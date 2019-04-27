@@ -2,44 +2,44 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8121EB3E9
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Apr 2019 18:32:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92436B3F4
+	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Apr 2019 18:40:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XyC+orf1EVNjIauRT1to7poDD36uEmb5aAnz8wG7Ljg=; b=WoIfYxeBIrYRkz
-	RqVK1UQVSQxiZJLb9UsQLCOOUFf87bdiqJ/t75+ZGGQwfHNaZw1b4CH7oKa8BUhSaLL7CTAA9T9Cv
-	lKgMt3hfVlEuDrfjD8ipdK0h9/idYw65lhInEixYvI3sVu1agt8Lx9ka+wayV7T4ZuPlq/3v4KbL9
-	MOBIcXLxZvlRGXPXcNhiPc57afWOHcBhnLGA9eGaIlZgtrOfLPyxktMK88sjziIrIpuGK/xPiKJu3
-	GEYwYFZZ//uciZ1tORL/PTl0OEgKvCOdglEvPfbz3qQEdtx1/267VRc804qoTsAQw9NUYmOrGpfdg
-	TLL+BFbepiedPQKYXHyw==;
+	List-Owner; bh=w/dbqM7TRBP5oePpZbn2/jG9eqmG3D/XjKNO83SAjFA=; b=pINQhFpnAW+oOf
+	rdaMW+JPRpiqdJM3aY+1PozvlxEUVJnFQduIaLmdhrdu9HuYlSx2Kc8JwoGd5eRKedmsG8SnK1iU6
+	mTDYs39+Mvnrbrb+Ac6BXQBMMgADRg+PlCmJKLCjG5nC1fldnPWI/EpKdDdnsODo00wnkyLq0mSDS
+	pJVap8DFCS95rKPzTud4zLEgkL9SQTcA2xh4tmFcLQjS0IMyOr+xkCvNzkWlxy5evFRi857TNyJ7S
+	+im/xhtU29xdy1BgPgaq7VJ5nMtK0h7yZSAztgkXfS+B3o0rpKn9WDpUPwfj6M1ojhYritUDuRSwG
+	rtSV3B+5n7G0Ul7ASogg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKQFM-00088T-Rj; Sat, 27 Apr 2019 16:32:16 +0000
+	id 1hKQMl-0001fd-Bp; Sat, 27 Apr 2019 16:39:55 +0000
 Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKQFB-0007zB-WA; Sat, 27 Apr 2019 16:32:07 +0000
+ id 1hKQMb-0001Vm-0p; Sat, 27 Apr 2019 16:39:46 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
  s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
  Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=c8Bux03tjjC8g0RTzqUC1nUbzfL5pVXpfOPA0tXBHRg=; b=MQ0lfL6dxkAgb5GpK8RRtxkbd9
- l4cp8MqqwAuN12ZCsK2fKY4xXvea7ZoYi5hP4+9GkeIQwpDO/vzWQc5P7/ItBl4HsvQOw/Q3fEwIW
- aUUXZzu92B0JcV0AjOzPfJcbEOSEsV63RPz+CZRhNkRS6plNbLgyFxgErChiqspLgr/4=;
+ bh=3x96KLf+7WG5HZo66dPuyudWlNtB7m+kcjzsKB7rZzg=; b=NP4Xq1USCnJhhYgYDDYXEAfO7F
+ FGgqIcxVfyzF/TNICY/nGs8WP7a4PxioELoSKoCFgpAu3TA2hS6u0jXIgcnYNXUS0c/DcMANKnWb3
+ WaCK+nEJcGW7H4R96huF6cNNCPFWroHi82Or7gh9W1yQdJIRu+R0A5bwWFXhP1+YNzSU=;
 Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
  (envelope-from <andrew@lunn.ch>)
- id 1hKQEZ-0002go-EJ; Sat, 27 Apr 2019 18:31:27 +0200
-Date: Sat, 27 Apr 2019 18:31:27 +0200
+ id 1hKQMF-0002l5-3c; Sat, 27 Apr 2019 18:39:23 +0200
+Date: Sat, 27 Apr 2019 18:39:23 +0200
 From: Andrew Lunn <andrew@lunn.ch>
 To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
 Subject: Re: [PATCH 2/4] dt-bindings: doc: Reflect new NVMEM
  of_get_mac_address behaviour
-Message-ID: <20190427163127.GB9816@lunn.ch>
+Message-ID: <20190427163923.GC9816@lunn.ch>
 References: <1556320002-26213-1-git-send-email-ynezz@true.cz>
  <1556320002-26213-3-git-send-email-ynezz@true.cz>
 MIME-Version: 1.0
@@ -47,17 +47,17 @@ Content-Disposition: inline
 In-Reply-To: <1556320002-26213-3-git-send-email-ynezz@true.cz>
 User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_093206_181473_F87A1C77 
-X-CRM114-Status: GOOD (  10.85  )
+X-CRM114-CacheID: sfid-20190427_093945_225230_85A35011 
+X-CRM114-Status: GOOD (  13.67  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
  no trust [185.16.172.187 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -105,21 +105,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> diff --git a/Documentation/devicetree/bindings/net/ethernet.txt b/Documentation/devicetree/bindings/net/ethernet.txt
-> index 2974e63..1e2bc9a 100644
-> --- a/Documentation/devicetree/bindings/net/ethernet.txt
-> +++ b/Documentation/devicetree/bindings/net/ethernet.txt
-> @@ -10,6 +10,8 @@ Documentation/devicetree/bindings/phy/phy-bindings.txt.
->    the boot program; should be used in cases where the MAC address assigned to
->    the device by the boot program is different from the "local-mac-address"
->    property;
-> +- nvmem-cells: phandle, reference to an nvmem node for the MAC address
-> +- nvmem-cell-names: string, should be "mac-address" if nvmem is to be used
+> diff --git a/Documentation/devicetree/bindings/net/macb.txt b/Documentation/devicetree/bindings/net/macb.txt
+> index 8b80515..92c5642 100644
+> --- a/Documentation/devicetree/bindings/net/macb.txt
+> +++ b/Documentation/devicetree/bindings/net/macb.txt
+> @@ -26,15 +26,15 @@ Required properties:
+>  	Optional elements: 'tsu_clk'
+>  - clocks: Phandles to input clocks.
+>  
+> -Optional properties:
+> -- nvmem-cells: phandle, reference to an nvmem node for the MAC address
+> -- nvmem-cell-names: string, should be "mac-address" if nvmem is to be used
+> -
+>  Optional properties for PHY child node:
+>  - reset-gpios : Should specify the gpio for phy reset
+>  - magic-packet : If present, indicates that the hardware supports waking
+>    up via magic packet.
+>  - phy-handle : see ethernet.txt file in the same directory
+> +- mac-address: See ethernet.txt in the same directory.
+> +- local-mac-address: See ethernet.txt in the same directory.
+> +- nvmem-cells: See ethernet.txt in the same directory.
+> +- nvmem-cell-names: See ethernet.txt in the same directory.
 
-You put the new values after local-mac-address and mac-address. That
-suggests they are of lower priority. That conflicts with the current
-patch. If you think NVMEM should take priority, please put the
-properties first.
+This looks wrong. The MAC address is not a PHY property, so should not
+be inside the PHY child node.
+
+phy-handle is in the wrong place, but that is a separate problem.
 
 	   Andrew
 
