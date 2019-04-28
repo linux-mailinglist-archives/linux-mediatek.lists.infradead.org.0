@@ -2,111 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33BF1B403
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Apr 2019 18:57:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82CE5B4BA
+	for <lists+linux-mediatek@lfdr.de>; Sun, 28 Apr 2019 03:51:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KgOWMpT8OfPcG6HtjOFailFtjeUiChHBznMynMBr/QY=; b=TpBUiaDRa3hYyP
-	zmidwfrwLfO2Ut+ZowOjI3IUtI6HvjdqBunRs2SDZdMSPSrRFzzXqyRc1QxEyV3HFSJmTBCOW00N3
-	vohITDgIbhfPVdV7Z8C3xfRGGLTfKqmuker0loROlER2aDkP+gdC7x1CA/FNYGERlNC60F6Ei+1Hy
-	XfksEIPkpb/fJA5ZYpraEY2UukKjXUEgPsEeSGiRvnfsizcBT1oZ9wtHisBZvcvXXJ85Z7m8k9Knx
-	dSI+CSkPCBeKBGDG41IZJJWJerlZTHXkDUo6uC3UNW6mqVFbe28/pqVHY+0mxRbqx4cl6L460eb1c
-	rMtoo/2fsMtL0js4gphQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=2occpOwlbD3Y10rMlkONFWOAm36sunzBllJBorM9c4k=; b=rT58ylHYR8SVYS
+	u5iZxkheppurRkCdAkpaRWaPUIZqbBOoYcQcN53+24fT2DoErMh7/Ptrxsxv5ViGsvtdSW2wD5bXF
+	jUhAblx46KL+X/0ugXF7JeEVy9ZTthvwClkGIpFmjCVoFQp632L1/tlwxAHfVi/+aAPtVgJRMMIvf
+	05lB4yxNZrVf1ivY3lV+XsQdnyJP4b25t52+N3ZSh4fD9VTU1Mq+8RwscPmF72L0ShMqsro2vm6d1
+	1wfunxq+dx+espgsJFKvr1YihBg5A9G8v7b3SHGI/u0trDh5reD/R23D7Bv6nMGhi5bRFdYntdxqw
+	C5vcizgzuHLwF9vlBptQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKQdD-0007Yz-UL; Sat, 27 Apr 2019 16:56:55 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hKYyO-0001Uv-Px; Sun, 28 Apr 2019 01:51:20 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKQdA-0007YY-Lw; Sat, 27 Apr 2019 16:56:54 +0000
-Received: by mail-pl1-x644.google.com with SMTP id e92so3023100plb.6;
- Sat, 27 Apr 2019 09:56:51 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:openpgp:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=Hvtq7zNAnrPZFqg7B9biXnElsoCmOPrVGVZCJ5gJhp4=;
- b=oY1Z64KccFbyy0wq9QVwJe0jyd7/RsnZQ/RB8ENhLnlCZjeajuJNoHTIn7SX0vVdqi
- LrjUFiFbUCa4YxtQMvMdljRqdgTGgHHDLQHj1H0QA9OyD05A3DqADEj8/N1oJhoproXe
- y/9kGhYlwLp4EsGsStj0io0eywSB1DQAT/MNckNred9ws5HfIqcstfSMDAPbD8MvPnJX
- 2J5O4rkODzSg+rHTATqNxgK3wELuL9CMGwJhxNvPTwUcOewrX3KyYIsv9M0jMOJs122I
- lwv9AJyObKXTquKg208AUDBouu50hh5Yb0ErQ0TMHegRiHTmh4VYhwlqWwTjE8E8Ev7q
- 0hPg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:openpgp:message-id
- :date:user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=Hvtq7zNAnrPZFqg7B9biXnElsoCmOPrVGVZCJ5gJhp4=;
- b=EhIPCEfYA+qd6NkcHZdpseQblTpAGYl1V/3SKNqbnXA7tTWU1iXtJZSSLWbgrXoPsP
- ljPLtyVejvQafuzw9mYhx2JjcTnsTpBAxDZe7zR/gIvWE+QANzbJ1qZj/PMLVYfD5gYQ
- 2d4jpiDjsusOL71FBS8zlNrWbOImgcg0qNY4ysuSA0e+seDdW+RqTLGryzVTMXfrt6kg
- 1atPCkZ4jLL/8qWR/QcDnyq65sNgK5nedVt6sZdrnpb3s4bKYZYK6U0ZUKotFkiESFzU
- /ShhF8xoXEUtRQ/Z33unEqFq/ca45ZH87Ab6XJDOlz1CmCyrXTNLCrC4RIbGrYIoY+Se
- mQYg==
-X-Gm-Message-State: APjAAAWdNK+8PIQ6oXyA6czupzTQfmqB8rEZ3dlT9AdXgkAWC7vKdYvw
- SM6C9OPW2BfTt0O46S0xB4Y=
-X-Google-Smtp-Source: APXvYqwSU6ZbpDR62x+bxBE8Veh7kQjbUVRkiAHr91sHGmJIgIdCZpoTZH34EFyaTXPIL5o++jb2hg==
-X-Received: by 2002:a17:902:2b87:: with SMTP id
- l7mr53015721plb.130.1556384211138; 
- Sat, 27 Apr 2019 09:56:51 -0700 (PDT)
-Received: from [10.230.28.107] ([192.19.223.250])
- by smtp.gmail.com with ESMTPSA id w65sm473514pfb.59.2019.04.27.09.56.38
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sat, 27 Apr 2019 09:56:49 -0700 (PDT)
-Subject: Re: [PATCH 2/4] dt-bindings: doc: Reflect new NVMEM
- of_get_mac_address behaviour
-To: =?UTF-8?Q?Petr_=c5=a0tetiar?= <ynezz@true.cz>, netdev@vger.kernel.org,
- devicetree@vger.kernel.org, linux-kernel@vger.kernel.org,
- "David S. Miller" <davem@davemloft.net>, Rob Herring <robh+dt@kernel.org>,
- Mark Rutland <mark.rutland@arm.com>, Andrew Lunn <andrew@lunn.ch>,
- Vivien Didelot <vivien.didelot@gmail.com>, Heiko Stuebner <heiko@sntech.de>,
- Fugang Duan <fugang.duan@nxp.com>, Claudiu Manoil <claudiu.manoil@nxp.com>,
- Yisen Zhuang <yisen.zhuang@huawei.com>, Salil Mehta
- <salil.mehta@huawei.com>, Woojung Huh <woojung.huh@microchip.com>,
- Microchip Linux Driver Support <UNGLinuxDriver@microchip.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Jassi Brar <jaswinder.singh@linaro.org>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Alexandre Torgue <alexandre.torgue@st.com>, Kalle Valo
- <kvalo@codeaurora.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Li Yang <leoyang.li@nxp.com>
-References: <1556320002-26213-1-git-send-email-ynezz@true.cz>
- <1556320002-26213-3-git-send-email-ynezz@true.cz>
-From: Florian Fainelli <f.fainelli@gmail.com>
-Openpgp: preference=signencrypt
-Message-ID: <f335fb31-ed1b-efd1-9cd3-a88b4a7fadf0@gmail.com>
-Date: Sat, 27 Apr 2019 09:56:35 -0700
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ id 1hKYyF-0001Os-S7; Sun, 28 Apr 2019 01:51:13 +0000
+X-UUID: 7e042395ef9b439f929ab05fc7ae5ff2-20190427
+X-UUID: 7e042395ef9b439f929ab05fc7ae5ff2-20190427
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1965872067; Sat, 27 Apr 2019 17:51:02 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 27 Apr 2019 18:51:01 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 28 Apr 2019 09:50:58 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sun, 28 Apr 2019 09:50:57 +0800
+Message-ID: <1556416257.10179.210.camel@mhfsdcap03>
+Subject: Re: [PATCH v4 2/6] dt-bindings: usb: add binding for Type-B GPIO
+ connector driver
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Rob Herring <robh@kernel.org>
+Date: Sun, 28 Apr 2019 09:50:57 +0800
+In-Reply-To: <20190426204537.GA15074@bogus>
+References: <1556261237-13823-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1556261237-13823-3-git-send-email-chunfeng.yun@mediatek.com>
+ <20190426204537.GA15074@bogus>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-In-Reply-To: <1556320002-26213-3-git-send-email-ynezz@true.cz>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_095652_721354_B1BCACF1 
-X-CRM114-Status: GOOD (  12.16  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190427_185111_909835_BDDCBF2C 
+X-CRM114-Status: GOOD (  21.19  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (f.fainelli[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -118,33 +72,120 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Maxime Ripard <maxime.ripard@bootlin.com>, linuxppc-dev@lists.ozlabs.org,
- linux-wireless@vger.kernel.org, linux-rockchip@lists.infradead.org,
- linux-mediatek@lists.infradead.org,
- Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
- Alban Bedel <albeu@free.fr>, linux-oxnas@groups.io,
- Frank Rowand <frowand.list@gmail.com>,
- linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org,
- Heiner Kallweit <hkallweit1@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
+ Sridharan <badhri@google.com>, Andy
+ Shevchenko <andy.shevchenko@gmail.com>, linux-mediatek@lists.infradead.org,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-CgpPbiA0LzI2LzIwMTkgNDowNiBQTSwgUGV0ciDFoHRldGlhciB3cm90ZToKPiBBcyBvZl9nZXRf
-bWFjX2FkZHJlc3Mgbm93IHN1cHBvcnRzIE5WTUVNIHVuZGVyIHRoZSBob29kLCB3ZSBzaG91bGQK
-PiB1cGRhdGUgdGhlIGJpbmRpbmdzIGRvY3VtZW50YXRpb24gd2l0aCB0aGUgbmV3IG52bWVtLWNl
-bGwqIHByb3BlcnRpZXMuCj4gV2hpbGUgYXQgaXQsIGZpeCBhbHNvIG90aGVyIG1pc3NpbmcgcHJv
-cGVydGllcyBzdXBwb3J0ZWQgYnkKPiBvZl9nZXRfbWFjX2FkZHJlc3MuCj4gCj4gU2lnbmVkLW9m
-Zi1ieTogUGV0ciDFoHRldGlhciA8eW5lenpAdHJ1ZS5jej4KCldoaWxlIEkgYXBwcmVjaWF0ZSB5
-b3VyIGVmZm9ydCBpbiBtYWtpbmcgdGhlIGJpbmRpbmdzIHVwIHRvIGRhdGUgYW5kCmNvbnNpc3Rl
-bnQsIHRoaXMgZG9lcyByZWFsbHkgc2NhbGUgd2VsbCBhbmQgaXMgYW4gZXJyb3IgcHJvbmUgZXhl
-cmNpc2UsCmhvdyBhYm91dCBjb25zb2xpZGF0aW5nIGFsbCBNQUMgYWRkcmVzcyByZWxhdGVkIHBy
-b3BlcnRpZXMgaW50byB0aGUKZXRoZXJuZXQudHh0IGRvY3VtZW50IGxpa2UgeW91IGp1c3QgZGlk
-IGFuZCB1cGRhdGUgYWxsIGJpbmRpbmdzIHRvCmluZGljYXRlIHNvbWV0aGluZyBhbG9uZyB0aGUg
-bGluZXMgb2Y6CgpGb3IgYWxsIG90aGVyIHN0YW5kYXJkIEV0aGVybmV0IHJlbGF0ZWQgcHJvcGVy
-dGllcywgcGxlYXNlIHJlZmVyIHRvCmV0aGVybmV0LnR4dCBvciBzb21ldGhpbmcgbGlrZSB0aGF0
-PwotLSAKRmxvcmlhbgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmlu
-ZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9s
-aW51eC1tZWRpYXRlawo=
+On Fri, 2019-04-26 at 15:45 -0500, Rob Herring wrote:
+> On Fri, Apr 26, 2019 at 02:47:13PM +0800, Chunfeng Yun wrote:
+> > It's used to support dual role switch via GPIO when use Type-B
+> > receptacle, typically the USB ID pin is connected to an input
+> > GPIO pin
+> > 
+> > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > ---
+> > v4 no changes
+> > 
+> > v3 changes:
+> >  1. treat type-B connector as a virtual device, but not child device of
+> >     USB controller's
+> > 
+> > v2 changes:
+> >   1. new patch to make binding clear suggested by Hans
+> > ---
+> >  .../bindings/usb/typeb-conn-gpio.txt          | 49 +++++++++++++++++++
+> >  1 file changed, 49 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt b/Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt
+> > new file mode 100644
+> > index 000000000000..d2e1c4e01b6d
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt
+> > @@ -0,0 +1,49 @@
+> > +USB Type-B GPIO Connector
+> > +
+> > +This is a virtual device used to switch dual role mode from the USB ID pin
+> > +connected to an input GPIO pin.
+> > +
+> > +Required properties:
+> > +- compatible : Should be "linux,typeb-conn-gpio"
+> 
+> There's no need for this virtual node. The USB host or device driver can 
+> instantiate a connector driver by walking the OF graph to the connector 
+> and creating a device.
+Got it.
+> 
+> > +
+> > +Sub-nodes:
+> > +- connector : should be present.
+> > +	- compatible : should be "usb-b-connector".
+> > +	- id-gpios, vbus-gpios : either one of them must be present,
+> > +		and both can be present as well.
+> > +	- vbus-supply : can be present if needed when supports dual role mode.
+> > +	see connector/usb-connector.txt
+> > +
+> > +- port : should be present.
+> > +	see graph.txt
+> > +
+> > +Example:
+> > +
+> > +rsw_iddig: role_sw_iddig {
+> > +	compatible = "linux,typeb-conn-gpio";
+> > +	status = "okay";
+> > +
+> > +	connector {
+> > +		compatible = "usb-b-connector";
+> > +		label = "micro-USB";
+> > +		type = "micro";
+> > +		id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+> > +		vbus-supply = <&usb_p0_vbus>;
+> > +	};
+> > +
+> > +	port {
+> 
+> Humm, same mistake as Hikey patches...
+> 
+> This goes under the connector node as defined in the connector binding.
+Ok, will fix it.
+
+Thanks a lot.
+
+> 
+> > +		bconn_ep: endpoint@0 {
+> > +			remote-endpoint = <&usb_role_sw>;
+> > +		};
+> > +	};
+> > +};
+> > +
+> > +&mtu3 {
+> > +	status = "okay";
+> > +
+> > +	port {
+> > +		usb_role_sw: endpoint@0 {
+> > +			remote-endpoint = <&bconn_ep>;
+> > +		};
+> > +	};
+> > +};
+> > -- 
+> > 2.21.0
+> > 
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
