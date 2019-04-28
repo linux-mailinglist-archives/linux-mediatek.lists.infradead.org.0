@@ -2,76 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ADC39B649
-	for <lists+linux-mediatek@lfdr.de>; Sun, 28 Apr 2019 19:41:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 50BF1B6A1
+	for <lists+linux-mediatek@lfdr.de>; Sun, 28 Apr 2019 22:26:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XGT81y/VKczu2H4k46rh59Gc/OICF5h1eW/hUKJNOz8=; b=Fv90LhQSvwQ6FI
-	AVT45RA6FLhQeDpg5Tk3sg2Tq+ENXl5ZTsVi1s0NqA7WGNmRY6ibySRL6x92mlfT1RA7JqIKmuC6A
-	8pGIP6PXpjIg2PaeI3pzFrjoVrDtDC3htWdm58urCFC3nG6TAu6VWNHwMALjYCIa3o2h5fRRUYt2W
-	4KKQ7g5HiT9Vla1++xxC3hXs48TEbbqarWGUJtx8bl8zZZbzOk8ykFAAkRR7zNEBzF6dCfeVnpDl9
-	4O7lEicrCuqrKnl6B/9SPUgJ9dn4mH9yWxXzyerBQhLI3AalfuA5ohloyxSsjq2UDgJnv5chWrbYw
-	8MFPmcPxXgaW5LB9bPWA==;
+	List-Owner; bh=WUnknVMEP9FS7f5OPQP89TBC0Vnrlbg7JIMaIhDGE3U=; b=IJMJRBG5GInfAM
+	5uGcsjgm0DKiQEm8WI3sMTdMyZFEbxCS+qjXkTcIJ9KQ/Sw3F/RPgFDA6toVHh5S1fRDhQGUKNpSE
+	BFQxms6LpuShKm0Mw/Xmt4fPsu1OUSW2EU2+egvlEOg3Q2ls5KRPKVK7aL3ImgcPyGOt3rPKMzzRp
+	8t8x34VLup88BwEG/Vfy3VEShCBpxIuBfGaWYJxEbnnhylC1lnOXR9wb9LaOj/xERSWNcwWySR5Hc
+	+Frd+e27TVKUy/O90FUPzVmcrzvPNyZTmEFsQjy578ktT6b1lyPjI1nVCU0ypnZrnBvzE4eCYOFlS
+	6JrWWmgkWvmGAQ/mDUiQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKnnm-0004d5-QC; Sun, 28 Apr 2019 17:41:22 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hKqNq-0001mk-Ag; Sun, 28 Apr 2019 20:26:46 +0000
+Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKnnd-0004WM-K0; Sun, 28 Apr 2019 17:41:15 +0000
-Received: from mail-wm1-f43.google.com (mail-wm1-f43.google.com
- [209.85.128.43])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6F51D206E0;
- Sun, 28 Apr 2019 17:41:12 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1556473272;
- bh=pF+bqio+UuvZynnnmsVJ0Fp54niJWefa9PRp71am6DQ=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=HCvNzJyjMBB+jFr4LmVSmKystQ0XLURYblY4K3oP+pSjEmFhPioQ3L7dmIwZYSXtb
- 0CLDkHM09mIXsqwpXAkLIiofGtlW6tBS0LMC90Br2tRNJaA1J6GUkSNZowbubRQFyC
- i+VJM2woUl32Lh0wmJ1g+/AtMqQNMsSZ6ReO8fAA=
-Received: by mail-wm1-f43.google.com with SMTP id o25so10702504wmf.5;
- Sun, 28 Apr 2019 10:41:12 -0700 (PDT)
-X-Gm-Message-State: APjAAAVCM7lXa9taaR4G02sRvwtIxl0iefc++NLfMvmYtDKkyUTe0SXc
- 9ppFVBKWhUIkLQdHK0R4rjgFLKaV6g+434/gF5Y=
-X-Google-Smtp-Source: APXvYqxTedt23d2QO8v6AmbxwXc7H+tR8LrPbVrHcoVQvY+gq716NH0n3naaMQytuMheFRq/ZyHkZ6RVSiA/fU3VxxQ=
-X-Received: by 2002:a1c:44d7:: with SMTP id
- r206mr14268754wma.129.1556473270970; 
- Sun, 28 Apr 2019 10:41:10 -0700 (PDT)
+ id 1hKqIu-0002LQ-Ge
+ for linux-mediatek@lists.infradead.org; Sun, 28 Apr 2019 20:21:52 +0000
+Received: by mail-lf1-x144.google.com with SMTP id h126so6354891lfh.4
+ for <linux-mediatek@lists.infradead.org>; Sun, 28 Apr 2019 13:21:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=lixom-net.20150623.gappssmtp.com; s=20150623;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=1QT1sK+ANF5OG/PefqUzMYvBnb84fl+mwlYnScnPHm8=;
+ b=QGX4h6SdMKi8crwz1Cm20GvR6BYGAhmkuis0Z6KM9Q283K6/Mg/WWro7uoEt+kMid8
+ Z13A0leNzkuTmkmgxuqD6e/9rzi6rdqhl1FtuoV7oYxoWn+VZhchNQbQOBkE1777l0Op
+ jgINLab3OCW5aXv7fol2+LZgF7ThXruNK0RMUI02+iLCju5vAS5tFMjRLwWU7z8Los5g
+ nzwodRVJ3vE+SgrQXXk8MeUueu0g/DcMXmLc6gIKdo/Q50xEyrNolYKkghXOzk0U+/CN
+ O8ZQh2MBEZDNVzzz+Jiv3fkEVi1aQN4P067/vNovarmcTuk1/dFzfifxNUUGlT9bj16n
+ GlCg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=1QT1sK+ANF5OG/PefqUzMYvBnb84fl+mwlYnScnPHm8=;
+ b=IbpMdjVKH3DEcwTpH/zDPOUuw692lekU5k+p5ve4uzWMwLP9q+cnSK8s/2u3deuoEf
+ tTS7Shr5H1VxEnRkDFfqqozjdnPTPX+w6w42ON8ITL4yPTevqvyDTBpgFSzQrtaLdWNX
+ tMdPiS429RV80T/Ag1p5+yr4EpruSBCVbX5zEqWSiyfvDM/IR0su0dhPPtL2ybMi7xM0
+ ZrqnsQAPtR82CP0zHFeyRg8fLwZdMv8JPJQvD+nf+/5MicpuZk8oP0Y5rsS0Ctp/OPeh
+ HhJZgjmY+ooBW9Zp8zpr2Boneyz7sGyVT7NrggwICXe08kEFl6neH/CES0UnHnfzOGBF
+ j7iw==
+X-Gm-Message-State: APjAAAXsNKnveDTxkaBMxhNuw4IEioCGIbFnCtNATNGYZ8lhWXQjCTV+
+ RxknMYS5a737Ie4AQHklR+6FjDHx1+ejOA==
+X-Google-Smtp-Source: APXvYqwnbEjOKlwCNKl7E6dXgVKxR/CBq94EMoVDAvx7iWMWVRhhOw1Rcq2bTmtmdvahCETBTTgr7A==
+X-Received: by 2002:ac2:50d5:: with SMTP id h21mr5312226lfm.44.1556482898800; 
+ Sun, 28 Apr 2019 13:21:38 -0700 (PDT)
+Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
+ by smtp.gmail.com with ESMTPSA id d22sm6937783lfm.57.2019.04.28.13.21.37
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Sun, 28 Apr 2019 13:21:37 -0700 (PDT)
+Date: Sun, 28 Apr 2019 12:57:53 -0700
+From: Olof Johansson <olof@lixom.net>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Subject: Re: [GIT PULL] dts64 updates for v5.2
+Message-ID: <20190428195753.fxfhpkcckeajjut3@localhost>
+References: <5ea296e5-92bd-5790-c075-cf4bcb74d88c@gmail.com>
+ <47e01204-41b6-ba89-cbbb-3f684e3a7dff@gmail.com>
 MIME-Version: 1.0
-References: <1556181691-10293-1-git-send-email-long.cheng@mediatek.com>
- <1556181691-10293-2-git-send-email-long.cheng@mediatek.com>
-In-Reply-To: <1556181691-10293-2-git-send-email-long.cheng@mediatek.com>
-From: Sean Wang <sean.wang@kernel.org>
-Date: Sun, 28 Apr 2019 10:40:59 -0700
-X-Gmail-Original-Message-ID: <CAGp9LzqdmXQx4mqjLuUqm-fQM3s=ULpk2hadFV4PRHSe9qnoCQ@mail.gmail.com>
-Message-ID: <CAGp9LzqdmXQx4mqjLuUqm-fQM3s=ULpk2hadFV4PRHSe9qnoCQ@mail.gmail.com>
-Subject: Re: [PATCH 1/2] serial: 8250-mtk: add follow control
-To: Long Cheng <long.cheng@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <47e01204-41b6-ba89-cbbb-3f684e3a7dff@gmail.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_104113_691942_519AC7AC 
-X-CRM114-Status: GOOD (  19.63  )
-X-Spam-Score: -5.3 (-----)
+X-CRM114-CacheID: sfid-20190428_132141_023800_CF4C87BB 
+X-CRM114-Status: GOOD (  10.48  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:144 listed in]
+ [list.dnswl.org]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -83,161 +92,36 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Zhenbao Liu <zhenbao.liu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- Changqi Hu <changqi.hu@mediatek.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Jiri Slaby <jslaby@suse.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Peter Shih <pihsun@chromium.org>, linux-serial@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Seiya Wang <seiya.wang@mediatek.com>, Yunfei Dong <yunfei.dong@mediatek.com>,
+ Erin Lo <erin.lo@mediatek.com>, Fabien Parent <fparent@baylibre.com>,
+ arm-soc <arm@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Zhiyong Tao <zhiyong.tao@mediatek.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Long
+On Wed, Apr 24, 2019 at 09:55:46AM +0200, Matthias Brugger wrote:
+> 
+> 
+> On 23/04/2019 18:12, Matthias Brugger wrote:
+> > Hi Anrd and Olof,
+> > 
+> > you can find below the pull request for mediatek related dts64.
+> > 
+> > Please have a look :)
+> 
+> Unfortunately the pull request has a minor merge conflict with the serial/tty
+> tree [1]. Is there any action needed from my side?
 
-I guess you should mean "flow control", not "follow control".
-And the commit subject should be swapped between 1/2 and 2/2,
-otherwise, the subject is inconsistent with its own content.
+Nah, that's fine. Thanks for the heads up.
 
-       Sean
 
-On Thu, Apr 25, 2019 at 1:41 AM Long Cheng <long.cheng@mediatek.com> wrote:
->
-> Add SW and HW follow control function.
->
-> Signed-off-by: Long Cheng <long.cheng@mediatek.com>
-> ---
->  drivers/tty/serial/8250/8250_mtk.c |   60 ++++++++++++++++++++++--------------
->  1 file changed, 37 insertions(+), 23 deletions(-)
->
-> diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
-> index c1fdbc0..959fd85 100644
-> --- a/drivers/tty/serial/8250/8250_mtk.c
-> +++ b/drivers/tty/serial/8250/8250_mtk.c
-> @@ -21,12 +21,14 @@
->
->  #include "8250.h"
->
-> -#define UART_MTK_HIGHS         0x09    /* Highspeed register */
-> -#define UART_MTK_SAMPLE_COUNT  0x0a    /* Sample count register */
-> -#define UART_MTK_SAMPLE_POINT  0x0b    /* Sample point register */
-> +#define MTK_UART_HIGHS         0x09    /* Highspeed register */
-> +#define MTK_UART_SAMPLE_COUNT  0x0a    /* Sample count register */
-> +#define MTK_UART_SAMPLE_POINT  0x0b    /* Sample point register */
->  #define MTK_UART_RATE_FIX      0x0d    /* UART Rate Fix Register */
-> -
->  #define MTK_UART_DMA_EN                0x13    /* DMA Enable register */
-> +#define MTK_UART_RXTRI_AD      0x14    /* RX Trigger address */
-> +#define MTK_UART_FRACDIV_L     0x15    /* Fractional divider LSB address */
-> +#define MTK_UART_FRACDIV_M     0x16    /* Fractional divider MSB address */
->  #define MTK_UART_DMA_EN_TX     0x2
->  #define MTK_UART_DMA_EN_RX     0x5
->
-> @@ -46,6 +48,7 @@ enum dma_rx_status {
->  struct mtk8250_data {
->         int                     line;
->         unsigned int            rx_pos;
-> +       unsigned int            clk_count;
->         struct clk              *uart_clk;
->         struct clk              *bus_clk;
->         struct uart_8250_dma    *dma;
-> @@ -196,9 +199,15 @@ static void mtk8250_shutdown(struct uart_port *port)
->  mtk8250_set_termios(struct uart_port *port, struct ktermios *termios,
->                         struct ktermios *old)
->  {
-> +       unsigned short fraction_L_mapping[] = {
-> +               0, 1, 0x5, 0x15, 0x55, 0x57, 0x57, 0x77, 0x7F, 0xFF, 0xFF
-> +       };
-> +       unsigned short fraction_M_mapping[] = {
-> +               0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 3
-> +       };
->         struct uart_8250_port *up = up_to_u8250p(port);
-> +       unsigned int baud, quot, fraction;
->         unsigned long flags;
-> -       unsigned int baud, quot;
->
->  #ifdef CONFIG_SERIAL_8250_DMA
->         if (up->dma) {
-> @@ -214,7 +223,7 @@ static void mtk8250_shutdown(struct uart_port *port)
->         serial8250_do_set_termios(port, termios, old);
->
->         /*
-> -        * Mediatek UARTs use an extra highspeed register (UART_MTK_HIGHS)
-> +        * Mediatek UARTs use an extra highspeed register (MTK_UART_HIGHS)
->          *
->          * We need to recalcualte the quot register, as the claculation depends
->          * on the vaule in the highspeed register.
-> @@ -230,18 +239,11 @@ static void mtk8250_shutdown(struct uart_port *port)
->                                   port->uartclk / 16 / UART_DIV_MAX,
->                                   port->uartclk);
->
-> -       if (baud <= 115200) {
-> -               serial_port_out(port, UART_MTK_HIGHS, 0x0);
-> +       if (baud < 115200) {
-> +               serial_port_out(port, MTK_UART_HIGHS, 0x0);
->                 quot = uart_get_divisor(port, baud);
-> -       } else if (baud <= 576000) {
-> -               serial_port_out(port, UART_MTK_HIGHS, 0x2);
-> -
-> -               /* Set to next lower baudrate supported */
-> -               if ((baud == 500000) || (baud == 576000))
-> -                       baud = 460800;
-> -               quot = DIV_ROUND_UP(port->uartclk, 4 * baud);
->         } else {
-> -               serial_port_out(port, UART_MTK_HIGHS, 0x3);
-> +               serial_port_out(port, MTK_UART_HIGHS, 0x3);
->                 quot = DIV_ROUND_UP(port->uartclk, 256 * baud);
->         }
->
-> @@ -258,17 +260,29 @@ static void mtk8250_shutdown(struct uart_port *port)
->         /* reset DLAB */
->         serial_port_out(port, UART_LCR, up->lcr);
->
-> -       if (baud > 460800) {
-> +       if (baud >= 115200) {
->                 unsigned int tmp;
->
-> -               tmp = DIV_ROUND_CLOSEST(port->uartclk, quot * baud);
-> -               serial_port_out(port, UART_MTK_SAMPLE_COUNT, tmp - 1);
-> -               serial_port_out(port, UART_MTK_SAMPLE_POINT,
-> -                                       (tmp - 2) >> 1);
-> +               tmp = (port->uartclk / (baud *  quot)) - 1;
-> +               serial_port_out(port, MTK_UART_SAMPLE_COUNT, tmp);
-> +               serial_port_out(port, MTK_UART_SAMPLE_POINT,
-> +                                       (tmp >> 1) - 1);
-> +
-> +               /*count fraction to set fractoin register */
-> +               fraction = ((port->uartclk  * 100) / baud / quot) % 100;
-> +               fraction = DIV_ROUND_CLOSEST(fraction, 10);
-> +               serial_port_out(port, MTK_UART_FRACDIV_L,
-> +                                               fraction_L_mapping[fraction]);
-> +               serial_port_out(port, MTK_UART_FRACDIV_M,
-> +                                               fraction_M_mapping[fraction]);
->         } else {
-> -               serial_port_out(port, UART_MTK_SAMPLE_COUNT, 0x00);
-> -               serial_port_out(port, UART_MTK_SAMPLE_POINT, 0xff);
-> +               serial_port_out(port, MTK_UART_SAMPLE_COUNT, 0x00);
-> +               serial_port_out(port, MTK_UART_SAMPLE_POINT, 0xff);
-> +               serial_port_out(port, MTK_UART_FRACDIV_L, 0x00);
-> +               serial_port_out(port, MTK_UART_FRACDIV_M, 0x00);
->         }
-> +       if (uart_console(port))
-> +               up->port.cons->cflag = termios->c_cflag;
->
->         spin_unlock_irqrestore(&port->lock, flags);
->         /* Don't rewrite B0 */
-> --
-> 1.7.9.5
->
->
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+-Olof
 
 _______________________________________________
 Linux-mediatek mailing list
