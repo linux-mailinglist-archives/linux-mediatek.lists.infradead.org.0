@@ -2,63 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4FCE8DACA
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 05:29:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BA001DAE5
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 05:55:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=07xq9X8q3h+yrZvjh2UZI/7HIPbqjeGU60ncW5yz10U=; b=u5BQKbwFKs0fBb
-	5Dmrude5Jl1SMs0ansQouLu1UqKBIXIPd6yWwBsK6V1SDH1/KktvfRW+3hZVd+pHtMksnF7wHpqrJ
-	PUpw5F170DqsthQv/+3NCThdqBDyKW/C5mbBIAXz4+zhKtGHycH2kAWF01BhEJDwS0ExSJlYoutkh
-	6N1WdBsw1OtrsM5mhDs3Fwk8xJ2+qMBzQDC9sAQoQ9i8yv4BdyeETNd8sWmWGf9Fg2JCjD4yFOJay
-	GeHV/y6P1CsLJossldFmawCcBGhcjXGtnEB6B7oL1T4i++57ky3JICdILOt8Fdsr4GaCe3s+23wnE
-	XUP8ejkdEvQs/gp2Copg==;
+	List-Owner; bh=HvFaSasfCzmSSrCQdwfCrV6lOksuYfJGVgOGPoM5gpE=; b=hu8HjFkgYyQ1/O
+	MMUjCwpk0Mq7mU36P31ANMGkV5Ptvms6ex3n1O/OPL8fBtyzPw2NKVQT4LRHV4ba2u8/yiyfUM0GL
+	YAy1RylG2oeY1ROwpzUWg63uElEIulw3mrK9Y7pcdFJnbnjKeJ4t49ZHEhaIFobw1cI0vUwitJwkY
+	Ucs8cgcR2eJwLycoaduG4Yqo7bl/DtHb6KfKBdZ9HEvQ0mzw+IqFSFAXG0mCJRrmefKOu1wsKcieO
+	iNiUf70lqaXtODdkZXffvvQF6YeHcAculLR2kCiwoHmyONySsmV0rjnHZULuEWs1YRAJTxdLUdsaw
+	XtHNuAF9pCf0MzHXFgfQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKwyP-0005lS-LE; Mon, 29 Apr 2019 03:28:57 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hKxOD-0006Di-LG; Mon, 29 Apr 2019 03:55:37 +0000
+Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKwyM-0005ky-0u; Mon, 29 Apr 2019 03:28:55 +0000
-X-UUID: 5adfd84b2409421b85c67e7e7b6dda07-20190428
-X-UUID: 5adfd84b2409421b85c67e7e7b6dda07-20190428
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <xiaolei.li@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 663994682; Sun, 28 Apr 2019 19:28:46 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 28 Apr 2019 20:28:44 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Apr 2019 11:28:36 +0800
-Received: from mtkslt306.mediatek.inc (10.21.14.136) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 29 Apr 2019 11:28:36 +0800
-From: <xiaolei.li@mediatek.com>
-To: <david.oberhollenzer@sigma-star.at>
-Subject: [PATCH] mtd-tests: nandbiterrs: Fix issue that just insert error at
- bit 7
-Date: Mon, 29 Apr 2019 11:28:34 +0800
-Message-ID: <20190429032834.7550-1-xiaolei.li@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ id 1hKxO4-00064f-6p
+ for linux-mediatek@lists.infradead.org; Mon, 29 Apr 2019 03:55:29 +0000
+Received: by mail-pl1-x644.google.com with SMTP id b3so4418577plr.7
+ for <linux-mediatek@lists.infradead.org>; Sun, 28 Apr 2019 20:55:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=bXk34VsYreRCPNz4i6pWPCyTwvp96N833kW5KsYPoLI=;
+ b=QA3b1VEMbb59818pXyhhNImtFA59xQ9SCX5WROV+Ul/trmfLt4HCeV030EL6SVf+iL
+ N4s8vtOptfY7n0NAMyGYKVz7OOd8lsdVcIlBDOPBEJ/X1a81gLUMzCzapAfpsJkywWNo
+ 7uLoYVxud71OMLp9bl+NqVQ57Yadzqm9zi1pg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=bXk34VsYreRCPNz4i6pWPCyTwvp96N833kW5KsYPoLI=;
+ b=eEvEwqM/TlI5gKys0MmJlpNRVnNySjmHcIPZwIbVLV+GRAk0JHl/JL1/FhDcv+dP2q
+ IeG3VR08R2nURF5+kyURLNUzrFUtePuAJF6W84nfdHwmFib4l9GzCHVm/XgMXyryAnhj
+ eB5mx5t0inUcKV+q2O9udPyShlgH7iu9bOdwYyAV77lXOSFnI/0yeIYMpkD8STBTITH0
+ zK1iPtzJ3k5W1VRojjeu0Yo01QyfysDgURwNYAhfKLE/W/rQmgotWXTuVma0yAPEVHig
+ zsFGo9WTDmQaxfb7Xb6PmmQogS723S6iIibosLZOxpUpz1dKNsWW0XNuRauxbtfthy+Q
+ lXCw==
+X-Gm-Message-State: APjAAAW1f6Q0F4oJ09r0YlAdc1CSmyfCnfdRBDwnNPvj9KigBSpsyQqY
+ NadIIpI74Ec6RslEWYQnC9olEcR+yj8=
+X-Google-Smtp-Source: APXvYqzjt4UrpemC6KYvWhVVLUW4VYRT494asAiDQflS3Vl76Sn5i0szake9Oj3w9XgJcvbp9UevSA==
+X-Received: by 2002:a17:902:6f17:: with SMTP id
+ w23mr39043760plk.29.1556510127299; 
+ Sun, 28 Apr 2019 20:55:27 -0700 (PDT)
+Received: from drinkcat2.tpe.corp.google.com
+ ([2401:fa00:1:b:d8b7:33af:adcb:b648])
+ by smtp.gmail.com with ESMTPSA id x128sm55433585pfx.103.2019.04.28.20.55.25
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Sun, 28 Apr 2019 20:55:26 -0700 (PDT)
+From: Nicolas Boichat <drinkcat@chromium.org>
+To: linux-mediatek@lists.infradead.org
+Subject: [PATCH 0/2] pinctrl: mediatek: Fix 2 issues related to resume from
+ wake sources.
+Date: Mon, 29 Apr 2019 11:55:13 +0800
+Message-Id: <20190429035515.73611-1-drinkcat@chromium.org>
+X-Mailer: git-send-email 2.21.0.593.g511ec345e18-goog
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 9A82CE3685D45613FF70AD94047C4EFBDECF68D727A0E7098B1954AE24CC1DB42000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_202854_064684_F31F6F4E 
-X-CRM114-Status: UNSURE (   9.80  )
+X-CRM114-CacheID: sfid-20190428_205528_244644_E54FCD30 
+X-CRM114-Status: UNSURE (   6.65  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -70,45 +94,31 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: srv_heupstream@mediatek.com, richard@nod.at, bayi.cheng@mediatek.com,
- linux-mediatek@lists.infradead.org, linux-mtd@lists.infradead.org,
- xiaolei.li@mediatek.com
+Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
+ linux-kernel@vger.kernel.org, evgreen@chromium.org, swboyd@chromium.org,
+ linux-gpio@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Xiaolei Li <xiaolei.li@mediatek.com>
+This fixes 2 issues when resuming from a wake source, especially if these
+wake sources are level-sensitive.
 
-The function insert_biterror should be designed to insert error at
-the first '1' bit starting at offset byte.
+Tested on mt8183 with the series in https://patchwork.kernel.org/cover/10921121/,
+but this should affect all mediatek platforms.
 
-But now, only bit 7 of each byte is checked, because checking mask
-is always 0x80.
+Nicolas Boichat (2):
+  pinctrl: mediatek: Ignore interrupts that are wake only during resume
+  pinctrl: mediatek: Update cur_mask in mask/mask ops
 
-So, do right shift for checking mask after each checking to check
-the whole 8 bits of each bytes.
+ drivers/pinctrl/mediatek/mtk-eint.c | 34 ++++++++++++++++-------------
+ 1 file changed, 19 insertions(+), 15 deletions(-)
 
-Signed-off-by: Xiaolei Li <xiaolei.li@mediatek.com>
----
- tests/mtd-tests/nandbiterrs.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/tests/mtd-tests/nandbiterrs.c b/tests/mtd-tests/nandbiterrs.c
-index 24a6c03..f583c14 100644
---- a/tests/mtd-tests/nandbiterrs.c
-+++ b/tests/mtd-tests/nandbiterrs.c
-@@ -333,7 +333,7 @@ static int insert_biterror(void)
- 	int bit, mask, byte;
- 
- 	for (byte = 0; byte < pagesize; ++byte) {
--		for (bit = 7, mask = 0x80; bit >= 0; bit--, mask>>=0) {
-+		for (bit = 7, mask = 0x80; bit >= 0; bit--, mask >>= 1) {
- 			if (wbuffer[byte] & mask) {
- 				wbuffer[byte] &= ~mask;
- 				printf("Inserted biterror @ %u/%u\n", byte, bit);
 -- 
-2.18.0
+2.21.0.593.g511ec345e18-goog
 
 
 _______________________________________________
