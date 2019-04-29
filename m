@@ -2,63 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 059A2E3A9
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 15:23:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0CABBE5B8
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 17:04:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9XjyKwLX0LFW40qMH8xVU/2s83XECvb/lfUH6ntQAUY=; b=jRnzbzSRA+2fEq
-	ky6FgG9qziuh2xs1qnnS5oAcQFOFUVLcYkgnz+UNJDo5/irSle9DbK5xmnGl+0Eg7xPWDR5kWxqT6
-	+lVHVo23AHSZVg4G0cVMWp3yeEGPfDUWc+NfIkhkmMaecF5tT1UcGNKvhaqdMRt1kE/gTOqK+QcQC
-	aukP2D8mviBE68dktuynul820QAn4Bd+ott104h3GSjVLFGnD5jhWTifjrreVnfx6U+JqWqnKZyNQ
-	B0PLApxOgfu9xVyS5LR3/zAqGGbMGlud90shVqoDkVJOBNP7ZTOBmWu/j+DLbTKHoKXrnSEHfbqAp
-	fzm08AHkiIGGORlNw18A==;
+	List-Owner; bh=o8aMYgnbuzD1KtzOubabJJD3dAPvl7YH4k+hUMvBsy8=; b=RrIxc5z2QQyc/E
+	SmNEy1h4ESv8YPnDkp1k+GLOjQF36qkznXSYAxsBbZaBFtEypmB6M1PFmOjg5mCkrBDdZhOdap0An
+	qn9alW2WYR3IDrJOyxmhwJcd/VTEP/IwpWamcMycI5YpntJmuJ0hon92L5QC8OmXNAkN4eAhKm6Ho
+	IzdJ/ZDORrLGhl/456k2FKPch0mnkasED2CkL1J5quZSJxYAniCh4Nx9GjH6FAduiMoIylZhbC409
+	+QWzhDeY6K+aoAdUfpr/x+kOZGDbrJxXlCMmpmEMfsKyfyVtbKWLZCe9eDEffJ7lph57N8HLbmSqW
+	C2+o4lWKVTkdt/5j+QqQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL6G4-0000ke-Jy; Mon, 29 Apr 2019 13:23:48 +0000
-Received: from vps0.lunn.ch ([185.16.172.187])
+	id 1hL7pH-00064X-UX; Mon, 29 Apr 2019 15:04:15 +0000
+Received: from dc8-smtprelay2.synopsys.com ([198.182.47.102]
+ helo=smtprelay-out1.synopsys.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL6Fv-0000da-M8; Mon, 29 Apr 2019 13:23:41 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
- s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
- Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=G9+UVkmUelZPc/fq6yyI9wbOx04gDxUNqmqWJk98Nkg=; b=UJxTcsu3QVfNUjU0YZtQzi6U3y
- wqS5EGC5LSO/GkxW9xCydVDvbZ1fs37BBldYsyRB4/OLeWLrobP38ZeMf/gS1JrYsru+wKb40eq3m
- ceOmhYYufSpplKctvC8LKsMTHYMWy3AnrSfh9BAbBMXdDsP07MKex5LVfvQ4FhluvDmg=;
-Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
- (envelope-from <andrew@lunn.ch>)
- id 1hL6Fj-00010z-OB; Mon, 29 Apr 2019 15:23:27 +0200
-Date: Mon, 29 Apr 2019 15:23:27 +0200
-From: Andrew Lunn <andrew@lunn.ch>
-To: biao huang <biao.huang@mediatek.com>
-Subject: Re: [PATCH 5/6] net: stmmac: add mdio clause 45 access from mac
- device for dwmac4
-Message-ID: <20190429132327.GF10772@lunn.ch>
-References: <1556433009-25759-1-git-send-email-biao.huang@mediatek.com>
- <1556433009-25759-6-git-send-email-biao.huang@mediatek.com>
- <20190428163705.GH23059@lunn.ch>
- <1556517925.24897.17.camel@mhfsdcap03>
+ id 1hL7p7-0005vE-Kg; Mon, 29 Apr 2019 15:04:07 +0000
+Received: from mailhost.synopsys.com (dc2-mailhost2.synopsys.com
+ [10.12.135.162])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+ (No client certificate requested)
+ by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id 98CE4C002F;
+ Mon, 29 Apr 2019 15:04:04 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=synopsys.com; s=mail;
+ t=1556550245; bh=EP0l9O+XUelRrIR09obEO6YxvbV7t+C4HdJOJBUa3uI=;
+ h=From:To:CC:Subject:Date:References:In-Reply-To:From;
+ b=CE28/wGVwxEHboixUzXvBZ7W0piorfaFhmjtBZRhP4xYW+cXCsLqM9ARST+iO2GB1
+ 2lmPyX06uBcZ32qFp054wZojyhLd/027tG3kH2nsHICGO+Nz3BVKw9vxHmj2uLhv2m
+ LquYPNX+IDbVZN9WeMFkIRlaqEptiXCg7U64vya21NE/y4j+mN83Juf+EM/pKOllWc
+ ylXLrpNe5cvhyhoYTJCHDF6E09DIbEUQmkgDtYnWQ3womAmskL0pzdFAuhajVFV2cX
+ OI4hPVl+aw0bRpWstwOhobMyeGW1eomffJIM22vstnJyp+4SD+STwP2NhlCIoTIL0i
+ bs+w9Mp89a9wg==
+Received: from US01WXQAHTC1.internal.synopsys.com
+ (us01wxqahtc1.internal.synopsys.com [10.12.238.230])
+ (using TLSv1.2 with cipher AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mailhost.synopsys.com (Postfix) with ESMTPS id 94C3FA0096;
+ Mon, 29 Apr 2019 15:04:02 +0000 (UTC)
+Received: from DE02WEHTCA.internal.synopsys.com (10.225.19.92) by
+ US01WXQAHTC1.internal.synopsys.com (10.12.238.230) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Mon, 29 Apr 2019 08:04:02 -0700
+Received: from DE02WEMBXB.internal.synopsys.com ([fe80::95ce:118a:8321:a099])
+ by DE02WEHTCA.internal.synopsys.com ([::1]) with mapi id
+ 14.03.0415.000; Mon, 29 Apr 2019 17:04:00 +0200
+From: Jose Abreu <Jose.Abreu@synopsys.com>
+To: Biao Huang <biao.huang@mediatek.com>, "davem@davemloft.net"
+ <davem@davemloft.net>
+Subject: RE: [PATCH 2/2] net-next: stmmac: add mdio clause 45 access from
+ mac device for dwmac4
+Thread-Topic: [PATCH 2/2] net-next: stmmac: add mdio clause 45 access from
+ mac device for dwmac4
+Thread-Index: AQHU/lXExFDw5bAlc0G9MPOfQZ0kMKZTPDhg
+Date: Mon, 29 Apr 2019 15:03:59 +0000
+Message-ID: <78EB27739596EE489E55E81C33FEC33A0B46E586@DE02WEMBXB.internal.synopsys.com>
+References: <1556519724-1576-1-git-send-email-biao.huang@mediatek.com>
+ <1556519724-1576-3-git-send-email-biao.huang@mediatek.com>
+In-Reply-To: <1556519724-1576-3-git-send-email-biao.huang@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [10.107.19.176]
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1556517925.24897.17.camel@mhfsdcap03>
-User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_062339_873357_C5CF1D40 
-X-CRM114-Status: GOOD (  16.29  )
+X-CRM114-CacheID: sfid-20190429_080405_682623_422EFFB4 
+X-CRM114-Status: UNSURE (   8.51  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [185.16.172.187 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -78,68 +97,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: jianguo.zhang@mediatek.com, Alexandre Torgue <alexandre.torgue@st.com>,
- netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
- linux-mediatek@lists.infradead.org,
+Cc: "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
  Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
- linux-arm-kernel@lists.infradead.org
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> > Hi Biao
-> > 
-> > readl_poll_timeout() returns an error code. It is better to return
-> > that, than make up some other error code. Yes, i know the C22 read
-> > returns EBUSY, but we don't need to copy that behaviour into C45.
-> > 
-> OK, will return error code here.
-> > > +
-> > > +	value = 0;
-> > > +	value |= (prtad << priv->hw->mii.cl45_reg_shift)
-> > > +			& priv->hw->mii.cl45_reg_mask;
-> > > +	writel(value, priv->ioaddr + mii_data);
-> > > +
-> > > +	/* delay 2ms to avoid error value of get_phy_c45_devs_in_pkg */
-> > > +	mdelay(2);
-> > 
-> > Please could you explain this a bit more?
-> when of_mdiobus_register is invoked,
-> the C22 PHY addr information will be obtained in device tree(reg = xx,
-> no need through mdiobus),
-> but C45 PHY addr should be got through mdiobus->read according to
-> current flow.
->     of_mdiobus_register -->
->     of_mdiobus_register_phy -->
->     get_phy_device -->
->     get_phy_id -->
->     get_phy_c45_ids -->
->     get_phy_c45_devs_in_pkg
-> 
-> In my platform, mdio bus read will return 0xffff or 0x0000 for C45 in
-> of_mdiobus_register callstack, and that's not the expected value. 
-> So that the mdiobus register fails.
-> 
-> We took some time to find that only after adding 2ms delay here,
-> the read action will be stable and return the expected value.
-> 
-> did you try C45 support in your platform? I can't tell whether it's a
-> common or specified issue.
+From: Biao Huang <biao.huang@mediatek.com>
+Date: Mon, Apr 29, 2019 at 07:35:24
 
-It sounds like you need to put a logic analyser on the bus and see if
-it performs a C22 transaction, or an invalid transaction, without the
-2ms pause.
+> +		value |= priv->hw->mii.cl45_en;
 
-This sounds like a 'silicon' bug. There should not be a need to pause
-here. And the comment should talk about this silicon bug, not
-get_phy_c45_devs_in_pkg(). It will fail for all accesses, not just
-those for get_phy_c45_devs_in_pkg().
+This tells the MAC that a C45 Capable PHY is connected so it should be 
+written before anything else. Maybe that explains the need for the 
+mdelay() that you have in the code ?
 
-	Andrew
+Thanks,
+Jose Miguel Abreu
 
 _______________________________________________
 Linux-mediatek mailing list
