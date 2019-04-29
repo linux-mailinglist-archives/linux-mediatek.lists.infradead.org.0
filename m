@@ -2,54 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7B5E4DD15
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 09:46:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 66EF8DD44
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 09:58:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nD1pSEAHKhqoacKzp6sOz3AeMDYvHBXMjBbHrrSsxlI=; b=rFOPDbXwWpEVYK
-	+IOXb1NmWYublM39PHao3yDjXnHmTKHDNW5gTLqVxrJmz3mKaIwbjlM9dNMHGm+P3qOdVyXsrGJCI
-	aCU8gKhtFrfAzWfEcAH2eiKws5/qT+8RFJpGZRv/yOAgKdEPJTruClvLkH2rlujiGnzEry8JMbGnn
-	0nZ3zXZGJwBX5G/J3d6uO6NOtpKiPtrShfpOTAjUeLfItdpl9TAzu5voKMSPZj+S/fdRTPQh7jabq
-	1GP8fO2OgE2KXhJm6zS+sZtrpx1XGv9oM77GItVq5B9+kDbpgq6VFmuqsO4bWMLzQbIR5FTNHBo/R
-	kxFt/xMY9wiWvXXzUEzA==;
+	List-Owner; bh=3YpDe3fC3ZvNA7ZOMuIy4BZTGXfrT94zzNEdj3Omblw=; b=IT15y6tocUidf9
+	HRztCLY+hm8sykEX3YZjBzRwGlXSRB1VtWwdoH3F97YcIw3IrHPYd0vwaI0pxi1XDzzcOIzwkBtkI
+	KeZQ3S+Uzu8USOCZYM8HjIA69ou47aNnMSqkcf95txeDpyV+TfjAVCQFRogIf06iOTO6b3TxIvokW
+	q/6Vh4PD75axyDWXWX6KyLAupZLqr/cXYx4QQBy87w1aWiLph2K9P1qDaeIB4jCXAAGxZ9Zqlqh3t
+	XZR6DXSAe6HAh8NNTeFOHoUMxIiUttAYqMFzHrCZ/rzvWuYxqtWyE2xUOpmd14okaM5Ye11bUOZgj
+	IbnoRO6iECnNiNvlE0HQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL0zu-00040X-U6; Mon, 29 Apr 2019 07:46:46 +0000
-Received: from relay11.mail.gandi.net ([217.70.178.231])
+	id 1hL1Aj-0000e3-Md; Mon, 29 Apr 2019 07:57:57 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL0zr-000403-Hs; Mon, 29 Apr 2019 07:46:45 +0000
-Received: from xps13 (aaubervilliers-681-1-27-33.w90-88.abo.wanadoo.fr
- [90.88.147.33]) (Authenticated sender: miquel.raynal@bootlin.com)
- by relay11.mail.gandi.net (Postfix) with ESMTPSA id 57AE2100014;
- Mon, 29 Apr 2019 07:44:31 +0000 (UTC)
-Date: Mon, 29 Apr 2019 09:44:30 +0200
-From: Miquel Raynal <miquel.raynal@bootlin.com>
-To: Xiaolei Li <xiaolei.li@mediatek.com>
+ id 1hL1AZ-0000V9-IX; Mon, 29 Apr 2019 07:57:49 +0000
+X-UUID: 8def36b1ecb4447faf48b87193fa79a3-20190428
+X-UUID: 8def36b1ecb4447faf48b87193fa79a3-20190428
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1524038134; Sun, 28 Apr 2019 23:57:39 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Apr 2019 00:57:37 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs08n1.mediatek.inc
+ (172.21.101.55) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 29 Apr 2019 15:57:36 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 29 Apr 2019 15:57:34 +0800
+Message-ID: <1556524654.26455.27.camel@mhfsdcap03>
 Subject: Re: [RFC PATCH v2 1/1] mtd: rawnand: mtk: Re-license MTK NAND
  driver as Dual MIT/GPL
-Message-ID: <20190429094430.7715f7a1@xps13>
-In-Reply-To: <20190425015552.42638-2-xiaolei.li@mediatek.com>
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: Miquel Raynal <miquel.raynal@bootlin.com>
+Date: Mon, 29 Apr 2019 15:57:34 +0800
+In-Reply-To: <20190429094430.7715f7a1@xps13>
 References: <20190425015552.42638-1-xiaolei.li@mediatek.com>
  <20190425015552.42638-2-xiaolei.li@mediatek.com>
-Organization: Bootlin
-X-Mailer: Claws Mail 3.17.1 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
+ <20190429094430.7715f7a1@xps13>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_004643_737256_459D3F08 
-X-CRM114-Status: UNSURE (   6.63  )
+X-CRM114-CacheID: sfid-20190429_005747_620506_4DDE316D 
+X-CRM114-Status: UNSURE (   9.34  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.7 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.178.231 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,15 +83,17 @@ Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgWGlhb2xlaSwKClhpYW9sZWkgTGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPiB3cm90ZSBv
-biBUaHUsIDI1IEFwciAyMDE5IDA5OjU1OjUyCiswODAwOgoKPiBJdCBpcyBhbGxvd2VkIHRvIHVz
-ZSBNVEsgTkFORCBkcml2ZXIgd2l0aCBHUEwtMi4wIG9yIE1JVCBsaWNlbnNlLgo+IEJ1dCBub3cg
-aXQgaXMgb25seSBsaWNlbnNlZCBhcyBHUEwtMi4wLgo+IFNvIHJlLWxpY2Vuc2UgaXQgYXMgZHVh
-bCBNSVQvR1BMLgo+IAoKWW91IGFsc28gcmVtb3ZlIHRoZSBsaWNlbnNlIHRleHQgYW5kIHJlcGxh
-Y2UgaXQgd2l0aCBhbiBTUERYIHRhZywKcGxlYXNlIGRlc2NyaWJlIHRoaXMgY2hhbmdlIHRvby4K
-Cj4gU2lnbmVkLW9mZi1ieTogWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+Cj4g
-QWNrZWQtYnk6IEpvcmdlIFJhbWlyZXotT3J0aXogPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJv
-Lm9yZz4KPiAtLS0KClRoYW5rcywKTWlxdcOobAoKX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1l
-ZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFp
-bG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+SGkgTWlxdWVsLAoKT24gTW9uLCAyMDE5LTA0LTI5IGF0IDA5OjQ0ICswMjAwLCBNaXF1ZWwgUmF5
+bmFsIHdyb3RlOgo+IEhpIFhpYW9sZWksCj4gCj4gWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRp
+YXRlay5jb20+IHdyb3RlIG9uIFRodSwgMjUgQXByIDIwMTkgMDk6NTU6NTIKPiArMDgwMDoKPiAK
+PiA+IEl0IGlzIGFsbG93ZWQgdG8gdXNlIE1USyBOQU5EIGRyaXZlciB3aXRoIEdQTC0yLjAgb3Ig
+TUlUIGxpY2Vuc2UuCj4gPiBCdXQgbm93IGl0IGlzIG9ubHkgbGljZW5zZWQgYXMgR1BMLTIuMC4K
+PiA+IFNvIHJlLWxpY2Vuc2UgaXQgYXMgZHVhbCBNSVQvR1BMLgo+ID4gCj4gCj4gWW91IGFsc28g
+cmVtb3ZlIHRoZSBsaWNlbnNlIHRleHQgYW5kIHJlcGxhY2UgaXQgd2l0aCBhbiBTUERYIHRhZywK
+PiBwbGVhc2UgZGVzY3JpYmUgdGhpcyBjaGFuZ2UgdG9vLgpPSy4gTm8gcHJvYmxlbS4KClRoYW5r
+cywKWGlhb2xlaQo+IAo+ID4gU2lnbmVkLW9mZi1ieTogWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBt
+ZWRpYXRlay5jb20+Cj4gPiBBY2tlZC1ieTogSm9yZ2UgUmFtaXJlei1PcnRpeiA8am9yZ2UucmFt
+aXJlei1vcnRpekBsaW5hcm8ub3JnPgo+ID4gLS0tCj4gCj4gVGhhbmtzLAo+IE1pcXXDqGwKCgoK
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVk
+aWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0
+cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
