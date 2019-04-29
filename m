@@ -2,84 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7451BE877
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 19:11:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1B0B1ECBE
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 00:27:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jP5mYxpghgk0wAvp/hh5u2Uw8u+gyMOylfkcPwvwFk4=; b=Wz5d8vwHn/9pXj
-	Zm0Qb61dxspdQ45dGSGB35pqyyOt0ZVVmvkMqQ2HP65hMupidK6JySv1KXe8YmneYeZ3M2VH11FUn
-	8h9F0cGNVnUzzysopPN9B6tZ/odAEKdJ5lj3UPEpfSHfG2/aTdh3XJyxEVGVNRSIaYTrH8ENwmzWn
-	XG6rbURNWEsUGnDLsjP7kIi9ARwJyHYu0EQJWKey5I4TNGcSbPxKiW5TXf1a354flRUcg5nB0UP+Z
-	3aHS7KT9xnczzrnl4wvJSsYjOoFO+pTvj/4XswuLeBmoMULHhzgEVSGNqdCqgz730bgZkwhNBIY4S
-	2N3BNfDrt0bH3U9AStVQ==;
+	List-Owner; bh=1xqPVm5FgDE0xkfmWdr1qpbpZSDW3RIsvJCX0RpWitc=; b=A/5ofqSBhcIxyH
+	QixiYyUkyl5/Loq6ajRBi9wy4KhNkGr3eLdrSYglUpDv2/r+zWE4N13FEw+nE8ZruXYf8AI5ulCTA
+	NTaThiEa8x+Y3K/bu/uPjX8RGHlyYZuxYKJYwFlNKtqWKDoJYhGx0kzSLVojHvSZMm3GT9ksZHmhn
+	g4UV/4xxOTJvz2XcH+UPzXL3WdjLxySk34vyDo8f5Ms+ra/q6NIFtXXzuFEz4EncWRPUqTB0YwED+
+	DBfoxW0L/LmJwb/YcWSUHBbPGWiLDayQW89O3pDlmrO0Qzu8Y3Bd+7z8FIoIqTDRPHQVjPmgJOqpU
+	uck7s+12OhMmNHJk1+6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL9oT-0008Aj-Gv; Mon, 29 Apr 2019 17:11:33 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1hLEji-0004uI-4t; Mon, 29 Apr 2019 22:26:58 +0000
+Received: from mail-ot1-f65.google.com ([209.85.210.65])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL9lF-0003Gp-8r
- for linux-mediatek@lists.infradead.org; Mon, 29 Apr 2019 17:08:38 +0000
-Received: by mail-lf1-x144.google.com with SMTP id u17so8611410lfi.3
- for <linux-mediatek@lists.infradead.org>; Mon, 29 Apr 2019 10:08:12 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=lixom-net.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=wOR2n/WKNBUlgLsrspMYLj33ij4ail9EpMWAzQM+fOY=;
- b=y1BPnATeiJgU4rbLMQZ4SDld1g79zw1NXRTsk+8h63rzjqInRjWUhGv0v6WovaaJSq
- VuhXW5O9E1zkcB/iwlN5yGm29aNmDlOjHjLp6Nlqr63G9n/jMRjRgprCl8LDMl+5nL0U
- OAOERZB4jzHMVIrDRt7+rIGiCEI6P7eXKZW6tHGugru+uQ+JRd/l4vkSoCHSmr1aBD6g
- 3uYBojW4MMbtg8DxmTRzmHN/6md6zhYVzH2crjPNqZfZBheAJA45U90HBsX95pDARVP0
- mcKL5QSbdzrWlKH0KkOBwczqjSP6C5jrh8XUkadM2Dr95VhzHzP0FBGfYUmrNDqOec1S
- Ot6g==
+ id 1hLEjZ-0004nh-3z; Mon, 29 Apr 2019 22:26:50 +0000
+Received: by mail-ot1-f65.google.com with SMTP id r20so9038619otg.4;
+ Mon, 29 Apr 2019 15:26:48 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=wOR2n/WKNBUlgLsrspMYLj33ij4ail9EpMWAzQM+fOY=;
- b=YgaQkivBaYbDwKu6fybBGnX+b2VLLywZq62fNxAB1X8CoeqhkdLi8vuYDWTxtcmqXY
- 7jRwe5RSZGnOYzUxdTfrbJznWo21c9IydLKStGoFdECYz2FCQL4Nn3Ls0Pb4UJPtxW4o
- G/aNQQ/T76O+hjwD0jXh6az4Nh1Eziro69BlAzldOKtGMdVVaIygbeY/otWjczT2Kpe6
- BnGOu3EMtEsZULZYJlpXsPULSKY8f0Cwu9an69NiXDiJgRE2/R9NlgHItpcmYAdDUQbf
- anFsYd8jcWF03oRjNvTtGDM3fmpyeSKAsGzlIFJjVefuvg138DEd2CQuydykcZmIAgYZ
- xg3Q==
-X-Gm-Message-State: APjAAAW8fQTPtWhD9F2i5DBXjL0wTooJdZzxWqUioH36d39ks5H/xK6b
- CiEaYyrB5whSsGMmTrBCAaHBXw==
-X-Google-Smtp-Source: APXvYqxXXQVdOGHrHWTt813C818iLtBiUoofOLkGEeN7de2qupW3UQIVzhxdljtgdI/QBEPD1lS1oQ==
-X-Received: by 2002:a19:751a:: with SMTP id y26mr12229470lfe.47.1556557691259; 
- Mon, 29 Apr 2019 10:08:11 -0700 (PDT)
-Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
- by smtp.gmail.com with ESMTPSA id z16sm8795165lfi.9.2019.04.29.10.08.09
+ bh=oRenui5Af25LDBg0th7gwZb/BUZtc0JZI0y66saQTqM=;
+ b=En7q1Wi1EBcHlN4f5C2wTB8NcbuMdNLKfZDf8OFG5Ownowz9ijAV5ptWscVDVudoGi
+ LijBJKMXpk/B7xyM60bKkhy5G1bgpI6Ur9o0ufagGd9xTATw3PJl9wKO4Y9Oq2FtJS6w
+ WvDuq0gaixw0kLiURng3r+4vH/IDjbJqoogL1EfQbraLdGdkwL1+TntLNkaTnvuO7ah3
+ TFT0bP3Rargcqi8kcEatdUlD3EWkyzGh3vtq4e0R/xAgvqhVirK8X6SdaqHIC/MBqtJT
+ uH9dzCq5jBPea16sexUqhF4tUx0XwfdUUGBwYVIz1wozyi4457tqzA0gPUYSkmF7UmJz
+ wf9A==
+X-Gm-Message-State: APjAAAVMm0xefDAtE4BTIBMORlaV2TObQh0lI7mNvc3C2AMaaoZgQKEW
+ uCDC4EfkZxuKrGFKd9KQcg==
+X-Google-Smtp-Source: APXvYqwld5ffy3XYYJumXMPmkKQz5Gc5XST2UIO1EEhtfK4zl1hJZzjNCevWVUbeRLAFuTl7ew5iqw==
+X-Received: by 2002:a9d:6397:: with SMTP id w23mr274180otk.332.1556576807861; 
+ Mon, 29 Apr 2019 15:26:47 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id j82sm14504482oih.31.2019.04.29.15.26.46
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 29 Apr 2019 10:08:09 -0700 (PDT)
-Date: Mon, 29 Apr 2019 09:52:42 -0700
-From: Olof Johansson <olof@lixom.net>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: Re: [GIT PULL] soc: mediatek: soc driver updates for v5.2
-Message-ID: <20190429165242.lzujqpkym4p43etl@localhost>
-References: <269cf168-14c0-6a72-5078-0c8e307655eb@gmail.com>
+ Mon, 29 Apr 2019 15:26:46 -0700 (PDT)
+Date: Mon, 29 Apr 2019 17:26:46 -0500
+From: Rob Herring <robh@kernel.org>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Subject: Re: [v2 1/3] dt-bindings: display: mediatek: update dsi supported
+ chips
+Message-ID: <20190429222646.GA20752@bogus>
+References: <20190416054217.75387-1-jitao.shi@mediatek.com>
+ <20190416054217.75387-2-jitao.shi@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <269cf168-14c0-6a72-5078-0c8e307655eb@gmail.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
+In-Reply-To: <20190416054217.75387-2-jitao.shi@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_100813_836004_F7D2534A 
-X-CRM114-Status: GOOD (  13.66  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190429_152649_162345_05FE519C 
+X-CRM114-Status: GOOD (  13.70  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ no trust [209.85.210.65 listed in list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,51 +87,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Fabien Parent <fparent@baylibre.com>,
- Nathan Chancellor <natechancellor@gmail.com>, arm-soc <arm@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
+ Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ linux-mediatek@lists.infradead.org, Andy Yan <andy.yan@rock-chips.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, Kumar Gala <galak@codeaurora.org>,
+ Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Apr 23, 2019 at 06:14:24PM +0200, Matthias Brugger wrote:
-> Hi Olof and Arnd,
+On Tue, Apr 16, 2019 at 01:42:15PM +0800, Jitao Shi wrote:
+> Update device tree binding documentation for the dsi for
+> Mediatek MT8183 SoCs.
 > 
-> Below you can find the updates for soc drivers ready to be merged for v5.2.
-> 
-> Please take them into account.
-> 
-> Best regards,
-> Matthias
-> 
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 > ---
+>  .../devicetree/bindings/display/mediatek/mediatek,dsi.txt       | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
 > 
-> The following changes since commit 9e98c678c2d6ae3a17cb2de55d17f69dddaa231b:
-> 
->   Linux 5.1-rc1 (2019-03-17 14:22:26 -0700)
-> 
-> are available in the Git repository at:
-> 
->   https://git.kernel.org/pub/scm/linux/kernel/git/matthias.bgg/linux.git/
-> tags/v5.1-next-soc
-> 
-> for you to fetch changes up to 89e28da82836530f1ac7a3a32fecc31f22d79b3e:
-> 
->   soc: mediatek: pwrap: Zero initialize rdata in pwrap_init_cipher (2019-04-12
-> 21:57:49 +0200)
-> 
-> ----------------------------------------------------------------
-> pmic wrapper:
-> - add mt8516 bindings
-> - add mt8516 driver support
-> - fix clang warning
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
+> index fadf327c7cdf..bd68195458b9 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
+> @@ -26,7 +26,7 @@ The MIPI TX configuration module controls the MIPI D-PHY.
+>  
+>  Required properties:
+>  - compatible: "mediatek,<chip>-mipi-tx"
+> -  the supported chips are mt2701 and mt8173.
+> +  the supported chips are mt2701 , mt8173 and mt8183.
 
-Merged, thanks!
+drop the space                     ^
 
+With that,
 
--Olof
+Acked-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
