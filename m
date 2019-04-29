@@ -2,55 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 24ED7DC0A
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 08:36:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D7028DC11
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 08:38:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AE6oRGO5qJV3vZecIwx05BhgX6TfqyWJYyn9lwAJscA=; b=lIpLo7IwHmZF3x
-	9cMvqY7EzODW8ipLshsMGE7cATP7h4j8QifG9Kss8KTbwgYZBG1cD+D18q9LC9CRKOgHG1gSeFmwd
-	Jmr3l9Yquzk/ICpeif7pzDjRgiOorLW0XQjl1qUkUdHbl53OYRSlmKrYaxGktoFVD6JGAPq8wsNYO
-	OhaNfHzAhFoUksbRImqKmg1Wntn+y0NlcomZfCOTssLMEpenQcykMKozJPIpoxlrjON4E3l9ljuBt
-	t3E5iTFSNQFWU4z7riiCvV5tcJvwM4u5hKPqluflaQGrv+n0juCDZjvF9pcXvSMk61QOdc2ZykisQ
-	df4da2s9l+j/ZINbzqUA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=xSOFpJvAHKQxW9xoiL2bMvXmb0t25G6jvjcYb7btTrs=; b=EwIu49bnihLIiG
+	6KE0c++whqFabI8kbrsSBGUf1WqzJypWDk+ZjVlpro703wcF/BLok0JWLtW7ZaovTWcuaXgBBMO0W
+	+GdQEbaIUVfcvHQkVLTaAIOF/1WlJ3KzqVerW20VkOGJcGR/RPcWiVhp3+H9exm/ETKNAzTzaYipO
+	3Vrx/Glc6vxWjE+3VEbNOh17Ic0k7FvQ+kuMX0P41RaWwv38njTIaSEAvmo6oI2EFE4m8M0c1Pfio
+	jlveqhJG9WMbjd71nRyXoDbdpUg7eFh7mmeqbu+1LxSbDFtSGA4Hz97AlZ2mMwO8/2etDrrjzdxFz
+	N8jUuI2ileyBea8KDyCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKzu7-00057u-BF; Mon, 29 Apr 2019 06:36:43 +0000
+	id 1hKzwD-0005dQ-FR; Mon, 29 Apr 2019 06:38:53 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKzu4-00057S-BA; Mon, 29 Apr 2019 06:36:41 +0000
-X-UUID: 33a79edcf875460594ecf9746ce6e65b-20190428
-X-UUID: 33a79edcf875460594ecf9746ce6e65b-20190428
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <eddie.huang@mediatek.com>)
+ id 1hKzw2-0005Ss-HY; Mon, 29 Apr 2019 06:38:43 +0000
+X-UUID: 84e19a367dd543558feaff10e515bcf1-20190428
+X-UUID: 84e19a367dd543558feaff10e515bcf1-20190428
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1725050422; Sun, 28 Apr 2019 22:35:54 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 1605268737; Sun, 28 Apr 2019 22:38:39 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 28 Apr 2019 23:35:53 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Apr 2019 14:35:51 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 29 Apr 2019 14:35:51 +0800
-Message-ID: <1556519751.15195.5.camel@mtksdaap41>
-Subject: Re: [PATCH v2 2/2] clk: reset: Modify reset-controller driver
-From: Eddie Huang <eddie.huang@mediatek.com>
-To: Yong Liang <yong.liang@mediatek.com>
-Date: Mon, 29 Apr 2019 14:35:51 +0800
-In-Reply-To: <1556262618-14281-2-git-send-email-yong.liang@mediatek.com>
-References: <1556262618-14281-1-git-send-email-yong.liang@mediatek.com>
- <1556262618-14281-2-git-send-email-yong.liang@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Sun, 28 Apr 2019 23:38:38 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Apr 2019 14:38:36 +0800
+Received: from mtkslt306.mediatek.inc (10.21.14.136) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 29 Apr 2019 14:38:36 +0800
+From: Xiaolei Li <xiaolei.li@mediatek.com>
+To: <miquel.raynal@bootlin.com>, <richard@nod.at>
+Subject: [PATCH 0/5] MTK NAND driver improvements and fixes
+Date: Mon, 29 Apr 2019 14:38:29 +0800
+Message-ID: <20190429063834.45967-1-xiaolei.li@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 42CF0C37319A5446CCD51CF3BB79BF061238EA6C185D6EC7417B1474532625C92000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_233640_381175_72E3B7F7 
-X-CRM114-Status: GOOD (  16.79  )
+X-CRM114-CacheID: sfid-20190428_233842_586966_A5D23E0E 
+X-CRM114-Status: UNSURE (   6.30  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -70,88 +69,66 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
- JamesJJ Liao =?UTF-8?Q?=28=E5=BB=96=E5=BB=BA=E6=99=BA=29?=
- <jamesjj.liao@mediatek.com>, "drinkcat@chromium.org" <drinkcat@chromium.org>,
- Weiyi Lu =?UTF-8?Q?=28=E5=91=82=E5=A8=81=E5=84=80=29?= <Weiyi.Lu@mediatek.com>,
- "chunhui.dai@mediatek.com" <chunhui.dai@mediatek.com>,
- "sboyd@kernel.org" <sboyd@kernel.org>,
- "mturquette@baylibre.com" <mturquette@baylibre.com>,
- "robh+dt@kernel.org" <robh+dt@kernel.org>,
- "jasu@njomotys.info" <jasu@njomotys.info>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Owen Chen =?UTF-8?Q?=28=E9=99=B3=E5=B3=BB=E6=96=8C=29?=
- <owen.chen@mediatek.com>,
- Erin Lo =?UTF-8?Q?=28=E7=BE=85=E9=9B=85=E9=BD=A1=29?= <erin.lo@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: linux-mediatek@lists.infradead.org, xiaolei.li@mediatek.com,
+ linux-mtd@lists.infradead.org, srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Yong,
+Hello Maintainers,
 
-Please add reset controller maintainer in this mailing loop
-  Philipp Zabel <p.zabel@pengutronix.de>
+The following patch set is used to do MTK NAND driver improvements and
+bug fixes, include:
+* Fix low level time calculation of read/write cycle to meet tRC_min
+  and tWC_min requirements.
+* Refine RE# pulse width calculation and data sampling to improve read
+  performance.
+* Add CS validity check.
+* Fix oob buffer pointer wrongly setting and empty page threshold setting.
 
+Changes relative to:
+--------------------
 
-On Fri, 2019-04-26 at 15:10 +0800, Yong Liang wrote:
-> From: "yong.liang" <yong.liang@mediatek.com>
-> 
-> Set reset signal by a register and clear reset signal by
-> another register for 8183.
+tree    : git://git.infradead.org/linux-mtd.git
+branch  : master
+commit  :
+        'commit 3e35730dd754 ("mtd: powernv_flash: Fix device
+         registration error")
 
-You should move your signed-off-by here, then add --- in next line to
-avoid your notes appear in commit message when use git am to apply this
-patch
+Tests:
+------
 
-> Base on https://git.kernel.org/pub/scm/linux/kernel/git/clk/linux.git branch clk-next and https://patchwork.kernel.org/patch/10856987/
-> 
-> Changes in patch v2:
-> Rollback modify for "_tuner_en_bit, _pcw_reg, _pcw_shift,"
-> in drivers/clk/mediatek/clk-mt8183.c
-> 
-> Signed-off-by: yong.liang <yong.liang@mediatek.com>
-> ---
->  drivers/clk/mediatek/clk-mt8183.c                  |   10 ++-
->  drivers/clk/mediatek/clk-mtk.h                     |    3 +
->  drivers/clk/mediatek/reset.c                       |   53 +++++++++++-
->  .../dt-bindings/reset-controller/mt8183-resets.h   |   89 ++++++++++++++++++++
->  4 files changed, 151 insertions(+), 4 deletions(-)
->  create mode 100644 include/dt-bindings/reset-controller/mt8183-resets.h
-> 
-> diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-> index 9d86510..cda5b91 100644
-> --- a/drivers/clk/mediatek/clk-mt8183.c
-> +++ b/drivers/clk/mediatek/clk-mt8183.c
-> @@ -1156,6 +1156,7 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
->  {
->  	struct clk_onecell_data *clk_data;
->  	struct device_node *node = pdev->dev.of_node;
-> +	int r;
->  
->  	clk_data = mtk_alloc_clk_data(CLK_APMIXED_NR_CLK);
->  
-> @@ -1164,7 +1165,14 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
->  	mtk_clk_register_gates(node, apmixed_clks, ARRAY_SIZE(apmixed_clks),
->  		clk_data);
->  
-> -	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-> +	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-> +	if (r)
-> +		dev_err(&pdev->dev,
-> +			"%s(): could not register clock provider: %d\n",__func__, r);
-> +
-> +	mtk_register_reset_controller_set_clr(node, 4, 0x120);
-> +
-> +	return r;
->  }
+* ubifs and jffs2 are validated on NAND device MT29F16G08ADBCA by
+  'dd' command.
+* all drivers/mtd/tests/* pass.
+* speed test:
+  eraseblock write speed is 11087 KiB/s
+  eraseblock read speed is 19986 KiB/s
+  page write speed is 10689 KiB/s
+  page read speed is 18724 KiB/s
+  2 page write speed is 10611 KiB/s
+  2 page read speed is 18713 KiB/s
+  erase speed is 103696 KiB/s
+  2x multi-block erase speed is 354248 KiB/s
+  4x multi-block erase speed is 350459 KiB/s
+  8x multi-block erase speed is 356173 KiB/s
+  16x multi-block erase speed is 356173 KiB/s
+  32x multi-block erase speed is 358120 KiB/s
+  64x multi-block erase speed is 356173 KiB/s
 
-You should call mtk_register_reset_controller_set_clr function in
-clk_mt8183_infra_probe
+Xiaolei Li (5):
+  mtd: rawnand: mtk: Correct low level time calculation of r/w cycle
+  mtd: rawnand: mtk: Improve data sampling timing for read cycle
+  mtd: rawnand: mtk: Add validity check for CE# pin setting
+  mtd: rawnand: mtk: Fix wrongly assigned oob buffer pointer issue
+  mtd: rawnand: mtk: Setup empty page threshold correctly
 
-Eddie
+ drivers/mtd/nand/raw/mtk_nand.c | 73 ++++++++++++++++++++++++++-------
+ 1 file changed, 59 insertions(+), 14 deletions(-)
+
+--
+2.18.0
 
 
 
