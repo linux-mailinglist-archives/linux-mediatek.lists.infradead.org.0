@@ -2,64 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2F32BDE62
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 10:52:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D881DE61
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 10:52:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6IMC9hktWahFCcIERaflMHXaKc/cuS0stF0G0NfP6Y0=; b=eFNsG/K5lzfiGe
-	9wPxfRgK53di9Hy6xkW2N9mHzkcvbxrai6oRP6+oqXOMcFwfs6xVkMCoeAd1YuX/7OVOgsarSK+dZ
-	FQQAtzkUfNqz+seHk+U+/Qw2I+NFaWpYWugYC3NcS7anYK9qIa6qAi7LijPtAAKRpWhcZfH9X9fFZ
-	ydr4EItCPGWc7/ZwFoSjdGY+KJFX/j018vabduXA9zcFYUlBgAJLNycsLbJ5i6RhD+K8pWtrmn3Yl
-	S39m+dbXkLFrWOQ2nYfs3kuRq55EjyaiOCKXMldYy9oQoXBq0fXGYBT7F3xDIC5yvdAf3cEjFgULi
-	zHbj1S9+PZxvazd0Fp6w==;
+	List-Owner; bh=k37Ep3Q1jSaIsYo8cH//TQX9PzMcmF1MayrH7PcoxC0=; b=de6YyfJoDQy5c3
+	6/4tWsqzpUJiFbEJ0+f5K5JMPbuX4f83SE1h85kcJ+KF8yZ4vsIureWM8w/HD0hIFnbU2B0fqTD2y
+	Hyzo8I8Eby4nB8STT32guZIYKHwQ177a+3odJedVGZz4FQywo/tPBnV8YibS6F+xibAJFKmKkT4N0
+	pFlYyh7b6l0YK9hYOVq4UJR+vp31hJp3ixQvwu6+AL3LlS0FLD6hMNW7nchHayB3+AZz0Y9XCFh66
+	40MmN/zTM7vW16ANaMhXGdZ3Yl3cWwZWaOf9gtyDZKqqsoqlgZYGrkrZ4gN9m9UDKT4Zek8cbrBjt
+	Tll8jCBxK8gJ/ZtBn4Iw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL214-0007Br-5G; Mon, 29 Apr 2019 08:52:02 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hL211-000778-6Z; Mon, 29 Apr 2019 08:51:59 +0000
+Received: from dc8-smtprelay2.synopsys.com ([198.182.47.102]
+ helo=smtprelay-out1.synopsys.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL20w-00070S-39; Mon, 29 Apr 2019 08:51:58 +0000
-X-UUID: c38d71cf063b4d2ba9d2613fa9ff3c50-20190429
-X-UUID: c38d71cf063b4d2ba9d2613fa9ff3c50-20190429
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <xiaolei.li@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 147392293; Mon, 29 Apr 2019 00:51:30 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Apr 2019 01:51:29 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Apr 2019 16:51:20 +0800
-Received: from mtkslt306.mediatek.inc (10.21.14.136) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 29 Apr 2019 16:51:20 +0800
-From: Xiaolei Li <xiaolei.li@mediatek.com>
-To: <miquel.raynal@bootlin.com>, <richard@nod.at>
-Subject: [RFC PATCH v3 1/1] mtd: rawnand: mtk: Re-license MTK NAND driver as
- Dual MIT/GPL
-Date: Mon, 29 Apr 2019 16:51:16 +0800
-Message-ID: <20190429085116.60081-2-xiaolei.li@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190429085116.60081-1-xiaolei.li@mediatek.com>
-References: <20190429085116.60081-1-xiaolei.li@mediatek.com>
+ id 1hL20p-0006wr-Hr; Mon, 29 Apr 2019 08:51:48 +0000
+Received: from mailhost.synopsys.com (dc2-mailhost2.synopsys.com
+ [10.12.135.162])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+ (No client certificate requested)
+ by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id AC019C0070;
+ Mon, 29 Apr 2019 08:51:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=synopsys.com; s=mail;
+ t=1556527906; bh=wJX6bGWdlKPbsdOdJyT3D6DTbahJBisRdZKY2ByzFdM=;
+ h=From:To:CC:Subject:Date:References:In-Reply-To:From;
+ b=CUKpkuCNXsp8rWOQtRoufEAf+S/ZNN0U47pNC4m1eNnMW5BdVlhndu0OCffNhpOEI
+ bmYSrUfNC+FbiMhVcroDIDR3kHdfr1wOlVRXh0idCUJGSygZluE+0uZ4aE7Zur5UK4
+ 6kloCVJ4ERdI8Txz8JSbduI2ii9LkIK1ZXXc/+nG49aj3kEP7UJefSbsaLVJhC+l8/
+ TrSBNVuClq1EZ29Vgp09F5GpSc78fg8CV+RzrlMgv9XCsemtct+/uEqftDEhSO/V/W
+ zoAxvGzidAsHkhDWg86FVcWGEUJSHfEwMJahxQNsuJcpNXpcImPP735Vtp+330/qi+
+ 4vbBZOz5DGALA==
+Received: from US01WXQAHTC1.internal.synopsys.com
+ (us01wxqahtc1.internal.synopsys.com [10.12.238.230])
+ (using TLSv1.2 with cipher AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mailhost.synopsys.com (Postfix) with ESMTPS id EE4B8A0091;
+ Mon, 29 Apr 2019 08:51:41 +0000 (UTC)
+Received: from DE02WEHTCB.internal.synopsys.com (10.225.19.94) by
+ US01WXQAHTC1.internal.synopsys.com (10.12.238.230) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Mon, 29 Apr 2019 01:51:42 -0700
+Received: from DE02WEMBXB.internal.synopsys.com ([fe80::95ce:118a:8321:a099])
+ by DE02WEHTCB.internal.synopsys.com ([::1]) with mapi id
+ 14.03.0415.000; Mon, 29 Apr 2019 10:51:40 +0200
+From: Jose Abreu <Jose.Abreu@synopsys.com>
+To: Biao Huang <biao.huang@mediatek.com>, "davem@davemloft.net"
+ <davem@davemloft.net>
+Subject: RE: [PATCH 1/4] net: stmmac: update rx tail pointer register to fix
+ rx dma hang issue.
+Thread-Topic: [PATCH 1/4] net: stmmac: update rx tail pointer register to
+ fix rx dma hang issue.
+Thread-Index: AQHU/lMO5G2GtMH+wUeCSibnjv/EX6ZS1H8A
+Date: Mon, 29 Apr 2019 08:51:39 +0000
+Message-ID: <78EB27739596EE489E55E81C33FEC33A0B46DDF0@DE02WEMBXB.internal.synopsys.com>
+References: <1556518556-32464-1-git-send-email-biao.huang@mediatek.com>
+ <1556518556-32464-2-git-send-email-biao.huang@mediatek.com>
+In-Reply-To: <1556518556-32464-2-git-send-email-biao.huang@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [10.107.19.176]
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 7543E9F864FA6FADEE5DCA36AAB61F21531C2034102561E29FFAB9E7559BDE432000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_015154_451934_E12DE3DB 
-X-CRM114-Status: GOOD (  10.36  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190429_015147_599516_3833787A 
+X-CRM114-Status: GOOD (  13.25  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,112 +96,53 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com,
- srv_heupstream@mediatek.com, yellowriver2010@hotmail.com,
- jorge.ramirez-ortiz@linaro.org, matthias.bgg@gmail.com,
- boris.brezillon@collabora.com, linux-mtd@lists.infradead.org,
- yingjoe.chen@mediatek.com, rafal@milecki.pl,
- linux-mediatek@lists.infradead.org, xiaolei.li@mediatek.com
+Cc: "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-It is allowed to use MTK NAND driver with GPL-2.0 or MIT license.
-But now it is only licensed as GPL-2.0.
-So re-license it as dual MIT/GPL and replace license text with
-SPDX tag.
+From: Biao Huang <biao.huang@mediatek.com>
+Date: Mon, Apr 29, 2019 at 07:15:53
 
-Signed-off-by: Xiaolei Li <xiaolei.li@mediatek.com>
-Acked-by: Jorge Ramirez-Ortiz <jorge.ramirez-ortiz@linaro.org>
-Acked-by: Ryder Lee <ryder.lee@mediatek.com>
----
- drivers/mtd/nand/raw/mtk_ecc.c  | 12 ++----------
- drivers/mtd/nand/raw/mtk_ecc.h  |  4 +---
- drivers/mtd/nand/raw/mtk_nand.c | 12 ++----------
- 3 files changed, 5 insertions(+), 23 deletions(-)
+> Currently we will not update the receive descriptor tail pointer in
+> stmmac_rx_refill. Rx dma will think no available descriptors and stop
+> once received packets exceed DMA_RX_SIZE, so that the rx only test will fail.
+> 
+> Update the receive tail pointer in stmmac_rx_refill to add more descriptors
+> to the rx channel, so packets can be received continually
+> 
+> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
+> ---
+>  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    3 +++
+>  1 file changed, 3 insertions(+)
+> 
+> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> index 97c5e1a..818ad88 100644
+> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> @@ -3336,6 +3336,9 @@ static inline void stmmac_rx_refill(struct stmmac_priv *priv, u32 queue)
+>  		entry = STMMAC_GET_ENTRY(entry, DMA_RX_SIZE);
+>  	}
+>  	rx_q->dirty_rx = entry;
+> +	stmmac_set_rx_tail_ptr(priv, priv->ioaddr,
+> +			       rx_q->dma_rx_phy + (entry * sizeof(struct dma_desc)),
 
-diff --git a/drivers/mtd/nand/raw/mtk_ecc.c b/drivers/mtd/nand/raw/mtk_ecc.c
-index 6432bd70c3b3..eea0f903bc24 100644
---- a/drivers/mtd/nand/raw/mtk_ecc.c
-+++ b/drivers/mtd/nand/raw/mtk_ecc.c
-@@ -1,17 +1,9 @@
-+// SPDX-License-Identifier: GPL-2.0 OR MIT
- /*
-  * MTK ECC controller driver.
-  * Copyright (C) 2016  MediaTek Inc.
-  * Authors:	Xiaolei Li		<xiaolei.li@mediatek.com>
-  *		Jorge Ramirez-Ortiz	<jorge.ramirez-ortiz@linaro.org>
-- *
-- * This program is free software; you can redistribute it and/or modify
-- * it under the terms of the GNU General Public License version 2 as
-- * published by the Free Software Foundation.
-- *
-- * This program is distributed in the hope that it will be useful,
-- * but WITHOUT ANY WARRANTY; without even the implied warranty of
-- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-- * GNU General Public License for more details.
-  */
- 
- #include <linux/platform_device.h>
-@@ -600,4 +592,4 @@ module_platform_driver(mtk_ecc_driver);
- 
- MODULE_AUTHOR("Xiaolei Li <xiaolei.li@mediatek.com>");
- MODULE_DESCRIPTION("MTK Nand ECC Driver");
--MODULE_LICENSE("GPL");
-+MODULE_LICENSE("Dual MIT/GPL");
-diff --git a/drivers/mtd/nand/raw/mtk_ecc.h b/drivers/mtd/nand/raw/mtk_ecc.h
-index a455df080952..0e48c36e6ca0 100644
---- a/drivers/mtd/nand/raw/mtk_ecc.h
-+++ b/drivers/mtd/nand/raw/mtk_ecc.h
-@@ -1,12 +1,10 @@
-+/* SPDX-License-Identifier: GPL-2.0 OR MIT */
- /*
-  * MTK SDG1 ECC controller
-  *
-  * Copyright (c) 2016 Mediatek
-  * Authors:	Xiaolei Li		<xiaolei.li@mediatek.com>
-  *		Jorge Ramirez-Ortiz	<jorge.ramirez-ortiz@linaro.org>
-- * This program is free software; you can redistribute it and/or modify it
-- * under the terms of the GNU General Public License version 2 as published
-- * by the Free Software Foundation.
-  */
- 
- #ifndef __DRIVERS_MTD_NAND_MTK_ECC_H__
-diff --git a/drivers/mtd/nand/raw/mtk_nand.c b/drivers/mtd/nand/raw/mtk_nand.c
-index b6b4602f5132..3cbc25793062 100644
---- a/drivers/mtd/nand/raw/mtk_nand.c
-+++ b/drivers/mtd/nand/raw/mtk_nand.c
-@@ -1,17 +1,9 @@
-+// SPDX-License-Identifier: GPL-2.0 OR MIT
- /*
-  * MTK NAND Flash controller driver.
-  * Copyright (C) 2016 MediaTek Inc.
-  * Authors:	Xiaolei Li		<xiaolei.li@mediatek.com>
-  *		Jorge Ramirez-Ortiz	<jorge.ramirez-ortiz@linaro.org>
-- *
-- * This program is free software; you can redistribute it and/or modify
-- * it under the terms of the GNU General Public License version 2 as
-- * published by the Free Software Foundation.
-- *
-- * This program is distributed in the hope that it will be useful,
-- * but WITHOUT ANY WARRANTY; without even the implied warranty of
-- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-- * GNU General Public License for more details.
-  */
- 
- #include <linux/platform_device.h>
-@@ -1598,6 +1590,6 @@ static struct platform_driver mtk_nfc_driver = {
- 
- module_platform_driver(mtk_nfc_driver);
- 
--MODULE_LICENSE("GPL");
-+MODULE_LICENSE("Dual MIT/GPL");
- MODULE_AUTHOR("Xiaolei Li <xiaolei.li@mediatek.com>");
- MODULE_DESCRIPTION("MTK Nand Flash Controller Driver");
--- 
-2.18.0
+I think you can just use the "rx_q->rx_tail_addr" here. It'll always 
+trigger a poll demand for the channel.
 
+Thanks,
+Jose Miguel Abreu
 
 _______________________________________________
 Linux-mediatek mailing list
