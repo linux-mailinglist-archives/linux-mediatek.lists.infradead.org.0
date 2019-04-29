@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9D881DE61
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 10:52:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6D5F8DE97
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 11:01:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=k37Ep3Q1jSaIsYo8cH//TQX9PzMcmF1MayrH7PcoxC0=; b=de6YyfJoDQy5c3
-	6/4tWsqzpUJiFbEJ0+f5K5JMPbuX4f83SE1h85kcJ+KF8yZ4vsIureWM8w/HD0hIFnbU2B0fqTD2y
-	Hyzo8I8Eby4nB8STT32guZIYKHwQ177a+3odJedVGZz4FQywo/tPBnV8YibS6F+xibAJFKmKkT4N0
-	pFlYyh7b6l0YK9hYOVq4UJR+vp31hJp3ixQvwu6+AL3LlS0FLD6hMNW7nchHayB3+AZz0Y9XCFh66
-	40MmN/zTM7vW16ANaMhXGdZ3Yl3cWwZWaOf9gtyDZKqqsoqlgZYGrkrZ4gN9m9UDKT4Zek8cbrBjt
-	Tll8jCBxK8gJ/ZtBn4Iw==;
+	List-Owner; bh=++KytSbFDuNRUjkmuYJ3ksUqpzKACAeDUn10a1L/W84=; b=JKKlB6K3eBt5jV
+	Lkqdx219W6g6FgEZQkgM7EBjW8Y7eQaWxqoc1+Cmaa7Px0xTUXlHjLKmgYcQJNrCofDE3CZcDN2Cs
+	8DzdwdP7SM6I0snD3uN3ez3pUH5fso1sDsYo6KaAwZYrUr8rGe4YyQ6Pe3G4psozd3ukwJ8iFBd9X
+	MoleGVkvFSZTS9cfOY9HZZ0kcIZO4YcZaUi0jPopLAe+tv9S/0HMeqSqDt/YFy95mUu44ZiDILiA6
+	TkUkF/g7Q142kVWT3wDHedKkP5oha9BYlRUvAxe8N8SyTsZks67jpq3fO5ARQ3rgWEYIcCBtYxMy4
+	iNFAeiCJE9wFE21PESRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL211-000778-6Z; Mon, 29 Apr 2019 08:51:59 +0000
-Received: from dc8-smtprelay2.synopsys.com ([198.182.47.102]
- helo=smtprelay-out1.synopsys.com)
+	id 1hL2A1-000369-9K; Mon, 29 Apr 2019 09:01:17 +0000
+Received: from smtprelay-out1.synopsys.com ([198.182.61.142])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL20p-0006wr-Hr; Mon, 29 Apr 2019 08:51:48 +0000
-Received: from mailhost.synopsys.com (dc2-mailhost2.synopsys.com
- [10.12.135.162])
+ id 1hL29m-0002rA-8n; Mon, 29 Apr 2019 09:01:03 +0000
+Received: from mailhost.synopsys.com (badc-mailhost2.synopsys.com
+ [10.192.0.18])
  (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
  (No client certificate requested)
- by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id AC019C0070;
- Mon, 29 Apr 2019 08:51:44 +0000 (UTC)
+ by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id 8D1C3C00B0;
+ Mon, 29 Apr 2019 09:00:59 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=synopsys.com; s=mail;
- t=1556527906; bh=wJX6bGWdlKPbsdOdJyT3D6DTbahJBisRdZKY2ByzFdM=;
+ t=1556528460; bh=f+Cu/athXgOTZCGbWOkD1x70otBzc7nrCuSU1nPo2XY=;
  h=From:To:CC:Subject:Date:References:In-Reply-To:From;
- b=CUKpkuCNXsp8rWOQtRoufEAf+S/ZNN0U47pNC4m1eNnMW5BdVlhndu0OCffNhpOEI
- bmYSrUfNC+FbiMhVcroDIDR3kHdfr1wOlVRXh0idCUJGSygZluE+0uZ4aE7Zur5UK4
- 6kloCVJ4ERdI8Txz8JSbduI2ii9LkIK1ZXXc/+nG49aj3kEP7UJefSbsaLVJhC+l8/
- TrSBNVuClq1EZ29Vgp09F5GpSc78fg8CV+RzrlMgv9XCsemtct+/uEqftDEhSO/V/W
- zoAxvGzidAsHkhDWg86FVcWGEUJSHfEwMJahxQNsuJcpNXpcImPP735Vtp+330/qi+
- 4vbBZOz5DGALA==
-Received: from US01WXQAHTC1.internal.synopsys.com
- (us01wxqahtc1.internal.synopsys.com [10.12.238.230])
- (using TLSv1.2 with cipher AES128-SHA256 (128/128 bits))
+ b=ETWv8pqP/VDfCRlvwlPl6QM4T+AXFjYWarpa2e2JcO6fVTn9lVI2T2l/L5OM7f11p
+ ha7P7e4QLjFqxjLUUSqvXbTeqXMc7M5jpW+91mVRhZgjvK74P4F0gOFai2p6XWYkzA
+ CW1JwjzrltvOXd5mlhRvKxbtciEqkBClo4TNeDYirq/qPzFVQ4OhZzXo9FvBOWBSbw
+ xZYMVLPuo0csKLsibII5U7qCLZEis4K4E1gWyb3cElcsReR7FQoCMOY0bFekXLK2sa
+ ESuTklDQp3FrxSv9LLeZFAoY1y6rOaEQ5n+SDhe9DP1lNvHU/GgvZ2VbKFY7hCzJQd
+ 6832nLyvCB99Q==
+Received: from US01WEHTC3.internal.synopsys.com
+ (us01wehtc3.internal.synopsys.com [10.15.84.232])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
  (No client certificate requested)
- by mailhost.synopsys.com (Postfix) with ESMTPS id EE4B8A0091;
- Mon, 29 Apr 2019 08:51:41 +0000 (UTC)
-Received: from DE02WEHTCB.internal.synopsys.com (10.225.19.94) by
- US01WXQAHTC1.internal.synopsys.com (10.12.238.230) with Microsoft SMTP Server
- (TLS) id 14.3.408.0; Mon, 29 Apr 2019 01:51:42 -0700
+ by mailhost.synopsys.com (Postfix) with ESMTPS id D0F87A0066;
+ Mon, 29 Apr 2019 09:00:55 +0000 (UTC)
+Received: from DE02WEHTCA.internal.synopsys.com (10.225.19.92) by
+ US01WEHTC3.internal.synopsys.com (10.15.84.232) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Mon, 29 Apr 2019 02:00:55 -0700
 Received: from DE02WEMBXB.internal.synopsys.com ([fe80::95ce:118a:8321:a099])
- by DE02WEHTCB.internal.synopsys.com ([::1]) with mapi id
- 14.03.0415.000; Mon, 29 Apr 2019 10:51:40 +0200
+ by DE02WEHTCA.internal.synopsys.com ([::1]) with mapi id
+ 14.03.0415.000; Mon, 29 Apr 2019 11:00:53 +0200
 From: Jose Abreu <Jose.Abreu@synopsys.com>
 To: Biao Huang <biao.huang@mediatek.com>, "davem@davemloft.net"
  <davem@davemloft.net>
-Subject: RE: [PATCH 1/4] net: stmmac: update rx tail pointer register to fix
- rx dma hang issue.
-Thread-Topic: [PATCH 1/4] net: stmmac: update rx tail pointer register to
- fix rx dma hang issue.
-Thread-Index: AQHU/lMO5G2GtMH+wUeCSibnjv/EX6ZS1H8A
-Date: Mon, 29 Apr 2019 08:51:39 +0000
-Message-ID: <78EB27739596EE489E55E81C33FEC33A0B46DDF0@DE02WEMBXB.internal.synopsys.com>
-References: <1556518556-32464-1-git-send-email-biao.huang@mediatek.com>
- <1556518556-32464-2-git-send-email-biao.huang@mediatek.com>
-In-Reply-To: <1556518556-32464-2-git-send-email-biao.huang@mediatek.com>
+Subject: RE: [PATCH 1/2] net-next: stmmac: add support for hash table size
+ 128/256 in dwmac4
+Thread-Topic: [PATCH 1/2] net-next: stmmac: add support for hash table size
+ 128/256 in dwmac4
+Thread-Index: AQHU/lXC7igBXFx5K0O3QkQ2RyP1CKZS1qXA
+Date: Mon, 29 Apr 2019 09:00:53 +0000
+Message-ID: <78EB27739596EE489E55E81C33FEC33A0B46DE20@DE02WEMBXB.internal.synopsys.com>
+References: <1556519724-1576-1-git-send-email-biao.huang@mediatek.com>
+ <1556519724-1576-2-git-send-email-biao.huang@mediatek.com>
+In-Reply-To: <1556519724-1576-2-git-send-email-biao.huang@mediatek.com>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -70,8 +69,9 @@ X-MS-TNEF-Correlator:
 x-originating-ip: [10.107.19.176]
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_015147_599516_3833787A 
-X-CRM114-Status: GOOD (  13.25  )
+X-CRM114-CacheID: sfid-20190429_020102_487591_2B284673 
+X-CRM114-Status: UNSURE (   7.91  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -113,33 +113,20 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 From: Biao Huang <biao.huang@mediatek.com>
-Date: Mon, Apr 29, 2019 at 07:15:53
+Date: Mon, Apr 29, 2019 at 07:35:23
 
-> Currently we will not update the receive descriptor tail pointer in
-> stmmac_rx_refill. Rx dma will think no available descriptors and stop
-> once received packets exceed DMA_RX_SIZE, so that the rx only test will fail.
-> 
-> Update the receive tail pointer in stmmac_rx_refill to add more descriptors
-> to the rx channel, so packets can be received continually
-> 
-> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
-> ---
->  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    3 +++
->  1 file changed, 3 insertions(+)
-> 
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> index 97c5e1a..818ad88 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> @@ -3336,6 +3336,9 @@ static inline void stmmac_rx_refill(struct stmmac_priv *priv, u32 queue)
->  		entry = STMMAC_GET_ENTRY(entry, DMA_RX_SIZE);
->  	}
->  	rx_q->dirty_rx = entry;
-> +	stmmac_set_rx_tail_ptr(priv, priv->ioaddr,
-> +			       rx_q->dma_rx_phy + (entry * sizeof(struct dma_desc)),
+> +#define GMAC_HASH_TAB(x)		(0x10 + x * 4)
 
-I think you can just use the "rx_q->rx_tail_addr" here. It'll always 
-trigger a poll demand for the channel.
+You need to guard x here with parenthesis.
+
+>  	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
+> -	unsigned int value = 0;
+> +	unsigned int value;
+> +	int i;
+> +	int numhashregs = (hw->multicast_filter_bins >> 5);
+> +	int mcbitslog2 = hw->mcast_bits_log2;
+
+Reverse Christmas tree order here please.
 
 Thanks,
 Jose Miguel Abreu
