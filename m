@@ -2,58 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 66EF8DD44
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 09:58:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 26955DD6B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 10:09:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3YpDe3fC3ZvNA7ZOMuIy4BZTGXfrT94zzNEdj3Omblw=; b=IT15y6tocUidf9
-	HRztCLY+hm8sykEX3YZjBzRwGlXSRB1VtWwdoH3F97YcIw3IrHPYd0vwaI0pxi1XDzzcOIzwkBtkI
-	KeZQ3S+Uzu8USOCZYM8HjIA69ou47aNnMSqkcf95txeDpyV+TfjAVCQFRogIf06iOTO6b3TxIvokW
-	q/6Vh4PD75axyDWXWX6KyLAupZLqr/cXYx4QQBy87w1aWiLph2K9P1qDaeIB4jCXAAGxZ9Zqlqh3t
-	XZR6DXSAe6HAh8NNTeFOHoUMxIiUttAYqMFzHrCZ/rzvWuYxqtWyE2xUOpmd14okaM5Ye11bUOZgj
-	IbnoRO6iECnNiNvlE0HQ==;
+	List-Owner; bh=AXequAYrOUMKUbWRz54DqOBHiEjrS4ualvIHQSN/7MM=; b=a6EqziE6OGnsSf
+	2ESCx+NS9uWiU42bRY+STL28o8SQRF62WGHqaMwS7sH7MBERiApFi1Vxua1hDkTbCYsF/ryJ+nfQ4
+	8/zaQmq/++xAJOQxQE8PU9gfpTvNscAK3AkacXv7g0mDzqSJFl/aZq/0OLwoLBch9zYBaiZZ7mHl0
+	lsv/rVonx8IFrlAxNvJZWb2L8t1EFlx1fa5eogc/7I899f5OVLz/kUQgS83dhvrHiE/+2w5oHi31W
+	i1Nxazbw9rKywNonVfFrVTx7ysRb2iVk7iegU++mYdv4gAJUacGGbHQLHCZqsMJ6yHG1SUewCMAnn
+	H6E2pv4S5EAw+5GNY9EA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL1Aj-0000e3-Md; Mon, 29 Apr 2019 07:57:57 +0000
+	id 1hL1Lx-0004wZ-O3; Mon, 29 Apr 2019 08:09:33 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL1AZ-0000V9-IX; Mon, 29 Apr 2019 07:57:49 +0000
-X-UUID: 8def36b1ecb4447faf48b87193fa79a3-20190428
-X-UUID: 8def36b1ecb4447faf48b87193fa79a3-20190428
+ id 1hL1Lm-0004mV-Iy; Mon, 29 Apr 2019 08:09:24 +0000
+X-UUID: 4ff5c9dba4d244a2a385a95fd8f691ba-20190429
+X-UUID: 4ff5c9dba4d244a2a385a95fd8f691ba-20190429
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <xiaolei.li@mediatek.com>)
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1524038134; Sun, 28 Apr 2019 23:57:39 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 147006063; Mon, 29 Apr 2019 00:09:18 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Apr 2019 00:57:37 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs08n1.mediatek.inc
- (172.21.101.55) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 29 Apr 2019 15:57:36 +0800
+ 15.0.1395.4; Mon, 29 Apr 2019 01:09:17 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 29 Apr 2019 16:09:14 +0800
 Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 29 Apr 2019 15:57:34 +0800
-Message-ID: <1556524654.26455.27.camel@mhfsdcap03>
-Subject: Re: [RFC PATCH v2 1/1] mtd: rawnand: mtk: Re-license MTK NAND
- driver as Dual MIT/GPL
-From: xiaolei li <xiaolei.li@mediatek.com>
-To: Miquel Raynal <miquel.raynal@bootlin.com>
-Date: Mon, 29 Apr 2019 15:57:34 +0800
-In-Reply-To: <20190429094430.7715f7a1@xps13>
-References: <20190425015552.42638-1-xiaolei.li@mediatek.com>
- <20190425015552.42638-2-xiaolei.li@mediatek.com>
- <20190429094430.7715f7a1@xps13>
+ Transport; Mon, 29 Apr 2019 16:09:13 +0800
+Message-ID: <1556525353.24897.30.camel@mhfsdcap03>
+Subject: Re: [PATCH 2/6] net: stmmac: fix csr_clk can't be zero issue
+From: biao huang <biao.huang@mediatek.com>
+To: Alexandre Torgue <alexandre.torgue@st.com>
+Date: Mon, 29 Apr 2019 16:09:13 +0800
+In-Reply-To: <24f4b268-aa7f-e1f7-59fc-2bc163eb8277@st.com>
+References: <1556433009-25759-1-git-send-email-biao.huang@mediatek.com>
+ <1556433009-25759-3-git-send-email-biao.huang@mediatek.com>
+ <24f4b268-aa7f-e1f7-59fc-2bc163eb8277@st.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_005747_620506_4DDE316D 
-X-CRM114-Status: UNSURE (   9.34  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190429_010922_624422_4F4F96A0 
+X-CRM114-Status: GOOD (  16.74  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,27 +71,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com,
- srv_heupstream@mediatek.com, richard@nod.at, yingjoe.chen@mediatek.com,
- jorge.ramirez-ortiz@linaro.org, boris.brezillon@bootlin.com,
- linux-mtd@lists.infradead.org, yellowriver2010@hotmail.com, rafal@milecki.pl,
- linux-mediatek@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: jianguo.zhang@mediatek.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-stm32@st-md-mailman.stormreply.com,
+ Jose Abreu <joabreu@synopsys.com>, linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Giuseppe
+ Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgTWlxdWVsLAoKT24gTW9uLCAyMDE5LTA0LTI5IGF0IDA5OjQ0ICswMjAwLCBNaXF1ZWwgUmF5
-bmFsIHdyb3RlOgo+IEhpIFhpYW9sZWksCj4gCj4gWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRp
-YXRlay5jb20+IHdyb3RlIG9uIFRodSwgMjUgQXByIDIwMTkgMDk6NTU6NTIKPiArMDgwMDoKPiAK
-PiA+IEl0IGlzIGFsbG93ZWQgdG8gdXNlIE1USyBOQU5EIGRyaXZlciB3aXRoIEdQTC0yLjAgb3Ig
-TUlUIGxpY2Vuc2UuCj4gPiBCdXQgbm93IGl0IGlzIG9ubHkgbGljZW5zZWQgYXMgR1BMLTIuMC4K
-PiA+IFNvIHJlLWxpY2Vuc2UgaXQgYXMgZHVhbCBNSVQvR1BMLgo+ID4gCj4gCj4gWW91IGFsc28g
-cmVtb3ZlIHRoZSBsaWNlbnNlIHRleHQgYW5kIHJlcGxhY2UgaXQgd2l0aCBhbiBTUERYIHRhZywK
-PiBwbGVhc2UgZGVzY3JpYmUgdGhpcyBjaGFuZ2UgdG9vLgpPSy4gTm8gcHJvYmxlbS4KClRoYW5r
-cywKWGlhb2xlaQo+IAo+ID4gU2lnbmVkLW9mZi1ieTogWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBt
-ZWRpYXRlay5jb20+Cj4gPiBBY2tlZC1ieTogSm9yZ2UgUmFtaXJlei1PcnRpeiA8am9yZ2UucmFt
-aXJlei1vcnRpekBsaW5hcm8ub3JnPgo+ID4gLS0tCj4gCj4gVGhhbmtzLAo+IE1pcXXDqGwKCgoK
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVk
-aWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0
-cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+Hi,
+
+On Mon, 2019-04-29 at 09:18 +0200, Alexandre Torgue wrote:
+> Hi
+> 
+> On 4/28/19 8:30 AM, Biao Huang wrote:
+> > The specific clk_csr value can be zero, and
+> > stmmac_clk is necessary for MDC clock which can be set dynamically.
+> > So, change the condition from plat->clk_csr to plat->stmmac_clk to
+> > fix clk_csr can't be zero issue.
+> > 
+> > Signed-off-by: Biao Huang <biao.huang@mediatek.com>
+> > ---
+> >   drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    2 +-
+> >   1 file changed, 1 insertion(+), 1 deletion(-)
+> > 
+> > diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > index 818ad88..9e89b94 100644
+> > --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > @@ -4376,7 +4376,7 @@ int stmmac_dvr_probe(struct device *device,
+> >   	 * set the MDC clock dynamically according to the csr actual
+> >   	 * clock input.
+> >   	 */
+> > -	if (!priv->plat->clk_csr)
+> > +	if (priv->plat->stmmac_clk)
+> >   		stmmac_clk_csr_set(priv);
+> >   	else
+> >   		priv->clk_csr = priv->plat->clk_csr;
+> > 
+> 
+> So, as soon as stmmac_clk will be declared, it is no longer possible to 
+> fix a CSR through the device tree ?
+
+let's focus on the condition:
+1. clk_csr may be zero, it should not be the condition. or the clk_csr =
+0 will jump to the wrong block.
+2. Since stmmac_clk_csr_set will get_clk_rate from stmmac_clk,
+the plat->stmmac_clk is a more proper condition.
+
+In some case, it's impossible to get the clk rate of stmmac_clk,
+so it's better to remain the clk_csr flow.
+
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
