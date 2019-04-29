@@ -2,56 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1DF5BE000
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 12:02:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8AF47E046
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 12:09:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OGTS8RRPadZvhFm0B5W17WvNTOTc8wOMudHypm7anTw=; b=dUqfIyi3FFuqnN
-	3H5Rl2usRCffLolvfWO22P8b3nKjGTzaj7+15ilreIbwOj+xVy9OzzKUwgSxdVnFhXxiS50i9XylJ
-	cYXNV7yRbFv6Mrm2rJLefY4ceD1OKidw6h/V8zW86BYEQtB7s9IdwlhXCMVK0UPvtl0NVSduPQtgM
-	ZuMqoE2rJpxnggxWE7YOFEOzp3BCTyqDoV7+gEFxiwqGEQHFXp2nkG0e8NJb+5qK9zzbQ3/vxfKOc
-	afNX2TLyBynirNO6z5P93Mw9MpKDZT87vjp29ca4S1/6n+qq3YQoYbRimUoXwzqhWr23KrbtlBIGP
-	55bDPMTI8bABqE9uZ15g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=XGUgvIAkO+hLLLYQ3s7+hxVz4Ei9vDXDYBjHjfSMsjc=; b=syVwNSnAlEar4q
+	9LLfK8XY7RH4oRoCJA8hql1srBC1M4vBT34S+8uEauBbJdqgSdo2vkIDGShDWaWJ63v7vRPD08RQQ
+	m8PuRl7bJiPBPHN29pmCzdlc7pJNqp2YYy4cc+vTbzPAywRTgvZKfH2kCzXBr90Q4iJSBzbwcFHKL
+	fRQCBQM00VFibgFUjlV9KVcq7qhGq8fYniIRsidU2Rbr6cRZTQ7un2Daa7xlzxS9lgWJ0YvQAMplr
+	BphvCNzDiKtGGMGTx6hvOcg10Lhe8YfoYkyIQCpffCrJKm/nQliVUJBBFL9+YpPgdlfSt+blCgo5M
+	KWWze20FS9bpAytrh24g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL37J-0002YS-Qc; Mon, 29 Apr 2019 10:02:33 +0000
-Received: from relay9-d.mail.gandi.net ([217.70.183.199])
+	id 1hL3EQ-0006F7-7o; Mon, 29 Apr 2019 10:09:54 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL37G-0002Xt-IN; Mon, 29 Apr 2019 10:02:32 +0000
-X-Originating-IP: 90.88.147.33
-Received: from xps13 (aaubervilliers-681-1-27-33.w90-88.abo.wanadoo.fr
- [90.88.147.33]) (Authenticated sender: miquel.raynal@bootlin.com)
- by relay9-d.mail.gandi.net (Postfix) with ESMTPSA id 6FD8AFF81A;
- Mon, 29 Apr 2019 10:02:27 +0000 (UTC)
-Date: Mon, 29 Apr 2019 12:02:26 +0200
-From: Miquel Raynal <miquel.raynal@bootlin.com>
-To: xiaolei li <xiaolei.li@mediatek.com>
-Subject: Re: [PATCH 1/5] mtd: rawnand: mtk: Correct low level time
- calculation of r/w cycle
-Message-ID: <20190429120226.43589cdd@xps13>
-In-Reply-To: <1556530553.26455.35.camel@mhfsdcap03>
-References: <20190429063834.45967-1-xiaolei.li@mediatek.com>
- <20190429063834.45967-2-xiaolei.li@mediatek.com>
- <20190429110341.208c096e@xps13>
- <1556530553.26455.35.camel@mhfsdcap03>
-Organization: Bootlin
-X-Mailer: Claws Mail 3.17.1 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
+ id 1hL3EM-0006DO-VW
+ for linux-mediatek@lists.infradead.org; Mon, 29 Apr 2019 10:09:52 +0000
+X-UUID: 69a220a3504f420795cb3a58b1c47f05-20190429
+X-UUID: 69a220a3504f420795cb3a58b1c47f05-20190429
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <jjian.zhou@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1352100904; Mon, 29 Apr 2019 02:09:47 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Apr 2019 03:09:45 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Apr 2019 18:09:36 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 29 Apr 2019 18:09:36 +0800
+From: Jjian Zhou <jjian.zhou@mediatek.com>
+To: <matthias.bgg@gmail.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>
+Subject: [PATCH 1/2] arm64: dts: mt8183: add emi node
+Date: Mon, 29 Apr 2019 18:09:30 +0800
+Message-ID: <1556532571-8234-1-git-send-email-jjian.zhou@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 51898FB411B3FA3339E6CC321AB8E4059616E46E9E49FE57282BE04F62B582042000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_030230_758368_342AE7B9 
-X-CRM114-Status: GOOD (  15.19  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190429_030951_020941_52490138 
+X-CRM114-Status: UNSURE (   6.69  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.199 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -63,46 +70,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: richard@nod.at, linux-mediatek@lists.infradead.org,
- linux-mtd@lists.infradead.org, srv_heupstream@mediatek.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: linux-mediatek@lists.infradead.org, Xi
+ Chen <xixi.chen@mediatek.com>, srv_heupstream@mediatek.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgeGlhb2xlaSwKCnhpYW9sZWkgbGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPiB3cm90ZSBv
-biBNb24sIDI5IEFwciAyMDE5IDE3OjM1OjUzCiswODAwOgoKPiBIaSBNaXF1ZWwsCj4gCj4gVGhh
-bmtzIGZvciB5b3VyIHJldmlldy4KPiAKPiAKPiBPbiBNb24sIDIwMTktMDQtMjkgYXQgMTE6MDMg
-KzAyMDAsIE1pcXVlbCBSYXluYWwgd3JvdGU6Cj4gPiBIaSBYaWFvbGVpLAo+ID4gCj4gPiBYaWFv
-bGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4gd3JvdGUgb24gTW9uLCAyOSBBcHIgMjAx
-OSAxNDozODozMAo+ID4gKzA4MDA6Cj4gPiAgIAo+ID4gPiBBdCBwcmVzZW50LCB0aGUgZmxvdyBv
-ZiBjYWxjdWxhdGluZyBBQyB0aW1pbmcgb2YgcmVhZC93cml0ZSBjeWNsZSBpbiBTRFIKPiA+ID4g
-bW9kZSBpcyB0aGF0Ogo+ID4gPiBBdCBmaXJzdCwgY2FsY3VsYXRlIGhpZ2ggaG9sZCB0aW1lIHdo
-aWNoIGlzIHZhbGlkIGZvciBib3RoIHJlYWQgYW5kIHdyaXRlCj4gPiA+IGN5Y2xlIHVzaW5nIHRo
-ZSBtYXggdmFsdWUgYmV0d2VlbiB0UkVIX21pbiBhbmQgdFdIX21pbi4KPiA+ID4gU2Vjb25kbHks
-IGNhbGN1bGF0ZSBXRSMgcHVsc2Ugd2lkdGggdXNpbmcgdFdQX21pbi4KPiA+ID4gVGhyaWRseSwg
-Y2FsY3VsYXRlIFJFIyBwdWxzZSB3aWR0aCB1c2luZyB0aGUgYmlnZ2VyIG9uZSBiZXR3ZWVuIHRS
-RUFfbWF4Cj4gPiA+IGFuZCB0UlBfbWluLgo+ID4gPiAKPiA+ID4gQnV0IE5BTkQgU1BFQyBzaG93
-cyB0aGF0IENvbnRyb2xsZXIgc2hvdWxkIGFsc28gbWVldCB3cml0ZS9yZWFkIGN5Y2xlIHRpbWUu
-Cj4gPiA+IFRoYXQgaXMgd3JpdGUgY3ljbGUgdGltZSBzaG91bGQgYmUgbW9yZSB0aGFuIHRXQ19t
-aW4gYW5kIHJlYWQgY3ljbGUgc2hvdWxkCj4gPiA+IGJlIG1vcmUgdGhhbiB0UkNfbWluLiBPYnZp
-b3VzbHksIHdlIGRvIG5vdCBhY2hpZXZlIHRoYXQgbm93Lgo+ID4gPiAKPiA+ID4gVGhpcyBwYXRj
-aCBjb3JyZWN0cyB0aGUgbG93IGxldmVsIHRpbWUgY2FsY3VsYXRpb24gdG8gbWVldCBtaW5pbXVt
-Cj4gPiA+IHJlYWQvd3JpdGUgY3ljbGUgdGltZSByZXF1aXJlZC4gQWZ0ZXIgZ2V0dGluZyB0aGUg
-aGlnaCBob2xkIHRpbWUsIFdFIyBsb3cKPiA+ID4gbGV2ZWwgdGltZSB3aWxsIGJlIHByb21pc2Vk
-IHRvIG1lZXQgdFdQX21pbiBhbmQgdFdDX21pbiByZXF1aXJlbWVudCwKPiA+ID4gYW5kIFJFIyBs
-b3cgbGV2ZWwgdGltZSB3aWxsIGJlIHByb21pc2VkIHRvIG1lZXQgdFJFQV9tYXgsIHRSUF9taW4g
-YW5kCj4gPiA+IHRSQ19taW4gcmVxdWlyZW1lbnQuCj4gPiA+IAo+ID4gPiBGaXhlczogOTNkYjQ0
-NmE0MjRjICgibXRkOiBuYW5kOiBtb3ZlIHJhdyBOQU5EIHJlbGF0ZWQgY29kZSB0byB0aGUgcmF3
-LyBzdWJkaXIiKSAgCj4gPiAKPiA+IFRoaXMgaXMgZGVmaW5pdGVseSBub3QgdGhlIGZhdWx0eSBw
-YXRjaC4gUGxlYXNlIHVzZSAtLWZvbGxvdyB3aGVuCj4gPiBzZWFyY2hpbmcgZm9yIHRoZSBjdWxw
-cml0LCB0byBhdm9pZCBiZWluZyBibG9ja2VkIGJ5IHRoZQo+ID4gcmVuYW1pbmcvbW92aW5nIHdv
-cmsuICAKPiBZZXMuIFRoaXMgaXNzdWUgZXhpc3RzIGJlZm9yZSByYXcvIHN1ZGlyIGJlaW5nIGNy
-ZWF0ZWQuCj4gCj4gVGhlIGZhdWx0eSBwYXRjaCBzaG91bGQgYmUgJ2NvbW1pdCBlZGZlZTM2MTlj
-NDkgKCJtdGQ6IG5hbmQ6IG10azogYWRkCj4gLT5zZXR1cF9kYXRhX2ludGVyZmFjZSgpIGhvb2si
-KScgd2hpY2ggY2Fubm90IGJlIGZvdW5kIGluIGdpdCBoaXN0b3J5ICAKPiBub3cuCj4gCj4gU2hv
-dWxkIEkgbGlzdCBpdCBoZXJlPwoKV2hhdCBkbyB5b3UgbWVhbj8gVGhpcyBjb21taXQgZXhpc3Rz
-LCBJIGNhbiBhY3R1YWxseSAiZ2l0IHNob3ciIGl0LgoKClRoYW5rcywKTWlxdcOobAoKX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsg
-bWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xp
-c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+From: Xi Chen <xixi.chen@mediatek.com>
+
+Add emi dts node.
+
+Change-Id: I965fe2fa5258bdd92547282c96c3d86cb0c76427
+---
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi |   11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index 75c4881..2a176e9 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -269,6 +269,17 @@
+ 			clock-names = "spi", "wrap";
+ 		};
+
++		emi@10219000 {
++			compatible = "mediatek,mt8183-emi";
++			reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
++				  <0 0x10226000 0 0x1000>, /* EMI MPU */
++				  <0 0x1022d000 0 0x1000>, /* CHA EMI */
++			      <0 0x10235000 0 0x1000>; /* CHB EMI */
++			interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
++						 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
++						 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
++		};
++
+ 		uart0: serial@11002000 {
+ 			compatible = "mediatek,mt8183-uart",
+ 				     "mediatek,mt6577-uart";
+--
+1.7.9.5
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
