@@ -2,85 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 50BF1B6A1
-	for <lists+linux-mediatek@lfdr.de>; Sun, 28 Apr 2019 22:26:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 57450DABF
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 05:26:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WUnknVMEP9FS7f5OPQP89TBC0Vnrlbg7JIMaIhDGE3U=; b=IJMJRBG5GInfAM
-	5uGcsjgm0DKiQEm8WI3sMTdMyZFEbxCS+qjXkTcIJ9KQ/Sw3F/RPgFDA6toVHh5S1fRDhQGUKNpSE
-	BFQxms6LpuShKm0Mw/Xmt4fPsu1OUSW2EU2+egvlEOg3Q2ls5KRPKVK7aL3ImgcPyGOt3rPKMzzRp
-	8t8x34VLup88BwEG/Vfy3VEShCBpxIuBfGaWYJxEbnnhylC1lnOXR9wb9LaOj/xERSWNcwWySR5Hc
-	+Frd+e27TVKUy/O90FUPzVmcrzvPNyZTmEFsQjy578ktT6b1lyPjI1nVCU0ypnZrnBvzE4eCYOFlS
-	6JrWWmgkWvmGAQ/mDUiQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=W4Fsr6nM38kljLMZZfgHRTf9rQDXjzqKVQCaGGdWVT0=; b=jx6ooQqp0hLuS9
+	ADQm7kY8SfsnzPPjX1zxhL37Y6K1Y1XJtqzwGB+9mG7nfpLXAXY4ACXu+Qyt5W+XQkSNnhIV6NrT1
+	r6EnsQSYGKCxXtktnes/lW3U3f9uAVzwDmHD6xwsqYQtSHR2htcr0NW6Liuba2/34nZA+zSEUKLaI
+	J8SFDZiWq63RQf7YayJKCD4r+RKQQ9w+82Zk28T/1ZnlVOldw2cyXh5bTpGEHiFDtTE2MJw0TbViS
+	7574PlR5seNW3vHJc+VDU/fTFfvxFlwUa94SP8ZkTemNppsxYRXsifX4cQomUIQhZ6SrG5e2zjbvf
+	PpR+klLUqZrckfd1ddZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKqNq-0001mk-Ag; Sun, 28 Apr 2019 20:26:46 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1hKwvp-0004um-Ke; Mon, 29 Apr 2019 03:26:17 +0000
+Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKqIu-0002LQ-Ge
- for linux-mediatek@lists.infradead.org; Sun, 28 Apr 2019 20:21:52 +0000
-Received: by mail-lf1-x144.google.com with SMTP id h126so6354891lfh.4
- for <linux-mediatek@lists.infradead.org>; Sun, 28 Apr 2019 13:21:40 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=lixom-net.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=1QT1sK+ANF5OG/PefqUzMYvBnb84fl+mwlYnScnPHm8=;
- b=QGX4h6SdMKi8crwz1Cm20GvR6BYGAhmkuis0Z6KM9Q283K6/Mg/WWro7uoEt+kMid8
- Z13A0leNzkuTmkmgxuqD6e/9rzi6rdqhl1FtuoV7oYxoWn+VZhchNQbQOBkE1777l0Op
- jgINLab3OCW5aXv7fol2+LZgF7ThXruNK0RMUI02+iLCju5vAS5tFMjRLwWU7z8Los5g
- nzwodRVJ3vE+SgrQXXk8MeUueu0g/DcMXmLc6gIKdo/Q50xEyrNolYKkghXOzk0U+/CN
- O8ZQh2MBEZDNVzzz+Jiv3fkEVi1aQN4P067/vNovarmcTuk1/dFzfifxNUUGlT9bj16n
- GlCg==
+ id 1hKwvg-0004m4-3f
+ for linux-mediatek@lists.infradead.org; Mon, 29 Apr 2019 03:26:09 +0000
+Received: by mail-pl1-x641.google.com with SMTP id n8so4379407plp.10
+ for <linux-mediatek@lists.infradead.org>; Sun, 28 Apr 2019 20:26:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=VfaUjavgU7FLcbQRnhsJ2vG6fwuvzcfeYnH0eMo2lew=;
+ b=ZIO9fcp3UVgcrIpro2HhbPWDhopkv0jrc/1NOivlvUpXqUNgaAWC3mq2KSfBJcfro6
+ FnUyZrktLKoHzUugRUgUO1fD0EBf6bACTP64AxQFAlOpDPq31IP1E0S/bAmcVJXu/mAx
+ CW/Fu5r6XzT83MF0MjYDhG2nocDhko8GyAYAY=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=1QT1sK+ANF5OG/PefqUzMYvBnb84fl+mwlYnScnPHm8=;
- b=IbpMdjVKH3DEcwTpH/zDPOUuw692lekU5k+p5ve4uzWMwLP9q+cnSK8s/2u3deuoEf
- tTS7Shr5H1VxEnRkDFfqqozjdnPTPX+w6w42ON8ITL4yPTevqvyDTBpgFSzQrtaLdWNX
- tMdPiS429RV80T/Ag1p5+yr4EpruSBCVbX5zEqWSiyfvDM/IR0su0dhPPtL2ybMi7xM0
- ZrqnsQAPtR82CP0zHFeyRg8fLwZdMv8JPJQvD+nf+/5MicpuZk8oP0Y5rsS0Ctp/OPeh
- HhJZgjmY+ooBW9Zp8zpr2Boneyz7sGyVT7NrggwICXe08kEFl6neH/CES0UnHnfzOGBF
- j7iw==
-X-Gm-Message-State: APjAAAXsNKnveDTxkaBMxhNuw4IEioCGIbFnCtNATNGYZ8lhWXQjCTV+
- RxknMYS5a737Ie4AQHklR+6FjDHx1+ejOA==
-X-Google-Smtp-Source: APXvYqwnbEjOKlwCNKl7E6dXgVKxR/CBq94EMoVDAvx7iWMWVRhhOw1Rcq2bTmtmdvahCETBTTgr7A==
-X-Received: by 2002:ac2:50d5:: with SMTP id h21mr5312226lfm.44.1556482898800; 
- Sun, 28 Apr 2019 13:21:38 -0700 (PDT)
-Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
- by smtp.gmail.com with ESMTPSA id d22sm6937783lfm.57.2019.04.28.13.21.37
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Sun, 28 Apr 2019 13:21:37 -0700 (PDT)
-Date: Sun, 28 Apr 2019 12:57:53 -0700
-From: Olof Johansson <olof@lixom.net>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: Re: [GIT PULL] dts64 updates for v5.2
-Message-ID: <20190428195753.fxfhpkcckeajjut3@localhost>
-References: <5ea296e5-92bd-5790-c075-cf4bcb74d88c@gmail.com>
- <47e01204-41b6-ba89-cbbb-3f684e3a7dff@gmail.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=VfaUjavgU7FLcbQRnhsJ2vG6fwuvzcfeYnH0eMo2lew=;
+ b=A/K3Yn9o/6qg8ATO2eMeXJ3m6rqoeyl04rxDzwG0IwKVLjjdlGumvG15+UYDHTmMdl
+ P4RGKAPFuTNUyKb48SEACroYk9ITWNsaiW7PU/bKiupArqAtXH+53NOQZ14/mKIzo6p0
+ LzxUGfzIDs5/nkWpNtsDCuzk5WNJcGKdTJ19qcYRpfQzoiJryST/I8yy4/GBsqXuU0Jv
+ VsHI7lyp1asQNLTjpJGLjvnknV3fjDKnc5/0xDwFUQc2jmnn7+lsrkLvO0Aw5yKi5QVn
+ jF+yAE5akEnfbSDUADozTqui3xTUGYm4BI8qkCT0ylhF1nqea5oOoEzh3Hy9R+/zmBqH
+ CLeA==
+X-Gm-Message-State: APjAAAW1wrwPl3yKLUD/ZfzfrGdRsPxJpSPOtfEGRUJxio1SFMWOxW/n
+ p5C02lKgSs3fdzoZtok/jlD8Hk5P/Vo=
+X-Google-Smtp-Source: APXvYqx3ji95ro+Qgz/gh/2nu0EmODc2XcZ6cLoCoVh777KZZC76LVFq9Evhuk0WPUubiVGpIc4D9g==
+X-Received: by 2002:a17:902:b089:: with SMTP id
+ p9mr59602794plr.185.1556508366781; 
+ Sun, 28 Apr 2019 20:26:06 -0700 (PDT)
+Received: from drinkcat2.tpe.corp.google.com
+ ([2401:fa00:1:b:d8b7:33af:adcb:b648])
+ by smtp.gmail.com with ESMTPSA id a10sm41364938pfc.21.2019.04.28.20.26.04
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Sun, 28 Apr 2019 20:26:05 -0700 (PDT)
+From: Nicolas Boichat <drinkcat@chromium.org>
+To: linux-mediatek@lists.infradead.org
+Subject: [PATCH 0/2] pinctrl: mediatek: mt8183: Add support for wake sources
+Date: Mon, 29 Apr 2019 11:25:49 +0800
+Message-Id: <20190429032551.65975-1-drinkcat@chromium.org>
+X-Mailer: git-send-email 2.21.0.593.g511ec345e18-goog
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <47e01204-41b6-ba89-cbbb-3f684e3a7dff@gmail.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_132141_023800_CF4C87BB 
-X-CRM114-Status: GOOD (  10.48  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190428_202608_154678_34B0A710 
+X-CRM114-Status: UNSURE (   7.65  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
  [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -92,36 +93,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Seiya Wang <seiya.wang@mediatek.com>, Yunfei Dong <yunfei.dong@mediatek.com>,
- Erin Lo <erin.lo@mediatek.com>, Fabien Parent <fparent@baylibre.com>,
- arm-soc <arm@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Zhiyong Tao <zhiyong.tao@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
+ linux-kernel@vger.kernel.org, evgreen@chromium.org, swboyd@chromium.org,
+ linux-gpio@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Apr 24, 2019 at 09:55:46AM +0200, Matthias Brugger wrote:
-> 
-> 
-> On 23/04/2019 18:12, Matthias Brugger wrote:
-> > Hi Anrd and Olof,
-> > 
-> > you can find below the pull request for mediatek related dts64.
-> > 
-> > Please have a look :)
-> 
-> Unfortunately the pull request has a minor merge conflict with the serial/tty
-> tree [1]. Is there any action needed from my side?
+This adds support for wake sources in pinctrl-mtk-common-v2, and
+pinctrl-mt8183. Without this patch, all interrupts that are left
+enabled on suspend act as wake sources (and wake sources without
+interrupt enabled do not).
 
-Nah, that's fine. Thanks for the heads up.
+Nicolas Boichat (2):
+  pinctrl: mediatek: Add mtk_eint_pm_ops to common-v2
+  pinctrl: mediatek: mt8183: Add mtk_eint_pm_ops
 
+ drivers/pinctrl/mediatek/pinctrl-mt8183.c     |  1 +
+ .../pinctrl/mediatek/pinctrl-mtk-common-v2.c  | 19 +++++++++++++++++++
+ .../pinctrl/mediatek/pinctrl-mtk-common-v2.h  |  1 +
+ 3 files changed, 21 insertions(+)
 
--Olof
+-- 
+2.21.0.593.g511ec345e18-goog
+
 
 _______________________________________________
 Linux-mediatek mailing list
