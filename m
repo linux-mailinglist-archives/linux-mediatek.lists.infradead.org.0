@@ -2,86 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 638ADDAEE
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 05:56:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3A04FDBC5
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Apr 2019 08:05:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ufAR4ruHY4wde/19vgLX2Qxm/15w9hm1B/GmbVGROI4=; b=KbcxomCi1OLL4c
-	wwjOnDD8swdg/RGr3Mi4hUVo+OQshlxXklbDwA2GcaX0WXP7ReGSGFnwDKlBW6o5qEU+47+CeJLyM
-	BbVq/BApkNJIO3FLdKTCXRFJ23nQWDEBnu7glUDgBOG7ZrRDz5JPRCki4K2VXh+Qk39h1vXr1F52t
-	6xMv6fCfHpCCXqH0HEJbpn32u3FYW7l9SGHNxgZVFnZAqyRkBbuPKGG/o4ByRaLGtfRly2KK7URDo
-	XTi0O9CkiLh1T8c9MJbvJr3O+xVj1n5b1dejVFq1O2aKYYr2voQ+SWDoN36nT90BPadPjjc0BivjG
-	wPVyHfbz3/WSep+Kpqgg==;
+	List-Owner; bh=ZiP4p8/CLa7Gus0Ik5jQ+roF7XU8acpgGOzKMgcY9Vk=; b=kMfJk59Ns/IC6a
+	GtRYXUTf+kEmOcwEjUFD2kroSjFJDRdEcJJvUFFqv2LY/7z+nk87zQNsHOI1PmWyv6wO1Z6UWNKTd
+	/SBvJMdgCH1TX1VAwen6h6F1kmHWhOTa5smnQFU8jIEVlu/FQF5XqrmUi+IyMKIIQ0I73v9xXXHru
+	4blx1rZ+ETm33uQ2lbYRj2bptphE69EvSl+U9qHED0E/5wcbfFw6zt8ukZxyCOC4Bphi1OujIsieI
+	Jt2YndAXagCVstEjXNfS33xb17WnWT9MUCIOcwRyHgHJYRZCwKv3lAbuFOEG1qI9Jo0f1p87m/gKY
+	04adtKdQN3qJV3E3FFzA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKxOf-0006lA-Dr; Mon, 29 Apr 2019 03:56:05 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1hKzQ4-0002Oj-E9; Mon, 29 Apr 2019 06:05:40 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKxO8-00067a-Mf
- for linux-mediatek@lists.infradead.org; Mon, 29 Apr 2019 03:55:37 +0000
-Received: by mail-pf1-x444.google.com with SMTP id v80so49261pfa.3
- for <linux-mediatek@lists.infradead.org>; Sun, 28 Apr 2019 20:55:32 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=WAZlyDzGKVIdVMC388n6S7o0DOasFYjgOEfAKf4uteY=;
- b=nSEa1MJ4YGhP7t6ZTTKWFurbopRUMivjdQCEUKmamdRbDSTbxUQbmsdw/JeTlHj47P
- e9Rjsu7YKOeUFG6lZbHcj2EFQJ2rW7yuNvBuXJVi0gyadnS0GlwtOvda8IRiGsZRqzsr
- tU5oaOTdgfubtwUJH0ZWA4QUdgzfJLmwUBugM=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=WAZlyDzGKVIdVMC388n6S7o0DOasFYjgOEfAKf4uteY=;
- b=Exa8kiMICxQ4wVmCJpYA53ndyBrZSeu19IKOPx8tNzlT0vcog+IHGqXhY2OeinpeCZ
- QwmMsbSLR8/l3XFXt50pwkWutL4aPhwz3SVDt+kzQhGSS+ltFkF0fBVxjeJ/w0XmE6PK
- sR7rPtGJN5+uhy/4jHr1MEnJp3jcgdoSOjQMhAz+Kvo8Ar0bZ+fQHLU3CzHxlZuwJb7a
- FMcZYQN1poJn8P8h5Ppg/futjx2SQ1Q2GFTX+qXI78hVBGH6k9mYvrJZkHhuGRY4WgmT
- uZKCNg5+UN1r6KFOzDUVdkNCVLSiefJhDMoQwimTdHnGMLAyFE2TxtMGAxgI4LGiEgJu
- 0DdQ==
-X-Gm-Message-State: APjAAAUxt1z0SCgejtYO+9tCRPiffyOtYbsGTKydqiFS9eUII/lVHCsl
- nvIg63hRTClROJAjEaN6aOhVkyAOwec=
-X-Google-Smtp-Source: APXvYqx3TFhPNmuhW9pXjaa8z9fORbLQnXGmeqzBi0NVBXmBzyMccsPh3dh+KK5grUYlUW8sKt9sow==
-X-Received: by 2002:a62:a219:: with SMTP id m25mr60974348pff.197.1556510131833; 
- Sun, 28 Apr 2019 20:55:31 -0700 (PDT)
-Received: from drinkcat2.tpe.corp.google.com
- ([2401:fa00:1:b:d8b7:33af:adcb:b648])
- by smtp.gmail.com with ESMTPSA id x128sm55433585pfx.103.2019.04.28.20.55.29
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sun, 28 Apr 2019 20:55:31 -0700 (PDT)
-From: Nicolas Boichat <drinkcat@chromium.org>
-To: linux-mediatek@lists.infradead.org
-Subject: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
-Date: Mon, 29 Apr 2019 11:55:15 +0800
-Message-Id: <20190429035515.73611-3-drinkcat@chromium.org>
-X-Mailer: git-send-email 2.21.0.593.g511ec345e18-goog
-In-Reply-To: <20190429035515.73611-1-drinkcat@chromium.org>
-References: <20190429035515.73611-1-drinkcat@chromium.org>
+ id 1hKzQ1-0002Ng-7I; Mon, 29 Apr 2019 06:05:39 +0000
+X-UUID: 696e6df33369435e82c3f21050945e40-20190428
+X-UUID: 696e6df33369435e82c3f21050945e40-20190428
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 908794319; Sun, 28 Apr 2019 22:05:30 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 28 Apr 2019 23:05:29 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N1.mediatek.inc
+ (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 29 Apr 2019 14:05:26 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 29 Apr 2019 14:05:25 +0800
+Message-ID: <1556517925.24897.17.camel@mhfsdcap03>
+Subject: Re: [PATCH 5/6] net: stmmac: add mdio clause 45 access from mac
+ device for dwmac4
+From: biao huang <biao.huang@mediatek.com>
+To: Andrew Lunn <andrew@lunn.ch>
+Date: Mon, 29 Apr 2019 14:05:25 +0800
+In-Reply-To: <20190428163705.GH23059@lunn.ch>
+References: <1556433009-25759-1-git-send-email-biao.huang@mediatek.com>
+ <1556433009-25759-6-git-send-email-biao.huang@mediatek.com>
+ <20190428163705.GH23059@lunn.ch>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_205533_084264_78934947 
-X-CRM114-Status: GOOD (  12.10  )
-X-Spam-Score: -0.3 (/)
+X-CRM114-CacheID: sfid-20190428_230537_269552_2BFD9A93 
+X-CRM114-Status: GOOD (  14.82  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,88 +72,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
- Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
- linux-kernel@vger.kernel.org, evgreen@chromium.org, swboyd@chromium.org,
- linux-gpio@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: jianguo.zhang@mediatek.com, Alexandre Torgue <alexandre.torgue@st.com>,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
+ linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Giuseppe
+ Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-During suspend/resume, mtk_eint_mask may be called while
-wake_mask is active. For example, this happens if a wake-source
-with an active interrupt handler wakes the system:
-irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
-that it can be handled later on in the resume flow.
+Hi Andrew,
 
-However, this may happen before mtk_eint_do_resume is called:
-in this case, wake_mask is loaded, and cur_mask is restored
-from an older copy, re-enabling the interrupt, and causing
-an interrupt storm (especially for level interrupts).
+On Sun, 2019-04-28 at 18:37 +0200, Andrew Lunn wrote:
+> On Sun, Apr 28, 2019 at 02:30:08PM +0800, Biao Huang wrote:
+> > +static int stmmac_c45_read(struct mii_bus *bus, int phyaddr,
+> > +			   int devad, int prtad)
+> > +{
+> > +	struct net_device *ndev = bus->priv;
+> > +	struct stmmac_priv *priv = netdev_priv(ndev);
+> > +	unsigned int mii_address = priv->hw->mii.addr;
+> > +	unsigned int mii_data = priv->hw->mii.data;
+> > +	u32 v, value;
+> > +	int data;
+> > +
+> > +	if (readl_poll_timeout(priv->ioaddr + mii_address, v, !(v & MII_BUSY),
+> > +			       100, 10000))
+> > +		return -EBUSY;
+> 
+> Hi Biao
+> 
+> readl_poll_timeout() returns an error code. It is better to return
+> that, than make up some other error code. Yes, i know the C22 read
+> returns EBUSY, but we don't need to copy that behaviour into C45.
+> 
+OK, will return error code here.
+> > +
+> > +	value = 0;
+> > +	value |= (prtad << priv->hw->mii.cl45_reg_shift)
+> > +			& priv->hw->mii.cl45_reg_mask;
+> > +	writel(value, priv->ioaddr + mii_data);
+> > +
+> > +	/* delay 2ms to avoid error value of get_phy_c45_devs_in_pkg */
+> > +	mdelay(2);
+> 
+> Please could you explain this a bit more?
+when of_mdiobus_register is invoked,
+the C22 PHY addr information will be obtained in device tree(reg = xx,
+no need through mdiobus),
+but C45 PHY addr should be got through mdiobus->read according to
+current flow.
+    of_mdiobus_register -->
+    of_mdiobus_register_phy -->
+    get_phy_device -->
+    get_phy_id -->
+    get_phy_c45_ids -->
+    get_phy_c45_devs_in_pkg
 
-Instead, we just record mask/unmask changes in cur_mask. This
-also avoids the need to read the current mask in eint_do_suspend,
-and we can remove mtk_eint_chip_read_mask function.
+In my platform, mdio bus read will return 0xffff or 0x0000 for C45 in
+of_mdiobus_register callstack, and that's not the expected value. 
+So that the mdiobus register fails.
 
-Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
----
- drivers/pinctrl/mediatek/mtk-eint.c | 18 ++++--------------
- 1 file changed, 4 insertions(+), 14 deletions(-)
+We took some time to find that only after adding 2ms delay here,
+the read action will be stable and return the expected value.
 
-diff --git a/drivers/pinctrl/mediatek/mtk-eint.c b/drivers/pinctrl/mediatek/mtk-eint.c
-index 737385e86beb807..7e526bcf5e0b55c 100644
---- a/drivers/pinctrl/mediatek/mtk-eint.c
-+++ b/drivers/pinctrl/mediatek/mtk-eint.c
-@@ -113,6 +113,8 @@ static void mtk_eint_mask(struct irq_data *d)
- 	void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
- 						eint->regs->mask_set);
- 
-+	eint->cur_mask[d->hwirq >> 5] &= ~mask;
-+
- 	writel(mask, reg);
- }
- 
-@@ -123,6 +125,8 @@ static void mtk_eint_unmask(struct irq_data *d)
- 	void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
- 						eint->regs->mask_clr);
- 
-+	eint->cur_mask[d->hwirq >> 5] |= mask;
-+
- 	writel(mask, reg);
- 
- 	if (eint->dual_edge[d->hwirq])
-@@ -217,19 +221,6 @@ static void mtk_eint_chip_write_mask(const struct mtk_eint *eint,
- 	}
- }
- 
--static void mtk_eint_chip_read_mask(const struct mtk_eint *eint,
--				    void __iomem *base, u32 *buf)
--{
--	int port;
--	void __iomem *reg;
--
--	for (port = 0; port < eint->hw->ports; port++) {
--		reg = base + eint->regs->mask + (port << 2);
--		buf[port] = ~readl_relaxed(reg);
--		/* Mask is 0 when irq is enabled, and 1 when disabled. */
--	}
--}
--
- static int mtk_eint_irq_request_resources(struct irq_data *d)
- {
- 	struct mtk_eint *eint = irq_data_get_irq_chip_data(d);
-@@ -384,7 +375,6 @@ static void mtk_eint_irq_handler(struct irq_desc *desc)
- 
- int mtk_eint_do_suspend(struct mtk_eint *eint)
- {
--	mtk_eint_chip_read_mask(eint, eint->base, eint->cur_mask);
- 	mtk_eint_chip_write_mask(eint, eint->base, eint->wake_mask);
- 
- 	return 0;
--- 
-2.21.0.593.g511ec345e18-goog
+did you try C45 support in your platform? I can't tell whether it's a
+common or specified issue.
+
+our version is 4.21a.
+> 
+>        Andrew
+
 
 
 _______________________________________________
