@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5F720F56B
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:22:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8DF02F55F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:21:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dw7U+RLeMTBkvtyNlGbbUROA8El0iwER/KFkOPdDze8=; b=cfKSrsrZQrn5Yo
-	ZQPaMRWoEPDsxLQZcJKv6CXaMq55cqRxuADfnvcB+Y7cmZ10+aSjeKyhEgeHm2P5ZAE0QLVV1vUMi
-	4RN/TcfPXsAgnV3BXz9/g2eRRiUW1tX4+i3ogZ9YqsUHIbGt0wOIzbn5Y86FaUzKnJvkjKI9GqqMC
-	UddueWerfIkyIqjfX2PEc0/L76S0SpQn63QshrV93ZXbOkYRYdrM+W0DrQZsWpJ/Rgyp9HKk1UZ22
-	FkXOyKM8ws5r5uBfBEG0nyXZluipywB+LbPXKx6Da8MtSp6OQ5QnnpcGud53Ofq8rNEoqjw5Io3tb
-	ranQSfVdK65JkadUwtsQ==;
+	List-Owner; bh=c7cOijeaNKOoArvl3/I96Eoe2tyAdZZGMgZxAUpz+0w=; b=fIha/7I9P8Dj0d
+	93+tfjF6RbMYu/yP81nTQ7EqdQk1L/okNQNhatrfyw1Y79dGVaYbBVFDcxkRuNh0QlLvYy7UnwAhG
+	6xwQOeasGIU8cmGI1gky8g/4KQOrfE2l8zejkv+53Ub3yiDPVhUu54drLeBL8VK99hHUm7LxsufrN
+	rnSiRBpspj0FXBuFzTD4/53S5etxGkGhB8WtEhM8RLHZAlJkqTk57phF3nuRr2+IgrUidPYL1aprX
+	RrHrrGDfXbOzPWdTS3u6i/Yis54hY5HvshuI0jCIaoQZqiLhiPRnCion82IurMSO7CdUdqrp0asRD
+	xTTHyHK7Fs42+8TLST4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLQq1-0001kT-Sg; Tue, 30 Apr 2019 11:22:17 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hLQpX-0001Ay-Qm; Tue, 30 Apr 2019 11:21:47 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLQpU-00014z-QE; Tue, 30 Apr 2019 11:21:50 +0000
-X-UUID: 6a2f285fdea44fdcac04c0197e50ad13-20190430
-X-UUID: 6a2f285fdea44fdcac04c0197e50ad13-20190430
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ id 1hLQpN-00012E-Sw; Tue, 30 Apr 2019 11:21:39 +0000
+X-UUID: 9ef3686066ad4501b36721599d27992c-20190430
+X-UUID: 9ef3686066ad4501b36721599d27992c-20190430
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <roger.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1436152873; Tue, 30 Apr 2019 03:21:38 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 1385664965; Tue, 30 Apr 2019 03:21:32 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 30 Apr 2019 04:21:37 -0700
+ 15.0.1395.4; Tue, 30 Apr 2019 04:21:31 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Tue, 30 Apr 2019 19:21:29 +0800
 Received: from mtkslt207.mediatek.inc (10.21.15.94) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
@@ -41,18 +41,18 @@ From: Roger Lu <roger.lu@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger
  <matthias.bgg@gmail.com>, Viresh Kumar <vireshk@kernel.org>, Stephen Boyd
  <sboyd@kernel.org>, "Rafael J . Wysocki" <rjw@rjwysocki.net>
-Subject: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
-Date: Tue, 30 Apr 2019 19:20:10 +0800
-Message-ID: <20190430112012.4514-2-roger.lu@mediatek.com>
+Subject: [RFC v1 2/3] arm64: dts: mt8183: add svs device information
+Date: Tue, 30 Apr 2019 19:20:11 +0800
+Message-ID: <20190430112012.4514-3-roger.lu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20190430112012.4514-1-roger.lu@mediatek.com>
 References: <20190430112012.4514-1-roger.lu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E98BCA2A6482E39BD36EDBBB3E007502447FBA8A75806DE18C05AF44705A47AC2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_042145_392990_9FD97E22 
-X-CRM114-Status: GOOD (  11.15  )
+X-CRM114-CacheID: sfid-20190430_042137_939073_0ED54DDB 
+X-CRM114-Status: UNSURE (   9.47  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -82,90 +82,104 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Document the binding for enabling mtk svs on MediaTek SoC.
+add pmic/clock/irq/efuse setting in svs noce
 
 Signed-off-by: Roger Lu <roger.lu@mediatek.com>
 ---
- .../devicetree/bindings/power/mtk-svs.txt     | 70 +++++++++++++++++++
- 1 file changed, 70 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 16 +++++++
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 46 +++++++++++++++++++++
+ 2 files changed, 62 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
-new file mode 100644
-index 000000000000..355329db74ba
---- /dev/null
-+++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
-@@ -0,0 +1,70 @@
-+* Mediatek Smart Voltage Scaling (MTK SVS)
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+index 9b525597e5ec..42bdf4f3c0bc 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
++++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+@@ -26,6 +26,22 @@
+ 	};
+ };
+ 
++&svs_cpu_little {
++	vcpu_little-supply = <&mt6358_vproc12_reg>;
++};
 +
-+This describes the device tree binding for the MTK SVS controller
-+which helps provide the optimized CPU/GPU/CCI voltages. This device also
-+needs thermal data to calculate thermal slope for accurately compensate
-+the voltages when temperature change.
++&svs_cpu_big {
++	vcpu_big-supply = <&mt6358_vproc11_reg>;
++};
 +
-+Required properties:
-+- compatible:
-+  - "mediatek,mt8183-svs" : For MT8183 family of SoCs
-+- reg: Address range of the MTK SVS controller.
-+- interrupts: IRQ for the MTK SVS controller.
-+- clocks, clock-names: Clocks needed for the svs controller. required
-+                       clocks are:
-+		       "main_clk": Main clock needed for register access
-+- nvmem-cells: Phandle to the calibration data provided by a nvmem device.
-+- nvmem-cell-names: Should be "svs-calibration-data" and "calibration-data"
-+- svs_xxx: Phandle of svs_bank device for controlling corresponding opp
-+           table and power-domains.
-+- vxxx-supply: Phandle to each regulator. vxxx can be "vcpu_little",
-+	       "vcpu_big", "vcci" and "vgpu".
++&svs_cci {
++	vcci-supply = <&mt6358_vproc12_reg>;
++};
 +
-+Example:
++&svs_gpu {
++	vgpu-spply = <&mt6358_vgpu_reg>;
++};
 +
-+	svs: svs@1100b000 {
-+		compatible = "mediatek,mt8183-svs";
-+		reg = <0 0x1100b000 0 0x1000>;
-+		interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW 0>;
-+		clocks = <&infracfg CLK_INFRA_THERM>;
-+		clock-names = "main_clk";
-+		nvmem-cells = <&svs_calibration>, <&thermal_calibration>;
-+		nvmem-cell-names = "svs-calibration-data", "calibration-data";
+ &uart0 {
+ 	status = "okay";
+ };
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index 75c4881bbe5e..0ae00cf39d41 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -299,12 +299,58 @@
+ 			status = "disabled";
+ 		};
+ 
++		svs: svs@1100b000 {
++			compatible = "mediatek,mt8183-svs";
++			reg = <0 0x1100b000 0 0x1000>;
++			interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW 0>;
++			clocks = <&infracfg CLK_INFRA_THERM>;
++			clock-names = "main_clk";
++			nvmem-cells = <&svs_calibration>,
++				      <&thermal_calibration>;
++			nvmem-cell-names = "svs-calibration-data",
++					   "calibration-data";
 +
-+		svs_cpu_little: svs_cpu_little {
-+			compatible = "mediatek,mt8183-svs-cpu-little";
-+			operating-points-v2 = <&cluster0_opp>;
++			svs_cpu_little: svs_cpu_little {
++				compatible = "mediatek,mt8183-svs-cpu-little";
++				operating-points-v2 = <&cluster0_opp>;
++			};
++
++			svs_cpu_big: svs_cpu_big {
++				compatible = "mediatek,mt8183-svs-cpu-big";
++				operating-points-v2 = <&cluster1_opp>;
++			};
++
++			svs_cci: svs_cci {
++				compatible = "mediatek,mt8183-svs-cci";
++				operating-points-v2 = <&cluster2_opp>;
++			};
++
++			svs_gpu: svs_gpu {
++				compatible = "mediatek,mt8183-svs-gpu";
++				power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
++				operating-points-v2 = <&gpu_opp_table>;
++			};
 +		};
 +
-+		svs_cpu_big: svs_cpu_big {
-+			compatible = "mediatek,mt8183-svs-cpu-big";
-+			operating-points-v2 = <&cluster1_opp>;
+ 		audiosys: syscon@11220000 {
+ 			compatible = "mediatek,mt8183-audiosys", "syscon";
+ 			reg = <0 0x11220000 0 0x1000>;
+ 			#clock-cells = <1>;
+ 		};
+ 
++		efuse: efuse@11f10000 {
++			compatible = "mediatek,efuse";
++			reg = <0 0x11f10000 0 0x1000>;
++			#address-cells = <1>;
++			#size-cells = <1>;
++			svs_calibration: calib@580 {
++				reg = <0x580 0x64>;
++			};
++			thermal_calibration: calib@180 {
++				reg = <0x180 0xc>;
++			};
 +		};
 +
-+		svs_cci: svs_cci {
-+			compatible = "mediatek,mt8183-svs-cci";
-+			operating-points-v2 = <&cluster2_opp>;
-+		};
-+
-+		svs_gpu: svs_gpu {
-+			compatible = "mediatek,mt8183-svs-gpu";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-+			operating-points-v2 = <&gpu_opp_table>;
-+		};
-+	};
-+
-+	&svs_cpu_little {
-+		vcpu_little-supply = <&mt6358_vproc12_reg>;
-+	};
-+
-+	&svs_cpu_big {
-+		vcpu_big-supply = <&mt6358_vproc11_reg>;
-+	};
-+
-+	&svs_cci {
-+		vcci-supply = <&mt6358_vproc12_reg>;
-+	};
-+
-+	&svs_gpu {
-+		vgpu-spply = <&mt6358_vgpu_reg>;
-+	};
+ 		mfgcfg: syscon@13000000 {
+ 			compatible = "mediatek,mt8183-mfgcfg", "syscon";
+ 			reg = <0 0x13000000 0 0x1000>;
 -- 
 2.18.0
 
