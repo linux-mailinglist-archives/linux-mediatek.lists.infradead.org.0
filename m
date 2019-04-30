@@ -2,56 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2E066F3A4
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 12:05:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B03F4F3A0
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 12:04:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=irrkjwKXu3nBzToXXFmDPEIo1kA1tvd3YxuUBrf/8bE=; b=lPe+xNqi8kDMK4
-	9c+1VPrY3EVN7LIWzU98f7g+HUjhMl1CJOzbrs4GOgut/u6Yuo3VdtjXwPP6JVcLEaJdTJgLShtf3
-	sRDuQnZG8vC7VM2y59HKHgVOheOZayRKoBGPosRO7QlTXUJFkxB71wo/AjCVaYxjA4EUcYjv2DEVZ
-	NxYD2GysRpnAJ8bAsuPxDIIh1CICD6evWt/cj4XQwXWzq60FlwOgCTZBNuGLPb5+P6tpbcecWHvIJ
-	iLgbt6VC4JV7b2s/glUTYORevLBlsXEeyM3yodZ4sGgxvQBAkI2mpv/CUoi6bA/P2adplf1SeiDEi
-	RvBciL81+ENCgoE3JV9g==;
+	List-Owner; bh=phiYrSDop5kpCpZVFOLBz4UyT+LPQXXfY/wSCPEOGGM=; b=sMG9Bn2NwZoGtj
+	37s02iwesDNIjgewkCFCi8Muw1o5B+l0ge8rdFVuBb03obblVcexG2+P9cQnYCHJVzzqoKip8jmj9
+	1akwHg4gck7/1tRk6hsFGiBaxzJltwP5gaxXypoMAKi+gondBzfUVd4efpxP0rKshGfLlu5osMICj
+	6yEUebQ7qB3sKv/stMzosIB7NobKV0x8V9nlRRF+0dowIZdYdnLpVZDuK5g8qTanvylXzsaEBkPr4
+	7Ng9u8LUQbezefmduMpX1Tgr675dMK3GKhc81EjTAATa5iPUluPs4eWyM1Zvp5cCdpRyFjD+OnvHt
+	3+7ZL8Ur1sr+tkLc/aJQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLPd8-0001Qt-MV; Tue, 30 Apr 2019 10:04:54 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hLPck-0000tT-50; Tue, 30 Apr 2019 10:04:30 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLPcY-0000eJ-Re; Tue, 30 Apr 2019 10:04:22 +0000
-X-UUID: efa3e322b09e4c08849224d2bb704dab-20190430
-X-UUID: efa3e322b09e4c08849224d2bb704dab-20190430
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hLPcQ-0000UC-4k; Tue, 30 Apr 2019 10:04:11 +0000
+X-UUID: 2567b0dd098c40d19feabd68777f9ac1-20190430
+X-UUID: 2567b0dd098c40d19feabd68777f9ac1-20190430
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 119293181; Tue, 30 Apr 2019 02:04:17 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 30 Apr 2019 03:04:15 -0700
+ with ESMTP id 1533831900; Tue, 30 Apr 2019 02:04:07 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 03:04:06 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 30 Apr 2019 18:04:03 +0800
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 18:04:04 +0800
 Received: from mtkslt306.mediatek.inc (10.21.14.136) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 30 Apr 2019 18:04:03 +0800
+ Frontend Transport; Tue, 30 Apr 2019 18:04:04 +0800
 From: Xiaolei Li <xiaolei.li@mediatek.com>
 To: <miquel.raynal@bootlin.com>, <richard@nod.at>
-Subject: [PATCH v2 4/5] mtd: rawnand: mtk: Fix wrongly assigned OOB buffer
- pointer issue
-Date: Tue, 30 Apr 2019 18:02:49 +0800
-Message-ID: <20190430100250.28083-5-xiaolei.li@mediatek.com>
+Subject: [PATCH v2 5/5] mtd: rawnand: mtk: Setup empty page threshold correctly
+Date: Tue, 30 Apr 2019 18:02:50 +0800
+Message-ID: <20190430100250.28083-6-xiaolei.li@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20190430100250.28083-1-xiaolei.li@mediatek.com>
 References: <20190430100250.28083-1-xiaolei.li@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F0C6D8D1A4B3ECC204026368483FB9662EFEA67EBE3809FFBFE27B17D8539A0E2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_030419_471692_6EDB9E68 
-X-CRM114-Status: UNSURE (   9.83  )
+X-CRM114-CacheID: sfid-20190430_030410_185142_1C5DB4EA 
+X-CRM114-Status: UNSURE (   8.74  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,80 +77,49 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-One main goal of the function mtk_nfc_update_ecc_stats is to check
-whether sectors are all empty. If they are empty, set these sectors's
-data buffer and OOB buffer as 0xff.
+MTK NAND Controller has the ability to check whether read data are
+mostly 0xff by comparing zero bit count of read data with empty
+threshold automatically.
 
-But now, the sector OOB buffer pointer is wrongly assigned. We always
-do memset from sector 0.
+But now we never set this threshold and always make it be default value
+which is 10.
 
-To fix this issue, pass start sector number to make OOB buffer pointer
-be properly assigned.
+This patch fixes this problem by setting empty threshold as the product
+of read sector count and ECC strength.
 
 Fixes: 1d6b1e464950 ("mtd: mediatek: driver for MTK Smart Device")
 Signed-off-by: Xiaolei Li <xiaolei.li@mediatek.com>
-Reviewed-by: Miquel Raynal <miquel.raynal@bootlin.com>
 ---
- drivers/mtd/nand/raw/mtk_nand.c | 21 ++++++++++-----------
- 1 file changed, 10 insertions(+), 11 deletions(-)
+ drivers/mtd/nand/raw/mtk_nand.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
 
 diff --git a/drivers/mtd/nand/raw/mtk_nand.c b/drivers/mtd/nand/raw/mtk_nand.c
-index 23ebd668bbcd..48759af5c058 100644
+index 48759af5c058..b56965328771 100644
 --- a/drivers/mtd/nand/raw/mtk_nand.c
 +++ b/drivers/mtd/nand/raw/mtk_nand.c
-@@ -889,19 +889,21 @@ static int mtk_nfc_write_oob_std(struct nand_chip *chip, int page)
- 	return mtk_nfc_write_page_raw(chip, NULL, 1, page);
- }
+@@ -94,6 +94,7 @@
+ #define NFI_MASTER_STA		(0x224)
+ #define		MASTER_STA_MASK		(0x0FFF)
+ #define NFI_EMPTY_THRESH	(0x23C)
++#define		EMPTY_THRESH_MASK	GENMASK(7, 0)
  
--static int mtk_nfc_update_ecc_stats(struct mtd_info *mtd, u8 *buf, u32 sectors)
-+static int mtk_nfc_update_ecc_stats(struct mtd_info *mtd, u8 *buf, u32 start,
-+				    u32 sectors)
- {
- 	struct nand_chip *chip = mtd_to_nand(mtd);
- 	struct mtk_nfc *nfc = nand_get_controller_data(chip);
- 	struct mtk_nfc_nand_chip *mtk_nand = to_mtk_nand(chip);
- 	struct mtk_ecc_stats stats;
-+	u32 reg_size = mtk_nand->fdm.reg_size;
- 	int rc, i;
- 
- 	rc = nfi_readl(nfc, NFI_STA) & STA_EMP_PAGE;
- 	if (rc) {
- 		memset(buf, 0xff, sectors * chip->ecc.size);
- 		for (i = 0; i < sectors; i++)
--			memset(oob_ptr(chip, i), 0xff, mtk_nand->fdm.reg_size);
-+			memset(oob_ptr(chip, start + i), 0xff, reg_size);
- 		return 0;
+ #define MTK_NAME		"mtk-nand"
+ #define KB(x)			((x) * 1024UL)
+@@ -947,6 +948,14 @@ static int mtk_nfc_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,
+ 		return -EINVAL;
  	}
  
-@@ -921,7 +923,7 @@ static int mtk_nfc_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,
- 	u32 spare = mtk_nand->spare_per_sector;
- 	u32 column, sectors, start, end, reg;
- 	dma_addr_t addr;
--	int bitflips;
-+	int bitflips = 0;
- 	size_t len;
- 	u8 *buf;
- 	int rc;
-@@ -988,14 +990,11 @@ static int mtk_nfc_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,
- 	if (rc < 0) {
- 		dev_err(nfc->dev, "subpage done timeout\n");
- 		bitflips = -EIO;
--	} else {
--		bitflips = 0;
--		if (!raw) {
--			rc = mtk_ecc_wait_done(nfc->ecc, ECC_DECODE);
--			bitflips = rc < 0 ? -ETIMEDOUT :
--				mtk_nfc_update_ecc_stats(mtd, buf, sectors);
--			mtk_nfc_read_fdm(chip, start, sectors);
--		}
-+	} else if (!raw) {
-+		rc = mtk_ecc_wait_done(nfc->ecc, ECC_DECODE);
-+		bitflips = rc < 0 ? -ETIMEDOUT :
-+			mtk_nfc_update_ecc_stats(mtd, buf, start, sectors);
-+		mtk_nfc_read_fdm(chip, start, sectors);
- 	}
- 
- 	dma_unmap_single(nfc->dev, addr, len, DMA_FROM_DEVICE);
++	/**
++	 * Setup empty threshold as the product of sector count
++	 * and ECC strength
++	 */
++	reg = sectors * chip->ecc.strength;
++	reg = min_t(unsigned int, reg, EMPTY_THRESH_MASK);
++	nfi_writel(nfc, reg, NFI_EMPTY_THRESH);
++
+ 	reg = nfi_readw(nfc, NFI_CNFG);
+ 	reg |= CNFG_READ_EN | CNFG_DMA_BURST_EN | CNFG_AHB;
+ 	if (!raw) {
 -- 
 2.18.0
 
