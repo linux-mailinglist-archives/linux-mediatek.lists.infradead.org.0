@@ -2,84 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 78FF5F2BA
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 11:25:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C83CBF337
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 11:44:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VUx6InnXnKQSOCB/rdpvB7Z+DgS7uDzmlT6T6qTkUXE=; b=YKWG0+PuoaA4b1
-	5kV1vk/pPwdYD5+4pAcO1CU4DLcufG0+UxbTXpN+6Uj2GeUOdiIv3IPnHrlmLSZ8eEtXjwrqp//Hv
-	LGIkT+uoWd7ESO7nAPewGElwpnvzlHvpL5QaTMDAxDCWc70o6utQgOGRa1ci8lDb8YGbR8vnWB5lQ
-	MWD0xmPqK6Je8/qRz9GS3BtSaJmd2gCIs0J2YOtdPP/Z9nuEnu9n2TeyTOSp8+MUmavj0oZd6xZfV
-	ETDiMm4hRJYs3X7SFra5K7RzQRU6WnIBzEI5Qa8ceuGEHdDutW713Kj5n1s15FfUOzKiR4EhNFxuF
-	AnpRMvE2SIX7lkrqkdZg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=5IxUwZ05zWNEaXR5qF6uVG0Bmt1/RFYJxL1uEVm+iT0=; b=YzJFnsD8tHc3Uz8x7aOVYHYTN
+	yXl60Xet3j0ZH9I+IXroFBpZCTnqrpFS+i+snwM214v1CVdd+HGK7rPFN39Esc6dLTYCEjZhu6De8
+	BGUqbXgckB4nVbWOg0uUrJJXsFXMJImVeILwy+bkxWvfthxBRGHMkD3njD+zGivJP6ZnhHaYrViC2
+	N9qDpNOq8Jk0flosyGDUFXl4VyJQae23kSnYxx6cfC1igacjpAIxCjGipWgw/WwrtcgQannrogpKK
+	/6fDE3DTZQ39W/Quusw7rvFb7LqW9pVXZHBli2sTDPE118Vi8zxluOFzbSj1JiBlMR+DlzDRhdZTq
+	Lwk/Admmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLP0b-0005Jb-PD; Tue, 30 Apr 2019 09:25:05 +0000
-Received: from nbd.name ([2a01:4f8:221:3d45::2])
+	id 1hLPJ1-0006as-2x; Tue, 30 Apr 2019 09:44:07 +0000
+Received: from mx08-00178001.pphosted.com ([91.207.212.93]
+ helo=mx07-00178001.pphosted.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLP0Y-0004wj-2h
- for linux-mediatek@lists.infradead.org; Tue, 30 Apr 2019 09:25:03 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
- s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=07t/B0FBgWimtwCFIC57NK6vofmRzKUYAo6LUAADlIY=; b=tifufPuE/GBd81btMxf/j6om1M
- Bh6s6MSQRU2f2c4TY8YWdKEJCv/aJxJRnWRFCn5ObL4y8O39EkkpjJCcW5d0e2EOVe6+QTM5iNK3B
- 2BRNL+Ae7BWpZdOZW90+VMBkeVerUcSBHI0/haxL2Op+iaFevUVQpqASuP/l/v6KVktA=;
-Received: from p4ff135f1.dip0.t-ipconnect.de ([79.241.53.241] helo=nf.local)
- by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
- (Exim 4.89) (envelope-from <nbd@nbd.name>)
- id 1hLP0S-0007XK-Ix; Tue, 30 Apr 2019 11:24:56 +0200
-Subject: Re: [PATCH v2] mt76: mt7615: add TX/RX antenna pattern capabilities
-To: Ryder Lee <ryder.lee@mediatek.com>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
-References: <4f7160cb9f52335ce15fccac087fec25e7650884.1556255852.git.ryder.lee@mediatek.com>
-From: Felix Fietkau <nbd@nbd.name>
-Openpgp: preference=signencrypt
-Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
- mQGiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
- ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
- Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
- AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
- vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
- wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
- TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
- l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwbQcRmVsaXggRmll
- dGthdSA8bmJkQG5iZC5uYW1lPohgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
- HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
- VrwYTIThkTlQuQINBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
- CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
- VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
- Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
- DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
- wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
- f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
- aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
- FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
- TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabiEkE
- GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
- RjMaxwtSdaCKMw3j33ZbsWS4
-Message-ID: <c3f6e202-8c2f-a103-a104-e0d1cde8147b@nbd.name>
-Date: Tue, 30 Apr 2019 11:24:55 +0200
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:60.0)
- Gecko/20100101 Thunderbird/60.6.1
+ id 1hLPIx-0006aM-LN; Tue, 30 Apr 2019 09:44:05 +0000
+Received: from pps.filterd (m0046661.ppops.net [127.0.0.1])
+ by mx08-00178001.pphosted.com (8.16.0.27/8.16.0.27) with SMTP id
+ x3U9fBrl026129; Tue, 30 Apr 2019 11:43:56 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=st.com;
+ h=subject : to : cc :
+ references : from : message-id : date : mime-version : in-reply-to :
+ content-type : content-transfer-encoding; s=STMicroelectronics;
+ bh=9fdnpUZsMrLx27j+EXtChHalN5BDYMsqjBIsFWxPcmw=;
+ b=ZqHMHuYgQyWHe3g0kaxkVFNRld5iXUv7r9FiUdq2gqatSxjKpUoCUzZIra3rDBj9xFmd
+ KtZbQ1IMwjZPfK6LufOQQ0eBa0OfNDo91qgTJ66BVVVZEsQJMQzDjv58kVSGfXtFTguq
+ dxQcGL6FdtONfM7l0s0KvsYn8MS9otouy6wlYMCoqpYCcSS90DQLbTuS2elDWYlXQ98z
+ pZoqkDFQ9oLvqL7VIgsUbZPK9IPLERS8zVRAQM4jGgH4sBpchZGJet/4nuPBxuQobTDi
+ 2W2IQHw1InI+EHw4JfT4jmK0AIdM9dCqw4yQblsJQwut6CMLpe9E/AZggYj2GJV6/PKK qA== 
+Received: from beta.dmz-eu.st.com (beta.dmz-eu.st.com [164.129.1.35])
+ by mx08-00178001.pphosted.com with ESMTP id 2s61r0d53h-1
+ (version=TLSv1 cipher=ECDHE-RSA-AES256-SHA bits=256 verify=NOT);
+ Tue, 30 Apr 2019 11:43:56 +0200
+Received: from zeta.dmz-eu.st.com (zeta.dmz-eu.st.com [164.129.230.9])
+ by beta.dmz-eu.st.com (STMicroelectronics) with ESMTP id 0CDCE34;
+ Tue, 30 Apr 2019 09:43:54 +0000 (GMT)
+Received: from Webmail-eu.st.com (sfhdag3node2.st.com [10.75.127.8])
+ by zeta.dmz-eu.st.com (STMicroelectronics) with ESMTP id 8F07115E8;
+ Tue, 30 Apr 2019 09:43:54 +0000 (GMT)
+Received: from [10.48.0.204] (10.75.127.50) by SFHDAG3NODE2.st.com
+ (10.75.127.8) with Microsoft SMTP Server (TLS) id 15.0.1347.2; Tue, 30 Apr
+ 2019 11:43:54 +0200
+Subject: Re: [PATCH 2/6] net: stmmac: fix csr_clk can't be zero issue
+To: biao huang <biao.huang@mediatek.com>
+References: <1556433009-25759-1-git-send-email-biao.huang@mediatek.com>
+ <1556433009-25759-3-git-send-email-biao.huang@mediatek.com>
+ <24f4b268-aa7f-e1f7-59fc-2bc163eb8277@st.com>
+ <1556525353.24897.30.camel@mhfsdcap03>
+ <738b37cd-4719-9257-18fc-aab1dc7424f4@st.com>
+ <1556615745.24897.40.camel@mhfsdcap03>
+From: Alexandre Torgue <alexandre.torgue@st.com>
+Message-ID: <11036b11-e862-2c99-2345-901ac6276e02@st.com>
+Date: Tue, 30 Apr 2019 11:43:52 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <4f7160cb9f52335ce15fccac087fec25e7650884.1556255852.git.ryder.lee@mediatek.com>
+In-Reply-To: <1556615745.24897.40.camel@mhfsdcap03>
 Content-Language: en-US
+X-Originating-IP: [10.75.127.50]
+X-ClientProxiedBy: SFHDAG6NODE1.st.com (10.75.127.16) To SFHDAG3NODE2.st.com
+ (10.75.127.8)
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:, ,
+ definitions=2019-04-30_04:, , signatures=0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_022502_518250_14ED47E4 
-X-CRM114-Status: GOOD (  12.38  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190430_024404_032217_4D86D9C1 
+X-CRM114-Status: GOOD (  19.42  )
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [91.207.212.93 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -87,6 +88,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ 0.8 KHOP_DYNAMIC           Relay looks like a dynamic address
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,44 +100,105 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
- Roy Luo <royluo@google.com>
-Content-Type: text/plain; charset="us-ascii"
+Cc: jianguo.zhang@mediatek.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-stm32@st-md-mailman.stormreply.com,
+ Jose Abreu <joabreu@synopsys.com>, linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2019-04-26 07:23, Ryder Lee wrote:
-> Announce antenna pattern cap to adapt PHY and baseband settings.
-> 
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> ---
-> Changes since v2:
-> - Add a prefix mt76 in the title.
-> ---
->  drivers/net/wireless/mediatek/mt76/mt7615/init.c | 2 ++
->  1 file changed, 2 insertions(+)
-> 
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> index 3ab3ff553ef2..122f7a565540 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> @@ -190,6 +190,8 @@ int mt7615_register_device(struct mt7615_dev *dev)
->  			IEEE80211_VHT_CAP_SHORT_GI_160 |
->  			IEEE80211_VHT_CAP_MAX_MPDU_LENGTH_11454 |
->  			IEEE80211_VHT_CAP_MAX_A_MPDU_LENGTH_EXPONENT_MASK |
-> +			IEEE80211_VHT_CAP_RX_ANTENNA_PATTERN |
-> +			IEEE80211_VHT_CAP_TX_ANTENNA_PATTERN |
-If I read the standard correctly, these flags indicate that the rx/tx
-antenna pattern does NOT change during association.
-Doesn't that mean that we should set it in mac80211.c instead, so that
-it also applies to MT76x2?
 
-Thanks,
 
-- Felix
+On 4/30/19 11:15 AM, biao huang wrote:
+> On Mon, 2019-04-29 at 10:26 +0200, Alexandre Torgue wrote:
+>>
+>> On 4/29/19 10:09 AM, biao huang wrote:
+>>> Hi,
+>>>
+>>> On Mon, 2019-04-29 at 09:18 +0200, Alexandre Torgue wrote:
+>>>> Hi
+>>>>
+>>>> On 4/28/19 8:30 AM, Biao Huang wrote:
+>>>>> The specific clk_csr value can be zero, and
+>>>>> stmmac_clk is necessary for MDC clock which can be set dynamically.
+>>>>> So, change the condition from plat->clk_csr to plat->stmmac_clk to
+>>>>> fix clk_csr can't be zero issue.
+>>>>>
+>>>>> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
+>>>>> ---
+>>>>>     drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    2 +-
+>>>>>     1 file changed, 1 insertion(+), 1 deletion(-)
+>>>>>
+>>>>> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+>>>>> index 818ad88..9e89b94 100644
+>>>>> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+>>>>> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+>>>>> @@ -4376,7 +4376,7 @@ int stmmac_dvr_probe(struct device *device,
+>>>>>     	 * set the MDC clock dynamically according to the csr actual
+>>>>>     	 * clock input.
+>>>>>     	 */
+>>>>> -	if (!priv->plat->clk_csr)
+>>>>> +	if (priv->plat->stmmac_clk)
+>>>>>     		stmmac_clk_csr_set(priv);
+>>>>>     	else
+>>>>>     		priv->clk_csr = priv->plat->clk_csr;
+>>>>>
+>>>>
+>>>> So, as soon as stmmac_clk will be declared, it is no longer possible to
+>>>> fix a CSR through the device tree ?
+>>>
+>>> let's focus on the condition:
+>>> 1. clk_csr may be zero, it should not be the condition. or the clk_csr =
+>>> 0 will jump to the wrong block.
+>>> 2. Since stmmac_clk_csr_set will get_clk_rate from stmmac_clk,
+>>> the plat->stmmac_clk is a more proper condition.
+>>>
+>>
+>> Ok, but here you remove one possibility: stmmac_clk and clk_csr defined.
+>> no ?
+>>
+>> Other way could be the following code + initialize priv->plat->clk_csr
+>> with a non null value before read it in device tree (in stmmac_platform).
+>>
+>> if (priv->plat->clk_csr >= 0)
+>> 	priv->clk_csr = priv->plat->clk_csr;
+>> else
+>> 	stmmac_clk_csr_set(priv);
+>>
+>>
+>>> In some case, it's impossible to get the clk rate of stmmac_clk,
+>>> so it's better to remain the clk_csr flow.
+>>>
+> Agree.
+> 
+> Maybe we should initialize plat->clk_csr to -1
+> in stmmac_probe_config_dt:
+> 
+> plat->clk_csr = -1;
+> /* Get clk_csr from device tree */
+> of_property_read_u32(np, "clk_csr", &plat->clk_csr);
+> 
+> Then the condition can write as you proposed:
+> if (priv->plat->clk_csr >= 0)
+>   	priv->clk_csr = priv->plat->clk_csr;
+> else
+>   	stmmac_clk_csr_set(priv);
+>
+
+Yes, I agree.
+Thanks
+Alex
+
+
+>>>
+>>>
+> 
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
