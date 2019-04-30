@@ -2,36 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55453F52A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:12:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22485F568
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:22:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=A5s4G0+N+ymxkMzAaPbxUeGI4+s7QAENvGH3+v3fuDw=; b=UkUAjp69D7mecn
-	rd2I8V/Yo0LMjmkj3Nrv4nN/LnH4AB71a4+VZWYMPLxUVarMh9bgNfr/ejdjvvD3gbYQhqRnBlyoW
-	MTJrtxwcetpROrFgt4Wfm7GdYHfJQKPqd4/sSfO++r1XiNkEczov9XIQ5Pb6G4tOnRWNdmIIWl53i
-	5BerJTeUvq+4kTjl0X+N/qhpYkWkku5SP2XzquxZE09R0b58a0wdYLcFH1Cv3qf/XzvRpJ64/H5g2
-	Yy4tzJQTk9og1k/IffjpUEPpbLQgmSEi3yCvsiHE8hErJH7CM/aUIQNDR9zmRpUiETHqyRY9IRE6t
-	ldNYSzYT3WfE+sT6Mr6A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=SuHRvGpXt8E5Sp8G5Epyr5aQvTVe1ozxXSUyrjELsME=; b=OjReXA+V0PZu31
+	83lO5AQ4JEX68wEx2SU22OYAw0Px8+hF38uyD6E/Fj8D2T/PmX+dm+kZjqvfX9MOGwV42WzibYEOT
+	ZjfkHn09y+l9ioz2Ochbx2C4nk70C8VfhHu3P7Kt3anmB9tYma77kHW7UOmMDKnEjM9tQeMWM9JJ2
+	r+dSExJ/hsKI0u9xHtftzy+9cCupnT+RBBLCQ8RDUKff9ueM8vlk3b/YfE+LMNOlgSSQBS5tdk7Vz
+	v2ojJfXn/zRdD1peCI1VAptE8NWCDohbvPxuBT3170bOlQJojYp4eUEzoA9+kjti3nU8Thw10Jknm
+	SW+/oRyzSpXZ03/yefgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLQgV-0005Eb-Bq; Tue, 30 Apr 2019 11:12:27 +0000
-Received: from hch by bombadil.infradead.org with local (Exim 4.90_1 #2 (Red
- Hat Linux)) id 1hLQgR-0005Dn-0q; Tue, 30 Apr 2019 11:12:23 +0000
-Date: Tue, 30 Apr 2019 04:12:22 -0700
-From: Christoph Hellwig <hch@infradead.org>
-To: Tom Murphy <tmurphy@arista.com>
-Subject: Re: [PATCH v2 3/4] iommu/dma-iommu: Use the dev->coherent_dma_mask
-Message-ID: <20190430111222.GA3191@infradead.org>
-References: <20190430002952.18909-1-tmurphy@arista.com>
- <20190430002952.18909-4-tmurphy@arista.com>
+	id 1hLQpk-0001TK-H7; Tue, 30 Apr 2019 11:22:00 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hLQpP-00012D-35; Tue, 30 Apr 2019 11:21:40 +0000
+X-UUID: 7b13e138704b479bb33fa31d6efc2cfd-20190430
+X-UUID: 7b13e138704b479bb33fa31d6efc2cfd-20190430
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <roger.lu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 997501542; Tue, 30 Apr 2019 03:21:32 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 04:21:30 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 19:21:29 +0800
+Received: from mtkslt207.mediatek.inc (10.21.15.94) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 30 Apr 2019 19:21:29 +0800
+From: Roger Lu <roger.lu@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Viresh Kumar <vireshk@kernel.org>, Stephen Boyd
+ <sboyd@kernel.org>, "Rafael J . Wysocki" <rjw@rjwysocki.net>
+Subject: PM / AVS: SVS: Introduce SVS engine
+Date: Tue, 30 Apr 2019 19:20:09 +0800
+Message-ID: <20190430112012.4514-1-roger.lu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190430002952.18909-4-tmurphy@arista.com>
-User-Agent: Mutt/1.9.2 (2017-12-15)
+X-MTK: N
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190430_042139_145685_33C1633B 
+X-CRM114-Status: UNSURE (   8.19  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (0.0 points)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -43,134 +70,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>, Will Deacon <will.deacon@arm.com>,
- David Brown <david.brown@linaro.org>,
- Thierry Reding <thierry.reding@gmail.com>, linux-s390@vger.kernel.org,
- linux-samsung-soc@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
- Kukjin Kim <kgene@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Gerald Schaefer <gerald.schaefer@de.ibm.com>,
- Andy Gross <andy.gross@linaro.org>, linux-arm-msm@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, David Woodhouse <dwmw2@infradead.org>,
- linux-kernel@vger.kernel.org, murphyt7@tcd.ie,
- iommu@lists.linux-foundation.org, Robin Murphy <robin.murphy@arm.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ devicetree@vger.kernel.org, linux-pm@vger.kernel.org, Kevin
+ Hilman <khilman@kernel.org>, Roger Lu <roger.lu@mediatek.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
->  static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
-> -		size_t size, int prot, struct iommu_domain *domain)
-> +		size_t size, int prot, struct iommu_domain *domain,
-> +		dma_addr_t dma_limit)
+The SVS (Smart Voltage Scaling) engine is a piece of hardware which is
+used to calculate optimized voltage values of several power domains, e.g.
+CPU/GPU/CCI, according to chip process corner, temperatures, and other
+factors. Then DVFS driver could apply those optimized voltage values to
+reduce power consumption.
 
-Can we just call this dma_mask?
+Roger Lu (3):
+  dt-bindings: soc: add mtk svs dt-bindings
+  arm64: dts: mt8183: add svs device information
+  PM / AVS: SVS: Introduce SVS engine
 
->  static void iommu_dma_unmap_resource(struct device *dev, dma_addr_t handle,
-> @@ -1250,7 +1251,8 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
->  	if (!msi_page)
->  		return NULL;
->  
-> -	iova = __iommu_dma_map(dev, msi_addr, size, prot, domain);
-> +	iova = __iommu_dma_map(dev, msi_addr, size, prot, domain,
-> +			dma_get_mask(dev));
+ .../devicetree/bindings/power/mtk-svs.txt     |   70 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |   16 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |   46 +
+ drivers/power/avs/Kconfig                     |   10 +
+ drivers/power/avs/Makefile                    |    1 +
+ drivers/power/avs/mtk_svs.c                   | 2084 +++++++++++++++++
+ include/linux/power/mtk_svs.h                 |   23 +
+ 7 files changed, 2250 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+ create mode 100644 drivers/power/avs/mtk_svs.c
+ create mode 100644 include/linux/power/mtk_svs.h
 
-Hmm, I don't think we need the DMA mask for the MSI mapping, this
-should probably always use a 64-bit mask.  Or we could just untangle
-it from the DMA mapping fast path entire, something like:
+--
+2.18.0
 
----
-From 0debafc85174ca830f2e371ff8e8f7465bde3ad8 Mon Sep 17 00:00:00 2001
-From: Christoph Hellwig <hch@lst.de>
-Date: Tue, 30 Apr 2019 07:06:23 -0400
-Subject: iommu/dma: opencode __iommu_dma_map in iommu_dma_get_msi_page
-
-The MSI page mapping really is a little different from the normal DMA
-mappings and doesn't need to look at the DMA mask.  Just open code
-it instead of trying to squeeze the behavior into the DMA path helpers.
-
-Signed-off-by: Christoph Hellwig <hch@lst.de>
----
- drivers/iommu/dma-iommu.c | 27 +++++++--------------------
- 1 file changed, 7 insertions(+), 20 deletions(-)
-
-diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
-index 58c35bab7626..2ac0df0879d7 100644
---- a/drivers/iommu/dma-iommu.c
-+++ b/drivers/iommu/dma-iommu.c
-@@ -358,11 +358,6 @@ static dma_addr_t iommu_dma_alloc_iova(struct iommu_domain *domain,
- 	struct iova_domain *iovad = &cookie->iovad;
- 	unsigned long shift, iova_len, iova = 0;
- 
--	if (cookie->type == IOMMU_DMA_MSI_COOKIE) {
--		cookie->msi_iova += size;
--		return cookie->msi_iova - size;
--	}
--
- 	shift = iova_shift(iovad);
- 	iova_len = size >> shift;
- 	/*
-@@ -397,10 +392,7 @@ static void iommu_dma_free_iova(struct iommu_dma_cookie *cookie,
- {
- 	struct iova_domain *iovad = &cookie->iovad;
- 
--	/* The MSI case is only ever cleaning up its most recent allocation */
--	if (cookie->type == IOMMU_DMA_MSI_COOKIE)
--		cookie->msi_iova -= size;
--	else if (cookie->fq_domain)	/* non-strict mode */
-+	if (cookie->fq_domain)	/* non-strict mode */
- 		queue_iova(iovad, iova_pfn(iovad, iova),
- 				size >> iova_shift(iovad), 0);
- 	else
-@@ -430,14 +422,10 @@ static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
- {
- 	struct iommu_domain *domain = iommu_get_dma_domain(dev);
- 	struct iommu_dma_cookie *cookie = domain->iova_cookie;
--	size_t iova_off = 0;
-+	size_t iova_off = iova_offset(&cookie->iovad, phys);
- 	dma_addr_t iova;
- 
--	if (cookie->type == IOMMU_DMA_IOVA_COOKIE) {
--		iova_off = iova_offset(&cookie->iovad, phys);
--		size = iova_align(&cookie->iovad, size + iova_off);
--	}
--
-+	size = iova_align(&cookie->iovad, size + iova_off);
- 	iova = iommu_dma_alloc_iova(domain, size, dma_get_mask(dev), dev);
- 	if (!iova)
- 		return DMA_MAPPING_ERROR;
-@@ -1121,7 +1109,6 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
- {
- 	struct iommu_dma_cookie *cookie = domain->iova_cookie;
- 	struct iommu_dma_msi_page *msi_page;
--	dma_addr_t iova;
- 	int prot = IOMMU_WRITE | IOMMU_NOEXEC | IOMMU_MMIO;
- 	size_t size = cookie_msi_granule(cookie);
- 
-@@ -1134,16 +1121,16 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
- 	if (!msi_page)
- 		return NULL;
- 
--	iova = __iommu_dma_map(dev, msi_addr, size, prot);
--	if (iova == DMA_MAPPING_ERROR)
-+	if (iommu_map(domain, cookie->msi_iova, msi_addr, size, prot))
- 		goto out_free_page;
- 
- 	INIT_LIST_HEAD(&msi_page->list);
- 	msi_page->phys = msi_addr;
--	msi_page->iova = iova;
-+	msi_page->iova = cookie->msi_iova;
- 	list_add(&msi_page->list, &cookie->msi_page_list);
--	return msi_page;
- 
-+	cookie->msi_iova += size;
-+	return msi_page;
- out_free_page:
- 	kfree(msi_page);
- 	return NULL;
--- 
-2.20.1
 
 
 _______________________________________________
