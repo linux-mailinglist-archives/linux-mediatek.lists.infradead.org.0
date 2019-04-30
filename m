@@ -2,57 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 112A6F584
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:27:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 21D71F58C
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 13:28:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=IZshO0NJ1UZWHE/5qKSy8IsIlY+VIPeiN5gsNuYE6uA=; b=JhVEiL9k1dE/FxtQfY1QUKUX1
-	WQUFYB4IdYyM3IR2OtpZNo4MAurhIdDWGZAKR6Neq8pJhlbrwJYtGVWDKRVsYi3gyQ0xyyGSq8O7d
-	nYoZghZcghbGZMCsS57ghepNyUeGtyjail5ECPhR8zbexyJ6nnaEUrSpCptNcb5gEZ6EHojsji2Mz
-	XB7+ZtG+mZZObkoLW3Ro7Vx1m4WqounTxfV32IWJfQVV1ATDNwRJEhiPQaafgxzxvu96W1j7XZK3F
-	qU3qsZitEJa3SNGd0hltR11RdSYWVWVEh9sulaXfzmtl/kMaWDHhvsR5DMOX8/xrj1DDPgNBHy82N
-	gtcy/tgNw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=E98klLbQvvWDal9y920kZUJX0ulEI+YYc4k/CKA7nts=; b=QsLJAlXxLCvoKF
+	RfLo9NtwS6PWm0KfLSdf8vgcySDnckplJyz58vDwq3ul7Dprgo5udH1TSxzVTq7ZxTSOUyLvpfStK
+	/ktjYJwDnLO/B+KmlgBPrXS7MsFO6/u69ygk7D5fVSXEczkdQqrOSuaJ9dlmxDS8pW9ubjjrStH7G
+	RWfigdoVdz5VuAENnN5w/KGdDmIQbCyw98uFCOT50diIoItDuYHdM/wTR4ACiGceaSgn0NJdkyaAw
+	cvdOc6jfteP7jhgh9WKVBWAge9INzdUJ/eAcmicJYC3R6XJl9zhbPRK+YgqRFg5jg3x8wDXYb5yZ0
+	c1PsgY0MwnSzu0za7myQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLQur-0004K8-Sy; Tue, 30 Apr 2019 11:27:17 +0000
-Received: from usa-sjc-mx-foss1.foss.arm.com ([217.140.101.70]
- helo=foss.arm.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLQui-0004Cb-9t; Tue, 30 Apr 2019 11:27:09 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.72.51.249])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 70BD380D;
- Tue, 30 Apr 2019 04:27:07 -0700 (PDT)
-Received: from [10.1.196.75] (e110467-lin.cambridge.arm.com [10.1.196.75])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id B9CB03F5C1;
- Tue, 30 Apr 2019 04:27:03 -0700 (PDT)
-Subject: Re: [PATCH v2 3/4] iommu/dma-iommu: Use the dev->coherent_dma_mask
-To: Christoph Hellwig <hch@infradead.org>, Tom Murphy <tmurphy@arista.com>
-References: <20190430002952.18909-1-tmurphy@arista.com>
- <20190430002952.18909-4-tmurphy@arista.com>
- <20190430111222.GA3191@infradead.org>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <da835ce2-f73e-3035-e1d7-d3028cc1a838@arm.com>
-Date: Tue, 30 Apr 2019 12:27:02 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+	id 1hLQvg-0004Zy-Bi; Tue, 30 Apr 2019 11:28:08 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hLQvc-0004Z8-OU
+ for linux-mediatek@lists.infradead.org; Tue, 30 Apr 2019 11:28:05 +0000
+X-UUID: 083cdad0587447108c3e473d86945782-20190430
+X-UUID: 083cdad0587447108c3e473d86945782-20190430
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 364735567; Tue, 30 Apr 2019 03:28:01 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 04:28:00 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Apr 2019 19:27:58 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 30 Apr 2019 19:27:58 +0800
+Message-ID: <1556623678.4496.1.camel@mtkswgap22>
+Subject: Re: [PATCH v2] mt76: mt7615: add TX/RX antenna pattern capabilities
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>
+Date: Tue, 30 Apr 2019 19:27:58 +0800
+In-Reply-To: <c3f6e202-8c2f-a103-a104-e0d1cde8147b@nbd.name>
+References: <4f7160cb9f52335ce15fccac087fec25e7650884.1556255852.git.ryder.lee@mediatek.com>
+ <c3f6e202-8c2f-a103-a104-e0d1cde8147b@nbd.name>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-In-Reply-To: <20190430111222.GA3191@infradead.org>
-Content-Language: en-GB
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_042708_352224_7982807E 
-X-CRM114-Status: GOOD (  30.49  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190430_042804_803679_8B19DCE6 
+X-CRM114-Status: GOOD (  12.78  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [217.140.101.70 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -64,143 +71,47 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org, linux-s390@vger.kernel.org,
- linux-samsung-soc@vger.kernel.org, linux-tegra@vger.kernel.org,
- Heiko Stuebner <heiko@sntech.de>, linux-rockchip@lists.infradead.org,
- linux-arm-msm@vger.kernel.org, Will Deacon <will.deacon@arm.com>,
- linux-kernel@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, David Brown <david.brown@linaro.org>,
- iommu@lists.linux-foundation.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-mediatek@lists.infradead.org, Kukjin Kim <kgene@kernel.org>,
- Andy Gross <andy.gross@linaro.org>, murphyt7@tcd.ie,
- David Woodhouse <dwmw2@infradead.org>,
- Gerald Schaefer <gerald.schaefer@de.ibm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>
+Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 30/04/2019 12:12, Christoph Hellwig wrote:
->>   static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
->> -		size_t size, int prot, struct iommu_domain *domain)
->> +		size_t size, int prot, struct iommu_domain *domain,
->> +		dma_addr_t dma_limit)
+On Tue, 2019-04-30 at 11:24 +0200, Felix Fietkau wrote:
+> On 2019-04-26 07:23, Ryder Lee wrote:
+> > Announce antenna pattern cap to adapt PHY and baseband settings.
+> > 
+> > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> > ---
+> > Changes since v2:
+> > - Add a prefix mt76 in the title.
+> > ---
+> >  drivers/net/wireless/mediatek/mt76/mt7615/init.c | 2 ++
+> >  1 file changed, 2 insertions(+)
+> > 
+> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > index 3ab3ff553ef2..122f7a565540 100644
+> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > @@ -190,6 +190,8 @@ int mt7615_register_device(struct mt7615_dev *dev)
+> >  			IEEE80211_VHT_CAP_SHORT_GI_160 |
+> >  			IEEE80211_VHT_CAP_MAX_MPDU_LENGTH_11454 |
+> >  			IEEE80211_VHT_CAP_MAX_A_MPDU_LENGTH_EXPONENT_MASK |
+> > +			IEEE80211_VHT_CAP_RX_ANTENNA_PATTERN |
+> > +			IEEE80211_VHT_CAP_TX_ANTENNA_PATTERN |
+> If I read the standard correctly, these flags indicate that the rx/tx
+> antenna pattern does NOT change during association.
+> Doesn't that mean that we should set it in mac80211.c instead, so that
+> it also applies to MT76x2?
 > 
-> Can we just call this dma_mask?
-> 
->>   static void iommu_dma_unmap_resource(struct device *dev, dma_addr_t handle,
->> @@ -1250,7 +1251,8 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
->>   	if (!msi_page)
->>   		return NULL;
->>   
->> -	iova = __iommu_dma_map(dev, msi_addr, size, prot, domain);
->> +	iova = __iommu_dma_map(dev, msi_addr, size, prot, domain,
->> +			dma_get_mask(dev));
-> 
-> Hmm, I don't think we need the DMA mask for the MSI mapping, this
-> should probably always use a 64-bit mask.
+Right. I will add these flags in common code.
 
-If that were true then we wouldn't need DMA masks for regular mappings 
-either. If we have to map the MSI doorbell at all, then we certainly 
-have to place it at an IOVA that the relevant device is actually capable 
-of addressing.
+Ryder
 
-Robin.
 
->  Or we could just untangle
-> it from the DMA mapping fast path entire, something like:
-> 
-> ---
->  From 0debafc85174ca830f2e371ff8e8f7465bde3ad8 Mon Sep 17 00:00:00 2001
-> From: Christoph Hellwig <hch@lst.de>
-> Date: Tue, 30 Apr 2019 07:06:23 -0400
-> Subject: iommu/dma: opencode __iommu_dma_map in iommu_dma_get_msi_page
-> 
-> The MSI page mapping really is a little different from the normal DMA
-> mappings and doesn't need to look at the DMA mask.  Just open code
-> it instead of trying to squeeze the behavior into the DMA path helpers.
-> 
-> Signed-off-by: Christoph Hellwig <hch@lst.de>
-> ---
->   drivers/iommu/dma-iommu.c | 27 +++++++--------------------
->   1 file changed, 7 insertions(+), 20 deletions(-)
-> 
-> diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
-> index 58c35bab7626..2ac0df0879d7 100644
-> --- a/drivers/iommu/dma-iommu.c
-> +++ b/drivers/iommu/dma-iommu.c
-> @@ -358,11 +358,6 @@ static dma_addr_t iommu_dma_alloc_iova(struct iommu_domain *domain,
->   	struct iova_domain *iovad = &cookie->iovad;
->   	unsigned long shift, iova_len, iova = 0;
->   
-> -	if (cookie->type == IOMMU_DMA_MSI_COOKIE) {
-> -		cookie->msi_iova += size;
-> -		return cookie->msi_iova - size;
-> -	}
-> -
->   	shift = iova_shift(iovad);
->   	iova_len = size >> shift;
->   	/*
-> @@ -397,10 +392,7 @@ static void iommu_dma_free_iova(struct iommu_dma_cookie *cookie,
->   {
->   	struct iova_domain *iovad = &cookie->iovad;
->   
-> -	/* The MSI case is only ever cleaning up its most recent allocation */
-> -	if (cookie->type == IOMMU_DMA_MSI_COOKIE)
-> -		cookie->msi_iova -= size;
-> -	else if (cookie->fq_domain)	/* non-strict mode */
-> +	if (cookie->fq_domain)	/* non-strict mode */
->   		queue_iova(iovad, iova_pfn(iovad, iova),
->   				size >> iova_shift(iovad), 0);
->   	else
-> @@ -430,14 +422,10 @@ static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
->   {
->   	struct iommu_domain *domain = iommu_get_dma_domain(dev);
->   	struct iommu_dma_cookie *cookie = domain->iova_cookie;
-> -	size_t iova_off = 0;
-> +	size_t iova_off = iova_offset(&cookie->iovad, phys);
->   	dma_addr_t iova;
->   
-> -	if (cookie->type == IOMMU_DMA_IOVA_COOKIE) {
-> -		iova_off = iova_offset(&cookie->iovad, phys);
-> -		size = iova_align(&cookie->iovad, size + iova_off);
-> -	}
-> -
-> +	size = iova_align(&cookie->iovad, size + iova_off);
->   	iova = iommu_dma_alloc_iova(domain, size, dma_get_mask(dev), dev);
->   	if (!iova)
->   		return DMA_MAPPING_ERROR;
-> @@ -1121,7 +1109,6 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
->   {
->   	struct iommu_dma_cookie *cookie = domain->iova_cookie;
->   	struct iommu_dma_msi_page *msi_page;
-> -	dma_addr_t iova;
->   	int prot = IOMMU_WRITE | IOMMU_NOEXEC | IOMMU_MMIO;
->   	size_t size = cookie_msi_granule(cookie);
->   
-> @@ -1134,16 +1121,16 @@ static struct iommu_dma_msi_page *iommu_dma_get_msi_page(struct device *dev,
->   	if (!msi_page)
->   		return NULL;
->   
-> -	iova = __iommu_dma_map(dev, msi_addr, size, prot);
-> -	if (iova == DMA_MAPPING_ERROR)
-> +	if (iommu_map(domain, cookie->msi_iova, msi_addr, size, prot))
->   		goto out_free_page;
->   
->   	INIT_LIST_HEAD(&msi_page->list);
->   	msi_page->phys = msi_addr;
-> -	msi_page->iova = iova;
-> +	msi_page->iova = cookie->msi_iova;
->   	list_add(&msi_page->list, &cookie->msi_page_list);
-> -	return msi_page;
->   
-> +	cookie->msi_iova += size;
-> +	return msi_page;
->   out_free_page:
->   	kfree(msi_page);
->   	return NULL;
-> 
 
 _______________________________________________
 Linux-mediatek mailing list
