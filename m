@@ -2,57 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C0F05F808
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 14:05:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 401B4F86E
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 14:08:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=+QBP3tReIUci8qb9FTJcZFmc91sUmSWjhpHwRr4MMzY=; b=LLr5cqeHzdfixklpE96WhMAlD
-	J/wtcduBHIpUG8TrXMQU24GxOKP24gsIlrgDxSGQciMtvFNDKVWSF0VH/qM1UmsvR25cfQwv9rPMu
-	grOGVC0bI2Tf+Agfog1bF9hKVmrGJVSuVWdmUZ5kYbx5sD28r4a0BcN090h2MFrFYviB4mOTuwUb5
-	0ePq0dRj8LbTJQTEvH4j/YbF3q7DvVP1Nv9VPQ03QKVcjMbaPKZuJXgWjtH8CEwjDn7QS/XWtACzA
-	ja9pTG3sNTkdXtWGmb0F0jGOcroAglNiUCuAgEQ0ebdtcu7hcyQEIeQuJqgOcNnQl8MhFRGvc/RTa
-	DqEsQJAuw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=WaYN/i4U0z83eEWovG8qQDdRouY0LiZ5F8BVoDHKVy8=; b=XnylbhUu/bDf6T
+	O+Z7S4eI+6vwOMNqjXUomNz5xuM68xFJRWOOa9KagB8wzUIKpbjkWv6Fmv0TNTbcDxKNtWl3J8JY/
+	dyrn8XeQJUlgiggHcgnZYRfdX4Pqfrd/iaZfrMzcOEOZJ/c+5qijFnla69bdZEamkzvznSo18GxZS
+	6SqlLIwC05ehJ8AikpnALet4DCIf9C+X7V+rhK94Rmx6X6RkGGcO7d4uDAEKAIE+kETirHKXl0JYp
+	ufvuHXV6dm2L+j6gnvKBSp3jycZvDxlDv+sEGxLCJwFhKjLT5SmXRrYj44QNJmQlqKP0dNDuRHkUw
+	jc64VCHp+E7j+y+XwZqw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLRVb-0004iO-8l; Tue, 30 Apr 2019 12:05:15 +0000
-Received: from foss.arm.com ([217.140.101.70])
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLRVP-0003Io-4W; Tue, 30 Apr 2019 12:05:04 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.72.51.249])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 82D9680D;
- Tue, 30 Apr 2019 05:05:00 -0700 (PDT)
-Received: from [10.1.196.75] (e110467-lin.cambridge.arm.com [10.1.196.75])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id CB4A83F5C1;
- Tue, 30 Apr 2019 05:04:56 -0700 (PDT)
-Subject: Re: [PATCH v2 3/4] iommu/dma-iommu: Use the dev->coherent_dma_mask
-To: Christoph Hellwig <hch@infradead.org>
-References: <20190430002952.18909-1-tmurphy@arista.com>
- <20190430002952.18909-4-tmurphy@arista.com>
- <20190430111222.GA3191@infradead.org>
- <da835ce2-f73e-3035-e1d7-d3028cc1a838@arm.com>
- <20190430113253.GA23210@infradead.org>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <96ebb6fc-a889-fa94-09ba-65d505b85724@arm.com>
-Date: Tue, 30 Apr 2019 13:04:55 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+	id 1hLRYz-0005P1-VZ; Tue, 30 Apr 2019 12:08:45 +0000
+Received: from relay1-d.mail.gandi.net ([217.70.183.193])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hLRYw-0005O2-Qj; Tue, 30 Apr 2019 12:08:44 +0000
+X-Originating-IP: 90.88.147.33
+Received: from xps13 (aaubervilliers-681-1-27-33.w90-88.abo.wanadoo.fr
+ [90.88.147.33]) (Authenticated sender: miquel.raynal@bootlin.com)
+ by relay1-d.mail.gandi.net (Postfix) with ESMTPSA id CB4AC240021;
+ Tue, 30 Apr 2019 12:08:34 +0000 (UTC)
+Date: Tue, 30 Apr 2019 14:08:33 +0200
+From: Miquel Raynal <miquel.raynal@bootlin.com>
+To: Xiaolei Li <xiaolei.li@mediatek.com>
+Subject: Re: [PATCH v2 0/5] MTK NAND driver improvements and fixes
+Message-ID: <20190430140833.08039a9f@xps13>
+In-Reply-To: <20190430100250.28083-1-xiaolei.li@mediatek.com>
+References: <20190430100250.28083-1-xiaolei.li@mediatek.com>
+Organization: Bootlin
+X-Mailer: Claws Mail 3.17.1 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
 MIME-Version: 1.0
-In-Reply-To: <20190430113253.GA23210@infradead.org>
-Content-Language: en-GB
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_050503_232052_2224E8F6 
-X-CRM114-Status: GOOD (  20.60  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190430_050843_018270_C0721111 
+X-CRM114-Status: UNSURE (   6.73  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [217.140.101.70 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.193 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
@@ -65,50 +60,27 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>, Will Deacon <will.deacon@arm.com>,
- David Brown <david.brown@linaro.org>,
- Thierry Reding <thierry.reding@gmail.com>, linux-s390@vger.kernel.org,
- linux-samsung-soc@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
- Kukjin Kim <kgene@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Gerald Schaefer <gerald.schaefer@de.ibm.com>,
- Andy Gross <andy.gross@linaro.org>, linux-arm-msm@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, Tom Murphy <tmurphy@arista.com>,
- linux-kernel@vger.kernel.org, murphyt7@tcd.ie,
- iommu@lists.linux-foundation.org, David Woodhouse <dwmw2@infradead.org>
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Cc: richard@nod.at, linux-mediatek@lists.infradead.org,
+ linux-mtd@lists.infradead.org, srv_heupstream@mediatek.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 30/04/2019 12:32, Christoph Hellwig wrote:
-> On Tue, Apr 30, 2019 at 12:27:02PM +0100, Robin Murphy wrote:
->>> Hmm, I don't think we need the DMA mask for the MSI mapping, this
->>> should probably always use a 64-bit mask.
->>
->> If that were true then we wouldn't need DMA masks for regular mappings
->> either. If we have to map the MSI doorbell at all, then we certainly have to
->> place it at an IOVA that the relevant device is actually capable of
->> addressing.
-> 
-> Well, as shown by the patch below we don't even look at the DMA mask
-> for the MSI page - we just allocate from bottom to top.
-
-In the trivial cookie for unmanaged domains, yes, but in that case the 
-responsibility is on VFIO to provide a suitable (i.e. sub-32-bit) 
-address range for that cookie in the first place. In the managed case, 
-allocation uses the streaming mask via iommu_dma_get_msi_page() calling 
-__iommu_dma_map(). Admittedly the mask can then get overlooked when 
-reusing an existing mapping, which strictly could pose a problem if you 
-have multiple devices with incompatible masks in the same group (and 
-such that the PCI stuff doesn't already mitigate it), but that's such an 
-obscure corner case that I'm reticent to introduce the complication to 
-handle it until it's actually proven necessary.
-
-Robin.
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgWGlhb2xlaSwKClhpYW9sZWkgTGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPiB3cm90ZSBv
+biBUdWUsIDMwIEFwciAyMDE5IDE4OjAyOjQ1CiswODAwOgoKPiBUaGUgZm9sbG93aW5nIHBhdGNo
+IHNldCBtYWlubHkgY29udGFpbnM6Cj4gKiBGaXggbG93IGxldmVsIHRpbWUgY2FsY3VsYXRpb24g
+b2YgcmVhZC93cml0ZSBjeWNsZSB0byBtZWV0IHRSQ19taW4KPiAgIGFuZCB0V0NfbWluIHJlcXVp
+cmVtZW50cy4KPiAqIFJlZmluZSBSRSMgcHVsc2Ugd2lkdGggY2FsY3VsYXRpb24gYW5kIGRhdGEg
+c2FtcGxpbmcgdG8gaW1wcm92ZSByZWFkCj4gICBwZXJmb3JtYW5jZS4KPiAqIEFkZCBDUyB2YWxp
+ZGl0eSBjaGVjay4KPiAqIEZpeCBvb2IgYnVmZmVyIHBvaW50ZXIgd3JvbmdseSBzZXR0aW5nIGFu
+ZCBlbXB0eSBwYWdlIHRocmVzaG9sZCBzZXR0aW5nLgo+IAo+IENoYW5nZXMgb24gdjIgcmVsYXRp
+dmUgdG86Cj4gLS0tLS0tLS0tLS0tLS0tLS0tLS0KPiAKPiB0cmVlICAgIDogZ2l0Oi8vZ2l0Lmlu
+ZnJhZGVhZC5vcmcvbGludXgtbXRkLmdpdAo+IGJyYW5jaCAgOiBtYXN0ZXIKCldlIGp1c3Qgc3dp
+dGNoZWQgdG8gYSByZXBvc2l0b3J5IGhvc3RlZCBvbiBrZXJuZWwub3JnOgpodHRwczovL2dpdC5r
+ZXJuZWwub3JnL3B1Yi9zY20vbGludXgva2VybmVsL2dpdC9tdGQvbGludXguZ2l0LwpuYW5kL25l
+eHQgaXMgdGhlIGJyYW5jaCBmb3IgdGhpcyBraW5kIG9mIHNlcmllcy4KClRoYW5rcywKTWlxdcOo
+bAoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgt
+bWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcK
+aHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRl
+awo=
