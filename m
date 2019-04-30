@@ -2,84 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC6DEECFB
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 00:53:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0F161EDBC
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 02:30:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=h3vEYp/iYa67OsJIKTXC3PBXKPBVZLilaocR0YVXSzs=; b=Gk75TjLojCthS2
-	6Sc0VWe92Y701UDjkJPHtTLgTZ6jayAIn9w2j1PencbmBBM498gnDz9yiaFbnafflnGAcaGQ28wjS
-	YKahkQXvHtXCp/0jr4gzlMx0osz+JKAv7Jq0tJSmD2iNtgnsyH8Vn45Dp/XdwOcW6s66XCBD+3IK3
-	S34iYvjiqnSjeC5nzTmY+2r196hh3tIO9LPWssG0uPuvIKYvNUdK3gL4SawoBdQAJmjeScF4MLnSB
-	Nr8Iv6uhUEETWpi3qbCSz5c6dWFilGAF0lnlaYifEMMlejaibIHbv4OIEvVihSswSWLkoRBPYaOiG
-	jjdNkickgYtjrb+wRSmQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=s76qTLhrG1zpmpKZKKcIyUT3GF2MLcu3Wf4yFHIRTk8=; b=jW91INn5qFSy11
+	pIdWTKFRVgXqV/eskOLEGZRVPIzXe6w13Q46daLxsGiQLG8jDvz/BogC+w72noInFvC2uw8zd+GsK
+	EVV+dbinnSCcFIdvyJFrgWl1KqyOkOVTUu/+qE9aQbMpq2Ia9BB3DXSQaM5wGGAvCTWLg2fSLisSD
+	IgA8Ui9UNr2GCc+Z4o5LDDIhBAz623FQH9jfXG9L0FsNgJGDFS6YEn+LLjoOPSxg2hb3UIF6gdfX5
+	hI9deG2HlykB0yOvWmckdXx5ro/DH5t8gWr1V8Y4POZ4RdjNbiA9pOYLR7mrXnmi3y603bXvJw4Hy
+	3AcsFKHqNJAJVQVLyxhA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLF9M-0005s0-Rp; Mon, 29 Apr 2019 22:53:28 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1hLGfY-0000oL-Ib; Tue, 30 Apr 2019 00:30:48 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLF9C-0005lB-Pi; Mon, 29 Apr 2019 22:53:21 +0000
-Received: by mail-ot1-f68.google.com with SMTP id s11so5905604otp.0;
- Mon, 29 Apr 2019 15:53:18 -0700 (PDT)
+ id 1hLGfO-0000f8-17
+ for linux-mediatek@lists.infradead.org; Tue, 30 Apr 2019 00:30:39 +0000
+Received: by mail-ed1-x541.google.com with SMTP id n17so2095560edb.0
+ for <linux-mediatek@lists.infradead.org>; Mon, 29 Apr 2019 17:30:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=arista.com; s=googlenew;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=tmHyoZA3s8+eH8irHXDQwuHohJUycE2ziw5RpU+dlOU=;
+ b=MOPfSeYvgFTPgmXOyqu5vdYm5hkSdQbjS+ZqEcO2RU+mAi+5MAMZoFxX3IpBDPLPQS
+ +6cxB/pSPBzbPChynLlIkPp4j946qOnm4Ye/TMQhOEbAMuMfpeVVBcoKcz4+RJW8yx6/
+ Ved8pdw06sn2gpyLII0BLDY6t7Sg8N2naFdo6CAqbtTC39FR3o1Tc1kBC5kIorVz+Ak4
+ ako09dGNcEJDViNxWaT8wPfz1pEdUxqyVHmDsDi6DvZ163SxxHJc0/irfHhaluAhRXut
+ fRdoOWoA4QNK2yK1oJ5SHB/z+IS3njGTe+Ft9ivlpb8yi+AAVdDoaUQ0ZqtYNO7vRck8
+ qUcQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=TJyEVrvktv6Tufpho/NZ7KCvbKlhL+8KY18oT1f7uHk=;
- b=hsSO+xW+GlOkfjbN614Hl4hAmwckMqs5P/pfLSmZAu/zFEtsSQrLKZKEs+s6xPEyOD
- PnRqEQVKc4pcHTzn+KRDcH1hsPnEoA5wdWs35qdL4YQkr8fwiyVQl57TVpEioXA3tgw5
- 0mr4ky39xJOSRfE98qhVi53ImMVBno2Hl3+vPdwy5JhZfjU/xxHrcQBEpOECx4a45mSS
- 2qjXfXRjNdqXpRjB9XgfICAWs7LOwNqST1z0ZR+gvzV1T8kgmj5Xc+eQaaGc55Jz+eeQ
- jKk0rqNwa2D7/iEXYdZcDtVtZ3T5cU1h8w2i1ByWpLJOUgaIx1++Ixk8C9VIPJcZxwAI
- iiww==
-X-Gm-Message-State: APjAAAV1SqRpSJID///UqdJgtvbLL4rtQtsHDfFgVQKdxtgxxfjc4P19
- OZWYL0e0STvR/O0hwvO51g==
-X-Google-Smtp-Source: APXvYqxyLs6MFB7n9d1LRFWLjpK15UJ0Vz05okp6i1ecyTDNMHsqOeG5GSjwhhfcQTOtr1suT8/yeg==
-X-Received: by 2002:a05:6830:4d:: with SMTP id
- d13mr8171393otp.106.1556578397797; 
- Mon, 29 Apr 2019 15:53:17 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id s202sm2479151oih.42.2019.04.29.15.53.16
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 29 Apr 2019 15:53:16 -0700 (PDT)
-Date: Mon, 29 Apr 2019 17:53:15 -0500
-From: Rob Herring <robh@kernel.org>
-To: Stu Hsieh <stu.hsieh@mediatek.com>
-Subject: Re: [PATCH v2 01/15] dt-bindings: media: Add binding for MT2712
- MIPI-CSI2
-Message-ID: <20190429225315.GA23589@bogus>
-References: <1555407015-18130-1-git-send-email-stu.hsieh@mediatek.com>
- <1555407015-18130-2-git-send-email-stu.hsieh@mediatek.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=tmHyoZA3s8+eH8irHXDQwuHohJUycE2ziw5RpU+dlOU=;
+ b=TjMv1jQcSHi8OKD8ZpQcDfPG9i6CDQbK160jFynkcEJVje3MWiybvZNcHWdkrC637+
+ L2lesWBguiMcCwjyknM7GZqkTdD7zipg6qFVe/NAkBGTRUPTVk2REAUMWd2uRnTW6W3F
+ cKm/gUBtM0mxxuW2lTiUE2kexOCvRI08XRCfJQSf4DjVmmcCthzk4wRnXcghiK2qwXNN
+ +SZ/muS/5rw0IEsvIReY2Ocl+6WQhL7gDjREFEKC6PxHsswuX2YKgQ4DbZAWol6e/EA2
+ HZ4A2Ez9+6ABAkpvDHgSNeh1pWDT9Zx8WrbBTDfDS0o2kqyXEpwZPiO9DVGhY5TJg+68
+ ZfNA==
+X-Gm-Message-State: APjAAAU2O9qI8X+pZ9q3Zx83qCLNyWCnrH33IBZoHnnW0I6U2hhTF72q
+ Q4ZyV5fJgvOPIY90UYJkCvXr2g==
+X-Google-Smtp-Source: APXvYqxnysyX/Gy2Mv+d0SzufhcdmkrISFZgci8tZfFs0rMtqN5Lk2YDEgY4FPz5PnrMa8o5ipagUg==
+X-Received: by 2002:aa7:c88a:: with SMTP id p10mr41403077eds.145.1556584235673; 
+ Mon, 29 Apr 2019 17:30:35 -0700 (PDT)
+Received: from localhost.localdomain ([2a02:8084:a0:bc00:7d76:7b66:68:3b5f])
+ by smtp.gmail.com with ESMTPSA id a9sm9424163edt.93.2019.04.29.17.30.34
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Mon, 29 Apr 2019 17:30:35 -0700 (PDT)
+From: Tom Murphy <tmurphy@arista.com>
+To: iommu@lists.linux-foundation.org
+Subject: [PATCH v2 0/4] iommu/amd: Convert the AMD iommu driver to the
+ dma-iommu api
+Date: Tue, 30 Apr 2019 01:29:47 +0100
+Message-Id: <20190430002952.18909-1-tmurphy@arista.com>
+X-Mailer: git-send-email 2.17.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1555407015-18130-2-git-send-email-stu.hsieh@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_155318_831452_E04961EB 
-X-CRM114-Status: GOOD (  19.34  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20190429_173038_080178_DC61A5B7 
+X-CRM114-Status: GOOD (  11.95  )
+X-Spam-Score: -0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,206 +95,66 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- CK Hu <ck.hu@mediatek.com>, Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: Heiko Stuebner <heiko@sntech.de>, Will Deacon <will.deacon@arm.com>,
+ David Brown <david.brown@linaro.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
+ linux-rockchip@lists.infradead.org, Kukjin Kim <kgene@kernel.org>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Andy Gross <andy.gross@linaro.org>, linux-tegra@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Tom Murphy <tmurphy@arista.com>,
+ Robin Murphy <robin.murphy@arm.com>, linux-kernel@vger.kernel.org,
+ murphyt7@tcd.ie, Rob Clark <robdclark@gmail.com>,
+ David Woodhouse <dwmw2@infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Apr 16, 2019 at 05:30:01PM +0800, Stu Hsieh wrote:
-> Add MIPI-CSI2 dt-binding for Mediatek MT2712 SoC
-> 
-> Signed-off-by: Stu Hsieh <stu.hsieh@mediatek.com>
-> ---
->  .../bindings/media/mediatek-mipicsi-camsv.txt | 53 ++++++++++++++++++
->  .../media/mediatek-mipicsi-common.txt         | 19 +++++++
->  .../bindings/media/mediatek-mipicsi.txt       | 54 +++++++++++++++++++
->  3 files changed, 126 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek-mipicsi-camsv.txt
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek-mipicsi-common.txt
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek-mipicsi.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek-mipicsi-camsv.txt b/Documentation/devicetree/bindings/media/mediatek-mipicsi-camsv.txt
-> new file mode 100644
-> index 000000000000..5f34974f12ac
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek-mipicsi-camsv.txt
-> @@ -0,0 +1,53 @@
-> +* Mediatek MIPI-CSI2 receiver camsv
-> +
-> +Mediatek MIPI-CSI2 receiver camsv transfer data to DRAM in Mediatek SoCs
-> +
-> +Required properties:
-> +- reg : physical base address of the mipicsi receiver registers and length of
-> +  memory mapped region.
+Convert the AMD iommu driver to the dma-iommu api. Remove the iova
+handling and reserve region code from the AMD iommu driver.
 
-Looks like 2 regions in the example. What are they?
+Change-log:
+v2:
+-Rebase on top of this series:
+ http://git.infradead.org/users/hch/misc.git/shortlog/refs/heads/dma-iommu-ops.3
+-Add a gfp_t parameter to the iommu_ops::map function.
+-Made use of the reserve region code inside the dma-iommu api
 
-> +- clocks: device clocks, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
+Tom Murphy (4):
+  iommu: Add gfp parameter to iommu_ops::map
+  iommu/dma-iommu: Handle deferred devices
+  iommu/dma-iommu: Use the dev->coherent_dma_mask
+  iommu/amd: Convert the AMD iommu driver to the dma-iommu api
 
-1 clock?
+ drivers/iommu/Kconfig          |   1 +
+ drivers/iommu/amd_iommu.c      | 694 ++++-----------------------------
+ drivers/iommu/arm-smmu-v3.c    |   2 +-
+ drivers/iommu/arm-smmu.c       |   2 +-
+ drivers/iommu/dma-iommu.c      |  52 ++-
+ drivers/iommu/exynos-iommu.c   |   2 +-
+ drivers/iommu/intel-iommu.c    |   2 +-
+ drivers/iommu/iommu.c          |  43 +-
+ drivers/iommu/ipmmu-vmsa.c     |   2 +-
+ drivers/iommu/msm_iommu.c      |   2 +-
+ drivers/iommu/mtk_iommu.c      |   2 +-
+ drivers/iommu/mtk_iommu_v1.c   |   2 +-
+ drivers/iommu/omap-iommu.c     |   2 +-
+ drivers/iommu/qcom_iommu.c     |   2 +-
+ drivers/iommu/rockchip-iommu.c |   2 +-
+ drivers/iommu/s390-iommu.c     |   2 +-
+ drivers/iommu/tegra-gart.c     |   2 +-
+ drivers/iommu/tegra-smmu.c     |   2 +-
+ include/linux/iommu.h          |  21 +-
+ 19 files changed, 187 insertions(+), 652 deletions(-)
 
-> +- interrupts : interrupt number to the interrupt controller.
-> +
-> +Example:
-> +	seninf1_mux_camsv0: seninf_mux_camsv@15002100 {
-> +		reg = <0 0x15002120 0 0x40>,
-> +		      <0 0x15004000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV_EN>;
-> +		interrupts = <GIC_SPI 222 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	seninf2_mux_camsv1: seninf_mux_camsv@15002500 {
-> +		reg = <0 0x15002520 0 0x40>,
-> +		      <0 0x15005000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV_EN>;
-> +		interrupts = <GIC_SPI 223 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	seninf3_mux_camsv2: seninf_mux_camsv@15002900 {
-> +		reg = <0 0x15002920 0 0x40>,
-> +		      <0 0x15006000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV1_EN>;
-> +		interrupts = <GIC_SPI 268 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	seninf4_mux_camsv3: seninf_mux_camsv@15002D00 {
-> +		reg = <0 0x15002D20 0 0x40>,
-> +		      <0 0x15007000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV1_EN>;
-> +		interrupts = <GIC_SPI 269 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	seninf5_mux_camsv4: seninf_mux_camsv@15003100 {
-> +		reg = <0 0x15003120 0 0x40>,
-> +		      <0 0x15008000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV2_EN>;
-> +		interrupts = <GIC_SPI 270 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	seninf6_mux_camsv5: seninf_mux_camsv@15003500 {
-> +		reg = <0 0x15003520 0 0x40>,
-> +		      <0 0x15009000 0 0x1000>;
-> +		clocks = <&imgsys CLK_IMG_CAM_SV2_EN>;
-> +		interrupts = <GIC_SPI 271 IRQ_TYPE_LEVEL_LOW>;
-> +	
-> diff --git a/Documentation/devicetree/bindings/media/mediatek-mipicsi-common.txt b/Documentation/devicetree/bindings/media/mediatek-mipicsi-common.txt
-> new file mode 100644
-> index 000000000000..a67c744b75f0
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek-mipicsi-common.txt
-> @@ -0,0 +1,19 @@
-> +* Mediatek MIPI-CSI2 receiver common
-> +
-> +Mediatek MIPI-CSI2 receiver is the MIPI Signal capture hardware present in Mediatek SoCs
-> +
-> +Required properties:
-> +- compatible: should be "mediatek,mt2712-mipicsi-common"
-> +- reg : physical base address of the mipicsi receiver registers and length of
-> +  memory mapped region.
-> +- clocks: device clocks, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
+-- 
+2.17.1
 
-How many clocks and what are they?
-
-> +
-> +
-> +Example:
-> +	mipicsi: mipicsi@15002000 {
-> +		compatible = "mediatek,mt2712-mipicsi-common", "syscon";
-> +		reg = <0 0x15002000 0 0x10>;
-> +		clocks = <&imgsys CLK_IMG_SENINF_CAM_EN>,
-> +			 <&imgsys CLK_IMG_SENINF_SCAM_EN>;
-> +	};
-> diff --git a/Documentation/devicetree/bindings/media/mediatek-mipicsi.txt b/Documentation/devicetree/bindings/media/mediatek-mipicsi.txt
-> new file mode 100644
-> index 000000000000..24741ed62b25
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek-mipicsi.txt
-> @@ -0,0 +1,54 @@
-> +* Mediatek MIPI-CSI2 receiver
-> +
-> +Mediatek MIPI-CSI2 receiver is the MIPI Signal capture hardware present in Mediatek SoCs
-> +
-> +Required properties:
-> +- compatible: should be "mediatek,mt2712-mipicsi"
-> +- reg : physical base address of the mipicsi receiver registers and length of
-> +  memory mapped region.
-
-How many regions?
-
-> +- power-domains: a phandle to the power domain, see
-> +  Documentation/devicetree/bindings/power/power_domain.txt for details.
-> +- mediatek,larb: must contain the local arbiters in the current Socs, see
-> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
-> +  for details.
-> +- iommus: should point to the respective IOMMU block with master port as
-> +  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
-> +  for details.
-
-How many?
-
-> +- mediatek,seninf_mux_camsv: seninf_mux_camsv the data go through of the mipicsi port
-
-s/_/-/
-
-How many entries?
-
-> +- mediatek,mipicsiid: the id of the mipicsi port
-
-What is this for? We generally don't do device indexes in DT.
-
-> +- mediatek,mipicsi: the common component of the two mipicsi port
-> +
-> +Example:
-> +	mipicsi0: mipicsi@10217000 {
-> +		compatible = "mediatek,mt2712-mipicsi";
-> +		mediatek,mipicsi = <&mipicsi>;
-> +		iommus = <&iommu0 M4U_PORT_CAM_DMA0>,
-> +			 <&iommu0 M4U_PORT_CAM_DMA1>;
-> +		mediatek,larb = <&larb2>;
-> +		power-domains = <&scpsys MT2712_POWER_DOMAIN_ISP>;
-> +
-> +		mediatek,seninf_mux_camsv = <&seninf1_mux_camsv0
-> +					     &seninf2_mux_camsv1
-> +					     &seninf3_mux_camsv2
-> +					     &seninf4_mux_camsv3>;
-> +		reg = <0 0x10217000 0 0x60>,
-> +		      <0 0x15002100 0 0x4>,
-> +		      <0 0x15002300 0 0x100>;
-> +		mediatek,mipicsiid = <0>;
-> +		status="disabled";
-
-Don't show status in examples.
-
-> +	};
-> +
-> +	mipicsi1: mipicsi@10218000 {
-> +		compatible = "mediatek,mt2712-mipicsi";
-> +		mediatek,mipicsi = <&mipicsi>;
-> +		iommus = <&iommu0 M4U_PORT_CAM_DMA2>;
-> +		mediatek,larb = <&larb2>;
-> +		power-domains = <&scpsys MT2712_POWER_DOMAIN_ISP>;
-> +		mediatek,seninf_mux_camsv = <&seninf5_mux_camsv4
-> +					     &seninf6_mux_camsv5>;
-> +		reg = <0 0x10218000 0 0x60>,
-> +		      <0 0x15002500 0 0x4>,
-> +		      <0 0x15002700 0 0x100>;
-> +		mediatek,mipicsiid = <1>;
-> +		status="disabled";
-> +	};
-> \ No newline at end of file
-
-Fix this.
-
-> -- 
-> 2.18.0
-> 
 
 _______________________________________________
 Linux-mediatek mailing list
