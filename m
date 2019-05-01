@@ -2,71 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3F0B710F17
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 00:45:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 91B7610F54
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 00:48:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=W3O3jSaEg8Mje0thDQ33tzraJg2AKlXONTWhFxWk+Hs=; b=hCkFyUAP9zfSpj
-	7D/lHRhqX+aRbCKYKSI1k72BxMUppTl20Qnsoh7KLKMaOakKrObCBuO0Ky/Y+P3/al+OXGs35maDz
-	8CJZFkI4qJTiBPD1IeQRTfSZ160hP4lyTluQxdsiTvgUXDi4keay+2cv909hvJyW5ZJ37tyJzxBII
-	iRgILz+KodEh9cU1m6okEconTXpXXulEYHI0zPp2mGwwZ0TFAp0MLfIAv3CUhIyO/LgyOFm56Zf8X
-	+o+/siMvXenhwd0Ul3k2r5X9TQKGFdOqVPaCi88/x7Ye+epH6VChAPSOckiuBvFzfI7WOdA+dpA/Y
-	hsbZBn1paNICYLKdyzwg==;
+	List-Owner; bh=IUPIehFISY8C/Wc9zr7RcpUtgBYfEXgzLBfkgX/HdtQ=; b=mQ7jlkq8kHQK9L
+	XTMxx6lyEvC5KUUh8+OeM4k9vNofVf9aL9LzGOQdG27uN7MJHSvBo/J0r6K94Ct6PgyGKsSUPDgo3
+	8kZg/sMIWDvAiIsjVMgbQxHLSWbFsF9tvfAwYodeNnsW4TvkKXQMiBFp1yUZV+TVkT0z2z8LEsDgZ
+	uM0Ksz14c7HvOWSbdWIt0babaNjg/utaQK/3otnd016M5JPN1x2zJIYMTDTZwbk1iVC8+A5mR9GrL
+	+VeZRhDxZ8d8C+jihWL57R49626xc8XnWLpq805gLCoHIA2mx74BlvvzX+eDKhNzhBQjM2uukc5Nw
+	7gDO/n8wGckub7ACaQjQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLxya-0005oh-MS; Wed, 01 May 2019 22:45:20 +0000
-Received: from mail-ot1-f67.google.com ([209.85.210.67])
+	id 1hLy1d-0000mI-IR; Wed, 01 May 2019 22:48:29 +0000
+Received: from mail-ot1-f68.google.com ([209.85.210.68])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLxyV-0005o5-OE; Wed, 01 May 2019 22:45:17 +0000
-Received: by mail-ot1-f67.google.com with SMTP id a10so350904otl.12;
- Wed, 01 May 2019 15:45:15 -0700 (PDT)
+ id 1hLy03-00077W-0r; Wed, 01 May 2019 22:47:19 +0000
+Received: by mail-ot1-f68.google.com with SMTP id e108so364110ote.10;
+ Wed, 01 May 2019 15:46:50 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=b4eTdXWrNh3DXxF20Y/xFu+EwX4anaVGTC9t/+J/+Ag=;
- b=YrQBRrKsWW/vcISiMBmaESE00nWZ6qx3+ADXUKRxTfu21CYczLDyJRfe1OA+bg3L+6
- r1Y+qflFK2l2lqsEtALGWGqYsl261ulmu094OS9oi4E6TVJFNCvwa84KP/M0+DigNtOP
- d/wmBnxzrfkYjkyXr36oEfB4g9c+3Vp+ndtDVaYUwiBArwNMpnXqdnMkW7Iezibg0THz
- DL7VnqdEFLJsFxtHBRztCDlAuPaL5OVVi9QI8aAzIIjF4IDe1kwEUrk9noYCqjJjuIAC
- jLSPD6DQuDxczpRbXav511LEvgpNXJ/YCFYKHvYzkuop9UeLGIcrtDOl6M16JkyJTrsz
- N2PA==
-X-Gm-Message-State: APjAAAUyHnIrsuIVplvvxMl7kdYd7CtLK+h0UXWN21/GRG35e0sgkBuS
- P+3SyC9c3Ou0WJo+gAgifg==
-X-Google-Smtp-Source: APXvYqx5w+AQiMs8ivRbF7xmZwHoV0ksJWr+KP9nlrArRn0R40gUkAg8crBaRaZ0pNk6tcRrvUCV1A==
-X-Received: by 2002:a9d:7401:: with SMTP id n1mr329353otk.226.1556750714180;
- Wed, 01 May 2019 15:45:14 -0700 (PDT)
+ bh=hTyewxaqn7LAiT2SH+DZREdfXU1PNz3ufBiht/yAAn0=;
+ b=udJaOUszBN2A6oHd15qhVBheq1ZzQjEdxhLxUjAVtA5t/rgo9lgjtHF/EYvkBmlIYK
+ foWEg9OV7QmL7a9d6+9u7Vg9pIvIinWzXMaxlwGwo7kbiZFRzbvB+Q6eHflWO6sKq+TR
+ qh4TWNredO8lc5xfvEvatVE8d1amVysfoJLE1hDFKHptlzPVCafMDexY6rjpopelaJfC
+ 3k4/IDIuQRFl8fH1d1ypzQK0AWH4ZA3UH6wwCo0PZvGXifffg51KJGPnK0vbguSZtfyu
+ go40PgIQm966CktbimJxBTac0kara48T/Gnj+qkXZVBUgh4CowKbeREsxKXbH36bbw+z
+ jNiA==
+X-Gm-Message-State: APjAAAWotmDmG99UzIXEL5xRfkNBin1H9FZhyTlUpAyEMrMmkTPMQWEG
+ pPYIfgveBxv6oEDaLJS8Cg==
+X-Google-Smtp-Source: APXvYqxx6FkC5f0arUAphcB6iggn1JI8NSGZcl25tCDEnnaao5v/3Yw/L/PJSTrJwGTYqIcAZWMyPg==
+X-Received: by 2002:a9d:615a:: with SMTP id c26mr342832otk.76.1556750809579;
+ Wed, 01 May 2019 15:46:49 -0700 (PDT)
 Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id w5sm10599530oib.6.2019.05.01.15.45.12
+ by smtp.gmail.com with ESMTPSA id q124sm17147876oia.13.2019.05.01.15.46.48
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 01 May 2019 15:45:13 -0700 (PDT)
-Date: Wed, 1 May 2019 17:45:12 -0500
+ Wed, 01 May 2019 15:46:48 -0700 (PDT)
+Date: Wed, 1 May 2019 17:46:47 -0500
 From: Rob Herring <robh@kernel.org>
 To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
-Subject: Re: [RFC PATCH V1 1/6] dt-bindings: mt8183: Add binding for FD
- shared memory
-Message-ID: <20190501224512.GA4287@bogus>
+Subject: Re: [RFC PATCH V1 3/6] dt-bindings: mt8183: Added FD dt-bindings
+Message-ID: <20190501224647.GA12044@bogus>
 References: <20190423104505.38778-1-Jerry-Ch.chen@mediatek.com>
- <20190423104505.38778-2-Jerry-Ch.chen@mediatek.com>
+ <20190423104505.38778-4-Jerry-Ch.chen@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190423104505.38778-2-Jerry-Ch.chen@mediatek.com>
+In-Reply-To: <20190423104505.38778-4-Jerry-Ch.chen@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190501_154515_818239_E4CA7B36 
-X-CRM114-Status: GOOD (  19.80  )
+X-CRM114-CacheID: sfid-20190501_154651_855497_63BDB272 
+X-CRM114-Status: GOOD (  17.78  )
 X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.67 listed in list.dnswl.org]
+ no trust [209.85.210.68 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.68 listed in wl.mailspike.net]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -76,6 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  mail domains are different
  0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -101,62 +103,66 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Apr 23, 2019 at 06:45:00PM +0800, Jerry-ch Chen wrote:
+On Tue, Apr 23, 2019 at 06:45:02PM +0800, Jerry-ch Chen wrote:
 > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
 > 
-> This patch adds the binding for describing the shared memory
-> used to exchange meta data between the co-processor and Face
-> Detection (FD) unit of the camera system on Mediatek SoCs.
+> This patch adds DT binding documentation for the Face Detection (FD)
+> unit of the camera system on Mediatek's SoCs.
 > 
 > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
 > ---
->  .../mediatek,reserve-memory-fd_smem.txt       | 44 +++++++++++++++++++
->  1 file changed, 44 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
+>  .../bindings/media/mediatek,mt8183-fd.txt     | 34 +++++++++++++++++++
+>  1 file changed, 34 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
 > 
-> diff --git a/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
+> diff --git a/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
 > new file mode 100644
-> index 000000000000..52ae5071e238
+> index 000000000000..97c12fd93e7e
 > --- /dev/null
-> +++ b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
-> @@ -0,0 +1,44 @@
-> +Mediatek FD Shared Memory binding
+> +++ b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
+> @@ -0,0 +1,34 @@
+> +* Mediatek Face Detection Unit (FD)
 > +
-> +This binding describes the shared memory, which serves the purpose of
-> +describing the shared memory region used to exchange data between Face
-> +Detection hardware (FD) and co-processor in Mediatek SoCs.
-> +
-> +The co-processor doesn't have the iommu so we need to use the physical
-> +address to access the shared buffer in the firmware.
-> +
-> +The Face Detection hardware (FD) can access memory through mt8183 IOMMU so
-> +it can use dma address to access the memory region.
-> +(See iommu/mediatek,iommu.txt for the detailed description of Mediatek IOMMU)
-> +
+> +Face Detection (FD) unit is a typical memory-to-memory HW device.
+> +It provides hardware accelerated face detection function, and it
+> +is able to detect different poses of faces. FD will writre result
+> +of detected face into memory as output.
 > +
 > +Required properties:
-> +
-> +- compatible: must be "mediatek,reserve-memory-fd_smem"
-> +
-> +- reg: required for static allocation (see reserved-memory.txt for
-> +  the detailed usage)
-> +
-> +- alloc-range: required for dynamic allocation. The range must
-> +  between 0x00000400 and 0x100000000 due to the co-processer's
-> +  addressing limitation
-> +
-> +- size: required for dynamic allocation. The unit is bytes.
-> +  for Face Detection Unit, you need 1 MB at least.
+> +- compatible: "mediatek,mt8183-fd"
+> +- reg: Physical base address and length of the function block register space
+> +- interrupts: interrupt number to the cpu.
+> +- iommus: should point to the respective IOMMU block with master port as
+> +  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
+> +  for details.
 
-What's the most?
+How many entries? Looks like 3 from the example.
 
-I don't think you really need reserved memory here if you don't need a 
-fixed address. The size is not that big that a contiguous allocation 
-shouldn't be a problem (though with IOMMU you don't even need that). 
-'dma-ranges' can be used to set the kernel's dma mask and ensure a 
-range below 0x10000000.
+> +- mediatek,larb: must contain the local arbiters in the current Socs, see
+> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
+> +  for details.
+> +- clocks : must contain the FDVT clock
+> +- clock-names: must contain FD_CLK_IMG_FD
+> +
+> +Example:
+> +	fd:fd@1502b000 {
+           ^ space needed
 
-Rob
+> +		compatible = "mediatek,mt8183-fd";
+> +		mediatek,larb = <&larb5>;
+> +		mediatek,scp = <&scp>;
+> +		iommus = <&iommu M4U_PORT_CAM_FDVT_RP>,
+> +			 <&iommu M4U_PORT_CAM_FDVT_WR>,
+> +			 <&iommu M4U_PORT_CAM_FDVT_RB>;
+> +		reg = <0 0x1502b000 0 0x1000>;
+> +		interrupts = <GIC_SPI 269 IRQ_TYPE_LEVEL_LOW>;
+> +		clocks = <&imgsys CLK_IMG_FDVT>;
+> +		clock-names = "FD_CLK_IMG_FD";
+> +	};
+> +
+> -- 
+> 2.18.0
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
