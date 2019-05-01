@@ -2,69 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4CE70100DF
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Apr 2019 22:32:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19FB110DA9
+	for <lists+linux-mediatek@lfdr.de>; Wed,  1 May 2019 22:01:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:Subject:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fco/5n8H9rPxK/J9eJtCaNOvfLWbDR93TqbtRUHLOtM=; b=FhlEHFu0YauywA
-	xCHyVyGnRIwqwhOJWA5se6hCBFKIFIfEbEDzKclqN0WbsPAKlethyfblSaKzniZnqRGYDjkX+TYgK
-	CRuyYFsSRMXOspuwF43jPoOGbv6OmQyjqHuC3NawdfmcG7jyafyaqboQ3A/xbocvspJKDwtI9I8SO
-	PnOovxB9z/DFBDVzFNrJLt1NTacj/Tze1WprEUSodneNrfmbjLK1boddkZl25bdUF4SVqlymGBE6i
-	wHqUspBSSrmceOuBLQrkLRvA5fc4s4vGQHNvSiu3MkZZwzwyd3fR2uD5yugYugcGwAYdtnLqjDaqj
-	cq+6kASQZr6kC019wUmg==;
+	List-Owner; bh=7qaN4fIzKcWrzSJT7X9ZjSkhm29Mk/J9mOZqpFoRsXk=; b=JZO59+4rA1DtwJ
+	NTS+G9g48WowYaocyKB2ASkhL1vh4/c6u84sT4eFKqs3SQh2EH22U3NihX04zjHTFVu1u5c2OchsV
+	jnsj6DKTtynR6xp2txBkD5Ys0RqfkwpGNjJBb1MSmQET6FQkolO1qlxgNEqbBERlrXPRcssjPN273
+	cv84kwE3PUfUpWhWqrY4lniSnKc4vivPED0YNKtC88L42x0a9APOZjpGEgrJXPIx91Jstnb/uGHTe
+	ljp8cGEgAmDMrrvr06oazztunt77iq+8jXub4bZWDJgTt8I1PmvRIXbW6zyE+Rv+4dcnMwpFiiDO4
+	17jcckdYnyBi/bC3Bchg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLZPt-0004O2-1i; Tue, 30 Apr 2019 20:31:53 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hLvQ8-0001J3-IC; Wed, 01 May 2019 20:01:36 +0000
+Received: from mail-oi1-f193.google.com ([209.85.167.193])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLZPZ-0003xo-Eg; Tue, 30 Apr 2019 20:31:35 +0000
-Received: from localhost (unknown [104.132.0.74])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 068C92087B;
- Tue, 30 Apr 2019 20:31:32 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1556656293;
- bh=Rl6KR3mE/J4TovWktTnPEk6bL3lFfupWJ2cXE8RKcsA=;
- h=In-Reply-To:References:From:Subject:To:Cc:Date:From;
- b=wHvQCF48Origsh+9ks+KYh/bRuAs6K6xp778iJA1nRTZzsT36/reutO1Up4TzrAds
- WiRpljJ4fDtsI1kUoNe0YkY9axaShkcYuXsQCaYQqivN7wRDjcek1H8cymh1H4V+Mr
- /CdVuiy/7arCFuCtZOhpv5dw5dpt+lmN6NiHND5k=
+ id 1hLvQ0-0001CM-19; Wed, 01 May 2019 20:01:29 +0000
+Received: by mail-oi1-f193.google.com with SMTP id 143so1513499oii.4;
+ Wed, 01 May 2019 13:01:27 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=qIHTWDGzYQZkJHiXkUezp72uwINxeVDukTjbaIhuiTs=;
+ b=d103TdAVZ5fh8PBXNP+DzrXvy5EdYtqwA0HPvyU8IyFjlc9sdRD0nG64lfnIWGrkp5
+ sV5NQQL8j04T1lApCjveCgW5BFuaKlEl2s74heVz7/NIDkEGKygUZ4nMewwiph9IcKGr
+ 4DyolkRZnRzWh4vQW0X594wg8HcvkwvxpG67DxxflgsOpOjzBMPNLj+YQfLXgj63rU6m
+ e4dsm4ccpWaNI0t/YxB3pacR6BsjiRXpkIe0r9V6exbub97zusdu3na55wFZaLzBxked
+ 2dyadwJJyipsO4dLjV0uxmp0RoNcXecAzu1ITJeeA5KiFw+w0liHfctnqbh0BgW7aqE9
+ 7XxA==
+X-Gm-Message-State: APjAAAVYoQ5dogpXjgbuHa20Ogh87TOlVMFuEbDpTryKi5UdInue5qFc
+ jzGbupXuFPzZ0wF8yQlGMsTwa+o=
+X-Google-Smtp-Source: APXvYqwwvwj4oDg/bmeUnn4vK+Jak43dJ5tnDPhQiN/4HMQjCLWKMf5r4j6Hlke3L5ETSZw1m0/USA==
+X-Received: by 2002:aca:c4c3:: with SMTP id u186mr56454oif.82.1556740887017;
+ Wed, 01 May 2019 13:01:27 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id w131sm17543434oig.29.2019.05.01.13.01.25
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Wed, 01 May 2019 13:01:25 -0700 (PDT)
+Date: Wed, 1 May 2019 15:01:25 -0500
+From: Rob Herring <robh@kernel.org>
+To: Zhiyong Tao <zhiyong.tao@mediatek.com>
+Subject: Re: [PATCH v2 1/2] dt-bindings: adc: mt8183: add binding document
+Message-ID: <20190501200125.GA29927@bogus>
+References: <20190424011112.14283-1-zhiyong.tao@mediatek.com>
+ <20190424011112.14283-2-zhiyong.tao@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <20190430112012.4514-2-roger.lu@mediatek.com>
-References: <20190430112012.4514-1-roger.lu@mediatek.com>
- <20190430112012.4514-2-roger.lu@mediatek.com>
-From: Stephen Boyd <sboyd@kernel.org>
-Subject: Re: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
-To: "Rafael J . Wysocki" <rjw@rjwysocki.net>,
- Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- Roger Lu <roger.lu@mediatek.com>, Viresh Kumar <vireshk@kernel.org>
-Message-ID: <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
-User-Agent: alot/0.8
-Date: Tue, 30 Apr 2019 13:31:32 -0700
+Content-Disposition: inline
+In-Reply-To: <20190424011112.14283-2-zhiyong.tao@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190430_133133_596119_9D8D7295 
-X-CRM114-Status: GOOD (  15.78  )
-X-Spam-Score: -5.3 (-----)
+X-CRM114-CacheID: sfid-20190501_130128_068355_17F50A2B 
+X-CRM114-Status: UNSURE (   9.23  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.3 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.167.193 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.193 listed in wl.mailspike.net]
+ 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,100 +89,28 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
- Kevin Hilman <khilman@kernel.org>, Roger Lu <roger.lu@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, lars@metafoo.de, srv_heupstream@mediatek.com,
+ linux-iio@vger.kernel.org, Zhiyong Tao <zhiyong.tao@mediatek.com>,
+ erin.lo@mediatek.com, hui.liu@mediatek.com, linux-kernel@vger.kernel.org,
+ robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, pmeerw@pmeerw.net, knaack.h@gmx.de,
+ matthias.bgg@gmail.com, yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
+ sean.wang@mediatek.com, s.hauer@pengutronix.de, jic23@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Roger Lu (2019-04-30 04:20:10)
-> Document the binding for enabling mtk svs on MediaTek SoC.
+On Wed, 24 Apr 2019 09:11:11 +0800, Zhiyong Tao wrote:
+> The commit adds mt8183 compatible node in binding document.
 > 
-> Signed-off-by: Roger Lu <roger.lu@mediatek.com>
+> Signed-off-by: Zhiyong Tao <zhiyong.tao@mediatek.com>
 > ---
->  .../devicetree/bindings/power/mtk-svs.txt     | 70 +++++++++++++++++++
->  1 file changed, 70 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+>  Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt | 1 +
+>  1 file changed, 1 insertion(+)
 > 
-> diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> new file mode 100644
-> index 000000000000..355329db74ba
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> @@ -0,0 +1,70 @@
-> +* Mediatek Smart Voltage Scaling (MTK SVS)
-> +
-> +This describes the device tree binding for the MTK SVS controller
-> +which helps provide the optimized CPU/GPU/CCI voltages. This device also
-> +needs thermal data to calculate thermal slope for accurately compensate
-> +the voltages when temperature change.
-> +
-> +Required properties:
-> +- compatible:
-> +  - "mediatek,mt8183-svs" : For MT8183 family of SoCs
-> +- reg: Address range of the MTK SVS controller.
-> +- interrupts: IRQ for the MTK SVS controller.
-> +- clocks, clock-names: Clocks needed for the svs controller. required
-> +                       clocks are:
-> +                      "main_clk": Main clock needed for register access
-> +- nvmem-cells: Phandle to the calibration data provided by a nvmem device.
-> +- nvmem-cell-names: Should be "svs-calibration-data" and "calibration-data"
-> +- svs_xxx: Phandle of svs_bank device for controlling corresponding opp
 
-Properties shouldn't have underscores in them. Use dashes?
-
-> +           table and power-domains.
-> +- vxxx-supply: Phandle to each regulator. vxxx can be "vcpu_little",
-> +              "vcpu_big", "vcci" and "vgpu".
-> +
-> +Example:
-> +
-> +       svs: svs@1100b000 {
-> +               compatible = "mediatek,mt8183-svs";
-> +               reg = <0 0x1100b000 0 0x1000>;
-> +               interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW 0>;
-> +               clocks = <&infracfg CLK_INFRA_THERM>;
-> +               clock-names = "main_clk";
-> +               nvmem-cells = <&svs_calibration>, <&thermal_calibration>;
-> +               nvmem-cell-names = "svs-calibration-data", "calibration-data";
-> +
-> +               svs_cpu_little: svs_cpu_little {
-> +                       compatible = "mediatek,mt8183-svs-cpu-little";
-> +                       operating-points-v2 = <&cluster0_opp>;
-> +               };
-> +
-> +               svs_cpu_big: svs_cpu_big {
-> +                       compatible = "mediatek,mt8183-svs-cpu-big";
-> +                       operating-points-v2 = <&cluster1_opp>;
-> +               };
-> +
-> +               svs_cci: svs_cci {
-> +                       compatible = "mediatek,mt8183-svs-cci";
-> +                       operating-points-v2 = <&cluster2_opp>;
-> +               };
-> +
-> +               svs_gpu: svs_gpu {
-> +                       compatible = "mediatek,mt8183-svs-gpu";
-> +                       power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-> +                       operating-points-v2 = <&gpu_opp_table>;
-> +               };
-
-It looks like you need multiple OPPs for a single device, because it has
-different independent power supplies it wants to associate the OPP
-tables with? Why can't these OPP tables be attached to the devices that
-use them, i.e. CPU, GPU, CCI, etc.? Seems odd that those devices don't
-have OPP tables that this hardware block can look up somehow. Similarly,
-the power domains should probably be part of the devices that are using
-them and not these sub-nodes that are mirroring the other hardware
-blocks in the system?
-
-> +       };
-> +
-> +       &svs_cpu_little {
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
