@@ -2,41 +2,41 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3FC9C1176B
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 12:43:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A731211776
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 12:44:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rfpdS9GSKG0NCAJwrhIBX525obI1E/CeQ4ReTOelwK4=; b=Yqm5uYOw4aC6lm
-	KJa1ivuhriLReErgEbvY3PZrSSfbwyZjJJ7iap0kCAxeqC+8Rlzhu7VU1MdC+6t1BFKq8adnKq2k1
-	PfMXT1RkIKNI5fwcQ6Due+Mw+UL9NcolFYG/+CsClTepZsVx0fFSdsiAhbH9KMxvjnMQ0XjLScinE
-	gS7zgB7ibWu5XsaxyIFPBTg4XuJzKi90RWmdo0N+Ru4iXnuAbSJgHwaf8fXmi1zag68qw9NPEP4Mu
-	gaXQf40AEuWpSSgeoQ36V/FxsAE4lnOVE0G6Ot9wa7xqbMxTVa8uUCgBMOKXJ3/u4rbwIpd6yFbW+
-	XJHEaBJFV83WSVCOBVCg==;
+	List-Owner; bh=2cpJsugAT+weVTysKpXKFoIYLuSwn4lupHYpUDSUkgY=; b=kslmllQjkYO6qV
+	cbUNoOKykbXJizG1kdRteEuqFgdFYAcxPT/rWT28oZ/56iE8qRzL+Ey4l4ezwY4Fmf9FPWhxdVybw
+	LorkcoJia2l3mfbpTDrKVJxrTEnmAY/ZOJhc1AqIWR4BsTcD4PWd/kAn8z1AF9Fu0jQRzu1Io2JmL
+	iCGFTg9TdxzZCV0jju1fXFi74qLrW1T1l3ZYwHZWpFTLQXysk27r3QUNxe0DAzIm9VwLuvHCRE5jI
+	8WPbXRe1ewS7Noxo29VPbYE+jO0PP6l3tUmwSHPlR9EVGw9oDIH2vvTESzSTXI1HNKpAX1dJzMubv
+	Dc9KCVsL3LiZ3COaz+Xw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hM9BX-0008Vp-1l; Thu, 02 May 2019 10:43:27 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hM9CY-0001Vc-K5; Thu, 02 May 2019 10:44:30 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hM9BU-0008Uf-8h; Thu, 02 May 2019 10:43:25 +0000
-X-UUID: a4092bb2bf3b4b0ea2249ab6074073c3-20190502
-X-UUID: a4092bb2bf3b4b0ea2249ab6074073c3-20190502
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ id 1hM9BY-0008Vo-FQ; Thu, 02 May 2019 10:43:31 +0000
+X-UUID: a999b1e3e7d04c08b9a32d49de3a128b-20190502
+X-UUID: a999b1e3e7d04c08b9a32d49de3a128b-20190502
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <michael.kao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 276591909; Thu, 02 May 2019 02:43:21 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 2136538285; Thu, 02 May 2019 02:43:22 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 2 May 2019 03:43:20 -0700
+ 15.0.1395.4; Thu, 2 May 2019 03:43:21 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Thu, 2 May 2019 18:43:18 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 2 May 2019 18:43:18 +0800
+ Frontend Transport; Thu, 2 May 2019 18:43:19 +0800
 From: michael.kao <michael.kao@mediatek.com>
 To: <michael.kao@mediatek.com>, <fan.chen@mediatek.com>,
  <jamesjj.liao@mediatek.com>, <dawei.chien@mediatek.com>,
@@ -44,17 +44,18 @@ To: <michael.kao@mediatek.com>, <fan.chen@mediatek.com>,
  <rui.zhang@intel.com>, Eduardo Valentin <edubezval@gmail.com>, Daniel Lezcano
  <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
  <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH 3/8] arm64: dts: mt8183: Add #cooling-cells to CPU nodes
-Date: Thu, 2 May 2019 18:43:10 +0800
-Message-ID: <1556793795-25204-4-git-send-email-michael.kao@mediatek.com>
+Subject: [PATCH 4/8] arm64: dts: mt8183: Configure CPU cooling
+Date: Thu, 2 May 2019 18:43:11 +0800
+Message-ID: <1556793795-25204-5-git-send-email-michael.kao@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
 References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: DCB88114CDD3C68FDEA27613F4C557B7FED064DD00A56F9A132A6DD1A974AC492000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190502_034324_310394_E11F370A 
-X-CRM114-Status: UNSURE (   9.03  )
+X-CRM114-CacheID: sfid-20190502_034328_815029_C104FA91 
+X-CRM114-Status: UNSURE (   7.54  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -75,40 +76,47 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-pm@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Kaehlcke <mka@chromium.org>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The #cooling-cells property needs to be specified to allow a CPU
-to be used as cooling device.
-
-Signed-off-by: michael.kao <Michael.Kao@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 2 ++
- 1 file changed, 2 insertions(+)
-
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 5668fb8..95f1d7b 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -11,6 +11,8 @@
- #include <dt-bindings/power/mt8183-power.h>
- #include <dt-bindings/reset-controller/mt8183-resets.h>
- #include "mt8183-pinfunc.h"
-+#include <dt-bindings/thermal/thermal.h>
-+
- / {
- 	compatible = "mediatek,mt8183";
- 	interrupt-parent = <&sysirq>;
--- 
-1.9.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+RnJvbTogTWF0dGhpYXMgS2FlaGxja2UgPG1rYUBjaHJvbWl1bS5vcmc+CgpBZGQgdHdvIHBhc3Np
+dmUgdHJpcCBwb2ludHMgYXQgNjjCsEMgYW5kIDg1wrBDIGZvciB0aGUgQ1BVIHRlbXBlcmF0dXJl
+LgoKU2lnbmVkLW9mZi1ieTogTWF0dGhpYXMgS2FlaGxja2UgPG1rYUBjaHJvbWl1bS5vcmc+ClNp
+Z25lZC1vZmYtYnk6IE1pY2hhZWwgS2FvIDxtaWNoYWVsLmthb0BtZWRpYXRlay5jb20+Ci0tLQog
+YXJjaC9hcm02NC9ib290L2R0cy9tZWRpYXRlay9tdDgxODMuZHRzaSB8IDU1ICsrKysrKysrKysr
+KysrKysrKysrKysrKysrKysrKysrCiAxIGZpbGUgY2hhbmdlZCwgNTUgaW5zZXJ0aW9ucygrKQoK
+ZGlmZiAtLWdpdCBhL2FyY2gvYXJtNjQvYm9vdC9kdHMvbWVkaWF0ZWsvbXQ4MTgzLmR0c2kgYi9h
+cmNoL2FybTY0L2Jvb3QvZHRzL21lZGlhdGVrL210ODE4My5kdHNpCmluZGV4IDk1ZjFkN2IuLjBi
+MzI5NGIgMTAwNjQ0Ci0tLSBhL2FyY2gvYXJtNjQvYm9vdC9kdHMvbWVkaWF0ZWsvbXQ4MTgzLmR0
+c2kKKysrIGIvYXJjaC9hcm02NC9ib290L2R0cy9tZWRpYXRlay9tdDgxODMuZHRzaQpAQCAtMzc1
+LDYgKzM3NSw2MSBAQAogCiAJCQkJdGhlcm1hbC1zZW5zb3JzID0gPCZ0aGVybWFsIDA+OwogCQkJ
+CXN1c3RhaW5hYmxlLXBvd2VyID0gPDE1MDA+OworCisJCQkJdHJpcHMgeworCQkJCQl0aHJlc2hv
+bGQ6IHRyaXAtcG9pbnRAMCB7CisJCQkJCQl0ZW1wZXJhdHVyZSA9IDw2ODAwMD47CisJCQkJCQlo
+eXN0ZXJlc2lzID0gPDIwMDA+OworCQkJCQkJdHlwZSA9ICJwYXNzaXZlIjsKKwkJCQkJfTsKKwor
+CQkJCQl0YXJnZXQ6IHRyaXAtcG9pbnRAMSB7CisJCQkJCQl0ZW1wZXJhdHVyZSA9IDw4NTAwMD47
+CisJCQkJCQloeXN0ZXJlc2lzID0gPDIwMDA+OworCQkJCQkJdHlwZSA9ICJwYXNzaXZlIjsKKwkJ
+CQkJfTsKKworCQkJCQljcHVfY3JpdDogY3B1LWNyaXQgeworCQkJCQkJdGVtcGVyYXR1cmUgPSA8
+MTE1MDAwPjsKKwkJCQkJCWh5c3RlcmVzaXMgPSA8MjAwMD47CisJCQkJCQl0eXBlID0gImNyaXRp
+Y2FsIjsKKwkJCQkJfTsKKwkJCQl9OworCisJCQkJY29vbGluZy1tYXBzIHsKKwkJCQkJbWFwMCB7
+CisJCQkJCQl0cmlwID0gPCZ0YXJnZXQ+OworCQkJCQkJY29vbGluZy1kZXZpY2UgPSA8JmNwdTAK
+KwkJCQkJCQlUSEVSTUFMX05PX0xJTUlUCisJCQkJCQkJVEhFUk1BTF9OT19MSU1JVD4sCisJCQkJ
+CQkJCSA8JmNwdTEKKwkJCQkJCQlUSEVSTUFMX05PX0xJTUlUCisJCQkJCQkJVEhFUk1BTF9OT19M
+SU1JVD4sCisJCQkJCQkJCSA8JmNwdTIKKwkJCQkJCQlUSEVSTUFMX05PX0xJTUlUCisJCQkJCQkJ
+VEhFUk1BTF9OT19MSU1JVD4sCisJCQkJCQkJCSA8JmNwdTMKKwkJCQkJCQlUSEVSTUFMX05PX0xJ
+TUlUCisJCQkJCQkJVEhFUk1BTF9OT19MSU1JVD47CisJCQkJCQljb250cmlidXRpb24gPSA8MzA3
+Mj47CisJCQkJCX07CisJCQkJCW1hcDEgeworCQkJCQkJdHJpcCA9IDwmdGFyZ2V0PjsKKwkJCQkJ
+CWNvb2xpbmctZGV2aWNlID0gPCZjcHU0CisJCQkJCQkJVEhFUk1BTF9OT19MSU1JVAorCQkJCQkJ
+CVRIRVJNQUxfTk9fTElNSVQ+LAorCQkJCQkJCQkgPCZjcHU1CisJCQkJCQkJVEhFUk1BTF9OT19M
+SU1JVAorCQkJCQkJCVRIRVJNQUxfTk9fTElNSVQ+LAorCQkJCQkJCQkgPCZjcHU2CisJCQkJCQkJ
+VEhFUk1BTF9OT19MSU1JVAorCQkJCQkJCVRIRVJNQUxfTk9fTElNSVQ+LAorCQkJCQkJCQkgPCZj
+cHU3CisJCQkJCQkJVEhFUk1BTF9OT19MSU1JVAorCQkJCQkJCVRIRVJNQUxfTk9fTElNSVQ+Owor
+CQkJCQkJY29udHJpYnV0aW9uID0gPDEwMjQ+OworCQkJCQl9OworCQkJCX07CiAJCQl9OwogCiAJ
+CQl0enRzMTogdHp0czEgewotLSAKMS45LjEKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVk
+aWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWls
+bWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
