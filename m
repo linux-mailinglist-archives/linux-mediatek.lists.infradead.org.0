@@ -2,82 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 91B7610F54
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 00:48:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7705711124
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 04:18:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
+	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IUPIehFISY8C/Wc9zr7RcpUtgBYfEXgzLBfkgX/HdtQ=; b=mQ7jlkq8kHQK9L
-	XTMxx6lyEvC5KUUh8+OeM4k9vNofVf9aL9LzGOQdG27uN7MJHSvBo/J0r6K94Ct6PgyGKsSUPDgo3
-	8kZg/sMIWDvAiIsjVMgbQxHLSWbFsF9tvfAwYodeNnsW4TvkKXQMiBFp1yUZV+TVkT0z2z8LEsDgZ
-	uM0Ksz14c7HvOWSbdWIt0babaNjg/utaQK/3otnd016M5JPN1x2zJIYMTDTZwbk1iVC8+A5mR9GrL
-	+VeZRhDxZ8d8C+jihWL57R49626xc8XnWLpq805gLCoHIA2mx74BlvvzX+eDKhNzhBQjM2uukc5Nw
-	7gDO/n8wGckub7ACaQjQ==;
+	References:List-Owner; bh=XXga2+Yhqi6vIxVpQZGmMap5WeXjQFGz57S1A8e4FQw=; b=SOw
+	2XyogMWYXFX5xBD+4fyAeOOgSAZW2r8Q2SnffLSlefRerLgPurvrK4bjsipr9A9uStz0PUxfUEqFy
+	lvFr9zlh6LaRikLekgS12l0Ds7MDE9SQswOj6XEQ9GtKnStapNuRS3ec9BbzolxC9RFnK9fNfGbuJ
+	F7gzocdQ74rdoEtgzT+bQsCAckhWbzizM25tiAkBy3+0RMzCMKD3tTCAfXgGPpTX9XOZLfo0286AP
+	oAqyaeU+qySpPrGhAzONyi20p3AsoqT1FhgjJuNZfl3OdimB7nBNOVbAQ+y5f7rp8Z6TOcnLIpdcc
+	x2f0ky0yHLUk/DTkKMGeGEBI699xs0A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hLy1d-0000mI-IR; Wed, 01 May 2019 22:48:29 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1hM1Iq-0003pQ-Ve; Thu, 02 May 2019 02:18:28 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hLy03-00077W-0r; Wed, 01 May 2019 22:47:19 +0000
-Received: by mail-ot1-f68.google.com with SMTP id e108so364110ote.10;
- Wed, 01 May 2019 15:46:50 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=hTyewxaqn7LAiT2SH+DZREdfXU1PNz3ufBiht/yAAn0=;
- b=udJaOUszBN2A6oHd15qhVBheq1ZzQjEdxhLxUjAVtA5t/rgo9lgjtHF/EYvkBmlIYK
- foWEg9OV7QmL7a9d6+9u7Vg9pIvIinWzXMaxlwGwo7kbiZFRzbvB+Q6eHflWO6sKq+TR
- qh4TWNredO8lc5xfvEvatVE8d1amVysfoJLE1hDFKHptlzPVCafMDexY6rjpopelaJfC
- 3k4/IDIuQRFl8fH1d1ypzQK0AWH4ZA3UH6wwCo0PZvGXifffg51KJGPnK0vbguSZtfyu
- go40PgIQm966CktbimJxBTac0kara48T/Gnj+qkXZVBUgh4CowKbeREsxKXbH36bbw+z
- jNiA==
-X-Gm-Message-State: APjAAAWotmDmG99UzIXEL5xRfkNBin1H9FZhyTlUpAyEMrMmkTPMQWEG
- pPYIfgveBxv6oEDaLJS8Cg==
-X-Google-Smtp-Source: APXvYqxx6FkC5f0arUAphcB6iggn1JI8NSGZcl25tCDEnnaao5v/3Yw/L/PJSTrJwGTYqIcAZWMyPg==
-X-Received: by 2002:a9d:615a:: with SMTP id c26mr342832otk.76.1556750809579;
- Wed, 01 May 2019 15:46:49 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id q124sm17147876oia.13.2019.05.01.15.46.48
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 01 May 2019 15:46:48 -0700 (PDT)
-Date: Wed, 1 May 2019 17:46:47 -0500
-From: Rob Herring <robh@kernel.org>
-To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
-Subject: Re: [RFC PATCH V1 3/6] dt-bindings: mt8183: Added FD dt-bindings
-Message-ID: <20190501224647.GA12044@bogus>
-References: <20190423104505.38778-1-Jerry-Ch.chen@mediatek.com>
- <20190423104505.38778-4-Jerry-Ch.chen@mediatek.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190423104505.38778-4-Jerry-Ch.chen@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ id 1hM1Ii-0003i8-OS
+ for linux-mediatek@lists.infradead.org; Thu, 02 May 2019 02:18:22 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
+ Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
+ List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=xkmTlJvBk2CY0QQnHQgQpvfF3NVtN7m9lajR+LsPLsw=; b=uan32wqgmRLB
+ oZSTcn0BXiB6O0M2MGT0e/d+Y9fNuZ/IluTr/xP539sTl05bV43OrBJCJo4O0QK2o8wBLBGJzbSEp
+ +Nb+O41V5924JuHfnXgUzULrFbTVv5I+VmBrtVETQHnxjcE8vuTquk8CVBYD1qPhO168u8Oploky3
+ gk+n4=;
+Received: from [211.55.52.15] (helo=finisterre.ee.mobilebroadband)
+ by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.89)
+ (envelope-from <broonie@sirena.org.uk>)
+ id 1hM1Ib-0005qh-Sa; Thu, 02 May 2019 02:18:14 +0000
+Received: by finisterre.ee.mobilebroadband (Postfix, from userid 1000)
+ id 2CF36441D3C; Thu,  2 May 2019 03:18:10 +0100 (BST)
+From: Mark Brown <broonie@kernel.org>
+To: Shunli Wang <shunli.wang@mediatek.com>
+Subject: Applied "ASoC: Mediatek: MT8183: add I2S2 control path from UL2 and
+ UL3" to the asoc tree
+In-Reply-To: <20190409091337.43934-2-shunli.wang@mediatek.com>
+X-Patchwork-Hint: ignore
+Message-Id: <20190502021810.2CF36441D3C@finisterre.ee.mobilebroadband>
+Date: Thu,  2 May 2019 03:18:10 +0100 (BST)
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190501_154651_855497_63BDB272 
-X-CRM114-Status: GOOD (  17.78  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20190501_191820_943418_D28CF172 
+X-CRM114-Status: GOOD (  13.28  )
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,80 +75,238 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- christie.yu@mediatek.com, srv_heupstream@mediatek.com,
- holmes.chiou@mediatek.com, suleiman@chromium.org, shik@chromium.org,
- tfiga@chromium.org, jungo.lin@mediatek.com, sj.huang@mediatek.com,
- yuzhao@chromium.org, hans.verkuil@cisco.com, zwisler@chromium.org,
- frederic.chen@mediatek.com, matthias.bgg@gmail.com,
- linux-mediatek@lists.infradead.org, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: alsa-devel@alsa-project.org, srv_heupstream@mediatek.com,
+ garlic.tseng@mediatek.com, jiaxin.yu@mediatek.com, tzungbi@google.com,
+ Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
+ shunli.wang@mediatek.com, kaichieh.chuang@mediatek.com
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Apr 23, 2019 at 06:45:02PM +0800, Jerry-ch Chen wrote:
-> From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> 
-> This patch adds DT binding documentation for the Face Detection (FD)
-> unit of the camera system on Mediatek's SoCs.
-> 
-> Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> ---
->  .../bindings/media/mediatek,mt8183-fd.txt     | 34 +++++++++++++++++++
->  1 file changed, 34 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
-> new file mode 100644
-> index 000000000000..97c12fd93e7e
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
-> @@ -0,0 +1,34 @@
-> +* Mediatek Face Detection Unit (FD)
-> +
-> +Face Detection (FD) unit is a typical memory-to-memory HW device.
-> +It provides hardware accelerated face detection function, and it
-> +is able to detect different poses of faces. FD will writre result
-> +of detected face into memory as output.
-> +
-> +Required properties:
-> +- compatible: "mediatek,mt8183-fd"
-> +- reg: Physical base address and length of the function block register space
-> +- interrupts: interrupt number to the cpu.
-> +- iommus: should point to the respective IOMMU block with master port as
-> +  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
-> +  for details.
+The patch
 
-How many entries? Looks like 3 from the example.
+   ASoC: Mediatek: MT8183: add I2S2 control path from UL2 and UL3
 
-> +- mediatek,larb: must contain the local arbiters in the current Socs, see
-> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
-> +  for details.
-> +- clocks : must contain the FDVT clock
-> +- clock-names: must contain FD_CLK_IMG_FD
-> +
-> +Example:
-> +	fd:fd@1502b000 {
-           ^ space needed
+has been applied to the asoc tree at
 
-> +		compatible = "mediatek,mt8183-fd";
-> +		mediatek,larb = <&larb5>;
-> +		mediatek,scp = <&scp>;
-> +		iommus = <&iommu M4U_PORT_CAM_FDVT_RP>,
-> +			 <&iommu M4U_PORT_CAM_FDVT_WR>,
-> +			 <&iommu M4U_PORT_CAM_FDVT_RB>;
-> +		reg = <0 0x1502b000 0 0x1000>;
-> +		interrupts = <GIC_SPI 269 IRQ_TYPE_LEVEL_LOW>;
-> +		clocks = <&imgsys CLK_IMG_FDVT>;
-> +		clock-names = "FD_CLK_IMG_FD";
-> +	};
-> +
-> -- 
-> 2.18.0
-> 
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git 
+
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
+
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
+
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
+
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
+
+Thanks,
+Mark
+
+From d232591c9482ddb121b60782d2e7dac1c4880bdb Mon Sep 17 00:00:00 2001
+From: Shunli Wang <shunli.wang@mediatek.com>
+Date: Tue, 9 Apr 2019 17:13:37 +0800
+Subject: [PATCH] ASoC: Mediatek: MT8183: add I2S2 control path from UL2 and
+ UL3
+
+This patch add the control path from UL2 or UL3 to I2S2.
+The patch is based on broonie tree "for-next" branch.
+
+Signed-off-by: Shunli Wang <shunli.wang@mediatek.com>
+Signed-off-by: Mark Brown <broonie@kernel.org>
+---
+ sound/soc/mediatek/mt8183/mt8183-afe-pcm.c | 38 ++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+diff --git a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
+index 43be51bf0329..1bc0fafe5e29 100644
+--- a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
++++ b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
+@@ -291,11 +291,15 @@ static struct snd_soc_dai_driver mt8183_memif_dai_driver[] = {
+ static const struct snd_kcontrol_new memif_ul1_ch1_mix[] = {
+ 	SOC_DAPM_SINGLE_AUTODISABLE("ADDA_UL_CH1", AFE_CONN21,
+ 				    I_ADDA_UL_CH1, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S0_CH1", AFE_CONN21,
++				    I_I2S0_CH1, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul1_ch2_mix[] = {
+ 	SOC_DAPM_SINGLE_AUTODISABLE("ADDA_UL_CH2", AFE_CONN22,
+ 				    I_ADDA_UL_CH2, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S0_CH2", AFE_CONN21,
++				    I_I2S0_CH2, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul2_ch1_mix[] = {
+@@ -307,6 +311,8 @@ static const struct snd_kcontrol_new memif_ul2_ch1_mix[] = {
+ 				    I_DL2_CH1, 1, 0),
+ 	SOC_DAPM_SINGLE_AUTODISABLE("DL3_CH1", AFE_CONN5,
+ 				    I_DL3_CH1, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S2_CH1", AFE_CONN5,
++				    I_I2S2_CH1, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul2_ch2_mix[] = {
+@@ -318,16 +324,22 @@ static const struct snd_kcontrol_new memif_ul2_ch2_mix[] = {
+ 				    I_DL2_CH2, 1, 0),
+ 	SOC_DAPM_SINGLE_AUTODISABLE("DL3_CH2", AFE_CONN6,
+ 				    I_DL3_CH2, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S2_CH2", AFE_CONN6,
++				    I_I2S2_CH2, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul3_ch1_mix[] = {
+ 	SOC_DAPM_SINGLE_AUTODISABLE("ADDA_UL_CH1", AFE_CONN32,
+ 				    I_ADDA_UL_CH1, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S2_CH1", AFE_CONN32,
++				    I_I2S2_CH1, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul3_ch2_mix[] = {
+ 	SOC_DAPM_SINGLE_AUTODISABLE("ADDA_UL_CH2", AFE_CONN33,
+ 				    I_ADDA_UL_CH2, 1, 0),
++	SOC_DAPM_SINGLE_AUTODISABLE("I2S2_CH2", AFE_CONN33,
++				    I_I2S2_CH2, 1, 0),
+ };
+ 
+ static const struct snd_kcontrol_new memif_ul4_ch1_mix[] = {
+@@ -380,16 +392,22 @@ static const struct snd_soc_dapm_route mt8183_memif_routes[] = {
+ 	{"UL1", NULL, "UL1_CH2"},
+ 	{"UL1_CH1", "ADDA_UL_CH1", "ADDA Capture"},
+ 	{"UL1_CH2", "ADDA_UL_CH2", "ADDA Capture"},
++	{"UL1_CH1", "I2S0_CH1", "I2S0"},
++	{"UL1_CH2", "I2S0_CH2", "I2S0"},
+ 
+ 	{"UL2", NULL, "UL2_CH1"},
+ 	{"UL2", NULL, "UL2_CH2"},
+ 	{"UL2_CH1", "ADDA_UL_CH1", "ADDA Capture"},
+ 	{"UL2_CH2", "ADDA_UL_CH2", "ADDA Capture"},
++	{"UL2_CH1", "I2S2_CH1", "I2S2"},
++	{"UL2_CH2", "I2S2_CH2", "I2S2"},
+ 
+ 	{"UL3", NULL, "UL3_CH1"},
+ 	{"UL3", NULL, "UL3_CH2"},
+ 	{"UL3_CH1", "ADDA_UL_CH1", "ADDA Capture"},
+ 	{"UL3_CH2", "ADDA_UL_CH2", "ADDA Capture"},
++	{"UL3_CH1", "I2S2_CH1", "I2S2"},
++	{"UL3_CH2", "I2S2_CH2", "I2S2"},
+ 
+ 	{"UL4", NULL, "UL4_CH1"},
+ 	{"UL4", NULL, "UL4_CH2"},
+@@ -421,7 +439,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = DL1_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_DL2] = {
+ 		.name = "DL2",
+@@ -438,7 +458,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = DL2_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_DL3] = {
+ 		.name = "DL3",
+@@ -455,7 +477,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = DL3_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_VUL2] = {
+ 		.name = "VUL2",
+@@ -472,7 +496,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = VUL2_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_AWB] = {
+ 		.name = "AWB",
+@@ -489,7 +515,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = AWB_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_AWB2] = {
+ 		.name = "AWB2",
+@@ -506,7 +534,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = AWB2_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_VUL12] = {
+ 		.name = "VUL12",
+@@ -523,7 +553,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = VUL12_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_MOD_DAI] = {
+ 		.name = "MOD_DAI",
+@@ -540,7 +572,9 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = MOD_DAI_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ 	[MT8183_MEMIF_HDMI] = {
+ 		.name = "HDMI",
+@@ -553,10 +587,13 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.mono_reg = -1,
+ 		.mono_shift = -1,
+ 		.enable_reg = -1,	/* control in tdm for sync start */
++		.enable_shift = -1,
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_shift = HDMI_HD_SFT,
+ 		.agent_disable_reg = -1,
++		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
++		.msb_shift = -1,
+ 	},
+ };
+ 
+@@ -671,6 +708,7 @@ static const struct mtk_base_irq_data irq_data[MT8183_IRQ_NUM] = {
+ 		.irq_cnt_shift = 0,
+ 		.irq_cnt_maskbit = 0x3ffff,
+ 		.irq_fs_reg = -1,
++		.irq_fs_shift = -1,
+ 		.irq_fs_maskbit = -1,
+ 		.irq_en_reg = AFE_IRQ_MCU_CON0,
+ 		.irq_en_shift = IRQ8_MCU_ON_SFT,
+-- 
+2.20.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
