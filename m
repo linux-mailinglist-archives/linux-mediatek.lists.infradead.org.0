@@ -2,58 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33F9312075
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 18:43:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7B176122C2
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 21:49:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fL7IwTU5wpaeP7w4MvYYTbek/BXfnF0W1te1+j9IRh0=; b=cAtzlNKfmR8+eS
-	BbR5pAfpJN/inHyeEsPXFhf9mCAZbk54OM7YKT618zRE2LeJISDBPW3dfB3kYNr1pw+EzarZnkuMs
-	rW/k9GXjIH6aqwgbOVGOM4txmqZayI0IsW1hYXeDYlhpM2LxO6q9SIQJzoHz64EnS+N1jsAVxfi/V
-	n4WaUYVlbA1QTC0YtSQvKhZ/c9CLbj1ELy++CnAohrRa1NMo3laIwHQGJfAFSTo+WM4Yyw9UvxgyP
-	RWGk0ujFepm3LG4vGI1JQ+O7VREqj8oPzQChjxvMuJnk+Ls4PcZWgB1ty1TtY9gTkQVdvxUAugS62
-	9TNLptxoethPdQXnMiJg==;
+	List-Owner; bh=jXwG3cSclhiSN21+bU7eLLoK/Kq7ELsXSHtUEPpJR5k=; b=kvDgeW04DinHB3
+	/iKYtGKjuwgrMv4zemtwJNPxBn9QvF4zr5dNJgfP+mRcnrFuqvggiGNs1SPHkytwKAF7jI+aXcToM
+	hocGCqcacED1Ps1OLhO0UBX9TQRPbCxkigYcd7cuZAMRGuGObHZMJddBR2j29iqBh6KeAZNGL8jkj
+	KjdV/czgEd+Y5WDqI6BZpYVvedwOgKTANV2/fuYH3gvooTsfgdBF/DNvB6jy6OMCYIFn6i4lS1ptL
+	ZmcWyWDudb8ifvxuiqAVaO5xFhOgJDkZna7VJbkDQIYm/s2M82dXWTxJfkDZbU1tSHjiNSJmk4Ecc
+	49MryY1d18fELieOOnXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hMEoJ-0007ky-GI; Thu, 02 May 2019 16:43:51 +0000
-Received: from usa-sjc-mx-foss1.foss.arm.com ([217.140.101.70]
- helo=foss.arm.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hMEoB-0007ey-Oz; Thu, 02 May 2019 16:43:45 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.72.51.249])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 7CACFA78;
- Thu,  2 May 2019 09:43:41 -0700 (PDT)
-Received: from e121166-lin.cambridge.arm.com (e121166-lin.cambridge.arm.com
- [10.1.196.255])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 787543F738;
- Thu,  2 May 2019 09:43:39 -0700 (PDT)
-Date: Thu, 2 May 2019 17:43:33 +0100
-From: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-To: Jianjun Wang <jianjun.wang@mediatek.com>
-Subject: Re: [v1] PCI: mediatek: Remove MSI inner domain
-Message-ID: <20190502164333.GA26454@e121166-lin.cambridge.arm.com>
-References: <1548149855-3225-1-git-send-email-jianjun.wang@mediatek.com>
- <1548926367.4980.14.camel@mhfsdcap03>
- <10e8e731-5749-f6fb-eb33-ab67aa0e2c3f@arm.com>
- <1548938997.6292.52.camel@mhfsdcap03>
+	id 1hMHhm-0008CY-3u; Thu, 02 May 2019 19:49:18 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hMHhc-00084n-8I; Thu, 02 May 2019 19:49:11 +0000
+Received: by mail-ot1-f66.google.com with SMTP id s11so3265292otp.0;
+ Thu, 02 May 2019 12:49:07 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=FGfxNsDw3M/Z12wiu2wAdnzAwwHu4M4I58DLCLbAH48=;
+ b=T3ST1KSeU3PwEx6kUPE3alNs/ChfJWCqUS7ik7ljP9kSY5f+Qcp77djEmiytpuXKp2
+ Dwqj8pHrqYt9ejsdtAca45JyyBXjIeNOgDlNjMKF190rd3FtzvkXNG6Im4+7YrF1ncYz
+ p/eXB7Y+tQNgC9MKmaoeOE4iPWLscfuNLZWxaIZoPi4GSmbkPllx/pXU7ln3+Lod1Bn/
+ gYoNJTKg9bkVSKHuJpiXFpXVcf9FjYq9KwpKSTtvGssE+vyUp9Whq/J09HF5aDbMyoSZ
+ 0EBH5AqfN59TeCe5w3nUlyblLkJ8MrazD1F3IXUBnRVOWKLW9zSxa9Go6/PoA/GBP466
+ Ozzg==
+X-Gm-Message-State: APjAAAXOswDlWp8bgF6oZVNZyiKu6giNOxEtCyl/LzxFisYX7UzIeZYB
+ 0ZU3rJ96WJHRvR+uRJG1RQ==
+X-Google-Smtp-Source: APXvYqzYJ9AupEd9Umw0x6xgTlB7dtQUdfi0f3hYSCZGFwwsr29XCXUyJ7qIx36e0LDiOwYhqSkwBQ==
+X-Received: by 2002:a9d:73d9:: with SMTP id m25mr3984524otk.356.1556826546929; 
+ Thu, 02 May 2019 12:49:06 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id 189sm89076oid.35.2019.05.02.12.49.05
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Thu, 02 May 2019 12:49:05 -0700 (PDT)
+Date: Thu, 2 May 2019 14:49:05 -0500
+From: Rob Herring <robh@kernel.org>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH] dt-binding: usb: add usb-role-switch property
+Message-ID: <20190502194905.GA22144@bogus>
+References: <5756e05930f5e6a3940ad9d019399c8e63d24f18.1556454324.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1548938997.6292.52.camel@mhfsdcap03>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+In-Reply-To: <5756e05930f5e6a3940ad9d019399c8e63d24f18.1556454324.git.chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190502_094343_823116_8EF5BAC3 
-X-CRM114-Status: GOOD (  37.07  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190502_124908_299167_72643764 
+X-CRM114-Status: GOOD (  15.98  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [217.140.101.70 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.66 listed in list.dnswl.org]
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.66 listed in wl.mailspike.net]
+ 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -65,290 +88,62 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, ryder.lee@mediatek.com,
- Marc Zyngier <marc.zyngier@arm.com>, linux-pci@vger.kernel.org,
- linux-kernel@vger.kernel.org, matthias.bgg@gmail.com,
- linux-mediatek@lists.infradead.org, Honghui Zhang <honghui.zhang@mediatek.com>,
- bhelgaas@google.com, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Felipe Balbi <felipe.balbi@linux.intel.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Biju Das <biju.das@bp.renesas.com>, linux-mediatek@lists.infradead.org,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jan 31, 2019 at 08:49:57PM +0800, Jianjun Wang wrote:
-> On Thu, 2019-01-31 at 09:44 +0000, Marc Zyngier wrote:
-> > On 31/01/2019 09:19, Honghui Zhang wrote:
-> > > On Tue, 2019-01-22 at 17:37 +0800, Jianjun Wang wrote:
-> > >> There is no need to create the inner domain as a parent for MSI domian,
-> > >> some feature has been implemented by MSI framework.
-> > >>
-> > >> Remove the inner domain and its irq chip, it will be more closer to
-> > >> hardware implementation.
-> > 
-> > This is not about being closer to any HW implementation. This is about
-> > having a uniform way to deal with MSI controllers, no matter how they
-> > are implemented by the HW.
-> > 
-> > So maybe you could start by explaining what this is trying to achieve.
-> > 
-> > >>
-> > > Hi, jianjun, I'm not quite familiar with the irq_chip framework, It was
-> > > under Marc's great help with the first version of irq_chip solution
-> > > code. I would like you to add him for the review.
-> > > 
-> > > Thanks.
-> > > 
-> > >> Signed-off-by: Jianjun Wang <jianjun.wang@mediatek.com>
-> > >> ---
-> > >>  drivers/pci/controller/pcie-mediatek.c | 86 +++++++++++---------------
-> > >>  1 file changed, 37 insertions(+), 49 deletions(-)
-> > >>
-> > >> diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
-> > >> index 8d05df56158b..f996a9a6331f 100644
-> > >> --- a/drivers/pci/controller/pcie-mediatek.c
-> > >> +++ b/drivers/pci/controller/pcie-mediatek.c
-> > >> @@ -169,7 +169,6 @@ struct mtk_pcie_soc {
-> > >>   * @slot: port slot
-> > >>   * @irq: GIC irq
-> > >>   * @irq_domain: legacy INTx IRQ domain
-> > >> - * @inner_domain: inner IRQ domain
-> > >>   * @msi_domain: MSI IRQ domain
-> > >>   * @lock: protect the msi_irq_in_use bitmap
-> > >>   * @msi_irq_in_use: bit map for assigned MSI IRQ
-> > >> @@ -190,7 +189,6 @@ struct mtk_pcie_port {
-> > >>  	u32 slot;
-> > >>  	int irq;
-> > >>  	struct irq_domain *irq_domain;
-> > >> -	struct irq_domain *inner_domain;
-> > >>  	struct irq_domain *msi_domain;
-> > >>  	struct mutex lock;
-> > >>  	DECLARE_BITMAP(msi_irq_in_use, MTK_MSI_IRQS_NUM);
-> > >> @@ -418,22 +416,15 @@ static void mtk_msi_ack_irq(struct irq_data *data)
-> > >>  	u32 hwirq = data->hwirq;
-> > >>  
-> > >>  	writel(1 << hwirq, port->base + PCIE_IMSI_STATUS);
-> > >> +	writel(MSI_STATUS, port->base + PCIE_INT_STATUS);
-> > >>  }
-> > >>  
-> > >> -static struct irq_chip mtk_msi_bottom_irq_chip = {
-> > >> -	.name			= "MTK MSI",
-> > >> -	.irq_compose_msi_msg	= mtk_compose_msi_msg,
-> > >> -	.irq_set_affinity	= mtk_msi_set_affinity,
-> > >> -	.irq_ack		= mtk_msi_ack_irq,
-> > >> -};
-> > >> -
-> > >> -static int mtk_pcie_irq_domain_alloc(struct irq_domain *domain, unsigned int virq,
-> > >> -				     unsigned int nr_irqs, void *args)
-> > >> +static irq_hw_number_t mtk_pcie_msi_get_hwirq(struct msi_domain_info *info,
-> > >> +					      msi_alloc_info_t *arg)
-> > >>  {
-> > >> -	struct mtk_pcie_port *port = domain->host_data;
-> > >> -	unsigned long bit;
-> > >> +	struct mtk_pcie_port *port = info->chip_data;
-> > >> +	irq_hw_number_t bit;
-> > >>  
-> > >> -	WARN_ON(nr_irqs != 1);
-> > >>  	mutex_lock(&port->lock);
-> > >>  
-> > >>  	bit = find_first_zero_bit(port->msi_irq_in_use, MTK_MSI_IRQS_NUM);
-> > >> @@ -446,18 +437,14 @@ static int mtk_pcie_irq_domain_alloc(struct irq_domain *domain, unsigned int vir
-> > >>  
-> > >>  	mutex_unlock(&port->lock);
-> > >>  
-> > >> -	irq_domain_set_info(domain, virq, bit, &mtk_msi_bottom_irq_chip,
-> > >> -			    domain->host_data, handle_edge_irq,
-> > >> -			    NULL, NULL);
-> > >> -
-> > >> -	return 0;
-> > >> +	return bit;
-> > 
-> > Why do you need to override the get_hwirq method? Using the generic
-> > PCI/MSI version has the advantage of giving you a universal encoding
-> > which makes debugging much easier.
+On Sun, Apr 28, 2019 at 08:27:46PM +0800, Chunfeng Yun wrote:
+> Add a property usb-role-switch to tell Dual-Role controller driver
+> that use USB Role Switch framework to handle the role switch between
+> host mode and device mode, it's useful when the driver has already
+> supported other ways, such as extcon framework etc.
 > 
-> Hi Marc,
+> Cc: Biju Das <biju.das@bp.renesas.com>
+> Cc: Yu Chen <chenyu56@huawei.com>
+> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> ---
+> v1:
+> the property is discussed in:
+> [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
+> https://patchwork.kernel.org/patch/10852497/
 > 
-> In previous patch, we create a inner_domain as a parent for msi_domain,
-> when we allocate a irq for MSI, the work flow of each domain will be the
-> following:
+> Mediatek and Hisilicon also try to use it:
+> [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
+> https://patchwork.kernel.org/patch/10918385/
+> [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
+> https://patchwork.kernel.org/patch/10918367/
 > 
-> inner_domain:
-> 1. Allocated a irq bit from bitmap as this domain's hwirq;
-> 2. Mapping with system virtual irq number;
-> 3. Set irq chip and irq handler;
-> 4. Send MSI message to EP.
+> [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
+> https://patchwork.kernel.org/patch/10909981/
+> ---
+>  Documentation/devicetree/bindings/usb/generic.txt | 3 +++
+>  1 file changed, 3 insertions(+)
 > 
-> msi_domain:
-> 1. Calculate a hwirq;
-> 2. Mapping with system virtual irq number;
-> 3. Set irq chip which from info->chip and irq handler if defined in
-> info.
-> 4. Send MSI message to EP or trigger parent domain to send the message.
-> 
-> The last three steps looks similar, if we override the get_hwirq method
-> and set irq chip and handler to info structure, MSI framework will do
-> the rest of thing. I think it will be more simple and easy to understand
-> the driver's work flow.
-> 
-> Further more, if we try to enhance the interrupt performance, such as
-> connect the MSI interrupt line to GIC directly in hardware, we will need
-> to set gic domain as the parent, in that case, there will be a lot of
-> work to do to replace the inner domain.
+> diff --git a/Documentation/devicetree/bindings/usb/generic.txt b/Documentation/devicetree/bindings/usb/generic.txt
+> index 0a74ab8dfdc2..c73950b72513 100644
+> --- a/Documentation/devicetree/bindings/usb/generic.txt
+> +++ b/Documentation/devicetree/bindings/usb/generic.txt
+> @@ -30,6 +30,9 @@ Optional properties:
+>  			optional for OTG device.
+>   - adp-disable: tells OTG controllers we want to disable OTG ADP, ADP is
+>  			optional for OTG device.
+> + - usb-role-switch: tells Dual-Role USB controller driver that we want to use
+> +			USB Role Switch framework to handle the role switch
+> +			between host mode and device mode.
 
-I do not understand what you mean, I am sorry. I won't review v2 until
-we have an understanding of what this patch should achieve and we
-have a clear reason why we need it, more specifically I do not
-understand what it has to do with performance (keeping in mind what
-Marc said about the IRQ controllers representation, which has a
-reason to be there on its own).
+Please describe this in terms of h/w functionality, not drivers and 
+Linux things.
 
-Thanks,
-Lorenzo
-
-> Thanks.
-> > 
-> > >>  }
-> > >>  
-> > >> -static void mtk_pcie_irq_domain_free(struct irq_domain *domain,
-> > >> -				     unsigned int virq, unsigned int nr_irqs)
-> > >> +static void mtk_pcie_msi_free(struct irq_domain *domain,
-> > >> +			      struct msi_domain_info *info, unsigned int virq)
-> > >>  {
-> > >>  	struct irq_data *d = irq_domain_get_irq_data(domain, virq);
-> > >> -	struct mtk_pcie_port *port = irq_data_get_irq_chip_data(d);
-> > >> +	struct mtk_pcie_port *port = info->chip_data;
-> > >>  
-> > >>  	mutex_lock(&port->lock);
-> > >>  
-> > >> @@ -468,46 +455,50 @@ static void mtk_pcie_irq_domain_free(struct irq_domain *domain,
-> > >>  		__clear_bit(d->hwirq, port->msi_irq_in_use);
-> > >>  
-> > >>  	mutex_unlock(&port->lock);
-> > >> -
-> > >> -	irq_domain_free_irqs_parent(domain, virq, nr_irqs);
-> > >>  }
-> > >>  
-> > >> -static const struct irq_domain_ops msi_domain_ops = {
-> > >> -	.alloc	= mtk_pcie_irq_domain_alloc,
-> > >> -	.free	= mtk_pcie_irq_domain_free,
-> > >> +static struct msi_domain_ops mtk_msi_domain_ops = {
-> > >> +	.get_hwirq	= mtk_pcie_msi_get_hwirq,
-> > >> +	.msi_free	= mtk_pcie_msi_free,
-> > >>  };
-> > >>  
-> > >>  static struct irq_chip mtk_msi_irq_chip = {
-> > >> -	.name		= "MTK PCIe MSI",
-> > >> -	.irq_ack	= irq_chip_ack_parent,
-> > >> -	.irq_mask	= pci_msi_mask_irq,
-> > >> -	.irq_unmask	= pci_msi_unmask_irq,
-> > >> +	.name			= "MTK PCIe",
-> > >> +	.irq_compose_msi_msg	= mtk_compose_msi_msg,
-> > >> +	.irq_write_msi_msg	= pci_msi_domain_write_msg,
-> > >> +	.irq_set_affinity	= mtk_msi_set_affinity,
-> > >> +	.irq_ack		= mtk_msi_ack_irq,
-> > >> +	.irq_mask		= pci_msi_mask_irq,
-> > >> +	.irq_unmask		= pci_msi_unmask_irq,
-> > >>  };
-> > >>  
-> > >>  static struct msi_domain_info mtk_msi_domain_info = {
-> > >> -	.flags	= (MSI_FLAG_USE_DEF_DOM_OPS | MSI_FLAG_USE_DEF_CHIP_OPS |
-> > >> -		   MSI_FLAG_PCI_MSIX),
-> > >> -	.chip	= &mtk_msi_irq_chip,
-> > >> +	.flags		= (MSI_FLAG_USE_DEF_DOM_OPS |
-> > >> +			   MSI_FLAG_USE_DEF_CHIP_OPS | MSI_FLAG_PCI_MSIX),
-> > >> +	.ops		= &mtk_msi_domain_ops,
-> > >> +	.chip		= &mtk_msi_irq_chip,
-> > >> +	.handler	= handle_edge_irq,
-> > >> +	.handler_name	= "MSI",
-> > >>  };
-> > >>  
-> > >>  static int mtk_pcie_allocate_msi_domains(struct mtk_pcie_port *port)
-> > >>  {
-> > >> -	struct fwnode_handle *fwnode = of_node_to_fwnode(port->pcie->dev->of_node);
-> > >> +	struct device *dev = port->pcie->dev;
-> > >> +	struct fwnode_handle *fwnode = of_node_to_fwnode(dev->of_node);
-> > >> +	struct msi_domain_info *info;
-> > >>  
-> > >>  	mutex_init(&port->lock);
-> > >>  
-> > >> -	port->inner_domain = irq_domain_create_linear(fwnode, MTK_MSI_IRQS_NUM,
-> > >> -						      &msi_domain_ops, port);
-> > >> -	if (!port->inner_domain) {
-> > >> -		dev_err(port->pcie->dev, "failed to create IRQ domain\n");
-> > >> +	info = devm_kzalloc(dev, sizeof(*info), GFP_KERNEL);
-> > >> +	if (!info)
-> > >>  		return -ENOMEM;
-> > >> -	}
-> > >>  
-> > >> -	port->msi_domain = pci_msi_create_irq_domain(fwnode, &mtk_msi_domain_info,
-> > >> -						     port->inner_domain);
-> > >> +	memcpy(info, &mtk_msi_domain_info, sizeof(*info));
-> > >> +	info->chip_data = port;
-> > >> +
-> > > 
-> > > I'm not really like this memcpy of msi_domain_info, but I do not have a
-> > > better idea to prevent the mixed of mtk_pcie_port data.
-> > 
-> > So we're basically trading an indirection for another. What's the gain?
-> 
-> There is usually more than one PCIe port in each SoC, we use
-> mtk_pcie_port data to describe it, in previous version, we pass the port
-> data as inner domain's host_data. When remove the inner domain, we also
-> need to pass the port data and should prevent to mix with another port,
-> so I thank maybe we can make a copy for each port and set port data as
-> it's chip_data.
-> > 
-> > > 
-> > >> +	port->msi_domain = pci_msi_create_irq_domain(fwnode, info, NULL);
-> > >>  	if (!port->msi_domain) {
-> > >> -		dev_err(port->pcie->dev, "failed to create MSI domain\n");
-> > >> -		irq_domain_remove(port->inner_domain);
-> > >> +		dev_err(dev, "failed to create MSI domain\n");
-> > >>  		return -ENOMEM;
-> > >>  	}
-> > >>  
-> > >> @@ -541,8 +532,6 @@ static void mtk_pcie_irq_teardown(struct mtk_pcie *pcie)
-> > >>  		if (IS_ENABLED(CONFIG_PCI_MSI)) {
-> > >>  			if (port->msi_domain)
-> > >>  				irq_domain_remove(port->msi_domain);
-> > >> -			if (port->inner_domain)
-> > >> -				irq_domain_remove(port->inner_domain);
-> > >>  		}
-> > >>  
-> > >>  		irq_dispose_mapping(port->irq);
-> > >> @@ -619,12 +608,11 @@ static void mtk_pcie_intr_handler(struct irq_desc *desc)
-> > >>  
-> > >>  			while ((imsi_status = readl(port->base + PCIE_IMSI_STATUS))) {
-> > >>  				for_each_set_bit(bit, &imsi_status, MTK_MSI_IRQS_NUM) {
-> > >> -					virq = irq_find_mapping(port->inner_domain, bit);
-> > >> +					virq = irq_find_mapping(
-> > >> +							port->msi_domain, bit);
-> > >>  					generic_handle_irq(virq);
-> > >>  				}
-> > >>  			}
-> > >> -			/* Clear MSI interrupt status */
-> > >> -			writel(MSI_STATUS, port->base + PCIE_INT_STATUS);
-> > >>  		}
-> > > 
-> > > why change this irq status clear flow?
-> > 
-> > I think this is trying move everything to the irq_ack callback. But
-> > that's a change of semantics, and I'd like it explained. It certainly
-> > feels wrong.
-> Yes, I confused with each irq's ack callback, it doesn't need to be
-> changed.
-> 
-> Thanks.
-> > 
-> > Overall, this patch as it stands (without any real explanation) doesn't
-> > feel me with confidence. It introduces significant differences in the
-> > way we build PCI/MSI domains, and I'd like to understand why.
-> > 
-> > Thanks,
-> > 
-> > 	M.
-> 
-> 
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
