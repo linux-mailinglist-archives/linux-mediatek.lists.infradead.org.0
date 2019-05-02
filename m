@@ -2,87 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E851211267
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 06:56:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 71E2D1134A
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 08:20:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iDsILmRQDQW9v+yXZHX/igi1NNyn2K5H7fR7pZpjhDA=; b=ruTlbRB4f1GysO
-	Zpj1EYpCwzxjiPAsEh7ajj5NpQ4lhypAvMMLsejgHTG0PX7EPqmqOT6hTJCdjAK746xPQqbi5Q7wj
-	E72zEqV3CP0YBGIpfsKl4PqLoatbb0+jBthG2biRw0J2RDfO2KTulOtoTKKKnPpyziJitkSI/HCch
-	Rrx2TpLtwNPPCTGcw9eJ+V64l7gEneovgkUbIEfJn6js8HFGeGFZSLUa2idIj4ymXe2JoFJPxZR/P
-	N9JWT91vfqngLX8LYX5I2ODkIDFQ/m96bgAbZyMtuSjZqKHTN42/8Eidin+qq7qc8ORcvOfOh+ukw
-	XPH72YGgBPoZjLIa7lSA==;
+	List-Owner; bh=R/aUI/g6EEV/ePzgwlUPrrqtagsHVUEVYfsRTpm3Bzg=; b=K0LRTeZkh3gMie
+	bfc/cHoZ4flAmRpf9pxbZx64itvP9HaasxC9NQWE0eWXRIwYwVTUxO3VUUsM7O8U31g5g8LGpgqtT
+	OIsbHoYc6CtBfjAhrU8askTyCgfPi1jtm3H20Fl9MGidCQFNhOaj9Sr4sX5mpckLcZZh0RQ7yF4IF
+	96AGKbSm8vgh9cZBJIF7xMYMirJil8W+iEN9aoWL+IhGVJ5iy2xCfE5AxbIgfxmIyT8TpQxHnM2bu
+	qHTUPMX96XXzw+941BX5JsKWL1JBpslxTmGjHEo53dJx8haOD3vKG9py0605nHj0Y851KfN6S9v4G
+	qTYfRMuYAFeQE3Ph5ZBw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hM3m5-0006rR-1n; Thu, 02 May 2019 04:56:49 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1hM54g-000191-JR; Thu, 02 May 2019 06:20:06 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hM3lv-0006h3-CC
- for linux-mediatek@lists.infradead.org; Thu, 02 May 2019 04:56:40 +0000
-Received: by mail-pf1-x444.google.com with SMTP id b3so536784pfd.1
- for <linux-mediatek@lists.infradead.org>; Wed, 01 May 2019 21:56:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=0uEhbXfTbBJ1Z2Kv01LPBYrX3ZS5Rz9y5kPzobESOBI=;
- b=kjA0IkL2lphoYXjpaZd0JAuzOk4YKKTN2UCTNfqgYOGUz6zgSRQY1cyglpFLe9gZ1n
- GRnS9XNzri/D5ysNkPqqdDRMk3KRSwovN2qpgkhVkTiuhC4agg/NTutb4WuN47fVcZCF
- UUIO5robvSzsJ+u7sWK47XdnbhZImedX79T2Q=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=0uEhbXfTbBJ1Z2Kv01LPBYrX3ZS5Rz9y5kPzobESOBI=;
- b=ZDVuG363xLpSp6NS5K8F56LQo65XmdZUD0O3TwFoY2cfOVsrbZuCIb1Pw/xGB4ZLLc
- 2fDQZBS+AfQTj8tOy8qFe6ZgMqOY/Zni4O7R0iwQQ4zd2H+2LcqHXBfJ3NIA2xvRsrpg
- 0guV6Xdv/rd8dtZ8lAtLYVFy/b4jhJv4S6g175AvYkx9ZpJjIhiHTqZbEOAbNidjjQzL
- KLJjlCjooRf8xmgXsCf+kHZPacfJBFoGLqmVZxgov4xtZx+ZdZw5PVK/CcMk/+UxxM9/
- firhcOhhQUmSchZu7ZV+g5Lk4ajAv5GaQGjdt9/tjAo9cqVdujNybJ465drQbXZTHHs4
- rvzA==
-X-Gm-Message-State: APjAAAXs9IDnOoKq9/j4hfRUOSrLoI9ExjBo3O+m+g2ySt69FkZ0t4Od
- kAbvLVuUM87phUnjUkDH1nP0xg==
-X-Google-Smtp-Source: APXvYqxb8f1zrcqX3NddJRYvEW77UkD+Um0XCa7fQsUuySsX73xUDBYJ7k8eUOzlL/onT4KImTFWUg==
-X-Received: by 2002:aa7:800e:: with SMTP id j14mr1786208pfi.157.1556772998334; 
- Wed, 01 May 2019 21:56:38 -0700 (PDT)
-Received: from drinkcat2.tpe.corp.google.com
- ([2401:fa00:1:b:d8b7:33af:adcb:b648])
- by smtp.gmail.com with ESMTPSA id a6sm64239470pfn.181.2019.05.01.21.56.36
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 01 May 2019 21:56:37 -0700 (PDT)
-From: Nicolas Boichat <drinkcat@chromium.org>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: [PATCH 2/2] usb: xhci-mtk: Do not create shared_hcd if no USB 3.0
- port available
-Date: Thu,  2 May 2019 12:56:30 +0800
-Message-Id: <20190502045631.229386-2-drinkcat@chromium.org>
-X-Mailer: git-send-email 2.21.0.593.g511ec345e18-goog
-In-Reply-To: <20190502045631.229386-1-drinkcat@chromium.org>
-References: <20190502045631.229386-1-drinkcat@chromium.org>
+ id 1hM54U-0000rX-5c; Thu, 02 May 2019 06:19:56 +0000
+X-UUID: b1f68a2e1a7d4243838937cd640a314e-20190501
+X-UUID: b1f68a2e1a7d4243838937cd640a314e-20190501
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <roger.lu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1135422410; Wed, 01 May 2019 22:19:41 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 1 May 2019 23:19:40 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 2 May 2019 14:19:31 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 2 May 2019 14:19:31 +0800
+Message-ID: <1556777971.12123.35.camel@mtksdaap41>
+Subject: Re: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
+From: Roger Lu <roger.lu@mediatek.com>
+To: Stephen Boyd <sboyd@kernel.org>
+Date: Thu, 2 May 2019 14:19:31 +0800
+In-Reply-To: <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
+References: <20190430112012.4514-1-roger.lu@mediatek.com>
+ <20190430112012.4514-2-roger.lu@mediatek.com>
+ <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 2E2F08777EB39D1A247C11B19DDF97D305EB6283DD65100F47975443F62BB5352000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190501_215639_411938_22980009 
-X-CRM114-Status: GOOD (  13.72  )
-X-Spam-Score: -0.3 (/)
+X-CRM114-CacheID: sfid-20190501_231954_218671_1B5D9086 
+X-CRM114-Status: GOOD (  19.47  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -94,10 +72,12 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Khuong Dinh <khuong@os.amperecomputing.com>,
- Mathias Nyman <mathias.nyman@intel.com>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Hoan Tran <hoan@os.amperecomputing.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ Angus.Lin@mediatek.com, devicetree@vger.kernel.org,
+ Viresh Kumar <vireshk@kernel.org>, linux-pm@vger.kernel.org,
+ "Rafael J . Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org, Kevin
+ Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Andy-YT.Liu@mediatek.com,
  Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
@@ -105,111 +85,121 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When the controller only supports USB 2.0, do not even create the
-USB 3.0 hcd/root hub.
+Dear Stephen,
 
-Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
----
- drivers/usb/host/xhci-mtk.c | 44 +++++++++++++++++++++++--------------
- 1 file changed, 28 insertions(+), 16 deletions(-)
+Thanks for the review.
 
-diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
-index 026fe18972d3e5b..189f5dc614e6e05 100644
---- a/drivers/usb/host/xhci-mtk.c
-+++ b/drivers/usb/host/xhci-mtk.c
-@@ -527,23 +527,28 @@ static int xhci_mtk_probe(struct platform_device *pdev)
- 	xhci->imod_interval = 5000;
- 	device_property_read_u32(dev, "imod-interval-ns", &xhci->imod_interval);
- 
--	xhci->shared_hcd = usb_create_shared_hcd(driver, dev,
-+	/* Only create shared_hcd when USB3.0 port is available. */
-+	if (xhci->usb3_rhub.num_ports > 0) {
-+		xhci->shared_hcd = usb_create_shared_hcd(driver, dev,
- 			dev_name(dev), hcd);
--	if (!xhci->shared_hcd) {
--		ret = -ENOMEM;
--		goto disable_device_wakeup;
-+		if (!xhci->shared_hcd) {
-+			ret = -ENOMEM;
-+			goto disable_device_wakeup;
-+		}
- 	}
- 
- 	ret = usb_add_hcd(hcd, irq, IRQF_SHARED);
- 	if (ret)
- 		goto put_usb3_hcd;
- 
--	if (HCC_MAX_PSA(xhci->hcc_params) >= 4)
--		xhci->shared_hcd->can_do_streams = 1;
-+	if (xhci->usb3_rhub.num_ports > 0) {
-+		if (HCC_MAX_PSA(xhci->hcc_params) >= 4)
-+			xhci->shared_hcd->can_do_streams = 1;
- 
--	ret = usb_add_hcd(xhci->shared_hcd, irq, IRQF_SHARED);
--	if (ret)
--		goto dealloc_usb2_hcd;
-+		ret = usb_add_hcd(xhci->shared_hcd, irq, IRQF_SHARED);
-+		if (ret)
-+			goto dealloc_usb2_hcd;
-+	}
- 
- 	return 0;
- 
-@@ -552,7 +557,8 @@ static int xhci_mtk_probe(struct platform_device *pdev)
- 
- put_usb3_hcd:
- 	xhci_mtk_sch_exit(mtk);
--	usb_put_hcd(xhci->shared_hcd);
-+	if (xhci->shared_hcd)
-+		usb_put_hcd(xhci->shared_hcd);
- 
- disable_device_wakeup:
- 	device_init_wakeup(dev, false);
-@@ -579,12 +585,14 @@ static int xhci_mtk_remove(struct platform_device *dev)
- 	struct xhci_hcd	*xhci = hcd_to_xhci(hcd);
- 	struct usb_hcd  *shared_hcd = xhci->shared_hcd;
- 
--	usb_remove_hcd(shared_hcd);
-+	if (shared_hcd)
-+		usb_remove_hcd(shared_hcd);
- 	xhci->shared_hcd = NULL;
- 	device_init_wakeup(&dev->dev, false);
- 
- 	usb_remove_hcd(hcd);
--	usb_put_hcd(shared_hcd);
-+	if (shared_hcd)
-+		usb_put_hcd(shared_hcd);
- 	usb_put_hcd(hcd);
- 	xhci_mtk_sch_exit(mtk);
- 	xhci_mtk_clks_disable(mtk);
-@@ -611,8 +619,10 @@ static int __maybe_unused xhci_mtk_suspend(struct device *dev)
- 	xhci_dbg(xhci, "%s: stop port polling\n", __func__);
- 	clear_bit(HCD_FLAG_POLL_RH, &hcd->flags);
- 	del_timer_sync(&hcd->rh_timer);
--	clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
--	del_timer_sync(&xhci->shared_hcd->rh_timer);
-+	if (xhci->shared_hcd) {
-+		clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-+		del_timer_sync(&xhci->shared_hcd->rh_timer);
-+	}
- 
- 	xhci_mtk_host_disable(mtk);
- 	xhci_mtk_clks_disable(mtk);
-@@ -631,8 +641,10 @@ static int __maybe_unused xhci_mtk_resume(struct device *dev)
- 	xhci_mtk_host_enable(mtk);
- 
- 	xhci_dbg(xhci, "%s: restart port polling\n", __func__);
--	set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
--	usb_hcd_poll_rh_status(xhci->shared_hcd);
-+	if (xhci->shared_hcd) {
-+		set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-+		usb_hcd_poll_rh_status(xhci->shared_hcd);
-+	}
- 	set_bit(HCD_FLAG_POLL_RH, &hcd->flags);
- 	usb_hcd_poll_rh_status(hcd);
- 	return 0;
--- 
-2.21.0.593.g511ec345e18-goog
+On Tue, 2019-04-30 at 13:31 -0700, Stephen Boyd wrote:
+> Quoting Roger Lu (2019-04-30 04:20:10)
+> > Document the binding for enabling mtk svs on MediaTek SoC.
+> > 
+> > Signed-off-by: Roger Lu <roger.lu@mediatek.com>
+> > ---
+> >  .../devicetree/bindings/power/mtk-svs.txt     | 70 +++++++++++++++++++
+> >  1 file changed, 70 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
+> > new file mode 100644
+> > index 000000000000..355329db74ba
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
+> > @@ -0,0 +1,70 @@
+> > +* Mediatek Smart Voltage Scaling (MTK SVS)
+> > +
+> > +This describes the device tree binding for the MTK SVS controller
+> > +which helps provide the optimized CPU/GPU/CCI voltages. This device also
+> > +needs thermal data to calculate thermal slope for accurately compensate
+> > +the voltages when temperature change.
+> > +
+> > +Required properties:
+> > +- compatible:
+> > +  - "mediatek,mt8183-svs" : For MT8183 family of SoCs
+> > +- reg: Address range of the MTK SVS controller.
+> > +- interrupts: IRQ for the MTK SVS controller.
+> > +- clocks, clock-names: Clocks needed for the svs controller. required
+> > +                       clocks are:
+> > +                      "main_clk": Main clock needed for register access
+> > +- nvmem-cells: Phandle to the calibration data provided by a nvmem device.
+> > +- nvmem-cell-names: Should be "svs-calibration-data" and "calibration-data"
+> > +- svs_xxx: Phandle of svs_bank device for controlling corresponding opp
+> 
+> Properties shouldn't have underscores in them. Use dashes?
+Ok. I'll use dashes.
+
+> 
+> > +           table and power-domains.
+> > +- vxxx-supply: Phandle to each regulator. vxxx can be "vcpu_little",
+> > +              "vcpu_big", "vcci" and "vgpu".
+> > +
+> > +Example:
+> > +
+> > +       svs: svs@1100b000 {
+> > +               compatible = "mediatek,mt8183-svs";
+> > +               reg = <0 0x1100b000 0 0x1000>;
+> > +               interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW 0>;
+> > +               clocks = <&infracfg CLK_INFRA_THERM>;
+> > +               clock-names = "main_clk";
+> > +               nvmem-cells = <&svs_calibration>, <&thermal_calibration>;
+> > +               nvmem-cell-names = "svs-calibration-data", "calibration-data";
+> > +
+> > +               svs_cpu_little: svs_cpu_little {
+> > +                       compatible = "mediatek,mt8183-svs-cpu-little";
+> > +                       operating-points-v2 = <&cluster0_opp>;
+> > +               };
+> > +
+> > +               svs_cpu_big: svs_cpu_big {
+> > +                       compatible = "mediatek,mt8183-svs-cpu-big";
+> > +                       operating-points-v2 = <&cluster1_opp>;
+> > +               };
+> > +
+> > +               svs_cci: svs_cci {
+> > +                       compatible = "mediatek,mt8183-svs-cci";
+> > +                       operating-points-v2 = <&cluster2_opp>;
+> > +               };
+> > +
+> > +               svs_gpu: svs_gpu {
+> > +                       compatible = "mediatek,mt8183-svs-gpu";
+> > +                       power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
+> > +                       operating-points-v2 = <&gpu_opp_table>;
+> > +               };
+> 
+> It looks like you need multiple OPPs for a single device, because it has
+> different independent power supplies it wants to associate the OPP
+> tables with?
+Yes. SVS has different controllers inside the hardware in order to
+calculate and optimize different OPP table voltage part.
+
+> Why can't these OPP tables be attached to the devices that
+> use them, i.e. CPU, GPU, CCI, etc.? Seems odd that those devices don't
+> have OPP tables that this hardware block can look up somehow.
+Those OPP tables are attached by our DVFS node (please refers below
+patch). SVS just shares with their OPP table and help optimize these OPP
+tables' voltage part.
+
+Add cpufreq DTS node to the mt8183 and mt8183-evb
+https://patchwork.kernel.org/patch/10921675/
+
+
+> Similarly,
+> the power domains should probably be part of the devices that are using
+> them and not these sub-nodes that are mirroring the other hardware
+> blocks in the system?
+Oh. There is a svs controller in GPU power-domain. We need to turn on
+GPU power so that svs controller can work functionally. Therefore, we
+add GPU power-domains in our svs_gpu sub-node.
+
+
+> 
+> > +       };
+> > +
+> > +       &svs_cpu_little {
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
 
 
 _______________________________________________
