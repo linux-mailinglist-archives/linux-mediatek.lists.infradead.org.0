@@ -2,67 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CC12611167
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 04:20:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 46B2211266
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 May 2019 06:56:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=c/iwWgtlpvntEcGKvgc/NmC4F/Tf2rbvPmokl7B1awg=; b=HH/
-	nQsfGI9Xj9CnQu/W6yjZsw8qkF4MPqq4Pu+IOBau3pRIBCBX6FRLDsfjQK9J+tZtOV44P7F3rsibO
-	j6w+EkhLE+ztKUOQkd0VK6BdMJ6q0j950Jrw1ED6Ma7SnVjZY58m6sZP/3SJAkCe/tgZLT6Vw4Op4
-	8LjM4Tif9mI9IsEppIVkZToPBuTZn5ELoNFbxAPSD0sPd0cHCqlrFR8S6dJpeHDGuHX15Ukh1/TmU
-	EgbnDDQsgfFoTWTm33qLtqr8bI3g7jvfxpWu7kqWumxNvtEP3O8AP6DZYHwdtAXMnuGQGV3Gxtcx7
-	WxU1eL1S6yTU6B+fCTg1UMB8vjMVpzA==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=v5BNdbh0s/lzOXxCrwsW4kzwc7HniCW043U16Z4iUo4=; b=hCGcV8Eztm25b4
+	NCBX+rhGRtE/dae23JQBJVh2j900er65Xu46xAeRdNosMxoUm0GcoQgnV1WbAhG7TCknhJiGnK9oR
+	a3lZUE7Uld71epkqBlBMADMuN6VPgQmr0mDxbShfUhL17DQS2QSm+J29AZC34MwBxcICVttN0xprD
+	8IY230WtsWeF5IBe+h24LzgSgbQJIdwojIPp434Jn4tspx58yK1ixCQ3qO0/L2XIuYXfN1VMD05pp
+	8i8vHAFxFu3RPQ4eaNdfUUnHawkOpGO+9UvXiOk+FosF+H4Ik1IaWgsERYhI/yZZcvqDK9+VQVhTW
+	g+fDqrk/oZ0gryJVXUNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hM1Kz-0007nD-UC; Thu, 02 May 2019 02:20:41 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1hM3m2-0006oR-UW; Thu, 02 May 2019 04:56:46 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hM1Jf-0004wM-Ug; Thu, 02 May 2019 02:19:55 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=MS1QOIzunXomYID48sunfBjS80NfFtkOyiO7X8198WQ=; b=hmeOarK2EAp+
- OrRY0LIZ1San+orD97cOS0mkWrykbTDCwIm3C0m6V/kbRkD5LiOtnGtCW0OedzN245qlKnloW6C61
- 1AJ0OHH7V1gBDDqQSTAD5EydATm55hK7tIvdpRpMAtyynHVS1oH08J4apHVJO5E/M617S+oFZwfqa
- fBSLI=;
-Received: from [211.55.52.15] (helo=finisterre.ee.mobilebroadband)
- by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.89)
- (envelope-from <broonie@sirena.org.uk>)
- id 1hM1JW-0005wV-W3; Thu, 02 May 2019 02:19:11 +0000
-Received: by finisterre.ee.mobilebroadband (Postfix, from userid 1000)
- id C4AF8441D3D; Thu,  2 May 2019 03:19:07 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: Leilk Liu <leilk.liu@mediatek.com>
-Subject: Applied "dt-bindings: spi: spi-mt65xx: add support for MT8516" to the
- spi tree
-In-Reply-To: <1555490836-13382-1-git-send-email-leilk.liu@mediatek.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190502021907.C4AF8441D3D@finisterre.ee.mobilebroadband>
-Date: Thu,  2 May 2019 03:19:07 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+ id 1hM3lt-0006gS-JP
+ for linux-mediatek@lists.infradead.org; Thu, 02 May 2019 04:56:39 +0000
+Received: by mail-pf1-x441.google.com with SMTP id e67so515681pfe.10
+ for <linux-mediatek@lists.infradead.org>; Wed, 01 May 2019 21:56:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=IkrMCqEn9oBcjz0/CtfAqnhPX22uydzYRgGmzuCpAEU=;
+ b=ijpGbk6l9KiByD4XFUJqq6IgByHkJAUD7Ag93JRuA50qIy0MK1NCQ5ppXmY5UBmBTf
+ MWbNrREJQi7ySq4aHqLTApAXTjP5OJaK4AoWHSzmW09GxwJ4N/fTuXH//QGN1C+vwv+m
+ MmX8RhXDGST3fCcYjYXjf6r3RNY4rfTMozMEc=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=IkrMCqEn9oBcjz0/CtfAqnhPX22uydzYRgGmzuCpAEU=;
+ b=PvEcoPC+GeHke5UfGRo355bkFC5XU0p5B+QFYT5crEZ52inBAPt2hcuP/8R9WQemZU
+ 8GFwB3KBE9OcObIWX/XM7C6NeBKaxTOE5Rj4ZbKE/c76a4rn/nDTHoVqHfksHXbDA0pJ
+ fVWFlMoYbg/huSdXJrvAiNiL3iyzgsQo4PV0zsKlH7HdIAowHS/7C3VX26mTxtWPJVka
+ Si+lLljn0Ak0xxGEl3q01Uj4eygMgpXIZNdI4j/sAAGcg3xVVWYufnrRpspCR+D7ZjkT
+ H4T6x2poKr2/z5vp9YuDD1Qu2qrTWaEIfNPZAOQQ1TRnfxmJ9ueQ0Az0OZxrBzHiDtYQ
+ Y+ow==
+X-Gm-Message-State: APjAAAW9ISVqw1+nXCNcqmENIveMLe0jt8x7rDwZIdZrtBVhBdt7ltPi
+ UMX5ssf9EK1nCVDLxCU5SsAnnQ==
+X-Google-Smtp-Source: APXvYqw1sDUyzzDiU3Vy5sYFPwzI+iVL9D0QGXxIHbzqHHaXqc3ZpHKtv4ApVsNNmAUr61R578y0sw==
+X-Received: by 2002:a62:6842:: with SMTP id d63mr1875558pfc.9.1556772996219;
+ Wed, 01 May 2019 21:56:36 -0700 (PDT)
+Received: from drinkcat2.tpe.corp.google.com
+ ([2401:fa00:1:b:d8b7:33af:adcb:b648])
+ by smtp.gmail.com with ESMTPSA id a6sm64239470pfn.181.2019.05.01.21.56.33
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Wed, 01 May 2019 21:56:35 -0700 (PDT)
+From: Nicolas Boichat <drinkcat@chromium.org>
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Subject: [PATCH 1/2] usb: xhci: Make it possible to not have a secondary HCD
+ (3.0)
+Date: Thu,  2 May 2019 12:56:29 +0800
+Message-Id: <20190502045631.229386-1-drinkcat@chromium.org>
+X-Mailer: git-send-email 2.21.0.593.g511ec345e18-goog
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190501_191920_730077_89B845C0 
-X-CRM114-Status: GOOD (  12.76  )
-X-Spam-Score: -0.1 (/)
+X-CRM114-CacheID: sfid-20190501_215637_659849_0E910BB1 
+X-CRM114-Status: GOOD (  17.24  )
+X-Spam-Score: -0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.1 points)
+ Content analysis details:   (-0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,72 +92,191 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-spi@vger.kernel.org, fparent@baylibre.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
+Cc: Khuong Dinh <khuong@os.amperecomputing.com>,
+ Mathias Nyman <mathias.nyman@intel.com>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Hoan Tran <hoan@os.amperecomputing.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+Some XHCI controllers may not have any USB 3.0 port, in this case, it
+is not useful to create add hcd->shared_hcd, which has 2 main
+downsides:
+ - A useless USB 3.0 root hub is created.
+ - A warning is thrown on boot:
+hub 2-0:1.0: config failed, hub doesn't have any ports! (err -19)
 
-   dt-bindings: spi: spi-mt65xx: add support for MT8516
+The change is mostly about checking if hcd->shared_hcd is NULL before
+accessing it. The one special case is in xhci_run, where we need to
+call xhci_run_finished immediately, if there is no secondary hcd.
 
-has been applied to the spi tree at
-
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi.git 
-
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
-
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From bf6e839657598b77e40eb18225f8660c4778cb19 Mon Sep 17 00:00:00 2001
-From: Leilk Liu <leilk.liu@mediatek.com>
-Date: Wed, 17 Apr 2019 16:47:16 +0800
-Subject: [PATCH] dt-bindings: spi: spi-mt65xx: add support for MT8516
-
-Add binding documentation of spi-mt65xx for MT8516 SOC.
-
-Signed-off-by: Leilk Liu <leilk.liu@mediatek.com>
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-Signed-off-by: Mark Brown <broonie@kernel.org>
+Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
 ---
- Documentation/devicetree/bindings/spi/spi-mt65xx.txt | 1 +
- 1 file changed, 1 insertion(+)
 
-diff --git a/Documentation/devicetree/bindings/spi/spi-mt65xx.txt b/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-index 69c356767cf8..c0f6c8ecfa2e 100644
---- a/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-+++ b/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-@@ -10,6 +10,7 @@ Required properties:
-     - mediatek,mt8135-spi: for mt8135 platforms
-     - mediatek,mt8173-spi: for mt8173 platforms
-     - mediatek,mt8183-spi: for mt8183 platforms
-+    - "mediatek,mt8516-spi", "mediatek,mt2712-spi": for mt8516 platforms
+This is a respin of https://lore.kernel.org/patchwork/patch/863993/,
+hopefully addressing the comments there. Note that I dropped the change
+in xhci-plat.c, as I do not have a device to test it, but made a
+similar change in xhci-mtk.c, in the next patch.
+
+(the @apm.com addresses seem to bounce, so I added some
+@amperecomputing.com instead, if somebody there can track back the
+original issue, I'm happy to provide a patch for xhci-plat.c as well)
+
+drivers/usb/host/xhci-hub.c |  7 ++++--
+ drivers/usb/host/xhci.c     | 45 +++++++++++++++++++++++++++----------
+ 2 files changed, 38 insertions(+), 14 deletions(-)
+
+diff --git a/drivers/usb/host/xhci-hub.c b/drivers/usb/host/xhci-hub.c
+index 3abe70ff1b1e2af..9a9c5a63ae57c6d 100644
+--- a/drivers/usb/host/xhci-hub.c
++++ b/drivers/usb/host/xhci-hub.c
+@@ -627,8 +627,11 @@ static int xhci_enter_test_mode(struct xhci_hcd *xhci,
+ 	/* Put all ports to the Disable state by clear PP */
+ 	xhci_dbg(xhci, "Disable all port (PP = 0)\n");
+ 	/* Power off USB3 ports*/
+-	for (i = 0; i < xhci->usb3_rhub.num_ports; i++)
+-		xhci_set_port_power(xhci, xhci->shared_hcd, i, false, flags);
++	if (xhci->shared_hcd) {
++		for (i = 0; i < xhci->usb3_rhub.num_ports; i++)
++			xhci_set_port_power(xhci, xhci->shared_hcd, i, false,
++					flags);
++	}
+ 	/* Power off USB2 ports*/
+ 	for (i = 0; i < xhci->usb2_rhub.num_ports; i++)
+ 		xhci_set_port_power(xhci, xhci->main_hcd, i, false, flags);
+diff --git a/drivers/usb/host/xhci.c b/drivers/usb/host/xhci.c
+index a9bb796794e3937..a2cf715c53f2164 100644
+--- a/drivers/usb/host/xhci.c
++++ b/drivers/usb/host/xhci.c
+@@ -523,6 +523,10 @@ static void compliance_mode_recovery(struct timer_list *t)
+  */
+ static void compliance_mode_recovery_timer_init(struct xhci_hcd *xhci)
+ {
++	/* No compliance mode recovery needed if there is no USB 3.0 hcd. */
++	if (!xhci->shared_hcd)
++		return;
++
+ 	xhci->port_status_u0 = 0;
+ 	timer_setup(&xhci->comp_mode_recovery_timer, compliance_mode_recovery,
+ 		    0);
+@@ -610,7 +614,8 @@ static int xhci_run_finished(struct xhci_hcd *xhci)
+ 		xhci_halt(xhci);
+ 		return -ENODEV;
+ 	}
+-	xhci->shared_hcd->state = HC_STATE_RUNNING;
++	if (xhci->shared_hcd)
++		xhci->shared_hcd->state = HC_STATE_RUNNING;
+ 	xhci->cmd_ring_state = CMD_RING_STATE_RUNNING;
  
- - #address-cells: should be 1.
+ 	if (xhci->quirks & XHCI_NEC_HOST)
+@@ -698,6 +703,10 @@ int xhci_run(struct usb_hcd *hcd)
+ 
+ 	xhci_debugfs_init(xhci);
+ 
++	/* There is no secondary HCD, start the host controller immediately. */
++	if (!xhci->shared_hcd)
++		return xhci_run_finished(xhci);
++
+ 	return 0;
+ }
+ EXPORT_SYMBOL_GPL(xhci_run);
+@@ -984,7 +993,8 @@ int xhci_suspend(struct xhci_hcd *xhci, bool do_wakeup)
+ 		return 0;
+ 
+ 	if (hcd->state != HC_STATE_SUSPENDED ||
+-			xhci->shared_hcd->state != HC_STATE_SUSPENDED)
++			(xhci->shared_hcd &&
++				xhci->shared_hcd->state != HC_STATE_SUSPENDED))
+ 		return -EINVAL;
+ 
+ 	xhci_dbc_suspend(xhci);
+@@ -997,15 +1007,18 @@ int xhci_suspend(struct xhci_hcd *xhci, bool do_wakeup)
+ 	xhci_dbg(xhci, "%s: stopping port polling.\n", __func__);
+ 	clear_bit(HCD_FLAG_POLL_RH, &hcd->flags);
+ 	del_timer_sync(&hcd->rh_timer);
+-	clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
+-	del_timer_sync(&xhci->shared_hcd->rh_timer);
++	if (xhci->shared_hcd) {
++		clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
++		del_timer_sync(&xhci->shared_hcd->rh_timer);
++	}
+ 
+ 	if (xhci->quirks & XHCI_SUSPEND_DELAY)
+ 		usleep_range(1000, 1500);
+ 
+ 	spin_lock_irq(&xhci->lock);
+ 	clear_bit(HCD_FLAG_HW_ACCESSIBLE, &hcd->flags);
+-	clear_bit(HCD_FLAG_HW_ACCESSIBLE, &xhci->shared_hcd->flags);
++	if (xhci->shared_hcd)
++		clear_bit(HCD_FLAG_HW_ACCESSIBLE, &xhci->shared_hcd->flags);
+ 	/* step 1: stop endpoint */
+ 	/* skipped assuming that port suspend has done */
+ 
+@@ -1103,7 +1116,8 @@ int xhci_resume(struct xhci_hcd *xhci, bool hibernated)
+ 		msleep(100);
+ 
+ 	set_bit(HCD_FLAG_HW_ACCESSIBLE, &hcd->flags);
+-	set_bit(HCD_FLAG_HW_ACCESSIBLE, &xhci->shared_hcd->flags);
++	if (xhci->shared_hcd)
++		set_bit(HCD_FLAG_HW_ACCESSIBLE, &xhci->shared_hcd->flags);
+ 
+ 	spin_lock_irq(&xhci->lock);
+ 	if ((xhci->quirks & XHCI_RESET_ON_RESUME) || xhci->broken_suspend)
+@@ -1145,7 +1159,9 @@ int xhci_resume(struct xhci_hcd *xhci, bool hibernated)
+ 
+ 		/* Let the USB core know _both_ roothubs lost power. */
+ 		usb_root_hub_lost_power(xhci->main_hcd->self.root_hub);
+-		usb_root_hub_lost_power(xhci->shared_hcd->self.root_hub);
++		if (xhci->shared_hcd)
++			usb_root_hub_lost_power(
++					xhci->shared_hcd->self.root_hub);
+ 
+ 		xhci_dbg(xhci, "Stop HCD\n");
+ 		xhci_halt(xhci);
+@@ -1185,10 +1201,12 @@ int xhci_resume(struct xhci_hcd *xhci, bool hibernated)
+ 		retval = xhci_run(hcd->primary_hcd);
+ 		if (!retval) {
+ 			xhci_dbg(xhci, "Start the secondary HCD\n");
+-			retval = xhci_run(secondary_hcd);
++			if (secondary_hcd)
++				retval = xhci_run(secondary_hcd);
+ 		}
+ 		hcd->state = HC_STATE_SUSPENDED;
+-		xhci->shared_hcd->state = HC_STATE_SUSPENDED;
++		if (xhci->shared_hcd)
++			xhci->shared_hcd->state = HC_STATE_SUSPENDED;
+ 		goto done;
+ 	}
+ 
+@@ -1216,7 +1234,8 @@ int xhci_resume(struct xhci_hcd *xhci, bool hibernated)
+ 	if (retval == 0) {
+ 		/* Resume root hubs only when have pending events. */
+ 		if (xhci_pending_portevent(xhci)) {
+-			usb_hcd_resume_root_hub(xhci->shared_hcd);
++			if (xhci->shared_hcd)
++				usb_hcd_resume_root_hub(xhci->shared_hcd);
+ 			usb_hcd_resume_root_hub(hcd);
+ 		}
+ 	}
+@@ -1235,8 +1254,10 @@ int xhci_resume(struct xhci_hcd *xhci, bool hibernated)
+ 
+ 	/* Re-enable port polling. */
+ 	xhci_dbg(xhci, "%s: starting port polling.\n", __func__);
+-	set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
+-	usb_hcd_poll_rh_status(xhci->shared_hcd);
++	if (xhci->shared_hcd) {
++		set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
++		usb_hcd_poll_rh_status(xhci->shared_hcd);
++	}
+ 	set_bit(HCD_FLAG_POLL_RH, &hcd->flags);
+ 	usb_hcd_poll_rh_status(hcd);
  
 -- 
-2.20.1
+2.21.0.593.g511ec345e18-goog
 
 
 _______________________________________________
