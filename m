@@ -2,80 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D846C13274
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 18:47:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7EEC5132E4
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 19:09:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5DNbixRtLirkMqZvSA2JjdSI2MI8VJdhrRsU5jtpwv8=; b=aYnZpvOAEbzSx/
-	tvjPuy70nnu4HAaW3SFZxDGdvTM0POrR5flUF3PzfHpNdYZT+G1sol4YFQppC5KjW4msMedmk+WT4
-	CcQiztz3uKSmptdoJTISJB9J93QtD8wC/IcRaVIhR1i6LX2qXw+DS5UlnW/j0dPywrILqBI/4lKa/
-	nGba9ufYgEVchK2ioFdKuwHiujKRSyuYEFysctl9xp645egkbrbv5A4efxy842fyxgthbA0KrZs/t
-	99Ijl/hyDbItkEB63Z2jb8ZQLlO13cEvdnkI20PhSCC11ezl2jBLoTRjrxB30an0LfHYgocKsmth2
-	Wa31ygeADNGUhf3WNZ6A==;
+	List-Owner; bh=Kcu95WrM7MX11bTMM57FGvGe0UJs2urtbV/jz9fr66k=; b=H2s5tb5zwFwtdr
+	invoVeMkJulSF0y0Paq/UDLPHo3CWNgsU1A21yLZRhRZlwtpvg6pJyBQ9aoSjl0nwJAgGYVjkT/5V
+	rJhG6T2Mb9Rhx6zzYn633J3E2Omxda0WI/sd7xVCrAXAULLLWKyMxjWGsqbMIszbK1DfJWa+sy7Vr
+	OewL2g/u9B1GZbh5aMMZrTjIaH7mDpQM6bZHU/wIvGxVNG71DqY59zQAqq/qwKnr310Fs1KpD581W
+	y/NEmzP+wXs4r0hs7obT4O8LhxvVJsSjXyFUyGa6VlQCGWN1KyxQG7xW3XoR89RZCPyt6HciOJKD6
+	m581jEQ4GWpMrA+O3wDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hMbKt-0005HT-5f; Fri, 03 May 2019 16:46:59 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hMbgO-0008EP-QF; Fri, 03 May 2019 17:09:12 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hMbKo-0005GS-9X
- for linux-mediatek@lists.infradead.org; Fri, 03 May 2019 16:46:56 +0000
-Received: by mail-pl1-x644.google.com with SMTP id n8so2948183plp.10
- for <linux-mediatek@lists.infradead.org>; Fri, 03 May 2019 09:46:53 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=I6Kj7J5O6mOYwdObKv7gUJ8XCyM1RwJ3zMEkMb1FKIA=;
- b=CyQ4K5S6LZCPez3P3h4Yxxkjx5MBxsP5BHCmBIL6WSY0qUlz3mMC4lIpY2Vhriry6a
- oXx9z7VzntcU6eC6xQcsSIzOqmACQmL8DeTBYaE8HymEL4qWrTlVSAmi/F6yKSegpaUY
- yzTiLzZgcSRyaY8DoLKKDvUdX+If3vo60mwTg=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=I6Kj7J5O6mOYwdObKv7gUJ8XCyM1RwJ3zMEkMb1FKIA=;
- b=ms9GZvn+kYQA9KD46Ws3X5mWjjLCu0BtcaJaEpltGj7uA23jc7CRnnRbL2zcjEQ7y6
- svcgYmpDLgSmaiTXw/EeT+FsODfh8qCd9QhDtZ6XcWOCD/5JhroROs13KoINqFmDnidO
- u6+g7Eb2UiJIKtcbOkMZ+bJey1PhArmkGT0klulmUybkO9CrDZQQE9RmqWYBVmpUY3ZG
- iV9g3fqwOHFkyP/+y6cuCAvuOiSDNh2IoZZJMukqbxbq6EdOUQNX7hkpqVS9661WhStM
- aaglgEbqWrIvZwTp/BF9ZpW7k8Qe1zbeDpNomJL+azFKTRGF8UcwIvYwTzEo7h3gleDb
- lHDA==
-X-Gm-Message-State: APjAAAWCRU028bhMv5+fwG8drWaDw0KRwfQYOU+yoVM2lix4Oa+6zG7O
- 9PO5VoDkPQoBoQ2P6ceWrzKppg==
-X-Google-Smtp-Source: APXvYqxWg5BvQCMW5sbTPT2MdGAVLNcxxY3llDZ9nW22Kb9AR5oS4k2LVUS2tXpLJVTQ1tgp8Uwwrg==
-X-Received: by 2002:a17:902:1c1:: with SMTP id
- b59mr11866780plb.182.1556902013175; 
- Fri, 03 May 2019 09:46:53 -0700 (PDT)
-Received: from localhost ([2620:15c:202:1:75a:3f6e:21d:9374])
- by smtp.gmail.com with ESMTPSA id f21sm3394538pfn.30.2019.05.03.09.46.52
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 03 May 2019 09:46:52 -0700 (PDT)
-Date: Fri, 3 May 2019 09:46:51 -0700
-From: Matthias Kaehlcke <mka@chromium.org>
-To: Hsin-Yi Wang <hsinyi@chromium.org>
-Subject: Re: [PATCH 1/8] arm64: dts: mt8183: add thermal zone node
-Message-ID: <20190503164651.GB40515@google.com>
-References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
- <1556793795-25204-2-git-send-email-michael.kao@mediatek.com>
- <CAJMQK-isJf6f+OubbCdoXs8L2cup=rm3Z8Mr7Q26QshMP-0wxA@mail.gmail.com>
+ id 1hMbgF-00087b-Np; Fri, 03 May 2019 17:09:05 +0000
+Received: from mail-wr1-f46.google.com (mail-wr1-f46.google.com
+ [209.85.221.46])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id B846F20C01;
+ Fri,  3 May 2019 17:09:02 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1556903343;
+ bh=B6/MSMYbkg+WTWBm94Gih3RB7d5QYsXpBeEAwOIv+D0=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=DYiblBjocgSq/Lbl+6Cnzwlf09QeF+2q8IFuQwZX3/BLRsXP4Z+XvuCmgRoSCZwG9
+ BVB+hH7S5ve0VvNLT7q0V2uKB9P9eBCb9gUh6VoK6y9SGwxlWhn8KIvR1Nyr9X9fiW
+ 3z73v9x5d5zBCOR6auE/dpxTltqebB2nIcLzY4XM=
+Received: by mail-wr1-f46.google.com with SMTP id c12so8750415wrt.8;
+ Fri, 03 May 2019 10:09:02 -0700 (PDT)
+X-Gm-Message-State: APjAAAXeuZYaq3K98WHFXu7BLQoCe18+WGsU7ZAFgtWuLbz2fBQepwsZ
+ WW3lOU5rsBHvXl1v9CIq4o/0HMQp92qo2bao5ss=
+X-Google-Smtp-Source: APXvYqxUYmAOLutHuKkaO6/H+LbNDlFI1Tlxl80gA9Hwuxr9ET8QCNLanMkTbxWvc59Wz2Wn8KG7Ghk5n2dYvn1pPYw=
+X-Received: by 2002:adf:f310:: with SMTP id i16mr7641713wro.291.1556903341329; 
+ Fri, 03 May 2019 10:09:01 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAJMQK-isJf6f+OubbCdoXs8L2cup=rm3Z8Mr7Q26QshMP-0wxA@mail.gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20190429032551.65975-1-drinkcat@chromium.org>
+ <20190429032551.65975-2-drinkcat@chromium.org>
+ <1556804888.28808.6.camel@mtksdaap41>
+ <CANMq1KAugRiL+-bAFijEM7NngLSoOUQtN=rNV5+YYdJ12u+jVQ@mail.gmail.com>
+In-Reply-To: <CANMq1KAugRiL+-bAFijEM7NngLSoOUQtN=rNV5+YYdJ12u+jVQ@mail.gmail.com>
+From: Sean Wang <sean.wang@kernel.org>
+Date: Fri, 3 May 2019 10:08:50 -0700
+X-Gmail-Original-Message-ID: <CAGp9LzqdYapagHUH1uuuHRR+j5JcphN7hhM2SyZoXQFCP8_fSw@mail.gmail.com>
+Message-ID: <CAGp9LzqdYapagHUH1uuuHRR+j5JcphN7hhM2SyZoXQFCP8_fSw@mail.gmail.com>
+Subject: Re: [PATCH 1/2] pinctrl: mediatek: Add mtk_eint_pm_ops to common-v2
+To: Nicolas Boichat <drinkcat@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190503_094654_359805_2CAB8EB7 
-X-CRM114-Status: GOOD (  17.64  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190503_100903_823245_E106B8E4 
+X-CRM114-Status: GOOD (  29.05  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -96,109 +84,116 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, jamesjj.liao@mediatek.com,
- devicetree@vger.kernel.org, louis.yu@mediatek.com, dawei.chien@mediatek.com,
- linux-pm@vger.kernel.org, Daniel Lezcano <daniel.lezcano@linaro.org>,
- roger.lu@mediatek.com, linux-kernel@vger.kernel.org,
- "michael.kao" <michael.kao@mediatek.com>,
- Eduardo Valentin <edubezval@gmail.com>, fan.chen@mediatek.com,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Zhang Rui <rui.zhang@intel.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, lkml <linux-kernel@vger.kernel.org>,
+ Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
+ linux-gpio@vger.kernel.org,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Hi, Nicolas
 
-On Fri, May 03, 2019 at 04:03:58PM +0800, Hsin-Yi Wang wrote:
-> On Thu, May 2, 2019 at 10:43 AM michael.kao <michael.kao@mediatek.com> wrote:
+On Thu, May 2, 2019 at 5:53 PM Nicolas Boichat <drinkcat@chromium.org> wrote:
+>
+> On Thu, May 2, 2019 at 9:48 PM Yingjoe Chen <yingjoe.chen@mediatek.com> wrote:
 > >
-> > Add thermal zone node to Mediatek MT8183 dts file.
+> > On Mon, 2019-04-29 at 11:25 +0800, Nicolas Boichat wrote:
+> > > pinctrl variants that include pinctrl-mtk-common-v2.h (and not
+> > > pinctrl-mtk-common.h) also need to use mtk_eint_pm_ops to setup
+> > > wake mask properly, so copy over the pm_ops to v2.
+> > >
+> > > It is not easy to merge the 2 copies (or move
+> > > mtk_eint_suspend/resume to mtk-eint.c), as we need to
+> > > dereference pctrl->eint, and struct mtk_pinctrl *pctl has a
+> > > different structure definition for v1 and v2.
+> > >
+> > > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+> > > Reviewed-by: Chuanjia Liu <Chuanjia.Liu@mediatek.com>
+> > > ---
+> > >  .../pinctrl/mediatek/pinctrl-mtk-common-v2.c  | 19 +++++++++++++++++++
+> > >  .../pinctrl/mediatek/pinctrl-mtk-common-v2.h  |  1 +
+> > >  2 files changed, 20 insertions(+)
+> > >
+> > > diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> > > index 20e1c890e73b30c..7e19b5a4748eafe 100644
+> > > --- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> > > +++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> > > @@ -723,3 +723,22 @@ int mtk_pinconf_adv_drive_get(struct mtk_pinctrl *hw,
+> > >
+> > >       return 0;
+> > >  }
+> > > +
+> > > +static int mtk_eint_suspend(struct device *device)
+> > > +{
+> > > +     struct mtk_pinctrl *pctl = dev_get_drvdata(device);
+> > > +
+> > > +     return mtk_eint_do_suspend(pctl->eint);
+> > > +}
+> > > +
+> > > +static int mtk_eint_resume(struct device *device)
+> > > +{
+> > > +     struct mtk_pinctrl *pctl = dev_get_drvdata(device);
+> > > +
+> > > +     return mtk_eint_do_resume(pctl->eint);
+> > > +}
+> > > +
+> > > +const struct dev_pm_ops mtk_eint_pm_ops = {
+> > > +     .suspend_noirq = mtk_eint_suspend,
+> > > +     .resume_noirq = mtk_eint_resume,
+> > > +};
 > >
-> > Signed-off-by: Michael Kao <michael.kao@mediatek.com>
-> > ---
-> >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 64 ++++++++++++++++++++++++++++++++
-> >  1 file changed, 64 insertions(+)
+> > This is identical to the one in pinctrl-mtk-common.c and will have name
+> > clash if both pinctrl-mtk-common.c and pinctrl-mtk-common-v2.c are
+> > built.
 > >
-> > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > index 926df75..b92116f 100644
-> > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > @@ -334,6 +334,67 @@
-> >                         status = "disabled";
-> >                 };
+> > It would be better if we try to merge both version into mtk-eint.c, this
+> > way we could also remove some global functions.
+>
+> Argh, I didn't think about the name clash, you're right. I guess the
+> easy way is to rename this one mtk_eint_pm_ops_v2 ...
+>
+> As highlighted in the commit message, it's tricky to merge the 2 sets
+> of functions, they look identical, but they actually work on struct
+> mtk_pinctrl that are defined differently (in
+> pinctrl-mtk-common[-v2].h), so the ->eint member is at different
+> addresses...
+>
+> I don't really see a way around this... Unless we want to change
+> platform_set_drvdata(pdev, pctl); to pass another type of structure
+> that could be shared (but I think that'll make the code fairly
+> verbose, with another layer of indirection). Or just assign struct
+> mtk_eint to that, since that contains pctl so we could get back the
+> struct mtk_pinctrl from that, but that feels ugly as well...
+>
+
+I agree on renaming would make the thing simple. but I wouldn't like
+to rename to mtk_eint_pm_ops_v2 since this would make people
+misunderstand that is mtk_eint_v2.
+
+How about renaming to mtk_paris_pinctrl_pm_ops and then place related
+logic you added into pinctrl-paris.c? Because I prefer to keep pure
+pinctrl hardware operations in pinctrl-mtk-common-v2.c, and for
+relevant to other modules (mtk eint) or others subsystem (device tree
+binding, GPIO subsytem, PM something like that) they should be moved
+to pinctrl-paris.c or pinctrl-moore.c
+
+     Sean
+
 > >
-> > +               thermal: thermal@1100b000 {
-> > +                       #thermal-sensor-cells = <1>;
-> > +                       compatible = "mediatek,mt8183-thermal";
-> > +                       reg = <0 0x1100b000 0 0x1000>;
-> > +                       interrupts = <0 76 IRQ_TYPE_LEVEL_LOW>;
-> > +                       clocks = <&infracfg CLK_INFRA_THERM>,
-> > +                                <&infracfg CLK_INFRA_AUXADC>;
-> > +                       clock-names = "therm", "auxadc";
-> > +                       resets = <&infracfg  MT8183_INFRACFG_AO_THERM_SW_RST>;
-> > +                       mediatek,auxadc = <&auxadc>;
-> > +                       mediatek,apmixedsys = <&apmixedsys>;
-> > +                       mediatek,hw-reset-temp = <117000>;
-> > +                       nvmem-cells = <&thermal_calibration>;
-> > +                       nvmem-cell-names = "calibration-data";
-> > +               };
-> > +
-> > +               thermal-zones {
-> > +                       cpu_thermal: cpu_thermal {
-> > +                               polling-delay-passive = <1000>;
-> > +                               polling-delay = <1000>;
-> > +
-> > +                               thermal-sensors = <&thermal 0>;
-> > +                               sustainable-power = <1500>;
-> > +                       };
-> > +
-> > +                       tzts1: tzts1 {
-> > +                               polling-delay-passive = <1000>;
-> > +                               polling-delay = <1000>;
-> > +                               thermal-sensors = <&thermal 1>;
-> Is sustainable-power required for tzts? Though it's an optional
-> property, kernel would have warning:
-> [    0.631556] thermal thermal_zone1: power_allocator:
-> sustainable_power will be estimated
-> [    0.639586] thermal thermal_zone2: power_allocator:
-> sustainable_power will be estimated
-> [    0.647611] thermal thermal_zone3: power_allocator:
-> sustainable_power will be estimated
-> [    0.655635] thermal thermal_zone4: power_allocator:
-> sustainable_power will be estimated
-> [    0.663658] thermal thermal_zone5: power_allocator:
-> sustainable_power will be estimated
-> if no sustainable-power assigned.
-
-The property is indeed optional, if it isn't specified IPA will use
-the sum of the minimum power of all 'power actors' of the zone as
-estimate (see estimate_sustainable_power()). This may lead to overly
-agressive throttling, since the nominal sustainable power will always
-be <= the requested power.
-
-In my understanding the sustainable power may varies between devices,
-even for the same SoC. One could have all the hardware crammed into a
-tiny plastic enclosure (e.g. ASUS Chromebit), another might have a
-laptop form factor and a metal enclosure (e.g. ASUS C201). Both
-examples are based on an Rockchip rk3288, but they have completely
-different thermal behavior, and would likely have different values for
-'sustainable-power'.
-
-In this sense I tend to consider 'sustainable-power' more a device,
-than a SoC property. You could specify a 'reasonable' value as a
-starting point, but it will likely not be optimal for all or even most
-devices. The warning might even be useful for device makers by
-indicating them that there is room for tweaking.
-
-I'm not an expert in the matter though, just happend to look into this
-recently :)
-
-Cheers
-
-Matthias
+> > Joe.C
+> >
+> >
+> >
+> > _______________________________________________
+> > Linux-mediatek mailing list
+> > Linux-mediatek@lists.infradead.org
+> > http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
 _______________________________________________
 Linux-mediatek mailing list
