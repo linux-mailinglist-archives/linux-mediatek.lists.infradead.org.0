@@ -2,61 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7EEC5132E4
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 19:09:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8533C134A4
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 23:08:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:Subject:From:To:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Kcu95WrM7MX11bTMM57FGvGe0UJs2urtbV/jz9fr66k=; b=H2s5tb5zwFwtdr
-	invoVeMkJulSF0y0Paq/UDLPHo3CWNgsU1A21yLZRhRZlwtpvg6pJyBQ9aoSjl0nwJAgGYVjkT/5V
-	rJhG6T2Mb9Rhx6zzYn633J3E2Omxda0WI/sd7xVCrAXAULLLWKyMxjWGsqbMIszbK1DfJWa+sy7Vr
-	OewL2g/u9B1GZbh5aMMZrTjIaH7mDpQM6bZHU/wIvGxVNG71DqY59zQAqq/qwKnr310Fs1KpD581W
-	y/NEmzP+wXs4r0hs7obT4O8LhxvVJsSjXyFUyGa6VlQCGWN1KyxQG7xW3XoR89RZCPyt6HciOJKD6
-	m581jEQ4GWpMrA+O3wDA==;
+	List-Owner; bh=4ANggHB5pkN2DxhLwH71bMpKKmi9QURNtJIP3MUFOLs=; b=VInGaxMvWAMk10
+	BQqpJjrCHnoElkpPH8Sed5GjKuT6/su8n76dG/fXCqwhseoUOMv1i7VXJazqC7er1SAQvICZacRJH
+	pfPEiLAh8qN+t3NWFlzhtDflKnW0XbPrLKXZBMah1XO/h3OAHuwcWAeYymnOybKWrBA9oYQHQJpNK
+	zYOPSs/PvEFFCVgO5SPxVfaek11ieoMOkGN+mUtrPkQMycJLSKPjLMqNTVlYim0VPE2R+2cD8obhi
+	9CmvHpDqwBIa7EPK1PcAnsahWIO0nctlLdoPyAp3h5eLCv1YS101YbweYOjQoKLPNu/BnOntntd/9
+	dCMNSFjrpnbK1bDbuLog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hMbgO-0008EP-QF; Fri, 03 May 2019 17:09:12 +0000
+	id 1hMfPy-0006oz-Lu; Fri, 03 May 2019 21:08:30 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hMbgF-00087b-Np; Fri, 03 May 2019 17:09:05 +0000
-Received: from mail-wr1-f46.google.com (mail-wr1-f46.google.com
- [209.85.221.46])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ id 1hMfPp-0006i6-W5; Fri, 03 May 2019 21:08:23 +0000
+Received: from localhost (unknown [104.132.0.70])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id B846F20C01;
- Fri,  3 May 2019 17:09:02 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 4D2522070B;
+ Fri,  3 May 2019 21:08:21 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1556903343;
- bh=B6/MSMYbkg+WTWBm94Gih3RB7d5QYsXpBeEAwOIv+D0=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=DYiblBjocgSq/Lbl+6Cnzwlf09QeF+2q8IFuQwZX3/BLRsXP4Z+XvuCmgRoSCZwG9
- BVB+hH7S5ve0VvNLT7q0V2uKB9P9eBCb9gUh6VoK6y9SGwxlWhn8KIvR1Nyr9X9fiW
- 3z73v9x5d5zBCOR6auE/dpxTltqebB2nIcLzY4XM=
-Received: by mail-wr1-f46.google.com with SMTP id c12so8750415wrt.8;
- Fri, 03 May 2019 10:09:02 -0700 (PDT)
-X-Gm-Message-State: APjAAAXeuZYaq3K98WHFXu7BLQoCe18+WGsU7ZAFgtWuLbz2fBQepwsZ
- WW3lOU5rsBHvXl1v9CIq4o/0HMQp92qo2bao5ss=
-X-Google-Smtp-Source: APXvYqxUYmAOLutHuKkaO6/H+LbNDlFI1Tlxl80gA9Hwuxr9ET8QCNLanMkTbxWvc59Wz2Wn8KG7Ghk5n2dYvn1pPYw=
-X-Received: by 2002:adf:f310:: with SMTP id i16mr7641713wro.291.1556903341329; 
- Fri, 03 May 2019 10:09:01 -0700 (PDT)
+ s=default; t=1556917701;
+ bh=aqcL29qHJsAYLqk55Q2wpnp7s9uGAqVZLA5M+CR6604=;
+ h=In-Reply-To:References:To:Cc:From:Subject:Date:From;
+ b=Dso9UErmUzkJ3ZamrjDEdNv4u7/1wbneeAfHXvB0+lZJsZyTrHTNLtHb+hfLwvKHW
+ ywwvXyRhWET2LFDkF3ssEpv/9pyHMhRN5kW7vZAi+ps7oH3L3AnvaRqmaCjQ+sseat
+ TAcev7toef6D8yexAqbmooLK868VgmlWzGanEY8w=
 MIME-Version: 1.0
-References: <20190429032551.65975-1-drinkcat@chromium.org>
- <20190429032551.65975-2-drinkcat@chromium.org>
- <1556804888.28808.6.camel@mtksdaap41>
- <CANMq1KAugRiL+-bAFijEM7NngLSoOUQtN=rNV5+YYdJ12u+jVQ@mail.gmail.com>
-In-Reply-To: <CANMq1KAugRiL+-bAFijEM7NngLSoOUQtN=rNV5+YYdJ12u+jVQ@mail.gmail.com>
-From: Sean Wang <sean.wang@kernel.org>
-Date: Fri, 3 May 2019 10:08:50 -0700
-X-Gmail-Original-Message-ID: <CAGp9LzqdYapagHUH1uuuHRR+j5JcphN7hhM2SyZoXQFCP8_fSw@mail.gmail.com>
-Message-ID: <CAGp9LzqdYapagHUH1uuuHRR+j5JcphN7hhM2SyZoXQFCP8_fSw@mail.gmail.com>
-Subject: Re: [PATCH 1/2] pinctrl: mediatek: Add mtk_eint_pm_ops to common-v2
-To: Nicolas Boichat <drinkcat@chromium.org>
+In-Reply-To: <1556777971.12123.35.camel@mtksdaap41>
+References: <20190430112012.4514-1-roger.lu@mediatek.com>
+ <20190430112012.4514-2-roger.lu@mediatek.com>
+ <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
+ <1556777971.12123.35.camel@mtksdaap41>
+To: Roger Lu <roger.lu@mediatek.com>
+From: Stephen Boyd <sboyd@kernel.org>
+Subject: Re: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
+Message-ID: <155691770027.200842.16164651681407381397@swboyd.mtv.corp.google.com>
+User-Agent: alot/0.8
+Date: Fri, 03 May 2019 14:08:20 -0700
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190503_100903_823245_E106B8E4 
-X-CRM114-Status: GOOD (  29.05  )
+X-CRM114-CacheID: sfid-20190503_140822_070854_A6C85F3E 
+X-CRM114-Status: GOOD (  20.27  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -84,116 +76,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
- Linus Walleij <linus.walleij@linaro.org>, lkml <linux-kernel@vger.kernel.org>,
- Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
- linux-gpio@vger.kernel.org,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ Angus.Lin@mediatek.com, devicetree@vger.kernel.org,
+ Viresh Kumar <vireshk@kernel.org>, linux-pm@vger.kernel.org,
+ "Rafael J . Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
+ Kevin Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Andy-YT.Liu@mediatek.com,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>,
- linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Nicolas
-
-On Thu, May 2, 2019 at 5:53 PM Nicolas Boichat <drinkcat@chromium.org> wrote:
->
-> On Thu, May 2, 2019 at 9:48 PM Yingjoe Chen <yingjoe.chen@mediatek.com> wrote:
-> >
-> > On Mon, 2019-04-29 at 11:25 +0800, Nicolas Boichat wrote:
-> > > pinctrl variants that include pinctrl-mtk-common-v2.h (and not
-> > > pinctrl-mtk-common.h) also need to use mtk_eint_pm_ops to setup
-> > > wake mask properly, so copy over the pm_ops to v2.
-> > >
-> > > It is not easy to merge the 2 copies (or move
-> > > mtk_eint_suspend/resume to mtk-eint.c), as we need to
-> > > dereference pctrl->eint, and struct mtk_pinctrl *pctl has a
-> > > different structure definition for v1 and v2.
-> > >
-> > > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> > > Reviewed-by: Chuanjia Liu <Chuanjia.Liu@mediatek.com>
-> > > ---
-> > >  .../pinctrl/mediatek/pinctrl-mtk-common-v2.c  | 19 +++++++++++++++++++
-> > >  .../pinctrl/mediatek/pinctrl-mtk-common-v2.h  |  1 +
-> > >  2 files changed, 20 insertions(+)
-> > >
-> > > diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> > > index 20e1c890e73b30c..7e19b5a4748eafe 100644
-> > > --- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> > > +++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> > > @@ -723,3 +723,22 @@ int mtk_pinconf_adv_drive_get(struct mtk_pinctrl *hw,
-> > >
-> > >       return 0;
-> > >  }
+Quoting Roger Lu (2019-05-01 23:19:31)
+> On Tue, 2019-04-30 at 13:31 -0700, Stephen Boyd wrote:
+> > Quoting Roger Lu (2019-04-30 04:20:10)
+> > > diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
+> > > new file mode 100644
+> > > index 000000000000..355329db74ba
+> > > --- /dev/null
+> > > +++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
+[..]
 > > > +
-> > > +static int mtk_eint_suspend(struct device *device)
-> > > +{
-> > > +     struct mtk_pinctrl *pctl = dev_get_drvdata(device);
-> > > +
-> > > +     return mtk_eint_do_suspend(pctl->eint);
-> > > +}
-> > > +
-> > > +static int mtk_eint_resume(struct device *device)
-> > > +{
-> > > +     struct mtk_pinctrl *pctl = dev_get_drvdata(device);
-> > > +
-> > > +     return mtk_eint_do_resume(pctl->eint);
-> > > +}
-> > > +
-> > > +const struct dev_pm_ops mtk_eint_pm_ops = {
-> > > +     .suspend_noirq = mtk_eint_suspend,
-> > > +     .resume_noirq = mtk_eint_resume,
-> > > +};
-> >
-> > This is identical to the one in pinctrl-mtk-common.c and will have name
-> > clash if both pinctrl-mtk-common.c and pinctrl-mtk-common-v2.c are
-> > built.
-> >
-> > It would be better if we try to merge both version into mtk-eint.c, this
-> > way we could also remove some global functions.
->
-> Argh, I didn't think about the name clash, you're right. I guess the
-> easy way is to rename this one mtk_eint_pm_ops_v2 ...
->
-> As highlighted in the commit message, it's tricky to merge the 2 sets
-> of functions, they look identical, but they actually work on struct
-> mtk_pinctrl that are defined differently (in
-> pinctrl-mtk-common[-v2].h), so the ->eint member is at different
-> addresses...
->
-> I don't really see a way around this... Unless we want to change
-> platform_set_drvdata(pdev, pctl); to pass another type of structure
-> that could be shared (but I think that'll make the code fairly
-> verbose, with another layer of indirection). Or just assign struct
-> mtk_eint to that, since that contains pctl so we could get back the
-> struct mtk_pinctrl from that, but that feels ugly as well...
->
+> > > +               svs_gpu: svs_gpu {
+> > > +                       compatible = "mediatek,mt8183-svs-gpu";
+> > > +                       power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
+> > > +                       operating-points-v2 = <&gpu_opp_table>;
+> > > +               };
+> > 
+> > It looks like you need multiple OPPs for a single device, because it has
+> > different independent power supplies it wants to associate the OPP
+> > tables with?
+> Yes. SVS has different controllers inside the hardware in order to
+> calculate and optimize different OPP table voltage part.
 
-I agree on renaming would make the thing simple. but I wouldn't like
-to rename to mtk_eint_pm_ops_v2 since this would make people
-misunderstand that is mtk_eint_v2.
+So is there more than one SVS register region that needs certain devices
+to be powered on or at least have their power domain enabled so that the
+SVS hardware can read the voltage and adjust accordingly? I should read
+the driver I suppose.
 
-How about renaming to mtk_paris_pinctrl_pm_ops and then place related
-logic you added into pinctrl-paris.c? Because I prefer to keep pure
-pinctrl hardware operations in pinctrl-mtk-common-v2.c, and for
-relevant to other modules (mtk eint) or others subsystem (device tree
-binding, GPIO subsytem, PM something like that) they should be moved
-to pinctrl-paris.c or pinctrl-moore.c
+> 
+> > Why can't these OPP tables be attached to the devices that
+> > use them, i.e. CPU, GPU, CCI, etc.? Seems odd that those devices don't
+> > have OPP tables that this hardware block can look up somehow.
+> Those OPP tables are attached by our DVFS node (please refers below
+> patch). SVS just shares with their OPP table and help optimize these OPP
+> tables' voltage part.
+> 
+> Add cpufreq DTS node to the mt8183 and mt8183-evb
+> https://patchwork.kernel.org/patch/10921675/
 
-     Sean
+Cool thanks for the pointer.
 
-> >
-> > Joe.C
-> >
-> >
-> >
-> > _______________________________________________
-> > Linux-mediatek mailing list
-> > Linux-mediatek@lists.infradead.org
-> > http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> 
+> 
+> > Similarly,
+> > the power domains should probably be part of the devices that are using
+> > them and not these sub-nodes that are mirroring the other hardware
+> > blocks in the system?
+> Oh. There is a svs controller in GPU power-domain. We need to turn on
+> GPU power so that svs controller can work functionally. Therefore, we
+> add GPU power-domains in our svs_gpu sub-node.
+> 
+> 
+
+Sorry, I'm not really following what you're saying too closely. I think
+I get it but it sounds complicated.
+
+I'm mostly wondering if having properties like svs-gpu = <&gpu_node>,
+and svs-cci = <&cci_node> would work for you. The idea would be to link
+this hardware block to the nodes that it's going to adjust the OPPs of.
+Once you have the node, use some sort of OPP API to get the OPP table
+for a device_node and adjust it at runtime for the current OPP. It
+sounds like it might be a little more complicated if the hardware goes
+haywire when the device like GPU is powered down and the power domain is
+shut off. Hopefully it isn't though, so that the driver can mostly sit
+on top of the SVS hardware and poke OPP every once and a while when the
+voltage needs to change, regardless of the power state of the device.
+
 
 _______________________________________________
 Linux-mediatek mailing list
