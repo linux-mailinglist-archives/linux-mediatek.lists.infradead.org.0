@@ -2,59 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 986F313028
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 16:28:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81B73130F8
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 May 2019 17:12:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=opHif0vX2QqbNz9SNrhPZvmtPMIZF6Fx8JwCt9MhzZE=; b=MbqjHlsDgM0ZMF
-	8dWbGOSV/Dx9HqjOJFZm4PKkuaykuj+JPRhf2XcAxwyPdSQB+SdidMXQviw0vJtxnafu2y8JJjXhy
-	UKdOMwv1zsNAgrGY7BYB7RJy4Yy52rAx6AnjHyJxlBfAb74rpDqgHFLmRMfJ+GTog8+s5SKl2sx3J
-	ghB5FVclvuTT9QMo78YLmrecUirGoIt48/oRYPUsb7ifvjK+iHs5UdHNkqX64P6vMHMvvvihcEB4H
-	rBZUr2umKwh+5rj77VgAhZTnbFs5vfK5xNTwJ5jaVv1wNc96tKUVrkzaIQp5UqILkz0Zr6KWbbLx6
-	xlVTX2fU6YYSAwufi7wQ==;
+	List-Owner; bh=qxQ9pmQsI9kl/sQEvh1WXVYMX1lyfphj+bIDkFr5w4Q=; b=cKTNth1lKrxDxx
+	Zil1ba+7LZy3bTMJ0OMiKAmtIuAAUiEPkwD1oznuf2utZybzzO9CCdQiUQt5kRRrvnI7Czk8QnjUG
+	vMisxPJEZqHL1NhW6aPsi46Y2pRlggvZ4aNQwV+EZpC0fHdebmpH28Qz28+pWtCZJNjtCLMkc1Tri
+	BPC8SvNrTeosZjldqUAyGC2BTqgsaiZdHwQ+Sa+zYmuYALCdm0lvpm/oHrQQkFfhHb8XmRr2nxD0T
+	M4/gwEvRdajR61LsPSB80OXPEeKkhjmE2WwGIPfMi+/RzWkpBSwEjyOM08O8s5Dl6f1JPy+XuDUvL
+	o1Znrpi7KtuGBTMgoNBg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hMZAX-0001AI-CO; Fri, 03 May 2019 14:28:09 +0000
-Received: from smtp-out.xnet.cz ([178.217.244.18])
+	id 1hMZrm-0003gI-UM; Fri, 03 May 2019 15:12:50 +0000
+Received: from mail-it1-x142.google.com ([2607:f8b0:4864:20::142])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hMZAD-0000h7-5o; Fri, 03 May 2019 14:27:53 +0000
-Received: from meh.true.cz (meh.true.cz [108.61.167.218])
- (Authenticated sender: petr@true.cz)
- by smtp-out.xnet.cz (Postfix) with ESMTPSA id 2BDF24AD4;
- Fri,  3 May 2019 16:27:47 +0200 (CEST)
-Received: by meh.true.cz (OpenSMTPD) with ESMTP id cbd31f28;
- Fri, 3 May 2019 16:27:45 +0200 (CEST)
-From: =?UTF-8?q?Petr=20=C5=A0tetiar?= <ynezz@true.cz>
-To: netdev@vger.kernel.org, devicetree@vger.kernel.org,
- QCA ath9k Development <ath9k-devel@qca.qualcomm.com>,
- Kalle Valo <kvalo@codeaurora.org>, "David S. Miller" <davem@davemloft.net>,
- Felix Fietkau <nbd@nbd.name>,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Stanislaw Gruszka <sgruszka@redhat.com>,
- Helmut Schaa <helmut.schaa@googlemail.com>
-Subject: [PATCH v4 07/10] net: wireless: support of_get_mac_address new
- ERR_PTR error
-Date: Fri,  3 May 2019 16:27:12 +0200
-Message-Id: <1556893635-18549-8-git-send-email-ynezz@true.cz>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1556893635-18549-1-git-send-email-ynezz@true.cz>
-References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
+ id 1hMZri-0003fs-TS
+ for linux-mediatek@lists.infradead.org; Fri, 03 May 2019 15:12:49 +0000
+Received: by mail-it1-x142.google.com with SMTP id a190so9640042ite.4
+ for <linux-mediatek@lists.infradead.org>; Fri, 03 May 2019 08:12:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=h0gqP9UfAhrcVQ0B7jx45OW9tzcGMjRGZERkH/amQd8=;
+ b=fc39lvNrtLQ+PPYtosoIsxvEQNSCEyLIoC+tTlsPyHSyB86C/K2Ksa2rV2eZSMGM6e
+ 8kWCQ8JFZdBwoDoLSdnbcM7+rOSwHi+7dCOOWVM01wEl2NceqOGu3KrH1YoREi7GDUl2
+ Hs6YesgZxH8N1Qx3JSRTYZrdwVBWxYTOIE08vZAZ0oSQnxRTTAhbZjIwk7xkxMXTKK/N
+ /l1nnVGX7L0dWh2Sq29F2WDwdvQWJId7/BMmu69ruuNp9wRHrIP523awi2Ppcz9k4WIU
+ Az6uS9ExDKAlCoJ4pM0oPjzBJ4w5KN97FZyN2GUl1ykw+DPgsJJayFbSqWSqizMpmfmt
+ K3jQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=h0gqP9UfAhrcVQ0B7jx45OW9tzcGMjRGZERkH/amQd8=;
+ b=V9DkWxTaMWcSWQrwEXNiqU8OToafqzn8vbGhsrAIUYnINjE7g43RiBxRS3BBtQSkd5
+ bNNenmN6R47WaYA8ElCOww+NRvbBgpY01uuDnSCsEr6JsVqtipJlqr0Pyug5B+sw0EOd
+ lhLerc0HxEMWgikkGF7qfXgDRy582DJQTNfRbnr9ArVLdAv7Flgyw4K6qu/HTzDrcUn5
+ OP1ASuMhE1nJA3b+pp1RT3pFaa95Nqca2e8RMV0X2UIBecY1/ystDH8zJSnAw0igceh9
+ 6UzBfcFyJ8i4XPtR4PbOZ3oCBa7krECzF1U1GYdzGvDIjXZ6FIaz4k/2ukpeNlMDcVvU
+ zWlg==
+X-Gm-Message-State: APjAAAXCp6hYcLopzL8FstWjChD2hiJ+B6F/zDHzENs1scNNWEDsFTbH
+ QpegYW6a0spTIXFaX4GzXmVBgSsj1xtpmQa4Pv7emQ==
+X-Google-Smtp-Source: APXvYqylRqk8vy/C0ENyupfDoZQ0z4e1EDdlHqQ1vxzioimJlizkmjvHen1pYQGiwpvSjAY735JShzGgeVvSLnohe6E=
+X-Received: by 2002:a02:4482:: with SMTP id o124mr7550142jaa.121.1556896365345; 
+ Fri, 03 May 2019 08:12:45 -0700 (PDT)
 MIME-Version: 1.0
+References: <20190323211612.860-1-fparent@baylibre.com>
+ <20190323211612.860-9-fparent@baylibre.com>
+ <CAPDyKFrAxmBv+1i3qJpD=M1Wq33U2PMfQv_99xDm9MLhLxSWYg@mail.gmail.com>
+In-Reply-To: <CAPDyKFrAxmBv+1i3qJpD=M1Wq33U2PMfQv_99xDm9MLhLxSWYg@mail.gmail.com>
+From: Fabien Parent <fparent@baylibre.com>
+Date: Fri, 3 May 2019 17:12:34 +0200
+Message-ID: <CAOwMV_z8RrmoK+bfEqgwOv97uJarnuTCUo7aczZz=gyvg8CDzQ@mail.gmail.com>
+Subject: Re: [PATCH 08/24] dt-bindings: mmc: mtk-sd: add mtk-sd support for
+ MT8516
+To: Ulf Hansson <ulf.hansson@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190503_072749_694922_E10D6627 
-X-CRM114-Status: GOOD (  10.51  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190503_081247_098298_FCB61B11 
+X-CRM114-Status: GOOD (  14.20  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [178.217.244.18 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:142 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -66,52 +88,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org,
- Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
- linux-mediatek@lists.infradead.org,
- =?UTF-8?q?Petr=20=C5=A0tetiar?= <ynezz@true.cz>,
- Frank Rowand <frowand.list@gmail.com>, linux-arm-kernel@lists.infradead.org,
- Heiner Kallweit <hkallweit1@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: DTML <devicetree@vger.kernel.org>,
+ "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Chaotian Jing <chaotian.jing@mediatek.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-VGhlcmUgd2FzIE5WTUVNIHN1cHBvcnQgYWRkZWQgdG8gb2ZfZ2V0X21hY19hZGRyZXNzLCBzbyBp
-dCBjb3VsZCBub3cgcmV0dXJuCkVSUl9QVFIgZW5jb2RlZCBlcnJvciB2YWx1ZXMsIHNvIHdlIG5l
-ZWQgdG8gYWRqdXN0IGFsbCBjdXJyZW50IHVzZXJzIG9mCm9mX2dldF9tYWNfYWRkcmVzcyB0byB0
-aGlzIG5ldyBmYWN0LgoKU2lnbmVkLW9mZi1ieTogUGV0ciDFoHRldGlhciA8eW5lenpAdHJ1ZS5j
-ej4KLS0tCgogQ2hhbmdlcyBzaW5jZSB2MzoKCiAgKiBJU19FUlJfT1JfTlVMTCAtPiBJU19FUlIK
-CiBkcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoOWsvaW5pdC5jICAgICAgICAgIHwgMiArLQog
-ZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9lZXByb20uYyAgICB8IDIgKy0KIGRy
-aXZlcnMvbmV0L3dpcmVsZXNzL3JhbGluay9ydDJ4MDAvcnQyeDAwZGV2LmMgfCAyICstCiAzIGZp
-bGVzIGNoYW5nZWQsIDMgaW5zZXJ0aW9ucygrKSwgMyBkZWxldGlvbnMoLSkKCmRpZmYgLS1naXQg
-YS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoOWsvaW5pdC5jIGIvZHJpdmVycy9uZXQvd2ly
-ZWxlc3MvYXRoL2F0aDlrL2luaXQuYwppbmRleCA5ODE0MWI2Li5hMDRkODYxIDEwMDY0NAotLS0g
-YS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoOWsvaW5pdC5jCisrKyBiL2RyaXZlcnMvbmV0
-L3dpcmVsZXNzL2F0aC9hdGg5ay9pbml0LmMKQEAgLTY0Miw3ICs2NDIsNyBAQCBzdGF0aWMgaW50
-IGF0aDlrX29mX2luaXQoc3RydWN0IGF0aF9zb2Z0YyAqc2MpCiAJfQogCiAJbWFjID0gb2ZfZ2V0
-X21hY19hZGRyZXNzKG5wKTsKLQlpZiAobWFjKQorCWlmICghSVNfRVJSKG1hYykpCiAJCWV0aGVy
-X2FkZHJfY29weShjb21tb24tPm1hY2FkZHIsIG1hYyk7CiAKIAlyZXR1cm4gMDsKZGlmZiAtLWdp
-dCBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvZWVwcm9tLmMgYi9kcml2ZXJz
-L25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L2VlcHJvbS5jCmluZGV4IGExNTI5OTIwZC4uMDQ5
-NjQ5MyAxMDA2NDQKLS0tIGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9lZXBy
-b20uYworKysgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L2VlcHJvbS5jCkBA
-IC05NCw3ICs5NCw3IEBACiAJCXJldHVybjsKIAogCW1hYyA9IG9mX2dldF9tYWNfYWRkcmVzcyhu
-cCk7Ci0JaWYgKG1hYykKKwlpZiAoIUlTX0VSUihtYWMpKQogCQltZW1jcHkoZGV2LT5tYWNhZGRy
-LCBtYWMsIEVUSF9BTEVOKTsKICNlbmRpZgogCmRpZmYgLS1naXQgYS9kcml2ZXJzL25ldC93aXJl
-bGVzcy9yYWxpbmsvcnQyeDAwL3J0MngwMGRldi5jIGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvcmFs
-aW5rL3J0MngwMC9ydDJ4MDBkZXYuYwppbmRleCAzNTdjMDk0Li4xOWE3OTRhIDEwMDY0NAotLS0g
-YS9kcml2ZXJzL25ldC93aXJlbGVzcy9yYWxpbmsvcnQyeDAwL3J0MngwMGRldi5jCisrKyBiL2Ry
-aXZlcnMvbmV0L3dpcmVsZXNzL3JhbGluay9ydDJ4MDAvcnQyeDAwZGV2LmMKQEAgLTEwMDcsNyAr
-MTAwNyw3IEBAIHZvaWQgcnQyeDAwbGliX3NldF9tYWNfYWRkcmVzcyhzdHJ1Y3QgcnQyeDAwX2Rl
-diAqcnQyeDAwZGV2LCB1OCAqZWVwcm9tX21hY19hZGRyCiAJY29uc3QgY2hhciAqbWFjX2FkZHI7
-CiAKIAltYWNfYWRkciA9IG9mX2dldF9tYWNfYWRkcmVzcyhydDJ4MDBkZXYtPmRldi0+b2Zfbm9k
-ZSk7Ci0JaWYgKG1hY19hZGRyKQorCWlmICghSVNfRVJSKG1hY19hZGRyKSkKIAkJZXRoZXJfYWRk
-cl9jb3B5KGVlcHJvbV9tYWNfYWRkciwgbWFjX2FkZHIpOwogCiAJaWYgKCFpc192YWxpZF9ldGhl
-cl9hZGRyKGVlcHJvbV9tYWNfYWRkcikpIHsKLS0gCjEuOS4xCgoKX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0
-CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVh
-ZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+Hi Ulf,
+
+On Mon, Mar 25, 2019 at 2:27 PM Ulf Hansson <ulf.hansson@linaro.org> wrote:
+>
+> - trimmed cc list
+>
+> On Sat, 23 Mar 2019 at 22:17, Fabien Parent <fparent@baylibre.com> wrote:
+> >
+> > Add binding documentation of mtk-sd for MT8516 SoCs.
+> >
+> > Signed-off-by: Fabien Parent <fparent@baylibre.com>
+>
+> Applied for next, thanks!
+
+I think this patch got lost since I cannot see it in your tree.
+
+Thanks,
+Fabien
+
+>
+> Kind regards
+> Uffe
+>
+>
+> > ---
+> >  Documentation/devicetree/bindings/mmc/mtk-sd.txt | 1 +
+> >  1 file changed, 1 insertion(+)
+> >
+> > diff --git a/Documentation/devicetree/bindings/mmc/mtk-sd.txt b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
+> > index f5bcda3980cc..91a2ec59e497 100644
+> > --- a/Documentation/devicetree/bindings/mmc/mtk-sd.txt
+> > +++ b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
+> > @@ -11,6 +11,7 @@ Required properties:
+> >         "mediatek,mt8135-mmc": for mmc host ip compatible with mt8135
+> >         "mediatek,mt8173-mmc": for mmc host ip compatible with mt8173
+> >         "mediatek,mt8183-mmc": for mmc host ip compatible with mt8183
+> > +       "mediatek,mt8516-mmc": for mmc host ip compatible with mt8516
+> >         "mediatek,mt2701-mmc": for mmc host ip compatible with mt2701
+> >         "mediatek,mt2712-mmc": for mmc host ip compatible with mt2712
+> >         "mediatek,mt7622-mmc": for MT7622 SoC
+> > --
+> > 2.20.1
+> >
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
