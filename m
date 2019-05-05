@@ -2,52 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC87813DA0
-	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 08:03:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8857313E11
+	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 09:09:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=PpjP54yXhmScjteS9GYW0Y9gP7j9Puv+bODqIoaMEhY=; b=W8rF304oyCy4B1
-	5nCrcSzfMagQfaIKEAXrHn41PQZJWCpdUmQH6MRK44OmD4ARs77lHUwERGHSP8uB/V0EMt3HhKozi
-	XxC/uA0f4nBPEmVomF+4TfKSTBdshm6BxfOs7noacObO+nsg6tvUSYNbxWhRkrrlKYcWEdC47VyMl
-	lAMe1Lb245nfBbhFEQqCzH1aVlPam6APq9KlakPipl2tYK4MSo7hsLl2vt1J3wWFq2CQizShYk7aH
-	NrnhABx8WlwsnHcoJZ2OcHjXni2XD0DzmT1kAaSgw8CS3pV2/nbIiRYhyzGdzVH2nllalGW88GZ6d
-	5g5gepykPvmnbcBsnd5g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=XJIZYicDaJwywObzt+c6x8LzXMe9J/Zyt4oeO3adnKk=; b=hUmA4vW70Ra7CV
+	ixb2JgT5b9+esyHc/3bNL0gTsR7kAkYh1oVjYWoGS1kCXAGiZzgp28VUWyPY/M4r2Uq6UMIeljjff
+	JWJaRj7211u/ARjkOagW7+wqR0nKmDC4s650zz1GS5thHGBKKvkNCCztsZvNdOlg84GpPY7KCBVuC
+	gg4HceG0gGbuI4/WzjQ5XV0+Gbgs5bv3LjX7x7WsHRNqQ0gaHzzFVcLdQCFPOZ8KpF360XS//UcrD
+	jp3fB8aKEltm+F963YXj39pt3zpPcMPvqXqh/paKtgOk+9jJrtDwf6uu2s/WamBo+CgcGfOjOaNM1
+	CJ3DdgyO7zfTyogpDq5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNAFC-0008V5-Im; Sun, 05 May 2019 06:03:26 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hNBGz-0004fI-1z; Sun, 05 May 2019 07:09:21 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNAEx-0008Ot-6C; Sun, 05 May 2019 06:03:13 +0000
-X-UUID: 9292b722f7e64d44aacd32709195e68d-20190504
-X-UUID: 9292b722f7e64d44aacd32709195e68d-20190504
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hNBGl-0004WB-EH; Sun, 05 May 2019 07:09:08 +0000
+X-UUID: 408b455e3c044c07bf42eeef8f4a4151-20190504
+X-UUID: 408b455e3c044c07bf42eeef8f4a4151-20190504
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 960258048; Sat, 04 May 2019 22:03:02 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 4 May 2019 23:03:01 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 May 2019 14:02:58 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 5 May 2019 14:02:58 +0800
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: [next PATCH] usb: mtu3: fix up undefined reference to usb_debug_root
-Date: Sun, 5 May 2019 14:02:49 +0800
-Message-ID: <2b79c411c5d07a6846967c41803b328e300df8c6.1557035810.git.chunfeng.yun@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
+ with ESMTP id 391945471; Sat, 04 May 2019 23:09:01 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 5 May 2019 00:09:00 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs03n1.mediatek.inc
+ (172.21.101.181) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 5 May 2019 15:08:58 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sun, 5 May 2019 15:08:57 +0800
+Message-ID: <1557040137.26455.60.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 0/5] MTK NAND driver improvements and fixes
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: Miquel Raynal <miquel.raynal@bootlin.com>
+Date: Sun, 5 May 2019 15:08:57 +0800
+In-Reply-To: <20190430140833.08039a9f@xps13>
+References: <20190430100250.28083-1-xiaolei.li@mediatek.com>
+ <20190430140833.08039a9f@xps13>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190504_230311_233347_22D3E09A 
-X-CRM114-Status: UNSURE (   9.46  )
+X-CRM114-CacheID: sfid-20190505_000907_486215_CE99BDF0 
+X-CRM114-Status: UNSURE (   9.59  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -68,50 +71,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
- linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: richard@nod.at, linux-mediatek@lists.infradead.org,
+ linux-mtd@lists.infradead.org, srv_heupstream@mediatek.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
-there is an issue:
-
-ld:
-drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
-mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
-
-usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
-and use NULL instead.
-
-Reported-by: Randy Dunlap <rdunlap@infradead.org>
-Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
----
- drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
-
-diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
-index c96e5dab0a48..3ed666f94dd9 100644
---- a/drivers/usb/mtu3/mtu3_debugfs.c
-+++ b/drivers/usb/mtu3/mtu3_debugfs.c
-@@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
- 
- void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
- {
--	ssusb->dbgfs_root =
--		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
-+	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
- }
- 
- void ssusb_debugfs_remove_root(struct ssusb_mtk *ssusb)
--- 
-2.21.0
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgTWlxdWVsLAoKT24gVHVlLCAyMDE5LTA0LTMwIGF0IDE0OjA4ICswMjAwLCBNaXF1ZWwgUmF5
+bmFsIHdyb3RlOgo+IEhpIFhpYW9sZWksCj4gCj4gWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRp
+YXRlay5jb20+IHdyb3RlIG9uIFR1ZSwgMzAgQXByIDIwMTkgMTg6MDI6NDUKPiArMDgwMDoKPiAK
+PiA+IFRoZSBmb2xsb3dpbmcgcGF0Y2ggc2V0IG1haW5seSBjb250YWluczoKPiA+ICogRml4IGxv
+dyBsZXZlbCB0aW1lIGNhbGN1bGF0aW9uIG9mIHJlYWQvd3JpdGUgY3ljbGUgdG8gbWVldCB0UkNf
+bWluCj4gPiAgIGFuZCB0V0NfbWluIHJlcXVpcmVtZW50cy4KPiA+ICogUmVmaW5lIFJFIyBwdWxz
+ZSB3aWR0aCBjYWxjdWxhdGlvbiBhbmQgZGF0YSBzYW1wbGluZyB0byBpbXByb3ZlIHJlYWQKPiA+
+ICAgcGVyZm9ybWFuY2UuCj4gPiAqIEFkZCBDUyB2YWxpZGl0eSBjaGVjay4KPiA+ICogRml4IG9v
+YiBidWZmZXIgcG9pbnRlciB3cm9uZ2x5IHNldHRpbmcgYW5kIGVtcHR5IHBhZ2UgdGhyZXNob2xk
+IHNldHRpbmcuCj4gPiAKPiA+IENoYW5nZXMgb24gdjIgcmVsYXRpdmUgdG86Cj4gPiAtLS0tLS0t
+LS0tLS0tLS0tLS0tLQo+ID4gCj4gPiB0cmVlICAgIDogZ2l0Oi8vZ2l0LmluZnJhZGVhZC5vcmcv
+bGludXgtbXRkLmdpdAo+ID4gYnJhbmNoICA6IG1hc3Rlcgo+IAo+IFdlIGp1c3Qgc3dpdGNoZWQg
+dG8gYSByZXBvc2l0b3J5IGhvc3RlZCBvbiBrZXJuZWwub3JnOgo+IGh0dHBzOi8vZ2l0Lmtlcm5l
+bC5vcmcvcHViL3NjbS9saW51eC9rZXJuZWwvZ2l0L210ZC9saW51eC5naXQvCj4gbmFuZC9uZXh0
+IGlzIHRoZSBicmFuY2ggZm9yIHRoaXMga2luZCBvZiBzZXJpZXMuCk9LLiBHb29kLgpUaGFua3Mg
+Zm9yIHlvdXIgc2hhcmluZy4KPiAKPiBUaGFua3MsCj4gTWlxdcOobAoKVGhhbmtzLApYaWFvbGVp
+CgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4
+LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3Jn
+Cmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0
+ZWsK
