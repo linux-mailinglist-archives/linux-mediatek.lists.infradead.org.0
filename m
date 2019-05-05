@@ -2,57 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E4C2A13CED
-	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 05:21:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AC87813DA0
+	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 08:03:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UC79CYTlTuJRoPHBipqxjcQ4YmDDeS0NqsYptScYpcs=; b=tiTevia7mISOwN
-	xc5Kp0oSnUNvGs6XpBLDsB7aPoMZTpAixLieBASXRFwjjo529IMSj3ogJnlQs01ubNxYfy9n42fdl
-	NiDCDZFP6MchN9iAQZAzbNf/cEM3NiNe4A996BKzYkjYD494nIWnmg+nH8UOu7UZ0eojdVdmvPiy/
-	p7DU2hCUDsO1t6H9mlEHbS7w1VOQP4bhpVVl0qU8KZ45QoO786tHU38McXntUaBnLFCUJRcW8sDUk
-	bdvLpD0nZW87tVBWyHY6YKTK+FM4ZYpot0mFTIETqIv+X4x7oTm+Ybumzma2y+zPfO4m33RXAyziM
-	FL0iGb5dX2RKqVVQ2GOg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=PpjP54yXhmScjteS9GYW0Y9gP7j9Puv+bODqIoaMEhY=; b=W8rF304oyCy4B1
+	5nCrcSzfMagQfaIKEAXrHn41PQZJWCpdUmQH6MRK44OmD4ARs77lHUwERGHSP8uB/V0EMt3HhKozi
+	XxC/uA0f4nBPEmVomF+4TfKSTBdshm6BxfOs7noacObO+nsg6tvUSYNbxWhRkrrlKYcWEdC47VyMl
+	lAMe1Lb245nfBbhFEQqCzH1aVlPam6APq9KlakPipl2tYK4MSo7hsLl2vt1J3wWFq2CQizShYk7aH
+	NrnhABx8WlwsnHcoJZ2OcHjXni2XD0DzmT1kAaSgw8CS3pV2/nbIiRYhyzGdzVH2nllalGW88GZ6d
+	5g5gepykPvmnbcBsnd5g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hN7iC-0003hp-QD; Sun, 05 May 2019 03:21:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNAFC-0008V5-Im; Sun, 05 May 2019 06:03:26 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hN7i9-0003hS-2k
- for linux-mediatek@lists.infradead.org; Sun, 05 May 2019 03:21:10 +0000
-X-UUID: 9565760b15fc439fbdece744db81cd3a-20190504
-X-UUID: 9565760b15fc439fbdece744db81cd3a-20190504
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1hNAEx-0008Ot-6C; Sun, 05 May 2019 06:03:13 +0000
+X-UUID: 9292b722f7e64d44aacd32709195e68d-20190504
+X-UUID: 9292b722f7e64d44aacd32709195e68d-20190504
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1897125114; Sat, 04 May 2019 19:21:03 -0800
-Received: from MTKMBS32N2.mediatek.inc (172.27.4.72) by
+ with ESMTP id 960258048; Sat, 04 May 2019 22:03:02 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 4 May 2019 20:21:01 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS32N2.mediatek.inc
- (172.27.4.72) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Sun, 5 May 2019 11:20:56 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 5 May 2019 11:20:56 +0800
-Message-ID: <1557026456.10179.261.camel@mhfsdcap03>
-Subject: Re: linux-next: Tree for May 2 (drivers/usb/mtu3/mtu3_debugfs.o)
+ 15.0.1395.4; Sat, 4 May 2019 23:03:01 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 5 May 2019 14:02:58 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sun, 5 May 2019 14:02:58 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Randy Dunlap <rdunlap@infradead.org>
-Date: Sun, 5 May 2019 11:20:56 +0800
-In-Reply-To: <3e56059c-e024-324f-f584-75a806d9b0e0@infradead.org>
-References: <20190502201028.707453d8@canb.auug.org.au>
- <3e56059c-e024-324f-f584-75a806d9b0e0@infradead.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Subject: [next PATCH] usb: mtu3: fix up undefined reference to usb_debug_root
+Date: Sun, 5 May 2019 14:02:49 +0800
+Message-ID: <2b79c411c5d07a6846967c41803b328e300df8c6.1557035810.git.chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: C34135B66CD1248BC920FDFC08C2E130B3749552C9C5D14BFBA1722239135E9A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190504_202109_130011_86C9AFF8 
-X-CRM114-Status: UNSURE (   9.42  )
+X-CRM114-CacheID: sfid-20190504_230311_233347_22D3E09A 
+X-CRM114-Status: UNSURE (   9.46  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -73,52 +68,47 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stephen Rothwell <sfr@canb.auug.org.au>,
- Linux Next Mailing List <linux-next@vger.kernel.org>,
- linux-mediatek@lists.infradead.org,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- USB list <linux-usb@vger.kernel.org>
+Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
+ linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Randy,
-On Thu, 2019-05-02 at 08:17 -0700, Randy Dunlap wrote:
-> On 5/2/19 3:10 AM, Stephen Rothwell wrote:
-> > Hi all,
-> > 
-> > Changes since 20190501:
-> > 
-> 
-> on i386:
-> 
-> ld: drivers/usb/mtu3/mtu3_debugfs.o: in function `ssusb_debugfs_create_root':
-> mtu3_debugfs.c:(.text+0xba3): undefined reference to `usb_debug_root'
-> 
-> CONFIG_USB_SUPPORT=y
-> CONFIG_USB_COMMON=y
-> CONFIG_USB_ARCH_HAS_HCD=y
-> # CONFIG_USB is not set     <<<<< no host-side USB
-> # CONFIG_USB_PCI is not set
-> CONFIG_USB_MTU3=y
-> CONFIG_USB_MTU3_GADGET=y     <<<<< gadget-only mode
-> # CONFIG_USB_MTU3_DEBUG is not set
-> CONFIG_USB_MUSB_HDRC=m
-> CONFIG_USB_MUSB_GADGET=y
-> 
-> usb_debug_root is in drivers/usb/core/usb.c, which is only built
-> when CONFIG_USB is set/enabled.
-> 
-I'll fix it ASAP.
+When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
+there is an issue:
 
-Thanks a lot
+ld:
+drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
+mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
 
-> 
-> 
-> Full randconfig file is attached.
-> 
+usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
+and use NULL instead.
 
+Reported-by: Randy Dunlap <rdunlap@infradead.org>
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+---
+ drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
+index c96e5dab0a48..3ed666f94dd9 100644
+--- a/drivers/usb/mtu3/mtu3_debugfs.c
++++ b/drivers/usb/mtu3/mtu3_debugfs.c
+@@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
+ 
+ void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
+ {
+-	ssusb->dbgfs_root =
+-		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
++	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
+ }
+ 
+ void ssusb_debugfs_remove_root(struct ssusb_mtk *ssusb)
+-- 
+2.21.0
 
 
 _______________________________________________
