@@ -2,64 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 124D213A8D
-	for <lists+linux-mediatek@lfdr.de>; Sat,  4 May 2019 16:05:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6CC5713C9E
+	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 03:29:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8lB+ghTRn8FvOrgMcd+r5sE1c39Ak3y7YNINR24nVWE=; b=EEnxx87yCZiItG
-	6fF1WzIVV+3GHiKjByBq8u224kWRCc2saDjPyIOReLdDNYAFiiG6/0WGqBKBc7rv8YnStIWKwWZtB
-	dWXN3XOSwahbOz7Pos7hwWWiG+o3l4ndsgTfXMJpDo2DK4aEphMJvnNE7PkL0xUzcu4sjk2+gCQFz
-	wJg3pS5/cFeU4xV4twq/5Tpx7xU+76juX1EwXrIWeWfwNTb3K0OLtlzVbjNgITIEJp8Bg9QtNZABk
-	YPHicUIodS8+FGhMET/3U41tNkIF8nBeSh9P2f1lz4vdhnmF2CYrTqvdyyNDVzh+93Fmbafj/bL0e
-	3HRbeIxljGcQoxF1NyZg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=1BAbUeii83qVHhIFGfXLdt/nftPJbfvXhBoD/ptKL6w=; b=rSQE7juFpnX6agbCfMD9XRQUe
+	/MbZYJ3F5J6X2xIb6308ORS8xtwCYHyQe2Qh1K9x43Zmjj0kvsUp7pphKQotiK5o8ogossWXWsA5i
+	IRzR9RQ+oFq1wT0qbd0V7Hvg/L0njPXqEAHa4rRQC9jxj2ZTlwgrfxL+gFxXzAFQ4f9UYuXo/LgTe
+	TNnYi+DqBz63DKGjMHPxen2vMgqc9khIJqaSy2G0KcTM8VXzZd55kvHKOpvrnTlbIp4l57t4ch/BY
+	Q2JKZbN+so1P3IJ2V8GmO+M5jVg4M1T+hXbWa6C3bUNioankq1ajroAvyFhMxZMVnIdgOjT4uftGp
+	n821PyfMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hMvHa-0004gZ-7V; Sat, 04 May 2019 14:04:54 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hN5xW-00029V-F2; Sun, 05 May 2019 01:28:54 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hMvHR-0004bb-W2; Sat, 04 May 2019 14:04:47 +0000
-X-UUID: 7997a1fe426d48ac953f1810b02bf661-20190504
-X-UUID: 7997a1fe426d48ac953f1810b02bf661-20190504
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <yingjoe.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1903619551; Sat, 04 May 2019 06:04:38 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 4 May 2019 07:04:36 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 4 May 2019 22:04:22 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sat, 4 May 2019 22:04:16 +0800
-Message-ID: <1556978656.25811.1.camel@mtksdaap41>
-Subject: Re: [PATCH v3 10/10] rtc: Add support for the MediaTek MT6358 RTC
-From: Yingjoe Chen <yingjoe.chen@mediatek.com>
-To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-Date: Sat, 4 May 2019 22:04:16 +0800
-In-Reply-To: <20190503093117.54830-11-hsin-hsiung.wang@mediatek.com>
-References: <20190503093117.54830-1-hsin-hsiung.wang@mediatek.com>
- <20190503093117.54830-11-hsin-hsiung.wang@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hN5wx-0001rU-LG; Sun, 05 May 2019 01:28:21 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga008.fm.intel.com ([10.253.24.58])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 04 May 2019 18:26:18 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.60,431,1549958400"; d="scan'208";a="146319205"
+Received: from allen-box.sh.intel.com (HELO [10.239.159.136])
+ ([10.239.159.136])
+ by fmsmga008.fm.intel.com with ESMTP; 04 May 2019 18:26:14 -0700
+Subject: Re: [RFC 2/7] iommu/vt-d: Remove iova handling code from non-dma ops
+ path
+To: Tom Murphy <tmurphy@arista.com>, iommu@lists.linux-foundation.org
+References: <20190504132327.27041-1-tmurphy@arista.com>
+ <20190504132327.27041-3-tmurphy@arista.com>
+From: Lu Baolu <baolu.lu@linux.intel.com>
+Message-ID: <bf35694d-3ff4-0df7-0802-b0e87a9a0d47@linux.intel.com>
+Date: Sun, 5 May 2019 09:19:51 +0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 94F06579A06AD170C4104FD99EDD8ACC6517C53AB96CA365032830D34A4671372000:8
-X-MTK: N
+In-Reply-To: <20190504132327.27041-3-tmurphy@arista.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190504_070446_042402_1B77711F 
-X-CRM114-Status: GOOD (  17.55  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190504_182819_710421_88E93406 
+X-CRM114-Status: GOOD (  15.47  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,123 +67,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark
- Rutland <mark.rutland@arm.com>, Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Ran Bi <ran.bi@mediatek.com>,
- Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
- Rob Herring <robh+dt@kernel.org>, linux-kernel@vger.kernel.org, Mark
- Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Eddie Huang <eddie.huang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
- linux-arm-kernel@lists.infradead.org, linux-rtc@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: Heiko Stuebner <heiko@sntech.de>, kvm@vger.kernel.org,
+ Will Deacon <will.deacon@arm.com>, linux-tegra@vger.kernel.org,
+ Thierry Reding <thierry.reding@gmail.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Kukjin Kim <kgene@kernel.org>, Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Andy Gross <andy.gross@linaro.org>, Marc Zyngier <marc.zyngier@arm.com>,
+ linux-arm-msm@vger.kernel.org, Alex Williamson <alex.williamson@redhat.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, linux-arm-kernel@lists.infradead.org,
+ David Brown <david.brown@linaro.org>, David Woodhouse <dwmw2@infradead.org>,
+ linux-kernel@vger.kernel.org, murphyt7@tcd.ie,
+ Robin Murphy <robin.murphy@arm.com>, baolu.lu@linux.intel.com
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-05-03 at 17:31 +0800, Hsin-Hsiung Wang wrote:
-> From: Ran Bi <ran.bi@mediatek.com>
-> 
-> This add support for the MediaTek MT6358 RTC. Driver using
-> compatible data to store different RTC_WRTGR address offset.
-> 
-> Signed-off-by: Ran Bi <ran.bi@mediatek.com>
-> ---
->  drivers/rtc/rtc-mt6397.c | 43 ++++++++++++++++++++++++++++++++--------
->  1 file changed, 35 insertions(+), 8 deletions(-)
-> 
-> diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
-> index f85f1fc29e32..3476e29db87c 100644
-> --- a/drivers/rtc/rtc-mt6397.c
-> +++ b/drivers/rtc/rtc-mt6397.c
-> @@ -20,6 +20,7 @@
->  #include <linux/irqdomain.h>
->  #include <linux/platform_device.h>
->  #include <linux/of_address.h>
-> +#include <linux/of_device.h>
->  #include <linux/of_irq.h>
->  #include <linux/io.h>
->  #include <linux/mfd/mt6397/core.h>
-> @@ -27,7 +28,8 @@
->  #define RTC_BBPU		0x0000
->  #define RTC_BBPU_CBUSY		BIT(6)
->  
-> -#define RTC_WRTGR		0x003c
-> +#define RTC_WRTGR_MT6358	0x3a
-> +#define RTC_WRTGR_MT6397	0x3c
->  
->  #define RTC_IRQ_STA		0x0002
->  #define RTC_IRQ_STA_AL		BIT(0)
-> @@ -71,6 +73,10 @@
->  #define RTC_NUM_YEARS		128
->  #define RTC_MIN_YEAR_OFFSET	(RTC_MIN_YEAR - RTC_BASE_YEAR)
->  
-> +struct mtk_rtc_compatible {
-> +	u32			wrtgr_addr;
-> +};
-> +
->  struct mt6397_rtc {
->  	struct device		*dev;
->  	struct rtc_device	*rtc_dev;
-> @@ -78,7 +84,25 @@ struct mt6397_rtc {
->  	struct regmap		*regmap;
->  	int			irq;
->  	u32			addr_base;
-> +	const struct mtk_rtc_compatible *dev_comp;
-> +};
-> +
-> +static const struct mtk_rtc_compatible mt6358_rtc_compat = {
-> +	.wrtgr_addr = RTC_WRTGR_MT6358,
-> +};
-> +
-> +static const struct mtk_rtc_compatible mt6397_rtc_compat = {
-> +	.wrtgr_addr = RTC_WRTGR_MT6397,
-> +};
-> +
-> +static const struct of_device_id mt6397_rtc_of_match[] = {
-> +	{ .compatible = "mediatek,mt6358-rtc",
-> +		.data = (void *)&mt6358_rtc_compat, },
-> +	{ .compatible = "mediatek,mt6397-rtc",
-> +		.data = (void *)&mt6397_rtc_compat, },
-> +	{}
->  };
-> +MODULE_DEVICE_TABLE(of, mt6397_rtc_of_match);
->  
->  static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
->  {
-> @@ -86,7 +110,8 @@ static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
->  	int ret;
->  	u32 data;
->  
-> -	ret = regmap_write(rtc->regmap, rtc->addr_base + RTC_WRTGR, 1);
-> +	ret = regmap_write(rtc->regmap,
-> +			   rtc->addr_base + rtc->dev_comp->wrtgr_addr, 1);
->  	if (ret < 0)
->  		return ret;
->  
-> @@ -332,6 +357,7 @@ static int mtk_rtc_probe(struct platform_device *pdev)
->  	struct resource *res;
->  	struct mt6397_chip *mt6397_chip = dev_get_drvdata(pdev->dev.parent);
->  	struct mt6397_rtc *rtc;
-> +	const struct of_device_id *of_id;
->  	int ret;
->  
->  	rtc = devm_kzalloc(&pdev->dev, sizeof(struct mt6397_rtc), GFP_KERNEL);
-> @@ -341,6 +367,13 @@ static int mtk_rtc_probe(struct platform_device *pdev)
->  	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->  	rtc->addr_base = res->start;
->  
-> +	of_id = of_match_device(mt6397_rtc_of_match, &pdev->dev);
-> +	if (!of_id) {
+Hi,
 
-This will never happens, but I'm fine with it.
+On 5/4/19 9:23 PM, Tom Murphy via iommu wrote:
+> @@ -4181,58 +4168,37 @@ static int intel_iommu_memory_notifier(struct notifier_block *nb,
+>   				       unsigned long val, void *v)
+>   {
+>   	struct memory_notify *mhp = v;
+> -	unsigned long long start, end;
+> -	unsigned long start_vpfn, last_vpfn;
+> +	unsigned long start_vpfn = mm_to_dma_pfn(mhp->start_pfn);
+> +	unsigned long last_vpfn = mm_to_dma_pfn(mhp->start_pfn +
+> +			mhp->nr_pages - 1);
+>   
+>   	switch (val) {
+>   	case MEM_GOING_ONLINE:
+> -		start = mhp->start_pfn << PAGE_SHIFT;
+> -		end = ((mhp->start_pfn + mhp->nr_pages) << PAGE_SHIFT) - 1;
+> -		if (iommu_domain_identity_map(si_domain, start, end)) {
+> -			pr_warn("Failed to build identity map for [%llx-%llx]\n",
+> -				start, end);
+> +		if (iommu_domain_identity_map(si_domain, start_vpfn,
+> +					last_vpfn)) {
+> +			pr_warn("Failed to build identity map for [%lx-%lx]\n",
+> +				start_vpfn, last_vpfn);
+>   			return NOTIFY_BAD;
+>   		}
+>   		break;
 
-Review-by: Yingjoe Chen <yingjoe.chen@mediatek.com>
+Actually we don't need to update the si_domain if iommu hardware
+supports pass-through mode. This should be made in a separated patch
+anyway.
 
-Joe.C
-
-
+Best regards,
+Lu Baolu
 
 _______________________________________________
 Linux-mediatek mailing list
