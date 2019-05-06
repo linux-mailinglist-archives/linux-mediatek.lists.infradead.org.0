@@ -2,94 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 283BB14F21
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 17:09:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D144715030
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 17:27:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sXrEkMys+lVtO0QUnf0ELro/gGMpXUr8BASC+jDaQo0=; b=ew5pFyx/QBJgvJ
-	7BoNwp/BAYFDvHGbIwYtZl9YqUsYT4yH1xXkNcJ0/fSJybiOvw5CEeSCensO5j/2tLbgSHJq8elSq
-	G1h2Xo7k/P1oBKpaZfC3K9zDm9e1HhCr2kpt+dOWE2F8Y+6viiPi5kSAXjS6MMjgxNtkf0LjP1ZYa
-	AzLuwBIcQTiZPUlyeZLFdPu/pWhFxImJ9qFljWwpMmyzG3cXgId2qqbGrEhOiambyhBg49BlW8gu4
-	LGWlPpGs8be8YmBiM41vmWuY49cZT/HWnBlOOYrjrgl5CuUW4TRkoP/VmfUVBEvFXRyC1zzXqAvlU
-	G3kulCSba6X2WoVuG/sg==;
+	List-Owner; bh=1mqc4WniVUfUeDWLU0jTLONDcxy+QyB8+jvPJE2B1cA=; b=olqSJQDBm3W9Ip
+	k8RiKiPZkt420RFj53sqikidjyR9CSrDOmxGLtUyEatI07sSkieQuTs8B2TaCL3HlbYgMWwnvhrgk
+	IQCEdobDxveBB+0Y4J1NIQUA+QSXZd/VO/uv0dFbMmSVKQtJYzl9VUM1XM4LUYfwPsXPIBnkl1RQb
+	lfS5zlfRAjq/oP147i7iLyIOKSbam+RgAetP4wo+SicYBoOkZAMJJJgQD/bdI6z3bhD76ExY0o4Cc
+	4fahfKqrWCUgGcBngLTNTGxCO1WHTy044oGSUun5QR6rpW3avjj1g9kQCfn85Etkd+2ZUY1NLjzkU
+	ONJTzkiRTJ+Cgvrb12tQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNfEn-0008GD-BG; Mon, 06 May 2019 15:09:05 +0000
-Received: from userp2120.oracle.com ([156.151.31.85])
+	id 1hNfWd-0006ln-9L; Mon, 06 May 2019 15:27:31 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNfEk-0008FH-1H
- for linux-mediatek@lists.infradead.org; Mon, 06 May 2019 15:09:03 +0000
-Received: from pps.filterd (userp2120.oracle.com [127.0.0.1])
- by userp2120.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x46F3o4l106193;
- Mon, 6 May 2019 15:08:02 GMT
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
- h=date : from : to : cc
- : subject : message-id : references : mime-version : content-type :
- content-transfer-encoding : in-reply-to; s=corp-2018-07-02;
- bh=rDJ/z/pPRZKtR5JzVGMLLDer4402GB87zt7n/gU4krU=;
- b=qEzSeP3aGTDv3s9znu1nX/m58g0qTnZdtpwUK1CQGRD3KDy2qgkIaoxVFwc/d6ws7egj
- wKcF47zucTRQ/UMQoV42jXTQnbrbo1me39YFnJGDlEghnI+xb8AKzpb70cRdkMZYEd2i
- len4M5CrDAbyEt9xWopCKmPOhQ1DHZBZz2BVpO0aHb8kNHooK6KP9UxzWxV3heh1s/+S
- IHEkd4K6qpvVJkObdyJWwYVF8oJH/PC9ukV87kuCFZ0lYFIYkXaJDTX3G+9dvHxZvWPI
- nWzAzWFZ7lixcllZPY2dSxcuLuG3RnRzQi3Z0oyn9pQKiKyurW1w7pvqKKcLmRZUpPQq YQ== 
-Received: from aserp3030.oracle.com (aserp3030.oracle.com [141.146.126.71])
- by userp2120.oracle.com with ESMTP id 2s94b0f811-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Mon, 06 May 2019 15:08:02 +0000
-Received: from pps.filterd (aserp3030.oracle.com [127.0.0.1])
- by aserp3030.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x46F6wpr045484;
- Mon, 6 May 2019 15:08:01 GMT
-Received: from aserv0122.oracle.com (aserv0122.oracle.com [141.146.126.236])
- by aserp3030.oracle.com with ESMTP id 2s94b8y1bu-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Mon, 06 May 2019 15:08:01 +0000
-Received: from abhmp0007.oracle.com (abhmp0007.oracle.com [141.146.116.13])
- by aserv0122.oracle.com (8.14.4/8.14.4) with ESMTP id x46F7gJH005600;
- Mon, 6 May 2019 15:07:42 GMT
-Received: from kadam (/196.110.137.40) by default (Oracle Beehive Gateway v4.0)
- with ESMTP ; Mon, 06 May 2019 08:07:42 -0700
-Date: Mon, 6 May 2019 18:07:13 +0300
-From: Dan Carpenter <dan.carpenter@oracle.com>
-To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
-Subject: Re: [PATCH net-next 1/3] net: ethernet: support of_get_mac_address
- new ERR_PTR error
-Message-ID: <20190506150713.GH2269@kadam>
-References: <1557136717-531-1-git-send-email-ynezz@true.cz>
- <1557136717-531-2-git-send-email-ynezz@true.cz>
+ id 1hNfWU-0006e9-El
+ for linux-mediatek@lists.infradead.org; Mon, 06 May 2019 15:27:23 +0000
+Received: by mail-wr1-x441.google.com with SMTP id w12so4347618wrp.2
+ for <linux-mediatek@lists.infradead.org>; Mon, 06 May 2019 08:27:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=arista.com; s=googlenew;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=GuMSdmXl0z53dDi0xhlaU7BU2n/bLw/DBUWaPvlO+dc=;
+ b=C/d9PWiZ7kbJC0oH7zo5Ibhtjb0LJxg5WGRhk2z22dgXTR0ahak265kLVZyGYOhfje
+ aEtSmh42RRvz8bCCBZRBFOn7uv5XCF0ECqKL0Hb338d0yPodqMwGb1L0gvRyJgITkaxQ
+ Ki1y61sbdbPypKRjDCxUR8MH0zfn/bbro9LPpFVyLBByJZzEOqelQf5tS81MK2FkUIP3
+ sLhve+NsmP0dlDX03w14Qjs93JrqJwcC/r4yHUZhJhCv/72E7VCM80drfYcNtln/9ipb
+ cKIyK6t7ROv023pVx/00hbtubgQCmfBlIjzs3E6R48gtIILod1LUINjWV6UVWZ8tSjxH
+ BBpA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=GuMSdmXl0z53dDi0xhlaU7BU2n/bLw/DBUWaPvlO+dc=;
+ b=ra0zQ4sYt9B4lQpniNVVrFD+6rm6wPkrGmLx6xTIWMYW1+3LUchFw5Em1rJXECSWNt
+ YXm+uKhRlJ4XZlBi6xHFhRVh8ursSbFoBiA0BFhk4KyS6GSKIv8GQi40DuiYOPxECy9V
+ 5Z/fHl/z/SI698AFpC84ojivdHq3TQnFwZl2Q8HDJbbBXWB6h8I1FzzywJhoXjLqHcYI
+ uvEYw27B2fbTZ1u8U5q7VOXEGyZ1LIvl8Jlxa5b4ktAkSf4ZoDGH3RR2aB7Sz4G0Wdox
+ dkmj/PiBglqjlF2a1X3ZYFo94IMp6+dB5HhaUF5uF1NBeRuxCL3TcTn7EJue6JQJ79oK
+ Ll2Q==
+X-Gm-Message-State: APjAAAXey/QfMVpZOhgYB52d5cW7BcA2uck0fg9CWFb0433Ml6ICnKXH
+ nX5Bf2tHr69hfehr/l2aDKhF3AVmJ208f17VVgXFww==
+X-Google-Smtp-Source: APXvYqzdYjq2KzNwXSYRUYk147h4YL+JNa0zWfymURRoAL7aXQogilrHn37rwl9PoIS46ayzMGu+Ikwm2tOs7SUKN4Y=
+X-Received: by 2002:a5d:5551:: with SMTP id g17mr20082024wrw.50.1557156440752; 
+ Mon, 06 May 2019 08:27:20 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1557136717-531-2-git-send-email-ynezz@true.cz>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
- signatures=668686
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
- malwarescore=0
- phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=814
- adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
- engine=8.0.1-1810050000 definitions=main-1905060130
-X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
- signatures=668686
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
- priorityscore=1501 malwarescore=0
- suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1011
- lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=845 adultscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1810050000
- definitions=main-1905060130
+References: <20190504132327.27041-1-tmurphy@arista.com>
+ <20190504132327.27041-2-tmurphy@arista.com>
+ <8fef18f5-773c-e1c9-2537-c9dff5bfd35e@linux.intel.com>
+In-Reply-To: <8fef18f5-773c-e1c9-2537-c9dff5bfd35e@linux.intel.com>
+From: Tom Murphy <tmurphy@arista.com>
+Date: Mon, 6 May 2019 16:27:09 +0100
+Message-ID: <CAPL0++4_Qa+dxzQ2k6BJi_o+VSSrHEtomYgVmRqjtjsOfHbGew@mail.gmail.com>
+Subject: Re: [RFC 1/7] iommu/vt-d: Set the dma_ops per device so we can remove
+ the iommu_no_mapping code
+To: Lu Baolu <baolu.lu@linux.intel.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190506_080902_207925_15F4436B 
-X-CRM114-Status: GOOD (  15.71  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190506_082722_494377_881A88D3 
+X-CRM114-Status: GOOD (  21.34  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [156.151.31.85 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -98,8 +81,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
  -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
@@ -112,54 +93,113 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>, Thor Thayer <thor.thayer@linux.intel.com>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Andreas Larsson <andreas@gaisler.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Pantelis Antoniou <pantelis.antoniou@gmail.com>,
- Byungho An <bh74.an@samsung.com>, Frank Rowand <frowand.list@gmail.com>,
- John Linn <John.Linn@xilinx.com>, Alexandre Torgue <alexandre.torgue@st.com>,
- Vipul Pandya <vipul.pandya@samsung.com>, linux-renesas-soc@vger.kernel.org,
- Felix Fietkau <nbd@openwrt.org>, Florian Fainelli <f.fainelli@gmail.com>,
- Madalin Bucur <madalin.bucur@nxp.com>, Michal Simek <michal.simek@xilinx.com>,
- linux-stm32@st-md-mailman.stormreply.com, Chen-Yu Tsai <wens@csie.org>,
- Jose Abreu <joabreu@synopsys.com>, bcm-kernel-feedback-list@broadcom.com,
- Sylvain Lemieux <slemieux.tyco@gmail.com>, Sunil Goutham <sgoutham@cavium.com>,
- Yisen Zhuang <yisen.zhuang@huawei.com>,
- Sebastian Hesselbarth <sebastian.hesselbarth@gmail.com>,
- nios2-dev@lists.rocketboards.org, devel@driverdev.osuosl.org,
- Grygorii Strashko <grygorii.strashko@ti.com>, Robert Richter <rric@kernel.org>,
- Girish K S <ks.giri@samsung.com>, Nelson Chang <nelson.chang@mediatek.com>,
- Wingman Kwok <w-kwok2@ti.com>, Hauke Mehrtens <hauke@hauke-m.de>,
- Sean Wang <sean.wang@mediatek.com>, Vladimir Zapolskiy <vz@mleia.com>,
- Claudiu Manoil <claudiu.manoil@nxp.com>, Doug Berger <opendmb@gmail.com>,
- linux-mediatek@lists.infradead.org, Murali Karicheri <m-karicheri2@ti.com>,
- John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>, linux-omap@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, Mirko Lindner <mlindner@marvell.com>,
- Salil Mehta <salil.mehta@huawei.com>, Fugang Duan <fugang.duan@nxp.com>,
- Sergei Shtylyov <sergei.shtylyov@cogentembedded.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-kernel@vger.kernel.org,
- Li Yang <leoyang.li@nxp.com>, Stephen Hemminger <stephen@networkplumber.org>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>, netdev@vger.kernel.org,
- Anirudha Sarangi <anirudh@xilinx.com>, linuxppc-dev@lists.ozlabs.org,
- "David S. Miller" <davem@davemloft.net>,
- Heiner Kallweit <hkallweit1@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Heiko Stuebner <heiko@sntech.de>, kvm@vger.kernel.org,
+ Will Deacon <will.deacon@arm.com>, David Brown <david.brown@linaro.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ iommu@lists.linux-foundation.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Kukjin Kim <kgene@kernel.org>, Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Andy Gross <andy.gross@linaro.org>, linux-tegra@vger.kernel.org,
+ Marc Zyngier <marc.zyngier@arm.com>, linux-arm-msm@vger.kernel.org,
+ Alex Williamson <alex.williamson@redhat.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, linux-arm-kernel@lists.infradead.org,
+ Robin Murphy <robin.murphy@arm.com>, linux-kernel@vger.kernel.org,
+ Tom Murphy <murphyt7@tcd.ie>, Rob Clark <robdclark@gmail.com>,
+ David Woodhouse <dwmw2@infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gTW9uLCBNYXkgMDYsIDIwMTkgYXQgMTE6NTg6MzVBTSArMDIwMCwgUGV0ciDFoHRldGlhciB3
-cm90ZToKPiBUaGVyZSB3YXMgTlZNRU0gc3VwcG9ydCBhZGRlZCB0byBvZl9nZXRfbWFjX2FkZHJl
-c3MsIHNvIGl0IGNvdWxkIG5vdyByZXR1cm4KPiBFUlJfUFRSIGVuY29kZWQgZXJyb3IgdmFsdWVz
-LCBzbyB3ZSBuZWVkIHRvIGFkanVzdCBhbGwgY3VycmVudCB1c2VycyBvZgo+IG9mX2dldF9tYWNf
-YWRkcmVzcyB0byB0aGlzIG5ldyBmYWN0LgoKV2UgbmVlZCBhIEZpeGVzIHRhZyBzbyB3ZSBjYW4g
-bG9vayBhdCB0aGUgY29tbWl0IHdoaWNoIGFkZHMgTlZNRU0Kc3VwcG9ydC4KCkl0J3Mgbm90IGNs
-ZWFyIHRvIG1lIHRoYXQgYW55b25lIGV2ZXIgYXBwbGllZCB0aGF0IHBhdGNoLiAgSWYgbm90IHRo
-ZW4Kd2hvIGhvbyEgIExldCdzIG5vdCBhcHBseSBpdC4gIEJ1dCBpZiBpdCBoYXMgYmVlbiBjb21t
-aXR0ZWQgdGhlbiBpdCBoYXMKYSBnaXQgaGFzaC4KCnJlZ2FyZHMsCmRhbiBjYXJwZW50ZXIKCl9f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlh
-dGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6
-Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Mon, May 6, 2019 at 2:48 AM Lu Baolu <baolu.lu@linux.intel.com> wrote:
+>
+> Hi,
+>
+> On 5/4/19 9:23 PM, Tom Murphy wrote:
+> > Set the dma_ops per device so we can remove the iommu_no_mapping code.
+> >
+> > Signed-off-by: Tom Murphy<tmurphy@arista.com>
+> > ---
+> >   drivers/iommu/intel-iommu.c | 85 +++----------------------------------
+> >   1 file changed, 6 insertions(+), 79 deletions(-)
+> >
+> > diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
+> > index eace915602f0..2db1dc47e7e4 100644
+> > --- a/drivers/iommu/intel-iommu.c
+> > +++ b/drivers/iommu/intel-iommu.c
+> > @@ -2622,17 +2622,6 @@ static int __init si_domain_init(int hw)
+> >       return 0;
+> >   }
+> >
+> > -static int identity_mapping(struct device *dev)
+> > -{
+> > -     struct device_domain_info *info;
+> > -
+> > -     info = dev->archdata.iommu;
+> > -     if (info && info != DUMMY_DEVICE_DOMAIN_INFO)
+> > -             return (info->domain == si_domain);
+> > -
+> > -     return 0;
+> > -}
+> > -
+> >   static int domain_add_dev_info(struct dmar_domain *domain, struct device *dev)
+> >   {
+> >       struct dmar_domain *ndomain;
+> > @@ -3270,43 +3259,6 @@ static unsigned long intel_alloc_iova(struct device *dev,
+> >       return iova_pfn;
+> >   }
+> >
+> > -/* Check if the dev needs to go through non-identity map and unmap process.*/
+> > -static int iommu_no_mapping(struct device *dev)
+> > -{
+> > -     int found;
+> > -
+> > -     if (iommu_dummy(dev))
+> > -             return 1;
+> > -
+> > -     found = identity_mapping(dev);
+> > -     if (found) {
+> > -             /*
+> > -              * If the device's dma_mask is less than the system's memory
+> > -              * size then this is not a candidate for identity mapping.
+> > -              */
+> > -             u64 dma_mask = *dev->dma_mask;
+> > -
+> > -             if (dev->coherent_dma_mask &&
+> > -                 dev->coherent_dma_mask < dma_mask)
+> > -                     dma_mask = dev->coherent_dma_mask;
+> > -
+> > -             if (dma_mask < dma_get_required_mask(dev)) {
+> > -                     /*
+> > -                      * 32 bit DMA is removed from si_domain and fall back
+> > -                      * to non-identity mapping.
+> > -                      */
+> > -                     dmar_remove_one_dev_info(dev);
+> > -                     dev_warn(dev, "32bit DMA uses non-identity mapping\n");
+> > -
+> > -                     return 0;
+> > -             }
+>
+> The iommu_no_mapping() also checks whether any 32bit DMA device uses
+> identity mapping. The device might not work if the system memory space
+> is bigger than 4G.
+
+It looks like their is actually a bug in the v3 of the "iommu/vt-d:
+Delegate DMA domain to generic iommu" patch set. I will leave a
+message in that email thread. Fixing that bug should also fix this
+issue.
+
+
+>
+> Will you add this to other place, or it's unnecessary?
+>
+> Best regards,
+> Lu Baolu
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
