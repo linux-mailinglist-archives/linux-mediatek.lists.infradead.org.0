@@ -2,52 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 09FB014289
-	for <lists+linux-mediatek@lfdr.de>; Sun,  5 May 2019 23:32:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 76BD514342
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 02:56:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=02JLO1b1T6fi45Kw+ZrImfYiafeGM39LWzNz06ww3rA=; b=YUtfb95NfpF7Vy
-	B13ssxtXzlZDFpGNw1TXLQkxPv/EJiBT6uOLEDjVX+9B1R4hapcshnT9O2njqqOQppDiErhEoJARx
-	2Kuckocog3bu8nSv9MBa0sYUJnHY1rccVvpwgawK30FnIScGeOH+6jO9qkFH6DH6Kz4PXcW6bamVp
-	20SzsGK0GKGCN5BcjLen1dfeXSd6ga9602XdApTP+GyN5APjmYNwbgVXKD200rhAVrod6CS8b9HHz
-	gojDMRGavJSyIEjmpNRdW9scGJ5pzroHLDcNggaN6PXfsO5HcCvqC2cXcpaOyvrB5YbBcC116zkn1
-	xpkjGA+hK2yTQkwY9KUg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=0HLreLLbc/BDoTxKyijcIV5K+nZPieG7XtlPFq0Rjw0=; b=dYciGijATlSV6v
+	bfmO4jmtwCAlZprsh1K++4MI4weWRAq8RF/HABbttBYoaOXiG5SXM7zDiOnQCyo+y6Fjx8pcDev6t
+	GvmvLPFJiOl1oTKERuwgMtLJXEnBLxCIgSrsuB1dHxXxHQOcmc9ZX7pnG7ANaJRTbrmWRd/X1uiPD
+	AMMKHzJbhhJz52cpDs3X+vPw+cbLzap6DinlEXDTUmWkLTSMAhApdODvNA1BSmmArVf2O/48szFIR
+	8nesyMZW5Ruxq8YiDO2U8CcDpFNaZtsxurCztYnodO4VRZyYaf7t7UhHKnUj+eyc4Pp7TpofLMhHQ
+	uzkNytKSAuoehiYqGhXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNOjj-0001Yt-J6; Sun, 05 May 2019 21:31:55 +0000
-Received: from youngberry.canonical.com ([91.189.89.112])
+	id 1hNRvq-0001UM-JM; Mon, 06 May 2019 00:56:38 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNOjb-0001TM-H2; Sun, 05 May 2019 21:31:49 +0000
-Received: from 1.general.cking.uk.vpn ([10.172.193.212] helo=localhost)
- by youngberry.canonical.com with esmtpsa (TLS1.0:RSA_AES_256_CBC_SHA1:32)
- (Exim 4.76) (envelope-from <colin.king@canonical.com>)
- id 1hNOjQ-0007uz-Ax; Sun, 05 May 2019 21:31:36 +0000
-From: Colin King <colin.king@canonical.com>
-To: Felix Fietkau <nbd@nbd.name>, Roy Luo <royluo@google.com>,
- Kalle Valo <kvalo@codeaurora.org>,
- "David S . Miller" <davem@davemloft.net>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-wireless@vger.kernel.org,
- netdev@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-Subject: [PATCH][next] mt76: fix less than zero check on a u8 variable
-Date: Sun,  5 May 2019 22:31:35 +0100
-Message-Id: <20190505213135.3895-1-colin.king@canonical.com>
-X-Mailer: git-send-email 2.20.1
+ id 1hNRvm-0001Tu-NG; Mon, 06 May 2019 00:56:36 +0000
+X-UUID: ca3ab7d8f5e04c96b224a30dc74c9ff4-20190505
+X-UUID: ca3ab7d8f5e04c96b224a30dc74c9ff4-20190505
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 522310142; Sun, 05 May 2019 16:56:26 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 5 May 2019 17:56:24 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs01n1.mediatek.inc
+ (172.21.101.68) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 6 May 2019 08:56:22 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 6 May 2019 08:56:20 +0800
+Message-ID: <1557104180.26455.89.camel@mhfsdcap03>
+Subject: Re: [RFC PATCH v3 1/1] mtd: rawnand: mtk: Re-license MTK NAND
+ driver as Dual MIT/GPL
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: =?UTF-8?Q?Rafa=C5=82_Mi=C5=82ecki?= <rafal@milecki.pl>
+Date: Mon, 6 May 2019 08:56:20 +0800
+In-Reply-To: <79539034414767c95e456a79391a18e7@milecki.pl>
+References: <20190429085116.60081-1-xiaolei.li@mediatek.com>
+ <20190429085116.60081-2-xiaolei.li@mediatek.com>
+ <82cc648b1e92d5ed6876b025a2da1821@milecki.pl>
+ <1557047534.26455.81.camel@mhfsdcap03>
+ <79539034414767c95e456a79391a18e7@milecki.pl>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190505_143147_702414_9F788890 
-X-CRM114-Status: GOOD (  10.75  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190505_175634_771143_03304D25 
+X-CRM114-Status: GOOD (  16.39  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [91.189.89.112 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -59,50 +74,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kernel-janitors@vger.kernel.org, linux-kernel@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com,
+ srv_heupstream@mediatek.com, richard@nod.at, miquel.raynal@bootlin.com,
+ jorge.ramirez-ortiz@linaro.org, yingjoe.chen@mediatek.com,
+ boris.brezillon@collabora.com, linux-mtd@lists.infradead.org,
+ yellowriver2010@hotmail.com, matthias.bgg@gmail.com,
+ linux-mediatek@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Colin Ian King <colin.king@canonical.com>
-
-The signed return from the call to get_omac_idx is being assigned to the
-u8 variable mac_idx and then checked for a negative error condition
-which is always going to be false. Fix this by assigning the return to
-the int variable ret and checking this instead.
-
-Addresses-Coverity: ("Unsigned compared against 0")
-Fixes: 04b8e65922f6 ("mt76: add mac80211 driver for MT7615 PCIe-based chipsets")
-Signed-off-by: Colin Ian King <colin.king@canonical.com>
----
- drivers/net/wireless/mediatek/mt76/mt7615/main.c | 5 +++--
- 1 file changed, 3 insertions(+), 2 deletions(-)
-
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-index 80e6b211f60b..460d90d5ed6d 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-@@ -77,11 +77,12 @@ static int mt7615_add_interface(struct ieee80211_hw *hw,
- 		goto out;
- 	}
- 
--	mvif->omac_idx = get_omac_idx(vif->type, dev->omac_mask);
--	if (mvif->omac_idx < 0) {
-+	ret = get_omac_idx(vif->type, dev->omac_mask);
-+	if (ret < 0) {
- 		ret = -ENOSPC;
- 		goto out;
- 	}
-+	mvif->omac_idx = ret;
- 
- 	/* TODO: DBDC support. Use band 0 and wmm 0 for now */
- 	mvif->band_idx = 0;
--- 
-2.20.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgUmFmYWwsCgpPbiBTdW4sIDIwMTktMDUtMDUgYXQgMTc6MDYgKzAyMDAsIFJhZmHFgiBNacWC
+ZWNraSB3cm90ZToKPiBPbiAyMDE5LTA1LTA1IDExOjEyLCB4aWFvbGVpIGxpIHdyb3RlOgo+ID4g
+VXAgdG8gbm93LAo+ID4gWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+ICh0aGUg
+YXV0aG9yIGFuZCBtYWpvciAKPiA+IGNvbnRyaWJ1dG9yKSwKPiA+IEpvcmdlIFJhbWlyZXotT3J0
+aXogPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJvLm9yZz4gKHRoZSBhdXRob3IgYW5kCj4gPiBt
+YWpvciBjb250cmlidXRvciksCj4gPiBSeWRlciBMZWUgPHJ5ZGVyLmxlZUBtZWRpYXRlay5jb20+
+IChkZXZlbG9wZXIpLAo+ID4gUmFmYcWCIE1pxYJlY2tpIDxyYWZhbEBtaWxlY2tpLnBsPiAoZGV2
+ZWxvcGVyKQo+ID4gc2VudCBBQ0sgZm9yIHRoaXMgUkZDIHBhdGNoLgo+ID4gCj4gPiBNYXkgSSBh
+c2sgaWYgaXQgaXMgZW5vdWdoIHRvIGFjY2VwdCB0aGlzIGNoYW5nZT8gT3Igc2hvdWxkIEkgd2Fp
+dCBmb3IKPiA+IG90aGVyIGRldmVsb3BlcidzIHJlc3BvbnNlPwo+IAo+IEkgY2FuJ3QgaW1hZ2lu
+ZSByZS1saWNlbnNpbmcgc29tZW9uZSdzIHdvcmsgd2l0aG91dCBhIHBlcm1pc3Npb24uCgpJIGhh
+dmUgbm8gaW50ZW50aW9uIHRvIG9mZmVuZCBvdGhlcidzIGNvbnRyaWJ1dGlvbi4KVGhhdCBpcyB3
+aHkgSSBzZW50IHRoaXMgUkZDIHBhdGNoIHRvIGFzayBmb3IgQUNLcyBmcm9tIGNvbnRyaWJ1dG9y
+cy4KCj4gCj4gVGhlIGJlc3QgeW91IGNhbiBkbyBpcyBpZ25vcmluZyBjb250cmlidXRvcnMgdGhh
+dCBzdWJtaXR0ZWQgY2hhbmdlcyB0aGF0Cj4gYXJlbid0IHJlYWxseSBjb3B5cmlnaHRhYmxlIChz
+b21ldGhpbmcgbGlrZSBmaXhpbmcgYSBjb21tZW50IHR5cG8sIHNvbWUKPiBhdXRvLWdlbmVyYXRl
+ZCBkaWZmLXMpLgo+IAo+IEkgdXNlZCBmb2xsb3dpbmcgY29tbWFuZCB0byBjaGVjayBtdGtfbmFu
+ZC5jIGZpbGUgaGlzdG9yeToKPiAjIGdpdCBsb2cgLS1mb2xsb3cgZHJpdmVycy9tdGQvbmFuZC9y
+YXcvbXRrX25hbmQuYyB8IGdyZXAgCj4gIlNpZ25lZC1vZmYtYnkiIHwgc29ydCB8IHVuaXEgLWMg
+fCBzb3J0IC1yIC1uCj4gICAgICAgMTkgICAgIFNpZ25lZC1vZmYtYnk6IE1pcXVlbCBSYXluYWwg
+PG1pcXVlbC5yYXluYWxAYm9vdGxpbi5jb20+Cj4gICAgICAgMTggICAgIFNpZ25lZC1vZmYtYnk6
+IEJvcmlzIEJyZXppbGxvbiA8Ym9yaXMuYnJlemlsbG9uQGJvb3RsaW4uY29tPgo+ICAgICAgIDE1
+ICAgICBTaWduZWQtb2ZmLWJ5OiBCb3JpcyBCcmV6aWxsb24gCj4gPGJvcmlzLmJyZXppbGxvbkBm
+cmVlLWVsZWN0cm9ucy5jb20+Cj4gICAgICAgIDYgICAgIFNpZ25lZC1vZmYtYnk6IFhpYW9sZWkg
+TGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPgo+ICAgICAgICAzICAgICBTaWduZWQtb2ZmLWJ5
+OiBSb2dlckNDIExpbiA8cm9nZXJjYy5saW5AbWVkaWF0ZWsuY29tPgo+ICAgICAgICAyICAgICBT
+aWduZWQtb2ZmLWJ5OiBNaXF1ZWwgUmF5bmFsIAo+IDxtaXF1ZWwucmF5bmFsQGZyZWUtZWxlY3Ry
+b25zLmNvbT4KPiAgICAgICAgMSAgICAgU2lnbmVkLW9mZi1ieTogV2VpIFlvbmdqdW4gPHdlaXlv
+bmdqdW4xQGh1YXdlaS5jb20+Cj4gICAgICAgIDEgICAgIFNpZ25lZC1vZmYtYnk6IFJ5ZGVyIExl
+ZSA8cnlkZXIubGVlQG1lZGlhdGVrLmNvbT4KPiAgICAgICAgMSAgICAgU2lnbmVkLW9mZi1ieTog
+UmFmYcWCIE1pxYJlY2tpIDxyYWZhbEBtaWxlY2tpLnBsPgo+ICAgICAgICAxICAgICBTaWduZWQt
+b2ZmLWJ5OiBQZXRlciBQYW4gPHBldGVycGFuZG9uZ0BtaWNyb24uY29tPgo+ICAgICAgICAxICAg
+ICBTaWduZWQtb2ZmLWJ5OiBNYXNhaGlybyBZYW1hZGEgCj4gPHlhbWFkYS5tYXNhaGlyb0Bzb2Np
+b25leHQuY29tPgo+ICAgICAgICAxICAgICBTaWduZWQtb2ZmLWJ5OiBKb3JnZSBSYW1pcmV6LU9y
+dGl6IAo+IDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5vcmc+Cj4gCj4gSWRlYWxseSB5b3Ug
+c2hvdWxkIHN0aWxsIGdldCBhY2tzIGZyb206Cj4gCj4gMSkgTWlxdWVsCj4gQ29udHJpYnV0b3Ig
+b2YgMjEgY2hhbmdlcwo+IAo+IDIpIEJvcmlzCj4gQ29udHJpYnV0b3Igb2YgMzMgY2hhbmdlcwo+
+IAo+IDMpIFJvZ2VyQ0MKPiBDb250cmlidXRvciBvZiAzIGNoYW5nZXM6Cj4gOThkZWE4ZDcxOTMx
+ICgibXRkOiBuYW5kOiBtdGs6IFN1cHBvcnQgTVQ3NjIyIE5BTkQgZmxhc2ggY29udHJvbGxlci4i
+KQo+IGI0NWVlNTUwMWVkZSAoIm10ZDogbmFuZDogbXRrOiBTdXBwb3J0IGRpZmZlcmVudCBNVEsg
+TkFORCBmbGFzaCAKPiBjb250cm9sbGVyIElQIikKPiA1NTllNThlN2VkMmQgKCJtdGQ6IG5hbmQ6
+IGZpeCBjaGFuY2VzIHRvIGNyZWF0ZSBpbmNvbXBsZXRlIEVDQyBkYXRhIHdoZW4gCj4gd3JpdGlu
+ZyIpCj4gCj4gNCkgV2VpCj4gQ29udHJpYnV0b3Igb2YgMSBjaGFuZ2U6Cj4gMDdmNzY0NDNlZjgx
+ICgibXRkOiBuYW5kOiBtZWRpYXRlazogcmVtb3ZlIHJlZHVuZGFudCBkZXZfZXJyIGNhbGwgaW4g
+Cj4gbXRrX25mY19wcm9iZSgpIikKPiAKPiA1KSBQZXRlcgo+IENvbnRyaWJ1dG9yIG9mIDEgY2hh
+bmdlOgo+IGQ0MDkyZDc2YTRhNCAoIm10ZDogbmFuZDogUmVuYW1lIG5hbmQuaCBpbnRvIHJhd25h
+bmQuaCIpCj4gCj4gNikgTWFzYWhpcm8KPiBDb250cmlidXRvciBvZiAxIGNoYW5nZToKPiBmMGRi
+ZTRhYTM1ZTcgKCJtdGQ6IG5hbmQ6IG1lZGlhdGVrOiByZXR1cm4gZXJyb3IgY29kZSBvZiAKPiBu
+YW5kX3NjYW5faWRlbnQvdGFpbCgpIG9uIGVycm9yIikKPiAKPiBJIGd1ZXNzIHdlIGNvdWxkIGFj
+Y2VwdCB5b3VyIHBhdGNoIHdpdGhvdXQgYWNrcyBmcm9tIFdlaSwgUGV0ZXIgYW5kIAo+IE1hc2Fo
+aXJvLgo+IAo+IFlvdSBkZWZpbml0ZWx5IG5lZWQgYW4gYXBwcm92YWwgZnJvbSBNaXF1ZWwsIEJv
+cmlzIGFuZCBSb2dlckNDLgo+IAo+IEl0IGRvZXNuJ3Qgc2VlbSB5b3UgdG9vayB0aGlzIHJlLWxp
+Y2Vuc2luZyB0YXNrIHRvbyBzZXJpb3VzbHkuCj4gCj4gUGxlYXNlIHBheSBtb3JlIGF0dGVudGlv
+biB0byB0aGlzIGxpY2Vuc2luZyBwcm9ibGVtLCB5b3UgY2FuIHN0YXJ0IHdpdGggCj4gZG9pbmcK
+PiBhIHNpbWlsYXIgcmVzZWFyY2ggZm9yIG10a19lY2MuYyBhbmQgbXRrX2VjYy5oLgoKVGhhbmtz
+IGZvciB5b3VyIEFDSyBhbmQgZ29vZCBzdWdnZXN0aW9uLiBJdCBpcyByZWFsbHkgaGVscGZ1bCBm
+b3IgbWUuCgpUaGFua3MsClhpYW9sZWkKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0
+ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFu
+L2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
