@@ -2,67 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 76BD514342
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 02:56:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A6BF51435F
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 03:41:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0HLreLLbc/BDoTxKyijcIV5K+nZPieG7XtlPFq0Rjw0=; b=dYciGijATlSV6v
-	bfmO4jmtwCAlZprsh1K++4MI4weWRAq8RF/HABbttBYoaOXiG5SXM7zDiOnQCyo+y6Fjx8pcDev6t
-	GvmvLPFJiOl1oTKERuwgMtLJXEnBLxCIgSrsuB1dHxXxHQOcmc9ZX7pnG7ANaJRTbrmWRd/X1uiPD
-	AMMKHzJbhhJz52cpDs3X+vPw+cbLzap6DinlEXDTUmWkLTSMAhApdODvNA1BSmmArVf2O/48szFIR
-	8nesyMZW5Ruxq8YiDO2U8CcDpFNaZtsxurCztYnodO4VRZyYaf7t7UhHKnUj+eyc4Pp7TpofLMhHQ
-	uzkNytKSAuoehiYqGhXQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=0VbfDn3atIrm08cprYCLINfDQQmDS4C6NYjjFvhgK8s=; b=Wzo4AI3iL/n8WkDbK1KIx8Ndk
+	aIvj822gH2PzoG53BJqjC1AVrY16UF1Y96CgHHd+dawViL9qZDQ65qtO67TohQ712e/jF4mPOrlUa
+	rdxQLxOnYU3MSGZhfRdwjzP08welBDu4hbnd3SgYOkH32H5B+pKUUdPYKLqMGd7ws2IHGJXhDSv80
+	tt/GwG+ZVmwXmLlECS2eZgrUWBOXdXlecqFphrMDoqqxXmMmVtScnE4c1DRfRHcxMZ4w5Jk2TzLFc
+	NgRzGwg1nY+GY/Y1iRNDVjc8KAtQuMkcPZU0hcEbEWryfB9eDYKF+pKnm4HABmDRZe9Q06cqWLDXl
+	jLO9Eqqzw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNRvq-0001UM-JM; Mon, 06 May 2019 00:56:38 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hNSdR-0005xt-He; Mon, 06 May 2019 01:41:41 +0000
+Received: from mga14.intel.com ([192.55.52.115])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNRvm-0001Tu-NG; Mon, 06 May 2019 00:56:36 +0000
-X-UUID: ca3ab7d8f5e04c96b224a30dc74c9ff4-20190505
-X-UUID: ca3ab7d8f5e04c96b224a30dc74c9ff4-20190505
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <xiaolei.li@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 522310142; Sun, 05 May 2019 16:56:26 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 May 2019 17:56:24 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs01n1.mediatek.inc
- (172.21.101.68) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 6 May 2019 08:56:22 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 6 May 2019 08:56:20 +0800
-Message-ID: <1557104180.26455.89.camel@mhfsdcap03>
-Subject: Re: [RFC PATCH v3 1/1] mtd: rawnand: mtk: Re-license MTK NAND
- driver as Dual MIT/GPL
-From: xiaolei li <xiaolei.li@mediatek.com>
-To: =?UTF-8?Q?Rafa=C5=82_Mi=C5=82ecki?= <rafal@milecki.pl>
-Date: Mon, 6 May 2019 08:56:20 +0800
-In-Reply-To: <79539034414767c95e456a79391a18e7@milecki.pl>
-References: <20190429085116.60081-1-xiaolei.li@mediatek.com>
- <20190429085116.60081-2-xiaolei.li@mediatek.com>
- <82cc648b1e92d5ed6876b025a2da1821@milecki.pl>
- <1557047534.26455.81.camel@mhfsdcap03>
- <79539034414767c95e456a79391a18e7@milecki.pl>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hNSdN-0005wS-1W; Mon, 06 May 2019 01:41:38 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga008.fm.intel.com ([10.253.24.58])
+ by fmsmga103.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 05 May 2019 18:41:29 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.60,435,1549958400"; d="scan'208";a="146639249"
+Received: from allen-box.sh.intel.com (HELO [10.239.159.136])
+ ([10.239.159.136])
+ by fmsmga008.fm.intel.com with ESMTP; 05 May 2019 18:41:24 -0700
+Subject: Re: [RFC 6/7] iommu/vt-d: convert the intel iommu driver to the
+ dma-iommu ops api
+To: Tom Murphy <tmurphy@arista.com>
+References: <20190504132327.27041-1-tmurphy@arista.com>
+ <20190504132327.27041-7-tmurphy@arista.com>
+ <602b77a2-9c68-ad14-b64f-904a7ff27a15@linux.intel.com>
+ <CAPL0++57nyLYP1fq=-6zvNS0z_iCqjWLbQ1MsG5F60ODkmRCQQ@mail.gmail.com>
+From: Lu Baolu <baolu.lu@linux.intel.com>
+Message-ID: <2419e94d-bfdb-e70d-bbfd-425671886e99@linux.intel.com>
+Date: Mon, 6 May 2019 09:34:59 +0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <CAPL0++57nyLYP1fq=-6zvNS0z_iCqjWLbQ1MsG5F60ODkmRCQQ@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190505_175634_771143_03304D25 
-X-CRM114-Status: GOOD (  16.39  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190505_184137_103811_C62A7CCB 
+X-CRM114-Status: GOOD (  21.61  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.115 listed in list.dnswl.org]
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,74 +68,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com,
- srv_heupstream@mediatek.com, richard@nod.at, miquel.raynal@bootlin.com,
- jorge.ramirez-ortiz@linaro.org, yingjoe.chen@mediatek.com,
- boris.brezillon@collabora.com, linux-mtd@lists.infradead.org,
- yellowriver2010@hotmail.com, matthias.bgg@gmail.com,
- linux-mediatek@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Heiko Stuebner <heiko@sntech.de>, kvm@vger.kernel.org,
+ Will Deacon <will.deacon@arm.com>, David Brown <david.brown@linaro.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ iommu@lists.linux-foundation.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Kukjin Kim <kgene@kernel.org>, linux-arm-kernel@lists.infradead.org,
+ Andy Gross <andy.gross@linaro.org>, linux-tegra@vger.kernel.org,
+ Marc Zyngier <marc.zyngier@arm.com>, linux-arm-msm@vger.kernel.org,
+ Alex Williamson <alex.williamson@redhat.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Robin Murphy <robin.murphy@arm.com>, linux-kernel@vger.kernel.org,
+ Tom Murphy <murphyt7@tcd.ie>, Rob Clark <robdclark@gmail.com>,
+ David Woodhouse <dwmw2@infradead.org>, baolu.lu@linux.intel.com
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgUmFmYWwsCgpPbiBTdW4sIDIwMTktMDUtMDUgYXQgMTc6MDYgKzAyMDAsIFJhZmHFgiBNacWC
-ZWNraSB3cm90ZToKPiBPbiAyMDE5LTA1LTA1IDExOjEyLCB4aWFvbGVpIGxpIHdyb3RlOgo+ID4g
-VXAgdG8gbm93LAo+ID4gWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+ICh0aGUg
-YXV0aG9yIGFuZCBtYWpvciAKPiA+IGNvbnRyaWJ1dG9yKSwKPiA+IEpvcmdlIFJhbWlyZXotT3J0
-aXogPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJvLm9yZz4gKHRoZSBhdXRob3IgYW5kCj4gPiBt
-YWpvciBjb250cmlidXRvciksCj4gPiBSeWRlciBMZWUgPHJ5ZGVyLmxlZUBtZWRpYXRlay5jb20+
-IChkZXZlbG9wZXIpLAo+ID4gUmFmYcWCIE1pxYJlY2tpIDxyYWZhbEBtaWxlY2tpLnBsPiAoZGV2
-ZWxvcGVyKQo+ID4gc2VudCBBQ0sgZm9yIHRoaXMgUkZDIHBhdGNoLgo+ID4gCj4gPiBNYXkgSSBh
-c2sgaWYgaXQgaXMgZW5vdWdoIHRvIGFjY2VwdCB0aGlzIGNoYW5nZT8gT3Igc2hvdWxkIEkgd2Fp
-dCBmb3IKPiA+IG90aGVyIGRldmVsb3BlcidzIHJlc3BvbnNlPwo+IAo+IEkgY2FuJ3QgaW1hZ2lu
-ZSByZS1saWNlbnNpbmcgc29tZW9uZSdzIHdvcmsgd2l0aG91dCBhIHBlcm1pc3Npb24uCgpJIGhh
-dmUgbm8gaW50ZW50aW9uIHRvIG9mZmVuZCBvdGhlcidzIGNvbnRyaWJ1dGlvbi4KVGhhdCBpcyB3
-aHkgSSBzZW50IHRoaXMgUkZDIHBhdGNoIHRvIGFzayBmb3IgQUNLcyBmcm9tIGNvbnRyaWJ1dG9y
-cy4KCj4gCj4gVGhlIGJlc3QgeW91IGNhbiBkbyBpcyBpZ25vcmluZyBjb250cmlidXRvcnMgdGhh
-dCBzdWJtaXR0ZWQgY2hhbmdlcyB0aGF0Cj4gYXJlbid0IHJlYWxseSBjb3B5cmlnaHRhYmxlIChz
-b21ldGhpbmcgbGlrZSBmaXhpbmcgYSBjb21tZW50IHR5cG8sIHNvbWUKPiBhdXRvLWdlbmVyYXRl
-ZCBkaWZmLXMpLgo+IAo+IEkgdXNlZCBmb2xsb3dpbmcgY29tbWFuZCB0byBjaGVjayBtdGtfbmFu
-ZC5jIGZpbGUgaGlzdG9yeToKPiAjIGdpdCBsb2cgLS1mb2xsb3cgZHJpdmVycy9tdGQvbmFuZC9y
-YXcvbXRrX25hbmQuYyB8IGdyZXAgCj4gIlNpZ25lZC1vZmYtYnkiIHwgc29ydCB8IHVuaXEgLWMg
-fCBzb3J0IC1yIC1uCj4gICAgICAgMTkgICAgIFNpZ25lZC1vZmYtYnk6IE1pcXVlbCBSYXluYWwg
-PG1pcXVlbC5yYXluYWxAYm9vdGxpbi5jb20+Cj4gICAgICAgMTggICAgIFNpZ25lZC1vZmYtYnk6
-IEJvcmlzIEJyZXppbGxvbiA8Ym9yaXMuYnJlemlsbG9uQGJvb3RsaW4uY29tPgo+ICAgICAgIDE1
-ICAgICBTaWduZWQtb2ZmLWJ5OiBCb3JpcyBCcmV6aWxsb24gCj4gPGJvcmlzLmJyZXppbGxvbkBm
-cmVlLWVsZWN0cm9ucy5jb20+Cj4gICAgICAgIDYgICAgIFNpZ25lZC1vZmYtYnk6IFhpYW9sZWkg
-TGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPgo+ICAgICAgICAzICAgICBTaWduZWQtb2ZmLWJ5
-OiBSb2dlckNDIExpbiA8cm9nZXJjYy5saW5AbWVkaWF0ZWsuY29tPgo+ICAgICAgICAyICAgICBT
-aWduZWQtb2ZmLWJ5OiBNaXF1ZWwgUmF5bmFsIAo+IDxtaXF1ZWwucmF5bmFsQGZyZWUtZWxlY3Ry
-b25zLmNvbT4KPiAgICAgICAgMSAgICAgU2lnbmVkLW9mZi1ieTogV2VpIFlvbmdqdW4gPHdlaXlv
-bmdqdW4xQGh1YXdlaS5jb20+Cj4gICAgICAgIDEgICAgIFNpZ25lZC1vZmYtYnk6IFJ5ZGVyIExl
-ZSA8cnlkZXIubGVlQG1lZGlhdGVrLmNvbT4KPiAgICAgICAgMSAgICAgU2lnbmVkLW9mZi1ieTog
-UmFmYcWCIE1pxYJlY2tpIDxyYWZhbEBtaWxlY2tpLnBsPgo+ICAgICAgICAxICAgICBTaWduZWQt
-b2ZmLWJ5OiBQZXRlciBQYW4gPHBldGVycGFuZG9uZ0BtaWNyb24uY29tPgo+ICAgICAgICAxICAg
-ICBTaWduZWQtb2ZmLWJ5OiBNYXNhaGlybyBZYW1hZGEgCj4gPHlhbWFkYS5tYXNhaGlyb0Bzb2Np
-b25leHQuY29tPgo+ICAgICAgICAxICAgICBTaWduZWQtb2ZmLWJ5OiBKb3JnZSBSYW1pcmV6LU9y
-dGl6IAo+IDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5vcmc+Cj4gCj4gSWRlYWxseSB5b3Ug
-c2hvdWxkIHN0aWxsIGdldCBhY2tzIGZyb206Cj4gCj4gMSkgTWlxdWVsCj4gQ29udHJpYnV0b3Ig
-b2YgMjEgY2hhbmdlcwo+IAo+IDIpIEJvcmlzCj4gQ29udHJpYnV0b3Igb2YgMzMgY2hhbmdlcwo+
-IAo+IDMpIFJvZ2VyQ0MKPiBDb250cmlidXRvciBvZiAzIGNoYW5nZXM6Cj4gOThkZWE4ZDcxOTMx
-ICgibXRkOiBuYW5kOiBtdGs6IFN1cHBvcnQgTVQ3NjIyIE5BTkQgZmxhc2ggY29udHJvbGxlci4i
-KQo+IGI0NWVlNTUwMWVkZSAoIm10ZDogbmFuZDogbXRrOiBTdXBwb3J0IGRpZmZlcmVudCBNVEsg
-TkFORCBmbGFzaCAKPiBjb250cm9sbGVyIElQIikKPiA1NTllNThlN2VkMmQgKCJtdGQ6IG5hbmQ6
-IGZpeCBjaGFuY2VzIHRvIGNyZWF0ZSBpbmNvbXBsZXRlIEVDQyBkYXRhIHdoZW4gCj4gd3JpdGlu
-ZyIpCj4gCj4gNCkgV2VpCj4gQ29udHJpYnV0b3Igb2YgMSBjaGFuZ2U6Cj4gMDdmNzY0NDNlZjgx
-ICgibXRkOiBuYW5kOiBtZWRpYXRlazogcmVtb3ZlIHJlZHVuZGFudCBkZXZfZXJyIGNhbGwgaW4g
-Cj4gbXRrX25mY19wcm9iZSgpIikKPiAKPiA1KSBQZXRlcgo+IENvbnRyaWJ1dG9yIG9mIDEgY2hh
-bmdlOgo+IGQ0MDkyZDc2YTRhNCAoIm10ZDogbmFuZDogUmVuYW1lIG5hbmQuaCBpbnRvIHJhd25h
-bmQuaCIpCj4gCj4gNikgTWFzYWhpcm8KPiBDb250cmlidXRvciBvZiAxIGNoYW5nZToKPiBmMGRi
-ZTRhYTM1ZTcgKCJtdGQ6IG5hbmQ6IG1lZGlhdGVrOiByZXR1cm4gZXJyb3IgY29kZSBvZiAKPiBu
-YW5kX3NjYW5faWRlbnQvdGFpbCgpIG9uIGVycm9yIikKPiAKPiBJIGd1ZXNzIHdlIGNvdWxkIGFj
-Y2VwdCB5b3VyIHBhdGNoIHdpdGhvdXQgYWNrcyBmcm9tIFdlaSwgUGV0ZXIgYW5kIAo+IE1hc2Fo
-aXJvLgo+IAo+IFlvdSBkZWZpbml0ZWx5IG5lZWQgYW4gYXBwcm92YWwgZnJvbSBNaXF1ZWwsIEJv
-cmlzIGFuZCBSb2dlckNDLgo+IAo+IEl0IGRvZXNuJ3Qgc2VlbSB5b3UgdG9vayB0aGlzIHJlLWxp
-Y2Vuc2luZyB0YXNrIHRvbyBzZXJpb3VzbHkuCj4gCj4gUGxlYXNlIHBheSBtb3JlIGF0dGVudGlv
-biB0byB0aGlzIGxpY2Vuc2luZyBwcm9ibGVtLCB5b3UgY2FuIHN0YXJ0IHdpdGggCj4gZG9pbmcK
-PiBhIHNpbWlsYXIgcmVzZWFyY2ggZm9yIG10a19lY2MuYyBhbmQgbXRrX2VjYy5oLgoKVGhhbmtz
-IGZvciB5b3VyIEFDSyBhbmQgZ29vZCBzdWdnZXN0aW9uLiBJdCBpcyByZWFsbHkgaGVscGZ1bCBm
-b3IgbWUuCgpUaGFua3MsClhpYW9sZWkKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0
-ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFu
-L2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+Hi,
+
+On 5/6/19 1:03 AM, Tom Murphy wrote:
+> On Sun, May 5, 2019 at 3:44 AM Lu Baolu<baolu.lu@linux.intel.com>  wrote:
+>> Hi,
+>>
+>> On 5/4/19 9:23 PM, Tom Murphy wrote:
+>>> static int intel_iommu_add_device(struct device *dev)
+>>>    {
+>>> +     struct dmar_domain *dmar_domain;
+>>> +     struct iommu_domain *domain;
+>>>        struct intel_iommu *iommu;
+>>>        struct iommu_group *group;
+>>> -     struct iommu_domain *domain;
+>>> +     dma_addr_t base;
+>>>        u8 bus, devfn;
+>>>
+>>>        iommu = device_to_iommu(dev, &bus, &devfn);
+>>> @@ -4871,9 +4514,12 @@ static int intel_iommu_add_device(struct device *dev)
+>>>        if (IS_ERR(group))
+>>>                return PTR_ERR(group);
+>>>
+>>> +     base = IOVA_START_PFN << VTD_PAGE_SHIFT;
+>>>        domain = iommu_get_domain_for_dev(dev);
+>>> +     dmar_domain = to_dmar_domain(domain);
+>>>        if (domain->type == IOMMU_DOMAIN_DMA)
+>>> -             dev->dma_ops = &intel_dma_ops;
+>>> +             iommu_setup_dma_ops(dev, base,
+>>> +                             __DOMAIN_MAX_ADDR(dmar_domain->gaw) - base);
+>> I didn't find the implementation of iommu_setup_dma_ops() in this
+>> series. Will the iova resource be initialized in this function?
+> Ah sorry, I should've mentioned this is based on the
+> http://git.infradead.org/users/hch/misc.git/shortlog/refs/heads/dma-iommu-ops.3
+> branch with the "iommu/vt-d: Delegate DMA domain to generic iommu" and
+> "iommu/amd: Convert the AMD iommu driver to the dma-iommu api" patch
+> sets applied.
+> 
+>> If so, will this block iommu_group_create_direct_mappings() which
+>> reserves and maps the reserved iova ranges.
+> The reserved regions will be reserved by the
+> iova_reserve_iommu_regions function instead:
+> (https://github.com/torvalds/linux/blob/6203838dec05352bc357625b1e9ba0a10d3bca35/drivers/iommu/dma-iommu.c#L238
+> )
+> iommu_setup_dma_ops calls iommu_dma_init_domain which calls
+> iova_reserve_iommu_regions.
+> iommu_group_create_direct_mappings will still execute normally but it
+> won't be able to call the intel_iommu_apply_resv_region function
+> because it's been removed in this patchset.
+> This shouldn't change any behavior and the same regions should be reserved.
+> 
+
+Okay, I understand it now. Thanks for the explanation.
+
+Best regards,
+Lu Baolu
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
