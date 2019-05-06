@@ -2,62 +2,90 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 52760144F7
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 09:06:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 26EAA145AC
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 09:59:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=piWVS8hji3ELaof8LyGf5opyUSCg1b79yU8X7QPrvMs=; b=qx4/Pj7mf5vBhnvQ1sUm+RnVn+
-	1IEeFcZsFM2BRzdlJ6xBcd1g0mpITSa4c3zpT70DxnWKfI5loZqjIcERACPi1OcdMdYLKdhmsMFq1
-	1r0fobRXcAlGHa+Z9/+3qmCZMq+8ueKV6psVGfiLEky7wfzLDhiX7wBwDAtJ0X+nwzOqCq/fykRGk
-	Tszaim8WJqHgUmoEy9jioEnA0BZgwAInqBnIagcorcW/xhHAQ3qu3UglkAX4xTA54XsBVZ7IZwg14
-	KBf65tDpNFxD6tbNHrKrybQakrfxRjOA12W/3XbaA2Pss9AgkDKh3i/14HcOco3O7qidyYyaHWEKx
-	j2VBbVwg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4qMSN3dc3QEsaO2iHfni5L+Fpd5q1GOVDh9ZkAfzvP8=; b=UyAxjfRDs9u5Bm
+	0VH2V9sctHjqcFBRzjets3T0gI+uCi47SllzmFufgk0PyUo3s1IJHArgJV2Kpy23fggCbg2P/Al2j
+	VLx1YooLcZkTjx9k1CH8FBgF2OmuxS+VB31wqSRXE5CljmC1O65N3Tl7d8wLKJs/eyqmfIn+0M9zT
+	AgorYl/DQUL/d1aw/WKFC1q8+kRIcxSKg3ajV1tEfk9kLPmhry/lB9MYMdxCbcJgqvBMyI39Sm9eD
+	gEfyMSHxsuOIZw5Cw0mlSrY8jHxPkyCDgea2yNjcpJh6ST/ak+kOiD37B4qegvq1F/JJ3diXB99E1
+	myH5dds6L9ZYH2y1IbKw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNXhM-0001IN-PI; Mon, 06 May 2019 07:06:04 +0000
-Received: from mxhk.zte.com.cn ([63.217.80.70])
+	id 1hNYXN-0003MO-BO; Mon, 06 May 2019 07:59:49 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNXh2-000808-13; Mon, 06 May 2019 07:05:45 +0000
-Received: from mse-fl1.zte.com.cn (unknown [10.30.14.238])
- by Forcepoint Email with ESMTPS id DA82BDDDD39076BBC7BB;
- Mon,  6 May 2019 15:03:30 +0800 (CST)
-Received: from notes_smtp.zte.com.cn ([10.30.1.239])
- by mse-fl1.zte.com.cn with ESMTP id x4673Q2e021653;
- Mon, 6 May 2019 15:03:26 +0800 (GMT-8)
- (envelope-from wen.yang99@zte.com.cn)
-Received: from fox-host8.localdomain ([10.74.120.8])
- by szsmtp06.zte.com.cn (Lotus Domino Release 8.5.3FP6)
- with ESMTP id 2019050615033055-10027950 ;
- Mon, 6 May 2019 15:03:30 +0800 
-From: Wen Yang <wen.yang99@zte.com.cn>
-To: linux-kernel@vger.kernel.org
-Subject: [PATCH 3/4] media: mtk-vcodec: fix leaked of_node references
-Date: Mon, 6 May 2019 15:05:17 +0800
-Message-Id: <1557126318-21487-4-git-send-email-wen.yang99@zte.com.cn>
-X-Mailer: git-send-email 1.8.3.1
-In-Reply-To: <1557126318-21487-1-git-send-email-wen.yang99@zte.com.cn>
-References: <1557126318-21487-1-git-send-email-wen.yang99@zte.com.cn>
-X-MIMETrack: Itemize by SMTP Server on SZSMTP06/server/zte_ltd(Release
- 8.5.3FP6|November 21, 2013) at 2019-05-06 15:03:30,
- Serialize by Router on notes_smtp/zte_ltd(Release 9.0.1FP7|August  17, 2016) at
- 2019-05-06 15:03:24, Serialize complete at 2019-05-06 15:03:24
-X-MAIL: mse-fl1.zte.com.cn x4673Q2e021653
+ id 1hNYXE-0003Fs-Fw; Mon, 06 May 2019 07:59:41 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id CB3E460DA8; Mon,  6 May 2019 07:59:38 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557129578;
+ bh=NMarB24NYlqwYKYppR0+S1WNXUCddPdMFLRiI09z0ms=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=S9wBSr0a+TQBG7xwfbdOrrv1ahXoiDudhF6XkCXpTt/CW9pqbvjWbczmdmJNR0MYc
+ 2/kdA7onz3mXKfh302yaLeXlkLoadd0mBVlhFR31R7df8rrS/KzZ3SWKRPkQrlBzc7
+ xx7pQXs+bEF84B2H5G/cwYWGPraloPEoHiQfWWA4=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from x230.qca.qualcomm.com (37-136-65-53.rev.dnainternet.fi
+ [37.136.65.53])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 81E6460770;
+ Mon,  6 May 2019 07:59:33 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557129578;
+ bh=NMarB24NYlqwYKYppR0+S1WNXUCddPdMFLRiI09z0ms=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=S9wBSr0a+TQBG7xwfbdOrrv1ahXoiDudhF6XkCXpTt/CW9pqbvjWbczmdmJNR0MYc
+ 2/kdA7onz3mXKfh302yaLeXlkLoadd0mBVlhFR31R7df8rrS/KzZ3SWKRPkQrlBzc7
+ xx7pQXs+bEF84B2H5G/cwYWGPraloPEoHiQfWWA4=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 81E6460770
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
+Subject: Re: [PATCH v4 07/10] net: wireless: support of_get_mac_address new
+ ERR_PTR error
+References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
+ <1556893635-18549-8-git-send-email-ynezz@true.cz>
+Date: Mon, 06 May 2019 10:59:29 +0300
+In-Reply-To: <1556893635-18549-8-git-send-email-ynezz@true.cz> ("Petr
+ \=\?utf-8\?Q\?\=C5\=A0tetiar\=22's\?\= message of "Fri,
+ 3 May 2019 16:27:12 +0200")
+Message-ID: <878svkvwri.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190506_000544_219980_FCE38139 
-X-CRM114-Status: GOOD (  12.82  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190506_005940_558991_3854BC10 
+X-CRM114-Status: GOOD (  13.34  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [63.217.80.70 listed in list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -69,58 +97,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wang.yi59@zte.com.cn, Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Tiffany Lin <tiffany.lin@mediatek.com>, linux-mediatek@lists.infradead.org,
+Cc: devicetree@vger.kernel.org, Florian Fainelli <f.fainelli@gmail.com>,
+ Stanislaw Gruszka <sgruszka@redhat.com>, Andrew Lunn <andrew@lunn.ch>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org,
+ QCA ath9k Development <ath9k-devel@qca.qualcomm.com>,
+ Helmut Schaa <helmut.schaa@googlemail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>, Wen Yang <wen.yang99@zte.com.cn>,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ linux-mediatek@lists.infradead.org, Heiner Kallweit <hkallweit1@gmail.com>,
+ Frank Rowand <frowand.list@gmail.com>, "David S. Miller" <davem@davemloft.net>,
+ linux-kernel@vger.kernel.org, Felix Fietkau <nbd@nbd.name>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The call to of_find_device_by_node returns a node pointer with refcount
-incremented thus it must be explicitly decremented after the last
-usage.
-
-Detected by coccinelle with the following warnings:
-drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c:60:3-9: ERROR: missing of_node_put; acquired a node pointer with refcount incremented on line 38, but without a corresponding object release within this function.
-drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c:63:2-8: ERROR: missing of_node_put; acquired a node pointer with refcount incremented on line 38, but without a corresponding object release within this function.
-drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c:72:3-9: ERROR: missing of_node_put; acquired a node pointer with refcount incremented on line 38, but without a corresponding object release within this function.
-
-Signed-off-by: Wen Yang <wen.yang99@zte.com.cn>
-Cc: Tiffany Lin <tiffany.lin@mediatek.com>
-Cc: Andrew-CT Chen <andrew-ct.chen@mediatek.com>
-Cc: Mauro Carvalho Chehab <mchehab@kernel.org>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>
-Cc: linux-media@vger.kernel.org
-Cc: linux-arm-kernel@lists.infradead.org
-Cc: linux-mediatek@lists.infradead.org
-Cc: linux-kernel@vger.kernel.org
----
- drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c
-index 7884465..11c45c5 100644
---- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c
-+++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c
-@@ -42,8 +42,8 @@ int mtk_vcodec_init_dec_pm(struct mtk_vcodec_dev *mtkdev)
- 	}
- 
- 	pdev = of_find_device_by_node(node);
-+	of_node_put(node);
- 	if (WARN_ON(!pdev)) {
--		of_node_put(node);
- 		return -1;
- 	}
- 	pm->larbvdec = &pdev->dev;
--- 
-2.9.5
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+UGV0ciDFoHRldGlhciA8eW5lenpAdHJ1ZS5jej4gd3JpdGVzOgoKPiBUaGVyZSB3YXMgTlZNRU0g
+c3VwcG9ydCBhZGRlZCB0byBvZl9nZXRfbWFjX2FkZHJlc3MsIHNvIGl0IGNvdWxkIG5vdyByZXR1
+cm4KPiBFUlJfUFRSIGVuY29kZWQgZXJyb3IgdmFsdWVzLCBzbyB3ZSBuZWVkIHRvIGFkanVzdCBh
+bGwgY3VycmVudCB1c2VycyBvZgo+IG9mX2dldF9tYWNfYWRkcmVzcyB0byB0aGlzIG5ldyBmYWN0
+Lgo+Cj4gU2lnbmVkLW9mZi1ieTogUGV0ciDFoHRldGlhciA8eW5lenpAdHJ1ZS5jej4KPiAtLS0K
+Pgo+ICBDaGFuZ2VzIHNpbmNlIHYzOgo+Cj4gICAqIElTX0VSUl9PUl9OVUxMIC0+IElTX0VSUgo+
+Cj4gIGRyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGg5ay9pbml0LmMgICAgICAgICAgfCAyICst
+Cj4gIGRyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvZWVwcm9tLmMgICAgfCAyICst
+Cj4gIGRyaXZlcnMvbmV0L3dpcmVsZXNzL3JhbGluay9ydDJ4MDAvcnQyeDAwZGV2LmMgfCAyICst
+Cj4gIDMgZmlsZXMgY2hhbmdlZCwgMyBpbnNlcnRpb25zKCspLCAzIGRlbGV0aW9ucygtKQoKVmlh
+IHdoaWNoIHRyZWUgaXMgdGhpcyBzdXBwb3NlZCB0byBnbz8gSW4gY2FzZSBzb21ldGhpbmcgZWxz
+ZSB0aGFuIG15CndpcmVsZXNzLWRyaXZlcnMtbmV4dDoKCkFja2VkLWJ5OiBLYWxsZSBWYWxvIDxr
+dmFsb0Bjb2RlYXVyb3JhLm9yZz4KCi0tIApLYWxsZSBWYWxvCgpfX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QK
+TGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFk
+Lm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
