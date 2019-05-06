@@ -2,64 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C815E14443
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 07:26:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8FCB144F8
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 09:06:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Y+FgtVViAzw6JmGwtPF+AZUGwZqo9U4xHsPXRANbqd4=; b=J72agz+qTFt2Ye
-	3PYnP3+MJuBr2QWCQY9Rz2LAKyuy5VIT8WXYVu5VtR5Wd85i8GeJmUlFvb+jX4qSzusexrG2jMxQN
-	T1Z1Tud6mKQoyUx9OzLxTzTm3DkoMRRviu8F6GWcSUCEkg54I4j7CCd4jKq7zXQXzaSlou7yX/MVJ
-	tTQJG2JzNmBD8o9VRMd/UpPb+wk3L2UZCeO+Je8qs0YqM92YAZqceieQ62t+XI9DpoPeUHDRP64aF
-	9RSRg4TZYM0nRZXY752NvMNI4awpRJJRfNJm+pwllLWjVBTbZ+cktoitPaDGUheTnkLDQO7Q/d4yT
-	FBhhO4/N5JdPTP6EeaPg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=DP9dryP9dyxhpb61q98v5B6LjgiYq1+0oNk02FvZIj0=; b=nKG8MyiTB39w1d3c/+ObGfxUjT
+	XJpb9DTy3mQ2bge3myP0x5RuGRTuXoExhnGHHmj3plQlx/6/tCRQJjpHVCU8kh6LSdvllRHk08+Rl
+	wLnCc0xTj63J3jlhz0bJ9j3we8MsWDpH42FXpHXC7wMbjoeURBe+YMr7it0W7rLSn3NjzjMaULCO7
+	gTsRuZamtqejBySWkk49OeJTecktoj+7/noOt7eplXGhVVIywuQD38e4npVadFtECyj3rIJhxrlze
+	re46p7DZL8V0w3/Gep1T3b48hzNacdCI5M/JjHA1OdMUVUMn6eEP65Clf0PSrEWhNniPruUUfisQh
+	pqzdMnNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNW8U-00052h-Qp; Mon, 06 May 2019 05:25:58 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNXhO-0001Ka-62; Mon, 06 May 2019 07:06:06 +0000
+Received: from out1.zte.com.cn ([202.103.147.172] helo=mxct.zte.com.cn)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNW8L-0004yX-LC; Mon, 06 May 2019 05:25:52 +0000
-X-UUID: 3064a709d5674f8b9d487ccc9bc8ead9-20190505
-X-UUID: 3064a709d5674f8b9d487ccc9bc8ead9-20190505
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <eddie.huang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1200256665; Sun, 05 May 2019 21:25:41 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 May 2019 22:25:40 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 6 May 2019 13:25:32 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 6 May 2019 13:25:32 +0800
-Message-ID: <1557120332.13225.2.camel@mtksdaap41>
-Subject: Re: [PATCH 3/8] arm64: dts: mt8183: Add #cooling-cells to CPU nodes
-From: Eddie Huang <eddie.huang@mediatek.com>
-To: michael.kao <michael.kao@mediatek.com>
-Date: Mon, 6 May 2019 13:25:32 +0800
-In-Reply-To: <1556793795-25204-4-git-send-email-michael.kao@mediatek.com>
-References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
- <1556793795-25204-4-git-send-email-michael.kao@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
-MIME-Version: 1.0
-X-TM-SNTS-SMTP: CE8BF35983F880354250BBA5CCFA2DB768ECC27B1165A24DE23EE3EEF84EC4B72000:8
-X-MTK: N
+ id 1hNXh2-000809-13; Mon, 06 May 2019 07:05:45 +0000
+Received: from mse-fl2.zte.com.cn (unknown [10.30.14.239])
+ by Forcepoint Email with ESMTPS id 45A5C80D955ADEA13251;
+ Mon,  6 May 2019 15:03:34 +0800 (CST)
+Received: from notes_smtp.zte.com.cn ([10.30.1.239])
+ by mse-fl2.zte.com.cn with ESMTP id x4673P5h076258;
+ Mon, 6 May 2019 15:03:25 +0800 (GMT-8)
+ (envelope-from wen.yang99@zte.com.cn)
+Received: from fox-host8.localdomain ([10.74.120.8])
+ by szsmtp06.zte.com.cn (Lotus Domino Release 8.5.3FP6)
+ with ESMTP id 2019050615032991-10027949 ;
+ Mon, 6 May 2019 15:03:29 +0800 
+From: Wen Yang <wen.yang99@zte.com.cn>
+To: linux-kernel@vger.kernel.org
+Subject: [PATCH 2/4] media: mtk-vpu: fix leaked of_node references
+Date: Mon, 6 May 2019 15:05:16 +0800
+Message-Id: <1557126318-21487-3-git-send-email-wen.yang99@zte.com.cn>
+X-Mailer: git-send-email 1.8.3.1
+In-Reply-To: <1557126318-21487-1-git-send-email-wen.yang99@zte.com.cn>
+References: <1557126318-21487-1-git-send-email-wen.yang99@zte.com.cn>
+X-MIMETrack: Itemize by SMTP Server on SZSMTP06/server/zte_ltd(Release
+ 8.5.3FP6|November 21, 2013) at 2019-05-06 15:03:30,
+ Serialize by Router on notes_smtp/zte_ltd(Release 9.0.1FP7|August  17, 2016) at
+ 2019-05-06 15:03:23, Serialize complete at 2019-05-06 15:03:23
+X-MAIL: mse-fl2.zte.com.cn x4673P5h076258
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190505_222549_702494_0478BC49 
-X-CRM114-Status: GOOD (  11.09  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190506_000544_230758_442763AD 
+X-CRM114-Status: GOOD (  12.73  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [202.103.147.172 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,56 +69,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- JamesJJ Liao =?UTF-8?Q?=28=E5=BB=96=E5=BB=BA=E6=99=BA=29?=
- <jamesjj.liao@mediatek.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Louis Yu =?UTF-8?Q?=28=E6=B8=B8=E6=94=BF=E9=8C=95=29?= <louis.yu@mediatek.com>,
- Dawei Chien =?UTF-8?Q?=28=E9=8C=A2=E5=A4=A7=E8=A1=9B=29?=
- <Dawei.Chien@mediatek.com>,
- "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>, Daniel
- Lezcano <daniel.lezcano@linaro.org>,
- Roger Lu =?UTF-8?Q?=28=E9=99=B8=E7=91=9E=E5=82=91=29?= <Roger.Lu@mediatek.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Eduardo Valentin <edubezval@gmail.com>,
- Fan Chen =?UTF-8?Q?=28=E9=99=B3=E5=87=A1=29?= <fan.chen@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Zhang Rui <rui.zhang@intel.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: wang.yi59@zte.com.cn, Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
+ Houlong Wei <houlong.wei@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Tiffany Lin <tiffany.lin@mediatek.com>, Wen Yang <wen.yang99@zte.com.cn>,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Michael,
+The call to of_parse_phandle returns a node pointer with refcount
+incremented thus it must be explicitly decremented after the last
+usage.
 
-On Thu, 2019-05-02 at 18:43 +0800, michael.kao wrote:
-> The #cooling-cells property needs to be specified to allow a CPU
-> to be used as cooling device.
-> 
-> Signed-off-by: michael.kao <Michael.Kao@mediatek.com>
-> ---
->  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 2 ++
->  1 file changed, 2 insertions(+)
-> 
-> diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> index 5668fb8..95f1d7b 100644
-> --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> @@ -11,6 +11,8 @@
->  #include <dt-bindings/power/mt8183-power.h>
->  #include <dt-bindings/reset-controller/mt8183-resets.h>
->  #include "mt8183-pinfunc.h"
-> +#include <dt-bindings/thermal/thermal.h>
-> +
->  / {
->  	compatible = "mediatek,mt8183";
->  	interrupt-parent = <&sysirq>;
+Detected by coccinelle with the following warnings:
+drivers/media/platform/mtk-vpu/mtk_vpu.c:477:1-7: ERROR: missing of_node_put; acquired a node pointer with refcount incremented on line 464, but without a corresponding object release within this function.
 
-It seems this patch don't have #cooling-cells but in your 2/8 patch in
-this series
+Signed-off-by: Wen Yang <wen.yang99@zte.com.cn>
+Cc: Minghsiu Tsai <minghsiu.tsai@mediatek.com>
+Cc: Houlong Wei <houlong.wei@mediatek.com>
+Cc: Andrew-CT Chen <andrew-ct.chen@mediatek.com>
+Cc: Tiffany Lin <tiffany.lin@mediatek.com>
+Cc: Mauro Carvalho Chehab <mchehab@kernel.org>
+Cc: Matthias Brugger <matthias.bgg@gmail.com>
+Cc: linux-media@vger.kernel.org
+Cc: linux-arm-kernel@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org
+Cc: linux-kernel@vger.kernel.org
+---
+ drivers/media/platform/mtk-vpu/mtk_vpu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
+diff --git a/drivers/media/platform/mtk-vpu/mtk_vpu.c b/drivers/media/platform/mtk-vpu/mtk_vpu.c
+index 46c45f9..97dcb4c 100644
+--- a/drivers/media/platform/mtk-vpu/mtk_vpu.c
++++ b/drivers/media/platform/mtk-vpu/mtk_vpu.c
+@@ -468,9 +468,9 @@ struct platform_device *vpu_get_plat_device(struct platform_device *pdev)
+ 	}
+ 
+ 	vpu_pdev = of_find_device_by_node(vpu_node);
++	of_node_put(vpu_node);
+ 	if (WARN_ON(!vpu_pdev)) {
+ 		dev_err(dev, "vpu pdev failed\n");
+-		of_node_put(vpu_node);
+ 		return NULL;
+ 	}
+ 
+-- 
+2.9.5
 
 
 _______________________________________________
