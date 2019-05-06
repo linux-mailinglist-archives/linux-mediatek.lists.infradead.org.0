@@ -2,59 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D4E9E14ACC
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 15:19:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B14E714C94
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 May 2019 16:42:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=5VCXu6WubQLWuD7/CztE70cxZVV8Omt2juPqXQuXYw8=; b=JaJHHo5cQlwXdtj/47upGGgvR
-	2IWy6TUl502xSyTEgcIO5aEuhvu5qTIEtFaoAytg7Di+cT06kLHn97TxIzGjQ/n3z+ScKB5D0BVHg
-	6GBGuWZXxGWY5waDLvkTj9fZC/NDTxCWbA+B0DNfz3rUq889OJzrOf7KUzwcWkGaqh7KrTwuLt2sg
-	IUoDeiR/S4/Kh6IMajYnFftdq6XTZtfdk4aU2pj0Tw4LsqXKP2Qts4YxLchZsg0BRYD6AP13WKfSs
-	jw3Ed5lXsl/LU4IFEYt6/zuy0VGoYKYm3KDUHUZ6mmn8W5CppStTQcrFeSFW6QCGziNRp2OLxO648
-	NrHAds+mQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=a+zV/w4M6nZEYJlK7vmr8HyT9exN0K5OrA57MYlN2Gk=; b=MiA2GObZmnxpRu
+	eChZR2w9olsfrnPYUYubOqF3egqX/R5nlxLYSi7cKK0mw/Mc3M2zi8r87fUWMgcFdaB8qRBfmDTon
+	kawZF2oMh1BafibQAtEoxL/NPZcZnhO5/QPkaf6CCQmrZCUXDyZdGgC4sG8B5RgHbSPuXHgHgqKk7
+	kdZBYQYk3O57rjpMSPfjYMHuFjOrEyaCJWk7L8AhnoPYRplMq6jWLmTk+R1k7PSEB0d6MpQuIEmEN
+	e6epAPxb2PXxSs05NdTIMmj+VpTGc/+hzcubqZnn4tYwgFaypuwxQ2/KQbli0uwx6H7/xiD1sWvoy
+	BC7wOxLlw4ZVmx2UaPEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNdWm-0001S5-GE; Mon, 06 May 2019 13:19:32 +0000
-Received: from mga06.intel.com ([134.134.136.31])
+	id 1hNeop-0005EP-Kn; Mon, 06 May 2019 14:42:15 +0000
+Received: from relay3-d.mail.gandi.net ([217.70.183.195])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNdWd-0001L1-86; Mon, 06 May 2019 13:19:24 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga003.fm.intel.com ([10.253.24.29])
- by orsmga104.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 06 May 2019 06:19:20 -0700
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.60,438,1549958400"; d="scan'208";a="155548586"
-Received: from mattu-haswell.fi.intel.com (HELO [10.237.72.164])
- ([10.237.72.164])
- by FMSMGA003.fm.intel.com with ESMTP; 06 May 2019 06:19:18 -0700
-Subject: Re: [PATCH 1/2] usb: xhci: Make it possible to not have a secondary
- HCD (3.0)
-To: Nicolas Boichat <drinkcat@chromium.org>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-References: <20190502045631.229386-1-drinkcat@chromium.org>
-From: Mathias Nyman <mathias.nyman@linux.intel.com>
-Message-ID: <6844539f-3d5e-e3ff-b498-390cdc731880@linux.intel.com>
-Date: Mon, 6 May 2019 16:21:53 +0300
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.4.0
+ id 1hNeoN-0004yj-5J; Mon, 06 May 2019 14:41:48 +0000
+X-Originating-IP: 90.88.149.145
+Received: from bootlin.com (aaubervilliers-681-1-29-145.w90-88.abo.wanadoo.fr
+ [90.88.149.145])
+ (Authenticated sender: maxime.chevallier@bootlin.com)
+ by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id 8ADAF6000B;
+ Mon,  6 May 2019 14:41:33 +0000 (UTC)
+Date: Mon, 6 May 2019 16:41:32 +0200
+From: Maxime Chevallier <maxime.chevallier@bootlin.com>
+To: Petr =?UTF-8?B?xaB0ZXRpYXI=?= <ynezz@true.cz>
+Subject: Re: [PATCH v4 00/10] of_net: Add NVMEM support to of_get_mac_address
+Message-ID: <20190506164132.10342ef6@bootlin.com>
+In-Reply-To: <20190506083207.GG81826@meh.true.cz>
+References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
+ <20190505.214727.1839442238121977055.davem@davemloft.net>
+ <20190506083207.GG81826@meh.true.cz>
+X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
 MIME-Version: 1.0
-In-Reply-To: <20190502045631.229386-1-drinkcat@chromium.org>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190506_061923_554470_1FD605CA 
-X-CRM114-Status: GOOD (  24.34  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190506_074147_349386_7911C553 
+X-CRM114-Status: UNSURE (   8.50  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.31 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.195 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [217.70.183.195 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -66,80 +64,32 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Khuong Dinh <khuong@os.amperecomputing.com>,
- Mathias Nyman <mathias.nyman@intel.com>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Hoan Tran <hoan@os.amperecomputing.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Cc: andrew@lunn.ch, f.fainelli@gmail.com, devicetree@vger.kernel.org,
+ maxime.ripard@bootlin.com, netdev@vger.kernel.org,
+ srinivas.kandagatla@linaro.org, matthias.bgg@gmail.com,
+ linux-mediatek@lists.infradead.org, frowand.list@gmail.com,
+ David Miller <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org,
+ hkallweit1@gmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2.5.2019 7.56, Nicolas Boichat wrote:
-> Some XHCI controllers may not have any USB 3.0 port, in this case, it
-> is not useful to create add hcd->shared_hcd, which has 2 main
-> downsides:
->   - A useless USB 3.0 root hub is created.
->   - A warning is thrown on boot:
-> hub 2-0:1.0: config failed, hub doesn't have any ports! (err -19)
-> 
-> The change is mostly about checking if hcd->shared_hcd is NULL before
-> accessing it. The one special case is in xhci_run, where we need to
-> call xhci_run_finished immediately, if there is no secondary hcd.
-
-To me it looks like this creates an controller starting issue for
-xHC hardware that have both usb2 and usb3 ports.
-
-When we have usb3 ports xhci->shared_hcd is not set yet when xhci_run is called
-the first time. We will end up starting the xHC before properly setting up the secondary hcd.
-
-See further down for details
-
-> 
-> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> ---
-> 
-> This is a respin of https://lore.kernel.org/patchwork/patch/863993/,
-> hopefully addressing the comments there. Note that I dropped the change
-> in xhci-plat.c, as I do not have a device to test it, but made a
-> similar change in xhci-mtk.c, in the next patch.
-> 
-> (the @apm.com addresses seem to bounce, so I added some
-> @amperecomputing.com instead, if somebody there can track back the
-> original issue, I'm happy to provide a patch for xhci-plat.c as well)
-> 
-> drivers/usb/host/xhci-hub.c |  7 ++++--
->   drivers/usb/host/xhci.c     | 45 +++++++++++++++++++++++++++----------
->   2 files changed, 38 insertions(+), 14 deletions(-)
-> 
-
-...
-
-> @@ -698,6 +703,10 @@ int xhci_run(struct usb_hcd *hcd)
->   
->   	xhci_debugfs_init(xhci);
->   
-> +	/* There is no secondary HCD, start the host controller immediately. */
-> +	if (!xhci->shared_hcd)
-> +		return xhci_run_finished(xhci);
-> +
-
-PCI xHC controllers with both usb2 and usb3 ports will be started before usb3 parts are properly set up.
-
-xhci_pci_probe()
-   usb_hcd_pci_probe()
-     usb_add_hcd()
-       hcd->driver->start(hcd)  // .start = xhci_run
-         xhci_run()
-           if (!xhci->shared_hcd)  // TRUE as xhci->shared_hcd is not yet set,
-	    return xhci_run_finished(xhci)  // starting controller too early here
-   xhci->shared_hcd = usb_create_shared_hcd()   // now xhci->shared_hcd is set.
-
--Mathias
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgUGV0ciwKCk9uIE1vbiwgNiBNYXkgMjAxOSAxMDozMjowNyArMDIwMApQZXRyIMWgdGV0aWFy
+IDx5bmV6ekB0cnVlLmN6PiB3cm90ZToKCj5EYXZpZCBNaWxsZXIgPGRhdmVtQGRhdmVtbG9mdC5u
+ZXQ+IFsyMDE5LTA1LTA1IDIxOjQ3OjI3XToKPgo+SGkgRGF2aWQsCj4KPj4gU2VyaWVzIGFwcGxp
+ZWQsIHRoYW5rIHlvdS4gIAo+Cj5JIGRpZCBwcm9iYWJseSBzb21ldGhpbmcgdGVycmlibHkgd3Jv
+bmcsIGJ1dCBwYXRjaCAiW1BBVENIIHY0IDA1LzEwXSBuZXQ6Cj5ldGhlcm5ldDogc3VwcG9ydCBv
+Zl9nZXRfbWFjX2FkZHJlc3MgbmV3IEVSUl9QVFIgZXJyb3IiIGhhcyBub3QgcmVhY2hlZCB0aGUK
+PnBhdGNod29yaywgYnV0IEknbSBzdXJlLCB0aGF0IGl0IHdhcyBzZW50IG91dCBhcyBIYXVrZSBN
+ZWhydGVucyAobWFpbnRhaW5lcgo+Zm9yIGV0aGVybmV0L2xhbnRpcV94cngyMDAuYykgaGFzIGNv
+bmZpcm1lZCB0byBtZSBvbiBJUkMsIHRoYXQgaGUgaGFzIHJlY2VpdmVkCj5pdC4KCkl0IHNlZW1z
+IGluZGVlZCB0aGF0IHRoZSA1dGggcGF0Y2ggaGFzbid0IGJlZWQgYXBwbGllZCwgd2hpY2ggZWZm
+ZWN0aXZlbHkKYnJlYWtzIG12bmV0YSBvbiBuZXQtbmV4dCwgYW5kIEkgZ3Vlc3MgYSBsb3Qgb2Yg
+b3RoZXIgZHJpdmVycyB0aGF0IHJlbHkKb24gaGFuZGxpbmcgdGhlIG5ldyByZXR1cm4gdmFsdWVz
+LgoKSSBzYXcgeW91IHNlbnQgYSBmb2xsb3d1cCBzZXJpZXMgZml4aW5nIHRoYXQsIGJ1dCBvbmx5
+IHBhdGNoIDIvMwpzaG93cy11cCBvbiBuZXRkZXYsIHNvIHlvdSBtaWdodCBiZSBmYWNpbmcgYSBz
+aW1pbGFyIGlzc3VlIGhlcmUuCgpNYXhpbWUKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRp
+YXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxt
+YW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
