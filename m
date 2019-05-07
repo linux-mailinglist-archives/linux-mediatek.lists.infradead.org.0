@@ -2,76 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E9201684A
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 18:45:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41E4B16969
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 19:41:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mKhJR5ReY9eouFkwTSX+tZ3APzed38KME2B2ZFiDxtk=; b=I4zuY65kWTb1x8
-	lgHnNhZOk2rvVVZn+bHKqIe+2JUoSwX+p0UKBaXNDb9gCBv8oFViEAVzvz0sBdhuBCpgE2JeLWaGz
-	iwXxlVBQiKAYHF07eBSpU8ATbwIt6BklGrW+MK0znixOesbKv48QLAAN322/6N808bdZ/Jndx7pul
-	36mXaPez4m87DDIg2FpnqdpMDqBaW1Uvi2LbIRYnFELFHGinZTR8bYGDFwvvOd8z4K68V3vOgLLlL
-	bvo5v1h9QRDF1hJPvzV0vIXTmPcdfsGvYqLCV9qrSkdRxgmryZAFgpYZupEI2v7CB/BJQW8zOplzq
-	IPstpbtn68+os2/09Ecw==;
+	List-Owner; bh=Xb+jek/LjgguU1Y+eY5b142DkwUjGEfOR4FBxB5SjDA=; b=eZQzD2APFGDJu/
+	usNdMH0r0Pv/s9zDEf5vWLP4VPMcysRg0sSNsnR/ZvX5H9c3HqEFEv7lmYFJcWTIH5UgSdAjjkG7n
+	QAy+D0HoOlTBIRkSaNcBXFFBFDrLD2Ql/nit1RW3bcWGtNJ0UT83dBQCw8Ofur/0Fq4YPlngYHMR4
+	nZw81qFHahZJo/X9UYfN8ytTNk9+0rskjiX3D8FjV/LOzuTHuSMz/WkzZpbTMlvWv02J27/OpTQSx
+	QcIbrCniSYqh4g73rvCjy/M7NCaR2SvRmkD+uj8ktciWBW+iF/+FECJ7z6kFxFxEXAmtnC/xgH6IO
+	wtWRMKoydZCRgU56ef4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO3DT-0002hU-PK; Tue, 07 May 2019 16:45:19 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hO45h-0002Ly-6O; Tue, 07 May 2019 17:41:21 +0000
+Received: from mail-ot1-f68.google.com ([209.85.210.68])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO3DK-0002Zr-9O; Tue, 07 May 2019 16:45:11 +0000
-Received: from mail-qt1-f169.google.com (mail-qt1-f169.google.com
- [209.85.160.169])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 919FA20989;
- Tue,  7 May 2019 16:45:09 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1557247509;
- bh=iM8J/j10jYr+vXCxXzUjgCYgZk17YUkoK9VE/2fhJ1I=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=INXumkFeyNf58pU/qjd3huFH5ZfaxLIpyMXHCnZHxbXpsPJF6T1W6Vkh88hhOGvrJ
- GIheX5UtWz5QwB5Diw5nYE1jqJSPYf2nUHSJh66NP2uXzpdCBhwXjr4Np+l7L8hUOv
- mxoIiNV+EIzMpgJ0Ex/W0XZsuvBDRvLXKk1WcejY=
-Received: by mail-qt1-f169.google.com with SMTP id t1so1754114qtc.12;
- Tue, 07 May 2019 09:45:09 -0700 (PDT)
-X-Gm-Message-State: APjAAAXrKM+uUBisPh09olxZSH9DoLxwTbYDolbLMpXdtNP8TZcl3TXW
- 69u6Uqoxk2zrtZx+6M3y8VRBuip2tOKjeFxjtg==
-X-Google-Smtp-Source: APXvYqy7rk1sMMIHbSD/9OOZe8P3NIAyg7u8OPXuXWtwWi2WaDv6h/Xnf9ZSQ+8dUBlM+SULUoG2eW9wkEEg+3BdjGk=
-X-Received: by 2002:ac8:641:: with SMTP id e1mr27644859qth.76.1557247508777;
- Tue, 07 May 2019 09:45:08 -0700 (PDT)
+ id 1hO45Z-0002Ff-7k; Tue, 07 May 2019 17:41:14 +0000
+Received: by mail-ot1-f68.google.com with SMTP id i8so6032568oth.10;
+ Tue, 07 May 2019 10:41:12 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=9rNLy/ZQaK42lTMWdGC3VYdIL1Q3ruxBaNI2KenFfZA=;
+ b=OkOif2d/kYjHtIwD+3TqX/C4Q/cvW5yjqfytYLN22KPaipW1d7DTYQnnP+xmCXHkjS
+ m2cwGZkTrggC0X1WNnEkIYRzkU8+PClVfYMf+h1b5mpkwwWs8fblhUpWXgbmsatHgKZ6
+ U44XeoEhI7oCvqnHMSrGZs7eM8zETH/pdeLJ+xd8GmrD+su/x/e8c6s1FG7CSt7iQfvZ
+ 20YgS1/mspBTsLIBS3YbqZGrWMMsBjJ20/ARgJHOZy2Wo2f2RXGw+ELQ2ZFNF5bsFqYl
+ GQMdATezkgnxDUiFYSmjkeZUf7Ybw+sSgUej6kjYmRJQoS6viYHrUvDOzPok8Yx7yhk3
+ hACw==
+X-Gm-Message-State: APjAAAX2G+U6srXElqTav7HuLt20FC3Sg4L0YUjJ/J3ODl4sR6ExC0cU
+ na81pcu6z1UNAY1IkCV20g==
+X-Google-Smtp-Source: APXvYqxVT+rgS9ARF8x0VFy/ggxBe7eDGWK8eU6UPVfhX/GM8vt4GowdhjtHpTbE2QIioJsCsu6roQ==
+X-Received: by 2002:a9d:6b93:: with SMTP id b19mr24293889otq.313.1557250872208; 
+ Tue, 07 May 2019 10:41:12 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id 24sm2059963oiz.14.2019.05.07.10.41.10
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Tue, 07 May 2019 10:41:11 -0700 (PDT)
+Date: Tue, 7 May 2019 12:41:10 -0500
+From: Rob Herring <robh@kernel.org>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Subject: Re: [PATCH v5 03/12] dt-binding: gce: add binding for gce subsys
+ property
+Message-ID: <20190507174110.GA6767@bogus>
+References: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
+ <20190507081355.52630-4-bibby.hsieh@mediatek.com>
 MIME-Version: 1.0
-References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
- <1556893635-18549-3-git-send-email-ynezz@true.cz>
-In-Reply-To: <1556893635-18549-3-git-send-email-ynezz@true.cz>
-From: Rob Herring <robh+dt@kernel.org>
-Date: Tue, 7 May 2019 11:44:57 -0500
-X-Gmail-Original-Message-ID: <CAL_JsqLt6UFU_6bmh3Pc0taXUgMtAEV7kL7eZU13cLOjoakf=Q@mail.gmail.com>
-Message-ID: <CAL_JsqLt6UFU_6bmh3Pc0taXUgMtAEV7kL7eZU13cLOjoakf=Q@mail.gmail.com>
-Subject: Re: [PATCH v4 02/10] dt-bindings: doc: reflect new NVMEM
- of_get_mac_address behaviour
-To: =?UTF-8?Q?Petr_=C5=A0tetiar?= <ynezz@true.cz>
+Content-Disposition: inline
+In-Reply-To: <20190507081355.52630-4-bibby.hsieh@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_094510_367813_22787529 
-X-CRM114-Status: GOOD (  20.36  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190507_104113_282864_5E6E8884 
+X-CRM114-Status: GOOD (  19.08  )
+X-Spam-Score: 0.6 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.68 listed in list.dnswl.org]
+ 0.1 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.68 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -83,97 +90,90 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Andrew Lunn <andrew@lunn.ch>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
- Frank Rowand <frowand.list@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
- Kalle Valo <kvalo@codeaurora.org>, Yisen Zhuang <yisen.zhuang@huawei.com>,
- Vivien Didelot <vivien.didelot@gmail.com>,
- Woojung Huh <woojung.huh@microchip.com>, devicetree@vger.kernel.org,
- Jassi Brar <jaswinder.singh@linaro.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ kendrick.hsu@mediatek.com, Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
+ linux-kernel@vger.kernel.org, CK HU <ck.hu@mediatek.com>,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Sascha Hauer <kernel@pengutronix.de>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>, Salil Mehta <salil.mehta@huawei.com>,
- netdev <netdev@vger.kernel.org>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Microchip Linux Driver Support <UNGLinuxDriver@microchip.com>,
- "David S. Miller" <davem@davemloft.net>,
- Heiner Kallweit <hkallweit1@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+ Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ Frederic Chen <Frederic.Chen@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gRnJpLCBNYXkgMywgMjAxOSBhdCA5OjI3IEFNIFBldHIgxaB0ZXRpYXIgPHluZXp6QHRydWUu
-Y3o+IHdyb3RlOgo+Cj4gQXMgb2ZfZ2V0X21hY19hZGRyZXNzIG5vdyBzdXBwb3J0cyBOVk1FTSB1
-bmRlciB0aGUgaG9vZCwgd2UgbmVlZCB0byB1cGRhdGUKPiB0aGUgYmluZGluZ3MgZG9jdW1lbnRh
-dGlvbiB3aXRoIHRoZSBuZXcgbnZtZW0tY2VsbCogcHJvcGVydGllcywgd2hpY2ggd291bGQKPiBt
-ZWFuIGNvcHkmcGFzdGluZyBhIGxvdCBvZiByZWR1bmRhbnQgaW5mb3JtYXRpb24gdG8gZXZlcnkg
-YmluZGluZwo+IGRvY3VtZW50YXRpb24gY3VycmVudGx5IHJlZmVyZW5jaW5nIHNvbWUgb2YgdGhl
-IE1BQyBhZGRyZXNzIHByb3BlcnRpZXMuCj4KPiBTbyBJJ3ZlIGp1c3QgcmVtb3ZlZCBhbGwgdGhl
-IHJlZmVyZW5jZXMgdG8gdGhlIG9wdGlvbmFsIE1BQyBhZGRyZXNzCj4gcHJvcGVydGllcyBhbmQg
-cmVwbGFjZWQgdGhlbSB3aXRoIHRoZSBzbWFsbCBub3RlIHJlZmVyZW5jaW5nCj4gbmV0L2V0aGVy
-bmV0LnR4dCBmaWxlLgo+Cj4gU2lnbmVkLW9mZi1ieTogUGV0ciDFoHRldGlhciA8eW5lenpAdHJ1
-ZS5jej4KPiAtLS0KPgo+ICBDaGFuZ2VzIHNpbmNlIHYyOgo+Cj4gICogcmVwbGFjZWQgb25seSBN
-QUMgYWRkcmVzcyByZWxhdGVkIG9wdGlvbmFsIHByb3BlcnRpZXMgd2l0aCBhIHRleHQKPiAgICBy
-ZWZlcmVuY2luZyBldGhlcm5ldC50eHQKPgo+ICBEb2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmlu
-ZGluZ3MvbmV0L2FsdGVyYV90c2UudHh0ICAgICAgICAgICB8ICA1ICsrLS0tCj4gIERvY3VtZW50
-YXRpb24vZGV2aWNldHJlZS9iaW5kaW5ncy9uZXQvYW1kLXhnYmUudHh0ICAgICAgICAgICAgIHwg
-IDUgKysrLS0KPiAgRG9jdW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9icmNtLGFt
-YWMudHh0ICAgICAgICAgICAgfCAgNCArKy0tCj4gIERvY3VtZW50YXRpb24vZGV2aWNldHJlZS9i
-aW5kaW5ncy9uZXQvY3Bzdy50eHQgICAgICAgICAgICAgICAgIHwgIDQgKysrLQo+ICBEb2N1bWVu
-dGF0aW9uL2RldmljZXRyZWUvYmluZGluZ3MvbmV0L2RhdmluY2lfZW1hYy50eHQgICAgICAgICB8
-ICA1ICsrKy0tCj4gIERvY3VtZW50YXRpb24vZGV2aWNldHJlZS9iaW5kaW5ncy9uZXQvZHNhL2Rz
-YS50eHQgICAgICAgICAgICAgIHwgIDUgKystLS0KPiAgRG9jdW1lbnRhdGlvbi9kZXZpY2V0cmVl
-L2JpbmRpbmdzL25ldC9ldGhlcm5ldC50eHQgICAgICAgICAgICAgfCAgNiArKysrLS0KPiAgRG9j
-dW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9oaXNpbGljb24tZmVtYWMudHh0ICAg
-ICAgfCAgNCArKystCj4gIC4uLi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9oaXNpbGljb24taGl4
-NWhkMi1nbWFjLnR4dCAgICAgICAgIHwgIDQgKysrLQo+ICBEb2N1bWVudGF0aW9uL2RldmljZXRy
-ZWUvYmluZGluZ3MvbmV0L2tleXN0b25lLW5ldGNwLnR4dCAgICAgICB8IDEwICsrKysrLS0tLS0K
-PiAgRG9jdW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9tYWNiLnR4dCAgICAgICAg
-ICAgICAgICAgfCAgNSArKy0tLQo+ICBEb2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmluZGluZ3Mv
-bmV0L21hcnZlbGwtcHhhMTY4LnR4dCAgICAgICB8ICA0ICsrKy0KPiAgRG9jdW1lbnRhdGlvbi9k
-ZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9taWNyb2NoaXAsZW5jMjhqNjAudHh0ICAgfCAgMyArKy0K
-PiAgRG9jdW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9taWNyb2NoaXAsbGFuNzh4
-eC50eHQgICAgfCAgNSArKy0tLQo+ICBEb2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmluZGluZ3Mv
-bmV0L3FjYSxxY2E3MDAwLnR4dCAgICAgICAgICB8ICA0ICsrKy0KPiAgRG9jdW1lbnRhdGlvbi9k
-ZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9zYW1zdW5nLXN4Z2JlLnR4dCAgICAgICAgfCAgNCArKyst
-Cj4gIC4uLi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9zbnBzLGR3Yy1xb3MtZXRoZXJuZXQudHh0
-ICAgICAgICAgIHwgIDUgKysrLS0KPiAgLi4uL2RldmljZXRyZWUvYmluZGluZ3MvbmV0L3NvY2lv
-bmV4dCx1bmlwaGllci1hdmU0LnR4dCAgICAgICAgfCAgNCArKy0tCj4gIERvY3VtZW50YXRpb24v
-ZGV2aWNldHJlZS9iaW5kaW5ncy9uZXQvc29jaW9uZXh0LW5ldHNlYy50eHQgICAgIHwgIDUgKysr
-LS0KPiAgLi4uL2RldmljZXRyZWUvYmluZGluZ3MvbmV0L3dpcmVsZXNzL21lZGlhdGVrLG10NzYu
-dHh0ICAgICAgICAgfCAgNSArKystLQo+ICBEb2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmluZGlu
-Z3MvbmV0L3dpcmVsZXNzL3FjYSxhdGg5ay50eHQgICB8ICA0ICsrLS0KPiAgMjEgZmlsZXMgY2hh
-bmdlZCwgNTggaW5zZXJ0aW9ucygrKSwgNDIgZGVsZXRpb25zKC0pCgpbLi4uXQoKPiBkaWZmIC0t
-Z2l0IGEvRG9jdW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9rZXlzdG9uZS1uZXRj
-cC50eHQgYi9Eb2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmluZGluZ3MvbmV0L2tleXN0b25lLW5l
-dGNwLnR4dAo+IGluZGV4IDA0YmExZGMuLjNhNjVhYWIgMTAwNjQ0Cj4gLS0tIGEvRG9jdW1lbnRh
-dGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL25ldC9rZXlzdG9uZS1uZXRjcC50eHQKPiArKysgYi9E
-b2N1bWVudGF0aW9uL2RldmljZXRyZWUvYmluZGluZ3MvbmV0L2tleXN0b25lLW5ldGNwLnR4dAo+
-IEBAIC0xMzUsMTQgKzEzNSwxNCBAQCBPcHRpb25hbCBwcm9wZXJ0aWVzOgo+ICAgICAgICAgICAg
-ICAgICBhcmUgc3dhcHBlZC4gIFRoZSBuZXRjcCBkcml2ZXIgd2lsbCBzd2FwIHRoZSB0d28gRFdP
-UkRzCj4gICAgICAgICAgICAgICAgIGJhY2sgdG8gdGhlIHByb3BlciBvcmRlciB3aGVuIHRoaXMg
-cHJvcGVydHkgaXMgc2V0IHRvIDIKPiAgICAgICAgICAgICAgICAgd2hlbiBpdCBvYnRhaW5zIHRo
-ZSBtYWMgYWRkcmVzcyBmcm9tIGVmdXNlLgo+IC0tIGxvY2FsLW1hYy1hZGRyZXNzOiAgIHRoZSBk
-cml2ZXIgaXMgZGVzaWduZWQgdG8gdXNlIHRoZSBvZl9nZXRfbWFjX2FkZHJlc3MgYXBpCj4gLSAg
-ICAgICAgICAgICAgICAgICAgICAgb25seSBpZiBlZnVzZS1tYWMgaXMgMC4gV2hlbiBlZnVzZS1t
-YWMgaXMgMCwgdGhlIE1BQwo+IC0gICAgICAgICAgICAgICAgICAgICAgIGFkZHJlc3MgaXMgb2J0
-YWluZWQgZnJvbSBsb2NhbC1tYWMtYWRkcmVzcy4gSWYgdGhpcwo+IC0gICAgICAgICAgICAgICAg
-ICAgICAgIGF0dHJpYnV0ZSBpcyBub3QgcHJlc2VudCwgdGhlbiB0aGUgZHJpdmVyIHdpbGwgdXNl
-IGEKPiAtICAgICAgICAgICAgICAgICAgICAgICByYW5kb20gTUFDIGFkZHJlc3MuCj4gIC0gIm5l
-dGNwLWRldmljZSBsYWJlbCI6ICAgICAgICBwaGFuZGxlIHRvIHRoZSBkZXZpY2Ugc3BlY2lmaWNh
-dGlvbiBmb3IgZWFjaCBvZiBOZXRDUAo+ICAgICAgICAgICAgICAgICAgICAgICAgIHN1Yi1tb2R1
-bGUgYXR0YWNoZWQgdG8gdGhpcyBpbnRlcmZhY2UuCj4KPiArVGhlIE1BQyBhZGRyZXNzIHdpbGwg
-YmUgZGV0ZXJtaW5lZCB1c2luZyB0aGUgb3B0aW9uYWwgcHJvcGVydGllcyBkZWZpbmVkIGluCj4g
-K2V0aGVybmV0LnR4dCwgYXMgcHJvdmlkZWQgYnkgdGhlIG9mX2dldF9tYWNfYWRkcmVzcyBBUEkg
-YW5kIG9ubHkgaWYgZWZ1c2UtbWFjCgpEb24ndCBtYWtlIHJlZmVyZW5jZXMgdG8gTGludXggaW4g
-YmluZGluZ3MuIFlvdSBjYW4gdGFsayBhYm91dApleHBlY3RhdGlvbnMgb2YgY2xpZW50IHByb2dy
-YW1zIChlLmcgTGludXgsIHUtYm9vdCwgQlNELCBldGMuKSB0aG91Z2guCgpSb2IKCl9fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1h
-aWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0
-cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Tue, May 07, 2019 at 04:13:46PM +0800, Bibby Hsieh wrote:
+> tcmdq driver provide a function that get the relationship
+> of sub system number from device node for client.
+> add specification for #subsys-cells, mediatek,gce-subsys.
+> 
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> ---
+>  .../devicetree/bindings/mailbox/mtk-gce.txt       | 15 ++++++++++++---
+>  1 file changed, 12 insertions(+), 3 deletions(-)
+> 
+> diff --git a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> index 1f7f8f2a3f49..8fd9479bc9f6 100644
+> --- a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> +++ b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> @@ -21,11 +21,19 @@ Required properties:
+>  	priority: Priority of GCE thread.
+>  	atomic_exec: GCE processing continuous packets of commands in atomic
+>  		way.
+> +- #subsys-cells: Should be 3.
+> +	<&phandle subsys_number start_offset size>
+> +	phandle: Label name of a gce node.
+> +	subsys_number: specify the sub-system id which is corresponding
+> +		       to the register address.
+> +	start_offset: the start offset of register address that GCE can access.
+> +	size: the total size of register address that GCE can access.
+
+Like the #event-cells, do you need this if it isn't variable?
+
+>  
+>  Required properties for a client device:
+>  - mboxes: Client use mailbox to communicate with GCE, it should have this
+>    property and list of phandle, mailbox specifiers.
+> -- mediatek,gce-subsys: u32, specify the sub-system id which is corresponding
+> +Optional propertier for a client device:
+> +- mediatek,gce-client-reg: u32, specify the sub-system id which is corresponding
+>    to the register address.
+
+This isn't a u32, but a phandle + 3 cells (or a list of those). How many 
+entries can there be?
+
+>  
+>  Some vaules of properties are defined in 'dt-bindings/gce/mt8173-gce.h'
+> @@ -40,6 +48,7 @@ Example:
+>  		clocks = <&infracfg CLK_INFRA_GCE>;
+>  		clock-names = "gce";
+>  		#mbox-cells = <3>;
+> +		#subsys-cells = <3>;
+>  	};
+>  
+>  Example for a client device:
+> @@ -48,9 +57,9 @@ Example for a client device:
+>  		compatible = "mediatek,mt8173-mmsys";
+>  		mboxes = <&gce 0 CMDQ_THR_PRIO_LOWEST 1>,
+>  			 <&gce 1 CMDQ_THR_PRIO_LOWEST 1>;
+> -		mediatek,gce-subsys = <SUBSYS_1400XXXX>;
+>  		mutex-event-eof = <CMDQ_EVENT_MUTEX0_STREAM_EOF
+>  				CMDQ_EVENT_MUTEX1_STREAM_EOF>;
+> -
+> +		mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x3000 0x1000>,
+> +					  <&gce SUBSYS_1401XXXX 0x2000 0x100>;
+>  		...
+>  	};
+> -- 
+> 2.18.0
+> 
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
