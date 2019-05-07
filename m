@@ -2,64 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2392E15FE8
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 10:58:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5CB6615FF1
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 10:59:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KXUpZv1geA3rSsyOOE3uU4BbPgM/gYVW/kVB3S+ps0I=; b=cko+pkiHRKo1kY
-	WRY7oRW2hGGqa4QTh29ABolQ0c5oy3GkZ0ZzFay3iYNVc1n13C/oPxrx+q/vTiBaZRqoeXBpdBOrA
-	8Og2PV3al+q+yVaiD45nrjfY5s7RXUPL8iT5Ay4lw7KlPVoKBfjJzoCjGvBS78DELfEsYWjcSJtER
-	XR6f1CEgWcswClcv0JbYBeHYm6tr/Y7YBGPpqiV7mBu0eQQVHLA9FXNFcMv9xrbwxjFuyAc3siwgM
-	pMHLg3p6uH47aG++qtAxcUoUZP883YG65mM6N2ZqoYy0tB6d9STz0gDgizjZg1fIzv89chfALIpWg
-	lV+//IYYULr6Px4oZmLA==;
+	List-Owner; bh=dOdNoxY4V+GY3NASI25ahUljpU6tKl3ElhH35VH0VGw=; b=so4OrOCaMfiI09
+	lKpEZYY6XJygqYz+Z0d6KyL/98aX4dAOcCibgPyrJrCM6cbOc+9eAbTFTnIRF27eb7CGeK7ud9RbC
+	l367ap1keOtRESNjKQT1qLBKGffg7JwbxUABQqM+QrRxsIDydsRRNJ/xz01Xf5PZ9RPeVP5EEhk2Y
+	9WOkK6ZrQW5t+ZGk/OXAC359/fxzixRH+CzhgKyh5LlVDcjjlkeN1EDcIdUbt774jxEApfbv2hgb0
+	mLRPPMqcuQjJD9ck+Gu2ov+wX35p5fmnxU2f9taIqjWTpv23MP0Lncm+s2PivYqYyKelotz707GaW
+	yS2SUeTfboawNsYIASxQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNvvc-0006mG-MU; Tue, 07 May 2019 08:58:24 +0000
+	id 1hNvw7-00079d-Gs; Tue, 07 May 2019 08:58:55 +0000
 Received: from mail-qt1-x844.google.com ([2607:f8b0:4864:20::844])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNvvU-0006ek-0l
- for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 08:58:17 +0000
-Received: by mail-qt1-x844.google.com with SMTP id m32so15022060qtf.0
- for <linux-mediatek@lists.infradead.org>; Tue, 07 May 2019 01:58:14 -0700 (PDT)
+ id 1hNvvw-000720-Rp
+ for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 08:58:47 +0000
+Received: by mail-qt1-x844.google.com with SMTP id y42so740266qtk.6
+ for <linux-mediatek@lists.infradead.org>; Tue, 07 May 2019 01:58:44 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=bgt65WYUyh4keq60HSFM9ou9BWNsxqpsxUheEsmJ/Ps=;
- b=LFXHlmUi0/8ulUeaMb6kFoZgCQOYaGhjD0Rv5sOqvJAdFWnGFpVQ9T+NX2HpuBvduI
- C14vwFf0hjhSV2f2O2geQK9TiX/sTj5gFNlhRPzsoJh5tR6YgCfF2VtBRUQjbjagINNw
- +fcIApgzTmb4yoNs2rPZdhdJuD4mwJN06wYHM=
+ :cc; bh=N4j8vIu2wMMo6UT4+kjIlyoObNO3WTbPl4WCu+/nidM=;
+ b=ctTKjgV+zvGS9Gu1Me48lcXJj5NqtLOU2qUZfsGcBDnwCUXDVEdjcq3QLVxixOlQSa
+ xDxe0j3pLX2v9kUw9PZ+P910lyFYWbJbJkIgwu+caLtqZ49bbGbcdHpr8qyqbT9Oy5rV
+ ZfEOk3QiUo7CLg9q/N5n5gysIRNWmEcCZxpLQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=bgt65WYUyh4keq60HSFM9ou9BWNsxqpsxUheEsmJ/Ps=;
- b=pyS3a/GKxr125CicHZxHW/FqfmmqhsxCWlHWfQM4dYh3gBM7naZfag8J1zRhn3pNxg
- xx8VT7v6nt9ytSpDJmQTqcnbsAoagsCqSrM7GCSNp1cP7x0UulXVw9anFfJWYByNkr4V
- XRsTlDseG6kog1P5xq/rXPkVG0GVYTdpBYo9HrSm3JlKWGcmm1839iRV0dSWswDu2drs
- QE65LTGMQRcyM63oE5ZApazhW0p0d1c9W9aSyIt/1DWB2m2mKb/RhMjktPn7gixKdGJY
- zbLcaa7eDfWODKoKs3ovFonp6hhjku1RdFMV0VWi4SFjCqs3v2lAO7XQ5RJYsASa56w8
- 7f4A==
-X-Gm-Message-State: APjAAAVBFCO7eP9war00dKXKCnaZ1z8mdYomgdsrX645NoQwyQxe1bkN
- CzjBICXx2wz789vUXwrlbmCI05U9hKujUE60ROJBhA==
-X-Google-Smtp-Source: APXvYqxRKpUMVzA6AG7GCIY/+g/BwxuTBk4WFdQofQEHMln8CxbzW33eb9ZBrRV8Z4nlMUPH71Flva1Aw5lznF2Ik9Q=
-X-Received: by 2002:ac8:2963:: with SMTP id z32mr25699870qtz.236.1557219493495; 
- Tue, 07 May 2019 01:58:13 -0700 (PDT)
+ :message-id:subject:to:cc;
+ bh=N4j8vIu2wMMo6UT4+kjIlyoObNO3WTbPl4WCu+/nidM=;
+ b=GWF/biAFrDzxZlQElW5G/gsJRQkiBO/0ADJbTxV6w9TosDCJGpKu2bm2aeG3X5J/Sb
+ cKI+wKS/Ap+k39UXhu5aABI7ElKPmZ+k2YLmcqKNnnGWGKbhCfHGaQh8jNlhvnVZMmZj
+ S24r5ORnKM5OJbgeJxZO167nsiGMrLLk3zmCgMh8tJ0IdneJ4pPmhxSIb2EVNsB0oZIM
+ p330Fwr5/1+zLw+xHmDLugjln/hY4xJDjRHfKMyWgbV+6E4aURH5KYyorcK6t2LGCDVa
+ NAE8hLKZgINhIGWgkcYHClxMO6DMpcLMjP0pDgu/bWU2+hbUWKZilchocmMsRG32oPmp
+ xh7g==
+X-Gm-Message-State: APjAAAVe5JUDkyTUxP/Q/Sid44vyeOakC9zcMkMBV7QduHtnGdQxms/W
+ 7zSbqAQBVeCtz39UJrqfWj9rzZ6qAtJQN3T/nArkEg==
+X-Google-Smtp-Source: APXvYqwh0Jp85DeTO2qBWgQsuEyExRB1yb+3NzYLBg178fUUMnHKuPVE2ZV5rt3C9hW9+lUMAdlXGFQiVeB/ea6x5qw=
+X-Received: by 2002:ac8:3fe3:: with SMTP id v32mr24484207qtk.307.1557219524087; 
+ Tue, 07 May 2019 01:58:44 -0700 (PDT)
 MIME-Version: 1.0
 References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
- <1556793795-25204-5-git-send-email-michael.kao@mediatek.com>
-In-Reply-To: <1556793795-25204-5-git-send-email-michael.kao@mediatek.com>
+ <1556793795-25204-6-git-send-email-michael.kao@mediatek.com>
+In-Reply-To: <1556793795-25204-6-git-send-email-michael.kao@mediatek.com>
 From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Tue, 7 May 2019 16:57:47 +0800
-Message-ID: <CAJMQK-i===iehSxLky1rZMnYhZfrnAJzWtDxT2OLOwRnKwaZoA@mail.gmail.com>
-Subject: Re: [PATCH 4/8] arm64: dts: mt8183: Configure CPU cooling
+Date: Tue, 7 May 2019 16:58:18 +0800
+Message-ID: <CAJMQK-hKoK1hfK+XJuyExxp3rDWY9py6j3_jwEMfVeJcYYM7XA@mail.gmail.com>
+Subject: Re: [PATCH 5/8] arm64: dts: mt8183: Increase polling frequency for
+ CPU thermal zone
 To: "michael.kao" <michael.kao@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_015816_084048_742B7C95 
-X-CRM114-Status: GOOD (  12.27  )
+X-CRM114-CacheID: sfid-20190507_015846_161018_FF9381C8 
+X-CRM114-Status: GOOD (  12.38  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -96,88 +96,43 @@ Cc: Mark Rutland <mark.rutland@arm.com>, jamesjj.liao@mediatek.com,
  Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>, Zhang Rui <rui.zhang@intel.com>,
  Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gVGh1LCBNYXkgMiwgMjAxOSBhdCAxMDo0MyBBTSBtaWNoYWVsLmthbyA8bWljaGFlbC5rYW9A
-bWVkaWF0ZWsuY29tPiB3cm90ZToKPgo+IEZyb206IE1hdHRoaWFzIEthZWhsY2tlIDxta2FAY2hy
-b21pdW0ub3JnPgo+Cj4gQWRkIHR3byBwYXNzaXZlIHRyaXAgcG9pbnRzIGF0IDY4wrBDIGFuZCA4
-NcKwQyBmb3IgdGhlIENQVSB0ZW1wZXJhdHVyZS4KPgo+IFNpZ25lZC1vZmYtYnk6IE1hdHRoaWFz
-IEthZWhsY2tlIDxta2FAY2hyb21pdW0ub3JnPgo+IFNpZ25lZC1vZmYtYnk6IE1pY2hhZWwgS2Fv
-IDxtaWNoYWVsLmthb0BtZWRpYXRlay5jb20+Cj4gLS0tCj4gIGFyY2gvYXJtNjQvYm9vdC9kdHMv
-bWVkaWF0ZWsvbXQ4MTgzLmR0c2kgfCA1NSArKysrKysrKysrKysrKysrKysrKysrKysrKysrKysr
-Kwo+ICAxIGZpbGUgY2hhbmdlZCwgNTUgaW5zZXJ0aW9ucygrKQo+Cj4gZGlmZiAtLWdpdCBhL2Fy
-Y2gvYXJtNjQvYm9vdC9kdHMvbWVkaWF0ZWsvbXQ4MTgzLmR0c2kgYi9hcmNoL2FybTY0L2Jvb3Qv
-ZHRzL21lZGlhdGVrL210ODE4My5kdHNpCj4gaW5kZXggOTVmMWQ3Yi4uMGIzMjk0YiAxMDA2NDQK
-PiAtLS0gYS9hcmNoL2FybTY0L2Jvb3QvZHRzL21lZGlhdGVrL210ODE4My5kdHNpCj4gKysrIGIv
-YXJjaC9hcm02NC9ib290L2R0cy9tZWRpYXRlay9tdDgxODMuZHRzaQo+IEBAIC0zNzUsNiArMzc1
-LDYxIEBACj4KPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRoZXJtYWwtc2Vuc29y
-cyA9IDwmdGhlcm1hbCAwPjsKPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN1c3Rh
-aW5hYmxlLXBvd2VyID0gPDE1MDA+Owo+ICsKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIHRyaXBzIHsKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGhy
-ZXNob2xkOiB0cmlwLXBvaW50QDAgewo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIHRlbXBlcmF0dXJlID0gPDY4MDAwPjsKPiArICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoeXN0ZXJlc2lzID0gPDIwMDA+Owo+ICsg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGUgPSAicGFz
-c2l2ZSI7Cj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH07Cj4gKwo+
-ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0YXJnZXQ6IHRyaXAtcG9p
-bnRAMSB7Cj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-dGVtcGVyYXR1cmUgPSA8ODUwMDA+Owo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIGh5c3RlcmVzaXMgPSA8MjAwMD47Cj4gKyAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJwYXNzaXZlIjsKPiArICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfTsKPiArCj4gKyAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgIGNwdV9jcml0OiBjcHUtY3JpdCB7Cj4gKyAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGVtcGVyYXR1cmUgPSA8MTE1
-MDAwPjsKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBo
-eXN0ZXJlc2lzID0gPDIwMDA+Owo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIHR5cGUgPSAiY3JpdGljYWwiOwo+ICsgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICB9Owo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfTsK
-PiArCj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb29saW5nLW1hcHMgewo+ICsg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXAwIHsKPiArICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmlwID0gPCZ0YXJnZXQ+Owo+
-ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvb2xpbmct
-ZGV2aWNlID0gPCZjcHUwCj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUCj4gKyAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUPiwKPiAr
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgIDwmY3B1MQo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgVEhFUk1BTF9OT19MSU1JVAo+ICsgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVEhFUk1BTF9OT19MSU1JVD4sCj4gKyAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICA8JmNwdTIKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQKPiArICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQ+LAo+ICsgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgPCZjcHUzCj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUCj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUPjsKPiArICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb250cmlidXRpb24gPSA8
-MzA3Mj47Cj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH07Cj4gKyAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1hcDEgewo+ICsgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyaXAgPSA8JnRhcmdldD47Cj4g
-KyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29vbGluZy1k
-ZXZpY2UgPSA8JmNwdTQKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQKPiArICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQ+LAo+ICsg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgPCZjcHU1Cj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUCj4gKyAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUSEVSTUFMX05PX0xJTUlUPiwKPiArICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIDwmY3B1Ngo+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgVEhFUk1BTF9OT19MSU1JVAo+ICsgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVEhFUk1BTF9OT19MSU1JVD4sCj4gKyAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICA8JmNwdTcKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRIRVJNQUxfTk9fTElNSVQ+Owo+ICsgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRyaWJ1dGlvbiA9IDwx
-MDI0PjsKPiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfTsKPiArICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIH07Cj4gICAgICAgICAgICAgICAgICAgICAgICAg
-fTsKPgo+ICAgICAgICAgICAgICAgICAgICAgICAgIHR6dHMxOiB0enRzMSB7CgpUZXN0ZWQtYnk6
-IEhzaW4tWWkgV2FuZyA8aHNpbnlpQGNocm9taXVtLm9yZz4KCl9fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApM
-aW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQu
-b3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Thu, May 2, 2019 at 10:43 AM michael.kao <michael.kao@mediatek.com> wrote:
+>
+> From: Matthias Kaehlcke <mka@chromium.org>
+>
+> Evaluate the thermal zone every 500ms while not cooling and every
+> 100ms when passive cooling is performed.
+>
+> Signed-off-by: Matthias Kaehlcke <mka@chromium.org>
+> Signed-off-by: Michael Kao <michael.kao@mediatek.com>
+> ---
+>  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 4 ++--
+>  1 file changed, 2 insertions(+), 2 deletions(-)
+>
+> diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> index 0b3294b..be879ac 100644
+> --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> @@ -370,8 +370,8 @@
+>
+>                 thermal-zones {
+>                         cpu_thermal: cpu_thermal {
+> -                               polling-delay-passive = <1000>;
+> -                               polling-delay = <1000>;
+> +                               polling-delay-passive = <100>;
+> +                               polling-delay = <500>;
+>
+>                                 thermal-sensors = <&thermal 0>;
+>                                 sustainable-power = <1500>;
+
+Tested-by: Hsin-Yi Wang <hsinyi@chromium.org>
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
