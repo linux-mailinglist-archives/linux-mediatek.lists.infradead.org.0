@@ -2,63 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6B82D15F02
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 10:14:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 02DC715F8C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 10:39:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
+	List-Post:List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:
+	References:Message-ID:Subject:To:From:Date:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WI6kdpCXU6K7KdZsoAru57QYzVje6ElI8X1++BZ8Gq8=; b=txSr6HpaeTmFiT
-	t/70Kwyw+UlNRfB0HiY8V4v75y4sMcub6ama7EAt5Dbx7bNsWbY77elyZAGXKSyoCViUQIABxZ38h
-	lItCCtfcgKD7VMPgV+78zDqHOvXttchFyDobP9qPIs21ZBGzO7UMiCDuDi2XkVzrmoGWCJvg/pABC
-	oqn/WFLAWWKwrqt1tmgCnrPXaWwfKEQAHrSdSHJpOD7xjQDTPCYJh8I/SPGk7ZIDYB3dREFGecJPK
-	AqbZNNm5K2hGYSFvO/LdiXUM4bv2mG9TAvfDly1KBd6C7qEH+fhxC112MnUtaJWDLxas6cSc+2E7/
-	1l0TMZSsHi2qJqPh51bw==;
+	List-Owner; bh=fePWLK/KTGTRsXwffNcTTToYd+XB/643nCM45Efouqs=; b=F2JCfX/4UbO/Rx
+	X6i2upH9dTtWbODcxgjZuR50uXPPxD8zFQRwnOcJYkFm5/i8ZeCtRUmHbHiNU3oJ1J1vC4Q5cueNj
+	2uLevhRwAW1CltHggHNGhGei2N7oOEn6eWl3Rswnjk24n+YEFje/dAwXdBDpO4Fd2XDndRepGqjxC
+	hwGYlFhWSnFrO7xBQhzmJTQImPPr5+wnZdTkhO7yixXwSAKv8ZljTN7wjfvvMDyAXXzSJ/sCc2opj
+	rSRfMske4EAVKgDoEWaZo4U8ao1h2NbI1TVBVq4wVXaIs9O2q+wGwJlSdOC65ud/tJl1MEhdG4I/L
+	IiFOjG1DFDwYz2zutl3A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNvF8-0001So-Ay; Tue, 07 May 2019 08:14:30 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNvdR-0006N2-9s; Tue, 07 May 2019 08:39:37 +0000
+Received: from smtp-out.xnet.cz ([178.217.244.18])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNvEv-0001EH-Mt; Tue, 07 May 2019 08:14:18 +0000
-X-UUID: d783c330648a4ee9a44bc1924cac8c1a-20190507
-X-UUID: d783c330648a4ee9a44bc1924cac8c1a-20190507
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <bibby.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1569236680; Tue, 07 May 2019 00:14:02 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 01:14:01 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 16:13:59 +0800
-Received: from mtkslt302.mediatek.inc (10.21.14.115) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 7 May 2019 16:13:59 +0800
-From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
- <ck.hu@mediatek.com>
-Subject: [PATCH v5 12/12] arm64: dts: add gce node for mt8183
-Date: Tue, 7 May 2019 16:13:55 +0800
-Message-ID: <20190507081355.52630-13-bibby.hsieh@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
-References: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
+ id 1hNvdF-0006Dj-Mv; Tue, 07 May 2019 08:39:28 +0000
+Received: from meh.true.cz (meh.true.cz [108.61.167.218])
+ (Authenticated sender: petr@true.cz)
+ by smtp-out.xnet.cz (Postfix) with ESMTPSA id C739A5D6B;
+ Tue,  7 May 2019 10:39:20 +0200 (CEST)
+Received: from localhost (meh.true.cz [local])
+ by meh.true.cz (OpenSMTPD) with ESMTPA id 878559c4;
+ Tue, 7 May 2019 10:39:19 +0200 (CEST)
+Date: Tue, 7 May 2019 10:39:18 +0200
+From: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
+To: Dan Carpenter <dan.carpenter@oracle.com>
+Subject: Re: [PATCH net-next v2 0/4] of_get_mac_address ERR_PTR fixes
+Message-ID: <20190507083918.GI81826@meh.true.cz>
+References: <1557177887-30446-1-git-send-email-ynezz@true.cz>
+ <20190507071914.GJ2269@kadam>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190507071914.GJ2269@kadam>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_011417_745101_B5A74754 
-X-CRM114-Status: UNSURE (   9.97  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190507_013926_051464_8B0A2CC3 
+X-CRM114-Status: GOOD (  19.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [178.217.244.18 listed in list.dnswl.org]
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -72,63 +62,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, linux-kernel@vger.kernel.org,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>, kendrick.hsu@mediatek.com,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Sascha
- Hauer <kernel@pengutronix.de>, Frederic Chen <Frederic.Chen@mediatek.com>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- ginny.chen@mediatek.com
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Reply-To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
+Cc: devel@driverdev.osuosl.org, Andrew Lunn <andrew@lunn.ch>,
+ Florian Fainelli <f.fainelli@gmail.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Frank Rowand <frowand.list@gmail.com>, "David S. Miller" <davem@davemloft.net>,
+ linux-arm-kernel@lists.infradead.org, Heiner Kallweit <hkallweit1@gmail.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-add gce device node for mt8183
-
-Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 11 +++++++++++
- 1 file changed, 11 insertions(+)
-
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index b36e37fcdfe3..d6d26fa32dd7 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -9,6 +9,7 @@
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/interrupt-controller/irq.h>
- #include <dt-bindings/power/mt8183-power.h>
-+#include <dt-bindings/gce/mt8183-gce.h>
- #include "mt8183-pinfunc.h"
- / {
- 	compatible = "mediatek,mt8183";
-@@ -293,6 +294,16 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		gce: gce@10238000 {
-+			compatible = "mediatek,mt8183-gce";
-+			reg = <0 0x10238000 0 0x4000>;
-+			interrupts = <GIC_SPI 162 IRQ_TYPE_LEVEL_LOW>;
-+			#mbox-cells = <3>;
-+			#subsys-cells = <3>;
-+			clocks = <&infracfg CLK_INFRA_GCE>;
-+			clock-names = "gce";
-+		};
-+
- 		uart0: serial@11002000 {
- 			compatible = "mediatek,mt8183-uart",
- 				     "mediatek,mt6577-uart";
--- 
-2.18.0
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+RGFuIENhcnBlbnRlciA8ZGFuLmNhcnBlbnRlckBvcmFjbGUuY29tPiBbMjAxOS0wNS0wNyAxMDox
+OToxNF06CgpIaSwKCj4gT24gTW9uLCBNYXkgMDYsIDIwMTkgYXQgMTE6MjQ6NDNQTSArMDIwMCwg
+UGV0ciDFoHRldGlhciB3cm90ZToKPiA+IAo+ID4gdGhpcyBwYXRjaCBzZXJpZXMgaXMgYW4gYXR0
+ZW1wdCB0byBmaXggdGhlIG1lc3MsIEkndmUgc29tZWhvdyBtYW5hZ2VkIHRvCj4gPiBpbnRyb2R1
+Y2UuCj4gPiAKPiA+IEZpcnN0IHBhdGNoIGluIHRoaXMgc2VyaWVzIGlzIGRlZmFjdG8gdjUgb2Yg
+dGhlIHByZXZpb3VzIDA1LzEwIHBhdGNoIGluIHRoZQo+ID4gc2VyaWVzLCBidXQgc2luY2UgdGhl
+IHY0IG9mIHRoaXMgMDUvMTAgcGF0Y2ggd2Fzbid0IHBpY2tlZCB1cCBieSB0aGUKPiA+IHBhdGNo
+d29yayBmb3Igc29tZSB1bmtub3duIHJlYXNvbiwgdGhpcyBwYXRjaCB3YXNuJ3QgYXBwbGllZCB3
+aXRoIHRoZSBvdGhlcgo+ID4gOSBwYXRjaGVzIGluIHRoZSBzZXJpZXMsIHNvIEknbSByZXNlbmRp
+bmcgaXQgYXMgYSBzZXBhcmF0ZSBwYXRjaCBvZiB0aGlzCj4gPiBmaXh1cCBzZXJpZXMgYWdhaW4u
+Cj4gCj4gSSBmZWVsIHNvcnQgb2YgcmlkaWN1bG91cyBhc2tpbmcgdGhpcyBvdmVyIGFuZCBvdmVy
+Li4uICBNYXliZSB5b3VyIHNwYW0KPiBmaWx0ZXIgaXMgZWF0aW5nIG15IGVtYWlscz8KCm5vcGUs
+IEkndmUgcmVhZCB5b3VyIGVtYWlsLCB0aGF0J3MgdGhlIG9ubHkgcmVhc29uIEkndmUgc2VudCBv
+dXQgdGhpcyB2MiB3aGljaAphZGRlZCBGaXhlczogdGFnIHlvdSd2ZSBzdWdnZXN0ZWQgaW4geW91
+ciBlbWFpbC4KCj4gVGhpcyBidWcgd2FzIGludHJvZHVjZWQgaW4gaHR0cHM6Ly9wYXRjaHdvcmsu
+b3psYWJzLm9yZy9wYXRjaC8xMDk0OTE2Lwo+ICJbdjQsMDEvMTBdIG9mX25ldDogYWRkIE5WTUVN
+IHN1cHBvcnQgdG8gb2ZfZ2V0X21hY19hZGRyZXNzIiBidXQgaXQKPiBsb29rcyBsaWtlIG5vIG9u
+ZSBhcHBsaWVkIGl0LgoKdGhpcyBwYXRjaCBzZXJpZXMgaXMgYWdhaW5zdCBuZXQtbmV4dCwgYW5k
+IEkndmUgYWRkZWQgRml4ZXM6IHRhZyBhcyB5b3UndmUKcmVxdWVzdGVkIGluIHRoaXMgdjIgc2Vy
+aWVzWzFdICh3aGljaCBleHBhbmRzIHRvIGNvbW1pdFsyXSBpbiBuZXQtbmV4dCk6CgogRml4ZXM6
+IGQwMWY0NDljMDA4YSAoIm9mX25ldDogYWRkIE5WTUVNIHN1cHBvcnQgdG8gb2ZfZ2V0X21hY19h
+ZGRyZXNzIikKCj4gWW91J3JlIGFjdGluZyBhcyBpZiBpdCAqd2FzKiBhcHBsaWVkIGJ1dCB5b3Ug
+cmVmdXNlIHRvIGFuc3dlciBteQo+IHF1ZXN0aW9uIHdobyBhcHBsaWVkIGl0IGFuZCB3aGljaCB0
+byB3aGljaCB0cmVlIHNvIEkgY2FuIGZpZ3VyZSBvdXQgd2hhdAo+IHdlbnQgd3JvbmcuCgppdCB3
+YXMgYXBwbGllZFsyXSB0byBEYXZpZCdzIG5ldC1uZXh0IHRyZWUsIGJ1dCB1bmZvcnR1bmF0ZWx5
+IHBhcnRpYWx5LCBqdXN0IDkKcGF0Y2hlcyBvdXQgb2YgMTAsIGFzIHRoZSBwYXRjaCAwNS8xMCBp
+biB0aGF0IHNlcmllcyAod2hpY2ggaXMgcGF0Y2ggMS80IGluCnRoaXMgc2VyaWVzKSBuZXZlciBy
+ZWFjaGVkIG5ldGRldiBtYWlsaW5nIGxpc3QgYW5kIHBhdGNod29yaywgcHJvYmFibHkgYmVjYXVz
+ZQpvZiBzb21lIG5ldGRldiBtYWlsaW5nIGxpc3Qgc29mdHdhcmUgYW5kL29yIHBhdGNod29yayBo
+aWNjdXAsIHZlcnkgbGlrZWx5IGR1ZQp0byB0aGUgbG9uZyBsaXN0IG9mIHJlY2lwaWVudHMgaW4g
+dGhhdCBwYXRjaCBhbmQgYXMgSSdtIG5vdCBzdWJzY3JpYmVkIHRvIHRoZQpuZXRkZXYgKGR1ZSB0
+byB0aGUgaGlnaCB0cmFmZmljKSBJJ20gcHJvYmFibHkgdHJlYXRlbiBzb21laG93IGRpZmZlcmVu
+dGx5LgoKU28gdG8gc3VtIGl0IHVwLCBJJ3ZlIHNpbXBseSB0aG91Z2h0LCB0aGF0IGl0IHdhcyBl
+bm91Z2ggdG8gc2VuZCBvdXQgdjIgd2l0aAp0aGF0IEZpeGVzOiB0YWcgYW5kIGNvbnNpZGVyZWQg
+aXQgZG9uZS4KCj4gSSBvbmx5IHNlZSBjb21tZW50cyBmcm9tIGxhc3QgRnJpZGF5IHRoYXQgaXQg
+c2hvdWxkbid0IGJlIGFwcGxpZWQuLi4KCkknbSBzb3JyeSwgYnV0IHdoaWNoIGNvbW1lbnRzIGRv
+IHlvdSBtZWFuIGV4YWN0bHk/IFRob3NlIGFib3V0IHRoZQpgbnZtZW0tbWFjLWFkZHJlc3NgIERU
+IChzeXNmcykgZW50cnk/IElmIHRoYXQgaXMgdGhlIGNhc2UsIGZyb20gbXkgcG9pbnQgb2YKdmll
+dywgSSd2ZSBwcm92aWRlZCByZWFzb25hYmxlIGFyZ3VtZW50cyBhbmQgbm9ib2R5IHRvbGQgbWUs
+IHRoYXQgSSdtIHdyb25nCndpdGggbXkgcmVhc29uaW5nIG9yIE5BQ0tlZCB0aGlzIGV4cGxpY2l0
+bHksIHNvIERhdmlkIHByb2JhYmx5IGNvbnNpZGVyZWQgbXkKYXJndW1lbnRzIGdvb2QgZW5vdWdo
+IGFuZCBtZXJnZWQgaXQgYXMgaXQgaXM/IEkgZG9uJ3QgaGF2ZSBhbnkgb3RoZXIKZXhwbGFuYXRp
+b24uCgo+IEkgYWxzbyB0b2xkIHlvdSBvbiBGcmlkYXkgaW4gYSBkaWZmZXJlbnQgdGhyZWFkIHRo
+YXQgdGhhdCBwYXRjaCBzaG91bGRuJ3QgYmUKPiBhcHBsaWVkLiAgQnJlYWtpbmcgZ2l0IGJpc2Vj
+dCBpcyBhIGJ1ZywgYW5kIHdlIG5ldmVyIGRvIHRoYXQuIAoKWWVzLCBhbmQgSSBhZ3JlZSB3aXRo
+IHlvdSwgYnV0IEkndmUgc2ltcGx5IHRob3VnaHQsIHRoYXQgaWYgYW55IG9mIHRoZQptYWludGFp
+bmVycyB3aG8gcHJldmlvdXNseSByZXZpZXdlZCB0aGUgc2VyaWVzIGRpZG4ndCBvYmplY3RlZCBh
+Ym91dCB0aGlzLAp0aGF0IHRoZXkncmUgcG9zc2libHkgZ29pbmcgdG8gc3F1YXNoIHRob3NlIHBh
+dGNoZXMgYnkgdGhlbXNlbHZlcyBkdXJpbmcgdGhlCm1lcmdpbmcgcHJvY2VzcyBvciB0aGF0IHRo
+ZXkncmUgZ29pbmcgdG8gdGVsbCBtZSB0byBkbyBzbyBhbmQgSSB3b3VsZCBhZGRyZXNzCnRoaXMg
+aW4gdGhlIGxhdGVzdCBpbnRlcmF0aW9uIG9mIHRoZSBwYXRjaHNldCBiZWZvcmUgbWVyZ2UuCgpB
+bnl3YXksIGlzIHRoZXJlIGFueSBwb3NzaWJpbGl0eSBob3cgdG8gZml4IHRoYXQgbm93PwoKPiBJ
+J20ganVzdCB2ZXJ5IGNvbmZ1c2VkIHJpZ2h0IG5vdy4gIFdoYXQgSSdtIHRyeWluZyB0byBkbyBp
+cyBmaWd1cmUgb3V0IGluCj4gbXkgaGVhZCBob3cgdGhpcyBwcm9jZXNzIGZhaWxlZCBzbyB3ZSBj
+YW4gZG8gYmV0dGVyIG5leHQgdGltZS4KCkknbSBqdXN0IG9jY2FzaW9uYWwgY29udHJpYnV0b3Is
+IHNvIEknbSBzb3JyeSwgYnV0IEkgY2FuIGhhcmRseSBwcm92aWRlIGFueQppbnB1dC4KCjEuIGh0
+dHBzOi8vcGF0Y2h3b3JrLm96bGFicy5vcmcvcGF0Y2gvMTA5NjA1NC8KMi4gaHR0cHM6Ly9naXQu
+a2VybmVsLm9yZy9wdWIvc2NtL2xpbnV4L2tlcm5lbC9naXQvZGF2ZW0vbmV0LW5leHQuZ2l0L2Nv
+bW1pdC8/aWQ9ZDAxZjQ0OWMwMDhhM2Y0MWZhNDRjNjAzZTI4YTc0NTJhYjhmOGU2OAoKQ2hlZXJz
+LAoKUGV0cgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18K
+TGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVh
+ZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1t
+ZWRpYXRlawo=
