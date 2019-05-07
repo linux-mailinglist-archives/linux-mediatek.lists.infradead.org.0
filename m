@@ -2,65 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5CFB15E53
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 09:37:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5093415E69
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 09:41:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=K5xNvlW6cGdS6XdEUxQ44Qz2aStfOsr9ZNursVGhrYk=; b=akNPp8c96lwTzg
-	g8NbH+cVOBDUdk+WhlFT2eaGOUrwgXzuYvMTjKvJJJAYpH+57yZSfqtlDzozReGLDri+sEjRKaaWM
-	htE8XGmvwgxg7Q2/lGVHn5Kb2lzcOMVvCZQKhzVl/9e+TLh8UQV64iC4vu215MDzbXn+AMOdgueqB
-	DQ+b6+UIrXtbD6HjlDfslhrOBNSkMOK1R2zsj0dBqnfLU1/oTEejE9LgetvqQVMj7PrT+V4Kbl4wl
-	niZNr9Vouf0bUJmUHcf8LbOdsz8tWCVnWYSAamNi8/k1JcW9q4POSLLBHdFWGbBftEgrkrNZBcehP
-	4y9ceST/uIrmqvXDPavg==;
+	List-Owner; bh=VYcpEQGC7HWHUHGOlBqLDr+Cckv96Pz2elBmerWfuJ0=; b=JdBXjrjp7j2KCY
+	nTwiR0Zh9F/ktUqmvShJ/x9ltBafZ/jo2VKB30Yi5V9dhz1SiTYCKCOBhDisgm7lk7HLuLqA4FOQk
+	K8kKZvPxyJV3d1CuZBGTAzuTGJItiQoLnn3FVAZUnZ0+VF4EZxJiQKslBD+t9yNymeAa8j+dw6SUJ
+	GEmt2cDR+TOsG64KdvUI6Fr0fNZSGqKVUMj6rEJa9RpNmYA30APYIV/YdYBHVFtF71urEn0aB84Yg
+	FsBho7dbWuSdQSjiKMC0QgXof0T32++lpd9FGLqfJGmuPfZdzcDryzDtHkImMJ/NRB/wvGabX+cjT
+	Tno/K3K4YrMToDUxjeBA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNufY-0000fY-98; Tue, 07 May 2019 07:37:44 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNujL-0002ae-Qe; Tue, 07 May 2019 07:41:39 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNufP-0000YI-NQ; Tue, 07 May 2019 07:37:37 +0000
-X-UUID: f098d1cdeee043f2987d178b8aed4191-20190506
-X-UUID: f098d1cdeee043f2987d178b8aed4191-20190506
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1281229756; Mon, 06 May 2019 23:37:32 -0800
-Received: from MTKMBS32DR.mediatek.inc (172.27.6.104) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 00:37:30 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS32DR.mediatek.inc
- (172.27.6.104) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 7 May 2019 15:37:25 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 May 2019 15:37:24 +0800
-Message-ID: <1557214644.10179.266.camel@mhfsdcap03>
-Subject: Re: [PATCH 2/2] usb: xhci-mtk: Do not create shared_hcd if no USB
- 3.0 port available
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Nicolas Boichat <drinkcat@chromium.org>
-Date: Tue, 7 May 2019 15:37:24 +0800
-In-Reply-To: <20190502045631.229386-2-drinkcat@chromium.org>
-References: <20190502045631.229386-1-drinkcat@chromium.org>
- <20190502045631.229386-2-drinkcat@chromium.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hNujB-0002T4-W1; Tue, 07 May 2019 07:41:31 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 9115620989;
+ Tue,  7 May 2019 07:41:28 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1557214889;
+ bh=bn9LxTz5PdUe1/eUSoWy21rExjTBSKgzZqLiQHJSJt8=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=G9IZEx4Ac6qG5IHydgnkSVdU2W3m3DzHUL1a8UNorDAR3bT8YrmdfqPbnGovYAZqT
+ gJPg1s4gm5MefjSAlyiTpxSL25/qZyI2uPZLngg5B69pvF4BDdV4Ro6afM2qi/0H5h
+ BBPj0fkQFaLnYMa/n4Ir+xUQmGDzRY/bniniJQGg=
+Date: Tue, 7 May 2019 09:41:26 +0200
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Dan Carpenter <dan.carpenter@oracle.com>,
+ Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
+Subject: Re: [PATCH net-next v2 0/4] of_get_mac_address ERR_PTR fixes
+Message-ID: <20190507074126.GA26478@kroah.com>
+References: <1557177887-30446-1-git-send-email-ynezz@true.cz>
+ <20190507071914.GJ2269@kadam>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F29A5653419344021C7CCE1ECFF7F5112A40D61367D92EF03386E42FBB22C6DA2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190507071914.GJ2269@kadam>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_003735_776201_C2CF4A2A 
-X-CRM114-Status: GOOD (  17.06  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190507_004130_045414_A147C015 
+X-CRM114-Status: GOOD (  18.59  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -72,129 +73,45 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Khuong Dinh <khuong@os.amperecomputing.com>,
- Mathias Nyman <mathias.nyman@intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+Cc: devel@driverdev.osuosl.org, Andrew Lunn <andrew@lunn.ch>,
+ Florian Fainelli <f.fainelli@gmail.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, netdev@vger.kernel.org,
  linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Hoan Tran <hoan@os.amperecomputing.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ Frank Rowand <frowand.list@gmail.com>, "David S. Miller" <davem@davemloft.net>,
+ linux-arm-kernel@lists.infradead.org, Heiner Kallweit <hkallweit1@gmail.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Nicolas,
-On Thu, 2019-05-02 at 12:56 +0800, Nicolas Boichat wrote:
-> When the controller only supports USB 2.0, do not even create the
-> USB 3.0 hcd/root hub.
-> 
-> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> ---
->  drivers/usb/host/xhci-mtk.c | 44 +++++++++++++++++++++++--------------
->  1 file changed, 28 insertions(+), 16 deletions(-)
-> 
-> diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
-> index 026fe18972d3e5b..189f5dc614e6e05 100644
-> --- a/drivers/usb/host/xhci-mtk.c
-> +++ b/drivers/usb/host/xhci-mtk.c
-> @@ -527,23 +527,28 @@ static int xhci_mtk_probe(struct platform_device *pdev)
->  	xhci->imod_interval = 5000;
->  	device_property_read_u32(dev, "imod-interval-ns", &xhci->imod_interval);
->  
-> -	xhci->shared_hcd = usb_create_shared_hcd(driver, dev,
-> +	/* Only create shared_hcd when USB3.0 port is available. */
-> +	if (xhci->usb3_rhub.num_ports > 0) {
-xhci->usb3_rhub.num_ports is not set until usb_add_hcd() is called.
-
-> +		xhci->shared_hcd = usb_create_shared_hcd(driver, dev,
->  			dev_name(dev), hcd);
-> -	if (!xhci->shared_hcd) {
-> -		ret = -ENOMEM;
-> -		goto disable_device_wakeup;
-> +		if (!xhci->shared_hcd) {
-> +			ret = -ENOMEM;
-> +			goto disable_device_wakeup;
-> +		}
->  	}
->  
->  	ret = usb_add_hcd(hcd, irq, IRQF_SHARED);
->  	if (ret)
->  		goto put_usb3_hcd;
->  
-> -	if (HCC_MAX_PSA(xhci->hcc_params) >= 4)
-> -		xhci->shared_hcd->can_do_streams = 1;
-> +	if (xhci->usb3_rhub.num_ports > 0) {
-> +		if (HCC_MAX_PSA(xhci->hcc_params) >= 4)
-> +			xhci->shared_hcd->can_do_streams = 1;
->  
-> -	ret = usb_add_hcd(xhci->shared_hcd, irq, IRQF_SHARED);
-> -	if (ret)
-> -		goto dealloc_usb2_hcd;
-> +		ret = usb_add_hcd(xhci->shared_hcd, irq, IRQF_SHARED);
-> +		if (ret)
-> +			goto dealloc_usb2_hcd;
-> +	}
->  
->  	return 0;
->  
-> @@ -552,7 +557,8 @@ static int xhci_mtk_probe(struct platform_device *pdev)
->  
->  put_usb3_hcd:
->  	xhci_mtk_sch_exit(mtk);
-> -	usb_put_hcd(xhci->shared_hcd);
-> +	if (xhci->shared_hcd)
-> +		usb_put_hcd(xhci->shared_hcd);
->  
->  disable_device_wakeup:
->  	device_init_wakeup(dev, false);
-> @@ -579,12 +585,14 @@ static int xhci_mtk_remove(struct platform_device *dev)
->  	struct xhci_hcd	*xhci = hcd_to_xhci(hcd);
->  	struct usb_hcd  *shared_hcd = xhci->shared_hcd;
->  
-> -	usb_remove_hcd(shared_hcd);
-> +	if (shared_hcd)
-> +		usb_remove_hcd(shared_hcd);
->  	xhci->shared_hcd = NULL;
->  	device_init_wakeup(&dev->dev, false);
->  
->  	usb_remove_hcd(hcd);
-> -	usb_put_hcd(shared_hcd);
-> +	if (shared_hcd)
-> +		usb_put_hcd(shared_hcd);
->  	usb_put_hcd(hcd);
->  	xhci_mtk_sch_exit(mtk);
->  	xhci_mtk_clks_disable(mtk);
-> @@ -611,8 +619,10 @@ static int __maybe_unused xhci_mtk_suspend(struct device *dev)
->  	xhci_dbg(xhci, "%s: stop port polling\n", __func__);
->  	clear_bit(HCD_FLAG_POLL_RH, &hcd->flags);
->  	del_timer_sync(&hcd->rh_timer);
-> -	clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-> -	del_timer_sync(&xhci->shared_hcd->rh_timer);
-> +	if (xhci->shared_hcd) {
-> +		clear_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-> +		del_timer_sync(&xhci->shared_hcd->rh_timer);
-> +	}
->  
->  	xhci_mtk_host_disable(mtk);
->  	xhci_mtk_clks_disable(mtk);
-> @@ -631,8 +641,10 @@ static int __maybe_unused xhci_mtk_resume(struct device *dev)
->  	xhci_mtk_host_enable(mtk);
->  
->  	xhci_dbg(xhci, "%s: restart port polling\n", __func__);
-> -	set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-> -	usb_hcd_poll_rh_status(xhci->shared_hcd);
-> +	if (xhci->shared_hcd) {
-> +		set_bit(HCD_FLAG_POLL_RH, &xhci->shared_hcd->flags);
-> +		usb_hcd_poll_rh_status(xhci->shared_hcd);
-> +	}
->  	set_bit(HCD_FLAG_POLL_RH, &hcd->flags);
->  	usb_hcd_poll_rh_status(hcd);
->  	return 0;
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gVHVlLCBNYXkgMDcsIDIwMTkgYXQgMTA6MTk6MTRBTSArMDMwMCwgRGFuIENhcnBlbnRlciB3
+cm90ZToKPiBPbiBNb24sIE1heSAwNiwgMjAxOSBhdCAxMToyNDo0M1BNICswMjAwLCBQZXRyIMWg
+dGV0aWFyIHdyb3RlOgo+ID4gSGksCj4gPiAKPiA+IHRoaXMgcGF0Y2ggc2VyaWVzIGlzIGFuIGF0
+dGVtcHQgdG8gZml4IHRoZSBtZXNzLCBJJ3ZlIHNvbWVob3cgbWFuYWdlZCB0bwo+ID4gaW50cm9k
+dWNlLgo+ID4gCj4gPiBGaXJzdCBwYXRjaCBpbiB0aGlzIHNlcmllcyBpcyBkZWZhY3RvIHY1IG9m
+IHRoZSBwcmV2aW91cyAwNS8xMCBwYXRjaCBpbiB0aGUKPiA+IHNlcmllcywgYnV0IHNpbmNlIHRo
+ZSB2NCBvZiB0aGlzIDA1LzEwIHBhdGNoIHdhc24ndCBwaWNrZWQgdXAgYnkgdGhlCj4gPiBwYXRj
+aHdvcmsgZm9yIHNvbWUgdW5rbm93biByZWFzb24sIHRoaXMgcGF0Y2ggd2Fzbid0IGFwcGxpZWQg
+d2l0aCB0aGUgb3RoZXIKPiA+IDkgcGF0Y2hlcyBpbiB0aGUgc2VyaWVzLCBzbyBJJ20gcmVzZW5k
+aW5nIGl0IGFzIGEgc2VwYXJhdGUgcGF0Y2ggb2YgdGhpcwo+ID4gZml4dXAgc2VyaWVzIGFnYWlu
+Lgo+IAo+IEkgZmVlbCBzb3J0IG9mIHJpZGljdWxvdXMgYXNraW5nIHRoaXMgb3ZlciBhbmQgb3Zl
+ci4uLiAgTWF5YmUgeW91ciBzcGFtCj4gZmlsdGVyIGlzIGVhdGluZyBteSBlbWFpbHM/Cj4gCj4g
+VGhpcyBidWcgd2FzIGludHJvZHVjZWQgaW4gaHR0cHM6Ly9wYXRjaHdvcmsub3psYWJzLm9yZy9w
+YXRjaC8xMDk0OTE2Lwo+ICJbdjQsMDEvMTBdIG9mX25ldDogYWRkIE5WTUVNIHN1cHBvcnQgdG8g
+b2ZfZ2V0X21hY19hZGRyZXNzIiBidXQgaXQKPiBsb29rcyBsaWtlIG5vIG9uZSBhcHBsaWVkIGl0
+Lgo+IAo+IFlvdSdyZSBhY3RpbmcgYXMgaWYgaXQgKndhcyogYXBwbGllZCBidXQgeW91IHJlZnVz
+ZSB0byBhbnN3ZXIgbXkKPiBxdWVzdGlvbiB3aG8gYXBwbGllZCBpdCBhbmQgd2hpY2ggdG8gd2hp
+Y2ggdHJlZSBzbyBJIGNhbiBmaWd1cmUgb3V0IHdoYXQKPiB3ZW50IHdyb25nLgo+IAo+IEkgb25s
+eSBzZWUgY29tbWVudHMgZnJvbSBsYXN0IEZyaWRheSB0aGF0IGl0IHNob3VsZG4ndCBiZSBhcHBs
+aWVkLi4uICBJCj4gYWxzbyB0b2xkIHlvdSBvbiBGcmlkYXkgaW4gYSBkaWZmZXJlbnQgdGhyZWFk
+IHRoYXQgdGhhdCBwYXRjaCBzaG91bGRuJ3QKPiBiZSBhcHBsaWVkLiAgQnJlYWtpbmcgZ2l0IGJp
+c2VjdCBpcyBhIGJ1ZywgYW5kIHdlIG5ldmVyIGRvIHRoYXQuICBJJ20KPiBqdXN0IHZlcnkgY29u
+ZnVzZWQgcmlnaHQgbm93Li4uICBXaGF0IEknbSB0cnlpbmcgdG8gZG8gaXMgZmlndXJlIG91dCBp
+bgo+IG15IGhlYWQgaG93IHRoaXMgcHJvY2VzcyBmYWlsZWQgc28gd2UgY2FuIGRvIGJldHRlciBu
+ZXh0IHRpbWUuCgpKdXN0IHRvIHJlc2VuZCB0aGlzLCBzbyB0aGF0IGl0IGhvcGVmdWxseSBkb2Vz
+IF9ub3RfIGdldCBzdHVjayBpbiBhIHNwYW0KZmlsdGVyLgoKUGV0ciwgcGxlYXNlIGFkZHJlc3Mg
+RGFuJ3MgY29tbWVudHMsIGRvIG5vdCBpZ25vcmUgdGhlbS4KCmdyZWcgay1oCgpfX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWls
+aW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMu
+aW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
