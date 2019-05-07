@@ -2,54 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7AC5516042
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:15:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8CF3A160B3
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:20:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=1NQieHRUjpJN2UqwBXMfjCCthp5SWu1Jwjf3Kch9C2w=; b=fezJVZAuek6GyK
-	6trWVWpzbO+KQ3bbZtdUZmd/AWMOYjdUgDfpDPL8UrQ13CuOYhIfnKN2cyndfgMCvhrL6/cIrjdNb
-	SEot8MmMR35oh9E08zFW7LsU3psXIDTL5UTKYync0lxMaCSx4SGnamhjeGQMCzBzwSBHhWnKtW49V
-	Vg29CIjYP6HvQ1G4XR3CTtUzhcpThXt/PoAcfG7AwU/UJtgc0gcwTvV5IiJntlZJTriwk5KGVoH84
-	AdvI1OOiqK6P3BW5zCzq9M/GnUyKGqzoi2mUXJKDnf6Gf9+R01c5uYk+d6dGcTOGT3+ZbTfo9qJOu
-	SMTxkustBr9bZ9PBZPzA==;
+	List-Owner; bh=hzyF1sMfHf1dfiHL7hB4Wc4wmyaELDHBIQpg4jcdYDk=; b=p0fTEe1Di17JNx
+	t4K8a+7iQkjdJ4XM630R+cC2ar3PGNvhQzYAGP1FjKXsXUgLIRuYTuLmfyu1als0ItABAxqu3UKy2
+	Em0RYBl6dQlvnElsIQiYoVskCA6C8c4tZFyq7qyx6SqoaiWom6U/PGjoxTd8avyUMJmxjqwlxKjMp
+	DvtbWpw6agNor9y/NAaKyQQ1yS6XLt++9jIVb08t6CBRodebbfPv8MLykgj85CKrr8sBzz2lq7hXC
+	kp92zObnT4Pe3X9vvH8d3Oou+ggFIV+5yuFttcNjNtTYEz3Ny6WQsWI9azXqeFv13VNzC9Ap6zMdh
+	1T9mrfCXg+LuhTs8FkWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNwCJ-00009z-Ih; Tue, 07 May 2019 09:15:39 +0000
+	id 1hNwHE-000663-SK; Tue, 07 May 2019 09:20:44 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNwCG-00009c-4N
- for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 09:15:37 +0000
-X-UUID: c37164fc2afb49b6bdea347f1f1017a9-20190507
-X-UUID: c37164fc2afb49b6bdea347f1f1017a9-20190507
+ id 1hNwH5-0005wt-2t; Tue, 07 May 2019 09:20:36 +0000
+X-UUID: 0d2ff4f8909a483c9439cdddb3e88489-20190507
+X-UUID: 0d2ff4f8909a483c9439cdddb3e88489-20190507
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <xixi.chen@mediatek.com>)
+ (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1022164973; Tue, 07 May 2019 01:15:32 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 02:15:30 -0700
+ with ESMTP id 2084016634; Tue, 07 May 2019 01:20:25 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 02:20:23 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 17:15:25 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 May 2019 17:15:25 +0800
-From: Xi Chen <xixi.chen@mediatek.com>
-To: <matthias.bgg@gmail.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>
-Subject: [v2,1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
-Date: Tue, 7 May 2019 17:15:23 +0800
-Message-ID: <1557220523-24992-1-git-send-email-xixi.chen@mediatek.com>
-X-Mailer: git-send-email 1.9.1
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 17:20:21 +0800
+Received: from mtkslt306.mediatek.inc (10.21.14.136) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 7 May 2019 17:20:21 +0800
+From: Xiaolei Li <xiaolei.li@mediatek.com>
+To: <miquel.raynal@bootlin.com>, <richard@nod.at>
+Subject: [RFC PATCH v4 0/1] Re-license MTK NAND driver
+Date: Tue, 7 May 2019 17:20:19 +0800
+Message-ID: <20190507092020.1917-1-xiaolei.li@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 05CE6694E687DD29975CE0BAB73FFFC718C9514A030ED2FE8830E3F468F8339B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_021536_178920_B06D6C75 
-X-CRM114-Status: UNSURE (   7.81  )
+X-CRM114-CacheID: sfid-20190507_022035_130125_6F2695C5 
+X-CRM114-Status: UNSURE (   5.45  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -70,48 +68,54 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Xi
- Chen <xixi.chen@mediatek.com>, srv_heupstream@mediatek.com
+Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com, arnd@arndb.de,
+ srv_heupstream@mediatek.com, yamada.masahiro@socionext.com,
+ yellowriver2010@hotmail.com, gustavo@embeddedor.com,
+ jorge.ramirez-ortiz@linaro.org, matthias.bgg@gmail.com,
+ boris.brezillon@collabora.com, linux-mtd@lists.infradead.org,
+ weiyongjun1@huawei.com, yingjoe.chen@mediatek.com, rafal@milecki.pl,
+ linux-mediatek@lists.infradead.org, xiaolei.li@mediatek.com,
+ rogercc.lin@mediatek.com, dan.carpenter@oracle.com, peterpandong@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add emi dt-bindings of MT8183 in binding document.
+Hello,
 
-Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
----
- .../bindings/memory-controllers/mediatek,emi.txt      | 19 +++++++++++++++++++
- 1 file changed, 19 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+Currently, MTK NAND driver is licensed as GPL. And we would like to
+modify and publish it in bootloader with MIT license. So, here we send
+this RFC patch to solicit ACKs from MTK NAND driver authors and
+contributors whether we can re-license MTK NAND driver as dual MIT/GPL.
 
-diff --git a/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
-new file mode 100644
-index 0000000..a19e3b3
---- /dev/null
-+++ b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
-@@ -0,0 +1,19 @@
-+EMI (External Memory Interface)
-+
-+Required properties:
-+- compatible : must be one of :
-+	"mediatek,mt8183-emi"
-+- reg : the register and size of the EMI block.
-+- interrupts : includes MPU, CGM, ELM.
-+
-+Example:
-+	emi@10219000 {
-+	compatible = "mediatek,mt8183-emi";
-+	reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
-+		  <0 0x10226000 0 0x1000>, /* EMI MPU */
-+		  <0 0x1022d000 0 0x1000>, /* CHA EMI */
-+		  <0 0x10235000 0 0x1000>; /* CHB EMI */
-+	interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
-+			 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
-+			 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
-+};
+Thanks and looking forward to your reply,
+Xiaolei
+
+Patch v4:
+---------
+- Append ACK from Miquel, Boris, RogerCC, Ryder, Rafal.
+- Use "git log --follow" to find all contributors and add them all in Cc list.
+
+Patch v3:
+---------
+- Add license text replacement description in commit log.
+
+Patch v2:
+---------
+- Add Ryder, Rafal, Wen in CC list.
+- Introduce why we want to re-license MTK NAND driver.
+
+Xiaolei Li (1):
+  mtd: rawnand: mtk: Re-license MTK NAND driver as Dual MIT/GPL
+
+ drivers/mtd/nand/raw/mtk_ecc.c  | 12 ++----------
+ drivers/mtd/nand/raw/mtk_ecc.h  |  4 +---
+ drivers/mtd/nand/raw/mtk_nand.c | 12 ++----------
+ 3 files changed, 5 insertions(+), 23 deletions(-)
+
 -- 
-1.9.1
+2.18.0
+
 
 
 _______________________________________________
