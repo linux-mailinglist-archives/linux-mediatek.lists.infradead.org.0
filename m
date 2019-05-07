@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 007D01603A
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:13:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7AC5516042
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:15:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=RrboFvV5x6MPl9L5YtLtrzj36ES/Tb9AWUxLiB04ySI=; b=LNv22dVMKyZdMQ
-	RaAN78wgGKvaQ1Zg0hwcliIWEQhdx27b+res9Bvv53bxzmi/DL87tlguMwBjGpNNNBLrzaeJ/JCCe
-	nktNWL/Vj2PJ8cnyzDGf5lnzuvAJ/JPtIUK86jJJ4XBvCsO1ZuF9vv909gUqTVoCeYxn79hamVUkd
-	ng6wuVtA2oLWtGyro9WeyQaoL24vjExOmHuta0HvfZOWO1ekoxTiBo/Rz3ifS9HNmWmqSDSW31dit
-	6alABpXkgHHOTZYvFsOKxqU3q/yCri/gNralEw0w+5JaV5vMdhwMK+V5uXmeiD9M3/yFQ60wt7MIa
-	mywsfAUEMGptKI1EfkSQ==;
+	List-Owner; bh=1NQieHRUjpJN2UqwBXMfjCCthp5SWu1Jwjf3Kch9C2w=; b=fezJVZAuek6GyK
+	6trWVWpzbO+KQ3bbZtdUZmd/AWMOYjdUgDfpDPL8UrQ13CuOYhIfnKN2cyndfgMCvhrL6/cIrjdNb
+	SEot8MmMR35oh9E08zFW7LsU3psXIDTL5UTKYync0lxMaCSx4SGnamhjeGQMCzBzwSBHhWnKtW49V
+	Vg29CIjYP6HvQ1G4XR3CTtUzhcpThXt/PoAcfG7AwU/UJtgc0gcwTvV5IiJntlZJTriwk5KGVoH84
+	AdvI1OOiqK6P3BW5zCzq9M/GnUyKGqzoi2mUXJKDnf6Gf9+R01c5uYk+d6dGcTOGT3+ZbTfo9qJOu
+	SMTxkustBr9bZ9PBZPzA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNwA3-00073k-Bs; Tue, 07 May 2019 09:13:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNwCJ-00009z-Ih; Tue, 07 May 2019 09:15:39 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNwA0-00072z-9V
- for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 09:13:17 +0000
-X-UUID: f9313f24029d4d1089f676fefa8a13de-20190507
-X-UUID: f9313f24029d4d1089f676fefa8a13de-20190507
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hNwCG-00009c-4N
+ for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 09:15:37 +0000
+X-UUID: c37164fc2afb49b6bdea347f1f1017a9-20190507
+X-UUID: c37164fc2afb49b6bdea347f1f1017a9-20190507
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <xixi.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1675011551; Tue, 07 May 2019 01:13:10 -0800
+ with ESMTP id 1022164973; Tue, 07 May 2019 01:15:32 -0800
 Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 02:13:08 -0700
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 02:15:30 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 17:12:54 +0800
+ 15.0.1395.4; Tue, 7 May 2019 17:15:25 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 May 2019 17:12:53 +0800
+ Transport; Tue, 7 May 2019 17:15:25 +0800
 From: Xi Chen <xixi.chen@mediatek.com>
 To: <matthias.bgg@gmail.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>
-Subject: [PATCH] [1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
-Date: Tue, 7 May 2019 17:12:53 +0800
-Message-ID: <1557220373-24853-1-git-send-email-xixi.chen@mediatek.com>
+Subject: [v2,1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
+Date: Tue, 7 May 2019 17:15:23 +0800
+Message-ID: <1557220523-24992-1-git-send-email-xixi.chen@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E2F3ED89DFD2A1828F9ECB3ED06163759FAD7B6D69E53B4F311A31A0EC0D4CB72000:8
+X-TM-SNTS-SMTP: 05CE6694E687DD29975CE0BAB73FFFC718C9514A030ED2FE8830E3F468F8339B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_021316_334431_4244031A 
-X-CRM114-Status: UNSURE (   7.79  )
+X-CRM114-CacheID: sfid-20190507_021536_178920_B06D6C75 
+X-CRM114-Status: UNSURE (   7.81  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,7 +79,6 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Add emi dt-bindings of MT8183 in binding document.
 
-Change-Id: I6704ad444093778462b9a16f6c03a1ca7ecc1e0d
 Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
 ---
  .../bindings/memory-controllers/mediatek,emi.txt      | 19 +++++++++++++++++++
