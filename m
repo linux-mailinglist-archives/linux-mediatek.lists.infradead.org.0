@@ -2,63 +2,102 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED13816123
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:39:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C2E851613B
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:41:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=PAVzfKsMqQDoIfBjMH7XI14VjprRIMHE/oQsOy3mGWw=; b=NgULY0sPtxIfS8
-	kHmSsgt31GdvA2A9YHH90KwpGzpKDEGz7IYvBGJwSupE97VY5x1xNMywQO8RlTDvxZgC4Hb0rRHul
-	8/GV2OQ2WTFs28iq8XQWxJeXYKhPorEWMC5XBs7uPcoMMShSOKmDBj8Ri1Rn7pYcB5wTNCNFkP2nQ
-	plpo8Cc+s6AL70ESCrMZdYrGz15wo604UEqxCJmAwzKWyS406O2fNY9c3roxX7i13tss16zzQ3e2i
-	Jf6WKQAcGH94VSFMsFJr/tDr6fINb4qTMDLjJA5SZW+SM0hzhomOppGjG+/jPVrq55H6cpg8L0TEx
-	3SgBvWcnkcuVQI5Tk7hQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=acVlF46t9dchM37I7F9dAjzSMksdHdFZXE1NQjs+UjM=; b=Sq3jGpAlHjZAC+
+	7LqnVMoS4KAVOgwyrolMTKA0t6NRFjY9+X07Jix1kWTaItmzYESr755nmbW+JIDslKN1XsDH0q3eg
+	MlltorUxwVCsclX2ZtNOGOoYHhdkUZ3OmkFCUkDXtXI2sIPLbwtT1erhXO9dOs5165Auj+Hx9yypk
+	G/q73yuMQMlM0oeuge1vi7GCjUqiqQq6Okk6aaiHkUnfU6YvWTQh++ZWT4Z/vo74dwd9n+w00FyyK
+	aaFUPs1DhLMjTtNWFtAN1WP/oBvudEMfMtIqPh4DB+OrH3JVIwx9XPfCR+ICJEIjR6UGG7F4VOQHB
+	dlEVKfOR/v2M/ZPOlyMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNwYp-0007g5-Ll; Tue, 07 May 2019 09:38:55 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNwb2-00013D-O5; Tue, 07 May 2019 09:41:12 +0000
+Received: from userp2120.oracle.com ([156.151.31.85])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNwYm-0007fY-I7
- for linux-mediatek@lists.infradead.org; Tue, 07 May 2019 09:38:54 +0000
-X-UUID: e29b4d6ed0ca41d4bc44ad210ada19cc-20190507
-X-UUID: e29b4d6ed0ca41d4bc44ad210ada19cc-20190507
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <xixi.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 922200092; Tue, 07 May 2019 01:38:48 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 02:38:46 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 17:38:44 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 May 2019 17:38:44 +0800
-From: Xi Chen <xixi.chen@mediatek.com>
-To: <matthias.bgg@gmail.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>
-Subject: [v2,2/3] arm64: dts: mt8183: add emi node
-Date: Tue, 7 May 2019 17:38:42 +0800
-Message-ID: <1557221922-26035-1-git-send-email-xixi.chen@mediatek.com>
-X-Mailer: git-send-email 1.9.1
+ id 1hNwas-0000uq-Rz; Tue, 07 May 2019 09:41:04 +0000
+Received: from pps.filterd (userp2120.oracle.com [127.0.0.1])
+ by userp2120.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x479Xgg4180908;
+ Tue, 7 May 2019 09:40:33 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
+ h=date : from : to : cc
+ : subject : message-id : references : mime-version : content-type :
+ in-reply-to; s=corp-2018-07-02;
+ bh=w+of231rH4tdBnhJ6seY4uuggvk1XXnKvBxVZPYMxtU=;
+ b=uSCKrbdy+TidPcFl6JYZJf2E2Kuqzr73QTRYjS1ZdV7gvdpsQ5w8zf+1IEsStweOQ95e
+ 85vlEyUUzNqmJ1lyXHUV0v+2f3sE006J0lf+qAYkLFmd34hEW9T5kQx3zmMwh/xxB7K1
+ 05uV25pFILivg81tjcYEKHvpn7sDLUvET2dbDIXU/Sxk6uYfeeayaxAuTuZl+96o3IBV
+ qOx8cGPDVEyGreujUUU1EZdsFqjqAGVE3AjGX/XXotil5ZIq1QQAguv1+e4kNPPWLj4G
+ RGJTWW7VBGUVdyRfU1J+1JcownG+aPLoi+73EkHVOiXLwpUFs4jPFtEXr8koEgykS6Ze nQ== 
+Received: from userp3030.oracle.com (userp3030.oracle.com [156.151.31.80])
+ by userp2120.oracle.com with ESMTP id 2s94b0ky0p-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 07 May 2019 09:40:33 +0000
+Received: from pps.filterd (userp3030.oracle.com [127.0.0.1])
+ by userp3030.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x479e37F049914;
+ Tue, 7 May 2019 09:40:33 GMT
+Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
+ by userp3030.oracle.com with ESMTP id 2sagytu6rq-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 07 May 2019 09:40:33 +0000
+Received: from abhmp0001.oracle.com (abhmp0001.oracle.com [141.146.116.7])
+ by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id x479eLQl022615;
+ Tue, 7 May 2019 09:40:22 GMT
+Received: from kadam (/41.57.98.10) by default (Oracle Beehive Gateway v4.0)
+ with ESMTP ; Tue, 07 May 2019 02:40:21 -0700
+Date: Tue, 7 May 2019 12:40:10 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: Xiaolei Li <xiaolei.li@mediatek.com>
+Subject: Re: [RFC PATCH v4 0/1] Re-license MTK NAND driver
+Message-ID: <20190507094010.GU2239@kadam>
+References: <20190507092020.1917-1-xiaolei.li@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 35C67BF2ECFE84A9387F0496E8160C1DE4B83EBE8256071F55E1F4249FFE050F2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190507092020.1917-1-xiaolei.li@mediatek.com>
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
+ signatures=668686
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=909
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1810050000 definitions=main-1905070063
+X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
+ signatures=668686
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ priorityscore=1501 malwarescore=0
+ suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1011
+ lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=952 adultscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1810050000
+ definitions=main-1905070063
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_023852_616987_5FA21421 
-X-CRM114-Status: UNSURE (   7.46  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190507_024103_036911_4C839567 
+X-CRM114-Status: GOOD (  11.12  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [156.151.31.85 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -70,44 +109,25 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Xi
- Chen <xixi.chen@mediatek.com>, srv_heupstream@mediatek.com
+Cc: daniel.thompson@linaro.org, ryder.lee@mediatek.com, arnd@arndb.de,
+ srv_heupstream@mediatek.com, yamada.masahiro@socionext.com, richard@nod.at,
+ miquel.raynal@bootlin.com, gustavo@embeddedor.com,
+ jorge.ramirez-ortiz@linaro.org, yingjoe.chen@mediatek.com,
+ boris.brezillon@collabora.com, linux-mtd@lists.infradead.org,
+ weiyongjun1@huawei.com, yellowriver2010@hotmail.com, rafal@milecki.pl,
+ linux-mediatek@lists.infradead.org, peterpandong@micron.com,
+ rogercc.lin@mediatek.com, matthias.bgg@gmail.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add emi dts node.
+Fine by me.
 
-Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 11 +++++++++++
- 1 file changed, 11 insertions(+)
+Acked-by: Dan Carpenter <dan.carpenter@oracle.com>
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 75c4881..2a176e9 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -269,6 +269,17 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		emi@10219000 {
-+			compatible = "mediatek,mt8183-emi";
-+			reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
-+				  <0 0x10226000 0 0x1000>, /* EMI MPU */
-+				  <0 0x1022d000 0 0x1000>, /* CHA EMI */
-+			      <0 0x10235000 0 0x1000>; /* CHB EMI */
-+			interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
-+						 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
-+						 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
-+		};
-+
- 		uart0: serial@11002000 {
- 			compatible = "mediatek,mt8183-uart",
- 				     "mediatek,mt6577-uart";
--- 
-1.9.1
+regards,
+dan carpenter
 
 
 _______________________________________________
