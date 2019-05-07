@@ -2,103 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B648D16156
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:47:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 253791617D
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 11:52:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WwrwVfPdsmG8ndP1DLJluiUjw9s0KmMAldo7X0Rgddc=; b=TX3dKF+grNde25
-	1oIygZJJugEfZEwTjSTasG44KuU+pjBPQvM/DdUYNOg/VAD3PRJ0OU5tC2q1SX3hXY6R/ln9cmHTW
-	arSr4duvQFDwhNDwLfzAIti8P+on8bbRFYKQhIvc6PqtoYgUkq7Zu0fcX4wgZSuzPSsVXRtERTeoP
-	WvE+nDTqKnuug+QAzld5pyDDy9y1cGp7/QsZhQBUdzbI0/adnYa+Ff0LKFKP4qwBfSECRaJ6M57Zn
-	OQEzpnRs9kGxsFPejZqoykHxIrCymaMkR7B+NjaclYIxWA6gk4J+/Bo723MmzncqJp4H0Ay4+GWoa
-	S2rNVqeWRFdMajdGaZgQ==;
+	List-Owner; bh=1zZKKFckaGLXYKFXhktyzzKvL8OLgPZ7pKrtzXJa2JE=; b=FySMUHIlk4RkCN
+	LVbB9Rv1oTV86sl/iyqIiMwPBXxn0LAcd1oWHwAbBzPQcDSrI5dkZqH7W8Qmz2L3fz7XfSuYxic+T
+	Rpi4B4RU73Q4Onx6zHtYCYahycdIhRyfFU7siO3vNgifSC21VkFGj8pQKJEbGpCxn7a6Ynm6VSZ/v
+	tixaAwXSBVaKqWqVErdC50ShSnbQ9ZniCVd8ANLSWS5FpfQvLsRlE6MbDVf7G0s9rNPyqZoF7EIty
+	AqjVVMe6b7BqnQY7B/sQsFzPWZeidrj70u3VB/ycPMw0fzNk1cd7CzvAXJ1I9FnhUsSCSzd6Ki9/5
+	WivlPNYO5R1b+6I6AO6g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNwgq-0003MF-EU; Tue, 07 May 2019 09:47:12 +0000
-Received: from userp2120.oracle.com ([156.151.31.85])
+	id 1hNwm8-00067e-Ob; Tue, 07 May 2019 09:52:40 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNwgm-0003Kv-Vq; Tue, 07 May 2019 09:47:10 +0000
-Received: from pps.filterd (userp2120.oracle.com [127.0.0.1])
- by userp2120.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x479hpZa188983;
- Tue, 7 May 2019 09:47:01 GMT
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
- h=date : from : to : cc
- : subject : message-id : references : mime-version : content-type :
- in-reply-to; s=corp-2018-07-02;
- bh=IszXfswFlYl2arvHcEs+8IRK7idVEl3hS9gc+dq8XSk=;
- b=RossLspbAbEVPTw69pFQWUUJfZtMyELXS/kRP6gPlL9wSsnSZAjLtr9sMYwN8ggyXNi3
- RHnOdhE3i0WNvIILqHZHRB+BUZslMmZUB9qBN69vt++4fr4GHyM465m/dHNbr1XmH3j/
- vMiPqb9erN/soXxsW4DlF0FDelDqYTMGtqikXIoqOcNrVki2RfTYwnKZMXCohhUXfard
- 2N6QN65MaKWfUlMXqhBSMqSFVp22hfI54I2H1OVmSR4upjW5iVibhzMrCc7iAiAjJBZ9
- JwhwkNXoRZVRQ9hrxezohwFeflllTmSgmpwpKFkrmWsDoROIvU1saAgydEnP9zlAcWSH 1A== 
-Received: from userp3020.oracle.com (userp3020.oracle.com [156.151.31.79])
- by userp2120.oracle.com with ESMTP id 2s94b0m018-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Tue, 07 May 2019 09:47:01 +0000
-Received: from pps.filterd (userp3020.oracle.com [127.0.0.1])
- by userp3020.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x479hIc0018848;
- Tue, 7 May 2019 09:45:01 GMT
-Received: from userv0122.oracle.com (userv0122.oracle.com [156.151.31.75])
- by userp3020.oracle.com with ESMTP id 2s94afcj0e-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Tue, 07 May 2019 09:45:00 +0000
-Received: from abhmp0020.oracle.com (abhmp0020.oracle.com [141.146.116.26])
- by userv0122.oracle.com (8.14.4/8.14.4) with ESMTP id x479iuHY011092;
- Tue, 7 May 2019 09:44:56 GMT
-Received: from kadam (/41.57.98.10) by default (Oracle Beehive Gateway v4.0)
- with ESMTP ; Tue, 07 May 2019 02:44:56 -0700
-Date: Tue, 7 May 2019 12:44:46 +0300
-From: Dan Carpenter <dan.carpenter@oracle.com>
-To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
-Subject: Re: [PATCH net-next v2 0/4] of_get_mac_address ERR_PTR fixes
-Message-ID: <20190507094446.GA21059@kadam>
-References: <1557177887-30446-1-git-send-email-ynezz@true.cz>
- <20190507071914.GJ2269@kadam> <20190507083918.GI81826@meh.true.cz>
+ id 1hNwlt-0005xb-Qq; Tue, 07 May 2019 09:52:28 +0000
+X-UUID: 81cd6d3c3da64fafb0f2f59aa902d249-20190507
+X-UUID: 81cd6d3c3da64fafb0f2f59aa902d249-20190507
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 413574817; Tue, 07 May 2019 01:52:20 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 02:52:18 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS33N1.mediatek.inc (172.27.4.75) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 17:52:15 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 7 May 2019 17:52:15 +0800
+Message-ID: <1557222735.3498.11.camel@mtksdaap41>
+Subject: Re: [v2 1/5] drm/mediatek: move mipi_dsi_host_register to probe
+From: CK Hu <ck.hu@mediatek.com>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Date: Tue, 7 May 2019 17:52:15 +0800
+In-Reply-To: <20190416060501.76276-2-jitao.shi@mediatek.com>
+References: <20190416060501.76276-1-jitao.shi@mediatek.com>
+ <20190416060501.76276-2-jitao.shi@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190507083918.GI81826@meh.true.cz>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
- signatures=668686
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
- malwarescore=0
- phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=852
- adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
- engine=8.0.1-1810050000 definitions=main-1905070064
-X-Proofpoint-Virus-Version: vendor=nai engine=5900 definitions=9249
- signatures=668686
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
- priorityscore=1501 malwarescore=0
- suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1015
- lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=885 adultscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1810050000
- definitions=main-1905070064
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_024709_463433_636034A0 
-X-CRM114-Status: GOOD (  12.48  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190507_025227_112743_614A8810 
+X-CRM114-Status: GOOD (  17.43  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [156.151.31.85 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -110,26 +70,130 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devel@driverdev.osuosl.org, Andrew Lunn <andrew@lunn.ch>,
- Florian Fainelli <f.fainelli@gmail.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, netdev@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Frank Rowand <frowand.list@gmail.com>, "David S. Miller" <davem@davemloft.net>,
- linux-arm-kernel@lists.infradead.org, Heiner Kallweit <hkallweit1@gmail.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com, Ajay
+ Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Andy Yan <andy.yan@rock-chips.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul
+ Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Kumar Gala <galak@codeaurora.org>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Oh crap.  You did add a Fixes tag.  My bad.
+Hi, Jitao:
 
-I should have been more clear/pro-active on Friday and we could have
-avoided this...  Next time.
+On Tue, 2019-04-16 at 14:04 +0800, Jitao Shi wrote:
+> DSI panel driver need attach function which is inculde in
+> mipi_dsi_host_ops.
+> 
+> If mipi_dsi_host_register is not in probe, dsi panel will
+> probe fail or more delay.
 
-regards,
-dan carpenter
+I think this patch just prevent delay, not to prevent dsi panel probe
+fail. In [1], you mention mipi_dsi_attach() is called in
+panel_simple_dsi_probe(), but panel_simple_dsi_probe() is trigger by
+mipi_dsi_host_register(), so the probe would success.
+
+[1]
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/panel/panel-simple.c?h=v5.0-rc6#n2987
+
+
+> 
+> So move the mipi_dsi_host_register to probe from bind.
+> 
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 50 ++++++++++++++++++------------
+>  1 file changed, 30 insertions(+), 20 deletions(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b00eb2d2e086..6c4ac37f983d 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -1045,12 +1045,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
+>  		return ret;
+>  	}
+>  
+> -	ret = mipi_dsi_host_register(&dsi->host);
+> -	if (ret < 0) {
+> -		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> -		goto err_ddp_comp_unregister;
+> -	}
+> -
+>  	ret = mtk_dsi_create_conn_enc(drm, dsi);
+>  	if (ret) {
+>  		DRM_ERROR("Encoder create failed with %d\n", ret);
+> @@ -1060,8 +1054,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
+>  	return 0;
+>  
+>  err_unregister:
+> -	mipi_dsi_host_unregister(&dsi->host);
+> -err_ddp_comp_unregister:
+>  	mtk_ddp_comp_unregister(drm, &dsi->ddp_comp);
+>  	return ret;
+>  }
+> @@ -1097,31 +1089,37 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+>  
+>  	dsi->host.ops = &mtk_dsi_ops;
+>  	dsi->host.dev = dev;
+> +	dsi->dev = dev;
+
+Why do this?
+
+Regards,
+CK
+
+> +	ret = mipi_dsi_host_register(&dsi->host);
+> +	if (ret < 0) {
+> +		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> +		return ret;
+> +	}
+>  
+>  	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
+>  					  &dsi->panel, &dsi->bridge);
+>  	if (ret)
+> -		return ret;
+> +		goto err_unregister_host;
+>  
+>  	dsi->engine_clk = devm_clk_get(dev, "engine");
+>  	if (IS_ERR(dsi->engine_clk)) {
+>  		ret = PTR_ERR(dsi->engine_clk);
+>  		dev_err(dev, "Failed to get engine clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	dsi->digital_clk = devm_clk_get(dev, "digital");
+>  	if (IS_ERR(dsi->digital_clk)) {
+>  		ret = PTR_ERR(dsi->digital_clk);
+>  		dev_err(dev, "Failed to get digital clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	dsi->hs_clk = devm_clk_get(dev, "hs");
+>  	if (IS_ERR(dsi->hs_clk)) {
+>  		ret = PTR_ERR(dsi->hs_clk);
+>  		dev_err(dev, "Failed to get hs clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
