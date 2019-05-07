@@ -2,59 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E47C15EA0
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 09:51:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F108515F24
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 10:15:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mdLgKPByX7+PCHULumBfBLcWWbKh/Aif4JIqT9astkM=; b=t6B2UL85CGJHeQ
-	cltnTQOS+wFuTjLTec1DsL7oefckGP2+7HhrABnyIjMaW3oeErLadhPbsKUT9iJdEi8NCHaCu+sVY
-	noYO/8CY5rn7fo6SMPj6spUuRWUrenKxzL0o2fPLlZyloXTpZk00aKvuSgr7gDZ67KQ91nK7kZTK8
-	K4QcPKzob5HCK0X+0EOPWobbJvZzPnqlu8oY34YHKJt3+2CkE88bY5HA/1AwJABt8d/9ciRdjRb2o
-	TY+hkWBv+yvUOukFKTpj5dmAeULABzsdbj4MdjmpLP+LWWBEyY6eHnX1/w33XiSxWMmpHiogI6qhz
-	9RcdvxeBRDWkFP50Etpg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=r2RiFlySENKgBF+0vWsuvx9zn5rgDnXB4bz6Ct9Rg7Y=; b=VlutMFtZNL6PCU
+	mnBZ5SxLKnSkOkWjcmUBi52wQwCn89IQNvOMdlZCDQ+88oGstU3+rgU1UbucNTog1Ylqb6463en1W
+	hcVRlS6fg80Sjbla8/HS2G/04v4sUQ8cLRY7vzGejgNlv/waEOKdHa2m7Nk7GXz7t0VenUGsGoA19
+	SjwfFjD1VwhH4uhkPAKZ+A6pw5ebN3nTyRtndLt+K76jtsMjEdAh1KsEzm58xYPIK+CmNW+rNQ3sa
+	pLwP3huzNNN1PvKf5UEhP0qp0OpanO0Kf+Ik/xk3Q3+dX1c19jw/mpAhUV0/N4huKksVXFlNam5GU
+	vZAFecG4+ud3+mQopmKQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNut4-0007jD-3b; Tue, 07 May 2019 07:51:42 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNvGL-00042y-5x; Tue, 07 May 2019 08:15:45 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNusp-0007Np-4E; Tue, 07 May 2019 07:51:31 +0000
-X-UUID: 2afb7553cbbe413fa3590c0414014418-20190506
-X-UUID: 2afb7553cbbe413fa3590c0414014418-20190506
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <roger.lu@mediatek.com>)
+ id 1hNvEy-0001EI-7X; Tue, 07 May 2019 08:14:24 +0000
+X-UUID: 2587865bc95a41dfba253dca4362ce74-20190507
+X-UUID: 2587865bc95a41dfba253dca4362ce74-20190507
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 491281644; Mon, 06 May 2019 23:51:07 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 00:51:06 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 15:50:57 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 May 2019 15:50:57 +0800
-Message-ID: <1557215457.2147.90.camel@mtksdaap41>
-Subject: Re: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
-From: Roger Lu <roger.lu@mediatek.com>
-To: Stephen Boyd <sboyd@kernel.org>
-Date: Tue, 7 May 2019 15:50:57 +0800
-In-Reply-To: <155691770027.200842.16164651681407381397@swboyd.mtv.corp.google.com>
-References: <20190430112012.4514-1-roger.lu@mediatek.com>
- <20190430112012.4514-2-roger.lu@mediatek.com>
- <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
- <1556777971.12123.35.camel@mtksdaap41>
- <155691770027.200842.16164651681407381397@swboyd.mtv.corp.google.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 1694917781; Tue, 07 May 2019 00:14:06 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 01:14:04 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 16:13:56 +0800
+Received: from mtkslt302.mediatek.inc (10.21.14.115) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 7 May 2019 16:13:57 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
+ <ck.hu@mediatek.com>
+Subject: [PATCH v5 00/14] support gce on mt8183 platform
+Date: Tue, 7 May 2019 16:13:43 +0800
+Message-ID: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2A70FA32ECE4104952054275D588E9976EED734ADF312A104C76D8D354D178072000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_005127_512096_2F34A9E3 
-X-CRM114-Status: GOOD (  26.74  )
+X-CRM114-CacheID: sfid-20190507_011420_566850_BC1914B6 
+X-CRM114-Status: GOOD (  12.80  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,148 +69,88 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- Angus.Lin@mediatek.com, linux-pm@vger.kernel.org,
- Viresh Kumar <vireshk@kernel.org>, Kevin Hilman <khilman@kernel.org>,
- "Rafael J . Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
- HenryC.Chen@mediatek.com, devicetree@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Andy-YT.Liu@mediatek.com, Matthias
- Brugger <matthias.bgg@gmail.com>, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, linux-kernel@vger.kernel.org,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>, kendrick.hsu@mediatek.com,
+ linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Sascha
+ Hauer <kernel@pengutronix.de>, Frederic Chen <Frederic.Chen@mediatek.com>,
+ Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dear Stephen,
+Changes since v4:
+ - refine the architecture of the packet encoder function
+ - refine the gce enevt property
+ - change the patch's title
 
-Sorry for the late reply.
+Changes since v3:
+ - fix a typo in dt-binding and dtsi
+ - cast the return value to right format
 
-On Fri, 2019-05-03 at 14:08 -0700, Stephen Boyd wrote:
-> Quoting Roger Lu (2019-05-01 23:19:31)
-> > On Tue, 2019-04-30 at 13:31 -0700, Stephen Boyd wrote:
-> > > Quoting Roger Lu (2019-04-30 04:20:10)
-> > > > diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> > > > new file mode 100644
-> > > > index 000000000000..355329db74ba
-> > > > --- /dev/null
-> > > > +++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> [..]
-> > > > +
-> > > > +               svs_gpu: svs_gpu {
-> > > > +                       compatible = "mediatek,mt8183-svs-gpu";
-> > > > +                       power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-> > > > +                       operating-points-v2 = <&gpu_opp_table>;
-> > > > +               };
-> > > 
-> > > It looks like you need multiple OPPs for a single device, because it has
-> > > different independent power supplies it wants to associate the OPP
-> > > tables with?
-> > Yes. SVS has different controllers inside the hardware in order to
-> > calculate and optimize different OPP table voltage part.
-> 
-> So is there more than one SVS register region that needs certain devices
-> to be powered on or at least have their power domain enabled so that the
-> SVS hardware can read the voltage and adjust accordingly? I should read
-> the driver I suppose.
-No, basically, each SVS controller (aka SVS bank) only has one SVS
-register region that needs to be powered on for the init.
-In MT8183 SVS case, SVS has four controllers (banks). Each SVS bank
-needs corresponding power domain to be on for its init.
+Changes since v2:
+ - according to CK's review comment, change the property name and
+   refine the parameter
+ - change the patch's title
+ - remove unused property from dt-binding and dts
 
-#SVS bank corresponding power domain
-svs_cpu_little: Needs CPU-A53 power on for init
-svs_cpu_big: Needs CPU-A73 power on for init
-svs_cci: Needs CPU-A53 power on for init
-svs_gpu: Needs MFG_2D power on for init
+Changes since v1:
+ - add prefix "cmdq" in the commit subject
+ - add dt-binding document for get event and subsys function
+ - add fix up tag in fixup patch
+ - fix up some coding style (alignment)
 
-P.S SVS driver will use pm_runtime_get_sync() to turn on power before
-svs bank init and pm_runtime_put_sync() to turn off power power after
-svs bank init.
+MTK will support gce function on mt8183 platform.
+  dt-binding: gce: add gce header file for mt8183
+  mailbox: mediatek: cmdq: support mt8183 gce function
+  arm64: dts: add gce node for mt8183
 
-> 
-> > 
-> > > Why can't these OPP tables be attached to the devices that
-> > > use them, i.e. CPU, GPU, CCI, etc.? Seems odd that those devices don't
-> > > have OPP tables that this hardware block can look up somehow.
-> > Those OPP tables are attached by our DVFS node (please refers below
-> > patch). SVS just shares with their OPP table and help optimize these OPP
-> > tables' voltage part.
-> > 
-> > Add cpufreq DTS node to the mt8183 and mt8183-evb
-> > https://patchwork.kernel.org/patch/10921675/
-> 
-> Cool thanks for the pointer.
-> 
-> > 
-> > 
-> > > Similarly,
-> > > the power domains should probably be part of the devices that are using
-> > > them and not these sub-nodes that are mirroring the other hardware
-> > > blocks in the system?
-> > Oh. There is a svs controller in GPU power-domain. We need to turn on
-> > GPU power so that svs controller can work functionally. Therefore, we
-> > add GPU power-domains in our svs_gpu sub-node.
-> > 
-> > 
-> 
-> Sorry, I'm not really following what you're saying too closely. I think
-> I get it but it sounds complicated.
-> 
-> I'm mostly wondering if having properties like svs-gpu = <&gpu_node>,
-> and svs-cci = <&cci_node> would work for you. The idea would be to link
-> this hardware block to the nodes that it's going to adjust the OPPs of.
-> Once you have the node, use some sort of OPP API to get the OPP table
-> for a device_node and adjust it at runtime for the current OPP.
-Yes, I understand your idea. Thank you. I share my design purpose and
-the troubles I encountered when linking other hardware block.
+Besides above patches, we refine gce driver on those patches.
+  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
+  soc: mediatek: cmdq: clear the event in cmdq initial flow
 
-#my design purpose
-1. SVS bank doesn't need all the resources in other device node like
-cci_node. Therefore, I model SVS sub-nodes to declare what svs bank
-needs.
+In order to enhance the convenience of gce usage, we add new helper
+functions and refine the method of instruction combining.
+  dt-binding: gce: remove thread-num property
+  dt-binding: gce: add binding for gce subsys property
+  dt-binding: gce: add binding for gce event property
+  soc: mediatek: cmdq: define the instruction struct
+  soc: mediatek: cmdq: add polling function
+  soc: mediatek: cmdq: add cmdq_dev_get_subsys function
+  soc: mediatek: cmdq: add cmdq_dev_get_event function
 
-#troubles - linking other hardware block
-1. I don't know how to get cpu devcie after we link CPU node
-(svs_cpu_little = <cpu0>). I use "get_cpu_device(unsigned cpu)" in Linux
-driver to attain cpuX device generally.
-2. Our MT8183 has three gpu-related node as below, svs_gpu need the
-reference of gpu (OPP table) & gpu_core2 (power-domain MFG_2D) to make
-sure svs_gpu can init and update gpu OPP table. I don't know how to
-refer two nodes by one property. Therefore, I model a svs_gpu to declare
-what it needs.
+Bibby Hsieh (12):
+  dt-binding: gce: remove thread-num property
+  dt-binding: gce: add gce header file for mt8183
+  dt-binding: gce: add binding for gce subsys property
+  dt-binding: gce: add binding for gce event property
+  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
+  mailbox: mediatek: cmdq: support mt8183 gce function
+  soc: mediatek: cmdq: clear the event in cmdq initial flow
+  soc: mediatek: cmdq: define the instruction struct
+  soc: mediatek: cmdq: add polling function
+  soc: mediatek: cmdq: add cmdq_dev_get_subsys function
+  soc: mediatek: cmdq: add cmdq_dev_get_event function
+  arm64: dts: add gce node for mt8183
 
-gpu: mali@13040000 {
-	...
-	power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE0>;
-	operating-points-v2 = <&gpu_opp_table>;
-	...
-}
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |  31 ++-
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  11 +
+ drivers/mailbox/mtk-cmdq-mailbox.c            |  18 +-
+ drivers/soc/mediatek/mtk-cmdq-helper.c        | 195 ++++++++++++++----
+ include/dt-bindings/gce/mt8183-gce.h          | 177 ++++++++++++++++
+ include/linux/mailbox/mtk-cmdq-mailbox.h      |   5 +
+ include/linux/soc/mediatek/mtk-cmdq.h         |  62 +++++-
+ 7 files changed, 437 insertions(+), 62 deletions(-)
+ create mode 100644 include/dt-bindings/gce/mt8183-gce.h
 
-gpu_core1: mali_gpu_core1 {
-	...
-	power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE1>;
-};
-
-gpu_core2: mali_gpu_core2 {
-	...
-	power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-};
-
-P.S MT8183 GPU won't do upstream. So, there is no patchwork weblink to
-refer.
-
-> It sounds like it might be a little more complicated if the hardware goes
-> haywire when the device like GPU is powered down and the power domain is
-> shut off. Hopefully it isn't though, so that the driver can mostly sit
-> on top of the SVS hardware and poke OPP every once and a while when the
-> voltage needs to change, regardless of the power state of the device.
-
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
+-- 
+2.18.0
 
 
 _______________________________________________
