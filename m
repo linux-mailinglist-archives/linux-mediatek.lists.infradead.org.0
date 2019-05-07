@@ -2,83 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 41E4B16969
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 19:41:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D1B716B3A
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 21:23:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
+	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Xb+jek/LjgguU1Y+eY5b142DkwUjGEfOR4FBxB5SjDA=; b=eZQzD2APFGDJu/
-	usNdMH0r0Pv/s9zDEf5vWLP4VPMcysRg0sSNsnR/ZvX5H9c3HqEFEv7lmYFJcWTIH5UgSdAjjkG7n
-	QAy+D0HoOlTBIRkSaNcBXFFBFDrLD2Ql/nit1RW3bcWGtNJ0UT83dBQCw8Ofur/0Fq4YPlngYHMR4
-	nZw81qFHahZJo/X9UYfN8ytTNk9+0rskjiX3D8FjV/LOzuTHuSMz/WkzZpbTMlvWv02J27/OpTQSx
-	QcIbrCniSYqh4g73rvCjy/M7NCaR2SvRmkD+uj8ktciWBW+iF/+FECJ7z6kFxFxEXAmtnC/xgH6IO
-	wtWRMKoydZCRgU56ef4g==;
+	List-Owner; bh=CiDD0PIyG/1rLoiEyzdfoSPGiUdN3QPfHA2L5GHVAzQ=; b=PPxb/YvS6DB8UN
+	bIFR1qhiuEb1dk5/8sCrin1EpOBZL7Ocw9B7U2ZWceGEROEpRJjDuPrmX7Q/1srIMBzw9vmloODH6
+	Fcaf7axt8+gTn+7xuUy+nupYqZYZvzYpn8AKmSo8FKCMchDCo0awnootzPgkM8QCLnkEKz+NCC7YG
+	pEenAYH46T9OGCpaTicE3z5sRCvVdWJXUsPPHG/kh40dGRSZt4X+LTr+EFrS2kZCDOcJoxqYQMiPz
+	5rlX1DA0pSORsjgpAM9/BMI/ci4nNPQhEz0pcPP0A6tQqY30Qsh2G3w2Pdp3iKemetuJVe1KnlA1k
+	PGPnS6IuNToROknoYgYQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO45h-0002Ly-6O; Tue, 07 May 2019 17:41:21 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1hO5gT-000886-RG; Tue, 07 May 2019 19:23:25 +0000
+Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO45Z-0002Ff-7k; Tue, 07 May 2019 17:41:14 +0000
-Received: by mail-ot1-f68.google.com with SMTP id i8so6032568oth.10;
- Tue, 07 May 2019 10:41:12 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=9rNLy/ZQaK42lTMWdGC3VYdIL1Q3ruxBaNI2KenFfZA=;
- b=OkOif2d/kYjHtIwD+3TqX/C4Q/cvW5yjqfytYLN22KPaipW1d7DTYQnnP+xmCXHkjS
- m2cwGZkTrggC0X1WNnEkIYRzkU8+PClVfYMf+h1b5mpkwwWs8fblhUpWXgbmsatHgKZ6
- U44XeoEhI7oCvqnHMSrGZs7eM8zETH/pdeLJ+xd8GmrD+su/x/e8c6s1FG7CSt7iQfvZ
- 20YgS1/mspBTsLIBS3YbqZGrWMMsBjJ20/ARgJHOZy2Wo2f2RXGw+ELQ2ZFNF5bsFqYl
- GQMdATezkgnxDUiFYSmjkeZUf7Ybw+sSgUej6kjYmRJQoS6viYHrUvDOzPok8Yx7yhk3
- hACw==
-X-Gm-Message-State: APjAAAX2G+U6srXElqTav7HuLt20FC3Sg4L0YUjJ/J3ODl4sR6ExC0cU
- na81pcu6z1UNAY1IkCV20g==
-X-Google-Smtp-Source: APXvYqxVT+rgS9ARF8x0VFy/ggxBe7eDGWK8eU6UPVfhX/GM8vt4GowdhjtHpTbE2QIioJsCsu6roQ==
-X-Received: by 2002:a9d:6b93:: with SMTP id b19mr24293889otq.313.1557250872208; 
- Tue, 07 May 2019 10:41:12 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id 24sm2059963oiz.14.2019.05.07.10.41.10
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Tue, 07 May 2019 10:41:11 -0700 (PDT)
-Date: Tue, 7 May 2019 12:41:10 -0500
-From: Rob Herring <robh@kernel.org>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Subject: Re: [PATCH v5 03/12] dt-binding: gce: add binding for gce subsys
- property
-Message-ID: <20190507174110.GA6767@bogus>
-References: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
- <20190507081355.52630-4-bibby.hsieh@mediatek.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190507081355.52630-4-bibby.hsieh@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ id 1hO5gK-00080U-1I; Tue, 07 May 2019 19:23:17 +0000
+Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::3d8])
+ (using TLSv1 with cipher AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ (Authenticated sender: davem-davemloft)
+ by shards.monkeyblade.net (Postfix) with ESMTPSA id 3092614B7666B;
+ Tue,  7 May 2019 12:23:07 -0700 (PDT)
+Date: Tue, 07 May 2019 12:23:06 -0700 (PDT)
+Message-Id: <20190507.122306.163240491107984253.davem@davemloft.net>
+To: ynezz@true.cz
+Subject: Re: [PATCH net-next v2 0/4] of_get_mac_address ERR_PTR fixes
+From: David Miller <davem@davemloft.net>
+In-Reply-To: <1557177887-30446-1-git-send-email-ynezz@true.cz>
+References: <1557177887-30446-1-git-send-email-ynezz@true.cz>
+X-Mailer: Mew version 6.8 on Emacs 26.1
+Mime-Version: 1.0
+X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
+ (shards.monkeyblade.net [149.20.54.216]);
+ Tue, 07 May 2019 12:23:07 -0700 (PDT)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_104113_282864_5E6E8884 
-X-CRM114-Status: GOOD (  19.08  )
-X-Spam-Score: 0.6 (/)
+X-CRM114-CacheID: sfid-20190507_122316_084405_E971B576 
+X-CRM114-Status: GOOD (  11.53  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.6 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.1 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,88 +59,46 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- kendrick.hsu@mediatek.com, Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel@vger.kernel.org, CK HU <ck.hu@mediatek.com>,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Sascha Hauer <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- Frederic Chen <Frederic.Chen@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devel@driverdev.osuosl.org, andrew@lunn.ch, f.fainelli@gmail.com,
+ maxime.ripard@bootlin.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ gregkh@linuxfoundation.org, matthias.bgg@gmail.com, frowand.list@gmail.com,
+ linux-arm-kernel@lists.infradead.org, hkallweit1@gmail.com
+Content-Type: text/plain; charset="iso-8859-15"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, May 07, 2019 at 04:13:46PM +0800, Bibby Hsieh wrote:
-> tcmdq driver provide a function that get the relationship
-> of sub system number from device node for client.
-> add specification for #subsys-cells, mediatek,gce-subsys.
-> 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> ---
->  .../devicetree/bindings/mailbox/mtk-gce.txt       | 15 ++++++++++++---
->  1 file changed, 12 insertions(+), 3 deletions(-)
-> 
-> diff --git a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
-> index 1f7f8f2a3f49..8fd9479bc9f6 100644
-> --- a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
-> +++ b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
-> @@ -21,11 +21,19 @@ Required properties:
->  	priority: Priority of GCE thread.
->  	atomic_exec: GCE processing continuous packets of commands in atomic
->  		way.
-> +- #subsys-cells: Should be 3.
-> +	<&phandle subsys_number start_offset size>
-> +	phandle: Label name of a gce node.
-> +	subsys_number: specify the sub-system id which is corresponding
-> +		       to the register address.
-> +	start_offset: the start offset of register address that GCE can access.
-> +	size: the total size of register address that GCE can access.
+From: Petr =A6tetiar <ynezz@true.cz>
+Date: Mon,  6 May 2019 23:24:43 +0200
 
-Like the #event-cells, do you need this if it isn't variable?
+> this patch series is an attempt to fix the mess, I've somehow managed to
+> introduce.
+> =
 
->  
->  Required properties for a client device:
->  - mboxes: Client use mailbox to communicate with GCE, it should have this
->    property and list of phandle, mailbox specifiers.
-> -- mediatek,gce-subsys: u32, specify the sub-system id which is corresponding
-> +Optional propertier for a client device:
-> +- mediatek,gce-client-reg: u32, specify the sub-system id which is corresponding
->    to the register address.
+> First patch in this series is defacto v5 of the previous 05/10 patch in t=
+he
+> series, but since the v4 of this 05/10 patch wasn't picked up by the
+> patchwork for some unknown reason, this patch wasn't applied with the oth=
+er
+> 9 patches in the series, so I'm resending it as a separate patch of this
+> fixup series again.
+> =
 
-This isn't a u32, but a phandle + 3 cells (or a list of those). How many 
-entries can there be?
+> Second patch is a result of this rebase against net-next tree, where I was
+> checking again all current users of of_get_mac_address and found out, that
+> there's new one in DSA, so I've converted this user to the new ERR_PTR
+> encoded error value as well.
+> =
 
->  
->  Some vaules of properties are defined in 'dt-bindings/gce/mt8173-gce.h'
-> @@ -40,6 +48,7 @@ Example:
->  		clocks = <&infracfg CLK_INFRA_GCE>;
->  		clock-names = "gce";
->  		#mbox-cells = <3>;
-> +		#subsys-cells = <3>;
->  	};
->  
->  Example for a client device:
-> @@ -48,9 +57,9 @@ Example for a client device:
->  		compatible = "mediatek,mt8173-mmsys";
->  		mboxes = <&gce 0 CMDQ_THR_PRIO_LOWEST 1>,
->  			 <&gce 1 CMDQ_THR_PRIO_LOWEST 1>;
-> -		mediatek,gce-subsys = <SUBSYS_1400XXXX>;
->  		mutex-event-eof = <CMDQ_EVENT_MUTEX0_STREAM_EOF
->  				CMDQ_EVENT_MUTEX1_STREAM_EOF>;
-> -
-> +		mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x3000 0x1000>,
-> +					  <&gce SUBSYS_1401XXXX 0x2000 0x100>;
->  		...
->  	};
-> -- 
-> 2.18.0
-> 
+> Third patch which was sent as v5 wasn't considered for merge, but I still
+> think, that we need to check for possible NULL value, thus current IS_ERR
+> check isn't sufficient and we need to use IS_ERR_OR_NULL instead.
+> =
+
+> Fourth patch fixes warning reported by kbuild test robot.
+
+Series applied, thanks.
 
 _______________________________________________
 Linux-mediatek mailing list
