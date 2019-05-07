@@ -2,56 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1BE47161EA
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 12:26:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 54B6C161F1
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 12:26:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=I7BIJeZQ3ZmpDrzgattvj6KxMNxPUT4KDigNZxM/ePA=; b=siS6dtHuGNyr4s
-	c3r7hBzsyDxhkMCv+CK6R22KK9bMYespRctz2XO5Yc3AQdjt1uBBvxgt0Xvi3Yiq6hi1yyhHVnCoz
-	QfTozqBCXsMM+oNBsYBpyrTNrOtWShV7kPy/qh39DB9xXfVfIxUm2QdXY/W+oOoafboLY5p6tud8V
-	fZG347MiyycD7bqW7mglmWXrX/tMkLL0mamuIDwNgkc8ot0jrcZ4NUpYcnYS72wXLlab53cmmypCk
-	KnIBqSr5GvoNE8/ddrp0NcE1ovPBncd13JyHQWyVLIh49FKLsqFls93G0PzAHNOHaZ0rlz0yDPFPe
-	ZbQfjN5yFGcaLqiEVIUw==;
+	List-Owner; bh=OXFV6RaW/1JTtsSAWWFqOQHXTRIDqrQH2nglv6QQRq4=; b=uESfmMch3wHuXk
+	5PKV/tIW9DHC71Slxs3y7eoBhzsD+rTJs/UZor2hg7HkvngK65/esWQ7ukaaQQrl3ka9mmcAwiwDw
+	kryhO78WGJzaHNX4J+Mf2mpvfuHTX6/IKHYO88lIl7F5FvRTW8l8MsSOAbN7L69DJftMZarWQghmR
+	PKe6N88/dHhvKHpksKlnAJaKLOBGZrV1vymipNY1k7RACHliMv+gxYS1gmV5pguXNiF18AXKKsbla
+	0A2lbXnK8DeH7YtJFq959hrDE7/91yfX/VkEGA9jehcVZ5pLoGUhM0rSpN7Czf6zlZYazA/S6at78
+	9vQDLsOPFvX8w09+A/Yw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hNxIS-00034U-A4; Tue, 07 May 2019 10:26:04 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hNxJ0-0003r9-Hk; Tue, 07 May 2019 10:26:38 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hNxIH-0002uY-5h; Tue, 07 May 2019 10:25:54 +0000
-X-UUID: b2cbfa6645364d35b754f9e8b1113c14-20190507
-X-UUID: b2cbfa6645364d35b754f9e8b1113c14-20190507
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hNxIM-0002vu-7h; Tue, 07 May 2019 10:26:02 +0000
+X-UUID: ddb4fefbd4f24709830aa864284e6355-20190507
+X-UUID: ddb4fefbd4f24709830aa864284e6355-20190507
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2114400942; Tue, 07 May 2019 02:25:52 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 03:25:51 -0700
+ with ESMTP id 687659724; Tue, 07 May 2019 02:25:55 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 03:25:54 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 18:25:50 +0800
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 18:25:51 +0800
 Received: from mtkslt306.mediatek.inc (10.21.14.136) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 7 May 2019 18:25:50 +0800
+ Frontend Transport; Tue, 7 May 2019 18:25:51 +0800
 From: Xiaolei Li <xiaolei.li@mediatek.com>
 To: <miquel.raynal@bootlin.com>, <richard@nod.at>
-Subject: [PATCH v3 3/4] mtd: rawnand: mtk: Add validity check for CE# pin
- setting
-Date: Tue, 7 May 2019 18:25:40 +0800
-Message-ID: <20190507102541.34341-4-xiaolei.li@mediatek.com>
+Subject: [PATCH v3 4/4] mtd: rawnand: mtk: Fix wrongly assigned OOB buffer
+ pointer issue
+Date: Tue, 7 May 2019 18:25:41 +0800
+Message-ID: <20190507102541.34341-5-xiaolei.li@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20190507102541.34341-1-xiaolei.li@mediatek.com>
 References: <20190507102541.34341-1-xiaolei.li@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: AFEDD5DF6343538AA28CE4432F714967C6CDD82681F59CD011010CD6A14EA0F72000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_032553_310640_7C63380F 
-X-CRM114-Status: GOOD (  10.20  )
+X-CRM114-CacheID: sfid-20190507_032558_632910_3F9BBAFE 
+X-CRM114-Status: GOOD (  10.24  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -78,50 +77,80 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Currently, we only check how many CE# pins are set in device tree.
-But it should be necessary to check whether CE# pin setting is
-duplicated or if CE# pin index exceeds the maximum CE# number that
-controller supports.
+One main goal of the function mtk_nfc_update_ecc_stats is to check
+whether sectors are all empty. If they are empty, set these sectors's
+data buffer and OOB buffer as 0xff.
 
-So, add validity check to avoid these invalid settings.
+But now, the sector OOB buffer pointer is wrongly assigned. We always
+do memset from sector 0.
 
+To fix this issue, pass start sector number to make OOB buffer pointer
+be properly assigned.
+
+Fixes: 1d6b1e464950 ("mtd: mediatek: driver for MTK Smart Device")
 Signed-off-by: Xiaolei Li <xiaolei.li@mediatek.com>
 Reviewed-by: Miquel Raynal <miquel.raynal@bootlin.com>
 ---
- drivers/mtd/nand/raw/mtk_nand.c | 13 +++++++++++++
- 1 file changed, 13 insertions(+)
+ drivers/mtd/nand/raw/mtk_nand.c | 21 ++++++++++-----------
+ 1 file changed, 10 insertions(+), 11 deletions(-)
 
 diff --git a/drivers/mtd/nand/raw/mtk_nand.c b/drivers/mtd/nand/raw/mtk_nand.c
-index 6b79a0f9aef8..14a9b8c2a8db 100644
+index 14a9b8c2a8db..617f9656a045 100644
 --- a/drivers/mtd/nand/raw/mtk_nand.c
 +++ b/drivers/mtd/nand/raw/mtk_nand.c
-@@ -162,6 +162,8 @@ struct mtk_nfc {
- 	struct list_head chips;
+@@ -889,19 +889,21 @@ static int mtk_nfc_write_oob_std(struct nand_chip *chip, int page)
+ 	return mtk_nfc_write_page_raw(chip, NULL, 1, page);
+ }
  
- 	u8 *buffer;
-+
-+	unsigned long assigned_cs;
- };
+-static int mtk_nfc_update_ecc_stats(struct mtd_info *mtd, u8 *buf, u32 sectors)
++static int mtk_nfc_update_ecc_stats(struct mtd_info *mtd, u8 *buf, u32 start,
++				    u32 sectors)
+ {
+ 	struct nand_chip *chip = mtd_to_nand(mtd);
+ 	struct mtk_nfc *nfc = nand_get_controller_data(chip);
+ 	struct mtk_nfc_nand_chip *mtk_nand = to_mtk_nand(chip);
+ 	struct mtk_ecc_stats stats;
++	u32 reg_size = mtk_nand->fdm.reg_size;
+ 	int rc, i;
  
- /*
-@@ -1367,6 +1369,17 @@ static int mtk_nfc_nand_chip_init(struct device *dev, struct mtk_nfc *nfc,
- 			dev_err(dev, "reg property failure : %d\n", ret);
- 			return ret;
- 		}
-+
-+		if (tmp >= MTK_NAND_MAX_NSELS) {
-+			dev_err(dev, "invalid CS: %u\n", tmp);
-+			return -EINVAL;
-+		}
-+
-+		if (test_and_set_bit(tmp, &nfc->assigned_cs)) {
-+			dev_err(dev, "CS %u already assigned\n", tmp);
-+			return -EINVAL;
-+		}
-+
- 		chip->sels[i] = tmp;
+ 	rc = nfi_readl(nfc, NFI_STA) & STA_EMP_PAGE;
+ 	if (rc) {
+ 		memset(buf, 0xff, sectors * chip->ecc.size);
+ 		for (i = 0; i < sectors; i++)
+-			memset(oob_ptr(chip, i), 0xff, mtk_nand->fdm.reg_size);
++			memset(oob_ptr(chip, start + i), 0xff, reg_size);
+ 		return 0;
  	}
  
+@@ -921,7 +923,7 @@ static int mtk_nfc_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,
+ 	u32 spare = mtk_nand->spare_per_sector;
+ 	u32 column, sectors, start, end, reg;
+ 	dma_addr_t addr;
+-	int bitflips;
++	int bitflips = 0;
+ 	size_t len;
+ 	u8 *buf;
+ 	int rc;
+@@ -988,14 +990,11 @@ static int mtk_nfc_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,
+ 	if (rc < 0) {
+ 		dev_err(nfc->dev, "subpage done timeout\n");
+ 		bitflips = -EIO;
+-	} else {
+-		bitflips = 0;
+-		if (!raw) {
+-			rc = mtk_ecc_wait_done(nfc->ecc, ECC_DECODE);
+-			bitflips = rc < 0 ? -ETIMEDOUT :
+-				mtk_nfc_update_ecc_stats(mtd, buf, sectors);
+-			mtk_nfc_read_fdm(chip, start, sectors);
+-		}
++	} else if (!raw) {
++		rc = mtk_ecc_wait_done(nfc->ecc, ECC_DECODE);
++		bitflips = rc < 0 ? -ETIMEDOUT :
++			mtk_nfc_update_ecc_stats(mtd, buf, start, sectors);
++		mtk_nfc_read_fdm(chip, start, sectors);
+ 	}
+ 
+ 	dma_unmap_single(nfc->dev, addr, len, DMA_FROM_DEVICE);
 -- 
 2.18.0
 
