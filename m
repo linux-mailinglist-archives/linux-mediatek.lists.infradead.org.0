@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF4E516FC0
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 05:59:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1B9A716FC4
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 05:59:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=MxM3mXgOq55CkeS8Fg5qxd9b5dJN/0COCk58xqXfsCw=; b=gXwu2Ux/4gmbQr
-	/0uI2W3fQPajWOyHvMiLTwGOYtRuSHI6mn/2Oz3Rv7lRmT2nZ+XgtiVNf52pxG8SqOAB9dNQ4h5Tb
-	IbPmTBzy5r1GJ6h5HvItW3IEro7zoTIrJVjrVCJDloydrxGXa1KoI52Lgwzr8SjYFpxh+sJKgdwCy
-	D0hUW++eiEf9tOLX7r9Wcu6glyKbtL+hC1EqzsMMkQrcDDE+PE+ThfLBh4EAAZ8JT0auM7NTqPGTi
-	WWCeZUyhvHmspYiOBzAjoEaWsmxTdp+PXf+aKhag40UIuj/jkV4Ppz+oetbEj1nHftPk/vd3tRZCt
-	bHTWDX00fzGhRCO7KL+g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=bpnrZbhXPkwv0ZPMTLQDuUjcDRmdCU11JA6EDKMwFjU=; b=VuE0fl0U47Dmi/
+	2G1W14uVCm/dE8w7Os/cAR3g0tcijA3ovdegUtsE3BZiMVMkKogsn3Sf1g9PtAJLBBLXkQcY8xBX3
+	4UGlaMGMD6eMlILhEHMtUaUGS+1wu45bUBNwxX+ALVzmt5OqYqWDO2MooM5hY/7kN35m+ZrMDN3Ey
+	x4y7zCo2bBT7Ed3RNBNYBhSHKj44mvO1+OAGx/rSlxaGHOtMBrXkCxsRhdMBJykEPdXYu29ePark7
+	CGc0QqvSpc5nk+TyLpyiDg5zROPFwOk6rWa1NtbhY3Huv1YMJByHR+iAKNMJusi2oir/oSf8PJ+aC
+	CcSJUVbqH4yrpV0VKGRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hODjt-0005sW-7J; Wed, 08 May 2019 03:59:29 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hODkE-0005wa-PN; Wed, 08 May 2019 03:59:50 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hODjp-0005s9-HX
- for linux-mediatek@lists.infradead.org; Wed, 08 May 2019 03:59:26 +0000
-X-UUID: b4a90bf577f84bc8bab44cc3f4c29cfe-20190507
-X-UUID: b4a90bf577f84bc8bab44cc3f4c29cfe-20190507
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hODkB-0005wH-VA
+ for linux-mediatek@lists.infradead.org; Wed, 08 May 2019 03:59:49 +0000
+X-UUID: 837fc948f6834230b170bd959cedabfd-20190507
+X-UUID: 837fc948f6834230b170bd959cedabfd-20190507
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <neal.liu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1099119179; Tue, 07 May 2019 19:59:21 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ with ESMTP id 1077886879; Tue, 07 May 2019 19:59:35 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 May 2019 20:59:20 -0700
+ 15.0.1395.4; Tue, 7 May 2019 20:59:33 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 8 May 2019 11:59:17 +0800
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 11:59:31 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 8 May 2019 11:59:17 +0800
+ Frontend Transport; Wed, 8 May 2019 11:59:31 +0800
 From: <neal.liu@mediatek.com>
 To: <mpm@selenic.com>, <herbert@gondor.apana.org.au>, <robh+dt@kernel.org>,
  <mark.rutland@arm.com>, <matthias.bgg@gmail.com>
-Subject: [PATCH 0/3] MT67XX random number generator support
-Date: Wed, 8 May 2019 11:58:54 +0800
-Message-ID: <1557287937-2410-1-git-send-email-neal.liu@mediatek.com>
+Subject: [PATCH 1/3] soc: mediatek: add SMC fid table for SIP interface
+Date: Wed, 8 May 2019 11:58:55 +0800
+Message-ID: <1557287937-2410-2-git-send-email-neal.liu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1557287937-2410-1-git-send-email-neal.liu@mediatek.com>
+References: <1557287937-2410-1-git-send-email-neal.liu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: CE048B95ABCC1571DC2B35A1121169CE7F25B8DED925862DF515DB4EE21190BF2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_205925_585325_CA90F98D 
-X-CRM114-Status: UNSURE (   7.56  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190507_205948_000871_5EF4EC00 
+X-CRM114-Status: GOOD (  10.20  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,41 +71,87 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-crypto@vger.kernel.org, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Neal Liu <neal.liu@mediatek.com>,
+ linux-crypto@vger.kernel.org, linux-mediatek@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-These patch series introduce a generic rng driver for Trustzone
-based kernel driver which would like to communicate with ATF
-SIP services.
+From: Neal Liu <neal.liu@mediatek.com>
 
-Patch #1 initials SMC fid table for Mediatek SIP interfaces and
-adds HWRNG related SMC call.
+1. Add a header file to provide SIP interface to ARM
+Trusted Firmware(ATF)
+2. Add hwrng SMC fid
 
-Patch #2..3 adds mt67xx-rng kernel driver for Trustzone based SoCs.
-For Mediatek SoCs on ARMv8 with TrustZone enabled, peripherals like
-entropy sources is not accessible from normal world (linux) and
-rather accessible from secure world (ATF/TEE) only. This driver aims
-to provide a generic interface to ATF rng service.
-
-Neal Liu (3):
-  soc: mediatek: add SMC fid table for SIP interface
-  dt-bindings: rng: update bindings for MT67xx SoCs
-  hwrng: add mt67xx-rng driver
-
- Documentation/devicetree/bindings/rng/mtk-rng.txt |   13 ++-
- drivers/char/hw_random/Kconfig                    |   16 ++++
- drivers/char/hw_random/Makefile                   |    1 +
- drivers/char/hw_random/mt67xx-rng.c               |  104 +++++++++++++++++++++
- include/linux/soc/mediatek/mtk_sip_svc.h          |   55 +++++++++++
- 5 files changed, 186 insertions(+), 3 deletions(-)
- create mode 100644 drivers/char/hw_random/mt67xx-rng.c
+Signed-off-by: Neal Liu <neal.liu@mediatek.com>
+---
+ include/linux/soc/mediatek/mtk_sip_svc.h |   55 ++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
  create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
 
+diff --git a/include/linux/soc/mediatek/mtk_sip_svc.h b/include/linux/soc/mediatek/mtk_sip_svc.h
+new file mode 100644
+index 0000000..ac73f68
+--- /dev/null
++++ b/include/linux/soc/mediatek/mtk_sip_svc.h
+@@ -0,0 +1,55 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Copyright (c) 2019 MediaTek Inc.
++ */
++
++#ifndef _MTK_SECURE_API_H_
++#define _MTK_SECURE_API_H_
++
++#include <linux/kernel.h>
++
++
++/* Error Code */
++#define SIP_SVC_E_SUCCESS			0
++#define SIP_SVC_E_NOT_SUPPORTED			-1
++#define SIP_SVC_E_INVALID_PARAMS		-2
++#define SIP_SVC_E_INVALID_RANGE			-3
++#define SIP_SVC_E_PERMISSION_DENY		-4
++
++#ifdef CONFIG_ARM64
++#define MTK_SIP_SMC_AARCH_BIT			0x40000000
++#else
++#define MTK_SIP_SMC_AARCH_BIT			0x00000000
++#endif
++
++
++/*******************************************************************************
++ * Defines for Mediatek runtime services func ids
++ ******************************************************************************/
++
++/* Debug feature and ATF related SMC call */
++
++/* CPU operations related SMC call */
++
++/* SPM related SMC call */
++
++/* Low power related SMC call */
++
++/* AMMS related SMC call */
++
++/* Security related SMC call */
++/* HWRNG */
++#define MTK_SIP_KERNEL_GET_RND \
++	(0x82000206 | MTK_SIP_SMC_AARCH_BIT)
++
++/* Storage Encryption related SMC call */
++
++/* Platform related SMC call */
++
++/* Pheripheral related SMC call */
++
++/* MM related SMC call */
++
++
++#endif /* _MTK_SECURE_API_H_ */
++
 -- 
 1.7.9.5
 
