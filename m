@@ -2,71 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7391216C96
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 May 2019 22:49:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 299A316E90
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 03:17:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:Subject:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0DUT9hFHmjP1mFLnBZqEo9ag/9DIXljYL/5+4aUM8Ko=; b=gszjS/daQLsfrg
-	pd1jpvFwOTDb+lzYkZN1PQnuVQgZF9XQWiXtkZSYJN10fe2B+Hu+FJiBpouESr0sPKs0Hfceyx7hR
-	QdOcllkTCY8Sac6/Gm69/25M7yq2jJpKv0sVCNnZ/08kopIkRW6to2it0nyWTh7v2uf7RW1dYEE+w
-	WlVU6xWhY8CQSp19t7/GZ0uxHe83/VZWIr2Ojyyc2ZQGWxRdFZindrb+l22qa0jnV4SvVGgVd077a
-	2MyZj4ldWhUGT2dzQrLkyO/KlQ25L7JJD1WYDfB3U2eJtlRZKNWqlT48khzM8I3iAgYHijXaRaLlt
-	jY3moC9evlRxxUsvZ6qA==;
+	List-Owner; bh=ODPRJ5yYITikqRFgO69mLlACT1UczZIsOSKyG1+9Wqw=; b=DyuAfkC4K9682D
+	yIe24+Ldx8rJ9lypAujgnUz9EcGTfnuC2j6na7hLiDqRgwTqMytw5XStOj2zdvDalyNOyJwCMKTmE
+	afiwb+t3qYp/QPVZnNv+X6M0i8LX/cyfG3DRVySXZISpxWxi/oUEWVq0tH6sVv87i0t9FOZEmWvrV
+	8CMf0Fy2pZpQpjnCt3iRz4Avf766s23ZBN9iLAZM82J0rpIdcEgrcBtKVaXb9WrsVMb5hoySC5UXa
+	zsk1ShkRwuv6/ANaNC4JehVvZvxksErC+vrE7rZcef07hYSE+O7TB+MQJqACLny6izqqSfl3+yTFr
+	ZxuJICkJC0UAtlKpNn0A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO71X-0005dZ-8o; Tue, 07 May 2019 20:49:15 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hOBDM-0002Mk-FG; Wed, 08 May 2019 01:17:44 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO71N-0005X3-LU; Tue, 07 May 2019 20:49:07 +0000
-Received: from localhost (unknown [104.132.0.74])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 5ED85205C9;
- Tue,  7 May 2019 20:49:04 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1557262144;
- bh=UgQi0e7oHFXGjN1t4VrSnFtRC24frVRuEPTYfkilrW0=;
- h=In-Reply-To:References:From:Subject:Cc:To:Date:From;
- b=wxmG5tUCN0ycumdAr5/YRmGR0VS6AW087jInglKNSFP74iCaL9HDqJd0HLwAUYT/F
- TNmpN2BxlDjHfQzQm3/94TRUXspHIbucrf9jvaUpSHO+GHrTTODDiGrafiurVmYr3b
- 9cRG+CeH6C9+gOusj5zihFQMz3pxy+0EUL75anQU=
+ id 1hOBDI-0002MF-EO
+ for linux-mediatek@lists.infradead.org; Wed, 08 May 2019 01:17:42 +0000
+X-UUID: 4bd5c5c980b24168839a2b0d491c7458-20190507
+X-UUID: 4bd5c5c980b24168839a2b0d491c7458-20190507
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1258198177; Tue, 07 May 2019 17:17:36 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 May 2019 18:17:34 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 09:17:33 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 8 May 2019 09:17:33 +0800
+Message-ID: <1557278253.3536.3.camel@mtksdaap41>
+Subject: Re: [PATCH 2/2] mt8183: emi: add bandwidth driver support
+From: CK Hu <ck.hu@mediatek.com>
+To: Jjian Zhou <jjian.zhou@mediatek.com>
+Date: Wed, 8 May 2019 09:17:33 +0800
+In-Reply-To: <1556588366.20107.14.camel@mtksdaap41>
+References: <1556532571-8234-1-git-send-email-jjian.zhou@mediatek.com>
+ <1556532571-8234-2-git-send-email-jjian.zhou@mediatek.com>
+ <1556588366.20107.14.camel@mtksdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-In-Reply-To: <1557215457.2147.90.camel@mtksdaap41>
-References: <20190430112012.4514-1-roger.lu@mediatek.com>
- <20190430112012.4514-2-roger.lu@mediatek.com>
- <155665629219.168659.8221738507474891604@swboyd.mtv.corp.google.com>
- <1556777971.12123.35.camel@mtksdaap41>
- <155691770027.200842.16164651681407381397@swboyd.mtv.corp.google.com>
- <1557215457.2147.90.camel@mtksdaap41>
-From: Stephen Boyd <sboyd@kernel.org>
-Subject: Re: [RFC v1 1/3] dt-bindings: soc: add mtk svs dt-bindings
-To: Roger Lu <roger.lu@mediatek.com>
-Message-ID: <155726214346.14659.17800352563837760252@swboyd.mtv.corp.google.com>
-User-Agent: alot/0.8
-Date: Tue, 07 May 2019 13:49:03 -0700
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_134905_743193_F22E7D7C 
-X-CRM114-Status: GOOD (  30.39  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190507_181740_489192_2D4AB9D0 
+X-CRM114-Status: GOOD (  15.65  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,163 +72,138 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- Angus.Lin@mediatek.com, linux-pm@vger.kernel.org,
- Viresh Kumar <vireshk@kernel.org>, Kevin Hilman <khilman@kernel.org>,
- "Rafael J . Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
- HenryC.Chen@mediatek.com, devicetree@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Andy-YT.Liu@mediatek.com, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, srv_heupstream@mediatek.com,
+ Xi Chen <xixi.chen@mediatek.com>, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Roger Lu (2019-05-07 00:50:57)
-> Dear Stephen,
+Hi, Jjian:
+
+On Tue, 2019-04-30 at 09:39 +0800, CK Hu wrote:
+> Hi, Jjian:
 > 
-> Sorry for the late reply.
-> 
-> On Fri, 2019-05-03 at 14:08 -0700, Stephen Boyd wrote:
-> > Quoting Roger Lu (2019-05-01 23:19:31)
-> > > On Tue, 2019-04-30 at 13:31 -0700, Stephen Boyd wrote:
-> > > > Quoting Roger Lu (2019-04-30 04:20:10)
-> > > > > diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> > > > > new file mode 100644
-> > > > > index 000000000000..355329db74ba
-> > > > > --- /dev/null
-> > > > > +++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
-> > [..]
-> > > > > +
-> > > > > +               svs_gpu: svs_gpu {
-> > > > > +                       compatible = "mediatek,mt8183-svs-gpu";
-> > > > > +                       power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-> > > > > +                       operating-points-v2 = <&gpu_opp_table>;
-> > > > > +               };
-> > > > 
-> > > > It looks like you need multiple OPPs for a single device, because it has
-> > > > different independent power supplies it wants to associate the OPP
-> > > > tables with?
-> > > Yes. SVS has different controllers inside the hardware in order to
-> > > calculate and optimize different OPP table voltage part.
+> On Mon, 2019-04-29 at 18:09 +0800, Jjian Zhou wrote:
+> > From: Xi Chen <xixi.chen@mediatek.com>
 > > 
-> > So is there more than one SVS register region that needs certain devices
-> > to be powered on or at least have their power domain enabled so that the
-> > SVS hardware can read the voltage and adjust accordingly? I should read
-> > the driver I suppose.
-> No, basically, each SVS controller (aka SVS bank) only has one SVS
-> register region that needs to be powered on for the init.
-> In MT8183 SVS case, SVS has four controllers (banks). Each SVS bank
-> needs corresponding power domain to be on for its init.
-> 
-> #SVS bank corresponding power domain
-> svs_cpu_little: Needs CPU-A53 power on for init
-> svs_cpu_big: Needs CPU-A73 power on for init
-> svs_cci: Needs CPU-A53 power on for init
-> svs_gpu: Needs MFG_2D power on for init
-> 
-> P.S SVS driver will use pm_runtime_get_sync() to turn on power before
-> svs bank init and pm_runtime_put_sync() to turn off power power after
-> svs bank init.
-
-Ok. How are you making sure that certain CPUs are powered on?
-
-> 
+> > EMI provides interface for get bandwidth  on every 1 miliseconds.
+> > Currently, just support GPU bandwidth info.
 > > 
-> > > 
-> > > > Why can't these OPP tables be attached to the devices that
-> > > > use them, i.e. CPU, GPU, CCI, etc.? Seems odd that those devices don't
-> > > > have OPP tables that this hardware block can look up somehow.
-> > > Those OPP tables are attached by our DVFS node (please refers below
-> > > patch). SVS just shares with their OPP table and help optimize these OPP
-> > > tables' voltage part.
-> > > 
-> > > Add cpufreq DTS node to the mt8183 and mt8183-evb
-> > > https://patchwork.kernel.org/patch/10921675/
+> > Change-Id: I515db6194b0978b0d27a51d966c914a0b0f9d362
+> > Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
+> > ---
+> >  drivers/memory/Kconfig     |    9 +
+> >  drivers/memory/Makefile    |    1 +
+> >  drivers/memory/mtk-emi.c   |  412 ++++++++++++++++++++++++++++++++++++++++++++
+> >  include/soc/mediatek/emi.h |  116 +++++++++++++
+> >  4 files changed, 538 insertions(+)
+> >  create mode 100644 drivers/memory/mtk-emi.c
+> >  create mode 100644 include/soc/mediatek/emi.h
 > > 
-> > Cool thanks for the pointer.
-> > 
-> > > 
-> > > 
-> > > > Similarly,
-> > > > the power domains should probably be part of the devices that are using
-> > > > them and not these sub-nodes that are mirroring the other hardware
-> > > > blocks in the system?
-> > > Oh. There is a svs controller in GPU power-domain. We need to turn on
-> > > GPU power so that svs controller can work functionally. Therefore, we
-> > > add GPU power-domains in our svs_gpu sub-node.
-> > > 
-> > > 
-> > 
-> > Sorry, I'm not really following what you're saying too closely. I think
-> > I get it but it sounds complicated.
-> > 
-> > I'm mostly wondering if having properties like svs-gpu = <&gpu_node>,
-> > and svs-cci = <&cci_node> would work for you. The idea would be to link
-> > this hardware block to the nodes that it's going to adjust the OPPs of.
-> > Once you have the node, use some sort of OPP API to get the OPP table
-> > for a device_node and adjust it at runtime for the current OPP.
-> Yes, I understand your idea. Thank you. I share my design purpose and
-> the troubles I encountered when linking other hardware block.
-> 
-> #my design purpose
-> 1. SVS bank doesn't need all the resources in other device node like
-> cci_node. Therefore, I model SVS sub-nodes to declare what svs bank
-> needs.
 
-Do you mean that there are other properties in the cci_node that the SVS
-hardware block doesn't use? That doesn't sound like a problem to me. I
-view nodes in the SoC bus as all memory mapped IO devices and it sounds
-like SVS is a hardware IP core that's off to the side in the system that
-has some sensors that goes into various other IP blocks in the system.
-It's correct to model the registers and interrupts, etc. as one node for
-the one hardware block that's delivered by the hardware engineers.
+[snip]
 
+> > +
+> > +static int emi_probe(struct platform_device *pdev)
+> > +{
+> > +	struct mtk_emi *emi;
+> > +	struct resource *res;
+> > +	struct device *dev = &pdev->dev;
+> > +	int i, ret;
+> > +
+> > +	emi = devm_kzalloc(dev, sizeof(*emi), GFP_KERNEL);
+> > +	if (!emi)
+> > +		return -ENOMEM;
+> > +
+> > +	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> > +	emi->cen_emi_base = devm_ioremap_resource(dev, res);
+> > +	if (IS_ERR(emi->cen_emi_base)) {
+> > +		pr_err("[EMI] unable to map cen_emi_base\n");
+> > +		devm_kfree(dev, emi);
+> > +		return -EINVAL;
+> > +	}
+> > +
+> > +	res = platform_get_resource(pdev, IORESOURCE_MEM, 1);
+> > +	emi->emi_mpu_base = devm_ioremap_resource(dev, res);
+> > +	if (IS_ERR(emi->emi_mpu_base)) {
+> > +		pr_err("[EMI] unable to map emi_mpu_base\n");
+> > +		devm_kfree(dev, emi);
+> > +		return -EINVAL;
+> > +	}
+> > +
+> > +	for (i = 0; i < MAX_CH; i++) {
+> > +		res = platform_get_resource(pdev, IORESOURCE_MEM, 2 + i);
+> > +		emi->chn_emi_base[i] = devm_ioremap_resource(dev, res);
+> > +		if (IS_ERR(emi->chn_emi_base[i])) {
+> > +			pr_err("[EMI] unable to map ch%d_emi_base\n", i);
+> > +			devm_kfree(dev, emi);
+> > +			return -EINVAL;
+> > +		}
+> > +	}
+> > +
+> > +	platform_set_drvdata(pdev, emi);
+> > +
+> > +	emi_dev = dev;
+> > +	/* start emi bw monitor */
+> > +	mtk_emi_mon_start(dev);
+> > +
+> > +	emi->emi_bw_max_idx = ARRAY_SIZE(emi->emi_bw_array);
+> > +	/* setup timer */
+> > +	timer_setup(&(emi->emi_bw_timer), NULL, 0);
+> > +	do_gettimeofday(&(emi->old_tv));
+> > +
+> > +	emi->emi_bw_timer.function = emi_bw_timer_callback;
+> > +	emi->emi_bw_timer.expires = jiffies + msecs_to_jiffies(1);
 > 
-> #troubles - linking other hardware block
-> 1. I don't know how to get cpu devcie after we link CPU node
-> (svs_cpu_little = <cpu0>). I use "get_cpu_device(unsigned cpu)" in Linux
-> driver to attain cpuX device generally.
+> You could set
+> 
+> emi->emi_bw_timer.data = emi;
+> 
+> So timer function could get emi.
+> 
+> Regards,
+> CK
 
-This should probably be some sort of list property that points to all
-the CPUs in the little and big clusters. Then the code can iterate
-through the node pointers and look for an OPP table in any of them by
-combining of_cpu_node_to_id() with get_cpu_device()?
+Sorry, the latest kernel has removed data field. From [1], it suggest
+another way to pass the data to timer callback function. The [2] is the
+example to pass the data to timer callback function.
 
-> 2. Our MT8183 has three gpu-related node as below, svs_gpu need the
-> reference of gpu (OPP table) & gpu_core2 (power-domain MFG_2D) to make
-> sure svs_gpu can init and update gpu OPP table. I don't know how to
-> refer two nodes by one property. Therefore, I model a svs_gpu to declare
-> what it needs.
-> 
-> gpu: mali@13040000 {
->         ...
->         power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE0>;
->         operating-points-v2 = <&gpu_opp_table>;
->         ...
-> }
-> 
-> gpu_core1: mali_gpu_core1 {
->         ...
->         power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE1>;
-> };
-> 
-> gpu_core2: mali_gpu_core2 {
->         ...
->         power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-> };
+[1] https://lwn.net/Articles/735887/
+[2]
+https://elixir.bootlin.com/linux/latest/source/drivers/soc/mediatek/mtk-cmdq-helper.c#L18
 
-These three nodes should be combined into one node for the GPU. The
-power domains will need to be referred to by name. Luckily we have
-support for multiple power domains in the kernel now so this should
-work. Let us know if it doesn't work for some reason.
+Regards,
+CK
 
 > 
-> P.S MT8183 GPU won't do upstream. So, there is no patchwork weblink to
-> refer.
+> > +	add_timer(&(emi->emi_bw_timer));
+> > +
+> > +	/* debug node */
+> > +	ret = device_create_file(dev, &dev_attr_bw);
+> > +	if (ret) {
+> > +		dev_err(dev, "create bw file failed!\n");
+> > +		goto err_create_attr_bw;
+> > +	}
+> > +	ret = device_create_file(dev, &dev_attr_dump_bw);
+> > +	if (ret) {
+> > +		dev_err(dev, "create dump_bw file failed!\n");
+> > +		goto err_create_attr_dump_bw;
+> > +	}
+> > +
+> > +	return 0;
+> > +
+> > +err_create_attr_dump_bw:
+> > +	del_timer(&(emi->emi_bw_timer));
+> > +	device_remove_file(dev, &dev_attr_bw);
+> > +err_create_attr_bw:
+> > +	devm_kfree(dev, emi);
+> > +	return -ENOMEM;
+> > +}
+> > +
 
-Sure.
+
 
 
 _______________________________________________
