@@ -2,71 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 567A0178D9
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 13:50:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D78BF17962
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 14:23:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xQAxpuH9+t59J7IvD12eryiKkg2ldiRM4BZNfkyermc=; b=U+W9qxqhvr50y3
-	98ga1Tzgh/JYCKaTfaE+8kux40hDOLtkVrx3hOZO8XqsQidaupJSm1VkOgjT3R4nKMRXGGmu8JbzJ
-	q3kFXVX3V3p2mLRyPOSKWnjRjDHnhcrv9hUHLtewq/FptocMdZwkaH2VSU8aOISLxMwYOtNZ3bOrl
-	3IEPdaeXoEeo9P6m+0cEkEe9JlPNTIXoWWA+Ouxrna4CcV8P9tHe44lqbveT8UjPX7rOCzaYP1kcW
-	4JT6FlqOZaH/31txdzdlFJTi2x8hAVj1e4lYIV7o2Vse/wfzP4sHV4qoPRxgd0KQR83KAoi+7hxUu
-	lodXNDLY/VlVdCthi9xQ==;
+	List-Owner; bh=ZdbzkbCvrAX0JOdBXcNtILUdSk9ojOXn3mugI2LwboY=; b=NTEe0og5x4uH8P
+	zienx9EE5/l4qkUww/RtwBx51Fj2NIIsDplM5VeGC9GP+Kcelp4/mR+zOD4LHOfYzXdi62yONwUig
+	toIj9mmJP3HFqUiGBpSsGEPossj4rPdWUIqqQHDDm1TN86NSO/+IjcbH/quQLxkYzNdK0luPW0PpN
+	PeJtzGC8ag2V11E71yfT54z8tb+bafrgez0rtbJjJIp7JbxjEOtw9PLyoENfIRUQQFN/a+7cWgZcV
+	gCKf5iP3e/P0hKXAE77cGW52vNqRQ+2ZVtGhzRIH2aZOlaflF+6UKWl0oVZhAEqz926FyNI5Des1i
+	SqZOHHFu5YIFFGQP2Kmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hOL5N-00080o-Bi; Wed, 08 May 2019 11:50:09 +0000
-Received: from vps0.lunn.ch ([185.16.172.187])
+	id 1hOLc0-0002aM-Lj; Wed, 08 May 2019 12:23:52 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hOL4V-0006Zl-5b; Wed, 08 May 2019 11:49:53 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
- s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
- Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=cHXDOAI/sb7qYnc/OEjR9OhWCqVE0yCfcRGxBY6Z0kM=; b=h8uS09r9tHqr1dIZuU0P8ieTGe
- Ay1aINmssQ22D65almIb0CMh4ccZ/IMgFRgo9OQ6OYSW99xZIJ0fo2q/z0cPr91eBvnC1lYJOCvWq
- WOW8e5cl83tFaLwLbOJNROmkMjhu94vfmmL/MW+c5/reEcIyC7Luq/WWsrG1aWDhTAp4=;
-Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
- (envelope-from <andrew@lunn.ch>)
- id 1hOL46-0000iQ-Vo; Wed, 08 May 2019 13:48:50 +0200
-Date: Wed, 8 May 2019 13:48:50 +0200
-From: Andrew Lunn <andrew@lunn.ch>
-To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
-Subject: Re: [PATCH v4 02/10] dt-bindings: doc: reflect new NVMEM
- of_get_mac_address behaviour
-Message-ID: <20190508114850.GC30557@lunn.ch>
-References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
- <1556893635-18549-3-git-send-email-ynezz@true.cz>
- <CAL_JsqLt6UFU_6bmh3Pc0taXUgMtAEV7kL7eZU13cLOjoakf=Q@mail.gmail.com>
- <20190508084152.GM81826@meh.true.cz>
+ id 1hOLbr-0002SQ-Mc; Wed, 08 May 2019 12:23:45 +0000
+X-UUID: b81d892166f344cb882119da7cc2d320-20190508
+X-UUID: b81d892166f344cb882119da7cc2d320-20190508
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <michael.kao@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 244529747; Wed, 08 May 2019 04:23:38 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 05:23:37 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 20:23:35 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 8 May 2019 20:23:35 +0800
+Message-ID: <1557318215.29634.7.camel@mtksdccf07>
+Subject: Re: [PATCH 1/8] arm64: dts: mt8183: add thermal zone node
+From: Michael Kao <michael.kao@mediatek.com>
+To: Daniel Lezcano <daniel.lezcano@linaro.org>
+Date: Wed, 8 May 2019 20:23:35 +0800
+In-Reply-To: <c6cf6170-331d-8ffc-d272-e5d8ee648eda@linaro.org>
+References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
+ <1556793795-25204-2-git-send-email-michael.kao@mediatek.com>
+ <CAJMQK-isJf6f+OubbCdoXs8L2cup=rm3Z8Mr7Q26QshMP-0wxA@mail.gmail.com>
+ <20190503164651.GB40515@google.com>
+ <c6cf6170-331d-8ffc-d272-e5d8ee648eda@linaro.org>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190508084152.GM81826@meh.true.cz>
-User-Agent: Mutt/1.5.23 (2014-03-12)
+X-TM-SNTS-SMTP: AA13AA691B0CF73F1B5A1F4F47777D55CE9FB045FE730AE38B5FDF7571CED59C2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190508_044916_054793_13B6F318 
-X-CRM114-Status: GOOD (  10.36  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190508_052343_743279_A009431D 
+X-CRM114-Status: GOOD (  26.25  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [185.16.172.187 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,42 +74,142 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
- Frank Rowand <frowand.list@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
- Kalle Valo <kvalo@codeaurora.org>, Yisen Zhuang <yisen.zhuang@huawei.com>,
- Vivien Didelot <vivien.didelot@gmail.com>,
- Woojung Huh <woojung.huh@microchip.com>, devicetree@vger.kernel.org,
- Jassi Brar <jaswinder.singh@linaro.org>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>, Salil Mehta <salil.mehta@huawei.com>,
- netdev <netdev@vger.kernel.org>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Microchip Linux Driver Support <UNGLinuxDriver@microchip.com>,
- "David S. Miller" <davem@davemloft.net>,
- Heiner Kallweit <hkallweit1@gmail.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, jamesjj.liao@mediatek.com,
+ devicetree@vger.kernel.org, louis.yu@mediatek.com, roger.lu@mediatek.com,
+ linux-pm@vger.kernel.org, dawei.chien@mediatek.com,
+ linux-kernel@vger.kernel.org, Rob
+ Herring <robh+dt@kernel.org>, Eduardo Valentin <edubezval@gmail.com>,
+ fan.chen@mediatek.com, Matthias Kaehlcke <mka@chromium.org>,
+ linux-mediatek@lists.infradead.org, Hsin-Yi Wang <hsinyi@chromium.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Zhang Rui <rui.zhang@intel.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> I've just tried to reword what was already there, anyway, did I understood
-> your remark properly, would this be more appropriate?
+On Mon, 2019-05-06 at 12:43 +0200, Daniel Lezcano wrote:
+> On 03/05/2019 18:46, Matthias Kaehlcke wrote:
+> > Hi,
+> > 
+> > On Fri, May 03, 2019 at 04:03:58PM +0800, Hsin-Yi Wang wrote:
+> >> On Thu, May 2, 2019 at 10:43 AM michael.kao <michael.kao@mediatek.com> wrote:
+> >>>
+> >>> Add thermal zone node to Mediatek MT8183 dts file.
+> >>>
+> >>> Signed-off-by: Michael Kao <michael.kao@mediatek.com>
+> >>> ---
+> >>>  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 64 ++++++++++++++++++++++++++++++++
+> >>>  1 file changed, 64 insertions(+)
+> >>>
+> >>> diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> >>> index 926df75..b92116f 100644
+> >>> --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> >>> +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> >>> @@ -334,6 +334,67 @@
+> >>>                         status = "disabled";
+> >>>                 };
+> >>>
+> >>> +               thermal: thermal@1100b000 {
+> >>> +                       #thermal-sensor-cells = <1>;
+> >>> +                       compatible = "mediatek,mt8183-thermal";
+> >>> +                       reg = <0 0x1100b000 0 0x1000>;
+> >>> +                       interrupts = <0 76 IRQ_TYPE_LEVEL_LOW>;
+> >>> +                       clocks = <&infracfg CLK_INFRA_THERM>,
+> >>> +                                <&infracfg CLK_INFRA_AUXADC>;
+> >>> +                       clock-names = "therm", "auxadc";
+> >>> +                       resets = <&infracfg  MT8183_INFRACFG_AO_THERM_SW_RST>;
+> >>> +                       mediatek,auxadc = <&auxadc>;
+> >>> +                       mediatek,apmixedsys = <&apmixedsys>;
+> >>> +                       mediatek,hw-reset-temp = <117000>;
+> >>> +                       nvmem-cells = <&thermal_calibration>;
+> >>> +                       nvmem-cell-names = "calibration-data";
+> >>> +               };
+> >>> +
+> >>> +               thermal-zones {
+> >>> +                       cpu_thermal: cpu_thermal {
+> >>> +                               polling-delay-passive = <1000>;
+> >>> +                               polling-delay = <1000>;
+> >>> +
+> >>> +                               thermal-sensors = <&thermal 0>;
+> >>> +                               sustainable-power = <1500>;
+> >>> +                       };
+> >>> +
+> >>> +                       tzts1: tzts1 {
+> >>> +                               polling-delay-passive = <1000>;
+> >>> +                               polling-delay = <1000>;
+> >>> +                               thermal-sensors = <&thermal 1>;
+> >> Is sustainable-power required for tzts? Though it's an optional
+> >> property, kernel would have warning:
+> >> [    0.631556] thermal thermal_zone1: power_allocator:
+> >> sustainable_power will be estimated
+> >> [    0.639586] thermal thermal_zone2: power_allocator:
+> >> sustainable_power will be estimated
+> >> [    0.647611] thermal thermal_zone3: power_allocator:
+> >> sustainable_power will be estimated
+> >> [    0.655635] thermal thermal_zone4: power_allocator:
+> >> sustainable_power will be estimated
+> >> [    0.663658] thermal thermal_zone5: power_allocator:
+> >> sustainable_power will be estimated
+> >> if no sustainable-power assigned.
+> > 
+> > The property is indeed optional, if it isn't specified IPA will use
+> > the sum of the minimum power of all 'power actors' of the zone as
+> > estimate (see estimate_sustainable_power()). This may lead to overly
+> > agressive throttling, since the nominal sustainable power will always
+> > be <= the requested power.
+> > 
+> > In my understanding the sustainable power may varies between devices,
+> > even for the same SoC. One could have all the hardware crammed into a
+> > tiny plastic enclosure (e.g. ASUS Chromebit), another might have a
+> > laptop form factor and a metal enclosure (e.g. ASUS C201). Both
+> > examples are based on an Rockchip rk3288, but they have completely
+> > different thermal behavior, and would likely have different values for
+> > 'sustainable-power'.
+> > 
+> > In this sense I tend to consider 'sustainable-power' more a device,
+> > than a SoC property. You could specify a 'reasonable' value as a
+> > starting point, but it will likely not be optimal for all or even most
+> > devices. The warning might even be useful for device makers by
+> > indicating them that there is room for tweaking.
 > 
->  The MAC address will be determined using the optional properties defined in
->  ethernet.txt and only if efuse-mac is set to 0. If any of the optional MAC
->  address properties are not present, then the driver will use random MAC
->  address.
+> 
+> The sustainable power is the power dissipated by the devices belonging
+> to the thermal zone at the given trip temperature.
+> 
+> With the power numbers and the cooling devices, the IPA will change the
+> states of the cooling devices to leverage the dissipated power to the
+> sustainable power.
+> 
+> The contribution is the cooling effect of the cooling device.
+> 
+> However, the IPA is limited to one thermal zone and the cooling device
+> is the cpu cooling device. There is the devfreq cooling device but as
+> the graphic driver is not upstream, it is found in the android tree only
+> for the moment.
+> 
+> As you mentioned the sustainable power can vary depending on the form
+> factor and the production process for the same SoC (they can go to
+> higher frequencies thus dissipate more power). That is the reason why we
+> split the DT per SoC and we override the values on a per SoC version basis.
+> 
+> You can have a look the rk3399.dtsi and their variant for experimental
+> board (*-rock960.dts) and the chromebook version (*-gru-kevin.dts).
+> 
+> Do you want a empiric procedure to find out the sustainable power ?
+> 
+> 
+> 
+OK, I will add the cooling map. But the tzts1 ~ tzts6 don't need to binding cooler.
+The "cpu_thermal" is max value of tzts1 ~tzts6. And cpu_thermal bind
+cooler with IPA. tzts1~6 don't need to add cooler. So, do I just add
+cooling map without any binding any cooling-cell?
 
-If _all_ of the optional ...
+I think thermal framework will add estimated sustainable power. Maybe I
+should add by myself. What's procedure do you recommend to find
+sustainable power?
 
-   Andrew
+
 
 _______________________________________________
 Linux-mediatek mailing list
