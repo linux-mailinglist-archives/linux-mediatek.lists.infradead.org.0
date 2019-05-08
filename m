@@ -2,89 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 61AEF17D90
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 17:54:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 68FDB17EA5
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 18:59:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kj8OMz+YnJGBpnHg1mZKT7jBqc4ISgUY138zUjc+JKs=; b=t4VspnM1XdOupq
-	koxtu5y1h+uGzhnTr8jfm9ViI3n+VxxrYyYT7DWu6UeqryJMEMXla2cBLTK7l5erpiufKMtTi7Xvb
-	EYN1SwX63woB7zuYHg4iix8IdnvaREYc3Yxe0FwOdbhet8x3sPBf0GdVju3dGJADc1fv4TbHae0yi
-	yp6/Fi5s6BniD2+p/xQvd9iB/zTqHQDKyxmjfydlessBz4k2VrbL6l64RBTCVdMYO8BkAv7rL6rLz
-	TJ2QpeEhz9zXaI5qdTx9G/+2XbVnQYUzO7GzkWZ39fD7/7YL9D1vum6Fb604uO0YoBKUh90CifBhO
-	3SoM76p02OeueFzx+odg==;
+	List-Owner; bh=J1bSeRZfUtLNg4W8695A5Z4KgNB53qZ/fb7SWvx8bwc=; b=LagYc2+wuzpn7G
+	W483jO6zHwMEufZZEnB6eB9QWfWx0hbJXGWqm/hnrSPAfaR5LM++fkJVm/oZO2IHDZMDzoTMW5u/O
+	gUZ1d9etiCwP6iBX42kc/rG9E3aVSrgW3tzttrtOWVQL1AtSrjb6AIsbAXdYqusUXxGqRVpUf+Q0j
+	vYiQiMn3gX8nZGfxCW1vZNhOfL6qT9LeW1+XEXY4sy0/F0yxueU95tiVbRSOqaKar8ta3i9SZFqjI
+	7/NBFIkUlrH2QEpeU3zX8wYn+aoRR/vIvb/iESkBxsPEcBSwtzhMkMf4QjaRxA09gYgIKv0smpyKC
+	+kSRn3azGjCTLVikcQBA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hOOtD-0003pK-Px; Wed, 08 May 2019 15:53:51 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hOPup-0003SW-8Z; Wed, 08 May 2019 16:59:35 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hOOtA-0003oV-DW; Wed, 08 May 2019 15:53:50 +0000
-Received: by mail-wr1-x442.google.com with SMTP id o4so27897386wra.3;
- Wed, 08 May 2019 08:53:45 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=/INLHFLoO3fwx8sE75gtH7ePrD+/xqNv4SqcqLzKke8=;
- b=GQmxEZhssi+c6wCO0ryHOulQS9xtfLbea9bWWK3dnWvZa1Mr2LayNbiBL//0MiXoGR
- QvkuGYnR5H06nWZPMiGl/Er6W0EVzKZWGW8lURQRfQUfixDOOy7loSZ5fP1FnPlFzprJ
- 8Wsr4/99zcCql7GKJRwPZmXvvVA0MUCG9PBEppYJqoBq5l6O3RX9VJU6XjYTEBC2c4Ul
- 771AipqXZZ01pvfx3O8ZdqY0wze0k31qsdzDy6tcHFTSle4CjV4u2fUAavAudvmi6ngA
- WcIgemZm1zxjwXmhB+7e3WNbtaPpcKwa4Obmeo8+5DtqmFg2KstIrkkKiHyB8M1CSrDo
- GQHA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=/INLHFLoO3fwx8sE75gtH7ePrD+/xqNv4SqcqLzKke8=;
- b=G5/CN4OPiFwWLGydIcN1rOL5AwYsrSCJ2rM4C1DrEVrFlAdlXXVtXEcAtTlGDcwHEC
- kF37/1O5ePr5ppgW5GfR58ypc65sUDXVRYjPi7y/eGn7cgEU9iSwJ4dtxHQveDxv0xxk
- 7FgEatCmsTfAZhNZVjdqZoHRiFdMYObdM3vyP+wJdJsYoSBCQjupLxhnbXUWD2mO8F64
- culGkxdbbCen6USG19u2MLL5xoTw3MlZpGWs3YRAhfJaJ9umK3whlUXuHEcb1dE0bI98
- 8kbvkc1h32Q6wQQ46tacwYREVWwm4rLc6QaaiAoX0hKWlERs41pFmNdovH2q+vaca5M8
- fxPA==
-X-Gm-Message-State: APjAAAUDzyW3U3X5/iun+v7sU4t/0vMz7xC2uaByJNuQhqkkN57/QabB
- czElfL9/xeAxyfkpw+mZmmI=
-X-Google-Smtp-Source: APXvYqyuKISPo+x4BFl9nEqc/t4WkE6l5uUP6rQxJIgo0rWfg1qBLWT64oRs+vPdbL/TkD99TG/c6w==
-X-Received: by 2002:adf:edc8:: with SMTP id v8mr28669098wro.206.1557330824343; 
- Wed, 08 May 2019 08:53:44 -0700 (PDT)
-Received: from Red ([2a01:cb1d:147:7200:2e56:dcff:fed2:c6d6])
- by smtp.googlemail.com with ESMTPSA id c10sm36912386wrd.69.2019.05.08.08.53.43
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 08 May 2019 08:53:43 -0700 (PDT)
-Date: Wed, 8 May 2019 17:53:41 +0200
-From: Corentin Labbe <clabbe.montjoie@gmail.com>
-To: Loys Ollivier <lollivier@baylibre.com>
-Subject: Re: [RESEND PATCH] gnss: get serial speed from subdrivers
-Message-ID: <20190508155341.GA1605@Red>
-References: <1557322788-10403-1-git-send-email-lollivier@baylibre.com>
+ id 1hOPul-0003SB-Sv
+ for linux-mediatek@lists.infradead.org; Wed, 08 May 2019 16:59:33 +0000
+X-UUID: db20acfe12e94843ba7a20b5359fe2eb-20190508
+X-UUID: db20acfe12e94843ba7a20b5359fe2eb-20190508
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <yingjoe.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 415619595; Wed, 08 May 2019 08:59:25 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 09:59:24 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 9 May 2019 00:59:16 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 9 May 2019 00:59:16 +0800
+Message-ID: <1557334756.20369.11.camel@mtksdaap41>
+Subject: Re: [PATCH v5 0/3] mt8183 emi driver support
+From: Yingjoe Chen <yingjoe.chen@mediatek.com>
+To: Xi Chen <xixi.chen@mediatek.com>
+Date: Thu, 9 May 2019 00:59:16 +0800
+In-Reply-To: <1557297478-29778-1-git-send-email-xixi.chen@mediatek.com>
+References: <1557297478-29778-1-git-send-email-xixi.chen@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1557322788-10403-1-git-send-email-lollivier@baylibre.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: EE4CD0392AD13ECA6548C79609D6BF2E61D2FCF6D09459AE2302DC9FB9B41B152000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190508_085348_670260_FB96D3D2 
-X-CRM114-Status: GOOD (  19.87  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190508_095931_935008_FCFDE99B 
+X-CRM114-Status: UNSURE (   4.85  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (clabbe.montjoie[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,91 +72,23 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Johan Hovold <johan@kernel.org>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Colin Ian King <colin.king@canonical.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: matthias.bgg@gmail.com, mark.rutland@arm.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, May 08, 2019 at 03:39:48PM +0200, Loys Ollivier wrote:
-> The default serial speed was hardcoded in the code.
-> Rename current-speed to default-speed.
-> Add a function parameter that lets the subdrivers specify their
-> default speed.
-> If not specified fallback to the device-tree default-speed.
-> 
-> Signed-off-by: Loys Ollivier <lollivier@baylibre.com>
-> ---
-> Hello,
-> 
-> This patch moves the currently hardcoded, default serial speed
-> to the subdrivers.
-> If the default speed is not specified by the subdriver then it is read
-> from the device tree.
-> 
-> Cheers,
-> Loys
-> 
->  drivers/gnss/mtk.c    |  6 +++++-
->  drivers/gnss/serial.c | 21 +++++++++++++--------
->  drivers/gnss/serial.h |  3 ++-
->  drivers/gnss/ubx.c    |  3 ++-
->  4 files changed, 22 insertions(+), 11 deletions(-)
-> 
-> diff --git a/drivers/gnss/mtk.c b/drivers/gnss/mtk.c
-> index d1fc55560daf..a1a89f0cc75c 100644
-> --- a/drivers/gnss/mtk.c
-> +++ b/drivers/gnss/mtk.c
-> @@ -16,6 +16,10 @@
->  
->  #include "serial.h"
->  
-> +static uint serial_speed = 9600; /* Serial speed (baud rate) */
-> +module_param(serial_speed, uint, 0644);
-> +MODULE_PARM_DESC(serial_speed, "Serial baud rate (bit/s), (default = 9600)");
-> +
->  struct mtk_data {
->  	struct regulator *vbackup;
->  	struct regulator *vcc;
-> @@ -69,7 +73,7 @@ static int mtk_probe(struct serdev_device *serdev)
->  	struct mtk_data *data;
->  	int ret;
->  
-> -	gserial = gnss_serial_allocate(serdev, sizeof(*data));
-> +	gserial = gnss_serial_allocate(serdev, sizeof(*data), serial_speed);
->  	if (IS_ERR(gserial)) {
->  		ret = PTR_ERR(gserial);
->  		return ret;
-> diff --git a/drivers/gnss/serial.c b/drivers/gnss/serial.c
-> index def64b36d994..706fc5b46811 100644
-> --- a/drivers/gnss/serial.c
-> +++ b/drivers/gnss/serial.c
-> @@ -103,17 +103,13 @@ static int gnss_serial_set_power(struct gnss_serial *gserial,
->  	return gserial->ops->set_power(gserial, state);
->  }
->  
-> -/*
-> - * FIXME: need to provide subdriver defaults or separate dt parsing from
-> - * allocation.
-> - */
->  static int gnss_serial_parse_dt(struct serdev_device *serdev)
->  {
->  	struct gnss_serial *gserial = serdev_device_get_drvdata(serdev);
->  	struct device_node *node = serdev->dev.of_node;
-> -	u32 speed = 4800;
-> +	uint speed;
->  
-> -	of_property_read_u32(node, "current-speed", &speed);
-> +	of_property_read_u32(node, "default-speed", &speed);
 
-Hello
+On Wed, 2019-05-08 at 14:37 +0800, Xi Chen wrote:
+> Provide emi bandwidth interface.
 
-of_property_read_u32 use u32, so no reason to use uint instead.
 
-Regards
+Why do you send so many versions of same driver in 1 day?
+Please always add change history when sending new version.
+
+Joe.C
+
 
 
 _______________________________________________
