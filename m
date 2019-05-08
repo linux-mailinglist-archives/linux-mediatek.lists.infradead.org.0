@@ -2,55 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C948A17421
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 10:42:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D59E174E1
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 May 2019 11:18:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:
-	References:Message-ID:Subject:To:From:Date:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SttpmDXJ81B8f632wW+FEQWOlSj7W9m3pVxO9GgWkgw=; b=cUOktVuYS3j4Lo
-	TdNrR/00dpkGmNEF3YiJZZiC+JmhmDwxurjcE8+Jshp8Op7kKUpo1E+msl0QUgYiNFKC3OXXkpDYI
-	DhZWGP5M5JX96LES9eDg1US9OjES96+bNHoeBpYki/TptNzCpl1ToHjBEu4GiGtK4GuXu9piua6vC
-	6P6PvPvzl79PARc4ZxvPbIAx5yDR8eB6aEZmMjpny5AEm2onwvv/MOElhV/GCu1rCiGIjnZ4hPYR+
-	l6s2ukSIQr3NbEeltyvjI8IwP/QnSVZ1VYc0AOxIbXQxO45kePp83OaLzSvizYJiWXRFqGxd5IQUU
-	dAZ9u3dRU/lR8k3m02gQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=+psmxA+cHL3Iop23kbYCnB4S44BDfxy4/nrUSjPEuoE=; b=pXIRYJfJ7WISK/
+	CymeOoW4eO8a6U9cLVAg6kg4eiHgGamMc/2IcOuQMKx3en4A6aBOe/M9O0UbEb6jWZScrofPNaQh1
+	qVVB1xGQLJWnNVay6o+eSSeSzo3C9d6Csqa4Oj+PH4Q7GJKeyxxQFHZwkNZN7xYdcOG9xduosvSKC
+	M9cUkwCHQ5fLc1vx0HoE5vhiZs3jEQQAyLHOSIYh5vatrLNCfhn21vegXcWf+uNuE8xgB1rBKtubo
+	BBhz9tZCguDBEHEMOjHH6EMbkxdTO8qBchGoCXIAiLi+3DrgYXQ0zvjxF3+POrL6TR+jKpkI/2UqY
+	12frPJZD8VCUDTFPQG/Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hOI9O-0005aY-VN; Wed, 08 May 2019 08:42:06 +0000
-Received: from smtp-out.xnet.cz ([178.217.244.18])
+	id 1hOIiG-00052d-On; Wed, 08 May 2019 09:18:08 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hOI9G-0005Sz-97; Wed, 08 May 2019 08:42:00 +0000
-Received: from meh.true.cz (meh.true.cz [108.61.167.218])
- (Authenticated sender: petr@true.cz)
- by smtp-out.xnet.cz (Postfix) with ESMTPSA id DD9AC47A7;
- Wed,  8 May 2019 10:41:53 +0200 (CEST)
-Received: from localhost (meh.true.cz [local])
- by meh.true.cz (OpenSMTPD) with ESMTPA id a0fd15e7;
- Wed, 8 May 2019 10:41:52 +0200 (CEST)
-Date: Wed, 8 May 2019 10:41:52 +0200
-From: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
+ id 1hOIiC-00051k-Re; Wed, 08 May 2019 09:18:06 +0000
+X-UUID: e605acce96724c3c83d5ce7c6f942697-20190508
+X-UUID: e605acce96724c3c83d5ce7c6f942697-20190508
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1996166909; Wed, 08 May 2019 01:17:59 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 02:17:57 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 May 2019 17:17:55 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 8 May 2019 17:17:54 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>
-Subject: Re: [PATCH v4 02/10] dt-bindings: doc: reflect new NVMEM
- of_get_mac_address behaviour
-Message-ID: <20190508084152.GM81826@meh.true.cz>
-References: <1556893635-18549-1-git-send-email-ynezz@true.cz>
- <1556893635-18549-3-git-send-email-ynezz@true.cz>
- <CAL_JsqLt6UFU_6bmh3Pc0taXUgMtAEV7kL7eZU13cLOjoakf=Q@mail.gmail.com>
+Subject: [v3 PATCH] dt-binding: usb: add usb-role-switch property
+Date: Wed, 8 May 2019 17:17:44 +0800
+Message-ID: <c3596e996c9ab39c6b9bc14b93309244c4a55014.1557306151.git.chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAL_JsqLt6UFU_6bmh3Pc0taXUgMtAEV7kL7eZU13cLOjoakf=Q@mail.gmail.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190508_014158_470671_752C9FFC 
-X-CRM114-Status: GOOD (  12.64  )
+X-CRM114-CacheID: sfid-20190508_021804_896649_3E843FF5 
+X-CRM114-Status: UNSURE (   9.74  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [178.217.244.18 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -64,61 +68,70 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Reply-To: Petr =?utf-8?Q?=C5=A0tetiar?= <ynezz@true.cz>
-Cc: Mark Rutland <mark.rutland@arm.com>, Andrew Lunn <andrew@lunn.ch>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
- Frank Rowand <frowand.list@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
- Kalle Valo <kvalo@codeaurora.org>, Yisen Zhuang <yisen.zhuang@huawei.com>,
- Vivien Didelot <vivien.didelot@gmail.com>,
- Woojung Huh <woojung.huh@microchip.com>, devicetree@vger.kernel.org,
- Jassi Brar <jaswinder.singh@linaro.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>, Felipe
+ Balbi <felipe.balbi@linux.intel.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org, Yu
+ Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Biju Das <biju.das@bp.renesas.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>, Salil Mehta <salil.mehta@huawei.com>,
- netdev <netdev@vger.kernel.org>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Microchip Linux Driver Support <UNGLinuxDriver@microchip.com>,
- "David S. Miller" <davem@davemloft.net>,
- Heiner Kallweit <hkallweit1@gmail.com>
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Rob Herring <robh+dt@kernel.org> [2019-05-07 11:44:57]:
+Add a property usb-role-switch to tell the driver that use
+USB Role Switch framework to handle the role switch,
+it's useful when the driver has already supported other ways,
+such as extcon framework etc.
 
-Hi,
+Cc: Biju Das <biju.das@bp.renesas.com>
+Cc: Yu Chen <chenyu56@huawei.com>
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+---
+v3:
+    add property type, modify description suggested by Heikki
 
-> > -- local-mac-address:   the driver is designed to use the of_get_mac_address api
-> > -                       only if efuse-mac is 0. When efuse-mac is 0, the MAC
-> > -                       address is obtained from local-mac-address. If this
-> > -                       attribute is not present, then the driver will use a
-> > -                       random MAC address.
-> >  - "netcp-device label":        phandle to the device specification for each of NetCP
-> >                         sub-module attached to this interface.
-> >
-> > +The MAC address will be determined using the optional properties defined in
-> > +ethernet.txt, as provided by the of_get_mac_address API and only if efuse-mac
-> 
-> Don't make references to Linux in bindings. You can talk about
-> expectations of client programs (e.g Linux, u-boot, BSD, etc.) though.
+v2:
+    describe it in terms of h/w functionality suggested by Rob
 
-I've just tried to reword what was already there, anyway, did I understood
-your remark properly, would this be more appropriate?
+v1:
+    the property is discussed in:
+    [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
+    https://patchwork.kernel.org/patch/10852497/
 
- The MAC address will be determined using the optional properties defined in
- ethernet.txt and only if efuse-mac is set to 0. If any of the optional MAC
- address properties are not present, then the driver will use random MAC
- address.
+    Mediatek and Hisilicon also try to use it:
+    [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
+    https://patchwork.kernel.org/patch/10918385/
+    [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
+    https://patchwork.kernel.org/patch/10918367/
 
-Thanks!
+    [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
+    https://patchwork.kernel.org/patch/10909981/
+---
+ Documentation/devicetree/bindings/usb/generic.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
 
--- ynezz
+diff --git a/Documentation/devicetree/bindings/usb/generic.txt b/Documentation/devicetree/bindings/usb/generic.txt
+index 0a74ab8dfdc2..cf5a1ad456e6 100644
+--- a/Documentation/devicetree/bindings/usb/generic.txt
++++ b/Documentation/devicetree/bindings/usb/generic.txt
+@@ -30,6 +30,10 @@ Optional properties:
+ 			optional for OTG device.
+  - adp-disable: tells OTG controllers we want to disable OTG ADP, ADP is
+ 			optional for OTG device.
++ - usb-role-switch: boolean, indicates that the device is capable of assigning
++			the USB data role (USB host or USB device) for a given
++			USB connector, such as Type-C, Type-B(micro).
++			see connector/usb-connector.txt.
+ 
+ This is an attribute to a USB controller such as:
+ 
+-- 
+2.21.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
