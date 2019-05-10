@@ -2,58 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A3ABC19885
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 May 2019 08:40:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 83F7F19896
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 May 2019 08:49:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fLG0zzO8xS/apeWY+fcwwVPp6C9j2195KCi4YQFJcio=; b=DMbwDOZaSjNuLE
-	30Y0hpuowNFao5S1LB92m55+DhDz3meGQ6aFFsZkGVzyWi6EuKXkIp6/sL5gea9RCfJNssJq5lSN2
-	qU/PuTruMJSuXWlpx59gslvzrOdywocfcgyv4BfVr3YVnMS5xqgzyoijOHdH7a4uo3lBPHUb2Xbu0
-	5VN2QVCvJjgBNBRybwYYmwiQBCNDyO+uduW35m4xFU+5xI9v7uLBrVLXItx5daw9DBZo7hbMAQXJf
-	GP5gzHqP1MN7M1s1+eifJvpIIx5pYCvxN0r7zCjRfdAQ8ptWvddweMPeuwABkP43hOJhWV6Mfkm6G
-	Ij3C/s7uu+ZgqtBp/pZA==;
+	List-Owner; bh=lqUg3+Z6IF8j22VITtC1ovmHOJqHLrnL9TYW+8Q5n7c=; b=rg/R9OoTF0szX7
+	RjoB62uMk2GC9f4bwRfijkHftFu2fuWCp6wnxU/VxR04npzu3WBcETZGl87AfG4jWwEyPdjockuXS
+	PEgM7UyrM7DBxZCSoTtnWoCAUCQvU+MwlWk9fSH5VW3zV/XRw3XqIvlMXu/5AGas1jEJm++wBJ2JR
+	FmvSaFmq7x5Y3ZIaUQ4BWUlHW0nKCpelPImTs2HLwXqaacXTcLbOeREp3jKZONmNuh0az7WqoN4mr
+	85/d0cOgeOtQi86vlP7obagl5Ygpe2uKlyCJVJH71t/MAA2XOXU0LLFG3JCw35lZW1NLu6fWJnb31
+	vnpgM95zBQ8iduFCDZWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hOzCa-0007Yf-2I; Fri, 10 May 2019 06:40:16 +0000
-Received: from orcrist.hmeau.com ([5.180.42.13] helo=deadmen.hmeau.com)
+	id 1hOzKy-0001CE-2S; Fri, 10 May 2019 06:48:56 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hOzCV-00079s-Vh
- for linux-mediatek@lists.infradead.org; Fri, 10 May 2019 06:40:13 +0000
-Received: from gondobar.mordor.me.apana.org.au ([192.168.128.4] helo=gondobar)
- by deadmen.hmeau.com with esmtps (Exim 4.89 #2 (Debian))
- id 1hOzBj-0001Lo-Ph; Fri, 10 May 2019 14:39:23 +0800
-Received: from herbert by gondobar with local (Exim 4.89)
- (envelope-from <herbert@gondor.apana.org.au>)
- id 1hOzBb-0004u3-V0; Fri, 10 May 2019 14:39:16 +0800
-Date: Fri, 10 May 2019 14:39:15 +0800
-From: Herbert Xu <herbert@gondor.apana.org.au>
-To: Neal Liu <neal.liu@mediatek.com>
-Subject: Re: [PATCH 3/3] hwrng: add mt67xx-rng driver
-Message-ID: <20190510063915.kwqy3e5urs6j7ity@gondor.apana.org.au>
-References: <1557287937-2410-1-git-send-email-neal.liu@mediatek.com>
- <1557287937-2410-4-git-send-email-neal.liu@mediatek.com>
- <12193108.aNnqf5ydOJ@tauon.chronox.de>
- <1557311737.11818.11.camel@mtkswgap22>
- <20190509052649.xfkgb3qd7rhcgktj@gondor.apana.org.au>
- <1557413686.23445.6.camel@mtkswgap22>
+ id 1hOzKo-00016N-Vg; Fri, 10 May 2019 06:48:49 +0000
+X-UUID: 706175521b4b436b941bfc19678885fe-20190509
+X-UUID: 706175521b4b436b941bfc19678885fe-20190509
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1839853325; Thu, 09 May 2019 22:48:40 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 9 May 2019 23:48:38 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 10 May 2019 14:48:30 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 10 May 2019 14:48:30 +0800
+Message-ID: <1557470910.20990.7.camel@mtksdaap41>
+Subject: Re: [PATCH v5 04/12] dt-binding: gce: add binding for gce event
+ property
+From: CK Hu <ck.hu@mediatek.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Date: Fri, 10 May 2019 14:48:30 +0800
+In-Reply-To: <1557458857.29102.1.camel@mtksdaap41>
+References: <20190507081355.52630-1-bibby.hsieh@mediatek.com>
+ <20190507081355.52630-5-bibby.hsieh@mediatek.com>
+ <1557292247.3936.5.camel@mtksdaap41> <1557458857.29102.1.camel@mtksdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1557413686.23445.6.camel@mtkswgap22>
-User-Agent: NeoMutt/20170113 (1.7.2)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190509_234012_170353_FCFD63EF 
-X-CRM114-Status: UNSURE (   5.38  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190509_234847_028848_3DD6BD9F 
+X-CRM114-Status: GOOD (  21.85  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -65,31 +72,96 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Stephan Mueller <smueller@chronox.de>, linux-kernel@vger.kernel.org,
- robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
- linux-crypto@vger.kernel.org, mpm@selenic.com, matthias.bgg@gmail.com,
- Crystal.Guo@mediatek.com
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ kendrick.hsu@mediatek.com, Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
+ linux-kernel@vger.kernel.org, Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Houlong Wei <houlong.wei@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ Frederic Chen <Frederic.Chen@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, May 09, 2019 at 10:54:46PM +0800, Neal Liu wrote:
->
-> Hi Stephan/Herbert,
-> 	My mistake. This buffer is allocated by kmalloc with larger than 32
-> bytes. So yes, it's word-align for sure.
-> 	reference:
-> https://elixir.bootlin.com/linux/latest/source/drivers/char/hw_random/core.c#L590
+Hi, Bibby:
 
-Yes you're right.
+On Fri, 2019-05-10 at 11:27 +0800, Bibby Hsieh wrote:
+> Hi, CK,
+> 
+> On Wed, 2019-05-08 at 13:10 +0800, CK Hu wrote:
+> > Hi, Bibby:
+> > 
+> > On Tue, 2019-05-07 at 16:13 +0800, Bibby Hsieh wrote:
+> > > Client hardware would send event to GCE hardware,
+> > > mediatek,gce-event-names and mediatek,gce-events
+> > > can be used to present the event.
+> > > 
+> > > Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> > > ---
+> > >  Documentation/devicetree/bindings/mailbox/mtk-gce.txt | 9 +++++++--
+> > >  1 file changed, 7 insertions(+), 2 deletions(-)
+> > > 
+> > > diff --git a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> > > index 8fd9479bc9f6..76491f194c56 100644
+> > > --- a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> > > +++ b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> > > @@ -35,6 +35,9 @@ Required properties for a client device:
+> > >  Optional propertier for a client device:
+> > >  - mediatek,gce-client-reg: u32, specify the sub-system id which is corresponding
+> > >    to the register address.
+> > > +- mediatek,gce-event-names: the event name can be defined by user.
+> > 
+> > gce-event is like an interrupt from client hardware to GCE hardware, we
+> > do not give a name to an interrupt, so do we need to give a name for
+> > gce-event?
+> > 
+> 
+> Yes, we need to know the name of gce-ecent.
+> The name can help users to figure out the problems when GCE meet the
+> event time out errors.
 
-Cheers,
--- 
-Email: Herbert Xu <herbert@gondor.apana.org.au>
-Home Page: http://gondor.apana.org.au/~herbert/
-PGP Key: http://gondor.apana.org.au/~herbert/pubkey.txt
+For debug, driver does not need this information. In your example, The
+event 'CMDQ_EVENT_MDP_RDMA0_SOF' is used by rdma driver. I think rdma
+driver should know why it need this event (it want to know whether 'rdma
+is starting to work (SOF)'), so when this event is time out, rdma driver
+should know what is timeout (it knows RDMA_SOF is timeout).
+
+Regards,
+CK
+
+> 
+> 
+> > Regards,
+> > CK
+> > 
+> > > +- mediatek,gce-events: u32, the event number defined in
+> > > +  'dt-bindings/gce/mt8173-gce.h' or 'dt-binding/gce/mt8183-gce.h'.
+> > >  
+> > >  Some vaules of properties are defined in 'dt-bindings/gce/mt8173-gce.h'
+> > >  or 'dt-binding/gce/mt8183-gce.h'. Such as sub-system ids, thread priority, event ids.
+> > > @@ -57,8 +60,10 @@ Example for a client device:
+> > >  		compatible = "mediatek,mt8173-mmsys";
+> > >  		mboxes = <&gce 0 CMDQ_THR_PRIO_LOWEST 1>,
+> > >  			 <&gce 1 CMDQ_THR_PRIO_LOWEST 1>;
+> > > -		mutex-event-eof = <CMDQ_EVENT_MUTEX0_STREAM_EOF
+> > > -				CMDQ_EVENT_MUTEX1_STREAM_EOF>;
+> > > +		mediatek,gce-event-names = "rdma0_sof",
+> > > +					   "rsz0_sof";
+> > > +		mediatek,gce-events = <CMDQ_EVENT_MDP_RDMA0_SOF>,
+> > > +				      <CMDQ_EVENT_MDP_RSZ0_SOF>;
+> > >  		mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x3000 0x1000>,
+> > >  					  <&gce SUBSYS_1401XXXX 0x2000 0x100>;
+> > >  		...
+> > 
+> > 
+> 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
