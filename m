@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EF6EA19E20
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 May 2019 15:27:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6B69119E1E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 May 2019 15:27:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=okMvMr1Qbdl5hFdBNaQVzxZgcfWvf0Vvj2jb/3VDozg=; b=GdHJwIb3YHAaPN
-	iXGCq1TuCuDpForBbYtv9YrlltabDNlVhtNsv1DacOvQcyBOnqmZFbuj5ApFJrtjXzGQrERMT1uPa
-	KJ0+kuljpU87po7imOkEaONxb/SW9LVbtFGkgVg2S1gnZthcNCiCMOd8l20FDQiHO9FxOA96mKSrs
-	H2w1b/2T0p9U/gdzb5C4vV/LGH+Mmvt/WrnzaPNLoieebiWmZ7HDOvMFRVQxI0nTCOpkOTrU2eFM1
-	WMYzFrlw9JROgqRisnUrc+RqaOKF7R2ligCg6Q+AZVOSk2j0zx30w6gJ15J7pmMwhCTs8AdjQvg48
-	l+Qjue4Z27OrsJSb/83g==;
+	List-Owner; bh=vb/KKnF4kVRBIGAhbe/4dXqO7OtekCmpAcCC2ZsMiSA=; b=nOwsR+pL41tUgf
+	/4zornuPlqzGv61VN2e2XhQzN4IA4Zw6q/Yu5fEgysHl/lQW8+Ip8MGupWRBhzol9EmRK+TmQcZ4D
+	yqoxDspgL1TzXmZE40AS3cRN9ZPUfh1PUBoYcPspa1icTwJtSgKv4waefBqNqqabADuDxTa32/Bk6
+	lmiAKErtxcEVunVVnS4K/1VSUPIMZY/wxhwOhnQ5ch0l2XHk86gRZgWpBRRJ2w/G89jEfSQIH0wUs
+	O8bKBt2ZHWhRvSg2KbdEf5zB+ICAy2QMojMVTrSCYS0wenLhb0Y3cFAWX82OZE2D3it2j5LiJW0+y
+	1dd7p+kcf18p/+vXASsg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hP5Yv-0002Bg-6K; Fri, 10 May 2019 13:27:45 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hP5Ys-0002AA-Or; Fri, 10 May 2019 13:27:42 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hP5YW-0001dB-Hz; Fri, 10 May 2019 13:27:24 +0000
-X-UUID: 6064b2eb45cc4036a282093794e2f9e6-20190510
-X-UUID: 6064b2eb45cc4036a282093794e2f9e6-20190510
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hP5YU-0001dv-3z; Fri, 10 May 2019 13:27:23 +0000
+X-UUID: 14d25213d30b4451bed1c7d0b7985027-20190510
+X-UUID: 14d25213d30b4451bed1c7d0b7985027-20190510
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <michael.kao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1567581048; Fri, 10 May 2019 05:27:13 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 10 May 2019 06:27:12 -0700
+ with ESMTP id 499871902; Fri, 10 May 2019 05:27:14 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 10 May 2019 06:27:13 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Fri, 10 May 2019 21:27:10 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -42,19 +42,17 @@ To: Zhang Rui <rui.zhang@intel.com>, Eduardo Valentin <edubezval@gmail.com>,
  Daniel Lezcano <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, 
  Mark Rutland <mark.rutland@arm.com>, Matthias Brugger
  <matthias.bgg@gmail.com>, <hsinyi@chromium.org>
-Subject: [PATCH v2 5/8] arm64: dts: mt8183: Increase polling frequency for CPU
- thermal zone
-Date: Fri, 10 May 2019 21:27:03 +0800
-Message-ID: <1557494826-6044-6-git-send-email-michael.kao@mediatek.com>
+Subject: [PATCH v2 6/8] thermal: mediatek: mt8183: fix bank number settings
+Date: Fri, 10 May 2019 21:27:04 +0800
+Message-ID: <1557494826-6044-7-git-send-email-michael.kao@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1557494826-6044-1-git-send-email-michael.kao@mediatek.com>
 References: <1557494826-6044-1-git-send-email-michael.kao@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190510_062720_969274_4E173092 
-X-CRM114-Status: UNSURE (   9.97  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190510_062718_426465_C0222024 
+X-CRM114-Status: GOOD (  10.91  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -75,39 +73,47 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Kaehlcke <mka@chromium.org>,
+ linux-kernel@vger.kernel.org, Michael Kao <michael.kao@mediatek.com>,
  linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Matthias Kaehlcke <mka@chromium.org>
+From: Michael Kao <michael.kao@mediatek.com>
 
-Evaluate the thermal zone every 500ms while not cooling and every
-100ms when passive cooling is performed.
+MT8183_NUM_ZONES should be set to 1
+because MT8183 doesn't have multiple banks.
 
-Signed-off-by: Matthias Kaehlcke <mka@chromium.org>
+Fixes: a4ffe6b52d27 ("thermal: mediatek: add support for MT8183")
 Signed-off-by: Michael Kao <michael.kao@mediatek.com>
 ---
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ drivers/thermal/mtk_thermal.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 29ad660..2c4e014 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -370,8 +370,8 @@
+diff --git a/drivers/thermal/mtk_thermal.c b/drivers/thermal/mtk_thermal.c
+index 5c07a61..cb41e46 100644
+--- a/drivers/thermal/mtk_thermal.c
++++ b/drivers/thermal/mtk_thermal.c
+@@ -216,6 +216,9 @@ enum {
+ /* The total number of temperature sensors in the MT8183 */
+ #define MT8183_NUM_SENSORS	6
  
- 		thermal-zones {
- 			cpu_thermal: cpu_thermal {
--				polling-delay-passive = <1000>;
--				polling-delay = <1000>;
-+				polling-delay-passive = <100>;
-+				polling-delay = <500>;
- 				thermal-sensors = <&thermal 0>;
- 				sustainable-power = <1500>;
++/* The number of banks in the MT8183 */
++#define MT8183_NUM_ZONES               1
++
+ /* The number of sensing points per bank */
+ #define MT8183_NUM_SENSORS_PER_ZONE	 6
  
+@@ -503,7 +506,7 @@ static const struct mtk_thermal_data mt7622_thermal_data = {
+ 
+ static const struct mtk_thermal_data mt8183_thermal_data = {
+ 	.auxadc_channel = MT8183_TEMP_AUXADC_CHANNEL,
+-	.num_banks = MT8183_NUM_SENSORS_PER_ZONE,
++	.num_banks = MT8183_NUM_ZONES,
+ 	.num_sensors = MT8183_NUM_SENSORS,
+ 	.vts_index = mt8183_vts_index,
+ 	.cali_val = MT8183_CALIBRATION,
 -- 
 2.6.4
 
