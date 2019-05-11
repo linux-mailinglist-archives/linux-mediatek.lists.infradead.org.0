@@ -2,46 +2,44 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55A011A7F7
-	for <lists+linux-mediatek@lfdr.de>; Sat, 11 May 2019 15:31:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5DDF91A817
+	for <lists+linux-mediatek@lfdr.de>; Sat, 11 May 2019 16:24:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=i2Occrl7/ETiibu75nPWtX5eFtjcWn+J0AvoYXO9tUM=; b=piGsJGuDLWl3qu
-	uByt70Y8SbteRjyPG4E68yDoJDpd8ysasIqgJ0YIygolWpIiU77RK42oDVzm5O3hmVwAKfDaZm4H8
-	iF9manG7DoNIJzvj87NDBx99HLX1KWFc+NfctyJRs7laTDTWUpLRLSXlPdhW8bgfxPg4O6p1KqjUw
-	c3RoVemvZdFfv3ZFSEpy6KI4iduhzJINT/vznTStN4qBni3R30qFyxe9f6Js6BYKDsQA33f1Gc3Sz
-	PQNdXwpTpC9zqKnxApLa2V0YxicOvvGVRJYQl5u8JhjfAq2UlxovlU+8+KZuXZPP3xzme75PAqlR4
-	5WvDXTon+ZFnCp4IAQVA==;
+	List-Owner; bh=D4n9IA+0efUuL+BZhVUx28zQ4xNhingYNTeZIkNOlq8=; b=pOvCyqSOyMK0Bu
+	zTueUv27/7AKKlzIzo/X9sLZvizNUAnsUy2r38G405d8e0oxugA6mF0MJ6WDHZJGiNrTwrwILRS9z
+	9Erw/MtakfEZ6Hg5dLMJf2yk8fdE20555Df13/p8ORhrBfn13wiJUkI7zempUsd73LGNkxMQ2/Fhh
+	tJQJg3qp9l4LdMYLMXPTIEmX3YS0y3ZNFYdd1YiiqwKmOE/HQ/kvCbm9dG+1Qi2DGn/Tn+SZXquh/
+	AU9zgBjfMmc4os+YhtGPCa3tdkJg45PLbRIcjTWtl5Ee7YTn/wmxKpSlX+qVJWRdvJ73F9LwIPGXx
+	opDu9yOOJj7srEfYnbVg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hPS6I-0007sJ-Ti; Sat, 11 May 2019 13:31:42 +0000
+	id 1hPSvC-0007Bd-SG; Sat, 11 May 2019 14:24:18 +0000
 Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hPS6F-0007rd-Ik; Sat, 11 May 2019 13:31:40 +0000
+ id 1hPSv2-00074r-E3; Sat, 11 May 2019 14:24:09 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
  s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
  MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=s/AZSOJdvUNU5yPgVGE8CutgVSk3rVEECA+FUX1RXDw=; b=Pd1sGj7GJ++06en9Qla/DwHFxy
- jLRvRo7YD1PLcTj+xmf05M9cwjo+4FcZ8NBQiPoKTy329QTs17V3Z0FKNcZqtO6LkJxqD53I5GqPI
- 9rE89PBKHg/+YTcurS0k0iwItGOB+DHzRpNf0v4lvL2d8/J8yisH54Pez4SM6mvY8Qto=;
+ bh=6D8lHhlPnErlwBUUg7pykhDXuLB10RpnRmnHan5006c=; b=M6sOyTv2Vw0yg/RJTR8macl6dL
+ Ts1wn7fHpqTg9blYEtrdghH4NTRvSy3Gnxm8pytbHCfVeDpsrgJXszmhz+FsOnCOXqRgL3xZfKc1f
+ FsUHZxSaN5GGZ4fzVv19MRS8/BYG8RhDht/W3brnmRaTr3y+R5pVtajyPKDrvcbiUTVQ=;
 Received: from p54ae9c89.dip0.t-ipconnect.de ([84.174.156.137] helo=nf.local)
  by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
  (Exim 4.89) (envelope-from <nbd@nbd.name>)
- id 1hPS6B-00028f-17; Sat, 11 May 2019 15:31:35 +0200
-Subject: Re: [PATCH][next] mt76: fix less than zero check on a u8 variable
-To: Colin King <colin.king@canonical.com>, Roy Luo <royluo@google.com>,
- Kalle Valo <kvalo@codeaurora.org>, "David S . Miller" <davem@davemloft.net>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-wireless@vger.kernel.org,
- netdev@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-References: <20190505213135.3895-1-colin.king@canonical.com>
+ id 1hPSuy-0005td-Hp; Sat, 11 May 2019 16:24:04 +0200
+Subject: Re: [PATCH] mt76: mt7615: Make mt7615_irq_handler static
+To: YueHaibing <yuehaibing@huawei.com>, lorenzo.bianconi83@gmail.com,
+ ryder.lee@mediatek.com, royluo@google.com, kvalo@codeaurora.org,
+ matthias.bgg@gmail.com
+References: <20190504102247.43720-1-yuehaibing@huawei.com>
 From: Felix Fietkau <nbd@nbd.name>
 Openpgp: preference=signencrypt
 Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
@@ -67,16 +65,17 @@ Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
  TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabiEkE
  GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
  RjMaxwtSdaCKMw3j33ZbsWS4
-Message-ID: <a0d21c98-9421-547f-6dd9-5153812107e5@nbd.name>
-Date: Sat, 11 May 2019 15:31:34 +0200
+Message-ID: <eb17d602-ab87-2d75-7d82-acbf93ede150@nbd.name>
+Date: Sat, 11 May 2019 16:24:03 +0200
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:60.0)
  Gecko/20100101 Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <20190505213135.3895-1-colin.king@canonical.com>
+In-Reply-To: <20190504102247.43720-1-yuehaibing@huawei.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190511_063139_775876_919E2738 
-X-CRM114-Status: GOOD (  10.29  )
+X-CRM114-CacheID: sfid-20190511_072408_633816_A56ED271 
+X-CRM114-Status: UNSURE (   7.49  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,24 +99,22 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kernel-janitors@vger.kernel.org, linux-kernel@vger.kernel.org
+Cc: linux-wireless@vger.kernel.org, netdev@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2019-05-05 23:31, Colin King wrote:
-> From: Colin Ian King <colin.king@canonical.com>
+On 2019-05-04 12:22, YueHaibing wrote:
+> Fix sparse warning:
 > 
-> The signed return from the call to get_omac_idx is being assigned to the
-> u8 variable mac_idx and then checked for a negative error condition
-> which is always going to be false. Fix this by assigning the return to
-> the int variable ret and checking this instead.
+> drivers/net/wireless/mediatek/mt76/mt7615/pci.c:37:13:
+>  warning: symbol 'mt7615_irq_handler' was not declared. Should it be static?
 > 
-> Addresses-Coverity: ("Unsigned compared against 0")
-> Fixes: 04b8e65922f6 ("mt76: add mac80211 driver for MT7615 PCIe-based chipsets")
-> Signed-off-by: Colin Ian King <colin.king@canonical.com>
-Already fixed by a similar patch by Dan Carpenter.
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Applied, thanks.
 
 - Felix
 
