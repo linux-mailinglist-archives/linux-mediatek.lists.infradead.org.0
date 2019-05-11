@@ -2,81 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 49B3F1A64D
-	for <lists+linux-mediatek@lfdr.de>; Sat, 11 May 2019 04:31:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC0CD1A7F6
+	for <lists+linux-mediatek@lfdr.de>; Sat, 11 May 2019 15:29:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H436msV3vutS12udmqxtPJfxKJl4QgMvCTfPxIJiO2Q=; b=KxEM77YQzdotkK
-	+GEIhU91YOrlCjhr4hDZgBnbfytfXrWNMCLxQhg5jfjnRuKJ2F/xL/13jftJL9+8qmodRPuE6LLv8
-	pQv40wkZSWvrQM+qaazNcfvqFxdeTsy+tyGcvGO3HZoT1c4uADQrwX7xHWGIbL8Qejtt+ZX/qZHvJ
-	Q8z/2WdDm8c98W10J8HV+qWX9ZE3DGZpXooZIamnFSs0Fbk0LeOVXzQONjRHQe7SjrufcrO5WS+g1
-	2tT7bqUEQ+uXCzYlu+5GE51f8Hv+1Y6tzU9E47szNksw7Xhnz0jGo3NALeAd58USkXZMMsx0lZHTS
-	i/iIWbN5pdlIs7eQglaA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6PpYC7ucWIEgR3pbbFs1kB2oetQtM+tUyucUCJr6/Rc=; b=lER6ZMY8qKIdYy
+	qJKT16TE7oeffrqkKQYym1m9MWtHgofn6ySP9NuIQWC1RTjcy3iYcfJm0thb+TIe4BWKb1eZJ/XNt
+	y+tA0dzDJDBTBqfLZ72Awr6JxxG56rZujgvMH46rZIMIHhQq8mF9i4PC0GoIekP8tnTODrn26gfRh
+	tor3JYpBSZrjNMfVO9iSRVN7ZWCcUELBqqTeWBcljOA+yGGfw/kC+PenNL9rq6zKXx5cez4yAYa/s
+	D0VPZLhsgaU+T6GuoInVvqPd16H+SEs/yFTm7A5/bQJidRDxvCA106Wt2hNwWCyGARCbr5VSI6tyQ
+	oQhKBd789Ev4oUVMZTvQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hPHnQ-0008HY-DK; Sat, 11 May 2019 02:31:32 +0000
-Received: from mail-qt1-x842.google.com ([2607:f8b0:4864:20::842])
+	id 1hPS3r-0006PQ-Pd; Sat, 11 May 2019 13:29:11 +0000
+Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hPHnG-0008Ap-2C
- for linux-mediatek@lists.infradead.org; Sat, 11 May 2019 02:31:24 +0000
-Received: by mail-qt1-x842.google.com with SMTP id k24so3912930qtq.7
- for <linux-mediatek@lists.infradead.org>; Fri, 10 May 2019 19:31:20 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=QkHid6lisLXvpmq0JMNlVb1recKQukJ7PuauuXWUQBw=;
- b=CFYwUdlb6kDt1NhEEjrC0A0nuRHWn/prCx1A1kIqu1GhRZfmdY8bgahc02/X19llbd
- fvxssMqrQQ6Z/4ELAilm0gKIZ0OkiTljAKrePdvGDo8GmzBW4bSQ+Pk9F/xHwraaTGug
- hP27VQvggJlYqYGyMP2FvkeRHxg3gYVJdXK60=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=QkHid6lisLXvpmq0JMNlVb1recKQukJ7PuauuXWUQBw=;
- b=nNcc99+jhjLCot1PJkmByWs0KP4Y3UY4KXBuNsjP4+3TqNGTV48ORhvz1n8p1IHiGG
- 3iqDm6Ha8t27LEeLnc8olei3rnHnhr8WbMWF50kbPcXq2XdwZBr4+HQVY9Z/JTMDrHj9
- aD+vmEW0vLtfWtiDsRyq6IrrLMaT5dXQ9lyYxmyXMV9Z6jWBi8WTMLU9a3/5UHy234N3
- COD+F7UlMfAX5roX1DU5qmAZWLM2GtUkP2c+TCQ59n/1gH5XRM0xuREXBZMFskE/gDHR
- m849OuWahYiT7WYCOQ19a0Pc5LEs+OB00UHe6fPU3i7qQF4ujALXXz/cr3mAa+HQNXum
- EvWg==
-X-Gm-Message-State: APjAAAUxHyKUeQ6Fu+i0zGuoBSH3y87my9d4kyuj/sKWUFDeX5DqxL3x
- l0b/N0JQTj9OG7PwItBRrBtqXfVVitOrc1ho9cT+Ew==
-X-Google-Smtp-Source: APXvYqyW5OpnvPwOyXp+1b/92lREfPpRtf9W5zCWsq24yemetlTdNNphRPH6NE7SW8/mCSyxiaqF+3PgsW4V3IWGCTA=
-X-Received: by 2002:a0c:ee28:: with SMTP id l8mr11862487qvs.67.1557541879585; 
- Fri, 10 May 2019 19:31:19 -0700 (PDT)
+ id 1hPS3o-0006Oq-AO
+ for linux-mediatek@lists.infradead.org; Sat, 11 May 2019 13:29:09 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
+ s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=mdvjgPMA9eI8DprNFHPPXca19zBL7cdKnNyLoDx9Ga0=; b=sS+6V2Sn8YFUOqu0V/2wEiKpWi
+ ELbhxnofZ8dnUCQG0ncooK+ySrMewXD7wJXGOwyt8bIoy+rYo1KozYo3Afgi+pdD2mOngM9MjNltj
+ /C8vn30bTUx+Vol69muawWXpPlpRGM0okIgR5Y1SITpuIP9Zkg3W1d5F7Yywm04oVy74=;
+Received: from p54ae9c89.dip0.t-ipconnect.de ([84.174.156.137] helo=nf.local)
+ by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
+ (Exim 4.89) (envelope-from <nbd@nbd.name>)
+ id 1hPS3g-00022e-8R; Sat, 11 May 2019 15:29:00 +0200
+Subject: Re: [PATCH] mt76: Fix a signedness bug in mt7615_add_interface()
+To: Dan Carpenter <dan.carpenter@oracle.com>,
+ Ryder Lee <ryder.lee@mediatek.com>
+References: <20190502212341.GA31847@mwanda>
+From: Felix Fietkau <nbd@nbd.name>
+Openpgp: preference=signencrypt
+Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
+ mQGiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
+ ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
+ Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
+ AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
+ vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
+ wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
+ TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
+ l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwbQcRmVsaXggRmll
+ dGthdSA8bmJkQG5iZC5uYW1lPohgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
+ HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
+ VrwYTIThkTlQuQINBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
+ CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
+ VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
+ Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
+ DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
+ wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
+ f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
+ aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
+ FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
+ TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabiEkE
+ GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
+ RjMaxwtSdaCKMw3j33ZbsWS4
+Message-ID: <c554f3b8-e46d-9137-ad06-c31f7961a958@nbd.name>
+Date: Sat, 11 May 2019 15:28:59 +0200
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:60.0)
+ Gecko/20100101 Thunderbird/60.6.1
 MIME-Version: 1.0
-References: <1556793795-25204-1-git-send-email-michael.kao@mediatek.com>
- <1556793795-25204-8-git-send-email-michael.kao@mediatek.com>
-In-Reply-To: <1556793795-25204-8-git-send-email-michael.kao@mediatek.com>
-From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Sat, 11 May 2019 11:31:08 +0900
-Message-ID: <CANMq1KBna0V2X3_CNQrcH==WVLs7oY=GvFGzEbWS91-oZCLKTQ@mail.gmail.com>
-Subject: Re: [PATCH 7/8] thermal: mediatek: add another get_temp ops for
- thermal sensors
-To: "michael.kao" <michael.kao@mediatek.com>
+In-Reply-To: <20190502212341.GA31847@mwanda>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190510_193122_147853_683FCA61 
-X-CRM114-Status: GOOD (  22.33  )
+X-CRM114-CacheID: sfid-20190511_062908_520218_C3C78E5E 
+X-CRM114-Status: UNSURE (   9.72  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:842 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,192 +99,25 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, James Liao <jamesjj.liao@mediatek.com>,
- devicetree@vger.kernel.org, louis.yu@mediatek.com, dawei.chien@mediatek.com,
- linux-pm@vger.kernel.org, Daniel Lezcano <daniel.lezcano@linaro.org>,
- roger.lu@mediatek.com, lkml <linux-kernel@vger.kernel.org>,
- Eduardo Valentin <edubezval@gmail.com>, Fan Chen <fan.chen@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Hsin-Yi Wang <hsinyi@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Zhang Rui <rui.zhang@intel.com>,
- linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
+Cc: kernel-janitors@vger.kernel.org, linux-wireless@vger.kernel.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, May 2, 2019 at 7:45 PM michael.kao <michael.kao@mediatek.com> wrote:
->
-> From: Michael Kao <michael.kao@mediatek.com>
->
-> Provide thermal zone to read thermal sensor
-> in the SoC. We can read all the thermal sensors
-> value in the SoC by the node /sys/class/thermal/
->
-> Signed-off-by: Michael Kao <michael.kao@mediatek.com>
-> ---
->  drivers/thermal/mtk_thermal.c | 68 ++++++++++++++++++++++++++++++++++++++-----
->  1 file changed, 60 insertions(+), 8 deletions(-)
->
-> diff --git a/drivers/thermal/mtk_thermal.c b/drivers/thermal/mtk_thermal.c
-> index cb41e46..d5c78b0 100644
-> --- a/drivers/thermal/mtk_thermal.c
-> +++ b/drivers/thermal/mtk_thermal.c
-> @@ -230,6 +230,11 @@ enum {
->
->  struct mtk_thermal;
->
-> +struct mtk_thermal_zone {
-> +       struct mtk_thermal *mt;
-> +       int id;
-> +};
-> +
->  struct thermal_bank_cfg {
->         unsigned int num_sensors;
->         const int *sensors;
-> @@ -612,7 +617,7 @@ static int mtk_thermal_bank_temperature(struct mtk_thermal_bank *bank)
->                  * not immediately shut down.
->                  */
->                 if (temp > 200000)
-> -                       temp = 0;
-> +                       temp = -EACCES;
+On 2019-05-03 14:54, Dan Carpenter wrote:
+> The problem is that "mvif->omac_idx" is a u8 so it can't be negative
+> and the error handling won't work.  The get_omac_idx() function returns
+> -1 on error.
+> 
+> Fixes: 04b8e65922f6 ("mt76: add mac80211 driver for MT7615 PCIe-based chipsets")
+> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+Applied, thanks.
 
-EACCES/permission denied doesn't really seem to be the right error
-code here. Maybe EAGAIN?
-
->
->                 if (temp > max)
->                         max = temp;
-> @@ -623,7 +628,8 @@ static int mtk_thermal_bank_temperature(struct mtk_thermal_bank *bank)
->
->  static int mtk_read_temp(void *data, int *temperature)
->  {
-> -       struct mtk_thermal *mt = data;
-> +       struct mtk_thermal_zone *tz = data;
-> +       struct mtk_thermal *mt = tz->mt;
->         int i;
->         int tempmax = INT_MIN;
->
-> @@ -636,16 +642,48 @@ static int mtk_read_temp(void *data, int *temperature)
->
->                 mtk_thermal_put_bank(bank);
->         }
-> -
-
-I'd drop that change.
-
->         *temperature = tempmax;
->
->         return 0;
->  }
->
-> +static int mtk_read_sensor_temp(void *data, int *temperature)
-> +{
-> +       struct mtk_thermal_zone *tz = data;
-> +       struct mtk_thermal *mt = tz->mt;
-> +       const struct mtk_thermal_data *conf = mt->conf;
-> +       int id = tz->id - 1;
-> +       int temp = INT_MIN;
-
-No need to initialize temp.
-
-> +       u32 raw;
-> +
-> +       if (id < 0)
-> +               return  -EACCES;
-
-EINVAL?
-
-> +
-> +       raw = readl(mt->thermal_base + conf->msr[id]);
-> +
-> +       temp = raw_to_mcelsius(mt, id, raw);
-> +
-> +       /*
-> +        * The first read of a sensor often contains very high bogus
-> +        * temperature value. Filter these out so that the system does
-> +        * not immediately shut down.
-> +        */
-> +
-
-nit: Drop this blank line
-
-> +       if (temp > 200000)
-> +               return  -EACCES;
-
-Again, EAGAIN, maybe?
-
-> +
-> +       *temperature = temp;
-> +       return 0;
-> +}
-> +
->  static const struct thermal_zone_of_device_ops mtk_thermal_ops = {
->         .get_temp = mtk_read_temp,
->  };
->
-> +static const struct thermal_zone_of_device_ops mtk_thermal_sensor_ops = {
-> +       .get_temp = mtk_read_sensor_temp,
-> +};
-> +
->  static void mtk_thermal_init_bank(struct mtk_thermal *mt, int num,
->                                   u32 apmixed_phys_base, u32 auxadc_phys_base,
->                                   int ctrl_id)
-> @@ -878,6 +916,7 @@ static int mtk_thermal_probe(struct platform_device *pdev)
->         struct resource *res;
->         u64 auxadc_phys_base, apmixed_phys_base;
->         struct thermal_zone_device *tzdev;
-> +       struct mtk_thermal_zone *tz;
->
->         mt = devm_kzalloc(&pdev->dev, sizeof(*mt), GFP_KERNEL);
->         if (!mt)
-> @@ -959,11 +998,24 @@ static int mtk_thermal_probe(struct platform_device *pdev)
->
->         platform_set_drvdata(pdev, mt);
->
-> -       tzdev = devm_thermal_zone_of_sensor_register(&pdev->dev, 0, mt,
-> -                                                    &mtk_thermal_ops);
-> -       if (IS_ERR(tzdev)) {
-> -               ret = PTR_ERR(tzdev);
-> -               goto err_disable_clk_peri_therm;
-> +       for (i = 0; i < mt->conf->num_sensors + 1; i++) {
-> +               tz = kmalloc(sizeof(*tz), GFP_KERNEL);
-
-Are we leaking this pointer? Should this be devm_kmalloc?
-
-> +               if (!tz)
-> +                       return -ENOMEM;
-> +
-> +               tz->mt = mt;
-> +               tz->id = i;
-> +
-> +               tzdev = devm_thermal_zone_of_sensor_register(&pdev->dev, i,
-> +                               tz, (i == 0) ?
-> +                               &mtk_thermal_ops : &mtk_thermal_sensor_ops);
-> +
-> +               if (IS_ERR(tzdev)) {
-> +                       if (IS_ERR(tzdev) != -EACCES) {
-
-Why would EACCES ever happen? AFAICT
-devm_thermal_zone_of_sensor_register does not actually try to read the
-temperature value? Or does the error come from somewhere else?
-
-> +                               ret = PTR_ERR(tzdev);
-> +                               goto err_disable_clk_peri_therm;
-> +                       }
-> +               }
->         }
->
->         return 0;
-> --
-> 1.9.1
->
->
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+- Felix
 
 _______________________________________________
 Linux-mediatek mailing list
