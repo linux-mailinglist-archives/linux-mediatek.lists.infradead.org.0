@@ -2,81 +2,108 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2FCB81BBF2
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 19:29:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2E3051BD1D
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 20:21:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jz8V6w9jiFuacCwiFHv/daSRXha+ADwCT63/xJ2Sx6k=; b=gKgnX/bbFKslFn
-	L6kdRuowERPnqsThUNC2CKMy/VyOMO7fEFdVJYu14LoDps/7M+P5+zuyODG22DBhQKVcFgFGRAsGD
-	jiZ/9mFxZJ65JIn+s9DuVpMoUXVKFxbAts5wUgSPcJvKcA+UHjHjnzatZoC+0X3InqaCqlRzuAJnQ
-	1PWiR2SwOhYPTrnXZlhjauaEPMzLVh6thT/USPHGLC4AWwwAPrNd38jDHLAOHmqdZBKVjt3c3nJa/
-	kX2HgK4SQfgNDFDdOUptn5PCFuMaTQGD16b8pVr3ydfk/3tX+ZoHwBZRjiUfLAvstaGv6ZcDvy4/H
-	rL4FdfOdBwuiySZ2UQyQ==;
+	List-Owner; bh=VOJg0getHXVhHA92oolXX8YYT4molYihlwp6uqpxKLY=; b=GcVtgKZt98w/IX
+	U7nNgGrOholPGzVYY/LFDeXq5G0Y3OFeudtpMotrIE+39aliNc1ekmloSF47e0p0a6JI+7GAOyYYh
+	Pr5TcEvv5dlpLhLi5CiCcCUkQ3TSg7A3MtlKi3cHHOK1V8Dfu5cXDqFcy5yTDEV5tjXgrMJoBa5sF
+	xS51Sa2TuSR1I2SYFTROktRAjJL8ot1v1lPWOOQvMUp0DC0LPQvkfRvkiIiCwERRcCtaQRUkh4Qo5
+	ivnVn0JpXH6w/l1bbRR9UVnPN9PjxIcrbW9ElSJB5UlGFAI2hzRe45IGx2l2dIV+jlnzFCQPMWiXA
+	kIJhnUNeJuncLwwnFv3Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQEl1-0005uQ-0e; Mon, 13 May 2019 17:28:59 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1hQFa0-0003XY-9y; Mon, 13 May 2019 18:21:40 +0000
+Received: from mail-eopbgr730054.outbound.protection.outlook.com
+ ([40.107.73.54] helo=NAM05-DM3-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQEks-0005ms-5o; Mon, 13 May 2019 17:28:51 +0000
-Received: by mail-ot1-f66.google.com with SMTP id j49so4877833otc.13;
- Mon, 13 May 2019 10:28:50 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=6feJZa0aw0GZsImOuxnHSsC5EDhjfyRhfdFCIT3tJFo=;
- b=uPtIB3T7zqKkCjNGUn73BcvF3s3pI+bxcri65I1i6utGH4I68Q9kxulxYURop+/Jyw
- 8mrZUKj3CUo3uuTYrUtZiRSQytgXE9Fw25hpY+z206F1IwPd+XLYzzFy2JeSIu3NPYrv
- pw8bKImWJlgtxpjukIlGVj9uwE9xh17rbObMGoNHLKG7vk/WVPSZKU9ZWSzvAR4/FQSS
- 3fQRNSvazRygPdFCLpHv1DO9enHkQRo2mqmOeo9qt38xgFfPsTwS63bLQfbT/Lpq+/XJ
- hr6jWjguN9viuN4BGY75WbLHp28yKWuxOC3+hqpc22xlnjM+Aw4Nr3LQQAdqPnNsVk5I
- UWpw==
-X-Gm-Message-State: APjAAAW8D6H34EzoGlychYS86L13Z8Eu8Bsf+MJ980QAktjDcxBlfbyA
- 8Fp/6klyflT5fjDhHgUd+A==
-X-Google-Smtp-Source: APXvYqxW/0x7M65XCFbh2CtdKwvaAnoHUcFJ/jpvEKj+sZqkwTWbn2hNdCW+F0o0Ism5B8ky398RwQ==
-X-Received: by 2002:a9d:6288:: with SMTP id x8mr254754otk.79.1557768529379;
- Mon, 13 May 2019 10:28:49 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id h194sm1094992oib.58.2019.05.13.10.28.48
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 13 May 2019 10:28:48 -0700 (PDT)
-Date: Mon, 13 May 2019 12:28:47 -0500
-From: Rob Herring <robh@kernel.org>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [v3 PATCH] dt-binding: usb: add usb-role-switch property
-Message-ID: <20190513172847.GA15347@bogus>
-References: <c3596e996c9ab39c6b9bc14b93309244c4a55014.1557306151.git.chunfeng.yun@mediatek.com>
+ id 1hQFZw-0003Wx-JM; Mon, 13 May 2019 18:21:37 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=8z+Mn+lb73jmCGFVT1Pk/z//+SLoGgNMe99zjJuR7Q8=;
+ b=sK3HLb3cuMqVBE9El25ZGrDXGs/TS4n/FZylNfxPHNz3so9rU8hBeQh33WEzuBnrqp1esAIqYryOK/NnSvupWiMuuZFfXYdzU+ovwScyjPO/sPEhcCjocMx5bNKcrCW38IMpzcrxcYhDN/huxxtQmwrNdn2xKNPN4ul7h88pPjg=
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.31.141) by
+ BN7PR08MB5537.namprd08.prod.outlook.com (20.176.29.80) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1878.25; Mon, 13 May 2019 18:21:23 +0000
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::8d6c:f350:4859:e532]) by BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::8d6c:f350:4859:e532%4]) with mapi id 15.20.1878.024; Mon, 13 May 2019
+ 18:21:23 +0000
+From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>
+Subject: RE: [EXT] [PATCH v1 2/3] scsi: ufs: add error handling of auto-hibern8
+Thread-Topic: [EXT] [PATCH v1 2/3] scsi: ufs: add error handling of
+ auto-hibern8
+Thread-Index: AQHVCZlJG8f+B7maOUSAPf/KvWjoI6ZpV6KQ
+Date: Mon, 13 May 2019 18:21:23 +0000
+Message-ID: <BN7PR08MB568438668FC7C90A1284F53DDB0F0@BN7PR08MB5684.namprd08.prod.outlook.com>
+References: <1557758186-18706-1-git-send-email-stanley.chu@mediatek.com>
+ <1557758186-18706-3-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1557758186-18706-3-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-150, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=beanhuo@micron.com; 
+x-originating-ip: [165.225.80.131]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 5e905364-6b9e-4550-d84d-08d6d7cfce30
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(7168020)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(2017052603328)(7193020);
+ SRVR:BN7PR08MB5537; 
+x-ms-traffictypediagnostic: BN7PR08MB5537:|BN7PR08MB5537:
+x-microsoft-antispam-prvs: <BN7PR08MB553757C2B02303588760BB9EDB0F0@BN7PR08MB5537.namprd08.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:4714;
+x-forefront-prvs: 0036736630
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10009020)(366004)(39860400002)(136003)(376002)(346002)(396003)(199004)(189003)(110136005)(99286004)(54906003)(229853002)(73956011)(9686003)(256004)(74316002)(66556008)(14444005)(66476007)(64756008)(66946007)(66446008)(2201001)(5660300002)(7416002)(4744005)(86362001)(7696005)(6506007)(76176011)(76116006)(4326008)(3846002)(6116002)(53936002)(66066001)(81166006)(81156014)(25786009)(102836004)(316002)(55016002)(8676002)(486006)(71200400001)(6436002)(52536014)(71190400001)(14454004)(55236004)(33656002)(11346002)(476003)(305945005)(2501003)(2906002)(68736007)(186003)(7736002)(446003)(8936002)(26005)(6246003)(478600001);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB5537;
+ H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+received-spf: None (protection.outlook.com: micron.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: 6A+z/BY7l3S1p8EMS/pDKFxtSp1S5N3L524N7fxBTRSZtpBL8ni0j6/BsDr1sy/RiY2qP5Gvo/2L/qYDvEx/PWg/fYNyQ6TG+/NZHVYeIXTz1GtmmZjGFKlkuLU5MyNpucxPWYgnR8CS2Il3koCZpdKvgrO04zoz07MORhN2C8/W7hLmI31PqqQpoodEhIaVtOt1Gm/0VYvQ2jKscAkeXITG940YgrysBSUNCd1lPa6rYBhWFF/YQBl1VA5G7IfCbUyQr61zJ9nlWXydACmC8vwRWodfpBhyfvkr5OSA7pneMXZxMWJQ8NrWHIsMJPFSeKRRI2+wKMa2r0I3nrvwJUH1r653QyGCIvSTsDbJYL/E/KwwZj3Gh1ir7CsYz7NFCxs5/3bfnyW4xz2NPsr19B63ePQgPDt2rpmzvBzxTlw=
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <c3596e996c9ab39c6b9bc14b93309244c4a55014.1557306151.git.chunfeng.yun@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-OriginatorOrg: micron.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5e905364-6b9e-4550-d84d-08d6d7cfce30
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 May 2019 18:21:23.5594 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB5537
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_102850_216100_153DE486 
-X-CRM114-Status: GOOD (  12.16  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190513_112136_696147_88908890 
+X-CRM114-Status: UNSURE (   4.89  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ no trust [40.107.73.54 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,55 +115,39 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- Felipe Balbi <felipe.balbi@linux.intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
- Biju Das <biju.das@bp.renesas.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "vivek.gautam@codeaurora.org" <vivek.gautam@codeaurora.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "sayalil@codeaurora.org" <sayalil@codeaurora.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 8 May 2019 17:17:44 +0800, Chunfeng Yun wrote:
-> Add a property usb-role-switch to tell the driver that use
-> USB Role Switch framework to handle the role switch,
-> it's useful when the driver has already supported other ways,
-> such as extcon framework etc.
-> 
-> Cc: Biju Das <biju.das@bp.renesas.com>
-> Cc: Yu Chen <chenyu56@huawei.com>
-> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> ---
-> v3:
->     add property type, modify description suggested by Heikki
-> 
-> v2:
->     describe it in terms of h/w functionality suggested by Rob
-> 
-> v1:
->     the property is discussed in:
->     [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
->     https://patchwork.kernel.org/patch/10852497/
-> 
->     Mediatek and Hisilicon also try to use it:
->     [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
->     https://patchwork.kernel.org/patch/10918385/
->     [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
->     https://patchwork.kernel.org/patch/10918367/
-> 
->     [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
->     https://patchwork.kernel.org/patch/10909981/
-> ---
->  Documentation/devicetree/bindings/usb/generic.txt | 4 ++++
->  1 file changed, 4 insertions(+)
-> 
+Hi, Stanley
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+>+
+>+static inline bool ufshcd_is_auto_hibern8_error(struct ufs_hba *hba,
+>+						u32 intr_mask)
+>+{
+>+	return (ufshcd_is_auto_hibern8_supported(hba) &&
+>+		!hba->uic_async_done &&
+
+Here check if uic_async_done is NULL, no big problem so far, but not safe enough.
+How about setting a flag in ufshcd_auto_hibern8_enable(),
+
+I concern about how to compatible with auto_hibern8 disabled condition.
+
+
+//Bean
 
 _______________________________________________
 Linux-mediatek mailing list
