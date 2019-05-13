@@ -2,82 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 294611B982
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 17:06:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1811F1BAC2
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 18:11:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Zf41tujnblAFdzLRP7VB5MFD2ClnD8o1QjsZ9N3eS8Q=; b=MiLXzl3msWNfQV
-	nAHtfrOyQecS7NBV/rKxDnQnKcZTz93R9A3FdAxqM/TzO0ub5fRfAo1KbcuJcwdYs4GbLkJVA9Gdc
-	d1qT8LhSKXFaXThcNJBCU1ejQDl3qshOVHCb27pGNplQzP898APUorE6MVQBdBr+2W1thOP9aqdNd
-	rv3Xw66sV8hSVTJKTohPR8dBdhwxVFL08z47a/UD6RffU4hY+PzYeacA+689z1G5j7DjjrfMdq3TG
-	IdRERRdPcZHxJy9ztH6Lgy7CKqk7g65/Nv2AmKhRQXkoXVTb41IL3y4nq9unBRb9fIQTlr1xFmC/r
-	OzjOnzKxhjofaX9eoA8Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=qvcFCz8tPuEiI5iNflcSGdpkqXETDj5hcPwRG2P07Uc=; b=OoHTSQ/o1CrpRy
+	i2l1PjpXwYzOIXV+AIzmliIe0OSYUyJy4hmbt9DoTZiWL0Q+w+KLnW4ISfctKhWK4snCiUL3Jz/GM
+	jWLnGJfGxDHxo0Dj1RWSos1N4IPclMLuEwYCCxqnxAjh96S7dxj9hKfgMj2cZCVE8jv2EUIIFyAu+
+	6TrLgBNZeGKuae56Kh5cVQtNDt5G+JS7fmC0rEvEX09aGR2kh16fdrXTroMTXW12Uj6KDztVbCjyk
+	avX8xg/BntvA/5UqjbIM9j9tO/BGy5pVfTnuPlBeBWoilGQzk8VlzGvliUDapXmyGyaJ+t2sd416f
+	LqG19QFg66HIEifME54A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQCWr-0002Z6-Ph; Mon, 13 May 2019 15:06:13 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1hQDYJ-0007Bf-14; Mon, 13 May 2019 16:11:47 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQCWh-0002Qa-Vg; Mon, 13 May 2019 15:06:05 +0000
-Received: by mail-ot1-f66.google.com with SMTP id i8so12023105oth.10;
- Mon, 13 May 2019 08:06:03 -0700 (PDT)
+ id 1hQDX6-0005kW-Kv
+ for linux-mediatek@lists.infradead.org; Mon, 13 May 2019 16:11:07 +0000
+Received: by mail-wr1-x444.google.com with SMTP id e15so3546820wrs.4
+ for <linux-mediatek@lists.infradead.org>; Mon, 13 May 2019 09:10:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=IBIWbSPpc7j2EgIiZbpjBgwSCzEoaoZA6IHHGeyqm0k=;
+ b=aY5uMZeISGZkbAL4GnQfuBHulOyUat3bMlveTgkJEg6ZBvpZ46nBDnlLqd/Jc79Ck2
+ 8wJtwXrFpWPlcwX3JBvKFk61E77dPYAb0o4ZS6QivcLAxxymoy+SIWueXSvhsWe+Cui0
+ 5M5/40WeQcT5p+w3fM/dlxqUl/nd2uCkqI1Ch1LT780M9ui4QcYyvBLFwwvG/HkUGw/2
+ ius4Ma6d9Ba2ztYKa4i/bA7eWNdcpXplomqgDocIwJ8mhjHxvSOs2EkEPg8k6mP1e5eX
+ ivr+bf+9dFvo7pyIFXxda2BQshTin5d1OCk7NFTzfkF9LebTtfxVv5dpxLe/SRxyKnXx
+ raDw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=bKxni4Tnr4JV/OACFJaw+XVWF/+XkwKuGUE+XE3uQeA=;
- b=SEqeIEEPzXGzXheCol6S0oGFgfZLVM8SGuBBUyRGRJ9H8UIX4c8OTH0CmbMHgz51vy
- vafpD8ip0fT/RjsyTBTiUJNNlvC7qTGBw793a35PXl+iPDqcX91TH1xz4dETHNDbiaAl
- IUlTX2eT0H9CLg8idpcLYu5X8wvXyhSGC3BClec8Dqv9CXIjGiBsiAsywv7/iVDdMOUe
- /MMQ2Zq2sOunn/EeIqpEyooaLA87VrqtllZl1B/5Dc5UcylddgCuktzX2MHfKk96JSlc
- 2YTMr3BS7xIp5Pjdp1luodre+TLUXOIqCipt8wawc9t2SaK4KBiZHlB53UO3v9tlAq9y
- gvTg==
-X-Gm-Message-State: APjAAAX/MtbIU+3alL6WhyZ5mz67WTaowK2kytfa8ZdQJn7u2CqiKtQi
- 7KcEqoJegtuk8IRxcV4y5Q==
-X-Google-Smtp-Source: APXvYqw/GihQMP21orlofX8NqbcrIV1iCJZoSvbgR6Y1E26mr/GcNPDvJQkTbd5Rg6WgZ+e95G+xuQ==
-X-Received: by 2002:a9d:4808:: with SMTP id c8mr2532355otf.316.1557759962932; 
- Mon, 13 May 2019 08:06:02 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id w142sm1648584oie.15.2019.05.13.08.06.02
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 13 May 2019 08:06:02 -0700 (PDT)
-Date: Mon, 13 May 2019 10:06:01 -0500
-From: Rob Herring <robh@kernel.org>
-To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-Subject: Re: [PATCH v3 05/10] regulator: Add document for MT6358 regulator
-Message-ID: <20190513150601.GA21798@bogus>
-References: <20190503093117.54830-1-hsin-hsiung.wang@mediatek.com>
- <20190503093117.54830-6-hsin-hsiung.wang@mediatek.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=IBIWbSPpc7j2EgIiZbpjBgwSCzEoaoZA6IHHGeyqm0k=;
+ b=a7S0lRUUI3EMlu/d6WsD4dnBkmmFL5zex0PPv2GI9KxOKWv3Q0yS7JOZYXl+MrfWHO
+ tZZcBVMMJU24RafXDvjPw4L6wv0EyqKv0R6uLz8mu1lBOWcMQRu/L3E8PMyiT5OFcS9J
+ AIQzlnnblDwU2EWEGIH0WxeEebb+Wddd9zMH51s7WP0lrubEEUGxr+Zv/Ef8IuR3x2yh
+ QyeupS3kAGi4rEAF8z5nXUQcLpX9TKZIPgA4jpc+YpfiQuW1g7X/w1D2u1ZLW5t0WrVc
+ tv8NnreDi25QkcuFALTGyqRE/x3QWUMnriOUpYmyoA3Duano946ULaL8jLCdhjzzDgLC
+ StOQ==
+X-Gm-Message-State: APjAAAXW/8sPO/Mmi/HRWzESxL9ClF/zofdeUotyIDuymWtKnxPqwYta
+ dKbCJuYwblrBaosWfaonCb8zCQ==
+X-Google-Smtp-Source: APXvYqwl0U7CzCVOL/tmw6kz1N59Lc9fpRVWsN1Me+FPaSVsbwduVRxDq8hd2gYZT9TE28T+W6qLNQ==
+X-Received: by 2002:adf:ce07:: with SMTP id p7mr3219226wrn.241.1557763830904; 
+ Mon, 13 May 2019 09:10:30 -0700 (PDT)
+Received: from localhost.localdomain
+ (aputeaux-684-1-11-31.w90-86.abo.wanadoo.fr. [90.86.214.31])
+ by smtp.gmail.com with ESMTPSA id n2sm24439089wra.89.2019.05.13.09.10.29
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Mon, 13 May 2019 09:10:30 -0700 (PDT)
+From: Fabien Parent <fparent@baylibre.com>
+To: robh+dt@kernel.org,
+	mark.rutland@arm.com,
+	matthias.bgg@gmail.com
+Subject: [PATCH v2 0/5] mt6392: Add support for MediaTek MT6392 PMIC
+Date: Mon, 13 May 2019 18:10:21 +0200
+Message-Id: <20190513161026.31308-1-fparent@baylibre.com>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190503093117.54830-6-hsin-hsiung.wang@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_080604_017461_20528100 
-X-CRM114-Status: GOOD (  10.43  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190513_091033_202811_8648CBDB 
+X-CRM114-Status: GOOD (  11.65  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,30 +92,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
- Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Eddie Huang <eddie.huang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
- linux-arm-kernel@lists.infradead.org, linux-rtc@vger.kernel.org
+Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ Fabien Parent <fparent@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, May 03, 2019 at 05:31:12PM +0800, Hsin-Hsiung Wang wrote:
-> add dt-binding document for MediaTek MT6358 PMIC
-> 
-> Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-> ---
->  .../bindings/regulator/mt6358-regulator.txt   | 358 ++++++++++++++++++
->  1 file changed, 358 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/regulator/mt6358-regulator.txt
+This patch series aims at bringing support for the MediaTek MT6392 PMIC. This
+PMIC is used on the MT8516 Pumpkin board.
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+This patch series adds support for the following features:
+ * PMIC keys
+ * regulator
+ * RTC
+
+Fabien Parent (5):
+  dt-bindings: regulator: add support for MT6392
+  regulator: mt6392: Add support for MT6392 regulator
+  dt-bindings: mfd: mt6397: Add bindings for MT6392 PMIC
+  mfd: mt6397: Add support for MT6392 pmic
+  arm64: dts: mt6392: Add PMIC mt6392 dtsi
+
+ .../devicetree/bindings/mfd/mt6397.txt        |  12 +-
+ .../bindings/regulator/mt6392-regulator.txt   | 220 ++++++++
+ arch/arm64/boot/dts/mediatek/mt6392.dtsi      | 208 ++++++++
+ drivers/mfd/mt6397-core.c                     |  55 ++
+ drivers/regulator/Kconfig                     |   9 +
+ drivers/regulator/Makefile                    |   1 +
+ drivers/regulator/mt6392-regulator.c          | 490 ++++++++++++++++++
+ include/linux/mfd/mt6392/core.h               |  42 ++
+ include/linux/mfd/mt6392/registers.h          | 487 +++++++++++++++++
+ include/linux/regulator/mt6392-regulator.h    |  40 ++
+ 10 files changed, 1562 insertions(+), 2 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/regulator/mt6392-regulator.txt
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt6392.dtsi
+ create mode 100644 drivers/regulator/mt6392-regulator.c
+ create mode 100644 include/linux/mfd/mt6392/core.h
+ create mode 100644 include/linux/mfd/mt6392/registers.h
+ create mode 100644 include/linux/regulator/mt6392-regulator.h
+
+-- 
+2.20.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
