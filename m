@@ -2,59 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 223951B915
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 16:51:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 348361B971
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 May 2019 17:04:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PiDUvry/iMtkxQ1w0YPfUpCheGHQvV+AkpO/w/DpLYc=; b=TMabviixJwrQNx
-	XEeExzV2JZmeZq7ynn2Y8mEKxeOa9H5WwznIqd7TNw5QWdYvgx2j/VR0OBK40GkSQjpHTfRDJrlFz
-	AAbDOyeWckiXDbzWKcOgn6bwgn2RRUi1+SvYxBWWBJgpCYP2AwKGT3zhqMYRRqCLVZyePYhszvFp7
-	tIGdihI9Pd/3UbHKtzwVpVdy2WO04WpUMelNJOst3wedBvGYCM4GCAjukkdU/+F+DSgS/T1X3aPTk
-	Irib0yr4FMqKQCrGwZOtJ/KV3IgMkRyVyZs+QVYOsVwszifRQ5hk/3bWbtXGCAlcDFL7ykdiG+F3x
-	g2RrSdoS7XSwre020tzg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=OAsnY3ZLweMa0rz2F24t07vQI94R1fh2zB/5CjyWtNM=; b=aZoJklBX9GjL7S
+	/XhgQ3JNllByFnVciQDEG1l/AepqFJVEoiyUhKXkEvvHRN0JZ/QnrsAz3Ctgok3iAgqXvmHs6byoq
+	6oNf8FGyX4obdzy5T1pq6EbnvMc0iTUN39NZv2WAaEXlbXoVe+tCrGzXNl2/HmNQZT/our7DJxyHN
+	RZ5XmIFAPPQn1cDWDE8fTFtHDt0VEBLpplgE8sJbEMaXY0Y9aEw1QGwxlHFIV6FCmpAGy+z+9av9+
+	GAGgmPNYxN4EhJ70doGTUV/A8P25uJWH68IN2meS5FNVNZfrkMOicsujXnYUvQSWjEDgj7ensyP9M
+	lVkwg0Ifiz5f+LyiaQ4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQCIR-00036C-Gg; Mon, 13 May 2019 14:51:19 +0000
-Received: from ns.iliad.fr ([212.27.33.1])
+	id 1hQCVD-0000dU-9T; Mon, 13 May 2019 15:04:31 +0000
+Received: from mail-oi1-f196.google.com ([209.85.167.196])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQCIJ-0002zg-13; Mon, 13 May 2019 14:51:12 +0000
-Received: from ns.iliad.fr (localhost [127.0.0.1])
- by ns.iliad.fr (Postfix) with ESMTP id 3F90D1FF44;
- Mon, 13 May 2019 16:51:05 +0200 (CEST)
-Received: from [192.168.108.49] (freebox.vlq16.iliad.fr [213.36.7.13])
- by ns.iliad.fr (Postfix) with ESMTP id 0834A1FF2B;
- Mon, 13 May 2019 16:51:05 +0200 (CEST)
-Subject: Re: [PATCH v1 0/3] scsi: ufs: add error handlings of auto-hibern8
-To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
- martin.petersen@oracle.com, avri.altman@wdc.com, alim.akhtar@samsung.com,
- pedrom.sousa@synopsys.com
-References: <1557758186-18706-1-git-send-email-stanley.chu@mediatek.com>
-From: Marc Gonzalez <marc.w.gonzalez@free.fr>
-Message-ID: <55818bc4-d464-bb35-25bb-9ef87af8224e@free.fr>
-Date: Mon, 13 May 2019 16:51:04 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ id 1hQCV5-0000XN-Ig; Mon, 13 May 2019 15:04:24 +0000
+Received: by mail-oi1-f196.google.com with SMTP id k9so9547840oig.9;
+ Mon, 13 May 2019 08:04:22 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=Ai6rjPFrafyd6umFHEjlpBi/HrKqyBzAzERgqLZhf2g=;
+ b=bY917LSDvQ4daVV+uEpwUpzKFm1LceaDj7P/me3Fhv9j+OIqKIFjww7gt+S1MAwiuO
+ 0q7K8P0iKvksmAffUjcEl61oAqWPaw5leMRXpCe1Rxq63eXUOwShzYCaOfZ3OPig7V6v
+ 2M2eAYN03kDxQ+9W5nwFxerThlFjq3tP7ene+3gSJywsUstRGyES/xSEoD/G7OgZd5Mq
+ lT80SMda0EZQSMS0FbQj88rH4go2heNkA5w3Pm3OvGO70T2/Wky0wW4H1ZBoHM9fr6Ko
+ mlpPQYmbqV4Cohrilk8Msp2ZUrcrLNZbLwf7Tj8KxhObU/fdct7RTTnt4uGkMuWq4nUQ
+ c/4w==
+X-Gm-Message-State: APjAAAW+KIR2OV8xi6wrYVINzE4ULLyA0v2hwelNY2XVh8VO7JNAegek
+ 5CcdRLs2PGdS0GzkR/rxhA==
+X-Google-Smtp-Source: APXvYqxVXfjOnWaZN5e9dSjye6lhc3XyeNNDviJ/wA+MXXfwKmpzGSqIuCkQvL/GtWBR1trD1GIH4w==
+X-Received: by 2002:aca:c794:: with SMTP id x142mr5118647oif.172.1557759862144; 
+ Mon, 13 May 2019 08:04:22 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id v6sm4954890otk.53.2019.05.13.08.04.21
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Mon, 13 May 2019 08:04:21 -0700 (PDT)
+Date: Mon, 13 May 2019 10:04:20 -0500
+From: Rob Herring <robh@kernel.org>
+To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
+Subject: Re: [PATCH v3 04/10] dt-bindings: mfd: Add compatible for the
+ MediaTek MT6358 PMIC
+Message-ID: <20190513150420.GA16152@bogus>
+References: <20190503093117.54830-1-hsin-hsiung.wang@mediatek.com>
+ <20190503093117.54830-5-hsin-hsiung.wang@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <1557758186-18706-1-git-send-email-stanley.chu@mediatek.com>
-Content-Language: en-US
-X-Virus-Scanned: ClamAV using ClamSMTP ; ns.iliad.fr ;
- Mon May 13 16:51:05 2019 +0200 (CEST)
+Content-Disposition: inline
+In-Reply-To: <20190503093117.54830-5-hsin-hsiung.wang@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_075111_219041_87648832 
-X-CRM114-Status: GOOD (  10.44  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190513_080423_617650_D08ACE49 
+X-CRM114-Status: GOOD (  10.41  )
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [212.27.33.1 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.167.196 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (marc.w.gonzalez[at]free.fr)
+ provider (robherring2[at]gmail.com)
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.196 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -66,55 +89,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, evgreen@chromium.org, subhashj@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- vivek.gautam@codeaurora.org, matthias.bgg@gmail.com, sayalil@codeaurora.org,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
+ Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Eddie Huang <eddie.huang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-arm-kernel@lists.infradead.org, linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 13/05/2019 16:36, Stanley Chu wrote:
-
-> Currently auto-hibern8 is activated if host supports
-> auto-hibern8 capability. However no error handlings are existed thus
-> this feature is kind of risky.
-
-This last sentence is not very idiomatic.
-
-I would suggest:
-"However, error-handling is not implemented, which makes the feature
-somewhat risky."
-
-> If "Hibernate Enter" or "Hibernate Exit" fail happens
-
-I would suggest:
-If either "Hibernate Enter" or "Hibernate Exit" fail during ...
-
-> during auto-hibern8 flow, the corresponding interrupt
-> "UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
-> according to UFS specification.
+On Fri, May 03, 2019 at 05:31:11PM +0800, Hsin-Hsiung Wang wrote:
+> This adds compatible for the MediaTek MT6358 PMIC.
 > 
-> This patch adds auto-hibern8 error handlings:
+> Acked-for-MFD-by: Lee Jones <lee.jones@linaro.org>
+> Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
+> ---
+>  Documentation/devicetree/bindings/mfd/mt6397.txt | 11 ++++++++---
+>  1 file changed, 8 insertions(+), 3 deletions(-)
 
-error-handling
-
-> - Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
->   auto-hibern8 feature is activated.
-
-I just want to take this opportunity to ask a rhetorical question.
-
-Who in the Great Heavens thought it would be a good idea to call the
-feature "auto-hibern8" ?
-
-Was it really worth it to save 2 characters by writing "8" instead
-of "ate" ?
-
-This bugs me so much that I just might send a patch to fix it up.
-
-Regards.
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
