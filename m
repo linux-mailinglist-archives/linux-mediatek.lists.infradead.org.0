@@ -2,80 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A3D161D0AB
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 May 2019 22:32:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85C161E526
+	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 00:24:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
+	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=orLjoMRAslF7WTvgQesPtd/NZnPPKaq7oPb8vntVa90=; b=ExdIQr1WjNmEE/
-	OMdqmK65ORMt8kOWBPknlPwMlIpc0RCj83XKFAFr44Mp0EK6AuMwgkNObgLdRsxTvWtw2zTW3VpOV
-	oDYZlNa8P0I8zM0qh3qM9oi44yYdWBk9VzEYeMaFbT8kIHLMmBdrxZB3bAS8KHPa662w5hNjl5dqk
-	/dXG7ysFY4mxBGD2crV43zrKt83XwHzpR1YQOnKiPNHTQagOBqhFWC6vpRtJZkvHdl4UTp25OkHC4
-	QQqNm9Y6H2M/hVFXgO0hkN0M/TUsnuw0lNRMBnXCiTZS4Qynjfqilv78ASKe/SLDQZLZ0bdxszjvJ
-	AOFlbix303fTYfsPEooA==;
+	List-Owner; bh=569G+hP9zE0TNBzJvFJGFptbrQOT5w/EYz1Y4GGSb88=; b=VHVqQK6sQT53ml
+	VxKAu8esPjm2z2pUygETxgrcF99aEsliG7rE2Pg/6/KYqfXAKhG/GzKeDO/sRb8XKjkC/h3zibZlt
+	bg7pIX/pUs2dI1TG1BhFJ9nE8xSD3rCSv1ftnO6a/gDzR/XIOh3jsvq/LcYu2mX3utbt9uGH6Dsih
+	Zil86zRP4DmDIcbQOwxMavHJRRgznikCF3PVpDIjsnKLViw6AIZX/ns+pSirueipx3GsW4/nLO/Ae
+	PweNIbEkAwdZPpOoLg+vHktEo1z4uOqLhGzx05g4JkMzEGKKSyATiH1cwrmFivAlEPrM9UC66NFgW
+	poi/Biyb9UiFpfU+oQ2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQe5n-0001UG-FU; Tue, 14 May 2019 20:32:07 +0000
-Received: from mail-oi1-f195.google.com ([209.85.167.195])
+	id 1hQfqZ-0003Nq-CG; Tue, 14 May 2019 22:24:31 +0000
+Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQe5e-0001Md-Bj; Tue, 14 May 2019 20:31:59 +0000
-Received: by mail-oi1-f195.google.com with SMTP id l203so143046oia.3;
- Tue, 14 May 2019 13:31:58 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=YjL/NO0p+mAa79u2Dxd50/GNPObZERJpL2+IFfkzaF8=;
- b=q6nRsP3eqGvd1OmSgwA3rI0786Letl3O6IenINi9csGlGC2EeyBKRnDyyl7fpVjb18
- HXl0cS0EBam+o7MqMR4XLTBOQUmOqwvvSQlZCFDbKwMLdIun4/Kr5sBx5qdXvpu1BSZ7
- jQb3U9oglernQQ6NPawuQQAsqDZHYlQY/pOBy+GzSajT5IB7ctuKyA0CWkcx84AW5ZR3
- FPXqC38cGgSLB1SxUDNegaYcQC7f3F/DvxDvlTgDr1rmFJwp62Qhu9zDclavZamor2LL
- BHbfitNu/BXS22mTe7PxGFuqxzMaYqz+w/2M50hOvDR2nnpDbZM0LsUQuJ0Fm0PkNLMZ
- /2Sg==
-X-Gm-Message-State: APjAAAVn7FLfWDxacITDJ2v0qgHPTqR16BJWEwjZmKZw9ISNmYCImu7U
- 5UTGpC3e5Ib70tTt3nZ3DA==
-X-Google-Smtp-Source: APXvYqw/MbsPeIjo4+IkAQdkLBVa4RuZxpAvyfeJ4IbH7xYxg4CqthUnaxBNffPoyTkXoH2kmFKyxQ==
-X-Received: by 2002:aca:5c44:: with SMTP id q65mr4181493oib.16.1557865917510; 
- Tue, 14 May 2019 13:31:57 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id v89sm2933228otb.14.2019.05.14.13.31.56
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Tue, 14 May 2019 13:31:56 -0700 (PDT)
-Date: Tue, 14 May 2019 15:31:56 -0500
-From: Rob Herring <robh@kernel.org>
-To: Fabien Parent <fparent@baylibre.com>
-Subject: Re: [PATCH 1/2] dt-bindings: mediatek: audsys: add support for MT8516
-Message-ID: <20190514203156.GA28188@bogus>
-References: <20190502121843.14493-1-fparent@baylibre.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190502121843.14493-1-fparent@baylibre.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ id 1hQfqQ-0003BZ-2N; Tue, 14 May 2019 22:24:23 +0000
+Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::3d8])
+ (using TLSv1 with cipher AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ (Authenticated sender: davem-davemloft)
+ by shards.monkeyblade.net (Postfix) with ESMTPSA id BED3B14BFF810;
+ Tue, 14 May 2019 15:24:13 -0700 (PDT)
+Date: Tue, 14 May 2019 15:24:13 -0700 (PDT)
+Message-Id: <20190514.152413.759642243023046997.davem@davemloft.net>
+To: biao.huang@mediatek.com
+Subject: Re: [v3, PATCH 0/4] fix some bugs in stmmac
+From: David Miller <davem@davemloft.net>
+In-Reply-To: <1557805046-306-1-git-send-email-biao.huang@mediatek.com>
+References: <1557805046-306-1-git-send-email-biao.huang@mediatek.com>
+X-Mailer: Mew version 6.8 on Emacs 26.1
+Mime-Version: 1.0
+X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
+ (shards.monkeyblade.net [149.20.54.216]);
+ Tue, 14 May 2019 15:24:14 -0700 (PDT)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190514_133158_394138_00D2D911 
-X-CRM114-Status: GOOD (  10.18  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190514_152422_113877_9B3FF0BC 
+X-CRM114-Status: UNSURE (   4.80  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.195 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.195 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -87,28 +60,20 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, ryder.lee@mediatek.com,
- wenzhen.yu@mediatek.com, sboyd@kernel.org, mturquette@baylibre.com,
- sean.wang@mediatek.com, linux-kernel@vger.kernel.org,
- Fabien Parent <fparent@baylibre.com>, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: alexandre.torgue@st.com, jianguo.zhang@mediatek.comi,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org, boon.leong.ong@intel.com,
+ joabreu@synopsys.com, linux-mediatek@lists.infradead.org,
+ mcoquelin.stm32@gmail.com, matthias.bgg@gmail.com, peppe.cavallaro@st.com,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu,  2 May 2019 14:18:42 +0200, Fabien Parent wrote:
-> Add AUDSYS device tree bindings documentation for MediaTek MT8516 SoC.
-> 
-> Signed-off-by: Fabien Parent <fparent@baylibre.com>
-> ---
->  .../bindings/arm/mediatek/mediatek,audsys.txt   |  1 +
->  include/dt-bindings/clock/mt8516-clk.h          | 17 +++++++++++++++++
->  2 files changed, 18 insertions(+)
-> 
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+This series doesn't apply to my 'net' tree, mainly because something like
+patch #3 is already in my tree.
+
 
 _______________________________________________
 Linux-mediatek mailing list
