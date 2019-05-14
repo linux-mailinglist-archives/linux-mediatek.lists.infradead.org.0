@@ -2,89 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D97531D055
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 May 2019 22:14:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3EC911D072
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 May 2019 22:20:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:Subject:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uSUsTLRl8UxGE+DVgzynySeHzlbfN/ZejxF1i5xZPFA=; b=ZYvmS8PkuW7NOz
-	nlFNj/69nWDca3Tpk2Q20Ox3pYI7pkaRYkv8oytmvdC+02Qtku3mGlzQB16wmGY7PLTCs1xkTVsF8
-	XUEdREQmLmUk5qRg0g46K4qBk30Z1caDT2cAlTDJGsgiRQfxv41pBe9BUUcJAUoEDOHJhZMn3m0RR
-	/LUIcBjKJBb1arK3Nt1xRfwgVy8RqlaFQEO21/DTPf6YMfiG9BG9OYCL0ImakKfzEV7c2wThITNyJ
-	uk+leR+NXZX272sHwYNDIT+V1uSh9qUeNd6NfCixxZT7O+MxvGAg3eVjyOeiV9v1sQMBZxaks4LGy
-	45L7kOiL5/dKPFpsL4fA==;
+	List-Owner; bh=EbLN7W0/wwwlVyYuutY4MD+iBKzz/YXltybHKGvmNTA=; b=tSAiuzrh4yLbra
+	rSVqVAOk1oYE3gN1BTZaK3U+/SPWYIikrCieUgZUN/+IUKy23/xqEF6Z39Pe5fLqGDp7MEHTJ0BHc
+	xWywLoVWtSfdJ2lH7N+U9Fo7mQrV0OSs2NtORu/1VCf1jT8fg31Uis821CtkVwLjRNXGCPxO44qwu
+	u++TTaDZpyHBY0H1v49CAnWq7DjSt++vvsoX5drmi8ikmwkcSnDxLCIbbgHEqqFAUox7NOsYQXmxm
+	TiOdNrNuEcupMxEEFBfmfoCZzqQsuTvFXlrnyWxM4cvy6wboTbHIcnkSXZViqggk/DCwkqlWMN6Fp
+	7l9/iNO22OrpBmhhOnZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQdox-0001vO-DD; Tue, 14 May 2019 20:14:43 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1hQduA-0004Nj-B0; Tue, 14 May 2019 20:20:06 +0000
+Received: from mail-it1-f195.google.com ([209.85.166.195])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQdot-0001uk-Cw
- for linux-mediatek@lists.infradead.org; Tue, 14 May 2019 20:14:41 +0000
-Received: by mail-pg1-x544.google.com with SMTP id a3so120040pgb.3
- for <linux-mediatek@lists.infradead.org>; Tue, 14 May 2019 13:14:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:content-transfer-encoding:in-reply-to:references:from
- :subject:cc:to:message-id:user-agent:date;
- bh=NwBKkvRALDSfJXSRslkyqKuEQQ49X1NvKTDQCoJHdlI=;
- b=CCE5qzleFDtTOHIb/LPu8GAOVirRmVFIRYv2NvKSnorxyMLWDwMVTbDQNdiG4j1kxd
- cFx1dYDfqw+fuqMLvgYSomNiIrrgPxPOWY884zW4I65CqNYiEe0Loz/t6G4UK8OHSwaN
- muyemZmyBqRdfBFtb7yczMlrj2swanAKfQpu8=
+ id 1hQdu6-0003qM-0G
+ for linux-mediatek@lists.infradead.org; Tue, 14 May 2019 20:20:03 +0000
+Received: by mail-it1-f195.google.com with SMTP id m140so922832itg.2
+ for <linux-mediatek@lists.infradead.org>; Tue, 14 May 2019 13:19:59 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:content-transfer-encoding
- :in-reply-to:references:from:subject:cc:to:message-id:user-agent
- :date;
- bh=NwBKkvRALDSfJXSRslkyqKuEQQ49X1NvKTDQCoJHdlI=;
- b=ryz93aWS4ZMRuhvNry/gc99B1OCqsbRX+E1JNZFHFCnWjDUeBPx/5iUz4me2X2tc66
- gsbQxiAHIf0yQ+HXjNRnM6t0NHZkXPip/nJQN7Y3+cZmXEXSCElE75GhlTwy1KXn2k7y
- twnvGsuAlRy8VHOODSpF0KVeDEHAm/HyUghvpJhLR77DkqMZ89Df8352FrzTTnDoVqhf
- NPSU2VVHI96JbQ9ZrJx+yXCf6uwcx1dkJIFrmAk461o4D/J3YHT+mxJ1Q3tWu5QIRdel
- 8MXJVnIdI5tX5e/+57wEh1NXe2HnMyrMUntKqUYmV1NFCc2XRfe7wllLedbAuly2NvEN
- fing==
-X-Gm-Message-State: APjAAAUV5O74BupwgRjxtvH5JiQunAuHv5IgMSisZM0fHRPMiaP8ybkq
- qddIc8wAJgV5nyPT1aT2ctW40kktJSXfog==
-X-Google-Smtp-Source: APXvYqzDQ19kpSxfLWSgqhbEO+Bv2cEGlMH90i1VoP/vOiYQQXLgL9nWWDvQ5o3dkbO5mmiC4br8CQ==
-X-Received: by 2002:aa7:880f:: with SMTP id c15mr44432292pfo.100.1557864878218; 
- Tue, 14 May 2019 13:14:38 -0700 (PDT)
-Received: from localhost ([2620:15c:202:1:fa53:7765:582b:82b9])
- by smtp.gmail.com with ESMTPSA id x4sm21867128pfm.19.2019.05.14.13.14.37
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Tue, 14 May 2019 13:14:37 -0700 (PDT)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=lK8c734xh5U5PM3ABKp/9nxVkeJ2kE5gY87Z6hnyLjY=;
+ b=aGYXGCiGcgewlPSPFARgYzZ+zLC4xQ+jJftpqcIpXOmd4c5JMmiRfh0hDx6OZo5dEe
+ 1fJvTsnzUi/I4MWKg40e7OSRxSq4H+OCkpAcbUzkLCWAAKg9W8fB1KgPUmJoxPehV+bq
+ 9y16qd7AUoL6RK4qzI7kKgO45XQXa6XrC+VbNSzNE9OFrbvTNjhAM4oWC9T3ORFhR9Sp
+ X5bqjqGmkT3zFP3GNyQLhXkhF8qtvIZwV/8RCTVz5U72kHGiBku5w0AhKmg+Ot3rTR3Z
+ vOiiliHussRJMxr2zLw/wKAU23EmwkYZqWt8tpesN+ruN55F7rg+WGaxYaMuCq6vqzA8
+ pPzg==
+X-Gm-Message-State: APjAAAXRVExe5nML2ouIDPE6dSEQ4G7iS5JU2sFZsv7vCIeENuWosY+G
+ Dbd9EP6vHgor+Xz614vNI+kH3Q==
+X-Google-Smtp-Source: APXvYqw5Ieb4O+HXGg5FGMOQuh00DKqk4E7AnX5MHmnns5jJT4DhWDpnXg9aD82Klnzt0ms9U6gjAw==
+X-Received: by 2002:a02:c4c6:: with SMTP id h6mr25419071jaj.33.1557865198005; 
+ Tue, 14 May 2019 13:19:58 -0700 (PDT)
+Received: from chromium.org ([2620:15c:183:0:92f:a80a:519d:f777])
+ by smtp.gmail.com with ESMTPSA id m189sm25150itm.21.2019.05.14.13.19.56
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Tue, 14 May 2019 13:19:57 -0700 (PDT)
+Date: Tue, 14 May 2019 14:19:52 -0600
+From: Drew Davenport <ddavenport@chromium.org>
+To: Louis Kuo <louis.kuo@mediatek.com>
+Subject: Re: [RFC PATCH V2 0/4] media: support Mediatek sensor interface driver
+Message-ID: <20190514201952.GA107202@chromium.org>
+References: <20190512060005.5444-1-louis.kuo@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <CANMq1KBMd7eR3dP=V9gJ6G4OgE6DsXad_gzvuNJ25_pee4+6eg@mail.gmail.com>
-References: <20190429035515.73611-1-drinkcat@chromium.org>
- <20190429035515.73611-3-drinkcat@chromium.org>
- <155778659317.14659.136626364818483852@swboyd.mtv.corp.google.com>
- <CANMq1KBMd7eR3dP=V9gJ6G4OgE6DsXad_gzvuNJ25_pee4+6eg@mail.gmail.com>
-From: Stephen Boyd <swboyd@chromium.org>
-Subject: Re: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
-To: Nicolas Boichat <drinkcat@chromium.org>
-Message-ID: <155786487644.14659.17142525593824613967@swboyd.mtv.corp.google.com>
-User-Agent: alot/0.8
-Date: Tue, 14 May 2019 13:14:36 -0700
+Content-Disposition: inline
+In-Reply-To: <20190512060005.5444-1-louis.kuo@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190514_131439_477107_04FB49DA 
-X-CRM114-Status: GOOD (  30.77  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190514_132002_113318_8265B1C8 
+X-CRM114-Status: GOOD (  14.32  )
+X-Spam-Score: -7.5 (-------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-7.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
- [list.dnswl.org]
+ no trust [209.85.166.195 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.195 listed in wl.mailspike.net]
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,154 +83,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
- Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
- lkml <linux-kernel@vger.kernel.org>, Evan Green <evgreen@chromium.org>,
- linux-gpio@vger.kernel.org,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
+ laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ christie.yu@mediatek.com, srv_heupstream@mediatek.com,
+ holmes.chiou@mediatek.com, Jerry-ch.Chen@mediatek.com, tfiga@chromium.org,
+ keiichiw@chromium.org, jungo.lin@mediatek.com, sj.huang@mediatek.com,
+ yuzhao@chromium.org, hans.verkuil@cisco.com, zwisler@chromium.org,
+ frederic.chen@mediatek.com, matthias.bgg@gmail.com,
+ linux-mediatek@lists.infradead.org, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Nicolas Boichat (2019-05-13 18:37:58)
-> On Tue, May 14, 2019 at 6:29 AM Stephen Boyd <swboyd@chromium.org> wrote:
-> >
-> > Quoting Nicolas Boichat (2019-04-28 20:55:15)
-> > > During suspend/resume, mtk_eint_mask may be called while
-> > > wake_mask is active. For example, this happens if a wake-source
-> > > with an active interrupt handler wakes the system:
-> > > irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
-> > > that it can be handled later on in the resume flow.
-> > >
-> > > However, this may happen before mtk_eint_do_resume is called:
-> > > in this case, wake_mask is loaded, and cur_mask is restored
-> > > from an older copy, re-enabling the interrupt, and causing
-> > > an interrupt storm (especially for level interrupts).
-> > >
-> > > Instead, we just record mask/unmask changes in cur_mask. This
-> > > also avoids the need to read the current mask in eint_do_suspend,
-> > > and we can remove mtk_eint_chip_read_mask function.
-> > >
-> > > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> >
-> > It looks an awful lot like you should just use IRQCHIP_MASK_ON_SUSPEND
-> > here. Isn't that what's happening? All non-wake irqs should be masked at
-> > the hardware level so they can't cause a wakeup during suspend and on
-> > resume they can be unmasked?
+Hello Louis,
+
+On Sun, May 12, 2019 at 02:00:01PM +0800, Louis Kuo wrote:
+> Hello,
 > 
-> No, this is for an line that has both wake and interrupt enabled. To
-> reword the commit message above:
-
-Is my understanding correct that there isn't a different "wake up"
-register that can be written to cause a GPIO to be configured to wake
-the system from suspend? The only way to do so is to leave the GPIO
-unmasked in the hardware by having EINT_EN[irq] = 1? And thus any
-interrupts that we don't want to wake us up during suspend should be
-masked in the hardware? 
-
-If that's true, the code here that's trying to keep track of enabled
-irqs and wakeup enabled irqs can be replaced with the irqchip flag so
-that wakeup irqs are not masked while non-wakeups are masked.
-
-
->  1. cur_mask[irq] = 1; wake_mask[irq] = 1; EINT_EN[irq] = 1 (interrupt
-> enabled at hardware level)
->  2. System suspends, resumes due to that line (at this stage EINT_HW
-> == wake_mask)
->  3. irq_pm_check_wakeup is called, and disables the interrupt =>
-> EINT_EN[irq] = 0, but we still have cur_mask[irq] = 1
->  4. mtk_eint_do_resume is called, and restores EINT_EN = cur_mask, so
-> it reenables EINT_EN[irq] = 1 => interrupt storm.
+> This is the RFC patch adding Sensor Inferface(seninf) driver on
+> Mediatek mt8183 SoC, which will be used in camera features on CrOS application.
+> It belongs to the first Mediatek's camera driver series based on V4L2 and media controller framework.
+> I posted the main part of the seninf driver as RFC to discuss first and would like some review comments
+> on the overall structure of the driver.
 > 
-> This patch fixes the issue in step 3. So that the interrupt can be
-> re-enabled properly later on, sometimes after mtk_eint_do_resume, when
-> the driver is ready to handle it.
+> The driver is implemented with V4L2 framework.
+> 1. Register as a V4L2 sub-device.
+> 2. Only one entity with sink pads linked to camera sensors for choosing desired camera sensor by setup link
+>    and with source pads linked to cam-io for routing different types of decoded packet datas to PASS1 driver
+>    to generate sensor image frame and meta-data.
+> 
+> The overall file structure of the seninf driver is as following:
+> 
+> * mtk_seninf.c: Implement software and HW control flow of seninf driver.
+> * mtk_seninf_def.h: Define data structure and enumeration.
+> * mtk_seninf_reg.h: Define HW register R/W macros and HW register names.
+> 
+> [ v2: use recommended coding style, fix v4l2-compliance issue, add v4l2 async notifier operations, remove redundant code]
 
-Right, we'd rather not see irqchip drivers working around the genirq
-layer to do these things like tracking cur_mask and wake_mask. That
-leads to subtle bugs and makes the driver maintain state across the
-irqchip callbacks and system suspend/resume.
+Thanks for the style fixes. I made a number of review comments on V1 of
+the driver patch. Please take a look at those if you haven't already.
 
 > 
-> Also, IRQCHIP_MASK_ON_SUSPEND does not handle lines that are enabled
-> as a wake source, but without interrupt enabled (e.g. cros_ec driver
-> does that), which we do want to support.
-
-Hmm. I thought that even if the irq is disabled by a driver, that would
-be a lazy disable so it isn't really masked in the hardware. Then if an
-interrupt comes in during suspend on a wake configured irq line, the
-hardware will have left it unmasked because IRQCHIP_MASK_ON_SUSPEND in
-combination with lazy disable would mean that the line is left unmasked
-(ignoring whatever this mediatek driver is doing to mask and unmask in
-PM hooks).
-
-Just reading Documentation/power/suspend-and-interrupts.txt I'm led to
-believe that the cros_ec driver shouldn't call disable_irq() on the
-interrupt if it wants to wakeup from it:
-
-"Calling enable_irq_wake() causes suspend_device_irqs() to treat the
-given IRQ in a special way.  Namely, the IRQ remains enabled, by on the
-first interrupt it will be disabled, marked as pending and "suspended"
-so that it will be re-enabled by resume_device_irqs() during the
-subsequent system resume.  Also the PM core is notified about the event
-which causes the system suspend in progress to be aborted (that doesn't
-have to happen immediately, but at one of the points where the suspend
-thread looks for pending wakeup events)."
-
-I suppose the problem is an irq line disabled in hardware that has
-wakeup armed on it? Is this even valid? Shouldn't an irq be enabled for
-wakeup to work?
-
-We could immediately unmask those lines in the hardware when the
-set_wake() callback is called. That way the genirq layer can use the
-driver to do what it wants with the hardware and the driver can make
-sure that set_wake() will always cause the wakeup interrupt to be
-delivered to genirq even when software has disabled it.
-
-But I think that there might be a problem with how genirq understands
-the masked state of a line when the wakeup implementation conflates
-masked state with wakeup armed state. Consider this call-flow:
-
-	irq masked in hardware, IRQD_IRQ_MASKED is set
-	enable_irq_wake()
-	  unmask_irq in hardware
-	IRQD_WAKEUP_ARMED is set
-	<suspend and wakeup from irq>
-	handle_level_irq()
-	  mask_ack_irq()
-	    mask_irq()
-	      if (irqd_irq_masked()) -> returns true and skips masking!
-	    if (desc->irq_data.chip->irq_ack)
-	      ...
-	  irq_may_run()
-	    irq_pm_check_wakeup()
-	      irq_disable()
-	        mask_irq() -> does nothing again
-
-In the above flow, we never mask the irq because we thought it was
-already masked when it was disabled, but the irqchip implementation
-unmasked it to make wakeup work. Maybe we should always mask the irq if
-wakeup is armed and we're trying to call mask_irq()? Looks hacky.
-
-diff --git a/kernel/irq/chip.c b/kernel/irq/chip.c
-index 51128bea3846..20257d528880 100644
---- a/kernel/irq/chip.c
-+++ b/kernel/irq/chip.c
-@@ -411,7 +411,7 @@ static inline void mask_ack_irq(struct irq_desc *desc)
- 
- void mask_irq(struct irq_desc *desc)
- {
--	if (irqd_irq_masked(&desc->irq_data))
-+	if (!irqd_is_wakeup_armed(&desc->irq_data) && irqd_irq_masked(&desc->irq_data))
- 		return;
- 
- 	if (desc->irq_data.chip->irq_mask) {
-
-
+>   media: platform: mtk-isp: Add Mediatek sensor interface driver
+>   media: platform: Add Mediatek sensor interface driver KConfig
+>   dt-bindings: mt8183: Add sensor interface dt-bindings
+>   dts: arm64: mt8183: Add sensor interface nodes
+> 
+>  .../bindings/media/mediatek-seninf.txt        |   52 +
+>  arch/arm64/boot/dts/mediatek/mt8183.dtsi      |   34 +
+>  drivers/media/platform/Makefile               |    2 +
+>  drivers/media/platform/mtk-isp/Kconfig        |   16 +
+>  drivers/media/platform/mtk-isp/Makefile       |   14 +
+>  .../media/platform/mtk-isp/isp_50/Makefile    |   17 +
+>  .../platform/mtk-isp/isp_50/seninf/Makefile   |    4 +
+>  .../mtk-isp/isp_50/seninf/mtk_seninf.c        | 1366 +++++++++++++++++
+>  .../mtk-isp/isp_50/seninf/mtk_seninf_def.h    |  170 ++
+>  .../mtk-isp/isp_50/seninf/mtk_seninf_reg.h    |  992 ++++++++++++
+>  10 files changed, 2667 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek-seninf.txt
+>  create mode 100644 drivers/media/platform/mtk-isp/Kconfig
+>  create mode 100644 drivers/media/platform/mtk-isp/Makefile
+>  create mode 100644 drivers/media/platform/mtk-isp/isp_50/Makefile
+>  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/Makefile
+>  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c
+>  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_def.h
+>  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_reg.h
+> 
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
