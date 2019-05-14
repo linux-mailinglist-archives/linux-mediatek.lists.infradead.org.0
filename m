@@ -2,56 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2BE731C38F
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 May 2019 08:58:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 24E5F1C53C
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 May 2019 10:48:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uLl0Xua95x+RUzMpxUEr+g1Z+E2sUlMLyunokvxBrxc=; b=VrBIumjR3NJGAs
-	eL16kfPvWyAsAprlMxIzcGCOgie1MSEOIYtlAMeGhwqxqq5Q7RPA8q1fxwlNkaLZzg/3BBjtOpcEm
-	OoS2MEh9SX43sQayN7wvbjJ/6uuNlcBmCBfAtgzj90tewlbp0uIachDz0/Z+5aSVzCokfOZXkMnIE
-	n9oFDR5IaQW+V+lk5fycsEyLUioSf7SbZzu6YtSvzciPC60baCs/kaGGIfaY0KSs7MclLcBfAO8N1
-	TX2P7Ie6l6hhPfxwf6qhAzMuvsuTSnLS1RHqRBvkpebbHCz9u0lgqICbp1bC5R2e6KkGoSbFhrA5L
-	FHRqRGrW9N1gRDMwAH8w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ux1JNB1ztxcUn8Q+dfrb6D1AcnHYM7eg3GA/OMV2nPU=; b=enVTNeFdLBNS4U
+	bYru0cQMRjdiDCqvCq392lmkF7xiw07k96ZXOm4Q1K0rjSh+ju+Q3o+3J7VNX9cWaWfGsSat0JVx5
+	oUr2Vpdj8d/1uBUEosBECCzRxodC0e259Uup/UpH8Sqv2Z2ut+4YSf92A0UZAob2Is6fLLQG9iS77
+	M/MNBlj34u9Gw7QNFJEY6ut17yQ7f3dFW9I9hrUV1dGO3lWYEXz1M6990fa7OAr09+qSkX3ze3+55
+	V5/B5/2GQ9t60zOO8KrybYk4AHH7ozW0GMUPkGhiQCc1W0gqYyIuyoh5hNZkpkFLBfjCb/8ssEW6B
+	35NYKfc6J0eZ2D9/MHmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQROa-0002r9-JM; Tue, 14 May 2019 06:58:40 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hQT6M-0008Nb-8D; Tue, 14 May 2019 08:47:58 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQROS-0002lP-QJ; Tue, 14 May 2019 06:58:34 +0000
-X-UUID: 797c67ea8a3642aaa747b00a83b694a9-20190513
-X-UUID: 797c67ea8a3642aaa747b00a83b694a9-20190513
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hQT5z-0007w8-9G; Tue, 14 May 2019 08:47:36 +0000
+X-UUID: 99d9c8058832417e9909f5832e914bc0-20190514
+X-UUID: 99d9c8058832417e9909f5832e914bc0-20190514
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 796138434; Mon, 13 May 2019 22:58:31 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 1342006092; Tue, 14 May 2019 00:47:30 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 13 May 2019 23:58:30 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 14 May 2019 14:58:22 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ 15.0.1395.4; Tue, 14 May 2019 01:47:29 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 14 May 2019 16:47:26 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 14 May 2019 14:58:22 +0800
-Message-ID: <1557817102.24427.20.camel@mtkswgap22>
-Subject: RE: [EXT] [PATCH v1 2/3] scsi: ufs: add error handling of auto-hibern8
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: "Bean Huo (beanhuo)" <beanhuo@micron.com>
-Date: Tue, 14 May 2019 14:58:22 +0800
-In-Reply-To: <BN7PR08MB568438668FC7C90A1284F53DDB0F0@BN7PR08MB5684.namprd08.prod.outlook.com>
-References: <1557758186-18706-1-git-send-email-stanley.chu@mediatek.com>
- <1557758186-18706-3-git-send-email-stanley.chu@mediatek.com>
- <BN7PR08MB568438668FC7C90A1284F53DDB0F0@BN7PR08MB5684.namprd08.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ Transport; Tue, 14 May 2019 16:47:24 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Heikki Krogerus
+ <heikki.krogerus@linux.intel.com>
+Subject: [v5 PATCH 0/6] add USB Type-B GPIO connector driver
+Date: Tue, 14 May 2019 16:47:17 +0800
+Message-ID: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_235832_857625_D5791C27 
-X-CRM114-Status: GOOD (  10.81  )
+X-CRM114-CacheID: sfid-20190514_014735_325568_7C045805 
+X-CRM114-Status: GOOD (  13.49  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,74 +69,96 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-arm-kernel@lists.infradead.org"
- <linux-arm-kernel@lists.infradead.org>,
- "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "sayalil@codeaurora.org" <sayalil@codeaurora.org>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "vivek.gautam@codeaurora.org" <vivek.gautam@codeaurora.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Hans de Goede <hdegoede@redhat.com>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>, Adam
+ Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Bean,
+Because the USB Connector is introduced and the requirement of
+usb-connector.txt binding, the old way using extcon to support
+USB Dual-Role switch is now deprecated, meanwhile there is no
+available common driver when use Type-B connector, typically
+using an input GPIO to detect USB ID pin.
+This patch series introduce a Type-B GPIO connector driver and try
+to replace the function provided by extcon-usb-gpio driver.
 
-Thanks so much for review.
+v5 changes:
+  1. remove linux/of.h and put usb_role_switch when error happens,
+     suggested by Biju
+  2. treat Type-B connector as USB controller's child, but not as
+     a virtual device, suggested by Rob
+  3. provide and use generic property "usb-role-switch", see [1],
+     suggested by Rob
 
-On Mon, 2019-05-13 at 18:21 +0000, Bean Huo (beanhuo) wrote:
-> Hi, Stanley
-> 
-> >+
-> >+static inline bool ufshcd_is_auto_hibern8_error(struct ufs_hba *hba,
-> >+						u32 intr_mask)
-> >+{
-> >+	return (ufshcd_is_auto_hibern8_supported(hba) &&
-> >+		!hba->uic_async_done &&
-> 
-> Here check if uic_async_done is NULL, no big problem so far, but not safe enough.
-> How about setting a flag in ufshcd_auto_hibern8_enable(),
+Note: this series still depends on [2]
 
-> 
-> I concern about how to compatible with auto_hibern8 disabled condition.
+[1]: [v3] dt-binding: usb: add usb-role-switch property
+      https://patchwork.kernel.org/patch/10934835/
+[2]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+      https://patchwork.kernel.org/patch/10909971/
 
-Currently auto-hibern8 disabling method is not implemented in
-mainstream, so an "enabling" flag may looks redundant unless disabling
-path is really existed.
+v4 changes:
+  1. use switch_fwnode_match() to find fwnode suggested by Heikki
+  2. assign fwnode member of usb_role_switch struct suggested by Heikki
+  3. make [4/6] depend on [2]
+  3. remove linux/gpio.h suggested by Linus
+  4. put node when error happens
 
-I agree that checking hba->uic_async_done here does not look so
-intuitive. However even if auto-hibern8 is disabled, these checks could
-be safe enough because both "UIC_HIBERNATE_ENTER" and
-"UIC_HIBERNATE_EXIT" are raised only if "manual-hibernate" is performed,
-and in this case hba->uic_async_done shall be true.
+  [4/6] usb: roles: add API to get usb_role_switch by node
+  [2] [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+    https://patchwork.kernel.org/patch/10909971/
 
-Anything else or corner case I missed?
+v3 changes:
+  1. add GPIO direction, and use fixed-regulator for GPIO controlled
+    VBUS regulator suggested by Rob;
+  2. rebuild fwnode_usb_role_switch_get() suggested by Andy and Heikki
+  3. treat the type-B connector as a virtual device;
+  4. change file name of driver again
+  5. select USB_ROLE_SWITCH in mtu3/Kconfig suggested by Heikki
+  6. rename ssusb_mode_manual_switch() to ssusb_mode_switch()
 
-> 
-> 
-> //Bean
+v2 changes:
+ 1. make binding clear, and add a extra compatible suggested by Hans
 
-Thanks,
-Stanley
+Chunfeng Yun (6):
+  dt-bindings: connector: add optional properties for Type-B
+  dt-bindings: usb: add binding for Type-B GPIO connector driver
+  dt-bindings: usb: mtu3: add properties about USB Role Switch
+  usb: roles: add API to get usb_role_switch by node
+  usb: roles: add USB Type-B GPIO connector driver
+  usb: mtu3: register a USB Role Switch for dual role mode
 
-> 
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+ .../bindings/connector/usb-connector.txt      |  14 +
+ .../devicetree/bindings/usb/mediatek,mtu3.txt |  10 +
+ .../bindings/usb/typeb-conn-gpio.txt          |  42 +++
+ drivers/usb/mtu3/Kconfig                      |   1 +
+ drivers/usb/mtu3/mtu3.h                       |   5 +
+ drivers/usb/mtu3/mtu3_debugfs.c               |   4 +-
+ drivers/usb/mtu3/mtu3_dr.c                    |  48 ++-
+ drivers/usb/mtu3/mtu3_dr.h                    |   6 +-
+ drivers/usb/mtu3/mtu3_plat.c                  |   3 +-
+ drivers/usb/roles/Kconfig                     |  11 +
+ drivers/usb/roles/Makefile                    |   1 +
+ drivers/usb/roles/class.c                     |  24 ++
+ drivers/usb/roles/typeb-conn-gpio.c           | 295 ++++++++++++++++++
+ include/linux/usb/role.h                      |   8 +
+ 14 files changed, 465 insertions(+), 7 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt
+ create mode 100644 drivers/usb/roles/typeb-conn-gpio.c
 
+-- 
+2.21.0
 
 
 _______________________________________________
