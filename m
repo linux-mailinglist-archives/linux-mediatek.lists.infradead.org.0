@@ -2,101 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C12FF1EBBF
-	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 12:05:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 804371F4C3
+	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 14:47:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=czYmzsJnJw6RgbLREjDFa0EVI0q95US7zChajkaUjBM=; b=Rf8HktOW+Jh0yV
-	n/6SKLNzC/ANKf2X0PY8n8yK64BT7152W5yxXWT6WagmZFTMgcmB7Wop4cUG6axRs9/8cXZ+4fgUN
-	kLOrPUstnLmCZ4jaxh/RSyqQ6/2milCiFH4JuIxDYR15RidmB3XFtVvNPfiNhjqiSkH9M8lMp5pDP
-	cesIy92tIMNaSHB4ifCdVYHKg0vp31OHUfToBf2P36JyzROc3bOStTLzNfcSzJDCBLBJFyKHbQkUe
-	HEn3UtlRupj30g9jyqiplWDPPUoK8JnbBy5ZTk0y0FrIABE2kc3BkE2RZNf4e7tM3LiZMt4eM8brE
-	gm+Hp2zX5OBD87wAb8iw==;
+	List-Owner; bh=TuShtk7Q5aUgRwm8OSgZP/TjD3zWTDV7BcYLrbScZ3M=; b=i911OvWdMseHCh
+	HpfrXv38hcbEgmF9Iumo0tCbSogTVACxX4MgkVCCBcEOJIUDxJ5mRdixBlSpO72FCbkexzZ+szcu4
+	c7ql6Z2cpdhTkLWvbTLP7O35OcSnaWmSX0SlgmmC8iDP3SxAzNICi9IqCfmXFmQucqgL1/q737KXS
+	RcUwogi9pi8++naH6pEf2PsP0kkoIqwDDt4LyKgx9CuQjGjLRx2WJSQD5Fa6Eu1JE2+dS/NVwwLYD
+	YtPNX2VkRqyZNAMnntwPs+9o9ZFirZmToABPDRJBa13ywklDWLm247xV39DAqF8nvyd8hbkD8U3f0
+	yxuaYZyASo2LfhQzIl5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQqnJ-0003gG-Tk; Wed, 15 May 2019 10:05:53 +0000
-Received: from mail-eopbgr800049.outbound.protection.outlook.com
- ([40.107.80.49] helo=NAM03-DM3-obe.outbound.protection.outlook.com)
+	id 1hQtJE-00007X-7j; Wed, 15 May 2019 12:47:00 +0000
+Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQqnG-0003fc-Uu; Wed, 15 May 2019 10:05:52 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
- s=selector2;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=cbqhx1RxC8OLLT+Gnw3LEgY5TxyRHMqGiMHjA5oSNY4=;
- b=yeSs9AfUYdxv2qaOArvq7Y1ywpJ8oecQyKHwW1iAl9iWsnIzKKXEu18M5VY7B1R41gtKLeSfFv2nt/DO5WlaFoh0NpDhTBHz5oUQuizGAUbXkbMXTBL+R6zJ+ex56F7yjpIQZAfl0ovIeNIAxv6FOVKbMed5oJ95rp8ctaIqYB0=
-Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.31.141) by
- BN7PR08MB4161.namprd08.prod.outlook.com (52.132.222.160) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.1878.22; Wed, 15 May 2019 10:05:47 +0000
-Received: from BN7PR08MB5684.namprd08.prod.outlook.com
- ([fe80::8d6c:f350:4859:e532]) by BN7PR08MB5684.namprd08.prod.outlook.com
- ([fe80::8d6c:f350:4859:e532%4]) with mapi id 15.20.1878.024; Wed, 15 May 2019
- 10:05:47 +0000
-From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>
-Subject: RE: [EXT] [PATCH v2 3/3] scsi: ufs: Use re-factored Auto-Hibernate
- function
-Thread-Topic: [EXT] [PATCH v2 3/3] scsi: ufs: Use re-factored Auto-Hibernate
- function
-Thread-Index: AQHVCwG29uhNvrJwCku8+uhYZbnAhKZr9V3w
-Date: Wed, 15 May 2019 10:05:46 +0000
-Message-ID: <BN7PR08MB568479DBB08F3CECEC1F6D8BDB090@BN7PR08MB5684.namprd08.prod.outlook.com>
-References: <1557912988-26758-1-git-send-email-stanley.chu@mediatek.com>
- <1557912988-26758-4-git-send-email-stanley.chu@mediatek.com>
-In-Reply-To: <1557912988-26758-4-git-send-email-stanley.chu@mediatek.com>
-Accept-Language: en-150, en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=beanhuo@micron.com; 
-x-originating-ip: [165.225.80.131]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: e1b77735-8609-4be4-feb7-08d6d91ce6a7
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(7168020)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(2017052603328)(7193020);
- SRVR:BN7PR08MB4161; 
-x-ms-traffictypediagnostic: BN7PR08MB4161:|BN7PR08MB4161:
-x-microsoft-antispam-prvs: <BN7PR08MB41616F9A3B0771967792054BDB090@BN7PR08MB4161.namprd08.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:1824;
-x-forefront-prvs: 0038DE95A2
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10009020)(346002)(39860400002)(136003)(396003)(366004)(376002)(199004)(189003)(558084003)(305945005)(7696005)(71190400001)(71200400001)(229853002)(2906002)(6116002)(25786009)(316002)(66946007)(66446008)(64756008)(66556008)(66476007)(66066001)(76176011)(2201001)(74316002)(53936002)(86362001)(7736002)(99286004)(3846002)(9686003)(486006)(33656002)(476003)(7416002)(55236004)(11346002)(2501003)(4326008)(54906003)(110136005)(478600001)(14454004)(55016002)(446003)(26005)(6506007)(8936002)(102836004)(8676002)(81166006)(81156014)(76116006)(73956011)(256004)(5660300002)(186003)(6436002)(52536014)(6246003)(68736007);
- DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB4161;
- H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; A:1; MX:1; 
-received-spf: None (protection.outlook.com: micron.com does not designate
- permitted sender hosts)
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: +lhRSosguVNGPAu8gpLtPZV78tMoj67+1cOt7wulfAVKeJrh3XOKCkukQS50O6HXPHOZFM347RSun6xtDstAVTn826nOL4ZIA/bXelIYWQjhg5fVEB7IH77JwQNZ8C1TgE0Ch8ddPmqszbvXp+EpHE9uFCdliCwlZ2yxV5zahcwIOipFcK/4JZhBVAWpNW8uGdLAR8k0WjZn+/BCD7fgTSBVdkE3oN/IGXIcJCdVsaFT3TERaWHZ3SH9w5ouzvbj5fyOkD1n575K3zrUiKvZGjjMSchEpXpwvRxVj1cc50ktZHzHaeLJdT0MlQDODaPZP3kKNg2QwzTDV8ww+/mvtbH/4ctJmrdMKm2U7RZ604OF0cRXLURbxGffL/jRR+emFxZEpwnnon7Qv2cRZTQXjJElJecCwkh1ync+aPL8+yE=
+ id 1hQtJA-00005w-21
+ for linux-mediatek@lists.infradead.org; Wed, 15 May 2019 12:46:57 +0000
+Received: by mail-pl1-x641.google.com with SMTP id g69so1294431plb.7
+ for <linux-mediatek@lists.infradead.org>; Wed, 15 May 2019 05:46:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=arista.com; s=googlenew;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=b3HyjACi/MsUUs/bdvxi48Ab6BnFJ6ZhEKEib98a4qc=;
+ b=Xql7xL76UlYG2HgQrNw2rS48dkmsc4mtYUzCNuPcx9exYI1ZmEu7lZqz2wZCRpSq5N
+ P/62eA1WGojofeojjMEVVfykGFGMoC0h24yl2IGMP+MMD6n/+9xLNayyFAwmk67CqnR1
+ m8FLpulEhu3q1K43A5KpMSgYNY/9ZQFxlv1sLLC+Y4jO+Ip0fUJakXQ0r3SGBP8eKC6y
+ 8c8qARg+kB1bO3KBeiRnMVlAPDwWif2wtpKXbjbo5qVDDAOu6rngr7KYzRQuR7hO5Gmh
+ lcl5CLLB06Ib9xN7L7Nu/HtKO3R428g2WTFCp36Qq7GME8YG4fu4z4pF+aWoLIZ6h2KQ
+ NZMw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=b3HyjACi/MsUUs/bdvxi48Ab6BnFJ6ZhEKEib98a4qc=;
+ b=j4us6rr5MUfv/Mv9RxtYraSsVXRbjRjddB9ZwBoVMy9OzeHk5C/ZqSy0cLpIb+1zkl
+ Z3fesZQ/2SdEKLsH9Pne7VumxgxFr4g+NNMMMe/gcUnTY2CAEw3D90srqVfzZKmyD2Ge
+ lXnNUR8+PCh7wRpK1GH0K+dLRhsIHUkDS/bwpzIvdra35CcAT0c3rFQ54Xfhf1MRNr8Z
+ QKQ0LF10DUdt3JnEXzuTHIngIonYGRlxc52lq3qGZqqCl2m9oxYupV3thlxP0uxZLkRw
+ 8sKAh/TW7n+sTVnd1go3iLOHuLbkadEvQytspUbCbwLyeXyZR2/YcW3vkLCzXTr+cvpt
+ urxg==
+X-Gm-Message-State: APjAAAWwS4xrMhzgg0pgJOqxmwjOX7qRgOECJKm8FZmYrauwk99CO+WQ
+ eUGKF7HDHmzDliW0+H9WsK+x6HQePnOxxoE/7QDwXA==
+X-Google-Smtp-Source: APXvYqwTSlq+glzh8dvBA9RnhTgkzA0FJBG+kmyFPUzc3vgEhgrnY6HSdtm+CvmJk20OFdPWunOILeeGu3jijFHRxb0=
+X-Received: by 2002:a17:902:4181:: with SMTP id
+ f1mr22625568pld.22.1557924414679; 
+ Wed, 15 May 2019 05:46:54 -0700 (PDT)
 MIME-Version: 1.0
-X-OriginatorOrg: micron.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: e1b77735-8609-4be4-feb7-08d6d91ce6a7
-X-MS-Exchange-CrossTenant-originalarrivaltime: 15 May 2019 10:05:46.9925 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4161
+References: <20190506185207.31069-1-tmurphy@arista.com>
+ <20190506185207.31069-3-tmurphy@arista.com>
+ <20190507064000.GB5173@infradead.org>
+In-Reply-To: <20190507064000.GB5173@infradead.org>
+From: Tom Murphy <tmurphy@arista.com>
+Date: Wed, 15 May 2019 13:46:43 +0100
+Message-ID: <CAPL0++5AUyVHexpsE86PfXxmQgDHfxjSSoAAGXM5c7Mdix=OZQ@mail.gmail.com>
+Subject: Re: [PATCH v3 2/4] iommu/dma-iommu: Handle deferred devices
+To: Christoph Hellwig <hch@infradead.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190515_030550_992214_E484077D 
-X-CRM114-Status: UNSURE (   2.98  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190515_054656_240263_8590ED99 
+X-CRM114-Status: GOOD (  19.16  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.80.49 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -105,6 +81,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -116,30 +93,147 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: Heiko Stuebner <heiko@sntech.de>, Will Deacon <will.deacon@arm.com>,
+ David Brown <david.brown@linaro.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ iommu@lists.linux-foundation.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Kukjin Kim <kgene@kernel.org>, Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Andy Gross <andy.gross@linaro.org>, linux-tegra@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Robin Murphy <robin.murphy@arm.com>,
+ linux-kernel@vger.kernel.org, Tom Murphy <murphyt7@tcd.ie>,
+ Rob Clark <robdclark@gmail.com>, David Woodhouse <dwmw2@infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+like this?
+
+In that case we need to add a call to iommu_dma_alloc_remap.
+
+From 862aeebb601008cf863e3aff4ff8ed7cefebeefa Mon Sep 17 00:00:00 2001
+From: Tom Murphy <tmurphy@tmurphy-419tom-0.sjc.aristanetworks.com>
+Date: Wed, 15 May 2019 05:43:25 -0700
+Subject: [PATCH] iommu/dma-iommu: Handle deferred devices
+
+Handle devices which defer their attach to the iommu in the dma-iommu api
+
+Signed-off-by: Tom Murphy <tmurphy@arista.com>
+---
+ drivers/iommu/dma-iommu.c | 27 ++++++++++++++++++++++++++-
+ 1 file changed, 26 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
+index 7f313cfa9..a48ae906d 100644
+--- a/drivers/iommu/dma-iommu.c
++++ b/drivers/iommu/dma-iommu.c
+@@ -22,6 +22,7 @@
+ #include <linux/pci.h>
+ #include <linux/scatterlist.h>
+ #include <linux/vmalloc.h>
++#include <linux/crash_dump.h>
+
+ struct iommu_dma_msi_page {
+     struct list_head    list;
+@@ -323,6 +324,21 @@ static int iommu_dma_init_domain(struct
+iommu_domain *domain, dma_addr_t base,
+     return iova_reserve_iommu_regions(dev, domain);
+ }
+
++static int handle_deferred_device(struct device *dev,
++        struct iommu_domain *domain)
++{
++    const struct iommu_ops *ops = domain->ops;
++
++    if (!is_kdump_kernel())
++        return 0;
++
++    if (unlikely(ops->is_attach_deferred &&
++            ops->is_attach_deferred(domain, dev)))
++        return iommu_attach_device(domain, dev);
++
++    return 0;
++}
++
+ /**
+  * dma_info_to_prot - Translate DMA API directions and attributes to IOMMU API
+  *                    page flags.
+@@ -432,6 +448,9 @@ static dma_addr_t __iommu_dma_map(struct device
+*dev, phys_addr_t phys,
+     size_t iova_off = 0;
+     dma_addr_t iova;
+
++    if (unlikely(handle_deferred_device(dev, domain)))
++        return DMA_MAPPING_ERROR;
++
+     if (cookie->type == IOMMU_DMA_IOVA_COOKIE) {
+         iova_off = iova_offset(&cookie->iovad, phys);
+         size = iova_align(&cookie->iovad, size + iova_off);
+@@ -609,6 +628,9 @@ static void *iommu_dma_alloc_remap(struct device
+*dev, size_t size,
+     dma_addr_t iova;
+     void *vaddr;
+
++    if (unlikely(handle_deferred_device(dev, domain)))
++        return DMA_MAPPING_ERROR;
++
+     *dma_handle = DMA_MAPPING_ERROR;
+
+     min_size = alloc_sizes & -alloc_sizes;
+@@ -836,7 +858,7 @@ static dma_addr_t iommu_dma_map_page(struct device
+*dev, struct page *page,
+     bool coherent = dev_is_dma_coherent(dev);
+     dma_addr_t dma_handle;
+
+-    dma_handle =__iommu_dma_map(dev, phys, size,
++    dma_handle = __iommu_dma_map(dev, phys, size,
+             dma_info_to_prot(dir, coherent, attrs),
+             iommu_get_dma_domain(dev));
+     if (!coherent && !(attrs & DMA_ATTR_SKIP_CPU_SYNC) &&
+@@ -954,6 +976,9 @@ static int iommu_dma_map_sg(struct device *dev,
+struct scatterlist *sg,
+     unsigned long mask = dma_get_seg_boundary(dev);
+     int i;
+
++    if (unlikely(handle_deferred_device(dev, domain)))
++        return 0;
++
+     if (!(attrs & DMA_ATTR_SKIP_CPU_SYNC))
+         iommu_dma_sync_sg_for_device(dev, sg, nents, dir);
+
+-- 
+2.20.0
+
+On Tue, May 7, 2019 at 7:40 AM Christoph Hellwig <hch@infradead.org> wrote:
 >
->Use re-factored ufshcd_is_auto_hibern8_supported() function in ufshcd_init()
->instead to make code more cleaner.
+> On Mon, May 06, 2019 at 07:52:04PM +0100, Tom Murphy wrote:
+> > +static int handle_deferred_device(struct device *dev)
+> > +{
+> > +     struct iommu_domain *domain;
+> > +     const struct iommu_ops *ops;
+> > +
+> > +     if (!is_kdump_kernel())
+> > +             return 0;
+> > +
+> > +     domain = iommu_get_domain_for_dev(dev);
 >
->Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-
-
-Reviewed-by: Bean Huo <beanhuo@micron.com>
-
-
+> > -     dma_handle =__iommu_dma_map(dev, phys, size,
+> > +     if (unlikely(handle_deferred_device(dev)))
+> > +             return DMA_MAPPING_ERROR;
+> > +
+> > +     dma_handle = __iommu_dma_map(dev, phys, size,
+>
+> __iommu_dma_map already looks up the domain, and as far as I can
+> tell all callers need the handle_deferred_device call.  Should we
+> just move it to there and pass the domain from the caller?
+>
+> Also shouldn't the iommu_attach_device call inside
+> handle_deferred_device also get an unlikely marker?
 
 _______________________________________________
 Linux-mediatek mailing list
