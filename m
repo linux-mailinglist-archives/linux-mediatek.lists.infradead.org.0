@@ -2,58 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B2F7C1F4D3
-	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 14:50:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E8BD1F4FF
+	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 15:04:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2w90ghBJbRFvBQPb3IEQQqpYGc/Vqq4Yqz0o6SjnHVE=; b=s4+UHyiJWHnkRc
-	wNpClKLay8bBIyOy2Hc0EWEz+IcAsJqL2aa0cNCIYs1BPImM6gVHBuUwX4UHhFQDcQZ3aCinu0TEy
-	A4aGrgTiBC8JTDwwt34uqXeU8apTU3rDFSwvuNTg44NljFWPvp1x0/J1BiQ/QvKWmlGClHB+aItk6
-	Fr3Q7ReNHVnimbh5C0NT1DHsMHLNH5vUBeoMQ0IvCZuUx+w1lBDljUegbxWBH2T38UQDEK+wchTof
-	81k9gmXve19bTqU9asHkcl3AYfrdzxhzxF2+jgcn4tLkYx35ms6tNUgCAxUw3KiDiEG6XlGXln6Wp
-	8Xq05ekU2DUkpb7M/KfA==;
+	List-Owner; bh=ss/j2vbTljBSwWtrQtl9XvPrpYFEgS6drN94WJMhxjQ=; b=qD/DAc7aGIOXhD
+	hf42n3wCg2+qV/NW3Uo7NT/CpAf3fYh6s3GlCrKmorTzi/+OAHF/jHr4ErGpBMmvR9zTsvbJWXwZh
+	VEux9E1sDE+7PkOovHyanjEvEsl21/GLnfgL0MAZJ9XDGWH5qTAlHUBAZkYlKvPfbkCoHF4aecNoZ
+	BXggx6HrCwgPyfHxqo6scFFr0Vpo4Sdp69DsSK8VoolsiJs8Y1o9hpSDVj3B8yhX3dfvk7CTK2w4D
+	Eio+XAMrAffZI7RRoJ0CsVOgruMCDNn8/ScZHS7/tdDjnXKQu9e+YCgVBVAvbgMvqLct9Ydo4Y7wA
+	lwY0BJYCB8pHyZSWJ+Yg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQtMB-0000wl-PV; Wed, 15 May 2019 12:50:03 +0000
+	id 1hQtZg-0006Kv-S1; Wed, 15 May 2019 13:04:00 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQtM0-0000pZ-AA; Wed, 15 May 2019 12:49:54 +0000
-X-UUID: 02beb1857e144677bd82b830c4dac088-20190515
-X-UUID: 02beb1857e144677bd82b830c4dac088-20190515
+ id 1hQtZX-0006BX-ND; Wed, 15 May 2019 13:03:52 +0000
+X-UUID: b56ee797ae074005ab817fb6286cdca0-20190515
+X-UUID: b56ee797ae074005ab817fb6286cdca0-20190515
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <jungo.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 639512267; Wed, 15 May 2019 04:49:43 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 1162092976; Wed, 15 May 2019 05:02:58 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 15 May 2019 05:49:43 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 15 May 2019 20:49:40 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ 15.0.1395.4; Wed, 15 May 2019 06:02:57 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 15 May 2019 21:02:55 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 15 May 2019 20:49:39 +0800
-Message-ID: <1557924579.5721.5.camel@mtksdccf07>
-Subject: Re: [RFC, V2, 06/11] media: platform: Add Mediatek ISP P1 image &
- meta formats
+ Transport; Wed, 15 May 2019 21:02:55 +0800
+Message-ID: <1557925375.5721.7.camel@mtksdccf07>
+Subject: Re: [RFC,V2,01/11] dt-bindings: mt8183: Add binding for ISP Pass 1
+ reserved memory
 From: Jungo Lin <jungo.lin@mediatek.com>
-To: Hans Verkuil <hverkuil@xs4all.nl>
-Date: Wed, 15 May 2019 20:49:39 +0800
-In-Reply-To: <5aad30f8-04b0-e3f1-e1d1-def349fd2974@xs4all.nl>
-References: <Jungo Lin <jungo.lin@mediatek.com>
- <20190510015755.51495-7-jungo.lin@mediatek.com>
- <5aad30f8-04b0-e3f1-e1d1-def349fd2974@xs4all.nl>
+To: Rob Herring <robh@kernel.org>
+Date: Wed, 15 May 2019 21:02:55 +0800
+In-Reply-To: <20190514195052.GA3314@bogus>
+References: <jungo.lin@mediatek.com>
+ <20190510015755.51495-2-jungo.lin@mediatek.com>
+ <20190514195052.GA3314@bogus>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 1CCEB0FC81A333AE5BC56B0F71FB2257A386FDA685253B160604E3EC0E7228382000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190515_054952_358863_91C911A5 
-X-CRM114-Status: GOOD (  16.20  )
+X-CRM114-CacheID: sfid-20190515_060351_765794_115D3814 
+X-CRM114-Status: GOOD (  11.84  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -77,99 +76,44 @@ Cc: ryan.yu@mediatek.com, frankie.chiu@mediatek.com,
  laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
  suleiman@chromium.org, Jerry-ch.Chen@mediatek.com, hans.verkuil@cisco.com,
  frederic.chen@mediatek.com, seraph.huang@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org, sj.huang@mediatek.com,
+ linux-media@vger.kernel.org, devicetree@vger.kernel.org, shik@chromium.org,
  yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
  matthias.bgg@gmail.com, mchehab@kernel.org,
  linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, shik@chromium.org, tfiga@chromium.org,
+ srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
  christie.yu@mediatek.com, zwisler@chromium.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Hans:
+Hi Rob:
 
 Thanks for your comments.
 
-On Mon, 2019-05-13 at 10:35 +0200, Hans Verkuil wrote:
-> On 5/10/19 3:57 AM, Jungo Lin wrote:
-> > Add packed/unpacked/full-g bayer format with 8/10/12/14 bit
-> > for image output. Add Pass 1 (P1) specific meta formats for
-> > parameter processing and 3A/other statistics.
-> 
-> These pixel formats will need to be documented in Documentation/media/uapi/v4l/pixfmt-<something>.rst.
-> 
-
-Ok, we will add these pixfmt-<something>.rst files in next patch to
-explain these pixel formats.
-
+On Tue, 2019-05-14 at 14:50 -0500, Rob Herring wrote:
+> On Fri, May 10, 2019 at 09:57:47AM +0800, Jungo Lin wrote:
+> > This patch adds the binding for describing the reserved
+> > shared memory used to exchange ISP configuration and tuning
+> > data between the co-processor and Pass 1 (P1) unit of the
+> > camera ISP system on Mediatek SoCs.
 > > 
 > > Signed-off-by: Jungo Lin <jungo.lin@mediatek.com>
 > > ---
-> >  include/uapi/linux/videodev2.h | 20 ++++++++++++++++++++
-> >  1 file changed, 20 insertions(+)
-> > 
-> > diff --git a/include/uapi/linux/videodev2.h b/include/uapi/linux/videodev2.h
-> > index 1db220da3bcc..b79046d2d812 100644
-> > --- a/include/uapi/linux/videodev2.h
-> > +++ b/include/uapi/linux/videodev2.h
-> > @@ -711,6 +711,20 @@ struct v4l2_pix_format {
-> >  #define V4L2_PIX_FMT_IPU3_SGRBG10	v4l2_fourcc('i', 'p', '3', 'G') /* IPU3 packed 10-bit GRBG bayer */
-> >  #define V4L2_PIX_FMT_IPU3_SRGGB10	v4l2_fourcc('i', 'p', '3', 'r') /* IPU3 packed 10-bit RGGB bayer */
-> >  
-> > +/* Vendor specific - Mediatek ISP compressed formats */
-> > +#define V4L2_PIX_FMT_MTISP_U8	v4l2_fourcc('M', 'T', 'U', '8') /* Unpacked bayer format, 16-bit */
-> > +#define V4L2_PIX_FMT_MTISP_U10  v4l2_fourcc('M', 'T', 'U', 'A') /* Unpacked bayer format, 16-bit */
-> > +#define V4L2_PIX_FMT_MTISP_U12  v4l2_fourcc('M', 'T', 'U', 'C') /* Unpacked bayer format, 16-bit */
-> > +#define V4L2_PIX_FMT_MTISP_U14  v4l2_fourcc('M', 'T', 'U', 'E') /* Unpacked bayer format, 16-bit */
-> > +#define V4L2_PIX_FMT_MTISP_B8	v4l2_fourcc('M', 'T', 'B', '8') /* Packed   bayer format,  8-bit */
-> > +#define V4L2_PIX_FMT_MTISP_B10  v4l2_fourcc('M', 'T', 'B', 'A') /* Packed   bayer format, 10-bit */
-> > +#define V4L2_PIX_FMT_MTISP_B12  v4l2_fourcc('M', 'T', 'B', 'C') /* Packed   bayer format, 12-bit */
-> > +#define V4L2_PIX_FMT_MTISP_B14  v4l2_fourcc('M', 'T', 'B', 'E') /* Packed   bayer format, 14-bit */
-> > +#define V4L2_PIX_FMT_MTISP_F8	v4l2_fourcc('M', 'T', 'F', '8') /* Full-G   bayer format,  8-bit */
-> > +#define V4L2_PIX_FMT_MTISP_F10  v4l2_fourcc('M', 'T', 'F', 'A') /* Full-G   bayer format, 10-bit */
-> > +#define V4L2_PIX_FMT_MTISP_F12  v4l2_fourcc('M', 'T', 'F', 'C') /* Full-G   bayer format, 12-bit */
-> > +#define V4L2_PIX_FMT_MTISP_F14  v4l2_fourcc('M', 'T', 'F', 'E') /* Full-G   bayer format, 14-bit */
+> >  .../mediatek,reserve-memory-cam-smem.txt      | 42 +++++++++++++++++++
+> >  1 file changed, 42 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-cam-smem.txt
 > 
-> Are these all compressed formats? What sort of compression is used? Can software unpack it,
-> or this is meant to be fed to other mediatek hardware blocks?
+> See my comments on the other 2 camera related reserved-memory bindings.
 > 
 
-No, these are not compressed formats. These images could be unpacked by
-software, not depended on Mediatek hardware blocks.
+Ok, we will align DIP & FD drivers's implementation.
 
-> > +
-> >  /* SDR formats - used only for Software Defined Radio devices */
-> >  #define V4L2_SDR_FMT_CU8          v4l2_fourcc('C', 'U', '0', '8') /* IQ u8 */
-> >  #define V4L2_SDR_FMT_CU16LE       v4l2_fourcc('C', 'U', '1', '6') /* IQ u16le */
-> > @@ -732,6 +746,12 @@ struct v4l2_pix_format {
-> >  #define V4L2_META_FMT_VSP1_HGT    v4l2_fourcc('V', 'S', 'P', 'T') /* R-Car VSP1 2-D Histogram */
-> >  #define V4L2_META_FMT_UVC         v4l2_fourcc('U', 'V', 'C', 'H') /* UVC Payload Header metadata */
-> >  #define V4L2_META_FMT_D4XX        v4l2_fourcc('D', '4', 'X', 'X') /* D4XX Payload Header metadata */
-> > +/* Vendor specific - Mediatek ISP parameters for firmware */
-> > +#define V4L2_META_FMT_MTISP_PARAMS v4l2_fourcc('M', 'T', 'f', 'p') /* ISP tuning parameters */
-> > +#define V4L2_META_FMT_MTISP_3A	   v4l2_fourcc('M', 'T', 'f', 'a') /* AE/AWB histogram */
-> > +#define V4L2_META_FMT_MTISP_AF	   v4l2_fourcc('M', 'T', 'f', 'f') /* AF histogram */
-> > +#define V4L2_META_FMT_MTISP_LCS	   v4l2_fourcc('M', 'T', 'f', 'c') /* Local contrast enhanced statistics */
-> > +#define V4L2_META_FMT_MTISP_LMV	   v4l2_fourcc('M', 'T', 'f', 'm') /* Local motion vector histogram */
-> 
-> The documentation for these meta formats either needs to point to
-> freely available mediatek documentation (i.e. no NDA needed), or it
-> has to be documented in a header or in the pixelformat documentation.
-> 
+Best regards,
 
-Ok, we are under internal discussion how to export these meta
-information.
+Jungo
 
-> Regards,
-> 
-> 	Hans
-> 
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> Rob
 
 
 
