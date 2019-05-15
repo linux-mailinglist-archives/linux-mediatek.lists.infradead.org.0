@@ -2,87 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5FF321F563
-	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 15:19:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1CC501F5EA
+	for <lists+linux-mediatek@lfdr.de>; Wed, 15 May 2019 15:49:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7aNKB6vQn8r/1nGU+WMELTqfcJPOj1T30nLHNmTfzg4=; b=WSDzHnUGpkfMu1
-	iX6ksvbhXTh3EgMa4Hem+qaU/sJW9AvJjfeHsNpqoVpBhe3kCeOrSKs+T6y+6b7pvF7jVEJrhaYba
-	ggMxV4WgT5fs5WMTqeccl3v6oNpZSBdsuV2UVH+YIFbLC1mwy4jS/hh4Note7dbx+cUuDaAJ+wZVe
-	TchB3MBAM13ODNgxntrsBlxZ0s03+50OD4YQLbt9qJNvRQtls4qHTdSvcudj/2XqvZV/5AzaRVCL9
-	nXRkKCJebX1tNaEo6vyw4C+InZ5pl5dF1h/nplJzQ5uDGJSk8QRDjzK06s21f1WT7eiuT6xvp2G6Z
-	nboEkwYpSXFRFxhQLeNA==;
+	List-Owner; bh=54EtgZOj9DYhix9r+tSL5HNXfZx4p3AXr99i2PAXdLA=; b=aZVtZY2A9NNEgz
+	9ZNJiD8fNY2l4NIDy5jF+D7sIETdv+s3Kw3H5Kj0/6mxAcLNjPzu3Whk2oeViWGA4zDpun8ySBSNo
+	Lba8nLhwXFMFlhfKRVvqfa7vSshs80o0tggym2ttXgptV7+kILX5o2RjLYkInP+PoZiRFWyKvTqCT
+	RW3TAVO6l4a8LK4egNcHfQx2HWig7zK2RqCI0iplUqTN8LoowYd6wmwVxPZS2IItcsaecNihAUXdx
+	2aur+ZRTATSVgjdnfBQFnZxlXQLve1DfhpASdh2Qol/5RG2bMLZlgqka11bNovdJypAY4pz9pWJUW
+	z8j8Ug/2Y78E38wA3qzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQto5-0003pU-SM; Wed, 15 May 2019 13:18:53 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1hQuHP-0008Lg-9x; Wed, 15 May 2019 13:49:11 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQtn5-0002Xp-4k
- for linux-mediatek@lists.infradead.org; Wed, 15 May 2019 13:17:56 +0000
-Received: by mail-wm1-x342.google.com with SMTP id f204so23727wme.0
- for <linux-mediatek@lists.infradead.org>; Wed, 15 May 2019 06:17:51 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=3nPwxijYzUSn3tCLVItFDtpETqdKC0544kYngMirnWk=;
- b=QyZ4QdQeRN8UlfPr6E+wgj0jrZ2veOsEoLlNkvD4Ofsv4z7K9tqmCbGXsH2Af6j9gY
- Q4CJK36dKMFXJcCanoleIjcn7agv3DcpjyfVC9iuEDC3thtwZdUITfCqBLcO9uYqoAbU
- 4zCp/jgyXfxMHE81pg4DrK+06iqgAi9ByLfvvM+nchyzw2m6zvpRIQ2YOq1L+vWb4yEX
- IknNZ6TnpXCscmPLLIczS2GsTARcvyutLRvHTS0ji6wDuICs0/w6GV5eTjDI/9yyVZRh
- MD/hxwKa1SBs+lC1pGxY4lLPPbqRQ9Zd9b1rRmO78opmI1gxTHRQ+yzyT/KAtImxbs48
- /AcA==
+ id 1hQuHK-0008Jw-CT
+ for linux-mediatek@lists.infradead.org; Wed, 15 May 2019 13:49:09 +0000
+Received: by mail-qk1-x741.google.com with SMTP id z6so1480833qkl.10
+ for <linux-mediatek@lists.infradead.org>; Wed, 15 May 2019 06:49:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=0bU82F+gt2zE3PINH+I2iOdx7/P2Z54mTmX7HD0f23g=;
+ b=Rz/eTH+AhP/E1BbGJwPsapzQcGBCN6AsXcTjNCMhLwf/Y4ROLeWXnzuXXCGskE4ial
+ C6vT5lbVMECErTsbOqncFmph2Tp1d0H7MkmabSVn4yEYTkDH28DQUEmZW/+6q04J8i/T
+ CJuQRVnjMj4PSEctgFELgkj3rPlU7ctawx7IU=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=3nPwxijYzUSn3tCLVItFDtpETqdKC0544kYngMirnWk=;
- b=dqNQsvo019jUTYeke0CzuSBdnPPotAypYmuRt7yBAiB8nkIIk2WgQM54se+VpiWHOR
- uzRBB0bEOSgtXLjs0zagmpX463+zLenR1Ovhe9CWloELc1GqTMs2H9whb1yrnFNEsu+c
- 9N13FmPv37uat3Go2bQ59/s7jUcYcAvFDRY2q+ZveKOhl0LsC9oFDFYzHFIQki5KP8v8
- 8Nx5Ffsr1TaLXo5gr4cOLyiGg3T641rgKQDvHVsSLh6KWgZRRcstwkblU9HJm1kJR98s
- 53YuIZTmRxlUccxoxjDv9p5D+hj/ftxOyIlmNB4lFNxPef4FLxF/vuvScNQ+Faz9uCkR
- 11hQ==
-X-Gm-Message-State: APjAAAX1T/ZvVw8fbveXDZ/6iXlZe0e0soEwwN2N0nPnNJFbqHZ3Yemx
- +CUj4/qvMpr0wsHfjHu6AWobow==
-X-Google-Smtp-Source: APXvYqzNuhAI/rjBVnyXEZdScQkgzG6SUeRwgWMdJNrvodeJ+8hjQ5UkYHP1bnVgWXmmvpqJXKW6FA==
-X-Received: by 2002:a1c:e3c3:: with SMTP id a186mr318808wmh.5.1557926269684;
- Wed, 15 May 2019 06:17:49 -0700 (PDT)
-Received: from localhost.localdomain
- (aputeaux-684-1-11-31.w90-86.abo.wanadoo.fr. [90.86.214.31])
- by smtp.gmail.com with ESMTPSA id f10sm3268583wrg.24.2019.05.15.06.17.48
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 15 May 2019 06:17:49 -0700 (PDT)
-From: Fabien Parent <fparent@baylibre.com>
-To: robh+dt@kernel.org,
-	mark.rutland@arm.com,
-	matthias.bgg@gmail.com
-Subject: [PATCH v3 5/5] arm64: dts: mt6392: Add PMIC mt6392 dtsi
-Date: Wed, 15 May 2019 15:17:41 +0200
-Message-Id: <20190515131741.17294-6-fparent@baylibre.com>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190515131741.17294-1-fparent@baylibre.com>
-References: <20190515131741.17294-1-fparent@baylibre.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=0bU82F+gt2zE3PINH+I2iOdx7/P2Z54mTmX7HD0f23g=;
+ b=G2xJpUMu2DF0/LK1AL/O0Nv30j9JLWyciiSRCkAiduD46b9iQ56WVIWnKcpMyDQJK1
+ pSUdE5at+uiCDXDWZ3LkiVe6dHnr2FlcUo4drvWSTnU0BzH5gLTZ1+zF+QzTOzZ1bEFd
+ 7RajhIe/FIsaY3tEtP3df8bLEUI8jXEdHZCjh9zBZJ0Qh5OgZp26LLlDu9Y2GhJvzueX
+ Fa1ixa+7PN3fyS4erHY5lVkWoToMZ+o1ZNnC1jC+tVM+h4gDYkCKnfCTwGfzET69tmgj
+ 3ofk2MKuTW76E/1360KU1grssI8PK2ZlrCzLIaCnkGh8NgH+lFDI/oHIn9i7dUFa4fHt
+ jGtQ==
+X-Gm-Message-State: APjAAAVH9Iz8PcNgZTz+kRY5qgOBcBywVvFfnb4evEwjU0iFyh6y4T0H
+ 60IzGIeN2ekTc1EomWRo+1O8gTqKWYOoa6fABy7ooQ==
+X-Google-Smtp-Source: APXvYqwlUOhQfWVG0cDXJfSD77I136CNQYmnycgW7CY0DPgH6v1ONynTfzyo3enPqgR8mXrkE9bC5wWl+/AN2lmlbhE=
+X-Received: by 2002:ae9:f818:: with SMTP id x24mr32636878qkh.329.1557928145116; 
+ Wed, 15 May 2019 06:49:05 -0700 (PDT)
 MIME-Version: 1.0
+References: <1556336193-15198-1-git-send-email-long.cheng@mediatek.com>
+ <1556336193-15198-5-git-send-email-long.cheng@mediatek.com>
+In-Reply-To: <1556336193-15198-5-git-send-email-long.cheng@mediatek.com>
+From: Nicolas Boichat <drinkcat@chromium.org>
+Date: Wed, 15 May 2019 21:48:52 +0800
+Message-ID: <CANMq1KDTyu48joV6uMksGBMz9EmjFH9SEpGAm93YCZ40jxgBpQ@mail.gmail.com>
+Subject: Re: [PATCH 4/4] serial: 8250-mtk: modify uart DMA rx
+To: Long Cheng <long.cheng@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190515_061751_478680_AD58A6ED 
-X-CRM114-Status: GOOD (  11.56  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190515_064906_464107_84B00579 
+X-CRM114-Status: GOOD (  19.92  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -94,249 +87,166 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Fabien Parent <fparent@baylibre.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, Zhenbao Liu <zhenbao.liu@mediatek.com>,
+ linux-serial@vger.kernel.org, srv_heupstream <srv_heupstream@mediatek.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Randy Dunlap <rdunlap@infradead.org>, lkml <linux-kernel@vger.kernel.org>,
+ Sean Wang <sean.wang@kernel.org>, dmaengine@vger.kernel.org,
+ Vinod Koul <vkoul@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Sean Wang <sean.wang@mediatek.com>, Jiri Slaby <jslaby@suse.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ Dan Williams <dan.j.williams@intel.com>,
+ linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add the regulator nodes for the MT6392 PMIC.
+On Sat, Apr 27, 2019 at 11:36 AM Long Cheng <long.cheng@mediatek.com> wrote:
+>
+> Modify uart rx and complete for DMA.
 
-Signed-off-by: Fabien Parent <fparent@baylibre.com>
----
+I don't know much about the DMA framework, but can you please explain
+why you are making the changes in this CL? I see that you are dropping
+dma_sync_single_for_device calls, for example, why?
 
-V3:
-	* No change
+>
+> Signed-off-by: Long Cheng <long.cheng@mediatek.com>
+> ---
+>  drivers/tty/serial/8250/8250_mtk.c |   53 ++++++++++++++++--------------------
+>  1 file changed, 23 insertions(+), 30 deletions(-)
+>
+> diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
+> index c1fdbc0..04081a6 100644
+> --- a/drivers/tty/serial/8250/8250_mtk.c
+> +++ b/drivers/tty/serial/8250/8250_mtk.c
+> @@ -30,7 +30,6 @@
+>  #define MTK_UART_DMA_EN_TX     0x2
+>  #define MTK_UART_DMA_EN_RX     0x5
+>
+> -#define MTK_UART_TX_SIZE       UART_XMIT_SIZE
+>  #define MTK_UART_RX_SIZE       0x8000
+>  #define MTK_UART_TX_TRIGGER    1
+>  #define MTK_UART_RX_TRIGGER    MTK_UART_RX_SIZE
+> @@ -64,28 +63,30 @@ static void mtk8250_dma_rx_complete(void *param)
+>         struct mtk8250_data *data = up->port.private_data;
+>         struct tty_port *tty_port = &up->port.state->port;
+>         struct dma_tx_state state;
+> +       int copied, cnt, tmp;
+>         unsigned char *ptr;
+> -       int copied;
+>
+> -       dma_sync_single_for_cpu(dma->rxchan->device->dev, dma->rx_addr,
+> -                               dma->rx_size, DMA_FROM_DEVICE);
+> +       if (data->rx_status == DMA_RX_SHUTDOWN)
+> +               return;
+>
+>         dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
+> +       cnt = dma->rx_size - state.residue;
+> +       tmp = cnt;
 
-V2:
-	* Use 'pmic' as node name for the pmic.
-	* Use 'regulators' as node name for the regulators
-	* use dash instead of underscore for regulator's node names.
+I ponder, maybe we should rename cnt to left? (like, how many bytes
+are left to transfer, in total) Or maybe "total"
+Then maybe rename tmp to cnt.
 
----
- arch/arm64/boot/dts/mediatek/mt6392.dtsi | 208 +++++++++++++++++++++++
- 1 file changed, 208 insertions(+)
- create mode 100644 arch/arm64/boot/dts/mediatek/mt6392.dtsi
+>
+> -       if (data->rx_status == DMA_RX_SHUTDOWN)
+> -               return;
+> +       if ((data->rx_pos + cnt) > dma->rx_size)
+> +               tmp = dma->rx_size - data->rx_pos;
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt6392.dtsi b/arch/arm64/boot/dts/mediatek/mt6392.dtsi
-new file mode 100644
-index 000000000000..ff2d83026bbb
---- /dev/null
-+++ b/arch/arm64/boot/dts/mediatek/mt6392.dtsi
-@@ -0,0 +1,208 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
-+
-+&pwrap {
-+	mt6392_pmic: pmic {
-+		compatible = "mediatek,mt6392", "mediatek,mt6323";
-+		mediatek,system-power-controller;
-+
-+		regulators {
-+			compatible = "mediatek,mt6392-regulator";
-+
-+			mt6392_vproc_reg: buck-vproc {
-+				regulator-name = "buck-vproc";
-+				regulator-min-microvolt = < 700000>;
-+				regulator-max-microvolt = <1350000>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vsys_reg: buck-vsys {
-+				regulator-name = "buck-vsys";
-+				regulator-min-microvolt = <1400000>;
-+				regulator-max-microvolt = <2987500>;
-+				regulator-ramp-delay = <25000>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcore_reg: buck-vcore {
-+				regulator-name = "buck-vcore";
-+				regulator-min-microvolt = < 700000>;
-+				regulator-max-microvolt = <1350000>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vxo22_reg: ldo-vxo22 {
-+				regulator-name = "ldo-vxo22";
-+				regulator-min-microvolt = <2200000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <110>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vaud22_reg: ldo-vaud22 {
-+				regulator-name = "ldo-vaud22";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcama_reg: ldo-vcama {
-+				regulator-name = "ldo-vcama";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vaud28_reg: ldo-vaud28 {
-+				regulator-name = "ldo-vaud28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vadc18_reg: ldo-vadc18 {
-+				regulator-name = "ldo-vadc18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcn35_reg: ldo-vcn35 {
-+				regulator-name = "ldo-vcn35";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3600000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vio28_reg: ldo-vio28 {
-+				regulator-name = "ldo-vio28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vusb_reg: ldo-vusb {
-+				regulator-name = "ldo-vusb";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vmc_reg: ldo-vmc {
-+				regulator-name = "ldo-vmc";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vmch_reg: ldo-vmch {
-+				regulator-name = "ldo-vmch";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vemc3v3_reg: ldo-vemc3v3 {
-+				regulator-name = "ldo-vemc3v3";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vgp1_reg: ldo-vgp1 {
-+				regulator-name = "ldo-vgp1";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vgp2_reg: ldo-vgp2 {
-+				regulator-name = "ldo-vgp2";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcn18_reg: ldo-vcn18 {
-+				regulator-name = "ldo-vcn18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcamaf_reg: ldo-vcamaf {
-+				regulator-name = "ldo-vcamaf";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vm_reg: ldo-vm {
-+				regulator-name = "ldo-vm";
-+				regulator-min-microvolt = <1240000>;
-+				regulator-max-microvolt = <1390000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vio18_reg: ldo-vio18 {
-+				regulator-name = "ldo-vio18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcamd_reg: ldo-vcamd {
-+				regulator-name = "ldo-vcamd";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcamio_reg: ldo-vcamio {
-+				regulator-name = "ldo-vcamio";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vm25_reg: ldo-vm25 {
-+				regulator-name = "ldo-vm25";
-+				regulator-min-microvolt = <2500000>;
-+				regulator-max-microvolt = <2500000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vefuse_reg: ldo-vefuse {
-+				regulator-name = "ldo-vefuse";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <2000000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+		};
-+	};
-+};
--- 
-2.20.1
+Maybe replace this and the line above:
+tmp = max_t(int, cnt, dma->rx_size - data->rx_pos);
 
+>
+> -       if ((data->rx_pos + state.residue) <= dma->rx_size) {
+> -               ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> -               copied = tty_insert_flip_string(tty_port, ptr, state.residue);
+> -       } else {
+> -               ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> -               copied = tty_insert_flip_string(tty_port, ptr,
+> -                                               dma->rx_size - data->rx_pos);
+> +       ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> +       copied = tty_insert_flip_string(tty_port, ptr, tmp);
+> +       data->rx_pos += tmp;
+> +
+> +       if (cnt > tmp) {
+>                 ptr = (unsigned char *)(dma->rx_buf);
+> -               copied += tty_insert_flip_string(tty_port, ptr,
+> -                               data->rx_pos + state.residue - dma->rx_size);
+> +               tmp = cnt - tmp;
+> +               copied += tty_insert_flip_string(tty_port, ptr, tmp);
+> +               data->rx_pos = tmp;
+>         }
+> +
+>         up->port.icount.rx += copied;
+>
+>         tty_flip_buffer_push(tty_port);
+> @@ -96,9 +97,7 @@ static void mtk8250_dma_rx_complete(void *param)
+>  static void mtk8250_rx_dma(struct uart_8250_port *up)
+>  {
+>         struct uart_8250_dma *dma = up->dma;
+> -       struct mtk8250_data *data = up->port.private_data;
+>         struct dma_async_tx_descriptor  *desc;
+> -       struct dma_tx_state      state;
+>
+>         desc = dmaengine_prep_slave_single(dma->rxchan, dma->rx_addr,
+>                                            dma->rx_size, DMA_DEV_TO_MEM,
+> @@ -113,12 +112,6 @@ static void mtk8250_rx_dma(struct uart_8250_port *up)
+>
+>         dma->rx_cookie = dmaengine_submit(desc);
+>
+> -       dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
+> -       data->rx_pos = state.residue;
+> -
+> -       dma_sync_single_for_device(dma->rxchan->device->dev, dma->rx_addr,
+> -                                  dma->rx_size, DMA_FROM_DEVICE);
+> -
+>         dma_async_issue_pending(dma->rxchan);
+>  }
+>
+> @@ -131,13 +124,13 @@ static void mtk8250_dma_enable(struct uart_8250_port *up)
+>         if (data->rx_status != DMA_RX_START)
+>                 return;
+>
+> -       dma->rxconf.direction           = DMA_DEV_TO_MEM;
+> -       dma->rxconf.src_addr_width      = dma->rx_size / 1024;
+> -       dma->rxconf.src_addr            = dma->rx_addr;
+> +       dma->rxconf.direction                           = DMA_DEV_TO_MEM;
+> +       dma->rxconf.src_port_window_size        = dma->rx_size;
+> +       dma->rxconf.src_addr                            = dma->rx_addr;
+>
+> -       dma->txconf.direction           = DMA_MEM_TO_DEV;
+> -       dma->txconf.dst_addr_width      = MTK_UART_TX_SIZE / 1024;
+> -       dma->txconf.dst_addr            = dma->tx_addr;
+> +       dma->txconf.direction                           = DMA_MEM_TO_DEV;
+> +       dma->txconf.dst_port_window_size        = UART_XMIT_SIZE;
+> +       dma->txconf.dst_addr                            = dma->tx_addr;
+>
+>         serial_out(up, UART_FCR, UART_FCR_ENABLE_FIFO | UART_FCR_CLEAR_RCVR |
+>                 UART_FCR_CLEAR_XMIT);
+> @@ -217,7 +210,7 @@ static void mtk8250_shutdown(struct uart_port *port)
+>          * Mediatek UARTs use an extra highspeed register (UART_MTK_HIGHS)
+>          *
+>          * We need to recalcualte the quot register, as the claculation depends
+> -        * on the vaule in the highspeed register.
+> +        * on the value in the highspeed register.
+
+Since you're doing some cosmetic changes here, you might as well fix
+recalcualte => recalculate and claculation => calculation on the line
+above.
+
+But technically, this should belong in another patch...
+
+>          *
+>          * Some baudrates are not supported by the chip, so we use the next
+>          * lower rate supported and update termios c_flag.
+> --
+> 1.7.9.5
+>
 
 _______________________________________________
 Linux-mediatek mailing list
