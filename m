@@ -2,53 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 95882202EA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 11:54:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 06BDA202EB
+	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 11:54:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=8deAaPbVAdeSPRomIexE55HIo+qNARB9vMFP4D/CXEc=; b=QbW4cBtGL8Kcrj
-	jZQtC03gAQQwnb2xP8QHX7FFf+iXUyTdY/e/Ur2dBzz06CU+ghGApozxs33OHlhNuKKlARGdcWowZ
-	+U2l8PI4BBqK+VQ6UbO6lUw7poNDJRBkm14Au6UjudRlbeje6Ne9hCtOWkKmNjWehJHTUUIiN1StP
-	rt5CjTnkTlIa1RCfZBByH88x4E4TtG/HxQ8Smjh2SIJ0kCNcsFuX2ZD4+qzvOGdsWkXEDkMg5++p0
-	L3DTmGxnNinP7swDDmAUkeLXboHxabEnQvT3F4VfXdPjB8XD4m808EgY5ueY9FXEEV2nZ23TWIYcy
-	Z5yzEcidB4/TPLmkzW6w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=J2KVPLruSjDdvLoAsvKCBahwwOEkrL+idAH0ZL/C4po=; b=ORtfeSbAAlqtZi
+	uxcRcBfrpddq6vDCmRxeK738p++pQVxsfeq3HoZzIEmPr3g30Twdvl5Bh36hE+dbumOIwkNVDtpXt
+	87yXNOHW1JjX51wbztMTdjwAC8X8Gu9FQdpp9ZJXt1at7rXksIn0S9BM/OrzQPoxWxV9Ixxj49m/9
+	hAtXytRvCjQBCGpUUzoS3haqMfTRSEnzu9332yazUfPHjQXg0BZRnXV1dIjg0FY/WwLhfQHrJM0T2
+	hhieFP+rByaUqIT7Amt7eFiTfBSG6vdCU7QaqPq/PxF44SQDwHSYF7Y7lRwzt8HWQ3rkBPJi87lt6
+	PyYIjLeoqmG06WTblfLw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRD67-0005Bf-OP; Thu, 16 May 2019 09:54:47 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hRD6B-0005Dd-CK; Thu, 16 May 2019 09:54:51 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRD65-0005Ay-Mu
- for linux-mediatek@lists.infradead.org; Thu, 16 May 2019 09:54:46 +0000
-X-UUID: 5f4e81695a264d8f853edf97f58672fc-20190516
-X-UUID: 5f4e81695a264d8f853edf97f58672fc-20190516
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hRD68-0005BK-2E
+ for linux-mediatek@lists.infradead.org; Thu, 16 May 2019 09:54:49 +0000
+X-UUID: de81f4cf79e544b8b605bdb85bc100c8-20190516
+X-UUID: de81f4cf79e544b8b605bdb85bc100c8-20190516
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <shunli.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 429256127; Thu, 16 May 2019 01:54:42 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 May 2019 02:54:41 -0700
+ with ESMTP id 2139789301; Thu, 16 May 2019 01:54:44 -0800
+Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 May 2019 02:54:43 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Thu, 16 May 2019 17:54:40 +0800
 Received: from mtkslt301.mediatek.inc (10.21.14.114) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Thu, 16 May 2019 17:54:40 +0800
 From: Shunli Wang <shunli.wang@mediatek.com>
 To: <broonie@kernel.org>
-Subject: [PATCH 0/2] ASoC: Mediatek: MT8183: support both S32_LE and S24_LE
-Date: Thu, 16 May 2019 17:54:36 +0800
-Message-ID: <20190516095438.15759-1-shunli.wang@mediatek.com>
+Subject: [PATCH 1/2] ASoC: Mediatek: add memory interface data align
+Date: Thu, 16 May 2019 17:54:37 +0800
+Message-ID: <20190516095438.15759-2-shunli.wang@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20190516095438.15759-1-shunli.wang@mediatek.com>
+References: <20190516095438.15759-1-shunli.wang@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 83AAA05584EBEFEF300809274AAA279063FAE224E474642367DE58D515434D982000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190516_025445_749256_0050A3E2 
-X-CRM114-Status: UNSURE (   4.46  )
+X-CRM114-CacheID: sfid-20190516_025448_114288_EB7FC9ED 
+X-CRM114-Status: UNSURE (   8.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,18 +82,64 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch adds support both S32_LE and S24_LE.
-The patch is based on broonie tree "for-next" branch.
+This supports two data align settings. One is S32_LE and
+other is S24_LE.
 
-Shunli Wang (2):
-  ASoC: Mediatek: add memory interface data align
-  ASoC: Mediatek: MT8183: set data align
+Signed-off-by: Shunli Wang <shunli.wang@mediatek.com>
+---
+ sound/soc/mediatek/common/mtk-afe-fe-dai.c | 7 +++++++
+ sound/soc/mediatek/common/mtk-base-afe.h   | 2 ++
+ 2 files changed, 9 insertions(+)
 
- sound/soc/mediatek/common/mtk-afe-fe-dai.c |  7 +++++++
- sound/soc/mediatek/common/mtk-base-afe.h   |  2 ++
- sound/soc/mediatek/mt8183/mt8183-afe-pcm.c | 18 ++++++++++++++++++
- 3 files changed, 27 insertions(+)
-
+diff --git a/sound/soc/mediatek/common/mtk-afe-fe-dai.c b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
+index fded11d14cde..19048c3dc324 100644
+--- a/sound/soc/mediatek/common/mtk-afe-fe-dai.c
++++ b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
+@@ -241,6 +241,7 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
+ 	struct mtk_base_afe *afe = snd_soc_dai_get_drvdata(dai);
+ 	struct mtk_base_afe_memif *memif = &afe->memif[rtd->cpu_dai->id];
+ 	int hd_audio = 0;
++	int hd_align = 1;
+ 
+ 	/* set hd mode */
+ 	switch (substream->runtime->format) {
+@@ -249,9 +250,11 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
+ 		break;
+ 	case SNDRV_PCM_FORMAT_S32_LE:
+ 		hd_audio = 1;
++		hd_align = 1;
+ 		break;
+ 	case SNDRV_PCM_FORMAT_S24_LE:
+ 		hd_audio = 1;
++		hd_align = 0;
+ 		break;
+ 	default:
+ 		dev_err(afe->dev, "%s() error: unsupported format %d\n",
+@@ -262,6 +265,10 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
+ 	mtk_regmap_update_bits(afe->regmap, memif->data->hd_reg,
+ 			       1, hd_audio, memif->data->hd_shift);
+ 
++	mtk_regmap_update_bits(afe->regmap, memif->data->hd_align_reg,
++			       memif->data->hd_align_mshift,
++			       hd_align ? memif->data->hd_align_mshift : 0);
++
+ 	return 0;
+ }
+ EXPORT_SYMBOL_GPL(mtk_afe_fe_prepare);
+diff --git a/sound/soc/mediatek/common/mtk-base-afe.h b/sound/soc/mediatek/common/mtk-base-afe.h
+index bd8d5e0c6843..60cb609a9790 100644
+--- a/sound/soc/mediatek/common/mtk-base-afe.h
++++ b/sound/soc/mediatek/common/mtk-base-afe.h
+@@ -24,7 +24,9 @@ struct mtk_base_memif_data {
+ 	int enable_reg;
+ 	int enable_shift;
+ 	int hd_reg;
++	int hd_align_reg;
+ 	int hd_shift;
++	int hd_align_mshift;
+ 	int msb_reg;
+ 	int msb_shift;
+ 	int agent_disable_reg;
 -- 
 2.18.0
 
