@@ -2,41 +2,41 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4983220235
+	by mail.lfdr.de (Postfix) with ESMTPS id 3B63B20234
 	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 11:09:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=IvJHzKftwW+vsrc8Z2x9VoTE5puaGlSjnDBNskz+Wb4=; b=FjJ+YO9GtxpTGE
-	BCdJP/rV277+2Iu53U1vVmOG7gHYMhp/bTfSihPDX40phAQJQgdWfX6kjg9CQjwa9y+ymKmXIL6u3
-	kmu3YrgQha/B90z+RJJhs9kH0rgju9rt91+cHsQD4QQLzahcqZpsRRvDeN6mZekOpcDbORDsZTm7N
-	U7Yj9nCol77CQ9qiNrDZr6Ei5V72kn+pHfTo9rhq9jvy/1TWqzUbVN/R++L7rkMLZQIiVQ//i/+sz
-	QmfihUfjuUgAwM8oZJB2Ujus4nflddMYFuzdUkXZHFNmfaiAGAAmGtHfeheLGdFJ0hiD1PGjEALMA
-	Hfggsk+qL68zIRRze7JA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=d5ii5Pa8CM74knBUGH99PZDKHSxano1OSqkDLPxw0ts=; b=c4bsj2wccUzVk8
+	LOzP7t8mlviG0dH7gvHGx4c0iCMRDlRfL56DIr3JU3slMfVGdytEPs+WewmfGqpQ9sQa0lSa0hkTR
+	GSPdR4mFn3ASJcaxOW/PnHpasAZGNajFQqgfLIpJkLYmHqf5wAT/Dq5SdoD/Yv61Cq6rixrwo4ZGE
+	Kx/rjQ1q8D7Wz8zDjtdXeZQ1xwUuYSjIj7kbPAxhv7H6swTcJmhty8GGdinLSRB8H4dWmAM3jjsy+
+	TeGZCwpSRQaDmUE7kf8yUbdKuAtLLALMXs+yzzy3FgHLMx8rKr2yPofEnGnI1tdDUnEGJfxJh05uW
+	uAY4X1VQeKsQC/a0kHAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRCNm-0000lP-S2; Thu, 16 May 2019 09:08:58 +0000
+	id 1hRCNn-0000lw-Gk; Thu, 16 May 2019 09:08:59 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRCNk-0000kM-BS; Thu, 16 May 2019 09:08:57 +0000
-X-UUID: 4bec25a1af264529bafb50f066eae534-20190516
-X-UUID: 4bec25a1af264529bafb50f066eae534-20190516
+ id 1hRCNk-0000kF-EC; Thu, 16 May 2019 09:08:57 +0000
+X-UUID: 9787825880404b54852acd1239990df0-20190516
+X-UUID: 9787825880404b54852acd1239990df0-20190516
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <andrew-sh.cheng@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 15307253; Thu, 16 May 2019 01:08:50 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 May 2019 02:08:48 -0700
+ with ESMTP id 1620524660; Thu, 16 May 2019 01:08:51 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 May 2019 02:08:49 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 May 2019 17:08:47 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 May 2019 17:08:48 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 16 May 2019 17:08:47 +0800
+ Frontend Transport; Thu, 16 May 2019 17:08:48 +0800
 From: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
 To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
  <kyungmin.park@samsung.com>, Chanwoo Choi <cw00.choi@samsung.com>, "Rob
@@ -44,15 +44,17 @@ To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
  Brugger" <matthias.bgg@gmail.com>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
  Viresh Kumar <viresh.kumar@linaro.org>, Nishanth Menon <nm@ti.com>, "Stephen
  Boyd" <sboyd@kernel.org>
-Subject: [PATCH 0/8] Add cpufreq and cci devfreq for mt8183, and SVS support
-Date: Thu, 16 May 2019 17:08:37 +0800
-Message-ID: <1557997725-12178-1-git-send-email-andrew-sh.cheng@mediatek.com>
+Subject: [PATCH 1/8] cpufreq: mediatek: change to regulator_get_optional
+Date: Thu, 16 May 2019 17:08:38 +0800
+Message-ID: <1557997725-12178-2-git-send-email-andrew-sh.cheng@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1557997725-12178-1-git-send-email-andrew-sh.cheng@mediatek.com>
+References: <1557997725-12178-1-git-send-email-andrew-sh.cheng@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190516_020856_396810_5024BB7E 
-X-CRM114-Status: GOOD (  10.08  )
+X-CRM114-CacheID: sfid-20190516_020856_486571_0CB854BD 
+X-CRM114-Status: GOOD (  10.75  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -84,35 +86,28 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
 
-MT8183 supports CPU DVFS and CCI DVFS, and LITTLE cpus and CCI are in the same voltage domain.
-So, this series is to add drivers to handle the voltage coupling between CPU and CCI DVFS.
+For new mediatek chip mt8183,
+cci and little cluster share the same buck,
+so need to modify the attribute of regulator from exclusive to optional
 
-For SVS support, add OPP_EVENT_ADJUST_VOLTAGE and corresponding reaction.
+Signed-off-by: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
+---
+ drivers/cpufreq/mediatek-cpufreq.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-Andrew-sh.Cheng (7):
-  cpufreq: mediatek: change to regulator_get_optional
-  cpufreq: mediatek: add clock enable for intermediate clock
-  cpufreq: mediatek: Add support for mt8183
-  dt-bindings: devfreq: add compatible for mt8183 cci devfreq
-  devfreq: add mediatek cci devfreq
-  cpufreq: mediatek: add opp notification for SVS support
-  devfreq: cci devfreq register opp notification for SVS support
-
-Stephen Boyd (1):
-  PM / OPP: Support adjusting OPP voltages at runtime
-
- .../bindings/devfreq/mt8183-cci-devfreq.txt        |  20 ++
- drivers/cpufreq/cpufreq-dt-platdev.c               |   1 +
- drivers/cpufreq/mediatek-cpufreq.c                 |  88 +++++-
- drivers/devfreq/Kconfig                            |  10 +
- drivers/devfreq/Makefile                           |   1 +
- drivers/devfreq/mt8183-cci-devfreq.c               | 310 +++++++++++++++++++++
- drivers/opp/core.c                                 |  78 ++++++
- include/linux/pm_opp.h                             |  11 +
- 8 files changed, 517 insertions(+), 2 deletions(-)
- create mode 100644 Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
- create mode 100644 drivers/devfreq/mt8183-cci-devfreq.c
-
+diff --git a/drivers/cpufreq/mediatek-cpufreq.c b/drivers/cpufreq/mediatek-cpufreq.c
+index 48e9829274c6..f2464c1ff17c 100644
+--- a/drivers/cpufreq/mediatek-cpufreq.c
++++ b/drivers/cpufreq/mediatek-cpufreq.c
+@@ -346,7 +346,7 @@ static int mtk_cpu_dvfs_info_init(struct mtk_cpu_dvfs_info *info, int cpu)
+ 		goto out_free_resources;
+ 	}
+ 
+-	proc_reg = regulator_get_exclusive(cpu_dev, "proc");
++	proc_reg = regulator_get_optional(cpu_dev, "proc");
+ 	if (IS_ERR(proc_reg)) {
+ 		if (PTR_ERR(proc_reg) == -EPROBE_DEFER)
+ 			pr_warn("proc regulator for cpu%d not ready, retry.\n",
 -- 
 2.12.5
 
