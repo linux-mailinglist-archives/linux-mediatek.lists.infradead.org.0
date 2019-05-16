@@ -2,65 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0E174206D5
-	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 14:24:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B772D20737
+	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 14:48:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kTOdLoB5rW1OSKlapThBdNjNCuDXZbXtpLZ2BLoepL0=; b=sC/raxszCG7J86
-	oFFr3gXiIzqIwLKwFCEAOvOqacWDc9ZNfs9KckEb6xmQRfyYRWr7n12CzCAhULnGOhObzWNxlcYOj
-	Gp6fbdyv0Rd6I1j2wmqlDJ5xtL4i9JaFQyvn6PgcK9E1R/CbW2IOZCOufe1jl7Uqe9NrLTUvEarD7
-	2BRWPa2AZLR/+eQTD+i6oF2xH4P25R+L2vm9wLzI2K2dgl2+E1FtsFcLsmgYlpMTE5j4PaTd7C9+w
-	Nl/PKyJNpzRSZ8RdblFDNy174B/BHeiv+XCCeuyCbZuF9fKPzVQ2a2ZMVGtJi8tF/ER4uWQxGnGS7
-	o+SSSNEbwDWVIW3+zbqw==;
+	List-Owner; bh=4FN5y5K9aUAvv83WNXrRPdAemrEXCr8GBFvfpHVOsRM=; b=k3DhrwX//k7qb0
+	2qXSNyQq7Mc+LbA2KmpVR+rSGGjGfn3g8IIMVYHYsjWqUQzYTxqf9ueywE8dyONs5rT1mJGifyfZ5
+	nNeckUVh42FDP6MhPWe9a0S2Zs9DrOGYDxKsX7nVLarZ9up6fzxkINK9bdrlpANuhkjLtVpOPcPHj
+	tbD4hfZBHLTSWNPzy8YYPtiA+T6AOUktJ7fTb3Njqnqyu3oNQpi9uoIpc8pSx9S3IxhOS0IiovH4z
+	9CEkbzIn6HYxxUaOEqDl3Dhat8LKKBXeChcV4Hxca6ZIaK430gp0ShCPhFMf1GvXSZKxEX/ZegC0D
+	zu5Zb4VP0a6XHNydxfzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRFQS-0002Cd-Fn; Thu, 16 May 2019 12:23:56 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hRFnf-0001Uq-Ht; Thu, 16 May 2019 12:47:55 +0000
+Received: from mail-qk1-x743.google.com ([2607:f8b0:4864:20::743])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRFQO-0002CA-HB; Thu, 16 May 2019 12:23:54 +0000
-X-UUID: 423ae854a80a42fca7a16f5bac198baf-20190516
-X-UUID: 423ae854a80a42fca7a16f5bac198baf-20190516
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <andrew-sh.cheng@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 635194405; Thu, 16 May 2019 04:23:49 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 May 2019 05:23:47 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 May 2019 20:23:46 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 16 May 2019 20:23:46 +0800
-Message-ID: <1558009426.29944.1.camel@mtksdaap41>
-Subject: Re: [PATCH 0/8] Add cpufreq and cci devfreq for mt8183, and SVS
- support
-From: andrew-sh.cheng <andrew-sh.cheng@mediatek.com>
-To: Viresh Kumar <viresh.kumar@linaro.org>
-Date: Thu, 16 May 2019 20:23:46 +0800
-In-Reply-To: <20190516092328.4n7kuqw7bxokhdjp@vireshk-i7>
-References: <1557997725-12178-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <20190516092328.4n7kuqw7bxokhdjp@vireshk-i7>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hRFnV-0001Mz-Kt
+ for linux-mediatek@lists.infradead.org; Thu, 16 May 2019 12:47:47 +0000
+Received: by mail-qk1-x743.google.com with SMTP id g190so2117932qkf.8
+ for <linux-mediatek@lists.infradead.org>; Thu, 16 May 2019 05:47:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=W184LUt3OLZpc35GbIgyfbdRWYWzS470rOoUrNJBmxU=;
+ b=TRma6EWmVqtTh6oyWeOyXuXYl+5HLkiD+FLBf6YYv1n3LTrxOJcXtDjC9qMNgWV3IM
+ 9/L3ct4DLiJQOWk/6Vr+Zcmy4GqUrvJkXz80l5T6lMeDYVdK+B2rz9KW/QoYjrG5fcXu
+ dYY57kMN4S4l7szDwWKXb9Qsvi5JOUOtVT/i4=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=W184LUt3OLZpc35GbIgyfbdRWYWzS470rOoUrNJBmxU=;
+ b=WddOYwMyG3tpAJ57tkEDHvmt7bfq0q6Bc0CiTmBixvEBMOa2SDv3MVGFeMWcFFXuUT
+ 2p4GdyyZ4CQu4Vw79Mbg3w3PQUHJN2c7gx8rSaGvpa9qwKNsicaINYE/qtW01TTUOUup
+ h8aqIySnIQjccnNqZkYX4XPxJhJT74xhDxF8ug7vA2WZeewuKuXUpri0/saklibev3BP
+ b4CFQcMS1H3pMGGZluHXavh2ABZc021RSxrDiTqU7cv+mj6W4gkpBTpTiYK1gyIsRdAJ
+ JH5d7xME7Zydsfz4O7zz77gIRojUABGzhtGIWHcc7yWVjVFTk22bDtJK3jMc8DI+gOXQ
+ hGIw==
+X-Gm-Message-State: APjAAAUx9h79jXbwveom+bf/aN64SpHsKIFhUfeE0kwuPZ9616dAdrUO
+ K3RiI/oEsRZz02QmX02BAm2w6IK3orbBAwho5FNCJQ==
+X-Google-Smtp-Source: APXvYqybed54iK4vV+PN2Aj3PjQ2Py6dcAunCb38T+fR74fZCjJqmxhGgna5I/pOr2f8Y6E05PAXezd/gE5bKfmgw6I=
+X-Received: by 2002:ae9:f818:: with SMTP id x24mr37963214qkh.329.1558010863680; 
+ Thu, 16 May 2019 05:47:43 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <20190508073331.27475-1-drinkcat@chromium.org>
+ <CACRpkdZb73vNyepcfjzEGAopc7BBxde_N1wxn7PSJ3aGC0=Gig@mail.gmail.com>
+In-Reply-To: <CACRpkdZb73vNyepcfjzEGAopc7BBxde_N1wxn7PSJ3aGC0=Gig@mail.gmail.com>
+From: Nicolas Boichat <drinkcat@chromium.org>
+Date: Thu, 16 May 2019 20:47:32 +0800
+Message-ID: <CANMq1KAOeuDCZEvV2A18nUts3WP2MbhUpY7gQ+vk0oTOz8TRQA@mail.gmail.com>
+Subject: Re: [PATCH v2 0/2] pinctrl: mediatek: mt8183: Add support for wake
+ sources
+To: Linus Walleij <linus.walleij@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190516_052352_589078_C104C404 
-X-CRM114-Status: GOOD (  17.50  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190516_054745_711491_D11F3883 
+X-CRM114-Status: GOOD (  17.55  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:743 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -72,73 +89,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- srv_heupstream@mediatek.com, linux-pm@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
- linux-kernel@vger.kernel.org, Rob
- Herring <robh+dt@kernel.org>, Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>,
- MyungJoo Ham <myungjoo.ham@samsung.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Matthias
- Brugger <matthias.bgg@gmail.com>, fan.chen@mediatek.com,
- devicetree@vger.kernel.org
+Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
+ "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2019-05-16 at 14:53 +0530, Viresh Kumar wrote:
-> On 16-05-19, 17:08, Andrew-sh.Cheng wrote:
-> > From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
-> > 
-> > MT8183 supports CPU DVFS and CCI DVFS, and LITTLE cpus and CCI are in the same voltage domain.
-> > So, this series is to add drivers to handle the voltage coupling between CPU and CCI DVFS.
-> > 
-> > For SVS support, add OPP_EVENT_ADJUST_VOLTAGE and corresponding reaction.
-> 
-> No version information here or what has changed. That doesn't help.
-> 
-> I believe this is V3.
-> 
-> Don't resend it but please mention the changes in reply now. Thanks.
-Yes, this is patch v3
+On Thu, May 16, 2019 at 7:55 PM Linus Walleij <linus.walleij@linaro.org> wrote:
+>
+> On Wed, May 8, 2019 at 9:33 AM Nicolas Boichat <drinkcat@chromium.org> wrote:
+>
+> > This adds support for wake sources in pinctrl-mtk-common-v2, and
+> > pinctrl-mt8183. Without this patch, all interrupts that are left
+> > enabled on suspend act as wake sources (and wake sources without
+> > interrupt enabled do not).
+> >
+> > Changes since v1:
+> >  - Move changes from mtk-common-v2 to mtk-pinctrl-paris, as
+> >    recommended by Sean, to keep better separation between eint
+> >    and pinctrl-common features.
+> >
+> > Nicolas Boichat (2):
+> >   pinctrl: mediatek: Add pm_ops to pinctrl-paris
+> >   pinctrl: mediatek: mt8183: Add mtk_pinctrl_paris_pm_ops
+>
+> All seems to look fair to me, but I need some official ACK from
+> Sean on these.
+>
+> I see there is some discussion on a related patch set which
+> also has two patches so I am a but confused how mature the
+> two patch sets are? Are they at all related?
 
-Change since v2:
-- Separate cpufreq modification into 3 patches.
-- Modify dt-binding for more HW information.
-- Refine cci devfreq coding style.
-- patch 6 ~ patch 8 are for SVS support
+They are somewhat related, but I don't think this depends on the other series.
 
-> 
-> > Andrew-sh.Cheng (7):
-> >   cpufreq: mediatek: change to regulator_get_optional
-> >   cpufreq: mediatek: add clock enable for intermediate clock
-> >   cpufreq: mediatek: Add support for mt8183
-> >   dt-bindings: devfreq: add compatible for mt8183 cci devfreq
-> >   devfreq: add mediatek cci devfreq
-> >   cpufreq: mediatek: add opp notification for SVS support
-> >   devfreq: cci devfreq register opp notification for SVS support
-> > 
-> > Stephen Boyd (1):
-> >   PM / OPP: Support adjusting OPP voltages at runtime
-> > 
-> >  .../bindings/devfreq/mt8183-cci-devfreq.txt        |  20 ++
-> >  drivers/cpufreq/cpufreq-dt-platdev.c               |   1 +
-> >  drivers/cpufreq/mediatek-cpufreq.c                 |  88 +++++-
-> >  drivers/devfreq/Kconfig                            |  10 +
-> >  drivers/devfreq/Makefile                           |   1 +
-> >  drivers/devfreq/mt8183-cci-devfreq.c               | 310 +++++++++++++++++++++
-> >  drivers/opp/core.c                                 |  78 ++++++
-> >  include/linux/pm_opp.h                             |  11 +
-> >  8 files changed, 517 insertions(+), 2 deletions(-)
-> >  create mode 100644 Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
-> >  create mode 100644 drivers/devfreq/mt8183-cci-devfreq.c
-> > 
-> > -- 
-> > 2.12.5
-> 
+This series adds support for wake on mt8183, and makes it similar to,
+say, mt8173.
 
+The other patch series fixes issues that affect all mtk pinctrl
+variants (i.e. I think mt8173 pinctrl on current mainline has similar
+issues). It's not impossible that the answer to the other series is
+that we need to refactor code, but in that case, if we merge this
+first, we'd just have to clean up one more pinctrl variant.
 
+Thanks,
+
+> Yours,
+> Linus Walleij
 
 _______________________________________________
 Linux-mediatek mailing list
