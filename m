@@ -2,70 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 774E920345
-	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 12:17:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0095D2036C
+	for <lists+linux-mediatek@lfdr.de>; Thu, 16 May 2019 12:28:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=h8ZXsfxBI1D8Ut8PpI726KA78jI+J659QTGsiuoHS3g=; b=LFr
-	EbtqDsXWsiEuYhpbl9LQmQ7Hu63Y0MAa4vg/wmcQ2O9i91PDk2YRFDbLWfbrweuLABaLwe4nBunxL
-	eB9O/3/S7H1yJKDXjx5sKV4Y038G6Lq1HBWlcd91GU79oaAMDs77kMMSUtNB+AimobW08T77abQsh
-	S0cyJqbswIIkE0HNv2agVeA0sr6MdY9NZAf8jVmk7L1lqNHD5aLTKFP0JAshCIrqYhmbq/yMv/H3q
-	i2ce+ZhQ7M4jffMl2qyF2ib1dcQKMjCCpYrR1HFWcdeMoh9hsZ8KRg5ZRhE1RFH70cmOseNCuPs4X
-	3avgC5Gqb1NyfjnDll40U7VeV43uBhA==;
+	List-Owner; bh=3YhL1CWhEpHv3RbunVuSNsUrKutkP9IAWfuxsSHbU08=; b=VO7KfdD24C25OF
+	8ZmK/NwsqtPQeyhujgXVDa2vzjKq+ma6icv63UWf/pXpHPUmLhXXj4vVlTIPYpHeDbUqkvK02/+sc
+	PB6g4sBh1srN1J2qjZ1z5QThBJtrjCQ8GsCOogJREueUeKgwE9+SlnctSZfs/iKHiqdlbwoJnT2tl
+	zaI2QhFeGCjAFJAcTn6ZdSvaorp7uUe/1T9CGDv+x+xTW8FTZwM/s1aZDG3kUo2X+V3LGDOkfA2tj
+	XJzn900gtIIQO3HZe+rvXK0aq4ZUBV2eo0sS7wrPTuts+kyohDoQcj2M1/p61mD3L/2ANXQ8prj4B
+	uJK1zowZ2wupn5LSpgwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRDS3-0006SB-0v; Thu, 16 May 2019 10:17:27 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1hRDcW-0001VY-02; Thu, 16 May 2019 10:28:16 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRDRz-0006Qe-5f
- for linux-mediatek@lists.infradead.org; Thu, 16 May 2019 10:17:24 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=oDBnrhZivGsdJVR9kCjrFKov0JC/wAnshgL0vB1Lk0c=; b=U/gmXu9m66oy
- rPIO016chld9Z5klq0B3sWRNk11EdcDjgfjhGAgk4Gi+HRW8rnKUuwBPxSlav0KoPqBGlJSBDNo1x
- 1KRHEwowxrbyxjpUfAyiYO6lBUlgsK3dBt5/EOiXUjrdKcwSgQZ0doBVeUTYMV6Sr0RReURjMijN8
- G9lXc=;
-Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
- ([82.37.168.47] helo=debutante.sirena.org.uk)
- by heliosphere.sirena.org.uk with esmtpa (Exim 4.89)
- (envelope-from <broonie@sirena.org.uk>)
- id 1hRDRv-00062G-PK; Thu, 16 May 2019 10:17:19 +0000
-Received: by debutante.sirena.org.uk (Postfix, from userid 1000)
- id 3E67A1126D46; Thu, 16 May 2019 11:17:16 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: Shunli Wang <shunli.wang@mediatek.com>
-Subject: Applied "ASoC: Mediatek: add memory interface data align" to the asoc
- tree
-In-Reply-To: <20190516095438.15759-2-shunli.wang@mediatek.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190516101716.3E67A1126D46@debutante.sirena.org.uk>
-Date: Thu, 16 May 2019 11:17:16 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+ id 1hRDcL-0001OP-Iw; Thu, 16 May 2019 10:28:07 +0000
+X-UUID: f22237e06cb44df39af6b13a240a5779-20190516
+X-UUID: f22237e06cb44df39af6b13a240a5779-20190516
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1623016907; Thu, 16 May 2019 02:27:56 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 May 2019 03:27:55 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 May 2019 18:27:52 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 16 May 2019 18:27:52 +0800
+Message-ID: <1558002472.26743.2.camel@mtksdaap41>
+Subject: Re: [PATCH v6 11/12] soc: mediatek: cmdq: add cmdq_dev_get_event
+ function
+From: CK Hu <ck.hu@mediatek.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Date: Thu, 16 May 2019 18:27:52 +0800
+In-Reply-To: <20190516090224.59070-12-bibby.hsieh@mediatek.com>
+References: <20190516090224.59070-1-bibby.hsieh@mediatek.com>
+ <20190516090224.59070-12-bibby.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+MIME-Version: 1.0
+X-TM-SNTS-SMTP: 340E37131E274E309CCD55145B936522FE76AA128486110F5FC92DCAA60C875A2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190516_031723_353314_A9735ED1 
-X-CRM114-Status: GOOD (  12.24  )
-X-Spam-Score: -0.1 (/)
+X-CRM114-CacheID: sfid-20190516_032805_654031_A07550A8 
+X-CRM114-Status: GOOD (  14.10  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -77,109 +73,95 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, srv_heupstream@mediatek.com,
- garlic.tseng@mediatek.com, jiaxin.yu@mediatek.com, tzungbi@google.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- shunli.wang@mediatek.com, kaichieh.chuang@mediatek.com
-MIME-Version: 1.0
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
+ linux-kernel@vger.kernel.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Dennis-YC Hsieh
+ <dennis-yc.hsimediatek/mtkcam/drv/fdvt/4.0/cam_fdvt_v4l2.cppeh@mediatek.com>,
+ Sascha Hauer <kernel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+Hi, Bibby:
 
-   ASoC: Mediatek: add memory interface data align
+On Thu, 2019-05-16 at 17:02 +0800, Bibby Hsieh wrote:
+> When client ask gce to clear or wait for event,
+> client need to pass event number to the API.
+> We suggest client store the event information in device node,
+> so we provide an API for client parse the event property.
+> 
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> ---
+>  drivers/soc/mediatek/mtk-cmdq-helper.c | 18 ++++++++++++++++++
+>  include/linux/soc/mediatek/mtk-cmdq.h  | 12 ++++++++++++
+>  2 files changed, 30 insertions(+)
+> 
+> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> index a64060a34e01..e9658063c3d4 100644
+> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
+> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> @@ -52,6 +52,24 @@ struct cmdq_subsys *cmdq_dev_get_subsys(struct device *dev, int idx)
+>  }
+>  EXPORT_SYMBOL(cmdq_dev_get_subsys);
+>  
+> +s32 cmdq_dev_get_event(struct device *dev, int index)
+> +{
+> +	s32 result;
+> +
+> +	if (!dev)
+> +		return -EINVAL;
+> +
+> +	if (of_property_read_u32_index(dev->of_node, "mediatek,gce-events",
+> +				       index, &result)) {
+> +		dev_err(dev, "can't parse gce-events property");
+> +
+> +		return -ENODEV;
+> +	}
+> +
+> +	return result;
 
-has been applied to the asoc tree at
+This function just does one thing, so client driver could just directly
+call of_property_read_u32_index().
 
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.3
+Regards,
+CK
 
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
+> +}
+> +EXPORT_SYMBOL(cmdq_dev_get_event);
+> +
+>  static void cmdq_client_timeout(struct timer_list *t)
+>  {
+>  	struct cmdq_client *client = from_timer(client, t, timer);
+> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
+> index 574006c5cd76..525713bf79b5 100644
+> --- a/include/linux/soc/mediatek/mtk-cmdq.h
+> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
+> @@ -160,4 +160,16 @@ int cmdq_pkt_flush(struct cmdq_pkt *pkt);
+>   */
+>  struct cmdq_subsys *cmdq_dev_get_subsys(struct device *dev, int idx);
+>  
+> +/**
+> + * cmdq_dev_get_event() - parse event from the device node of CMDQ client
+> + * @dev:	device of CMDQ mailbox client
+> + * @index:	the index of desired event
+> + *
+> + * Return: CMDQ event number
+> + *
+> + * Help CMDQ client pasing the event number
+> + * from the device node of CMDQ client.
+> + */
+> +s32 cmdq_dev_get_event(struct device *dev, int index);
+> +
+>  #endif	/* __MTK_CMDQ_H__ */
 
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From 1628fc3f47717fc3c8d9cd5fd6c7bc7d3796927d Mon Sep 17 00:00:00 2001
-From: Shunli Wang <shunli.wang@mediatek.com>
-Date: Thu, 16 May 2019 17:54:37 +0800
-Subject: [PATCH] ASoC: Mediatek: add memory interface data align
-
-This supports two data align settings. One is S32_LE and
-other is S24_LE.
-
-Signed-off-by: Shunli Wang <shunli.wang@mediatek.com>
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- sound/soc/mediatek/common/mtk-afe-fe-dai.c | 7 +++++++
- sound/soc/mediatek/common/mtk-base-afe.h   | 2 ++
- 2 files changed, 9 insertions(+)
-
-diff --git a/sound/soc/mediatek/common/mtk-afe-fe-dai.c b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-index fded11d14cde..19048c3dc324 100644
---- a/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-+++ b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-@@ -241,6 +241,7 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 	struct mtk_base_afe *afe = snd_soc_dai_get_drvdata(dai);
- 	struct mtk_base_afe_memif *memif = &afe->memif[rtd->cpu_dai->id];
- 	int hd_audio = 0;
-+	int hd_align = 1;
- 
- 	/* set hd mode */
- 	switch (substream->runtime->format) {
-@@ -249,9 +250,11 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 		break;
- 	case SNDRV_PCM_FORMAT_S32_LE:
- 		hd_audio = 1;
-+		hd_align = 1;
- 		break;
- 	case SNDRV_PCM_FORMAT_S24_LE:
- 		hd_audio = 1;
-+		hd_align = 0;
- 		break;
- 	default:
- 		dev_err(afe->dev, "%s() error: unsupported format %d\n",
-@@ -262,6 +265,10 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 	mtk_regmap_update_bits(afe->regmap, memif->data->hd_reg,
- 			       1, hd_audio, memif->data->hd_shift);
- 
-+	mtk_regmap_update_bits(afe->regmap, memif->data->hd_align_reg,
-+			       memif->data->hd_align_mshift,
-+			       hd_align ? memif->data->hd_align_mshift : 0);
-+
- 	return 0;
- }
- EXPORT_SYMBOL_GPL(mtk_afe_fe_prepare);
-diff --git a/sound/soc/mediatek/common/mtk-base-afe.h b/sound/soc/mediatek/common/mtk-base-afe.h
-index bd8d5e0c6843..60cb609a9790 100644
---- a/sound/soc/mediatek/common/mtk-base-afe.h
-+++ b/sound/soc/mediatek/common/mtk-base-afe.h
-@@ -24,7 +24,9 @@ struct mtk_base_memif_data {
- 	int enable_reg;
- 	int enable_shift;
- 	int hd_reg;
-+	int hd_align_reg;
- 	int hd_shift;
-+	int hd_align_mshift;
- 	int msb_reg;
- 	int msb_shift;
- 	int agent_disable_reg;
--- 
-2.20.1
 
 
 _______________________________________________
