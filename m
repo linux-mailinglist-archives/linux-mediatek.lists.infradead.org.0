@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C24E215E4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 May 2019 11:06:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D564D21628
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 May 2019 11:21:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RvK6jqYGuMW3viKd2uzx6tG/Xm7WETuAHcjrqt0RYSs=; b=Qv6Xi8p45QOsdI
-	Hbu8L5Cw+zkpU+xmxpMrFWVvRmyi1JBCSqymCiTBDNZ+pizvwQdoHcltHFjaWBRPu4Z3u3HeumBQY
-	lLzmM/4/HvDw/oWH3nmZuM9T31CsfYrqYuCEDKBZ5Hx779F5EmvwEsIVcaMzNgJQGeZeQXGhzWG0d
-	6WvQgQKMq3w48+yGkfY4wuVULxLDU9zc0erqZyn3zHzLzYDVdJOyp/lO+pHj4PI9br0FWfwNJlWad
-	emBzzFjwfv5gP8JYhf69pHolSxVHX007j6md0xKkCCxEjaL5U3ReAW3i3IbhrxQ5S+eoRYyN850ig
-	Y0pF0gjtoq+tDTP3cBmw==;
+	List-Owner; bh=LUyRvEp7Fd8yieMspSm9oLQxkeztJ/JsdTSSm3d5v60=; b=GwtmP6s8kSw2JC
+	afWIBDwyzTAQYOCpShqXeL82pHFt6y3dgBsfPkkaiEZHZpw2w+F0Vc+FkdSVPaLJ/oIAUTSRseprm
+	+kTRBSzKJXCja24jC4mHsbBmYh2y86YvrHa1/rSH0eSOTreVkUBI9TdCeeTJ8z5m8Hqd475cK6R/8
+	QnvA6Re/sGxL4Avuy5HjKA5WeDcyxccpIo3ypRPIobIAOuxq+ZO+2yBs31yi8XW4sFatYH9xwZxj7
+	F7g55CN0EB6UhieR4Vhk/c5NOYo6k7GbDvbssUZ1VtoxRcMrNHJpy0aQvzVhpTFM9KM34FQ6y2WEy
+	lacIbBvkPEQjMtIjVf2w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRYoM-0000Un-23; Fri, 17 May 2019 09:05:54 +0000
+	id 1hRZ3f-0007UW-6n; Fri, 17 May 2019 09:21:43 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRYoF-0000Na-Ug; Fri, 17 May 2019 09:05:52 +0000
-X-UUID: 38e18c1e90b940fbba22acbd39bf81e6-20190517
-X-UUID: 38e18c1e90b940fbba22acbd39bf81e6-20190517
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hRZ3V-0007Lh-IL; Fri, 17 May 2019 09:21:34 +0000
+X-UUID: 44571fe1f5e0477f9175a59ffdaa130c-20190517
+X-UUID: 44571fe1f5e0477f9175a59ffdaa130c-20190517
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 924884380; Fri, 17 May 2019 01:05:37 -0800
+ with ESMTP id 937721415; Fri, 17 May 2019 01:21:27 -0800
 Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 17 May 2019 02:05:35 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 17 May 2019 17:05:34 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 17 May 2019 17:05:34 +0800
-Message-ID: <1558083934.29098.6.camel@mtksdaap41>
-Subject: Re: [PATCH v3 09/13] [media] mtk-mipicsi: add ISR for writing the
- data to buffer
-From: CK Hu <ck.hu@mediatek.com>
-To: Stu Hsieh <stu.hsieh@mediatek.com>
-Date: Fri, 17 May 2019 17:05:34 +0800
-In-Reply-To: <1557814430-9675-10-git-send-email-stu.hsieh@mediatek.com>
-References: <1557814430-9675-1-git-send-email-stu.hsieh@mediatek.com>
- <1557814430-9675-10-git-send-email-stu.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 17 May 2019 02:21:25 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs03n1.mediatek.inc
+ (172.21.101.181) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 17 May 2019 17:21:24 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 17 May 2019 17:21:22 +0800
+Message-ID: <1558084882.26455.106.camel@mhfsdcap03>
+Subject: Re: [PATCH v3 0/4] MTK NAND driver improvements and fixes
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: Miquel Raynal <miquel.raynal@bootlin.com>
+Date: Fri, 17 May 2019 17:21:22 +0800
+In-Reply-To: <20190517101226.17b23550@xps13>
+References: <20190507102541.34341-1-xiaolei.li@mediatek.com>
+ <1558056767.26455.98.camel@mhfsdcap03> <20190517101226.17b23550@xps13>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190517_020548_145606_F38AF95D 
-X-CRM114-Status: GOOD (  22.70  )
+X-CRM114-CacheID: sfid-20190517_022133_613215_FD307B15 
+X-CRM114-Status: UNSURE (   8.39  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,209 +72,21 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: richard@nod.at, linux-mediatek@lists.infradead.org,
+ linux-mtd@lists.infradead.org, srv_heupstream@mediatek.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Stu:
-
-On Tue, 2019-05-14 at 14:13 +0800, Stu Hsieh wrote:
-> This patch add ISR for writing the data to buffer
-> 
-> When mipicsi HW complete to write the data in buffer,
-> the interrupt woulb be trigger.
-> So, the ISR need to clear interrupt status for next interrupt.
-> 
-> Signed-off-by: Stu Hsieh <stu.hsieh@mediatek.com>
-> ---
->  .../media/platform/mtk-mipicsi/mtk_mipicsi.c  | 110 ++++++++++++++++++
->  1 file changed, 110 insertions(+)
-> 
-> diff --git a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
-> index 44c01c8d566b..af5655345754 100644
-> --- a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
-> +++ b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
-> @@ -36,6 +36,7 @@
->  #include <linux/pm_runtime.h>
->  #include <linux/iommu.h>
->  #include <linux/of.h>
-> +#include <linux/of_irq.h>
->  #include <linux/of_platform.h>
->  #include <media/v4l2-common.h>
->  #include <media/v4l2-dev.h>
-> @@ -93,6 +94,8 @@
->  #define CAMSV_MODULE_EN					0x10
->  #define CAMSV_FMT_SEL					0x14
->  #define CAMSV_INT_EN					0x18
-> +#define CAMSV_INT_STATUS				0x1C
-> +#define PASS1_DONE_STATUS				10
->  #define CAMSV_SW_CTL					0x20
->  #define CAMSV_CLK_EN					0x30
->  
-> @@ -122,6 +125,8 @@ struct mtk_mipicsi_dev {
->  	struct platform_device *pdev;
->  	unsigned int camsv_num;
->  	struct device *larb_pdev;
-> +	unsigned int		irq[MTK_CAMDMA_MAX_NUM];
-> +	bool irq_status[MTK_CAMDMA_MAX_NUM];
->  	void __iomem		*ana;
->  	void __iomem		*seninf_ctrl;
->  	void __iomem		*seninf;
-> @@ -132,6 +137,7 @@ struct mtk_mipicsi_dev {
->  	spinlock_t		lock;
->  	spinlock_t		queue_lock;
->  	struct mtk_mipicsi_buf	cam_buf[MAX_BUFFER_NUM];
-> +	bool			is_enable_irq[MTK_CAMDMA_MAX_NUM];
-
-Useless, so remove it.
-
->  	bool streamon;
->  	unsigned int link;
->  	u8 link_reg_val;
-> @@ -911,9 +917,96 @@ static const struct dev_pm_ops mtk_mipicsi_pm = {
->  		mtk_mipicsi_pm_resume, NULL)
->  };
->  
-> +static int get_irq_channel(struct mtk_mipicsi_dev *mipicsi)
-> +{
-> +	int ch;
-> +	u32 int_reg_val;
-> +
-> +	for (ch = 0; ch < mipicsi->camsv_num; ++ch) {
-> +		int_reg_val = readl(mipicsi->camsv[ch] + CAMSV_INT_STATUS);
-> +		if ((int_reg_val & (1UL << PASS1_DONE_STATUS)) != 0UL)
-> +			return ch;
-> +	}
-> +
-> +	return -1;
-> +}
-> +
-> +static void mtk_mipicsi_irq_buf_process(struct mtk_mipicsi_dev *mipicsi)
-> +{
-> +	unsigned int i = 0U;
-> +	struct mtk_mipicsi_buf *new_cam_buf = NULL;
-> +	struct mtk_mipicsi_buf *tmp = NULL;
-> +	unsigned int index = 0U;
-> +	unsigned int next = 0U;
-> +
-> +	for (i = 0U; i < MTK_CAMDMA_MAX_NUM; ++i)
-> +		mipicsi->irq_status[i] = false;
-> +
-> +	i = 0;
-> +
-> +	/* only one buffer left */
-> +	if ((&(mipicsi->fb_list))->next->next == &(mipicsi->fb_list))
-> +		return;
-> +
-> +	/*for each fb_lst 2 times to get the top 2 buffer.*/
-> +	list_for_each_entry_safe(new_cam_buf, tmp,
-> +		&(mipicsi->fb_list), queue) {
-> +		if (i == 0U) {
-> +			index = new_cam_buf->vb->index;
-> +		} else {
-> +			next = new_cam_buf->vb->index;
-> +			break;
-> +		}
-> +		++i;
-> +	}
-> +
-> +	/*
-> +	 * fb_list has one more buffer. Free the first buffer to user
-> +	 * and fill the second buffer to HW.
-> +	 */
-> +	vb2_buffer_done(mipicsi->cam_buf[index].vb,
-> +		VB2_BUF_STATE_DONE);
-> +
-> +	list_del_init(&(mipicsi->cam_buf[index].queue));
-> +}
-> +
-> +static irqreturn_t mtk_mipicsi_isr(int irq, void *data)
-> +{
-> +
-> +	struct mtk_mipicsi_dev *mipicsi = data;
-> +	unsigned long flags = 0;
-> +	int isr_ch;
-> +	u8 irq_cnt = 0, i = 0;
-> +
-> +	spin_lock_irqsave(&mipicsi->lock, flags);
-> +
-> +	isr_ch = get_irq_channel(mipicsi);
-
-I think you should pass data as camsv instance, so you need not to
-search the camsv instance, and each camsv instance could pointer to the
-same misicsi instance.
-
-> +	if (isr_ch < 0) {
-> +		spin_unlock_irqrestore(&mipicsi->lock, flags);
-> +		return IRQ_HANDLED;
-> +	}
-> +
-> +	/* clear interrupt */
-> +	writel(1UL << PASS1_DONE_STATUS,
-> +		mipicsi->camsv[isr_ch] + CAMSV_INT_STATUS);
-> +	mipicsi->irq_status[isr_ch] = true;
-> +	for (i = 0U; i < MTK_CAMDMA_MAX_NUM; ++i) {
-> +		if (mipicsi->irq_status[i])
-> +			++irq_cnt;
-> +	}
-> +
-> +	if (irq_cnt == mipicsi->link)
-> +		mtk_mipicsi_irq_buf_process(mipicsi);
-
-I think mtk_mipicsi_irq_buf_process() should not be processed in irq
-handler. In irq handler, do as few things as possible.
-
-Regards,
-CK
-
-> +	spin_unlock_irqrestore(&mipicsi->lock, flags);
-> +
-> +	return IRQ_HANDLED;
-> +}
-> +
->  static int seninf_mux_camsv_node_parse(struct mtk_mipicsi_dev *mipicsi,
->  		int index)
->  {
-> +	int ret;
-> +	int irq;
->  	struct clk *clk = NULL;
->  	struct device *dev = NULL;
->  	struct resource *res = NULL;
-> @@ -951,6 +1044,23 @@ static int seninf_mux_camsv_node_parse(struct mtk_mipicsi_dev *mipicsi,
->  	}
->  	mipicsi->clk[index] = clk;
->  
-> +	irq = of_irq_get(np, 0);
-> +	if (irq <= 0) {
-> +		dev_err(dev, "get irq fail in %s node\n", np->full_name);
-> +		return -ENODEV;
-> +	}
-> +	mipicsi->irq[index] = irq;
-> +
-> +	ret = devm_request_irq(dev, irq,
-> +			mtk_mipicsi_isr, 0,
-> +			mipicsi->drv_name, mipicsi);
-> +	if (ret != 0) {
-> +		dev_err(dev, "%s irq register failed\n", np->full_name);
-> +		return -ENODEV;
-> +	}
-> +	disable_irq(mipicsi->irq[index]);
-> +	mipicsi->irq_status[index] = false;
-> +
->  	res = platform_get_resource(camdma_pdev, IORESOURCE_MEM, 0);
->  	if (res == NULL) {
->  		dev_err(dev, "get seninf_mux memory failed in %s node\n",
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gRnJpLCAyMDE5LTA1LTE3IGF0IDEwOjEyICswMjAwLCBNaXF1ZWwgUmF5bmFsIHdyb3RlOgo+
+IEhpIHhpYW9sZWksCj4gCj4geGlhb2xlaSBsaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+IHdy
+b3RlIG9uIEZyaSwgMTcgTWF5IDIwMTkgMDk6MzI6NDcKPiArMDgwMDoKPiAKPiA+IEhpIE1pcXVl
+bCwKPiA+IAo+ID4gU29ycnkgdG8gYm90aGVyIHlvdSwgYnV0IG1heSBJIGFzayBpZiBpdCBpcyBm
+aW5lIHRvIGFjY2VwdCB0aGlzIHBhdGNoCj4gPiBzZXQgbm93LCBwYXRjaGVzIGFsbCB3aXRoIHlv
+dXIgcmV2aWV3Lgo+IAo+IFdlIGFyZSBpbiB0aGUgbWlkZGxlIG9mIHRoZSBtZXJnZSB3aW5kb3cs
+IHNvIHllcywgSSB3aWxsIHRha2UgeW91cgo+IHBhdGNoZXMsIGJ1dCBub3Qgbm93LgoKR290IGl0
+LiBUaGFua3MgTWlxdWVsLgoKPiAKPiBUaGFua3MsCj4gTWlxdcOobAoKCgpfX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5n
+IGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5m
+cmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
