@@ -2,86 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CBA0721592
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 May 2019 10:46:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2C24E215E4
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 May 2019 11:06:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5FiEpT1zGsKhDtlQ8TODQARa4Eai3CEpkfQ5XIPZyj8=; b=kYS8fgMWwX3XSI
-	nWpCnv4gTPzNvUTlcgXnsj7H0kTkNFKo2YKoLBrifenx+jB6Hx7usoLlq8g8nqNGsZeNzSegixbvl
-	TYPlw0unIzy85dWpJykdsKuxkuTtb/Kn8OodvnrrVxN1B6M2MLmYrQLccIYm8yZsfdI9jgb6BexLP
-	rGHb5yQ0FdlOfgA0PxV1eGv1k9CYEl+Jk1/80wxiIAltjQwFr+7z5IhB6SWKAFx853KuhNxCgJviH
-	Qn9L3rJvBtCv5vTGRdKy/04sPad4Aq/IbqGYB/XEOz3sxKwmo3byEz8NrF5kK34V41nHTWMvotfrb
-	rXb4IQpW4DwROVDmoy4g==;
+	List-Owner; bh=RvK6jqYGuMW3viKd2uzx6tG/Xm7WETuAHcjrqt0RYSs=; b=Qv6Xi8p45QOsdI
+	Hbu8L5Cw+zkpU+xmxpMrFWVvRmyi1JBCSqymCiTBDNZ+pizvwQdoHcltHFjaWBRPu4Z3u3HeumBQY
+	lLzmM/4/HvDw/oWH3nmZuM9T31CsfYrqYuCEDKBZ5Hx779F5EmvwEsIVcaMzNgJQGeZeQXGhzWG0d
+	6WvQgQKMq3w48+yGkfY4wuVULxLDU9zc0erqZyn3zHzLzYDVdJOyp/lO+pHj4PI9br0FWfwNJlWad
+	emBzzFjwfv5gP8JYhf69pHolSxVHX007j6md0xKkCCxEjaL5U3ReAW3i3IbhrxQ5S+eoRYyN850ig
+	Y0pF0gjtoq+tDTP3cBmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRYV8-0001Qk-Fm; Fri, 17 May 2019 08:46:02 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1hRYoM-0000Un-23; Fri, 17 May 2019 09:05:54 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRYV3-0001Pk-SB
- for linux-mediatek@lists.infradead.org; Fri, 17 May 2019 08:46:00 +0000
-Received: by mail-wr1-x443.google.com with SMTP id l2so6178606wrb.9
- for <linux-mediatek@lists.infradead.org>; Fri, 17 May 2019 01:45:57 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=zANvFWcmKo8EuxHsHKy0+A0TL7ZrRo4zFgliyPjUUj4=;
- b=G89E42Pa8/i0yLqFzDrR7voEnExiA0bj6nxX/4R5r20F5lboYP6d80VB+yt+uns+cU
- CLh2KVwNUMjJb6+O8Y93sHBY/NUt++OAt1tQ/3SDeNABXCdBOafrfibAkCOB3L+feT2m
- s8KKjZzoi+CZ3QwFklDFwfqL5xNo4+o+laL2vGQMvFhfjpOpDpH/nYqr7zoFiWsDa+wF
- eDvewynCTMPVD2dTSK+2OE91AyC87rburN6cEoGRymtk4UVzaG5SUtZU/qTII1JxVCcO
- KybayTKa8Vw6kkWVbJAPaHWf/bzv2rVzxFntNfCUMdPh8jfM3u2rwPh3bOb1tqB2Uf0v
- rEWw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=zANvFWcmKo8EuxHsHKy0+A0TL7ZrRo4zFgliyPjUUj4=;
- b=B6+UZr0dzGfPcCrOXO16f64ybdOlQkmkwkjmPPtkE5ICgetgGIKJCMIzEjBd771yn6
- DMB5iA/ltP4yBX8NjVfHEM8ooBeOSs+7GqdtLS9NE9QLVDScSnIfkx4XBubF8o0sx2PY
- pLWn4VZwA7hO/IxochopaMMh6umIFQOiqVdLuN4j6DvflC9ldauasPKdWyrvp/64kq03
- tybxrUYQrJSJ023adNM9Dz92GuqMtOy676xzdKoXusPekFsJGEJc7djBdyiCKT35zsxU
- 0VlqWLiDSOs6F7pDUrfoQSgrJVYWR8D9JeyuIB/VlrH+KPgZzHqHCVsz1//kt/V07aOX
- OyfA==
-X-Gm-Message-State: APjAAAUz6xLpApRJgBlkak0RHf20X+M1OK6fNvaLaa99YzEC2EbFn7Gx
- wL7HXZWIwrAXapCat5JmMlk26Q==
-X-Google-Smtp-Source: APXvYqwBWa7+jkAlmZTk18op83oeFtloTczIxdn6drxP9ta4epZYJ52bFHtjfdYK8jPP5UQwHeCBig==
-X-Received: by 2002:adf:ec42:: with SMTP id w2mr32445004wrn.77.1558082756357; 
- Fri, 17 May 2019 01:45:56 -0700 (PDT)
-Received: from localhost ([2620:10d:c092:180::1:fcd4])
- by smtp.gmail.com with ESMTPSA id v17sm5528287wmc.30.2019.05.17.01.45.55
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Fri, 17 May 2019 01:45:55 -0700 (PDT)
-From: Loys Ollivier <lollivier@baylibre.com>
-To: Robin Murphy <robin.murphy@arm.com>, Johan Hovold <johan@kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Subject: Re: [PATCH v2] gnss: get serial speed from subdrivers
-In-Reply-To: <69b5e90c-c1c3-9f2e-57a8-64741182a96e@arm.com>
-References: <1558024626-19395-1-git-send-email-lollivier@baylibre.com>
- <69b5e90c-c1c3-9f2e-57a8-64741182a96e@arm.com>
-Date: Fri, 17 May 2019 10:45:53 +0200
-Message-ID: <86y33579ku.fsf@baylibre.com>
+ id 1hRYoF-0000Na-Ug; Fri, 17 May 2019 09:05:52 +0000
+X-UUID: 38e18c1e90b940fbba22acbd39bf81e6-20190517
+X-UUID: 38e18c1e90b940fbba22acbd39bf81e6-20190517
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 924884380; Fri, 17 May 2019 01:05:37 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 17 May 2019 02:05:35 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 17 May 2019 17:05:34 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 17 May 2019 17:05:34 +0800
+Message-ID: <1558083934.29098.6.camel@mtksdaap41>
+Subject: Re: [PATCH v3 09/13] [media] mtk-mipicsi: add ISR for writing the
+ data to buffer
+From: CK Hu <ck.hu@mediatek.com>
+To: Stu Hsieh <stu.hsieh@mediatek.com>
+Date: Fri, 17 May 2019 17:05:34 +0800
+In-Reply-To: <1557814430-9675-10-git-send-email-stu.hsieh@mediatek.com>
+References: <1557814430-9675-1-git-send-email-stu.hsieh@mediatek.com>
+ <1557814430-9675-10-git-send-email-stu.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190517_014557_964225_B32978F2 
-X-CRM114-Status: UNSURE (   9.50  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190517_020548_145606_F38AF95D 
+X-CRM114-Status: GOOD (  22.70  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,52 +72,207 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: baylibre-upstreaming@groups.io, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Colin Ian King <colin.king@canonical.com>,
- Corentin Labbe <clabbe.montjoie@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu 16 May 2019 at 19:02, Robin Murphy <robin.murphy@arm.com> wrote:
+Hi, Stu:
 
->> -/*
->> - * FIXME: need to provide subdriver defaults or separate dt parsing from
->> - * allocation.
->> - */
->>   static int gnss_serial_parse_dt(struct serdev_device *serdev)
->>   {
->>   	struct gnss_serial *gserial = serdev_device_get_drvdata(serdev);
->>   	struct device_node *node = serdev->dev.of_node;
->> -	u32 speed = 4800;
->> +	u32 speed;
->>   
->> -	of_property_read_u32(node, "current-speed", &speed);
->> +	of_property_read_u32(node, "default-speed", &speed);
->>   
->>   	gserial->speed = speed;
->
-> Hmm, maybe it's a bit too convoluted for the compiler to warn about, but 
-> if a "default-speed" property is not present, gserial->speed will now be 
-> assigned an uninitialised value. I don't know what the intent is neither 
-> the driver nor the DT provides a value, but you'll either need to bring 
-> back the fallback initialisation above or propagate errors from 
-> of_property_read_u32().
->
-> Robin.
->
+On Tue, 2019-05-14 at 14:13 +0800, Stu Hsieh wrote:
+> This patch add ISR for writing the data to buffer
+> 
+> When mipicsi HW complete to write the data in buffer,
+> the interrupt woulb be trigger.
+> So, the ISR need to clear interrupt status for next interrupt.
+> 
+> Signed-off-by: Stu Hsieh <stu.hsieh@mediatek.com>
+> ---
+>  .../media/platform/mtk-mipicsi/mtk_mipicsi.c  | 110 ++++++++++++++++++
+>  1 file changed, 110 insertions(+)
+> 
+> diff --git a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
+> index 44c01c8d566b..af5655345754 100644
+> --- a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
+> +++ b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
+> @@ -36,6 +36,7 @@
+>  #include <linux/pm_runtime.h>
+>  #include <linux/iommu.h>
+>  #include <linux/of.h>
+> +#include <linux/of_irq.h>
+>  #include <linux/of_platform.h>
+>  #include <media/v4l2-common.h>
+>  #include <media/v4l2-dev.h>
+> @@ -93,6 +94,8 @@
+>  #define CAMSV_MODULE_EN					0x10
+>  #define CAMSV_FMT_SEL					0x14
+>  #define CAMSV_INT_EN					0x18
+> +#define CAMSV_INT_STATUS				0x1C
+> +#define PASS1_DONE_STATUS				10
+>  #define CAMSV_SW_CTL					0x20
+>  #define CAMSV_CLK_EN					0x30
+>  
+> @@ -122,6 +125,8 @@ struct mtk_mipicsi_dev {
+>  	struct platform_device *pdev;
+>  	unsigned int camsv_num;
+>  	struct device *larb_pdev;
+> +	unsigned int		irq[MTK_CAMDMA_MAX_NUM];
+> +	bool irq_status[MTK_CAMDMA_MAX_NUM];
+>  	void __iomem		*ana;
+>  	void __iomem		*seninf_ctrl;
+>  	void __iomem		*seninf;
+> @@ -132,6 +137,7 @@ struct mtk_mipicsi_dev {
+>  	spinlock_t		lock;
+>  	spinlock_t		queue_lock;
+>  	struct mtk_mipicsi_buf	cam_buf[MAX_BUFFER_NUM];
+> +	bool			is_enable_irq[MTK_CAMDMA_MAX_NUM];
 
-Robin,
-Good point, thank you for your review. I'll think about it and see about
-a fallback scenario.
-I would be in favour of propagating the error because default values are
-very dependent on the hardware in use.
+Useless, so remove it.
 
-Best,
+>  	bool streamon;
+>  	unsigned int link;
+>  	u8 link_reg_val;
+> @@ -911,9 +917,96 @@ static const struct dev_pm_ops mtk_mipicsi_pm = {
+>  		mtk_mipicsi_pm_resume, NULL)
+>  };
+>  
+> +static int get_irq_channel(struct mtk_mipicsi_dev *mipicsi)
+> +{
+> +	int ch;
+> +	u32 int_reg_val;
+> +
+> +	for (ch = 0; ch < mipicsi->camsv_num; ++ch) {
+> +		int_reg_val = readl(mipicsi->camsv[ch] + CAMSV_INT_STATUS);
+> +		if ((int_reg_val & (1UL << PASS1_DONE_STATUS)) != 0UL)
+> +			return ch;
+> +	}
+> +
+> +	return -1;
+> +}
+> +
+> +static void mtk_mipicsi_irq_buf_process(struct mtk_mipicsi_dev *mipicsi)
+> +{
+> +	unsigned int i = 0U;
+> +	struct mtk_mipicsi_buf *new_cam_buf = NULL;
+> +	struct mtk_mipicsi_buf *tmp = NULL;
+> +	unsigned int index = 0U;
+> +	unsigned int next = 0U;
+> +
+> +	for (i = 0U; i < MTK_CAMDMA_MAX_NUM; ++i)
+> +		mipicsi->irq_status[i] = false;
+> +
+> +	i = 0;
+> +
+> +	/* only one buffer left */
+> +	if ((&(mipicsi->fb_list))->next->next == &(mipicsi->fb_list))
+> +		return;
+> +
+> +	/*for each fb_lst 2 times to get the top 2 buffer.*/
+> +	list_for_each_entry_safe(new_cam_buf, tmp,
+> +		&(mipicsi->fb_list), queue) {
+> +		if (i == 0U) {
+> +			index = new_cam_buf->vb->index;
+> +		} else {
+> +			next = new_cam_buf->vb->index;
+> +			break;
+> +		}
+> +		++i;
+> +	}
+> +
+> +	/*
+> +	 * fb_list has one more buffer. Free the first buffer to user
+> +	 * and fill the second buffer to HW.
+> +	 */
+> +	vb2_buffer_done(mipicsi->cam_buf[index].vb,
+> +		VB2_BUF_STATE_DONE);
+> +
+> +	list_del_init(&(mipicsi->cam_buf[index].queue));
+> +}
+> +
+> +static irqreturn_t mtk_mipicsi_isr(int irq, void *data)
+> +{
+> +
+> +	struct mtk_mipicsi_dev *mipicsi = data;
+> +	unsigned long flags = 0;
+> +	int isr_ch;
+> +	u8 irq_cnt = 0, i = 0;
+> +
+> +	spin_lock_irqsave(&mipicsi->lock, flags);
+> +
+> +	isr_ch = get_irq_channel(mipicsi);
 
-Loys
+I think you should pass data as camsv instance, so you need not to
+search the camsv instance, and each camsv instance could pointer to the
+same misicsi instance.
+
+> +	if (isr_ch < 0) {
+> +		spin_unlock_irqrestore(&mipicsi->lock, flags);
+> +		return IRQ_HANDLED;
+> +	}
+> +
+> +	/* clear interrupt */
+> +	writel(1UL << PASS1_DONE_STATUS,
+> +		mipicsi->camsv[isr_ch] + CAMSV_INT_STATUS);
+> +	mipicsi->irq_status[isr_ch] = true;
+> +	for (i = 0U; i < MTK_CAMDMA_MAX_NUM; ++i) {
+> +		if (mipicsi->irq_status[i])
+> +			++irq_cnt;
+> +	}
+> +
+> +	if (irq_cnt == mipicsi->link)
+> +		mtk_mipicsi_irq_buf_process(mipicsi);
+
+I think mtk_mipicsi_irq_buf_process() should not be processed in irq
+handler. In irq handler, do as few things as possible.
+
+Regards,
+CK
+
+> +	spin_unlock_irqrestore(&mipicsi->lock, flags);
+> +
+> +	return IRQ_HANDLED;
+> +}
+> +
+>  static int seninf_mux_camsv_node_parse(struct mtk_mipicsi_dev *mipicsi,
+>  		int index)
+>  {
+> +	int ret;
+> +	int irq;
+>  	struct clk *clk = NULL;
+>  	struct device *dev = NULL;
+>  	struct resource *res = NULL;
+> @@ -951,6 +1044,23 @@ static int seninf_mux_camsv_node_parse(struct mtk_mipicsi_dev *mipicsi,
+>  	}
+>  	mipicsi->clk[index] = clk;
+>  
+> +	irq = of_irq_get(np, 0);
+> +	if (irq <= 0) {
+> +		dev_err(dev, "get irq fail in %s node\n", np->full_name);
+> +		return -ENODEV;
+> +	}
+> +	mipicsi->irq[index] = irq;
+> +
+> +	ret = devm_request_irq(dev, irq,
+> +			mtk_mipicsi_isr, 0,
+> +			mipicsi->drv_name, mipicsi);
+> +	if (ret != 0) {
+> +		dev_err(dev, "%s irq register failed\n", np->full_name);
+> +		return -ENODEV;
+> +	}
+> +	disable_irq(mipicsi->irq[index]);
+> +	mipicsi->irq_status[index] = false;
+> +
+>  	res = platform_get_resource(camdma_pdev, IORESOURCE_MEM, 0);
+>  	if (res == NULL) {
+>  		dev_err(dev, "get seninf_mux memory failed in %s node\n",
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
