@@ -2,81 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E607F22035
-	for <lists+linux-mediatek@lfdr.de>; Sat, 18 May 2019 00:23:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A4FEC22224
+	for <lists+linux-mediatek@lfdr.de>; Sat, 18 May 2019 09:52:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2M/73FglFR1Pyk+9LwUm3/zPmea1lHdmnu9hmq7gRzQ=; b=MWaoeE6WO6plWE
-	ormeOKpXGJHiTd9+cSrBb0CYEy3hidF0J4NorNUmjtEiEu/zdY9HTTP1IQ+OGYWiJ0NxDKwHz9N39
-	WMCW6u3qFqBanE+25OuPZPNoRXEcmxoj546UPqhctESKoXHLLFfo/NiLvmC8dynKtGSNSOr1K8vz5
-	VmO4NOix62Cem6w3pEhpokdfaOnvnbYVPhCvP6F9ibBIr3CyzE51Mj9uBtPrk8isuc0ClVjMmGXl7
-	QmSfzbm6Y3dzXLXf4ZVbbuaJL1CL1toDgZ3dACzQkEzrtyE0GJefFS9+SwNgkgLiDts7KqsSar4l6
-	V0Mn0bivZoKbBxkz6wwA==;
+	List-Owner; bh=xRxnyDWnsG81nOq9+IZjifleZ8TQ8PowinSiCPUR7KQ=; b=HSlF0vL8exv822
+	lxx8JzuR23zJbLaXj3gV1zMV4y/1D9U2s4tHvHm0JRAXIlJ9hq0Qg5cjzxQ/sarxc1E/krFgRHTWg
+	eyNAis4SE5+bOdDpXyVaJcSmZyReELiQZ8rFZsJF7laDS5+gdorCBbcz0pCT8T34FMzVSz/SL4a8r
+	3hBMe3T8xLOer6l+dAUxm0NIB33yQLX8NpvDBB9aZcx06UQbTbbpepJzL6dIh543wKuUKqsrQS56m
+	eTmdmBqQMVrjOzFN+bKrZxGRkmoZmW211mKPUg0eTj52/DhFDlPRJEWTdhmNFodrFSXYSxTa1cHRG
+	GjUnA+DMfk+8SD2OvCTQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRlFn-0003NS-U3; Fri, 17 May 2019 22:23:03 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hRu8Q-0000Cu-03; Sat, 18 May 2019 07:52:02 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRlFe-0003GM-4Q; Fri, 17 May 2019 22:22:55 +0000
-Received: from mail-qt1-f176.google.com (mail-qt1-f176.google.com
- [209.85.160.176])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6DD2221734;
- Fri, 17 May 2019 22:22:53 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1558131773;
- bh=wy3tUZPJTfjLA6B2iSkaBZEFlBpyvFUKCy44GXr0yjI=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=1H8AXHsM/HDg4uE/AoRizeknctHuF4pbibpUykeWsjQrOTs0uwSaNYbA+O6l/2Xs9
- Ov6lBU00JS8+Tb8R+N/06VtXt0SHNrz52/TeDKk0D6sLF58BZTsWtnjdtblWRqqJie
- R2I4HibvqDOpWRkqITAOovENVOXUYTjn/z18L03w=
-Received: by mail-qt1-f176.google.com with SMTP id a39so9865366qtk.2;
- Fri, 17 May 2019 15:22:53 -0700 (PDT)
-X-Gm-Message-State: APjAAAUgI1Cjd//dHdytBYN1z9YtyRZGBuTn+zNba3nVfiQY0E9EQh/k
- SUW0LArd8kS/vc4qQlOwOBIco2X1Eyd4JzeOCQ==
-X-Google-Smtp-Source: APXvYqxCG14RTMkHi4AFjCOBJ2jDfMBdP6IR9Yo55aGoXHKbHkWK52ZrzIrGRx1VvIDs46fF56pwC87n9mQ89Qff9Qc=
-X-Received: by 2002:a0c:f350:: with SMTP id e16mr48812969qvm.72.1558131772630; 
- Fri, 17 May 2019 15:22:52 -0700 (PDT)
+ id 1hRu8F-00005h-NW; Sat, 18 May 2019 07:51:53 +0000
+X-UUID: 0982a45f2d544508be480936273495db-20190517
+X-UUID: 0982a45f2d544508be480936273495db-20190517
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 951579047; Fri, 17 May 2019 23:51:46 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 18 May 2019 00:51:44 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs01n1.mediatek.inc
+ (172.21.101.68) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sat, 18 May 2019 15:51:36 +0800
+Received: from [10.16.6.141] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sat, 18 May 2019 15:51:33 +0800
+Message-ID: <1558165892.7681.8.camel@mszsdaap41>
+Subject: Re: [v2 3/3] drm/mediatek: add mipi_tx driver for mt8183
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: CK Hu <ck.hu@mediatek.com>
+Date: Sat, 18 May 2019 15:51:32 +0800
+In-Reply-To: <1557134258.5345.5.camel@mtksdaap41>
+References: <20190416054217.75387-1-jitao.shi@mediatek.com>
+ <20190416054217.75387-4-jitao.shi@mediatek.com>
+ <1557134258.5345.5.camel@mtksdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <20190417104511.21514-1-frederic.chen@mediatek.com>
- <20190417104511.21514-2-frederic.chen@mediatek.com>
- <20190430011506.GA8514@bogus>
- <1557238925.11663.21.camel@mtksdccf07>
- <CAL_JsqKGW9WqyNgqKD0MxsqxYHKZ+VNV5A2p+neGqwmKmiODOQ@mail.gmail.com>
- <CAAFQd5BVWjcxp9Tia9Pmgn_54bc9n5Vs1s__G7YWHiezfVVYpA@mail.gmail.com>
-In-Reply-To: <CAAFQd5BVWjcxp9Tia9Pmgn_54bc9n5Vs1s__G7YWHiezfVVYpA@mail.gmail.com>
-From: Rob Herring <robh@kernel.org>
-Date: Fri, 17 May 2019 17:22:41 -0500
-X-Gmail-Original-Message-ID: <CAL_Jsq+hcgth5gT4gCKPiWtFvje8eOHFs1PxtkHJ6Raj8TOw3w@mail.gmail.com>
-Message-ID: <CAL_Jsq+hcgth5gT4gCKPiWtFvje8eOHFs1PxtkHJ6Raj8TOw3w@mail.gmail.com>
-Subject: Re: [RFC PATCH V1 1/6] dt-bindings: mt8183: Add binding for DIP
- shared memory
-To: Tomasz Figa <tfiga@chromium.org>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190517_152254_207902_C667C64E 
-X-CRM114-Status: GOOD (  33.61  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190518_005151_771414_9D055516 
+X-CRM114-Status: GOOD (  17.31  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,132 +72,144 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Shik Chen <shik@chromium.org>, devicetree@vger.kernel.org,
- =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
- Frederic Chen <frederic.chen@mediatek.com>,
- =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
- =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- =?UTF-8?B?SG9sbWVzIENoaW91ICjpgrHmjLop?= <holmes.chiou@mediatek.com>,
- suleiman@chromium.org, Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>,
- yuzhao@chromium.org,
- =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
- Sj Huang <sj.huang@mediatek.com>,
- Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
- Hans Verkuil <hans.verkuil@cisco.com>, zwisler@chromium.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com, Ajay
+ Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Andy Yan <andy.yan@rock-chips.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul
+ Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Kumar Gala <galak@codeaurora.org>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, May 16, 2019 at 1:12 AM Tomasz Figa <tfiga@chromium.org> wrote:
->
-> On Wed, May 15, 2019 at 1:19 AM Rob Herring <robh@kernel.org> wrote:
-> >
-> > On Tue, May 7, 2019 at 9:22 AM Frederic Chen <frederic.chen@mediatek.com> wrote:
-> > >
-> > > Dear Rob,
-> > >
-> > > I appreciate your comments.
-> > >
-> > > On Mon, 2019-04-29 at 20:15 -0500, Rob Herring wrote:
-> > > > On Wed, Apr 17, 2019 at 06:45:06PM +0800, Frederic Chen wrote:
-> > > > > This patch adds the binding for describing the shared memory
-> > > > > used to exchange configuration and tuning data between the
-> > > > > co-processor and Digital Image Processing (DIP) unit of the
-> > > > > camera ISP system on Mediatek SoCs.
-> > > > >
-> > > > > Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
-> > > > > ---
-> > > > >  .../mediatek,reserve-memory-dip_smem.txt      | 45 +++++++++++++++++++
-> > > > >  1 file changed, 45 insertions(+)
-> > > > >  create mode 100644 Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-dip_smem.txt
-> > > > >
-> > > > > diff --git a/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-dip_smem.txt b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-dip_smem.txt
-> > > > > new file mode 100644
-> > > > > index 000000000000..64c001b476b9
-> > > > > --- /dev/null
-> > > > > +++ b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-dip_smem.txt
-> > > > > @@ -0,0 +1,45 @@
-> > > > > +Mediatek DIP Shared Memory binding
-> > > > > +
-> > > > > +This binding describes the shared memory, which serves the purpose of
-> > > > > +describing the shared memory region used to exchange data between Digital
-> > > > > +Image Processing (DIP) and co-processor in Mediatek SoCs.
-> > > > > +
-> > > > > +The co-processor doesn't have the iommu so we need to use the physical
-> > > > > +address to access the shared buffer in the firmware.
-> > > > > +
-> > > > > +The Digital Image Processing (DIP) can access memory through mt8183 IOMMU so
-> > > > > +it can use dma address to access the memory region.
-> > > > > +(See iommu/mediatek,iommu.txt for the detailed description of Mediatek IOMMU)
-> > > > > +
-> > > > > +
-> > > > > +Required properties:
-> > > > > +
-> > > > > +- compatible: must be "mediatek,reserve-memory-dip_smem"
-> > > >
-> > > > Don't use '_'.
-> > >
-> > > I got it. I will use "mediatek,reserve-memory-dip-smem" instead in next
-> > > version of the patch
-> > >
-> > > >
-> > > > > +
-> > > > > +- reg: required for static allocation (see reserved-memory.txt for
-> > > > > +  the detailed usage)
-> > > > > +
-> > > > > +- alloc-range: required for dynamic allocation. The range must
-> > > > > +  between 0x00000400 and 0x100000000 due to the co-processer's
-> > > > > +  addressing limitation
-> > > >
-> > > > Generally, you should pick either static or dynamic allocation for a
-> > > > given binding. Static if there's some address restriction or sharing,
-> > > > dynamic if not.
-> > > >
-> > > > Sounds like static in this case.
-> > > >
-> > >
-> > > DIP reserved memory has address restriction so it is the static case. I
-> > > would like to remove the dynamic allocation part and modify the
-> > > description as following:
-> > >
-> > > - reg: required for DIP. The range must be between 0x00000400 and
-> > >   0x100000000 due to the co-processor's addressing limitation.
-> > >   The size must be 26MB. Please see reserved-memory.txt for the
-> > >   detailed usage.
-> >
-> > You can use dma-ranges to define addressing translations and
-> > restrictions like this. That will in turn set the device's dma-mask to
-> > ensure allocations are done in a region that is addressable.
-> >
-> > But if you have a known, fixed size, then a carve out with
-> > reserved-memory is fine.
->
-> There is also another aspect here. The coprocessor that we're
-> allocating the memory for is behind an MPU that must be programmed
-> completely in one go and locked for security reasons to ensure that
-> the coprocessor itself doesn't rewrite the MPU settings. That means
-> that we need to have all the allocations completed before booting that
-> coprocessor.
->
-> To be honest, I'd adopt a completely different design here.
->
-> We're going to have a driver for that coprocessor (SCP) and IMHO any
-> shared memory areas should belong to it. Then, any specific drivers
-> talking to the firmware running on SCP should ask the SCP driver to
-> allocate some memory from its fixed pool. WDYT?
+On Mon, 2019-05-06 at 17:17 +0800, CK Hu wrote:
+> Hi, Jitao:
+> 
+> On Tue, 2019-04-16 at 13:42 +0800, Jitao Shi wrote:
+> > This patch add mt8183 mipi_tx driver.
+> > And also support other chips that use the same binding and driver.
+> > 
+> > Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> > ---
+> >  drivers/gpu/drm/mediatek/Makefile             |   1 +
+> >  drivers/gpu/drm/mediatek/mtk_mipi_tx.c        |   2 +
+> >  drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |   1 +
+> >  drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 154 ++++++++++++++++++
+> >  4 files changed, 158 insertions(+)
+> >  create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
+> > 
+> 
+> [snip]
+> 
+> > +
+> > +static int mtk_mipi_tx_pll_prepare(struct clk_hw *hw)
+> > +{
+> > +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
+> > +	unsigned int txdiv, txdiv0;
+> > +	u64 pcw;
+> > +	int ret;
+> > +
+> > +	dev_dbg(mipi_tx->dev, "prepare: %u bps\n", mipi_tx->data_rate);
+> > +
+> > +	if (mipi_tx->data_rate >= 2000000000) {
+> > +		txdiv = 1;
+> > +		txdiv0 = 0;
+> > +	} else if (mipi_tx->data_rate >= 1000000000) {
+> > +		txdiv = 2;
+> > +		txdiv0 = 1;
+> > +	} else if (mipi_tx->data_rate >= 500000000) {
+> > +		txdiv = 4;
+> > +		txdiv0 = 2;
+> > +	} else if (mipi_tx->data_rate > 250000000) {
+> > +		txdiv = 8;
+> > +		txdiv0 = 3;
+> > +	} else if (mipi_tx->data_rate >= 125000000) {
+> > +		txdiv = 16;
+> > +		txdiv0 = 4;
+> > +	} else {
+> > +		return -EINVAL;
+> > +	}
+> > +
+> > +	ret = clk_prepare_enable(mipi_tx->ref_clk);
+> > +	if (ret < 0) {
+> > +		dev_err(mipi_tx->dev,
+> > +			"can't prepare and enable mipi_tx ref_clk %d\n", ret);
+> > +		return ret;
+> > +	}
+> 
+> You enable the parent clock when prepare this clock here, this behavior
+> looks strange. I think the flow should be:
+> 
+> 1. Parent clock prepare
+> 2. This clock prepare
+> 3. Parent clock enable
+> 4. This clock enable
+> 
+> Maybe you should implement 'enable callback' so that parent clock would
+> be already enabled.
+> 
+> One question is, mipi_tx_pll is used by dsi driver, but I does not see
+> dsi prepare_enable() mipi_tx_pll, how does this work?
+> 
+> Regards,
+> CK
+> 
 
-That's more than just an address restriction, so yeah, use a
-reserved-memory area.
+The mipi_tx can be accessed after clk_prepare_enable(mipi_tx->ref_clk);
 
-Rob
+So place the clk_prepare_enable(mipi_tx->ref_clk) before accessing
+mipitx.
+
+mipi_tx_pll is enable by mtk_mipi_tx_power_on() in mtk_mip_tx.c.
+clk_prepare_enable(mipi_tx->pll) will enable mipi_tx_pll.
+
+Beset Regards
+Jitao
+
+> > +
+> > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON4, RG_DSI_PLL_IBIAS);
+> > +
+> > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
+> > +	usleep_range(30, 100);
+> > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
+> > +	pcw = div_u64(((u64)mipi_tx->data_rate * txdiv) << 24, 26000000);
+> > +	writel(pcw, mipi_tx->regs + MIPITX_PLL_CON0);
+> > +	mtk_mipi_tx_update_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_POSDIV,
+> > +				txdiv0 << 8);
+> > +	usleep_range(1000, 2000);
+> > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static void mtk_mipi_tx_pll_unprepare(struct clk_hw *hw)
+> > +{
+> > +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
+> > +
+> > +	dev_dbg(mipi_tx->dev, "unprepare\n");
+> > +
+> > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
+> > +
+> > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
+> > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
+> > +	clk_disable_unprepare(mipi_tx->ref_clk);
+> > +}
+> > +
+> 
+> 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
