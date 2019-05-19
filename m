@@ -2,58 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3CA602266D
-	for <lists+linux-mediatek@lfdr.de>; Sun, 19 May 2019 11:26:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C09882266C
+	for <lists+linux-mediatek@lfdr.de>; Sun, 19 May 2019 11:26:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Q4/LJ8P2hdmVHamBaNuPKC9Tpaz/Vh6P5uudffIfn+c=; b=fQXQ7UJVC1QP6T
-	N2r26L2ra+HLoqen4n+nQDcxHAPG/cb49qNyeA/45mxK1m+cNyCn8dVHjbOFW2/Tkh84m4pabRakz
-	BsWPpHIouTEX6EuYFHGnsSocGed7bFLykASiPKUWCfjPKpQ1xLagR0E2ctFA6musJBFblboCe/Cww
-	PXIfWbAO9IPUwS+gd+0HTH6MYArJoz20alLuAF8sbGZzfE+/HeDsayK7ZNLkeGniQmQ/O6/c/VscD
-	yN8BZFvRl9leKr5Z46Qvk97oG0tDZe5msdXGhgfseDin53wMlzSELrHcmQK1m0ZmcJjRVLQYyhF8D
-	PW4XFKv+k3IK4wOayI7A==;
+	List-Owner; bh=A5sBrJTkyRer3kqMrHTSXcDx+mdvMvmt4E0B1GUgNGo=; b=p9jiTNSIOxj6a9
+	2PpjizlaDtGN/nr3ysPxQ5MtHTC2FKMG7ZyzYW9f3w7xjqK6rG0RJ51PAV8CA9HphRqq7zIwyE50f
+	TMESaHroZ8wy3yHrv9zYeBS5KLRSHsvq9iKUktP3O2YX17ST/EiLIuZNMePK/Ko2ttpbg+driLGi9
+	g15MI+ANy0nznao/96ycM8F6CzOiZxkTCUKD7L8gTsBEaTs6RFJ+p7ROjz2Sc1W12epPwxbzsaXDQ
+	FE3eKj5eDadHWd8eRBHzZOozNyrPStJrcZWvCXoX7w+QbhbsYO2o1ljVL+atu3VWWX+yToC1Wx2d3
+	ZjAXsXqEI0MS/nRLYiow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSI5F-0006uY-IX; Sun, 19 May 2019 09:26:21 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hSI5D-0006sM-Tw; Sun, 19 May 2019 09:26:19 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSI4m-0006Il-Br; Sun, 19 May 2019 09:25:53 +0000
-X-UUID: 464918c245d743f0ab32ff6bf61a4bb7-20190519
-X-UUID: 464918c245d743f0ab32ff6bf61a4bb7-20190519
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hSI4l-0006JU-Aa; Sun, 19 May 2019 09:25:53 +0000
+X-UUID: 941f9a9c64b74b90bc3f559b758dbd1a-20190519
+X-UUID: 941f9a9c64b74b90bc3f559b758dbd1a-20190519
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 373020841; Sun, 19 May 2019 01:25:48 -0800
-Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 02:25:46 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
- (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Sun, 19 May 2019 17:25:44 +0800
+ with ESMTP id 1807174943; Sun, 19 May 2019 01:25:49 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 19 May 2019 02:25:48 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
+ (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 19 May 2019 17:25:46 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Sun, 19 May 2019 17:25:43 +0800
+ 15.0.1395.4 via Frontend Transport; Sun, 19 May 2019 17:25:44 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
  Rutland" <mark.rutland@arm.com>, Ian Campbell
  <ijc+devicetree@hellion.org.uk>, Kumar Gala <galak@codeaurora.org>,
  <linux-pwm@vger.kernel.org>, David Airlie <airlied@linux.ie>, Matthias
  Brugger <matthias.bgg@gmail.com>
-Subject: [v3 3/7] drm/mediatek: add dsi reg commit disable control
-Date: Sun, 19 May 2019 17:25:33 +0800
-Message-ID: <20190519092537.69053-4-jitao.shi@mediatek.com>
+Subject: [v3 4/7] drm/mediatek: add frame size control
+Date: Sun, 19 May 2019 17:25:34 +0800
+Message-ID: <20190519092537.69053-5-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190519092537.69053-1-jitao.shi@mediatek.com>
 References: <20190519092537.69053-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_022552_472812_C00D82C2 
-X-CRM114-Status: UNSURE (   9.99  )
+X-CRM114-CacheID: sfid-20190519_022551_364537_5F3037D8 
+X-CRM114-Status: UNSURE (   9.44  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -92,53 +92,45 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-New DSI IP has shadow register and working reg. The register
-values are writen to shadow register. And then trigger with
-commit reg, the register values will be moved working register.
-
-This fucntion is defualt on. But this driver doesn't use this
-function. So add the disable control.
+Our new DSI chip has frame size control.
+So add the driver data to control for different chips.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
 ---
- drivers/gpu/drm/mediatek/mtk_dsi.c | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+ drivers/gpu/drm/mediatek/mtk_dsi.c | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-index a48db056df6c..fd367985c7fd 100644
+index fd367985c7fd..13c34b854a25 100644
 --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
 +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-@@ -131,6 +131,10 @@
- #define VM_CMD_EN			BIT(0)
- #define TS_VFP_EN			BIT(5)
- 
-+#define DSI_SHADOW_DEBUG	0x190U
-+#define FORCE_COMMIT		BIT(0)
-+#define BYPASS_SHADOW		BIT(1)
-+
- #define CONFIG				(0xff << 0)
- #define SHORT_PACKET			0
- #define LONG_PACKET			2
-@@ -157,6 +161,7 @@ struct phy;
- 
+@@ -78,6 +78,7 @@
+ #define DSI_VBP_NL		0x24
+ #define DSI_VFP_NL		0x28
+ #define DSI_VACT_NL		0x2C
++#define DSI_SIZE_CON		0x38
+ #define DSI_HSA_WC		0x50
+ #define DSI_HBP_WC		0x54
+ #define DSI_HFP_WC		0x58
+@@ -162,6 +163,7 @@ struct phy;
  struct mtk_dsi_driver_data {
  	const u32 reg_cmdq_off;
-+	bool has_shadow_ctl;
+ 	bool has_shadow_ctl;
++	bool has_size_ctl;
  };
  
  struct mtk_dsi {
-@@ -594,6 +599,11 @@ static int mtk_dsi_poweron(struct mtk_dsi *dsi)
- 	}
+@@ -430,6 +432,9 @@ static void mtk_dsi_config_vdo_timing(struct mtk_dsi *dsi)
+ 	writel(vm->vfront_porch, dsi->regs + DSI_VFP_NL);
+ 	writel(vm->vactive, dsi->regs + DSI_VACT_NL);
  
- 	mtk_dsi_enable(dsi);
++	if (dsi->driver_data->has_size_ctl)
++		writel(vm->vactive << 16 | vm->hactive, dsi->regs + DSI_SIZE_CON);
 +
-+	if (dsi->driver_data->has_shadow_ctl)
-+		writel(FORCE_COMMIT | BYPASS_SHADOW,
-+		       dsi->regs + DSI_SHADOW_DEBUG);
-+
- 	mtk_dsi_reset_engine(dsi);
- 	mtk_dsi_phy_timconfig(dsi);
+ 	horizontal_sync_active_byte = (vm->hsync_len * dsi_tmp_buf_bpp - 10);
  
+ 	if (dsi->mode_flags & MIPI_DSI_MODE_VIDEO_SYNC_PULSE)
 -- 
 2.21.0
 
