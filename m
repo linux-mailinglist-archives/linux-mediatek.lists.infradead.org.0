@@ -2,62 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ABE922264B
-	for <lists+linux-mediatek@lfdr.de>; Sun, 19 May 2019 09:58:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 414242266B
+	for <lists+linux-mediatek@lfdr.de>; Sun, 19 May 2019 11:26:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yB+7KsfLdQFcVJlnUzk9xFnXh2eHvVpZBpEPKdnrqPc=; b=j7qp58axKuh6VY
-	WdJCWFt5OziFEa7KUwA88a2JDw2MIJwLhV1yA1x8qt4TXxhBVdF4SBQYJnbLkkSfAep4fZvETbRWF
-	iFmjqCLjPQsP3i6cZ1Y9+a9W4wGbebEy+P6t5K+c6EBcu9xDQBkQFcEd55YhFnRSimIflXVdy23Lt
-	hqmjx4M12oz50BMIOZRnqnfuEHjK9gpQqwFbTVdzFoRJYoYMMuufvhXSOJx/YyqW3/msTXMyLCeXD
-	8+AhHQbZKq/nBUaVA53TRMdWZtV5WXx5ROH1iJhByz2QgaDOKRaTos/Mnqyc9st/Yg+YHx8EA8xUc
-	iPeqxNlzldx3navF9X+Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=hG7PcgGU0J8JsiDEjE7pdxhuLR+wwJQ1SJ36ovp1X3A=; b=Rf9i4gGUsPur4M
+	JIsDMR/CtzYAZYdNr/qBnhaRSTN9msW+7YFlQk+rMXGSgCeYvj38M8iGIM9uSnJUjlbr7LBj8WbdP
+	2xA0ElnJm6VZo+9Q4ks/XcRYHUj2z46TtTphEQKhAYFgjD2pYBAYZLYat1nxuou6sE7SPv/1UB2ul
+	rdPZK/oLIDqdoSawgGhWvuEACbDrR2comXrPhjckyiPpvxkF4jppojw3liVWu3hDd7HDLqiFSonxa
+	foEOjBE0m/EpM+JmlNhKWg+eXDvsjHkBH2LcHm1LV8/BCV+BUlGdNoxcDVo1sSjjPWPJPBvJ+6pKp
+	0BW4BXp+VtR/iQvKF8LA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSGhu-0005Vq-3A; Sun, 19 May 2019 07:58:10 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hSI5C-0006qZ-6i; Sun, 19 May 2019 09:26:18 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSGhN-0004qU-Jz; Sun, 19 May 2019 07:57:38 +0000
-X-UUID: 8bc365b610b749af8a3176ce92463e78-20190518
-X-UUID: 8bc365b610b749af8a3176ce92463e78-20190518
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <chaotian.jing@mediatek.com>)
+ id 1hSI4k-0006Ip-UE; Sun, 19 May 2019 09:25:53 +0000
+X-UUID: ab7072ebcc564ed0ae6423484f892701-20190519
+X-UUID: ab7072ebcc564ed0ae6423484f892701-20190519
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 441210588; Sat, 18 May 2019 23:57:30 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 00:57:29 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 15:57:27 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 19 May 2019 15:57:27 +0800
-From: Chaotian Jing <chaotian.jing@mediatek.com>
-To: Ulf Hansson <ulf.hansson@linaro.org>
-Subject: [PATCH 2/2] mmc: mediatek: support 24bits segment size
-Date: Sun, 19 May 2019 15:57:17 +0800
-Message-ID: <1558252637-10556-3-git-send-email-chaotian.jing@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1558252637-10556-1-git-send-email-chaotian.jing@mediatek.com>
-References: <1558252637-10556-1-git-send-email-chaotian.jing@mediatek.com>
+ with ESMTP id 684644719; Sun, 19 May 2019 01:25:43 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 19 May 2019 02:25:42 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
+ (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 19 May 2019 17:25:39 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Sun, 19 May 2019 17:25:38 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
+ Rutland" <mark.rutland@arm.com>, Ian Campbell
+ <ijc+devicetree@hellion.org.uk>, Kumar Gala <galak@codeaurora.org>,
+ <linux-pwm@vger.kernel.org>, David Airlie <airlied@linux.ie>, Matthias
+ Brugger <matthias.bgg@gmail.com>
+Subject: [v3 0/7] Support dsi for mt8183
+Date: Sun, 19 May 2019 17:25:30 +0800
+Message-ID: <20190519092537.69053-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2E91B52073018D154ED368F480FF70C73E3518419F3DBA61916625645C3301422000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_005737_664843_6A07C255 
-X-CRM114-Status: GOOD (  10.83  )
+X-CRM114-CacheID: sfid-20190519_022550_985310_C0107C5C 
+X-CRM114-Status: UNSURE (   6.89  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -71,67 +73,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: srv_heupstream@mediatek.com, linux-mmc@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Chaotian Jing <chaotian.jing@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
+ Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
+ Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
+ Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
+ Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
+ yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-MSDC IP which support 64G DRAM will support 24bits BDMA buffer length,
-so add support it.
+Changes since v2:
+ - change the video timing calc method
+ - fine the dsi and mipitx init sequence
+ - fine tune commit msg
 
-Signed-off-by: Chaotian Jing <chaotian.jing@mediatek.com>
----
- drivers/mmc/host/mtk-sd.c | 16 +++++++++++++---
- 1 file changed, 13 insertions(+), 3 deletions(-)
+Changes since v1:
+ - separate frame size and reg commit control independent patches.
+ - fix some return values in probe
+ - remove DSI_CMDW0 in "CMDQ reg address of mt8173 is different with mt2701"
 
-diff --git a/drivers/mmc/host/mtk-sd.c b/drivers/mmc/host/mtk-sd.c
-index 7d8502a..682e483 100644
---- a/drivers/mmc/host/mtk-sd.c
-+++ b/drivers/mmc/host/mtk-sd.c
-@@ -336,6 +336,7 @@ struct mt_bdma_desc {
- 	u32 ptr;
- 	u32 bd_data_len;
- #define BDMA_DESC_BUFLEN	(0xffff) /* bit0 ~ bit15 */
-+#define BDMA_DESC_BUFLEN_EXT	(0xffffff) /* bit0 ~ bit23 */
- };
- 
- struct msdc_dma {
-@@ -649,8 +650,14 @@ static inline void msdc_dma_setup(struct msdc_host *host, struct msdc_dma *dma,
- 			bd[j].bd_info |= (upper_32_bits(dma_address) & 0xf)
- 					 << 28;
- 		}
--		bd[j].bd_data_len &= ~BDMA_DESC_BUFLEN;
--		bd[j].bd_data_len |= (dma_len & BDMA_DESC_BUFLEN);
-+
-+		if (host->dev_comp->support_64g) {
-+			bd[j].bd_data_len &= ~BDMA_DESC_BUFLEN_EXT;
-+			bd[j].bd_data_len |= (dma_len & BDMA_DESC_BUFLEN_EXT);
-+		} else {
-+			bd[j].bd_data_len &= ~BDMA_DESC_BUFLEN;
-+			bd[j].bd_data_len |= (dma_len & BDMA_DESC_BUFLEN);
-+		}
- 
- 		if (j == data->sg_count - 1) /* the last bd */
- 			bd[j].bd_info |= BDMA_DESC_EOL;
-@@ -2280,7 +2287,10 @@ static int msdc_drv_probe(struct platform_device *pdev)
- 	mmc->caps |= MMC_CAP_ERASE | MMC_CAP_CMD23;
- 	/* MMC core transfer sizes tunable parameters */
- 	mmc->max_segs = MAX_BD_NUM;
--	mmc->max_seg_size = BDMA_DESC_BUFLEN;
-+	if (host->dev_comp->support_64g)
-+		mmc->max_seg_size = BDMA_DESC_BUFLEN_EXT;
-+	else
-+		mmc->max_seg_size = BDMA_DESC_BUFLEN;
- 	mmc->max_blk_size = 2048;
- 	mmc->max_req_size = 512 * 1024;
- 	mmc->max_blk_count = mmc->max_req_size / 512;
+Jitao Shi (7):
+  drm/mediatek: move mipi_dsi_host_register to probe
+  drm/mediatek: fixes CMDQ reg address of mt8173 is different with
+    mt2701
+  drm/mediatek: add dsi reg commit disable control
+  drm/mediatek: add frame size control
+  drm/mediatek: add mt8183 dsi driver support
+  drm/mediatek: change the dsi phytiming calculate method
+  drm: mediatek: adjust dsi and mipi_tx probe sequence
+
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c |   2 +-
+ drivers/gpu/drm/mediatek/mtk_dsi.c     | 219 ++++++++++++++++++-------
+ 2 files changed, 163 insertions(+), 58 deletions(-)
+
 -- 
-1.8.1.1.dirty
+2.21.0
 
 
 _______________________________________________
