@@ -2,61 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 145642234A
-	for <lists+linux-mediatek@lfdr.de>; Sat, 18 May 2019 12:37:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 17806225BB
+	for <lists+linux-mediatek@lfdr.de>; Sun, 19 May 2019 05:09:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dP9Dt9s/MmB2q5gOeaKFifQULBp7jKqzhBVvDbQFaz0=; b=WN/Qd/5HI4Cs4h
-	2zYAYErcqzRdTz8llUKtLzDmHTyM6Uo3k+1zTsY7jSSmrqzamvBLKLrBjMr2VUdQJsJJkuCWLu+8n
-	me3kMhz3p2vY0kX3JEvATYO+LVIwdajbGPp3diCJjVsHB0E1QSKOlNWdDn5DrNWl3DJoK3gChMz4Q
-	J7CcySiKkciqsbZqoxP5zFjhFngRBPHzICStoZlCPmzi1kX5R+WP6gzYJBTOciqlaYr1Gpxr9x451
-	hrY9pumwKTzXBjz+At6KyzxQfYbWZ89jDC4iHRzSapHjGPwG0OzeD7RncHujZ7iqXvQfiZV0XjHV/
-	eGBCSVBPrbW1jLtsZtWw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=UJWndulouBtNAjatyPMlarHpeesJ84u+VR70r8dtGS0=; b=Dyn
+	43AldCqRmZBaY4rtEwi/krN3sU1jI/zBDk4iP2fsInfrvXQreWjg5ceWnb/VsYeoygPwy3TK5KK7+
+	MN2xKqOdfRe+zeXMBcxZr3TtHv8S7FyeY2E3D7qsB9L7z+rkP8I9+yOOUlZHB/ThciW8/kjQb2TfD
+	42vnNivgGdVhsQgmFHdkHVfFxlJ2ERmunnHc/9MJONI41L69ruS9eF076aBH6OJQlD1fa8tfI3RN2
+	96rCSvS8o8q15JV1AxPsGy0hoTRh5AJihyAJHMM7UyTdATKHgjCvwssDB6KLhJusFTdECak4FwmyC
+	/Ra13TnpfBbM8rvi1EiD2p6mT/khyNA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRwi5-0002Sy-7g; Sat, 18 May 2019 10:37:01 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hSCCi-0000dw-7L; Sun, 19 May 2019 03:09:40 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRwhv-0002KZ-93; Sat, 18 May 2019 10:36:52 +0000
-Received: from archlinux (cpc91196-cmbg18-2-0-cust659.5-4.cable.virginm.net
- [81.96.234.148])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id DE78A2087E;
- Sat, 18 May 2019 10:36:46 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1558175809;
- bh=M1cIR0VtB3TnODl/YmcCk/DeYpsOPIWvqiJuH+ZAFUs=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=zHTz8ROxUjXgte53XjHgXP5dkTZVEV0pmQckU89uK6+MPaGeN9/N+brp4jDieoyoc
- k2r6IvTw63gXs8CGpigA7dRWuBeYJkFp5YI+lk10B1P8VTMnmpDlB1s46MDMveWw6h
- 0Z9DOouy3lTGmuty10y5oQom+ftK+0O+NPUuqhi4=
-Date: Sat, 18 May 2019 11:36:43 +0100
-From: Jonathan Cameron <jic23@kernel.org>
-To: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-Subject: Re: [PATCH 4/4] iio: auxadc: mediatek: change to subsys_initcall
-Message-ID: <20190518113643.53a42976@archlinux>
-In-Reply-To: <1557994247-16739-5-git-send-email-chun-hung.wu@mediatek.com>
-References: <1557994247-16739-1-git-send-email-chun-hung.wu@mediatek.com>
- <1557994247-16739-5-git-send-email-chun-hung.wu@mediatek.com>
-X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
-MIME-Version: 1.0
+ id 1hSCCa-0000Z5-I0; Sun, 19 May 2019 03:09:33 +0000
+Received: by mail-pf1-x442.google.com with SMTP id q17so5528592pfq.8;
+ Sat, 18 May 2019 20:09:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id;
+ bh=WzJCr5Mqo7KDli7/APapwgRQAN+3Dg6ZabacVkfKewY=;
+ b=bDPww6T9HxL4G0YBVqH8QA8CxtSPz0B8H38YvWR1qMuAfAhv4ImEaMvavxWgzBbY1S
+ Ui44qaJO1e7sKwZqpav6+PoKS0jvRoCz9DpNUi5xytn1plf4WNQLdnOT1TDrSmIXZp8d
+ 7oMmJdHlmSP6IYMH1mxvfdm2/zWKht5zkFz13Y793V+GqLq3HlJP84FizNUIccz/qyV5
+ DbW7830t96KocxtQu56drxYLzDznc1tgK4OCQoewDb4X0otT3bIhuWQpt9x5Si07IzQM
+ 1/XKlnL5gWsRnOy/gtTyPK0NXhSluLir8CnznHsvMMFnskMVDYOUoVB1EExDZ+qmlIgb
+ jVuw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=WzJCr5Mqo7KDli7/APapwgRQAN+3Dg6ZabacVkfKewY=;
+ b=eUT0KelEV7e12RC2p7vWF9vHlz8Jxv+e0d1QrwrWwOaIKqt+LR6Tu2gLyyWs8CswiV
+ BHr6C9EvymxYFRmQ49K1bBvRa4Xb8VVw1TPSEk41u9grQ/e06i1WxlBMbsXVTeRFO1fk
+ 5CNfltDmmALLe4UbI3WDixtrySWoKx+9ObquWzwL6Efga3f+wsG/BqyoeAQvZOa91d4C
+ JcF8yKtO7rQPUwotgMdqyOzUBHwWBks8F0FCUlow9Li9Ky2nwfKPckPXNAgcjtWeSIyb
+ QWuvX9AEzqX134PtTSt+9m5nEHzGWKKkcrf32oYpgOfyzJ9V97GJxsFUaem4l2P+zABL
+ nnTA==
+X-Gm-Message-State: APjAAAVO1vtc1mc+1ADzd1s01/cft41/4MEkIKSnYqDFg6jM7wAxzwNW
+ Z7hdEJESBhL889wKI066bNs=
+X-Google-Smtp-Source: APXvYqzUDhR+agkX0dI26XmwhEq48+gxrghmc6If8Xc5OS7eLq2qfmYj8EnWhg/A70HjcFg2S8X8Iw==
+X-Received: by 2002:aa7:90ca:: with SMTP id k10mr72091047pfk.20.1558235368251; 
+ Sat, 18 May 2019 20:09:28 -0700 (PDT)
+Received: from localhost ([43.224.245.181])
+ by smtp.gmail.com with ESMTPSA id n127sm13217809pga.57.2019.05.18.20.09.27
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Sat, 18 May 2019 20:09:27 -0700 (PDT)
+From: Weitao Hou <houweitaoo@gmail.com>
+To: nbd@nbd.name, lorenzo.bianconi83@gmail.com, ryder.lee@mediatek.com,
+ royluo@google.com, kvalo@codeaurora.org, davem@davemloft.net,
+ matthias.bgg@gmail.com
+Subject: [PATCH] net: fix typos in code comments
+Date: Sun, 19 May 2019 11:09:23 +0800
+Message-Id: <20190519030923.18343-1-houweitaoo@gmail.com>
+X-Mailer: git-send-email 2.18.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190518_033651_331527_C309A24F 
-X-CRM114-Status: GOOD (  13.77  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190518_200932_621008_B73D3FC6 
+X-CRM114-Status: UNSURE (   9.93  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (houweitaoo[at]gmail.com)
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -64,7 +80,9 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,66 +94,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Lars-Peter Clausen <lars@metafoo.de>, wsd_upstream@mediatek.com,
- linux-iio@vger.kernel.org, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- Peter Meerwald-Stadler <pmeerw@pmeerw.net>, Hartmut Knaack <knaack.h@gmx.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, jg_poxu@mediatek.com,
- linux-arm-kernel@lists.infradead.org
+Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Weitao Hou <houweitaoo@gmail.com>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 16 May 2019 16:10:47 +0800
-Chun-Hung Wu <chun-hung.wu@mediatek.com> wrote:
+fix lenght to length
 
->   Move auxadc platform_driver_register() from module_init
-> to subsys_initcall because auxadc user drivers
-> are all moudle drivers, need to gurantee
-> auxadc driver ready before module_init.
-> 
-Is it not possible to make them use deferred handling to come
-back later if this isn't yet available?
+Signed-off-by: Weitao Hou <houweitaoo@gmail.com>
+---
+ drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-subsys_initcall often ends up being a more fragile approach.
-
-Thanks,
-
-Jonathan
-
-> Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-> ---
->  drivers/iio/adc/mt6577_auxadc.c | 14 +++++++++++++-
->  1 file changed, 13 insertions(+), 1 deletion(-)
-> 
-> diff --git a/drivers/iio/adc/mt6577_auxadc.c b/drivers/iio/adc/mt6577_auxadc.c
-> index 58d7cb2..cb8e3dd 100644
-> --- a/drivers/iio/adc/mt6577_auxadc.c
-> +++ b/drivers/iio/adc/mt6577_auxadc.c
-> @@ -350,7 +350,19 @@ static int mt6577_auxadc_remove(struct platform_device *pdev)
->  	.probe	= mt6577_auxadc_probe,
->  	.remove	= mt6577_auxadc_remove,
->  };
-> -module_platform_driver(mt6577_auxadc_driver);
-> +
-> +static int __init mt6577_auxadc_init(void)
-> +{
-> +	return platform_driver_register(&mt6577_auxadc_driver);
-> +}
-> +
-> +static void __exit mt6577_auxadc_exit(void)
-> +{
-> +	platform_driver_unregister(&mt6577_auxadc_driver);
-> +}
-> +
-> +subsys_initcall(mt6577_auxadc_init);
-> +module_exit(mt6577_auxadc_exit);
->  
->  MODULE_AUTHOR("Zhiyong Tao <zhiyong.tao@mediatek.com>");
->  MODULE_DESCRIPTION("MTK AUXADC Device Driver");
+diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
+index 6b89f7eab26c..e0f5e6202a27 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
++++ b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
+@@ -53,7 +53,7 @@ int mt76x02u_skb_dma_info(struct sk_buff *skb, int port, u32 flags)
+ 	pad = round_up(skb->len, 4) + 4 - skb->len;
+ 
+ 	/* First packet of a A-MSDU burst keeps track of the whole burst
+-	 * length, need to update lenght of it and the last packet.
++	 * length, need to update length of it and the last packet.
+ 	 */
+ 	skb_walk_frags(skb, iter) {
+ 		last = iter;
+-- 
+2.18.0
 
 
 _______________________________________________
