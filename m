@@ -2,129 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B849422B1E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 07:26:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8BFAD22B26
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 07:30:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:MIME-Version:
-	Date:Message-ID:From:To:Subject:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MtHQup3KxByrZJHEIHsXT/Q9NBRDySCLoSC9oMH7Avw=; b=hyHY918qkwCumQ
-	eZjTpf0TjemJgelJnINnYSVWAEOuCwmtyBMtjdatX9SvL8Jnwe/qwc8PtQPDowXEsOufJNA4POqwr
-	LBt8tMxEityq9cI4+yAoB0HKy42flNKch4fYz/86o9mjdjDHqRBtoDymc/sw7Fc9f3ixS5HAfFlHy
-	wt8NL7I4m0CMrTwrqUTBdlX+VzmlzZKX9Zc10uCEaCDhAaPOYuKfa6/eO4S8EOgSbvsjwqTFjoa9L
-	yzzk4yYjsrbjCxQ2RXIpQ1alvC3Ta2SzjeJHG447l8+JkfNeYbpJSj+5UOYi8dwyAEKy1fGwOylJs
-	04YjpedE8ATjkl7wc6iQ==;
+	List-Owner; bh=W7k1J8SORgyQC7O6YXoU8IkSwTiK8l5tZ9ADGhK8zxY=; b=ALPgJUIJ2j6w04
+	45ccyW3UO8BTrO4EZGEFXQyuRk+HaLxwjZSXAZvgztIw9dP7vdFEFuAcu5EmIObitqzZMYGaroeHZ
+	mtyCEo8yvGnDKj3M0qhkRS1sIDgQDm62yn6Vprj5vAGQdjc6yO4Wdm5phrDNUly2ET81kFu/tJKm0
+	K4XkV3FP93VCSqVHgDDNzDkRxaix4J6xBiN2SS00qvCuLSk2SRKKTTloQOk1nsW/jexZjAGB5XDXk
+	7lMAXodifpdi7dFNTrsOJJLqj9ShzyTYOaT1xpn4v4/0sQz1mEJ6u41Ablseedaa+3ONFZp1Ds79U
+	/exx0QwLGGOQwi9GyKow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSao9-0003T2-PQ; Mon, 20 May 2019 05:25:57 +0000
-Received: from mailout1.samsung.com ([203.254.224.24])
+	id 1hSasp-0005FE-30; Mon, 20 May 2019 05:30:47 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSao6-0003SH-7r
- for linux-mediatek@lists.infradead.org; Mon, 20 May 2019 05:25:56 +0000
-Received: from epcas5p3.samsung.com (unknown [182.195.41.41])
- by mailout1.samsung.com (KnoxPortal) with ESMTP id
- 20190520052550epoutp01ba94f6f7aca9a715f9dd1b09dac4836f~gTNVjBEoS1858518585epoutp01h
- for <linux-mediatek@lists.infradead.org>; Mon, 20 May 2019 05:25:50 +0000 (GMT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mailout1.samsung.com
- 20190520052550epoutp01ba94f6f7aca9a715f9dd1b09dac4836f~gTNVjBEoS1858518585epoutp01h
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=samsung.com;
- s=mail20170921; t=1558329950;
- bh=VYqZ8pX4JEj6SMX7HVs1dhhu8H1gxzZkoe1GrhwI4Zo=;
- h=Subject:To:Cc:From:Date:In-Reply-To:References:From;
- b=PHV+uTDQojxQYCsbliGOo5XVYpfkq7hMwn8YUUBDAVrAEI+ZZxf48+CsxlvzvOQ9G
- zieLyMANFeU8BGMI97a5mebOaQkAbTfRKIGHVuDiuRNEAot+e2icdPgX6aEf48thRz
- 3pxttnAaIUm+0oVn3snMew61qDdAYvd1AHsGq0Rc=
-Received: from epsmges5p2new.samsung.com (unknown [182.195.42.74]) by
- epcas5p3.samsung.com (KnoxPortal) with ESMTP id
- 20190520052549epcas5p391a70df588f08d6bfd0268091d3097e3~gTNVE-zLy0368503685epcas5p3d;
- Mon, 20 May 2019 05:25:49 +0000 (GMT)
-Received: from epcas5p4.samsung.com ( [182.195.41.42]) by
- epsmges5p2new.samsung.com (Symantec Messaging Gateway) with SMTP id
- 8D.99.04066.D5A32EC5; Mon, 20 May 2019 14:25:49 +0900 (KST)
-Received: from epsmtrp2.samsung.com (unknown [182.195.40.14]) by
- epcas5p3.samsung.com (KnoxPortal) with ESMTPA id
- 20190520052549epcas5p31f79f15fd71cbb13bfdfacdd5be2b3b9~gTNUvl6gq0368903689epcas5p3T;
- Mon, 20 May 2019 05:25:49 +0000 (GMT)
-Received: from epsmgms1p1new.samsung.com (unknown [182.195.42.41]) by
- epsmtrp2.samsung.com (KnoxPortal) with ESMTP id
- 20190520052549epsmtrp2bff5e032b66ce571f2d433707371f609~gTNUukvno0347903479epsmtrp2f;
- Mon, 20 May 2019 05:25:49 +0000 (GMT)
-X-AuditID: b6c32a4a-973ff70000000fe2-d4-5ce23a5d1f12
-Received: from epsmtip2.samsung.com ( [182.195.34.31]) by
- epsmgms1p1new.samsung.com (Symantec Messaging Gateway) with SMTP id
- CE.0E.03692.D5A32EC5; Mon, 20 May 2019 14:25:49 +0900 (KST)
-Received: from [107.108.73.28] (unknown [107.108.73.28]) by
- epsmtip2.samsung.com (KnoxPortal) with ESMTPA id
- 20190520052547epsmtip2425e9597cbcbc3914b3e5ec1b18b1a3a~gTNSoWB-03166531665epsmtip2U;
- Mon, 20 May 2019 05:25:47 +0000 (GMT)
-Subject: Re: [PATCH v2 1/3] scsi: ufs: Do not overwrite Auto-Hibernate timer
-To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
- martin.petersen@oracle.com, avri.altman@wdc.com, pedrom.sousa@synopsys.com
-From: Alim Akhtar <alim.akhtar@samsung.com>
-Message-ID: <15a271c6-88c8-b9d5-68a8-dc142afdf224@samsung.com>
-Date: Mon, 20 May 2019 10:35:37 +0530
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ id 1hSasf-00058D-2x; Mon, 20 May 2019 05:30:38 +0000
+X-UUID: 149f87da9fca48408ff02501bb56e752-20190519
+X-UUID: 149f87da9fca48408ff02501bb56e752-20190519
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 805102241; Sun, 19 May 2019 21:30:31 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 19 May 2019 22:30:30 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 13:30:26 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 20 May 2019 13:30:27 +0800
+Message-ID: <1558330227.7311.14.camel@mtksdaap41>
+Subject: Re: [v2 3/3] drm/mediatek: add mipi_tx driver for mt8183
+From: CK Hu <ck.hu@mediatek.com>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Date: Mon, 20 May 2019 13:30:27 +0800
+In-Reply-To: <1558165892.7681.8.camel@mszsdaap41>
+References: <20190416054217.75387-1-jitao.shi@mediatek.com>
+ <20190416054217.75387-4-jitao.shi@mediatek.com>
+ <1557134258.5345.5.camel@mtksdaap41> <1558165892.7681.8.camel@mszsdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-In-Reply-To: <1557912988-26758-2-git-send-email-stanley.chu@mediatek.com>
-Content-Language: en-US
-X-Brightmail-Tracker: H4sIAAAAAAAAA01Se0gTcRznt7ub52h2TcNvCrUmIhpqZdn1wAp6XCEUZhCxqJWXis7Gppa2
- Smw+aj3UJHXqelohlOI7S8tVyjDDVSrO1moZ0Uh7TIswsm23yv8+T37fD/xITGQnAsjktHRW
- mSZLlfAFeMuj0LDwPats0sWNz6PpXv0ARn/8OcCnu96ewunaT218Os9axqPzpu0Y3fBukKBf
- nDQhWjvkNFocfRh9s+c3j87VRNGa7kmcbv42RdA1zcNo3WymMseEM+fvOAjmrs7ixTReP8Fo
- jA9w5kddIZ/5+t6MM00PHIhxNMxnCh5qedsFuwVrEtjU5ExWGRmzT5BUNilWvCaPlNh+ETmo
- 2Os08iaBWgbT08NOLCBF1D0Etg9nPOQbAnt/qYd8R/BZe/tfpVr/E+eMDgSPx98gjowhaO08
- y3elfKlYGB7S812GH1XqrP9uxlwEoy7y4Gv7CO5K8alFYClr4rmwkIqB5/kGt45TwaDtqHPj
- udQusHbXE1xmDhgrRt26N7UFvvRp3DpG+YN59BKPwwugdawK427t9AJd4zIOb4CnfUbPBl+w
- 9zR5cAA4xjucl5JOnAJn2qM4WQ01+m6cw2vh4csq3BXBqFCoa4/kXvKBs1OjPK4phMJ8EZcO
- hpPjA55mIBRrtQQXYaCgAFyyiBpBUKRZW4TEuhmzdDOm6GZM0f1/9zLCa9E8VqGSJ7Kq5Yql
- aezhCJVMrspIS4w4cEjegNw/MGxrG7rxLNaAKBJJZgm/lL6VighZpipLbkBAYhI/YVSIVSoS
- Jsiyslnlob3KjFRWZUCBJC7xF5YQA1IRlShLZ1NYVsEq/7o80jsgBy2MNmZc9bb9mDDwyTiz
- T9vS+mh1lzXotXgwP2jHytQVCcadleyENbMk3HLhWO8Tu19j/NDg2C317KL44+JyTah806uW
- 1vLl+5MqzHEbTd/vHlHXdt7KnjBFKi3WTYW5/tXXHL1NVNeI8nr66oNV4nMlMduubF7/0p5w
- /+iLGtQfIsFVSbIlYZhSJfsDt5XHPX0DAAA=
-X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFjrKIsWRmVeSWpSXmKPExsWy7bCSvG6s1aMYg7NTpS1Oz7vKbPHy51U2
- i4MPO1ksVr3ZwWbRen86k0Xr/1fMFpseX2O1uNx8kdGi+zpQYtvns8wWy4//Y7JoajG2aDn2
- lcVi66ffrBZLt95kdOD3mN1wkcWjf91nVo+ds+6ye2xeUu/RcnI/i8f39R1sHh+f3mLx2LL/
- M6PH501yHu0HupkCuKK4bFJSczLLUov07RK4MqZ/VSi4x1Ex6dEf1gbGiexdjJwcEgImEnPn
- /WTpYuTiEBLYzSjx984iNoiEtMT1jROgioQlVv57zg5R9JpRYlL3GVaQhLCAj8TN6/PYQBIi
- AlMYJfauesgE4jALTGGS2Ph8AzNEy21GiaazE8Fa2AS0Je5O38IEYvMK2ElcajvEAmKzCKhK
- dO9dD2aLCkRInHm/ggWiRlDi5MwnYDangKfEh7MtYHOYBcwk5m1+yAxhi0vcejKfCcKWl9j+
- dg7zBEahWUjaZyFpmYWkZRaSlgWMLKsYJVMLinPTc4sNCwzzUsv1ihNzi0vz0vWS83M3MYIj
- V0tzB+PlJfGHGAU4GJV4eD2mP4wRYk0sK67MPcQowcGsJMJrrH4/Rog3JbGyKrUoP76oNCe1
- +BCjNAeLkjjv07xjkUIC6YklqdmpqQWpRTBZJg5OqQZGr6RJYe8SX2d9+rb014z4c1Y3W+3P
- cK1sNY02V4m17JnW3nigoSFUU9D3YgZD6fZlZwxL/VPdTjv+S39zwHZa78LTV7TN3wX3fZ52
- JKeZcw6rxmq9Y4c+X2H/nnY/12PNQpOLXvPYX7btL9g7I0x21b3iSxPsyxUe8bp92T4t+6O8
- nLrUxqnJSizFGYmGWsxFxYkA46CZWdgCAAA=
-X-CMS-MailID: 20190520052549epcas5p31f79f15fd71cbb13bfdfacdd5be2b3b9
-X-Msg-Generator: CA
-CMS-TYPE: 105P
-X-CMS-RootMailID: 20190515093640epcas2p17e4c3e4545ce5e4e4b59ed7b9a954741
-References: <1557912988-26758-1-git-send-email-stanley.chu@mediatek.com>
- <CGME20190515093640epcas2p17e4c3e4545ce5e4e4b59ed7b9a954741@epcas2p1.samsung.com>
- <1557912988-26758-2-git-send-email-stanley.chu@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_222554_615557_DE6867FD 
-X-CRM114-Status: GOOD (  18.59  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190519_223037_266725_5C166242 
+X-CRM114-Status: GOOD (  19.09  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [203.254.224.24 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -136,44 +72,173 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, evgreen@chromium.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org,
- beanhuo@micron.com
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com, Ajay
+ Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Andy Yan <andy.yan@rock-chips.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul
+ Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Kumar Gala <galak@codeaurora.org>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hello Stanley,
+On Sat, 2019-05-18 at 15:51 +0800, Jitao Shi wrote:
+> On Mon, 2019-05-06 at 17:17 +0800, CK Hu wrote:
+> > Hi, Jitao:
+> > 
+> > On Tue, 2019-04-16 at 13:42 +0800, Jitao Shi wrote:
+> > > This patch add mt8183 mipi_tx driver.
+> > > And also support other chips that use the same binding and driver.
+> > > 
+> > > Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> > > ---
+> > >  drivers/gpu/drm/mediatek/Makefile             |   1 +
+> > >  drivers/gpu/drm/mediatek/mtk_mipi_tx.c        |   2 +
+> > >  drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |   1 +
+> > >  drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 154 ++++++++++++++++++
+> > >  4 files changed, 158 insertions(+)
+> > >  create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
+> > > 
+> > 
+> > [snip]
+> > 
+> > > +
+> > > +static int mtk_mipi_tx_pll_prepare(struct clk_hw *hw)
+> > > +{
+> > > +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
+> > > +	unsigned int txdiv, txdiv0;
+> > > +	u64 pcw;
+> > > +	int ret;
+> > > +
+> > > +	dev_dbg(mipi_tx->dev, "prepare: %u bps\n", mipi_tx->data_rate);
+> > > +
+> > > +	if (mipi_tx->data_rate >= 2000000000) {
+> > > +		txdiv = 1;
+> > > +		txdiv0 = 0;
+> > > +	} else if (mipi_tx->data_rate >= 1000000000) {
+> > > +		txdiv = 2;
+> > > +		txdiv0 = 1;
+> > > +	} else if (mipi_tx->data_rate >= 500000000) {
+> > > +		txdiv = 4;
+> > > +		txdiv0 = 2;
+> > > +	} else if (mipi_tx->data_rate > 250000000) {
+> > > +		txdiv = 8;
+> > > +		txdiv0 = 3;
+> > > +	} else if (mipi_tx->data_rate >= 125000000) {
+> > > +		txdiv = 16;
+> > > +		txdiv0 = 4;
+> > > +	} else {
+> > > +		return -EINVAL;
+> > > +	}
+> > > +
+> > > +	ret = clk_prepare_enable(mipi_tx->ref_clk);
+> > > +	if (ret < 0) {
+> > > +		dev_err(mipi_tx->dev,
+> > > +			"can't prepare and enable mipi_tx ref_clk %d\n", ret);
+> > > +		return ret;
+> > > +	}
+> > 
+> > You enable the parent clock when prepare this clock here, this behavior
+> > looks strange. I think the flow should be:
+> > 
+> > 1. Parent clock prepare
+> > 2. This clock prepare
+> > 3. Parent clock enable
+> > 4. This clock enable
+> > 
+> > Maybe you should implement 'enable callback' so that parent clock would
+> > be already enabled.
+> > 
+> > One question is, mipi_tx_pll is used by dsi driver, but I does not see
+> > dsi prepare_enable() mipi_tx_pll, how does this work?
+> > 
+> > Regards,
+> > CK
+> > 
+> 
+> The mipi_tx can be accessed after clk_prepare_enable(mipi_tx->ref_clk);
+> 
+> So place the clk_prepare_enable(mipi_tx->ref_clk) before accessing
+> mipitx.
+> 
+> mipi_tx_pll is enable by mtk_mipi_tx_power_on() in mtk_mip_tx.c.
+> clk_prepare_enable(mipi_tx->pll) will enable mipi_tx_pll.
 
-On 5/15/19 3:06 PM, Stanley Chu wrote:
-> Some vendor-specific initialization flow may set its own
-> auto-hibernate timer. In this case, do not overwrite timer value
-> as "default value" in ufshcd_init().
+OK, so it start from dsi driver. The callstack is:
+
+phy_power_on(dsi->phy);
+-> mtk_mipi_tx_power_on()
+--> clk_prepare_enable(mipi_tx->pll);
+---> mtk_mipi_tx_pll_prepare();
+
+In clk_prepare_enable(), it separately call clk_prepare() and
+clk_enable(). When clk_prepare(), it prepare the parent clock then
+prepare this clock. When clk_enable(), it enable the parent clock then
+enable this clock. So this would result in the sequence:
+
+1. Prepare mipi_tx->ref_clk
+2. Prepare mipi_tx->pll
+3. Enable mipi_tx->ref_clk
+4. Enable mipi_tx->pll
+
+You say 'So place the clk_prepare_enable(mipi_tx->ref_clk) before
+accessing mipitx.', so the step 1 and step 3 is equal to
+clk_prepare_enable(mipi_tx->ref_clk), so I require you to access mipitx
+in step 4, not in step 2.
+
+Regards,
+CK
+
 > 
-> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-> ---
->   drivers/scsi/ufs/ufshcd.c | 2 +-
->   1 file changed, 1 insertion(+), 1 deletion(-)
+> Beset Regards
+> Jitao
 > 
-> diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-> index e040f9dd9ff3..1665820c22fd 100644
-> --- a/drivers/scsi/ufs/ufshcd.c
-> +++ b/drivers/scsi/ufs/ufshcd.c
-> @@ -8309,7 +8309,7 @@ int ufshcd_init(struct ufs_hba *hba, void __iomem *mmio_base, unsigned int irq)
->   						UIC_LINK_HIBERN8_STATE);
->   
->   	/* Set the default auto-hiberate idle timer value to 150 ms */
-> -	if (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT) {
-> +	if (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT & !hba->ahit) {
->   		hba->ahit = FIELD_PREP(UFSHCI_AHIBERN8_TIMER_MASK, 150) |
->   			    FIELD_PREP(UFSHCI_AHIBERN8_SCALE_MASK, 3);
->   	}
+> > > +
+> > > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON4, RG_DSI_PLL_IBIAS);
+> > > +
+> > > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
+> > > +	usleep_range(30, 100);
+> > > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
+> > > +	pcw = div_u64(((u64)mipi_tx->data_rate * txdiv) << 24, 26000000);
+> > > +	writel(pcw, mipi_tx->regs + MIPITX_PLL_CON0);
+> > > +	mtk_mipi_tx_update_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_POSDIV,
+> > > +				txdiv0 << 8);
+> > > +	usleep_range(1000, 2000);
+> > > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
+> > > +
+> > > +	return 0;
+> > > +}
+> > > +
+> > > +static void mtk_mipi_tx_pll_unprepare(struct clk_hw *hw)
+> > > +{
+> > > +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
+> > > +
+> > > +	dev_dbg(mipi_tx->dev, "unprepare\n");
+> > > +
+> > > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
+> > > +
+> > > +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
+> > > +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
+> > > +	clk_disable_unprepare(mipi_tx->ref_clk);
+> > > +}
+> > > +
+> > 
+> > 
 > 
-Looks good to me,
-Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
+> 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
