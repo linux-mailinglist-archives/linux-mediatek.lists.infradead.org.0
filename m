@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3D84C22C4E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 08:48:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3DD0722C8C
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 09:06:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3n0Q53Fjs90gBrQ+MU8ZP53vAJseBLhtbYB5Luw27Cg=; b=G4+2F5zgNRkR6p
-	MAG683R6rSmv1yyYMlV+GIxU3ukzmDUtHWgcRTIevpnyUaBDBJ9vIdMRm0yGda5Rwc78ETDlNORt1
-	GKwQ18jFlfvCjgHwWKxV1UgFz3xJhz9TEs3YY8OAy53wuxc5vU55KGKvxV9/hQINWhLllOheE3y4d
-	kQj7xdXkwPH2H8HwFa9W5hmIEvPmWyJz3JF0MH/ZCuFwo0J5/2oDa5puXcwWOQALcJshGCxx7Bp7/
-	yh+Y3HWkRJ1WLIYEC46gy+ELg1jQfg1npnj2X9OVeYZE/MJJQOHmIbvynNoR+J6i8AyhDEUi/65zP
-	mr+bfZzuXdrNSr9bHr8g==;
+	List-Owner; bh=Vy0c8Ii4Waties2isU2oS4gAOaBFV1gP5A/b7w+iCmw=; b=Dk49n6dE1nUEIy
+	/RLtFKzolJV9gSXso+tFGxgN6QeaNu8jue4AcSxaElyVHK9qtM+qLnCfCE0Zgas4146Hpw6WO5cTn
+	cXBxkkmARVM4sbfoCHIiSKNE+keGItfVDIecC9OULzwqFhgFZdy8BZP1I1EBmW6x7rfWgTZbYqPR4
+	PmejrtwUxqeeqnxjJsW9nps0mKsmuLhl08MmRAXp6CwlnDEpNlwcJ01D+Mx+warB0/g7hSW+QxwXv
+	q/wHexVbZt011le1LOprTGn8eXt07d7CNjlSHY2AdqifFyt+OfheYMjMCHQE2n2m8tircRdBrApML
+	8sGF8CgZUyA71L6Cp8wQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSc6G-0003OK-Ae; Mon, 20 May 2019 06:48:44 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hScNk-0002TA-81; Mon, 20 May 2019 07:06:48 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSc66-0003Gw-Qb; Mon, 20 May 2019 06:48:36 +0000
-X-UUID: d558322e6568429480e7c9b6e55c33d9-20190519
-X-UUID: d558322e6568429480e7c9b6e55c33d9-20190519
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ id 1hScNa-0002M4-HC; Mon, 20 May 2019 07:06:40 +0000
+X-UUID: b6adad78e60e4814b7f30b6c2e5a0b44-20190519
+X-UUID: b6adad78e60e4814b7f30b6c2e5a0b44-20190519
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1691588567; Sun, 19 May 2019 22:48:32 -0800
-Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 23:48:31 -0700
+ with ESMTP id 1962944480; Sun, 19 May 2019 23:06:32 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 00:06:31 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS33N1.mediatek.inc (172.27.4.75) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 14:48:29 +0800
+ MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 15:06:28 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 14:48:28 +0800
-Message-ID: <1558334909.7311.27.camel@mtksdaap41>
-Subject: Re: [v4 4/5] drm/mediatek: control dpi pins dpi or gpio mode in on
- or off
+ Transport; Mon, 20 May 2019 15:06:28 +0800
+Message-ID: <1558335988.7311.34.camel@mtksdaap41>
+Subject: Re: [v2 1/5] drm/mediatek: move mipi_dsi_host_register to probe
 From: CK Hu <ck.hu@mediatek.com>
 To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Mon, 20 May 2019 14:48:29 +0800
-In-Reply-To: <20190518095618.18454-5-jitao.shi@mediatek.com>
-References: <20190518095618.18454-1-jitao.shi@mediatek.com>
- <20190518095618.18454-5-jitao.shi@mediatek.com>
+Date: Mon, 20 May 2019 15:06:28 +0800
+In-Reply-To: <1558258588.367.5.camel@mszsdaap41>
+References: <20190416060501.76276-1-jitao.shi@mediatek.com>
+ <20190416060501.76276-2-jitao.shi@mediatek.com>
+ <1557222735.3498.11.camel@mtksdaap41> <1558258588.367.5.camel@mszsdaap41>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_234834_867423_E71D94DD 
-X-CRM114-Status: GOOD (  15.51  )
+X-CRM114-CacheID: sfid-20190520_000638_575417_A0FEBB48 
+X-CRM114-Status: GOOD (  21.00  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -93,110 +93,126 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
+On Sun, 2019-05-19 at 17:36 +0800, Jitao Shi wrote:
+> On Tue, 2019-05-07 at 17:52 +0800, CK Hu wrote:
+> > Hi, Jitao:
+> > 
+> > On Tue, 2019-04-16 at 14:04 +0800, Jitao Shi wrote:
+> > > DSI panel driver need attach function which is inculde in
+> > > mipi_dsi_host_ops.
+> > > 
+> > > If mipi_dsi_host_register is not in probe, dsi panel will
+> > > probe fail or more delay.
+> > 
+> > I think this patch just prevent delay, not to prevent dsi panel probe
+> > fail. In [1], you mention mipi_dsi_attach() is called in
+> > panel_simple_dsi_probe(), but panel_simple_dsi_probe() is trigger by
+> > mipi_dsi_host_register(), so the probe would success.
+> > 
+> > [1]
+> > https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/panel/panel-simple.c?h=v5.0-rc6#n2987
+> > 
+> > 
+> 
+> Yes, this just prevent delay.
+> 
+> > > 
+> > > So move the mipi_dsi_host_register to probe from bind.
+> > > 
+> > > Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> > > ---
+> > >  drivers/gpu/drm/mediatek/mtk_dsi.c | 50 ++++++++++++++++++------------
+> > >  1 file changed, 30 insertions(+), 20 deletions(-)
+> > > 
+> > > diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> > > index b00eb2d2e086..6c4ac37f983d 100644
+> > > --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> > > +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> > > @@ -1045,12 +1045,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
+> > >  		return ret;
+> > >  	}
+> > >  
+> > > -	ret = mipi_dsi_host_register(&dsi->host);
+> > > -	if (ret < 0) {
+> > > -		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> > > -		goto err_ddp_comp_unregister;
+> > > -	}
+> > > -
+> > >  	ret = mtk_dsi_create_conn_enc(drm, dsi);
+> > >  	if (ret) {
+> > >  		DRM_ERROR("Encoder create failed with %d\n", ret);
+> > > @@ -1060,8 +1054,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
+> > >  	return 0;
+> > >  
+> > >  err_unregister:
+> > > -	mipi_dsi_host_unregister(&dsi->host);
+> > > -err_ddp_comp_unregister:
+> > >  	mtk_ddp_comp_unregister(drm, &dsi->ddp_comp);
+> > >  	return ret;
+> > >  }
+> > > @@ -1097,31 +1089,37 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+> > >  
+> > >  	dsi->host.ops = &mtk_dsi_ops;
+> > >  	dsi->host.dev = dev;
+> > > +	dsi->dev = dev;
+> > 
+> > Why do this?
+> > 
+> > Regards,
+> > CK
+> > 
+> 
+> There are some error message require this poweron().
 
-On Sat, 2019-05-18 at 17:56 +0800, Jitao Shi wrote:
-> Pull dpi pins low when dpi has nothing to display. Aovid leakage
-> current from some dpi pins (Hsync Vsync DE ... ).
-> 
-> Some chips have dpi pins, but there are some chip don't have pins.
-> So this function is controlled by chips driver data.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_dpi.c | 35 +++++++++++++++++++++++++++++-
->  1 file changed, 34 insertions(+), 1 deletion(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dpi.c b/drivers/gpu/drm/mediatek/mtk_dpi.c
-> index 77e6e0f99188..0c4ba0a2be27 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dpi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dpi.c
-> @@ -17,10 +17,12 @@
->  #include <drm/drm_of.h>
->  #include <linux/kernel.h>
->  #include <linux/component.h>
-> -#include <linux/platform_device.h>
->  #include <linux/of.h>
->  #include <linux/of_device.h>
-> +#include <linux/of_gpio.h>
->  #include <linux/of_graph.h>
-> +#include <linux/pinctrl/consumer.h>
-> +#include <linux/platform_device.h>
->  #include <linux/interrupt.h>
->  #include <linux/types.h>
->  #include <linux/clk.h>
-> @@ -79,6 +81,9 @@ struct mtk_dpi {
->  	enum mtk_dpi_out_yc_map yc_map;
->  	enum mtk_dpi_out_bit_num bit_num;
->  	enum mtk_dpi_out_channel_swap channel_swap;
-> +	struct pinctrl *pinctrl;
-> +	struct pinctrl_state *pins_default;
-> +	struct pinctrl_state *pins_dpi;
->  	int refcount;
->  };
->  
-> @@ -118,6 +123,7 @@ struct mtk_dpi_conf {
->  	u32 reg_h_fre_con;
->  	bool edge_sel_en;
->  	bool dual_edge;
-> +	bool dpi_pin_ctrl;
->  };
->  
->  static void mtk_dpi_mask(struct mtk_dpi *dpi, u32 offset, u32 val, u32 mask)
-> @@ -392,6 +398,9 @@ static void mtk_dpi_power_off(struct mtk_dpi *dpi)
->  	if (--dpi->refcount != 0)
->  		return;
->  
-> +	if (dpi->conf->dpi_pin_ctrl)
-> +		pinctrl_select_state(dpi->pinctrl, dpi->pins_default);
-> +
->  	mtk_dpi_disable(dpi);
->  	clk_disable_unprepare(dpi->pixel_clk);
->  	clk_disable_unprepare(dpi->engine_clk);
-> @@ -416,6 +425,9 @@ static int mtk_dpi_power_on(struct mtk_dpi *dpi)
->  		goto err_pixel;
->  	}
->  
-> +	if (dpi->conf->dpi_pin_ctrl)
-> +		pinctrl_select_state(dpi->pinctrl, dpi->pins_dpi);
-> +
->  	mtk_dpi_enable(dpi);
->  	return 0;
->  
-> @@ -724,6 +736,27 @@ static int mtk_dpi_probe(struct platform_device *pdev)
->  	dpi->dev = dev;
->  	dpi->conf = (struct mtk_dpi_conf *)of_device_get_match_data(dev);
->  
-> +	if (dpi->conf->dpi_pin_ctrl) {
-> +		dpi->pinctrl = devm_pinctrl_get(&pdev->dev);
-
-Please describe this in binding document.
+So this should not be in this patch. This patch is related to the timing
+of mipi_dsi_host_register().
 
 Regards,
 CK
 
-> +		if (IS_ERR(dpi->pinctrl)) {
-> +			dev_err(&pdev->dev, "Cannot find pinctrl!\n");
-> +			return PTR_ERR(dpi->pinctrl);
-> +		}
-> +
-> +		dpi->pins_default = pinctrl_lookup_state(dpi->pinctrl,
-> +							 "default");
-> +		if (IS_ERR(dpi->pins_default)) {
-> +			dev_err(&pdev->dev, "Cannot find pinctrl default!\n");
-> +			return PTR_ERR(dpi->pins_default);
-> +		}
-> +
-> +		dpi->pins_dpi = pinctrl_lookup_state(dpi->pinctrl, "dpimode");
-> +		if (IS_ERR(dpi->pins_dpi)) {
-> +			dev_err(&pdev->dev, "Cannot find pinctrl dpimode!\n");
-> +			return PTR_ERR(dpi->pins_dpi);
-> +		}
-> +	}
-> +
->  	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->  	dpi->regs = devm_ioremap_resource(dev, mem);
->  	if (IS_ERR(dpi->regs)) {
+> 
+> > > +	ret = mipi_dsi_host_register(&dsi->host);
+> > > +	if (ret < 0) {
+> > > +		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> > > +		return ret;
+> > > +	}
+> > >  
+> > >  	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
+> > >  					  &dsi->panel, &dsi->bridge);
+> > >  	if (ret)
+> > > -		return ret;
+> > > +		goto err_unregister_host;
+> > >  
+> > >  	dsi->engine_clk = devm_clk_get(dev, "engine");
+> > >  	if (IS_ERR(dsi->engine_clk)) {
+> > >  		ret = PTR_ERR(dsi->engine_clk);
+> > >  		dev_err(dev, "Failed to get engine clock: %d\n", ret);
+> > > -		return ret;
+> > > +		goto err_unregister_host;
+> > >  	}
+> > >  
+> > >  	dsi->digital_clk = devm_clk_get(dev, "digital");
+> > >  	if (IS_ERR(dsi->digital_clk)) {
+> > >  		ret = PTR_ERR(dsi->digital_clk);
+> > >  		dev_err(dev, "Failed to get digital clock: %d\n", ret);
+> > > -		return ret;
+> > > +		goto err_unregister_host;
+> > >  	}
+> > >  
+> > >  	dsi->hs_clk = devm_clk_get(dev, "hs");
+> > >  	if (IS_ERR(dsi->hs_clk)) {
+> > >  		ret = PTR_ERR(dsi->hs_clk);
+> > >  		dev_err(dev, "Failed to get hs clock: %d\n", ret);
+> > > -		return ret;
+> > > +		goto err_unregister_host;
+> > >  	}
+> > >  
+> > >  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> > 
+> > 
+> > 
+> 
+> 
 
 
 
