@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 51224229AC
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 03:16:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8CFFA229F5
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 04:30:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yNtzFRSoYbyVrWdLwVi9H68mNj28Sb0oeCHrQoBetFE=; b=Mwt9pA4KcCL/Dr
-	pvG5FSO5c/Srir5uMzzbL2hHWoe7coAYXrm/zxdXxSQhojyecz709H81gCLT5xDh4SyOURTyAzXwa
-	lP3rDGpSYGwSul2LW1DXu0m3EQSPbKEXBlplgiT5JATQIkZrcyZPTYtEu4NkFKpeMtwaHrF09hKc/
-	jPhRUewNo2WeZB2UW/DGTzxPzh46WzdshqvkkByTN1jXGVLcKOV/x/MyVxeZImMJCTPOHLMveIj/m
-	tPQGK2/pKv7W3owVlK9ow0lmKdLPDcfI1fosSx4To6Lb9FVAhHC6+bbPcPmDd8tYoFWu8RxTN/Pgq
-	3N5uFmO2bhGgmZDn9V8g==;
+	List-Owner; bh=NKrSalG7+ZNRWhS5bKB4caXM8dAlTDdfc3tOv3lsuNk=; b=KSIUmJvyaQNqjT
+	F5Gf6vnHip+779k6SQBFJuy5ENgph/7eGYHfKE1kz8WU6U19NxcXeNPkfjEa7Gp9BYJaKjgvtIqlU
+	CD8Sd66ribkSFONulrYBqlx59dTYSxmxTyedLemsVzuZjB5b8QV3Xe9vj25pSg3iDz3eKtFtpiGSS
+	cpoaIdum6aoWFhL8GyKtwhej8Qcs3dJsFqY9YDZntKjBHyszCOZdFcnbgMWs3MNlMOqq9gsvgqeHD
+	0dLrODhCi1eyjNnQRoJew9ciSx9MM/3hKSRkUn5JOd3Q1HovzRKax8YnQU2Y3F3iilDsSp9hFoPB5
+	Ey8lj/j5pVO5OvBnuXgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSWuG-0007DP-Pq; Mon, 20 May 2019 01:16:00 +0000
+	id 1hSY3z-0004Uz-7S; Mon, 20 May 2019 02:30:07 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSWu7-000784-2i; Mon, 20 May 2019 01:15:53 +0000
-X-UUID: e0d781155c494a11be0a956767fb23a1-20190519
-X-UUID: e0d781155c494a11be0a956767fb23a1-20190519
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hSY3u-0003lQ-0y; Mon, 20 May 2019 02:30:03 +0000
+X-UUID: 71c1147f71ea40f99a63e9cff57976f8-20190519
+X-UUID: 71c1147f71ea40f99a63e9cff57976f8-20190519
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1088236999; Sun, 19 May 2019 17:15:41 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 18:15:40 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 09:15:38 +0800
-Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 09:15:38 +0800
-Message-ID: <1558314937.660.2.camel@mtkswgap22>
-Subject: Re: [PATCH v2 0/3] scsi: ufs: Add error handling of Auto-Hibernate
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>
-Date: Mon, 20 May 2019 09:15:37 +0800
-In-Reply-To: <1557912988-26758-1-git-send-email-stanley.chu@mediatek.com>
-References: <1557912988-26758-1-git-send-email-stanley.chu@mediatek.com>
+ with ESMTP id 1545321235; Sun, 19 May 2019 18:29:54 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 19 May 2019 19:29:52 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 20 May 2019 10:29:50 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 20 May 2019 10:29:49 +0800
+Message-ID: <1558319389.10179.347.camel@mhfsdcap03>
+Subject: Re: [v3 PATCH] dt-binding: usb: add usb-role-switch property
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Date: Mon, 20 May 2019 10:29:49 +0800
+In-Reply-To: <20190517132721.GB1887@kuha.fi.intel.com>
+References: <c3596e996c9ab39c6b9bc14b93309244c4a55014.1557306151.git.chunfeng.yun@mediatek.com>
+ <20190517132721.GB1887@kuha.fi.intel.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 98DB3DEF6BAFB6C6F7C95ADEF238E8BF6072C530D9204002251DC5A7057FDE232000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_181551_127584_9C51BC5A 
-X-CRM114-Status: GOOD (  11.62  )
+X-CRM114-CacheID: sfid-20190519_193002_076928_6DCB9E19 
+X-CRM114-Status: GOOD (  19.75  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,67 +71,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- Andy Teng =?UTF-8?Q?=28=E9=84=A7=E5=A6=82=E5=AE=8F=29?=
- <Andy.Teng@mediatek.com>,
- Chun-Hung Wu =?UTF-8?Q?=28=E5=B7=AB=E9=A7=BF=E5=AE=8F=29?=
- <Chun-hung.Wu@mediatek.com>,
- Kuohong Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=8B=E9=B4=BB=29?=
- <kuohong.wang@mediatek.com>, "evgreen@chromium.org" <evgreen@chromium.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Peter Wang =?UTF-8?Q?=28=E7=8E=8B=E4=BF=A1=E5=8F=8B=29?=
- <peter.wang@mediatek.com>, "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Felipe Balbi <felipe.balbi@linux.intel.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Biju Das <biju.das@bp.renesas.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Avri, Alim, Pedro,
+On Fri, 2019-05-17 at 16:27 +0300, Heikki Krogerus wrote:
+> On Wed, May 08, 2019 at 05:17:44PM +0800, Chunfeng Yun wrote:
+> > Add a property usb-role-switch to tell the driver that use
+> > USB Role Switch framework to handle the role switch,
+> > it's useful when the driver has already supported other ways,
+> > such as extcon framework etc.
+> > 
+> > Cc: Biju Das <biju.das@bp.renesas.com>
+> > Cc: Yu Chen <chenyu56@huawei.com>
+> > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> 
+> Who is meant to pick this? 
 
-Gentle ping for this patch.
+> Can you include this in your series where
+> you introduce that USB Type-B GPIO connector driver?
+> 
+Ok, I'll do it if need
 
-On Wed, 2019-05-15 at 17:36 +0800, Stanley Chu wrote:
-> Currently auto-hibernate is activated if host supports
-> auto-hibern8 capability. However error-handling is not implemented,
-> which makes the feature somewhat risky.
+> FWIW:
 > 
-> If either "Hibernate Enter" or "Hibernate Exit" fail during
-> auto-hibernate flow, the corresponding interrupt
-> "UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
-> according to UFS specification.
+> Reviewed-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 > 
-> This patch adds auto-hibernate error-handling:
+> > ---
+> > v3:
+> >     add property type, modify description suggested by Heikki
+> > 
+> > v2:
+> >     describe it in terms of h/w functionality suggested by Rob
+> > 
+> > v1:
+> >     the property is discussed in:
+> >     [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
+> >     https://patchwork.kernel.org/patch/10852497/
+> > 
+> >     Mediatek and Hisilicon also try to use it:
+> >     [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
+> >     https://patchwork.kernel.org/patch/10918385/
+> >     [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
+> >     https://patchwork.kernel.org/patch/10918367/
+> > 
+> >     [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
+> >     https://patchwork.kernel.org/patch/10909981/
+> > ---
+> >  Documentation/devicetree/bindings/usb/generic.txt | 4 ++++
+> >  1 file changed, 4 insertions(+)
+> > 
+> > diff --git a/Documentation/devicetree/bindings/usb/generic.txt b/Documentation/devicetree/bindings/usb/generic.txt
+> > index 0a74ab8dfdc2..cf5a1ad456e6 100644
+> > --- a/Documentation/devicetree/bindings/usb/generic.txt
+> > +++ b/Documentation/devicetree/bindings/usb/generic.txt
+> > @@ -30,6 +30,10 @@ Optional properties:
+> >  			optional for OTG device.
+> >   - adp-disable: tells OTG controllers we want to disable OTG ADP, ADP is
+> >  			optional for OTG device.
+> > + - usb-role-switch: boolean, indicates that the device is capable of assigning
+> > +			the USB data role (USB host or USB device) for a given
+> > +			USB connector, such as Type-C, Type-B(micro).
+> > +			see connector/usb-connector.txt.
+> >  
+> >  This is an attribute to a USB controller such as:
+> >  
+> > -- 
+> > 2.21.0
 > 
-> - Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
->   auto-hibernate feature is activated.
+> thanks,
 > 
-> - If fail happens, trigger error-handling just like "manual-hibernate"
->   fail and apply the same recovery flow: schedule UFS error handler in
->   ufshcd_check_errors(), and then do host reset and restore
->   in UFS error handler.
-> 
-> v2:
->  - Fix sentences in commit message (Marc Gonzalez)
->  - Make "Auto-Hibernate" error detection more precise (Bean Huo)
-> 
-> Stanley Chu (3):
->   scsi: ufs: Do not overwrite Auto-Hibernate timer
->   scsi: ufs: Add error-handling of Auto-Hibernate
->   scsi: ufs: Use re-factored Auto-Hibernate function
-> 
->  drivers/scsi/ufs/ufshcd.c | 33 ++++++++++++++++++++++++++++++++-
->  drivers/scsi/ufs/ufshcd.h |  5 +++++
->  drivers/scsi/ufs/ufshci.h |  3 +++
->  3 files changed, 40 insertions(+), 1 deletion(-)
-> 
-Thanks,
-Stanley
+
 
 
 _______________________________________________
