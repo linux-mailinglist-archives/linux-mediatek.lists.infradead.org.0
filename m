@@ -2,64 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 078C422CCD
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 09:18:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5BC5E22DA1
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 10:04:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zVmwsQ7EDBQcPJyha4DYdb63acdprZQkukoJypgIMQ8=; b=HZlGFuiyKiAvla
-	memd0ONVlrlP22jQOJyE7mrw3TN/aUAH4o/g/ef1XK/ALP091Re9vTX8l7T4gDe2Wzn7r2NMrBnQr
-	wAR1dQIjk4Gz1qtNHNDqBLE/bYhScGf+YAQLxT4l/GCpJaTZ7fEo89aRkRpYin8SzJVT+/UfEPrwi
-	2Z7g+lj+4l5ZarOTningNXURle1xXUGLtTQdGFYrLtdArCdotWILTUdZ9Bfy1yBVrwjdRNSVaHkQ3
-	4h8TY/tdwxAQNbaZqU4OBoB9tH+4gzdYR3GN2Tj9XChNEkaLMrtPmUkCGUxyyRy7eEy1qWEHtQb/N
-	v0yNt0wTXTYAB8lobKAQ==;
+	List-Owner; bh=kAF0qkM0QqkPyTq6og/W1E8p0RfkE5QL/SGE4dPtr1c=; b=ohUZ22pGLHPjhE
+	6x653ROtz/+4JcvaU7W/woQTEKtn4Iw2z4OLUy5cxnkoYA7VqhD07sNfRtzxDmQWV3sh1Q4N+x4wO
+	wjDD0bxE6MulSCHPz7RTNklcJ/OAcRigA/wgI+/lNQLjLm/sb4ZbyoK3bpm/T5HKLc2fCT/YRM/5x
+	qjJziyyd/v7GDixWBJ/2FFesQuYWu3fghwWXH/uV4jc0PjxILobIkJhMtPHgrr6EIFXwF1OkGKnih
+	BfgezVin9kCv9Jfyf8DugVAfvlJwvVJ7GixI5+YbjDcRW3UzsCif/0BZIMh//iCVdpJQXSjDOuHYE
+	HgTWaI70ibz2/oExzHGQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hScZH-0006kJ-Eb; Mon, 20 May 2019 07:18:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hSdHN-0007yA-7t; Mon, 20 May 2019 08:04:17 +0000
+Received: from mga01.intel.com ([192.55.52.88])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hScZ7-0006e3-OJ; Mon, 20 May 2019 07:18:35 +0000
-X-UUID: ba75b4d7cab94c38b327ac0c853c036c-20190519
-X-UUID: ba75b4d7cab94c38b327ac0c853c036c-20190519
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 612037668; Sun, 19 May 2019 23:18:27 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 00:18:26 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 15:18:23 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 15:18:23 +0800
-Message-ID: <1558336703.7311.37.camel@mtksdaap41>
-Subject: Re: [v3 1/7] drm/mediatek: move mipi_dsi_host_register to probe
-From: CK Hu <ck.hu@mediatek.com>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Mon, 20 May 2019 15:18:23 +0800
-In-Reply-To: <20190519092537.69053-2-jitao.shi@mediatek.com>
-References: <20190519092537.69053-1-jitao.shi@mediatek.com>
- <20190519092537.69053-2-jitao.shi@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hSdHD-0007rp-7O; Mon, 20 May 2019 08:04:08 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by fmsmga101.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 20 May 2019 01:04:06 -0700
+X-ExtLoop1: 1
+Received: from kuha.fi.intel.com ([10.237.72.189])
+ by fmsmga001.fm.intel.com with SMTP; 20 May 2019 01:04:00 -0700
+Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
+ Mon, 20 May 2019 11:03:59 +0300
+Date: Mon, 20 May 2019 11:03:59 +0300
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+Message-ID: <20190520080359.GC1887@kuha.fi.intel.com>
+References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1557823643-8616-5-git-send-email-chunfeng.yun@mediatek.com>
+ <20190517103736.GA1490@kuha.fi.intel.com>
+ <20190517130511.GA1887@kuha.fi.intel.com>
+ <1558319951.10179.352.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1558319951.10179.352.camel@mhfsdcap03>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_001833_792618_4B09A4CC 
-X-CRM114-Status: GOOD (  17.34  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190520_010407_275197_E3EC6C8E 
+X-CRM114-Status: GOOD (  30.65  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.88 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -72,195 +71,126 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com, Ajay
- Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
- cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>,
- Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Andy Yan <andy.yan@rock-chips.com>, Matthias
- Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org, Rahul
- Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Kumar Gala <galak@codeaurora.org>, Sean Paul <seanpaul@chromium.org>
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
+On Mon, May 20, 2019 at 10:39:11AM +0800, Chunfeng Yun wrote:
+> Hi,
+> On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wrote:
+> > Hi,
+> > 
+> > On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Krogerus wrote:
+> > > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfeng Yun wrote:
+> > > > Add fwnode_usb_role_switch_get() to make easier to get
+> > > > usb_role_switch by fwnode which register it.
+> > > > It's useful when there is not device_connection registered
+> > > > between two drivers and only knows the fwnode which register
+> > > > usb_role_switch.
+> > > > 
+> > > > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > > > Tested-by: Biju Das <biju.das@bp.renesas.com>
+> > > 
+> > > Acked-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> > 
+> > Hold on. I just noticed Rob's comment on patch 2/6, where he points out
+> > that you don't need to use device graph since the controller is the
+> > parent of the connector. Doesn't that mean you don't really need this
+> > API?
+> No, I still need it. 
+> The change is about the way how to get fwnode;
+> when use device graph, get fwnode by of_graph_get_remote_node();
+> but now will get fwnode by of_get_parent();
 
-On Sun, 2019-05-19 at 17:25 +0800, Jitao Shi wrote:
-> DSI panel driver need attach function which is inculde in
-> mipi_dsi_host_ops.
+OK, I get that, but I'm still not convinced about if something like
+this function is needed at all. I also have concerns regarding how you
+are using the function. I'll explain in comment to the patch 5/6 in
+this series...
+
+> > > > ---
+> > > > v5 changes:
+> > > >  1. remove linux/of.h suggested by Biju
+> > > >  2. add tested by Biju
+> > > > 
+> > > > Note: still depends on [1]
+> > > >  [1]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+> > > >       https://patchwork.kernel.org/patch/10909971/
+> > > > 
+> > > > v4 changes:
+> > > >   1. use switch_fwnode_match() to find fwnode suggested by Heikki
+> > > >   2. this patch now depends on [1]
+> > > > 
+> > > >  [1] [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+> > > >     https://patchwork.kernel.org/patch/10909971/
+> > > > 
+> > > > v3 changes:
+> > > >   1. use fwnodes instead of node suggested by Andy
+> > > >   2. rebuild the API suggested by Heikki
+> > > > 
+> > > > v2 no changes
+> > > > ---
+> > > >  drivers/usb/roles/class.c | 24 ++++++++++++++++++++++++
+> > > >  include/linux/usb/role.h  |  8 ++++++++
+> > > >  2 files changed, 32 insertions(+)
+> > > > 
+> > > > diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+> > > > index f45d8df5cfb8..4a1f09a41ec0 100644
+> > > > --- a/drivers/usb/roles/class.c
+> > > > +++ b/drivers/usb/roles/class.c
+> > > > @@ -135,6 +135,30 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+> > > >  }
+> > > >  EXPORT_SYMBOL_GPL(usb_role_switch_get);
+> > > >  
+> > > > +/**
+> > > > + * fwnode_usb_role_switch_get - Find USB role switch by it's parent fwnode
+> > > > + * @fwnode: The fwnode that register USB role switch
+> > > > + *
+> > > > + * Finds and returns role switch registered by @fwnode. The reference count
+> > > > + * for the found switch is incremented.
+> > > > + */
+> > > > +struct usb_role_switch *
+> > > > +fwnode_usb_role_switch_get(struct fwnode_handle *fwnode)
+> > > > +{
+> > > > +	struct usb_role_switch *sw;
+> > > > +	struct device *dev;
+> > > > +
+> > > > +	dev = class_find_device(role_class, NULL, fwnode, switch_fwnode_match);
+> > > > +	if (!dev)
+> > > > +		return ERR_PTR(-EPROBE_DEFER);
+> > > > +
+> > > > +	sw = to_role_switch(dev);
+> > > > +	WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+> > > > +
+> > > > +	return sw;
+> > > > +}
+> > > > +EXPORT_SYMBOL_GPL(fwnode_usb_role_switch_get);
+> > 
+> > This function only basically converts the fwnode to usb_role_switch,
+> > but I would actually prefer that we walked through the device graph
+> > here instead of expecting the caller to do that.
+> > 
+> > So this function should probable be called fwnode_to_usb_role_switch()
+> > and not fwnode_usb_role_switch_get(), but I guess you don't need it
+> > at all, right?
+> > 
+> > 
+> > thanks,
+> > 
 > 
-> If mipi_dsi_host_register is not in probe, dsi panel will
-> probe fail or more delay.
 
-In [1], you have agreed this patch just for delay not for probe fail
-Remove 'probe fail'.in commit message.
-
-[1]
-http://lists.infradead.org/pipermail/linux-mediatek/2019-May/019836.html
-
-> 
-> So move the mipi_dsi_host_register to probe from bind.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 50 ++++++++++++++++++------------
->  1 file changed, 30 insertions(+), 20 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index b00eb2d2e086..6c4ac37f983d 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -1045,12 +1045,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
->  		return ret;
->  	}
->  
-> -	ret = mipi_dsi_host_register(&dsi->host);
-> -	if (ret < 0) {
-> -		dev_err(dev, "failed to register DSI host: %d\n", ret);
-> -		goto err_ddp_comp_unregister;
-> -	}
-> -
->  	ret = mtk_dsi_create_conn_enc(drm, dsi);
->  	if (ret) {
->  		DRM_ERROR("Encoder create failed with %d\n", ret);
-> @@ -1060,8 +1054,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
->  	return 0;
->  
->  err_unregister:
-> -	mipi_dsi_host_unregister(&dsi->host);
-> -err_ddp_comp_unregister:
->  	mtk_ddp_comp_unregister(drm, &dsi->ddp_comp);
->  	return ret;
->  }
-> @@ -1097,31 +1089,37 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  
->  	dsi->host.ops = &mtk_dsi_ops;
->  	dsi->host.dev = dev;
-> +	dsi->dev = dev;
-
-This is for debug message, not for the timing of
-mipi_dsi_host_register(), so move to an independent patch.
-
-Regards,
-CK
-
-> +	ret = mipi_dsi_host_register(&dsi->host);
-> +	if (ret < 0) {
-> +		dev_err(dev, "failed to register DSI host: %d\n", ret);
-> +		return ret;
-> +	}
->  
->  	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
->  					  &dsi->panel, &dsi->bridge);
->  	if (ret)
-> -		return ret;
-> +		goto err_unregister_host;
->  
->  	dsi->engine_clk = devm_clk_get(dev, "engine");
->  	if (IS_ERR(dsi->engine_clk)) {
->  		ret = PTR_ERR(dsi->engine_clk);
->  		dev_err(dev, "Failed to get engine clock: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	dsi->digital_clk = devm_clk_get(dev, "digital");
->  	if (IS_ERR(dsi->digital_clk)) {
->  		ret = PTR_ERR(dsi->digital_clk);
->  		dev_err(dev, "Failed to get digital clock: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	dsi->hs_clk = devm_clk_get(dev, "hs");
->  	if (IS_ERR(dsi->hs_clk)) {
->  		ret = PTR_ERR(dsi->hs_clk);
->  		dev_err(dev, "Failed to get hs clock: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> @@ -1129,33 +1127,35 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  	if (IS_ERR(dsi->regs)) {
->  		ret = PTR_ERR(dsi->regs);
->  		dev_err(dev, "Failed to ioremap memory: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	dsi->phy = devm_phy_get(dev, "dphy");
->  	if (IS_ERR(dsi->phy)) {
->  		ret = PTR_ERR(dsi->phy);
->  		dev_err(dev, "Failed to get MIPI-DPHY: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	comp_id = mtk_ddp_comp_get_id(dev->of_node, MTK_DSI);
->  	if (comp_id < 0) {
->  		dev_err(dev, "Failed to identify by alias: %d\n", comp_id);
-> -		return comp_id;
-> +		ret = comp_id;
-> +		goto err_unregister_host;
->  	}
->  
->  	ret = mtk_ddp_comp_init(dev, dev->of_node, &dsi->ddp_comp, comp_id,
->  				&mtk_dsi_funcs);
->  	if (ret) {
->  		dev_err(dev, "Failed to initialize component: %d\n", ret);
-> -		return ret;
-> +		goto err_unregister_host;
->  	}
->  
->  	irq_num = platform_get_irq(pdev, 0);
->  	if (irq_num < 0) {
-> -		dev_err(&pdev->dev, "failed to request dsi irq resource\n");
-> -		return -EPROBE_DEFER;
-> +		dev_err(&pdev->dev, "failed to get dsi irq_num: %d\n", irq_num);
-> +		ret = irq_num;
-> +		goto err_unregister_host;
->  	}
->  
->  	irq_set_status_flags(irq_num, IRQ_TYPE_LEVEL_LOW);
-> @@ -1163,14 +1163,24 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  			       IRQF_TRIGGER_LOW, dev_name(&pdev->dev), dsi);
->  	if (ret) {
->  		dev_err(&pdev->dev, "failed to request mediatek dsi irq\n");
-> -		return -EPROBE_DEFER;
-> +		goto err_unregister_host;
->  	}
->  
->  	init_waitqueue_head(&dsi->irq_wait_queue);
->  
->  	platform_set_drvdata(pdev, dsi);
->  
-> -	return component_add(&pdev->dev, &mtk_dsi_component_ops);
-> +	ret = component_add(&pdev->dev, &mtk_dsi_component_ops);
-> +	if (ret) {
-> +		dev_err(&pdev->dev, "failed to add component: %d\n", ret);
-> +		goto err_unregister_host;
-> +	}
-> +
-> +	return 0;
-> +
-> +err_unregister_host:
-> +	mipi_dsi_host_unregister(&dsi->host);
-> +	return ret;
->  }
->  
->  static int mtk_dsi_remove(struct platform_device *pdev)
-
-
+-- 
+heikki
 
 _______________________________________________
 Linux-mediatek mailing list
