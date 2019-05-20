@@ -2,57 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8BFC322BD8
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 08:07:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0E30222C45
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 08:47:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GEN1ejRb/BGOAQg/xz2OsiT1pB5iBxoxXwHK200901w=; b=LpJocgtX/sx23O
-	D95QQSNmqB0asQ9Xtqo67lGdjak42W4xHCKlpAxkIrTp95ZYXJz4ropuQivM/3y+QoA2MHge+G8UC
-	2O3LOM0udb0FYgEgk5mtkkQDfTM5o3e55IsqXxZTVpbl/ac6uS0yw/E3K/+if5NwL0KTElVelD14H
-	SlGiK1QDZTG9eMh2Wvt6pACdTbPxMxkmlKCfsF+nkZvMA3Ayh9UfAFAFavlrBVAR5DxnwDE+x4qOF
-	zAAvTtSWM67qIrzmMOZcBz/TTTp7PR99TCymE9Uu2v2wdpxO5vR5bGTiX8wtTjOdfx0ugPUdYu8lK
-	vh4tWx3Lfnzsr+Y8hlaA==;
+	List-Owner; bh=MIS/wQQvpaTFlIgwGWhIrKnk56PlKcNlYkOgjgWuRd0=; b=KTDlU9YD0dYUt0
+	36vajmIECRmm3lWfr4z+P4I6Q8xL3hoWOtRxaNIZnj0LWcbs3Kud+fCFvDLOsjRhE+2A/Ip9WbbeU
+	ofDDOrGMcJG2/Q9HMsndIHloA98DXkRdE3FYpEMqMIt3BgYq+8gzgiUAMJcFPASGfVeWww9c3aILD
+	sEJPiJ2ZeNKyqBQ3oZR4yLKDeMUjmiFAjWB4cxyOoiAL8ATWsgDZem/IJxI4AeO2rj2rHOmFc729k
+	RNEMXesP6KObEPq2GDXBMLnFCwJKKYTPwAPn4zdpzad2MAppgJ8rBaOgWFdeIX8Ah8eSzMWQX3CyX
+	l0LFh97eaWZpFAO50qPA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSbRo-0005OQ-63; Mon, 20 May 2019 06:06:56 +0000
+	id 1hSc5H-0002rX-4S; Mon, 20 May 2019 06:47:43 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSbRe-00058S-Kv; Mon, 20 May 2019 06:06:47 +0000
-X-UUID: b6ea6b9fce964c7cac7254bb2ba854f8-20190519
-X-UUID: b6ea6b9fce964c7cac7254bb2ba854f8-20190519
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hSc55-0002gT-5b; Mon, 20 May 2019 06:47:32 +0000
+X-UUID: e773c82592cf45a3ab1d293091c31314-20190519
+X-UUID: e773c82592cf45a3ab1d293091c31314-20190519
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <chun-hung.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 46756079; Sun, 19 May 2019 22:06:42 -0800
+ with ESMTP id 773788269; Sun, 19 May 2019 22:47:28 -0800
 Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 23:06:40 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 19 May 2019 23:47:26 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 14:06:38 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
+ 15.0.1395.4; Mon, 20 May 2019 14:47:24 +0800
+Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 14:06:38 +0800
-Message-ID: <1558332398.11080.9.camel@mtkswgap22>
-Subject: Re: [PATCH 4/4] iio: auxadc: mediatek: change to subsys_initcall
+ Transport; Mon, 20 May 2019 14:47:24 +0800
+Message-ID: <1558334844.13182.7.camel@mtkswgap22>
+Subject: Re: [PATCH 1/4] dt-bindings: iio: adc: mediatek: Add document for
+ mt6765
 From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
 To: Jonathan Cameron <jic23@kernel.org>
-Date: Mon, 20 May 2019 14:06:38 +0800
-In-Reply-To: <20190518113643.53a42976@archlinux>
+Date: Mon, 20 May 2019 14:47:24 +0800
+In-Reply-To: <20190518113356.1cf99a31@archlinux>
 References: <1557994247-16739-1-git-send-email-chun-hung.wu@mediatek.com>
- <1557994247-16739-5-git-send-email-chun-hung.wu@mediatek.com>
- <20190518113643.53a42976@archlinux>
+ <1557994247-16739-2-git-send-email-chun-hung.wu@mediatek.com>
+ <20190518113356.1cf99a31@archlinux>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2F0B7CBF20F89F7C6C59579E9C4CCAF43409E6EB9A5EC6F37009CE4AC58C707A2000:8
+X-TM-SNTS-SMTP: 136E65FE89BA7E502B30A204F640972BA020EFA250DD3943DEB1B7A03C25AD6D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_230646_690938_ADBDF70B 
-X-CRM114-Status: GOOD (  14.67  )
+X-CRM114-CacheID: sfid-20190519_234731_211325_90391DD3 
+X-CRM114-Status: GOOD (  14.24  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -88,62 +89,40 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi Jonathan,
 
-On Sat, 2019-05-18 at 11:36 +0100, Jonathan Cameron wrote:
-> On Thu, 16 May 2019 16:10:47 +0800
+On Sat, 2019-05-18 at 11:33 +0100, Jonathan Cameron wrote:
+> On Thu, 16 May 2019 16:10:44 +0800
 > Chun-Hung Wu <chun-hung.wu@mediatek.com> wrote:
 > 
-> >   Move auxadc platform_driver_register() from module_init
-> > to subsys_initcall because auxadc user drivers
-> > are all moudle drivers, need to gurantee
-> > auxadc driver ready before module_init.
+> > Add compatible node for mt6765 auxadc
 > > 
-> Is it not possible to make them use deferred handling to come
-> back later if this isn't yet available?
+> > Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
+> Applied, but in numeric order.  There was also another clashing patch
+> that caused some fuzz.
+No problem, thanks!
+
+regards,
+Chun-Hung
 > 
-> subsys_initcall often ends up being a more fragile approach.
-
-Agreed, I will ask auxadc driver users to add deferred handling
-instead of moving auxadc platform_driver_register() from module_init
-to subsys_initcall.
-
-Thanks,
-Chun-hung
-
-> 
-> Thanks,
+> thanks,
 > 
 > Jonathan
 > 
-> > Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
 > > ---
-> >  drivers/iio/adc/mt6577_auxadc.c | 14 +++++++++++++-
-> >  1 file changed, 13 insertions(+), 1 deletion(-)
+> >  Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt | 1 +
+> >  1 file changed, 1 insertion(+)
 > > 
-> > diff --git a/drivers/iio/adc/mt6577_auxadc.c b/drivers/iio/adc/mt6577_auxadc.c
-> > index 58d7cb2..cb8e3dd 100644
-> > --- a/drivers/iio/adc/mt6577_auxadc.c
-> > +++ b/drivers/iio/adc/mt6577_auxadc.c
-> > @@ -350,7 +350,19 @@ static int mt6577_auxadc_remove(struct platform_device *pdev)
-> >  	.probe	= mt6577_auxadc_probe,
-> >  	.remove	= mt6577_auxadc_remove,
-> >  };
-> > -module_platform_driver(mt6577_auxadc_driver);
-> > +
-> > +static int __init mt6577_auxadc_init(void)
-> > +{
-> > +	return platform_driver_register(&mt6577_auxadc_driver);
-> > +}
-> > +
-> > +static void __exit mt6577_auxadc_exit(void)
-> > +{
-> > +	platform_driver_unregister(&mt6577_auxadc_driver);
-> > +}
-> > +
-> > +subsys_initcall(mt6577_auxadc_init);
-> > +module_exit(mt6577_auxadc_exit);
-> >  
-> >  MODULE_AUTHOR("Zhiyong Tao <zhiyong.tao@mediatek.com>");
-> >  MODULE_DESCRIPTION("MTK AUXADC Device Driver");
+> > diff --git a/Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt b/Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt
+> > index 0df9bef..ab7efab 100644
+> > --- a/Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt
+> > +++ b/Documentation/devicetree/bindings/iio/adc/mt6577_auxadc.txt
+> > @@ -15,6 +15,7 @@ Required properties:
+> >      - "mediatek,mt2712-auxadc": For MT2712 family of SoCs
+> >      - "mediatek,mt7622-auxadc": For MT7622 family of SoCs
+> >      - "mediatek,mt8173-auxadc": For MT8173 family of SoCs
+> > +    - "mediatek,mt6765-auxadc": For MT6765 family of SoCs
+> >    - reg: Address range of the AUXADC unit.
+> >    - clocks: Should contain a clock specifier for each entry in clock-names
+> >    - clock-names: Should contain "main".
 > 
 
 
