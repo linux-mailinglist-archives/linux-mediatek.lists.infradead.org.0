@@ -2,55 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8CFFA229F5
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 04:30:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BA7422A02
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 04:39:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NKrSalG7+ZNRWhS5bKB4caXM8dAlTDdfc3tOv3lsuNk=; b=KSIUmJvyaQNqjT
-	F5Gf6vnHip+779k6SQBFJuy5ENgph/7eGYHfKE1kz8WU6U19NxcXeNPkfjEa7Gp9BYJaKjgvtIqlU
-	CD8Sd66ribkSFONulrYBqlx59dTYSxmxTyedLemsVzuZjB5b8QV3Xe9vj25pSg3iDz3eKtFtpiGSS
-	cpoaIdum6aoWFhL8GyKtwhej8Qcs3dJsFqY9YDZntKjBHyszCOZdFcnbgMWs3MNlMOqq9gsvgqeHD
-	0dLrODhCi1eyjNnQRoJew9ciSx9MM/3hKSRkUn5JOd3Q1HovzRKax8YnQU2Y3F3iilDsSp9hFoPB5
-	Ey8lj/j5pVO5OvBnuXgw==;
+	List-Owner; bh=gJdjvKnhiUBDQc9ZOLNokBhKP0zIjuBrHpWaoI6UyWI=; b=aeHbI895mXhxNk
+	WXhMIZAAFqDs2INCjjbPMc+PFC0SrdEqTAfpiYuKTQsfBxgTTTzkcCnATdMOCtEK8tJm32ge07Yyo
+	0Bj8vysM2iXrygqV+/ELTvCtjC78lS4UMsbPBUk2/2J2y/HUMQfP6UCOvPu6D6K5nJgp3XqpsSP3l
+	1lOGekQ8txIz1ZHAib3DSkqxdSher+Zl7MngP3kWEMD1ZHkS3/bs2MyX6smlxtyT2wGZ44hIAS5wn
+	iEgStwNVlOBbAEHoE5WEfVX0bZQFKdkG9v67bDi5O/Zmdgor04jL85Go2OEUvmH+7sMhk6CDh9ocT
+	yxhNSCEtmcZnseiEwPRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSY3z-0004Uz-7S; Mon, 20 May 2019 02:30:07 +0000
+	id 1hSYD5-00075E-Vl; Mon, 20 May 2019 02:39:31 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSY3u-0003lQ-0y; Mon, 20 May 2019 02:30:03 +0000
-X-UUID: 71c1147f71ea40f99a63e9cff57976f8-20190519
-X-UUID: 71c1147f71ea40f99a63e9cff57976f8-20190519
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hSYCv-0006yJ-SH; Mon, 20 May 2019 02:39:24 +0000
+X-UUID: e84445936ce9488198b0965ad5799d31-20190519
+X-UUID: e84445936ce9488198b0965ad5799d31-20190519
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1545321235; Sun, 19 May 2019 18:29:54 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ with ESMTP id 1197673448; Sun, 19 May 2019 18:39:17 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 19 May 2019 19:29:52 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 20 May 2019 10:29:50 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ 15.0.1395.4; Sun, 19 May 2019 19:39:16 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 20 May 2019 10:39:13 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 10:29:49 +0800
-Message-ID: <1558319389.10179.347.camel@mhfsdcap03>
-Subject: Re: [v3 PATCH] dt-binding: usb: add usb-role-switch property
+ Transport; Mon, 20 May 2019 10:39:11 +0800
+Message-ID: <1558319951.10179.352.camel@mhfsdcap03>
+Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-Date: Mon, 20 May 2019 10:29:49 +0800
-In-Reply-To: <20190517132721.GB1887@kuha.fi.intel.com>
-References: <c3596e996c9ab39c6b9bc14b93309244c4a55014.1557306151.git.chunfeng.yun@mediatek.com>
- <20190517132721.GB1887@kuha.fi.intel.com>
+Date: Mon, 20 May 2019 10:39:11 +0800
+In-Reply-To: <20190517130511.GA1887@kuha.fi.intel.com>
+References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1557823643-8616-5-git-send-email-chunfeng.yun@mediatek.com>
+ <20190517103736.GA1490@kuha.fi.intel.com>
+ <20190517130511.GA1887@kuha.fi.intel.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190519_193002_076928_6DCB9E19 
-X-CRM114-Status: GOOD (  19.75  )
+X-CRM114-CacheID: sfid-20190519_193921_926665_EF4860C7 
+X-CRM114-Status: GOOD (  24.40  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,80 +74,114 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Felipe Balbi <felipe.balbi@linux.intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
- Biju Das <biju.das@bp.renesas.com>, Rob Herring <robh+dt@kernel.org>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
+ Sridharan <badhri@google.com>, Andy
+ Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
  linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>, Matthias
- Brugger <matthias.bgg@gmail.com>, linux-arm-kernel@lists.infradead.org
+ Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-05-17 at 16:27 +0300, Heikki Krogerus wrote:
-> On Wed, May 08, 2019 at 05:17:44PM +0800, Chunfeng Yun wrote:
-> > Add a property usb-role-switch to tell the driver that use
-> > USB Role Switch framework to handle the role switch,
-> > it's useful when the driver has already supported other ways,
-> > such as extcon framework etc.
-> > 
-> > Cc: Biju Das <biju.das@bp.renesas.com>
-> > Cc: Yu Chen <chenyu56@huawei.com>
-> > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Hi,
+On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wrote:
+> Hi,
 > 
-> Who is meant to pick this? 
+> On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Krogerus wrote:
+> > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfeng Yun wrote:
+> > > Add fwnode_usb_role_switch_get() to make easier to get
+> > > usb_role_switch by fwnode which register it.
+> > > It's useful when there is not device_connection registered
+> > > between two drivers and only knows the fwnode which register
+> > > usb_role_switch.
+> > > 
+> > > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > > Tested-by: Biju Das <biju.das@bp.renesas.com>
+> > 
+> > Acked-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> 
+> Hold on. I just noticed Rob's comment on patch 2/6, where he points out
+> that you don't need to use device graph since the controller is the
+> parent of the connector. Doesn't that mean you don't really need this
+> API?
+No, I still need it. 
+The change is about the way how to get fwnode;
+when use device graph, get fwnode by of_graph_get_remote_node();
+but now will get fwnode by of_get_parent();
 
-> Can you include this in your series where
-> you introduce that USB Type-B GPIO connector driver?
 > 
-Ok, I'll do it if need
-
-> FWIW:
+> > > ---
+> > > v5 changes:
+> > >  1. remove linux/of.h suggested by Biju
+> > >  2. add tested by Biju
+> > > 
+> > > Note: still depends on [1]
+> > >  [1]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+> > >       https://patchwork.kernel.org/patch/10909971/
+> > > 
+> > > v4 changes:
+> > >   1. use switch_fwnode_match() to find fwnode suggested by Heikki
+> > >   2. this patch now depends on [1]
+> > > 
+> > >  [1] [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+> > >     https://patchwork.kernel.org/patch/10909971/
+> > > 
+> > > v3 changes:
+> > >   1. use fwnodes instead of node suggested by Andy
+> > >   2. rebuild the API suggested by Heikki
+> > > 
+> > > v2 no changes
+> > > ---
+> > >  drivers/usb/roles/class.c | 24 ++++++++++++++++++++++++
+> > >  include/linux/usb/role.h  |  8 ++++++++
+> > >  2 files changed, 32 insertions(+)
+> > > 
+> > > diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+> > > index f45d8df5cfb8..4a1f09a41ec0 100644
+> > > --- a/drivers/usb/roles/class.c
+> > > +++ b/drivers/usb/roles/class.c
+> > > @@ -135,6 +135,30 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+> > >  }
+> > >  EXPORT_SYMBOL_GPL(usb_role_switch_get);
+> > >  
+> > > +/**
+> > > + * fwnode_usb_role_switch_get - Find USB role switch by it's parent fwnode
+> > > + * @fwnode: The fwnode that register USB role switch
+> > > + *
+> > > + * Finds and returns role switch registered by @fwnode. The reference count
+> > > + * for the found switch is incremented.
+> > > + */
+> > > +struct usb_role_switch *
+> > > +fwnode_usb_role_switch_get(struct fwnode_handle *fwnode)
+> > > +{
+> > > +	struct usb_role_switch *sw;
+> > > +	struct device *dev;
+> > > +
+> > > +	dev = class_find_device(role_class, NULL, fwnode, switch_fwnode_match);
+> > > +	if (!dev)
+> > > +		return ERR_PTR(-EPROBE_DEFER);
+> > > +
+> > > +	sw = to_role_switch(dev);
+> > > +	WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+> > > +
+> > > +	return sw;
+> > > +}
+> > > +EXPORT_SYMBOL_GPL(fwnode_usb_role_switch_get);
 > 
-> Reviewed-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> This function only basically converts the fwnode to usb_role_switch,
+> but I would actually prefer that we walked through the device graph
+> here instead of expecting the caller to do that.
 > 
-> > ---
-> > v3:
-> >     add property type, modify description suggested by Heikki
-> > 
-> > v2:
-> >     describe it in terms of h/w functionality suggested by Rob
-> > 
-> > v1:
-> >     the property is discussed in:
-> >     [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
-> >     https://patchwork.kernel.org/patch/10852497/
-> > 
-> >     Mediatek and Hisilicon also try to use it:
-> >     [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
-> >     https://patchwork.kernel.org/patch/10918385/
-> >     [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
-> >     https://patchwork.kernel.org/patch/10918367/
-> > 
-> >     [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
-> >     https://patchwork.kernel.org/patch/10909981/
-> > ---
-> >  Documentation/devicetree/bindings/usb/generic.txt | 4 ++++
-> >  1 file changed, 4 insertions(+)
-> > 
-> > diff --git a/Documentation/devicetree/bindings/usb/generic.txt b/Documentation/devicetree/bindings/usb/generic.txt
-> > index 0a74ab8dfdc2..cf5a1ad456e6 100644
-> > --- a/Documentation/devicetree/bindings/usb/generic.txt
-> > +++ b/Documentation/devicetree/bindings/usb/generic.txt
-> > @@ -30,6 +30,10 @@ Optional properties:
-> >  			optional for OTG device.
-> >   - adp-disable: tells OTG controllers we want to disable OTG ADP, ADP is
-> >  			optional for OTG device.
-> > + - usb-role-switch: boolean, indicates that the device is capable of assigning
-> > +			the USB data role (USB host or USB device) for a given
-> > +			USB connector, such as Type-C, Type-B(micro).
-> > +			see connector/usb-connector.txt.
-> >  
-> >  This is an attribute to a USB controller such as:
-> >  
-> > -- 
-> > 2.21.0
+> So this function should probable be called fwnode_to_usb_role_switch()
+> and not fwnode_usb_role_switch_get(), but I guess you don't need it
+> at all, right?
+> 
 > 
 > thanks,
 > 
