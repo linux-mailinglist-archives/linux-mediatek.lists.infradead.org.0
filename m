@@ -2,58 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33F73230EB
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 12:04:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E434B2395D
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 16:05:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=g0u9X3d/H4+cEbtrM+Sc3kDTgPPR0j/L0jhWTLuL3oU=; b=XYw7NaO6jJNcDR
-	WJ13ru3dTE15vy7+gBIKmlE4188/oW8Gw/j5P0Cb/TwRv3JAl4T6RRPEv4VJerCbaALvKCjIBQoXX
-	W+ACKWXJPDm/yfnKV0e2U7EayrleGyannYP5tW3bKOjYW4U9xjld4RROHNXrKw5op+WJB5GBkIU/u
-	8QGC5wnFu7fwMzKgsjFW6XCBdSDPUUEsAKu+GgkpLDrkYLD9IBHpDpOYwUd0GcNcIP6UISFfXsbUr
-	2IUpUrYE3lIL+0TwmT6vJQoX294Y6n7t2rsWBTeRDsIo3VbxpbBvzEPRlNf+LIqLJekuKpOk6PqAT
-	cS1ICRKar4FHfHqJPOtw==;
+	List-Owner; bh=ckfkAZWoBiH8FodUNpmPL09GA2+qYqJeRjtMxUY/eTo=; b=lAeUjZ8P7UAhhd
+	HjA6/aR680moX8ENHRKkOHDeDJeMdvTcPgIeMc6E3Z2uLo41R3aMiwtV9TUan6sNItuG6rc/vwK8O
+	e90nk6EI8+9NHf7D2+X7OLWaCiZ2lQ/ic8eNgpnApnpEsz0csGVat+sZtGKKM7plqiXl0aDETKxFZ
+	FinVn2QAyuNStLEtkmcM6kjYxg9SAdmv1iErIcIrWIaGbMIfd+EPJ3hCArSx1JLNn3bLz4jg4PYDN
+	8Cuf/UIhmgKhTF4LHzoQ9q3u12wDm7GmXtJhKDpCXfTRvdI4YchMfeXGE9Wd6Gjg0rf7ycRSAVf/V
+	abmuIJq5EgWYt8FoMwGg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSf9v-0000pd-GM; Mon, 20 May 2019 10:04:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hSivB-0004q5-7b; Mon, 20 May 2019 14:05:45 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSf9m-0000jy-J7; Mon, 20 May 2019 10:04:36 +0000
-X-UUID: 3efc854043394a6ea0e98f7994aad57f-20190520
-X-UUID: 3efc854043394a6ea0e98f7994aad57f-20190520
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <jerry-ch.chen@mediatek.com>)
+ id 1hSiv7-0004pZ-Ie; Mon, 20 May 2019 14:05:42 +0000
+X-UUID: 3c9ec5f8585644329577aa91e7d57e5f-20190520
+X-UUID: 3c9ec5f8585644329577aa91e7d57e5f-20190520
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1499576345; Mon, 20 May 2019 02:04:29 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 03:04:27 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 18:04:13 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ with ESMTP id 662098336; Mon, 20 May 2019 06:05:32 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 07:05:30 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 22:05:29 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 20 May 2019 18:04:12 +0800
-Message-ID: <1558346653.3318.18.camel@mtksdccf07>
-Subject: Re: [RFC PATCH V1 1/6] dt-bindings: mt8183: Add binding for FD
- shared memory
-From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
-To: Rob Herring <robh@kernel.org>
-Date: Mon, 20 May 2019 18:04:13 +0800
-In-Reply-To: <20190501224512.GA4287@bogus>
-References: <20190423104505.38778-1-Jerry-Ch.chen@mediatek.com>
- <20190423104505.38778-2-Jerry-Ch.chen@mediatek.com>
- <20190501224512.GA4287@bogus>
+ Transport; Mon, 20 May 2019 22:05:29 +0800
+Message-ID: <1558361129.660.8.camel@mtkswgap22>
+Subject: RE: [PATCH v3 2/3] scsi: ufs: Add error-handling of Auto-Hibernate
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: Avri Altman <Avri.Altman@wdc.com>
+Date: Mon, 20 May 2019 22:05:29 +0800
+In-Reply-To: <SN6PR04MB4925DE7B66A63ED81EDD9444FC060@SN6PR04MB4925.namprd04.prod.outlook.com>
+References: <1558341138-18043-1-git-send-email-stanley.chu@mediatek.com>
+ <1558341138-18043-3-git-send-email-stanley.chu@mediatek.com>
+ <SN6PR04MB4925DE7B66A63ED81EDD9444FC060@SN6PR04MB4925.namprd04.prod.outlook.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: C4BCE08F12A91F1FC96390B1BA7BC941E6507BB7E8BC193F02F220A7615273562000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_030434_636554_C245F70D 
-X-CRM114-Status: GOOD (  22.32  )
+X-CRM114-CacheID: sfid-20190520_070541_614552_0306B4AB 
+X-CRM114-Status: GOOD (  11.27  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,115 +72,77 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
- <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
- <laurent.pinchart+renesas@ideasonboard.com>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
- Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
- <christie.yu@mediatek.com>, srv_heupstream <srv_heupstream@mediatek.com>,
- Holmes Chiou =?UTF-8?Q?=28=E9=82=B1=E6=8C=BA=29?= <holmes.chiou@mediatek.com>,
- "suleiman@chromium.org" <suleiman@chromium.org>,
- "shik@chromium.org" <shik@chromium.org>,
- "tfiga@chromium.org" <tfiga@chromium.org>,
- Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
- <jungo.lin@mediatek.com>, Sj
- Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
- "yuzhao@chromium.org" <yuzhao@chromium.org>,
- "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
- "zwisler@chromium.org" <zwisler@chromium.org>,
- Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
- <Frederic.Chen@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
+ "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
+ "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
  "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "mchehab@kernel.org" <mchehab@kernel.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
  "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Rob,
+Hi Avri,
 
-Thank you for your comments.
-
-On Thu, 2019-05-02 at 06:45 +0800, Rob Herring wrote:
-> On Tue, Apr 23, 2019 at 06:45:00PM +0800, Jerry-ch Chen wrote:
-> > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> > 
-> > This patch adds the binding for describing the shared memory
-> > used to exchange meta data between the co-processor and Face
-> > Detection (FD) unit of the camera system on Mediatek SoCs.
-> > 
-> > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> > ---
-> >  .../mediatek,reserve-memory-fd_smem.txt       | 44 +++++++++++++++++++
-> >  1 file changed, 44 insertions(+)
-> >  create mode 100644 Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
-> > 
-> > diff --git a/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
-> > new file mode 100644
-> > index 000000000000..52ae5071e238
-> > --- /dev/null
-> > +++ b/Documentation/devicetree/bindings/reserved-memory/mediatek,reserve-memory-fd_smem.txt
-> > @@ -0,0 +1,44 @@
-> > +Mediatek FD Shared Memory binding
-> > +
-> > +This binding describes the shared memory, which serves the purpose of
-> > +describing the shared memory region used to exchange data between Face
-> > +Detection hardware (FD) and co-processor in Mediatek SoCs.
-> > +
-> > +The co-processor doesn't have the iommu so we need to use the physical
-> > +address to access the shared buffer in the firmware.
-> > +
-> > +The Face Detection hardware (FD) can access memory through mt8183 IOMMU so
-> > +it can use dma address to access the memory region.
-> > +(See iommu/mediatek,iommu.txt for the detailed description of Mediatek IOMMU)
-> > +
-> > +
-> > +Required properties:
-> > +
-> > +- compatible: must be "mediatek,reserve-memory-fd_smem"
-> > +
-> > +- reg: required for static allocation (see reserved-memory.txt for
-> > +  the detailed usage)
-> > +
-> > +- alloc-range: required for dynamic allocation. The range must
-> > +  between 0x00000400 and 0x100000000 due to the co-processer's
-> > +  addressing limitation
-> > +
-> > +- size: required for dynamic allocation. The unit is bytes.
-> > +  for Face Detection Unit, you need 1 MB at least.
+On Mon, 2019-05-20 at 09:51 +0000, Avri Altman wrote:
+> Aside from some nits - see below, looks fine.
 > 
-> What's the most?
+> Thanks,
+> Avri
+> 
+> > diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+> > index ecfa898b9ccc..994d73d03207 100644
+> > --- a/drivers/scsi/ufs/ufshcd.h
+> > +++ b/drivers/scsi/ufs/ufshcd.h
+> > @@ -740,6 +740,11 @@ return true;
+> >  #endif
+> >  }
+> > 
+> > +static inline bool ufshcd_is_auto_hibern8_supported(struct ufs_hba *hba)
+> > +{
+> > +	return (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT);
+> > +}
+> Maybe use it elsewhere in the driver, preferable in a preparatory patch,
+> Instead of patch #3.
 > 
 
-For this part, we would like to revise as following:
-
-alloc-range: required for dynamic allocation. The range must between
-0x40000000 and 0x100000000 due to the co-processor's addressing
-limitation
-
-size: required for dynamic allocation. The unit is bytes.
-for Face Detection Unit, you need 518KB.
-
-> I don't think you really need reserved memory here if you don't need a 
-> fixed address. The size is not that big that a contiguous allocation 
-> shouldn't be a problem (though with IOMMU you don't even need that). 
-> 'dma-ranges' can be used to set the kernel's dma mask and ensure a 
-> range below 0x10000000.
+OK. I will modify original patch #3 to a preparation patch which just
+re-factors ufshcd_is_auto_hibern8_supported(), and change its order to
+#2.
 > 
+> 
+> > diff --git a/drivers/scsi/ufs/ufshci.h b/drivers/scsi/ufs/ufshci.h
+> > index 6fa889de5ee5..4bcb205f2077 100644
+> > --- a/drivers/scsi/ufs/ufshci.h
+> > +++ b/drivers/scsi/ufs/ufshci.h
+> > @@ -148,6 +148,9 @@ enum {
+> >  				UIC_HIBERNATE_EXIT |\
+> >  				UIC_POWER_MODE)
+> > 
+> > +#define UFSHCD_UIC_AH8_ERROR_MASK	(UIC_HIBERNATE_ENTER |\
+> > +					UIC_HIBERNATE_EXIT)
+> So maybe update UFSHCD_UIC_PWR_MASK above
 
-FD driver might be able to use the FD memory pool inside the scp
-reserved memory instead of declaring reserved memory here.
-would you have any suggestion if so?
+OK.
+WIll make these definitions more elegant.
 
-Sincerely,
-	Jerry
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
-
-> Rob
+Thanks,
+Stanley
 
 
 
