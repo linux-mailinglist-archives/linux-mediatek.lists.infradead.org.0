@@ -2,7 +2,7 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 39F6E258F4
+	by mail.lfdr.de (Postfix) with ESMTPS id 40B03258F5
 	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 22:33:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,47 +10,47 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=zAsaQTzBB2yr1jvoKLanZaM0Gcj3AmawmGaBnxshmqk=; b=JP1
-	kpOyXjhBXiPNQD4elApfn8NQki08QZvbaezVKKVSVxiqDpaEgaEmFnd53EBTkUJuIyqoPj5dz8kap
-	c82xaNUmpG1KM51FRu1fXrU6bjJhPsI+eAfIF6464tKGzXu5oAhNsJ9jJRaI8bsM3p9t0nQeH1Djy
-	Z3xx2gcBVMJJLqtv7nuWKBwRkhAq5izLC/3y5Fjo4tmP1vSv/HfgScAECnmSQOVzatjLJMVfbwx9e
-	+OzsLx5OmtNs5Ft3A2fOeD12t8Kz3oMUuyPtS+Yt9DbiCZoh4/1K28EDrWNtfB7urPe7u83hkxHqC
-	4yvYLtDEqskw74c9p5YiHySehvTC4AA==;
+	References:List-Owner; bh=rllxzqYi/uoqsEbeNPL89B8CvgzU3fkZ1fhMTQy+k20=; b=pNQ
+	kM5RR9BPfJw9oiclWA73iafWDOJI72994ZerBx1pnMzj9FMYC3rwYE/U91pSxp460cO4xil6Ri3+Q
+	oY/5jz7oNsL1k1/aO7RssnlAkRNxxlzqqhQ2SB+jSaPQFlW9jqylcbuaXJM0+IeQXl8xNB6VZ4QeI
+	KA04mWE+tDiVtFuTEFbpvPOhJR8EVoKaSKdasnwQraR5h1U3FNtQS0KAQCya+RVUS91QN2KxNvuXH
+	kP+wdYZeHkBmdKRl73Hhv4TnvoU98tbTcOAqk/N5XLh634wOh8ANZNb8b6msbFJfVMSfhgEkhxIib
+	Zqgc5Oa4yR3xQXOxV1ljHuHbU87CosA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTBRY-00051E-Uz; Tue, 21 May 2019 20:33:04 +0000
+	id 1hTBRa-00057B-Uy; Tue, 21 May 2019 20:33:06 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTBRL-0004i1-De
- for linux-mediatek@lists.infradead.org; Tue, 21 May 2019 20:32:57 +0000
+ id 1hTBRL-0004j5-Kf
+ for linux-mediatek@lists.infradead.org; Tue, 21 May 2019 20:33:01 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=dAzJxnon9GLWXKQiC3q94Xs+4pz9rlIkJSYLfHOSoME=; b=PFHy+I7tunml
- JplaOoFq40Abav1hbn9Ly54bfJ+PU0petCYMHhJPpwxGKl9iCIyykEAMz/C4lC1zz7zxoGkpP7FQ3
- DukSfEigmPfsb5gOP8zDYLF33B4HKfnElWIdhns7SSczVbgzBIe5lUKIf+qBkKr93Z3U6shmJfHDh
- J10S4=;
+ List-Archive; bh=XkrsRvXUswg4QUhoQelGk2TIO7uoJT0THp96pk/PqpU=; b=mDw2IY45NtNe
+ PFpGJE288M3fuc/vuDr+64cfEk4PMCirTiP1sjJuDtIvdZ31vajgm4OAYq6u01Yng1O50z8GlcV+L
+ f7O4rcJPr5HGeLqEOg+Ex9Yy4pIXRbxaWTkKvN+aASE8MChGnz6Hy4WPT63nXlCVUOJMcU6aqplAO
+ +Dfe0=;
 Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
  ([82.37.168.47] helo=debutante.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpa (Exim 4.89)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hTBRE-0001yG-Eo; Tue, 21 May 2019 20:32:44 +0000
+ id 1hTBRE-0001yF-Et; Tue, 21 May 2019 20:32:44 +0000
 Received: by debutante.sirena.org.uk (Postfix, from userid 1000)
- id 02D251126D17; Tue, 21 May 2019 21:32:40 +0100 (BST)
+ id BC44C1126D16; Tue, 21 May 2019 21:32:40 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: Jiaxin Yu <jiaxin.yu@mediatek.com>
 Subject: Applied "ASoC: Mediatek: MT8183: fix compile error" to the asoc tree
-In-Reply-To: <1558430978-2440-2-git-send-email-jiaxin.yu@mediatek.com>
+In-Reply-To: <1558430978-2440-3-git-send-email-jiaxin.yu@mediatek.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190521203241.02D251126D17@debutante.sirena.org.uk>
+Message-Id: <20190521203240.BC44C1126D16@debutante.sirena.org.uk>
 Date: Tue, 21 May 2019 21:32:40 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_133252_219260_463FC87A 
-X-CRM114-Status: GOOD (  11.85  )
+X-CRM114-CacheID: sfid-20190521_133252_505298_3F3A9865 
+X-CRM114-Status: GOOD (  10.88  )
 X-Spam-Score: -0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.1 points)
@@ -77,9 +77,8 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: alsa-devel@alsa-project.org, wsd_upstream@mediatek.com,
- Jiaxin@sirena.org.uk, garlic.tseng@mediatek.com, tzungbi@google.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- kaichieh.chuang@mediatek.com
+ garlic.tseng@mediatek.com, tzungbi@google.com, Mark Brown <broonie@kernel.org>,
+ linux-mediatek@lists.infradead.org, kaichieh.chuang@mediatek.com
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -113,36 +112,108 @@ to this mail.
 Thanks,
 Mark
 
-From e355d3de196fe08e4de99bc0521c25a36c903b1b Mon Sep 17 00:00:00 2001
+From 383d30e72e682021fdaf0371ade1c58ad2c434a4 Mon Sep 17 00:00:00 2001
 From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Date: Tue, 21 May 2019 17:29:37 +0800
+Date: Tue, 21 May 2019 17:29:38 +0800
 Subject: [PATCH] ASoC: Mediatek: MT8183: fix compile error
 
-mtk_regmap_update_bits() has been changed from four
-parameters to five parameters.
+mtk_regmap_update_bits() has been changed to take a shift and warn
+when reg >= 0 but shift < 0.So the hd_align_mshift must not have shift.
+Change it from XXX_HD_ALIGN_MASK_SFT to XXX_HD_ALIGN_MASK.
 
-Fixes: 1628fc3f4771 ("ASoC: Mediatek: MT8183: add memory interface data align")
+Fixes: cf61f5b01531 ("ASoC: Mediatek: MT8183: set data align")
 
 Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/mediatek/common/mtk-afe-fe-dai.c | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ sound/soc/mediatek/mt8183/mt8183-afe-pcm.c | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
 
-diff --git a/sound/soc/mediatek/common/mtk-afe-fe-dai.c b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-index 19048c3dc324..d16563408465 100644
---- a/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-+++ b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-@@ -266,8 +266,7 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 			       1, hd_audio, memif->data->hd_shift);
- 
- 	mtk_regmap_update_bits(afe->regmap, memif->data->hd_align_reg,
--			       memif->data->hd_align_mshift,
--			       hd_align ? memif->data->hd_align_mshift : 0);
-+			       1, hd_align, memif->data->hd_align_mshift);
- 
- 	return 0;
- }
+diff --git a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
+index ab2bce1d9b3d..56c37323bc13 100644
+--- a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
++++ b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
+@@ -439,7 +439,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = DL1_HD_SFT,
+-		.hd_align_mshift = DL1_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = DL1_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -460,7 +460,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = DL2_HD_SFT,
+-		.hd_align_mshift = DL2_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = DL2_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -481,7 +481,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = DL3_HD_SFT,
+-		.hd_align_mshift = DL3_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = DL3_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -502,7 +502,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = VUL2_HD_SFT,
+-		.hd_align_mshift = VUL2_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = VUL2_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -523,7 +523,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = AWB_HD_SFT,
+-		.hd_align_mshift = AWB_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = AWB_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -544,7 +544,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = AWB2_HD_SFT,
+-		.hd_align_mshift = AWB2_ALIGN_MASK_SFT,
++		.hd_align_mshift = AWB2_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -565,7 +565,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = VUL12_HD_SFT,
+-		.hd_align_mshift = VUL12_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = VUL12_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -586,7 +586,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = MOD_DAI_HD_SFT,
+-		.hd_align_mshift = MOD_DAI_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = MOD_DAI_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
+@@ -607,7 +607,7 @@ static const struct mtk_base_memif_data memif_data[MT8183_MEMIF_NUM] = {
+ 		.hd_reg = AFE_MEMIF_HD_MODE,
+ 		.hd_align_reg = AFE_MEMIF_HDALIGN,
+ 		.hd_shift = HDMI_HD_SFT,
+-		.hd_align_mshift = HDMI_HD_ALIGN_MASK_SFT,
++		.hd_align_mshift = HDMI_HD_ALIGN_SFT,
+ 		.agent_disable_reg = -1,
+ 		.agent_disable_shift = -1,
+ 		.msb_reg = -1,
 -- 
 2.20.1
 
