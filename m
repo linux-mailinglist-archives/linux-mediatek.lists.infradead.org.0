@@ -2,64 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D9F9924667
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 05:40:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E82D24733
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 06:59:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=4Xrh28HePUzsaiPnv40rEmBZP8bHBeMEZQpSu8ttbQQ=; b=kIAHOazp7E5/yw
-	SijdWOlacd9/+3VNMKTDVW7O78HOkbGdkjw+I3H4jLl2PbRNvPWCvMVJTytAu61SI0xKjt09IATaf
-	yPpDW0zVlqhRGMdtqao4m3bEwg82X1BL2CbnR2q62YIh1lVQXOAhwmy0ZvIMdCoV+ONVR/xq0jyZv
-	3X6ye8n8TBkU4Z0c8EVXRjLYrdYesBI97Vkzv1xJtyHRI3KSzlwXtpgtEon1L+CyAk7FCLb8kDgnw
-	VsqnsBOuAgS5EFqAX8nWpY7X5lWNimbS/qKgmbDk0h7m71YTNghy/utsoGeIVNF7EcX1yVUJ7RmNJ
-	XSl2Pd/VQLLsySldysbQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Uncbkn9ndfkLllgVl3ZkeeJJ1FVqI/YNR61WdtrzxN4=; b=FI7yPi3d79u6Qp
+	xaNF4VpqGGR2RKWpvo4cbfbw/gyYfKjUp2IBN0zIy2wxCXbUVRTio2nNK8b2G6G/b1suUXJNnzppo
+	qUOxvZsJs3uENnM0TH3/N/pPvINj/z2xI6X0wLUJW5fmMraqVD7jlGbr+9Q6PWeHrFh0cgjjif+zJ
+	XZ09wXc20FeBNsrxmc8ntv2d0uVFid/QOYtXpOu1qpDoOln0+ZpbTW7n+hdGRk1I92sBqnD7okbWX
+	Stb2aAumavtHwZdm0cQB/T59JaoFgfrCUQsAOs7CiZQCk1k3rYTE9vsFzobfJ7W5dJpZ3tJUyGyRo
+	Nk39uCoFMMs4uXuALMWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSvdf-0007AK-VW; Tue, 21 May 2019 03:40:31 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hSwrb-00062v-8R; Tue, 21 May 2019 04:58:59 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSvdc-00079t-M6; Tue, 21 May 2019 03:40:30 +0000
-X-UUID: 7b6e34a3dea44a0a88127e79f10d1961-20190520
-X-UUID: 7b6e34a3dea44a0a88127e79f10d1961-20190520
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <erin.lo@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 47128751; Mon, 20 May 2019 19:40:16 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 20:40:14 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 21 May 2019 11:40:12 +0800
-Received: from mtkslt303.mediatek.inc (10.21.14.116) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 21 May 2019 11:40:12 +0800
-From: Erin Lo <erin.lo@mediatek.com>
-To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
- <matthias.bgg@gmail.com>, Stephen Boyd <sboyd@kernel.org>
-Subject: [PATCH] clk: mediatek: Remove MT8183 unused clock
-Date: Tue, 21 May 2019 11:40:01 +0800
-Message-ID: <20190521034001.53365-1-erin.lo@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ id 1hSwrX-00062Q-B1
+ for linux-mediatek@lists.infradead.org; Tue, 21 May 2019 04:58:56 +0000
+Received: from localhost (unknown [106.201.107.13])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 4207121019;
+ Tue, 21 May 2019 04:58:54 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1558414735;
+ bh=w0PrRhb/VLNDP5E1yQloNmbdNQpf/jLdu2sJYIQzoqU=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=wmWkLTPAQGqtWF4/jrOD7kyg84A83fKHEk6yU+xZ3MeatGBuQ2XTplO2ASwvXXW8f
+ jSHwl6zOpH+h2vhWkCJjY/v3sVd31AGKwC5TZF/oL7TM6CS/ifXpKaeoIdx2pEpNnN
+ PQlVn0vCEPAoBikbm3TbaIf0ZkRVki+DzGy6e0B0=
+Date: Tue, 21 May 2019 10:28:51 +0530
+From: Vinod Koul <vkoul@kernel.org>
+To: Dan Carpenter <dan.carpenter@oracle.com>
+Subject: Re: [PATCH] dmaengine: mediatek-cqdma: sleeping in atomic context
+Message-ID: <20190521045851.GR15118@vkoul-mobl>
+References: <20190509100923.GA7024@mwanda>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 97CAF9D7C80D56F8BE6033CF8E65B654151A3B10C79D90FE75D003E4E7EEA6182000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190509100923.GA7024@mwanda>
+User-Agent: Mutt/1.11.3 (2019-02-01)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_204028_730482_712A761F 
-X-CRM114-Status: UNSURE (   6.78  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190520_215855_393970_61875121 
+X-CRM114-Status: GOOD (  10.83  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,80 +76,39 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream <srv_heupstream@mediatek.com>,
- Erin Lo <erin.lo@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-clk@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Sean Wang <sean.wang@mediatek.com>, kernel-janitors@vger.kernel.org,
+ dmaengine@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Shun-Chih Yu <shun-chih.yu@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Dan Williams <dan.j.williams@intel.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Remove MT8183 sspm clock
+On 09-05-19, 13:09, Dan Carpenter wrote:
+> The mtk_cqdma_poll_engine_done() function takes a true/false parameter
+> where true means it's called from atomic context.  There are a couple
+> places where it was set to false but it's actually in atomic context
+> so it should be true.
+> 
+> All the callers for mtk_cqdma_hard_reset() are holding a spin_lock and
+> in mtk_cqdma_free_chan_resources() we take a spin_lock before calling
+> the mtk_cqdma_poll_engine_done() function.
 
-Signed-off-by: Erin Lo <erin.lo@mediatek.com>
----
-This clock should only be set in secure world.
----
- drivers/clk/mediatek/clk-mt8183.c | 19 -------------------
- 1 file changed, 19 deletions(-)
+Applied, thanks
 
-diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-index 9d8651033ae9..1aa5f4059251 100644
---- a/drivers/clk/mediatek/clk-mt8183.c
-+++ b/drivers/clk/mediatek/clk-mt8183.c
-@@ -395,14 +395,6 @@ static const char * const atb_parents[] = {
- 	"syspll_d5"
- };
- 
--static const char * const sspm_parents[] = {
--	"clk26m",
--	"univpll_d2_d4",
--	"syspll_d2_d2",
--	"univpll_d2_d2",
--	"syspll_d3"
--};
--
- static const char * const dpi0_parents[] = {
- 	"clk26m",
- 	"tvdpll_d2",
-@@ -606,9 +598,6 @@ static const struct mtk_mux top_muxes[] = {
- 	MUX_GATE_CLR_SET_UPD(CLK_TOP_MUX_ATB, "atb_sel",
- 		atb_parents, 0xa0,
- 		0xa4, 0xa8, 0, 2, 7, 0x004, 24),
--	MUX_GATE_CLR_SET_UPD(CLK_TOP_MUX_SSPM, "sspm_sel",
--		sspm_parents, 0xa0,
--		0xa4, 0xa8, 8, 3, 15, 0x004, 25),
- 	MUX_GATE_CLR_SET_UPD(CLK_TOP_MUX_DPI0, "dpi0_sel",
- 		dpi0_parents, 0xa0,
- 		0xa4, 0xa8, 16, 4, 23, 0x004, 26),
-@@ -947,12 +936,8 @@ static const struct mtk_gate infra_clks[] = {
- 		"fufs_sel", 13),
- 	GATE_INFRA2(CLK_INFRA_MD32_BCLK, "infra_md32_bclk",
- 		"axi_sel", 14),
--	GATE_INFRA2(CLK_INFRA_SSPM, "infra_sspm",
--		"sspm_sel", 15),
- 	GATE_INFRA2(CLK_INFRA_UNIPRO_MBIST, "infra_unipro_mbist",
- 		"axi_sel", 16),
--	GATE_INFRA2(CLK_INFRA_SSPM_BUS_HCLK, "infra_sspm_bus_hclk",
--		"axi_sel", 17),
- 	GATE_INFRA2(CLK_INFRA_I2C5, "infra_i2c5",
- 		"i2c_sel", 18),
- 	GATE_INFRA2(CLK_INFRA_I2C5_ARBITER, "infra_i2c5_arbiter",
-@@ -986,10 +971,6 @@ static const struct mtk_gate infra_clks[] = {
- 		"msdc50_0_sel", 1),
- 	GATE_INFRA3(CLK_INFRA_MSDC2_SELF, "infra_msdc2_self",
- 		"msdc50_0_sel", 2),
--	GATE_INFRA3(CLK_INFRA_SSPM_26M_SELF, "infra_sspm_26m_self",
--		"f_f26m_ck", 3),
--	GATE_INFRA3(CLK_INFRA_SSPM_32K_SELF, "infra_sspm_32k_self",
--		"f_f26m_ck", 4),
- 	GATE_INFRA3(CLK_INFRA_UFS_AXI, "infra_ufs_axi",
- 		"axi_sel", 5),
- 	GATE_INFRA3(CLK_INFRA_I2C6, "infra_i2c6",
+> 
+> Fixes: b1f01e48df5a ("dmaengine: mediatek: Add MediaTek Command-Queue DMA controller for MT6765 SoC")
+> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+> ---
+> The "atomic" parameter is always true so the temptation was to just
+> remove it entirely.
+
+a patch is welcome :)
+
 -- 
-2.18.0
-
+~Vinod
 
 _______________________________________________
 Linux-mediatek mailing list
