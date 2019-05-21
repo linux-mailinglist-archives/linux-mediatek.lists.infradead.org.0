@@ -2,96 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CA03D24EC4
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 14:16:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0223D25144
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 15:57:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:Message-ID:Date
-	:Subject:From:Reply-To:To:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=XotOkX10ZPtC+MtXEj4fivUSHlnGwL/1QKkX2Se9aFA=; b=oMEAFjC96RPQkC
-	+NrZDCm455krSXx9Uf3trKhMUk53jlMlLwc5UcHQ2XhP8VOzqbZKybAT3ORBIrMjl/A6FM2HamV8k
-	3cfLX83h4BJRbORIuYX2cX6Kf2eSCjTvjs6TMTQe1Je+FrI2szQFeojYBLIMGROIV1ij/o7irjxFr
-	7PRW0CUeO2JgC/WVHkQYPO1AdR0OxS+yo4zTJxGKWAw09xeuxk8AMT8+I+xo3ATR0/KABJG4cV7o5
-	Rg5p9av//wjbcDMLHhsQbrO2FN6t3ET88awtoihUN5EKZWLR1Gs3kNzx/jevP6QbPOrj4NcT6JMsN
-	qS+wfiJ2c0utn+/k1dOA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=afV0ZMCdEWtgT6kFAc3DeqcDRtwGY1yayoR001LaiOw=; b=LHJ+umv4+JnMzS
+	2O/o23Eh08ZUIhjWSIUo6aLloyIqbM4/8PY5Q57F8M1TGuDW2XkX/5t5IRNwB0w+aLoefunRjS9Hl
+	g3RGRRLMWYTc7idM69DmL5qNhmxiIwOu6ykUBFa6VEUFt/IvCaSkAa+OhkCgPxRVcmjKip5LGEi7k
+	mhCe2VpfYif7hBM2at8suXQaJex0PoGkZ/zw2eaNeW39A31XSEOgxZP7cWqHlyXr1D9ELYh67ehfX
+	HH1Phz3XSXBXvMW3SQG+AtqLARXF8u6NLqRM86sAySLp58Jg3KTpvvhpKter7RrDt2zz+lcjRtjzc
+	9YFIFgpG5TszaXUgwzrg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hT3gz-0002Hw-1O; Tue, 21 May 2019 12:16:29 +0000
-Received: from mail-oln040092065019.outbound.protection.outlook.com
- ([40.92.65.19] helo=EUR01-HE1-obe.outbound.protection.outlook.com)
+	id 1hT5Gu-0000iL-3u; Tue, 21 May 2019 13:57:40 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hT3gp-0002A2-Eo; Tue, 21 May 2019 12:16:20 +0000
-Received: from VE1EUR01FT058.eop-EUR01.prod.protection.outlook.com
- (10.152.2.54) by VE1EUR01HT145.eop-EUR01.prod.protection.outlook.com
- (10.152.3.191) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1900.16; Tue, 21 May
- 2019 12:16:14 +0000
-Received: from VI1PR07MB4432.eurprd07.prod.outlook.com (10.152.2.54) by
- VE1EUR01FT058.mail.protection.outlook.com (10.152.3.136) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
- 15.20.1900.16 via Frontend Transport; Tue, 21 May 2019 12:16:14 +0000
-Received: from VI1PR07MB4432.eurprd07.prod.outlook.com
- ([fe80::91f:b1bb:a60a:fdc3]) by VI1PR07MB4432.eurprd07.prod.outlook.com
- ([fe80::91f:b1bb:a60a:fdc3%7]) with mapi id 15.20.1922.013; Tue, 21 May 2019
- 12:16:14 +0000
-From: Philippe Mazenauer <philippe.mazenauer@outlook.de>
-Subject: [PATCH] clk: Remove unused variable
-Thread-Topic: [PATCH] clk: Remove unused variable
-Thread-Index: AQHVD878NH4niKcAbkGQS1Zq+TuwCg==
-Date: Tue, 21 May 2019 12:16:14 +0000
-Message-ID: <VI1PR07MB44324648C54773C24E4B186AFD070@VI1PR07MB4432.eurprd07.prod.outlook.com>
-Accept-Language: de-CH, en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-clientproxiedby: MWHPR0201CA0045.namprd02.prod.outlook.com
- (2603:10b6:301:73::22) To VI1PR07MB4432.eurprd07.prod.outlook.com
- (2603:10a6:802:67::17)
-x-incomingtopheadermarker: OriginalChecksum:AC1CDF9B7E0587675D62C5068EBBAEEFEC3198AA2838AA2DEEEB372B33E36057;
- UpperCasedChecksum:F12575AB9399412C42B53289C4DC711B69F7A80BEF1B18AF3232D82A69D6696A;
- SizeAsReceived:7733; Count:47
-x-ms-exchange-messagesentrepresentingtype: 1
-x-mailer: git-send-email 2.17.1
-x-tmn: [nJ1juxtnP1Zcdux7epdSyzoGFywwolgO]
-x-microsoft-original-message-id: <20190521121547.119863-1-philippe.mazenauer@outlook.de>
-x-ms-publictraffictype: Email
-x-incomingheadercount: 47
-x-eopattributedmessage: 0
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(5050001)(7020095)(20181119110)(201702061078)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031323274)(2017031324274)(2017031322404)(1601125500)(1603101475)(1701031045);
- SRVR:VE1EUR01HT145; 
-x-ms-traffictypediagnostic: VE1EUR01HT145:
-x-microsoft-antispam-message-info: BQrbwy9gZ2t/mX75oj20cZ9Gt8TciHH9LYQqfCp6YoTF9coVOiYEvbFj1P00OhCK40PNBwo30sfRKUfqGnv/Oy98rwCjTeubSBDzbzyV44SX9qVdDIXCZvQqwcDzxK5W8AUeMmmcZX4XHiSrLdnBvmRLpw6xTLROGrlN46PO5/3/+IYJ/bLymd5NwtWq5Udd
-Content-ID: <A735F365BEE52F4FB81877FF849B6A63@eurprd07.prod.outlook.com>
+ id 1hT5Gk-0000bE-Ik; Tue, 21 May 2019 13:57:32 +0000
+Received: from localhost (unknown [106.51.105.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 04AC621479;
+ Tue, 21 May 2019 13:57:29 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1558447050;
+ bh=p5zj6aoLLNC0yMiNnBSt2O1dX8e+LCMuZRJxjILAIfw=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=bgXxUEe1venUsogc/J7JRiQZeehTDpwIWNaoFUysa+vgHozkfEzxPdBnv6w452wux
+ 0H8q2NuqSq+LleLgJhAoKYAypYZz7jMPws06tLgOW0oLo6LXekJc7fEvT6w7aERLGW
+ vZS4BQBBoiOHcuGYUC16SQ5k2QBs9SkKj+R0VaS8=
+Date: Tue, 21 May 2019 19:27:25 +0530
+From: Vinod Koul <vkoul@kernel.org>
+To: Long Cheng <long.cheng@mediatek.com>
+Subject: Re: [PATCH 4/4] serial: 8250-mtk: modify uart DMA rx
+Message-ID: <20190521135725.GN15118@vkoul-mobl>
+References: <1556336193-15198-1-git-send-email-long.cheng@mediatek.com>
+ <1556336193-15198-5-git-send-email-long.cheng@mediatek.com>
 MIME-Version: 1.0
-X-OriginatorOrg: outlook.com
-X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
-X-MS-Exchange-CrossTenant-Network-Message-Id: b43d6e31-bbb0-4f49-bcfd-08d6dde61e20
-X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
-X-MS-Exchange-CrossTenant-originalarrivaltime: 21 May 2019 12:16:14.4118 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Internet
-X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: VE1EUR01HT145
+Content-Disposition: inline
+In-Reply-To: <1556336193-15198-5-git-send-email-long.cheng@mediatek.com>
+User-Agent: Mutt/1.11.3 (2019-02-01)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_051619_492330_2C1FA122 
-X-CRM114-Status: UNSURE (   9.91  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 2.8 (++)
+X-CRM114-CacheID: sfid-20190521_065730_648374_5B19CC9D 
+X-CRM114-Status: GOOD (  19.07  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.8 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.92.65.19 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (philippe.mazenauer[at]outlook.de)
- 1.2 MISSING_HEADERS        Missing To: header
- 1.6 MALFORMED_FREEMAIL     Bad headers on message from free email
- service
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -103,37 +76,149 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stephen Boyd <sboyd@kernel.org>,
- Michael Turquette <mturquette@baylibre.com>,
- open list <linux-kernel@vger.kernel.org>, Fabien Parent <fparent@baylibre.com>,
- Philippe Mazenauer <philippe.mazenauer@outlook.de>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, "open
- list:COMMON CLK FRAMEWORK" <linux-clk@vger.kernel.org>, "moderated
- list:ARM/Mediatek SoC support" <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ Zhenbao Liu <zhenbao.liu@mediatek.com>, linux-serial@vger.kernel.org,
+ srv_heupstream@mediatek.com, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Randy Dunlap <rdunlap@infradead.org>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, Sean Wang <sean.wang@kernel.org>,
+ dmaengine@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Sean Wang <sean.wang@mediatek.com>,
+ Jiri Slaby <jslaby@suse.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ Dan Williams <dan.j.williams@intel.com>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-VmFyaWFibGUgJ2RkcnBoeWNmZ19wYXJlbnRzJyBpcyBkZWZpbmVkIHN0YXRpYyBhbmQgaW5pdGlh
-bGl6ZWQsIGJ1dCBub3QNCnVzZWQgaW4gdGhlIGZpbGUuDQoNCi4uL2RyaXZlcnMvY2xrL21lZGlh
-dGVrL2Nsay1tdDg1MTYuYzoyMzQ6Mjc6IHdhcm5pbmc6IOKAmGRkcnBoeWNmZ19wYXJlbnRz4oCZ
-IGRlZmluZWQgYnV0IG5vdCB1c2VkIFstV3VudXNlZC1jb25zdC12YXJpYWJsZT1dDQogc3RhdGlj
-IGNvbnN0IGNoYXIgKiBjb25zdCBkZHJwaHljZmdfcGFyZW50c1tdIF9faW5pdGNvbnN0ID0gew0K
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgXn5+fn5+fn5+fn5+fn5+fn4NCg0KU2lnbmVkLW9m
-Zi1ieTogUGhpbGlwcGUgTWF6ZW5hdWVyIDxwaGlsaXBwZS5tYXplbmF1ZXJAb3V0bG9vay5kZT4N
-Ci0tLQ0KIGRyaXZlcnMvY2xrL21lZGlhdGVrL2Nsay1tdDg1MTYuYyB8IDUgLS0tLS0NCiAxIGZp
-bGUgY2hhbmdlZCwgNSBkZWxldGlvbnMoLSkNCg0KZGlmZiAtLWdpdCBhL2RyaXZlcnMvY2xrL21l
-ZGlhdGVrL2Nsay1tdDg1MTYuYyBiL2RyaXZlcnMvY2xrL21lZGlhdGVrL2Nsay1tdDg1MTYuYw0K
-aW5kZXggMjZmZTQzY2M5ZWEyLi45ZDQyNjFlY2M3NjAgMTAwNjQ0DQotLS0gYS9kcml2ZXJzL2Ns
-ay9tZWRpYXRlay9jbGstbXQ4NTE2LmMNCisrKyBiL2RyaXZlcnMvY2xrL21lZGlhdGVrL2Nsay1t
-dDg1MTYuYw0KQEAgLTIzMSwxMSArMjMxLDYgQEAgc3RhdGljIGNvbnN0IGNoYXIgKiBjb25zdCBu
-ZmkxeF9wYWRfcGFyZW50c1tdIF9faW5pdGNvbnN0ID0gew0KIAkibmZpMXhfY2siDQogfTsNCiAN
-Ci1zdGF0aWMgY29uc3QgY2hhciAqIGNvbnN0IGRkcnBoeWNmZ19wYXJlbnRzW10gX19pbml0Y29u
-c3QgPSB7DQotCSJjbGsyNm1fY2siLA0KLQkibWFpbnBsbF9kMTYiDQotfTsNCi0NCiBzdGF0aWMg
-Y29uc3QgY2hhciAqIGNvbnN0IHVzYl83OG1fcGFyZW50c1tdIF9faW5pdGNvbnN0ID0gew0KIAki
-Y2xrX251bGwiLA0KIAkiY2xrMjZtX2NrIiwNCi0tIA0KMi4xNy4xDQoNCl9fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcg
-bGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZy
-YWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On 27-04-19, 11:36, Long Cheng wrote:
+> Modify uart rx and complete for DMA.
+> 
+> Signed-off-by: Long Cheng <long.cheng@mediatek.com>
+> ---
+>  drivers/tty/serial/8250/8250_mtk.c |   53 ++++++++++++++++--------------------
+>  1 file changed, 23 insertions(+), 30 deletions(-)
+> 
+> diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
+> index c1fdbc0..04081a6 100644
+> --- a/drivers/tty/serial/8250/8250_mtk.c
+> +++ b/drivers/tty/serial/8250/8250_mtk.c
+> @@ -30,7 +30,6 @@
+>  #define MTK_UART_DMA_EN_TX	0x2
+>  #define MTK_UART_DMA_EN_RX	0x5
+>  
+> -#define MTK_UART_TX_SIZE	UART_XMIT_SIZE
+>  #define MTK_UART_RX_SIZE	0x8000
+>  #define MTK_UART_TX_TRIGGER	1
+>  #define MTK_UART_RX_TRIGGER	MTK_UART_RX_SIZE
+> @@ -64,28 +63,30 @@ static void mtk8250_dma_rx_complete(void *param)
+>  	struct mtk8250_data *data = up->port.private_data;
+>  	struct tty_port *tty_port = &up->port.state->port;
+>  	struct dma_tx_state state;
+> +	int copied, cnt, tmp;
+>  	unsigned char *ptr;
+> -	int copied;
+>  
+> -	dma_sync_single_for_cpu(dma->rxchan->device->dev, dma->rx_addr,
+> -				dma->rx_size, DMA_FROM_DEVICE);
+> +	if (data->rx_status == DMA_RX_SHUTDOWN)
+> +		return;
+>  
+>  	dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
+> +	cnt = dma->rx_size - state.residue;
+> +	tmp = cnt;
+>  
+> -	if (data->rx_status == DMA_RX_SHUTDOWN)
+> -		return;
+> +	if ((data->rx_pos + cnt) > dma->rx_size)
+> +		tmp = dma->rx_size - data->rx_pos;
+>  
+> -	if ((data->rx_pos + state.residue) <= dma->rx_size) {
+> -		ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> -		copied = tty_insert_flip_string(tty_port, ptr, state.residue);
+> -	} else {
+> -		ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> -		copied = tty_insert_flip_string(tty_port, ptr,
+> -						dma->rx_size - data->rx_pos);
+> +	ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
+> +	copied = tty_insert_flip_string(tty_port, ptr, tmp);
+> +	data->rx_pos += tmp;
+> +
+> +	if (cnt > tmp) {
+>  		ptr = (unsigned char *)(dma->rx_buf);
+> -		copied += tty_insert_flip_string(tty_port, ptr,
+> -				data->rx_pos + state.residue - dma->rx_size);
+> +		tmp = cnt - tmp;
+> +		copied += tty_insert_flip_string(tty_port, ptr, tmp);
+> +		data->rx_pos = tmp;
+>  	}
+> +
+>  	up->port.icount.rx += copied;
+>  
+>  	tty_flip_buffer_push(tty_port);
+> @@ -96,9 +97,7 @@ static void mtk8250_dma_rx_complete(void *param)
+>  static void mtk8250_rx_dma(struct uart_8250_port *up)
+>  {
+>  	struct uart_8250_dma *dma = up->dma;
+> -	struct mtk8250_data *data = up->port.private_data;
+>  	struct dma_async_tx_descriptor	*desc;
+> -	struct dma_tx_state	 state;
+>  
+>  	desc = dmaengine_prep_slave_single(dma->rxchan, dma->rx_addr,
+>  					   dma->rx_size, DMA_DEV_TO_MEM,
+> @@ -113,12 +112,6 @@ static void mtk8250_rx_dma(struct uart_8250_port *up)
+>  
+>  	dma->rx_cookie = dmaengine_submit(desc);
+>  
+> -	dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
+> -	data->rx_pos = state.residue;
+> -
+> -	dma_sync_single_for_device(dma->rxchan->device->dev, dma->rx_addr,
+> -				   dma->rx_size, DMA_FROM_DEVICE);
+> -
+>  	dma_async_issue_pending(dma->rxchan);
+>  }
+>  
+> @@ -131,13 +124,13 @@ static void mtk8250_dma_enable(struct uart_8250_port *up)
+>  	if (data->rx_status != DMA_RX_START)
+>  		return;
+>  
+> -	dma->rxconf.direction		= DMA_DEV_TO_MEM;
+> -	dma->rxconf.src_addr_width	= dma->rx_size / 1024;
+> -	dma->rxconf.src_addr		= dma->rx_addr;
+> +	dma->rxconf.direction				= DMA_DEV_TO_MEM;
+
+Direction field is deprecated, please do not use this anymore...
+
+> +	dma->rxconf.src_port_window_size	= dma->rx_size;
+> +	dma->rxconf.src_addr				= dma->rx_addr;
+>  
+> -	dma->txconf.direction		= DMA_MEM_TO_DEV;
+> -	dma->txconf.dst_addr_width	= MTK_UART_TX_SIZE / 1024;
+> -	dma->txconf.dst_addr		= dma->tx_addr;
+> +	dma->txconf.direction				= DMA_MEM_TO_DEV;
+> +	dma->txconf.dst_port_window_size	= UART_XMIT_SIZE;
+> +	dma->txconf.dst_addr				= dma->tx_addr;
+>  
+>  	serial_out(up, UART_FCR, UART_FCR_ENABLE_FIFO | UART_FCR_CLEAR_RCVR |
+>  		UART_FCR_CLEAR_XMIT);
+> @@ -217,7 +210,7 @@ static void mtk8250_shutdown(struct uart_port *port)
+>  	 * Mediatek UARTs use an extra highspeed register (UART_MTK_HIGHS)
+>  	 *
+>  	 * We need to recalcualte the quot register, as the claculation depends
+> -	 * on the vaule in the highspeed register.
+> +	 * on the value in the highspeed register.
+>  	 *
+>  	 * Some baudrates are not supported by the chip, so we use the next
+>  	 * lower rate supported and update termios c_flag.
+> -- 
+> 1.7.9.5
+
+-- 
+~Vinod
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
