@@ -2,65 +2,120 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DFFBC2493E
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 09:45:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D4E824A98
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 10:41:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PvTw7gUELEEoPVBFS1+zBHLgAA4XiJzJtimeEMBNoPc=; b=UKSYPsqX4roliu
-	lEz13MDg7iw9Z/RohgMekgMURMPQMSOTi1B4+doOdyHYuU26PtXyHEBuoMuTFJCK2RaldjyClB8KU
-	8TweCPBSwq6zhs6bwbBprsix+DOP+y1VBNd2Or3CZpjKOmvVh4qHo68Wf9wjVwxhnRlJZwXT1zkI1
-	ZU6yFBGrGMZQQqrVKc8t7s4PxdM2Wx5wbW38bs7WaMJJvi8btR5GANzMjW1A11vWjJWgxm+NoQBPS
-	vX253TFHdqTsZKTH7oCya40GP29F+To8yTwfB4FX8wXrOWGfHe8UaUbjmSZKjDvSjVwKA/0Tv+zRD
-	VhsM6/qAq1P8yQkLFEcw==;
+	List-Owner; bh=55AqiixVKzkCR12BGMEsVm5EX9EFNtQEWbC30SKXMro=; b=J/N3q3jp2nTlSL
+	yCfLQyhvQhUW6in1BBSjnurFhReYxGRDGwp/k17UhhQl/tITMGIoRb5jr0Q9SESY2A45Bhku+cgj6
+	RzyFilI2ifqLekq+6PG9MST7VJKbC3HDlFLMheYg3fYYZIf+i532rDCZzuMDUOBn+S5ntqHGaU6vf
+	LLe+dZ+xMY0xm6VJ3ofghoW33NmSXUJqL2b2HM+qx58g9x0rju3CnsdrLEeMBBF59JiqK4mJUpGrT
+	EW9wTcpFBu3JmkA69TTLOhm1M1JfGkB1T8Ra7rqT6Aj4GphwSY1lSsFGKnhsGtLHAyo1gWsDBRqhj
+	0LcJ1IKdi1Hp6Nbrjyuw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSzSZ-0005ka-9c; Tue, 21 May 2019 07:45:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hT0L9-0005mU-PD; Tue, 21 May 2019 08:41:43 +0000
+Received: from esa6.hgst.iphmx.com ([216.71.154.45])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSzSI-0004Nj-5Z; Tue, 21 May 2019 07:45:04 +0000
-X-UUID: 00f87ac4fa424d4c8133d4e49eff014c-20190520
-X-UUID: 00f87ac4fa424d4c8133d4e49eff014c-20190520
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1223937690; Mon, 20 May 2019 23:44:58 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 21 May 2019 00:44:56 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 21 May 2019 15:44:54 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 21 May 2019 15:44:53 +0800
-Message-ID: <1558424693.10179.374.camel@mhfsdcap03>
-Subject: Re: [PATCH v5 5/6] usb: roles: add USB Type-B GPIO connector driver
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-Date: Tue, 21 May 2019 15:44:53 +0800
-In-Reply-To: <20190520083151.GD1887@kuha.fi.intel.com>
-References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
- <1557823643-8616-6-git-send-email-chunfeng.yun@mediatek.com>
- <20190520083151.GD1887@kuha.fi.intel.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hT0L3-0005fs-GI; Tue, 21 May 2019 08:41:39 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
+ t=1558428097; x=1589964097;
+ h=from:to:cc:subject:date:message-id:references:
+ in-reply-to:content-transfer-encoding:mime-version;
+ bh=yruSyDYojSfEQZ4GoktjasNAJ1225ZeBVdn4GOPPwDg=;
+ b=K+tirRPjVfkiMeAZDiqppTJm6WaYZxN2J+w9LlnWvXPRb+ZOc+0OsKPX
+ k1ORpGlSYkaqc5zLzSlLjgJZIcdxusIKBD4dNPHcDh5cX9VgMY6wxBjdp
+ /LmNsROqu5f64zpvRKmKX0KQA58mKqx/nxyYaj3CFp+dPKVN1sTGGUKqL
+ OywWaqMxH3191bJJbtxgZa2sPcUaeObcDvGFWihVkUnWbGhp4GW809iGs
+ HSYJLXq9NtZ7eG7ze1to6+P2P8uDyVUkyV8DYP8LTKc4rB5pcr3xdPsC+
+ 7uupIfHu+RUBs2rm0UWZtjKxCwQgDlZ/DNUB/WjEL9sHRLFKxTPEQg4r3 Q==;
+X-IronPort-AV: E=Sophos;i="5.60,494,1549900800"; d="scan'208";a="110418234"
+Received: from mail-bn3nam01lp2055.outbound.protection.outlook.com (HELO
+ NAM01-BN3-obe.outbound.protection.outlook.com) ([104.47.33.55])
+ by ob1.hgst.iphmx.com with ESMTP; 21 May 2019 16:41:35 +0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=0W7hGmdA5KypAQTtphJVx0R91aCMuv1WoxwM2XnmSBQ=;
+ b=uMqr/YuOItmZ1MRjZufSoXT8YQ/ItnMNID1xcKxDWqSi4OebFtM95Iuj1++9BxDLOmt5C7XhqhjuqZIhhbYNQKt0SyCoMnA1L2mwRyUWn5g3IdG82/GzTvUJ1mNl3fbEV7KD7Wp71tOE52PE8EKWNtfVKFIpaijEY3RBiyC9iAY=
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
+ SN6PR04MB4255.namprd04.prod.outlook.com (52.135.71.159) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1900.18; Tue, 21 May 2019 08:41:32 +0000
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530]) by SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530%6]) with mapi id 15.20.1900.020; Tue, 21 May 2019
+ 08:41:32 +0000
+From: Avri Altman <Avri.Altman@wdc.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
+ <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
+ <pedrom.sousa@synopsys.com>
+Subject: RE: [PATCH v5 0/3] scsi: ufs: Add error handling of Auto-Hibernate
+Thread-Topic: [PATCH v5 0/3] scsi: ufs: Add error handling of Auto-Hibernate
+Thread-Index: AQHVD6DGIM/lpURAaUuuCZWM2A74F6Z1QowA
+Date: Tue, 21 May 2019 08:41:32 +0000
+Message-ID: <SN6PR04MB4925604BFAF0A66D54F65E3EFC070@SN6PR04MB4925.namprd04.prod.outlook.com>
+References: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=Avri.Altman@wdc.com; 
+x-originating-ip: [212.25.79.133]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: e9159af8-7cf2-4d17-fb38-08d6ddc82067
+x-ms-office365-filtering-ht: Tenant
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(4618075)(2017052603328)(7193020);
+ SRVR:SN6PR04MB4255; 
+x-ms-traffictypediagnostic: SN6PR04MB4255:
+wdcipoutbound: EOP-TRUE
+x-microsoft-antispam-prvs: <SN6PR04MB42559F240996374849D0D2E9FC070@SN6PR04MB4255.namprd04.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:2331;
+x-forefront-prvs: 0044C17179
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10019020)(376002)(366004)(136003)(396003)(346002)(39860400002)(189003)(199004)(71200400001)(102836004)(478600001)(53936002)(25786009)(4326008)(66066001)(2201001)(26005)(14454004)(86362001)(54906003)(76176011)(71190400001)(9686003)(5660300002)(6506007)(52536014)(14444005)(256004)(7416002)(110136005)(6246003)(186003)(7696005)(6436002)(99286004)(72206003)(55016002)(229853002)(476003)(74316002)(3846002)(6116002)(2501003)(316002)(68736007)(2906002)(76116006)(8676002)(73956011)(66946007)(81156014)(81166006)(446003)(8936002)(11346002)(7736002)(66446008)(66556008)(64756008)(66476007)(33656002)(486006)(305945005);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB4255;
+ H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; MX:1; A:1; 
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: pj486WJFKEwx49OxmokeD5rJSNhrgqiTD0wpOsn8xw5MH9/hUoJWIMRdrqHAli4sQIXORjHFecGkOPaQmwR4FNn/jAerMgfNxJYXWKpqqMQK0VKt+NWsUcuCIxO1WuMoj0xKBF8PbCg3KD20jTTlORnYsslF0RgeorArqIiy1p9/T8NGBuxP72+HOsrq884AYNgK5JD+YS8vMt/6HjWN19zaOw7KbJXZSmF3JrOFiiYlBwEBpQBHkYNmIMrpCu/nJDU+tSiSzglj0xE5q4s+c23/+deuK9JrYQZL1y2uwBgagswM84Y5K5Athkn6s47/WTUo3C3ANJE2b1x5In8f6I7fQ4J6Gf2u6RPVoQFvl0cSzaqsG3lXIrCIBsdOSH1RoUW1xRGi6MPciNr+Y1RKeGJLO6Kage164P/RXoOtRPo=
 MIME-Version: 1.0
-X-MTK: N
+X-OriginatorOrg: wdc.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: e9159af8-7cf2-4d17-fb38-08d6ddc82067
+X-MS-Exchange-CrossTenant-originalarrivaltime: 21 May 2019 08:41:32.4578 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB4255
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_004502_364545_EA9963F7 
-X-CRM114-Status: GOOD (  17.25  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190521_014137_583723_1B7DDC9F 
+X-CRM114-Status: GOOD (  17.59  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [216.71.154.45 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -72,160 +127,82 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
- Sridharan <badhri@google.com>, Andy
- Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>, Matthias
- Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
+Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+This series looks fine to me.
 
-On Mon, 2019-05-20 at 11:31 +0300, Heikki Krogerus wrote:
-> On Tue, May 14, 2019 at 04:47:22PM +0800, Chunfeng Yun wrote:
-> > +static int usb_conn_probe(struct platform_device *pdev)
-> > +{
-> > +	struct device *dev = &pdev->dev;
-> > +	struct device_node *node = dev->of_node;
-> > +	struct device_node *remote_node;
-> > +	struct usb_conn_info *info;
-> > +	int ret = 0;
-> > +
-> > +	info = devm_kzalloc(dev, sizeof(*info), GFP_KERNEL);
-> > +	if (!info)
-> > +		return -ENOMEM;
-> > +
-> > +	info->dev = dev;
-> > +	info->id_gpiod = devm_gpiod_get_optional(dev, "id", GPIOD_IN);
-> > +	if (IS_ERR(info->id_gpiod))
-> > +		return PTR_ERR(info->id_gpiod);
-> > +
-> > +	info->vbus_gpiod = devm_gpiod_get_optional(dev, "vbus", GPIOD_IN);
-> > +	if (IS_ERR(info->vbus_gpiod))
-> > +		return PTR_ERR(info->vbus_gpiod);
-> > +
-> > +	if (!info->id_gpiod && !info->vbus_gpiod) {
-> > +		dev_err(dev, "failed to get gpios\n");
-> > +		return -ENODEV;
-> > +	}
-> > +
-> > +	if (info->id_gpiod)
-> > +		ret = gpiod_set_debounce(info->id_gpiod, USB_GPIO_DEB_US);
-> > +	if (!ret && info->vbus_gpiod)
-> > +		ret = gpiod_set_debounce(info->vbus_gpiod, USB_GPIO_DEB_US);
-> > +	if (ret < 0)
-> > +		info->debounce_jiffies = msecs_to_jiffies(USB_GPIO_DEB_MS);
-> > +
-> > +	INIT_DELAYED_WORK(&info->dw_det, usb_conn_detect_cable);
-> > +
-> > +	info->vbus = devm_regulator_get(dev, "vbus");
-> > +	if (IS_ERR(info->vbus)) {
-> > +		dev_err(dev, "failed to get vbus\n");
-> > +		return PTR_ERR(info->vbus);
-> > +	}
-> > +
-> > +	remote_node = of_graph_get_remote_node(node, -1, 0);
-> 
-> This is really not ideal. In practice this code will only work if
-> there is only one endpoint described for this device, or if the first
-> endpoint is always the one we are looking for. There is no way to
-> guarantee that.
-Yes, it is.
-I'll modify it as case 2, see reply [v5, 4/6] in this series.
+Thanks,
+Avri
 
 > 
-> The code really has to walk through the entire graph, and identify the
-> remote endpoint it's looking for (and for that we have the boolean
-> device property).
+> Currently auto-hibernate is activated if host supports
+> auto-hibern8 capability. However error-handling is not implemented,
+> which makes the feature somewhat risky.
 > 
-> > +	if (!remote_node) {
-> > +		dev_err(dev, "failed to get remote node\n");
-> > +		return -ENODEV;
-> > +	}
-> > +
-> > +	info->role_sw =
-> > +		fwnode_usb_role_switch_get(of_fwnode_handle(remote_node));
+> If either "Hibernate Enter" or "Hibernate Exit" fail during
+> auto-hibernate flow, the corresponding interrupt
+> "UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
+> according to UFS specification.
 > 
-> So fwnode_usb_role_switch_get() needs be the one that walks through
-> the graph, not the drivers. Otherwise every driver will do the same
-> exact steps (boilerplate). Here you need to be able to just pass the
-> node of this device, not the remote endpoint:
+> This patch adds auto-hibernate error-handling:
 > 
->         info->role_sw = fwnode_usb_role_switch_get(dev_fwnode(&client->dev));
+> - Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
+>   auto-hibernate feature is activated.
 > 
-> But why do you need that function at all? Why wouldn't
-> usb_role_switch_get() work?
+> - If fail happens, trigger error-handling just like "manual-hibernate"
+>   fail and apply the same recovery flow: schedule UFS error handler in
+>   ufshcd_check_errors(), and then do host reset and restore
+>   in UFS error handler.
 > 
->         info->role_sw = usb_role_switch_get(&client->dev);
+> v5:
+>  - Also re-factor checking of Auto-Hibernation support in other places, e.g., in
+> ufshcd_auto_hibern8_enable() and in ufs-sysfs (Avri Altman)
+>  - Change order of patch "scsi: ufs: Introduce
+> ufshcd_is_auto_hibern8_supported()" to #1 as a preparation patch of whole
+> series
 > 
-see reply [v5, 4/6] in this series
-
-Thanks a lot.
-
-> > +	of_node_put(remote_node);
-> > +	if (IS_ERR(info->role_sw)) {
-> > +		dev_err(dev, "failed to get role switch\n");
-> > +		return PTR_ERR(info->role_sw);
-> > +	}
-> > +
-> > +	if (info->id_gpiod) {
-> > +		info->id_irq = gpiod_to_irq(info->id_gpiod);
-> > +		if (info->id_irq < 0) {
-> > +			dev_err(dev, "failed to get ID IRQ\n");
-> > +			ret = info->id_irq;
-> > +			goto put_role_sw;
-> > +		}
-> > +
-> > +		ret = devm_request_threaded_irq(dev, info->id_irq, NULL,
-> > +						usb_conn_isr, USB_CONN_IRQF,
-> > +						pdev->name, info);
-> > +		if (ret < 0) {
-> > +			dev_err(dev, "failed to request ID IRQ\n");
-> > +			goto put_role_sw;
-> > +		}
-> > +	}
-> > +
-> > +	if (info->vbus_gpiod) {
-> > +		info->vbus_irq = gpiod_to_irq(info->vbus_gpiod);
-> > +		if (info->vbus_irq < 0) {
-> > +			dev_err(dev, "failed to get VBUS IRQ\n");
-> > +			ret = info->vbus_irq;
-> > +			goto put_role_sw;
-> > +		}
-> > +
-> > +		ret = devm_request_threaded_irq(dev, info->vbus_irq, NULL,
-> > +						usb_conn_isr, USB_CONN_IRQF,
-> > +						pdev->name, info);
-> > +		if (ret < 0) {
-> > +			dev_err(dev, "failed to request VBUS IRQ\n");
-> > +			goto put_role_sw;
-> > +		}
-> > +	}
-> > +
-> > +	platform_set_drvdata(pdev, info);
-> > +
-> > +	/* Perform initial detection */
-> > +	usb_conn_queue_dwork(info, 0);
-> > +
-> > +	return 0;
-> > +
-> > +put_role_sw:
-> > +	usb_role_switch_put(info->role_sw);
-> > +	return ret;
-> > +}
+> v4:
+>  - Replace original patch "[3/3] scsi: ufs: Use re-factored Auto-Hibernate
+> function" by a new preparation patch "[2/3] scsi: ufs: Introduce
+> ufshcd_is_auto_hibern8_supported()" for re-factoring
+> ufshcd_is_auto_hibern8_supported (Avri Altman)
+>  - Refine UIC mask definitions (Avri Altman)
 > 
-> thanks,
+> v3:
+>  - Fix typo in patch "scsi: ufs: Do not overwrite Auto-Hibernate timer" (Avri
+> Altman)
+>  - Rebase to Linux 5.2-rc1
 > 
-
+> v2:
+>  - Fix sentences in commit message (Marc Gonzalez)
+>  - Make "Auto-Hibernate" error detection more precise (Bean Huo)
+> 
+> Stanley Chu (3):
+>   scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()
+>   scsi: ufs: Do not overwrite Auto-Hibernate timer
+>   scsi: ufs: Add error-handling of Auto-Hibernate
+> 
+>  drivers/scsi/ufs/ufs-sysfs.c |  6 +++---
+>  drivers/scsi/ufs/ufshcd.c    | 35 +++++++++++++++++++++++++++++++++--
+>  drivers/scsi/ufs/ufshcd.h    |  5 +++++
+>  drivers/scsi/ufs/ufshci.h    |  6 ++++--
+>  4 files changed, 45 insertions(+), 7 deletions(-)
+> 
+> --
+> 2.18.0
 
 
 _______________________________________________
