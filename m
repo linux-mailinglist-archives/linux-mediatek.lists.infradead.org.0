@@ -2,38 +2,38 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C936E24568
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 03:12:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 706B324560
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 03:11:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=yrGvr7bx1VTvV0ajZ6YNOuBNEWyMKc69FbyZ7lQzUT0=; b=aCCNqNVRgERSm3
-	wWCAW1V0lHdIfIB5wUyaxjkg2dKGCMEVWZkNq2d3ktYHT2yiif7OHFl20rMlVt1Ez/9VYB29l30dI
-	vdlx0ai5NkqhZXI2CQ3GcJj7k/cumJmqBaZh/3txl8hEAbH7wS22JVKocXmqoe5DOihc+EdUkaBOX
-	Tsh9fuVOLtDUndov5+F3XdWsCTYxKW/Hqp9/XYIaLwije0y7V8MuL5anUmOrt5DyLFItxLpTqvEqx
-	Am7MfJOKkTC19yXnNJCjs41BuMPeHpVXK/JbS+OWzh+cAgpIV+rWBMSPWdCntGIda9tB5SaLl7hPn
-	hwmNsjemQICsWLeEyviQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=J6WVth2gNsMQLWrT6AYbd1Fwahp+vDwNXVq7JU9MglI=; b=IWxT/3viCFb7mQ
+	OwTPOpbJHonx4yIPiAEW/HvM/J/Dx5+mhlsNZPwSCPHXeJSDtnl6SXX5h2MEzOTGhzgtwYPIPn1fj
+	G1KxNMPotC/4LWjHfGc8g+Mhmu1pgfbOTGLdy6bBWFY8P1hZwYGJ6prlJb2aE9JRpEobZG4qjeFrP
+	gUVz4iH7jxHLZFYz/qtQO+k1cLqLHEjM1dyJU0CmVQ0zvi+sgIdWXu7asNlpXAHGMY61MFUmbSXIC
+	KeBOmCnmy68wwbknAVTrUGEIMh+dcPZ33D9SEwWOyL94CddMqvpwVWs8EAUSNfIdnyyoPQBUAjpI6
+	o8duupi1uANhwYFtkTTQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hStKO-0004t0-FJ; Tue, 21 May 2019 01:12:28 +0000
+	id 1hStJj-0003uP-2R; Tue, 21 May 2019 01:11:47 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hStJO-0003Oz-BB; Tue, 21 May 2019 01:11:29 +0000
-X-UUID: fe05a768fe054ef9a78f7361fa926dd6-20190520
-X-UUID: fe05a768fe054ef9a78f7361fa926dd6-20190520
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hStJL-0003Oz-8c; Tue, 21 May 2019 01:11:24 +0000
+X-UUID: 5db34aa6ef224f75921a96c5e4cd6a9f-20190520
+X-UUID: 5db34aa6ef224f75921a96c5e4cd6a9f-20190520
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 719265843; Mon, 20 May 2019 17:11:18 -0800
-Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 18:11:17 -0700
+ with ESMTP id 1343979464; Mon, 20 May 2019 17:11:13 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 18:11:11 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 21 May 2019 09:11:09 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 May 2019 09:11:10 +0800
 Received: from mtkslt302.mediatek.inc (10.21.14.115) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Tue, 21 May 2019 09:11:09 +0800
@@ -41,16 +41,18 @@ From: Bibby Hsieh <bibby.hsieh@mediatek.com>
 To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
  <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
  <ck.hu@mediatek.com>
-Subject: [PATCH v7 00/12] support gce on mt8183 platform
-Date: Tue, 21 May 2019 09:10:56 +0800
-Message-ID: <20190521011108.40428-1-bibby.hsieh@mediatek.com>
+Subject: [PATCH v7 01/12] dt-binding: gce: remove thread-num property
+Date: Tue, 21 May 2019 09:10:57 +0800
+Message-ID: <20190521011108.40428-2-bibby.hsieh@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20190521011108.40428-1-bibby.hsieh@mediatek.com>
+References: <20190521011108.40428-1-bibby.hsieh@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 560C39CD169EBD5E0F1571542FAC1B01D239FA9C6AF030FEC3F9F7430BE8543B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_181126_570508_A31A7401 
-X-CRM114-Status: GOOD (  13.29  )
+X-CRM114-CacheID: sfid-20190520_181123_302401_DDEF9F8B 
+X-CRM114-Status: UNSURE (   9.31  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -86,80 +88,26 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Changes since v6:
- - remove cmdq_dev_get_event function and gce event property
- - separate some changes to indepentent patch
- - change the binding document related to gce-client-reg property
+"thread-num" is an unused property so we remove it from example.
 
-Changes since v5:
- - fix typo
- - remove gce-event-name form the dt-binding
- - add reasons in commit message
+Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Reviewed-by: Rob Herring <robh@kernel.org>
+---
+ Documentation/devicetree/bindings/mailbox/mtk-gce.txt | 1 -
+ 1 file changed, 1 deletion(-)
 
-Changes since v4:
- - refine the architecture of the packet encoder function
- - refine the gce enevt property
- - change the patch's title
-
-Changes since v3:
- - fix a typo in dt-binding and dtsi
- - cast the return value to right format
-
-Changes since v2:
- - according to CK's review comment, change the property name and
-   refine the parameter
- - change the patch's title
- - remove unused property from dt-binding and dts
-
-Changes since v1:
- - add prefix "cmdq" in the commit subject
- - add dt-binding document for get event and subsys function
- - add fix up tag in fixup patch
- - fix up some coding style (alignment)
-
-MTK will support gce function on mt8183 platform.
-  dt-binding: gce: add gce header file for mt8183
-  mailbox: mediatek: cmdq: support mt8183 gce function
-  arm64: dts: add gce node for mt8183
-
-Besides above patches, we refine gce driver on those patches.
-  soc: mediatek: cmdq: reorder the parameter
-  soc: mediatek: cmdq: change the type of input parameter
-  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
-  soc: mediatek: cmdq: clear the event in cmdq initial flow
-
-In order to enhance the convenience of gce usage, we add new
-helper functions and refine the method of instruction combining.
-  dt-binding: gce: remove thread-num property
-  dt-binding: gce: add binding for gce subsys property
-  soc: mediatek: cmdq: define the instruction struct
-  soc: mediatek: cmdq: add polling function
-  soc: mediatek: cmdq: add cmdq_dev_get_subsys function
-
-Bibby Hsieh (12):
-  dt-binding: gce: remove thread-num property
-  dt-binding: gce: add gce header file for mt8183
-  dt-binding: gce: add binding for gce client reg property
-  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
-  mailbox: mediatek: cmdq: support mt8183 gce function
-  soc: mediatek: cmdq: clear the event in cmdq initial flow
-  soc: mediatek: cmdq: reorder the parameter
-  soc: mediatek: cmdq: change the type of input parameter
-  soc: mediatek: cmdq: define the instruction struct
-  soc: mediatek: cmdq: add polling function
-  soc: mediatek: cmdq: add cmdq_dev_get_client_reg function
-  arm64: dts: add gce node for mt8183
-
- .../devicetree/bindings/mailbox/mtk-gce.txt   |  25 ++-
- arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  11 ++
- drivers/mailbox/mtk-cmdq-mailbox.c            |  18 +-
- drivers/soc/mediatek/mtk-cmdq-helper.c        | 166 ++++++++++++----
- include/dt-bindings/gce/mt8183-gce.h          | 177 ++++++++++++++++++
- include/linux/mailbox/mtk-cmdq-mailbox.h      |   5 +
- include/linux/soc/mediatek/mtk-cmdq.h         |  50 ++++-
- 7 files changed, 391 insertions(+), 61 deletions(-)
- create mode 100644 include/dt-bindings/gce/mt8183-gce.h
-
+diff --git a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+index 7d72b21c9e94..cfe40b01d164 100644
+--- a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
++++ b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+@@ -39,7 +39,6 @@ Example:
+ 		interrupts = <GIC_SPI 135 IRQ_TYPE_LEVEL_LOW>;
+ 		clocks = <&infracfg CLK_INFRA_GCE>;
+ 		clock-names = "gce";
+-		thread-num = CMDQ_THR_MAX_COUNT;
+ 		#mbox-cells = <3>;
+ 	};
+ 
 -- 
 2.18.0
 
