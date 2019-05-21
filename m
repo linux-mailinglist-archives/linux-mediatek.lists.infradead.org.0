@@ -2,54 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE33424854
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 08:46:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 75B4924852
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 08:46:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=4CFtXGz2L0kJm0p7SVQxNWyVsOCYC3JaB1KPrxQeXKA=; b=VTP21o51BS+Iq6
-	eVk8fqz1TGRv6lrQ0nnp8PAfa+x2KXrccruED+JhBSORk4vJdb9Qwk6OgAVJD2hjLDB5sd0mS47JV
-	sMQ3Y9kntTg79+CchSARs037WDLfPt6cLNCofDB486tIpEOajtu3c9pxImEAHBBNglTbPuO4/yk9J
-	CtOGnFNVAipkASQG8J+rAuysOHwgaKhNo6Hb1ixqu2HwfZvfwjCTgIqyvZ864MlHjWsw5yLedCQWu
-	ZPfoTlLygT0uDxx4lQh8bJXEW+OxUak6PUX5axG2VO5425o/NlDylMwZi/WnrXIjdENdLG40L+Ohf
-	pWAJFzWMRMDEwKEz5p6A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Dv+/BA+zIItoGe6lCPU0S1+z6JBI6Q4Joo8/pnbhKrA=; b=SEOvqt64L3hAru
+	hGa3Iq9Pij2QciYWV+POjOb3/9+bv9xnCVlIJEyf+j1jGcEKdxZ8FgRfBZWSSUra3hO52AExul43h
+	wmk9F7i4TYXfC9sMI6/gjrUKEzPxHroF2kEfZOUEJMxqYUlBetq9B7XzXZ8MaG6uTEvhu4NxbSCyl
+	U2Tt7ms5OKF/P2PeZzN8c8LZxyDdTZCkXH0t1sHIPTsQ99rqRtlcZ6gS3CsrxD3QhO7anmaEf+HjA
+	ywfa/Xv6OGj/UFR5kTUy6sCvEa641GFFbbFwGRL3xQQtdNG7uce9/ETn/f/Kj0l2a1pUlSCKJoOdS
+	bNA749rIAJQ13am858XA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSyXJ-0001V3-I4; Tue, 21 May 2019 06:46:09 +0000
+	id 1hSyX5-0001BS-R7; Tue, 21 May 2019 06:45:55 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSyWk-0000jM-3m; Tue, 21 May 2019 06:45:35 +0000
-X-UUID: 5506ed965b224078bc70834e6376a746-20190520
-X-UUID: 5506ed965b224078bc70834e6376a746-20190520
+ id 1hSyWj-0000jA-HT; Tue, 21 May 2019 06:45:34 +0000
+X-UUID: abdf4621e6ae4d45b77012e54936a07f-20190520
+X-UUID: abdf4621e6ae4d45b77012e54936a07f-20190520
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 991889183; Mon, 20 May 2019 22:45:08 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 429055699; Mon, 20 May 2019 22:45:08 -0800
+Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Mon, 20 May 2019 23:45:06 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 21 May 2019 14:45:04 +0800
+ mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 May 2019 14:45:05 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 21 May 2019 14:45:04 +0800
+ Frontend Transport; Tue, 21 May 2019 14:45:05 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH v5 0/3] scsi: ufs: Add error handling of Auto-Hibernate
-Date: Tue, 21 May 2019 14:44:51 +0800
-Message-ID: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v5 1/3] scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()
+Date: Tue, 21 May 2019 14:44:52 +0800
+Message-ID: <1558421094-3182-2-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
+References: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_234534_154786_4EEAA440 
-X-CRM114-Status: UNSURE (   6.47  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190520_234533_580862_3A1340B6 
+X-CRM114-Status: GOOD (  11.00  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -80,52 +81,89 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Currently auto-hibernate is activated if host supports
-auto-hibern8 capability. However error-handling is not implemented,
-which makes the feature somewhat risky.
+The checking of Auto-Hibernation support is used in
+many places in the driver, thus re-factor it as
+ufshcd_is_auto_hibern8_supported() to make code more
+clean.
 
-If either "Hibernate Enter" or "Hibernate Exit" fail during
-auto-hibernate flow, the corresponding interrupt
-"UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
-according to UFS specification.
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Reviewed-by: Bean Huo <beanhuo@micron.com>
+Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
+---
+ drivers/scsi/ufs/ufs-sysfs.c | 6 +++---
+ drivers/scsi/ufs/ufshcd.c    | 4 ++--
+ drivers/scsi/ufs/ufshcd.h    | 5 +++++
+ 3 files changed, 10 insertions(+), 5 deletions(-)
 
-This patch adds auto-hibernate error-handling:
-
-- Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
-  auto-hibernate feature is activated.
-
-- If fail happens, trigger error-handling just like "manual-hibernate"
-  fail and apply the same recovery flow: schedule UFS error handler in
-  ufshcd_check_errors(), and then do host reset and restore
-  in UFS error handler.
-
-v5:
- - Also re-factor checking of Auto-Hibernation support in other places, e.g., in ufshcd_auto_hibern8_enable() and in ufs-sysfs (Avri Altman)
- - Change order of patch "scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()" to #1 as a preparation patch of whole series
-
-v4:
- - Replace original patch "[3/3] scsi: ufs: Use re-factored Auto-Hibernate function" by a new preparation patch "[2/3] scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()" for re-factoring ufshcd_is_auto_hibern8_supported (Avri Altman)
- - Refine UIC mask definitions (Avri Altman)
-
-v3:
- - Fix typo in patch "scsi: ufs: Do not overwrite Auto-Hibernate timer" (Avri Altman)
- - Rebase to Linux 5.2-rc1
-
-v2:
- - Fix sentences in commit message (Marc Gonzalez)
- - Make "Auto-Hibernate" error detection more precise (Bean Huo)
-
-Stanley Chu (3):
-  scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()
-  scsi: ufs: Do not overwrite Auto-Hibernate timer
-  scsi: ufs: Add error-handling of Auto-Hibernate
-
- drivers/scsi/ufs/ufs-sysfs.c |  6 +++---
- drivers/scsi/ufs/ufshcd.c    | 35 +++++++++++++++++++++++++++++++++--
- drivers/scsi/ufs/ufshcd.h    |  5 +++++
- drivers/scsi/ufs/ufshci.h    |  6 ++++--
- 4 files changed, 45 insertions(+), 7 deletions(-)
-
+diff --git a/drivers/scsi/ufs/ufs-sysfs.c b/drivers/scsi/ufs/ufs-sysfs.c
+index 8d9332bb7d0c..f478685122ff 100644
+--- a/drivers/scsi/ufs/ufs-sysfs.c
++++ b/drivers/scsi/ufs/ufs-sysfs.c
+@@ -122,7 +122,7 @@ static void ufshcd_auto_hibern8_update(struct ufs_hba *hba, u32 ahit)
+ {
+ 	unsigned long flags;
+ 
+-	if (!(hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT))
++	if (!ufshcd_is_auto_hibern8_supported(hba))
+ 		return;
+ 
+ 	spin_lock_irqsave(hba->host->host_lock, flags);
+@@ -164,7 +164,7 @@ static ssize_t auto_hibern8_show(struct device *dev,
+ {
+ 	struct ufs_hba *hba = dev_get_drvdata(dev);
+ 
+-	if (!(hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT))
++	if (!ufshcd_is_auto_hibern8_supported(hba))
+ 		return -EOPNOTSUPP;
+ 
+ 	return snprintf(buf, PAGE_SIZE, "%d\n", ufshcd_ahit_to_us(hba->ahit));
+@@ -177,7 +177,7 @@ static ssize_t auto_hibern8_store(struct device *dev,
+ 	struct ufs_hba *hba = dev_get_drvdata(dev);
+ 	unsigned int timer;
+ 
+-	if (!(hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT))
++	if (!ufshcd_is_auto_hibern8_supported(hba))
+ 		return -EOPNOTSUPP;
+ 
+ 	if (kstrtouint(buf, 0, &timer))
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index 8c1c551f2b42..0cf698d05426 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -3907,7 +3907,7 @@ static void ufshcd_auto_hibern8_enable(struct ufs_hba *hba)
+ {
+ 	unsigned long flags;
+ 
+-	if (!(hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT) || !hba->ahit)
++	if (!ufshcd_is_auto_hibern8_supported(hba) || !hba->ahit)
+ 		return;
+ 
+ 	spin_lock_irqsave(hba->host->host_lock, flags);
+@@ -8312,7 +8312,7 @@ int ufshcd_init(struct ufs_hba *hba, void __iomem *mmio_base, unsigned int irq)
+ 						UIC_LINK_HIBERN8_STATE);
+ 
+ 	/* Set the default auto-hiberate idle timer value to 150 ms */
+-	if (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT) {
++	if (ufshcd_is_auto_hibern8_supported(hba)) {
+ 		hba->ahit = FIELD_PREP(UFSHCI_AHIBERN8_TIMER_MASK, 150) |
+ 			    FIELD_PREP(UFSHCI_AHIBERN8_SCALE_MASK, 3);
+ 	}
+diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+index ecfa898b9ccc..994d73d03207 100644
+--- a/drivers/scsi/ufs/ufshcd.h
++++ b/drivers/scsi/ufs/ufshcd.h
+@@ -740,6 +740,11 @@ return true;
+ #endif
+ }
+ 
++static inline bool ufshcd_is_auto_hibern8_supported(struct ufs_hba *hba)
++{
++	return (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT);
++}
++
+ #define ufshcd_writel(hba, val, reg)	\
+ 	writel((val), (hba)->mmio_base + (reg))
+ #define ufshcd_readl(hba, reg)	\
 -- 
 2.18.0
 
