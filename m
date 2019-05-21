@@ -2,52 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 13BFF25157
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 16:01:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 376C125160
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 16:02:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4qc12+EkvE/d1bR6qdc90Ld7rncCwrIuI6baYtoRN5o=; b=Xmj6ZLZJYxiBmg
-	tPZ8OyyFTHbH83ZfmJv7FMUcDdNt37ESdRvHT5GF4J4kt3F3g2TJl0aSrieai5BNmcw8i4Tp66jes
-	OlClgghpwZPw8OVKlpVEfHwKCc9R4wZ/k9rIB3qnZrrekXd2JWGfPxLumGLJY25aj/TYBv+y0lBhS
-	Wqytjfc669dWP5P5/kQ6BiwwscTXuJV3HOcaibVFbSPXm53csCCiMD5+THnyE3d+Sr0ceHppbwofl
-	S5OgfK4Qt/QPyNT91VQ9bO8ai7z9OjbyurpEhk7Q2TSSHQ7F7kPv9sL2OPKzRKhdj6OiPROLJ8dQ7
-	hOhQpZ5GBLR2hur3fOKQ==;
+	List-Owner; bh=JoyYuD/Pf2qqDeg6B64Zv/HDMFg/IUW9KREsdik3G+I=; b=hactJ5T+PIlebl
+	GjUo8r4eqSWcZf35E0fvPbts5RNbyD3Nk4jM1enrhe3BG7doDReJiq4A4E4JzH487ol8fn7AqIH7y
+	1ueDwa6795JOdo8ShzbCqplfuLBsLclPZEQyWRmid3lF3M/6GMjd5BYOvZFcY8Fj4KeE9Gx4g6bv3
+	DJtLSkeg7hOqDsdCRWf7Vz+0tKb2vjWi+NuXErKfs+TYWjNPvMx8Iy2/yUhf+1QAdxMjoRELR89Mn
+	mbjKPLXPYEkCZV4MXWTUVE7UyL3l5YFTodk93ip8d+mdXFCXyM6YsZGPu2hYu/ll7INDwKOvSfIqs
+	1mx+UkIugp4uuzUVWItw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hT5K6-0002Xf-W8; Tue, 21 May 2019 14:00:59 +0000
+	id 1hT5L8-0002sg-5L; Tue, 21 May 2019 14:02:02 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hT5Jz-0002RF-98; Tue, 21 May 2019 14:00:52 +0000
+ id 1hT5Kw-0002lR-Cr; Tue, 21 May 2019 14:01:54 +0000
 Received: from localhost (unknown [106.51.105.51])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 0791921479;
- Tue, 21 May 2019 14:00:50 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id C72C521743;
+ Tue, 21 May 2019 14:01:48 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1558447251;
- bh=B2pMNgUdKmU1cAmS6aYmbKhfcBaE02tqFqEBfSUGy3Q=;
+ s=default; t=1558447310;
+ bh=LNDtj+p6qU3r67+ocgpSi5ncMC3Yz/CpRU5mwiTPnGI=;
  h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=HAUzjmDTqsg1XPKB4jRXTJPq8vu9dHTzhkPag3QFY60QQq1ZTM1a2O2q54Gv4VHiA
- kI7E3I3rrv3A1XP+CL4/VU1R1kKiHR2vt0XwnE//KEgiCXkpmZn5NvYp1WIapOd0+i
- ARPZ9RgQKveXyCZ4x4m05+nSs/iWf+CT1TOG4Ops=
-Date: Tue, 21 May 2019 19:30:45 +0530
+ b=bJEplRpQvhI53BWvqwOvhAGXW+mUoXtl7rbCjZ9njTRZJq0kjAA1XDwkytgTQD6tv
+ VsNU4QlW1RwJmdH176Mxz6hOVsIfcF9sUnM+qoqYi+JuMXAWN0DPWQijkwJVIRkLFW
+ xSt5fjtQcQxcRFII6YOG82sMtayTYmn7a9++SL9A=
+Date: Tue, 21 May 2019 19:31:45 +0530
 From: Vinod Koul <vkoul@kernel.org>
 To: Long Cheng <long.cheng@mediatek.com>
-Subject: Re: [PATCH 1/4] dmaengine: mediatek: Add MediaTek UART APDMA support
-Message-ID: <20190521140045.GO15118@vkoul-mobl>
+Subject: Re: [PATCH 3/4] dt-bindings: dma: uart: rename binding
+Message-ID: <20190521140145.GP15118@vkoul-mobl>
 References: <1556336193-15198-1-git-send-email-long.cheng@mediatek.com>
- <1556336193-15198-2-git-send-email-long.cheng@mediatek.com>
+ <1556336193-15198-4-git-send-email-long.cheng@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1556336193-15198-2-git-send-email-long.cheng@mediatek.com>
+In-Reply-To: <1556336193-15198-4-git-send-email-long.cheng@mediatek.com>
 User-Agent: Mutt/1.11.3 (2019-02-01)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_070051_339375_2FFD8DD7 
-X-CRM114-Status: UNSURE (   8.99  )
+X-CRM114-CacheID: sfid-20190521_070151_958224_8AD5EA62 
+X-CRM114-Status: UNSURE (   7.49  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -94,11 +94,12 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 On 27-04-19, 11:36, Long Cheng wrote:
-> Add 8250 UART APDMA to support MediaTek UART. If MediaTek UART is
-> enabled by SERIAL_8250_MT6577, and we can enable this driver to offload
-> the UART device moving bytes.
+> The filename matches mtk-uart-apdma.c.
+> So using "mtk-uart-apdma.txt" should be better.
+> And add some property.
 
-Applied, thanks
+Applied with Robs r-b tag in last version, thanks
+Also fixed a trailing line in patch :(
 
 -- 
 ~Vinod
