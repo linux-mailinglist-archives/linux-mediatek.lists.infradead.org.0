@@ -2,67 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A0D9224C14
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 11:59:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5B70624C74
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 12:13:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yo9vvNCkKKeGxdRifL1jhanbkIFTezMkKOSqQG5OUzE=; b=uK8zBzywxXQ4Xv
-	vWjpv3/81zDiqvqdV0mw1JNXcJ1pyq9ccsd3wmSydvj38kKpap9wQ594Kk7wBkU53skcUH+9d0tRu
-	TkomxIIp7npQNjLqB0sPzmNApvvrPVx/pMbo9525knOH9v1jrixW0ebjaDNUu8uSCzZ2JxjuzL5Rj
-	q2U2rrmfNv72xMPa1V1BEnSeNu8OG3qTC0nKTdtiEq5KL0RwSuTaeh8X7+v3k9Zq9hIGL6la2cN5p
-	9ZZlpIfjLOYXY5HME3rTj6zL/MuxqQB5IWsZvTFP+ulQog8/TIgWJuunOM02YobrXGgBOg2/qrMh7
-	+AZcSC5tvuLzWRrMmxEA==;
+	List-Owner; bh=EhYoF8v4rP1GghI8WUINR1nu/9SioC1aeRy2lVN6uKQ=; b=ftIUfQvXwHwRL/
+	qa/H2T4sMfRONeJXwGmRQPUmmo+Uf19hbHyTD3GKYhlN8zYc6ZqZyuKS2n4tMcHqhb7aYbwno8EDU
+	TItx4Op4SuvA6OGCrnspMRVOtBoyvrIHYQPFz8lwARwN3gDrOgIlufjkQ6NPFk2b/1rR4NHh36Wmb
+	hQeeCj8JC5kFB5vwV/sbA4A4yjhWhm2hbtChcHlqu0/fcPeArRBIi2+gpW5I4PhWvuxdasjcNelVA
+	jaQuXTo2/EgoRTa+pTw7hnkBL1rrGKZ4Y1Ht4VMyXf5ti9pgsbzy25EWlEi5wjy+kndaDa3DsS5aa
+	XuA2wzFAmWZTT0gcYUTg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hT1Xr-0000FF-Ke; Tue, 21 May 2019 09:58:55 +0000
-Received: from mga01.intel.com ([192.55.52.88])
+	id 1hT1m8-00087E-PY; Tue, 21 May 2019 10:13:40 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hT1Xh-000084-QR; Tue, 21 May 2019 09:58:47 +0000
-X-Amp-Result: UNKNOWN
-X-Amp-Original-Verdict: FILE UNKNOWN
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by fmsmga101.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 21 May 2019 02:58:45 -0700
-X-ExtLoop1: 1
-Received: from kuha.fi.intel.com ([10.237.72.189])
- by fmsmga001.fm.intel.com with SMTP; 21 May 2019 02:58:40 -0700
-Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
- Tue, 21 May 2019 12:58:39 +0300
-Date: Tue, 21 May 2019 12:58:39 +0300
-From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-To: Biju Das <biju.das@bp.renesas.com>
-Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
-Message-ID: <20190521095839.GI1887@kuha.fi.intel.com>
-References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
- <1557823643-8616-5-git-send-email-chunfeng.yun@mediatek.com>
- <20190517103736.GA1490@kuha.fi.intel.com>
- <20190517130511.GA1887@kuha.fi.intel.com>
- <1558319951.10179.352.camel@mhfsdcap03>
- <20190520080359.GC1887@kuha.fi.intel.com>
- <OSBPR01MB2103385D996762FA54F8E437B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
- <20190520083601.GE1887@kuha.fi.intel.com>
- <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ id 1hT1lz-00080r-LO; Tue, 21 May 2019 10:13:32 +0000
+Received: from mail-wr1-f51.google.com (mail-wr1-f51.google.com
+ [209.85.221.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 918B621773;
+ Tue, 21 May 2019 10:13:30 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1558433610;
+ bh=OufmRIYJQ0nbYLIvqyUNnOhI9i9mkYrk0LMrip+KEiI=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=ryfrH3Wpwo2adEt4OeWEHICRHYnhpBhlyK66YfjCP0puw45cAuqNoYm8thn9W3mkd
+ kWQ4RlSa8sMKzjuBwR/QImifJYSWp8Q0Slhnu6jVxxtfSmQWup7R5D05uId9XdsFuM
+ AxlIZzHLF+n+PEvOThSGF8l08U2XN+RCqv/PXWJk=
+Received: by mail-wr1-f51.google.com with SMTP id e15so17922208wrs.4;
+ Tue, 21 May 2019 03:13:30 -0700 (PDT)
+X-Gm-Message-State: APjAAAVbfBZJoO/6/50gMajqsr7C6glsUXhGr3ZwKwQi99onoJ4ITcEk
+ FNybk/7Zv1yFpbecEcsnUGI1TFoMlJBikcKQz0o=
+X-Google-Smtp-Source: APXvYqzmTjjOL9v8MqfbpV2G5sAp6vg4KFpwg98Fgc4v9EVuXBUC7juwUBRFOmLuLrdEoaon7lkrW6QqVeiKkYCEMQ4=
+X-Received: by 2002:adf:ee0c:: with SMTP id y12mr24087711wrn.34.1558433609178; 
+ Tue, 21 May 2019 03:13:29 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
-User-Agent: Mutt/1.11.4 (2019-03-13)
+References: <20190508073331.27475-1-drinkcat@chromium.org>
+ <CACRpkdZb73vNyepcfjzEGAopc7BBxde_N1wxn7PSJ3aGC0=Gig@mail.gmail.com>
+In-Reply-To: <CACRpkdZb73vNyepcfjzEGAopc7BBxde_N1wxn7PSJ3aGC0=Gig@mail.gmail.com>
+From: Sean Wang <sean.wang@kernel.org>
+Date: Tue, 21 May 2019 03:13:17 -0700
+X-Gmail-Original-Message-ID: <CAGp9LzriFJTf_pqUDx3Tmp2dbJBy7Rv1y73Tq+Rw5WeXPT94aA@mail.gmail.com>
+Message-ID: <CAGp9LzriFJTf_pqUDx3Tmp2dbJBy7Rv1y73Tq+Rw5WeXPT94aA@mail.gmail.com>
+Subject: Re: [PATCH v2 0/2] pinctrl: mediatek: mt8183: Add support for wake
+ sources
+To: Linus Walleij <linus.walleij@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_025845_861566_8C702E77 
-X-CRM114-Status: GOOD (  25.83  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190521_031331_710555_E54B413D 
+X-CRM114-Status: GOOD (  16.33  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.88 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,119 +84,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Hans de Goede <hdegoede@redhat.com>,
- Badhri Jagan Sridharan <badhri@google.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>,
- "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+Cc: Nicolas Boichat <drinkcat@chromium.org>,
+ Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
  "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
+ "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Min Guo <min.guo@mediatek.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Li Jun <jun.li@nxp.com>
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, May 20, 2019 at 09:45:46AM +0000, Biju Das wrote:
-> 
-> 
-> Hi Heikki,
-> 
-> Thanks for the feedback.
-> 
-> > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by
-> > node
-> > 
-> > On Mon, May 20, 2019 at 08:06:41AM +0000, Biju Das wrote:
-> > > Hi Heikki,
-> > >
-> > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
-> > > > usb_role_switch by node
-> > > >
-> > > > On Mon, May 20, 2019 at 10:39:11AM +0800, Chunfeng Yun wrote:
-> > > > > Hi,
-> > > > > On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wrote:
-> > > > > > Hi,
-> > > > > >
-> > > > > > On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Krogerus wrote:
-> > > > > > > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfeng Yun wrote:
-> > > > > > > > Add fwnode_usb_role_switch_get() to make easier to get
-> > > > > > > > usb_role_switch by fwnode which register it.
-> > > > > > > > It's useful when there is not device_connection registered
-> > > > > > > > between two drivers and only knows the fwnode which register
-> > > > > > > > usb_role_switch.
-> > > > > > > >
-> > > > > > > > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> > > > > > > > Tested-by: Biju Das <biju.das@bp.renesas.com>
-> > > > > > >
-> > > > > > > Acked-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-> > > > > >
-> > > > > > Hold on. I just noticed Rob's comment on patch 2/6, where he
-> > > > > > points out that you don't need to use device graph since the
-> > > > > > controller is the parent of the connector. Doesn't that mean you
-> > > > > > don't really need this API?
-> > > > > No, I still need it.
-> > > > > The change is about the way how to get fwnode; when use device
-> > > > > graph, get fwnode by of_graph_get_remote_node(); but now will get
-> > > > > fwnode by of_get_parent();
-> > > >
-> > > > OK, I get that, but I'm still not convinced about if something like
-> > > > this function is needed at all. I also have concerns regarding how
-> > > > you are using the function. I'll explain in comment to the patch 5/6 in this
-> > series...
-> > >
-> > > FYI, Currently  I am also using this api in my patch series.
-> > > https://patchwork.kernel.org/patch/10944637/
-> > 
-> > Yes, and I have the same question for you I jusb asked in comment I added
-> > to the patch 5/6 of this series. Why isn't usb_role_switch_get() enough?
-> 
-> Currently no issue. It will work with this api as well, since the port node is part of controller node.
-> For eg:-
-> https://patchwork.kernel.org/patch/10944627/
-> 
-> However if any one adds port node inside the connector node, then this api may won't work as expected.
-> Currently I get below error
-> 
-> [    2.299703] OF: graph: no port node found in /soc/i2c@e6500000/hd3ss3220@47
+On Thu, May 16, 2019 at 4:56 AM Linus Walleij <linus.walleij@linaro.org> wrote:
+>
+> On Wed, May 8, 2019 at 9:33 AM Nicolas Boichat <drinkcat@chromium.org> wrote:
+>
+> > This adds support for wake sources in pinctrl-mtk-common-v2, and
+> > pinctrl-mt8183. Without this patch, all interrupts that are left
+> > enabled on suspend act as wake sources (and wake sources without
+> > interrupt enabled do not).
+> >
+> > Changes since v1:
+> >  - Move changes from mtk-common-v2 to mtk-pinctrl-paris, as
+> >    recommended by Sean, to keep better separation between eint
+> >    and pinctrl-common features.
+> >
+> > Nicolas Boichat (2):
+> >   pinctrl: mediatek: Add pm_ops to pinctrl-paris
+> >   pinctrl: mediatek: mt8183: Add mtk_pinctrl_paris_pm_ops
+>
+> All seems to look fair to me, but I need some official ACK from
+> Sean on these.
+>
 
-We need to understand why is that happening?
+sure, it looks good to me and thanks for Nicolas' help
 
-It looks like we have an issue somewhere in the code, and instead of
-fixing that, you are working around it. Let's not do that.
+Acked-by: Sean Wang <sean.wang@kernel.org>
 
-> For eg:-
-> 
-> 	hd3ss3220@47 {
-> 		compatible = "ti,hd3ss3220";
-> 		...
-> 		....
-> 		usb_con: connector {
->                                      ....
->                                      ....
-> 			port {
-> 				hd3ss3220_ep: endpoint@0 {
-> 					reg = <0>;
-> 					remote-endpoint = <&usb3peri_role_switch>;
-> 				};
-> 			};
-> 		};
-> 	};
-> 
-> Regards,
-> Biju
-
-thanks,
-
--- 
-heikki
+> I see there is some discussion on a related patch set which
+> also has two patches so I am a but confused how mature the
+> two patch sets are? Are they at all related?
+>
+> Yours,
+> Linus Walleij
 
 _______________________________________________
 Linux-mediatek mailing list
