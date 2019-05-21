@@ -2,58 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 651A62481D
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 08:34:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE33424854
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 08:46:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vi+1QggR1kz7BHA+2Qbxb+Q9GvD/4Z1KD/EyP/+NMMY=; b=tPiCK6gv0jVYTW
-	6hv13n0BenTJ1ZLHEsS5BB0RzO8oVwNIL45MNJcTATmi2Tv5PndOBf0oCNhwpmHNVYZwqXo49FWNW
-	38tSf9oKo5DaR4VCy9FfkFdLNu8N8Fv1+5pXcjU8ijIXnwDbMCIqGtoo+HsjWL10+MK5zHbdKn1xw
-	ajD7bZyndhLldbWftO1/KYCHmcKL0/Dvis+qhKN1fnVZHzhIog/Pzkq26ZkQwoYzBueztvrxIK2DX
-	M/PT/jlU2vlWcYKIePA+vys4Vm8tUkq7ZUEqmDMKkN3kV8aJsgUKIIYP8adzkRNXMBHW1hVlzibOX
-	J7/AE+VjUO7JEhb9B1bg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4CFtXGz2L0kJm0p7SVQxNWyVsOCYC3JaB1KPrxQeXKA=; b=VTP21o51BS+Iq6
+	eVk8fqz1TGRv6lrQ0nnp8PAfa+x2KXrccruED+JhBSORk4vJdb9Qwk6OgAVJD2hjLDB5sd0mS47JV
+	sMQ3Y9kntTg79+CchSARs037WDLfPt6cLNCofDB486tIpEOajtu3c9pxImEAHBBNglTbPuO4/yk9J
+	CtOGnFNVAipkASQG8J+rAuysOHwgaKhNo6Hb1ixqu2HwfZvfwjCTgIqyvZ864MlHjWsw5yLedCQWu
+	ZPfoTlLygT0uDxx4lQh8bJXEW+OxUak6PUX5axG2VO5425o/NlDylMwZi/WnrXIjdENdLG40L+Ohf
+	pWAJFzWMRMDEwKEz5p6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSyLT-0003W5-Vn; Tue, 21 May 2019 06:33:56 +0000
+	id 1hSyXJ-0001V3-I4; Tue, 21 May 2019 06:46:09 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSyLK-0003PI-St; Tue, 21 May 2019 06:33:48 +0000
-X-UUID: 18f4a3ae4f704a9288435b256bc5a76b-20190520
-X-UUID: 18f4a3ae4f704a9288435b256bc5a76b-20190520
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1hSyWk-0000jM-3m; Tue, 21 May 2019 06:45:35 +0000
+X-UUID: 5506ed965b224078bc70834e6376a746-20190520
+X-UUID: 5506ed965b224078bc70834e6376a746-20190520
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1663878573; Mon, 20 May 2019 22:29:55 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 23:29:54 -0700
+ with ESMTP id 991889183; Mon, 20 May 2019 22:45:08 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 23:45:06 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 21 May 2019 14:29:45 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 21 May 2019 14:29:45 +0800
-Message-ID: <1558420185.660.9.camel@mtkswgap22>
-Subject: RE: [PATCH v4 2/3] scsi: ufs: Introduce
- ufshcd_is_auto_hibern8_supported()
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 May 2019 14:45:04 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 21 May 2019 14:45:04 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
-To: Avri Altman <Avri.Altman@wdc.com>
-Date: Tue, 21 May 2019 14:29:45 +0800
-In-Reply-To: <SN6PR04MB4925EAB455D857AEB055258FFC070@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1558361445-30994-1-git-send-email-stanley.chu@mediatek.com>
- <1558361445-30994-3-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB4925EAB455D857AEB055258FFC070@SN6PR04MB4925.namprd04.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
+Subject: [PATCH v5 0/3] scsi: ufs: Add error handling of Auto-Hibernate
+Date: Tue, 21 May 2019 14:44:51 +0800
+Message-ID: <1558421094-3182-1-git-send-email-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 654E7C1331B3670E11854CE7A262AB6C908DCE4D8CDB3BB365F47B68D9F001742000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_233346_936474_BFA3DB07 
-X-CRM114-Status: UNSURE (   7.52  )
+X-CRM114-CacheID: sfid-20190520_234534_154786_4EEAA440 
+X-CRM114-Status: UNSURE (   6.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -75,43 +70,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, evgreen@chromium.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Avri,
+Currently auto-hibernate is activated if host supports
+auto-hibern8 capability. However error-handling is not implemented,
+which makes the feature somewhat risky.
 
-On Tue, 2019-05-21 at 06:18 +0000, Avri Altman wrote:
-> > 
-> > ufshcd_is_auto_hibern8_supported() will be used elsewhere
-> > in the driver, thus refactor it for preparation.
-> You missed a couple of spots, e.g. in ufshcd_auto_hibern8_enable and in ufs-sysfs.
+If either "Hibernate Enter" or "Hibernate Exit" fail during
+auto-hibernate flow, the corresponding interrupt
+"UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
+according to UFS specification.
 
-Yes...
-Will re-factor them as well in next version.
+This patch adds auto-hibernate error-handling:
 
-> 
-> Thanks,
-> Avri
+- Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
+  auto-hibernate feature is activated.
 
-Thanks,
-Stanley
+- If fail happens, trigger error-handling just like "manual-hibernate"
+  fail and apply the same recovery flow: schedule UFS error handler in
+  ufshcd_check_errors(), and then do host reset and restore
+  in UFS error handler.
 
+v5:
+ - Also re-factor checking of Auto-Hibernation support in other places, e.g., in ufshcd_auto_hibern8_enable() and in ufs-sysfs (Avri Altman)
+ - Change order of patch "scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()" to #1 as a preparation patch of whole series
+
+v4:
+ - Replace original patch "[3/3] scsi: ufs: Use re-factored Auto-Hibernate function" by a new preparation patch "[2/3] scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()" for re-factoring ufshcd_is_auto_hibern8_supported (Avri Altman)
+ - Refine UIC mask definitions (Avri Altman)
+
+v3:
+ - Fix typo in patch "scsi: ufs: Do not overwrite Auto-Hibernate timer" (Avri Altman)
+ - Rebase to Linux 5.2-rc1
+
+v2:
+ - Fix sentences in commit message (Marc Gonzalez)
+ - Make "Auto-Hibernate" error detection more precise (Bean Huo)
+
+Stanley Chu (3):
+  scsi: ufs: Introduce ufshcd_is_auto_hibern8_supported()
+  scsi: ufs: Do not overwrite Auto-Hibernate timer
+  scsi: ufs: Add error-handling of Auto-Hibernate
+
+ drivers/scsi/ufs/ufs-sysfs.c |  6 +++---
+ drivers/scsi/ufs/ufshcd.c    | 35 +++++++++++++++++++++++++++++++++--
+ drivers/scsi/ufs/ufshcd.h    |  5 +++++
+ drivers/scsi/ufs/ufshci.h    |  6 ++++--
+ 4 files changed, 45 insertions(+), 7 deletions(-)
+
+-- 
+2.18.0
 
 
 _______________________________________________
