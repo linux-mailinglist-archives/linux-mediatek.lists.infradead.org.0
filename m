@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A520F2397A
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 May 2019 16:11:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C936E24568
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 03:12:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fkVRLrxmYd4UBDvgvVPQBigv/STifAZQCEwGemfN0AU=; b=dZkitEv2oCz420
-	J5DDpOlZ06ZzGK4hbTKDMRvPyI0DcYkDDbzqns/HqXxo6JdYQPWqXrQyCLUveX5rta5Hn743U7fJy
-	7MpTMmbWMzDXNv1TzH8t7xhpDeZb50SyIWMLMhGlopz4ygK/KxtYWLHVL6cbWmnQjCOj5BzGuOcsL
-	pZ6DAtOorgPiiu23+5Irdmy4hGV4+p2iE0Q8CTyy3IeYpE9Q2gHsDW7ViZ6rqIC+WBJK3uJPRHFqv
-	YDTxbxw9xbw5PF4kiEZEXFBwZl8ixKjxzc3hyYgIZtztxuQA86j18PX9xktUhhkFfUVcoIrbac8+k
-	23rS2gy8bxVCovya692Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=yrGvr7bx1VTvV0ajZ6YNOuBNEWyMKc69FbyZ7lQzUT0=; b=aCCNqNVRgERSm3
+	wWCAW1V0lHdIfIB5wUyaxjkg2dKGCMEVWZkNq2d3ktYHT2yiif7OHFl20rMlVt1Ez/9VYB29l30dI
+	vdlx0ai5NkqhZXI2CQ3GcJj7k/cumJmqBaZh/3txl8hEAbH7wS22JVKocXmqoe5DOihc+EdUkaBOX
+	Tsh9fuVOLtDUndov5+F3XdWsCTYxKW/Hqp9/XYIaLwije0y7V8MuL5anUmOrt5DyLFItxLpTqvEqx
+	Am7MfJOKkTC19yXnNJCjs41BuMPeHpVXK/JbS+OWzh+cAgpIV+rWBMSPWdCntGIda9tB5SaLl7hPn
+	hwmNsjemQICsWLeEyviQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSj0z-0007th-Cx; Mon, 20 May 2019 14:11:45 +0000
+	id 1hStKO-0004t0-FJ; Tue, 21 May 2019 01:12:28 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSj0S-0007Am-Sl; Mon, 20 May 2019 14:11:14 +0000
-X-UUID: dce75c60072d40158332ca6aacfe1b22-20190520
-X-UUID: dce75c60072d40158332ca6aacfe1b22-20190520
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hStJO-0003Oz-BB; Tue, 21 May 2019 01:11:29 +0000
+X-UUID: fe05a768fe054ef9a78f7361fa926dd6-20190520
+X-UUID: fe05a768fe054ef9a78f7361fa926dd6-20190520
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 672237720; Mon, 20 May 2019 06:10:49 -0800
-Received: from mtkmbs03n1.mediatek.inc (172.21.101.181) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 07:10:48 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs03n1.mediatek.inc (172.21.101.181) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 20 May 2019 22:10:47 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
+ with ESMTP id 719265843; Mon, 20 May 2019 17:11:18 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 20 May 2019 18:11:17 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 May 2019 09:11:09 +0800
+Received: from mtkslt302.mediatek.inc (10.21.14.115) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 20 May 2019 22:10:47 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH v4 3/3] scsi: ufs: Add error-handling of Auto-Hibernate
-Date: Mon, 20 May 2019 22:10:45 +0800
-Message-ID: <1558361445-30994-4-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1558361445-30994-1-git-send-email-stanley.chu@mediatek.com>
-References: <1558361445-30994-1-git-send-email-stanley.chu@mediatek.com>
+ Frontend Transport; Tue, 21 May 2019 09:11:09 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
+ <ck.hu@mediatek.com>
+Subject: [PATCH v7 00/12] support gce on mt8183 platform
+Date: Tue, 21 May 2019 09:10:56 +0800
+Message-ID: <20190521011108.40428-1-bibby.hsieh@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 560C39CD169EBD5E0F1571542FAC1B01D239FA9C6AF030FEC3F9F7430BE8543B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_071112_925294_3DCCB3C1 
-X-CRM114-Status: GOOD (  10.28  )
+X-CRM114-CacheID: sfid-20190520_181126_570508_A31A7401 
+X-CRM114-Status: GOOD (  13.29  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,123 +71,95 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, evgreen@chromium.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, linux-kernel@vger.kernel.org,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Sascha
+ Hauer <kernel@pengutronix.de>, Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Currently auto-hibernate is activated if host supports
-auto-hibern8 capability. However error-handling is not implemented,
-which makes the feature somewhat risky.
+Changes since v6:
+ - remove cmdq_dev_get_event function and gce event property
+ - separate some changes to indepentent patch
+ - change the binding document related to gce-client-reg property
 
-If either "Hibernate Enter" or "Hibernate Exit" fail during
-auto-hibernate flow, the corresponding interrupt
-"UIC_HIBERNATE_ENTER" or "UIC_HIBERNATE_EXIT" shall be raised
-according to UFS specification.
+Changes since v5:
+ - fix typo
+ - remove gce-event-name form the dt-binding
+ - add reasons in commit message
 
-This patch adds auto-hibernate error-handling:
+Changes since v4:
+ - refine the architecture of the packet encoder function
+ - refine the gce enevt property
+ - change the patch's title
 
-- Monitor "Hibernate Enter" and "Hibernate Exit" interrupts after
-  auto-hibernate feature is activated.
+Changes since v3:
+ - fix a typo in dt-binding and dtsi
+ - cast the return value to right format
 
-- If fail happens, trigger error-handling just like "manual-hibernate"
-  fail and apply the same recovery flow: schedule UFS error handler in
-  ufshcd_check_errors(), and then do host reset and restore
-  in UFS error handler.
+Changes since v2:
+ - according to CK's review comment, change the property name and
+   refine the parameter
+ - change the patch's title
+ - remove unused property from dt-binding and dts
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Bean Huo <beanhuo@micron.com>
-Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
----
- drivers/scsi/ufs/ufshcd.c | 31 +++++++++++++++++++++++++++++++
- drivers/scsi/ufs/ufshci.h |  6 ++++--
- 2 files changed, 35 insertions(+), 2 deletions(-)
+Changes since v1:
+ - add prefix "cmdq" in the commit subject
+ - add dt-binding document for get event and subsys function
+ - add fix up tag in fixup patch
+ - fix up some coding style (alignment)
 
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index c904625d9905..da304cbf9b0b 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -5254,6 +5254,7 @@ static void ufshcd_err_handler(struct work_struct *work)
- 			goto skip_err_handling;
- 	}
- 	if ((hba->saved_err & INT_FATAL_ERRORS) ||
-+	    (hba->saved_err & UFSHCD_UIC_HIBERN8_MASK) ||
- 	    ((hba->saved_err & UIC_ERROR) &&
- 	    (hba->saved_uic_err & (UFSHCD_UIC_DL_PA_INIT_ERROR |
- 				   UFSHCD_UIC_DL_NAC_RECEIVED_ERROR |
-@@ -5413,6 +5414,23 @@ static void ufshcd_update_uic_error(struct ufs_hba *hba)
- 			__func__, hba->uic_error);
- }
- 
-+static bool ufshcd_is_auto_hibern8_error(struct ufs_hba *hba,
-+					 u32 intr_mask)
-+{
-+	if (!ufshcd_is_auto_hibern8_supported(hba))
-+		return false;
-+
-+	if (!(intr_mask & UFSHCD_UIC_HIBERN8_MASK))
-+		return false;
-+
-+	if (hba->active_uic_cmd &&
-+	    (hba->active_uic_cmd->command == UIC_CMD_DME_HIBER_ENTER ||
-+	    hba->active_uic_cmd->command == UIC_CMD_DME_HIBER_EXIT))
-+		return false;
-+
-+	return true;
-+}
-+
- /**
-  * ufshcd_check_errors - Check for errors that need s/w attention
-  * @hba: per-adapter instance
-@@ -5431,6 +5449,15 @@ static void ufshcd_check_errors(struct ufs_hba *hba)
- 			queue_eh_work = true;
- 	}
- 
-+	if (hba->errors & UFSHCD_UIC_HIBERN8_MASK) {
-+		dev_err(hba->dev,
-+			"%s: Auto Hibern8 %s failed - status: 0x%08x, upmcrs: 0x%08x\n",
-+			__func__, (hba->errors & UIC_HIBERNATE_ENTER) ?
-+			"Enter" : "Exit",
-+			hba->errors, ufshcd_get_upmcrs(hba));
-+		queue_eh_work = true;
-+	}
-+
- 	if (queue_eh_work) {
- 		/*
- 		 * update the transfer error masks to sticky bits, let's do this
-@@ -5493,6 +5520,10 @@ static void ufshcd_tmc_handler(struct ufs_hba *hba)
- static void ufshcd_sl_intr(struct ufs_hba *hba, u32 intr_status)
- {
- 	hba->errors = UFSHCD_ERROR_MASK & intr_status;
-+
-+	if (ufshcd_is_auto_hibern8_error(hba, intr_status))
-+		hba->errors |= (UFSHCD_UIC_HIBERN8_MASK & intr_status);
-+
- 	if (hba->errors)
- 		ufshcd_check_errors(hba);
- 
-diff --git a/drivers/scsi/ufs/ufshci.h b/drivers/scsi/ufs/ufshci.h
-index 6fa889de5ee5..dbb75cd28dc8 100644
---- a/drivers/scsi/ufs/ufshci.h
-+++ b/drivers/scsi/ufs/ufshci.h
-@@ -144,8 +144,10 @@ enum {
- #define CONTROLLER_FATAL_ERROR			0x10000
- #define SYSTEM_BUS_FATAL_ERROR			0x20000
- 
--#define UFSHCD_UIC_PWR_MASK	(UIC_HIBERNATE_ENTER |\
--				UIC_HIBERNATE_EXIT |\
-+#define UFSHCD_UIC_HIBERN8_MASK	(UIC_HIBERNATE_ENTER |\
-+				UIC_HIBERNATE_EXIT)
-+
-+#define UFSHCD_UIC_PWR_MASK	(UFSHCD_UIC_HIBERN8_MASK |\
- 				UIC_POWER_MODE)
- 
- #define UFSHCD_UIC_MASK		(UIC_COMMAND_COMPL | UFSHCD_UIC_PWR_MASK)
+MTK will support gce function on mt8183 platform.
+  dt-binding: gce: add gce header file for mt8183
+  mailbox: mediatek: cmdq: support mt8183 gce function
+  arm64: dts: add gce node for mt8183
+
+Besides above patches, we refine gce driver on those patches.
+  soc: mediatek: cmdq: reorder the parameter
+  soc: mediatek: cmdq: change the type of input parameter
+  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
+  soc: mediatek: cmdq: clear the event in cmdq initial flow
+
+In order to enhance the convenience of gce usage, we add new
+helper functions and refine the method of instruction combining.
+  dt-binding: gce: remove thread-num property
+  dt-binding: gce: add binding for gce subsys property
+  soc: mediatek: cmdq: define the instruction struct
+  soc: mediatek: cmdq: add polling function
+  soc: mediatek: cmdq: add cmdq_dev_get_subsys function
+
+Bibby Hsieh (12):
+  dt-binding: gce: remove thread-num property
+  dt-binding: gce: add gce header file for mt8183
+  dt-binding: gce: add binding for gce client reg property
+  mailbox: mediatek: cmdq: move the CMDQ_IRQ_MASK into cmdq driver data
+  mailbox: mediatek: cmdq: support mt8183 gce function
+  soc: mediatek: cmdq: clear the event in cmdq initial flow
+  soc: mediatek: cmdq: reorder the parameter
+  soc: mediatek: cmdq: change the type of input parameter
+  soc: mediatek: cmdq: define the instruction struct
+  soc: mediatek: cmdq: add polling function
+  soc: mediatek: cmdq: add cmdq_dev_get_client_reg function
+  arm64: dts: add gce node for mt8183
+
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |  25 ++-
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  11 ++
+ drivers/mailbox/mtk-cmdq-mailbox.c            |  18 +-
+ drivers/soc/mediatek/mtk-cmdq-helper.c        | 166 ++++++++++++----
+ include/dt-bindings/gce/mt8183-gce.h          | 177 ++++++++++++++++++
+ include/linux/mailbox/mtk-cmdq-mailbox.h      |   5 +
+ include/linux/soc/mediatek/mtk-cmdq.h         |  50 ++++-
+ 7 files changed, 391 insertions(+), 61 deletions(-)
+ create mode 100644 include/dt-bindings/gce/mt8183-gce.h
+
 -- 
 2.18.0
 
