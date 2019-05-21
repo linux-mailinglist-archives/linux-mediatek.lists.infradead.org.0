@@ -2,59 +2,115 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E82D24733
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 06:59:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B2D7E247EF
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 08:18:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Uncbkn9ndfkLllgVl3ZkeeJJ1FVqI/YNR61WdtrzxN4=; b=FI7yPi3d79u6Qp
-	xaNF4VpqGGR2RKWpvo4cbfbw/gyYfKjUp2IBN0zIy2wxCXbUVRTio2nNK8b2G6G/b1suUXJNnzppo
-	qUOxvZsJs3uENnM0TH3/N/pPvINj/z2xI6X0wLUJW5fmMraqVD7jlGbr+9Q6PWeHrFh0cgjjif+zJ
-	XZ09wXc20FeBNsrxmc8ntv2d0uVFid/QOYtXpOu1qpDoOln0+ZpbTW7n+hdGRk1I92sBqnD7okbWX
-	Stb2aAumavtHwZdm0cQB/T59JaoFgfrCUQsAOs7CiZQCk1k3rYTE9vsFzobfJ7W5dJpZ3tJUyGyRo
-	Nk39uCoFMMs4uXuALMWQ==;
+	List-Owner; bh=DI19MRWvPuoIxXg8+eutqSOIBVKN9QGZvNaZ7rK0KoQ=; b=EBC6O54rjDdjyb
+	+SFzmaD/RBcg6IeLkkFmRLfKTmqFrogCaTGCOaAyslWJikHpjM7MxTtSHwHHEz3WqsEOWofH4Ib7v
+	Ra+deuTEQDTvVqwqYR3xG7Ep10YKtOgFp+I/Iwg+/Z14HC4YAzARnmqaqvHllBAinjV7tdvRWxFQi
+	YjNdSmuzHhJ3IpMpUuOQ7W+tLkHwlRRiXfaLGbcberfkzLMjas17WwAYrDr1Y90OE0am0vj8ZhRfV
+	EMMbPQb+QsKNNr7ngltR66gi6EyjqxS0PgFgNsqnH4hkOvNg3E9qshnsI6qCpSJQ/creche0WLhCd
+	lKXOGN2JPuSEqU01RWQA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSwrb-00062v-8R; Tue, 21 May 2019 04:58:59 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hSy6P-0006lJ-16; Tue, 21 May 2019 06:18:21 +0000
+Received: from esa2.hgst.iphmx.com ([68.232.143.124])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSwrX-00062Q-B1
- for linux-mediatek@lists.infradead.org; Tue, 21 May 2019 04:58:56 +0000
-Received: from localhost (unknown [106.201.107.13])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 4207121019;
- Tue, 21 May 2019 04:58:54 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1558414735;
- bh=w0PrRhb/VLNDP5E1yQloNmbdNQpf/jLdu2sJYIQzoqU=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=wmWkLTPAQGqtWF4/jrOD7kyg84A83fKHEk6yU+xZ3MeatGBuQ2XTplO2ASwvXXW8f
- jSHwl6zOpH+h2vhWkCJjY/v3sVd31AGKwC5TZF/oL7TM6CS/ifXpKaeoIdx2pEpNnN
- PQlVn0vCEPAoBikbm3TbaIf0ZkRVki+DzGy6e0B0=
-Date: Tue, 21 May 2019 10:28:51 +0530
-From: Vinod Koul <vkoul@kernel.org>
-To: Dan Carpenter <dan.carpenter@oracle.com>
-Subject: Re: [PATCH] dmaengine: mediatek-cqdma: sleeping in atomic context
-Message-ID: <20190521045851.GR15118@vkoul-mobl>
-References: <20190509100923.GA7024@mwanda>
+ id 1hSy6L-0006kb-SY; Tue, 21 May 2019 06:18:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
+ t=1558419531; x=1589955531;
+ h=from:to:cc:subject:date:message-id:references:
+ in-reply-to:content-transfer-encoding:mime-version;
+ bh=tjsXONKa+Pf6UPe0Zzel/r/jyoegrw1lpopf3HtQQyY=;
+ b=ndJSfaiLDeyVN7A2fZx9sgS1GiQMA6RdFe8EXvbHfpfd8K5WArK04Q0M
+ NHosRQwu26KzQpIY3Uvgmcb3+B8HR6lKyHncQuOWaWxxX443Envp64lex
+ IxX2+ZGB7aNT6xYulOac8eUg50phBNhdO1xhuPPhNO6g6t42GAocOyQp9
+ u7zSL76iow4QL5ohAss+MukJBBbTZy/SZJUaAYPMatUEONgIgJXuf6UNb
+ vi40wWVZ/DZmFoYXMqCld58TkOefmtSqKhhp425Cc8ZDho44eCwnSOk1p
+ /0oI7+mxe5IU3DfGGk6d7XNnSyEPpgjfdFwHyWE7w0LJnG+6gg0bR2slc g==;
+X-IronPort-AV: E=Sophos;i="5.60,494,1549900800"; d="scan'208";a="208184221"
+Received: from mail-sn1nam01lp2059.outbound.protection.outlook.com (HELO
+ NAM01-SN1-obe.outbound.protection.outlook.com) ([104.47.32.59])
+ by ob1.hgst.iphmx.com with ESMTP; 21 May 2019 14:18:46 +0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=tjsXONKa+Pf6UPe0Zzel/r/jyoegrw1lpopf3HtQQyY=;
+ b=BRnRkGiVSFcU7oDMZGaJ5jbv9m7JvBDJs/AuRWp2VSaIsTtsWvftbgvRXNkzTxqw3Qun5aLxPpjeCV4EZOSKW1qcP6X2wHfEtM2zoc1GY+mNrQC77zCaDaWKwSgnvkV9kQIxeqKFwSlAxNUU4OX6tqtO92pivxMS5CdvWJwEjWk=
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
+ SN6PR04MB3824.namprd04.prod.outlook.com (52.135.81.33) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1900.18; Tue, 21 May 2019 06:18:11 +0000
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530]) by SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530%6]) with mapi id 15.20.1900.020; Tue, 21 May 2019
+ 06:18:11 +0000
+From: Avri Altman <Avri.Altman@wdc.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
+ <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
+ <pedrom.sousa@synopsys.com>
+Subject: RE: [PATCH v4 2/3] scsi: ufs: Introduce
+ ufshcd_is_auto_hibern8_supported()
+Thread-Topic: [PATCH v4 2/3] scsi: ufs: Introduce
+ ufshcd_is_auto_hibern8_supported()
+Thread-Index: AQHVDxXZu6oGxF11MU6BMI1MBhbFCaZ1GtHg
+Date: Tue, 21 May 2019 06:18:11 +0000
+Message-ID: <SN6PR04MB4925EAB455D857AEB055258FFC070@SN6PR04MB4925.namprd04.prod.outlook.com>
+References: <1558361445-30994-1-git-send-email-stanley.chu@mediatek.com>
+ <1558361445-30994-3-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1558361445-30994-3-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=Avri.Altman@wdc.com; 
+x-originating-ip: [212.25.79.133]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: c20d7dde-6802-49c7-a78d-08d6ddb419ac
+x-ms-office365-filtering-ht: Tenant
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(4618075)(2017052603328)(7193020);
+ SRVR:SN6PR04MB3824; 
+x-ms-traffictypediagnostic: SN6PR04MB3824:
+wdcipoutbound: EOP-TRUE
+x-microsoft-antispam-prvs: <SN6PR04MB3824DF90CC9E6DE59927266CFC070@SN6PR04MB3824.namprd04.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:4714;
+x-forefront-prvs: 0044C17179
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10019020)(136003)(346002)(366004)(376002)(396003)(39860400002)(199004)(189003)(76176011)(33656002)(99286004)(6116002)(6506007)(3846002)(5660300002)(54906003)(110136005)(7696005)(55016002)(558084003)(256004)(4326008)(26005)(11346002)(52536014)(446003)(68736007)(478600001)(2501003)(14454004)(7736002)(6246003)(8936002)(81166006)(53936002)(81156014)(8676002)(186003)(102836004)(66066001)(476003)(86362001)(9686003)(486006)(72206003)(316002)(64756008)(66446008)(66556008)(2906002)(73956011)(76116006)(66946007)(66476007)(2201001)(229853002)(71190400001)(305945005)(7416002)(6436002)(74316002)(25786009)(71200400001);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB3824;
+ H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: L0vnxzWxKVRMQWeeCxzzjIw2vMOTm1/9ZedCGdkKv4DvlIRCe8yLw2L5DxvZzzUaRyPqmTCjFlVKL+6axMJjcAkhEu8k03YiX1dbpckZempERgJKOMujmM3aVphTgsKR+MsfI1kWz8Mm+TJFYVxHnBWKBwym/tbwn/iJbVB0poqLLIm+Jm94xgT8TtArrxO5PlnBZ/A2zGuDFQH0/rUOgJg3QeSrBAXxtKWPo+HDN/a4IMWd8hKeD9VYG4ch+lz9mKygnpZayTYvLKDbsd/uaL9SwtzbBPTRlq7DobTi/861sQ4pHWy2zJ5sTN7H+PMLGKtId0bh6s+VYdY0S6XdYgYCNYnU26U+WDmjbQFbq/M9f0mACg3m3XTpdAMgbEZiGd1b75Pdmi6dBSa67jMdSpAjm4acsTo13R9FhZEFiT8=
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190509100923.GA7024@mwanda>
-User-Agent: Mutt/1.11.3 (2019-02-01)
+X-OriginatorOrg: wdc.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: c20d7dde-6802-49c7-a78d-08d6ddb419ac
+X-MS-Exchange-CrossTenant-originalarrivaltime: 21 May 2019 06:18:11.2721 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB3824
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_215855_393970_61875121 
-X-CRM114-Status: GOOD (  10.83  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190520_231818_072764_18B7A27C 
+X-CRM114-Status: UNSURE (   8.74  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [68.232.143.124 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -64,7 +120,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,39 +131,28 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, kernel-janitors@vger.kernel.org,
- dmaengine@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Shun-Chih Yu <shun-chih.yu@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Dan Williams <dan.j.williams@intel.com>
+Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 09-05-19, 13:09, Dan Carpenter wrote:
-> The mtk_cqdma_poll_engine_done() function takes a true/false parameter
-> where true means it's called from atomic context.  There are a couple
-> places where it was set to false but it's actually in atomic context
-> so it should be true.
 > 
-> All the callers for mtk_cqdma_hard_reset() are holding a spin_lock and
-> in mtk_cqdma_free_chan_resources() we take a spin_lock before calling
-> the mtk_cqdma_poll_engine_done() function.
+> ufshcd_is_auto_hibern8_supported() will be used elsewhere
+> in the driver, thus refactor it for preparation.
+You missed a couple of spots, e.g. in ufshcd_auto_hibern8_enable and in ufs-sysfs.
 
-Applied, thanks
-
-> 
-> Fixes: b1f01e48df5a ("dmaengine: mediatek: Add MediaTek Command-Queue DMA controller for MT6765 SoC")
-> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
-> ---
-> The "atomic" parameter is always true so the temptation was to just
-> remove it entirely.
-
-a patch is welcome :)
-
--- 
-~Vinod
+Thanks,
+Avri
 
 _______________________________________________
 Linux-mediatek mailing list
