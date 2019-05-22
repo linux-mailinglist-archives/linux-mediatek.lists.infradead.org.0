@@ -2,91 +2,111 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E2F6C261B4
-	for <lists+linux-mediatek@lfdr.de>; Wed, 22 May 2019 12:25:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3B7FC2628C
+	for <lists+linux-mediatek@lfdr.de>; Wed, 22 May 2019 12:55:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OPFncLo8VThU3FQ/SHuLP13UJ3vRZ0fn103wP9s6NEU=; b=YFuzq8tIbtTQP0
-	Op1Xrd52MqtTaDCkmg3VCKqg5/j52KAyhuNFYoQ07xGqPpV2mhR68uFf0wDnc0o4Mo1ORp8PbBLBG
-	4UhqdxNVWhbP7ky9uL6AwBGK4+sIaEylp1Q7MkrQlLpCBpYVXTLB1OVT0Uf9bXSnP1t02c5YLqBFE
-	zH5w6JTArnUOrdWe3H9y7RDY3q7UnOedk7IasvRy4PYuocw/5BJIbFhKlNWbHBL4TV4maoTZZ1/iY
-	VTmLd7ReypnKY5Btqb+UjdF8EiiC955xKcbLaOif77hJL0Ai1kSmuHg8VLoL2yMbpWn7db0c8Q4Ex
-	OA77A5VIzI4jX13BK5Ow==;
+	List-Owner; bh=pR+hm7CpAlsXnfWJK2stRCKFbizx5KEE9d3SmHjki+0=; b=hFx5Ss60wZWMP7
+	57SvNKVUmSNnYKgoyogRT4PuocxaXs8CxL8WtLJLWmZKU2JXfCFQJFbm9nFyD/Kmtt8TbuM0IK4IA
+	JcvTC5TSUPIlQRFtKVQlxWZViJmu3fZkOUvrv7pLSsHoxz2/0JU7I5OnJ529GGmH48cipS1Rb+ian
+	Rbjqy6LqLHpkURyepkq1UnWQbRKrOX3ugl2zbETZpsYPiV5tTYAt1fBF/dxEXdf2qkYpOGw/nElTD
+	pCXT7lt/P62LGyNQ/QXM62G2UqDwMijH+ZAZGvF62bZj6JznqH5jfOzq9onJhZjJJqYTKOwfKIe2X
+	T94OHOAq/1ZNQzxyFNag==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTOR6-0000r1-6C; Wed, 22 May 2019 10:25:28 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1hTOuC-0002qj-0Y; Wed, 22 May 2019 10:55:32 +0000
+Received: from mail-eopbgr1410115.outbound.protection.outlook.com
+ ([40.107.141.115] helo=JPN01-OS2-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTOR1-0000qA-8X
- for linux-mediatek@lists.infradead.org; Wed, 22 May 2019 10:25:25 +0000
-Received: by mail-pf1-x443.google.com with SMTP id u17so1088340pfn.7
- for <linux-mediatek@lists.infradead.org>; Wed, 22 May 2019 03:25:22 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=zqfWKVsUhdkOR/Nc5yLisuDwHqajL3y1wL67d7oCIDY=;
- b=mHqEpBboVjbUR3xpwir5FCaaamu8gZr+LEkXtzA9l5Q/cn5aNAh5nRcegYj1925abJ
- IMzQsj6Z7O0kOl1BOPOOtJgIs5wpMMSXwKW+VMkTpZ/+1LYNJt93/RGgjHEOP1ixCnMN
- M9BeIidwUlVG4KSw2YA1UCnoMF9NG2MSe0KSo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=zqfWKVsUhdkOR/Nc5yLisuDwHqajL3y1wL67d7oCIDY=;
- b=cMmbP8lsmNMLWBAabTXM5NWuxuKZY0DcqMTQZW0uch0ohYrlyhC2h56NvyHWACNIx9
- W9XSEn6jyRpEVya1v99EmeulAeEh+NzwjCuJNzQPwxi0UVsq7zUKee2W41dd8OTwptfN
- jWSG+xKHPRW8KKu++quGLWWNKTf0+JqN9fTNfc8g36WyS5x0kCY2kG5N8bSjgtXcucik
- nI6yqmT0edBPDGCdshQP5ckVd9DMkLgL6MJ18+glnSHU6soR9T7mWDyS1ZEj1UQULBlF
- wk3bY04tMIjr/aVV03zocQY/hTH0Dnf3VbvwWhKauyByv6MWUjCgqmAB/7589DT5fiwn
- sNpw==
-X-Gm-Message-State: APjAAAWlhbs8bcqntAA8PHV2GaymYyZaMzvAD+f+caX6VwgDwZ0epC2o
- 29OSJc5RFDCU6suDe6qUxu3GkQ==
-X-Google-Smtp-Source: APXvYqxbPH4VpvYlm7+27HRhk3WMtsV80mvd3UDJftfAxajmAnCKWgnvSrBa8SSZBJDxaQpg3o25UQ==
-X-Received: by 2002:a62:798b:: with SMTP id
- u133mr30621588pfc.210.1558520721582; 
- Wed, 22 May 2019 03:25:21 -0700 (PDT)
-Received: from chromium.org ([2401:fa00:4:4:6d27:f13:a0fa:d4b6])
- by smtp.gmail.com with ESMTPSA id 140sm39271455pfw.123.2019.05.22.03.25.16
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 22 May 2019 03:25:20 -0700 (PDT)
-Date: Wed, 22 May 2019 19:25:14 +0900
-From: Tomasz Figa <tfiga@chromium.org>
-To: Frederic Chen <frederic.chen@mediatek.com>
-Subject: Re: [RFC PATCH V1 6/6] platform: mtk-isp: Add Mediatek DIP driver
-Message-ID: <20190522102514.GA218991@chromium.org>
-References: <20190417104511.21514-1-frederic.chen@mediatek.com>
- <20190417104511.21514-7-frederic.chen@mediatek.com>
- <20190509094846.GA65444@google.com>
- <1558466055.15388.342.camel@mtksdccf07>
+ id 1hTOu2-0002jr-Ov; Wed, 22 May 2019 10:55:24 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=renesasgroup.onmicrosoft.com; s=selector2-renesasgroup-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=jMgJmwSOhyU4SGsVx7Cp6tBPBYtt2ugZHPy0KRXEC2k=;
+ b=YnkEpPMqulcTYE2lJRER5F05Ip2LAJbQ0w9HSpuxZdOU63BQTTsDFPAgfKO8jgn+QGJNwgUdjUTxdKG7L8h3z3aVEBZhqh3OEjnqDeXFLxrNqfi7WyIhc+an7bgkUeWo8/HF1fgOK8xMyVMpoteLQiJBqDaaejpE35wY2Th77KM=
+Received: from OSBPR01MB2103.jpnprd01.prod.outlook.com (52.134.242.17) by
+ OSBPR01MB1608.jpnprd01.prod.outlook.com (52.134.225.151) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1900.18; Wed, 22 May 2019 10:55:17 +0000
+Received: from OSBPR01MB2103.jpnprd01.prod.outlook.com
+ ([fe80::a146:39f0:5df9:11bc]) by OSBPR01MB2103.jpnprd01.prod.outlook.com
+ ([fe80::a146:39f0:5df9:11bc%7]) with mapi id 15.20.1900.020; Wed, 22 May 2019
+ 10:55:17 +0000
+From: Biju Das <biju.das@bp.renesas.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>, Heikki Krogerus
+ <heikki.krogerus@linux.intel.com>
+Subject: RE: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+Thread-Topic: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+Thread-Index: AQHVCjGxbEdsIx4ReU+jIZIOb3TooaZvJLIAgAApPICABAgXgIAAWsCAgAAANlCAAAi9gIAADx0AgAGaToCAAW2SoIAAHO0AgAAPKZA=
+Date: Wed, 22 May 2019 10:55:17 +0000
+Message-ID: <OSBPR01MB21038F2B99EF74831A22727BB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1557823643-8616-5-git-send-email-chunfeng.yun@mediatek.com>
+ <20190517103736.GA1490@kuha.fi.intel.com>
+ <20190517130511.GA1887@kuha.fi.intel.com>
+ <1558319951.10179.352.camel@mhfsdcap03>
+ <20190520080359.GC1887@kuha.fi.intel.com>
+ <OSBPR01MB2103385D996762FA54F8E437B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190520083601.GE1887@kuha.fi.intel.com>
+ <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190521095839.GI1887@kuha.fi.intel.com>
+ <OSBPR01MB21032206146152983C8F4E8EB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <1558517436.10179.388.camel@mhfsdcap03>
+In-Reply-To: <1558517436.10179.388.camel@mhfsdcap03>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=biju.das@bp.renesas.com; 
+x-originating-ip: [193.141.220.21]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 374b0aa0-4b73-48a8-d0d8-08d6dea3f9eb
+x-ms-office365-filtering-ht: Tenant
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(4618075)(2017052603328)(7193020);
+ SRVR:OSBPR01MB1608; 
+x-ms-traffictypediagnostic: OSBPR01MB1608:
+x-ms-exchange-purlcount: 2
+x-microsoft-antispam-prvs: <OSBPR01MB160860EE47BA337E6C38609CB8000@OSBPR01MB1608.jpnprd01.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:7691;
+x-forefront-prvs: 0045236D47
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10019020)(396003)(346002)(136003)(376002)(39860400002)(366004)(51914003)(189003)(199004)(7736002)(5660300002)(305945005)(53936002)(186003)(7416002)(26005)(54906003)(6436002)(110136005)(316002)(71200400001)(966005)(14454004)(86362001)(478600001)(71190400001)(52536014)(256004)(44832011)(9686003)(4326008)(11346002)(446003)(6306002)(476003)(486006)(55016002)(25786009)(33656002)(81156014)(8936002)(6246003)(74316002)(6116002)(3846002)(8676002)(81166006)(7696005)(229853002)(76176011)(2906002)(66476007)(102836004)(99286004)(68736007)(6506007)(66066001)(76116006)(66446008)(64756008)(66946007)(66556008)(73956011);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:OSBPR01MB1608;
+ H:OSBPR01MB2103.jpnprd01.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; MX:1; A:0; 
+received-spf: None (protection.outlook.com: bp.renesas.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: YgaGTvXxUXd/WW+J3SsZ1diQxQmGpa0h8+vEzoB6mLe0fxHJ6by7ebMD7ku3wCo+A8c4uk4xqUEryV8Mns+Y5bMuA4Hu2dBSepAOIuycxpDMOh8w14lYKcyFFrYp8DwaTavJPEg+gu9IlqAVRWCZkCHd0Mn7Wnn7S7bnmiAhLnsXeBM+Xzj+Ru3fCP22x3B3fB9vdXabK4h90Zuw3LAKgRfU7K01DMlpYorLHGRB2wAFHGzkk2ejfJ53ElTgoiOlpuHrZVj7ETJxt0VQau38APOwJv5wUNEMCkbIZFrUEtO3PytHR3Qf9pberHaDlV6k9LVXR/56NbJaZ+WBRXfXqjjxH8LkTAsTA69zfA3lkHdr7h6Qtsi7WwuJ7U4FT3kByXRbANrd/ahVwl4Zk2Jk8TiDChc1MFybiQJDj7Df5lw=
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1558466055.15388.342.camel@mtksdccf07>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-OriginatorOrg: bp.renesas.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 374b0aa0-4b73-48a8-d0d8-08d6dea3f9eb
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 May 2019 10:55:17.1062 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 53d82571-da19-47e4-9cb4-625a166a4a2a
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: OSBPR01MB1608
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190522_032523_330797_75EB2F7E 
-X-CRM114-Status: GOOD (  45.51  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190522_035522_896054_6A7A6A7A 
+X-CRM114-Status: GOOD (  32.71  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [40.107.141.115 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,577 +118,199 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: shik@chromium.org, devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- srv_heupstream@mediatek.com, holmes.chiou@mediatek.com, suleiman@chromium.org,
- Jerry-ch.Chen@mediatek.com, jungo.lin@mediatek.com, sj.huang@mediatek.com,
- yuzhao@chromium.org, linux-mediatek@lists.infradead.org, zwisler@chromium.org,
- matthias.bgg@gmail.com, christie.yu@mediatek.com, mchehab@kernel.org,
- hans.verkuil@cisco.com, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Frederic,
+Hi Chunfeng Yun,
 
-On Wed, May 22, 2019 at 03:14:15AM +0800, Frederic Chen wrote:
-> Dear Tomasz,
-> 
-> I appreciate your comment. It is very helpful for us.
-> 
+Thanks for the feedback.
 
-You're welcome. Thanks for replying to all the comments. I'll skip those
-resolved in my reply to keep the message shorter.
+> Subject: RE: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by
+> node
+> 
+> Hi Biju,
+> On Wed, 2019-05-22 at 08:05 +0000, Biju Das wrote:
+> > Hi Heikki,
+> >
+> > Thanks for the feedback.
+> >
+> > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > usb_role_switch by node
+> > >
+> > > On Mon, May 20, 2019 at 09:45:46AM +0000, Biju Das wrote:
+> > > >
+> > > >
+> > > > Hi Heikki,
+> > > >
+> > > > Thanks for the feedback.
+> > > >
+> > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > usb_role_switch by node
+> > > > >
+> > > > > On Mon, May 20, 2019 at 08:06:41AM +0000, Biju Das wrote:
+> > > > > > Hi Heikki,
+> > > > > >
+> > > > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > > > usb_role_switch by node
+> > > > > > >
+> > > > > > > On Mon, May 20, 2019 at 10:39:11AM +0800, Chunfeng Yun wrote:
+> > > > > > > > Hi,
+> > > > > > > > On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wrote:
+> > > > > > > > > Hi,
+> > > > > > > > >
+> > > > > > > > > On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Krogerus
+> wrote:
+> > > > > > > > > > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfeng Yun
+> > > wrote:
+> > > > > > > > > > > Add fwnode_usb_role_switch_get() to make easier to
+> > > > > > > > > > > get usb_role_switch by fwnode which register it.
+> > > > > > > > > > > It's useful when there is not device_connection
+> > > > > > > > > > > registered between two drivers and only knows the
+> > > > > > > > > > > fwnode which register usb_role_switch.
+> > > > > > > > > > >
+> > > > > > > > > > > Signed-off-by: Chunfeng Yun
+> > > > > > > > > > > <chunfeng.yun@mediatek.com>
+> > > > > > > > > > > Tested-by: Biju Das <biju.das@bp.renesas.com>
+> > > > > > > > > >
+> > > > > > > > > > Acked-by: Heikki Krogerus
+> > > > > > > > > > <heikki.krogerus@linux.intel.com>
+> > > > > > > > >
+> > > > > > > > > Hold on. I just noticed Rob's comment on patch 2/6,
+> > > > > > > > > where he points out that you don't need to use device
+> > > > > > > > > graph since the controller is the parent of the
+> > > > > > > > > connector. Doesn't that mean you don't really need this API?
+> > > > > > > > No, I still need it.
+> > > > > > > > The change is about the way how to get fwnode; when use
+> > > > > > > > device graph, get fwnode by of_graph_get_remote_node();
+> > > > > > > > but now will get fwnode by of_get_parent();
+> > > > > > >
+> > > > > > > OK, I get that, but I'm still not convinced about if
+> > > > > > > something like this function is needed at all. I also have
+> > > > > > > concerns regarding how you are using the function. I'll
+> > > > > > > explain in comment to the patch 5/6 in this
+> > > > > series...
+> > > > > >
+> > > > > > FYI, Currently  I am also using this api in my patch series.
+> > > > > > https://patchwork.kernel.org/patch/10944637/
+> > > > >
+> > > > > Yes, and I have the same question for you I jusb asked in
+> > > > > comment I added to the patch 5/6 of this series. Why isn't
+> > > > > usb_role_switch_get()
+> > > enough?
+> > > >
+> > > > Currently no issue. It will work with this api as well, since the
+> > > > port node is
+> > > part of controller node.
+> > > > For eg:-
+> > > > https://patchwork.kernel.org/patch/10944627/
+> > > >
+> > > > However if any one adds port node inside the connector node, then
+> > > > this
+> > > api may won't work as expected.
+> > > > Currently I get below error
+> > > >
+> > > > [    2.299703] OF: graph: no port node found in
+> > > /soc/i2c@e6500000/hd3ss3220@47
+> > >
+> > > We need to understand why is that happening?
+> > >
+> >
+> > Form the stack trace  the parent node is "parent_node=hd3ss3220@47" ,
+> instead of the "connector" node.
+> > That is the reason for the above error.
+> >
+> > [    2.442429]  of_graph_get_next_endpoint.part.0+0x28/0x168
+> > [    2.447889]  of_fwnode_graph_get_next_endpoint+0x5c/0xb0
+> > [    2.453267]  fwnode_graph_get_next_endpoint+0x20/0x30
+> > [    2.458374]  device_connection_find_match+0x74/0x1a0
+> > [    2.463399]  usb_role_switch_get+0x20/0x28
+> > [    2.467542]  hd3ss3220_probe+0xc4/0x218
+> >
+> > The use case is
+> >
+> > &i2c0 {
+> > 	hd3ss3220@47 {
+> >                  	compatible = "ti,hd3ss3220";
+> >
+> >                  	usb_con: connector {
+> >                           		compatible = "usb-c-connector";
+> >                          		port {
+> >                                 		 hd3ss3220_ep: endpoint {
+> >                                         			remote-endpoint =
+> <&usb3_role_switch>;
+> >                                 		};
+> >                          		};
+> >                 	 };
+> > 	 };
+> > };
+> >
+> > &usb3_peri0 {
+> >          companion = <&xhci0>;
+> >          usb-role-switch;
+> >
+> >          port {
+> >                 usb3_role_switch: endpoint {
+> >                         remote-endpoint = <&hd3ss3220_ep>;
+> >                  };
+> >          };
+> > };
+> >
+> > Q1) How do we modify the usb_role_switch_get() function to search
+> > Child(connector) and child's endpoint?
+> How about firstly finding connector node in fwnode_graph_devcon_match(),
+> then search each endpoint?
 
-> 
-> On Thu, 2019-05-09 at 18:48 +0900, Tomasz Figa wrote:
-> > Hi Frederic,
-> > 
-> > On Wed, Apr 17, 2019 at 7:45 PM Frederic Chen <frederic.chen@mediatek.com> wrote:
-[snip]
-> > > +
-> > > +       timestamp = ktime_get_ns();
-> > 
-> > This timestamp is unused.
-> 
-> This line will be removed in the next patch.
-> 
-> > 
-> > > +
-> > > +       for (i = 0; i < MTK_DIP_VIDEO_NODE_ID_TOTAL_NUM; i++) {
-> > > +               struct mtk_dip_dev_buffer *dev_buf = job_info->buf_map[i];
-> > > +
-> > > +               if (!dev_buf) {
-> > > +                       continue;
-> > > +               } else {
-> > 
-> > No need to put this code under else.
-> 
-> I got it.
-> 
-> > 
-> > > +                       dev_buf->vbb.vb2_buf.timestamp = ktime_get_ns();
-> > 
-> > Did you mean to use the timestamp variable here?
-> 
-> I would like to remove timestamp and still use
-> dev_buf->vbb.vb2_buf.timestamp directly.
-> 
+ I have done a quick prototyping with the changes you suggested and it works.
 
-That would result in buffers from different queues having different
-timestamps.
+-       struct fwnode_handle *ep;
++       struct fwnode_handle *ep,*child,*tmp = fwnode; 
+ 
+-       fwnode_graph_for_each_endpoint(fwnode, ep) {
++       child = fwnode_get_named_child_node(fwnode, "connector");
++       if (child)
++               tmp = child;
++
++       fwnode_graph_for_each_endpoint(tmp, ep) {
 
-However, this is a mem2mem device, so we shouldn't assign timestamps
-here. We should copy the timestamp from the matching input buffer. I
-missed that before, sorry.
+Form the stack trace  the parent node is "parent_node= connector" .
 
-[snip]
+[    2.440922]  of_graph_get_next_endpoint.part.0+0x28/0x168
+[    2.446381]  of_fwnode_graph_get_next_endpoint+0x5c/0xb0
+[    2.451758]  fwnode_graph_get_next_endpoint+0x20/0x30
+[    2.456866]  device_connection_find_match+0x84/0x1c0
+[    2.461888]  usb_role_switch_get+0x20/0x28
 
-> > 
-> > > +       dev_buf->buffer_usage = node->dev_q.buffer_usage;
-> > 
-> > There should be no buffer_usage, but rather separate queue for each usage.
+Heikki, 
+Are you ok  with the above changes?
+
+Regards,
+Biju
+> >
+> > > It looks like we have an issue somewhere in the code, and instead of
+> > > fixing that, you are working around it. Let's not do that.
+> >
+> > OK.
+> >
+> > Regards,
+> > Biju
+> >
 > 
-> I will remove mtk_dip_dev_buffer.buffer_usage and
-> mtk_dip_dev_queue.buffer_usage.
-> 
-> May I add the dma port information (DMA port selection hint) in each
-> video node's setting (mtk_dip_video_device_desc) so that we can retrieve
-> the hint when we need to pass the buffer to co-processor as following:
-> 
-> 
-> static int fill_ipi_img_param(struct mtk_dip_pipe *dip_pipe,
-> 			      struct img_image_buffer *img,
-> 			      struct mtk_dip_dev_buffer *dev_buf,
-> 			      char *buf_name)
-> {
-> struct mtk_dip_video_device *vdo_dev;
-> // ...
-> vdo_dev = mtk_dip_vbq_to_node(dev_buf->vbb.vb2_buf.vb2_queue);
-> /* image parameter will be passed to firmware*/
-> img->usage = vdo_dev->desc->dma_hint;
-> // ...
-> }
->
-
-Yes, that sounds sensible, but I'm not sure "hint" is a good name here,
-because the purpose is precisely defined, not just a hint. Perhaps
-better to call it something like "dma_port"?
-
-> 
-> > 
-> > > +       dev_buf->rotation = node->dev_q.rotation;
-> > > +
-> > > +       if (desc->smem_alloc) {
-> > > +               dev_buf->scp_daddr =
-> > > +                       mtk_dip_smem_iova_to_phys
-> > > +                       (dip_pipe->smem_alloc_dev,
-> > > +                        dev_buf->isp_daddr);
-> > 
-> > Isn't this overly wrapped? The first argument should fit in the second line.
-> 
-> Do you mean the modification like this:
-> 
->                dev_buf->scp_daddr = mtk_dip_smem_iova_to_phys
-> 					(dip_pipe->smem_alloc_dev,
-> 					 dev_buf->isp_daddr);
-
-Almost. The wrapped lines should be aligned to the right as much as
-possible, so it would be more like:
-
-		dev_buf->scp_daddr = mtk_dip_smem_iova_to_phys(
-						dip_pipe->smem_alloc_dev,
-						dev_buf->isp_daddr);
-
-[snip]
-> > > +
-> > > +       if (fjob->sequence == -1) {
-> > > +               pr_err("%s: Invalid cmdq_cb_data(%p)\n",
-> > > +                      __func__, data);
-> > > +               ipi_fparam = NULL;
-> > 
-> > As far as I can see, we always get the data we explicitly gave to the cmdq
-> > driver together with the callback function, so it sounds like we shouldn't
-> > be able to get invalid data here.
-> > 
-> 
-> I'm not sure if we can always trust CMDQ callback since we had
-> suffered from an CMDQ bug that return an invalid address before.
-> 
-
-Hmm, but these values don't really go to the CMDQ hardware or firmware,
-right? It's just the kernel CMDQ driver that looks the data pointer in
-its internal state. That would be a bug similar to the workqueue
-framework giving a bad pointer to the work function.
-
-Also, checking for -1 alone doesn't really help us too much, because we
-could for example get a pointer to some memory filled with random
-values, in case of such bug.
-
-Perhaps we should inspect the CMDQ driver design instead to make sure
-it's impossible to receive a bad pointer from it.
-
-[snip]
-
-> > > +
-> > > +       if (WARN_ONCE(!mdpcb_work, "%s: frame_no(%d) is lost",
-> > > +                     __func__, frameparam->frame_no))
-> > > +               return;
-> > > +
-> > > +       INIT_WORK(&mdpcb_work->frame_work, mdp_cb_worker);
-> > > +       mdpcb_work->frameparams = frameparam;
-> > > +       if (data.sta != CMDQ_CB_NORMAL)
-> > > +               mdpcb_work->frameparams->state = FRAME_STATE_HW_TIMEOUT;
-> > > +
-> > > +       queue_work(dip_hw->mdpcb_workqueue, &mdpcb_work->frame_work);
-> > 
-> > Looking at mdp_cb_worker() and mtk_dip_notify() called by it, after fixing
-> > the locking to use spinlocks rather than mutexes and remove some dynamic
-> > allocations pointed out in other comments, we could just run them in atomic
-> > context, without the need for this workqueue.
-> 
-> I will re-design this part to support the function to be run in
-> atomic context. 
-> 
-> I would like to discuss the error handling in this function 
-> for the next patch. When we get FRAME_STATE_HW_TIMEOUT, is it 
-> suitable to trigger a  work to notify SCP with scp_ipi_send() to
-> dump debug messages in further? (Can this kind of debugging 
-> function be upstream?)
->
-
-Yes, we should be able to have something like that.
-
-> > 
-> > > +}
-> > > +
-> > > +static void dip_vpu_handler(void *data, unsigned int len, void *priv)
-> > > +{
-> > > +       struct img_frameparam *framejob;
-> > > +       struct img_ipi_frameparam *frameparam;
-> > > +       struct mtk_dip_hw *dip_hw;
-> > > +       struct mtk_dip_dev *dip_dev;
-> > > +       unsigned long flags;
-> > > +       u32 num;
-> > > +
-> > > +       if (WARN_ONCE(!data, "%s: failed due to NULL data\n", __func__))
-> > > +               return;
-> > > +
-> > > +       frameparam = (struct img_ipi_frameparam *)data;
-> > > +       framejob = dip_create_framejob(frameparam->index);
-> > 
-> > Rather than creating this dynamically, it should be already created. The
-> > reason you have the priv argument to this function is that you can have the
-> > SCP driver give to you a pointer to some struct that you gave to it when
-> > calling scp_ipi_register(). That struct should have a list of valid VPU jobs
-> > and here you should iterate through that list and find a matching job or
-> > fail if there is no matching one. (We need to validate here, because we
-> > can't trust the values coming from the firmware.)
-> 
-> May I embedded img_frameparam into the extended media_request object
-> so that it can be managed with media_request objects?
-> 
-> struct mtk_dip_request {
-> 	struct media_request request;
-> 	struct mtk_dip_pipe_job_info job_info;
-> 	struct mtk_dip_hw_work dip_work;
-> 	struct img_frameparam job;
-> 	struct mtk_dip_hw_mdpcb_timeout_work timeout_work;
-> };
-> 
-> 
-
-Yes, I think it would make sense indeed.
-
-[snip]
-
-> > > +static int dip_runner_func(void *data)
-> > > +{
-> > > +       struct img_frameparam *framejob;
-> > > +       struct mtk_dip_hw *dip_hw;
-> > > +       struct mtk_dip_dev *dip_dev;
-> > > +       struct mtk_dip_hw_user_id *user_id;
-> > > +       unsigned long flags;
-> > > +       bool found;
-> > > +       u32 queuecnt, num;
-> > > +       int ret;
-> > > +
-> > > +       dip_hw = (struct mtk_dip_hw *)data;
-> > > +       dip_dev = mtk_dip_hw_to_dev(dip_hw);
-> > > +
-> > > +       while (1) {
-> > > +               spin_lock_irqsave(&dip_hw->dip_gcejoblist.queuelock, flags);
-> > > +               queuecnt = dip_hw->dip_gcejoblist.queue_cnt;
-> > > +               spin_unlock_irqrestore(&dip_hw->dip_gcejoblist.queuelock,
-> > > +                                      flags);
-> > > +
-> > > +               ret = wait_event_interruptible_timeout
-> > > +                       (dip_hw->dip_runner_thread.wq,
-> > > +                        queuecnt || kthread_should_stop(),
-> > > +                        msecs_to_jiffies(DIP_COMPOSER_THREAD_TIMEOUT));
-> > 
-> > Checking queuecnt here is also wrong. Please check my comment to another
-> > wait_event_* in this patch.
-> > 
-> > Also the interruptibility and timeout don't make sense here, because we just
-> > want to keep waiting unless something shows up or the kthread is forcefully
-> > woken up for stopping.
-> > 
-> > However, we probably want it to be freezable(), so that we don't have to
-> > bring the thread down and up on suspend/resume.
-> 
-> 
-> I would like to fix it as following:
-> 
-> 
-> static bool mtk_dip_hw_qce_queuecnt(struct mtk_dip_hw *dip_hw)
-> {
-> 	int queuecnt;
-> 
-> 	spin_lock_irqsave(&dip_hw->dip_gcejoblist.queuelock, flags);
-> 	queuecnt = dip_hw->dip_gcejoblist.queue_cnt;
-> 	spin_unlock_irqrestore(&dip_hw->dip_gcejoblist.queuelock,
-> 
-> 	return queuecnt;	
-> }
-> 
-> static int dip_runner_func(void *data)
-> {
-> 
-> 	//...
-> 	set_freezable();
-> 	while(1) {
-> 		wait_event_freezable((dip_hw->dip_runner_thread.wq,
-> 			 	     mtk_dip_hw_qce_queuecnt() ||
-> 			 	     kthread_should_stop());
-> 
-> 		if (kthread_should_stop())
-> 			break;
-> 	
-> 		// Call MDP/GCE API to do HW excecution
-> 		// ...
-> 
-> 	}
-> }
->
-
-Sounds good to me.
-
-[snip]
-
-> > > +
-> > > +free_work_list:
-> > > +
-> > > +       dev_dbg(&dip_dev->pdev->dev,
-> > > +               "%s, free: frame_no(%d),idx(0x%x),worklist cnt(%d),composing num(%d)\n",
-> > > +               __func__, dip_work->frameparams.frame_no,
-> > > +               dip_work->frameparams.index, len, num);
-> > > +
-> > > +       kfree(dip_work);
-> > 
-> > We haven't allocated this object and so we shouldn't free it here. The layer
-> > that allocated it should receive it back and free. (But we probably don't
-> > need to allocate it dynamically as per my other comments.)
-> > 
-> 
-> May I also merge dip_work into mtk_dip_request? 
-> 
-> struct mtk_dip_request {
-> 	struct media_request request;
-> 	struct mtk_dip_pipe_job_info job_info;
-> 	struct mtk_dip_hw_work dip_work;
-> 	struct img_frameparam job;
-> 	struct mtk_dip_hw_mdpcb_timeout_work timeout_work;
-> };
-> 
-
-Yes, it should indeed make sense.
-
-> 
-> > Also a general note - a work can be queued only once. This means that
-> > current code races when two dip_works are attempted to be queued very
-> > quickly one after another (or even at the same time from different threads).
-> > 
-> > I can think of two potential options for fixing this:
-> > 
-> > 1) Loop in the work function until there is nothing to queue to the hardware
-> >    anymore - but this needs tricky synchronization, because there is still
-> >    short time at the end of the work function when a new dip_work could be
-> >    added.
-> > 
-> > 2) Change this to a kthread that just keeps running in a loop waiting for
-> >    some available dip_work to show up and then sending it to the firmware.
-> >    This should be simpler, as the kthread shouldn't have a chance to miss
-> >    any dip_work queued.
-> > 
-> > I'm personally in favor of option 2, as it should simplify the
-> > synchronization.
-> > 
-> 
-> I would like to re-design this part with a kthread in the next patch.
-
-Actually I missed another option. We could have 1 work_struct for 1
-request and then we could keep using a workqueue. Perhaps that could be
-simpler than a kthread.
-
-Actually, similar approach could be used for the dip_runner_func.
-Instead of having a kthread looping, we could just have another
-workqueue and 1 dip_runner_work per 1 request. Then we wouldn't need to
-do the waiting loop ourselves anymore.
-
-Does it make sense?
-
-[snip]
-
-> > > +               buf->buffer.iova = sg_dma_address(buf->table.sgl);
-> > > +               buf->tuning_buf.iova = buf->buffer.iova +
-> > > +                       DIP_TUNING_OFFSET;
-> > > +
-> > > +               dev_dbg(&dip_dev->pdev->dev,
-> > > +                       "%s: buf(%d), pa(%p), iova(%p)\n",
-> > > +                       __func__, i, buf->buffer.pa, buf->buffer.iova);
-> > > +
-> > > +               dev_dbg(&dip_dev->pdev->dev,
-> > > +                       "%s: config_data(%d), pa(%p), iova(%p)\n",
-> > > +                       __func__, i, buf->config_data.pa, buf->config_data.va);
-> > > +
-> > > +               dev_dbg(&dip_dev->pdev->dev,
-> > > +                       "%s: tuning_buf(%d), pa(%p), iova(%p)\n",
-> > > +                       __func__, i, buf->tuning_buf.pa, buf->tuning_buf.iova);
-> > > +
-> > > +               dev_dbg(&dip_dev->pdev->dev,
-> > > +                       "%s: frameparam(%d), pa(%p), iova(%p)\n",
-> > > +                       __func__, i, buf->frameparam.pa, buf->frameparam.va);
-> > > +
-> > > +               list_add_tail(&buf->list_entry,
-> > > +                             &dip_hw->dip_freebufferlist.queue);
-> > > +               dip_hw->dip_freebufferlist.queue_cnt++;
-> > > +               kfree(pages);
-> > > +       }
-> > 
-> > But actually, why aren't these buffers managed by VB2?
-> > 
-> 
-> I would like to manage the buffer with VB2, but I'm not sure what is 
-> the right way to do that.
-> 
-> These are DIP internal working buffers. The buffers are not read or
-> written by user application. In this case, could I add a meta capture
-> video device to manage them or integrate the buffers with tuning meta
-> output buffer directly?
-> 
-
-Ah, if these are internal buffers, then I guess we indeed need to
-allocate them ourselves.
-
-[snip]
-
-> > > +               frameparam.state = FRAME_STATE_INIT;
-> > > +               dip_send(dip_hw->vpu_pdev, SCP_IPI_DIP_INIT,
-> > > +                        (void *)&frameparam, sizeof(frameparam), 0);
-> > 
-> > Is the call above synchronous? If not, don't we need to wait here for SCP to
-> > initialize?
-> > 
-> 
-> No, it is not synchronous when passing 0 in the latest parameter. We
-> would like to improve it by using scp_ipi_send() directly instead of
-> dip_send(), and wait for the ack from SCP with 2ms timeout setting.
-> 
-> ret = scp_ipi_send(dip_hw->scp_pdev SCP_IPI_DIP_INIT,
-> 		   &frameparam, sizeof(frameparam), 2);
-> 
-
-2ms could likely fail here quite often, because even kernel code can be
-preempted. We should have something like 200ms here, just to avoid
-blocking indefinitely, but long enough not to happen even during high
-system load.
-
-[snip]
-
-> 
-> > > +       framework->frameparams.state = FRAME_STATE_INIT;
-> > > +       framework->frameparams.frame_no =
-> > > +               atomic_inc_return(&dip_hw->dip_enque_cnt);
-> > 
-> > It sounds like the struct passed as the frameparams argument to this
-> > function and framework->frameparams should be two different structs.
-> > 
-> 
-> I'm not sure if I understand it. Would you like to elaborate on this
-> point? 
-> 
-> I would like to merge mtk_dip_hw_enqueue and mtk_dip_pipe_job_start so
-> that we can configure the framework->frameparams in a single function.
->
-
-Ah, that comment might have been added before I noticed that the
-functions can be merged. Forgot to remove, sorry. Please ignore.
-
-[snip]
-
-> > > +static int __maybe_unused mtk_dip_pm_suspend(struct device *dev)
-> > > +{
-> > > +       struct mtk_dip_dev *dip_dev = dev_get_drvdata(dev);
-> > > +
-> > > +       if (atomic_read(&dip_dev->dip_hw.dip_user_cnt) > 0) {
-> > > +               mtk_dip_hw_set_clk(&dip_dev->dip_hw, false);
-> > > +               dev_dbg(&dip_dev->pdev->dev, "%s: disable clock\n",
-> > > +                       __func__);
-> > > +       }
-> > 
-> > Don't we need to do something to prevent the driver from scheduling next
-> > frames here and wait for the hardware to finish processing current frame
-> > here?
-> > 
-> 
-> I will add some design to handle this case. Could we add a 
-> suspend variable in mtk_dip_hw and check it in submit work kthread?
-> 
-
-Actually, with the other changes, the kthread would have been frozen for
-us at this point, so maybe there isn't anything to do here! :)
-
-OR, if we change the kthread to a workqueue (as per my other comment
-above), we could make the workqueue freezable (by adding WQ_FREEZABLE to
-the flags argument at creation time) and it would be frozen for us after
-finishing current work struct.
-
-> > > +
-> > > +       return 0;
-> > > +}
-> > > +
-> > > +static int __maybe_unused mtk_dip_pm_resume(struct device *dev)
-> > > +{
-> > > +       struct mtk_dip_dev *dip_dev = dev_get_drvdata(dev);
-> > > +
-> > > +       if (atomic_read(&dip_dev->dip_hw.dip_user_cnt) > 0) {
-> > > +               mtk_dip_hw_set_clk(&dip_dev->dip_hw, true);
-> > > +               dev_dbg(&dip_dev->pdev->dev, "%s: enable clock\n",
-> > > +                       __func__);
-> > > +       }
-> > 
-> > Don't we need to kick off the hardware here to continue processing from
-> > the next frame?
-> > 
-> 
-> I will add some design to handle this case.
-> 
-
-As per above, making the kthreads/workqueues freezable actually should
-solve the problem.
-
-[snip]
-
-> > > +static int mtk_dip_subdev_close(struct v4l2_subdev *sd,
-> > > +                               struct v4l2_subdev_fh *fh)
-> > > +{
-> > > +       struct mtk_dip_pipe *dip_pipe = mtk_dip_subdev_to_pipe(sd);
-> > > +       struct mtk_dip_dev *dip_dev =
-> > > +               dev_get_drvdata(&dip_pipe->dip_dev->pdev->dev);
-> > > +
-> > > +       dev_dbg(&dip_pipe->dip_dev->pdev->dev,
-> > > +               "%s:%s: pipe(%d) disconnect to dip_hw\n",
-> > > +               __func__, dip_pipe->desc->name,
-> > > +               dip_pipe->desc->id);
-> > > +
-> > > +       return mtk_dip_hw_disconnect(&dip_dev->dip_hw);
-> > > +}
-> > 
-> > We shouldn't do any hardware operations just at subdev open or close. Those
-> > should happen once the streaming actually starts.
-> > 
-> > Userspace is expected to open device nodes just to query them and that
-> > shouldn't have any side effects.
-> > 
-> > In general I don't see why we actually should even do anything in subdev ops
-> > in this driver. The subdev is only exposed to bridge all the video nodes
-> > together and any control is done via either video ioctls or metadata
-> > buffers.
-> > 
-> 
-> I will move the hardware operation to streamon. We call rproc_boot() to
-> load frimware in mtk_dip_hw_connect(), should it be moved to streamon,
-> too?
-> 
-
-I think that would normally be done in runtime PM callbacks, with
-autosuspend delay enabled to avoid continuous power-off and on
-repeateadly.
-
-Then, when there is a request to queue, the driver would call
-pm_runtime_get_sync() and when a request completes,
-pm_runtime_put_autosuspend().
-
-[snip]
-
-> > > +static void mtk_dip_node_to_v4l2(struct mtk_dip_pipe *dip_pipe,
-> > > +                                u32 idx,
-> > > +                                struct video_device *vdev,
-> > > +                                struct v4l2_format *f)
-> > > +{
-> > > +       u32 cap;
-> > > +       struct mtk_dip_video_device *node = &dip_pipe->nodes[idx];
-> > > +
-> > > +       cap = mtk_dip_node_get_v4l2_cap(dip_pipe, node);
-> > > +       vdev->ioctl_ops = node->desc->ops;
-> > > +       vdev->device_caps = V4L2_CAP_STREAMING | cap;
-> > 
-> > Why not just have mtk_dip_node_get_v4l2_cap() include V4L2_CAP_STREAMING in
-> > the return value?
-> > 
-> 
-> I would like to set the V4L2_CAP_STREAMING in node->desc->cap directly.
-> 
-> vdev->device_caps = node->desc->caps;
-> 
-
-Sure, that's also good.
-
-Best regards,
-Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
