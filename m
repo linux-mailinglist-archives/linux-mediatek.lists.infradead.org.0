@@ -2,69 +2,73 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 179A3258F6
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 May 2019 22:33:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 818B925C3B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 22 May 2019 05:38:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=zAl4TB7VontCfLwb+0hicohcDo91J+hjzQyCN/ntyRw=; b=g7V
-	nw4/75XO3abgljbAVVVJVftdTR6/dEdbAbSKg9BSyEvd76HcdD9S1nnGjS+5ITlfz1YW4N5iNrukD
-	Z8Z3eIGtGjSgV/oIGk1iRqaLvqRBIM7LL4x9buid7ff1fLl9p4zPZ4vS8kx/yY79Q9t+EVjlC3DJN
-	HGzlyCbBrGQ2HlTUWTnsFFYiSXii59pptH6Psqclp/z2R6yewYlB5veXkBvF1Yi0xmOvfH7N2YC0P
-	7YiBV1B9/Us4xSit7b+W1DNoHubab8bH/0xYTUFalGEvnLawuLEkMwSjOoe3KG0AWrmzopY9GGedM
-	Jxwlx/p20Mo6IDIzfozRHk6o8ZfpGkA==;
+	List-Owner; bh=xIDOfzay3ou+4rq34knsHdD7ueLqklowRh/Be+DoX0o=; b=Lb0iWRbFuTOdlp
+	8nwe3dzf5KHuxV2l0Vk6wq34fuBkJ4gtL80+u5AwFlx6iEhpc5CQmQqggSPhEsxkC9zrc6EN5tfRH
+	qkEaGcz9E4Y3mvSzT6Hc3zy2mlGCHZOr+3aj2uSZiMCbRhjDcYDBlx3XYHAgm+09CoKJpsH5l63E7
+	R1VYyMl/WGs42TspR3QnYShZpAX6XwQUfXnTMEG+ccgqG/m+gcrPgPwUPWPfCUJNtqB85sjqL1ETs
+	mw8uRDq7iEu+pZAcbASeWAQKAIsaqdAXesJTBDltcKqaTIxDV0MpJrUCoX4M6ECN0XXBIdW8e6/Yf
+	6L/7dDTF26IdowOHleoA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTBRc-00058L-Jw; Tue, 21 May 2019 20:33:08 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1hTI4r-0004MZ-UC; Wed, 22 May 2019 03:38:05 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTBRL-0004jK-Kl
- for linux-mediatek@lists.infradead.org; Tue, 21 May 2019 20:33:01 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=TUlpK2unIF2IGy4lMVx7T6Bwj9nXmh9dGW604PLl3uU=; b=vLtGG5tfiVAK
- y1Yyv0O4E17dqqeea0QJYJPX0jfbPGTgaYQHGygqphSdVJu+YCwUDLjvpgqGColt30hfNvhr+qJ1M
- zn8t5+IBhSAexv/+N1vzj2FZitjAmQNhBMCyxuK3YZvl4AUKS3vPdnvU6h9qHC+PqBSmSa+l6ChQ2
- 7iraQ=;
-Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
- ([82.37.168.47] helo=debutante.sirena.org.uk)
- by heliosphere.sirena.org.uk with esmtpa (Exim 4.89)
- (envelope-from <broonie@sirena.org.uk>)
- id 1hTBRI-0001ym-07; Tue, 21 May 2019 20:32:48 +0000
-Received: by debutante.sirena.org.uk (Postfix, from userid 1000)
- id E20DC1126D20; Tue, 21 May 2019 21:32:42 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: Shunli Wang <shunli.wang@mediatek.com>
-Subject: Applied "ASoC: Mediatek: MT8183: enable IIR filter" to the asoc tree
-In-Reply-To: <20190520082420.11236-1-shunli.wang@mediatek.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190521203242.E20DC1126D20@debutante.sirena.org.uk>
-Date: Tue, 21 May 2019 21:32:42 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+ id 1hTI4n-0004M9-BF; Wed, 22 May 2019 03:38:03 +0000
+X-UUID: 936fd9d9f23b430c9ec331ddba257371-20190521
+X-UUID: 936fd9d9f23b430c9ec331ddba257371-20190521
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1237621317; Tue, 21 May 2019 19:37:47 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 May 2019 20:37:45 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
+ (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 22 May 2019 11:37:43 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 22 May 2019 11:37:42 +0800
+Message-ID: <1558496262.10179.379.camel@mhfsdcap03>
+Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Date: Wed, 22 May 2019 11:37:42 +0800
+In-Reply-To: <20190521103304.GJ1887@kuha.fi.intel.com>
+References: <1557823643-8616-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1557823643-8616-5-git-send-email-chunfeng.yun@mediatek.com>
+ <20190517103736.GA1490@kuha.fi.intel.com>
+ <20190517130511.GA1887@kuha.fi.intel.com>
+ <1558319951.10179.352.camel@mhfsdcap03>
+ <20190520080359.GC1887@kuha.fi.intel.com>
+ <OSBPR01MB2103385D996762FA54F8E437B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190520083601.GE1887@kuha.fi.intel.com>
+ <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <1558424104.10179.365.camel@mhfsdcap03>
+ <20190521103304.GJ1887@kuha.fi.intel.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_133252_616691_EFE91BBC 
-X-CRM114-Status: GOOD (  11.34  )
-X-Spam-Score: -0.1 (/)
+X-CRM114-CacheID: sfid-20190521_203801_396432_C200BED9 
+X-CRM114-Status: GOOD (  37.01  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,91 +80,244 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, srv_heupstream@mediatek.com,
- garlic.tseng@mediatek.com, jiaxin.yu@mediatek.com, tzungbi@google.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- shunli.wang@mediatek.com, kaichieh.chuang@mediatek.com
-MIME-Version: 1.0
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+On Tue, 2019-05-21 at 13:33 +0300, Heikki Krogerus wrote:
+> On Tue, May 21, 2019 at 03:35:04PM +0800, Chunfeng Yun wrote:
+> > Hi,
+> > On Mon, 2019-05-20 at 09:45 +0000, Biju Das wrote:
+> > > 
+> > > Hi Heikki,
+> > > 
+> > > Thanks for the feedback.
+> > > 
+> > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by
+> > > > node
+> > > > 
+> > > > On Mon, May 20, 2019 at 08:06:41AM +0000, Biju Das wrote:
+> > > > > Hi Heikki,
+> > > > >
+> > > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > > usb_role_switch by node
+> > > > > >
+> > > > > > On Mon, May 20, 2019 at 10:39:11AM +0800, Chunfeng Yun wrote:
+> > > > > > > Hi,
+> > > > > > > On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wrote:
+> > > > > > > > Hi,
+> > > > > > > >
+> > > > > > > > On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Krogerus wrote:
+> > > > > > > > > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfeng Yun wrote:
+> > > > > > > > > > Add fwnode_usb_role_switch_get() to make easier to get
+> > > > > > > > > > usb_role_switch by fwnode which register it.
+> > > > > > > > > > It's useful when there is not device_connection registered
+> > > > > > > > > > between two drivers and only knows the fwnode which register
+> > > > > > > > > > usb_role_switch.
+> > > > > > > > > >
+> > > > > > > > > > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > > > > > > > > > Tested-by: Biju Das <biju.das@bp.renesas.com>
+> > > > > > > > >
+> > > > > > > > > Acked-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> > > > > > > >
+> > > > > > > > Hold on. I just noticed Rob's comment on patch 2/6, where he
+> > > > > > > > points out that you don't need to use device graph since the
+> > > > > > > > controller is the parent of the connector. Doesn't that mean you
+> > > > > > > > don't really need this API?
+> > > > > > > No, I still need it.
+> > > > > > > The change is about the way how to get fwnode; when use device
+> > > > > > > graph, get fwnode by of_graph_get_remote_node(); but now will get
+> > > > > > > fwnode by of_get_parent();
+> > > > > >
+> > > > > > OK, I get that, but I'm still not convinced about if something like
+> > > > > > this function is needed at all. I also have concerns regarding how
+> > > > > > you are using the function. I'll explain in comment to the patch 5/6 in this
+> > > > series...
+> > > > >
+> > > > > FYI, Currently  I am also using this api in my patch series.
+> > > > > https://patchwork.kernel.org/patch/10944637/
+> > > > 
+> > > > Yes, and I have the same question for you I jusb asked in comment I added
+> > > > to the patch 5/6 of this series. Why isn't usb_role_switch_get() enough?
+> > > 
+> > > Currently no issue. It will work with this api as well, since the port node is part of controller node.
+> > > For eg:-
+> > > https://patchwork.kernel.org/patch/10944627/
+> > > 
+> > > However if any one adds port node inside the connector node, then this api may won't work as expected.
+> > > Currently I get below error
+> > > 
+> > > [    2.299703] OF: graph: no port node found in /soc/i2c@e6500000/hd3ss3220@47
+> > > 
+> > > For eg:-
+> > > 
+> > > 	hd3ss3220@47 {
+> > > 		compatible = "ti,hd3ss3220";
+> > > 		...
+> > > 		....
+> > > 		usb_con: connector {
+> > >                                      ....
+> > >                                      ....
+> > > 			port {
+> > > 				hd3ss3220_ep: endpoint@0 {
+> > > 					reg = <0>;
+> > > 					remote-endpoint = <&usb3peri_role_switch>;
+> > > 				};
+> > > 			};
+> > > 		};
+> > > 	};
+> > > 
+> > > Regards,
+> > > Biju
+> > 
+> > I tested 3 cases:
+> > 
+> > case 1:
+> > 
+> > connector {
+> >     compatible = "linux,typeb-conn-gpio", "usb-b-connector";
+> >     label = "micro-USB";
+> >     type = "micro";
+> >     id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+> >     vbus-supply = <&usb_p0_vbus>;
+> > 
+> >     port {
+> >         bconn_ep: endpoint@0 {
+> >             remote-endpoint = <&usb_role_sw>;
+> >         };
+> >     };
+> > };
+> > 
+> > &mtu3 {
+> >     usb-role-switch;
+> > 
+> >     port {
+> >         usb_role_sw: endpoint@0 {
+> >             remote-endpoint = <&bconn_ep>;
+> >         };
+> >     };
+> > };
+> > 
+> > the driver of connector could use usb_role_switch_get(dev) to get
+> > mtu3's USB Role Switch. (dev is the device of connector)
+> > 
+> > case 2:
+> > 
+> > &mtu3 {
+> >     usb-role-switch;
+> > 
+> >     connector {
+> >         compatible = "linux,typeb-conn-gpio", "usb-b-connector";
+> >         label = "micro-USB";
+> >         type = "micro";
+> >         id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+> >         vbus-supply = <&usb_p0_vbus>;
+> >     };
+> > };
+> > 
+> > the driver of connector using usb_role_switch_get(dev) failed to get
+> > mtu3's USB Role Switch.
+> > error log:
+> > #OF: graph: no port node found in /usb@11271000/connector
+> > this is because connector hasn't child node connected to remote
+> > endpoint which register USB Role Switch
+> > 
+> > case 3:
+> > 
+> > rsw_iddig: role_sw_iddig {
+> >     compatible = "linux,typeb-conn-gpio";
+> >     status = "okay";
+> > 
+> >     connector {
+> >         compatible = "usb-b-connector";
+> >         label = "micro-USB";
+> >         type = "micro";
+> >         id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+> >         vbus-supply = <&usb_p0_vbus>;
+> > 
+> >         port {
+> >             bconn_ep: endpoint@0 {
+> >                 remote-endpoint = <&usb_role_sw>;
+> >             };
+> >         };
+> >     };
+> > };
+> > 
+> > &mtu3 {
+> >     usb-role-switch;
+> > 
+> >     port {
+> >         usb_role_sw: endpoint@0 {
+> >             remote-endpoint = <&bconn_ep>;
+> >         };
+> >     };
+> > };
+> > 
+> > 
+> > the driver of connector using usb_role_switch_get(dev) also failed to
+> > get mtu3's USB Role Switch. Because usb_role_switch_get() only search
+> > its child nodes (connector node), but not child's child (port node)
+> > This case is the same as Biju's
+> > 
+> > Usually type-c is similar with case 3;
+> > the next version v6 of this series will use case 2 as Rob suggested,
+> > see [v5, 2/6]
+> > 
+> > for case 2, will need the new API fwnode_usb_role_switch_get();
+> 
+> Thanks for the explanation.
+> 
+> In this case, if I understood this correctly, the USB controller, which
+> is also the role switch, is the parent of the connector. So shouldn't
+> we simply consider that in the current API?
+It's better if can be added into the current API.
+I'll try it.
+> 
+> diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+> index f45d8df5cfb8..2f898167b99a 100644
+> --- a/drivers/usb/roles/class.c
+> +++ b/drivers/usb/roles/class.c
+> @@ -125,6 +125,13 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+>  {
+>         struct usb_role_switch *sw;
+> 
+> +       /*
+> +        * Simplest case is that a connector is looking for the controller,
+> +        * which is its parent.
+> +        */
+> +       if (device_property_present(dev->parent, "usb-role-switch"))
+> +               return to_role_switch(dev->parent);
+> +
+>         sw = device_connection_find_match(dev, "usb-role-switch", NULL,
+>                                           usb_role_switch_match);
+> 
+> 
+> > for case 3, use the new API, or need modify usb_role_switch_get();
+> 
+> I did not completely understand this case, but isn't it the same as
+> case 2 in the end, after you change it as Rob suggested?
+I'm afraid not, their bindings are different, see
+connector/usb-connector.txt
+> 
+> 
+> thanks,
+> 
 
-   ASoC: Mediatek: MT8183: enable IIR filter
-
-has been applied to the asoc tree at
-
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.3
-
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
-
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From 326b18176353d26df54dbc8b4b75ed4332898f61 Mon Sep 17 00:00:00 2001
-From: Shunli Wang <shunli.wang@mediatek.com>
-Date: Mon, 20 May 2019 16:24:20 +0800
-Subject: [PATCH] ASoC: Mediatek: MT8183: enable IIR filter
-
-IIR fileter can remove DC offset. It must be enabled when
-dmic or amic connected to pmic is used.
-
-Signed-off-by: Shunli Wang <shunli.wang@mediatek.com>
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- sound/soc/mediatek/mt8183/mt8183-dai-adda.c | 14 +++++++++++---
- 1 file changed, 11 insertions(+), 3 deletions(-)
-
-diff --git a/sound/soc/mediatek/mt8183/mt8183-dai-adda.c b/sound/soc/mediatek/mt8183/mt8183-dai-adda.c
-index 017d7d1d9148..2b758a18c2ea 100644
---- a/sound/soc/mediatek/mt8183/mt8183-dai-adda.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-dai-adda.c
-@@ -176,9 +176,6 @@ static int mtk_adda_ul_event(struct snd_soc_dapm_widget *w,
- 	case SND_SOC_DAPM_POST_PMD:
- 		/* should delayed 1/fs(smallest is 8k) = 125us before afe off */
- 		usleep_range(125, 135);
--
--		/* reset dmic */
--		afe_priv->mtkaif_dmic = 0;
- 		break;
- 	default:
- 		break;
-@@ -426,6 +423,17 @@ static int mtk_dai_adda_hw_params(struct snd_pcm_substream *substream,
- 
- 		ul_src_con0 |= (voice_mode << 17) & (0x7 << 17);
- 
-+		/* enable iir */
-+		ul_src_con0 |= (1 << UL_IIR_ON_TMP_CTL_SFT) &
-+			       UL_IIR_ON_TMP_CTL_MASK_SFT;
-+
-+		/* 35Hz @ 48k */
-+		regmap_write(afe->regmap, AFE_ADDA_IIR_COEF_02_01, 0x00000000);
-+		regmap_write(afe->regmap, AFE_ADDA_IIR_COEF_04_03, 0x00003FB8);
-+		regmap_write(afe->regmap, AFE_ADDA_IIR_COEF_06_05, 0x3FB80000);
-+		regmap_write(afe->regmap, AFE_ADDA_IIR_COEF_08_07, 0x3FB80000);
-+		regmap_write(afe->regmap, AFE_ADDA_IIR_COEF_10_09, 0x0000C048);
-+
- 		regmap_write(afe->regmap, AFE_ADDA_UL_SRC_CON0, ul_src_con0);
- 
- 		/* mtkaif_rxif_data_mode = 0, amic */
--- 
-2.20.1
 
 
 _______________________________________________
