@@ -2,52 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B3873290CC
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 08:12:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F0F9290F3
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 08:26:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=NTdl2ienbO52PwhIT3g/giijTup6qbUZBSIOOed7LmU=; b=tcREB+fQ6qiEOy
-	c5A1SXUoKgVnIxex7gjm5QW5B1L+savlA7kmu+iBxMZ20c/8NXoIQnESjGbDP7QUQ6niwE9h+0H3N
-	y85vwZqhjpcJiCPUIXswHrLz35rlmIOE942w+9c4LKoMcaAfIDsw2ZyCfno7Ksbq1I3Oq0jzQx6YJ
-	VkBUFCDu7z3jmIPxVinsaoc+4Vidvr3b34u1OAn+H58C5x+ixqOipVhXIxFfPaEgPgte1kgm2RpHB
-	nuo25JPTrKV7EJymMthBCRfssphe05t8lXlNz43J0kMwpJQjk0GHa5Qrx5kEFABSHJ6b6EI866Qs5
-	cuOnjgcXBxyrcDFn57/w==;
+	List-Owner; bh=KtC99usxJ5MFSAfyHaaVoVJzMJ4v5tseRJw2NvTmiVs=; b=CE+1ae/fatJKjk
+	FqBHosC5f2EQfFiRe9qKqRZjGpxB8FxGbCCFw+Cdxr5sLxGuU1B+skma7MQMnXD2Q3UC8+orn+whc
+	+nbdEKIrpCY0Z2lOrf+9K0TkiSP71Q8iwYLmN4QrSwzAECZGqJK3RgDZASgDIxPsd4SESYTZmq9yU
+	7BDl+RyMvllhZGKZ//rDvmwK9lBHscJ9uJcHtdyBSXzUoZPK+Wf/JNj5Q42gNW6Txsk9A5QXFlUuP
+	/HoPy2WuQf13MCL4PYs4iM/cUGrPLv7l4Fqch20Yr0/qEIOhecIssTMfGgObIFg00nRs23FZa9v4m
+	dappAsiB3Jk1ux7qM+KQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hU3Qw-0003n4-B3; Fri, 24 May 2019 06:12:02 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hU3fB-00024A-P6; Fri, 24 May 2019 06:26:45 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hU3Qm-0003fZ-DH; Fri, 24 May 2019 06:11:53 +0000
-X-UUID: dd6fffee33ba4aefba538bc940fe8d45-20190523
-X-UUID: dd6fffee33ba4aefba538bc940fe8d45-20190523
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hU3eo-0001dU-38; Fri, 24 May 2019 06:26:23 +0000
+X-UUID: e0404943a5e14b21a27794090668a2ad-20190523
+X-UUID: e0404943a5e14b21a27794090668a2ad-20190523
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1834007914; Thu, 23 May 2019 22:11:47 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 23 May 2019 23:11:45 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 24 May 2019 14:11:43 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ with ESMTP id 1343229035; Thu, 23 May 2019 22:26:16 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 23 May 2019 23:26:15 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 May 2019 14:26:13 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 24 May 2019 14:11:42 +0800
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: [RESEND PATCH] usb: mtu3: fix up undefined reference to usb_debug_root
-Date: Fri, 24 May 2019 14:11:33 +0800
-Message-ID: <ee71197a681165aa72cb73c7f6cb402953351805.1558678075.git.chunfeng.yun@mediatek.com>
+ Transport; Fri, 24 May 2019 14:26:13 +0800
+From: Biao Huang <biao.huang@mediatek.com>
+To: Jose Abreu <joabreu@synopsys.com>
+Subject: [v4, PATCH 0/3] fix some bugs in stmmac
+Date: Fri, 24 May 2019 14:26:06 +0800
+Message-ID: <1558679169-26752-1-git-send-email-biao.huang@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190523_231152_459039_96F11EB4 
-X-CRM114-Status: GOOD (  10.10  )
+X-CRM114-CacheID: sfid-20190523_232622_134653_BF83D2B9 
+X-CRM114-Status: UNSURE (   8.32  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -68,48 +69,53 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
- linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Alexandre Torgue <alexandre.torgue@st.com>, jianguo.zhang@mediatek.comi,
+ biao.huang@mediatek.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ boon.leong.ong@intel.com, linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
-there is an issue:
-
-ld:
-drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
-mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
-
-usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
-and use NULL instead.
-
-Reported-by: Randy Dunlap <rdunlap@infradead.org>
-Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Acked-by: Randy Dunlap <rdunlap@infradead.org>
----
- drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
-
-diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
-index 62c57ddc554e..b7c86ccd50b4 100644
---- a/drivers/usb/mtu3/mtu3_debugfs.c
-+++ b/drivers/usb/mtu3/mtu3_debugfs.c
-@@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
- 
- void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
- {
--	ssusb->dbgfs_root =
--		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
-+	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
- }
- 
- void ssusb_debugfs_remove_root(struct ssusb_mtk *ssusb)
--- 
-2.21.0
+changes in v4:                                                                  
+        since MTL_OPERATION_MODE write back issue has be fixed in the latest driver,
+remove original patch#3                                                         
+                                                                                
+changes in v3:                                                                  
+        add a Fixes:tag for each patch                                          
+                                                                                
+changes in v2:                                                                  
+        1. update rx_tail_addr as Jose's comment                                
+        2. changes clk_csr condition as Alex's proposition                      
+        3. remove init lines in dwmac-mediatek, get clk_csr from dts instead.   
+                                                                                
+v1:                                                                             
+This series fix some bugs in stmmac driver                                      
+3 patches are for common stmmac or dwmac4:                                      
+        1. update rx tail pointer to fix rx dma hang issue.                     
+        2. change condition for mdc clock to fix csr_clk can't be zero issue.   
+        3. write the modified value back to MTL_OPERATION_MODE.                 
+1 patch is for dwmac-mediatek:                                                  
+        modify csr_clk value to fix mdio read/write fail issue for dwmac-mediatek
+                                                                                
+Biao Huang (3):                                                                 
+  net: stmmac: update rx tail pointer register to fix rx dma hang               
+    issue.                                                                      
+  net: stmmac: fix csr_clk can't be zero issue                                  
+  net: stmmac: dwmac-mediatek: modify csr_clk value to fix mdio                 
+    read/write fail                                                             
+                                                                                
+ .../net/ethernet/stmicro/stmmac/dwmac-mediatek.c   |    2 --                   
+ drivers/net/ethernet/stmicro/stmmac/stmmac_main.c  |    7 ++++---              
+ .../net/ethernet/stmicro/stmmac/stmmac_platform.c  |    5 ++++-                
+ 3 files changed, 8 insertions(+), 6 deletions(-)                               
+                                                                                
+--                                                                              
+1.7.9.5
 
 
 _______________________________________________
