@@ -2,75 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 841E129216
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 09:53:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DA14429219
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 09:55:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9ThNhoBQRISjOmJkdyaLw8wZgZqwo9kXXIgIzcuRsck=; b=UQdNFPecd9kbKs
-	dm2H1zT590eq9T/Uv7/Vlsr4nOar/07P8KMnJp5XFJD1ypAKrVhhPyV340LiTrFRbmKcNa+iCvXSW
-	O8v98pq0x9hGJoZbho0YP/N49GSpdADhhutjKeaNP5fZM7YiuBH82sUtUmax7uZLqVtg1w6ZoxS8N
-	UXyEjKWHiyXYJSeVXPCNFUubHRj4rG7Eh9AeGz5qmWT6KqqbPiPqPIUEZhN2AVXmcGpZypKQGgJHA
-	tNX7E0+xHjH+cMAfB7Sj7UOTa2b/nUdmAJctY9mpl2fUmDmL+jQ7U4v34HT6kX+uXQM1ys6zUXrcm
-	mEfyxeVPOZ6ahYTUIwug==;
+	List-Owner; bh=vaY/hrwuJanw7dgw6eNMP3wJ6OZicC1huNrR/fBBDk0=; b=qfj/t5Qnbd3iQm
+	fATjCG2GXpuPBW+waVfdH0IjnT5RnSVZclxetg20YcfXP4iDZqP+hM0QYWqvZBPd/LYVoAIPbJUcA
+	1K7wYNE++WNk/BvQ+PkaHBrQMC02kTZR2jc0I61oJ+mJj7B7AZMBQ0+jCONUtgZSMWiab1t8iEeio
+	UxLBY12Ixrkn46YSCSjVIynyDWrdvElcQ+uRwZiaRU648ozBicoe9fgj8oSM37rvx+Eb8duaPtvma
+	k91uvF+4mhan5v94hpz2Z4BGAy9SSrupw32sAYiXc7B2yL6z2+MqutYMi/3gs+7C7TishsHdcjWsr
+	ZrZtD2Io1Kh5pAf+nZ4Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hU50o-0000HJ-Se; Fri, 24 May 2019 07:53:10 +0000
-Received: from mail-qk1-f193.google.com ([209.85.222.193])
+	id 1hU52o-0001iS-LE; Fri, 24 May 2019 07:55:14 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hU50e-00008b-DT; Fri, 24 May 2019 07:53:01 +0000
-Received: by mail-qk1-f193.google.com with SMTP id d10so6090647qko.4;
- Fri, 24 May 2019 00:52:59 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=QmIWS/gC+fa19PxSGHgrqfgpvxjgo7flHvAf9Hy7FNk=;
- b=Q2dcJfO1Lu/IcYtBkLGHcedolToQw/YXoDf0rEvc7/sFnquOxEDccCs2gxnQ84G5qv
- lPo2ZFubcVaBoC5kVRYYpXxw/QcKp4jYbbuJiCD2KuW7YHkEO7GG0mO2BTFRr+EJm6NE
- vl98+Hl/vPKUEP23RHNJXSshjDH/tfAVwe6ouVeFFYKN3cwX0iYvZxANQ4GfVl7U3dSE
- o+Ntq53+fFsZliX1cbsJOYIIvk+bKLF0zzHHaYtAAB5YNy8tBPXWC3UG7umY5AFlRMvF
- jyzX+2ifJsjL86vOjOioG8lmqY4K1Vx2HzIwK3e9QBc6VNojoIJgR9tiDvNrpEYKqN5y
- wuUQ==
-X-Gm-Message-State: APjAAAXzLQVryG6Mk+x6k/E/O/W4z+j24ilRctNYeXTQearKHrknOOF6
- KHjP6hcPjZZeOe9GPG1SHR6LtZn0bhmmTSEd2so=
-X-Google-Smtp-Source: APXvYqxaxfnh6nmAp0lGugPobsxiW7O+QwmUArkhVA0P3guGuBwge1kPVPSxfQEQDjERy7qUg4QYOPiGt1HNqd9w5y4=
-X-Received: by 2002:ac8:19a7:: with SMTP id u36mr2812318qtj.7.1558684379039;
- Fri, 24 May 2019 00:52:59 -0700 (PDT)
+ id 1hU52l-0001hv-Hj
+ for linux-mediatek@lists.infradead.org; Fri, 24 May 2019 07:55:12 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id B5FFF20879;
+ Fri, 24 May 2019 07:55:10 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1558684511;
+ bh=erVr97GltBdW+TY/NQm3CwstjOX12OJL5JWbo8L3z/M=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=Ooze/Bz3O1ArZ5k1Nc3dNnwR9RhM3sbE5nT/GAoApphuLee3CF6EH2a6pzps8j965
+ 2EKg64aoGaL94YD+f/Ok4Vf00YRtiX3cXOYST+mnUSLAG8QlqIiNGigJ/HMrWgu2oT
+ ZwP32BVgt/yKx7kp1pmyajJ+mOsTkT7ILYvIqdkM=
+Date: Fri, 24 May 2019 09:55:08 +0200
+From: Greg KH <gregkh@linuxfoundation.org>
+To: Claire Chang <tientzu@chromium.org>
+Subject: Re: [PATCH 1/2] dt-bindings: serial: add documentation for Rx
+ in-band wakeup support
+Message-ID: <20190524075508.GA31438@kroah.com>
+References: <20190521084701.100179-1-tientzu@chromium.org>
+ <20190521084701.100179-2-tientzu@chromium.org>
 MIME-Version: 1.0
-References: <20190507092020.1917-1-xiaolei.li@mediatek.com>
- <20190507092020.1917-2-xiaolei.li@mediatek.com>
-In-Reply-To: <20190507092020.1917-2-xiaolei.li@mediatek.com>
-From: Arnd Bergmann <arnd@arndb.de>
-Date: Fri, 24 May 2019 09:52:42 +0200
-Message-ID: <CAK8P3a3d-2U=hpb0P0+W-eZ0cviwKVwy6dWvHbhBCgF4CJUWKA@mail.gmail.com>
-Subject: Re: [RFC PATCH v4 1/1] mtd: rawnand: mtk: Re-license MTK NAND driver
- as Dual MIT/GPL
-To: Xiaolei Li <xiaolei.li@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <20190521084701.100179-2-tientzu@chromium.org>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190524_005300_457838_FA7BC570 
-X-CRM114-Status: UNSURE (   9.66  )
+X-CRM114-CacheID: sfid-20190524_005511_605409_DC5153BC 
+X-CRM114-Status: UNSURE (   7.15  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.1 (/)
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.1 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.222.193 listed in list.dnswl.org]
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.3 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.222.193 listed in wl.mailspike.net]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (arndbergmann[at]gmail.com)
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -82,37 +76,25 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Daniel Thompson <daniel.thompson@linaro.org>,
- Ryder Lee <ryder.lee@mediatek.com>, srv_heupstream@mediatek.com,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Richard Weinberger <richard@nod.at>, Miquel Raynal <miquel.raynal@bootlin.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>, jorge.ramirez-ortiz@linaro.org,
- yingjoe.chen@mediatek.com, boris.brezillon@collabora.com,
- linux-mtd <linux-mtd@lists.infradead.org>,
- Wei Yongjun <weiyongjun1@huawei.com>, yellowriver2010@hotmail.com,
- =?UTF-8?B?UmFmYcWCIE1pxYJlY2tp?= <rafal@milecki.pl>,
- "moderated list:ARM/Mediatek SoC..." <linux-mediatek@lists.infradead.org>,
- peterpandong@micron.com, rogercc.lin@mediatek.com,
- Dan Carpenter <dan.carpenter@oracle.com>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
+ changqi.hu@mediatek.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gVHVlLCBNYXkgNywgMjAxOSBhdCAxMToyMCBBTSBYaWFvbGVpIExpIDx4aWFvbGVpLmxpQG1l
-ZGlhdGVrLmNvbT4gd3JvdGU6Cj4KPiBJdCBpcyB3YW50ZWQgdG8gdXNlIE1USyBOQU5EIGRyaXZl
-ciB3aXRoIEdQTC0yLjAgb3IgTUlUIGxpY2Vuc2UuCj4gQnV0IG5vdyBpdCBpcyBvbmx5IGxpY2Vu
-c2VkIGFzIEdQTC0yLjAuCj4gU28gcmUtbGljZW5zZSBpdCBhcyBkdWFsIE1JVC9HUEwgYW5kIHJl
-cGxhY2UgbGljZW5zZSB0ZXh0IHdpdGgKPiBTUERYIHRhZy4KPgo+IFNpZ25lZC1vZmYtYnk6IFhp
-YW9sZWkgTGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPgo+IEFja2VkLWJ5OiBKb3JnZSBSYW1p
-cmV6LU9ydGl6IDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5vcmc+Cj4gQWNrZWQtYnk6IFJ5
-ZGVyIExlZSA8cnlkZXIubGVlQG1lZGlhdGVrLmNvbT4KPiBBY2tlZC1ieTogUmFmYcWCIE1pxYJl
-Y2tpIDxyYWZhbEBtaWxlY2tpLnBsPgo+IEFja2VkLWJ5OiBNaXF1ZWwgUmF5bmFsIDxtaXF1ZWwu
-cmF5bmFsQGJvb3RsaW4uY29tPgo+IEFja2VkLWJ5OiBCb3JpcyBCcmV6aWxsb24gPGJvcmlzLmJy
-ZXppbGxvbkBjb2xsYWJvcmEuY29tPgo+IEFja2VkLWJ5OiBSb2dlckNDIExpbiA8cm9nZXJjYy5s
-aW5AbWVkaWF0ZWsuY29tPgoKQWNrZWQtYnk6IEFybmQgQmVyZ21hbm4gPGFybmRAYXJuZGIuZGU+
-CgpTb3JyeSBmb3IgbWlzc2luZyB0aGlzIGVhcmxpZXIuCgpfX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGlu
-dXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9y
-Zy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+On Tue, May 21, 2019 at 04:47:00PM +0800, Claire Chang wrote:
+> Signed-off-by: Claire Chang <tientzu@chromium.org>
+> ---
+
+I can not take patches without any changelog text at all.  Part of
+writing a good patch is actually describing why you are making a change.
+
+thanks,
+
+greg k-h
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
