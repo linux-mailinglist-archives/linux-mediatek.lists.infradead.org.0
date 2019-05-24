@@ -2,68 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 402CA2973B
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 13:33:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4C08F2977E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 13:42:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UU7bHlzS7E2UOuE8b3KFGwgLqvW58cnBuOag+om5NwI=; b=kzg8AcYLJ0o6wG
-	0h4T8AIldERciyNSnAg0+a49YXYVCPQd0E4/Nr4/oKdPz0eDWbhXX41hmNoocEwce8QZzbkj50Cr6
-	mOHjxULueXXWvdK3YKksZshjc4j648QmwW7Qg6WQeen71AYg+miqsqvCVdQua2Kn+BgjHVCxx9kN3
-	YHwcafJQtl8rAAPXj5+tHSGq/D2bVU/d6S30JrbkQOsgrvHNn6t2tcbiIJuVxOP+ctrjHt54iGxX5
-	V18YtJRdd7AjO2LZ8cG81yCeUbrbjnhRBkIxgdtU9qxhVYBrHS/+A9A6qPiqL9zCdMeG3HM5iAOTr
-	NgKIjW9IZTqofDwhITYA==;
+	List-Owner; bh=2yo9wcSF/eSRP8x34tC2s8CT5ISnzFkey7CIEcyRjkc=; b=cWunIPlgpB0p8m
+	DTb1gEhNKpNty0X6SFhp7EBUT0uaJCkRfZ6OmBUmdI5hn61o4rVGLBdmncLwLIIGngDCJ+ZGuk1/u
+	RCGKvwLrqcjprDtuHpXeXfxfXu9JJIqUNQXALL5I6U1hChJaoKG7+CT0I0RhRPASzLfAcUGaG6J7i
+	orVCn2E+hh3HRKhoiEA6ZkpAvracemhsZiWgcKMF+NbIEjNJZOEV8sy/ZBB4TvaFt6TJcDcxFuyLQ
+	c8laMCoXwEQkILFRt8UO4qylYrO3o+bK+kNzKhOr2BLOsOW76si0ipUCiUUqZerTFin6/6kOAqj7C
+	jVUE4OpCSl5hME06mzcQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hU8SN-0005dH-Om; Fri, 24 May 2019 11:33:51 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hU8b6-0001GX-Nj; Fri, 24 May 2019 11:42:52 +0000
+Received: from mga18.intel.com ([134.134.136.126])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hU8S0-0005Do-4u; Fri, 24 May 2019 11:33:34 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 9B782217F9;
- Fri, 24 May 2019 11:33:25 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1558697606;
- bh=qsSpekRTMO6soSqgbGN+CDeIL1lm1krs6w3p0H8XQJM=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=J28+TsNIIP/dFub2mHSp/HM5iob1cAFymNIpICdMmFWS1rtbjRgLqFp5VpQF0WTcp
- EU7DKD6sFmDNNFxfiioA7iPyk7g36wq2A0CqCSnwZmMBgO4av735JVq9pTxm6xiDsd
- G9L8xLX59PeNMp/Da2UBdrLRP913ArMRz1AX2nVE=
-Date: Fri, 24 May 2019 13:33:22 +0200
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ id 1hU8ax-0000pW-RL; Fri, 24 May 2019 11:42:45 +0000
+X-Amp-Result: UNSCANNABLE
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by orsmga106.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 24 May 2019 04:40:42 -0700
+X-ExtLoop1: 1
+Received: from kuha.fi.intel.com ([10.237.72.189])
+ by fmsmga001.fm.intel.com with SMTP; 24 May 2019 04:40:36 -0700
+Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
+ Fri, 24 May 2019 14:40:36 +0300
+Date: Fri, 24 May 2019 14:40:36 +0300
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [RESEND PATCH] usb: mtu3: fix up undefined reference to
- usb_debug_root
-Message-ID: <20190524113322.GA32094@kroah.com>
-References: <ee71197a681165aa72cb73c7f6cb402953351805.1558678075.git.chunfeng.yun@mediatek.com>
- <20190524074552.GA1080@kroah.com>
- <1558689951.10179.422.camel@mhfsdcap03>
+Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+Message-ID: <20190524114036.GO1887@kuha.fi.intel.com>
+References: <20190520080359.GC1887@kuha.fi.intel.com>
+ <OSBPR01MB2103385D996762FA54F8E437B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190520083601.GE1887@kuha.fi.intel.com>
+ <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190521095839.GI1887@kuha.fi.intel.com>
+ <OSBPR01MB21032206146152983C8F4E8EB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <1558517436.10179.388.camel@mhfsdcap03>
+ <OSBPR01MB21038F2B99EF74831A22727BB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190522142640.GN1887@kuha.fi.intel.com>
+ <1558606570.10179.403.camel@mhfsdcap03>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1558689951.10179.422.camel@mhfsdcap03>
+In-Reply-To: <1558606570.10179.403.camel@mhfsdcap03>
 User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190524_043328_521435_08CE4291 
-X-CRM114-Status: GOOD (  21.16  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190524_044243_946379_3F5CFA01 
+X-CRM114-Status: GOOD (  42.18  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.126 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -75,69 +74,335 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Li Jun <jun.li@nxp.com>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, May 24, 2019 at 05:25:51PM +0800, Chunfeng Yun wrote:
-> On Fri, 2019-05-24 at 09:45 +0200, Greg Kroah-Hartman wrote:
-> > On Fri, May 24, 2019 at 02:11:33PM +0800, Chunfeng Yun wrote:
-> > > When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
-> > > there is an issue:
-> > > 
-> > > ld:
-> > > drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
-> > > mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
-> > > 
-> > > usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
-> > > and use NULL instead.
-> > > 
-> > > Reported-by: Randy Dunlap <rdunlap@infradead.org>
-> > > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> > > Acked-by: Randy Dunlap <rdunlap@infradead.org>
-> > > ---
-> > >  drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
-> > >  1 file changed, 1 insertion(+), 2 deletions(-)
-> > 
-> > Why resend?
-> Sorry, I should send it out as v2 due to acked-by is added.
+On Thu, May 23, 2019 at 06:16:10PM +0800, Chunfeng Yun wrote:
+> Hi Heikki,
+> On Wed, 2019-05-22 at 17:26 +0300, Heikki Krogerus wrote:
+> > On Wed, May 22, 2019 at 10:55:17AM +0000, Biju Das wrote:
+> > > Hi Chunfeng Yun,
+> > > =
 
-Then please document that below the --- line, otherwise I have no idea :(
+> > > Thanks for the feedback.
+> > > =
 
-> > > diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
-> > > index 62c57ddc554e..b7c86ccd50b4 100644
-> > > --- a/drivers/usb/mtu3/mtu3_debugfs.c
-> > > +++ b/drivers/usb/mtu3/mtu3_debugfs.c
-> > > @@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
-> > >  
-> > >  void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
-> > >  {
-> > > -	ssusb->dbgfs_root =
-> > > -		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
-> > > +	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
-> > 
-> > This moves the directory to a new location no matter what the
-> > configuration is. What's wrong with where it is today?  
-> it seems usb_debug_root is only for host, but not for gadget only, it's
-> defined and created in usb/core/usb.c
+> > > > Subject: RE: [PATCH v5 4/6] usb: roles: add API to get usb_role_swi=
+tch by
+> > > > node
+> > > > =
 
-True, but you just moved the root if usb core is present too.
+> > > > Hi Biju,
+> > > > On Wed, 2019-05-22 at 08:05 +0000, Biju Das wrote:
+> > > > > Hi Heikki,
+> > > > >
+> > > > > Thanks for the feedback.
+> > > > >
+> > > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > > usb_role_switch by node
+> > > > > >
+> > > > > > On Mon, May 20, 2019 at 09:45:46AM +0000, Biju Das wrote:
+> > > > > > >
+> > > > > > >
+> > > > > > > Hi Heikki,
+> > > > > > >
+> > > > > > > Thanks for the feedback.
+> > > > > > >
+> > > > > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > > > > usb_role_switch by node
+> > > > > > > >
+> > > > > > > > On Mon, May 20, 2019 at 08:06:41AM +0000, Biju Das wrote:
+> > > > > > > > > Hi Heikki,
+> > > > > > > > >
+> > > > > > > > > > Subject: Re: [PATCH v5 4/6] usb: roles: add API to get
+> > > > > > > > > > usb_role_switch by node
+> > > > > > > > > >
+> > > > > > > > > > On Mon, May 20, 2019 at 10:39:11AM +0800, Chunfeng Yun =
+wrote:
+> > > > > > > > > > > Hi,
+> > > > > > > > > > > On Fri, 2019-05-17 at 16:05 +0300, Heikki Krogerus wr=
+ote:
+> > > > > > > > > > > > Hi,
+> > > > > > > > > > > >
+> > > > > > > > > > > > On Fri, May 17, 2019 at 01:37:36PM +0300, Heikki Kr=
+ogerus
+> > > > wrote:
+> > > > > > > > > > > > > On Tue, May 14, 2019 at 04:47:21PM +0800, Chunfen=
+g Yun
+> > > > > > wrote:
+> > > > > > > > > > > > > > Add fwnode_usb_role_switch_get() to make easier=
+ to
+> > > > > > > > > > > > > > get usb_role_switch by fwnode which register it.
+> > > > > > > > > > > > > > It's useful when there is not device_connection
+> > > > > > > > > > > > > > registered between two drivers and only knows t=
+he
+> > > > > > > > > > > > > > fwnode which register usb_role_switch.
+> > > > > > > > > > > > > >
+> > > > > > > > > > > > > > Signed-off-by: Chunfeng Yun
+> > > > > > > > > > > > > > <chunfeng.yun@mediatek.com>
+> > > > > > > > > > > > > > Tested-by: Biju Das <biju.das@bp.renesas.com>
+> > > > > > > > > > > > >
+> > > > > > > > > > > > > Acked-by: Heikki Krogerus
+> > > > > > > > > > > > > <heikki.krogerus@linux.intel.com>
+> > > > > > > > > > > >
+> > > > > > > > > > > > Hold on. I just noticed Rob's comment on patch 2/6,
+> > > > > > > > > > > > where he points out that you don't need to use devi=
+ce
+> > > > > > > > > > > > graph since the controller is the parent of the
+> > > > > > > > > > > > connector. Doesn't that mean you don't really need =
+this API?
+> > > > > > > > > > > No, I still need it.
+> > > > > > > > > > > The change is about the way how to get fwnode; when u=
+se
+> > > > > > > > > > > device graph, get fwnode by of_graph_get_remote_node(=
+);
+> > > > > > > > > > > but now will get fwnode by of_get_parent();
+> > > > > > > > > >
+> > > > > > > > > > OK, I get that, but I'm still not convinced about if
+> > > > > > > > > > something like this function is needed at all. I also h=
+ave
+> > > > > > > > > > concerns regarding how you are using the function. I'll
+> > > > > > > > > > explain in comment to the patch 5/6 in this
+> > > > > > > > series...
+> > > > > > > > >
+> > > > > > > > > FYI, Currently  I am also using this api in my patch seri=
+es.
+> > > > > > > > > https://patchwork.kernel.org/patch/10944637/
+> > > > > > > >
+> > > > > > > > Yes, and I have the same question for you I jusb asked in
+> > > > > > > > comment I added to the patch 5/6 of this series. Why isn't
+> > > > > > > > usb_role_switch_get()
+> > > > > > enough?
+> > > > > > >
+> > > > > > > Currently no issue. It will work with this api as well, since=
+ the
+> > > > > > > port node is
+> > > > > > part of controller node.
+> > > > > > > For eg:-
+> > > > > > > https://patchwork.kernel.org/patch/10944627/
+> > > > > > >
+> > > > > > > However if any one adds port node inside the connector node, =
+then
+> > > > > > > this
+> > > > > > api may won't work as expected.
+> > > > > > > Currently I get below error
+> > > > > > >
+> > > > > > > [    2.299703] OF: graph: no port node found in
+> > > > > > /soc/i2c@e6500000/hd3ss3220@47
+> > > > > >
+> > > > > > We need to understand why is that happening?
+> > > > > >
+> > > > >
+> > > > > Form the stack trace  the parent node is "parent_node=3Dhd3ss3220=
+@47" ,
+> > > > instead of the "connector" node.
+> > > > > That is the reason for the above error.
+> > > > >
+> > > > > [    2.442429]  of_graph_get_next_endpoint.part.0+0x28/0x168
+> > > > > [    2.447889]  of_fwnode_graph_get_next_endpoint+0x5c/0xb0
+> > > > > [    2.453267]  fwnode_graph_get_next_endpoint+0x20/0x30
+> > > > > [    2.458374]  device_connection_find_match+0x74/0x1a0
+> > > > > [    2.463399]  usb_role_switch_get+0x20/0x28
+> > > > > [    2.467542]  hd3ss3220_probe+0xc4/0x218
+> > > > >
+> > > > > The use case is
+> > > > >
+> > > > > &i2c0 {
+> > > > > 	hd3ss3220@47 {
+> > > > >                  	compatible =3D "ti,hd3ss3220";
+> > > > >
+> > > > >                  	usb_con: connector {
+> > > > >                           		compatible =3D "usb-c-connector";
+> > > > >                          		port {
+> > > > >                                 		 hd3ss3220_ep: endpoint {
+> > > > >                                         			remote-endpoint =3D
+> > > > <&usb3_role_switch>;
+> > > > >                                 		};
+> > > > >                          		};
+> > > > >                 	 };
+> > > > > 	 };
+> > > > > };
+> > > > >
+> > > > > &usb3_peri0 {
+> > > > >          companion =3D <&xhci0>;
+> > > > >          usb-role-switch;
+> > > > >
+> > > > >          port {
+> > > > >                 usb3_role_switch: endpoint {
+> > > > >                         remote-endpoint =3D <&hd3ss3220_ep>;
+> > > > >                  };
+> > > > >          };
+> > > > > };
+> > > > >
+> > > > > Q1) How do we modify the usb_role_switch_get() function to search
+> > > > > Child(connector) and child's endpoint?
+> > > > How about firstly finding connector node in fwnode_graph_devcon_mat=
+ch(),
+> > > > then search each endpoint?
+> > > =
 
-> > And shoudn't we
-> > create the usb root directory if only gadget is enabled?
-> Yes, need modify udc/core.c, it's better if support it, do you want me
-> to send a patch for it?
+> > >  I have done a quick prototyping with the changes you suggested and i=
+t works.
+> > > =
 
-Yes please, let's see what that looks like.
+> > > -       struct fwnode_handle *ep;
+> > > +       struct fwnode_handle *ep,*child,*tmp =3D fwnode; =
+
+> > >  =
+
+> > > -       fwnode_graph_for_each_endpoint(fwnode, ep) {
+> > > +       child =3D fwnode_get_named_child_node(fwnode, "connector");
+> > > +       if (child)
+> > > +               tmp =3D child;
+> > > +
+> > > +       fwnode_graph_for_each_endpoint(tmp, ep) {
+> > > =
+
+> > > Form the stack trace  the parent node is "parent_node=3D connector" .
+> > > =
+
+> > > [    2.440922]  of_graph_get_next_endpoint.part.0+0x28/0x168
+> > > [    2.446381]  of_fwnode_graph_get_next_endpoint+0x5c/0xb0
+> > > [    2.451758]  fwnode_graph_get_next_endpoint+0x20/0x30
+> > > [    2.456866]  device_connection_find_match+0x84/0x1c0
+> > > [    2.461888]  usb_role_switch_get+0x20/0x28
+> > > =
+
+> > > Heikki, =
+
+> > > Are you ok  with the above changes?
+> > =
+
+> > Doesn't that mean that if we made fwnode_usb_role_switch_get() the way
+> > I proposed, there is no problem? You just find the "connector" child
+> > node in your driver, and pass that to fwnode_usb_role_switch_get():
+> > =
+
+> >         struct fwnode_handle *connector;
+> >         ...
+> >         connector =3D device_get_named_child_node(&client->dev, "connec=
+tor");
+> >         if (IS_ERR(connector))
+> >                 <do something>
+> > =
+
+> >         hd3ss3220->role_sw =3D fwnode_usb_role_switch_get(connector);
+> >         ...
+> > =
+
+> > The difference is that instead of just converting a device node of an
+> > usb role switch to the usb role switch, it works just like
+> > usb_role_switch_get(), just taking fwnode instead of device entry as
+> > parameter.
+> > =
+
+> > I prepared the patches implementing fwnode_usb_role_switch_get() the
+> > way I though it needs to work for my own tests. Please find the
+> > patches attached.
+> I tested these patches, it didn't work for case as following:
+> =
+
+> case 2:
+> =
+
+> &mtu3 {
+>     usb-role-switch;
+> =
+
+>     connector {
+>         compatible =3D "linux,typeb-conn-gpio", "usb-b-connector";
+>         label =3D "micro-USB";
+>         type =3D "micro";
+>         id-gpios =3D <&pio 12 GPIO_ACTIVE_HIGH>;
+>         vbus-supply =3D <&usb_p0_vbus>;
+>     };
+> };
+> =
+
+> so I consider this case in the function fwnode_graph_devcon_match()
+> (based on your patches)
+
+IMO that case should be handled in USB role switch API initially, not
+in the device connection API. If there is another user for it one day,
+then we can move it to device connection API, but not before that.
+
+How about this on top of the two patches I sent:
+
+diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+index aab795b54c7f..36ac9d181e09 100644
+--- a/drivers/usb/roles/class.c
++++ b/drivers/usb/roles/class.c
+@@ -114,6 +114,19 @@ static void *usb_role_switch_match(struct device_conne=
+ction *con, int ep,
+        return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
+ }
+
++static struct usb_role_switch *
++usb_role_switch_is_parent(struct fwnode_handle *parent)
++{
++       struct device *dev;
++
++       if (!parent ||=A0!fwnode_property_present(parent, "usb-role-switch"=
+))
++               return NULL;
++
++       dev =3D class_find_device(role_class, NULL, parent, switch_fwnode_m=
+atch);
++
++       return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
++}
++
+ /**
+  * usb_role_switch_get - Find USB role switch linked with the caller
+  * @dev: The caller device
+@@ -125,6 +138,10 @@ struct usb_role_switch *usb_role_switch_get(struct dev=
+ice *dev)
+ {
+        struct usb_role_switch *sw;
+
++       sw =3D usb_role_switch_is_parent(fwnode_get_parent(dev_fwnode(dev))=
+);
++       if (sw)
++               return sw;
++
+        sw =3D device_connection_find_match(dev, "usb-role-switch", NULL,
+                                          usb_role_switch_match);
+
+@@ -146,6 +163,10 @@ struct usb_role_switch *fwnode_usb_role_switch_get(str=
+uct fwnode_handle *fwnode)
+ {
+        struct usb_role_switch *sw;
+
++       sw =3D usb_role_switch_is_parent(fwnode_get_parent(fwnode));
++       if (sw)
++               return sw;
++
+        sw =3D fwnode_connection_find_match(fwnode, "usb-role-switch", NULL,
+                                          usb_role_switch_match);
+        if (!IS_ERR_OR_NULL(sw))
+
 
 thanks,
 
-greg k-h
+-- =
+
+heikki
 
 _______________________________________________
 Linux-mediatek mailing list
