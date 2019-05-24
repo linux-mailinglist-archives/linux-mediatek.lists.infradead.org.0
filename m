@@ -2,71 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BBDD3291F5
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 09:42:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6FF092920C
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 09:46:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pV579hqEDYFWOmbDSE9eT7KVERHysFfhPWQB1aijjJA=; b=ZHD+/P/4XVqQ5Q
-	nLJUjCVvWLEX/o9ZrGrTk1+DeiqibndT/xNfSNCc4fpSdal7Ldc4T/eiyRLyugg8FAv16LV5HDkF3
-	xyW04Iy+h40GW1rBhVWK1o2Vmv5lekLSZmRf3ecET8c1QTsQLUc/ZNKDfBfcMFtWDMHyFG1iEk3/y
-	ouAuT6WRG8fm7Y73eVSu5X0SaCcXpOybQsDYlQcIbWdra7lXvWQ0iLGovFq7NsZeWjjR8X2N5KUVG
-	osef62C6vdpif+xhmqrYJH2tqHz2pLFPOYOG3UP/8v8BYvtglSI0mtCWaJd292e7FZIbRsJ3SHiTC
-	E94SqZnvYD/bYNseHqNw==;
+	List-Owner; bh=lEACM3CJW06Rsw/4SgO9d/OZ2GB80ADA8fAPqY1Y6+I=; b=AXsu/1PqgohLEO
+	TqBHGAq9lbm3yclDzH1z7gypBxS97ETUHXJ1j77Bdqr+uKOdQuxhvH8ra6wglV2v9MiNALdcEfVnc
+	Q+mmJm9JUCETFYiYWwFwrt/pNiMZSMlpsC1y1yx0dP9QjH6aIeMGza/00gGznad8ECvICHU7XCbIL
+	f2rULeJ4EnI+pRbSbnhDHqntCfj0R7k8fVVP2to6pIMTi1F0MFG7G82TCHaKhRl/hzbIBKxnNmWdg
+	RVJpAYMOk67DAi6dJombfSUEqHyWfRtL3/k8KE3EkQ3uwITVYZgt3G9ed3S+4pnZcDyPBITFOi6B9
+	Pbzuu7RS14tTfh6MVxDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hU4qn-00058U-JC; Fri, 24 May 2019 07:42:49 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hU4tw-0006uO-As; Fri, 24 May 2019 07:46:04 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hU4ql-000582-5Q
- for linux-mediatek@lists.infradead.org; Fri, 24 May 2019 07:42:48 +0000
-X-UUID: 27ae80e6f83b41b6bd725ce6e1564a0d-20190523
-X-UUID: 27ae80e6f83b41b6bd725ce6e1564a0d-20190523
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <neal.liu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1991031528; Thu, 23 May 2019 23:42:38 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 24 May 2019 00:42:37 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 24 May 2019 15:42:34 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 24 May 2019 15:42:34 +0800
-Message-ID: <1558683754.5671.4.camel@mtkswgap22>
-Subject: Re: [PATCH 3/3] hwrng: add mt67xx-rng driver
-From: Neal Liu <neal.liu@mediatek.com>
-To: Herbert Xu <herbert@gondor.apana.org.au>
-Date: Fri, 24 May 2019 15:42:34 +0800
-In-Reply-To: <20190510063915.kwqy3e5urs6j7ity@gondor.apana.org.au>
-References: <1557287937-2410-1-git-send-email-neal.liu@mediatek.com>
- <1557287937-2410-4-git-send-email-neal.liu@mediatek.com>
- <12193108.aNnqf5ydOJ@tauon.chronox.de>
- <1557311737.11818.11.camel@mtkswgap22>
- <20190509052649.xfkgb3qd7rhcgktj@gondor.apana.org.au>
- <1557413686.23445.6.camel@mtkswgap22>
- <20190510063915.kwqy3e5urs6j7ity@gondor.apana.org.au>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hU4tn-0006kn-7m; Fri, 24 May 2019 07:45:56 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id F2B0D217F9;
+ Fri, 24 May 2019 07:45:53 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1558683954;
+ bh=ObrvGpPLiHEvyPviS1L6MjtoBDnP+praLC5ukqMFU0M=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=EUN9fDVX77IBJUkCIzY9sNbVP5n/uaDGltIbrw7RwF72ifujn+NUZ3fD5lGSp2vF3
+ ES8/uxnuMieLrmdE953JA4Aznd29rvq5GXNIemu2kQtvCEi6Rilck3U7Ab+62zbQ+W
+ 6H23cbY3lGz9eJcBK+CbpAf6HrBR8eMoOGFxBtfs=
+Date: Fri, 24 May 2019 09:45:52 +0200
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [RESEND PATCH] usb: mtu3: fix up undefined reference to
+ usb_debug_root
+Message-ID: <20190524074552.GA1080@kroah.com>
+References: <ee71197a681165aa72cb73c7f6cb402953351805.1558678075.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 89ED3B40815DB6F837B8DBB2E0E3948F37DDFAA36A07D69CF4F4116AD8AC13F82000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <ee71197a681165aa72cb73c7f6cb402953351805.1558678075.git.chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190524_004247_206694_276E8895 
-X-CRM114-Status: GOOD (  10.02  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190524_004555_294234_402C2192 
+X-CRM114-Status: GOOD (  15.29  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,65 +73,54 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- wsd_upstream <wsd_upstream@mediatek.com>,
- Stephan Mueller <smueller@chronox.de>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Neal Liu <neal.liu@mediatek.com>, "robh+dt@kernel.org" <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "linux-crypto@vger.kernel.org" <linux-crypto@vger.kernel.org>,
- "mpm@selenic.com" <mpm@selenic.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- Crystal Guo =?UTF-8?Q?=28=E9=83=AD=E6=99=B6=29?= <Crystal.Guo@mediatek.com>
+Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Herbert,
-	Could you kindly help to review our patches?
-	Thanks
+On Fri, May 24, 2019 at 02:11:33PM +0800, Chunfeng Yun wrote:
+> When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
+> there is an issue:
+> 
+> ld:
+> drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
+> mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
+> 
+> usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
+> and use NULL instead.
+> 
+> Reported-by: Randy Dunlap <rdunlap@infradead.org>
+> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> Acked-by: Randy Dunlap <rdunlap@infradead.org>
+> ---
+>  drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
+>  1 file changed, 1 insertion(+), 2 deletions(-)
 
-From	Neal Liu <>
-Subject	[PATCH 0/3] MT67XX random number generator support
-Date	Wed, 8 May 2019 11:58:54 +0800
-share
-These patch series introduce a generic rng driver for Trustzone
-based kernel driver which would like to communicate with ATF
-SIP services.
+Why resend?
 
-Patch #1 initials SMC fid table for Mediatek SIP interfaces and
-adds HWRNG related SMC call.
+> diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
+> index 62c57ddc554e..b7c86ccd50b4 100644
+> --- a/drivers/usb/mtu3/mtu3_debugfs.c
+> +++ b/drivers/usb/mtu3/mtu3_debugfs.c
+> @@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
+>  
+>  void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
+>  {
+> -	ssusb->dbgfs_root =
+> -		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
+> +	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
 
-Patch #2..3 adds mt67xx-rng kernel driver for Trustzone based SoCs.
-For Mediatek SoCs on ARMv8 with TrustZone enabled, peripherals like
-entropy sources is not accessible from normal world (linux) and
-rather accessible from secure world (ATF/TEE) only. This driver aims
-to provide a generic interface to ATF rng service.
+This moves the directory to a new location no matter what the
+configuration is. What's wrong with where it is today?  And shoudn't we
+create the usb root directory if only gadget is enabled?
 
-Neal Liu (3):
-  soc: mediatek: add SMC fid table for SIP interface
-  dt-bindings: rng: update bindings for MT67xx SoCs
-  hwrng: add mt67xx-rng driver
+thanks,
 
- Documentation/devicetree/bindings/rng/mtk-rng.txt |   13 ++-
- drivers/char/hw_random/Kconfig                    |   16 ++++
- drivers/char/hw_random/Makefile                   |    1 +
- drivers/char/hw_random/mt67xx-rng.c               |  104
-+++++++++++++++++++++
- include/linux/soc/mediatek/mtk_sip_svc.h          |   55 +++++++++++
- 5 files changed, 186 insertions(+), 3 deletions(-)
- create mode 100644 drivers/char/hw_random/mt67xx-rng.c
- create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
-
--- 
-1.7.9.5
-
-Best Regards,
--Neal Liu
-
-
+greg k-h
 
 _______________________________________________
 Linux-mediatek mailing list
