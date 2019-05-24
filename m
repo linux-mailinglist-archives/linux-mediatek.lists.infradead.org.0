@@ -2,92 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AA93328D7F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 00:55:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF47A28FBD
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 05:54:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=htzH+wOQ0un6OA4G/n0rrffq79eYBuUTs5sG8yjN7ds=; b=HxqgYwHTnGnUAu
-	lSNwd+hMUPOmlkkuBv0XGEucMcypfzrlS4MkNGjaDQs5VMjd1W3UVxKzNJAj1BxUGUrObYFIBRPnR
-	R0+8gbfm8T/9lifOyQDot11u3WDhIsXX6sXCpX1y0IuGR5NiJYEAYY73D3DsLPO0oSKkVZfc9cm1J
-	VOdMO5+BMo6G9hEb8j/wmIkguUha5hZc/NrAU3O7e3EnbDqP/ARIpjcxhG2QzS0trybhxFWkon5ge
-	bV4IwW4tTyz2AsgQg6PAEWTBGr/hzKonHXASUEhnMdOvbNsraGpyrTh7j3kVgzkFR0hwYubAUhWwa
-	l0zGU42Wmu2DWgkXc5bg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=L24OCRk3TKIr44u0Q3WHWcRis9txx+Q47hR5/sPo0OY=; b=Os4Cl1zNmSkw6+
+	PWxaMQiBPPmjnM12gnIhLVDA3cJlptR1oHTr0/U2zJSV9yPQYaeQVWwX+0llPBr/d0soclNlOoUum
+	1l9BNxWZPRvFFIrnDFctM9IMZ0xw3KHWJgdDXM88rYqsRGrbftM54h+xohU1zsOlxTrtX1vVBxm6p
+	47G5949GJYUwdEnkRYzSGHGIjIARYk6qiWWur1FjhSKzBJZxSFIjEEUsBtMuC2iZ0N3nbHHaC9Hp1
+	8G2CKpkPFQ1sko5bmvj07AWQyN0pjjkwlqLMPgFv3Wz4/M/uprIpi0LN1PTMbpGgAp6irtNfVVr42
+	ypa+K+ZACC/LUB3Ol+RQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTwcm-0002yF-0G; Thu, 23 May 2019 22:55:48 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hU1I3-0004p6-Lb; Fri, 24 May 2019 03:54:43 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTwcd-0002s6-MU; Thu, 23 May 2019 22:55:41 +0000
-Received: by mail-pl1-x644.google.com with SMTP id p1so3338199plo.2;
- Thu, 23 May 2019 15:55:39 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=27oT/4g6iIria1a8VEGy3UQ4sbwIVeCLLiSd/9UWd04=;
- b=jCSgmtO/BeBcWImt8/iAItnN7kht6k+7osXxzhQ5D+QB3xNgbz/FUSfC2LqQsBvr/l
- f/m/mIk+7UiQYMVNV9DbXH7qBc/ob629H/7t2a8T9ntAdPOek5vvBGBDONPOUMDBLlns
- dh1+VzJQtPTTP1cQqvxlZ4WtacETA6cjUTNhVCOeVsRjgcE/WEESOjA9RP3AhK37dp/H
- F84INqJDbjsvX9PCQR4ZEoCKMzMbWz772ZGl7hYs20W71s/hD9fPnGKyCtmWO8G2Ke5v
- 7EoJCL2YdufhAItIV0ORSdrLPYaHwE+gZV1Nkb9akjyDTUeySjI6RmGJB63xy9dfjdd2
- UnPw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=27oT/4g6iIria1a8VEGy3UQ4sbwIVeCLLiSd/9UWd04=;
- b=jE6WyKdBaadjJF14xH6kC+BT+FdErQwKbGmF1w4iEAlfe73Vd+ClMgUZi2OkvU4Y5W
- PD51Z1Jmefkc9BomzA5nMlKEGZwGEBWhNbjmGd+pqVBVICuoT8bjZvPxJoGngMVXMG0A
- G9xX7bQrju90R3GTl/r8goukoaaguLUsltODesXSTUGTWbwgdnfoScwEjnp2wvjGEmHk
- psQHn2iVUXCL6Olx/cBm/zeTW/RkvYlk8BJ8a2gdOefkqf4A/1HGJpBP5BdaVJHd6Bsd
- AafRVv6N0L+C2Sp3k3B8TnFodU3RuHUTjCf8SBoenj2w40zJa9PvYFmzBoOUztGioQsN
- aM1g==
-X-Gm-Message-State: APjAAAWjHXV73MVCbkMf3Sf3LPWw3e6FEdX1AIOErKAD8B5F8kd0MWZ0
- XBI6b2xEyOVesihRZAXO8sM=
-X-Google-Smtp-Source: APXvYqzt75vj9/47EIZfhyd7iAELswjMnv1hgg/C1pxBoiot4mdCedfhyicycjbWVTlRBPtDNFgzpg==
-X-Received: by 2002:a17:902:9343:: with SMTP id
- g3mr101257298plp.260.1558652138370; 
- Thu, 23 May 2019 15:55:38 -0700 (PDT)
-Received: from dtor-ws ([2620:15c:202:201:3adc:b08c:7acc:b325])
- by smtp.gmail.com with ESMTPSA id u134sm504276pfc.61.2019.05.23.15.55.37
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Thu, 23 May 2019 15:55:37 -0700 (PDT)
-Date: Thu, 23 May 2019 15:55:36 -0700
-From: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-To: Fabien Parent <fparent@baylibre.com>
-Subject: Re: [PATCH 2/2] input: keyboard: mtk-pmic-keys: add MT6392 support
-Message-ID: <20190523225536.GE176265@dtor-ws>
-References: <20190513142120.6527-1-fparent@baylibre.com>
- <20190513142120.6527-2-fparent@baylibre.com>
+ id 1hU1Hy-0004nX-FR
+ for linux-mediatek@lists.infradead.org; Fri, 24 May 2019 03:54:39 +0000
+X-UUID: 9d55e3ec27ac47ac9e4f24099ca48f6b-20190523
+X-UUID: 9d55e3ec27ac47ac9e4f24099ca48f6b-20190523
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <xixi.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 206848363; Thu, 23 May 2019 19:54:33 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 23 May 2019 20:54:31 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 May 2019 11:54:29 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 24 May 2019 11:54:29 +0800
+From: Xi Chen <xixi.chen@mediatek.com>
+To: <matthias.bgg@gmail.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>,
+ <ck.hu@mediatek.com>
+Subject: [PATCH v2, 0/3] 8183 emi driver support
+Date: Fri, 24 May 2019 11:54:23 +0800
+Message-ID: <1558670066-22484-1-git-send-email-xixi.chen@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190513142120.6527-2-fparent@baylibre.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 7B4411BA848D719F40A5820DC5EACE91619EE587BEC418D9A70C8B79E1DEB5692000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190523_155539_736903_CC708380 
-X-CRM114-Status: GOOD (  15.95  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190523_205438_516169_D68ABAEC 
+X-CRM114-Status: UNSURE (   7.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (dmitry.torokhov[at]gmail.com)
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -99,74 +72,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, linux-input@vger.kernel.org,
- matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org, srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, May 13, 2019 at 04:21:20PM +0200, Fabien Parent wrote:
-> Add support for MT6392 PMIC's keys.
-> 
-> Signed-off-by: Fabien Parent <fparent@baylibre.com>
+Remove global emi_dev.
 
-Apparently this depends on not-yet merged MT6392 support in MFD, so
-please merge through MFD tree with the rest of it.
+Xi Chen (3):
+  dt-bindings: soc: Add MT8183 emi dt-bindings
+  arm64: dts: mt8183: add emi node
+  mt8183: emi: add bandwidth driver support
 
-Acked-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-
-> ---
->  drivers/input/keyboard/mtk-pmic-keys.c | 14 ++++++++++++++
->  1 file changed, 14 insertions(+)
-> 
-> diff --git a/drivers/input/keyboard/mtk-pmic-keys.c b/drivers/input/keyboard/mtk-pmic-keys.c
-> index 8e6ebab05ab4..aaf68cbf7e5b 100644
-> --- a/drivers/input/keyboard/mtk-pmic-keys.c
-> +++ b/drivers/input/keyboard/mtk-pmic-keys.c
-> @@ -18,6 +18,7 @@
->  #include <linux/interrupt.h>
->  #include <linux/kernel.h>
->  #include <linux/mfd/mt6323/registers.h>
-> +#include <linux/mfd/mt6392/registers.h>
->  #include <linux/mfd/mt6397/core.h>
->  #include <linux/mfd/mt6397/registers.h>
->  #include <linux/module.h>
-> @@ -83,6 +84,16 @@ static const struct mtk_pmic_regs mt6323_regs = {
->  	.pmic_rst_reg = MT6323_TOP_RST_MISC,
->  };
->  
-> +static const struct mtk_pmic_regs mt6392_regs = {
-> +	.keys_regs[MTK_PMIC_PWRKEY_INDEX] =
-> +		MTK_PMIC_KEYS_REGS(MT6392_CHRSTATUS,
-> +		0x2, MT6392_INT_MISC_CON, 0x10),
-> +	.keys_regs[MTK_PMIC_HOMEKEY_INDEX] =
-> +		MTK_PMIC_KEYS_REGS(MT6392_CHRSTATUS,
-> +		0x4, MT6392_INT_MISC_CON, 0x8),
-> +	.pmic_rst_reg = MT6392_TOP_RST_MISC,
-> +};
-> +
->  struct mtk_pmic_keys_info {
->  	struct mtk_pmic_keys *keys;
->  	const struct mtk_pmic_keys_regs *regs;
-> @@ -238,6 +249,9 @@ static const struct of_device_id of_mtk_pmic_keys_match_tbl[] = {
->  	}, {
->  		.compatible = "mediatek,mt6323-keys",
->  		.data = &mt6323_regs,
-> +	}, {
-> +		.compatible = "mediatek,mt6392-keys",
-> +		.data = &mt6392_regs,
->  	}, {
->  		/* sentinel */
->  	}
-> -- 
-> 2.20.1
-> 
+ .../bindings/memory-controllers/mediatek,emi.txt   |  19 ++
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi           |  11 +
+ drivers/memory/Kconfig                             |   9 +
+ drivers/memory/Makefile                            |   1 +
+ drivers/memory/mtk-emi.c                           | 379 +++++++++++++++++++++
+ include/soc/mediatek/emi.h                         | 116 +++++++
+ 6 files changed, 535 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+ create mode 100644 drivers/memory/mtk-emi.c
+ create mode 100644 include/soc/mediatek/emi.h
 
 -- 
-Dmitry
+1.9.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
