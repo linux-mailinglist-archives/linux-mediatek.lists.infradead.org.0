@@ -2,84 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC0C72909C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 07:54:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B3873290CC
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 May 2019 08:12:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Z/BiInK0xoRhFD8Vcic27p1IgvI/RZNyLtDvCiur73U=; b=W1Ivcym/KVM6/A
-	lTLwQS8vv/60s6sqxOtNd+6say/6IkpmEc50fxe0yZfuAo73FODvIOf9nsBXPHLHjLmce04dnvlGL
-	GGWJqFTFJ7hBkVfDC1QFApXm4eGV0fjll728FYcZGneALF/HpG1w6ODIMOPZaBmPOZjYsviRv9iKT
-	Qn3r81oO8OqPOy9vLvdOLuM2WkzmcEoK6xuy5v0CTX8aMtvmKAExW0hGPg6VdYda/QaJCW0YaurMW
-	gTvpFfBSW+41POG0E+c4ThxkXEuOwMQjlHq+zLRMpj3bSlOfMsSds9YenH9e/AyWZGOy55gwzkR46
-	yTfcpJ3uVm/v7PkI7ovQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=NTdl2ienbO52PwhIT3g/giijTup6qbUZBSIOOed7LmU=; b=tcREB+fQ6qiEOy
+	c5A1SXUoKgVnIxex7gjm5QW5B1L+savlA7kmu+iBxMZ20c/8NXoIQnESjGbDP7QUQ6niwE9h+0H3N
+	y85vwZqhjpcJiCPUIXswHrLz35rlmIOE942w+9c4LKoMcaAfIDsw2ZyCfno7Ksbq1I3Oq0jzQx6YJ
+	VkBUFCDu7z3jmIPxVinsaoc+4Vidvr3b34u1OAn+H58C5x+ixqOipVhXIxFfPaEgPgte1kgm2RpHB
+	nuo25JPTrKV7EJymMthBCRfssphe05t8lXlNz43J0kMwpJQjk0GHa5Qrx5kEFABSHJ6b6EI866Qs5
+	cuOnjgcXBxyrcDFn57/w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hU39z-0005ps-DM; Fri, 24 May 2019 05:54:31 +0000
-Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
+	id 1hU3Qw-0003n4-B3; Fri, 24 May 2019 06:12:02 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hU39o-0005iP-LZ; Fri, 24 May 2019 05:54:21 +0000
-Received: by mail-oi1-x244.google.com with SMTP id 203so6154746oid.13;
- Thu, 23 May 2019 22:54:19 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=7Ebgv3UeXA0WytHreGCVh/7DQkPpVomBIGZeLwu/7es=;
- b=WzxkgAyRBYozpQ9xwmo4jx8O4OFRtPU6J0nptXrnuf+XflBtgcZgTRHwcpnbhEmVAv
- usBq5i6iGIoTGhH3T4ughQUWoLxun4lJZmnw1D8s4AkM/5A9zCYhUuMJBwBaLG+74xd9
- cAJfKD65CbgSvqMGfCS9b1xHDIkd6gZI3ar5Z0XvUqUhAaBYVGsX6H7b5uccDJt4eySU
- MYSo6jGHbKD9L9dnKS05g0Qm1ycdhH2tguBQh9rWV2gyIdEYwANqfWndBfUxBDYMSXb/
- AzwcI7cP0mhIZnAUnajbr1n0shjsHYdDtiW7moPVVpFA5DhZpV4qTI20AA2LFMx70I7h
- zf0A==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=7Ebgv3UeXA0WytHreGCVh/7DQkPpVomBIGZeLwu/7es=;
- b=K5BjsbGTpmnkW6l+qBi391Kty4QpPnecjBAn+ejGNE1R9fqixjt7jEp3omOcncimo/
- awFPeDwlWLLQlFH5yb/uiZDMqGLHx/IS30IfCtMS23sjd5Cul60nOF26xIc9XF1fJHZe
- rucUNL+ulSaO6Zd0wyEcYMTZZh97c2jR8C9sI602w91IQIQkabrKFFh7aWSzV24mDxGq
- iNfV/Inem0wyc0t3ZDbyRA/U933GvtNl9i1uuQdhiW9OZdb+BL4N2ujIj0bAAY0ryNyy
- nzB161t3L2mKZH2tsj+1gkVd7vbKbrVOjg9pPqvfSQ3v0bxvlyKuUe2+fUVesP0AjhLL
- EFeA==
-X-Gm-Message-State: APjAAAWJgwyPO6g2Fa4IkP2vawOPkkKJ2QrnMojOxFEXEDHnGRcrDzDv
- 3POKmTOXnbSyas/GheaTCumNA02YHAlp1Iv9zck=
-X-Google-Smtp-Source: APXvYqxMC+I6BinOmBqmotSjJts4Ix18CeAG/RSOJyQ2f/Fct4fsBMOH+wWVl8C6cc2AOAkKi/k7adx3Cjy6I0Xu97w=
-X-Received: by 2002:aca:3c85:: with SMTP id j127mr5285364oia.29.1558677259014; 
- Thu, 23 May 2019 22:54:19 -0700 (PDT)
+ id 1hU3Qm-0003fZ-DH; Fri, 24 May 2019 06:11:53 +0000
+X-UUID: dd6fffee33ba4aefba538bc940fe8d45-20190523
+X-UUID: dd6fffee33ba4aefba538bc940fe8d45-20190523
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1834007914; Thu, 23 May 2019 22:11:47 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 23 May 2019 23:11:45 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 May 2019 14:11:43 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 24 May 2019 14:11:42 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Subject: [RESEND PATCH] usb: mtu3: fix up undefined reference to usb_debug_root
+Date: Fri, 24 May 2019 14:11:33 +0800
+Message-ID: <ee71197a681165aa72cb73c7f6cb402953351805.1558678075.git.chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-References: <20190523183510.GA12942@hari-Inspiron-1545>
-In-Reply-To: <20190523183510.GA12942@hari-Inspiron-1545>
-From: Sergio Paracuellos <sergio.paracuellos@gmail.com>
-Date: Fri, 24 May 2019 07:54:08 +0200
-Message-ID: <CAMhs-H9222OXrqWh4W-D7pFV6FXbhLVVGXz-29gO-Qo0eQaTvQ@mail.gmail.com>
-Subject: Re: [PATCH] staging: mt7621-pci: pci-mt7621: Remove unneeded variable
- err
-To: Hariprasad Kelam <hariprasad.kelam@gmail.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190523_225420_700479_A976B5E1 
-X-CRM114-Status: GOOD (  14.88  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190523_231152_459039_96F11EB4 
+X-CRM114-Status: GOOD (  10.10  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (sergio.paracuellos[at]gmail.com)
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,64 +68,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devel@driverdev.osuosl.org, reg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- Mamta Shukla <mamtashukla555@gmail.com>, NeilBrown <neil@brown.name>,
- Peter Vernia <peter.vernia@gmail.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
+ linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Hariprasad,
+When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
+there is an issue:
 
+ld:
+drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
+mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
 
-On Thu, May 23, 2019 at 8:35 PM Hariprasad Kelam
-<hariprasad.kelam@gmail.com> wrote:
->
-> devm_request_pci_bus_resources function will return -EBUSY/-ENOMEM
-> in fail case and returns 0 on success.
->
-> So no need to store return value in err variable.
->
-> Signed-off-by: Hariprasad Kelam <hariprasad.kelam@gmail.com>
-> ---
->  drivers/staging/mt7621-pci/pci-mt7621.c | 7 +------
->  1 file changed, 1 insertion(+), 6 deletions(-)
->
-> diff --git a/drivers/staging/mt7621-pci/pci-mt7621.c b/drivers/staging/mt7621-pci/pci-mt7621.c
-> index 03d919a..bc2a3d1 100644
-> --- a/drivers/staging/mt7621-pci/pci-mt7621.c
-> +++ b/drivers/staging/mt7621-pci/pci-mt7621.c
-> @@ -596,17 +596,12 @@ static int mt7621_pcie_request_resources(struct mt7621_pcie *pcie,
->                                          struct list_head *res)
->  {
->         struct device *dev = pcie->dev;
-> -       int err;
->
->         pci_add_resource_offset(res, &pcie->io, pcie->offset.io);
->         pci_add_resource_offset(res, &pcie->mem, pcie->offset.mem);
->         pci_add_resource(res, &pcie->busn);
->
-> -       err = devm_request_pci_bus_resources(dev, res);
-> -       if (err < 0)
-> -               return err;
-> -
-> -       return 0;
-> +       return devm_request_pci_bus_resources(dev, res);
->  }
->
+usb_debug_root is only built when CONFIG_USB is enabled, so here drop it
+and use NULL instead.
 
-In the patch title, the "mt7621-pci" is repeated twice. With that changed:
+Reported-by: Randy Dunlap <rdunlap@infradead.org>
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Acked-by: Randy Dunlap <rdunlap@infradead.org>
+---
+ drivers/usb/mtu3/mtu3_debugfs.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
-Reviewed-by: Sergio Paracuellos <sergio.paracuellos@gmail.com>
+diff --git a/drivers/usb/mtu3/mtu3_debugfs.c b/drivers/usb/mtu3/mtu3_debugfs.c
+index 62c57ddc554e..b7c86ccd50b4 100644
+--- a/drivers/usb/mtu3/mtu3_debugfs.c
++++ b/drivers/usb/mtu3/mtu3_debugfs.c
+@@ -528,8 +528,7 @@ void ssusb_dr_debugfs_init(struct ssusb_mtk *ssusb)
+ 
+ void ssusb_debugfs_create_root(struct ssusb_mtk *ssusb)
+ {
+-	ssusb->dbgfs_root =
+-		debugfs_create_dir(dev_name(ssusb->dev), usb_debug_root);
++	ssusb->dbgfs_root = debugfs_create_dir(dev_name(ssusb->dev), NULL);
+ }
+ 
+ void ssusb_debugfs_remove_root(struct ssusb_mtk *ssusb)
+-- 
+2.21.0
 
->  static int mt7621_pcie_register_host(struct pci_host_bridge *host,
-> --
-> 2.7.4
->
 
 _______________________________________________
 Linux-mediatek mailing list
