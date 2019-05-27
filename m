@@ -2,67 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7B6DE2B0FF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 11:08:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 008A92B266
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 12:45:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=prwJVlwN727kLl5+23lCoZI5aCCAgpYSiOmNZLNGgoo=; b=LezANYPtX6qAHs
-	PxoyOyPakUZclNMZssZr2hPyAdEEKStcgYq09MysiSUjTZ7w2DkP5Gdet+xbzHbBuxNdP85xtrFK7
-	oeWPxqcWD2OdVSWdXvijjc9K9xohQYRRXfEX5ZZs+IEIIek5hRve2PA1APPIQXH0zgthp3clKyaF0
-	IhPTTuGAC1EiRXJU8iz1BnB/dpN1KLCdSpIwPTihxc1RiTF4R4iW5YuP9pAKhz0T/M6pb6tdcPH1z
-	O2O+NPonSviDDQgLpkTSwa8LqB8HhxBpbgz77kRlwqZ5oBgFL9Mz723bR69vhTX3aY39JeFI6qugc
-	UCgfry8xzvEweRhfuIVA==;
+	List-Owner; bh=UN2DoHdncoPXPIFSDSS4XU1qfPHxOeJMUlgJ9IjjgKg=; b=lP75Yj6sJ/rShH
+	lC96uEIHxPxVGtges30/U95vDOq/55lf/LCx2i+j2fRSF51+LkT1jK+DANMDBshhbq8v3CPuEFTb3
+	6kQv9wIPkMzYqUQqsCgYSAY5jjVv9mj98x321v05aLPEBaC58osYRyX4AKGw/hsgAdGfkXEAC/cwa
+	iwxAwdQmhxFyOT3VqBcfDGZsg7OiLrvZgvXmDZaN+V/gfz2bhA0w3fas767zlyHpfdSy37MpDm1ku
+	HCWYYShXK4TbdOqw0ZDObAlwX7afdfsZO3eBD8s66O+gjlXFn7ZhrYLNtW5V9nVVrzPEadVtRj0sD
+	Y7chbdoc6DjSUfY7jT6g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVBc6-0008W0-OK; Mon, 27 May 2019 09:08:14 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hVD87-0006vS-Nq; Mon, 27 May 2019 10:45:23 +0000
+Received: from mga05.intel.com ([192.55.52.43])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVBbl-00087Y-OZ; Mon, 27 May 2019 09:07:56 +0000
-X-UUID: a9ed5120dfef4098ac5c44156b631241-20190527
-X-UUID: a9ed5120dfef4098ac5c44156b631241-20190527
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <erin.lo@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1451335824; Mon, 27 May 2019 01:05:33 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 02:05:22 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 17:05:20 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 27 May 2019 17:05:20 +0800
-From: Erin Lo <erin.lo@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring
- <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>
-Subject: [PATCH v11 6/6] arm64: dts: mt8183: add efuse and Mediatek Chip id
- node to read
-Date: Mon, 27 May 2019 17:04:47 +0800
-Message-ID: <1558947887-31084-7-git-send-email-erin.lo@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1558947887-31084-1-git-send-email-erin.lo@mediatek.com>
-References: <1558947887-31084-1-git-send-email-erin.lo@mediatek.com>
+ id 1hVD7x-0006oy-OU; Mon, 27 May 2019 10:45:15 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by fmsmga105.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 27 May 2019 03:45:12 -0700
+X-ExtLoop1: 1
+Received: from kuha.fi.intel.com ([10.237.72.189])
+ by fmsmga001.fm.intel.com with SMTP; 27 May 2019 03:45:07 -0700
+Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
+ Mon, 27 May 2019 13:45:06 +0300
+Date: Mon, 27 May 2019 13:45:06 +0300
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+Message-ID: <20190527104506.GA7167@kuha.fi.intel.com>
+References: <20190520083601.GE1887@kuha.fi.intel.com>
+ <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190521095839.GI1887@kuha.fi.intel.com>
+ <OSBPR01MB21032206146152983C8F4E8EB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <1558517436.10179.388.camel@mhfsdcap03>
+ <OSBPR01MB21038F2B99EF74831A22727BB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190522142640.GN1887@kuha.fi.intel.com>
+ <1558606570.10179.403.camel@mhfsdcap03>
+ <20190524114036.GO1887@kuha.fi.intel.com>
+ <1558926443.10179.438.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: BC6772C244BE5BC8E09530FE258C73FF60A08144B109D9253A4ADFC41D8847CA2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1558926443.10179.438.camel@mhfsdcap03>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_020754_608966_F02F5A64 
-X-CRM114-Status: UNSURE (   8.53  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190527_034514_522935_5A8849F8 
+X-CRM114-Status: GOOD (  19.18  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.43 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,65 +75,76 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream <srv_heupstream@mediatek.com>,
- erin.lo@mediatek.com, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
- mars.cheng@mediatek.com, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org, Michael Mei <michael.mei@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Michael Mei <michael.mei@mediatek.com>
+Hi,
 
-support for reading chip ID and efuse
+> > IMO that case should be handled in USB role switch API initially, not
+> > in the device connection API. If there is another user for it one day,
+> > then we can move it to device connection API, but not before that.
+> Ok
+> > 
+> > How about this on top of the two patches I sent:
+> I just test it, it works well.
+> I'll prepare a patch and put into this series.
+> 
+> > 
+> > diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+> > index aab795b54c7f..36ac9d181e09 100644
+> > --- a/drivers/usb/roles/class.c
+> > +++ b/drivers/usb/roles/class.c
+> > @@ -114,6 +114,19 @@ static void *usb_role_switch_match(struct device_connection *con, int ep,
+> >         return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
+> >  }
+> > 
+> > +static struct usb_role_switch *
+> > +usb_role_switch_is_parent(struct fwnode_handle *parent)
+> > +{
+> > +       struct device *dev;
+> > +
+> > +       if (!parent || !fwnode_property_present(parent, "usb-role-switch"))
+> > +               return NULL;
+> > +
+> > +       dev = class_find_device(role_class, NULL, parent, switch_fwnode_match);
+> > +
+> > +       return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
+> > +}
+> > +
+> >  /**
+> >   * usb_role_switch_get - Find USB role switch linked with the caller
+> >   * @dev: The caller device
+> > @@ -125,6 +138,10 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+> >  {
+> >         struct usb_role_switch *sw;
+> > 
+> > +       sw = usb_role_switch_is_parent(fwnode_get_parent(dev_fwnode(dev)));
+> > +       if (sw)
+> > +               return sw;
+> Do we also need to get parent module before return?
 
-Signed-off-by: Michael Mei <michael.mei@mediatek.com>
-Signed-off-by: Erin Lo <erin.lo@mediatek.com>
----
-This patch is based on this patch:
-https://patchwork.kernel.org/patch/10953029/
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+Yes.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 2e3063f..c2749c4 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -156,6 +156,15 @@
- 		compatible = "simple-bus";
- 		ranges;
- 
-+		soc_data: soc_data@8000000 {
-+			compatible = "mediatek,mt8183-efuse",
-+				     "mediatek,efuse";
-+			reg = <0 0x08000000 0 0x0010>;
-+			#address-cells = <1>;
-+			#size-cells = <1>;
-+			status = "disabled";
-+		};
-+
- 		gic: interrupt-controller@c000000 {
- 			compatible = "arm,gic-v3";
- 			#interrupt-cells = <4>;
-@@ -369,6 +378,12 @@
- 			#clock-cells = <1>;
- 		};
- 
-+		efuse: efuse@11f10000 {
-+			compatible = "mediatek,mt8183-efuse",
-+				     "mediatek,efuse";
-+			reg = <0 0x11f10000 0 0x1000>;
-+		};
-+
- 		mfgcfg: syscon@13000000 {
- 			compatible = "mediatek,mt8183-mfgcfg", "syscon";
- 			reg = <0 0x13000000 0 0x1000>;
+thanks,
+
 -- 
-1.8.1.1.dirty
-
+heikki
 
 _______________________________________________
 Linux-mediatek mailing list
