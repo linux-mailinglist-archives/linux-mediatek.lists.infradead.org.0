@@ -2,87 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1E1FA2B045
-	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 10:32:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF0502B06E
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 10:40:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TI2qN+lAe0oVM1uxtSpiE0uuvvJ2+jE+gh3TGOK6EBU=; b=JYLq/SeptnxnLS
-	5Xj+t9CL9/b+xpU1bZQyop1ud2+m/GpMA8+z7MSzbQ2YT1cuMZ7Uog9LF+I2B/5j4LrcJYX++9iyG
-	oeS0PW7u3geEGCgj0enPxLxkj7i7sWFilGosS4P3Z/gfg7haZoJh7fevRnIU+QRmKFBZT540UH4ft
-	L8T7CBWR1FOPMtfGs8om0Ag/2FiREpw+Qeo1jOP/7W+WJHIk/2qiSJRRdzb8wbQLVxIRireTUFYSV
-	DXh1TTvbO1pRkKIxmIFK2CDOpgJVWauCNgEN3AwAOzl9L7dfwffLofEsMt2mrtaaj2WWf6tnLuFwg
-	aM16LGDfM/0pd5dPOmvg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=OiMzU8wSeu6MYntnqoKfP1GQvy3orHv15kV+Dgj8jFE=; b=kluTIkcEv+fNcf
+	RGTAFD7Pz1+KLZ6uAj2Yd3ujn/V3Tsroth6tLzxXQazTKj2YEHp6G7B+4sMNBewnKxW+o+UC68W9F
+	ml2l7E0QGpXBEdr3ceWBRit0rvY3YiD3Z7H1M4ykG8Yect++2ttCr4GVI0L59t3ePjROu4LEB1OtL
+	/vPflpnIpaqkQ3RZWuMi21jF6DLbpvc0BsAZl7SS7G8rK9NhVy0qQPkC9bLuTZ4/kwedbcfRofnxg
+	/gBXGjCOWcuJIq8mLxjsmj24Kl9GQ4WUnsx7GzhRWr6ZRj9tH9cGTvtdBiw6JNJ5JuHJjl6vJlMza
+	+04Pj0U9RnIenIUL7K7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVB39-0006jL-Ol; Mon, 27 May 2019 08:32:07 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1hVBAj-0001li-CU; Mon, 27 May 2019 08:39:57 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVB33-0006gG-90
- for linux-mediatek@lists.infradead.org; Mon, 27 May 2019 08:32:03 +0000
-Received: by mail-pg1-x544.google.com with SMTP id n2so8687322pgp.11
- for <linux-mediatek@lists.infradead.org>; Mon, 27 May 2019 01:32:00 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=LqoCn9Xhl56Gl3+VvLRbq2L1F7zbqoVOBwyCwaTUpoM=;
- b=O+YQVkHQNN/p5LUAtWx+Tnj9GQq88I6z6fhkAa9LVS5XiwVAGzLe3C9XXGeCmG7koh
- mvXhcoSURd6jFjMGLpL1uRe/boOy8vAhM+2cW2hnh7uPeewWk8ORIVEG/8xUMD90b+70
- ryS2Fi+Fqxs1otmya2No2gkmuFcSN64bikuuk=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=LqoCn9Xhl56Gl3+VvLRbq2L1F7zbqoVOBwyCwaTUpoM=;
- b=Tiks2ahsnN2p3hLK/lHmk06FxWeiOK2Vr8y2kyOzOPlxS2mJzk5IFFetn4x/p+7U2H
- TIXovuuM+P9o8NBd/47IILnqDcy9MLehECmWWFUWyfa5SCJVvdSKWY+Q87hc2xvcIZ4Z
- o9baJvO+gew4NdVMQ+ZEWo7Fe6Iwpbsbt9wwirOTQn7PEaSixiHm6jVhlhLY1cermMXF
- lrKAVHM/ucbbeF8PUNuaZg9xS4PZiSZDJZb9d3KSP4ls0+/vZ6daeTrti6w/ccIkezuw
- 4h/Moni3FnDu0qHf069SzCGmNuMjC0UZkSUnofeb45JqgqpFJBssDaEPZf1BFKmFhbnN
- eztA==
-X-Gm-Message-State: APjAAAUuME4tbwlX8wfNLuLUuvA9wV0Z8MMu/2fkqDuyw96FdWQfVcqy
- Okx5zhrBFSKmkoF6Q0YAcBjjBYQdXfdY1A==
-X-Google-Smtp-Source: APXvYqwjlREo18YcQPzD0JN8hZ/tFQ9UzO6kb3YZgMEKdPeOdh+Hinr68gQDfNLo8vVcF+ciOR1Dbw==
-X-Received: by 2002:a17:90a:5d09:: with SMTP id
- s9mr28893570pji.120.1558945920357; 
- Mon, 27 May 2019 01:32:00 -0700 (PDT)
-Received: from localhost ([2401:fa00:1:10:3db2:76bf:938b:be05])
- by smtp.gmail.com with ESMTPSA id n35sm9517453pgl.44.2019.05.27.01.31.58
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 27 May 2019 01:31:59 -0700 (PDT)
-From: Claire Chang <tientzu@chromium.org>
-To: gregkh@linuxfoundation.org
-Subject: [PATCH v3 2/2] uart: mediatek: support Rx in-band wakeup
-Date: Mon, 27 May 2019 16:31:50 +0800
-Message-Id: <20190527083150.220194-3-tientzu@chromium.org>
-X-Mailer: git-send-email 2.22.0.rc1.257.g3120a18244-goog
-In-Reply-To: <20190527083150.220194-1-tientzu@chromium.org>
-References: <20190527083150.220194-1-tientzu@chromium.org>
+ id 1hVBAK-0001LJ-GP; Mon, 27 May 2019 08:39:42 +0000
+X-UUID: f00b2e3b3eeb41daa966e49d4dc38551-20190527
+X-UUID: f00b2e3b3eeb41daa966e49d4dc38551-20190527
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <neal.liu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 645608105; Mon, 27 May 2019 00:39:23 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 27 May 2019 01:39:22 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 27 May 2019 16:39:07 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 27 May 2019 16:39:07 +0800
+From: Neal Liu <neal.liu@mediatek.com>
+To: Matt Mackall <mpm@selenic.com>, Herbert Xu <herbert@gondor.apana.org.au>, 
+ Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Wang <sean.wang@kernel.org>
+Subject: [PATCH v2 0/3] MediaTek Security random number generator support
+Date: Mon, 27 May 2019 16:38:43 +0800
+Message-ID: <1558946326-13630-1-git-send-email-neal.liu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 230D15169F03B83C7C0D95C59BE03E1101255BC24DBD91EF7AD4844FB1453F612000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_013201_313037_A9B19BA3 
-X-CRM114-Status: GOOD (  12.69  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190527_013933_196125_6A8D0C29 
+X-CRM114-Status: UNSURE (   9.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -94,100 +72,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Claire Chang <tientzu@chromium.org>, drinkcat@chromium.org,
- linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
- changqi.hu@mediatek.com
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ lkml <linux-kernel@vger.kernel.org>, Crystal Guo <Crystal.Guo@mediatek.com>,
+ linux-mediatek@lists.infradead.org, linux-crypto@vger.kernel.org,
+ Neal Liu <neal.liu@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In order to support Rx in-band wakeup, we need to enable irq wake on an
-edge sensitive interrupt of Rx pin before suspend and disable it when
-resuming.
+These patch series introduce a generic rng driver for Trustzone
+based kernel driver which would like to communicate with ATF
+SIP services.
 
-This interrupt is used only as wake source to resume the system when
-suspended. Note that the sent character will be lost as the controller is
-actually suspended.
+Patch #1 initials SMC fid table for MediaTek SIP interfaces and
+adds HWRNG related SMC call.
 
-We use this to support wakeup on bluetooth. Bluetooth will repeatedly send
-0xFD to wakeup host. Once host detects Rx falling, an interrupt is
-triggered, and the system leaves sleep state. Then, the bluetooth driver
-will send 0xFC to bluetooth and bluetooth can start to send normal HCI
-packets.
+Patch #2..3 adds mtk-sec-rng kernel driver for Trustzone based SoCs.
+For MediaTek SoCs on ARMv8 with TrustZone enabled, peripherals like
+entropy sources is not accessible from normal world (linux) and
+rather accessible from secure world (ATF/TEE) only. This driver aims
+to provide a generic interface to ATF rng service.
 
-Signed-off-by: Claire Chang <tientzu@chromium.org>
----
- drivers/tty/serial/8250/8250_mtk.c | 24 ++++++++++++++++++++++++
- 1 file changed, 24 insertions(+)
 
-diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
-index 417c7c810df9..5b94b853387d 100644
---- a/drivers/tty/serial/8250/8250_mtk.c
-+++ b/drivers/tty/serial/8250/8250_mtk.c
-@@ -10,6 +10,7 @@
- #include <linux/module.h>
- #include <linux/of_irq.h>
- #include <linux/of_platform.h>
-+#include <linux/pinctrl/consumer.h>
- #include <linux/platform_device.h>
- #include <linux/pm_runtime.h>
- #include <linux/serial_8250.h>
-@@ -70,6 +71,7 @@ struct mtk8250_data {
- #ifdef CONFIG_SERIAL_8250_DMA
- 	enum dma_rx_status	rx_status;
- #endif
-+	int			rx_wakeup_irq;
- };
- 
- /* flow control mode */
-@@ -551,6 +553,8 @@ static int mtk8250_probe(struct platform_device *pdev)
- 	pm_runtime_set_active(&pdev->dev);
- 	pm_runtime_enable(&pdev->dev);
- 
-+	data->rx_wakeup_irq = platform_get_irq(pdev, 1);
-+
- 	return 0;
- }
- 
-@@ -572,15 +576,35 @@ static int mtk8250_remove(struct platform_device *pdev)
- static int __maybe_unused mtk8250_suspend(struct device *dev)
- {
- 	struct mtk8250_data *data = dev_get_drvdata(dev);
-+	int irq = data->rx_wakeup_irq;
-+	int err;
- 
- 	serial8250_suspend_port(data->line);
- 
-+	pinctrl_pm_select_sleep_state(dev);
-+	if (irq >= 0) {
-+		err = enable_irq_wake(irq);
-+		if (err) {
-+			dev_err(dev,
-+				"failed to enable irq wake on IRQ %d: %d\n",
-+				irq, err);
-+			pinctrl_pm_select_default_state(dev);
-+			serial8250_resume_port(data->line);
-+			return err;
-+		}
-+	}
-+
- 	return 0;
- }
- 
- static int __maybe_unused mtk8250_resume(struct device *dev)
- {
- 	struct mtk8250_data *data = dev_get_drvdata(dev);
-+	int irq = data->rx_wakeup_irq;
-+
-+	if (irq >= 0)
-+		disable_irq_wake(irq);
-+	pinctrl_pm_select_default_state(dev);
- 
- 	serial8250_resume_port(data->line);
- 
+changes since v2:
+- rename mt67xx-rng to mtk-sec-rng since all MediaTek ARMv8 SoCs
+can reuse this driver.
+- refine coding style and unnecessary check.
+
+Neal Liu (3):
+  soc: mediatek: add SMC fid table for SIP interface
+  dt-bindings: rng: update bindings for MediaTek ARMv8 SoCs
+  hwrng: add mtk-sec-rng driver
+
+ .../devicetree/bindings/rng/mtk-rng.txt       | 13 ++-
+ drivers/char/hw_random/Kconfig                | 16 +++
+ drivers/char/hw_random/Makefile               |  1 +
+ drivers/char/hw_random/mtk-sec-rng.c          | 97 +++++++++++++++++++
+ include/linux/soc/mediatek/mtk_sip_svc.h      | 51 ++++++++++
+ 5 files changed, 175 insertions(+), 3 deletions(-)
+ create mode 100644 drivers/char/hw_random/mtk-sec-rng.c
+ create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+
 -- 
-2.22.0.rc1.257.g3120a18244-goog
+2.18.0
 
 
 _______________________________________________
