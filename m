@@ -2,77 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CE612AF00
-	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 08:56:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D4B712AF01
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 08:56:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YsBIKa3wDEruXUjG0ACr/D0I8SdJ7XxJHGbPCFsrrCg=; b=oaodIbwSZD+6E3
-	/AqxeXsiETLqKkFwiQ+6x0J/cHndpqL7f5vBFKKVjxHBydpDYAWJIf1q9p/XOBB9nb9ve8SyJ6fDU
-	+n+B/u3q114Ga6+qg3l6dpA4aSadE1htSruo5bDfVvb69S7azZfZeOTF4Ukkjsr/kKYJAmFyBhRGE
-	P9UC3TeVF7aFL3uG61UurEI6dBLt+aHe9/seTufRdouU65+EuKda74sXZ8fkYxpIx7oxTodKeGPY6
-	oluBMY7v1NaplmG7/cFQQAmyAy72ZsG82dkD/0UBdkEnYcW9opUFoJt8p2lUGY90L5yXDI26y43LI
-	LevdNsCS9fTqMIjQny8w==;
+	List-Owner; bh=+WZKGONBlN0+YTH0IeNO3NPTuFSSsrV1kEolt7gHTeg=; b=GlydyvC2SzW50r
+	SvIr7qAHKHuDt/22qJWm5Pwgt80QRvIMyRC0JwgMhMuvMby0R0BSGOrZxwocM6s5dH4seygXMfVjP
+	cQsxTCAGT/6OYFtujh9fecKVCi9/CNMESzC8S29YfbDrI6EQWa+5tbA06LlAngj+nXCvnVYohjmUx
+	c/pfdt0iMtUdeEGsJGIUNdZcU9q6ifCE/vhdswUOWGT7EpvR4eJB4eTUMWyb0MHYcWMLRU2m0UrC3
+	xqPaI3yPRjFt0xn1kx31B15pc3LlwLqi0dB2pMNQe/C2mCatjx1uZJatm20No8McyZaafrXNVPVk7
+	deYisFpL5+7C5c4hCrGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hV9YK-0001OL-Qw; Mon, 27 May 2019 06:56:12 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1hV9YN-0001QB-GL; Mon, 27 May 2019 06:56:15 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hV9YH-0001Mu-Fp
- for linux-mediatek@lists.infradead.org; Mon, 27 May 2019 06:56:11 +0000
-Received: by mail-pg1-x544.google.com with SMTP id a3so8561440pgb.3
- for <linux-mediatek@lists.infradead.org>; Sun, 26 May 2019 23:56:09 -0700 (PDT)
+ id 1hV9YK-0001OH-5o
+ for linux-mediatek@lists.infradead.org; Mon, 27 May 2019 06:56:14 +0000
+Received: by mail-pf1-x442.google.com with SMTP id u22so1719448pfm.3
+ for <linux-mediatek@lists.infradead.org>; Sun, 26 May 2019 23:56:11 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=xerSC/mm9BOvVEW3oLYxPMIZLIQ4Oo4zyl2Y1qCU630=;
- b=EDgH5Tg9MUT8wYSX/I/78TQjfnAIT45trMeoMBxgaFYHM1TO+jBWiChGX7XajfMBnB
- MkS7f2c3xhe8TniPVbPck/A5K0qG5QG5WbIU5T6t9OvsEz1XVH6WOXUEodhBCNm0iBpL
- hKxByL47EP/kaoaHQcPGIzAwij9MXXBk47SHw=
+ bh=GXP8X1L27wbZgV5j2BKjX7dRHd3c48Hr+NTlDkvhu/M=;
+ b=S+mQ9UJ4I5ubtMiMdqvmfqWdiSqc74l0Mc9AnXEIOQ20XfNFKiSfalNkNyBOySHAFW
+ 856VDRK0cw5Lu32ixbA+HHlIIoiMkAd3DoJUalDxpijJR7+NKZfSfod5Z231tSjpknEe
+ /WjxtTaLzqRpoLTqI6ZiRct3NHqCVkbTasIiA=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=xerSC/mm9BOvVEW3oLYxPMIZLIQ4Oo4zyl2Y1qCU630=;
- b=hulDYRIPC9VFy0aKpEtfE1NVOz9M/tFykQeLO3FcEP6m/b8B/qMeneWpx/uYuZvIPq
- qFdyHA/4h5S88BLnDYW+1wnOUk/RaXmQ6tyEoIsBy/LUgEC0xM8gv7Nf2WrknfKfgjzB
- i4ddJxKRMnSg9nZBnRaWi+UrDBxLMtq7InULIWd+9853DISi/3B81tTacZqu3N3q3AHL
- 5Uc4TogyBzZCK3JpdSip1hQYE+WpAxt9t7FTZL9Y1IftWxQahREQrrv9B+BekDzdCLeb
- zbvM6oEjI/Bf1vGNImYB2hZ1Xq0L5wrQUKle+aPPNnjA/NrpZMoxbmMc1+qDVMcvMBm4
- 1Flw==
-X-Gm-Message-State: APjAAAUSU53OIY3Gq3JrzF1891s8CXzGVgqhlqhCQC5vIdyK+uI+ZwsK
- wBoK3VAymIXYTELipY9RKllnbQ==
-X-Google-Smtp-Source: APXvYqw4h01MnpXR8PN73d+xU/KEzLyn1lrestfUFNb41t3906mgw1QVTlC9zUCTvfgyK87gcqhScw==
-X-Received: by 2002:a63:6ac3:: with SMTP id
- f186mr124627918pgc.326.1558940168746; 
- Sun, 26 May 2019 23:56:08 -0700 (PDT)
+ bh=GXP8X1L27wbZgV5j2BKjX7dRHd3c48Hr+NTlDkvhu/M=;
+ b=t06l4chuLzTuuxN5b+fr5VkVFOJC2UNe8AysE2axeqrc2XwYw/wXmFqtv14GziQZlY
+ dSNhPpbdfHCZC686iiwKW9stSohLfQ+GWtfo/8Hy6J0/nkBb4DYfMhZa2eIp334nljVS
+ 89PnT02cSh1pGeYULY4iQjCYBoXEdg0eP5DU06oxSmKfDz5XAM7r5OGJzcMrJe7vMnC/
+ 7pFc46vrvofT72ppvmYGitn6GqJTnzbK3XeRIsNSy9u1sxGjDJZaIrChEU2rEIvQ0n3l
+ ZunOI1GIzHCEHTwysSUj0pzZWVC1q5L/N9/eU/5xRBEGwEbeXWXOnf4AM5/sNETsrRTh
+ fOHQ==
+X-Gm-Message-State: APjAAAXocbZymRQKkHiEGiDvfv8Hvftes+38FpKKDhc2rwEaHH5yhGUj
+ KBo9MuLbtLdwtebhP2DKOiOe/A==
+X-Google-Smtp-Source: APXvYqw5dGklTTVfU8TQscGL43Q9tu0l4wUXGb1BPxZewZP8p90W5k1RrK1NZ+Np8xVQinhQ+le8kA==
+X-Received: by 2002:a17:90a:21a8:: with SMTP id
+ q37mr29420363pjc.5.1558940171453; 
+ Sun, 26 May 2019 23:56:11 -0700 (PDT)
 Received: from localhost ([2401:fa00:1:10:3db2:76bf:938b:be05])
- by smtp.gmail.com with ESMTPSA id j26sm13529000pgl.31.2019.05.26.23.56.07
+ by smtp.gmail.com with ESMTPSA id o6sm10326995pfo.164.2019.05.26.23.56.09
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sun, 26 May 2019 23:56:08 -0700 (PDT)
+ Sun, 26 May 2019 23:56:10 -0700 (PDT)
 From: Claire Chang <tientzu@chromium.org>
 To: gregkh@linuxfoundation.org
-Subject: [PATCH v2 1/2] dt-bindings: serial: add documentation for Rx in-band
- wakeup support
-Date: Mon, 27 May 2019 14:55:58 +0800
-Message-Id: <20190527065559.66056-2-tientzu@chromium.org>
+Subject: [PATCH v2 2/2] uart: mediatek: support Rx in-band wakeup
+Date: Mon, 27 May 2019 14:55:59 +0800
+Message-Id: <20190527065559.66056-3-tientzu@chromium.org>
 X-Mailer: git-send-email 2.22.0.rc1.257.g3120a18244-goog
 In-Reply-To: <20190527065559.66056-1-tientzu@chromium.org>
 References: <20190527065559.66056-1-tientzu@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190526_235609_531318_45F8BEAD 
-X-CRM114-Status: GOOD (  11.17  )
+X-CRM114-CacheID: sfid-20190526_235612_529003_EEB0538C 
+X-CRM114-Status: GOOD (  12.41  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -103,48 +102,91 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-To support Rx in-band wakeup, one must create an interrupt specifier with
-edge sensitivity on Rx pin and an addtional pinctrl to reconfigure Rx pin
-to normal GPIO in sleep state. Driver will switch to sleep mode pinctrl and
-enable irq wake before suspend and restore to default settings when
+In order to support Rx in-band wakeup, we need to enable irq wake on an
+edge sensitive interrupt of Rx pin before suspend and disable it when
 resuming.
+
+This interrupt is used only as wake source to resume the system when
+suspended. Note that the sent character will be lost as the controller is
+actually suspended.
+
+We use this to support wakeup on bluetooth. Bluetooth will repeatedly send
+0xFD to wakeup host. Once host detects Rx falling, an interrupt is
+triggered, and the system leaves sleep state. Then, the bluetooth driver
+will send 0xFC to bluetooth and bluetooth can start to send normal HCI
+packets.
 
 Signed-off-by: Claire Chang <tientzu@chromium.org>
 ---
- .../devicetree/bindings/serial/mtk-uart.txt         | 13 +++++++++++--
- 1 file changed, 11 insertions(+), 2 deletions(-)
+ drivers/tty/serial/8250/8250_mtk.c | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/serial/mtk-uart.txt b/Documentation/devicetree/bindings/serial/mtk-uart.txt
-index c6b5262eb352..11966de2a4b3 100644
---- a/Documentation/devicetree/bindings/serial/mtk-uart.txt
-+++ b/Documentation/devicetree/bindings/serial/mtk-uart.txt
-@@ -23,7 +23,12 @@ Required properties:
+diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
+index 417c7c810df9..b0713d1e07bb 100644
+--- a/drivers/tty/serial/8250/8250_mtk.c
++++ b/drivers/tty/serial/8250/8250_mtk.c
+@@ -10,6 +10,7 @@
+ #include <linux/module.h>
+ #include <linux/of_irq.h>
+ #include <linux/of_platform.h>
++#include <linux/pinctrl/consumer.h>
+ #include <linux/platform_device.h>
+ #include <linux/pm_runtime.h>
+ #include <linux/serial_8250.h>
+@@ -70,6 +71,7 @@ struct mtk8250_data {
+ #ifdef CONFIG_SERIAL_8250_DMA
+ 	enum dma_rx_status	rx_status;
+ #endif
++	int			rx_wakeup_irq;
+ };
  
- - reg: The base address of the UART register bank.
+ /* flow control mode */
+@@ -551,6 +553,8 @@ static int mtk8250_probe(struct platform_device *pdev)
+ 	pm_runtime_set_active(&pdev->dev);
+ 	pm_runtime_enable(&pdev->dev);
  
--- interrupts: A single interrupt specifier.
-+- interrupts or interrupts-extended:
-+  index 0: an interrupt specifier for the UART controller itself
-+  index 1: optional, an interrupt specifier with edge sensitivity on Rx pin to
-+           support Rx in-band wake up. If one would like to use this feature,
-+           one must create an addtional pinctrl to reconfigure Rx pin to normal
-+           GPIO before suspend.
++	data->rx_wakeup_irq = platform_get_irq(pdev, 1);
++
+ 	return 0;
+ }
  
- - clocks : Must contain an entry for each entry in clock-names.
-   See ../clocks/clock-bindings.txt for details.
-@@ -39,7 +44,11 @@ Example:
- 	uart0: serial@11006000 {
- 		compatible = "mediatek,mt6589-uart", "mediatek,mt6577-uart";
- 		reg = <0x11006000 0x400>;
--		interrupts = <GIC_SPI 51 IRQ_TYPE_LEVEL_LOW>;
-+		interrupts-extended = <&sysirq GIC_SPI 51 IRQ_TYPE_LEVEL_LOW>,
-+				      <&gpio 121 IRQ_TYPE_EDGE_FALLING>;
- 		clocks = <&uart_clk>, <&bus_clk>;
- 		clock-names = "baud", "bus";
-+		pinctrl-names = "default", "sleep";
-+		pinctrl-0 = <&uart_pin>;
-+		pinctrl-1 = <&uart_pin_sleep>;
- 	};
+@@ -572,15 +576,36 @@ static int mtk8250_remove(struct platform_device *pdev)
+ static int __maybe_unused mtk8250_suspend(struct device *dev)
+ {
+ 	struct mtk8250_data *data = dev_get_drvdata(dev);
++	struct uart_8250_port *up = serial8250_get_port(data->line);
++	int irq = data->rx_wakeup_irq;
++	int err;
+ 
+ 	serial8250_suspend_port(data->line);
+ 
++	pinctrl_pm_select_sleep_state(dev);
++	if (irq >= 0) {
++		err = enable_irq_wake(irq);
++		if (err) {
++			dev_err(dev,
++				"failed to enable irq wake on IRQ %d: %d\n",
++				irq, err);
++			pinctrl_pm_select_default_state(dev);
++			serial8250_resume_port(data->line);
++			return err;
++		}
++	}
++
+ 	return 0;
+ }
+ 
+ static int __maybe_unused mtk8250_resume(struct device *dev)
+ {
+ 	struct mtk8250_data *data = dev_get_drvdata(dev);
++	int irq = data->rx_wakeup_irq;
++
++	if (irq >= 0)
++		disable_irq_wake(irq);
++	pinctrl_pm_select_default_state(dev);
+ 
+ 	serial8250_resume_port(data->line);
+ 
 -- 
 2.22.0.rc1.257.g3120a18244-goog
 
