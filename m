@@ -2,57 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 57DB22B06F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 10:40:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 131112B0F2
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 11:06:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uMzxRuake2ApP5UIvc8BXX+7IOS79YT4ivNTBZE/JVk=; b=aEBi8Q+QltF5lN
-	PDLx76+tZm+VaJm7kf5rjFTootSbTCXOzT+3DqfHr6zDpjBV9CZ8TBZcRBH55B9E3aLfXRaCUuy02
-	mdhgkDQsoarwoQZctknD6Mltu0ID7ItvcnrUuuv5r35F51GdaHZDMP2bmlgXFEX19SSPvWjySDQsk
-	KhTrZ4zDqGUzwOUI2D3tprgaZCv7n/pCY5r7EMUaaEBYekg9VJNksL+sxLVMnZo6lVf6siPyLR9Bu
-	G9gkpyLIdWClpH/i32vv8mhsM82DCSCrHOkUxvKB24Sx8vjRNhoL96pJTqyDi3fQBFBfu020SoTv0
-	PvVykkcSbYexeZQSYuUw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=beRIFFZIHm2srNoeKnBOSBC7y55uUhiClT/9/UJl7hg=; b=bu61srzZ+DhRCc
+	gk9VjZ9jnN7bk8eLRhzoi2BNA8sWAi0zBnQrVQKggR0j2LBaUe+vA1GjG+RIUtmgfP1ZUz6arWlIY
+	t0XQTrxY9VU34SAd+skWuI2P2IIiSnSHDZsk4g9ergFsyymlnFLkSXJeJAje9s/yLPQ8Hawucr54g
+	BKIHPg9YyBFpyxPx0+pXT6cc9h/FYtufRapERDg04Lm9Y8gnyZw60FHNjpzzrBOLDXPsamWOD/aFR
+	+uHhI0YPI/nSOKtAY2qfuCJCmgeAsfLTSnzfyJwijABkzKQyMkVYdSMSDvYZ9nQ9yRZWRLoSWInas
+	7WJaN6PcZqOxKqrIUleA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVBAt-0002Av-U5; Mon, 27 May 2019 08:40:08 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hVBZu-0007Pq-7v; Mon, 27 May 2019 09:05:58 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVBAK-0001My-GW; Mon, 27 May 2019 08:39:42 +0000
-X-UUID: 2c2e308801064927a56cb89cd4d566a9-20190527
-X-UUID: 2c2e308801064927a56cb89cd4d566a9-20190527
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <neal.liu@mediatek.com>)
+ id 1hVBZK-0006jU-UL; Mon, 27 May 2019 09:05:27 +0000
+X-UUID: f83be318c2e841869be0a6165cd6c294-20190527
+X-UUID: f83be318c2e841869be0a6165cd6c294-20190527
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <erin.lo@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 413745007; Mon, 27 May 2019 00:39:23 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 01:39:23 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 16:39:08 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ with ESMTP id 100998796; Mon, 27 May 2019 01:05:08 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 27 May 2019 02:05:06 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 27 May 2019 17:04:59 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 27 May 2019 16:39:08 +0800
-From: Neal Liu <neal.liu@mediatek.com>
-To: Matt Mackall <mpm@selenic.com>, Herbert Xu <herbert@gondor.apana.org.au>, 
- Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sean Wang <sean.wang@kernel.org>
-Subject: [PATCH v2 3/3] hwrng: add mtk-sec-rng driver
-Date: Mon, 27 May 2019 16:38:46 +0800
-Message-ID: <1558946326-13630-4-git-send-email-neal.liu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1558946326-13630-1-git-send-email-neal.liu@mediatek.com>
-References: <1558946326-13630-1-git-send-email-neal.liu@mediatek.com>
+ Frontend Transport; Mon, 27 May 2019 17:04:59 +0800
+From: Erin Lo <erin.lo@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring
+ <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>
+Subject: [PATCH v11 0/6] Add basic node support for Mediatek MT8183 SoC
+Date: Mon, 27 May 2019 17:04:41 +0800
+Message-ID: <1558947887-31084-1-git-send-email-erin.lo@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: BD4B105A6E092554A06C671E9FEB9F64EE7E7C79F5631132485CF7A2508A38002000:8
+X-TM-SNTS-SMTP: A3A3979E730E1DEDDFD1A2DDEE29397448A5ACC75A9DFEC103545943F1E524CC2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_013933_324018_56B28684 
-X-CRM114-Status: GOOD (  15.94  )
+X-CRM114-CacheID: sfid-20190527_020523_319830_D5E2E750 
+X-CRM114-Status: UNSURE (   9.30  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,172 +71,96 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- lkml <linux-kernel@vger.kernel.org>, Crystal Guo <Crystal.Guo@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-crypto@vger.kernel.org,
- Neal Liu <neal.liu@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, srv_heupstream <srv_heupstream@mediatek.com>,
+ erin.lo@mediatek.com, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
+ mars.cheng@mediatek.com, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-For MediaTek SoCs on ARMv8 with TrustZone enabled, peripherals like
-entropy sources is not accessible from normal world (linux) and
-rather accessible from secure world (ATF/TEE) only. This driver aims
-to provide a generic interface to ATF rng service.
+MT8183 is a SoC based on 64bit ARMv8 architecture.
+It contains 4 CA53 and 4 CA73 cores.
+MT8183 share many HW IP with MT65xx series.
+This patchset was tested on MT8183 evaluation board and use correct clock to shell.
 
-Signed-off-by: Neal Liu <neal.liu@mediatek.com>
----
- drivers/char/hw_random/Kconfig       |   16 ++++++
- drivers/char/hw_random/Makefile      |    1 +
- drivers/char/hw_random/mtk-sec-rng.c |   97 ++++++++++++++++++++++++++++++++++
- 3 files changed, 114 insertions(+)
- create mode 100644 drivers/char/hw_random/mtk-sec-rng.c
+Based on v5.2-rc1
 
-diff --git a/drivers/char/hw_random/Kconfig b/drivers/char/hw_random/Kconfig
-index 25a7d8f..6c82a3b 100644
---- a/drivers/char/hw_random/Kconfig
-+++ b/drivers/char/hw_random/Kconfig
-@@ -398,6 +398,22 @@ config HW_RANDOM_MTK
- 
- 	  If unsure, say Y.
- 
-+config HW_RANDOM_MTK_SEC
-+	tristate "MediaTek Security Random Number Generator support"
-+	depends on HW_RANDOM
-+	depends on ARCH_MEDIATEK || COMPILE_TEST
-+	default HW_RANDOM
-+	help
-+	  This driver provides kernel-side support for the Random Number
-+	  Generator hardware found on MediaTek SoCs. The difference with
-+	  mtk-rng is the Random Number Generator hardware is secure
-+	  access only.
-+
-+	  To compile this driver as a module, choose M here. the
-+	  module will be called mtk-sec-rng.
-+
-+	  If unsure, say Y.
-+
- config HW_RANDOM_S390
- 	tristate "S390 True Random Number Generator support"
- 	depends on S390
-diff --git a/drivers/char/hw_random/Makefile b/drivers/char/hw_random/Makefile
-index 7c9ef4a..0ae4993 100644
---- a/drivers/char/hw_random/Makefile
-+++ b/drivers/char/hw_random/Makefile
-@@ -36,6 +36,7 @@ obj-$(CONFIG_HW_RANDOM_PIC32) += pic32-rng.o
- obj-$(CONFIG_HW_RANDOM_MESON) += meson-rng.o
- obj-$(CONFIG_HW_RANDOM_CAVIUM) += cavium-rng.o cavium-rng-vf.o
- obj-$(CONFIG_HW_RANDOM_MTK)	+= mtk-rng.o
-+obj-$(CONFIG_HW_RANDOM_MTK_SEC) += mtk-sec-rng.o
- obj-$(CONFIG_HW_RANDOM_S390) += s390-trng.o
- obj-$(CONFIG_HW_RANDOM_KEYSTONE) += ks-sa-rng.o
- obj-$(CONFIG_HW_RANDOM_OPTEE) += optee-rng.o
-diff --git a/drivers/char/hw_random/mtk-sec-rng.c b/drivers/char/hw_random/mtk-sec-rng.c
-new file mode 100644
-index 0000000..4c6e5bf
---- /dev/null
-+++ b/drivers/char/hw_random/mtk-sec-rng.c
-@@ -0,0 +1,97 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (C) 2019 MediaTek Inc.
-+ */
-+
-+#include <linux/arm-smccc.h>
-+#include <linux/hw_random.h>
-+#include <linux/module.h>
-+#include <linux/of.h>
-+#include <linux/platform_device.h>
-+#include <linux/soc/mediatek/mtk_sip_svc.h>
-+
-+#define MT67XX_RNG_MAGIC	0x74726e67
-+#define SMC_RET_NUM		4
-+#define MTK_SEC_RND_SIZE	(sizeof(u32) * SMC_RET_NUM)
-+
-+struct mtk_sec_rng_priv {
-+	struct hwrng rng;
-+};
-+
-+static void mtk_sec_get_rnd(uint32_t *val)
-+{
-+	struct arm_smccc_res res;
-+
-+	arm_smccc_smc(MTK_SIP_KERNEL_GET_RND,
-+		      MT67XX_RNG_MAGIC, 0, 0, 0, 0, 0, 0, &res);
-+
-+	val[0] = res.a0;
-+	val[1] = res.a1;
-+	val[2] = res.a2;
-+	val[3] = res.a3;
-+}
-+
-+static int mtk_sec_rng_read(struct hwrng *rng, void *buf, size_t max, bool wait)
-+{
-+	size_t get_rnd_size = MTK_SEC_RND_SIZE;
-+	u32 val[4] = {0};
-+	int i, retval = 0;
-+
-+	while (max >= get_rnd_size) {
-+		mtk_sec_get_rnd(val);
-+
-+		for (i = 0; i < SMC_RET_NUM; i++) {
-+			*(u32 *)buf = val[i];
-+			buf += sizeof(u32);
-+		}
-+
-+		retval += get_rnd_size;
-+		max -= get_rnd_size;
-+	}
-+
-+	return retval;
-+}
-+
-+static int mtk_sec_rng_probe(struct platform_device *pdev)
-+{
-+	struct mtk_sec_rng_priv *priv;
-+	int ret;
-+
-+	priv = devm_kzalloc(&pdev->dev, sizeof(*priv), GFP_KERNEL);
-+	if (!priv)
-+		return -ENOMEM;
-+
-+	priv->rng.name = pdev->name;
-+	priv->rng.read = mtk_sec_rng_read;
-+	priv->rng.priv = (unsigned long)&pdev->dev;
-+	priv->rng.quality = 900;
-+
-+	ret = devm_hwrng_register(&pdev->dev, &priv->rng);
-+	if (ret) {
-+		dev_err(&pdev->dev, "failed to register rng device: %d\n", ret);
-+		return ret;
-+	}
-+
-+	return 0;
-+}
-+
-+static const struct of_device_id mtk_sec_rng_match[] = {
-+	{ .compatible = "mediatek,mtk-sec-rng", },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(of, mtk_sec_rng_match);
-+
-+static struct platform_driver mtk_sec_rng_driver = {
-+	.probe = mtk_sec_rng_probe,
-+	.driver = {
-+		.name = KBUILD_MODNAME,
-+		.owner = THIS_MODULE,
-+		.of_match_table = mtk_sec_rng_match,
-+	},
-+};
-+
-+module_platform_driver(mtk_sec_rng_driver);
-+
-+MODULE_DESCRIPTION("MediaTek Security Random Number Generator Driver");
-+MODULE_AUTHOR("Neal Liu <neal.liu@mediatek.com>");
-+MODULE_LICENSE("GPL");
--- 
-1.7.9.5
+Change in v11:
+New add spi node, efuse node, pinctrl node, auxadc node, and capacity-dmips-mhz field
+
+Change in v10:
+Add the L2 cache node to prevent warning on unable to detect cache
+hierarchy.
+
+Change in v9:
+Remove pio node since binding is not documented yet
+
+Change in v8:
+1. Fix interrupt-parent of pio node
+2. Remove pinfunc.h and spi node patches
+
+Change in v7:
+1. Place all the MMIO peripherals under one or more simple-bus nodes
+2. Make the pinfunc.h and spi node into seperate patch
+3. Modify SPIs pamerater from 4 back to 3
+   and remove patch "support 4 interrupt parameters for sysirq"
+4. Rename intpol-controller to interrupt-controller
+5. Rename pinctrl@1000b000 to pinctrl@10005000
+
+Change in v6:
+1. Remove power and iommu nodes
+2. Fix dtb build warning
+3. Fix pinctrl binding doc
+4. Fix '_' in node names
+
+Change in v5:
+1. Collect all device tree nodes to the last patch
+2. Add PMU
+3. Add Signed-off-by
+4. Remove clock driver code and binding doc
+5. Add pinctrl, iommu, spi, and pwrap nodes
+
+Change in v4:
+1. Correct syntax error in dtsi
+2. Add MT8183 clock support
+
+Change in v3:
+1. Fill out GICC, GICH, GICV regions
+2. Update Copyright to 2018
+
+Change in v2:
+1. Split dt-bindings into different patches
+2. Correct bindings for supported SoCs (mtk-uart.txt)
+
+Ben Ho (1):
+  arm64: dts: Add Mediatek SoC MT8183 and evaluation board dts and
+    Makefile
+
+Erin Lo (1):
+  arm64: dts: mt8183: add spi node
+
+Hsin-Yi, Wang (1):
+  arm64: dts: mt8183: add capacity-dmips-mhz
+
+Michael Mei (1):
+  arm64: dts: mt8183: add efuse and Mediatek Chip id node to read
+
+Zhiyong Tao (2):
+  arm64: dts: mt8183: add pinctrl device node
+  arm64: dts: mt8183: Add auxadc device node
+
+ arch/arm64/boot/dts/mediatek/Makefile       |   1 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 140 ++++++
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 447 ++++++++++++++++++++
+ 3 files changed, 588 insertions(+)
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8183.dtsi
+
+--
+1.8.1.1.dirty
 
 
 _______________________________________________
