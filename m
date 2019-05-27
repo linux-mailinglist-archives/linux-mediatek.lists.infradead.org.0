@@ -2,62 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2EE292B8B4
-	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 18:09:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EBCD22B951
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 May 2019 19:08:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=LAn4YMmVGQG+rtJuu/7FlgL+UkJj9xGmN20NN/AywL8=; b=mYz5DAPBOF8RCf
-	712cVDbArcOFe4D621ZYnI8mqHv+QdJjF9OgENH42D3h2d2nL6KUdWT/SIbbr1XgwnxEiD6OAeXMK
-	dhWnw+OFdQYgAHU9qCpZ4Si0LVrxNsiwFnO9VJElV1QRP0fcWi3yni1P916JNTrwv+K+WpMS1QX06
-	hooFKUQqaLbM2sHj1TDF7jHDAUlVhsAXzuy2NcgkZZBjwU/PO2GbdVw/t1yAMBQ/MiWVTzs0u73kp
-	7VrtXwG9dl6QjjWonIFXl2c8ecj/xGNs/RfMP57I8FLxuQfmR8quoSRzgcMpRL/cgz3UrvE//oWYx
-	+HW4DTz0hPcSoCOL3nnQ==;
+	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
+	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=fFDTvcoWSNErTiv2puQ0Efb8zNmdBxwVNlNJmhFIFAc=; b=Jp4PvbYBf9VrWD
+	rFX/zXKKxrRADs8gQOHvTQ992Z75Auzz3WebjGwT9WQ07TqSe4m3rdK3u872Q/YLVjYzDgy6sbM86
+	YOdddqwAlgPH+o2bTycHEQTcEsq7s9tqpXOpqj7WnD3Ae4BXOe1sLHaMbi+NaIZTiULVO6u+Z8YE/
+	i+6+QowSF9hMqBZ4zLHy+EEFDrpHPV+2RqKhndpEz7qvmZyLUTXBsb+klRboMa51nMkj+aHL76svr
+	SZiSi1KGYvyTj6PTfANj4U+jc//5riSyzzlLTrxbSA7ozsNLS4d8T1PxB0RgKNLIj94tMczu++8LU
+	h1y4OgUmotP8oAJxwhvg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVIBL-00054W-Ta; Mon, 27 May 2019 16:09:03 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hVJ6c-000438-Te; Mon, 27 May 2019 17:08:14 +0000
+Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVIBI-000540-BC; Mon, 27 May 2019 16:09:02 +0000
-X-UUID: 2461e03fef02428a8731189a225cf1d9-20190527
-X-UUID: 2461e03fef02428a8731189a225cf1d9-20190527
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <miles.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1088421531; Mon, 27 May 2019 08:08:52 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 09:08:51 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 May 2019 00:08:36 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 28 May 2019 00:08:36 +0800
-From: Miles Chen <miles.chen@mediatek.com>
-To: Catalin Marinas <catalin.marinas@arm.com>, Will Deacon
- <will.deacon@arm.com>
-Subject: [PATCH] arm64: mm: make CONFIG_ZONE_DMA32 configurable
-Date: Tue, 28 May 2019 00:08:35 +0800
-Message-ID: <1558973315-19655-1-git-send-email-miles.chen@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-MIME-Version: 1.0
-X-MTK: N
+ id 1hVJ6V-0003wK-8w; Mon, 27 May 2019 17:08:08 +0000
+Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::3d8])
+ (using TLSv1 with cipher AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ (Authenticated sender: davem-davemloft)
+ by shards.monkeyblade.net (Postfix) with ESMTPSA id E103315006226;
+ Mon, 27 May 2019 10:08:02 -0700 (PDT)
+Date: Mon, 27 May 2019 10:08:00 -0700 (PDT)
+Message-Id: <20190527.100800.1719164073038257292.davem@davemloft.net>
+To: biao.huang@mediatek.com
+Subject: Re: [v3, PATCH] net: stmmac: add support for hash table size
+ 128/256 in dwmac4
+From: David Miller <davem@davemloft.net>
+In-Reply-To: <1558926867-16472-2-git-send-email-biao.huang@mediatek.com>
+References: <1558926867-16472-1-git-send-email-biao.huang@mediatek.com>
+ <1558926867-16472-2-git-send-email-biao.huang@mediatek.com>
+X-Mailer: Mew version 6.8 on Emacs 26.1
+Mime-Version: 1.0
+X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
+ (shards.monkeyblade.net [149.20.54.216]);
+ Mon, 27 May 2019 10:08:03 -0700 (PDT)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_090900_384775_1C51702E 
-X-CRM114-Status: GOOD (  10.97  )
+X-CRM114-CacheID: sfid-20190527_100807_313167_687CBA5E 
+X-CRM114-Status: UNSURE (   8.44  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -69,65 +64,36 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- wsd_upstream@mediatek.com
+Cc: jianguo.zhang@mediatek.com, alexandre.torgue@st.com,
+ boon.leong.ong@intel.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ joabreu@synopsys.com, linux-mediatek@lists.infradead.org,
+ mcoquelin.stm32@gmail.com, matthias.bgg@gmail.com, peppe.cavallaro@st.com,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This change makes CONFIG_ZONE_DMA32 defuly y and allows users
-to overwrite it.
+From: Biao Huang <biao.huang@mediatek.com>
+Date: Mon, 27 May 2019 11:14:27 +0800
 
-For the SoCs that do not need CONFIG_ZONE_DMA32, this is the
-first step to manage all available memory by a single
-zone(normal zone) to reduce the overhead of multiple zones.
+> diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
+> index 5e98da4..029a3db 100644
+> --- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
+> +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
+> @@ -403,41 +403,50 @@ static void dwmac4_set_filter(struct mac_device_info *hw,
+>  			      struct net_device *dev)
+>  {
+>  	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
+> -	unsigned int value = 0;
+> +	unsigned int value;
+> +	int numhashregs = (hw->multicast_filter_bins >> 5);
+> +	int mcbitslog2 = hw->mcast_bits_log2;
+> +	int i;
 
-The change also fixes a build error when CONFIG_NUMA=y and
-CONFIG_ZONE_DMA32=n.
+Please retain the reverse christmas tree ordering here.
 
-arch/arm64/mm/init.c:195:17: error: use of undeclared identifier 'ZONE_DMA32'
-                max_zone_pfns[ZONE_DMA32] = PFN_DOWN(max_zone_dma_phys());
-
-Signed-off-by: Miles Chen <miles.chen@mediatek.com>
----
- arch/arm64/Kconfig   | 3 ++-
- arch/arm64/mm/init.c | 2 ++
- 2 files changed, 4 insertions(+), 1 deletion(-)
-
-diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
-index 76f6e4765f49..9d20a736d1d1 100644
---- a/arch/arm64/Kconfig
-+++ b/arch/arm64/Kconfig
-@@ -260,7 +260,8 @@ config GENERIC_CALIBRATE_DELAY
- 	def_bool y
- 
- config ZONE_DMA32
--	def_bool y
-+	bool "Support DMA32 zone"
-+	default y
- 
- config HAVE_GENERIC_GUP
- 	def_bool y
-diff --git a/arch/arm64/mm/init.c b/arch/arm64/mm/init.c
-index d2adffb81b5d..96829ce21f99 100644
---- a/arch/arm64/mm/init.c
-+++ b/arch/arm64/mm/init.c
-@@ -191,8 +191,10 @@ static void __init zone_sizes_init(unsigned long min, unsigned long max)
- {
- 	unsigned long max_zone_pfns[MAX_NR_ZONES]  = {0};
- 
-+#ifdef CONFIG_ZONE_DMA32
- 	if (IS_ENABLED(CONFIG_ZONE_DMA32))
- 		max_zone_pfns[ZONE_DMA32] = PFN_DOWN(max_zone_dma_phys());
-+#endif
- 	max_zone_pfns[ZONE_NORMAL] = max;
- 
- 	free_area_init_nodes(max_zone_pfns);
--- 
-2.18.0
-
+Thank you.
 
 _______________________________________________
 Linux-mediatek mailing list
