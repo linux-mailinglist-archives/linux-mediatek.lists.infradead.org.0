@@ -2,66 +2,90 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3B2402BEAA
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 07:36:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2A6C32BEC3
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 07:57:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oG30uZK7w9iOJLsLfNeytcGoTa8H7o9e+jwjGnyO28w=; b=jcd3F/mL6ry3Fs
-	HIT/uCuU9kxrdJHftYQyC7aO/i/9OSVziZtwsB7AhwzjsE4P3DhL3I9KRhW3/7cHWQq5Mg0rW5m/8
-	xZ6sQC2Xn2g9n2A7clBt+jOon/MWgUFohZbKx727MFHb8PkzUfdwq3LUI+bmFz5LpSrKzV7z+hZAe
-	uvG/PWfyPqTbYLf4hz7rZ6t9bGb1t2AHmtO2wKTn+sIf5WuezhaI92Tah8OnO/e18LAX41hxAKYm3
-	9EhCPY8fQzqXQkhm/PImjyrvSq4Ub69kZ5p7GR2U+TQoz/+STlFiJZekQKDajXHo7yF0YrVvaY+yQ
-	ikQ23uDnwbz1OfTdE4OQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=yMsUZqXnXxf4KYnG9piiI7V6/BXwz5f0MGipH9s6YG4=; b=My5V0MLShnzYdi
+	VOkhBr1nE6W9tABLANBG3D9zy0crQxZdo+BF8xZfPepJaix/92m+CPK3iZ27H1FNsEG5h//ufx1Qr
+	noYYpS2O8/vXs2V72YgRIJ98py/b74dVKJnVr53elY0MdB79/USPe6z9/XYQGp7DLzQIeAD2kdR3c
+	S8eHS3vdLmaZajsUAuT8e/+iEqOGgQLn4CW9SAwHYfdHwflRi4OBmxZDkwopJrNB1tVlyt5FLarSi
+	pGlO5EwW+kQgqXf4NRzoPfR4pXAg5TTIQKQ88WB09I7uXR71BzKxRx9ycvj7dSyGx4hbjehyvY9lR
+	n+qmo1Xk+rqdj5IKnbWw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVUmk-0002LB-QX; Tue, 28 May 2019 05:36:30 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hVV6q-0002BQ-Ay; Tue, 28 May 2019 05:57:16 +0000
+Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVUmh-0002Kc-I3; Tue, 28 May 2019 05:36:28 +0000
-X-UUID: 79f525399f594e9dad2395890f38c957-20190527
-X-UUID: 79f525399f594e9dad2395890f38c957-20190527
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1926506958; Mon, 27 May 2019 21:36:02 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 22:36:01 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 May 2019 13:35:59 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 28 May 2019 13:35:59 +0800
-Message-ID: <1559021759.15879.2.camel@mtksdaap41>
-Subject: Re: [PATCH v2 24/25] drm/mediatek: respect page offset for PRIME
- mmap calls
-From: CK Hu <ck.hu@mediatek.com>
-To: <yongqiang.niu@mediatek.com>
-Date: Tue, 28 May 2019 13:35:59 +0800
-In-Reply-To: <1555403634.11519.11.camel@mtksdaap41>
-References: <1553667561-25447-1-git-send-email-yongqiang.niu@mediatek.com>
- <1553667561-25447-25-git-send-email-yongqiang.niu@mediatek.com>
- <1555403634.11519.11.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hVV6m-0002Al-Hc
+ for linux-mediatek@lists.infradead.org; Tue, 28 May 2019 05:57:14 +0000
+Received: by mail-pf1-x443.google.com with SMTP id s11so10764424pfm.12
+ for <linux-mediatek@lists.infradead.org>; Mon, 27 May 2019 22:57:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=DM2roW1uDasR/ZhwHW+lf0A3UJpao3MjC7jIgvQYwWs=;
+ b=lON1htqnT51A/TgqWDNbasbuMR3FlrSuB4q9IdzD9gunXLPoXv6HIWiRzcGkEZ/FSW
+ iazvgJJzI1AYNDHg5Tas2VKcqI4dR3V38lwXzk1me/GpbxuvFrZXEsS+27DjSuHiNE1g
+ Ws9YGKoMjcyGzzqymF6/QeLwG3ppJqVEiaaBQ=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=DM2roW1uDasR/ZhwHW+lf0A3UJpao3MjC7jIgvQYwWs=;
+ b=a+PJj2AR2azDoHmIC+1Uw5ufhLP3vAslq9UZRcalQsur8W743cCjgf8pGjDKmcNwVP
+ SPLOjbb+0iA57h/uqnIwutBGp35XArCcXuw3MWDZ8YetvV3DW8h5Lz2C9YOA5zLmWzTy
+ GBSNetv33p/NQcrsctyGXic/uvODPYrbcfBO5J2n4K7jJ/PmpFCA5G4noZ5Rg7N2aoDR
+ bGs8UdCfIwRBJQJxeIpN7PNXhGJNHUNDO3Slh9V0OUrhkG4/Yle49xmQpRjj2QUx4otB
+ wQ7k7r69ixaj/3dITXSvbTxmKEWySo8jjGbrSTjF/H+hiVGmYu6D/BMHNUE/88QfzSeC
+ PTYA==
+X-Gm-Message-State: APjAAAVrhaW5HAGSsFrklW7KlPHZpOh+geXuBLZM66acyuuwXvs7des9
+ MlWeUIxhaR90wWXXAwDM4tI+Gg==
+X-Google-Smtp-Source: APXvYqzllEC5p/Z7QS0hLnM3/Kb5OyKB96SW7huDFH2YYaMAl4Rsg2svryHrforUkjGoMCld1uerGQ==
+X-Received: by 2002:a17:90a:cf83:: with SMTP id
+ i3mr3379555pju.71.1559023030501; 
+ Mon, 27 May 2019 22:57:10 -0700 (PDT)
+Received: from acourbot.tok.corp.google.com
+ ([2401:fa00:4:4:9712:8cf1:d0f:7d33])
+ by smtp.gmail.com with ESMTPSA id w1sm13950551pfg.51.2019.05.27.22.57.07
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Mon, 27 May 2019 22:57:09 -0700 (PDT)
+From: Alexandre Courbot <acourbot@chromium.org>
+To: Yunfei Dong <yunfei.dong@mediatek.com>,
+ Tiffany Lin <tiffany.lin@mediatek.com>,
+ Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Hans Verkuil <hans.verkuil@cisco.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>
+Subject: [RFCv1 00/12] media: mtk-vcodec: support for MT8183 decoder
+Date: Tue, 28 May 2019 14:56:23 +0900
+Message-Id: <20190528055635.12109-1-acourbot@chromium.org>
+X-Mailer: git-send-email 2.22.0.rc1.257.g3120a18244-goog
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_223627_600849_FDCDB874 
-X-CRM114-Status: GOOD (  15.26  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190527_225712_609622_994DA148 
+X-CRM114-Status: GOOD (  14.95  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,72 +97,103 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, Bibby.Hsieh@mediatek.com,
- airlied@linux.ie, linux-kernel@vger.kernel.org,
- dri-devel@lists.freedesktop.org, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, p.zabel@pengutronix.de,
- matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ Alexandre Courbot <acourbot@chromium.org>, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Yongqiang:
+This series is a refactoring/split of the initial patch for MT8183 codec support
+that was posted for Chrome OS [1] in order to make it upstreamable.
 
-On Tue, 2019-04-16 at 16:33 +0800, CK Hu wrote:
-> Hi, Yongqiang:
-> 
-> On Wed, 2019-03-27 at 14:19 +0800, yongqiang.niu@mediatek.com wrote:
-> > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > 
-> > Respect page offset for PRIME mmap calls
-> 
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
+The line count has been significantly reduced compared to the initial patch,
+although support for the MT8183 encoder is not here yet to limit the amount of
+code to review.
 
+Although the series applies on top of today's media tree, it will not compile
+until support for the SCP is merged, hence the RFC status. Note also that the
+H.264 structures used and implementation of the stateless codec API may not be
+completely up-to-date. So the goal of this publication is to review the general
+idea (especially split unto stateful and stateless ops), and maybe merge the
+first 5 patches.
 
-This patch looks independent, so I've applied it to
-mediatek-drm-fixes-5.2 [1], thanks.
+Patches 1-5 are cleanup/small fixes that came while working on this series. They
+should be harmless and can be merged.
 
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-fixes-5.2
+Patches 6 adds a layer of abstraction to some of the decoder operations.
+Currently mtk-vcodec and MT8173 use the stateful codec API, but MT8183 is based
+on a stateless model. So patch 6 isolates the ops specific to the stateful codec
+so MT8173 and MT8183 can share a big part of the code.
 
-Regards,
-CK
+Patch 7 abstracts the firmware interface, as MT8173 and MT8183 are controlled
+by different interfaces (VPU or SCP). Patch 8 adds the firmware ops for MT8183.
 
-> 
-> > 
-> > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > ---
-> >  drivers/gpu/drm/mediatek/mtk_drm_gem.c | 7 ++++++-
-> >  1 file changed, 6 insertions(+), 1 deletion(-)
-> > 
-> > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_gem.c b/drivers/gpu/drm/mediatek/mtk_drm_gem.c
-> > index c230237..524e494 100644
-> > --- a/drivers/gpu/drm/mediatek/mtk_drm_gem.c
-> > +++ b/drivers/gpu/drm/mediatek/mtk_drm_gem.c
-> > @@ -144,7 +144,6 @@ static int mtk_drm_gem_object_mmap(struct drm_gem_object *obj,
-> >  	 * VM_PFNMAP flag that was set by drm_gem_mmap_obj()/drm_gem_mmap().
-> >  	 */
-> >  	vma->vm_flags &= ~VM_PFNMAP;
-> > -	vma->vm_pgoff = 0;
-> >  
-> >  	ret = dma_mmap_attrs(priv->dma_dev, vma, mtk_gem->cookie,
-> >  			     mtk_gem->dma_addr, obj->size, mtk_gem->dma_attrs);
-> > @@ -183,6 +182,12 @@ int mtk_drm_gem_mmap(struct file *filp, struct vm_area_struct *vma)
-> >  
-> >  	obj = vma->vm_private_data;
-> >  
-> > +	/*
-> > +	 * Set vm_pgoff (used as a fake buffer offset by DRM) to 0 and map the
-> > +	 * whole buffer from the start.
-> > +	 */
-> > +	vma->vm_pgoff = 0;
-> > +
-> >  	return mtk_drm_gem_object_mmap(obj, vma);
-> >  }
-> >  
-> 
+Patch 9 and 10 add support for stateless decoders in the driver, and support for
+stateless H.264 decoding respectively.
 
+Patch 11 takes care of adding the media device for stateless codecs, and
+patch 12 allows the MT8183 decoder to probe.
+
+I am mostly expecting comments about the general direction, but of course more
+in-depth reviews are also welcome.
+
+[1] https://chromium-review.googlesource.com/c/chromiumos/third_party/kernel/+/1377757/
+
+Alexandre Courbot (3):
+  media: mtk-vcodec: avoid unneeded pointer-to-long conversions
+  media: mtk-vcodec: remove unneeded proxy functions
+  media: mtk-vcodec: constify formats
+
+Yunfei Dong (9):
+  media: mtk-vcodec: fix copyright indent
+  media: mtk-vcodec: support single-buffer frames
+  media: mtk-vcodec: move stateful ops into their own file
+  media: mtk-vcodec: abstract firmware interface
+  media: mtk-vcodec: add SCP firmware ops
+  media: mtk-vcodec: vdec: support stateless API
+  media: mtk-vcodec: vdec: support stateless H.264 decoding
+  media: mtk-vcodec: vdec: add media device if using stateless api
+  media: mtk-vcodec: enable MT8183 decoder
+
+ drivers/media/platform/Kconfig                |   1 +
+ drivers/media/platform/mtk-vcodec/Makefile    |   7 +-
+ .../platform/mtk-vcodec/mtk_vcodec_dec.c      | 751 +++---------------
+ .../platform/mtk-vcodec/mtk_vcodec_dec.h      |  30 +-
+ .../platform/mtk-vcodec/mtk_vcodec_dec_drv.c  | 103 ++-
+ .../platform/mtk-vcodec/mtk_vcodec_dec_pm.c   |   1 -
+ .../mtk-vcodec/mtk_vcodec_dec_stateful.c      | 629 +++++++++++++++
+ .../mtk-vcodec/mtk_vcodec_dec_stateless.c     | 493 ++++++++++++
+ .../platform/mtk-vcodec/mtk_vcodec_drv.h      |  81 +-
+ .../platform/mtk-vcodec/mtk_vcodec_enc.c      |  45 +-
+ .../platform/mtk-vcodec/mtk_vcodec_enc_drv.c  |  49 +-
+ .../platform/mtk-vcodec/mtk_vcodec_enc_pm.c   |  26 +-
+ .../media/platform/mtk-vcodec/mtk_vcodec_fw.c | 208 +++++
+ .../media/platform/mtk-vcodec/mtk_vcodec_fw.h |  38 +
+ .../platform/mtk-vcodec/mtk_vcodec_util.c     |   1 -
+ .../platform/mtk-vcodec/vdec/vdec_h264_if.c   |  22 +-
+ .../mtk-vcodec/vdec/vdec_h264_req_if.c        | 533 +++++++++++++
+ .../platform/mtk-vcodec/vdec/vdec_vp8_if.c    |  22 +-
+ .../platform/mtk-vcodec/vdec/vdec_vp9_if.c    |  22 +-
+ .../media/platform/mtk-vcodec/vdec_drv_base.h |  10 +-
+ .../media/platform/mtk-vcodec/vdec_drv_if.c   |  19 +-
+ .../media/platform/mtk-vcodec/vdec_vpu_if.c   |  10 +-
+ .../media/platform/mtk-vcodec/vdec_vpu_if.h   |  11 +-
+ .../platform/mtk-vcodec/venc/venc_h264_if.c   |  34 +-
+ .../platform/mtk-vcodec/venc/venc_vp8_if.c    |  27 +-
+ .../media/platform/mtk-vcodec/venc_drv_base.h |   8 +-
+ .../media/platform/mtk-vcodec/venc_drv_if.c   |  11 +-
+ .../media/platform/mtk-vcodec/venc_vpu_if.c   |  15 +-
+ .../media/platform/mtk-vcodec/venc_vpu_if.h   |   5 +-
+ 29 files changed, 2328 insertions(+), 884 deletions(-)
+ create mode 100644 drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_stateful.c
+ create mode 100644 drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_stateless.c
+ create mode 100644 drivers/media/platform/mtk-vcodec/mtk_vcodec_fw.c
+ create mode 100644 drivers/media/platform/mtk-vcodec/mtk_vcodec_fw.h
+ create mode 100644 drivers/media/platform/mtk-vcodec/vdec/vdec_h264_req_if.c
+
+-- 
+2.22.0.rc1.257.g3120a18244-goog
 
 
 _______________________________________________
