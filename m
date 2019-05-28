@@ -2,65 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71EB82C2EF
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 11:18:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A971A2C312
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 11:24:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=clFuBGmIZjouwY4mp/eIR5fyaS9kUTDbZtnOEYOfJWE=; b=qfMU2EHOg/R1ab
-	WBshd76sNgBBZAuPCE9N68ZeZlXXi8umqZ3bhSZmvD2umyNJwjxsK3boxIk2oc0o7pCvAlPwSbmiz
-	VU+qoSaTFEcryH/CO4lFwEch67VsmpR3qTxEP1NVAdjxmCVPtE40CSF509jrrXnlZTRMTR533BfMC
-	ogda+5V1C2zVb2oE+Wcuf3ZxCXOsFANEwQtTnnELm4BgQRkZ5diiNGDWGnyzAO2DGuwO0DCfm4ANR
-	4SprihUeClcYkZa6ixY0ZScBMXM5pDvTzEWizjLShfoVWMDBBDtHEZtdiyKl0XK94M2aElhY7kX2V
-	sS9Y4umOhjvb5CByJZ/g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=b7iuXLvS7ESucR63RZ91cBEbE8iWGdPlAgYxscLWvbU=; b=G6fv/fNiF7sPnC
+	+mil2Pv9waEiylA9f5+liLK2WNtbd1EmTh7+MqLfcBhTqTNORmC7DXiwm5GgxVUSPB04h2GBkFyOq
+	qD8JMyz1ntgEv1DYXGwYmxLrxKsuX6Qv0j8sgIQ3R2z0pi5GeCguBRlKW8j7Oxzhap8MT3zgIJAby
+	iTeLwAiwiNpAn5WbxlZy4VfHWji6YgF6FZ0pTgXbXQATNbJUo+jCaYG6TTFB66DXD9vgELRZBPeB3
+	92q8qOTKNvYjb5XrQbSfGvKbygSXHm+KiHa+PnhxFqyPITTuM/3VjgGFXClNl11zgn0bU58Ngl5Q+
+	cF4fz0tDnIIEwcvR2rWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVYFg-0004Y8-2I; Tue, 28 May 2019 09:18:36 +0000
-Received: from lb2-smtp-cloud9.xs4all.net ([194.109.24.26])
+	id 1hVYKw-0006TL-18; Tue, 28 May 2019 09:24:02 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVYFc-0004XQ-QK
- for linux-mediatek@lists.infradead.org; Tue, 28 May 2019 09:18:34 +0000
-Received: from [IPv6:2001:983:e9a7:1:10b2:2e62:e4b1:bd13]
- ([IPv6:2001:983:e9a7:1:10b2:2e62:e4b1:bd13])
- by smtp-cloud9.xs4all.net with ESMTPA
- id VYFZhh8VhsDWyVYFahcRZ2; Tue, 28 May 2019 11:18:30 +0200
-Subject: Re: [RFCv1 00/12] media: mtk-vcodec: support for MT8183 decoder
-To: Alexandre Courbot <acourbot@chromium.org>,
- Yunfei Dong <yunfei.dong@mediatek.com>,
- Tiffany Lin <tiffany.lin@mediatek.com>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Hans Verkuil <hans.verkuil@cisco.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>
-References: <20190528055635.12109-1-acourbot@chromium.org>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <f143b2e2-45ab-9d59-a607-f2032206e4e0@xs4all.nl>
-Date: Tue, 28 May 2019 11:18:29 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ id 1hVYKs-0006Rl-Qe; Tue, 28 May 2019 09:24:00 +0000
+X-UUID: 4b51586b4b1f4738a418194edb1bc341-20190528
+X-UUID: 4b51586b4b1f4738a418194edb1bc341-20190528
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 240677516; Tue, 28 May 2019 01:23:55 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 28 May 2019 02:23:53 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 28 May 2019 17:23:51 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 28 May 2019 17:23:50 +0800
+Message-ID: <1559035430.8487.11.camel@mhfsdcap03>
+Subject: RE: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Biju Das <biju.das@bp.renesas.com>
+Date: Tue, 28 May 2019 17:23:50 +0800
+In-Reply-To: <OSBPR01MB2103B7E9BB12FDCEB4105BAFB81E0@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+References: <20190520080359.GC1887@kuha.fi.intel.com>
+ <OSBPR01MB2103385D996762FA54F8E437B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190520083601.GE1887@kuha.fi.intel.com>
+ <OSBPR01MB2103C4C8920C40E42BC1B2A9B8060@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190521095839.GI1887@kuha.fi.intel.com>
+ <OSBPR01MB21032206146152983C8F4E8EB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <1558517436.10179.388.camel@mhfsdcap03>
+ <OSBPR01MB21038F2B99EF74831A22727BB8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190522142640.GN1887@kuha.fi.intel.com>
+ <OSBPR01MB2103B669C24E9E261B4AFA73B8000@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+ <20190524124445.GP1887@kuha.fi.intel.com>
+ <1558926515.10179.439.camel@mhfsdcap03>
+ <OSBPR01MB2103B7E9BB12FDCEB4105BAFB81E0@OSBPR01MB2103.jpnprd01.prod.outlook.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-In-Reply-To: <20190528055635.12109-1-acourbot@chromium.org>
-Content-Language: en-US
-X-CMAE-Envelope: MS4wfMM8dvHjwzwUAfKnKoP8luEtEGaVf32kshxDabImXd9jy0WyZNQu0oWcDuCA15v9nj/65NQVATJO4tPv31EblnvNkBcLyM0GlUCHRM2mkscgsxSaiswR
- z+uWhE+HAnoTjmtUpDFDsRwqLldLpm10GCvThGRZS9AwpB6rYzpOoJACHAi+y7ayANPTsKM8eXP10lvHUMh3XG3vFDJmZyk+ZKi4hili3Ha6LsQVHdZ1Kq3v
- vKz7PBFkC289Svxv/UAK1HyqfzxsmMyvf3hgblMRlP6QCjItw2KzTaQuDPaDKe25huRnygLIgRxG5gND9j3oXY1Z1GJ8dz7N4yXj4S9m59bZfu7ZZABtfHe3
- xnEJWDQZmDvZFYRZWNECTI8f1mrue7Twz7xEv+XgXHHNARAg5dowSUiLwU3VaLo7hq3660hThRLml4Z47FJzmQHHI23PFddGlMShAwD4IcU9WP0Gm3pZagt5
- uj3w07yiQs3Z5ISYUg9Ic/KY+HpW5qmmXcqyIeQwT3ro8nPkQ5zdw8Ifphm4h2EKGIXgHZae/WMch5Sz9rDGyVUtTyRv4tUkPXalEvIEwlgMP4zknzhckwVy
- kYI=
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190528_021833_010444_A51B0239 
-X-CRM114-Status: GOOD (  13.50  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190528_022358_869629_A561F984 
+X-CRM114-Status: GOOD (  10.27  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [194.109.24.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -72,37 +82,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-media@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ Chen Yu <chenyu56@huawei.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>, Badhri Jagan
+ Sridharan <badhri@google.com>, Andy
+ Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 5/28/19 7:56 AM, Alexandre Courbot wrote:
-> This series is a refactoring/split of the initial patch for MT8183 codec support
-> that was posted for Chrome OS [1] in order to make it upstreamable.
-> 
-> The line count has been significantly reduced compared to the initial patch,
-> although support for the MT8183 encoder is not here yet to limit the amount of
-> code to review.
-> 
-> Although the series applies on top of today's media tree, it will not compile
-> until support for the SCP is merged, hence the RFC status. Note also that the
-> H.264 structures used and implementation of the stateless codec API may not be
-> completely up-to-date. So the goal of this publication is to review the general
-> idea (especially split unto stateful and stateless ops), and maybe merge the
-> first 5 patches.
-> 
-> Patches 1-5 are cleanup/small fixes that came while working on this series. They
-> should be harmless and can be merged.
+Hi Biju & Yu,
 
-Merging these makes sense. I should be able to do that when v2 is posted with the
-SPDX conversion.
+On Tue, 2019-05-28 at 06:52 +0000, Biju Das wrote:
+> Hi Chunfeng Yun,
+> 
+> + Chen Yu
+> 
+> Thanks for the feedback.
+[...]
+> 
+> Just a suggestion, Do you think, is it worth to add the below  patch[1] also part of this series? So that we have all common patches in this series.
+> 
+Or resend it as a single patch?
 
-Regards,
+> "usb: roles: Introduce stubs for the exiting functions in role.h."
+> [1] https://patchwork.kernel.org/patch/10909971/
+> 
+ 
+> Regards,
+> Biju
 
-	Hans
+
 
 _______________________________________________
 Linux-mediatek mailing list
