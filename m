@@ -2,66 +2,94 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A519D2C2A8
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 11:07:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D868F2C2B8
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 11:08:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nu7+LvYLTaFqmwUiZC0gA9RzbhYncbh51jHuT9GFpdg=; b=hYZT3c3J9vHmHs
-	OrHBlAMn8E4TpEQwXqW81cVve0nBRG3fs5a3YKcIboveaOYpTcvQRHRZ4SsUA5vkTZd15ExIzkROK
-	hU0Tn7UNOuodT9JP4onUU/ybl5P/ZmTvYJtlnMnwb473MlL22H2WeXwu/XBhVaqhBZnc9Ws40mju4
-	KHm9LLZn/JCP3P8PKxeyySjazDkjMg3rOYHEfHCPws9CXT7F/zxrY+96JKX7qa3K4vfWqDT2nI5Ae
-	7A+f4tsdTdRDrlVnnWprg7zSwy6qN8lYraqSNkP8Lh8oL8k02hiAV8Jzar/hZwGDjgyRoYuZP7rIy
-	z2gercmQRzc17oKA9X5Q==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Iad0fxg7D+kMvErNKN2muBST72IfxHrjvAPJogt8aBo=; b=f4GX4Ly62G7iLM
+	MnyScmO0XaQ75sBakAija8VAeM0NMc9cehW1bi97QkOEm1YqHGf057q6N5GqNcl82ZrdfB0boG0ra
+	hUxzlGizLG5fYBQk7ZSL2iZ9Eo94qBsrIujAVoZQflaEKC6UVesw2FdE2gQ2k71tfbiRUyK5bORnB
+	cSBvkH44biuNvaacCx0kgC7YGrDJhycfRBVrZKX+EWupMqktFdywQWn35PDvxCuV6x16xVfD2WPWj
+	x4DZtdkAjcrWb4It8rLOsSYV0/RNvZEid/yDMHiX7nt7RSFKlrje5RJgJ7DvD7MNt5Hy9YR3ZgZ/u
+	ljbhNY7gzJYRk+shWfzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVY4g-00009x-Jl; Tue, 28 May 2019 09:07:14 +0000
-Received: from lb3-smtp-cloud9.xs4all.net ([194.109.24.30])
+	id 1hVY5i-0000Id-Fs; Tue, 28 May 2019 09:08:18 +0000
+Received: from mail-oi1-x230.google.com ([2607:f8b0:4864:20::230])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVY4b-000092-S8
- for linux-mediatek@lists.infradead.org; Tue, 28 May 2019 09:07:12 +0000
-Received: from [IPv6:2001:983:e9a7:1:10b2:2e62:e4b1:bd13]
- ([IPv6:2001:983:e9a7:1:10b2:2e62:e4b1:bd13])
- by smtp-cloud9.xs4all.net with ESMTPA
- id VY4Whh3TBsDWyVY4YhcNp2; Tue, 28 May 2019 11:07:06 +0200
-Subject: Re: [RFCv1 04/12] media: mtk-vcodec: fix copyright indent
-To: Alexandre Courbot <acourbot@chromium.org>,
- Yunfei Dong <yunfei.dong@mediatek.com>,
- Tiffany Lin <tiffany.lin@mediatek.com>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Hans Verkuil <hans.verkuil@cisco.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>
+ id 1hVY5f-0000I3-9V
+ for linux-mediatek@lists.infradead.org; Tue, 28 May 2019 09:08:16 +0000
+Received: by mail-oi1-x230.google.com with SMTP id y10so13687816oia.8
+ for <linux-mediatek@lists.infradead.org>; Tue, 28 May 2019 02:08:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=kDByEXQ6Hf0CbYi5tGfeP4Y/wNBK9tNQLpjcw1bOeZo=;
+ b=OP/IgysQdXyBC7aWcc8ztRELyrZYczvf6ydXAFrauGcAeQPQ0aQnrLJXIIYpVOmxav
+ P0uChtMDV5cZ69pAuopjFCS5FE2RovXlnTPZzChBtLIav+10P9CnxY/BWxIGjVBzCQeP
+ 6TjLD3xAnXvZm6vT318aWMnXZamSlqFjbL0Oo=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=kDByEXQ6Hf0CbYi5tGfeP4Y/wNBK9tNQLpjcw1bOeZo=;
+ b=HQUbBOS8d1NyViz8C+6qR15mHM5YkpyCTPcLK+cY3VsDqcMiG9zbO+v1C6kHg6MNq4
+ tHS2OCLUCMdQM4UOqXBFe/eL6Ac3H8j8dJZ3N2KD5LMCVuiZdCThiCTSEt4LUGW8Tlp5
+ 4NbpYuwhTBcXpOCFLjCc85JarC8PAxJhCYCZNgNhuJB3aZ0vvUZpMzOZbyhdq5CXdtGl
+ CaDABdOGofJW+IRGZWnf/Ftn8u5fH2BYXtFCicEdY2lwxHJ3CT9Oxlxr/gpsTucD7nYJ
+ AO/r7I4MAEn9PXOkkW0wl/7dnHo1/0TcGIlAxuHQwMzlnIfHp4SmPtc6EYQkB2Qr/JeA
+ /bow==
+X-Gm-Message-State: APjAAAXCO9AVFGtNGHkwY62InMJYdyn72Utm1PJTRw4TCgV8i8okcva/
+ fmX/xYiM4d1o4RFIBaCur94+FPCWZDs=
+X-Google-Smtp-Source: APXvYqxfq4HjfF9PmJ4JdTrjUJurVsq6j2Wp73MoKeyWHiSjYW5NO3fUPb8sGxEqZSLQRqdx3oPXEQ==
+X-Received: by 2002:aca:4404:: with SMTP id r4mr1934423oia.130.1559034493540; 
+ Tue, 28 May 2019 02:08:13 -0700 (PDT)
+Received: from mail-oi1-f180.google.com (mail-oi1-f180.google.com.
+ [209.85.167.180])
+ by smtp.gmail.com with ESMTPSA id l65sm4853834oif.20.2019.05.28.02.08.12
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
+ Tue, 28 May 2019 02:08:12 -0700 (PDT)
+Received: by mail-oi1-f180.google.com with SMTP id z65so13664592oia.11
+ for <linux-mediatek@lists.infradead.org>; Tue, 28 May 2019 02:08:12 -0700 (PDT)
+X-Received: by 2002:aca:3c1:: with SMTP id 184mr2080922oid.170.1559034491936; 
+ Tue, 28 May 2019 02:08:11 -0700 (PDT)
+MIME-Version: 1.0
 References: <20190528055635.12109-1-acourbot@chromium.org>
  <20190528055635.12109-5-acourbot@chromium.org>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <fa11a504-071e-f786-8564-cb7e95248f64@xs4all.nl>
-Date: Tue, 28 May 2019 11:07:04 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
-MIME-Version: 1.0
-In-Reply-To: <20190528055635.12109-5-acourbot@chromium.org>
-Content-Language: en-US
-X-CMAE-Envelope: MS4wfNgP3bKa8S2uESOwLT0GPUnLycNeowjEr5Lggzem4wfMEaDIBq7m4Zg6V5IkvWrB5sEVohwm2tLybYHYAPBWGs5mTvILdj7wZ8LeJJIpshmsM+ff6IXR
- LgFWaFhA/KldlsvLQ7wY78oBn3xOFJPgxrYdlVbmOuGekUR502TT14QrD5cCO/mFn1AdD6zCt8daTwSthQbhitomrG5YHiL+fUxtVpYOWzLfRqgFxL+knYVC
- hcFcYAa8qVog3BP21OOwxeAjs3Nk4lYFWpxhLmoWOTb8Vh1x5/1IBHttdGzHVatK+GVvGowRiseoZ6Upzezwzny5onfYJzsOekUpHrOL3TZ1H81orKKUc6EZ
- lQecz5n9TNReOGU9EftN3TP6f6sjUBVKzt+uBI/x3+xmO/Z34l8CV/b20hf0TyaTU6HD/m6A7lg2uCrVlAOsoKNJGDN1GqR0f9gOsijsiuCL4R1ouA1JsKPB
- wzMGhkyGOogDwsbc8acyXRK02oQ/OyVAZOKB70o8LI9d2qZW/AJzkMV+YxP8q5AVsU1N2BCeOsW0SnNRjq9dmHCmdaFkKPsxfM2LABkvoUSS9seRGnQ5SWPD
- Q5Q=
+ <fa11a504-071e-f786-8564-cb7e95248f64@xs4all.nl>
+In-Reply-To: <fa11a504-071e-f786-8564-cb7e95248f64@xs4all.nl>
+From: Alexandre Courbot <acourbot@chromium.org>
+Date: Tue, 28 May 2019 18:08:00 +0900
+X-Gmail-Original-Message-ID: <CAPBb6MWKm2DxRdtWur80EkxvLYj_t7Dr62E2h0Xdm5A6wURV5A@mail.gmail.com>
+Message-ID: <CAPBb6MWKm2DxRdtWur80EkxvLYj_t7Dr62E2h0Xdm5A6wURV5A@mail.gmail.com>
+Subject: Re: [RFCv1 04/12] media: mtk-vcodec: fix copyright indent
+To: Hans Verkuil <hverkuil@xs4all.nl>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190528_020710_073233_C97C719F 
-X-CRM114-Status: GOOD (  16.24  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190528_020815_356372_51F8F2D1 
+X-CRM114-Status: UNSURE (   7.79  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [194.109.24.30 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:230 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,139 +101,26 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-media@vger.kernel.org
+Cc: Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Tiffany Lin <tiffany.lin@mediatek.com>, Yunfei Dong <yunfei.dong@mediatek.com>,
+ LKML <linux-kernel@vger.kernel.org>, Hans Verkuil <hans.verkuil@cisco.com>,
+ linux-mediatek@lists.infradead.org, Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 5/28/19 7:56 AM, Alexandre Courbot wrote:
-> From: Yunfei Dong <yunfei.dong@mediatek.com>
-> 
-> Minor identation fix for copyright notice in a few source files.
+On Tue, May 28, 2019 at 6:07 PM Hans Verkuil <hverkuil@xs4all.nl> wrote:
+>
+> On 5/28/19 7:56 AM, Alexandre Courbot wrote:
+> > From: Yunfei Dong <yunfei.dong@mediatek.com>
+> >
+> > Minor identation fix for copyright notice in a few source files.
+>
+> How about converting to using SPDX as well?
 
-How about converting to using SPDX as well?
-
-Regards,
-
-	Hans
-
-> 
-> Signed-off-by: Yunfei Dong <yunfei.dong@mediatek.com>
-> [acourbot: refactor, cleanup and split]
-> Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
-> ---
->  .../platform/mtk-vcodec/mtk_vcodec_drv.h      | 26 +++++++++----------
->  .../platform/mtk-vcodec/mtk_vcodec_enc.c      | 26 +++++++++----------
->  .../platform/mtk-vcodec/mtk_vcodec_enc_pm.c   | 24 ++++++++---------
->  3 files changed, 38 insertions(+), 38 deletions(-)
-> 
-> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> index 109c7578a8b2..76905e2d56a7 100644
-> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> @@ -1,17 +1,17 @@
->  /*
-> -* Copyright (c) 2016 MediaTek Inc.
-> -* Author: PC Chen <pc.chen@mediatek.com>
-> -*         Tiffany Lin <tiffany.lin@mediatek.com>
-> -*
-> -* This program is free software; you can redistribute it and/or modify
-> -* it under the terms of the GNU General Public License version 2 as
-> -* published by the Free Software Foundation.
-> -*
-> -* This program is distributed in the hope that it will be useful,
-> -* but WITHOUT ANY WARRANTY; without even the implied warranty of
-> -* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> -* GNU General Public License for more details.
-> -*/
-> + * Copyright (c) 2016 MediaTek Inc.
-> + * Author: PC Chen <pc.chen@mediatek.com>
-> + *         Tiffany Lin <tiffany.lin@mediatek.com>
-> + *
-> + * This program is free software; you can redistribute it and/or modify
-> + * it under the terms of the GNU General Public License version 2 as
-> + * published by the Free Software Foundation.
-> + *
-> + * This program is distributed in the hope that it will be useful,
-> + * but WITHOUT ANY WARRANTY; without even the implied warranty of
-> + * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> + * GNU General Public License for more details.
-> + */
->  
->  #ifndef _MTK_VCODEC_DRV_H_
->  #define _MTK_VCODEC_DRV_H_
-> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
-> index 2d5a61c06287..32d8ce9c8f6e 100644
-> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
-> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
-> @@ -1,17 +1,17 @@
->  /*
-> -* Copyright (c) 2016 MediaTek Inc.
-> -* Author: PC Chen <pc.chen@mediatek.com>
-> -*         Tiffany Lin <tiffany.lin@mediatek.com>
-> -*
-> -* This program is free software; you can redistribute it and/or modify
-> -* it under the terms of the GNU General Public License version 2 as
-> -* published by the Free Software Foundation.
-> -*
-> -* This program is distributed in the hope that it will be useful,
-> -* but WITHOUT ANY WARRANTY; without even the implied warranty of
-> -* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> -* GNU General Public License for more details.
-> -*/
-> + * Copyright (c) 2016 MediaTek Inc.
-> + * Author: PC Chen <pc.chen@mediatek.com>
-> + *         Tiffany Lin <tiffany.lin@mediatek.com>
-> + *
-> + * This program is free software; you can redistribute it and/or modify
-> + * it under the terms of the GNU General Public License version 2 as
-> + * published by the Free Software Foundation.
-> + *
-> + * This program is distributed in the hope that it will be useful,
-> + * but WITHOUT ANY WARRANTY; without even the implied warranty of
-> + * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> + * GNU General Public License for more details.
-> + */
->  
->  #include <media/v4l2-event.h>
->  #include <media/v4l2-mem2mem.h>
-> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_pm.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_pm.c
-> index 39375b8ea27c..2fdae50173be 100644
-> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_pm.c
-> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_pm.c
-> @@ -1,16 +1,16 @@
->  /*
-> -* Copyright (c) 2016 MediaTek Inc.
-> -* Author: Tiffany Lin <tiffany.lin@mediatek.com>
-> -*
-> -* This program is free software; you can redistribute it and/or modify
-> -* it under the terms of the GNU General Public License version 2 as
-> -* published by the Free Software Foundation.
-> -*
-> -* This program is distributed in the hope that it will be useful,
-> -* but WITHOUT ANY WARRANTY; without even the implied warranty of
-> -* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> -* GNU General Public License for more details.
-> -*/
-> + * Copyright (c) 2016 MediaTek Inc.
-> + * Author: Tiffany Lin <tiffany.lin@mediatek.com>
-> + *
-> + * This program is free software; you can redistribute it and/or modify
-> + * it under the terms of the GNU General Public License version 2 as
-> + * published by the Free Software Foundation.
-> + *
-> + * This program is distributed in the hope that it will be useful,
-> + * but WITHOUT ANY WARRANTY; without even the implied warranty of
-> + * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> + * GNU General Public License for more details.
-> + */
->  
->  #include <linux/clk.h>
->  #include <linux/of_address.h>
-> 
-
+Yeah, that would be much better. Should have thought about it.
 
 _______________________________________________
 Linux-mediatek mailing list
