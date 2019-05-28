@@ -2,57 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DAE122BD00
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 03:53:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 70D2A2BEA5
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 07:35:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Sj8/E6pCXYtyKdREIykPRXcF08YtQ8iuOASNLGx9PMA=; b=HIutwWIu//kkex
-	5dAn4WIFd4yRVeMjnfKBWHEDkkCfGe3fIlqF5CWHxsoI5T+IFOZabMDHOuUnArqm6+PCQMZPVvkso
-	Twr2gnbKKVf5wag6ZK/305rw1AYWSc8VNmkM/dEy7LqW6/esn2D9rv8QJq1R7JhPwzeZOioLW2Jzy
-	hujwFje/2Agae2n8fyZOGjL4++VDA2Gfz+xOoRuvL3XNsQnKPyh04B0n8qPceTr9d5UD7Tmq21407
-	akFSDa8rhbaz9FDRIfvmyyCHZc1ev3is7ErlWPATzj7S1HsA77GrA7q/OqbzNEzSUBcRLK/Qq4iYj
-	bq5ByyQMCC7Su6xZqkUA==;
+	List-Owner; bh=e3Hv/xtkddi5hkbixz4tncaoB8qssY9uPSNRwe4GEHQ=; b=Tt9RzX27OO97GS
+	xGSmzP/nuzffBUJUwHYM/Gb5yxw81Ac3Bh7mrOaKS+xicq4x7iHr4Dg145bPibk7s6iYmD+sT53HF
+	qyDTXV/urycKgmY3cEqSsOHNHe2xrmIoNPSC1HY/VCX5Ov1DykRF47zMfBdsfNJKb8pJg+pdvoXUW
+	VkptkyEtqCVrv4Nc0XPluqnLI/OI/ZHjUzLlCl90PgRMyAbYz/GBnVDzLY+k8CWoEyFRhX09mS7EV
+	J3R1FmjPNh8ekSJ22Jz5dsVG+HagpcEB1Y6+Mhl3M92yWXc1apwSHzVgXJHAp0WWt0CrczWR0+Bts
+	ugG1eshf46xtetYISuhg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVRIm-0008Ax-1e; Tue, 28 May 2019 01:53:20 +0000
+	id 1hVUm0-0001x3-9Z; Tue, 28 May 2019 05:35:44 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVRId-00085x-ED; Tue, 28 May 2019 01:53:13 +0000
-X-UUID: 366fbe3dbfa342e1a7cd8a7e0ac19b8a-20190527
-X-UUID: 366fbe3dbfa342e1a7cd8a7e0ac19b8a-20190527
+ id 1hVUlv-0001nB-62; Tue, 28 May 2019 05:35:42 +0000
+X-UUID: 343c54c9b2a14a35b6f9036f7cbd6ef4-20190527
+X-UUID: 343c54c9b2a14a35b6f9036f7cbd6ef4-20190527
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 511790623; Mon, 27 May 2019 17:52:54 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ with ESMTP id 212699397; Mon, 27 May 2019 21:35:32 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 May 2019 18:52:53 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 28 May 2019 09:52:50 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 28 May 2019 09:52:49 +0800
-Message-ID: <1559008369.24897.66.camel@mhfsdcap03>
-Subject: Re: [v3, PATCH] net: stmmac: add support for hash table size
- 128/256 in dwmac4
-From: biao huang <biao.huang@mediatek.com>
-To: David Miller <davem@davemloft.net>
-Date: Tue, 28 May 2019 09:52:49 +0800
-In-Reply-To: <20190527.100800.1719164073038257292.davem@davemloft.net>
-References: <1558926867-16472-1-git-send-email-biao.huang@mediatek.com>
- <1558926867-16472-2-git-send-email-biao.huang@mediatek.com>
- <20190527.100800.1719164073038257292.davem@davemloft.net>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ 15.0.1395.4; Mon, 27 May 2019 22:35:31 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 28 May 2019 13:35:29 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 28 May 2019 13:35:29 +0800
+Message-ID: <1559021729.15879.1.camel@mtksdaap41>
+Subject: Re: [PATCH v2 22/25] drm/mediatek: adjust ddp clock control flow
+From: CK Hu <ck.hu@mediatek.com>
+To: <yongqiang.niu@mediatek.com>
+Date: Tue, 28 May 2019 13:35:29 +0800
+In-Reply-To: <1555403090.11519.7.camel@mtksdaap41>
+References: <1553667561-25447-1-git-send-email-yongqiang.niu@mediatek.com>
+ <1553667561-25447-23-git-send-email-yongqiang.niu@mediatek.com>
+ <1555403090.11519.7.camel@mtksdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_185311_483777_E1AC3181 
-X-CRM114-Status: GOOD (  11.58  )
+X-CRM114-CacheID: sfid-20190527_223539_676582_5A417BB0 
+X-CRM114-Status: GOOD (  16.91  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,60 +72,121 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: jianguo.zhang@mediatek.com, alexandre.torgue@st.com,
- boon.leong.ong@intel.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- joabreu@synopsys.com, linux-mediatek@lists.infradead.org,
- mcoquelin.stm32@gmail.com, matthias.bgg@gmail.com, peppe.cavallaro@st.com,
- linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, Bibby.Hsieh@mediatek.com,
+ airlied@linux.ie, linux-kernel@vger.kernel.org,
+ dri-devel@lists.freedesktop.org, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, p.zabel@pengutronix.de,
+ matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dear David,
+Hi, Yongqiang:
 
-On Mon, 2019-05-27 at 10:08 -0700, David Miller wrote:
-> From: Biao Huang <biao.huang@mediatek.com>
-> Date: Mon, 27 May 2019 11:14:27 +0800
+On Tue, 2019-04-16 at 16:24 +0800, CK Hu wrote:
+> Hi, Yongqiang:
 > 
-> > diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> > index 5e98da4..029a3db 100644
-> > --- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> > +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> > @@ -403,41 +403,50 @@ static void dwmac4_set_filter(struct mac_device_info *hw,
-> >  			      struct net_device *dev)
-> >  {
-> >  	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
-> > -	unsigned int value = 0;
-> > +	unsigned int value;
-> > +	int numhashregs = (hw->multicast_filter_bins >> 5);
-> > +	int mcbitslog2 = hw->mcast_bits_log2;
-> > +	int i;
+> On Wed, 2019-03-27 at 14:19 +0800, yongqiang.niu@mediatek.com wrote:
+> > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> > 
+> > display hardware clock will not unprepare when
+> > crtc is disable, until crtc is destroyed.
+> > with this patch, hard clock will disable and unprepare
+> > at the same time.
 > 
-> Please retain the reverse christmas tree ordering here.
-I'm a little confused about the reverse xmas tree ordering.
+> Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
-should I reorder them only according to the total length like this:
+This patch looks independent, so I've applied it to
+mediatek-drm-fixes-5.2 [1], thanks.
 
-	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
-	int numhashregs = (hw->multicast_filter_bins >> 5);
-	int mcbitslog2 = hw->mcast_bits_log2;
-	unsigned int value;
-	int i;
+[1]
+https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-fixes-5.2
 
-or should I gather the same type together, and order types as reverse
-xmas tree, then order the same type definitions as reverse xmas tree,
-like this:
-
-	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
-	unsigned int value;
-	int numhashregs = (hw->multicast_filter_bins >> 5);
-	int mcbitslog2 = hw->mcast_bits_log2;
-	int i;
-
-Thank you.
+Regards,
+CK
 > 
-> Thank you.
+> > 
+> > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> > ---
+> >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 26 ++++++--------------------
+> >  1 file changed, 6 insertions(+), 20 deletions(-)
+> > 
+> > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> > index 0f97ee3..606c6e2 100644
+> > --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> > +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> > @@ -195,7 +195,7 @@ static int mtk_crtc_ddp_clk_enable(struct mtk_drm_crtc *mtk_crtc)
+> >  
+> >  	DRM_DEBUG_DRIVER("%s\n", __func__);
+> >  	for (i = 0; i < mtk_crtc->ddp_comp_nr; i++) {
+> > -		ret = clk_enable(mtk_crtc->ddp_comp[i]->clk);
+> > +		ret = clk_prepare_enable(mtk_crtc->ddp_comp[i]->clk);
+> >  		if (ret) {
+> >  			DRM_ERROR("Failed to enable clock %d: %d\n", i, ret);
+> >  			goto err;
+> > @@ -205,7 +205,7 @@ static int mtk_crtc_ddp_clk_enable(struct mtk_drm_crtc *mtk_crtc)
+> >  	return 0;
+> >  err:
+> >  	while (--i >= 0)
+> > -		clk_disable(mtk_crtc->ddp_comp[i]->clk);
+> > +		clk_disable_unprepare(mtk_crtc->ddp_comp[i]->clk);
+> >  	return ret;
+> >  }
+> >  
+> > @@ -215,7 +215,7 @@ static void mtk_crtc_ddp_clk_disable(struct mtk_drm_crtc *mtk_crtc)
+> >  
+> >  	DRM_DEBUG_DRIVER("%s\n", __func__);
+> >  	for (i = 0; i < mtk_crtc->ddp_comp_nr; i++)
+> > -		clk_disable(mtk_crtc->ddp_comp[i]->clk);
+> > +		clk_disable_unprepare(mtk_crtc->ddp_comp[i]->clk);
+> >  }
+> >  
+> >  static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
+> > @@ -615,15 +615,7 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
+> >  		if (!comp) {
+> >  			dev_err(dev, "Component %pOF not initialized\n", node);
+> >  			ret = -ENODEV;
+> > -			goto unprepare;
+> > -		}
+> > -
+> > -		ret = clk_prepare(comp->clk);
+> > -		if (ret) {
+> > -			dev_err(dev,
+> > -				"Failed to prepare clock for component %pOF: %d\n",
+> > -				node, ret);
+> > -			goto unprepare;
+> > +			return ret;
+> >  		}
+> >  
+> >  		mtk_crtc->ddp_comp[i] = comp;
+> > @@ -649,23 +641,17 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
+> >  		ret = mtk_plane_init(drm_dev, &mtk_crtc->planes[zpos],
+> >  				     BIT(pipe), type);
+> >  		if (ret)
+> > -			goto unprepare;
+> > +			return ret;
+> >  	}
+> >  
+> >  	ret = mtk_drm_crtc_init(drm_dev, mtk_crtc, &mtk_crtc->planes[0],
+> >  				mtk_crtc->layer_nr > 1 ? &mtk_crtc->planes[1] :
+> >  				NULL, pipe);
+> >  	if (ret < 0)
+> > -		goto unprepare;
+> > +		return ret;
+> >  	drm_mode_crtc_set_gamma_size(&mtk_crtc->base, MTK_LUT_SIZE);
+> >  	drm_crtc_enable_color_mgmt(&mtk_crtc->base, 0, false, MTK_LUT_SIZE);
+> >  	priv->num_pipes++;
+> >  
+> >  	return 0;
+> > -
+> > -unprepare:
+> > -	while (--i >= 0)
+> > -		clk_unprepare(mtk_crtc->ddp_comp[i]->clk);
+> > -
+> > -	return ret;
+> >  }
+> 
 
 
 
