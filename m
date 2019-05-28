@@ -2,54 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 89B372C0F9
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 10:12:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D7AF32C124
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 May 2019 10:24:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=TdPzhv65bRcqN3hAaKFLPNoHpy4cFAKLkm5r/QwAyc8=; b=p9G55ixeeA86ll
-	/leU6Eu6ICvhWMaNrcuFaUnPptsfPMHFpTgSliHx2felAlrcx6rl0hKC07UGcOFx2W0cApO1MJK9m
-	KxkX1pU82W4XFAeFpMMAfr6XDdClzvU9GQVdgJJwdyvoWqrBCWyclP41+b5EGgFaGo1zjsqUYWDvS
-	WyfR6KeG+RxUB0Y1mB6IXD5Gkm8EWoHujkvpBBm4w3P0KK8lzHvoFiegnJeF0kqRvUf7dJ+Kun0VJ
-	E1pRbfOg2LLOoZuh6V8jJ3sn0nzwiWna6aMgIW8KjimeK5dyU8vHKn3PxugGXSRPpYqxHn+gTaYW/
-	R5CCeNKD9PojL2aiLqSQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=pLmXUCuFUTGOaGsZYnRrohiOe/om7khx4MRY4MmalDk=; b=XScjyJf0QschbP
+	M178r5nMTlTnmfYtpeuWeJHy+lQxJCo5rMB0ltCNSQY0/4gEKEaUd3+nm7tYtEya0rUhKRGZ6irX/
+	UDHJvQSW+bNKV8K7hg1Hg9WshIncwnD0qqPM8VzuJdUXWB2pwjFq+Lfz9knPbekH9YNkg0Xm1nYzZ
+	RbOk+I0YWBC7HCpkvWwra3DtFI6ioMPcXCag4l9zj5gknYzxz1a2CyQGz8Fajza0wLDEPXrgvGcJr
+	4z4Bcr/XvIkscdP0ARA/f2uOUnhBTjfdOF1d0g9XxnpO3YCqKz6+sibJLoYfXvkLEgKgnTvFOTNAw
+	+OjifMSM4e/LVzG23zEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVXDz-0006Rh-5Z; Tue, 28 May 2019 08:12:47 +0000
+	id 1hVXPe-0003m6-N3; Tue, 28 May 2019 08:24:50 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVXDp-0006DL-FA; Tue, 28 May 2019 08:12:38 +0000
-X-UUID: 204a2809b9dc4543acc4e344f5a8e4db-20190528
-X-UUID: 204a2809b9dc4543acc4e344f5a8e4db-20190528
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hVXPT-0003b4-NW; Tue, 28 May 2019 08:24:41 +0000
+X-UUID: 69e20f0dd27b40eabd0352fbbfdef19a-20190528
+X-UUID: 69e20f0dd27b40eabd0352fbbfdef19a-20190528
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1883501474; Tue, 28 May 2019 00:12:13 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 May 2019 01:12:12 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 May 2019 16:12:10 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 28 May 2019 16:12:10 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH] scsi: ufs: Use pm_runtime_get_sync in shutdown flow
-Date: Tue, 28 May 2019 16:12:06 +0800
-Message-ID: <1559031126-6587-1-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
+ with ESMTP id 1705875596; Tue, 28 May 2019 00:24:18 -0800
+Received: from MTKMBS32DR.mediatek.inc (172.27.6.104) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 28 May 2019 01:24:17 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS32DR.mediatek.inc
+ (172.27.6.104) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 28 May 2019 16:24:14 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 28 May 2019 16:24:13 +0800
+Message-ID: <1559031853.10179.441.camel@mhfsdcap03>
+Subject: Re: [v3 PATCH] usb: create usb_debug_root for gadget only
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
+ <balbi@kernel.org>
+Date: Tue, 28 May 2019 16:24:13 +0800
+In-Reply-To: <cffd6d75f69e4d908c8f39b8a60ddae27d6b7c88.1559028752.git.chunfeng.yun@mediatek.com>
+References: <cffd6d75f69e4d908c8f39b8a60ddae27d6b7c88.1559028752.git.chunfeng.yun@mediatek.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: C96933C95D958AC6AE24513B8160BC0AC75F44EAA61D38CE6C91777A0D4E505A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190528_011237_509075_8D87AD07 
-X-CRM114-Status: UNSURE (   9.59  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190528_012439_767895_E859FB48 
+X-CRM114-Status: GOOD (  19.80  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -70,62 +72,129 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, evgreen@chromium.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: linux-usb@vger.kernel.org, Randy Dunlap <rdunlap@infradead.org>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-There might be a racing issue between UFS shutdown and runtime resume
-flow described as below,
+add Felipe, sorry
 
-Thread #1: In UFS shutdown flow with ufshcd_shutdown() is running.
-Thread #2: In UFS runtime-resume flow which invokes
-           ufshcd_runtime_resume() because UFS was in runtime-suspended
-           state while an I/O request was issued.
+On Tue, 2019-05-28 at 15:54 +0800, Chunfeng Yun wrote:
+> When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
+> there is an issue, e.g.:
+> 
+> drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
+> mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
+> 
+> usb_debug_root is currently only built when host is supported
+> (CONFIG_USB is set), for convenience, we also want it created when
+> gadget only is enabled, this patch try to support it.
+> 
+> Reported-by: Randy Dunlap <rdunlap@infradead.org>
+> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> ---
+> v3:
+>   1. still create usb_debug_root for gadget only
+>   2. abandon mtu3's change
+>   3. drop acked-by Randy
+> 
+> v2(resend): add acked-by Randy
+> 
+> v1: fix mtu3's build error, replace usb_debug_root by NULL;
+> ---
+>  drivers/usb/core/usb.c        |  2 +-
+>  drivers/usb/gadget/udc/core.c | 27 +++++++++++++++++++++++++++
+>  include/linux/usb.h           |  1 +
+>  3 files changed, 29 insertions(+), 1 deletion(-)
+> 
+> diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
+> index 7fcb9f782931..88b3ee03a12d 100644
+> --- a/drivers/usb/core/usb.c
+> +++ b/drivers/usb/core/usb.c
+> @@ -1190,7 +1190,7 @@ EXPORT_SYMBOL_GPL(usb_debug_root);
+>  
+>  static void usb_debugfs_init(void)
+>  {
+> -	usb_debug_root = debugfs_create_dir("usb", NULL);
+> +	usb_debug_root = debugfs_create_dir(USB_DEBUG_ROOT_NAME, NULL);
+>  	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
+>  			    &usbfs_devices_fops);
+>  }
+> diff --git a/drivers/usb/gadget/udc/core.c b/drivers/usb/gadget/udc/core.c
+> index 7cf34beb50df..ed45f9429e58 100644
+> --- a/drivers/usb/gadget/udc/core.c
+> +++ b/drivers/usb/gadget/udc/core.c
+> @@ -8,6 +8,7 @@
+>  
+>  #include <linux/kernel.h>
+>  #include <linux/module.h>
+> +#include <linux/debugfs.h>
+>  #include <linux/device.h>
+>  #include <linux/list.h>
+>  #include <linux/err.h>
+> @@ -1587,12 +1588,37 @@ static int usb_udc_uevent(struct device *dev, struct kobj_uevent_env *env)
+>  	return 0;
+>  }
+>  
+> +/* if CONFIG_USB is set, leave USB core to create usb_debug_root */
+> +#ifndef CONFIG_USB
+> +struct dentry *usb_debug_root;
+> +EXPORT_SYMBOL_GPL(usb_debug_root);
+> +
+> +static void usb_debugfs_init(void)
+> +{
+> +	usb_debug_root = debugfs_create_dir(USB_DEBUG_ROOT_NAME, NULL);
+> +}
+> +
+> +static void usb_debugfs_cleanup(void)
+> +{
+> +	debugfs_remove_recursive(usb_debug_root);
+> +}
+> +#else
+> +static void usb_debugfs_init(void)
+> +{}
+> +
+> +static void usb_debugfs_cleanup(void)
+> +{}
+> +#endif
+> +
+>  static int __init usb_udc_init(void)
+>  {
+> +	usb_debugfs_init();
+> +
+>  	udc_class = class_create(THIS_MODULE, "udc");
+>  	if (IS_ERR(udc_class)) {
+>  		pr_err("failed to create udc class --> %ld\n",
+>  				PTR_ERR(udc_class));
+> +		usb_debugfs_cleanup();
+>  		return PTR_ERR(udc_class);
+>  	}
+>  
+> @@ -1604,6 +1630,7 @@ subsys_initcall(usb_udc_init);
+>  static void __exit usb_udc_exit(void)
+>  {
+>  	class_destroy(udc_class);
+> +	usb_debugfs_cleanup();
+>  }
+>  module_exit(usb_udc_exit);
+>  
+> diff --git a/include/linux/usb.h b/include/linux/usb.h
+> index ae82d9d1112b..9c6e7b3265af 100644
+> --- a/include/linux/usb.h
+> +++ b/include/linux/usb.h
+> @@ -1994,6 +1994,7 @@ extern void usb_register_notify(struct notifier_block *nb);
+>  extern void usb_unregister_notify(struct notifier_block *nb);
+>  
+>  /* debugfs stuff */
+> +#define USB_DEBUG_ROOT_NAME	"usb"
+>  extern struct dentry *usb_debug_root;
+>  
+>  /* LED triggers */
 
-In this scenario, racing may happen and possibly lead to system hang
-if Thread #2 accesses UFS host's register map after host's resource,
-like power or clocks, are disabled by Thread #1.
-
-To avoid this racing, use PM public function pm_runtime_get_sync() in
-shutdown flow instead of internal function ufshcd_runtime_resume() for
-consolidated control of RPM status.
-
-One concern is that pm_runtime_get_sync() may be better paired with
-pm_runtime_put_sync(), however shutdown could be one-way path thus the
-pairing is not required.
-
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Signed-off-by: Peter Wang <peter.wang@mediatek.com>
----
- drivers/scsi/ufs/ufshcd.c | 7 ++-----
- 1 file changed, 2 insertions(+), 5 deletions(-)
-
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index a208589426b1..cce7303f8653 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -8095,11 +8095,8 @@ int ufshcd_shutdown(struct ufs_hba *hba)
- 	if (ufshcd_is_ufs_dev_poweroff(hba) && ufshcd_is_link_off(hba))
- 		goto out;
- 
--	if (pm_runtime_suspended(hba->dev)) {
--		ret = ufshcd_runtime_resume(hba);
--		if (ret)
--			goto out;
--	}
-+	if (pm_runtime_get_sync(hba->dev) < 0)
-+		goto out;
- 
- 	ret = ufshcd_suspend(hba, UFS_SHUTDOWN_PM);
- out:
--- 
-2.18.0
 
 
 _______________________________________________
