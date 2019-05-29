@@ -2,64 +2,95 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4C9BD2D370
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 03:39:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BF1B92D450
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 05:38:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mJszm53iNCmf3nFt95QNQCfBg1Q+cdUAEiZ4iGBG4CM=; b=Fvojg5sjqoeyRA
-	QO2y5dGenz52QC04XPg7xm1VqzSDSWyufgz7C9Ax8qABdHP2XaEifgykow3Bzp4Pq9eeqZdkM2VaZ
-	FtEbCpwjm9FO1OTamu1FW+9+0gmu8MyIYe0jYUZK7uLmUecMRKu0T8wqRAlWyufucXEsv1T+GJn9Y
-	Y2L0B4oIQ/3gct7z/6dxrw69VD5SsAB0hmJVv/tiVXTsyQNLpKVMKy1ZaXvekz6ec98GnBByAkVBG
-	SCBcxT9RCXvPKYP67EsvkEzHVkDodRNETmizPlnASxCbjDtLZ2NYRwK1x/OX/I18WRTq/cFeS4uDe
-	FDvJ3A7FFmQ28xL8Zn7w==;
+	List-Owner; bh=akz7WGfR5O9qxLMQh3Ijwdxdj2+bwr0TzLMwABkD9lE=; b=YfAUX1jhHtXGg6
+	6vUp70mMhB4QEyvhsyMUd37xa8EH6FnLqC2YYGJBLREgsM3saWxyvQG12kGVcIou/w+bhspqJTX0F
+	MAxGj/toI6AKIjmLx4OxvJN7IbESGfHYHfNA747JetQmqRGtiE7sLKexPc/wxFiO3hDjikPcCFQ2O
+	cpOvFXaigKuo2zaN1b8RytIXTPDcF0miuFipZuHZUeG0x82nsF4mn7eFecnwOnII+Zs6nTjBr/dNf
+	2aV+PUlaQp72ifsxqLnoDKfFdM9SkV1lR5wcoQDgk37x6JbU+JNts4sScnwLf8m+bE7yPtJzIyLLo
+	KgEvhSbQrP6egbgqfB1w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVnYk-0006uo-5I; Wed, 29 May 2019 01:39:18 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hVpQ7-0006kn-Ue; Wed, 29 May 2019 03:38:32 +0000
+Received: from mail-it1-x144.google.com ([2607:f8b0:4864:20::144])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVnYV-0006ff-DL; Wed, 29 May 2019 01:39:04 +0000
-X-UUID: fb87b6ab276948af834c191de1c5b218-20190528
-X-UUID: fb87b6ab276948af834c191de1c5b218-20190528
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1936242824; Tue, 28 May 2019 17:38:51 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 May 2019 18:38:51 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 May 2019 09:38:49 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 29 May 2019 09:38:49 +0800
-From: Biao Huang <biao.huang@mediatek.com>
-To: Jose Abreu <joabreu@synopsys.com>
-Subject: [v4,
- PATCH] net: stmmac: add support for hash table size 128/256 in dwmac4
-Date: Wed, 29 May 2019 09:38:44 +0800
-Message-ID: <1559093924-7791-2-git-send-email-biao.huang@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1559093924-7791-1-git-send-email-biao.huang@mediatek.com>
-References: <1559093924-7791-1-git-send-email-biao.huang@mediatek.com>
+ id 1hVpQ3-0006k7-4f
+ for linux-mediatek@lists.infradead.org; Wed, 29 May 2019 03:38:28 +0000
+Received: by mail-it1-x144.google.com with SMTP id a186so1380137itg.0
+ for <linux-mediatek@lists.infradead.org>; Tue, 28 May 2019 20:38:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=mIbWrLxXAUE8DdyCUYuINo2mEcBTR51/ocvmSZbFSDw=;
+ b=lcHDc2Op9T8SoWV1TcTU9MzPj1yUXZKCIdo2qqKUeKkLApgMEYjVonwfqLSxyI8jUr
+ dutzBgiBuJt/RUNJqMJHifw/vSAqE9DuDbryE6gSznXK7pHOVR5vgSrMKXYWJPlFOpls
+ VzVfrKJwU1ySbtqwH+I71n0GF+r1wIXnbJxRI=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=mIbWrLxXAUE8DdyCUYuINo2mEcBTR51/ocvmSZbFSDw=;
+ b=iSzPK7kGySQt4DXuw44j5kth5zQdrCSJZoJOCC7sWJIXpoL8/vSeGgB0+mhScqoJxq
+ ugJ4/A4/uCsBV66cwZfNBGqmMNK0kBx79AiQ9+Uwm6lxefnzobmVRoCG99ZaA1WVTtoO
+ VshtlgkqTzcjM3Ep5L381bSTc+8dSQPsEd0aZIsNBbWSBFwWjFsfGI2zdCmqFOzvgAVi
+ mjr7OKdiaXst0dihBNEq63WSTjjQbdeNzOccrYTgOn3NRq7mVOBjTIycGLqwgZWxUOvm
+ Q3E7YUZEXCLJOqI5o2BPx3R6lYpi7KmWot0HV1Bj9Nj+BE7aGag1svppMXr3piEJHgY0
+ Y5nQ==
+X-Gm-Message-State: APjAAAWXTCXpEqryzNMxYn5/4khkDOqyyTUX2e8YOS6HUwh0U200JyVz
+ 6GcxHvIvyoU7TILQ64BaWAUExhyXvx0VJIEr
+X-Google-Smtp-Source: APXvYqwuF0vpn7bKZieVv2BducF9p0C2n6HfpairOlgK/sht0ZlerwWimxmrUpDvXn7cNl6idmcc5A==
+X-Received: by 2002:a24:753:: with SMTP id f80mr5390885itf.120.1559101105518; 
+ Tue, 28 May 2019 20:38:25 -0700 (PDT)
+Received: from mail-io1-f52.google.com (mail-io1-f52.google.com.
+ [209.85.166.52])
+ by smtp.gmail.com with ESMTPSA id z198sm485799itb.11.2019.05.28.20.38.23
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
+ Tue, 28 May 2019 20:38:24 -0700 (PDT)
+Received: by mail-io1-f52.google.com with SMTP id r185so591697iod.6
+ for <linux-mediatek@lists.infradead.org>; Tue, 28 May 2019 20:38:23 -0700 (PDT)
+X-Received: by 2002:a5e:db02:: with SMTP id q2mr308707iop.306.1559101103189;
+ Tue, 28 May 2019 20:38:23 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <20190417104511.21514-1-frederic.chen@mediatek.com>
+ <20190417104511.21514-7-frederic.chen@mediatek.com>
+ <20190509094846.GA65444@google.com>
+ <1558466055.15388.342.camel@mtksdccf07> <20190522102514.GA218991@chromium.org>
+ <1558619189.7995.27.camel@mtksdccf07>
+In-Reply-To: <1558619189.7995.27.camel@mtksdccf07>
+From: Tomasz Figa <tfiga@chromium.org>
+Date: Wed, 29 May 2019 12:38:11 +0900
+X-Gmail-Original-Message-ID: <CAAFQd5BbrfhjGbKaUi4p6fJJNOKvkZb4_47gw-W8n5fEmaf5XQ@mail.gmail.com>
+Message-ID: <CAAFQd5BbrfhjGbKaUi4p6fJJNOKvkZb4_47gw-W8n5fEmaf5XQ@mail.gmail.com>
+Subject: Re: [RFC PATCH V1 6/6] platform: mtk-isp: Add Mediatek DIP driver
+To: Frederic Chen <frederic.chen@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190528_183903_453712_52AEE7E6 
-X-CRM114-Status: GOOD (  18.88  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190528_203827_206190_AC96F5A6 
+X-CRM114-Status: GOOD (  26.89  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:144 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,185 +102,124 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
- Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
- biao.huang@mediatek.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
+Cc: Shik Chen <shik@chromium.org>, devicetree@vger.kernel.org,
+ =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
+ Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
+ =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
+ srv_heupstream <srv_heupstream@mediatek.com>,
+ =?UTF-8?B?SG9sbWVzIENoaW91ICjpgrHmjLop?= <holmes.chiou@mediatek.com>,
+ suleiman@chromium.org, Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>,
+ =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
+ Sj Huang <sj.huang@mediatek.com>, yuzhao@chromium.org,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ zwisler@chromium.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Hans Verkuil <hans.verkuil@cisco.com>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-1. get hash table size in hw feature reigster, and add support
-for taller hash table(128/256) in dwmac4.
-2. only clear GMAC_PACKET_FILTER bits used in this function,
-to avoid side effect to functions of other bits.
+On Thu, May 23, 2019 at 10:46 PM Frederic Chen
+<frederic.chen@mediatek.com> wrote:
+>
+> Dear Tomasz,
+>
+> Thank you for your comments.
+>
+>
+> On Wed, 2019-05-22 at 19:25 +0900, Tomasz Figa wrote:
+> > Hi Frederic,
+> >
+> > On Wed, May 22, 2019 at 03:14:15AM +0800, Frederic Chen wrote:
+> > > Dear Tomasz,
+> > >
+> > > I appreciate your comment. It is very helpful for us.
+> > >
+> >
+> > You're welcome. Thanks for replying to all the comments. I'll skip those
+> > resolved in my reply to keep the message shorter.
+> >
+> > >
+> > > On Thu, 2019-05-09 at 18:48 +0900, Tomasz Figa wrote:
+> > > > Hi Frederic,
+> > > >
+> > > > On Wed, Apr 17, 2019 at 7:45 PM Frederic Chen <frederic.chen@mediatek.com> wrote:
+[snip]
+> > > > Also a general note - a work can be queued only once. This means that
+> > > > current code races when two dip_works are attempted to be queued very
+> > > > quickly one after another (or even at the same time from different threads).
+> > > >
+> > > > I can think of two potential options for fixing this:
+> > > >
+> > > > 1) Loop in the work function until there is nothing to queue to the hardware
+> > > >    anymore - but this needs tricky synchronization, because there is still
+> > > >    short time at the end of the work function when a new dip_work could be
+> > > >    added.
+> > > >
+> > > > 2) Change this to a kthread that just keeps running in a loop waiting for
+> > > >    some available dip_work to show up and then sending it to the firmware.
+> > > >    This should be simpler, as the kthread shouldn't have a chance to miss
+> > > >    any dip_work queued.
+> > > >
+> > > > I'm personally in favor of option 2, as it should simplify the
+> > > > synchronization.
+> > > >
+> > >
+> > > I would like to re-design this part with a kthread in the next patch.
+> >
+> > Actually I missed another option. We could have 1 work_struct for 1
+> > request and then we could keep using a workqueue. Perhaps that could be
+> > simpler than a kthread.
+> >
+> > Actually, similar approach could be used for the dip_runner_func.
+> > Instead of having a kthread looping, we could just have another
+> > workqueue and 1 dip_runner_work per 1 request. Then we wouldn't need to
+> > do the waiting loop ourselves anymore.
+> >
+> > Does it make sense?
+>
+> Yes, it make sense. Let me summarize the modification about the flow.
+>
+> First, we will have two work_struct in mtk_dip_request.
+>
+> struct mtk_dip_request {
+>         struct media_request request;
+>         //...
+>         /* Prepare DIP part hardware configurtion */
+>         struct mtk_dip_hw_submit_work submit_work;
+>         /* Replace dip_running thread jobs*/
+>         struct mtk_dip_hw_composing_work composing_work;
+>         /* Only for composing error handling */
+>         struct mtk_dip_hw_mdpcb_timeout_work timeout_work;
+> };
+>
+> Second, the overall flow of handling each request is :
+>
+> 1. mtk_dip_hw_enqueue calls queue_work() to put submit_work into its
+>    workqueue
+> 2. submit_work sends IMG_IPI_FRAME command to SCP to prepare DIP
+>    hardware configuration
+> 3. dip_scp_handler receives the IMG_IPI_FRAME result from SCP
+> 4. dip_scp_handler calls queue_work() to put composing_work (instead
+>    of original dip_running thread jobs) into its workqueue
+> 5. composing_work calls dip_mdp_cmdq_send() to finish the mdp part tasks
+> 6. dip_mdp_cb_func() trigged by MDP driver calls vb2_buffer_done to
+>    return the buffer (no workqueue required here)
+>
 
-Signed-off-by: Biao Huang <biao.huang@mediatek.com>
----
- drivers/net/ethernet/stmicro/stmmac/common.h      |    7 +--
- drivers/net/ethernet/stmicro/stmmac/dwmac4.h      |    4 +-
- drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c |   49 ++++++++++++---------
- drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c  |    1 +
- drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    4 ++
- 5 files changed, 40 insertions(+), 25 deletions(-)
+Sounds good to me, but actually then simply making the workqueues
+freezable doesn't solve the suspend/resume problem, because the work
+functions wouldn't wait for the firmware/hardware completion anymore.
+That's also okay, but in this case we need to add some code to suspend
+to wait for any pending operations to complete.
 
-diff --git a/drivers/net/ethernet/stmicro/stmmac/common.h b/drivers/net/ethernet/stmicro/stmmac/common.h
-index 1961fe9..26bbcd8 100644
---- a/drivers/net/ethernet/stmicro/stmmac/common.h
-+++ b/drivers/net/ethernet/stmicro/stmmac/common.h
-@@ -335,6 +335,7 @@ struct dma_features {
- 	/* 802.3az - Energy-Efficient Ethernet (EEE) */
- 	unsigned int eee;
- 	unsigned int av;
-+	unsigned int hash_tb_sz;
- 	unsigned int tsoen;
- 	/* TX and RX csum */
- 	unsigned int tx_coe;
-@@ -428,9 +429,9 @@ struct mac_device_info {
- 	struct mii_regs mii;	/* MII register Addresses */
- 	struct mac_link link;
- 	void __iomem *pcsr;     /* vpointer to device CSRs */
--	int multicast_filter_bins;
--	int unicast_filter_entries;
--	int mcast_bits_log2;
-+	unsigned int multicast_filter_bins;
-+	unsigned int unicast_filter_entries;
-+	unsigned int mcast_bits_log2;
- 	unsigned int rx_csum;
- 	unsigned int pcs;
- 	unsigned int pmt;
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4.h b/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-index 01c1089..a37e09b 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-@@ -18,8 +18,7 @@
- /*  MAC registers */
- #define GMAC_CONFIG			0x00000000
- #define GMAC_PACKET_FILTER		0x00000008
--#define GMAC_HASH_TAB_0_31		0x00000010
--#define GMAC_HASH_TAB_32_63		0x00000014
-+#define GMAC_HASH_TAB(x)		(0x10 + x * 4)
- #define GMAC_RX_FLOW_CTRL		0x00000090
- #define GMAC_QX_TX_FLOW_CTRL(x)		(0x70 + x * 4)
- #define GMAC_TXQ_PRTY_MAP0		0x98
-@@ -184,6 +183,7 @@ enum power_event {
- #define GMAC_HW_FEAT_MIISEL		BIT(0)
- 
- /* MAC HW features1 bitmap */
-+#define GMAC_HW_HASH_TB_SZ		GENMASK(25, 24)
- #define GMAC_HW_FEAT_AVSEL		BIT(20)
- #define GMAC_HW_TSOEN			BIT(18)
- #define GMAC_HW_TXFIFOSIZE		GENMASK(10, 6)
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-index 5e98da4..2544cff 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-@@ -403,41 +403,50 @@ static void dwmac4_set_filter(struct mac_device_info *hw,
- 			      struct net_device *dev)
- {
- 	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
--	unsigned int value = 0;
-+	int numhashregs = (hw->multicast_filter_bins >> 5);
-+	int mcbitslog2 = hw->mcast_bits_log2;
-+	unsigned int value;
-+	int i;
- 
-+	value = readl(ioaddr + GMAC_PACKET_FILTER);
-+	value &= ~GMAC_PACKET_FILTER_HMC;
-+	value &= ~GMAC_PACKET_FILTER_HPF;
-+	value &= ~GMAC_PACKET_FILTER_PCF;
-+	value &= ~GMAC_PACKET_FILTER_PM;
-+	value &= ~GMAC_PACKET_FILTER_PR;
- 	if (dev->flags & IFF_PROMISC) {
- 		value = GMAC_PACKET_FILTER_PR | GMAC_PACKET_FILTER_PCF;
- 	} else if ((dev->flags & IFF_ALLMULTI) ||
--			(netdev_mc_count(dev) > HASH_TABLE_SIZE)) {
-+		   (netdev_mc_count(dev) > hw->multicast_filter_bins)) {
- 		/* Pass all multi */
--		value = GMAC_PACKET_FILTER_PM;
--		/* Set the 64 bits of the HASH tab. To be updated if taller
--		 * hash table is used
--		 */
--		writel(0xffffffff, ioaddr + GMAC_HASH_TAB_0_31);
--		writel(0xffffffff, ioaddr + GMAC_HASH_TAB_32_63);
-+		value |= GMAC_PACKET_FILTER_PM;
-+		/* Set all the bits of the HASH tab */
-+		for (i = 0; i < numhashregs; i++)
-+			writel(0xffffffff, ioaddr + GMAC_HASH_TAB(i));
- 	} else if (!netdev_mc_empty(dev)) {
--		u32 mc_filter[2];
-+		u32 mc_filter[8];
- 		struct netdev_hw_addr *ha;
- 
- 		/* Hash filter for multicast */
--		value = GMAC_PACKET_FILTER_HMC;
-+		value |= GMAC_PACKET_FILTER_HMC;
- 
- 		memset(mc_filter, 0, sizeof(mc_filter));
- 		netdev_for_each_mc_addr(ha, dev) {
--			/* The upper 6 bits of the calculated CRC are used to
--			 * index the content of the Hash Table Reg 0 and 1.
-+			/* The upper n bits of the calculated CRC are used to
-+			 * index the contents of the hash table. The number of
-+			 * bits used depends on the hardware configuration
-+			 * selected at core configuration time.
- 			 */
--			int bit_nr =
--				(bitrev32(~crc32_le(~0, ha->addr, 6)) >> 26);
--			/* The most significant bit determines the register
--			 * to use while the other 5 bits determines the bit
--			 * within the selected register
-+			int bit_nr = bitrev32(~crc32_le(~0, ha->addr,
-+					ETH_ALEN)) >> (32 - mcbitslog2);
-+			/* The most significant bit determines the register to
-+			 * use (H/L) while the other 5 bits determine the bit
-+			 * within the register.
- 			 */
--			mc_filter[bit_nr >> 5] |= (1 << (bit_nr & 0x1F));
-+			mc_filter[bit_nr >> 5] |= (1 << (bit_nr & 0x1f));
- 		}
--		writel(mc_filter[0], ioaddr + GMAC_HASH_TAB_0_31);
--		writel(mc_filter[1], ioaddr + GMAC_HASH_TAB_32_63);
-+		for (i = 0; i < numhashregs; i++)
-+			writel(mc_filter[i], ioaddr + GMAC_HASH_TAB(i));
- 	}
- 
- 	value |= GMAC_PACKET_FILTER_HPF;
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-index edb6053..59afb53 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-@@ -354,6 +354,7 @@ static void dwmac4_get_hw_feature(void __iomem *ioaddr,
- 
- 	/* MAC HW feature1 */
- 	hw_cap = readl(ioaddr + GMAC_HW_FEATURE1);
-+	dma_cap->hash_tb_sz = (hw_cap & GMAC_HW_HASH_TB_SZ) >> 24;
- 	dma_cap->av = (hw_cap & GMAC_HW_FEAT_AVSEL) >> 20;
- 	dma_cap->tsoen = (hw_cap & GMAC_HW_TSOEN) >> 18;
- 	/* RX and TX FIFO sizes are encoded as log2(n / 128). Undo that by
-diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-index 8fcbf22..ed0d10e 100644
---- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-@@ -4166,6 +4166,10 @@ static int stmmac_hw_init(struct stmmac_priv *priv)
- 		priv->plat->enh_desc = priv->dma_cap.enh_desc;
- 		priv->plat->pmt = priv->dma_cap.pmt_remote_wake_up;
- 		priv->hw->pmt = priv->plat->pmt;
-+		if (priv->dma_cap.hash_tb_sz) {
-+			priv->hw->multicast_filter_bins = BIT(priv->dma_cap.hash_tb_sz) * 32;
-+			priv->hw->mcast_bits_log2 = ilog2(priv->hw->multicast_filter_bins);
-+		}
- 
- 		/* TXCOE doesn't work in thresh DMA mode */
- 		if (priv->plat->force_thresh_dma_mode)
--- 
-1.7.9.5
-
+Best regards,
+Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
