@@ -2,67 +2,90 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AD3D02D602
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 09:13:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DE8B22D68D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 09:40:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pZ58r+lAW6f1rnzIc2DXY1LT9V0Hi85SKEC4IlXQQho=; b=gDfHF2NMnKCogQ
-	GiLgfNts+olxbk/C083gmKSl8KzSC/ZXkQO5uMLhxnLa6H21FiAURPMZsdsREyLoFA73zVQrvfAD1
-	6wDU3D5lBjVinvWAb1FrW83RBoQ0xRv9o9MQFGhtysY8jj4qpZ8LEx7lWC4O6rNCvZRY59Vhgm9iE
-	wYENb2JYRlW5VQlZhSDcb4I9oUb9unWqH66mMZlQsDGtyRfNB2cpOq2Z0J6Sbd5gvdEajUhcc6IVZ
-	cKRUI0Y+/ltzPl5xOk2XIP/5BV9DM7rpefFk794jmwwb1P+a+h9TF0dzW2lPfCtmg8lhV3J+58KE6
-	Ma8G93A34XcmQ+83L2Ag==;
+	List-Owner; bh=NrG1b5WmQ8R2hm/LQemNHV1ZeMwH5+EDwvILcPtOdnQ=; b=W3pcCFt23tcdSw
+	+ySPao3NCr/vq0Hb+3EPwI+u2vDQxX+HYL8HGxqwG6RyMReORTFNZfW4BXscp1YV+vQjxX0396GWQ
+	IxX6C5+fRypR3RvUhRQAJQ3WxdJ7BXvcm9OPECo8VgSQCDA69qBeXs2FyNs5oWQSHvXOep6SUZtHI
+	DdDOmtgBNoqYJ7rMbR/pcPx13t1j1mTOEDw/FeZRqJmu57HyF2euBc59FkL64GZnKeDdU1EqQ5KZj
+	MSzphoXqUApSrUwJmrOol75RFnUfAeg/8nNVbUdjxsTEWlvfjethIwHER6UmO+rW5T9kpbrk1nJSt
+	1+MBL7OzUZ1IJw5HymKw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVslb-0000jl-Ok; Wed, 29 May 2019 07:12:55 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hVtC5-0004wA-0B; Wed, 29 May 2019 07:40:17 +0000
+Received: from dc2-smtprelay2.synopsys.com ([198.182.61.142]
+ helo=smtprelay-out1.synopsys.com)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVslY-0000iv-Dd; Wed, 29 May 2019 07:12:54 +0000
-X-UUID: e38dba6e695f42b89a7861883f15d81b-20190528
-X-UUID: e38dba6e695f42b89a7861883f15d81b-20190528
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2023928018; Tue, 28 May 2019 23:12:38 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 May 2019 00:12:37 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 May 2019 15:12:35 +0800
-Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 29 May 2019 15:12:35 +0800
-Message-ID: <1559113955.4226.1.camel@mtksdaap41>
-Subject: Re: [PATCH 2/3] drm: mediatek: remove clk_unprepare() in
- mtk_drm_crtc_destroy()
-From: CK Hu <ck.hu@mediatek.com>
-To: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Wed, 29 May 2019 15:12:35 +0800
-In-Reply-To: <CAJMQK-gQ_j4ma_EjGbFJOz6WGXy3UZA0F9JZYnFHPZ0F08rXog@mail.gmail.com>
-References: <20190527045054.113259-1-hsinyi@chromium.org>
- <20190527045054.113259-3-hsinyi@chromium.org>
- <1559109490.15592.6.camel@mtksdaap41>
- <CAJMQK-gQ_j4ma_EjGbFJOz6WGXy3UZA0F9JZYnFHPZ0F08rXog@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hVtBw-0003dZ-46; Wed, 29 May 2019 07:40:09 +0000
+Received: from mailhost.synopsys.com (badc-mailhost2.synopsys.com
+ [10.192.0.18])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+ (No client certificate requested)
+ by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id 305D0C263A;
+ Wed, 29 May 2019 07:39:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=synopsys.com; s=mail;
+ t=1559115584; bh=u0bHvq09qbXFfPIAKp6YPrwchkqDTwxdAG0Y1BAOgdk=;
+ h=From:To:CC:Subject:Date:References:In-Reply-To:From;
+ b=lkJyzDP25Iq5Bo1MkV7iN3kRiuFWrghtGGqU3Xu15XD6DGkmrZI7mPOucZQPcX281
+ /3XhmhGqVJEOtctZctfG9bKvjGYFF3JZjyaURA28P+YVo1r5hEcZxhm571aN26dbrd
+ qw+1xHh8xk+/Iz64V1t+Iqj+fdW8AWDQq/LMlpn3o6r89wsXuo9eCrZATweQ3EaPEH
+ pPKdptPsTFlx/0EnN3fG/Fx9g6hG67rKjHFhuoM7Q7IvrV6VpTRqJidrxwHCvLZalE
+ QWryRDqmQIzyaAghUme5LnU+WnwIYs4PyNZzjjHS0CIH7Lnr1C5DoRQ9cTFghvDj+M
+ RQLMD2AF8w2DQ==
+Received: from US01WEHTC3.internal.synopsys.com
+ (us01wehtc3.internal.synopsys.com [10.15.84.232])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mailhost.synopsys.com (Postfix) with ESMTPS id 74DCBA0070;
+ Wed, 29 May 2019 07:39:52 +0000 (UTC)
+Received: from DE02WEHTCA.internal.synopsys.com (10.225.19.92) by
+ US01WEHTC3.internal.synopsys.com (10.15.84.232) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Wed, 29 May 2019 00:39:51 -0700
+Received: from DE02WEMBXB.internal.synopsys.com ([fe80::95ce:118a:8321:a099])
+ by DE02WEHTCA.internal.synopsys.com ([::1]) with mapi id
+ 14.03.0415.000; Wed, 29 May 2019 09:39:49 +0200
+From: Jose Abreu <Jose.Abreu@synopsys.com>
+To: Biao Huang <biao.huang@mediatek.com>
+Subject: RE: [v4, PATCH] net: stmmac: add support for hash table size
+ 128/256 in dwmac4
+Thread-Topic: [v4, PATCH] net: stmmac: add support for hash table size
+ 128/256 in dwmac4
+Thread-Index: AQHVFb9bD/NyYV8x/ESH/6Rc+9wGiKaBtu5A
+Date: Wed, 29 May 2019 07:39:49 +0000
+Message-ID: <78EB27739596EE489E55E81C33FEC33A0B932F51@DE02WEMBXB.internal.synopsys.com>
+References: <1559093924-7791-1-git-send-email-biao.huang@mediatek.com>
+ <1559093924-7791-2-git-send-email-biao.huang@mediatek.com>
+In-Reply-To: <1559093924-7791-2-git-send-email-biao.huang@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [10.107.19.176]
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_001252_464978_6D44B080 
-X-CRM114-Status: GOOD (  14.25  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190529_004008_171381_01A22A02 
+X-CRM114-Status: UNSURE (   8.32  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,53 +97,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- lkml <linux-kernel@vger.kernel.org>, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
+ "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Hsin-Yi:
+From: Biao Huang <biao.huang@mediatek.com>
+Date: Wed, May 29, 2019 at 02:38:44
 
-On Wed, 2019-05-29 at 14:08 +0800, Hsin-Yi Wang wrote:
-> On Wed, May 29, 2019 at 1:58 PM CK Hu <ck.hu@mediatek.com> wrote:
-> >
-> > Hi, Hsin-Yi:
-> >
-> > On Mon, 2019-05-27 at 12:50 +0800, Hsin-Yi Wang wrote:
-> > > There is no clk_prepare() called in mtk_drm_crtc_reset(), when unbinding
-> > > drm device, mtk_drm_crtc_destroy() will be triggered, and the clocks will
-> > > be disabled and unprepared in mtk_crtc_ddp_clk_disable. If clk_unprepare()
-> > > is called here, we'll get warnings[1], so remove clk_unprepare() here.
-> >
-> > In original code, clk_prepare() is called in mtk_drm_crtc_create() and
-> > clk_unprepare() is called in mtk_drm_crtc_destroy(). This looks correct.
-> 
-> clk_prepare() is removed in https://patchwork.kernel.org/patch/10872777/.
-> 
+>  	} else if (!netdev_mc_empty(dev)) {
+> -		u32 mc_filter[2];
+> +		u32 mc_filter[8];
+>  		struct netdev_hw_addr *ha;
 
-I think this patch is a fix of that patch, and I've already applied that
-patch, so I merge this patch with that patch in my tree [1], thanks.
+The reverse christmas tree also applies here.
 
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commit/937f861def1a1d49abb92e041efaa5c259281fbf
+I also see some coding-style errors, like missing line breaks, etc... 
+that checkpatch should complain about.
 
-Regards,
-CK
+Also, please run this patch against stmmac selftests and add the output 
+to the commit log.
 
-> > I don't know why we should do any thing about clock in
-> > mtk_drm_crtc_reset(). To debug this, the first step is to print message
-> > when mediatek drm call clk_prepare() and clk_unprepare(). If these two
-> > interface is called in pair, I think we should not modify mediatek drm
-> > driver, the bug maybe in clock driver.
-> >
-
-
+Thanks,
+Jose Miguel Abreu
 
 _______________________________________________
 Linux-mediatek mailing list
