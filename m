@@ -2,92 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C6EAB2D94F
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 11:43:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CC8CD2D961
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 11:47:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PEbDhtzMJK8p7ZAuVG+uuvk9t+hdiyk4lTVf7kFc7eo=; b=jUEJQK4SOLJsai
-	6yTPuAxHnSzr35HDXFs576i/bEOhlBeG4SFy5wIWoNd4BbaoPsVo95287Y3jrDykSa+lYOjK5WmlC
-	uSRFrGs0AaeW3u5FwttkwvPLzQ16teZunfI9iXazkVQsQCtYzyPyNBO7GF7sYlSKgD1huJUEufxWd
-	614hd+2/0h7QFGOWSLbFFqhe4yrVa2SHS3hv5IBam9h+V6FQPjCqWgIvx2ZmT8/A/k5lrbqaUvqV6
-	jfUkctj+BTFmFmxDKoVGlkvueiyk2okDCH6Ot3nkAG5Ry6eimsfxS3PXCG27ZpkCvYE4j8zzSmmzj
-	tSt+BssJZKpM30ygI/mw==;
+	List-Owner; bh=ZaZyHgz0G27OT6yoJIRlI3nDAbK8zoa2vYyPCnOpkDo=; b=VH9PUAkPlj3vjs
+	ZT45Rg95445O9IEnja5iDjrqs2uvX1JcjgYtGW+6xCgDyYprpJ/ZAYS/VvS2J3iPz7RlQBusZViOS
+	Q5zHZaYxGFb6RCfwb1gKMkx6l+U5NzNsifABhItxH+WhzMd/OKUrQgk48+0djT7ORPqvBy0C/zYvz
+	bGemij5dD/Je9DC+41cRNXjYD/uyRmr02Wct700tdl92/rI23Bd6pvSsBjb/s+ZkCiWG4VvoD5Q06
+	OYT2gID5t+B2GVpE/0gFv3LSf47Gt3t2JIlrasorp5fsHxw3Sh0QmlodiVqy8Vb06vkM+T2BarufF
+	7ET8SBF8K6JrLqHPL68Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVv7L-0004fF-Fq; Wed, 29 May 2019 09:43:31 +0000
-Received: from mail-it1-x141.google.com ([2607:f8b0:4864:20::141])
+	id 1hVvAz-00077A-16; Wed, 29 May 2019 09:47:17 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVv76-0004Ru-7w
- for linux-mediatek@lists.infradead.org; Wed, 29 May 2019 09:43:17 +0000
-Received: by mail-it1-x141.google.com with SMTP id u186so2505810ith.0
- for <linux-mediatek@lists.infradead.org>; Wed, 29 May 2019 02:43:15 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=1vwG6ed0prywy+z8KiREagdtZuNI9VOig8toshOVg54=;
- b=chAc1nMBM1I/RScOIuvOknRcBCvKLY8OQacCAciGX3D4YaWn/Hh24EppGZcPDR0rDf
- JHQduWJ7lOTPO9GrnA747wXh+eW9eJcInXMAHBfodLWGHDLOBUrUkr7vmIZjD6yOGYuy
- Wq2Xg8f3PCCgKgmrlyIzWc7LQ2QU09gR978fdQ0MnbskpGMWtvMOQuK1G/AFvl9j5su4
- sQcSUZUvFm3Dke07chnv0kr0O5FP+wjvCyp09+/uzd9NrFa0gNeiXqvqfY/XE2h1or1v
- gzc49DcdJPtvkp8DGycOBdeqgyO1/x/0DnBWZDLCiuMgNK5NgsIxxO77m0ZOkBhAm7H/
- MB+w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=1vwG6ed0prywy+z8KiREagdtZuNI9VOig8toshOVg54=;
- b=G18ldpd1TwG0e/2tjjeYUHY6/zN9geZaD+jN8tbz5k0MCqzD5rMRyVSpQuyziP6sJ9
- ZA7Y3+T6iSBq7/ZIHl1e2Tzu6tkg1BbywurWmTCIjLEWpFksFY3jJpK8fC/KxoUT8fKe
- lO40Z8sS1yynv7sORq70cBfvO9+ga3vlY5ChnVtLyN7Xjrm7Jz9R6CjDVJHMlfBRgTkq
- iEZcQxkdhz5pc1P00ZGy4Q4voZua6pbnTZsiNGzD40Q5DnKtVKNXEi5xLa+Nw+xPAmS/
- A7bOmu9NpTq30KXoBD/RKvxXcXwqVPs8gYc+ZohTn9pPMADOFfaZugUkzqkE2Z+14E7X
- FfUA==
-X-Gm-Message-State: APjAAAV/+tqpfkFhoPh8Q8eG0YwcVChYdcrfv6vWHi331G8HiwZg70lI
- srEQQIxOm3LsWsdLaQRUOIR8gpCDJ6BoNe2xfv1F0g==
-X-Google-Smtp-Source: APXvYqzOol0fDJQfwGvb3+ZpLxlDyeBB7gKfR/q2fZYceJu/nmlQBxb+cmhFz/G3/FlwRFiCO6ubKizNA6OPnTs6xPk=
-X-Received: by 2002:a02:1384:: with SMTP id 126mr13105640jaz.72.1559122994696; 
- Wed, 29 May 2019 02:43:14 -0700 (PDT)
+ id 1hVvAs-0006yc-7F; Wed, 29 May 2019 09:47:13 +0000
+X-UUID: 13efe01553a0480b8f1e9893897760b7-20190529
+X-UUID: 13efe01553a0480b8f1e9893897760b7-20190529
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1913855606; Wed, 29 May 2019 01:47:05 -0800
+Received: from mtkmbs03n2.mediatek.inc (172.21.101.182) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 02:47:04 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs03n2.mediatek.inc (172.21.101.182) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 17:47:02 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 29 May 2019 17:47:02 +0800
+Message-ID: <1559123222.6582.2.camel@mtksdaap41>
+Subject: Re: [PATCH 3/3] drm: mediatek: unbind components in mtk_drm_unbind()
+From: CK Hu <ck.hu@mediatek.com>
+To: Hsin-Yi Wang <hsinyi@chromium.org>
+Date: Wed, 29 May 2019 17:47:02 +0800
+In-Reply-To: <20190527045054.113259-4-hsinyi@chromium.org>
+References: <20190527045054.113259-1-hsinyi@chromium.org>
+ <20190527045054.113259-4-hsinyi@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <1559027797-30303-1-git-send-email-walter-zh.wu@mediatek.com>
- <CACT4Y+aCnODuffR7PafyYispp_U+ZdY1Dr0XQYvmghkogLJzSw@mail.gmail.com>
- <1559122529.17186.24.camel@mtksdccf07>
-In-Reply-To: <1559122529.17186.24.camel@mtksdccf07>
-From: Dmitry Vyukov <dvyukov@google.com>
-Date: Wed, 29 May 2019 11:43:02 +0200
-Message-ID: <CACT4Y+a__7FQxqbzowLq5KOZGyBys90S8=HP_Gqu_KoNm7W39w@mail.gmail.com>
-Subject: Re: [PATCH] kasan: add memory corruption identification for software
- tag-based mode
-To: Walter Wu <walter-zh.wu@mediatek.com>
+X-TM-SNTS-SMTP: 0D67655A3172A9E677B28064701E21555F16641623DFE39541481F10AB8379D22000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_024316_371405_E24A4F30 
-X-CRM114-Status: GOOD (  27.73  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20190529_024710_316707_24427C20 
+X-CRM114-Status: GOOD (  17.17  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:141 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 T_DKIMWL_WL_MED        DKIMwl.org - Medium sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -99,105 +72,87 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Catalin Marinas <catalin.marinas@arm.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
- Linux-MM <linux-mm@kvack.org>, Miles Chen <miles.chen@mediatek.com>,
- Alexander Potapenko <glider@google.com>, David Rientjes <rientjes@google.com>,
+Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
- Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gV2VkLCBNYXkgMjksIDIwMTkgYXQgMTE6MzUgQU0gV2FsdGVyIFd1IDx3YWx0ZXItemgud3VA
-bWVkaWF0ZWsuY29tPiB3cm90ZToKPgo+ID4gSGkgV2FsdGVyLAo+ID4KPiA+IFBsZWFzZSBkZXNj
-cmliZSB5b3VyIHVzZSBjYXNlLgo+ID4gRm9yIHRlc3RpbmcgY29udGV4dCB0aGUgZ2VuZXJpYyBL
-QVNBTiB3b3JrcyBiZXR0ZXIgYW5kIGl0IGRvZXMgaGF2ZQo+ID4gcXVhcmFudGluZSBhbHJlYWR5
-LiBGb3IgcHJvZC9jYW5hcnkgZW52aXJvbm1lbnQgdGhlIHF1YXJhbnRpbmUgbWF5IGJlCj4gPiB1
-bmFjY2VwdGFibGUgaW4gbW9zdCBjYXNlcy4KPiA+IEkgdGhpbmsgd2UgYWxzbyB3YW50IHRvIHVz
-ZSB0YWctYmFzZWQgS0FTQU4gYXMgYSBiYXNlIGZvciBBUk0gTVRFCj4gPiBzdXBwb3J0IGluIG5l
-YXIgZnV0dXJlIGFuZCBxdWFyYW50aW5lIHdpbGwgYmUgbW9zdCBsaWtlbHkgdW5hY2NlcHRhYmxl
-Cj4gPiBmb3IgbWFpbiBNVEUgdXNlIGNhc2VzLiBTbyBhdCB0aGUgdmVyeSBsZWFzdCBJIHRoaW5r
-IHRoaXMgc2hvdWxkIGJlCj4gPiBjb25maWd1cmFibGUuICtDYXRhbGluIGZvciB0aGlzLgo+ID4K
-PiBNeSBwYXRjaCBob3BlIHRoZSB0YWctYmFzZWQgS0FTQU4gYnVnIHJlcG9ydCBtYWtlIGl0IGVh
-c2llciBmb3IKPiBwcm9ncmFtbWVycyB0byBzZWUgbWVtb3J5IGNvcnJ1cHRpb24gcHJvYmxlbS4K
-PiBCZWNhdXNlIG5vdyB0YWctYmFzZWQgS0FTQU4gYnVnIHJlcG9ydCBhbHdheXMgc2hvd3Mg4oCc
-aW52YWxpZC1hY2Nlc3PigJ0KPiBlcnJvciwgbXkgcGF0Y2ggY2FuIGlkZW50aWZ5IGl0IHdoZXRo
-ZXIgaXQgaXMgdXNlLWFmdGVyLWZyZWUgb3IKPiBvdXQtb2YtYm91bmQuCj4KPiBXZSBjYW4gdHJ5
-IHRvIG1ha2Ugb3VyIHBhdGNoIGlzIGZlYXR1cmUgb3B0aW9uLiBUaGFua3MgeW91ciBzdWdnZXN0
-aW9uLgo+IFdvdWxkIHlvdSBleHBsYWluIHdoeSB0aGUgcXVhcmFudGluZSBpcyB1bmFjY2VwdGFi
-bGUgZm9yIG1haW4gTVRFPwo+IFRoYW5rcy4KCk1URSBpcyBzdXBwb3NlZCB0byBiZSB1c2VkIG9u
-IGFjdHVhbCBwcm9kdWN0aW9uIGRldmljZXMuCkNvbnNpZGVyIHRoYXQgYnkgc3VibWl0dGluZyB0
-aGlzIHBhdGNoIHlvdSBhcmUgYWN0dWFsbHkgcmVkdWNpbmcKYW1vdW50IG9mIGF2YWlsYWJsZSBt
-ZW1vcnkgb24geW91ciBuZXh0IHBob25lIDspCgoKPiA+IFlvdSBkb24ndCBjaGFuZ2UgdG90YWwg
-cXVhcmFudGluZSBzaXplIGFuZCBjaGFyZ2Ugb25seSBzaXplb2Yoc3RydWN0Cj4gPiBxbGlzdF9v
-YmplY3QpLiBJZiBJIGFtIHJlYWRpbmcgdGhpcyBjb3JyZWN0bHksIHRoaXMgbWVhbnMgdGhhdAo+
-ID4gcXVhcmFudGluZSB3aWxsIGhhdmUgdGhlIHNhbWUgbGFyZ2Ugb3ZlcmhlYWQgYXMgd2l0aCBn
-ZW5lcmljIEtBU0FOLiBXZQo+ID4gd2lsbCBqdXN0IGNhY2hlIG11Y2ggbW9yZSBvYmplY3RzIHRo
-ZXJlLiBUaGUgYm9vdCBiZW5jaG1hcmtzIG1heSBiZQo+ID4gdW5yZXByZXNlbnRhdGl2ZSBmb3Ig
-dGhpcy4gRG9uJ3Qgd2UgbmVlZCB0byByZWR1Y2UgcXVhcmFudGluZSBzaXplIG9yCj4gPiBzb21l
-dGhpbmc/Cj4gPgo+IFllcywgd2Ugd2lsbCB0cnkgdG8gY2hvb3NlIDIuIE15IG9yaWdpbmFsIGlk
-ZWEgaXMgYmVsb25nIHRvIGl0LiBTbyB3ZQo+IHdpbGwgcmVkdWNlIHF1YXJhbnRpbmUgc2l6ZS4K
-Pgo+IDEpLiBJZiBxdWFyYW50aW5lIHNpemUgaXMgdGhlIHNhbWUgd2l0aCBnZW5lcmljIEtBU0FO
-IGFuZCB0YWctYmFzZWQKPiBLQVNBTiwgdGhlbiB0aGUgbWlzcyByYXRlIG9mIHVzZS1hZnRlci1m
-cmVlIGNhc2UgaW4gZ2VuZXJpYyBLQVNBTiBpcwo+IGxhcmdlciB0aGFuIHRhZy1iYXNlZCBLQVNB
-Ti4KPiAyKS4gSWYgdGFnLWJhc2VkIEtBU0FOIHF1YXJhbnRpbmUgc2l6ZSBpcyBzbWFsbGVyIGdl
-bmVyaWMgS0FTQU4sIHRoZW4KPiB0aGUgbWlzcyByYXRlIG9mIHVzZS1hZnRlci1mcmVlIGNhc2Ug
-bWF5IGJlIHRoZSBzYW1lLCBidXQgdGFnLWJhc2VkCj4gS0FTQU4gY2FuIHNhdmUgc2xhYiBtZW1v
-cnkgdXNhZ2UuCj4KPgo+ID4KPiA+ID4gU2lnbmVkLW9mZi1ieTogV2FsdGVyIFd1IDx3YWx0ZXIt
-emgud3VAbWVkaWF0ZWsuY29tPgo+ID4gPiAtLS0KPiA+ID4gIGluY2x1ZGUvbGludXgva2FzYW4u
-aCAgfCAgMjAgKysrKystLS0KPiA+ID4gIG1tL2thc2FuL01ha2VmaWxlICAgICAgfCAgIDQgKy0K
-PiA+ID4gIG1tL2thc2FuL2NvbW1vbi5jICAgICAgfCAgMTUgKysrKystCj4gPiA+ICBtbS9rYXNh
-bi9nZW5lcmljLmMgICAgIHwgIDExIC0tLS0tCj4gPiA+ICBtbS9rYXNhbi9rYXNhbi5oICAgICAg
-IHwgIDQ1ICsrKysrKysrKysrKysrKystCj4gPiA+ICBtbS9rYXNhbi9xdWFyYW50aW5lLmMgIHwg
-MTA3ICsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrLS0tCj4gPiA+ICBtbS9r
-YXNhbi9yZXBvcnQuYyAgICAgIHwgIDM2ICsrKysrKysrKy0tLS0tCj4gPiA+ICBtbS9rYXNhbi90
-YWdzLmMgICAgICAgIHwgIDY0ICsrKysrKysrKysrKysrKysrKysrKysrKwo+ID4gPiAgbW0va2Fz
-YW4vdGFnc19yZXBvcnQuYyB8ICAgNSArLQo+ID4gPiAgbW0vc2x1Yi5jICAgICAgICAgICAgICB8
-ICAgMiAtCj4gPiA+ICAxMCBmaWxlcyBjaGFuZ2VkLCAyNjIgaW5zZXJ0aW9ucygrKSwgNDcgZGVs
-ZXRpb25zKC0pCj4gPiA+Cj4gPiA+IGRpZmYgLS1naXQgYS9pbmNsdWRlL2xpbnV4L2thc2FuLmgg
-Yi9pbmNsdWRlL2xpbnV4L2thc2FuLmgKPiA+ID4gaW5kZXggYjQwZWExMDRkZDM2Li5iYmI1MmE4
-YmY0YTkgMTAwNjQ0Cj4gPiA+IC0tLSBhL2luY2x1ZGUvbGludXgva2FzYW4uaAo+ID4gPiArKysg
-Yi9pbmNsdWRlL2xpbnV4L2thc2FuLmgKPiA+ID4gQEAgLTgzLDYgKzgzLDkgQEAgc2l6ZV90IGth
-c2FuX21ldGFkYXRhX3NpemUoc3RydWN0IGttZW1fY2FjaGUgKmNhY2hlKTsKPiA+ID4gIGJvb2wg
-a2FzYW5fc2F2ZV9lbmFibGVfbXVsdGlfc2hvdCh2b2lkKTsKPiA+ID4gIHZvaWQga2FzYW5fcmVz
-dG9yZV9tdWx0aV9zaG90KGJvb2wgZW5hYmxlZCk7Cj4gPiA+Cj4gPiA+ICt2b2lkIGthc2FuX2Nh
-Y2hlX3NocmluayhzdHJ1Y3Qga21lbV9jYWNoZSAqY2FjaGUpOwo+ID4gPiArdm9pZCBrYXNhbl9j
-YWNoZV9zaHV0ZG93bihzdHJ1Y3Qga21lbV9jYWNoZSAqY2FjaGUpOwo+ID4gPiArCj4gPiA+ICAj
-ZWxzZSAvKiBDT05GSUdfS0FTQU4gKi8KPiA+ID4KPiA+ID4gIHN0YXRpYyBpbmxpbmUgdm9pZCBr
-YXNhbl91bnBvaXNvbl9zaGFkb3coY29uc3Qgdm9pZCAqYWRkcmVzcywgc2l6ZV90IHNpemUpIHt9
-Cj4gPiA+IEBAIC0xNTMsMjAgKzE1NiwxNCBAQCBzdGF0aWMgaW5saW5lIHZvaWQga2FzYW5fcmVt
-b3ZlX3plcm9fc2hhZG93KHZvaWQgKnN0YXJ0LAo+ID4gPiAgc3RhdGljIGlubGluZSB2b2lkIGth
-c2FuX3VucG9pc29uX3NsYWIoY29uc3Qgdm9pZCAqcHRyKSB7IH0KPiA+ID4gIHN0YXRpYyBpbmxp
-bmUgc2l6ZV90IGthc2FuX21ldGFkYXRhX3NpemUoc3RydWN0IGttZW1fY2FjaGUgKmNhY2hlKSB7
-IHJldHVybiAwOyB9Cj4gPiA+Cj4gPiA+ICtzdGF0aWMgaW5saW5lIHZvaWQga2FzYW5fY2FjaGVf
-c2hyaW5rKHN0cnVjdCBrbWVtX2NhY2hlICpjYWNoZSkge30KPiA+ID4gK3N0YXRpYyBpbmxpbmUg
-dm9pZCBrYXNhbl9jYWNoZV9zaHV0ZG93bihzdHJ1Y3Qga21lbV9jYWNoZSAqY2FjaGUpIHt9Cj4g
-PiA+ICAjZW5kaWYgLyogQ09ORklHX0tBU0FOICovCj4gPiA+Cj4gPiA+ICAjaWZkZWYgQ09ORklH
-X0tBU0FOX0dFTkVSSUMKPiA+ID4KPiA+ID4gICNkZWZpbmUgS0FTQU5fU0hBRE9XX0lOSVQgMAo+
-ID4gPgo+ID4gPiAtdm9pZCBrYXNhbl9jYWNoZV9zaHJpbmsoc3RydWN0IGttZW1fY2FjaGUgKmNh
-Y2hlKTsKPiA+ID4gLXZvaWQga2FzYW5fY2FjaGVfc2h1dGRvd24oc3RydWN0IGttZW1fY2FjaGUg
-KmNhY2hlKTsKPiA+ID4gLQo+ID4gPiAtI2Vsc2UgLyogQ09ORklHX0tBU0FOX0dFTkVSSUMgKi8K
-PiA+ID4gLQo+ID4gPiAtc3RhdGljIGlubGluZSB2b2lkIGthc2FuX2NhY2hlX3NocmluayhzdHJ1
-Y3Qga21lbV9jYWNoZSAqY2FjaGUpIHt9Cj4gPiA+IC1zdGF0aWMgaW5saW5lIHZvaWQga2FzYW5f
-Y2FjaGVfc2h1dGRvd24oc3RydWN0IGttZW1fY2FjaGUgKmNhY2hlKSB7fQo+ID4KPiA+IFdoeSBk
-byB3ZSBuZWVkIHRvIG1vdmUgdGhlc2UgZnVuY3Rpb25zPwo+ID4gRm9yIGdlbmVyaWMgS0FTQU4g
-dGhhdCdzIHJlcXVpcmVkIGJlY2F1c2Ugd2Ugc3RvcmUgdGhlIG9iamVjdHMKPiA+IHRoZW1zZWx2
-ZXMgaW4gdGhlIHF1YXJhbnRpbmUsIGJ1dCBpdCdzIG5vdCB0aGUgY2FzZSBmb3IgdGFnLWJhc2Vk
-IG1vZGUKPiA+IHdpdGggeW91ciBwYXRjaC4uLgo+ID4KPiBUaGUgcXVhcmFudGluZSBpbiB0YWct
-YmFzZWQgS0FTQU4gaW5jbHVkZXMgbmV3IG9iamVjdHMgd2hpY2ggd2UgY3JlYXRlLgo+IFRob3Nl
-IG9iamVjdHMgYXJlIHRoZSBmcmVlZCBpbmZvcm1hdGlvbi4gVGhleSBjYW4gYmUgc2hydW5rIGJ5
-IGNhbGxpbmcKPiB0aGVtLiBTbyB3ZSBtb3ZlIHRoZXNlIGZ1bmN0aW9uIGludG8gQ09ORklHX0tB
-U0FOLgoKT2ssIGthc2FuX2NhY2hlX3NocmluayBpcyB0byByZWxlYXNlIG1lbW9yeSBkdXJpbmcg
-bWVtb3J5IHByZXNzdXJlLgpCdXQgd2h5IGRvIHdlIG5lZWQga2FzYW5fY2FjaGVfc2h1dGRvd24/
-IEl0IHNlZW1zIHRoYXQgd2UgY291bGQgbGVhdmUKcW9iamVjdHMgaW4gcXVhcmFudGluZSB3aGVu
-IHRoZSBjb3JyZXNwb25kaW5nIGNhY2hlIGlzIGRlc3Ryb3llZC4gQW5kCmluIGZhY3QgaXQncyB1
-c2VmdWwgYmVjYXVzZSB3ZSBzdGlsbCBjYW4gZ2V0IHVzZS1hZnRlci1mcmVlcyBvbiB0aGVzZQpv
-YmplY3RzLgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18K
-TGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVh
-ZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1t
-ZWRpYXRlawo=
+Hi, Hsin-Yi:
+
+On Mon, 2019-05-27 at 12:50 +0800, Hsin-Yi Wang wrote:
+> Unbinding components (i.e. mtk_dsi and mtk_disp_ovl/rdma/color) will
+> trigger master(mtk_drm)'s .unbind(), and currently mtk_drm's unbind
+> won't actually unbind components. During the next bind,
+> mtk_drm_kms_init() is called, and the components are added back.
+> 
+> .unbind() should call mtk_drm_kms_deinit() to unbind components.
+> 
+> And since component_master_del() in .remove() will trigger .unbind(),
+> which will also unregister device, it's fine to remove original functions
+> called here.
+> 
+> Fixes: 119f5173628a ("drm/mediatek: Add DRM Driver for Mediatek SoC MT8173.")
+> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.c | 8 +++-----
+>  1 file changed, 3 insertions(+), 5 deletions(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> index 57ce4708ef1b..bbfe3a464aea 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> @@ -311,6 +311,7 @@ static int mtk_drm_kms_init(struct drm_device *drm)
+>  static void mtk_drm_kms_deinit(struct drm_device *drm)
+>  {
+>  	drm_kms_helper_poll_fini(drm);
+> +	drm_atomic_helper_shutdown(drm);
+
+This looks not related to this patch. This patch is related to the
+unbind timing. You could separate this to an independent patch.
+
+>  
+>  	component_unbind_all(drm->dev, drm);
+>  	drm_mode_config_cleanup(drm);
+> @@ -397,7 +398,9 @@ static void mtk_drm_unbind(struct device *dev)
+>  	struct mtk_drm_private *private = dev_get_drvdata(dev);
+>  
+>  	drm_dev_unregister(private->drm);
+> +	mtk_drm_kms_deinit(private->drm);
+>  	drm_dev_put(private->drm);
+> +	private->num_pipes = 0;
+
+This looks not related to this patch. This patch is related to the
+unbind timing. You could separate this to an independent patch.
+
+Regards,
+CK
+
+>  	private->drm = NULL;
+>  }
+>  
+> @@ -568,13 +571,8 @@ static int mtk_drm_probe(struct platform_device *pdev)
+>  static int mtk_drm_remove(struct platform_device *pdev)
+>  {
+>  	struct mtk_drm_private *private = platform_get_drvdata(pdev);
+> -	struct drm_device *drm = private->drm;
+>  	int i;
+>  
+> -	drm_dev_unregister(drm);
+> -	mtk_drm_kms_deinit(drm);
+> -	drm_dev_put(drm);
+> -
+>  	component_master_del(&pdev->dev, &mtk_drm_ops);
+>  	pm_runtime_disable(&pdev->dev);
+>  	of_node_put(private->mutex_node);
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
