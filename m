@@ -2,56 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 522512F982
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 11:34:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F3F402F9C2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 11:45:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=h6rw/nzb5nzJtnZsGaLqiaVzz0EvL4o/SnX/T7ag01c=; b=PKOe+7LgHGwwYQ
-	+bzVCkMzOmy8pXW8Oby5u/4fuP/NcfbU5cK1FiFU/BDsiuKoGeeSS0lvZcbJA3fsDS05Uq3YJNn3M
-	nZBFSpaLNCLc1wZHTsRiM/M8/8tqFLDm8tf0ZskkNNSGyvXWjrSpGB8xCLPY3zjVeQOQi2N5gE1mT
-	6sQvTwcQIsggda2YktaH64yYftzaNEo5YFb730+MO9ldeWc4o5LdYG6qQ/ezzgzm6sc1uSnd2+Ggc
-	RZMb2mcc3OMbIJHhyK2wLH09jjVeSllyixd/GVUNixfhOzE9jWak1dxkvgrLPbAYZ7yacVqxTqxLa
-	EJUDjuprfrGafHsbZlCg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=NhiR4YCNEdODrMDC8rxsg+LAq0hwcvjZ4pTLzkt0P2U=; b=br574bUBWL+1wT
+	InvX8y/eVeBnBSTinaQYeiioP+OAYLFiO330rKXviK7fxxRcHbK0Q/fzFwPQcUmtnmPN09ZlOam2p
+	mmpaAfJbAoeuYDZEZZNjiZm9/XL0arSabD0gQyDQM8EWDkiNB25nbLzGMyxKJT7MYu2SbEsHaJDZL
+	Vja2bQdoJOoWfIP3m2v/tjLxUBAmpvzxa4OmZP80I8yqufx4jtBMrQRnmWAMyyrLwfcIKhN0qINjE
+	zaEKuDrZRgA6vOuYJYFoHG+XKHk5xpfMm0q9Yw4JfpgQVnHk4jbMDEobsTQTOXI6v9ByQ4GGfgwNO
+	1L07+mDsgYtaCzA8uESw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWHSO-0004J9-V4; Thu, 30 May 2019 09:34:44 +0000
+	id 1hWHce-0002os-NV; Thu, 30 May 2019 09:45:20 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWHSF-0004CG-Gc; Thu, 30 May 2019 09:34:37 +0000
-X-UUID: 25c3d1e88afc46968404f0524f29b104-20190530
-X-UUID: 25c3d1e88afc46968404f0524f29b104-20190530
+ id 1hWHcV-0002hB-GV; Thu, 30 May 2019 09:45:12 +0000
+X-UUID: 7e33d8de95664a3dac66996d33e468ff-20190530
+X-UUID: 7e33d8de95664a3dac66996d33e468ff-20190530
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <long.cheng@mediatek.com>)
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 494420038; Thu, 30 May 2019 01:34:28 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 02:34:27 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs08n2.mediatek.inc
- (172.21.101.56) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 30 May 2019 17:34:17 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 17:34:16 +0800
-Message-ID: <1559208856.14150.35.camel@mhfsdcap03>
-Subject: Re: [PATCH 2/2] serial: 8250-mtk: modify uart DMA rx
-From: Long Cheng <long.cheng@mediatek.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Date: Thu, 30 May 2019 17:34:16 +0800
-In-Reply-To: <1558596909-14084-3-git-send-email-long.cheng@mediatek.com>
-References: <1558596909-14084-1-git-send-email-long.cheng@mediatek.com>
- <1558596909-14084-3-git-send-email-long.cheng@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 821172413; Thu, 30 May 2019 01:43:40 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 02:43:38 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 17:43:25 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 30 May 2019 17:43:24 +0800
+From: Biao Huang <biao.huang@mediatek.com>
+To: <davem@davemloft.net>, Jose Abreu <joabreu@synopsys.com>
+Subject: [RESEND,
+ PATCH 0/4] complete dwmac-mediatek driver and fix flow control issue
+Date: Thu, 30 May 2019 17:43:14 +0800
+Message-ID: <1559209398-3607-1-git-send-email-biao.huang@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: B27139AB2F1BB9957CAE9332638E0C210155CD5265085DED026FD2DB4FE943502000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_023435_783817_7E77D342 
-X-CRM114-Status: GOOD (  14.55  )
+X-CRM114-CacheID: sfid-20190530_024511_552139_4F89B291 
+X-CRM114-Status: UNSURE (   7.04  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,139 +70,43 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Sean Wang <sean.wang@kernel.org>,
- Zhenbao Liu <zhenbao.liu@mediatek.com>, Nicolas
- Boichat <drinkcat@chromium.org>, Long Cheng <Long.cheng@mediatek.com>,
- linux-serial@vger.kernel.org, Jiri Slaby <jslaby@suse.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>, devicetree@vger.kernel.org, Changqi
- Hu <changqi.hu@mediatek.com>, Sean Wang <sean.wang@mediatek.com>, Ryder
- Lee <ryder.lee@mediatek.com>, linux-mediatek@lists.infradead.org,
+Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
+ Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
+ biao.huang@mediatek.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Dan Williams <dan.j.williams@intel.com>, linux-arm-kernel@lists.infradead.org,
- srv_heupstream@mediatek.com, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Randy Dunlap <rdunlap@infradead.org>, linux-kernel@vger.kernel.org,
- Vinod Koul <vkoul@kernel.org>, Rob
- Herring <robh+dt@kernel.org>, dmaengine@vger.kernel.org
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2019-05-23 at 15:35 +0800, Long Cheng wrote:
+Sorry for not adding David Miller to the mailist, so resend this series.
 
-
-Hi Greg,
-
-Just a gentle ping!
-
-thanks.
-
-> Modify uart rx and complete for DMA
-> 
-> Signed-off-by: Long Cheng <long.cheng@mediatek.com>
-> ---
->  drivers/tty/serial/8250/8250_mtk.c |   49 +++++++++++++++---------------------
->  1 file changed, 20 insertions(+), 29 deletions(-)
-> 
-> diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
-> index 417c7c8..f470ded 100644
-> --- a/drivers/tty/serial/8250/8250_mtk.c
-> +++ b/drivers/tty/serial/8250/8250_mtk.c
-> @@ -47,7 +47,6 @@
->  #define MTK_UART_DMA_EN_RX	0x5
->  
->  #define MTK_UART_ESCAPE_CHAR	0x77	/* Escape char added under sw fc */
-> -#define MTK_UART_TX_SIZE	UART_XMIT_SIZE
->  #define MTK_UART_RX_SIZE	0x8000
->  #define MTK_UART_TX_TRIGGER	1
->  #define MTK_UART_RX_TRIGGER	MTK_UART_RX_SIZE
-> @@ -89,28 +88,30 @@ static void mtk8250_dma_rx_complete(void *param)
->  	struct mtk8250_data *data = up->port.private_data;
->  	struct tty_port *tty_port = &up->port.state->port;
->  	struct dma_tx_state state;
-> +	int copied, total, cnt;
->  	unsigned char *ptr;
-> -	int copied;
->  
-> -	dma_sync_single_for_cpu(dma->rxchan->device->dev, dma->rx_addr,
-> -				dma->rx_size, DMA_FROM_DEVICE);
-> +	if (data->rx_status == DMA_RX_SHUTDOWN)
-> +		return;
->  
->  	dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
-> +	total = dma->rx_size - state.residue;
-> +	cnt = total;
->  
-> -	if (data->rx_status == DMA_RX_SHUTDOWN)
-> -		return;
-> +	if ((data->rx_pos + cnt) > dma->rx_size)
-> +		cnt = dma->rx_size - data->rx_pos;
->  
-> -	if ((data->rx_pos + state.residue) <= dma->rx_size) {
-> -		ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
-> -		copied = tty_insert_flip_string(tty_port, ptr, state.residue);
-> -	} else {
-> -		ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
-> -		copied = tty_insert_flip_string(tty_port, ptr,
-> -						dma->rx_size - data->rx_pos);
-> +	ptr = (unsigned char *)(data->rx_pos + dma->rx_buf);
-> +	copied = tty_insert_flip_string(tty_port, ptr, cnt);
-> +	data->rx_pos += cnt;
-> +
-> +	if (total > cnt) {
->  		ptr = (unsigned char *)(dma->rx_buf);
-> -		copied += tty_insert_flip_string(tty_port, ptr,
-> -				data->rx_pos + state.residue - dma->rx_size);
-> +		cnt = total - cnt;
-> +		copied += tty_insert_flip_string(tty_port, ptr, cnt);
-> +		data->rx_pos = cnt;
->  	}
-> +
->  	up->port.icount.rx += copied;
->  
->  	tty_flip_buffer_push(tty_port);
-> @@ -121,9 +122,7 @@ static void mtk8250_dma_rx_complete(void *param)
->  static void mtk8250_rx_dma(struct uart_8250_port *up)
->  {
->  	struct uart_8250_dma *dma = up->dma;
-> -	struct mtk8250_data *data = up->port.private_data;
->  	struct dma_async_tx_descriptor	*desc;
-> -	struct dma_tx_state	 state;
->  
->  	desc = dmaengine_prep_slave_single(dma->rxchan, dma->rx_addr,
->  					   dma->rx_size, DMA_DEV_TO_MEM,
-> @@ -138,12 +137,6 @@ static void mtk8250_rx_dma(struct uart_8250_port *up)
->  
->  	dma->rx_cookie = dmaengine_submit(desc);
->  
-> -	dmaengine_tx_status(dma->rxchan, dma->rx_cookie, &state);
-> -	data->rx_pos = state.residue;
-> -
-> -	dma_sync_single_for_device(dma->rxchan->device->dev, dma->rx_addr,
-> -				   dma->rx_size, DMA_FROM_DEVICE);
-> -
->  	dma_async_issue_pending(dma->rxchan);
->  }
->  
-> @@ -156,13 +149,11 @@ static void mtk8250_dma_enable(struct uart_8250_port *up)
->  	if (data->rx_status != DMA_RX_START)
->  		return;
->  
-> -	dma->rxconf.direction		= DMA_DEV_TO_MEM;
-> -	dma->rxconf.src_addr_width	= dma->rx_size / 1024;
-> -	dma->rxconf.src_addr		= dma->rx_addr;
-> +	dma->rxconf.src_port_window_size	= dma->rx_size;
-> +	dma->rxconf.src_addr				= dma->rx_addr;
->  
-> -	dma->txconf.direction		= DMA_MEM_TO_DEV;
-> -	dma->txconf.dst_addr_width	= MTK_UART_TX_SIZE / 1024;
-> -	dma->txconf.dst_addr		= dma->tx_addr;
-> +	dma->txconf.dst_port_window_size	= UART_XMIT_SIZE;
-> +	dma->txconf.dst_addr				= dma->tx_addr;
->  
->  	serial_out(up, UART_FCR, UART_FCR_ENABLE_FIFO | UART_FCR_CLEAR_RCVR |
->  		UART_FCR_CLEAR_XMIT);
-
+This series mainly complete dwmac-mediatek driver:                              
+        1. add power on/off operations for dwmac-mediatek.                      
+        2. disable rx watchdog to reduce rx path reponding time.                
+        3. change the default value of tx-frames from 25 to 1, so               
+           ptp4l will test pass by default.                                     
+                                                                                
+and also fix the issue that flow control won't be disabled any more             
+once being enabled.                                                             
+                                                                                
+Biao Huang (4):                                                                 
+  net: stmmac: dwmac-mediatek: enable Ethernet power domain                     
+  net: stmmac: dwmac-mediatek: disable rx watchdog                              
+  net: stmmac: modify default value of tx-frames                                
+  net: stmmac: dwmac4: fix flow control issue                                   
+                                                                                
+ drivers/net/ethernet/stmicro/stmmac/common.h       |    2 +-                   
+ .../net/ethernet/stmicro/stmmac/dwmac-mediatek.c   |   19 ++++++++++++++++++-  
+ drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c  |    8 ++++++--             
+ 3 files changed, 25 insertions(+), 4 deletions(-)                              
+                                                                                
+--                                                                              
+1.7.9.5
 
 
 _______________________________________________
