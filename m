@@ -2,54 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4A8202F9BC
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 11:44:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E6FD62F9F8
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 12:06:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tQoj5BIX4uVO+rp84DHtfyMvxEXk6wNIjusvZ9ckHPE=; b=i7jog/0sHuCF6x
-	Tr3tsg5XTcTMJeXJD9OJzNsdvWX0IXT+w9IyXKoXL1EBWedA2kbkzQ8HTSHWbmYdhgHUcbjC0c27u
-	71/zyhRwQgaB107MLQ7zs3rBCwdYxRw9efNuhemmshKl0Sr6pIhp6piH7O5EzzEvTJ24LyRtMbHre
-	voh7c8BEodVMrnjf1cuRuoKcm+LNlGEWcWH/RfmHaRsZP90G2Tb5IxxKpNmsOPsWbVxXNbXe10E4S
-	9XXxPxVIm8MkUUm8QMGUNyTkXj3ozX8RcW0NwLiac8fyQmrO5dT7jdDLwY6TgchXuCY2NcsFrm8gy
-	GQ0cZ4dCvInE5bwYZOGQ==;
+	List-Owner; bh=WKamwjcCJWotup1ZnVlYRciVMmmnsGJhYYsKJqO/GDU=; b=hoXe4h02nJASkS
+	P/kN26LeO2BjHZNezGXKx6Iow0wCxNhnxj7q4oCx5x4raO5O40h6ut/YOR/V03/j6WT6xO3bGanPK
+	G7ppVdeTleWJ8Zqlas409sMTiPrp8SMoVNS6vNcteEbXyYUEOaCL493Q/ZHY26XFbGMscjc/nY8Dn
+	TpQPCPht7yKIg41cTpMllCm7iygL4s7lEpKxmqnns06AbDUaCkUODiAfD3duLTobdGi/7SqYvt6j2
+	IoT5UiwvFdUmxHRHn10hQU6IyKxEvRcDNoP2oPhxbVqqfvKXOy+uwW/6pEAPjKta0NQqTb60Vcyr4
+	aUtcEZ35eokJXM2rAjog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWHbg-0000kX-M8; Thu, 30 May 2019 09:44:20 +0000
+	id 1hWHx5-0002U9-LK; Thu, 30 May 2019 10:06:27 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWHb6-0008Om-G9; Thu, 30 May 2019 09:43:49 +0000
-X-UUID: 3b97f6e4b6d74c15a68de19f0b23a551-20190530
-X-UUID: 3b97f6e4b6d74c15a68de19f0b23a551-20190530
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
+ id 1hWHx1-0002TP-UK; Thu, 30 May 2019 10:06:25 +0000
+X-UUID: 0f65a1d84337428dad5633dd072e89d9-20190530
+X-UUID: 0f65a1d84337428dad5633dd072e89d9-20190530
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 324819892; Thu, 30 May 2019 01:43:42 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 02:43:41 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 17:43:29 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ with ESMTP id 990244314; Thu, 30 May 2019 02:06:13 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 03:06:12 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 18:06:10 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 17:43:28 +0800
-From: Biao Huang <biao.huang@mediatek.com>
-To: <davem@davemloft.net>, Jose Abreu <joabreu@synopsys.com>
-Subject: [RESEND, PATCH 4/4] net: stmmac: dwmac4: fix flow control issue
-Date: Thu, 30 May 2019 17:43:18 +0800
-Message-ID: <1559209398-3607-5-git-send-email-biao.huang@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1559209398-3607-1-git-send-email-biao.huang@mediatek.com>
-References: <1559209398-3607-1-git-send-email-biao.huang@mediatek.com>
+ Transport; Thu, 30 May 2019 18:06:10 +0800
+Message-ID: <1559210770.12373.0.camel@mtksdaap41>
+Subject: Re: [PATCH v4] gpu/drm: mediatek: call mtk_dsi_stop() after
+ mtk_drm_crtc_atomic_disable()
+From: CK Hu <ck.hu@mediatek.com>
+To: Hsin-Yi Wang <hsinyi@chromium.org>
+Date: Thu, 30 May 2019 18:06:10 +0800
+In-Reply-To: <20190530091847.90263-1-hsinyi@chromium.org>
+References: <20190530091847.90263-1-hsinyi@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_024344_872986_063BF46A 
-X-CRM114-Status: GOOD (  10.04  )
+X-CRM114-CacheID: sfid-20190530_030623_982775_0636F3FD 
+X-CRM114-Status: GOOD (  17.41  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -70,66 +71,82 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
- Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
- biao.huang@mediatek.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Current dwmac4_flow_ctrl will not clear
-GMAC_RX_FLOW_CTRL_RFE/GMAC_RX_FLOW_CTRL_RFE bits,
-so MAC hw will keep flow control on although expecting
-flow control off by ethtool. Add codes to fix it.
+Hi, Hsin-Yi:
 
-Fixes: 477286b53f55 ("stmmac: add GMAC4 core support")
-Signed-off-by: Biao Huang <biao.huang@mediatek.com>
----
- drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c |    8 ++++++--
- 1 file changed, 6 insertions(+), 2 deletions(-)
+On Thu, 2019-05-30 at 17:18 +0800, Hsin-Yi Wang wrote:
+> mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(), which needs
+> ovl irq for drm_crtc_wait_one_vblank(), since after mtk_dsi_stop() is called,
+> ovl irq will be disabled. If drm_crtc_wait_one_vblank() is called after last
+> irq, it will timeout with this message: "vblank wait timed out on crtc 0". This
+> happens sometimes when turning off the screen.
+> 
+> In drm_atomic_helper.c#disable_outputs(),
+> the calling sequence when turning off the screen is:
+> 
+> 1. mtk_dsi_encoder_disable()
+>      --> mtk_output_dsi_disable()
+>        --> mtk_dsi_stop();  // sometimes make vblank timeout in atomic_disable
+>        --> mtk_dsi_poweroff();
+> 2. mtk_drm_crtc_atomic_disable()
+>      --> drm_crtc_wait_one_vblank();
+>      ...
+>        --> mtk_dsi_ddp_stop()
+>          --> mtk_dsi_poweroff();
+> 
+> mtk_dsi_poweroff() has reference count design, change to make mtk_dsi_stop()
+> called in mtk_dsi_poweroff() when refcount is 0.
 
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-index 2544cff..9322b71 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-@@ -488,8 +488,9 @@ static void dwmac4_flow_ctrl(struct mac_device_info *hw, unsigned int duplex,
- 	if (fc & FLOW_RX) {
- 		pr_debug("\tReceive Flow-Control ON\n");
- 		flow |= GMAC_RX_FLOW_CTRL_RFE;
--		writel(flow, ioaddr + GMAC_RX_FLOW_CTRL);
- 	}
-+	writel(flow, ioaddr + GMAC_RX_FLOW_CTRL);
-+
- 	if (fc & FLOW_TX) {
- 		pr_debug("\tTransmit Flow-Control ON\n");
- 
-@@ -497,7 +498,7 @@ static void dwmac4_flow_ctrl(struct mac_device_info *hw, unsigned int duplex,
- 			pr_debug("\tduplex mode: PAUSE %d\n", pause_time);
- 
- 		for (queue = 0; queue < tx_cnt; queue++) {
--			flow |= GMAC_TX_FLOW_CTRL_TFE;
-+			flow = GMAC_TX_FLOW_CTRL_TFE;
- 
- 			if (duplex)
- 				flow |=
-@@ -505,6 +506,9 @@ static void dwmac4_flow_ctrl(struct mac_device_info *hw, unsigned int duplex,
- 
- 			writel(flow, ioaddr + GMAC_QX_TX_FLOW_CTRL(queue));
- 		}
-+	} else {
-+		for (queue = 0; queue < tx_cnt; queue++)
-+			writel(0, ioaddr + GMAC_QX_TX_FLOW_CTRL(queue));
- 	}
- }
- 
--- 
-1.7.9.5
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+> 
+> Fixes: 0707632b5bac ("drm/mediatek: update DSI sub driver flow for sending commands to panel")
+> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+> ---
+> change log v3->v4:
+> * add comment in code.
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 10 +++++++++-
+>  1 file changed, 9 insertions(+), 1 deletion(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b00eb2d2e086..730594a91440 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -630,6 +630,15 @@ static void mtk_dsi_poweroff(struct mtk_dsi *dsi)
+>  	if (--dsi->refcount != 0)
+>  		return;
+>  
+> +	/* 
+> +	 * mtk_dsi_stop() and mtk_dsi_start() is asymmetric, since
+> +	 * mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(),
+> +	 * which needs irq for vblank, and mtk_dsi_stop() will disable irq.
+> +	 * mtk_dsi_start() needs to be called in mtk_output_dsi_enable(),
+> +	 * after dsi is fully set.
+> +	 */
+> +	mtk_dsi_stop(dsi);
+> +
+>  	if (!mtk_dsi_switch_to_cmd_mode(dsi, VM_DONE_INT_FLAG, 500)) {
+>  		if (dsi->panel) {
+>  			if (drm_panel_unprepare(dsi->panel)) {
+> @@ -696,7 +705,6 @@ static void mtk_output_dsi_disable(struct mtk_dsi *dsi)
+>  		}
+>  	}
+>  
+> -	mtk_dsi_stop(dsi);
+>  	mtk_dsi_poweroff(dsi);
+>  
+>  	dsi->enabled = false;
+
 
 
 _______________________________________________
