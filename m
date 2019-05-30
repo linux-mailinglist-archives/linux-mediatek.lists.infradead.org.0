@@ -2,58 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82A0C2EA6D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 03:58:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 617B72EA8A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 04:13:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FJKl8M2cJ7X7L3eT7yYQYkqu9VLeE/SrTUlOZRYO0nQ=; b=a0cE5dhqngQR0O
-	NyR0jnYwQcRofATm4twdcUQFBORG225Ws3vEwNT6GpzMgiNGD3a24/CSY8c8BYK4IZ5xhdj7+xGiG
-	x4x1ofJ4UIMK9RcgSVErd2lqMX6Z6M6uhky1eOG1mWXNi5/MQWExy1TmsYITpM5nLjKLrPq+/s1Ns
-	p1S+GSX3liLuE+KabT1kjSn4pDDPLgjH8GkQQWH5W+qJBA26wsj6nAQ6CLVK3axx2syiQb7LCAmo+
-	g3iAafAZ09U8UpjWL/iCdaoDAamLjzBQgN19swj0k2T7zrfTZD4CKwj3YSNCCJAT+zw7E2UamH/XV
-	TWe7zlbWaGqhiIy++vqg==;
+	List-Owner; bh=hmq8vj5bbQFr45C9Ya6AaupXMK3e8Ht2QH6Wlx4CcE4=; b=jS2WvscKdX/QL0
+	Fi/KVTrn8S0SbASbUkU5PQhqrbrt8WMZvhuLpLmaucqpFE/lsiEMFqiLa3EJWlUmGIQRkZsudA2gk
+	KlR6WpBzIf3OGqOSkRE9WbqMrXH0MPpr1P5UtC3s8saXfQzPPi/aZaZ6ODHJFE2dXC34I1wViB6sY
+	eV3d/LGWNyk/wLCu9ymUnGhTTP5SD5PnPloD7x+MCdjR6w52Bokinz2n/G7oBbM81gfFyAyLMusgN
+	QValWfyKTe3i5KOhDYG5Mpiwcrz+Rj25WDO/KLTpx+LveBzE4sLMjGJ3Cnsag/K0EObrm7MT9XlCe
+	/w9ax/sRJtoTH9KjOCKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWAKr-0005lE-07; Thu, 30 May 2019 01:58:29 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hWAZc-0002nz-Fk; Thu, 30 May 2019 02:13:44 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWAKn-0005kb-If; Thu, 30 May 2019 01:58:27 +0000
-X-UUID: 0f66a0144afd4b8785e7f15f8bea6d9a-20190529
-X-UUID: 0f66a0144afd4b8785e7f15f8bea6d9a-20190529
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ id 1hWAZY-0002nG-Nt; Thu, 30 May 2019 02:13:42 +0000
+X-UUID: e09de3d67ee745329a9985b736bf53a6-20190529
+X-UUID: e09de3d67ee745329a9985b736bf53a6-20190529
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1795255748; Wed, 29 May 2019 17:58:05 -0800
+ with ESMTP id 1419160102; Wed, 29 May 2019 18:13:38 -0800
 Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 May 2019 18:58:04 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 19:13:36 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 09:58:02 +0800
-Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
+ 15.0.1395.4; Thu, 30 May 2019 10:13:35 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 09:58:02 +0800
-Message-ID: <1559181482.24427.18.camel@mtksdccf07>
-Subject: Re: [PATCH] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Dmitry Vyukov <dvyukov@google.com>
-Date: Thu, 30 May 2019 09:58:02 +0800
-In-Reply-To: <CACT4Y+ZwXsBk8VqvDOJGMqrbVjuZ-HfC9RG4LpgRC-9WqmQJVw@mail.gmail.com>
-References: <1559027797-30303-1-git-send-email-walter-zh.wu@mediatek.com>
- <CACT4Y+aCnODuffR7PafyYispp_U+ZdY1Dr0XQYvmghkogLJzSw@mail.gmail.com>
- <1559122529.17186.24.camel@mtksdccf07>
- <CACT4Y+ZwXsBk8VqvDOJGMqrbVjuZ-HfC9RG4LpgRC-9WqmQJVw@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ Transport; Thu, 30 May 2019 10:13:35 +0800
+Message-ID: <1559182415.6868.0.camel@mtksdaap41>
+Subject: Re: [PATCH v2 1/4] drm: mediatek: fix unbind functions
+From: CK Hu <ck.hu@mediatek.com>
+To: Hsin-Yi Wang <hsinyi@chromium.org>
+Date: Thu, 30 May 2019 10:13:35 +0800
+In-Reply-To: <20190529102555.251579-2-hsinyi@chromium.org>
+References: <20190529102555.251579-1-hsinyi@chromium.org>
+ <20190529102555.251579-2-hsinyi@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_185825_633648_A541D293 
-X-CRM114-Status: GOOD (  21.69  )
+X-CRM114-CacheID: sfid-20190529_191340_792412_C1F5AF20 
+X-CRM114-Status: GOOD (  13.43  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,98 +71,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Catalin Marinas <catalin.marinas@arm.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
- Linux-MM <linux-mm@kvack.org>, Miles
- Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- David Rientjes <rientjes@google.com>,
+Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
- Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-05-29 at 12:00 +0200, Dmitry Vyukov wrote:
-> > > There can be multiple qobjects in the quarantine associated with the
-> > > address, right? If so, we need to find the last one rather then a
-> > > random one.
-> > >
-> > The qobject includes the address which has tag and range, corruption
-> > address must be satisfied with the same tag and within object address
-> > range, then it is found in the quarantine.
-> > It should not easy to get multiple qobjects have the same tag and within
-> > object address range.
+Hi, Hsin-Yi:
+
+On Wed, 2019-05-29 at 18:25 +0800, Hsin-Yi Wang wrote:
+> detatch panel in mtk_dsi_destroy_conn_enc(), since .bind will try to
+> attach it again.
 > 
-> Yes, using the tag for matching (which I missed) makes the match less likely.
+
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+> Fixes: 2e54c14e310f ("drm/mediatek: Add DSI sub driver")
+> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+> ---
+> change log v1->v2:
+> * mipi_dsi_host_unregister() should be fixed in another patch on the list.
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 2 ++
+>  1 file changed, 2 insertions(+)
 > 
-> But I think we should at least try to find the newest object in
-> best-effort manner.
-We hope it, too.
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b00eb2d2e086..1ae3be99e0ff 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -844,6 +844,8 @@ static void mtk_dsi_destroy_conn_enc(struct mtk_dsi *dsi)
+>  	/* Skip connector cleanup if creation was delegated to the bridge */
+>  	if (dsi->conn.dev)
+>  		drm_connector_cleanup(&dsi->conn);
+> +	if (dsi->panel)
+> +		drm_panel_detach(dsi->panel);
+>  }
+>  
+>  static void mtk_dsi_ddp_start(struct mtk_ddp_comp *comp)
 
-> Consider, both slab and slub reallocate objects in LIFO manner and we
-> don't have a quarantine for objects themselves. So if we have a loop
-> that allocates and frees an object of same size a dozen of times.
-> That's enough to get a duplicate pointer+tag qobject.
-> This includes:
-> 1. walking the global quarantine from quarantine_tail backwards.
-It is ok.
-
-> 2. walking per-cpu lists in the opposite direction: from tail rather
-> then from head. I guess we don't have links, so we could change the
-> order and prepend new objects from head.
-> This way we significantly increase chances of finding the right
-> object. This also deserves a comment mentioning that we can find a
-> wrong objects.
-> 
-The current walking per-cpu list direction is from head to trail. we
-will modify the direction and find the newest object.
-
-
-> > > Why don't we allocate qlist_object and qlist_node in a single
-> > > allocation? Doing 2 allocations is both unnecessary slow and leads to
-> > > more complex code. We need to allocate them with a single allocations.
-> > > Also I think they should be allocated from a dedicated cache that opts
-> > > out of quarantine?
-> > >
-> > Single allocation is good suggestion, if we only has one allocation.
-> > then we need to move all member of qlist_object to qlist_node?
-> >
-> > struct qlist_object {
-> >     unsigned long addr;
-> >     unsigned int size;
-> >     struct kasan_alloc_meta free_track;
-> > };
-> > struct qlist_node {
-> >     struct qlist_object *qobject;
-> >     struct qlist_node *next;
-> > };
-> 
-> I see 2 options:
-> 1. add addr/size/free_track to qlist_node under ifdef CONFIG_KASAN_SW_TAGS
-> 2. or probably better would be to include qlist_node into qlist_object
-> as first field, then allocate qlist_object and cast it to qlist_node
-> when adding to quarantine, and then as we iterate quarantine, we cast
-> qlist_node back to qlist_object and can access size/addr.
-> 
-Choice 2 looks better, We first try it.
-
-> 
-> > We call call ___cache_free() to free the qobject and qnode, it should be
-> > out of quarantine?
-> 
-> This should work.
-
-Thanks your good suggestion.
-We will implement those solution which you suggested to the second
-edition.
-
-
-Thanks,
-Walter
 
 
 _______________________________________________
