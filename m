@@ -2,84 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 46BE92EAD6
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 04:55:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5FDDE2ED1C
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 05:32:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yxHAdSAajn1ws75psR+i49FP4A/uzXrE4DpEHysY3BM=; b=MpukicaGtY4keP
-	Ucrw3EMCTxrL7OCOpI4f2NRGEodOrZyuJfVGddfu61CK30FjCepDwtWvmRIUsShaPS9rgot30ruKP
-	hDeScoZo2vtx5UsbETfr37SUhLZ50dxJXWZ8rd2cX88nWbQ/NhOReQb0LVPoLuAnfd8SqNCyGsZrI
-	xSOTMl+U4eBrRF03/ngiZTpUal/pxUJJiagauC+DJHVuBvIIpPsOb2JovyQfjCIk//W8ON0NL6eeL
-	qWIP8t4u8vPLLjasrMmGi5h8OwW70NU1YyEMHmyubh0aYCLlu7YvxKhHAHasPESTQLO0bwJEkE2Ds
-	YROdSRiIL9mj/BXkrAgA==;
+	List-Owner; bh=0/jy24qz8ukqanQwrUCoRTDugektDg0yqA38B76mSeU=; b=pBaJBmLVlcsk4N
+	tZ0DmZGpIvfDLAPbMjbj7toCyqk9Hv+9wHFCkWaNgQT5wYtzO/mf4Nuc+No2Zt2Dp73AeTNhTU+Hh
+	ertGV0rxaueQaYyaacpT6o3i09XEb8PYKJKscojSMoWrraxc5KEfQ0wS0yUETDs4lIdMhvFUzS8rA
+	gQif8iA4RnUtQWPr8/p+vcy3UJL4Dxo9xMWDTabawu7SmKhsPZwGFxr37SGIVTaAz31zS2jnaYdq9
+	+MDGoSyKWrxwjZJtXJHr0LMi9N3mncCzh+qAOh84blhsov7R8gB4DSQUctSCHzhXNPnQatBJ7CX4d
+	SrsyfO7cC+0kZEcvgvIA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWBEF-0001Il-PQ; Thu, 30 May 2019 02:55:43 +0000
-Received: from mail-qk1-x743.google.com ([2607:f8b0:4864:20::743])
+	id 1hWBnS-0001B1-G9; Thu, 30 May 2019 03:32:06 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWBEC-0001Hp-BW
- for linux-mediatek@lists.infradead.org; Thu, 30 May 2019 02:55:41 +0000
-Received: by mail-qk1-x743.google.com with SMTP id g18so2946316qkl.3
- for <linux-mediatek@lists.infradead.org>; Wed, 29 May 2019 19:55:39 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=hXC4kHzYwJGnl8YXVUWx0puoDDwpLZgED1hwjltNjg4=;
- b=K6yWGboPMYwUdNCjC32JmzZHDaPsR9bN4M9bMJOWj6QNjlo3n58nUVIKLrzji8AhDW
- 7QezzgWoWhv/YRJ2k7nX4f7ltYiLhEMyhrCUrbTEXlKVqJC0bvB2UyywYyuaFizo68zv
- ugWTtb5QNrzFd7wJvqKR8eeF8DfRbkXiaWjn4=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=hXC4kHzYwJGnl8YXVUWx0puoDDwpLZgED1hwjltNjg4=;
- b=cABfOymrvIjZCbp2r0iVvimUWzDlJRpaGAhCjbAiAoYcot24fsu5bAMFEIFMFzBgZw
- N4538JaZLhI33BCqpqfaqvLV1viotT7L6/MCqafHupgS8YJErQtSaOpE3a0mCEH8svHk
- UjOpJb35WlQV8IQPawy45qSMEJ/c1jPsVl7LLEzRgPJPJHc1i6pFkd0AdRIslZ3Sqtrf
- rfEQBSxYvw2plubIMhDGrLPa0Q8VfrVuIma8hTd4UH7bazHwg4/Zm9toKmIYgjx0KO9Y
- IpfXOZXJGCMYKvdUEI0ApRlIx19gPduJ1mulZ7LyTJbMPLCfoQ7qAvE1QuZl8nkSMCzQ
- K7lQ==
-X-Gm-Message-State: APjAAAXBqNKUMqbxsHUmQ+taF68JFkEJ07ZI63JFIlk/eU3N/aJI+Y+b
- 3Kp6GgT2bKvG9wWDEmNBMLfKwiJNc4Qx8BTou6N0zg==
-X-Google-Smtp-Source: APXvYqwbvVCUHkyZ1UVrW3CoWKtkXaSs4V4XiLDBo7b0pM95AINVAYXNQOY+l2q5rzTV9S+lLKzvEUHvy1askLPhD+c=
-X-Received: by 2002:a05:620a:1425:: with SMTP id
- k5mr1062627qkj.146.1559184938564; 
- Wed, 29 May 2019 19:55:38 -0700 (PDT)
+ id 1hWBnJ-00014n-Ag; Thu, 30 May 2019 03:31:59 +0000
+X-UUID: a657132796104de48a304b11d8799b2c-20190529
+X-UUID: a657132796104de48a304b11d8799b2c-20190529
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 966002473; Wed, 29 May 2019 19:31:45 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 20:31:44 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 30 May 2019 11:31:41 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 30 May 2019 11:31:40 +0800
+Message-ID: <1559187100.24897.81.camel@mhfsdcap03>
+Subject: RE: [v5, PATCH] net: stmmac: add support for hash table size
+ 128/256 in dwmac4
+From: biao huang <biao.huang@mediatek.com>
+To: Jose Abreu <Jose.Abreu@synopsys.com>
+Date: Thu, 30 May 2019 11:31:40 +0800
+In-Reply-To: <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
+References: <1559122268-22545-1-git-send-email-biao.huang@mediatek.com>
+ <1559122268-22545-2-git-send-email-biao.huang@mediatek.com>
+ <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-References: <20190528073908.633-1-hsinyi@chromium.org>
- <1559033586.5141.3.camel@mtksdaap41>
-In-Reply-To: <1559033586.5141.3.camel@mtksdaap41>
-From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Thu, 30 May 2019 10:55:12 +0800
-Message-ID: <CAJMQK-ir9J-JN9DDZPBA1nVkJUZ_6A+fY4fA6jx6zOh_9q5a-w@mail.gmail.com>
-Subject: Re: [PATCH v3] gpu/drm: mediatek: call mtk_dsi_stop() after
- mtk_drm_crtc_atomic_disable()
-To: CK Hu <ck.hu@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_195540_420886_D09ADFF9 
-X-CRM114-Status: UNSURE (   7.11  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190529_203157_374436_EB1B0E37 
+X-CRM114-Status: GOOD (  12.63  )
+X-Spam-Score: 1.8 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (1.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:743 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 1.8 FUZZY_XPILL            BODY: Attempt to obfuscate words in spam
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,39 +74,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Daniel Vetter <daniel@ffwll.ch>, David Airlie <airlied@linux.ie>,
- lkml <linux-kernel@vger.kernel.org>, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Philipp Zabel <p.zabel@pengutronix.de>,
+Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
+ "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, May 28, 2019 at 4:53 PM CK Hu <ck.hu@mediatek.com> wrote:
+Hi Jose,
+	I also try "ethtool -A eth0 tx on rx on", and selftests pass.
 
-> I think we've already discussed in [1]. I need a reason to understand
-> this is hardware behavior or software bug. If this is a software bug, we
-> need to fix the bug and code could be symmetric.
->
-> [1]
-> http://lists.infradead.org/pipermail/linux-mediatek/2019-March/018423.html
->
-Hi CK,
+	But there are bugs in dwmac4_flow_ctrl:
+		flow control will keep on once enabled. 
+		ethtool -A eth0 tx off rx off can't change it.
 
-Jitao has replied in v2[1]
-"
-mtk_dsi_start must after dsi full setting.
-If you put it in mtk_dsi_ddp_start, mtk_dsi_set_mode won't work. DSI
-will keep cmd mode. So you see no irq.
-...
-"
+	if (fc & FLOW_RX)  {
+		pr_debug ...
+		flow |= GMAC_RX_FLOW_CTRL_RFE;
+		writel(flow, ioaddr + GMAC_RX_FLOW_CTRL);
+		>> this should move outside to enasure rx flow control will be off
+when execute "ethtool -A eth0 rx off"
+	} 
 
-[1] https://lore.kernel.org/patchwork/patch/1052505/#1276270
+	same for tx.
 
-Thanks
+On Wed, 2019-05-29 at 10:30 +0000, Jose Abreu wrote:
+> From: Biao Huang <biao.huang@mediatek.com>
+> Date: Wed, May 29, 2019 at 10:31:08
+> 
+> > 1. get hash table size in hw feature reigster, and add support
+> > for taller hash table(128/256) in dwmac4.
+> > 2. only clear GMAC_PACKET_FILTER bits used in this function,
+> > to avoid side effect to functions of other bits.
+> > 
+> > stmmac selftests output log:
+> > 	ethtool -t eth0
+> > 	The test result is FAIL
+> > 	The test extra info:
+> > 	 1. MAC Loopback                 0
+> > 	 2. PHY Loopback                 -95
+> > 	 3. MMC Counters                 0
+> > 	 4. EEE                          -95
+> > 	 5. Hash Filter MC               0
+> > 	 6. Perfect Filter UC            0
+> > 	 7. MC Filter                    0
+> > 	 8. UC Filter                    0
+> > 	 9. Flow Control                 1
+> 
+> Thanks for testing, this patch looks good to me.
+> 
+> Do you want to check why Flow Control selftest is failing ?
+> 
+> 
+> Thanks,
+> Jose Miguel Abreu
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
