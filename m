@@ -2,55 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3258D2E082
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 May 2019 17:05:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E7932EA4D
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 03:39:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=fawPERsETl8E03h7XV2EJr/TrDpKvLPZdn9ISiHFi/E=; b=NYQ4589Xd7P52F
-	VDAF1HPM2zcL0pq18lchFZ9nQOl3wG/tgfLha5HY2Uwe35WVR9bXeEggdoRTDnbJ1abdaCjFak50u
-	M5oL8dmKAN9bJBe+EW/vsylPrUJc++shirwI1S0sT3nS17rJzkdkXPKnWnM64+2NAxp9s1jLyssTV
-	LOT2JT0sAZ4Pf8zhPz7ALs6JlZjsc3nmpI6ULFlNRspBSWKCSaHTH5qFxBDozxBjviROiND2qznoi
-	k+TbMHUoYoB1KziwfvGnXDfNIOrglAltpEDe1L1zk3G5g+v3FoSgAWP4UeQu7eP1syStMKR73FMP1
-	dIyJb2izDyJ7nt8o3A6Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=xfDTLG55Q8ffHBThLsA0ewUXGAUFUkmc5zAvXylhjKA=; b=J6hkdfseQxtOz2
+	njX4j/nhQ2bebRk7HKGIkI98Zrsh05Y2Gvea1J+uONyl1Hvsnv5WAS+UlX4SI/n8KghYElOP1OST1
+	DxUBf5FVsbrQTxKoxngMr0+8qqKrt67kRks3gSjljR0Val5BaF04qARaxZflGRTkaf3BshUZuRRww
+	O4sxfnR9PpQhxklhBZTTJCKf3xC3gP2McetubiejeuFU71i6Sr9BmiA0d3IoXUChNBrbXSwtngaR/
+	PyuHsN115A+Be6XjsDmDXfGnAYW1OdTMh1GxPZyct04o1DMl7GvpNtOQ9Lp/HMPN3W2I/2Zbo55df
+	WrL18Zw6qIUuKEuTJ7kw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hW08h-0008Uv-7Q; Wed, 29 May 2019 15:05:15 +0000
-Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
+	id 1hWA2X-0008GL-OQ; Thu, 30 May 2019 01:39:33 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hW08X-0007Pv-Kf; Wed, 29 May 2019 15:05:07 +0000
-Received: from DGGEMS410-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 5B4D2DBC006830ABF8D4;
- Wed, 29 May 2019 23:05:00 +0800 (CST)
-Received: from localhost (10.177.31.96) by DGGEMS410-HUB.china.huawei.com
- (10.3.19.210) with Microsoft SMTP Server id 14.3.439.0; Wed, 29 May 2019
- 23:04:53 +0800
-From: YueHaibing <yuehaibing@huawei.com>
-To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
- <tiwai@suse.com>, <matthias.bgg@gmail.com>, <kaichieh.chuang@mediatek.com>
-Subject: [PATCH -next] ASoC: mediatek: Make some symbols static
-Date: Wed, 29 May 2019 23:04:37 +0800
-Message-ID: <20190529150437.19004-1-yuehaibing@huawei.com>
-X-Mailer: git-send-email 2.10.2.windows.1
+ id 1hWA2O-00089V-V7; Thu, 30 May 2019 01:39:26 +0000
+X-UUID: 8d614679a2b647ac880d47f8f5344287-20190529
+X-UUID: 8d614679a2b647ac880d47f8f5344287-20190529
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 476568689; Wed, 29 May 2019 17:39:16 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 18:39:14 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 30 May 2019 09:39:11 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 30 May 2019 09:39:10 +0800
+Message-ID: <1559180349.24897.72.camel@mhfsdcap03>
+Subject: RE: [v5, PATCH] net: stmmac: add support for hash table size
+ 128/256 in dwmac4
+From: biao huang <biao.huang@mediatek.com>
+To: Jose Abreu <Jose.Abreu@synopsys.com>
+Date: Thu, 30 May 2019 09:39:09 +0800
+In-Reply-To: <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
+References: <1559122268-22545-1-git-send-email-biao.huang@mediatek.com>
+ <1559122268-22545-2-git-send-email-biao.huang@mediatek.com>
+ <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-Originating-IP: [10.177.31.96]
-X-CFilter-Loop: Reflected
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_080506_194636_7E1AF2E7 
-X-CRM114-Status: UNSURE (   8.28  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190529_183925_004299_27C3F0A0 
+X-CRM114-Status: GOOD (  12.42  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [45.249.212.190 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -62,75 +73,77 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: YueHaibing <yuehaibing@huawei.com>, alsa-devel@alsa-project.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
+ "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Fix sparse warnings:
+Hi Jose,
+	Flow control is disabled in v5 commit.
 
-sound/soc/mediatek/common/mtk-btcvsd.c:410:5: warning: symbol 'mtk_btcvsd_write_to_bt' was not declared. Should it be static?
-sound/soc/mediatek/common/mtk-btcvsd.c:698:9: warning: symbol 'mtk_btcvsd_snd_read' was not declared. Should it be static?
-sound/soc/mediatek/common/mtk-btcvsd.c:779:9: warning: symbol 'mtk_btcvsd_snd_write' was not declared. Should it be static?
+	I tried "insmod stmmac flow_ctrl=1", and the output log shows self test
+pass:
+	ethtool -t eth0                                    
+	The test result is PASS
+ 	The test extra info:
+ 	 1. MAC Loopback                 0
+ 	 2. PHY Loopback                 -95
+ 	 3. MMC Counters                 0
+ 	 4. EEE                          -95
+ 	 5. Hash Filter MC               0
+ 	 6. Perfect Filter UC            0
+ 	 7. MC Filter                    0
+ 	 8. UC Filter                    0
+	 9. Flow Control                 0
 
-Reported-by: Hulk Robot <hulkci@huawei.com>
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
----
- sound/soc/mediatek/common/mtk-btcvsd.c | 22 +++++++++++-----------
- 1 file changed, 11 insertions(+), 11 deletions(-)
+	Is v5 OK? Should I resend a v6?
 
-diff --git a/sound/soc/mediatek/common/mtk-btcvsd.c b/sound/soc/mediatek/common/mtk-btcvsd.c
-index bd55c546e790..c7a81c4be068 100644
---- a/sound/soc/mediatek/common/mtk-btcvsd.c
-+++ b/sound/soc/mediatek/common/mtk-btcvsd.c
-@@ -407,11 +407,11 @@ static int mtk_btcvsd_read_from_bt(struct mtk_btcvsd_snd *bt,
- 	return 0;
- }
- 
--int mtk_btcvsd_write_to_bt(struct mtk_btcvsd_snd *bt,
--			   enum bt_sco_packet_len packet_type,
--			   unsigned int packet_length,
--			   unsigned int packet_num,
--			   unsigned int blk_size)
-+static int mtk_btcvsd_write_to_bt(struct mtk_btcvsd_snd *bt,
-+				  enum bt_sco_packet_len packet_type,
-+				  unsigned int packet_length,
-+				  unsigned int packet_num,
-+				  unsigned int blk_size)
- {
- 	unsigned int i;
- 	unsigned long flags;
-@@ -695,9 +695,9 @@ static int wait_for_bt_irq(struct mtk_btcvsd_snd *bt,
- 	return 0;
- }
- 
--ssize_t mtk_btcvsd_snd_read(struct mtk_btcvsd_snd *bt,
--			    char __user *buf,
--			    size_t count)
-+static ssize_t mtk_btcvsd_snd_read(struct mtk_btcvsd_snd *bt,
-+				   char __user *buf,
-+				   size_t count)
- {
- 	ssize_t read_size = 0, read_count = 0, cur_read_idx, cont;
- 	unsigned int cur_buf_ofs = 0;
-@@ -776,9 +776,9 @@ ssize_t mtk_btcvsd_snd_read(struct mtk_btcvsd_snd *bt,
- 	return read_count;
- }
- 
--ssize_t mtk_btcvsd_snd_write(struct mtk_btcvsd_snd *bt,
--			     char __user *buf,
--			     size_t count)
-+static ssize_t mtk_btcvsd_snd_write(struct mtk_btcvsd_snd *bt,
-+				    char __user *buf,
-+				    size_t count)
- {
- 	int written_size = count, avail = 0, cur_write_idx, write_size, cont;
- 	unsigned int cur_buf_ofs = 0;
--- 
-2.17.1
+On Wed, 2019-05-29 at 10:30 +0000, Jose Abreu wrote:
+> From: Biao Huang <biao.huang@mediatek.com>
+> Date: Wed, May 29, 2019 at 10:31:08
+> 
+> > 1. get hash table size in hw feature reigster, and add support
+> > for taller hash table(128/256) in dwmac4.
+> > 2. only clear GMAC_PACKET_FILTER bits used in this function,
+> > to avoid side effect to functions of other bits.
+> > 
+> > stmmac selftests output log:
+> > 	ethtool -t eth0
+> > 	The test result is FAIL
+> > 	The test extra info:
+> > 	 1. MAC Loopback                 0
+> > 	 2. PHY Loopback                 -95
+> > 	 3. MMC Counters                 0
+> > 	 4. EEE                          -95
+> > 	 5. Hash Filter MC               0
+> > 	 6. Perfect Filter UC            0
+> > 	 7. MC Filter                    0
+> > 	 8. UC Filter                    0
+> > 	 9. Flow Control                 1
+> 
+> Thanks for testing, this patch looks good to me.
+> 
+> Do you want to check why Flow Control selftest is failing ?
+> 
+> 
+> Thanks,
+> Jose Miguel Abreu
+
+Thanks,
+Biao
 
 
 
