@@ -2,55 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3743A2F7EE
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 09:32:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1CDA12F8D9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 10:55:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6iYydzPeBRWJo3GYlky+oJTwqx4pOofPxNQBdBFNCbg=; b=NhTx4kMKEPXbjJ
-	Wdvf+j5VaB+ppziEXvp6i2sqcnDf23TaRXd4wnHD9NqUIWKgpZ+HoTKMUifi+dvfP36zA4/VrcOha
-	FN1zq7xzFEWFIPMUiTzxhBMM3lAQrO+r1vlP5V3WcxT5gCePMqkoyYgKx9VGDL41LTNfsAltcrTs3
-	7egPlSL3vIzFHOw90xpspzJAcNUeK04TgyD4eiA8OFtgKuFhZMDQM5wN6gBCWCQ7/vXRIAuZdWJ1P
-	DFAoOQcI/TGDbifd9XS6TUp/SLhOzf2enrCVp3B6HdytnDnezM/FVm3qqzfhtXCgd9QYtan90MJPS
-	OLQ04aQgUiSQk/aHW9kg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=B4Asw4xHJL8HXKxM3HP/UjxPThXAn+e/oudDye137oA=; b=E3joZtOebxEiL7
+	sdp+j2ZF5/7Mnt6nSAQ9mirR26PTK0yttgjlpA9kiM9xyl/xHuL+L0fFs9jsN/foNcTrHEMqraV8S
+	FBLOg3WzL0I9zK2yiCjSmrN7YY1ARHWtsiex5hccACJKItxZwNCxc2MiF2dqmrlCk/FsTuF/YuDkc
+	0gBv+rRNO4VXJO8tQZLl+ees5Qdr1gpJG89gZrGwpX2CBRr8ONwNn7GgDElBgdD2X/5JAUaT+RJ0H
+	qUGAwy88OReu/Czo4PQLZgsAhnfB95L2CnXpHXtnomp1Okm8wNiiTFcUlbMD8884wGg02na4RJQ00
+	jN1Q0B/bcAo/DAf8ZixA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWFY6-0000ok-AT; Thu, 30 May 2019 07:32:30 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hWGqK-0004Tb-1p; Thu, 30 May 2019 08:55:24 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWFXv-0000hw-HF; Thu, 30 May 2019 07:32:23 +0000
-X-UUID: 4d3dc13f9a48485eb6f3fccfd8813978-20190529
-X-UUID: 4d3dc13f9a48485eb6f3fccfd8813978-20190529
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hWGpw-0002r3-9a; Thu, 30 May 2019 08:55:01 +0000
+X-UUID: 99dcee40f03c475f8383ad0635bf3dba-20190530
+X-UUID: 99dcee40f03c475f8383ad0635bf3dba-20190530
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 4402759; Wed, 29 May 2019 23:31:49 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ with ESMTP id 322899924; Thu, 30 May 2019 00:54:50 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 00:31:46 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 30 May 2019 15:31:39 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 15:31:39 +0800
-Message-ID: <1559201499.8487.40.camel@mhfsdcap03>
-Subject: Re: [v3 PATCH] usb: create usb_debug_root for gadget only
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Felipe Balbi <felipe.balbi@linux.intel.com>
-Date: Thu, 30 May 2019 15:31:39 +0800
-In-Reply-To: <87k1ebj8vt.fsf@linux.intel.com>
-References: <cffd6d75f69e4d908c8f39b8a60ddae27d6b7c88.1559028752.git.chunfeng.yun@mediatek.com>
- <87k1ebj8vt.fsf@linux.intel.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ 15.0.1395.4; Thu, 30 May 2019 01:54:49 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 16:54:47 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 30 May 2019 16:54:46 +0800
+From: Biao Huang <biao.huang@mediatek.com>
+To: Jose Abreu <joabreu@synopsys.com>
+Subject: [PATCH 0/4] complete dwmac-mediatek driver and fix flow control issue
+Date: Thu, 30 May 2019 16:54:40 +0800
+Message-ID: <1559206484-1825-1-git-send-email-biao.huang@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_003221_864610_FC302176 
-X-CRM114-Status: GOOD (  13.97  )
+X-CRM114-CacheID: sfid-20190530_015500_339910_3A769002 
+X-CRM114-Status: UNSURE (   7.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,127 +69,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-usb@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Randy Dunlap <rdunlap@infradead.org>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
+ Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
+ biao.huang@mediatek.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Felipe,
-On Tue, 2019-05-28 at 11:11 +0300, Felipe Balbi wrote:
-> Hi,
-> 
-> Chunfeng Yun <chunfeng.yun@mediatek.com> writes:
-> > diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-> > index 7fcb9f782931..88b3ee03a12d 100644
-> > --- a/drivers/usb/core/usb.c
-> > +++ b/drivers/usb/core/usb.c
-> > @@ -1190,7 +1190,7 @@ EXPORT_SYMBOL_GPL(usb_debug_root);
-> >  
-> >  static void usb_debugfs_init(void)
-> >  {
-> > -	usb_debug_root = debugfs_create_dir("usb", NULL);
-> > +	usb_debug_root = debugfs_create_dir(USB_DEBUG_ROOT_NAME, NULL);
-> >  	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
-> >  			    &usbfs_devices_fops);
-> >  }
-> 
-> might be a better idea to move this to usb common. Then have a function
-> which can be called by both host and gadget to maybe create the
-> directory:
-> 
-> static struct dentry *usb_debug_root;
-> 
-> struct dentry *usb_debugfs_init(void)
-> {
-> 	if (!usb_debug_root)
->         	usb_debug_root = debugfs_create_dir("usb", NULL);
-> 
-> 	return usb_debug_root;
-> }
-> 
-> 
-> Then usb core would be updated to something like:
-> 
-> static void usb_core_debugfs_init(void)
-> {
-> 	struct dentry *root = usb_debugfs_init();
-> 
-> 	debugfs_create_file("devices", 0444, root, NULL, &usbfs_devices_fops);
-> }
-> 
-I find a problem when move usb_debugfs_init() and usb_debugfs_cleanup()
-into usb common, it's easy to create "usb" directory, but difficult to
-cleanup it:
-
-common/common.c
-
-struct dentry *usb_debugfs_init(void)
-{
-    if (!usb_debug_root)
-        usb_debug_root = debugfs_create_dir("usb", NULL);
-
-    return usb_debug_root;
-}
-
-void usb_debugfs_cleanup(void)
-{
-    debugfs_remove_recursive(usb_debug_root);
-    usb_debug_root = NULL;
-}
-
-core/usb.c
-
-static void usb_core_debugfs_init(void)
-{
-    struct dentry *root = usb_debugfs_init();
-
-    debugfs_create_file("devices", 0444, root, NULL,
-&usbfs_devices_fops);
-}
-
-static int __init usb_init(void)
-{
-    ...
-    usb_core_debugfs_init();
-    ...
-}
-
-static void __exit usb_exit(void)
-{
-    ...
-    usb_debugfs_cleanup();
-    // will be error, gadget may use it.
-    ...
-}
-
-gadget/udc/core.c
-
-static int __init usb_udc_init(void)
-{
-    ...
-    usb_debugfs_init();
-    ...
-}
-
-static void __exit usb_udc_exit(void)
-{
-    ...
-    usb_debugfs_cleanup();
-    // can't cleanup in fact, usb core may use it.
-}
-
-How to handle this case? introduce a reference count? do you have any
-suggestion?
-
-Thanks a lot
-
-
-
-
+This series mainly complete dwmac-mediatek driver:                              
+        1. add power on/off operations for dwmac-mediatek.                      
+        2. disable rx watchdog to reduce rx path reponding time.                
+        3. change the default value of tx-frames from 25 to 1, so               
+           ptp4l will test pass by default.                                     
+                                                                                
+and also fix the issue that flow control won't be disabled any more             
+once being enabled.                                                               
+                                                                                
+Biao Huang (4):                                                                 
+  net: stmmac: dwmac-mediatek: enable Ethernet power domain                     
+  net: stmmac: dwmac-mediatek: disable rx watchdog                              
+  net: stmmac: modify default value of tx-frames                                
+  net: stmmac: dwmac4: fix flow control issue                                   
+                                                                                
+ drivers/net/ethernet/stmicro/stmmac/common.h       |    2 +-                   
+ .../net/ethernet/stmicro/stmmac/dwmac-mediatek.c   |   19 ++++++++++++++++++-  
+ drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c  |    8 ++++++--             
+ 3 files changed, 25 insertions(+), 4 deletions(-)                              
+                                                                                
+--                                                                              
+1.7.9.5
 
 
 _______________________________________________
