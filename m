@@ -2,57 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E7932EA4D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 03:39:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82A0C2EA6D
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 03:58:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xfDTLG55Q8ffHBThLsA0ewUXGAUFUkmc5zAvXylhjKA=; b=J6hkdfseQxtOz2
-	njX4j/nhQ2bebRk7HKGIkI98Zrsh05Y2Gvea1J+uONyl1Hvsnv5WAS+UlX4SI/n8KghYElOP1OST1
-	DxUBf5FVsbrQTxKoxngMr0+8qqKrt67kRks3gSjljR0Val5BaF04qARaxZflGRTkaf3BshUZuRRww
-	O4sxfnR9PpQhxklhBZTTJCKf3xC3gP2McetubiejeuFU71i6Sr9BmiA0d3IoXUChNBrbXSwtngaR/
-	PyuHsN115A+Be6XjsDmDXfGnAYW1OdTMh1GxPZyct04o1DMl7GvpNtOQ9Lp/HMPN3W2I/2Zbo55df
-	WrL18Zw6qIUuKEuTJ7kw==;
+	List-Owner; bh=FJKl8M2cJ7X7L3eT7yYQYkqu9VLeE/SrTUlOZRYO0nQ=; b=a0cE5dhqngQR0O
+	NyR0jnYwQcRofATm4twdcUQFBORG225Ws3vEwNT6GpzMgiNGD3a24/CSY8c8BYK4IZ5xhdj7+xGiG
+	x4x1ofJ4UIMK9RcgSVErd2lqMX6Z6M6uhky1eOG1mWXNi5/MQWExy1TmsYITpM5nLjKLrPq+/s1Ns
+	p1S+GSX3liLuE+KabT1kjSn4pDDPLgjH8GkQQWH5W+qJBA26wsj6nAQ6CLVK3axx2syiQb7LCAmo+
+	g3iAafAZ09U8UpjWL/iCdaoDAamLjzBQgN19swj0k2T7zrfTZD4CKwj3YSNCCJAT+zw7E2UamH/XV
+	TWe7zlbWaGqhiIy++vqg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWA2X-0008GL-OQ; Thu, 30 May 2019 01:39:33 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hWAKr-0005lE-07; Thu, 30 May 2019 01:58:29 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWA2O-00089V-V7; Thu, 30 May 2019 01:39:26 +0000
-X-UUID: 8d614679a2b647ac880d47f8f5344287-20190529
-X-UUID: 8d614679a2b647ac880d47f8f5344287-20190529
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
+ id 1hWAKn-0005kb-If; Thu, 30 May 2019 01:58:27 +0000
+X-UUID: 0f66a0144afd4b8785e7f15f8bea6d9a-20190529
+X-UUID: 0f66a0144afd4b8785e7f15f8bea6d9a-20190529
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 476568689; Wed, 29 May 2019 17:39:16 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 May 2019 18:39:14 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 30 May 2019 09:39:11 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 09:39:10 +0800
-Message-ID: <1559180349.24897.72.camel@mhfsdcap03>
-Subject: RE: [v5, PATCH] net: stmmac: add support for hash table size
- 128/256 in dwmac4
-From: biao huang <biao.huang@mediatek.com>
-To: Jose Abreu <Jose.Abreu@synopsys.com>
-Date: Thu, 30 May 2019 09:39:09 +0800
-In-Reply-To: <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
-References: <1559122268-22545-1-git-send-email-biao.huang@mediatek.com>
- <1559122268-22545-2-git-send-email-biao.huang@mediatek.com>
- <78EB27739596EE489E55E81C33FEC33A0B9334CE@DE02WEMBXB.internal.synopsys.com>
+ with ESMTP id 1795255748; Wed, 29 May 2019 17:58:05 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 29 May 2019 18:58:04 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 09:58:02 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 30 May 2019 09:58:02 +0800
+Message-ID: <1559181482.24427.18.camel@mtksdccf07>
+Subject: Re: [PATCH] kasan: add memory corruption identification for
+ software tag-based mode
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Dmitry Vyukov <dvyukov@google.com>
+Date: Thu, 30 May 2019 09:58:02 +0800
+In-Reply-To: <CACT4Y+ZwXsBk8VqvDOJGMqrbVjuZ-HfC9RG4LpgRC-9WqmQJVw@mail.gmail.com>
+References: <1559027797-30303-1-git-send-email-walter-zh.wu@mediatek.com>
+ <CACT4Y+aCnODuffR7PafyYispp_U+ZdY1Dr0XQYvmghkogLJzSw@mail.gmail.com>
+ <1559122529.17186.24.camel@mtksdccf07>
+ <CACT4Y+ZwXsBk8VqvDOJGMqrbVjuZ-HfC9RG4LpgRC-9WqmQJVw@mail.gmail.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190529_183925_004299_27C3F0A0 
-X-CRM114-Status: GOOD (  12.42  )
+X-CRM114-CacheID: sfid-20190529_185825_633648_A541D293 
+X-CRM114-Status: GOOD (  21.69  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,78 +74,98 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
- "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>,
- Alexandre Torgue <alexandre.torgue@st.com>,
- "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
- "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+Cc: wsd_upstream@mediatek.com, Catalin Marinas <catalin.marinas@arm.com>,
+ linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
+ kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
+ Linux-MM <linux-mm@kvack.org>, Miles
+ Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ David Rientjes <rientjes@google.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- "linux-stm32@st-md-mailman.stormreply.com"
- <linux-stm32@st-md-mailman.stormreply.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+ Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
+ Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Jose,
-	Flow control is disabled in v5 commit.
+On Wed, 2019-05-29 at 12:00 +0200, Dmitry Vyukov wrote:
+> > > There can be multiple qobjects in the quarantine associated with the
+> > > address, right? If so, we need to find the last one rather then a
+> > > random one.
+> > >
+> > The qobject includes the address which has tag and range, corruption
+> > address must be satisfied with the same tag and within object address
+> > range, then it is found in the quarantine.
+> > It should not easy to get multiple qobjects have the same tag and within
+> > object address range.
+> 
+> Yes, using the tag for matching (which I missed) makes the match less likely.
+> 
+> But I think we should at least try to find the newest object in
+> best-effort manner.
+We hope it, too.
 
-	I tried "insmod stmmac flow_ctrl=1", and the output log shows self test
-pass:
-	ethtool -t eth0                                    
-	The test result is PASS
- 	The test extra info:
- 	 1. MAC Loopback                 0
- 	 2. PHY Loopback                 -95
- 	 3. MMC Counters                 0
- 	 4. EEE                          -95
- 	 5. Hash Filter MC               0
- 	 6. Perfect Filter UC            0
- 	 7. MC Filter                    0
- 	 8. UC Filter                    0
-	 9. Flow Control                 0
+> Consider, both slab and slub reallocate objects in LIFO manner and we
+> don't have a quarantine for objects themselves. So if we have a loop
+> that allocates and frees an object of same size a dozen of times.
+> That's enough to get a duplicate pointer+tag qobject.
+> This includes:
+> 1. walking the global quarantine from quarantine_tail backwards.
+It is ok.
 
-	Is v5 OK? Should I resend a v6?
+> 2. walking per-cpu lists in the opposite direction: from tail rather
+> then from head. I guess we don't have links, so we could change the
+> order and prepend new objects from head.
+> This way we significantly increase chances of finding the right
+> object. This also deserves a comment mentioning that we can find a
+> wrong objects.
+> 
+The current walking per-cpu list direction is from head to trail. we
+will modify the direction and find the newest object.
 
-On Wed, 2019-05-29 at 10:30 +0000, Jose Abreu wrote:
-> From: Biao Huang <biao.huang@mediatek.com>
-> Date: Wed, May 29, 2019 at 10:31:08
+
+> > > Why don't we allocate qlist_object and qlist_node in a single
+> > > allocation? Doing 2 allocations is both unnecessary slow and leads to
+> > > more complex code. We need to allocate them with a single allocations.
+> > > Also I think they should be allocated from a dedicated cache that opts
+> > > out of quarantine?
+> > >
+> > Single allocation is good suggestion, if we only has one allocation.
+> > then we need to move all member of qlist_object to qlist_node?
+> >
+> > struct qlist_object {
+> >     unsigned long addr;
+> >     unsigned int size;
+> >     struct kasan_alloc_meta free_track;
+> > };
+> > struct qlist_node {
+> >     struct qlist_object *qobject;
+> >     struct qlist_node *next;
+> > };
 > 
-> > 1. get hash table size in hw feature reigster, and add support
-> > for taller hash table(128/256) in dwmac4.
-> > 2. only clear GMAC_PACKET_FILTER bits used in this function,
-> > to avoid side effect to functions of other bits.
-> > 
-> > stmmac selftests output log:
-> > 	ethtool -t eth0
-> > 	The test result is FAIL
-> > 	The test extra info:
-> > 	 1. MAC Loopback                 0
-> > 	 2. PHY Loopback                 -95
-> > 	 3. MMC Counters                 0
-> > 	 4. EEE                          -95
-> > 	 5. Hash Filter MC               0
-> > 	 6. Perfect Filter UC            0
-> > 	 7. MC Filter                    0
-> > 	 8. UC Filter                    0
-> > 	 9. Flow Control                 1
+> I see 2 options:
+> 1. add addr/size/free_track to qlist_node under ifdef CONFIG_KASAN_SW_TAGS
+> 2. or probably better would be to include qlist_node into qlist_object
+> as first field, then allocate qlist_object and cast it to qlist_node
+> when adding to quarantine, and then as we iterate quarantine, we cast
+> qlist_node back to qlist_object and can access size/addr.
 > 
-> Thanks for testing, this patch looks good to me.
+Choice 2 looks better, We first try it.
+
 > 
-> Do you want to check why Flow Control selftest is failing ?
+> > We call call ___cache_free() to free the qobject and qnode, it should be
+> > out of quarantine?
 > 
-> 
-> Thanks,
-> Jose Miguel Abreu
+> This should work.
+
+Thanks your good suggestion.
+We will implement those solution which you suggested to the second
+edition.
+
 
 Thanks,
-Biao
-
+Walter
 
 
 _______________________________________________
