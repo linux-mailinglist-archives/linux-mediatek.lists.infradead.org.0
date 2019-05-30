@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E6FD62F9F8
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 12:06:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD2C32FB59
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 May 2019 14:01:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WKamwjcCJWotup1ZnVlYRciVMmmnsGJhYYsKJqO/GDU=; b=hoXe4h02nJASkS
-	P/kN26LeO2BjHZNezGXKx6Iow0wCxNhnxj7q4oCx5x4raO5O40h6ut/YOR/V03/j6WT6xO3bGanPK
-	G7ppVdeTleWJ8Zqlas409sMTiPrp8SMoVNS6vNcteEbXyYUEOaCL493Q/ZHY26XFbGMscjc/nY8Dn
-	TpQPCPht7yKIg41cTpMllCm7iygL4s7lEpKxmqnns06AbDUaCkUODiAfD3duLTobdGi/7SqYvt6j2
-	IoT5UiwvFdUmxHRHn10hQU6IyKxEvRcDNoP2oPhxbVqqfvKXOy+uwW/6pEAPjKta0NQqTb60Vcyr4
-	aUtcEZ35eokJXM2rAjog==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=bpsR4YlSChZAVtmKRtptficeF76G4Zp6kTCT1LtY/Vg=; b=pczlUhkIXdr6+v
+	aRDhxLvktumGwUCAARd5nPP2dDTUsqMVbBwQPEhPug/3B84rh7w3MJu3Q0+5mbQql0792FYnQj5eq
+	6flwq2MMb1qm8vbe4HMt4/6Ip3cUlm4QKRu2DnC4ZO2uoMQJd+WGtGEjPJXHw0e4SsZbLfqn5U+rh
+	ffxXyU/t41tkeL/jAy8Vm/HR9XybUsvY/76O5+lbLx51QSiU0tokvsAqlxgglXy6zfNcsuPs8kI7l
+	IN1O+SLEo9Yl9k52ijt4UmiSUvTz0WNLAxLuu/HuIo/AX3MZB17fY90xA8XQ1Km9ra8T4w7lygBy4
+	4ulC0kUVHpZyYTBGEaCg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWHx5-0002U9-LK; Thu, 30 May 2019 10:06:27 +0000
+	id 1hWJkK-0001Bl-TU; Thu, 30 May 2019 12:01:24 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWHx1-0002TP-UK; Thu, 30 May 2019 10:06:25 +0000
-X-UUID: 0f65a1d84337428dad5633dd072e89d9-20190530
-X-UUID: 0f65a1d84337428dad5633dd072e89d9-20190530
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hWJkG-000142-CN
+ for linux-mediatek@lists.infradead.org; Thu, 30 May 2019 12:01:22 +0000
+X-UUID: 085625f80ff0435aaa3e62aa7788af6a-20190530
+X-UUID: 085625f80ff0435aaa3e62aa7788af6a-20190530
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <kobe-cp.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 990244314; Thu, 30 May 2019 02:06:13 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 03:06:12 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 18:06:10 +0800
-Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 30 May 2019 18:06:10 +0800
-Message-ID: <1559210770.12373.0.camel@mtksdaap41>
-Subject: Re: [PATCH v4] gpu/drm: mediatek: call mtk_dsi_stop() after
- mtk_drm_crtc_atomic_disable()
-From: CK Hu <ck.hu@mediatek.com>
-To: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Thu, 30 May 2019 18:06:10 +0800
-In-Reply-To: <20190530091847.90263-1-hsinyi@chromium.org>
-References: <20190530091847.90263-1-hsinyi@chromium.org>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 118921524; Thu, 30 May 2019 04:01:03 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 05:01:02 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 20:00:52 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Thu, 30 May 2019 20:00:53 +0800
+From: Kobe Wu <kobe-cp.wu@mediatek.com>
+To: Peter Zijlstra <peterz@infradead.org>, Ingo Molnar <mingo@redhat.com>,
+ Will Deacon <will.deacon@arm.com>
+Subject: [PATCH] locking/lockdep: Remove unnecessary DEBUG_LOCKS_WARN_ON()
+Date: Thu, 30 May 2019 19:59:35 +0800
+Message-ID: <1559217575-30298-1-git-send-email-kobe-cp.wu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 1B7035FDE05B085C2C32BCEFE450E73C0E7A6F9BC639B3BB6475598512739F112000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_030623_982775_0636F3FD 
-X-CRM114-Status: GOOD (  17.41  )
+X-CRM114-CacheID: sfid-20190530_050120_814579_EF22C1FE 
+X-CRM114-Status: UNSURE (   7.17  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,82 +72,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Eason Lin <eason-yh.lin@mediatek.com>, linux-mediatek@lists.infradead.org,
+ wsd_upstream@mediatek.com, Kobe Wu <kobe-cp.wu@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Hsin-Yi:
+DEBUG_LOCKS_WARN_ON() will turn off debug_locks and 
+makes print_unlock_imbalance_bug() return directly.
 
-On Thu, 2019-05-30 at 17:18 +0800, Hsin-Yi Wang wrote:
-> mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(), which needs
-> ovl irq for drm_crtc_wait_one_vblank(), since after mtk_dsi_stop() is called,
-> ovl irq will be disabled. If drm_crtc_wait_one_vblank() is called after last
-> irq, it will timeout with this message: "vblank wait timed out on crtc 0". This
-> happens sometimes when turning off the screen.
-> 
-> In drm_atomic_helper.c#disable_outputs(),
-> the calling sequence when turning off the screen is:
-> 
-> 1. mtk_dsi_encoder_disable()
->      --> mtk_output_dsi_disable()
->        --> mtk_dsi_stop();  // sometimes make vblank timeout in atomic_disable
->        --> mtk_dsi_poweroff();
-> 2. mtk_drm_crtc_atomic_disable()
->      --> drm_crtc_wait_one_vblank();
->      ...
->        --> mtk_dsi_ddp_stop()
->          --> mtk_dsi_poweroff();
-> 
-> mtk_dsi_poweroff() has reference count design, change to make mtk_dsi_stop()
-> called in mtk_dsi_poweroff() when refcount is 0.
+Remove a redundant whitespace.
 
-Reviewed-by: CK Hu <ck.hu@mediatek.com>
+Signed-off-by: Kobe Wu <kobe-cp.wu@mediatek.com>
+---
+ kernel/locking/lockdep.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
-> 
-> Fixes: 0707632b5bac ("drm/mediatek: update DSI sub driver flow for sending commands to panel")
-> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
-> ---
-> change log v3->v4:
-> * add comment in code.
-> ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 10 +++++++++-
->  1 file changed, 9 insertions(+), 1 deletion(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index b00eb2d2e086..730594a91440 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -630,6 +630,15 @@ static void mtk_dsi_poweroff(struct mtk_dsi *dsi)
->  	if (--dsi->refcount != 0)
->  		return;
->  
-> +	/* 
-> +	 * mtk_dsi_stop() and mtk_dsi_start() is asymmetric, since
-> +	 * mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(),
-> +	 * which needs irq for vblank, and mtk_dsi_stop() will disable irq.
-> +	 * mtk_dsi_start() needs to be called in mtk_output_dsi_enable(),
-> +	 * after dsi is fully set.
-> +	 */
-> +	mtk_dsi_stop(dsi);
-> +
->  	if (!mtk_dsi_switch_to_cmd_mode(dsi, VM_DONE_INT_FLAG, 500)) {
->  		if (dsi->panel) {
->  			if (drm_panel_unprepare(dsi->panel)) {
-> @@ -696,7 +705,6 @@ static void mtk_output_dsi_disable(struct mtk_dsi *dsi)
->  		}
->  	}
->  
-> -	mtk_dsi_stop(dsi);
->  	mtk_dsi_poweroff(dsi);
->  
->  	dsi->enabled = false;
-
+diff --git a/kernel/locking/lockdep.c b/kernel/locking/lockdep.c
+index d06190f..37c0a5e 100644
+--- a/kernel/locking/lockdep.c
++++ b/kernel/locking/lockdep.c
+@@ -4049,8 +4049,8 @@ static int __lock_downgrade(struct lockdep_map *lock, unsigned long ip)
+ 	 * So we're all set to release this lock.. wait what lock? We don't
+ 	 * own any locks, you've been drinking again?
+ 	 */
+-	if (DEBUG_LOCKS_WARN_ON(depth <= 0))
+-		 return print_unlock_imbalance_bug(curr, lock, ip);
++	if (depth <= 0)
++		return print_unlock_imbalance_bug(curr, lock, ip);
+ 
+ 	/*
+ 	 * Check whether the lock exists in the current stack
+-- 
+1.7.9.5
 
 
 _______________________________________________
