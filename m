@@ -2,54 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0446830663
-	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 03:51:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8ABAF3070C
+	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 05:38:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5TXPW4QtJd94NMjPlbLKKouWsaCcY1wVNmLFvURG7Co=; b=khUQdevCxd2Uxm
-	mXOt8HBzcH92imCIfJMC8p9kJnW5/q9tyHHEhNx11S6D1fKHdwtI28YUOqqIg9cSXD41D6hnB7gGY
-	kz2TybIPg7NF0it77DibCqjxm3kYQbKDlVJmtPPYndeoZbnc2KjBLGxJgULu9WH53Z9WDmvsfw015
-	GVPG+NwQwiqecN7KYIDgTx7MHkvjIkwHOn8TlODwBIl/UsdDhOAUyIxHZcjTSXoZRwpr8PGWPkD0O
-	CP4TmDBIncetTq7cBqh9XvZHh6CnmLIeFLbklvwqCGPfqXo4bEQly8vHbIGLTFSF9SDGSs0Mj55m6
-	zsdU/DEiWA9DJc5nFOjQ==;
+	List-Owner; bh=kNUWd2hz5Dl2DPHnJ4LcSFSpvI5u/DXyFS0oJXeSETw=; b=BAJ4sOGH76l6SS
+	JWdpc4zZFu1A8SeTgnShYGNdd4eEWRh7b4ZBikMz2sC3NddeFsK33txHNRYp4ZrQturJgy0+2btvW
+	XwlDH15cFcsGTFRQbaJh1onAljfHKmGnG1Kw0vGbpwpk1PkiNgPkwvo8PRgpIZ0N2NbXkExHGb6RB
+	w5cx4Jo94/mlbuTN76noFH+E6cK6pQlxBN6eGQFabSnvCmPAT/2zsbBXjONyNLx3kOCImt5V1MaZ7
+	pm3jyT9si7oNnRVN1h3K2/rSKDDuwV6wLrGtJ0ajmj/hhPaNABRsjmXawN+USr4eVo4blwxQCCweo
+	3NBp3W5VHv/5C6GbC5bA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWWhN-0006V7-9S; Fri, 31 May 2019 01:51:13 +0000
+	id 1hWYNW-0006ZW-01; Fri, 31 May 2019 03:38:50 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWWhK-0006U8-0M; Fri, 31 May 2019 01:51:11 +0000
-X-UUID: 66410be834854e738768287b9b0a923d-20190530
-X-UUID: 66410be834854e738768287b9b0a923d-20190530
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hWYNM-0006Rw-TS; Fri, 31 May 2019 03:38:42 +0000
+X-UUID: 48c6925429e046c59d0c132b06993a13-20190530
+X-UUID: 48c6925429e046c59d0c132b06993a13-20190530
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1176460895; Thu, 30 May 2019 17:50:58 -0800
-Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ with ESMTP id 1782327830; Thu, 30 May 2019 19:38:33 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 30 May 2019 18:50:56 -0700
+ 15.0.1395.4; Thu, 30 May 2019 20:38:31 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS33N2.mediatek.inc (172.27.4.76) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 31 May 2019 09:50:52 +0800
+ MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 31 May 2019 11:38:28 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 31 May 2019 09:50:52 +0800
-Message-ID: <1559267452.9102.0.camel@mtksdaap41>
-Subject: Re: [PATCH] drm/mediatek: add dsi module reset driver
+ Transport; Fri, 31 May 2019 11:38:29 +0800
+Message-ID: <1559273908.9102.2.camel@mtksdaap41>
+Subject: Re: [v3 3/7] drm/mediatek: add dsi reg commit disable control
 From: CK Hu <ck.hu@mediatek.com>
 To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Fri, 31 May 2019 09:50:52 +0800
-In-Reply-To: <20190519111513.73919-1-jitao.shi@mediatek.com>
-References: <20190519111513.73919-1-jitao.shi@mediatek.com>
+Date: Fri, 31 May 2019 11:38:28 +0800
+In-Reply-To: <20190519092537.69053-4-jitao.shi@mediatek.com>
+References: <20190519092537.69053-1-jitao.shi@mediatek.com>
+ <20190519092537.69053-4-jitao.shi@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_185110_056163_5C49C050 
-X-CRM114-Status: GOOD (  17.07  )
+X-CRM114-CacheID: sfid-20190530_203840_955929_7BBA085D 
+X-CRM114-Status: GOOD (  14.09  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,20 +73,20 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com, Ajay
+ Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
  cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>, Thierry
- Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
  Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki
- Dae <inki.dae@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Andy
- Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>, Sean
- Paul <seanpaul@chromium.org>
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Andy Yan <andy.yan@rock-chips.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul
+ Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Kumar Gala <galak@codeaurora.org>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -93,113 +94,60 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi, Jitao:
 
-On Sun, 2019-05-19 at 19:15 +0800, Jitao Shi wrote:
-> Reset dsi HW to default when power on. Prevent the setting differet
-> between bootloader and kernel.
+On Sun, 2019-05-19 at 17:25 +0800, Jitao Shi wrote:
+> New DSI IP has shadow register and working reg. The register
+> values are writen to shadow register. And then trigger with
+> commit reg, the register values will be moved working register.
+> 
+> This fucntion is defualt on. But this driver doesn't use this
+> function. So add the disable control.
 > 
 > Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 > ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 35 ++++++++++++++++++++++++++++++
->  1 file changed, 35 insertions(+)
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 10 ++++++++++
+>  1 file changed, 10 insertions(+)
 > 
 > diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index b00eb2d2e086..39ccb34a7c7f 100644
+> index a48db056df6c..fd367985c7fd 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
 > +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -21,10 +21,12 @@
->  #include <linux/component.h>
->  #include <linux/iopoll.h>
->  #include <linux/irq.h>
-> +#include <linux/mfd/syscon.h>
->  #include <linux/of.h>
->  #include <linux/of_platform.h>
->  #include <linux/phy/phy.h>
->  #include <linux/platform_device.h>
-> +#include <linux/regmap.h>
->  #include <video/mipi_display.h>
->  #include <video/videomode.h>
+> @@ -131,6 +131,10 @@
+>  #define VM_CMD_EN			BIT(0)
+>  #define TS_VFP_EN			BIT(5)
 >  
-> @@ -146,6 +148,8 @@
->  #define T_HS_EXIT	7
->  #define T_HS_ZERO	10
->  
-> +#define MMSYS_SW_RST_DSI_B BIT(25)
-> +
->  #define NS_TO_CYCLE(n, c)    ((n) / (c) + (((n) % (c)) ? 1 : 0))
->  
->  #define MTK_DSI_HOST_IS_READ(type) \
-> @@ -165,6 +169,8 @@ struct mtk_dsi {
->  	struct drm_panel *panel;
->  	struct drm_bridge *bridge;
->  	struct phy *phy;
-> +	struct regmap *mmsys_sw_rst_b;
-> +	u32 sw_rst_b;
->  
->  	void __iomem *regs;
->  
-> @@ -238,6 +244,16 @@ static void mtk_dsi_disable(struct mtk_dsi *dsi)
->  	mtk_dsi_mask(dsi, DSI_CON_CTRL, DSI_EN, 0);
->  }
->  
-> +static void mtk_dsi_reset_all(struct mtk_dsi *dsi)
-> +{
-> +	regmap_update_bits(dsi->mmsys_sw_rst_b, dsi->sw_rst_b,
-> +			   MMSYS_SW_RST_DSI_B, ~MMSYS_SW_RST_DSI_B);
-> +	usleep_range(1000, 1100);
-> +
-> +	regmap_update_bits(dsi->mmsys_sw_rst_b, dsi->sw_rst_b,
-> +			   MMSYS_SW_RST_DSI_B, MMSYS_SW_RST_DSI_B);
-> +}
-> +
->  static void mtk_dsi_reset_engine(struct mtk_dsi *dsi)
->  {
->  	mtk_dsi_mask(dsi, DSI_CON_CTRL, DSI_RESET, DSI_RESET);
-> @@ -831,6 +847,8 @@ static int mtk_dsi_create_conn_enc(struct drm_device *drm, struct mtk_dsi *dsi)
->  			goto err_encoder_cleanup;
->  	}
->  
-> +	mtk_dsi_reset_all(dsi);
-> +
->  	return 0;
->  
->  err_encoder_cleanup:
-> @@ -1087,6 +1105,7 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  	struct mtk_dsi *dsi;
->  	struct device *dev = &pdev->dev;
->  	struct resource *regs;
-> +	struct regmap *regmap;
->  	int irq_num;
->  	int comp_id;
->  	int ret;
-> @@ -1139,6 +1158,22 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  		return ret;
->  	}
->  
-> +	regmap = syscon_regmap_lookup_by_phandle(dev->of_node,
-> +						 "mediatek,syscon-dsi");
+> +#define DSI_SHADOW_DEBUG	0x190U
+> +#define FORCE_COMMIT		BIT(0)
+> +#define BYPASS_SHADOW		BIT(1)
 
-Where is the binding document for "mediatek,syscon-dsi"?
+One more 'tab' for bitwise definition.
 
 Regards,
 CK
 
-> +	ret = of_property_read_u32_index(dev->of_node, "mediatek,syscon-dsi", 1,
-> +					 &dsi->sw_rst_b);
 > +
-> +	if (IS_ERR(regmap))
-> +		ret = PTR_ERR(regmap);
+>  #define CONFIG				(0xff << 0)
+>  #define SHORT_PACKET			0
+>  #define LONG_PACKET			2
+> @@ -157,6 +161,7 @@ struct phy;
+>  
+>  struct mtk_dsi_driver_data {
+>  	const u32 reg_cmdq_off;
+> +	bool has_shadow_ctl;
+>  };
+>  
+>  struct mtk_dsi {
+> @@ -594,6 +599,11 @@ static int mtk_dsi_poweron(struct mtk_dsi *dsi)
+>  	}
+>  
+>  	mtk_dsi_enable(dsi);
 > +
-> +	if (ret) {
-> +		ret = PTR_ERR(regmap);
-> +		dev_err(dev, "Failed to get mmsys registers: %d\n", ret);
-> +		return ret;
-> +	}
+> +	if (dsi->driver_data->has_shadow_ctl)
+> +		writel(FORCE_COMMIT | BYPASS_SHADOW,
+> +		       dsi->regs + DSI_SHADOW_DEBUG);
 > +
-> +	dsi->mmsys_sw_rst_b = regmap;
-> +
->  	comp_id = mtk_ddp_comp_get_id(dev->of_node, MTK_DSI);
->  	if (comp_id < 0) {
->  		dev_err(dev, "Failed to identify by alias: %d\n", comp_id);
+>  	mtk_dsi_reset_engine(dsi);
+>  	mtk_dsi_phy_timconfig(dsi);
+>  
 
 
 
