@@ -2,80 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1331F3058B
-	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 01:54:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D6CC30654
+	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 03:47:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Bkq51kSAH2OpDyGlktLnJc+sbv99vup/QvjMtmpJZUE=; b=rsupW4LNMxBUdl
-	47lZgzV3T/2RRRXJfzeH43061Tl/zjnpPokrR9CxOohGOTN0HXyj0uH57vvuva4N5WVJFGQAr9605
-	0xfyY1NwFGJ53M9Iib2N+CIqGaS2xPNnrsNVrk4tr9t1yWf4xXzFt74K9+m8q66ytI4KFIU6KvrXQ
-	1xuImzmPzMH3L7pas/nfjMsuuSqof8eAIrOJW51021angkJLr3zBsi1l1sDn0YGLVUlu4cgrWuwlo
-	760RNqUMxU9I6fHgCdOxkWeGOcDhyCDJXjQor21ABN12Q6XXOjTAmfCN11g27TRPmIpMcogNDZwYY
-	VANo8/JCzdY3fjIXqimw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7/8z2p5wx9Sr/DbFhdpoMRAyEEfTMzAQUXZpwggV2xY=; b=fkqLfii3YcrU/2
+	u0Nu0CgXf7C+rEpOnrMBONMJ4ztB0GWeltZQ4FXiEgfq63GZY8S2azLYe2uD6m4EpsDupVJeknl2n
+	/7CKHIkKvbz/y341p0OnEbeZUR7+huZ1eJAecjl2sR5lnIyHv9Bm+gZbpQ6xNdTZHJ2RSx7UkylIl
+	eM9Gnz9WIVCIR8DsUxjDLu2ZJ634hTiw0Ouj/sByePY4yTjXrWXewR5G5PjPEMnhGgHULjkq7y7lX
+	Y45NYl6b1kwiDNdlxj9oTmL4gjdcEKPS9UzPWd6pp3PlSgWLawnDtxRUERV1iCcJ5jg+c9I4y+KHb
+	XEb13NCJr3ln2WeioNdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWUs8-0002jJ-LO; Thu, 30 May 2019 23:54:12 +0000
-Received: from new3-smtp.messagingengine.com ([66.111.4.229])
+	id 1hWWdQ-0004xG-9H; Fri, 31 May 2019 01:47:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWUrz-0002cl-Ho; Thu, 30 May 2019 23:54:05 +0000
-Received: from compute2.internal (compute2.nyi.internal [10.202.2.42])
- by mailnew.nyi.internal (Postfix) with ESMTP id 08B342CBB;
- Thu, 30 May 2019 19:53:59 -0400 (EDT)
-Received: from mailfrontend2 ([10.202.2.163])
- by compute2.internal (MEProxy); Thu, 30 May 2019 19:53:59 -0400
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
- messagingengine.com; h=cc:content-type:date:from:message-id
- :mime-version:subject:to:x-me-proxy:x-me-proxy:x-me-sender
- :x-me-sender:x-sasl-enc; s=fm2; bh=fg8Q3S/7A0Lvcu0KZhM1U56P+Ty9w
- LituQugZp3Wx28=; b=1wZ7DofR81+AVVRncg64Dh2dnG2VFEGEXP2wP2N3QVQ+n
- 5FNGX/d4LmjZ3NnYvG2bW0Zoh+cjytajtnBqbGsAly/11IWIvucawy4qG5MqCSuq
- XN8M2jzgcMFByCFHivht7daM5BGL5NRnDsbTjonejUF2G+WBtwixQkv50+nKIyFc
- cMbkP+ni0zaYL5Uv0VnhUN73vKjLyrwbr+Nrbobn2VklHui5u69cCTSZGwy34o62
- rYY6k7vZWDTXWqkBc35Crdb29uRXxJy2UftV96DC2tOknsENc2zvJkbI53NmN+Hw
- jMHvFu+oyk3ndFvYlOKrhne+GSiHV1yErC6AjVY2g==
-X-ME-Sender: <xms:Fm3wXNv1E-ENAWSDhnXBlM_XdMntB_mGFzxb2_n-I6gycX9wunqHTQ>
-X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgeduuddrudeftddgvdeiucetufdoteggodetrfdotf
- fvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdfqfgfvpdfurfetoffkrfgpnffqhgen
- uceurghilhhouhhtmecufedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmne
- cujfgurhepfffhvffukfggtggusehttdertddttddvnecuhfhrohhmpeeuvghnjhgrmhhi
- nhcuufhhvghrmhgrnhcuoegsvghnjhgrmhhinhessggvnhhshhgvrhhmrghnrdhioheqne
- cukfhppeduvdekrdduudefrddujedruddvvdenucfrrghrrghmpehmrghilhhfrhhomhep
- sggvnhhjrghmihhnsegsvghnshhhvghrmhgrnhdrihhonecuvehluhhsthgvrhfuihiivg
- eptd
-X-ME-Proxy: <xmx:Fm3wXBGgxtXFLXR35JUbGB6VDROkFFb-rmTg1pHybHnDSBGqRmWJCg>
- <xmx:Fm3wXGwjr9hOzbcQGxTf9wGKxtgrM9zMAdl4JuDDEHBkq-1gI64f8w>
- <xmx:Fm3wXD0Z_LT3TUjzb7Qp5WK15PzViFs9wcUfBPvR77XuRnQLRgehmA>
- <xmx:Fm3wXGRLT314edzJsOG7mgDX1lK3OGnh_NO1aRkGFHEK3GY5-6AGCL2mLVk>
-Received: from valkyrie-prime.rpi (el-tovar-33.dynamic2.rpi.edu
- [128.113.17.122])
- by mail.messagingengine.com (Postfix) with ESMTPA id 2E3A9380084;
- Thu, 30 May 2019 19:53:58 -0400 (EDT)
-Date: Thu, 30 May 2019 23:53:48 +0000
-From: Benjamin Sherman <benjamin@bensherman.io>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: [PATCH] staging: mt7621-dma: sizeof via pointer dereference
-Message-ID: <20190530235348.j3orly64wadtjydx@valkyrie-prime.rpi>
+ id 1hWWdG-0004pw-RW; Fri, 31 May 2019 01:47:00 +0000
+X-UUID: 726f1a2cec2148c09159fd76816d5645-20190530
+X-UUID: 726f1a2cec2148c09159fd76816d5645-20190530
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 324067444; Thu, 30 May 2019 17:46:54 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 30 May 2019 18:46:52 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 31 May 2019 09:46:47 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 31 May 2019 09:46:44 +0800
+Message-ID: <1559267203.24897.101.camel@mhfsdcap03>
+Subject: Re: [PATCH 3/4] net: stmmac: modify default value of tx-frames
+From: biao huang <biao.huang@mediatek.com>
+To: Andrew Lunn <andrew@lunn.ch>, Jose Abreu <joabreu@synopsys.com>
+Date: Fri, 31 May 2019 09:46:43 +0800
+In-Reply-To: <20190530125832.GB22727@lunn.ch>
+References: <1559206484-1825-1-git-send-email-biao.huang@mediatek.com>
+ <1559206484-1825-4-git-send-email-biao.huang@mediatek.com>
+ <20190530125832.GB22727@lunn.ch>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_165403_699274_30D886A4 
-X-CRM114-Status: GOOD (  10.06  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190530_184658_890286_C7B048BF 
+X-CRM114-Status: GOOD (  15.40  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [66.111.4.229 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -87,38 +72,69 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>, devel@driverdev.osuosl.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: jianguo.zhang@mediatek.com, Alexandre Torgue <alexandre.torgue@st.com>,
+ boon.leong.ong@intel.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Pass the size of a struct into kzalloc by pointer dereference.  This
-complies with the Linux kernel coding style and removes the possibility
-for a bug if the pointer's type is changed.
+Hi Andrew,
 
-Signed-off-by: Benjamin Sherman <benjamin@bensherman.io>
----
- drivers/staging/mt7621-dma/mtk-hsdma.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+On Thu, 2019-05-30 at 14:58 +0200, Andrew Lunn wrote:
+> On Thu, May 30, 2019 at 04:54:43PM +0800, Biao Huang wrote:
+> > the default value of tx-frames is 25, it's too late when
+> > passing tstamp to stack, then the ptp4l will fail:
+> > 
+> > ptp4l -i eth0 -f gPTP.cfg -m
+> > ptp4l: selected /dev/ptp0 as PTP clock
+> > ptp4l: port 1: INITIALIZING to LISTENING on INITIALIZE
+> > ptp4l: port 0: INITIALIZING to LISTENING on INITIALIZE
+> > ptp4l: port 1: link up
+> > ptp4l: timed out while polling for tx timestamp
+> > ptp4l: increasing tx_timestamp_timeout may correct this issue,
+> >        but it is likely caused by a driver bug
+> > ptp4l: port 1: send peer delay response failed
+> > ptp4l: port 1: LISTENING to FAULTY on FAULT_DETECTED (FT_UNSPECIFIED)
+> > 
+> > ptp4l tests pass when changing the tx-frames from 25 to 1 with
+> > ethtool -C option.
+> > It should be fine to set tx-frames default value to 1, so ptp4l will pass
+> > by default.
+> 
+> Hi Biao
+> 
+> What does this do to the number of interrupts? Do we get 25 times more
+> interrupts? Have you done any performance tests to see if this causes
+> performance regressions?
+Yes, it seems tx-frames=25 can reduce interrupts.
+But the tx interrupt is handled in napi now, which will disable/enable
+tx interrupts at the beginning/ending of napi flow.
 
-diff --git a/drivers/staging/mt7621-dma/mtk-hsdma.c b/drivers/staging/mt7621-dma/mtk-hsdma.c
-index a58725dd2611..60db06768c8a 100644
---- a/drivers/staging/mt7621-dma/mtk-hsdma.c
-+++ b/drivers/staging/mt7621-dma/mtk-hsdma.c
-@@ -468,7 +468,7 @@ static struct dma_async_tx_descriptor *mtk_hsdma_prep_dma_memcpy(
- 	if (len <= 0)
- 		return NULL;
- 
--	desc = kzalloc(sizeof(struct mtk_hsdma_desc), GFP_ATOMIC);
-+	desc = kzalloc(sizeof(*desc), GFP_ATOMIC);
- 	if (!desc) {
- 		dev_err(c->device->dev, "alloc memcpy decs error\n");
- 		return NULL;
--- 
-2.21.0
+Here is the test result on our platform:
+		tx-frames=1		tx-frames=25		
+irq number	478514			393750	
+performance	904Mbits/sec		902Mbits/sec
+
+commands for test:
+	"cat /proc/interrupts | grep eth0"
+	"iperf3 -c ipaddress -w 256K -t 60"
+
+Thanks to napi, the interrupts will not grow 25 times more(almost the
+same level), and no obvious performance degradation.
+
+Is there anybody can double check the performance with tx-frames = 0 or
+25?
+> 
+> 	    Andrew
+Thanks.
+Biao
+
 
 
 _______________________________________________
