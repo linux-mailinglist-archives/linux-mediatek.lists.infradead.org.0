@@ -2,104 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F133930993
-	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 09:42:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B73F5309D7
+	for <lists+linux-mediatek@lfdr.de>; Fri, 31 May 2019 10:06:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fyDjE8djchX0kaM+YpriI7HN4Ln9D5XtJZbI93podGM=; b=mg63T1oCQlMJIo
-	cklmf6YeAp+gXfd3dRDbanhx06TSEnIrsM9ZwZy5CmRACL2h0tAecDuy7JL2Sq/8qZBkQ0pLhzdZk
-	FMaL5wKySU4Kfnrq8CFR+VgzVIVQl3NpWVs5n6qNsHTj062ZG5ElTt/lvugABsLHv4zPs9lxGFtls
-	ooSrHqDCJ0pFMCS/8OpaRKy4ul4EPYDfcA/KoU734HNetoBEEbT483xLXkbexpydbu9xfS5av1pt+
-	nzWNctpNWdVkprZU2tkv+6gdt5pQ5n+HqIDx1VC7y+pt61NpR61dPlv/8lw/KfC6ixPmVtHXAYjts
-	WsMT2T29YQF7NWVKqI0g==;
+	List-Owner; bh=CV5aJjgmTpqMjiHwRFR04X1DDHrhKbM2IE1I/7no4EY=; b=kMzWNqY8q8Sc6l
+	yp0lewuHRAf/pB6XvzwfWOFG/jFj2pJTm5wLjW7pecLWZMdLOQdd6MEKZHy9ltojsxJrTSxkvSIVe
+	wWbVAC8Elma+r+CuOo5CRlidCKOwKm0dIXjAqDghFZzKG8d0FBfvgKSzlh0Jl+PBZx/GTJRd/Aud3
+	21Hsnh4noTD4evprK7T9FS4ifaj6uOCIWKrU3xTQ6LG04VG7LiMUhvknN6dppGFxb1IlTVlY4XSgV
+	NgbV2vfUSM3FLEIYq+TOmEAFMvodLHEGfHzMkwiiWIE0NXEvZB+aU0jKIer/AF6mUom+5srgeucjm
+	A0PaDJ/LetQhJage3MFg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWcAy-0006fC-Ac; Fri, 31 May 2019 07:42:08 +0000
-Received: from mail-eopbgr1410094.outbound.protection.outlook.com
- ([40.107.141.94] helo=JPN01-OS2-obe.outbound.protection.outlook.com)
+	id 1hWcYV-0000Wz-R6; Fri, 31 May 2019 08:06:28 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWcAo-0006Wk-D3; Fri, 31 May 2019 07:41:59 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=renesasgroup.onmicrosoft.com; s=selector2-renesasgroup-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=dS2PUEhD/OjappvmUraoY8QaAl4V8vxaLKFPsCyxD+8=;
- b=beAINlgbA+eR5K3SfOwGG27fJi0DCJ2M1RXEA1kTM2OdXXhFCHYUBFApzK7DfJ0mqKdcsLY+kWUiJy9QiDYrjm/niX3AEBs5EDTvVgPOvkmAawql0KfOMvIqyzFcKGzA7XiJ2/iRitfUlKcOTPOzqUdYH3hKidmmWCd54UUQ+no=
-Received: from OSBPR01MB2103.jpnprd01.prod.outlook.com (52.134.242.17) by
- OSBPR01MB4117.jpnprd01.prod.outlook.com (20.178.99.22) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.1922.23; Fri, 31 May 2019 07:41:52 +0000
-Received: from OSBPR01MB2103.jpnprd01.prod.outlook.com
- ([fe80::a146:39f0:5df9:11bc]) by OSBPR01MB2103.jpnprd01.prod.outlook.com
- ([fe80::a146:39f0:5df9:11bc%7]) with mapi id 15.20.1922.021; Fri, 31 May 2019
- 07:41:52 +0000
-From: Biju Das <biju.das@bp.renesas.com>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>, Rob Herring
- <robh+dt@kernel.org>, Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Heikki
- Krogerus <heikki.krogerus@linux.intel.com>
-Subject: RE: [PATCH v6 07/10] usb: roles: Add fwnode_usb_role_switch_get()
- function
-Thread-Topic: [PATCH v6 07/10] usb: roles: Add fwnode_usb_role_switch_get()
- function
-Thread-Index: AQHVFfJWpqP1rp7HJE+ey5v+4Ztlb6aE3Isg
-Date: Fri, 31 May 2019 07:41:51 +0000
-Message-ID: <OSBPR01MB2103D590654C4A7A49A3EF37B8190@OSBPR01MB2103.jpnprd01.prod.outlook.com>
-References: <1559115828-19146-1-git-send-email-chunfeng.yun@mediatek.com>
- <1559115828-19146-8-git-send-email-chunfeng.yun@mediatek.com>
-In-Reply-To: <1559115828-19146-8-git-send-email-chunfeng.yun@mediatek.com>
-Accept-Language: en-GB, en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=biju.das@bp.renesas.com; 
-x-originating-ip: [193.141.220.21]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: d714a013-f5c3-4728-bf49-08d6e59b7258
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(5600148)(711020)(4605104)(1401327)(4618075)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(2017052603328)(7193020);
- SRVR:OSBPR01MB4117; 
-x-ms-traffictypediagnostic: OSBPR01MB4117:
-x-microsoft-antispam-prvs: <OSBPR01MB4117D2C9011DF9F485DDCB1FB8190@OSBPR01MB4117.jpnprd01.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:7219;
-x-forefront-prvs: 00540983E2
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(39860400002)(346002)(366004)(376002)(396003)(136003)(199004)(189003)(51914003)(14454004)(2906002)(26005)(76176011)(486006)(7696005)(6506007)(4326008)(102836004)(66946007)(476003)(52536014)(81166006)(5660300002)(81156014)(11346002)(8936002)(86362001)(446003)(76116006)(6116002)(3846002)(8676002)(73956011)(64756008)(66556008)(66446008)(66476007)(25786009)(54906003)(71190400001)(71200400001)(53936002)(110136005)(68736007)(66066001)(33656002)(44832011)(99286004)(316002)(6436002)(74316002)(229853002)(7416002)(478600001)(55016002)(186003)(305945005)(256004)(6246003)(9686003)(7736002);
- DIR:OUT; SFP:1102; SCL:1; SRVR:OSBPR01MB4117;
- H:OSBPR01MB2103.jpnprd01.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; A:0; MX:1; 
-received-spf: None (protection.outlook.com: bp.renesas.com does not designate
- permitted sender hosts)
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: xWUIpcpiXGzBdDN5QMWAj1TG9dCR0QHCi1lpL4PpGlnOO+n+exTJwXzA5UabH3xPLeZW/OnQ8ro+Dm5cuPVjqCAEAiG8iKlXbRckJalAZ5ejXSoNTWpTIuHYQvkJQd1QpXyDk3kj9m7YioXJFMtbDUyS9V5HAqB4Qmk9tGfhzT2VSY22QKZX8h3kh4E0Bslue1HSuwbmDRET+fOz8XELiYh5D1EqQ3ECuD/wA4epi/gzy6sTC0HYQI0/0tyapJ1HlFVlNfyod0mCsWZ3jbEIQ5SPz88Xix0BxBLFLQiDCZXfd4W0icdHcmgXogDXreNPrGH4eAQBqazvb7O/5I6hU+8mkyqjeF60c0D6dwCnEcDkpEsrwZhjcZlAzFG5qgkKX84WdnCx+GYQ7UbqzuPEchO6kfKmI17D2QL2AiGNP9o=
+ id 1hWcYL-0000No-83; Fri, 31 May 2019 08:06:19 +0000
+X-UUID: 986b6f8647864bb38aebc1926f282326-20190531
+X-UUID: 986b6f8647864bb38aebc1926f282326-20190531
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <chuanjia.liu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1431797334; Fri, 31 May 2019 00:06:02 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 31 May 2019 01:06:00 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
+ (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 31 May 2019 16:05:57 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 31 May 2019 16:05:57 +0800
+Message-ID: <1559289956.13732.17.camel@mhfsdcap03>
+Subject: Re: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
+From: Chuanjia Liu <Chuanjia.Liu@mediatek.com>
+To: Evan Green <evgreen@chromium.org>
+Date: Fri, 31 May 2019 16:05:56 +0800
+In-Reply-To: <CAE=gft6jxR9Lt7tLwm6VKy9_shMVW7wf3g6rBGEqtB7oNH0hUA@mail.gmail.com>
+References: <20190429035515.73611-1-drinkcat@chromium.org>
+ <20190429035515.73611-3-drinkcat@chromium.org>
+ <155778659317.14659.136626364818483852@swboyd.mtv.corp.google.com>
+ <CANMq1KBMd7eR3dP=V9gJ6G4OgE6DsXad_gzvuNJ25_pee4+6eg@mail.gmail.com>
+ <155786487644.14659.17142525593824613967@swboyd.mtv.corp.google.com>
+ <CANMq1KCNzn-5sYJZGivUedsNaQfVW_MjgDZn27W6sz8Fk3beNA@mail.gmail.com>
+ <CAE=gft6jxR9Lt7tLwm6VKy9_shMVW7wf3g6rBGEqtB7oNH0hUA@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-OriginatorOrg: bp.renesas.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: d714a013-f5c3-4728-bf49-08d6e59b7258
-X-MS-Exchange-CrossTenant-originalarrivaltime: 31 May 2019 07:41:51.8355 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: 53d82571-da19-47e4-9cb4-625a166a4a2a
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: biju.das@bp.renesas.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: OSBPR01MB4117
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190531_004158_437937_F086FB0B 
-X-CRM114-Status: GOOD (  19.29  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190531_010617_287667_23EF05E0 
+X-CRM114-Status: GOOD (  50.11  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.141.94 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -111,112 +76,244 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Hans de Goede <hdegoede@redhat.com>, Linus Walleij <linus.walleij@linaro.org>,
- "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
- Yu Chen <chenyu56@huawei.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Badhri Jagan Sridharan <badhri@google.com>,
- Andy Shevchenko <andy.shevchenko@gmail.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Li Jun <jun.li@nxp.com>
+Cc: Nicolas Boichat <drinkcat@chromium.org>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
+ lkml <linux-kernel@vger.kernel.org>, Stephen Boyd <swboyd@chromium.org>,
+ linux-gpio@vger.kernel.org,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, linux-arm Mailing
+ List <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+On Thu, 2019-05-30 at 10:12 -0700, Evan Green wrote:
+> On Wed, May 15, 2019 at 1:05 AM Nicolas Boichat <drinkcat@chromium.org> wrote:
+> >
+> > On Wed, May 15, 2019 at 4:14 AM Stephen Boyd <swboyd@chromium.org> wrote:
+> > >
+> > > Quoting Nicolas Boichat (2019-05-13 18:37:58)
+> > > > On Tue, May 14, 2019 at 6:29 AM Stephen Boyd <swboyd@chromium.org> wrote:
+> > > > >
+> > > > > Quoting Nicolas Boichat (2019-04-28 20:55:15)
+> > > > > > During suspend/resume, mtk_eint_mask may be called while
+> > > > > > wake_mask is active. For example, this happens if a wake-source
+> > > > > > with an active interrupt handler wakes the system:
+> > > > > > irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
+> > > > > > that it can be handled later on in the resume flow.
+> > > > > >
+> > > > > > However, this may happen before mtk_eint_do_resume is called:
+> > > > > > in this case, wake_mask is loaded, and cur_mask is restored
+> > > > > > from an older copy, re-enabling the interrupt, and causing
+> > > > > > an interrupt storm (especially for level interrupts).
+> > > > > >
+> > > > > > Instead, we just record mask/unmask changes in cur_mask. This
+> > > > > > also avoids the need to read the current mask in eint_do_suspend,
+> > > > > > and we can remove mtk_eint_chip_read_mask function.
+> > > > > >
+> > > > > > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+> > > > >
+> > > > > It looks an awful lot like you should just use IRQCHIP_MASK_ON_SUSPEND
+> > > > > here. Isn't that what's happening? All non-wake irqs should be masked at
+> > > > > the hardware level so they can't cause a wakeup during suspend and on
+> > > > > resume they can be unmasked?
+> > > >
+> > > > No, this is for an line that has both wake and interrupt enabled. To
+> > > > reword the commit message above:
+> > >
+> > > Is my understanding correct that there isn't a different "wake up"
+> > > register that can be written to cause a GPIO to be configured to wake
+> > > the system from suspend? The only way to do so is to leave the GPIO
+> > > unmasked in the hardware by having EINT_EN[irq] = 1? And thus any
+> > > interrupts that we don't want to wake us up during suspend should be
+> > > masked in the hardware?
+> >
+> > Yes, that's my understanding as well.
+> >
+> > And then, what this driver does is to emulate the behaviour of a
+> > controller that would actually have separate irq and wake enable
+> > registers.
+> >
+> > > If that's true, the code here that's trying to keep track of enabled
+> > > irqs and wakeup enabled irqs can be replaced with the irqchip flag so
+> > > that wakeup irqs are not masked while non-wakeups are masked.
+> >
+> > Correct, but with the caveat that I don't see anything that definitely
+> > requires an interrupt to be enabled to be a wake source. See below...
+> >
+> > >
+> > > >  1. cur_mask[irq] = 1; wake_mask[irq] = 1; EINT_EN[irq] = 1 (interrupt
+> > > > enabled at hardware level)
+> > > >  2. System suspends, resumes due to that line (at this stage EINT_HW
+> > > > == wake_mask)
+> > > >  3. irq_pm_check_wakeup is called, and disables the interrupt =>
+> > > > EINT_EN[irq] = 0, but we still have cur_mask[irq] = 1
+> > > >  4. mtk_eint_do_resume is called, and restores EINT_EN = cur_mask, so
+> > > > it reenables EINT_EN[irq] = 1 => interrupt storm.
+> > > >
+> > > > This patch fixes the issue in step 3. So that the interrupt can be
+> > > > re-enabled properly later on, sometimes after mtk_eint_do_resume, when
+> > > > the driver is ready to handle it.
+> > >
+> > > Right, we'd rather not see irqchip drivers working around the genirq
+> > > layer to do these things like tracking cur_mask and wake_mask. That
+> > > leads to subtle bugs and makes the driver maintain state across the
+> > > irqchip callbacks and system suspend/resume.
+> > >
+> > > >
+> > > > Also, IRQCHIP_MASK_ON_SUSPEND does not handle lines that are enabled
+> > > > as a wake source, but without interrupt enabled (e.g. cros_ec driver
+> > > > does that), which we do want to support.
+> > >
+> > > Hmm. I thought that even if the irq is disabled by a driver, that would
+> > > be a lazy disable so it isn't really masked in the hardware. Then if an
+> > > interrupt comes in during suspend on a wake configured irq line, the
+> > > hardware will have left it unmasked because IRQCHIP_MASK_ON_SUSPEND in
+> > > combination with lazy disable would mean that the line is left unmasked
+> > > (ignoring whatever this mediatek driver is doing to mask and unmask in
+> > > PM hooks).
+> >
+> > At the very least, that's not what happens with this system. The
+> > interrupt is definitely not kept enabled in suspend, and the system
+> > would not wake from an EC interrupt. (see also this series, BTW:
+> > https://patchwork.kernel.org/cover/10921121/).
+> >
+> > > Just reading Documentation/power/suspend-and-interrupts.txt I'm led to
+> > > believe that the cros_ec driver shouldn't call disable_irq() on the
+> > > interrupt if it wants to wakeup from it:
+> > >
+> > > "Calling enable_irq_wake() causes suspend_device_irqs() to treat the
+> > > given IRQ in a special way.  Namely, the IRQ remains enabled, by on the
+> > > first interrupt it will be disabled, marked as pending and "suspended"
+> > > so that it will be re-enabled by resume_device_irqs() during the
+> > > subsequent system resume.  Also the PM core is notified about the event
+> > > which causes the system suspend in progress to be aborted (that doesn't
+> > > have to happen immediately, but at one of the points where the suspend
+> > > thread looks for pending wakeup events)."
+> >
+> > I think this describes the behaviour when you keep both enabled.
+> >
+> > > I suppose the problem is an irq line disabled in hardware that has
+> > > wakeup armed on it? Is this even valid? Shouldn't an irq be enabled for
+> > > wakeup to work?
+> >
+> > I couldn't really find a definite answer, but there are a bunch of
+> > examples of other drivers in the kernel:
+> >  - drivers/extcon/extcon-usb-gpio.c:usb_extcon_suspend
+> >  - drivers/hid/i2c-hid/i2c-hid.c:i2c_hid_suspend
+> >  - drivers/mfd/max77843.c:max77843_suspend
+> > (not exhaustive, this is quite hard to grep for...)
+> >
+> > > We could immediately unmask those lines in the hardware when the
+> > > set_wake() callback is called. That way the genirq layer can use the
+> > > driver to do what it wants with the hardware and the driver can make
+> > > sure that set_wake() will always cause the wakeup interrupt to be
+> > > delivered to genirq even when software has disabled it.
+> > >
+> > > But I think that there might be a problem with how genirq understands
+> > > the masked state of a line when the wakeup implementation conflates
+> > > masked state with wakeup armed state. Consider this call-flow:
+> > >
+> > >         irq masked in hardware, IRQD_IRQ_MASKED is set
+> > >         enable_irq_wake()
+> > >           unmask_irq in hardware
+> > >         IRQD_WAKEUP_ARMED is set
+> > >         <suspend and wakeup from irq>
+> > >         handle_level_irq()
+> > >           mask_ack_irq()
+> > >             mask_irq()
+> > >               if (irqd_irq_masked()) -> returns true and skips masking!
+> > >             if (desc->irq_data.chip->irq_ack)
+> > >               ...
+> > >           irq_may_run()
+> > >             irq_pm_check_wakeup()
+> > >               irq_disable()
+> > >                 mask_irq() -> does nothing again
+> > >
+> > > In the above flow, we never mask the irq because we thought it was
+> > > already masked when it was disabled, but the irqchip implementation
+> > > unmasked it to make wakeup work. Maybe we should always mask the irq if
+> > > wakeup is armed and we're trying to call mask_irq()? Looks hacky.
+Maybe we can implement irqchip's mask_ack_irq  in mediatek driver to
+always mask the irq. Then flow will always call it without judgment
+IRQD_IRQ_MASKED.
 
-Thanks for the patch.
+diff --git a/drivers/pinctrl/mediatek/mtk-eint.c
+b/drivers/pinctrl/mediatek/mtk-
+index f464f8c..9f1aae2 100644
+--- a/drivers/pinctrl/mediatek/mtk-eint.c
++++ b/drivers/pinctrl/mediatek/mtk-eint.c
+@@ -272,12 +272,19 @@ static void mtk_eint_irq_release_resources(struct
+irq_data
+        gpiochip_unlock_as_irq(gpio_c, gpio_n);
+ }
 
-> Subject: [PATCH v6 07/10] usb: roles: Add fwnode_usb_role_switch_get()
-> function
-> 
-> From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-> 
-> The fwnode_usb_role_switch_get() function is exactly the same as
-> usb_role_switch_get(), except that it takes struct fwnode_handle as
-> parameter instead of struct device.
-> 
-> Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-Tested-by: Biju Das <biju.das@bp.renesas.com>
++static void mtk_eint_mask_ack(struct irq_data *d)
++{
++       mtk_eint_mask(d);
++       mtk_eint_ack(d);
++}
++
+ static struct irq_chip mtk_eint_irq_chip = {
+        .name = "mt-eint",
+        .irq_disable = mtk_eint_mask,
+        .irq_mask = mtk_eint_mask,
+        .irq_unmask = mtk_eint_unmask,
+        .irq_ack = mtk_eint_ack,
++       .irq_mask_ack = mtk_eint_mask_ack,
+        .irq_set_type = mtk_eint_set_type,
+        .irq_set_wake = mtk_eint_irq_set_wake,
+        .irq_request_resources = mtk_eint_irq_request_resources,
 
-> ---
-> v6:
->   new patch
-> ---
->  drivers/usb/roles/class.c | 20 ++++++++++++++++++++
-> include/linux/usb/role.h  |  7 +++++++
->  2 files changed, 27 insertions(+)
+This seems like a small change.
+thanks.
+> > >
+> > > diff --git a/kernel/irq/chip.c b/kernel/irq/chip.c
+> > > index 51128bea3846..20257d528880 100644
+> > > --- a/kernel/irq/chip.c
+> > > +++ b/kernel/irq/chip.c
+> > > @@ -411,7 +411,7 @@ static inline void mask_ack_irq(struct irq_desc *desc)
+> > >
+> > >  void mask_irq(struct irq_desc *desc)
+> > >  {
+> > > -       if (irqd_irq_masked(&desc->irq_data))
+> > > +       if (!irqd_is_wakeup_armed(&desc->irq_data) && irqd_irq_masked(&desc->irq_data))
+> > >                 return;
+> > >
+> > >         if (desc->irq_data.chip->irq_mask) {
+> >
+> > I'm... really not sure what's the best approach here. But basically,
+> > yes, if we can find a way to properly handle wake and interrupt
+> > behaviour for drivers with a single mask, that'd be good.
+> > IRQCHIP_MASK_ON_SUSPEND only seems to be doing half of the work, since
+> > it does not cover the disable+wake source case.
+> >
+> > Thanks,
 > 
-> diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c index
-> f45d8df5cfb8..aab795b54c7f 100644
-> --- a/drivers/usb/roles/class.c
-> +++ b/drivers/usb/roles/class.c
-> @@ -135,6 +135,26 @@ struct usb_role_switch *usb_role_switch_get(struct
-> device *dev)  }  EXPORT_SYMBOL_GPL(usb_role_switch_get);
+> I finally got around to studying this patch. This series seems okay to
+> me. The underlying problem is really that the hardware IRQ enabled
+> state is out of sync with what Linux thinks. This happens during
+> suspend because Linux thinks the irq is disabled, but due to the
+> hardware constraints on this platform, the interrupt has to be enabled
+> for it to be a wake source. So the mtk driver re-enables the
+> interrupt, and then has to find a way to get back in sync with Linux's
+> IRQ mask state.
 > 
-> +/**
-> + * fwnode_usb_role_switch_get - Find USB role switch linked with the
-> +caller
-> + * @fwnode: The caller device node
-> + *
-> + * This is similar to the usb_role_switch_get() function above, but it
-> +searches
-> + * the switch using fwnode instead of device entry.
-> + */
-> +struct usb_role_switch *fwnode_usb_role_switch_get(struct
-> fwnode_handle
-> +*fwnode) {
-> +	struct usb_role_switch *sw;
-> +
-> +	sw = fwnode_connection_find_match(fwnode, "usb-role-switch",
-> NULL,
-> +					  usb_role_switch_match);
-> +	if (!IS_ERR_OR_NULL(sw))
-> +		WARN_ON(!try_module_get(sw->dev.parent->driver-
-> >owner));
-> +
-> +	return sw;
-> +}
-> +EXPORT_SYMBOL_GPL(fwnode_usb_role_switch_get);
-> +
->  /**
->   * usb_role_switch_put - Release handle to a switch
->   * @sw: USB Role Switch
-> diff --git a/include/linux/usb/role.h b/include/linux/usb/role.h index
-> da2b9641b877..2d77f97df72d 100644
-> --- a/include/linux/usb/role.h
-> +++ b/include/linux/usb/role.h
-> @@ -47,6 +47,7 @@ struct usb_role_switch_desc {  int
-> usb_role_switch_set_role(struct usb_role_switch *sw, enum usb_role role);
-> enum usb_role usb_role_switch_get_role(struct usb_role_switch *sw);
-> struct usb_role_switch *usb_role_switch_get(struct device *dev);
-> +struct usb_role_switch *fwnode_usb_role_switch_get(struct
-> fwnode_handle
-> +*node);
->  void usb_role_switch_put(struct usb_role_switch *sw);
+> One possible approach is mentioned above by Stephen: stop calling
+> disable_irq in the cros EC driver. Then both linux and mtk agree the
+> interrupt is enabled at suspend time. I think this ran into other
+> problems though, where the EC gets its interrupt but is unable to
+> silence it because the underlying SPI bus is still suspended.
 > 
->  struct usb_role_switch *
-> @@ -70,6 +71,12 @@ static inline struct usb_role_switch
-> *usb_role_switch_get(struct device *dev)
->  	return ERR_PTR(-ENODEV);
->  }
-> 
-> +static inline struct usb_role_switch *
-> +fwnode_usb_role_switch_get(struct fwnode_handle *node) {
-> +	return ERR_PTR(-ENODEV);
-> +}
-> +
->  static inline void usb_role_switch_put(struct usb_role_switch *sw) { }
-> 
->  static inline struct usb_role_switch *
-> --
-> 2.21.0
+> The other approach, taken here, is to mask the interrupt when it first
+> comes in, getting Linux and mtk back in agreement that yes, the
+> interrupt is masked. Outside of enlightening the generic IRQ core
+> about these types of interrupts that need to get re-enabled to be wake
+> sources, this seems like a reasonable approach.
+> -Evan
+
 
 
 _______________________________________________
