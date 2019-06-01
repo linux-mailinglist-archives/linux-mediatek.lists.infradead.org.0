@@ -2,53 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AEE253188E
-	for <lists+linux-mediatek@lfdr.de>; Sat,  1 Jun 2019 02:03:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 54020318BD
+	for <lists+linux-mediatek@lfdr.de>; Sat,  1 Jun 2019 02:16:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AxREbphoQ0V9MydxFkDnAiZtRrUqTi/xRWHNwlhjOek=; b=EM6TsxL9ld/pll
-	IcUOB09ANiip84z3YcuEJ1bXAXvZ3AgLHFlyS18Awl0b0+zq7QCqUSTTefOAsceDXZ+2QBWuDEdPZ
-	72ZbRMTDeFDL1utzsy7+cSLuu2FATSbu8skR8vVnFgLUfPTcmBUsSffT55Hj7JKsU17e3rFQnuNbs
-	u9sTAap5tOh3pZkaElKiBlVV0wLK1a3dDfJCHHeLOmu1e4VCtG3CPmcBKEUo9Nnjm2+0ZCR5p2ca8
-	3KCdxpS3F9AC7eqJpBmx+zQI6H+0UwxVQRsqjU2CUHwB+ATHFpj4x6F+B80QOHBRETSkm6nej7UjS
-	+J2gyQzyoQOdF7fE4elQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=vHDn2BMZ5+wlkWxOO605MdSuUfFwjGMRjBxNUSktNVo=; b=CQwiBHbor7RzQy
+	Ob9Iq+d27JGU2390oO8rWwExnidkBTyH1atYrFloDhvYrMcB0FpBj6qUE9Bfz63FGPE5ySC5U7Ech
+	45X+cC91AjWWpH9yJsa4S3CO+ExldFMmp6VQXDiORIto5p4aietOWaBFOtuUzDG+DtrPqChMNlyRx
+	qbk3ZcpoW2leaW945gukGDIisyiQQSpxxFtVZoxmhoOLP9qBnk9kv9dOUvJAInrRlmq8w2/CzJUEG
+	Il3QcI7/qOuEolKa/KSYaX6Ugy7eGT3Q+VryOhqttCGnKpM9qvWaOVl4KwOowvb3o9cOq9BEEQvRS
+	OLIIaOyiOLX6SDTm2VSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWrUo-0000u9-M9; Sat, 01 Jun 2019 00:03:38 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hWrhT-00056n-5t; Sat, 01 Jun 2019 00:16:43 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWrUh-0000nG-Db
- for linux-mediatek@lists.infradead.org; Sat, 01 Jun 2019 00:03:33 +0000
-X-UUID: c6c4e400f907448cb5d188c0313ad3a2-20190531
-X-UUID: c6c4e400f907448cb5d188c0313ad3a2-20190531
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hWrhP-00055y-6v
+ for linux-mediatek@lists.infradead.org; Sat, 01 Jun 2019 00:16:40 +0000
+X-UUID: 9cf3dee3bbda40048c7940c1e5bc44d3-20190531
+X-UUID: 9cf3dee3bbda40048c7940c1e5bc44d3-20190531
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <sean.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1305278653; Fri, 31 May 2019 16:03:28 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ with ESMTP id 1140436271; Fri, 31 May 2019 16:16:38 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 31 May 2019 17:03:26 -0700
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ 15.0.1395.4; Fri, 31 May 2019 17:16:36 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 1 Jun 2019 08:16:28 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Sat, 1 Jun 2019 08:03:26 +0800
+ Frontend Transport; Sat, 1 Jun 2019 08:16:28 +0800
 From: <sean.wang@mediatek.com>
 To: <john@phrozen.org>, <davem@davemloft.net>
-Subject: [PATCH net-next v1 6/6] arm64: dts: mt7622: Enlarge the SGMII
- register range
-Date: Sat, 1 Jun 2019 08:03:15 +0800
-Message-ID: <1559347395-14058-7-git-send-email-sean.wang@mediatek.com>
+Subject: [PATCH net v1 1/2] net: ethernet: mediatek: Use hw_feature to judge
+ if HWLRO is supported
+Date: Sat, 1 Jun 2019 08:16:26 +0800
+Message-ID: <1559348187-14941-1-git-send-email-sean.wang@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1559347395-14058-1-git-send-email-sean.wang@mediatek.com>
-References: <1559347395-14058-1-git-send-email-sean.wang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190531_170331_704826_F78660B1 
-X-CRM114-Status: UNSURE (   8.66  )
+X-CRM114-CacheID: sfid-20190531_171639_254473_45430176 
+X-CRM114-Status: UNSURE (   7.81  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -70,8 +71,9 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, nbd@openwrt.org, Sean Wang <sean.wang@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
+Cc: nbd@openwrt.org, netdev@vger.kernel.org, Sean
+ Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Mark Lee <mark-mc.lee@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -79,27 +81,63 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Sean Wang <sean.wang@mediatek.com>
 
-Enlarge the SGMII register range and using 2.5G force mode on default.
+Should hw_feature as hardware capability flags to check if hardware LRO
+got support.
 
+Signed-off-by: Mark Lee <mark-mc.lee@mediatek.com>
 Signed-off-by: Sean Wang <sean.wang@mediatek.com>
 ---
- arch/arm64/boot/dts/mediatek/mt7622.dtsi | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ drivers/net/ethernet/mediatek/mtk_eth_soc.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt7622.dtsi b/arch/arm64/boot/dts/mediatek/mt7622.dtsi
-index 4b1f5ae710eb..d1e13d340e26 100644
---- a/arch/arm64/boot/dts/mediatek/mt7622.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt7622.dtsi
-@@ -929,7 +929,8 @@
- 	sgmiisys: sgmiisys@1b128000 {
- 		compatible = "mediatek,mt7622-sgmiisys",
- 			     "syscon";
--		reg = <0 0x1b128000 0 0x1000>;
-+		reg = <0 0x1b128000 0 0x3000>;
- 		#clock-cells = <1>;
-+		mediatek,physpeed = "2500";
- 	};
- };
+diff --git a/drivers/net/ethernet/mediatek/mtk_eth_soc.c b/drivers/net/ethernet/mediatek/mtk_eth_soc.c
+index f9fbb3ffa3a6..0b88febbaf2a 100644
+--- a/drivers/net/ethernet/mediatek/mtk_eth_soc.c
++++ b/drivers/net/ethernet/mediatek/mtk_eth_soc.c
+@@ -2298,13 +2298,13 @@ static int mtk_get_rxnfc(struct net_device *dev, struct ethtool_rxnfc *cmd,
+ 
+ 	switch (cmd->cmd) {
+ 	case ETHTOOL_GRXRINGS:
+-		if (dev->features & NETIF_F_LRO) {
++		if (dev->hw_features & NETIF_F_LRO) {
+ 			cmd->data = MTK_MAX_RX_RING_NUM;
+ 			ret = 0;
+ 		}
+ 		break;
+ 	case ETHTOOL_GRXCLSRLCNT:
+-		if (dev->features & NETIF_F_LRO) {
++		if (dev->hw_features & NETIF_F_LRO) {
+ 			struct mtk_mac *mac = netdev_priv(dev);
+ 
+ 			cmd->rule_cnt = mac->hwlro_ip_cnt;
+@@ -2312,11 +2312,11 @@ static int mtk_get_rxnfc(struct net_device *dev, struct ethtool_rxnfc *cmd,
+ 		}
+ 		break;
+ 	case ETHTOOL_GRXCLSRULE:
+-		if (dev->features & NETIF_F_LRO)
++		if (dev->hw_features & NETIF_F_LRO)
+ 			ret = mtk_hwlro_get_fdir_entry(dev, cmd);
+ 		break;
+ 	case ETHTOOL_GRXCLSRLALL:
+-		if (dev->features & NETIF_F_LRO)
++		if (dev->hw_features & NETIF_F_LRO)
+ 			ret = mtk_hwlro_get_fdir_all(dev, cmd,
+ 						     rule_locs);
+ 		break;
+@@ -2333,11 +2333,11 @@ static int mtk_set_rxnfc(struct net_device *dev, struct ethtool_rxnfc *cmd)
+ 
+ 	switch (cmd->cmd) {
+ 	case ETHTOOL_SRXCLSRLINS:
+-		if (dev->features & NETIF_F_LRO)
++		if (dev->hw_features & NETIF_F_LRO)
+ 			ret = mtk_hwlro_add_ipaddr(dev, cmd);
+ 		break;
+ 	case ETHTOOL_SRXCLSRLDEL:
+-		if (dev->features & NETIF_F_LRO)
++		if (dev->hw_features & NETIF_F_LRO)
+ 			ret = mtk_hwlro_del_ipaddr(dev, cmd);
+ 		break;
+ 	default:
 -- 
 2.17.1
 
