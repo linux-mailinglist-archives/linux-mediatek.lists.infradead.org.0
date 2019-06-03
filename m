@@ -2,64 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 80A29326CD
-	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 04:53:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E38D8326E8
+	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 05:31:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=o7oxNVoOTF3/hFhuA3VcCk79aHZC9JLrTSPqlHld43I=; b=thkXhWtRukZ61w
-	821L2LWtjKhPvfGYdGV36GNwc6UfUNPD93oPYSWNwDGbgfO95pb4EC84ktf835R19SWymDgKNQiU2
-	afZDiTXu1BR7+5kFC4UZfLtkUTu4jIK2NHGijCaBkNv3KpdJIGlYEMdFHkSJf/Y9oa0Rn3aE30/+G
-	PuI4CxUjRqW8KlstSHy0AXgqamE6ztFISrN3/bZru7AvGnSHx+Zd93HArbJbJFSVy+YRivPB5OWdC
-	GZTzZ7BMy5NoDfI/vFB331n/YMxzFH6oAe3DVhOFM1rNSF4SNTcAc4BwMi+RWYly4fxuVkIKJ/lAr
-	VSlkK3cNYh3qO65MwR8w==;
+	List-Owner; bh=9e6LL6IDbTVwdQzIkkeMhjI9Fb2Jd92bsv3gnZPIYSk=; b=PH8kOeRbe606xl
+	/sYaN3MR9THpqbFQ/vqWCpahIJNSrR/dasLinQy2Eu0QnSi8DKn0Q7wXNoJlNJFxrgCOcX+uWHusC
+	66+8RQxjKJid5xSGDsys/M0iXUnsG6GWb3z1iwa26fr2hJ6be7SYTAnySO6SyzrNq9245XB3Ynt28
+	SB5br5mmx1aayZLDaPGCWQZm93+dbVoYzRRLALWQplLSJEiIPAJ+0i2nm/X0glGshOaQofTmdF+nU
+	pg7/W16LkbvxT+pY0egK9/QLfpr4/ZIflQtz0I3ODxrhCLskPvSoK8/Wy1tbxAA9tDioK+R9FC1fv
+	ls2vByCA6Y/TKav6WO+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXd6W-000195-0i; Mon, 03 Jun 2019 02:53:44 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hXdhG-0006OA-Sz; Mon, 03 Jun 2019 03:31:42 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXd6S-00018f-Pb; Mon, 03 Jun 2019 02:53:42 +0000
-X-UUID: a3e8252ce227418fa96643eea19f8b54-20190602
-X-UUID: a3e8252ce227418fa96643eea19f8b54-20190602
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1522237117; Sun, 02 Jun 2019 18:53:39 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 2 Jun 2019 19:53:37 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Jun 2019 10:53:34 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 3 Jun 2019 10:53:33 +0800
-Message-ID: <1559530413.32185.8.camel@mtksdaap41>
-Subject: Re: [v4 3/3] drm/mediatek: add mipi_tx driver for mt8183
-From: CK Hu <ck.hu@mediatek.com>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Mon, 3 Jun 2019 10:53:33 +0800
-In-Reply-To: <20190601095235.9194-4-jitao.shi@mediatek.com>
-References: <20190601095235.9194-1-jitao.shi@mediatek.com>
- <20190601095235.9194-4-jitao.shi@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hXdhD-0006Nl-Cl
+ for linux-mediatek@lists.infradead.org; Mon, 03 Jun 2019 03:31:41 +0000
+Received: by mail-qk1-x741.google.com with SMTP id c70so10131924qkg.7
+ for <linux-mediatek@lists.infradead.org>; Sun, 02 Jun 2019 20:31:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=M2pM/nkf1A1euBtVWZMDLIqDbLGr66zihKn/vdYTjTQ=;
+ b=UlW2uTB2hMdPcjBNNW5Lbo14ZXuAeoI4n/h8qMjd1qHsaoDYKe66yYTvfIWtY0fJHK
+ dkvvwaUCGt5is3ltB0Srvsr2kbg+aKKvVqSifbv/YEeWZQmtb9fTzWAmfJqm82UinXGi
+ RAb6CzCifI/b/d1BqBqQp8Iax55LjNHqbZkcg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=M2pM/nkf1A1euBtVWZMDLIqDbLGr66zihKn/vdYTjTQ=;
+ b=iU1umt4MNI06d/vHLU+9U2bEu1ymolcFngt8uM9A+3lq8U8tKPWPK6vQf9KK6/cG3a
+ K8cRLIbeI0o677fqECBpcaByHBO4RcczXY8q/IhSBhhY+P1A6i8k7jL0A+pbPjx25bhm
+ dKB12009hessah+XV3kFDY40X7RImAdzdWAUla1EFvReGMUXuuh9DYks8T2OTmcu0mN6
+ o/2v5liWyZihTnIwbdR3N96uGlIy6rxnFt4k/iVMgP9NdMaJBq8On9HWCzNscpxZehLh
+ 0Kqw61ACV9fCms/mHPRkhhLlr6wuOn37drVO+c84K6DvA/CkO2UAWNnVHV322XKcQys1
+ 3imQ==
+X-Gm-Message-State: APjAAAW574XuD3dzhFpD0M+5Wh2dqX2o1LGDhKG/P9fsj5kSaop4QbrU
+ OWvh1yjHLslRA1DQUxc1z7S6Ba+0nu4ETGnbnnknDA==
+X-Google-Smtp-Source: APXvYqymK56mIsfk25HR9DGgVNvsNl7A358Z+rnD4UFU4EfXzBDVvfpl0srlguV90A6phujqMAsvuDwUioifOaAf590=
+X-Received: by 2002:a37:4c04:: with SMTP id z4mr20217027qka.195.1559532696386; 
+ Sun, 02 Jun 2019 20:31:36 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <20190527083150.220194-1-tientzu@chromium.org>
+ <20190527083150.220194-3-tientzu@chromium.org>
+In-Reply-To: <20190527083150.220194-3-tientzu@chromium.org>
+From: Nicolas Boichat <drinkcat@chromium.org>
+Date: Mon, 3 Jun 2019 11:31:25 +0800
+Message-ID: <CANMq1KAym_cp8vCJ0+OtxAMJmsFp1LXM15rcZdKEM+w6f92=aA@mail.gmail.com>
+Subject: Re: [PATCH v3 2/2] uart: mediatek: support Rx in-band wakeup
+To: Claire Chang <tientzu@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190602_195340_839550_8CA61163 
-X-CRM114-Status: GOOD (  17.67  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190602_203139_765199_838F0D83 
+X-CRM114-Status: GOOD (  17.77  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,257 +88,107 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
- cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>, Thierry
- Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki
- Dae <inki.dae@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Andy
- Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>, Sean
- Paul <seanpaul@chromium.org>
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-mediatek@lists.infradead.org>, linux-serial@vger.kernel.org,
+ changqi.hu@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
+On Mon, May 27, 2019 at 4:32 PM Claire Chang <tientzu@chromium.org> wrote:
+>
+> In order to support Rx in-band wakeup, we need to enable irq wake on an
+> edge sensitive interrupt of Rx pin before suspend and disable it when
+> resuming.
+>
+> This interrupt is used only as wake source to resume the system when
+> suspended. Note that the sent character will be lost as the controller is
+> actually suspended.
+>
+> We use this to support wakeup on bluetooth. Bluetooth will repeatedly send
+> 0xFD to wakeup host. Once host detects Rx falling, an interrupt is
+> triggered, and the system leaves sleep state. Then, the bluetooth driver
+> will send 0xFC to bluetooth and bluetooth can start to send normal HCI
+> packets.
+>
+> Signed-off-by: Claire Chang <tientzu@chromium.org>
 
-On Sat, 2019-06-01 at 17:52 +0800, Jitao Shi wrote:
-> This patch add mt8183 mipi_tx driver.
-> And also support other chips that use the same binding and driver.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Reviewed-by: Nicolas Boichat <drinkcat@chromium.org>
+
 > ---
->  drivers/gpu/drm/mediatek/Makefile             |   1 +
->  drivers/gpu/drm/mediatek/mtk_mipi_tx.c        |   2 +
->  drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |   1 +
->  drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 162 ++++++++++++++++++++++++++
->  4 files changed, 166 insertions(+)
->  create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-> 
-> diff --git a/drivers/gpu/drm/mediatek/Makefile b/drivers/gpu/drm/mediatek/Makefile
-> index 2c8de1f5a5ee..8067a4be8311 100644
-> --- a/drivers/gpu/drm/mediatek/Makefile
-> +++ b/drivers/gpu/drm/mediatek/Makefile
-> @@ -13,6 +13,7 @@ mediatek-drm-y := mtk_disp_color.o \
->  		  mtk_dsi.o \
->  		  mtk_mipi_tx.o \
->  		  mtk_mt8173_mipi_tx.o \
-> +		  mtk_mt8183_mipi_tx.o \
->  		  mtk_dpi.o
->  
->  obj-$(CONFIG_DRM_MEDIATEK) += mediatek-drm.o
-> diff --git a/drivers/gpu/drm/mediatek/mtk_mipi_tx.c b/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-> index cdc68b88cefd..ab0fbfba5572 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-> @@ -182,6 +182,8 @@ static const struct of_device_id mtk_mipi_tx_match[] = {
->  	  .data = &mt2701_mipitx_data },
->  	{ .compatible = "mediatek,mt8173-mipi-tx",
->  	  .data = &mt8173_mipitx_data },
-> +	{ .compatible = "mediatek,mt8183-mipi-tx",
-> +	  .data = &mt8183_mipitx_data },
->  	{ },
->  };
->  
-> diff --git a/drivers/gpu/drm/mediatek/mtk_mipi_tx.h b/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
-> index 660726924992..3fd24563952e 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
-> +++ b/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
-> @@ -45,5 +45,6 @@ unsigned long mtk_mipi_tx_pll_recalc_rate(struct clk_hw *hw,
->  
->  extern const struct mtk_mipitx_data mt2701_mipitx_data;
->  extern const struct mtk_mipitx_data mt8173_mipitx_data;
-> +extern const struct mtk_mipitx_data mt8183_mipitx_data;
->  
+>  drivers/tty/serial/8250/8250_mtk.c | 24 ++++++++++++++++++++++++
+>  1 file changed, 24 insertions(+)
+>
+> diff --git a/drivers/tty/serial/8250/8250_mtk.c b/drivers/tty/serial/8250/8250_mtk.c
+> index 417c7c810df9..5b94b853387d 100644
+> --- a/drivers/tty/serial/8250/8250_mtk.c
+> +++ b/drivers/tty/serial/8250/8250_mtk.c
+> @@ -10,6 +10,7 @@
+>  #include <linux/module.h>
+>  #include <linux/of_irq.h>
+>  #include <linux/of_platform.h>
+> +#include <linux/pinctrl/consumer.h>
+>  #include <linux/platform_device.h>
+>  #include <linux/pm_runtime.h>
+>  #include <linux/serial_8250.h>
+> @@ -70,6 +71,7 @@ struct mtk8250_data {
+>  #ifdef CONFIG_SERIAL_8250_DMA
+>         enum dma_rx_status      rx_status;
 >  #endif
-> diff --git a/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-> new file mode 100644
-> index 000000000000..a9f893d8e409
-> --- /dev/null
-> +++ b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-> @@ -0,0 +1,162 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Copyright (c) 2019 MediaTek Inc.
-> + * Author: jitao.shi <jitao.shi@mediatek.com>
-> + */
+> +       int                     rx_wakeup_irq;
+>  };
+>
+>  /* flow control mode */
+> @@ -551,6 +553,8 @@ static int mtk8250_probe(struct platform_device *pdev)
+>         pm_runtime_set_active(&pdev->dev);
+>         pm_runtime_enable(&pdev->dev);
+>
+> +       data->rx_wakeup_irq = platform_get_irq(pdev, 1);
 > +
-> +#include "mtk_mipi_tx.h"
+>         return 0;
+>  }
+>
+> @@ -572,15 +576,35 @@ static int mtk8250_remove(struct platform_device *pdev)
+>  static int __maybe_unused mtk8250_suspend(struct device *dev)
+>  {
+>         struct mtk8250_data *data = dev_get_drvdata(dev);
+> +       int irq = data->rx_wakeup_irq;
+> +       int err;
+>
+>         serial8250_suspend_port(data->line);
+>
+> +       pinctrl_pm_select_sleep_state(dev);
+> +       if (irq >= 0) {
+> +               err = enable_irq_wake(irq);
+> +               if (err) {
+> +                       dev_err(dev,
+> +                               "failed to enable irq wake on IRQ %d: %d\n",
+> +                               irq, err);
+> +                       pinctrl_pm_select_default_state(dev);
+> +                       serial8250_resume_port(data->line);
+> +                       return err;
+> +               }
+> +       }
 > +
-> +#define MIPITX_LANE_CON		0x000c
-> +#define RG_DSI_CPHY_T1DRV_EN		BIT(0)
-> +#define RG_DSI_ANA_CK_SEL		BIT(1)
-> +#define RG_DSI_PHY_CK_SEL		BIT(2)
-> +#define RG_DSI_CPHY_EN			BIT(3)
-> +#define RG_DSI_PHYCK_INV_EN		BIT(4)
-> +#define RG_DSI_PWR04_EN			BIT(5)
-> +#define RG_DSI_BG_LPF_EN		BIT(6)
-> +#define RG_DSI_BG_CORE_EN		BIT(7)
-> +#define RG_DSI_PAD_TIEL_SEL		BIT(8)
+>         return 0;
+>  }
+>
+>  static int __maybe_unused mtk8250_resume(struct device *dev)
+>  {
+>         struct mtk8250_data *data = dev_get_drvdata(dev);
+> +       int irq = data->rx_wakeup_irq;
 > +
-> +#define MIPITX_PLL_PWR	0x0028
-> +#define MIPITX_PLL_CON0	0x002c
-> +#define MIPITX_PLL_CON1	0x0030
-> +#define MIPITX_PLL_CON2	0x0034
-> +#define MIPITX_PLL_CON3	0x0038
-> +#define MIPITX_PLL_CON4	0x003c
-> +#define RG_DSI_PLL_IBIAS		(3 << 10)
-> +
-> +#define MIPITX_D2_SW_CTL_EN	0x0144
-> +#define MIPITX_D0_SW_CTL_EN	0x0244
-> +#define MIPITX_CK_CKMODE_EN	0x0328
-> +#define DSI_CK_CKMODE_EN		BIT(0)
-> +#define MIPITX_CK_SW_CTL_EN	0x0344
-> +#define MIPITX_D1_SW_CTL_EN	0x0444
-> +#define MIPITX_D3_SW_CTL_EN	0x0544
-> +#define DSI_SW_CTL_EN			BIT(0)
-> +#define AD_DSI_PLL_SDM_PWR_ON		BIT(0)
-> +#define AD_DSI_PLL_SDM_ISO_EN		BIT(1)
-> +
-> +#define RG_DSI_PLL_EN			BIT(4)
-> +#define RG_DSI_PLL_POSDIV		(0x7 << 8)
-> +
-> +static int mtk_mipi_tx_pll_prepare(struct clk_hw *hw)
-> +{
-> +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
-> +	unsigned int txdiv, txdiv0;
-> +	u64 pcw;
-> +	int ret;
-> +
-> +	dev_dbg(mipi_tx->dev, "prepare: %u bps\n", mipi_tx->data_rate);
-> +
-> +	if (mipi_tx->data_rate >= 2000000000) {
-> +		txdiv = 1;
-> +		txdiv0 = 0;
-> +	} else if (mipi_tx->data_rate >= 1000000000) {
-> +		txdiv = 2;
-> +		txdiv0 = 1;
-> +	} else if (mipi_tx->data_rate >= 500000000) {
-> +		txdiv = 4;
-> +		txdiv0 = 2;
-> +	} else if (mipi_tx->data_rate > 250000000) {
-> +		txdiv = 8;
-> +		txdiv0 = 3;
-> +	} else if (mipi_tx->data_rate >= 125000000) {
-> +		txdiv = 16;
-> +		txdiv0 = 4;
-> +	} else {
-> +		return -EINVAL;
-> +	}
-> +
-> +	ret = clk_prepare_enable(mipi_tx->ref_clk);
-
-My last comment is in [1].
-
-[1]
-http://lists.infradead.org/pipermail/linux-mediatek/2019-May/019851.html
-
-Regards,
-CK
-
-> +	if (ret < 0) {
-> +		dev_err(mipi_tx->dev,
-> +			"can't prepare and enable mipi_tx ref_clk %d\n", ret);
-> +		return ret;
-> +	}
-> +
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON4, RG_DSI_PLL_IBIAS);
-> +
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
-> +	usleep_range(30, 100);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
-> +	pcw = div_u64(((u64)mipi_tx->data_rate * txdiv) << 24, 26000000);
-> +	writel(pcw, mipi_tx->regs + MIPITX_PLL_CON0);
-> +	mtk_mipi_tx_update_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_POSDIV,
-> +				txdiv0 << 8);
-> +	usleep_range(1000, 2000);
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
-> +
-> +	return 0;
-> +}
-> +
-> +static void mtk_mipi_tx_pll_unprepare(struct clk_hw *hw)
-> +{
-> +	struct mtk_mipi_tx *mipi_tx = mtk_mipi_tx_from_clk_hw(hw);
-> +
-> +	dev_dbg(mipi_tx->dev, "unprepare\n");
-> +
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_CON1, RG_DSI_PLL_EN);
-> +
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_ISO_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_PLL_PWR, AD_DSI_PLL_SDM_PWR_ON);
-> +	clk_disable_unprepare(mipi_tx->ref_clk);
-> +}
-> +
-> +static long mtk_mipi_tx_pll_round_rate(struct clk_hw *hw, unsigned long rate,
-> +				       unsigned long *prate)
-> +{
-> +	return clamp_val(rate, 50000000, 1600000000);
-> +}
-> +
-> +static const struct clk_ops mtk_mipi_tx_pll_ops = {
-> +	.prepare = mtk_mipi_tx_pll_prepare,
-> +	.unprepare = mtk_mipi_tx_pll_unprepare,
-> +	.round_rate = mtk_mipi_tx_pll_round_rate,
-> +	.set_rate = mtk_mipi_tx_pll_set_rate,
-> +	.recalc_rate = mtk_mipi_tx_pll_recalc_rate,
-> +};
-> +
-> +static void mtk_mipi_tx_power_on_signal(struct phy *phy)
-> +{
-> +	struct mtk_mipi_tx *mipi_tx = phy_get_drvdata(phy);
-> +
-> +	/* BG_LPF_EN / BG_CORE_EN */
-> +	writel(RG_DSI_PAD_TIEL_SEL | RG_DSI_BG_CORE_EN,
-> +	       mipi_tx->regs + MIPITX_LANE_CON);
-> +	usleep_range(30, 100);
-> +	writel(RG_DSI_BG_CORE_EN | RG_DSI_BG_LPF_EN,
-> +	       mipi_tx->regs + MIPITX_LANE_CON);
-> +
-> +	/* Switch OFF each Lane */
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_D0_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_D1_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_D2_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_D3_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_CK_SW_CTL_EN, DSI_SW_CTL_EN);
-> +
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_CK_CKMODE_EN, DSI_CK_CKMODE_EN);
-> +}
-> +
-> +static void mtk_mipi_tx_power_off_signal(struct phy *phy)
-> +{
-> +	struct mtk_mipi_tx *mipi_tx = phy_get_drvdata(phy);
-> +
-> +	/* Switch ON each Lane */
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_D0_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_D1_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_D2_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_D3_SW_CTL_EN, DSI_SW_CTL_EN);
-> +	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_CK_SW_CTL_EN, DSI_SW_CTL_EN);
-> +
-> +	writel(RG_DSI_PAD_TIEL_SEL | RG_DSI_BG_CORE_EN,
-> +	       mipi_tx->regs + MIPITX_LANE_CON);
-> +	writel(RG_DSI_PAD_TIEL_SEL, mipi_tx->regs + MIPITX_LANE_CON);
-> +}
-> +
-> +const struct mtk_mipitx_data mt8183_mipitx_data = {
-> +	.mipi_tx_clk_ops = &mtk_mipi_tx_pll_ops,
-> +	.mipi_tx_enable_signal = mtk_mipi_tx_power_on_signal,
-> +	.mipi_tx_disable_signal = mtk_mipi_tx_power_off_signal,
-> +};
-> +
-
-
+> +       if (irq >= 0)
+> +               disable_irq_wake(irq);
+> +       pinctrl_pm_select_default_state(dev);
+>
+>         serial8250_resume_port(data->line);
+>
+> --
+> 2.22.0.rc1.257.g3120a18244-goog
+>
 
 _______________________________________________
 Linux-mediatek mailing list
