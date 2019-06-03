@@ -2,56 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B4D423264F
-	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 03:59:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 17EC132655
+	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 03:59:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rF0jF30JoLXB1ydJ18W27+00lBUkLScKcunzJ4Y9YNY=; b=TFKDj3EF3Ni2nI
-	u3LC1PjTXlEmCYALyYSdp/EDWs/aSGFh2aS1g8J4lENLQl+M5xgXFqn00IsErtsVYSzcX9qm2Hxki
-	KdrvLpM0Ksg6pH6dKLwAHDmuehdBa1IqcjrJ2RliQbAJasRZURRfGMeOCtLBsnPzV0ltLvhNKZbxC
-	OH/kJkLwdBIvpXJxVf5zWqwzodnKQcZsU2gFH+XBenRkZOAz4T4OksocyNvW1ucTFFrU+dgycqpGi
-	jKZQeD9+3+Z/U9ekQo50HzzzwtMTKPiwbOrD5/Dxltu/iywqmGd9X0TxzIabZsFlmV/yRJNJT3fk0
-	trPuOcK7XlOrY2yAd1Zg==;
+	List-Owner; bh=+lFJ0SMquIvf41ywaT20ziTZV5v/ojg/7/mG43jqJQM=; b=knf12z4+HSQTJ2
+	J+kUhTOYgwNNerK7Wu8A1cA+UmuRv4H2fRX//CTuyZpGwuCXIN88E/O9RK1bRXaGL9a8ew905Mt+h
+	xYtTBA0+ZUNtD4tdoTqAwxLXbFmn9XsAXyRlAaMBtFC49giclH6V/GVHFDavLdZ5W+qcxWWJKAaXe
+	FtD/ujuScJdFzOdLI53XXUQ75CEAjFa2DitcTyekw4PSZXd11YDVpLpVM/LfiEXbs/LmgCfY+2b3f
+	E9HclnQM/ee3nGKHxDk5tnCPsmO9vyvilzJTSroPxugYQRTjcGknWYUO3xTeK4RGHFGBq9IxTVaVU
+	TjGoGELjGJ0iXX4bOi2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXcFT-0005DO-Mm; Mon, 03 Jun 2019 01:58:55 +0000
+	id 1hXcG3-00062p-Hv; Mon, 03 Jun 2019 01:59:31 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXcFA-0004nS-FG; Mon, 03 Jun 2019 01:58:37 +0000
-X-UUID: 7f6d91b64a9f4a288d626b95c9d09701-20190602
-X-UUID: 7f6d91b64a9f4a288d626b95c9d09701-20190602
+ id 1hXcFB-0004nU-Vc; Mon, 03 Jun 2019 01:58:39 +0000
+X-UUID: c5112f8f83ca42d2b956c569366a6ea9-20190602
+X-UUID: c5112f8f83ca42d2b956c569366a6ea9-20190602
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 104432698; Sun, 02 Jun 2019 17:58:23 -0800
+ with ESMTP id 1415399635; Sun, 02 Jun 2019 17:58:23 -0800
 Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Sun, 2 Jun 2019 18:58:22 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Jun 2019 09:58:20 +0800
+ 15.0.1395.4; Mon, 3 Jun 2019 09:58:21 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 3 Jun 2019 09:58:19 +0800
+ Transport; Mon, 3 Jun 2019 09:58:20 +0800
 From: Biao Huang <biao.huang@mediatek.com>
 To: <davem@davemloft.net>, Jose Abreu <joabreu@synopsys.com>, <andrew@lunn.ch>
-Subject: [v2, PATCH 2/4] net: stmmac: dwmac-mediatek: disable rx watchdog
-Date: Mon, 3 Jun 2019 09:58:04 +0800
-Message-ID: <1559527086-7227-3-git-send-email-biao.huang@mediatek.com>
+Subject: [v2, PATCH 3/4] net: stmmac: modify default value of tx-frames
+Date: Mon, 3 Jun 2019 09:58:05 +0800
+Message-ID: <1559527086-7227-4-git-send-email-biao.huang@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1559527086-7227-1-git-send-email-biao.huang@mediatek.com>
 References: <1559527086-7227-1-git-send-email-biao.huang@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 7D0565A1FE1EFC274A578540D2089DD78AB5CB210095DDB5636615ACBAD78AAD2000:8
+X-TM-SNTS-SMTP: BD275BFD7C7B409CEB7828DFEDF77080E409217901078B7CB600EA6F89081E792000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190602_185836_512604_3AF8987A 
-X-CRM114-Status: UNSURE (   7.58  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190602_185838_028655_B4BEF91F 
+X-CRM114-Status: GOOD (  10.60  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -84,27 +83,43 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-disable rx watchdog for dwmac-mediatek, then the hw will
-issue a rx interrupt once receiving a packet, so the responding time
-for rx path will be reduced.
+the default value of tx-frames is 25, it's too late when
+passing tstamp to stack, then the ptp4l will fail:
+
+ptp4l -i eth0 -f gPTP.cfg -m
+ptp4l: selected /dev/ptp0 as PTP clock
+ptp4l: port 1: INITIALIZING to LISTENING on INITIALIZE
+ptp4l: port 0: INITIALIZING to LISTENING on INITIALIZE
+ptp4l: port 1: link up
+ptp4l: timed out while polling for tx timestamp
+ptp4l: increasing tx_timestamp_timeout may correct this issue,
+       but it is likely caused by a driver bug
+ptp4l: port 1: send peer delay response failed
+ptp4l: port 1: LISTENING to FAULTY on FAULT_DETECTED (FT_UNSPECIFIED)
+
+ptp4l tests pass when changing the tx-frames from 25 to 1 with
+ethtool -C option.
+It should be fine to set tx-frames default value to 1, so ptp4l will pass
+by default.
 
 Signed-off-by: Biao Huang <biao.huang@mediatek.com>
 ---
- .../net/ethernet/stmicro/stmmac/dwmac-mediatek.c   |    1 +
- 1 file changed, 1 insertion(+)
+ drivers/net/ethernet/stmicro/stmmac/common.h |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c b/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
-index b84269e..79f2ee3 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
-@@ -356,6 +356,7 @@ static int mediatek_dwmac_probe(struct platform_device *pdev)
- 	plat_dat->has_gmac4 = 1;
- 	plat_dat->has_gmac = 0;
- 	plat_dat->pmt = 0;
-+	plat_dat->riwt_off = 1;
- 	plat_dat->maxmtu = ETH_DATA_LEN;
- 	plat_dat->bsp_priv = priv_plat;
- 	plat_dat->init = mediatek_dwmac_init;
+diff --git a/drivers/net/ethernet/stmicro/stmmac/common.h b/drivers/net/ethernet/stmicro/stmmac/common.h
+index 26bbcd8..6a08cec 100644
+--- a/drivers/net/ethernet/stmicro/stmmac/common.h
++++ b/drivers/net/ethernet/stmicro/stmmac/common.h
+@@ -261,7 +261,7 @@ struct stmmac_safety_stats {
+ #define STMMAC_COAL_TX_TIMER	1000
+ #define STMMAC_MAX_COAL_TX_TICK	100000
+ #define STMMAC_TX_MAX_FRAMES	256
+-#define STMMAC_TX_FRAMES	25
++#define STMMAC_TX_FRAMES	1
+ 
+ /* Packets types */
+ enum packets_types {
 -- 
 1.7.9.5
 
