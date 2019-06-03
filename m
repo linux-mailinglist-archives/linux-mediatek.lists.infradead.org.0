@@ -2,57 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E7EA324B5
-	for <lists+linux-mediatek@lfdr.de>; Sun,  2 Jun 2019 22:01:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E468325FA
+	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 03:21:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
-	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0VB1xmhboD9e3HMu12x3GhMUo14BsIEM/yeT0qV901c=; b=ErRiyDFaouHt0q
-	rIpJ+joIWWg+IYf1xw++9DskJQ3dmlKl0DfY3tLsJN+x83mtWP+SGasdra0qCAIQE4oHnNuL3Dg/h
-	v2mYzcbj5OgO62xea6CkRHNLTdO1qVXAnmvLaofQbaTb+amn2Bz1ra07vsJLlJ9dvQWru2M8uh9W5
-	zV1z0sw54KiYi0k2Wao7YlGIkcQKso/z7mFFncrb6KYJmKezLiDY6swg7Fxrll8j3kH9MFnn8h0V4
-	q6ePwdykfJIFHRCanzy/eScFXCpGGcU2chBYb1no2lQAPs48VfBxkLlSrkbcmxjzRYukazW+kK3nu
-	YM6UlknCYnphj02OksBw==;
+	List-Owner; bh=pTF+UGFLj0VgmKFwCrmHG0SX+oscYCCJq4CDjL4qcyM=; b=ZeUkZ79O2/kMaX
+	ukmzZJ79wmXa24Z3TUBk2GWz2boOxo7b4M0j4gO42IbYKVBnf+4G9qKpE78UhRsUCovBz51OvWBqL
+	4lSe7Gcepab9qC0q2SlZzvZb7mR9IxNf5rm7I9PNm0R3CnOb+MHMoXQ9MZsy5BRR5DD/WIgATVwP1
+	948d9FIisTEjtChsAuvAdQsKBwJOT4X7G2UuAAA3bciOfWktFt9vchcA2dRPWmHdoYiiyajykdW6L
+	YxVoa5HfaFGputL9jK0jFWYdQ7i58U+eYtWxMvQfQQsIjybBH8VKtvPpABJncSc5Q+LOOnErZJG68
+	7xMg/mwCj7+ef+3XWrcg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXWfh-0002xM-IS; Sun, 02 Jun 2019 20:01:37 +0000
-Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
+	id 1hXbep-0000OJ-9w; Mon, 03 Jun 2019 01:21:03 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXWfX-0002qe-0N; Sun, 02 Jun 2019 20:01:30 +0000
-Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::3d5])
- (using TLSv1 with cipher AES256-SHA (256/256 bits))
- (Client did not present a certificate)
- (Authenticated sender: davem-davemloft)
- by shards.monkeyblade.net (Postfix) with ESMTPSA id 7B8EE1400F7B4;
- Sun,  2 Jun 2019 13:01:21 -0700 (PDT)
-Date: Sun, 02 Jun 2019 13:01:18 -0700 (PDT)
-Message-Id: <20190602.130118.1624703340305098863.davem@davemloft.net>
-To: biao.huang@mediatek.com
-Subject: Re: [RESEND, PATCH 1/4] net: stmmac: dwmac-mediatek: enable
- Ethernet power domain
-From: David Miller <davem@davemloft.net>
-In-Reply-To: <1559209398-3607-2-git-send-email-biao.huang@mediatek.com>
-References: <1559209398-3607-1-git-send-email-biao.huang@mediatek.com>
- <1559209398-3607-2-git-send-email-biao.huang@mediatek.com>
-X-Mailer: Mew version 6.8 on Emacs 26.1
-Mime-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
- (shards.monkeyblade.net [149.20.54.216]);
- Sun, 02 Jun 2019 13:01:22 -0700 (PDT)
+ id 1hXbel-0000No-7J; Mon, 03 Jun 2019 01:21:01 +0000
+X-UUID: 49c1f31d65f34e4d9a6d31ca14f741c7-20190602
+X-UUID: 49c1f31d65f34e4d9a6d31ca14f741c7-20190602
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1702262545; Sun, 02 Jun 2019 17:20:39 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 2 Jun 2019 18:20:36 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS33N2.mediatek.inc (172.27.4.76) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 3 Jun 2019 09:20:30 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 3 Jun 2019 09:20:28 +0800
+Message-ID: <1559524828.14616.0.camel@mtksdaap41>
+Subject: Re: [v4 1/7] drm/mediatek: move mipi_dsi_host_register to probe
+From: CK Hu <ck.hu@mediatek.com>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Date: Mon, 3 Jun 2019 09:20:28 +0800
+In-Reply-To: <20190601092615.67917-2-jitao.shi@mediatek.com>
+References: <20190601092615.67917-1-jitao.shi@mediatek.com>
+ <20190601092615.67917-2-jitao.shi@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190602_130127_080833_430F667D 
-X-CRM114-Status: UNSURE (   7.49  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190602_182059_267692_FB52FBF4 
+X-CRM114-Status: GOOD (  15.91  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -64,48 +71,187 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com, alexandre.torgue@st.com,
- boon.leong.ong@intel.com, netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- joabreu@synopsys.com, linux-mediatek@lists.infradead.org,
- mcoquelin.stm32@gmail.com, matthias.bgg@gmail.com, peppe.cavallaro@st.com,
- linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
+ Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>, Thierry
+ Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki
+ Dae <inki.dae@samsung.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Andy
+ Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>, Sean
+ Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Biao Huang <biao.huang@mediatek.com>
-Date: Thu, 30 May 2019 17:43:15 +0800
+Hi, Jitao:
 
-> @@ -364,6 +371,15 @@ static int mediatek_dwmac_probe(struct platform_device *pdev)
+On Sat, 2019-06-01 at 17:26 +0800, Jitao Shi wrote:
+> DSI panel driver need attach function which is inculde in
+> mipi_dsi_host_ops.
+> 
+> If mipi_dsi_host_register is not in probe, dsi panel will
+> probe more delay.
+> 
+> So move the mipi_dsi_host_register to probe from bind.
+> 
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 50 ++++++++++++++++++------------
+>  1 file changed, 30 insertions(+), 20 deletions(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b00eb2d2e086..6c4ac37f983d 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -1045,12 +1045,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
+>  		return ret;
+>  	}
+>  
+> -	ret = mipi_dsi_host_register(&dsi->host);
+> -	if (ret < 0) {
+> -		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> -		goto err_ddp_comp_unregister;
+> -	}
+> -
+>  	ret = mtk_dsi_create_conn_enc(drm, dsi);
+>  	if (ret) {
+>  		DRM_ERROR("Encoder create failed with %d\n", ret);
+> @@ -1060,8 +1054,6 @@ static int mtk_dsi_bind(struct device *dev, struct device *master, void *data)
 >  	return 0;
+>  
+>  err_unregister:
+> -	mipi_dsi_host_unregister(&dsi->host);
+> -err_ddp_comp_unregister:
+>  	mtk_ddp_comp_unregister(drm, &dsi->ddp_comp);
+>  	return ret;
+>  }
+> @@ -1097,31 +1089,37 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+>  
+>  	dsi->host.ops = &mtk_dsi_ops;
+>  	dsi->host.dev = dev;
+> +	dsi->dev = dev;
+
+Except this line,
+
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+> +	ret = mipi_dsi_host_register(&dsi->host);
+> +	if (ret < 0) {
+> +		dev_err(dev, "failed to register DSI host: %d\n", ret);
+> +		return ret;
+> +	}
+>  
+>  	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
+>  					  &dsi->panel, &dsi->bridge);
+>  	if (ret)
+> -		return ret;
+> +		goto err_unregister_host;
+>  
+>  	dsi->engine_clk = devm_clk_get(dev, "engine");
+>  	if (IS_ERR(dsi->engine_clk)) {
+>  		ret = PTR_ERR(dsi->engine_clk);
+>  		dev_err(dev, "Failed to get engine clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	dsi->digital_clk = devm_clk_get(dev, "digital");
+>  	if (IS_ERR(dsi->digital_clk)) {
+>  		ret = PTR_ERR(dsi->digital_clk);
+>  		dev_err(dev, "Failed to get digital clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	dsi->hs_clk = devm_clk_get(dev, "hs");
+>  	if (IS_ERR(dsi->hs_clk)) {
+>  		ret = PTR_ERR(dsi->hs_clk);
+>  		dev_err(dev, "Failed to get hs clock: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> @@ -1129,33 +1127,35 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+>  	if (IS_ERR(dsi->regs)) {
+>  		ret = PTR_ERR(dsi->regs);
+>  		dev_err(dev, "Failed to ioremap memory: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	dsi->phy = devm_phy_get(dev, "dphy");
+>  	if (IS_ERR(dsi->phy)) {
+>  		ret = PTR_ERR(dsi->phy);
+>  		dev_err(dev, "Failed to get MIPI-DPHY: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	comp_id = mtk_ddp_comp_get_id(dev->of_node, MTK_DSI);
+>  	if (comp_id < 0) {
+>  		dev_err(dev, "Failed to identify by alias: %d\n", comp_id);
+> -		return comp_id;
+> +		ret = comp_id;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	ret = mtk_ddp_comp_init(dev, dev->of_node, &dsi->ddp_comp, comp_id,
+>  				&mtk_dsi_funcs);
+>  	if (ret) {
+>  		dev_err(dev, "Failed to initialize component: %d\n", ret);
+> -		return ret;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	irq_num = platform_get_irq(pdev, 0);
+>  	if (irq_num < 0) {
+> -		dev_err(&pdev->dev, "failed to request dsi irq resource\n");
+> -		return -EPROBE_DEFER;
+> +		dev_err(&pdev->dev, "failed to get dsi irq_num: %d\n", irq_num);
+> +		ret = irq_num;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	irq_set_status_flags(irq_num, IRQ_TYPE_LEVEL_LOW);
+> @@ -1163,14 +1163,24 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+>  			       IRQF_TRIGGER_LOW, dev_name(&pdev->dev), dsi);
+>  	if (ret) {
+>  		dev_err(&pdev->dev, "failed to request mediatek dsi irq\n");
+> -		return -EPROBE_DEFER;
+> +		goto err_unregister_host;
+>  	}
+>  
+>  	init_waitqueue_head(&dsi->irq_wait_queue);
+>  
+>  	platform_set_drvdata(pdev, dsi);
+>  
+> -	return component_add(&pdev->dev, &mtk_dsi_component_ops);
+> +	ret = component_add(&pdev->dev, &mtk_dsi_component_ops);
+> +	if (ret) {
+> +		dev_err(&pdev->dev, "failed to add component: %d\n", ret);
+> +		goto err_unregister_host;
+> +	}
+> +
+> +	return 0;
+> +
+> +err_unregister_host:
+> +	mipi_dsi_host_unregister(&dsi->host);
+> +	return ret;
 >  }
 >  
-> +static int mediatek_dwmac_remove(struct platform_device *pdev)
-> +{
-> +	int ret;
-> +
-> +	ret = stmmac_pltfr_remove(pdev);
-> +
-> +	return ret;
-> +}
-> +
->  static const struct of_device_id mediatek_dwmac_match[] = {
->  	{ .compatible = "mediatek,mt2712-gmac",
->  	  .data = &mt2712_gmac_variant },
-> @@ -374,7 +390,7 @@ static int mediatek_dwmac_probe(struct platform_device *pdev)
->  
->  static struct platform_driver mediatek_dwmac_driver = {
->  	.probe  = mediatek_dwmac_probe,
-> -	.remove = stmmac_pltfr_remove,
-> +	.remove = mediatek_dwmac_remove,
->  	.driver = {
->  		.name           = "dwmac-mediatek",
->  		.pm		= &stmmac_pltfr_pm_ops,
+>  static int mtk_dsi_remove(struct platform_device *pdev)
 
-This half of your patch has no effect and seems completely unnecessary.
 
-Please remove it.
 
 _______________________________________________
 Linux-mediatek mailing list
