@@ -2,38 +2,38 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1123932857
-	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 08:10:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1B2CF32853
+	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Jun 2019 08:09:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=oUVUyOr0rwsAt8zJpKqTdX2Qg+hBoTCdfvSHbi4tboA=; b=XBkrqdql8FzAdu
-	V/dForj+1YjOjp5499bMRnxJ2HLQzP2T3+KOku1xV7tDgGDyakCih8hKLd6OaiPOzXz9hHWYB6Fft
-	PxSSCNNktY+BgabY9s6w9xtUQwts8W8qo7zxgWJt2NmE6uBSKqa7Akyw/xf9teLIbfHalpcAls6ax
-	AzzzVw2RqfjbNGBbSn7k14TXPnuA9Huyx29q6oXJ1dD/IYgnoOLQCEpF1V3v/MyWrLbBDCh42+/fc
-	NAyrYSAmrWboNk0NvGMu6Nl2TIKzwbQEchT2ubNRAsCLxURDXBd7mS3XbP7BvenYq2+B+0rBGC7R5
-	AiJC8VyHCXMn4RJlYu/Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=zxEN/ciYkuW5iOWjRLq8+GuyArYTrZnmt99jR/rpv6Y=; b=XOD9TjIHz8xoMK
+	7xSW1J0xGWlQJgLV+fmzU+kVYuxwTBB3Doh8DpOGe092QvRlnmheQWL+BrjJJMHMWdPnPfouNj9uK
+	174upmw3ZirjvIR7y1etpnkeyRzkeSuvceMjj/XmEyRkhQrr7OOmvdPue81kKTCLMUXYkhUmxWXU9
+	KAEbte2qecAeHSXuszF7vPCIEAICDyR5NeYUZsmJmhSn30kfyZSghzmVO+SZXqDbnHWdDToo6/PzL
+	ReI47z83XSD7wsJsReC9dPJZLD/Gl4Bccf+Ug136wIMjhgrqsXLagOEnYA6uOATy3vfcMPmyTAd2d
+	sC4dBTp5qZ9K4yGVrmtA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXgAO-0007xe-31; Mon, 03 Jun 2019 06:09:56 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hXg9n-0007uH-Dw; Mon, 03 Jun 2019 06:09:19 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXgAL-0007xJ-7O
- for linux-mediatek@lists.infradead.org; Mon, 03 Jun 2019 06:09:54 +0000
-X-UUID: 6b446d09c86a4db7bb93307b23e59ede-20190602
-X-UUID: 6b446d09c86a4db7bb93307b23e59ede-20190602
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hXg9j-0007tF-EM
+ for linux-mediatek@lists.infradead.org; Mon, 03 Jun 2019 06:09:17 +0000
+X-UUID: e151d72dec3d4b1783af4b15eafb9516-20190602
+X-UUID: e151d72dec3d4b1783af4b15eafb9516-20190602
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1213544408; Sun, 02 Jun 2019 22:09:12 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 2 Jun 2019 23:09:10 -0700
+ with ESMTP id 392628621; Sun, 02 Jun 2019 22:09:06 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 2 Jun 2019 23:09:05 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Mon, 3 Jun 2019 14:09:03 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -41,16 +41,18 @@ Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
-Date: Mon, 3 Jun 2019 14:08:43 +0800
-Message-ID: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+Subject: [PATCH v3 2/2] mt76: mt7615: fix slow performance when enable
+ encryption
+Date: Mon, 3 Jun 2019 14:08:44 +0800
+Message-ID: <429cf8c1421017b4030b8b6e4fa9e5cbea953d3c.1559541944.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 1.9.1
+In-Reply-To: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190602_230953_270598_EC5D0875 
-X-CRM114-Status: UNSURE (   8.35  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190602_230915_691318_62292F61 
+X-CRM114-Status: GOOD (  11.16  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -76,124 +78,65 @@ Cc: Sean Wang <sean.wang@mediatek.com>,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org, Ryder
  Lee <ryder.lee@mediatek.com>, Yiwei Chung <yiwei.chung@mediatek.com>,
  linux-mediatek@lists.infradead.org, Roy Luo <royluo@google.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Enable NL80211_IFTYPE_MESH_POINT and update its path.
-
-Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
----
-Changes since v3 - fix a wrong expression
-Changes since v2 - remove unused definitions
----
- drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
- drivers/net/wireless/mediatek/mt76/mt7615/main.c | 1 +
- drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 4 +++-
- drivers/net/wireless/mediatek/mt76/mt7615/mcu.h  | 6 ------
- 4 files changed, 10 insertions(+), 7 deletions(-)
-
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-index 59f604f3161f..f860af6a42da 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-@@ -133,6 +133,9 @@ static const struct ieee80211_iface_limit if_limits[] = {
- 	{
- 		.max = MT7615_MAX_INTERFACES,
- 		.types = BIT(NL80211_IFTYPE_AP) |
-+#ifdef CONFIG_MAC80211_MESH
-+			 BIT(NL80211_IFTYPE_MESH_POINT) |
-+#endif
- 			 BIT(NL80211_IFTYPE_STATION)
- 	}
- };
-@@ -195,6 +198,9 @@ int mt7615_register_device(struct mt7615_dev *dev)
- 	dev->mt76.antenna_mask = 0xf;
- 
- 	wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) |
-+#ifdef CONFIG_MAC80211_MESH
-+				 BIT(NL80211_IFTYPE_MESH_POINT) |
-+#endif
- 				 BIT(NL80211_IFTYPE_AP);
- 
- 	ret = mt76_register_device(&dev->mt76, true, mt7615_rates,
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-index b0bb7cc12385..585e67fa2728 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-@@ -37,6 +37,7 @@ static int get_omac_idx(enum nl80211_iftype type, u32 mask)
- 
- 	switch (type) {
- 	case NL80211_IFTYPE_AP:
-+	case NL80211_IFTYPE_MESH_POINT:
- 		/* ap use hw bssid 0 and ext bssid */
- 		if (~mask & BIT(HW_BSSID_0))
- 			return HW_BSSID_0;
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-index 43f70195244c..e82297048449 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-@@ -754,6 +754,7 @@ int mt7615_mcu_set_bss_info(struct mt7615_dev *dev,
- 
- 	switch (vif->type) {
- 	case NL80211_IFTYPE_AP:
-+	case NL80211_IFTYPE_MESH_POINT:
- 		tx_wlan_idx = mvif->sta.wcid.idx;
- 		conn_type = CONNECTION_INFRA_AP;
- 		break;
-@@ -968,7 +969,7 @@ int mt7615_mcu_add_wtbl(struct mt7615_dev *dev, struct ieee80211_vif *vif,
- 		.rx_wtbl = {
- 			.tag = cpu_to_le16(WTBL_RX),
- 			.len = cpu_to_le16(sizeof(struct wtbl_rx)),
--			.rca1 = vif->type != NL80211_IFTYPE_AP,
-+			.rca1 = vif->type == NL80211_IFTYPE_STATION,
- 			.rca2 = 1,
- 			.rv = 1,
- 		},
-@@ -1042,6 +1043,7 @@ static void sta_rec_convert_vif_type(enum nl80211_iftype type, u32 *conn_type)
- {
- 	switch (type) {
- 	case NL80211_IFTYPE_AP:
-+	case NL80211_IFTYPE_MESH_POINT:
- 		if (conn_type)
- 			*conn_type = CONNECTION_INFRA_STA;
- 		break;
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-index e96efb13fa4d..0915cb735699 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-@@ -105,25 +105,19 @@ enum {
- #define STA_TYPE_STA		BIT(0)
- #define STA_TYPE_AP		BIT(1)
- #define STA_TYPE_ADHOC		BIT(2)
--#define STA_TYPE_TDLS		BIT(3)
- #define STA_TYPE_WDS		BIT(4)
- #define STA_TYPE_BC		BIT(5)
- 
- #define NETWORK_INFRA		BIT(16)
- #define NETWORK_P2P		BIT(17)
- #define NETWORK_IBSS		BIT(18)
--#define NETWORK_MESH		BIT(19)
--#define NETWORK_BOW		BIT(20)
- #define NETWORK_WDS		BIT(21)
- 
- #define CONNECTION_INFRA_STA	(STA_TYPE_STA | NETWORK_INFRA)
- #define CONNECTION_INFRA_AP	(STA_TYPE_AP | NETWORK_INFRA)
- #define CONNECTION_P2P_GC	(STA_TYPE_STA | NETWORK_P2P)
- #define CONNECTION_P2P_GO	(STA_TYPE_AP | NETWORK_P2P)
--#define CONNECTION_MESH_STA	(STA_TYPE_STA | NETWORK_MESH)
--#define CONNECTION_MESH_AP	(STA_TYPE_AP | NETWORK_MESH)
- #define CONNECTION_IBSS_ADHOC	(STA_TYPE_ADHOC | NETWORK_IBSS)
--#define CONNECTION_TDLS		(STA_TYPE_STA | NETWORK_INFRA | STA_TYPE_TDLS)
- #define CONNECTION_WDS		(STA_TYPE_WDS | NETWORK_WDS)
- #define CONNECTION_INFRA_BC	(STA_TYPE_BC | NETWORK_INFRA)
- 
--- 
-2.18.0
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+Rml4IHdyb25nIFdDSUQgYXNzaWdubWVudCBhbmQgYWRkIFJLViAoUlggS2V5IG9mIHRoaXMgZW50
+cnkgaXMgdmFsaWQpCmZsYWcgdG8gY2hlY2sgaWYgcGVlciB1c2VzIHRoZSBzYW1lIGNvbmZpZ3Vy
+YXRpb24gd2l0aCBwcmV2aW91cwpoYW5kc2hha2luZy4KCklmIHRoZSBjb25maWd1cmF0aW9uIGlz
+IG1pc21hdGNoLCBXVEJMIGluZGljYXRlcyBhIOKAnGNpcGhlciBtaXNtYXRjaOKAnQp0byBzdG9w
+IFNFQyBkZWNyeXB0aW9uIHRvIHByZXZlbnQgdGhlIHBhY2tldCBmcm9tIGRhbWFnZS4KClN1Z2dl
+c3RlZC1ieTogWUYgTHVvIDx5Zi5sdW9AbWVkaWF0ZWsuY29tPgpTdWdnZXN0ZWQtYnk6IFlpd2Vp
+IENodW5nIDx5aXdlaS5jaHVuZ0BtZWRpYXRlay5jb20+ClNpZ25lZC1vZmYtYnk6IFJ5ZGVyIExl
+ZSA8cnlkZXIubGVlQG1lZGlhdGVrLmNvbT4KLS0tCkNoYW5nZXMgc2luY2UgdjMgLSBub25lCkNo
+YW5nZXMgc2luY2UgdjIgLSBub25lCi0tLQogZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsv
+bXQ3Ni9tdDc2MTUvaW5pdC5jIHwgMTYgKysrKysrKysrKy0tLS0tLQogZHJpdmVycy9uZXQvd2ly
+ZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWFpbi5jIHwgIDIgKy0KIGRyaXZlcnMvbmV0L3dp
+cmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21jdS5jICB8ICAxICsKIDMgZmlsZXMgY2hhbmdl
+ZCwgMTIgaW5zZXJ0aW9ucygrKSwgNyBkZWxldGlvbnMoLSkKCmRpZmYgLS1naXQgYS9kcml2ZXJz
+L25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9pbml0LmMgYi9kcml2ZXJzL25ldC93
+aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9pbml0LmMKaW5kZXggZjg2MGFmNmE0MmRhLi5i
+M2UwODE1NGNjYmUgMTAwNjQ0Ci0tLSBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210
+NzYvbXQ3NjE1L2luaXQuYworKysgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2
+L210NzYxNS9pbml0LmMKQEAgLTYyLDE2ICs2MiwxMSBAQCBzdGF0aWMgdm9pZCBtdDc2MTVfbWFj
+X2luaXQoc3RydWN0IG10NzYxNV9kZXYgKmRldikKIAkJIE1UX0FHR19BUkNSX1JBVEVfRE9XTl9S
+QVRJT19FTiB8CiAJCSBGSUVMRF9QUkVQKE1UX0FHR19BUkNSX1JBVEVfRE9XTl9SQVRJTywgMSkg
+fAogCQkgRklFTERfUFJFUChNVF9BR0dfQVJDUl9SQVRFX1VQX0VYVFJBX1RILCA0KSkpOwotCi0J
+ZGV2LT5tdDc2Lmdsb2JhbF93Y2lkLmlkeCA9IE1UNzYxNV9XVEJMX1JFU0VSVkVEOwotCWRldi0+
+bXQ3Ni5nbG9iYWxfd2NpZC5od19rZXlfaWR4ID0gLTE7Ci0JcmN1X2Fzc2lnbl9wb2ludGVyKGRl
+di0+bXQ3Ni53Y2lkW01UNzYxNV9XVEJMX1JFU0VSVkVEXSwKLQkJCSAgICZkZXYtPm10NzYuZ2xv
+YmFsX3djaWQpOwogfQogCiBzdGF0aWMgaW50IG10NzYxNV9pbml0X2hhcmR3YXJlKHN0cnVjdCBt
+dDc2MTVfZGV2ICpkZXYpCiB7Ci0JaW50IHJldDsKKwlpbnQgcmV0LCBpZHg7CiAKIAltdDc2X3dy
+KGRldiwgTVRfSU5UX1NPVVJDRV9DU1IsIH4wKTsKIApAQCAtOTgsNiArOTMsMTUgQEAgc3RhdGlj
+IGludCBtdDc2MTVfaW5pdF9oYXJkd2FyZShzdHJ1Y3QgbXQ3NjE1X2RldiAqZGV2KQogCW10NzYx
+NV9tY3VfY3RybF9wbV9zdGF0ZShkZXYsIDApOwogCW10NzYxNV9tY3VfZGVsX3d0YmxfYWxsKGRl
+dik7CiAKKwkvKiBCZWFjb24gYW5kIG1nbXQgZnJhbWVzIHNob3VsZCBvY2N1cHkgd2NpZCAwICov
+CisJaWR4ID0gbXQ3Nl93Y2lkX2FsbG9jKGRldi0+bXQ3Ni53Y2lkX21hc2ssIE1UNzYxNV9XVEJM
+X1NUQSAtIDEpOworCWlmIChpZHgpCisJCXJldHVybiAtRU5PU1BDOworCisJZGV2LT5tdDc2Lmds
+b2JhbF93Y2lkLmlkeCA9IGlkeDsKKwlkZXYtPm10NzYuZ2xvYmFsX3djaWQuaHdfa2V5X2lkeCA9
+IC0xOworCXJjdV9hc3NpZ25fcG9pbnRlcihkZXYtPm10NzYud2NpZFtpZHhdLCAmZGV2LT5tdDc2
+Lmdsb2JhbF93Y2lkKTsKKwogCXJldHVybiAwOwogfQogCmRpZmYgLS1naXQgYS9kcml2ZXJzL25l
+dC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tYWluLmMgYi9kcml2ZXJzL25ldC93aXJl
+bGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tYWluLmMKaW5kZXggNTg1ZTY3ZmEyNzI4Li4yY2Rk
+MzM5NDUzYzggMTAwNjQ0Ci0tLSBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYv
+bXQ3NjE1L21haW4uYworKysgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210
+NzYxNS9tYWluLmMKQEAgLTk1LDcgKzk1LDcgQEAgc3RhdGljIGludCBtdDc2MTVfYWRkX2ludGVy
+ZmFjZShzdHJ1Y3QgaWVlZTgwMjExX2h3ICpodywKIAogCWRldi0+dmlmX21hc2sgfD0gQklUKG12
+aWYtPmlkeCk7CiAJZGV2LT5vbWFjX21hc2sgfD0gQklUKG12aWYtPm9tYWNfaWR4KTsKLQlpZHgg
+PSBNVDc2MTVfV1RCTF9SRVNFUlZFRCAtIDEgLSBtdmlmLT5pZHg7CisJaWR4ID0gTVQ3NjE1X1dU
+QkxfUkVTRVJWRUQgLSBtdmlmLT5pZHg7CiAJbXZpZi0+c3RhLndjaWQuaWR4ID0gaWR4OwogCW12
+aWYtPnN0YS53Y2lkLmh3X2tleV9pZHggPSAtMTsKIApkaWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQv
+d2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmMgYi9kcml2ZXJzL25ldC93aXJlbGVz
+cy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuYwppbmRleCBlODIyOTcwNDg0NDkuLmIzODAyZjE4
+YjM3YiAxMDA2NDQKLS0tIGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2
+MTUvbWN1LmMKKysrIGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUv
+bWN1LmMKQEAgLTg4Miw2ICs4ODIsNyBAQCBpbnQgbXQ3NjE1X21jdV9zZXRfd3RibF9rZXkoc3Ry
+dWN0IG10NzYxNV9kZXYgKmRldiwgaW50IHdjaWQsCiAJCWlmIChjaXBoZXIgPT0gTVRfQ0lQSEVS
+X05PTkUgJiYga2V5KQogCQkJcmV0dXJuIC1FT1BOT1RTVVBQOwogCisJCXJlcS5rZXkucmt2ID0g
+MTsKIAkJcmVxLmtleS5jaXBoZXJfaWQgPSBjaXBoZXI7CiAJCXJlcS5rZXkua2V5X2lkID0ga2V5
+LT5rZXlpZHg7CiAJCXJlcS5rZXkua2V5X2xlbiA9IGtleS0+a2V5bGVuOwotLSAKMi4xOC4wCgoK
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVk
+aWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0
+cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
