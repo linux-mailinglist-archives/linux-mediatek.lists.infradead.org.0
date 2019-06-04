@@ -2,80 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A369C3435B
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 11:38:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2EE393435C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 11:38:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zohFJNR5ozwb2zHiJCsjFkbNYVIy9rRzZF0ULVBCgWk=; b=lK7e05vlre8Rfy
-	3b04gzRVywOre5eQ+ZueJCPQT8DquK1HYFGFLVIwMzEp63/VHN9avZbXPqnxeNTA85IgVkZgNq9GO
-	onCwUuyIIy7LnfJRsoNF0jdbPaNi7LIzVXJjyk8NJPo8DbelkEVd4euXroXO/G6GhE2pwj6LpuZwq
-	0YQ5L8+UbH3UqvwzkYg8s4uza6rFYjGz+8k5PhdMhAT7xK+RoN3Dly80A+aMkOs/Yn8vd0aQrxL4v
-	0jiYuDYPYfeE7mnyIFi5u6MeSLoEUlFob+QRZpwNGqwph6BX5zCNL/0mB1amziGRPTYi0qz063x1K
-	vp1XTcibOvHj69c8SmDg==;
+	List-Owner; bh=cI5GOWYZmfN3PRd1oTl+6oqS0m5GH+7gAA3AvIHfubQ=; b=b+NENZOPGUmwfJ
+	kyq3TQeS3Yfv/qHWkEiwfQbIC/5uADt3KO3QE1eradlxl9AiCzUbUJs4CoOHcvC+2/ylgQZm8QDf4
+	5OQUC5U815+cRKSD27ZrzorpPZGCY7ev6dXKcnLlUAg4whGkfLzjezkorbJXwYXWhdnq8PO3dMUMn
+	sxCdpm3sXzXOYWHXCPVx1fpu4d/DY0XNel7jotN2vaiOQ0FkpS1RKWx8nfVLWpPqMsKsOqM9t7oNi
+	SgDQq+un7m0lI6+xh+G2Ui87Xz5uxpTCIwoTaFKzdUmDWWfFsSx14wjQbpKokiqqg4jTyJiaKxxPn
+	5Z1HQJfmZst8Ly1ZuHtw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hY5tP-000121-0u; Tue, 04 Jun 2019 09:38:07 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1hY5tQ-00014K-KD; Tue, 04 Jun 2019 09:38:08 +0000
+Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hY5tK-0000wu-2E
- for linux-mediatek@lists.infradead.org; Tue, 04 Jun 2019 09:38:04 +0000
-Received: by mail-pf1-x444.google.com with SMTP id y11so12315775pfm.13
- for <linux-mediatek@lists.infradead.org>; Tue, 04 Jun 2019 02:38:01 -0700 (PDT)
+ id 1hY5tM-00010C-L6
+ for linux-mediatek@lists.infradead.org; Tue, 04 Jun 2019 09:38:06 +0000
+Received: by mail-pf1-x443.google.com with SMTP id a23so12354475pff.4
+ for <linux-mediatek@lists.infradead.org>; Tue, 04 Jun 2019 02:38:04 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=3vo0CKjVAQO8Efn26GFf+EbXSh3Y7HePB8JtNRXrXQo=;
- b=SP2kR9aTHjK29bZKBEesqtIsZN4oZoGMbmZIJ/+FA5UMlOgTTSKTsMB2pe9Ea4lR/p
- NqyLYFPdRCVfD9wxloIYk6aZU/79opinVilnNWqAygu3Bi4RVOpYKbhmJYVop2pvOjGO
- 4gbPMPTE5V3v/7KHFQiaTjCK0PMCYe6b+A1Vg=
+ bh=Kkz/XzAOhnm/D/+CBYg1z225Vw/50tqayYaD8NUxlbU=;
+ b=lNej2GHpJFHhSX5Wafo2JC+jKDIiMJEwglY1egsj2tTgl0CQtE88cOwbO0CgShR/KB
+ Ei4wKW9rV86pYeUnXfZu+AQwz61DDo54QbRPMjYNhpkuvX3qkzL+8VGxuV7UGUS6G+jC
+ NfY7SaKvaII5e5ct8H33XKnTvOJMIVnIWbuCQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=3vo0CKjVAQO8Efn26GFf+EbXSh3Y7HePB8JtNRXrXQo=;
- b=huploJcEt4H/g+8hSGnbp8ZEgnM8FVL69LgxAB1CSV6eaGAkcE/E+fNYK6hPdxXnNa
- uovPbC5CXX5+1JL8idC2ysvGQcCtcCTCvzZrSTnN3ZlLcXsCDohRh+3vxoal8cPP2swL
- byBk8itR9MmlyrCeXm59ODEKabaJYXdvCMdype7OtNrc2Scq8MXf5Q2TjMYU6yaNNV6Z
- JPKZ0hgLjkAF9lEJduTjBy4Jm6IpFB7INlWgPjtUAhM3jKN+6zhwdAEJPxgA9oNm/qdP
- P/MhYkNl1LV/6K5lSUpa/I0Ykn0NDQNRrSZJUdk755qeoX3gtGjmB4ZgCPYw9AescIe+
- 3Pqw==
-X-Gm-Message-State: APjAAAUIcOF9U24CNnuCU8UtEU8fp+/OxyWucXowg2CShSCiIdt6JLaZ
- xXtvDJJSMFRHTff0GkL40+qMFg==
-X-Google-Smtp-Source: APXvYqwwjpkPddY40O7gaNv+ljNDxPTMNx/7dR6h8CvtZytFsNg3JXLP3IUAzj3pL672x/NYqpgF9Q==
-X-Received: by 2002:aa7:8193:: with SMTP id g19mr29469117pfi.162.1559641081312; 
- Tue, 04 Jun 2019 02:38:01 -0700 (PDT)
+ bh=Kkz/XzAOhnm/D/+CBYg1z225Vw/50tqayYaD8NUxlbU=;
+ b=pugXxUXeWmpNHhhoU9uk51hjO+v7HVNlmYilyo5/sZwIYv14taK1bQoB1GXj6nKwRv
+ dmcenF7dPuyGDEFq7A5pCAZ818CV9rPafuC94IOcPPaE39j2Y7mTU4Tz+UxlhaE/tCXq
+ t9UP4W54vCCIJk5MWschD/KGArF7JiJox+CvMWDq99RNx7Jv5h8Ud2lrv6eeLrY82oga
+ oB1ueEq1sTZFAJetnTeTVMnP2ifZG9H/Gbct/gvkEwv2554+dVEcMSZjmopu6G8ubTw2
+ YNQnEc1+qG13Izo0hA/SGlR706h24/sHtL/OPiY8XW+EFYXTqwr9T63cTLxijuBMoMa7
+ e/6Q==
+X-Gm-Message-State: APjAAAWWL29wvV4NUrTPphO+8OCs0nUVZYZigxjXgSY91D8nGpKJ/2Wi
+ //Xq4jOcnRa567tLHX7Xr+XUnfwaf8SQZw==
+X-Google-Smtp-Source: APXvYqz2Fz/pnGXv0ZPvgJW7e6d7ZqtCPt+NixsSUGw1uA+K5fsccM7BUPplF4NCNUk+DabA0RDGRQ==
+X-Received: by 2002:a17:90a:372a:: with SMTP id
+ u39mr7218059pjb.2.1559641084175; 
+ Tue, 04 Jun 2019 02:38:04 -0700 (PDT)
 Received: from acourbot.tok.corp.google.com
  ([2401:fa00:4:4:9712:8cf1:d0f:7d33])
- by smtp.gmail.com with ESMTPSA id j7sm17431588pfa.184.2019.06.04.02.37.58
+ by smtp.gmail.com with ESMTPSA id j7sm17431588pfa.184.2019.06.04.02.38.01
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 04 Jun 2019 02:38:00 -0700 (PDT)
+ Tue, 04 Jun 2019 02:38:03 -0700 (PDT)
 From: Alexandre Courbot <acourbot@chromium.org>
 To: Tiffany Lin <tiffany.lin@mediatek.com>,
  Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
  Mauro Carvalho Chehab <mchehab@kernel.org>,
  Yunfei Dong <yunfei.dong@mediatek.com>,
  Hans Verkuil <hverkuil-cisco@xs4all.nl>
-Subject: [PATCH 3/5] media: mtk-vcodec: remove unneeded proxy functions
-Date: Tue,  4 Jun 2019 18:37:35 +0900
-Message-Id: <20190604093737.172599-4-acourbot@chromium.org>
+Subject: [PATCH 4/5] media: mtk-vcodec: constify formats
+Date: Tue,  4 Jun 2019 18:37:36 +0900
+Message-Id: <20190604093737.172599-5-acourbot@chromium.org>
 X-Mailer: git-send-email 2.22.0.rc1.311.g5d7573a151-goog
 In-Reply-To: <20190604093737.172599-1-acourbot@chromium.org>
 References: <20190604093737.172599-1-acourbot@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190604_023802_110897_0CE26313 
-X-CRM114-Status: GOOD (  11.88  )
+X-CRM114-CacheID: sfid-20190604_023804_702628_5009721A 
+X-CRM114-Status: GOOD (  13.42  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -105,193 +106,188 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-We were getting the codec interface through a proxy function that does
-not bring anything compared to just accessing the interface definition
-directly, so just do that. Also make the decoder interfaces const.
+Formats are read-only internal memory structures, so make them const.
 
 Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
 ---
- .../media/platform/mtk-vcodec/vdec/vdec_h264_if.c    |  9 +--------
- drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c |  9 +--------
- drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c |  9 +--------
- drivers/media/platform/mtk-vcodec/vdec_drv_if.c      | 12 ++++++------
- .../media/platform/mtk-vcodec/venc/venc_h264_if.c    |  9 +--------
- drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c |  9 +--------
- drivers/media/platform/mtk-vcodec/venc_drv_if.c      |  8 ++++----
- 7 files changed, 15 insertions(+), 50 deletions(-)
+ .../platform/mtk-vcodec/mtk_vcodec_dec.c      | 19 ++++++++++---------
+ .../platform/mtk-vcodec/mtk_vcodec_drv.h      |  2 +-
+ .../platform/mtk-vcodec/mtk_vcodec_enc.c      | 19 ++++++++++---------
+ 3 files changed, 21 insertions(+), 19 deletions(-)
 
-diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-index 0c0660d2560b..85afdd6ab093 100644
---- a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-+++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-@@ -481,16 +481,9 @@ static int vdec_h264_get_param(void *h_vdec, enum vdec_get_param_type type,
- 	return 0;
- }
+diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec.c
+index 371e70d6a803..131a8117ece2 100644
+--- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec.c
++++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_dec.c
+@@ -19,7 +19,7 @@
+ #define DFT_CFG_WIDTH	MTK_VDEC_MIN_W
+ #define DFT_CFG_HEIGHT	MTK_VDEC_MIN_H
  
--static struct vdec_common_if vdec_h264_if = {
-+const struct vdec_common_if vdec_h264_if = {
- 	.init		= vdec_h264_init,
- 	.decode		= vdec_h264_decode,
- 	.get_param	= vdec_h264_get_param,
- 	.deinit		= vdec_h264_deinit,
- };
--
--struct vdec_common_if *get_h264_dec_comm_if(void);
--
--struct vdec_common_if *get_h264_dec_comm_if(void)
--{
--	return &vdec_h264_if;
--}
-diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-index 1e3763881e0d..a8ca762eac76 100644
---- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-+++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-@@ -605,16 +605,9 @@ static void vdec_vp8_deinit(void *h_vdec)
- 	kfree(inst);
- }
+-static struct mtk_video_fmt mtk_video_formats[] = {
++static const struct mtk_video_fmt mtk_video_formats[] = {
+ 	{
+ 		.fourcc = V4L2_PIX_FMT_H264,
+ 		.type = MTK_FMT_DEC,
+@@ -63,9 +63,9 @@ static const struct mtk_codec_framesizes mtk_vdec_framesizes[] = {
+ #define NUM_SUPPORTED_FRAMESIZE ARRAY_SIZE(mtk_vdec_framesizes)
+ #define NUM_FORMATS ARRAY_SIZE(mtk_video_formats)
  
--static struct vdec_common_if vdec_vp8_if = {
-+const struct vdec_common_if vdec_vp8_if = {
- 	.init		= vdec_vp8_init,
- 	.decode		= vdec_vp8_decode,
- 	.get_param	= vdec_vp8_get_param,
- 	.deinit		= vdec_vp8_deinit,
- };
--
--struct vdec_common_if *get_vp8_dec_comm_if(void);
--
--struct vdec_common_if *get_vp8_dec_comm_if(void)
--{
--	return &vdec_vp8_if;
--}
-diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-index 589b2fc91da2..1f99febdfbbe 100644
---- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-+++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-@@ -994,16 +994,9 @@ static int vdec_vp9_get_param(void *h_vdec, enum vdec_get_param_type type,
- 	return ret;
- }
- 
--static struct vdec_common_if vdec_vp9_if = {
-+const struct vdec_common_if vdec_vp9_if = {
- 	.init		= vdec_vp9_init,
- 	.decode		= vdec_vp9_decode,
- 	.get_param	= vdec_vp9_get_param,
- 	.deinit		= vdec_vp9_deinit,
- };
--
--struct vdec_common_if *get_vp9_dec_comm_if(void);
--
--struct vdec_common_if *get_vp9_dec_comm_if(void)
--{
--	return &vdec_vp9_if;
--}
-diff --git a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-index 5d8d76d55005..aa614eea3cc5 100644
---- a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-+++ b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-@@ -10,9 +10,9 @@
- #include "mtk_vcodec_dec_pm.h"
- #include "mtk_vpu.h"
- 
--const struct vdec_common_if *get_h264_dec_comm_if(void);
--const struct vdec_common_if *get_vp8_dec_comm_if(void);
--const struct vdec_common_if *get_vp9_dec_comm_if(void);
-+extern const struct vdec_common_if vdec_h264_if;
-+extern const struct vdec_common_if vdec_vp8_if;
-+extern const struct vdec_common_if vdec_vp9_if;
- 
- int vdec_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+-static struct mtk_video_fmt *mtk_vdec_find_format(struct v4l2_format *f)
++static const struct mtk_video_fmt *mtk_vdec_find_format(struct v4l2_format *f)
  {
-@@ -20,13 +20,13 @@ int vdec_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	unsigned int k;
  
- 	switch (fourcc) {
- 	case V4L2_PIX_FMT_H264:
--		ctx->dec_if = get_h264_dec_comm_if();
-+		ctx->dec_if = &vdec_h264_if;
- 		break;
- 	case V4L2_PIX_FMT_VP8:
--		ctx->dec_if = get_vp8_dec_comm_if();
-+		ctx->dec_if = &vdec_vp8_if;
- 		break;
- 	case V4L2_PIX_FMT_VP9:
--		ctx->dec_if = get_vp9_dec_comm_if();
-+		ctx->dec_if = &vdec_vp9_if;
- 		break;
- 	default:
- 		return -EINVAL;
-diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-index bfe61d5dc1cb..4e1d933395cd 100644
---- a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-+++ b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-@@ -649,16 +649,9 @@ static int h264_enc_deinit(void *handle)
- 	return ret;
- }
- 
--static const struct venc_common_if venc_h264_if = {
-+const struct venc_common_if venc_h264_if = {
- 	.init = h264_enc_init,
- 	.encode = h264_enc_encode,
- 	.set_param = h264_enc_set_param,
- 	.deinit = h264_enc_deinit,
- };
--
--const struct venc_common_if *get_h264_enc_comm_if(void);
--
--const struct venc_common_if *get_h264_enc_comm_if(void)
--{
--	return &venc_h264_if;
--}
-diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-index af23367cf1dd..2d1372ab6486 100644
---- a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-+++ b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-@@ -455,16 +455,9 @@ static int vp8_enc_deinit(void *handle)
- 	return ret;
- }
- 
--static const struct venc_common_if venc_vp8_if = {
-+const struct venc_common_if venc_vp8_if = {
- 	.init = vp8_enc_init,
- 	.encode = vp8_enc_encode,
- 	.set_param = vp8_enc_set_param,
- 	.deinit = vp8_enc_deinit,
- };
--
--const struct venc_common_if *get_vp8_enc_comm_if(void);
--
--const struct venc_common_if *get_vp8_enc_comm_if(void)
--{
--	return &venc_vp8_if;
--}
-diff --git a/drivers/media/platform/mtk-vcodec/venc_drv_if.c b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-index 318af1b4b6e7..cf5bfa296d20 100644
---- a/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-+++ b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-@@ -11,8 +11,8 @@
- #include "mtk_vcodec_enc_pm.h"
- #include "mtk_vpu.h"
- 
--const struct venc_common_if *get_h264_enc_comm_if(void);
--const struct venc_common_if *get_vp8_enc_comm_if(void);
-+extern const struct venc_common_if venc_h264_if;
-+extern const struct venc_common_if venc_vp8_if;
- 
- int venc_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+ 	for (k = 0; k < NUM_FORMATS; k++) {
+@@ -266,7 +266,7 @@ static void mtk_vdec_flush_decoder(struct mtk_vcodec_ctx *ctx)
+ static void mtk_vdec_update_fmt(struct mtk_vcodec_ctx *ctx,
+ 				unsigned int pixelformat)
  {
-@@ -20,10 +20,10 @@ int venc_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	struct mtk_q_data *dst_q_data;
+ 	unsigned int k;
  
- 	switch (fourcc) {
- 	case V4L2_PIX_FMT_VP8:
--		ctx->enc_if = get_vp8_enc_comm_if();
-+		ctx->enc_if = &venc_vp8_if;
- 		break;
- 	case V4L2_PIX_FMT_H264:
--		ctx->enc_if = get_h264_enc_comm_if();
-+		ctx->enc_if = &venc_h264_if;
- 		break;
- 	default:
- 		return -EINVAL;
+@@ -639,7 +639,8 @@ static int vidioc_vdec_subscribe_evt(struct v4l2_fh *fh,
+ 	}
+ }
+ 
+-static int vidioc_try_fmt(struct v4l2_format *f, struct mtk_video_fmt *fmt)
++static int vidioc_try_fmt(struct v4l2_format *f,
++			  const struct mtk_video_fmt *fmt)
+ {
+ 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
+ 	int i;
+@@ -712,7 +713,7 @@ static int vidioc_try_fmt(struct v4l2_format *f, struct mtk_video_fmt *fmt)
+ static int vidioc_try_fmt_vid_cap_mplane(struct file *file, void *priv,
+ 				struct v4l2_format *f)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 
+ 	fmt = mtk_vdec_find_format(f);
+ 	if (!fmt) {
+@@ -727,7 +728,7 @@ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
+ 				struct v4l2_format *f)
+ {
+ 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 
+ 	fmt = mtk_vdec_find_format(f);
+ 	if (!fmt) {
+@@ -821,7 +822,7 @@ static int vidioc_vdec_s_fmt(struct file *file, void *priv,
+ 	struct v4l2_pix_format_mplane *pix_mp;
+ 	struct mtk_q_data *q_data;
+ 	int ret = 0;
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 
+ 	mtk_v4l2_debug(3, "[%d]", ctx->id);
+ 
+@@ -920,7 +921,7 @@ static int vidioc_enum_framesizes(struct file *file, void *priv,
+ 
+ static int vidioc_enum_fmt(struct v4l2_fmtdesc *f, bool output_queue)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	int i, j = 0;
+ 
+ 	for (i = 0; i < NUM_FORMATS; i++) {
+diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+index 4b10996e6532..0a29a0694124 100644
+--- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
++++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+@@ -124,7 +124,7 @@ struct mtk_q_data {
+ 	enum v4l2_field	field;
+ 	unsigned int	bytesperline[MTK_VCODEC_MAX_PLANES];
+ 	unsigned int	sizeimage[MTK_VCODEC_MAX_PLANES];
+-	struct mtk_video_fmt	*fmt;
++	const struct mtk_video_fmt	*fmt;
+ };
+ 
+ /**
+diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
+index 1a3845809b92..868147616da7 100644
+--- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
++++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc.c
+@@ -24,7 +24,7 @@
+ 
+ static void mtk_venc_worker(struct work_struct *work);
+ 
+-static struct mtk_video_fmt mtk_video_formats[] = {
++static const struct mtk_video_fmt mtk_video_formats[] = {
+ 	{
+ 		.fourcc = V4L2_PIX_FMT_NV12M,
+ 		.type = MTK_FMT_FRAME,
+@@ -153,7 +153,7 @@ static const struct v4l2_ctrl_ops mtk_vcodec_enc_ctrl_ops = {
+ 
+ static int vidioc_enum_fmt(struct v4l2_fmtdesc *f, bool output_queue)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	int i, j = 0;
+ 
+ 	for (i = 0; i < NUM_FORMATS; ++i) {
+@@ -261,9 +261,9 @@ static struct mtk_q_data *mtk_venc_get_q_data(struct mtk_vcodec_ctx *ctx,
+ 	return &ctx->q_data[MTK_Q_DATA_DST];
+ }
+ 
+-static struct mtk_video_fmt *mtk_venc_find_format(struct v4l2_format *f)
++static const struct mtk_video_fmt *mtk_venc_find_format(struct v4l2_format *f)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	unsigned int k;
+ 
+ 	for (k = 0; k < NUM_FORMATS; k++) {
+@@ -278,7 +278,8 @@ static struct mtk_video_fmt *mtk_venc_find_format(struct v4l2_format *f)
+ /* V4L2 specification suggests the driver corrects the format struct if any of
+  * the dimensions is unsupported
+  */
+-static int vidioc_try_fmt(struct v4l2_format *f, struct mtk_video_fmt *fmt)
++static int vidioc_try_fmt(struct v4l2_format *f,
++			  const struct mtk_video_fmt *fmt)
+ {
+ 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
+ 	int i;
+@@ -414,7 +415,7 @@ static int vidioc_venc_s_fmt_cap(struct file *file, void *priv,
+ 	struct vb2_queue *vq;
+ 	struct mtk_q_data *q_data;
+ 	int i, ret;
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 
+ 	vq = v4l2_m2m_get_vq(ctx->m2m_ctx, f->type);
+ 	if (!vq) {
+@@ -476,7 +477,7 @@ static int vidioc_venc_s_fmt_out(struct file *file, void *priv,
+ 	struct vb2_queue *vq;
+ 	struct mtk_q_data *q_data;
+ 	int ret, i;
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
+ 
+ 	vq = v4l2_m2m_get_vq(ctx->m2m_ctx, f->type);
+@@ -575,7 +576,7 @@ static int vidioc_venc_g_fmt(struct file *file, void *priv,
+ static int vidioc_try_fmt_vid_cap_mplane(struct file *file, void *priv,
+ 					 struct v4l2_format *f)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 	struct mtk_vcodec_ctx *ctx = fh_to_ctx(priv);
+ 
+ 	fmt = mtk_venc_find_format(f);
+@@ -594,7 +595,7 @@ static int vidioc_try_fmt_vid_cap_mplane(struct file *file, void *priv,
+ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
+ 					 struct v4l2_format *f)
+ {
+-	struct mtk_video_fmt *fmt;
++	const struct mtk_video_fmt *fmt;
+ 
+ 	fmt = mtk_venc_find_format(f);
+ 	if (!fmt) {
 -- 
 2.22.0.rc1.311.g5d7573a151-goog
 
