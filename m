@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2DA5233CC3
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 03:33:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2ED9933CFC
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 04:06:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/DBUSgTBDOH463ioq9Zf4X6/NAk55vz1STPn0WX5T2Y=; b=dR2zZsjLvaTDnb
-	E9/B5wzSTh8R2c1w1cdXJCRuy5fvv8kEuVUDl7LSq1pXEkrQXAMhGwbN24B+GxewQMrXPvmLdcUi5
-	1j6NRGoxmeKgsmgxE2+6Di1m9NYg7aNkL5BkYxD1BCMfDZGDYdWjcANUnLn2BxmwaZQvVZLUl9jrg
-	eaR5HODFJhCZckiCJNtAAZ2yU/7Ji2hMHxv9v1gGCf4395Ewji7bUPUc2vsasRwMBeoz4ftXVjmYW
-	Agde8I4BL2EWmaKdcdTSuB/eOvieelGhs+cTN/Cujig7YB64kO+c9WFf1jit8iS0fDvEfjRMGh2af
-	Ix18ipHbjtAKMLdcJ3Ag==;
+	List-Owner; bh=3d9OLkExFdL+yBkANnh+isinGtfM31dnPWDMHC6JRuw=; b=GRcbE7KplU4MSz
+	4dO0kK0DG3aMcJDeLeu2Ph+voeW9E5oxAIEIySxUfN97s/447qm2+R/VRx16lQw5TGyvkVYTwUPYN
+	w4JARRo+h0JFFEQBLpKpJc6jlFqddLFfh2BKX95NlTEVdyc/iCupDTc/tqWUKrmUrPD3iltgzi5dz
+	QewD9OBrdtdw1/ENZALGrCLy1Be6EvWp68XQSiW+zUb1ux4gKvDpWyGaKHhKBhvHrswGnnlmfv+wu
+	Pe6F4oStcQ9k8UEwQH/XI8hbx8m2vcfh9FyWICMvmWrPol5o4h8Nvcu4cPtObdV2vu6CbaZLuT0tE
+	on9NmTjvwO7ziO5Z/BdA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXyKZ-0006DZ-99; Tue, 04 Jun 2019 01:33:39 +0000
+	id 1hXypn-000138-Eq; Tue, 04 Jun 2019 02:05:55 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXyKV-0006Cp-8v; Tue, 04 Jun 2019 01:33:37 +0000
-X-UUID: 72dccf69039b471b8053613f23a45c9d-20190603
-X-UUID: 72dccf69039b471b8053613f23a45c9d-20190603
+ id 1hXypi-00012g-EF; Tue, 04 Jun 2019 02:05:52 +0000
+X-UUID: 4c2c30c7379640f3a4f5e35ac10f7218-20190603
+X-UUID: 4c2c30c7379640f3a4f5e35ac10f7218-20190603
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1759249077; Mon, 03 Jun 2019 17:33:25 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Jun 2019 18:33:23 -0700
+ with ESMTP id 1279330952; Mon, 03 Jun 2019 18:05:43 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Jun 2019 09:33:22 +0800
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 3 Jun 2019 19:05:42 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by mtkcas08.mediatek.inc
+ (172.21.101.126) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 4 Jun 2019 10:05:40 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 4 Jun 2019 09:33:22 +0800
-Message-ID: <1559612002.2749.2.camel@mtksdaap41>
-Subject: Re: [PATCH v2 0/4] fix mediatek drm, dis, and disp-* unbind/bind
+ Transport; Tue, 4 Jun 2019 10:05:40 +0800
+Message-ID: <1559613940.9975.0.camel@mtksdaap41>
+Subject: Re: [PATCH v4] gpu/drm: mediatek: call mtk_dsi_stop() after
+ mtk_drm_crtc_atomic_disable()
 From: CK Hu <ck.hu@mediatek.com>
 To: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Tue, 4 Jun 2019 09:33:22 +0800
-In-Reply-To: <20190529102555.251579-1-hsinyi@chromium.org>
-References: <20190529102555.251579-1-hsinyi@chromium.org>
+Date: Tue, 4 Jun 2019 10:05:40 +0800
+In-Reply-To: <20190530091847.90263-1-hsinyi@chromium.org>
+References: <20190530091847.90263-1-hsinyi@chromium.org>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190603_183335_318961_D777D2C2 
-X-CRM114-Status: UNSURE (   9.09  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190603_190550_491291_18821488 
+X-CRM114-Status: GOOD (  18.03  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -83,18 +83,30 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi, Hsin-Yi:
 
-On Wed, 2019-05-29 at 18:25 +0800, Hsin-Yi Wang wrote:
-> There are some errors when unbinding and rebinding mediatek drm, dsi,
-> and disp-* drivers. This series is to fix those errors and warnings.
+On Thu, 2019-05-30 at 17:18 +0800, Hsin-Yi Wang wrote:
+> mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(), which needs
+> ovl irq for drm_crtc_wait_one_vblank(), since after mtk_dsi_stop() is called,
+> ovl irq will be disabled. If drm_crtc_wait_one_vblank() is called after last
+> irq, it will timeout with this message: "vblank wait timed out on crtc 0". This
+> happens sometimes when turning off the screen.
 > 
-> Hsin-Yi Wang (4):
->   drm: mediatek: fix unbind functions
->   drm: mediatek: unbind components in mtk_drm_unbind()
->   drm: mediatek: call drm_atomic_helper_shutdown() when unbinding driver
->   drm: mediatek: clear num_pipes when unbind driver
+> In drm_atomic_helper.c#disable_outputs(),
+> the calling sequence when turning off the screen is:
+> 
+> 1. mtk_dsi_encoder_disable()
+>      --> mtk_output_dsi_disable()
+>        --> mtk_dsi_stop();  // sometimes make vblank timeout in atomic_disable
+>        --> mtk_dsi_poweroff();
+> 2. mtk_drm_crtc_atomic_disable()
+>      --> drm_crtc_wait_one_vblank();
+>      ...
+>        --> mtk_dsi_ddp_stop()
+>          --> mtk_dsi_poweroff();
+> 
+> mtk_dsi_poweroff() has reference count design, change to make mtk_dsi_stop()
+> called in mtk_dsi_poweroff() when refcount is 0.
 
-For this series with some title modification, applied to
-mediatek-drm-fixes-5.2 [1], thanks.
+Applied to mediatek-drm-fixes-5.2 [1], thanks.
 
 [1]
 https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-fixes-5.2
@@ -103,10 +115,43 @@ Regards,
 CK
 
 > 
->  drivers/gpu/drm/mediatek/mtk_drm_drv.c | 8 +++-----
->  drivers/gpu/drm/mediatek/mtk_dsi.c     | 2 ++
->  2 files changed, 5 insertions(+), 5 deletions(-)
+> Fixes: 0707632b5bac ("drm/mediatek: update DSI sub driver flow for sending commands to panel")
+> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+> ---
+> change log v3->v4:
+> * add comment in code.
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 10 +++++++++-
+>  1 file changed, 9 insertions(+), 1 deletion(-)
 > 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b00eb2d2e086..730594a91440 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -630,6 +630,15 @@ static void mtk_dsi_poweroff(struct mtk_dsi *dsi)
+>  	if (--dsi->refcount != 0)
+>  		return;
+>  
+> +	/* 
+> +	 * mtk_dsi_stop() and mtk_dsi_start() is asymmetric, since
+> +	 * mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(),
+> +	 * which needs irq for vblank, and mtk_dsi_stop() will disable irq.
+> +	 * mtk_dsi_start() needs to be called in mtk_output_dsi_enable(),
+> +	 * after dsi is fully set.
+> +	 */
+> +	mtk_dsi_stop(dsi);
+> +
+>  	if (!mtk_dsi_switch_to_cmd_mode(dsi, VM_DONE_INT_FLAG, 500)) {
+>  		if (dsi->panel) {
+>  			if (drm_panel_unprepare(dsi->panel)) {
+> @@ -696,7 +705,6 @@ static void mtk_output_dsi_disable(struct mtk_dsi *dsi)
+>  		}
+>  	}
+>  
+> -	mtk_dsi_stop(dsi);
+>  	mtk_dsi_poweroff(dsi);
+>  
+>  	dsi->enabled = false;
 
 
 
