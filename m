@@ -2,54 +2,51 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BCFDE3432A
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 11:28:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6C1733433D
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 11:33:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=up3pbR2oiw/STGRlRJN7TdZozixRClTQ3Puleoc1bVA=; b=GOgqz5Dpq1FcDI
-	sCuV3w6wLul0FldftzKyMZwGxp3S1dlA2I+GBfsbCCijXLSuon0o5MUaHDH5y/0cvToPwdunP9JxA
-	i9HcQz9bbBcCVPnAcv21Fhj7HsjZEnLfwMPtutPd9khfnGlKfocfdwT0q28FQ6Z2n7QSSB0EotVPV
-	uLVcf+dbmhvkkntMo4TKDZh0W01C5N6Vr9/DG1vYPlqxX5Sg+qkWgyWBa/zZfyYmDCtFUqxGe2ND9
-	RzZMpDki4C0m+VinTzN0nupLppQdOHNFBj5uODs3wbUoxDWQGCJQayAgJ4YYNlCpkBGji6FznFSP3
-	LTVSIZLDTPQKfY6a2Mjw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=AU03kKywCdK3Y+KbfXyK8mpeYc+hoeYzqAMJybEIUxE=; b=IsG1HWyvn/0Gmg
+	nOwYrHeG7ToU4ZJFXYozhWiNrbvbwfNN37Io1vOyQLvYtzPs+tJmcwwaX7rDtprfaUyuTwv+hHMaZ
+	LQQtPNVljPx6yyG0PE0sx+Q/ILOjZPiZxDpfQV/M4yOaKbnvJDYD32AE0cABFFyPLPKDLRpHKdETE
+	lqeNBo9kBzJSfCokfPszaL4iJ3N4VXnKIAcuBqEJBJyWdKGhubP4U2eFExCRg1vfk+46l+nGRYaf2
+	4uFkZQpmUjuMjbn2xBybuu4e6jYO/ruXdHy5fOFToPRh8DWQVrYyljmojyX5KrFjBdCE+J753mScp
+	wYoP3+YrG4wBN054gZ4Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hY5kH-0004vf-7A; Tue, 04 Jun 2019 09:28:41 +0000
+	id 1hY5oc-0006ux-Po; Tue, 04 Jun 2019 09:33:10 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hY5k7-0004o4-HR; Tue, 04 Jun 2019 09:28:32 +0000
+ id 1hY5oT-0006li-9E; Tue, 04 Jun 2019 09:33:02 +0000
 Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
  [83.86.89.107])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 9F296204FD;
- Tue,  4 Jun 2019 09:28:30 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id EDA46249CF;
+ Tue,  4 Jun 2019 09:32:59 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1559640511;
- bh=6ETqa+2EBIL2s592Vq0+tBj4SL6ET4j6q8SqOPkcKuw=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=hEd3fP6V8hlo4nCqa5dKa4wmtNC978msNENPO3/f7cQrwTkoSJQpCq8GbqFkPjEIZ
- qyAV3dZUz5+bEE5XiWAQipkuAYAiRjFHLZvFYvlHHpPtUOcyOu9aEQ4L2rYvt9BqXQ
- oF7Z0UdcWtWJIRtUy9Lr2IkDX92UBC7cal1SDhGA=
-Date: Tue, 4 Jun 2019 11:28:28 +0200
+ s=default; t=1559640780;
+ bh=fv30zCd+ya4eAbJ4qBlKi6F+W7utOftCbI5ndSkbhZo=;
+ h=Date:From:To:Cc:Subject:From;
+ b=opKQBg1EmjmuiDNAy8aOnEBCvJP3Ac5iFVNmMiAYHI80Eiwt8JcsTxSJtKzOpmazr
+ kIh/7ratqm4vMuGT7y34esEVCWWub0gyxE03Q0QLX0ZY0agYtaWXFjboWzPdQY9SeD
+ P75Ocf07Mw2YSeXlHqhoW0TUmwyAqqREHqZNluLE=
+Date: Tue, 4 Jun 2019 11:32:58 +0200
 From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 To: Felipe Balbi <felipe.balbi@linux.intel.com>
-Subject: Re: [PATCH v4] usb: create usb_debug_root for gadget only
-Message-ID: <20190604092828.GA30054@kroah.com>
-References: <1559633647-29040-1-git-send-email-chunfeng.yun@mediatek.com>
- <20190604073706.GA25045@kroah.com> <87k1e123mc.fsf@linux.intel.com>
- <20190604082407.GA3783@kroah.com>
+Subject: [PATCH] USB: move usb debugfs directory creation to the usb common
+ core
+Message-ID: <20190604093258.GB30054@kroah.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190604082407.GA3783@kroah.com>
 User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190604_022831_617701_FBDC766E 
-X-CRM114-Status: GOOD (  20.83  )
+X-CRM114-CacheID: sfid-20190604_023301_342058_AD5688BD 
+X-CRM114-Status: GOOD (  11.32  )
 X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.0 points)
@@ -83,62 +80,16 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jun 04, 2019 at 10:24:07AM +0200, Greg Kroah-Hartman wrote:
-> On Tue, Jun 04, 2019 at 10:47:55AM +0300, Felipe Balbi wrote:
-> > 
-> > Hi,
-> > 
-> > Greg Kroah-Hartman <gregkh@linuxfoundation.org> writes:
-> > >> +struct dentry *usb_debugfs_init(void)
-> > >> +{
-> > >> +	if (!usb_debug_root)
-> > >> +		usb_debug_root = debugfs_create_dir("usb", NULL);
-> > >> +
-> > >> +	atomic_inc(&usb_debug_root_refcnt);
-> > >> +
-> > >> +	return usb_debug_root;
-> > >> +}
-> > >> +EXPORT_SYMBOL_GPL(usb_debugfs_init);
-> > >> +
-> > >> +void usb_debugfs_cleanup(void)
-> > >> +{
-> > >> +	if (atomic_dec_and_test(&usb_debug_root_refcnt)) {
-> > >> +		debugfs_remove_recursive(usb_debug_root);
-> > >> +		usb_debug_root = NULL;
-> > >> +	}
-> > >> +}
-> > >> +EXPORT_SYMBOL_GPL(usb_debugfs_cleanup);
-> > >
-> > > Only remove the debugfs subdir if the usbcore module is removed.  Create
-> > > the debugfs subdir when the usbcore module is loaded.  No need for any
-> > > reference counting of any sort at all.  No need to overthink this :)
-> > 
-> > There is a slight need to overthink. He wants to use the same directory
-> > for gadget-only builds too :-)
-> 
-> Again, that's fine, this file will be loaded for those builds as well,
-> right?  Otherwise, how would this code even be present?  :)
-
-
-As it seems to be easier to just write the patch instead of trying to
-describe it in email, and the patch is even simpler than the text,
-here's what I was thinking of:
-
-Note, it's not fully correct, now that I think of it, but you get the
-idea...
-
-
-From foo@baz Tue 04 Jun 2019 11:25:30 AM CEST
-Date: Tue, 04 Jun 2019 11:25:30 +0200
-To: Greg KH <gregkh@linuxfoundation.org>
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: [PATCH] USB: move usb debugfs directory creation to the usb core
-
 The USB gadget subsystem wants to use the USB debugfs root directory, so
 move it to the common "core" USB code so that it is properly initialized
 and removed as needed.
 
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+
+---
+
+This should be the "correct" version of this, Chunfeng, can you test
+this to verify it works for you?
 
 
 diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
@@ -176,22 +127,33 @@ index 18f5dcf58b0d..3b5e4263ffef 100644
 +
  MODULE_LICENSE("GPL");
 diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-index 7fcb9f782931..2aa28445277d 100644
+index 7fcb9f782931..f3d6b1ab80cb 100644
 --- a/drivers/usb/core/usb.c
 +++ b/drivers/usb/core/usb.c
-@@ -1185,12 +1185,8 @@ static struct notifier_block usb_bus_nb = {
+@@ -1185,19 +1185,17 @@ static struct notifier_block usb_bus_nb = {
  	.notifier_call = usb_bus_notify,
  };
  
 -struct dentry *usb_debug_root;
 -EXPORT_SYMBOL_GPL(usb_debug_root);
--
++static struct dentry *usb_devices_root;
+ 
  static void usb_debugfs_init(void)
  {
 -	usb_debug_root = debugfs_create_dir("usb", NULL);
- 	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
- 			    &usbfs_devices_fops);
+-	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
+-			    &usbfs_devices_fops);
++	usb_devices_root = debugfs_create_file("devices", 0444, usb_debug_root,
++					       NULL, &usbfs_devices_fops);
  }
+ 
+ static void usb_debugfs_cleanup(void)
+ {
+-	debugfs_remove_recursive(usb_debug_root);
++	debugfs_remove_recursive(usb_devices_root);
+ }
+ 
+ /*
 
 _______________________________________________
 Linux-mediatek mailing list
