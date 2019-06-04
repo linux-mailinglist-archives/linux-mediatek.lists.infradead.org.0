@@ -2,56 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 42CF233F25
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 08:44:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8583334035
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 09:34:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jOL2UwIqh188+4FM/XZVBPFkXv2pdqYzDxn/HSfzQ+o=; b=VEo0TazvNDkBSB
-	sqKaDmu8wM5fxZaAVdaSwaOsEFHR2MOmgadoGcg1n4h3Z9s2eHRGVCbJ+mpsGrAI3kLF3/dUJz2H+
-	+HUlrmO0zviIsKfFz1ufFFb8Q2zFpKoFpYkWU0TdWKvDO8ye7v3iRn0DE9VQURX3WmdPxxbk1V0F4
-	r07ktojVjAI6LCxJX3NJ9OSvPqlpMHUKkZhShxGT4Qm5XriVwYUpghQdzrF6ZJsDrrsz8y7HS8PNm
-	+6Nfx/g0LFaO65oiNnGWhvE8+tasOfxk0jkHG9LgfetoLsNkfmSqzHLvNcK0/9+WHxlvqCm4kIJ5R
-	jUtyTHlAiFqTkJUU9pTw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=s96NTDJZGmCVSUqR+/hAmKCHXcc7/bYZae7Oc//5L88=; b=qPHdTy02WqWuMJ
+	2uiwM1U6pVM9XOOSoFnbkVPcfq2Jri2pfvCL4lMkdaGOc7MvXX7xo5SPvWLw8uZPD6QTMj8xBKx59
+	xpRhSgakYdOE13O+vO4qdyzJfeMKPikPJJydk+Ke3SL0fQtIucnLLRylpzR+v1LnzFKogYOU7Kt3Z
+	eU0MVVQteP1I9eNXJg1YRrEDtxqfcpSgN8nmdVrPX9N/saUDFka5flVWClIu82UmFEGG3DD5douea
+	mNqxMjS/THMN/ICmwu3m88EIpxtRWNC9qbP4wzFIhvHPIsB/JMgJyrzdl8smsxvDT7fe0JQHrAO+j
+	DBZAJ2+hyZoKiE9pJ9DA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hY3Bb-0006XX-Ke; Tue, 04 Jun 2019 06:44:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hY3xi-00041f-1A; Tue, 04 Jun 2019 07:34:26 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hY3BS-0006PO-70; Tue, 04 Jun 2019 06:44:35 +0000
-X-UUID: a27ec159874c4855b627a31428f6f836-20190603
-X-UUID: a27ec159874c4855b627a31428f6f836-20190603
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hY3xe-00041I-Ka; Tue, 04 Jun 2019 07:34:24 +0000
+X-UUID: 4775b66b93e94337a69f6e19048a96f9-20190603
+X-UUID: 4775b66b93e94337a69f6e19048a96f9-20190603
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 866147116; Mon, 03 Jun 2019 22:44:23 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ with ESMTP id 2054556446; Mon, 03 Jun 2019 23:34:19 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Jun 2019 23:44:21 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 4 Jun 2019 14:44:18 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 4 Jun 2019 14:44:18 +0800
-Message-ID: <1559630658.8487.61.camel@mhfsdcap03>
-Subject: Re: [v3 PATCH] usb: create usb_debug_root for gadget only
+ 15.0.1395.4; Tue, 4 Jun 2019 00:34:18 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 4 Jun 2019 15:34:15 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 4 Jun 2019 15:34:13 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Felipe Balbi <felipe.balbi@linux.intel.com>
-Date: Tue, 4 Jun 2019 14:44:18 +0800
-In-Reply-To: <87sgsv2n54.fsf@linux.intel.com>
-References: <cffd6d75f69e4d908c8f39b8a60ddae27d6b7c88.1559028752.git.chunfeng.yun@mediatek.com>
- <87k1ebj8vt.fsf@linux.intel.com> <1559201499.8487.40.camel@mhfsdcap03>
- <87sgsv2n54.fsf@linux.intel.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
+ <felipe.balbi@linux.intel.com>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v4] usb: create usb_debug_root for gadget only
+Date: Tue, 4 Jun 2019 15:34:07 +0800
+Message-ID: <1559633647-29040-1-git-send-email-chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190603_234434_263290_14FEEA28 
-X-CRM114-Status: GOOD (  18.91  )
+X-CRM114-CacheID: sfid-20190604_003422_679967_5475ADE7 
+X-CRM114-Status: GOOD (  14.12  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,151 +69,160 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-usb@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Randy Dunlap <rdunlap@infradead.org>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-05-31 at 08:44 +0300, Felipe Balbi wrote:
-> Hi,
-> 
-> Chunfeng Yun <chunfeng.yun@mediatek.com> writes:
-> 
-> > Hi Felipe,
-> > On Tue, 2019-05-28 at 11:11 +0300, Felipe Balbi wrote:
-> >> Hi,
-> >> 
-> >> Chunfeng Yun <chunfeng.yun@mediatek.com> writes:
-> >> > diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-> >> > index 7fcb9f782931..88b3ee03a12d 100644
-> >> > --- a/drivers/usb/core/usb.c
-> >> > +++ b/drivers/usb/core/usb.c
-> >> > @@ -1190,7 +1190,7 @@ EXPORT_SYMBOL_GPL(usb_debug_root);
-> >> >  
-> >> >  static void usb_debugfs_init(void)
-> >> >  {
-> >> > -	usb_debug_root = debugfs_create_dir("usb", NULL);
-> >> > +	usb_debug_root = debugfs_create_dir(USB_DEBUG_ROOT_NAME, NULL);
-> >> >  	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
-> >> >  			    &usbfs_devices_fops);
-> >> >  }
-> >> 
-> >> might be a better idea to move this to usb common. Then have a function
-> >> which can be called by both host and gadget to maybe create the
-> >> directory:
-> >> 
-> >> static struct dentry *usb_debug_root;
-> >> 
-> >> struct dentry *usb_debugfs_init(void)
-> >> {
-> >> 	if (!usb_debug_root)
-> >>         	usb_debug_root = debugfs_create_dir("usb", NULL);
-> >> 
-> >> 	return usb_debug_root;
-> >> }
-> >> 
-> >> 
-> >> Then usb core would be updated to something like:
-> >> 
-> >> static void usb_core_debugfs_init(void)
-> >> {
-> >> 	struct dentry *root = usb_debugfs_init();
-> >> 
-> >> 	debugfs_create_file("devices", 0444, root, NULL, &usbfs_devices_fops);
-> >> }
-> >> 
-> > I find a problem when move usb_debugfs_init() and usb_debugfs_cleanup()
-> > into usb common, it's easy to create "usb" directory, but difficult to
-> > cleanup it:
-> >
-> > common/common.c
-> >
-> > struct dentry *usb_debugfs_init(void)
-> > {
-> >     if (!usb_debug_root)
-> >         usb_debug_root = debugfs_create_dir("usb", NULL);
-> >
-> >     return usb_debug_root;
-> > }
-> >
-> > void usb_debugfs_cleanup(void)
-> > {
-> >     debugfs_remove_recursive(usb_debug_root);
-> >     usb_debug_root = NULL;
-> > }
-> >
-> > core/usb.c
-> >
-> > static void usb_core_debugfs_init(void)
-> > {
-> >     struct dentry *root = usb_debugfs_init();
-> >
-> >     debugfs_create_file("devices", 0444, root, NULL,
-> > &usbfs_devices_fops);
-> > }
-> >
-> > static int __init usb_init(void)
-> > {
-> >     ...
-> >     usb_core_debugfs_init();
-> >     ...
-> > }
-> >
-> > static void __exit usb_exit(void)
-> > {
-> >     ...
-> >     usb_debugfs_cleanup();
-> >     // will be error, gadget may use it.
-> >     ...
-> > }
-> >
-> > gadget/udc/core.c
-> >
-> > static int __init usb_udc_init(void)
-> > {
-> >     ...
-> >     usb_debugfs_init();
-> >     ...
-> > }
-> >
-> > static void __exit usb_udc_exit(void)
-> > {
-> >     ...
-> >     usb_debugfs_cleanup();
-> >     // can't cleanup in fact, usb core may use it.
-> > }
-> >
-> > How to handle this case? introduce a reference count? do you have any
-> > suggestion?
-> 
-> I guess a simple refcount is the way to go:
-> 
-> struct dentry *usb_debugfs_init(void)
-> {
-> 	if (!usb_debug_root)
-> 		usb_debug_root = debugfs_create_dir("usb", NULL);
-> 
-> 	usb_debug_root_refcnt++;
-> 	return usb_debug_root;
-> }
-> 
-> void usb_debugfs_cleanup(void)
-> {
-> 	if (!(--usb_debug_root_refcnt)) {
-> 		debugfs_remove_recursive(usb_debug_root);
-> 		usb_debug_root = NULL;
-> 	}
-> }
-I'll try it, thanks
+When CONFIG_USB is not set, and CONFIG_USB_GADGET is set,
+there is an issue, e.g.:
 
-> 
-> Or something along those lines
-> 
+drivers/usb/mtu3/mtu3_debugfs.o: in function 'ssusb_debugfs_create_root':
+mtu3_debugfs.c:(.text+0xba3): undefined reference to 'usb_debug_root'
 
+usb_debug_root is currently only built when host is supported
+(CONFIG_USB is set), for convenience, we also want it created when
+gadget only is enabled, this patch try to support it.
+
+Reported-by: Randy Dunlap <rdunlap@infradead.org>
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+---
+v4:
+  move common API into common.c suggested by Felipe
+
+v3:
+  1. still create usb_debug_root for gadget only
+  2. abandon mtu3's change
+  3. drop acked-by Randy
+
+v2(resend): add acked-by Randy
+
+v1: fix mtu3's build error, replace usb_debug_root by NULL;
+---
+ drivers/usb/common/common.c   | 26 ++++++++++++++++++++++++++
+ drivers/usb/core/usb.c        | 16 ++++------------
+ drivers/usb/gadget/udc/core.c |  3 +++
+ include/linux/usb.h           |  2 ++
+ 4 files changed, 35 insertions(+), 12 deletions(-)
+
+diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
+index 18f5dcf58b0d..c52e9c9f58ec 100644
+--- a/drivers/usb/common/common.c
++++ b/drivers/usb/common/common.c
+@@ -15,6 +15,7 @@
+ #include <linux/usb/of.h>
+ #include <linux/usb/otg.h>
+ #include <linux/of_platform.h>
++#include <linux/debugfs.h>
+ 
+ static const char *const ep_type_names[] = {
+ 	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
+@@ -139,6 +140,31 @@ enum usb_dr_mode usb_get_dr_mode(struct device *dev)
+ }
+ EXPORT_SYMBOL_GPL(usb_get_dr_mode);
+ 
++struct dentry *usb_debug_root;
++EXPORT_SYMBOL_GPL(usb_debug_root);
++
++static atomic_t usb_debug_root_refcnt = ATOMIC_INIT(0);
++
++struct dentry *usb_debugfs_init(void)
++{
++	if (!usb_debug_root)
++		usb_debug_root = debugfs_create_dir("usb", NULL);
++
++	atomic_inc(&usb_debug_root_refcnt);
++
++	return usb_debug_root;
++}
++EXPORT_SYMBOL_GPL(usb_debugfs_init);
++
++void usb_debugfs_cleanup(void)
++{
++	if (atomic_dec_and_test(&usb_debug_root_refcnt)) {
++		debugfs_remove_recursive(usb_debug_root);
++		usb_debug_root = NULL;
++	}
++}
++EXPORT_SYMBOL_GPL(usb_debugfs_cleanup);
++
+ #ifdef CONFIG_OF
+ /**
+  * of_usb_get_dr_mode_by_phy - Get dual role mode for the controller device
+diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
+index 7fcb9f782931..9d8db7faf75f 100644
+--- a/drivers/usb/core/usb.c
++++ b/drivers/usb/core/usb.c
+@@ -1185,19 +1185,11 @@ static struct notifier_block usb_bus_nb = {
+ 	.notifier_call = usb_bus_notify,
+ };
+ 
+-struct dentry *usb_debug_root;
+-EXPORT_SYMBOL_GPL(usb_debug_root);
+-
+-static void usb_debugfs_init(void)
++static void usb_core_debugfs_init(void)
+ {
+-	usb_debug_root = debugfs_create_dir("usb", NULL);
+-	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
+-			    &usbfs_devices_fops);
+-}
++	struct dentry *root = usb_debugfs_init();
+ 
+-static void usb_debugfs_cleanup(void)
+-{
+-	debugfs_remove_recursive(usb_debug_root);
++	debugfs_create_file("devices", 0444, root, NULL, &usbfs_devices_fops);
+ }
+ 
+ /*
+@@ -1212,7 +1204,7 @@ static int __init usb_init(void)
+ 	}
+ 	usb_init_pool_max();
+ 
+-	usb_debugfs_init();
++	usb_core_debugfs_init();
+ 
+ 	usb_acpi_register();
+ 	retval = bus_register(&usb_bus_type);
+diff --git a/drivers/usb/gadget/udc/core.c b/drivers/usb/gadget/udc/core.c
+index 7cf34beb50df..8ef000b9baa4 100644
+--- a/drivers/usb/gadget/udc/core.c
++++ b/drivers/usb/gadget/udc/core.c
+@@ -1597,12 +1597,15 @@ static int __init usb_udc_init(void)
+ 	}
+ 
+ 	udc_class->dev_uevent = usb_udc_uevent;
++	usb_debugfs_init();
++
+ 	return 0;
+ }
+ subsys_initcall(usb_udc_init);
+ 
+ static void __exit usb_udc_exit(void)
+ {
++	usb_debugfs_cleanup();
+ 	class_destroy(udc_class);
+ }
+ module_exit(usb_udc_exit);
+diff --git a/include/linux/usb.h b/include/linux/usb.h
+index ae82d9d1112b..175e4a0b1847 100644
+--- a/include/linux/usb.h
++++ b/include/linux/usb.h
+@@ -1995,6 +1995,8 @@ extern void usb_unregister_notify(struct notifier_block *nb);
+ 
+ /* debugfs stuff */
+ extern struct dentry *usb_debug_root;
++extern struct dentry *usb_debugfs_init(void);
++extern void usb_debugfs_cleanup(void);
+ 
+ /* LED triggers */
+ enum usb_led_event {
+-- 
+2.21.0
 
 
 _______________________________________________
