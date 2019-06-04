@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2ED9933CFC
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 04:06:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C15C833D2C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 04:31:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3d9OLkExFdL+yBkANnh+isinGtfM31dnPWDMHC6JRuw=; b=GRcbE7KplU4MSz
-	4dO0kK0DG3aMcJDeLeu2Ph+voeW9E5oxAIEIySxUfN97s/447qm2+R/VRx16lQw5TGyvkVYTwUPYN
-	w4JARRo+h0JFFEQBLpKpJc6jlFqddLFfh2BKX95NlTEVdyc/iCupDTc/tqWUKrmUrPD3iltgzi5dz
-	QewD9OBrdtdw1/ENZALGrCLy1Be6EvWp68XQSiW+zUb1ux4gKvDpWyGaKHhKBhvHrswGnnlmfv+wu
-	Pe6F4oStcQ9k8UEwQH/XI8hbx8m2vcfh9FyWICMvmWrPol5o4h8Nvcu4cPtObdV2vu6CbaZLuT0tE
-	on9NmTjvwO7ziO5Z/BdA==;
+	List-Owner; bh=mdJlAlPRRJ+obxzCisCXR8km8QeCDQg6/i+K5abAfzs=; b=LbemwO16SIR93X
+	yLjPuI4CGIZO34IPy23AEK8DjzSs5NeL5jOf3xN9jYS34yxgmHZwox8QIh1HMmqV7nacjytpfceh1
+	gjn68NhZlVgLEFUhXF07BZ+zksNPzkRAkfUxG9CYKIRHNxeVLkiL/zq5dGUMj/XUaOf5lrEvgvDjY
+	LocTegBJ19DemZ5zBPm6S5ZpyaCkett+E0lyTZarMR0Se7sqJHcNPHWD+LeIFEMPhWjNzrX9YATSm
+	9tJ1qGSHTqH4UThkm9oQD/8L0wB/dg9NMv66xhDld4k7tOahzjG2lepw0IvGIfdXwqQaYmkftCpp2
+	uqNypnBnHVkuhcp5JB5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXypn-000138-Eq; Tue, 04 Jun 2019 02:05:55 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hXzEa-0001i7-9R; Tue, 04 Jun 2019 02:31:32 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hXypi-00012g-EF; Tue, 04 Jun 2019 02:05:52 +0000
-X-UUID: 4c2c30c7379640f3a4f5e35ac10f7218-20190603
-X-UUID: 4c2c30c7379640f3a4f5e35ac10f7218-20190603
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hXzER-0001R9-Pw; Tue, 04 Jun 2019 02:31:25 +0000
+X-UUID: ee0d5ad1c587492499dd69305bf88f47-20190603
+X-UUID: ee0d5ad1c587492499dd69305bf88f47-20190603
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1279330952; Mon, 03 Jun 2019 18:05:43 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Jun 2019 19:05:42 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by mtkcas08.mediatek.inc
- (172.21.101.126) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 4 Jun 2019 10:05:40 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 4 Jun 2019 10:05:40 +0800
-Message-ID: <1559613940.9975.0.camel@mtksdaap41>
-Subject: Re: [PATCH v4] gpu/drm: mediatek: call mtk_dsi_stop() after
- mtk_drm_crtc_atomic_disable()
-From: CK Hu <ck.hu@mediatek.com>
-To: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Tue, 4 Jun 2019 10:05:40 +0800
-In-Reply-To: <20190530091847.90263-1-hsinyi@chromium.org>
-References: <20190530091847.90263-1-hsinyi@chromium.org>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 633810019; Mon, 03 Jun 2019 18:31:10 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 3 Jun 2019 19:31:09 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 4 Jun 2019 10:31:06 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 4 Jun 2019 10:31:06 +0800
+Message-ID: <1559615466.24897.106.camel@mhfsdcap03>
+Subject: RE: [v2, PATCH 3/4] net: stmmac: modify default value of tx-frames
+From: biao huang <biao.huang@mediatek.com>
+To: Jose Abreu <Jose.Abreu@synopsys.com>
+Date: Tue, 4 Jun 2019 10:31:06 +0800
+In-Reply-To: <78EB27739596EE489E55E81C33FEC33A0B93B6DF@DE02WEMBXB.internal.synopsys.com>
+References: <1559527086-7227-1-git-send-email-biao.huang@mediatek.com>
+ <1559527086-7227-4-git-send-email-biao.huang@mediatek.com>
+ <78EB27739596EE489E55E81C33FEC33A0B93B6DF@DE02WEMBXB.internal.synopsys.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190603_190550_491291_18821488 
-X-CRM114-Status: GOOD (  18.03  )
+X-CRM114-CacheID: sfid-20190603_193123_855250_6027AEEF 
+X-CRM114-Status: GOOD (  13.67  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,87 +72,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
+ "jianguo.zhang@mediatek.com" <jianguo.zhang@mediatek.com>, Alexandre
+ Torgue <alexandre.torgue@st.com>,
+ "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
+ "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-stm32@st-md-mailman.stormreply.com"
+ <linux-stm32@st-md-mailman.stormreply.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ "davem@davemloft.net" <davem@davemloft.net>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Hsin-Yi:
-
-On Thu, 2019-05-30 at 17:18 +0800, Hsin-Yi Wang wrote:
-> mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(), which needs
-> ovl irq for drm_crtc_wait_one_vblank(), since after mtk_dsi_stop() is called,
-> ovl irq will be disabled. If drm_crtc_wait_one_vblank() is called after last
-> irq, it will timeout with this message: "vblank wait timed out on crtc 0". This
-> happens sometimes when turning off the screen.
+On Mon, 2019-06-03 at 11:40 +0000, Jose Abreu wrote:
+> From: Biao Huang <biao.huang@mediatek.com>
 > 
-> In drm_atomic_helper.c#disable_outputs(),
-> the calling sequence when turning off the screen is:
+> > the default value of tx-frames is 25, it's too late when
+> > passing tstamp to stack, then the ptp4l will fail:
+> > 
+> > ptp4l -i eth0 -f gPTP.cfg -m
+> > ptp4l: selected /dev/ptp0 as PTP clock
+> > ptp4l: port 1: INITIALIZING to LISTENING on INITIALIZE
+> > ptp4l: port 0: INITIALIZING to LISTENING on INITIALIZE
+> > ptp4l: port 1: link up
+> > ptp4l: timed out while polling for tx timestamp
+> > ptp4l: increasing tx_timestamp_timeout may correct this issue,
+> >        but it is likely caused by a driver bug
+> > ptp4l: port 1: send peer delay response failed
+> > ptp4l: port 1: LISTENING to FAULTY on FAULT_DETECTED (FT_UNSPECIFIED)
+> > 
+> > ptp4l tests pass when changing the tx-frames from 25 to 1 with
+> > ethtool -C option.
+> > It should be fine to set tx-frames default value to 1, so ptp4l will pass
+> > by default.
 > 
-> 1. mtk_dsi_encoder_disable()
->      --> mtk_output_dsi_disable()
->        --> mtk_dsi_stop();  // sometimes make vblank timeout in atomic_disable
->        --> mtk_dsi_poweroff();
-> 2. mtk_drm_crtc_atomic_disable()
->      --> drm_crtc_wait_one_vblank();
->      ...
->        --> mtk_dsi_ddp_stop()
->          --> mtk_dsi_poweroff();
-> 
-> mtk_dsi_poweroff() has reference count design, change to make mtk_dsi_stop()
-> called in mtk_dsi_poweroff() when refcount is 0.
+> I'm not sure if this is the right approach ... What's the timeout value 
+> you have for TX Timestamp ?
+I use the default tx_timestamp_timeout value 1, which represents 1ms.
+do you try ptp4l on your side?
 
-Applied to mediatek-drm-fixes-5.2 [1], thanks.
-
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-fixes-5.2
-
-Regards,
-CK
+performance test is done in https://lkml.org/lkml/2019/5/30/1617
+and seems no performance degradation.
 
 > 
-> Fixes: 0707632b5bac ("drm/mediatek: update DSI sub driver flow for sending commands to panel")
-> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
-> ---
-> change log v3->v4:
-> * add comment in code.
-> ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 10 +++++++++-
->  1 file changed, 9 insertions(+), 1 deletion(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index b00eb2d2e086..730594a91440 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -630,6 +630,15 @@ static void mtk_dsi_poweroff(struct mtk_dsi *dsi)
->  	if (--dsi->refcount != 0)
->  		return;
->  
-> +	/* 
-> +	 * mtk_dsi_stop() and mtk_dsi_start() is asymmetric, since
-> +	 * mtk_dsi_stop() should be called after mtk_drm_crtc_atomic_disable(),
-> +	 * which needs irq for vblank, and mtk_dsi_stop() will disable irq.
-> +	 * mtk_dsi_start() needs to be called in mtk_output_dsi_enable(),
-> +	 * after dsi is fully set.
-> +	 */
-> +	mtk_dsi_stop(dsi);
-> +
->  	if (!mtk_dsi_switch_to_cmd_mode(dsi, VM_DONE_INT_FLAG, 500)) {
->  		if (dsi->panel) {
->  			if (drm_panel_unprepare(dsi->panel)) {
-> @@ -696,7 +705,6 @@ static void mtk_output_dsi_disable(struct mtk_dsi *dsi)
->  		}
->  	}
->  
-> -	mtk_dsi_stop(dsi);
->  	mtk_dsi_poweroff(dsi);
->  
->  	dsi->enabled = false;
+> Thanks,
+> Jose Miguel Abreu
 
 
 
