@@ -2,63 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EF665343DC
-	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 12:13:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E8E83440C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Jun 2019 12:14:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=24RULiVxcp2/Xcsty3007BU/fGhWFxK33kKbHMQfFFo=; b=h2V7ER9QkXir8t
-	D63s0o8wbqZnk8dJMmMs0VACFP6ZXNGdqpka/P26U9YDhYSYNOVCFT55AMWN5xu7nbgPs/o23M7fP
-	NAz5EVT7CkbPnAUi2OkG6D14EHntWyyCetZfIM9tZWBfmSrUKQvCqnS28bRJBe6UTvpdMu3XVeqQd
-	IpoZMN6GCAJjqadKhbd5Ze66sDAa6dnwJenRVnhE4dOGBBl7nJFF0R7wfpXNxoxKbe3qSsmZdnrdo
-	8blb9w+GIa6lgEElaEZveFP9uiPT65k34A/7BRYMkMIubrNn97jvm+DYjttfaxtHVGG+rjoj3DKOz
-	HD7V5b4AUgl0EUT8hXXg==;
+	List-Owner; bh=7w8EqcJREIfczajQ10MGJuuTeDaeO2nuf9CT0vIN8ok=; b=PszYMZt6A3ALIA
+	dvkuLWQoV2h8HQSW7nJn9ZUirc2aDafLCzPnUXUEIxuj34gOJpHIh3nF5wQcdI2fduirdjXj9iIcr
+	qJ6s7HnnYqd8SV57oHP+YVuj156KuMmQ2N+eNWZhutN/mWqNjOdPBLYcLto4eAPZ83EpVRqjYLLri
+	i7adP8o4fAmMrLA3kOLOEhxLbsGXUsJqfyL7IiTymulWH6aSBpbkaoc+a3BWCawIOZJlgI6sNDjsx
+	tU4aPvATE0nLBPV1hQfFKZtcUVeMlvb2cV4wxfCJ56Pdw3F3pM78P3DIq7K7fAah/gHntfbEaF5hI
+	sgl8ZC/BGnlkNxnEruig==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hY6RC-0007X9-Q5; Tue, 04 Jun 2019 10:13:02 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hY6SQ-0000hF-C5; Tue, 04 Jun 2019 10:14:18 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hY6QK-0006FW-CD; Tue, 04 Jun 2019 10:12:13 +0000
-X-UUID: 0cc44a3cc3c441af8bd548319fd9d72d-20190604
-X-UUID: 0cc44a3cc3c441af8bd548319fd9d72d-20190604
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1hY6RW-0007kZ-7j; Tue, 04 Jun 2019 10:13:22 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=Content-Type:MIME-Version:References:
+ In-Reply-To:Message-ID:Date:Subject:CC:To:From:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=X82u0k5Tt+0WfEI1nYZg4HT5FFOfhfBLzKE7JXG2HsI=; b=HbuhRQlewU9AtFHxXmHBVQ+3V
+ XsA6CA3LcKgUhPr1ioqhmCXVYAa394jBE4v3myLGp1dLudyybZnSlqAngq0oTrYM55lRJYJAWEZUN
+ MIXe6Xv/3B1y6ercRB6xjsiHDFllfSI67WMgK6CIyh9VWWyQMGobDn0Ueh4t1OoFJFF1Pi+wD0DVX
+ w/P/9LNE4uX51K87gx/4++gPLkiAXQHnMlZc40G3Mu5qLgF1rccn7Z4ob0Ph/0/dHkJxz/cYR6DN7
+ S7eS2Cnme8245IYF6aSuZKGkT9TQHiQeT8hasnX+UKB9fyEeX0TU1869HWWOLKUNyriFtPeu2+qGi
+ nJl0pk8gQ==;
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by merlin.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hY6RT-0003Us-9N; Tue, 04 Jun 2019 10:13:20 +0000
+X-UUID: 4ba7d121cde040a7812f5ba1c30ced96-20190604
+X-UUID: 4ba7d121cde040a7812f5ba1c30ced96-20190604
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <stu.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 291116945; Tue, 04 Jun 2019 02:12:04 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 2016854775; Tue, 04 Jun 2019 02:12:05 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Jun 2019 03:12:03 -0700
+ 15.0.1395.4; Tue, 4 Jun 2019 03:12:04 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Jun 2019 18:12:02 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 4 Jun 2019 18:12:01 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Tue, 4 Jun 2019 18:12:01 +0800
 From: Stu Hsieh <stu.hsieh@mediatek.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, Rob Herring
  <robh+dt@kernel.org>, CK Hu <ck.hu@mediatek.com>
-Subject: [PATCH v4 12/14] [media] mtk-mipicsi: add debug message for mipicsi
- driver
-Date: Tue, 4 Jun 2019 18:11:53 +0800
-Message-ID: <1559643115-15124-13-git-send-email-stu.hsieh@mediatek.com>
+Subject: [PATCH v4 13/14] [media] mtk-mipicsi: add debugfs for mipicsi driver
+Date: Tue, 4 Jun 2019 18:11:54 +0800
+Message-ID: <1559643115-15124-14-git-send-email-stu.hsieh@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1559643115-15124-1-git-send-email-stu.hsieh@mediatek.com>
 References: <1559643115-15124-1-git-send-email-stu.hsieh@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190604_031208_666233_C66B44C8 
-X-CRM114-Status: GOOD (  16.84  )
+X-CRM114-CacheID: sfid-20190604_061319_459959_98FA293F 
+X-CRM114-Status: GOOD (  18.57  )
 X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -82,120 +96,147 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch add debug message for mipicsi driver.
+This patch add debugfs for mipicsi driver.
 
 Signed-off-by: Stu Hsieh <stu.hsieh@mediatek.com>
 ---
- .../media/platform/mtk-mipicsi/mtk_mipicsi.c  | 40 ++++++++++++++++++-
- 1 file changed, 39 insertions(+), 1 deletion(-)
+ .../media/platform/mtk-mipicsi/mtk_mipicsi.c  | 68 ++++++++++++++++++-
+ 1 file changed, 67 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
-index aaaea5c6f280..b291c95bbf0e 100644
+index b291c95bbf0e..9b5983b39f2b 100644
 --- a/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
 +++ b/drivers/media/platform/mtk-mipicsi/mtk_mipicsi.c
-@@ -25,6 +25,7 @@
- #include <linux/kernel.h>
- #include <linux/mm.h>
- #include <linux/moduleparam.h>
-+#include <linux/time64.h>
- #include <linux/device.h>
- #include <linux/platform_device.h>
- #include <linux/clk.h>
-@@ -109,6 +110,15 @@
+@@ -50,6 +50,7 @@
+ #include <soc/mediatek/smi.h>
+ #include <linux/regmap.h>
+ #include <linux/mfd/syscon.h>
++#include <linux/debugfs.h>
  
+ #define MTK_MIPICSI_DRV_NAME "mtk-mipicsi"
+ #define MTK_PLATFORM_STR "platform:mt2712"
+@@ -78,6 +79,7 @@
+ #define SENINF_NCSI2_INT_EN				0xB0
+ #define SENINF_NCSI2_INT_STATUS				0xB4
+ #define SENINF_NCSI2_DBG_SEL				0xB8
++#define SENINF_NCSI2_DBG_PORT				0xBC
+ #define SENINF_NCSI2_HSRX_DBG				0xD8
+ #define SENINF_NCSI2_DI					0xDC
+ #define SENINF_NCSI2_DI_CTRL				0xE4
+@@ -87,6 +89,7 @@
+ #define SENINF_TOP_MUX					0x08
+ 
+ #define SENINF_MUX_CTRL					0x00
++#define SENINF_MUX_DEBUG_2				0x14
+ 
+ #define CAMSV_MODULE_EN					0x10
+ #define CAMSV_FMT_SEL					0x14
+@@ -108,6 +111,8 @@
+ #define IMGO_STRIDE					0x238
+ #define DMA_FRAME_HEADER_EN				0xE00
+ 
++#define CONFIG_DEBUG_FS 1
++
  #define notifier_to_mipicsi(n) container_of(n, struct mtk_mipicsi_dev, \
  					    notifier)
-+static int mtk_mipicsi_dbg_level;
-+#define mtk_mipicsi_dbg(level, fmt, args...)				 \
-+	do {								 \
-+		if (mtk_mipicsi_dbg_level >= level)			\
-+			pr_info("[MTK_MIPICSI%d] L%d %s %d: " fmt "\n", \
-+				mipicsi->id, level,  __func__, __LINE__, \
-+				##args);	\
-+	} while (0)
-+
- /* buffer for one video frame */
- struct mtk_mipicsi_buf {
- 	struct list_head queue;
-@@ -168,6 +178,8 @@ struct mtk_mipicsi_dev {
- 	u8 link_reg_val;
- 	char drv_name[16];
- 	u32 id;
-+	struct timespec64 fps_time_cur;
-+	struct timespec64 fps_time_pre;
- 
+ static int mtk_mipicsi_dbg_level;
+@@ -184,7 +189,9 @@ struct mtk_mipicsi_dev {
  	spinlock_t		irqlock;
  	spinlock_t		queue_lock;
-@@ -535,6 +547,11 @@ static int mtk_mipicsi_vb2_prepare(struct vb2_buffer *vb)
- 		buf->prepare_flag = 1;
- 		buf->vb_dma_addr_phy =
- 			vb2_dma_contig_plane_dma_addr(vb, 0);
-+
-+		mtk_mipicsi_dbg(1, "vb_dma_addr_phy=%lx size=%d",
-+			(unsigned long)buf->vb_dma_addr_phy,
-+			vb->planes[0].bytesused);
-+
- 		buf->vb = vb;
- 	}
- 
-@@ -581,6 +598,8 @@ static void mtk_mipicsi_vb2_queue(struct vb2_buffer *vb)
- 		mtk_mipicsi_write_camsv(mipicsi, vb->index, mipicsi->camsv_num);
- 
- 	spin_unlock(&mipicsi->irqlock);
-+
-+	mtk_mipicsi_dbg(2, "enqueue NO.%d buffer(%p).", vb->index, vb);
- }
- 
- static void mtk_mipicsi_cmos_vf_enable(struct mtk_mipicsi_dev *mipicsi,
-@@ -888,6 +907,7 @@ static void mtk_mipicsi_irq_buf_process(struct mtk_mipicsi_dev *mipicsi)
- 	struct mtk_mipicsi_buf *tmp = NULL;
- 	unsigned int index = 0;
- 	unsigned int next = 0;
-+	long time_interval;
- 
- 	for (i = 0; i < mipicsi->camsv_num; ++i)
- 		ch[i].irq_status = false;
-@@ -895,8 +915,10 @@ static void mtk_mipicsi_irq_buf_process(struct mtk_mipicsi_dev *mipicsi)
- 	i = 0;
- 
- 	/* only one buffer left */
--	if ((&(mipicsi->fb_list))->next->next == &(mipicsi->fb_list))
-+	if ((&(mipicsi->fb_list))->next->next == &(mipicsi->fb_list)) {
-+		mtk_mipicsi_dbg(1, "only 1 buffer left, drop frame");
- 		return;
-+	}
- 
- 	/*for each fb_lst 2 times to get the top 2 buffer.*/
- 	list_for_each_entry_safe(new_cam_buf, tmp,
-@@ -920,6 +942,21 @@ static void mtk_mipicsi_irq_buf_process(struct mtk_mipicsi_dev *mipicsi)
- 		VB2_BUF_STATE_DONE);
- 
- 	list_del_init(&(mipicsi->cam_buf[index].queue));
-+
-+	if (mtk_mipicsi_dbg_level >= 2) {
-+		ktime_get_real_ts64(&(mipicsi->fps_time_cur));
-+
-+		time_interval = (mipicsi->fps_time_cur.tv_sec
-+			- mipicsi->fps_time_pre.tv_sec) * 1000000000
-+			+ (mipicsi->fps_time_cur.tv_nsec
-+			- mipicsi->fps_time_pre.tv_nsec);
-+		mtk_mipicsi_dbg(0, "time interval is %ld\n",
-+			time_interval);
-+		mipicsi->fps_time_pre.tv_sec =
-+			mipicsi->fps_time_cur.tv_sec;
-+		mipicsi->fps_time_pre.tv_nsec =
-+			mipicsi->fps_time_cur.tv_nsec;
-+	}
- }
- 
- static irqreturn_t mtk_mipicsi_isr(int irq, void *data)
-@@ -1575,5 +1612,6 @@ static struct platform_driver mtk_mipicsi_driver = {
+ 	struct mutex		lock;
+-
++#ifdef CONFIG_DEBUG_FS
++	struct dentry *mtk_mipicsi_debugfs;
++#endif
  };
  
- module_platform_driver(mtk_mipicsi_driver);
-+module_param(mtk_mipicsi_dbg_level, int, 0644);
- MODULE_DESCRIPTION("MediaTek SoC Camera Host driver");
- MODULE_LICENSE("GPL v2");
+ static const struct mtk_format mtk_mipicsi_formats[] = {
+@@ -207,12 +214,56 @@ static const struct mtk_format mtk_mipicsi_formats[] = {
+ },
+ };
+ 
++#ifdef CONFIG_DEBUG_FS
++static ssize_t mtk_mipicsi_debug_read(struct file *file, char __user *user_buf,
++			      size_t count, loff_t *ppos)
++{
++	struct device *dev = file->private_data;
++	struct mtk_mipicsi_dev *mipicsi = dev_get_drvdata(dev);
++	struct mtk_mipicsi_channel *ch = mipicsi->channel;
++	u32 int_val;
++	u32 dbg_port;
++	u32 cnt_val;
++	u32 hcnt;
++	u32 vcnt;
++	char buf[256];
++	char cnt_info[150];
++	int i;
++
++	int_val = readl(mipicsi->seninf + SENINF_NCSI2_INT_STATUS);
++	dbg_port = readl(mipicsi->seninf + SENINF_NCSI2_DBG_PORT);
++	memset(buf, 0, sizeof(buf));
++	snprintf(buf, sizeof(buf), "%s\nSENINF_NCSI2_INT_STATUS: 0x%X\n"
++		"SENINF_NCSI2_DBG_PORT: 0x%X\n",
++		dev_name(dev), int_val, dbg_port);
++
++	for (i = 0; i < mipicsi->camsv_num; ++i) {
++		cnt_val = readl(ch[i].seninf_mux + SENINF_MUX_DEBUG_2);
++		hcnt = (cnt_val >> 16) & 0xFFFF;
++		vcnt = cnt_val & 0xFFFF;
++		memset(cnt_info, 0, sizeof(cnt_info));
++		snprintf(cnt_info, sizeof(cnt_info),
++			"HCNT[%d]: 0x%X\n"
++			"VCNT[%d]: 0x%X\n",
++			i, hcnt, i, vcnt);
++		strcat(buf, cnt_info);
++	}
++
++	return simple_read_from_buffer(user_buf, count, ppos, buf, strlen(buf));
++}
++static const struct file_operations mtk_mipicsi_debug_fops = {
++	.open = simple_open,
++	.read = mtk_mipicsi_debug_read,
++};
++#endif /* CONFIG_DEBUG_FS */
++
+ static int get_subdev_link(struct mtk_mipicsi_dev *mipicsi,
+ 	unsigned int *link, u8 *link_reg_val)
+ {
+ 	struct device *dev = &mipicsi->pdev->dev;
+ 	struct mtk_mipicsi_subdev *sd = &mipicsi->mipicsi_sd;
+ 
++
+ 	if (sd->max_vc == 1) {
+ 		*link = 1;
+ 		*link_reg_val = 0x1;
+@@ -1574,6 +1625,16 @@ static int mtk_mipicsi_probe(struct platform_device *pdev)
+ 		goto clean;
+ 	}
+ 
++#ifdef CONFIG_DEBUG_FS
++	mipicsi->mtk_mipicsi_debugfs =
++		debugfs_create_file(mipicsi->drv_name, 0444, NULL,
++			(void *)(&pdev->dev), &mtk_mipicsi_debug_fops);
++	if (mipicsi->mtk_mipicsi_debugfs == NULL) {
++		dev_err(&pdev->dev, "debugfs_create_file fail\n");
++		goto clean;
++	}
++#endif
++
+ 	dev_set_drvdata(&pdev->dev, mipicsi);
+ 
+ 	dev_info(&pdev->dev, "probe done\n");
+@@ -1591,6 +1652,11 @@ static int mtk_mipicsi_probe(struct platform_device *pdev)
+ 
+ static int mtk_mipicsi_remove(struct platform_device *pdev)
+ {
++#ifdef CONFIG_DEBUG_FS
++	struct mtk_mipicsi_dev *mipicsi = dev_get_drvdata(&pdev->dev);
++
++	debugfs_remove(mipicsi->mtk_mipicsi_debugfs);
++#endif
+ 	pm_runtime_disable(&pdev->dev);
+ 
+ 	return 0;
 -- 
 2.18.0
 
