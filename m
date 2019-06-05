@@ -2,55 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C13AE35902
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 10:52:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD824359AA
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 11:28:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+4dQmeJp7Lcc2mm6HvsQVCp7Zp+yAoMFYVnEiOLV4iM=; b=nGXvxXwJZtoJxY
-	g0x81k3mFzM4Jg+8gdIzPQNa7Kt5OI2qLnv7PfE1ngN7kL9wdcOhgnB95BotxeLSUmUaCs35lac64
-	MfTf9APx7yWfLtOS53GGDIAoPLxXawRNqn9WUSjbXj5QYB45Yt65/b2y8HqKi8Jaaq3hgI4Po8OYd
-	NcDvUvfWHp7XSeuClE0AFhZLJ5J9VH2lRjrijhxNxjhcvwNxDoPARD908Abr58ob0m+fcTzeLG61x
-	/skYwcK5sVUtrzXC9do+qwR8v/N/mQ7t2Rp5BmdL+3rYrp6hQwczQVVABhAdHTKcUfxo0ECoURTZM
-	947ToYZI09NbObnza4zw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4LCVWcP/2Jfg2VJ1VG70upbBBITSfjObVyf2DvpmqWA=; b=aigTYE4PbWuENN
+	sboYifQi5UcovxPO6QjCVe9bJ6udlQDRXMKIUnPTQJm/DHyxewzf8sNhxgGP2b2XbsNzehNlyjTVT
+	uvgyRZdtTkw1ZdIvu6PfClab+STyeu4eZrsUrSxiLPHmzZQQmA4GQC6TIkGVZ2Dwl3ya2F8VVES4p
+	dDj1lRLV7lgGQgTZlnO1z0xTPfzcyEJl7M6eV2V2tdm4k3gZvthk0PK/VlxhxVU11tH/VGLyL4xwR
+	TFqbtrRahnjTg3Lrz/979+1H1wr3z2KLPLdjWw++xeBSY9MfMHm9KH1nZryMvhO0GpL9BV5GEyC8/
+	RSgtjq+HrTXATV1Mat7w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYRem-0001F5-EP; Wed, 05 Jun 2019 08:52:28 +0000
+	id 1hYSDc-0000YI-K0; Wed, 05 Jun 2019 09:28:28 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYRed-00018w-8X; Wed, 05 Jun 2019 08:52:20 +0000
+ id 1hYSDT-0000S7-Kj; Wed, 05 Jun 2019 09:28:21 +0000
 Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
  [83.86.89.107])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 01A322075C;
- Wed,  5 Jun 2019 08:52:17 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id B1F8A20717;
+ Wed,  5 Jun 2019 09:28:18 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1559724738;
- bh=33U2EKfjRS7h+XMGkmD3adAxfr6fGPYO5U7ZjaS/GaY=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=Jg8LNDdI0PoUYPg/zVrHza4ANwwsNV4xpyvG90wnOrXz6LjtnDwRiaa5W+ti7SflB
- 7ATBvjKJU2WdvbuNwRTWRQPx0hbf1OrcQiHrmNoWTdDl+jVvYwWMzvNGvfBN/4HMx2
- 44ObQkLWTyjt8JccrcHrk/wdy3CfHRaHp+UMDTTo=
-Date: Wed, 5 Jun 2019 10:52:16 +0200
+ s=default; t=1559726899;
+ bh=O8jFUaIHNHhFCwSgoimMNeuJKeLFh5boOF6WLICbEpQ=;
+ h=Date:From:To:Cc:Subject:From;
+ b=FiXrtfdl7Ez5iV/gHP9vjJGmvSqImAYHTPZMEwXuX9HgOC/7EXQ808E925fUEXosr
+ iOb5iAspD+AXB3OFxxpTeLoITqiwdnamIjK7cQO3haA6ZcV5k4vUZpJ+fvUTFBm9k5
+ FjZG1lzSn/o1kMfIytjRy87EU7xcqMFEKWY8rP2k=
+Date: Wed, 5 Jun 2019 11:28:16 +0200
 From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH] USB: move usb debugfs directory creation to the usb
+To: Felipe Balbi <felipe.balbi@linux.intel.com>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: [PATCH v2] USB: move usb debugfs directory creation to the usb
  common core
-Message-ID: <20190605085216.GB26984@kroah.com>
-References: <20190604093258.GB30054@kroah.com>
- <20190604115919.GA24346@kroah.com>
- <1559721031.8487.99.camel@mhfsdcap03>
+Message-ID: <20190605092816.GA23758@kroah.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1559721031.8487.99.camel@mhfsdcap03>
 User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_015219_338348_3963C994 
-X-CRM114-Status: GOOD (  22.65  )
+X-CRM114-CacheID: sfid-20190605_022819_777247_251BD25B 
+X-CRM114-Status: GOOD (  16.85  )
 X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.0 points)
@@ -75,115 +72,189 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Felipe Balbi <felipe.balbi@linux.intel.com>,
- linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: devicetree@vger.kernel.org, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Jun 05, 2019 at 03:50:31PM +0800, Chunfeng Yun wrote:
-> On Tue, 2019-06-04 at 13:59 +0200, Greg Kroah-Hartman wrote:
-> > On Tue, Jun 04, 2019 at 11:32:58AM +0200, Greg Kroah-Hartman wrote:
-> > > The USB gadget subsystem wants to use the USB debugfs root directory, so
-> > > move it to the common "core" USB code so that it is properly initialized
-> > > and removed as needed.
-> > > 
-> > > Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> > > 
-> > > ---
-> > > 
-> > > This should be the "correct" version of this, Chunfeng, can you test
-> > > this to verify it works for you?
-> > > 
-> > > 
-> > > diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
-> > > index 18f5dcf58b0d..3b5e4263ffef 100644
-> > > --- a/drivers/usb/common/common.c
-> > > +++ b/drivers/usb/common/common.c
-> > > @@ -15,6 +15,7 @@
-> > >  #include <linux/usb/of.h>
-> > >  #include <linux/usb/otg.h>
-> > >  #include <linux/of_platform.h>
-> > > +#include <linux/debugfs.h>
-> > >  
-> > >  static const char *const ep_type_names[] = {
-> > >  	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
-> > > @@ -291,4 +292,21 @@ struct device *usb_of_get_companion_dev(struct device *dev)
-> > >  EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
-> > >  #endif
-> > >  
-> > > +struct dentry *usb_debug_root;
-> > > +EXPORT_SYMBOL_GPL(usb_debug_root);
-> > > +
-> > > +static int usb_common_init(void)
-> > > +{
-> > > +	usb_debug_root = debugfs_create_dir("usb", NULL);
-> > > +	return 0;
-> > > +}
-> > > +
-> > > +static void usb_common_exit(void)
-> > > +{
-> > > +	debugfs_remove_recursive(usb_debug_root);
-> > > +}
-> > > +
-> > > +module_init(usb_common_init);
-> I tested this patch.
-> 
-> Here use module_init() indeed have a race as Felipe said before.
-> usbcore uses subsys_initcall(), and have a higher priority than
-> module_init(), so when usbcore tries to create "devices" file,
-> usb_debug_root is not created.
+The USB gadget subsystem wants to use the USB debugfs root directory, so
+move it to the common "core" USB code so that it is properly initialized
+and removed as needed.
 
-Ah, let me fix that, it should have the same init level and I'll ensure
-it comes first in the linking.
+In order to properly do this, we need to load the common code before the
+usb core code, when everything is linked into the kernel, so reorder the
+link order of the code.
 
-> after I replace it by postcore_initcall() (debugfs uses
-> core_initcall()), test two cases:
-> 
-> 1. buildin usbcore/udc-core
-> 
->     "usb" directory is created, and usb/devices file is also created by
-> usbcore
-> 
-> 2. build both usbcore and gadget as ko
-> 
->     usbcore.ko, udc-core.ko and usb-common.ko are created. 
-> 
->    2.1 
->        insmod usb-common.ko   // "usb" directory is created
->        insmod usb-core.ko   // usb/devices file is created
-> 
->    2.2
->        rmmod usb-common.ko  // failed, usb_common is in use by usb-core
-> 
->    2.3 
->        rmmod usb-core.ko   // usb/devices file is destroyed
->        rmmod usb-common.ko  // usb directory is destroyed
-> 
->    2.4 
->        insmod usb-common.ko   // "usb" directory is created
->        insmod udc-core.ko
-> 
->    2.5
->        rmmod usb-common.ko  // failed, usb_common is in use by udc-core
-> 
->    2.6 
->        rmmod udc-core.ko
->        rmmod usb-common.ko  // usb directory is destroyed
-> 
-> they are all in line with expectations
+Also as the usb common code has the possibility of the led trigger logic
+to be merged into it, handle the build option properly by only having
+one module init/exit function and have the common code initialize the
+led trigger if needed.
 
-Wonderful!
+Reported-by: From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Cc: Felipe Balbi <felipe.balbi@linux.intel.com>
+Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+---
 
-Let me fix up the init level, and the build issue tha kbuild found, and
-post a v2 patch.
+Chunfeng, can you test this version to verify it works for you when
+building the code into the kernel?
 
-thanks,
+v2: handle led common code link error reported by kbuild
+    handle subsys_initcall issue pointed out by Chunfeng
 
-greg k-h
+ drivers/usb/Makefile        |  3 +--
+ drivers/usb/common/common.c | 21 +++++++++++++++++++++
+ drivers/usb/common/common.h | 14 ++++++++++++++
+ drivers/usb/common/led.c    |  9 +++------
+ drivers/usb/core/usb.c      | 10 ++++------
+ 5 files changed, 43 insertions(+), 14 deletions(-)
+ create mode 100644 drivers/usb/common/common.h
+
+diff --git a/drivers/usb/Makefile b/drivers/usb/Makefile
+index 7d1b8c82b208..ecc2de1ffaae 100644
+--- a/drivers/usb/Makefile
++++ b/drivers/usb/Makefile
+@@ -5,6 +5,7 @@
+ 
+ # Object files in subdirectories
+ 
++obj-$(CONFIG_USB_COMMON)	+= common/
+ obj-$(CONFIG_USB)		+= core/
+ obj-$(CONFIG_USB_SUPPORT)	+= phy/
+ 
+@@ -60,8 +61,6 @@ obj-$(CONFIG_USB_CHIPIDEA)	+= chipidea/
+ obj-$(CONFIG_USB_RENESAS_USBHS)	+= renesas_usbhs/
+ obj-$(CONFIG_USB_GADGET)	+= gadget/
+ 
+-obj-$(CONFIG_USB_COMMON)	+= common/
+-
+ obj-$(CONFIG_USBIP_CORE)	+= usbip/
+ 
+ obj-$(CONFIG_TYPEC)		+= typec/
+diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
+index 18f5dcf58b0d..84a4423aaddf 100644
+--- a/drivers/usb/common/common.c
++++ b/drivers/usb/common/common.c
+@@ -15,6 +15,8 @@
+ #include <linux/usb/of.h>
+ #include <linux/usb/otg.h>
+ #include <linux/of_platform.h>
++#include <linux/debugfs.h>
++#include "common.h"
+ 
+ static const char *const ep_type_names[] = {
+ 	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
+@@ -291,4 +293,23 @@ struct device *usb_of_get_companion_dev(struct device *dev)
+ EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
+ #endif
+ 
++struct dentry *usb_debug_root;
++EXPORT_SYMBOL_GPL(usb_debug_root);
++
++static int usb_common_init(void)
++{
++	usb_debug_root = debugfs_create_dir("usb", NULL);
++	ledtrig_usb_init();
++	return 0;
++}
++
++static void usb_common_exit(void)
++{
++	ledtrig_usb_exit();
++	debugfs_remove_recursive(usb_debug_root);
++}
++
++subsys_initcall(usb_common_init);
++module_exit(usb_common_exit);
++
+ MODULE_LICENSE("GPL");
+diff --git a/drivers/usb/common/common.h b/drivers/usb/common/common.h
+new file mode 100644
+index 000000000000..424a91316a4b
+--- /dev/null
++++ b/drivers/usb/common/common.h
+@@ -0,0 +1,14 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++
++#ifndef __LINUX_USB_COMMON_H
++#define __LINUX_USB_COMMON_H
++
++#if defined(CONFIG_USB_LED_TRIG)
++void ledtrig_usb_init(void);
++void ledtrig_usb_exit(void);
++#else
++static inline void ledtrig_usb_init(void) { }
++static inline void ledtrig_usb_exit(void) { }
++#endif
++
++#endif	/* __LINUX_USB_COMMON_H */
+diff --git a/drivers/usb/common/led.c b/drivers/usb/common/led.c
+index 7bd81166b77d..0865dd44a80a 100644
+--- a/drivers/usb/common/led.c
++++ b/drivers/usb/common/led.c
+@@ -10,6 +10,7 @@
+ #include <linux/init.h>
+ #include <linux/leds.h>
+ #include <linux/usb.h>
++#include "common.h"
+ 
+ #define BLINK_DELAY 30
+ 
+@@ -36,18 +37,14 @@ void usb_led_activity(enum usb_led_event ev)
+ EXPORT_SYMBOL_GPL(usb_led_activity);
+ 
+ 
+-static int __init ledtrig_usb_init(void)
++void __init ledtrig_usb_init(void)
+ {
+ 	led_trigger_register_simple("usb-gadget", &ledtrig_usb_gadget);
+ 	led_trigger_register_simple("usb-host", &ledtrig_usb_host);
+-	return 0;
+ }
+ 
+-static void __exit ledtrig_usb_exit(void)
++void __exit ledtrig_usb_exit(void)
+ {
+ 	led_trigger_unregister_simple(ledtrig_usb_gadget);
+ 	led_trigger_unregister_simple(ledtrig_usb_host);
+ }
+-
+-module_init(ledtrig_usb_init);
+-module_exit(ledtrig_usb_exit);
+diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
+index 7fcb9f782931..5a0df527a8ca 100644
+--- a/drivers/usb/core/usb.c
++++ b/drivers/usb/core/usb.c
+@@ -1185,19 +1185,17 @@ static struct notifier_block usb_bus_nb = {
+ 	.notifier_call = usb_bus_notify,
+ };
+ 
+-struct dentry *usb_debug_root;
+-EXPORT_SYMBOL_GPL(usb_debug_root);
++static struct dentry *usb_devices_root;
+ 
+ static void usb_debugfs_init(void)
+ {
+-	usb_debug_root = debugfs_create_dir("usb", NULL);
+-	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
+-			    &usbfs_devices_fops);
++	usb_devices_root = debugfs_create_file("devices", 0444, usb_debug_root,
++					       NULL, &usbfs_devices_fops);
+ }
+ 
+ static void usb_debugfs_cleanup(void)
+ {
+-	debugfs_remove_recursive(usb_debug_root);
++	debugfs_remove(usb_devices_root);
+ }
+ 
+ /*
+-- 
+2.21.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
