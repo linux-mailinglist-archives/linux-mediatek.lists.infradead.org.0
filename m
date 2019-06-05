@@ -2,56 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3673D35DFC
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 15:36:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9ADDA364A1
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 21:25:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rfPaanmDyK8ANvhiYzUoiEaBnVlFgbzG/mP616rZ0nQ=; b=nuErahwfzd3A7W
-	aXJm5xMqYkw4jHTckdefINMC1jTfEUzn/CECv9FfjCKnqg3f+qNWw1QazCiSu1giK6IEf01aS1WEg
-	Chr2xGzhmpbqkXrHMwwq4FoEt+ueZ7U+68z2k92w9R+RHXGvPDjTnlpwNNoraUKUPK8NM/gYacaFu
-	oxhy2wDngULWvSc3LYNw/yckzMXfpk9v/kzOaBdmzQ5pQqNTZhdLH3pckv+xETpdW9AmaWYNOTQOJ
-	8lrMkdELrzefE+sLIGPBCksrcWrDyIAJTTx7W/MFRNpSdtXzLEL9kUE43fKMpPqxydS4KJuuLXNAt
-	KYmar94Hsr/TCVfhwW8w==;
+	List-Owner; bh=g7Pie8Qhq+MhARYur8tO278cjq3de5hin1k/5cnyNYI=; b=d/8JkGn+j4YXgU
+	ms0q87aV5+MtkQpORW99VauAFejI7NxvNcQsjPxSrWGoy2yI73XRjcqIyrNN9m1i2gH92tO+lE/ft
+	18VvE6/wy0I1UBJ7JFo2HCFZfFusXZWhy1XrO4xgioXvj6e5l7mD4tFHia9K2q0lqpjK09gMqSslo
+	0gtotTaT7dth27ThBYCN5zJT3/khFOl9mRuyUoaHou9eqmjjt74vKyagUfRPEZbzh2tJ8i0Wlk2LV
+	Ay7jdsDvY+5EQ5p8275auBJ58bQ2icGItO0ujKddPS8mXEkKQI1uQ9pWoML1cHzEPXT2YJO9eRTrc
+	c9TYLpk44vLs4DmlxNwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYW57-0001Ob-5D; Wed, 05 Jun 2019 13:35:57 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hYbXY-0006BY-NK; Wed, 05 Jun 2019 19:25:40 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYW55-0001OP-4a
- for linux-mediatek@bombadil.infradead.org; Wed, 05 Jun 2019 13:35:55 +0000
+ id 1hYbXW-00069o-7X
+ for linux-mediatek@bombadil.infradead.org; Wed, 05 Jun 2019 19:25:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=P1+fW1PPTiIie9P8lhC5eebUVAEeMvr7xd6pNvurfAs=; b=PpmAast+LnxIikTrYPfxApTuq
- JWZrZ3f9tvN5BAfBWaFhAb/N0WeQOXQBB/ydyUKy4SQp5mWlT5uwUiww7PM2xBML3Pm34dSbeXi45
- j6KnS+yxz2oPjmY5vL62mEnaGcvdh2zxfuYJUtegK4p2lnxTwxHSqFSARHjipZVnX7sO8yOhIaKgH
- R/vDw+is8sCNO/cz9fXfKfvkLzfwa6AvyqSqCEW1hC5hSXTt7jIsXbUz8uO0vUCHusxTs4HKYnRaG
- /Mk+8uLTbo22t+oXn/f/Oab9P6zSxyW6bfdTB0QQLKE1HbDnr7eIzrUL2GEGt8XRpkiOHipGL73Z/
- eFja6YhxQ==;
-Received: from j217100.upc-j.chello.nl ([24.132.217.100]
- helo=hirez.programming.kicks-ass.net)
- by merlin.infradead.org with esmtpsa (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYW52-0006zz-5t; Wed, 05 Jun 2019 13:35:52 +0000
-Received: by hirez.programming.kicks-ass.net (Postfix, from userid 1000)
- id EB19F202674D6; Wed,  5 Jun 2019 15:35:50 +0200 (CEST)
-Date: Wed, 5 Jun 2019 15:35:50 +0200
-From: Peter Zijlstra <peterz@infradead.org>
-To: Will Deacon <will.deacon@arm.com>
-Subject: Re: [PATCH] locking/lockdep: Remove unnecessary DEBUG_LOCKS_WARN_ON()
-Message-ID: <20190605133550.GZ3402@hirez.programming.kicks-ass.net>
-References: <1559217575-30298-1-git-send-email-kobe-cp.wu@mediatek.com>
- <20190605124633.GM15030@fuggles.cambridge.arm.com>
+ d=infradead.org; s=casper.20170209; h=Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:In-Reply-To:Message-ID:Subject:Cc:To:From:Date:Sender
+ :Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+ Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
+ List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=uJLdj/hJn3gAr828xhuBrMt76xjXc3h7qiDuE4oiaq0=; b=I2lXbd6VMOAwpQ4fOorQwlkktH
+ G2btDH6smcGNpVKhTilphni+Wu7rgeD7n/IONJ1ebs5I3keIQtzeWlkOSFL5ti7zHurqtBnZGFcuF
+ LtE/gRsM4woCWdyHOUcs8wXxB3tYkf5kz5ZuRK6hH4b9eBgXVqnoIhHTX3uIOpQ8jZCjPYQ6crrTb
+ 38ZZt2plPBAmOVsjbA92q+7b5mKLqMx0mrYymnztOUsEZztKOkI92vDFyEzBMSj6HxKJUui0sgFxi
+ HM4QUTtty7dQH2nOF48j5UAgZiyAn1ULA6b2toAqI9z2nPtfMgUgLvhnE7vMku22H/Rt1wbfeh2b9
+ FCSeva0w==;
+Received: from [179.182.172.34] (helo=coco.lan)
+ by casper.infradead.org with esmtpsa (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hYbVP-0003zc-Rn; Wed, 05 Jun 2019 19:23:28 +0000
+Date: Wed, 5 Jun 2019 16:23:22 -0300
+From: Mauro Carvalho Chehab <mchehab@kernel.org>
+To: Alexandre Courbot <acourbot@chromium.org>
+Subject: Re: [PATCH 2/5] media: mtk-vcodec: avoid unneeded pointer-to-long
+ conversions
+Message-ID: <20190605162322.56b909e1@coco.lan>
+In-Reply-To: <20190604093737.172599-3-acourbot@chromium.org>
+References: <20190604093737.172599-1-acourbot@chromium.org>
+ <20190604093737.172599-3-acourbot@chromium.org>
+X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; x86_64-redhat-linux-gnu)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190605124633.GM15030@fuggles.cambridge.arm.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -63,46 +60,424 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Eason Lin <eason-yh.lin@mediatek.com>, Ingo Molnar <mingo@redhat.com>,
- linux-mediatek@lists.infradead.org, wsd_upstream@mediatek.com,
- Kobe Wu <kobe-cp.wu@mediatek.com>
+Cc: Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Yunfei Dong <yunfei.dong@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Hans Verkuil <hverkuil-cisco@xs4all.nl>,
+ Tiffany Lin <tiffany.lin@mediatek.com>, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Jun 05, 2019 at 01:46:33PM +0100, Will Deacon wrote:
-> On Thu, May 30, 2019 at 07:59:35PM +0800, Kobe Wu wrote:
-> > DEBUG_LOCKS_WARN_ON() will turn off debug_locks and 
-> > makes print_unlock_imbalance_bug() return directly.
-> > 
-> > Remove a redundant whitespace.
-> > 
-> > Signed-off-by: Kobe Wu <kobe-cp.wu@mediatek.com>
-> > ---
-> >  kernel/locking/lockdep.c |    4 ++--
-> >  1 file changed, 2 insertions(+), 2 deletions(-)
-> > 
-> > diff --git a/kernel/locking/lockdep.c b/kernel/locking/lockdep.c
-> > index d06190f..37c0a5e 100644
-> > --- a/kernel/locking/lockdep.c
-> > +++ b/kernel/locking/lockdep.c
-> > @@ -4049,8 +4049,8 @@ static int __lock_downgrade(struct lockdep_map *lock, unsigned long ip)
-> >  	 * So we're all set to release this lock.. wait what lock? We don't
-> >  	 * own any locks, you've been drinking again?
-> >  	 */
-> > -	if (DEBUG_LOCKS_WARN_ON(depth <= 0))
-> > -		 return print_unlock_imbalance_bug(curr, lock, ip);
-> > +	if (depth <= 0)
-> > +		return print_unlock_imbalance_bug(curr, lock, ip);
-> 
-> Hmm, feels more like we should keep the DEBUG_LOCKS_WARN_ON but just
-> return 0 when it fires.
-> 
-> Peter?
+Em Tue,  4 Jun 2019 18:37:34 +0900
+Alexandre Courbot <acourbot@chromium.org> escreveu:
 
-Nah, we should definitely print something when we try and release a lock
-while not holding any. I think I'll take this one as is.
+> The interface used to communicate with the firmware casts pointers
+> into unsigned longs and back again in order to store private
+> references, all of this for pointers that remain purely in the kernel.
+> Replace these unsigned longs with void pointers to make the code a bit
+> sturdier and easier to follow.
+> 
+> Also simplify some interfaces by removing arguments that could be
+> infered from others.
+
+This generate lots of sparse warnings:
+
+
+ drivers/media/platform/mtk-vcodec/vdec_drv_if.c:64:32:  warning: Using plain integer as NULL pointer
+ drivers/media/platform/mtk-vcodec/vdec_drv_if.c:87:32:  warning: Using plain integer as NULL pointer
+ drivers/media/platform/mtk-vcodec/vdec_drv_if.c:99:32:  warning: Using plain integer as NULL pointer
+ drivers/media/platform/mtk-vcodec/vdec_drv_if.c:108:27:  warning: Using plain integer as NULL pointer
+ drivers/media/platform/mtk-vcodec/venc_drv_if.c:86:32:  warning: Using plain integer as NULL pointer
+ drivers/media/platform/mtk-vcodec/venc_drv_if.c:95:27:  warning: Using plain integer as NULL pointer
+
+Please fix and re-submit.
+
+Regards,
+Mauro
+
+> 
+> Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
+> ---
+>  drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h   |  2 +-
+>  .../media/platform/mtk-vcodec/vdec/vdec_h264_if.c    | 12 ++++++------
+>  drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c | 12 ++++++------
+>  drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c | 12 ++++++------
+>  drivers/media/platform/mtk-vcodec/vdec_drv_base.h    |  8 ++++----
+>  drivers/media/platform/mtk-vcodec/vdec_drv_if.c      |  2 +-
+>  .../media/platform/mtk-vcodec/venc/venc_h264_if.c    | 10 +++++-----
+>  drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c | 10 +++++-----
+>  drivers/media/platform/mtk-vcodec/venc_drv_base.h    |  8 ++++----
+>  drivers/media/platform/mtk-vcodec/venc_drv_if.c      |  2 +-
+>  10 files changed, 39 insertions(+), 39 deletions(-)
+> 
+> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> index d7b43caf7988..4b10996e6532 100644
+> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> @@ -268,7 +268,7 @@ struct mtk_vcodec_ctx {
+>  
+>  	const struct vdec_common_if *dec_if;
+>  	const struct venc_common_if *enc_if;
+> -	unsigned long drv_handle;
+> +	void *drv_handle;
+>  
+>  	struct vdec_pic_info picinfo;
+>  	int dpb_size;
+> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
+> index d725ea54b1c1..0c0660d2560b 100644
+> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
+> @@ -262,7 +262,7 @@ static void get_dpb_size(struct vdec_h264_inst *inst, unsigned int *dpb_sz)
+>  	mtk_vcodec_debug(inst, "sz=%d", *dpb_sz);
+>  }
+>  
+> -static int vdec_h264_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+> +static int vdec_h264_init(struct mtk_vcodec_ctx *ctx)
+>  {
+>  	struct vdec_h264_inst *inst = NULL;
+>  	int err;
+> @@ -291,7 +291,7 @@ static int vdec_h264_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  
+>  	mtk_vcodec_debug(inst, "H264 Instance >> %p", inst);
+>  
+> -	*h_vdec = (unsigned long)inst;
+> +	ctx->drv_handle = inst;
+>  	return 0;
+>  
+>  error_deinit:
+> @@ -302,7 +302,7 @@ static int vdec_h264_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  	return err;
+>  }
+>  
+> -static void vdec_h264_deinit(unsigned long h_vdec)
+> +static void vdec_h264_deinit(void *h_vdec)
+>  {
+>  	struct vdec_h264_inst *inst = (struct vdec_h264_inst *)h_vdec;
+>  
+> @@ -327,7 +327,7 @@ static int find_start_code(unsigned char *data, unsigned int data_sz)
+>  	return -1;
+>  }
+>  
+> -static int vdec_h264_decode(unsigned long h_vdec, struct mtk_vcodec_mem *bs,
+> +static int vdec_h264_decode(void *h_vdec, struct mtk_vcodec_mem *bs,
+>  			    struct vdec_fb *fb, bool *res_chg)
+>  {
+>  	struct vdec_h264_inst *inst = (struct vdec_h264_inst *)h_vdec;
+> @@ -447,8 +447,8 @@ static void vdec_h264_get_fb(struct vdec_h264_inst *inst,
+>  	list->count--;
+>  }
+>  
+> -static int vdec_h264_get_param(unsigned long h_vdec,
+> -			       enum vdec_get_param_type type, void *out)
+> +static int vdec_h264_get_param(void *h_vdec, enum vdec_get_param_type type,
+> +			       void *out)
+>  {
+>  	struct vdec_h264_inst *inst = (struct vdec_h264_inst *)h_vdec;
+>  
+> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
+> index 8de997875b6b..1e3763881e0d 100644
+> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
+> @@ -383,7 +383,7 @@ static void free_working_buf(struct vdec_vp8_inst *inst)
+>  	inst->vsi->dec.working_buf_dma = 0;
+>  }
+>  
+> -static int vdec_vp8_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+> +static int vdec_vp8_init(struct mtk_vcodec_ctx *ctx)
+>  {
+>  	struct vdec_vp8_inst *inst;
+>  	int err;
+> @@ -414,7 +414,7 @@ static int vdec_vp8_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  	get_hw_reg_base(inst);
+>  	mtk_vcodec_debug(inst, "VP8 Instance >> %p", inst);
+>  
+> -	*h_vdec = (unsigned long)inst;
+> +	ctx->drv_handle = inst;
+>  	return 0;
+>  
+>  error_deinit:
+> @@ -424,7 +424,7 @@ static int vdec_vp8_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  	return err;
+>  }
+>  
+> -static int vdec_vp8_decode(unsigned long h_vdec, struct mtk_vcodec_mem *bs,
+> +static int vdec_vp8_decode(void *h_vdec, struct mtk_vcodec_mem *bs,
+>  			   struct vdec_fb *fb, bool *res_chg)
+>  {
+>  	struct vdec_vp8_inst *inst = (struct vdec_vp8_inst *)h_vdec;
+> @@ -560,8 +560,8 @@ static void get_crop_info(struct vdec_vp8_inst *inst, struct v4l2_rect *cr)
+>  			 cr->left, cr->top, cr->width, cr->height);
+>  }
+>  
+> -static int vdec_vp8_get_param(unsigned long h_vdec,
+> -			      enum vdec_get_param_type type, void *out)
+> +static int vdec_vp8_get_param(void *h_vdec, enum vdec_get_param_type type,
+> +			      void *out)
+>  {
+>  	struct vdec_vp8_inst *inst = (struct vdec_vp8_inst *)h_vdec;
+>  
+> @@ -594,7 +594,7 @@ static int vdec_vp8_get_param(unsigned long h_vdec,
+>  	return 0;
+>  }
+>  
+> -static void vdec_vp8_deinit(unsigned long h_vdec)
+> +static void vdec_vp8_deinit(void *h_vdec)
+>  {
+>  	struct vdec_vp8_inst *inst = (struct vdec_vp8_inst *)h_vdec;
+>  
+> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
+> index 02b65298c87e..589b2fc91da2 100644
+> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
+> @@ -751,7 +751,7 @@ static int validate_vsi_array_indexes(struct vdec_vp9_inst *inst,
+>  	return 0;
+>  }
+>  
+> -static void vdec_vp9_deinit(unsigned long h_vdec)
+> +static void vdec_vp9_deinit(void *h_vdec)
+>  {
+>  	struct vdec_vp9_inst *inst = (struct vdec_vp9_inst *)h_vdec;
+>  	struct mtk_vcodec_mem *mem;
+> @@ -773,7 +773,7 @@ static void vdec_vp9_deinit(unsigned long h_vdec)
+>  	vp9_free_inst(inst);
+>  }
+>  
+> -static int vdec_vp9_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+> +static int vdec_vp9_init(struct mtk_vcodec_ctx *ctx)
+>  {
+>  	struct vdec_vp9_inst *inst;
+>  
+> @@ -797,7 +797,7 @@ static int vdec_vp9_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  	inst->vsi = (struct vdec_vp9_vsi *)inst->vpu.vsi;
+>  	init_all_fb_lists(inst);
+>  
+> -	(*h_vdec) = (unsigned long)inst;
+> +	ctx->drv_handle = inst;
+>  	return 0;
+>  
+>  err_deinit_inst:
+> @@ -806,7 +806,7 @@ static int vdec_vp9_init(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec)
+>  	return -EINVAL;
+>  }
+>  
+> -static int vdec_vp9_decode(unsigned long h_vdec, struct mtk_vcodec_mem *bs,
+> +static int vdec_vp9_decode(void *h_vdec, struct mtk_vcodec_mem *bs,
+>  		   struct vdec_fb *fb, bool *res_chg)
+>  {
+>  	int ret = 0;
+> @@ -963,8 +963,8 @@ static void get_crop_info(struct vdec_vp9_inst *inst, struct v4l2_rect *cr)
+>  			 cr->left, cr->top, cr->width, cr->height);
+>  }
+>  
+> -static int vdec_vp9_get_param(unsigned long h_vdec,
+> -		enum vdec_get_param_type type, void *out)
+> +static int vdec_vp9_get_param(void *h_vdec, enum vdec_get_param_type type,
+> +			      void *out)
+>  {
+>  	struct vdec_vp9_inst *inst = (struct vdec_vp9_inst *)h_vdec;
+>  	int ret = 0;
+> diff --git a/drivers/media/platform/mtk-vcodec/vdec_drv_base.h b/drivers/media/platform/mtk-vcodec/vdec_drv_base.h
+> index 014712b1312e..4453f7de9f87 100644
+> --- a/drivers/media/platform/mtk-vcodec/vdec_drv_base.h
+> +++ b/drivers/media/platform/mtk-vcodec/vdec_drv_base.h
+> @@ -13,7 +13,7 @@ struct vdec_common_if {
+>  	 * @ctx     : [in] mtk v4l2 context
+>  	 * @h_vdec  : [out] driver handle
+>  	 */
+> -	int (*init)(struct mtk_vcodec_ctx *ctx, unsigned long *h_vdec);
+> +	int (*init)(struct mtk_vcodec_ctx *ctx);
+>  
+>  	/**
+>  	 * (*decode)() - trigger decode
+> @@ -22,7 +22,7 @@ struct vdec_common_if {
+>  	 * @fb      : [in] frame buffer to store decoded frame
+>  	 * @res_chg : [out] resolution change happen
+>  	 */
+> -	int (*decode)(unsigned long h_vdec, struct mtk_vcodec_mem *bs,
+> +	int (*decode)(void *h_vdec, struct mtk_vcodec_mem *bs,
+>  		      struct vdec_fb *fb, bool *res_chg);
+>  
+>  	/**
+> @@ -31,14 +31,14 @@ struct vdec_common_if {
+>  	 * @type   : [in] input parameter type
+>  	 * @out    : [out] buffer to store query result
+>  	 */
+> -	int (*get_param)(unsigned long h_vdec, enum vdec_get_param_type type,
+> +	int (*get_param)(void *h_vdec, enum vdec_get_param_type type,
+>  			 void *out);
+>  
+>  	/**
+>  	 * (*deinit)() - deinitialize driver.
+>  	 * @h_vdec : [in] driver handle to be deinit
+>  	 */
+> -	void (*deinit)(unsigned long h_vdec);
+> +	void (*deinit)(void *h_vdec);
+>  };
+>  
+>  #endif
+> diff --git a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
+> index 6835cb7d090a..5d8d76d55005 100644
+> --- a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
+> @@ -34,7 +34,7 @@ int vdec_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+>  
+>  	mtk_vdec_lock(ctx);
+>  	mtk_vcodec_dec_clock_on(&ctx->dev->pm);
+> -	ret = ctx->dec_if->init(ctx, &ctx->drv_handle);
+> +	ret = ctx->dec_if->init(ctx);
+>  	mtk_vcodec_dec_clock_off(&ctx->dev->pm);
+>  	mtk_vdec_unlock(ctx);
+>  
+> diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
+> index 0cf08dd7b6e3..bfe61d5dc1cb 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
+> @@ -452,7 +452,7 @@ static void h264_encode_filler(struct venc_h264_inst *inst, void *buf,
+>  	memset(p, 0xff, size);
+>  }
+>  
+> -static int h264_enc_init(struct mtk_vcodec_ctx *ctx, unsigned long *handle)
+> +static int h264_enc_init(struct mtk_vcodec_ctx *ctx)
+>  {
+>  	int ret = 0;
+>  	struct venc_h264_inst *inst;
+> @@ -478,12 +478,12 @@ static int h264_enc_init(struct mtk_vcodec_ctx *ctx, unsigned long *handle)
+>  	if (ret)
+>  		kfree(inst);
+>  	else
+> -		(*handle) = (unsigned long)inst;
+> +		ctx->drv_handle = inst;
+>  
+>  	return ret;
+>  }
+>  
+> -static int h264_enc_encode(unsigned long handle,
+> +static int h264_enc_encode(void *handle,
+>  			   enum venc_start_opt opt,
+>  			   struct venc_frm_buf *frm_buf,
+>  			   struct mtk_vcodec_mem *bs_buf,
+> @@ -578,7 +578,7 @@ static int h264_enc_encode(unsigned long handle,
+>  	return ret;
+>  }
+>  
+> -static int h264_enc_set_param(unsigned long handle,
+> +static int h264_enc_set_param(void *handle,
+>  			      enum venc_set_param_type type,
+>  			      struct venc_enc_param *enc_prm)
+>  {
+> @@ -631,7 +631,7 @@ static int h264_enc_set_param(unsigned long handle,
+>  	return ret;
+>  }
+>  
+> -static int h264_enc_deinit(unsigned long handle)
+> +static int h264_enc_deinit(void *handle)
+>  {
+>  	int ret = 0;
+>  	struct venc_h264_inst *inst = (struct venc_h264_inst *)handle;
+> diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
+> index 3fb9e0c79b4f..af23367cf1dd 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
+> @@ -318,7 +318,7 @@ static int vp8_enc_encode_frame(struct venc_vp8_inst *inst,
+>  	return ret;
+>  }
+>  
+> -static int vp8_enc_init(struct mtk_vcodec_ctx *ctx, unsigned long *handle)
+> +static int vp8_enc_init(struct mtk_vcodec_ctx *ctx)
+>  {
+>  	int ret = 0;
+>  	struct venc_vp8_inst *inst;
+> @@ -344,12 +344,12 @@ static int vp8_enc_init(struct mtk_vcodec_ctx *ctx, unsigned long *handle)
+>  	if (ret)
+>  		kfree(inst);
+>  	else
+> -		(*handle) = (unsigned long)inst;
+> +		ctx->drv_handle = inst;
+>  
+>  	return ret;
+>  }
+>  
+> -static int vp8_enc_encode(unsigned long handle,
+> +static int vp8_enc_encode(void *handle,
+>  			  enum venc_start_opt opt,
+>  			  struct venc_frm_buf *frm_buf,
+>  			  struct mtk_vcodec_mem *bs_buf,
+> @@ -386,7 +386,7 @@ static int vp8_enc_encode(unsigned long handle,
+>  	return ret;
+>  }
+>  
+> -static int vp8_enc_set_param(unsigned long handle,
+> +static int vp8_enc_set_param(void *handle,
+>  			     enum venc_set_param_type type,
+>  			     struct venc_enc_param *enc_prm)
+>  {
+> @@ -437,7 +437,7 @@ static int vp8_enc_set_param(unsigned long handle,
+>  	return ret;
+>  }
+>  
+> -static int vp8_enc_deinit(unsigned long handle)
+> +static int vp8_enc_deinit(void *handle)
+>  {
+>  	int ret = 0;
+>  	struct venc_vp8_inst *inst = (struct venc_vp8_inst *)handle;
+> diff --git a/drivers/media/platform/mtk-vcodec/venc_drv_base.h b/drivers/media/platform/mtk-vcodec/venc_drv_base.h
+> index 2de37b47fe73..be368fcb01e6 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc_drv_base.h
+> +++ b/drivers/media/platform/mtk-vcodec/venc_drv_base.h
+> @@ -13,7 +13,7 @@ struct venc_common_if {
+>  	 * @ctx:	[in] mtk v4l2 context
+>  	 * @handle: [out] driver handle
+>  	 */
+> -	int (*init)(struct mtk_vcodec_ctx *ctx, unsigned long *handle);
+> +	int (*init)(struct mtk_vcodec_ctx *ctx);
+>  
+>  	/**
+>  	 * (*encode)() - trigger encode
+> @@ -23,7 +23,7 @@ struct venc_common_if {
+>  	 * @bs_buf: [in] bitstream buffer to store output bitstream
+>  	 * @result: [out] encode result
+>  	 */
+> -	int (*encode)(unsigned long handle, enum venc_start_opt opt,
+> +	int (*encode)(void *handle, enum venc_start_opt opt,
+>  		      struct venc_frm_buf *frm_buf,
+>  		      struct mtk_vcodec_mem *bs_buf,
+>  		      struct venc_done_result *result);
+> @@ -34,14 +34,14 @@ struct venc_common_if {
+>  	 * @type: [in] parameter type
+>  	 * @in: [in] buffer to store the parameter
+>  	 */
+> -	int (*set_param)(unsigned long handle, enum venc_set_param_type type,
+> +	int (*set_param)(void *handle, enum venc_set_param_type type,
+>  			 struct venc_enc_param *in);
+>  
+>  	/**
+>  	 * (*deinit)() - deinitialize driver.
+>  	 * @handle: [in] driver handle
+>  	 */
+> -	int (*deinit)(unsigned long handle);
+> +	int (*deinit)(void *handle);
+>  };
+>  
+>  #endif
+> diff --git a/drivers/media/platform/mtk-vcodec/venc_drv_if.c b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
+> index 25c1e100f5a1..318af1b4b6e7 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc_drv_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
+> @@ -31,7 +31,7 @@ int venc_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
+>  
+>  	mtk_venc_lock(ctx);
+>  	mtk_vcodec_enc_clock_on(&ctx->dev->pm);
+> -	ret = ctx->enc_if->init(ctx, (unsigned long *)&ctx->drv_handle);
+> +	ret = ctx->enc_if->init(ctx);
+>  	mtk_vcodec_enc_clock_off(&ctx->dev->pm);
+>  	mtk_venc_unlock(ctx);
+>  
+
+
+
+Thanks,
+Mauro
 
 _______________________________________________
 Linux-mediatek mailing list
