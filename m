@@ -2,64 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3477135C3C
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 14:03:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7638435D0A
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 14:40:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+qY0kjs3f8TmzihaUsvdSd8h2cN6aPlm7hhdM4+LvRQ=; b=ovm2Tw+lAqD7RN
-	S/2XEGhvP3cOvWLFcIZTngXdQ2yuULhQd+In27/loOpO/nsnPS6Y/UbQXb45SM3VFcobcMb4lAwZ2
-	Zhi5kiAM/kqe0CMP6+/z/oeF+DOR173NzEnhS0tldLsMJ767S9UrW2Wr2BdFA74spdgpXnmP2vrmo
-	ACn4umVbXuSbEIpgtQcnkFNp+h7G07T7NWuOJ66xcEDvNlo0I5YfZqVsVbIK0r8pNgbzEB5LhJTlC
-	dADxXud+rbMnYK1bbsJG0N9ZxDmeg9+Mi2dtYCRp/bMqBeA3hQ9uSiu7XTWohP+G7y0IXemXZJedn
-	16L7bqnRfXn7jriR/qfQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=freFwYYcYk1KyOdK2MFwbwVwLW00E/wFX64Ibf49WhE=; b=HV2r2HsHdQ3uiB
+	iguODCV5y+Iem9EWNJETWsTTfxEJ5erLYOsSjlITV68MGYNlnaPYdsU/Tr98wffY5/oWwd2AKxMMk
+	xsUhLL/F6aDXFiN/9XgggiYtgKWxIWrn0Ey3GFCZRSFjXGgLiEe0eTqEjcwwXtzy2TRNRRIe7l5vE
+	UKucAsSeQP23zolz3duVupDxSnFMYgQ+6EreJ1k0mSz4nrLm5810gJ3sPGXJ3T7m6MyQMFf2POs5m
+	D2PE5m0KfYsvzL1kFzxPZQGZg559efqjoPCrWlbK3hjyar8w6rQtLCUjraHB2yLXN2QeB4+BuBdIB
+	+ZixO6/d+B0hnkH//wZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYUdp-0000TS-D1; Wed, 05 Jun 2019 12:03:41 +0000
-Received: from lb3-smtp-cloud7.xs4all.net ([194.109.24.31])
+	id 1hYVDL-0004Ml-OY; Wed, 05 Jun 2019 12:40:23 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYUdl-0000SQ-TL
- for linux-mediatek@lists.infradead.org; Wed, 05 Jun 2019 12:03:39 +0000
-Received: from [IPv6:2001:420:44c1:2579:c806:4d76:5b3c:eea9]
- ([IPv6:2001:420:44c1:2579:c806:4d76:5b3c:eea9])
- by smtp-cloud7.xs4all.net with ESMTPA
- id YUdahlLxG3qlsYUddhfn01; Wed, 05 Jun 2019 14:03:30 +0200
-Subject: Re: [PATCH 3/5] media: mtk-vcodec: remove unneeded proxy functions
-To: Alexandre Courbot <acourbot@chromium.org>,
- Tiffany Lin <tiffany.lin@mediatek.com>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Yunfei Dong <yunfei.dong@mediatek.com>
-References: <20190604093737.172599-1-acourbot@chromium.org>
- <20190604093737.172599-4-acourbot@chromium.org>
-From: Hans Verkuil <hverkuil-cisco@xs4all.nl>
-Message-ID: <c86d2409-b3f0-b20e-f371-50338f7199d8@xs4all.nl>
-Date: Wed, 5 Jun 2019 14:03:26 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.5.1
+ id 1hYVDC-0004Gl-Fg; Wed, 05 Jun 2019 12:40:16 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 1AE4C206BB;
+ Wed,  5 Jun 2019 12:40:12 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1559738413;
+ bh=qdAUBbULazBNhStl1AcZ7Kv55Zf3/V9JNzSigkm1w7M=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=d+brviXoxz8rR+sa6s+nEnzxEORtvoSYychevSjfk+wLUWBEPtzNRxqQVfhQpZBCH
+ nsrd7ag0lwuGki2SLtp21v2dlF9Z/igkVJeTqH1rw1VIBnseo0+90PB5RZLzcWFvBD
+ CP24WIcSjTIE83sXdlJ1xmviw6Mu1b5JboF/7eb0=
+Date: Wed, 5 Jun 2019 14:40:11 +0200
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v2] USB: move usb debugfs directory creation to the usb
+ common core
+Message-ID: <20190605124011.GB17558@kroah.com>
+References: <20190605092816.GA23758@kroah.com>
+ <1559732515.8487.106.camel@mhfsdcap03>
 MIME-Version: 1.0
-In-Reply-To: <20190604093737.172599-4-acourbot@chromium.org>
-Content-Language: en-US
-X-CMAE-Envelope: MS4wfKpG5YTmPrv9ECx9caWZmPw9wkF0O/93RuPnuOaSU66y2ZAoV9ShsUwPVF9kfGZTQgDYjiL4ukeiLhetjqbgu8qna2enbKFUhjePWLcpE9pRmktaDyn4
- eft3zXM5crqve0NuecMlrhRKZ/+KtE7sdwyFL7Iz/JeOSWwJtPPYnpv/qUP2ELySMXV1wmOjUPeXErPSoPoV7DrRFfrAWTIQ3TLQk2ggx6Qm/22acgF2mK/k
- 97hf0Q+WlQgpVhUbjfkHPv5PTtUZJ4ZINQBDlusRXfvj1M7Y5YLojmyNU+yr9wHtcCz1PavCt2dFA6E34YGcQmYELfHRWB0GgHZ63ZrsQSwsk3qNF2eNWOgY
- gSi5auLPBbMOPp32s33upW7yibZ+qNjtxrpYLNnmTA/sUUVDPR+4+xQg63qjgObwPy0z5aRKK0pkv/9IMRXoA9569KeqMzsWqSOa3qG6bM3ZvUZSxOO0FPxd
- I1JeYD+poEknkgxJMGbAHtq5pYz0Eec4EPfvCy2n1ndeQm0awrhL9GRJIV+/Gasq+z4e6rCkd/0kq7qWhLeT9nY4OU2uk+BLjPV9Qg==
+Content-Disposition: inline
+In-Reply-To: <1559732515.8487.106.camel@mhfsdcap03>
+User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_050338_101271_96A2B684 
-X-CRM114-Status: GOOD (  13.94  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190605_054014_590969_2B0C8ADF 
+X-CRM114-Status: GOOD (  25.60  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [194.109.24.31 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,227 +74,129 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-media@vger.kernel.org
+Cc: devicetree@vger.kernel.org, Felipe Balbi <felipe.balbi@linux.intel.com>,
+ linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 6/4/19 11:37 AM, Alexandre Courbot wrote:
-> We were getting the codec interface through a proxy function that does
-> not bring anything compared to just accessing the interface definition
-> directly, so just do that. Also make the decoder interfaces const.
+On Wed, Jun 05, 2019 at 07:01:55PM +0800, Chunfeng Yun wrote:
+> Hi Greg,
+> On Wed, 2019-06-05 at 11:28 +0200, Greg Kroah-Hartman wrote:
+> > The USB gadget subsystem wants to use the USB debugfs root directory, so
+> > move it to the common "core" USB code so that it is properly initialized
+> > and removed as needed.
+> > 
+> > In order to properly do this, we need to load the common code before the
+> > usb core code, when everything is linked into the kernel, so reorder the
+> > link order of the code.
+> > 
+> > Also as the usb common code has the possibility of the led trigger logic
+> > to be merged into it, handle the build option properly by only having
+> > one module init/exit function and have the common code initialize the
+> > led trigger if needed.
+> > 
+> > Reported-by: From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > Cc: Felipe Balbi <felipe.balbi@linux.intel.com>
+> > Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+> > ---
+> > 
+> > Chunfeng, can you test this version to verify it works for you when
+> > building the code into the kernel?
+> > 
+> > v2: handle led common code link error reported by kbuild
+> >     handle subsys_initcall issue pointed out by Chunfeng
+> > 
+> >  drivers/usb/Makefile        |  3 +--
+> >  drivers/usb/common/common.c | 21 +++++++++++++++++++++
+> >  drivers/usb/common/common.h | 14 ++++++++++++++
+> >  drivers/usb/common/led.c    |  9 +++------
+> >  drivers/usb/core/usb.c      | 10 ++++------
+> >  5 files changed, 43 insertions(+), 14 deletions(-)
+> >  create mode 100644 drivers/usb/common/common.h
+> > 
+> > diff --git a/drivers/usb/Makefile b/drivers/usb/Makefile
+> > index 7d1b8c82b208..ecc2de1ffaae 100644
+> > --- a/drivers/usb/Makefile
+> > +++ b/drivers/usb/Makefile
+> > @@ -5,6 +5,7 @@
+> >  
+> >  # Object files in subdirectories
+> >  
+> > +obj-$(CONFIG_USB_COMMON)	+= common/
+> >  obj-$(CONFIG_USB)		+= core/
+> >  obj-$(CONFIG_USB_SUPPORT)	+= phy/
+> >  
+> > @@ -60,8 +61,6 @@ obj-$(CONFIG_USB_CHIPIDEA)	+= chipidea/
+> >  obj-$(CONFIG_USB_RENESAS_USBHS)	+= renesas_usbhs/
+> >  obj-$(CONFIG_USB_GADGET)	+= gadget/
+> >  
+> > -obj-$(CONFIG_USB_COMMON)	+= common/
+> > -
+> >  obj-$(CONFIG_USBIP_CORE)	+= usbip/
+> >  
+> >  obj-$(CONFIG_TYPEC)		+= typec/
+> > diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
+> > index 18f5dcf58b0d..84a4423aaddf 100644
+> > --- a/drivers/usb/common/common.c
+> > +++ b/drivers/usb/common/common.c
+> > @@ -15,6 +15,8 @@
+> >  #include <linux/usb/of.h>
+> >  #include <linux/usb/otg.h>
+> >  #include <linux/of_platform.h>
+> > +#include <linux/debugfs.h>
+> > +#include "common.h"
+> >  
+> >  static const char *const ep_type_names[] = {
+> >  	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
+> > @@ -291,4 +293,23 @@ struct device *usb_of_get_companion_dev(struct device *dev)
+> >  EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
+> >  #endif
+> >  
+> > +struct dentry *usb_debug_root;
+> > +EXPORT_SYMBOL_GPL(usb_debug_root);
+> > +
+> > +static int usb_common_init(void)
+> > +{
+> > +	usb_debug_root = debugfs_create_dir("usb", NULL);
+> > +	ledtrig_usb_init();
+> > +	return 0;
+> > +}
+> > +
+> > +static void usb_common_exit(void)
+> > +{
+> > +	ledtrig_usb_exit();
+> > +	debugfs_remove_recursive(usb_debug_root);
+> > +}
+> > +
+> When enable CONFIG_LED_TRIGGER, there is a warning
 > 
-> Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
-> ---
->  .../media/platform/mtk-vcodec/vdec/vdec_h264_if.c    |  9 +--------
->  drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c |  9 +--------
->  drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c |  9 +--------
->  drivers/media/platform/mtk-vcodec/vdec_drv_if.c      | 12 ++++++------
->  .../media/platform/mtk-vcodec/venc/venc_h264_if.c    |  9 +--------
->  drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c |  9 +--------
->  drivers/media/platform/mtk-vcodec/venc_drv_if.c      |  8 ++++----
->  7 files changed, 15 insertions(+), 50 deletions(-)
+>  MODPOST vmlinux.o
+> WARNING: vmlinux.o(.text+0x68e300): Section mismatch in reference from
+> the function usb_common_init() to the
+> function .init.text:ledtrig_usb_init()
+> The function usb_common_init() references
+> the function __init ledtrig_usb_init().
+> This is often because usb_common_init lacks a __init
+> annotation or the annotation of ledtrig_usb_init is wrong.
 > 
-> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-> index 0c0660d2560b..85afdd6ab093 100644
-> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_h264_if.c
-> @@ -481,16 +481,9 @@ static int vdec_h264_get_param(void *h_vdec, enum vdec_get_param_type type,
->  	return 0;
->  }
->  
-> -static struct vdec_common_if vdec_h264_if = {
-> +const struct vdec_common_if vdec_h264_if = {
->  	.init		= vdec_h264_init,
->  	.decode		= vdec_h264_decode,
->  	.get_param	= vdec_h264_get_param,
->  	.deinit		= vdec_h264_deinit,
->  };
-> -
-> -struct vdec_common_if *get_h264_dec_comm_if(void);
-> -
-> -struct vdec_common_if *get_h264_dec_comm_if(void)
-> -{
-> -	return &vdec_h264_if;
-> -}
-> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-> index 1e3763881e0d..a8ca762eac76 100644
-> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp8_if.c
-> @@ -605,16 +605,9 @@ static void vdec_vp8_deinit(void *h_vdec)
->  	kfree(inst);
->  }
->  
-> -static struct vdec_common_if vdec_vp8_if = {
-> +const struct vdec_common_if vdec_vp8_if = {
->  	.init		= vdec_vp8_init,
->  	.decode		= vdec_vp8_decode,
->  	.get_param	= vdec_vp8_get_param,
->  	.deinit		= vdec_vp8_deinit,
->  };
-> -
-> -struct vdec_common_if *get_vp8_dec_comm_if(void);
-> -
-> -struct vdec_common_if *get_vp8_dec_comm_if(void)
-> -{
-> -	return &vdec_vp8_if;
-> -}
-> diff --git a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-> index 589b2fc91da2..1f99febdfbbe 100644
-> --- a/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/vdec/vdec_vp9_if.c
-> @@ -994,16 +994,9 @@ static int vdec_vp9_get_param(void *h_vdec, enum vdec_get_param_type type,
->  	return ret;
->  }
->  
-> -static struct vdec_common_if vdec_vp9_if = {
-> +const struct vdec_common_if vdec_vp9_if = {
->  	.init		= vdec_vp9_init,
->  	.decode		= vdec_vp9_decode,
->  	.get_param	= vdec_vp9_get_param,
->  	.deinit		= vdec_vp9_deinit,
->  };
-> -
-> -struct vdec_common_if *get_vp9_dec_comm_if(void);
-> -
-> -struct vdec_common_if *get_vp9_dec_comm_if(void)
-> -{
-> -	return &vdec_vp9_if;
-> -}
-> diff --git a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-> index 5d8d76d55005..aa614eea3cc5 100644
-> --- a/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/vdec_drv_if.c
-> @@ -10,9 +10,9 @@
->  #include "mtk_vcodec_dec_pm.h"
->  #include "mtk_vpu.h"
->  
-> -const struct vdec_common_if *get_h264_dec_comm_if(void);
-> -const struct vdec_common_if *get_vp8_dec_comm_if(void);
-> -const struct vdec_common_if *get_vp9_dec_comm_if(void);
-> +extern const struct vdec_common_if vdec_h264_if;
-> +extern const struct vdec_common_if vdec_vp8_if;
-> +extern const struct vdec_common_if vdec_vp9_if;
->  
->  int vdec_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
->  {
-> @@ -20,13 +20,13 @@ int vdec_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
->  
->  	switch (fourcc) {
->  	case V4L2_PIX_FMT_H264:
-> -		ctx->dec_if = get_h264_dec_comm_if();
-> +		ctx->dec_if = &vdec_h264_if;
->  		break;
->  	case V4L2_PIX_FMT_VP8:
-> -		ctx->dec_if = get_vp8_dec_comm_if();
-> +		ctx->dec_if = &vdec_vp8_if;
->  		break;
->  	case V4L2_PIX_FMT_VP9:
-> -		ctx->dec_if = get_vp9_dec_comm_if();
-> +		ctx->dec_if = &vdec_vp9_if;
->  		break;
->  	default:
->  		return -EINVAL;
-> diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-> index bfe61d5dc1cb..4e1d933395cd 100644
-> --- a/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/venc/venc_h264_if.c
-> @@ -649,16 +649,9 @@ static int h264_enc_deinit(void *handle)
->  	return ret;
->  }
->  
-> -static const struct venc_common_if venc_h264_if = {
-> +const struct venc_common_if venc_h264_if = {
->  	.init = h264_enc_init,
->  	.encode = h264_enc_encode,
->  	.set_param = h264_enc_set_param,
->  	.deinit = h264_enc_deinit,
->  };
-> -
-> -const struct venc_common_if *get_h264_enc_comm_if(void);
-> -
-> -const struct venc_common_if *get_h264_enc_comm_if(void)
-> -{
-> -	return &venc_h264_if;
-> -}
-> diff --git a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-> index af23367cf1dd..2d1372ab6486 100644
-> --- a/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/venc/venc_vp8_if.c
-> @@ -455,16 +455,9 @@ static int vp8_enc_deinit(void *handle)
->  	return ret;
->  }
->  
-> -static const struct venc_common_if venc_vp8_if = {
-> +const struct venc_common_if venc_vp8_if = {
->  	.init = vp8_enc_init,
->  	.encode = vp8_enc_encode,
->  	.set_param = vp8_enc_set_param,
->  	.deinit = vp8_enc_deinit,
->  };
-> -
-> -const struct venc_common_if *get_vp8_enc_comm_if(void);
-> -
-> -const struct venc_common_if *get_vp8_enc_comm_if(void)
-> -{
-> -	return &venc_vp8_if;
-> -}
-> diff --git a/drivers/media/platform/mtk-vcodec/venc_drv_if.c b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-> index 318af1b4b6e7..cf5bfa296d20 100644
-> --- a/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-> +++ b/drivers/media/platform/mtk-vcodec/venc_drv_if.c
-> @@ -11,8 +11,8 @@
->  #include "mtk_vcodec_enc_pm.h"
->  #include "mtk_vpu.h"
->  
-> -const struct venc_common_if *get_h264_enc_comm_if(void);
-> -const struct venc_common_if *get_vp8_enc_comm_if(void);
-> +extern const struct venc_common_if venc_h264_if;
-> +extern const struct venc_common_if venc_vp8_if;
-
-This should be moved to a header. checkpatch gives me:
-
-Applying: media: mtk-vcodec: remove unneeded proxy functions
-WARNING: externs should be avoided in .c files
-#79: FILE: drivers/media/platform/mtk-vcodec/vdec_drv_if.c:14:
-+extern const struct vdec_common_if vdec_vp8_if;
-
-WARNING: externs should be avoided in .c files
-#80: FILE: drivers/media/platform/mtk-vcodec/vdec_drv_if.c:15:
-+extern const struct vdec_common_if vdec_vp9_if;
-
-WARNING: externs should be avoided in .c files
-#156: FILE: drivers/media/platform/mtk-vcodec/venc_drv_if.c:15:
-+extern const struct venc_common_if venc_vp8_if;
-
-And I agree with checkpatch here.
-
-I'll drop this patch from the series, but I'll take the others.
-
-Regards,
-
-	Hans
-
->  
->  int venc_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
->  {
-> @@ -20,10 +20,10 @@ int venc_if_init(struct mtk_vcodec_ctx *ctx, unsigned int fourcc)
->  
->  	switch (fourcc) {
->  	case V4L2_PIX_FMT_VP8:
-> -		ctx->enc_if = get_vp8_enc_comm_if();
-> +		ctx->enc_if = &venc_vp8_if;
->  		break;
->  	case V4L2_PIX_FMT_H264:
-> -		ctx->enc_if = get_h264_enc_comm_if();
-> +		ctx->enc_if = &venc_h264_if;
->  		break;
->  	default:
->  		return -EINVAL;
+> WARNING: vmlinux.o(.text+0x68e318): Section mismatch in reference from
+> the function usb_common_exit() to the
+> function .exit.text:ledtrig_usb_exit()
+> The function usb_common_exit() references a function in an exit section.
+> Often the function ledtrig_usb_exit() has valid usage outside the exit
+> section
+> and the fix is to remove the __exit annotation of ledtrig_usb_exit.
 > 
+> seems need add __init and __exit for usb_common_init/exit
 
+Yes, you are right, I'll go add those markings to those functions, good
+catch.
+
+greg k-h
 
 _______________________________________________
 Linux-mediatek mailing list
