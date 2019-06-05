@@ -2,61 +2,36 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 27A743558A
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 05:07:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41A063565F
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 07:50:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=NPpQmeBjnqhHax/I+dddorItS2fxRzp741HtTAcsRGw=; b=Z7GwOSBL1f9rm9
-	1yD8kB7uyJ+pA7RGWiOyCXPHlBlo8ohgNykD3jtwYu5ElmXgQl1ypRMtX2CSQSNC/TgRRzDHN9ltm
-	9X3UiFIbaP/q03EQh7KislG4gpbL03CD7Cmgx8tHyUPISb5wSho35/L+yLeJCKDzyxWQaWL6oQ1RM
-	kedpizkIhhfvR1bwbk1bcpJVJ8e4hAGAm9ptGq9AjbniNoqCLVugmL9ggDwCA+U45+djjyM0uGzEJ
-	QPWdlM353tmOtdoAF2pB3l54RhoxqGIbysAxUKt5G38Pql7WrergNMIwL2SndBTuiYsdLv/5ZrGwo
-	BHJUsGnPLQLwFRoo6IfQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=plZtm7QqjXi6Qx0s/b6ihnAqCfZaxJP7t/GIweb0RJY=; b=M6zMtR60jsYkvA
+	hSDnQCZrz/cyEWszMuyCGOZnSDN+UwAQebWS5gjFgNU8Qeorxt2CJzc9xXGRR5sSLUuVKn5FaX5oi
+	36hgt0ccFboBFjpsZ6oSZB/w4eRgB+uZHtQUzU6qMD+rpJflEG96/E81UN+7Fc90l/PIz2spS0gtr
+	GBNeOZmHMaybnQIrwkSwGmeeKErMJivm+akEDUZDY3sUSPUUUPUCHi1rc9sIWHPtfsNgLTE5Ovy7F
+	pSYU/O+ROY/z1PIrEHuZifHcbjvzzXhsasYf/jUQaFFsnBf9FwX08DaJkOypkj3VTokPjZLY3prMG
+	XnnndU4xJcKL2NwvjyMg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYMH2-0007Vh-UA; Wed, 05 Jun 2019 03:07:36 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYMGv-0007QZ-0P; Wed, 05 Jun 2019 03:07:30 +0000
-X-UUID: e59b73a029d9463fb00a2c0dfbf39250-20190604
-X-UUID: e59b73a029d9463fb00a2c0dfbf39250-20190604
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <leilk.liu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1934652754; Tue, 04 Jun 2019 19:07:26 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Jun 2019 20:07:24 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 11:07:21 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 5 Jun 2019 11:07:20 +0800
-From: Leilk Liu <leilk.liu@mediatek.com>
-To: Mark Brown <broonie@kernel.org>
-Subject: [PATCH] spi: mediatek: add SPI_LSB_FIRST support
-Date: Wed, 5 Jun 2019 11:07:04 +0800
-Message-ID: <1559704024-5369-1-git-send-email-leilk.liu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
+	id 1hYOoc-0005BO-DP; Wed, 05 Jun 2019 05:50:26 +0000
+Received: from hch by bombadil.infradead.org with local (Exim 4.90_1 #2 (Red
+ Hat Linux)) id 1hYOoX-0005Al-PR; Wed, 05 Jun 2019 05:50:21 +0000
+Date: Tue, 4 Jun 2019 22:50:21 -0700
+From: Christoph Hellwig <hch@infradead.org>
+To: Tom Murphy <tmurphy@arista.com>
+Subject: Re: [PATCH v3 1/4] iommu: Add gfp parameter to iommu_ops::map
+Message-ID: <20190605055021.GA15036@infradead.org>
+References: <20190506185207.31069-1-tmurphy@arista.com>
+ <20190506185207.31069-2-tmurphy@arista.com>
 MIME-Version: 1.0
-X-MTK: N
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190604_200729_059196_63DACFB5 
-X-CRM114-Status: GOOD (  11.52  )
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+Content-Disposition: inline
+In-Reply-To: <20190506185207.31069-2-tmurphy@arista.com>
+User-Agent: Mutt/1.9.2 (2017-12-15)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -68,84 +43,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Leilk Liu <leilk.liu@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-spi@vger.kernel.org, fparent@baylibre.com,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Heiko Stuebner <heiko@sntech.de>, Will Deacon <will.deacon@arm.com>,
+ David Brown <david.brown@linaro.org>,
+ Thierry Reding <thierry.reding@gmail.com>, linux-s390@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Kukjin Kim <kgene@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Andy Gross <andy.gross@linaro.org>, linux-arm-msm@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, David Woodhouse <dwmw2@infradead.org>,
+ linux-kernel@vger.kernel.org, murphyt7@tcd.ie,
+ iommu@lists.linux-foundation.org, Robin Murphy <robin.murphy@arm.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-this patch add SPI_LSB_FIRST feature support.
-
-Signed-off-by: Leilk Liu <leilk.liu@mediatek.com>
----
- drivers/spi/spi-mt65xx.c                 |   15 ++++++---------
- include/linux/platform_data/spi-mt65xx.h |    2 --
- 2 files changed, 6 insertions(+), 11 deletions(-)
-
-diff --git a/drivers/spi/spi-mt65xx.c b/drivers/spi/spi-mt65xx.c
-index 0cce6f0..7f4dc18 100644
---- a/drivers/spi/spi-mt65xx.c
-+++ b/drivers/spi/spi-mt65xx.c
-@@ -131,8 +131,6 @@ struct mtk_spi {
-  * supplies it.
-  */
- static const struct mtk_chip_config mtk_default_chip_info = {
--	.rx_mlsb = 1,
--	.tx_mlsb = 1,
- 	.cs_pol = 0,
- 	.sample_sel = 0,
- };
-@@ -203,14 +201,13 @@ static int mtk_spi_prepare_message(struct spi_master *master,
- 		reg_val &= ~SPI_CMD_CPOL;
- 
- 	/* set the mlsbx and mlsbtx */
--	if (chip_config->tx_mlsb)
--		reg_val |= SPI_CMD_TXMSBF;
--	else
-+	if (spi->mode & SPI_LSB_FIRST) {
- 		reg_val &= ~SPI_CMD_TXMSBF;
--	if (chip_config->rx_mlsb)
--		reg_val |= SPI_CMD_RXMSBF;
--	else
- 		reg_val &= ~SPI_CMD_RXMSBF;
-+	} else {
-+		reg_val |= SPI_CMD_TXMSBF;
-+		reg_val |= SPI_CMD_RXMSBF;
-+	}
- 
- 	/* set the tx/rx endian */
- #ifdef __LITTLE_ENDIAN
-@@ -607,7 +604,7 @@ static int mtk_spi_probe(struct platform_device *pdev)
- 
- 	master->auto_runtime_pm = true;
- 	master->dev.of_node = pdev->dev.of_node;
--	master->mode_bits = SPI_CPOL | SPI_CPHA;
-+	master->mode_bits = SPI_CPOL | SPI_CPHA | SPI_LSB_FIRST;
- 
- 	master->set_cs = mtk_spi_set_cs;
- 	master->prepare_message = mtk_spi_prepare_message;
-diff --git a/include/linux/platform_data/spi-mt65xx.h b/include/linux/platform_data/spi-mt65xx.h
-index ba4e4bb..8d5df58 100644
---- a/include/linux/platform_data/spi-mt65xx.h
-+++ b/include/linux/platform_data/spi-mt65xx.h
-@@ -14,8 +14,6 @@
- 
- /* Board specific platform_data */
- struct mtk_chip_config {
--	u32 tx_mlsb;
--	u32 rx_mlsb;
- 	u32 cs_pol;
- 	u32 sample_sel;
- };
--- 
-1.7.9.5
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gTW9uLCBNYXkgMDYsIDIwMTkgYXQgMDc6NTI6MDNQTSArMDEwMCwgVG9tIE11cnBoeSB2aWEg
+aW9tbXUgd3JvdGU6Cj4gV2UgY2FuIHJlbW92ZSB0aGUgbXV0ZXggbG9jayBmcm9tIGFtZF9pb21t
+dV9tYXAgYW5kIGFtZF9pb21tdV91bm1hcC4KPiBpb21tdV9tYXAgZG9lc27igJl0IGxvY2sgd2hp
+bGUgbWFwcGluZyBhbmQgc28gbm8gdHdvIGNhbGxzIHNob3VsZCB0b3VjaAo+IHRoZSBzYW1lIGlv
+dmEgcmFuZ2UuIFRoZSBBTUQgZHJpdmVyIGFscmVhZHkgaGFuZGxlcyB0aGUgcGFnZSB0YWJsZSBw
+YWdlCj4gYWxsb2NhdGlvbnMgd2l0aG91dCBsb2NrcyBzbyB3ZSBjYW4gc2FmZWx5IHJlbW92ZSB0
+aGUgbG9ja3MuCgpCdHcsIHRoaXMgcmVhbGx5IHNob3VsZCBiZSBhIHNlcGFyYXRlIHBhdGNoLgoK
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVk
+aWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0
+cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
