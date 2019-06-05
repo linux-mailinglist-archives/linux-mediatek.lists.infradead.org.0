@@ -2,55 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EC84E35ACE
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:02:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 757DA35B9E
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:44:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cgRe0iH7zUYuyTYbdnuvT34mpeiytyJ+h5Ig1YqA91g=; b=sBVmGH805DGcHo
-	LICNIk8yNqSnu4Zs3szYLeJIdSWIvcgEhc7cP9xoPCutSvCWQT30JIyDF+BH3QtAJP57GokIBDmlI
-	KD8rXrIh7Ap1koudgBAZnZuZD4lzI/uugrvqEet0GTUDmZmiZg8/jC+fOrnnP3xGWY2gWiXy9iGji
-	FnzzvIrF2HnZrmXrjUoewydKTZYzchluUUUFRQnkPz7U7mKuBn4Jjk3wkM3rAV+tLRBdOMIheN4nw
-	hIgzLgjqAKeiAbG4bh5fgmtlIOTPLq0CjVkf9OPriMvTNe2hTLqo5rjCDsF0STuz76J20NtySqMc8
-	H8fypzVqfLhDYnKcQgFQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=m80mJKO2T2jxhziLi68Q6z9wzpYgc2ICk5CA5CFYE8c=; b=DO4wuFgFa7htyo
+	385P7LeCDyHon+Hk9KVa2lcy/+4BgikbB8VbXlKB5hCxvP7cO1upm4aaZwR71bCj+5oj//YRLYnja
+	3KIiyBck+IceoIaSNB4lgIQTYJLcCIOxdcEIa5mUUxdMT2bqFRQcN75xkHfovQAC97uTAdP8AMECK
+	FsH28D2leoIU4AYzBhp4iNontFiSueqXTGQXQi4Ogjk5pIhULX70n0zstv9Zf+1cQEm4h+cKfN0C0
+	YvY9MgDRJ9bXVQqJP6E1K0H88SBroamRF3Kz7lSr2oB+KDv2ABAd6UTr9zx9kyelayN9kMB3C7X0d
+	sfwoQhaXc9V71XbQFZUQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYTgK-0004ng-Eo; Wed, 05 Jun 2019 11:02:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hYULG-00053n-Eo; Wed, 05 Jun 2019 11:44:30 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYTgH-0004nG-4R; Wed, 05 Jun 2019 11:02:10 +0000
-X-UUID: f783470954df4165a9f6798ed6db3e85-20190605
-X-UUID: f783470954df4165a9f6798ed6db3e85-20190605
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hYUKd-0004CU-4g; Wed, 05 Jun 2019 11:44:11 +0000
+X-UUID: 878ef95c85bf43e7a49fc9199fadb214-20190605
+X-UUID: 878ef95c85bf43e7a49fc9199fadb214-20190605
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <yongqiang.niu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2105332943; Wed, 05 Jun 2019 03:01:59 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 04:01:57 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 5 Jun 2019 19:01:55 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 5 Jun 2019 19:01:55 +0800
-Message-ID: <1559732515.8487.106.camel@mhfsdcap03>
-Subject: Re: [PATCH v2] USB: move usb debugfs directory creation to the usb
- common core
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Date: Wed, 5 Jun 2019 19:01:55 +0800
-In-Reply-To: <20190605092816.GA23758@kroah.com>
-References: <20190605092816.GA23758@kroah.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 338246934; Wed, 05 Jun 2019 03:43:30 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 5 Jun 2019 04:43:29 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 5 Jun 2019 19:43:21 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 5 Jun 2019 19:43:20 +0800
+From: <yongqiang.niu@mediatek.com>
+To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>, "Rob
+ Herring" <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v3, 00/27] add drm support for MT8183
+Date: Wed, 5 Jun 2019 19:42:39 +0800
+Message-ID: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_040209_178897_D3B36A61 
-X-CRM114-Status: GOOD (  25.17  )
+X-CRM114-CacheID: sfid-20190605_044351_678936_C99893E1 
+X-CRM114-Status: UNSURE (   9.43  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,210 +70,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Felipe Balbi <felipe.balbi@linux.intel.com>,
- linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Yongqiang Niu <yongqiang.niu@mediatek.com>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Greg,
-On Wed, 2019-06-05 at 11:28 +0200, Greg Kroah-Hartman wrote:
-> The USB gadget subsystem wants to use the USB debugfs root directory, so
-> move it to the common "core" USB code so that it is properly initialized
-> and removed as needed.
-> 
-> In order to properly do this, we need to load the common code before the
-> usb core code, when everything is linked into the kernel, so reorder the
-> link order of the code.
-> 
-> Also as the usb common code has the possibility of the led trigger logic
-> to be merged into it, handle the build option properly by only having
-> one module init/exit function and have the common code initialize the
-> led trigger if needed.
-> 
-> Reported-by: From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> Cc: Felipe Balbi <felipe.balbi@linux.intel.com>
-> Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> ---
-> 
-> Chunfeng, can you test this version to verify it works for you when
-> building the code into the kernel?
-> 
-> v2: handle led common code link error reported by kbuild
->     handle subsys_initcall issue pointed out by Chunfeng
-> 
->  drivers/usb/Makefile        |  3 +--
->  drivers/usb/common/common.c | 21 +++++++++++++++++++++
->  drivers/usb/common/common.h | 14 ++++++++++++++
->  drivers/usb/common/led.c    |  9 +++------
->  drivers/usb/core/usb.c      | 10 ++++------
->  5 files changed, 43 insertions(+), 14 deletions(-)
->  create mode 100644 drivers/usb/common/common.h
-> 
-> diff --git a/drivers/usb/Makefile b/drivers/usb/Makefile
-> index 7d1b8c82b208..ecc2de1ffaae 100644
-> --- a/drivers/usb/Makefile
-> +++ b/drivers/usb/Makefile
-> @@ -5,6 +5,7 @@
->  
->  # Object files in subdirectories
->  
-> +obj-$(CONFIG_USB_COMMON)	+= common/
->  obj-$(CONFIG_USB)		+= core/
->  obj-$(CONFIG_USB_SUPPORT)	+= phy/
->  
-> @@ -60,8 +61,6 @@ obj-$(CONFIG_USB_CHIPIDEA)	+= chipidea/
->  obj-$(CONFIG_USB_RENESAS_USBHS)	+= renesas_usbhs/
->  obj-$(CONFIG_USB_GADGET)	+= gadget/
->  
-> -obj-$(CONFIG_USB_COMMON)	+= common/
-> -
->  obj-$(CONFIG_USBIP_CORE)	+= usbip/
->  
->  obj-$(CONFIG_TYPEC)		+= typec/
-> diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
-> index 18f5dcf58b0d..84a4423aaddf 100644
-> --- a/drivers/usb/common/common.c
-> +++ b/drivers/usb/common/common.c
-> @@ -15,6 +15,8 @@
->  #include <linux/usb/of.h>
->  #include <linux/usb/otg.h>
->  #include <linux/of_platform.h>
-> +#include <linux/debugfs.h>
-> +#include "common.h"
->  
->  static const char *const ep_type_names[] = {
->  	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
-> @@ -291,4 +293,23 @@ struct device *usb_of_get_companion_dev(struct device *dev)
->  EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
->  #endif
->  
-> +struct dentry *usb_debug_root;
-> +EXPORT_SYMBOL_GPL(usb_debug_root);
-> +
-> +static int usb_common_init(void)
-> +{
-> +	usb_debug_root = debugfs_create_dir("usb", NULL);
-> +	ledtrig_usb_init();
-> +	return 0;
-> +}
-> +
-> +static void usb_common_exit(void)
-> +{
-> +	ledtrig_usb_exit();
-> +	debugfs_remove_recursive(usb_debug_root);
-> +}
-> +
-When enable CONFIG_LED_TRIGGER, there is a warning
+From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
- MODPOST vmlinux.o
-WARNING: vmlinux.o(.text+0x68e300): Section mismatch in reference from
-the function usb_common_init() to the
-function .init.text:ledtrig_usb_init()
-The function usb_common_init() references
-the function __init ledtrig_usb_init().
-This is often because usb_common_init lacks a __init
-annotation or the annotation of ledtrig_usb_init is wrong.
+This series are based on 5.2-rc1 and provid 27 patch
+to support mediatek SOC MT8183
 
-WARNING: vmlinux.o(.text+0x68e318): Section mismatch in reference from
-the function usb_common_exit() to the
-function .exit.text:ledtrig_usb_exit()
-The function usb_common_exit() references a function in an exit section.
-Often the function ledtrig_usb_exit() has valid usage outside the exit
-section
-and the fix is to remove the __exit annotation of ledtrig_usb_exit.
+Change since v2
+- fix reviewed issue in v2
+- add mutex node into dts file
 
-seems need add __init and __exit for usb_common_init/exit
+Yongqiang Niu (27):
+  dt-bindings: mediatek: add binding for mt8183 display
+  dt-bindings: mediatek: add ovl_2l description for mt8183 display
+  dt-bindings: mediatek: add ccorr description for mt8183 display
+  dt-bindings: mediatek: add dither description for mt8183 display
+  arm64: dts: add display nodes for mt8183
+  drm/mediatek: add mutex mod into ddp private data
+  drm/mediatek: add mutex mod register offset into ddp private data
+  drm/mediatek: add mutex sof into ddp private data
+  drm/mediatek: add mutex sof register offset into ddp private data
+  drm/mediatek: split DISP_REG_CONFIG_DSI_SEL setting into another use
+    case
+  drm/mediatek: add mmsys private data for ddp path config
+  drm/mediatek: move rdma sout from mtk_ddp_mout_en into
+    mtk_ddp_sout_sel
+  drm/mediatek: add ddp component CCORR
+  drm/mediatek: add commponent OVL_2L0
+  drm/mediatek: add component OVL_2L1
+  drm/mediatek: add component DITHER
+  drm/mediatek: add gmc_bits for ovl private data
+  drm/medaitek: add layer_nr for ovl private data
+  drm/mediatek: add function to background color input select for
+    ovl/ovl_2l direct link
+  drm/mediatek: add background color input select function for
+    ovl/ovl_2l
+  drm/mediatek: add ovl0/ovl_2l0 usecase
+  drm/mediatek: distinguish ovl and ovl_2l by layer_nr
+  drm/mediatek: add connection from ovl0 to ovl_2l0
+  drm/mediatek: add connection from RDMA0 to COLOR0
+  drm/mediatek: add connection from RDMA1 to DSI0
+  drm/mediatek: add clock property check before get it
+  drm/mediatek: add support for mediatek SOC MT8183
 
-> +subsys_initcall(usb_common_init);
-> +module_exit(usb_common_exit);
-> +
->  MODULE_LICENSE("GPL");
-> diff --git a/drivers/usb/common/common.h b/drivers/usb/common/common.h
-> new file mode 100644
-> index 000000000000..424a91316a4b
-> --- /dev/null
-> +++ b/drivers/usb/common/common.h
-> @@ -0,0 +1,14 @@
-> +/* SPDX-License-Identifier: GPL-2.0 */
-> +
-> +#ifndef __LINUX_USB_COMMON_H
-> +#define __LINUX_USB_COMMON_H
-> +
-> +#if defined(CONFIG_USB_LED_TRIG)
-> +void ledtrig_usb_init(void);
-> +void ledtrig_usb_exit(void);
-> +#else
-> +static inline void ledtrig_usb_init(void) { }
-> +static inline void ledtrig_usb_exit(void) { }
-> +#endif
-> +
-> +#endif	/* __LINUX_USB_COMMON_H */
-> diff --git a/drivers/usb/common/led.c b/drivers/usb/common/led.c
-> index 7bd81166b77d..0865dd44a80a 100644
-> --- a/drivers/usb/common/led.c
-> +++ b/drivers/usb/common/led.c
-> @@ -10,6 +10,7 @@
->  #include <linux/init.h>
->  #include <linux/leds.h>
->  #include <linux/usb.h>
-> +#include "common.h"
->  
->  #define BLINK_DELAY 30
->  
-> @@ -36,18 +37,14 @@ void usb_led_activity(enum usb_led_event ev)
->  EXPORT_SYMBOL_GPL(usb_led_activity);
->  
-> 
-> -static int __init ledtrig_usb_init(void)
-> +void __init ledtrig_usb_init(void)
->  {
->  	led_trigger_register_simple("usb-gadget", &ledtrig_usb_gadget);
->  	led_trigger_register_simple("usb-host", &ledtrig_usb_host);
-> -	return 0;
->  }
->  
-> -static void __exit ledtrig_usb_exit(void)
-> +void __exit ledtrig_usb_exit(void)
->  {
->  	led_trigger_unregister_simple(ledtrig_usb_gadget);
->  	led_trigger_unregister_simple(ledtrig_usb_host);
->  }
-> -
-> -module_init(ledtrig_usb_init);
-> -module_exit(ledtrig_usb_exit);
-> diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-> index 7fcb9f782931..5a0df527a8ca 100644
-> --- a/drivers/usb/core/usb.c
-> +++ b/drivers/usb/core/usb.c
-> @@ -1185,19 +1185,17 @@ static struct notifier_block usb_bus_nb = {
->  	.notifier_call = usb_bus_notify,
->  };
->  
-> -struct dentry *usb_debug_root;
-> -EXPORT_SYMBOL_GPL(usb_debug_root);
-> +static struct dentry *usb_devices_root;
->  
->  static void usb_debugfs_init(void)
->  {
-> -	usb_debug_root = debugfs_create_dir("usb", NULL);
-> -	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
-> -			    &usbfs_devices_fops);
-> +	usb_devices_root = debugfs_create_file("devices", 0444, usb_debug_root,
-> +					       NULL, &usbfs_devices_fops);
->  }
->  
->  static void usb_debugfs_cleanup(void)
->  {
-> -	debugfs_remove_recursive(usb_debug_root);
-> +	debugfs_remove(usb_devices_root);
->  }
->  
->  /*
+ .../bindings/display/mediatek/mediatek,disp.txt    |  37 +-
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi           | 114 ++++++
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c            |  80 +++-
+ drivers/gpu/drm/mediatek/mtk_disp_rdma.c           |  12 +
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c            |  42 +-
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.c             | 429 ++++++++++++++++-----
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.h             |   6 +
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c        |  68 ++++
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h        |  23 ++
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c             |  52 +++
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h             |   4 +
+ 11 files changed, 745 insertions(+), 122 deletions(-)
 
+-- 
+1.8.1.1.dirty
 
 
 _______________________________________________
