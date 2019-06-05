@@ -2,56 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BADD135528
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 04:16:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 27A743558A
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 05:07:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OeXX8Dxg+ghPs+6VLKGP3NfK10nku7eaM/XQUeBm8os=; b=alsra4t7vcg13e
-	wAbT4LiaBEpzo8Cot1Go2MfIyrBb3Hj9qKTUK+zv91OfaYbB9ItAFPdy0U0Qx4WlrfwGeNZYrKvs7
-	4J1DZgf9FoagdYbYQJINEXuWreDNgdTHhlN/I3DkC9R7iKegcud0vtBclhXZUi5oqgOLwm4X8VuKK
-	ERRMAyhM0Cz2GZj75Ys1f5HDC2c8nUZeLX6dfFBSnyn7H9W+Upe8vUd7xQJndkafTE9LYpQ13BOFd
-	e8s4oo+gvZK1GSu+073yuiqwhVMwr2wpIy2aVCivHFgeOOL0XQb/FVW2hsHxArdQB+KsxI7dX4gv5
-	Lm+S6pvUTaJHbAXt/D9A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=NPpQmeBjnqhHax/I+dddorItS2fxRzp741HtTAcsRGw=; b=Z7GwOSBL1f9rm9
+	1yD8kB7uyJ+pA7RGWiOyCXPHlBlo8ohgNykD3jtwYu5ElmXgQl1ypRMtX2CSQSNC/TgRRzDHN9ltm
+	9X3UiFIbaP/q03EQh7KislG4gpbL03CD7Cmgx8tHyUPISb5wSho35/L+yLeJCKDzyxWQaWL6oQ1RM
+	kedpizkIhhfvR1bwbk1bcpJVJ8e4hAGAm9ptGq9AjbniNoqCLVugmL9ggDwCA+U45+djjyM0uGzEJ
+	QPWdlM353tmOtdoAF2pB3l54RhoxqGIbysAxUKt5G38Pql7WrergNMIwL2SndBTuiYsdLv/5ZrGwo
+	BHJUsGnPLQLwFRoo6IfQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYLTU-0008Fg-Aq; Wed, 05 Jun 2019 02:16:24 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hYMH2-0007Vh-UA; Wed, 05 Jun 2019 03:07:36 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYLTQ-0008FG-Rf; Wed, 05 Jun 2019 02:16:22 +0000
-X-UUID: 5688d7165b024c7eba6ff20e110d6bf7-20190604
-X-UUID: 5688d7165b024c7eba6ff20e110d6bf7-20190604
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hYMGv-0007QZ-0P; Wed, 05 Jun 2019 03:07:30 +0000
+X-UUID: e59b73a029d9463fb00a2c0dfbf39250-20190604
+X-UUID: e59b73a029d9463fb00a2c0dfbf39250-20190604
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <leilk.liu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1857944710; Tue, 04 Jun 2019 18:16:07 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Jun 2019 19:16:05 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 5 Jun 2019 10:16:00 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 5 Jun 2019 10:15:59 +0800
-Message-ID: <1559700959.8487.78.camel@mhfsdcap03>
-Subject: Re: [PATCH] USB: move usb debugfs directory creation to the usb
- common core
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Date: Wed, 5 Jun 2019 10:15:59 +0800
-In-Reply-To: <20190604115919.GA24346@kroah.com>
-References: <20190604093258.GB30054@kroah.com>
- <20190604115919.GA24346@kroah.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 1934652754; Tue, 04 Jun 2019 19:07:26 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 4 Jun 2019 20:07:24 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 5 Jun 2019 11:07:21 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 5 Jun 2019 11:07:20 +0800
+From: Leilk Liu <leilk.liu@mediatek.com>
+To: Mark Brown <broonie@kernel.org>
+Subject: [PATCH] spi: mediatek: add SPI_LSB_FIRST support
+Date: Wed, 5 Jun 2019 11:07:04 +0800
+Message-ID: <1559704024-5369-1-git-send-email-leilk.liu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190604_191620_900808_4BFD0280 
-X-CRM114-Status: GOOD (  18.27  )
+X-CRM114-CacheID: sfid-20190604_200729_059196_63DACFB5 
+X-CRM114-Status: GOOD (  11.52  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,8 +68,9 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Felipe Balbi <felipe.balbi@linux.intel.com>,
- linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Leilk Liu <leilk.liu@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-spi@vger.kernel.org, fparent@baylibre.com,
  linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
@@ -81,90 +78,71 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-06-04 at 13:59 +0200, Greg Kroah-Hartman wrote:
-> On Tue, Jun 04, 2019 at 11:32:58AM +0200, Greg Kroah-Hartman wrote:
-> > The USB gadget subsystem wants to use the USB debugfs root directory, so
-> > move it to the common "core" USB code so that it is properly initialized
-> > and removed as needed.
-> > 
-> > Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> > 
-> > ---
-> > 
-> > This should be the "correct" version of this, Chunfeng, can you test
-> > this to verify it works for you?
-I'll test it ASAP, thanks a lot
+this patch add SPI_LSB_FIRST feature support.
 
-> > 
-> > 
-> > diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
-> > index 18f5dcf58b0d..3b5e4263ffef 100644
-> > --- a/drivers/usb/common/common.c
-> > +++ b/drivers/usb/common/common.c
-> > @@ -15,6 +15,7 @@
-> >  #include <linux/usb/of.h>
-> >  #include <linux/usb/otg.h>
-> >  #include <linux/of_platform.h>
-> > +#include <linux/debugfs.h>
-> >  
-> >  static const char *const ep_type_names[] = {
-> >  	[USB_ENDPOINT_XFER_CONTROL] = "ctrl",
-> > @@ -291,4 +292,21 @@ struct device *usb_of_get_companion_dev(struct device *dev)
-> >  EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
-> >  #endif
-> >  
-> > +struct dentry *usb_debug_root;
-> > +EXPORT_SYMBOL_GPL(usb_debug_root);
-> > +
-> > +static int usb_common_init(void)
-> > +{
-> > +	usb_debug_root = debugfs_create_dir("usb", NULL);
-> > +	return 0;
-> > +}
-> > +
-> > +static void usb_common_exit(void)
-> > +{
-> > +	debugfs_remove_recursive(usb_debug_root);
-> > +}
-> > +
-> > +module_init(usb_common_init);
-> > +module_exit(usb_common_exit);
-> > +
-> >  MODULE_LICENSE("GPL");
-> > diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-> > index 7fcb9f782931..f3d6b1ab80cb 100644
-> > --- a/drivers/usb/core/usb.c
-> > +++ b/drivers/usb/core/usb.c
-> > @@ -1185,19 +1185,17 @@ static struct notifier_block usb_bus_nb = {
-> >  	.notifier_call = usb_bus_notify,
-> >  };
-> >  
-> > -struct dentry *usb_debug_root;
-> > -EXPORT_SYMBOL_GPL(usb_debug_root);
-> > +static struct dentry *usb_devices_root;
-> >  
-> >  static void usb_debugfs_init(void)
-> >  {
-> > -	usb_debug_root = debugfs_create_dir("usb", NULL);
-> > -	debugfs_create_file("devices", 0444, usb_debug_root, NULL,
-> > -			    &usbfs_devices_fops);
-> > +	usb_devices_root = debugfs_create_file("devices", 0444, usb_debug_root,
-> > +					       NULL, &usbfs_devices_fops);
-> >  }
-> >  
-> >  static void usb_debugfs_cleanup(void)
-> >  {
-> > -	debugfs_remove_recursive(usb_debug_root);
-> > +	debugfs_remove_recursive(usb_devices_root);
-> 
-> That should just be debugfs_remove();
-> 
-> I'll fix it up after someone tests this :)
-> 
-> thanks,
-> 
-> greg k-h
+Signed-off-by: Leilk Liu <leilk.liu@mediatek.com>
+---
+ drivers/spi/spi-mt65xx.c                 |   15 ++++++---------
+ include/linux/platform_data/spi-mt65xx.h |    2 --
+ 2 files changed, 6 insertions(+), 11 deletions(-)
 
+diff --git a/drivers/spi/spi-mt65xx.c b/drivers/spi/spi-mt65xx.c
+index 0cce6f0..7f4dc18 100644
+--- a/drivers/spi/spi-mt65xx.c
++++ b/drivers/spi/spi-mt65xx.c
+@@ -131,8 +131,6 @@ struct mtk_spi {
+  * supplies it.
+  */
+ static const struct mtk_chip_config mtk_default_chip_info = {
+-	.rx_mlsb = 1,
+-	.tx_mlsb = 1,
+ 	.cs_pol = 0,
+ 	.sample_sel = 0,
+ };
+@@ -203,14 +201,13 @@ static int mtk_spi_prepare_message(struct spi_master *master,
+ 		reg_val &= ~SPI_CMD_CPOL;
+ 
+ 	/* set the mlsbx and mlsbtx */
+-	if (chip_config->tx_mlsb)
+-		reg_val |= SPI_CMD_TXMSBF;
+-	else
++	if (spi->mode & SPI_LSB_FIRST) {
+ 		reg_val &= ~SPI_CMD_TXMSBF;
+-	if (chip_config->rx_mlsb)
+-		reg_val |= SPI_CMD_RXMSBF;
+-	else
+ 		reg_val &= ~SPI_CMD_RXMSBF;
++	} else {
++		reg_val |= SPI_CMD_TXMSBF;
++		reg_val |= SPI_CMD_RXMSBF;
++	}
+ 
+ 	/* set the tx/rx endian */
+ #ifdef __LITTLE_ENDIAN
+@@ -607,7 +604,7 @@ static int mtk_spi_probe(struct platform_device *pdev)
+ 
+ 	master->auto_runtime_pm = true;
+ 	master->dev.of_node = pdev->dev.of_node;
+-	master->mode_bits = SPI_CPOL | SPI_CPHA;
++	master->mode_bits = SPI_CPOL | SPI_CPHA | SPI_LSB_FIRST;
+ 
+ 	master->set_cs = mtk_spi_set_cs;
+ 	master->prepare_message = mtk_spi_prepare_message;
+diff --git a/include/linux/platform_data/spi-mt65xx.h b/include/linux/platform_data/spi-mt65xx.h
+index ba4e4bb..8d5df58 100644
+--- a/include/linux/platform_data/spi-mt65xx.h
++++ b/include/linux/platform_data/spi-mt65xx.h
+@@ -14,8 +14,6 @@
+ 
+ /* Board specific platform_data */
+ struct mtk_chip_config {
+-	u32 tx_mlsb;
+-	u32 rx_mlsb;
+ 	u32 cs_pol;
+ 	u32 sample_sel;
+ };
+-- 
+1.7.9.5
 
 
 _______________________________________________
