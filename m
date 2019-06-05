@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D53835BEC
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:47:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C3ED35BF4
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:47:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VZY3nTRR+/JzJZjx2zOpgPt8TgLlTERblqSP9tlHKZU=; b=sKSS6S7X6Rzrcq
-	n4QmD47QwcKTgaEXKPrgBouomqOERRukbMCSJum43kOGbaLTXQgaFu7w/n1wdD5vZjcQHLvdFZiqP
-	pM4cE+YBd2KoeyFSB883jUVAg/VcPVRZabWubIrR/7yXXAPTtJycFoiuuoTpAVTi08e6JDfxI7Wsu
-	ltWnbu/5QDYoCzOb7S0USzd9VdIwC7+32SiH0v6kPfEx8C9fdfT47LQzosZ+SVndWDqkG2gzlXe3M
-	sGyRf8Az1RgeNC+3uBERWKbAVL6lHh9mRF5/qzq0kh3DitunA5QCg8UHiKDL8Wu9haw/jpTVtKZdO
-	2TTf3r3Hjzt4MFGDLk2Q==;
+	List-Owner; bh=xwUObxwFANvcPexvtgVG1VZVNv5/AvGOFXZGHdgUK7Q=; b=uvRCwqsOIqMkkk
+	2brgpUCS3nhQ8JVl4B/tJkhfgh+chxn8Fj+dwf1TfX23p4mxfDGoXmkhDKZjkssBYudciIDagvRV6
+	TKwyDFn5694LHn62cIOiS+jf3MOCMS3Y/4eUgFR9mvUNoqd81zyJWCVgl8jTzt8VOmyO0Edm7x/HI
+	7DwPTQ3hhlkmz0Nj1nBRzaUP/9zEZrUHu9KQ1505Q0fY1VHxNt8LoSvyhHIc8tGHTgbwkQa+ydvSf
+	evWvJ9VctfUtTDkVoj3n54+8Tq98tExBeYv3qMSTO0hdCNrbCqfEnb0zsAV9UXTI3swUHYjCa80vB
+	EaRZXDk6nnHGotP3pM3Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYUNc-0000iL-4b; Wed, 05 Jun 2019 11:46:56 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hYUOB-0001Up-JH; Wed, 05 Jun 2019 11:47:31 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYULy-0006qK-1m; Wed, 05 Jun 2019 11:45:45 +0000
-X-UUID: 80ee22093b5a49eab9004319d96fc254-20190605
-X-UUID: 80ee22093b5a49eab9004319d96fc254-20190605
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hYUMb-0004CU-PK; Wed, 05 Jun 2019 11:46:33 +0000
+X-UUID: b211158e46ca4fdfad516beaf2dde924-20190605
+X-UUID: b211158e46ca4fdfad516beaf2dde924-20190605
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <yongqiang.niu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1657854378; Wed, 05 Jun 2019 03:43:59 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 04:43:58 -0700
+ with ESMTP id 742388613; Wed, 05 Jun 2019 03:44:01 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 5 Jun 2019 04:44:00 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 19:43:56 +0800
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 5 Jun 2019 19:43:57 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 5 Jun 2019 19:43:56 +0800
+ Transport; Wed, 5 Jun 2019 19:43:57 +0800
 From: <yongqiang.niu@mediatek.com>
 To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>, "Rob
  Herring" <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v3, 23/27] drm/mediatek: add connection from ovl0 to ovl_2l0
-Date: Wed, 5 Jun 2019 19:43:02 +0800
-Message-ID: <1559734986-7379-24-git-send-email-yongqiang.niu@mediatek.com>
+Subject: [PATCH v3, 24/27] drm/mediatek: add connection from RDMA0 to COLOR0
+Date: Wed, 5 Jun 2019 19:43:03 +0800
+Message-ID: <1559734986-7379-25-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
 References: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 717D9759EF384F207F34662BAC61A623A0D163772F5D90CAACA60FEA58BAFD452000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_044514_788295_BA715CA1 
-X-CRM114-Status: UNSURE (   9.37  )
+X-CRM114-CacheID: sfid-20190605_044554_145648_5040AF8E 
+X-CRM114-Status: UNSURE (   9.39  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -84,7 +85,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
-This patch add connection from ovl0 to ovl_2l0
+This patch add connection from RDMA0 to COLOR0
 
 Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 ---
@@ -92,16 +93,16 @@ Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-index 872c744..f980826 100644
+index f980826..adafa41 100644
 --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
 +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-@@ -322,6 +322,9 @@ static unsigned int mtk_ddp_mout_en(const struct mtk_mmsys_reg_data *data,
- 	} else if (cur == DDP_COMPONENT_OD1 && next == DDP_COMPONENT_RDMA1) {
- 		*addr = DISP_REG_CONFIG_DISP_OD_MOUT_EN;
- 		value = OD1_MOUT_EN_RDMA1;
-+	} else if (cur == DDP_COMPONENT_OVL0 && next == DDP_COMPONENT_OVL_2L0) {
-+		*addr = DISP_REG_OVL0_MOUT_EN(data);
-+		value = OVL0_MOUT_EN_OVL0_2L;
+@@ -449,6 +449,9 @@ static unsigned int mtk_ddp_sout_sel(const struct mtk_mmsys_reg_data *data,
+ 	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI3) {
+ 		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+ 		value = RDMA2_SOUT_DSI3;
++	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_COLOR0) {
++		*addr = DISP_REG_RDMA0_SOUT_SEL_IN(data);
++		value = DISP_REG_RDMA0_SOUT_COLOR0(data);
  	} else {
  		value = 0;
  	}
