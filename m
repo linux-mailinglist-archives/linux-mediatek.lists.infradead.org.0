@@ -2,56 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 129CF35BF7
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:47:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DC8E035BF9
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Jun 2019 13:48:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Cy/KCsguzIX1nge2TcB1TQg+sg8OCp7iGHMebLEW0YU=; b=ZVIi9e04V1ZIWE
-	5PDJx/ygKnXdUAe0bbo9wrrWuhEKeCGWmTeMBwBZEEKQjR5Of/lkp7c1BucfTQxvT+IdX4SxM34FI
-	F8YvgXsaoGHPFde/F5ZSrGaLgWI2FpIjOA5rC+wpYR7TJpaPyeeBIkJnTtqRaMUg7Xqe885JvZmyO
-	giJOZzdjTLQ1JBoL6+9GKwpYIw+MQgm7QoWaYG5OgnCO666v8eXyfR7mzgE3ab6qN2qyIqhnPCaxj
-	FU2ry1dgD+TZJOAjD6Iis8wFtNlWcMYV5C0zwiqsrhkga1U2w3hAyquh1320Jgha3RdCDKQ0U7Fb4
-	dMzn6Stjh6AOWmtRS4rQ==;
+	List-Owner; bh=Sf7aB4JZ2xW1NfI4Qy9iCeeNQMqAnrZESH1WekUJ+os=; b=SJdPuSRavVGVQi
+	w3yVc7ePRBsmquAAYUDY+6toGePh5XzvsNnFIHOnBWyR9BsZnDSHeHBrP1Qkh7aWzHt/zKWExaQ8l
+	pIXcBeCdeuze2qyymnhl2Y/0XSb+AP/8w5M+efNkYp17Ene5B77KNL5I9GI52MuVJq6HGYZuD35Ri
+	Mnq1vMU19CxMO2Cqn8CAjbhx+rtYDPX0VaI7d5DTy16OQ4BSywDOmxGTN2uv2STsqiV0SGngvNaij
+	nZNm4h6wWgzltMIf2NRxDFc0phWaAZ08TeDYgd8pffh/1vjaDbFsjg1IGAiO+Jb4F0xS7if/mkVj9
+	mC6+GHVDFNo0iTN6kUNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYUOO-0001mE-55; Wed, 05 Jun 2019 11:47:44 +0000
+	id 1hYUOd-000278-PA; Wed, 05 Jun 2019 11:47:59 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYUMl-0004E0-OH; Wed, 05 Jun 2019 11:46:44 +0000
-X-UUID: f7871c69d84c48de8580ae06bb24b86d-20190605
-X-UUID: f7871c69d84c48de8580ae06bb24b86d-20190605
+ id 1hYUNF-0004CU-F2; Wed, 05 Jun 2019 11:47:16 +0000
+X-UUID: 22913bcc205747008858c95915db1710-20190605
+X-UUID: 22913bcc205747008858c95915db1710-20190605
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <yongqiang.niu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 108567563; Wed, 05 Jun 2019 03:44:01 -0800
+ with ESMTP id 667204890; Wed, 05 Jun 2019 03:44:01 -0800
 Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 04:44:00 -0700
+ 15.0.1395.4; Wed, 5 Jun 2019 04:44:01 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 19:43:58 +0800
+ 15.0.1395.4; Wed, 5 Jun 2019 19:43:59 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 5 Jun 2019 19:43:57 +0800
+ Transport; Wed, 5 Jun 2019 19:43:58 +0800
 From: <yongqiang.niu@mediatek.com>
 To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>, "Rob
  Herring" <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v3, 25/27] drm/mediatek: add connection from RDMA1 to DSI0
-Date: Wed, 5 Jun 2019 19:43:04 +0800
-Message-ID: <1559734986-7379-26-git-send-email-yongqiang.niu@mediatek.com>
+Subject: [PATCH v3, 26/27] drm/mediatek: add clock property check before get it
+Date: Wed, 5 Jun 2019 19:43:05 +0800
+Message-ID: <1559734986-7379-27-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
 References: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_044604_137959_CED786AF 
-X-CRM114-Status: UNSURE (   9.58  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190605_044633_990932_C081F351 
+X-CRM114-Status: GOOD (  10.95  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -84,27 +83,34 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
-This patch add connection from RDMA1 to DSI0
+This patch add clock property check before get it
 
 Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 ---
- drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 3 +++
- 1 file changed, 3 insertions(+)
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-index adafa41..9986c61 100644
+index 9986c61..28274d2 100644
 --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
 +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-@@ -452,6 +452,9 @@ static unsigned int mtk_ddp_sout_sel(const struct mtk_mmsys_reg_data *data,
- 	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_COLOR0) {
- 		*addr = DISP_REG_RDMA0_SOUT_SEL_IN(data);
- 		value = DISP_REG_RDMA0_SOUT_COLOR0(data);
-+	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI0) {
-+		*addr = DISP_REG_RDMA1_SOUT_SEL_IN(data);
-+		value = DISP_REG_RDMA1_SOUT_DSI0(data);
- 	} else {
- 		value = 0;
+@@ -689,10 +689,12 @@ static int mtk_ddp_probe(struct platform_device *pdev)
+ 	for (i = 0; i < 10; i++)
+ 		ddp->mutex[i].id = i;
+ 
+-	ddp->clk = devm_clk_get(dev, NULL);
+-	if (IS_ERR(ddp->clk)) {
+-		dev_err(dev, "Failed to get clock\n");
+-		return PTR_ERR(ddp->clk);
++	if (of_find_property(dev->of_node, "clocks", &i)) {
++		ddp->clk = devm_clk_get(dev, NULL);
++		if (IS_ERR(ddp->clk)) {
++			dev_err(dev, "Failed to get clock\n");
++			return PTR_ERR(ddp->clk);
++		}
  	}
+ 
+ 	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 -- 
 1.8.1.1.dirty
 
