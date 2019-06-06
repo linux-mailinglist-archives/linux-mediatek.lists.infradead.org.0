@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 29B9136A35
-	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 04:54:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A632536A8B
+	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 05:47:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=e68njJKXNKCaK0PY0VtttTqyblDxbgnjj+BZJ1B4dNk=; b=gye90p4yN6ArJ1
-	huzDefQz3LW6r4WWQxK06lIypmGFWq8LTlhCw7EW81KKdCCQd/GwBlpEIYAGeFIv/cDaOxQyOXjZA
-	juc5OW8dD79yDogiJbFRVytW/9zEInxLVPBmlvchxPWrMp+WRvcwlKKZVSbZ4RW/NP2EXYCfSa63+
-	Ca0rIzpkyhVm+/YUBfXV0xQK26+RYr6fvK/KGPuZhjd/NI+zOpIYRBYUzNKoqt8X0REQoK5pU1Or3
-	1y/00ty7BjC6yWXbWW0wpLLmTRzeLVXXZDOyoUGWEJw/U9X3oG+dCeozfN6Zy9S3TgE1eVltcXnBE
-	/qZfPzAoj8AF6pUQ2KpQ==;
+	List-Owner; bh=fzqT32Ywla52CQDpkB+91hnzZqd/zTY4UApVMgoIe9g=; b=FTDSMx0+qWsX5u
+	SKsd8GMQa4Lo18FlhbJaxrGh0ZYvcGY1v9ckM3VTkAqBDJg5KPYqstbPFBApxNEKCEBuAYB7aSRgS
+	HCX1a3tvVo3l0ZSCgj+aMNiUy+VTf4D3CL4kywyaNzQKsLleyih3lo756rErOj86oArVlPCQg0RSI
+	f452XfNmpDxsuLKBZf+NOZy2yk/ZAE8c0dsztq/R+RhAnieszmjEEfgdrBiJ7knXsHyR1Kwq8fyk7
+	zqBUM6V0iLLNB4v18WkH5W3eQxos7t3hF86E1SQYU6DPjuVjoXMi+iJr0e8lK6jprRR+a+j0KJq6D
+	5KE/8x+hl+QG0FSzj8jg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYiXa-00070w-UA; Thu, 06 Jun 2019 02:54:10 +0000
+	id 1hYjNJ-0005rD-IG; Thu, 06 Jun 2019 03:47:37 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYiXQ-0006rX-BH; Thu, 06 Jun 2019 02:54:01 +0000
-X-UUID: 7defee9b654a4edea3c52625a89c8023-20190605
-X-UUID: 7defee9b654a4edea3c52625a89c8023-20190605
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1hYjN8-0005kc-Vo; Thu, 06 Jun 2019 03:47:29 +0000
+X-UUID: 8e22625dca8f40ea92a645d11ee52a1e-20190605
+X-UUID: 8e22625dca8f40ea92a645d11ee52a1e-20190605
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1528234389; Wed, 05 Jun 2019 18:53:55 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ with ESMTP id 470237905; Wed, 05 Jun 2019 19:47:19 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 5 Jun 2019 19:53:54 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 6 Jun 2019 10:53:51 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 6 Jun 2019 10:53:51 +0800
-Message-ID: <1559789630.8487.111.camel@mhfsdcap03>
-Subject: Re: [PATCH v6 09/10] usb: roles: add USB Type-B GPIO connector driver
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Andy Shevchenko <andy.shevchenko@gmail.com>
-Date: Thu, 6 Jun 2019 10:53:51 +0800
-In-Reply-To: <CAHp75VcbZwd0e6r38C2x7HLEHLr4oR7TjwdDXnDxRPRs3anwgA@mail.gmail.com>
-References: <1559115828-19146-1-git-send-email-chunfeng.yun@mediatek.com>
- <1559115828-19146-10-git-send-email-chunfeng.yun@mediatek.com>
- <CAHp75VcbZwd0e6r38C2x7HLEHLr4oR7TjwdDXnDxRPRs3anwgA@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ 15.0.1395.4; Wed, 5 Jun 2019 20:47:17 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 6 Jun 2019 11:47:12 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 6 Jun 2019 11:47:12 +0800
+Message-ID: <1559792829.20098.4.camel@mtksdaap41>
+Subject: Re: [PATCH v3, 01/27] dt-bindings: mediatek: add binding for mt8183
+ display
+From: CK Hu <ck.hu@mediatek.com>
+To: <yongqiang.niu@mediatek.com>
+Date: Thu, 6 Jun 2019 11:47:09 +0800
+In-Reply-To: <1559734986-7379-2-git-send-email-yongqiang.niu@mediatek.com>
+References: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
+ <1559734986-7379-2-git-send-email-yongqiang.niu@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190605_195400_690747_D7B632E3 
-X-CRM114-Status: GOOD (  11.33  )
+X-CRM114-CacheID: sfid-20190605_204727_031904_C2532B23 
+X-CRM114-Status: GOOD (  14.42  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -72,47 +72,93 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- devicetree <devicetree@vger.kernel.org>,
- Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>, USB <linux-usb@vger.kernel.org>, Yu
- Chen <chenyu56@huawei.com>, Linux
- Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
- Sridharan <badhri@google.com>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC
- support" <linux-mediatek@lists.infradead.org>, Min Guo <min.guo@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>,
- Li Jun <jun.li@nxp.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-06-05 at 11:45 +0300, Andy Shevchenko wrote:
-> On Wed, May 29, 2019 at 10:44 AM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
-> >
-> > Due to the requirement of usb-connector.txt binding, the old way
-> > using extcon to support USB Dual-Role switch is now deprecated
-> > when use Type-B connector.
-> > This patch introduces a driver of Type-B connector which typically
-> > uses an input GPIO to detect USB ID pin, and try to replace the
-> > function provided by extcon-usb-gpio driver
-> 
-> > +static SIMPLE_DEV_PM_OPS(usb_conn_pm_ops,
-> > +                        usb_conn_suspend, usb_conn_resume);
-> > +
-> > +#define DEV_PMS_OPS (IS_ENABLED(CONFIG_PM_SLEEP) ? &usb_conn_pm_ops : NULL)
-> 
-> Why this macro is needed?
-Want to set .pm as NULL when CONFIG_PM_SLEEP is not enabled.
+Hi, Yongqiang:
 
-Thanks
+On Wed, 2019-06-05 at 19:42 +0800, yongqiang.niu@mediatek.com wrote:
+> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
+> Update device tree binding documention for the display subsystem for
+> Mediatek MT8183 SOCs
+> 
+> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> ---
+>  .../bindings/display/mediatek/mediatek,disp.txt    | 34 +++++++++++++---------
+>  1 file changed, 20 insertions(+), 14 deletions(-)
+> 
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> index 8469de5..70770fe 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> @@ -27,20 +27,20 @@ Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt.
+>  
+>  Required properties (all function blocks):
+>  - compatible: "mediatek,<chip>-disp-<function>", one of
+> -	"mediatek,<chip>-disp-ovl"   - overlay (4 layers, blending, csc)
+> -	"mediatek,<chip>-disp-rdma"  - read DMA / line buffer
+> -	"mediatek,<chip>-disp-wdma"  - write DMA
+> -	"mediatek,<chip>-disp-color" - color processor
+> -	"mediatek,<chip>-disp-aal"   - adaptive ambient light controller
+> -	"mediatek,<chip>-disp-gamma" - gamma correction
+> -	"mediatek,<chip>-disp-merge" - merge streams from two RDMA sources
+> -	"mediatek,<chip>-disp-split" - split stream to two encoders
+> -	"mediatek,<chip>-disp-ufoe"  - data compression engine
+> -	"mediatek,<chip>-dsi"        - DSI controller, see mediatek,dsi.txt
+> -	"mediatek,<chip>-dpi"        - DPI controller, see mediatek,dpi.txt
+> -	"mediatek,<chip>-disp-mutex" - display mutex
+> -	"mediatek,<chip>-disp-od"    - overdrive
+> -  the supported chips are mt2701, mt2712 and mt8173.
+> +	"mediatek,<chip>-disp-ovl"   		- overlay (4 layers, blending, csc)
+> +	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
+> +	"mediatek,<chip>-disp-wdma"  		- write DMA
+> +	"mediatek,<chip>-disp-color" 		- color processor
+> +	"mediatek,<chip>-disp-aal"   		- adaptive ambient light controller
+> +	"mediatek,<chip>-disp-gamma" 		- gamma correction
+> +	"mediatek,<chip>-disp-merge" 		- merge streams from two RDMA sources
+> +	"mediatek,<chip>-disp-split" 		- split stream to two encoders
+> +	"mediatek,<chip>-disp-ufoe"  		- data compression engine
+> +	"mediatek,<chip>-dsi"        		- DSI controller, see mediatek,dsi.txt
+> +	"mediatek,<chip>-dpi"        		- DPI controller, see mediatek,dpi.txt
+> +	"mediatek,<chip>-disp-mutex" 		- display mutex
+> +	"mediatek,<chip>-disp-od"    		- overdrive
+
+I think you add 'tab' because of "add ovl_2l description for mt8183
+display" not "add binding for mt8183 display", so move the 'tab' to the
+related patch.
+
+> +  the supported chips are mt2701, mt2712, mt8173 and mt8183.
+>  - reg: Physical base address and length of the function block register space
+>  - interrupts: The interrupt signal from the function block (required, except for
+>    merge and split function blocks).
+> @@ -71,6 +71,12 @@ mmsys: clock-controller@14000000 {
+>  	#clock-cells = <1>;
+>  };
+>  
+> +display_components: dispsys@14000000 {
+> +		compatible = "mediatek,mt8183-display";
+
+Where do you define "mediatek,mt8183-display"?
+
+Regards,
+CK
+
+> +		reg = <0 0x14000000 0 0x1000>;
+> +		power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+> +};
+> +
+>  ovl0: ovl@1400c000 {
+>  	compatible = "mediatek,mt8173-disp-ovl";
+>  	reg = <0 0x1400c000 0 0x1000>;
 
 
 
