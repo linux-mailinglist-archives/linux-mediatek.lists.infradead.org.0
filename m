@@ -2,67 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 123F637118
-	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 12:00:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0C93F3715D
+	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 12:12:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XtX/87srSxxuTtd79G7GW4ZY91qWimDiIKel7MQrDtE=; b=dnZ/N3mFCDrTXx
-	lqQ8AzX6tkdQMVDm3NDtAhMqWnLdHno7+mXXk8uPH9fBfzBQf5acsLdd1URi+FDSYJEyGjHFX2us4
-	En8iRryyZ0yySuJ7o9KNJzq+PCTYs1Z1EOH20H+0Bk94lackGxmTqJ/Uq2uiVD+DfdehMcj8Zt/DG
-	Jnku0lyHQ6SnvsEEDZM5pv+/JihGHszMI0iX1kbLL2rApHpdaGcOlB5TKK2h3bsqg+QNZ6v4exiNy
-	DSdMRyjE3UJmjdfw9u/SMRKhWUcRWzrs8UkGng8UovawvbI34w7qFshwgPLiY/3WPEkH8y7rn4xlJ
-	iBm3LmhWW9Wg+0rjPKIw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=IxVerRZYTlxBqa/umshR4ljOARJeXFg3PdMFgr+eq6M=; b=fSOD6ja93vrOj1IX4eVRMG7xp
+	hF873N+XDMYh1wSukgZjvVJB3c1oNUXokQQGsDiD1BxBLabKp9ZmrZsnavMgLjrCJ7dtPGJ4WTwI5
+	eCJ4SOTmOhhnhLhZ1vsj6ahqDzmjWFMtN8CuhK2vFb/ythstCMEbRnpiGUO6ghZD9mLBmu5PjUPVK
+	JMyNT0zjtkEvJAG9tjevzU8RzoktivA4mrDM7zM2AIYII+H+oH1uLB7ZmfIWonjOf77aP/7pOQTfL
+	+Ec1rtHjzUJCreYSaq+XgDXiMokeXdHUOC4UsB3KtWtO5N/PsSQ+amXQ9RP7mFZcfLukgo9mpim3f
+	5XWqPlB5Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYpCW-0004rg-NO; Thu, 06 Jun 2019 10:00:52 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hYpNE-0002Iz-Fv; Thu, 06 Jun 2019 10:11:56 +0000
+Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
+ helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYpCT-0004rG-Hk; Thu, 06 Jun 2019 10:00:50 +0000
-X-UUID: 27c29ecb2d3649fd8097b0a51404ad93-20190606
-X-UUID: 27c29ecb2d3649fd8097b0a51404ad93-20190606
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <louis.kuo@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 961695225; Thu, 06 Jun 2019 02:00:46 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 6 Jun 2019 03:00:45 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 6 Jun 2019 18:00:42 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 6 Jun 2019 18:00:42 +0800
-From: Louis Kuo <louis.kuo@mediatek.com>
-To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
- <tfiga@chromium.org>, <keiichiw@chromium.org>, <matthias.bgg@gmail.com>,
- <mchehab@kernel.org>
-Subject: [RFC PATCH V3 4/4] dts: arm64: mt8183: Add sensor interface nodes
-Date: Thu, 6 Jun 2019 18:00:33 +0800
-Message-ID: <1559815233-24796-5-git-send-email-louis.kuo@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1559815233-24796-1-git-send-email-louis.kuo@mediatek.com>
-References: <1559815233-24796-1-git-send-email-louis.kuo@mediatek.com>
+ id 1hYpNA-0002GJ-G7
+ for linux-mediatek@lists.infradead.org; Thu, 06 Jun 2019 10:11:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=newmedia-net.de; s=mikd; 
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
+ bh=C1z1MYsrx/SRpP1spyHjHQ4JV3+0P+ksX3PAEqJ8gyc=; 
+ b=MPv2IOnZsk2mcrlJALBQw+A8TAB5jgJ8qv4vR6tKeNRKyDNElgEd8iqCVd7g1c9jo9f7/vyesj+lKiEHuT7ibb4ySmLx3fHTPdonTCCZDf68pJ0xDH+A/CrlIcQ31dK9ekplGRaOzQumLbrjlgtvAQ9eiQ9ewBxaqQlMEUCcwCk=;
+Subject: Re: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
+To: Ryder Lee <ryder.lee@mediatek.com>, Felix Fietkau <nbd@nbd.name>,
+ Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
+Message-ID: <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
+Date: Thu, 6 Jun 2019 12:11:09 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 745F35D63D56B7E4467BD79ED8DD0542DD4F0EE424B2793DA7791920112282522000:8
-X-MTK: N
+In-Reply-To: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+X-Received: from [212.111.244.1] (helo=[172.29.0.186])
+ by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
+ (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
+ id 1hYpN9-000859-8L; Thu, 06 Jun 2019 12:11:51 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_030049_585905_DBEB13C0 
-X-CRM114-Status: UNSURE (   7.14  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190606_031152_862072_D9B99EE2 
+X-CRM114-Status: GOOD (  15.57  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,54 +72,132 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com, Rynn.Wu@mediatek.com,
- srv_heupstream@mediatek.com, holmes.chiou@mediatek.com,
- Jerry-ch.Chen@mediatek.com, jungo.lin@mediatek.com, sj.huang@mediatek.com,
- yuzhao@chromium.org, linux-mediatek@lists.infradead.org, zwisler@chromium.org,
- Louis Kuo <louis.kuo@mediatek.com>, christie.yu@mediatek.com,
- frederic.chen@mediatek.com, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: Sean Wang <sean.wang@mediatek.com>,
+ Chih-Min Chen <chih-min.Chen@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add nodes for Mediatek's sensor interface device. Sensor interface module
-embedded in Mediatek SOCs, works as a HW camera interface controller
-intended for image and data transmission between cameras and host devices.
+i tested your patch against a qca 9984 chipset using SAE and without 
+encryption. both did not work. the devices are connecting, but no data 
+connection is possible
 
-Signed-off-by: Louis Kuo <louis.kuo@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 75c4881..d98bb3f 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -370,4 +370,19 @@
- 			#clock-cells = <1>;
- 		};
- 	};
-+
-+	seninf: seninf@1a040000 {
-+		compatible = "mediatek,mt8183-seninf";
-+		reg = <0 0x1a040000 0 0x8000>,
-+		      <0 0x11C80000 0 0x6000>;
-+		reg-names = "base_reg", "rx_reg";
-+		interrupts = <GIC_SPI 251 IRQ_TYPE_LEVEL_LOW>;
-+		power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-+		clocks =
-+				<&camsys CLK_CAM_SENINF>, <&topckgen CLK_TOP_MUX_SENINF>;
-+		clock-names =
-+			"CLK_CAM_SENINF", "CLK_TOP_MUX_SENINF";
-+		status = "disabled";
-+		};
-+	};
- };
--- 
-1.9.1
+Sebastian
 
+Am 03.06.2019 um 08:08 schrieb Ryder Lee:
+> Enable NL80211_IFTYPE_MESH_POINT and update its path.
+>
+> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> ---
+> Changes since v3 - fix a wrong expression
+> Changes since v2 - remove unused definitions
+> ---
+>   drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
+>   drivers/net/wireless/mediatek/mt76/mt7615/main.c | 1 +
+>   drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 4 +++-
+>   drivers/net/wireless/mediatek/mt76/mt7615/mcu.h  | 6 ------
+>   4 files changed, 10 insertions(+), 7 deletions(-)
+>
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> index 59f604f3161f..f860af6a42da 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> @@ -133,6 +133,9 @@ static const struct ieee80211_iface_limit if_limits[] = {
+>   	{
+>   		.max = MT7615_MAX_INTERFACES,
+>   		.types = BIT(NL80211_IFTYPE_AP) |
+> +#ifdef CONFIG_MAC80211_MESH
+> +			 BIT(NL80211_IFTYPE_MESH_POINT) |
+> +#endif
+>   			 BIT(NL80211_IFTYPE_STATION)
+>   	}
+>   };
+> @@ -195,6 +198,9 @@ int mt7615_register_device(struct mt7615_dev *dev)
+>   	dev->mt76.antenna_mask = 0xf;
+>   
+>   	wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) |
+> +#ifdef CONFIG_MAC80211_MESH
+> +				 BIT(NL80211_IFTYPE_MESH_POINT) |
+> +#endif
+>   				 BIT(NL80211_IFTYPE_AP);
+>   
+>   	ret = mt76_register_device(&dev->mt76, true, mt7615_rates,
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> index b0bb7cc12385..585e67fa2728 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> @@ -37,6 +37,7 @@ static int get_omac_idx(enum nl80211_iftype type, u32 mask)
+>   
+>   	switch (type) {
+>   	case NL80211_IFTYPE_AP:
+> +	case NL80211_IFTYPE_MESH_POINT:
+>   		/* ap use hw bssid 0 and ext bssid */
+>   		if (~mask & BIT(HW_BSSID_0))
+>   			return HW_BSSID_0;
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> index 43f70195244c..e82297048449 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> @@ -754,6 +754,7 @@ int mt7615_mcu_set_bss_info(struct mt7615_dev *dev,
+>   
+>   	switch (vif->type) {
+>   	case NL80211_IFTYPE_AP:
+> +	case NL80211_IFTYPE_MESH_POINT:
+>   		tx_wlan_idx = mvif->sta.wcid.idx;
+>   		conn_type = CONNECTION_INFRA_AP;
+>   		break;
+> @@ -968,7 +969,7 @@ int mt7615_mcu_add_wtbl(struct mt7615_dev *dev, struct ieee80211_vif *vif,
+>   		.rx_wtbl = {
+>   			.tag = cpu_to_le16(WTBL_RX),
+>   			.len = cpu_to_le16(sizeof(struct wtbl_rx)),
+> -			.rca1 = vif->type != NL80211_IFTYPE_AP,
+> +			.rca1 = vif->type == NL80211_IFTYPE_STATION,
+>   			.rca2 = 1,
+>   			.rv = 1,
+>   		},
+> @@ -1042,6 +1043,7 @@ static void sta_rec_convert_vif_type(enum nl80211_iftype type, u32 *conn_type)
+>   {
+>   	switch (type) {
+>   	case NL80211_IFTYPE_AP:
+> +	case NL80211_IFTYPE_MESH_POINT:
+>   		if (conn_type)
+>   			*conn_type = CONNECTION_INFRA_STA;
+>   		break;
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> index e96efb13fa4d..0915cb735699 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> @@ -105,25 +105,19 @@ enum {
+>   #define STA_TYPE_STA		BIT(0)
+>   #define STA_TYPE_AP		BIT(1)
+>   #define STA_TYPE_ADHOC		BIT(2)
+> -#define STA_TYPE_TDLS		BIT(3)
+>   #define STA_TYPE_WDS		BIT(4)
+>   #define STA_TYPE_BC		BIT(5)
+>   
+>   #define NETWORK_INFRA		BIT(16)
+>   #define NETWORK_P2P		BIT(17)
+>   #define NETWORK_IBSS		BIT(18)
+> -#define NETWORK_MESH		BIT(19)
+> -#define NETWORK_BOW		BIT(20)
+>   #define NETWORK_WDS		BIT(21)
+>   
+>   #define CONNECTION_INFRA_STA	(STA_TYPE_STA | NETWORK_INFRA)
+>   #define CONNECTION_INFRA_AP	(STA_TYPE_AP | NETWORK_INFRA)
+>   #define CONNECTION_P2P_GC	(STA_TYPE_STA | NETWORK_P2P)
+>   #define CONNECTION_P2P_GO	(STA_TYPE_AP | NETWORK_P2P)
+> -#define CONNECTION_MESH_STA	(STA_TYPE_STA | NETWORK_MESH)
+> -#define CONNECTION_MESH_AP	(STA_TYPE_AP | NETWORK_MESH)
+>   #define CONNECTION_IBSS_ADHOC	(STA_TYPE_ADHOC | NETWORK_IBSS)
+> -#define CONNECTION_TDLS		(STA_TYPE_STA | NETWORK_INFRA | STA_TYPE_TDLS)
+>   #define CONNECTION_WDS		(STA_TYPE_WDS | NETWORK_WDS)
+>   #define CONNECTION_INFRA_BC	(STA_TYPE_BC | NETWORK_INFRA)
+>   
 
 _______________________________________________
 Linux-mediatek mailing list
