@@ -2,61 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 12E0137874
-	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 17:46:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E2DB337967
+	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 18:20:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eewtdYZ4ijDc1UwJsV9deueYrJCc/ptWWO72ZUVzrqg=; b=okYOzQw25nqJbs
-	16mMv9mBkUigX30iIDNMckBcHnLIYskUO0J8DtYvtKA92AF8bqVAUXuUXfd3KZI1aIpNhnonptw++
-	odLsabEZNQzUUruRsnRnm5QCRRVAb8aQeJ6c2PA9ZvsqOq/d6n0puDFgU9GIesV7WXzVYvPn7gIU+
-	boVeYlALRaki5UIA5rSm+XPxsUbzyZycMFD3dLUOKx9uzEeQq/sObHwUa4DmaTM9/iqthnsAoxEFm
-	+chbwdLe7BIZ+pVWsyT3WLG1E+KK7AjX0xrIv95+ItAJWq7JF2fQI7X+c+/tyCdZXj5+2Ybz5sSnj
-	ebqXE3v0vOh+8gYWmKKA==;
+	List-Owner; bh=PXDYWHSHRnNv+l32RzqMhp/Tu1tgoDx+Cdmzg5/SGkw=; b=DePg3/6InCAqL7
+	ppfT+OIbpQskGnbT/jeGVF6/DDQK37G0uAQnY3iAKf+IEENFO6tJm0XuqzJzicaeBadsFtNoUR97W
+	9obcHI5ol38amQhbRbehShPmBlJFrQLN9jrkl1KKOxmQwHFDTV4+OG7/fwck/7EEgc/nLWRrZfIWw
+	wCXyjN1bv2b0mmq3rf8cXajDZTmP4mBNBUNwj9L6duXYtiJMbq8VTyRMw85vn/qbd9I0M7aC+kwIH
+	+nzzNcJuIXZ322SFwmxf/oGx/vjiRcOFTMzn397UmnFsvZrvVXXqpN6hovAQIJ1hTlQu5A6OvCmze
+	uZtwYgCtDa5+cVKWsC2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYubH-0002to-HI; Thu, 06 Jun 2019 15:46:47 +0000
-Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
+	id 1hYv7K-0000gz-TH; Thu, 06 Jun 2019 16:19:54 +0000
+Received: from mail-io1-f65.google.com ([209.85.166.65])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYub7-0002kF-KY; Thu, 06 Jun 2019 15:46:40 +0000
-Received: from DGGEMS401-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 4D16868F10A3783AD570;
- Thu,  6 Jun 2019 23:46:18 +0800 (CST)
-Received: from localhost (10.202.226.61) by DGGEMS401-HUB.china.huawei.com
- (10.3.19.201) with Microsoft SMTP Server id 14.3.439.0; Thu, 6 Jun 2019
- 23:46:14 +0800
-Date: Thu, 6 Jun 2019 16:46:00 +0100
-From: Jonathan Cameron <jonathan.cameron@huawei.com>
-To: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-Subject: Re: [PATCH 3/4] iio: adc: mediatek: SET_LATE_SYSTEM_SLEEP_PM_OPS
- support
-Message-ID: <20190606164600.000060b3@huawei.com>
-In-Reply-To: <1559041196.12867.3.camel@mtkswgap22>
-References: <1557994247-16739-1-git-send-email-chun-hung.wu@mediatek.com>
- <1557994247-16739-4-git-send-email-chun-hung.wu@mediatek.com>
- <20190518113527.5210b0bf@archlinux>
- <1558332205.11080.6.camel@mtkswgap22>
- <7838dcae-8a69-0297-718b-a061b14a456d@gmail.com>
- <1559041196.12867.3.camel@mtkswgap22>
-Organization: Huawei
-X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; i686-w64-mingw32)
+ id 1hYv7H-0000gc-6v
+ for linux-mediatek@lists.infradead.org; Thu, 06 Jun 2019 16:19:52 +0000
+Received: by mail-io1-f65.google.com with SMTP id e5so667692iok.4
+ for <linux-mediatek@lists.infradead.org>; Thu, 06 Jun 2019 09:19:48 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=7AZryVPm9WEZf89lWXbEGTDn4y+TgVuIZXrDppDnWmE=;
+ b=PAMO+I2wGrxNWzJMedZfa/jQAklwHBl7SACZ29Yr1KQv6nzLp4wJ70btAiwj648U7Z
+ LAtY07n2sj1eZsA9UvQP2GEiWx5xKGtO4Tjf25YKTEweih1JmjqTRKhcxzc6euPFnEW0
+ 2pCvlLqY2G6XXKNK1sBCqJb0luUs8lJnPx/AMTA3YC11qlLW91RLUnNADAav76UyUwi+
+ U9GkmAYxiko3bh1tpbI5f+lDOJTIDzEKZiq3lMFgwdpHlBiXZml/+JpdGlKUkRXEyHH2
+ XvfNoocnA17o+yjdlavKxcEZgWbnFHeOQ32gPNcEDO2RGKOBu4AxCtkL+iVCWYywClmv
+ A/Hg==
+X-Gm-Message-State: APjAAAVfzE7JTHKB4vK8agnauKRS/FoEN9eoDSNbkeHlOkmTLsnoz8C/
+ EO93JyZQpOvQgquy6Nb8cmj5quWGscJRuQP5OlOD0w==
+X-Google-Smtp-Source: APXvYqyyfL36sLDzC3fGZJuckRuKrOR5/eaCW6vfPOwmumzPutA8k5DseFsUoso4bYVBykjNSQSZmm46G3WbB60v7fA=
+X-Received: by 2002:a05:6602:2006:: with SMTP id
+ y6mr28202284iod.218.1559837988226; 
+ Thu, 06 Jun 2019 09:19:48 -0700 (PDT)
 MIME-Version: 1.0
-X-Originating-IP: [10.202.226.61]
-X-CFilter-Loop: Reflected
+References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+ <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
+In-Reply-To: <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
+From: Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+Date: Thu, 6 Jun 2019 18:19:37 +0200
+Message-ID: <CAJ0CqmVBogQrqf4Gckr5gQ6tCrdZG=p60ZiC+-WW-yxt93+40Q@mail.gmail.com>
+Subject: Re: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
+To: Sebastian Gottschall <s.gottschall@newmedia-net.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_084638_403384_346D8C9E 
-X-CRM114-Status: GOOD (  22.08  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190606_091951_247161_A5F73EEE 
+X-CRM114-Status: GOOD (  18.13  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.35 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.166.65 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.21
@@ -69,107 +74,144 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Lars-Peter Clausen <lars@metafoo.de>, wsd_upstream@mediatek.com,
- linux-iio@vger.kernel.org, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, stanley.chu@mediatek.com,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
- Peter Meerwald-Stadler <pmeerw@pmeerw.net>, Hartmut Knaack <knaack.h@gmx.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, jg_poxu@mediatek.com,
- Jonathan Cameron <jic23@kernel.org>, peter.wang@mediatek.com
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>, YF Luo <yf.luo@mediatek.com>,
+ Chih-Min Chen <chih-min.Chen@mediatek.com>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Sean Wang <sean.wang@mediatek.com>, Roy Luo <royluo@google.com>,
+ Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 28 May 2019 18:59:56 +0800
-Chun-Hung Wu <chun-hung.wu@mediatek.com> wrote:
+>
+> i tested your patch against a qca 9984 chipset using SAE and without
+> encryption. both did not work. the devices are connecting, but no data
+> connection is possible
 
-> Hi Matthias:
-> 
->   Thanks for your suggestion, I think device_links is a good way to
-> make dependency of module's suspend/resume order.
-> 
-> Hi Jonathan:
-> 
->   Is it ok to keep using late_suspend and early_resume, or do you think
-> it's better to use device_links?
-I think device links would be preferable as the reasoning becomes explicit.
-As I understand them they are also a less fragile solution.
+Hi Sebastian,
 
-Thanks,
+I tested Ryder's patch using mt76x2 as mesh peer and it works fine for me.
+Could you please provide some more info?
 
-Jonathan
+Regards,
+Lorenzo
 
-> 
-> Thanks,
-> Chun-Hung
-> On Wed, 2019-05-22 at 18:28 +0200, Matthias Brugger wrote:
-> > 
-> > On 20/05/2019 08:03, Chun-Hung Wu wrote:  
-> > > Hi Jonathan:
-> > > 
-> > >   Thanks for the prompt reply,
-> > > 
-> > > On Sat, 2019-05-18 at 11:35 +0100, Jonathan Cameron wrote:  
-> > >> On Thu, 16 May 2019 16:10:46 +0800
-> > >> Chun-Hung Wu <chun-hung.wu@mediatek.com> wrote:
-> > >>  
-> > >>>   Move suspend/resume to late_suspend and
-> > >>> early_resume to gurantee users can use auxadc  
-> > >> guarantee
-> > >>  
-> > > will fix it in next version.  
-> > >>> driver at suspend/resume stage.  
-> > >> No problem with the patch content, but we need a reason why they may
-> > >> want to do so?  
-> > > Our thermal drivers uses auxadc at suspend/resume stage.
-> > > In order to avoid auxadc suspended prior to thermal driver,
-> > > we move auxadc to late_suspend and early_resume.
-> > >   
-> > 
-> > That sounds like a user of device_links [1] to me.
-> > 
-> > [1] https://www.kernel.org/doc/html/latest/driver-api/device_link.html
-> >   
-> > > Thanks,
-> > > Chun-Hung  
-> > >>
-> > >> Thanks,
-> > >>
-> > >> Jonathan  
-> > >>>
-> > >>> Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-> > >>> ---
-> > >>>  drivers/iio/adc/mt6577_auxadc.c | 7 ++++---
-> > >>>  1 file changed, 4 insertions(+), 3 deletions(-)
-> > >>>
-> > >>> diff --git a/drivers/iio/adc/mt6577_auxadc.c b/drivers/iio/adc/mt6577_auxadc.c
-> > >>> index e1bdcc0..58d7cb2 100644
-> > >>> --- a/drivers/iio/adc/mt6577_auxadc.c
-> > >>> +++ b/drivers/iio/adc/mt6577_auxadc.c
-> > >>> @@ -326,9 +326,10 @@ static int mt6577_auxadc_remove(struct platform_device *pdev)
-> > >>>  	return 0;
-> > >>>  }
-> > >>>  
-> > >>> -static SIMPLE_DEV_PM_OPS(mt6577_auxadc_pm_ops,
-> > >>> -			 mt6577_auxadc_suspend,
-> > >>> -			 mt6577_auxadc_resume);
-> > >>> +static const struct dev_pm_ops mt6577_auxadc_pm_ops = {
-> > >>> +	SET_LATE_SYSTEM_SLEEP_PM_OPS(mt6577_auxadc_suspend,
-> > >>> +				     mt6577_auxadc_resume)
-> > >>> +};
-> > >>>  
-> > >>>  static const struct of_device_id mt6577_auxadc_of_match[] = {
-> > >>>  	{ .compatible = "mediatek,mt2701-auxadc", .data = &mt8173_compat},  
-> > >>  
-> > > 
-> > >   
-> 
-> 
-
-
+>
+>
+> Sebastian
+>
+> Am 03.06.2019 um 08:08 schrieb Ryder Lee:
+> > Enable NL80211_IFTYPE_MESH_POINT and update its path.
+> >
+> > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> > ---
+> > Changes since v3 - fix a wrong expression
+> > Changes since v2 - remove unused definitions
+> > ---
+> >   drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
+> >   drivers/net/wireless/mediatek/mt76/mt7615/main.c | 1 +
+> >   drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 4 +++-
+> >   drivers/net/wireless/mediatek/mt76/mt7615/mcu.h  | 6 ------
+> >   4 files changed, 10 insertions(+), 7 deletions(-)
+> >
+> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > index 59f604f3161f..f860af6a42da 100644
+> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> > @@ -133,6 +133,9 @@ static const struct ieee80211_iface_limit if_limits[] = {
+> >       {
+> >               .max = MT7615_MAX_INTERFACES,
+> >               .types = BIT(NL80211_IFTYPE_AP) |
+> > +#ifdef CONFIG_MAC80211_MESH
+> > +                      BIT(NL80211_IFTYPE_MESH_POINT) |
+> > +#endif
+> >                        BIT(NL80211_IFTYPE_STATION)
+> >       }
+> >   };
+> > @@ -195,6 +198,9 @@ int mt7615_register_device(struct mt7615_dev *dev)
+> >       dev->mt76.antenna_mask = 0xf;
+> >
+> >       wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) |
+> > +#ifdef CONFIG_MAC80211_MESH
+> > +                              BIT(NL80211_IFTYPE_MESH_POINT) |
+> > +#endif
+> >                                BIT(NL80211_IFTYPE_AP);
+> >
+> >       ret = mt76_register_device(&dev->mt76, true, mt7615_rates,
+> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> > index b0bb7cc12385..585e67fa2728 100644
+> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+> > @@ -37,6 +37,7 @@ static int get_omac_idx(enum nl80211_iftype type, u32 mask)
+> >
+> >       switch (type) {
+> >       case NL80211_IFTYPE_AP:
+> > +     case NL80211_IFTYPE_MESH_POINT:
+> >               /* ap use hw bssid 0 and ext bssid */
+> >               if (~mask & BIT(HW_BSSID_0))
+> >                       return HW_BSSID_0;
+> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> > index 43f70195244c..e82297048449 100644
+> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> > @@ -754,6 +754,7 @@ int mt7615_mcu_set_bss_info(struct mt7615_dev *dev,
+> >
+> >       switch (vif->type) {
+> >       case NL80211_IFTYPE_AP:
+> > +     case NL80211_IFTYPE_MESH_POINT:
+> >               tx_wlan_idx = mvif->sta.wcid.idx;
+> >               conn_type = CONNECTION_INFRA_AP;
+> >               break;
+> > @@ -968,7 +969,7 @@ int mt7615_mcu_add_wtbl(struct mt7615_dev *dev, struct ieee80211_vif *vif,
+> >               .rx_wtbl = {
+> >                       .tag = cpu_to_le16(WTBL_RX),
+> >                       .len = cpu_to_le16(sizeof(struct wtbl_rx)),
+> > -                     .rca1 = vif->type != NL80211_IFTYPE_AP,
+> > +                     .rca1 = vif->type == NL80211_IFTYPE_STATION,
+> >                       .rca2 = 1,
+> >                       .rv = 1,
+> >               },
+> > @@ -1042,6 +1043,7 @@ static void sta_rec_convert_vif_type(enum nl80211_iftype type, u32 *conn_type)
+> >   {
+> >       switch (type) {
+> >       case NL80211_IFTYPE_AP:
+> > +     case NL80211_IFTYPE_MESH_POINT:
+> >               if (conn_type)
+> >                       *conn_type = CONNECTION_INFRA_STA;
+> >               break;
+> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> > index e96efb13fa4d..0915cb735699 100644
+> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+> > @@ -105,25 +105,19 @@ enum {
+> >   #define STA_TYPE_STA                BIT(0)
+> >   #define STA_TYPE_AP         BIT(1)
+> >   #define STA_TYPE_ADHOC              BIT(2)
+> > -#define STA_TYPE_TDLS                BIT(3)
+> >   #define STA_TYPE_WDS                BIT(4)
+> >   #define STA_TYPE_BC         BIT(5)
+> >
+> >   #define NETWORK_INFRA               BIT(16)
+> >   #define NETWORK_P2P         BIT(17)
+> >   #define NETWORK_IBSS                BIT(18)
+> > -#define NETWORK_MESH         BIT(19)
+> > -#define NETWORK_BOW          BIT(20)
+> >   #define NETWORK_WDS         BIT(21)
+> >
+> >   #define CONNECTION_INFRA_STA        (STA_TYPE_STA | NETWORK_INFRA)
+> >   #define CONNECTION_INFRA_AP (STA_TYPE_AP | NETWORK_INFRA)
+> >   #define CONNECTION_P2P_GC   (STA_TYPE_STA | NETWORK_P2P)
+> >   #define CONNECTION_P2P_GO   (STA_TYPE_AP | NETWORK_P2P)
+> > -#define CONNECTION_MESH_STA  (STA_TYPE_STA | NETWORK_MESH)
+> > -#define CONNECTION_MESH_AP   (STA_TYPE_AP | NETWORK_MESH)
+> >   #define CONNECTION_IBSS_ADHOC       (STA_TYPE_ADHOC | NETWORK_IBSS)
+> > -#define CONNECTION_TDLS              (STA_TYPE_STA | NETWORK_INFRA | STA_TYPE_TDLS)
+> >   #define CONNECTION_WDS              (STA_TYPE_WDS | NETWORK_WDS)
+> >   #define CONNECTION_INFRA_BC (STA_TYPE_BC | NETWORK_INFRA)
+> >
 
 _______________________________________________
 Linux-mediatek mailing list
