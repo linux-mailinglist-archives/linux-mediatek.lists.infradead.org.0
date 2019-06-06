@@ -2,40 +2,40 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0C93F3715D
-	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 12:12:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 411193716B
+	for <lists+linux-mediatek@lfdr.de>; Thu,  6 Jun 2019 12:14:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
 	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=IxVerRZYTlxBqa/umshR4ljOARJeXFg3PdMFgr+eq6M=; b=fSOD6ja93vrOj1IX4eVRMG7xp
-	hF873N+XDMYh1wSukgZjvVJB3c1oNUXokQQGsDiD1BxBLabKp9ZmrZsnavMgLjrCJ7dtPGJ4WTwI5
-	eCJ4SOTmOhhnhLhZ1vsj6ahqDzmjWFMtN8CuhK2vFb/ythstCMEbRnpiGUO6ghZD9mLBmu5PjUPVK
-	JMyNT0zjtkEvJAG9tjevzU8RzoktivA4mrDM7zM2AIYII+H+oH1uLB7ZmfIWonjOf77aP/7pOQTfL
-	+Ec1rtHjzUJCreYSaq+XgDXiMokeXdHUOC4UsB3KtWtO5N/PsSQ+amXQ9RP7mFZcfLukgo9mpim3f
-	5XWqPlB5Q==;
+	 bh=qJKYVB1gY4j66q5O26s73by0mvPk/BGWMO2vOlSHq5Q=; b=VyFRdpKDBkHpWnJUFYbpfDKhq
+	GvXhh6fkSU7Puugec3X1NDFUjZlRMDydM77Y7i7bcB3kL9U0ZJTHLSUAweSv0iwL8jvS9t40pK3oc
+	sF3JBRM9yQFYbfTa33JkenbFSzBDLILS1X6PwT91lpjuFsGlELOum8zq5FpTdA+cVqJX869uecU1P
+	ObTqB5eheUwNDxt/JUoLZK1uPORot6mqqv8x6LcibfUefPjdDNmtkaAkV/5/4FesmjgOcB3zr8lam
+	UDGbR6BBacTT++G9j9VjxREFQxzBCnM1nJ0joUxXHCRONI3WVHR8bjPfdh8TTLDEHPPAAFxBHolBB
+	/aUfBn/xg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYpNE-0002Iz-Fv; Thu, 06 Jun 2019 10:11:56 +0000
+	id 1hYpQ1-0002dp-9Z; Thu, 06 Jun 2019 10:14:49 +0000
 Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
  helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYpNA-0002GJ-G7
- for linux-mediatek@lists.infradead.org; Thu, 06 Jun 2019 10:11:54 +0000
+ id 1hYpPw-0002dV-MK
+ for linux-mediatek@lists.infradead.org; Thu, 06 Jun 2019 10:14:47 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=newmedia-net.de; s=mikd; 
  h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
- bh=C1z1MYsrx/SRpP1spyHjHQ4JV3+0P+ksX3PAEqJ8gyc=; 
- b=MPv2IOnZsk2mcrlJALBQw+A8TAB5jgJ8qv4vR6tKeNRKyDNElgEd8iqCVd7g1c9jo9f7/vyesj+lKiEHuT7ibb4ySmLx3fHTPdonTCCZDf68pJ0xDH+A/CrlIcQ31dK9ekplGRaOzQumLbrjlgtvAQ9eiQ9ewBxaqQlMEUCcwCk=;
+ bh=IVyG0+asKq/UCG7fsgR27xleEN4h1pxc9HyWAz1Nb+A=; 
+ b=JdlD+A7ZvGDKeJH02nK2YNcVgPjSfugBFOPFlypfOjHjvJoxffzgnRKwsPh/cQ3EPGcGvn+/oAzIzX/I0pwoI6OGuefPKkFJI+Zhuwi3FI5z3PhmGZ+9uBZe9aka0TTDvcuTPWhb874ZXw82QKq3idv0DFZetf9qdp/pXn7vwKA=;
 Subject: Re: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
 To: Ryder Lee <ryder.lee@mediatek.com>, Felix Fietkau <nbd@nbd.name>,
  Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
 References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
 From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Message-ID: <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
-Date: Thu, 6 Jun 2019 12:11:09 +0200
+Message-ID: <a0a6f631-2eb1-87cc-5653-338c6126690c@newmedia-net.de>
+Date: Thu, 6 Jun 2019 12:14:10 +0200
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
  Thunderbird/60.7.0
 MIME-Version: 1.0
@@ -43,10 +43,10 @@ In-Reply-To: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@
 X-Received: from [212.111.244.1] (helo=[172.29.0.186])
  by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
  (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
- id 1hYpN9-000859-8L; Thu, 06 Jun 2019 12:11:51 +0200
+ id 1hYpQ1-0008Bc-SJ; Thu, 06 Jun 2019 12:14:49 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_031152_862072_D9B99EE2 
-X-CRM114-Status: GOOD (  15.57  )
+X-CRM114-CacheID: sfid-20190606_031445_952040_64E1FE9A 
+X-CRM114-Status: GOOD (  15.24  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -77,129 +77,112 @@ Cc: Sean Wang <sean.wang@mediatek.com>,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
  Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
  Roy Luo <royluo@google.com>
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-i tested your patch against a qca 9984 chipset using SAE and without 
-encryption. both did not work. the devices are connecting, but no data 
-connection is possible
-
-
-Sebastian
-
-Am 03.06.2019 um 08:08 schrieb Ryder Lee:
-> Enable NL80211_IFTYPE_MESH_POINT and update its path.
->
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> ---
-> Changes since v3 - fix a wrong expression
-> Changes since v2 - remove unused definitions
-> ---
->   drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
->   drivers/net/wireless/mediatek/mt76/mt7615/main.c | 1 +
->   drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 4 +++-
->   drivers/net/wireless/mediatek/mt76/mt7615/mcu.h  | 6 ------
->   4 files changed, 10 insertions(+), 7 deletions(-)
->
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> index 59f604f3161f..f860af6a42da 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
-> @@ -133,6 +133,9 @@ static const struct ieee80211_iface_limit if_limits[] = {
->   	{
->   		.max = MT7615_MAX_INTERFACES,
->   		.types = BIT(NL80211_IFTYPE_AP) |
-> +#ifdef CONFIG_MAC80211_MESH
-> +			 BIT(NL80211_IFTYPE_MESH_POINT) |
-> +#endif
->   			 BIT(NL80211_IFTYPE_STATION)
->   	}
->   };
-> @@ -195,6 +198,9 @@ int mt7615_register_device(struct mt7615_dev *dev)
->   	dev->mt76.antenna_mask = 0xf;
->   
->   	wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) |
-> +#ifdef CONFIG_MAC80211_MESH
-> +				 BIT(NL80211_IFTYPE_MESH_POINT) |
-> +#endif
->   				 BIT(NL80211_IFTYPE_AP);
->   
->   	ret = mt76_register_device(&dev->mt76, true, mt7615_rates,
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> index b0bb7cc12385..585e67fa2728 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> @@ -37,6 +37,7 @@ static int get_omac_idx(enum nl80211_iftype type, u32 mask)
->   
->   	switch (type) {
->   	case NL80211_IFTYPE_AP:
-> +	case NL80211_IFTYPE_MESH_POINT:
->   		/* ap use hw bssid 0 and ext bssid */
->   		if (~mask & BIT(HW_BSSID_0))
->   			return HW_BSSID_0;
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> index 43f70195244c..e82297048449 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> @@ -754,6 +754,7 @@ int mt7615_mcu_set_bss_info(struct mt7615_dev *dev,
->   
->   	switch (vif->type) {
->   	case NL80211_IFTYPE_AP:
-> +	case NL80211_IFTYPE_MESH_POINT:
->   		tx_wlan_idx = mvif->sta.wcid.idx;
->   		conn_type = CONNECTION_INFRA_AP;
->   		break;
-> @@ -968,7 +969,7 @@ int mt7615_mcu_add_wtbl(struct mt7615_dev *dev, struct ieee80211_vif *vif,
->   		.rx_wtbl = {
->   			.tag = cpu_to_le16(WTBL_RX),
->   			.len = cpu_to_le16(sizeof(struct wtbl_rx)),
-> -			.rca1 = vif->type != NL80211_IFTYPE_AP,
-> +			.rca1 = vif->type == NL80211_IFTYPE_STATION,
->   			.rca2 = 1,
->   			.rv = 1,
->   		},
-> @@ -1042,6 +1043,7 @@ static void sta_rec_convert_vif_type(enum nl80211_iftype type, u32 *conn_type)
->   {
->   	switch (type) {
->   	case NL80211_IFTYPE_AP:
-> +	case NL80211_IFTYPE_MESH_POINT:
->   		if (conn_type)
->   			*conn_type = CONNECTION_INFRA_STA;
->   		break;
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-> index e96efb13fa4d..0915cb735699 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
-> @@ -105,25 +105,19 @@ enum {
->   #define STA_TYPE_STA		BIT(0)
->   #define STA_TYPE_AP		BIT(1)
->   #define STA_TYPE_ADHOC		BIT(2)
-> -#define STA_TYPE_TDLS		BIT(3)
->   #define STA_TYPE_WDS		BIT(4)
->   #define STA_TYPE_BC		BIT(5)
->   
->   #define NETWORK_INFRA		BIT(16)
->   #define NETWORK_P2P		BIT(17)
->   #define NETWORK_IBSS		BIT(18)
-> -#define NETWORK_MESH		BIT(19)
-> -#define NETWORK_BOW		BIT(20)
->   #define NETWORK_WDS		BIT(21)
->   
->   #define CONNECTION_INFRA_STA	(STA_TYPE_STA | NETWORK_INFRA)
->   #define CONNECTION_INFRA_AP	(STA_TYPE_AP | NETWORK_INFRA)
->   #define CONNECTION_P2P_GC	(STA_TYPE_STA | NETWORK_P2P)
->   #define CONNECTION_P2P_GO	(STA_TYPE_AP | NETWORK_P2P)
-> -#define CONNECTION_MESH_STA	(STA_TYPE_STA | NETWORK_MESH)
-> -#define CONNECTION_MESH_AP	(STA_TYPE_AP | NETWORK_MESH)
->   #define CONNECTION_IBSS_ADHOC	(STA_TYPE_ADHOC | NETWORK_IBSS)
-> -#define CONNECTION_TDLS		(STA_TYPE_STA | NETWORK_INFRA | STA_TYPE_TDLS)
->   #define CONNECTION_WDS		(STA_TYPE_WDS | NETWORK_WDS)
->   #define CONNECTION_INFRA_BC	(STA_TYPE_BC | NETWORK_INFRA)
->   
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+aW4gYWRkaXRpb24geW91IHNob3VsZCB0YWtlIGNhcmUgYWJvdXQgdGhpcyBwcm9ibGVtIHdoaWNo
+IGlzIHJhaXNlZCB1cCAKaWYgU0FFIGlzIHVzZWQuIHNpbmNlIEFFUy1DTUFDIHJlcXVpcmVkIHRp
+ZCB0byBiZSBub24gemVybwoKV0FSTklORzogQ1BVOiAyIFBJRDogMTUzMjQgYXQgCi9ob21lL3Nl
+Zy9ERVYvbXQ3NjIxL3NyYy9yb3V0ZXIvcHJpdmF0ZS9jb21wYXQtd2lyZWxlc3MtMjAxNy0wOS0w
+My9uZXQvbWFjODAyMTEva2V5LmM6MTA5NiAKbXQ3Nl93Y2lkX2tleV9zZXR1cCsweDU4LzB4OWMg
+W210NzZdCk1vZHVsZXMgbGlua2VkIGluOiBzaG9ydGN1dF9mZSBnY20gZ2hhc2hfZ2VuZXJpYyBj
+dHIgZ2YxMjhtdWwgbXQ3NjE1ZSAKbXQ3NiBtYWM4MDIxMSBjb21wYXQKQ1BVOiAyIFBJRDogMTUz
+MjQgQ29tbTogd3BhX3N1cHBsaWNhbnQgVGFpbnRlZDogR8KgwqDCoMKgwqDCoMKgIFcgNC4xNC4x
+MjMgIzEwNgpTdGFjayA6IDAwMDAwMDAwIDg3YzJkMDAwIDAwMDAwMDAwIDgwMDdkOGI0IDgwNDgw
+MDAwIDgwNDgyYjljIDgwNjEwMDAwIAo4MDVhNDM5MAogwqDCoMKgwqDCoMKgwqAgODA1N2UyYjQg
+ODU0ZmI5OWMgODdlZDA0NWMgODA1ZTQ3NjcgODA1NzgyODggMDAwMDAwMDEgODU0ZmI5NDAgCjgw
+NWU5Zjc4CiDCoMKgwqDCoMKgwqDCoCAwMDAwMDAwMCAwMDAwMDAwMCA4MDY0MDAwMCAwMDAwMDAw
+MCA4MTE0N2JiOCAwMDAwMDU4NCAwMDAwMDAwNyAKMDAwMDAwMDAKIMKgwqDCoMKgwqDCoMKgIDAw
+MDAwMDAwIDgwNjUwMDAwIDgwNjUwMDAwIDIwMjAyMDIwIDgwMDAwMDAwIDAwMDAwMDAwIDgwNjEw
+MDAwIAo4NzJiOWZlMAogwqDCoMKgwqDCoMKgwqAgODcyYTJiMTQgMDAwMDA0NDggMDAwMDAwMDAg
+ODdjMmQwMDAgMDAwMDAwMTAgODAyMmQ2NjAgMDAwMDAwMDggCjgwNjQwMDA4CiDCoMKgwqDCoMKg
+wqDCoCAuLi4KQ2FsbCBUcmFjZToKWzw4MDAxNTNlMD5dIHNob3dfc3RhY2srMHg1OC8weDEwMApb
+PDgwNDJlODNjPl0gZHVtcF9zdGFjaysweDljLzB4ZTAKWzw4MDAzNDlmMD5dIF9fd2FybisweGU0
+LzB4MTQ0Cls8ODAwMzQ2OGM+XSB3YXJuX3Nsb3dwYXRoX251bGwrMHgxYy8weDMwCls8ODcyYjlm
+ZTA+XSBtdDc2X3djaWRfa2V5X3NldHVwKzB4NTgvMHg5YyBbbXQ3Nl0KWzw4NzYxMTY5MD5dIG10
+NzYxNV9lZXByb21faW5pdCsweDdiNC8weGU5YyBbbXQ3NjE1ZV0KLS0tWyBlbmQgdHJhY2UgZTI0
+YWViNGI1NDJlMGRlYSBdLS0tCgpBbSAwMy4wNi4yMDE5IHVtIDA4OjA4IHNjaHJpZWIgUnlkZXIg
+TGVlOgo+IEVuYWJsZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5UIGFuZCB1cGRhdGUgaXRzIHBh
+dGguCj4KPiBTaWduZWQtb2ZmLWJ5OiBSeWRlciBMZWUgPHJ5ZGVyLmxlZUBtZWRpYXRlay5jb20+
+Cj4gLS0tCj4gQ2hhbmdlcyBzaW5jZSB2MyAtIGZpeCBhIHdyb25nIGV4cHJlc3Npb24KPiBDaGFu
+Z2VzIHNpbmNlIHYyIC0gcmVtb3ZlIHVudXNlZCBkZWZpbml0aW9ucwo+IC0tLQo+ICAgZHJpdmVy
+cy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvaW5pdC5jIHwgNiArKysrKysKPiAg
+IGRyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21haW4uYyB8IDEgKwo+
+ICAgZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmMgIHwgNCAr
+KystCj4gICBkcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuaCAg
+fCA2IC0tLS0tLQo+ICAgNCBmaWxlcyBjaGFuZ2VkLCAxMCBpbnNlcnRpb25zKCspLCA3IGRlbGV0
+aW9ucygtKQo+Cj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210
+NzYvbXQ3NjE1L2luaXQuYyBiL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3
+NjE1L2luaXQuYwo+IGluZGV4IDU5ZjYwNGYzMTYxZi4uZjg2MGFmNmE0MmRhIDEwMDY0NAo+IC0t
+LSBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L2luaXQuYwo+ICsr
+KyBiL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L2luaXQuYwo+IEBA
+IC0xMzMsNiArMTMzLDkgQEAgc3RhdGljIGNvbnN0IHN0cnVjdCBpZWVlODAyMTFfaWZhY2VfbGlt
+aXQgaWZfbGltaXRzW10gPSB7Cj4gICAJewo+ICAgCQkubWF4ID0gTVQ3NjE1X01BWF9JTlRFUkZB
+Q0VTLAo+ICAgCQkudHlwZXMgPSBCSVQoTkw4MDIxMV9JRlRZUEVfQVApIHwKPiArI2lmZGVmIENP
+TkZJR19NQUM4MDIxMV9NRVNICj4gKwkJCSBCSVQoTkw4MDIxMV9JRlRZUEVfTUVTSF9QT0lOVCkg
+fAo+ICsjZW5kaWYKPiAgIAkJCSBCSVQoTkw4MDIxMV9JRlRZUEVfU1RBVElPTikKPiAgIAl9Cj4g
+ICB9Owo+IEBAIC0xOTUsNiArMTk4LDkgQEAgaW50IG10NzYxNV9yZWdpc3Rlcl9kZXZpY2Uoc3Ry
+dWN0IG10NzYxNV9kZXYgKmRldikKPiAgIAlkZXYtPm10NzYuYW50ZW5uYV9tYXNrID0gMHhmOwo+
+ICAgCj4gICAJd2lwaHktPmludGVyZmFjZV9tb2RlcyA9IEJJVChOTDgwMjExX0lGVFlQRV9TVEFU
+SU9OKSB8Cj4gKyNpZmRlZiBDT05GSUdfTUFDODAyMTFfTUVTSAo+ICsJCQkJIEJJVChOTDgwMjEx
+X0lGVFlQRV9NRVNIX1BPSU5UKSB8Cj4gKyNlbmRpZgo+ICAgCQkJCSBCSVQoTkw4MDIxMV9JRlRZ
+UEVfQVApOwo+ICAgCj4gICAJcmV0ID0gbXQ3Nl9yZWdpc3Rlcl9kZXZpY2UoJmRldi0+bXQ3Niwg
+dHJ1ZSwgbXQ3NjE1X3JhdGVzLAo+IGRpZmYgLS1naXQgYS9kcml2ZXJzL25ldC93aXJlbGVzcy9t
+ZWRpYXRlay9tdDc2L210NzYxNS9tYWluLmMgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRl
+ay9tdDc2L210NzYxNS9tYWluLmMKPiBpbmRleCBiMGJiN2NjMTIzODUuLjU4NWU2N2ZhMjcyOCAx
+MDA2NDQKPiAtLS0gYS9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9t
+YWluLmMKPiArKysgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9t
+YWluLmMKPiBAQCAtMzcsNiArMzcsNyBAQCBzdGF0aWMgaW50IGdldF9vbWFjX2lkeChlbnVtIG5s
+ODAyMTFfaWZ0eXBlIHR5cGUsIHUzMiBtYXNrKQo+ICAgCj4gICAJc3dpdGNoICh0eXBlKSB7Cj4g
+ICAJY2FzZSBOTDgwMjExX0lGVFlQRV9BUDoKPiArCWNhc2UgTkw4MDIxMV9JRlRZUEVfTUVTSF9Q
+T0lOVDoKPiAgIAkJLyogYXAgdXNlIGh3IGJzc2lkIDAgYW5kIGV4dCBic3NpZCAqLwo+ICAgCQlp
+ZiAofm1hc2sgJiBCSVQoSFdfQlNTSURfMCkpCj4gICAJCQlyZXR1cm4gSFdfQlNTSURfMDsKPiBk
+aWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1
+LmMgYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuYwo+IGlu
+ZGV4IDQzZjcwMTk1MjQ0Yy4uZTgyMjk3MDQ4NDQ5IDEwMDY0NAo+IC0tLSBhL2RyaXZlcnMvbmV0
+L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21jdS5jCj4gKysrIGIvZHJpdmVycy9uZXQv
+d2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmMKPiBAQCAtNzU0LDYgKzc1NCw3IEBA
+IGludCBtdDc2MTVfbWN1X3NldF9ic3NfaW5mbyhzdHJ1Y3QgbXQ3NjE1X2RldiAqZGV2LAo+ICAg
+Cj4gICAJc3dpdGNoICh2aWYtPnR5cGUpIHsKPiAgIAljYXNlIE5MODAyMTFfSUZUWVBFX0FQOgo+
+ICsJY2FzZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5UOgo+ICAgCQl0eF93bGFuX2lkeCA9IG12
+aWYtPnN0YS53Y2lkLmlkeDsKPiAgIAkJY29ubl90eXBlID0gQ09OTkVDVElPTl9JTkZSQV9BUDsK
+PiAgIAkJYnJlYWs7Cj4gQEAgLTk2OCw3ICs5NjksNyBAQCBpbnQgbXQ3NjE1X21jdV9hZGRfd3Ri
+bChzdHJ1Y3QgbXQ3NjE1X2RldiAqZGV2LCBzdHJ1Y3QgaWVlZTgwMjExX3ZpZiAqdmlmLAo+ICAg
+CQkucnhfd3RibCA9IHsKPiAgIAkJCS50YWcgPSBjcHVfdG9fbGUxNihXVEJMX1JYKSwKPiAgIAkJ
+CS5sZW4gPSBjcHVfdG9fbGUxNihzaXplb2Yoc3RydWN0IHd0YmxfcngpKSwKPiAtCQkJLnJjYTEg
+PSB2aWYtPnR5cGUgIT0gTkw4MDIxMV9JRlRZUEVfQVAsCj4gKwkJCS5yY2ExID0gdmlmLT50eXBl
+ID09IE5MODAyMTFfSUZUWVBFX1NUQVRJT04sCj4gICAJCQkucmNhMiA9IDEsCj4gICAJCQkucnYg
+PSAxLAo+ICAgCQl9LAo+IEBAIC0xMDQyLDYgKzEwNDMsNyBAQCBzdGF0aWMgdm9pZCBzdGFfcmVj
+X2NvbnZlcnRfdmlmX3R5cGUoZW51bSBubDgwMjExX2lmdHlwZSB0eXBlLCB1MzIgKmNvbm5fdHlw
+ZSkKPiAgIHsKPiAgIAlzd2l0Y2ggKHR5cGUpIHsKPiAgIAljYXNlIE5MODAyMTFfSUZUWVBFX0FQ
+Ogo+ICsJY2FzZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5UOgo+ICAgCQlpZiAoY29ubl90eXBl
+KQo+ICAgCQkJKmNvbm5fdHlwZSA9IENPTk5FQ1RJT05fSU5GUkFfU1RBOwo+ICAgCQlicmVhazsK
+PiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUv
+bWN1LmggYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuaAo+
+IGluZGV4IGU5NmVmYjEzZmE0ZC4uMDkxNWNiNzM1Njk5IDEwMDY0NAo+IC0tLSBhL2RyaXZlcnMv
+bmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21jdS5oCj4gKysrIGIvZHJpdmVycy9u
+ZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmgKPiBAQCAtMTA1LDI1ICsxMDUs
+MTkgQEAgZW51bSB7Cj4gICAjZGVmaW5lIFNUQV9UWVBFX1NUQQkJQklUKDApCj4gICAjZGVmaW5l
+IFNUQV9UWVBFX0FQCQlCSVQoMSkKPiAgICNkZWZpbmUgU1RBX1RZUEVfQURIT0MJCUJJVCgyKQo+
+IC0jZGVmaW5lIFNUQV9UWVBFX1RETFMJCUJJVCgzKQo+ICAgI2RlZmluZSBTVEFfVFlQRV9XRFMJ
+CUJJVCg0KQo+ICAgI2RlZmluZSBTVEFfVFlQRV9CQwkJQklUKDUpCj4gICAKPiAgICNkZWZpbmUg
+TkVUV09SS19JTkZSQQkJQklUKDE2KQo+ICAgI2RlZmluZSBORVRXT1JLX1AyUAkJQklUKDE3KQo+
+ICAgI2RlZmluZSBORVRXT1JLX0lCU1MJCUJJVCgxOCkKPiAtI2RlZmluZSBORVRXT1JLX01FU0gJ
+CUJJVCgxOSkKPiAtI2RlZmluZSBORVRXT1JLX0JPVwkJQklUKDIwKQo+ICAgI2RlZmluZSBORVRX
+T1JLX1dEUwkJQklUKDIxKQo+ICAgCj4gICAjZGVmaW5lIENPTk5FQ1RJT05fSU5GUkFfU1RBCShT
+VEFfVFlQRV9TVEEgfCBORVRXT1JLX0lORlJBKQo+ICAgI2RlZmluZSBDT05ORUNUSU9OX0lORlJB
+X0FQCShTVEFfVFlQRV9BUCB8IE5FVFdPUktfSU5GUkEpCj4gICAjZGVmaW5lIENPTk5FQ1RJT05f
+UDJQX0dDCShTVEFfVFlQRV9TVEEgfCBORVRXT1JLX1AyUCkKPiAgICNkZWZpbmUgQ09OTkVDVElP
+Tl9QMlBfR08JKFNUQV9UWVBFX0FQIHwgTkVUV09SS19QMlApCj4gLSNkZWZpbmUgQ09OTkVDVElP
+Tl9NRVNIX1NUQQkoU1RBX1RZUEVfU1RBIHwgTkVUV09SS19NRVNIKQo+IC0jZGVmaW5lIENPTk5F
+Q1RJT05fTUVTSF9BUAkoU1RBX1RZUEVfQVAgfCBORVRXT1JLX01FU0gpCj4gICAjZGVmaW5lIENP
+Tk5FQ1RJT05fSUJTU19BREhPQwkoU1RBX1RZUEVfQURIT0MgfCBORVRXT1JLX0lCU1MpCj4gLSNk
+ZWZpbmUgQ09OTkVDVElPTl9URExTCQkoU1RBX1RZUEVfU1RBIHwgTkVUV09SS19JTkZSQSB8IFNU
+QV9UWVBFX1RETFMpCj4gICAjZGVmaW5lIENPTk5FQ1RJT05fV0RTCQkoU1RBX1RZUEVfV0RTIHwg
+TkVUV09SS19XRFMpCj4gICAjZGVmaW5lIENPTk5FQ1RJT05fSU5GUkFfQkMJKFNUQV9UWVBFX0JD
+IHwgTkVUV09SS19JTkZSQSkKPiAgIAoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVr
+QGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9s
+aXN0aW5mby9saW51eC1tZWRpYXRlawo=
