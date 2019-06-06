@@ -2,52 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E998238164
-	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 00:58:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E1DD03816E
+	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 00:59:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:Subject:From:To:
 	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Baj4nKssEAbYunX1jQ11X5K2DZgiuT/snjZamKxb54M=; b=ajFOK5GJL86j7Q
-	f2W4oJ37M1AOm065F50SaXxI3982ZSf1RAy7Z+BmKhAKy/h+VnakauLqowPlu/zr/fed8uLhFEy4j
-	XbBlVw6f2nsP4GSs2eoL2jgUsSlghOl4eyJyqitS/V20NQC8Y+0rfip+fkSnfK2S58kt/9MbS1WO8
-	8Jl3NOTsJ+B654Dg/fsam5t3seHqCc9Ddm4JOvZbXiorDXPMF1KOueIP9I7W98kKnTaxBDNA1FtWG
-	ZB1uxrdeDCOVtbDaFrYrUV4uG7tAJZA5J0knx3mkVfGpoye70N9uOcdtb1F0VpbS6TiuociJV8/SA
-	mvxTHPUd8H/a0j/uRegA==;
+	List-Owner; bh=X9Bcm79GJLt81MTcRn+m6FnuYe6T6Jh37t0aV/g6udc=; b=AbA83cjFQUmWaY
+	gmt2FU/LVaWVr2GzYsiGhZyMDECEFoafB10lQTWWlDFwzovfyf2CfgcTW9PR63qAg7CAh3HYciPza
+	DFw6H87YzagP5oEww8tz1oaNGfczwFQMEDLWre9k+VHVG1pU8HEiz/4EkCzsEFkabaSUwR9lfp43y
+	BMu8bRubSeC1NJ35LO/QQxd0D108Ce8obQ/tPX74f66gDiRU7qumDK93gX6Blltzc5zpVzXez0OGV
+	6bXsXyZvMt1a5G/8CWI/ayyAPCM4f7PSnvvdNlQfErI4NmBx330/NVgQVhBzjm11zWcLOjrJAPYJn
+	eWKZVJbESgp7fHpZ773w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hZ1KY-0004X5-Ur; Thu, 06 Jun 2019 22:57:59 +0000
+	id 1hZ1Lp-0004xC-MA; Thu, 06 Jun 2019 22:59:18 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hZ1JD-0004Kc-LF; Thu, 06 Jun 2019 22:56:38 +0000
+ id 1hZ1Jz-0004UL-Oj; Thu, 06 Jun 2019 22:57:43 +0000
 Received: from kernel.org (unknown [104.132.0.74])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 45EE32089E;
- Thu,  6 Jun 2019 22:56:32 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id F3F3A2089E;
+ Thu,  6 Jun 2019 22:57:21 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1559861792;
- bh=E9bmdThWnZM5wjGabhY6OrvCZOTpZUpOafsqSHjs9Ys=;
+ s=default; t=1559861842;
+ bh=SbcmLhRUMEcKE2G1wyLK7KO1wG+abbZtFt5UzD5yYPM=;
  h=In-Reply-To:References:To:From:Subject:Cc:Date:From;
- b=1hvEr86WkE0f1Yq9Z/8HZ5ecFcIGHEmS55k3uZCRfL3j2BEhI0D4/CGyT3wZbBOJT
- p05+xotlO1lU8rbyQ98+T942EtW2xoEx0Ad5JE+oNxT5oI+BQxNfw5NFkC7FWk/zBV
- 4kVXW0eXIMypcY8YrNOajUZEngWqu7TCRRnESJs4=
+ b=fLZhLm4O0ZRtATNhW6LC8DXAUlbFw6Hdz13pkrUZtvPnELiNLq2VReUt+CngNwlGD
+ knziL1f0OQGfjCRdXxjd2806IfTPb5FK3Bqi+Iypc9kJPU2k3iD6SJOu/EVG9uOHqL
+ /MBIOc9pI1yZaqRGKB3VCU/QwOE9nbYVyujz1y3E=
 MIME-Version: 1.0
-In-Reply-To: <20190502121843.14493-1-fparent@baylibre.com>
+In-Reply-To: <20190502121843.14493-2-fparent@baylibre.com>
 References: <20190502121843.14493-1-fparent@baylibre.com>
+ <20190502121843.14493-2-fparent@baylibre.com>
 To: Fabien Parent <fparent@baylibre.com>, mark.rutland@arm.com,
  matthias.bgg@gmail.com, mturquette@baylibre.com, robh+dt@kernel.org,
  ryder.lee@mediatek.com, sean.wang@mediatek.com, wenzhen.yu@mediatek.com
 From: Stephen Boyd <sboyd@kernel.org>
-Subject: Re: [PATCH 1/2] dt-bindings: mediatek: audsys: add support for MT8516
+Subject: Re: [PATCH 2/2] clk: mediatek: add audsys clock driver for MT8516
 User-Agent: alot/0.8.1
-Date: Thu, 06 Jun 2019 15:56:31 -0700
-Message-Id: <20190606225632.45EE32089E@mail.kernel.org>
+Date: Thu, 06 Jun 2019 15:57:21 -0700
+Message-Id: <20190606225721.F3F3A2089E@mail.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_155635_766345_A862F4AB 
-X-CRM114-Status: UNSURE (   5.52  )
+X-CRM114-CacheID: sfid-20190606_155728_928848_FEC133CC 
+X-CRM114-Status: UNSURE (   4.98  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -85,8 +86,8 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Fabien Parent (2019-05-02 05:18:42)
-> Add AUDSYS device tree bindings documentation for MediaTek MT8516 SoC.
+Quoting Fabien Parent (2019-05-02 05:18:43)
+> Add audsys clock driver for MediaTek MT8516 SoC.
 > 
 > Signed-off-by: Fabien Parent <fparent@baylibre.com>
 > ---
