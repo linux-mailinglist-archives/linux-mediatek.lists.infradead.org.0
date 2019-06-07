@@ -2,66 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B2DAA38415
-	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 08:04:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 42DE1387F3
+	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 12:30:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:In-Reply-To:
+	Content-Type:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To
+	:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=uVAMMp8dJ0KSHwISrdhcH+L8HhOUpQwQrqD9PIkPEhs=; b=ArBIBIKuXuDAKYoGM51/gb1/7
-	TIWQY8vN55wahQbIWAQ7EFLLqcQvGtJiPZcWmZFcdbBPuhQWNf0X3oIHF15FtPm8T4y9feu1oWrD2
-	JIUNB8/hAlMdDP8d6yrREHuzUwgEm2joMAypCwq6M1iUpYE0edtvUuCYDa7hKTCfBCFOquwJKpccu
-	+N9b3lb430h89esdGdTqL871TrAGVih/v5fJymKOxraK+GFROqd5Qg9hAn3mLEve+146xIY9ya3iR
-	Az+oucg1MunJ0zUoQvCSjv30h8Tt/ZZUKD6t7rgD6hElbyY7Iqkv0pIapJbH0ZqZ+abGQ3ERoSEL8
-	HjUpwOomw==;
+	 bh=Jl2K6UUm9qKp3mbi3yvmeNMUwLY/L6sT6l264l6HnKo=; b=uhqC4At4dgnBD7MTcHhgYOynn
+	OPBUyrhh8HKDnrtKvEptO0aWhWX7WWuoMtJVsuLCIinkGjaCsW4rVyDXGTfG8FQR8R90R8NPBV4/Q
+	jA9bcz4gbudnk83xzmyX0V4xXaYTajyiFp9ipcuJDBp3HMhA+SSwmi49pX4y7jLTFjaK0rzfK38+C
+	LlTX190TQbo6gCgyCe9wBLrWB2DrOGhS97mWfHShBKyuSwJnvuj05jsQSpRBHLIzTqys98SpYnEeu
+	bHdKst1dcY7YLTeLlzlQq7zy0riMS86mk4l+f9bLtd8qMH3Nptf0Z2QYIdln9R06/xCKkJNX1se87
+	6IbKVvf9g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hZ7z9-0001i2-BX; Fri, 07 Jun 2019 06:04:19 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
- helo=webmail.newmedia-net.de)
+	id 1hZC8z-0003EA-Mq; Fri, 07 Jun 2019 10:30:45 +0000
+Received: from mga06.intel.com ([134.134.136.31])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hZ7z3-0001hG-LO
- for linux-mediatek@lists.infradead.org; Fri, 07 Jun 2019 06:04:17 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=newmedia-net.de; s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
- bh=hbFWgnGZTUGaPNuuRP7tTcnFOL1g5weZZi+2V4ndpQE=; 
- b=Tq8NwgqJrq2oLvvM1ouxMds4Cpixnez/8rfCQr6PeASo2fV/u13nA7EJ6AsZXYDVfm3ZZIUaNeXwCiXqb5RcmjGiRIl5Juq2YNVm+erZMlMQpiNtvNqOHzVbAH/ZJOrp4+FFfTQ4hWNwzLebIfnr+hIn/Aov9jCbPkPAmF2fFXA=;
-Subject: Re: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
-To: Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
-References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
- <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
- <CAJ0CqmVBogQrqf4Gckr5gQ6tCrdZG=p60ZiC+-WW-yxt93+40Q@mail.gmail.com>
-From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Message-ID: <a09e5c36-e610-e5eb-51c1-f1f634ee8591@newmedia-net.de>
-Date: Fri, 7 Jun 2019 08:03:08 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.0
+ id 1hZC8o-00036L-QD; Fri, 07 Jun 2019 10:30:36 +0000
+X-Amp-Result: UNSCANNABLE
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by orsmga104.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 07 Jun 2019 03:30:32 -0700
+X-ExtLoop1: 1
+Received: from kuha.fi.intel.com ([10.237.72.189])
+ by fmsmga001.fm.intel.com with SMTP; 07 Jun 2019 03:30:27 -0700
+Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
+ Fri, 07 Jun 2019 13:30:26 +0300
+Date: Fri, 7 Jun 2019 13:30:26 +0300
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v6 06/10] device connection: Add
+ fwnode_connection_find_match()
+Message-ID: <20190607103026.GE10298@kuha.fi.intel.com>
+References: <1559115828-19146-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1559115828-19146-7-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <CAJ0CqmVBogQrqf4Gckr5gQ6tCrdZG=p60ZiC+-WW-yxt93+40Q@mail.gmail.com>
-X-Received: from [2003:c9:3f05:3a00:1884:73db:702a:507]
- by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
- (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
- id 1hZ7yk-0002vB-Kv; Fri, 07 Jun 2019 08:04:17 +0200
+Content-Type: multipart/mixed; boundary="bg08WKrSYDhXBjb5"
+Content-Disposition: inline
+In-Reply-To: <1559115828-19146-7-git-send-email-chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_230414_178219_2F5B38EB 
-X-CRM114-Status: GOOD (  14.63  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190607_033034_901037_8F65DD11 
+X-CRM114-Status: GOOD (  20.44  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.31 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,156 +68,179 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>,
- linux-wireless <linux-wireless@vger.kernel.org>, YF Luo <yf.luo@mediatek.com>,
- Chih-Min Chen <chih-min.Chen@mediatek.com>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
- Sean Wang <sean.wang@mediatek.com>, Roy Luo <royluo@google.com>,
- Felix Fietkau <nbd@nbd.name>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-CkFtIDA2LjA2LjIwMTkgdW0gMTg6MTkgc2NocmllYiBMb3JlbnpvIEJpYW5jb25pOgo+PiBpIHRl
-c3RlZCB5b3VyIHBhdGNoIGFnYWluc3QgYSBxY2EgOTk4NCBjaGlwc2V0IHVzaW5nIFNBRSBhbmQg
-d2l0aG91dAo+PiBlbmNyeXB0aW9uLiBib3RoIGRpZCBub3Qgd29yay4gdGhlIGRldmljZXMgYXJl
-IGNvbm5lY3RpbmcsIGJ1dCBubyBkYXRhCj4+IGNvbm5lY3Rpb24gaXMgcG9zc2libGUKPiBIaSBT
-ZWJhc3RpYW4sCj4KPiBJIHRlc3RlZCBSeWRlcidzIHBhdGNoIHVzaW5nIG10NzZ4MiBhcyBtZXNo
-IHBlZXIgYW5kIGl0IHdvcmtzIGZpbmUgZm9yIG1lLgo+IENvdWxkIHlvdSBwbGVhc2UgcHJvdmlk
-ZSBzb21lIG1vcmUgaW5mbz8KCnRoZSBwZWVyIHdhcyBhIFFDQTk5ODQgY2hpcHNldCBydW5uaW5n
-IGF0aDEway4gdGhlIGZvbGxvd2luZyB3cGEgCnN1cHBsaWNhbnQgY29uZmlnIHdhcyB1c2VkCmFu
-ZCBlbmNyeXB0aW9uIGNsZWFybHkgY2Fubm90IHdvcmsgc2luY2UgbXQ3Nl93Y2lkX2tleV9zZXR1
-cCBkb2VzIAp0cmlnZ2VyIGEgYnVnwqAgc2luY2UgaWVlZWVfZ2V0X2tleV9yeF9zZXEgZG9lcyBu
-b3QgYWNjZXB0IHRpZCBhcyAKYXJndW1lbnQgIT0gMCBmb3IgYWVzX2NtYWMgKHdoaWNoIGlzIHVz
-ZWQgZm9yIHNhZSkKY29uc2lkZXIgdGhlIHNhbWUgc2V0dXAgd29ya3Mgd2l0aCBhdGg1aywgOWsg
-YW5kIDEwayBwZXJmZWN0IHdpdGggbm8gCmlzc3Vlcy4gaW4gbXkgdGVzdCBzZXR1cCBpIGFsc28g
-Y29ubmVjdGVkIG5vdyAzIGRldmljZXMuIDIgOTk4NCBhbmQgMSAKbXQ3NjE1IHRvIGVuc3VyZSB0
-aGF0IGFsbCBpcyB3b3JraW5nLiB0aGUgcWNhIDk5ODQgZGV2aWNlcyBjYW4gcGluZyBlYWNoIApv
-dGhlciwgb25seSB0aGUgbXQ3NjE1IGRvZXMgbm90IHdvcmsuIHRoZSBzZXR1cHMgYXJlIGFsbCBp
-ZGVudGljYWwgCihleGNlcHQgZm9yIGlwcykKCmZhc3RfcmVhdXRoPTEKZWFwb2xfdmVyc2lvbj0x
-CnNhZV9ncm91cHM9MTkgMjAgMjEKbmV0d29yaz17CiDCoMKgwqDCoMKgwqDCoCBkaXNhYmxlX2h0
-NDA9MQogwqDCoMKgwqDCoMKgwqAgc3NpZD0ibXQ3NjE1LTI0IgogwqDCoMKgwqDCoMKgwqAgbW9k
-ZT01CiDCoMKgwqDCoMKgwqDCoCBmcmVxdWVuY3k9MjQ1MgogwqDCoMKgwqDCoMKgwqAgaHRtb2Rl
-PUhUMjAKIMKgwqDCoMKgwqDCoMKgIHNjYW5fc3NpZD0xCiDCoMKgwqDCoMKgwqDCoCBrZXlfbWdt
-dD1TQUUKIMKgwqDCoMKgwqDCoMKgIGllZWU4MDIxMXc9MgogwqDCoMKgwqDCoMKgwqAgbm9zY2Fu
-PTEKIMKgwqDCoMKgwqDCoMKgIHBhaXJ3aXNlPUNDTVAKIMKgwqDCoMKgwqDCoMKgIGdyb3VwPUND
-TVAKIMKgwqDCoMKgwqDCoMKgIHByb3RvPVJTTgogwqDCoMKgwqDCoMKgwqAgc2FlX3Bhc3N3b3Jk
-PSIxMjM0NTY3OCIKfQoKYW5kIHRoZSBidWcgYWdhaW4KCldBUk5JTkc6IENQVTogMiBQSUQ6IDIy
-MDg2IGF0IAovaG9tZS9zZWcvREVWL210NzYyMS9zcmMvcm91dGVyL3ByaXZhdGUvY29tcGF0LXdp
-cmVsZXNzLTIwMTctMDktMDMvbmV0L21hYzgwMjExL2tleS5jOjEwOTYgCm10NzZfd2NpZF9rZXlf
-c2V0dXArMHg1OC8weDljIFttdDc2XQpNb2R1bGVzIGxpbmtlZCBpbjogc2hvcnRjdXRfZmUgZ2Nt
-IGdoYXNoX2dlbmVyaWMgY3RyIGdmMTI4bXVsIG10NzYxNWUgCm10NzYgbWFjODAyMTEgY29tcGF0
-CkNQVTogMiBQSUQ6IDIyMDg2IENvbW06IHdwYV9zdXBwbGljYW50IFRhaW50ZWQ6IEfCoMKgwqDC
-oMKgwqDCoCBXIDQuMTQuMTIzICMxMDYKU3RhY2sgOiAwMDAwMDAwMCA4N2MyZDAwMCAwMDAwMDAw
-MCA4MDA3ZDhiNCA4MDQ4MDAwMCA4MDQ4MmI5YyA4MDYxMDAwMCAKODA1YTQzOTAKIMKgwqDCoMKg
-wqDCoMKgIDgwNTdlMmI0IDg3YzRiOTljIDg3MGE1OWRjIDgwNWU0NzY3IDgwNTc4Mjg4IDAwMDAw
-MDAxIDg3YzRiOTQwIAo4MDVlOWY3OAogwqDCoMKgwqDCoMKgwqAgMDAwMDAwMDAgMDAwMDAwMDAg
-ODA2NDAwMDAgMDAwMDAwMDAgODExNDdiYjggMDAwMDA2Y2UgMDAwMDAwMDcgCjAwMDAwMDAwCiDC
-oMKgwqDCoMKgwqDCoCAwMDAwMDAwMCA4MDY1MDAwMCA4MDY1MDAwMCAyMDIwMjAyMCA4MDAwMDAw
-MCAwMDAwMDAwMCA4MDYxMDAwMCAKODcyYjlmZTAKIMKgwqDCoMKgwqDCoMKgIDg3MmEyYjE0IDAw
-MDAwNDQ4IDAwMDAwMDAwIDg3YzJkMDAwIDAwMDAwMDEwIDgwMjJkNjYwIDAwMDAwMDA4IAo4MDY0
-MDAwOAogwqDCoMKgwqDCoMKgwqAgLi4uCkNhbGwgVHJhY2U6Cls8ODAwMTUzZTA+XSBzaG93X3N0
-YWNrKzB4NTgvMHgxMDAKWzw4MDQyZTgzYz5dIGR1bXBfc3RhY2srMHg5Yy8weGUwCls8ODAwMzQ5
-ZjA+XSBfX3dhcm4rMHhlNC8weDE0NApbPDgwMDM0NjhjPl0gd2Fybl9zbG93cGF0aF9udWxsKzB4
-MWMvMHgzMApbPDg3MmI5ZmUwPl0gbXQ3Nl93Y2lkX2tleV9zZXR1cCsweDU4LzB4OWMgW210NzZd
-Cls8ODc2MTE2OTA+XSBtdDc2MTVfZWVwcm9tX2luaXQrMHg3YjQvMHhlOWMgW210NzYxNWVdCi0t
-LVsgZW5kIHRyYWNlIGUyNGFlYjRiNTQyZTBkZjkgXS0tLQoKCj4KPiBSZWdhcmRzLAo+IExvcmVu
-em8KPgo+Pgo+PiBTZWJhc3RpYW4KPj4KPj4gQW0gMDMuMDYuMjAxOSB1bSAwODowOCBzY2hyaWVi
-IFJ5ZGVyIExlZToKPj4+IEVuYWJsZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5UIGFuZCB1cGRh
-dGUgaXRzIHBhdGguCj4+Pgo+Pj4gU2lnbmVkLW9mZi1ieTogUnlkZXIgTGVlIDxyeWRlci5sZWVA
-bWVkaWF0ZWsuY29tPgo+Pj4gLS0tCj4+PiBDaGFuZ2VzIHNpbmNlIHYzIC0gZml4IGEgd3Jvbmcg
-ZXhwcmVzc2lvbgo+Pj4gQ2hhbmdlcyBzaW5jZSB2MiAtIHJlbW92ZSB1bnVzZWQgZGVmaW5pdGlv
-bnMKPj4+IC0tLQo+Pj4gICAgZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2
-MTUvaW5pdC5jIHwgNiArKysrKysKPj4+ICAgIGRyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVr
-L210NzYvbXQ3NjE1L21haW4uYyB8IDEgKwo+Pj4gICAgZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVk
-aWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmMgIHwgNCArKystCj4+PiAgICBkcml2ZXJzL25ldC93aXJl
-bGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuaCAgfCA2IC0tLS0tLQo+Pj4gICAgNCBmaWxl
-cyBjaGFuZ2VkLCAxMCBpbnNlcnRpb25zKCspLCA3IGRlbGV0aW9ucygtKQo+Pj4KPj4+IGRpZmYg
-LS1naXQgYS9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9pbml0LmMg
-Yi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9pbml0LmMKPj4+IGlu
-ZGV4IDU5ZjYwNGYzMTYxZi4uZjg2MGFmNmE0MmRhIDEwMDY0NAo+Pj4gLS0tIGEvZHJpdmVycy9u
-ZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvaW5pdC5jCj4+PiArKysgYi9kcml2ZXJz
-L25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9pbml0LmMKPj4+IEBAIC0xMzMsNiAr
-MTMzLDkgQEAgc3RhdGljIGNvbnN0IHN0cnVjdCBpZWVlODAyMTFfaWZhY2VfbGltaXQgaWZfbGlt
-aXRzW10gPSB7Cj4+PiAgICAgICAgewo+Pj4gICAgICAgICAgICAgICAgLm1heCA9IE1UNzYxNV9N
-QVhfSU5URVJGQUNFUywKPj4+ICAgICAgICAgICAgICAgIC50eXBlcyA9IEJJVChOTDgwMjExX0lG
-VFlQRV9BUCkgfAo+Pj4gKyNpZmRlZiBDT05GSUdfTUFDODAyMTFfTUVTSAo+Pj4gKyAgICAgICAg
-ICAgICAgICAgICAgICBCSVQoTkw4MDIxMV9JRlRZUEVfTUVTSF9QT0lOVCkgfAo+Pj4gKyNlbmRp
-Zgo+Pj4gICAgICAgICAgICAgICAgICAgICAgICAgQklUKE5MODAyMTFfSUZUWVBFX1NUQVRJT04p
-Cj4+PiAgICAgICAgfQo+Pj4gICAgfTsKPj4+IEBAIC0xOTUsNiArMTk4LDkgQEAgaW50IG10NzYx
-NV9yZWdpc3Rlcl9kZXZpY2Uoc3RydWN0IG10NzYxNV9kZXYgKmRldikKPj4+ICAgICAgICBkZXYt
-Pm10NzYuYW50ZW5uYV9tYXNrID0gMHhmOwo+Pj4KPj4+ICAgICAgICB3aXBoeS0+aW50ZXJmYWNl
-X21vZGVzID0gQklUKE5MODAyMTFfSUZUWVBFX1NUQVRJT04pIHwKPj4+ICsjaWZkZWYgQ09ORklH
-X01BQzgwMjExX01FU0gKPj4+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCSVQoTkw4
-MDIxMV9JRlRZUEVfTUVTSF9QT0lOVCkgfAo+Pj4gKyNlbmRpZgo+Pj4gICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICBCSVQoTkw4MDIxMV9JRlRZUEVfQVApOwo+Pj4KPj4+ICAgICAgICBy
-ZXQgPSBtdDc2X3JlZ2lzdGVyX2RldmljZSgmZGV2LT5tdDc2LCB0cnVlLCBtdDc2MTVfcmF0ZXMs
-Cj4+PiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2
-MTUvbWFpbi5jIGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWFp
-bi5jCj4+PiBpbmRleCBiMGJiN2NjMTIzODUuLjU4NWU2N2ZhMjcyOCAxMDA2NDQKPj4+IC0tLSBh
-L2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21haW4uYwo+Pj4gKysr
-IGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWFpbi5jCj4+PiBA
-QCAtMzcsNiArMzcsNyBAQCBzdGF0aWMgaW50IGdldF9vbWFjX2lkeChlbnVtIG5sODAyMTFfaWZ0
-eXBlIHR5cGUsIHUzMiBtYXNrKQo+Pj4KPj4+ICAgICAgICBzd2l0Y2ggKHR5cGUpIHsKPj4+ICAg
-ICAgICBjYXNlIE5MODAyMTFfSUZUWVBFX0FQOgo+Pj4gKyAgICAgY2FzZSBOTDgwMjExX0lGVFlQ
-RV9NRVNIX1BPSU5UOgo+Pj4gICAgICAgICAgICAgICAgLyogYXAgdXNlIGh3IGJzc2lkIDAgYW5k
-IGV4dCBic3NpZCAqLwo+Pj4gICAgICAgICAgICAgICAgaWYgKH5tYXNrICYgQklUKEhXX0JTU0lE
-XzApKQo+Pj4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gSFdfQlNTSURfMDsKPj4+IGRp
-ZmYgLS1naXQgYS9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3Uu
-YyBiL2RyaXZlcnMvbmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21jdS5jCj4+PiBp
-bmRleCA0M2Y3MDE5NTI0NGMuLmU4MjI5NzA0ODQ0OSAxMDA2NDQKPj4+IC0tLSBhL2RyaXZlcnMv
-bmV0L3dpcmVsZXNzL21lZGlhdGVrL210NzYvbXQ3NjE1L21jdS5jCj4+PiArKysgYi9kcml2ZXJz
-L25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuYwo+Pj4gQEAgLTc1NCw2ICs3
-NTQsNyBAQCBpbnQgbXQ3NjE1X21jdV9zZXRfYnNzX2luZm8oc3RydWN0IG10NzYxNV9kZXYgKmRl
-diwKPj4+Cj4+PiAgICAgICAgc3dpdGNoICh2aWYtPnR5cGUpIHsKPj4+ICAgICAgICBjYXNlIE5M
-ODAyMTFfSUZUWVBFX0FQOgo+Pj4gKyAgICAgY2FzZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5U
-Ogo+Pj4gICAgICAgICAgICAgICAgdHhfd2xhbl9pZHggPSBtdmlmLT5zdGEud2NpZC5pZHg7Cj4+
-PiAgICAgICAgICAgICAgICBjb25uX3R5cGUgPSBDT05ORUNUSU9OX0lORlJBX0FQOwo+Pj4gICAg
-ICAgICAgICAgICAgYnJlYWs7Cj4+PiBAQCAtOTY4LDcgKzk2OSw3IEBAIGludCBtdDc2MTVfbWN1
-X2FkZF93dGJsKHN0cnVjdCBtdDc2MTVfZGV2ICpkZXYsIHN0cnVjdCBpZWVlODAyMTFfdmlmICp2
-aWYsCj4+PiAgICAgICAgICAgICAgICAucnhfd3RibCA9IHsKPj4+ICAgICAgICAgICAgICAgICAg
-ICAgICAgLnRhZyA9IGNwdV90b19sZTE2KFdUQkxfUlgpLAo+Pj4gICAgICAgICAgICAgICAgICAg
-ICAgICAubGVuID0gY3B1X3RvX2xlMTYoc2l6ZW9mKHN0cnVjdCB3dGJsX3J4KSksCj4+PiAtICAg
-ICAgICAgICAgICAgICAgICAgLnJjYTEgPSB2aWYtPnR5cGUgIT0gTkw4MDIxMV9JRlRZUEVfQVAs
-Cj4+PiArICAgICAgICAgICAgICAgICAgICAgLnJjYTEgPSB2aWYtPnR5cGUgPT0gTkw4MDIxMV9J
-RlRZUEVfU1RBVElPTiwKPj4+ICAgICAgICAgICAgICAgICAgICAgICAgLnJjYTIgPSAxLAo+Pj4g
-ICAgICAgICAgICAgICAgICAgICAgICAucnYgPSAxLAo+Pj4gICAgICAgICAgICAgICAgfSwKPj4+
-IEBAIC0xMDQyLDYgKzEwNDMsNyBAQCBzdGF0aWMgdm9pZCBzdGFfcmVjX2NvbnZlcnRfdmlmX3R5
-cGUoZW51bSBubDgwMjExX2lmdHlwZSB0eXBlLCB1MzIgKmNvbm5fdHlwZSkKPj4+ICAgIHsKPj4+
-ICAgICAgICBzd2l0Y2ggKHR5cGUpIHsKPj4+ICAgICAgICBjYXNlIE5MODAyMTFfSUZUWVBFX0FQ
-Ogo+Pj4gKyAgICAgY2FzZSBOTDgwMjExX0lGVFlQRV9NRVNIX1BPSU5UOgo+Pj4gICAgICAgICAg
-ICAgICAgaWYgKGNvbm5fdHlwZSkKPj4+ICAgICAgICAgICAgICAgICAgICAgICAgKmNvbm5fdHlw
-ZSA9IENPTk5FQ1RJT05fSU5GUkFfU1RBOwo+Pj4gICAgICAgICAgICAgICAgYnJlYWs7Cj4+PiBk
-aWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1
-LmggYi9kcml2ZXJzL25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuaAo+Pj4g
-aW5kZXggZTk2ZWZiMTNmYTRkLi4wOTE1Y2I3MzU2OTkgMTAwNjQ0Cj4+PiAtLS0gYS9kcml2ZXJz
-L25ldC93aXJlbGVzcy9tZWRpYXRlay9tdDc2L210NzYxNS9tY3UuaAo+Pj4gKysrIGIvZHJpdmVy
-cy9uZXQvd2lyZWxlc3MvbWVkaWF0ZWsvbXQ3Ni9tdDc2MTUvbWN1LmgKPj4+IEBAIC0xMDUsMjUg
-KzEwNSwxOSBAQCBlbnVtIHsKPj4+ICAgICNkZWZpbmUgU1RBX1RZUEVfU1RBICAgICAgICAgICAg
-ICAgIEJJVCgwKQo+Pj4gICAgI2RlZmluZSBTVEFfVFlQRV9BUCAgICAgICAgIEJJVCgxKQo+Pj4g
-ICAgI2RlZmluZSBTVEFfVFlQRV9BREhPQyAgICAgICAgICAgICAgQklUKDIpCj4+PiAtI2RlZmlu
-ZSBTVEFfVFlQRV9URExTICAgICAgICAgICAgICAgIEJJVCgzKQo+Pj4gICAgI2RlZmluZSBTVEFf
-VFlQRV9XRFMgICAgICAgICAgICAgICAgQklUKDQpCj4+PiAgICAjZGVmaW5lIFNUQV9UWVBFX0JD
-ICAgICAgICAgQklUKDUpCj4+Pgo+Pj4gICAgI2RlZmluZSBORVRXT1JLX0lORlJBICAgICAgICAg
-ICAgICAgQklUKDE2KQo+Pj4gICAgI2RlZmluZSBORVRXT1JLX1AyUCAgICAgICAgIEJJVCgxNykK
-Pj4+ICAgICNkZWZpbmUgTkVUV09SS19JQlNTICAgICAgICAgICAgICAgIEJJVCgxOCkKPj4+IC0j
-ZGVmaW5lIE5FVFdPUktfTUVTSCAgICAgICAgIEJJVCgxOSkKPj4+IC0jZGVmaW5lIE5FVFdPUktf
-Qk9XICAgICAgICAgIEJJVCgyMCkKPj4+ICAgICNkZWZpbmUgTkVUV09SS19XRFMgICAgICAgICBC
-SVQoMjEpCj4+Pgo+Pj4gICAgI2RlZmluZSBDT05ORUNUSU9OX0lORlJBX1NUQSAgICAgICAgKFNU
-QV9UWVBFX1NUQSB8IE5FVFdPUktfSU5GUkEpCj4+PiAgICAjZGVmaW5lIENPTk5FQ1RJT05fSU5G
-UkFfQVAgKFNUQV9UWVBFX0FQIHwgTkVUV09SS19JTkZSQSkKPj4+ICAgICNkZWZpbmUgQ09OTkVD
-VElPTl9QMlBfR0MgICAoU1RBX1RZUEVfU1RBIHwgTkVUV09SS19QMlApCj4+PiAgICAjZGVmaW5l
-IENPTk5FQ1RJT05fUDJQX0dPICAgKFNUQV9UWVBFX0FQIHwgTkVUV09SS19QMlApCj4+PiAtI2Rl
-ZmluZSBDT05ORUNUSU9OX01FU0hfU1RBICAoU1RBX1RZUEVfU1RBIHwgTkVUV09SS19NRVNIKQo+
-Pj4gLSNkZWZpbmUgQ09OTkVDVElPTl9NRVNIX0FQICAgKFNUQV9UWVBFX0FQIHwgTkVUV09SS19N
-RVNIKQo+Pj4gICAgI2RlZmluZSBDT05ORUNUSU9OX0lCU1NfQURIT0MgICAgICAgKFNUQV9UWVBF
-X0FESE9DIHwgTkVUV09SS19JQlNTKQo+Pj4gLSNkZWZpbmUgQ09OTkVDVElPTl9URExTICAgICAg
-ICAgICAgICAoU1RBX1RZUEVfU1RBIHwgTkVUV09SS19JTkZSQSB8IFNUQV9UWVBFX1RETFMpCj4+
-PiAgICAjZGVmaW5lIENPTk5FQ1RJT05fV0RTICAgICAgICAgICAgICAoU1RBX1RZUEVfV0RTIHwg
-TkVUV09SS19XRFMpCj4+PiAgICAjZGVmaW5lIENPTk5FQ1RJT05fSU5GUkFfQkMgKFNUQV9UWVBF
-X0JDIHwgTkVUV09SS19JTkZSQSkKPj4+CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0
-ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFu
-L2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+
+--bg08WKrSYDhXBjb5
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Hi,
+
+On Wed, May 29, 2019 at 03:43:44PM +0800, Chunfeng Yun wrote:
+> From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> 
+> The fwnode_connection_find_match() function is exactly the
+> same as device_connection_find_match(), except it takes
+> struct fwnode_handle as parameter instead of struct device.
+> That allows locating device connections before the device
+> entries have been created.
+> 
+> Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+
+This one is also missing your SoB.
+
+There are now some other changes to the devcon API in Rafael's tree
+[1] that will conflict with this one. I'm attaching a modified version
+of the patch that is rebased on top of today's linux-next. If you use
+it, you should make a note (probable in the cover letter) that the
+series now depends on Rafael's tree.
+
+[1] https://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git/log/?h=linux-next
+
+
+thanks,
+
+-- 
+heikki
+
+--bg08WKrSYDhXBjb5
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename="0001-device-connection-Add-fwnode_connection_find_match.patch"
+
+From ea4ebbfd00e6ddc7bb7ad32e2f921bfc67f2ff8f Mon Sep 17 00:00:00 2001
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Date: Wed, 22 May 2019 17:06:54 +0300
+Subject: [PATCH] device connection: Add fwnode_connection_find_match()
+
+The fwnode_connection_find_match() function is exactly the
+same as device_connection_find_match(), except it takes
+struct fwnode_handle as parameter instead of struct device.
+That allows locating device connections before the device
+entries have been created.
+
+Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+---
+ drivers/base/devcon.c  | 43 ++++++++++++++++++++++++++++++------------
+ include/linux/device.h | 10 +++++++---
+ 2 files changed, 38 insertions(+), 15 deletions(-)
+
+diff --git a/drivers/base/devcon.c b/drivers/base/devcon.c
+index f7035fc12b92..5bf9537bd738 100644
+--- a/drivers/base/devcon.c
++++ b/drivers/base/devcon.c
+@@ -12,9 +12,6 @@
+ static DEFINE_MUTEX(devcon_lock);
+ static LIST_HEAD(devcon_list);
+ 
+-typedef void *(*devcon_match_fn_t)(struct device_connection *con, int ep,
+-				   void *data);
+-
+ static void *
+ fwnode_graph_devcon_match(struct fwnode_handle *fwnode, const char *con_id,
+ 			  void *data, devcon_match_fn_t match)
+@@ -60,6 +57,34 @@ fwnode_devcon_match(struct fwnode_handle *fwnode, const char *con_id,
+ 	return NULL;
+ }
+ 
++/**
++ * fwnode_connection_find_match - Find connection from a device node
++ * @fwnode: Device node with the connection
++ * @con_id: Identifier for the connection
++ * @data: Data for the match function
++ * @match: Function to check and convert the connection description
++ *
++ * Find a connection with unique identifier @con_id between @fwnode and another
++ * device node. @match will be used to convert the connection description to
++ * data the caller is expecting to be returned.
++ */
++void *fwnode_connection_find_match(struct fwnode_handle *fwnode,
++				   const char *con_id, void *data,
++				   devcon_match_fn_t match)
++{
++	void *ret;
++
++	if (!fwnode || !match)
++		return NULL;
++
++	ret = fwnode_graph_devcon_match(fwnode, con_id, data, match);
++	if (ret)
++		return ret;
++
++	return fwnode_devcon_match(fwnode, con_id, data, match);
++}
++EXPORT_SYMBOL_GPL(fwnode_connection_find_match);
++
+ /**
+  * device_connection_find_match - Find physical connection to a device
+  * @dev: Device with the connection
+@@ -83,15 +108,9 @@ void *device_connection_find_match(struct device *dev, const char *con_id,
+ 	if (!match)
+ 		return NULL;
+ 
+-	if (fwnode) {
+-		ret = fwnode_graph_devcon_match(fwnode, con_id, data, match);
+-		if (ret)
+-			return ret;
+-
+-		ret = fwnode_devcon_match(fwnode, con_id, data, match);
+-		if (ret)
+-			return ret;
+-	}
++	ret = fwnode_connection_find_match(fwnode, con_id, data, match);
++	if (ret)
++		return ret;
+ 
+ 	mutex_lock(&devcon_lock);
+ 
+diff --git a/include/linux/device.h b/include/linux/device.h
+index e0649f6adf2e..fd06d75da206 100644
+--- a/include/linux/device.h
++++ b/include/linux/device.h
+@@ -773,10 +773,14 @@ struct device_connection {
+ 	struct list_head	list;
+ };
+ 
++typedef void *(*devcon_match_fn_t)(struct device_connection *con, int ep,
++				   void *data);
++
++void *fwnode_connection_find_match(struct fwnode_handle *fwnode,
++				   const char *con_id, void *data,
++				   devcon_match_fn_t match);
+ void *device_connection_find_match(struct device *dev, const char *con_id,
+-				void *data,
+-				void *(*match)(struct device_connection *con,
+-					       int ep, void *data));
++				   void *data, devcon_match_fn_t match);
+ 
+ struct device *device_connection_find(struct device *dev, const char *con_id);
+ 
+-- 
+2.20.1
+
+
+--bg08WKrSYDhXBjb5
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--bg08WKrSYDhXBjb5--
+
