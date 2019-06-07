@@ -2,45 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08C96392B0
-	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 19:01:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F1A7392B5
+	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 19:02:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sP5lLbgJ0ECGDtkBMmh/4B0QnJdIUL+XOFPc9MALJwM=; b=n5Jp20VUVhUvI3
-	g8a/4/wZMd43hcg8eJEEjuLUxXQM0pmnGgGybbZBGQzrlbaS5rVtAbG7+pawdw97a+GVVj87Q6uDV
-	pxTZRavhzQUMkzKybEW+ZvyRRwyhw/qH3EY0i50UefgWH2tT1TrBq2lmeeeJMmRsaTaF77T8AOuNJ
-	dwjkWdJmZfz2a4dszkFfF8r+6Hy6fP5RQq653HF3+0FfsaaUODcC/6CUauO4Tp7q+5pjeDnK7BTbD
-	IlN1tjoaS7omliv0UXstfckWPioEqk0UbfA2Bcip/lcHJJutpzDEaUFR0EDQuAS+M46WQNybHL8bz
-	W8fa5whrimsCiHmIIwKg==;
+	List-Owner; bh=3EadEkiFRb6bnks91TE+jE25E2G5LQstFX5vmwb7f2s=; b=CmgHbw8FOc97sJ
+	H5vZBJ9C4jpUPakxMZ5NvDHlPDnXxEmiHLrJZoxTllKGxgOIa5G7nNqZY3YVpRXtDjx1MS984iTx5
+	HvIh37XTpfusfMnhBfpyO3cOe5KIUIWYyJEaPz0TsTLbyF61iWOHrm4D4PLTqF3QGWMVLC7StrvF0
+	Z8+g3zxhMVlrIDaZz/I8hWASXjRRVv/XihHuUbFES5eTLNwT196jSwLT7tVvoXRXWlfQXgdjyAQu+
+	7JMGzpdGPzpiOggUYc0lXEtQnQEQrFQfeGOWer+CQOPxjXqWtfTDdd1pilFIw5AEZJFrIWTWF22cD
+	Fnrkwu9n9TJvKoj6mLhg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hZIFS-0006Nh-Ec; Fri, 07 Jun 2019 17:01:50 +0000
+	id 1hZIFj-0006dz-RW; Fri, 07 Jun 2019 17:02:07 +0000
 Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hZIFP-0006M4-30; Fri, 07 Jun 2019 17:01:48 +0000
+ id 1hZIFh-0006cQ-0e
+ for linux-mediatek@lists.infradead.org; Fri, 07 Jun 2019 17:02:06 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
  s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
  MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=UP3HYaBRyyZCgrGkjreuXPoJQnusxc/pp3ork1+U7J0=; b=NvvbWXHuJRSTpWUc/rF5CX0QxG
- wG2uEqYO38wVscQkr6Apxn9JLac0sUUMgviV7orNAv5vVOSXymrV0r6gSaj4maQgAGKbq+cSzg6Gg
- 7Y2F1Bc8IifKwDNxZm1EKYe3tzjPDb7gGTy7yGkQ2zy3AMRwo8DhdtYa61Q/yUpDiVyM=;
+ bh=w1NkHhj3P/sBvSMvxpUd9PLtJQN0qShfm+pLtoheRUo=; b=kHGnpw7zxPutB/Ss7SbHat/1rJ
+ tLj2TGAlVTPJg84j5twrteZIN57pTyVLZDbRQRqb6XO/IPr6XdXfnnDBMzdy18glsMUk7X5Jn2xHD
+ l06jkGzivkfnK/5k6v7CLH0LsuiFcw+nb/SR+7bnr/ey9wWj6zay2Y/U4lKzoxBfjJP8=;
 Received: from p4ff13bc7.dip0.t-ipconnect.de ([79.241.59.199] helo=nf.local)
  by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
  (Exim 4.89) (envelope-from <nbd@nbd.name>)
- id 1hZIFF-00011f-Hm; Fri, 07 Jun 2019 19:01:37 +0200
-Subject: Re: [PATCH] mt76: Remove set but not used variables 'pid' and
- 'final_mpdu'
-To: YueHaibing <yuehaibing@huawei.com>, lorenzo.bianconi83@gmail.com,
- ryder.lee@mediatek.com, royluo@google.com, kvalo@codeaurora.org,
- matthias.bgg@gmail.com, sgruszka@redhat.com
-References: <20190529145356.13872-1-yuehaibing@huawei.com>
+ id 1hZIFf-00013n-CA; Fri, 07 Jun 2019 19:02:03 +0200
+Subject: Re: [PATCH v3 2/2] mt76: mt7615: fix slow performance when enable
+ encryption
+To: Ryder Lee <ryder.lee@mediatek.com>,
+ Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+ <429cf8c1421017b4030b8b6e4fa9e5cbea953d3c.1559541944.git.ryder.lee@mediatek.com>
 From: Felix Fietkau <nbd@nbd.name>
 Openpgp: preference=signencrypt
 Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
@@ -66,16 +67,16 @@ Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
  TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabiEkE
  GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
  RjMaxwtSdaCKMw3j33ZbsWS4
-Message-ID: <f3e5d386-e1de-d707-397d-2ef99e09f345@nbd.name>
-Date: Fri, 7 Jun 2019 19:01:36 +0200
+Message-ID: <034e7eaa-5e39-57c4-1e5b-f58d41ad451a@nbd.name>
+Date: Fri, 7 Jun 2019 19:02:02 +0200
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:60.0)
  Gecko/20100101 Thunderbird/60.7.0
 MIME-Version: 1.0
-In-Reply-To: <20190529145356.13872-1-yuehaibing@huawei.com>
+In-Reply-To: <429cf8c1421017b4030b8b6e4fa9e5cbea953d3c.1559541944.git.ryder.lee@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190607_100147_288474_E2169A5D 
-X-CRM114-Status: UNSURE (   7.47  )
+X-CRM114-CacheID: sfid-20190607_100205_215917_2E93C83A 
+X-CRM114-Status: UNSURE (   7.77  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -102,33 +103,25 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- davem@davemloft.net, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Sean Wang <sean.wang@mediatek.com>,
+ Chih-Min Chen <chih-min.Chen@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2019-05-29 16:53, YueHaibing wrote:
-> Fixes gcc '-Wunused-but-set-variable' warnings:
-> 
-> drivers/net/wireless/mediatek/mt76/mt7603/mac.c: In function mt7603_fill_txs:
-> drivers/net/wireless/mediatek/mt76/mt7603/mac.c:969:5: warning: variable pid set but not used [-Wunused-but-set-variable]
-> drivers/net/wireless/mediatek/mt76/mt7603/mac.c:961:7: warning: variable final_mpdu set but not used [-Wunused-but-set-variable]
-> drivers/net/wireless/mediatek/mt76/mt7615/mac.c: In function mt7615_fill_txs:
-> drivers/net/wireless/mediatek/mt76/mt7615/mac.c:555:5: warning: variable pid set but not used [-Wunused-but-set-variable]
-> drivers/net/wireless/mediatek/mt76/mt7615/mac.c:552:19: warning: variable final_mpdu set but not used [-Wunused-but-set-variable]
-> 
-> They are never used, so can be removed.
-> 
-> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-
-Applied, thanks.
-
-- Felix
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gMjAxOS0wNi0wMyAwODowOCwgUnlkZXIgTGVlIHdyb3RlOgo+IEZpeCB3cm9uZyBXQ0lEIGFz
+c2lnbm1lbnQgYW5kIGFkZCBSS1YgKFJYIEtleSBvZiB0aGlzIGVudHJ5IGlzIHZhbGlkKQo+IGZs
+YWcgdG8gY2hlY2sgaWYgcGVlciB1c2VzIHRoZSBzYW1lIGNvbmZpZ3VyYXRpb24gd2l0aCBwcmV2
+aW91cwo+IGhhbmRzaGFraW5nLgo+IAo+IElmIHRoZSBjb25maWd1cmF0aW9uIGlzIG1pc21hdGNo
+LCBXVEJMIGluZGljYXRlcyBhIOKAnGNpcGhlciBtaXNtYXRjaOKAnQo+IHRvIHN0b3AgU0VDIGRl
+Y3J5cHRpb24gdG8gcHJldmVudCB0aGUgcGFja2V0IGZyb20gZGFtYWdlLgo+IAo+IFN1Z2dlc3Rl
+ZC1ieTogWUYgTHVvIDx5Zi5sdW9AbWVkaWF0ZWsuY29tPgo+IFN1Z2dlc3RlZC1ieTogWWl3ZWkg
+Q2h1bmcgPHlpd2VpLmNodW5nQG1lZGlhdGVrLmNvbT4KPiBTaWduZWQtb2ZmLWJ5OiBSeWRlciBM
+ZWUgPHJ5ZGVyLmxlZUBtZWRpYXRlay5jb20+CgpBcHBsaWVkLCB0aGFua3MuCgotIEZlbGl4Cgpf
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRp
+YXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRw
+Oi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
