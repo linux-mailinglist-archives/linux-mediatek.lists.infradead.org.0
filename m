@@ -2,70 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4EEFB393CC
-	for <lists+linux-mediatek@lfdr.de>; Fri,  7 Jun 2019 19:59:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 27EEE39B6F
+	for <lists+linux-mediatek@lfdr.de>; Sat,  8 Jun 2019 09:03:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:Subject:From:To:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HTLQogBZopcagcR/z9GuIygSPHpDwOsccBeXRE06+Qk=; b=DDDb+65NycAZoi
-	Pd9SKkxy3830xyK8LE4MQWRPwrgrKdK0sIIB98kUiHMSwwfWmmcBYMQCOyrposCt07ZOBsmN4bsyF
-	ArMnRun7ZaDgTpPVtqbvGIXHoBMsi0PG7epzmqwEbM3z1/l8S68N2VcV86pBh9IQZ9z/DOISUWA+k
-	RdvO4mhBioQ2KIlkQcY/qCgjKJqGbQuWBkRyGC+JtNFJRWWqkTZ5fpWPukWEl+ViptSjeUJdUXXwK
-	zfor7gQ9/SUPmn8wpL7QJQJpxzfpUtTBmIeGgAOLm5U/6Bi/v9oUc1IeFCAFywl152rDOlxQ8U9eE
-	gYB5bVQkVQROC8+5Fmdw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=yZQYPndY0Dax+Sya+1akJPHmTjJ8uk9RtNsoGClSRTQ=; b=SYU1H1Yp0bGVuc
+	7Xa5cJfKEqsMUr0ofp+xarHAq6Rq9e8oIKigcVvuQNo9FOMpxpX3aoiFmNFvPe0EDEW8hLMdOCCNV
+	5U1PT1+qB7GaarP/s1F9xibgqtv9NGUtjKtTZCjg3wOao1uwer1iOPCpU2o2naF5u7cVRau4fU8hq
+	u/GTfVvCbaApV+3lbMcy3T7B8V/K3HBYvQw7hCzc+rnK/pDed0XKfvyKq9Zy9Si0mL7jda07vmByt
+	i6ZnaiVgbkWPpl8R4yS80nZAet5ZQE08N/SELefC8NxJDmsCyCPiuG5dtLhr/4zNw9j/qaREigdr9
+	E7hApLCwJhHf+hjqwSfw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hZJ9J-0003RB-Ua; Fri, 07 Jun 2019 17:59:33 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hZVNM-0003UF-QB; Sat, 08 Jun 2019 07:02:52 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hZJ99-0003JS-G2; Fri, 07 Jun 2019 17:59:24 +0000
-Received: from kernel.org (unknown [104.132.0.74])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6D5F5208C0;
- Fri,  7 Jun 2019 17:59:22 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1559930362;
- bh=9dKMZGCodIC7GBJF2KTazZroE2B9B8QOzrgq3LpSTsQ=;
- h=In-Reply-To:References:To:From:Subject:Cc:Date:From;
- b=XfxpMEW6MNIwAhNik2mOzmu24+FyFp1A0uIkPo4OOO1D/9Ahk2YJUYbZwD0O9zBtn
- QAoVzL/Dqg/4eXuX9bHK0ezkVRuJncdkBsJ7JrDMJAaDJ2o5ycXYr4yU+AIQcWtHLh
- DTVFeJtIA/PeklsvZn15h5uskwVM/3/96b0yt+9w=
+ id 1hZVNI-0003T9-4L; Sat, 08 Jun 2019 07:02:49 +0000
+X-UUID: 2cfd4553e1aa49f096f9f144c48a1bd7-20190607
+X-UUID: 2cfd4553e1aa49f096f9f144c48a1bd7-20190607
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1750901022; Fri, 07 Jun 2019 23:02:38 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 8 Jun 2019 00:02:36 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33N1.mediatek.inc
+ (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sat, 8 Jun 2019 15:02:34 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS32.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Sat, 8 Jun 2019 15:02:33 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
+ Rutland" <mark.rutland@arm.com>, Ian Campbell
+ <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
+ <airlied@linux.ie>, "Matthias Brugger" <matthias.bgg@gmail.com>
+Subject: [1/2] dt-bindngs: display: panel: Add BOE tv101wum-nl6 panel bindings
+Date: Sat, 8 Jun 2019 15:02:29 +0800
+Message-ID: <20190608070230.55381-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-In-Reply-To: <1559877112-21064-1-git-send-email-weiyi.lu@mediatek.com>
-References: <1559877112-21064-1-git-send-email-weiyi.lu@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>,
- Nicolas Boichat <drinkcat@chromium.org>, Rob Herring <robh@kernel.org>,
- Weiyi Lu <weiyi.lu@mediatek.com>
-From: Stephen Boyd <sboyd@kernel.org>
-Subject: Re: [PATCH v1] clk: mediatek: mt8183: Register 13MHz clock earlier
- for clocksource
-User-Agent: alot/0.8.1
-Date: Fri, 07 Jun 2019 10:59:21 -0700
-Message-Id: <20190607175922.6D5F5208C0@mail.kernel.org>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190607_105923_554544_AC9778C7 
-X-CRM114-Status: GOOD (  10.79  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190608_000248_180230_22E23AD4 
+X-CRM114-Status: UNSURE (   9.03  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,68 +72,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Dehui Sun <dehui.sun@mediatek.com>, James Liao <jamesjj.liao@mediatek.com>,
- Weiyi Lu <weiyi.lu@mediatek.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, stable@vger.kernel.org,
- Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
+ Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
+ Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
+ Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
+ Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
+ yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Weiyi Lu (2019-06-06 20:11:52)
-> diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-> index 9d86510..a8f50bc 100644
-> --- a/drivers/clk/mediatek/clk-mt8183.c
-> +++ b/drivers/clk/mediatek/clk-mt8183.c
-> @@ -1167,37 +1169,62 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
->         return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
->  }
->  
-> +static struct clk_onecell_data *top_clk_data;
-> +
-> +static void clk_mt8183_top_init_early(struct device_node *node)
-> +{
-> +       int i;
-> +
-> +       if (!top_clk_data) {
+Add documentation for boe tv101wum-n16 panel.
 
-Is this function ever called more than once? I believe the answer is no
-so this check should be removed.
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+---
+ .../display/panel/boe,tv101wum-nl6.txt        | 34 +++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
 
-> +               top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
-> +
-> +               for (i = 0; i < CLK_TOP_NR_CLK; i++)
-> +                       top_clk_data->clks[i] = ERR_PTR(-EPROBE_DEFER);
-> +       }
-> +
-> +       mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
-> +                       top_clk_data);
-> +
-> +       of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
-> +}
-> +
-> +CLK_OF_DECLARE_DRIVER(mt8183_topckgen, "mediatek,mt8183-topckgen",
-> +                       clk_mt8183_top_init_early);
-> +
->  static int clk_mt8183_top_probe(struct platform_device *pdev)
->  {
->         struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->         void __iomem *base;
-> -       struct clk_onecell_data *clk_data;
->         struct device_node *node = pdev->dev.of_node;
->  
->         base = devm_ioremap_resource(&pdev->dev, res);
->         if (IS_ERR(base))
->                 return PTR_ERR(base);
->  
-> -       clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
-> +       if (!top_clk_data)
-> +               top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
-
-And then this can be removed because top_clk_data must be allocated at
-this point.
+diff --git a/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+new file mode 100644
+index 000000000000..2a84735d742d
+--- /dev/null
++++ b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+@@ -0,0 +1,34 @@
++Boe Corporation 10.1" WUXGA TFT LCD panel
++
++Required properties:
++- compatible: should be "boe,tv101wum"
++- reg: the virtual channel number of a DSI peripheral
++- enable-gpios: a GPIO spec for the enable pin
++- pp1800-supply: core voltage supply
++- avdd-supply: 
++- avee-supply: 
++- backlight: phandle of the backlight device attached to the panel
++
++The device node can contain one 'port' child node with one child
++'endpoint' node, according to the bindings defined in
++media/video-interfaces.txt. This node should describe panel's video bus.
++
++Example:
++&dsi {
++	...
++	panel@0 {
++		compatible = "boe,tv101wum-nl6";
++		reg = <0>;
++		enable-gpios = <&pio 45 0>;
++		avdd-supply = <&ppvarn_lcd>;
++		avee-supply = <&ppvarp_lcd>;
++		pp1800-supply = <&pp1800_lcd>;
++		backlight = <&backlight_lcd0>;
++		status = "okay";
++		port {
++			panel_in: endpoint {
++				remote-endpoint = <&dsi_out>;
++			};
++		};
++	};
++};
+\ No newline at end of file
+-- 
+2.21.0
 
 
 _______________________________________________
