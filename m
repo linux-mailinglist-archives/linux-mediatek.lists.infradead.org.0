@@ -2,61 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6F9713A535
-	for <lists+linux-mediatek@lfdr.de>; Sun,  9 Jun 2019 13:51:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CA1E23A668
+	for <lists+linux-mediatek@lfdr.de>; Sun,  9 Jun 2019 16:37:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+0SFKwvZTsisPnhhcyPoEQ41z+ntLk8/O6tyCFjx7Zg=; b=G2635YmAiS/rHY
-	HYYsuUo21F333ekzzzVSVn18A/IaTkH5oXRtec3Gc7Ym09pjxoAu/3WAy049R/bGP0wYyizV4pVh2
-	Q+e+Ag/uL10KfzU1e6DmbhpLzINLSM/rchJV2c9gxcxt5byV7H83vkwrluUAvb1iCs+zU4fUOORxF
-	CjBaEKokVCP6GDD/TnFCilKGoh3DR7SksP0aQ1252VppWUdPfSP94cLvBMMoPgW7B2f/5U37ZDET0
-	72z0Ylzc6q0jyXXRZJUqQCDKT+/ITonTyEEFD4P90azw3VObAFbnIPQL9DNRd9rFLlYQRj7wmH9uU
-	lKh97HGFQxFD/GSIfeXg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=aRcCztSOr0QzzFHtHJOCtiDCP4z+VbcgZJJrqW/twPo=; b=r2PtXl0dY+4uyDeoW/1XOUky+
+	cn0lZunZTaxWCMY9nq+ik7bPWX95kor3Uk84ZcNlcyqLT/fUlSyI9wZiKExpVimHSg2VoRX1ZFuzN
+	VPL8xTtaX/KVU/D3h8+cUfCUIDpiNYYZbzOdTen2tckDnMUeerS7IaMdkoaAUU5o3AQ14QZ8njYcW
+	VrDxpRZ6fQJngQvxRIcUg/7rkEwXOhG6pZmHLQ7NHmwmGPXPX+20KdAcWz3ds8FrC41s3cJqDR8xj
+	X983eamtiCMtg7GFKtILyuYEXDOwCmzv7MzPJNhNTfnBJc8dtjkaPRVZUsmkO1jA/UbxpRtnMatGq
+	H2Lb7HGkg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hZwM8-0007la-3J; Sun, 09 Jun 2019 11:51:24 +0000
-Received: from asavdk3.altibox.net ([109.247.116.14])
+	id 1hZywY-0001lx-FL; Sun, 09 Jun 2019 14:37:10 +0000
+Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
+ helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hZwLy-0007fb-8o; Sun, 09 Jun 2019 11:51:16 +0000
-Received: from ravnborg.org (unknown [158.248.194.18])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by asavdk3.altibox.net (Postfix) with ESMTPS id 1658F20030;
- Sun,  9 Jun 2019 13:51:07 +0200 (CEST)
-Date: Sun, 9 Jun 2019 13:51:05 +0200
-From: Sam Ravnborg <sam@ravnborg.org>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [2/2] drm/panel: support for AUO kd101n80-45na wuxga dsi video
- mode panel
-Message-ID: <20190609115105.GA31079@ravnborg.org>
-References: <20190608112342.64416-1-jitao.shi@mediatek.com>
- <20190608112342.64416-2-jitao.shi@mediatek.com>
+ id 1hZywS-0001kq-Rm
+ for linux-mediatek@lists.infradead.org; Sun, 09 Jun 2019 14:37:08 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=newmedia-net.de; s=mikd; 
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
+ bh=2B/RIjGHUT/vsYG/v5Zt/3JaknSAy9TmyLhmt7XtUBg=; 
+ b=A3KbMpqYfU3xcPjB0rJvhgtG6Cj9B2adg6gtwbH/1LQ/jWsNyAh3DaoJBEw6l+BPmfOCjr9eWLxXROyymbXFjPhW6FrD2rubaxFrn1BtgYP1WCOLmW4+NCaktC3H9P+VqXDnihypMN8hGJBZydjjVbNnJJEJ+ItA4Fgq2FX4FUY=;
+Subject: Re: [PATCH v3 1/2] mt76: mt7615: enable support for mesh
+To: Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+References: <a1ff446dfc06e2443552e7ec2d754099aacce7df.1559541944.git.ryder.lee@mediatek.com>
+ <ade7ef01-8b06-ec7d-4caf-e581f4033819@newmedia-net.de>
+ <CAJ0CqmVBogQrqf4Gckr5gQ6tCrdZG=p60ZiC+-WW-yxt93+40Q@mail.gmail.com>
+From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
+Message-ID: <0eea6d21-1de2-abc3-93f4-70ed04dac3df@newmedia-net.de>
+Date: Sun, 9 Jun 2019 16:36:23 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190608112342.64416-2-jitao.shi@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
-X-CMAE-Score: 0
-X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
- a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=mpaa-ttXAAAA:8
- a=e5mUnYsNAAAA:8 a=3arX_EwEDu8COwomX1QA:9 a=CjuIK1q_8ugA:10
- a=6heAxKwa5pAsJatQ0mat:22 a=Vxmtnl_E_bksehYqCbjh:22
+In-Reply-To: <CAJ0CqmVBogQrqf4Gckr5gQ6tCrdZG=p60ZiC+-WW-yxt93+40Q@mail.gmail.com>
+X-Received: from [2003:c9:3f05:3a00:f095:7be4:6d09:fd49]
+ by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
+ (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
+ id 1hZywV-0005Wr-8f; Sun, 09 Jun 2019 16:37:07 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190609_045114_664021_DCED8C8D 
-X-CRM114-Status: GOOD (  24.78  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190609_073705_481620_FE3B43D7 
+X-CRM114-Status: GOOD (  15.79  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [109.247.116.14 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,444 +73,148 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- yingjoe.chen@mediatek.com, Thierry Reding <treding@nvidia.com>,
- Sean Paul <seanpaul@chromium.org>, linux-pwm@vger.kernel.org,
- Pawel Moll <pawel.moll@arm.com>, Ian Campbell <ijc+devicetree@hellion.org.uk>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Russell King <rmk+kernel@arm.linux.org.uk>,
- Matthias Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Andy Yan <andy.yan@rock-chips.com>
-Content-Type: text/plain; charset="us-ascii"
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>, YF Luo <yf.luo@mediatek.com>,
+ Chih-Min Chen <chih-min.Chen@mediatek.com>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Sean Wang <sean.wang@mediatek.com>, Roy Luo <royluo@google.com>,
+ Felix Fietkau <nbd@nbd.name>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Jitao.
+by the way. this big fat kernel warning exists in all operation modes 
+unless anything else but aes-128 ccmp is used. since the chipset is 
+capable of doing gcmp etc. as well
+it would be nice if this issue can be fixed. otherwise encryption 
+support can be defined as "broken" for mt7615
 
-Thanks for another panel driver.
-
-The comments for the panel-boe-tv101wum-nl6 diver to extent
-applies to this driver too.
-Please address these and I will do a proper review of the next version.
-
-I notice that error handlign is a little bit less in this driver.
-consier what approch to use and see if you can align between these
-drivers, and if in doubt use panel-simple as your role model.
-
-	Sam
-
-On Sat, Jun 08, 2019 at 07:23:42PM +0800, Jitao Shi wrote:
-> Add driver for AUO kd101n80-45na panel.
-> This panel supports the resolution 1200x1920, dsi video mode
-> and 4 lanes.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  drivers/gpu/drm/panel/Kconfig                 |  10 +
->  drivers/gpu/drm/panel/Makefile                |   1 +
->  .../gpu/drm/panel/panel-auo-kd101n80-45na.c   | 352 ++++++++++++++++++
->  3 files changed, 363 insertions(+)
->  create mode 100644 drivers/gpu/drm/panel/panel-auo-kd101n80-45na.c
-> 
-> diff --git a/drivers/gpu/drm/panel/Kconfig b/drivers/gpu/drm/panel/Kconfig
-> index e36dbb4df867..f5cd5af9ce42 100644
-> --- a/drivers/gpu/drm/panel/Kconfig
-> +++ b/drivers/gpu/drm/panel/Kconfig
-> @@ -272,4 +272,14 @@ config DRM_PANEL_TRULY_NT35597_WQXGA
->  	help
->  	  Say Y here if you want to enable support for Truly NT35597 WQXGA Dual DSI
->  	  Video Mode panel
-> +
-> +config DRM_PANEL_AUO_KD101N80_45NA
-> +	tristate "AUO KD101N80_45NA 1200x1920 panel"
-> +	depends on OF
-> +	depends on DRM_MIPI_DSI
-> +	depends on BACKLIGHT_CLASS_DEVICE
-> +	help
-> +	  Say Y here if you want to support for AUO KD101N80_45NA WUXGA PANEL
-> +	  DSI Video Mode panel
-> +
->  endmenu
-> diff --git a/drivers/gpu/drm/panel/Makefile b/drivers/gpu/drm/panel/Makefile
-> index 78e3dc376bdd..1056933bdf2e 100644
-> --- a/drivers/gpu/drm/panel/Makefile
-> +++ b/drivers/gpu/drm/panel/Makefile
-> @@ -28,3 +28,4 @@ obj-$(CONFIG_DRM_PANEL_SITRONIX_ST7701) += panel-sitronix-st7701.o
->  obj-$(CONFIG_DRM_PANEL_SITRONIX_ST7789V) += panel-sitronix-st7789v.o
->  obj-$(CONFIG_DRM_PANEL_TPO_TPG110) += panel-tpo-tpg110.o
->  obj-$(CONFIG_DRM_PANEL_TRULY_NT35597_WQXGA) += panel-truly-nt35597.o
-> +obj-$(CONFIG_DRM_PANEL_AUO_KD101N80_45NA) += panel-auo-kd101n80-45na.o
-> diff --git a/drivers/gpu/drm/panel/panel-auo-kd101n80-45na.c b/drivers/gpu/drm/panel/panel-auo-kd101n80-45na.c
-> new file mode 100644
-> index 000000000000..ab7bfc059e8a
-> --- /dev/null
-> +++ b/drivers/gpu/drm/panel/panel-auo-kd101n80-45na.c
-> @@ -0,0 +1,352 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Copyright (c) 2018 MediaTek Inc.
-> + * Author: Jitao Shi <jitao.shi@mediatek.com>
-> + */
-> +
-> +#include <linux/backlight.h>
-> +#include <linux/gpio/consumer.h>
-> +#include <linux/module.h>
-> +#include <linux/of.h>
-> +#include <linux/regulator/consumer.h>
-> +
-> +#include <drm/drmP.h>
-> +#include <drm/drm_crtc.h>
-> +#include <drm/drm_mipi_dsi.h>
-> +#include <drm/drm_panel.h>
-> +
-> +#include <video/mipi_display.h>
-> +
-> +struct auo_panel {
-> +	struct drm_panel base;
-> +	struct mipi_dsi_device *dsi;
-> +
-> +	struct backlight_device *backlight;
-> +	struct regulator *pp1800;
-> +	struct regulator *avee;
-> +	struct regulator *avdd;
-> +	struct gpio_desc *enable_gpio;
-> +
-> +	bool prepared;
-> +	bool enabled;
-> +
-> +	const struct drm_display_mode *mode;
-> +};
-> +
-> +static inline struct auo_panel *to_auo_panel(struct drm_panel *panel)
-> +{
-> +	return container_of(panel, struct auo_panel, base);
-> +}
-> +
-> +static int auo_panel_init(struct auo_panel *auo)
-> +{
-> +	struct drm_panel *panel = &auo->base;
-> +	int err;
-> +
-> +	err = mipi_dsi_dcs_exit_sleep_mode(auo->dsi);
-> +	if (err < 0) {
-> +		DRM_DEV_ERROR(panel->dev, "failed to exit sleep mode: %d\n",
-> +			      err);
-> +		return err;
-> +	}
-> +
-> +	/* T3.1*/
-> +	msleep(120);
-> +
-> +	err = mipi_dsi_dcs_set_display_on(auo->dsi);
-> +	if (err < 0) {
-> +		DRM_DEV_ERROR(panel->dev, "failed to set display on: %d\n",
-> +			      err);
-> +	}
-> +	/* T3.1 + T3.2: > 200ms */
-> +	msleep(120);
-> +
-> +	return err;
-> +}
-> +
-> +static int auo_panel_off(struct auo_panel *auo)
-> +{
-> +	struct mipi_dsi_device *dsi = auo->dsi;
-> +	int ret;
-> +
-> +	dsi->mode_flags &= ~MIPI_DSI_MODE_LPM;
-> +
-> +	ret = mipi_dsi_dcs_set_display_off(dsi);
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	ret = mipi_dsi_dcs_enter_sleep_mode(dsi);
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	return 0;
-> +}
-> +
-> +static int auo_panel_disable(struct drm_panel *panel)
-> +{
-> +	struct auo_panel *auo = to_auo_panel(panel);
-> +
-> +	if (!auo->enabled)
-> +		return 0;
-> +
-> +	backlight_disable(auo->backlight);
-> +
-> +	auo->enabled = false;
-> +
-> +	return 0;
-> +}
-> +
-> +static int auo_panel_unprepare(struct drm_panel *panel)
-> +{
-> +	struct auo_panel *auo = to_auo_panel(panel);
-> +	int ret;
-> +
-> +	if (!auo->prepared)
-> +		return 0;
-> +
-> +	ret = auo_panel_off(auo);
-> +	if (ret < 0) {
-> +		dev_err(panel->dev, "failed to set panel off: %d\n", ret);
-> +		return ret;
-> +	}
-> +
-> +	msleep(150);
-> +	regulator_disable(auo->avee);
-> +	regulator_disable(auo->avdd);
-> +	usleep_range(5000, 7000);
-> +	regulator_disable(auo->pp1800);
-> +	if (auo->enable_gpio)
-> +		gpiod_set_value(auo->enable_gpio, 0);
-> +
-> +	auo->prepared = false;
-> +
-> +	return 0;
-> +}
-> +
-> +static int auo_panel_prepare(struct drm_panel *panel)
-> +{
-> +	struct auo_panel *auo = to_auo_panel(panel);
-> +	int ret;
-> +
-> +	if (auo->prepared)
-> +		return 0;
-> +
-> +	if (auo->enable_gpio) {
-> +		gpiod_set_value(auo->enable_gpio, 0);
-> +		usleep_range(1000, 1500);
-> +	}
-> +
-> +	ret = regulator_enable(auo->pp1800);
-> +	if (ret < 0)
-> +		return ret;
-> +	ret = regulator_enable(auo->avdd);
-> +	if (ret < 0)
-> +		goto poweroff1v8;
-> +	ret = regulator_enable(auo->avee);
-> +	if (ret < 0)
-> +		goto poweroffavdd;
-> +
-> +	if (auo->enable_gpio) {
-> +		gpiod_set_value(auo->enable_gpio, 1);
-> +		usleep_range(10000, 12000);
-> +	}
-> +
-> +	ret = auo_panel_init(auo);
-> +	if (ret < 0) {
-> +		dev_err(panel->dev, "failed to init panel: %d\n", ret);
-> +		goto poweroff;
-> +	}
-> +
-> +	auo->prepared = true;
-> +
-> +	return 0;
-> +
-> +poweroff:
-> +	regulator_disable(auo->avee);
-> +poweroffavdd:
-> +	regulator_disable(auo->avdd);
-> +poweroff1v8:
-> +	usleep_range(5000, 7000);
-> +	regulator_disable(auo->pp1800);
-> +	if (auo->enable_gpio)
-> +		gpiod_set_value(auo->enable_gpio, 0);
-> +	return ret;
-> +}
-> +
-> +static int auo_panel_enable(struct drm_panel *panel)
-> +{
-> +	struct auo_panel *auo = to_auo_panel(panel);
-> +	int ret;
-> +
-> +	if (auo->enabled)
-> +		return 0;
-> +
-> +	ret = backlight_enable(auo->backlight);
-> +	if (ret) {
-> +		DRM_DEV_ERROR(panel->drm->dev,
-> +			      "Failed to enable backlight %d\n", ret);
-> +		return ret;
-> +	}
-> +
-> +	auo->enabled = true;
-> +
-> +	return 0;
-> +}
-> +
-> +static const struct drm_display_mode default_mode = {
-> +	.clock = 157000,
-> +	.hdisplay = 1200,
-> +	.hsync_start = 1200 + 80,
-> +	.hsync_end = 1200 + 80 + 24,
-> +	.htotal = 1200 + 80 + 24 + 36,
-> +	.vdisplay = 1920,
-> +	.vsync_start = 1920 + 16,
-> +	.vsync_end = 1920 + 16 + 4,
-> +	.vtotal = 1920 + 16 + 4 + 16,
-> +	.vrefresh = 60,
-> +};
-> +
-> +static int auo_panel_get_modes(struct drm_panel *panel)
-> +{
-> +	struct drm_display_mode *mode;
-> +
-> +	mode = drm_mode_duplicate(panel->drm, &default_mode);
-> +	if (!mode) {
-> +		dev_err(panel->drm->dev, "failed to add mode %ux%ux@%u\n",
-> +			default_mode.hdisplay, default_mode.vdisplay,
-> +			default_mode.vrefresh);
-> +		return -ENOMEM;
-> +	}
-> +
-> +	drm_mode_set_name(mode);
-> +
-> +	drm_mode_probed_add(panel->connector, mode);
-> +
-> +	panel->connector->display_info.width_mm = 135;
-> +	panel->connector->display_info.height_mm = 216;
-> +	panel->connector->display_info.bpc = 8;
-> +
-> +	return 1;
-> +}
-> +
-> +static const struct drm_panel_funcs auo_panel_funcs = {
-> +	.disable = auo_panel_disable,
-> +	.unprepare = auo_panel_unprepare,
-> +	.prepare = auo_panel_prepare,
-> +	.enable = auo_panel_enable,
-> +	.get_modes = auo_panel_get_modes,
-> +};
-> +
-> +static int auo_panel_add(struct auo_panel *auo)
-> +{
-> +	struct device *dev = &auo->dsi->dev;
-> +
-> +	auo->avdd = devm_regulator_get(dev, "avdd");
-> +	if (IS_ERR(auo->avdd))
-> +		return PTR_ERR(auo->avdd);
-> +
-> +	auo->avee = devm_regulator_get(dev, "avee");
-> +	if (IS_ERR(auo->avee))
-> +		return PTR_ERR(auo->avee);
-> +
-> +	auo->pp1800 = devm_regulator_get(dev, "pp1800");
-> +	if (IS_ERR(auo->pp1800))
-> +		return PTR_ERR(auo->pp1800);
-> +
-> +	auo->enable_gpio = devm_gpiod_get(dev, "enable", GPIOD_OUT_LOW);
-> +	if (IS_ERR(auo->enable_gpio)) {
-> +		dev_err(dev, "cannot get reset-gpios %ld\n",
-> +			PTR_ERR(auo->enable_gpio));
-> +		auo->enable_gpio = NULL;
-> +	} else {
-> +		gpiod_set_value(auo->enable_gpio, 0);
-> +	}
-> +
-> +	auo->backlight = devm_of_find_backlight(dev);
-> +	if (IS_ERR(auo->backlight))
-> +		return PTR_ERR(auo->backlight);
-> +
-> +	drm_panel_init(&auo->base);
-> +	auo->base.funcs = &auo_panel_funcs;
-> +	auo->base.dev = &auo->dsi->dev;
-> +
-> +	return drm_panel_add(&auo->base);
-> +}
-> +
-> +static void auo_panel_del(struct auo_panel *auo)
-> +{
-> +	if (auo->base.dev)
-> +		drm_panel_remove(&auo->base);
-> +}
-> +
-> +static int auo_panel_probe(struct mipi_dsi_device *dsi)
-> +{
-> +	struct auo_panel *auo;
-> +	int ret;
-> +
-> +	dsi->lanes = 4;
-> +	dsi->format = MIPI_DSI_FMT_RGB888;
-> +	dsi->mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_SYNC_PULSE |
-> +		 MIPI_DSI_MODE_LPM;
-> +
-> +	auo = devm_kzalloc(&dsi->dev, sizeof(*auo), GFP_KERNEL);
-> +	if (!auo)
-> +		return -ENOMEM;
-> +
-> +	mipi_dsi_set_drvdata(dsi, auo);
-> +
-> +	auo->dsi = dsi;
-> +
-> +	ret = auo_panel_add(auo);
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	return mipi_dsi_attach(dsi);
-> +}
-> +
-> +static int auo_panel_remove(struct mipi_dsi_device *dsi)
-> +{
-> +	struct auo_panel *auo = mipi_dsi_get_drvdata(dsi);
-> +	int ret;
-> +
-> +	ret = auo_panel_disable(&auo->base);
-> +	if (ret < 0)
-> +		dev_err(&dsi->dev, "failed to disable panel: %d\n", ret);
-> +
-> +	ret = mipi_dsi_detach(dsi);
-> +	if (ret < 0)
-> +		dev_err(&dsi->dev, "failed to detach from DSI host: %d\n", ret);
-> +
-> +	auo_panel_del(auo);
-> +
-> +	return 0;
-> +}
-> +
-> +static void auo_panel_shutdown(struct mipi_dsi_device *dsi)
-> +{
-> +	struct auo_panel *auo = mipi_dsi_get_drvdata(dsi);
-> +
-> +	auo_panel_disable(&auo->base);
-> +}
-> +
-> +static const struct of_device_id auo_of_match[] = {
-> +	{ .compatible = "auo,kd101n80-45na", },
-> +	{ }
-> +};
-> +MODULE_DEVICE_TABLE(of, auo_of_match);
-> +
-> +static struct mipi_dsi_driver auo_panel_driver = {
-> +	.driver = {
-> +		.name = "panel-auo-kd101n80-45na",
-> +		.of_match_table = auo_of_match,
-> +	},
-> +	.probe = auo_panel_probe,
-> +	.remove = auo_panel_remove,
-> +	.shutdown = auo_panel_shutdown,
-> +};
-> +module_mipi_dsi_driver(auo_panel_driver);
-> +
-> +MODULE_AUTHOR("Jitao Shi <jitao.shi@mediatek.com>");
-> +MODULE_DESCRIPTION("AUO kd101n80-45na wuxga (1200x1920) video mode panel driver");
-> +MODULE_LICENSE("GPL v2");
-> +
-> -- 
-> 2.21.0
-> 
-> _______________________________________________
-> dri-devel mailing list
-> dri-devel@lists.freedesktop.org
-> https://lists.freedesktop.org/mailman/listinfo/dri-devel
+Am 06.06.2019 um 18:19 schrieb Lorenzo Bianconi:
+>> i tested your patch against a qca 9984 chipset using SAE and without
+>> encryption. both did not work. the devices are connecting, but no data
+>> connection is possible
+> Hi Sebastian,
+>
+> I tested Ryder's patch using mt76x2 as mesh peer and it works fine for me.
+> Could you please provide some more info?
+>
+> Regards,
+> Lorenzo
+>
+>>
+>> Sebastian
+>>
+>> Am 03.06.2019 um 08:08 schrieb Ryder Lee:
+>>> Enable NL80211_IFTYPE_MESH_POINT and update its path.
+>>>
+>>> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+>>> ---
+>>> Changes since v3 - fix a wrong expression
+>>> Changes since v2 - remove unused definitions
+>>> ---
+>>>    drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
+>>>    drivers/net/wireless/mediatek/mt76/mt7615/main.c | 1 +
+>>>    drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 4 +++-
+>>>    drivers/net/wireless/mediatek/mt76/mt7615/mcu.h  | 6 ------
+>>>    4 files changed, 10 insertions(+), 7 deletions(-)
+>>>
+>>> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+>>> index 59f604f3161f..f860af6a42da 100644
+>>> --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+>>> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+>>> @@ -133,6 +133,9 @@ static const struct ieee80211_iface_limit if_limits[] = {
+>>>        {
+>>>                .max = MT7615_MAX_INTERFACES,
+>>>                .types = BIT(NL80211_IFTYPE_AP) |
+>>> +#ifdef CONFIG_MAC80211_MESH
+>>> +                      BIT(NL80211_IFTYPE_MESH_POINT) |
+>>> +#endif
+>>>                         BIT(NL80211_IFTYPE_STATION)
+>>>        }
+>>>    };
+>>> @@ -195,6 +198,9 @@ int mt7615_register_device(struct mt7615_dev *dev)
+>>>        dev->mt76.antenna_mask = 0xf;
+>>>
+>>>        wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) |
+>>> +#ifdef CONFIG_MAC80211_MESH
+>>> +                              BIT(NL80211_IFTYPE_MESH_POINT) |
+>>> +#endif
+>>>                                 BIT(NL80211_IFTYPE_AP);
+>>>
+>>>        ret = mt76_register_device(&dev->mt76, true, mt7615_rates,
+>>> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+>>> index b0bb7cc12385..585e67fa2728 100644
+>>> --- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+>>> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+>>> @@ -37,6 +37,7 @@ static int get_omac_idx(enum nl80211_iftype type, u32 mask)
+>>>
+>>>        switch (type) {
+>>>        case NL80211_IFTYPE_AP:
+>>> +     case NL80211_IFTYPE_MESH_POINT:
+>>>                /* ap use hw bssid 0 and ext bssid */
+>>>                if (~mask & BIT(HW_BSSID_0))
+>>>                        return HW_BSSID_0;
+>>> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+>>> index 43f70195244c..e82297048449 100644
+>>> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+>>> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+>>> @@ -754,6 +754,7 @@ int mt7615_mcu_set_bss_info(struct mt7615_dev *dev,
+>>>
+>>>        switch (vif->type) {
+>>>        case NL80211_IFTYPE_AP:
+>>> +     case NL80211_IFTYPE_MESH_POINT:
+>>>                tx_wlan_idx = mvif->sta.wcid.idx;
+>>>                conn_type = CONNECTION_INFRA_AP;
+>>>                break;
+>>> @@ -968,7 +969,7 @@ int mt7615_mcu_add_wtbl(struct mt7615_dev *dev, struct ieee80211_vif *vif,
+>>>                .rx_wtbl = {
+>>>                        .tag = cpu_to_le16(WTBL_RX),
+>>>                        .len = cpu_to_le16(sizeof(struct wtbl_rx)),
+>>> -                     .rca1 = vif->type != NL80211_IFTYPE_AP,
+>>> +                     .rca1 = vif->type == NL80211_IFTYPE_STATION,
+>>>                        .rca2 = 1,
+>>>                        .rv = 1,
+>>>                },
+>>> @@ -1042,6 +1043,7 @@ static void sta_rec_convert_vif_type(enum nl80211_iftype type, u32 *conn_type)
+>>>    {
+>>>        switch (type) {
+>>>        case NL80211_IFTYPE_AP:
+>>> +     case NL80211_IFTYPE_MESH_POINT:
+>>>                if (conn_type)
+>>>                        *conn_type = CONNECTION_INFRA_STA;
+>>>                break;
+>>> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+>>> index e96efb13fa4d..0915cb735699 100644
+>>> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+>>> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.h
+>>> @@ -105,25 +105,19 @@ enum {
+>>>    #define STA_TYPE_STA                BIT(0)
+>>>    #define STA_TYPE_AP         BIT(1)
+>>>    #define STA_TYPE_ADHOC              BIT(2)
+>>> -#define STA_TYPE_TDLS                BIT(3)
+>>>    #define STA_TYPE_WDS                BIT(4)
+>>>    #define STA_TYPE_BC         BIT(5)
+>>>
+>>>    #define NETWORK_INFRA               BIT(16)
+>>>    #define NETWORK_P2P         BIT(17)
+>>>    #define NETWORK_IBSS                BIT(18)
+>>> -#define NETWORK_MESH         BIT(19)
+>>> -#define NETWORK_BOW          BIT(20)
+>>>    #define NETWORK_WDS         BIT(21)
+>>>
+>>>    #define CONNECTION_INFRA_STA        (STA_TYPE_STA | NETWORK_INFRA)
+>>>    #define CONNECTION_INFRA_AP (STA_TYPE_AP | NETWORK_INFRA)
+>>>    #define CONNECTION_P2P_GC   (STA_TYPE_STA | NETWORK_P2P)
+>>>    #define CONNECTION_P2P_GO   (STA_TYPE_AP | NETWORK_P2P)
+>>> -#define CONNECTION_MESH_STA  (STA_TYPE_STA | NETWORK_MESH)
+>>> -#define CONNECTION_MESH_AP   (STA_TYPE_AP | NETWORK_MESH)
+>>>    #define CONNECTION_IBSS_ADHOC       (STA_TYPE_ADHOC | NETWORK_IBSS)
+>>> -#define CONNECTION_TDLS              (STA_TYPE_STA | NETWORK_INFRA | STA_TYPE_TDLS)
+>>>    #define CONNECTION_WDS              (STA_TYPE_WDS | NETWORK_WDS)
+>>>    #define CONNECTION_INFRA_BC (STA_TYPE_BC | NETWORK_INFRA)
+>>>
 
 _______________________________________________
 Linux-mediatek mailing list
