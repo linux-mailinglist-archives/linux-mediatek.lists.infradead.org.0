@@ -2,58 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9CA7D3ACCF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 04:10:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 87B713ACDC
+	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 04:16:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ztloxJ6w3840GDwxCrAl1fbUUc4TN1xVoO9+kuLtokM=; b=kxfBvk9KldDRVD
-	aQ1ZPc0SplRO1MhyblgBNHKi2YKpRE621qlf4qIkg2V8VOFuLHW2vRUtLZ96IN0CIfk3elkXNSNt/
-	LLt+nnogcaGjbcK++cT6sQnILzTeR/rural1yKKTZE20Kh4Cvl6eVAHulmUKXf7Cp5yFdodYh8F2r
-	s85kY5UpxRSFwgPO5End2VlTpA37KPJaXSCq/bENu/69tWoask7Vp4oL2ct7NdBiO35VvdSumyUe8
-	y6knP3Td+c5RBJ0VOJnWpODQquTzuAuRk3E4FAfKLXkVv0FpacWWogMoLct+9V/jLklm6MfSmzoR/
-	PVEd0mQK4TIP0mSQJsdg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=iQv2eiwUB8IoQc6suAKcG3v/Q4Njo3MWFzLgSzuABG8=; b=jiwLrq2wX5V58n
+	D38YADW+aM//MvPx7O5rkDm6Aw2XUFzLCK0PNLYcQbAoyG0MYbXwYlLY79zco8+fOhSlo3/qlS/5r
+	V3crd0CZwUIvxwnI9RZQKxRWZW2w/hcrFPnN1FDJ6p7dQte9p1ozvG+j571i1IFhU1TErB7kdYRVL
+	ZsGDFRvrSzirFjU3VCUWmRf9vg3S595fDD6Yduquu+rHYzvU1Nr6ceVWwoe/649KfAbfmReI8WH8A
+	1Er3uk77v+FbRYGxf+jMldb8aByJet9+Gq65CDCPEdNpFtEwVOMEgzKEB4DWEIXlulcNoeJ4Aq4tn
+	1cqToPb/+i9XsDaeAZ4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ha9l3-00044Z-Ba; Mon, 10 Jun 2019 02:10:01 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ha9rP-0006zB-GZ; Mon, 10 Jun 2019 02:16:35 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ha9kz-000445-Js
- for linux-mediatek@lists.infradead.org; Mon, 10 Jun 2019 02:09:59 +0000
-X-UUID: 89d30a1d294f49b199814ea0e34472a5-20190609
-X-UUID: 89d30a1d294f49b199814ea0e34472a5-20190609
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <ryder.lee@mediatek.com>)
+ id 1ha9rD-0006rb-5s; Mon, 10 Jun 2019 02:16:24 +0000
+X-UUID: 75c0c7475d6344b7978e1dcabbd1edf7-20190609
+X-UUID: 75c0c7475d6344b7978e1dcabbd1edf7-20190609
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <weiyi.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1189306827; Sun, 09 Jun 2019 18:09:54 -0800
-Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 9 Jun 2019 19:09:52 -0700
+ with ESMTP id 987368370; Sun, 09 Jun 2019 18:16:19 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 9 Jun 2019 19:16:17 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 10 Jun 2019 10:09:50 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 10 Jun 2019 10:09:50 +0800
-Message-ID: <1560132590.28258.5.camel@mtkswgap22>
-Subject: Re: [PATCH] mt76: mt7615: add support for per-chain signal strength
- reporting
-From: Ryder Lee <ryder.lee@mediatek.com>
-To: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Date: Mon, 10 Jun 2019 10:09:50 +0800
-In-Reply-To: <d6cfd2e9-4b2b-36ac-6cae-a34f74204801@newmedia-net.de>
-References: <3912a2863e858f3623ced61737836e42c7b19149.1560071167.git.ryder.lee@mediatek.com>
- <d6cfd2e9-4b2b-36ac-6cae-a34f74204801@newmedia-net.de>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 10 Jun 2019 10:16:15 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 10 Jun 2019 10:16:15 +0800
+From: Weiyi Lu <weiyi.lu@mediatek.com>
+To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Stephen Boyd <sboyd@kernel.org>, Rob Herring
+ <robh@kernel.org>
+Subject: [PATCH v2] clk: mediatek: mt8183: Register 13MHz clock earlier for
+ clocksource
+Date: Mon, 10 Jun 2019 10:16:09 +0800
+Message-ID: <1560132969-1960-1-git-send-email-weiyi.lu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 8D06DDBC87EE4513CDD414093242ECAB5DE3824B96BF2BAF50026F9C7918A2862000:8
+X-TM-SNTS-SMTP: CAC1BC70DE426AEAA8E799500347601E8B809F99947FB5D622F96AFBA05C332B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190609_190957_664035_8BF7124F 
-X-CRM114-Status: GOOD (  16.11  )
+X-CRM114-CacheID: sfid-20190609_191623_227411_93F5C827 
+X-CRM114-Status: UNSURE (   9.25  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,122 +73,112 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, Chih-Min
- Chen <chih-min.Chen@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
- Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
- Felix Fietkau <nbd@nbd.name>
+Cc: Dehui Sun <dehui.sun@mediatek.com>, James Liao <jamesjj.liao@mediatek.com>,
+ Weiyi Lu <weiyi.lu@mediatek.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, stable@vger.kernel.org,
+ Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sun, 2019-06-09 at 16:44 +0200, Sebastian Gottschall wrote:
-> according to my findings
-> 
-> MT_RXV4_RCPI1 is part of rx descriptor 4 and not 3
-> so it must be rxdg4 = rxd[4] etc.
+The 13MHz clock should be registered before clocksource driver is
+initialized. Use CLK_OF_DECLARE_DRIVER() to guarantee.
 
-RXV start from 1 in the code.
+Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
+---
+ drivers/clk/mediatek/clk-mt8183.c | 46 +++++++++++++++++++++++++++++----------
+ 1 file changed, 34 insertions(+), 12 deletions(-)
 
-That is: RXV1 <-> rxdg0, RXV2 <-> rxdg1 ...so RXV4 <-> rxdg3
-
-> however rxdg3 contains MT_RXV3_IB_RSSIRX which can be used for signal calculation.
-> i already wrote a similar code for this driver which i sended to felix a long time ago.
-> my variant looks like
->                  status->signal = (FIELD_GET(MT_RXV3_IB_RSSIRX, rxdg3) - 220) / 2;
->                  status->chain_signal[0] = (FIELD_GET(MT_RXV4_RCPI0, rxdg4) - 220) / 2;
->                  status->chain_signal[1] = (FIELD_GET(MT_RXV4_RCPI1, rxdg4) - 220) / 2;
->                  status->chain_signal[2] = (FIELD_GET(MT_RXV4_RCPI2, rxdg4) - 220) / 2;
->                  status->chain_signal[3] = (FIELD_GET(MT_RXV4_RCPI3, rxdg4) - 220) / 2;
-
-> Am 09.06.2019 um 11:09 schrieb Ryder Lee:
-> > Fill in RX status->chain_signal to avoid empty value.
-> >
-> > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> > ---
-> >   .../net/wireless/mediatek/mt76/mt7615/mac.c   | 30 ++++++++++++++++++-
-> >   .../net/wireless/mediatek/mt76/mt7615/mac.h   |  5 ++++
-> >   2 files changed, 34 insertions(+), 1 deletion(-)
-> >
-> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-> > index b60d42b5923d..9ee83ea11b8c
-> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-> > @@ -13,6 +13,11 @@
-> >   #include "../dma.h"
-> >   #include "mac.h"
-> >   
-> > +static inline s8 to_rssi(u32 field, u32 rxv)
-> > +{
-> > +	return (FIELD_GET(field, rxv) - 220) / 2;
-> > +}
-> > +
-> >   static struct mt76_wcid *mt7615_rx_get_wcid(struct mt7615_dev *dev,
-> >   					    u8 idx, bool unicast)
-> >   {
-> > @@ -120,6 +125,7 @@ int mt7615_mac_fill_rx(struct mt7615_dev *dev, struct sk_buff *skb)
-> >   	if (rxd0 & MT_RXD0_NORMAL_GROUP_3) {
-> >   		u32 rxdg0 = le32_to_cpu(rxd[0]);
-> >   		u32 rxdg1 = le32_to_cpu(rxd[1]);
-> > +		u32 rxdg3 = le32_to_cpu(rxd[3]);
-> >   		u8 stbc = FIELD_GET(MT_RXV1_HT_STBC, rxdg0);
-> >   		bool cck = false;
-> >   
-> > @@ -169,7 +175,29 @@ int mt7615_mac_fill_rx(struct mt7615_dev *dev, struct sk_buff *skb)
-> >   
-> >   		status->enc_flags |= RX_ENC_FLAG_STBC_MASK * stbc;
-> >   
-> > -		/* TODO: RSSI */
-> > +		status->chains = dev->mt76.antenna_mask;
-> > +		status->chain_signal[0] = to_rssi(MT_RXV4_RCPI0, rxdg3);
-> > +		status->signal = status->chain_signal[0];
-> > +
-> > +		switch (status->chains) {
-> > +		case 0x3:
-> > +			status->chain_signal[1] = to_rssi(MT_RXV4_RCPI1, rxdg3);
-> > +			status->signal = max(status->signal,
-> > +					     status->chain_signal[1]);
-> > +			break;
-> > +		case 0x7:
-> > +			status->chain_signal[2] = to_rssi(MT_RXV4_RCPI2, rxdg3);
-> > +			status->signal = max(status->signal,
-> > +					     status->chain_signal[2]);
-> > +			break;
-> > +		case 0xf:
-> > +			status->chain_signal[3] = to_rssi(MT_RXV4_RCPI3, rxdg3);
-> > +			status->signal = max(status->signal,
-> > +					     status->chain_signal[3]);
-> > +			break;
-> > +		default:
-> > +			break;
-> > +		}
-> >   		rxd += 6;
-> >   		if ((u8 *)rxd - skb->data >= skb->len)
-> >   			return -EINVAL;
-> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.h b/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-> > index 18ad4b8a3807..b00ce8db58e9
-> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-> > @@ -98,6 +98,11 @@ enum rx_pkt_type {
-> >   #define MT_RXV2_GROUP_ID		GENMASK(26, 21)
-> >   #define MT_RXV2_LENGTH			GENMASK(20, 0)
-> >   
-> > +#define MT_RXV4_RCPI3			GENMASK(31, 24)
-> > +#define MT_RXV4_RCPI2			GENMASK(23, 16)
-> > +#define MT_RXV4_RCPI1			GENMASK(15, 8)
-> > +#define MT_RXV4_RCPI0			GENMASK(7, 0)
-> > +
-> >   enum tx_header_format {
-> >   	MT_HDR_FORMAT_802_3,
-> >   	MT_HDR_FORMAT_CMD,
-> 
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
+diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
+index 9d86510..bc01611 100644
+--- a/drivers/clk/mediatek/clk-mt8183.c
++++ b/drivers/clk/mediatek/clk-mt8183.c
+@@ -25,9 +25,11 @@
+ 	FIXED_CLK(CLK_TOP_UNIVP_192M, "univpll_192m", "univpll", 192000000),
+ };
+ 
++static const struct mtk_fixed_factor top_early_divs[] = {
++	FACTOR(CLK_TOP_CLK13M, "clk13m", "clk26m", 1, 2),
++};
++
+ static const struct mtk_fixed_factor top_divs[] = {
+-	FACTOR(CLK_TOP_CLK13M, "clk13m", "clk26m", 1,
+-		2),
+ 	FACTOR(CLK_TOP_F26M_CK_D2, "csw_f26m_ck_d2", "clk26m", 1,
+ 		2),
+ 	FACTOR(CLK_TOP_SYSPLL_CK, "syspll_ck", "mainpll", 1,
+@@ -1167,37 +1169,57 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
+ 	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
+ }
+ 
++static struct clk_onecell_data *top_clk_data;
++
++static void clk_mt8183_top_init_early(struct device_node *node)
++{
++	int i;
++
++	top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
++
++	for (i = 0; i < CLK_TOP_NR_CLK; i++)
++		top_clk_data->clks[i] = ERR_PTR(-EPROBE_DEFER);
++
++	mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
++			top_clk_data);
++
++	of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
++}
++
++CLK_OF_DECLARE_DRIVER(mt8183_topckgen, "mediatek,mt8183-topckgen",
++			clk_mt8183_top_init_early);
++
+ static int clk_mt8183_top_probe(struct platform_device *pdev)
+ {
+ 	struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+ 	void __iomem *base;
+-	struct clk_onecell_data *clk_data;
+ 	struct device_node *node = pdev->dev.of_node;
+ 
+ 	base = devm_ioremap_resource(&pdev->dev, res);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
+ 
+-	clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
+-
+ 	mtk_clk_register_fixed_clks(top_fixed_clks, ARRAY_SIZE(top_fixed_clks),
+-		clk_data);
++		top_clk_data);
++
++	mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
++		top_clk_data);
+ 
+-	mtk_clk_register_factors(top_divs, ARRAY_SIZE(top_divs), clk_data);
++	mtk_clk_register_factors(top_divs, ARRAY_SIZE(top_divs), top_clk_data);
+ 
+ 	mtk_clk_register_muxes(top_muxes, ARRAY_SIZE(top_muxes),
+-		node, &mt8183_clk_lock, clk_data);
++		node, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_composites(top_aud_muxes, ARRAY_SIZE(top_aud_muxes),
+-		base, &mt8183_clk_lock, clk_data);
++		base, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_composites(top_aud_divs, ARRAY_SIZE(top_aud_divs),
+-		base, &mt8183_clk_lock, clk_data);
++		base, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_gates(node, top_clks, ARRAY_SIZE(top_clks),
+-		clk_data);
++		top_clk_data);
+ 
+-	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
++	return of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
+ }
+ 
+ static int clk_mt8183_infra_probe(struct platform_device *pdev)
+-- 
+1.8.1.1.dirty
 
 
 _______________________________________________
