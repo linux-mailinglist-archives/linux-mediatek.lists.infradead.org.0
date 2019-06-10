@@ -2,57 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 69BDB3ACBF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 03:50:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D534E3ACCA
+	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 04:09:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IltwTRXFrW3taQ8R2TiZgFV6ja01+igq0nOYVpgc2Mc=; b=FYSEMLvxBs5jnr
-	Z0rik3uw2OPrlxjHokWHQLA6ZNyUbIGiKMolcVYDLomuFtUZZi3nde9VApK8IqnyeTjz31wxWw9Kd
-	TgKRZ2JQ8ea3hpJ/sHQKjlg4QqNKLHeGMqGLqTqGhOaELFnCJrSileui0BNpCZs0ueA0MtBKjDAtK
-	SIi7JLsS7j33IlniIGAY42X/Qtl5Hwhcgu7o1aISNC+PfRgs8nQfdjDtGThYi/fgTnwuCJDTr4rq4
-	4IQMCHATTQIaqXMYfIn8apA4NAKxWrklq3gboYZ6ussBfVrfRncxP0HLT2RJQ1nVYKUMzG7/5qPTm
-	Pj9sd1FLVey3J7mXQROw==;
+	List-Owner; bh=z53u2BY36M3W4hSaCbi8SC/RRFXrKxTEpBg3gR6HyHQ=; b=Ml9iiixBtx/2BN
+	tQQixcxNa0he68vjXNCG46zE1JlO+VnyjyEspV+x04E+Q06msTbGiUEMH1ag3v18F2ZHEeBjosQ48
+	/zWEVZ1D4BNUzm9ZpsY0CXuWqTvLCzjxJCtvQze4qKDp5FYfkg7u29e7rcya6WFz5kypobzY1NOQl
+	NPPdYnFmKHhStvbV9CeTvDeaM4vNNPzUtEEtB15ooEYkHw/jSKM/b43FmnCUXa1SlBmDkpwsh2vDk
+	Lu83m8Z38GxLL8IhSBitOkjW56ZlmagljfOssVqYzX2ayKqFq+3k8MalMdPuUpDdUfRTgcvqqZlbf
+	336uPPxDAlECkrbg1G3g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ha9SX-0007OA-6Q; Mon, 10 Jun 2019 01:50:53 +0000
+	id 1ha9kX-0003tX-M1; Mon, 10 Jun 2019 02:09:29 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ha9SL-0007Fg-7p; Mon, 10 Jun 2019 01:50:42 +0000
-X-UUID: 1d865b37c11b421ba6782eea90940aba-20190609
-X-UUID: 1d865b37c11b421ba6782eea90940aba-20190609
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1ha9kL-0003m0-Hy; Mon, 10 Jun 2019 02:09:18 +0000
+X-UUID: 91462e071ff1404c8a41618b2578b227-20190609
+X-UUID: 91462e071ff1404c8a41618b2578b227-20190609
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <weiyi.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1180069066; Sun, 09 Jun 2019 17:50:19 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 9 Jun 2019 18:50:16 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 10 Jun 2019 09:50:11 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 10 Jun 2019 09:50:09 +0800
-Message-ID: <1560131408.8487.112.camel@mhfsdcap03>
-Subject: Re: [PATCH v6 06/10] device connection: Add
- fwnode_connection_find_match()
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-Date: Mon, 10 Jun 2019 09:50:08 +0800
-In-Reply-To: <20190607103026.GE10298@kuha.fi.intel.com>
-References: <1559115828-19146-1-git-send-email-chunfeng.yun@mediatek.com>
- <1559115828-19146-7-git-send-email-chunfeng.yun@mediatek.com>
- <20190607103026.GE10298@kuha.fi.intel.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 1933198069; Sun, 09 Jun 2019 18:09:12 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 9 Jun 2019 19:09:10 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 10 Jun 2019 10:09:10 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 10 Jun 2019 10:09:09 +0800
+Message-ID: <1560132549.16837.1.camel@mtksdaap41>
+Subject: Re: [PATCH v1] clk: mediatek: mt8183: Register 13MHz clock earlier
+ for clocksource
+From: Weiyi Lu <weiyi.lu@mediatek.com>
+To: Stephen Boyd <sboyd@kernel.org>
+Date: Mon, 10 Jun 2019 10:09:09 +0800
+In-Reply-To: <20190607175922.6D5F5208C0@mail.kernel.org>
+References: <1559877112-21064-1-git-send-email-weiyi.lu@mediatek.com>
+ <20190607175922.6D5F5208C0@mail.kernel.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190609_185041_290828_99AAC4F0 
-X-CRM114-Status: GOOD (  14.27  )
+X-CRM114-CacheID: sfid-20190609_190917_601711_477A75FE 
+X-CRM114-Status: GOOD (  13.67  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,54 +72,82 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
- Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
- Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
- Sridharan <badhri@google.com>, Andy
- Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>, Matthias
- Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
+Cc: Dehui Sun <dehui.sun@mediatek.com>, Rob Herring <robh@kernel.org>,
+ Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
+ James Liao <jamesjj.liao@mediatek.com>, linux-kernel@vger.kernel.org,
+ stable@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Heikki,
+On Fri, 2019-06-07 at 10:59 -0700, Stephen Boyd wrote:
+> Quoting Weiyi Lu (2019-06-06 20:11:52)
+> > diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
+> > index 9d86510..a8f50bc 100644
+> > --- a/drivers/clk/mediatek/clk-mt8183.c
+> > +++ b/drivers/clk/mediatek/clk-mt8183.c
+> > @@ -1167,37 +1169,62 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
+> >         return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
+> >  }
+> >  
+> > +static struct clk_onecell_data *top_clk_data;
+> > +
+> > +static void clk_mt8183_top_init_early(struct device_node *node)
+> > +{
+> > +       int i;
+> > +
+> > +       if (!top_clk_data) {
+> 
+> Is this function ever called more than once? I believe the answer is no
+> so this check should be removed.
+> 
 
-On Fri, 2019-06-07 at 13:30 +0300, Heikki Krogerus wrote:
-> Hi,
+Thanks for reminding. I'll fix in next version.
+
+> > +               top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
+> > +
+> > +               for (i = 0; i < CLK_TOP_NR_CLK; i++)
+> > +                       top_clk_data->clks[i] = ERR_PTR(-EPROBE_DEFER);
+> > +       }
+> > +
+> > +       mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
+> > +                       top_clk_data);
+> > +
+> > +       of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
+> > +}
+> > +
+> > +CLK_OF_DECLARE_DRIVER(mt8183_topckgen, "mediatek,mt8183-topckgen",
+> > +                       clk_mt8183_top_init_early);
+> > +
+> >  static int clk_mt8183_top_probe(struct platform_device *pdev)
+> >  {
+> >         struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> >         void __iomem *base;
+> > -       struct clk_onecell_data *clk_data;
+> >         struct device_node *node = pdev->dev.of_node;
+> >  
+> >         base = devm_ioremap_resource(&pdev->dev, res);
+> >         if (IS_ERR(base))
+> >                 return PTR_ERR(base);
+> >  
+> > -       clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
+> > +       if (!top_clk_data)
+> > +               top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
 > 
-> On Wed, May 29, 2019 at 03:43:44PM +0800, Chunfeng Yun wrote:
-> > From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-> > 
-> > The fwnode_connection_find_match() function is exactly the
-> > same as device_connection_find_match(), except it takes
-> > struct fwnode_handle as parameter instead of struct device.
-> > That allows locating device connections before the device
-> > entries have been created.
-> > 
-> > Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+> And then this can be removed because top_clk_data must be allocated at
+> this point.
 > 
-> This one is also missing your SoB.
-> 
-> There are now some other changes to the devcon API in Rafael's tree
-> [1] that will conflict with this one. I'm attaching a modified version
-> of the patch that is rebased on top of today's linux-next. If you use
-> it, you should make a note (probable in the cover letter) that the
-> series now depends on Rafael's tree.
-Got it, thanks
+
+I'll fix in next version. Many thanks.
 
 > 
-> [1] https://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git/log/?h=linux-next
-> 
-> 
-> thanks,
-> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
 
 
