@@ -2,38 +2,38 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 484A03B35B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 12:37:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E71E3B357
+	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Jun 2019 12:37:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=J2Ywn6LT5uWoIOVzgSiZACiUmw6LQ7yoB9q/hi+lBy0=; b=Z+Drx1BrC2qrft
-	t7TYrJQvbJI6Tn9yMWpBtQnr6zGD/LfZSV8aE+t9DeuP1T0NGToxKMXXHjQgULb7GqsJcxIk3FOKD
-	wSLItByEfDt87BTOkkxqXOIs+WW56l7nEBUbXVPfbOGkEYbPzl6t6JZpJKCtbPxPjTqzlakMf7O8B
-	f6RRxFRxrhEzhUnEm4Zs6fn18Fly8QFMANSdvC1AjDtzVzGbp4wCxWAesz/n6YriPikt7706SaiI+
-	K7psCtwG2H5wStpnoYZAnwhPoAx/uKMTkLw7XeyK7r1xQAEObizsm8lSOkMSUQ2DmNQqjymZANta8
-	j+vCQAAfBdbD48IOYwdQ==;
+	List-Owner; bh=i4L6vwJ1ElKjKosKOn/1Cc8FjYUQheygCQrmOlJav/Y=; b=X5go2d1D6BKF9D
+	vIHNRPQClrqKpoz3b+WfkJrCPbXeP0oCppceetMjvCbSef8HfjGE9vKhI5Np58k6XxrlnQSAK+Pk+
+	SLaB94XbAQNFI1IspQOYb7cUy36XuD5PstEA26rcM+l78u2MvyibqJXPvvK4Pk0ZoNQ8EKNc5VRx1
+	ksS9g0iJgeHCTfhORHT3mEcdlwAmPnfcuGC8t2snuJTP9dndohS+fd46akcz8Y3QBq/YqI7EPrxIc
+	P7Dgzs/OPdowoZSAW31zdU+PYysaL7QTWCda4GKwK4IKES80QjCz+CWtMkJu8j39YtmK6Phy5Oe4o
+	4/CKMQXEENjrk+cW4/Jw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haHgX-0003rn-7h; Mon, 10 Jun 2019 10:37:53 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1haHfw-00035b-CC; Mon, 10 Jun 2019 10:37:16 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haHfZ-0002jD-Tc; Mon, 10 Jun 2019 10:36:55 +0000
-X-UUID: d66631e7966e4b268f90b172e098294d-20190610
-X-UUID: d66631e7966e4b268f90b172e098294d-20190610
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1haHfO-0002Yu-Ph; Mon, 10 Jun 2019 10:36:44 +0000
+X-UUID: 91d00f49df5d4e4caaf861a1e5c20192-20190610
+X-UUID: 91d00f49df5d4e4caaf861a1e5c20192-20190610
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <neal.liu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1084503431; Mon, 10 Jun 2019 02:36:42 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 10 Jun 2019 03:36:41 -0700
+ with ESMTP id 850929798; Mon, 10 Jun 2019 02:36:36 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 10 Jun 2019 03:36:35 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 10 Jun 2019 18:36:33 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 10 Jun 2019 18:36:34 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Mon, 10 Jun 2019 18:36:33 +0800
@@ -41,18 +41,18 @@ From: Neal Liu <neal.liu@mediatek.com>
 To: Matt Mackall <mpm@selenic.com>, Herbert Xu <herbert@gondor.apana.org.au>, 
  Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Sean Wang <sean.wang@kernel.org>
-Subject: [PATCH v3 1/3] soc: mediatek: add SMC fid table for SIP interface
-Date: Mon, 10 Jun 2019 18:36:22 +0800
-Message-ID: <1560162984-26104-2-git-send-email-neal.liu@mediatek.com>
+Subject: [PATCH v3 2/3] dt-bindings: rng: update bindings for MediaTek ARMv8
+ SoCs
+Date: Mon, 10 Jun 2019 18:36:23 +0800
+Message-ID: <1560162984-26104-3-git-send-email-neal.liu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1560162984-26104-1-git-send-email-neal.liu@mediatek.com>
 References: <1560162984-26104-1-git-send-email-neal.liu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: AB049FDEE81F782DF02F0C1296A73261E00F082DEA0E126DB98903FBC0B15F5C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190610_033653_979833_0700EE73 
-X-CRM114-Status: UNSURE (   9.82  )
+X-CRM114-CacheID: sfid-20190610_033642_845402_C5162C2C 
+X-CRM114-Status: UNSURE (   9.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -83,54 +83,44 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-1. Add a header file to provide SIP interface to ATF
-2. Add hwrng SMC fid
+Document the binding used by the MediaTek ARMv8 SoCs random
+number generator with TrustZone enabled.
 
 Signed-off-by: Neal Liu <neal.liu@mediatek.com>
 ---
- include/linux/soc/mediatek/mtk_sip_svc.h |   33 ++++++++++++++++++++++++++++++
- 1 file changed, 33 insertions(+)
- create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+ Documentation/devicetree/bindings/rng/mtk-rng.txt |   15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
 
-diff --git a/include/linux/soc/mediatek/mtk_sip_svc.h b/include/linux/soc/mediatek/mtk_sip_svc.h
-new file mode 100644
-index 0000000..e70c325
---- /dev/null
-+++ b/include/linux/soc/mediatek/mtk_sip_svc.h
-@@ -0,0 +1,33 @@
-+/* SPDX-License-Identifier: GPL-2.0 */
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
+diff --git a/Documentation/devicetree/bindings/rng/mtk-rng.txt b/Documentation/devicetree/bindings/rng/mtk-rng.txt
+index 2bc89f1..fb3dd59 100644
+--- a/Documentation/devicetree/bindings/rng/mtk-rng.txt
++++ b/Documentation/devicetree/bindings/rng/mtk-rng.txt
+@@ -3,9 +3,13 @@ found in MediaTek SoC family
+ 
+ Required properties:
+ - compatible	    : Should be
+-			"mediatek,mt7622-rng", 	"mediatek,mt7623-rng" : for MT7622
+-			"mediatek,mt7629-rng",  "mediatek,mt7623-rng" : for MT7629
+-			"mediatek,mt7623-rng" : for MT7623
++			"mediatek,mt7622-rng", "mediatek,mt7623-rng" for MT7622
++			"mediatek,mt7629-rng", "mediatek,mt7623-rng" for MT7629
++			"mediatek,mt7623-rng" for MT7623
++			"mediatek,mtk-sec-rng" for MediaTek ARMv8 SoCs with
++			security RNG
 +
-+#ifndef _MTK_SECURE_API_H_
-+#define _MTK_SECURE_API_H_
++Optional properties:
+ - clocks	    : list of clock specifiers, corresponding to
+ 		      entries in clock-names property;
+ - clock-names	    : Should contain "rng" entries;
+@@ -19,3 +23,8 @@ rng: rng@1020f000 {
+ 	clocks = <&infracfg CLK_INFRA_TRNG>;
+ 	clock-names = "rng";
+ };
 +
-+#include <linux/kernel.h>
-+
-+/* Error Code */
-+#define SIP_SVC_E_SUCCESS		0
-+#define SIP_SVC_E_NOT_SUPPORTED		-1
-+#define SIP_SVC_E_INVALID_PARAMS	-2
-+#define SIP_SVC_E_INVALID_RANGE		-3
-+#define SIP_SVC_E_PERMISSION_DENY	-4
-+
-+#ifdef CONFIG_ARM64
-+#define MTK_SIP_SMC_AARCH_BIT		BIT(30)
-+#else
-+#define MTK_SIP_SMC_AARCH_BIT		0
-+#endif
-+
-+/*******************************************************************************
-+ * Defines for Mediatek runtime services func ids
-+ ******************************************************************************/
-+
-+/* Security related SMC call */
-+/* HWRNG */
-+#define MTK_SIP_KERNEL_GET_RND \
-+	(0x82000206 | MTK_SIP_SMC_AARCH_BIT)
-+
-+#endif /* _MTK_SECURE_API_H_ */
++/* secure RNG */
++hwrng: hwrng {
++	compatible = "mediatek,mtk-sec-rng";
++};
 -- 
 1.7.9.5
 
