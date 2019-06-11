@@ -2,97 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9EDE53C8DB
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 12:26:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 21EA23C93B
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 12:45:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5c3GApwaLeJjJKDbiEwY0CHnk7HRQ1jbaq7BQNs7lFg=; b=nPMvIk0jlVTvh3
-	mNSB3pyk+7wAQ2z6np+cjXa6sCZONLe1ayyl+obPil+7MQyuUrm9P9NfmWPOIt442e8zYoshB3m1r
-	WCb5XeQ2olNx4GEKRxklnIVFT4xmeGRhKPs03R7qLhqF59c1Sig7OXuaeOGR9A1rvI56OZ6grT9Dx
-	mUmWc6oKITOqyhuZU4eaXmpxJXQCPQ3WClDuQh0YNo9myxp0AcNgFCj1uAAXnB6/lU1S1LBu4c1Kr
-	kba6bH/Znxs+MSNy8ra4/5AHedM77Fgr7zb/rdvIfFDbIU+W39Xo51yPtOHH2+aBl72JAwaeQ1Diw
-	flWhyWrWZOZMhF3GzSbA==;
+	List-Owner; bh=oIPmUyrWCgp2d9FJhpTMSIJaWAI9WUVhDVc4da+vjZI=; b=rGrAeC5xXzzSHW
+	CRNcx2ap2BfXt9xMSpDl3xhM1nfewV/J4xYt6p4d8BSE6hgdTTGiAFRhFqnmVMrj7Q8sXY9y91o5E
+	DCr/KkkvBII2laJl4z2g2PvyQt9Ux8WuPKQs/G+DXb0X2PtIhJ+WzPsLJIZ/6XyKmCef1FT9EfW8f
+	DXPkYOyV1tw5tGTNSf3uRbQyyxqmscLuqjXT+it5XGHsunPK3CdbZDzJqfBHGJbnUTdQgdkh9SVy5
+	DgC/NCvn+TtJbS7daOc9XJnWj/hhF4yy4TM5fZIf+Tva2QbxWR+zf5r7gCltMP5vKdlMCwx1wNC0m
+	5J2MFq06yzIE9LTPTo3A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hadyU-0004g2-G6; Tue, 11 Jun 2019 10:25:54 +0000
-Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
+	id 1haeHD-0005N2-7G; Tue, 11 Jun 2019 10:45:15 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hadre-0002iR-Jx
- for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 10:18:52 +0000
-Received: by mail-ed1-x541.google.com with SMTP id w33so19232483edb.10
- for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 03:18:49 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=X0C5tQts1L+LXt2Q6k9c6ouRJcr990w6/a3NoyIORNQ=;
- b=hMSEhr1Ibx3hCZ1fwXTjoT0WNF47kP/wJklo2hoCJz1xUYosHQcyhZduBi4ldMd4u5
- E1DFtj7cgLW/CRLILv3exZPt3kEXlkD3pLqVUz+QF2sMXilMvWtC3DtptVfHdjGIuxi2
- y8sVqaA5Phb46+tnfHdR/Z1k05JiQ36ou7x8Q=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=X0C5tQts1L+LXt2Q6k9c6ouRJcr990w6/a3NoyIORNQ=;
- b=heoMRBbtl0Q3Vnut+2M0ah9Y3d0kRJdTihaUSrWMuTai4kXNRlMB6I2b/ExxvCewyD
- wbve/dYWtpjGfBAF4OCQf7uWOqISVh5QYo7/VwqKJI6muXmg9ZIT7hIeE15VTZziF6IK
- E6NqWndNNifk4Z03ErYQaJydvjZY6rNiBYiMCiI1st6a+ypFTeROECKT8RD3EU/gp7/x
- Uk84/bY5RSzv4iSEw2axF1jnW7cApiFR3QzVYiw+CxgsjeCdxo7p7d2EQn9JdSL6iYYt
- Zn3Wh5G9uV5zVVNGUn8DeJrE+FEmZDZCR/xFP4qLkILf6w5OIUDoCGu1Xw9ToBo7mJPZ
- nM2A==
-X-Gm-Message-State: APjAAAWUhvpmo95wCO+bbiUG8W7DZ57tl0AZxCb6i7KdkzqPMdBzAova
- Ro6MFICv2dOG77tWOr1xTgkAV7NCRowgvw==
-X-Google-Smtp-Source: APXvYqxNST6airxLBOhOAnRgXbGKqFdXgrAjmL6KbYBTTzR5sp2Qt5ID1ZG912sl9SqY4cfidH+a6Q==
-X-Received: by 2002:a17:906:3482:: with SMTP id
- g2mr63337351ejb.186.1560248328442; 
- Tue, 11 Jun 2019 03:18:48 -0700 (PDT)
-Received: from mail-wr1-f46.google.com (mail-wr1-f46.google.com.
- [209.85.221.46])
- by smtp.gmail.com with ESMTPSA id dc1sm2180450ejb.39.2019.06.11.03.18.48
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Tue, 11 Jun 2019 03:18:48 -0700 (PDT)
-Received: by mail-wr1-f46.google.com with SMTP id f9so12334697wre.12
- for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 03:18:48 -0700 (PDT)
-X-Received: by 2002:a5d:514d:: with SMTP id u13mr32683805wrt.77.1560247997738; 
- Tue, 11 Jun 2019 03:13:17 -0700 (PDT)
+ id 1haeH8-0005Aj-3o; Tue, 11 Jun 2019 10:45:12 +0000
+X-UUID: 90eb4b276d6b4681b6da52a2dbe6ba43-20190611
+X-UUID: 90eb4b276d6b4681b6da52a2dbe6ba43-20190611
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1812829475; Tue, 11 Jun 2019 02:45:07 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 03:45:05 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 18:44:51 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 11 Jun 2019 18:44:51 +0800
+Message-ID: <1560249891.29153.4.camel@mtksdccf07>
+Subject: Re: [PATCH v2] kasan: add memory corruption identification for
+ software tag-based mode
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Dmitry Vyukov <dvyukov@google.com>
+Date: Tue, 11 Jun 2019 18:44:51 +0800
+In-Reply-To: <CACT4Y+YNG0OGT+mCEms+=SYWA=9R3MmBzr8e3QsNNdQvHNt9Fg@mail.gmail.com>
+References: <1559651172-28989-1-git-send-email-walter-zh.wu@mediatek.com>
+ <CACT4Y+Y9_85YB8CCwmKerDWc45Z00hMd6Pc-STEbr0cmYSqnoA@mail.gmail.com>
+ <1560151690.20384.3.camel@mtksdccf07>
+ <CACT4Y+aetKEM9UkfSoVf8EaDNTD40mEF0xyaRiuw=DPEaGpTkQ@mail.gmail.com>
+ <1560236742.4832.34.camel@mtksdccf07>
+ <CACT4Y+YNG0OGT+mCEms+=SYWA=9R3MmBzr8e3QsNNdQvHNt9Fg@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-References: <20190417104511.21514-1-frederic.chen@mediatek.com>
- <20190417104511.21514-7-frederic.chen@mediatek.com>
- <20190509094846.GA65444@google.com>
- <1558466055.15388.342.camel@mtksdccf07> <1560242886.23799.13.camel@mtksdccf07>
- <CAAFQd5CReiPOySyk-eFkgiQMDMoqB3Uhd=bcho2Qtsv74y8fmg@mail.gmail.com>
- <1560247648.23799.16.camel@mtksdccf07>
-In-Reply-To: <1560247648.23799.16.camel@mtksdccf07>
-From: Tomasz Figa <tfiga@chromium.org>
-Date: Tue, 11 Jun 2019 19:13:06 +0900
-X-Gmail-Original-Message-ID: <CAAFQd5Ai2JmwY+_inA-WkE1rKhTOyvJeLM8XG3E6BsYCrp4pnw@mail.gmail.com>
-Message-ID: <CAAFQd5Ai2JmwY+_inA-WkE1rKhTOyvJeLM8XG3E6BsYCrp4pnw@mail.gmail.com>
-Subject: Re: [RFC PATCH V1 6/6] platform: mtk-isp: Add Mediatek DIP driver
-To: Frederic Chen <frederic.chen@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_031850_723201_1F32820A 
-X-CRM114-Status: GOOD (  26.50  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190611_034510_163416_7BFC9607 
+X-CRM114-Status: GOOD (  31.86  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:541 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -104,180 +76,125 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Shik Chen <shik@chromium.org>, devicetree@vger.kernel.org,
- =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
- Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
- =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- =?UTF-8?B?SG9sbWVzIENoaW91ICjpgrHmjLop?= <holmes.chiou@mediatek.com>,
- suleiman@chromium.org, Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>,
- =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
- Sj Huang <sj.huang@mediatek.com>, yuzhao@chromium.org,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- zwisler@chromium.org, Matthias Brugger <matthias.bgg@gmail.com>,
- =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Hans Verkuil <hans.verkuil@cisco.com>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
- Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Jason
+ A. Donenfeld" <Jason@zx2c4.com>, Vasily
+ Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>,
+ Linux-MM <linux-mm@kvack.org>, Andrey Konovalov <andreyknvl@google.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
+ Pekka Enberg <penberg@kernel.org>, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>,
+ Miles Chen =?UTF-8?Q?=28=E9=99=B3=E6=B0=91=E6=A8=BA=29?=
+ <Miles.Chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
+ Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jun 11, 2019 at 7:07 PM Frederic Chen
-<frederic.chen@mediatek.com> wrote:
->
-> Hi Tomasz,
->
->
-> On Tue, 2019-06-11 at 17:59 +0900, Tomasz Figa wrote:
-> > On Tue, Jun 11, 2019 at 5:48 PM Frederic Chen
-> > <frederic.chen@mediatek.com> wrote:
-> > >
-> > > Dear Tomasz,
-> > >
-> > > I'd like to elaborate more about the tuning_data.va.
-> > > Would you like to give us some advice about our improvement proposal inline?
-> > >
-> > > Thank you very much.
-> > >
-> > >
-> > > On Wed, 2019-05-22 at 03:14 +0800, Frederic Chen wrote:
-> > > > Dear Tomasz,
-> > > >
-> > > > I appreciate your comment. It is very helpful for us.
-> > > >
-> > > >
-> > > > > > diff --git a/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c b/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c
-> > > > > > new file mode 100644
-> > > > > > index 000000000000..54d2b5f5b802
-> > > > > > --- /dev/null
-> > > > > > +++ b/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c
-> > > > > > @@ -0,0 +1,1384 @@
-> > >
-> > > [snip]
-> > >
-> > > > > > +static void dip_submit_worker(struct work_struct *work)
-> > > > > > +{
-> > > > > > +       struct mtk_dip_hw_submit_work *dip_submit_work =
-> > > > > > +               container_of(work, struct mtk_dip_hw_submit_work, frame_work);
-> > > > > > +       struct mtk_dip_hw *dip_hw = dip_submit_work->dip_hw;
-> > > > > > +       struct mtk_dip_dev *dip_dev = mtk_dip_hw_to_dev(dip_hw);
-> > > > > > +       struct mtk_dip_hw_work *dip_work;
-> > > > > > +       struct mtk_dip_hw_subframe *buf;
-> > > > > > +       u32 len, num;
-> > > > > > +       int ret;
-> > > > > > +
-> > > > > > +       num  = atomic_read(&dip_hw->num_composing);
-> > > > > > +
-> > > > > > +       mutex_lock(&dip_hw->dip_worklist.queuelock);
-> > > > > > +       dip_work = list_first_entry(&dip_hw->dip_worklist.queue,
-> > >
-> > > [snip]
-> > >
-> > > > > > +
-> > > > > > +       if (dip_work->frameparams.tuning_data.pa == 0) {
-> > > > > > +               dev_dbg(&dip_dev->pdev->dev,
-> > > > > > +                       "%s: frame_no(%d) has no tuning_data\n",
-> > > > > > +                       __func__, dip_work->frameparams.frame_no);
-> > > > > > +
-> > > > > > +               memcpy(&dip_work->frameparams.tuning_data,
-> > > > > > +                      &buf->tuning_buf, sizeof(buf->tuning_buf));
-> > > > >
-> > > > > Ditto.
-> > > > >
-> > > >
-> > > > I got it.
-> > > >
-> > > > > > +               memset((char *)buf->tuning_buf.va, 0, DIP_TUNING_SZ);
-> > > > >
-> > > > > Ditto.
-> > > >
-> > > > I got it.
-> > > >
-> > > > >
-> > > > > > +               /*
-> > > > > > +                * When user enqueued without tuning buffer,
-> > > > > > +                * it would use driver internal buffer.
-> > > > > > +                * So, tuning_data.va should be 0
-> > > > > > +                */
-> > > > > > +               dip_work->frameparams.tuning_data.va = 0;
-> > > > >
-> > > > > I don't understand this. We just zeroed the buffer via this kernel VA few
-> > > > > lines above, so why would it have to be set to 0?
-> > > > >
-> > > >
-> > > > I will remove this unnecessary line.
-> > > >
-> > > > > > +       }
-> > >
-> > > After confirming the firmware part, I found that we use this field
-> > > (tuning_data.va) to notify firmware if there is no tuning data from
-> > > user.
-> > >
-> > > - frameparams.tuning_data.va is 0: use the default tuning data in
-> > >                                    SCP, but we still need to pass
-> > >                                    frameparams.tuning_data.pa because
-> > >                                    the buffer contains some working
-> > >                                    buffer required.
-> > > - frameparams.tuning_data.va is not 0: the tuning data was passed from
-> > >                                        the user
-> > >
-> > > Since we should not pass cpu addres to SCP, could I rename tuning_data.va
-> > > as tuning_data.cookie, and write a constant value to indicate if SCP
-> > > should use its internal default setting or not here?
-> > >
-> > > For example,
-> > > /* SCP uses tuning data passed from userspace*/
-> > > dip_work->frameparams.tuning_data.cookie = MTK_DIP_USER_TUNING_DATA;
-> > >
-> > > /* SCP uses internal tuning data */
-> > > dip_work->frameparams.tuning_data.cookie = MTK_DIP_DEFAULT_TUNING_DATA;
+On Tue, 2019-06-11 at 10:47 +0200, Dmitry Vyukov wrote:
+> On Tue, Jun 11, 2019 at 9:05 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
 > >
-> > Perhaps we could just call it "present" and set to true or false?
+> > On Mon, 2019-06-10 at 13:46 +0200, Dmitry Vyukov wrote:
+> > > On Mon, Jun 10, 2019 at 9:28 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> > > >
+> > > > On Fri, 2019-06-07 at 21:18 +0800, Dmitry Vyukov wrote:
+> > > > > > diff --git a/include/linux/kasan.h b/include/linux/kasan.h
+> > > > > > index b40ea104dd36..be0667225b58 100644
+> > > > > > --- a/include/linux/kasan.h
+> > > > > > +++ b/include/linux/kasan.h
+> > > > > > @@ -164,7 +164,11 @@ void kasan_cache_shutdown(struct kmem_cache *cache);
+> > > > > >
+> > > > > >  #else /* CONFIG_KASAN_GENERIC */
+> > > > > >
+> > > > > > +#ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
+> > > > > > +void kasan_cache_shrink(struct kmem_cache *cache);
+> > > > > > +#else
+> > > > >
+> > > > > Please restructure the code so that we don't duplicate this function
+> > > > > name 3 times in this header.
+> > > > >
+> > > > We have fixed it, Thank you for your reminder.
+> > > >
+> > > >
+> > > > > >  static inline void kasan_cache_shrink(struct kmem_cache *cache) {}
+> > > > > > +#endif
+> > > > > >  static inline void kasan_cache_shutdown(struct kmem_cache *cache) {}
+> > > > > >
+> > > > > >  #endif /* CONFIG_KASAN_GENERIC */
+> > > > > > diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
+> > > > > > index 9950b660e62d..17a4952c5eee 100644
+> > > > > > --- a/lib/Kconfig.kasan
+> > > > > > +++ b/lib/Kconfig.kasan
+> > > > > > @@ -134,6 +134,15 @@ config KASAN_S390_4_LEVEL_PAGING
+> > > > > >           to 3TB of RAM with KASan enabled). This options allows to force
+> > > > > >           4-level paging instead.
+> > > > > >
+> > > > > > +config KASAN_SW_TAGS_IDENTIFY
+> > > > > > +       bool "Enable memory corruption idenitfication"
+> > > > >
+> > > > > s/idenitfication/identification/
+> > > > >
+> > > > I should replace my glasses.
+> > > >
+> > > >
+> > > > > > +       depends on KASAN_SW_TAGS
+> > > > > > +       help
+> > > > > > +         Now tag-based KASAN bug report always shows invalid-access error, This
+> > > > > > +         options can identify it whether it is use-after-free or out-of-bound.
+> > > > > > +         This will make it easier for programmers to see the memory corruption
+> > > > > > +         problem.
+> > > > >
+> > > > > This description looks like a change description, i.e. it describes
+> > > > > the current behavior and how it changes. I think code comments should
+> > > > > not have such, they should describe the current state of the things.
+> > > > > It should also mention the trade-off, otherwise it raises reasonable
+> > > > > questions like "why it's not enabled by default?" and "why do I ever
+> > > > > want to not enable it?".
+> > > > > I would do something like:
+> > > > >
+> > > > > This option enables best-effort identification of bug type
+> > > > > (use-after-free or out-of-bounds)
+> > > > > at the cost of increased memory consumption for object quarantine.
+> > > > >
+> > > > I totally agree with your comments. Would you think we should try to add the cost?
+> > > > It may be that it consumes about 1/128th of available memory at full quarantine usage rate.
+> > >
+> > > Hi,
+> > >
+> > > I don't understand the question. We should not add costs if not
+> > > necessary. Or you mean why we should add _docs_ regarding the cost? Or
+> > > what?
+> > >
+> > I mean the description of option. Should it add the description for
+> > memory costs. I see KASAN_SW_TAGS and KASAN_GENERIC options to show the
+> > memory costs. So We originally think it is possible to add the
+> > description, if users want to enable it, maybe they want to know its
+> > memory costs.
 > >
->
-> Yes. I would like to use "present" here.
->
-> Original:
->   struct img_addr {
->       u64 va; /* Used by Linux OS access */
->       u32 pa; /* Used by CM4 access */
->       u32 iova; /* Used by IOMMU HW access */
->   } __attribute__ ((__packed__));
->
->   struct img_ipi_frameparam {
->       u32 index;
->       u32 frame_no;
->       u64 timestamp;
->       u8 type;  /* enum mdp_stream_type */
->       u8 state;
->       u8 num_inputs;
->       u8 num_outputs;
->       u64 drv_data;
->       struct img_input inputs[IMG_MAX_HW_INPUTS];
->       struct img_output outputs[IMG_MAX_HW_OUTPUTS];
->       struct img_addr tuning_data;
->       struct img_addr subfrm_data;
->       struct img_sw_addr config_data;
->       struct img_sw_addr self_data;
->   } __attribute__ ((__packed__));
->
->
-> Modified:
->   struct tuning_buf {
->       u8 present;
+> > If you think it is not necessary, we will not add it.
+> 
+> Full description of memory costs for normal KASAN mode and
+> KASAN_SW_TAGS should probably go into
+> Documentation/dev-tools/kasan.rst rather then into config description
+> because it may be too lengthy.
+> 
+Thanks your reminder.
 
-I'd make this u32 to keep the other fields aligned.
+> I mentioned memory costs for this config because otherwise it's
+> unclear why would one ever want to _not_ enable this option. If it
+> would only have positive effects, then it should be enabled all the
+> time and should not be a config option at all.
 
->       u32 pa;   /* Used by CM4 access */
->       u32 iova; /* Used by IOMMU HW access */
->   } __attribute__ ((__packed__));
+Sorry, I don't get your full meaning.
+You think not to add the memory costs into the description of config ?
+or need to add it? or make it not be a config option(default enabled)?
 
-Best regards,
-Tomasz
+
 
 _______________________________________________
 Linux-mediatek mailing list
