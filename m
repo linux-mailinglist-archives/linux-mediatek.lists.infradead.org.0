@@ -2,57 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 69B833CB50
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 14:26:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 09EF53CB7F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 14:29:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FQkxG9UZsT++FK91oyRqQxN8HAt5OiCPQHYsp4/dxMc=; b=DarTfPUF23vPyW
-	gz/sSGOiYx1u9Bdh9M6jgAtJ9gHONMK+8ci6xzRZeBXD7gF6RCmCLIPMZHo7dGsjqiTyNgeOSIBKa
-	kHdEX6OhzdgmykyuoyJuTa7cSYoT8k3+CSmoB/50WB0eRG4we7yfqtACUycZI4miy8/hS7rhr98z5
-	zBq27OmrKbp6HuBCbTaHJhgyQFG35GK7ae7h1Lf2wxafYlO92as95s7izwXDuq8J7Ga3MpEvOUFmc
-	is74G4dN6YKfKdO8uglQYzw5F7zxaPRsucmxEgjlFerW3+bBQBs6XuMltwL8PVhqjH4otnbqu5nSI
-	aJHA6O74Bvy+qENY+HNw==;
+	List-Owner; bh=gdf6pcAb5k1u4lXZHPIK15EgaAmo6vFTQt0lm43eekc=; b=kIyLGRWAOxcez5
+	8RD3m+fZ+EUH9FIuMc5py3w2U9CUWjWfur1H9kXg1a1ncV5uKaeMHnV2iRO9LJzni26y7jae75bT8
+	pkGwQvBDoaKIwJK8yPvXdD2iH/r7OxJKAlcSNXrE8x85mls+nzLWZFcVvZLrlgCRY5RMxambsHr0m
+	tvK9rWYKE8BMAyGUdFF3zhyqylDPWGgn1HWgW/nJWzhsftDByog6KhXMytb4yX+QZyy+YMOLYXEy0
+	zmdfaxFycRXXbi6rZhM+6yfvaSbmQvyiHwxQWQdDZG119Adr1Lt4/Ywcjb4Q+eGHtv8k9GkdbAvln
+	4qq/f2bQVGh1Q5pl+SHg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hafr6-0002OM-Tg; Tue, 11 Jun 2019 12:26:24 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hafuA-0004pQ-26; Tue, 11 Jun 2019 12:29:34 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hafqE-0001m5-V4; Tue, 11 Jun 2019 12:25:32 +0000
-X-UUID: ae53fd09794f40e28f359636efee4d59-20190611
-X-UUID: ae53fd09794f40e28f359636efee4d59-20190611
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <qii.wang@mediatek.com>)
+ id 1hafqn-0002Bx-7s; Tue, 11 Jun 2019 12:26:08 +0000
+X-UUID: 1fdde72bafe540f085b0ca9ff2695413-20190611
+X-UUID: 1fdde72bafe540f085b0ca9ff2695413-20190611
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1358946353; Tue, 11 Jun 2019 04:25:27 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 05:25:25 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 11 Jun 2019 20:25:23 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 11 Jun 2019 20:25:22 +0800
-Message-ID: <1560255922.12217.3.camel@mhfsdcap03>
-Subject: Re: [PATCH 2/2] i3c: master: Add driver for MediaTek IP
-From: Qii Wang <qii.wang@mediatek.com>
-To: Boris Brezillon <boris.brezillon@collabora.com>
-Date: Tue, 11 Jun 2019 20:25:22 +0800
-In-Reply-To: <1559651200.5871.2.camel@mhfsdcap03>
-References: <1559533863-10292-1-git-send-email-qii.wang@mediatek.com>
- <1559533863-10292-3-git-send-email-qii.wang@mediatek.com>
- <20190604095858.38ed9a28@collabora.com>
- <1559651200.5871.2.camel@mhfsdcap03>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 1049997069; Tue, 11 Jun 2019 04:25:58 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 05:25:57 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 20:25:55 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 11 Jun 2019 20:25:55 +0800
+Message-ID: <1560255955.29153.20.camel@mtksdccf07>
+Subject: Re: [PATCH v2] kasan: add memory corruption identification for
+ software tag-based mode
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Dmitry Vyukov <dvyukov@google.com>
+Date: Tue, 11 Jun 2019 20:25:55 +0800
+In-Reply-To: <CACT4Y+aXqjCMaJego3yeSG1eR1+vkJkx5GB+xsy5cpGvAtTnDA@mail.gmail.com>
+References: <1559651172-28989-1-git-send-email-walter-zh.wu@mediatek.com>
+ <CACT4Y+Y9_85YB8CCwmKerDWc45Z00hMd6Pc-STEbr0cmYSqnoA@mail.gmail.com>
+ <1560151690.20384.3.camel@mtksdccf07>
+ <CACT4Y+aetKEM9UkfSoVf8EaDNTD40mEF0xyaRiuw=DPEaGpTkQ@mail.gmail.com>
+ <1560236742.4832.34.camel@mtksdccf07>
+ <CACT4Y+YNG0OGT+mCEms+=SYWA=9R3MmBzr8e3QsNNdQvHNt9Fg@mail.gmail.com>
+ <1560249891.29153.4.camel@mtksdccf07>
+ <CACT4Y+aXqjCMaJego3yeSG1eR1+vkJkx5GB+xsy5cpGvAtTnDA@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_052531_017221_03568423 
-X-CRM114-Status: GOOD (  13.68  )
+X-CRM114-CacheID: sfid-20190611_052605_437815_FCE308A9 
+X-CRM114-Status: GOOD (  33.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,117 +78,135 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- bbrezillon@kernel.org, leilk.liu@mediatek.com, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
- xinping.qian@mediatek.com
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Jason
+ A. Donenfeld" <Jason@zx2c4.com>, Vasily
+ Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>,
+ Linux-MM <linux-mm@kvack.org>, Andrey Konovalov <andreyknvl@google.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
+ Pekka Enberg <penberg@kernel.org>, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>,
+ Miles Chen =?UTF-8?Q?=28=E9=99=B3=E6=B0=91=E6=A8=BA=29?=
+ <Miles.Chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
+ Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-06-04 at 20:26 +0800, Qii Wang wrote:
-> On Tue, 2019-06-04 at 09:58 +0200, Boris Brezillon wrote:
-> > On Mon, 3 Jun 2019 11:51:03 +0800
-> > Qii Wang <qii.wang@mediatek.com> wrote:
-> > 
-> > 
-> > > +static int mtk_i3c_master_probe(struct platform_device *pdev)
-> > > +{
-> > > +	struct device *dev = &pdev->dev;
-> > > +	struct mtk_i3c_master *master;
-> > > +	struct resource *res;
-> > > +	int ret, irqnr;
-> > > +
-> > > +	master = devm_kzalloc(dev, sizeof(*master), GFP_KERNEL);
-> > > +	if (!master)
-> > > +		return -ENOMEM;
-> > > +
-> > > +	res = platform_get_resource_byname(pdev, IORESOURCE_MEM, "main");
-> > > +	master->regs = devm_ioremap_resource(dev, res);
-> > > +	if (IS_ERR(master->regs))
-> > > +		return PTR_ERR(master->regs);
-> > > +
-> > > +	res = platform_get_resource_byname(pdev, IORESOURCE_MEM, "dma");
-> > > +	master->dma_regs = devm_ioremap_resource(dev, res);
-> > > +	if (IS_ERR(master->dma_regs))
-> > > +		return PTR_ERR(master->dma_regs);
-> > > +
-> > > +	irqnr = platform_get_irq(pdev, 0);
-> > > +	if (irqnr < 0)
-> > > +		return irqnr;
-> > > +
-> > > +	ret = devm_request_irq(dev, irqnr, mtk_i3c_master_irq,
-> > > +			       IRQF_TRIGGER_NONE, DRV_NAME, master);
-> > > +	if (ret < 0) {
-> > > +		dev_err(dev, "Request I3C IRQ %d fail\n", irqnr);
-> > > +		return ret;
-> > > +	}
-> > > +
-> > > +	ret = of_property_read_u32(pdev->dev.of_node, "clock-div",
-> > > +				   &master->clk_src_div);
-> > 
-> > You say in one comment that this clock divider is fixed in HW but might
-> > change on a per-SoC basis. If that's the case, you should get rid of
-> > this clock-div prop and attach the divider to the compatible (using an
-> > mtk_i3c_master_variant struct that contains a divider field).
-> > 
+On Tue, 2019-06-11 at 13:32 +0200, Dmitry Vyukov wrote:
+> On Tue, Jun 11, 2019 at 12:44 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> >
+> > On Tue, 2019-06-11 at 10:47 +0200, Dmitry Vyukov wrote:
+> > > On Tue, Jun 11, 2019 at 9:05 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> > > >
+> > > > On Mon, 2019-06-10 at 13:46 +0200, Dmitry Vyukov wrote:
+> > > > > On Mon, Jun 10, 2019 at 9:28 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> > > > > >
+> > > > > > On Fri, 2019-06-07 at 21:18 +0800, Dmitry Vyukov wrote:
+> > > > > > > > diff --git a/include/linux/kasan.h b/include/linux/kasan.h
+> > > > > > > > index b40ea104dd36..be0667225b58 100644
+> > > > > > > > --- a/include/linux/kasan.h
+> > > > > > > > +++ b/include/linux/kasan.h
+> > > > > > > > @@ -164,7 +164,11 @@ void kasan_cache_shutdown(struct kmem_cache *cache);
+> > > > > > > >
+> > > > > > > >  #else /* CONFIG_KASAN_GENERIC */
+> > > > > > > >
+> > > > > > > > +#ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
+> > > > > > > > +void kasan_cache_shrink(struct kmem_cache *cache);
+> > > > > > > > +#else
+> > > > > > >
+> > > > > > > Please restructure the code so that we don't duplicate this function
+> > > > > > > name 3 times in this header.
+> > > > > > >
+> > > > > > We have fixed it, Thank you for your reminder.
+> > > > > >
+> > > > > >
+> > > > > > > >  static inline void kasan_cache_shrink(struct kmem_cache *cache) {}
+> > > > > > > > +#endif
+> > > > > > > >  static inline void kasan_cache_shutdown(struct kmem_cache *cache) {}
+> > > > > > > >
+> > > > > > > >  #endif /* CONFIG_KASAN_GENERIC */
+> > > > > > > > diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
+> > > > > > > > index 9950b660e62d..17a4952c5eee 100644
+> > > > > > > > --- a/lib/Kconfig.kasan
+> > > > > > > > +++ b/lib/Kconfig.kasan
+> > > > > > > > @@ -134,6 +134,15 @@ config KASAN_S390_4_LEVEL_PAGING
+> > > > > > > >           to 3TB of RAM with KASan enabled). This options allows to force
+> > > > > > > >           4-level paging instead.
+> > > > > > > >
+> > > > > > > > +config KASAN_SW_TAGS_IDENTIFY
+> > > > > > > > +       bool "Enable memory corruption idenitfication"
+> > > > > > >
+> > > > > > > s/idenitfication/identification/
+> > > > > > >
+> > > > > > I should replace my glasses.
+> > > > > >
+> > > > > >
+> > > > > > > > +       depends on KASAN_SW_TAGS
+> > > > > > > > +       help
+> > > > > > > > +         Now tag-based KASAN bug report always shows invalid-access error, This
+> > > > > > > > +         options can identify it whether it is use-after-free or out-of-bound.
+> > > > > > > > +         This will make it easier for programmers to see the memory corruption
+> > > > > > > > +         problem.
+> > > > > > >
+> > > > > > > This description looks like a change description, i.e. it describes
+> > > > > > > the current behavior and how it changes. I think code comments should
+> > > > > > > not have such, they should describe the current state of the things.
+> > > > > > > It should also mention the trade-off, otherwise it raises reasonable
+> > > > > > > questions like "why it's not enabled by default?" and "why do I ever
+> > > > > > > want to not enable it?".
+> > > > > > > I would do something like:
+> > > > > > >
+> > > > > > > This option enables best-effort identification of bug type
+> > > > > > > (use-after-free or out-of-bounds)
+> > > > > > > at the cost of increased memory consumption for object quarantine.
+> > > > > > >
+> > > > > > I totally agree with your comments. Would you think we should try to add the cost?
+> > > > > > It may be that it consumes about 1/128th of available memory at full quarantine usage rate.
+> > > > >
+> > > > > Hi,
+> > > > >
+> > > > > I don't understand the question. We should not add costs if not
+> > > > > necessary. Or you mean why we should add _docs_ regarding the cost? Or
+> > > > > what?
+> > > > >
+> > > > I mean the description of option. Should it add the description for
+> > > > memory costs. I see KASAN_SW_TAGS and KASAN_GENERIC options to show the
+> > > > memory costs. So We originally think it is possible to add the
+> > > > description, if users want to enable it, maybe they want to know its
+> > > > memory costs.
+> > > >
+> > > > If you think it is not necessary, we will not add it.
+> > >
+> > > Full description of memory costs for normal KASAN mode and
+> > > KASAN_SW_TAGS should probably go into
+> > > Documentation/dev-tools/kasan.rst rather then into config description
+> > > because it may be too lengthy.
+> > >
+> > Thanks your reminder.
+> >
+> > > I mentioned memory costs for this config because otherwise it's
+> > > unclear why would one ever want to _not_ enable this option. If it
+> > > would only have positive effects, then it should be enabled all the
+> > > time and should not be a config option at all.
+> >
+> > Sorry, I don't get your full meaning.
+> > You think not to add the memory costs into the description of config ?
+> > or need to add it? or make it not be a config option(default enabled)?
 > 
-> ok, I will attach the divider to the compatible.
-> 
-I have rechecked your comment, maybe I have misunderstood what you mean.
-"clock-div" changes according to i2c source clock, different project may
-change i2c source clock, The previous dt-binding may be misleading, I
-will modify it.
+> Yes, I think we need to include mention of additional cost into _this_
+> new config.
 
-> > > +	if (ret < 0)
-> > > +		return -EINVAL;
-> > > +
-> > > +	spin_lock_init(&master->xferqueue.lock);
-> > > +	INIT_LIST_HEAD(&master->xferqueue.list);
-> > > +
-> > > +	if (dma_set_mask(dev, DMA_BIT_MASK(33))) {
-> > > +		dev_err(dev, "dma_set_mask return error.\n");
-> > > +		return -EINVAL;
-> > > +	}
-> > > +
-> > > +	master->clk_main = devm_clk_get(dev, "main");
-> > > +	if (IS_ERR(master->clk_main)) {
-> > > +		dev_err(dev, "cannot get main clock\n");
-> > > +		return PTR_ERR(master->clk_main);
-> > > +	}
-> > > +	master->clk_dma = devm_clk_get(dev, "dma");
-> > > +	if (IS_ERR(master->clk_dma)) {
-> > > +		dev_err(dev, "cannot get dma clock\n");
-> > > +		return PTR_ERR(master->clk_dma);
-> > > +	}
-> > > +
-> > > +	master->clk_arb = devm_clk_get_optional(dev, "arb");
-> > > +	if (IS_ERR(master->clk_arb))
-> > > +		return PTR_ERR(master->clk_arb);
-> > > +
-> > > +	ret = mtk_i3c_master_clock_enable(master);
-> > > +	if (ret) {
-> > > +		dev_err(dev, "clock enable failed!\n");
-> > > +		return ret;
-> > > +	}
-> > > +
-> > > +	master->dev = dev;
-> > > +	platform_set_drvdata(pdev, master);
-> > > +
-> > > +	ret = i3c_master_register(&master->mas_ctrler, dev,
-> > > +				  &mtk_i3c_master_ops, false);
-> > > +	if (ret) {
-> > > +		dev_err(dev, "Failed to add i3c bus to i3c core\n");
-> > > +		mtk_i3c_master_clock_disable(master);
-> > > +		return ret;
-> > > +	}
-> > > +
-> > > +	return 0;
-> > > +}
-> 
+Thanks your response.
+We will fix v2 patch into next version.
+
+Thanks.
+Walter
 
 
 
