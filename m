@@ -2,52 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E4F423C5B1
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:13:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6CA913C5AF
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:13:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Bu96Gev0kBqPV3/t6IfxoWQNMHuVTeiKLku2fDA/vgI=; b=e0CRnW8gNK9MEA
-	gLe3CilkxJgCemIrG8JQBp9zzf1kl/j1sfRtlaz3tpxS0uJsAJ/AFV3TzhEtQCUwVj8YXMYMctnuM
-	pwrzlYHqUSJzrW9dJviBpllFjuN8Az8udwI3gRZ75zojsFX0rbTqfY6qdhUysrG9ZqwM2xp/8o+US
-	Mj9zr1KbTU6usS5TDz6j71EDI5TtAbtvCanxpfMNb6PPtaX9TszE/sAthxLlt++cEdXtuZBbrqyP7
-	YlIgsyr3lat9/Tv0XJneEFRCuLoqTICtMFR8l8co3r7yk4iwB/EpcY/7+zKlnmFuBKbkr3cfwFvO0
-	EIDglWvbik8LVCLN/xgw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=elIXgCTnu0D/l9uXNuhRJbbCZAWD7qSCv8fVfNbnUAE=; b=je4MNUitXz5BcD
+	Pfi51gHAdU+1m46QboTIC1SHADzx3byGRztygzp8G8ZJV8MZ+RJbyY7q+M+Kb4iNN2T3Vm1z2cQzw
+	Fz9y56tORjAEabmClGJPkEgdlWckQm+XcMsbSCUCifyQuxpAIshoT6dgmf8XkalrxpNcejOHg5tSg
+	bcP0ORaYb+gBieBpGZXQOJpKZpb5mlB337bKs3J6Mmihzjl6bOlGlZWuNyyj/51H5CVEg6BMQc86u
+	Ti21F0HQm0pMeVVOmK9h7xKxogrS6Rxl+jWzVVs7PGHhVm61PTCTmz8CZ8NO+TNDAP8+ZKUPqI4we
+	ZpzcKAuATfTMlA/a3tXg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1habuH-0003Bw-IT; Tue, 11 Jun 2019 08:13:25 +0000
+	id 1habts-0002vW-O7; Tue, 11 Jun 2019 08:13:00 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1habtp-0002tn-FN; Tue, 11 Jun 2019 08:12:58 +0000
-X-UUID: 7eecefe945f34608a44c825b5866e28c-20190611
-X-UUID: 7eecefe945f34608a44c825b5866e28c-20190611
+ id 1habtp-0002tm-2u; Tue, 11 Jun 2019 08:12:58 +0000
+X-UUID: c9323b62277d494b8123a4b54869ff54-20190611
+X-UUID: c9323b62277d494b8123a4b54869ff54-20190611
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <qii.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 197662687; Tue, 11 Jun 2019 00:12:50 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 525475109; Tue, 11 Jun 2019 00:12:50 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Tue, 11 Jun 2019 01:12:49 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 16:12:47 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 16:12:48 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 11 Jun 2019 16:12:46 +0800
+ Transport; Tue, 11 Jun 2019 16:12:47 +0800
 From: Qii Wang <qii.wang@mediatek.com>
 To: <wsa@the-dreams.de>
-Subject: [PATCH 0/2] Add support for AC timing adjustment
-Date: Tue, 11 Jun 2019 16:11:53 +0800
-Message-ID: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
+Subject: [PATCH 1/2] dt-bindings: i2c: Add MediaTek i2c AC timing binding
+Date: Tue, 11 Jun 2019 16:11:54 +0800
+Message-ID: <1560240715-22595-2-git-send-email-qii.wang@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
+References: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_011257_515410_916BAE4E 
-X-CRM114-Status: UNSURE (   5.97  )
+X-CRM114-CacheID: sfid-20190611_011257_137402_66C707C5 
+X-CRM114-Status: UNSURE (   8.01  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,19 +81,45 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This series are based on 5.2-rc1, we provide two patches to
-support AC timing adjustment.
+Add i2c AC timing binding to binding file. It can give the AC
+timing parameters to meet I2C specification at different speed.
 
-Qii Wang (2):
-  dt-bindings: i2c: Add MediaTek i2c AC timing binding
-  i2c: mediatek: Add i2c AC timing adjust support
+Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+---
+ .../devicetree/bindings/i2c/i2c-mt65xx.txt         |   11 +++++++++++
+ 1 file changed, 11 insertions(+)
 
- .../devicetree/bindings/i2c/i2c-mt65xx.txt         |   11 +++
- drivers/i2c/busses/i2c-mt65xx.c                    |   94 +++++++++++++++++---
- 2 files changed, 93 insertions(+), 12 deletions(-)
-
+diff --git a/Documentation/devicetree/bindings/i2c/i2c-mt65xx.txt b/Documentation/devicetree/bindings/i2c/i2c-mt65xx.txt
+index 68f6d73..0f92813 100644
+--- a/Documentation/devicetree/bindings/i2c/i2c-mt65xx.txt
++++ b/Documentation/devicetree/bindings/i2c/i2c-mt65xx.txt
+@@ -30,6 +30,7 @@ Optional properties:
+   - mediatek,have-pmic: platform can control i2c form special pmic side.
+     Only mt6589 and mt8135 support this feature.
+   - mediatek,use-push-pull: IO config use push-pull mode.
++  - ac-timing: give some AC timing parameters to meet i2c spec fully.
+ 
+ Example:
+ 
+@@ -43,5 +44,15 @@ Example:
+ 			clock-div = <16>;
+ 			clocks = <&i2c0_ck>, <&ap_dma_ck>;
+ 			clock-names = "main", "dma";
++			ac-timing =  /bits/ 16 <
++				0x8001	/* 0:ext */
++				0x0005	/* 1:inter_clk_div */
++				0x0102	/* 2:scl_hl_ratio */
++				0x0102	/* 3:hs_scl_hl_ratio */
++				0x0002	/* 4:scl_mis_comp */
++				0x0002	/* 5:sta_stop */
++				0x0002	/* 6:hs_sta_stop */
++				0x0002	/* 7:sda_timing */
++			>;
+ 	};
+ 
 -- 
 1.7.9.5
+
 
 _______________________________________________
 Linux-mediatek mailing list
