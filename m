@@ -2,101 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0E8193C6B9
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:57:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B061C3C6CE
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 11:00:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FEz8V81kXfWIpFip7hEhU+XnpuE49ixtL4eK2Rua3GI=; b=gbJDvNxryT0sIW
-	r5fM9+n9cUUsvPaA/giGfa+ToV3ozVBrMXHW59YKAJR9HYf5WdN8A82GjNACbE94gib9OFiJR2vx7
-	ltQLPAWi80PXdNBz0KNDl9gu/epAbtYECYJfRHhJCZZPfIPvWS0sZbeSlrw+0IuwscUNHDOAtA42h
-	RxSva7V37GKcKkULcNPxRsU8/08KgKqAj75+KDWSf2ug+9VnBYbdgxLFpuLYlILvxcqsRD2el3NQR
-	RARt1SuenlR98ktNngRSJy+fV/GuucgTgetec724XPohwELtrJILu/onEQmmZ36Cn2eP/VqXl/2lY
-	LHgbP63ML4S0F9PYfNMQ==;
+	List-Owner; bh=OJxtt1FhLQNG4+/UQns6xlJTIkG7TRL6AWeEfwOpQdw=; b=VscVQmVEVoKvYM
+	ba5eFYMXlz1TP8+5arzX6xkI6bhBlzXVlCMJFiLk+KoPePeN3L4RbzCjbShDrtcEjQ69uI4gu+6aL
+	DK5VbEcGtUMiawJsJBlbSn1R8qkUEBA63/Usng8+4q5613VnC3Bf7nWpLXcI91Mjgq/2veShEbcMQ
+	TnE2zrXyAG6jiO1hCY3P6xnmoaVaHs2oL8W3pWdGn4lNmqp5rzG4iZfPzIdQfxGeIBFxEmW0tQxhL
+	tjnBGoJA6xassBA2k/4CqcIMnaWBD/Sk+JRkyu2bYP2S+GMt1WPLxSyM1R+K4W4krFdQ0MonTKiTU
+	o7hkDXRK7/pLcF8GEIiQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hacbC-0004C5-4L; Tue, 11 Jun 2019 08:57:46 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1hacdc-0006GW-Vw; Tue, 11 Jun 2019 09:00:17 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hacat-00040L-Eg
- for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 08:57:29 +0000
-Received: by mail-ed1-x543.google.com with SMTP id w13so18917198eds.4
- for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 01:57:26 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ffwll.ch; s=google;
- h=sender:date:from:to:cc:subject:message-id:mail-followup-to
- :references:mime-version:content-disposition:in-reply-to:user-agent;
- bh=bTkOEfoVS8xqoBdJMHWo3E+Rkaj2bpqidMUiZcDnoAk=;
- b=ZiTDkJRVzn+jc565v456AsNS1x9g3BjkYr7za4w5jSGUMvN0zRkNbwrjz+WKcjgJ7G
- nVEabfR7lwPxQPzOWNyhTaNeCZNmuZbiS/yoZmcFwLZx8+TklX/CEVM6W8dFxldKtroS
- fKKE1lLtvvPaX/DCq4LqhJjtJN0r4j+0DpEZc=
+ id 1hacdF-0004r7-9J
+ for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 08:59:55 +0000
+Received: by mail-ed1-x544.google.com with SMTP id m10so18898600edv.6
+ for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 01:59:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=PASnnopO7T/n97vN91v+qyJWOS2KsO1RcpQqKw02sVo=;
+ b=hKJ2KC6xZjCmH41h834KL9DBOKssuku0pkXd4y8LIUW+dgG8fzTRprMaW/jw8En3+E
+ HubSnI4sKFaiMyrY/RWIo8CVwTCUAcz+BL7I2rOOBdmGaIKMAdSpdUuKCaAmQyfjWw+y
+ XuE0Z3fbV6D3xsDJnfp9sCTE7bDzy+5JPjK1E=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
- :mail-followup-to:references:mime-version:content-disposition
- :in-reply-to:user-agent;
- bh=bTkOEfoVS8xqoBdJMHWo3E+Rkaj2bpqidMUiZcDnoAk=;
- b=Ar6UFDLIeLHjVHHaQXcXOCc+piWadeIBXaWyQPTqm9y+iqmb2erlWbEiG6vxjzUDtU
- YkgvkH/NvGhwu2crTPeXKq4hhga5TdKqB6lGqznubsbJf1mx4+VjOr8C87zMdMElCc3o
- 1Zj+99SrOKchO7xSWeY+KMrN/U2xVrDTUwtzCdBpDd2jYI+6rJBm+749kvzYotIAG2zG
- LRQqd+2Ih2z9MsHvxrDU3Y5hlZQPZpnPum1P4KoLYk4SAkuNDoZoX7y8hmajWiIdcgwL
- iN0BBdot6/A1GPtOjRW8N0kULyY/mKZoeEyQ1RExVewYtQX/yqLFSjKi70/EKrgTLEe2
- nQ+A==
-X-Gm-Message-State: APjAAAXI6ItTSXh9bEMTkhUuXIq38S362vGU3WpKDKHI4AmlMtIrAAo8
- ZVl6Eh545ZOulgKWMo1khnm/+A==
-X-Google-Smtp-Source: APXvYqyYSiI8MCmhIFP5093eoXLHoiUXmUjorUOjoDyQgA+DoU3k97SYd9dqfm+MFflJC285PU1vqQ==
-X-Received: by 2002:a05:6402:8d7:: with SMTP id
- d23mr37696956edz.17.1560243445858; 
- Tue, 11 Jun 2019 01:57:25 -0700 (PDT)
-Received: from phenom.ffwll.local ([2a02:168:569e:0:3106:d637:d723:e855])
- by smtp.gmail.com with ESMTPSA id m3sm3498364edi.33.2019.06.11.01.57.24
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 11 Jun 2019 01:57:25 -0700 (PDT)
-Date: Tue, 11 Jun 2019 10:57:22 +0200
-From: Daniel Vetter <daniel@ffwll.ch>
-To: Derek Basehore <dbasehore@chromium.org>
-Subject: Re: [PATCH 3/5] drm/panel: Add attach/detach callbacks
-Message-ID: <20190611085722.GX21222@phenom.ffwll.local>
-Mail-Followup-To: Derek Basehore <dbasehore@chromium.org>,
- linux-kernel@vger.kernel.org,
- Thierry Reding <thierry.reding@gmail.com>,
- Sam Ravnborg <sam@ravnborg.org>, David Airlie <airlied@linux.ie>,
- Rob Herring <robh+dt@kernel.org>,
- Mark Rutland <mark.rutland@arm.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Sean Paul <sean@poorly.run>,
- Jani Nikula <jani.nikula@linux.intel.com>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>, CK Hu <ck.hu@mediatek.com>,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- dri-devel@lists.freedesktop.org, devicetree@vger.kernel.org,
- intel-gfx@lists.freedesktop.org,
- linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-References: <20190611040350.90064-1-dbasehore@chromium.org>
- <20190611040350.90064-4-dbasehore@chromium.org>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=PASnnopO7T/n97vN91v+qyJWOS2KsO1RcpQqKw02sVo=;
+ b=mqLkCc/egYPXHatAHvAnRtp8ykLaqq2U8NS1Frue0XgKFCWexhWIrxV0XhuvjlhnhG
+ WR2ccd3m9WtFEqH8z1uWdE2Y67WXBMnPgwPwK7M+nFfRLMlhf9E7eFGEZp1n13kEVtER
+ PpD2zPzHUX9zTRngeq56jd6rcLsJrRIKfGA6kUALeJ645IF1yoWT8lP9FM+OWnlWpaPQ
+ MENp3Bvfpt/6uUDmAOgVZPtq8xi/xhZ6OKPGneZmwG/oOPy8Dq1LM1P924m465MU2+tv
+ R6OmlT71H/vp52otdWudy3KL9e/g05r/FAW+QUF4mjdE3lyyKY9nMjkxGwJsw9qSiE8M
+ 2E7w==
+X-Gm-Message-State: APjAAAXCFdKriQlwcuH19kkeGnLB1J7oIyRu/yfPtPMz3dom2OOEzDeB
+ PSTgA53IQReVlqA/xqY9GgkSnDraRqyo/g==
+X-Google-Smtp-Source: APXvYqyxw4h/si/eeWVNu3KVtm3Z6uMcVVf4r9NaXCDn8YM/+0C4fYdWBmBwO1derKnjQIlnWBDszw==
+X-Received: by 2002:a50:c908:: with SMTP id o8mr49617466edh.131.1560243591930; 
+ Tue, 11 Jun 2019 01:59:51 -0700 (PDT)
+Received: from mail-wm1-f46.google.com (mail-wm1-f46.google.com.
+ [209.85.128.46])
+ by smtp.gmail.com with ESMTPSA id g37sm2924599edb.50.2019.06.11.01.59.49
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
+ Tue, 11 Jun 2019 01:59:49 -0700 (PDT)
+Received: by mail-wm1-f46.google.com with SMTP id h19so1430399wme.0
+ for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 01:59:49 -0700 (PDT)
+X-Received: by 2002:a1c:407:: with SMTP id 7mr17983312wme.113.1560243588440;
+ Tue, 11 Jun 2019 01:59:48 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190611040350.90064-4-dbasehore@chromium.org>
-X-Operating-System: Linux phenom 4.14.0-3-amd64 
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20190417104511.21514-1-frederic.chen@mediatek.com>
+ <20190417104511.21514-7-frederic.chen@mediatek.com>
+ <20190509094846.GA65444@google.com>
+ <1558466055.15388.342.camel@mtksdccf07> <1560242886.23799.13.camel@mtksdccf07>
+In-Reply-To: <1560242886.23799.13.camel@mtksdccf07>
+From: Tomasz Figa <tfiga@chromium.org>
+Date: Tue, 11 Jun 2019 17:59:36 +0900
+X-Gmail-Original-Message-ID: <CAAFQd5CReiPOySyk-eFkgiQMDMoqB3Uhd=bcho2Qtsv74y8fmg@mail.gmail.com>
+Message-ID: <CAAFQd5CReiPOySyk-eFkgiQMDMoqB3Uhd=bcho2Qtsv74y8fmg@mail.gmail.com>
+Subject: Re: [RFC PATCH V1 6/6] platform: mtk-isp: Add Mediatek DIP driver
+To: Frederic Chen <frederic.chen@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_015727_492217_7D50AE54 
-X-CRM114-Status: GOOD (  21.22  )
+X-CRM114-CacheID: sfid-20190611_015953_358360_6E8636EB 
+X-CRM114-Status: GOOD (  23.42  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -104,6 +89,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -115,114 +101,135 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Sean Paul <sean@poorly.run>, intel-gfx@lists.freedesktop.org,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- linux-kernel@vger.kernel.org, Jani Nikula <jani.nikula@linux.intel.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, Rob Herring <robh+dt@kernel.org>,
- Thierry Reding <thierry.reding@gmail.com>, dri-devel@lists.freedesktop.org,
- Daniel Vetter <daniel@ffwll.ch>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Sam Ravnborg <sam@ravnborg.org>, linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>
+Cc: Shik Chen <shik@chromium.org>, devicetree@vger.kernel.org,
+ =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
+ Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
+ =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
+ srv_heupstream <srv_heupstream@mediatek.com>,
+ =?UTF-8?B?SG9sbWVzIENoaW91ICjpgrHmjLop?= <holmes.chiou@mediatek.com>,
+ suleiman@chromium.org, Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>,
+ =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
+ Sj Huang <sj.huang@mediatek.com>, yuzhao@chromium.org,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ zwisler@chromium.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Hans Verkuil <hans.verkuil@cisco.com>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Jun 10, 2019 at 09:03:48PM -0700, Derek Basehore wrote:
-> This adds the attach/detach callbacks. These are for setting up
-> internal state for the connector/panel pair that can't be done at
-> probe (since the connector doesn't exist) and which don't need to be
-> repeatedly done for every get/modes, prepare, or enable callback.
-> Values such as the panel orientation, and display size can be filled
-> in for the connector.
-> 
-> Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> ---
->  drivers/gpu/drm/drm_panel.c | 14 ++++++++++++++
->  include/drm/drm_panel.h     |  4 ++++
->  2 files changed, 18 insertions(+)
-> 
-> diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
-> index 3b689ce4a51a..72f67678d9d5 100644
-> --- a/drivers/gpu/drm/drm_panel.c
-> +++ b/drivers/gpu/drm/drm_panel.c
-> @@ -104,12 +104,23 @@ EXPORT_SYMBOL(drm_panel_remove);
->   */
->  int drm_panel_attach(struct drm_panel *panel, struct drm_connector *connector)
->  {
-> +	int ret;
-> +
->  	if (panel->connector)
->  		return -EBUSY;
->  
->  	panel->connector = connector;
->  	panel->drm = connector->dev;
->  
-> +	if (panel->funcs->attach) {
-> +		ret = panel->funcs->attach(panel);
-> +		if (ret < 0) {
-> +			panel->connector = NULL;
-> +			panel->drm = NULL;
-> +			return ret;
-> +		}
-> +	}
+On Tue, Jun 11, 2019 at 5:48 PM Frederic Chen
+<frederic.chen@mediatek.com> wrote:
+>
+> Dear Tomasz,
+>
+> I'd like to elaborate more about the tuning_data.va.
+> Would you like to give us some advice about our improvement proposal inline?
+>
+> Thank you very much.
+>
+>
+> On Wed, 2019-05-22 at 03:14 +0800, Frederic Chen wrote:
+> > Dear Tomasz,
+> >
+> > I appreciate your comment. It is very helpful for us.
+> >
+> >
+> > > > diff --git a/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c b/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c
+> > > > new file mode 100644
+> > > > index 000000000000..54d2b5f5b802
+> > > > --- /dev/null
+> > > > +++ b/drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c
+> > > > @@ -0,0 +1,1384 @@
+>
+> [snip]
+>
+> > > > +static void dip_submit_worker(struct work_struct *work)
+> > > > +{
+> > > > +       struct mtk_dip_hw_submit_work *dip_submit_work =
+> > > > +               container_of(work, struct mtk_dip_hw_submit_work, frame_work);
+> > > > +       struct mtk_dip_hw *dip_hw = dip_submit_work->dip_hw;
+> > > > +       struct mtk_dip_dev *dip_dev = mtk_dip_hw_to_dev(dip_hw);
+> > > > +       struct mtk_dip_hw_work *dip_work;
+> > > > +       struct mtk_dip_hw_subframe *buf;
+> > > > +       u32 len, num;
+> > > > +       int ret;
+> > > > +
+> > > > +       num  = atomic_read(&dip_hw->num_composing);
+> > > > +
+> > > > +       mutex_lock(&dip_hw->dip_worklist.queuelock);
+> > > > +       dip_work = list_first_entry(&dip_hw->dip_worklist.queue,
+>
+> [snip]
+>
+> > > > +
+> > > > +       if (dip_work->frameparams.tuning_data.pa == 0) {
+> > > > +               dev_dbg(&dip_dev->pdev->dev,
+> > > > +                       "%s: frame_no(%d) has no tuning_data\n",
+> > > > +                       __func__, dip_work->frameparams.frame_no);
+> > > > +
+> > > > +               memcpy(&dip_work->frameparams.tuning_data,
+> > > > +                      &buf->tuning_buf, sizeof(buf->tuning_buf));
+> > >
+> > > Ditto.
+> > >
+> >
+> > I got it.
+> >
+> > > > +               memset((char *)buf->tuning_buf.va, 0, DIP_TUNING_SZ);
+> > >
+> > > Ditto.
+> >
+> > I got it.
+> >
+> > >
+> > > > +               /*
+> > > > +                * When user enqueued without tuning buffer,
+> > > > +                * it would use driver internal buffer.
+> > > > +                * So, tuning_data.va should be 0
+> > > > +                */
+> > > > +               dip_work->frameparams.tuning_data.va = 0;
+> > >
+> > > I don't understand this. We just zeroed the buffer via this kernel VA few
+> > > lines above, so why would it have to be set to 0?
+> > >
+> >
+> > I will remove this unnecessary line.
+> >
+> > > > +       }
+>
+> After confirming the firmware part, I found that we use this field
+> (tuning_data.va) to notify firmware if there is no tuning data from
+> user.
+>
+> - frameparams.tuning_data.va is 0: use the default tuning data in
+>                                    SCP, but we still need to pass
+>                                    frameparams.tuning_data.pa because
+>                                    the buffer contains some working
+>                                    buffer required.
+> - frameparams.tuning_data.va is not 0: the tuning data was passed from
+>                                        the user
+>
+> Since we should not pass cpu addres to SCP, could I rename tuning_data.va
+> as tuning_data.cookie, and write a constant value to indicate if SCP
+> should use its internal default setting or not here?
+>
+> For example,
+> /* SCP uses tuning data passed from userspace*/
+> dip_work->frameparams.tuning_data.cookie = MTK_DIP_USER_TUNING_DATA;
+>
+> /* SCP uses internal tuning data */
+> dip_work->frameparams.tuning_data.cookie = MTK_DIP_DEFAULT_TUNING_DATA;
 
-Why can't we just implement this in the drm helpers for everyone, by e.g.
-storing a dt node in drm_panel? Feels a bit overkill to have these new
-hooks here.
+Perhaps we could just call it "present" and set to true or false?
 
-Also, my understanding is that this dt stuff is supposed to be
-standardized, so this should work.
--Daniel
-
-> +
->  	return 0;
->  }
->  EXPORT_SYMBOL(drm_panel_attach);
-> @@ -128,6 +139,9 @@ EXPORT_SYMBOL(drm_panel_attach);
->   */
->  int drm_panel_detach(struct drm_panel *panel)
->  {
-> +	if (panel->funcs->detach)
-> +		panel->funcs->detach(panel);
-> +
->  	panel->connector = NULL;
->  	panel->drm = NULL;
->  
-> diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
-> index 13631b2efbaa..e136e3a3c996 100644
-> --- a/include/drm/drm_panel.h
-> +++ b/include/drm/drm_panel.h
-> @@ -37,6 +37,8 @@ struct display_timing;
->   * struct drm_panel_funcs - perform operations on a given panel
->   * @disable: disable panel (turn off back light, etc.)
->   * @unprepare: turn off panel
-> + * @detach: detach panel->connector (clear internal state, etc.)
-> + * @attach: attach panel->connector (update internal state, etc.)
->   * @prepare: turn on panel and perform set up
->   * @enable: enable panel (turn on back light, etc.)
->   * @get_modes: add modes to the connector that the panel is attached to and
-> @@ -70,6 +72,8 @@ struct display_timing;
->  struct drm_panel_funcs {
->  	int (*disable)(struct drm_panel *panel);
->  	int (*unprepare)(struct drm_panel *panel);
-> +	void (*detach)(struct drm_panel *panel);
-> +	int (*attach)(struct drm_panel *panel);
->  	int (*prepare)(struct drm_panel *panel);
->  	int (*enable)(struct drm_panel *panel);
->  	int (*get_modes)(struct drm_panel *panel);
-> -- 
-> 2.22.0.rc2.383.gf4fbbf30c2-goog
-> 
-
--- 
-Daniel Vetter
-Software Engineer, Intel Corporation
-http://blog.ffwll.ch
+Best regards,
+Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
