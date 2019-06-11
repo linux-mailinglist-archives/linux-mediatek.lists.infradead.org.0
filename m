@@ -2,73 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5495E41850
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 00:41:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E3C974186F
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 00:54:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ICr0lkAvTxPGXDUHIfUwvvg1GZeVDsoX+/p4RyMEjdI=; b=evqSpXzGLaFpSx
-	PRRv7T+PXPn4yfS+y+Jyv7gvUWwGknw4qEuPQpTmdbq45EpTI3chbNZLFI0o7wEoionppdonJ6WdI
-	PFZzIx6zBLTgt5Z8kG7PZrS/wr95AJDY0Z7yRpuhIAhGoxBHnp3uucpuJyasDqCZiV/RYDPdGR6eJ
-	VzGxDlQN4lNGGz+R6ZO5fvOws33d5j1PoasXRlqRbbt9rSyf+mQYUpGBr4KQtszq8VG7wXNRXPd/5
-	MQ4Z0tzFNQj5WifL5RuIYqXDKdm86mswnVkfNXcV4dqTdNjlZG6CJOn+DR1o7AhCn+2OoVk5cv6cp
-	SXTUKzmdeub6Vn9xRtsQ==;
+	List-Owner; bh=jySrk95mByUgJP+/STtKTKQ2AkbZFg+TbJrcXOUYkKM=; b=TNxcyFSLVJSLiG
+	40j0ASV1yH987123Ikkpzqws7OvkGLnog0/qSdbRJQ/iosd7meuDT8PKFhKIlX1UiFnkZAq5w3PNJ
+	uHCmvDyJ9rMv7v7UPKCns+/LV8Czz1w407ZTbDN8ysQlbXIhcmgN7Pg4mGbPxyaaR0nBv0IVe9U3Z
+	yhKd0PQi12v/Y0j5fi3xxM67MBh5aoXz5TdokXT5mGfSU0piRJIJLZSehTV86BethU0HQzgVV/NnO
+	whl6SCy1OQtY/G4ZVL9MJYe5ZxygBWnjWwzaOENYINK0umThxuTfeyhU9ZkqxhxWcXJlyjIeCgD5N
+	1lpLnjkg6q5IuwI/1nFQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hapRo-0005ri-Mu; Tue, 11 Jun 2019 22:40:56 +0000
-Received: from mail-it1-f193.google.com ([209.85.166.193])
+	id 1hapea-0002DK-1y; Tue, 11 Jun 2019 22:54:08 +0000
+Received: from mail-it1-f194.google.com ([209.85.166.194])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hapRe-0005nM-Te; Tue, 11 Jun 2019 22:40:48 +0000
-Received: by mail-it1-f193.google.com with SMTP id x22so7529667itl.2;
- Tue, 11 Jun 2019 15:40:46 -0700 (PDT)
+ id 1hapeP-00024m-HY; Tue, 11 Jun 2019 22:53:58 +0000
+Received: by mail-it1-f194.google.com with SMTP id n189so7584671itd.0;
+ Tue, 11 Jun 2019 15:53:57 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=HI3rHUK26/S2B0LA3WlM09q3Q/jcQRPOrltE5Dys4vg=;
- b=SubqXtmy5xBdt95Eqnsu5NFkjrylz3sRlabPHuSnSnXpnMO/czwfAGPXhTyYI67dOf
- BpDswP+WUVPyQLbEcIEMaQhUnSNn3gqai52L8Sfj5Cr0sHomr1tUaAfvJnsFW/NoIlws
- pjawxanXcB8O0NNo1vJi36hRFyRMP7R1ZpE4e3FnPQJUmorcO3//SLlUzRmIPebqSw2Y
- OZLu59WQn1fxBSQO/aZgJ6TzRFX8oyd/AbbazgT+g5clubuGDMAmR4fXFRlnfgdTi4+R
- O+qLfZ1Bbu1YtEoU3i2RKmBUc8/HiHS+Wm55KMHzVR4FxmSMlb90w8PFZ8llrRUTLvpX
- 2KdQ==
-X-Gm-Message-State: APjAAAWTcXgDrFmYk96keHVP1eWO5DA7S2f36mpeH6z4sZ+zSh/SM0nL
- x6Bb0LXIxOUrNC6KPAw2Ow==
-X-Google-Smtp-Source: APXvYqyYN7ZbEDoYi00MhHLqHL7FwPdCa2uF9Kv/WyYmja0MIBn3v9bIz1f2IeqAvvSfdbDWHNDRAg==
-X-Received: by 2002:a24:b303:: with SMTP id e3mr18466988itf.170.1560292845706; 
- Tue, 11 Jun 2019 15:40:45 -0700 (PDT)
+ bh=iQPRF6XFm/QWEVO1CPfMz0EhoIEuoqt7VcGHt4YVR3s=;
+ b=evM1em5gIYL767UkQYlbJ6fX+auhmHtq4GJPQYY7fZITlX+z+CdbrNperJRfDbTq4B
+ fHU3TL2yYY91y/6BfTvPBQ+zBzgRhNIaLdNRLELvIbVIy6qPLWFARKMHu/fEd6si9eIT
+ im/ilkXg7jA+pW875wzBRT8cp9Uy7YF9FCrr6Xafcst7ntu2X+czHLt4TgterwRYKaox
+ c+1vlcoPRgt4aJ3mUmpLn639PDFy2yj1E0WdYH/zQ9BkGMqMFWYhdpDquKvBnGzBECEn
+ 6R3qDXeGyyA1aoJc9kEJxIPGchS4m+HfnpQlTwciy6icR0SKXG3aTy5hNU9vHT7DCowt
+ 7TAA==
+X-Gm-Message-State: APjAAAU3aQUBs/oMEpDP32ZutfZeTP4YEXGelwbpWERcT/oYDp0Eoqn7
+ bXMbjhu6OkD3qu4FFrUQTukLgbw=
+X-Google-Smtp-Source: APXvYqzoe7kqFMLzrRy1dkQxZdck05wcc6WXp2uGdqhH5bgqiTrtunhGBZNVP2Qc9VtW1KcUeh7Ffg==
+X-Received: by 2002:a24:61d7:: with SMTP id
+ s206mr19458252itc.133.1560293636578; 
+ Tue, 11 Jun 2019 15:53:56 -0700 (PDT)
 Received: from localhost (ip-174-149-252-64.englco.spcsdns.net.
  [174.149.252.64])
- by smtp.gmail.com with ESMTPSA id p10sm5553716iob.54.2019.06.11.15.40.44
+ by smtp.gmail.com with ESMTPSA id f4sm5155254iok.56.2019.06.11.15.53.54
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 11 Jun 2019 15:40:45 -0700 (PDT)
-Date: Tue, 11 Jun 2019 16:40:41 -0600
+ Tue, 11 Jun 2019 15:53:55 -0700 (PDT)
+Date: Tue, 11 Jun 2019 16:53:51 -0600
 From: Rob Herring <robh@kernel.org>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [1/2] dt-bindngs: display: panel: Add BOE tv101wum-nl6 panel
- bindings
-Message-ID: <20190611224041.GA407@bogus>
-References: <20190608070230.55381-1-jitao.shi@mediatek.com>
+To: Neal Liu <neal.liu@mediatek.com>
+Subject: Re: [PATCH v3 2/3] dt-bindings: rng: update bindings for MediaTek
+ ARMv8 SoCs
+Message-ID: <20190611225351.GA17332@bogus>
+References: <1560162984-26104-1-git-send-email-neal.liu@mediatek.com>
+ <1560162984-26104-3-git-send-email-neal.liu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190608070230.55381-1-jitao.shi@mediatek.com>
+In-Reply-To: <1560162984-26104-3-git-send-email-neal.liu@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_154047_024691_B95CD850 
-X-CRM114-Status: GOOD (  14.45  )
+X-CRM114-CacheID: sfid-20190611_155357_583463_DBA75143 
+X-CRM114-Status: GOOD (  15.10  )
 X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.193 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.193 listed in wl.mailspike.net]
+ no trust [209.85.166.194 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.194 listed in wl.mailspike.net]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -90,77 +92,66 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- yingjoe.chen@mediatek.com, Thierry Reding <treding@nvidia.com>,
- Sean Paul <seanpaul@chromium.org>, linux-pwm@vger.kernel.org,
- Pawel Moll <pawel.moll@arm.com>, Ian Campbell <ijc+devicetree@hellion.org.uk>,
- linux-mediatek@lists.infradead.org, Russell King <rmk+kernel@arm.linux.org.uk>,
- Matthias Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Andy Yan <andy.yan@rock-chips.com>
+ Herbert Xu <herbert@gondor.apana.org.au>, wsd_upstream@mediatek.com,
+ Sean Wang <sean.wang@kernel.org>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-crypto@vger.kernel.org,
+ Matt Mackall <mpm@selenic.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Crystal Guo <Crystal.Guo@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sat, Jun 08, 2019 at 03:02:29PM +0800, Jitao Shi wrote:
-> Add documentation for boe tv101wum-n16 panel.
-
-Typo in the subject and checkpatch complains about trailing whitespace.
-
+On Mon, Jun 10, 2019 at 06:36:23PM +0800, Neal Liu wrote:
+> Document the binding used by the MediaTek ARMv8 SoCs random
+> number generator with TrustZone enabled.
 > 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> Signed-off-by: Neal Liu <neal.liu@mediatek.com>
 > ---
->  .../display/panel/boe,tv101wum-nl6.txt        | 34 +++++++++++++++++++
->  1 file changed, 34 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+>  Documentation/devicetree/bindings/rng/mtk-rng.txt |   15 ++++++++++++---
+>  1 file changed, 12 insertions(+), 3 deletions(-)
 > 
-> diff --git a/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
-> new file mode 100644
-> index 000000000000..2a84735d742d
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
-> @@ -0,0 +1,34 @@
-> +Boe Corporation 10.1" WUXGA TFT LCD panel
-> +
-> +Required properties:
-> +- compatible: should be "boe,tv101wum"
-> +- reg: the virtual channel number of a DSI peripheral
-> +- enable-gpios: a GPIO spec for the enable pin
-> +- pp1800-supply: core voltage supply
-> +- avdd-supply: 
-> +- avee-supply: 
-> +- backlight: phandle of the backlight device attached to the panel
-> +
-> +The device node can contain one 'port' child node with one child
-> +'endpoint' node, according to the bindings defined in
-> +media/video-interfaces.txt. This node should describe panel's video bus.
-> +
-> +Example:
-> +&dsi {
-> +	...
-> +	panel@0 {
-> +		compatible = "boe,tv101wum-nl6";
-> +		reg = <0>;
-> +		enable-gpios = <&pio 45 0>;
-> +		avdd-supply = <&ppvarn_lcd>;
-> +		avee-supply = <&ppvarp_lcd>;
-> +		pp1800-supply = <&pp1800_lcd>;
-> +		backlight = <&backlight_lcd0>;
-> +		status = "okay";
-> +		port {
-> +			panel_in: endpoint {
-> +				remote-endpoint = <&dsi_out>;
-> +			};
-> +		};
-> +	};
-> +};
-> \ No newline at end of file
+> diff --git a/Documentation/devicetree/bindings/rng/mtk-rng.txt b/Documentation/devicetree/bindings/rng/mtk-rng.txt
+> index 2bc89f1..fb3dd59 100644
+> --- a/Documentation/devicetree/bindings/rng/mtk-rng.txt
+> +++ b/Documentation/devicetree/bindings/rng/mtk-rng.txt
+> @@ -3,9 +3,13 @@ found in MediaTek SoC family
+>  
+>  Required properties:
+>  - compatible	    : Should be
+> -			"mediatek,mt7622-rng", 	"mediatek,mt7623-rng" : for MT7622
+> -			"mediatek,mt7629-rng",  "mediatek,mt7623-rng" : for MT7629
+> -			"mediatek,mt7623-rng" : for MT7623
+> +			"mediatek,mt7622-rng", "mediatek,mt7623-rng" for MT7622
+> +			"mediatek,mt7629-rng", "mediatek,mt7623-rng" for MT7629
+> +			"mediatek,mt7623-rng" for MT7623
+> +			"mediatek,mtk-sec-rng" for MediaTek ARMv8 SoCs with
+> +			security RNG
 
-Fix this.
+Is there any commonality with the prior h/w? If not, make this a 
+separate binding doc.
+
+> +
+> +Optional properties:
+>  - clocks	    : list of clock specifiers, corresponding to
+>  		      entries in clock-names property;
+>  - clock-names	    : Should contain "rng" entries;
+> @@ -19,3 +23,8 @@ rng: rng@1020f000 {
+>  	clocks = <&infracfg CLK_INFRA_TRNG>;
+>  	clock-names = "rng";
+>  };
+> +
+> +/* secure RNG */
+> +hwrng: hwrng {
+> +	compatible = "mediatek,mtk-sec-rng";
+
+How does one access this? Seems like this should be part of a node for 
+firmware? What about other functions?
+
+> +};
+> -- 
+> 1.7.9.5
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
