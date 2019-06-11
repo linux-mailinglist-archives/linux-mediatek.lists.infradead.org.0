@@ -2,75 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 166393C1DE
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 06:04:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1EE4F3C1EB
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 06:04:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=vTt1OnMbnkwAC3fy1H44GGqJAu7nAeyP7rKLBdyqZPk=; b=SdgRV1mEYRqO2E
-	DD9SygHPc9BXfHuZaB271T7poqTQxQ3cOmDdR4IBaJMx42FKQ2AgGZ1E6CRQ6TMGyJ79pA5DcgJ3m
-	Uz03rtJwv7lpK61oFaKv55ujpF53kpw7/NhiHzs+GyZ5l5JouZDbXJEgvQgBfPs5j6uk+FgFSLYI/
-	s+70YTkCJzY7uHcJhssfXwIAt80WAs9HRZ1BcBMfIsjpWfk4QMhnjZhmLwzRbcy6mXY/70wPGtC6m
-	i0K8/UE5B07v5hJ3nQ2sDifqrNYmbVAc8MLptbxmYuP7kK+FZvbLukoabpSxx6cHc50rHhNSFyR97
-	2Mi/GKGQXRHjsw1MyuEA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=JoFqSgb2ESMTX89VKdo6XGJ77FlI818WAO06RQaUAdE=; b=ZEptRpFm6w7dSK
+	qNQZIT3PcQLRpFeBJOC9xesHi2fcrCxrSU1gNY6dMHM16PsVui27OOIiwKzsYAlkYfnjlggreWydh
+	764nohf3yaLp1EgNvuwZX6f6BbAf+0kRegWWVlQICEQh/R2dVvKJaSfv1M2Ux9n3d58HDLA3shHt2
+	zS7lSEbb2xgOHSQkAMcHGzWNwiLZlkDAxijf9BE2ruxKKHVW6LRPxdt36+VZU2CH3FSUeJtb5QHb8
+	sWFj/utjrVjvcYV9Qc5mbT9DDSzP83tDPIWYsfuYwm014WOA2Ehl18NaXizg6RC0tlHnDu1AM2E7O
+	KA1nRhXxUZ3PVMDjaObw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haY0u-0005hn-8Q; Tue, 11 Jun 2019 04:04:00 +0000
-Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
+	id 1haY1U-0006Dd-2Z; Tue, 11 Jun 2019 04:04:36 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haY0q-0005g0-67
- for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 04:03:57 +0000
-Received: by mail-pf1-x442.google.com with SMTP id 81so6515216pfy.13
- for <linux-mediatek@lists.infradead.org>; Mon, 10 Jun 2019 21:03:55 -0700 (PDT)
+ id 1haY0q-0005gS-Vs
+ for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 04:03:58 +0000
+Received: by mail-pg1-x543.google.com with SMTP id 196so6161134pgc.6
+ for <linux-mediatek@lists.infradead.org>; Mon, 10 Jun 2019 21:03:56 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=ep5PT5nJYpz/Bj3Iz+6dAuGsY6URZpg14AnULVjTGA0=;
- b=BPeWijeb5HdxjyxppQb40ApVn/nxLgHSyp0AL/ASYmRCiKlPLM1ddJO4q+5DVFlKJo
- M/6tW2VGGMmJt5p6uRnJYncIATIm7J5usdTrrpfDSsoiEwZOhO6s75rGbFLm+gF0M/Zu
- OXBZxzrusRa5BRO0jGY04Rtc4em07eeQ66PnQ=
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=dK5nepKO/Lu9qcWjch0d2Z8IhG0b83DDW/+1Tc5GcLg=;
+ b=KXrCMiQg7a3OfPUXlEJ0jxFjUzyZmNjg7jLQ3vlyHvu+/ZoYFywdDn0CYhVxJ6210H
+ Be7ENhzB8haIWSJaAFOqD/im/zV70ZC09Z+ulYwJ0v3pb2/30T9ccgBbFuxxbqyb4Sb3
+ F8SC9XyvrE2wKX+6pwO4Kc/M8q4p4YESBKAMI=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=ep5PT5nJYpz/Bj3Iz+6dAuGsY6URZpg14AnULVjTGA0=;
- b=NAnBwfyGzOxkrd1PXjXYDTwNzV862x4WkJTsIKMRbcyT7ZUTNQPWi4IrV3K3U+IlpT
- FSGw2FtGGmHQoW3S/abcmHEgLh/JimG+r57/w17BcHfqfBIHTmL6HjoS3RcZ0orR5qb4
- qSq9FAS0KzMa4Q2yMhwFU4ktpnE0Qk6BuRADdGt0a6NJkvFN6tATfczuZbsNIhlfnLww
- tChM/RuLIUjb4dKFvxOHxxsgy7ltmMrENQ+Ib+4SyeNyZ8Gy+mO9BagVKqqvmERwVhgv
- g31FOK6YSyXkcggh+rIklSJe7QDPxpNY/vDI/wzjyXvpDNM4+Wgol3CRhupF0aKtAKAd
- KhYw==
-X-Gm-Message-State: APjAAAWZ5mSNXw8dL9vg4w8/qytWQZT0kdJ+XgDDwMUq1Ylh0QiiaOop
- fr0LWkhkgZBRRkkZJLSKPKgwAA==
-X-Google-Smtp-Source: APXvYqwomU3EkmGbmD6lmNUwogikv7z13A3K3b0++X/UrjCKXAXsfZu9Zj3Dxfvxg4ZWCL337q4OtA==
-X-Received: by 2002:a62:e0c2:: with SMTP id d63mr21262331pfm.60.1560225835215; 
- Mon, 10 Jun 2019 21:03:55 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=dK5nepKO/Lu9qcWjch0d2Z8IhG0b83DDW/+1Tc5GcLg=;
+ b=RY3QARCb0rbSCty26SMCinifqUhJ8PCzWX42ib4tMuYhtFxpTOwF4VtItToVnq6Cye
+ FBy7aEUKXnle1ORpsljrIypu0XO6l3aV9Gq/vKRW7IvPWvqg2bm2kG+evvnGzq50LpS/
+ Hj1kw+ya55DGLXzie9Cqsgs1WAUhWTmc9EYVgCyN7bjXNGbLhJ7vTp9B8b+mMKIWa00q
+ WdhLmNG4zP/ifVF4sMuJ8K2C+bYpibaLgHuzVBAJn8kcywl6D9FVb3SilSwuvaM5WzA8
+ z5lK+GHkEEj5dQM2o+gzlZL/N4wke7OgBeTQ1/yOsbmIA4Kk4/C2w+o7d+wKvQ6qNuX3
+ bQRg==
+X-Gm-Message-State: APjAAAXu4KmvhY9RE4eLJcyR6IHKdCkYjxyiBsu+WVhr1OdpnUDye+Bb
+ 6yFob3BgP8d30I0Sv3YVQ6oBtg==
+X-Google-Smtp-Source: APXvYqwobTrT91p21YyGnsEse1+RxzZxvnHAKh/XjPiTdvWC3iFSRE8s82N6n3Ie7F+FBFdVUvCVAQ==
+X-Received: by 2002:a62:ce07:: with SMTP id y7mr49658309pfg.12.1560225836465; 
+ Mon, 10 Jun 2019 21:03:56 -0700 (PDT)
 Received: from exogeni.mtv.corp.google.com
  ([2620:15c:202:1:5be8:f2a6:fd7b:7459])
- by smtp.gmail.com with ESMTPSA id y133sm13301185pfb.28.2019.06.10.21.03.53
+ by smtp.gmail.com with ESMTPSA id y133sm13301185pfb.28.2019.06.10.21.03.55
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 10 Jun 2019 21:03:54 -0700 (PDT)
+ Mon, 10 Jun 2019 21:03:55 -0700 (PDT)
 From: Derek Basehore <dbasehore@chromium.org>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH v2 0/5] Panel rotation patches
-Date: Mon, 10 Jun 2019 21:03:45 -0700
-Message-Id: <20190611040350.90064-1-dbasehore@chromium.org>
+Subject: [PATCH 1/5] drm/panel: Add helper for reading DT rotation
+Date: Mon, 10 Jun 2019 21:03:46 -0700
+Message-Id: <20190611040350.90064-2-dbasehore@chromium.org>
 X-Mailer: git-send-email 2.22.0.rc2.383.gf4fbbf30c2-goog
+In-Reply-To: <20190611040350.90064-1-dbasehore@chromium.org>
+References: <20190611040350.90064-1-dbasehore@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190610_210356_259159_2EE340B4 
-X-CRM114-Status: UNSURE (   8.55  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190610_210357_024648_D59857E2 
+X-CRM114-Status: GOOD (  13.87  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -111,29 +112,90 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This adds the plumbing for reading panel rotation from the devicetree
-and sets up adding a panel property for the panel orientation on
-Mediatek SoCs when a rotation is present.
+This adds a helper function for reading the rotation (panel
+orientation) from the device tree.
 
-v2 changes:
-fixed build errors in i915
+Signed-off-by: Derek Basehore <dbasehore@chromium.org>
+---
+ drivers/gpu/drm/drm_panel.c | 41 +++++++++++++++++++++++++++++++++++++
+ include/drm/drm_panel.h     |  7 +++++++
+ 2 files changed, 48 insertions(+)
 
-Derek Basehore (5):
-  drm/panel: Add helper for reading DT rotation
-  dt-bindings: display/panel: Expand rotation documentation
-  drm/panel: Add attach/detach callbacks
-  drm/connector: Split out orientation quirk detection
-  drm/mtk: add panel orientation property
-
- .../bindings/display/panel/panel.txt          | 32 +++++++++++
- drivers/gpu/drm/drm_connector.c               | 16 ++----
- drivers/gpu/drm/drm_panel.c                   | 55 +++++++++++++++++++
- drivers/gpu/drm/i915/vlv_dsi.c                | 13 +++--
- drivers/gpu/drm/mediatek/mtk_dsi.c            |  8 +++
- include/drm/drm_connector.h                   |  2 +-
- include/drm/drm_panel.h                       | 11 ++++
- 7 files changed, 120 insertions(+), 17 deletions(-)
-
+diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
+index dbd5b873e8f2..3b689ce4a51a 100644
+--- a/drivers/gpu/drm/drm_panel.c
++++ b/drivers/gpu/drm/drm_panel.c
+@@ -172,6 +172,47 @@ struct drm_panel *of_drm_find_panel(const struct device_node *np)
+ 	return ERR_PTR(-EPROBE_DEFER);
+ }
+ EXPORT_SYMBOL(of_drm_find_panel);
++
++/**
++ * of_drm_get_panel_orientation - look up the rotation of the panel using a
++ * device tree node
++ * @np: device tree node of the panel
++ * @orientation: orientation enum to be filled in
++ *
++ * Looks up the rotation of a panel in the device tree. The rotation in the
++ * device tree is counter clockwise.
++ *
++ * Return: 0 when a valid rotation value (0, 90, 180, or 270) is read or the
++ * rotation property doesn't exist. -EERROR otherwise.
++ */
++int of_drm_get_panel_orientation(const struct device_node *np, int *orientation)
++{
++	int rotation, ret;
++
++	ret = of_property_read_u32(np, "rotation", &rotation);
++	if (ret == -EINVAL) {
++		/* Don't return an error if there's no rotation property. */
++		*orientation = DRM_MODE_PANEL_ORIENTATION_UNKNOWN;
++		return 0;
++	}
++
++	if (ret < 0)
++		return ret;
++
++	if (rotation == 0)
++		*orientation = DRM_MODE_PANEL_ORIENTATION_NORMAL;
++	else if (rotation == 90)
++		*orientation = DRM_MODE_PANEL_ORIENTATION_RIGHT_UP;
++	else if (rotation == 180)
++		*orientation = DRM_MODE_PANEL_ORIENTATION_BOTTOM_UP;
++	else if (rotation == 270)
++		*orientation = DRM_MODE_PANEL_ORIENTATION_LEFT_UP;
++	else
++		return -EINVAL;
++
++	return 0;
++}
++EXPORT_SYMBOL(of_drm_get_panel_orientation);
+ #endif
+ 
+ MODULE_AUTHOR("Thierry Reding <treding@nvidia.com>");
+diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
+index 8c738c0e6e9f..13631b2efbaa 100644
+--- a/include/drm/drm_panel.h
++++ b/include/drm/drm_panel.h
+@@ -197,11 +197,18 @@ int drm_panel_detach(struct drm_panel *panel);
+ 
+ #if defined(CONFIG_OF) && defined(CONFIG_DRM_PANEL)
+ struct drm_panel *of_drm_find_panel(const struct device_node *np);
++int of_drm_get_panel_orientation(const struct device_node *np,
++				 int *orientation);
+ #else
+ static inline struct drm_panel *of_drm_find_panel(const struct device_node *np)
+ {
+ 	return ERR_PTR(-ENODEV);
+ }
++int of_drm_get_panel_orientation(const struct device_node *np,
++				 int *orientation)
++{
++	return -ENODEV;
++}
+ #endif
+ 
+ #endif
 -- 
 2.22.0.rc2.383.gf4fbbf30c2-goog
 
