@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E23D43C668
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:48:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6905B3C66A
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:49:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vulxzyKM27xwf4P3HInVY98OhWB7tJ+yOn0RRGXuYNM=; b=eKEAfCZ5DD8hCq
-	Uq1AfeGh7GHtpbsAm48hBQjA6Quo9tuChul/moOWKQuLnm9++A0sXnqzgVLFXtX+nrJTMWzVmTifq
-	/qYCrPOND3xspcHujNvK8zDjp3UpNJtDq7wd9k2zbuiqBtVRbAw0FM1q9CnVIy0Dqg/2rotRmj2+7
-	ryNJNR5U745Ql6Kkuwm1OnAXnTcNCu4dyYgU2ACXzKplFGwET5f/oC5KXAUIHlQ8FqiULQ61kK1jU
-	3SR/OA39h1ooO0eHigiV95xv83C5Pws1gWV11a1k4rKxqrTno0y/ZG2mNNSexw+6WK4kXgyG6SYo3
-	hBeSTeGxNCLaNIdGJYPw==;
+	List-Owner; bh=khcCclGeN0AXBa3zOgP5lkBfjwby9b/Bf7D8GNA0KVk=; b=OBXFP2drXwVJ89
+	GTgpCaZvugIfBPFG0w+zUo7nBRbmkwLputUdfb8CyPRLbs4910xr68ASvMZdx5S4AJPOMaHI7NSyY
+	DwFC+zDaaF76CKXI+yE9RT3Wza1d1p5U8FMoYm5SaSpE++ReMaloEXFBBoSURTnqHzTyNitmIHiEj
+	alZbNZXEzehtL3wOYPqUgjMLjBj8qWodqlPijwybNz5eVMOGtg2sr/SdSt176RgWIcr9ilte96izU
+	KJPu+vjkXPofINDG9ffEp8OJGoX0BhNEKX1AF+woOYp7A3fYM26TI63JL+WR8G2/SpUWfS3IUS+5Z
+	8jWQpE5uM9CKeucn3BbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hacSN-0004fO-5f; Tue, 11 Jun 2019 08:48:39 +0000
+	id 1hacSg-0004x5-NO; Tue, 11 Jun 2019 08:48:58 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hacPG-0002VV-Bj; Tue, 11 Jun 2019 08:45:28 +0000
-X-UUID: e3e9e928272c4cd6993cd086cc7ad7b7-20190611
-X-UUID: e3e9e928272c4cd6993cd086cc7ad7b7-20190611
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1hacPH-0002Wx-Cg; Tue, 11 Jun 2019 08:45:29 +0000
+X-UUID: 1fd633f417f845cc934a6d6d74903848-20190611
+X-UUID: 1fd633f417f845cc934a6d6d74903848-20190611
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1495453108; Tue, 11 Jun 2019 00:45:20 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 01:45:19 -0700
+ with ESMTP id 859087519; Tue, 11 Jun 2019 00:45:23 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 01:45:21 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 16:45:17 +0800
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 16:45:18 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 11 Jun 2019 16:45:15 +0800
+ Transport; Tue, 11 Jun 2019 16:45:17 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
  <gregkh@linuxfoundation.org>, Heikki Krogerus
  <heikki.krogerus@linux.intel.com>
-Subject: [PATCH v7 07/10] usb: roles: Add fwnode_usb_role_switch_get() function
-Date: Tue, 11 Jun 2019 16:44:37 +0800
-Message-ID: <1560242680-23844-8-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [PATCH v7 08/10] usb: roles: get usb-role-switch from parent
+Date: Tue, 11 Jun 2019 16:44:38 +0800
+Message-ID: <1560242680-23844-9-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1560242680-23844-1-git-send-email-chunfeng.yun@mediatek.com>
 References: <1560242680-23844-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_014526_684563_321DA672 
-X-CRM114-Status: GOOD (  10.94  )
+X-CRM114-CacheID: sfid-20190611_014527_644817_5203A18A 
+X-CRM114-Status: GOOD (  10.74  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -90,82 +90,72 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
-
-The fwnode_usb_role_switch_get() function is exactly the
-same as usb_role_switch_get(), except that it takes struct
-fwnode_handle as parameter instead of struct device.
+when the USB host controller is the parent of the connector,
+usually type-B, sometimes don't need the graph, so we should
+check whether it's parent registers usb-role-switch or not
+firstly, and get it if exists.
 
 Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Tested-by: Biju Das <biju.das@bp.renesas.com>
 ---
-v7: 
- add signed-off-by Chunfeng and tested-by Biju
+v7 no changes
 
 v6:
   new patch
 ---
- drivers/usb/roles/class.c | 20 ++++++++++++++++++++
- include/linux/usb/role.h  |  7 +++++++
- 2 files changed, 27 insertions(+)
+ drivers/usb/roles/class.c | 25 +++++++++++++++++++++----
+ 1 file changed, 21 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
-index 86defca6623e..5b637aaf311f 100644
+index 5b637aaf311f..87439a84c983 100644
 --- a/drivers/usb/roles/class.c
 +++ b/drivers/usb/roles/class.c
-@@ -135,6 +135,26 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+@@ -114,6 +114,19 @@ static void *usb_role_switch_match(struct device_connection *con, int ep,
+ 	return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
  }
- EXPORT_SYMBOL_GPL(usb_role_switch_get);
  
-+/**
-+ * fwnode_usb_role_switch_get - Find USB role switch linked with the caller
-+ * @fwnode: The caller device node
-+ *
-+ * This is similar to the usb_role_switch_get() function above, but it searches
-+ * the switch using fwnode instead of device entry.
-+ */
-+struct usb_role_switch *fwnode_usb_role_switch_get(struct fwnode_handle *fwnode)
++static struct usb_role_switch *
++usb_role_switch_is_parent(struct fwnode_handle *fwnode)
 +{
-+	struct usb_role_switch *sw;
++	struct fwnode_handle *parent = fwnode_get_parent(fwnode);
++	struct device *dev;
 +
-+	sw = fwnode_connection_find_match(fwnode, "usb-role-switch", NULL,
-+					  usb_role_switch_match);
-+	if (!IS_ERR_OR_NULL(sw))
-+		WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
++	if (!parent || !fwnode_property_present(parent, "usb-role-switch"))
++		return NULL;
 +
-+	return sw;
++	dev = class_find_device(role_class, NULL, parent, switch_fwnode_match);
++	return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
 +}
-+EXPORT_SYMBOL_GPL(fwnode_usb_role_switch_get);
 +
  /**
-  * usb_role_switch_put - Release handle to a switch
-  * @sw: USB Role Switch
-diff --git a/include/linux/usb/role.h b/include/linux/usb/role.h
-index da2b9641b877..2d77f97df72d 100644
---- a/include/linux/usb/role.h
-+++ b/include/linux/usb/role.h
-@@ -47,6 +47,7 @@ struct usb_role_switch_desc {
- int usb_role_switch_set_role(struct usb_role_switch *sw, enum usb_role role);
- enum usb_role usb_role_switch_get_role(struct usb_role_switch *sw);
- struct usb_role_switch *usb_role_switch_get(struct device *dev);
-+struct usb_role_switch *fwnode_usb_role_switch_get(struct fwnode_handle *node);
- void usb_role_switch_put(struct usb_role_switch *sw);
+  * usb_role_switch_get - Find USB role switch linked with the caller
+  * @dev: The caller device
+@@ -125,8 +138,10 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+ {
+ 	struct usb_role_switch *sw;
  
- struct usb_role_switch *
-@@ -70,6 +71,12 @@ static inline struct usb_role_switch *usb_role_switch_get(struct device *dev)
- 	return ERR_PTR(-ENODEV);
- }
+-	sw = device_connection_find_match(dev, "usb-role-switch", NULL,
+-					  usb_role_switch_match);
++	sw = usb_role_switch_is_parent(dev_fwnode(dev));
++	if (!sw)
++		sw = device_connection_find_match(dev, "usb-role-switch", NULL,
++						  usb_role_switch_match);
  
-+static inline struct usb_role_switch *
-+fwnode_usb_role_switch_get(struct fwnode_handle *node)
-+{
-+	return ERR_PTR(-ENODEV);
-+}
-+
- static inline void usb_role_switch_put(struct usb_role_switch *sw) { }
+ 	if (!IS_ERR_OR_NULL(sw))
+ 		WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+@@ -146,8 +161,10 @@ struct usb_role_switch *fwnode_usb_role_switch_get(struct fwnode_handle *fwnode)
+ {
+ 	struct usb_role_switch *sw;
  
- static inline struct usb_role_switch *
+-	sw = fwnode_connection_find_match(fwnode, "usb-role-switch", NULL,
+-					  usb_role_switch_match);
++	sw = usb_role_switch_is_parent(fwnode);
++	if (!sw)
++		sw = fwnode_connection_find_match(fwnode, "usb-role-switch",
++						  NULL, usb_role_switch_match);
+ 	if (!IS_ERR_OR_NULL(sw))
+ 		WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+ 
 -- 
 2.21.0
 
