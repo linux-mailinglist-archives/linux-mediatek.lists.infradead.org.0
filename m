@@ -2,85 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 85FBA417D4
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 00:02:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5495E41850
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 00:41:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wwGvJgStvxyy0znL9Q4fGfuipAYU8h8LZQNul4sO1hM=; b=PqgPL/AMDxLnAq
-	D8+0336UF4Bp5T/JjfbasvzLxMHjynK7EJgw4gE75nNZWm1pHf1ALQKARYRIwLuJS0BL0Sfhxwgq4
-	RnliwnIi2VcQjyT4wA/PwD6fse3WF0cUKbKqG4KKjS9Lk8XbUZNE72q1L8wANrVL0gPSWgGf4+4yC
-	+OLJi2CNXfSklY+Th9M0ZuSiiVXKKNk6gphs/XrFF0gNwsjbBsgDC9tmzWgSbfo/mjlBPc35fZkCh
-	67hKiMifsEtCdLBbnIRZ1iPihoy/5lG6fr+wqGjjb0I4nZP28YseAu/FjW+vpEGGIVEfnQPQPz2m8
-	1PlDgs9CA9EKXc/PmDZA==;
+	List-Owner; bh=ICr0lkAvTxPGXDUHIfUwvvg1GZeVDsoX+/p4RyMEjdI=; b=evqSpXzGLaFpSx
+	PRRv7T+PXPn4yfS+y+Jyv7gvUWwGknw4qEuPQpTmdbq45EpTI3chbNZLFI0o7wEoionppdonJ6WdI
+	PFZzIx6zBLTgt5Z8kG7PZrS/wr95AJDY0Z7yRpuhIAhGoxBHnp3uucpuJyasDqCZiV/RYDPdGR6eJ
+	VzGxDlQN4lNGGz+R6ZO5fvOws33d5j1PoasXRlqRbbt9rSyf+mQYUpGBr4KQtszq8VG7wXNRXPd/5
+	MQ4Z0tzFNQj5WifL5RuIYqXDKdm86mswnVkfNXcV4dqTdNjlZG6CJOn+DR1o7AhCn+2OoVk5cv6cp
+	SXTUKzmdeub6Vn9xRtsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haoqS-0005rZ-Sj; Tue, 11 Jun 2019 22:02:20 +0000
-Received: from mail-vs1-xe43.google.com ([2607:f8b0:4864:20::e43])
+	id 1hapRo-0005ri-Mu; Tue, 11 Jun 2019 22:40:56 +0000
+Received: from mail-it1-f193.google.com ([209.85.166.193])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haoqC-0005gS-EF
- for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 22:02:05 +0000
-Received: by mail-vs1-xe43.google.com with SMTP id n21so8957286vsp.12
- for <linux-mediatek@lists.infradead.org>; Tue, 11 Jun 2019 15:02:01 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=R9aK4K+mYhxsBGuDL1wSkT9a9QdB+QJqvCcQqCRoZqk=;
- b=jynV4LeLSkp8mY/yMLs3t4Pg5sizpYJiXBSRzIWuITTAmY09IkU049XMUREkVXni+g
- JYmm1KjaWGlZolbGVaL1OfPnf3JRGs5E9Tzrgf9suFhpZzr0hUOGtfsAg/LWhL40oakz
- 62yF0xRTAYPtIkJav7muvoNoGgY8jAOJHKSgg=
+ id 1hapRe-0005nM-Te; Tue, 11 Jun 2019 22:40:48 +0000
+Received: by mail-it1-f193.google.com with SMTP id x22so7529667itl.2;
+ Tue, 11 Jun 2019 15:40:46 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=R9aK4K+mYhxsBGuDL1wSkT9a9QdB+QJqvCcQqCRoZqk=;
- b=fhQJLTEpDlE1KJ/0ePJd3WRxlsgrz5ae7eLQ00sb5Hsd0nxOAPLD/EjXP7AZndCMCx
- RdU3xYKrDulErn7gdoUhZDNAmbOWUJaZnIU+34nDzcD9KQHOYG2Lz3cac6juUgXhyQtp
- TVxCZAb1GbwI9P2LjmGmqmMT4/XVtEqHgIJulvh+pkeyUsUQyqJ5rQLAAJlQzBF+Acll
- fqQ8jwxLkmSM8l+GyvJC/hqNFGUzyC7Dr/7GlSaQj2fpuSGRdgr5uAoC8+6V2rZpyKDu
- eW+BF2otINZfpywuBXeU5rYYoqbJGMKNqwbS+O7eKT39W8ENYGCaKBAAW/cBUzcrFSgx
- DLRw==
-X-Gm-Message-State: APjAAAUBmZZ2kY+mA2V1VT7BDsqVKn6SsIHq0Gp33+p8w4r7YIX1wkt9
- pEsuCOPCvbKoECjSsy1omGM05egjQ+bdf8Ka+T0WNQ==
-X-Google-Smtp-Source: APXvYqw0envY6zW+Lz/LpkpAKuJuPPY1ZENACuLJfRT4NvK+IVqHR36Y7gi5Vlqk+iKUf5BiCUj6/+NTISBNAEyEhIk=
-X-Received: by 2002:a67:d384:: with SMTP id b4mr9315081vsj.152.1560290519746; 
- Tue, 11 Jun 2019 15:01:59 -0700 (PDT)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=HI3rHUK26/S2B0LA3WlM09q3Q/jcQRPOrltE5Dys4vg=;
+ b=SubqXtmy5xBdt95Eqnsu5NFkjrylz3sRlabPHuSnSnXpnMO/czwfAGPXhTyYI67dOf
+ BpDswP+WUVPyQLbEcIEMaQhUnSNn3gqai52L8Sfj5Cr0sHomr1tUaAfvJnsFW/NoIlws
+ pjawxanXcB8O0NNo1vJi36hRFyRMP7R1ZpE4e3FnPQJUmorcO3//SLlUzRmIPebqSw2Y
+ OZLu59WQn1fxBSQO/aZgJ6TzRFX8oyd/AbbazgT+g5clubuGDMAmR4fXFRlnfgdTi4+R
+ O+qLfZ1Bbu1YtEoU3i2RKmBUc8/HiHS+Wm55KMHzVR4FxmSMlb90w8PFZ8llrRUTLvpX
+ 2KdQ==
+X-Gm-Message-State: APjAAAWTcXgDrFmYk96keHVP1eWO5DA7S2f36mpeH6z4sZ+zSh/SM0nL
+ x6Bb0LXIxOUrNC6KPAw2Ow==
+X-Google-Smtp-Source: APXvYqyYN7ZbEDoYi00MhHLqHL7FwPdCa2uF9Kv/WyYmja0MIBn3v9bIz1f2IeqAvvSfdbDWHNDRAg==
+X-Received: by 2002:a24:b303:: with SMTP id e3mr18466988itf.170.1560292845706; 
+ Tue, 11 Jun 2019 15:40:45 -0700 (PDT)
+Received: from localhost (ip-174-149-252-64.englco.spcsdns.net.
+ [174.149.252.64])
+ by smtp.gmail.com with ESMTPSA id p10sm5553716iob.54.2019.06.11.15.40.44
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Tue, 11 Jun 2019 15:40:45 -0700 (PDT)
+Date: Tue, 11 Jun 2019 16:40:41 -0600
+From: Rob Herring <robh@kernel.org>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Subject: Re: [1/2] dt-bindngs: display: panel: Add BOE tv101wum-nl6 panel
+ bindings
+Message-ID: <20190611224041.GA407@bogus>
+References: <20190608070230.55381-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-References: <20190611040350.90064-1-dbasehore@chromium.org>
- <20190611040350.90064-3-dbasehore@chromium.org>
- <CAL_JsqLM1CikZ8+NPjLk2CEW-z9vPynZpVG20x0jsa7hVq0LvA@mail.gmail.com>
-In-Reply-To: <CAL_JsqLM1CikZ8+NPjLk2CEW-z9vPynZpVG20x0jsa7hVq0LvA@mail.gmail.com>
-From: "dbasehore ." <dbasehore@chromium.org>
-Date: Tue, 11 Jun 2019 15:01:48 -0700
-Message-ID: <CAGAzgsoWGqf0JQPNyRFnv2xZTMxje6idce7Dy5FZzuxj30mQyw@mail.gmail.com>
-Subject: Re: [PATCH 2/5] dt-bindings: display/panel: Expand rotation
- documentation
-To: Rob Herring <robh+dt@kernel.org>
+Content-Disposition: inline
+In-Reply-To: <20190608070230.55381-1-jitao.shi@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_150204_473422_0F408AEC 
-X-CRM114-Status: GOOD (  23.60  )
-X-Spam-Score: -7.3 (-------)
+X-CRM114-CacheID: sfid-20190611_154047_024691_B95CD850 
+X-CRM114-Status: GOOD (  14.45  )
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-7.3 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:e43 listed in]
- [list.dnswl.org]
+ no trust [209.85.166.193 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.193 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,124 +90,77 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Sean Paul <sean@poorly.run>, Intel Graphics <intel-gfx@lists.freedesktop.org>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Jani Nikula <jani.nikula@linux.intel.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- dri-devel <dri-devel@lists.freedesktop.org>, Daniel Vetter <daniel@ffwll.ch>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>, CK Hu <ck.hu@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Sam Ravnborg <sam@ravnborg.org>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, Ajay Kumar <ajaykumar.rs@samsung.com>,
+ Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
+ yingjoe.chen@mediatek.com, Thierry Reding <treding@nvidia.com>,
+ Sean Paul <seanpaul@chromium.org>, linux-pwm@vger.kernel.org,
+ Pawel Moll <pawel.moll@arm.com>, Ian Campbell <ijc+devicetree@hellion.org.uk>,
+ linux-mediatek@lists.infradead.org, Russell King <rmk+kernel@arm.linux.org.uk>,
+ Matthias Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Andy Yan <andy.yan@rock-chips.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jun 11, 2019 at 8:25 AM Rob Herring <robh+dt@kernel.org> wrote:
->
-> On Mon, Jun 10, 2019 at 10:03 PM Derek Basehore <dbasehore@chromium.org> wrote:
-> >
-> > This adds to the rotation documentation to explain how drivers should
-> > use the property and gives an example of the property in a devicetree
-> > node.
-> >
-> > Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> > ---
-> >  .../bindings/display/panel/panel.txt          | 32 +++++++++++++++++++
-> >  1 file changed, 32 insertions(+)
-> >
-> > diff --git a/Documentation/devicetree/bindings/display/panel/panel.txt b/Documentation/devicetree/bindings/display/panel/panel.txt
-> > index e2e6867852b8..f35d62d933fc 100644
-> > --- a/Documentation/devicetree/bindings/display/panel/panel.txt
-> > +++ b/Documentation/devicetree/bindings/display/panel/panel.txt
-> > @@ -2,3 +2,35 @@ Common display properties
-> >  -------------------------
-> >
-> >  - rotation:    Display rotation in degrees counter clockwise (0,90,180,270)
-> > +
-> > +Property read from the device tree using of of_drm_get_panel_orientation
->
-> Don't put kernel specifics into bindings.
+On Sat, Jun 08, 2019 at 03:02:29PM +0800, Jitao Shi wrote:
+> Add documentation for boe tv101wum-n16 panel.
 
-Will remove that. I'll clean up the documentation to indicate that
-this binding creates a panel orientation property unless the rotation
-is handled in the Timing Controller on the panel if that sounds fine.
+Typo in the subject and checkpatch complains about trailing whitespace.
 
->
-> > +
-> > +The panel driver may apply the rotation at the TCON level, which will
->
-> What's TCON? Something Mediatek specific IIRC.
+> 
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> ---
+>  .../display/panel/boe,tv101wum-nl6.txt        | 34 +++++++++++++++++++
+>  1 file changed, 34 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+> 
+> diff --git a/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+> new file mode 100644
+> index 000000000000..2a84735d742d
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+> @@ -0,0 +1,34 @@
+> +Boe Corporation 10.1" WUXGA TFT LCD panel
+> +
+> +Required properties:
+> +- compatible: should be "boe,tv101wum"
+> +- reg: the virtual channel number of a DSI peripheral
+> +- enable-gpios: a GPIO spec for the enable pin
+> +- pp1800-supply: core voltage supply
+> +- avdd-supply: 
+> +- avee-supply: 
+> +- backlight: phandle of the backlight device attached to the panel
+> +
+> +The device node can contain one 'port' child node with one child
+> +'endpoint' node, according to the bindings defined in
+> +media/video-interfaces.txt. This node should describe panel's video bus.
+> +
+> +Example:
+> +&dsi {
+> +	...
+> +	panel@0 {
+> +		compatible = "boe,tv101wum-nl6";
+> +		reg = <0>;
+> +		enable-gpios = <&pio 45 0>;
+> +		avdd-supply = <&ppvarn_lcd>;
+> +		avee-supply = <&ppvarp_lcd>;
+> +		pp1800-supply = <&pp1800_lcd>;
+> +		backlight = <&backlight_lcd0>;
+> +		status = "okay";
+> +		port {
+> +			panel_in: endpoint {
+> +				remote-endpoint = <&dsi_out>;
+> +			};
+> +		};
+> +	};
+> +};
+> \ No newline at end of file
 
-The TCON is the Timing controller, which is on the panel. Every panel
-has one. I'll add to the doc that the TCON is in the panel, etc.
-
->
-> > +make the panel look like it isn't rotated to the kernel and any other
-> > +software.
-> > +
-> > +If not, a panel orientation property should be added through the SoC
-> > +vendor DRM code using the drm_connector_init_panel_orientation_property
-> > +function.
->
-> The 'rotation' property should be defined purely based on how the
-> panel is mounted relative to a device's orientation. If the display
-> pipeline has some ability to handle rotation, that's a feature of the
-> display pipeline and not the panel.
-
-This is how the panel orientation property is already handled in the
-kernel. See drivers/gpu/drm/i915/vlv_dsi.c for more details.
-
->
-> > +
-> > +Example:
->
-> This file is a collection of common properties. It shouldn't have an
-> example especially as this example is mostly non-common properties.
-
-Just copied one of our DTS entries that uses the property. I'll remove
-everything under compatible except for rotation and status.
-
->
-> > +       panel: panel@0 {
-> > +               compatible = "boe,himax8279d8p";
-> > +               reg = <0>;
-> > +               enable-gpios = <&pio 45 0>;
->
-> > +               pp33-gpios = <&pio 35 0>;
-> > +               pp18-gpios = <&pio 36 0>;
->
-> BTW, are these upstream because they look like GPIO controlled
-> supplies which we model with gpio-regulator binding typically.
-
-The boe,himax8279 driver was sent upstream, but it doesn't appear to
-be merged. I'll look into it on that thread.
-
->
-> > +               pinctrl-names = "default", "state_3300mv", "state_1800mv";
-> > +               pinctrl-0 = <&panel_pins_default>;
-> > +               pinctrl-1 = <&panel_pins_3300mv>;
-> > +               pinctrl-2 = <&panel_pins_1800mv>;
-> > +               backlight = <&backlight_lcd0>;
-> > +               rotation = <180>;
-> > +               status = "okay";
-> > +
-> > +               port {
-> > +                       panel_in: endpoint {
-> > +                               remote-endpoint = <&dsi_out>;
-> > +                       };
-> > +               };
-> > +       };
-> > --
-> > 2.22.0.rc2.383.gf4fbbf30c2-goog
-> >
+Fix this.
 
 _______________________________________________
 Linux-mediatek mailing list
