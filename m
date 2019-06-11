@@ -2,70 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 221FF3C06A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 02:24:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 349CA3C06B
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 02:24:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JBCoajuD5qWgNIdc7SinVBPQG4gTd4oPF+prm0BcmLc=; b=Qoy1bU66H9pTBg
-	7JiHCqiJsSO5Toej2SCtd8jD+4vGbeGadv1vg21eQ5ZLNWkbUNoafQd6+jEZtHZA3sLI+p9Vbk2Qm
-	LgEyqSkg/Tdk3dtdoZb+3sJbeOwV6chkj/1ORNKnw6TomfNvgWHmr04cZYqJP6eXrM/bTu77yCZ89
-	S5VZWQ+CyEMEcCfFCKvBAqCmqg3gNQQ6k15vONCuRWsmBNDupvUoTukPaIlPQeqJ/8kAJBAR64jvE
-	IJ2u0sNWkVGJKx8yx/SUqPv7Yg9G68kgvnYegtkdhybcLMACFWeSt31Gr431x+7tYP25R6PGs0HWv
-	Rbjnnzeks2VDtwtP3tmg==;
+	List-Owner; bh=wYVGxqI/pOH0MrttiLmKRjHl+61P9tOgoA9O+f2MWHE=; b=p7WbgbbOssLHNB
+	P0aSJVbMYcPdfffQ7rEZimKJJtTIhTP+ETrRT4NqIXw01Ysp9kzcp94ki518+zZtMeaRXj/QPig8E
+	IBEmXUpgOJikunwfXGgPCRIKTftoXKHhUDBCyrw0f2xDz5Kk8Faq0ixtGLhCMPiYlmhY/jI16v2w+
+	NHxd/T7TYNbrSxx6KSz75M4sHz2MvffgZPUze4Cck/bW9aTOWj24cjWIoy6imuz4uVBw3eeekwLPA
+	oqQS5vYmE+Km5bab0gfbE09dZUorZeqQWku9J5rB+O6UPSf0rXrdX4TioCGJh6WeruzNIg0Y6CggF
+	VNwvykt9VTT0bxjC2T7w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haUa3-00059Y-A0; Tue, 11 Jun 2019 00:24:03 +0000
+	id 1haUa5-0005CT-2x; Tue, 11 Jun 2019 00:24:05 +0000
 Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haUZ9-0004La-SF
+ id 1haUZB-0004N4-0L
  for linux-mediatek@lists.infradead.org; Tue, 11 Jun 2019 00:23:10 +0000
-Received: by mail-pg1-x544.google.com with SMTP id a3so5895288pgb.3
- for <linux-mediatek@lists.infradead.org>; Mon, 10 Jun 2019 17:23:07 -0700 (PDT)
+Received: by mail-pg1-x544.google.com with SMTP id f25so5882357pgv.10
+ for <linux-mediatek@lists.infradead.org>; Mon, 10 Jun 2019 17:23:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=ys0DSil+WvCMaDGevz2dSiLwFPZR4jwAs4InRe1vZNA=;
- b=X12Jn3AUd//JNQCTWSBR6eh9r650AWw9Xjg7KpO0V+0SA2HdJEsEae1jQkqDPHyQKe
- F9jkL7x/7/FbANfIR4mwRASAg6AXFvQesI26VoF7tgXODbVqSvH4TDWixSqzy/8t/2Oe
- o6kb4qUN0UwhrIOg/a3lFqtIXvRAqNQYOcNrA=
+ bh=7l9eJCs2PeowUasvujNxJ+tq7unRBQcTxAKWiz4JMIE=;
+ b=evokIjR4FgyjQ4UFLo9iswsV8vW4ne5f+ymL6lDggG9PK5MCubFk6GC/cJ93jctYsM
+ VaPiJo+Rs9owKBfAdgdm9x/Qx065hL6/VManLQv5fJsFUhQWa5CSgM5J7VV5u4PffOoj
+ 05Sca9TKhk3F9uLQLzI9BpVrtyH3VMUHP7vWk=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=ys0DSil+WvCMaDGevz2dSiLwFPZR4jwAs4InRe1vZNA=;
- b=VD7OorJ1gPD02ADnllVxwDzT2Mn1FGEb7L25JCefHcvudxHbZvamOvfjP66dICqxI/
- +ni74PR0Xy1LWCF/HFslg/Yhk+GjDglx5NKiwUeQ8WEstINMpQ2I6djWK1hAsmLQJl13
- K2FHJdAaRO9VLt2Hehzltpd1JR0YCetIA7T6RPhfYqJVjqmvsc7LNK7Y6nc5wW3J0V3a
- b1BrRt3lBUXl5CX0ipc3Mi1pFaAE+YmJbIAw93cIQz+OQiyLzgaE4CSGpXkWIz5pVG3q
- 0oCo4ebaMkQ1SV7oVR8CgnJkDExI1ZUbExOCOuZH3OtjePJK9ZzuRngTUqRv4669P6RW
- NpEg==
-X-Gm-Message-State: APjAAAWVJ5a2jJ2ACNx2r10RlBDaRf9Qki2u9s1rsDybzbHFkwiq5ev0
- vwRPD/w+9uqZSfikvou3K9DTsg==
-X-Google-Smtp-Source: APXvYqxAc42hyNbAAjVSUHVWNoM3DB7fjZVsqMVi9qbCUz/7kQyXOOCdI5Fe02ZPTYUapCArvj8xLA==
-X-Received: by 2002:a62:7552:: with SMTP id q79mr57521992pfc.71.1560212587343; 
- Mon, 10 Jun 2019 17:23:07 -0700 (PDT)
+ bh=7l9eJCs2PeowUasvujNxJ+tq7unRBQcTxAKWiz4JMIE=;
+ b=gNSebUciuM/bfjt3hUyaDzcx3TSwUWzOAkhjhDgFkKncLBoLYVYCPibt4YyirWar4K
+ Okgt4FE0P2KbrIZv2pHNFkUHJo9de9ju3XCk8PTbS+jJkjdKTXk/ahfuFtA1rmgmTX5F
+ HAKqkveFfv2WnZvM6nM4HXMnzjdyPVlVjf4Fwf7NLUklinTKzHIqa0M7yNchVtcSAbaT
+ yVBfb6ZZBj562NoT4YYDdBewSbs4ICfxD7WJTD8zG0cJAsg/kshJhAodud4kjwFCVbau
+ Kf52/AsShIoCURZ0foiurh6Isre2ch6u/32zyonkH943GneJYDk9nHQChPxwLHVa6lDk
+ 4urg==
+X-Gm-Message-State: APjAAAXFhHQhPsR5RSDARJ8XHwAd1NZJJzJnFIwOqnJVMXMqHPjh4O/s
+ mhrQDB9cB2dbG5+AZLY/aoe/Ug==
+X-Google-Smtp-Source: APXvYqxXrwREiReNGSD5SzpOTe3czQMpgGRjtIlULxAPe0ldReXT1NS+YN+qsMaBOSYIsfxHYJn70A==
+X-Received: by 2002:a62:2f87:: with SMTP id v129mr78643128pfv.9.1560212588496; 
+ Mon, 10 Jun 2019 17:23:08 -0700 (PDT)
 Received: from exogeni.mtv.corp.google.com
  ([2620:15c:202:1:5be8:f2a6:fd7b:7459])
- by smtp.gmail.com with ESMTPSA id t4sm540317pjq.19.2019.06.10.17.23.06
+ by smtp.gmail.com with ESMTPSA id t4sm540317pjq.19.2019.06.10.17.23.07
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 10 Jun 2019 17:23:06 -0700 (PDT)
+ Mon, 10 Jun 2019 17:23:07 -0700 (PDT)
 From: Derek Basehore <dbasehore@chromium.org>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 2/5] dt-bindings: display/panel: Expand rotation documentation
-Date: Mon, 10 Jun 2019 17:22:53 -0700
-Message-Id: <20190611002256.186969-3-dbasehore@chromium.org>
+Subject: [PATCH 3/5] drm/panel: Add attach/detach callbacks
+Date: Mon, 10 Jun 2019 17:22:54 -0700
+Message-Id: <20190611002256.186969-4-dbasehore@chromium.org>
 X-Mailer: git-send-email 2.22.0.rc2.383.gf4fbbf30c2-goog
 In-Reply-To: <20190611002256.186969-1-dbasehore@chromium.org>
 References: <20190611002256.186969-1-dbasehore@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190610_172308_103352_B755B8B4 
-X-CRM114-Status: UNSURE (   9.70  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190610_172309_168330_CECEF2FC 
+X-CRM114-Status: GOOD (  12.01  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -107,55 +106,79 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This adds to the rotation documentation to explain how drivers should
-use the property and gives an example of the property in a devicetree
-node.
+This adds the attach/detach callbacks. These are for setting up
+internal state for the connector/panel pair that can't be done at
+probe (since the connector doesn't exist) and which don't need to be
+repeatedly done for every get/modes, prepare, or enable callback.
+Values such as the panel orientation, and display size can be filled
+in for the connector.
 
 Signed-off-by: Derek Basehore <dbasehore@chromium.org>
 ---
- .../bindings/display/panel/panel.txt          | 32 +++++++++++++++++++
- 1 file changed, 32 insertions(+)
+ drivers/gpu/drm/drm_panel.c | 14 ++++++++++++++
+ include/drm/drm_panel.h     |  4 ++++
+ 2 files changed, 18 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/display/panel/panel.txt b/Documentation/devicetree/bindings/display/panel/panel.txt
-index e2e6867852b8..f35d62d933fc 100644
---- a/Documentation/devicetree/bindings/display/panel/panel.txt
-+++ b/Documentation/devicetree/bindings/display/panel/panel.txt
-@@ -2,3 +2,35 @@ Common display properties
- -------------------------
+diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
+index 3b689ce4a51a..72f67678d9d5 100644
+--- a/drivers/gpu/drm/drm_panel.c
++++ b/drivers/gpu/drm/drm_panel.c
+@@ -104,12 +104,23 @@ EXPORT_SYMBOL(drm_panel_remove);
+  */
+ int drm_panel_attach(struct drm_panel *panel, struct drm_connector *connector)
+ {
++	int ret;
++
+ 	if (panel->connector)
+ 		return -EBUSY;
  
- - rotation:	Display rotation in degrees counter clockwise (0,90,180,270)
+ 	panel->connector = connector;
+ 	panel->drm = connector->dev;
+ 
++	if (panel->funcs->attach) {
++		ret = panel->funcs->attach(panel);
++		if (ret < 0) {
++			panel->connector = NULL;
++			panel->drm = NULL;
++			return ret;
++		}
++	}
 +
-+Property read from the device tree using of of_drm_get_panel_orientation
+ 	return 0;
+ }
+ EXPORT_SYMBOL(drm_panel_attach);
+@@ -128,6 +139,9 @@ EXPORT_SYMBOL(drm_panel_attach);
+  */
+ int drm_panel_detach(struct drm_panel *panel)
+ {
++	if (panel->funcs->detach)
++		panel->funcs->detach(panel);
 +
-+The panel driver may apply the rotation at the TCON level, which will
-+make the panel look like it isn't rotated to the kernel and any other
-+software.
-+
-+If not, a panel orientation property should be added through the SoC
-+vendor DRM code using the drm_connector_init_panel_orientation_property
-+function.
-+
-+Example:
-+	panel: panel@0 {
-+		compatible = "boe,himax8279d8p";
-+		reg = <0>;
-+		enable-gpios = <&pio 45 0>;
-+		pp33-gpios = <&pio 35 0>;
-+		pp18-gpios = <&pio 36 0>;
-+		pinctrl-names = "default", "state_3300mv", "state_1800mv";
-+		pinctrl-0 = <&panel_pins_default>;
-+		pinctrl-1 = <&panel_pins_3300mv>;
-+		pinctrl-2 = <&panel_pins_1800mv>;
-+		backlight = <&backlight_lcd0>;
-+		rotation = <180>;
-+		status = "okay";
-+
-+		port {
-+			panel_in: endpoint {
-+				remote-endpoint = <&dsi_out>;
-+			};
-+		};
-+	};
+ 	panel->connector = NULL;
+ 	panel->drm = NULL;
+ 
+diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
+index 13631b2efbaa..e136e3a3c996 100644
+--- a/include/drm/drm_panel.h
++++ b/include/drm/drm_panel.h
+@@ -37,6 +37,8 @@ struct display_timing;
+  * struct drm_panel_funcs - perform operations on a given panel
+  * @disable: disable panel (turn off back light, etc.)
+  * @unprepare: turn off panel
++ * @detach: detach panel->connector (clear internal state, etc.)
++ * @attach: attach panel->connector (update internal state, etc.)
+  * @prepare: turn on panel and perform set up
+  * @enable: enable panel (turn on back light, etc.)
+  * @get_modes: add modes to the connector that the panel is attached to and
+@@ -70,6 +72,8 @@ struct display_timing;
+ struct drm_panel_funcs {
+ 	int (*disable)(struct drm_panel *panel);
+ 	int (*unprepare)(struct drm_panel *panel);
++	void (*detach)(struct drm_panel *panel);
++	int (*attach)(struct drm_panel *panel);
+ 	int (*prepare)(struct drm_panel *panel);
+ 	int (*enable)(struct drm_panel *panel);
+ 	int (*get_modes)(struct drm_panel *panel);
 -- 
 2.22.0.rc2.383.gf4fbbf30c2-goog
 
