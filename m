@@ -2,57 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C95773CA0A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 13:31:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 65EEE3CA04
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 13:30:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KPZCBwX8ivt989FtlTZCCCG+nL8gtlYFJ+2Jsna9IZU=; b=VahgAVb58k/2nw
-	lzO4MFb+zLwUGScnW9s7gzZ/9eX4m5hi9W5Vf4PnMadMRRVlPOoHcBEbsH/PSHH9cnNGMWBQf9v6q
-	NCUqsezFVwo41BRJIyICBWuuVBvtQ47e5cC2j6BAFeaJOGcKVvWrsrjvWAgGx4PkP6VBd1JJdqJek
-	aPNJbmI75XWHOlJxQqdjdrE6bm/RV5mj9kqvCv4tjAQ5idHk0uG+PMP3IGElBfaz5iJsU2DvCglAn
-	u75RC/gJ/4+jb7Isvfp7/1mB79JmZq2PE44S+Y6Ftu53vkL+uaZubTbRVuRRAve13Nb31OebRFbwN
-	SynNpmcRlzS8fvc3rR8w==;
+	List-Owner; bh=IVCqDjr179/2LoEev1ZpH3mR7HyQthvYSRzJHoO5dAI=; b=sJIPR1FQ1ZPKk9
+	It209ETAJitCSbw78xFI7ihM+2BxyRNE5CH7PLY1fpR+qEHeEZhAHjqlO2o3ADKs0A2gSxH9TxdCX
+	Q3+LkJBfgKImYU+aWgnqRcM+UuQoBqGyarw26zNaGzlg4uh0/4TOmrYLkCuaaEvHjFpw/W88SImzJ
+	v2+oYrtJpaLcdIji9jmsxwF6aZ7dL4gjVd6WVLvmq1edfbMztDTbb4og8n3j5yLTbYWDY5cSIAqyU
+	34zqUP/+KFrZKIyr12+JGTMAXBdHjK8FJZDtFlFmbARzj0Cs/5vHy2YGNjz5ieO3drWhcZNkETALQ
+	MjTYLwoT4GCYuD+SzDNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haezR-000256-NL; Tue, 11 Jun 2019 11:30:57 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1haez1-0001hT-Vp; Tue, 11 Jun 2019 11:30:32 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haezM-00022k-4a; Tue, 11 Jun 2019 11:30:53 +0000
-X-UUID: ecda872e80084b1d980730d9d3153424-20190611
-X-UUID: ecda872e80084b1d980730d9d3153424-20190611
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1haey5-0008FG-QA; Tue, 11 Jun 2019 11:29:35 +0000
+X-UUID: 45dcb2c5467e4c5987d9ee7b3b4895dd-20190611
+X-UUID: 45dcb2c5467e4c5987d9ee7b3b4895dd-20190611
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <dehui.sun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 431288528; Tue, 11 Jun 2019 03:29:58 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ with ESMTP id 1030422589; Tue, 11 Jun 2019 03:29:23 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Tue, 11 Jun 2019 04:29:21 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 19:29:19 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 19:29:20 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 11 Jun 2019 19:29:18 +0800
+ Transport; Tue, 11 Jun 2019 19:29:19 +0800
 From: Dehui Sun <dehui.sun@mediatek.com>
 To: Daniel Lezcano <daniel.lezcano@linaro.org>, Thomas Gleixner
  <tglx@linutronix.de>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
  <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v1 1/2] dt-bindings: mediatek: update bindings for MT8183
- systimer
-Date: Tue, 11 Jun 2019 19:28:53 +0800
-Message-ID: <1560252534-11412-2-git-send-email-dehui.sun@mediatek.com>
+Subject: [PATCH v1 2/2] arm64: dts: mt8183: add systimer0 device node
+Date: Tue, 11 Jun 2019 19:28:54 +0800
+Message-ID: <1560252534-11412-3-git-send-email-dehui.sun@mediatek.com>
 X-Mailer: git-send-email 2.1.0
 In-Reply-To: <1560252534-11412-1-git-send-email-dehui.sun@mediatek.com>
 References: <1560252534-11412-1-git-send-email-dehui.sun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_043052_254878_BE7DDFA0 
-X-CRM114-Status: UNSURE (   8.40  )
+X-CRM114-CacheID: sfid-20190611_042933_966215_D56DD4F4 
+X-CRM114-Status: UNSURE (   9.98  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -83,25 +82,37 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This commit adds mt8183 compatible node in mtk-timer binding document.
+Add systimer0 device node for MT8183.
 
 Signed-off-by: Dehui Sun <dehui.sun@mediatek.com>
 ---
- Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt | 1 +
- 1 file changed, 1 insertion(+)
+This patch is based on the following patches:
+https://patchwork.kernel.org/cover/10962385/
+https://patchwork.kernel.org/patch/10983939/
+---
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi | 9 +++++++++
+ 1 file changed, 9 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt b/Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt
-index 74c3ead..0d25648 100644
---- a/Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt
-+++ b/Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt
-@@ -21,6 +21,7 @@ Required properties:
- 	* "mediatek,mt6577-timer" for MT6577 and all above compatible timers (GPT)
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index c2749c4..ac3f87d 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -254,6 +254,15 @@
+ 			clock-names = "spi", "wrap";
+ 		};
  
- 	For those SoCs that use SYST
-+	* "mediatek,mt8183-timer" for MT8183 compatible timers (SYST)
- 	* "mediatek,mt7629-timer" for MT7629 compatible timers (SYST)
- 	* "mediatek,mt6765-timer" for MT6765 and all above compatible timers (SYST)
- 
++		systimer: systimer@10017000 {
++			compatible = "mediatek,mt8183-timer",
++				     "mediatek,mt6765-timer";
++			reg = <0 0x10017000 0 0x1000>;
++			interrupts = <GIC_SPI 200 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&topckgen CLK_TOP_CLK13M>;
++			clock-names = "clk13m";
++		};
++
+ 		auxadc: auxadc@11001000 {
+ 			compatible = "mediatek,mt8183-auxadc",
+ 				     "mediatek,mt8173-auxadc";
 -- 
 2.1.0
 
