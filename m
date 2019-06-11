@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 73EDC3C5B3
-	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:13:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 752723C63D
+	for <lists+linux-mediatek@lfdr.de>; Tue, 11 Jun 2019 10:47:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=L/yXTlvX7eEu0sOARzEfZxdXzGo3i2dbTWR07qtCd+A=; b=KPagmQDYrL5rXa
-	wXzp/tW3XkpN2V8ups08Yd3Fmd8gGuLzPrTmtO/IdMvfT6YVlTxdSmlXgm1vYVeA2ye/+kc1Yj1zS
-	tMOVTjKQMOVua83ZzpOqc2mMiTtiM9+05k0oG2Fpw4YLyTZ9hIyvU31+RhI4a30n6+GMDtC5SSpRN
-	l2hcu4hTXOj8K+RCpjdIGd4tdorRkpq3gEsy7y5B5qR4+IuLfpiUMU8R3TtiKLskUaYTPGu0rz/W3
-	8FVldKKTrKjqwAVBSaI5sx/QwB+HRMii1ggnzvcNPFidBELVjxl3YU1KGYKugs/95UKjvymlzbNgi
-	H0IOrT333afyBR/DSGzA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=lK7QpbVaXHDSRRJ+nOviNZOQQ0Rig9CwjlYPSrHJ9BE=; b=jsB2PVmaikNqo0
+	t7IBQ+nKZy+bqYrLa+9DOmqXEvF9WeSaXMeoJr8VyjMvwnP+HaCIoB51Ts3QKGIdtziUyRkF4X/iU
+	85B63Epq3DvrXZkyqATqvBNJ6zVWeNv7tLki3PqiICLnmtYWzsgbkXBG72XoS3Mj9VZw/BOHA0jIu
+	BqX5RcXW81HXAe6vh1yB9Fvl1aYaAhipsCq+oxxk77OBYqX/JH7WepZww3t6KjCkPKoe4OfS7ZSWi
+	AhW8tPHyNZ0FKOl3e8mjiuvbenUesQnRgo11INd2H7TkOiQ9Zsf6ev3lvGX4BZKars2w/tbTo8Y+8
+	mk81kItssIlp7LMX1hpA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1habuc-0003SG-TU; Tue, 11 Jun 2019 08:13:46 +0000
+	id 1hacRA-0003mp-Q5; Tue, 11 Jun 2019 08:47:24 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1habtq-0002tm-Ae; Tue, 11 Jun 2019 08:12:59 +0000
-X-UUID: e5b0dfc89bf14ffb8c65d085d457e7c8-20190611
-X-UUID: e5b0dfc89bf14ffb8c65d085d457e7c8-20190611
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <qii.wang@mediatek.com>)
+ id 1hacP9-0002QY-PF; Tue, 11 Jun 2019 08:45:21 +0000
+X-UUID: 26bece40580646158e739ddecc12b7d5-20190611
+X-UUID: 26bece40580646158e739ddecc12b7d5-20190611
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1551084668; Tue, 11 Jun 2019 00:12:50 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 1974616634; Tue, 11 Jun 2019 00:44:59 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 01:12:49 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 16:12:48 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Tue, 11 Jun 2019 01:44:57 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 11 Jun 2019 16:44:54 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 11 Jun 2019 16:12:48 +0800
-From: Qii Wang <qii.wang@mediatek.com>
-To: <wsa@the-dreams.de>
-Subject: [PATCH 2/2] i2c: mediatek: Add i2c AC timing adjust support
-Date: Tue, 11 Jun 2019 16:11:55 +0800
-Message-ID: <1560240715-22595-3-git-send-email-qii.wang@mediatek.com>
+ Transport; Tue, 11 Jun 2019 16:44:46 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Heikki Krogerus
+ <heikki.krogerus@linux.intel.com>
+Subject: [PATCH v7 00/10] add USB Type-B GPIO connector driver
+Date: Tue, 11 Jun 2019 16:44:30 +0800
+Message-ID: <1560242680-23844-1-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
-References: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_011258_378933_DB26607B 
-X-CRM114-Status: GOOD (  12.55  )
+X-CRM114-CacheID: sfid-20190611_014519_830674_9B4CEFD3 
+X-CRM114-Status: GOOD (  12.71  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -70,199 +70,131 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, qii.wang@mediatek.com,
- srv_heupstream@mediatek.com, leilk.liu@mediatek.com,
- linux-kernel@vger.kernel.org, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, linux-i2c@vger.kernel.org,
- matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Hans de Goede <hdegoede@redhat.com>,
+ Felipe Balbi <felipe.balbi@linux.intel.com>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Biju Das <biju.das@bp.renesas.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ Nagarjuna Kristam <nkristam@nvidia.com>, Adam
+ Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch adds some I2C timing registers to meet I2C spec, it
-configures these registers according to information passed via DT.
+Because the USB Connector is introduced and the requirement of
+usb-connector.txt binding, the old way using extcon to support
+USB Dual-Role switch is now deprecated, meanwhile there is no
+available common driver when use Type-B connector, typically
+using an input GPIO to detect USB ID pin.
+This patch series introduce a Type-B GPIO connector driver and try
+to replace the function provided by extcon-usb-gpio driver.
 
-Signed-off-by: Qii Wang <qii.wang@mediatek.com>
----
- drivers/i2c/busses/i2c-mt65xx.c |   94 ++++++++++++++++++++++++++++++++++-----
- 1 file changed, 82 insertions(+), 12 deletions(-)
+v7 changes:
+  1. [5/10]: add signed-off-by Chunfeng
+  2. [6/10]: add signed-off-by Chunfeng
+  3. [6/10]: depends on linux-next of Rafael's tree [1]
+  4. [7/10]: add signed-off-by Chunfeng and tested-by Biju
+  5. [9/10]: add tested-by Nagarjuna, and remove DEV_PMS_OPS suggested by Andy
 
-diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
-index 745b0d0..f4bf753 100644
---- a/drivers/i2c/busses/i2c-mt65xx.c
-+++ b/drivers/i2c/busses/i2c-mt65xx.c
-@@ -134,6 +134,12 @@ enum I2C_REGS_OFFSET {
- 	OFFSET_TRANSFER_LEN_AUX,
- 	OFFSET_CLOCK_DIV,
- 	OFFSET_LTIMING,
-+	OFFSET_SCL_HIGH_LOW_RATIO,
-+	OFFSET_HS_SCL_HIGH_LOW_RATIO,
-+	OFFSET_SCL_MIS_COMP_POINT,
-+	OFFSET_STA_STO_AC_TIMING,
-+	OFFSET_HS_STA_STO_AC_TIMING,
-+	OFFSET_SDA_TIMING,
- };
- 
- static const u16 mt_i2c_regs_v1[] = {
-@@ -161,6 +167,12 @@ enum I2C_REGS_OFFSET {
- 	[OFFSET_DEBUGCTRL] = 0x68,
- 	[OFFSET_TRANSFER_LEN_AUX] = 0x6c,
- 	[OFFSET_CLOCK_DIV] = 0x70,
-+	[OFFSET_SCL_HIGH_LOW_RATIO] = 0x74,
-+	[OFFSET_HS_SCL_HIGH_LOW_RATIO] = 0x78,
-+	[OFFSET_SCL_MIS_COMP_POINT] = 0x7C,
-+	[OFFSET_STA_STO_AC_TIMING] = 0x80,
-+	[OFFSET_HS_STA_STO_AC_TIMING] = 0x84,
-+	[OFFSET_SDA_TIMING] = 0x88,
- };
- 
- static const u16 mt_i2c_regs_v2[] = {
-@@ -179,9 +191,11 @@ enum I2C_REGS_OFFSET {
- 	[OFFSET_HS] = 0x30,
- 	[OFFSET_IO_CONFIG] = 0x34,
- 	[OFFSET_FIFO_ADDR_CLR] = 0x38,
-+	[OFFSET_SDA_TIMING] = 0x3c,
- 	[OFFSET_TRANSFER_LEN_AUX] = 0x44,
- 	[OFFSET_CLOCK_DIV] = 0x48,
- 	[OFFSET_SOFTRESET] = 0x50,
-+	[OFFSET_SCL_MIS_COMP_POINT] = 0x90,
- 	[OFFSET_DEBUGSTAT] = 0xe0,
- 	[OFFSET_DEBUGCTRL] = 0xe8,
- 	[OFFSET_FIFO_STAT] = 0xf4,
-@@ -202,6 +216,17 @@ struct mtk_i2c_compatible {
- 	unsigned char ltiming_adjust: 1;
- };
- 
-+struct mtk_i2c_ac_timing {
-+	u16 ext;
-+	u16 inter_clk_div;
-+	u16 scl_hl_ratio;
-+	u16 hs_scl_hl_ratio;
-+	u16 scl_mis_comp;
-+	u16 sta_stop;
-+	u16 hs_sta_stop;
-+	u16 sda_timing;
-+};
-+
- struct mtk_i2c {
- 	struct i2c_adapter adap;	/* i2c host adapter */
- 	struct device *dev;
-@@ -226,6 +251,7 @@ struct mtk_i2c {
- 	u16 ltiming_reg;
- 	unsigned char auto_restart;
- 	bool ignore_restart_irq;
-+	struct mtk_i2c_ac_timing ac_timing;
- 	const struct mtk_i2c_compatible *dev_comp;
- };
- 
-@@ -403,13 +429,40 @@ static void mtk_i2c_init_hw(struct mtk_i2c *i2c)
- 	if (i2c->dev_comp->dcm)
- 		mtk_i2c_writew(i2c, I2C_DCM_DISABLE, OFFSET_DCM_EN);
- 
--	if (i2c->dev_comp->timing_adjust)
--		mtk_i2c_writew(i2c, I2C_DEFAULT_CLK_DIV - 1, OFFSET_CLOCK_DIV);
--
- 	mtk_i2c_writew(i2c, i2c->timing_reg, OFFSET_TIMING);
- 	mtk_i2c_writew(i2c, i2c->high_speed_reg, OFFSET_HS);
--	if (i2c->dev_comp->ltiming_adjust)
--		mtk_i2c_writew(i2c, i2c->ltiming_reg, OFFSET_LTIMING);
-+
-+	if (i2c->dev_comp->timing_adjust) {
-+		mtk_i2c_writew(i2c, i2c->ac_timing.ext, OFFSET_EXT_CONF);
-+		mtk_i2c_writew(i2c, i2c->ac_timing.inter_clk_div - 1,
-+			       OFFSET_CLOCK_DIV);
-+		mtk_i2c_writew(i2c, i2c->ac_timing.scl_mis_comp,
-+			       OFFSET_SCL_MIS_COMP_POINT);
-+		mtk_i2c_writew(i2c, i2c->ac_timing.sda_timing,
-+			       OFFSET_SDA_TIMING);
-+
-+		if (i2c->dev_comp->ltiming_adjust) {
-+			mtk_i2c_writew(i2c, i2c->timing_reg -
-+				       i2c->ac_timing.scl_hl_ratio,
-+				       OFFSET_TIMING);
-+			mtk_i2c_writew(i2c, i2c->high_speed_reg -
-+				       ((i2c->ac_timing.hs_scl_hl_ratio) << 8),
-+				       OFFSET_HS);
-+			mtk_i2c_writew(i2c, i2c->ltiming_reg +
-+				       ((i2c->ac_timing.hs_scl_hl_ratio) << 9) +
-+				       i2c->ac_timing.scl_hl_ratio,
-+				       OFFSET_LTIMING);
-+		} else {
-+			mtk_i2c_writew(i2c, i2c->ac_timing.scl_hl_ratio,
-+				       OFFSET_SCL_HIGH_LOW_RATIO);
-+			mtk_i2c_writew(i2c, i2c->ac_timing.hs_scl_hl_ratio,
-+				       OFFSET_HS_SCL_HIGH_LOW_RATIO);
-+			mtk_i2c_writew(i2c, i2c->ac_timing.sta_stop,
-+				       OFFSET_STA_STO_AC_TIMING);
-+			mtk_i2c_writew(i2c, i2c->ac_timing.hs_sta_stop,
-+				       OFFSET_HS_STA_STO_AC_TIMING);
-+		}
-+	}
- 
- 	/* If use i2c pin from PMIC mt6397 side, need set PATH_DIR first */
- 	if (i2c->have_pmic)
-@@ -592,12 +645,6 @@ static int mtk_i2c_do_transfer(struct mtk_i2c *i2c, struct i2c_msg *msgs,
- 
- 	mtk_i2c_writew(i2c, control_reg, OFFSET_CONTROL);
- 
--	/* set start condition */
--	if (i2c->speed_hz <= I2C_DEFAULT_SPEED)
--		mtk_i2c_writew(i2c, I2C_ST_START_CON, OFFSET_EXT_CONF);
--	else
--		mtk_i2c_writew(i2c, I2C_FS_START_CON, OFFSET_EXT_CONF);
--
- 	addr_reg = i2c_8bit_addr_from_msg(msgs);
- 	mtk_i2c_writew(i2c, addr_reg, OFFSET_SLAVE_ADDR);
- 
-@@ -889,6 +936,7 @@ static u32 mtk_i2c_functionality(struct i2c_adapter *adap)
- static int mtk_i2c_parse_dt(struct device_node *np, struct mtk_i2c *i2c)
- {
- 	int ret;
-+	u16 ac_timing[8] = {0};
- 
- 	ret = of_property_read_u32(np, "clock-frequency", &i2c->speed_hz);
- 	if (ret < 0)
-@@ -901,6 +949,28 @@ static int mtk_i2c_parse_dt(struct device_node *np, struct mtk_i2c *i2c)
- 	if (i2c->clk_src_div == 0)
- 		return -EINVAL;
- 
-+	if (i2c->dev_comp->timing_adjust) {
-+		ret = of_property_read_u16_array(np, "ac-timing", ac_timing,
-+						 ARRAY_SIZE(ac_timing));
-+		if (ret < 0) {
-+			if (i2c->speed_hz <= I2C_DEFAULT_SPEED)
-+				i2c->ac_timing.ext = I2C_ST_START_CON;
-+			else
-+				i2c->ac_timing.ext = I2C_FS_START_CON;
-+
-+			i2c->ac_timing.inter_clk_div = I2C_DEFAULT_CLK_DIV;
-+		} else {
-+			i2c->ac_timing.ext = ac_timing[0];
-+			i2c->ac_timing.inter_clk_div = ac_timing[1];
-+			i2c->ac_timing.scl_hl_ratio = ac_timing[2];
-+			i2c->ac_timing.hs_scl_hl_ratio = ac_timing[3];
-+			i2c->ac_timing.scl_mis_comp = ac_timing[4];
-+			i2c->ac_timing.sta_stop = ac_timing[5];
-+			i2c->ac_timing.hs_sta_stop = ac_timing[6];
-+			i2c->ac_timing.sda_timing = ac_timing[7];
-+		}
-+	}
-+
- 	i2c->have_pmic = of_property_read_bool(np, "mediatek,have-pmic");
- 	i2c->use_push_pull =
- 		of_property_read_bool(np, "mediatek,use-push-pull");
-@@ -951,7 +1021,7 @@ static int mtk_i2c_probe(struct platform_device *pdev)
- 		return -EINVAL;
- 
- 	if (i2c->dev_comp->timing_adjust)
--		i2c->clk_src_div *= I2C_DEFAULT_CLK_DIV;
-+		i2c->clk_src_div *= i2c->ac_timing.inter_clk_div;
- 
- 	if (i2c->have_pmic && !i2c->dev_comp->pmic_i2c)
- 		return -EINVAL;
+[1] https://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git/log/?h=linux-next
+
+v6 changes:
+  1. merge [1] and [2] into this series
+  2. don't use graph anymore to find usb-role-switch
+  3. abandon [3] and introduce three patches (6, 7, 8 in this series)
+     to rebuild APIs getting usb-role-switch
+
+  [1]: [v3] dt-binding: usb: add usb-role-switch property
+       https://patchwork.kernel.org/patch/10934835/
+  [2]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+       https://patchwork.kernel.org/patch/10909971/
+
+  [3]: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+
+v5 changes:
+  1. remove linux/of.h and put usb_role_switch when error happens,
+     suggested by Biju
+  2. treat Type-B connector as USB controller's child, but not as
+     a virtual device, suggested by Rob
+  3. provide and use generic property "usb-role-switch", see [1],
+     suggested by Rob
+
+  Note: this series still depends on [2]
+
+  [1]: [v3] dt-binding: usb: add usb-role-switch property
+       https://patchwork.kernel.org/patch/10934835/
+  [2]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+       https://patchwork.kernel.org/patch/10909971/
+
+v4 changes:
+  1. use switch_fwnode_match() to find fwnode suggested by Heikki
+  2. assign fwnode member of usb_role_switch struct suggested by Heikki
+  3. make [4/6] depend on [2]
+  3. remove linux/gpio.h suggested by Linus
+  4. put node when error happens
+
+  [4/6] usb: roles: add API to get usb_role_switch by node
+  [2] [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+    https://patchwork.kernel.org/patch/10909971/
+
+v3 changes:
+  1. add GPIO direction, and use fixed-regulator for GPIO controlled
+    VBUS regulator suggested by Rob;
+  2. rebuild fwnode_usb_role_switch_get() suggested by Andy and Heikki
+  3. treat the type-B connector as a virtual device;
+  4. change file name of driver again
+  5. select USB_ROLE_SWITCH in mtu3/Kconfig suggested by Heikki
+  6. rename ssusb_mode_manual_switch() to ssusb_mode_switch()
+
+v2 changes:
+ 1. make binding clear, and add a extra compatible suggested by Hans
+
+Chunfeng Yun (7):
+  dt-binding: usb: add usb-role-switch property
+  dt-bindings: connector: add optional properties for Type-B
+  dt-bindings: usb: add binding for Type-B GPIO connector driver
+  dt-bindings: usb: mtu3: add properties about USB Role Switch
+  usb: roles: get usb-role-switch from parent
+  usb: roles: add USB Type-B GPIO connector driver
+  usb: mtu3: register a USB Role Switch for dual role mode
+
+Heikki Krogerus (2):
+  device connection: Add fwnode_connection_find_match()
+  usb: roles: Add fwnode_usb_role_switch_get() function
+
+Yu Chen (1):
+  usb: roles: Introduce stubs for the exiting functions in role.h.
+
+ .../bindings/connector/usb-connector.txt      |  14 +
+ .../devicetree/bindings/usb/generic.txt       |   4 +
+ .../devicetree/bindings/usb/mediatek,mtu3.txt |  10 +
+ .../bindings/usb/typeb-conn-gpio.txt          |  31 ++
+ drivers/base/devcon.c                         |  43 ++-
+ drivers/usb/mtu3/Kconfig                      |   1 +
+ drivers/usb/mtu3/mtu3.h                       |   5 +
+ drivers/usb/mtu3/mtu3_debugfs.c               |   4 +-
+ drivers/usb/mtu3/mtu3_dr.c                    |  48 ++-
+ drivers/usb/mtu3/mtu3_dr.h                    |   6 +-
+ drivers/usb/mtu3/mtu3_plat.c                  |   3 +-
+ drivers/usb/roles/Kconfig                     |  11 +
+ drivers/usb/roles/Makefile                    |   1 +
+ drivers/usb/roles/class.c                     |  41 ++-
+ drivers/usb/roles/typeb-conn-gpio.c           | 284 ++++++++++++++++++
+ include/linux/device.h                        |  10 +-
+ include/linux/usb/role.h                      |  37 +++
+ 17 files changed, 529 insertions(+), 24 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/usb/typeb-conn-gpio.txt
+ create mode 100644 drivers/usb/roles/typeb-conn-gpio.c
+
 -- 
-1.7.9.5
+2.21.0
 
 
 _______________________________________________
