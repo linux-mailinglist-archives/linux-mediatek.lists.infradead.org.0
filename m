@@ -2,57 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 508EE42855
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 16:03:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8CAC642AB1
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 17:19:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TNVZz6OqdRHd2tTowfluvAFOCQqnmiPil2kjGDiAWDM=; b=YPfVIKTiM02EW5
-	Ty+K1ntQRIRcxX5TQ8+ScUZRnAr/OCj3uqvfJxTLAQRtkTy6VX0SJ9RAmJMw4DbuuDB57fJPli0Hm
-	tXYpXUJa3cz8OmgBqMGswjxg4nb8e7EZbyHeihvAb1SokKnQSL25zvuDeFgKlBR0lcaMV54EhdJpO
-	JKMe0EtoLGMg3sVhCTBlFpPapUiTPouRwnMUW3JB2e4xxvks1Uagl1H9Fd1vvK+oyb3r1Nvr0Q6r+
-	zg09Wz3d+Gaqngftee3bcFPEVBn3vcArLkitCLvOR+tDYa1QpUazWlQGBlL9Mk6aZddHmozojto49
-	nVSw1ogjGVJ4MjoU0/ng==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=VD557ZB02HjnKjXXUg3Rl/SkzASYaR2LkR+tVsyP/Ek=; b=VwUWlQXqPnry2S
+	hWFozI0Dz6TyxTBi9LmjrFWyjmAKx4NDzwdsVahtuV6yM0ydCAXzt0YQZWtM3JiKGCLfi7LiBLN8S
+	5lNaKMQz5q/CXr/LYLDNRqwME/+4rReocJs5SN6W/rHAtNdP1+xFFJqKaEQCEoYTmlQzxryhaDghb
+	uKwe18SxXENeG+yxs52faxy3+/qdm7S7KUxMVID3sYfDRa+fL0Z18G2npnqGufcNx0zPc1wP0KaY4
+	pnYCk8smL3ay0gFBfh1R0dv7v7Y0DbN1wenoQkHNsmR1qsWeCHe5NQ5/mPkp4jv1xR9UcjTVvZ0aW
+	1bNzxOB1oMHJ0+74yb2A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hb3qp-00035z-Ph; Wed, 12 Jun 2019 14:03:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hb52G-0002a6-5S; Wed, 12 Jun 2019 15:19:36 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hb3qe-0002xN-Pt; Wed, 12 Jun 2019 14:03:34 +0000
-X-UUID: 19beb02eebb84110a5974c7c91e29bd6-20190612
-X-UUID: 19beb02eebb84110a5974c7c91e29bd6-20190612
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1hb521-0002PS-I8; Wed, 12 Jun 2019 15:19:22 +0000
+X-UUID: aa7641c2a90f47aab6b304788b72484d-20190612
+X-UUID: aa7641c2a90f47aab6b304788b72484d-20190612
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1517432226; Wed, 12 Jun 2019 06:03:27 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 07:03:26 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 22:03:24 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 12 Jun 2019 22:03:23 +0800
-Message-ID: <1560348204.19782.6.camel@mtkswgap22>
-Subject: RE: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
- blocked forever
+ with ESMTP id 1349178898; Wed, 12 Jun 2019 07:19:10 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 08:19:09 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 23:19:07 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 12 Jun 2019 23:19:07 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
-To: Avri Altman <Avri.Altman@wdc.com>
-Date: Wed, 12 Jun 2019 22:03:24 +0800
-In-Reply-To: <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
+Subject: [PATCH v2] scsi: ufs: Avoid runtime suspend possibly being blocked
+ forever
+Date: Wed, 12 Jun 2019 23:19:05 +0800
+Message-ID: <1560352745-24681-1-git-send-email-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 4018B39517CC99ADF846BD09B0727C651F76F30778E15F902E6C0D2819EA72F62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_070332_848047_3FDE6372 
-X-CRM114-Status: GOOD (  13.28  )
+X-CRM114-CacheID: sfid-20190612_081921_600280_5BF1D3C7 
+X-CRM114-Status: UNSURE (   8.45  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,74 +71,79 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "stable@vger.kernel.org" <stable@vger.kernel.org>, stanley.chu@mediatek.com,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: sthumma@codeaurora.org, marc.w.gonzalez@free.fr, andy.teng@mediatek.com,
+ chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com, peter.wang@mediatek.com,
+ evgreen@chromium.org, subhashj@codeaurora.org,
+ linux-mediatek@lists.infradead.org, ygardi@codeaurora.org,
+ matthias.bgg@gmail.com, stable@vger.kernel.org,
+ Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Avri,
+UFS runtime suspend can be triggered after pm_runtime_enable()
+is invoked in ufshcd_pltfrm_init(). However if the first runtime
+suspend is triggered before binding ufs_hba structure to ufs
+device structure via platform_set_drvdata(), then UFS runtime
+suspend will be no longer triggered in the future because its
+dev->power.runtime_error was set in the first triggering and does
+not have any chance to be cleared.
 
-On Wed, 2019-06-12 at 11:10 +0000, Avri Altman wrote:
-> Hi,
-> 
-> > 
-> > UFS runtime suspend can be triggered after pm_runtime_enable()
-> > is invoked in ufshcd_pltfrm_init(). However if the first runtime
-> > suspend is triggered before binding ufs_hba structure to ufs
-> > device structure via platform_set_drvdata(), then UFS runtime
-> > suspend will be no longer triggered in the future because its
-> > dev->power.runtime_error was set in the first triggering and does
-> > not have any chance to be cleared.
-> > 
-> > To be more clear, dev->power.runtime_error is set if hba is NULL
-> > in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
-> > where dev->power.runtime_error is set as -EINVAL. In this case, any
-> > future rpm_suspend() for UFS device fails because
-> > rpm_check_suspend_allowed() fails due to non-zero
-> > dev->power.runtime_error.
-> > 
-> > To resolve this issue, make sure the first UFS runtime suspend
-> > get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
-> > only after hba is successfully bound to UFS device structure.
-> > 
-> > Fixes: e3ce73d (scsi: ufs: fix bugs related to null pointer access and array size)
-> This code was inserted before platform_set_drvdata  in
-> 6269473 [SCSI] ufs: Add runtime PM support for UFS host controller driver.
-> Why do you point to e3ce73d?
+To be more clear, dev->power.runtime_error is set if hba is NULL
+in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
+where dev->power.runtime_error is set as -EINVAL. In this case, any
+future rpm_suspend() for UFS device fails because
+rpm_check_suspend_allowed() fails due to non-zero
+dev->power.runtime_error.
 
-e3ce73d (scsi: ufs: fix bugs related to null pointer access and array
-size) changed the returned value from 0 to -EINVAL in case of NULL "hba"
-in ufshcd_runtime_suspend().
+To resolve this issue, make sure the first UFS runtime suspend
+get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
+only after hba is successfully bound to UFS device structure.
 
-But you are right, above patch may do the right thing, and the real root
-cause is the incorrect timing of pm_runtime_enable().
+Fixes: 62694735ca95 ([SCSI] ufs: Add runtime PM support for UFS host controller driver)
+Cc: stable@vger.kernel.org
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ drivers/scsi/ufs/ufshcd-pltfrm.c | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
 
-I will fix commit message in next version.
-
-> 
-> Thanks,
-> Avri
-
-Thanks.
-Stanley
-
+diff --git a/drivers/scsi/ufs/ufshcd-pltfrm.c b/drivers/scsi/ufs/ufshcd-pltfrm.c
+index 8a74ec30c3d2..d7d521b394c3 100644
+--- a/drivers/scsi/ufs/ufshcd-pltfrm.c
++++ b/drivers/scsi/ufs/ufshcd-pltfrm.c
+@@ -430,24 +430,21 @@ int ufshcd_pltfrm_init(struct platform_device *pdev,
+ 		goto dealloc_host;
+ 	}
+ 
+-	pm_runtime_set_active(&pdev->dev);
+-	pm_runtime_enable(&pdev->dev);
+-
+ 	ufshcd_init_lanes_per_dir(hba);
+ 
+ 	err = ufshcd_init(hba, mmio_base, irq);
+ 	if (err) {
+ 		dev_err(dev, "Initialization failed\n");
+-		goto out_disable_rpm;
++		goto dealloc_host;
+ 	}
+ 
+ 	platform_set_drvdata(pdev, hba);
+ 
++	pm_runtime_set_active(&pdev->dev);
++	pm_runtime_enable(&pdev->dev);
++
+ 	return 0;
+ 
+-out_disable_rpm:
+-	pm_runtime_disable(&pdev->dev);
+-	pm_runtime_set_suspended(&pdev->dev);
+ dealloc_host:
+ 	ufshcd_dealloc_host(hba);
+ out:
+-- 
+2.18.0
 
 
 _______________________________________________
