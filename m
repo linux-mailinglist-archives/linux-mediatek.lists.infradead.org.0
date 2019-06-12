@@ -2,67 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 56FB141C37
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 08:28:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8EB5E41DD6
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 09:34:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=tiBCmM0f9Yjlu/dK6z9QHN8OQ5JxoKtatwVUiAQf81Q=; b=RKRTmPwgL1RxBW
-	QiRJYs8Ez4fNK2lvj5cbwih0kzPUMvBMilCKLLaIqn6rQZNm7hmFaJQ3Cugsh6Y1y1aNL5gKwxV6R
-	1sdyIbAuRCdKzyFzSOgfuYKoeRaVUl+LZ/cDI67F5mvQrs6JKiq/urxbOmHbolBbc+lCe13HCM4M2
-	t3yc9YZo58yq0qCq6+qjuIVWNvAyyieRIXH22jF21RMwt5A5qDsiOAEDU5EI+4OSurRfgSvTbYAix
-	D13CX7ADT8VeExvyzdXVqJ55ubETxnTaBDs02mprwmX8MXQtqqFpvblgfziDv9kzz43692wLXaxVc
-	cOsRj9dUrpRF9PZF/pWQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=MJa/nTr7/mR7WKGISkdJSKmMP9i9vefiSE9gvVZzeJs=; b=dF76m3/VwQvB1m
+	VAKr/aWUqPDqh3+qD/tBuDyax08CLy8RULo/Z+bhIwEcTpmKHEt4z39ajHh6M1wOhDVfxdBLpTjXA
+	OPycTszwCtekRsyvIE43PDj0BSK6Qr+jsdtVecVPK72dEU+K9tqzzKNZcfRjDBjlIegd8nfrS8VAN
+	VnHhE+S5uoO5x3pXBcPbsTprcb+LwSTxsUXYJknp+HGYlIA+MWjmT/hqY1vsW1fvlPFQvc5BYI2EN
+	fbLwTWs5toIX+NNVTZw21XTulw1lnatyhiEn4Hp/k1+ykB8+BdUL+ttilmq73jOOzLz8lzHZqzBn3
+	mfJF4Uz8yuwFRRK0FIxw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hawkP-0008NT-5x; Wed, 12 Jun 2019 06:28:37 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1haxmG-0003pi-RR; Wed, 12 Jun 2019 07:34:36 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hawkC-000841-Qd; Wed, 12 Jun 2019 06:28:26 +0000
-X-UUID: 219f8b9a6c3c442d803eb539877a6f00-20190611
-X-UUID: 219f8b9a6c3c442d803eb539877a6f00-20190611
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <macpaul.lin@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1338957400; Tue, 11 Jun 2019 22:28:18 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 11 Jun 2019 23:28:17 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 14:28:14 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 12 Jun 2019 14:28:15 +0800
-From: Macpaul Lin <macpaul.lin@mediatek.com>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>, Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Macpaul Lin <macpaul.lin@mediatek.com>, <linux-usb@vger.kernel.org>,
- <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
- <linux-kernel@vger.kernel.org>
-Subject: [PATCH] mtu3: fix setup packet response for HNP and SRP request
-Date: Wed, 12 Jun 2019 14:28:07 +0800
-Message-ID: <1560320892-30551-1-git-send-email-macpaul.lin@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
+ id 1haxmD-0003pc-UZ
+ for linux-mediatek@bombadil.infradead.org; Wed, 12 Jun 2019 07:34:33 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=jBDIAeIRS2SozSLknVU3YAvBw/DUL0oz2roJDkB2aJ0=; b=SMQruRvjU1LtEm2/zbP/APP9Y
+ E6ZddySRQRdDZgiM0M+GHocoooxi0/UFum/JtD9T6InntcSLluniorF5i7pbnaJXaX4LXy5B8QB2P
+ XLvmTVryjaXQBX7xVjjkzaHX999JgJPPmzEAFZ+N64BDi0cJxs3rcEqPYxvwUx2oOYhVgX2nprEph
+ q+mTVdRThFKJZN/6DMv++xMmmYF2Jwgto6jZfoSBA/jjA95yoFi0m/ZOgHR/5DuyVDkYrtTjDYnXQ
+ 1ZhC3Ou9bXor1f2TIqqqop0Y1dgFDmZmJ50a/gbWYBhIv02DPeO87Z0kLaP4m529MnkfaWPhBDyeS
+ 6BkV/vCXg==;
+Received: from j217100.upc-j.chello.nl ([24.132.217.100]
+ helo=hirez.programming.kicks-ass.net)
+ by merlin.infradead.org with esmtpsa (Exim 4.92 #3 (Red Hat Linux))
+ id 1haxm8-00042Q-Mz; Wed, 12 Jun 2019 07:34:29 +0000
+Received: by hirez.programming.kicks-ass.net (Postfix, from userid 1000)
+ id B2CEA20259523; Wed, 12 Jun 2019 09:34:25 +0200 (CEST)
+Date: Wed, 12 Jun 2019 09:34:25 +0200
+From: Peter Zijlstra <peterz@infradead.org>
+To: Kobe Wu <kobe-cp.wu@mediatek.com>
+Subject: Re: [PATCH] locking/lockdep: Fix UBSAN warnings
+Message-ID: <20190612073425.GD3436@hirez.programming.kicks-ass.net>
+References: <1560318544-27635-1-git-send-email-kobe-cp.wu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: CE1AD9F9C4AB7DD47709BB3955B3B7E2FF4BB35A299C25F5C5745B5492155FC12000:8
-X-MTK: N
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_232825_036814_A73B6D0A 
-X-CRM114-Status: UNSURE (   9.86  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+Content-Disposition: inline
+In-Reply-To: <1560318544-27635-1-git-send-email-kobe-cp.wu@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,95 +62,23 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com
+Cc: linux-mediatek@lists.infradead.org, Ingo Molnar <mingo@redhat.com>,
+ Will Deacon <will.deacon@arm.com>, wsd_upstream@mediatek.com,
+ Eason Lin <eason-yh.lin@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-1. Add OTG_HNP_REQD and OTG_SRP_REQD definitions in ch9.h.
-2. When OTG_HNP_REQD and OTG_SRP_REQD has been received,
-usb hardware must not enter TEST mode but need to response setup packet.
-3. Add otg_srp_reqd and otg_hnp_reqd in struct ssusb_mtk for futher
-implementation.
+On Wed, Jun 12, 2019 at 01:49:04PM +0800, Kobe Wu wrote:
+> Fix complaints from UBSAN about signed integer overflow.
+> 
+> ========================================================================
+> UBSAN: Undefined behaviour in kernel/locking/lockdep.c:2998:3
+> signed integer overflow:
 
-Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
----
- drivers/usb/mtu3/mtu3.h            |  4 ++++
- drivers/usb/mtu3/mtu3_gadget_ep0.c | 13 +++++++++++++
- include/uapi/linux/usb/ch9.h       |  5 +++++
- 3 files changed, 22 insertions(+)
-
-diff --git a/drivers/usb/mtu3/mtu3.h b/drivers/usb/mtu3/mtu3.h
-index 76ecf12fdf62..bb8a31bc6e4d 100644
---- a/drivers/usb/mtu3/mtu3.h
-+++ b/drivers/usb/mtu3/mtu3.h
-@@ -226,6 +226,8 @@ struct otg_switch_mtk {
-  * @dma_clk: dma_bus_ck clock for AXI bus etc
-  * @dr_mode: works in which mode:
-  *		host only, device only or dual-role mode
-+ * @otg_srp_reqd: used for SRP request handling.
-+ * @otg_hnp_reqd: used for HNP request handling.
-  * @u2_ports: number of usb2.0 host ports
-  * @u3_ports: number of usb3.0 host ports
-  * @u3p_dis_msk: mask of disabling usb3 ports, for example, bit0==1 to
-@@ -252,6 +254,8 @@ struct ssusb_mtk {
- 	/* otg */
- 	struct otg_switch_mtk otg_switch;
- 	enum usb_dr_mode dr_mode;
-+	bool otg_srp_reqd;
-+	bool otg_hnp_reqd;
- 	bool is_host;
- 	int u2_ports;
- 	int u3_ports;
-diff --git a/drivers/usb/mtu3/mtu3_gadget_ep0.c b/drivers/usb/mtu3/mtu3_gadget_ep0.c
-index 4da216c99726..1247c43a63e6 100644
---- a/drivers/usb/mtu3/mtu3_gadget_ep0.c
-+++ b/drivers/usb/mtu3/mtu3_gadget_ep0.c
-@@ -285,11 +285,24 @@ static int handle_test_mode(struct mtu3 *mtu, struct usb_ctrlrequest *setup)
- 		dev_dbg(mtu->dev, "TEST_PACKET\n");
- 		mtu->test_mode_nr = TEST_PACKET_MODE;
- 		break;
-+	case OTG_SRP_REQD:
-+		dev_dbg(mtu->dev, "OTG_SRP_REQD\n");
-+		mtu->ssusb->otg_srp_reqd = 1;
-+		break;
-+	case OTG_HNP_REQD:
-+		dev_dbg(mtu->dev, "OTG_HNP_REQD\n");
-+		mtu->ssusb->otg_hnp_reqd = 1;
-+		break;
- 	default:
- 		handled = -EINVAL;
- 		goto out;
- 	}
- 
-+	if (mtu->ssusb->otg_srp_reqd || mtu->ssusb->otg_hnp_reqd) {
-+		mtu->ep0_state = MU3D_EP0_STATE_SETUP;
-+		goto out;
-+	}
-+
- 	mtu->test_mode = true;
- 
- 	/* no TX completion interrupt, and need restart platform after test */
-diff --git a/include/uapi/linux/usb/ch9.h b/include/uapi/linux/usb/ch9.h
-index d5a5caec8fbc..545918c83fd1 100644
---- a/include/uapi/linux/usb/ch9.h
-+++ b/include/uapi/linux/usb/ch9.h
-@@ -143,6 +143,11 @@
- #define	TEST_SE0_NAK	3
- #define	TEST_PACKET	4
- #define	TEST_FORCE_EN	5
-+/*
-+ * OTG HNP and SRP REQD
-+ */
-+#define	OTG_SRP_REQD	6
-+#define	OTG_HNP_REQD	7
- 
- /* Status Type */
- #define USB_STATUS_TYPE_STANDARD	0
--- 
-2.18.0
-
+I don't mind the patch, but this is an UBSAN bug and cannot therefore be
+a reason.
 
 _______________________________________________
 Linux-mediatek mailing list
