@@ -2,66 +2,123 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4C6734201A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 10:57:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0811D4238D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 13:11:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8bsrGa1f5F9+LZ76y76kO+ZhVUsKic3o1/f435l0R2o=; b=XNGZQqn2eDl7Lq
-	ozO3DHyDONeexNKskxn5O2r2SvDz0u6wTDsJJRAVHZFP75la024cDf3itdar87WOk1kG3vR5/Mw5w
-	AqiSX/Zt6TdO5u4F6wKxY5PmAQdjwl579aYkbK0wXxvwAZX4QPVMMUkgrK941U0UHGTmEmJ+69vLO
-	q1lWGDaQzBSlumCy5JQT5q2nJ3F9Hwdo/uL8Bbt/gm/mdHr4PBS2XZvzcwrJvVndk1nVX/9JRzMyc
-	YhxuEU1W+CCPs6Wm3FlABUtIzS6PsJUyUCYkED0B14egp7jVPvWJkzJWl2TilWdXhaQJHKneN3CgA
-	e6r6glcR3cMvMJh9GHSg==;
+	List-Owner; bh=GRIRSRLGaGrLe6pzDH4G0lPc+HL0FxdnyQa90VbZuX8=; b=dbD/MsUeJxJgtY
+	YL5Tl8wMXVD5Fyd7Nm+KMfM6QYE8mySR+lqD6RpNYJh6Rx1o5dgy25iP/vnmiE6L7iHsk+sI2rvDa
+	OpGUfO0Il0UYRXBf84MIzEaJNaBKH2Wq3ivZGVbwCl2UJyy7O8RqBGWZ0LvVAsz+QEk91BlxP+P68
+	4KxyCKfYz8ddardaqNoNpKNkljNMzcUDOj1P5MFZdRo39kizzN68dWp1kGgqHzVtl44cDJOJHyrrZ
+	SS1YUWlTypy5HZ9Ilte5b4c7kC+N1h0Dp/kHHFClVdqyPNL2DTEuumK47bo2yh9/6wnARi227rW21
+	j8//x5hVQOPh9n8+nQeA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haz4K-0001Gd-FG; Wed, 12 Jun 2019 08:57:20 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hb19i-0004yR-0I; Wed, 12 Jun 2019 11:11:02 +0000
+Received: from esa6.hgst.iphmx.com ([216.71.154.45])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haz2e-0008Hg-4o; Wed, 12 Jun 2019 08:55:37 +0000
-X-UUID: ec1fea3840234f7eb4a711f88ebb3fda-20190612
-X-UUID: ec1fea3840234f7eb4a711f88ebb3fda-20190612
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <bibby.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 774001619; Wed, 12 Jun 2019 00:53:55 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 01:53:54 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 16:53:53 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 12 Jun 2019 16:53:53 +0800
-From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
- <ck.hu@mediatek.com>
-Subject: [PATCH v8 12/12] arm64: dts: add gce node for mt8183
-Date: Wed, 12 Jun 2019 16:53:49 +0800
-Message-ID: <20190612085349.21243-13-bibby.hsieh@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190612085349.21243-1-bibby.hsieh@mediatek.com>
-References: <20190612085349.21243-1-bibby.hsieh@mediatek.com>
+ id 1hb19d-0004xD-LM; Wed, 12 Jun 2019 11:10:59 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
+ t=1560337858; x=1591873858;
+ h=from:to:cc:subject:date:message-id:references:
+ in-reply-to:content-transfer-encoding:mime-version;
+ bh=9C6nIktpk58mQRmm8zfZNQ7uCehIhtK/t7hhQxTYMHw=;
+ b=ECsHVJRqfR4AT9KyQHsjeoY0sNHgPFYwnlm23rFaQmqqnwCJTPitYTWb
+ h0BPCSyecydQN1hkMEj/GauEmCcFBF7F6VJlv7s9704p/8mpDHKRzzdGg
+ srByV4O0nP1FaEf3m4DIR+ZzKvuZ5TnrauIO0/MTpsGnmwJRoUaerFbqS
+ IaozUpfunOHkfzfc7J3sBOTs0PBEGUxWijF5xpong2ZLlebNuPj5mPTr+
+ 3wwsYg4jiTaGyJM3xqVt0vQd8MFu+irMZ4RAKlhsk6PsEn5p/SVyoulsA
+ yH0XeeaJbyXtvovBTZyLvwOx2XCQqgK1w3CXLfESgnyahk6SwcnJLwi9g w==;
+X-IronPort-AV: E=Sophos;i="5.63,365,1557158400"; d="scan'208";a="112021876"
+Received: from mail-sn1nam02lp2058.outbound.protection.outlook.com (HELO
+ NAM02-SN1-obe.outbound.protection.outlook.com) ([104.47.36.58])
+ by ob1.hgst.iphmx.com with ESMTP; 12 Jun 2019 19:10:51 +0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=6Rpl6Q+aF8kLDJ4LtRAXjIUXsVHZkf9URmOHSSGWIMI=;
+ b=aMNpf06NYMKqToRFSpvwDJyKj5SWcHdwbUeKpACB39F+Si5SwO43bJ6pt0lcbX9f/0jNMUg+q4xLAL6lbk88GDPkOtM6iJuI2aJlqHflm9Boqk1w0J+n6f4HYfT13+E3IDqabaGHzPDh8YwAR2pFZzppDJ57LysLVeGpsJEVdbs=
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
+ SN6PR04MB4080.namprd04.prod.outlook.com (52.135.82.153) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1965.13; Wed, 12 Jun 2019 11:10:49 +0000
+Received: from SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530]) by SN6PR04MB4925.namprd04.prod.outlook.com
+ ([fe80::6d99:14d9:3fa:f530%6]) with mapi id 15.20.1965.017; Wed, 12 Jun 2019
+ 11:10:49 +0000
+From: Avri Altman <Avri.Altman@wdc.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
+ <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
+ <pedrom.sousa@synopsys.com>
+Subject: RE: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
+ blocked forever
+Thread-Topic: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
+ blocked forever
+Thread-Index: AQHVIPJij1mAYSBJOESW3uchKAIpIaaX3D1Q
+Date: Wed, 12 Jun 2019 11:10:49 +0000
+Message-ID: <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
+References: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=Avri.Altman@wdc.com; 
+x-originating-ip: [212.25.79.133]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 12e24cc3-2da4-43aa-48ac-08d6ef26a03d
+x-ms-office365-filtering-ht: Tenant
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
+ SRVR:SN6PR04MB4080; 
+x-ms-traffictypediagnostic: SN6PR04MB4080:
+wdcipoutbound: EOP-TRUE
+x-microsoft-antispam-prvs: <SN6PR04MB40809A3446AEDE13E777B343FCEC0@SN6PR04MB4080.namprd04.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:8882;
+x-forefront-prvs: 0066D63CE6
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10019020)(376002)(136003)(39860400002)(346002)(366004)(396003)(199004)(189003)(316002)(2906002)(476003)(33656002)(229853002)(76176011)(15650500001)(11346002)(486006)(446003)(72206003)(7736002)(305945005)(74316002)(6246003)(6506007)(2501003)(3846002)(110136005)(102836004)(5660300002)(6116002)(64756008)(478600001)(66476007)(66446008)(14454004)(66556008)(6436002)(73956011)(2201001)(256004)(66946007)(55016002)(76116006)(25786009)(99286004)(8676002)(14444005)(186003)(7416002)(4326008)(81156014)(52536014)(8936002)(81166006)(54906003)(68736007)(7696005)(66066001)(26005)(53936002)(9686003)(86362001)(71190400001)(71200400001);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB4080;
+ H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: sfHRWHkjg7wmUSjFUIEQlvQXM9Lgy2h3ZWI8AMMON/CsT8oshw7paqCJejmLGRjy9N+q/TNQhAqpkYj5YKPvEdU+VPiEAmQe1djbaZdZjrTmbWD56GVdsQOrQW6LumzTImFp35JJFDoN0i2KntXcJww0/jq/yolMEIuooWeDQkjIr2NUM4q7Io6zHSscg8+GkF0Ud9RNlsj0UJGVYipWeNdjfx3fteMxG8nBz/ffAjs7nz94ulp6MVpSHqzq1PYr+r7YGGtT9yqY5VGPgrC2H2YTVNXHBmKERnAgakD61FguaddKcYK/Is/qoMvGmHXahDYER2VI7byyehtdpqNEyAOv2xXRxrq8DNq0nt74TYmBNpBZKu2uX0Nx6qm2sthznY4Vhvo4O1MYPX3LxvOMDltnH5qV/rq4BMEXMGq5FI4=
 MIME-Version: 1.0
-X-MTK: N
+X-OriginatorOrg: wdc.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 12e24cc3-2da4-43aa-48ac-08d6ef26a03d
+X-MS-Exchange-CrossTenant-originalarrivaltime: 12 Jun 2019 11:10:49.3951 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: Avri.Altman@wdc.com
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB4080
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_015536_351015_0DC4DA4B 
-X-CRM114-Status: UNSURE (   8.89  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190612_041057_736609_073F2123 
+X-CRM114-Status: GOOD (  19.72  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [216.71.154.45 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,59 +130,96 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, linux-kernel@vger.kernel.org,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Sascha
- Hauer <kernel@pengutronix.de>, Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- ginny.chen@mediatek.com
+Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "stable@vger.kernel.org" <stable@vger.kernel.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-add gce device node for mt8183
+Hi,
 
-Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 11 +++++++++++
- 1 file changed, 11 insertions(+)
+> 
+> UFS runtime suspend can be triggered after pm_runtime_enable()
+> is invoked in ufshcd_pltfrm_init(). However if the first runtime
+> suspend is triggered before binding ufs_hba structure to ufs
+> device structure via platform_set_drvdata(), then UFS runtime
+> suspend will be no longer triggered in the future because its
+> dev->power.runtime_error was set in the first triggering and does
+> not have any chance to be cleared.
+> 
+> To be more clear, dev->power.runtime_error is set if hba is NULL
+> in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
+> where dev->power.runtime_error is set as -EINVAL. In this case, any
+> future rpm_suspend() for UFS device fails because
+> rpm_check_suspend_allowed() fails due to non-zero
+> dev->power.runtime_error.
+> 
+> To resolve this issue, make sure the first UFS runtime suspend
+> get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
+> only after hba is successfully bound to UFS device structure.
+> 
+> Fixes: e3ce73d (scsi: ufs: fix bugs related to null pointer access and array size)
+This code was inserted before platform_set_drvdata  in
+6269473 [SCSI] ufs: Add runtime PM support for UFS host controller driver.
+Why do you point to e3ce73d?
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 08274bfcebd8..42b7cc9e7304 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -8,6 +8,7 @@
- #include <dt-bindings/clock/mt8183-clk.h>
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/interrupt-controller/irq.h>
-+#include <dt-bindings/gce/mt8183-gce.h>
- 
- / {
- 	compatible = "mediatek,mt8183";
-@@ -212,6 +213,16 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		gce: gce@10238000 {
-+			compatible = "mediatek,mt8183-gce";
-+			reg = <0 0x10238000 0 0x4000>;
-+			interrupts = <GIC_SPI 162 IRQ_TYPE_LEVEL_LOW>;
-+			#mbox-cells = <3>;
-+			#subsys-cells = <3>;
-+			clocks = <&infracfg CLK_INFRA_GCE>;
-+			clock-names = "gce";
-+		};
-+
- 		uart0: serial@11002000 {
- 			compatible = "mediatek,mt8183-uart",
- 				     "mediatek,mt6577-uart";
--- 
-2.18.0
+Thanks,
+Avri
+
+> Cc: stable@vger.kernel.org
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+> ---
+>  drivers/scsi/ufs/ufshcd-pltfrm.c | 11 ++++-------
+>  1 file changed, 4 insertions(+), 7 deletions(-)
+> 
+> diff --git a/drivers/scsi/ufs/ufshcd-pltfrm.c b/drivers/scsi/ufs/ufshcd-pltfrm.c
+> index 8a74ec30c3d2..d7d521b394c3 100644
+> --- a/drivers/scsi/ufs/ufshcd-pltfrm.c
+> +++ b/drivers/scsi/ufs/ufshcd-pltfrm.c
+> @@ -430,24 +430,21 @@ int ufshcd_pltfrm_init(struct platform_device
+> *pdev,
+>  		goto dealloc_host;
+>  	}
+> 
+> -	pm_runtime_set_active(&pdev->dev);
+> -	pm_runtime_enable(&pdev->dev);
+> -
+>  	ufshcd_init_lanes_per_dir(hba);
+> 
+>  	err = ufshcd_init(hba, mmio_base, irq);
+>  	if (err) {
+>  		dev_err(dev, "Initialization failed\n");
+> -		goto out_disable_rpm;
+> +		goto dealloc_host;
+>  	}
+> 
+>  	platform_set_drvdata(pdev, hba);
+> 
+> +	pm_runtime_set_active(&pdev->dev);
+> +	pm_runtime_enable(&pdev->dev);
+> +
+>  	return 0;
+> 
+> -out_disable_rpm:
+> -	pm_runtime_disable(&pdev->dev);
+> -	pm_runtime_set_suspended(&pdev->dev);
+>  dealloc_host:
+>  	ufshcd_dealloc_host(hba);
+>  out:
+> --
+> 2.18.0
 
 
 _______________________________________________
