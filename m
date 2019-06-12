@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 20D2941DFB
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 09:43:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4AACB41E3E
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 09:51:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:To:From:Subject:
+	Message-ID:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Hjxqf52rtpZE52ODKKfdlRNR4CUAZ+d+FSWZqqdjCd0=; b=YKBfE7jJdIoM8Q
-	sCM7Dy5Du0W659YB7VgY2bNU56czyDGSmVRIAmnfHlHfBGBc7kl/TiGUHU4bseXjViB2ovk+d9caf
-	AHDSpkJmwXBUMHvaw08Q5o5AAjpsdrQUYbpppyvsN8VxMxO41hMw+2kQtog6BMrKoez8To507QRUj
-	cXCqiHM2EwRzkdl3SyRCyJf14iTEmILQDDx5DAruZJmNZN3rVKk6v5KPA8hOzlnjVX66p7S90K4ub
-	gtQISaaoWBZCNjaIv4iOZXsFZMmqn3fAR5gMfzkXzvYCbSMlaNZUf6BGFQ+9yXKtdgTLWwJAK0jEK
-	ITMlTm1gHnPlQnXe9MXA==;
+	List-Owner; bh=1m2613MM2flFAOB0R0kCCm0NdruOzXbpy9uRsugNaDQ=; b=bQUVvy0WCwyF3h
+	QAPjPYNCOQ/9rTFLXs661hi9PqeyelWWV2UY/Gwiju3rE5e36zJ6JoTN4y3cxuIJ+tOzoikcZVLIN
+	YocpPC4X60LxUNkRKn8JfhV0RJpIg7F+t1C03sowK+T1WWEV09mNrDJq753FLnx1E4BTeg5rR35/K
+	aDJmeJ+Ky1NyxLFFFzUrkw+67wC0ePVNlKsHvGEnzudlsVd2sVI9RdbPwpf72TAzZr4r6XJudoHxL
+	dwamSwelRDOxNwFJgb+LvjAMXjeM6tMUThjYKQDG+Bdb0Y41iXFOWTXyavVFFdGglFwb1YBGp63Ct
+	tstTm70P6U7cuO5gndmA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haxuQ-0008NO-NF; Wed, 12 Jun 2019 07:43:02 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hay2b-0004Us-Js; Wed, 12 Jun 2019 07:51:29 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haxu8-0008CK-SK; Wed, 12 Jun 2019 07:42:46 +0000
-X-UUID: 8e47befa46844facb2dd2cb92bd763e9-20190611
-X-UUID: 8e47befa46844facb2dd2cb92bd763e9-20190611
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hay2X-0004UO-OS
+ for linux-mediatek@lists.infradead.org; Wed, 12 Jun 2019 07:51:27 +0000
+X-UUID: 4c20c77ea5e3483087f355ec321d6afc-20190611
+X-UUID: 4c20c77ea5e3483087f355ec321d6afc-20190611
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 529718349; Tue, 11 Jun 2019 23:42:18 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 00:42:16 -0700
+ with ESMTP id 70139095; Tue, 11 Jun 2019 23:51:12 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 00:51:10 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 15:42:08 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 12 Jun 2019 15:42:08 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being blocked
- forever
-Date: Wed, 12 Jun 2019 15:42:06 +0800
-Message-ID: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 15:51:08 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 12 Jun 2019 15:51:08 +0800
+Message-ID: <1560325868.3259.6.camel@mtksdaap41>
+Subject: [GIT,PULL] mediatek drm fixes for 5.2
+From: CK Hu <ck.hu@mediatek.com>
+To: Dave Airlie <airlied@gmail.com>, Daniel Vetter <daniel.vetter@intel.com>, 
+ <dri-devel@lists.freedesktop.org>, <linux-mediatek@lists.infradead.org>
+Date: Wed, 12 Jun 2019 15:51:08 +0800
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_004244_917331_D012B31A 
-X-CRM114-Status: UNSURE (   8.80  )
+X-CRM114-CacheID: sfid-20190612_005125_809094_B49BF0E7 
+X-CRM114-Status: UNSURE (   6.59  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -71,78 +71,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, peter.wang@mediatek.com, evgreen@chromium.org,
- subhashj@codeaurora.org, linux-mediatek@lists.infradead.org,
- ygardi@codeaurora.org, matthias.bgg@gmail.com, stable@vger.kernel.org,
- Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- beanhuo@micron.com
+Cc: Yongqiang Niu <yongqiang.niu@mediatek.com>,
+ Hsin-Yi Wang <hsinyi@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-UFS runtime suspend can be triggered after pm_runtime_enable()
-is invoked in ufshcd_pltfrm_init(). However if the first runtime
-suspend is triggered before binding ufs_hba structure to ufs
-device structure via platform_set_drvdata(), then UFS runtime
-suspend will be no longer triggered in the future because its
-dev->power.runtime_error was set in the first triggering and does
-not have any chance to be cleared.
+Hi Dave, Daniel:
 
-To be more clear, dev->power.runtime_error is set if hba is NULL
-in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
-where dev->power.runtime_error is set as -EINVAL. In this case, any
-future rpm_suspend() for UFS device fails because
-rpm_check_suspend_allowed() fails due to non-zero
-dev->power.runtime_error.
+This include unbind error fix, clock control flow refinement, and PRIME
+mmap with page offset.
 
-To resolve this issue, make sure the first UFS runtime suspend
-get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
-only after hba is successfully bound to UFS device structure.
+Regards,
+CK
 
-Fixes: e3ce73d (scsi: ufs: fix bugs related to null pointer access and array size)
-Cc: stable@vger.kernel.org
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufshcd-pltfrm.c | 11 ++++-------
- 1 file changed, 4 insertions(+), 7 deletions(-)
+The following changes since commit
+a188339ca5a396acc588e5851ed7e19f66b0ebd9:
 
-diff --git a/drivers/scsi/ufs/ufshcd-pltfrm.c b/drivers/scsi/ufs/ufshcd-pltfrm.c
-index 8a74ec30c3d2..d7d521b394c3 100644
---- a/drivers/scsi/ufs/ufshcd-pltfrm.c
-+++ b/drivers/scsi/ufs/ufshcd-pltfrm.c
-@@ -430,24 +430,21 @@ int ufshcd_pltfrm_init(struct platform_device *pdev,
- 		goto dealloc_host;
- 	}
- 
--	pm_runtime_set_active(&pdev->dev);
--	pm_runtime_enable(&pdev->dev);
--
- 	ufshcd_init_lanes_per_dir(hba);
- 
- 	err = ufshcd_init(hba, mmio_base, irq);
- 	if (err) {
- 		dev_err(dev, "Initialization failed\n");
--		goto out_disable_rpm;
-+		goto dealloc_host;
- 	}
- 
- 	platform_set_drvdata(pdev, hba);
- 
-+	pm_runtime_set_active(&pdev->dev);
-+	pm_runtime_enable(&pdev->dev);
-+
- 	return 0;
- 
--out_disable_rpm:
--	pm_runtime_disable(&pdev->dev);
--	pm_runtime_set_suspended(&pdev->dev);
- dealloc_host:
- 	ufshcd_dealloc_host(hba);
- out:
--- 
-2.18.0
+  Linux 5.2-rc1 (2019-05-19 15:47:09 -0700)
+
+are available in the Git repository at:
+
+  https://github.com/ckhu-mediatek/linux.git-tags.git
+mediatek-drm-fixes-5.2
+
+for you to fetch changes up to 2458d9d6d94be982b917e93c61a89b4426f32e31:
+
+  drm/mediatek: call mtk_dsi_stop() after mtk_drm_crtc_atomic_disable()
+(2019-06-04 09:54:42 +0800)
+
+----------------------------------------------------------------
+Hsin-Yi Wang (5):
+      drm/mediatek: fix unbind functions
+      drm/mediatek: unbind components in mtk_drm_unbind()
+      drm/mediatek: call drm_atomic_helper_shutdown() when unbinding
+driver
+      drm/mediatek: clear num_pipes when unbind driver
+      drm/mediatek: call mtk_dsi_stop() after
+mtk_drm_crtc_atomic_disable()
+
+Yongqiang Niu (2):
+      drm/mediatek: adjust ddp clock control flow
+      drm/mediatek: respect page offset for PRIME mmap calls
+
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 30
+++++++------------------------
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c  |  8 +++-----
+ drivers/gpu/drm/mediatek/mtk_drm_gem.c  |  7 ++++++-
+ drivers/gpu/drm/mediatek/mtk_dsi.c      | 12 +++++++++++-
+ 4 files changed, 26 insertions(+), 31 deletions(-)
 
 
 _______________________________________________
