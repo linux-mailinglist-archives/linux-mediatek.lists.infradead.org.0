@@ -2,123 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0811D4238D
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 13:11:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 285F0425D9
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 14:33:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GRIRSRLGaGrLe6pzDH4G0lPc+HL0FxdnyQa90VbZuX8=; b=dbD/MsUeJxJgtY
-	YL5Tl8wMXVD5Fyd7Nm+KMfM6QYE8mySR+lqD6RpNYJh6Rx1o5dgy25iP/vnmiE6L7iHsk+sI2rvDa
-	OpGUfO0Il0UYRXBf84MIzEaJNaBKH2Wq3ivZGVbwCl2UJyy7O8RqBGWZ0LvVAsz+QEk91BlxP+P68
-	4KxyCKfYz8ddardaqNoNpKNkljNMzcUDOj1P5MFZdRo39kizzN68dWp1kGgqHzVtl44cDJOJHyrrZ
-	SS1YUWlTypy5HZ9Ilte5b4c7kC+N1h0Dp/kHHFClVdqyPNL2DTEuumK47bo2yh9/6wnARi227rW21
-	j8//x5hVQOPh9n8+nQeA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=lA8xrwqkxvhWVw8mVZsSAcIdxJy0SAIOYsIvs13G3FM=; b=gTKiu01Xqt8iAsNH9+OctBtID
+	qDJTL7ToRZeDQ+4MUEHmNpek9zd1Ncbdiunt+O+c/dK6fWVIy/eXKTTYKB+vNor4fSUl3txKKM13e
+	qOCY+NDRk1wvV44ljvur0foWuih95j0RBuzYIMG4/qkC7d2phGesWPNMTBUsSxB57npY0j0+nNqZu
+	vkK0Pr0/sEmy22BBiNsaMEmav3J7iKXfVkkmqfzdwBcrQF0PnT3IwE+t1H9xo/T9B107EV6JbKHSd
+	IxvsjB1bi43RxscdOqWRR9IxfZMxiimJihm1qYjexYUCjY+8w1LPWiRxKGLEtPEq+7eGH2elg392A
+	AS4l+AUfw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hb19i-0004yR-0I; Wed, 12 Jun 2019 11:11:02 +0000
-Received: from esa6.hgst.iphmx.com ([216.71.154.45])
+	id 1hb2RI-0003V7-1C; Wed, 12 Jun 2019 12:33:16 +0000
+Received: from mail-ed1-f67.google.com ([209.85.208.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hb19d-0004xD-LM; Wed, 12 Jun 2019 11:10:59 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
- t=1560337858; x=1591873858;
- h=from:to:cc:subject:date:message-id:references:
- in-reply-to:content-transfer-encoding:mime-version;
- bh=9C6nIktpk58mQRmm8zfZNQ7uCehIhtK/t7hhQxTYMHw=;
- b=ECsHVJRqfR4AT9KyQHsjeoY0sNHgPFYwnlm23rFaQmqqnwCJTPitYTWb
- h0BPCSyecydQN1hkMEj/GauEmCcFBF7F6VJlv7s9704p/8mpDHKRzzdGg
- srByV4O0nP1FaEf3m4DIR+ZzKvuZ5TnrauIO0/MTpsGnmwJRoUaerFbqS
- IaozUpfunOHkfzfc7J3sBOTs0PBEGUxWijF5xpong2ZLlebNuPj5mPTr+
- 3wwsYg4jiTaGyJM3xqVt0vQd8MFu+irMZ4RAKlhsk6PsEn5p/SVyoulsA
- yH0XeeaJbyXtvovBTZyLvwOx2XCQqgK1w3CXLfESgnyahk6SwcnJLwi9g w==;
-X-IronPort-AV: E=Sophos;i="5.63,365,1557158400"; d="scan'208";a="112021876"
-Received: from mail-sn1nam02lp2058.outbound.protection.outlook.com (HELO
- NAM02-SN1-obe.outbound.protection.outlook.com) ([104.47.36.58])
- by ob1.hgst.iphmx.com with ESMTP; 12 Jun 2019 19:10:51 +0800
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=6Rpl6Q+aF8kLDJ4LtRAXjIUXsVHZkf9URmOHSSGWIMI=;
- b=aMNpf06NYMKqToRFSpvwDJyKj5SWcHdwbUeKpACB39F+Si5SwO43bJ6pt0lcbX9f/0jNMUg+q4xLAL6lbk88GDPkOtM6iJuI2aJlqHflm9Boqk1w0J+n6f4HYfT13+E3IDqabaGHzPDh8YwAR2pFZzppDJ57LysLVeGpsJEVdbs=
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
- SN6PR04MB4080.namprd04.prod.outlook.com (52.135.82.153) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.1965.13; Wed, 12 Jun 2019 11:10:49 +0000
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::6d99:14d9:3fa:f530]) by SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::6d99:14d9:3fa:f530%6]) with mapi id 15.20.1965.017; Wed, 12 Jun 2019
- 11:10:49 +0000
-From: Avri Altman <Avri.Altman@wdc.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
- <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
- <pedrom.sousa@synopsys.com>
-Subject: RE: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
- blocked forever
-Thread-Topic: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
- blocked forever
-Thread-Index: AQHVIPJij1mAYSBJOESW3uchKAIpIaaX3D1Q
-Date: Wed, 12 Jun 2019 11:10:49 +0000
-Message-ID: <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
-In-Reply-To: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=Avri.Altman@wdc.com; 
-x-originating-ip: [212.25.79.133]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 12e24cc3-2da4-43aa-48ac-08d6ef26a03d
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
- SRVR:SN6PR04MB4080; 
-x-ms-traffictypediagnostic: SN6PR04MB4080:
-wdcipoutbound: EOP-TRUE
-x-microsoft-antispam-prvs: <SN6PR04MB40809A3446AEDE13E777B343FCEC0@SN6PR04MB4080.namprd04.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:8882;
-x-forefront-prvs: 0066D63CE6
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(376002)(136003)(39860400002)(346002)(366004)(396003)(199004)(189003)(316002)(2906002)(476003)(33656002)(229853002)(76176011)(15650500001)(11346002)(486006)(446003)(72206003)(7736002)(305945005)(74316002)(6246003)(6506007)(2501003)(3846002)(110136005)(102836004)(5660300002)(6116002)(64756008)(478600001)(66476007)(66446008)(14454004)(66556008)(6436002)(73956011)(2201001)(256004)(66946007)(55016002)(76116006)(25786009)(99286004)(8676002)(14444005)(186003)(7416002)(4326008)(81156014)(52536014)(8936002)(81166006)(54906003)(68736007)(7696005)(66066001)(26005)(53936002)(9686003)(86362001)(71190400001)(71200400001);
- DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB4080;
- H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; A:1; MX:1; 
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: sfHRWHkjg7wmUSjFUIEQlvQXM9Lgy2h3ZWI8AMMON/CsT8oshw7paqCJejmLGRjy9N+q/TNQhAqpkYj5YKPvEdU+VPiEAmQe1djbaZdZjrTmbWD56GVdsQOrQW6LumzTImFp35JJFDoN0i2KntXcJww0/jq/yolMEIuooWeDQkjIr2NUM4q7Io6zHSscg8+GkF0Ud9RNlsj0UJGVYipWeNdjfx3fteMxG8nBz/ffAjs7nz94ulp6MVpSHqzq1PYr+r7YGGtT9yqY5VGPgrC2H2YTVNXHBmKERnAgakD61FguaddKcYK/Is/qoMvGmHXahDYER2VI7byyehtdpqNEyAOv2xXRxrq8DNq0nt74TYmBNpBZKu2uX0Nx6qm2sthznY4Vhvo4O1MYPX3LxvOMDltnH5qV/rq4BMEXMGq5FI4=
+ id 1hb2RB-0003Qb-VB
+ for linux-mediatek@lists.infradead.org; Wed, 12 Jun 2019 12:33:12 +0000
+Received: by mail-ed1-f67.google.com with SMTP id p26so21464426edr.2
+ for <linux-mediatek@lists.infradead.org>; Wed, 12 Jun 2019 05:33:09 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=/9+BscyBSG8LtxRtL3bsLVsuCvjxfppgNJUSn3pi0BA=;
+ b=uh90t+7onIFWoKOYWSH2jIlB84WkDjY7Kd5CVCBo01Ikx9Ky5nOfjO4IAhJxhUSV0e
+ tARGeHJrOf6LfXYDtqAtYMNhXGkTfJ8mimhw7gWfXFDueAdJtuwszyeLu6PZikMU8Uk3
+ M5AnpAzx2ouFq2d9O7bkPO+8aBGOsuwj2xGv4I64UhuLW0E/DGwt7B5MDcjEadgJsL7q
+ HM7Gqvok2m0Hs0dsCpSSsoFoqx6zKDskxZeQNRsBBAtz7GjFEBIKIEGxsfNuE5nRlKbA
+ WpRW91Hj0mZdEdFSMvl6nG6MEOhkI5b0ReoPhIebukiZ/w6TojTAMXOsAx12OTu7wJ74
+ WLcg==
+X-Gm-Message-State: APjAAAVZpXilQRAPbe4ZulBjdwSZ0c8+yFqFtCeTFGqa1X1fF+fkWKN9
+ Ria2kq5RBWGyJNlJmNTQ9gb+lg==
+X-Google-Smtp-Source: APXvYqwH+EIsTHqwWN3f9HxFMK99PgTbuqj4T1Pw/EUS2brCmPFSeeUdToS6/AutI5NLtTDk9/MaKw==
+X-Received: by 2002:a50:b561:: with SMTP id z30mr32633599edd.87.1560342787019; 
+ Wed, 12 Jun 2019 05:33:07 -0700 (PDT)
+Received: from shalem.localdomain (84-106-84-65.cable.dynamic.v4.ziggo.nl.
+ [84.106.84.65])
+ by smtp.gmail.com with ESMTPSA id c21sm2784931ejk.79.2019.06.12.05.33.05
+ (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
+ Wed, 12 Jun 2019 05:33:06 -0700 (PDT)
+Subject: Re: [PATCH 4/5] drm/connector: Split out orientation quirk detection
+To: "dbasehore ." <dbasehore@chromium.org>
+References: <20190611040350.90064-1-dbasehore@chromium.org>
+ <20190611040350.90064-5-dbasehore@chromium.org> <87zhmoy270.fsf@intel.com>
+ <01636500-0be5-acf8-5f93-a57383bf4b20@redhat.com>
+ <CAGAzgsoxpsft-vmVOuKSAbLJqR-EZvcceLpMeWkz6ikJEKGJHg@mail.gmail.com>
+From: Hans de Goede <hdegoede@redhat.com>
+Message-ID: <fe774952-6fd5-b4ec-56c9-32fd30546313@redhat.com>
+Date: Wed, 12 Jun 2019 14:33:05 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-X-OriginatorOrg: wdc.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 12e24cc3-2da4-43aa-48ac-08d6ef26a03d
-X-MS-Exchange-CrossTenant-originalarrivaltime: 12 Jun 2019 11:10:49.3951 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: Avri.Altman@wdc.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB4080
+In-Reply-To: <CAGAzgsoxpsft-vmVOuKSAbLJqR-EZvcceLpMeWkz6ikJEKGJHg@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_041057_736609_073F2123 
-X-CRM114-Status: GOOD (  19.72  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190612_053310_021978_FD22BB99 
+X-CRM114-Status: GOOD (  23.71  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [216.71.154.45 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.208.67 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.208.67 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -130,97 +86,100 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "stable@vger.kernel.org" <stable@vger.kernel.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
-Content-Type: text/plain; charset="us-ascii"
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>,
+ Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ dri-devel <dri-devel@lists.freedesktop.org>,
+ Thierry Reding <thierry.reding@gmail.com>, Sam Ravnborg <sam@ravnborg.org>,
+ =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
+ David Airlie <airlied@linux.ie>, CK Hu <ck.hu@mediatek.com>,
+ devicetree@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
+ Intel Graphics <intel-gfx@lists.freedesktop.org>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ Jani Nikula <jani.nikula@linux.intel.com>, Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 Hi,
 
+On 12-06-19 02:16, dbasehore . wrote:
+> On Tue, Jun 11, 2019 at 1:54 AM Hans de Goede <hdegoede@redhat.com> wrote:
+>>
+>> Hi,
+>>
+>> On 11-06-19 10:08, Jani Nikula wrote:
+>>> On Mon, 10 Jun 2019, Derek Basehore <dbasehore@chromium.org> wrote:
+>>>> This removes the orientation quirk detection from the code to add
+>>>> an orientation property to a panel. This is used only for legacy x86
+>>>> systems, yet we'd like to start using this on devicetree systems where
+>>>> quirk detection like this is not needed.
+>>>
+>>> Not needed, but no harm done either, right?
+>>>
+>>> I guess I'll defer judgement on this to Hans and Ville (Cc'd).
+>>
+>> Hmm, I'm not big fan of this change. It adds code duplication and as
+>> other models with the same issue using a different driver or panel-type
+>> show up we will get more code duplication.
+>>
+>> Also I'm not convinced that devicetree based platforms will not need
+>> this. The whole devicetree as an ABI thing, which means that all
+>> devicetree bindings need to be set in stone before things are merged
+>> into the mainline, is done solely so that we can get vendors to ship
+>> hardware with the dtb files included in the firmware.
 > 
-> UFS runtime suspend can be triggered after pm_runtime_enable()
-> is invoked in ufshcd_pltfrm_init(). However if the first runtime
-> suspend is triggered before binding ufs_hba structure to ufs
-> device structure via platform_set_drvdata(), then UFS runtime
-> suspend will be no longer triggered in the future because its
-> dev->power.runtime_error was set in the first triggering and does
-> not have any chance to be cleared.
-> 
-> To be more clear, dev->power.runtime_error is set if hba is NULL
-> in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
-> where dev->power.runtime_error is set as -EINVAL. In this case, any
-> future rpm_suspend() for UFS device fails because
-> rpm_check_suspend_allowed() fails due to non-zero
-> dev->power.runtime_error.
-> 
-> To resolve this issue, make sure the first UFS runtime suspend
-> get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
-> only after hba is successfully bound to UFS device structure.
-> 
-> Fixes: e3ce73d (scsi: ufs: fix bugs related to null pointer access and array size)
-This code was inserted before platform_set_drvdata  in
-6269473 [SCSI] ufs: Add runtime PM support for UFS host controller driver.
-Why do you point to e3ce73d?
+> We've posted fixes to the devicetree well after the initial merge into
+> mainline before, so I don't see what you mean about the bindings being
+> set in stone.
 
-Thanks,
-Avri
+That was just me repeating the official party line about devicetree.
 
-> Cc: stable@vger.kernel.org
-> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-> ---
->  drivers/scsi/ufs/ufshcd-pltfrm.c | 11 ++++-------
->  1 file changed, 4 insertions(+), 7 deletions(-)
-> 
-> diff --git a/drivers/scsi/ufs/ufshcd-pltfrm.c b/drivers/scsi/ufs/ufshcd-pltfrm.c
-> index 8a74ec30c3d2..d7d521b394c3 100644
-> --- a/drivers/scsi/ufs/ufshcd-pltfrm.c
-> +++ b/drivers/scsi/ufs/ufshcd-pltfrm.c
-> @@ -430,24 +430,21 @@ int ufshcd_pltfrm_init(struct platform_device
-> *pdev,
->  		goto dealloc_host;
->  	}
-> 
-> -	pm_runtime_set_active(&pdev->dev);
-> -	pm_runtime_enable(&pdev->dev);
-> -
->  	ufshcd_init_lanes_per_dir(hba);
-> 
->  	err = ufshcd_init(hba, mmio_base, irq);
->  	if (err) {
->  		dev_err(dev, "Initialization failed\n");
-> -		goto out_disable_rpm;
-> +		goto dealloc_host;
->  	}
-> 
->  	platform_set_drvdata(pdev, hba);
-> 
-> +	pm_runtime_set_active(&pdev->dev);
-> +	pm_runtime_enable(&pdev->dev);
-> +
->  	return 0;
-> 
-> -out_disable_rpm:
-> -	pm_runtime_disable(&pdev->dev);
-> -	pm_runtime_set_suspended(&pdev->dev);
->  dealloc_host:
->  	ufshcd_dealloc_host(hba);
->  out:
-> --
-> 2.18.0
+> I also don't really see the point. The devicetree is in
+> the kernel. If there's some setting in the devicetree that we want to
+> change, it's effectively the same to make the change in the devicetree
+> versus some quirk setting. The only difference seems to be that making
+> the change in the devicetree is cleaner.
 
+I agree with you that devicetree in practice is easy to update after
+shipping. But at least whenever I tried to get new bindings reviewed
+I was always told that I was not allowed to count on that.
+
+>> I'm 100% sure that there is e.g. ARM hardware out there which uses
+>> non upright mounted LCD panels (I used to have a few Allwinner
+>> tablets which did this). And given my experience with the quality
+>> of firmware bundled tables like ACPI tables I'm quite sure that
+>> if we ever move to firmware included dtb files that we will need
+>> quirks for those too.
+> 
+> Is there a timeline to start using firmware bundled tables?
+
+Nope, as I said "if we ever move to ...".
+
+> Since the
+> quirk code only uses DMI, it will need to be changed anyways for
+> firmware bundled devicetree files anyways.
+> 
+> We could consolidate the duplicated code into another function that
+> calls drm_get_panel_orientation_quirks too. The only reason it's like
+> it is is because I initially only had the call to
+> drm_get_panel_orientation_quirk once in the code.
+
+Yes if you can add a new helper for the current callers, then
+I'm fine with dropping the quirk handling from
+drm_connector_init_panel_orientation_property()
+
+Regards,
+
+Hans
 
 _______________________________________________
 Linux-mediatek mailing list
