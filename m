@@ -2,57 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AD8A1425F5
-	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 14:35:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 508EE42855
+	for <lists+linux-mediatek@lfdr.de>; Wed, 12 Jun 2019 16:03:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1RrYp9WVhYJltu6HK0dFhJndxCXnChLttHPIPMH7T7I=; b=H92fo+c6HNUBoz
-	I/G+fM5z6ADoFjKdtZWjlkraDVqFVmXp/2zUcJZ64CVKxP8GOBm6kQh0vvukH4F/PbaUdy0+eSSUg
-	kDDVt1ezY5kf0WT2AKqkonabVEPN50qYVzBMZi9TpDj3OTzvwSNaPZwxaxYsDG4ie0cuojlTIEw1L
-	Vh84Bbxe1tVgQycqCXTltOOMI+8C/b5rqMgprQRxerx1Y80Wb2X+DWtpolCwMiHzhj8L+m2mS++6U
-	0zBg269fnG7etR0l3FBZkiwIEh/n3TneE3Hy1ZKFGPedNwOxQAuOxuZFTVGdG2oFA4OpfkILpINWm
-	+V2ViEqaMZQ2dSKglyLg==;
+	List-Owner; bh=TNVZz6OqdRHd2tTowfluvAFOCQqnmiPil2kjGDiAWDM=; b=YPfVIKTiM02EW5
+	Ty+K1ntQRIRcxX5TQ8+ScUZRnAr/OCj3uqvfJxTLAQRtkTy6VX0SJ9RAmJMw4DbuuDB57fJPli0Hm
+	tXYpXUJa3cz8OmgBqMGswjxg4nb8e7EZbyHeihvAb1SokKnQSL25zvuDeFgKlBR0lcaMV54EhdJpO
+	JKMe0EtoLGMg3sVhCTBlFpPapUiTPouRwnMUW3JB2e4xxvks1Uagl1H9Fd1vvK+oyb3r1Nvr0Q6r+
+	zg09Wz3d+Gaqngftee3bcFPEVBn3vcArLkitCLvOR+tDYa1QpUazWlQGBlL9Mk6aZddHmozojto49
+	nVSw1ogjGVJ4MjoU0/ng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hb2Tn-0005nX-MX; Wed, 12 Jun 2019 12:35:51 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hb3qp-00035z-Ph; Wed, 12 Jun 2019 14:03:43 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hb2Tk-0005mO-K7
- for linux-mediatek@lists.infradead.org; Wed, 12 Jun 2019 12:35:49 +0000
-X-UUID: 64606ff8caa14ababd8b7b0995adbef7-20190612
-X-UUID: 64606ff8caa14ababd8b7b0995adbef7-20190612
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <kobe-cp.wu@mediatek.com>)
+ id 1hb3qe-0002xN-Pt; Wed, 12 Jun 2019 14:03:34 +0000
+X-UUID: 19beb02eebb84110a5974c7c91e29bd6-20190612
+X-UUID: 19beb02eebb84110a5974c7c91e29bd6-20190612
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1727694239; Wed, 12 Jun 2019 04:35:44 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 05:35:42 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 12 Jun 2019 20:35:41 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ with ESMTP id 1517432226; Wed, 12 Jun 2019 06:03:27 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 07:03:26 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 22:03:24 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 12 Jun 2019 20:35:41 +0800
-Message-ID: <1560342941.16581.2.camel@mtkswgap22>
-Subject: Re: [PATCH] locking/lockdep: Fix UBSAN warnings
-From: Kobe-CP Wu <Kobe-CP.Wu@mediatek.com>
-To: Peter Zijlstra <peterz@infradead.org>
-Date: Wed, 12 Jun 2019 20:35:41 +0800
-In-Reply-To: <20190612073425.GD3436@hirez.programming.kicks-ass.net>
-References: <1560318544-27635-1-git-send-email-kobe-cp.wu@mediatek.com>
- <20190612073425.GD3436@hirez.programming.kicks-ass.net>
+ Transport; Wed, 12 Jun 2019 22:03:23 +0800
+Message-ID: <1560348204.19782.6.camel@mtkswgap22>
+Subject: RE: [PATCH v1] scsi: ufs: Avoid runtime suspend possibly being
+ blocked forever
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: Avri Altman <Avri.Altman@wdc.com>
+Date: Wed, 12 Jun 2019 22:03:24 +0800
+In-Reply-To: <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
+References: <1560325326-1598-1-git-send-email-stanley.chu@mediatek.com>
+ <SN6PR04MB492546256F8F8635E7EE60C2FCEC0@SN6PR04MB4925.namprd04.prod.outlook.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 4018B39517CC99ADF846BD09B0727C651F76F30778E15F902E6C0D2819EA72F62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_053548_668066_2A88ACE2 
-X-CRM114-Status: UNSURE (   8.67  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190612_070332_848047_3FDE6372 
+X-CRM114-Status: GOOD (  13.28  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,34 +73,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Ingo Molnar <mingo@redhat.com>,
- Will Deacon <will.deacon@arm.com>, wsd_upstream@mediatek.com,
- Eason Lin <eason-yh.lin@mediatek.com>
+Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
+ "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
+ "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "stable@vger.kernel.org" <stable@vger.kernel.org>, stanley.chu@mediatek.com,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-06-12 at 09:34 +0200, Peter Zijlstra wrote:
-> On Wed, Jun 12, 2019 at 01:49:04PM +0800, Kobe Wu wrote:
-> > Fix complaints from UBSAN about signed integer overflow.
-> > 
-> > ========================================================================
-> > UBSAN: Undefined behaviour in kernel/locking/lockdep.c:2998:3
-> > signed integer overflow:
+Hi Avri,
+
+On Wed, 2019-06-12 at 11:10 +0000, Avri Altman wrote:
+> Hi,
 > 
-> I don't mind the patch, but this is an UBSAN bug and cannot therefore be
-> a reason.
+> > 
+> > UFS runtime suspend can be triggered after pm_runtime_enable()
+> > is invoked in ufshcd_pltfrm_init(). However if the first runtime
+> > suspend is triggered before binding ufs_hba structure to ufs
+> > device structure via platform_set_drvdata(), then UFS runtime
+> > suspend will be no longer triggered in the future because its
+> > dev->power.runtime_error was set in the first triggering and does
+> > not have any chance to be cleared.
+> > 
+> > To be more clear, dev->power.runtime_error is set if hba is NULL
+> > in ufshcd_runtime_suspend() which returns -EINVAL to rpm_callback()
+> > where dev->power.runtime_error is set as -EINVAL. In this case, any
+> > future rpm_suspend() for UFS device fails because
+> > rpm_check_suspend_allowed() fails due to non-zero
+> > dev->power.runtime_error.
+> > 
+> > To resolve this issue, make sure the first UFS runtime suspend
+> > get valid "hba" in ufshcd_runtime_suspend(): Enable UFS runtime PM
+> > only after hba is successfully bound to UFS device structure.
+> > 
+> > Fixes: e3ce73d (scsi: ufs: fix bugs related to null pointer access and array size)
+> This code was inserted before platform_set_drvdata  in
+> 6269473 [SCSI] ufs: Add runtime PM support for UFS host controller driver.
+> Why do you point to e3ce73d?
 
-I think the description could be amended as follows.
-There is unnecessary to mention the UBSAN bug.
+e3ce73d (scsi: ufs: fix bugs related to null pointer access and array
+size) changed the returned value from 0 to -EINVAL in case of NULL "hba"
+in ufshcd_runtime_suspend().
 
-locking/lockdep: add size of counters for lockdep statistics
+But you are right, above patch may do the right thing, and the real root
+cause is the incorrect timing of pm_runtime_enable().
 
-When system has been running for a long time, signed integer counters 
-are not enough for some lockdep statistics. Using unsigned long counters
-can satisfy the requirement. Besides, most of lockdep statistics are 
-unsigned. It is better to use unsigned int instead of int.
+I will fix commit message in next version.
+
+> 
+> Thanks,
+> Avri
+
+Thanks.
+Stanley
 
 
 
