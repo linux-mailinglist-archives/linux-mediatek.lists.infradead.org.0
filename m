@@ -2,81 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7A2994340B
-	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 10:20:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BA5754341B
+	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 10:27:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XitfdxC2REaL6TG0XdBHH8xRs3mPc5Pt1zZlFC2oS9o=; b=qY3ggO00uMnA1H
-	3MkkJQz5cU06vtUyRZxEG7l5MUQFpcbje2XXhdHzMoA5O7q4A1mzpdRR/+eAKtUtiSZvBXI6cJKr5
-	v3aC6+tY6e5xrZYPkUT9Bi/aGoot73tI34HxmgsXISPBYXIZ7sVaNz4APR9KmfXCvuMmTeN7IgNxg
-	PCahVKv0hj/aNlfcDVxLaXIsXQiFEXJQTlZ8WYPKv/KlySPBGs2/MI0dvkIcnc7yXojZg2sWVvbk7
-	YfRBOGZCndBb39QiPzQ9mv8zph/Vi0Lhm6EpyhF7MY7Uu3XGFsTS4/d6MfEhyjFDC8ljWzYXbSJBF
-	uykfILwOh0YPvX6mc+1Q==;
+	List-Owner; bh=hcKeab8a+r/2sMe2ooaEC2FWr2zjWsVu6m1RCTEEMMo=; b=kAts4dYfU0WFAa
+	AvYFrhfA3uChqE74/kWukRCy8m+ngCV/9a9YkdmLVF4v81aybJQ7EmBANcIg0gevfPn6SCSi4abiP
+	9Ep4L73FYvwJTHgg2YbYvpHqBmvBBDFuneEo21eB4Q5QEU1UYga8N6OsqfvFAyCa+oRSSqmhP+uY0
+	LsF+Rc4Afy6/ksVsFFnKE16cctAbdTdHwbXKZEhx7vI86yEqPgjdbF1zTDmIAoSxAgNGO12QlOSs8
+	P/8ViKpMaFPP77XcdaXFmVjhVfhbOLbjtmNgkOrucxoxN57nnOWPzo13b7sm610rMGAxp/3AbYFam
+	azDxfFDzA6o7uiomFSIA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbKyT-0000AX-Ub; Thu, 13 Jun 2019 08:20:46 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1hbL4j-0002CJ-H8; Thu, 13 Jun 2019 08:27:13 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbKyP-00009e-1U
- for linux-mediatek@lists.infradead.org; Thu, 13 Jun 2019 08:20:43 +0000
-Received: by mail-ed1-x542.google.com with SMTP id w33so29917941edb.10
- for <linux-mediatek@lists.infradead.org>; Thu, 13 Jun 2019 01:20:40 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=JlRxJCwiPwkUyH7EE3nyXqgO0XVluxp/0ZdmWf9P5Z0=;
- b=RsNUrK+UEn6zsAOC9w9pM7uhwHxwQMGD+8t/Un0aIPb541XG2VU7OTMQe7tJ/AYugG
- G3FTQ65psDJrM6tPTQKU2rOXirC03jEhQDBtSNCzKL3RlSh+B4h4RysAzf/GD6k/xBvY
- 5d4Mj8gKd6ko8kFxspCeqeasrIc8irCflYt1E=
+ id 1hbL4f-0002BR-Se
+ for linux-mediatek@lists.infradead.org; Thu, 13 Jun 2019 08:27:11 +0000
+Received: by mail-ed1-x541.google.com with SMTP id p26so25924252edr.2
+ for <linux-mediatek@lists.infradead.org>; Thu, 13 Jun 2019 01:27:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ffwll.ch; s=google;
+ h=sender:date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=JpfCW44p+7Uv6TDM0Ox2JVfUSTMPnSQJH7O6CJtAHBg=;
+ b=Lp+mKwxNDLP9fXRhdND3OKWiXBC4ikL3meHfgqN5VwW0GwrUAkL6YX4RIrZimCshmv
+ g7BQkPhDzScCMB8FqKa8HXhMJ+gP8CNN7HhqqcT1nKxp0ZIPE0WePWEI2N/dB8VyOANC
+ koNjB1se8WuXWqrDlCUKVE9GYVAq+8symrah0=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=JlRxJCwiPwkUyH7EE3nyXqgO0XVluxp/0ZdmWf9P5Z0=;
- b=ag81STHpz31HGjkNs24tnX7HhI2k5xp+kjIkpZnumGF8IYmUTUv/YNoqeD8jd1x1tw
- SFPkYFSIaKDLAN3tHBisBqSFOyv4H3EAPMngTcH5iTxceoQERhILjRhFYrohoKzMsix9
- uj9ztAPRx/orp1j09Det6ikBKyxOkH9e+xyQUdGNSgUjzZJNiLwuQUkK6DGdf+34mj/3
- C1cD3lwo93CTeLOZUVdRqnDF+8MhpzZsF6WBZLbqszJQBBEozmFQgxLXAvc1EAODaqiO
- H+KIbwVr2naF4TUb1BMqykgNB+cS/DzS9hNSzoH+cQ1qL/RueqkCgeo2dsEqwRcpk2UD
- tnTQ==
-X-Gm-Message-State: APjAAAWCHYn/xAPYTV55vbX609fVtxjVIbvakEDOecgvzG86KS9FGmGV
- /lo2J7CQJiNzuewcqmeeiNcd44ytzIiQ/LtskqEBcA==
-X-Google-Smtp-Source: APXvYqxy4qqaJLhUmiQHMs45thTIqa/dGytvJgClVC9B5jpzBc/xWQ86XsED1JEqZnHBmphRLW0uSlK+Ywh5heGNQts=
-X-Received: by 2002:a50:b561:: with SMTP id z30mr38225104edd.87.1560414039622; 
- Thu, 13 Jun 2019 01:20:39 -0700 (PDT)
+ h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
+ :references:mime-version:content-disposition:in-reply-to:user-agent;
+ bh=JpfCW44p+7Uv6TDM0Ox2JVfUSTMPnSQJH7O6CJtAHBg=;
+ b=UJrJ60MkhKsz7whkN/KvkpE4r8DmbVG8G2EWIbk1FbiMxTTN+pk/wRCvniCqvrZ201
+ MVwgcDhgLygxgBmIZxxvy8QFA2r6eeAFEobsh6FDZwKyWe7BkJy2yrGwHl67M9ybaoB/
+ nheJjpq2T+CAGDnJra56P4ua+5WNMVHn2o849U7gXX0GUSW6feY/IZ5nZkIwpw9igRg3
+ JM4/cuC4/BpDfJ+qROxfgo6Zann5bX1LeUDvHy4ODLygVmyWFi2cQicQygtoDHsJYPlp
+ xCb9stqqlUKkXCjNJq5Hkr6MC9bmUe91nF3qJtyeBsVuD6weFKkROl5OQtyn6a13CwUU
+ F6ug==
+X-Gm-Message-State: APjAAAXAIfvN4ElSGWU4AZch6ff0/pvOOLI3iZMdudLlgCb9gjukSnVr
+ GiHa28WNZHDi0yaNK4nAjoqggg==
+X-Google-Smtp-Source: APXvYqxCwLi8HVNLbbKPTVQDlfkRXd8FrOrwPs8A7BimRJIdjubuXus64EOpuJHNMfJ+L/V4tnVzzw==
+X-Received: by 2002:aa7:dad6:: with SMTP id x22mr17910899eds.122.1560414427079; 
+ Thu, 13 Jun 2019 01:27:07 -0700 (PDT)
+Received: from phenom.ffwll.local ([2a02:168:569e:0:3106:d637:d723:e855])
+ by smtp.gmail.com with ESMTPSA id d1sm421989ejn.11.2019.06.13.01.27.06
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Thu, 13 Jun 2019 01:27:06 -0700 (PDT)
+Date: Thu, 13 Jun 2019 10:27:04 +0200
+From: Daniel Vetter <daniel@ffwll.ch>
+To: CK Hu <ck.hu@mediatek.com>
+Subject: Re: [GIT,PULL] mediatek drm fixes for 5.2
+Message-ID: <20190613082704.GI23020@phenom.ffwll.local>
+References: <1560325868.3259.6.camel@mtksdaap41>
+ <20190612162538.GA8035@phenom.ffwll.local>
+ <1560407478.7597.5.camel@mtksdaap41>
 MIME-Version: 1.0
-References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
-In-Reply-To: <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
-From: Pi-Hsun Shih <pihsun@chromium.org>
-Date: Thu, 13 Jun 2019 16:20:03 +0800
-Message-ID: <CANdKZ0emRPcTcL7Yq5nLH5z2_9fBuuczKehA8oEi0b+je15RPg@mail.gmail.com>
-Subject: Re: [PATCH v7 16/21] memory: mtk-smi: Add bus_sel for mt8183
-To: Yong Wu <yong.wu@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <1560407478.7597.5.camel@mtksdaap41>
+X-Operating-System: Linux phenom 4.19.0-5-amd64 
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_012041_219687_F208143D 
-X-CRM114-Status: GOOD (  15.23  )
+X-CRM114-CacheID: sfid-20190613_012709_984884_DF6A9C55 
+X-CRM114-Status: GOOD (  20.68  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,232 +96,113 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, Joerg Roedel <joro@8bytes.org>,
- Will Deacon <will.deacon@arm.com>, open list <linux-kernel@vger.kernel.org>,
- Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
- anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
- Matthias Kaehlcke <mka@chromium.org>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: Yongqiang Niu <yongqiang.niu@mediatek.com>, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+ Hsin-Yi Wang <hsinyi@chromium.org>, Daniel Vetter <daniel.vetter@intel.com>,
+ Dave Airlie <airlied@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-(Sorry for the possibly double-posting, my last mail got rejected by
-some mailing lists.)
+On Thu, Jun 13, 2019 at 02:31:18PM +0800, CK Hu wrote:
+> Hi, Daniel:
+> 
+> On Wed, 2019-06-12 at 18:25 +0200, Daniel Vetter wrote:
+> > On Wed, Jun 12, 2019 at 03:51:08PM +0800, CK Hu wrote:
+> > > Hi Dave, Daniel:
+> > > 
+> > > This include unbind error fix, clock control flow refinement, and PRIME
+> > > mmap with page offset.
+> > > 
+> > > Regards,
+> > > CK
+> > > 
+> > > The following changes since commit
+> > > a188339ca5a396acc588e5851ed7e19f66b0ebd9:
+> > > 
+> > >   Linux 5.2-rc1 (2019-05-19 15:47:09 -0700)
+> > > 
+> > > are available in the Git repository at:
+> > > 
+> > >   https://github.com/ckhu-mediatek/linux.git-tags.git
+> > > mediatek-drm-fixes-5.2
+> > 
+> > For next time around, please make this a signed annotated tag. annotated
+> > because then it's less typing for me, and signed because it's on a server
+> > we don't necessarily trust.
+> 
+> OK, I'd make a signed annotated tag in next time.
+> 
+> > 
+> > > 
+> > > for you to fetch changes up to 2458d9d6d94be982b917e93c61a89b4426f32e31:
+> > > 
+> > >   drm/mediatek: call mtk_dsi_stop() after mtk_drm_crtc_atomic_disable()
+> > > (2019-06-04 09:54:42 +0800)
+> > > 
+> > > ----------------------------------------------------------------
+> > > Hsin-Yi Wang (5):
+> > >       drm/mediatek: fix unbind functions
+> > >       drm/mediatek: unbind components in mtk_drm_unbind()
+> > >       drm/mediatek: call drm_atomic_helper_shutdown() when unbinding
+> > > driver
+> > >       drm/mediatek: clear num_pipes when unbind driver
+> > >       drm/mediatek: call mtk_dsi_stop() after
+> > > mtk_drm_crtc_atomic_disable()
+> > > 
+> > > Yongqiang Niu (2):
+> > >       drm/mediatek: adjust ddp clock control flow
+> > >       drm/mediatek: respect page offset for PRIME mmap calls
+> > 
+> > You might want to look into all the recently added helpers for mmap, I
+> > don't think mtk does anything special here.
+> 
+> If you mean using drm_gem_prime_mmap as the implementation of
+> drm_driver->gem_prime_mmap, I think we have discussed in [1] that
+> mediatek drm still need its own implementation.
+> 
+> [1] https://patchwork.kernel.org/patch/10657007/
 
-Hi,
-When I tested this patch series (Based on linux 5.2.0-rc2, and with
-various other patch series about MT8183) with lockdep enabled, and I'm
-seeing the following lockdep warning on boot.
+Yeah for reusing the overall helpers that's clear, but
+drm_gem_prime_gem_mmap should work for any gem based driver. It doesn't
+require you to use specific helpers at all.
 
-By bisecting the commits, the first commit that introduce this warning
-is this patch. The warning also doesn't appear if
-https://lore.kernel.org/patchwork/patch/1086582/ and
-https://lore.kernel.org/patchwork/patch/1086583/ are not applied.
+I'm wondering about this since I'm looking right now into this area, and
+it looks like we could just make drm_gem_prime_mmap the default and rip
+out all the custom driver implementations.
+-Daniel
 
-Do anyone have idea on why this is happening, or any suggestion on
-which part I should be digging into to figure this out? Thanks.
+> 
+> Regards,
+> CK
+> 
+> > 
+> > 
+> > > 
+> > >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 30
+> > > ++++++------------------------
+> > >  drivers/gpu/drm/mediatek/mtk_drm_drv.c  |  8 +++-----
+> > >  drivers/gpu/drm/mediatek/mtk_drm_gem.c  |  7 ++++++-
+> > >  drivers/gpu/drm/mediatek/mtk_dsi.c      | 12 +++++++++++-
+> > >  4 files changed, 26 insertions(+), 31 deletions(-)
+> > 
+> > Pulled, thanks.
+> > -Daniel
+> > 
+> > > 
+> > > _______________________________________________
+> > > dri-devel mailing list
+> > > dri-devel@lists.freedesktop.org
+> > > https://lists.freedesktop.org/mailman/listinfo/dri-devel
+> > 
+> 
+> 
 
-[    4.664194] ======================================================
-[    4.670368] WARNING: possible circular locking dependency detected
-[    4.676545] 5.2.0-rc2-next-20190528-44527-g6c94b6475c04 #20 Tainted: G S
-[    4.684539] ------------------------------------------------------
-[    4.690714] kworker/4:1/51 is trying to acquire lock:
-[    4.695760] (____ptrval____) (regulator_list_mutex){+.+.},
-at:regulator_lock_dependent+0xdc/0x6c4
-[    4.704732]
-[    4.704732] but task is already holding lock:
-[    4.710556] (____ptrval____) (&genpd->mlock/1){+.+.},
-at:genpd_lock_nested_mtx+0x24/0x30
-[    4.718740]
-[    4.718740] which lock already depends on the new lock.
-[    4.718740]
-[    4.726908]
-[    4.726908] the existing dependency chain (in reverse order) is:
-[    4.734382]
-[    4.734382] -> #4 (&genpd->mlock/1){+.+.}:
-[    4.739963]        __mutex_lock_common+0x1a0/0x1fe8
-[    4.744836]        mutex_lock_nested+0x40/0x50
-[    4.749275]        genpd_lock_nested_mtx+0x24/0x30
-[    4.754063]        genpd_add_subdomain+0x150/0x524
-[    4.758850]        pm_genpd_add_subdomain+0x3c/0x5c
-[    4.763723]        scpsys_probe+0x520/0xe78
-[    4.767902]        platform_drv_probe+0xf4/0x134
-[    4.772517]        really_probe+0x214/0x4dc
-[    4.776696]        driver_probe_device+0xcc/0x1d4
-[    4.781396]        __device_attach_driver+0x10c/0x180
-[    4.786442]        bus_for_each_drv+0x124/0x184
-[    4.790968]        __device_attach+0x1c0/0x2d8
-[    4.795407]        device_initial_probe+0x20/0x2c
-[    4.800106]        bus_probe_device+0x80/0x16c
-[    4.804546]        deferred_probe_work_func+0x120/0x168
-[    4.809767]        process_one_work+0x858/0x1208
-[    4.814379]        worker_thread+0x9ec/0xcb8
-[    4.818644]        kthread+0x2b8/0x2d0
-[    4.822391]        ret_from_fork+0x10/0x18
-[    4.826480]
-[    4.826480] -> #3 (&genpd->mlock){+.+.}:
-[    4.831880]        __mutex_lock_common+0x1a0/0x1fe8
-[    4.836752]        mutex_lock_nested+0x40/0x50
-[    4.841190]        genpd_lock_mtx+0x20/0x2c
-[    4.845369]        genpd_runtime_resume+0x140/0x434
-[    4.850241]        __rpm_callback+0xb0/0x1e4
-[    4.854506]        rpm_callback+0x54/0x1a8
-[    4.858597]        rpm_resume+0xc6c/0x10c4
-[    4.862689]        __pm_runtime_resume+0xb4/0x124
-[    4.867387]        device_link_add+0x598/0x8d0
-[    4.871829]        mtk_smi_larb_probe+0x2b0/0x340
-[    4.876528]        platform_drv_probe+0xf4/0x134
-[    4.881141]        really_probe+0x214/0x4dc
-[    4.885320]        driver_probe_device+0xcc/0x1d4
-[    4.890020]        __device_attach_driver+0x10c/0x180
-[    4.895066]        bus_for_each_drv+0x124/0x184
-[    4.899591]        __device_attach+0x1c0/0x2d8
-[    4.904031]        device_initial_probe+0x20/0x2c
-[    4.908730]        bus_probe_device+0x80/0x16c
-[    4.913169]        deferred_probe_work_func+0x120/0x168
-[    4.918387]        process_one_work+0x858/0x1208
-[    4.923000]        worker_thread+0x9ec/0xcb8
-[    4.927264]        kthread+0x2b8/0x2d0
-[    4.931009]        ret_from_fork+0x10/0x18
-[    4.935098]
-[    4.935098] -> #2 (dpm_list_mtx){+.+.}:
-[    4.940412]        __mutex_lock_common+0x1a0/0x1fe8
-[    4.945284]        mutex_lock_nested+0x40/0x50
-[    4.949722]        device_pm_lock+0x1c/0x24
-[    4.953900]        device_link_add+0x98/0x8d0
-[    4.958252]        _regulator_get+0x3f0/0x504
-[    4.962606]        _devm_regulator_get+0x58/0xb8
-[    4.967218]        devm_regulator_get+0x28/0x34
-[    4.971746]        pwm_backlight_probe+0x61c/0x1b90
-[    4.976617]        platform_drv_probe+0xf4/0x134
-[    4.981230]        really_probe+0x214/0x4dc
-[    4.985409]        driver_probe_device+0xcc/0x1d4
-[    4.990108]        device_driver_attach+0xe4/0x104
-[    4.994894]        __driver_attach+0x134/0x14c
-[    4.999333]        bus_for_each_dev+0x120/0x180
-[    5.003859]        driver_attach+0x48/0x54
-[    5.007950]        bus_add_driver+0x2ac/0x44c
-[    5.012303]        driver_register+0x160/0x288
-[    5.016742]        __platform_driver_register+0xcc/0xdc
-[    5.021964]        pwm_backlight_driver_init+0x1c/0x24
-[    5.027097]        do_one_initcall+0x38c/0x994
-[    5.031536]        do_initcall_level+0x3a4/0x4b8
-[    5.036148]        do_basic_setup+0x84/0xa0
-[    5.036153]        kernel_init_freeable+0x23c/0x324
-[    5.036158]        kernel_init+0x14/0x110
-[    5.036164]        ret_from_fork+0x10/0x18
-[    5.036166]
-[    5.036166] -> #1 (device_links_lock){+.+.}:
-[    5.065905]        __mutex_lock_common+0x1a0/0x1fe8
-[    5.070777]        mutex_lock_nested+0x40/0x50
-[    5.075215]        device_link_remove+0x40/0xe0
-[    5.079740]        _regulator_put+0x104/0x2d8
-[    5.084093]        regulator_put+0x30/0x44
-[    5.088184]        devm_regulator_release+0x38/0x44
-[    5.093056]        release_nodes+0x604/0x670
-[    5.097320]        devres_release_all+0x70/0x8c
-[    5.101846]        really_probe+0x270/0x4dc
-[    5.106024]        driver_probe_device+0xcc/0x1d4
-[    5.110724]        device_driver_attach+0xe4/0x104
-[    5.115510]        __driver_attach+0x134/0x14c
-[    5.119949]        bus_for_each_dev+0x120/0x180
-[    5.124474]        driver_attach+0x48/0x54
-[    5.128566]        bus_add_driver+0x2ac/0x44c
-[    5.132919]        driver_register+0x160/0x288
-[    5.137357]        __platform_driver_register+0xcc/0xdc
-[    5.142576]        pwm_backlight_driver_init+0x1c/0x24
-[    5.147708]        do_one_initcall+0x38c/0x994
-[    5.152146]        do_initcall_level+0x3a4/0x4b8
-[    5.156758]        do_basic_setup+0x84/0xa0
-[    5.160936]        kernel_init_freeable+0x23c/0x324
-[    5.165807]        kernel_init+0x14/0x110
-[    5.169813]        ret_from_fork+0x10/0x18
-[    5.173901]
-[    5.173901] -> #0 (regulator_list_mutex){+.+.}:
-[    5.179910]        lock_acquire+0x350/0x4d4
-[    5.184088]        __mutex_lock_common+0x1a0/0x1fe8
-[    5.184095]        mutex_lock_nested+0x40/0x50
-[    5.197475]        regulator_lock_dependent+0xdc/0x6c4
-[    5.197482]        regulator_disable+0xa0/0x138
-[    5.197487]        scpsys_power_off+0x38c/0x4bc
-[    5.197495]        genpd_power_off+0x3d8/0x6a0
-[    5.209399]        genpd_power_off+0x530/0x6a0
-[    5.209406]        genpd_power_off_work_fn+0x74/0xc0
-[    5.209411]        process_one_work+0x858/0x1208
-[    5.209419]        worker_thread+0x9ec/0xcb8
-[    5.219067]        kthread+0x2b8/0x2d0
-[    5.219073]        ret_from_fork+0x10/0x18
-[    5.219077]
-[    5.219077] other info that might help us debug this:
-[    5.219077]
-[    5.219080] Chain exists of:
-[    5.219080]   regulator_list_mutex --> &genpd->mlock --> &genpd->mlock/1
-[    5.219080]
-[    5.228039]  Possible unsafe locking scenario:
-[    5.228039]
-[    5.228042]        CPU0                    CPU1
-[    5.228046]        ----                    ----
-[    5.228048]   lock(&genpd->mlock/1);
-[    5.228058]                                lock(&genpd->mlock);
-[    5.311647]                                lock(&genpd->mlock/1);
-[    5.317736]   lock(regulator_list_mutex);
-[    5.321742]
-[    5.321742]  *** DEADLOCK ***
-[    5.321742]
-[    5.327655] 4 locks held by kworker/4:1/51:
-[    5.331831]  #0: (____ptrval____) ((wq_completion)pm){+.+.},
-at:process_one_work+0x57c/0x1208
-[    5.340444]  #1: (____ptrval____)
-((work_completion)(&genpd->power_off_work)){+.+.},
-at:process_one_work+0x5b8/0x1208
-[    5.351139]  #2: (____ptrval____) (&genpd->mlock){+.+.},
-at:genpd_lock_mtx+0x20/0x2c
-[    5.358970]  #3: (____ptrval____) (&genpd->mlock/1){+.+.},
-at:genpd_lock_nested_mtx+0x24/0x30
-[    5.367584]
-[    5.367584] stack backtrace:
-[    5.371939] CPU: 4 PID: 51 Comm: kworker/4:1 Tainted: G S
-     5.2.0-rc2-next-20190528-44527-g6c94b6475c04 #20
-[    5.382809] Workqueue: pm genpd_power_off_work_fn
-[    5.382816] Call trace:
-[    5.382822]  dump_backtrace+0x0/0x2c0
-[    5.382830]  show_stack+0x20/0x2c
-[    5.409174]  dump_stack+0x10c/0x17c
-[    5.412659]  print_circular_bug+0x42c/0x4d0
-[    5.416838]  __lock_acquire+0x4c88/0x5484
-[    5.420843]  lock_acquire+0x350/0x4d4
-[    5.424500]  __mutex_lock_common+0x1a0/0x1fe8
-[    5.428851]  mutex_lock_nested+0x40/0x50
-[    5.432770]  regulator_lock_dependent+0xdc/0x6c4
-[    5.437383]  regulator_disable+0xa0/0x138
-[    5.441389]  scpsys_power_off+0x38c/0x4bc
-[    5.445393]  genpd_power_off+0x3d8/0x6a0
-[    5.449310]  genpd_power_off+0x530/0x6a0
-[    5.453229]  genpd_power_off_work_fn+0x74/0xc0
-[    5.457667]  process_one_work+0x858/0x1208
-[    5.461758]  worker_thread+0x9ec/0xcb8
-[    5.465503]  kthread+0x2b8/0x2d0
-[    5.468727]  ret_from_fork+0x10/0x18
-
-On Mon, Jun 10, 2019 at 8:21 PM Yong Wu <yong.wu@mediatek.com> wrote:
-> ...
-> +       } else {
-> +               res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> +               common->base = devm_ioremap_resource(dev, res);
-> +               if (IS_ERR(common->base))
-> +                       return PTR_ERR(common->base);
->         }
->         pm_runtime_enable(dev);
->         platform_set_drvdata(pdev, common);
+-- 
+Daniel Vetter
+Software Engineer, Intel Corporation
+http://blog.ffwll.ch
 
 _______________________________________________
 Linux-mediatek mailing list
