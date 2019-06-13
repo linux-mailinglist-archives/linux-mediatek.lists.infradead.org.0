@@ -2,88 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D212E4327A
-	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 06:09:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C209432F6
+	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 08:32:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1mmchy0cgqryJH8VCBt9FA86HAeeF0eRDRQyWLl2z2k=; b=YGiNMGdN+4x4qM
-	ZgBCb1Pk5i7lK4gVHuVlVmA31jhQacBjpPTcxzhMQ+TcaEo+eNTfkCpP9B/MpupWnez4KHzeTbT+i
-	PuU/Xo5GjaWlKr+4C8wmtYTd7YD6Qvc+4QtH2zggOzuNIc4ooO4Yf9RPID5GVMBz1fozIRgW7xPvr
-	L37+viQexaPh4ErcoIvclXYvzD3E1FKhDQ5wAMus0yhInzTMxj9yFPeyFR2JVBVonkTOFmp4c+IpA
-	qywsQBjmK4agzh/kUvmxfjjiavAVRUDqm/k9ialnTcv+pVVcSrcVWrJrUv+jxp0NFrK/ZnEjg1mEX
-	oO5lJDR2RBp66QYT+o2Q==;
+	List-Owner; bh=DAfdbUEgC4G7D6U6H+aG/LNtLYEkYMplsH364Uw5s+s=; b=k4EK3ytcpCrsPm
+	KkHTRjnYr6zFeB23g67A5i2Cnm89pFYxt5QlowtomhcdsciOtyYbcLNJoi8LQw8d/2g1Cc9PjRXvM
+	K3uRp8t6lkorZKXo6MG+8fqwTp/GvNtFESTvI4mR42aRplWZPWxWxuBfbxIgN8xNp9SZDk+Pkou+Q
+	G2kDn+CYd77YWop0WOyd7upbvE7//4/mTgXVx86PmYnGdWlMg3Qaouw2wGSMJIXLYplf87ksg5fZ+
+	3RN/pcLWCREkgDHcaQtIqkH1jlodKNkMTHpoNC90GtX20wDY3g2WJ8HrLqc12lRD18d63mf6tbbSZ
+	/V08oLgs85iiO9bqeKdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbH3O-0007nE-8b; Thu, 13 Jun 2019 04:09:34 +0000
-Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
+	id 1hbJHD-0004c4-Id; Thu, 13 Jun 2019 06:31:59 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbH1i-0006Bj-FX
- for linux-mediatek@lists.infradead.org; Thu, 13 Jun 2019 04:07:54 +0000
-Received: by mail-pg1-x541.google.com with SMTP id v11so10122695pgl.5
- for <linux-mediatek@lists.infradead.org>; Wed, 12 Jun 2019 21:07:50 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=lfGAIiirWl0nq0xQZNMDSMKFfgaKJNsts8bTk+SJ4Kc=;
- b=kIpFm8Uc3gMN7cY/f4FOgPfIeA/9vYsgAIqeb8GD6KvPMC2lWIZKOD6s2OQbP4fw0U
- 8AAVUUUiKsgfEoRwZRyQc7YeuxBcsWkB5ZmmTWNWMKl00ONQz6jkp53/jq0UtSOcWRCf
- S+EMJdIuhtotXqDbY2dYGqhPIP3hkQ6oE+dVk=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=lfGAIiirWl0nq0xQZNMDSMKFfgaKJNsts8bTk+SJ4Kc=;
- b=CzhOi42JKWcF6zQGfVTBobFE9q2MszyUYHuZEmVgqTsSPMXckYhWTs+YhXP5vW6akS
- x+rsUkZXw19ljnerg1M/F2QfPFJAycAHC+jgRFf1UOqpGz+v6sBdNUY4ii5b4jCUh/dW
- pV11hFiR0VWc0SobEBHe61yFpUxNM5ZLbFavtvcMtxdmDth7dUqUBKss4A9R+uOQii7p
- 8iv+QzQjkCsiveivDn/lXVNWf7bwNhWTGDuwjWp8rHPkNm5whWJtIl/XlCssJp7UBeT6
- MkOtADFlBDbgQ43aXlfVgrHwmqGMM1xN4rNnIewcF10hvCVdo6I1aLOHVWlSLBMPPMlV
- Pdqw==
-X-Gm-Message-State: APjAAAXHH+IVNBDBNfcFp+vnwWa+6wxGjovrnZpjqSWJforHpCiWWZWj
- 9gscW2spuuPLQYnZkhiqhEA0sA==
-X-Google-Smtp-Source: APXvYqzA8cwBTsrR0gt9uDW70cCt1Y7F0MO9epqJK78JcRhYLfxAGcVRCaUHubB2xwG8abq4iqMeZQ==
-X-Received: by 2002:a17:90a:a601:: with SMTP id
- c1mr2704985pjq.24.1560398869389; 
- Wed, 12 Jun 2019 21:07:49 -0700 (PDT)
-Received: from pihsun-z840.tpe.corp.google.com
- ([2401:fa00:1:10:7889:7a43:f899:134c])
- by smtp.googlemail.com with ESMTPSA id a13sm956849pgh.6.2019.06.12.21.07.47
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 12 Jun 2019 21:07:48 -0700 (PDT)
-From: Pi-Hsun Shih <pihsun@chromium.org>
-To: 
-Subject: [PATCH v11 5/5] arm64: dts: mt8183: add scp node
-Date: Thu, 13 Jun 2019 12:06:52 +0800
-Message-Id: <20190613040708.97488-6-pihsun@chromium.org>
-X-Mailer: git-send-email 2.22.0.rc2.383.gf4fbbf30c2-goog
-In-Reply-To: <20190613040708.97488-1-pihsun@chromium.org>
-References: <20190613040708.97488-1-pihsun@chromium.org>
+ id 1hbJH9-0004bh-Mb
+ for linux-mediatek@lists.infradead.org; Thu, 13 Jun 2019 06:31:57 +0000
+X-UUID: 1c35bca4e48a4930b5a21be98ccace2e-20190612
+X-UUID: 1c35bca4e48a4930b5a21be98ccace2e-20190612
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 650596203; Wed, 12 Jun 2019 22:31:23 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 12 Jun 2019 23:31:21 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 13 Jun 2019 14:31:19 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 13 Jun 2019 14:31:18 +0800
+Message-ID: <1560407478.7597.5.camel@mtksdaap41>
+Subject: Re: [GIT,PULL] mediatek drm fixes for 5.2
+From: CK Hu <ck.hu@mediatek.com>
+To: Daniel Vetter <daniel@ffwll.ch>
+Date: Thu, 13 Jun 2019 14:31:18 +0800
+In-Reply-To: <20190612162538.GA8035@phenom.ffwll.local>
+References: <1560325868.3259.6.camel@mtksdaap41>
+ <20190612162538.GA8035@phenom.ffwll.local>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_210750_605289_6B163600 
-X-CRM114-Status: GOOD (  10.00  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190612_233155_743119_DC10A6AC 
+X-CRM114-Status: GOOD (  15.31  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -95,88 +72,95 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Erin Lo <erin.lo@mediatek.com>,
- open list <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Pi-Hsun Shih <pihsun@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Eddie Huang <eddie.huang@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: dri-devel@lists.freedesktop.org, linux-mediatek@lists.infradead.org,
+ Yongqiang Niu <yongqiang.niu@mediatek.com>, Hsin-Yi Wang <hsinyi@chromium.org>,
+ Daniel Vetter <daniel.vetter@intel.com>, Dave Airlie <airlied@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Eddie Huang <eddie.huang@mediatek.com>
+Hi, Daniel:
 
-Add scp node to mt8183 and mt8183-evb
+On Wed, 2019-06-12 at 18:25 +0200, Daniel Vetter wrote:
+> On Wed, Jun 12, 2019 at 03:51:08PM +0800, CK Hu wrote:
+> > Hi Dave, Daniel:
+> > 
+> > This include unbind error fix, clock control flow refinement, and PRIME
+> > mmap with page offset.
+> > 
+> > Regards,
+> > CK
+> > 
+> > The following changes since commit
+> > a188339ca5a396acc588e5851ed7e19f66b0ebd9:
+> > 
+> >   Linux 5.2-rc1 (2019-05-19 15:47:09 -0700)
+> > 
+> > are available in the Git repository at:
+> > 
+> >   https://github.com/ckhu-mediatek/linux.git-tags.git
+> > mediatek-drm-fixes-5.2
+> 
+> For next time around, please make this a signed annotated tag. annotated
+> because then it's less typing for me, and signed because it's on a server
+> we don't necessarily trust.
 
-Signed-off-by: Erin Lo <erin.lo@mediatek.com>
-Signed-off-by: Pi-Hsun Shih <pihsun@chromium.org>
-Signed-off-by: Eddie Huang <eddie.huang@mediatek.com>
----
-Changes from v10:
- - No change.
+OK, I'd make a signed annotated tag in next time.
 
-Changes from v9:
- - Remove extra reserve-memory-vpu_share node.
+> 
+> > 
+> > for you to fetch changes up to 2458d9d6d94be982b917e93c61a89b4426f32e31:
+> > 
+> >   drm/mediatek: call mtk_dsi_stop() after mtk_drm_crtc_atomic_disable()
+> > (2019-06-04 09:54:42 +0800)
+> > 
+> > ----------------------------------------------------------------
+> > Hsin-Yi Wang (5):
+> >       drm/mediatek: fix unbind functions
+> >       drm/mediatek: unbind components in mtk_drm_unbind()
+> >       drm/mediatek: call drm_atomic_helper_shutdown() when unbinding
+> > driver
+> >       drm/mediatek: clear num_pipes when unbind driver
+> >       drm/mediatek: call mtk_dsi_stop() after
+> > mtk_drm_crtc_atomic_disable()
+> > 
+> > Yongqiang Niu (2):
+> >       drm/mediatek: adjust ddp clock control flow
+> >       drm/mediatek: respect page offset for PRIME mmap calls
+> 
+> You might want to look into all the recently added helpers for mmap, I
+> don't think mtk does anything special here.
 
-Changes from v8:
- - New patch.
----
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 11 +++++++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 12 ++++++++++++
- 2 files changed, 23 insertions(+)
+If you mean using drm_gem_prime_mmap as the implementation of
+drm_driver->gem_prime_mmap, I think we have discussed in [1] that
+mediatek drm still need its own implementation.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-index d8e555cbb5d3..e46e34ce3159 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-@@ -24,6 +24,17 @@
- 	chosen {
- 		stdout-path = "serial0:921600n8";
- 	};
-+
-+	reserved-memory {
-+		#address-cells = <2>;
-+		#size-cells = <2>;
-+		ranges;
-+		scp_mem_reserved: scp_mem_region {
-+			compatible = "shared-dma-pool";
-+			reg = <0 0x50000000 0 0x2900000>;
-+			no-map;
-+		};
-+	};
- };
- 
- &auxadc {
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index c2749c4631bc..133146b52904 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -254,6 +254,18 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		scp: scp@10500000 {
-+			compatible = "mediatek,mt8183-scp";
-+			reg = <0 0x10500000 0 0x80000>,
-+			      <0 0x105c0000 0 0x5000>;
-+			reg-names = "sram", "cfg";
-+			interrupts = <GIC_SPI 174 IRQ_TYPE_LEVEL_HIGH>;
-+			clocks = <&infracfg CLK_INFRA_SCPSYS>;
-+			clock-names = "main";
-+			memory-region = <&scp_mem_reserved>;
-+			status = "disabled";
-+		};
-+
- 		auxadc: auxadc@11001000 {
- 			compatible = "mediatek,mt8183-auxadc",
- 				     "mediatek,mt8173-auxadc";
--- 
-2.22.0.rc2.383.gf4fbbf30c2-goog
+[1] https://patchwork.kernel.org/patch/10657007/
+
+Regards,
+CK
+
+> 
+> 
+> > 
+> >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 30
+> > ++++++------------------------
+> >  drivers/gpu/drm/mediatek/mtk_drm_drv.c  |  8 +++-----
+> >  drivers/gpu/drm/mediatek/mtk_drm_gem.c  |  7 ++++++-
+> >  drivers/gpu/drm/mediatek/mtk_dsi.c      | 12 +++++++++++-
+> >  4 files changed, 26 insertions(+), 31 deletions(-)
+> 
+> Pulled, thanks.
+> -Daniel
+> 
+> > 
+> > _______________________________________________
+> > dri-devel mailing list
+> > dri-devel@lists.freedesktop.org
+> > https://lists.freedesktop.org/mailman/listinfo/dri-devel
+> 
+
 
 
 _______________________________________________
