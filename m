@@ -2,71 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 759D643613
-	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 14:52:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE5CF4363A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Jun 2019 15:05:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kYXab80ssjQIbA3I3VIz0IBbww/7x07yxtwqNdrZ3D4=; b=tY7YGUAyppzdrZ
-	rXyz3dvNbMmEmWXKjnjrCphFs0eZOjPOlNKrBLRwRAFw+wC7GCQL0ABbTEiGB25KNNAVizYlybprT
-	2LhPxhZ/8fLYtKqbbgvQh7+J2S7apQerMmn1IjuBHYfOuD7Xk+XJECLnCAiZNkbDiDC3H0gTNC7Ol
-	XVjRkn+CIxpfkFB8/2j4cZvRKEtsI9MJwD+t9FSnjheFVfEDMMoXgtO5lnGnLQfzPFumXhxi62TAd
-	T9f9oIMFUwpj8H9IMMibx4oEiqUzQGlckSnynocYg+mpOzyI+L8BYHRZsFME/2HO+593+bc2e4x1q
-	3nwhVOtxgxJeXebCqB+w==;
+	List-Owner; bh=8P8zJhDsd11i3q52h4FAf/jfOOBSmtKB/klz3eMo+dM=; b=TFpPCQ2ESrFjYX
+	a8w3kZ7BZrC+FReHGfdAt3D4PUeTKnKdqEBv+PqLnm4us2ktrf2CbiqizhXTRMdm23CKblzWKJQcS
+	1OIX/M6uoog7iPHAgaCuGdu6BNY/cRFu9HNpVtz/i8mbyh5oYaqOT6MNR1QQ//cf3DZrYg2+Wb06t
+	IBsF4dRoQpFyYh3BMhp/RIlaOrnmYUb5eVN7bWl+zbD2nqOAsZdo7VXKz09kPDNqTeprZspgG+xMT
+	bOzvkpsD8o5oVKz2KkpbThapueFifot3dlVTd7+hgS4j657kL4UEc2sv4BWjS9mmi8vA9g0+7Dy12
+	RJEz74/KN6jhjtYRQTKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbPDP-00059v-EG; Thu, 13 Jun 2019 12:52:27 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hbPQF-00038q-3n; Thu, 13 Jun 2019 13:05:43 +0000
+Received: from mail-io1-xd43.google.com ([2607:f8b0:4864:20::d43])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbPD5-0004wR-Ri; Thu, 13 Jun 2019 12:52:09 +0000
-Received: from mail-qt1-f181.google.com (mail-qt1-f181.google.com
- [209.85.160.181])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 8CEE3217F9;
- Thu, 13 Jun 2019 12:52:05 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1560430325;
- bh=hGTL0UDB9YcWjm74Ir6wQQkX+JwdFyiJOCXF2M+5evU=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=wTbq5CEloa5SHhkjgeBYGYhL8+3cX1A9KNfN+w4wcEsou4uoK3R8GYYknSIbC0XIw
- yMulQoFX7Op9+tmF1uisRQ1zdrMdT6oHMrM5jwVwc6ZR0HX/6KT6sJuFaqhby7RTL4
- hoqPqr8M2vylF39fcb7bXFgXZLZDkOMCY3ZSYu+A=
-Received: by mail-qt1-f181.google.com with SMTP id x47so22311519qtk.11;
- Thu, 13 Jun 2019 05:52:05 -0700 (PDT)
-X-Gm-Message-State: APjAAAVFpVhI9CpQLtZIRpiLcR2ytijYgjBR1muM+/NgEfLISBdHD25/
- rXztghjvdo9cRKlUYz6823rD00D5ZjBdOVzjWQ==
-X-Google-Smtp-Source: APXvYqyQSf3AAUre27+KCK29BAV13oivw2pUie02NLqVC7Y0PandMlDUCad0+vn9k1QO92NFUsbnlgd0BItkrNEdFVo=
-X-Received: by 2002:a0c:b786:: with SMTP id l6mr3426471qve.148.1560430324645; 
- Thu, 13 Jun 2019 05:52:04 -0700 (PDT)
+ id 1hbPPv-0002tV-Pl
+ for linux-mediatek@lists.infradead.org; Thu, 13 Jun 2019 13:05:25 +0000
+Received: by mail-io1-xd43.google.com with SMTP id k13so16651891iop.5
+ for <linux-mediatek@lists.infradead.org>; Thu, 13 Jun 2019 06:05:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=COMq1DZp1tUFDOVJCz+Oc5oRle5W+TVy2bbvRpSIdF4=;
+ b=qc01olia4cmwrnoPTe2ZFrmw8g/xeegnMkBjI6b5n3TIdaetazObaCuOVxxJGxztfx
+ UWxdZDvZDFYmTfiHnlGPUNiNlz24GdHLSttZMTJdYvj6tFmu3BtHAev5gqLNhXvSPYnM
+ NsXWoj0lkbckrxBeZEJgG5KoxPDrFhBmupApL0hfeJS3hCMIKbbkjYDoZCw2sNnAkwZQ
+ 6cKSZeJReF8wUT0bqEHGB7mByLnj/TeKWcvCjWas4NwnEgzQpNFuh3wA5GgvZBs88li2
+ oNEgWYm244rN1o23TzoBUZ+n2kFqLpUW00bU/764tbCeMtdqKf/ChMz/FSj1569Oj9Ra
+ UQvg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=COMq1DZp1tUFDOVJCz+Oc5oRle5W+TVy2bbvRpSIdF4=;
+ b=BjUBiLSZn0B4+Pr4+r/6OQoH9TX2cBUurPpDzzXpIT8y3SwTVj/ffMFsMtMbUMGDh4
+ sZ0IEwyrMiznhtFlC36EhifkNIkDELD8w05Jcaikr2ICwLHPoSHIDQKx6++IMJ9o6+1H
+ DTRgwRBgzrorseC2mO46Fon8Z+Y4z8aiRsf55hNi4KFt6+/u2zmK3H9hG0uZJuBfdoRE
+ PztgsTBibb90voK45EVcDFRCRf45uDpTJ6A9SeFh7oKJ61w1XPGL+AQFPssa/sFyedX/
+ rfO8W61IArUHpIJJN3/2qKofMTXnKQB9HfXbUjH79NRw2z0WxIq3uoJGblpeAHKb3oGu
+ iGug==
+X-Gm-Message-State: APjAAAVda+yKvzExRkU/8KkuIkaQeIk6dsBdmF5vXTgGiIgEYmf8FYma
+ hLypBsfqAGLd3el8GtRTHgyiuJkE8CFZEvlJEfaO/A==
+X-Google-Smtp-Source: APXvYqx+Wyo9dQ01vmbb1QVMUlNB4LxKek/Z4JsplxvhFxRKIXJWRUTg5jAa3SaPJ4zJ8mK/k/T7Pj1+pIKN6neeKaQ=
+X-Received: by 2002:a5d:80d6:: with SMTP id h22mr6100497ior.231.1560431115386; 
+ Thu, 13 Jun 2019 06:05:15 -0700 (PDT)
 MIME-Version: 1.0
-References: <20190611040350.90064-1-dbasehore@chromium.org>
- <20190611040350.90064-3-dbasehore@chromium.org>
- <CAL_JsqLM1CikZ8+NPjLk2CEW-z9vPynZpVG20x0jsa7hVq0LvA@mail.gmail.com>
- <CAGAzgsoWGqf0JQPNyRFnv2xZTMxje6idce7Dy5FZzuxj30mQyw@mail.gmail.com>
-In-Reply-To: <CAGAzgsoWGqf0JQPNyRFnv2xZTMxje6idce7Dy5FZzuxj30mQyw@mail.gmail.com>
-From: Rob Herring <robh+dt@kernel.org>
-Date: Thu, 13 Jun 2019 06:51:52 -0600
-X-Gmail-Original-Message-ID: <CAL_Jsq+9K764hFT6GG=4paumGaxOUbnts4VJvTZ9a8Y-YPWdhg@mail.gmail.com>
-Message-ID: <CAL_Jsq+9K764hFT6GG=4paumGaxOUbnts4VJvTZ9a8Y-YPWdhg@mail.gmail.com>
-Subject: Re: [PATCH 2/5] dt-bindings: display/panel: Expand rotation
- documentation
-To: "dbasehore ." <dbasehore@chromium.org>
+References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
+ <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
+In-Reply-To: <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
+From: Dmitry Vyukov <dvyukov@google.com>
+Date: Thu, 13 Jun 2019 15:05:04 +0200
+Message-ID: <CACT4Y+ZGEmGE2LFmRfPGgtUGwBqyL+s_CSp5DCpWGanTJCRcXw@mail.gmail.com>
+Subject: Re: [PATCH v3] kasan: add memory corruption identification for
+ software tag-based mode
+To: Andrey Ryabinin <aryabinin@virtuozzo.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_055207_930038_7DA6B0D9 
-X-CRM114-Status: GOOD (  24.80  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190613_060523_848614_19439843 
+X-CRM114-Status: GOOD (  14.43  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:d43 listed in]
+ [list.dnswl.org]
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -74,7 +84,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- 0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match 0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,103 +97,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Sean Paul <sean@poorly.run>, Intel Graphics <intel-gfx@lists.freedesktop.org>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Jani Nikula <jani.nikula@linux.intel.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- dri-devel <dri-devel@lists.freedesktop.org>, Daniel Vetter <daniel@ffwll.ch>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>, CK Hu <ck.hu@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Sam Ravnborg <sam@ravnborg.org>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: wsd_upstream <wsd_upstream@mediatek.com>,
+ Walter Wu <walter-zh.wu@mediatek.com>, Vasily Gorbik <gor@linux.ibm.com>,
+ Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
+ Andrey Konovalov <andreyknvl@google.com>,
+ "Jason A . Donenfeld" <Jason@zx2c4.com>,
+ kasan-dev <kasan-dev@googlegroups.com>, LKML <linux-kernel@vger.kernel.org>,
+ Pekka Enberg <penberg@kernel.org>, Martin Schwidefsky <schwidefsky@de.ibm.com>,
+ Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Joonsoo Kim <iamjoonsoo.kim@lge.com>, Christoph Lameter <cl@linux.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jun 11, 2019 at 4:02 PM dbasehore . <dbasehore@chromium.org> wrote:
->
-> On Tue, Jun 11, 2019 at 8:25 AM Rob Herring <robh+dt@kernel.org> wrote:
+On Thu, Jun 13, 2019 at 2:27 PM Andrey Ryabinin <aryabinin@virtuozzo.com> wrote:
+> On 6/13/19 11:13 AM, Walter Wu wrote:
+> > This patch adds memory corruption identification at bug report for
+> > software tag-based mode, the report show whether it is "use-after-free"
+> > or "out-of-bound" error instead of "invalid-access" error.This will make
+> > it easier for programmers to see the memory corruption problem.
 > >
-> > On Mon, Jun 10, 2019 at 10:03 PM Derek Basehore <dbasehore@chromium.org> wrote:
-> > >
-> > > This adds to the rotation documentation to explain how drivers should
-> > > use the property and gives an example of the property in a devicetree
-> > > node.
-> > >
-> > > Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> > > ---
-> > >  .../bindings/display/panel/panel.txt          | 32 +++++++++++++++++++
-> > >  1 file changed, 32 insertions(+)
-> > >
-> > > diff --git a/Documentation/devicetree/bindings/display/panel/panel.txt b/Documentation/devicetree/bindings/display/panel/panel.txt
-> > > index e2e6867852b8..f35d62d933fc 100644
-> > > --- a/Documentation/devicetree/bindings/display/panel/panel.txt
-> > > +++ b/Documentation/devicetree/bindings/display/panel/panel.txt
-> > > @@ -2,3 +2,35 @@ Common display properties
-> > >  -------------------------
-> > >
-> > >  - rotation:    Display rotation in degrees counter clockwise (0,90,180,270)
-> > > +
-> > > +Property read from the device tree using of of_drm_get_panel_orientation
+> > Now we extend the quarantine to support both generic and tag-based kasan.
+> > For tag-based kasan, the quarantine stores only freed object information
+> > to check if an object is freed recently. When tag-based kasan reports an
+> > error, we can check if the tagged addr is in the quarantine and make a
+> > good guess if the object is more like "use-after-free" or "out-of-bound".
 > >
-> > Don't put kernel specifics into bindings.
 >
-> Will remove that. I'll clean up the documentation to indicate that
-> this binding creates a panel orientation property unless the rotation
-> is handled in the Timing Controller on the panel if that sounds fine.
-
-Even if the timing ctrlr handles it, don't you still need to know what
-the native orientation is?
-
-> > > +
-> > > +The panel driver may apply the rotation at the TCON level, which will
-> >
-> > What's TCON? Something Mediatek specific IIRC.
 >
-> The TCON is the Timing controller, which is on the panel. Every panel
-> has one. I'll add to the doc that the TCON is in the panel, etc.
+> We already have all the information and don't need the quarantine to make such guess.
+> Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
+> otherwise it's use-after-free.
 >
-> >
-> > > +make the panel look like it isn't rotated to the kernel and any other
-> > > +software.
-> > > +
-> > > +If not, a panel orientation property should be added through the SoC
-> > > +vendor DRM code using the drm_connector_init_panel_orientation_property
-> > > +function.
-> >
-> > The 'rotation' property should be defined purely based on how the
-> > panel is mounted relative to a device's orientation. If the display
-> > pipeline has some ability to handle rotation, that's a feature of the
-> > display pipeline and not the panel.
+> In pseudo-code it's something like this:
 >
-> This is how the panel orientation property is already handled in the
-> kernel. See drivers/gpu/drm/i915/vlv_dsi.c for more details.
-
-The point is your description is all about the kernel. This is a
-binding which is not kernel specific.
-
-> > > +
-> > > +Example:
-> >
-> > This file is a collection of common properties. It shouldn't have an
-> > example especially as this example is mostly non-common properties.
+> u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
 >
-> Just copied one of our DTS entries that uses the property. I'll remove
-> everything under compatible except for rotation and status.
+> if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
+>         // out-of-bounds
+> else
+>         // use-after-free
 
-Just remove the example or add what you want to the "boe,himax8279d8p"
-binding doc. We are moving towards examples being compiled and
-validated, so incomplete ones won't work.
-
-Rob
+But we don't have redzones in tag mode (intentionally), so unless I am
+missing something we don't have the necessary info. Both cases look
+the same -- we hit a different tag.
+There may only be a small trailer for kmalloc-allocated objects that
+is painted with a different tag. I don't remember if we actually use a
+different tag for the trailer. Since tag mode granularity is 16 bytes,
+for smaller objects the trailer is impossible at all.
 
 _______________________________________________
 Linux-mediatek mailing list
