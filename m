@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D4F34532C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Jun 2019 05:56:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 840E4453A0
+	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Jun 2019 06:37:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qfjiKPHSeeipLyV8NNHnBcNxjHAjrOIlFXYdblrbohg=; b=fC33Kqqt4kTM/8
-	Kh+802EDBnuShSdMFwEyQQIyD7HwltGFmoE61xW2BTIam9Ig87O8oqns+oj7fSzbhN6/fMh+4+IC4
-	+4HQ8FeWNlO06ROZURVUurtUGDEQRFIm5nL1QejotdmEg3SlaHLVnIh9G/GSv0sP86DH4bFACN47y
-	gEqTjL7NTcBvUgF9tY+9u0nUrJdrYqYIlbZkcuoCrTZOGSjJfgcw9qdP+wHTj5HLHXJ9v//NuQ7vx
-	dXDPinVOBy6fxwuNdbjsf05b2rpf2MtM5ITWZR+9VRt/Jz+mAzr2jVW4GV3MnV6iwHwfPvSLu7EQk
-	iECfPqaJn0pzmsYDbXtg==;
+	List-Owner; bh=7y9WTBKafi4ITSZYhwGgUae9AEE9mQthn3OhNsayy4I=; b=pCCiVkqOuh4tkw
+	7RgECPzQP95bXA/jqyzLPwsy30PDimQDt20E5mm4Ggko+yu4KMPdEfzC+2VyuryeS3eO2rzxDKOWg
+	HahL/VDF6cHgHiGm9fc/iUj2SOR+U32yqR/Vg9+v8Mj4Tt2ubTXP7vns6Ai266/CPoQiWsvd4ZfiL
+	ZpLF3U1HRu06hyv3veIL0l7u5lFV0iQi4B8rEko3fLRGvcsmgBuBzhIt05gpgEbfhoYk7ZQ3xfu+Y
+	IQvFJlfNRA2JBPTKuyylR4Y2kXbaPv35JI2cKkbqXyFgHFYjKdhqdoo4M/fPi8w8HM9/G34PysxFG
+	2Nrxf27dH4TvE88UiElg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbdJt-0007vV-91; Fri, 14 Jun 2019 03:56:05 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hbdxU-0006IF-HB; Fri, 14 Jun 2019 04:37:00 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbdJa-0007iu-8W; Fri, 14 Jun 2019 03:55:47 +0000
-X-UUID: 0629c57f93db4e37ba28d490e2f31cf4-20190613
-X-UUID: 0629c57f93db4e37ba28d490e2f31cf4-20190613
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hbdxL-0006CF-6q; Fri, 14 Jun 2019 04:36:53 +0000
+X-UUID: 5ba741378f4043daa66697d4265a2d0a-20190613
+X-UUID: 5ba741378f4043daa66697d4265a2d0a-20190613
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1575407742; Thu, 13 Jun 2019 19:55:42 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 13 Jun 2019 20:55:40 -0700
+ with ESMTP id 1882556220; Thu, 13 Jun 2019 20:36:44 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 13 Jun 2019 21:36:42 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 14 Jun 2019 11:55:37 +0800
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 14 Jun 2019 12:36:40 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 14 Jun 2019 11:55:37 +0800
-Message-ID: <1560484537.16718.14.camel@mtksdaap41>
-Subject: Re: [PATCH v3, 15/27] drm/mediatek: add component OVL_2L1
+ Transport; Fri, 14 Jun 2019 12:36:39 +0800
+Message-ID: <1560486999.16718.15.camel@mtksdaap41>
+Subject: Re: [PATCH v3, 16/27] drm/mediatek: add component DITHER
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Fri, 14 Jun 2019 11:55:37 +0800
-In-Reply-To: <1559734986-7379-16-git-send-email-yongqiang.niu@mediatek.com>
+Date: Fri, 14 Jun 2019 12:36:39 +0800
+In-Reply-To: <1559734986-7379-17-git-send-email-yongqiang.niu@mediatek.com>
 References: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
- <1559734986-7379-16-git-send-email-yongqiang.niu@mediatek.com>
+ <1559734986-7379-17-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_205546_303812_9ECAD55D 
-X-CRM114-Status: GOOD (  11.98  )
+X-CRM114-CacheID: sfid-20190613_213651_255630_E4A21FD7 
+X-CRM114-Status: GOOD (  13.11  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -87,41 +87,108 @@ Hi, Yongqiang:
 On Wed, 2019-06-05 at 19:42 +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> This patch add component OVL_2L1
+> This patch add component DITHER
 
 Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
 > 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > ---
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 1 +
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h | 1 +
->  2 files changed, 2 insertions(+)
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 32 +++++++++++++++++++++++++++++
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  2 ++
+>  2 files changed, 34 insertions(+)
 > 
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> index 8094926..5a0ec0f 100644
+> index 5a0ec0f..989024d 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
 > +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> @@ -268,6 +268,7 @@ struct mtk_ddp_comp_match {
->  	[DDP_COMPONENT_OVL0]	= { MTK_DISP_OVL,	0, NULL },
->  	[DDP_COMPONENT_OVL1]	= { MTK_DISP_OVL,	1, NULL },
->  	[DDP_COMPONENT_OVL_2L0]	= { MTK_DISP_OVL_2L,	0, NULL },
-> +	[DDP_COMPONENT_OVL_2L1]	= { MTK_DISP_OVL_2L,	1, NULL },
->  	[DDP_COMPONENT_PWM0]	= { MTK_DISP_PWM,	0, NULL },
->  	[DDP_COMPONENT_PWM1]	= { MTK_DISP_PWM,	1, NULL },
->  	[DDP_COMPONENT_PWM2]	= { MTK_DISP_PWM,	2, NULL },
+> @@ -47,6 +47,12 @@
+>  #define CCORR_RELAY_MODE			BIT(0)
+>  #define DISP_CCORR_SIZE				0x0030
+>  
+> +#define DISP_DITHER_EN				0x0000
+> +#define DITHER_EN				BIT(0)
+> +#define DISP_DITHER_CFG				0x0020
+> +#define DITHER_RELAY_MODE			BIT(0)
+> +#define DISP_DITHER_SIZE			0x0030
+> +
+>  #define DISP_GAMMA_EN				0x0000
+>  #define DISP_GAMMA_CFG				0x0020
+>  #define DISP_GAMMA_SIZE				0x0030
+> @@ -155,6 +161,24 @@ static void mtk_ccorr_stop(struct mtk_ddp_comp *comp)
+>  	writel_relaxed(0x0, comp->regs + DISP_CCORR_EN);
+>  }
+>  
+> +static void mtk_dither_config(struct mtk_ddp_comp *comp, unsigned int w,
+> +			      unsigned int h, unsigned int vrefresh,
+> +			      unsigned int bpc)
+> +{
+> +	writel(h << 16 | w, comp->regs + DISP_DITHER_SIZE);
+> +	writel(DITHER_RELAY_MODE, comp->regs + DISP_DITHER_CFG);
+> +}
+> +
+> +static void mtk_dither_start(struct mtk_ddp_comp *comp)
+> +{
+> +	writel(DITHER_EN, comp->regs + DISP_DITHER_EN);
+> +}
+> +
+> +static void mtk_dither_stop(struct mtk_ddp_comp *comp)
+> +{
+> +	writel_relaxed(0x0, comp->regs + DISP_DITHER_EN);
+> +}
+> +
+>  static void mtk_gamma_config(struct mtk_ddp_comp *comp, unsigned int w,
+>  			     unsigned int h, unsigned int vrefresh,
+>  			     unsigned int bpc)
+> @@ -209,6 +233,12 @@ static void mtk_gamma_set(struct mtk_ddp_comp *comp,
+>  	.stop = mtk_ccorr_stop,
+>  };
+>  
+> +static const struct mtk_ddp_comp_funcs ddp_dither = {
+> +	.config = mtk_dither_config,
+> +	.start = mtk_dither_start,
+> +	.stop = mtk_dither_stop,
+> +};
+> +
+>  static const struct mtk_ddp_comp_funcs ddp_gamma = {
+>  	.gamma_set = mtk_gamma_set,
+>  	.config = mtk_gamma_config,
+> @@ -234,6 +264,7 @@ static void mtk_gamma_set(struct mtk_ddp_comp *comp,
+>  	[MTK_DISP_CCORR] = "ccorr",
+>  	[MTK_DISP_AAL] = "aal",
+>  	[MTK_DISP_GAMMA] = "gamma",
+> +	[MTK_DISP_DITHER] = "dither",
+>  	[MTK_DISP_UFOE] = "ufoe",
+>  	[MTK_DSI] = "dsi",
+>  	[MTK_DPI] = "dpi",
+> @@ -256,6 +287,7 @@ struct mtk_ddp_comp_match {
+>  	[DDP_COMPONENT_CCORR]	= { MTK_DISP_CCORR,	0, &ddp_ccorr },
+>  	[DDP_COMPONENT_COLOR0]	= { MTK_DISP_COLOR,	0, NULL },
+>  	[DDP_COMPONENT_COLOR1]	= { MTK_DISP_COLOR,	1, NULL },
+> +	[DDP_COMPONENT_DITHER]	= { MTK_DISP_DITHER,	0, &ddp_dither },
+>  	[DDP_COMPONENT_DPI0]	= { MTK_DPI,		0, NULL },
+>  	[DDP_COMPONENT_DPI1]	= { MTK_DPI,		1, NULL },
+>  	[DDP_COMPONENT_DSI0]	= { MTK_DSI,		0, NULL },
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> index a81c322..d7ef480 100644
+> index d7ef480..158c1e5 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
 > +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> @@ -60,6 +60,7 @@ enum mtk_ddp_comp_id {
->  	DDP_COMPONENT_OD1,
->  	DDP_COMPONENT_OVL0,
->  	DDP_COMPONENT_OVL_2L0,
-> +	DDP_COMPONENT_OVL_2L1,
->  	DDP_COMPONENT_OVL1,
->  	DDP_COMPONENT_PWM0,
->  	DDP_COMPONENT_PWM1,
+> @@ -30,6 +30,7 @@ enum mtk_ddp_comp_type {
+>  	MTK_DISP_WDMA,
+>  	MTK_DISP_COLOR,
+>  	MTK_DISP_CCORR,
+> +	MTK_DISP_DITHER,
+>  	MTK_DISP_AAL,
+>  	MTK_DISP_GAMMA,
+>  	MTK_DISP_UFOE,
+> @@ -49,6 +50,7 @@ enum mtk_ddp_comp_id {
+>  	DDP_COMPONENT_CCORR,
+>  	DDP_COMPONENT_COLOR0,
+>  	DDP_COMPONENT_COLOR1,
+> +	DDP_COMPONENT_DITHER,
+>  	DDP_COMPONENT_DPI0,
+>  	DDP_COMPONENT_DPI1,
+>  	DDP_COMPONENT_DSI0,
 
 
 
