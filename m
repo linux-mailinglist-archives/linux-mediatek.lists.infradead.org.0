@@ -2,58 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 99A70451C0
-	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Jun 2019 04:06:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E2140451DB
+	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Jun 2019 04:26:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WqBhor5oXYYsj2SC7p1unCUKSpsQ5ntkA9IQOuGysjg=; b=aPnfcakwc8U53N
-	ebHw/j2teUfhEMynjINiTqs5D0uaTBUR3aJ6NhLoREho2Lt9p1roWAy5lTYAEmnbIr8kWm/QTsPu5
-	i3ZPpvc1vl8ejIZgqlvoblfFSHfGtGmMkfbP3Ri2huzvFrP62a1kLLdHHD265pYu6RaURJUwMmrPa
-	QDPYcGxEIQvKQjr8MkAStRFPCKtN32dkiRVkNEIBF/QQ42fqFrHYniDhJrq+/A3rqZnwJA185wcri
-	B4cf4ze7mewiltsfkgKtxtDs0IuQzGeUSvBKtLkQKMK3/wMBYPmLaHz4cNOXEWk/hcVybXJQruAHG
-	tA+z+XN1mi0XZ4jGg3Yw==;
+	List-Owner; bh=Ik0ufb6FAElVcQDdjGxw7Kv5oNUK23bXhn141C0PIJ0=; b=qagq1XNoomisQd
+	Y5iVfLg13l6eOblJ2YVy6uuPhymwAnzBlLDj1J2KADtavt29OErNir6CaypE26xihfZykGilo3+9r
+	d1tHTnMdE7X97DnXQL3YkmvbTnyKP6I4dVe1TRMJCGmp9ZOvZaSghyr40Y42XOYHy6dfI7Upo7JGw
+	pE0ifiSHTcSFV7Ta8BqltMjrEKHRT5ZzL9EVDIcc2TGjSiMgdRPzaMDSHHXhuQfU0BOxmZyyi1qSk
+	6jSPYMhF6dEz/TEJts0y7imXktOJo7L0IbjMULFHwZaCTND5GHxEVHDaaUybc0CZmT0e+W33vCQYr
+	jmbWThm5TTnr5YX3aLMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbbbp-0001k3-KX; Fri, 14 Jun 2019 02:06:29 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hbbvT-0008Vi-MX; Fri, 14 Jun 2019 02:26:47 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbbbl-0001jR-HN
- for linux-mediatek@lists.infradead.org; Fri, 14 Jun 2019 02:06:27 +0000
-X-UUID: 7562c3a09b154e74848205d0b7813d05-20190613
-X-UUID: 7562c3a09b154e74848205d0b7813d05-20190613
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hbbvP-0008U9-Lk; Fri, 14 Jun 2019 02:26:45 +0000
+X-UUID: 3561f09de74a445e8e5be5cc9a036e37-20190613
+X-UUID: 3561f09de74a445e8e5be5cc9a036e37-20190613
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 588420665; Thu, 13 Jun 2019 18:06:15 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 13 Jun 2019 19:06:11 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 14 Jun 2019 10:06:02 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ with ESMTP id 689387322; Thu, 13 Jun 2019 18:26:37 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 13 Jun 2019 19:26:36 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 14 Jun 2019 10:26:34 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 14 Jun 2019 10:06:00 +0800
-Message-ID: <1560477960.4789.5.camel@mtksdaap41>
-Subject: Re: [GIT,PULL] mediatek drm fixes for 5.2
+ Transport; Fri, 14 Jun 2019 10:26:34 +0800
+Message-ID: <1560479194.16718.5.camel@mtksdaap41>
+Subject: Re: [PATCH v3, 10/27] drm/mediatek: split DISP_REG_CONFIG_DSI_SEL
+ setting into another use case
 From: CK Hu <ck.hu@mediatek.com>
-To: Daniel Vetter <daniel@ffwll.ch>
-Date: Fri, 14 Jun 2019 10:06:00 +0800
-In-Reply-To: <20190613082704.GI23020@phenom.ffwll.local>
-References: <1560325868.3259.6.camel@mtksdaap41>
- <20190612162538.GA8035@phenom.ffwll.local>
- <1560407478.7597.5.camel@mtksdaap41>
- <20190613082704.GI23020@phenom.ffwll.local>
+To: <yongqiang.niu@mediatek.com>, <bibby.hsieh@mediatek.com>
+Date: Fri, 14 Jun 2019 10:26:34 +0800
+In-Reply-To: <1559734986-7379-11-git-send-email-yongqiang.niu@mediatek.com>
+References: <1559734986-7379-1-git-send-email-yongqiang.niu@mediatek.com>
+ <1559734986-7379-11-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_190625_584199_ACB1168C 
-X-CRM114-Status: GOOD (  21.82  )
+X-CRM114-CacheID: sfid-20190613_192643_724851_A625CA43 
+X-CRM114-Status: GOOD (  15.11  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,118 +72,59 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: dri-devel@lists.freedesktop.org, linux-mediatek@lists.infradead.org,
- Yongqiang Niu <yongqiang.niu@mediatek.com>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Daniel Vetter <daniel.vetter@intel.com>, Dave Airlie <airlied@gmail.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2019-06-13 at 10:27 +0200, Daniel Vetter wrote:
-> On Thu, Jun 13, 2019 at 02:31:18PM +0800, CK Hu wrote:
-> > Hi, Daniel:
-> > 
-> > On Wed, 2019-06-12 at 18:25 +0200, Daniel Vetter wrote:
-> > > On Wed, Jun 12, 2019 at 03:51:08PM +0800, CK Hu wrote:
-> > > > Hi Dave, Daniel:
-> > > > 
-> > > > This include unbind error fix, clock control flow refinement, and PRIME
-> > > > mmap with page offset.
-> > > > 
-> > > > Regards,
-> > > > CK
-> > > > 
-> > > > The following changes since commit
-> > > > a188339ca5a396acc588e5851ed7e19f66b0ebd9:
-> > > > 
-> > > >   Linux 5.2-rc1 (2019-05-19 15:47:09 -0700)
-> > > > 
-> > > > are available in the Git repository at:
-> > > > 
-> > > >   https://github.com/ckhu-mediatek/linux.git-tags.git
-> > > > mediatek-drm-fixes-5.2
-> > > 
-> > > For next time around, please make this a signed annotated tag. annotated
-> > > because then it's less typing for me, and signed because it's on a server
-> > > we don't necessarily trust.
-> > 
-> > OK, I'd make a signed annotated tag in next time.
-> > 
-> > > 
-> > > > 
-> > > > for you to fetch changes up to 2458d9d6d94be982b917e93c61a89b4426f32e31:
-> > > > 
-> > > >   drm/mediatek: call mtk_dsi_stop() after mtk_drm_crtc_atomic_disable()
-> > > > (2019-06-04 09:54:42 +0800)
-> > > > 
-> > > > ----------------------------------------------------------------
-> > > > Hsin-Yi Wang (5):
-> > > >       drm/mediatek: fix unbind functions
-> > > >       drm/mediatek: unbind components in mtk_drm_unbind()
-> > > >       drm/mediatek: call drm_atomic_helper_shutdown() when unbinding
-> > > > driver
-> > > >       drm/mediatek: clear num_pipes when unbind driver
-> > > >       drm/mediatek: call mtk_dsi_stop() after
-> > > > mtk_drm_crtc_atomic_disable()
-> > > > 
-> > > > Yongqiang Niu (2):
-> > > >       drm/mediatek: adjust ddp clock control flow
-> > > >       drm/mediatek: respect page offset for PRIME mmap calls
-> > > 
-> > > You might want to look into all the recently added helpers for mmap, I
-> > > don't think mtk does anything special here.
-> > 
-> > If you mean using drm_gem_prime_mmap as the implementation of
-> > drm_driver->gem_prime_mmap, I think we have discussed in [1] that
-> > mediatek drm still need its own implementation.
-> > 
-> > [1] https://patchwork.kernel.org/patch/10657007/
-> 
-> Yeah for reusing the overall helpers that's clear, but
-> drm_gem_prime_gem_mmap should work for any gem based driver. It doesn't
-> require you to use specific helpers at all.
-> 
-> I'm wondering about this since I'm looking right now into this area, and
-> it looks like we could just make drm_gem_prime_mmap the default and rip
-> out all the custom driver implementations.
++Bibby:
 
-OK, I find that drm_gem_prime_mmap() call driver->fops->mmap(), so the
-customization could be done in driver->fops->mmap and let
-drm_driver.gem_prime_mmap to be drm_gem_prime_mmap. I would try to do
-so.
+Hi, Yongqiang:
+
+On Wed, 2019-06-05 at 19:42 +0800, yongqiang.niu@mediatek.com wrote:
+> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> 
+> Here is two modifition in this patch:
+> 1.bls->dpi0 and rdma1->dsi are differen usecase,
+> Split DISP_REG_CONFIG_DSI_SEL setting into anther usecase
+> 2.remove DISP_REG_CONFIG_DPI_SEL setting, DPI_SEL_IN_BLS is 0 and
+> this is same with hardware defautl setting,
+> 
+> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 3 +--
+>  1 file changed, 1 insertion(+), 2 deletions(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> index 717609d..1bbabe6 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> @@ -401,10 +401,9 @@ static void mtk_ddp_sout_sel(void __iomem *config_regs,
+>  	} else if (cur == DDP_COMPONENT_BLS && next == DDP_COMPONENT_DPI0) {
+>  		writel_relaxed(BLS_TO_DPI_RDMA1_TO_DSI,
+>  			       config_regs + DISP_REG_CONFIG_OUT_SEL);
+
+You move 2 register setting out of the path from BLS to DPI0, does this
+path still work? Please make sure that all modification could work on
+all supported SoC.
 
 Regards,
 CK
 
-> -Daniel
-> 
-> > 
-> > Regards,
-> > CK
-> > 
-> > > 
-> > > 
-> > > > 
-> > > >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 30
-> > > > ++++++------------------------
-> > > >  drivers/gpu/drm/mediatek/mtk_drm_drv.c  |  8 +++-----
-> > > >  drivers/gpu/drm/mediatek/mtk_drm_gem.c  |  7 ++++++-
-> > > >  drivers/gpu/drm/mediatek/mtk_dsi.c      | 12 +++++++++++-
-> > > >  4 files changed, 26 insertions(+), 31 deletions(-)
-> > > 
-> > > Pulled, thanks.
-> > > -Daniel
-> > > 
-> > > > 
-> > > > _______________________________________________
-> > > > dri-devel mailing list
-> > > > dri-devel@lists.freedesktop.org
-> > > > https://lists.freedesktop.org/mailman/listinfo/dri-devel
-> > > 
-> > 
-> > 
-> 
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI0) {
+>  		writel_relaxed(DSI_SEL_IN_RDMA,
+>  			       config_regs + DISP_REG_CONFIG_DSI_SEL);
+> -		writel_relaxed(DPI_SEL_IN_BLS,
+> -			       config_regs + DISP_REG_CONFIG_DPI_SEL);
+>  	}
+>  }
+>  
 
 
 
