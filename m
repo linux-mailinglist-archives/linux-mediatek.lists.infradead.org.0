@@ -2,65 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4217646F83
-	for <lists+linux-mediatek@lfdr.de>; Sat, 15 Jun 2019 12:18:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 93AA1471E7
+	for <lists+linux-mediatek@lfdr.de>; Sat, 15 Jun 2019 21:18:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DDLswI2ZAv200/SSCGc/z+3rx7YIEfSvAGeGTuW6zcU=; b=ODVkAsWmCg/a8N
-	rjwrGYvTytpOKrrjki3mOtqNyhUsLEpJU6aeI5vfTDk4+vpMSVL1w3Gfd+uZmiqKzMvb4rs9gZuNC
-	igDEYWB5LY8LFlKvjjZBWREI/xgbBoAqBBWaLQpGGd4oF7u+GGWXyQUcI/F3EDx+UUqnMLLJ+hmkF
-	LISphArJt+6EZObG+g6LUuzR5mgJdwtix13iJw2ArI62z22wbcg22Cs2KtP7vWd91/TFufHaNld7v
-	KOXbSNQ7XkbYwd4AgFO8GedHpFnV9yllxgSW1N/VDfYrss7IVosDmgZE8Wq+xhp2CDaBmBOBladM0
-	t3aJsbgqrep9v7F8YzGw==;
+	List-Owner; bh=S5zVGtD2rpM6n6uZSgyXj54SDOLsQvZ2Wn9KZHOVosU=; b=BM7ALSGmiHuPEJ
+	geOaiV2naP2BqAJnRjsgXTjqH1h9pYlRfYQhy+wC9qTn7ebVqrrStKFa/UwbYvyrXVigokytAfHPj
+	OGNV0hTQKJXDcvZ2lLx0u9fiNc7i4MVqoZ9uCmu3QnqNMB2tQVdska3lRFbjEEW796xjcIbOIuwKM
+	LGl9aw/oVjA2YEDQiptu6/2pL26ka/PVLOf5RMx707C3n/ovz7926lrHAqfxKdjM3n8v4xZ7ABiNo
+	V4vEHerqo5+kEL/Ybytxyn+tfHmogRRTon0XOELQMpJlHofCK5J2I96NXfUJcraW3PIPe/7sTZMW6
+	bCx6258ktLk8pTBDiZ+A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hc5lD-0000u4-JW; Sat, 15 Jun 2019 10:18:11 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1hcECG-0004NL-Lb; Sat, 15 Jun 2019 19:18:41 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hc5l9-0000sp-1z; Sat, 15 Jun 2019 10:18:08 +0000
-Received: by mail-wm1-x342.google.com with SMTP id c6so4568123wml.0;
- Sat, 15 Jun 2019 03:18:02 -0700 (PDT)
+ id 1hcEBt-0004BS-Q4; Sat, 15 Jun 2019 19:18:19 +0000
+Received: by mail-wr1-x444.google.com with SMTP id k11so5833265wrl.1;
+ Sat, 15 Jun 2019 12:18:17 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=QpqJIgitmuvK80M2d3QZMC4jp8JT6uk6VpwpaI5cBqM=;
- b=IPn7CU55+SFCoCKU8oSsqGI8jYyWpPsgcN+kPVlTeBLEJ+FTc5MAg/gIHeX+EK4PEI
- CbvwmV8Kuv9dCMwCi9RaujI1vPjSekYADztO/2UYaqt8XDnSTX8B8mhayglWKWF2wj2P
- vjol1sDQ3j8aE3zOVrss8lEiKbvMykPd9+AL5r4AhjApuf+eIDFGicu9869UOSHnpdb3
- 8viA93gEV4RfVfomX5cCFCIk+Bn4CsOIVy1OdgSh+BMNLw3NnBODKExpVhVa64FhtWvL
- tPfZzoCQbC/wx8KzrOov020uacZXimscZQBhVH3IIdawQoDnQou76Db3SaDYQG0jzj+J
- 1TKw==
+ bh=Ut0fPZgP489sXGDYc32E07hMMHItVf4rNxwGTSMHF/M=;
+ b=s56ZtLfHl/TX5Xz5mOnxOfQOReaRpAhmsSaAMEx3HEDmg1FDDGUa7p1+6rCuIfQH1e
+ RCIgjDOtdTaAWzkTFYwXnwiRy+7GT5fjZQOEY6FOX57Iyv2u98cxg4LiCXU7TzrIdZbc
+ 0UdyXAYWuzO55hPab3MOAx33xBUy6LoWI+VQ2qWVne0L4IgeoI54mo0xxYCDE5cmdrHs
+ LqPUnLn1KLn6dOL+SPgTHHVzD9xX6zIBcxJdKqDAs7LsnlHgscU7e31BLBIZOHvqaxTH
+ Uq8g141Ns8sfa5N1v6dzbxzi9dJ8whX2CxEyL4frKvA8XBSHZ8juNKkRSqDiiF4ai/Ab
+ N7ag==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=QpqJIgitmuvK80M2d3QZMC4jp8JT6uk6VpwpaI5cBqM=;
- b=qR0KvWsPMv4DX0Ci+Ae2aiT5V8nAEi8/SnQ9eP9xuWsD77eKiyboHJtkMDr/PLd667
- /nOaBi2kW2PDbYMp+69G6IZX2vNWJhXHz0HgB3m4W/229vHDJcc46tJ3jjW5SHRem48W
- u1sVqCbS/UqbMsPMKDF4Nc2oo8BVPKbyCYGEYbJWAwZSFWSTrsfmD/CBI9puEVwAuJJI
- T7wY0i4soBqSiOuvTgJIle9vDscdVAhh8F1/vrrkx4naG84+2ru2SE+q3EwyJQpDnUHu
- roBRHvW1CfQDJ35KCiVkYsLZLamPCXqPGh5zkAmRzUzplxcolZrvd/Qa8yMUeZYq1xK7
- acGg==
-X-Gm-Message-State: APjAAAWy4WQggAL8qig3jlNINHd9m0czMgjN7esn0dCGlnvZPn+FRvrT
- sAp3ytFKAnlr08zA9kv59gMyIeb5knI=
-X-Google-Smtp-Source: APXvYqwaROn13fVlXV7PjHn+7ZZ+WS0oI/4r1fp0dDqWnDLbP3KlCa5oVKVtJYodtIsb1x1f+IlVRw==
-X-Received: by 2002:a1c:2d8b:: with SMTP id t133mr11137434wmt.57.1560593880910; 
- Sat, 15 Jun 2019 03:18:00 -0700 (PDT)
+ bh=Ut0fPZgP489sXGDYc32E07hMMHItVf4rNxwGTSMHF/M=;
+ b=CqEQQxP2/yMwjZ9mX68YBBYAs3KO01dTNs+jqw678tsVqMowi+oI/mvYEcsSec0iaR
+ 2/PGT43ZCTWZKtGZCXvTwdMgRv/MQnFfXIJXxTZ0peAyZGdW70lkQ90v6OEjdCdOEasJ
+ i2ZCkh0iPwVz/vNlgXPEfPJHpgUyCJ209Q6gUrSV155b84vit97UBLN4OSM2MWkYst8h
+ cmXDzGzpQ1+/8w1vyrNTA583YydJjFZ0tYjxpTH8hDXqDlr8EaqT2nnS+qFKlfiat5jt
+ WL1SIfQs04c57+aHSM9s4ehZgY+8cjJpPLPmVhVasxb4/B513jVqfpdPhykiHpugQTUa
+ 3b0w==
+X-Gm-Message-State: APjAAAWVlzHDjy+LkYqQXu0g63UF/PtL+iNxlhMlOCDZY9DXquYx38gJ
+ iqPHwU2eBwRDe3FRsy51O/s=
+X-Google-Smtp-Source: APXvYqwdrx03vOgcVyIF25JpyAueB4qrUQOsqL8SnMs1CYLQEhW82nRAo28lSXzD7FI58XNIm0NGzA==
+X-Received: by 2002:a5d:46cb:: with SMTP id g11mr1952391wrs.253.1560626296214; 
+ Sat, 15 Jun 2019 12:18:16 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.230.25])
- by smtp.gmail.com with ESMTPSA id w67sm9269226wma.24.2019.06.15.03.17.59
+ by smtp.gmail.com with ESMTPSA id v24sm5167927wmj.26.2019.06.15.12.18.14
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Sat, 15 Jun 2019 03:18:00 -0700 (PDT)
-Subject: Re: [PATCH v3] dt-bindings: arm: Convert MediaTek board/soc bindings
- to json-schema
-To: Rob Herring <robh@kernel.org>, arm@kernel.org
-References: <20190517154202.24594-1-robh@kernel.org>
- <20190613224921.GA9199@bogus>
+ Sat, 15 Jun 2019 12:18:15 -0700 (PDT)
+Subject: Re: [PATCH v7 07/21] iommu/mediatek: Add bclk can be supported
+ optionally
+To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
+ Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
+References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-8-git-send-email-yong.wu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -156,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <8e4fcd7c-c698-7fe0-fce6-7f153112d16e@gmail.com>
-Date: Sat, 15 Jun 2019 12:17:57 +0200
+Message-ID: <13f42053-cdc3-bef9-54f0-633880c41043@gmail.com>
+Date: Sat, 15 Jun 2019 21:18:14 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <20190613224921.GA9199@bogus>
+In-Reply-To: <1560169080-27134-8-git-send-email-yong.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190615_031807_122796_7DD4E255 
-X-CRM114-Status: GOOD (  14.35  )
+X-CRM114-CacheID: sfid-20190615_121817_855886_4B613825 
+X-CRM114-Status: GOOD (  21.19  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
@@ -196,9 +197,13 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
+ Will Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
+ iommu@lists.linux-foundation.org, Matthias Kaehlcke <mka@chromium.org>,
+ linux-mediatek@lists.infradead.org, yingjoe.chen@mediatek.com,
+ anan.sun@mediatek.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -206,37 +211,72 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 14/06/2019 00:49, Rob Herring wrote:
-> On Fri, May 17, 2019 at 10:42:02AM -0500, Rob Herring wrote:
->> Convert MediaTek SoC bindings to DT schema format using json-schema.
->>
->> Cc: Mark Rutland <mark.rutland@arm.com>
->> Cc: Matthias Brugger <matthias.bgg@gmail.com>
->> Cc: devicetree@vger.kernel.org
->> Cc: linux-arm-kernel@lists.infradead.org
->> Cc: linux-mediatek@lists.infradead.org
->> Signed-off-by: Rob Herring <robh@kernel.org>
->> ---
->> v3:
->>  - Rebase to Linus' master
->>
->>  .../devicetree/bindings/arm/mediatek.txt      | 89 ------------------
->>  .../devicetree/bindings/arm/mediatek.yaml     | 91 +++++++++++++++++++
->>  2 files changed, 91 insertions(+), 89 deletions(-)
->>  delete mode 100644 Documentation/devicetree/bindings/arm/mediatek.txt
->>  create mode 100644 Documentation/devicetree/bindings/arm/mediatek.yaml
+On 10/06/2019 14:17, Yong Wu wrote:
+> In some SoCs, M4U doesn't have its "bclk", it will use the EMI
+> clock instead which has always been enabled when entering kernel.
 > 
-> Ping. Three versions of this and no comments... Is Mediatek a dead 
-> platform?
+> Currently mt2712 and mt8173 have this bclk while mt8183 doesn't.
 > 
+> This also is a preparing patch for mt8183.
+> 
+> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+> Reviewed-by: Evan Green <evgreen@chromium.org>
 
-No just a too busy maintainer. Somehow I remembered that you mentioned you won't
-rebase it, so I put it on my long list of todos.
+Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
-Pushed now to v5.2-next/dts64
-
-Thanks a lot!
-Matthias
+> ---
+>  drivers/iommu/mtk_iommu.c | 10 +++++++---
+>  drivers/iommu/mtk_iommu.h |  3 +++
+>  2 files changed, 10 insertions(+), 3 deletions(-)
+> 
+> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> index aff5004..264dda4 100644
+> --- a/drivers/iommu/mtk_iommu.c
+> +++ b/drivers/iommu/mtk_iommu.c
+> @@ -611,9 +611,11 @@ static int mtk_iommu_probe(struct platform_device *pdev)
+>  	if (data->irq < 0)
+>  		return data->irq;
+>  
+> -	data->bclk = devm_clk_get(dev, "bclk");
+> -	if (IS_ERR(data->bclk))
+> -		return PTR_ERR(data->bclk);
+> +	if (data->plat_data->has_bclk) {
+> +		data->bclk = devm_clk_get(dev, "bclk");
+> +		if (IS_ERR(data->bclk))
+> +			return PTR_ERR(data->bclk);
+> +	}
+>  
+>  	larb_nr = of_count_phandle_with_args(dev->of_node,
+>  					     "mediatek,larbs", NULL);
+> @@ -741,11 +743,13 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
+>  static const struct mtk_iommu_plat_data mt2712_data = {
+>  	.m4u_plat     = M4U_MT2712,
+>  	.has_4gb_mode = true,
+> +	.has_bclk     = true,
+>  };
+>  
+>  static const struct mtk_iommu_plat_data mt8173_data = {
+>  	.m4u_plat     = M4U_MT8173,
+>  	.has_4gb_mode = true,
+> +	.has_bclk     = true,
+>  };
+>  
+>  static const struct of_device_id mtk_iommu_of_ids[] = {
+> diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+> index d7a001a..63e235e 100644
+> --- a/drivers/iommu/mtk_iommu.h
+> +++ b/drivers/iommu/mtk_iommu.h
+> @@ -43,6 +43,9 @@ enum mtk_iommu_plat {
+>  struct mtk_iommu_plat_data {
+>  	enum mtk_iommu_plat m4u_plat;
+>  	bool                has_4gb_mode;
+> +
+> +	/* HW will use the EMI clock if there isn't the "bclk". */
+> +	bool                has_bclk;
+>  };
+>  
+>  struct mtk_iommu_domain;
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
