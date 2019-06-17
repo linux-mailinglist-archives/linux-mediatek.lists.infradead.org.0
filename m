@@ -2,66 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 44B28488F6
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 18:31:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 852B34890C
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 18:34:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Q/Q5XAtdMk6kkr6PFU1d7B965s/JJDHarPtARjV9uow=; b=LdtIFvslVy9QMK
-	ZCeoXDZgBGxUfVgMICSN6wfFvvimkaCUvSSeiaypqOw4NcFqCxV8K4sRnQ8CHMpnsVQUvbZtMa2bl
-	dt3/idPDO3h086Uu8UL1OXzsoKuUQaOIO96OjKToWpJNHbW6ct01FgEJnzBqnP3z5tO818k6baXJS
-	XtRuR2gzSb0PVGW1hFIQvm6X51SFIWjsK1Se0goSJWldpuRYlgaYgQcKQOtbLuLP6pRpZ/d8WdSVi
-	SOsRQuICRJA8wqgwp0bdruY9S1G+1ZAmwwT96czIERr4E37NtTm9HKNwVY1nrJPdZUwE/w47cv3S5
-	2ShX+T0tCJL+UrUfX8qw==;
+	List-Owner; bh=jZXeCqgXyvN5M1KsZy+R7MKIm45NZwoKNhGGMhei4zE=; b=VRsydS6IPCU0Gd
+	EVAVweqcu8JYXHQ0JwxJczFKKk/uJdp2joE7XZdbrrYh5C5EuSFvsSelayZCfjQWsKWjj2/msexHJ
+	BoKm/F/U7cETSJNcSaiGxgjAITJ2cfASpedGbvjJ0j+cST/TeIwaCO4A2U7JtvzaRm1nH2TDEkz/G
+	XBMw56Q4viUjN4GgHllzhQFlaF7z9E1kCkV3B09BtcazkgLrSCWXNPg5Tj4IdJYhD0kDUqpMNNzb5
+	NQfSGm1zUbA9z8MhHpVlC9ngyMxtkZGODcOlGIAFp5It8zkF7cUkbuRu3ATLU/Sv4HOpvt56z+aDG
+	PwMMtFNXqw+wA22uIl6w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hcuWy-0004Ln-Ht; Mon, 17 Jun 2019 16:30:52 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1hcuaM-0006Ol-Lq; Mon, 17 Jun 2019 16:34:22 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hcuWc-00040Q-KX; Mon, 17 Jun 2019 16:30:32 +0000
-Received: by mail-ed1-x544.google.com with SMTP id i11so17075846edq.0;
- Mon, 17 Jun 2019 09:30:30 -0700 (PDT)
+ id 1hcuZp-0005y2-67; Mon, 17 Jun 2019 16:33:51 +0000
+Received: by mail-ed1-x543.google.com with SMTP id p15so17015361eds.8;
+ Mon, 17 Jun 2019 09:33:48 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=gXHlebz8VKQ6+/rZNAG9pPc7Wya5X3BB7Tl4DTSdlok=;
- b=OcB7fk4QiphpSryEH2LnwMcr/w8uGBcZyA3EN314WPdy5vJxt51TdZ5QSp00zzJthl
- 85PTiQyAu745qtmPRwhdOb+JT4Jp+y0AG5cKjWGA7f5CdYvs6UOewdCxcusoLmMAyY1P
- wgeL32843rItL36vj5HwZ50WsXWfetLgljgBNHSPg9s2VvCmYeYbNn+b3quHvohirngH
- hN/Gh6DPqoxpUAWxHLtxXICGKj9YRrU4BGwsmUbdU2hlye9rEKaAOBjFJBwRE3vYUmcq
- 3Ov+YmwjidaCaNysI+0hrZI4X6q0vmJc9i5vO9xe9USVDZ/xH4C6jxwL3Ztx8v7AtGZZ
- gddg==
+ bh=oYRhZvd9Rhcs1DxaHEleWPUKgvJsJsYmuXdoO4GH92I=;
+ b=hGG/k/Y+t91rEO99k82SJpAcKnYE4whaVBzSFudtLaBsJpwYFXkRkq2RwtvZVQaERQ
+ CoOEWnXA48/D92UQ82ArpJRIg9BrlG3doekpezFp5NQuDn7FmskMLVSkjfdxEbE6Y/Dl
+ dgpa1o1JqrUIJ8klECFCgUzSmihzi8KWfEZ94fr3zMMdc/Wjjzhzh00IXzylQZ3gRGBK
+ pK5eYM0TDMoO3QV9iDGDsXFleoRS6f/bhDzvXrRpjbSzcT68DxSyxGEbtx+CiSPm2VwA
+ mnBuBptAicTEPHjdXpUTTyJS+rSvdf/HqxMsZLoMpeXg372Aqzbg++pOo++HoEU9TgRZ
+ vj1A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=gXHlebz8VKQ6+/rZNAG9pPc7Wya5X3BB7Tl4DTSdlok=;
- b=DP56RG6Xu7PkM2Lm9UjxKMcmtBEXozD+fhKgchMdHoJo07iC+ijcb79tcrjSTmLVwL
- RpJOFmbCfAtIEnRNxDdsLKZwBSkRJZ1yRPy0wNJACrdhA0mrefVTVO0ppzR9miN9QekV
- KAC7REJe9eLoxqx/6HN9DDI4csEacP5ijCGQ61LMO7S/xG+6MPByP02UamHWlFV+THJD
- JeluYw5jyGh8zxAeoDNDSNv4lR97fGq33ccnDRWgXRTQNxX7izl/DIBH+QfQQMrVRBNQ
- lEOdjp1psJKCVPTrVWFhhmWfshj8AofAmpKFXpBncMfFZWga/UhYVo1wtK/jSJV0Nd3/
- PghQ==
-X-Gm-Message-State: APjAAAUArGJUrmUIu/qOD2JuDEbplY3ZknUQtuDH7HWM+g00xZ3NU93E
- 6hKfT+zUgi6yS0Rkn6Flgt4=
-X-Google-Smtp-Source: APXvYqyc9+zFOBeTb/JPA8WZGMgJ4OyElybqj1HfguGGuxrwloyuj/dWmuxG4GMoGIl1JPP7qDZR4g==
-X-Received: by 2002:a50:b161:: with SMTP id l30mr99846580edd.278.1560789029385; 
- Mon, 17 Jun 2019 09:30:29 -0700 (PDT)
+ bh=oYRhZvd9Rhcs1DxaHEleWPUKgvJsJsYmuXdoO4GH92I=;
+ b=cVgG/C2qjnef0zE7Wm+19X/i69XxYCcjgiWu9nsmw2llyDCL42qvFsuV6WRj+ZtMGZ
+ +CfhNYPcw/lkCBsdHIY15HAs9LwxSGhnlfwqKq2a4Ng91YVgIT71SWhWrx5PaI1F9sh0
+ 2LVIBRsNnkP4ucaysYVVmi1lmlokJzE2HaFVGB/gw03xbSna1ovfwsNt3V7NJfRVD2Gp
+ f34FK5kxfkaGtuWRwMLfGzfJZM91LbzKy6Vner1d6DXvZ89CtMarhkz+s4sLv0JwtIib
+ EfSOs/pjegSDVtCSV1T1eTj2C59MdRKerg/w06eYOLPLzpUfnVQ/9pf0bGrr/bKsufSr
+ RewQ==
+X-Gm-Message-State: APjAAAWBARfCXf5+sbo0qi44SG44oa+3rvJuFMMoKsHScjEeb5T70qQ+
+ y14oidsuJrQoPjzd/9qleeg=
+X-Google-Smtp-Source: APXvYqxbF7QMHTPa8Nkui5xm5nSCd98Uwko8VAJ4t4g6nYHeWc9hkxx3xdRtRxt+2Z8pYiyJjsd1Cg==
+X-Received: by 2002:a17:906:2191:: with SMTP id
+ 17mr34504291eju.157.1560789227361; 
+ Mon, 17 Jun 2019 09:33:47 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.140.27])
- by smtp.gmail.com with ESMTPSA id s27sm3904956eda.36.2019.06.17.09.30.27
+ by smtp.gmail.com with ESMTPSA id v3sm1427941ejk.77.2019.06.17.09.33.45
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Mon, 17 Jun 2019 09:30:28 -0700 (PDT)
-Subject: Re: [PATCH v7 18/21] iommu/mediatek: Fix VLD_PA_RNG register backup
- when suspend
+ Mon, 17 Jun 2019 09:33:46 -0700 (PDT)
+Subject: Re: [PATCH v7 21/21] iommu/mediatek: Switch to SPDX license identifier
 To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
  Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
 References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-19-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-22-git-send-email-yong.wu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -157,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <d8fd11c7-899d-27a3-7467-de351307c6a1@gmail.com>
-Date: Mon, 17 Jun 2019 18:30:27 +0200
+Message-ID: <9bf9e47f-b709-b2ce-b795-ff5e345a67d5@gmail.com>
+Date: Mon, 17 Jun 2019 18:33:45 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <1560169080-27134-19-git-send-email-yong.wu@mediatek.com>
+In-Reply-To: <1560169080-27134-22-git-send-email-yong.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_093030_799123_62CE5522 
-X-CRM114-Status: GOOD (  18.97  )
+X-CRM114-CacheID: sfid-20190617_093349_282859_6B798A92 
+X-CRM114-Status: GOOD (  17.91  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -211,54 +211,177 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 10/06/2019 14:17, Yong Wu wrote:
-> The register VLD_PA_RNG(0x118) was forgot to backup while adding 4GB
-> mode support for mt2712. this patch add it.
+On 10/06/2019 14:18, Yong Wu wrote:
+> Switch to SPDX license identifier for MediaTek iommu/smi and their
+> header files.
 > 
-> Fixes: 30e2fccf9512 ("iommu/mediatek: Enlarge the validate PA range
-> for 4GB mode")
 > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+> Reviewed-by: Rob Herring <robh@kernel.org>
 > Reviewed-by: Evan Green <evgreen@chromium.org>
 
 Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
 > ---
->  drivers/iommu/mtk_iommu.c | 2 ++
->  drivers/iommu/mtk_iommu.h | 1 +
->  2 files changed, 3 insertions(+)
+>  drivers/iommu/mtk_iommu.c                     | 10 +---------
+>  drivers/iommu/mtk_iommu.h                     | 10 +---------
+>  drivers/iommu/mtk_iommu_v1.c                  | 10 +---------
+>  drivers/memory/mtk-smi.c                      | 10 +---------
+>  include/dt-bindings/memory/mt2701-larb-port.h | 10 +---------
+>  include/dt-bindings/memory/mt8173-larb-port.h | 10 +---------
+>  include/soc/mediatek/smi.h                    | 10 +---------
+>  7 files changed, 7 insertions(+), 63 deletions(-)
 > 
 > diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-> index 6053b8b..86158d8 100644
+> index 34f2e40..6fe3369 100644
 > --- a/drivers/iommu/mtk_iommu.c
 > +++ b/drivers/iommu/mtk_iommu.c
-> @@ -719,6 +719,7 @@ static int __maybe_unused mtk_iommu_suspend(struct device *dev)
->  	reg->int_control0 = readl_relaxed(base + REG_MMU_INT_CONTROL0);
->  	reg->int_main_control = readl_relaxed(base + REG_MMU_INT_MAIN_CONTROL);
->  	reg->ivrp_paddr = readl_relaxed(base + REG_MMU_IVRP_PADDR);
-> +	reg->vld_pa_rng = readl_relaxed(base + REG_MMU_VLD_PA_RNG);
->  	clk_disable_unprepare(data->bclk);
->  	return 0;
->  }
-> @@ -743,6 +744,7 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
->  	writel_relaxed(reg->int_control0, base + REG_MMU_INT_CONTROL0);
->  	writel_relaxed(reg->int_main_control, base + REG_MMU_INT_MAIN_CONTROL);
->  	writel_relaxed(reg->ivrp_paddr, base + REG_MMU_IVRP_PADDR);
-> +	writel_relaxed(reg->vld_pa_rng, base + REG_MMU_VLD_PA_RNG);
->  	if (m4u_dom)
->  		writel(m4u_dom->cfg.arm_v7s_cfg.ttbr[0] & MMU_PT_ADDR_MASK,
->  		       base + REG_MMU_PT_BASE_ADDR);
+> @@ -1,15 +1,7 @@
+> +// SPDX-License-Identifier: GPL-2.0
+>  /*
+>   * Copyright (c) 2015-2016 MediaTek Inc.
+>   * Author: Yong Wu <yong.wu@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  #include <linux/memblock.h>
+>  #include <linux/bug.h>
 > diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
-> index c0b5c65..753266b 100644
+> index e8114b2..b24cfd3 100644
 > --- a/drivers/iommu/mtk_iommu.h
 > +++ b/drivers/iommu/mtk_iommu.h
-> @@ -32,6 +32,7 @@ struct mtk_iommu_suspend_reg {
->  	u32				int_control0;
->  	u32				int_main_control;
->  	u32				ivrp_paddr;
-> +	u32				vld_pa_rng;
->  };
+> @@ -1,15 +1,7 @@
+> +/* SPDX-License-Identifier: GPL-2.0 */
+>  /*
+>   * Copyright (c) 2015-2016 MediaTek Inc.
+>   * Author: Honghui Zhang <honghui.zhang@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
 >  
->  enum mtk_iommu_plat {
+>  #ifndef _MTK_IOMMU_H_
+> diff --git a/drivers/iommu/mtk_iommu_v1.c b/drivers/iommu/mtk_iommu_v1.c
+> index 73308ad..0b0908c 100644
+> --- a/drivers/iommu/mtk_iommu_v1.c
+> +++ b/drivers/iommu/mtk_iommu_v1.c
+> @@ -1,3 +1,4 @@
+> +// SPDX-License-Identifier: GPL-2.0
+>  /*
+>   * IOMMU API for MTK architected m4u v1 implementations
+>   *
+> @@ -5,15 +6,6 @@
+>   * Author: Honghui Zhang <honghui.zhang@mediatek.com>
+>   *
+>   * Based on driver/iommu/mtk_iommu.c
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  #include <linux/memblock.h>
+>  #include <linux/bug.h>
+> diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
+> index 10e6493..9688341 100644
+> --- a/drivers/memory/mtk-smi.c
+> +++ b/drivers/memory/mtk-smi.c
+> @@ -1,15 +1,7 @@
+> +// SPDX-License-Identifier: GPL-2.0
+>  /*
+>   * Copyright (c) 2015-2016 MediaTek Inc.
+>   * Author: Yong Wu <yong.wu@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  #include <linux/clk.h>
+>  #include <linux/component.h>
+> diff --git a/include/dt-bindings/memory/mt2701-larb-port.h b/include/dt-bindings/memory/mt2701-larb-port.h
+> index 6764d74..c511f0f 100644
+> --- a/include/dt-bindings/memory/mt2701-larb-port.h
+> +++ b/include/dt-bindings/memory/mt2701-larb-port.h
+> @@ -1,15 +1,7 @@
+> +/* SPDX-License-Identifier: GPL-2.0 */
+>  /*
+>   * Copyright (c) 2015 MediaTek Inc.
+>   * Author: Honghui Zhang <honghui.zhang@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  
+>  #ifndef _MT2701_LARB_PORT_H_
+> diff --git a/include/dt-bindings/memory/mt8173-larb-port.h b/include/dt-bindings/memory/mt8173-larb-port.h
+> index 111b4b0..a62bfeb 100644
+> --- a/include/dt-bindings/memory/mt8173-larb-port.h
+> +++ b/include/dt-bindings/memory/mt8173-larb-port.h
+> @@ -1,15 +1,7 @@
+> +/* SPDX-License-Identifier: GPL-2.0 */
+>  /*
+>   * Copyright (c) 2015-2016 MediaTek Inc.
+>   * Author: Yong Wu <yong.wu@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  #ifndef __DTS_IOMMU_PORT_MT8173_H
+>  #define __DTS_IOMMU_PORT_MT8173_H
+> diff --git a/include/soc/mediatek/smi.h b/include/soc/mediatek/smi.h
+> index a65324d..7a8d870 100644
+> --- a/include/soc/mediatek/smi.h
+> +++ b/include/soc/mediatek/smi.h
+> @@ -1,15 +1,7 @@
+> +/* SPDX-License-Identifier: GPL-2.0 */
+>  /*
+>   * Copyright (c) 2015-2016 MediaTek Inc.
+>   * Author: Yong Wu <yong.wu@mediatek.com>
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License version 2 as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful,
+> - * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> - * GNU General Public License for more details.
+>   */
+>  #ifndef MTK_IOMMU_SMI_H
+>  #define MTK_IOMMU_SMI_H
 > 
 
 _______________________________________________
