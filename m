@@ -2,59 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1B600478E0
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 06:00:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2C04A479AD
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 07:19:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dE/6TuB29R5sZ0O6ZxUKs/oD8kog8ZoWvKiQcHYsqQs=; b=jSbQpgiakNw4Jb
-	o254wYycEsFxYkTL3bcgOFXxxyFCP7p6U8WUVl06h2WYE8IcSSuBljK31LiOcHzWSYHrKqRjK/ur2
-	KgEmrxj6TQ3HI2KK5FiBZBkvDoArKs7jMw7tj2tSq2Z3XSNUT+2tUuKfdes5NZXjI6Nii/3cdpDax
-	n8Rz/OgWdOg4aAclelXCK1FT3Y6bQh4oIT/qbQPnf3C0zIQ+8ucgFomx8/lm5HFqdtFig3h3PPF0Q
-	9mFzQ9QOUTiQ8ejr9itaYPAQXO8bEkM7os6AISMZo078hDQbu12LBZI0k6uXVP2wcmLCm5dgAOR2w
-	Kz1uBRnOrU9uBH+SwaWA==;
+	List-Owner; bh=S+eg2dwPVhIdXE4lyellXvO0DPi00ThwULqsPw5Dhbg=; b=ChEj6gSboOYp5r
+	Vf2rGfj9sY4Vr3UOU52b53f2cXh0F76JmH6QBTbbSWb8qANgzKjUUZfhl84BTSj1Y/IoNJfZ/jnEE
+	NTbDvG4G/3D8Pw38v6bHtQr14tsMy+fqCQa0drcHzlGxij0lHQjQpIhj3HPV+IZSRFXYlIdSfZXmj
+	zY77YVuTEy7O1NWC9/ngDZubISFaI35ivkZwS0GECb79/15apboiXo9Kzt0kFH3w+GJlsJCTTsTkt
+	AyDpr3ve2L0giltITKFD2+KaKG4jXYfmGmFVLUCTI7jT8LeTHj+/UTNIhRr8GtpDjVlLsd1LLoeMw
+	UPzplcj58H/mQ1elb8jQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hcip3-0007iq-96; Mon, 17 Jun 2019 04:00:45 +0000
+	id 1hck3Y-000212-A9; Mon, 17 Jun 2019 05:19:48 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hcioy-0007iG-La; Mon, 17 Jun 2019 04:00:42 +0000
-X-UUID: d0216446594a4680a0ec7631a77ead4d-20190616
-X-UUID: d0216446594a4680a0ec7631a77ead4d-20190616
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ id 1hck3T-00020K-3t; Mon, 17 Jun 2019 05:19:45 +0000
+X-UUID: 8e1b63b243104fb0a82c4d8602375f29-20190616
+X-UUID: 8e1b63b243104fb0a82c4d8602375f29-20190616
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1398254681; Sun, 16 Jun 2019 20:00:21 -0800
+ with ESMTP id 1542709060; Sun, 16 Jun 2019 21:19:35 -0800
 Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 16 Jun 2019 21:00:19 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ 15.0.1395.4; Sun, 16 Jun 2019 22:19:33 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Jun 2019 12:00:18 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Mon, 17 Jun 2019 13:19:32 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 17 Jun 2019 12:00:17 +0800
-Message-ID: <1560744017.15814.49.camel@mtksdccf07>
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Dmitry Vyukov <dvyukov@google.com>, Andrey Ryabinin
- <aryabinin@virtuozzo.com>
-Date: Mon, 17 Jun 2019 12:00:17 +0800
-In-Reply-To: <1560479520.15814.34.camel@mtksdccf07>
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07>
- <1560479520.15814.34.camel@mtksdccf07>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ Transport; Mon, 17 Jun 2019 13:19:31 +0800
+Message-ID: <1560748771.16762.0.camel@mtksdaap41>
+Subject: Re: [PATCH 44/59] drm/mediatek: Use drm_atomic_helper_wait_for_fences
+From: CK Hu <ck.hu@mediatek.com>
+To: Daniel Vetter <daniel.vetter@ffwll.ch>
+Date: Mon, 17 Jun 2019 13:19:31 +0800
+In-Reply-To: <20190614203615.12639-45-daniel.vetter@ffwll.ch>
+References: <20190614203615.12639-1-daniel.vetter@ffwll.ch>
+ <20190614203615.12639-45-daniel.vetter@ffwll.ch>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190616_210040_714626_9FD18B62 
-X-CRM114-Status: GOOD (  24.32  )
+X-CRM114-CacheID: sfid-20190616_221943_164545_8F281DEB 
+X-CRM114-Status: GOOD (  17.29  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -77,103 +73,145 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily
- Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org,
- Andrey Konovalov <andreyknvl@google.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, Pekka Enberg <penberg@kernel.org>, Martin
- Schwidefsky <schwidefsky@de.ibm.com>, Miles Chen <miles.chen@mediatek.com>,
- Alexander Potapenko <glider@google.com>, linux-arm-kernel@lists.infradead.org,
- David Rientjes <rientjes@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Dmitry Vyukov <dvyukov@google.com>
+Cc: Intel Graphics Development <intel-gfx@lists.freedesktop.org>,
+ DRI Development <dri-devel@lists.freedesktop.org>,
+ linux-mediatek@lists.infradead.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Matthias
+ Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel.vetter@intel.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-06-14 at 10:32 +0800, Walter Wu wrote:
-> On Fri, 2019-06-14 at 01:46 +0800, Walter Wu wrote:
-> > On Thu, 2019-06-13 at 15:27 +0300, Andrey Ryabinin wrote:
-> > > 
-> > > On 6/13/19 11:13 AM, Walter Wu wrote:
-> > > > This patch adds memory corruption identification at bug report for
-> > > > software tag-based mode, the report show whether it is "use-after-free"
-> > > > or "out-of-bound" error instead of "invalid-access" error.This will make
-> > > > it easier for programmers to see the memory corruption problem.
-> > > > 
-> > > > Now we extend the quarantine to support both generic and tag-based kasan.
-> > > > For tag-based kasan, the quarantine stores only freed object information
-> > > > to check if an object is freed recently. When tag-based kasan reports an
-> > > > error, we can check if the tagged addr is in the quarantine and make a
-> > > > good guess if the object is more like "use-after-free" or "out-of-bound".
-> > > > 
-> > > 
-> > > 
-> > > We already have all the information and don't need the quarantine to make such guess.
-> > > Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
-> > > otherwise it's use-after-free.
-> > > 
-> > > In pseudo-code it's something like this:
-> > > 
-> > > u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
-> > > 
-> > > if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
-> > > 	// out-of-bounds
-> > > else
-> > > 	// use-after-free
-> > 
-> > Thanks your explanation.
-> > I see, we can use it to decide corruption type.
-> > But some use-after-free issues, it may not have accurate free-backtrace.
-> > Unfortunately in that situation, free-backtrace is the most important.
-> > please see below example
-> > 
-> > In generic KASAN, it gets accurate free-backrace(ptr1).
-> > In tag-based KASAN, it gets wrong free-backtrace(ptr2). It will make
-> > programmer misjudge, so they may not believe tag-based KASAN.
-> > So We provide this patch, we hope tag-based KASAN bug report is the same
-> > accurate with generic KASAN.
-> > 
-> > ---
-> >     ptr1 = kmalloc(size, GFP_KERNEL);
-> >     ptr1_free(ptr1);
-> > 
-> >     ptr2 = kmalloc(size, GFP_KERNEL);
-> >     ptr2_free(ptr2);
-> > 
-> >     ptr1[size] = 'x';  //corruption here
-> > 
-> > 
-> > static noinline void ptr1_free(char* ptr)
-> > {
-> >     kfree(ptr);
-> > }
-> > static noinline void ptr2_free(char* ptr)
-> > {
-> >     kfree(ptr);
-> > }
-> > ---
-> > 
-> We think of another question about deciding by that shadow of the first
-> byte.
-> In tag-based KASAN, it is immediately released after calling kfree(), so
-> the slub is easy to be used by another pointer, then it will change
-> shadow memory to the tag of new pointer, it will not be the
-> KASAN_TAG_INVALID, so there are many false negative cases, especially in
-> small size allocation.
-> 
-> Our patch is to solve those problems. so please consider it, thanks.
-> 
-Hi, Andrey and Dmitry,
+Hi, Daniel:
 
-I am sorry to bother you.
-Would you tell me what you think about this patch?
-We want to use tag-based KASAN, so we hope its bug report is clear and
-correct as generic KASAN.
+On Fri, 2019-06-14 at 22:36 +0200, Daniel Vetter wrote:
+> If we use the gem fb helper as the prepare_fb hook, plus the
+> drm_prime.c import helpers now automatically setting obj->resv, we can
+> use the shared helpers to wait for fences instead of rolling our own.
+> Note that this relies on mtk setting drm_fb->obj, which is already
+> done in mtk_drm_framebuffer_init().
 
-Thanks your review.
-Walter
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+> 
+> Aside: Probably can use the default commit_tail with this again, but I
+> didn't check for that.
+> 
+> Signed-off-by: Daniel Vetter <daniel.vetter@intel.com>
+> Cc: CK Hu <ck.hu@mediatek.com>
+> Cc: Philipp Zabel <p.zabel@pengutronix.de>
+> Cc: Matthias Brugger <matthias.bgg@gmail.com>
+> Cc: linux-arm-kernel@lists.infradead.org
+> Cc: linux-mediatek@lists.infradead.org
+> ---
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.c   | 12 +---------
+>  drivers/gpu/drm/mediatek/mtk_drm_fb.c    | 28 ------------------------
+>  drivers/gpu/drm/mediatek/mtk_drm_fb.h    |  1 -
+>  drivers/gpu/drm/mediatek/mtk_drm_plane.c |  2 ++
+>  4 files changed, 3 insertions(+), 40 deletions(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> index dd8dab562500..2d5caf532431 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+> @@ -38,22 +38,12 @@ static void mtk_atomic_schedule(struct mtk_drm_private *private,
+>  	schedule_work(&private->commit.work);
+>  }
+>  
+> -static void mtk_atomic_wait_for_fences(struct drm_atomic_state *state)
+> -{
+> -	struct drm_plane *plane;
+> -	struct drm_plane_state *new_plane_state;
+> -	int i;
+> -
+> -	for_each_new_plane_in_state(state, plane, new_plane_state, i)
+> -		mtk_fb_wait(new_plane_state->fb);
+> -}
+> -
+>  static void mtk_atomic_complete(struct mtk_drm_private *private,
+>  				struct drm_atomic_state *state)
+>  {
+>  	struct drm_device *drm = private->drm;
+>  
+> -	mtk_atomic_wait_for_fences(state);
+> +	drm_atomic_helper_wait_for_fences(drm, state, false);
+>  
+>  	/*
+>  	 * Mediatek drm supports runtime PM, so plane registers cannot be
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_fb.c b/drivers/gpu/drm/mediatek/mtk_drm_fb.c
+> index 4c3ad7de2d3b..396ba497986d 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_fb.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_fb.c
+> @@ -49,34 +49,6 @@ static struct drm_framebuffer *mtk_drm_framebuffer_init(struct drm_device *dev,
+>  	return fb;
+>  }
+>  
+> -/*
+> - * Wait for any exclusive fence in fb's gem object's reservation object.
+> - *
+> - * Returns -ERESTARTSYS if interrupted, else 0.
+> - */
+> -int mtk_fb_wait(struct drm_framebuffer *fb)
+> -{
+> -	struct drm_gem_object *gem;
+> -	struct reservation_object *resv;
+> -	long ret;
+> -
+> -	if (!fb)
+> -		return 0;
+> -
+> -	gem = fb->obj[0];
+> -	if (!gem || !gem->dma_buf || !gem->dma_buf->resv)
+> -		return 0;
+> -
+> -	resv = gem->dma_buf->resv;
+> -	ret = reservation_object_wait_timeout_rcu(resv, false, true,
+> -						  MAX_SCHEDULE_TIMEOUT);
+> -	/* MAX_SCHEDULE_TIMEOUT on success, -ERESTARTSYS if interrupted */
+> -	if (WARN_ON(ret < 0))
+> -		return ret;
+> -
+> -	return 0;
+> -}
+> -
+>  struct drm_framebuffer *mtk_drm_mode_fb_create(struct drm_device *dev,
+>  					       struct drm_file *file,
+>  					       const struct drm_mode_fb_cmd2 *cmd)
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_fb.h b/drivers/gpu/drm/mediatek/mtk_drm_fb.h
+> index 6b80c28e33cf..eb64d26001c6 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_fb.h
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_fb.h
+> @@ -6,7 +6,6 @@
+>  #ifndef MTK_DRM_FB_H
+>  #define MTK_DRM_FB_H
+>  
+> -int mtk_fb_wait(struct drm_framebuffer *fb);
+>  struct drm_framebuffer *mtk_drm_mode_fb_create(struct drm_device *dev,
+>  					       struct drm_file *file,
+>  					       const struct drm_mode_fb_cmd2 *cmd);
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_plane.c b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
+> index f2ef83aed6f9..42cc9823eaaa 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_plane.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
+> @@ -8,6 +8,7 @@
+>  #include <drm/drm_atomic.h>
+>  #include <drm/drm_atomic_helper.h>
+>  #include <drm/drm_plane_helper.h>
+> +#include <drm/drm_gem_framebuffer_helper.h>
+>  
+>  #include "mtk_drm_crtc.h"
+>  #include "mtk_drm_ddp_comp.h"
+> @@ -146,6 +147,7 @@ static void mtk_plane_atomic_disable(struct drm_plane *plane,
+>  }
+>  
+>  static const struct drm_plane_helper_funcs mtk_plane_helper_funcs = {
+> +	.prepare_fb = drm_gem_fb_prepare_fb,
+>  	.atomic_check = mtk_plane_atomic_check,
+>  	.atomic_update = mtk_plane_atomic_update,
+>  	.atomic_disable = mtk_plane_atomic_disable,
+
 
 
 _______________________________________________
