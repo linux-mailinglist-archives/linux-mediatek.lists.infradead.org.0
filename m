@@ -2,74 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 68794493BA
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 23:33:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 62A2949485
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 23:44:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
-	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=rsQGrjN4vg2BMk4mvQFm83Iu6N4WyXT9/qVuOhFLKok=; b=t8Um9y7q4c1kh4abjzvat703y
-	gHEyYz7WAu0TfSQtRryHmMeMavMYhBG6znN4dXtdOQ/DHYG630difDRS24prlNQiJ9EG0hO5kBgL8
-	mm18SZFxuMkyQenA9v/gXdbIOdSmvM2PjZfE3qsO5x6MfydWUPILi7iaJGxwFiOSPS50eST2u0MNU
-	yGKU49DhZNxWiz5iy11MiniarnMbUjk1+rPXWhV0ivWXW4+CvoVXevwjPxUnrJD788lRg59CHXJ2N
-	O5EwyDgK40yBEilcBiNRuosVX+Zqakp26SQExzUZbMtSRrWQV1G7sWLEoHNlcbvE+dAlU4tfYgsQP
-	+bdYgAwHA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=w6JjB1gXKZ1rDRNG0LR4jEATIWzcy4JINGIz86S6E9A=; b=kKuqOPKobL+OZx
+	sTQQ2+XR9fnW//6f9/x4ArMMvQ9QB61L0OmEv9mIlmrSxzvJgCA56Dns8cJ5Ac8OmVr3vjKTuM3EL
+	W9fxJTdHiW/l40CiplYbyrDjgaHCmcG4s2dfIBwRQSy5WykwY+KneMagfARHCbcrtAPrt6JzoevjW
+	epm7/D4VAbIbubV3jpVqlwRBpjJfzLY16hyHc6cBgWlci613gk8C2hmlrGmsG25uxsjupRaerAuft
+	MLmK0XoET3cwdHPmT6UMMITd49PudfXF/O9VxhPOAAQ15VTqTEuoAyhoV4uWOs/hjwWuou2h94/Cs
+	WRAUSp0dd8jRRQSktnxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hczFg-0002Zg-Q5; Mon, 17 Jun 2019 21:33:20 +0000
-Received: from mx.0dd.nl ([2a04:52c0:101:921::25])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hczFc-0002Yt-RY
- for linux-mediatek@lists.infradead.org; Mon, 17 Jun 2019 21:33:19 +0000
-Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mx.0dd.nl (Postfix) with ESMTPS id 56AD65FEE7;
- Mon, 17 Jun 2019 23:33:12 +0200 (CEST)
-Authentication-Results: mx.0dd.nl;
- dkim=pass (2048-bit key) header.d=vdorst.com header.i=@vdorst.com
- header.b="HZgKxU3I"; dkim-atps=neutral
-Received: from www (www.vdorst.com [192.168.2.222])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.vdorst.com (Postfix) with ESMTPSA id 168891C79191;
- Mon, 17 Jun 2019 23:33:12 +0200 (CEST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com 168891C79191
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
- s=default; t=1560807192;
- bh=mpnW9o2NLTWC9DpV89ZrktdnkCj2Hk6BtAKmEs1R7Io=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=HZgKxU3IqFhH818JqCma8/K3LSV4G9kSX63CnGbmPzy+ryh6//NEyxE0Amsd0s/RK
- k92SraEHuiQKFMQCSWdJb+Q3Z4oGDqMZMMHQQajOArKc4DYo+o8HK1GjWsEJEyum6w
- KMKFnzGCXNqOwGCH362eRwwKoJdxQRwRysuXHnHk1Z8/9NqbX9GoEaQzOlaP3+o07L
- 3HMijpcylvGBsh08uk7C281KkLD7EA001NidmPBtopdbh+R7q1mhLR1pGSQSCSU+Du
- XDxoWzNjz37gPi8riDve5Gz6Kh8FmHOEoaUoibX2FKj1k31NtURqtng2ia+vXzpqBE
- XP8LnlTrOr7oA==
-Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
- www.vdorst.com (Horde Framework) with HTTPS; Mon, 17 Jun 2019 21:33:12 +0000
-Date: Mon, 17 Jun 2019 21:33:12 +0000
-Message-ID: <20190617213312.Horde.fcb9-g80Zzfd-IMC8EQy50h@www.vdorst.com>
-From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
-To: Andrew Lunn <andrew@lunn.ch>
+	id 1hczQe-0006AJ-KF; Mon, 17 Jun 2019 21:44:40 +0000
+Received: from vps0.lunn.ch ([185.16.172.187])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hczQb-00069x-Jm
+ for linux-mediatek@lists.infradead.org; Mon, 17 Jun 2019 21:44:39 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+ s=20171124; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version
+ :References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=8hWxnlgCDerBlIvj+w63UCSLHnF0C+AVIm4FEITlEIE=; b=CD+JLJVLfj9MvebafqYPRCUL0e
+ NRBW3VdKFZZwUmfVsLLrE1NtmlpLEZqIRYSq/tSuVvsGifvEkubpdhniN/Rkzpvmw3xbQFs7lCudL
+ 511xtxJO1FTF5q4F0dGMnHaMaMat/Su2q66OuBojyAY9c9Q8l/ZcrwO8VJRk27uWJOuU=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
+ (envelope-from <andrew@lunn.ch>)
+ id 1hczQS-0003z7-Lo; Mon, 17 Jun 2019 23:44:28 +0200
+Date: Mon, 17 Jun 2019 23:44:28 +0200
+From: Andrew Lunn <andrew@lunn.ch>
+To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
 Subject: Re: [PATCH net-next 0/2] net: mediatek: Add MT7621 TRGMII mode support
+Message-ID: <20190617214428.GO17551@lunn.ch>
 References: <20190616182010.18778-1-opensource@vdorst.com>
  <20190617140223.GC25211@lunn.ch>
-In-Reply-To: <20190617140223.GC25211@lunn.ch>
-User-Agent: Horde Application Framework 5
+ <20190617213312.Horde.fcb9-g80Zzfd-IMC8EQy50h@www.vdorst.com>
 MIME-Version: 1.0
 Content-Disposition: inline
+In-Reply-To: <20190617213312.Horde.fcb9-g80Zzfd-IMC8EQy50h@www.vdorst.com>
+User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_143317_591026_102F0872 
-X-CRM114-Status: GOOD (  12.23  )
+X-CRM114-CacheID: sfid-20190617_144437_807796_D9C419AB 
+X-CRM114-Status: GOOD (  10.35  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [185.16.172.187 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -77,7 +66,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,49 +82,70 @@ Cc: Florian Fainelli <f.fainelli@gmail.com>, netdev@vger.kernel.org,
  Vivien Didelot <vivien.didelot@gmail.com>, linux-mediatek@lists.infradead.org,
  john@phrozen.org, Matthias Brugger <matthias.bgg@gmail.com>,
  "David S . Miller" <davem@davemloft.net>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-UXVvdGluZyBBbmRyZXcgTHVubiA8YW5kcmV3QGx1bm4uY2g+OgoKPiBPbiBTdW4sIEp1biAxNiwg
-MjAxOSBhdCAwODoyMDowOFBNICswMjAwLCBSZW7DqSB2YW4gRG9yc3Qgd3JvdGU6Cj4+IExpa2Ug
-bWFueSBvdGhlciBtZWRpYXRlayBTT0NzLCB0aGUgTVQ3NjIxIFNPQyBhbmQgdGhlIGludGVybmFs
-ICAKPj4gTVQ3NTMwIHN3aXRjaCBib3RoCj4+IHN1cHBvcnRzIFRSR01JSSBtb2RlLiBNVDc2MjEg
-VFJHTUlJIHNwZWVkIGlzIDEyMDBNQml0Lgo+Cj4gSGkgUmVuw6kKPgoKSGkgQW5kcmV3LAoKPiBJ
-cyBUUkdNSUkgdXNlZCBvbmx5IGJldHdlZW4gdGhlIFNvQyBhbmQgdGhlIFN3aXRjaD8gT3IgZG9l
-cyBleHRlcm5hbAo+IHBvcnRzIG9mIHRoZSBzd2l0Y2ggYWxzbyBzdXBwb3J0IDEyMDBNYml0L3M/
-IElmIGV4dGVybmFsIHBvcnRzIHN1cHBvcnQKPiB0aGlzLCB3aGF0IGRvZXMgZXRodG9vbCBzaG93
-IGZvciBTcGVlZD8KCk9ubHkgdGhlIGZpcnN0IEdNQUMgb2YgdGhlIFNPQyBhbmQgcG9ydCA2IG9m
-IHRoZSBzd2l0Y2ggc3VwcG9ydHMgdGhpcyBtb2RlLgpUaGUgc3dpdGNoIGNhbiBiZSBpbnRlcm5h
-bCBpbiB0aGUgU09DIGJ1dCBhbHNvIGEgc2VwYXJhdGUgY2hpcC4KClBIWUxJTksgYW5kIGV0aGVy
-dG9vbCByZXBvcnRzIHRoZSBsaW5rIGFzIDFHYml0LgpUaGUgbGluayBpcyBmaXhlZC1saW5rIHdp
-dGggc3BlZWQgPSAxMDAwLgoKZG1lc2cgb3V0cHV0IHdpdGggdW5wb3N0ZWQgUEhZTElOSyBwYXRj
-aGVzOgpbICAgIDUuMjM2NzYzXSBtdDc1MzAgbWRpby1idXM6MWY6IGNvbmZpZ3VyaW5nIGZvciBm
-aXhlZC90cmdtaWkgbGluayBtb2RlClsgICAgNS4yNDk4MTNdIG10NzUzMCBtZGlvLWJ1czoxZjog
-cGh5bGlua19tYWNfY29uZmlnOiAgCm1vZGU9Zml4ZWQvdHJnbWlpLzFHYnBzL0Z1bGwgYWR2PTAw
-LDAwMDAwMDAwLDAwMDAwMjIwIHBhdXNlPTEyIGxpbms9MSAgCmFuPTEKWyAgICA2LjM4OTQzNV0g
-bXRrX3NvY19ldGggMWUxMDAwMDAuZXRoZXJuZXQgZXRoMDogcGh5bGlua19tYWNfY29uZmlnOiAg
-Cm1vZGU9Zml4ZWQvdHJnbWlpLzFHYnBzL0Z1bGwgYWR2PTAwLDAwMDAwMDAwLDAwMDAwMjIwIHBh
-dXNlPTEyIGxpbms9MSAgCmFuPTEKCiMgZXRodG9vbCBldGgwClNldHRpbmdzIGZvciBldGgwOgog
-ICAgICAgICAgU3VwcG9ydGVkIHBvcnRzOiBbIE1JSSBdCiAgICAgICAgICBTdXBwb3J0ZWQgbGlu
-ayBtb2RlczogICAxMDAwYmFzZVQvRnVsbAogICAgICAgICAgU3VwcG9ydGVkIHBhdXNlIGZyYW1l
-IHVzZTogTm8KICAgICAgICAgIFN1cHBvcnRzIGF1dG8tbmVnb3RpYXRpb246IE5vCiAgICAgICAg
-ICBTdXBwb3J0ZWQgRkVDIG1vZGVzOiBOb3QgcmVwb3J0ZWQKICAgICAgICAgIEFkdmVydGlzZWQg
-bGluayBtb2RlczogIDEwMDBiYXNlVC9GdWxsCiAgICAgICAgICBBZHZlcnRpc2VkIHBhdXNlIGZy
-YW1lIHVzZTogTm8KICAgICAgICAgIEFkdmVydGlzZWQgYXV0by1uZWdvdGlhdGlvbjogTm8KICAg
-ICAgICAgIEFkdmVydGlzZWQgRkVDIG1vZGVzOiBOb3QgcmVwb3J0ZWQKICAgICAgICAgIFNwZWVk
-OiAxMDAwTWIvcwogICAgICAgICAgRHVwbGV4OiBGdWxsCiAgICAgICAgICBQb3J0OiBNSUkKICAg
-ICAgICAgIFBIWUFEOiAwCiAgICAgICAgICBUcmFuc2NlaXZlcjogaW50ZXJuYWwKICAgICAgICAg
-IEF1dG8tbmVnb3RpYXRpb246IG9uCiAgICAgICAgICBDdXJyZW50IG1lc3NhZ2UgbGV2ZWw6IDB4
-MDAwMDAwZmYgKDI1NSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZHJ2IHByb2Jl
-IGxpbmsgdGltZXIgaWZkb3duIGlmdXAgcnhfZXJyIHR4X2VycgogICAgICAgICAgTGluayBkZXRl
-Y3RlZDogeWVzCgoKCkkgYWxyZWFkeSBoYXZlIHJlcG9ydCBmcm9tIGEgTVQ3NjIzIHVzZXIgdGhh
-dCB0aGlzIHBhdGNoIGdpdmVzIGlzc3Vlcy4KCkkgc2VuZCB2MiBvZiB0aGUgcGF0Y2ggaWYgSSBm
-aXhlZCB0aGF0IGlzc3VlLgoKQWxzbyBJIHRoaW5rIGl0IGlzIGJldHRlciB0byBhZGQgYSBYVEFM
-IGZyZXF1ZW5jeSBjaGVjay4KVGhlIFBMTCB2YWx1ZXMgYXJlIG9ubHkgdmFsaWQgd2l0aCBhIDQw
-TUh6IGNyeXN0YWwuCgpBbnkgb3RoZXIgY29tbWVudHMgZm9yIHYyPwoKR3JlYXRzLAoKUmVuw6kK
-Cgo+Cj4gICAgICBUaGFua3MKPiAJQW5kcmV3CgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1t
-ZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21h
-aWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Mon, Jun 17, 2019 at 09:33:12PM +0000, Ren=E9 van Dorst wrote:
+> Quoting Andrew Lunn <andrew@lunn.ch>:
+> =
+
+> >On Sun, Jun 16, 2019 at 08:20:08PM +0200, Ren=E9 van Dorst wrote:
+> >>Like many other mediatek SOCs, the MT7621 SOC and the internal MT7530
+> >>switch both
+> >>supports TRGMII mode. MT7621 TRGMII speed is 1200MBit.
+> >
+> >Hi Ren=E9
+> >
+> =
+
+> Hi Andrew,
+> =
+
+> >Is TRGMII used only between the SoC and the Switch? Or does external
+> >ports of the switch also support 1200Mbit/s? If external ports support
+> >this, what does ethtool show for Speed?
+> =
+
+> Only the first GMAC of the SOC and port 6 of the switch supports this mod=
+e.
+> The switch can be internal in the SOC but also a separate chip.
+> =
+
+> PHYLINK and ethertool reports the link as 1Gbit.
+> The link is fixed-link with speed =3D 1000.
+> =
+
+> dmesg output with unposted PHYLINK patches:
+> [    5.236763] mt7530 mdio-bus:1f: configuring for fixed/trgmii link mode
+> [    5.249813] mt7530 mdio-bus:1f: phylink_mac_config:
+> mode=3Dfixed/trgmii/1Gbps/Full adv=3D00,00000000,00000220 pause=3D12 link=
+=3D1 an=3D1
+> [    6.389435] mtk_soc_eth 1e100000.ethernet eth0: phylink_mac_config:
+> mode=3Dfixed/trgmii/1Gbps/Full adv=3D00,00000000,00000220 pause=3D12 link=
+=3D1 an=3D1
+
+With PHYLINK, you can probably set the fixed link to the true 1.2Gbps.
+
+> # ethtool eth0
+> Settings for eth0:
+>          Supported ports: [ MII ]
+>          Supported link modes:   1000baseT/Full
+>          Supported pause frame use: No
+>          Supports auto-negotiation: No
+>          Supported FEC modes: Not reported
+>          Advertised link modes:  1000baseT/Full
+>          Advertised pause frame use: No
+>          Advertised auto-negotiation: No
+>          Advertised FEC modes: Not reported
+>          Speed: 1000Mb/s
+
+We could consider adding 1200BaseT/Full?
+
+   Andrew
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
