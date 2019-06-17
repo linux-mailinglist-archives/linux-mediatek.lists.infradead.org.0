@@ -2,66 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0826D47E5B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 11:26:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F0A2147F02
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 11:59:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WJQTMp/FEGOwphlpxclKdYMYY0WFqV0p5e7p7Djhj50=; b=OHqdYZ5s/DSzco
-	9b4ZB/jYSIumaJp95fiBrN+RJbgApjhydw4w9XMnYEsN9fIrjiVw1DeitaMHRGftRbrGR/l99yieD
-	ti3fd2B7M9Mzwnqe2qOZMOcIeuKAUlkSjeYjnvEkjNPyuLP7Cf8gp3IfzK12tkiQeRo9pAyhHRdIl
-	dLG+8L0tgyi4Pv9iL1DHXVKexyZBIdFP/m6/AIrcra1gpJan+B82N+luD9eH9y6rmxyPlWCRu4Ixr
-	fQc0YkqARn+VV9za93nIa/CFZHBN3jhE7WMK3qcTvCFRIi3VJIc1Vb7QXO3XWknjTSZrwRYP4zHO6
-	RPLjDYUz5aT3tgfqdP9g==;
+	List-Owner; bh=gOAW6RBAWdcZzT3A+GD5JCwla6+eyLH8SN2gzSAZKv8=; b=HOuLHd6SYG63+w
+	e8g2sSSdG1afGGFJxLVLn/Q8kwPPDFFiGZExdVEkT41/mjnCrj5+MINdr9adbG+FNTeGgjKJIN/AV
+	HyA7kP85mI0fDesRlOIQ89+Tind1tLYyKjiF36zz65MgPB+z4nZcQ/r2VgjTd/IU0/MQyxUmroDCE
+	XfmSGxouTDUITU3ASK9ZzLqrSDQQSIsVPFEeRoQe+QMyHaarpg1zI53TyxfCxE/AYMMBJf49LSqqS
+	V61WctSk9RoJK6y6vdalD+muWB/lDMdredXeIEfQVfINAxDyoU157qvvmX+4qJZX04UqFiY6lROi8
+	OXossvsquEN4EpO6EyHg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hcnti-0003By-51; Mon, 17 Jun 2019 09:25:54 +0000
+	id 1hcoQV-0000w2-5D; Mon, 17 Jun 2019 09:59:47 +0000
 Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hcnt1-0002mm-Vb; Mon, 17 Jun 2019 09:25:14 +0000
-Received: by mail-ed1-x541.google.com with SMTP id d4so15123585edr.13;
- Mon, 17 Jun 2019 02:25:11 -0700 (PDT)
+ id 1hcoQ9-0000hI-SV; Mon, 17 Jun 2019 09:59:27 +0000
+Received: by mail-ed1-x541.google.com with SMTP id p15so15265483eds.8;
+ Mon, 17 Jun 2019 02:59:25 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=lqVVGFiLtIXMSKaKfEjaA+hlMg6x2QMEeRiDkewgq3o=;
- b=EEgQ7ucSAOT4FEYRbI8qWX1+QPeFvnajDV9A6n2psA0494SH6GaoY7JTQ39g8BdVQA
- gFCu39RgNDYpyWCxHmcpdu86LbeFonpIeTddfAI2+PFvfWWcIKjEGnCXON8o2WWEfubf
- K52s4yu+4loxtX7GTh8DvHAGGKSG1/Yr92F7kwgEZsLkGhPOlIqOARPFr+0OAIsiMG9t
- k4MvFXZwwlMpUfUMmosNdT+MBiSo8AxDSm9xN6SIatB2MuhZd8djG2o9Ae2nNdE6nrGF
- pq+mPD+q8Gvhd7+4nE3O/3emY7tZCIHrflAEKk1GPNxmXjizRu2VGQrb0Dv16ngPe5DK
- VGug==
+ bh=Wk42T0Kn41hpMrw8onVz67gqbj9VTIvDZYpdkjVC3LU=;
+ b=HU2MhpCmFH5rFufEQWs7TJVnqXhA0pjjf7dg+aA8fqfagnr2AjBGI2ajPOwzvETN41
+ V5dlBx4pzhMJp4Y43GlmUc82x9F7ALUraweFErUOcRtBf5zJ6yeF9fxkomlsuXO+EXW8
+ lbaGX2Phztf+jdf0nemS3K8WapKXbR/Zg7LHQpthCxvDZ0hzj0uv3SiFPegCa5vi5jDl
+ yAyi49xqkLqv372JylnnOHwPCeDy0ecDR5uWMtlQ25gnRC0e5cbvy4JngL3diuYtSaLH
+ nz91frpKfAHMbZF4UTasneQ2fRP0hwF2MUmi35FtdggciKK6n9ulkuE2BM8vplTXFpFw
+ 3F2w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=lqVVGFiLtIXMSKaKfEjaA+hlMg6x2QMEeRiDkewgq3o=;
- b=dj3DVVaYEVtqYO4z6kOqZoagAvsWiuZouBgfu4zrO10uup9MmlEoj+eSfg3w7wXXlT
- g+anEt1/96oiokJf2C0Lata31n4gJOXrN3FqCazNw7zucJcj0YTFhOeTa39qX2rUPnaW
- sZzQzwIOOWDhRAzIj14CMzsapemL44HbBW73mLls9F84g6ZbqSUlRGxh+H0V7nzHDAaL
- 9BgcWmVni+6+F0q3i4pyqoV5gS97JmCUJrGdbG0d7+LyvXvd4QQDIpJtA0F4a72nUW0F
- p3JtKyxVsFs4C2ssO2SOprnxpfmrRg+wJ++vjQf6bYEwjEEUOffPML3I7nFiZKxzX4gq
- U9XQ==
-X-Gm-Message-State: APjAAAXoNNkh0C9hWmwvY2BwhXwR+4ZBWnccV+Udspxgir0rvAwAvSr4
- HPt0OrUtqm/3CP8Eo4ebLqeYkzlGBzM=
-X-Google-Smtp-Source: APXvYqwkzwykodP96cuw+v+PHe77dVwjss/INyzxyqzj2Io0DwDiwazXF9IiEw+lJLVQfUEpn0gXfQ==
-X-Received: by 2002:a17:906:1303:: with SMTP id
- w3mr94594670ejb.196.1560763510031; 
- Mon, 17 Jun 2019 02:25:10 -0700 (PDT)
+ bh=Wk42T0Kn41hpMrw8onVz67gqbj9VTIvDZYpdkjVC3LU=;
+ b=W7M1uX1vTyNnUhhHkZ+qVcjHMe/qMmG88MU+Lvtj1snpjJ/TQMJs9Od7aPp9CYmyFp
+ tPCNy1+D1IOb3q39qjlsXhBMGlz1UfeWkgAjcndwUcrPR/yK3Kbvi9gS0mL+tKBHIfkO
+ n6SYzjFvKpskAt2NVi/SVkhnGhVyuu8Deg/8eqy99fmnjwAEGAuMxpD7t5Mb2L2IK0jw
+ vPqpuK8u+4md+JJQXUSRQaTeRwA/a+Rg7LITeKht6YPrKMeMVFx0Gb6LjHuCKDarPZyd
+ pQLwO6sc8ui8VBnzZ2YPg5rRUwMnOvOMSEjWgh0qUaKHPVXq4Y1hKybjWTnc5og68w7k
+ zMkQ==
+X-Gm-Message-State: APjAAAWhreLTngdkUfQdVOFRfQRQZeu3XW0UnKV0KRu8Wn2sNdWEZFNQ
+ UySpincFLK4kvQfTbjEzsQTbIE3/LyI=
+X-Google-Smtp-Source: APXvYqyxo+9xluvpBbZCqFC3HASFesyzzpYZWPZbzIX1BjzUO5MO4hxfTHOP3fjHpxYmNS0/vPOJSQ==
+X-Received: by 2002:a17:906:2acf:: with SMTP id
+ m15mr94428745eje.31.1560765564160; 
+ Mon, 17 Jun 2019 02:59:24 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.140.27])
- by smtp.gmail.com with ESMTPSA id k11sm401711edq.54.2019.06.17.02.25.08
+ by smtp.gmail.com with ESMTPSA id u26sm3458355edf.91.2019.06.17.02.59.22
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Mon, 17 Jun 2019 02:25:09 -0700 (PDT)
-Subject: Re: [PATCH v7 08/21] iommu/mediatek: Add larb-id remapped support
+ Mon, 17 Jun 2019 02:59:23 -0700 (PDT)
+Subject: Re: [PATCH v7 09/21] iommu/mediatek: Refine protect memory definition
 To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
  Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
 References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-9-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-10-git-send-email-yong.wu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -157,16 +157,16 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <3dec887b-06b5-1aeb-8bd8-924999addd53@gmail.com>
-Date: Mon, 17 Jun 2019 11:25:07 +0200
+Message-ID: <d5bf7ef9-d6dd-2e09-5ad8-e72a26dd3880@gmail.com>
+Date: Mon, 17 Jun 2019 11:59:22 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <1560169080-27134-9-git-send-email-yong.wu@mediatek.com>
+In-Reply-To: <1560169080-27134-10-git-send-email-yong.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_022512_020032_8643FCC7 
-X-CRM114-Status: GOOD (  23.37  )
+X-CRM114-CacheID: sfid-20190617_025925_948790_94762E3A 
+X-CRM114-Status: GOOD (  18.68  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -212,82 +212,54 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 10/06/2019 14:17, Yong Wu wrote:
-> The larb-id may be remapped in the smi-common, this means the
-> larb-id reported in the mtk_iommu_isr isn't the real larb-id,
-> 
-> Take mt8183 as a example:
->                        M4U
->                         |
-> ---------------------------------------------
-> |               SMI common                  |
-> -0-----7-----5-----6-----1-----2------3-----4- <- Id remapped
->  |     |     |     |     |     |      |     |
-> larb0 larb1 IPU0  IPU1 larb4 larb5  larb6  CCU
-> disp  vdec  img   cam   venc  img    cam
-> As above, larb0 connects with the id 0 in smi-common.
->           larb1 connects with the id 7 in smi-common.
->           ...
-> If the larb-id reported in the isr is 7, actually it's larb1(vdec).
-> In order to output the right larb-id in the isr, we add a larb-id
-> remapping relationship in this patch.
-> 
-> If there is no this larb-id remapping in some SoCs, use the linear
-> mapping array instead.
-> 
-> This also is a preparing patch for mt8183.
+> The protect memory setting is a little different in the different SoCs.
+> In the register REG_MMU_CTRL_REG(0x110), the TF_PROT(translation fault
+> protect) shift bit is normally 4 while it shift 5 bits only in the
+> mt8173. This patch delete the complex MACRO and use a common if-else
+> instead.
 > 
 > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> Reviewed-by: Nicolas Boichat <drinkcat@chromium.org>
 > Reviewed-by: Evan Green <evgreen@chromium.org>
 
 Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
 > ---
->  drivers/iommu/mtk_iommu.c | 4 ++++
->  drivers/iommu/mtk_iommu.h | 2 ++
->  2 files changed, 6 insertions(+)
+>  drivers/iommu/mtk_iommu.c | 13 ++++++-------
+>  1 file changed, 6 insertions(+), 7 deletions(-)
 > 
 > diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-> index 264dda4..ad838b9 100644
+> index ad838b9..d38dfa2 100644
 > --- a/drivers/iommu/mtk_iommu.c
 > +++ b/drivers/iommu/mtk_iommu.c
-> @@ -220,6 +220,8 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
->  	fault_larb = F_MMU0_INT_ID_LARB_ID(regval);
->  	fault_port = F_MMU0_INT_ID_PORT_ID(regval);
+> @@ -52,12 +52,9 @@
+>  #define REG_MMU_DCM_DIS				0x050
 >  
-> +	fault_larb = data->plat_data->larbid_remap[fault_larb];
-> +
->  	if (report_iommu_fault(&dom->domain, data->dev, fault_iova,
->  			       write ? IOMMU_FAULT_WRITE : IOMMU_FAULT_READ)) {
->  		dev_err_ratelimited(
-> @@ -744,12 +746,14 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
->  	.m4u_plat     = M4U_MT2712,
->  	.has_4gb_mode = true,
->  	.has_bclk     = true,
-> +	.larbid_remap = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
->  };
+>  #define REG_MMU_CTRL_REG			0x110
+> +#define F_MMU_TF_PROT_TO_PROGRAM_ADDR		(2 << 4)
+>  #define F_MMU_PREFETCH_RT_REPLACE_MOD		BIT(4)
+> -#define F_MMU_TF_PROTECT_SEL_SHIFT(data) \
+> -	((data)->plat_data->m4u_plat == M4U_MT2712 ? 4 : 5)
+> -/* It's named by F_MMU_TF_PROT_SEL in mt2712. */
+> -#define F_MMU_TF_PROTECT_SEL(prot, data) \
+> -	(((prot) & 0x3) << F_MMU_TF_PROTECT_SEL_SHIFT(data))
+> +#define F_MMU_TF_PROT_TO_PROGRAM_ADDR_MT8173	(2 << 5)
 >  
->  static const struct mtk_iommu_plat_data mt8173_data = {
->  	.m4u_plat     = M4U_MT8173,
->  	.has_4gb_mode = true,
->  	.has_bclk     = true,
-> +	.larbid_remap = {0, 1, 2, 3, 4, 5}, /* Linear mapping. */
->  };
+>  #define REG_MMU_IVRP_PADDR			0x114
 >  
->  static const struct of_device_id mtk_iommu_of_ids[] = {
-> diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
-> index 63e235e..61fd5d6 100644
-> --- a/drivers/iommu/mtk_iommu.h
-> +++ b/drivers/iommu/mtk_iommu.h
-> @@ -46,6 +46,8 @@ struct mtk_iommu_plat_data {
+> @@ -519,9 +516,11 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
+>  		return ret;
+>  	}
 >  
->  	/* HW will use the EMI clock if there isn't the "bclk". */
->  	bool                has_bclk;
-> +
-> +	unsigned char       larbid_remap[MTK_LARB_NR_MAX];
->  };
+> -	regval = F_MMU_TF_PROTECT_SEL(2, data);
+>  	if (data->plat_data->m4u_plat == M4U_MT8173)
+> -		regval |= F_MMU_PREFETCH_RT_REPLACE_MOD;
+> +		regval = F_MMU_PREFETCH_RT_REPLACE_MOD |
+> +			 F_MMU_TF_PROT_TO_PROGRAM_ADDR_MT8173;
+> +	else
+> +		regval = F_MMU_TF_PROT_TO_PROGRAM_ADDR;
+>  	writel_relaxed(regval, data->base + REG_MMU_CTRL_REG);
 >  
->  struct mtk_iommu_domain;
+>  	regval = F_L2_MULIT_HIT_EN |
 > 
 
 _______________________________________________
