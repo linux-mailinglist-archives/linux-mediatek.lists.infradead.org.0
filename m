@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 928734887E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 18:14:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3F0E7488C9
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Jun 2019 18:23:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+07p0g/Kle5RWj3YiyppDqk+QOwnNvLecopbkkzOeyk=; b=rirrO6HjfJY3Uh
-	/Mqh9szr7y8JoZ5Sg5QNRwLS+T1rcqCK4nN9WbR/L88vtoGGae9gjxQJXJmI03nL2XBqBmLYlaYBa
-	eDRn8VWnpNgOWz2lbSGHPvM5xqajK8UTSYH/NrGvUCjZI6XB9x9sG4j4f6nclOZ70i7iNZ8NNi1W+
-	Vf1XSO1++9HYRP5Xd7mwOidAwzUvwuVRB6KgCFM2534txv5wFQOAFO9xqrARMud28fOVyDwtp6UMy
-	X20NwToAOzKnyqGt1c+vYhavrsBhN+LQP8pqrd3q9fjNPBoyYP3mSlFlFSf61ODArMfywPK56EQvL
-	CtqLFX+dixscJ3iab2Lg==;
+	List-Owner; bh=nLKk6xTirVKNGC0KunoevEuXlt7rxuLw2iVfwbhP2Mo=; b=NBd/IQZQOFuRS1
+	Cjr1eEK26fIzctW42QZc19rYGbYlKq653P+jLzbGKYPxbU3u7g6RdiaYneX10QYv5mT6Z2prbzW/A
+	BZe+7iyLmpv74x7LoR7iemyGOvQXEpQ9qKmjxcb5vc8XOG07c89FPEPseP92cGMv07GmA4mnbd8lT
+	UPixTpfIzgVojY4dHejVufbRDBbzCoZ41cK6J07YSulPuu9ieL7X+Tp030vXwWlywvGFm710Wke8X
+	6WXT5NHMC3T983/4fFjl+krFXsj1A9gbc+hDvbEiONW/0n235ihLrPOiCJrWf3J1XLUE7MGlIi+JW
+	GMo08HERRjM/l1yGrtEw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hcuH6-0003Gx-21; Mon, 17 Jun 2019 16:14:28 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1hcuQC-0000P9-Ts; Mon, 17 Jun 2019 16:23:53 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hcuGe-0002y6-1G; Mon, 17 Jun 2019 16:14:05 +0000
-Received: by mail-ed1-x543.google.com with SMTP id e3so16899502edr.10;
- Mon, 17 Jun 2019 09:13:59 -0700 (PDT)
+ id 1hcuPq-0000BM-8X; Mon, 17 Jun 2019 16:23:31 +0000
+Received: by mail-ed1-x541.google.com with SMTP id k21so17016727edq.3;
+ Mon, 17 Jun 2019 09:23:30 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=2nkyaA+ghoO4J8lTiZaadT7gkHaEm0zUOqwb908KY5s=;
- b=Otd608GylTQG4ZsOVCEjimijcZ22cEiJ++bqEY9V9pwNCdVXzubcSL2gF4jr+/vVQf
- LPe9FMy+HqmLYK7gYzroQbyn/pqi3LH4Kq/Z3kg6TGCWdhYQ6h77MShdd4Px7whbzAhM
- V0Tttpc0V1yC//iiACrfKFTlKDV/58dTx82fdgPZ9bve7TXewTDaWmcV8U8ZkXfYjqRO
- XU1bZP/HQMK2ZXezLLXxP34UyPpNJYtnlB3CsO1JE5MzD7lsxuY5b3mkqNvDbYPDonG/
- +mTQnLIxitBQWBkSYVM81yO45hqFot0u/nfEcLMy78ySJTltjeMfm0/sMiA65t9wzpFL
- ox0g==
+ bh=dSzF4K3Czf5VSASPYT8V9ED7YAnhZ1CcMZ3pw/HUTHg=;
+ b=WppaYHp1k9wFtL8RYqmKIZuDJWVZG0iAiq8sWUCpf/cnJpzOMHQW6e/xPJ6P1v2vth
+ qDQR/Bfv6F7s1nCBBjkh6y4VU1tbhr0vvN+iQYDIsh7cbKodpngyUhb6lOHIF9JjsVWs
+ PjnSD7lLdWiX5Yi1d2wFsBJXEbmQNkw5KayKfzEm+vRryXrHxujXc3Ea5ceXS+ttdSkZ
+ BgX5DriojSGKEvmvg5G7f9hElzDQPOxxlRf25TMTCMNcjggSO0rizg1kgl92npU3icCt
+ svX5X+alApoDTx4Qq/jTS5OU3O7j4GeEUSwvhr4ia7R1gEyZ0n1BH29nngifeWQN2SBh
+ C/kQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=2nkyaA+ghoO4J8lTiZaadT7gkHaEm0zUOqwb908KY5s=;
- b=NyVBJDU+KFbCITuuC0JOfv7MVUbxULrduUJhJKO9ZtJ76kmxkRQFOi8iT9WhDbEFKG
- LcTGCtoLcWagIjWxJMublvlIBoRoIQzxPG0O6ADf1ljGIM//PcZDqYT8FShPvkZZDS15
- H5eb2eftZXe9nUMYqx9wnXeiO2Tk8Gcq7BLIQT8G9vJq7JhrmjMz8sYZMBZJNeSchi2/
- Dr3DWy19eVZKq2v+G8xSJ2jpEP0IBlZUZTRVNIRU0zd5w/UshjiLC+0bhHmZe4JnKe4w
- ufX97vw9UbJL4N3hLORz+o7qVjEXz5x4VGZbBQLL9RliRGzaXwg2Xhq7ryZSgsPAVcr3
- vmHg==
-X-Gm-Message-State: APjAAAWVjjky5O8LKcipDzy/VOVy5M/VSeBNr0RmofCNVNVqvPqk9S0Z
- /XK6s2TSoTy1tzNuCEXWsKM=
-X-Google-Smtp-Source: APXvYqy/dzw7FA8rbxjnk0N+Jpt5W58JXI0sUgcw6kLx6RSwc2N8ZGNeHx/wBUaBFXPyUvCZYLmiGw==
-X-Received: by 2002:a17:906:6055:: with SMTP id
- p21mr21899471ejj.35.1560788038392; 
- Mon, 17 Jun 2019 09:13:58 -0700 (PDT)
+ bh=dSzF4K3Czf5VSASPYT8V9ED7YAnhZ1CcMZ3pw/HUTHg=;
+ b=pd6jPx8aCfAfFBhIMsVqS/wYAFllyKRBZC0MpQjBAgyCJ4cnSFVvrB1DLPuELMhnD6
+ X8DBbij+A10sIe3PBNjemDElySxqnzPMCCcpiKKEuY15XSC9fPNWdTgufzpQZ1XLVeXD
+ CKd0cX7u+GSBOKaE1LcCQC7ZEg75JrQSC7uy5AFgOjBDJC2D0VNZoTwNfIP+fmWRg5IP
+ W0heP8IIuw+PRkQlDtmxJYjWBY9mctisqyD7vbw53GoSQZ/VTur2Zqk7v8Nr8YpXylfw
+ 8jgpD4NGgBfiXRhNuMj97L0Xlb1AZM8GEZmkbgeTdReGZlMLCwe73TIND4xGw3d+h9+N
+ XMbg==
+X-Gm-Message-State: APjAAAWHMk/MrgIA8AVYJEc2iCbi+yBvdyLLHtBmm7E2nXv5FnjlMSyk
+ uD3BL07trMSlBHqp/ugE1dCaHQN0FQg=
+X-Google-Smtp-Source: APXvYqzrN73x2Z3UgYnPRoXY++yj/yVmr1z4SOtDpZjlQgKO+ApCR6iLaFFMYHjMk+4RlXL6MtKm0A==
+X-Received: by 2002:a17:906:7388:: with SMTP id
+ f8mr12519895ejl.231.1560788608869; 
+ Mon, 17 Jun 2019 09:23:28 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.140.27])
- by smtp.gmail.com with ESMTPSA id m31sm3917579edd.42.2019.06.17.09.13.56
+ by smtp.gmail.com with ESMTPSA id d1sm2217702ejn.11.2019.06.17.09.23.27
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Mon, 17 Jun 2019 09:13:57 -0700 (PDT)
-Subject: Re: [PATCH v7 15/21] memory: mtk-smi: Invoke pm runtime_callback to
- enable clocks
+ Mon, 17 Jun 2019 09:23:28 -0700 (PDT)
+Subject: Re: [PATCH v7 16/21] memory: mtk-smi: Add bus_sel for mt8183
 To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
  Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
 References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-16-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -158,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <719e0d71-a9e1-4cb2-0efb-0cdddc65e036@gmail.com>
-Date: Mon, 17 Jun 2019 18:13:56 +0200
+Message-ID: <0205e43a-8677-c194-d118-6c199c03306c@gmail.com>
+Date: Mon, 17 Jun 2019 18:23:26 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <1560169080-27134-16-git-send-email-yong.wu@mediatek.com>
+In-Reply-To: <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_091400_150907_ED396D6C 
-X-CRM114-Status: GOOD (  27.49  )
+X-CRM114-CacheID: sfid-20190617_092330_360434_1918D456 
+X-CRM114-Status: GOOD (  23.48  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -213,204 +212,111 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 10/06/2019 14:17, Yong Wu wrote:
-> This patch only move the clk_prepare_enable and config_port into the
-> runtime suspend/resume callback. It doesn't change the code content
-> and sequence.
+> There are 2 mmu cells in a M4U HW. we could adjust some larbs entering
+> mmu0 or mmu1 to balance the bandwidth via the smi-common register
+> SMI_BUS_SEL(0x220)(Each larb occupy 2 bits).
 > 
-> This is a preparing patch for adjusting SMI_BUS_SEL for mt8183.
-> (SMI_BUS_SEL need to be restored after smi-common resume every time.)
-> Also it gives a chance to get rid of mtk_smi_larb_get/put which could
-> be a next topic.
+> In mt8183, For better performance, we switch larb1/2/5/7 to enter
+> mmu1 while the others still keep enter mmu0.
+> 
+> In mt8173 and mt2712, we don't get the performance issue,
+> Keep its default value(0x0), that means all the larbs enter mmu0.
+> 
+> Note: smi gen1(mt2701/mt7623) don't have this bus_sel.
+> 
+> And, the base of smi-common is completely different with smi_ao_base
+> of gen1, thus I add new variable for that.
 > 
 > CC: Matthias Brugger <matthias.bgg@gmail.com>
 > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
 > Reviewed-by: Evan Green <evgreen@chromium.org>
-
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-
 > ---
->  drivers/memory/mtk-smi.c | 113 ++++++++++++++++++++++++++++++-----------------
->  1 file changed, 72 insertions(+), 41 deletions(-)
+>  drivers/memory/mtk-smi.c | 22 ++++++++++++++++++++--
+>  1 file changed, 20 insertions(+), 2 deletions(-)
 > 
 > diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
-> index a430721..9790801 100644
+> index 9790801..08cf40d 100644
 > --- a/drivers/memory/mtk-smi.c
 > +++ b/drivers/memory/mtk-smi.c
-> @@ -86,17 +86,13 @@ struct mtk_smi_larb { /* larb: local arbiter */
->  	u32				*mmu;
+> @@ -49,6 +49,12 @@
+>  #define SMI_LARB_NONSEC_CON(id)	(0x380 + ((id) * 4))
+>  #define F_MMU_EN		BIT(0)
+>  
+> +/* SMI COMMON */
+> +#define SMI_BUS_SEL			0x220
+> +#define SMI_BUS_LARB_SHIFT(larbid)	((larbid) << 1)
+> +/* All are MMU0 defaultly. Only specialize mmu1 here. */
+> +#define F_MMU1_LARB(larbid)		(0x1 << SMI_BUS_LARB_SHIFT(larbid))
+> +
+>  enum mtk_smi_gen {
+>  	MTK_SMI_GEN1,
+>  	MTK_SMI_GEN2
+> @@ -57,6 +63,7 @@ enum mtk_smi_gen {
+>  struct mtk_smi_common_plat {
+>  	enum mtk_smi_gen gen;
+>  	bool             has_gals;
+> +	u32              bus_sel; /* Balance some larbs to enter mmu0 or mmu1 */
 >  };
 >  
-> -static int mtk_smi_enable(const struct mtk_smi *smi)
-> +static int mtk_smi_clk_enable(const struct mtk_smi *smi)
+>  struct mtk_smi_larb_gen {
+> @@ -72,8 +79,8 @@ struct mtk_smi {
+>  	struct clk			*clk_apb, *clk_smi;
+>  	struct clk			*clk_gals0, *clk_gals1;
+>  	struct clk			*clk_async; /*only needed by mt2701*/
+> -	void __iomem			*smi_ao_base;
+> -
+> +	void __iomem			*smi_ao_base; /* only for gen1 */
+> +	void __iomem			*base;	      /* only for gen2 */
+
+union {} maybe?
+
+>  	const struct mtk_smi_common_plat *plat;
+>  };
+>  
+> @@ -410,6 +417,8 @@ static int __maybe_unused mtk_smi_larb_suspend(struct device *dev)
+>  static const struct mtk_smi_common_plat mtk_smi_common_mt8183 = {
+>  	.gen      = MTK_SMI_GEN2,
+>  	.has_gals = true,
+> +	.bus_sel  = F_MMU1_LARB(1) | F_MMU1_LARB(2) | F_MMU1_LARB(5) |
+> +		    F_MMU1_LARB(7),
+>  };
+>  
+>  static const struct of_device_id mtk_smi_common_of_ids[] = {
+> @@ -482,6 +491,11 @@ static int mtk_smi_common_probe(struct platform_device *pdev)
+>  		ret = clk_prepare_enable(common->clk_async);
+>  		if (ret)
+>  			return ret;
+> +	} else {
+> +		res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> +		common->base = devm_ioremap_resource(dev, res);
+> +		if (IS_ERR(common->base))
+> +			return PTR_ERR(common->base);
+
+We must be backwards compatible with DT which does not have the base defined.
+
+Regards,
+Matthias
+
+>  	}
+>  	pm_runtime_enable(dev);
+>  	platform_set_drvdata(pdev, common);
+> @@ -497,6 +511,7 @@ static int mtk_smi_common_remove(struct platform_device *pdev)
+>  static int __maybe_unused mtk_smi_common_resume(struct device *dev)
 >  {
+>  	struct mtk_smi *common = dev_get_drvdata(dev);
+> +	u32 bus_sel = common->plat->bus_sel;
 >  	int ret;
 >  
-> -	ret = pm_runtime_get_sync(smi->dev);
-> -	if (ret < 0)
-> -		return ret;
-> -
->  	ret = clk_prepare_enable(smi->clk_apb);
->  	if (ret)
-> -		goto err_put_pm;
-> +		return ret;
->  
->  	ret = clk_prepare_enable(smi->clk_smi);
->  	if (ret)
-> @@ -118,59 +114,28 @@ static int mtk_smi_enable(const struct mtk_smi *smi)
->  	clk_disable_unprepare(smi->clk_smi);
->  err_disable_apb:
->  	clk_disable_unprepare(smi->clk_apb);
-> -err_put_pm:
-> -	pm_runtime_put_sync(smi->dev);
->  	return ret;
->  }
->  
-> -static void mtk_smi_disable(const struct mtk_smi *smi)
-> +static void mtk_smi_clk_disable(const struct mtk_smi *smi)
->  {
->  	clk_disable_unprepare(smi->clk_gals1);
->  	clk_disable_unprepare(smi->clk_gals0);
->  	clk_disable_unprepare(smi->clk_smi);
->  	clk_disable_unprepare(smi->clk_apb);
-> -	pm_runtime_put_sync(smi->dev);
->  }
->  
->  int mtk_smi_larb_get(struct device *larbdev)
->  {
-> -	struct mtk_smi_larb *larb = dev_get_drvdata(larbdev);
-> -	const struct mtk_smi_larb_gen *larb_gen = larb->larb_gen;
-> -	struct mtk_smi *common = dev_get_drvdata(larb->smi_common_dev);
-> -	int ret;
-> +	int ret = pm_runtime_get_sync(larbdev);
->  
-> -	/* Enable the smi-common's power and clocks */
-> -	ret = mtk_smi_enable(common);
-> -	if (ret)
-> -		return ret;
-> -
-> -	/* Enable the larb's power and clocks */
-> -	ret = mtk_smi_enable(&larb->smi);
-> -	if (ret) {
-> -		mtk_smi_disable(common);
-> -		return ret;
-> -	}
-> -
-> -	/* Configure the iommu info for this larb */
-> -	larb_gen->config_port(larbdev);
-> -
-> -	return 0;
-> +	return (ret < 0) ? ret : 0;
->  }
->  EXPORT_SYMBOL_GPL(mtk_smi_larb_get);
->  
->  void mtk_smi_larb_put(struct device *larbdev)
->  {
-> -	struct mtk_smi_larb *larb = dev_get_drvdata(larbdev);
-> -	struct mtk_smi *common = dev_get_drvdata(larb->smi_common_dev);
-> -
-> -	/*
-> -	 * Don't de-configure the iommu info for this larb since there may be
-> -	 * several modules in this larb.
-> -	 * The iommu info will be reset after power off.
-> -	 */
-> -
-> -	mtk_smi_disable(&larb->smi);
-> -	mtk_smi_disable(common);
-> +	pm_runtime_put_sync(larbdev);
->  }
->  EXPORT_SYMBOL_GPL(mtk_smi_larb_put);
->  
-> @@ -385,12 +350,52 @@ static int mtk_smi_larb_remove(struct platform_device *pdev)
+>  	ret = mtk_smi_clk_enable(common);
+> @@ -504,6 +519,9 @@ static int __maybe_unused mtk_smi_common_resume(struct device *dev)
+>  		dev_err(common->dev, "Failed to enable clock(%d).\n", ret);
+>  		return ret;
+>  	}
+> +
+> +	if (common->plat->gen == MTK_SMI_GEN2 && bus_sel)
+> +		writel(bus_sel, common->base + SMI_BUS_SEL);
 >  	return 0;
 >  }
->  
-> +static int __maybe_unused mtk_smi_larb_resume(struct device *dev)
-> +{
-> +	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
-> +	const struct mtk_smi_larb_gen *larb_gen = larb->larb_gen;
-> +	int ret;
-> +
-> +	/* Power on smi-common. */
-> +	ret = pm_runtime_get_sync(larb->smi_common_dev);
-> +	if (ret < 0) {
-> +		dev_err(dev, "Failed to pm get for smi-common(%d).\n", ret);
-> +		return ret;
-> +	}
-> +
-> +	ret = mtk_smi_clk_enable(&larb->smi);
-> +	if (ret < 0) {
-> +		dev_err(dev, "Failed to enable clock(%d).\n", ret);
-> +		pm_runtime_put_sync(larb->smi_common_dev);
-> +		return ret;
-> +	}
-> +
-> +	/* Configure the basic setting for this larb */
-> +	larb_gen->config_port(dev);
-> +
-> +	return 0;
-> +}
-> +
-> +static int __maybe_unused mtk_smi_larb_suspend(struct device *dev)
-> +{
-> +	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
-> +
-> +	mtk_smi_clk_disable(&larb->smi);
-> +	pm_runtime_put_sync(larb->smi_common_dev);
-> +	return 0;
-> +}
-> +
-> +static const struct dev_pm_ops smi_larb_pm_ops = {
-> +	SET_RUNTIME_PM_OPS(mtk_smi_larb_suspend, mtk_smi_larb_resume, NULL)
-> +};
-> +
->  static struct platform_driver mtk_smi_larb_driver = {
->  	.probe	= mtk_smi_larb_probe,
->  	.remove	= mtk_smi_larb_remove,
->  	.driver	= {
->  		.name = "mtk-smi-larb",
->  		.of_match_table = mtk_smi_larb_of_ids,
-> +		.pm             = &smi_larb_pm_ops,
->  	}
->  };
->  
-> @@ -489,12 +494,38 @@ static int mtk_smi_common_remove(struct platform_device *pdev)
->  	return 0;
->  }
->  
-> +static int __maybe_unused mtk_smi_common_resume(struct device *dev)
-> +{
-> +	struct mtk_smi *common = dev_get_drvdata(dev);
-> +	int ret;
-> +
-> +	ret = mtk_smi_clk_enable(common);
-> +	if (ret) {
-> +		dev_err(common->dev, "Failed to enable clock(%d).\n", ret);
-> +		return ret;
-> +	}
-> +	return 0;
-> +}
-> +
-> +static int __maybe_unused mtk_smi_common_suspend(struct device *dev)
-> +{
-> +	struct mtk_smi *common = dev_get_drvdata(dev);
-> +
-> +	mtk_smi_clk_disable(common);
-> +	return 0;
-> +}
-> +
-> +static const struct dev_pm_ops smi_common_pm_ops = {
-> +	SET_RUNTIME_PM_OPS(mtk_smi_common_suspend, mtk_smi_common_resume, NULL)
-> +};
-> +
->  static struct platform_driver mtk_smi_common_driver = {
->  	.probe	= mtk_smi_common_probe,
->  	.remove = mtk_smi_common_remove,
->  	.driver	= {
->  		.name = "mtk-smi-common",
->  		.of_match_table = mtk_smi_common_of_ids,
-> +		.pm             = &smi_common_pm_ops,
->  	}
->  };
 >  
 > 
 
