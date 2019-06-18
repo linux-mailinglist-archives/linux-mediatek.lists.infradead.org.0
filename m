@@ -2,65 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9A60D4AD32
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 23:18:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8ED34AD48
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 23:24:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PlPSRJ+c2CkcYnCeLS92pQ2z2pHkoGgaWZGh6HLstn8=; b=dSwvspKsiTAxJj
-	lqHYDNJUJ8/3pVl3NHj5GhGvgCmXhXTifYEATvLSuXA/kLENciUAJSZh9iYozDaRkUhg6dlF8e2Ts
-	npUGxfpyNj90TF+TLnsd1+i9yvcqt03W7SeO2LTqMpWGwcvJHP6Y/pTrIr/18S7Z1UGa83p3Z7cXC
-	ETlxU/Qxcp6JpWQTciivn8V1Kr75WXNp0y5wQuRMp7GkOmlXbVUBggLPNq76t4Q3zcBDfmwg8waHQ
-	qEhU1Knm2fDd9Tyqo6/5Y9fMZbCM7cP3W1BkrBLAVfTzk39SIfquS8i2WDunkaQ9G+txaS9CcHKlo
-	iUtbolPBl2M5B+/aVGfQ==;
+	List-Owner; bh=xMuw9KostJgIZt4AfmCezEkBHk/y6POyh9zS6CrzrNY=; b=HN7/gOvauwrmQ5
+	1M/5RTC18nA6lDcnJrIdl553E/LjGBEPWE7R7oY4GKR/gpCrHQYaShK9igu1StJ/YvYSCc1dxy4+Z
+	jvHOYVAZ3FO96hLdi81jRqF/LAYDonBQWvBvH9iNPHhtKpFfM7UR/GYq5WU35prpB+9QrYVj9+bmv
+	0jPylleAmXBWfsLFKtkr2TMqQc3x/r3RD3CZeFE5UB1iHLENWV77honzXfciMtGskrDxkF3IOf/8W
+	jahFvkmKw//zd+hEgEaiCwWWaPuChwI4hQ1+GCTzK/ruHo4quwU+ESv6e1/HUWdYm5NEyR53uSGQ3
+	asm7Xbs28TME3Mxn9KSg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdLVC-0006iO-RI; Tue, 18 Jun 2019 21:18:50 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1hdLa7-0001E3-TW; Tue, 18 Jun 2019 21:23:55 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdLV9-0006hq-QR; Tue, 18 Jun 2019 21:18:49 +0000
-Received: by mail-wr1-x444.google.com with SMTP id m3so1054890wrv.2;
- Tue, 18 Jun 2019 14:18:46 -0700 (PDT)
+ id 1hdLZU-0000dc-5H
+ for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 21:23:19 +0000
+Received: by mail-wm1-x343.google.com with SMTP id s3so4824999wms.2
+ for <linux-mediatek@lists.infradead.org>; Tue, 18 Jun 2019 14:23:15 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=6KBwZ77vx+Ug72rN2lArM79k8txlJdN6M61O8g98a74=;
- b=aZFj62IN2vZIXZvTDaPcwKiArUlNvRMNR6+HlHBb9xIb967N1rIFDTITx+pKwXNbpA
- Duh0luTZvgd/ziOCnUAHiO5GqI59oxNxV9Yr8/R/wsKoGLwCtUDv0b1F/rwSzQQN+gzb
- HaNrfm0twwgsU0X2pOJJ7EIinE5SRwX9IpTX2HQUoh3dBiSnsKS5BaRxTUq8bv4jrLce
- C9JWX4f+/5QO6MHMYrhejPolbcN/+KKtnDU8NmramYN/hCL8C0dhcmdrX7h/VKi2FZib
- t/JazsOZ9JAoG4hR1mTevjgMahICJTdV9lhC6pbV1gsAVxeD0u5Rd9unBGJWnRU65RTy
- 9JeA==
+ bh=vmK8wlnP5bnAyIhoiqTrtVv4Zbb3t9omriy+VQcaNqU=;
+ b=sAZiECdn475BNhMktFCdRvHwC09n6ndLWvr5nu72ywqWqNOF+MM1gtOyKribLLI0ze
+ uKdKtDQcIi+jEiVLThvqxQWC7UFEoVvMumjAzu2Gz4J8bOtG+CLYWSRuUhCHF8h6A5cE
+ fRU4jnohvoeNhJaVai8dYX7xY8iFS8B1f97YjWQ+rzWmxLGoG6UPcS5CmgSabe/88q7D
+ Gg6WHXS/99aLMQgtM2GXhPpXo+xaGEuqnKAg0l4wt92NSmqxwR1mLrZXbHeHq1Dv8VKk
+ JOaEEHxI3IiNB+1yyvMgDh6Utg9Mr0IKy8J8rnih6OqSpkenozNB8qOUxKXAVLEYzMGL
+ dcQg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=6KBwZ77vx+Ug72rN2lArM79k8txlJdN6M61O8g98a74=;
- b=XGe8f+ByqW3XbKw7B2zGjIyE/pENbiQvnog5XFdkGF4f8FB4IGqOUPqr9byU27U0hP
- aMMrvs4P4h6inhVzr6Gv2x/BeM4Wtcig3z88kLc3yCwNSoGVpeRiWiJPRg9v2iocxjeQ
- qZYCIeCtiGiKAsIojJESnLYoIwPDeGi4aNCQqqgjfLgIbStCb7Br5ZkkPgbcUwueeSe8
- 0Y16az9NQhcmHEYt9N24kyFdFLUfP3scgrFxbWfPlwTzNUzTNIdVSo8mj0NUnuZorSQy
- GePNLYDKQYR5Z23LfhTZsXoMLEO1D641Z8mmQJEjE7GkxqjC+i4Wt/yreAtbwOLb4URi
- 1LXA==
-X-Gm-Message-State: APjAAAVe+WDRZWXIBF/eghSBo3+1hezEkUu1W9RCvjrhO/ZqKBQlBLL+
- O9rFoiWImJg08N5HHwX00MU=
-X-Google-Smtp-Source: APXvYqyiIDxZ3fIw7Bhztp3fOsuq4vMXo9bl5mh9gJ6oFlR1CTHzsxcEYs+OIzGqwCFjAKWxf5C0tA==
-X-Received: by 2002:a5d:6a05:: with SMTP id m5mr29918004wru.161.1560892725335; 
- Tue, 18 Jun 2019 14:18:45 -0700 (PDT)
+ bh=vmK8wlnP5bnAyIhoiqTrtVv4Zbb3t9omriy+VQcaNqU=;
+ b=osITTLcx5fmAbhFz0LrkJWWT8wH5HIcrWGiCh4YExoIPCvUCK2HhfsgZv4KozH9yK4
+ SySPIWqEf0W7miscP6vfFQU/Z5nfixvES+3ISBy84Kxgwk3203I9rMQLu1M1gUb/bagk
+ qTSXe48dGAQagJcdznlWnV6t0jgPWWfzPOyCGQdXkTCsZlGrkWsUg7RIaITIoqXz/9c8
+ uo8byxVgVjpdObg6PsmrBWjLwD0MnXNNIhJmFuzNATiuAFGE7Mnu7YMLa5KL3szW9PY/
+ Ir9EOP4rtMbFVWNAXa+/WKpC3ubkIDgp5VO+ExoPFc1Tw4ljt4yK3gM38oGjLVg9pk0G
+ ej6Q==
+X-Gm-Message-State: APjAAAUFPQMkxwHYVds9SgsXyfzAo6QEpe+Y7o1p7/Wk+EtCxpU1YdI3
+ a+deWaEcrcn1JJnoLtbRDLD3dKN+Its=
+X-Google-Smtp-Source: APXvYqzOjD4+E/Wiq8sXDb1X0unIY9PxocAd6/LkBLFEemzTjW7btJN4uwMnUFLYVyYL6Zc8xYe/+g==
+X-Received: by 2002:a1c:6545:: with SMTP id z66mr5082201wmb.77.1560892994184; 
+ Tue, 18 Jun 2019 14:23:14 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.230.25])
- by smtp.gmail.com with ESMTPSA id f1sm3417833wml.28.2019.06.18.14.18.44
+ by smtp.gmail.com with ESMTPSA id s10sm4205191wmf.8.2019.06.18.14.23.13
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Tue, 18 Jun 2019 14:18:44 -0700 (PDT)
-Subject: Re: [PATCH 2/2] mfd: mt6397: use DEFINE_RES_* helpers to define RTC
- resources
-To: Fabien Parent <fparent@baylibre.com>, lee.jones@linaro.org
-References: <20190618154347.16991-1-fparent@baylibre.com>
- <20190618154347.16991-2-fparent@baylibre.com>
+ Tue, 18 Jun 2019 14:23:13 -0700 (PDT)
+Subject: Re: [PATCH v2, 1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
+To: Xi Chen <xixi.chen@mediatek.com>, robh+dt@kernel.org,
+ mark.rutland@arm.com, ck.hu@mediatek.com
+References: <1558670066-22484-1-git-send-email-xixi.chen@mediatek.com>
+ <1558670066-22484-2-git-send-email-xixi.chen@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -156,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <6bf2d5a0-a768-b178-80c7-4f28f7db212c@gmail.com>
-Date: Tue, 18 Jun 2019 23:18:44 +0200
+Message-ID: <2e9ad859-4f98-ea40-47f7-dd27a2e8ad1a@gmail.com>
+Date: Tue, 18 Jun 2019 23:23:12 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <20190618154347.16991-2-fparent@baylibre.com>
+In-Reply-To: <1558670066-22484-2-git-send-email-xixi.chen@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190618_141847_858614_07765FBF 
-X-CRM114-Status: GOOD (  15.65  )
+X-CRM114-CacheID: sfid-20190618_142316_278058_006CC0DD 
+X-CRM114-Status: GOOD (  15.64  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
@@ -196,8 +197,7 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org, srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -205,41 +205,43 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 18/06/2019 17:43, Fabien Parent wrote:
-> Use the DEFINE_RES_{MEM,IRQ} to define the RTC reosurce for the MT6397
-> PMIC.
+On 24/05/2019 05:54, Xi Chen wrote:
+> Add emi dt-bindings of MT8183 in binding document.
 > 
-> Signed-off-by: Fabien Parent <fparent@baylibre.com>
-
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-
+> Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
 > ---
->  drivers/mfd/mt6397-core.c | 12 ++----------
->  1 file changed, 2 insertions(+), 10 deletions(-)
+>  .../bindings/memory-controllers/mediatek,emi.txt      | 19 +++++++++++++++++++
+>  1 file changed, 19 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
 > 
-> diff --git a/drivers/mfd/mt6397-core.c b/drivers/mfd/mt6397-core.c
-> index 190ed86ad93e..1e315712870b 100644
-> --- a/drivers/mfd/mt6397-core.c
-> +++ b/drivers/mfd/mt6397-core.c
-> @@ -23,16 +23,8 @@
->  #define MT6397_CID_CODE		0x97
->  
->  static const struct resource mt6397_rtc_resources[] = {
-> -	{
-> -		.start = MT6397_RTC_BASE,
-> -		.end   = MT6397_RTC_BASE + MT6397_RTC_SIZE,
-> -		.flags = IORESOURCE_MEM,
-> -	},
-> -	{
-> -		.start = MT6397_IRQ_RTC,
-> -		.end   = MT6397_IRQ_RTC,
-> -		.flags = IORESOURCE_IRQ,
-> -	},
-> +	DEFINE_RES_MEM(MT6397_RTC_BASE, MT6397_RTC_SIZE),
-> +	DEFINE_RES_IRQ(MT6397_IRQ_RTC),
->  };
->  
->  static const struct resource mt6323_keys_resources[] = {
+> diff --git a/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+> new file mode 100644
+> index 0000000..a19e3b3
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+> @@ -0,0 +1,19 @@
+> +EMI (External Memory Interface)
+> +
+
+Please describe a bit more what the EMI interface does.
+
+> +Required properties:
+> +- compatible : must be one of :
+> +	"mediatek,mt8183-emi"
+> +- reg : the register and size of the EMI block.
+> +- interrupts : includes MPU, CGM, ELM.
+> +
+> +Example:
+> +	emi@10219000 {
+> +	compatible = "mediatek,mt8183-emi";
+> +	reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
+> +		  <0 0x10226000 0 0x1000>, /* EMI MPU */
+> +		  <0 0x1022d000 0 0x1000>, /* CHA EMI */
+> +		  <0 0x10235000 0 0x1000>; /* CHB EMI */
+> +	interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
+> +			 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
+> +			 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
+> +};
 > 
 
 _______________________________________________
