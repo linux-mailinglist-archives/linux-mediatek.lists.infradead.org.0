@@ -2,66 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A7A54A715
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 18:36:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B1BEE4AD12
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 23:10:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9OmvEd5HsiRwPebb4IVu7NRrId5fLpMZPmwP2yflHp4=; b=opL/Zrs8Y5P663
-	3v3ejxbbO4ugQqSLrZzltdCIZzoSbbYE4P1iKhS1zPZfKZrUgKYQVwLwRWbtU7TAbdFrPn4zMcDw1
-	zuNrTm3jjTBi/bUaTk2zMQ32JKWumRyvKO/fi+m9Mcy+/5PNeKIVulrB1SpdChXvJOri+vzk3g0l8
-	oR18Blep61iJEs/a//TdmoUk/ZIMs7sGbHI8u/Ub0ZuRTjDGR+GbUaEFphjrww71eHhmpdlFMP5Bx
-	j0H5sJSB6UbbfiEuMvtcM4twfX0QJy9IzOeGM1+0w9GIABXcluiaaNiFyjbxtRdOrmrWhh4sEeMlW
-	yZUm1GssQtkZ8S37Nskw==;
+	List-Owner; bh=M+6EkXZtn0qVzrnLhxv15fArI9aKC+PecgsDCm1avK4=; b=jGFlVQ53u4OtLl
+	rt10vXuDMZT0fj9f5RWKsIT49461SrPAGbnt0sRHhZbMOoSNC0x7P8zRvAAvjRegSVewIyRaIcdZo
+	IHw0LCwJhvFXRtTPBWcppHlbAsPWrX4RqGj6Iugv5kdmnZ2nzmx8fi3MtdKhheRrQm9FPEcNjNJWp
+	xIHOmQAfESbnsDk+4lMk51ON5BZj9dY1hwX7eLYhG6LpHISeBpQ+7hIfIF6iyVh/B8sxvVwIQaRqR
+	JBOU7xRQv1mxTBRLpw62O+1C4oMLKsFmn+z9MKmD6ZwrH8zcYCZaija1l98j/pcROpg0ODRnHi/zf
+	E4JwgFpFyciFuoqa3gWg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdH5o-0000NK-M2; Tue, 18 Jun 2019 16:36:20 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1hdLN8-0003F0-Ua; Tue, 18 Jun 2019 21:10:30 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdH5S-0008Ah-3e; Tue, 18 Jun 2019 16:36:00 +0000
-Received: by mail-ed1-x542.google.com with SMTP id k8so22599098edr.11;
- Tue, 18 Jun 2019 09:35:57 -0700 (PDT)
+ id 1hdLKI-00005V-Kx; Tue, 18 Jun 2019 21:07:41 +0000
+Received: by mail-wr1-x443.google.com with SMTP id n4so945649wrw.13;
+ Tue, 18 Jun 2019 14:07:34 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=gVDiIvOas41EZaikHjmyXPbqJy6brqNxPpm/Ff6faSQ=;
- b=lHlB8JErMj/yWVB2G6rR1HEC1x/uxDmme8TMmdwjZz9Urutj+SMiIehesuNEknOfnD
- fioEFmiB3KMlCsdngPY/eJ03xT0gdaui2PA786QdEcdt8OA4p+oJOp/JJVAyWUTgZ7kX
- 3XlW+rXdHXOxC6S873sW7S6+Z6/ciKvlTIHM5l1VRIU1w7Q8o2JpbF89zlKEVHkj9Jnc
- ef+UoDbkqw/JyQVmadLmyJtqnsCmIMrQEy1x3qyAxWHB/zgv2gaYHoKS0k6fPyvC43cb
- 7Cr+wacq4UUIwYgedd111uYrNHRNwSQ/9lK1wqLIp4yoMOHqWd0sjTRk99Ifl6GbQ791
- ehjw==
+ bh=dETPkxfMPcC0ta/lQ9fPdZDx/rgTJAUHsaSrmx4YzcA=;
+ b=RdV6clCznMrb+H+Bbd+ABhrl3YxSzMAxok0QHxrjDJXCmrx+9uC/b/Qz89LEdn1qrC
+ XgwmWlkMZJFot9yXWXNQmRCE2T43o82aHuUFHtBcqymFm6jCVYOIyBX6hg4fdg9y+AOl
+ a0whaz68LDDY3kq5PJ1FDgf3YdeYjyAj5d7152KwEP2XYKQwC/jygmAO80ujdBXLFYqA
+ LYWMpB8dnkcDXaEYRGMA+ooARsgsbQ1JYGmPimzcXmYRYbJBI4FTI5lzXt39Z4s+cphZ
+ Zoa89IGUxV94gtn+jD2t718xFF1PvhsKAhYv4aCKTiTrsnkHaLdhGocBiNpCj3qtqN1L
+ 7xzA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=gVDiIvOas41EZaikHjmyXPbqJy6brqNxPpm/Ff6faSQ=;
- b=gaIqYs1W/kX+jSy/gcMrJ8cmgzCW+9om4DS2jrBr+Du4mlIoMvpeqZa2Ff7+ebGV6b
- KXJm1otYb/zQ6ONYcLDd7FJm4I1E+ZwP1aB/giBRH7tvoEschZvqH6Wo9NKlfxMxn6fV
- YslhdPp1QPjXODHUV20VZfadh5nSqNpT8Z/xllQNpgWWv/vH7ObmU8hZplodjmGqp/vf
- GQ4Q1Wjsn+ffGcLM1E4ftTRHjYRpTxEUk7R6Uc1Lor/L+jDAHSLYLXPd40Zhe1TQ5zIR
- YTvvHGJVFJuL+c2cmEWCX0EGG4MwY+H/uItFZYUf6MGJBpXBHPpB8sYKfJ+jPa9SNrfa
- OSiw==
-X-Gm-Message-State: APjAAAWVc3Mt6I9qQYurTtWQndLbpwe/GNyD2MhpsIdMBc4lX3sNY5WT
- fOvtGVAwidzaJNMi0LXGzPk=
-X-Google-Smtp-Source: APXvYqxmVtY275bDAzKPPLNtDVRPsVJRxMUOkZ6e8eVG4PKGv1pOeZnEZNNOFTM9xhqTSD3+qsLyoA==
-X-Received: by 2002:a50:92a5:: with SMTP id k34mr100905287eda.90.1560875756744; 
- Tue, 18 Jun 2019 09:35:56 -0700 (PDT)
-Received: from ziggy.stardust ([37.223.140.27])
- by smtp.gmail.com with ESMTPSA id d3sm4869774edd.88.2019.06.18.09.35.55
+ bh=dETPkxfMPcC0ta/lQ9fPdZDx/rgTJAUHsaSrmx4YzcA=;
+ b=ocrj4U5UpCohFPwtLXXN9HGF9fLuzzaTyXxH91LKAOcpBetTE1Os5kfb0yByUZciI9
+ Eu2DQAWNT6lhsEB6mdjn9OMIeX1wc4bKt58Xm1kY51kLRtx/YuoJM0TMX/Nj09qpiyXH
+ gNvXFvaGc0zghlbqli1LdRJzihBQzSxLlY+xJ2c7OJf/ty2wSZ0yQHFhzxroo+mvbmuC
+ qeMapqTFas2WwcnKhmB8ZEsSlmdgR5ThXJAfbPWRcoUvhAk2NY+bjrjN+ir15caNqNQs
+ zSI0kXw6xTRHw0o0Q+8yuA7D2MIeKUBIIkySTeinmZv/fMC6mn1qPnHrGh7uFkqz7Lcq
+ WCSQ==
+X-Gm-Message-State: APjAAAVIffHbdlHFXRAZGkMHoUU9k0J0rWn1UR790L2077J7j0EOSDca
+ E+bRK0f/kwwkHf0ovFN3Bks=
+X-Google-Smtp-Source: APXvYqwBH0yccDnjRK66wWkiPc8anxxOmiCePMlEYScdpdMmI1jINIZM0m8gOFwmA1aCsERkIpWorA==
+X-Received: by 2002:adf:ea8b:: with SMTP id s11mr1278666wrm.100.1560892052920; 
+ Tue, 18 Jun 2019 14:07:32 -0700 (PDT)
+Received: from ziggy.stardust ([95.169.230.25])
+ by smtp.gmail.com with ESMTPSA id j7sm16517215wru.54.2019.06.18.14.07.30
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Tue, 18 Jun 2019 09:35:56 -0700 (PDT)
-Subject: Re: [PATCH v7 20/21] iommu/mediatek: Fix iova_to_phys PA start for
- 4GB mode
-To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
- Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
+ Tue, 18 Jun 2019 14:07:31 -0700 (PDT)
+Subject: Re: [PATCH v7 16/21] memory: mtk-smi: Add bus_sel for mt8183
+To: Yong Wu <yong.wu@mediatek.com>
 References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-21-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
+ <0205e43a-8677-c194-d118-6c199c03306c@gmail.com>
+ <1560859855.8082.24.camel@mhfsdcap03>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -157,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <db9b3b2f-3206-01bf-f0f9-67251e5ff756@gmail.com>
-Date: Tue, 18 Jun 2019 18:35:54 +0200
+Message-ID: <f3e200af-499e-a4af-9e2f-5e22ea5d8ee3@gmail.com>
+Date: Tue, 18 Jun 2019 23:07:30 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <1560169080-27134-21-git-send-email-yong.wu@mediatek.com>
+In-Reply-To: <1560859855.8082.24.camel@mhfsdcap03>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190618_093558_160335_88690F3A 
-X-CRM114-Status: GOOD (  24.33  )
+X-CRM114-CacheID: sfid-20190618_140734_722017_D68DA66B 
+X-CRM114-Status: GOOD (  22.44  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
@@ -199,11 +199,13 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
  Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
- Will Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Matthias Kaehlcke <mka@chromium.org>,
- linux-mediatek@lists.infradead.org, yingjoe.chen@mediatek.com,
- anan.sun@mediatek.com, linux-arm-kernel@lists.infradead.org
+ Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ yingjoe.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -211,89 +213,136 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 10/06/2019 14:17, Yong Wu wrote:
-> In the 4GB mode, the physical address is remapped,
+On 18/06/2019 14:10, Yong Wu wrote:
+> On Mon, 2019-06-17 at 18:23 +0200, Matthias Brugger wrote:
+>>
+>> On 10/06/2019 14:17, Yong Wu wrote:
+>>> There are 2 mmu cells in a M4U HW. we could adjust some larbs entering
+>>> mmu0 or mmu1 to balance the bandwidth via the smi-common register
+>>> SMI_BUS_SEL(0x220)(Each larb occupy 2 bits).
+>>>
+>>> In mt8183, For better performance, we switch larb1/2/5/7 to enter
+>>> mmu1 while the others still keep enter mmu0.
+>>>
+>>> In mt8173 and mt2712, we don't get the performance issue,
+>>> Keep its default value(0x0), that means all the larbs enter mmu0.
+>>>
+>>> Note: smi gen1(mt2701/mt7623) don't have this bus_sel.
+>>>
+>>> And, the base of smi-common is completely different with smi_ao_base
+>>> of gen1, thus I add new variable for that.
+>>>
+>>> CC: Matthias Brugger <matthias.bgg@gmail.com>
+>>> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+>>> Reviewed-by: Evan Green <evgreen@chromium.org>
+>>> ---
+>>>  drivers/memory/mtk-smi.c | 22 ++++++++++++++++++++--
+>>>  1 file changed, 20 insertions(+), 2 deletions(-)
+>>>
+>>> diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
+>>> index 9790801..08cf40d 100644
+>>> --- a/drivers/memory/mtk-smi.c
+>>> +++ b/drivers/memory/mtk-smi.c
+>>> @@ -49,6 +49,12 @@
+>>>  #define SMI_LARB_NONSEC_CON(id)	(0x380 + ((id) * 4))
+>>>  #define F_MMU_EN		BIT(0)
+>>>  
+>>> +/* SMI COMMON */
+>>> +#define SMI_BUS_SEL			0x220
+>>> +#define SMI_BUS_LARB_SHIFT(larbid)	((larbid) << 1)
+>>> +/* All are MMU0 defaultly. Only specialize mmu1 here. */
+>>> +#define F_MMU1_LARB(larbid)		(0x1 << SMI_BUS_LARB_SHIFT(larbid))
+>>> +
+>>>  enum mtk_smi_gen {
+>>>  	MTK_SMI_GEN1,
+>>>  	MTK_SMI_GEN2
+>>> @@ -57,6 +63,7 @@ enum mtk_smi_gen {
+>>>  struct mtk_smi_common_plat {
+>>>  	enum mtk_smi_gen gen;
+>>>  	bool             has_gals;
+>>> +	u32              bus_sel; /* Balance some larbs to enter mmu0 or mmu1 */
+>>>  };
+>>>  
+>>>  struct mtk_smi_larb_gen {
+>>> @@ -72,8 +79,8 @@ struct mtk_smi {
+>>>  	struct clk			*clk_apb, *clk_smi;
+>>>  	struct clk			*clk_gals0, *clk_gals1;
+>>>  	struct clk			*clk_async; /*only needed by mt2701*/
+>>> -	void __iomem			*smi_ao_base;
+>>> -
+>>> +	void __iomem			*smi_ao_base; /* only for gen1 */
+>>> +	void __iomem			*base;	      /* only for gen2 */
+>>
+>> union {} maybe?
 > 
-> Here is the detailed remap relationship.
-> CPU PA         ->    HW PA
-> 0x4000_0000          0x1_4000_0000 (Add bit32)
-> 0x8000_0000          0x1_8000_0000 ...
-> 0xc000_0000          0x1_c000_0000 ...
-> 0x1_0000_0000        0x1_0000_0000 (No change)
+> Yes. Thanks.
 > 
-> Thus, we always add bit32 for PA when entering mtk_iommu_map.
-> But in the iova_to_phys, the CPU don't need this bit32 if the
-> PA is from 0x1_4000_0000 to 0x1_ffff_ffff.
-> This patch discards the bit32 in this iova_to_phys in the 4GB mode.
+> I will add it.
 > 
-> Fixes: 30e2fccf9512 ("iommu/mediatek: Enlarge the validate PA range
-> for 4GB mode")
-> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> ---
->  drivers/iommu/mtk_iommu.c | 18 ++++++++++++++++++
->  1 file changed, 18 insertions(+)
+>>
+>>>  	const struct mtk_smi_common_plat *plat;
+>>>  };
+>>>  
+>>> @@ -410,6 +417,8 @@ static int __maybe_unused mtk_smi_larb_suspend(struct device *dev)
+>>>  static const struct mtk_smi_common_plat mtk_smi_common_mt8183 = {
+>>>  	.gen      = MTK_SMI_GEN2,
+>>>  	.has_gals = true,
+>>> +	.bus_sel  = F_MMU1_LARB(1) | F_MMU1_LARB(2) | F_MMU1_LARB(5) |
+>>> +		    F_MMU1_LARB(7),
+>>>  };
+>>>  
+>>>  static const struct of_device_id mtk_smi_common_of_ids[] = {
+>>> @@ -482,6 +491,11 @@ static int mtk_smi_common_probe(struct platform_device *pdev)
+>>>  		ret = clk_prepare_enable(common->clk_async);
+>>>  		if (ret)
+>>>  			return ret;
+>>> +	} else {
+>>> +		res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+>>> +		common->base = devm_ioremap_resource(dev, res);
+>>> +		if (IS_ERR(common->base))
+>>> +			return PTR_ERR(common->base);
+>>
+>> We must be backwards compatible with DT which does not have the base defined.
 > 
-> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-> index 67cab2d..34f2e40 100644
-> --- a/drivers/iommu/mtk_iommu.c
-> +++ b/drivers/iommu/mtk_iommu.c
-> @@ -119,6 +119,19 @@ struct mtk_iommu_domain {
->  
->  static const struct iommu_ops mtk_iommu_ops;
->  
-> +/*
-> + * In M4U 4GB mode, the physical address is remapped as below:
-> + *  CPU PA         ->   M4U HW PA
-> + *  0x4000_0000         0x1_4000_0000 (Add bit32)
-> + *  0x8000_0000         0x1_8000_0000 ...
-> + *  0xc000_0000         0x1_c000_0000 ...
-> + *  0x1_0000_0000       0x1_0000_0000 (No change)
-> + *
-> + * Thus, We always add BIT32 in the iommu_map and disable BIT32 if PA is >=
-> + * 0x1_4000_0000 in the iova_to_phys.
-> + */
-> +#define MTK_IOMMU_4GB_MODE_PA_140000000     0x140000000UL
-> +
->  static LIST_HEAD(m4ulist);	/* List all the M4U HWs */
->  
->  #define for_each_m4u(data)	list_for_each_entry(data, &m4ulist, list)
-> @@ -415,6 +428,7 @@ static phys_addr_t mtk_iommu_iova_to_phys(struct iommu_domain *domain,
->  					  dma_addr_t iova)
->  {
->  	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
-> +	struct mtk_iommu_data *data = mtk_iommu_get_m4u_data();
->  	unsigned long flags;
->  	phys_addr_t pa;
->  
-> @@ -422,6 +436,10 @@ static phys_addr_t mtk_iommu_iova_to_phys(struct iommu_domain *domain,
->  	pa = dom->iop->iova_to_phys(dom->iop, iova);
->  	spin_unlock_irqrestore(&dom->pgtlock, flags);
->  
-> +	if (data->plat_data->has_4gb_mode && data->dram_is_4gb &&
-> +	    pa >= MTK_IOMMU_4GB_MODE_PA_140000000)
-> +		pa &= ~BIT_ULL(32);
-> +
+> The smi-common node in the previous mt2712 and mt8173 also have the
+> "reg" property even though they didn't use this base, Thus, It looks ok
+> for all the cases.
+> 
 
-Hm, I wonder if we could fix this as first patch in the series, especially before:
-"[PATCH 06/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB Mode"
+Correct, it is defined as a required property in the binding description so we
+are good.
+Sorry for the noise.
 
-This would make it easier for the stable maintainer to cherry-pick the fix.
-Without 100% understanding the code, it seems suspicious to me, that you first
-move the setting of the bit32 and bit33 into v7s and later explicitly clean the
-bits here.
+With the union added you can add:
+Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
-So my take on this is, that patch 6/21 introduced the regression you are trying
-to fix here. As said that is speculation as I don't understand the code in its
-whole.
-
-Any clarification would be useful.
-
-Regards,
-Matthias
-
->  	return pa;
->  }
->  
+>>
+>> Regards,
+>> Matthias
+>>
+>>>  	}
+>>>  	pm_runtime_enable(dev);
+>>>  	platform_set_drvdata(pdev, common);
+>>> @@ -497,6 +511,7 @@ static int mtk_smi_common_remove(struct platform_device *pdev)
+>>>  static int __maybe_unused mtk_smi_common_resume(struct device *dev)
+>>>  {
+>>>  	struct mtk_smi *common = dev_get_drvdata(dev);
+>>> +	u32 bus_sel = common->plat->bus_sel;
+>>>  	int ret;
+>>>  
+>>>  	ret = mtk_smi_clk_enable(common);
+>>> @@ -504,6 +519,9 @@ static int __maybe_unused mtk_smi_common_resume(struct device *dev)
+>>>  		dev_err(common->dev, "Failed to enable clock(%d).\n", ret);
+>>>  		return ret;
+>>>  	}
+>>> +
+>>> +	if (common->plat->gen == MTK_SMI_GEN2 && bus_sel)
+>>> +		writel(bus_sel, common->base + SMI_BUS_SEL);
+>>>  	return 0;
+>>>  }
+>>>  
+>>>
+> 
 > 
 
 _______________________________________________
