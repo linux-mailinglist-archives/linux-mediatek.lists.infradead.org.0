@@ -2,62 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 31BE9498ED
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 08:35:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C8BCC499C9
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 09:03:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mKQXq+Cl0RFnKDQHduZn5lZj4w9chwt7O+C5ZXx8uGw=; b=En1T4mApL2wx5l
-	P5UZvp1bO8Ho0BGhJEXTprNFBjW2yHIIhapHlE5JD/5om/NsRGZ6z6bbI88SNHGEyHl24TANro0S/
-	hiibHbK4C15aQzP+CMhkJppoWwcz0vvSnduNlZp+pdjf/gsTxaN4e2YzrhNi0w7+ChtwuJtpsvtYJ
-	r9CS62DK3hk5Ssd6D3Mr02Vb2foF5wxyTKQN2rV2ZjeUcQAkyF0hpAwOkTvBYaag+c0XeItthlQ2i
-	k48mQI7fAZoGcHnRlIt2VevjIFY5jM6cUV68KRd+ptq6/n/KAu2ggl89/+HUYMrt1SDlwgDyQdiuq
-	9x0GDtrPpo7taIEreUNg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=7sHfuwMdvohKNJXOoI07JxvDcv+CuVSEwAK/+PlrRvE=; b=uCLNN3Lsx+6bH3
+	hjQ5bGbzjQ9A/UMFaIkT4rnNI/59vvO9dzLyQ0NK8T6J/qERpgpGJiBDwHAhjTnL59wL3Er3X7Hz0
+	sBlK0h5xZ36axo9oGaAWlRNONofvs/frJ1nLx8BmjJNhSORq4RdZYU4F/Seuf+wWfgmHjFO8e1Veh
+	VknFJIBDCHz4V19rNKjbS5Ef+afwocEENhEy6b9QQtyaSmikqzomLSAl3vrbqTSIf0WGlIqZMPRht
+	qn5h0k9mBNBug8DYvto7d7tts+pNA1AKP2vVFe83i10ggQSpO3V89tFJMknQYsU3d0CigCBgNh1r6
+	3v9Xj/hiM2QPTPydhWxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hd7iQ-0002gr-0e; Tue, 18 Jun 2019 06:35:34 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hd89n-0007rS-Av; Tue, 18 Jun 2019 07:03:51 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hd7iL-0002gM-T3; Tue, 18 Jun 2019 06:35:31 +0000
-X-UUID: ce707053271342fab76361b2859657a3-20190617
-X-UUID: ce707053271342fab76361b2859657a3-20190617
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hd899-0007HP-OC; Tue, 18 Jun 2019 07:03:13 +0000
+X-UUID: 26021310776a42e19786c1d2f0719d79-20190617
+X-UUID: 26021310776a42e19786c1d2f0719d79-20190617
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <roger.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 191377585; Mon, 17 Jun 2019 22:35:22 -0800
+ with ESMTP id 1016922056; Mon, 17 Jun 2019 23:03:05 -0800
 Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Jun 2019 23:35:21 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 18 Jun 2019 00:03:03 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 18 Jun 2019 14:35:19 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 18 Jun 2019 14:35:19 +0800
-Message-ID: <1560839719.3736.0.camel@mtksdaap41>
-Subject: Re: [PATCH v2 08/12] drm/mediatek: Get rid of mtk_smi_larb_get/put
-From: CK Hu <ck.hu@mediatek.com>
-To: Yong Wu <yong.wu@mediatek.com>
-Date: Tue, 18 Jun 2019 14:35:19 +0800
-In-Reply-To: <1560171313-28299-9-git-send-email-yong.wu@mediatek.com>
-References: <1560171313-28299-1-git-send-email-yong.wu@mediatek.com>
- <1560171313-28299-9-git-send-email-yong.wu@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Tue, 18 Jun 2019 15:03:02 +0800
+Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 18 Jun 2019 15:03:02 +0800
+From: Roger Lu <roger.lu@mediatek.com>
+To: Kevin Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ Nicolas Boichat <drinkcat@google.com>, Stephen Boyd <sboyd@kernel.org>
+Subject: PM / AVS: SVS: Introduce SVS engine
+Date: Tue, 18 Jun 2019 15:02:56 +0800
+Message-ID: <20190618070258.11520-1-roger.lu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_233529_947521_D598BC55 
-X-CRM114-Status: GOOD (  15.95  )
+X-CRM114-CacheID: sfid-20190618_000311_784954_1F48B4D8 
+X-CRM114-Status: UNSURE (   7.44  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -73,149 +70,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
- Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
- linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
- Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
- anan.sun@mediatek.com, Robin
- Murphy <robin.murphy@arm.com>, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
+ Roger Lu <roger.lu@mediatek.com>, linux-kernel@vger.kernel.org,
+ HenryC Chen <HenryC.Chen@mediatek.com>, Fan Chen <fan.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Yong:
+SVS driver use OPP adjust event in [1] to update
+OPP table voltage part.
 
-On Mon, 2019-06-10 at 20:55 +0800, Yong Wu wrote:
-> MediaTek IOMMU has already added the device_link between the consumer
-> and smi-larb device. If the drm device call the pm_runtime_get_sync,
-> the smi-larb's pm_runtime_get_sync also be called automatically.
-> 
-> CC: CK Hu <ck.hu@mediatek.com>
-> CC: Philipp Zabel <p.zabel@pengutronix.de>
-> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> Reviewed-by: Evan Green <evgreen@chromium.org>
-> ---
->  drivers/gpu/drm/mediatek/mtk_drm_crtc.c     | 11 -----------
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 26 --------------------------
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  1 -
->  3 files changed, 38 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> index acad088..3a21a48 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> @@ -18,7 +18,6 @@
->  #include <drm/drm_probe_helper.h>
->  #include <linux/clk.h>
->  #include <linux/pm_runtime.h>
-> -#include <soc/mediatek/smi.h>
->  
->  #include "mtk_drm_drv.h"
->  #include "mtk_drm_crtc.h"
-> @@ -371,20 +370,12 @@ static void mtk_drm_crtc_atomic_enable(struct drm_crtc *crtc,
->  				       struct drm_crtc_state *old_state)
->  {
->  	struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
-> -	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
->  	int ret;
->  
->  	DRM_DEBUG_DRIVER("%s %d\n", __func__, crtc->base.id);
->  
-> -	ret = mtk_smi_larb_get(comp->larb_dev);
-> -	if (ret) {
-> -		DRM_ERROR("Failed to get larb: %d\n", ret);
-> -		return;
-> -	}
-> -
->  	ret = mtk_crtc_ddp_hw_init(mtk_crtc);
->  	if (ret) {
-> -		mtk_smi_larb_put(comp->larb_dev);
->  		return;
->  	}
+[1] https://patchwork.kernel.org/patch/10946069/
 
-Remove {}.
+changes since v1:
+- Add svs subnodes description in binding documents
+- Set svs_cpu_little & svs_cci vmin to 0x18 to meet cpufreq
+and cci software architecture.
 
-Regards,
-CK
+Roger Lu (2):
+  dt-bindings: soc: add mtk svs dt-bindings
+  PM / AVS: SVS: Introduce SVS engine
 
->  
-> @@ -396,7 +387,6 @@ static void mtk_drm_crtc_atomic_disable(struct drm_crtc *crtc,
->  					struct drm_crtc_state *old_state)
->  {
->  	struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
-> -	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
->  	int i;
->  
->  	DRM_DEBUG_DRIVER("%s %d\n", __func__, crtc->base.id);
-> @@ -419,7 +409,6 @@ static void mtk_drm_crtc_atomic_disable(struct drm_crtc *crtc,
->  
->  	drm_crtc_vblank_off(crtc);
->  	mtk_crtc_ddp_hw_fini(mtk_crtc);
-> -	mtk_smi_larb_put(comp->larb_dev);
->  
->  	mtk_crtc->enabled = false;
->  }
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> index 54ca794..ede15c9 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> @@ -265,8 +265,6 @@ int mtk_ddp_comp_init(struct device *dev, struct device_node *node,
->  		      const struct mtk_ddp_comp_funcs *funcs)
->  {
->  	enum mtk_ddp_comp_type type;
-> -	struct device_node *larb_node;
-> -	struct platform_device *larb_pdev;
->  
->  	if (comp_id < 0 || comp_id >= DDP_COMPONENT_ID_MAX)
->  		return -EINVAL;
-> @@ -296,30 +294,6 @@ int mtk_ddp_comp_init(struct device *dev, struct device_node *node,
->  	if (IS_ERR(comp->clk))
->  		return PTR_ERR(comp->clk);
->  
-> -	/* Only DMA capable components need the LARB property */
-> -	comp->larb_dev = NULL;
-> -	if (type != MTK_DISP_OVL &&
-> -	    type != MTK_DISP_RDMA &&
-> -	    type != MTK_DISP_WDMA)
-> -		return 0;
-> -
-> -	larb_node = of_parse_phandle(node, "mediatek,larb", 0);
-> -	if (!larb_node) {
-> -		dev_err(dev,
-> -			"Missing mediadek,larb phandle in %pOF node\n", node);
-> -		return -EINVAL;
-> -	}
-> -
-> -	larb_pdev = of_find_device_by_node(larb_node);
-> -	if (!larb_pdev) {
-> -		dev_warn(dev, "Waiting for larb device %pOF\n", larb_node);
-> -		of_node_put(larb_node);
-> -		return -EPROBE_DEFER;
-> -	}
-> -	of_node_put(larb_node);
-> -
-> -	comp->larb_dev = &larb_pdev->dev;
-> -
->  	return 0;
->  }
->  
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> index 8399229..b8dc17e 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> @@ -91,7 +91,6 @@ struct mtk_ddp_comp {
->  	struct clk *clk;
->  	void __iomem *regs;
->  	int irq;
-> -	struct device *larb_dev;
->  	enum mtk_ddp_comp_id id;
->  	const struct mtk_ddp_comp_funcs *funcs;
->  };
+ .../devicetree/bindings/power/mtk-svs.txt     |   88 +
+ drivers/power/avs/Kconfig                     |   10 +
+ drivers/power/avs/Makefile                    |    1 +
+ drivers/power/avs/mtk_svs.c                   | 2086 +++++++++++++++++
+ include/linux/power/mtk_svs.h                 |   23 +
+ 5 files changed, 2208 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+ create mode 100644 drivers/power/avs/mtk_svs.c
+ create mode 100644 include/linux/power/mtk_svs.h
 
 
 
