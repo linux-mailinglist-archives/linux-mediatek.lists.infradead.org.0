@@ -2,73 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55F6A4A5AF
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 17:44:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 397DA4A5AE
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 17:44:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=sCFMDGjCYddyQ0KIJ+vewawwGt6wGMypA0DChGHMUd8=; b=fZ7tV9Qglf4cjT
-	wTlmdKH2TKdm/vdtQEyDYT4ttm0GW/h0yyf2kppyB+fTEHvug9y6teu9Nht/W/o1DOaG66IULGPWJ
-	T9IEf7aLucRHvNRAaGxJeFRlXippsRGpgxFYsjh5M6kVbPDDonIEYEFGQOdehYo+nTqF/epmLx1dt
-	uiR5o3taUYEYoEQE57LSDYSvXu9XsF+IoJugBzlsUAzANPZr/EiHNM/4xfuHsB4VFurU28ocKJRaX
-	qh2hf3s66uht0Ovad740/Cp4GcsuJSw/iRBVPJrbGU1BeShlon955XelwW6qUGSdsZWcRFv+XNOj4
-	zLzVTtzXMdIbixQLGFGA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=fY+PkBNMhFs1hVvh7qazBQT1+DUyPbTzSfthPnNHQJU=; b=jRJjhfBd44ciqN
+	raFwZ+GP7SUqFFlN3ClA+bpajHEYLk15v+zk5C93CSlFyEojd2BsxU6iCGURaRGPlJa/KvZ00HWdB
+	tAYomk9skmLlAKSJwP6ie6etnloGjHMq3iABt9GMwaBNnwmUN7D4jk5c3SkfP+497QLGfurpnT0bA
+	+eYm6zKkJ33WfrFX9w5ZahKkIHX/to56be8P+cHnIeVLkeSm6uuHGgiuywRX8SJms/wQue+k4lylc
+	f1sE8HJt6o0d2a7+OwEEeCIw/eg6D2YAwV/jlvqWGzYiZ3Jd3w2CCucmHvvXT4MosXPMGpk38rkb9
+	6D+SZIE4LTgzJgYGiMKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdGHC-0007GV-MM; Tue, 18 Jun 2019 15:44:02 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1hdGH9-0007FK-GI; Tue, 18 Jun 2019 15:43:59 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdGH3-0007Cp-6l
+ id 1hdGH3-0007Ct-Od
  for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 15:43:56 +0000
-Received: by mail-wr1-x444.google.com with SMTP id p13so6111wru.10
- for <linux-mediatek@lists.infradead.org>; Tue, 18 Jun 2019 08:43:52 -0700 (PDT)
+Received: by mail-wm1-x342.google.com with SMTP id x15so3841029wmj.3
+ for <linux-mediatek@lists.infradead.org>; Tue, 18 Jun 2019 08:43:53 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=z2DroQv2ruFtbq7x0Nc/gqYAN5TH+pK8pLfYV3S723M=;
- b=RUZ5pi4GEOGMywZronlWI8Un8Y1j8se22zqHCih+IyO1yuWzno8FVkuUjJBI3m0H6Q
- WP+YBGRHeje8c5wvIMHqN7krS90n0cJhrasXt3x0ulEmWaGWSp/ys+LYjmb7QWdcRWu+
- niqe1vDD6rIcuo2KfRBS5a2SQZMCAzEE7Ydb2pGdgWlJblMRS7A2EL3Pt31Z29uGh/Co
- /96ef69t97+oB8uh+groM6vvJwNTZ4IdxZE9tWyCd1AnCvU2fOJB/EJvIs/1t2gKJJv2
- Hzb6Bdqzi6zhHpcMMg+XCwpFEzxSGcqCaQoIFoAWu8YaeF2JM64TdjnYcyWZNTccyS3v
- vbrA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=0vbPMnSPTFmTNhTvb78jQv/BzhDnMGLR+xrvA6q/kx0=;
+ b=VDRhhU5RFfax5iw/D6bgy+EWGO4v9G3xyws4yLORV4eWIzJ+FQZTTX2x7NttwaSvVf
+ bK8l7V8vhqYmhSUgyQ/sRTOMPTvLpBxKYC5k/KQ7fdi9Duu6O5z4Oaf9xXBDQyZssKp+
+ qIhECCaw9iKwmiov+X2tMABtA8kzifXjkEp+r3IdyfTCaMmBiy1j00VBTVDo3Bb1ZH1n
+ w2Lr9zATdrTXx5jVOf8iA+f0U9OGOTjLO/N6yqwu33aI/OPmXjx6TGd53gIhVWJNtU7f
+ 5PnxVhRqlP376h4FR8KVPGDFnjsAgEeNRzF8rL2ZloB1/47IxNoAMC5H5MZ7CtXcVHL/
+ OSkw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=z2DroQv2ruFtbq7x0Nc/gqYAN5TH+pK8pLfYV3S723M=;
- b=sG4R4PXHALUNp/X4iaRKln04QDYX+eAamohKX1ePlg2fe1yDqSj8cOTu+9SceGPPv+
- /OCmgbk96j2I59RfNv6KPllsnOmKps0uxI/U2k077Xz0TXO/iZ6rY8w39IJFcF/8gGAn
- Es74VQUvpZ97BEI3pJq9sa1J+VglYABEssLTES4FeuaiqhIhWWj6kcF07bX42sN5G1p/
- VyZt4Psk2LLHNeJcEMqO0DKKzOFpbnZGeu6qpUSN/Ss7Ox9s4AMPx0cC8rZ4IR1AFyps
- Qn3kOU5lAEMeWG7D3rG12u1PfFc9l/AP7MZu7zeTIoS6WD8hXf+qMIDfluqAS8eCpzCq
- zwHg==
-X-Gm-Message-State: APjAAAUolS4Vm1Zv08HjcO0QLSRtExEFuX3l7CCp274aOWmfwVppGUqT
- qupVdelprVlB5M8WlZf0l/E9ew==
-X-Google-Smtp-Source: APXvYqz3Tk6+Cw9PNouMQlpWVk3VHeEq+wax/N8KlWO1MqvPx1tt7KUzbGTY6HmB7/AfzGz9g8DQjg==
-X-Received: by 2002:a05:6000:1c6:: with SMTP id
- t6mr40208869wrx.236.1560872631011; 
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=0vbPMnSPTFmTNhTvb78jQv/BzhDnMGLR+xrvA6q/kx0=;
+ b=dQDDZ/Anxey/hC4VTXYtd0dLvGFIPoamOyWqFTe4EqHVLNrgaNRMP0Bj5nWT5n9XX0
+ P1gW/Q7Nsnn+mwexaQ+fA3klZX5pzPyUwS8Kud4Mx9XLDuGBry/D3MbPtlNY8LYhF6F7
+ BE5Edb9o+VTvrS0Arw/FF5Gv9wIRQJDchlR2BrN9TVt6ZbFSl1YZlPLk7AAE/043baYz
+ jTUa6+R/w8iPICZbbU/MT8/httAAl2wQmz+tIy/zWA7VdYob+MY2jMV+mPthuZSsSaQU
+ 9m2EfBOUPQ37pr+6M2Do4EjZNHKBQ/H/c+VWamGJ0g7uTU3w1J4amdZEPdrDqCCUG06M
+ 25Mg==
+X-Gm-Message-State: APjAAAU6iuJfE+gyxX6mnwv0szNi1p1YSJrwom4rvqV0Q0u7IwKHhjAj
+ S8qB77fTJij2gKzZRytQO37Z+g==
+X-Google-Smtp-Source: APXvYqwtw4L/aIDQ4+qEJmUYMfZ7EYwaOEj6yOOtOOc3CwsfJo7ZPI8soRXlk3VuzO+bkNaQhH2WCg==
+X-Received: by 2002:a1c:2c41:: with SMTP id s62mr4270696wms.8.1560872631849;
  Tue, 18 Jun 2019 08:43:51 -0700 (PDT)
 Received: from localhost.localdomain
  (amontpellier-652-1-281-69.w109-210.abo.wanadoo.fr. [109.210.96.69])
- by smtp.gmail.com with ESMTPSA id z5sm2633287wma.36.2019.06.18.08.43.50
+ by smtp.gmail.com with ESMTPSA id z5sm2633287wma.36.2019.06.18.08.43.51
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 18 Jun 2019 08:43:50 -0700 (PDT)
+ Tue, 18 Jun 2019 08:43:51 -0700 (PDT)
 From: Fabien Parent <fparent@baylibre.com>
 To: lee.jones@linaro.org,
 	matthias.bgg@gmail.com
-Subject: [PATCH 1/2] mfd: mt6397: Use PLATFORM_DEVID_NONE macro instead of -1
-Date: Tue, 18 Jun 2019 17:43:46 +0200
-Message-Id: <20190618154347.16991-1-fparent@baylibre.com>
+Subject: [PATCH 2/2] mfd: mt6397: use DEFINE_RES_* helpers to define RTC
+ resources
+Date: Tue, 18 Jun 2019 17:43:47 +0200
+Message-Id: <20190618154347.16991-2-fparent@baylibre.com>
 X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20190618154347.16991-1-fparent@baylibre.com>
+References: <20190618154347.16991-1-fparent@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190618_084353_319686_3F288EB7 
-X-CRM114-Status: UNSURE (   7.64  )
+X-CRM114-CacheID: sfid-20190618_084353_820979_A3730CBA 
+X-CRM114-Status: UNSURE (   9.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -76,7 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -101,44 +103,37 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use the correct macro when adding the MFD devices instead of using
-directly '-1' value.
+Use the DEFINE_RES_{MEM,IRQ} to define the RTC reosurce for the MT6397
+PMIC.
 
 Signed-off-by: Fabien Parent <fparent@baylibre.com>
 ---
- drivers/mfd/mt6397-core.c | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)
+ drivers/mfd/mt6397-core.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
 
 diff --git a/drivers/mfd/mt6397-core.c b/drivers/mfd/mt6397-core.c
-index 337bcccdb914..190ed86ad93e 100644
+index 190ed86ad93e..1e315712870b 100644
 --- a/drivers/mfd/mt6397-core.c
 +++ b/drivers/mfd/mt6397-core.c
-@@ -299,9 +299,9 @@ static int mt6397_probe(struct platform_device *pdev)
- 		if (ret)
- 			return ret;
+@@ -23,16 +23,8 @@
+ #define MT6397_CID_CODE		0x97
  
--		ret = devm_mfd_add_devices(&pdev->dev, -1, mt6323_devs,
--					   ARRAY_SIZE(mt6323_devs), NULL,
--					   0, pmic->irq_domain);
-+		ret = devm_mfd_add_devices(&pdev->dev, PLATFORM_DEVID_NONE,
-+					   mt6323_devs, ARRAY_SIZE(mt6323_devs),
-+					   NULL, 0, pmic->irq_domain);
- 		break;
+ static const struct resource mt6397_rtc_resources[] = {
+-	{
+-		.start = MT6397_RTC_BASE,
+-		.end   = MT6397_RTC_BASE + MT6397_RTC_SIZE,
+-		.flags = IORESOURCE_MEM,
+-	},
+-	{
+-		.start = MT6397_IRQ_RTC,
+-		.end   = MT6397_IRQ_RTC,
+-		.flags = IORESOURCE_IRQ,
+-	},
++	DEFINE_RES_MEM(MT6397_RTC_BASE, MT6397_RTC_SIZE),
++	DEFINE_RES_IRQ(MT6397_IRQ_RTC),
+ };
  
- 	case MT6397_CID_CODE:
-@@ -314,9 +314,9 @@ static int mt6397_probe(struct platform_device *pdev)
- 		if (ret)
- 			return ret;
- 
--		ret = devm_mfd_add_devices(&pdev->dev, -1, mt6397_devs,
--					   ARRAY_SIZE(mt6397_devs), NULL,
--					   0, pmic->irq_domain);
-+		ret = devm_mfd_add_devices(&pdev->dev, PLATFORM_DEVID_NONE,
-+					   mt6397_devs, ARRAY_SIZE(mt6397_devs),
-+					   NULL, 0, pmic->irq_domain);
- 		break;
- 
- 	default:
+ static const struct resource mt6323_keys_resources[] = {
 -- 
 2.20.1
 
