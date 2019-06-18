@@ -2,80 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E94E2497FD
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 06:16:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EAE37498D0
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 08:19:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=P29CHGy506k7b2iD4nbHKyPivzIcK4VhgOrvGo120uQ=; b=GuJF8ID3j6Jl7V
-	Y2238MIR+ZEugR80tQcQ2/rnVE1wdXeyiaIh3kyw2S6w0RP5JWsstvOmdxDXrAn6e8q6TGdjzvqgN
-	TwknQRi5zRrAr5u9cOrni/14ILT6jxDrKXQL8LojqGSQifx0dexVozmb9WUUhN8N34PMSTHqqolws
-	XZLTyyheW2saW3KroZ5TBaDQYkTrQ0WAwMaPDzdVVL68HMNzJzkXRUluJOu0us04LCYF9Onjpbt7+
-	ZhDC9DsTFO/I/PgwqzJfBh6vLf6uKmSNFpmUQIm46i4rSyf0OgGHq5wYam89FHoSNdCnhe4sQZILq
-	dph7GnD0FcIJbNm7SLIA==;
+	List-Owner; bh=wpJH7efTPSJq6xMo/bBcoGgNBoqgPzxlPh3srfxoWFY=; b=tmNSGXQvJid/GJ
+	/KA8icA0+yM4xstsdmg1M5omjtbrADkkTDlYPo9wMwu65COW/nubfmuwxkdV4oxuBCQZByMsg+rPB
+	OXR4i0mT9oFvZTgnLqD1GMdNLdbDob+rYYqlF0ntr8p7ki6zWZflHFq4TA6mRRsnbGj+iCKeqivK5
+	pWSAS/FkfQU4jQwuJO8jc7VFD2uZNTRJpWqyT94iRcz/bhlHKA4RLIdyaFD/HXt75jfI/VpSUOdHK
+	qzU7OL3EbJ8fmqVWUvItyxghBB+IWOM4wwsC841Ilk2GWWMF81E/ZIgx6D4+gsHvlYj6hvIkwn9nL
+	g+ZSpqIIyar9LhWHeMDQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hd5XI-0006Bd-Ow; Tue, 18 Jun 2019 04:15:56 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1hd7Ss-0002Hw-BT; Tue, 18 Jun 2019 06:19:30 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hd5Wi-0005ew-Uo
- for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 04:15:23 +0000
-Received: by mail-pf1-x443.google.com with SMTP id i189so6838418pfg.10
- for <linux-mediatek@lists.infradead.org>; Mon, 17 Jun 2019 21:15:20 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=bI5TZZVVWddYzi+zG+c3/8d//MTYrG/SEFr1ZVygmWI=;
- b=Va3jlYRkO6XmYcP4WnDmEIjixZAh3JbumkQtut9GDOvuenRaczimujEG27I18JsxS2
- ncBOEaSo94X4oYO9UZBS9xTsnVzpLHPPTsrbJ4wELh8r5HHNAYSoYjZ2NJ4cmB5Lhhfl
- 6uiLdLYWXPCgYg8LF2nD84jyITT/UANOAWUhE=
+ id 1hd7Sm-0002Gt-UF
+ for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 06:19:27 +0000
+Received: by mail-wr1-x442.google.com with SMTP id f9so12451815wre.12
+ for <linux-mediatek@lists.infradead.org>; Mon, 17 Jun 2019 23:19:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=2qhMEjTGxN0dhDss7cc7zfKbD1VT4IQism6fVgX1NpE=;
+ b=dvsdqA01/pZ+815FjjW8tFL5UWf7khLLQ82Ejhqn6TxNO1tCDktEgPtkMa4HNv7OLR
+ 1U39nh2EFsrtSmlNZcgDcq/9sa+nGn3SUOMpDbfIAp95GzajjL3XI+3GbjB5ULFzEoSH
+ IwACWh8kuOmwu5jEKWjMzofeGDXqP9safEXyJXu8ve2REW9BQaUclrQL8parNOK0OQjD
+ B3wkQTkyxFJk8UmfoMVdfQg+Tn/UTwLgckw83gJpr19cDBf/Gz90iGpXy7nsEYrqDA2m
+ eZwEj4HpXDoxWiOrmV6yaBfhp8pBtJeFO0hOjxV5cmt7gkv5WG1rUgP3mWcFMvMsVNL0
+ dfKw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=bI5TZZVVWddYzi+zG+c3/8d//MTYrG/SEFr1ZVygmWI=;
- b=NO/4+91XnGF2bkVV3p1+OUM2v0sfmk8RuMmur9Vx+ZbSs5Dy7SzdFkJH1TAHbkVtj3
- KOuZ2Jy7ckH87dT3LM0SSlI7H/Bp8ln8widosz4yRComkItLzUpZ/FwgzsUzakR47mIl
- SmLx8etvqhYqVIL8kO/TNa2SvYAXNbKGNF8kAzUnHqNs4F8oNnD/+aRf5KmsZ9NI8HKD
- dLPVlCkRbN/iBjpjY3hxsmUHwU03k6K99Ixf197lHQ3fNgtw8Cm2ZZMxRG9XSZVmZXPW
- pFeu+6aAV4BGe6qgjTdnqxagpoqf3ap9+K+X1Ygn8cbnUEbfX6hz6t/OWoPfAOyVE4yw
- +8bw==
-X-Gm-Message-State: APjAAAWnRGkAh3Bu1vH5C18oeq/VEFpSkFsgx3APjnzekvSGknrDB407
- N7Lq3eQDPo/zNjxccDC+zM6+H+llN1SDfg==
-X-Google-Smtp-Source: APXvYqwrFMYT6lCjebCRGps6DV03B4EN/FXJdD3P3q9sNrtIL19XuUD7DrcPdmrtB7AyuciVYfJ49Q==
-X-Received: by 2002:a62:ee04:: with SMTP id e4mr1380578pfi.232.1560831320142; 
- Mon, 17 Jun 2019 21:15:20 -0700 (PDT)
-Received: from hsinyi-z840.tpe.corp.google.com
- ([2401:fa00:1:10:b852:bd51:9305:4261])
- by smtp.gmail.com with ESMTPSA id 25sm13590685pfp.76.2019.06.17.21.15.18
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Mon, 17 Jun 2019 21:15:19 -0700 (PDT)
-From: Hsin-Yi Wang <hsinyi@chromium.org>
-To: linux-arm-kernel@lists.infradead.org
-Subject: [PATCH RFC 2/2] devfreq: mt8183-cci: using cpufreq-map governor in
- cci dvfs driver
-Date: Tue, 18 Jun 2019 12:14:36 +0800
-Message-Id: <20190618041433.245629-3-hsinyi@chromium.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190618041433.245629-1-hsinyi@chromium.org>
-References: <20190618041433.245629-1-hsinyi@chromium.org>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=2qhMEjTGxN0dhDss7cc7zfKbD1VT4IQism6fVgX1NpE=;
+ b=quZRkoT73BuqZGza2V/iizo69hZj0Pg/Fy0aNvuOxfXn3989UGMdyZ7Pwk7pfkuWr+
+ jI+HjXhJSIMonw/ScnjBzTbEwcIxlel2672ERxY+Ue3trQ9bSc62pErdr42wj44H5GFJ
+ CPW36B/KLiP3ZOQgZNJWTpb78Qjh1YfmXJSAhgbxy3goIaUXyKJHahaWgVyU6a9r6xfL
+ RgK6wzb6bKwpdt4Oo1zq13jcIdom00X6dMn42926RArJUzs64Fy7P9wqpuNl1RDwyCj5
+ pRi+q4PcXu3CGZ+RdO7SBk7x8Ucs08K5Jzz65bdzp5yIAqzv4Fp0shkRVKr/Y7LvHa7V
+ WNPg==
+X-Gm-Message-State: APjAAAWq6sToTUyl64QzOrumoCtDG77ffslSMZCgTHf0ZbSxzhKYZxt/
+ FVlcKt138xCnSm/4iM0dLMlW/C1iBIElcJAiidG9bg==
+X-Google-Smtp-Source: APXvYqyc9odfP5kl53sVaAJSFZ9kxou4Lg+4NAUEX3RWJa1eraarQrRn5NVyE6c41JtA+QlG76Va2MCtJMEgh2C9gYE=
+X-Received: by 2002:a5d:4b43:: with SMTP id w3mr14892373wrs.166.1560838760111; 
+ Mon, 17 Jun 2019 23:19:20 -0700 (PDT)
 MIME-Version: 1.0
+References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
+ <1560169080-27134-15-git-send-email-yong.wu@mediatek.com>
+In-Reply-To: <1560169080-27134-15-git-send-email-yong.wu@mediatek.com>
+From: Tomasz Figa <tfiga@google.com>
+Date: Tue, 18 Jun 2019 15:19:07 +0900
+Message-ID: <CAAFQd5A5GUn1Zq1xF2_2V0MReNPd5bra2F=nquvodSAZUua5AQ@mail.gmail.com>
+Subject: Re: [PATCH v7 14/21] iommu/mediatek: Add mmu1 support
+To: Yong Wu <yong.wu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_211521_052535_8BF785FE 
-X-CRM114-Status: GOOD (  17.02  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190617_231925_006493_B91251D5 
+X-CRM114-Status: GOOD (  17.08  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -83,7 +83,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -95,282 +96,103 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Saravana Kannan <skannan@codeaurora.org>,
- "Andrew-sh . Cheng" <andrew-sh.cheng@mediatek.com>, linux-pm@vger.kernel.org,
- linux-kernel@vger.kernel.org, Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>,
- MyungJoo Ham <myungjoo.ham@samsung.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream <srv_heupstream@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
+ Will Deacon <will.deacon@arm.com>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Evan Green <evgreen@chromium.org>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <iommu@lists.linux-foundation.org>,
+ Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ =?UTF-8?B?WWluZ2pvZSBDaGVuICjpmbPoi7HmtLIp?= <yingjoe.chen@mediatek.com>,
+ anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
+ Matthias Kaehlcke <mka@chromium.org>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Hsin-Yi Wang <hsinyi@chromium.org>
+On Mon, Jun 10, 2019 at 9:21 PM Yong Wu <yong.wu@mediatek.com> wrote:
+>
+> Normally the M4U HW connect EMI with smi. the diagram is like below:
+>               EMI
+>                |
+>               M4U
+>                |
+>             smi-common
+>                |
+>        -----------------
+>        |    |    |     |    ...
+>     larb0 larb1  larb2 larb3
+>
+> Actually there are 2 mmu cells in the M4U HW, like this diagram:
+>
+>               EMI
+>            ---------
+>             |     |
+>            mmu0  mmu1     <- M4U
+>             |     |
+>            ---------
+>                |
+>             smi-common
+>                |
+>        -----------------
+>        |    |    |     |    ...
+>     larb0 larb1  larb2 larb3
+>
+> This patch add support for mmu1. In order to get better performance,
+> we could adjust some larbs go to mmu1 while the others still go to
+> mmu0. This is controlled by a SMI COMMON register SMI_BUS_SEL(0x220).
+>
+> mt2712, mt8173 and mt8183 M4U HW all have 2 mmu cells. the default
+> value of that register is 0 which means all the larbs go to mmu0
+> defaultly.
+>
+> This is a preparing patch for adjusting SMI_BUS_SEL for mt8183.
+>
+> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+> Reviewed-by: Evan Green <evgreen@chromium.org>
+> ---
+>  drivers/iommu/mtk_iommu.c | 46 +++++++++++++++++++++++++++++-----------------
+>  1 file changed, 29 insertions(+), 17 deletions(-)
+>
+> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> index 3a14301..ec4ce74 100644
+> --- a/drivers/iommu/mtk_iommu.c
+> +++ b/drivers/iommu/mtk_iommu.c
+> @@ -72,26 +72,32 @@
+>  #define F_INT_CLR_BIT                          BIT(12)
+>
+>  #define REG_MMU_INT_MAIN_CONTROL               0x124
+> -#define F_INT_TRANSLATION_FAULT                        BIT(0)
+> -#define F_INT_MAIN_MULTI_HIT_FAULT             BIT(1)
+> -#define F_INT_INVALID_PA_FAULT                 BIT(2)
+> -#define F_INT_ENTRY_REPLACEMENT_FAULT          BIT(3)
+> -#define F_INT_TLB_MISS_FAULT                   BIT(4)
+> -#define F_INT_MISS_TRANSACTION_FIFO_FAULT      BIT(5)
+> -#define F_INT_PRETETCH_TRANSATION_FIFO_FAULT   BIT(6)
+> +                                               /* mmu0 | mmu1 */
+> +#define F_INT_TRANSLATION_FAULT                        (BIT(0) | BIT(7))
+> +#define F_INT_MAIN_MULTI_HIT_FAULT             (BIT(1) | BIT(8))
+> +#define F_INT_INVALID_PA_FAULT                 (BIT(2) | BIT(9))
+> +#define F_INT_ENTRY_REPLACEMENT_FAULT          (BIT(3) | BIT(10))
+> +#define F_INT_TLB_MISS_FAULT                   (BIT(4) | BIT(11))
+> +#define F_INT_MISS_TRANSACTION_FIFO_FAULT      (BIT(5) | BIT(12))
+> +#define F_INT_PRETETCH_TRANSATION_FIFO_FAULT   (BIT(6) | BIT(13))
 
-This is based on mediatek's devfreq patches[1].
+If there are two IOMMUs, shouldn't we have two driver instances handle
+them, instead of making the driver combine them two internally?
 
-In MT8183 SoC, CCI and little core cluster share same regulator. In original
-implementation, CCI frequency depends on regulator voltage, which results in
-bad memory access performance if tasks are loaded on other cpus other than
-little cluster (cpus 0-3).
+And, what is even more important from security point of view actually,
+have two separate page tables (aka IOMMU groups) for them?
 
-Using cpufreq-map mt8183-cci's devfreq governor can improve this situation,
-since in most cases, higher cpufreq implies higher loadings on the CCI, and CCI
-should consider all cpu loadings instead of only the little cluster.
-
-[1] https://patchwork.kernel.org/patch/10946063/
-
-Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
----
- drivers/devfreq/mt8183-cci-devfreq.c | 194 +--------------------------
- 1 file changed, 4 insertions(+), 190 deletions(-)
-
-diff --git a/drivers/devfreq/mt8183-cci-devfreq.c b/drivers/devfreq/mt8183-cci-devfreq.c
-index 250c963789f3..a153adee033e 100644
---- a/drivers/devfreq/mt8183-cci-devfreq.c
-+++ b/drivers/devfreq/mt8183-cci-devfreq.c
-@@ -17,164 +17,7 @@
- struct cci_devfreq {
- 	struct devfreq *devfreq;
- 	struct regulator *proc_reg;
--	unsigned long proc_reg_uV;
- 	struct clk *cci_clk;
--	unsigned long freq;
--	struct notifier_block nb;
--	struct notifier_block opp_nb;
--	int cci_min_freq;
--};
--
--static int cci_devfreq_regulator_notifier(struct notifier_block *nb,
--					  unsigned long val, void *data)
--{
--	int ret;
--	struct cci_devfreq *cci_df =
--		container_of(nb, struct cci_devfreq, nb);
--
--	/* deal with reduce frequency */
--	if (val & REGULATOR_EVENT_PRE_VOLTAGE_CHANGE) {
--		struct pre_voltage_change_data *pvc_data = data;
--
--		if (pvc_data->min_uV < pvc_data->old_uV) {
--			cci_df->proc_reg_uV =
--				(unsigned long)(pvc_data->min_uV);
--			mutex_lock(&cci_df->devfreq->lock);
--			ret = update_devfreq(cci_df->devfreq);
--			if (ret)
--				pr_err("Fail to reduce cci frequency: %d\n",
--				       ret);
--			mutex_unlock(&cci_df->devfreq->lock);
--		}
--	} else if ((val & REGULATOR_EVENT_ABORT_VOLTAGE_CHANGE) &&
--	    ((unsigned long)data > cci_df->proc_reg_uV)) {
--		cci_df->proc_reg_uV = (unsigned long)data;
--		mutex_lock(&cci_df->devfreq->lock);
--		ret = update_devfreq(cci_df->devfreq);
--		if (ret)
--			pr_err("Fail to raise cci frequency back: %d\n", ret);
--		mutex_unlock(&cci_df->devfreq->lock);
--	} else if ((val & REGULATOR_EVENT_VOLTAGE_CHANGE) &&
--	    (cci_df->proc_reg_uV < (unsigned long)data)) {
--		/* deal with increase frequency */
--		cci_df->proc_reg_uV = (unsigned long)data;
--		mutex_lock(&cci_df->devfreq->lock);
--		ret = update_devfreq(cci_df->devfreq);
--		if (ret)
--			pr_err("Fail to raise cci frequency: %d\n", ret);
--		mutex_unlock(&cci_df->devfreq->lock);
--	}
--
--	return 0;
--}
--
--static int ccidevfreq_opp_notifier(struct notifier_block *nb,
--unsigned long event, void *data)
--{
--	int ret;
--	struct dev_pm_opp *opp = data;
--	struct cci_devfreq *cci_df = container_of(nb, struct cci_devfreq,
--						  opp_nb);
--	unsigned long	freq, volt, cur_volt;
--
--	if (event == OPP_EVENT_ADJUST_VOLTAGE) {
--		freq = dev_pm_opp_get_freq(opp);
--		/* current opp item is changed */
--		if (freq == cci_df->freq) {
--			volt = dev_pm_opp_get_voltage(opp);
--			cur_volt = regulator_get_voltage(cci_df->proc_reg);
--
--			if (volt > cur_volt) {
--				/* need reduce freq */
--				mutex_lock(&cci_df->devfreq->lock);
--				ret = update_devfreq(cci_df->devfreq);
--				if (ret)
--					pr_err("Fail to reduce cci frequency by opp notification: %d\n",
--					       ret);
--				mutex_unlock(&cci_df->devfreq->lock);
--			}
--		}
--
--		if (freq == cci_df->cci_min_freq) {
--			volt = dev_pm_opp_get_voltage(opp);
--			regulator_set_voltage(cci_df->proc_reg, volt, INT_MAX);
--		}
--	} else if (event == OPP_EVENT_DISABLE) {
--	}
--
--	return 0;
--}
--
--
--static int mtk_cci_governor_get_target(struct devfreq *devfreq,
--				       unsigned long *freq)
--{
--	struct cci_devfreq *cci_df;
--	struct dev_pm_opp *opp;
--	int ret;
--
--	cci_df = dev_get_drvdata(devfreq->dev.parent);
--
--	/* find available frequency */
--	opp = dev_pm_opp_find_freq_ceil_by_volt(devfreq->dev.parent,
--						cci_df->proc_reg_uV);
--	ret = PTR_ERR_OR_ZERO(opp);
--	if (ret) {
--		pr_err("%s[%d], cannot find opp with voltage=%d: %d\n",
--		       __func__, __LINE__, cci_df->proc_reg_uV, ret);
--		return ret;
--	}
--	*freq = dev_pm_opp_get_freq(opp);
--
--	return 0;
--}
--
--static int mtk_cci_governor_event_handler(struct devfreq *devfreq,
--					  unsigned int event, void *data)
--{
--	int ret;
--	struct cci_devfreq *cci_df;
--	struct notifier_block *nb;
--	struct notifier_block *opp_nb;
--
--	cci_df = dev_get_drvdata(devfreq->dev.parent);
--	nb = &cci_df->nb;
--	opp_nb = &cci_df->opp_nb;
--
--	switch (event) {
--	case DEVFREQ_GOV_START:
--	case DEVFREQ_GOV_RESUME:
--		nb->notifier_call = cci_devfreq_regulator_notifier;
--		ret = regulator_register_notifier(cci_df->proc_reg,
--						  nb);
--		if (ret)
--			pr_err("%s: failed to add governor: %d\n", __func__,
--			       ret);
--		opp_nb->notifier_call = ccidevfreq_opp_notifier;
--		dev_pm_opp_register_notifier(devfreq->dev.parent, opp_nb);
--		break;
--
--	case DEVFREQ_GOV_STOP:
--	case DEVFREQ_GOV_SUSPEND:
--		ret = regulator_unregister_notifier(cci_df->proc_reg,
--						    nb);
--		if (ret)
--			pr_err("%s: failed to add governor: %d\n", __func__,
--			       ret);
--		break;
--
--	default:
--		break;
--	}
--
--	return 0;
--}
--
--static struct devfreq_governor mtk_cci_devfreq_governor = {
--	.name = "mtk_cci_vmon",
--	.get_target_freq = mtk_cci_governor_get_target,
--	.event_handler = mtk_cci_governor_event_handler,
--	.immutable = true
- };
- 
- static int mtk_cci_devfreq_target(struct device *dev, unsigned long *freq,
-@@ -193,8 +36,6 @@ static int mtk_cci_devfreq_target(struct device *dev, unsigned long *freq,
- 		return ret;
- 	}
- 
--	cci_df->freq = *freq;
--
- 	return 0;
- }
- 
-@@ -206,8 +47,6 @@ static int mtk_cci_devfreq_probe(struct platform_device *pdev)
- {
- 	struct device *cci_dev = &pdev->dev;
- 	struct cci_devfreq *cci_df;
--	unsigned long freq, volt;
--	struct dev_pm_opp *opp;
- 	int ret;
- 
- 	cci_df = devm_kzalloc(cci_dev, sizeof(*cci_df), GFP_KERNEL);
-@@ -237,19 +76,12 @@ static int mtk_cci_devfreq_probe(struct platform_device *pdev)
- 		return ret;
- 	}
- 
--	/* set voltage lower bound */
--	freq = 1;
--	opp = dev_pm_opp_find_freq_ceil(cci_dev, &freq);
--	cci_df->cci_min_freq = dev_pm_opp_get_freq(opp);
--	volt = dev_pm_opp_get_voltage(opp);
--	dev_pm_opp_put(opp);
--
- 	platform_set_drvdata(pdev, cci_df);
- 
- 	cci_df->devfreq = devm_devfreq_add_device(cci_dev,
--						  &cci_devfreq_profile,
--						  "mtk_cci_vmon",
--						  NULL);
-+						&cci_devfreq_profile,
-+						"cpufreq-map",
-+						NULL);
- 	if (IS_ERR(cci_df->devfreq)) {
- 		ret = PTR_ERR(cci_df->devfreq);
- 		dev_err(cci_dev, "cannot create cci devfreq device:%d\n", ret);
-@@ -277,30 +109,12 @@ static struct platform_driver cci_devfreq_driver = {
- 
- static int __init mtk_cci_devfreq_init(void)
- {
--	int ret;
--
--	ret = devfreq_add_governor(&mtk_cci_devfreq_governor);
--	if (ret) {
--		pr_err("%s: failed to add governor: %d\n", __func__, ret);
--		return ret;
--	}
--
--	ret = platform_driver_register(&cci_devfreq_driver);
--	if (ret)
--		devfreq_remove_governor(&mtk_cci_devfreq_governor);
--
--	return ret;
-+	return platform_driver_register(&cci_devfreq_driver);
- }
- module_init(mtk_cci_devfreq_init)
- 
- static void __exit mtk_cci_devfreq_exit(void)
- {
--	int ret;
--
--	ret = devfreq_remove_governor(&mtk_cci_devfreq_governor);
--	if (ret)
--		pr_err("%s: failed to remove governor: %d\n", __func__, ret);
--
- 	platform_driver_unregister(&cci_devfreq_driver);
- }
- module_exit(mtk_cci_devfreq_exit)
--- 
-2.20.1
-
+Best regards,
+Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
