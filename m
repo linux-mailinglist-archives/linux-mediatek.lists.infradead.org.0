@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8ED34AD48
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 23:24:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 736054AD61
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Jun 2019 23:32:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xMuw9KostJgIZt4AfmCezEkBHk/y6POyh9zS6CrzrNY=; b=HN7/gOvauwrmQ5
-	1M/5RTC18nA6lDcnJrIdl553E/LjGBEPWE7R7oY4GKR/gpCrHQYaShK9igu1StJ/YvYSCc1dxy4+Z
-	jvHOYVAZ3FO96hLdi81jRqF/LAYDonBQWvBvH9iNPHhtKpFfM7UR/GYq5WU35prpB+9QrYVj9+bmv
-	0jPylleAmXBWfsLFKtkr2TMqQc3x/r3RD3CZeFE5UB1iHLENWV77honzXfciMtGskrDxkF3IOf/8W
-	jahFvkmKw//zd+hEgEaiCwWWaPuChwI4hQ1+GCTzK/ruHo4quwU+ESv6e1/HUWdYm5NEyR53uSGQ3
-	asm7Xbs28TME3Mxn9KSg==;
+	List-Owner; bh=bHNmYnVN9jC/2nlkuc63kTe+ejzpdiMab0TIl232w9g=; b=rPpM4tJBo9gnz5
+	Cqagh3zp4OMScVD0gc5NAAWQUB1uiPU1yuYtg1zI26FZuRJBaPbxy99Fb8vF8hr1Vz0BfVI2L7nZq
+	/wYawhpWCsJUGfPmaAjCf4ezC0ynIoaPT1gn2RpSj1+pfo0hPYlHQohQULDV5KqNJZEXIuW2Wh8Xh
+	85rGW5E3yP0i6ikWWsc9uaghFMQXKzkKW8VfWD1rWlM0qZX9RXkq6Ol+/e9dPM/lDYW8malY2M7Kz
+	JMpA++yatJpFbSsFMCIkBU3kPx7yg6mazH1YW7BZKdOxZVIikQIKs2ZlngDWSlBvjZ7FYNSamT38l
+	jKZ8sBe7iww1uo4WEH8Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdLa7-0001E3-TW; Tue, 18 Jun 2019 21:23:55 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1hdLiI-0004x7-Nj; Tue, 18 Jun 2019 21:32:22 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdLZU-0000dc-5H
- for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 21:23:19 +0000
-Received: by mail-wm1-x343.google.com with SMTP id s3so4824999wms.2
- for <linux-mediatek@lists.infradead.org>; Tue, 18 Jun 2019 14:23:15 -0700 (PDT)
+ id 1hdLiF-0004wi-QV
+ for linux-mediatek@lists.infradead.org; Tue, 18 Jun 2019 21:32:21 +0000
+Received: by mail-wm1-x342.google.com with SMTP id h19so3191358wme.0
+ for <linux-mediatek@lists.infradead.org>; Tue, 18 Jun 2019 14:32:19 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=vmK8wlnP5bnAyIhoiqTrtVv4Zbb3t9omriy+VQcaNqU=;
- b=sAZiECdn475BNhMktFCdRvHwC09n6ndLWvr5nu72ywqWqNOF+MM1gtOyKribLLI0ze
- uKdKtDQcIi+jEiVLThvqxQWC7UFEoVvMumjAzu2Gz4J8bOtG+CLYWSRuUhCHF8h6A5cE
- fRU4jnohvoeNhJaVai8dYX7xY8iFS8B1f97YjWQ+rzWmxLGoG6UPcS5CmgSabe/88q7D
- Gg6WHXS/99aLMQgtM2GXhPpXo+xaGEuqnKAg0l4wt92NSmqxwR1mLrZXbHeHq1Dv8VKk
- JOaEEHxI3IiNB+1yyvMgDh6Utg9Mr0IKy8J8rnih6OqSpkenozNB8qOUxKXAVLEYzMGL
- dcQg==
+ bh=QRAt6Pxk5cc3lY46uxEloNsUuU46m++feCDYAgNm9ro=;
+ b=lC/t6aulwxhEq4ln8iwn/Wk5qnABFIROubQ1bFjmpjx9zYuYJvoX2YX+TId7kxoOOx
+ k4vSegPNm7z1eRK5MUMvoD1S/DFhddTs3sTtHwoH9TUhcmkJtpw2Fth6gCEBhHFG8wbP
+ nz0a405tYhnUqFoLxpqdeO6mX8RzCP5ebM1c8uM1ZGRSwokAnVA8T89OomDiRQw4g7kK
+ 9OCt1SyaWRNx0v4paxUHmy/8w5uuPB93t6Qk42BzDxNAyliBtKTzO/R5GFI+IFpfgvrx
+ 1mMF8yMDggrbqz/GxzFuocvkcpHwbGs546PeD8zDEN/mh5H7/pEqkQzO8D6JTTWWkRs0
+ Sy4Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=vmK8wlnP5bnAyIhoiqTrtVv4Zbb3t9omriy+VQcaNqU=;
- b=osITTLcx5fmAbhFz0LrkJWWT8wH5HIcrWGiCh4YExoIPCvUCK2HhfsgZv4KozH9yK4
- SySPIWqEf0W7miscP6vfFQU/Z5nfixvES+3ISBy84Kxgwk3203I9rMQLu1M1gUb/bagk
- qTSXe48dGAQagJcdznlWnV6t0jgPWWfzPOyCGQdXkTCsZlGrkWsUg7RIaITIoqXz/9c8
- uo8byxVgVjpdObg6PsmrBWjLwD0MnXNNIhJmFuzNATiuAFGE7Mnu7YMLa5KL3szW9PY/
- Ir9EOP4rtMbFVWNAXa+/WKpC3ubkIDgp5VO+ExoPFc1Tw4ljt4yK3gM38oGjLVg9pk0G
- ej6Q==
-X-Gm-Message-State: APjAAAUFPQMkxwHYVds9SgsXyfzAo6QEpe+Y7o1p7/Wk+EtCxpU1YdI3
- a+deWaEcrcn1JJnoLtbRDLD3dKN+Its=
-X-Google-Smtp-Source: APXvYqzOjD4+E/Wiq8sXDb1X0unIY9PxocAd6/LkBLFEemzTjW7btJN4uwMnUFLYVyYL6Zc8xYe/+g==
-X-Received: by 2002:a1c:6545:: with SMTP id z66mr5082201wmb.77.1560892994184; 
- Tue, 18 Jun 2019 14:23:14 -0700 (PDT)
+ bh=QRAt6Pxk5cc3lY46uxEloNsUuU46m++feCDYAgNm9ro=;
+ b=QGpqpezU657gN05hsKezc+zxLdZaaD91FfnX/TrxiRtx16e2VGJCzbjzboyVgwXB7s
+ L/C/x6DHYnZqyYyQes9vCgf3jpSZhfnKfIwUns0OzL7Q8OeHivZhT1VdyHf1weQK6u9F
+ otkGsPwUPGkf40fJDIVSVaB8qbaWztEBP4ghsCaP8ci+UyB6ueTJDpDnQAUmKaFfJPat
+ yCM+O0qD68xA6D/eloz6FVQIvigSNdNkJ/1OxQggxs758F3ybqENCBHaxL7efAI5Axc2
+ vM5m5sd74C9SpF+fpvcQ/m74ttiucWBHClwEInpZHfdVtrzgEndUYN4aYFG6Q2GYtKJW
+ Ul4A==
+X-Gm-Message-State: APjAAAWQDhHoDEleb/dhqXvqDPGaIbdFW9jJSXKY6yiIo3TbRGLy7CJs
+ Q4H48q6Q+fmlbT2ybkXmr7e/O+yTgL0=
+X-Google-Smtp-Source: APXvYqwAdfadXpQME3AfUwkpZhZB7qx37naJxmjtSO6L55BQn6w7vxeAotkpDmfdH5t5a7TaSp6bFA==
+X-Received: by 2002:a1c:7d02:: with SMTP id y2mr4505683wmc.15.1560893537619;
+ Tue, 18 Jun 2019 14:32:17 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.230.25])
- by smtp.gmail.com with ESMTPSA id s10sm4205191wmf.8.2019.06.18.14.23.13
+ by smtp.gmail.com with ESMTPSA id q20sm36045176wra.36.2019.06.18.14.32.16
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Tue, 18 Jun 2019 14:23:13 -0700 (PDT)
+ Tue, 18 Jun 2019 14:32:16 -0700 (PDT)
 Subject: Re: [PATCH v2, 1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
 To: Xi Chen <xixi.chen@mediatek.com>, robh+dt@kernel.org,
  mark.rutland@arm.com, ck.hu@mediatek.com
@@ -157,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <2e9ad859-4f98-ea40-47f7-dd27a2e8ad1a@gmail.com>
-Date: Tue, 18 Jun 2019 23:23:12 +0200
+Message-ID: <668e6ccb-709b-a93a-7113-a22362048972@gmail.com>
+Date: Tue, 18 Jun 2019 23:32:15 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
 In-Reply-To: <1558670066-22484-2-git-send-email-xixi.chen@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190618_142316_278058_006CC0DD 
-X-CRM114-Status: GOOD (  15.64  )
+X-CRM114-CacheID: sfid-20190618_143219_862095_BB71985D 
+X-CRM114-Status: GOOD (  15.45  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
@@ -222,22 +222,29 @@ On 24/05/2019 05:54, Xi Chen wrote:
 > @@ -0,0 +1,19 @@
 > +EMI (External Memory Interface)
 > +
-
-Please describe a bit more what the EMI interface does.
-
 > +Required properties:
 > +- compatible : must be one of :
 > +	"mediatek,mt8183-emi"
 > +- reg : the register and size of the EMI block.
+
+Please name the registers explicitly.
+
 > +- interrupts : includes MPU, CGM, ELM.
 > +
 > +Example:
 > +	emi@10219000 {
 > +	compatible = "mediatek,mt8183-emi";
+
+Please do the indention right.
+
 > +	reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
 > +		  <0 0x10226000 0 0x1000>, /* EMI MPU */
 > +		  <0 0x1022d000 0 0x1000>, /* CHA EMI */
 > +		  <0 0x10235000 0 0x1000>; /* CHB EMI */
+
+This looks quite spread out over the IO space. Is this really one HW block or
+did you add various blocks into one driver?
+
 > +	interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
 > +			 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
 > +			 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
