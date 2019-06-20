@@ -2,87 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A6B954BB56
-	for <lists+linux-mediatek@lfdr.de>; Wed, 19 Jun 2019 16:22:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F2F414C4D0
+	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Jun 2019 03:15:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=giCfXiCN5PCa2ztR2Tn2MED/45XRPs37voLw5JmQ4hI=; b=BfzBYSuHCNka7I
-	ibCsxrBEZJ7/HKBeefkIbfQcVfHw/i41oB/jQU5VmY60xomP9NmDoky9/Lr6Kl5EPT7MphdRZRqGE
-	KlOQSqMn4qY81as+FLAppGUSJo/K8KsYaWIYlhznvvOknKnHLQjLO9Ie9QqmH2Kg1AD5dL9ZgGKwl
-	GUagoxPK6A1RLO/4gR1RZ8hMwfKqjJtFBpK09xN5siF7bXSttZS4lbSC/V85EimPF/KY0JpeuN+2z
-	lwAwrGR8dIlTsuB4UVgjy77Xv6K4VCCF3MQMkgnnvM2sr+fkL2NVntHSgZAeaA+RZkNt5NfpavJk0
-	Al6h/PYurh5rHbz3wk4w==;
+	List-Owner; bh=GFoTXT+2L0vxVql+JFUQsK8uyLT2GhMBi/1X4J6cgLY=; b=GanRc81WEsGlqZ
+	IIiewPOb1sDOKNh7mGC8R9hph1D8j7cXN9G6ZOKAUB8C8WofzXMy9p/y9GPCNx6QoXJcklrhw/PNz
+	frNrhJaWDLqKl1wWomMREiacMHQiWfriNBxiXGwRDocHqAb7A7iYiKRRhRlmb1Z62IVGau65inuBg
+	jptW/D/AAbxcsAt+zBky0/Dt3qHKFJU5Blg10xIKmMvziDZFTrddt4Ja+/Vdza96l1nkpRkQLydmn
+	hJrsuJWpBhfmhsgf85TqO7mr+b9IoLJByfjuBHZioN+0cxLHRHjpyIZm4q/7J906atWFcOg0y2hwb
+	ZEGiEVVODrerUy8SJLfw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdbTl-0007tP-0d; Wed, 19 Jun 2019 14:22:25 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hdlff-0005jx-JA; Thu, 20 Jun 2019 01:15:23 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdbRr-00067a-Ed
- for linux-mediatek@lists.infradead.org; Wed, 19 Jun 2019 14:20:34 +0000
-Received: by mail-wr1-x442.google.com with SMTP id p11so3604378wre.7
- for <linux-mediatek@lists.infradead.org>; Wed, 19 Jun 2019 07:20:27 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=+cLoEI1rGhZCsgQxOO5xHLEbOwGBFQor6wshSvPnEQI=;
- b=rlGrLctm+pQE/yUjC3DA1AzqohSk3Gw7yOTlJvIql4nG0azAopbJXpJtjC+ov0r7wW
- lxdIc5jPEtuLhQQ/nRBML4W0JgFt4K3SkryTwripnKbDRZivIkEWRKyRySk468J+t1nG
- z5srWO/G9+XB115FxUygYFY8l3abJobxRQXQ/WXFmwKkVlEVoof31YmZAGo1j6PpH1If
- veEhw3KQDXl90Kq24MU2TtgQ/4wR9blQQYLkn+LyxghudD9rDRjO6vc8a0GmiwNTRWyU
- cu4L5ZDlMW0BnGn9Veq2iH+XJp6AEeDkHAlziTYVavxGzzmEhdYQuhTIax9RGZGy0gZC
- 9F4g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=+cLoEI1rGhZCsgQxOO5xHLEbOwGBFQor6wshSvPnEQI=;
- b=NABscsDFyrELOE0dZcMlLqmAQ/qoxq3307di+2YtiUm4jWqQ/8X7f7Mbwu2woI0+XP
- l0xrc9KJAsSVvBqNfkSasFm5aGmPU5H/T57gGHpN7ukpwSQxFiwbE5ibMGjaQB8wO54N
- QbUxyl9KrIu9XCKPF7rykbB2AvMiBJ1sNw1WtOH6Uyr/M9nCugyOfAZYqR51F1F9/K2V
- nnuLsYiqdXORtGJkMO+yKLAszCFichRqOxBfLLRwFvlU9F7H75OMEEGqyT3CqLSKA8kY
- VLk3EmiGkryApKhtm0A+iBam1NJLcVkKr/unpa4O0sUMpw1zTIsRLcVk0MmP411nUUAa
- m7xw==
-X-Gm-Message-State: APjAAAUN/atC1HeXug8+Sto0wj/8ea/BDSjuKRIn3sXMqx/foc0FVWco
- L4UcXLCLl07lBRdGCNSOfBbp/Zl3Mdw=
-X-Google-Smtp-Source: APXvYqwdJn4A3b8T3yhYbCCJFG6mJK2lSZdeVNTEgsg3QBuy2sn2YiKC/etFxu3mS/TAN3PRsJ+/XA==
-X-Received: by 2002:adf:fc4f:: with SMTP id e15mr42920656wrs.2.1560954025811; 
- Wed, 19 Jun 2019 07:20:25 -0700 (PDT)
-Received: from localhost.localdomain
- (amontpellier-652-1-281-69.w109-210.abo.wanadoo.fr. [109.210.96.69])
- by smtp.gmail.com with ESMTPSA id o20sm24209979wrh.8.2019.06.19.07.20.24
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 19 Jun 2019 07:20:25 -0700 (PDT)
-From: Fabien Parent <fparent@baylibre.com>
-To: robh+dt@kernel.org, mark.rutland@arm.com, matthias.bgg@gmail.com,
- lee.jones@linaro.org, lgirdwood@gmail.com, broonie@kernel.org
-Subject: [PATCH v4 7/7] arm64: dts: mt6392: Add PMIC mt6392 dtsi
-Date: Wed, 19 Jun 2019 16:20:13 +0200
-Message-Id: <20190619142013.20913-8-fparent@baylibre.com>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190619142013.20913-1-fparent@baylibre.com>
-References: <20190619142013.20913-1-fparent@baylibre.com>
+ id 1hdlfa-0005jA-Ou; Thu, 20 Jun 2019 01:15:20 +0000
+X-UUID: 33d9312673e747f6ae5232907f20a5dc-20190619
+X-UUID: 33d9312673e747f6ae5232907f20a5dc-20190619
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1108526305; Wed, 19 Jun 2019 17:14:58 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 19 Jun 2019 18:14:56 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs05n2.mediatek.inc
+ (172.21.101.140) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 20 Jun 2019 09:14:55 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 20 Jun 2019 09:14:47 +0800
+Message-ID: <1560993287.19057.2.camel@mhfsdcap03>
+Subject: Re: [RFC PATCH v4 1/1] mtd: rawnand: mtk: Re-license MTK NAND
+ driver as Dual MIT/GPL
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: =?UTF-8?Q?Rafa=C5=82_Mi=C5=82ecki?= <rafal@milecki.pl>
+Date: Thu, 20 Jun 2019 09:14:47 +0800
+In-Reply-To: <ce02eca83c4d28f7ea32a586f25b0d35@milecki.pl>
+References: <20190507092020.1917-1-xiaolei.li@mediatek.com>
+ <20190507092020.1917-2-xiaolei.li@mediatek.com>
+ <CAK8P3a3d-2U=hpb0P0+W-eZ0cviwKVwy6dWvHbhBCgF4CJUWKA@mail.gmail.com>
+ <5052ea548ce89c1a588236d00319960b@milecki.pl>
+ <1558685891.18315.33.camel@mhfsdcap03>
+ <75974a2066425e5852d0295b22d2b259@milecki.pl>
+ <1560936760.19057.1.camel@mhfsdcap03>
+ <ce02eca83c4d28f7ea32a586f25b0d35@milecki.pl>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190619_072027_529728_60FB45AA 
-X-CRM114-Status: GOOD (  11.13  )
+X-CRM114-CacheID: sfid-20190619_181518_819969_C2F088C2 
+X-CRM114-Status: GOOD (  17.17  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,255 +78,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, dmitry.torokhov@gmail.com,
- linux-kernel@vger.kernel.org, Fabien Parent <fparent@baylibre.com>,
- linux-mediatek@lists.infradead.org, linux-input@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Daniel
+ Thompson <daniel.thompson@linaro.org>, Ryder Lee <ryder.lee@mediatek.com>,
+ srv_heupstream@mediatek.com, Arnd Bergmann <arnd@arndb.de>,
+ Masahiro Yamada <yamada.masahiro@socionext.com>,
+ Richard Weinberger <richard@nod.at>, Miquel Raynal <miquel.raynal@bootlin.com>,
+ "Gustavo A. R. Silva" <gustavo@embeddedor.com>, jorge.ramirez-ortiz@linaro.org,
+ yingjoe.chen@mediatek.com, boris.brezillon@collabora.com,
+ linux-mtd <linux-mtd@lists.infradead.org>,
+ Wei Yongjun <weiyongjun1@huawei.com>, yellowriver2010@hotmail.com,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/Mediatek SoC..." <linux-mediatek@lists.infradead.org>,
+ rogercc.lin@mediatek.com, Dan Carpenter <dan.carpenter@oracle.com>,
+ peterpandong@micron.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add the regulator nodes for the MT6392 PMIC.
-
-Signed-off-by: Fabien Parent <fparent@baylibre.com>
----
-
-V4:
-	* No change
-
-V3:
-	* No change
-
-V2:
-	* Use 'pmic' as node name for the pmic.
-	* Use 'regulators' as node name for the regulators
-	* use dash instead of underscore for regulator's node names.
-
----
- arch/arm64/boot/dts/mediatek/mt6392.dtsi | 208 +++++++++++++++++++++++
- 1 file changed, 208 insertions(+)
- create mode 100644 arch/arm64/boot/dts/mediatek/mt6392.dtsi
-
-diff --git a/arch/arm64/boot/dts/mediatek/mt6392.dtsi b/arch/arm64/boot/dts/mediatek/mt6392.dtsi
-new file mode 100644
-index 000000000000..5621968c64e4
---- /dev/null
-+++ b/arch/arm64/boot/dts/mediatek/mt6392.dtsi
-@@ -0,0 +1,208 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
-+
-+&pwrap {
-+	mt6392_pmic: pmic {
-+		compatible = "mediatek,mt6392", "mediatek,mt6323";
-+		mediatek,system-power-controller;
-+
-+		regulators {
-+			compatible = "mediatek,mt6392-regulator";
-+
-+			mt6392_vproc_reg: buck-vproc {
-+				regulator-name = "buck_vproc";
-+				regulator-min-microvolt = < 700000>;
-+				regulator-max-microvolt = <1350000>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vsys_reg: buck-vsys {
-+				regulator-name = "buck_vsys";
-+				regulator-min-microvolt = <1400000>;
-+				regulator-max-microvolt = <2987500>;
-+				regulator-ramp-delay = <25000>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcore_reg: buck-vcore {
-+				regulator-name = "buck_vcore";
-+				regulator-min-microvolt = < 700000>;
-+				regulator-max-microvolt = <1350000>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vxo22_reg: ldo-vxo22 {
-+				regulator-name = "ldo_vxo22";
-+				regulator-min-microvolt = <2200000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <110>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vaud22_reg: ldo-vaud22 {
-+				regulator-name = "ldo_vaud22";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcama_reg: ldo-vcama {
-+				regulator-name = "ldo_vcama";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vaud28_reg: ldo-vaud28 {
-+				regulator-name = "ldo_vaud28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vadc18_reg: ldo-vadc18 {
-+				regulator-name = "ldo_vadc18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcn35_reg: ldo-vcn35 {
-+				regulator-name = "ldo_vcn35";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3600000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vio28_reg: ldo-vio28 {
-+				regulator-name = "ldo_vio28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vusb_reg: ldo-vusb {
-+				regulator-name = "ldo_vusb";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vmc_reg: ldo-vmc {
-+				regulator-name = "ldo_vmc";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vmch_reg: ldo-vmch {
-+				regulator-name = "ldo_vmch";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vemc3v3_reg: ldo-vemc3v3 {
-+				regulator-name = "ldo_vemc3v3";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vgp1_reg: ldo-vgp1 {
-+				regulator-name = "ldo_vgp1";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vgp2_reg: ldo-vgp2 {
-+				regulator-name = "ldo_vgp2";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcn18_reg: ldo-vcn18 {
-+				regulator-name = "ldo_vcn18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcamaf_reg: ldo-vcamaf {
-+				regulator-name = "ldo_vcamaf";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vm_reg: ldo-vm {
-+				regulator-name = "ldo_vm";
-+				regulator-min-microvolt = <1240000>;
-+				regulator-max-microvolt = <1390000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vio18_reg: ldo-vio18 {
-+				regulator-name = "ldo_vio18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+				regulator-always-on;
-+				regulator-boot-on;
-+			};
-+
-+			mt6392_vcamd_reg: ldo-vcamd {
-+				regulator-name = "ldo_vcamd";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vcamio_reg: ldo-vcamio {
-+				regulator-name = "ldo_vcamio";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vm25_reg: ldo-vm25 {
-+				regulator-name = "ldo_vm25";
-+				regulator-min-microvolt = <2500000>;
-+				regulator-max-microvolt = <2500000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+
-+			mt6392_vefuse_reg: ldo-vefuse {
-+				regulator-name = "ldo_vefuse";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <2000000>;
-+				regulator-enable-ramp-delay = <264>;
-+			};
-+		};
-+	};
-+};
--- 
-2.20.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gV2VkLCAyMDE5LTA2LTE5IGF0IDEyOjQ5ICswMjAwLCBSYWZhxYIgTWnFgmVja2kgd3JvdGU6
+Cj4gT24gMjAxOS0wNi0xOSAxMTozMiwgeGlhb2xlaSBsaSB3cm90ZToKPiA+IE9uIFR1ZSwgMjAx
+OS0wNi0xOCBhdCAxMTozNiArMDIwMCwgUmFmYcWCIE1pxYJlY2tpIHdyb3RlOgo+ID4+IE9uIDIw
+MTktMDUtMjQgMTA6MTgsIHhpYW9sZWkgbGkgd3JvdGU6Cj4gPj4gPiBPbiBGcmksIDIwMTktMDUt
+MjQgYXQgMDk6NTUgKzAyMDAsIFJhZmHFgiBNacWCZWNraSB3cm90ZToKPiA+PiA+PiBPbiAyMDE5
+LTA1LTI0IDA5OjUyLCBBcm5kIEJlcmdtYW5uIHdyb3RlOgo+ID4+ID4+ID4gT24gVHVlLCBNYXkg
+NywgMjAxOSBhdCAxMToyMCBBTSBYaWFvbGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4K
+PiA+PiA+PiA+IHdyb3RlOgo+ID4+ID4+ID4+Cj4gPj4gPj4gPj4gSXQgaXMgd2FudGVkIHRvIHVz
+ZSBNVEsgTkFORCBkcml2ZXIgd2l0aCBHUEwtMi4wIG9yIE1JVCBsaWNlbnNlLgo+ID4+ID4+ID4+
+IEJ1dCBub3cgaXQgaXMgb25seSBsaWNlbnNlZCBhcyBHUEwtMi4wLgo+ID4+ID4+ID4+IFNvIHJl
+LWxpY2Vuc2UgaXQgYXMgZHVhbCBNSVQvR1BMIGFuZCByZXBsYWNlIGxpY2Vuc2UgdGV4dCB3aXRo
+Cj4gPj4gPj4gPj4gU1BEWCB0YWcuCj4gPj4gPj4gPj4KPiA+PiA+PiA+PiBTaWduZWQtb2ZmLWJ5
+OiBYaWFvbGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4KPiA+PiA+PiA+PiBBY2tlZC1i
+eTogSm9yZ2UgUmFtaXJlei1PcnRpeiA8am9yZ2UucmFtaXJlei1vcnRpekBsaW5hcm8ub3JnPgo+
+ID4+ID4+ID4+IEFja2VkLWJ5OiBSeWRlciBMZWUgPHJ5ZGVyLmxlZUBtZWRpYXRlay5jb20+Cj4g
+Pj4gPj4gPj4gQWNrZWQtYnk6IFJhZmHFgiBNacWCZWNraSA8cmFmYWxAbWlsZWNraS5wbD4KPiA+
+PiA+PiA+PiBBY2tlZC1ieTogTWlxdWVsIFJheW5hbCA8bWlxdWVsLnJheW5hbEBib290bGluLmNv
+bT4KPiA+PiA+PiA+PiBBY2tlZC1ieTogQm9yaXMgQnJlemlsbG9uIDxib3Jpcy5icmV6aWxsb25A
+Y29sbGFib3JhLmNvbT4KPiA+PiA+PiA+PiBBY2tlZC1ieTogUm9nZXJDQyBMaW4gPHJvZ2VyY2Mu
+bGluQG1lZGlhdGVrLmNvbT4KPiA+PiA+PiA+Cj4gPj4gPj4gPiBBY2tlZC1ieTogQXJuZCBCZXJn
+bWFubiA8YXJuZEBhcm5kYi5kZT4KPiA+PiA+PiA+Cj4gPj4gPj4gPiBTb3JyeSBmb3IgbWlzc2lu
+ZyB0aGlzIGVhcmxpZXIuCj4gPj4gPj4KPiA+PiA+PiBUaGFuayB5b3UhCj4gPj4gPj4KPiA+PiA+
+PiBYaWFvbGVpOiBwbGVhc2UgcmVzZW5kIHRoaXMgcGF0Y2ggd2l0aG91dCBSRkMgaW4gYSBzdWJq
+ZWN0LiBJIGJlbGlldmUKPiA+PiA+PiBpdAo+ID4+ID4+IGNhbiBiZSBhcHBsaWVkL3B1c2hlZCBu
+b3cuCj4gPj4gPgo+ID4+ID4gVGhhbmtzIHZlcnkgbXVjaCBmb3IgeW91ciByZXNwb25zZSEKPiA+
+PiA+IEkgd2lsbCBzZW5kIGEgZm9ybWFsIHBhdGNoIHNvb24uCj4gPj4gCj4gPj4gSGkgWGlhb2xl
+aSwgd2hhdCdzIHRoZSBzdGF0dXMgb2YgdGhpcz8KPiA+PiAKPiA+PiBJdCB0b29rIHNvbWUgZWZm
+b3J0IHRvIHNvcnQgdGhhdCBsaWNlbnNpbmcgb3V0LCBJIGJlbGlldmUgaGFuZGxpbmcgCj4gPj4g
+dGhpcwo+ID4+IHNvb25lciB0aGFuIGxhdGVyIGlzIGhpZ2hseSByZWNvbW1lbmRlZC4KPiA+IAo+
+ID4gVGhhbmtzIGZvciB5b3VyIGF0dGVudGlvbi4KPiA+IEkgc2VudCB0aGUgZm9ybWFsIHBhdGNo
+IGFib3V0IHR3byB3ZWVrcyBhZ28uIFNvLCB5b3UgZGlkbid0IHJlY2VpdmUgaXQsCj4gPiByaWdo
+dCA/Cj4gCj4gSXQgaGFzIG5ldmVyIHJlYWNoZWQgbWUgb3IgbWFpbGluZyBsaXN0LgoKT0suIEkg
+d2lsbCByZS1zZW5kIGl0IHRvZGF5LiBUaGFua3MuCgo+IAo+IFNlZToKPiBodHRwOi8vbGlzdHMu
+aW5mcmFkZWFkLm9yZy9waXBlcm1haWwvbGludXgtbXRkLzIwMTktSnVuZS90aHJlYWQuaHRtbAo+
+IGh0dHBzOi8vcGF0Y2h3b3JrLm96bGFicy5vcmcvcHJvamVjdC9saW51eC1tdGQvbGlzdC8/c2Vy
+aWVzPSZzdWJtaXR0ZXI9NzE1OTkmc3RhdGU9KiZxPSZhcmNoaXZlPSZkZWxlZ2F0ZT0KPiAKPiBU
+aGUgbGF0ZXN0IG9uZSBpcyBSRkMgdjQuCgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRp
+YXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxt
+YW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
