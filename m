@@ -2,52 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3309F4C525
-	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Jun 2019 03:58:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0B2FE4C596
+	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Jun 2019 04:42:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=lHsqCdWW/QJxYYlfWPgZwP5HrwwamzRf3j784n97G3Y=; b=X00aHk+vsdFvLD
-	k2q3YRb75TeR6Iw6EceWErU2/ewrT0RRZ6PgAOk/fGOkPoVCJUUfQBEfpMxzY0VzOcMMnggdzoYf4
-	Ce9O82A4CAXT8KKYZZ11MlBYc6cH/9HxXHLXtZX9fgixITnIFGbLxbxKbcSMr3wjwJaFlS7EAW6DI
-	bFsEjjVCX1IBf90X6G4p+bZqsNZDy/tWyN5h3GTxx7Q47rlGTs3Cthm53+YROWgH9qBUdxiVuV7dR
-	KyPLibbX9EiczmuUsS69Q3twCgBhoD9cZXCGwf6kq89ZzRiutOIHlWuBuWguDosQvdW4yl9qtSp0v
-	YNdBev4vOi6nKiW0DBlQ==;
+	List-Owner; bh=FnBQ10T3bKVA5PASAcPbJzTZ7NvVBfuLjWllth545Tc=; b=Nspbo0NtpnFDZz
+	35bFXqpeqFZpbc3uYD0DXy0E6OsUhufsmlIXNYVP6DaQBhEF6ivNh8xvqbSqCFaSrnPX18hRkhrJI
+	pfknxw1zjhPUr+LeyzICEmc0lAYAORLBTnBD12IlrBhTat4mcsEKmD+83iGHvMpc1ccg0Aa8NRXbb
+	6mIn+XUADk9NbDzMW6IFB83eGrSEnO9tYi7Yxvh/DU/4V9ZKESiCK9i3A1k70olNHmdZZS7fOIKYj
+	eb9fRF71st209a5p+f+lrrKeojc9ChP9iJ9Sf/vdKk5I0ORftE0i1SwZxUCKqKo6PywWukZxBJqcL
+	MabDHQIcjAbXkTwnti9g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdmLc-00023X-Tm; Thu, 20 Jun 2019 01:58:44 +0000
+	id 1hdn28-0002JX-MF; Thu, 20 Jun 2019 02:42:40 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdmLO-0001up-IN; Thu, 20 Jun 2019 01:58:33 +0000
-X-UUID: a2ff23723c5c4885aa5a623c9cf99047-20190619
-X-UUID: a2ff23723c5c4885aa5a623c9cf99047-20190619
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <xiaolei.li@mediatek.com>)
+ id 1hdmyJ-0006Ax-9y; Thu, 20 Jun 2019 02:38:45 +0000
+X-UUID: a802d20be26741abb9af734a776d218f-20190619
+X-UUID: a802d20be26741abb9af734a776d218f-20190619
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <weiyi.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 241140098; Wed, 19 Jun 2019 17:58:18 -0800
+ with ESMTP id 850899427; Wed, 19 Jun 2019 18:38:21 -0800
 Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 19 Jun 2019 18:58:17 -0700
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 19 Jun 2019 19:38:20 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
  mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 20 Jun 2019 09:58:15 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 20 Jun 2019 09:58:14 +0800
-From: <xiaolei.li@mediatek.com>
-To: <miquel.raynal@bootlin.com>, <richard@nod.at>
-Subject: [PATCH] mtd: rawnand: mtk: Re-license MTK NAND driver as Dual MIT/GPL
-Date: Thu, 20 Jun 2019 09:58:12 +0800
-Message-ID: <20190620015812.16519-1-xiaolei.li@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ 15.0.1395.4; Thu, 20 Jun 2019 10:38:18 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Thu, 20 Jun 2019 10:38:18 +0800
+From: Weiyi Lu <weiyi.lu@mediatek.com>
+To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Rob Herring <robh@kernel.org>
+Subject: [PATCH v6 00/14] Mediatek MT8183 scpsys support  
+Date: Thu, 20 Jun 2019 10:37:52 +0800
+Message-ID: <1560998286-9189-1-git-send-email-weiyi.lu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190619_185830_619418_32029A25 
-X-CRM114-Status: GOOD (  10.71  )
+X-CRM114-CacheID: sfid-20190619_193843_442873_BB56A73F 
+X-CRM114-Status: GOOD (  10.12  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -68,87 +69,67 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: ryder.lee@mediatek.com, arnd@arndb.de, srv_heupstream@mediatek.com,
- yellowriver2010@hotmail.com, yamada.masahiro@socionext.com,
- boris.brezillon@collabora.com, linux-mediatek@lists.infradead.org,
- jorge.ramirez-ortiz@linaro.org, rafal@milecki.pl,
- linux-mtd@lists.infradead.org, xiaolei.li@mediatek.com,
- dan.carpenter@oracle.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: James Liao <jamesjj.liao@mediatek.com>, Weiyi Lu <weiyi.lu@mediatek.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Yong Wu <yong.wu@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RnJvbTogWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+CgpJdCBpcyB3YW50ZWQg
-dG8gdXNlIE1USyBOQU5EIGRyaXZlciB3aXRoIEdQTC0yLjAgb3IgTUlUIGxpY2Vuc2UuCkJ1dCBu
-b3cgaXQgaXMgb25seSBsaWNlbnNlZCBhcyBHUEwtMi4wLgpTbyByZS1saWNlbnNlIGl0IGFzIGR1
-YWwgTUlUL0dQTCBhbmQgcmVwbGFjZSBsaWNlbnNlIHRleHQgd2l0aApTUERYIHRhZy4KClNpZ25l
-ZC1vZmYtYnk6IFhpYW9sZWkgTGkgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPgpBY2tlZC1ieTog
-Sm9yZ2UgUmFtaXJlei1PcnRpeiA8am9yZ2UucmFtaXJlei1vcnRpekBsaW5hcm8ub3JnPgpBY2tl
-ZC1ieTogUnlkZXIgTGVlIDxyeWRlci5sZWVAbWVkaWF0ZWsuY29tPgpBY2tlZC1ieTogUmFmYcWC
-IE1pxYJlY2tpIDxyYWZhbEBtaWxlY2tpLnBsPgpBY2tlZC1ieTogTWlxdWVsIFJheW5hbCA8bWlx
-dWVsLnJheW5hbEBib290bGluLmNvbT4KQWNrZWQtYnk6IEJvcmlzIEJyZXppbGxvbiA8Ym9yaXMu
-YnJlemlsbG9uQGNvbGxhYm9yYS5jb20+CkFja2VkLWJ5OiBXZW4gWWFuZyA8eWVsbG93cml2ZXIy
-MDEwQGhvdG1haWwuY29tPgpBY2tlZC1ieTogRGFuIENhcnBlbnRlciA8ZGFuLmNhcnBlbnRlckBv
-cmFjbGUuY29tPgpBY2tlZC1ieTogQXJuZCBCZXJnbWFubiA8YXJuZEBhcm5kYi5kZT4KQWNrZWQt
-Ynk6IE1hc2FoaXJvIFlhbWFkYSA8eWFtYWRhLm1hc2FoaXJvQHNvY2lvbmV4dC5jb20+Ci0tLQog
-ZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5jICB8IDEyICsrLS0tLS0tLS0tLQogZHJpdmVy
-cy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5oICB8ICA0ICstLS0KIGRyaXZlcnMvbXRkL25hbmQvcmF3
-L210a19uYW5kLmMgfCAxMiArKy0tLS0tLS0tLS0KIDMgZmlsZXMgY2hhbmdlZCwgNSBpbnNlcnRp
-b25zKCspLCAyMyBkZWxldGlvbnMoLSkKCmRpZmYgLS1naXQgYS9kcml2ZXJzL210ZC9uYW5kL3Jh
-dy9tdGtfZWNjLmMgYi9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfZWNjLmMKaW5kZXggMDViMGMx
-OWQ3MmQ5Li43NDU5NWI2NDRiN2MgMTAwNjQ0Ci0tLSBhL2RyaXZlcnMvbXRkL25hbmQvcmF3L210
-a19lY2MuYworKysgYi9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfZWNjLmMKQEAgLTEsMTcgKzEs
-OSBAQAorLy8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEdQTC0yLjAgT1IgTUlUCiAvKgogICog
-TVRLIEVDQyBjb250cm9sbGVyIGRyaXZlci4KICAqIENvcHlyaWdodCAoQykgMjAxNiAgTWVkaWFU
-ZWsgSW5jLgogICogQXV0aG9yczoJWGlhb2xlaSBMaQkJPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29t
-PgogICoJCUpvcmdlIFJhbWlyZXotT3J0aXoJPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJvLm9y
-Zz4KLSAqCi0gKiBUaGlzIHByb2dyYW0gaXMgZnJlZSBzb2Z0d2FyZTsgeW91IGNhbiByZWRpc3Ry
-aWJ1dGUgaXQgYW5kL29yIG1vZGlmeQotICogaXQgdW5kZXIgdGhlIHRlcm1zIG9mIHRoZSBHTlUg
-R2VuZXJhbCBQdWJsaWMgTGljZW5zZSB2ZXJzaW9uIDIgYXMKLSAqIHB1Ymxpc2hlZCBieSB0aGUg
-RnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uLgotICoKLSAqIFRoaXMgcHJvZ3JhbSBpcyBkaXN0cmli
-dXRlZCBpbiB0aGUgaG9wZSB0aGF0IGl0IHdpbGwgYmUgdXNlZnVsLAotICogYnV0IFdJVEhPVVQg
-QU5ZIFdBUlJBTlRZOyB3aXRob3V0IGV2ZW4gdGhlIGltcGxpZWQgd2FycmFudHkgb2YKLSAqIE1F
-UkNIQU5UQUJJTElUWSBvciBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS4gIFNlZSB0
-aGUKLSAqIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIGZvciBtb3JlIGRldGFpbHMuCiAgKi8K
-IAogI2luY2x1ZGUgPGxpbnV4L3BsYXRmb3JtX2RldmljZS5oPgpAQCAtNjA0LDQgKzU5Niw0IEBA
-IG1vZHVsZV9wbGF0Zm9ybV9kcml2ZXIobXRrX2VjY19kcml2ZXIpOwogCiBNT0RVTEVfQVVUSE9S
-KCJYaWFvbGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4iKTsKIE1PRFVMRV9ERVNDUklQ
-VElPTigiTVRLIE5hbmQgRUNDIERyaXZlciIpOwotTU9EVUxFX0xJQ0VOU0UoIkdQTCIpOworTU9E
-VUxFX0xJQ0VOU0UoIkR1YWwgTUlUL0dQTCIpOwpkaWZmIC0tZ2l0IGEvZHJpdmVycy9tdGQvbmFu
-ZC9yYXcvbXRrX2VjYy5oIGIvZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5oCmluZGV4IGE0
-NTVkZjA4MDk1Mi4uMGU0OGMzNmU2Y2EwIDEwMDY0NAotLS0gYS9kcml2ZXJzL210ZC9uYW5kL3Jh
-dy9tdGtfZWNjLmgKKysrIGIvZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5oCkBAIC0xLDEy
-ICsxLDEwIEBACisvKiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogR1BMLTIuMCBPUiBNSVQgKi8K
-IC8qCiAgKiBNVEsgU0RHMSBFQ0MgY29udHJvbGxlcgogICoKICAqIENvcHlyaWdodCAoYykgMjAx
-NiBNZWRpYXRlawogICogQXV0aG9yczoJWGlhb2xlaSBMaQkJPHhpYW9sZWkubGlAbWVkaWF0ZWsu
-Y29tPgogICoJCUpvcmdlIFJhbWlyZXotT3J0aXoJPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJv
-Lm9yZz4KLSAqIFRoaXMgcHJvZ3JhbSBpcyBmcmVlIHNvZnR3YXJlOyB5b3UgY2FuIHJlZGlzdHJp
-YnV0ZSBpdCBhbmQvb3IgbW9kaWZ5IGl0Ci0gKiB1bmRlciB0aGUgdGVybXMgb2YgdGhlIEdOVSBH
-ZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHZlcnNpb24gMiBhcyBwdWJsaXNoZWQKLSAqIGJ5IHRoZSBG
-cmVlIFNvZnR3YXJlIEZvdW5kYXRpb24uCiAgKi8KIAogI2lmbmRlZiBfX0RSSVZFUlNfTVREX05B
-TkRfTVRLX0VDQ19IX18KZGlmZiAtLWdpdCBhL2RyaXZlcnMvbXRkL25hbmQvcmF3L210a19uYW5k
-LmMgYi9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfbmFuZC5jCmluZGV4IDYxN2Y5NjU2YTA0NS4u
-MzczZDQ3ZDFiYTRjIDEwMDY0NAotLS0gYS9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfbmFuZC5j
-CisrKyBiL2RyaXZlcnMvbXRkL25hbmQvcmF3L210a19uYW5kLmMKQEAgLTEsMTcgKzEsOSBAQAor
-Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEdQTC0yLjAgT1IgTUlUCiAvKgogICogTVRLIE5B
-TkQgRmxhc2ggY29udHJvbGxlciBkcml2ZXIuCiAgKiBDb3B5cmlnaHQgKEMpIDIwMTYgTWVkaWFU
-ZWsgSW5jLgogICogQXV0aG9yczoJWGlhb2xlaSBMaQkJPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29t
-PgogICoJCUpvcmdlIFJhbWlyZXotT3J0aXoJPGpvcmdlLnJhbWlyZXotb3J0aXpAbGluYXJvLm9y
-Zz4KLSAqCi0gKiBUaGlzIHByb2dyYW0gaXMgZnJlZSBzb2Z0d2FyZTsgeW91IGNhbiByZWRpc3Ry
-aWJ1dGUgaXQgYW5kL29yIG1vZGlmeQotICogaXQgdW5kZXIgdGhlIHRlcm1zIG9mIHRoZSBHTlUg
-R2VuZXJhbCBQdWJsaWMgTGljZW5zZSB2ZXJzaW9uIDIgYXMKLSAqIHB1Ymxpc2hlZCBieSB0aGUg
-RnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uLgotICoKLSAqIFRoaXMgcHJvZ3JhbSBpcyBkaXN0cmli
-dXRlZCBpbiB0aGUgaG9wZSB0aGF0IGl0IHdpbGwgYmUgdXNlZnVsLAotICogYnV0IFdJVEhPVVQg
-QU5ZIFdBUlJBTlRZOyB3aXRob3V0IGV2ZW4gdGhlIGltcGxpZWQgd2FycmFudHkgb2YKLSAqIE1F
-UkNIQU5UQUJJTElUWSBvciBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS4gIFNlZSB0
-aGUKLSAqIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIGZvciBtb3JlIGRldGFpbHMuCiAgKi8K
-IAogI2luY2x1ZGUgPGxpbnV4L3BsYXRmb3JtX2RldmljZS5oPgpAQCAtMTY1Myw2ICsxNjQ1LDYg
-QEAgc3RhdGljIHN0cnVjdCBwbGF0Zm9ybV9kcml2ZXIgbXRrX25mY19kcml2ZXIgPSB7CiAKIG1v
-ZHVsZV9wbGF0Zm9ybV9kcml2ZXIobXRrX25mY19kcml2ZXIpOwogCi1NT0RVTEVfTElDRU5TRSgi
-R1BMIik7CitNT0RVTEVfTElDRU5TRSgiRHVhbCBNSVQvR1BMIik7CiBNT0RVTEVfQVVUSE9SKCJY
-aWFvbGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4iKTsKIE1PRFVMRV9ERVNDUklQVElP
-TigiTVRLIE5hbmQgRmxhc2ggQ29udHJvbGxlciBEcml2ZXIiKTsKLS0gCjIuMTguMAoKCl9fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVr
-IG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9s
-aXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+This series is based on v5.2-rc1 with MT8183 dts v11 patch[1] and
+MT8183 SMI dt-binding v7 patch[2].
+
+[1] https://patchwork.kernel.org/patch/10962375/
+[2] https://patchwork.kernel.org/patch/10984743/
+
+changes since v5:
+- fix documentation in [PATCH 04/14]
+- remove useless variable checking and reuse API of clock control in [PATCH 06/14]
+- coding style fix of bus protection control in [PATCH 08/14]
+- fix naming of new added data in [PATCH 09/14]
+- small refactor of multiple step bus protection control in [PATCH 10/14]
+
+changes since v4:
+- add property to mt8183 smi-common
+- seperate refactor patches and new add function
+- add power controller device node
+
+--
+
+Weiyi Lu (14):
+  dt-bindings: mediatek: Add property to mt8183 smi-common
+  dt-bindings: soc: Add MT8183 power dt-bindings
+  soc: mediatek: Switch to SPDX license identifier
+  soc: mediatek: Refactor polling timeout and documentation
+  soc: mediatek: Refactor regulator control
+  soc: mediatek: Refactor clock control
+  soc: mediatek: Refactor sram control
+  soc: mediatek: Refactor bus protection control
+  soc: mediatek: Add basic_clk_id to scp_power_data
+  soc: mediatek: Add multiple step bus protection control
+  soc: mediatek: Add subsys clock control for bus protection
+  soc: mediatek: Add extra sram control
+  soc: mediatek: Add MT8183 scpsys support
+  arm64: dts: Add power controller device node of MT8183
+
+ .../memory-controllers/mediatek,smi-common.txt     |   2 +-
+ .../devicetree/bindings/soc/mediatek/scpsys.txt    |  14 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi           |  62 +++
+ drivers/soc/mediatek/Makefile                      |   2 +-
+ drivers/soc/mediatek/mtk-scpsys-ext.c              |  99 ++++
+ drivers/soc/mediatek/mtk-scpsys.c                  | 591 ++++++++++++++++++---
+ include/dt-bindings/power/mt8183-power.h           |  26 +
+ include/linux/soc/mediatek/scpsys-ext.h            |  39 ++
+ 8 files changed, 745 insertions(+), 90 deletions(-)
+ create mode 100644 drivers/soc/mediatek/mtk-scpsys-ext.c
+ create mode 100644 include/dt-bindings/power/mt8183-power.h
+ create mode 100644 include/linux/soc/mediatek/scpsys-ext.h
+
+--
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
