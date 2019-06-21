@@ -2,64 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2D454EC9A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 17:53:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 32F9A4ECDC
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 18:14:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OdApPOO62TWYrAdO+bLhith7lE29byAbPKeRB1asVcM=; b=n18+b4nPNPkOzr
-	umBkUEvcB91y76E72pMZPTqYOA5OchknHHxlcTlE4h76SHJ/9m9dhAsBafJs7u7r2hqabAqQrrbIn
-	/yfmeHsbgmg7dO+XxM9fKbxhefIblRzcw2Re6QwA6wU/JzBGUnym+mTLgBfbEQFKzYUCXAi/e5KS3
-	aYFp5pQEq0lHCI2bcty0fNPxkmVJj1dGZ43K4WZfqgGpYZ2TMzhMSjf/d+yUUv3eib0GJZbPQUiJV
-	YSSw1oF2qAQdva+hbJo/G5xX5amTPnf3s0CxocihsuOaMOg14EVzzqUGDqt+yGv+ngSn7cjIOhUDQ
-	dlfQb0fLVWQnTXUIj4Vw==;
+	List-Owner; bh=U5iNQW4jFfJmtRBFACNmNBToayixyEg9/eGo49HMU6Q=; b=c37ggvdcOHqrs/
+	ZA7oqBG5Z4q0ZlOpIlpjVfIGqtiEO/j2aZgtLlaUKJtF2zi73P5SpkrAIb5rDB0XGDNl148062RiK
+	hbuMbm7zZvdx8c8OD8n9w6MLhzL/MWf/Erd1WNJKgB62H/w+oOd7QaTZQdxabP1H6J2G4Ek/wQfq8
+	wt8ZKv24xAveNv8RWnhnmkRdtumLp5YrCboMwtg9ROQLRXDmpPtfYCdPGHEETUNo2yzkhNZ9eh3Bj
+	mjlPTTgtCQoxx7Nr5BddwDDaDS7jSvCbRyL993nn2Dn9QrdTwcR4c9xd4CocIwex0LkVvdVHaODcv
+	1ayARQosP4gWrNNli8iQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heLrF-0003U4-QT; Fri, 21 Jun 2019 15:53:45 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1heMBL-0004Ar-V8; Fri, 21 Jun 2019 16:14:31 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heLqz-0003Jg-Kk; Fri, 21 Jun 2019 15:53:31 +0000
-Received: by mail-ed1-x542.google.com with SMTP id e3so10718615edr.10;
- Fri, 21 Jun 2019 08:53:28 -0700 (PDT)
+ id 1heMB5-0003ze-Nw; Fri, 21 Jun 2019 16:14:17 +0000
+Received: by mail-ed1-x544.google.com with SMTP id d4so10770777edr.13;
+ Fri, 21 Jun 2019 09:14:15 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=v024Yi9VY9SaP2lwmt6tNXw7uP0VIRSrfKlfRLGOnKM=;
- b=omkn5oEOlUAfjuaZW25dE7JlIh4nddJ6WfSPiJwgZdZHOIoo9Of5BBvlqupHraEF/5
- KFo5Ox1swC8BHkEVvr9vwKiroEM1yOi38TlSCBMBxJtKeKAbJgT07AeFK9c6pu+HCZZD
- Ezy1EJ9ncoUwt05+svC+626lS6G6su+6hC2CdBQXpVm9YWNWYZOjH4acf7wwBletyqBJ
- 2TSSFmHzFMXt9o6/nWYqx26xujeygCWeAnfigrtLRIYQVBrDrsulx/OGevy3ighD+C/v
- UMFsoHHV2ePt+MoQ7KFWqJupV6joVc+693IdMpzA7vtTS6uwxqlJgO5MZZAyz7T2Ix8W
- JuVw==
+ bh=A1l40uYfHZ+7l78jbHxeMLC9cCQUsHcs4sbjF50SDik=;
+ b=bhbXaPqoFnSOfQUngQ8/Lct9RMFf90Lrt76bsec4n9kT/kvG2Ga73p/MJMEp7kv3KM
+ va9O+lDC3WaxVI6rhMfVdW2RwuVx4c9W2f9U75077Ypcy4Ujfypj3eWWXXhIhZ0v0Hxy
+ ZexwKfA8w1nDS0xLB9I5UcqG4qsJ3hbeZpG7aeWX1pUD9fAe8w7pHmCvf12MVoEuGZhv
+ jWj4rmrcAxaItWXrxVlKWtOdXvv0Qou/pV+I8CPwMFenvEoZcVhmQ5PQkK7Z3LVbfnBm
+ i2Dy+7fDiztlskmAlY6yo48/NhFOvHvh+dNU82F8O0UydwqQ6iR7rj6spqpSmoxIvnWa
+ upWQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=v024Yi9VY9SaP2lwmt6tNXw7uP0VIRSrfKlfRLGOnKM=;
- b=BE9wiq82S2GbDsWOPnl5CZs2+iQZ12831MMGs862kQX0QXzBH4bpysqn4d8RLVhNnP
- y7ivW20tnGiFLbno6o4eV4OKfd6xFtxaLVoTPmgDjOqT8B/dv6YJk+wdV/mXwBsRx7Bf
- Y0UeJ5M7V1GO5qWwUtZOVSzmM9a4uBcRkQVNdtspKTXa7NpoZLxJLpXefdUyrMAoZTVn
- YSCCeQy3Qu0TTSPtQlIR/vVpybOuf6hRH7hLGHs6EnsDNvejwXpkhmeKfTspkqXDQ8MW
- 0zEPHJsIWMSZQiTDwxGeLkQ4TZ7ezc1TDCCDBJuMWG2gq/2M78XT0Ty7blAPw2FHIzql
- YWlA==
-X-Gm-Message-State: APjAAAXmAGWCbXgw4Scp1V4A5m2luPhCMw6k+wvOvSh0cS6basDSvCo7
- WP2cDJiS/tzwkGwIHyDUB4w=
-X-Google-Smtp-Source: APXvYqz1dmCcYqapqZOkgX95YB1G8OaAM0yBeAFVP/NBBcjPsVJ59DI+PEiRpLmVwYW2HP7HJeECyQ==
-X-Received: by 2002:a50:940b:: with SMTP id p11mr36884855eda.194.1561132407518; 
- Fri, 21 Jun 2019 08:53:27 -0700 (PDT)
+ bh=A1l40uYfHZ+7l78jbHxeMLC9cCQUsHcs4sbjF50SDik=;
+ b=GAcivn68LfWo/A4YUcxwGoNIHs++EevkzYnq9y36eQ9C4voZGLZX50dpm8jLLpFnQ/
+ inkBp2K/JIA7HFbSMc4bDgn0lqDM1qUYwIeBdiyZI68uK8PNfsK8cRC1WiCJdtItblRA
+ Tgs2f5CiPj9hXZwSS8Um9eUB8Zqx1sYMqfFipqfaeZ6+6ca0CpSbDRASGTkpkrH5aUov
+ r5vS4LBGlUJPnimIfTnPwGz2VdT6McYOKrP6upVM/szw4ueJWmaTMs92oG+Nhn7JBYEa
+ QvfqmSgmdxgWL/SbZiJPM8A31Rtp/jBEU0XQRAxrTQdxPzhkq59lHdlvDX3vmvKVxO4S
+ Dlbg==
+X-Gm-Message-State: APjAAAV2GVQ1A60KdaP7LawN7uzyJ73oueG19BbU2uaYeA4rsCsgAo39
+ jCfZX4K97gleY0K+vATKaQi+4nfRRWw=
+X-Google-Smtp-Source: APXvYqyaulsvfpXVKRDQFyCycXJ/CFYdgEW3M6l/3pTlu7xkoVRqL8yixTL5maCak3auir5vMbqihQ==
+X-Received: by 2002:a50:8934:: with SMTP id
+ e49mr120630106ede.156.1561133653804; 
+ Fri, 21 Jun 2019 09:14:13 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.141.54])
- by smtp.gmail.com with ESMTPSA id 17sm109583ejo.3.2019.06.21.08.53.25
+ by smtp.gmail.com with ESMTPSA id h10sm956586ede.93.2019.06.21.09.14.12
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Fri, 21 Jun 2019 08:53:26 -0700 (PDT)
-Subject: Re: [PATCH v11 0/6] Add basic node support for Mediatek MT8183 SoC
-To: Erin Lo <erin.lo@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
+ Fri, 21 Jun 2019 09:14:12 -0700 (PDT)
+Subject: Re: [PATCH] arm64: dts: mt8183: Enable CPU idle-states
+To: James Liao <jamesjj.liao@mediatek.com>, Rob Herring <robh+dt@kernel.org>, 
  Mark Rutland <mark.rutland@arm.com>
-References: <1558947887-31084-1-git-send-email-erin.lo@mediatek.com>
+References: <1559118303-31875-1-git-send-email-jamesjj.liao@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -155,23 +156,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <8efbf3b7-0e11-b378-e582-769b2f869a00@gmail.com>
-Date: Fri, 21 Jun 2019 17:53:25 +0200
+Message-ID: <b6ea04f4-76aa-10c3-759f-aefb45e492de@gmail.com>
+Date: Fri, 21 Jun 2019 18:14:11 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <1558947887-31084-1-git-send-email-erin.lo@mediatek.com>
+In-Reply-To: <1559118303-31875-1-git-send-email-jamesjj.liao@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190621_085329_688020_398C9456 
-X-CRM114-Status: GOOD (  20.59  )
+X-CRM114-CacheID: sfid-20190621_091415_809150_FF488683 
+X-CRM114-Status: GOOD (  15.87  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -195,10 +196,9 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream <srv_heupstream@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-serial@vger.kernel.org, mars.cheng@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
+Cc: linux-arm-kernel@lists.infradead.org, devicetree@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -206,96 +206,114 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 27/05/2019 11:04, Erin Lo wrote:
-> MT8183 is a SoC based on 64bit ARMv8 architecture.
-> It contains 4 CA53 and 4 CA73 cores.
-> MT8183 share many HW IP with MT65xx series.
-> This patchset was tested on MT8183 evaluation board and use correct clock to shell.
+On 29/05/2019 10:25, James Liao wrote:
+> Enable mcdi-cpu and mcdi-cluster on MT8183 CPUs.
 > 
-> Based on v5.2-rc1
-> 
+> Signed-off-by: James Liao <jamesjj.liao@mediatek.com>
 
-Pushed all to v5.2-next/dts64
-
-Please send patches to update the bindings of auxadc and efuse. They use the
-fallback right now, but we should make sure to have the binding in sync.
+Would you mind to rebase and resend?
 
 Regards,
 Matthias
 
-> Change in v11:
-> New add spi node, efuse node, pinctrl node, auxadc node, and capacity-dmips-mhz field
+> ---
+> This patch bases on v5.1-rc1 and [1], adds idle-states for MT8183 CPUs.
 > 
-> Change in v10:
-> Add the L2 cache node to prevent warning on unable to detect cache
-> hierarchy.
+> [1] https://patchwork.kernel.org/patch/10962375/
 > 
-> Change in v9:
-> Remove pio node since binding is not documented yet
+>  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 30 ++++++++++++++++++++++++++++++
+>  1 file changed, 30 insertions(+)
 > 
-> Change in v8:
-> 1. Fix interrupt-parent of pio node
-> 2. Remove pinfunc.h and spi node patches
-> 
-> Change in v7:
-> 1. Place all the MMIO peripherals under one or more simple-bus nodes
-> 2. Make the pinfunc.h and spi node into seperate patch
-> 3. Modify SPIs pamerater from 4 back to 3
->    and remove patch "support 4 interrupt parameters for sysirq"
-> 4. Rename intpol-controller to interrupt-controller
-> 5. Rename pinctrl@1000b000 to pinctrl@10005000
-> 
-> Change in v6:
-> 1. Remove power and iommu nodes
-> 2. Fix dtb build warning
-> 3. Fix pinctrl binding doc
-> 4. Fix '_' in node names
-> 
-> Change in v5:
-> 1. Collect all device tree nodes to the last patch
-> 2. Add PMU
-> 3. Add Signed-off-by
-> 4. Remove clock driver code and binding doc
-> 5. Add pinctrl, iommu, spi, and pwrap nodes
-> 
-> Change in v4:
-> 1. Correct syntax error in dtsi
-> 2. Add MT8183 clock support
-> 
-> Change in v3:
-> 1. Fill out GICC, GICH, GICV regions
-> 2. Update Copyright to 2018
-> 
-> Change in v2:
-> 1. Split dt-bindings into different patches
-> 2. Correct bindings for supported SoCs (mtk-uart.txt)
-> 
-> Ben Ho (1):
->   arm64: dts: Add Mediatek SoC MT8183 and evaluation board dts and
->     Makefile
-> 
-> Erin Lo (1):
->   arm64: dts: mt8183: add spi node
-> 
-> Hsin-Yi, Wang (1):
->   arm64: dts: mt8183: add capacity-dmips-mhz
-> 
-> Michael Mei (1):
->   arm64: dts: mt8183: add efuse and Mediatek Chip id node to read
-> 
-> Zhiyong Tao (2):
->   arm64: dts: mt8183: add pinctrl device node
->   arm64: dts: mt8183: Add auxadc device node
-> 
->  arch/arm64/boot/dts/mediatek/Makefile       |   1 +
->  arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 140 ++++++
->  arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 447 ++++++++++++++++++++
->  3 files changed, 588 insertions(+)
->  create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-evb.dts
->  create mode 100644 arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> 
-> --
-> 1.8.1.1.dirty
+> diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> index 08274bf..ef4b054 100644
+> --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> @@ -56,6 +56,7 @@
+>  			compatible = "arm,cortex-a53";
+>  			reg = <0x000>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu1: cpu@1 {
+> @@ -63,6 +64,7 @@
+>  			compatible = "arm,cortex-a53";
+>  			reg = <0x001>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu2: cpu@2 {
+> @@ -70,6 +72,7 @@
+>  			compatible = "arm,cortex-a53";
+>  			reg = <0x002>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu3: cpu@3 {
+> @@ -77,6 +80,7 @@
+>  			compatible = "arm,cortex-a53";
+>  			reg = <0x003>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu4: cpu@100 {
+> @@ -84,6 +88,7 @@
+>  			compatible = "arm,cortex-a73";
+>  			reg = <0x100>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu5: cpu@101 {
+> @@ -91,6 +96,7 @@
+>  			compatible = "arm,cortex-a73";
+>  			reg = <0x101>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu6: cpu@102 {
+> @@ -98,6 +104,7 @@
+>  			compatible = "arm,cortex-a73";
+>  			reg = <0x102>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+>  		};
+>  
+>  		cpu7: cpu@103 {
+> @@ -105,6 +112,29 @@
+>  			compatible = "arm,cortex-a73";
+>  			reg = <0x103>;
+>  			enable-method = "psci";
+> +			cpu-idle-states = <&MCDI_CPU &MCDI_CLUSTER>;
+> +		};
+> +
+> +		idle-states {
+> +			entry-method = "arm,psci";
+> +
+> +			MCDI_CPU: mcdi-cpu {
+> +				compatible = "arm,idle-state";
+> +				local-timer-stop;
+> +				arm,psci-suspend-param = <0x00010001>;
+> +				entry-latency-us = <200>;
+> +				exit-latency-us = <200>;
+> +				min-residency-us = <800>;
+> +			};
+> +
+> +			MCDI_CLUSTER: mcdi-cluster {
+> +				compatible = "arm,idle-state";
+> +				local-timer-stop;
+> +				arm,psci-suspend-param = <0x01010001>;
+> +				entry-latency-us = <250>;
+> +				exit-latency-us = <400>;
+> +				min-residency-us = <1300>;
+> +			};
+>  		};
+>  	};
+>  
 > 
 
 _______________________________________________
