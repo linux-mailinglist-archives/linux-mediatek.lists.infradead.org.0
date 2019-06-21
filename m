@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EC7EA4E250
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 10:45:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A0E784E251
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 10:45:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=PSiCncUFDTKASsHBYgo5C7u14qPCoH6CgzQHHTDOwf8=; b=p3om7V+ZWhlXgM
-	ZwdU3c5BJA0n5JX+vT1Hv/jvihf8GVV6NjwkNSWEFTIRUplAJ3TlC4SeqTxdQE0fGjkiP/M6gNhRs
-	3j4hpeYSYwh+JoPPuikNu0FmjO+dNibIfeCaiLkK5RjTaX+XzMMnBra3Vd5d6ksymzzvUUA/G8OYE
-	Xe69i7TJp2uTSCxEb9x32v7Yec6BCGz7dlOAnkfPoUCu5+U0zxtDnZMqPuGbVyWrjhVD8e5o63eRk
-	+z0ShGbmLVFwfU7l0X8Y61PZY/9O1MFMF9hV9MtRh6RtkXIT/KPZy1wAqUjObowHBAQQzGTiPvpAs
-	c0iPTtukLh/PlO4NwEtw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7u+JGo+hMtPATzfbg91I+p4P+xwHVgPK3S+eyJb8qIk=; b=g+DjD4rTLY+w1/
+	MPLX/Pk4qe6vo/m8eengfAlYEd/ZVvaNdBaHfMWr1Sdw3ovYZnntBn+yhxp5W3unFvDpH0YjStdl3
+	4CTn85/lvRGg0EMQZ5B5qbtAHRN7C8iv7ExA4a40XW2BN97ehtc7hJ2TBdcV9LenTbi/i3OkAbWql
+	WPXx6QOFF7RfSuB1g/6Mx32dABsbfwXC9r1SLOKCF4DjK6/TSsC4oDDcYtEzofG+Xpr2WKDmR/U09
+	YfH0ecLATymXhRGDVQk2XLy3MAZ6tTDjIzSiSkt9huYs1gA3xu6w1r0gFr2nZpUVPGdkcI09El2HS
+	z9utYYQdBb4QfUVTV7Ug==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heFAu-0006Qk-B9; Fri, 21 Jun 2019 08:45:36 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1heFAy-0006Tm-4B; Fri, 21 Jun 2019 08:45:40 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heF9j-0004Hh-KH; Fri, 21 Jun 2019 08:44:27 +0000
-X-UUID: 6fe4b00a311843618598cb43eb21476d-20190621
-X-UUID: 6fe4b00a311843618598cb43eb21476d-20190621
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1heF9k-0004HG-Ey; Fri, 21 Jun 2019 08:44:27 +0000
+X-UUID: 96e13b60255f43e69209907567e87dae-20190621
+X-UUID: 96e13b60255f43e69209907567e87dae-20190621
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <roger.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1156321735; Fri, 21 Jun 2019 00:44:11 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 21 Jun 2019 01:44:10 -0700
+ with ESMTP id 1058742072; Fri, 21 Jun 2019 00:44:05 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 21 Jun 2019 01:44:03 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Fri, 21 Jun 2019 16:43:56 +0800
 Received: from mtksdaap41.mediatek.inc (172.21.77.4) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -40,23 +40,23 @@ Received: from mtksdaap41.mediatek.inc (172.21.77.4) by MTKCAS06.mediatek.inc
 From: Roger Lu <roger.lu@mediatek.com>
 To: Kevin Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
  Nicolas Boichat <drinkcat@google.com>, Stephen Boyd <sboyd@kernel.org>
-Subject: [PATCH v3 0/2] PM / AVS: SVS: Introduce SVS engine
-Date: Fri, 21 Jun 2019 16:43:46 +0800
-Message-ID: <20190621084348.16834-1-roger.lu@mediatek.com>
+Subject: [PATCH v3 1/2] dt-bindings: soc: add mtk svs dt-bindings
+Date: Fri, 21 Jun 2019 16:43:47 +0800
+Message-ID: <20190621084348.16834-2-roger.lu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20190621084348.16834-1-roger.lu@mediatek.com>
+References: <20190621084348.16834-1-roger.lu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: F144FADBDB67B45ACF23EBA8D3C9D85094F7529EED67178D28B3EAFCBDDB50632000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190621_014424_284702_35E88B87 
-X-CRM114-Status: UNSURE (   7.11  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190621_014424_638059_91F3DF51 
+X-CRM114-Status: GOOD (  10.19  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -83,29 +83,110 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SVS driver use OPP adjust event in [1] to update
-OPP table voltage part.
+Document the binding for enabling mtk svs on MediaTek SoC.
 
-[1] https://patchwork.kernel.org/patch/10946069/
-
-changes since v2:
-- Improve SVS driver: For power saving point of view,
-disable SVS main clk when probe fail.
-
-Roger Lu (2):
-  dt-bindings: soc: add mtk svs dt-bindings
-  PM / AVS: SVS: Introduce SVS engine
-
- .../devicetree/bindings/power/mtk-svs.txt     |   88 +
- drivers/power/avs/Kconfig                     |   10 +
- drivers/power/avs/Makefile                    |    1 +
- drivers/power/avs/mtk_svs.c                   | 2093 +++++++++++++++++
- include/linux/power/mtk_svs.h                 |   23 +
- 5 files changed, 2215 insertions(+)
+Signed-off-by: Roger Lu <roger.lu@mediatek.com>
+---
+ .../devicetree/bindings/power/mtk-svs.txt     | 88 +++++++++++++++++++
+ 1 file changed, 88 insertions(+)
  create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
- create mode 100644 drivers/power/avs/mtk_svs.c
- create mode 100644 include/linux/power/mtk_svs.h
 
+diff --git a/Documentation/devicetree/bindings/power/mtk-svs.txt b/Documentation/devicetree/bindings/power/mtk-svs.txt
+new file mode 100644
+index 000000000000..6a71992ef162
+--- /dev/null
++++ b/Documentation/devicetree/bindings/power/mtk-svs.txt
+@@ -0,0 +1,88 @@
++* Mediatek Smart Voltage Scaling (MTK SVS)
++
++This describes the device tree binding for the MTK SVS controller (bank)
++which helps provide the optimized CPU/GPU/CCI voltages. This device also
++needs thermal data to calculate thermal slope for accurately compensate
++the voltages when temperature change.
++
++Required properties:
++- compatible:
++  - "mediatek,mt8183-svs" : For MT8183 family of SoCs
++- reg: Address range of the MTK SVS controller.
++- interrupts: IRQ for the MTK SVS controller.
++- clocks, clock-names: Clocks needed for the svs controller. required
++                       clocks are:
++		       "main_clk": Main clock needed for register access
++- nvmem-cells: Phandle to the calibration data provided by a nvmem device.
++- nvmem-cell-names: Should be "svs-calibration-data" and "calibration-data"
++
++Subnodes:
++- svs_cpu_little: SVS bank device node of little CPU
++  compatible: "mediatek,mt8183-svs-cpu-little"
++  operating-points-v2: OPP table hooked by SVS little CPU bank.
++		       SVS will optimze this OPP table voltage part.
++  vcpu-little-supply: PMIC buck of little CPU
++- svs_cpu_big: SVS bank device node of big CPU
++  compatible: "mediatek,mt8183-svs-cpu-big"
++  operating-points-v2: OPP table hooked by SVS big CPU bank.
++		       SVS will optimze this OPP table voltage part.
++  vcpu-big-supply: PMIC buck of big CPU
++- svs_cci: SVS bank device node of CCI
++  compatible: "mediatek,mt8183-svs-cci"
++  operating-points-v2: OPP table hooked by SVS CCI bank.
++		       SVS will optimze this OPP table voltage part.
++  vcci-supply: PMIC buck of CCI
++- svs_gpu: SVS bank device node of GPU
++  compatible: "mediatek,mt8183-svs-gpu"
++  operating-points-v2: OPP table hooked by SVS GPU bank.
++		       SVS will optimze this OPP table voltage part.
++  vgpu-spply: PMIC buck of GPU
++
++Example:
++
++	svs: svs@1100b000 {
++		compatible = "mediatek,mt8183-svs";
++		reg = <0 0x1100b000 0 0x1000>;
++		interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW 0>;
++		clocks = <&infracfg CLK_INFRA_THERM>;
++		clock-names = "main_clk";
++		nvmem-cells = <&svs_calibration>, <&thermal_calibration>;
++		nvmem-cell-names = "svs-calibration-data", "calibration-data";
++
++		svs_cpu_little: svs_cpu_little {
++			compatible = "mediatek,mt8183-svs-cpu-little";
++			operating-points-v2 = <&cluster0_opp>;
++		};
++
++		svs_cpu_big: svs_cpu_big {
++			compatible = "mediatek,mt8183-svs-cpu-big";
++			operating-points-v2 = <&cluster1_opp>;
++		};
++
++		svs_cci: svs_cci {
++			compatible = "mediatek,mt8183-svs-cci";
++			operating-points-v2 = <&cci_opp>;
++		};
++
++		svs_gpu: svs_gpu {
++			compatible = "mediatek,mt8183-svs-gpu";
++			power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
++			operating-points-v2 = <&gpu_opp_table>;
++		};
++	};
++
++	&svs_cpu_little {
++		vcpu-little-supply = <&mt6358_vproc12_reg>;
++	};
++
++	&svs_cpu_big {
++		vcpu-big-supply = <&mt6358_vproc11_reg>;
++	};
++
++	&svs_cci {
++		vcci-supply = <&mt6358_vproc12_reg>;
++	};
++
++	&svs_gpu {
++		vgpu-spply = <&mt6358_vgpu_reg>;
++	};
+-- 
+2.18.0
 
 
 _______________________________________________
