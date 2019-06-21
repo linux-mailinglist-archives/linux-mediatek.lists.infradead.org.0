@@ -2,59 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 916244DF91
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 06:21:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5CDAE4DFD4
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 06:47:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QOCJkM7SO8E6xwYTgFvAJ8umvNUZjpeoaFX0HRGC+xQ=; b=dFNoDhyeNBVH5Q
-	xxscqX+lGCFhq8AZfSDOyQT4wWLGXoRDzkp6ucz41TsEPiqGZkzf0kIIAuIvsXZgBPYno9vZS0cZ5
-	VVtqeQXnfb8dbs67KW4/NW7vqBYQBMsc1Hp9vlhA8WaLUVcFsHG81M4dxlDfvRUFo5feyh5SsV9HM
-	U7xkFUi2m5AYqdMjX7DWfDqnPIasdbGgTFku/TmbmJh+Ad0hIvX3GyLBiGQNjCY9adUkfYeyvzTwi
-	m1guQQ8zLt5GxSztnIaZjESK9hlhIgeORbi/hHADPfr6w32GWz1r+fu48iu7hyDW/7O7gJgP2vD4n
-	/YycoJKmz4b1tKHdqCnQ==;
+	List-Owner; bh=cA3KUg6+SjP4DxntNKlj3qmjmwJXdEoAfBC0DcOhyKA=; b=AeoUfVzpdqdoY6
+	sZgKfhWYMT+A1Ztz8Bh/G9Jv+v5tykWMdslnLEonn+0SjFezxeSUyxQnl+VrKOeDvOfrCjnUhfkgK
+	OJIk17eM7LbUY5HruuMAbaAmq3MHDlWI3bXN54GS0W85D0teOpB4Lz5cv5+R6ADN/Aq8twcrh6PWy
+	6PWPVFk8FMsxWbO32dGiOF0043kwXJsDEXe55XAaCppu6nvjLpvTLVb9UZ5LsKEYJVZNu/v6lxCIN
+	sXRrff7z/ARKHY6MTAJZUi8Ki0sF3/04hO6Al1Oqd4zRnubPCihlZZqg9OKO4eiGEpMvYXcZNhZRJ
+	PEcKDoZlavuHmG0WaoSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heB2k-0003go-MQ; Fri, 21 Jun 2019 04:20:54 +0000
+	id 1heBSg-00049B-3L; Fri, 21 Jun 2019 04:47:42 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heB2S-0003VM-Ay; Fri, 21 Jun 2019 04:20:37 +0000
-Received: from mail-wr1-f54.google.com (mail-wr1-f54.google.com
- [209.85.221.54])
+ id 1heBSU-00040Q-17; Fri, 21 Jun 2019 04:47:31 +0000
+Received: from mail-wm1-f42.google.com (mail-wm1-f42.google.com
+ [209.85.128.42])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 7507920B1F;
- Fri, 21 Jun 2019 04:20:35 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 319DE208CA;
+ Fri, 21 Jun 2019 04:47:29 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1561090835;
- bh=prwIjTMabwEr3qse8OU5sFHLYf7QIq1SDJ61Unl5cu4=;
+ s=default; t=1561092449;
+ bh=2e8ga/L8SEdmf7Lt7noZ+sWu8LCAOrQ1GgcWN6Trw2Q=;
  h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=PUjtvdYnjRZ85n2+boZZ9k0pcAQpl5gbLH4chdr3VOnzC2ymZ6RTrHnXvI+Gfwi82
- R3Wq3QS2QMN3ZaDeflueVH8b6m9BqBc9+mtgKpMq5r+KQilk3j5UqxZysFK9h2NWpM
- C7IjdiJujJReLSrX1ny21nxoQJCsa4+GoIF4tzuc=
-Received: by mail-wr1-f54.google.com with SMTP id x4so5097129wrt.6;
- Thu, 20 Jun 2019 21:20:35 -0700 (PDT)
-X-Gm-Message-State: APjAAAWDT7A1MryxcV78ELke4g+ClZ080ipMa2iXdrWWQRJBYyPfYzi3
- uNv38/xhuFS8/rOeZ3u0nVTiLCeSNN7MvoMQqkw=
-X-Google-Smtp-Source: APXvYqyem6YyhVDjXx8VqeVnlAnT6mMzfo+2vIgBSpxxGHHIA0jqkRTx1R2WW6U4OzYACci7P3HmkWXjKBhpGjfJgS8=
-X-Received: by 2002:adf:afd5:: with SMTP id y21mr92511949wrd.12.1561090834068; 
- Thu, 20 Jun 2019 21:20:34 -0700 (PDT)
+ b=qYxeNh9SgFH2otygFAopDpn5bSOOXzOOQZC4JsuMuf4GuzcJyQV0reiVbvvkiY5HI
+ F4dd+WuPxJse1K8QLSqfnYlWqbMZlKcri2Ld9bg465c79KSydP0mhl2Mmd8k7REWC1
+ Sr9oaTAuAAolnFN+SfpW3LxDZRzCpBFyt4tMe68o=
+Received: by mail-wm1-f42.google.com with SMTP id x15so5013373wmj.3;
+ Thu, 20 Jun 2019 21:47:29 -0700 (PDT)
+X-Gm-Message-State: APjAAAVxXBTs3OmKHVeIEJYUpikjNXrY9seH2k/K08QgMIPJMFFDFDro
+ 6eXd375C7U1Gu00AY9ijBVD1Tcl3wzjHsyTk/Aw=
+X-Google-Smtp-Source: APXvYqzfssEVgigV9IyaopMmsOAvPClq7Yi3q82LMxYgtG/hvzSp2webHvdicOT4RPzD/wIoTvtKET482lzGX4xkvaI=
+X-Received: by 2002:a1c:1bc9:: with SMTP id b192mr2131534wmb.152.1561092447753; 
+ Thu, 20 Jun 2019 21:47:27 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190429035515.73611-1-drinkcat@chromium.org>
- <20190429035515.73611-3-drinkcat@chromium.org>
-In-Reply-To: <20190429035515.73611-3-drinkcat@chromium.org>
+ <20190429035515.73611-2-drinkcat@chromium.org>
+In-Reply-To: <20190429035515.73611-2-drinkcat@chromium.org>
 From: Sean Wang <sean.wang@kernel.org>
-Date: Thu, 20 Jun 2019 21:20:22 -0700
-X-Gmail-Original-Message-ID: <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
-Message-ID: <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
-Subject: Re: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
+Date: Thu, 20 Jun 2019 21:47:16 -0700
+X-Gmail-Original-Message-ID: <CAGp9LzouA3vKf6Hb=Jdy2FLG_Hkzartaksav-JpbRiVkxAACiQ@mail.gmail.com>
+Message-ID: <CAGp9LzouA3vKf6Hb=Jdy2FLG_Hkzartaksav-JpbRiVkxAACiQ@mail.gmail.com>
+Subject: Re: [PATCH 1/2] pinctrl: mediatek: Ignore interrupts that are wake
+ only during resume
 To: Nicolas Boichat <drinkcat@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190620_212036_410328_B72AB9D3 
-X-CRM114-Status: GOOD (  20.49  )
+X-CRM114-CacheID: sfid-20190620_214730_107640_635FE405 
+X-CRM114-Status: GOOD (  23.30  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -95,87 +96,75 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Nicolas
+Hi Nicolas,
 
 On Sun, Apr 28, 2019 at 8:55 PM Nicolas Boichat <drinkcat@chromium.org> wrote:
 >
-> During suspend/resume, mtk_eint_mask may be called while
-> wake_mask is active. For example, this happens if a wake-source
-> with an active interrupt handler wakes the system:
-> irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
-> that it can be handled later on in the resume flow.
+> Before suspending, mtk-eint would set the interrupt mask to the
+> one in wake_mask. However, some of these interrupts may not have a
+> corresponding interrupt handler, or the interrupt may be disabled.
 >
-> However, this may happen before mtk_eint_do_resume is called:
-> in this case, wake_mask is loaded, and cur_mask is restored
-> from an older copy, re-enabling the interrupt, and causing
-> an interrupt storm (especially for level interrupts).
+> On resume, the eint irq handler would trigger nevertheless,
+> and irq/pm.c:irq_pm_check_wakeup would be called, which would
+> try to call irq_disable. However, if the interrupt is not enabled
+> (irqd_irq_disabled(&desc->irq_data) is true), the call does nothing,
+> and the interrupt is left enabled in the eint driver.
 >
-> Instead, we just record mask/unmask changes in cur_mask. This
-> also avoids the need to read the current mask in eint_do_suspend,
-> and we can remove mtk_eint_chip_read_mask function.
+> Especially for level-sensitive interrupts, this will lead to an
+> interrupt storm on resume.
 >
-
-The change is worth rewording the commit message you added above as an instance
-and adding Fixes tag as a fixup to mean you're fixing the existing
-problem in the driver.
-
-And then Acked-by: Sean Wang <sean.wang@kernel.org>
-
+> If we detect that an interrupt is only in wake_mask, but not in
+> cur_mask, we can just mask it out immediately (as mtk_eint_resume
+> would do anyway at a later stage in the resume sequence, when
+> restoring cur_mask).
+>
+> Fixes: bf22ff45bed ("genirq: Avoid unnecessary low level irq function calls")
 > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+
+Acked-by: Sean Wang <sean.wang@kernel.org>
+
 > ---
->  drivers/pinctrl/mediatek/mtk-eint.c | 18 ++++--------------
->  1 file changed, 4 insertions(+), 14 deletions(-)
+>  drivers/pinctrl/mediatek/mtk-eint.c | 16 +++++++++++++++-
+>  1 file changed, 15 insertions(+), 1 deletion(-)
 >
 > diff --git a/drivers/pinctrl/mediatek/mtk-eint.c b/drivers/pinctrl/mediatek/mtk-eint.c
-> index 737385e86beb807..7e526bcf5e0b55c 100644
+> index f464f8cd274b75c..737385e86beb807 100644
 > --- a/drivers/pinctrl/mediatek/mtk-eint.c
 > +++ b/drivers/pinctrl/mediatek/mtk-eint.c
-> @@ -113,6 +113,8 @@ static void mtk_eint_mask(struct irq_data *d)
->         void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
->                                                 eint->regs->mask_set);
+> @@ -318,7 +318,7 @@ static void mtk_eint_irq_handler(struct irq_desc *desc)
+>         struct irq_chip *chip = irq_desc_get_chip(desc);
+>         struct mtk_eint *eint = irq_desc_get_handler_data(desc);
+>         unsigned int status, eint_num;
+> -       int offset, index, virq;
+> +       int offset, mask_offset, index, virq;
+>         void __iomem *reg =  mtk_eint_get_offset(eint, 0, eint->regs->stat);
+>         int dual_edge, start_level, curr_level;
 >
-> +       eint->cur_mask[d->hwirq >> 5] &= ~mask;
+> @@ -328,10 +328,24 @@ static void mtk_eint_irq_handler(struct irq_desc *desc)
+>                 status = readl(reg);
+>                 while (status) {
+>                         offset = __ffs(status);
+> +                       mask_offset = eint_num >> 5;
+>                         index = eint_num + offset;
+>                         virq = irq_find_mapping(eint->domain, index);
+>                         status &= ~BIT(offset);
+>
+> +                       /*
+> +                        * If we get an interrupt on pin that was only required
+> +                        * for wake (but no real interrupt requested), mask the
+> +                        * interrupt (as would mtk_eint_resume do anyway later
+> +                        * in the resume sequence).
+> +                        */
+> +                       if (eint->wake_mask[mask_offset] & BIT(offset) &&
+> +                           !(eint->cur_mask[mask_offset] & BIT(offset))) {
+> +                               writel_relaxed(BIT(offset), reg -
+> +                                       eint->regs->stat +
+> +                                       eint->regs->mask_set);
+> +                       }
 > +
->         writel(mask, reg);
->  }
->
-> @@ -123,6 +125,8 @@ static void mtk_eint_unmask(struct irq_data *d)
->         void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
->                                                 eint->regs->mask_clr);
->
-> +       eint->cur_mask[d->hwirq >> 5] |= mask;
-> +
->         writel(mask, reg);
->
->         if (eint->dual_edge[d->hwirq])
-> @@ -217,19 +221,6 @@ static void mtk_eint_chip_write_mask(const struct mtk_eint *eint,
->         }
->  }
->
-> -static void mtk_eint_chip_read_mask(const struct mtk_eint *eint,
-> -                                   void __iomem *base, u32 *buf)
-> -{
-> -       int port;
-> -       void __iomem *reg;
-> -
-> -       for (port = 0; port < eint->hw->ports; port++) {
-> -               reg = base + eint->regs->mask + (port << 2);
-> -               buf[port] = ~readl_relaxed(reg);
-> -               /* Mask is 0 when irq is enabled, and 1 when disabled. */
-> -       }
-> -}
-> -
->  static int mtk_eint_irq_request_resources(struct irq_data *d)
->  {
->         struct mtk_eint *eint = irq_data_get_irq_chip_data(d);
-> @@ -384,7 +375,6 @@ static void mtk_eint_irq_handler(struct irq_desc *desc)
->
->  int mtk_eint_do_suspend(struct mtk_eint *eint)
->  {
-> -       mtk_eint_chip_read_mask(eint, eint->base, eint->cur_mask);
->         mtk_eint_chip_write_mask(eint, eint->base, eint->wake_mask);
->
->         return 0;
+>                         dual_edge = eint->dual_edge[index];
+>                         if (dual_edge) {
+>                                 /*
 > --
 > 2.21.0.593.g511ec345e18-goog
 >
