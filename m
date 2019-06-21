@@ -2,74 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 56B354DF74
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 05:57:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 916244DF91
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 06:21:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Gdrkm6qUeUjVxM9zZm16MA9w6KbIZf/MSaBqFVr42uE=; b=YY+wUj8ZOXJ+KW
-	kgoriCufqtN0ODwHXvpu/uLevEKCavSLO1MW1BBmuuU2+jjPchWByyOQFIQ73aeWC5F5wJHK3wTzs
-	qJ231tqv77M5j7sx6RJfco59KKYuG/SWoAIewm2Pqh2byZK6aYGOdbpd4QEx7YZ9EsErWRr3OwLuM
-	9Z5EUux8Bk7EKEfb6igM6isQobNZYaojKiTAaEHnhXol4dcGtuHKNz3PEcu1gNCkzCMjusErdaAD0
-	jHILKrT89g3//ImEntV2yVxJukdENW4IvBteLx2mAMJR8I1Ior5xhUdENFF2jiapotsLJEwO4TaYg
-	1/kU4cC8yKUaAb/npMNw==;
+	List-Owner; bh=QOCJkM7SO8E6xwYTgFvAJ8umvNUZjpeoaFX0HRGC+xQ=; b=dFNoDhyeNBVH5Q
+	xxscqX+lGCFhq8AZfSDOyQT4wWLGXoRDzkp6ucz41TsEPiqGZkzf0kIIAuIvsXZgBPYno9vZS0cZ5
+	VVtqeQXnfb8dbs67KW4/NW7vqBYQBMsc1Hp9vlhA8WaLUVcFsHG81M4dxlDfvRUFo5feyh5SsV9HM
+	U7xkFUi2m5AYqdMjX7DWfDqnPIasdbGgTFku/TmbmJh+Ad0hIvX3GyLBiGQNjCY9adUkfYeyvzTwi
+	m1guQQ8zLt5GxSztnIaZjESK9hlhIgeORbi/hHADPfr6w32GWz1r+fu48iu7hyDW/7O7gJgP2vD4n
+	/YycoJKmz4b1tKHdqCnQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heAgJ-0003Hm-38; Fri, 21 Jun 2019 03:57:43 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1heB2k-0003go-MQ; Fri, 21 Jun 2019 04:20:54 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heAgF-0003Gj-TC
- for linux-mediatek@lists.infradead.org; Fri, 21 Jun 2019 03:57:41 +0000
-Received: by mail-ed1-x544.google.com with SMTP id a14so7859968edv.12
- for <linux-mediatek@lists.infradead.org>; Thu, 20 Jun 2019 20:57:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=CzpQ3kjwujWtzVv4DPV/tCEIfc/FEWMVjTdzmC0X/us=;
- b=jzfqpCbIoHgGVRtBrF7lF9LbFU0bamZ0XcWct6qlfHV/QwB10qU/rA1lxfbJzreE4d
- 1Eb9Q3vlujL0JdKQ0P5PUa4L684fqSj0w+5LfiZXn3ZB6Ey+OfAyIYoMpv3x967xmxah
- owqCTatdEiWnrqAb92DE1FkUfv1WWYVD9h1fE=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=CzpQ3kjwujWtzVv4DPV/tCEIfc/FEWMVjTdzmC0X/us=;
- b=VUjYx5iImY2OyIWCs4In3NY695B9FypW9cG3PDVw9pAcP/cnYkp24eT8grScIpjexv
- thMOHpboCC5XzDLWtlUjbWiXYOY+VJKst8VykP8za4KHMZqGpdvvi1p35hZJJkEeDOQP
- CNrNTYAd6AAbzk1EKBTQlmSBiHdJSSSveUrr8p9BMPGtH1enrT8ewcPcSnoB+R6E+s5w
- q+aJvxBCY6CQGaRDsSx4nAGHTa6wzUfGbS4B/Ip48Q9v9IZpURs1CpflYTq9UVjXvwQ5
- g8uIs3IQPyT9eN7DggIESv5+0/1/bfgiNugymUir9qiF1sf7Gh7qUsan8PEBMvyl51NR
- JWQw==
-X-Gm-Message-State: APjAAAUOj9LEiPhRTXMrpboXv7QN9jAvaM3lPFmZb+Sojco/bO6J3j+2
- ulE9XEyYDaI8R7JUbiJ9lc529dCcdoZ+3XL88uGKnw==
-X-Google-Smtp-Source: APXvYqxtQU/h9lU9BT7NNPLBVdxBj0QGosKYc3X2ZtxZ8KnWLpi5Bn5SLQLGMx+FINNzLp0Eu0dm/II4xxlh1U/V53Y=
-X-Received: by 2002:a50:b561:: with SMTP id z30mr89337967edd.87.1561089457646; 
- Thu, 20 Jun 2019 20:57:37 -0700 (PDT)
+ id 1heB2S-0003VM-Ay; Fri, 21 Jun 2019 04:20:37 +0000
+Received: from mail-wr1-f54.google.com (mail-wr1-f54.google.com
+ [209.85.221.54])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 7507920B1F;
+ Fri, 21 Jun 2019 04:20:35 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1561090835;
+ bh=prwIjTMabwEr3qse8OU5sFHLYf7QIq1SDJ61Unl5cu4=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=PUjtvdYnjRZ85n2+boZZ9k0pcAQpl5gbLH4chdr3VOnzC2ymZ6RTrHnXvI+Gfwi82
+ R3Wq3QS2QMN3ZaDeflueVH8b6m9BqBc9+mtgKpMq5r+KQilk3j5UqxZysFK9h2NWpM
+ C7IjdiJujJReLSrX1ny21nxoQJCsa4+GoIF4tzuc=
+Received: by mail-wr1-f54.google.com with SMTP id x4so5097129wrt.6;
+ Thu, 20 Jun 2019 21:20:35 -0700 (PDT)
+X-Gm-Message-State: APjAAAWDT7A1MryxcV78ELke4g+ClZ080ipMa2iXdrWWQRJBYyPfYzi3
+ uNv38/xhuFS8/rOeZ3u0nVTiLCeSNN7MvoMQqkw=
+X-Google-Smtp-Source: APXvYqyem6YyhVDjXx8VqeVnlAnT6mMzfo+2vIgBSpxxGHHIA0jqkRTx1R2WW6U4OzYACci7P3HmkWXjKBhpGjfJgS8=
+X-Received: by 2002:adf:afd5:: with SMTP id y21mr92511949wrd.12.1561090834068; 
+ Thu, 20 Jun 2019 21:20:34 -0700 (PDT)
 MIME-Version: 1.0
-References: <1560169080-27134-1-git-send-email-yong.wu@mediatek.com>
- <1560169080-27134-17-git-send-email-yong.wu@mediatek.com>
- <CANdKZ0d873PJ2u=Hn_aUJBu3dDiNyueVwBv94-VXHGLJBvAbGg@mail.gmail.com>
- <eee15db0-e43f-de9b-28a0-93bdd04836d7@gmail.com>
- <effb4fff-da83-708f-ca10-50f2645c91c6@gmail.com>
-In-Reply-To: <effb4fff-da83-708f-ca10-50f2645c91c6@gmail.com>
-From: Pi-Hsun Shih <pihsun@chromium.org>
-Date: Fri, 21 Jun 2019 11:57:01 +0800
-Message-ID: <CANdKZ0cr=SMtQOTVduKZBOtw5E6ZOpShf3q2McDX=rFWbfB03A@mail.gmail.com>
-Subject: Re: [PATCH v7 16/21] memory: mtk-smi: Add bus_sel for mt8183
-To: Matthias Brugger <matthias.bgg@gmail.com>
+References: <20190429035515.73611-1-drinkcat@chromium.org>
+ <20190429035515.73611-3-drinkcat@chromium.org>
+In-Reply-To: <20190429035515.73611-3-drinkcat@chromium.org>
+From: Sean Wang <sean.wang@kernel.org>
+Date: Thu, 20 Jun 2019 21:20:22 -0700
+X-Gmail-Original-Message-ID: <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
+Message-ID: <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
+Subject: Re: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
+To: Nicolas Boichat <drinkcat@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190620_205739_978811_232D024E 
-X-CRM114-Status: GOOD (  27.86  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190620_212036_410328_B72AB9D3 
+X-CRM114-Status: GOOD (  20.49  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -91,177 +83,102 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: =?UTF-8?B?WW91bGluIFBlaSAo6KO05Y+L5p6XKQ==?= <youlin.pei@mediatek.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, Joerg Roedel <joro@8bytes.org>,
- Will Deacon <will.deacon@arm.com>, open list <linux-kernel@vger.kernel.org>,
- Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, lkml <linux-kernel@vger.kernel.org>,
+ Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
+ "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>, Sascha Hauer <kernel@pengutronix.de>,
- =?UTF-8?B?WWluZ2pvZSBDaGVuICjpmbPoi7HmtLIp?= <yingjoe.chen@mediatek.com>,
- anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
- Matthias Kaehlcke <mka@chromium.org>, Yong Wu <yong.wu@mediatek.com>
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jun 20, 2019 at 7:38 PM Matthias Brugger <matthias.bgg@gmail.com> wrote:
->
-> CCing Sascha
->
-> On 20/06/2019 11:35, Matthias Brugger wrote:
-> >
-> >
-> > On 13/06/2019 10:14, Pi-Hsun Shih wrote:
-> >> Hi,
-> >> When I tested this patch series (Based on linux 5.2.0-rc2, and with
-> >> various other patch series about MT8183) with lockdep enabled, and I'm
-> >> seeing the following lockdep warning on boot.
-> >>
-> >> By bisecting the commits, the first commit that introduce this warning
-> >> is this patch. The warning also doesn't appear if
-> >> https://lore.kernel.org/patchwork/patch/1086582/ and
-> >> https://lore.kernel.org/patchwork/patch/1086583/ are not applied.
-> >>
-> >> Do anyone have idea on why this is happening, or any suggestion on
-> >> which part I should be digging into to figure this out? Thanks.
-> >>
-> >> [    4.664194] ======================================================
-> >> [    4.670368] WARNING: possible circular locking dependency detected
-> >> [    4.676545] 5.2.0-rc2-next-20190528-44527-g6c94b6475c04 #20 Tainted: G S
-> >> [    4.684539] ------------------------------------------------------
-> >> [    4.690714] kworker/4:1/51 is trying to acquire lock:
-> >> [    4.695760] (____ptrval____) (regulator_list_mutex){+.+.},
-> >> at:regulator_lock_dependent+0xdc/0x6c4
-> >> [    4.704732]
-> >> [    4.704732] but task is already holding lock:
-> >> [    4.710556] (____ptrval____) (&genpd->mlock/1){+.+.},
-> >> at:genpd_lock_nested_mtx+0x24/0x30
-> >> [    4.718740]
-> >> [    4.718740] which lock already depends on the new lock.
-> >> [    4.718740]
-> >> [    4.726908]
-> >> [    4.726908] the existing dependency chain (in reverse order) is:
-> >> [    4.734382]
-> >> [    4.734382] -> #4 (&genpd->mlock/1){+.+.}:
-> >> [    4.739963]        __mutex_lock_common+0x1a0/0x1fe8
-> >> [    4.744836]        mutex_lock_nested+0x40/0x50
-> >> [    4.749275]        genpd_lock_nested_mtx+0x24/0x30
-> >> [    4.754063]        genpd_add_subdomain+0x150/0x524
-> >> [    4.758850]        pm_genpd_add_subdomain+0x3c/0x5c
-> >> [    4.763723]        scpsys_probe+0x520/0xe78
-> >> [    4.767902]        platform_drv_probe+0xf4/0x134
-> >> [    4.772517]        really_probe+0x214/0x4dc
-> >> [    4.776696]        driver_probe_device+0xcc/0x1d4
-> >> [    4.781396]        __device_attach_driver+0x10c/0x180
-> >> [    4.786442]        bus_for_each_drv+0x124/0x184
-> >> [    4.790968]        __device_attach+0x1c0/0x2d8
-> >> [    4.795407]        device_initial_probe+0x20/0x2c
-> >> [    4.800106]        bus_probe_device+0x80/0x16c
-> >> [    4.804546]        deferred_probe_work_func+0x120/0x168
-> >> [    4.809767]        process_one_work+0x858/0x1208
-> >> [    4.814379]        worker_thread+0x9ec/0xcb8
-> >> [    4.818644]        kthread+0x2b8/0x2d0
-> >> [    4.822391]        ret_from_fork+0x10/0x18
-> >> [    4.826480]
-> >> [    4.826480] -> #3 (&genpd->mlock){+.+.}:
-> >> [    4.831880]        __mutex_lock_common+0x1a0/0x1fe8
-> >> [    4.836752]        mutex_lock_nested+0x40/0x50
-> >> [    4.841190]        genpd_lock_mtx+0x20/0x2c
-> >> [    4.845369]        genpd_runtime_resume+0x140/0x434
-> >> [    4.850241]        __rpm_callback+0xb0/0x1e4
-> >> [    4.854506]        rpm_callback+0x54/0x1a8
-> >> [    4.858597]        rpm_resume+0xc6c/0x10c4
-> >> [    4.862689]        __pm_runtime_resume+0xb4/0x124
-> >> [    4.867387]        device_link_add+0x598/0x8d0
-> >
-> > For this looks as if you have also patch
-> > [PATCH v2 04/12] memory: mtk-smi: Add device-link between smi-larb and smi-common
-> > from series
-> > [PATCH v2 00/12] Clean up "mediatek,larb" after adding device_link
-> > applied.
-> >
->
-> My guess is, that we run into this, because we call genpd_runtime_resume before
-> we have finished the subdomain registration in scpsys_probe.
-> That implies that you also have the scpsys series for mt8183 added to your tree.
->
-> Anyway it looks to me as if we have to add the subdomains before we call
-> of_genpd_add_provider_onecell().
->
-> Regards,
-> Matthias
+Hi, Nicolas
 
-Yes I do have scpsys series for mt8183 added in my tree. (I have about
-125 patches from list on top of 531b0a360899 "Add linux-next specific
-files for 20190528" to make the board boot)
-However the exact same warning still exists after I changed the order
-of of_genpd_add_provider_onecell and pm_genpd_add_subdomain, patch as
-follow:
-(Patch is based on commit f4788d37bc84 "Add linux-next specific files
-for 20190614")
-
-diff --git a/drivers/soc/mediatek/mtk-scpsys.c
-b/drivers/soc/mediatek/mtk-scpsys.c
-index 503222d0d0da..0cd9bdd4004e 100644
---- a/drivers/soc/mediatek/mtk-scpsys.c
-+++ b/drivers/soc/mediatek/mtk-scpsys.c
-@@ -440,8 +440,7 @@ static struct scp *init_scp(struct platform_device *pdev,
- static void mtk_register_power_domains(struct platform_device *pdev,
-  struct scp *scp, int num)
- {
-- struct genpd_onecell_data *pd_data;
-- int i, ret;
-+ int i;
-
-  for (i = 0; i < num; i++) {
-  struct scp_domain *scpd = &scp->domains[i];
-@@ -457,18 +456,6 @@ static void mtk_register_power_domains(struct
-platform_device *pdev,
-
-  pm_genpd_init(genpd, NULL, false);
-  }
--
-- /*
-- * We are not allowed to fail here since there is no way to unregister
-- * a power domain. Once registered above we have to keep the domains
-- * valid.
-- */
--
-- pd_data = &scp->pd_data;
--
-- ret = of_genpd_add_provider_onecell(pdev->dev.of_node, pd_data);
-- if (ret)
-- dev_err(&pdev->dev, "Failed to add OF provider: %d\n", ret);
- }
-
- /*
-@@ -1053,6 +1040,16 @@ static int scpsys_probe(struct platform_device *pdev)
-  ret);
-  }
-
-+ /*
-+ * We are not allowed to fail here since there is no way to unregister
-+ * a power domain. Once registered above we have to keep the domains
-+ * valid.
-+ */
-+
-+ ret = of_genpd_add_provider_onecell(pdev->dev.of_node, pd_data);
-+ if (ret)
-+ dev_err(&pdev->dev, "Failed to add OF provider: %d\n", ret);
-+
-  return 0;
- }
-
+On Sun, Apr 28, 2019 at 8:55 PM Nicolas Boichat <drinkcat@chromium.org> wrote:
 >
+> During suspend/resume, mtk_eint_mask may be called while
+> wake_mask is active. For example, this happens if a wake-source
+> with an active interrupt handler wakes the system:
+> irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
+> that it can be handled later on in the resume flow.
 >
-> > Regards,
-> > Matthias
-> >
+> However, this may happen before mtk_eint_do_resume is called:
+> in this case, wake_mask is loaded, and cur_mask is restored
+> from an older copy, re-enabling the interrupt, and causing
+> an interrupt storm (especially for level interrupts).
+>
+> Instead, we just record mask/unmask changes in cur_mask. This
+> also avoids the need to read the current mask in eint_do_suspend,
+> and we can remove mtk_eint_chip_read_mask function.
+>
+
+The change is worth rewording the commit message you added above as an instance
+and adding Fixes tag as a fixup to mean you're fixing the existing
+problem in the driver.
+
+And then Acked-by: Sean Wang <sean.wang@kernel.org>
+
+> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+> ---
+>  drivers/pinctrl/mediatek/mtk-eint.c | 18 ++++--------------
+>  1 file changed, 4 insertions(+), 14 deletions(-)
+>
+> diff --git a/drivers/pinctrl/mediatek/mtk-eint.c b/drivers/pinctrl/mediatek/mtk-eint.c
+> index 737385e86beb807..7e526bcf5e0b55c 100644
+> --- a/drivers/pinctrl/mediatek/mtk-eint.c
+> +++ b/drivers/pinctrl/mediatek/mtk-eint.c
+> @@ -113,6 +113,8 @@ static void mtk_eint_mask(struct irq_data *d)
+>         void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
+>                                                 eint->regs->mask_set);
+>
+> +       eint->cur_mask[d->hwirq >> 5] &= ~mask;
+> +
+>         writel(mask, reg);
+>  }
+>
+> @@ -123,6 +125,8 @@ static void mtk_eint_unmask(struct irq_data *d)
+>         void __iomem *reg = mtk_eint_get_offset(eint, d->hwirq,
+>                                                 eint->regs->mask_clr);
+>
+> +       eint->cur_mask[d->hwirq >> 5] |= mask;
+> +
+>         writel(mask, reg);
+>
+>         if (eint->dual_edge[d->hwirq])
+> @@ -217,19 +221,6 @@ static void mtk_eint_chip_write_mask(const struct mtk_eint *eint,
+>         }
+>  }
+>
+> -static void mtk_eint_chip_read_mask(const struct mtk_eint *eint,
+> -                                   void __iomem *base, u32 *buf)
+> -{
+> -       int port;
+> -       void __iomem *reg;
+> -
+> -       for (port = 0; port < eint->hw->ports; port++) {
+> -               reg = base + eint->regs->mask + (port << 2);
+> -               buf[port] = ~readl_relaxed(reg);
+> -               /* Mask is 0 when irq is enabled, and 1 when disabled. */
+> -       }
+> -}
+> -
+>  static int mtk_eint_irq_request_resources(struct irq_data *d)
+>  {
+>         struct mtk_eint *eint = irq_data_get_irq_chip_data(d);
+> @@ -384,7 +375,6 @@ static void mtk_eint_irq_handler(struct irq_desc *desc)
+>
+>  int mtk_eint_do_suspend(struct mtk_eint *eint)
+>  {
+> -       mtk_eint_chip_read_mask(eint, eint->base, eint->cur_mask);
+>         mtk_eint_chip_write_mask(eint, eint->base, eint->wake_mask);
+>
+>         return 0;
+> --
+> 2.21.0.593.g511ec345e18-goog
+>
 
 _______________________________________________
 Linux-mediatek mailing list
