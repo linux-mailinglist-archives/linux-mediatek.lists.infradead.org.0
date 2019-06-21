@@ -2,66 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71E594E388
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 11:27:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F14524E4AE
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Jun 2019 11:53:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WaLVHd4SbDq5Ai0MONy8xB5oad66v2142uEwQGDxxoQ=; b=dVYFg6gobRNZug
-	CpnXUWFJHP7V+rgQpDdAlaHsvtQ+Cy3Zx5CLytgcCT4HCQS8wDAvdGvO0OFzvf9uqfw2n1GtCdywM
-	AjbGAEUXbLoKgv9XPjlkeBlQFiQNR0TAIZadQxfL1YxdhSU1wUGevQxbeGl2RiEe3ZFa7u3RMCG8g
-	sWRthQlH2qwHbRB6ia5UrnDp9wevj8KI8NNyteu+sOWb4N8qUmOpvefuoIKsI7RNbh3zn4RZGC+fz
-	cxMsU1bdNyK2PlqguFQsytQZs0hz/faISqS2dfPFlo2hbVeJHG8rMvA37WCsWJlVWX41t+g6pUFsU
-	/W3MuZ2GQS521yPmfUSw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=bNpusBbX1+KfFxkXg74NH4CrALmlNzSwMN55sMDn6KY=; b=DaN48+ycWiEjakJkSGaA70QHZ
+	3/dvEw9kPSZzqD1naRzLCVszPBTatTCg+ZPxXm/FoiO/kHUWIlbP+kFTAukwO5oF+hqu74g89Wxig
+	Lz6vbJsqTZJeq20EbadG4sxt1fv9PpHG0x352BgogS0EbQRVlXsAK9nA4SA0+3VBbltkqNnlS+UHI
+	b8dg0qz8lHA0f6jURYix7twGsyrfdpR465RDl8STW5DPYDZEQmiCZ7tR2YfVug7Gr4wF8U9+XnEZq
+	fPBvxreqS9djApLuMA6hh/YfnDcyWDK966R136+KXcJoaDU3JUXhILj325gDWVQ+5G5OeJwxtW5Sv
+	KL4lnjsCQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heFpn-0004vE-HR; Fri, 21 Jun 2019 09:27:51 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1heGE4-0003Pq-9K; Fri, 21 Jun 2019 09:52:56 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heFe2-0002YA-Ip; Fri, 21 Jun 2019 09:15:45 +0000
-X-UUID: 483f39d82a6b4d4cb56db9e44d4275fb-20190621
-X-UUID: 483f39d82a6b4d4cb56db9e44d4275fb-20190621
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1783589090; Fri, 21 Jun 2019 01:15:28 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 21 Jun 2019 02:15:21 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 21 Jun 2019 17:15:12 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 21 Jun 2019 17:15:11 +0800
-Message-ID: <1561108511.7458.0.camel@mhfsdcap03>
-Subject: Re: [v7, PATCH] net: stmmac: add support for hash table size
- 128/256 in dwmac4
-From: biao huang <biao.huang@mediatek.com>
-To: "davem@davemloft.net" <davem@davemloft.net>, Jose Abreu
- <joabreu@synopsys.com>
-Date: Fri, 21 Jun 2019 17:15:11 +0800
-In-Reply-To: <1559208626-3218-2-git-send-email-biao.huang@mediatek.com>
-References: <1559208626-3218-1-git-send-email-biao.huang@mediatek.com>
- <1559208626-3218-2-git-send-email-biao.huang@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1heFhl-0004i0-Ox; Fri, 21 Jun 2019 09:19:35 +0000
+Received: by mail-wm1-x342.google.com with SMTP id s3so5655926wms.2;
+ Fri, 21 Jun 2019 02:19:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=uqOVQTxmNExiORglBPUYXCzHT8Z+/V19PnzivbaHVFg=;
+ b=AtY+EMm+8qKifhQvPhh0SzfwY8M40OwmQaZCjKlTFlON5z0akSBcx0Fj8962OPK3ax
+ qSeCVT1pZ7yHTxx1zUODdIkRlJf0v2QfrzZ0vXrWHmop2DQLKfQxfTbLBOBUC3Fxovef
+ hDWBmtqxaYo6hkz7FeuQGR9PkIz/Zg6AGkClzwe+5erBgT7hzbe60jJOYiN54ZTgWgFU
+ IpuQhCE6lGLTOnsgqCJda4W/R3IpPzppR+Jz8j05S+TyH4UcgUcxA+vs3ci829X4uaaC
+ UJKoOhqFMxgLLlRlQN2h2ZniFUDim5S9N8yK6CW5Ff2EI0fqFEnV3fTcbrlZl1Xf0ebw
+ 7e5Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=uqOVQTxmNExiORglBPUYXCzHT8Z+/V19PnzivbaHVFg=;
+ b=t4mDlvIlMRC/QqZpi3lmrn5gmDWp3BaclVz2/Pe3xTBoA/keDac4cLwKrYzSY2BW6x
+ iR7HIuaiyS0JayLU6A8g+Keg//AdtKM+XlFWgYmPTgfOe1EyFKdPVkqaHtCuiuKgjun2
+ WMYOMw86cawsl7TXYwx3ZcpxCqYUYDFvSCvHh2avDuUItEsiIVSeFEKV2RvvUDBgWx04
+ 6ni9oUuBjqP+AVur2KlIaR8gYpY50cTZ45/69YPo4+5MidVL9/K9qyurPX/ILgVqKlPm
+ aCB6s1hTfQLRzBNSfRlr/R1ozpSz47BR3C1mAG8LC5UzYoiE4nq++efBup5XIsiRFFQe
+ NmtA==
+X-Gm-Message-State: APjAAAX1aXg6gAY3DSnA6sb1Q+1q0kyUTnScnrWezoAYvnOYyWj946Hz
+ dYCg6Pywlf25cLj482WS5do=
+X-Google-Smtp-Source: APXvYqyqeaEKJauyN71saFZvZTDk0qi91ACjIQXrzW5Yfpqp1okzyBsUv4pQHA0207ShjTomFKY7Lw==
+X-Received: by 2002:a1c:4b1a:: with SMTP id y26mr3294210wma.105.1561108771060; 
+ Fri, 21 Jun 2019 02:19:31 -0700 (PDT)
+Received: from localhost (p2E5BEF36.dip0.t-ipconnect.de. [46.91.239.54])
+ by smtp.gmail.com with ESMTPSA id r12sm1761771wrt.95.2019.06.21.02.19.29
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Fri, 21 Jun 2019 02:19:30 -0700 (PDT)
+Date: Fri, 21 Jun 2019 11:19:28 +0200
+From: Thierry Reding <thierry.reding@gmail.com>
+To: "dbasehore ." <dbasehore@chromium.org>
+Subject: Re: [PATCH 3/5] drm/panel: Add attach/detach callbacks
+Message-ID: <20190621091928.GA11839@ulmo>
+References: <20190611040350.90064-1-dbasehore@chromium.org>
+ <20190611040350.90064-4-dbasehore@chromium.org>
+ <20190611085722.GX21222@phenom.ffwll.local>
+ <CAGAzgsr2sh5B1xi_ztQPN0xoQsZd26DDXwWT_qqJ68XeKReJ_Q@mail.gmail.com>
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <CAGAzgsr2sh5B1xi_ztQPN0xoQsZd26DDXwWT_qqJ68XeKReJ_Q@mail.gmail.com>
+User-Agent: Mutt/1.11.4 (2019-03-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190621_021542_860142_2FF67989 
-X-CRM114-Status: GOOD (  24.89  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190621_021933_939139_F31BCB3B 
+X-CRM114-Status: GOOD (  24.26  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (thierry.reding[at]gmail.com)
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,215 +99,139 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "andrew@lunn.ch" <andrew@lunn.ch>,
- Jianguo Zhang =?UTF-8?Q?=28=E5=BC=A0=E5=BB=BA=E5=9B=BD=29?=
- <Jianguo.Zhang@mediatek.com>, Alexandre Torgue <alexandre.torgue@st.com>,
- "boon.leong.ong@intel.com" <boon.leong.ong@intel.com>,
- "netdev@vger.kernel.org" <netdev@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Daniel Vetter <daniel@ffwll.ch>, David Airlie <airlied@linux.ie>,
+ Sean Paul <sean@poorly.run>, Intel Graphics <intel-gfx@lists.freedesktop.org>,
+ Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ Jani Nikula <jani.nikula@linux.intel.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, Rob Herring <robh+dt@kernel.org>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- "linux-stm32@st-md-mailman.stormreply.com"
- <linux-stm32@st-md-mailman.stormreply.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ dri-devel <dri-devel@lists.freedesktop.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ CK Hu <ck.hu@mediatek.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Sam Ravnborg <sam@ravnborg.org>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>
+Content-Type: multipart/mixed; boundary="===============0677311051525650327=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dear David, Jose,
 
-	any comments about this patch?
-
-Thanks
-Biao
-
-On Thu, 2019-05-30 at 17:30 +0800, Biao Huang wrote:
-> 1. get hash table size in hw feature reigster, and add support
-> for taller hash table(128/256) in dwmac4.
-> 2. only clear GMAC_PACKET_FILTER bits used in this function,
-> to avoid side effect to functions of other bits.
-> 
-> stmmac selftests output log with flow control on:
-> 	ethtool -t eth0
-> 	The test result is PASS
-> 	The test extra info:
-> 	 1. MAC Loopback                 0
-> 	 2. PHY Loopback                 -95
-> 	 3. MMC Counters                 0
-> 	 4. EEE                          -95
-> 	 5. Hash Filter MC               0
-> 	 6. Perfect Filter UC            0
-> 	 7. MC Filter                    0
-> 	 8. UC Filter                    0
-> 	 9. Flow Control                 0
-> 
-> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
-> ---
->  drivers/net/ethernet/stmicro/stmmac/common.h      |    7 +--
->  drivers/net/ethernet/stmicro/stmmac/dwmac4.h      |    4 +-
->  drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c |   49 ++++++++++++---------
->  drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c  |    1 +
->  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c |    6 +++
->  5 files changed, 42 insertions(+), 25 deletions(-)
-> 
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/common.h b/drivers/net/ethernet/stmicro/stmmac/common.h
-> index 1961fe9..26bbcd8 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/common.h
-> +++ b/drivers/net/ethernet/stmicro/stmmac/common.h
-> @@ -335,6 +335,7 @@ struct dma_features {
->  	/* 802.3az - Energy-Efficient Ethernet (EEE) */
->  	unsigned int eee;
->  	unsigned int av;
-> +	unsigned int hash_tb_sz;
->  	unsigned int tsoen;
->  	/* TX and RX csum */
->  	unsigned int tx_coe;
-> @@ -428,9 +429,9 @@ struct mac_device_info {
->  	struct mii_regs mii;	/* MII register Addresses */
->  	struct mac_link link;
->  	void __iomem *pcsr;     /* vpointer to device CSRs */
-> -	int multicast_filter_bins;
-> -	int unicast_filter_entries;
-> -	int mcast_bits_log2;
-> +	unsigned int multicast_filter_bins;
-> +	unsigned int unicast_filter_entries;
-> +	unsigned int mcast_bits_log2;
->  	unsigned int rx_csum;
->  	unsigned int pcs;
->  	unsigned int pmt;
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4.h b/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-> index 01c1089..b68785f7 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-> +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4.h
-> @@ -18,8 +18,7 @@
->  /*  MAC registers */
->  #define GMAC_CONFIG			0x00000000
->  #define GMAC_PACKET_FILTER		0x00000008
-> -#define GMAC_HASH_TAB_0_31		0x00000010
-> -#define GMAC_HASH_TAB_32_63		0x00000014
-> +#define GMAC_HASH_TAB(x)		(0x10 + (x) * 4)
->  #define GMAC_RX_FLOW_CTRL		0x00000090
->  #define GMAC_QX_TX_FLOW_CTRL(x)		(0x70 + x * 4)
->  #define GMAC_TXQ_PRTY_MAP0		0x98
-> @@ -184,6 +183,7 @@ enum power_event {
->  #define GMAC_HW_FEAT_MIISEL		BIT(0)
->  
->  /* MAC HW features1 bitmap */
-> +#define GMAC_HW_HASH_TB_SZ		GENMASK(25, 24)
->  #define GMAC_HW_FEAT_AVSEL		BIT(20)
->  #define GMAC_HW_TSOEN			BIT(18)
->  #define GMAC_HW_TXFIFOSIZE		GENMASK(10, 6)
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> index 5e98da4..4183607 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
-> @@ -403,41 +403,50 @@ static void dwmac4_set_filter(struct mac_device_info *hw,
->  			      struct net_device *dev)
->  {
->  	void __iomem *ioaddr = (void __iomem *)dev->base_addr;
-> -	unsigned int value = 0;
-> +	int numhashregs = (hw->multicast_filter_bins >> 5);
-> +	int mcbitslog2 = hw->mcast_bits_log2;
-> +	unsigned int value;
-> +	int i;
->  
-> +	value = readl(ioaddr + GMAC_PACKET_FILTER);
-> +	value &= ~GMAC_PACKET_FILTER_HMC;
-> +	value &= ~GMAC_PACKET_FILTER_HPF;
-> +	value &= ~GMAC_PACKET_FILTER_PCF;
-> +	value &= ~GMAC_PACKET_FILTER_PM;
-> +	value &= ~GMAC_PACKET_FILTER_PR;
->  	if (dev->flags & IFF_PROMISC) {
->  		value = GMAC_PACKET_FILTER_PR | GMAC_PACKET_FILTER_PCF;
->  	} else if ((dev->flags & IFF_ALLMULTI) ||
-> -			(netdev_mc_count(dev) > HASH_TABLE_SIZE)) {
-> +		   (netdev_mc_count(dev) > hw->multicast_filter_bins)) {
->  		/* Pass all multi */
-> -		value = GMAC_PACKET_FILTER_PM;
-> -		/* Set the 64 bits of the HASH tab. To be updated if taller
-> -		 * hash table is used
-> -		 */
-> -		writel(0xffffffff, ioaddr + GMAC_HASH_TAB_0_31);
-> -		writel(0xffffffff, ioaddr + GMAC_HASH_TAB_32_63);
-> +		value |= GMAC_PACKET_FILTER_PM;
-> +		/* Set all the bits of the HASH tab */
-> +		for (i = 0; i < numhashregs; i++)
-> +			writel(0xffffffff, ioaddr + GMAC_HASH_TAB(i));
->  	} else if (!netdev_mc_empty(dev)) {
-> -		u32 mc_filter[2];
->  		struct netdev_hw_addr *ha;
-> +		u32 mc_filter[8];
->  
->  		/* Hash filter for multicast */
-> -		value = GMAC_PACKET_FILTER_HMC;
-> +		value |= GMAC_PACKET_FILTER_HMC;
->  
->  		memset(mc_filter, 0, sizeof(mc_filter));
->  		netdev_for_each_mc_addr(ha, dev) {
-> -			/* The upper 6 bits of the calculated CRC are used to
-> -			 * index the content of the Hash Table Reg 0 and 1.
-> +			/* The upper n bits of the calculated CRC are used to
-> +			 * index the contents of the hash table. The number of
-> +			 * bits used depends on the hardware configuration
-> +			 * selected at core configuration time.
->  			 */
-> -			int bit_nr =
-> -				(bitrev32(~crc32_le(~0, ha->addr, 6)) >> 26);
-> -			/* The most significant bit determines the register
-> -			 * to use while the other 5 bits determines the bit
-> -			 * within the selected register
-> +			int bit_nr = bitrev32(~crc32_le(~0, ha->addr,
-> +					ETH_ALEN)) >> (32 - mcbitslog2);
-> +			/* The most significant bit determines the register to
-> +			 * use (H/L) while the other 5 bits determine the bit
-> +			 * within the register.
->  			 */
-> -			mc_filter[bit_nr >> 5] |= (1 << (bit_nr & 0x1F));
-> +			mc_filter[bit_nr >> 5] |= (1 << (bit_nr & 0x1f));
->  		}
-> -		writel(mc_filter[0], ioaddr + GMAC_HASH_TAB_0_31);
-> -		writel(mc_filter[1], ioaddr + GMAC_HASH_TAB_32_63);
-> +		for (i = 0; i < numhashregs; i++)
-> +			writel(mc_filter[i], ioaddr + GMAC_HASH_TAB(i));
->  	}
->  
->  	value |= GMAC_PACKET_FILTER_HPF;
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c b/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-> index edb6053..59afb53 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-> +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac4_dma.c
-> @@ -354,6 +354,7 @@ static void dwmac4_get_hw_feature(void __iomem *ioaddr,
->  
->  	/* MAC HW feature1 */
->  	hw_cap = readl(ioaddr + GMAC_HW_FEATURE1);
-> +	dma_cap->hash_tb_sz = (hw_cap & GMAC_HW_HASH_TB_SZ) >> 24;
->  	dma_cap->av = (hw_cap & GMAC_HW_FEAT_AVSEL) >> 20;
->  	dma_cap->tsoen = (hw_cap & GMAC_HW_TSOEN) >> 18;
->  	/* RX and TX FIFO sizes are encoded as log2(n / 128). Undo that by
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> index 8fcbf22..f7aac15 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> @@ -4166,6 +4166,12 @@ static int stmmac_hw_init(struct stmmac_priv *priv)
->  		priv->plat->enh_desc = priv->dma_cap.enh_desc;
->  		priv->plat->pmt = priv->dma_cap.pmt_remote_wake_up;
->  		priv->hw->pmt = priv->plat->pmt;
-> +		if (priv->dma_cap.hash_tb_sz) {
-> +			priv->hw->multicast_filter_bins =
-> +					(BIT(priv->dma_cap.hash_tb_sz) << 5);
-> +			priv->hw->mcast_bits_log2 =
-> +					ilog2(priv->hw->multicast_filter_bins);
-> +		}
->  
->  		/* TXCOE doesn't work in thresh DMA mode */
->  		if (priv->plat->force_thresh_dma_mode)
+--===============0677311051525650327==
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="cWoXeonUoKmBZSoM"
+Content-Disposition: inline
 
 
+--cWoXeonUoKmBZSoM
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Tue, Jun 11, 2019 at 05:25:47PM -0700, dbasehore . wrote:
+> On Tue, Jun 11, 2019 at 1:57 AM Daniel Vetter <daniel@ffwll.ch> wrote:
+> >
+> > On Mon, Jun 10, 2019 at 09:03:48PM -0700, Derek Basehore wrote:
+> > > This adds the attach/detach callbacks. These are for setting up
+> > > internal state for the connector/panel pair that can't be done at
+> > > probe (since the connector doesn't exist) and which don't need to be
+> > > repeatedly done for every get/modes, prepare, or enable callback.
+> > > Values such as the panel orientation, and display size can be filled
+> > > in for the connector.
+> > >
+> > > Signed-off-by: Derek Basehore <dbasehore@chromium.org>
+> > > ---
+> > >  drivers/gpu/drm/drm_panel.c | 14 ++++++++++++++
+> > >  include/drm/drm_panel.h     |  4 ++++
+> > >  2 files changed, 18 insertions(+)
+> > >
+> > > diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
+> > > index 3b689ce4a51a..72f67678d9d5 100644
+> > > --- a/drivers/gpu/drm/drm_panel.c
+> > > +++ b/drivers/gpu/drm/drm_panel.c
+> > > @@ -104,12 +104,23 @@ EXPORT_SYMBOL(drm_panel_remove);
+> > >   */
+> > >  int drm_panel_attach(struct drm_panel *panel, struct drm_connector *=
+connector)
+> > >  {
+> > > +     int ret;
+> > > +
+> > >       if (panel->connector)
+> > >               return -EBUSY;
+> > >
+> > >       panel->connector =3D connector;
+> > >       panel->drm =3D connector->dev;
+> > >
+> > > +     if (panel->funcs->attach) {
+> > > +             ret =3D panel->funcs->attach(panel);
+> > > +             if (ret < 0) {
+> > > +                     panel->connector =3D NULL;
+> > > +                     panel->drm =3D NULL;
+> > > +                     return ret;
+> > > +             }
+> > > +     }
+> >
+> > Why can't we just implement this in the drm helpers for everyone, by e.=
+g.
+> > storing a dt node in drm_panel? Feels a bit overkill to have these new
+> > hooks here.
+> >
+> > Also, my understanding is that this dt stuff is supposed to be
+> > standardized, so this should work.
+>=20
+> So do you want all of this information added to the drm_panel struct?
+> If we do that, we don't necessarily even need the drm helper function.
+> We could just copy the values over here in the drm_panel_attach
+> function (and clear them in drm_panel_detach).
+
+Yeah, I think we should have all this extra information in the struct
+drm_panel. However, I think we need to more carefully split things such
+that the DT parsing happens at panel probe time. That way we can catch
+errors in DT, or missing entries/resources when we can still do
+something about it.
+
+If we start parsing DT and encounter failures, it's going to be very
+confusing if that's at panel attach time where code will usually just
+assume that everything is already validated and can't fail anymore.
+
+Thierry
+
+--cWoXeonUoKmBZSoM
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCAAdFiEEiOrDCAFJzPfAjcif3SOs138+s6EFAl0MoR0ACgkQ3SOs138+
+s6HqSA/+K8hfGyhC4XmLpKlVudKyrd41RyGRD7AunVOl6aE/CaukHevacdCPSUtk
+d/jaIe1fC3ImLE/uIZQDQBsBL3JzwrJHo0RVxijTJ7P9X1jrMR1ynK5sOWW0dPxR
+Sd87iKVNNu0Rl8CxAYzucxHrr2Up2W6uT02H0Lbxk+idIWKixRrPbUAVCMpFHTyr
+MbaVLkRd1sOEqLzetlU7HoUCx3wKgWdQgeRllgTDYgGutEQWnizljTrTglT0IAeQ
+U2LAykWBhhM4LBxYoEcdfOnosYQpKrg9suaNHNXknN+KEB5lnt/UbWCi5poLg1P4
+vyXMGFN8GwXXRNEKP0hYKGlLTzM19i3g9FRXAzeKv1hxmYhdG6S3dnzX22TG75No
+g0mUT2aFCEImAtMtQaCsucDHAnU/+YfmTekla4NxZo2UdOh0GYyKTaZ8OKsaETu+
+Hb+l76/ebe16vU+nJUYzKF5i/T+UlplLKLLGF8ivNBDSbWDD4l5Gh+hec2akFAVd
+U/CvEE85FyPaUIM9rTztStgICDwaxJNk62apvYouCkIIHOR3QVlgkxvk6DM6O5/c
+AjfC0dJqHvnx1HYiD0Sz65SeWArm/ujA1tcNZAFKLtPN2P5CHo6b2P2C1DfclkCw
+HBVMLmjbClz3caQjKmTvXk9YSnSSZBejdPW6zptywAik+UBj2r0=
+=ph6O
+-----END PGP SIGNATURE-----
+
+--cWoXeonUoKmBZSoM--
+
+
+--===============0677311051525650327==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============0677311051525650327==--
+
