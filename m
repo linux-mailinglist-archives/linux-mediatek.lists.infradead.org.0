@@ -2,61 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 27DE34F5D3
-	for <lists+linux-mediatek@lfdr.de>; Sat, 22 Jun 2019 15:07:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A6C514F930
+	for <lists+linux-mediatek@lfdr.de>; Sun, 23 Jun 2019 01:58:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Ky5zaEQMmloP857XVMv8YOtX6+KCDIDXRadk15KL948=; b=D2GRu5bC9cF1MC
-	zQdU3mZG9PUWmzwe1Z67ls+5Sh3RPbSE3L2bJ242d/ck1Cb0vPq9ZrRT5U4jqDN559UhH9onbJLXo
-	lGCExmSkvxPT13pHt2IBTtY/z8uBA1r1mhECQAyNRApGRfVqSGtlnhQkWNRw5q65OGs1wHE3x+FF6
-	38Gul7QsjX+ND0/Ba+jetEXXlhUQN2cubCwaIVrUVZBxIJ9Ec8ArwtwYL6Y8ltbu3f/tZtMpXMisd
-	XbU7djMdDR1+Dcsi6KGePPa7+uuqs6MX7MFD8T6hr+KvWZYB0ceLHrmUardVjtK7abvJaO568EpTs
-	ztArDdhA3kqcXuy5qkdQ==;
+	List-Owner; bh=KEwh1Y0+pSFSRiK3dRDrWIGTF9wjM+qEGNt87+fT/Uk=; b=BfVj9QUQP4qVsZ
+	wGmCCGsHM/tmL/AKmXnTXEAIkAkThVAl0muAI/RTQHunfp74v6p3zKbhJv52zUqhKQh1poqBeIShN
+	0oFOPkUHm+ClDOisxqrHQob0lFOpuu/XVT3L3WcEj8kHHrv5oY2zRCupNT4UxIwKPldG3p4iBt/4x
+	TGVLTyAkg8yvjxl+4KrIpKBwFjoDxnI9g9w4DRZmcnFhNQU0KHVMJ+JqemOwjcA0GFQXDhQfPN8KY
+	3X8ZULv29uKg09V9u6R92Jm3D5RXf+P5igH2NHBLLPU7+b0ctI+V3z/dJSwiQCb8p75eWJuHAvCJC
+	wZtdbMaps81nnQ+oFsEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hefjN-0001xc-UA; Sat, 22 Jun 2019 13:06:57 +0000
-Received: from asavdk3.altibox.net ([109.247.116.14])
+	id 1hepuB-0002eQ-Fl; Sat, 22 Jun 2019 23:58:47 +0000
+Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hefjC-0001p3-S0; Sat, 22 Jun 2019 13:06:48 +0000
-Received: from ravnborg.org (unknown [158.248.194.18])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by asavdk3.altibox.net (Postfix) with ESMTPS id 555F220020;
- Sat, 22 Jun 2019 15:06:37 +0200 (CEST)
-Date: Sat, 22 Jun 2019 15:06:36 +0200
-From: Sam Ravnborg <sam@ravnborg.org>
-To: Masahiro Yamada <yamada.masahiro@socionext.com>
-Subject: Re: [PATCH] kbuild: compile-test global headers to ensure they are
- self-contained
-Message-ID: <20190622130635.GA24262@ravnborg.org>
-References: <20190621163931.19397-1-yamada.masahiro@socionext.com>
- <20190621175134.GB16409@ravnborg.org>
- <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
+ id 1hepts-0002TT-1s; Sat, 22 Jun 2019 23:58:29 +0000
+Received: by mail-pg1-x542.google.com with SMTP id w10so5108477pgj.7;
+ Sat, 22 Jun 2019 16:58:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=lZUHpH2M+Wyx1Nixzo+rxEWVRPouZAupWhJLtRBuER4=;
+ b=J+Qc6kFzXV9b/IP8VxIZb1nSUz8aJcZTeIw+r3UN1METyQW9w7rkYFTtp56KtdH7lH
+ dv/f1e3OsdYTzUCOYAxPRRqAjAC1WERCoOVmaNwhVLBRsK2w7s0aC2H/PgTASU1glaGb
+ doSeUQo478cuImKQX8AO4FRa/K2aLaIJ0gS9Bv78EaX/zEG3Ym0uJr2cwoKXzdFFtrzU
+ ZSgYf9VmyhFjW73xz4JOErU0I+RjjDjFEGbmd2VXVoBnegagFdnA0UTeT4vJ+VbVZDKs
+ Z8fuUo2uN4rQp1lI+W6KG521AyDCqpM+RDjnfFau9GmlvmL1E1o0tglE0OS9MbhmQUeI
+ EIsQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=lZUHpH2M+Wyx1Nixzo+rxEWVRPouZAupWhJLtRBuER4=;
+ b=Mxpu1ZeV6OJ5CAG7nS8TwKeuHc2FDcMBMq4ZH4nkWB2bc7vW8vG57BwdAk4FCx2QCc
+ VIGgZuW/a1jEIUh6ejdo3kBY0eYUsWjCB2zLSZvqLDekx1wRGRw2+mlQAMdsMyMEN0ZJ
+ hkSO1Zxuo5MQ4SQUhiPlILCa0uG+MWQ2cDWH4XjmVxA8tBHJwAtWAuCrpPPKbA60dtvE
+ 6D5Wsj11oKIXSTC4tPBAnLnhFGtAQQWKTlJXWfWpQz79sDp9me8feL22L5oKKj0p1xka
+ t+jIlIKhW4XaFHFgNk0pOd9gUFvteaWg1Oa7DRfSKWkNFpkTINnAg9zeXRGUCvUQoSZ3
+ ySuw==
+X-Gm-Message-State: APjAAAVs4xvJNiokvBLPi17BDsovqraEdtmWRAQ7Q9KI0+FlgOsWRyYF
+ WHAN7syaLETLsKkDU07oaEjHUPnb
+X-Google-Smtp-Source: APXvYqyjw3Hl7M5bTbfpARaC/m/3jkVGHllSCS84kbpa2Q8bhzRaDSNMWuamR84mgLSgh3AETTooUQ==
+X-Received: by 2002:a17:90a:2224:: with SMTP id
+ c33mr15573423pje.22.1561247906433; 
+ Sat, 22 Jun 2019 16:58:26 -0700 (PDT)
+Received: from icarus ([2001:268:c145:c721:c70:4af9:86e2:2])
+ by smtp.gmail.com with ESMTPSA id o74sm10340916pfg.91.2019.06.22.16.58.19
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Sat, 22 Jun 2019 16:58:25 -0700 (PDT)
+Date: Sun, 23 Jun 2019 08:58:03 +0900
+From: William Breathitt Gray <vilhelm.gray@gmail.com>
+To: Guenter Roeck <linux@roeck-us.net>
+Subject: Re: [PATCH] watchdog: convert remaining drivers to use SPDX license
+ identifier
+Message-ID: <20190622235803.GA3286@icarus>
+References: <1561048126-27578-1-git-send-email-linux@roeck-us.net>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
-X-CMAE-Score: 0
-X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
- a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10
- a=_h6k6vx1-o-evQNg5jYA:9 a=CjuIK1q_8ugA:10
+In-Reply-To: <1561048126-27578-1-git-send-email-linux@roeck-us.net>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190622_060647_085047_7EEC5F1E 
-X-CRM114-Status: GOOD (  13.05  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190622_165828_102503_C34904F9 
+X-CRM114-Status: GOOD (  15.04  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [109.247.116.14 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (vilhelm.gray[at]gmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,70 +99,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Michal Marek <michal.lkml@markovi.net>,
- Linux Kbuild mailing list <linux-kbuild@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: linux-watchdog@vger.kernel.org, Wan ZongShun <mcuos.com@gmail.com>,
+ linux-kernel@vger.kernel.org, linux-arm-msm@vger.kernel.org,
+ Jerry Hoemann <jerry.hoemann@hpe.com>, Vladimir Zapolskiy <vz@mleia.com>,
+ David Brown <david.brown@linaro.org>, Andy Gross <agross@kernel.org>,
+ linux-mediatek@lists.infradead.org, Sylvain Lemieux <slemieux.tyco@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Masahiro
-
-> At first, I tried to split Makefile per directory,
-> and add header-test-y one by one.
+On Thu, Jun 20, 2019 at 09:28:46AM -0700, Guenter Roeck wrote:
+> This gets rid of the unnecessary license boilerplate, and avoids
+> having to deal with individual patches one by one.
 > 
-> I think you expect they look like this:
+> No functional changes.
 > 
+> Signed-off-by: Guenter Roeck <linux@roeck-us.net>
+> ---
+> Note: Several drivers include a paragraph such as
 > 
-> include/Makefile:
+> "Neither <name> nor <company> admit liability nor
+>  provide warranty for any of this software. This material is
+>  provided "AS-IS" and at no charge."
 > 
-> subdir-y += drm
-> subdir-y += linux
-> subdir-y += media
+> Presumably this is covered by the GPL license. However, since I am not
+> an attorney, I am not sure, and I opted for leaving such paragraphs in
+> place.
+[...]
+>  drivers/watchdog/ebc-c384_wdt.c        |  9 ---------
+[...]
+> diff --git a/drivers/watchdog/ebc-c384_wdt.c b/drivers/watchdog/ebc-c384_wdt.c
+> index c176f59fea28..8ef4b0df3855 100644
+> --- a/drivers/watchdog/ebc-c384_wdt.c
+> +++ b/drivers/watchdog/ebc-c384_wdt.c
+> @@ -2,15 +2,6 @@
+>  /*
+>   * Watchdog timer driver for the WinSystems EBC-C384
+>   * Copyright (C) 2016 William Breathitt Gray
+> - *
+> - * This program is free software; you can redistribute it and/or modify
+> - * it under the terms of the GNU General Public License, version 2, as
+> - * published by the Free Software Foundation.
+> - *
+> - * This program is distributed in the hope that it will be useful, but
+> - * WITHOUT ANY WARRANTY; without even the implied warranty of
+> - * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+> - * General Public License for more details.
+>   */
+>  #include <linux/device.h>
+>  #include <linux/dmi.h>
 
-So far we agree.
-
-> include/drm/Makefile:
-> 
-> header-test-y += drm_cache.h
-> header-test-y += drm_file.h
-> header-test-y += drm_util.h
-> ...
-On this level it would be better to do:
-header-test-y += $(call find_all_header_files)
-
-# drm files that are not self-contained
-header-test-n += drm_legacy.h
-
-Likewise for all subdirs below include/
-and include/linux should maybe be split up a little too.
-Maybe include/uapi/ would need to be slipt a little.
-
-Then we have a manageable number of Makefiles.
-New header files are automatically checked and
-we have a list of files to fix.
-If for example drm/ have too much failures to a start
-then we can add that directory to the higler level Makefile later.
-
-The above is more or less what you already started,
-but the difference is that we have it pushed down one or two
-directories.
-
-The header-test-n logic could be moved to the generic part,
-and a helper could be made to find all header files.
-Then the Makefiles would be more or less trival, with all the
-Kbuild magic hidden away.
-
-> In my analysis, 70% of headers are already conf-contained.
-> After some fixups, 95% of headers can become self-contained.
-
-Sounds good. And we do not want 100%, but close...
-
-	Sam
+Acked-by: William Breathitt Gray <vilhelm.gray@gmail.com>
 
 _______________________________________________
 Linux-mediatek mailing list
