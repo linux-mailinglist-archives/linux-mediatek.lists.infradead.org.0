@@ -2,89 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A08424F36B
-	for <lists+linux-mediatek@lfdr.de>; Sat, 22 Jun 2019 05:41:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 84E464F5C0
+	for <lists+linux-mediatek@lfdr.de>; Sat, 22 Jun 2019 14:31:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=x08cH2kcXXUY7vqYW8JAO4K8Z4BbVwcULa0yOyEKdwQ=; b=fV22q5hxjlN7Y1
-	84ysIEOEUYvMr1rKLIUw+auPt43nXZSuQP0oKTVpeI8tlrODD0mmavpzcMsP53+bNGCYJC8+EVqaj
-	O37uuXdHJdwyopAXTQJWuu5/nky/251sH0Bddtaq9F3nQ+2IL2mNxWwYdzmt0THOAJNipgBp3zcJr
-	uGEloHA5ABkQb7IJP4oZ9UTfPG+XuIFEW5aC3M6ZSBt+x7DlSCwmRtVc+NfzE7AEWhm3HcT4aKQkm
-	C753ySrnMvPxuG2pXFdGAkJL1uJ72w4wqVRF413jvYTnJSu6VTGyn0DhSb6k+IHyeRa8MgJucwBMf
-	I0rHi1Jc03D30qa+MJzA==;
+	List-Owner; bh=+RIsSsUNRLEw0tyn1TJBJiDmFa39Fu7SVTNfbQ31VuU=; b=i7rxFijpBsOH9X
+	S3JOeo0ci83UIcGuarbu2wIXTt8YtDPH+r1dfFlRAjfH4i180w1vDAiOw1o6sWvcIXwYjO6zRct/m
+	SPfGwOU+kU1OodR+ojL0AQ3TRNZbO3bVmjNJbWJP0iDn0gh0GcOF0IZ4+qBi4mlhgJV9jhLpupsfd
+	m7H9YCGhcPsL0Jmo1p6eH2tfUiVAaWjtS5r7QHBp2UPXPp5i/TBYJcjo5B6ioALzRscQ6I/m1vszH
+	6hc3M4dFCFrVuNA/hXPLaaC8oBsBWZjyaI/feJfeinl3MiVOC1Y5NyIGZo63vWE7xRpZWoLLx8XWv
+	Kki/bARwlWJWodtkkgqw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1heWuC-0001z2-BM; Sat, 22 Jun 2019 03:41:32 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1hefBA-0004rK-Ro; Sat, 22 Jun 2019 12:31:36 +0000
+Received: from conssluserg-02.nifty.com ([210.131.2.81])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1heWtw-0001mZ-BA
- for linux-mediatek@lists.infradead.org; Sat, 22 Jun 2019 03:41:19 +0000
-Received: by mail-pf1-x443.google.com with SMTP id t16so4512851pfe.11
- for <linux-mediatek@lists.infradead.org>; Fri, 21 Jun 2019 20:41:16 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=4i2YSPugXI0nrqp33kMy8Y944Y94lb5ecy4lCGMxEsQ=;
- b=niGTS4FI/C687+sa3kKLIMPE58L7G7E5nctX9I6CtYN8GELqO1dmYNy3W+bytP3lM2
- 7jJLiBQxNMTmWuycDio83VjqRBYXENo40QGJV77eJIpEvs05teclhe/XR8ex/VpLgaDx
- lNQopJYpNYfOR+08BHj2q1c/NuSF1p8+Ua8Lg=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=4i2YSPugXI0nrqp33kMy8Y944Y94lb5ecy4lCGMxEsQ=;
- b=OTMOQKdW+hUhE5QFM4cyUes6Kb6shWaZ4z3YXfOeKjWJlJAKbXDXTrYRYhSRY9+HR5
- Sl2e5nJwv2bMzPJ9E0xzUZc4UiAGk5uds82wXDJAePgjx9tRN23yVVM8+VBmB5fTw40j
- AiccxBEYjwsmuV2uuYqao0I/fyM0OF2W0lTCD9Ag/Wc+vFSMWU72Bq53KgsQQLPZfjOp
- stnvUJ8po42tH4W9kWwQ3QeyEDJO+U7FgXQWRJN6UgNpCPUUwSYN3YRx61vclhn32UCD
- a8yQW7KTllbKdsDtYQNCaow8PlL1vg26TWk7B2aCZ5PZYkmU6estC5rHLMDRWRig9JrB
- 5eXQ==
-X-Gm-Message-State: APjAAAXGnK7vpSCy/nERMZ7AjRswxdxP3YYnEzfcJTBCn7vmaxfkhrGi
- TaVIjnFPwa32OAIbG+kKb+hgsA==
-X-Google-Smtp-Source: APXvYqzslQDI58gAtC55+8w+gQS8zY9PascQUVg5lYBeYsEo3d9ImRfo5a3yRY89wZxYrkoWlqCAMQ==
-X-Received: by 2002:a17:90b:d8f:: with SMTP id
- bg15mr10778249pjb.65.1561174875712; 
- Fri, 21 Jun 2019 20:41:15 -0700 (PDT)
-Received: from exogeni.mtv.corp.google.com
- ([2620:15c:202:1:5be8:f2a6:fd7b:7459])
- by smtp.gmail.com with ESMTPSA id u128sm4756688pfu.26.2019.06.21.20.41.14
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Fri, 21 Jun 2019 20:41:15 -0700 (PDT)
-From: Derek Basehore <dbasehore@chromium.org>
-To: linux-kernel@vger.kernel.org
-Subject: [PATCH v4 4/4] drm/mtk: add panel orientation property
-Date: Fri, 21 Jun 2019 20:41:05 -0700
-Message-Id: <20190622034105.188454-5-dbasehore@chromium.org>
-X-Mailer: git-send-email 2.22.0.410.gd8fdbe21b5-goog
-In-Reply-To: <20190622034105.188454-1-dbasehore@chromium.org>
-References: <20190622034105.188454-1-dbasehore@chromium.org>
+ id 1hefAx-0004iV-H8; Sat, 22 Jun 2019 12:31:25 +0000
+Received: from mail-vk1-f174.google.com (mail-vk1-f174.google.com
+ [209.85.221.174]) (authenticated)
+ by conssluserg-02.nifty.com with ESMTP id x5MCV12u019441;
+ Sat, 22 Jun 2019 21:31:02 +0900
+DKIM-Filter: OpenDKIM Filter v2.10.3 conssluserg-02.nifty.com x5MCV12u019441
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nifty.com;
+ s=dec2015msa; t=1561206662;
+ bh=m54BvUSyNYNL33mmnHMDkq+76aAFKf+BJdGvxLc/WI4=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=DLHR74rkAqZP3/MBBqZOM/tf+80ugRExZHoXIcUs8aFU5MwfvTFb9w+LUXwbrjihB
+ q/xpGGtf6lpk+A2VoHUdvR8SLJDP5/DPGXuLVriD94CBDCH8218GW06mg40rByqkRn
+ T33cCAiX23UXjydM3flMYDV2+gMZde4kPAQUXmRUgdJvrkOuPXWeDWCaRx7LkdpvU6
+ D1jENLTUNzdTwqT8YpVRWTNl5RwCNzZoezg5CHvf3XZFt/NeVu/MvSPZ5Ax+f5W+f+
+ Pq4BQCfOL0IddvlfurF/4Hea9T+jVbfKRjPSFju1HON8ah4S0DXMr8ZDq5CLKxVTUD
+ ZakkBFHU9jL8g==
+X-Nifty-SrcIP: [209.85.221.174]
+Received: by mail-vk1-f174.google.com with SMTP id b69so1873969vkb.3;
+ Sat, 22 Jun 2019 05:31:01 -0700 (PDT)
+X-Gm-Message-State: APjAAAVAZJdMqT57OaD6jYQeoqvvxw/cdGsGu+nt7x8XKMwcRrr0J0M7
+ JEKAW/0zl7HWDE+/8kYW+Rz4ToH5ekkazcnnMk8=
+X-Google-Smtp-Source: APXvYqyBMcX4VGPYKX3tfLIsaz7wkVCv1WB8vYa4Pvt6tJ+QqY3hMQYIWuARG2vUmbyjhfd7TSYdbMhHiQvJhvZdy/E=
+X-Received: by 2002:a1f:728b:: with SMTP id n133mr15338535vkc.84.1561206660594; 
+ Sat, 22 Jun 2019 05:31:00 -0700 (PDT)
 MIME-Version: 1.0
+References: <20190621163931.19397-1-yamada.masahiro@socionext.com>
+ <20190621175134.GB16409@ravnborg.org>
+In-Reply-To: <20190621175134.GB16409@ravnborg.org>
+From: Masahiro Yamada <yamada.masahiro@socionext.com>
+Date: Sat, 22 Jun 2019 21:30:24 +0900
+X-Gmail-Original-Message-ID: <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
+Message-ID: <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
+Subject: Re: [PATCH] kbuild: compile-test global headers to ensure they are
+ self-contained
+To: Sam Ravnborg <sam@ravnborg.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190621_204116_413021_340CB9F6 
-X-CRM114-Status: UNSURE (   9.93  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190622_053123_821011_7AEC4F91 
+X-CRM114-Status: GOOD (  14.33  )
+X-Spam-Score: 1.0 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (1.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [210.131.2.81 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [210.131.2.81 listed in wl.mailspike.net]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,58 +84,105 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Derek Basehore <dbasehore@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Maxime Ripard <maxime.ripard@bootlin.com>, Sam Ravnborg <sam@ravnborg.org>,
- intel-gfx@lists.freedesktop.org,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Jani Nikula <jani.nikula@linux.intel.com>, David Airlie <airlied@linux.ie>,
- Thierry Reding <thierry.reding@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, dri-devel@lists.freedesktop.org,
- Daniel Vetter <daniel@ffwll.ch>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Sean Paul <sean@poorly.run>, linux-arm-kernel@lists.infradead.org
+Cc: Michal Marek <michal.lkml@markovi.net>,
+ Linux Kbuild mailing list <linux-kbuild@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This inits the panel orientation property for the mediatek dsi driver
-if the panel orientation (connector.display_info.panel_orientation) is
-not DRM_MODE_PANEL_ORIENTATION_UNKNOWN.
+Hi Sam,
 
-Signed-off-by: Derek Basehore <dbasehore@chromium.org>
----
- drivers/gpu/drm/mediatek/mtk_dsi.c | 8 ++++++++
- 1 file changed, 8 insertions(+)
+On Sat, Jun 22, 2019 at 2:51 AM Sam Ravnborg <sam@ravnborg.org> wrote:
+>
+> Hi Masahiro.
+>
+> On Sat, Jun 22, 2019 at 01:39:31AM +0900, Masahiro Yamada wrote:
+> > Make as many headers self-contained as possible so that they can be
+> > included without relying on a specific include order.
+> It is very nice finally to get some infrastructure to validate header
+> files.
+>
+> But to avoid too many conflicts while including more and more headers
+> that are selfcontained we really need something that is more
+> distributed.
+> So for example all header files in include/drm/* could be in one
+> Makefile, incl. sub-directories, but the same Makefile would not include
+> the files in include/soc/
+>
+> If you just show how ot do it, others can follow-up with the
+> relevant directories.
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-index 4a0b9150a7bb..08ffdc7526dd 100644
---- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-+++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-@@ -782,10 +782,18 @@ static int mtk_dsi_create_connector(struct drm_device *drm, struct mtk_dsi *dsi)
- 			DRM_ERROR("Failed to attach panel to drm\n");
- 			goto err_connector_cleanup;
- 		}
-+
-+		ret = drm_connector_init_panel_orientation_property(&dsi->conn);
-+		if (ret) {
-+			DRM_ERROR("Failed to init panel orientation\n");
-+			goto err_panel_detach;
-+		}
- 	}
- 
- 	return 0;
- 
-+err_panel_detach:
-+	drm_panel_detach(dsi->panel);
- err_connector_cleanup:
- 	drm_connector_cleanup(&dsi->conn);
- 	return ret;
+
+At first, I tried to split Makefile per directory,
+and add header-test-y one by one.
+
+I think you expect they look like this:
+
+
+include/Makefile:
+
+subdir-y += drm
+subdir-y += linux
+subdir-y += media
+
+
+include/drm/Makefile:
+
+header-test-y += drm_cache.h
+header-test-y += drm_file.h
+header-test-y += drm_util.h
+...
+
+
+include/linux/Makefile:
+
+header-test-y += io.h
+header-test-y += list.h
+header-test-y += kernel.h
+header-test-y += types.h
+...
+
+
+
+This is a straightforward way,
+but I see some disadvantages.
+
+Currently, there are more than 4000 headers
+under include/.
+
+So, to cover (almost) all of them, we must
+list out 4000 entries.
+
+When somebody adds a new header,
+he will be very likely to forget to add
+header-test-y for it.
+So, newly added headers will always
+fall off the coverage.
+
+
+So, I am trying to take an opposite approach.
+
+Add all headers in include/ by wildcard, then
+filter-out one that cannot be self-contained.
+
+In my analysis, 70% of headers are already conf-contained.
+After some fixups, 95% of headers can become self-contained.
+
+At this moment, the wildcard only covers some directories
+or patterns, but my plan is to extend the wildcard gradually.
+
+
+Please feel free to suggest alternative ideas.
+
+
 -- 
-2.22.0.410.gd8fdbe21b5-goog
-
+Best Regards
+Masahiro Yamada
 
 _______________________________________________
 Linux-mediatek mailing list
