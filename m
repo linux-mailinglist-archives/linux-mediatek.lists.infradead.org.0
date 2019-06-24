@@ -2,78 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DAC6A4FB7C
-	for <lists+linux-mediatek@lfdr.de>; Sun, 23 Jun 2019 14:11:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A0E64FE54
+	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 03:14:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=7ArLQWIeHtMix8bskIwiPTgGjGAbReD1HLQjXGgMO0w=; b=dAFBt2j1Wgh9By78ia1SkG+R0
-	llFWa2YrQ9qFsMjLM+K7iblE9nQpCMSXtKaFOSgCufKVVf1ublVnbfgNR6OU+qciOOMFqZ/1IRkZS
-	VS+liid4nXqgtbm7pu20/ePtmVbx/kw6SU6NJ5ScWua/dvgGqR1Ho6jSmkCx9YIgfVlKt3M0bGoSt
-	YqZMq+LeqW4N4lCiNt5vJ+NtqdVbnbq0mVVOTwwSJwAvGmKYwm9W+tEtLMp8Lk55ELBCZg2xd/rfN
-	1lS8cmiBf3Kngjb7VD2t1hoogNBPTaPZgwaEvOg0GP3AeZE39CdmBk21nr/f+Y06Z+HE2KzuEwSZ1
-	ZEXFbBvbA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=dJDB3zHLsiQ1bgtc1JS9skWIQsxdnmuj4fwg7erQk6k=; b=WVVSeJhZAav655
+	u2L4BvK/p0E3vOoCbKGxyV+GFKfzpTmKcJuHVQlgm2OIlSod6pjQNBQ2q8gHgnKu4pSIRLBzqFl09
+	pEd8caaGvYYgf8P89luzydNjzgFtBE/TM5LJMClhuh6AaWYR0yxntjpsf9Y6bcV7FF16fS9IBa2CJ
+	vKeVRYWOz1RRrSE98RZ3vtpS0LqNAlJeh3PhSDUHujZOGfF0s6co4xNCNRD/1/qzqvDPY6E72pn6v
+	vryWfuLaV8R6EM6oP4v4A94wVVZV6PQu7zk83JyRufBiYaoP1Dcu1gVlngfzBSb1K0al/nCdszuBE
+	NgoOCreICoiHInR7cYXw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hf1L1-0007C8-IV; Sun, 23 Jun 2019 12:11:15 +0000
-Received: from mail-ed1-f65.google.com ([209.85.208.65])
+	id 1hfDYo-0007FG-GN; Mon, 24 Jun 2019 01:14:18 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hf1Kv-0007BV-TE
- for linux-mediatek@lists.infradead.org; Sun, 23 Jun 2019 12:11:11 +0000
-Received: by mail-ed1-f65.google.com with SMTP id w20so9493415edd.2
- for <linux-mediatek@lists.infradead.org>; Sun, 23 Jun 2019 05:11:09 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=nakBwI4sZGx37gf/nqQhnhkTTc4nH7gPn8eeyN2vS8M=;
- b=dUXUn9gXmLtCpfv1lXH+Fmh6HlJQzfb1F+8X1uhzmSKimTfkLHML8yVHatZk/377h4
- TeuC70qFgrYRqf00VBDix2jRBM8bXNbfdSJ7LIP0yItoIdIXEZT/4R3Y+BnwRk8W0mSF
- iSfRPnvBZ+CH1h+cYFNK+xphDiKWsDE8x+DAM4neWQbVjdW4boyf3Piw7QEjafUMHyV4
- kOON6un5Ek8Di14W2AP8ngk6bucdF8tEOgdcKw9KRrrjKVOdkaqg1Jzc310KDOFdSSyY
- xrfp+Wg3QyqzbuVakxX+sMtzIBcty5PRNc4sWe7JvKjOCl9a8BJ/iDbe8vLX16Ht0Zoz
- Vhlg==
-X-Gm-Message-State: APjAAAXgOvfm3RxpdkNFLpiEfivF0RhfKL53iHwPkG0Ale0I2hjV8m4T
- lRmS+SXiyWIZ9GgHIqdqiimfJA==
-X-Google-Smtp-Source: APXvYqyZ6F4Gqyf1cneAQ+IhpWxmyuyOUQ4oEoz0is6nrggMhomfTzXpIIkJ0JA2pB63Ppiz79GlZw==
-X-Received: by 2002:a50:f781:: with SMTP id h1mr90781547edn.240.1561291868076; 
- Sun, 23 Jun 2019 05:11:08 -0700 (PDT)
-Received: from shalem.localdomain (84-106-84-65.cable.dynamic.v4.ziggo.nl.
- [84.106.84.65])
- by smtp.gmail.com with ESMTPSA id y3sm2661992edr.27.2019.06.23.05.11.07
- (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Sun, 23 Jun 2019 05:11:07 -0700 (PDT)
-Subject: Re: [Intel-gfx] [PATCH v3 3/4] drm/connector: Split out orientation
- quirk detection
-To: Derek Basehore <dbasehore@chromium.org>, linux-kernel@vger.kernel.org
-References: <20190622034105.188454-1-dbasehore@chromium.org>
- <20190622034105.188454-4-dbasehore@chromium.org>
-From: Hans de Goede <hdegoede@redhat.com>
-Message-ID: <ff551bd8-ab2b-a89f-281b-5b3d3c285efc@redhat.com>
-Date: Sun, 23 Jun 2019 14:11:06 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.0
+ id 1hfDYh-0007EV-5R; Mon, 24 Jun 2019 01:14:14 +0000
+X-UUID: 8b0df9d15d224ecba0e8ca5ab45033d2-20190623
+X-UUID: 8b0df9d15d224ecba0e8ca5ab45033d2-20190623
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <xiaolei.li@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1266232117; Sun, 23 Jun 2019 17:14:01 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 23 Jun 2019 18:14:00 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs05n1.mediatek.inc
+ (172.21.101.15) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 24 Jun 2019 09:13:58 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 24 Jun 2019 09:13:57 +0800
+Message-ID: <1561338837.19057.14.camel@mhfsdcap03>
+Subject: Re: [PATCH] mtd: rawnand: mtk: Re-license MTK NAND driver as Dual
+ MIT/GPL
+From: xiaolei li <xiaolei.li@mediatek.com>
+To: Masahiro Yamada <yamada.masahiro@socionext.com>
+Date: Mon, 24 Jun 2019 09:13:57 +0800
+In-Reply-To: <CAK7LNASu5FdAcSY49EGGdKU46KYBvWKzA8BeZNk9nTKmsKHy0A@mail.gmail.com>
+References: <20190620015812.16519-1-xiaolei.li@mediatek.com>
+ <CAK7LNASu5FdAcSY49EGGdKU46KYBvWKzA8BeZNk9nTKmsKHy0A@mail.gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-In-Reply-To: <20190622034105.188454-4-dbasehore@chromium.org>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190623_051109_960250_C004BFC5 
-X-CRM114-Status: GOOD (  24.63  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190623_181411_215143_9F66F07D 
+X-CRM114-Status: GOOD (  25.93  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.208.65 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.208.65 listed in wl.mailspike.net]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,176 +74,146 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Maxime Ripard <maxime.ripard@bootlin.com>, intel-gfx@lists.freedesktop.org,
- dri-devel@lists.freedesktop.org, David Airlie <airlied@linux.ie>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sam Ravnborg <sam@ravnborg.org>,
- linux-arm-kernel@lists.infradead.org
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Cc: Ryder Lee <ryder.lee@mediatek.com>, Arnd Bergmann <arnd@arndb.de>,
+ srv_heupstream@mediatek.com, Richard Weinberger <richard@nod.at>,
+ Miquel Raynal <miquel.raynal@bootlin.com>,
+ Boris Brezillon <boris.brezillon@collabora.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ linux-mtd <linux-mtd@lists.infradead.org>,
+ Wen Yang <yellowriver2010@hotmail.com>,
+ =?UTF-8?Q?Rafa=C5=82_Mi=C5=82ecki?= <rafal@milecki.pl>,
+ Jorge Ramirez Ortiz <jorge.ramirez-ortiz@linaro.org>, rogercc.lin@mediatek.com,
+ Dan Carpenter <dan.carpenter@oracle.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
-
-On 22-06-19 05:41, Derek Basehore wrote:
-> Not every platform needs quirk detection for panel orientation, so
-> split the drm_connector_init_panel_orientation_property into two
-> functions. One for platforms without the need for quirks, and the
-> other for platforms that need quirks.
-> 
-> Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> ---
->   drivers/gpu/drm/drm_connector.c | 45 ++++++++++++++++++++++++---------
->   drivers/gpu/drm/i915/intel_dp.c |  4 +--
->   drivers/gpu/drm/i915/vlv_dsi.c  |  5 ++--
->   include/drm/drm_connector.h     |  2 ++
->   4 files changed, 39 insertions(+), 17 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-> index e17586aaa80f..c4b01adf927a 100644
-> --- a/drivers/gpu/drm/drm_connector.c
-> +++ b/drivers/gpu/drm/drm_connector.c
-> @@ -1894,31 +1894,23 @@ EXPORT_SYMBOL(drm_connector_set_vrr_capable_property);
->    * drm_connector_init_panel_orientation_property -
->    *	initialize the connecters panel_orientation property
->    * @connector: connector for which to init the panel-orientation property.
-> - * @width: width in pixels of the panel, used for panel quirk detection
-> - * @height: height in pixels of the panel, used for panel quirk detection
->    *
->    * This function should only be called for built-in panels, after setting
->    * connector->display_info.panel_orientation first (if known).
->    *
-> - * This function will check for platform specific (e.g. DMI based) quirks
-> - * overriding display_info.panel_orientation first, then if panel_orientation
-> - * is not DRM_MODE_PANEL_ORIENTATION_UNKNOWN it will attach the
-> - * "panel orientation" property to the connector.
-> + * This function will check if the panel_orientation is not
-> + * DRM_MODE_PANEL_ORIENTATION_UNKNOWN. If not, it will attach the "panel
-> + * orientation" property to the connector.
->    *
->    * Returns:
->    * Zero on success, negative errno on failure.
->    */
->   int drm_connector_init_panel_orientation_property(
-> -	struct drm_connector *connector, int width, int height)
-> +	struct drm_connector *connector)
->   {
->   	struct drm_device *dev = connector->dev;
->   	struct drm_display_info *info = &connector->display_info;
->   	struct drm_property *prop;
-> -	int orientation_quirk;
-> -
-> -	orientation_quirk = drm_get_panel_orientation_quirk(width, height);
-> -	if (orientation_quirk != DRM_MODE_PANEL_ORIENTATION_UNKNOWN)
-> -		info->panel_orientation = orientation_quirk;
->   
->   	if (info->panel_orientation == DRM_MODE_PANEL_ORIENTATION_UNKNOWN)
->   		return 0;
-> @@ -1941,6 +1933,35 @@ int drm_connector_init_panel_orientation_property(
->   }
->   EXPORT_SYMBOL(drm_connector_init_panel_orientation_property);
->   
-> +/**
-> + * drm_connector_init_panel_orientation_property_quirk -
-> + *	initialize the connecters panel_orientation property with a quirk
-> + *	override
-> + * @connector: connector for which to init the panel-orientation property.
-> + * @width: width in pixels of the panel, used for panel quirk detection
-> + * @height: height in pixels of the panel, used for panel quirk detection
-> + *
-> + * This function will check for platform specific (e.g. DMI based) quirks
-> + * overriding display_info.panel_orientation first, then if panel_orientation
-> + * is not DRM_MODE_PANEL_ORIENTATION_UNKNOWN it will attach the
-> + * "panel orientation" property to the connector.
-> + *
-> + * Returns:
-> + * Zero on success, negative errno on failure.
-> + */
-> +int drm_connector_init_panel_orientation_property_quirk(
-> +	struct drm_connector *connector, int width, int height)
-> +{
-> +	int orientation_quirk;
-> +
-> +	orientation_quirk = drm_get_panel_orientation_quirk(width, height);
-> +	if (orientation_quirk != DRM_MODE_PANEL_ORIENTATION_UNKNOWN)
-> +		connector->display_info.panel_orientation = orientation_quirk;
-> +
-> +	return drm_connector_init_panel_orientation_property(connector);
-> +}
-> +EXPORT_SYMBOL(drm_connector_init_panel_orientation_property_quirk);
-> +
->   int drm_connector_set_obj_prop(struct drm_mode_object *obj,
->   				    struct drm_property *property,
->   				    uint64_t value)
-> diff --git a/drivers/gpu/drm/i915/intel_dp.c b/drivers/gpu/drm/i915/intel_dp.c
-> index b099a9dc28fd..7d4e61cf5463 100644
-> --- a/drivers/gpu/drm/i915/intel_dp.c
-> +++ b/drivers/gpu/drm/i915/intel_dp.c
-> @@ -7282,8 +7282,8 @@ static bool intel_edp_init_connector(struct intel_dp *intel_dp,
->   	intel_panel_setup_backlight(connector, pipe);
->   
->   	if (fixed_mode)
-> -		drm_connector_init_panel_orientation_property(
-> -			connector, fixed_mode->hdisplay, fixed_mode->vdisplay);
-> +		drm_connector_init_panel_orientation_property_quirk(connector,
-> +				fixed_mode->hdisplay, fixed_mode->vdisplay);
->   
->   	return true;
->   
-> diff --git a/drivers/gpu/drm/i915/vlv_dsi.c b/drivers/gpu/drm/i915/vlv_dsi.c
-> index bfe2891eac37..fa9833dbe359 100644
-> --- a/drivers/gpu/drm/i915/vlv_dsi.c
-> +++ b/drivers/gpu/drm/i915/vlv_dsi.c
-> @@ -1650,6 +1650,7 @@ static void intel_dsi_add_properties(struct intel_connector *connector)
->   
->   	if (connector->panel.fixed_mode) {
->   		u32 allowed_scalers;
-> +		int orientation;
->   
->   		allowed_scalers = BIT(DRM_MODE_SCALE_ASPECT) | BIT(DRM_MODE_SCALE_FULLSCREEN);
->   		if (!HAS_GMCH(dev_priv))
-
-The above chunk seems to be a leftover from the previous version of this series.
-
-Otherwise this patch looks good, with this fixed you can add my:
-
-Reviewed-by: Hans de Goede <hdegoede@redhat.com>
-
-Regards,
-
-Hans
-
-
-
-> @@ -1660,9 +1661,7 @@ static void intel_dsi_add_properties(struct intel_connector *connector)
->   
->   		connector->base.state->scaling_mode = DRM_MODE_SCALE_ASPECT;
->   
-> -		connector->base.display_info.panel_orientation =
-> -			vlv_dsi_get_panel_orientation(connector);
-> -		drm_connector_init_panel_orientation_property(
-> +		drm_connector_init_panel_orientation_property_quirk(
->   				&connector->base,
->   				connector->panel.fixed_mode->hdisplay,
->   				connector->panel.fixed_mode->vdisplay);
-> diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-> index 47e749b74e5f..0468fd9a4418 100644
-> --- a/include/drm/drm_connector.h
-> +++ b/include/drm/drm_connector.h
-> @@ -1370,6 +1370,8 @@ void drm_connector_set_link_status_property(struct drm_connector *connector,
->   void drm_connector_set_vrr_capable_property(
->   		struct drm_connector *connector, bool capable);
->   int drm_connector_init_panel_orientation_property(
-> +	struct drm_connector *connector);
-> +int drm_connector_init_panel_orientation_property_quirk(
->   	struct drm_connector *connector, int width, int height);
->   int drm_connector_attach_max_bpc_property(struct drm_connector *connector,
->   					  int min, int max);
-> 
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgTWFzYWhpcm8sCgoKT24gRnJpLCAyMDE5LTA2LTIxIGF0IDIxOjM3ICswOTAwLCBNYXNhaGly
+byBZYW1hZGEgd3JvdGU6Cj4gT24gVGh1LCBKdW4gMjAsIDIwMTkgYXQgMTA6NTggQU0gPHhpYW9s
+ZWkubGlAbWVkaWF0ZWsuY29tPiB3cm90ZToKPiA+Cj4gPiBGcm9tOiBYaWFvbGVpIExpIDx4aWFv
+bGVpLmxpQG1lZGlhdGVrLmNvbT4KPiA+Cj4gPiBJdCBpcyB3YW50ZWQgdG8gdXNlIE1USyBOQU5E
+IGRyaXZlciB3aXRoIEdQTC0yLjAgb3IgTUlUIGxpY2Vuc2UuCj4gPiBCdXQgbm93IGl0IGlzIG9u
+bHkgbGljZW5zZWQgYXMgR1BMLTIuMC4KPiA+IFNvIHJlLWxpY2Vuc2UgaXQgYXMgZHVhbCBNSVQv
+R1BMIGFuZCByZXBsYWNlIGxpY2Vuc2UgdGV4dCB3aXRoCj4gPiBTUERYIHRhZy4KPiA+Cj4gPiBT
+aWduZWQtb2ZmLWJ5OiBYaWFvbGVpIExpIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNvbT4KPiA+IEFj
+a2VkLWJ5OiBKb3JnZSBSYW1pcmV6LU9ydGl6IDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5v
+cmc+Cj4gPiBBY2tlZC1ieTogUnlkZXIgTGVlIDxyeWRlci5sZWVAbWVkaWF0ZWsuY29tPgo+ID4g
+QWNrZWQtYnk6IFJhZmHFgiBNacWCZWNraSA8cmFmYWxAbWlsZWNraS5wbD4KPiA+IEFja2VkLWJ5
+OiBNaXF1ZWwgUmF5bmFsIDxtaXF1ZWwucmF5bmFsQGJvb3RsaW4uY29tPgo+ID4gQWNrZWQtYnk6
+IEJvcmlzIEJyZXppbGxvbiA8Ym9yaXMuYnJlemlsbG9uQGNvbGxhYm9yYS5jb20+Cj4gPiBBY2tl
+ZC1ieTogV2VuIFlhbmcgPHllbGxvd3JpdmVyMjAxMEBob3RtYWlsLmNvbT4KPiA+IEFja2VkLWJ5
+OiBEYW4gQ2FycGVudGVyIDxkYW4uY2FycGVudGVyQG9yYWNsZS5jb20+Cj4gPiBBY2tlZC1ieTog
+QXJuZCBCZXJnbWFubiA8YXJuZEBhcm5kYi5kZT4KPiA+IEFja2VkLWJ5OiBNYXNhaGlybyBZYW1h
+ZGEgPHlhbWFkYS5tYXNhaGlyb0Bzb2Npb25leHQuY29tPgo+ID4gLS0tCj4gPiAgZHJpdmVycy9t
+dGQvbmFuZC9yYXcvbXRrX2VjYy5jICB8IDEyICsrLS0tLS0tLS0tLQo+ID4gIGRyaXZlcnMvbXRk
+L25hbmQvcmF3L210a19lY2MuaCAgfCAgNCArLS0tCj4gPiAgZHJpdmVycy9tdGQvbmFuZC9yYXcv
+bXRrX25hbmQuYyB8IDEyICsrLS0tLS0tLS0tLQo+IAo+IAo+IAo+IAo+IAo+IGh0dHBzOi8vd3d3
+LmdudS5vcmcvbGljZW5zZXMvaWRlbnRpZnktbGljZW5zZXMtY2xlYXJseS5odG1sCj4gc2F5czoK
+PiAiQnV0IHRyb3VibGUgd2lsbCBoYXBwZW4gZXZlbiBkdXJpbmcgeW91ciBsaWZldGltZS4gV2hh
+dCBpZiB3ZSByZWxlYXNlCj4gR05VIEdQTCB2ZXJzaW9uIDQKPiB0ZW4geWVhcnMgZnJvbSBub3cs
+IGFuZCBieSB0aGF0IHRpbWUgNTAgb3RoZXJzIGhhdmUgYWRkZWQgdG8geW91cgo+IHByb2dyYW0s
+IHJlbGVhc2luZwo+IHRoZWlyIGFkZGVkIGNvZGUgdW5kZXIgR1BMLTMuMC1vbmx5IHNpbXBseSBi
+ZWNhdXNlIHlvdSBkaWQ/IFlvdSBjb3VsZAo+IGFwcHJvdmUgR1BMIDQgZm9yCj4gdGhlIHByb2dy
+YW0geW91IGluaXRpYWxseSByZWxlYXNlZCwgYnV0IGl0IHdvdWxkIGJlIGEgYmlnIGpvYiB0bwo+
+IGNvbnRhY3QgdGhlIDUwIHN1YnNlcXVlbnQKPiBkZXZlbG9wZXJzIGF0IHRoYXQgdGltZSB0byBn
+ZXQgdGhlaXIgcGVybWlzc2lvbiBmb3IgR1BMIDQgdXNhZ2Ugb2YKPiB0aGVpciBhZGRpdGlvbnMu
+Igo+IAo+IAo+IFRoaXMgaW1wbGllcyB0aGUgcmUtbGljZW5zaW5nIGlzIHJlYWxseSBkaWZmaWN1
+bHQKPiBvbmNlIHlvdSBtYWtlIGl0IGF2YWlsYWJsZSBpbiBvcGVuIHNvdXJjZS4KPiAKPiAKPiBZ
+b3Ugc2hvdWxkIG1ha2Ugc3VyZSBpZiB3ZSBoYXZlIGNvdmVyZWQgYWxsIHRoZSBjb250cmlidXRv
+cnMuCj4gKFByb2JhYmx5LCB0Z2x4IGlzIE9LLCBoZSBqdXN0IGNvbnZlcnRlZCBTUERYLikKPiAK
+PiAKPiBDb250cmlidXRvcnMgdG8gbXRrX2VjYy5jOgo+ICQgZ2l0IGxvZyAgLS1mb2xsb3cgLS1w
+cmV0dHk9Zm9ybWF0OiclYW4nCj4gZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5jIHwgc29y
+dCB8IHVuaXEKPiBBcm5kIEJlcmdtYW5uCj4gQm9yaXMgQnJlemlsbG9uCj4gRGFuIENhcnBlbnRl
+cgo+IEd1c3Rhdm8gQS4gUi4gU2lsdmEKPiBKb3JnZSBSYW1pcmV6LU9ydGl6Cj4gUm9nZXJDQyBM
+aW4KPiBSeWRlciBMZWUKPiBUaG9tYXMgR2xlaXhuZXIKPiBXZW4gWWFuZwo+IFhpYW9sZWkgTGkK
+PiAKPiAKPiBDb250cmlidXRvcnMgdG8gbXRrX2VjYy5oOgo+ICQgZ2l0IGxvZyAgLS1mb2xsb3cg
+LS1wcmV0dHk9Zm9ybWF0OiclYW4nCj4gZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5oIHwg
+c29ydCB8IHVuaXEKPiBCb3JpcyBCcmV6aWxsb24KPiBKb3JnZSBSYW1pcmV6LU9ydGl6Cj4gUm9n
+ZXJDQyBMaW4KPiBYaWFvbGVpIExpCj4gCj4gCj4gQ29udHJpYnV0b3JzIHRvIG10a19uYW5kLmM6
+Cj4gJCBnaXQgbG9nICAtLWZvbGxvdyAtLXByZXR0eT1mb3JtYXQ6JyVhbicKPiBkcml2ZXJzL210
+ZC9uYW5kL3Jhdy9tdGtfbmFuZC5jIHwgc29ydCB8IHVuaXEKPiBCb3JpcyBCcmV6aWxsb24KPiBK
+b3JnZSBSYW1pcmV6LU9ydGl6Cj4gTWFzYWhpcm8gWWFtYWRhCj4gTWlxdWVsIFJheW5hbAo+IFJh
+ZmHFgiBNacWCZWNraQo+IFJvZ2VyQ0MgTGluCj4gUnlkZXIgTGVlCj4gVGhvbWFzIEdsZWl4bmVy
+Cj4gV2VpIFlvbmdqdW4KPiBYaWFvbGVpIExpCj4gCj4gCj4gCj4gRm9yIGV4YW1wbGUsIGhvdyBh
+Ym91dCB0aGUgYXV0aG9yIG9mIHRoZSBmb2xsb3dpbmcgY29tbWl0Pwo+IAo+IEhlIHdvcmtzIGZv
+ciB0aGUgc2FtZSBjb21wYW55LCBzbyBqdXN0IGFzayBoaW0uCj4gCj4gCj4gY29tbWl0IGI0NWVl
+NTUwMWVkZTlhMzY5ZTliYzIwZWRjYTUwODE5M2I4NDhkMjUKPiBBdXRob3I6IFJvZ2VyQ0MgTGlu
+IDxyb2dlcmNjLmxpbkBtZWRpYXRlay5jb20+Cj4gRGF0ZTogICBUaHUgTm92IDMwIDIyOjEwOjQ0
+IDIwMTcgKzA4MDAKPiAKPiAgICAgbXRkOiBuYW5kOiBtdGs6IFN1cHBvcnQgZGlmZmVyZW50IE1U
+SyBOQU5EIGZsYXNoIGNvbnRyb2xsZXIgSVAKPiAKPiAKClRoYW5rcyBmb3IgeW91ciByZW1pbmRp
+bmcuClJvZ2VyIGhhcyBhbHJlYWR5IHNlbnQgQUNLIGZvciB0aGlzIHBhdGNoLiBJdCBpcyBteSBm
+YXVsdC4gSSBmb3Jnb3QgdG8KYWRkIGhpbSBpbiBBY2tlZC1ieSBsaXN0LgoKQWN0dWFsbHksIHdl
+IGhhdmUgc3BlbnQgdG9vIG11Y2ggdGltZSB0byBhc2sgZm9yIHJlc3BvbnNlIGZyb20gYWxsIE1U
+SwpOQU5EIGRyaXZlciBjb250cmlidXRvcnMuIFRoYW5rcyBmb3IgUmFmYWwncyB3b3JrLCBoZSBo
+ZWxwZWQgbWUgZmluZCBhbGwKY29udHJpYnV0b3JzIGFzIHlvdSBkaWQgaGVyZS4KClVwIHRvIG5v
+dywgYWxsIG1ham9yIGNvbnRyaWJ1dG9ycyBzZW50IEFDS3MgZm9yIHRoaXMgcGF0Y2guIFNvLCBJ
+IHNlbnQKZm9ybWFsIHBhdGNoIHRvIGZpbmlzaCB0aGlzIHJlLWxpY2Vuc2UgY2hhbmdlLgoKVGhh
+bmtzLApYaWFvbGVpCgo+IAo+IAo+IAo+IAo+ID4gIDMgZmlsZXMgY2hhbmdlZCwgNSBpbnNlcnRp
+b25zKCspLCAyMyBkZWxldGlvbnMoLSkKPiA+Cj4gPiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9tdGQv
+bmFuZC9yYXcvbXRrX2VjYy5jIGIvZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5jCj4gPiBp
+bmRleCAwNWIwYzE5ZDcyZDkuLjc0NTk1YjY0NGI3YyAxMDA2NDQKPiA+IC0tLSBhL2RyaXZlcnMv
+bXRkL25hbmQvcmF3L210a19lY2MuYwo+ID4gKysrIGIvZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRr
+X2VjYy5jCj4gPiBAQCAtMSwxNyArMSw5IEBACj4gPiArLy8gU1BEWC1MaWNlbnNlLUlkZW50aWZp
+ZXI6IEdQTC0yLjAgT1IgTUlUCj4gPiAgLyoKPiA+ICAgKiBNVEsgRUNDIGNvbnRyb2xsZXIgZHJp
+dmVyLgo+ID4gICAqIENvcHlyaWdodCAoQykgMjAxNiAgTWVkaWFUZWsgSW5jLgo+ID4gICAqIEF1
+dGhvcnM6ICAgIFhpYW9sZWkgTGkgICAgICAgICAgICAgIDx4aWFvbGVpLmxpQG1lZGlhdGVrLmNv
+bT4KPiA+ICAgKiAgICAgICAgICAgICBKb3JnZSBSYW1pcmV6LU9ydGl6ICAgICA8am9yZ2UucmFt
+aXJlei1vcnRpekBsaW5hcm8ub3JnPgo+ID4gLSAqCj4gPiAtICogVGhpcyBwcm9ncmFtIGlzIGZy
+ZWUgc29mdHdhcmU7IHlvdSBjYW4gcmVkaXN0cmlidXRlIGl0IGFuZC9vciBtb2RpZnkKPiA+IC0g
+KiBpdCB1bmRlciB0aGUgdGVybXMgb2YgdGhlIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHZl
+cnNpb24gMiBhcwo+ID4gLSAqIHB1Ymxpc2hlZCBieSB0aGUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0
+aW9uLgo+ID4gLSAqCj4gPiAtICogVGhpcyBwcm9ncmFtIGlzIGRpc3RyaWJ1dGVkIGluIHRoZSBo
+b3BlIHRoYXQgaXQgd2lsbCBiZSB1c2VmdWwsCj4gPiAtICogYnV0IFdJVEhPVVQgQU5ZIFdBUlJB
+TlRZOyB3aXRob3V0IGV2ZW4gdGhlIGltcGxpZWQgd2FycmFudHkgb2YKPiA+IC0gKiBNRVJDSEFO
+VEFCSUxJVFkgb3IgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UuICBTZWUgdGhlCj4g
+PiAtICogR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2UgZm9yIG1vcmUgZGV0YWlscy4KPiA+ICAg
+Ki8KPiA+Cj4gPiAgI2luY2x1ZGUgPGxpbnV4L3BsYXRmb3JtX2RldmljZS5oPgo+ID4gQEAgLTYw
+NCw0ICs1OTYsNCBAQCBtb2R1bGVfcGxhdGZvcm1fZHJpdmVyKG10a19lY2NfZHJpdmVyKTsKPiA+
+Cj4gPiAgTU9EVUxFX0FVVEhPUigiWGlhb2xlaSBMaSA8eGlhb2xlaS5saUBtZWRpYXRlay5jb20+
+Iik7Cj4gPiAgTU9EVUxFX0RFU0NSSVBUSU9OKCJNVEsgTmFuZCBFQ0MgRHJpdmVyIik7Cj4gPiAt
+TU9EVUxFX0xJQ0VOU0UoIkdQTCIpOwo+ID4gK01PRFVMRV9MSUNFTlNFKCJEdWFsIE1JVC9HUEwi
+KTsKPiA+IGRpZmYgLS1naXQgYS9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfZWNjLmggYi9kcml2
+ZXJzL210ZC9uYW5kL3Jhdy9tdGtfZWNjLmgKPiA+IGluZGV4IGE0NTVkZjA4MDk1Mi4uMGU0OGMz
+NmU2Y2EwIDEwMDY0NAo+ID4gLS0tIGEvZHJpdmVycy9tdGQvbmFuZC9yYXcvbXRrX2VjYy5oCj4g
+PiArKysgYi9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfZWNjLmgKPiA+IEBAIC0xLDEyICsxLDEw
+IEBACj4gPiArLyogU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEdQTC0yLjAgT1IgTUlUICovCj4g
+PiAgLyoKPiA+ICAgKiBNVEsgU0RHMSBFQ0MgY29udHJvbGxlcgo+ID4gICAqCj4gPiAgICogQ29w
+eXJpZ2h0IChjKSAyMDE2IE1lZGlhdGVrCj4gPiAgICogQXV0aG9yczogICAgWGlhb2xlaSBMaSAg
+ICAgICAgICAgICAgPHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPgo+ID4gICAqICAgICAgICAgICAg
+IEpvcmdlIFJhbWlyZXotT3J0aXogICAgIDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5vcmc+
+Cj4gPiAtICogVGhpcyBwcm9ncmFtIGlzIGZyZWUgc29mdHdhcmU7IHlvdSBjYW4gcmVkaXN0cmli
+dXRlIGl0IGFuZC9vciBtb2RpZnkgaXQKPiA+IC0gKiB1bmRlciB0aGUgdGVybXMgb2YgdGhlIEdO
+VSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHZlcnNpb24gMiBhcyBwdWJsaXNoZWQKPiA+IC0gKiBi
+eSB0aGUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uLgo+ID4gICAqLwo+ID4KPiA+ICAjaWZuZGVm
+IF9fRFJJVkVSU19NVERfTkFORF9NVEtfRUNDX0hfXwo+ID4gZGlmZiAtLWdpdCBhL2RyaXZlcnMv
+bXRkL25hbmQvcmF3L210a19uYW5kLmMgYi9kcml2ZXJzL210ZC9uYW5kL3Jhdy9tdGtfbmFuZC5j
+Cj4gPiBpbmRleCA2MTdmOTY1NmEwNDUuLjM3M2Q0N2QxYmE0YyAxMDA2NDQKPiA+IC0tLSBhL2Ry
+aXZlcnMvbXRkL25hbmQvcmF3L210a19uYW5kLmMKPiA+ICsrKyBiL2RyaXZlcnMvbXRkL25hbmQv
+cmF3L210a19uYW5kLmMKPiA+IEBAIC0xLDE3ICsxLDkgQEAKPiA+ICsvLyBTUERYLUxpY2Vuc2Ut
+SWRlbnRpZmllcjogR1BMLTIuMCBPUiBNSVQKPiA+ICAvKgo+ID4gICAqIE1USyBOQU5EIEZsYXNo
+IGNvbnRyb2xsZXIgZHJpdmVyLgo+ID4gICAqIENvcHlyaWdodCAoQykgMjAxNiBNZWRpYVRlayBJ
+bmMuCj4gPiAgICogQXV0aG9yczogICAgWGlhb2xlaSBMaSAgICAgICAgICAgICAgPHhpYW9sZWku
+bGlAbWVkaWF0ZWsuY29tPgo+ID4gICAqICAgICAgICAgICAgIEpvcmdlIFJhbWlyZXotT3J0aXog
+ICAgIDxqb3JnZS5yYW1pcmV6LW9ydGl6QGxpbmFyby5vcmc+Cj4gPiAtICoKPiA+IC0gKiBUaGlz
+IHByb2dyYW0gaXMgZnJlZSBzb2Z0d2FyZTsgeW91IGNhbiByZWRpc3RyaWJ1dGUgaXQgYW5kL29y
+IG1vZGlmeQo+ID4gLSAqIGl0IHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgR05VIEdlbmVyYWwgUHVi
+bGljIExpY2Vuc2UgdmVyc2lvbiAyIGFzCj4gPiAtICogcHVibGlzaGVkIGJ5IHRoZSBGcmVlIFNv
+ZnR3YXJlIEZvdW5kYXRpb24uCj4gPiAtICoKPiA+IC0gKiBUaGlzIHByb2dyYW0gaXMgZGlzdHJp
+YnV0ZWQgaW4gdGhlIGhvcGUgdGhhdCBpdCB3aWxsIGJlIHVzZWZ1bCwKPiA+IC0gKiBidXQgV0lU
+SE9VVCBBTlkgV0FSUkFOVFk7IHdpdGhvdXQgZXZlbiB0aGUgaW1wbGllZCB3YXJyYW50eSBvZgo+
+ID4gLSAqIE1FUkNIQU5UQUJJTElUWSBvciBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9T
+RS4gIFNlZSB0aGUKPiA+IC0gKiBHTlUgR2VuZXJhbCBQdWJsaWMgTGljZW5zZSBmb3IgbW9yZSBk
+ZXRhaWxzLgo+ID4gICAqLwo+ID4KPiA+ICAjaW5jbHVkZSA8bGludXgvcGxhdGZvcm1fZGV2aWNl
+Lmg+Cj4gPiBAQCAtMTY1Myw2ICsxNjQ1LDYgQEAgc3RhdGljIHN0cnVjdCBwbGF0Zm9ybV9kcml2
+ZXIgbXRrX25mY19kcml2ZXIgPSB7Cj4gPgo+ID4gIG1vZHVsZV9wbGF0Zm9ybV9kcml2ZXIobXRr
+X25mY19kcml2ZXIpOwo+ID4KPiA+IC1NT0RVTEVfTElDRU5TRSgiR1BMIik7Cj4gPiArTU9EVUxF
+X0xJQ0VOU0UoIkR1YWwgTUlUL0dQTCIpOwo+ID4gIE1PRFVMRV9BVVRIT1IoIlhpYW9sZWkgTGkg
+PHhpYW9sZWkubGlAbWVkaWF0ZWsuY29tPiIpOwo+ID4gIE1PRFVMRV9ERVNDUklQVElPTigiTVRL
+IE5hbmQgRmxhc2ggQ29udHJvbGxlciBEcml2ZXIiKTsKPiA+IC0tCj4gPiAyLjE4LjAKPiA+Cj4g
+Pgo+ID4gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fCj4gPiBMaW51eCBNVEQgZGlzY3Vzc2lvbiBtYWlsaW5nIGxpc3QKPiA+IGh0dHA6Ly9saXN0
+cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbXRkLwo+IAo+IAo+IAoKCgpf
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRp
+YXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRw
+Oi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
