@@ -2,51 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4281851C77
-	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 22:37:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35EBF51D3A
+	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 23:40:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=szbBcuG4sVFL9ob92qEk81YfoesqU5FnmyHukdzIiUw=; b=upAMcRvvSBt2uW
-	eCUuOmPo+nDdGBZfJqsx/Y+9FeaxhqKmYG4E95xVQt2fvhZrTGv379LgimrtpYWYwwbJckK1OroCh
-	n1xltOiQl6DzkHD98yUyvBAU5yure1+nwg8MM3PSa/eGXUU8SCOoGjFXWDvMh7+IX3wczICfTvrCY
-	BibrLDEJVrV077hszBfQfGgudoAY0s82Psk/Q61DtyC0W49LdPZnkVqN+1+mIOlh+z8Cn2zjLBgIq
-	R2/e1Z77Mn9a+/rHZo+LNCKXiJbuiDITKxw9APeYMwUFqBaHT9ijC0ZdwWkUmpQ++mg1GUGC0fyfr
-	Sw5LnT3Dw7iBpy7hANmg==;
+	List-Owner; bh=e1C7S8t7h8OA91Dsq70AViGzX03NP2Nfu09ZpW8Lr4M=; b=iR96TIdQLMP/G5
+	VEkwIbI0SIZ07kD5OqmGbWWsCE5AIqT/QwAfr0w/ad7oSBsko0iOcydWmRz14+jyL9LPIcThttjnP
+	gBwUjUhHlpNqfMQA0KOtMDn684X8+n1WKH7Oj+fIljejOQNlVxipLWwxP7lbevPRiZkRxBVcGKbMN
+	KiAX+gRSjdXpC9M90j4CnpBR7vbM0oCz7OUyBEWWK4x/m1L3ll96ocxWkrH05XbWyrpbNvfpnVfex
+	gaRRJvrMX8k9Ty0pNzYz3RWGAX/oF+1lL53Gp0s2mmBxp9PI4FH4esKfflqWVa+qz/HsKQuzLik0j
+	0B8LHp8VNjMgn29H/hWg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfVi3-0001pn-S4; Mon, 24 Jun 2019 20:37:03 +0000
+	id 1hfWhj-0004wT-1S; Mon, 24 Jun 2019 21:40:47 +0000
 Received: from asavdk4.altibox.net ([109.247.116.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfVho-0001ep-Av; Mon, 24 Jun 2019 20:36:50 +0000
+ id 1hfWhW-0004nz-UW; Mon, 24 Jun 2019 21:40:36 +0000
 Received: from ravnborg.org (unknown [158.248.194.18])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by asavdk4.altibox.net (Postfix) with ESMTPS id 9A6F28032A;
- Mon, 24 Jun 2019 22:36:38 +0200 (CEST)
-Date: Mon, 24 Jun 2019 22:36:32 +0200
+ by asavdk4.altibox.net (Postfix) with ESMTPS id 2D19D803EB;
+ Mon, 24 Jun 2019 23:40:28 +0200 (CEST)
+Date: Mon, 24 Jun 2019 23:40:27 +0200
 From: Sam Ravnborg <sam@ravnborg.org>
-To: Derek Basehore <dbasehore@chromium.org>
-Subject: Re: [PATCH v3 1/4] drm/panel: Add helper for reading DT rotation
-Message-ID: <20190624203632.GA12316@ravnborg.org>
-References: <20190622034105.188454-1-dbasehore@chromium.org>
- <20190622034105.188454-2-dbasehore@chromium.org>
+To: Masahiro Yamada <yamada.masahiro@socionext.com>
+Subject: Re: [PATCH] kbuild: compile-test global headers to ensure they are
+ self-contained
+Message-ID: <20190624214027.GA14740@ravnborg.org>
+References: <20190621163931.19397-1-yamada.masahiro@socionext.com>
+ <20190621175134.GB16409@ravnborg.org>
+ <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
+ <20190622130635.GA24262@ravnborg.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190622034105.188454-2-dbasehore@chromium.org>
+In-Reply-To: <20190622130635.GA24262@ravnborg.org>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CMAE-Score: 0
 X-CMAE-Analysis: v=2.3 cv=VcLZwmh9 c=1 sm=1 tr=0
  a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=cm27Pg_UAAAA:8
- a=Ikd4Dj_1AAAA:8 a=hD3m9dJnucmI1XD2aicA:9 a=CjuIK1q_8ugA:10
- a=xmb-EsYY8bH0VWELuYED:22
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10
+ a=3u5kl7jyWrYC5LYJQXIA:9 a=CjuIK1q_8ugA:10
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190624_133648_735097_362754E3 
-X-CRM114-Status: GOOD (  21.42  )
+X-CRM114-CacheID: sfid-20190624_144035_344270_0872B358 
+X-CRM114-Status: GOOD (  15.96  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -67,153 +69,131 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>,
- Maxime Ripard <maxime.ripard@bootlin.com>, intel-gfx@lists.freedesktop.org,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- linux-kernel@vger.kernel.org, Jani Nikula <jani.nikula@linux.intel.com>,
- David Airlie <airlied@linux.ie>, Thierry Reding <thierry.reding@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, dri-devel@lists.freedesktop.org,
- Daniel Vetter <daniel@ffwll.ch>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Sean Paul <sean@poorly.run>, linux-arm-kernel@lists.infradead.org
+Cc: Michal Marek <michal.lkml@markovi.net>,
+ Linux Kbuild mailing list <linux-kbuild@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Derek.
-
-On Fri, Jun 21, 2019 at 08:41:02PM -0700, Derek Basehore wrote:
-> This adds a helper function for reading the rotation (panel
-> orientation) from the device tree.
+Hi Masahiro
+> > ...
+> On this level it would be better to do:
+> header-test-y += $(call find_all_header_files)
 > 
-> Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> ---
->  drivers/gpu/drm/drm_panel.c | 42 +++++++++++++++++++++++++++++++++++++
->  include/drm/drm_panel.h     |  7 +++++++
->  2 files changed, 49 insertions(+)
-> 
-> diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
-> index dbd5b873e8f2..507099af4b57 100644
-> --- a/drivers/gpu/drm/drm_panel.c
-> +++ b/drivers/gpu/drm/drm_panel.c
-> @@ -172,6 +172,48 @@ struct drm_panel *of_drm_find_panel(const struct device_node *np)
->  	return ERR_PTR(-EPROBE_DEFER);
->  }
->  EXPORT_SYMBOL(of_drm_find_panel);
-> +
-> +/**
-> + * of_drm_get_panel_orientation - look up the rotation of the panel using a
-> + * device tree node
-> + * @np: device tree node of the panel
-> + * @orientation: orientation enum to be filled in
-> + *
-> + * Looks up the rotation of a panel in the device tree. The rotation in the
-> + * device tree is counter clockwise.
-> + *
-> + * Return: 0 when a valid rotation value (0, 90, 180, or 270) is read or the
-> + * rotation property doesn't exist. -EERROR otherwise.
-> + */
-This function should better spell out why it talks about rotation versus
-orientation.
+> # drm files that are not self-contained
+> header-test-n += drm_legacy.h
 
-It happens that orientation, due to bad design choices is named rotation
-in DT.
-But then this function is all about orientation, that just happens to be
-named rotation in DT.
-And the comments associated to the function should reflect this.
+I made a quick hack on top of your patch to demonstrate
+the ideas.
+See patch below.
 
-something like:
-/**
- * of_drm_get_panel_orientation - look up the orientation of the panel using a
- * device tree node
- * @np: device tree node of the panel
- * @orientation: orientation enum to be filled in
- *
- * Looks up the rotation property of a panel in the device tree.
- * The orientation of the panel is expressed as a property named
- * "rotation" in the device tree.
- * The rotation in the device tree is counter clockwise.
- *
- * Return: 0 when a valid orientation value (0, 90, 180, or 270) is read or the
- * rotation property doesn't exist. -EERROR otherwise.
- */
+When all header files below include/drm are self-contained it will be a
+single line:
 
-This would at least remove some of my confusiuon.
-And then maybe add a bit more explanation to the binding property
-description too.
+    header-test-y += $(all_headers_with_subdir)
+
+But for now I skipped the subdirs as they was not in too good shape.
+
+My gmake foo escapted me tonight, so $(call all_headers_with_subdir)
+did not really do what I wanted. Which is why I use the macro direct.
+The main part is that we have support in the generic part to find the
+header files and to filter out header files we do not want to check.
+
+Later we may extend the checking to something more than that they
+can build. We could check for CONFIG_ symbols in uapi/ and more.
+
+Another note. Maybe we should name the files Kbuild, as this is what we
+usually do in include/*
+
+But I also sometimes regret that I introduced this second name.
+Back then the idea was to globally rename Makefile => Kbuild.
+But I never advocated this, as the pain was much bigger than the gain.
+Another thing to be cleaned up one day maybe...
 
 	Sam
 
 
-
-
-
-
-
-
-
-
-
-
-> +int of_drm_get_panel_orientation(const struct device_node *np,
-> +				 enum drm_panel_orientation *orientation)
-> +{
-> +	int rotation, ret;
-> +
-> +	ret = of_property_read_u32(np, "rotation", &rotation);
-> +	if (ret == -EINVAL) {
-> +		/* Don't return an error if there's no rotation property. */
-> +		*orientation = DRM_MODE_PANEL_ORIENTATION_UNKNOWN;
-> +		return 0;
-> +	}
-> +
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	if (rotation == 0)
-> +		*orientation = DRM_MODE_PANEL_ORIENTATION_NORMAL;
-> +	else if (rotation == 90)
-> +		*orientation = DRM_MODE_PANEL_ORIENTATION_RIGHT_UP;
-> +	else if (rotation == 180)
-> +		*orientation = DRM_MODE_PANEL_ORIENTATION_BOTTOM_UP;
-> +	else if (rotation == 270)
-> +		*orientation = DRM_MODE_PANEL_ORIENTATION_LEFT_UP;
-> +	else
-> +		return -EINVAL;
-> +
-> +	return 0;
-> +}
-> +EXPORT_SYMBOL(of_drm_get_panel_orientation);
->  #endif
->  
->  MODULE_AUTHOR("Thierry Reding <treding@nvidia.com>");
-> diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
-> index 8c738c0e6e9f..3564952f1a4f 100644
-> --- a/include/drm/drm_panel.h
-> +++ b/include/drm/drm_panel.h
-> @@ -197,11 +197,18 @@ int drm_panel_detach(struct drm_panel *panel);
->  
->  #if defined(CONFIG_OF) && defined(CONFIG_DRM_PANEL)
->  struct drm_panel *of_drm_find_panel(const struct device_node *np);
-> +int of_drm_get_panel_orientation(const struct device_node *np,
-> +				 enum drm_panel_orientation *orientation);
->  #else
->  static inline struct drm_panel *of_drm_find_panel(const struct device_node *np)
->  {
->  	return ERR_PTR(-ENODEV);
->  }
-> +int of_drm_get_panel_orientation(const struct device_node *np,
-> +				 enum drm_panel_orientation *orientation)
-> +{
-> +	return -ENODEV;
-> +}
->  #endif
->  
->  #endif
-> -- 
-> 2.22.0.410.gd8fdbe21b5-goog
+diff --git a/include/Makefile b/include/Makefile
+index 68a76ac732c3..09e854d504f6 100644
+--- a/include/Makefile
++++ b/include/Makefile
+@@ -1,5 +1,7 @@
+ # SPDX-License-Identifier: GPL-2.0-only
+ 
++subdir-y += drm
++
+ # extend the test coverage when existing errors are fixed
+ 
+ header-test += linux/w*.h
+diff --git a/include/drm/Makefile b/include/drm/Makefile
+new file mode 100644
+index 000000000000..61a762964ef0
+--- /dev/null
++++ b/include/drm/Makefile
+@@ -0,0 +1,21 @@
++# Verify all header files
++
++header-test-y += $(all_headers)
++
++# Blacklist header files that do not yet pass the test
++# Keep list sorted
++header-test-n += ati_pcigart.h
++header-test-n += drm_audio_component.h
++header-test-n += drm_auth.h
++header-test-n += drm_debugfs.h
++header-test-n += drm_debugfs_crc.h
++header-test-n += drm_displayid.h
++header-test-n += drm_fb_cma_helper.h
++header-test-n += drm_fixed.h
++header-test-n += drm_format_helper.h
++header-test-n += drm_lease.h
++header-test-n += drm_legacy.h
++header-test-n += drm_plane_helper.h
++header-test-n += drm_rect.h
++header-test-n += i915_component.h
++header-test-n += intel-gtt.h
+diff --git a/scripts/Kbuild.include b/scripts/Kbuild.include
+index 0ae07e83d393..df29c65c6490 100644
+--- a/scripts/Kbuild.include
++++ b/scripts/Kbuild.include
+@@ -66,6 +66,20 @@ define filechk
+ 	fi
+ endef
+ 
++######
++# Support functions for header-test
++define all_headers
++	$(patsubst $(srctree)/$(src)/%,%,	\
++	$(wildcard $(srctree)/$(src)/*.h))
++endef
++
++define all_headers_with_subdir
++	$(patsubst $(srctree)/$(src)/%,%,	\
++	$(shell find $(srctree)/$(src)/ '*.h'))
++endef
++
++
++
+ ######
+ # gcc support functions
+ # See documentation in Documentation/kbuild/makefiles.txt
+diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
+index 3e630fcaffd1..e2f765e9d1e1 100644
+--- a/scripts/Makefile.lib
++++ b/scripts/Makefile.lib
+@@ -67,6 +67,7 @@ extra-$(CONFIG_OF_ALL_DTBS) += $(patsubst %.dtb,%.dt.yaml, $(dtb-))
+ endif
+ 
+ # Test self-contained headers
++header-test-y := $(filter-out $(header-test-n), $(header-test-y))
+ extra-$(CONFIG_HEADER_TEST) += $(patsubst %.h,%.hdrtest.o,$(header-test-y))
+ 
+ # Add subdir path
 
 _______________________________________________
 Linux-mediatek mailing list
