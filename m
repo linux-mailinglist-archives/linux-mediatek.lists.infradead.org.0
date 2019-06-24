@@ -2,80 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E5CCC510D4
-	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 17:40:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1320951902
+	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 18:50:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xGem2ML8PbAEO7uOYFg09YutwM1asWAed8mL9uXpW3I=; b=cWL7UcVQJcQv3B
-	uMBZc/VvalNIwoEcemZBoFWC6pk8wetKkK3wjK82dpkZ1NILMNUNtYhFSMBRBK7xtQjQzANuYWrI0
-	/QOikkFQwUBLLm+KyJwD7Jk0zGZ9HLqtyylkSOjj8CCAYJxBcn1LziBaf/JYDBCHjigqWskic9avF
-	xymdxYX4eYoy9HsnNSggXTDyg2LKy/Kd9KSAezJrmqL3Q4PrFPbagUQdnTTlTx8V0Ph7+4Yba5s8Z
-	rPhnATRySp9x6sauKyU/oH4LV6uLnf2SSrV15rOmc2qiXKDHLotS6XwY083jMulMsrpgp7qKw/VA0
-	HB/NazAbk+xM7tkULaew==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ghj9CaBsjfaihXS488/s8ZG+0SqJrYUd5cO2NBKRBhU=; b=nIi8+VoIIYYBlS
+	v/XcQ8PVpsyMp30ams3Gdlc9MjMiisEiZAD3d4GOdoeXNPpNXbWqCkTvkL7suJ++fxeCSptQf+euQ
+	+1Vh5W2K/29ENZILz3pDMjcKgZ41D8r8RfJrTWbsfSfqARUyZiiswuAhxRr6+GW7M27WDiPN7emDD
+	gY1hXA/KG7T0QX/X8uPXsOy3zPoUjzRFwJNM0wJ7xUDgv1qzWwgnX4Mh8jzo+vJBqtE3cR7YwYHUE
+	S0UXcfkNod3HTsjn6yGj4sKASZ9mAclPGA4IA/uVjNKMc3S+46YgLgc8pSH43VS3SBQPYZHxyjCL+
+	bWr8mtPiUfjwevNyn1+Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfR4o-0002Np-8G; Mon, 24 Jun 2019 15:40:14 +0000
-Received: from pandora.armlinux.org.uk
- ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
+	id 1hfSAz-0006jj-23; Mon, 24 Jun 2019 16:50:41 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfR4j-0001kX-Hj
- for linux-mediatek@lists.infradead.org; Mon, 24 Jun 2019 15:40:12 +0000
+ id 1hfSAw-0006jP-8W; Mon, 24 Jun 2019 16:50:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:
- Content-Transfer-Encoding:Content-Type:MIME-Version:References:Message-ID:
- Subject:Cc:To:From:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=BtLJYS2pbo8gfBfK3+LW+FXb5v0L7I5asBNqbGWt/ss=; b=NbqKe19XKOrUqUMQYY6OHxVFI
- lXReB/NBf2iwMArBO9z8xRF1R2HLsIobpo6zlyBoSKDRtM2XXbHE+gFHJs1pLPOq+m4/LCgxqaU/e
- W+1HjvaPJbkedxXAI+plW4Hu63Lg1XC5iGrn40pT+ZeHbxTrPghVWs+2KYVmYu8mMVA5Ygq1cFepQ
- zYO+6FqXUCQ70SvCjKZ0Cd4HUDZcHBMHMqfeU94kNK8AoIyntrF8Lche09yfw0lJwM+OkDjGfm+q1
- nQma/qQ4AQArsvTowQXWbbB5VoRrl/FFj2fqiXZv3d+1aQ34h9MuVrNWDyaoeTUXxfTMn2nMNaXaK
- vynDdG3VA==;
-Received: from shell.armlinux.org.uk
- ([2002:4e20:1eda:1:5054:ff:fe00:4ec]:59046)
- by pandora.armlinux.org.uk with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <linux@armlinux.org.uk>)
- id 1hfR4U-0000b6-Lo; Mon, 24 Jun 2019 16:39:55 +0100
-Received: from linux by shell.armlinux.org.uk with local (Exim 4.89)
- (envelope-from <linux@shell.armlinux.org.uk>)
- id 1hfR4Q-0006Qa-Nx; Mon, 24 Jun 2019 16:39:50 +0100
-Date: Mon, 24 Jun 2019 16:39:50 +0100
-From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
-Subject: Re: [PATCH RFC net-next 1/5] net: dsa: mt7530: Convert to PHYLINK API
-Message-ID: <20190624153950.hdsuhrvfd77heyor@shell.armlinux.org.uk>
-References: <20190624145251.4849-1-opensource@vdorst.com>
- <20190624145251.4849-2-opensource@vdorst.com>
+ d=infradead.org; s=merlin.20170209; h=Content-Type:MIME-Version:Message-ID:
+ Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=W/VEZbdGhUjH117MWiO4d1Ef5HTQzP6Qget39bh1OFc=; b=RTajwX88KgEy6Vvum/1kuLKzh6
+ fwpB5b6gOLbWafSNETBy8R9NscyoSMEobsA6YOmbM7YD3cV7LAzp+M1xmsziRSqCLLdUXMcCQMUv3
+ +0VK56QUOuO2gLYe9O1VCEH8H45fzNRki3xKIKgi1WYo0ROiSt+p+fYtjikT/iNKR9KxJlQa+wxIQ
+ nUgcQWtO1sZD0MB49h08xVYFYdIiHpuTr1ECn73NtK2WkYTOqIkRi3zYESWp7acoGvNKu/e1BUwy0
+ rVy4ljL9gQowk9V7MC6gK7o6Smv+qS/FSncd/tpmT4eXFKUZ7yHXByj2QtHedMc+5USAjXFYYEvZO
+ 5lIXxw8g==;
+Received: from j217100.upc-j.chello.nl ([24.132.217.100]
+ helo=hirez.programming.kicks-ass.net)
+ by merlin.infradead.org with esmtpsa (Exim 4.92 #3 (Red Hat Linux))
+ id 1hfSAX-0001KU-Je; Mon, 24 Jun 2019 16:50:13 +0000
+Received: by hirez.programming.kicks-ass.net (Postfix, from userid 1000)
+ id 5A0AD20A58BED; Mon, 24 Jun 2019 18:50:12 +0200 (CEST)
+Date: Mon, 24 Jun 2019 18:50:12 +0200
+From: Peter Zijlstra <peterz@infradead.org>
+To: David Howells <dhowells@redhat.com>,
+ Paul McKenney <paulmck@linux.vnet.ibm.com>,
+ Will Deacon <will.deacon@arm.com>
+Subject: [RFC][PATCH] wake_up_var() memory ordering
+Message-ID: <20190624165012.GH3436@hirez.programming.kicks-ass.net>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190624145251.4849-2-opensource@vdorst.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190624_084010_214661_2620DCC1 
-X-CRM114-Status: GOOD (  23.88  )
-X-Spam-Score: -2.5 (--)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
- [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,385 +61,699 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, f.fainelli@gmail.com, frank-w@public-files.de,
- netdev@vger.kernel.org, sean.wang@mediatek.com, linux-mips@vger.kernel.org,
- vivien.didelot@gmail.com, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, davem@davemloft.net
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: Martin Brandenburg <martin@omnibond.com>, linux-cachefs@redhat.com,
+ Mike Snitzer <snitzer@redhat.com>, linux-aio@kvack.org,
+ David Airlie <airlied@linux.ie>, samba-technical@lists.samba.org,
+ Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ dri-devel@lists.freedesktop.org, David Howells <dhowells@redhat.com>,
+ Chris Mason <clm@fb.com>, dm-devel@redhat.com, keyrings@vger.kernel.org,
+ Ingo Molnar <mingo@redhat.com>, linux-afs@lists.infradead.org,
+ Alasdair Kergon <agk@redhat.com>, Mike Marshall <hubcap@omnibond.com>,
+ linux-cifs@vger.kernel.org, rds-devel@oss.oracle.com,
+ Andreas Gruenbacher <agruenba@redhat.com>, linux-rdma@vger.kernel.org,
+ James Morris <jmorris@namei.org>, cluster-devel@redhat.com,
+ Peter Zijlstra <peterz@infradead.org>, Antti Palosaari <crope@iki.fi>,
+ Matthias Brugger <matthias.bgg@gmail.com>, intel-gfx@lists.freedesktop.org,
+ devel@lists.orangefs.org, "Serge E. Hallyn" <serge@hallyn.com>,
+ Santosh Shilimkar <santosh.shilimkar@oracle.com>,
+ Johan Hedberg <johan.hedberg@gmail.com>, Marcel Holtmann <marcel@holtmann.org>,
+ Sean Wang <sean.wang@mediatek.com>, Josef Bacik <josef@toxicpanda.com>,
+ Jani Nikula <jani.nikula@linux.intel.com>, linux-fsdevel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Alexander Viro <viro@zeniv.linux.org.uk>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>, David Sterba <dsterba@suse.com>,
+ MauroCarvalho Chehab <mchehab@kernel.org>,
+ Trond Myklebust <trond.myklebust@hammerspace.com>,
+ linux-arm-kernel@lists.infradead.org, "J. Bruce Fields" <bfields@fieldses.org>,
+ linux-nfs@vger.kernel.org, netdev@vger.kernel.org,
+ Jeff Layton <jlayton@kernel.org>, linux-kernel@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, Steve French <sfrench@samba.org>,
+ linux-bluetooth@vger.kernel.org, linux-security-module@vger.kernel.org,
+ Benjamin LaHaise <bcrl@kvack.org>, Daniel Vetter <daniel@ffwll.ch>,
+ Bob Peterson <rpeterso@redhat.com>, linux-media@vger.kernel.org,
+ Anna Schumaker <anna.schumaker@netapp.com>, linux-btrfs@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Hi all,
 
-On Mon, Jun 24, 2019 at 04:52:47PM +0200, Ren=E9 van Dorst wrote:
-> Convert mt7530 to PHYLINK API
-> =
+I tried using wake_up_var() today and accidentally noticed that it
+didn't imply an smp_mb() and specifically requires it through
+wake_up_bit() / waitqueue_active().
 
-> Signed-off-by: Ren=E9 van Dorst <opensource@vdorst.com>
-> ---
->  drivers/net/dsa/mt7530.c | 237 +++++++++++++++++++++++++++++----------
->  drivers/net/dsa/mt7530.h |   9 ++
->  2 files changed, 187 insertions(+), 59 deletions(-)
-> =
+Now, wake_up_bit() doesn't imply the barrier because it is assumed to be
+used with the atomic bitops API which either implies (test_and_clear) or
+only needs smp_mb__after_atomic(), which is 'much' cheaper than an
+unconditional smp_mb().
 
-> diff --git a/drivers/net/dsa/mt7530.c b/drivers/net/dsa/mt7530.c
-> index 3181e95586d6..9c5e4dd00826 100644
-> --- a/drivers/net/dsa/mt7530.c
-> +++ b/drivers/net/dsa/mt7530.c
-> @@ -13,7 +13,7 @@
->  #include <linux/of_mdio.h>
->  #include <linux/of_net.h>
->  #include <linux/of_platform.h>
-> -#include <linux/phy.h>
-> +#include <linux/phylink.h>
->  #include <linux/regmap.h>
->  #include <linux/regulator/consumer.h>
->  #include <linux/reset.h>
-> @@ -633,63 +633,6 @@ mt7530_get_sset_count(struct dsa_switch *ds, int por=
-t, int sset)
->  	return ARRAY_SIZE(mt7530_mib);
->  }
->  =
+Still, while auditing all that, I found a whole bunch of things that
+could be improved. There were missing barriers, superfluous barriers and
+a whole bunch of sites that could use clear_and_wake_up_bit().
 
-> -static void mt7530_adjust_link(struct dsa_switch *ds, int port,
-> -			       struct phy_device *phydev)
-> -{
-> -	struct mt7530_priv *priv =3D ds->priv;
-> -
-> -	if (phy_is_pseudo_fixed_link(phydev)) {
-> -		dev_dbg(priv->dev, "phy-mode for master device =3D %x\n",
-> -			phydev->interface);
-> -
-> -		/* Setup TX circuit incluing relevant PAD and driving */
-> -		mt7530_pad_clk_setup(ds, phydev->interface);
-> -
-> -		if (priv->id =3D=3D ID_MT7530) {
-> -			/* Setup RX circuit, relevant PAD and driving on the
-> -			 * host which must be placed after the setup on the
-> -			 * device side is all finished.
-> -			 */
-> -			mt7623_pad_clk_setup(ds);
-> -		}
-> -	} else {
-> -		u16 lcl_adv =3D 0, rmt_adv =3D 0;
-> -		u8 flowctrl;
-> -		u32 mcr =3D PMCR_USERP_LINK | PMCR_FORCE_MODE;
-> -
-> -		switch (phydev->speed) {
-> -		case SPEED_1000:
-> -			mcr |=3D PMCR_FORCE_SPEED_1000;
-> -			break;
-> -		case SPEED_100:
-> -			mcr |=3D PMCR_FORCE_SPEED_100;
-> -			break;
-> -		}
-> -
-> -		if (phydev->link)
-> -			mcr |=3D PMCR_FORCE_LNK;
-> -
-> -		if (phydev->duplex) {
-> -			mcr |=3D PMCR_FORCE_FDX;
-> -
-> -			if (phydev->pause)
-> -				rmt_adv =3D LPA_PAUSE_CAP;
-> -			if (phydev->asym_pause)
-> -				rmt_adv |=3D LPA_PAUSE_ASYM;
-> -
-> -			lcl_adv =3D linkmode_adv_to_lcl_adv_t(
-> -				phydev->advertising);
-> -			flowctrl =3D mii_resolve_flowctrl_fdx(lcl_adv, rmt_adv);
-> -
-> -			if (flowctrl & FLOW_CTRL_TX)
-> -				mcr |=3D PMCR_TX_FC_EN;
-> -			if (flowctrl & FLOW_CTRL_RX)
-> -				mcr |=3D PMCR_RX_FC_EN;
-> -		}
-> -		mt7530_write(priv, MT7530_PMCR_P(port), mcr);
-> -	}
-> -}
-> -
->  static int
->  mt7530_cpu_port_enable(struct mt7530_priv *priv,
->  		       int port)
-> @@ -1323,6 +1266,178 @@ mt7530_setup(struct dsa_switch *ds)
->  	return 0;
->  }
->  =
+So this fixes all wake_up_bit() usage without actually changing
+semantics of it (which are unfortunate but understandable). This does
+however change the semantics of wake_up_var(); even though wake_up_var()
+is most often used with atomics and then the additional smp_mb() is most
+often superfluous :/
 
-> +static void mt7530_phylink_mac_config(struct dsa_switch *ds, int port,
-> +				      unsigned int mode,
-> +				      const struct phylink_link_state *state)
-> +{
-> +	struct mt7530_priv *priv =3D ds->priv;
-> +	u32 mcr =3D PMCR_IFG_XMIT(1) | PMCR_MAC_MODE | PMCR_BACKOFF_EN |
-> +		  PMCR_BACKPR_EN | PMCR_TX_EN | PMCR_RX_EN;
-> +
-> +	switch (port) {
-> +	case 0: /* Internal phy */
-> +	case 1:
-> +	case 2:
-> +	case 3:
-> +	case 4:
-> +		if (state->interface !=3D PHY_INTERFACE_MODE_GMII)
-> +			goto unsupported;
-> +		break;
-> +	/* case 5: Port 5 is not supported! */
-> +	case 6: /* 1st cpu port */
-> +		if (state->interface !=3D PHY_INTERFACE_MODE_RGMII &&
-> +		    state->interface !=3D PHY_INTERFACE_MODE_TRGMII)
-> +			goto unsupported;
-> +
-> +		/* Setup TX circuit incluing relevant PAD and driving */
-> +		mt7530_pad_clk_setup(ds, state->interface);
-> +
-> +		if (priv->id =3D=3D ID_MT7530) {
-> +			/* Setup RX circuit, relevant PAD and driving on the
-> +			 * host which must be placed after the setup on the
-> +			 * device side is all finished.
-> +			 */
-> +			mt7623_pad_clk_setup(ds);
-> +		}
-> +		break;
-> +	default:
-> +		dev_err(ds->dev, "%s: unsupported port: %i\n", __func__, port);
-> +		return;
-> +	}
-> +
-> +	if (!state->an_enabled || mode =3D=3D MLO_AN_FIXED) {
-> +		mcr |=3D PMCR_FORCE_MODE;
-> +
-> +		if (state->speed =3D=3D SPEED_1000)
-> +			mcr |=3D PMCR_FORCE_SPEED_1000;
-> +		if (state->speed =3D=3D SPEED_100)
-> +			mcr |=3D PMCR_FORCE_SPEED_100;
-> +		if (state->duplex =3D=3D DUPLEX_FULL)
-> +			mcr |=3D PMCR_FORCE_FDX;
-> +		if (state->link || mode =3D=3D MLO_AN_FIXED)
-> +			mcr |=3D PMCR_FORCE_LNK;
-
-This should be removed - state->link is not for use in mac_config.
-Even in fixed mode, the link can be brought up/down by means of a
-gpio, and this should be dealt with via the mac_link_* functions.
-
-> +		if (state->pause || phylink_test(state->advertising, Pause))
-> +			mcr |=3D PMCR_TX_FC_EN | PMCR_RX_FC_EN;
-> +		if (state->pause & MLO_PAUSE_TX)
-> +			mcr |=3D PMCR_TX_FC_EN;
-> +		if (state->pause & MLO_PAUSE_RX)
-> +			mcr |=3D PMCR_RX_FC_EN;
-
-This is clearly wrong - if any bit in state->pause is set, then we
-end up with both PMCR_TX_FC_EN | PMCR_RX_FC_EN set.  If we have Pause
-Pause set in the advertising mask, then both are set.  This doesn't
-seem right - are these bits setting the advertisement, or are they
-telling the MAC to use flow control?
-
-> +	}
-> +
-> +	mt7530_write(priv, MT7530_PMCR_P(port), mcr);
-> +
-> +	return;
-> +
-> +unsupported:
-> +	dev_err(ds->dev, "%s: P%d: Unsupported phy_interface mode: %d (%s)\n",
-> +		__func__, port, state->interface, phy_modes(state->interface));
-> +}
-> +
-> +static void mt7530_phylink_mac_link_down(struct dsa_switch *ds, int port,
-> +					 unsigned int mode,
-> +					 phy_interface_t interface)
-> +{
-> +	/* Do nothing */
-> +}
-> +
-> +static void mt7530_phylink_mac_link_up(struct dsa_switch *ds, int port,
-> +				       unsigned int mode,
-> +				       phy_interface_t interface,
-> +				       struct phy_device *phydev)
-> +{
-> +	/* Do nothing */
-> +}
-
-These two are where you should be forcing the link up or down if
-required (basically, inband modes should let the link come up/down
-irrespective of these functions, otherwise it should be forced.)
-
-> +
-> +static void mt7530_phylink_validate(struct dsa_switch *ds, int port,
-> +				    unsigned long *supported,
-> +				    struct phylink_link_state *state)
-> +{
-> +	__ETHTOOL_DECLARE_LINK_MODE_MASK(mask) =3D { 0, };
-> +
-> +	switch (port) {
-> +	case 0: /* Internal phy */
-> +	case 1:
-> +	case 2:
-> +	case 3:
-> +	case 4:
-> +		if (state->interface !=3D PHY_INTERFACE_MODE_NA &&
-> +		    state->interface !=3D PHY_INTERFACE_MODE_GMII)
-> +			goto unsupported;
-> +		break;
-> +	/* case 5: Port 5 not supported! */
-> +	case 6: /* 1st cpu port */
-> +		if (state->interface !=3D PHY_INTERFACE_MODE_RGMII &&
-> +		    state->interface !=3D PHY_INTERFACE_MODE_TRGMII)
-
-PHY_INTERFACE_MODE_NA ?
-
-> +			goto unsupported;
-> +		break;
-> +	default:
-> +		linkmode_zero(supported);
-> +		dev_err(ds->dev, "%s: unsupported port: %i\n", __func__, port);
-> +		return;
-> +	}
-> +
-> +	phylink_set(mask, Autoneg);
-> +	phylink_set(mask, Pause);
-> +	phylink_set(mask, Asym_Pause);
-> +	phylink_set(mask, MII);
-> +
-> +	phylink_set(mask, 10baseT_Half);
-> +	phylink_set(mask, 10baseT_Full);
-> +	phylink_set(mask, 100baseT_Half);
-> +	phylink_set(mask, 100baseT_Full);
-> +	phylink_set(mask, 1000baseT_Full);
-> +	phylink_set(mask, 1000baseT_Half);
-
-You seem to be missing phylink_set_port_modes() here.
-
-> +
-> +	linkmode_and(supported, supported, mask);
-> +	linkmode_and(state->advertising, state->advertising, mask);
-> +	return;
-> +
-> +unsupported:
-> +	linkmode_zero(supported);
-> +	dev_err(ds->dev, "%s: unsupported interface mode: [0x%x] %s\n",
-> +		__func__, state->interface, phy_modes(state->interface));
-
-Not a good idea to print this at error level; sometimes we just probe
-for support.
-
-Eg, think about a SFP cage, and a SFP is plugged in that uses a PHY
-interface mode that the MAC can't support - we detect that by the
-validation failing, and printing a more meaningful message in phylink
-itself.
-
-> +}
-> +
-> +static int
-> +mt7530_phylink_mac_link_state(struct dsa_switch *ds, int port,
-> +			      struct phylink_link_state *state)
-> +{
-> +	struct mt7530_priv *priv =3D ds->priv;
-> +	u32 pmsr;
-> +
-> +	if (port < 0 || port >=3D MT7530_NUM_PORTS)
-> +		return -EINVAL;
-> +
-> +	pmsr =3D mt7530_read(priv, MT7530_PMSR_P(port));
-> +
-> +	state->link =3D (pmsr & PMSR_LINK);
-> +	state->an_complete =3D state->link;
-> +	state->duplex =3D (pmsr & PMSR_DPX) >> 1;
-> +
-> +	switch (pmsr & (PMSR_SPEED_1000 | PMSR_SPEED_100)) {
-> +	case 0:
-> +		state->speed =3D SPEED_10;
-> +		break;
-> +	case PMSR_SPEED_100:
-> +		state->speed =3D SPEED_100;
-> +		break;
-> +	case PMSR_SPEED_1000:
-> +		state->speed =3D SPEED_1000;
-> +		break;
-> +	default:
-> +		state->speed =3D SPEED_UNKNOWN;
-> +		break;
-> +	}
-> +
-> +	state->pause =3D 0;
-> +	if (pmsr & PMSR_RX_FC)
-> +		state->pause |=3D MLO_PAUSE_RX;
-> +	if (pmsr & PMSR_TX_FC)
-> +		state->pause |=3D MLO_PAUSE_TX;
-> +
-> +	return 1;
-> +}
-> +
->  static const struct dsa_switch_ops mt7530_switch_ops =3D {
->  	.get_tag_protocol	=3D mtk_get_tag_protocol,
->  	.setup			=3D mt7530_setup,
-> @@ -1331,7 +1446,6 @@ static const struct dsa_switch_ops mt7530_switch_op=
-s =3D {
->  	.phy_write		=3D mt7530_phy_write,
->  	.get_ethtool_stats	=3D mt7530_get_ethtool_stats,
->  	.get_sset_count		=3D mt7530_get_sset_count,
-> -	.adjust_link		=3D mt7530_adjust_link,
->  	.port_enable		=3D mt7530_port_enable,
->  	.port_disable		=3D mt7530_port_disable,
->  	.port_stp_state_set	=3D mt7530_stp_state_set,
-> @@ -1344,6 +1458,11 @@ static const struct dsa_switch_ops mt7530_switch_o=
-ps =3D {
->  	.port_vlan_prepare	=3D mt7530_port_vlan_prepare,
->  	.port_vlan_add		=3D mt7530_port_vlan_add,
->  	.port_vlan_del		=3D mt7530_port_vlan_del,
-> +	.phylink_validate	=3D mt7530_phylink_validate,
-> +	.phylink_mac_link_state =3D mt7530_phylink_mac_link_state,
-> +	.phylink_mac_config	=3D mt7530_phylink_mac_config,
-> +	.phylink_mac_link_down	=3D mt7530_phylink_mac_link_down,
-> +	.phylink_mac_link_up	=3D mt7530_phylink_mac_link_up,
->  };
->  =
-
->  static const struct of_device_id mt7530_of_match[] =3D {
-> diff --git a/drivers/net/dsa/mt7530.h b/drivers/net/dsa/mt7530.h
-> index bfac90f48102..41d9a132ac70 100644
-> --- a/drivers/net/dsa/mt7530.h
-> +++ b/drivers/net/dsa/mt7530.h
-> @@ -198,6 +198,7 @@ enum mt7530_vlan_port_attr {
->  #define  PMCR_FORCE_SPEED_100		BIT(2)
->  #define  PMCR_FORCE_FDX			BIT(1)
->  #define  PMCR_FORCE_LNK			BIT(0)
-> +#define  PMCR_FORCE_LNK_DOWN		PMCR_FORCE_MODE
->  #define  PMCR_COMMON_LINK		(PMCR_IFG_XMIT(1) | PMCR_MAC_MODE | \
->  					 PMCR_BACKOFF_EN | PMCR_BACKPR_EN | \
->  					 PMCR_TX_EN | PMCR_RX_EN | \
-> @@ -218,6 +219,14 @@ enum mt7530_vlan_port_attr {
->  					 PMCR_TX_FC_EN | PMCR_RX_FC_EN)
->  =
-
->  #define MT7530_PMSR_P(x)		(0x3008 + (x) * 0x100)
-> +#define  PMSR_EEE1G			BIT(7)
-> +#define  PMSR_EEE100M			BIT(6)
-> +#define  PMSR_RX_FC			BIT(5)
-> +#define  PMSR_TX_FC			BIT(4)
-> +#define  PMSR_SPEED_1000		BIT(3)
-> +#define  PMSR_SPEED_100			BIT(2)
-> +#define  PMSR_DPX			BIT(1)
-> +#define  PMSR_LINK			BIT(0)
->  =
-
->  /* Register for MIB */
->  #define MT7530_PORT_MIB_COUNTER(x)	(0x4000 + (x) * 0x100)
-> -- =
-
-> 2.20.1
-> =
-
-> =
+There isn't really a good option here, comments (other than I need to
+split this up)?
 
 
--- =
+---
+ drivers/bluetooth/btmtksdio.c               |  5 +----
+ drivers/bluetooth/btmtkuart.c               |  5 +----
+ drivers/bluetooth/hci_mrvl.c                |  8 ++------
+ drivers/gpu/drm/i915/i915_reset.c           |  6 ++----
+ drivers/md/dm-bufio.c                       | 10 ++--------
+ drivers/media/usb/dvb-usb-v2/dvb_usb_core.c | 15 ++++-----------
+ fs/afs/fs_probe.c                           |  1 +
+ fs/afs/server.c                             |  1 +
+ fs/afs/vl_probe.c                           |  1 +
+ fs/afs/volume.c                             |  1 +
+ fs/aio.c                                    |  4 +---
+ fs/block_dev.c                              |  1 +
+ fs/btrfs/extent_io.c                        |  4 +---
+ fs/cachefiles/namei.c                       |  1 +
+ fs/cifs/connect.c                           |  3 +--
+ fs/cifs/misc.c                              | 15 +++++----------
+ fs/fscache/cookie.c                         |  2 ++
+ fs/fscache/object.c                         |  2 ++
+ fs/fscache/page.c                           |  3 +++
+ fs/gfs2/glock.c                             |  8 ++------
+ fs/gfs2/glops.c                             |  1 +
+ fs/gfs2/lock_dlm.c                          |  8 ++------
+ fs/gfs2/recovery.c                          |  4 +---
+ fs/gfs2/super.c                             |  1 +
+ fs/gfs2/sys.c                               |  4 +---
+ fs/nfs/nfs4state.c                          |  4 +---
+ fs/nfs/pnfs_nfs.c                           |  4 +---
+ fs/nfsd/nfs4recover.c                       |  4 +---
+ fs/orangefs/file.c                          |  2 +-
+ kernel/sched/wait_bit.c                     |  1 +
+ net/bluetooth/hci_event.c                   |  5 +----
+ net/rds/ib_recv.c                           |  1 +
+ security/keys/gc.c                          |  5 ++---
+ 33 files changed, 50 insertions(+), 90 deletions(-)
 
-RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
-FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps =
-up
-According to speedtest.net: 11.9Mbps down 500kbps up
+diff --git a/drivers/bluetooth/btmtksdio.c b/drivers/bluetooth/btmtksdio.c
+index 813338288453..27523cfeac9a 100644
+--- a/drivers/bluetooth/btmtksdio.c
++++ b/drivers/bluetooth/btmtksdio.c
+@@ -356,11 +356,8 @@ static int btmtksdio_recv_event(struct hci_dev *hdev, struct sk_buff *skb)
+ 
+ 	if (hdr->evt == HCI_EV_VENDOR) {
+ 		if (test_and_clear_bit(BTMTKSDIO_TX_WAIT_VND_EVT,
+-				       &bdev->tx_state)) {
+-			/* Barrier to sync with other CPUs */
+-			smp_mb__after_atomic();
++				       &bdev->tx_state))
+ 			wake_up_bit(&bdev->tx_state, BTMTKSDIO_TX_WAIT_VND_EVT);
+-		}
+ 	}
+ 
+ 	return 0;
+diff --git a/drivers/bluetooth/btmtkuart.c b/drivers/bluetooth/btmtkuart.c
+index f5dbeec8e274..7fe324df3799 100644
+--- a/drivers/bluetooth/btmtkuart.c
++++ b/drivers/bluetooth/btmtkuart.c
+@@ -340,11 +340,8 @@ static int btmtkuart_recv_event(struct hci_dev *hdev, struct sk_buff *skb)
+ 
+ 	if (hdr->evt == HCI_EV_VENDOR) {
+ 		if (test_and_clear_bit(BTMTKUART_TX_WAIT_VND_EVT,
+-				       &bdev->tx_state)) {
+-			/* Barrier to sync with other CPUs */
+-			smp_mb__after_atomic();
++				       &bdev->tx_state))
+ 			wake_up_bit(&bdev->tx_state, BTMTKUART_TX_WAIT_VND_EVT);
+-		}
+ 	}
+ 
+ 	return 0;
+diff --git a/drivers/bluetooth/hci_mrvl.c b/drivers/bluetooth/hci_mrvl.c
+index 50212ac629e3..f03294d39d08 100644
+--- a/drivers/bluetooth/hci_mrvl.c
++++ b/drivers/bluetooth/hci_mrvl.c
+@@ -157,9 +157,7 @@ static int mrvl_recv_fw_req(struct hci_dev *hdev, struct sk_buff *skb)
+ 
+ 	mrvl->tx_len = le16_to_cpu(pkt->lhs);
+ 
+-	clear_bit(STATE_FW_REQ_PENDING, &mrvl->flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&mrvl->flags, STATE_FW_REQ_PENDING);
++	clear_and_wake_up_bit(STATE_FW_REQ_PENDING, &mrvl->flags);
+ 
+ done:
+ 	kfree_skb(skb);
+@@ -192,9 +190,7 @@ static int mrvl_recv_chip_ver(struct hci_dev *hdev, struct sk_buff *skb)
+ 
+ 	bt_dev_info(hdev, "Controller id = %x, rev = %x", mrvl->id, mrvl->rev);
+ 
+-	clear_bit(STATE_CHIP_VER_PENDING, &mrvl->flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&mrvl->flags, STATE_CHIP_VER_PENDING);
++	clear_and_wake_up_bit(STATE_CHIP_VER_PENDING, &mrvl->flags);
+ 
+ done:
+ 	kfree_skb(skb);
+diff --git a/drivers/gpu/drm/i915/i915_reset.c b/drivers/gpu/drm/i915/i915_reset.c
+index 677d59304e78..6809367dbfa9 100644
+--- a/drivers/gpu/drm/i915/i915_reset.c
++++ b/drivers/gpu/drm/i915/i915_reset.c
+@@ -1324,10 +1324,8 @@ void i915_handle_error(struct drm_i915_private *i915,
+ 			if (i915_reset_engine(engine, msg) == 0)
+ 				engine_mask &= ~engine->mask;
+ 
+-			clear_bit(I915_RESET_ENGINE + engine->id,
+-				  &error->flags);
+-			wake_up_bit(&error->flags,
+-				    I915_RESET_ENGINE + engine->id);
++			clear_and_wake_up_bit(I915_RESET_ENGINE + engine->id,
++					      &error->flags);
+ 		}
+ 	}
+ 
+diff --git a/drivers/md/dm-bufio.c b/drivers/md/dm-bufio.c
+index 2a48ea3f1b30..3114836cc717 100644
+--- a/drivers/md/dm-bufio.c
++++ b/drivers/md/dm-bufio.c
+@@ -667,10 +667,7 @@ static void write_endio(struct dm_buffer *b, blk_status_t status)
+ 	BUG_ON(!test_bit(B_WRITING, &b->state));
+ 
+ 	smp_mb__before_atomic();
+-	clear_bit(B_WRITING, &b->state);
+-	smp_mb__after_atomic();
+-
+-	wake_up_bit(&b->state, B_WRITING);
++	clear_and_wake_up_bit(B_WRITING, &b->state);
+ }
+ 
+ /*
+@@ -1045,10 +1042,7 @@ static void read_endio(struct dm_buffer *b, blk_status_t status)
+ 	BUG_ON(!test_bit(B_READING, &b->state));
+ 
+ 	smp_mb__before_atomic();
+-	clear_bit(B_READING, &b->state);
+-	smp_mb__after_atomic();
+-
+-	wake_up_bit(&b->state, B_READING);
++	clear_and_wake_up_bit(B_READING, &b->state);
+ }
+ 
+ /*
+diff --git a/drivers/media/usb/dvb-usb-v2/dvb_usb_core.c b/drivers/media/usb/dvb-usb-v2/dvb_usb_core.c
+index e5e056bf9dfa..fa46bc930704 100644
+--- a/drivers/media/usb/dvb-usb-v2/dvb_usb_core.c
++++ b/drivers/media/usb/dvb-usb-v2/dvb_usb_core.c
+@@ -374,9 +374,7 @@ static int dvb_usb_stop_feed(struct dvb_demux_feed *dvbdmxfeed)
+ 	usb_urb_killv2(&adap->stream);
+ 
+ 	/* clear 'streaming' status bit */
+-	clear_bit(ADAP_STREAMING, &adap->state_bits);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&adap->state_bits, ADAP_STREAMING);
++	clear_and_wake_up_bit(ADAP_STREAMING, &adap->state_bits);
+ skip_feed_stop:
+ 
+ 	if (ret)
+@@ -578,11 +576,8 @@ static int dvb_usb_fe_init(struct dvb_frontend *fe)
+ 			goto err;
+ 	}
+ err:
+-	if (!adap->suspend_resume_active) {
+-		clear_bit(ADAP_INIT, &adap->state_bits);
+-		smp_mb__after_atomic();
+-		wake_up_bit(&adap->state_bits, ADAP_INIT);
+-	}
++	if (!adap->suspend_resume_active)
++		clear_and_wake_up_bit(ADAP_INIT, &adap->state_bits);
+ 
+ 	dev_dbg(&d->udev->dev, "%s: ret=%d\n", __func__, ret);
+ 	return ret;
+@@ -619,9 +614,7 @@ static int dvb_usb_fe_sleep(struct dvb_frontend *fe)
+ err:
+ 	if (!adap->suspend_resume_active) {
+ 		adap->active_fe = -1;
+-		clear_bit(ADAP_SLEEP, &adap->state_bits);
+-		smp_mb__after_atomic();
+-		wake_up_bit(&adap->state_bits, ADAP_SLEEP);
++		clear_and_wake_up_bit(ADAP_SLEEP, &adap->state_bits);
+ 	}
+ 
+ 	dev_dbg(&d->udev->dev, "%s: ret=%d\n", __func__, ret);
+diff --git a/fs/afs/fs_probe.c b/fs/afs/fs_probe.c
+index cfe62b154f68..377ee07d5f76 100644
+--- a/fs/afs/fs_probe.c
++++ b/fs/afs/fs_probe.c
+@@ -18,6 +18,7 @@ static bool afs_fs_probe_done(struct afs_server *server)
+ 
+ 	wake_up_var(&server->probe_outstanding);
+ 	clear_bit_unlock(AFS_SERVER_FL_PROBING, &server->flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&server->flags, AFS_SERVER_FL_PROBING);
+ 	return true;
+ }
+diff --git a/fs/afs/server.c b/fs/afs/server.c
+index e900cd74361b..c9b74a397cc1 100644
+--- a/fs/afs/server.c
++++ b/fs/afs/server.c
+@@ -569,6 +569,7 @@ bool afs_check_server_record(struct afs_fs_cursor *fc, struct afs_server *server
+ 	if (!test_and_set_bit_lock(AFS_SERVER_FL_UPDATING, &server->flags)) {
+ 		success = afs_update_server_record(fc, server);
+ 		clear_bit_unlock(AFS_SERVER_FL_UPDATING, &server->flags);
++		smp_mb__after_atomic();
+ 		wake_up_bit(&server->flags, AFS_SERVER_FL_UPDATING);
+ 		_leave(" = %d", success);
+ 		return success;
+diff --git a/fs/afs/vl_probe.c b/fs/afs/vl_probe.c
+index 858498cc1b05..1939624aa147 100644
+--- a/fs/afs/vl_probe.c
++++ b/fs/afs/vl_probe.c
+@@ -18,6 +18,7 @@ static bool afs_vl_probe_done(struct afs_vlserver *server)
+ 
+ 	wake_up_var(&server->probe_outstanding);
+ 	clear_bit_unlock(AFS_VLSERVER_FL_PROBING, &server->flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&server->flags, AFS_VLSERVER_FL_PROBING);
+ 	return true;
+ }
+diff --git a/fs/afs/volume.c b/fs/afs/volume.c
+index 08fdb3951c49..b968e4e96f6b 100644
+--- a/fs/afs/volume.c
++++ b/fs/afs/volume.c
+@@ -303,6 +303,7 @@ int afs_check_volume_status(struct afs_volume *volume, struct key *key)
+ 		ret = afs_update_volume_status(volume, key);
+ 		clear_bit_unlock(AFS_VOLUME_WAIT, &volume->flags);
+ 		clear_bit_unlock(AFS_VOLUME_UPDATING, &volume->flags);
++		smp_mb__after_atomic();
+ 		wake_up_bit(&volume->flags, AFS_VOLUME_WAIT);
+ 		_leave(" = %d", ret);
+ 		return ret;
+diff --git a/fs/aio.c b/fs/aio.c
+index 3490d1fa0e16..a21acb7ee2a5 100644
+--- a/fs/aio.c
++++ b/fs/aio.c
+@@ -1154,9 +1154,7 @@ static void aio_complete(struct aio_kiocb *iocb)
+ 	 * like in wake_up_bit() where clearing a bit has to be
+ 	 * ordered with the unlocked test.
+ 	 */
+-	smp_mb();
+-
+-	if (waitqueue_active(&ctx->wait))
++	if (wq_has_sleeper(&ctx->wait))
+ 		wake_up(&ctx->wait);
+ }
+ 
+diff --git a/fs/block_dev.c b/fs/block_dev.c
+index 749f5984425d..80e35cbfc7cc 100644
+--- a/fs/block_dev.c
++++ b/fs/block_dev.c
+@@ -1687,6 +1687,7 @@ int blkdev_get(struct block_device *bdev, fmode_t mode, void *holder)
+ 		/* tell others that we're done */
+ 		BUG_ON(whole->bd_claiming != holder);
+ 		whole->bd_claiming = NULL;
++		smp_mb();
+ 		wake_up_bit(&whole->bd_claiming, 0);
+ 
+ 		spin_unlock(&bdev_lock);
+diff --git a/fs/btrfs/extent_io.c b/fs/btrfs/extent_io.c
+index db337e53aab3..ee1136ae46fd 100644
+--- a/fs/btrfs/extent_io.c
++++ b/fs/btrfs/extent_io.c
+@@ -3683,9 +3683,7 @@ static noinline_for_stack int lock_extent_buffer_for_io(struct extent_buffer *eb
+ 
+ static void end_extent_buffer_writeback(struct extent_buffer *eb)
+ {
+-	clear_bit(EXTENT_BUFFER_WRITEBACK, &eb->bflags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&eb->bflags, EXTENT_BUFFER_WRITEBACK);
++	clear_and_wake_up_bit(EXTENT_BUFFER_WRITEBACK, &eb->bflags);
+ }
+ 
+ static void set_btree_ioerr(struct page *page)
+diff --git a/fs/cachefiles/namei.c b/fs/cachefiles/namei.c
+index ecc8ecbbfa5a..ecebba72ec7d 100644
+--- a/fs/cachefiles/namei.c
++++ b/fs/cachefiles/namei.c
+@@ -267,6 +267,7 @@ void cachefiles_mark_object_inactive(struct cachefiles_cache *cache,
+ 	clear_bit(CACHEFILES_OBJECT_ACTIVE, &object->flags);
+ 	write_unlock(&cache->active_lock);
+ 
++	smp_mb__after_atomic();
+ 	wake_up_bit(&object->flags, CACHEFILES_OBJECT_ACTIVE);
+ 
+ 	/* This object can now be culled, so we need to let the daemon know
+diff --git a/fs/cifs/connect.c b/fs/cifs/connect.c
+index 8c4121da624e..8c1115ed1c28 100644
+--- a/fs/cifs/connect.c
++++ b/fs/cifs/connect.c
+@@ -5235,8 +5235,7 @@ cifs_sb_tlink(struct cifs_sb_info *cifs_sb)
+ 	}
+ 
+ 	tlink->tl_tcon = cifs_construct_tcon(cifs_sb, fsuid);
+-	clear_bit(TCON_LINK_PENDING, &tlink->tl_flags);
+-	wake_up_bit(&tlink->tl_flags, TCON_LINK_PENDING);
++	clear_and_wake_up_bit(TCON_LINK_PENDING, &tlink->tl_flags);
+ 
+ 	if (IS_ERR(tlink->tl_tcon)) {
+ 		cifs_put_tlink(tlink);
+diff --git a/fs/cifs/misc.c b/fs/cifs/misc.c
+index b1a696a73f7c..961751d89113 100644
+--- a/fs/cifs/misc.c
++++ b/fs/cifs/misc.c
+@@ -584,10 +584,8 @@ int cifs_get_writer(struct cifsInodeInfo *cinode)
+ 	/* Check to see if we have started servicing an oplock break */
+ 	if (test_bit(CIFS_INODE_PENDING_OPLOCK_BREAK, &cinode->flags)) {
+ 		cinode->writers--;
+-		if (cinode->writers == 0) {
+-			clear_bit(CIFS_INODE_PENDING_WRITERS, &cinode->flags);
+-			wake_up_bit(&cinode->flags, CIFS_INODE_PENDING_WRITERS);
+-		}
++		if (cinode->writers == 0)
++			clear_and_wake_up_bit(CIFS_INODE_PENDING_WRITERS, &cinode->flags);
+ 		spin_unlock(&cinode->writers_lock);
+ 		goto start;
+ 	}
+@@ -599,10 +597,8 @@ void cifs_put_writer(struct cifsInodeInfo *cinode)
+ {
+ 	spin_lock(&cinode->writers_lock);
+ 	cinode->writers--;
+-	if (cinode->writers == 0) {
+-		clear_bit(CIFS_INODE_PENDING_WRITERS, &cinode->flags);
+-		wake_up_bit(&cinode->flags, CIFS_INODE_PENDING_WRITERS);
+-	}
++	if (cinode->writers == 0)
++		clear_and_wake_up_bit(CIFS_INODE_PENDING_WRITERS, &cinode->flags);
+ 	spin_unlock(&cinode->writers_lock);
+ }
+ 
+@@ -630,8 +626,7 @@ void cifs_queue_oplock_break(struct cifsFileInfo *cfile)
+ 
+ void cifs_done_oplock_break(struct cifsInodeInfo *cinode)
+ {
+-	clear_bit(CIFS_INODE_PENDING_OPLOCK_BREAK, &cinode->flags);
+-	wake_up_bit(&cinode->flags, CIFS_INODE_PENDING_OPLOCK_BREAK);
++	clear_and_wake_up_bit(CIFS_INODE_PENDING_OPLOCK_BREAK, &cinode->flags);
+ }
+ 
+ bool
+diff --git a/fs/fscache/cookie.c b/fs/fscache/cookie.c
+index 0ce39658a620..40ba8957ebf0 100644
+--- a/fs/fscache/cookie.c
++++ b/fs/fscache/cookie.c
+@@ -381,6 +381,7 @@ void __fscache_enable_cookie(struct fscache_cookie *cookie,
+ 
+ out_unlock:
+ 	clear_bit_unlock(FSCACHE_COOKIE_ENABLEMENT_LOCK, &cookie->flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&cookie->flags, FSCACHE_COOKIE_ENABLEMENT_LOCK);
+ }
+ EXPORT_SYMBOL(__fscache_enable_cookie);
+@@ -778,6 +779,7 @@ void __fscache_disable_cookie(struct fscache_cookie *cookie,
+ 
+ out_unlock_enable:
+ 	clear_bit_unlock(FSCACHE_COOKIE_ENABLEMENT_LOCK, &cookie->flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&cookie->flags, FSCACHE_COOKIE_ENABLEMENT_LOCK);
+ 	_leave("");
+ }
+diff --git a/fs/fscache/object.c b/fs/fscache/object.c
+index cfeba839a0f2..08b2edec6596 100644
+--- a/fs/fscache/object.c
++++ b/fs/fscache/object.c
+@@ -524,6 +524,7 @@ void fscache_object_lookup_negative(struct fscache_object *object)
+ 
+ 		_debug("wake up lookup %p", &cookie->flags);
+ 		clear_bit_unlock(FSCACHE_COOKIE_LOOKING_UP, &cookie->flags);
++		smp_mb__after_atomic();
+ 		wake_up_bit(&cookie->flags, FSCACHE_COOKIE_LOOKING_UP);
+ 	}
+ 	_leave("");
+@@ -559,6 +560,7 @@ void fscache_obtained_object(struct fscache_object *object)
+ 		 * to begin shovelling data.
+ 		 */
+ 		clear_bit_unlock(FSCACHE_COOKIE_LOOKING_UP, &cookie->flags);
++		smp_mb__after_atomic();
+ 		wake_up_bit(&cookie->flags, FSCACHE_COOKIE_LOOKING_UP);
+ 	} else {
+ 		fscache_stat(&fscache_n_object_created);
+diff --git a/fs/fscache/page.c b/fs/fscache/page.c
+index 26af6fdf1538..49ef238502a3 100644
+--- a/fs/fscache/page.c
++++ b/fs/fscache/page.c
+@@ -113,6 +113,7 @@ bool __fscache_maybe_release_page(struct fscache_cookie *cookie,
+ 		fscache_stat(&fscache_n_store_vmscan_gone);
+ 	}
+ 
++	smp_mb();
+ 	wake_up_bit(&cookie->flags, 0);
+ 	trace_fscache_wake_cookie(cookie);
+ 	if (xpage)
+@@ -171,6 +172,7 @@ static void fscache_end_page_write(struct fscache_object *object,
+ 			trace_fscache_page(cookie, page, fscache_page_write_end_pend);
+ 		}
+ 		spin_unlock(&cookie->stores_lock);
++		smp_mb();
+ 		wake_up_bit(&cookie->flags, 0);
+ 		trace_fscache_wake_cookie(cookie);
+ 	} else {
+@@ -922,6 +924,7 @@ void fscache_invalidate_writes(struct fscache_cookie *cookie)
+ 			put_page(results[i]);
+ 	}
+ 
++	smp_mb();
+ 	wake_up_bit(&cookie->flags, 0);
+ 	trace_fscache_wake_cookie(cookie);
+ 
+diff --git a/fs/gfs2/glock.c b/fs/gfs2/glock.c
+index f1ebcb42cbf5..8024b6bdb6d4 100644
+--- a/fs/gfs2/glock.c
++++ b/fs/gfs2/glock.c
+@@ -302,9 +302,7 @@ static inline int may_grant(const struct gfs2_glock *gl, const struct gfs2_holde
+ 
+ static void gfs2_holder_wake(struct gfs2_holder *gh)
+ {
+-	clear_bit(HIF_WAIT, &gh->gh_iflags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&gh->gh_iflags, HIF_WAIT);
++	clear_and_wake_up_bit(HIF_WAIT, &gh->gh_iflags);
+ }
+ 
+ /**
+@@ -436,9 +434,7 @@ static void state_change(struct gfs2_glock *gl, unsigned int new_state)
+ static void gfs2_demote_wake(struct gfs2_glock *gl)
+ {
+ 	gl->gl_demote_state = LM_ST_EXCLUSIVE;
+-	clear_bit(GLF_DEMOTE, &gl->gl_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&gl->gl_flags, GLF_DEMOTE);
++	clear_and_wake_up_bit(GLF_DEMOTE, &gl->gl_flags);
+ }
+ 
+ /**
+diff --git a/fs/gfs2/glops.c b/fs/gfs2/glops.c
+index cf4c767005b1..666629ea5da7 100644
+--- a/fs/gfs2/glops.c
++++ b/fs/gfs2/glops.c
+@@ -227,6 +227,7 @@ static void gfs2_clear_glop_pending(struct gfs2_inode *ip)
+ 		return;
+ 
+ 	clear_bit_unlock(GIF_GLOP_PENDING, &ip->i_flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&ip->i_flags, GIF_GLOP_PENDING);
+ }
+ 
+diff --git a/fs/gfs2/lock_dlm.c b/fs/gfs2/lock_dlm.c
+index 4361804646d8..0fa1865dd600 100644
+--- a/fs/gfs2/lock_dlm.c
++++ b/fs/gfs2/lock_dlm.c
+@@ -1139,9 +1139,7 @@ static void gdlm_recover_done(void *arg, struct dlm_slot *slots, int num_slots,
+ 	if (!test_bit(DFL_UNMOUNT, &ls->ls_recover_flags))
+ 		queue_delayed_work(gfs2_control_wq, &sdp->sd_control_work, 0);
+ 
+-	clear_bit(DFL_DLM_RECOVERY, &ls->ls_recover_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&ls->ls_recover_flags, DFL_DLM_RECOVERY);
++	clear_and_wake_up_bit(DFL_DLM_RECOVERY, &ls->ls_recover_flags);
+ 	spin_unlock(&ls->ls_recover_spin);
+ }
+ 
+@@ -1276,9 +1274,7 @@ static int gdlm_mount(struct gfs2_sbd *sdp, const char *table)
+ 	}
+ 
+ 	ls->ls_first = !!test_bit(DFL_FIRST_MOUNT, &ls->ls_recover_flags);
+-	clear_bit(SDF_NOJOURNALID, &sdp->sd_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&sdp->sd_flags, SDF_NOJOURNALID);
++	clear_and_wake_up_bit(SDF_NOJOURNALID, &sdp->sd_flags);
+ 	return 0;
+ 
+ fail_release:
+diff --git a/fs/gfs2/recovery.c b/fs/gfs2/recovery.c
+index 2299a3fa1911..ef9a8ef6689b 100644
+--- a/fs/gfs2/recovery.c
++++ b/fs/gfs2/recovery.c
+@@ -436,9 +436,7 @@ void gfs2_recover_func(struct work_struct *work)
+ 	jd->jd_recover_error = error;
+ 	gfs2_recovery_done(sdp, jd->jd_jid, LM_RD_GAVEUP);
+ done:
+-	clear_bit(JDF_RECOVERY, &jd->jd_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&jd->jd_flags, JDF_RECOVERY);
++	clear_and_wake_up_bit(JDF_RECOVERY, &jd->jd_flags);
+ }
+ 
+ int gfs2_recover_journal(struct gfs2_jdesc *jd, bool wait)
+diff --git a/fs/gfs2/super.c b/fs/gfs2/super.c
+index b70cea5c8c59..28ff2e10bdd9 100644
+--- a/fs/gfs2/super.c
++++ b/fs/gfs2/super.c
+@@ -985,6 +985,7 @@ void gfs2_freeze_func(struct work_struct *work)
+ 	}
+ 	deactivate_super(sb);
+ 	clear_bit_unlock(SDF_FS_FROZEN, &sdp->sd_flags);
++	smp_mb__after_atomic();
+ 	wake_up_bit(&sdp->sd_flags, SDF_FS_FROZEN);
+ 	return;
+ }
+diff --git a/fs/gfs2/sys.c b/fs/gfs2/sys.c
+index 159aedf63c2a..b337798d8957 100644
+--- a/fs/gfs2/sys.c
++++ b/fs/gfs2/sys.c
+@@ -505,9 +505,7 @@ static ssize_t jid_store(struct gfs2_sbd *sdp, const char *buf, size_t len)
+ 	if (sdp->sd_args.ar_spectator && jid > 0)
+ 		rv = jid = -EINVAL;
+ 	sdp->sd_lockstruct.ls_jid = jid;
+-	clear_bit(SDF_NOJOURNALID, &sdp->sd_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&sdp->sd_flags, SDF_NOJOURNALID);
++	clear_and_wake_up_bit(SDF_NOJOURNALID, &sdp->sd_flags);
+ out:
+ 	spin_unlock(&sdp->sd_jindex_spin);
+ 	return rv ? rv : len;
+diff --git a/fs/nfs/nfs4state.c b/fs/nfs/nfs4state.c
+index e2e3c4f04d3e..a3ed413a38c5 100644
+--- a/fs/nfs/nfs4state.c
++++ b/fs/nfs/nfs4state.c
+@@ -1196,9 +1196,7 @@ static int nfs4_run_state_manager(void *);
+ static void nfs4_clear_state_manager_bit(struct nfs_client *clp)
+ {
+ 	smp_mb__before_atomic();
+-	clear_bit(NFS4CLNT_MANAGER_RUNNING, &clp->cl_state);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&clp->cl_state, NFS4CLNT_MANAGER_RUNNING);
++	clear_and_wake_up_bit(NFS4CLNT_MANAGER_RUNNING, &clp->cl_state);
+ 	rpc_wake_up(&clp->cl_rpcwaitq);
+ }
+ 
+diff --git a/fs/nfs/pnfs_nfs.c b/fs/nfs/pnfs_nfs.c
+index c0046c348910..37c4fe5a595c 100644
+--- a/fs/nfs/pnfs_nfs.c
++++ b/fs/nfs/pnfs_nfs.c
+@@ -567,9 +567,7 @@ static void nfs4_wait_ds_connect(struct nfs4_pnfs_ds *ds)
+ static void nfs4_clear_ds_conn_bit(struct nfs4_pnfs_ds *ds)
+ {
+ 	smp_mb__before_atomic();
+-	clear_bit(NFS4DS_CONNECTING, &ds->ds_state);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&ds->ds_state, NFS4DS_CONNECTING);
++	clear_and_wake_up_bit(NFS4DS_CONNECTING, &ds->ds_state);
+ }
+ 
+ static struct nfs_client *(*get_v3_ds_connect)(
+diff --git a/fs/nfsd/nfs4recover.c b/fs/nfsd/nfs4recover.c
+index 87679557d0d6..0a30f9cdf66a 100644
+--- a/fs/nfsd/nfs4recover.c
++++ b/fs/nfsd/nfs4recover.c
+@@ -1638,9 +1638,7 @@ static void
+ nfsd4_cltrack_upcall_unlock(struct nfs4_client *clp)
+ {
+ 	smp_mb__before_atomic();
+-	clear_bit(NFSD4_CLIENT_UPCALL_LOCK, &clp->cl_flags);
+-	smp_mb__after_atomic();
+-	wake_up_bit(&clp->cl_flags, NFSD4_CLIENT_UPCALL_LOCK);
++	clear_and_wake_up_bit(NFSD4_CLIENT_UPCALL_LOCK, &clp->cl_flags);
+ }
+ 
+ static void
+diff --git a/fs/orangefs/file.c b/fs/orangefs/file.c
+index a35c17017210..1958bb457143 100644
+--- a/fs/orangefs/file.c
++++ b/fs/orangefs/file.c
+@@ -302,7 +302,7 @@ int orangefs_revalidate_mapping(struct inode *inode)
+ 	orangefs_inode->mapping_time = jiffies +
+ 	    orangefs_cache_timeout_msecs*HZ/1000;
+ 
+-	clear_bit(1, bitlock);
++	clear_bit_unlock(1, bitlock);
+ 	smp_mb__after_atomic();
+ 	wake_up_bit(bitlock, 1);
+ 
+diff --git a/kernel/sched/wait_bit.c b/kernel/sched/wait_bit.c
+index 45eba18a2898..2662975473e3 100644
+--- a/kernel/sched/wait_bit.c
++++ b/kernel/sched/wait_bit.c
+@@ -189,6 +189,7 @@ EXPORT_SYMBOL(init_wait_var_entry);
+ 
+ void wake_up_var(void *var)
+ {
++	smp_mb();
+ 	__wake_up_bit(__var_waitqueue(var), var, -1);
+ }
+ EXPORT_SYMBOL(wake_up_var);
+diff --git a/net/bluetooth/hci_event.c b/net/bluetooth/hci_event.c
+index 9e4fcf406d9c..4e57f1a1b7a2 100644
+--- a/net/bluetooth/hci_event.c
++++ b/net/bluetooth/hci_event.c
+@@ -50,9 +50,7 @@ static void hci_cc_inquiry_cancel(struct hci_dev *hdev, struct sk_buff *skb)
+ 	if (status)
+ 		return;
+ 
+-	clear_bit(HCI_INQUIRY, &hdev->flags);
+-	smp_mb__after_atomic(); /* wake_up_bit advises about this barrier */
+-	wake_up_bit(&hdev->flags, HCI_INQUIRY);
++	clear_and_wake_up_bit(HCI_INQUIRY, &hdev->flags);
+ 
+ 	hci_dev_lock(hdev);
+ 	/* Set discovery state to stopped if we're not doing LE active
+@@ -2342,7 +2340,6 @@ static void hci_inquiry_complete_evt(struct hci_dev *hdev, struct sk_buff *skb)
+ 	if (!test_and_clear_bit(HCI_INQUIRY, &hdev->flags))
+ 		return;
+ 
+-	smp_mb__after_atomic(); /* wake_up_bit advises about this barrier */
+ 	wake_up_bit(&hdev->flags, HCI_INQUIRY);
+ 
+ 	if (!hci_dev_test_flag(hdev, HCI_MGMT))
+diff --git a/net/rds/ib_recv.c b/net/rds/ib_recv.c
+index 3cae88cbdaa0..2c2773172964 100644
+--- a/net/rds/ib_recv.c
++++ b/net/rds/ib_recv.c
+@@ -363,6 +363,7 @@ static int acquire_refill(struct rds_connection *conn)
+ static void release_refill(struct rds_connection *conn)
+ {
+ 	clear_bit(RDS_RECV_REFILL, &conn->c_flags);
++	smp_mb__after_atomic();
+ 
+ 	/* We don't use wait_on_bit()/wake_up_bit() because our waking is in a
+ 	 * hot path and finding waiters is very rare.  We don't want to walk
+diff --git a/security/keys/gc.c b/security/keys/gc.c
+index 44e58a3e5663..f452816bd7d0 100644
+--- a/security/keys/gc.c
++++ b/security/keys/gc.c
+@@ -308,9 +308,8 @@ static void key_garbage_collector(struct work_struct *work)
+ 
+ 	if (unlikely(gc_state & KEY_GC_REAPING_DEAD_3)) {
+ 		kdebug("dead wake");
+-		smp_mb();
+-		clear_bit(KEY_GC_REAPING_KEYTYPE, &key_gc_flags);
+-		wake_up_bit(&key_gc_flags, KEY_GC_REAPING_KEYTYPE);
++		smp_mb__before_atomic();
++		clear_and_wake_up_bit(KEY_GC_REAPING_KEYTYPE, &key_gc_flags);
+ 	}
+ 
+ 	if (gc_state & KEY_GC_REAP_AGAIN)
+
 
 _______________________________________________
 Linux-mediatek mailing list
