@@ -2,58 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3C7F550424
-	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 10:02:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 310AF50426
+	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Jun 2019 10:02:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9OhRYf7i7nDk3SlVaOylJCxYQ7eUGMPXC3zVouUqt98=; b=M6je3iSloqxo3c
-	MKRPNRU5+E8l/TGPyw+ozwnGhK4xE3KnbxJVuAh9uGl1U7r57LfUHY/zfHlgrJ/LPXYL4ioTyYmXG
-	mdMgBZaVV8ZxA8ruohe1Z88dXltY3MRALyvEJTMY3VqrXQAgOtM6G8mGX1NOw0MWg78cmF2Kw7vTz
-	VQeWppNSgH0TP+KfHMJ4mbQE3fMMBEze8Orp5cydb1PS4EQ7eubfXptU5hYZRKCA4sxrrkSlwz7Pz
-	M6KbEcM8GE1ipEBOBNVZF+KoeCLfgmil+9EXjCPiUtyF6ZPb0/kYGy/Wl8NSP1nGSmsyqICsjkGIb
-	JmKXOraI9cgFmZGzdIJA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=vIxmdgGTnsFyIhOl9f6vF/xxjBoENxMxsWggaGvewj8=; b=UubOjb5FDEdmiI
+	ViibeauWPY5Ult+Ao2akFcNYgmKW/My3pLciWwjje9wZ2JlsG5NBXJh3fDJ0sH3Kt4dRKmgAWkoYR
+	geSz2mMpiZ1E2KJaimDLsfR6NokgLuYUj1pU6wtydpFB9Uq1nPPvglv1UxMn9X37JiJoEYsz66Tdw
+	uKIxu76pzxiMYQEuvnE5Naea9YdefiTsKjybK8KB8i9PQutM7BAC5RMhZlwn20chTRQj2zTLPN9cL
+	+gM5ExfMeU3Ev3s0I5maWb3UeSZN+beYSIrq2LXfc4ets17FtkXiFBsCRcLHNGuOaKlxBTfr7eqFq
+	zKf/Fpil5b8Pjo/Rcp8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfJvj-0004aT-9P; Mon, 24 Jun 2019 08:02:23 +0000
+	id 1hfJvz-0004o3-Ng; Mon, 24 Jun 2019 08:02:39 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfJvf-0004ZM-UL; Mon, 24 Jun 2019 08:02:21 +0000
-X-UUID: f1c1344d2fe543ef9807ea03ea968007-20190624
-X-UUID: f1c1344d2fe543ef9807ea03ea968007-20190624
+ id 1hfJvh-0004ZZ-7U
+ for linux-mediatek@lists.infradead.org; Mon, 24 Jun 2019 08:02:22 +0000
+X-UUID: 4bb1ecd86fc247a783af475e48071dc8-20190624
+X-UUID: 4bb1ecd86fc247a783af475e48071dc8-20190624
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <jitao.shi@mediatek.com>)
+ (envelope-from <kobe-cp.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 367674676; Mon, 24 Jun 2019 00:00:35 -0800
-Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 24 Jun 2019 01:00:33 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
- (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 24 Jun 2019 16:00:31 +0800
-Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
- MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Mon, 24 Jun 2019 16:00:28 +0800
-From: Jitao Shi <jitao.shi@mediatek.com>
-To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
- Rutland" <mark.rutland@arm.com>, Ian Campbell
- <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
- <airlied@linux.ie>, "Matthias Brugger" <matthias.bgg@gmail.com>
-Subject: [v2 2/2] drm/panel: support for auo,
- kd101n80-45na wuxga dsi video mode panel
-Date: Mon, 24 Jun 2019 16:00:01 +0800
-Message-ID: <20190624080001.67222-3-jitao.shi@mediatek.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190624080001.67222-1-jitao.shi@mediatek.com>
-References: <20190624080001.67222-1-jitao.shi@mediatek.com>
+ with ESMTP id 137419139; Mon, 24 Jun 2019 00:01:40 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 24 Jun 2019 01:01:39 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 24 Jun 2019 16:01:37 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 24 Jun 2019 16:01:37 +0800
+From: Kobe Wu <kobe-cp.wu@mediatek.com>
+To: Peter Zijlstra <peterz@infradead.org>, Ingo Molnar <mingo@redhat.com>,
+ Will Deacon <will.deacon@arm.com>
+Subject: [PATCH] locking/lockdep: Save and display stack trace of held locks
+Date: Mon, 24 Jun 2019 16:00:59 +0800
+Message-ID: <1561363259-14705-1-git-send-email-kobe-cp.wu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190624_010219_989610_3067DA61 
-X-CRM114-Status: UNSURE (   8.33  )
+X-CRM114-CacheID: sfid-20190624_010221_286301_A71A8987 
+X-CRM114-Status: UNSURE (   8.93  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -77,100 +73,120 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
- Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>,
- Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
- Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
- Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
- yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
+Cc: Eason Lin <eason-yh.lin@mediatek.com>, linux-mediatek@lists.infradead.org,
+ wsd_upstream@mediatek.com, Kobe Wu <kobe-cp.wu@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Auo,kd101n80-45na's connector is same as boe,tv101wum-nl6.
-The most codes can be reuse.
-So auo,kd101n80-45na and boe,tv101wum-nl6 use one driver file.
-Add the different parts in driver data.
+Save the stack trace of held locks when lock_acquire() is invoked
+and display the stack trace when lockdep_print_held_locks() is
+invoked. The runtime stack trace of held locks are helpful in
+analyzing code flow and lockdep's warning.
 
-Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Save stack trace of each held lock will increase runtime overhead
+and memory consumption. The operation will be activated under
+CONFIG_LOCKDEP_TRACE_HELD_LOCK. So the impact will only occur
+when CONFIG_LOCKDEP_TRACE_HELD_LOCK=y.
+
+Signed-off-by: Kobe Wu <kobe-cp.wu@mediatek.com>
 ---
- .../gpu/drm/panel/panel-boe-tv101wum-nl6.c    | 40 +++++++++++++++++++
- 1 file changed, 40 insertions(+)
+ include/linux/lockdep.h  |   13 +++++++++++++
+ kernel/locking/lockdep.c |   22 ++++++++++++++++++++++
+ lib/Kconfig.debug        |   13 +++++++++++++
+ 3 files changed, 48 insertions(+)
 
-diff --git a/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c b/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
-index 6e06c8506623..d1ee43cfcbe2 100644
---- a/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
-+++ b/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
-@@ -372,6 +372,15 @@ static const struct panel_init_cmd boe_init_cmd[] = {
- 	{},
+diff --git a/include/linux/lockdep.h b/include/linux/lockdep.h
+index 6e2377e..4e8d027 100644
+--- a/include/linux/lockdep.h
++++ b/include/linux/lockdep.h
+@@ -224,6 +224,10 @@ struct lock_chain {
+  */
+ #define MAX_LOCKDEP_KEYS		((1UL << MAX_LOCKDEP_KEYS_BITS) - 1)
+ 
++#ifdef CONFIG_LOCKDEP_TRACE_HELD_LOCK
++#define MAX_HELD_LOCK_ENTRIES 32
++#endif
++
+ struct held_lock {
+ 	/*
+ 	 * One-way hash of the dependency chain up to this point. We
+@@ -269,6 +273,15 @@ struct held_lock {
+ 	unsigned int hardirqs_off:1;
+ 	unsigned int references:12;					/* 32 bits */
+ 	unsigned int pin_count;
++
++#ifdef CONFIG_LOCKDEP_TRACE_HELD_LOCK
++	/*
++	 * When trying to acquire a lock, the stack trace will be saved
++	 * in the entries.
++	 */
++	unsigned int nr_entries;
++	unsigned long entries[MAX_HELD_LOCK_ENTRIES];
++#endif
  };
  
-+static const struct panel_init_cmd auo_init_cmd[] = {
-+	_INIT_DELAY_CMD(24),
-+	_INIT_DCS_CMD(0x11),
-+	_INIT_DELAY_CMD(120),
-+	_INIT_DCS_CMD(0x29),
-+	_INIT_DELAY_CMD(120),
-+	{},
-+};
-+
- static inline struct boe_panel *to_boe_panel(struct drm_panel *panel)
- {
- 	return container_of(panel, struct boe_panel, base);
-@@ -572,6 +581,34 @@ static const struct panel_desc boe_tv101wum_nl6_desc = {
- 	.init_cmds = boe_init_cmd,
- };
+ /*
+diff --git a/kernel/locking/lockdep.c b/kernel/locking/lockdep.c
+index d06190f..ad7cecf 100644
+--- a/kernel/locking/lockdep.c
++++ b/kernel/locking/lockdep.c
+@@ -457,6 +457,28 @@ static int save_trace(struct lock_trace *trace)
+ 	return 1;
+ }
  
-+static const struct drm_display_mode auo_default_mode = {
-+	.clock = 157000,
-+	.hdisplay = 1200,
-+	.hsync_start = 1200 + 80,
-+	.hsync_end = 1200 + 80 + 24,
-+	.htotal = 1200 + 80 + 24 + 36,
-+	.vdisplay = 1920,
-+	.vsync_start = 1920 + 16,
-+	.vsync_end = 1920 + 16 + 4,
-+	.vtotal = 1920 + 16 + 4 + 16,
-+	.vrefresh = 60,
-+	.type = DRM_MODE_TYPE_DRIVER | DRM_MODE_TYPE_PREFERRED,
-+};
++/* Stack-trace: record stack backtrace when trying to acquire a lock. */
++#ifdef CONFIG_LOCKDEP_TRACE_HELD_LOCK
++static void save_held_lock_trace(struct held_lock *hlock)
++{
++	hlock->nr_entries =
++		stack_trace_save(hlock->entries, MAX_HELD_LOCK_ENTRIES, 2);
++}
 +
-+static const struct panel_desc auo_kd101n80_45na_desc = {
-+	.modes = &auo_default_mode,
-+	.bpc = 8,
-+	.size = {
-+		.width = 216,
-+		.height = 135,
-+	},
-+	.lanes = 4,
-+	.format = MIPI_DSI_FMT_RGB888,
-+	.mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_SYNC_PULSE |
-+		      MIPI_DSI_MODE_LPM,
-+	.init_cmds = auo_init_cmd,
-+};
++static void print_held_lock_trace(struct held_lock *hlock)
++{
++	stack_trace_print(hlock->entries, hlock->nr_entries, 6);
++}
++#else
++static void save_held_lock_trace(struct held_lock *hlock)
++{
++}
 +
- static int boe_panel_get_modes(struct drm_panel *panel)
- {
- 	struct boe_panel *boe = to_boe_panel(panel);
-@@ -695,6 +732,9 @@ static const struct of_device_id boe_of_match[] = {
- 	{ .compatible = "boe,tv101wum-nl6",
- 	  .data = &boe_tv101wum_nl6_desc
- 	},
-+	{ .compatible = "auo,kd101n80-45na",
-+	  .data = &auo_kd101n80_45na_desc
-+	},
- 	{ /* sentinel */ }
- };
- MODULE_DEVICE_TABLE(of, boe_of_match);
++static void print_held_lock_trace(struct held_lock *hlock)
++{
++}
++#endif
++
+ unsigned int nr_hardirq_chains;
+ unsigned int nr_softirq_chains;
+ unsigned int nr_process_chains;
+diff --git a/lib/Kconfig.debug b/lib/Kconfig.debug
+index eae4395..7082843 100644
+--- a/lib/Kconfig.debug
++++ b/lib/Kconfig.debug
+@@ -1285,6 +1285,19 @@ config WW_MUTEX_SELFTEST
+ 	  Say M if you want these self tests to build as a module.
+ 	  Say N if you are unsure.
+ 
++config LOCKDEP_TRACE_HELD_LOCK
++	bool "Lock information: save and display stack trace of held locks"
++	depends on PROVE_LOCKING
++	default n
++	help
++	  This feature will save the stack trace when trying to acquire a lock
++	  and display the stack trace when a lockdep warning is reported. This
++	  might be helpful in analyzing lockdep's warnings.
++
++	  Enable this will increase runtime overhead and memory consumption.
++
++	  If unsure, say N.
++
+ endmenu # lock debugging
+ 
+ config TRACE_IRQFLAGS
 -- 
-2.21.0
+1.7.9.5
 
 
 _______________________________________________
