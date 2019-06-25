@@ -2,67 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 715CC550C1
-	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 15:51:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D5921550C7
+	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 15:52:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rRPHidC5J/BLxsO4lIKqf+QkbpTfaEocSVD1CwxBYJo=; b=smEe47aRd3NwIe
-	Rq/l4JS0PZgtk7fl+4LkxgANini0Rm6Ssb1XQhsPVEm8uGSGk4UYyIVrM/zDfI98BFozz0TbORpQ6
-	+Isb/ruN7y4dWCfa15a17xBMKIS8oRYMHvNqa9qA2LQh2SvuoswAlPAlvqwkcpAR8RKo8zJX9pLCM
-	YQd11sESNHGUoJoh5K4T8dPZyrx1j4yV+DH6RuMQTyU6kNcPHOKUW8kIAIln2uhytCDw8zoVTm9c+
-	3eGTZkDLfZw6ninwtmANT5aGB0ssTeRvrYY4Tpo31S0crd1KjkxMTMAQc7fAJeGB80x6E9qz5w8Y0
-	IAdm7gooJlie8la78noQ==;
+	List-Owner; bh=iY7QqFYC0DiFOwqwpVZbV7PUv5Hpl2x0Iub0tBsoDF4=; b=hqEhIxIjPJe7yP
+	KfR2uZlNiHVDTzVRZq2hdkQOvGJw/mCnAPSwAMpsOhf25tVfJFGskH5E0KmLJGyqjFOp2ZG8GARCw
+	sgc3HEYhhdwdzY9kfv8TcmZUopf9yAPP8UX5WK4NOxVc+rezBPyq6Q+baFzp3vzcxuBDMhLSsso57
+	++U1rpTLSdOMQr4US3s+ol+gUUYNDuqsTal2i+rhzVNcj0r+ynYhbDKwHn6+qY1woTWd2pnN9tQgu
+	wXwPzOD0kfWjK4kBUw/BjrTX+G4puOUbYRy7knJ+roLHcjjvbdPQO4BF14eTsn+o1oBy4mLdbkytA
+	lhTvNSFGmJV2HtVfqc/g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hflqu-0001zj-IN; Tue, 25 Jun 2019 13:51:16 +0000
+	id 1hfls4-0002TO-5R; Tue, 25 Jun 2019 13:52:28 +0000
 Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hflqh-0001qm-RR
- for linux-mediatek@lists.infradead.org; Tue, 25 Jun 2019 13:51:05 +0000
-Received: by mail-lf1-x141.google.com with SMTP id x144so5248875lfa.9
- for <linux-mediatek@lists.infradead.org>; Tue, 25 Jun 2019 06:51:03 -0700 (PDT)
+ id 1hflrz-0002Sb-V7
+ for linux-mediatek@lists.infradead.org; Tue, 25 Jun 2019 13:52:25 +0000
+Received: by mail-lf1-x141.google.com with SMTP id z15so12656596lfh.13
+ for <linux-mediatek@lists.infradead.org>; Tue, 25 Jun 2019 06:52:23 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=NFgue3oKymAnPLqWEpKiFYxZqxdbMA1mAsgv3rYLpoE=;
- b=PdLfNuRX8o0MT8u/xnGoKn1MWuT+NeXfGGOEg8LQPuO8qtlaH+6/U/Se7HOmQPGW/t
- nhuOnnNj/Ur1cPp9pkrCWbCm946AeCXnyEcwO8F6uGppaYNGrImtYwVg4eqyZuYx4nw4
- VzpiyXCGGe1cmSCebquOcabusXBnFKLKt/BvnEHk5Iq9Ksp049DCVXNqpV90gE4KpAF6
- jIdbmoHFwr2O+yKyF5xOQ6KSyCo6vEP2VXoqEQKBLLqYGiyMWASrpQRYV9T68FD2svRX
- SLceTYFCOde44PwxP8DvJvoE815KPjsYOzE1qmOXi23IUTqltqJQloZd9osx4M9Eh944
- IQWw==
+ :cc; bh=1iPCXBWydY7xCYkvB8WzAfUNgl288BVJPxiE7eymZwc=;
+ b=g2V0fCvjO8+3g8khRYtLAnbQ17g4lqT6qVl4M0mCKmKWq+YJk1oLO9Zg92WOT9LoK3
+ OJ0TbgMvhLM3u8/sWKSIZnczTTXm3pxHjZ4hcg2+xP0SHdqLuUhWnjCO/nyI7mCxfOZe
+ pF55T17XglR3n4eL9/x16BxWXrtrXiwjNXvgCiX343miHdOa3JauxcHH2Pd3VPLIUbju
+ dBu/T9IuBycyeZef+ZDn9NmJB//VdJvSTJAMDSW+w5UCFyoprRYxlkFYYs2xjZMCWpWd
+ RF5Hj9cmTdbwLsAbZTQBlRpUofp+ZrJLl6R3kfCA1vvdesl9yKlln8Lfu898J7b2oa5c
+ iQ7w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=NFgue3oKymAnPLqWEpKiFYxZqxdbMA1mAsgv3rYLpoE=;
- b=U6c+fzP+tRQldVU9FfqnH5hpnmWX51AiWvBxiYl3l5OtotVbGysBGz31fuIWCr9+xH
- 8DP1M3hO8fNDvhEyKbfk8VipxG99OBHMhpDGanj49KB00yKdQZOZmDr0RjViOznyXUzq
- FkwNjtxc9Z7psoSSqIRTISkoJWoS/uHP5hx9qqnVzc52Q1If88Gma9+btXNA7U8YAehZ
- 8WZ6pI3sGVWYTTXUZQobudZ87B6tVJ3sMVdIX1SziulGcJcYevvPM5yThPUjbV5FETsi
- RUBUH0Or4Wgf+SswqM3LUb5HMbIk9/+zzTBmiQl7VR1xTegeDMKUwOy+GRsxymjqNtSN
- z3qA==
-X-Gm-Message-State: APjAAAVYX6ttAXpSrg0m3I816lIujt1+6hulg4B5T8P2Rk5WAhbSixYq
- J6jljmfIkXdZ5/z+zGgYvPeNwR6/+NgkeWCZX0yqig==
-X-Google-Smtp-Source: APXvYqweuybTOeTfqTGsuOJxjLKJ6DVhGG8Um8M//OczH8cF/Z2EL92nk9R9z1tbGk4bZ7C0ouYVRfKXJe75pfgJjXU=
-X-Received: by 2002:ac2:50c4:: with SMTP id h4mr25254433lfm.61.1561470662286; 
- Tue, 25 Jun 2019 06:51:02 -0700 (PDT)
+ bh=1iPCXBWydY7xCYkvB8WzAfUNgl288BVJPxiE7eymZwc=;
+ b=PpxDiGfvvF8kYwAozxEmvqtekFWzOLz905nhTG5W4xRuITg3vzJfmeZbmYlIyA3FSW
+ 1WqdFi+i3iWLaiNVvtZNpt3aCwkXLW3+tVYGo6pWbXHWopohW2TZIgEqvHHa3q7tyaCs
+ 5a+w5dYCMux80aOAWOlYz/PW4ehXh8lGMFxNxgjOVX+tNIJJeVJPmIOaqdbJHCV9Pk7y
+ UE2U2ahkOf+wwZEvQZwWOHKysxM/hQBVyXHi7t/xFGfYXOBP0LCgJSedl3PYdW64iMwR
+ znPkEH8XyCDiXlpnEUI8ivkhoGLAZJ33StsC5dFTNwoFElVuW+q0Ez3DXfkRUBbFWNww
+ rdLA==
+X-Gm-Message-State: APjAAAUFumz2+leBqBv/AdGalBdKFfSmU7MKj8xs76Fi4Lk0tDa2Z3DR
+ DWaZReo/os0I/FAfKxundseQdUjx64mXTxtdMEqtvA==
+X-Google-Smtp-Source: APXvYqys2XmtNKJMpGTxiNNF5eq3ErgW9CVtNHeSeJ6lfHCqj5xUU5+RhbLY8XHHRGOBrv8+Gr2dB9NfGnaPQOSPrJ4=
+X-Received: by 2002:a19:6a01:: with SMTP id u1mr14173585lfu.141.1561470742590; 
+ Tue, 25 Jun 2019 06:52:22 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190429035515.73611-1-drinkcat@chromium.org>
- <20190429035515.73611-2-drinkcat@chromium.org>
-In-Reply-To: <20190429035515.73611-2-drinkcat@chromium.org>
+ <20190429035515.73611-3-drinkcat@chromium.org>
+ <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
+In-Reply-To: <CAGp9LzqyRQ0knQ8+NanTAC0VVqBudAFPuCQJiyymmabaT1Hyfw@mail.gmail.com>
 From: Linus Walleij <linus.walleij@linaro.org>
-Date: Tue, 25 Jun 2019 15:50:50 +0200
-Message-ID: <CACRpkdZd+0_7xqaa05mqNzNxDC1kKmEv9LLRoSVYqTmO=+3iGA@mail.gmail.com>
-Subject: Re: [PATCH 1/2] pinctrl: mediatek: Ignore interrupts that are wake
- only during resume
-To: Nicolas Boichat <drinkcat@chromium.org>
+Date: Tue, 25 Jun 2019 15:52:10 +0200
+Message-ID: <CACRpkdZmNug21=6rz9U8-G5ONPywjCh6_y8-=msY+Y8WvZEm5g@mail.gmail.com>
+Subject: Re: [PATCH 2/2] pinctrl: mediatek: Update cur_mask in mask/mask ops
+To: Sean Wang <sean.wang@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_065103_892273_5895C0F3 
-X-CRM114-Status: GOOD (  12.51  )
+X-CRM114-CacheID: sfid-20190625_065224_005251_66A1681B 
+X-CRM114-Status: UNSURE (   7.22  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -91,43 +92,27 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+Cc: Nicolas Boichat <drinkcat@chromium.org>,
+ Chuanjia Liu <Chuanjia.Liu@mediatek.com>, lkml <linux-kernel@vger.kernel.org>,
  Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
  "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+ linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Apr 29, 2019 at 5:55 AM Nicolas Boichat <drinkcat@chromium.org> wrote:
+On Fri, Jun 21, 2019 at 6:20 AM Sean Wang <sean.wang@kernel.org> wrote:
 
-> Before suspending, mtk-eint would set the interrupt mask to the
-> one in wake_mask. However, some of these interrupts may not have a
-> corresponding interrupt handler, or the interrupt may be disabled.
+> The change is worth rewording the commit message you added above as an instance
+> and adding Fixes tag as a fixup to mean you're fixing the existing
+> problem in the driver.
 >
-> On resume, the eint irq handler would trigger nevertheless,
-> and irq/pm.c:irq_pm_check_wakeup would be called, which would
-> try to call irq_disable. However, if the interrupt is not enabled
-> (irqd_irq_disabled(&desc->irq_data) is true), the call does nothing,
-> and the interrupt is left enabled in the eint driver.
->
-> Especially for level-sensitive interrupts, this will lead to an
-> interrupt storm on resume.
->
-> If we detect that an interrupt is only in wake_mask, but not in
-> cur_mask, we can just mask it out immediately (as mtk_eint_resume
-> would do anyway at a later stage in the resume sequence, when
-> restoring cur_mask).
->
-> Fixes: bf22ff45bed ("genirq: Avoid unnecessary low level irq function calls")
-> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+> And then Acked-by: Sean Wang <sean.wang@kernel.org>
 
-Patch applied for fixes.
-Hm a late ACK made me miss this, sorry.
+I'm waiting for an updated version of this patch.
 
 Yours,
 Linus Walleij
