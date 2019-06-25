@@ -2,55 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 650FD5261D
-	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 10:11:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5464252672
+	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 10:24:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hpAjAiPEiiMVq8Li+nopcGVaYHP4LwJxQHnf5pmW1oI=; b=mrqCH366uExgiN
-	mKD81r0tOMUl6+rn+yzdmLj1ydakcoYfaAfijnEvV3WaOJZiLApS+MAY4mjo6C+vYsKr3V6gSGT2r
-	blBVsA1RIfGjyYJPVhiuFmrP6Jsixd/qpCmn+kBX7qOpD/P0lgp+2vV28wldPRR1UBrWqBz0LrER9
-	UISJtCuEEDE4NDbCYATOycQ45auos0QYogW26SX/+XI5mvGjG4EokojIt56b6WTvqjnTOUtUfQcRH
-	WBmFWj64NjL4R4i/6G8ehWq6Z1RgMAU1xeAlI3ASoRcS2wMZpB0m2fG2SxEZb4DxED70+BDXmDjjp
-	wuNwNO09aRu0JN7Iee5w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
+	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=E/t+nXrSZG0MQA4C3vg9I25qf8KVpfBpjbmY48uWjSw=; b=q1yZHJlQhSS7TR/JI1P75Xn6f
+	PMAusKXYKUVb6tpYTBKprchIosaizydfTF8oZD2Biqb45Wt5IEFRKB0teiHf7vb/3Xw5Ieg3y6j+4
+	DI/2NpMbpf72xPlbSg6SPIyWWADIy8eSC27shegYC+CoLQZKwxhtnVE6Ywf7ieWiR1EqLMFycs/4n
+	xFzCuCmlXBzRQAqWwUZND5BpEw8sbnJfoO26k49+OtR66m/3Y1bVldn54aKHVFHI9pFIRt1afG9ly
+	NwfoYjhxCaar7PLKzz4bAcQ28oor35izIxlkyO1LBm3LttcahJN8qnUddTT6P5pTYouFHrjiGNahm
+	yrAxHqrRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfgY2-0005T6-4r; Tue, 25 Jun 2019 08:11:26 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfgXz-0005St-Uu; Tue, 25 Jun 2019 08:11:23 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=FeL4YGXndhcHsWSAlte0b7Wx3ZKgDBGUgp4zwa60pPc=; b=tuUzdHIExne/eeS1c00vc7gjS
- AB3LJq0ZQ++Fg6J9CyRBrX4gTrDnwlDJ/Tlg4VwE9EZRX0L7mpJs2iWaNLbecP/UkjiJXVhaFuinv
- efEBhY3azsP53SGPaXLJ7K4+xH3UrVJBVbab7TYd/NhRi4NM6b2joLRQHY3MMZZkKc+ZdLVuLI7OE
- dre6EZ2IAwApDLiwNd+y6XYWNYjwUZwMMPYQNsdKeZs0D9c7jfiuKmdqNZ4YkOKC/SzkotBgMJg+i
- 24yIjZQ5KzGpb++2nZrAY8EI3/jnnNxtQW1CqqPB5Krupk3Igd6R4aRfeq60YT3cfWKiHmI6GoOIp
- WwO2NS7gw==;
-Received: from j217100.upc-j.chello.nl ([24.132.217.100]
- helo=hirez.programming.kicks-ass.net)
- by merlin.infradead.org with esmtpsa (Exim 4.92 #3 (Red Hat Linux))
- id 1hfgXg-0003Dx-KG; Tue, 25 Jun 2019 08:11:04 +0000
-Received: by hirez.programming.kicks-ass.net (Postfix, from userid 1000)
- id 56053209FFF54; Tue, 25 Jun 2019 10:11:03 +0200 (CEST)
-Date: Tue, 25 Jun 2019 10:11:03 +0200
-From: Peter Zijlstra <peterz@infradead.org>
-To: David Howells <dhowells@redhat.com>
-Subject: Re: [RFC][PATCH] wake_up_var() memory ordering
-Message-ID: <20190625081103.GU3436@hirez.programming.kicks-ass.net>
-References: <20190624165012.GH3436@hirez.programming.kicks-ass.net>
- <32379.1561449061@warthog.procyon.org.uk>
+	id 1hfgkN-0001BS-Nt; Tue, 25 Jun 2019 08:24:11 +0000
+Received: from mx.0dd.nl ([5.2.79.48])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hfgkJ-0001Ad-IM
+ for linux-mediatek@lists.infradead.org; Tue, 25 Jun 2019 08:24:09 +0000
+Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mx.0dd.nl (Postfix) with ESMTPS id 1B11C5FE8C;
+ Tue, 25 Jun 2019 10:24:06 +0200 (CEST)
+Authentication-Results: mx.0dd.nl; dkim=pass (2048-bit key;
+ secure) header.d=vdorst.com header.i=@vdorst.com header.b="RJLDHEVW"; 
+ dkim-atps=neutral
+Received: from www (www.vdorst.com [192.168.2.222])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.vdorst.com (Postfix) with ESMTPSA id D17F31CC905E;
+ Tue, 25 Jun 2019 10:24:05 +0200 (CEST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com D17F31CC905E
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
+ s=default; t=1561451045;
+ bh=81baUAKeAgxKW4Xwojp9lsyrtNx0oeNqTdLY8KnvPZ8=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=RJLDHEVW85CJKT+06SIAKyo0lnnjBcBY9gIzK7SYT1jcppOpNQxcLKnahAl4jHx8T
+ odFOUcX3cTKBjsI7fSSgpejHZgU0p64HyWb+B5s/XrYxYOw7wJm8Rp6kMPqvnK+AHX
+ UdzCcYeilIK2j1vzp/DYGJCkjgedD8tx0JVSsGFNTQIYTOKeEyuWx1nH4Gk49lkMGH
+ fxFnn2z8IvHo8zoGo/QAAm7k1b8t3zZJoAHe5jqmMnkfCeOq5HXylzkdvs5mBzC23N
+ RfPWfgH2wb9Y6VWycWM8jxIeK5BOgu/xuqJFxY19vuxy/1PgKbiEe9PrAOmoTHrnLV
+ gVuWWnAi9BHCg==
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
+ www.vdorst.com (Horde Framework) with HTTPS; Tue, 25 Jun 2019 08:24:05 +0000
+Date: Tue, 25 Jun 2019 08:24:05 +0000
+Message-ID: <20190625082405.Horde.AOfGPj5A9INWyS39F-pCQ27@www.vdorst.com>
+From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
+To: Andrew Lunn <andrew@lunn.ch>
+Subject: Re: [PATCH RFC net-next 5/5] net: dsa: mt7530: Add
+ mediatek,ephy-handle to isolate external phy
+References: <20190624145251.4849-1-opensource@vdorst.com>
+ <20190624145251.4849-6-opensource@vdorst.com>
+ <20190624215248.GC31306@lunn.ch>
+In-Reply-To: <20190624215248.GC31306@lunn.ch>
+User-Agent: Horde Application Framework 5
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <32379.1561449061@warthog.procyon.org.uk>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190625_012407_889129_7BED2CBD 
+X-CRM114-Status: GOOD (  10.23  )
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (-0.2 points)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,129 +91,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Brandenburg <martin@omnibond.com>, Mike Snitzer <snitzer@redhat.com>,
- linux-aio@kvack.org, David Airlie <airlied@linux.ie>,
- samba-technical@lists.samba.org,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Will Deacon <will.deacon@arm.com>, dri-devel@lists.freedesktop.org,
- "J. Bruce Fields" <bfields@fieldses.org>, Chris Mason <clm@fb.com>,
- dm-devel@redhat.com, keyrings@vger.kernel.org, Ingo Molnar <mingo@redhat.com>,
- linux-afs@lists.infradead.org, Alasdair Kergon <agk@redhat.com>,
- Mike Marshall <hubcap@omnibond.com>, linux-cifs@vger.kernel.org,
- rds-devel@oss.oracle.com, Andreas Gruenbacher <agruenba@redhat.com>,
- linux-rdma@vger.kernel.org, James Morris <jmorris@namei.org>,
- cluster-devel@redhat.com, Antti Palosaari <crope@iki.fi>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Paul McKenney <paulmck@linux.vnet.ibm.com>, intel-gfx@lists.freedesktop.org,
- devel@lists.orangefs.org, "Serge E. Hallyn" <serge@hallyn.com>,
- Santosh Shilimkar <santosh.shilimkar@oracle.com>,
- Johan Hedberg <johan.hedberg@gmail.com>, Marcel Holtmann <marcel@holtmann.org>,
- Sean Wang <sean.wang@mediatek.com>, Josef Bacik <josef@toxicpanda.com>,
- Jani Nikula <jani.nikula@linux.intel.com>, linux-fsdevel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Alexander Viro <viro@zeniv.linux.org.uk>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>, David Sterba <dsterba@suse.com>,
- MauroCarvalho Chehab <mchehab@kernel.org>,
- Trond Myklebust <trond.myklebust@hammerspace.com>,
- linux-arm-kernel@lists.infradead.org, linux-cachefs@redhat.com,
- linux-nfs@vger.kernel.org, netdev@vger.kernel.org,
- Jeff Layton <jlayton@kernel.org>, linux-kernel@vger.kernel.org,
- "David S. Miller" <davem@davemloft.net>, Steve French <sfrench@samba.org>,
- linux-bluetooth@vger.kernel.org, linux-security-module@vger.kernel.org,
- Benjamin LaHaise <bcrl@kvack.org>, Daniel Vetter <daniel@ffwll.ch>,
- Bob Peterson <rpeterso@redhat.com>, linux-media@vger.kernel.org,
- Anna Schumaker <anna.schumaker@netapp.com>, linux-btrfs@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: f.fainelli@gmail.com, frank-w@public-files.de, netdev@vger.kernel.org,
+ sean.wang@mediatek.com, linux@armlinux.org.uk, davem@davemloft.net,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
+ linux-mips@vger.kernel.org, vivien.didelot@gmail.com
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-
-(sorry for cross-posting to moderated lists btw, I've since
- acquired a patch to get_maintainers.pl that wil exclude them
- in the future)
-
-On Tue, Jun 25, 2019 at 08:51:01AM +0100, David Howells wrote:
-> Peter Zijlstra <peterz@infradead.org> wrote:
-> 
-> > I tried using wake_up_var() today and accidentally noticed that it
-> > didn't imply an smp_mb() and specifically requires it through
-> > wake_up_bit() / waitqueue_active().
-> 
-> Thinking about it again, I'm not sure why you need to add the barrier when
-> wake_up() (which this is a wrapper around) is required to impose a barrier at
-> the front if there's anything to wake up (ie. the wait queue isn't empty).
-> 
-> If this is insufficient, does it make sense just to have wake_up*() functions
-> do an unconditional release or full barrier right at the front, rather than it
-> being conditional on something being woken up?
-
-The curprit is __wake_up_bit()'s usage of waitqueue_active(); it is this
-latter (see its comment) that requires the smp_mb().
-
-wake_up_bit() and wake_up_var() are wrappers around __wake_up_bit().
-
-Without this barrier it is possible for the waitqueue_active() load to
-be hoisted over the cond=true store and the remote end can miss the
-store and we can miss its enqueue and we'll all miss a wakeup and get
-stuck.
-
-Adding an smp_mb() (or use wq_has_sleeper()) in __wake_up_bit() would be
-nice, but I fear some people will complain about overhead, esp. since
-about half the sites don't need the barrier due to being behind
-test_and_clear_bit() and the other half using smp_mb__after_atomic()
-after some clear_bit*() variant.
-
-There's a few sites that seem to open-code
-wait_var_event()/wake_up_var() and those actually need the full
-smp_mb(), but then maybe they should be converted to var instread of bit
-anyway.
-
-> > @@ -619,9 +614,7 @@ static int dvb_usb_fe_sleep(struct dvb_frontend *fe)
-> >  err:
-> >  	if (!adap->suspend_resume_active) {
-> >  		adap->active_fe = -1;
-> 
-> I'm wondering if there's a missing barrier here.  Should the clear_bit() on
-> the next line be clear_bit_unlock() or clear_bit_release()?
-
-That looks reasonable, but I'd like to hear from the DVB folks on that.
-
-> > -		clear_bit(ADAP_SLEEP, &adap->state_bits);
-> > -		smp_mb__after_atomic();
-> > -		wake_up_bit(&adap->state_bits, ADAP_SLEEP);
-> > +		clear_and_wake_up_bit(ADAP_SLEEP, &adap->state_bits);
-> >  	}
-> >  
-> >  	dev_dbg(&d->udev->dev, "%s: ret=%d\n", __func__, ret);
-> > diff --git a/fs/afs/fs_probe.c b/fs/afs/fs_probe.c
-> > index cfe62b154f68..377ee07d5f76 100644
-> > --- a/fs/afs/fs_probe.c
-> > +++ b/fs/afs/fs_probe.c
-> > @@ -18,6 +18,7 @@ static bool afs_fs_probe_done(struct afs_server *server)
-> >  
-> >  	wake_up_var(&server->probe_outstanding);
-> >  	clear_bit_unlock(AFS_SERVER_FL_PROBING, &server->flags);
-> > +	smp_mb__after_atomic();
-> >  	wake_up_bit(&server->flags, AFS_SERVER_FL_PROBING);
-> >  	return true;
-> >  }
-> 
-> Looking at this and the dvb one, does it make sense to stick the release
-> semantics of clear_bit_unlock() into clear_and_wake_up_bit()?
-
-I was thinking of adding another helper, maybe unlock_and_wake_up_bit()
-that included that extra barrier, but maybe making it unconditional
-isn't the worst idea.
-
-> Also, should clear_bit_unlock() be renamed to clear_bit_release() (and
-> similarly test_and_set_bit_lock() -> test_and_set_bit_acquire()) if we seem to
-> be trying to standardise on that terminology.
-
-That definitely makes sense to me, there's only 157 clear_bit_unlock()
-and 76 test_and_set_bit_lock() users (note the asymetry of that).
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+UXVvdGluZyBBbmRyZXcgTHVubiA8YW5kcmV3QGx1bm4uY2g+OgoKSGkgQW5kcmV3LAoKPj4gK3N0
+YXRpYyBpbnQgbXQ3NTMwX2lzb2xhdGVfZXBoeShzdHJ1Y3QgZHNhX3N3aXRjaCAqZHMsCj4+ICsJ
+CQkgICAgICAgc3RydWN0IGRldmljZV9ub2RlICplcGh5X25vZGUpCj4+ICt7Cj4+ICsJc3RydWN0
+IHBoeV9kZXZpY2UgKnBoeWRldiA9IG9mX3BoeV9maW5kX2RldmljZShlcGh5X25vZGUpOwo+PiAr
+CWludCByZXQ7Cj4+ICsKPj4gKwlpZiAoIXBoeWRldikKPj4gKwkJcmV0dXJuIDA7Cj4+ICsKPj4g
+KwlyZXQgPSBwaHlfbW9kaWZ5KHBoeWRldiwgTUlJX0JNQ1IsIDAsIChCTUNSX0lTT0xBVEUgfCBC
+TUNSX1BET1dOKSk7Cj4KPiBnZW5waHlfc3VzcGVuZCgpIGRvZXMgd2hhdCB5b3Ugd2FudC4KCklu
+IGNhc2UgbXkgZGV2aWNlIGhhcyBBVDgwMzMgUEhZIHdoaWNoIGFjdCBhcyBhIFJHTUlJLXRvLVNH
+TUlJICAKY29udmVydGVyIGZvciB0aGUKU0ZQIGNhZ2UuCgpRb3V0ZSBvZiB0aGUgQVI4MDMxLzMz
+IGRhdGFzaGVldDoKClRoZSBBUjgwMzMgZGV2aWNlIHN1cHBvcnRzIHRoZSBsb3cgcG93ZXIgbW9k
+ZSB3aXRoIHNvZnR3YXJlIHBvd2VyLWRvd24uClRvIGVudGVyIHRoZSBzdGFuZGFyZCBJRUVFIHBv
+d2VyLWRvd24gbW9kZSwgc2V0IHRoZSBiaXRbMTFdIFBPV0VSX0RPV04gb2YKQ29udHJvbCByZWdp
+c3RlciAtIGNvcHBlciBwYWdlIG9yIENvbnRyb2wgcmVnaXN0ZXIg4oCUIGZpYmVyIHBhZ2UgdG8g
+MS4KSW4gdGhpcyBtb2RlLCBBUjgwMzMgaWdub3JlcyBhbGwgTUFDIGludGVyZmFjZSBzaWduYWxz
+IGV4Y2VwdCB0aGUgTURDL01ESU8gYW5kCmRvZXMgbm90IHJlc3BvbmQgdG8gYW55IGFjdGl2aXR5
+IG9uIHRoZSBtZWRpYSBzaWRlLiBBUjgwMzMgY2Fubm90IHdha2UgIAp1cCBvbiBpdHMKb3duIGFu
+ZCBpcyBvbmx5IHdha2VuIHVwIGJ5IHNldHRpbmcgdGhlIFBPV0VSX0RPV04gYml0IHRvIDAuCgoK
+RG9lcyAic3RhbmRhcmQgSUVFRSBwb3dlci1kb3duIG1vZGUiIGRlc2NyaWIgdGhpcyBiZWhhdmlv
+ciB0aGF0IGluIHBvd2VyLWRvd24KbW9kZSB0aGUgUkdNSUkgYXJlIGFsc28gcHV0IGluIHRyaS1z
+dGF0ZT8KClJlYWRpbmcgdGhlIGRhdGFzaGVldCBkb2VzIG5vdCBnaXZlIG1lIGFueSBjbHVlcy4K
+UHV0dGluZyBSR01JSSBzaWduYWxzIGluIHRyaS1zdGF0ZSBpcyBpbXBvcnRhbnQgaW4gdGhpcyBj
+YXNlLgoKPgo+PiArCWlmIChyZXQpCj4+ICsJCWRldl9lcnIoZHMtPmRldiwgIkZhaWxlZCB0byBw
+dXQgcGh5ICVzIGluIGlzb2xhdGlvbiBtb2RlIVxuIiwKPj4gKwkJCWVwaHlfbm9kZS0+ZnVsbF9u
+YW1lKTsKPj4gKwllbHNlCj4+ICsJCWRldl9pbmZvKGRzLT5kZXYsICJQaHkgJXMgaW4gaXNvbGF0
+aW9uIG1vZGUhXG4iLAo+PiArCQkJIGVwaHlfbm9kZS0+ZnVsbF9uYW1lKTsKPgo+IE5vIG5lZWQg
+dG8gY2xvZyB1cCB0aGUgc3lzdGVtIHdpdGggeWV0IG1vcmUga2VybmVsIG1lc3NhZ2VzLgoKT0ss
+IEkgcmVtb3ZlIGl0LgoKPgo+ICAgIEFuZHJldwoKR3JlYXRzLAoKUmVuw6kKCgoKCl9fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1h
+aWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0
+cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
