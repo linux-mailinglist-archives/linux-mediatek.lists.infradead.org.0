@@ -2,63 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B1F4752350
-	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 08:11:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B72455254B
+	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Jun 2019 09:51:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Message-ID:Date:Content-ID:MIME-Version
+	:Subject:To:References:In-Reply-To:From:Reply-To:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tJ6t5S6Xemjku1KUHCCfaqe6jyRxRwzN7uBpjmAS6so=; b=oHFfcL/fNwnZUV
-	5CpzOU7Mb+IYlTPe7F7+XJ9lqpeOYERwAiT8zgOyqM1UrOymLV/nnXGoWHxFZ+tx3USJlvl+yqZ6w
-	IeyS6YsrNQkSB14hIHhv+5Bbie52/MuZf1/p40OiFODyX6CpGWZ+A3q1HaQZefnagcLNRBsrmjzqe
-	rMtZrxsXE73A3sRgCpxxLXRyLz/aEGcJn0BTeU6DCihE2xvZ4nLKQLYws3R2dIDYCBKYuj/6jACQc
-	iOzn72oFzqSw+fkdT3ZznfxRfz/zayzMHyMA9xgSo4NHo9IGJThZLdD66XJx652qJtemgFHQ4VwPU
-	yGITmqZ+4vZBCX4NEnZw==;
+	List-Owner; bh=hCQSD92yqVDonLppIiBuDV+I80C15vDa5F/IJr38eTE=; b=HXifK64OLSo0BO
+	ALk68KmdZ1aUbMcO6ZLXQ70koYyrP2/KB1ui9f2hk+kKY2HxmPntfSqStVOotI39czRTesQv5CEPq
+	O6dAbP+Ace/fyPQFSoERvBb7DVtYKNt2JBqvnE+3umetAdBGeNlKnh0SR69nED6L7xOYY9ru2C46X
+	nE39451NDavy3Isg+hfzVci3HAb6On4Zkctog89Pp8Qao0H547XCfhfmxs9izd2b+3iFEz7op3klj
+	b+ki2IaEIanXH0mbU0+NEzrlTipxc19h2NIYDKNHW12T4dWxsJVbs6sSR3T+5YiNUJ0O0pmbbf/KC
+	xih6ETQufUhcECnUVvfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfegD-0000IS-0g; Tue, 25 Jun 2019 06:11:45 +0000
-Received: from asavdk3.altibox.net ([109.247.116.14])
+	id 1hfgF1-0006c9-BU; Tue, 25 Jun 2019 07:51:47 +0000
+Received: from mx1.redhat.com ([209.132.183.28])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfefu-000067-7F; Tue, 25 Jun 2019 06:11:27 +0000
-Received: from ravnborg.org (unknown [158.248.194.18])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ id 1hfgEs-0006Zg-9q; Tue, 25 Jun 2019 07:51:39 +0000
+Received: from smtp.corp.redhat.com (int-mx03.intmail.prod.int.phx2.redhat.com
+ [10.5.11.13])
+ (using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
  (No client certificate requested)
- by asavdk3.altibox.net (Postfix) with ESMTPS id 3C6F120026;
- Tue, 25 Jun 2019 08:11:21 +0200 (CEST)
-Date: Tue, 25 Jun 2019 08:11:20 +0200
-From: Sam Ravnborg <sam@ravnborg.org>
-To: Masahiro Yamada <yamada.masahiro@socionext.com>
-Subject: Re: [PATCH] kbuild: compile-test global headers to ensure they are
- self-contained
-Message-ID: <20190625061120.GA7561@ravnborg.org>
-References: <20190621163931.19397-1-yamada.masahiro@socionext.com>
- <20190621175134.GB16409@ravnborg.org>
- <CAK7LNATz1iuG0Moab60gMSbVU8PJAmrLn27K8HK_1zQ0qeh26w@mail.gmail.com>
- <20190622130635.GA24262@ravnborg.org>
- <20190624214027.GA14740@ravnborg.org>
+ by mx1.redhat.com (Postfix) with ESMTPS id D5019307D932;
+ Tue, 25 Jun 2019 07:51:26 +0000 (UTC)
+Received: from warthog.procyon.org.uk (ovpn-120-57.rdu2.redhat.com
+ [10.10.120.57])
+ by smtp.corp.redhat.com (Postfix) with ESMTP id AC7AF6085B;
+ Tue, 25 Jun 2019 07:51:02 +0000 (UTC)
+Organization: Red Hat UK Ltd. Registered Address: Red Hat UK Ltd, Amberley
+ Place, 107-111 Peascod Street, Windsor, Berkshire, SI4 1TE, United
+ Kingdom.
+ Registered in England and Wales under Company Registration No. 3798903
+From: David Howells <dhowells@redhat.com>
+In-Reply-To: <20190624165012.GH3436@hirez.programming.kicks-ass.net>
+References: <20190624165012.GH3436@hirez.programming.kicks-ass.net>
+To: Peter Zijlstra <peterz@infradead.org>
+Subject: Re: [RFC][PATCH] wake_up_var() memory ordering
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190624214027.GA14740@ravnborg.org>
-User-Agent: Mutt/1.10.1 (2018-07-13)
-X-CMAE-Score: 0
-X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
- a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10
- a=XP9v88GcMfQVbZndWdIA:9 a=CjuIK1q_8ugA:10
+Content-ID: <32378.1561449061.1@warthog.procyon.org.uk>
+Date: Tue, 25 Jun 2019 08:51:01 +0100
+Message-ID: <32379.1561449061@warthog.procyon.org.uk>
+X-Scanned-By: MIMEDefang 2.79 on 10.5.11.13
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.5.16
+ (mx1.redhat.com [10.5.110.48]); Tue, 25 Jun 2019 07:51:37 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190624_231126_442077_E5E7943F 
-X-CRM114-Status: GOOD (  13.92  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190625_005138_469131_955D16DB 
+X-CRM114-Status: GOOD (  17.74  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [109.247.116.14 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [209.132.183.28 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,47 +71,92 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Michal Marek <michal.lkml@markovi.net>,
- Linux Kbuild mailing list <linux-kbuild@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: Martin Brandenburg <martin@omnibond.com>, linux-cachefs@redhat.com,
+ Mike Snitzer <snitzer@redhat.com>, linux-aio@kvack.org,
+ David Airlie <airlied@linux.ie>, samba-technical@lists.samba.org,
+ Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ Will Deacon <will.deacon@arm.com>, dri-devel@lists.freedesktop.org,
+ dhowells@redhat.com, Chris Mason <clm@fb.com>, dm-devel@redhat.com,
+ keyrings@vger.kernel.org, Ingo Molnar <mingo@redhat.com>,
+ linux-afs@lists.infradead.org, Alasdair Kergon <agk@redhat.com>,
+ Mike Marshall <hubcap@omnibond.com>, linux-cifs@vger.kernel.org,
+ rds-devel@oss.oracle.com, Andreas Gruenbacher <agruenba@redhat.com>,
+ linux-rdma@vger.kernel.org, James Morris <jmorris@namei.org>,
+ cluster-devel@redhat.com, Antti Palosaari <crope@iki.fi>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
+ Paul McKenney <paulmck@linux.vnet.ibm.com>, intel-gfx@lists.freedesktop.org,
+ devel@lists.orangefs.org, "Serge E. Hallyn" <serge@hallyn.com>,
+ Santosh Shilimkar <santosh.shilimkar@oracle.com>,
+ Johan Hedberg <johan.hedberg@gmail.com>, Marcel Holtmann <marcel@holtmann.org>,
+ Sean Wang <sean.wang@mediatek.com>, Josef Bacik <josef@toxicpanda.com>,
+ Jani Nikula <jani.nikula@linux.intel.com>, linux-fsdevel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Alexander Viro <viro@zeniv.linux.org.uk>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>, David Sterba <dsterba@suse.com>,
+ MauroCarvalho Chehab <mchehab@kernel.org>,
+ Trond Myklebust <trond.myklebust@hammerspace.com>,
+ linux-arm-kernel@lists.infradead.org, "J. Bruce Fields" <bfields@fieldses.org>,
+ linux-nfs@vger.kernel.org, netdev@vger.kernel.org,
+ Jeff Layton <jlayton@kernel.org>, linux-kernel@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, Steve French <sfrench@samba.org>,
+ linux-bluetooth@vger.kernel.org, linux-security-module@vger.kernel.org,
+ Benjamin LaHaise <bcrl@kvack.org>, Daniel Vetter <daniel@ffwll.ch>,
+ Bob Peterson <rpeterso@redhat.com>, linux-media@vger.kernel.org,
+ Anna Schumaker <anna.schumaker@netapp.com>, linux-btrfs@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> 
-> When all header files below include/drm are self-contained it will be a
-> single line:
-> 
->     header-test-y += $(all_headers_with_subdir)
-In reality it will likely be the above, and then a list of 
+Peter Zijlstra <peterz@infradead.org> wrote:
 
-header-test-n += foo.h
+> I tried using wake_up_var() today and accidentally noticed that it
+> didn't imply an smp_mb() and specifically requires it through
+> wake_up_bit() / waitqueue_active().
 
-For the header files that we for one or the other reason do not want to
-make self-contained.
-It would be nice to have the list of ignored files close to their home
-and not a full list in one Makefile in include/
+Thinking about it again, I'm not sure why you need to add the barrier when
+wake_up() (which this is a wrapper around) is required to impose a barrier at
+the front if there's anything to wake up (ie. the wait queue isn't empty).
 
-> diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
-> index 3e630fcaffd1..e2f765e9d1e1 100644
-> --- a/scripts/Makefile.lib
-> +++ b/scripts/Makefile.lib
-> @@ -67,6 +67,7 @@ extra-$(CONFIG_OF_ALL_DTBS) += $(patsubst %.dtb,%.dt.yaml, $(dtb-))
->  endif
+If this is insufficient, does it make sense just to have wake_up*() functions
+do an unconditional release or full barrier right at the front, rather than it
+being conditional on something being woken up?
+
+> @@ -619,9 +614,7 @@ static int dvb_usb_fe_sleep(struct dvb_frontend *fe)
+>  err:
+>  	if (!adap->suspend_resume_active) {
+>  		adap->active_fe = -1;
+
+I'm wondering if there's a missing barrier here.  Should the clear_bit() on
+the next line be clear_bit_unlock() or clear_bit_release()?
+
+> -		clear_bit(ADAP_SLEEP, &adap->state_bits);
+> -		smp_mb__after_atomic();
+> -		wake_up_bit(&adap->state_bits, ADAP_SLEEP);
+> +		clear_and_wake_up_bit(ADAP_SLEEP, &adap->state_bits);
+>  	}
 >  
->  # Test self-contained headers
-> +header-test-y := $(filter-out $(header-test-n), $(header-test-y))
-This part should include the logic to filter out duplicates too.
-I think we may do something wrong if the same header is listed twice.
+>  	dev_dbg(&d->udev->dev, "%s: ret=%d\n", __func__, ret);
+> diff --git a/fs/afs/fs_probe.c b/fs/afs/fs_probe.c
+> index cfe62b154f68..377ee07d5f76 100644
+> --- a/fs/afs/fs_probe.c
+> +++ b/fs/afs/fs_probe.c
+> @@ -18,6 +18,7 @@ static bool afs_fs_probe_done(struct afs_server *server)
+>  
+>  	wake_up_var(&server->probe_outstanding);
+>  	clear_bit_unlock(AFS_SERVER_FL_PROBING, &server->flags);
+> +	smp_mb__after_atomic();
+>  	wake_up_bit(&server->flags, AFS_SERVER_FL_PROBING);
+>  	return true;
+>  }
 
-We could also extend this with a check that all files in header-test-n
-exits.
+Looking at this and the dvb one, does it make sense to stick the release
+semantics of clear_bit_unlock() into clear_and_wake_up_bit()?
 
-	Sam
+Also, should clear_bit_unlock() be renamed to clear_bit_release() (and
+similarly test_and_set_bit_lock() -> test_and_set_bit_acquire()) if we seem to
+be trying to standardise on that terminology.
+
+David
 
 _______________________________________________
 Linux-mediatek mailing list
