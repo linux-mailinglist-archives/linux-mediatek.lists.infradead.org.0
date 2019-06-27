@@ -2,82 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DAFC658163
-	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 13:24:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8A245581B2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 13:37:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=G/waVP2d32xT3g6JPlgxTO/XBrl0LNkWI4d1aEmg210=; b=r0xkjOBmO0Va/7
-	WnYrHo0xltdZTfezcjNAS/Kl5QmEWMbxsnlbX5TBnVRod9GhahQ453MGA+D0OXr45vj4MNPLl1hnZ
-	4WxfCb+XASAIvH1Eht7zrLWVssfTsgFJvhToSe5sPC7Bifzn/Vv9GpjKobHkhjBeGAlYrb5K7CcGn
-	Yxo0YDNpGP2AtnUmPuYQz7NRCkpu71P3+YzuFnDWkWjCj7hP1yEm7fZANqQWhZ/ROzkr9dATy24Rq
-	YrAoFfHcFK3ACxPQRTj9Gp1dfaNXNiqPL+ZaaiGLgFbGHb8v2kc1QL5E3Wzz14XaBLs4i+ffocQuO
-	s1KkRybtSqgkKQaW+Zeg==;
+	List-Owner; bh=fqk+kGNudarsbi8/ScVMUseUl4m0YM/H0n4zh0+6Xow=; b=EUVSfKem5pbpee
+	N/EdBXAgz3WhOqT4RO74wFF4NuPgAYMh43XlojRgQ4A62y/VhEN5/yozxgbqnzt6ytbQg+x9xXMLp
+	7C/jyfdmGO2/LHMs3atPKZeOFb+N5+l6sX2fQyqEorM6phLmij42GBAb5bGVe0ZnoRT00z88izZYC
+	QmanLT7bCnDIaobHNVu77DMyFqCiK7TSXFVkUsjRHyVXogWVQjPNuyIzKIhuXpAV6TWBAvPsacF3D
+	LEXXAVhmOmC6Uno8N01c/Y7ou7Cv03DBM37LU/MOv7sbaV+l/dQ3+Zra1+rCftLDKbtuCQNTs18zI
+	5BAMm7RGlIr7sRUx2AzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgSVj-0002PZ-Dy; Thu, 27 Jun 2019 11:24:15 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1hgSiK-0007ig-6s; Thu, 27 Jun 2019 11:37:16 +0000
+Received: from mga09.intel.com ([134.134.136.24])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgSVW-0002FY-PX
- for linux-mediatek@lists.infradead.org; Thu, 27 Jun 2019 11:24:04 +0000
-Received: by mail-lf1-x144.google.com with SMTP id z15so1269430lfh.13
- for <linux-mediatek@lists.infradead.org>; Thu, 27 Jun 2019 04:24:02 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=F4KskJ1NAl/aeAMSSANWZVmj0vaROvOll7pDHlQvKrE=;
- b=nENRI+O/Sos7OKNBFX4fcuIjQJRwvWzpnQUI823OhuXy+g5L/2I06M0BvsD+EPBkBU
- jnMzz/8KF3lE8zGW4CZDHMmVSPuFkrs5D4b92ModrlnG7TNh9x/cgwb45aONOdqKlEec
- qS39kC+nzP1BDmIUzDeRmazx/dGoP61W2XHfSAtWn3ha5bU5t+BZA1+MNUIR4nBz4tOl
- NAX57XZMuQsMyPqhE+DroIbq+/20QvpPbo+0VMKO0XfCbCXNeQGCCgQ1pIrfPwdKeTta
- XzBI5e2tKYh0r3WdeMUnXmSkKv+DdJ5WiGWdmeTlnDcanzuEXZ+F1JSocegrhnetAmjw
- IkyA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=F4KskJ1NAl/aeAMSSANWZVmj0vaROvOll7pDHlQvKrE=;
- b=YXYxWDYvws7EIgeExeZov8efFekO1ysl1gbKtUghm4x37pcqvgdd49wv7uYhqCU3+b
- YgEo+nXBnRb2UtSNQCmDkGYSigy8W4QhrRzwu+OFu/Fp3CSJfPqgVREgu74YK21XmwAj
- nBJJMvETYVWxlDZE+c6eLY991P0pr61Z6CqKPe5q/DHyK/tSgQS3oSzHgiWWoZI9tD+B
- P8yerK8xNFEs5gKdxjMQXT8Uemo7bQOj+JL3Ht4vJ/OjfuFsG5YGRqJCWLKCTzpAEH96
- /oZHIzDCCSimrtl2Ccb2v05tuminDi+Fy1K6WdS8ShjZi0bqevo4B0CSV0BCg91/eJlR
- 6udg==
-X-Gm-Message-State: APjAAAXLG1Z5BzBZn8wcWLTgetdT4EO584iLkOdZ6dsnP1DKCVUiydNo
- Vx7mzr+uL6N1We2yIEzUZqh9rnuFdbe8/5JvQx1MTg==
-X-Google-Smtp-Source: APXvYqyeGnTnUh82XE5crL0FuoMFaSxBuAjA0pp9mZU9u9i/T+re4EBzmrybXpa77YjcTHZpDZQGFRLaagUdWo7XHdQ=
-X-Received: by 2002:a19:6a01:: with SMTP id u1mr1788889lfu.141.1561634640859; 
- Thu, 27 Jun 2019 04:24:00 -0700 (PDT)
+ id 1hgShr-0007XF-3e; Thu, 27 Jun 2019 11:36:48 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by orsmga102.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 27 Jun 2019 04:36:45 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.63,423,1557212400"; d="scan'208";a="183430789"
+Received: from jnikula-mobl3.fi.intel.com (HELO localhost) ([10.237.66.150])
+ by fmsmga001.fm.intel.com with ESMTP; 27 Jun 2019 04:36:37 -0700
+From: Jani Nikula <jani.nikula@linux.intel.com>
+To: Masahiro Yamada <yamada.masahiro@socionext.com>,
+ linux-kbuild@vger.kernel.org
+Subject: Re: [PATCH v2 0/4] Compile-test UAPI and kernel headers
+In-Reply-To: <20190627014617.600-1-yamada.masahiro@socionext.com>
+Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
+References: <20190627014617.600-1-yamada.masahiro@socionext.com>
+Date: Thu, 27 Jun 2019 14:39:24 +0300
+Message-ID: <87y31np89f.fsf@intel.com>
 MIME-Version: 1.0
-References: <20190626035445.236406-1-drinkcat@chromium.org>
-In-Reply-To: <20190626035445.236406-1-drinkcat@chromium.org>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Thu, 27 Jun 2019 12:23:49 +0100
-Message-ID: <CACRpkdaK1A2eS5_5Fg40hTV3bwRNvRmqfWidVMpNkxFkzVEVmw@mail.gmail.com>
-Subject: Re: [PATCH v2] pinctrl: mediatek: Update cur_mask in mask/mask ops
-To: Nicolas Boichat <drinkcat@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_042402_838226_D4016F52 
-X-CRM114-Status: GOOD (  14.22  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190627_043647_279375_A4B9B21E 
+X-CRM114-Status: GOOD (  17.54  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [134.134.136.24 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,58 +64,95 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chuanjia Liu <Chuanjia.Liu@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Evan Green <evgreen@chromium.org>, Stephen Boyd <swboyd@chromium.org>,
- "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+Cc: Song Liu <songliubraving@fb.com>,
+ Jakub Kicinski <jakub.kicinski@netronome.com>, linux-doc@vger.kernel.org,
+ Palmer Dabbelt <palmer@sifive.com>, Alexei Starovoitov <ast@kernel.org>,
+ Masahiro Yamada <yamada.masahiro@socionext.com>,
+ linux-riscv@lists.infradead.org, Sam Ravnborg <sam@ravnborg.org>,
+ Kees Cook <keescook@chromium.org>, xdp-newbies@vger.kernel.org,
+ Daniel Borkmann <daniel@iogearbox.net>, Jonathan Corbet <corbet@lwn.net>,
+ Anton Vorontsov <anton@enomsg.org>, John Fastabend <john.fastabend@gmail.com>,
+ Yonghong Song <yhs@fb.com>, Albert Ou <aou@eecs.berkeley.edu>,
+ Jesper Dangaard Brouer <hawk@kernel.org>,
+ Michal Marek <michal.lkml@markovi.net>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+ linux-arm-kernel@lists.infradead.org, Tony Luck <tony.luck@intel.com>,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, Colin Cross <ccross@android.com>,
+ bpf@vger.kernel.org, Martin KaFai Lau <kafai@fb.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Jun 26, 2019 at 4:54 AM Nicolas Boichat <drinkcat@chromium.org> wrote:
+On Thu, 27 Jun 2019, Masahiro Yamada <yamada.masahiro@socionext.com> wrote:
+> 1/4: reworked v2.
+>
+> 2/4: fix a flaw I noticed when I was working on this series
+>
+> 3/4: maybe useful for 4/4 and in some other places
+>
+> 4/4: v2. compile as many headers as possible.
+>
+>
+> Changes in v2:
+>  - Add CONFIG_CPU_{BIG,LITTLE}_ENDIAN guard to avoid build error
+>  - Use 'header-test-' instead of 'no-header-test'
+>  - Avoid weird 'find' warning when cleaning
+>   - New patch
+>   - New patch
+>   - Add everything to test coverage, and exclude broken ones
+>   - Rename 'Makefile' to 'Kbuild'
+>   - Add CONFIG_KERNEL_HEADER_TEST option
+>
+> Masahiro Yamada (4):
+>   kbuild: compile-test UAPI headers to ensure they are self-contained
+>   kbuild: do not create wrappers for header-test-y
+>   kbuild: support header-test-pattern-y
+>   kbuild: compile-test kernel headers to ensure they are self-contained
 
-> During suspend/resume, mtk_eint_mask may be called while
-> wake_mask is active. For example, this happens if a wake-source
-> with an active interrupt handler wakes the system:
-> irq/pm.c:irq_pm_check_wakeup would disable the interrupt, so
-> that it can be handled later on in the resume flow.
->
-> However, this may happen before mtk_eint_do_resume is called:
-> in this case, wake_mask is loaded, and cur_mask is restored
-> from an older copy, re-enabling the interrupt, and causing
-> an interrupt storm (especially for level interrupts).
->
-> Step by step, for a line that has both wake and interrupt enabled:
->  1. cur_mask[irq] = 1; wake_mask[irq] = 1; EINT_EN[irq] = 1 (interrupt
->     enabled at hardware level)
->  2. System suspends, resumes due to that line (at this stage EINT_EN
->     == wake_mask)
->  3. irq_pm_check_wakeup is called, and disables the interrupt =>
->     EINT_EN[irq] = 0, but we still have cur_mask[irq] = 1
->  4. mtk_eint_do_resume is called, and restores EINT_EN = cur_mask, so
->     it reenables EINT_EN[irq] = 1 => interrupt storm as the driver
->     is not yet ready to handle the interrupt.
->
-> This patch fixes the issue in step 3, by recording all mask/unmask
-> changes in cur_mask. This also avoids the need to read the current
-> mask in eint_do_suspend, and we can remove mtk_eint_chip_read_mask
-> function.
->
-> The interrupt will be re-enabled properly later on, sometimes after
-> mtk_eint_do_resume, when the driver is ready to handle it.
->
-> Fixes: 58a5e1b64b ("pinctrl: mediatek: Implement wake handler and suspend resume")
-> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> Acked-by: Sean Wang <sean.wang@kernel.org>
+[responding here because I didn't receive the actual patch]
 
-Patch applied after extending the has for Fixes: to 12 digits.
+This looks like it's doing what it's supposed to, but I ran into a bunch
+of build fails with CONFIG_OF=n. Sent a fix to one [1], but stopped at
+the next. Looks like you'll have to exclude more. And I'm pretty sure
+we'll uncover more configurations where this will fail.
 
-Yours,
-Linus Walleij
+But I do applaud the goal, and I'm committed to making all include/drm
+headers self-contained. I wouldn't block this based on the issues, it's
+pretty much the only way to expose them and get them fixed/excluded, and
+it's behind a config knob after all.
+
+With the caveat that I didn't finish the build, but OTOH tested the
+rainy day scenario and had the patch find issues it's meant to find:
+
+Tested-by: Jani Nikula <jani.nikula@intel.com>
+
+
+[1] http://patchwork.freedesktop.org/patch/msgid/20190627110103.7539-1-jani.nikula@intel.com
+
+>
+>  .gitignore                         |    1 -
+>  Documentation/dontdiff             |    1 -
+>  Documentation/kbuild/makefiles.txt |   13 +-
+>  Makefile                           |    4 +-
+>  include/Kbuild                     | 1134 ++++++++++++++++++++++++++++
+>  init/Kconfig                       |   22 +
+>  scripts/Makefile.build             |   10 +-
+>  scripts/Makefile.lib               |   12 +-
+>  scripts/cc-system-headers.sh       |    8 +
+>  usr/.gitignore                     |    1 -
+>  usr/Makefile                       |    2 +
+>  usr/include/.gitignore             |    3 +
+>  usr/include/Makefile               |  133 ++++
+>  13 files changed, 1331 insertions(+), 13 deletions(-)
+>  create mode 100644 include/Kbuild
+>  create mode 100755 scripts/cc-system-headers.sh
+>  create mode 100644 usr/include/.gitignore
+>  create mode 100644 usr/include/Makefile
+
+-- 
+Jani Nikula, Intel Open Source Graphics Center
 
 _______________________________________________
 Linux-mediatek mailing list
