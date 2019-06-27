@@ -2,54 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6C1BA56EA2
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Jun 2019 18:24:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DF31E57C7A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 08:51:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tjG4J6K4RGT/fxylZoKXYN2oq7rus2tlM06AxNXFlug=; b=AtfTwBqaKR74Fq
-	mt7gJh9r7EKVBSyefFrTW1cRasgA3GJB+Sn23+LkuUNz4lGBCYPPFBJL5H1qVUa4k0AEhdbAGMVbd
-	82zUXFZYZU19Sj3RdoY1E7ohrAkhu5lrNy1ae/EVDHRX+KGy7Hm7wxFXbLUGYeFX0p6OHnF2pmJgh
-	beNdn5wX4zHQXCTGgayb7mBwWwKmXn2yZuPXm3ncHSoqjxvp9YEvixkBZfebh6IKoV6ObQGwgEOSu
-	vry9EL3P4HHJwC1h7TLYj4lvWBblrS5UkxuRABk7yw6eHwyM22Sjs0j08iyALZIOmvQPGcYYFo7UM
-	5n2XyhQedZcMr4DyDgtg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=8FpXQwkURflikHOGf9f2kFGdkpIJTr9xbvmCUMGrEnE=; b=qIH
+	A4HkfFyRZXSARysL2NFi1tDcTeFrtUKxwNYI6MSlBNPcZVCRz+6gy1nAfiReY4PuKs/+IzcQxjnIp
+	ftlUKdj10JkZnqfG1bZs4vuHEm40i9sUAvC60UShJPVXKSk6kZlOGCLoclExk7TFFZtfsbMpRLOfP
+	AkaBWUrbThQ+cqfb+d9Ngc8HdW5PipQEt/8UejNCe0CqjekO0oIm9NAPUQ95hBeVpKDqVEmXWG7eD
+	J95S8XmFot1T7osj9gCmaDXq/JoLoYEX5hb3kcwQIYAheByMYzrxUGXtnENqN6IZQCfRSC/1Vr43j
+	LH3TCAEGz6EArKp+aUbj82EgERiCLvg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgAiJ-00016t-SH; Wed, 26 Jun 2019 16:24:03 +0000
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
+	id 1hgOG6-0006wq-Hn; Thu, 27 Jun 2019 06:51:50 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgAi1-0000s0-Et; Wed, 26 Jun 2019 16:23:48 +0000
-Received: from localhost (unknown [IPv6:2a01:e0a:2c:6930:5cf4:84a1:2763:fe0d])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- (Authenticated sender: bbrezillon)
- by bhuna.collabora.co.uk (Postfix) with ESMTPSA id 155F72753CB;
- Wed, 26 Jun 2019 17:23:43 +0100 (BST)
-Date: Wed, 26 Jun 2019 18:23:39 +0200
-From: Boris Brezillon <boris.brezillon@collabora.com>
-To: Qii Wang <qii.wang@mediatek.com>
-Subject: Re: [PATCH v2 1/2] dt-bindings: i3c: Document MediaTek I3C master
- bindings
-Message-ID: <20190626182339.0c6301a2@collabora.com>
-In-Reply-To: <1561527388-4829-2-git-send-email-qii.wang@mediatek.com>
-References: <1561527388-4829-1-git-send-email-qii.wang@mediatek.com>
- <1561527388-4829-2-git-send-email-qii.wang@mediatek.com>
-Organization: Collabora
-X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; x86_64-redhat-linux-gnu)
-MIME-Version: 1.0
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190626_092347_163705_2E11ABF4 
-X-CRM114-Status: GOOD (  16.52  )
-X-Spam-Score: -0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ id 1hgO8b-0006KM-8W; Thu, 27 Jun 2019 06:44:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=Message-Id:Date:Subject:Cc:To:From:
+ Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=t/tKte8+f+WnIerV46Kqk5V4Cu5goyQEz8X3TPyTH+k=; b=YmGTxxoN9UbpxZaK0IJIRp/Bk
+ syPXhkVtX+ul8X987R6Q2eLdhZ9XRF06x594dp+A74aVZdwKAkR91accZ2pcbtmhmTYxwjoN9sueD
+ G0zwBZWAlpKhbW43sq6dTpytNsieafBkZVq+OBd0uYZtDZCFDp/I6z7O8gMwAxWcwTZLwr+mn+Nez
+ eq2hS6Vps456GJvlF2oyG5MiTskjB0VapBGkozAkTErhCD5kzGScUxVAhMrFAToKqNbMW3NqYNKbD
+ 5qds3DGZrTV4lE0X88FzVhgxdHbJ1+TZ17Mh6miLcs/wIMyI8dX6kE3U4RTCucN0Y7u69Cm2ijkhE
+ eRzg9kH/g==;
+Received: from conuserg-08.nifty.com ([210.131.2.75])
+ by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hgJW2-0005W4-Ma; Thu, 27 Jun 2019 01:47:59 +0000
+Received: from grover.flets-west.jp (softbank126125154139.bbtec.net
+ [126.125.154.139]) (authenticated)
+ by conuserg-08.nifty.com with ESMTP id x5R1kN0v032702;
+ Thu, 27 Jun 2019 10:46:23 +0900
+DKIM-Filter: OpenDKIM Filter v2.10.3 conuserg-08.nifty.com x5R1kN0v032702
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nifty.com;
+ s=dec2015msa; t=1561599984;
+ bh=t/tKte8+f+WnIerV46Kqk5V4Cu5goyQEz8X3TPyTH+k=;
+ h=From:To:Cc:Subject:Date:From;
+ b=x56ew+Nf/mRL+Y9auCSqcIA7wXTn2ja3HVYzHe0zb/E43gJ8Lggs/PguNK3OCZjgp
+ uEyvbCO2H1dT/DpTwUE6DbmQRbC6vOSL5OITz+s0Bb0odvn6gylTlEcXpF8asnjeml
+ 88aMR4WR5z+A0KqVY3or1TMOqNYfDZk2Ex4sSzWca/5b84o36B0eGUd3VL7kWJzm2Z
+ ht4QKpX3nwgoUQtDo9jLHs9EQ7Dgcaxi1GdZoFz3rV7s0Tp5VvQMZ+OUmUdUW+ge61
+ tE78teOBqyznZ79jc3oTqjv6+zpNpU51id+uwMW/3dc8GBkGo5Jz2XIAR4PoONDPEu
+ JgLgECL33cJbg==
+X-Nifty-SrcIP: [126.125.154.139]
+From: Masahiro Yamada <yamada.masahiro@socionext.com>
+To: linux-kbuild@vger.kernel.org
+Subject: [PATCH v2 0/4] Compile-test UAPI and kernel headers
+Date: Thu, 27 Jun 2019 10:46:13 +0900
+Message-Id: <20190627014617.600-1-yamada.masahiro@socionext.com>
+X-Mailer: git-send-email 2.17.1
+X-Spam-Note: CRM114 invocation failed
+X-Spam-Score: 1.0 (+)
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+ Content analysis details:   (1.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [210.131.2.75 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,96 +83,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- bbrezillon@kernel.org, leilk.liu@mediatek.com, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
- linux-mediatek@lists.infradead.org, xinping.qian@mediatek.com,
- matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Song Liu <songliubraving@fb.com>,
+ Jakub Kicinski <jakub.kicinski@netronome.com>, linux-doc@vger.kernel.org,
+ Palmer Dabbelt <palmer@sifive.com>, Alexei Starovoitov <ast@kernel.org>,
+ Masahiro Yamada <yamada.masahiro@socionext.com>,
+ linux-riscv@lists.infradead.org, Sam Ravnborg <sam@ravnborg.org>,
+ Kees Cook <keescook@chromium.org>, xdp-newbies@vger.kernel.org,
+ Daniel Borkmann <daniel@iogearbox.net>, Jonathan Corbet <corbet@lwn.net>,
+ Anton Vorontsov <anton@enomsg.org>, John Fastabend <john.fastabend@gmail.com>,
+ Yonghong Song <yhs@fb.com>, Albert Ou <aou@eecs.berkeley.edu>,
+ Jesper Dangaard Brouer <hawk@kernel.org>,
+ Michal Marek <michal.lkml@markovi.net>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Tony Luck <tony.luck@intel.com>,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, Colin Cross <ccross@android.com>,
+ bpf@vger.kernel.org, Martin KaFai Lau <kafai@fb.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 26 Jun 2019 13:36:27 +0800
-Qii Wang <qii.wang@mediatek.com> wrote:
 
-> Document MediaTek I3C master DT bindings.
-> 
-> Signed-off-by: Qii Wang <qii.wang@mediatek.com>
-> ---
->  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   47 ++++++++++++++++++++
->  1 file changed, 47 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> new file mode 100644
-> index 0000000..3fd4f17
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> @@ -0,0 +1,47 @@
-> +Bindings for MediaTek I3C master block
-> +=====================================
-> +
-> +Required properties:
-> +--------------------
-> +- compatible: shall be "mediatek,i3c-master"
-> +- reg: physical base address of the controller and apdma base, length of
-> +  memory mapped region.
-> +- reg-names: should be "main" for controller and "dma" for apdma.
-> +- interrupts: interrupt number to the cpu.
+1/4: reworked v2.
 
-Depending on the interrupt controller, each interrupt cell might
-contain more than just the interrupt number.
+2/4: fix a flaw I noticed when I was working on this series
 
-> +- clocks: clock name from clock manager.
+3/4: maybe useful for 4/4 and in some other places
 
-This property does not contain clock names but clk references.
+4/4: v2. compile as many headers as possible.
 
-> +- clock-names: must include "main" and "dma".
-> +
-> +Mandatory properties defined by the generic binding (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
-> +
-> +- #address-cells: shall be set to 3
-> +- #size-cells: shall be set to 0
-> +
-> +Optional properties defined by the generic binding (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
-> +
-> +- i2c-scl-hz
-> +- i3c-scl-hz
-> +
-> +I3C device connected on the bus follow the generic description (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
-> +
-> +Example:
-> +
-> +	i3c0: i3c@1100d000 {
-> +		compatible = "mediatek,i3c-master";
-> +		reg = <0x1100d000 0x100>,
-> +		      <0x11000300 0x80>;
-> +		reg-names = "main", "dma";
-> +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
-> +		clocks = <&i3c0_ck>, <&ap_dma_ck>;
-> +		clock-names = "main", "dma";
-> +		#address-cells = <1>;
-> +		#size-cells = <0>;
-> +		i2c-scl-hz = <100000>;
-> +
-> +		nunchuk: nunchuk@52 {
-> +			compatible = "nintendo,nunchuk";
-> +			reg = <0x52 0x80000010 0>;
 
-reg is wrong here, should be
+Changes in v2:
+ - Add CONFIG_CPU_{BIG,LITTLE}_ENDIAN guard to avoid build error
+ - Use 'header-test-' instead of 'no-header-test'
+ - Avoid weird 'find' warning when cleaning
+  - New patch
+  - New patch
+  - Add everything to test coverage, and exclude broken ones
+  - Rename 'Makefile' to 'Kbuild'
+  - Add CONFIG_KERNEL_HEADER_TEST option
 
-			reg = <0x52 0x0 0x10>;
+Masahiro Yamada (4):
+  kbuild: compile-test UAPI headers to ensure they are self-contained
+  kbuild: do not create wrappers for header-test-y
+  kbuild: support header-test-pattern-y
+  kbuild: compile-test kernel headers to ensure they are self-contained
 
-While at it, can you send a patch to fix the example in the cadence
-binding doc?
+ .gitignore                         |    1 -
+ Documentation/dontdiff             |    1 -
+ Documentation/kbuild/makefiles.txt |   13 +-
+ Makefile                           |    4 +-
+ include/Kbuild                     | 1134 ++++++++++++++++++++++++++++
+ init/Kconfig                       |   22 +
+ scripts/Makefile.build             |   10 +-
+ scripts/Makefile.lib               |   12 +-
+ scripts/cc-system-headers.sh       |    8 +
+ usr/.gitignore                     |    1 -
+ usr/Makefile                       |    2 +
+ usr/include/.gitignore             |    3 +
+ usr/include/Makefile               |  133 ++++
+ 13 files changed, 1331 insertions(+), 13 deletions(-)
+ create mode 100644 include/Kbuild
+ create mode 100755 scripts/cc-system-headers.sh
+ create mode 100644 usr/include/.gitignore
+ create mode 100644 usr/include/Makefile
 
-> +		};
-> +	};
+-- 
+2.17.1
 
 
 _______________________________________________
