@@ -2,61 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8527357C4A
-	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 08:37:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4AB8A57D23
+	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 09:26:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0OJt2suiSpP6fPADUpJ8iGJmB+IC9ZWl6D33e9YpsXw=; b=efi7MqsgLgIf3E
-	wpa5GgLsgYDoPFVaTs3QpDZQxLEIVvPyvn90keTUnloRetU/IWYj5gPixDLfpmjx1+W/YWSovcQSm
-	E2cqg0Uy3z56Y0m/jUmPwTYabrA9rWYFLtLOdfeaxs+ME3hLt9o6WHLM9e7JUHJbdULC+oJmZI20H
-	bi/K/cFlG9uIDuXIC/tTYyxQDRDPEskoUX9zW4tB7iOFka1yVYFenfRHzIV4P+JSqDKBA4nKPMcCR
-	B+U9mcIQlHanXD5jaKvRpmmZ26CT00BZbRPZ8R7DGxRuKSmLxNuSTFyvQ9rSHKPFMZH4vx+4Nfdw+
-	0514wXrbLg7dYcF9adYA==;
+	List-Owner; bh=ff1ww7u4QU+SH673YM+pNyu3joMkfXzme4i2SXs9odc=; b=SI69wc2xV5Y4X6
+	T3cqK1D6GBBJ1icMVQ0tCyF4eHz3zzDnWRouSC8jl292yNh2FDCR5mH9fSdYCkwJRMBrQJk2xHL7Q
+	OImgCx1tB+bnNpMOIXsaPHOf5L966k4TLhw3TFqHCP77Na29LjfSaQgqod5a6HqlwwnI+bDx6MVyH
+	NRfR4tSO64ke+Al28TegxPNvRXLvPURXbHlklV64637hL+hCDHYK8CrxcccfgXYFfUXwiweZOfNVJ
+	yP1BjteSONubp3zh32eGC9SrdlBVSYx6z9lSAgKBj5HBgifUSsXIi8qze1cCfpBAdccwQjIq9vaDL
+	N8md3nvRWGwgKIsB0bfQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgO2c-00048G-2W; Thu, 27 Jun 2019 06:37:54 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hgOnL-0008D6-Iu; Thu, 27 Jun 2019 07:26:11 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgO2K-0003xI-Tg; Thu, 27 Jun 2019 06:37:38 +0000
-X-UUID: 0e0d19b14c854e0db54271d8b5e2d420-20190626
-X-UUID: 0e0d19b14c854e0db54271d8b5e2d420-20190626
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hgOmz-00080i-2n; Thu, 27 Jun 2019 07:25:50 +0000
+X-UUID: 6535ad019e8341bab7b5ff41e81c64a2-20190626
+X-UUID: 6535ad019e8341bab7b5ff41e81c64a2-20190626
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <qii.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1100819700; Wed, 26 Jun 2019 22:37:22 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 1214892574; Wed, 26 Jun 2019 23:25:31 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 26 Jun 2019 23:37:20 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 27 Jun 2019 14:37:12 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 27 Jun 2019 14:37:12 +0800
-Message-ID: <1561617432.17285.4.camel@mtksdaap41>
-Subject: Re: [PATCH v9 11/12] soc: mediatek: cmdq: add
- cmdq_dev_get_client_reg function
-From: CK Hu <ck.hu@mediatek.com>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Date: Thu, 27 Jun 2019 14:37:12 +0800
-In-Reply-To: <20190627061958.9488-12-bibby.hsieh@mediatek.com>
-References: <20190627061958.9488-1-bibby.hsieh@mediatek.com>
- <20190627061958.9488-12-bibby.hsieh@mediatek.com>
+ 15.0.1395.4; Thu, 27 Jun 2019 00:25:30 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 27 Jun 2019 15:25:27 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 27 Jun 2019 15:25:27 +0800
+Message-ID: <1561620327.12217.27.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 1/2] dt-bindings: i3c: Document MediaTek I3C master
+ bindings
+From: Qii Wang <qii.wang@mediatek.com>
+To: Boris Brezillon <boris.brezillon@collabora.com>
+Date: Thu, 27 Jun 2019 15:25:27 +0800
+In-Reply-To: <20190626182339.0c6301a2@collabora.com>
+References: <1561527388-4829-1-git-send-email-qii.wang@mediatek.com>
+ <1561527388-4829-2-git-send-email-qii.wang@mediatek.com>
+ <20190626182339.0c6301a2@collabora.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190626_233736_964903_C32C18FD 
-X-CRM114-Status: GOOD (  16.43  )
+X-CRM114-CacheID: sfid-20190627_002549_133007_E5AE8E99 
+X-CRM114-Status: GOOD (  19.67  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -72,115 +75,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel@vger.kernel.org, Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Houlong Wei <houlong.wei@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ bbrezillon@kernel.org, leilk.liu@mediatek.com, gregkh@linuxfoundation.org,
+ linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
+ linux-mediatek@lists.infradead.org, xinping.qian@mediatek.com,
+ matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Bibby:
-
-On Thu, 2019-06-27 at 14:19 +0800, Bibby Hsieh wrote:
-> GCE cannot know the register base address, this function
-> can help cmdq client to get the cmdq_client_reg structure.
+On Wed, 2019-06-26 at 18:23 +0200, Boris Brezillon wrote:
+> On Wed, 26 Jun 2019 13:36:27 +0800
+> Qii Wang <qii.wang@mediatek.com> wrote:
 > 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c | 24 ++++++++++++++++++++++++
->  include/linux/soc/mediatek/mtk-cmdq.h  | 21 +++++++++++++++++++++
->  2 files changed, 45 insertions(+)
+> > Document MediaTek I3C master DT bindings.
+> > 
+> > Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+> > ---
+> >  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   47 ++++++++++++++++++++
+> >  1 file changed, 47 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > new file mode 100644
+> > index 0000000..3fd4f17
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > @@ -0,0 +1,47 @@
+> > +Bindings for MediaTek I3C master block
+> > +=====================================
+> > +
+> > +Required properties:
+> > +--------------------
+> > +- compatible: shall be "mediatek,i3c-master"
+> > +- reg: physical base address of the controller and apdma base, length of
+> > +  memory mapped region.
+> > +- reg-names: should be "main" for controller and "dma" for apdma.
+> > +- interrupts: interrupt number to the cpu.
 > 
-> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index 70ad4d806fac..ceb1b569891f 100644
-> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -27,6 +27,30 @@ struct cmdq_instruction {
->  	u8 op;
->  };
->  
-> +int cmdq_dev_get_client_reg(struct device *dev,
-> +			    struct cmdq_client_reg *client_reg, int idx)
-> +{
-> +	struct of_phandle_args spec;
-> +
-> +	if (!client_reg)
-> +		return -ENOENT;
-> +
-> +	if (of_parse_phandle_with_args(dev->of_node, "mediatek,gce-client-reg",
-> +				       "#subsys-cells", idx, &spec)) {
-> +		dev_err(dev, "can't parse gce-client-reg property (%d)", idx);
-> +
-> +		return -ENOENT;
+> Depending on the interrupt controller, each interrupt cell might
+> contain more than just the interrupt number.
+> 
 
-Maybe my expression is not so clear. of_parse_phandle_with_args() may
-return -ENOENT, but it also may return -EINVAL. My point is why do you
-change the return value of of_parse_phandle_with_args(). What the error
-you get from of_parse_phandle_with_args(), you could also return it to
-the caller of cmdq_dev_get_client_reg().
+ok, I will modify it as "the interrupt line connected to this I3C
+master"
 
-Regards,
-CK
+> > +- clocks: clock name from clock manager.
+> 
+> This property does not contain clock names but clk references.
+> 
 
-> +	}
-> +
-> +	client_reg->subsys = spec.args[0];
-> +	client_reg->offset = spec.args[1];
-> +	client_reg->size = spec.args[2];
-> +	of_node_put(spec.np);
-> +
-> +	return 0;
-> +}
-> +EXPORT_SYMBOL(cmdq_dev_get_client_reg);
-> +
->  static void cmdq_client_timeout(struct timer_list *t)
->  {
->  	struct cmdq_client *client = from_timer(client, t, timer);
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index a345870a6d10..be402c4c740e 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -15,6 +15,12 @@
->  
->  struct cmdq_pkt;
->  
-> +struct cmdq_client_reg {
-> +	u8 subsys;
-> +	u16 offset;
-> +	u16 size;
-> +};
-> +
->  struct cmdq_client {
->  	spinlock_t lock;
->  	u32 pkt_cnt;
-> @@ -142,4 +148,19 @@ int cmdq_pkt_flush_async(struct cmdq_pkt *pkt, cmdq_async_flush_cb cb,
->   */
->  int cmdq_pkt_flush(struct cmdq_pkt *pkt);
->  
-> +/**
-> + * cmdq_dev_get_client_reg() - parse cmdq client reg from the device
-> + *			       node of CMDQ client
-> + * @dev:	device of CMDQ mailbox clienti
-> + * @client_reg: CMDQ client reg pointer
-> + * @idx:	the index of desired reg
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + *
-> + * Help CMDQ client pasing the cmdq client reg
-> + * from the device node of CMDQ client.
-> + */
-> +int cmdq_dev_get_client_reg(struct device *dev,
-> +			    struct cmdq_client_reg *client_reg, int idx);
-> +
->  #endif	/* __MTK_CMDQ_H__ */
+ok, I will modify it as "shall reference the i3c and apdma clocks"
+
+> > +- clock-names: must include "main" and "dma".
+> > +
+> > +Mandatory properties defined by the generic binding (see
+> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> > +
+> > +- #address-cells: shall be set to 3
+> > +- #size-cells: shall be set to 0
+> > +
+> > +Optional properties defined by the generic binding (see
+> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> > +
+> > +- i2c-scl-hz
+> > +- i3c-scl-hz
+> > +
+> > +I3C device connected on the bus follow the generic description (see
+> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
+> > +
+> > +Example:
+> > +
+> > +	i3c0: i3c@1100d000 {
+> > +		compatible = "mediatek,i3c-master";
+> > +		reg = <0x1100d000 0x100>,
+> > +		      <0x11000300 0x80>;
+> > +		reg-names = "main", "dma";
+> > +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
+> > +		clocks = <&i3c0_ck>, <&ap_dma_ck>;
+> > +		clock-names = "main", "dma";
+> > +		#address-cells = <1>;
+> > +		#size-cells = <0>;
+> > +		i2c-scl-hz = <100000>;
+> > +
+> > +		nunchuk: nunchuk@52 {
+> > +			compatible = "nintendo,nunchuk";
+> > +			reg = <0x52 0x80000010 0>;
+> 
+> reg is wrong here, should be
+> 
+> 			reg = <0x52 0x0 0x10>;
+> 
+> While at it, can you send a patch to fix the example in the cadence
+> binding doc?
+> 
+
+ok, I will do it. Thanks for your review.
+
+> > +		};
+> > +	};
+> 
 
 
 
