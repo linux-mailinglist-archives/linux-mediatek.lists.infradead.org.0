@@ -2,64 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4AB8A57D23
-	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 09:26:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B9CC757DD3
+	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Jun 2019 10:04:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ff1ww7u4QU+SH673YM+pNyu3joMkfXzme4i2SXs9odc=; b=SI69wc2xV5Y4X6
-	T3cqK1D6GBBJ1icMVQ0tCyF4eHz3zzDnWRouSC8jl292yNh2FDCR5mH9fSdYCkwJRMBrQJk2xHL7Q
-	OImgCx1tB+bnNpMOIXsaPHOf5L966k4TLhw3TFqHCP77Na29LjfSaQgqod5a6HqlwwnI+bDx6MVyH
-	NRfR4tSO64ke+Al28TegxPNvRXLvPURXbHlklV64637hL+hCDHYK8CrxcccfgXYFfUXwiweZOfNVJ
-	yP1BjteSONubp3zh32eGC9SrdlBVSYx6z9lSAgKBj5HBgifUSsXIi8qze1cCfpBAdccwQjIq9vaDL
-	N8md3nvRWGwgKIsB0bfQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=7NXpO6e4SW+V3V+ENXlVulwi5yA4SzcjAFLvg6U6iaw=; b=CBPXBaqX9CPP2G
+	HXap2p04+1H7ULi0EjRobh1JF1WbJXVXTqltpgOY48Pg7MOz6ccRPjAAmemgGLDGnp3CJ76sFBBso
+	Cx12qTQwX8BlzzTFBi/x19eyprhWznZ6UM6/F4tOJTaiRoBdNL91Dy5QzPS47FRH6pkr29GGlt3J0
+	Y51Si1PyNDPwqDtcfc1Yoxw4+JXx508GiGyzx46WNxVeD05IFS38aRt7wT/86LYPouc0XNE+UvyG2
+	wq3UthqcVqm4LXrw95eafY548771O2XIp2s2lT37NJYc2dHy4xpcZD1hSUB0i6vXxWt20/eNCwPVY
+	5GuCOWoeM18t7zFqZlcA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgOnL-0008D6-Iu; Thu, 27 Jun 2019 07:26:11 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hgPOT-0008Bm-IJ; Thu, 27 Jun 2019 08:04:33 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgOmz-00080i-2n; Thu, 27 Jun 2019 07:25:50 +0000
-X-UUID: 6535ad019e8341bab7b5ff41e81c64a2-20190626
-X-UUID: 6535ad019e8341bab7b5ff41e81c64a2-20190626
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <qii.wang@mediatek.com>)
+ id 1hgPMw-00071D-Lx; Thu, 27 Jun 2019 08:03:00 +0000
+X-UUID: 78903081d62d4ce1bcd4038c950ace92-20190627
+X-UUID: 78903081d62d4ce1bcd4038c950ace92-20190627
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1214892574; Wed, 26 Jun 2019 23:25:31 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 27 Jun 2019 00:25:30 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 27 Jun 2019 15:25:27 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 27 Jun 2019 15:25:27 +0800
-Message-ID: <1561620327.12217.27.camel@mhfsdcap03>
-Subject: Re: [PATCH v2 1/2] dt-bindings: i3c: Document MediaTek I3C master
- bindings
-From: Qii Wang <qii.wang@mediatek.com>
-To: Boris Brezillon <boris.brezillon@collabora.com>
-Date: Thu, 27 Jun 2019 15:25:27 +0800
-In-Reply-To: <20190626182339.0c6301a2@collabora.com>
-References: <1561527388-4829-1-git-send-email-qii.wang@mediatek.com>
- <1561527388-4829-2-git-send-email-qii.wang@mediatek.com>
- <20190626182339.0c6301a2@collabora.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 1576000544; Thu, 27 Jun 2019 00:01:39 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 27 Jun 2019 01:01:38 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
+ (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 27 Jun 2019 16:01:19 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Thu, 27 Jun 2019 16:01:17 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
+ Rutland" <mark.rutland@arm.com>, Ian Campbell
+ <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
+ <airlied@linux.ie>, "Matthias Brugger" <matthias.bgg@gmail.com>
+Subject: [v5 0/7] Support dsi for mt8183
+Date: Thu, 27 Jun 2019 16:01:08 +0800
+Message-ID: <20190627080116.40264-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_002549_133007_E5AE8E99 
-X-CRM114-Status: GOOD (  19.67  )
+X-CRM114-CacheID: sfid-20190627_010258_761372_B697E756 
+X-CRM114-Status: UNSURE (   7.04  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -75,109 +72,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- bbrezillon@kernel.org, leilk.liu@mediatek.com, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
- linux-mediatek@lists.infradead.org, xinping.qian@mediatek.com,
- matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
+ Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
+ Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
+ Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
+ Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
+ yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-06-26 at 18:23 +0200, Boris Brezillon wrote:
-> On Wed, 26 Jun 2019 13:36:27 +0800
-> Qii Wang <qii.wang@mediatek.com> wrote:
-> 
-> > Document MediaTek I3C master DT bindings.
-> > 
-> > Signed-off-by: Qii Wang <qii.wang@mediatek.com>
-> > ---
-> >  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   47 ++++++++++++++++++++
-> >  1 file changed, 47 insertions(+)
-> >  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> > 
-> > diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> > new file mode 100644
-> > index 0000000..3fd4f17
-> > --- /dev/null
-> > +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> > @@ -0,0 +1,47 @@
-> > +Bindings for MediaTek I3C master block
-> > +=====================================
-> > +
-> > +Required properties:
-> > +--------------------
-> > +- compatible: shall be "mediatek,i3c-master"
-> > +- reg: physical base address of the controller and apdma base, length of
-> > +  memory mapped region.
-> > +- reg-names: should be "main" for controller and "dma" for apdma.
-> > +- interrupts: interrupt number to the cpu.
-> 
-> Depending on the interrupt controller, each interrupt cell might
-> contain more than just the interrupt number.
-> 
+Change since v4:
+ - move mipi_dsi_host_unregiter() to .remove()
+ - fine tune add frame size control coding style
+ - change the data type of data_rate as u32, and add DIV_ROUND_UP_ULL
+ - use div_u64 when 8000000000ULL / dsi->data_rate.
 
-ok, I will modify it as "the interrupt line connected to this I3C
-master"
+Changes since v3
+ - add one more 'tab' for bitwise define.
+ - add Tested-by: Ryan Case <ryandcase@chromium.org>
+	and Reviewed-by: CK Hu <ck.hu@mediatek.com>.
+ - remove compare da_hs_zero to da_hs_prepare.
 
-> > +- clocks: clock name from clock manager.
-> 
-> This property does not contain clock names but clk references.
-> 
+Changes since v2:
+ - change the video timing calc method
+ - fine the dsi and mipitx init sequence
+ - fine tune commit msg
 
-ok, I will modify it as "shall reference the i3c and apdma clocks"
+Changes since v1:
+ - separate frame size and reg commit control independent patches.
+ - fix some return values in probe
+ - remove DSI_CMDW0 in "CMDQ reg address of mt8173 is different with mt2701" 
 
-> > +- clock-names: must include "main" and "dma".
-> > +
-> > +Mandatory properties defined by the generic binding (see
-> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
-> > +
-> > +- #address-cells: shall be set to 3
-> > +- #size-cells: shall be set to 0
-> > +
-> > +Optional properties defined by the generic binding (see
-> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
-> > +
-> > +- i2c-scl-hz
-> > +- i3c-scl-hz
-> > +
-> > +I3C device connected on the bus follow the generic description (see
-> > +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
-> > +
-> > +Example:
-> > +
-> > +	i3c0: i3c@1100d000 {
-> > +		compatible = "mediatek,i3c-master";
-> > +		reg = <0x1100d000 0x100>,
-> > +		      <0x11000300 0x80>;
-> > +		reg-names = "main", "dma";
-> > +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
-> > +		clocks = <&i3c0_ck>, <&ap_dma_ck>;
-> > +		clock-names = "main", "dma";
-> > +		#address-cells = <1>;
-> > +		#size-cells = <0>;
-> > +		i2c-scl-hz = <100000>;
-> > +
-> > +		nunchuk: nunchuk@52 {
-> > +			compatible = "nintendo,nunchuk";
-> > +			reg = <0x52 0x80000010 0>;
-> 
-> reg is wrong here, should be
-> 
-> 			reg = <0x52 0x0 0x10>;
-> 
-> While at it, can you send a patch to fix the example in the cadence
-> binding doc?
-> 
+Jitao Shi (7):
+  drm/mediatek: move mipi_dsi_host_register to probe
+  drm/mediatek: fixes CMDQ reg address of mt8173 is different with
+    mt2701
+  drm/mediatek: add dsi reg commit disable control
+  drm/mediatek: add frame size control
+  drm/mediatek: add mt8183 dsi driver support
+  drm/mediatek: change the dsi phytiming calculate method
+  drm: mediatek: adjust dsi and mipi_tx probe sequence
 
-ok, I will do it. Thanks for your review.
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c |   2 +-
+ drivers/gpu/drm/mediatek/mtk_dsi.c     | 223 ++++++++++++++++++-------
+ 2 files changed, 160 insertions(+), 65 deletions(-)
 
-> > +		};
-> > +	};
-> 
-
+-- 
+2.21.0
 
 
 _______________________________________________
