@@ -2,64 +2,49 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BEFA3597CC
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 11:43:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 283DB5A030
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 18:04:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+FY4hkzcxuEwoCjC15/QHXRu8JxgS91Xwn2lPFBq7PY=; b=bFQwlLO1yLsijR
-	dhYj0v+Bv37q7B6zJCp4dHdpkvnDG9RJ9+Jpv6LacFpofMBSr5Gsdrz1Q+rRAKDr2iSlys/+e3Bbe
-	4NnaEGg7G3hA1FobPIVNw4EPBTnDcvMBJHwJ0rf2Wy2UvBSnyN+Qiq/dEJo7dLv7pckdAwp0i2Yjh
-	sb6pg91YJUcqGxE4Wr4o1U5q32leeJgb3c2IEJ40IOjdIDCHP/3UyCL1qDHUrQ0PFtdfG1ryqoQ/N
-	618FB0l/wQ4FTQ39qK2Xi4bMZKeCv5ifa4zIGzrCwz8A44CTDL9lkvzNN321mgWWIuauG9R+1JZoR
-	SeiVJsjb39yiJxoOd67A==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=iGR3LwohkPDXBqeMU8zo2rl5PJm3mpirOKDmskgzfP8=; b=oNWjBQaaE4epZcbLIwe+VBbwz0
+	S3BJph+8QfS/33oSQsrWeViNEkkdiF9AzWYTDdX+1stmeePkvNVQtDaaDB6Fujm+oFE2Goirhdf7q
+	XM6+dGeWYFx/P3402sKj7Wd8OyZuPKVwb+yVjTHDPhj3RwwR3GqfVrolDEfm/p+mFkwVTZGjUlnXh
+	UUZ22XbmkGlLPBNEZfGg1Qi7THUxpRY1yC1CT1dz4jIEYGEjao47sJa2H7SEnhvnk8GDzoScFR6z8
+	C4YYC16ysA0zy+LqjGSSokCc1NDXHcfzMkzWcGoY5HUUSB6W3nE7ofQDFq5vU7exF4BZUYLn/09vP
+	bSfNuaHQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgnPi-0007rw-14; Fri, 28 Jun 2019 09:43:26 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hgtMM-0007Bh-MH; Fri, 28 Jun 2019 16:04:22 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgnPW-0007nq-Oy
- for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 09:43:16 +0000
-X-UUID: 8da932ddbe0543ed8951950f19ef11e6-20190628
-X-UUID: 8da932ddbe0543ed8951950f19ef11e6-20190628
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <kobe-cp.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1686540784; Fri, 28 Jun 2019 01:42:55 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 28 Jun 2019 02:42:54 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 28 Jun 2019 17:42:52 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 28 Jun 2019 17:42:40 +0800
-Message-ID: <1561714960.19339.12.camel@mtkswgap22>
-Subject: Re: [PATCH] locking/lockdep: Save and display stack trace of held
- locks
-From: Kobe-CP Wu <Kobe-CP.Wu@mediatek.com>
-To: Peter Zijlstra <peterz@infradead.org>
-Date: Fri, 28 Jun 2019 17:42:40 +0800
-In-Reply-To: <20190624110852.GV3419@hirez.programming.kicks-ass.net>
-References: <1561363259-14705-1-git-send-email-kobe-cp.wu@mediatek.com>
- <20190624110852.GV3419@hirez.programming.kicks-ass.net>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
-MIME-Version: 1.0
-X-MTK: N
+ id 1hgtMH-0007AX-MH; Fri, 28 Jun 2019 16:04:19 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: andrzej.p) with ESMTPSA id 8292D260A37
+From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+To: dri-devel@lists.freedesktop.org
+Subject: [PATCH v3 00/22] Associate ddc adapters with connectors
+Date: Fri, 28 Jun 2019 18:01:14 +0200
+Message-Id: <cover.1561735433.git.andrzej.p@collabora.com>
+X-Mailer: git-send-email 2.17.1
+In-Reply-To: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
+References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_024314_880679_20870123 
-X-CRM114-Status: GOOD (  13.57  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190628_090417_996329_09A5FC35 
+X-CRM114-Status: GOOD (  14.22  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -73,98 +58,140 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Ingo Molnar <mingo@redhat.com>,
- Will Deacon <will.deacon@arm.com>, wsd_upstream@mediatek.com,
- Eason Lin <eason-yh.lin@mediatek.com>
+Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
+ =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
+ Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>,
+ Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
+ Fabio Estevam <festevam@gmail.com>,
+ =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
+ "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
+ linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
+ linux-rockchip@lists.infradead.org, Vincent Abriou <vincent.abriou@st.com>,
+ Rob Clark <robdclark@gmail.com>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
+ Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
+ NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
+ Dave Airlie <airlied@redhat.com>, freedreno@lists.freedesktop.org,
+ linux-tegra@vger.kernel.org, Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ Sascha Hauer <s.hauer@pengutronix.de>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ Jyri Sarha <jsarha@ti.com>, Inki Dae <inki.dae@samsung.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
+ Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
+ Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
+ Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
+ Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
+ Thomas Zimmermann <tzimmermann@suse.de>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
+ linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Philipp Zabel <p.zabel@pengutronix.de>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
+ =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-06-24 at 13:08 +0200, Peter Zijlstra wrote:
-> On Mon, Jun 24, 2019 at 04:00:59PM +0800, Kobe Wu wrote:
-> > Save the stack trace of held locks when lock_acquire() is invoked
-> > and display the stack trace when lockdep_print_held_locks() is
-> > invoked. The runtime stack trace of held locks are helpful in
-> > analyzing code flow and lockdep's warning.
-> > 
-> > Save stack trace of each held lock will increase runtime overhead
-> > and memory consumption. The operation will be activated under
-> > CONFIG_LOCKDEP_TRACE_HELD_LOCK. So the impact will only occur
-> > when CONFIG_LOCKDEP_TRACE_HELD_LOCK=y.
-> 
-> Yeah, I don't see the point of this. If you cannot find where the lock
-> got taken you've bigger problems.
+It is difficult for a user to know which of the i2c adapters is for which
+drm connector. This series addresses this problem.
 
-There are some examples which can explain why stack trace are helpful.
+The idea is to have a symbolic link in connector's sysfs directory, e.g.:
 
-<#1>
+ls -l /sys/class/drm/card0-HDMI-A-1/ddc
+lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
+	-> ../../../../soc/13880000.i2c/i2c-2
 
-It provides more information for debug_show_all_locks().
-debug_show_all_locks() is called by other debug functions and helpful in
-analyzing problems and understanding system status.
+The user then knows that their card0-HDMI-A-1 uses i2c-2 and can e.g. run
+ddcutil:
 
-If a task goes into sleeping with holding several locks for a long time,
-it may result in problems. It would be easy to know how the task goes
-into sleeping and as a beginning to analyze why the task keep sleeping
-from the stack trace. Because the task goes into sleeping after the
-stack trace. We can research what happened after the code flow.
+ddcutil -b 2 getvcp 0x10
+VCP code 0x10 (Brightness                    ): current value =    90, max value =   100
 
-For the following example, (&f->f_pos_lock) is the lock we cannot
-acquire for a long time. We want to know what happened on
-logd.klogd/344. Why logd.klogd/344 keep sleeping? Only final function
-entry and task name is hard to understand the code flow and condition.
+The first patch in the series adds struct i2c_adapter pointer to struct
+drm_connector. If the field is used by a particular driver, then an
+appropriate symbolic link is created by the generic code, which is also added
+by this patch.
 
-Showing all locks held in the system:
-1 lock held by logd.klogd/344:
- #0:  (&f->f_pos_lock){+.+.+.}, at: [<ffffff8182a8ae04>] __fdget_pos
-+0x44/0x58
-...
+The second patch is an example of how to convert a driver to this new scheme.
 
-<#2>
+v1..v2:
 
-Provide more information for "BUG: task/pid still has locks held!".
+- used fixed name "ddc" for the symbolic link in order to make it easy for
+userspace to find the i2c adapter
 
-The original warning is as following. It not easy to know where the lock
-is held. Because the lock could be used in many functions and could be
-packed by other functions.
+v2..v3:
 
-=====================================
-[ BUG: vpud/657 still has locks held! ]
-4.9.117+ #2 Tainted: G S      W  O   
--------------------------------------
-1 lock held by vpud/657 on CPU#6:
- #0:  (&dev->enc_mutex){+.+.+.}, at: [<ffffff8c5ca3ca74>] venc_lock
-+0xec/0x108
-Call trace:
-[<ffffff8c5be8d190>] dump_backtrace+0x0/0x2bc
-[<ffffff8c5be8d188>] show_stack+0x18/0x20
-[<ffffff8c5c268274>] dump_stack+0xa8/0xf8
-[<ffffff8c5bf4c1e4>] debug_check_no_locks_held+0x174/0x17c
-[<ffffff8c5bf9e1dc>] futex_wait_queue_me+0xf4/0x16c
-[<ffffff8c5bf9bc44>] futex_wait+0x14c/0x334
-[<ffffff8c5bf9a534>] do_futex+0x10c/0x16d0
-[<ffffff8c5bf9f688>] compat_SyS_futex+0x100/0x158
-[<ffffff8c5be83e00>] el0_svc_naked+0x34/0x38
+- converted as many drivers as possible.
 
-If there is a stack trace for reference, it will be easy to understand
-and resolve this problem.
+PATCHES 3/22-22/22 SHOULD BE CONSIDERED RFC!
 
-1 lock held by vpud/657/[0] on CPU#6:
- #0:  (&dev->enc_mutex){+.+.+.}, at: [<ffffff8c5ca3ca74>] venc_lock
-+0xec/0x108
-       lock_acquire+0x224/0x25c
-       __mutex_lock_common+0x88/0x728
-       mutex_lock_nested+0x50/0x60
-       venc_lock+0xec/0x108
-       venc_encode_prepare+0x20/0x68
-       vcu_unlocked_ioctl+0x91c/0x1108
-       vcu_unlocked_compat_ioctl+0x110/0x238
-       compat_SyS_ioctl+0x128/0x244
-       el0_svc_naked+0x34/0x38
+Andrzej Pietrasiewicz (22):
+  drm: Include ddc adapter pointer in struct drm_connector
+  drm/exynos: Provide ddc symlink in connector's sysfs
+  drm: rockchip: Provide ddc symlink in rk3066_hdmi sysfs directory
+  drm: rockchip: Provide ddc symlink in inno_hdmi sysfs directory
+  drm/msm/hdmi: Provide ddc symlink in hdmi connector sysfs directory
+  drm/sun4i: hdmi: Provide ddc symlink in sun4i hdmi connector sysfs
+    directory
+  drm/mediatek: Provide ddc symlink in hdmi connector sysfs directory
+  drm/tegra: Provide ddc symlink in output connector sysfs directory
+  drm/imx: imx-ldb: Provide ddc symlink in connector's sysfs
+  drm/imx: imx-tve: Provide ddc symlink in connector's sysfs
+  drm/vc4: Provide ddc symlink in connector sysfs directory
+  drm: zte: Provide ddc symlink in hdmi connector sysfs directory
+  drm: zte: Provide ddc symlink in vga connector sysfs directory
+  drm/tilcdc: Provide ddc symlink in connector sysfs directory
+  drm: sti: Provide ddc symlink in hdmi connector sysfs directory
+  drm/mgag200: Provide ddc symlink in connector sysfs directory
+  drm/ast: Provide ddc symlink in connector sysfs directory
+  drm/bridge: dumb-vga-dac: Provide ddc symlink in connector sysfs
+    directory
+  drm/bridge: dw-hdmi: Provide ddc symlink in connector sysfs directory
+  drm/bridge: ti-tfp410: Provide ddc symlink in connector sysfs
+    directory
+  drm/amdgpu: Provide ddc symlink in connector sysfs directory
+  drm/radeon: Provide ddc symlink in connector sysfs directory
 
-For the same reason, it is helpful in analyzing "BUG: held lock freed!" 
-and "INFO: possible recursive locking detected".
+ .../gpu/drm/amd/amdgpu/amdgpu_connectors.c    | 70 +++++++++++-----
+ drivers/gpu/drm/ast/ast_mode.c                |  1 +
+ drivers/gpu/drm/bridge/dumb-vga-dac.c         | 19 ++---
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c     | 40 ++++-----
+ drivers/gpu/drm/bridge/ti-tfp410.c            | 19 ++---
+ drivers/gpu/drm/drm_sysfs.c                   |  7 ++
+ drivers/gpu/drm/exynos/exynos_hdmi.c          | 11 ++-
+ drivers/gpu/drm/imx/imx-ldb.c                 | 13 ++-
+ drivers/gpu/drm/imx/imx-tve.c                 |  8 +-
+ drivers/gpu/drm/mediatek/mtk_hdmi.c           |  9 +-
+ drivers/gpu/drm/mgag200/mgag200_mode.c        |  1 +
+ drivers/gpu/drm/msm/hdmi/hdmi_connector.c     |  1 +
+ drivers/gpu/drm/radeon/radeon_connectors.c    | 82 ++++++++++++++-----
+ drivers/gpu/drm/rockchip/inno_hdmi.c          | 17 ++--
+ drivers/gpu/drm/rockchip/rk3066_hdmi.c        | 17 ++--
+ drivers/gpu/drm/sti/sti_hdmi.c                |  1 +
+ drivers/gpu/drm/sun4i/sun4i_hdmi.h            |  1 -
+ drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c        | 14 ++--
+ drivers/gpu/drm/tegra/drm.h                   |  1 -
+ drivers/gpu/drm/tegra/output.c                | 12 +--
+ drivers/gpu/drm/tegra/sor.c                   |  6 +-
+ drivers/gpu/drm/tilcdc/tilcdc_tfp410.c        |  1 +
+ drivers/gpu/drm/vc4/vc4_hdmi.c                | 16 ++--
+ drivers/gpu/drm/zte/zx_hdmi.c                 | 25 ++----
+ drivers/gpu/drm/zte/zx_vga.c                  | 25 ++----
+ include/drm/drm_connector.h                   | 11 +++
+ 26 files changed, 252 insertions(+), 176 deletions(-)
+
+-- 
+2.17.1
 
 
 _______________________________________________
