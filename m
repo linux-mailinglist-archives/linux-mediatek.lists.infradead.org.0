@@ -2,91 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A0880594AF
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 09:18:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1348E594C3
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 09:24:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nCqWxCl0/fAOCdH0jLz2wktJcxs2oC+omcxP9VVkSTY=; b=aj6ddtiZtVzJMt
-	F0QoOubwPvFLRMs+yDaPlpivHKUmQl4xINnHEaJ1kKXGlNA+mGYIsbThYY758T4GpAy3dCKPOMT9a
-	E1lVBtx0kdf3U+D/cWVLcRM1zvdYNzkcBiM8re+exZYOAL542gj73uiIyF445TMJAvkqeCOn1qR0M
-	NTtc4aFAgtzJJsEQk3E4JVq2grmEa+cXpVbiCWdQarRj45Ek6AsITe4/znnCKCmP2PtUyTKMp9JoL
-	5lF4v7pysvMUy8QUv0914LIzlPD7Ef+egZ2o+ctrSz8t78T6Gr/E1c2YGRr823buXIxCJJExQAGB2
-	ywgL5jZphQxjTA/xc+cA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=WOGS8sV+QkX2M0xXLTZwe0igAxS9O4lJTCc4jil5OvU=; b=j4HsuU8OzCvHwP
+	rCvMbMdl5HZd06tAb+EX+MOYPuCKMcRdwNqDQtb8xwLhZiVyAlPsE+JUK8xgY1k6rYH6hKZpl4L4L
+	d6EvfTcABo/dVAtKDJoV/KUA8PrXjLqaJMkX7hIjwktm1WByKfa5dN9TG3kn2Ork4wxaf8Ez3lHuu
+	HvcvACnU2z2E5luHoX+32ZD8za3BzhXpcoVzbaDGI4NWVw0bPz4RbGfOiMhiCM7Q9jEDeRkPImpUm
+	jNVigGJq8/9BIObIlsVdgvvcc1K1yzrzRF+F7hlSjPq8t/oSRUxy0KO27Ve3zZzb+GAX4mVqiO1KC
+	K1wu3Fvrbc6jaX6pDkEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgl9T-0006Mb-NX; Fri, 28 Jun 2019 07:18:31 +0000
-Received: from pb-smtp1.pobox.com ([64.147.108.70])
+	id 1hglEm-0000AQ-BG; Fri, 28 Jun 2019 07:24:00 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgl9P-0006M6-Ph
- for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 07:18:29 +0000
-Received: from pb-smtp1.pobox.com (unknown [127.0.0.1])
- by pb-smtp1.pobox.com (Postfix) with ESMTP id 9716B15B271;
- Fri, 28 Jun 2019 03:18:22 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=subject:to:cc
- :references:from:message-id:date:mime-version:in-reply-to
- :content-type:content-transfer-encoding; s=sasl; bh=RqYXy6/tiJNJ
- E8T+ohPnz7lg4ls=; b=FN8QofOuy53TgWJm08+iIvLzrseBMj+ub7b4uBinaYxn
- y6hTo8Tdk8JWo7ZRDjArSz3rBTrV6vZaYxtUDTjg4xIFCSwpuV07H6pcFpsrDxzY
- tbsgfbG15aaQoF2P1GBkkrz1I7+K2gwO7wNr1nzusb/TONfWD3W6XD8WIIqZgKA=
-DomainKey-Signature: a=rsa-sha1; c=nofws; d=pobox.com; h=subject:to:cc
- :references:from:message-id:date:mime-version:in-reply-to
- :content-type:content-transfer-encoding; q=dns; s=sasl; b=HugLNt
- NjRsijoTY98SpqiN0xRNaJASV+0xeZmmyZqL9gvspfcd6GzA9BAGyHMNYTqGPkb9
- si4b/gcFeUe5eUaYdMI97zKkrYSs6e66Gz9zvi7ba362Hc9kpTW50TfaEfGtXEzD
- bHwsS1bnNXpEQatGfI3aSRubJy2ZFRISNptm8=
-Received: from pb-smtp1.nyi.icgroup.com (unknown [127.0.0.1])
- by pb-smtp1.pobox.com (Postfix) with ESMTP id 7B56F15B270;
- Fri, 28 Jun 2019 03:18:22 -0400 (EDT)
-Received: from [192.168.1.134] (unknown [70.142.57.80])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by pb-smtp1.pobox.com (Postfix) with ESMTPSA id 6345615B26F;
- Fri, 28 Jun 2019 03:18:21 -0400 (EDT)
-Subject: Re: [PATCH RFC net-next 1/5] net: dsa: mt7530: Convert to PHYLINK API
-To: Andrew Lunn <andrew@lunn.ch>
-References: <20190624145251.4849-1-opensource@vdorst.com>
- <20190624145251.4849-2-opensource@vdorst.com>
- <20190624153950.hdsuhrvfd77heyor@shell.armlinux.org.uk>
- <20190625113158.Horde.pCaJOVUsgyhYLd5Diz5EZKI@www.vdorst.com>
- <20190625121030.m5w7wi3rpezhfgyo@shell.armlinux.org.uk>
- <1ad9f9a5-8f39-40bd-94bb-6b700f30c4ba@pobox.com>
- <20190625190246.GA27733@lunn.ch>
- <4fc51dc4-0eec-30d7-86d1-3404819cf6fe@pobox.com>
- <20190625204148.GB27733@lunn.ch>
- <e469daa1-3e28-db9c-e29a-7f68cc676fda@pobox.com>
- <20190627192806.GQ27733@lunn.ch>
-From: Daniel Santos <daniel.santos@pobox.com>
-Message-ID: <56d8024e-1e02-7ff7-abf2-261ec9cbabf7@pobox.com>
-Date: Fri, 28 Jun 2019 02:16:45 -0500
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ id 1hglE8-0008GR-6T; Fri, 28 Jun 2019 07:23:21 +0000
+X-UUID: 90fa26496b9c4be8a5712c3d6fb6d532-20190627
+X-UUID: 90fa26496b9c4be8a5712c3d6fb6d532-20190627
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <weiyi.lu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1563477876; Thu, 27 Jun 2019 23:22:53 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 28 Jun 2019 00:22:52 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 28 Jun 2019 15:22:50 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 28 Jun 2019 15:22:50 +0800
+From: Weiyi Lu <weiyi.lu@mediatek.com>
+To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Stephen Boyd <sboyd@kernel.org>
+Subject: [PATCH v3] clk: mediatek: mt8183: Register 13MHz clock earlier for
+ clocksource
+Date: Fri, 28 Jun 2019 15:22:34 +0800
+Message-ID: <1561706554-27770-1-git-send-email-weiyi.lu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-In-Reply-To: <20190627192806.GQ27733@lunn.ch>
-Content-Language: en-US
-X-Pobox-Relay-ID: E93712BA-9974-11E9-9809-46F8B7964D18-06139138!pb-smtp1.pobox.com
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_001827_996172_673FFD50 
-X-CRM114-Status: GOOD (  18.25  )
-X-Spam-Score: -0.9 (/)
+X-CRM114-CacheID: sfid-20190628_002320_264151_6A9D7EE6 
+X-CRM114-Status: UNSURE (   9.48  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.9 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [64.147.108.70 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,56 +71,117 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: f.fainelli@gmail.com, frank-w@public-files.de, netdev@vger.kernel.org,
- sean.wang@mediatek.com, linux-mips@vger.kernel.org, davem@davemloft.net,
- =?UTF-8?Q?Ren=c3=a9_van_Dorst?= <opensource@vdorst.com>,
- linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
- vivien.didelot@gmail.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Dehui Sun <dehui.sun@mediatek.com>, James Liao <jamesjj.liao@mediatek.com>,
+ Weiyi Lu <weiyi.lu@mediatek.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, stable@vger.kernel.org,
+ Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGVsbG8gQW5kcmV3LAoKT24gNi8yNy8xOSAyOjI4IFBNLCBBbmRyZXcgTHVubiB3cm90ZToKPj4+
-IExvb2tpbmcgYXQgdGhlIGRhdGEgc2hlZXQgcGFnZSwgeW91IHdhbnQgRk9SQ0VfTU9ERV9QbiBz
-ZXQuIFlvdSBuZXZlcgo+Pj4gd2FudCB0aGUgTUFDIGRpcmVjdGx5IHRhbGtpbmcgdG8gdGhlIFBI
-WS4gQmFkIHRoaW5ncyB3aWxsIGhhcHBlbi4KPj4gU28gd2hhdCBleGFjdGx5IGRvIHlvdSBtZWFu
-IGJ5IHRoZSBNQUMgZGlyZWN0bHkgdGFsa2luZyB0byB0aGUgUEhZP8KgIERvCj4+IHlvdSBtZWFu
-IHNldHRpbmcgc3BlZWQsIGR1cGxleCwgZXRjLiB2aWEgdGhlIE1BQyByZWdpc3RlcnMgaW5zdGVh
-ZCBvZgo+PiB2aWEgTURJTyB0byB0aGUgTUlJIHJlZ2lzdGVycyBvZiB0aGUgUEhZPwo+IFRoZSBk
-YXRhIHNoZWV0IGltcGxpZXMgdGhlIE1BQyBoYXJkd2FyZSBwZXJmb3JtcyByZWFkcyBvbiB0aGUg
-UEhZIHRvCj4gZ2V0IHRoZSBzdGF0dXMsIGFuZCB0aGVuIHVzZXMgdGhhdCB0byBjb25maWd1cmUg
-dGhlIE1BQy4gVGhpcyBpcyBvZnRlbgo+IGNhbGxlZCBQSFkgcG9sbGluZy4gVGhlIE1BQyBoYXJk
-d2FyZSBob3dldmVyIGhhcyBubyBpZGVhIHdoYXQgdGhlIFBIWQo+IGRyaXZlciBpcyBkb2luZy4g
-VGhlIE1BQyBkb2VzIG5vdCB0YWtlIHRoZSBQSFkgbXV0ZXguIFNvIHRoZSBQSFkKPiBkcml2ZXIg
-bWlnaHQgYmUgZG9pbmcgc29tZXRoaW5nIGF0IHRoZSBzYW1lIHRpbWUgdGhlIE1BQyBoYXJkd2Fy
-ZQo+IHBvbGxzIHRoZSBQSFksIGFuZCBpdCBnZXRzIG9kZCByZXN1bHRzLiBTb21lIFBIWXMgaGF2
-ZSBtdWx0aXBsZSBwYWdlcywKPiBhbmQgZm9yIGV4YW1wbGUgcmVhZGluZyB0aGUgdGVtcGVyYXR1
-cmUgc2Vuc29yIG1lYW5zIHN3YXBwaW5nCj4gcGFnZXMuIElmIHRoZSBNQUMgaGFyZHdhcmUgd2Fz
-IHRvIHBvbGwgd2hpbGUgdGhlIHNlbnNvciBpcyBiZWluZyByZWFkLAo+IGl0IHdvdWxkIG5vdCBn
-ZXQgdGhlIGxpbmsgc3RhdHVzLCBpdCB3b3VsZCByZWFkIHNvbWUgcmFuZG9tCj4gdGVtcGVyYXR1
-cmUgcmVnaXN0ZXIuCj4KPiBTbyB5b3Ugd2FudCB0aGUgUEhZIGRyaXZlciB0byByZWFkIHRoZSBy
-ZXN1bHRzIG9mIGF1dG8tbmVnIGFuZCBpdCB0aGVuCj4gdGVsbCB0aGUgTUFDIHRoZSByZXN1bHRz
-LCBzbyB0aGUgTUFDIGNhbiBiZSBjb25maWd1cmVkIGNvcnJlY3RseS4KClRoYW5rIHlvdSwgdGhp
-cyBpcyB2ZXJ5IGhlbHBmdWwhwqAgSSBmaW5hbGx5IHVuZGVyc3RhbmQgd2h5IHRoZXNlCnNldHRp
-bmdzIGFyZSBpbiB0d28gZGlmZmVyZW50IHBsYWNlcy4gOinCoCBVbmZvcnR1bmF0ZWx5IHRoaXMg
-ZHJpdmVyIChpbgpPcGVuV1JUKSBkb2VzIGEgbG90IG9mICJtYWdpYyIgZHVyaW5nIGluaXQgdG8g
-cmVnaXN0ZXJzIHRoYXQgSSBkb24ndApoYXZlIGRvY3VtZW50YXRpb24gZm9yLCBidXQgSSBzZWUg
-d2hlcmUgYXV0by1wb2xsaW5nIGNhbiBiZSBkaXNhYmxlZCBub3cuCgo+Pj4gVGhlbiB1c2UgRk9S
-Q0VfUlhfRkNfUG4gYW5kIEZPUkNFX1RYX1BuIHRvIHJlZmxlY3QgcGh5ZGV2LT5wYXVzZSBhbmQK
-Pj4+IHBoeWRldi0+YXN5bV9wYXVzZS4KPj4+Cj4+PiBUaGUgc2FtZSBpZGVhIGFwcGxpZXMgd2hl
-biB1c2luZyBwaHlsaW5rLgo+Pj4KPj4+ICAgICBBbmRyZXcKPj4gWW91J3JlIGhlbHAgaXMgZ3Jl
-YXRseSBhcHByZWNpYXRlZCBoZXJlLsKgIEFkbWl0dGVkbHksIEknbSBhbHNvIHRyeWluZyB0bwo+
-PiBnZXQgdGhpcyB3b3JraW5nIGluIHRoZSBub3cgZGVwcmVjYXRlZCBzd2NvbmZpZyBmb3IgYSAz
-LjE4IGtlcm5lbCB0aGF0J3MKPj4gaW4gcHJvZHVjdGlvbi4KPiBJJ20gbm90IHZlcnkgZmFtaWxp
-YXIgd2l0aCBzd2NvbmZpZy4gSXMgdGhlcmUgc29mdHdhcmUgZHJpdmluZyB0aGUKPiBQSFk/IElm
-IG5vdCwgaXQgaXMgdGhlbiBzYWZlIGZvciB0aGUgTUFDIGhhcmR3YXJlIHRvIHBvbGwgdGhlIFBI
-WS4KPgo+ICAgICAgQW5kcmV3Cgpzd2NvbmZpZyBpcyBhbiBuZXRsaW5rLWJhc2VkIGludGVyZmFj
-ZSB0aGUgT3BlbldSVCB0ZWFtIGRldmVsb3BlZCBmb3IKY29uZmlndXJpbmcgc3dpdGNoZXMgYmVm
-b3JlIERTQSB3YXMgY29udmVydGVkIGludG8gYSB2ZW5kb3ItbmV1dHJhbAppbnRlcmZhY2UuwqAg
-Tm93IHRoYXQgRFNBIGRvZXMgd2hhdCBzd2NvbmZpZyB3YXMgZGVzaWduZWQgZm9yIGl0IGhhcyBi
-ZWVuCmRlcHJlY2F0ZWQsIGFsdGhvdWdoICh0byBteSBrbm93bGVkZ2UpIHdlIGRvbid0IHlldCBo
-YXZlIERTQSBmb3IgYWxsCmRldmljZXMgdGhhdCBPcGVuV1JUIHN1cHBvcnRzLgoKRGFuaWVsCgpf
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRp
-YXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRw
-Oi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+The 13MHz clock should be registered before clocksource driver is
+initialized. Use CLK_OF_DECLARE_DRIVER() to guarantee.
+
+Fixes: acddfc2c261b ("clk: mediatek: Add MT8183 clock support")
+Cc: <stable@vger.kernel.org>
+Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
+---
+ drivers/clk/mediatek/clk-mt8183.c | 46 +++++++++++++++++++++++++++++----------
+ 1 file changed, 34 insertions(+), 12 deletions(-)
+
+diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
+index 9d86510..bc01611 100644
+--- a/drivers/clk/mediatek/clk-mt8183.c
++++ b/drivers/clk/mediatek/clk-mt8183.c
+@@ -25,9 +25,11 @@
+ 	FIXED_CLK(CLK_TOP_UNIVP_192M, "univpll_192m", "univpll", 192000000),
+ };
+ 
++static const struct mtk_fixed_factor top_early_divs[] = {
++	FACTOR(CLK_TOP_CLK13M, "clk13m", "clk26m", 1, 2),
++};
++
+ static const struct mtk_fixed_factor top_divs[] = {
+-	FACTOR(CLK_TOP_CLK13M, "clk13m", "clk26m", 1,
+-		2),
+ 	FACTOR(CLK_TOP_F26M_CK_D2, "csw_f26m_ck_d2", "clk26m", 1,
+ 		2),
+ 	FACTOR(CLK_TOP_SYSPLL_CK, "syspll_ck", "mainpll", 1,
+@@ -1167,37 +1169,57 @@ static int clk_mt8183_apmixed_probe(struct platform_device *pdev)
+ 	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
+ }
+ 
++static struct clk_onecell_data *top_clk_data;
++
++static void clk_mt8183_top_init_early(struct device_node *node)
++{
++	int i;
++
++	top_clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
++
++	for (i = 0; i < CLK_TOP_NR_CLK; i++)
++		top_clk_data->clks[i] = ERR_PTR(-EPROBE_DEFER);
++
++	mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
++			top_clk_data);
++
++	of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
++}
++
++CLK_OF_DECLARE_DRIVER(mt8183_topckgen, "mediatek,mt8183-topckgen",
++			clk_mt8183_top_init_early);
++
+ static int clk_mt8183_top_probe(struct platform_device *pdev)
+ {
+ 	struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+ 	void __iomem *base;
+-	struct clk_onecell_data *clk_data;
+ 	struct device_node *node = pdev->dev.of_node;
+ 
+ 	base = devm_ioremap_resource(&pdev->dev, res);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
+ 
+-	clk_data = mtk_alloc_clk_data(CLK_TOP_NR_CLK);
+-
+ 	mtk_clk_register_fixed_clks(top_fixed_clks, ARRAY_SIZE(top_fixed_clks),
+-		clk_data);
++		top_clk_data);
++
++	mtk_clk_register_factors(top_early_divs, ARRAY_SIZE(top_early_divs),
++		top_clk_data);
+ 
+-	mtk_clk_register_factors(top_divs, ARRAY_SIZE(top_divs), clk_data);
++	mtk_clk_register_factors(top_divs, ARRAY_SIZE(top_divs), top_clk_data);
+ 
+ 	mtk_clk_register_muxes(top_muxes, ARRAY_SIZE(top_muxes),
+-		node, &mt8183_clk_lock, clk_data);
++		node, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_composites(top_aud_muxes, ARRAY_SIZE(top_aud_muxes),
+-		base, &mt8183_clk_lock, clk_data);
++		base, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_composites(top_aud_divs, ARRAY_SIZE(top_aud_divs),
+-		base, &mt8183_clk_lock, clk_data);
++		base, &mt8183_clk_lock, top_clk_data);
+ 
+ 	mtk_clk_register_gates(node, top_clks, ARRAY_SIZE(top_clks),
+-		clk_data);
++		top_clk_data);
+ 
+-	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
++	return of_clk_add_provider(node, of_clk_src_onecell_get, top_clk_data);
+ }
+ 
+ static int clk_mt8183_infra_probe(struct platform_device *pdev)
+-- 
+1.8.1.1.dirty
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
