@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DEF645A6A4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 23:57:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81EB55A6C0
+	for <lists+linux-mediatek@lfdr.de>; Sat, 29 Jun 2019 00:10:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
-	From:To:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:To:Subject
+	:From:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=MaChtMuX2x/YFhi2UQxZEuZtVD5dkEbWSKr3N4vFl+s=; b=VHLexFs73ZLyE2
-	3lUHg6zYNZn+zrdw5tQAhaJ2khlwIpQUDnuG2Fy9ZsKjsVgz1zNWmbZaeecygjnVNOnVAGbMBaik1
-	VdclWg0N4OgUMCBHxLBcmtkzzgpT2DkXPtsrygBDYtGLi86sM7+2ogyw89VmLL1qDDHXxbeoYhnsV
-	1Zl6QxNkPuIMI/VDA9vbZ27tD/zPdH5uOdx/B/MfXXVjCwWI4jo/YGmyINGzvwlXQW8JV3JZYLHS9
-	6ufykCFvx65B9jyVDthJY7bxZhWsf/2MQD2Xloa/rT3y9dJy93xzsMT/AcZSQ/GLnmUvCGCnFTAz3
-	AwN/hxpDGGLaPwi806Bw==;
+	List-Owner; bh=3m9HJLzvycyZLIylFy2hYMgP/0aTtbM0/qQmihzVuz0=; b=iip2Ds8cKnNVj5
+	wmeLfgY5b1qCEl9RNYlSPnIQYX/U/gacELaUeX0XVZf0D0MLBxK5PNpfG8wTuQyhy67oYvw4z0X9z
+	aAgwbRn+fOH9qoxWDwO7ii74THmuNzd2VsrOJC1DsOpXqo9HEyI7FfUToFe+2kLzUsrJTzUYjzWHi
+	aALN/l5DLgnHWb3q5rVCUpAZDNyWHP2lTp97OkmxEftFu5UNQbqJPljIFdlUsHWLD6wui701MWGqj
+	Z8U6dvB80tVfqAcSph51dtJSjttd0XVr1lC1MC5nacFz7CZwNJZMUwZKLIiu+CjB9wDTMAJOFeDnj
+	6QFbflwvJIGt8gpF88hQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgysI-0003iC-Tw; Fri, 28 Jun 2019 21:57:42 +0000
+	id 1hgz4x-0008Cz-8j; Fri, 28 Jun 2019 22:10:47 +0000
 Received: from mail.gsat.us ([66.165.183.93])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgyrx-0003WK-Fq
- for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 21:57:23 +0000
+ id 1hgz4d-0007zY-5o
+ for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 22:10:28 +0000
 Received: from [192.168.1.134] (70-142-57-80.lightspeed.rcsntx.sbcglobal.net
  [70.142.57.80])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mailgse.com (Postfix) with ESMTPSA id 8A2A5FA41D9;
- Fri, 28 Jun 2019 21:57:16 +0000 (GMT)
+ by mailgse.com (Postfix) with ESMTPSA id 2534AFA41D9;
+ Fri, 28 Jun 2019 22:10:25 +0000 (GMT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gsat.us; s=default;
- t=1561759036; bh=O/6igsGHu3CNdxxLoDWCgpHt5xXBeQPxeyTohasL2MY=;
- h=To:From:Subject:Date;
- b=QT8N1GhBoJsKZlrgP4Hu6RSx/dTu6bYF0FGWT89ttxD65SL6jABGwRWiqCfQ2cVEE
- 356F30CgyCxj9PCnOR3aKndIQvBo01XjBL1xmNNVf1zEGc3nWDioT7u5YZhcbUmeOS
- /wKInxOvtDktREwEViT9eca2ooEwtG8KuWxh4vhg=
+ t=1561759826; bh=O/6igsGHu3CNdxxLoDWCgpHt5xXBeQPxeyTohasL2MY=;
+ h=From:Subject:To:Date;
+ b=t0N8OUEo0Z+QL/1TgNu0QI1I7gHuvMe1JrjHiyPHEP50Eeo6eDAVSIxASVpVGmKvh
+ O9bWJCsNt3uBv+6FqqFAnFxV2HmZBRMEAov8cRk8zn6GjXNG+QfPbFBoHgvvtSPLKC
+ ct35QlnOzDREoVBc2t6wqnr5qhfOvfzguTWSIoXw=
+From: Daniel Santos <daniel@gsat.us>
+Subject: mt7620/1, mt7530: Where are these MAC and MII registers documented?
 To: John Crispin <blogic@openwrt.org>, Sean Wang <sean.wang@mediatek.com>,
  Felix Fietkau <nbd@nbd.name>, openwrt-devel
  <openwrt-devel@lists.openwrt.org>, Michael Lee <igvtee@gmail.com>,
  linux-mediatek@lists.infradead.org
-From: Daniel Santos <daniel@gsat.us>
-Subject: mt7620/1, mt7530: Where are these MAC and MII registers documented?
-Message-ID: <d40eafc3-b2c6-d4b6-cfe0-9e94092bfc03@gsat.us>
-Date: Fri, 28 Jun 2019 16:55:40 -0500
+Message-ID: <969a5fe6-2fa6-e8f0-a66e-d4aabbe937cd@gsat.us>
+Date: Fri, 28 Jun 2019 17:08:45 -0500
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_145721_752277_97978576 
-X-CRM114-Status: UNSURE (   9.03  )
+X-CRM114-CacheID: sfid-20190628_151027_363433_C81F7032 
+X-CRM114-Status: UNSURE (   9.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -171,7 +171,7 @@ c3ctPmVwaHlfYmFzZSArIDQsIDE2LCAweDEzMTMpOwoJCXByX2luZm8oImdzdzogc2V0dGluZyBw
 b3J0NCB0byBlcGh5IG1vZGVcbiIpOwoJfSBlbHNlIGlmICghbWRpb19tb2RlKSB7CgkJdTMyIHZh
 bCA9IHJ0X3N5c2NfcjMyKFNZU0NfUkVHX0NGRzEpOwoKCQl2YWwgJj0gfigzIDw8IDE0KTsKCQly
 dF9zeXNjX3czMih2YWwsIFNZU0NfUkVHX0NGRzEpOwoJCXByX2luZm8oImdzdzogc2V0dGluZyBw
-b3J0NCB0byBnbWFjIG1vZGVcbiIpOwoJfQp9CgoKVGhhbmtzLApEYW5pZWwKCl9fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxp
-bmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5p
-bmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+b3J0NCB0byBnbWFjIG1vZGVcbiIpOwoJfQp9CgoKVGhhbmtzLApEYW5pZWwKCgpfX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWls
+aW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMu
+aW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
