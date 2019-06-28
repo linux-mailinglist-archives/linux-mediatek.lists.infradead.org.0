@@ -2,77 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64CEE59028
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 04:03:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CC91759327
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 06:58:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=caPzSJofoeayXq+wae0VBHVfAAXKxJmvyoqIShBClu0=; b=sIeaP/zo65pgD/
-	xTvbcKzY+tpk2yJ+p18NaHEFSM7UbTlGLfksOe9Be6o+kuHVegix2wddFrLlL8iZlYOVMv7KDvnqy
-	yZm90FuJzkJKSo9K2s/uaSGb+x1rtc+dakqECunE9yTkKh8xMaX7TRiVf0PBmr6NBydVO42TvDsIe
-	jj1YUxfsRXaHaS0+6Ak/MB43RYM03GQd18UdhxEJF23MHX48sxMbWoO2LuYwRg9819UXF/W+vto8G
-	0fRxyhBNNt7BR17kvzdl/b48XvdBcra8Qo6bQiWJ1fdysF4khBIGhWr7LE5GBXIgYpjBLCVHRFx9R
-	kF/FWca8AqnaGJV6hyQQ==;
+	List-Owner; bh=u1p+YAzsOPhF30uuwg/7R8yE9s73RzlqveM+KyEapVU=; b=NaKsljR++YrfNE
+	ogSu2aO0VomdP/OXeNbjB+jyB1EL4L88UaGzcjIzSnLPRIl8/PkHxfBJpR339o3/A9qm8nrtdsCIE
+	oFeUtEpyNtWH6Sr6arA6itSOMAIQmVQXJiWq3FuNG97t2Z9lINouW7NTIr3pZPoFf/YTEZtq5OOv0
+	W2g5CDRn4yqOO55+S4ZKDFa6SRmp0XJGzhyhzpO8kCEGd1ECkm5Y8I/FLNYJsmMOfhdsqdN9uOBIV
+	f053E6sjcNIEi3YroeufesZnvmC00Wy6eAg7ULdcKC1FtNRxSG7sv7fcx4wwav5wuqu64xpISWWvj
+	14mIt8Mo3JmulX9RXlgA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hggEe-0007ry-Od; Fri, 28 Jun 2019 02:03:32 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hgiy5-0000ms-C4; Fri, 28 Jun 2019 04:58:37 +0000
+Received: from conssluserg-02.nifty.com ([210.131.2.81])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hggEa-0007rb-Ih; Fri, 28 Jun 2019 02:03:30 +0000
-X-UUID: 499902b7bc5d45909059212a843e062b-20190627
-X-UUID: 499902b7bc5d45909059212a843e062b-20190627
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1088672485; Thu, 27 Jun 2019 18:02:59 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 27 Jun 2019 19:02:57 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 28 Jun 2019 10:02:52 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 28 Jun 2019 10:02:51 +0800
-Message-ID: <1561687371.29330.11.camel@mtksdaap41>
-Subject: Re: [v5 2/3] drm/mediatek: separate mipi_tx to different file
-From: CK Hu <ck.hu@mediatek.com>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Fri, 28 Jun 2019 10:02:51 +0800
-In-Reply-To: <20190627025901.28418-3-jitao.shi@mediatek.com>
-References: <20190627025901.28418-1-jitao.shi@mediatek.com>
- <20190627025901.28418-3-jitao.shi@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hgixh-0000b2-UF; Fri, 28 Jun 2019 04:58:15 +0000
+Received: from mail-vs1-f42.google.com (mail-vs1-f42.google.com
+ [209.85.217.42]) (authenticated)
+ by conssluserg-02.nifty.com with ESMTP id x5S4vmGv019235;
+ Fri, 28 Jun 2019 13:57:49 +0900
+DKIM-Filter: OpenDKIM Filter v2.10.3 conssluserg-02.nifty.com x5S4vmGv019235
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nifty.com;
+ s=dec2015msa; t=1561697869;
+ bh=SIK/nAM+sI54EJmk0mR1Usgw9j5vfYmGFrOtLjOZzLg=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=JxblWpm3C3r7r01gYCOajBSW84T6W3cnHh34fYXfzFs98o7YC0XLfQPjyIZJOe7wM
+ PY/Z814YyNy19enS/Ou211c5U7rm691JuQCgggAcE2sGPHLAj9wwCQolzRkbPaDRiu
+ FrTXIynHp8sn8Ga5l38WmMbWouAfZu8DxdTPzh8CSEslepOK3tMS5SQS+4VtUehZ9t
+ NSNHzUy1OY+BQNhszkLRTwslt4vvB1fQRAdLZXk9kVNL+2+OwXetOycQuOQ2VOQRtf
+ XghTnCtXDc6J9Kd7iUMUzD/WmoM3yPHVBRQHQLacTI0FvtiDEE2S7qU0bYPKqALUUD
+ 5RDATmr7n88Ew==
+X-Nifty-SrcIP: [209.85.217.42]
+Received: by mail-vs1-f42.google.com with SMTP id a186so3202073vsd.7;
+ Thu, 27 Jun 2019 21:57:48 -0700 (PDT)
+X-Gm-Message-State: APjAAAXhO10j9bWkfm8UWgyZm69hfK5Zp3A/owwHoWWMehQUVg1rn1LT
+ 9m3WtJXOTuZwyFcu2KMb8EyIV+OEibzN1n9HRE0=
+X-Google-Smtp-Source: APXvYqyyvmsd8AAk5R7aaNFgntOJs2TjX0FeQ1b2WdSaf2T0LzzKUcfk9Z8oacISJcBzf5zvmHjL7/Pj9m8miFmaa6o=
+X-Received: by 2002:a67:d46:: with SMTP id 67mr4682467vsn.181.1561697868020;
+ Thu, 27 Jun 2019 21:57:48 -0700 (PDT)
 MIME-Version: 1.0
-X-TM-AS-Product-Ver: SMEX-12.5.0.1684-8.5.1010-24722.000
-X-TM-AS-Result: No-10.247700-8.000000-10
-X-TMASE-MatchedRID: L8tZF6zWW2rmLzc6AOD8DfHkpkyUphL9APiR4btCEeZJK2eJhY02w+Z5
- Gn23AeDZBCJmNbrkQwEB1c8PTXnqofI1YbpS1+avgmAd4Attpn/YuVu0X/rOkBpX1zEL4nq3zod
- Om+zp8Klvb8FTrUVVI7tTg4w4u0QPVdgv/fqHkl7obINHZkH5xqgmQ5FI9tvDDlLOAk1ICsupTt
- npKpQyOnuvCtBi52L250DWRAwkrYTtmWsUlPYSbZXIRfiL5JZTGEfoClqBl86bKItl61J/ycnjL
- TA/UDoAoTCA5Efyn8CNo+PRbWqfRDsAVzN+Ov/sHFf9y5qyR15CjO3g32i4QW3xAkDtY0KKM0RM
- yIBWAJybBCcU0pWFpQ==
-X-TM-AS-User-Approved-Sender: No
-X-TM-AS-User-Blocked-Sender: No
-X-TMASE-Result: 10--10.247700-8.000000
-X-TMASE-Version: SMEX-12.5.0.1684-8.5.1010-24722.000
-X-TM-SNTS-SMTP: 5329DA286C4A6660442E20F3A9F915E02E66B2517D31A07EE8877C820797CA0F2000:8
-X-MTK: N
+References: <20190627163903.28398-1-yamada.masahiro@socionext.com>
+In-Reply-To: <20190627163903.28398-1-yamada.masahiro@socionext.com>
+From: Masahiro Yamada <yamada.masahiro@socionext.com>
+Date: Fri, 28 Jun 2019 13:57:12 +0900
+X-Gmail-Original-Message-ID: <CAK7LNARj+A1JDnUmA_ZFC5Shsy7Tg37LtXS27H7ZTgDbp5BO2w@mail.gmail.com>
+Message-ID: <CAK7LNARj+A1JDnUmA_ZFC5Shsy7Tg37LtXS27H7ZTgDbp5BO2w@mail.gmail.com>
+Subject: Re: [PATCH v3 0/4] Compile-test UAPI and kernel headers
+To: Linux Kbuild mailing list <linux-kbuild@vger.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_190328_624221_9576710B 
-X-CRM114-Status: GOOD (  14.00  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190627_215814_219272_5E509E58 
+X-CRM114-Status: GOOD (  11.88  )
+X-Spam-Score: 1.0 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (1.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [210.131.2.81 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [210.131.2.81 listed in wl.mailspike.net]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,109 +82,92 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
- cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>, Thierry
- Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki
- Dae <inki.dae@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Andy
- Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>, Sean
- Paul <seanpaul@chromium.org>
+Cc: Song Liu <songliubraving@fb.com>,
+ Jakub Kicinski <jakub.kicinski@netronome.com>,
+ "open list:DOCUMENTATION" <linux-doc@vger.kernel.org>,
+ Palmer Dabbelt <palmer@sifive.com>, Alexei Starovoitov <ast@kernel.org>,
+ linux-riscv@lists.infradead.org, Sam Ravnborg <sam@ravnborg.org>,
+ Jesper Dangaard Brouer <hawk@kernel.org>, xdp-newbies@vger.kernel.org,
+ Daniel Borkmann <daniel@iogearbox.net>, Jonathan Corbet <corbet@lwn.net>,
+ Anton Vorontsov <anton@enomsg.org>, John Fastabend <john.fastabend@gmail.com>,
+ Yonghong Song <yhs@fb.com>, Albert Ou <aou@eecs.berkeley.edu>,
+ Kees Cook <keescook@chromium.org>, Jani Nikula <jani.nikula@intel.com>,
+ Tony Luck <tony.luck@intel.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
+ Michal Marek <michal.lkml@markovi.net>, Networking <netdev@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Martin KaFai Lau <kafai@fb.com>, Colin Cross <ccross@android.com>,
+ bpf@vger.kernel.org, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
+On Fri, Jun 28, 2019 at 1:41 AM Masahiro Yamada
+<yamada.masahiro@socionext.com> wrote:
+>
+> 1/4: Compile-test exported headers (reworked in v2)
+>
+> 2/4: fix a flaw I noticed when I was working on this series.
+>      Avoid generating intermediate wrappers.
+>
+> 3/4: maybe useful for 4/4 and in some other places.
+>      Add header-test-pattern-y syntax.
+>
+> 4/4: Compile-test kernel-space headers in include/.
+>      v2: compile as many headers as possible.
+>      v3: exclude more headers causing build errors
 
-On Thu, 2019-06-27 at 10:59 +0800, Jitao Shi wrote:
-> Different IC has different mipi_tx setting of dsi.
-> This patch separates the mipi_tx hardware relate part for mt8173.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/Makefile             |   1 +
->  drivers/gpu/drm/mediatek/mtk_mipi_tx.c        | 343 ++----------------
->  drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |  49 +++
->  drivers/gpu/drm/mediatek/mtk_mt8173_mipi_tx.c | 289 +++++++++++++++
->  4 files changed, 363 insertions(+), 319 deletions(-)
->  create mode 100644 drivers/gpu/drm/mediatek/mtk_mipi_tx.h
->  create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8173_mipi_tx.c
-> 
 
-[snip]
-
-> @@ -391,10 +101,8 @@ static int mtk_mipi_tx_probe(struct platform_device *pdev)
->  	struct device *dev = &pdev->dev;
->  	struct mtk_mipi_tx *mipi_tx;
->  	struct resource *mem;
-> -	struct clk *ref_clk;
->  	const char *ref_clk_name;
->  	struct clk_init_data clk_init = {
-> -		.ops = &mtk_mipi_tx_pll_ops,
->  		.num_parents = 1,
->  		.parent_names = (const char * const *)&ref_clk_name,
->  		.flags = CLK_SET_RATE_GATE,
-> @@ -408,6 +116,7 @@ static int mtk_mipi_tx_probe(struct platform_device *pdev)
->  		return -ENOMEM;
->  
->  	mipi_tx->driver_data = of_device_get_match_data(dev);
-> +
->  	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->  	mipi_tx->regs = devm_ioremap_resource(dev, mem);
->  	if (IS_ERR(mipi_tx->regs)) {
-> @@ -416,13 +125,14 @@ static int mtk_mipi_tx_probe(struct platform_device *pdev)
->  		return ret;
->  	}
->  
-> -	ref_clk = devm_clk_get(dev, NULL);
-> -	if (IS_ERR(ref_clk)) {
-> -		ret = PTR_ERR(ref_clk);
-> +	mipi_tx->ref_clk = devm_clk_get(dev, NULL);
-
-I think you need not to keep ref_clk in driver private data because you
-would not use it any more.
-
-Regards,
-CK
-
-> +	if (IS_ERR(mipi_tx->ref_clk)) {
-> +		ret = PTR_ERR(mipi_tx->ref_clk);
->  		dev_err(dev, "Failed to get reference clock: %d\n", ret);
->  		return ret;
->  	}
-> -	ref_clk_name = __clk_get_name(ref_clk);
-> +
-> +	ref_clk_name = __clk_get_name(mipi_tx->ref_clk);
->  
->  	ret = of_property_read_string(dev->of_node, "clock-output-names",
->  				      &clk_init.name);
-> @@ -431,6 +141,8 @@ static int mtk_mipi_tx_probe(struct platform_device *pdev)
->  		return ret;
->  	}
->  
-> +	clk_init.ops = mipi_tx->driver_data->mipi_tx_clk_ops;
-> +
->  	mipi_tx->pll_hw.init = &clk_init;
->  	mipi_tx->pll = devm_clk_register(dev, &mipi_tx->pll_hw);
->  	if (IS_ERR(mipi_tx->pll)) {
-> @@ -465,20 +177,12 @@ static int mtk_mipi_tx_remove(struct platform_device *pdev)
->  	return 0;
->  }
->  
+I push this series to
+ git://git.kernel.org/pub/scm/linux/kernel/git/masahiroy/linux-kbuild.git
+ header-test-v3
+for somebody who wants to test it.
 
 
 
+>
+> Masahiro Yamada (4):
+>   kbuild: compile-test UAPI headers to ensure they are self-contained
+>   kbuild: do not create wrappers for header-test-y
+>   kbuild: support header-test-pattern-y
+>   kbuild: compile-test kernel headers to ensure they are self-contained
+>
+>  .gitignore                         |    1 -
+>  Documentation/dontdiff             |    1 -
+>  Documentation/kbuild/makefiles.txt |   13 +-
+>  Makefile                           |    4 +-
+>  include/Kbuild                     | 1250 ++++++++++++++++++++++++++++
+>  init/Kconfig                       |   22 +
+>  scripts/Makefile.build             |   10 +-
+>  scripts/Makefile.lib               |   13 +-
+>  scripts/cc-system-headers.sh       |    8 +
+>  usr/.gitignore                     |    1 -
+>  usr/Makefile                       |    2 +
+>  usr/include/.gitignore             |    3 +
+>  usr/include/Makefile               |  134 +++
+>  13 files changed, 1449 insertions(+), 13 deletions(-)
+>  create mode 100644 include/Kbuild
+>  create mode 100755 scripts/cc-system-headers.sh
+>  create mode 100644 usr/include/.gitignore
+>  create mode 100644 usr/include/Makefile
+>
+> --
+> 2.17.1
+>
+>
+> _______________________________________________
+> linux-arm-kernel mailing list
+> linux-arm-kernel@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-arm-kernel
 
+
+
+--
+Best Regards
+Masahiro Yamada
 
 _______________________________________________
 Linux-mediatek mailing list
