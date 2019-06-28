@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7E4F5A032
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 18:04:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD7D65A038
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 18:04:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,26 +11,25 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=BilVltgdf7Z0ysW3C/eSZOtWXN2qeeSlQQ2NRFYppOo=; b=r9DHXbkksR42WG5CTd0yv+bXBA
-	N1Jntz7QrwaJ930lDiJ1bAGlKgeiNj9JpYKKsWmJ56JuSeICtKg+VnUPt16woCw3iP05E1sCkoUPl
-	pkmFLLhZOtDKMrdLmKusnlXR9hTx4+vmxZz/OsGxWP5fP2ADvf86/GSLMu4qlL2jezuj46O9Mo+FL
-	F+Mk1eKUa4MbykZxirMiq+zcRPmMSWAbrg9zOVNMU34NoVGMbugi1et1QzpYdvefKhIUXR2aHG2z8
-	JdQYnuK8dMqGI+0IconEWUA8T0YEH2SHVQGCr9rN6wZCttqiWOYBMUZ+RB88ztpYsV4i2jUqqZ7ct
-	Ym5hx8Lg==;
+	bh=mNqzES5Bya+6CYcFOC4kqmQnehBPcpqeINlOvvvUDpA=; b=UpEZRw8XClsa31zOV/e670maFf
+	kqdrnNtkhdRUs1VQwdJ4FNqvt8WFDpsCxFExvd+2ncnodjOTcEsRMx3tUaQgjxnBQDS8k1XX+cR/F
+	8uOhsdcqZozcufusbu01u3uWXgp9KiaPfNCrY+f+6XCt5k/RjSWjIokvNjtDlNffJRkgvAFKVfH/U
+	Qvwyr7oxitQIbrqswT0zWP+ItDElSm8GwtWL6brFIWYu7Edu6prkM36/izfHm0On1SgDDmZXh4o94
+	L+dXSsQc87RrBpIhq+yjZ1xeRnDUEY7W+aTbF0NwAOv5U02a7xSVsZZG5Mf7BcGGTiskrIPeN2Zwl
+	3TJJ+YOQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgtMU-0007HU-Ta; Fri, 28 Jun 2019 16:04:30 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hgtMg-0007Rv-Ke; Fri, 28 Jun 2019 16:04:42 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgtMQ-0007EQ-5U; Fri, 28 Jun 2019 16:04:27 +0000
+ id 1hgtMb-0007N5-20; Fri, 28 Jun 2019 16:04:38 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 110AC27FD65
+ (Authenticated sender: andrzej.p) with ESMTPSA id 9083C280AB5
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v3 01/22] drm: Include ddc adapter pointer in struct
- drm_connector
-Date: Fri, 28 Jun 2019 18:01:15 +0200
-Message-Id: <d6381c020ea1c848a7044d830bdb0ec9663d1619.1561735433.git.andrzej.p@collabora.com>
+Subject: [PATCH v3 02/22] drm/exynos: Provide ddc symlink in connector's sysfs
+Date: Fri, 28 Jun 2019 18:01:16 +0200
+Message-Id: <3f7bbe3420bbd30a21c771b7c9c24d9a23c85000.1561735433.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1561735433.git.andrzej.p@collabora.com>
 References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
@@ -38,15 +37,13 @@ References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
 In-Reply-To: <cover.1561735433.git.andrzej.p@collabora.com>
 References: <cover.1561735433.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_090426_481426_7769C64A 
-X-CRM114-Status: GOOD (  13.95  )
+X-CRM114-CacheID: sfid-20190628_090437_382896_E9AFD16F 
+X-CRM114-Status: GOOD (  13.41  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -81,16 +78,16 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
  Dave Airlie <airlied@redhat.com>, freedreno@lists.freedesktop.org,
  linux-tegra@vger.kernel.org, Pengutronix Kernel Team <kernel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- Sascha Hauer <s.hauer@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, Jani Nikula <jani.nikula@intel.com>,
+ linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jyri Sarha <jsarha@ti.com>, Inki Dae <inki.dae@samsung.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
  Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
- linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
- amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
- Eric Anholt <eric@anholt.net>, Thomas Zimmermann <tzimmermann@suse.de>,
+ linux-arm-kernel@lists.infradead.org, amd-gfx@lists.freedesktop.org,
+ Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
+ Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
@@ -104,81 +101,65 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add generic code which creates symbolic links in sysfs, pointing to ddc
-interface used by a particular video output. For example:
-
-ls -l /sys/class/drm/card0-HDMI-A-1/ddc
-lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
-	-> ../../../../soc/13880000.i2c/i2c-2
-
-This makes it easy for user to associate a display with its ddc adapter
-and use e.g. ddcutil to control the chosen monitor.
-
-This patch adds an i2c_adapter pointer to struct drm_connector. Particular
-drivers can then use it instead of using their own private instance. If a
-connector contains a ddc, then create a symbolic link in sysfs.
+Switch to using the ddc provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-Acked-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 ---
- drivers/gpu/drm/drm_sysfs.c |  7 +++++++
- include/drm/drm_connector.h | 11 +++++++++++
- 2 files changed, 18 insertions(+)
+ drivers/gpu/drm/exynos/exynos_hdmi.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
 
-diff --git a/drivers/gpu/drm/drm_sysfs.c b/drivers/gpu/drm/drm_sysfs.c
-index ad10810bc972..26d359b39785 100644
---- a/drivers/gpu/drm/drm_sysfs.c
-+++ b/drivers/gpu/drm/drm_sysfs.c
-@@ -294,6 +294,9 @@ int drm_sysfs_connector_add(struct drm_connector *connector)
- 	/* Let userspace know we have a new connector */
- 	drm_sysfs_hotplug_event(dev);
+diff --git a/drivers/gpu/drm/exynos/exynos_hdmi.c b/drivers/gpu/drm/exynos/exynos_hdmi.c
+index 894a99793633..6816e37861b7 100644
+--- a/drivers/gpu/drm/exynos/exynos_hdmi.c
++++ b/drivers/gpu/drm/exynos/exynos_hdmi.c
+@@ -126,7 +126,6 @@ struct hdmi_context {
+ 	void __iomem			*regs;
+ 	void __iomem			*regs_hdmiphy;
+ 	struct i2c_client		*hdmiphy_port;
+-	struct i2c_adapter		*ddc_adpt;
+ 	struct gpio_desc		*hpd_gpio;
+ 	int				irq;
+ 	struct regmap			*pmureg;
+@@ -872,10 +871,10 @@ static int hdmi_get_modes(struct drm_connector *connector)
+ 	struct edid *edid;
+ 	int ret;
  
-+	if (connector->ddc)
-+		return sysfs_create_link(&connector->kdev->kobj,
-+				 &connector->ddc->dev.kobj, "ddc");
+-	if (!hdata->ddc_adpt)
++	if (!connector->ddc)
+ 		return -ENODEV;
+ 
+-	edid = drm_get_edid(connector, hdata->ddc_adpt);
++	edid = drm_get_edid(connector, connector->ddc);
+ 	if (!edid)
+ 		return -ENODEV;
+ 
+@@ -1893,7 +1892,7 @@ static int hdmi_get_ddc_adapter(struct hdmi_context *hdata)
+ 		return -EPROBE_DEFER;
+ 	}
+ 
+-	hdata->ddc_adpt = adpt;
++	hdata->connector.ddc = adpt;
+ 
  	return 0;
  }
+@@ -2045,7 +2044,7 @@ static int hdmi_probe(struct platform_device *pdev)
+ 	if (hdata->regs_hdmiphy)
+ 		iounmap(hdata->regs_hdmiphy);
+ err_ddc:
+-	put_device(&hdata->ddc_adpt->dev);
++	put_device(&hdata->connector.ddc->dev);
  
-@@ -301,6 +304,10 @@ void drm_sysfs_connector_remove(struct drm_connector *connector)
- {
- 	if (!connector->kdev)
- 		return;
-+
-+	if (connector->ddc)
-+		sysfs_remove_link(&connector->kdev->kobj, "ddc");
-+
- 	DRM_DEBUG("removing \"%s\" from sysfs\n",
- 		  connector->name);
+ 	return ret;
+ }
+@@ -2072,7 +2071,7 @@ static int hdmi_remove(struct platform_device *pdev)
+ 	if (hdata->regs_hdmiphy)
+ 		iounmap(hdata->regs_hdmiphy);
  
-diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index ca745d9feaf5..1ad3d1d54ba7 100644
---- a/include/drm/drm_connector.h
-+++ b/include/drm/drm_connector.h
-@@ -23,6 +23,7 @@
- #ifndef __DRM_CONNECTOR_H__
- #define __DRM_CONNECTOR_H__
+-	put_device(&hdata->ddc_adpt->dev);
++	put_device(&hdata->connector.ddc->dev);
  
-+#include <linux/i2c.h>
- #include <linux/list.h>
- #include <linux/llist.h>
- #include <linux/ctype.h>
-@@ -1308,6 +1309,16 @@ struct drm_connector {
- 	 * [0]: progressive, [1]: interlaced
- 	 */
- 	int audio_latency[2];
-+
-+	/**
-+	 * @ddc: associated ddc adapter.
-+	 * A connector usually has its associated ddc adapter. If a driver uses
-+	 * this field, then an appropriate symbolic link is created in connector
-+	 * sysfs directory to make it easy for the user to tell which i2c
-+	 * adapter is for a particular display.
-+	 */
-+	struct i2c_adapter *ddc;
-+
- 	/**
- 	 * @null_edid_counter: track sinks that give us all zeros for the EDID.
- 	 * Needed to workaround some HW bugs where we get all 0s
+ 	mutex_destroy(&hdata->mutex);
+ 
 -- 
 2.17.1
 
