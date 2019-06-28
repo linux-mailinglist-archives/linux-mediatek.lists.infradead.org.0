@@ -2,74 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2BF8C5944A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 08:38:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A0880594AF
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 09:18:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IApQlpxuYXjStwITlVTtG018qRHCc1a+O2j/MYjwZ2E=; b=Ga1dh/LTeKw5te
-	vSWIPugo2sQS0M4MR3GFPflYuDtQp3uyfco0CwVZHadRYhkBsXrJ1ziLScMiyz9iD5y7sGP+DNLvE
-	pnulBVA/KRWte97zaz3cveCTKWQdvfWamtuf9wK9iiqpklCI4dU+cXuYvo/n7zL4Ketak1d+jbvAa
-	7M+/WiMsSt/Gs8NKbrlPZ3SzcTWILNi7HIfVBUPEsQiqosuBDt6h4QOaANfzcwiaaJpCnCKOLiWHR
-	HhblmRkUEP2T4VluoRkyrcAF2OA5BVtYRsIY0hrjKlGQetYHo7bDuJdTvjvDYj8O9cvf1ZwASzuV+
-	MWkHUP2rvuRlMvd6b3Zw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=nCqWxCl0/fAOCdH0jLz2wktJcxs2oC+omcxP9VVkSTY=; b=aj6ddtiZtVzJMt
+	F0QoOubwPvFLRMs+yDaPlpivHKUmQl4xINnHEaJ1kKXGlNA+mGYIsbThYY758T4GpAy3dCKPOMT9a
+	E1lVBtx0kdf3U+D/cWVLcRM1zvdYNzkcBiM8re+exZYOAL542gj73uiIyF445TMJAvkqeCOn1qR0M
+	NTtc4aFAgtzJJsEQk3E4JVq2grmEa+cXpVbiCWdQarRj45Ek6AsITe4/znnCKCmP2PtUyTKMp9JoL
+	5lF4v7pysvMUy8QUv0914LIzlPD7Ef+egZ2o+ctrSz8t78T6Gr/E1c2YGRr823buXIxCJJExQAGB2
+	ywgL5jZphQxjTA/xc+cA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgkWt-0007B3-Uu; Fri, 28 Jun 2019 06:38:40 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hgl9T-0006Mb-NX; Fri, 28 Jun 2019 07:18:31 +0000
+Received: from pb-smtp1.pobox.com ([64.147.108.70])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgkWc-0006ze-FS; Fri, 28 Jun 2019 06:38:24 +0000
-X-UUID: ff29b047cff54e11a42d4bcaa4b6fb38-20190627
-X-UUID: ff29b047cff54e11a42d4bcaa4b6fb38-20190627
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <jianjun.wang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1383343028; Thu, 27 Jun 2019 22:38:13 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 27 Jun 2019 23:38:11 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 28 Jun 2019 14:38:06 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 28 Jun 2019 14:38:06 +0800
-Message-ID: <1561703886.21133.14.camel@mhfsdcap03>
-Subject: Re: [PATCH 2/2] PCI: mediatek: Add controller support for MT7629
-From: Jianjun Wang <jianjun.wang@mediatek.com>
-To: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Date: Fri, 28 Jun 2019 14:38:06 +0800
-In-Reply-To: <20190219150352.GA21833@e107981-ln.cambridge.arm.com>
-References: <1544058553-10936-3-git-send-email-jianjun.wang@mediatek.com>
- <20181213145517.GB4701@google.com> <1545034779.8528.8.camel@mhfsdcap03>
- <20181217143247.GK20725@google.com>
- <20181217154645.GA24864@e107981-ln.cambridge.arm.com>
- <1545124764.25199.3.camel@mhfsdcap03> <20181220182043.GC183878@google.com>
- <1545651628.5634.57.camel@mhfsdcap03>
- <20190123154023.GA1157@e107981-ln.cambridge.arm.com>
- <1550559699.29794.2.camel@mhfsdcap03>
- <20190219150352.GA21833@e107981-ln.cambridge.arm.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hgl9P-0006M6-Ph
+ for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 07:18:29 +0000
+Received: from pb-smtp1.pobox.com (unknown [127.0.0.1])
+ by pb-smtp1.pobox.com (Postfix) with ESMTP id 9716B15B271;
+ Fri, 28 Jun 2019 03:18:22 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=subject:to:cc
+ :references:from:message-id:date:mime-version:in-reply-to
+ :content-type:content-transfer-encoding; s=sasl; bh=RqYXy6/tiJNJ
+ E8T+ohPnz7lg4ls=; b=FN8QofOuy53TgWJm08+iIvLzrseBMj+ub7b4uBinaYxn
+ y6hTo8Tdk8JWo7ZRDjArSz3rBTrV6vZaYxtUDTjg4xIFCSwpuV07H6pcFpsrDxzY
+ tbsgfbG15aaQoF2P1GBkkrz1I7+K2gwO7wNr1nzusb/TONfWD3W6XD8WIIqZgKA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=pobox.com; h=subject:to:cc
+ :references:from:message-id:date:mime-version:in-reply-to
+ :content-type:content-transfer-encoding; q=dns; s=sasl; b=HugLNt
+ NjRsijoTY98SpqiN0xRNaJASV+0xeZmmyZqL9gvspfcd6GzA9BAGyHMNYTqGPkb9
+ si4b/gcFeUe5eUaYdMI97zKkrYSs6e66Gz9zvi7ba362Hc9kpTW50TfaEfGtXEzD
+ bHwsS1bnNXpEQatGfI3aSRubJy2ZFRISNptm8=
+Received: from pb-smtp1.nyi.icgroup.com (unknown [127.0.0.1])
+ by pb-smtp1.pobox.com (Postfix) with ESMTP id 7B56F15B270;
+ Fri, 28 Jun 2019 03:18:22 -0400 (EDT)
+Received: from [192.168.1.134] (unknown [70.142.57.80])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by pb-smtp1.pobox.com (Postfix) with ESMTPSA id 6345615B26F;
+ Fri, 28 Jun 2019 03:18:21 -0400 (EDT)
+Subject: Re: [PATCH RFC net-next 1/5] net: dsa: mt7530: Convert to PHYLINK API
+To: Andrew Lunn <andrew@lunn.ch>
+References: <20190624145251.4849-1-opensource@vdorst.com>
+ <20190624145251.4849-2-opensource@vdorst.com>
+ <20190624153950.hdsuhrvfd77heyor@shell.armlinux.org.uk>
+ <20190625113158.Horde.pCaJOVUsgyhYLd5Diz5EZKI@www.vdorst.com>
+ <20190625121030.m5w7wi3rpezhfgyo@shell.armlinux.org.uk>
+ <1ad9f9a5-8f39-40bd-94bb-6b700f30c4ba@pobox.com>
+ <20190625190246.GA27733@lunn.ch>
+ <4fc51dc4-0eec-30d7-86d1-3404819cf6fe@pobox.com>
+ <20190625204148.GB27733@lunn.ch>
+ <e469daa1-3e28-db9c-e29a-7f68cc676fda@pobox.com>
+ <20190627192806.GQ27733@lunn.ch>
+From: Daniel Santos <daniel.santos@pobox.com>
+Message-ID: <56d8024e-1e02-7ff7-abf2-261ec9cbabf7@pobox.com>
+Date: Fri, 28 Jun 2019 02:16:45 -0500
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 226F04D099627E20AD2AD93D5DC115D1142A2FAD96C8240667F1D37A93E3DA682000:8
-X-MTK: N
+In-Reply-To: <20190627192806.GQ27733@lunn.ch>
+Content-Language: en-US
+X-Pobox-Relay-ID: E93712BA-9974-11E9-9809-46F8B7964D18-06139138!pb-smtp1.pobox.com
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_233822_530219_9E03B9BC 
-X-CRM114-Status: GOOD (  36.62  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190628_001827_996172_673FFD50 
+X-CRM114-Status: GOOD (  18.25  )
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [64.147.108.70 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,133 +98,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Ryder Lee =?UTF-8?Q?=28=E6=9D=8E=E5=BA=9A=E8=AB=BA=29?=
- <Ryder.Lee@mediatek.com>,
- "linux-pci@vger.kernel.org" <linux-pci@vger.kernel.org>,
- Youlin Pei =?UTF-8?Q?=28=E8=A3=B4=E5=8F=8B=E6=9E=97=29?=
- <youlin.pei@mediatek.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- jianjun.wang@mediatek.com, "robh+dt@kernel.org" <robh+dt@kernel.org>,
- Bjorn Helgaas <helgaas@kernel.org>,
- Honghui Zhang =?UTF-8?Q?=28=E5=BC=A0=E6=B4=AA=E8=BE=89=29?=
- <Honghui.Zhang@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: f.fainelli@gmail.com, frank-w@public-files.de, netdev@vger.kernel.org,
+ sean.wang@mediatek.com, linux-mips@vger.kernel.org, davem@davemloft.net,
+ =?UTF-8?Q?Ren=c3=a9_van_Dorst?= <opensource@vdorst.com>,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
+ vivien.didelot@gmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-02-19 at 23:03 +0800, Lorenzo Pieralisi wrote:
-> On Tue, Feb 19, 2019 at 03:01:39PM +0800, Jianjun Wang wrote:
-> > On Wed, 2019-01-23 at 15:40 +0000, Lorenzo Pieralisi wrote:
-> > > On Mon, Dec 24, 2018 at 07:40:28PM +0800, Jianjun Wang wrote:
-> > > > On Thu, 2018-12-20 at 12:20 -0600, Bjorn Helgaas wrote:
-> > > > > On Tue, Dec 18, 2018 at 05:19:24PM +0800, Jianjun Wang wrote:
-> > > > > > On Mon, 2018-12-17 at 15:46 +0000, Lorenzo Pieralisi wrote:
-> > > > > > > On Mon, Dec 17, 2018 at 08:32:47AM -0600, Bjorn Helgaas wrote:
-> > > > > > > > On Mon, Dec 17, 2018 at 04:19:39PM +0800, Jianjun Wang wrote:
-> > > > > > > > > On Thu, 2018-12-13 at 08:55 -0600, Bjorn Helgaas wrote:
-> > > > > > > > > > On Thu, Dec 06, 2018 at 09:09:13AM +0800, Jianjun Wang wrote:
-> > > > > > > > > > > The read value of BAR0 is 0xffff_ffff, it's size will be
-> > > > > > > > > > > calculated as 4GB in arm64 but bogus alignment values at
-> > > > > > > > > > > arm32, the pcie device and devices behind this bridge will
-> > > > > > > > > > > not be enabled. Fix it's BAR0 resource size to guarantee
-> > > > > > > > > > > the pcie devices will be enabled correctly.
-> > > > > > > > > > 
-> > > > > > > > > > So this is a hardware erratum?  Per spec, a memory BAR has
-> > > > > > > > > > bit 0 hardwired to 0, and an IO BAR has bit 1 hardwired to
-> > > > > > > > > > 0.
-> > > > > > > > > 
-> > > > > > > > > Yes, it only works properly on 64bit platform.
-> > > > > > > > 
-> > > > > > > > I don't understand.  BARs are supposed to work the same
-> > > > > > > > regardless of whether it's a 32- or 64-bit platform.  If this is
-> > > > > > > > a workaround for a hardware defect, please just say that
-> > > > > > > > explicitly.
-> > > > > > > 
-> > > > > > > I do not understand this either. First thing to do is to describe
-> > > > > > > the problem properly so that we can actually find a solution to
-> > > > > > > it.
-> > > > > > 
-> > > > > > This BAR0 is a 64-bit memory BAR, the HW default values for this BAR
-> > > > > > is 0xffff_ffff_0000_0000 and it could not be changed except by
-> > > > > > config write operation.
-> > > > > 
-> > > > > If you literally get 0xffff_ffff_0000_0000 when reading the BAR, that
-> > > > > is out of spec because the low-order 4 bits of a 64-bit memory BAR
-> > > > > cannot all be zero.
-> > > > > 
-> > > > > A 64-bit BAR consumes two DWORDS in config space.  For a 64-bit BAR0,
-> > > > > the DWORD at 0x10 contains the low-order bits, and the DWORD at 0x14
-> > > > > contains the upper 32 bits.  Bits 0-3 of the low-order DWORD (the
-> > > > > one at 0x10) are read-only, and in this case should contain the value
-> > > > > 0b1100 (0xc).  That means the range is prefetchable (bit 3 == 1) and
-> > > > > the BAR is 64 bits (bits 2:1 == 10).
-> > > > 
-> > > > Sorry, I have confused the HW default value and the read value of BAR
-> > > > size. The hardware default value is 0xffff_ffff_0000_000c, it's a 64-bit
-> > > > BAR with prefetchable range.
-> > > > 
-> > > > When we start to decoding the BAR, the read value of BAR0 at 0x10 is
-> > > > 0x0c, and the value at 0x14 is 0xffff_ffff, so the read value of BAR
-> > > > size is 0xffff_ffff_0000_0000, which will be decoded to 0xffff_ffff, and
-> > > > it will be set to the end value of BAR0 resource in the pci_dev.
-> > > > > 
-> > > > > > The calculated BAR size will be 0 in 32-bit platform since the
-> > > > > > phys_addr_t is a 32bit value in 32-bit platform.
-> > > > > 
-> > > > > Either (1) this is a hardware defect that feeds incorrect data to the
-> > > > > BAR size calculation, or (2) there's a problem in the BAR size
-> > > > > calculation code.  We need to figure out which one and work around or
-> > > > > fix it correctly.
-> > > > 
-> > > > The BAR size is calculated by the code (res->end - res->start + 1) is
-> > > > fine, I think it's a hardware defect because that we can not change the
-> > > > hardware default value or just disable it since we don't using it.
-> > > 
-> > > Apologies for the delay in getting back to this.
-> > > 
-> > > This looks like a kernel defect, not a HW defect.
-> > > 
-> > > I need some time to make up my mind on what the right fix for this
-> > > but it is most certainly not this patch.
-> > > 
-> > > Lorenzo
-> > 
-> > Hi Lorenzo,
-> > 
-> > Is there any better idea about this patch?
-> 
-> Hi,
-> 
-> I did not have time to investigate the issue in core code that triggers
-> this defect but this patch is not the solution to the problem it is a
-> plaster that papers over it, I won't merge it.
-> 
-> I would appreciate some help. If you could have a look at core code that
-> triggers the failure we can analyze what should be done to make it work,
-> I do not think it is a defect in your IP.
-> 
-> Lorenzo
-
-Hi Lorenzo,
-
-This BAR size issue has been fixed by commit
-"01b37f851ca150554496fd6e79c6d9a67992a2c0
-PCI: Make pci_size() return real BAR size"
-
-So there is no need to add the fixup method, I will remove it in next
-version.
-
-Thanks.
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGVsbG8gQW5kcmV3LAoKT24gNi8yNy8xOSAyOjI4IFBNLCBBbmRyZXcgTHVubiB3cm90ZToKPj4+
+IExvb2tpbmcgYXQgdGhlIGRhdGEgc2hlZXQgcGFnZSwgeW91IHdhbnQgRk9SQ0VfTU9ERV9QbiBz
+ZXQuIFlvdSBuZXZlcgo+Pj4gd2FudCB0aGUgTUFDIGRpcmVjdGx5IHRhbGtpbmcgdG8gdGhlIFBI
+WS4gQmFkIHRoaW5ncyB3aWxsIGhhcHBlbi4KPj4gU28gd2hhdCBleGFjdGx5IGRvIHlvdSBtZWFu
+IGJ5IHRoZSBNQUMgZGlyZWN0bHkgdGFsa2luZyB0byB0aGUgUEhZP8KgIERvCj4+IHlvdSBtZWFu
+IHNldHRpbmcgc3BlZWQsIGR1cGxleCwgZXRjLiB2aWEgdGhlIE1BQyByZWdpc3RlcnMgaW5zdGVh
+ZCBvZgo+PiB2aWEgTURJTyB0byB0aGUgTUlJIHJlZ2lzdGVycyBvZiB0aGUgUEhZPwo+IFRoZSBk
+YXRhIHNoZWV0IGltcGxpZXMgdGhlIE1BQyBoYXJkd2FyZSBwZXJmb3JtcyByZWFkcyBvbiB0aGUg
+UEhZIHRvCj4gZ2V0IHRoZSBzdGF0dXMsIGFuZCB0aGVuIHVzZXMgdGhhdCB0byBjb25maWd1cmUg
+dGhlIE1BQy4gVGhpcyBpcyBvZnRlbgo+IGNhbGxlZCBQSFkgcG9sbGluZy4gVGhlIE1BQyBoYXJk
+d2FyZSBob3dldmVyIGhhcyBubyBpZGVhIHdoYXQgdGhlIFBIWQo+IGRyaXZlciBpcyBkb2luZy4g
+VGhlIE1BQyBkb2VzIG5vdCB0YWtlIHRoZSBQSFkgbXV0ZXguIFNvIHRoZSBQSFkKPiBkcml2ZXIg
+bWlnaHQgYmUgZG9pbmcgc29tZXRoaW5nIGF0IHRoZSBzYW1lIHRpbWUgdGhlIE1BQyBoYXJkd2Fy
+ZQo+IHBvbGxzIHRoZSBQSFksIGFuZCBpdCBnZXRzIG9kZCByZXN1bHRzLiBTb21lIFBIWXMgaGF2
+ZSBtdWx0aXBsZSBwYWdlcywKPiBhbmQgZm9yIGV4YW1wbGUgcmVhZGluZyB0aGUgdGVtcGVyYXR1
+cmUgc2Vuc29yIG1lYW5zIHN3YXBwaW5nCj4gcGFnZXMuIElmIHRoZSBNQUMgaGFyZHdhcmUgd2Fz
+IHRvIHBvbGwgd2hpbGUgdGhlIHNlbnNvciBpcyBiZWluZyByZWFkLAo+IGl0IHdvdWxkIG5vdCBn
+ZXQgdGhlIGxpbmsgc3RhdHVzLCBpdCB3b3VsZCByZWFkIHNvbWUgcmFuZG9tCj4gdGVtcGVyYXR1
+cmUgcmVnaXN0ZXIuCj4KPiBTbyB5b3Ugd2FudCB0aGUgUEhZIGRyaXZlciB0byByZWFkIHRoZSBy
+ZXN1bHRzIG9mIGF1dG8tbmVnIGFuZCBpdCB0aGVuCj4gdGVsbCB0aGUgTUFDIHRoZSByZXN1bHRz
+LCBzbyB0aGUgTUFDIGNhbiBiZSBjb25maWd1cmVkIGNvcnJlY3RseS4KClRoYW5rIHlvdSwgdGhp
+cyBpcyB2ZXJ5IGhlbHBmdWwhwqAgSSBmaW5hbGx5IHVuZGVyc3RhbmQgd2h5IHRoZXNlCnNldHRp
+bmdzIGFyZSBpbiB0d28gZGlmZmVyZW50IHBsYWNlcy4gOinCoCBVbmZvcnR1bmF0ZWx5IHRoaXMg
+ZHJpdmVyIChpbgpPcGVuV1JUKSBkb2VzIGEgbG90IG9mICJtYWdpYyIgZHVyaW5nIGluaXQgdG8g
+cmVnaXN0ZXJzIHRoYXQgSSBkb24ndApoYXZlIGRvY3VtZW50YXRpb24gZm9yLCBidXQgSSBzZWUg
+d2hlcmUgYXV0by1wb2xsaW5nIGNhbiBiZSBkaXNhYmxlZCBub3cuCgo+Pj4gVGhlbiB1c2UgRk9S
+Q0VfUlhfRkNfUG4gYW5kIEZPUkNFX1RYX1BuIHRvIHJlZmxlY3QgcGh5ZGV2LT5wYXVzZSBhbmQK
+Pj4+IHBoeWRldi0+YXN5bV9wYXVzZS4KPj4+Cj4+PiBUaGUgc2FtZSBpZGVhIGFwcGxpZXMgd2hl
+biB1c2luZyBwaHlsaW5rLgo+Pj4KPj4+ICAgICBBbmRyZXcKPj4gWW91J3JlIGhlbHAgaXMgZ3Jl
+YXRseSBhcHByZWNpYXRlZCBoZXJlLsKgIEFkbWl0dGVkbHksIEknbSBhbHNvIHRyeWluZyB0bwo+
+PiBnZXQgdGhpcyB3b3JraW5nIGluIHRoZSBub3cgZGVwcmVjYXRlZCBzd2NvbmZpZyBmb3IgYSAz
+LjE4IGtlcm5lbCB0aGF0J3MKPj4gaW4gcHJvZHVjdGlvbi4KPiBJJ20gbm90IHZlcnkgZmFtaWxp
+YXIgd2l0aCBzd2NvbmZpZy4gSXMgdGhlcmUgc29mdHdhcmUgZHJpdmluZyB0aGUKPiBQSFk/IElm
+IG5vdCwgaXQgaXMgdGhlbiBzYWZlIGZvciB0aGUgTUFDIGhhcmR3YXJlIHRvIHBvbGwgdGhlIFBI
+WS4KPgo+ICAgICAgQW5kcmV3Cgpzd2NvbmZpZyBpcyBhbiBuZXRsaW5rLWJhc2VkIGludGVyZmFj
+ZSB0aGUgT3BlbldSVCB0ZWFtIGRldmVsb3BlZCBmb3IKY29uZmlndXJpbmcgc3dpdGNoZXMgYmVm
+b3JlIERTQSB3YXMgY29udmVydGVkIGludG8gYSB2ZW5kb3ItbmV1dHJhbAppbnRlcmZhY2UuwqAg
+Tm93IHRoYXQgRFNBIGRvZXMgd2hhdCBzd2NvbmZpZyB3YXMgZGVzaWduZWQgZm9yIGl0IGhhcyBi
+ZWVuCmRlcHJlY2F0ZWQsIGFsdGhvdWdoICh0byBteSBrbm93bGVkZ2UpIHdlIGRvbid0IHlldCBo
+YXZlIERTQSBmb3IgYWxsCmRldmljZXMgdGhhdCBPcGVuV1JUIHN1cHBvcnRzLgoKRGFuaWVsCgpf
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRp
+YXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRw
+Oi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
