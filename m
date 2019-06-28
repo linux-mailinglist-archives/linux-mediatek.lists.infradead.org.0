@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B458B5A04B
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 18:06:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A9E995A04E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Jun 2019 18:06:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,26 +11,26 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=a9fssPE8+sXlstMkdZpy3aQ0Y79+SG58ap9tq6ka0jA=; b=Qw8sTc2AIwDSFsHdWKwR9D1yy6
-	qTmGsOXJIDnJ7F1r8W3POrKNh2vGGFGc2atrk6R2tJjmtpvADzlONslkS3iCD4UaSGAP3QNcDMauF
-	91NX/YAOLhbWei6rHfvqbRVL3U14KSaY1J8XV6KpgUqJyswdT9DV1TL3PIQ3Glh3PY5egKqc9KIzQ
-	ICSJlMUZHYqaJaWv0jGioLJWaQ+5xG1gcCO/WO7dJWp7ThGc15nXMU2jnhVUyeur8TJYh3eRXbU1u
-	xZ4U/GR2au5IwUibr72R9WOl+OsDdpblk6JmafIQsXaf8GXRmMWYjwO7OML0HpgR6k6ZyZa/obxb9
-	LXxuUqTw==;
+	bh=Ekh7gUT1OKLpmtAdzcuW+8Rbt02lx0satKfg5x4dVfQ=; b=m73UaE9NGdbNLIlFd3NCXkAVWe
+	jq4j1NDWy1L9eW1q9AEhQHHIoBhjogNcBFIzZB39NbNp2PLt/NWVsCtAOt6YBZbt6lV8avZfo5rFg
+	Gie/FolrFrzQmwy0S1t/TebOs7X7O9ptqxHjSKNVCgt11gexsLJd5jJ00SwCTeGuwYDA0L1OcDM/p
+	nSe1YtIksBPYrQxga6fPDrWA/rpfZlvF6yhAk7LzXdwYYLd7lRS0e3MTn+vLvLABMIAdvhiQ0ITSU
+	XzaNNjDBGjw3PUm0RpVxnWDTtBiVCc2vQOP98syW8W8jOiIVnu91Ci89cPvFqJnSPJCLBmQGKxmDe
+	AQMAvU1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgtO7-00017s-QJ; Fri, 28 Jun 2019 16:06:11 +0000
+	id 1hgtOC-0001BE-IC; Fri, 28 Jun 2019 16:06:16 +0000
 Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgtNr-0000te-27; Fri, 28 Jun 2019 16:05:57 +0000
+ id 1hgtO2-00014t-5t; Fri, 28 Jun 2019 16:06:08 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id D51B8289CEA
+ (Authenticated sender: andrzej.p) with ESMTPSA id 8C68F289CEE
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v3 09/22] drm/imx: imx-ldb: Provide ddc symlink in connector's
+Subject: [PATCH v3 10/22] drm/imx: imx-tve: Provide ddc symlink in connector's
  sysfs
-Date: Fri, 28 Jun 2019 18:01:23 +0200
-Message-Id: <c73f0b5c89797584e0bdf7feee1560d7a4c4cec1.1561735433.git.andrzej.p@collabora.com>
+Date: Fri, 28 Jun 2019 18:01:24 +0200
+Message-Id: <00f93c3b30db9f531f4ed846ce95384af30a6c6d.1561735433.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1561735433.git.andrzej.p@collabora.com>
 References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
@@ -38,8 +38,8 @@ References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
 In-Reply-To: <cover.1561735433.git.andrzej.p@collabora.com>
 References: <cover.1561735433.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_090556_149477_3D48F6F9 
-X-CRM114-Status: GOOD (  14.33  )
+X-CRM114-CacheID: sfid-20190628_090606_651813_B70AB078 
+X-CRM114-Status: GOOD (  14.30  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -65,7 +65,7 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
  Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, Liviu Dudau <liviu.dudau@arm.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>,
  Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
  Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
@@ -81,8 +81,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
  Dave Airlie <airlied@redhat.com>, freedreno@lists.freedesktop.org,
  linux-tegra@vger.kernel.org, Pengutronix Kernel Team <kernel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- Sascha Hauer <s.hauer@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, Jani Nikula <jani.nikula@intel.com>,
+ linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jyri Sarha <jsarha@ti.com>, Inki Dae <inki.dae@samsung.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
@@ -95,7 +95,6 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
  Philipp Zabel <p.zabel@pengutronix.de>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
  Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
  =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
@@ -109,59 +108,46 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/imx/imx-ldb.c | 13 ++++++-------
- 1 file changed, 6 insertions(+), 7 deletions(-)
+ drivers/gpu/drm/imx/imx-tve.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/gpu/drm/imx/imx-ldb.c b/drivers/gpu/drm/imx/imx-ldb.c
-index 383733302280..44fdb264339e 100644
---- a/drivers/gpu/drm/imx/imx-ldb.c
-+++ b/drivers/gpu/drm/imx/imx-ldb.c
-@@ -55,7 +55,6 @@ struct imx_ldb_channel {
- 	struct drm_bridge *bridge;
+diff --git a/drivers/gpu/drm/imx/imx-tve.c b/drivers/gpu/drm/imx/imx-tve.c
+index e725af8a0025..b8bee4e1f169 100644
+--- a/drivers/gpu/drm/imx/imx-tve.c
++++ b/drivers/gpu/drm/imx/imx-tve.c
+@@ -109,7 +109,6 @@ struct imx_tve {
  
- 	struct device_node *child;
+ 	struct regmap *regmap;
+ 	struct regulator *dac_reg;
 -	struct i2c_adapter *ddc;
- 	int chno;
- 	void *edid;
- 	int edid_len;
-@@ -131,8 +130,8 @@ static int imx_ldb_connector_get_modes(struct drm_connector *connector)
- 			return num_modes;
- 	}
+ 	struct clk *clk;
+ 	struct clk *di_sel_clk;
+ 	struct clk_hw clk_hw_di;
+@@ -218,14 +217,13 @@ static int tve_setup_vga(struct imx_tve *tve)
  
--	if (!imx_ldb_ch->edid && imx_ldb_ch->ddc)
--		imx_ldb_ch->edid = drm_get_edid(connector, imx_ldb_ch->ddc);
-+	if (!imx_ldb_ch->edid && connector->ddc)
-+		imx_ldb_ch->edid = drm_get_edid(connector, connector->ddc);
+ static int imx_tve_connector_get_modes(struct drm_connector *connector)
+ {
+-	struct imx_tve *tve = con_to_tve(connector);
+ 	struct edid *edid;
+ 	int ret = 0;
  
- 	if (imx_ldb_ch->edid) {
- 		drm_connector_update_edid_property(connector,
-@@ -550,15 +549,15 @@ static int imx_ldb_panel_ddc(struct device *dev,
+-	if (!tve->ddc)
++	if (!connector->ddc)
+ 		return 0;
  
- 	ddc_node = of_parse_phandle(child, "ddc-i2c-bus", 0);
+-	edid = drm_get_edid(connector, tve->ddc);
++	edid = drm_get_edid(connector, connector->ddc);
+ 	if (edid) {
+ 		drm_connector_update_edid_property(connector, edid);
+ 		ret = drm_add_edid_modes(connector, edid);
+@@ -551,7 +549,7 @@ static int imx_tve_bind(struct device *dev, struct device *master, void *data)
+ 
+ 	ddc_node = of_parse_phandle(np, "ddc-i2c-bus", 0);
  	if (ddc_node) {
--		channel->ddc = of_find_i2c_adapter_by_node(ddc_node);
-+		channel->connector.ddc = of_find_i2c_adapter_by_node(ddc_node);
+-		tve->ddc = of_find_i2c_adapter_by_node(ddc_node);
++		tve->connector.ddc = of_find_i2c_adapter_by_node(ddc_node);
  		of_node_put(ddc_node);
--		if (!channel->ddc) {
-+		if (!channel->connector.ddc) {
- 			dev_warn(dev, "failed to get ddc i2c adapter\n");
- 			return -EPROBE_DEFER;
- 		}
  	}
- 
--	if (!channel->ddc) {
-+	if (!channel->connector.ddc) {
- 		/* if no DDC available, fallback to hardcoded EDID */
- 		dev_dbg(dev, "no ddc available\n");
- 
-@@ -725,7 +724,7 @@ static void imx_ldb_unbind(struct device *dev, struct device *master,
- 			drm_panel_detach(channel->panel);
- 
- 		kfree(channel->edid);
--		i2c_put_adapter(channel->ddc);
-+		i2c_put_adapter(channel->connector.ddc);
- 	}
- }
  
 -- 
 2.17.1
