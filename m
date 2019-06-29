@@ -2,87 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A14685A7A5
-	for <lists+linux-mediatek@lfdr.de>; Sat, 29 Jun 2019 01:32:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 437C95A823
+	for <lists+linux-mediatek@lfdr.de>; Sat, 29 Jun 2019 04:10:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=485cwuUp7B4bQlFB0761GPozeyJO/NDeWRYG2AW3ZKk=; b=sYryI74yikCZBO
-	MtbPWvwjFLQ2PzCE7oKJ+pWgFrKPps7W8SYCzyF0ut/Sos19bHMmpsQ7eZFBTcRnGkwgG0mWjmk0U
-	PpEGWzRWgrtpWBwhbce5RDW9m0kEZQkrlb+3n1pZr8pxHmgKo9xyd7VP9NQl2vPweqGZr5YyvSMgf
-	Eiej4HKgRtCXMCkhTEI+FYWlMKHhOeVJydxLUG9K+2QOQKFTUch14bhtuHiDt9IGKYCmS5llRiKvO
-	so/n3R+ElIqQx3uuEB8aL4beriOPL4uPS+mGxpGnxApHKHVvckwL/qPPn5hK6bmPbZ12SgKqmNL13
-	yn72a3sTy+uV1a8Nn9Hw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=fVxCPhWuchBLVpYcdYamqy7U9s7bmyMWhOsCcCP46OM=; b=aQOJ74CUJTlU+W
+	jANQWT9f8j4S4Sta4DZGrfVx6hgO0k2/ilrKllbM49hawJUxR80c640xLRfAb+qAgKmfY+yhIkt5C
+	dQCjTFfo7Jv/ALri5fKIDlH07CJkZfiZ7C1JcsdebH0rNSISc1W+jwKuhXGycTqYY4t6NIqKGGmVS
+	qp7mbI15jObzei+6oX/pubN9Tl/q8CGhy1/tnmln5WhCrh2we2LHEmaJwVvi+ysrEGWfRzhtMJK7L
+	0mNUWLL0JYfmAtFIywSZIxrxy/3Fe0diRoiMZltv2rsTxf0GmmH/V/GTGVdXnWrCEO9FbkuniZIUH
+	tzejMJcTyxUnl9HLi29Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hh0M9-0000n6-LP; Fri, 28 Jun 2019 23:32:37 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1hh2oY-0005xX-9Y; Sat, 29 Jun 2019 02:10:06 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hh0Lv-0000fO-Q0
- for linux-mediatek@lists.infradead.org; Fri, 28 Jun 2019 23:32:25 +0000
-Received: by mail-pf1-x443.google.com with SMTP id m30so3717605pff.8
- for <linux-mediatek@lists.infradead.org>; Fri, 28 Jun 2019 16:32:23 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=pCnZsFeXtEhsGu5hcikExC62+4Wo/EuuXi1fmzeilKA=;
- b=0VbzT+pPAZ5Cw+l50LsV6VxWXKVmzUDbFzYuh8RNn9jDhvwYrGLpdd2Zox3h+s5z3d
- NsHcNsx8UNYIl/Tvfb7cXa/FuLVj1zcEON3iB5PUkGIp07Nt8sBjGk1VhpQX63mE5GrQ
- v50tAcJD87eCeRoV0wkDeOzOz3jCuLO00fUJ3whOaPkolh4Bk6/8PU8zR+cwJsZAHMz/
- ScenEHfkRqLUKlPcxdU4QjR3X/mOrXFzVippr4fAnNlaDmVhjqINrruhID6v634TKkd/
- y9tKRsD6McBdP4RBm7SdgnNQYnubc97zKWxXjwt3g8AgXpwKyyd43Oguezk1zdCnyWPI
- r/Qg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=pCnZsFeXtEhsGu5hcikExC62+4Wo/EuuXi1fmzeilKA=;
- b=VNlw+bjPebcB5CbdFsvUy55b+Pne9suocd0rgbq4YxWBH0YfuMij04GOu5a3zI9Ztu
- nlFcU5+XDG0GrP5ElcY6he+Ens7ocK8CDtFrRTJH2gFiXRbFdZdPvEysb3ez3nN7oelC
- lucapX7ZIxp7wuzsJ1SSiJ3Lp8sGbGYBe2nX5F/8vbV/6WgSTbODiomfKefVTcAdwqxn
- rJ471E0E9VzUYJyWx+tH4qA8anlQ+Guz1v0CUj6dFGOZAU8Dqhk1/wB90dt18+ETIfyn
- gwTkoo/CO1s1QOfplvkeexUYEjqjVFKUvrk8h24W/fF6XNQfaA/VSy25ip9pHID0a88x
- PRQg==
-X-Gm-Message-State: APjAAAWIa+ZkJ91r1KEkxeHW6XbreCFbVQZffvNP2upiy7xwBBylKLAH
- LJTp1WoCc+jvc7MWyaM+pRsABg==
-X-Google-Smtp-Source: APXvYqzJ2MLMBi8iA3yNVUvYroDxbXL+variJXnbCGCuqZ3XKDF6o6+6MYhexAh/V2sqsNQR1LhPNg==
-X-Received: by 2002:a17:90a:3210:: with SMTP id
- k16mr15622156pjb.13.1561764742710; 
- Fri, 28 Jun 2019 16:32:22 -0700 (PDT)
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152])
- by smtp.googlemail.com with ESMTPSA id s22sm3569018pfh.107.2019.06.28.16.32.21
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 28 Jun 2019 16:32:21 -0700 (PDT)
-From: Kevin Hilman <khilman@baylibre.com>
-To: ryder.lee@kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Rob Herring <robh+dt@kernel.org>
-Subject: Re: [PATCH v1] arm: dts: mediatek: add basic support for MT7629 SoC
-In-Reply-To: <a8ca0018ac8a4c5f61a7a1efc9dc5dccd768628b.1552449524.git.ryder.lee@mediatek.com>
-References: <a8ca0018ac8a4c5f61a7a1efc9dc5dccd768628b.1552449524.git.ryder.lee@mediatek.com>
-Date: Fri, 28 Jun 2019 16:32:18 -0700
-Message-ID: <7hy31lp9q5.fsf@baylibre.com>
+ id 1hh2oT-0005UR-DF; Sat, 29 Jun 2019 02:10:03 +0000
+X-UUID: 76a24103f7c7483283cba0a870607456-20190628
+X-UUID: 76a24103f7c7483283cba0a870607456-20190628
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <yong.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 742353217; Fri, 28 Jun 2019 18:09:52 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 28 Jun 2019 19:09:50 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 29 Jun 2019 10:09:49 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sat, 29 Jun 2019 10:09:48 +0800
+From: Yong Wu <yong.wu@mediatek.com>
+To: Joerg Roedel <joro@8bytes.org>, Matthias Brugger <matthias.bgg@gmail.com>, 
+ Robin Murphy <robin.murphy@arm.com>, Rob Herring <robh+dt@kernel.org>
+Subject: [PATCH v8 00/21] MT8183 IOMMU SUPPORT
+Date: Sat, 29 Jun 2019 10:09:06 +0800
+Message-ID: <1561774167-24141-1-git-send-email-yong.wu@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_163223_840043_24101D6A 
-X-CRM114-Status: UNSURE (   6.47  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190628_191001_458202_C05AC3CA 
+X-CRM114-Status: GOOD (  15.01  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,31 +71,188 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- Steven Liu <steven.liu@mediatek.com>, Sean Wang <sean.wang@mediatek.com>,
- Weijie Gao <weijie.gao@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com, Will
+ Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
+ iommu@lists.linux-foundation.org, Matthias Kaehlcke <mka@chromium.org>,
+ linux-mediatek@lists.infradead.org, yong.wu@mediatek.com,
+ yingjoe.chen@mediatek.com, anan.sun@mediatek.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-<ryder.lee@kernel.org> writes:
+This patchset mainly adds support for mt8183 IOMMU and SMI.
 
-> From: Ryder Lee <ryder.lee@mediatek.com>
->
-> This adds basic support for MT7629 reference board.
->
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+mt8183 has only one M4U like mt8173 and is also MTK IOMMU gen2 which
+uses ARM Short-Descriptor translation table format.
 
-Just noticing this is not upstream yet.
+The mt8183 M4U-SMI HW diagram is as below:
 
-I did a basic boot test to ramdisk on the mt7629-rfb board donated for
-kernelCI (thanks MediaTek!) and it boots just fine.
+                          EMI
+                           |
+                          M4U
+                           |
+                       ----------
+                       |        |
+                   gals0-rx   gals1-rx
+                       |        |
+                       |        |
+                   gals0-tx   gals1-tx
+                       |        |
+                      ------------
+                       SMI Common
+                      ------------
+                           |
+  +-----+-----+--------+-----+-----+-------+-------+
+  |     |     |        |     |     |       |       |
+  |     |  gals-rx  gals-rx  |   gals-rx gals-rx gals-rx
+  |     |     |        |     |     |       |       |
+  |     |     |        |     |     |       |       |
+  |     |  gals-tx  gals-tx  |   gals-tx gals-tx gals-tx
+  |     |     |        |     |     |       |       |
+larb0 larb1  IPU0    IPU1  larb4  larb5  larb6    CCU
+disp  vdec   img     cam    venc   img    cam
 
-Tested-by: Kevin Hilman <khilman@baylibre.com>
+All the connections are HW fixed, SW can NOT adjust it.
 
-Kevin
+Compared with mt8173, we add a GALS(Global Async Local Sync) module
+between SMI-common and M4U, and additional GALS between larb2/3/5/6
+and SMI-common. GALS can help synchronize for the modules in different
+clock frequency, it can be seen as a "asynchronous fifo".
+
+GALS can only help transfer the command/data while it doesn't have
+the configuring register, thus it has the special "smi" clock and it
+doesn't have the "apb" clock. From the diagram above, we add "gals0"
+and "gals1" clocks for smi-common and add a "gals" clock for smi-larb.
+
+From the diagram above, IPU0/IPU1(Image Processor Unit) and CCU(Camera
+Control Unit) is connected with smi-common directly, we can take them
+as "larb2", "larb3" and "larb7", and their register spaces are
+different with the normal larb.
+
+The dtsi was send at: [1] https://lore.kernel.org/patchwork/patch/1054099/
+
+Change notes:
+v8:
+   1) For the 4GB mode:
+      a. Move the patch sequency: Move "iommu/mediatek: Fix iova_to_phys PA
+      start for 4GB mode" before "iommu/io-pgtable-arm-v7s: Extend MediaTek
+      4G Mode".
+      b. Remove the patch "Rename enable_4GB to dram_is_4gb" and apply Evan's
+      suggestion.
+   2) Add a "union" for smi gen1/gen2 base.
+   3) Clean up the structure "struct mtk_smi_iommu" since it have only one item,
+      suggested from Matthias.
+
+v7: https://lists.linuxfoundation.org/pipermail/iommu/2019-June/036552.html
+   1) rebase on v5.2-rc1.
+   2) Add fixed tags in patch 20.
+   3) Remove shutdown patch. I will send it independently if necessary.
+
+v6: https://lists.linuxfoundation.org/pipermail/iommu/2019-February/033685.html
+    1) rebase on v5.0-rc1.
+    2) About the register name (VLD_PA_RNG), Keep consistent in the patches.
+    3) In the 4GB mode, Always add MTK_4GB_quirk.
+    4) Reword some commit message helped from Evan. like common->smi_ao_base is
+       completely different from common->base; STANDARD_AXI_MODE reg is completely
+       different from CTRL_MISC; commit in the shutdown patch.
+    5) Add 2 new patches again:
+       iommu/mediatek: Rename enable_4GB to dram_is_4gb
+       iommu/mediatek: Fix iova_to_phys PA start for 4GB mode
+
+v5: https://lists.linuxfoundation.org/pipermail/iommu/2019-January/032387.html
+    1) Remove this patch "iommu/mediatek: Constify iommu_ops" from here as it
+       was applied for v5.0.
+    2) Again, add 3 preparing patches. Move two property into the plat_data.
+       iommu/mediatek: Move vld_pa_rng into plat_data
+       iommu/mediatek: Move reset_axi into plat_data
+       iommu/mediatek: Refine protect memory definition
+    3) Add shutdown callback for mtk_iommu_v1 in patch[19/20].
+
+v4: http://lists.infradead.org/pipermail/linux-mediatek/2018-December/016205.html
+    1) Add 3 preparing patches. Seperate some minor meaningful code into
+       a new patch according to Matthias's suggestion.
+       memory: mtk-smi: Add gals support         
+       iommu/mediatek: Add larb-id remapped support 
+       iommu/mediatek: Add bclk can be supported optionally       
+    2) rebase on "iommu/mediatek: Make it explicitly non-modular"
+       which was applied.
+       https://lore.kernel.org/patchwork/patch/1020125/
+    3) add some comment about "mediatek,larb-id" in the commit message of
+       the patch "mtk-smi: Get rid of need_larbid".
+    4) Fix bus_sel value.
+
+v3: https://lists.linuxfoundation.org/pipermail/iommu/2018-November/031121.html
+    1) rebase on v4.20-rc1.
+    2) In the dt-binding, add a minor string "mt7623" which also use gen1
+       since Matthias added it in v4.20.
+    3) About v7s:
+       a) for paddr_to_pte, change the param from "arm_v7s_io_pgtable" to
+          "arm_pgtable_cfg", according to Robin suggestion.
+       b) Don't use CONFIG_PHYS_ADDR_T_64BIT.
+       c) add a little comment(pgtable address still don't over 4GB) in the
+          commit message of the patch "Extend MediaTek 4GB Mode".
+    4) add "iommu/mediatek: Constify iommu_ops" into this patchset. this may
+       be helpful for review and merge.
+       https://lists.linuxfoundation.org/pipermail/iommu/2018-October/030637.html
+
+v2: https://lists.linuxfoundation.org/pipermail/iommu/2018-September/030164.html
+    1) Fix typo in the commit message of dt-binding.
+    2) Change larb2/larb3 to the special larbs.
+    3) Refactor the larb-id remapped array(larbid_remapped), then we
+    don't need add the new function(mtk_iommu_get_larbid).
+    4) Add a new patch for v7s two helpers(paddr_to_iopte and
+    iopte_to_paddr).
+    5) Change some comment for MTK 4GB mode.
+
+v1: base on v4.19-rc1.
+http://lists.infradead.org/pipermail/linux-mediatek/2018-September/014881.html
+
+Yong Wu (21):
+  dt-bindings: mediatek: Add binding for mt8183 IOMMU and SMI
+  iommu/mediatek: Use a struct as the platform data
+  memory: mtk-smi: Use a general config_port interface
+  memory: mtk-smi: Use a struct for the platform data for smi-common
+  iommu/mediatek: Fix iova_to_phys PA start for 4GB mode
+  iommu/io-pgtable-arm-v7s: Add paddr_to_iopte and iopte_to_paddr
+    helpers
+  iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB Mode
+  iommu/mediatek: Add bclk can be supported optionally
+  iommu/mediatek: Add larb-id remapped support
+  iommu/mediatek: Refine protect memory definition
+  iommu/mediatek: Move reset_axi into plat_data
+  iommu/mediatek: Move vld_pa_rng into plat_data
+  memory: mtk-smi: Add gals support
+  iommu/mediatek: Add mt8183 IOMMU support
+  iommu/mediatek: Add mmu1 support
+  memory: mtk-smi: Invoke pm runtime_callback to enable clocks
+  memory: mtk-smi: Add bus_sel for mt8183
+  iommu/mediatek: Fix VLD_PA_RNG register backup when suspend
+  memory: mtk-smi: Get rid of need_larbid
+  iommu/mediatek: Clean up struct mtk_smi_iommu
+  iommu/mediatek: Switch to SPDX license identifier
+
+ .../devicetree/bindings/iommu/mediatek,iommu.txt   |  30 ++-
+ .../memory-controllers/mediatek,smi-common.txt     |  12 +-
+ .../memory-controllers/mediatek,smi-larb.txt       |   4 +
+ drivers/iommu/io-pgtable-arm-v7s.c                 |  72 ++++--
+ drivers/iommu/mtk_iommu.c                          | 166 +++++++-----
+ drivers/iommu/mtk_iommu.h                          |  31 ++-
+ drivers/iommu/mtk_iommu_v1.c                       |  16 +-
+ drivers/memory/mtk-smi.c                           | 278 ++++++++++++++-------
+ include/dt-bindings/memory/mt2701-larb-port.h      |  10 +-
+ include/dt-bindings/memory/mt8173-larb-port.h      |  10 +-
+ include/dt-bindings/memory/mt8183-larb-port.h      | 130 ++++++++++
+ include/soc/mediatek/smi.h                         |  15 +-
+ 12 files changed, 540 insertions(+), 234 deletions(-)
+ create mode 100644 include/dt-bindings/memory/mt8183-larb-port.h
+
+-- 
+1.9.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
