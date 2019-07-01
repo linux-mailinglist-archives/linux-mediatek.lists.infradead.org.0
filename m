@@ -2,55 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C61325B2DA
-	for <lists+linux-mediatek@lfdr.de>; Mon,  1 Jul 2019 04:00:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85A115B32B
+	for <lists+linux-mediatek@lfdr.de>; Mon,  1 Jul 2019 05:55:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=splr3A+WGmza6ZHNpfUAVD5mkGgLrS4uRNRNctwJ6IQ=; b=csDQ3ZRT4HLfzp
-	Zxpg/mq78P/uAwNYNOf41nSj/SNCG5LKh+yfVOYKsvt3zMZrKTIhgu+cFuUp4sZ/e6iGhwJuIcvK2
-	L01LKcgrSI5688H6ca4VEGx1NGvfdH/mZ/O/jU+XwOBy5aVnYQtL7iRit9bq+LFBkcab4QV1xLCuc
-	6KySvrFROh7/Eo24lZG2ghIwZv5HIq6e5r13q9h3LkX+k61IgfnpVD7/NuQZJf/IU1Qz3T0anuOxf
-	nab+p/ReIY2A3qld3ffOgvC4/fZ9OhiNZ1v6y19Wud0ThCA7ICfUiqTodBPfO3CxZmrVDC6vs2A7x
-	dgaaLmAHp/jomXmR/lWg==;
+	List-Owner; bh=4/dPHFeW48RWBrubzuxR5fcOa/quPNzFt9GOQVavkyw=; b=m2GBcrgIROLZ07
+	m/5zQaI+Oil4Q/6sTniMG0vnJJ7S7tr91iDURiE/34i3+J7usn3ehF6zq4QwP9ywhs3AUsQXby7F0
+	zL8p51C3ns+Jx/YHuird8/ugUtWBnj9y6A25+b7bsahEOyhksctabIUPo7ZqObeXI/bAGUiA2KBGm
+	GGWn7+VyJzSbiNjM4RX2A0QRx/tUJ/UxtA/WrgEsC1KU+wj0DQ41R0zAx7E2nBAA+5G4cEpQ6Qw6o
+	w0yJg7iq338Bh7+1MAQL3rri5pzny8G33CHefVPncqmJdiZx9L79fzobwdL3yLyz6Ko2YdYYSpLOC
+	Jtd8D/Howi4LsM19716g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hhlbz-0006Z1-J5; Mon, 01 Jul 2019 02:00:07 +0000
+	id 1hhnPs-0002tR-F1; Mon, 01 Jul 2019 03:55:44 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hhlbM-0006Cx-BM; Mon, 01 Jul 2019 01:59:30 +0000
-X-UUID: b406a144fa1f4310880c6fb01dbaec01-20190630
-X-UUID: b406a144fa1f4310880c6fb01dbaec01-20190630
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1hhnPo-0002se-Ih; Mon, 01 Jul 2019 03:55:42 +0000
+X-UUID: 76ba95d6d2514c458ff21c20a745eb5d-20190630
+X-UUID: 76ba95d6d2514c458ff21c20a745eb5d-20190630
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1601671361; Sun, 30 Jun 2019 17:59:22 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ with ESMTP id 228163531; Sun, 30 Jun 2019 19:55:34 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 30 Jun 2019 18:59:21 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by mtkcas07.mediatek.inc
- (172.21.101.84) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 1 Jul 2019 09:59:19 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ 15.0.1395.4; Sun, 30 Jun 2019 20:55:31 -0700
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 1 Jul 2019 09:59:19 +0800
-Message-ID: <1561946359.23228.0.camel@mtksdaap41>
-Subject: Re: [PATCH v4 4/4] drm/mtk: add panel orientation property
+ Transport; Mon, 1 Jul 2019 11:55:17 +0800
+Message-ID: <1561953318.25914.9.camel@mtksdaap41>
+Subject: Re: [PATCH v5 08/12] dt-bindings: mediatek: Change the binding for
+ mmsys clocks
 From: CK Hu <ck.hu@mediatek.com>
-To: Derek Basehore <dbasehore@chromium.org>
-Date: Mon, 1 Jul 2019 09:59:19 +0800
-In-Reply-To: <20190622034105.188454-5-dbasehore@chromium.org>
-References: <20190622034105.188454-1-dbasehore@chromium.org>
- <20190622034105.188454-5-dbasehore@chromium.org>
+To: Matthias Brugger <mbrugger@suse.com>
+Date: Mon, 1 Jul 2019 11:55:18 +0800
+In-Reply-To: <a229bfc7-683f-5b0d-7b71-54f934de6214@suse.com>
+References: <20181116125449.23581-1-matthias.bgg@kernel.org>
+ <20181116125449.23581-9-matthias.bgg@kernel.org>
+ <20181116231522.GA18006@bogus>
+ <2a23e407-4cd4-2e2b-97a5-4e2bb96846e0@gmail.com>
+ <CAL_JsqKJQwfDJbpmwW+oCxiDkSp5+6mG-uoURmCQVEMP_jFOEg@mail.gmail.com>
+ <154281878765.88331.10581984256202566195@swboyd.mtv.corp.google.com>
+ <458178ac-c0fc-9671-7fc8-ed2d6f61424c@suse.com>
+ <154356023767.88331.18401188808548429052@swboyd.mtv.corp.google.com>
+ <a229bfc7-683f-5b0d-7b71-54f934de6214@suse.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190630_185928_714325_BFA2575F 
-X-CRM114-Status: GOOD (  12.69  )
+X-CRM114-CacheID: sfid-20190630_205540_625544_22D4A58D 
+X-CRM114-Status: GOOD (  26.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,60 +78,131 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Daniel Vetter <daniel@ffwll.ch>, Maxime Ripard <maxime.ripard@bootlin.com>,
- Sean Paul <sean@poorly.run>, intel-gfx@lists.freedesktop.org,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- linux-kernel@vger.kernel.org, Jani Nikula <jani.nikula@linux.intel.com>,
- David Airlie <airlied@linux.ie>, Thierry
- Reding <thierry.reding@gmail.com>, linux-mediatek@lists.infradead.org,
- dri-devel@lists.freedesktop.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sam Ravnborg <sam@ravnborg.org>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Sean Wang <Sean.Wang@mediatek.com>, "moderated list:ARM/FREESCALE IMX /
+ MXC ARM ARCHITECTURE" <linux-arm-kernel@lists.infradead.org>,
+ Rob Herring <robh@kernel.org>, Stephen Boyd <sboyd@kernel.org>,
+ Michael Turquette <mturquette@baylibre.com>, Sean Wang <sean.wang@kernel.org>,
+ Stephen Boyd <sboyd@codeaurora.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ dri-devel <dri-devel@lists.freedesktop.org>, David
+ Airlie <airlied@linux.ie>, Chen-Yu Tsai <wens@csie.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Randy
+ Dunlap <rdunlap@infradead.org>, Philipp Zabel <p.zabel@pengutronix.de>,
+ "matthias.bgg@kernel.org" <matthias.bgg@kernel.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-clk <linux-clk@vger.kernel.org>,
+ Ulrich Hecht <ulrich.hecht+renesas@gmail.com>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Derek:
+Hi, Matthias:
 
-On Fri, 2019-06-21 at 20:41 -0700, Derek Basehore wrote:
-> This inits the panel orientation property for the mediatek dsi driver
-> if the panel orientation (connector.display_info.panel_orientation) is
-> not DRM_MODE_PANEL_ORIENTATION_UNKNOWN.
+On Fri, 2018-11-30 at 16:59 +0800, Matthias Brugger wrote:
 > 
-
-Reviewed-by: CK Hu <ck.hu@mediatek.com>
-
-> Signed-off-by: Derek Basehore <dbasehore@chromium.org>
-> ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 8 ++++++++
->  1 file changed, 8 insertions(+)
+> On 30/11/2018 07:43, Stephen Boyd wrote:
+> > Quoting Matthias Brugger (2018-11-21 09:09:52)
+> >>
+> >>
+> >> On 21/11/2018 17:46, Stephen Boyd wrote:
+> >>> Quoting Rob Herring (2018-11-19 11:15:16)
+> >>>> On Sun, Nov 18, 2018 at 11:12 AM Matthias Brugger
+> >>>> <matthias.bgg@gmail.com> wrote:
+> >>>>> On 11/17/18 12:15 AM, Rob Herring wrote:
+> >>>>>> On Fri, Nov 16, 2018 at 01:54:45PM +0100, matthias.bgg@kernel.org wrote:
+> >>>>>>> -    #clock-cells = <1>;
+> >>>>>>> +
+> >>>>>>> +    mmsys_clk: clock-controller@14000000 {
+> >>>>>>> +            compatible = "mediatek,mt2712-mmsys-clk";
+> >>>>>>> +            #clock-cells = <1>;
+> >>>>>>
+> >>>>>> This goes against the general direction of not defining separate nodes
+> >>>>>> for providers with no resources.
+> >>>>>>
+> >>>>>> Why do you need this and what does it buy if you have to continue to
+> >>>>>> support the existing chips?
+> >>>>>>
+> >>>>>
+> >>>>> It would show explicitly that the mmsys block is used to probe two
+> >>>>> drivers, one for the gpu and one for the clocks. Otherwise that is
+> >>>>> hidden in the drm driver code. I think it is cleaner to describe that in
+> >>>>> the device tree.
+> >>>>
+> >>>> No, that's maybe cleaner for the driver implementation in the Linux
+> >>>> kernel. What about other OS's or when Linux drivers and subsystems
+> >>>> needs change? Cleaner for DT is design bindings that reflect the h/w.
+> >>>> Hardware is sometimes just messy.
+> >>>>
+> >>>
+> >>> I agree. I fail to see what this patch series is doing besides changing
+> >>> driver probe and device creation methods and making a backwards
+> >>> incompatible change to DT. Is there any other benefit here?
+> >>>
+> >>
+> >> You are referring whole series?
+> >> Citing the cover letter:
+> >> "MMSYS in Mediatek SoCs has some registers to control clock gates (which is
+> >> used in the clk driver) and some registers to set the routing and enable
+> >> the differnet (sic!) blocks of the display subsystem.
+> >>
+> >> Up to now both drivers, clock and drm are probed with the same device tree
+> >> compatible. But only the first driver get probed, which in effect breaks
+> >> graphics on mt8173 and mt2701.
+> > 
+> > Ouch!
+> > 
 > 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index 4a0b9150a7bb..08ffdc7526dd 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -782,10 +782,18 @@ static int mtk_dsi_create_connector(struct drm_device *drm, struct mtk_dsi *dsi)
->  			DRM_ERROR("Failed to attach panel to drm\n");
->  			goto err_connector_cleanup;
->  		}
-> +
-> +		ret = drm_connector_init_panel_orientation_property(&dsi->conn);
-> +		if (ret) {
-> +			DRM_ERROR("Failed to init panel orientation\n");
-> +			goto err_panel_detach;
-> +		}
->  	}
->  
->  	return 0;
->  
-> +err_panel_detach:
-> +	drm_panel_detach(dsi->panel);
->  err_connector_cleanup:
->  	drm_connector_cleanup(&dsi->conn);
->  	return ret;
+> Yes :)
+> 
+> >>
+> >> This patch uses a platform device registration in the DRM driver, which
+> >> will trigger the probe of the corresponding clock driver. It was tested on the
+> >> bananapi-r2 and the Acer R13 Chromebook."
+> > 
+> > Alright, please don't add nodes in DT just to make device drivers probe.
+> > Instead, register clks from the drm driver or create a child platform
+> > device for the clk bits purely in the drm driver and have that probe the
+> > associated clk driver from there.
+> > 
+> 
+> I'll make the other SoCs probe via a child platform device from the drm driver,
+> as already done in 2/12 and 3/12.
+
+This series have been pending for half an year, would you keep going on
+this series? If you're busy, I could complete this series, but I need to
+know what you have plan to do.
+
+I guess that 1/12 ~ 5/12 is for MT2701/MT8173 and that patches meet this
+discussion. 6/12 ~ 12/12 is for MT2712/MT6797 but that patches does not
+meet this discussion. So the unfinished work is to make MT2712/MT6797 to
+align MT2701/MT8173, is this right?
+
+Regards,
+CK
+
+> 
+> Regards,
+> Matthias
+> 
+> >>
+> >> DT is broken right now, because two drivers rely on the same node, which gets
+> >> consumed just once. The new DT introduced does not break anything because it is
+> >> only used for boards that: "[..] are not available to the general public
+> >> (mt2712e) or only have the mmsys clock driver part implemented (mt6797)."
+> > 
+> > Ok, so backwards compatibility is irrelevant then. Sounds fine to me.
+> > 
+> > 
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
 
 
