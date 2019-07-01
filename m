@@ -2,68 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED4E45B871
-	for <lists+linux-mediatek@lfdr.de>; Mon,  1 Jul 2019 11:56:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 12DBB5B877
+	for <lists+linux-mediatek@lfdr.de>; Mon,  1 Jul 2019 11:57:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2PhUR7WLVdT3S+yhtsGqiFUj3Z9TjNhBGzpgR3XTLXo=; b=QQkeEUkw58b7JD
-	9sbt9qd4jaEnp5o62Z0BdHBSr8U+2Z2vE3brWT8VhIdIqE6Gnfvlz62u4BzJ3ao+7IbBalNAfZROy
-	EP2EEKQLCSSAYIoibANt3yU1ejcWuMgO3SBR3L8drnQgRfMC6cpyfrYKXVraKy7KXFBwKxBfOONQT
-	0Mbg4F/fZ7qolYFyxVM2r8J/ppiNXzKQczBOf5mAtO9VP4RtEZJmxN6QeUexkS8jNwNjZ7UK/Hs4o
-	7HJzXKQf0B2/kSf2J7eCnzERTYfK4pdoiYN8CGFA/wWRozBqX+8h6UUmELvto7JY/QRg3d/U9uznG
-	7l/oXu+39yRT0zLt7/qQ==;
+	List-Owner; bh=mmd2wpOYh2nyONuHLpcSbyoqT4ORmEpbMbLXMtpb+Q4=; b=DsWXNQnCOzE4Qp
+	Loh3txgdZRUVW6B3TgqOBtPZF6iL/JW0tg4IYiIIanglMOcN3+ZUdMHS4kfIBN0oOfsGBmFohmkgb
+	YPRMpJio/BZh+nICAJ5Ug8bJ/2xNSZsAkndofoQ/W2dxMC1Ye8km30lSxnOSeGVKBE8yb0qz/LQDa
+	Gfr1PEHgsqih1MqVrqXKUF5vBzUjXxf2lp/XPOSjv6xSQphCgO5mOP+FsQfaIFFIhOwRdYi4Z1oke
+	bMdE+v5ay0yn6Py8s94jvMba1mPfClhgMrI3rUeWkz3RlvFF5I7evV0fJ7ujKh/4VOydoxpcG9p79
+	3tv+O8LLwjs9R2Y8/3lQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hht3I-0001oJ-TO; Mon, 01 Jul 2019 09:56:48 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hht42-0002Hz-Ao; Mon, 01 Jul 2019 09:57:34 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hht3E-0001nZ-SR; Mon, 01 Jul 2019 09:56:46 +0000
-X-UUID: b887bd6f4d904b869eaad4349bb65b7d-20190701
-X-UUID: b887bd6f4d904b869eaad4349bb65b7d-20190701
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ id 1hht3q-00027b-Ch
+ for linux-mediatek@lists.infradead.org; Mon, 01 Jul 2019 09:57:23 +0000
+X-UUID: e9f8c028670245fe8421bad9a1bd6de8-20190701
+X-UUID: e9f8c028670245fe8421bad9a1bd6de8-20190701
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1396231371; Mon, 01 Jul 2019 01:56:39 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 1063062291; Mon, 01 Jul 2019 01:57:04 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 1 Jul 2019 02:56:37 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 1 Jul 2019 17:56:36 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Mon, 1 Jul 2019 02:57:03 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 1 Jul 2019 17:57:01 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 1 Jul 2019 17:56:35 +0800
-Message-ID: <1561974995.18866.1.camel@mtksdccf07>
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Dmitry Vyukov <dvyukov@google.com>
-Date: Mon, 1 Jul 2019 17:56:35 +0800
-In-Reply-To: <1560774735.15814.54.camel@mtksdccf07>
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07>
- <1560479520.15814.34.camel@mtksdccf07>
- <1560744017.15814.49.camel@mtksdccf07>
- <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
- <1560774735.15814.54.camel@mtksdccf07>
+ Transport; Mon, 1 Jul 2019 17:57:01 +0800
+Message-ID: <1561975021.3950.9.camel@mtkswgap22>
+Subject: Re: [PATCH 4/6] mt76: mt7615: unlock dfs bands
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Date: Mon, 1 Jul 2019 17:57:01 +0800
+In-Reply-To: <87tvc69odh.fsf@kamboji.qca.qualcomm.com>
+References: <cover.1561804422.git.lorenzo@kernel.org>
+ <33184e0b78983fe7c79fa70c5fbb21042aafa4f5.1561804422.git.lorenzo@kernel.org>
+ <87muhzs9qv.fsf@purkki.adurom.net>
+ <CAJ0CqmU6TLhFa4ZJxWHBzvpx+5g5E4-WkSPECx47F9d3T=5YjQ@mail.gmail.com>
+ <87tvc69odh.fsf@kamboji.qca.qualcomm.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: B8E13F6ECB07971D9ECC9794EB8A4BCC29604420E225EDAC327276D592B976E52000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190701_025644_921708_3A901445 
-X-CRM114-Status: GOOD (  28.37  )
+X-CRM114-CacheID: sfid-20190701_025722_452173_BF3A9038 
+X-CRM114-Status: GOOD (  19.53  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -79,125 +76,83 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Jason
- A . Donenfeld" <Jason@zx2c4.com>, Vasily
- Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>,
- Linux-MM <linux-mm@kvack.org>, Andrey Konovalov <andreyknvl@google.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
- Martin
- Schwidefsky <schwidefsky@de.ibm.com>, Miles Chen <miles.chen@mediatek.com>,
- Alexander Potapenko <glider@google.com>, David Rientjes <rientjes@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
- Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: YF Luo <yf.luo@mediatek.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>,
+ linux-mediatek@lists.infradead.org, Roy Luo <royluo@google.com>,
+ Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-06-17 at 20:32 +0800, Walter Wu wrote:
-> On Mon, 2019-06-17 at 13:57 +0200, Dmitry Vyukov wrote:
-> > On Mon, Jun 17, 2019 at 6:00 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
-> > >
-> > > On Fri, 2019-06-14 at 10:32 +0800, Walter Wu wrote:
-> > > > On Fri, 2019-06-14 at 01:46 +0800, Walter Wu wrote:
-> > > > > On Thu, 2019-06-13 at 15:27 +0300, Andrey Ryabinin wrote:
-> > > > > >
-> > > > > > On 6/13/19 11:13 AM, Walter Wu wrote:
-> > > > > > > This patch adds memory corruption identification at bug report for
-> > > > > > > software tag-based mode, the report show whether it is "use-after-free"
-> > > > > > > or "out-of-bound" error instead of "invalid-access" error.This will make
-> > > > > > > it easier for programmers to see the memory corruption problem.
-> > > > > > >
-> > > > > > > Now we extend the quarantine to support both generic and tag-based kasan.
-> > > > > > > For tag-based kasan, the quarantine stores only freed object information
-> > > > > > > to check if an object is freed recently. When tag-based kasan reports an
-> > > > > > > error, we can check if the tagged addr is in the quarantine and make a
-> > > > > > > good guess if the object is more like "use-after-free" or "out-of-bound".
-> > > > > > >
-> > > > > >
-> > > > > >
-> > > > > > We already have all the information and don't need the quarantine to make such guess.
-> > > > > > Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
-> > > > > > otherwise it's use-after-free.
-> > > > > >
-> > > > > > In pseudo-code it's something like this:
-> > > > > >
-> > > > > > u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
-> > > > > >
-> > > > > > if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
-> > > > > >   // out-of-bounds
-> > > > > > else
-> > > > > >   // use-after-free
-> > > > >
-> > > > > Thanks your explanation.
-> > > > > I see, we can use it to decide corruption type.
-> > > > > But some use-after-free issues, it may not have accurate free-backtrace.
-> > > > > Unfortunately in that situation, free-backtrace is the most important.
-> > > > > please see below example
-> > > > >
-> > > > > In generic KASAN, it gets accurate free-backrace(ptr1).
-> > > > > In tag-based KASAN, it gets wrong free-backtrace(ptr2). It will make
-> > > > > programmer misjudge, so they may not believe tag-based KASAN.
-> > > > > So We provide this patch, we hope tag-based KASAN bug report is the same
-> > > > > accurate with generic KASAN.
-> > > > >
-> > > > > ---
-> > > > >     ptr1 = kmalloc(size, GFP_KERNEL);
-> > > > >     ptr1_free(ptr1);
-> > > > >
-> > > > >     ptr2 = kmalloc(size, GFP_KERNEL);
-> > > > >     ptr2_free(ptr2);
-> > > > >
-> > > > >     ptr1[size] = 'x';  //corruption here
-> > > > >
-> > > > >
-> > > > > static noinline void ptr1_free(char* ptr)
-> > > > > {
-> > > > >     kfree(ptr);
-> > > > > }
-> > > > > static noinline void ptr2_free(char* ptr)
-> > > > > {
-> > > > >     kfree(ptr);
-> > > > > }
-> > > > > ---
-> > > > >
-> > > > We think of another question about deciding by that shadow of the first
-> > > > byte.
-> > > > In tag-based KASAN, it is immediately released after calling kfree(), so
-> > > > the slub is easy to be used by another pointer, then it will change
-> > > > shadow memory to the tag of new pointer, it will not be the
-> > > > KASAN_TAG_INVALID, so there are many false negative cases, especially in
-> > > > small size allocation.
-> > > >
-> > > > Our patch is to solve those problems. so please consider it, thanks.
-> > > >
-> > > Hi, Andrey and Dmitry,
-> > >
-> > > I am sorry to bother you.
-> > > Would you tell me what you think about this patch?
-> > > We want to use tag-based KASAN, so we hope its bug report is clear and
-> > > correct as generic KASAN.
-> > >
-> > > Thanks your review.
-> > > Walter
-> > 
-> > Hi Walter,
-> > 
-> > I will probably be busy till the next week. Sorry for delays.
+On Mon, 2019-07-01 at 10:59 +0300, Kalle Valo wrote:
+> Lorenzo Bianconi <lorenzo.bianconi@redhat.com> writes:
 > 
-> It's ok. Thanks your kindly help.
-> I hope I can contribute to tag-based KASAN. It is a very important tool
-> for us.
+> >>
+> >> Lorenzo Bianconi <lorenzo@kernel.org> writes:
+> >>
+> >> > Unlock dfs channels since now mt7615 driver supports radar detection
+> >> >
+> >> > Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
+> >> > ---
+> >> >  drivers/net/wireless/mediatek/mt76/mt7615/init.c | 6 ++++++
+> >> >  1 file changed, 6 insertions(+)
+> >> >
+> >> > diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/init.c b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> >> > index 5dc4cced5789..6d336d82cafe 100644
+> >> > --- a/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> >> > +++ b/drivers/net/wireless/mediatek/mt76/mt7615/init.c
+> >> > @@ -152,6 +152,12 @@ static const struct ieee80211_iface_combination if_comb[] = {
+> >> >               .max_interfaces = 4,
+> >> >               .num_different_channels = 1,
+> >> >               .beacon_int_infra_match = true,
+> >> > +             .radar_detect_widths = BIT(NL80211_CHAN_WIDTH_20_NOHT) |
+> >> > +                                    BIT(NL80211_CHAN_WIDTH_20) |
+> >> > +                                    BIT(NL80211_CHAN_WIDTH_40) |
+> >> > +                                    BIT(NL80211_CHAN_WIDTH_80) |
+> >> > +                                    BIT(NL80211_CHAN_WIDTH_160) |
+> >> > +                                    BIT(NL80211_CHAN_WIDTH_80P80),
+> >>
+> >> Isn't it questionable to enable these without any testing on real
+> >> hardware? Getting DFS to work correctly is hard so I'm very suspicious
+> >> about this.
+> >>
+> >> --
+> >> Kalle Valo
+> >
+> > Hi Kalle,
+> >
+> > unfortunately at the moment I am not able to run any tests with a real
+> > signal generator so I just ported the code from vendor sdk.
+> > I am pretty confident it works since the radar pattern detection is
+> > done in fw/hw so I guess it has been already tested in the vendor sdk
+> 
+> DFS is really tricky to get it working right, so I'm not easily
+> convinced :)
+> 
+> > but we can postpone this patch and apply just the rest of the series
+> > until we have some test results.
+> 
+> Yeah, I think it would be best to drop this patch so that DFS is not
+> enabled by default and apply this patch only after positive test
+> results.
+> 
 
-Hi, Dmitry,
+That's why I suggested Lorenzo to add this one - "[6/6] mt76: mt7615:
+add radar pattern test knob to debugfs"
 
-Would you have free time to discuss this patch together?
-Thanks.
+We can feed radar pattern through debugfs to test if a pattern is
+detected as radar pattern or not and verify the fw radar detection
+algorithm.
 
-Walter
+In this format:
+RadarPulsePattern="3680128-2-245;3683878-2-245;3687628-2-245;3691378-2-245;3695128-2-245;3698878-2-245;3702628-2-245;3706378-2-245;3710128-2-245;3713878-2-245"
+
+As for testing it on 'real hardware' I need to take some other time to
+borrow equipment.
+
+Ryder
 
 
 _______________________________________________
