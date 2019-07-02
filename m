@@ -2,67 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0DE2D5CC7E
-	for <lists+linux-mediatek@lfdr.de>; Tue,  2 Jul 2019 11:17:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 11EE55CCCC
+	for <lists+linux-mediatek@lfdr.de>; Tue,  2 Jul 2019 11:41:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=nkA+cmqGeOxE5LHLqiuSVpdVHgGeFQbJ+mBTOHqmzPk=; b=sTXWiK3+9qI2xn
-	WYA6a45C6g3wXHmf5I/CpDmzeb5eEOZcz3GwidHr9C642b2jbVnmCyNxr40Tp03ft7tcoULnzcAeg
-	Ln/g3V1uxYJ4eFhXBocNmZb4x2QVZYnTsFN3VXQU8xfxx4dYCI/rs9fNxaw6L58qGcAi0Efxl/E5d
-	8bx5XxJ9DTQVknJsVThgIihuo9RoOAUcT99knVRBZM2Z6OnCaAZaFXaQXMn2Oi1OnZ5jax7FTtpwg
-	Q7BGcqoeaIZp/J93r5F5sMD9bc7+CjTSd2GgChjAh67ACD3rQCgNa1nPYzS9djDlZRxiXHrAnZ4yN
-	XLUpe7suchiNvYhKMb+A==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=d1OYNm3yEbJncpv7uQArmkK1pEZtNPVxMXJh4w9k13Y=; b=d8R
+	FLeDsQD/ArtlL46AAv4rm2Ouf1Lutr+EWIkHRKV9LfVJro6JH8ImFcJ6TQB4bnRf30WFCHn2lLgti
+	OAnAYUTQ2ZyH+66oU3yLA+WgZcDyqeGqxme2NyXfKCSteKkKb4hzufngVcDE3vx9N+w6B+s6CromT
+	cO+m0szfre0EwympGZjrh7AizlZhxgIfPgGc6HoXOiAGYCDriG4EQZm6QkNJ0MQDn5Qg/d/gqrbYV
+	2ewyMTLHMoPmRMZM+EZUWkxuyd3FJbb3rQno89I6P2D+hhOIhZBeHAsqOW5k83lN5HOWqzpgE/Aq5
+	EJ3nhap+aAxhewmucKJCmvsl36cYdRg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hiEuX-0000Vz-Uj; Tue, 02 Jul 2019 09:17:13 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hiFII-0000jC-KQ; Tue, 02 Jul 2019 09:41:46 +0000
+Received: from mout.gmx.net ([212.227.17.21])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hiEuT-0000Ub-LO; Tue, 02 Jul 2019 09:17:11 +0000
-X-UUID: 539d3a4eadb4452e82d9bbba3bfc1b15-20190702
-X-UUID: 539d3a4eadb4452e82d9bbba3bfc1b15-20190702
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <michael.kao@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 933282346; Tue, 02 Jul 2019 01:17:01 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 2 Jul 2019 02:17:00 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 2 Jul 2019 17:16:57 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 2 Jul 2019 17:16:54 +0800
-From: <michael.kao@mediatek.com>
-To: Zhang Rui <rui.zhang@intel.com>, Eduardo Valentin <edubezval@gmail.com>,
- Daniel Lezcano <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, 
- Mark Rutland <mark.rutland@arm.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, <hsinyi@chromium.org>
-Subject: [PATCH] thermal: mediatek: add suspend/resume callback
-Date: Tue, 2 Jul 2019 17:16:25 +0800
-Message-ID: <1562058985-27538-1-git-send-email-michael.kao@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2429C06C9BA8443CC21FB4AA74AF25B9765795EBA3F7023FE9599D20290EBFD22000:8
-X-MTK: N
+ id 1hiFHd-00009s-9B; Tue, 02 Jul 2019 09:41:06 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1562060457;
+ bh=xXxtxyTTAn8WYnm5rjgM/bMkAxJpK4CP+ke02d7vvFg=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date;
+ b=UT429osiJWt9Ktapaxnx8fs5B8LcwmS7KgJKihCwBJfXVOcrW4YkDk4ZYpRjphlJv
+ 8tRm9c8ftFzcVjvsh54fMeK72mB+7tfWiixpeB5Obj4KqO++ik16d+sX0+OOia83aj
+ jUA/3FmIOmW/y5zzVb21MVSOKpk/1xe3aZ6lpAhs=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from localhost.localdomain ([217.61.147.59]) by mail.gmx.com
+ (mrgmx104 [212.227.17.168]) with ESMTPSA (Nemesis) id
+ 1MbAci-1iFOAj2AQa-00bcOR; Tue, 02 Jul 2019 11:40:57 +0200
+From: Frank Wunderlich <frank-w@public-files.de>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, devicetree@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org
+Subject: [PATCH 0/3] implement poweroff for mt6323/6397
+Date: Tue,  2 Jul 2019 11:40:42 +0200
+Message-Id: <20190702094045.3652-1-frank-w@public-files.de>
+X-Mailer: git-send-email 2.17.1
+X-Provags-ID: V03:K1:vYKfD5Hh1FjG0AmzmJlBnrFiyiLdIG4UpK+hPmNFhBA295L5B2E
+ mQ5m4TWy+Z6lodaNgkm5A8VAm0OgBMObKifo2SKYDpIdlWYN3bj8XFS5SrIC7tb6dptTv6U
+ CY2W/tOlOq+Gxqa+LZDzXopMLbuCqOOJRWU0Jw8awZXwwa5R+DMZK1RIWFRRhjhBNliuyD0
+ 5r1JKZbDUTOoleblNtLWw==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:c+vdco4YyNU=:rlxBYVMFtWfezfoncYCRpQ
+ +CYJbcolYvgXyOHBFqGoz65on402iVLY39B7kjoR6U0tKfphAuatufZMaGJ+tDeloCDLbV237
+ rmcXYalB5u8cRsJOfEO7D473L7h8fWSiPJyiV4wskLnuheg6ildREWL+03V/bxUWlQ858hXzt
+ Up3UumFj3GihS5/nPvhmGWpt31K4VOgiAq2Q8HeaMQjRjn9IEkpnaURt0m+kr3O7t5RLJTTDH
+ dzy0GfqkW5G6eJoSKst9yJtgnqdpD4LuhdZKAGeS55JJoa1DAin5KH7QIbVcsI0RDMPaw3TGC
+ cY96oXOdi+BW1GPLOu9TNNfIacK0ovyW0xEt1RQVNdTZtqYIoaSGDXQc01x3QUDAKyj9HjixN
+ +k6R6/JyUQVvbUClRCd05i2PdpqkCAW3vUYiveUDwFLToAiSQDtmv/HiZoSWG6ZewoNmIaC3a
+ bDGi2BmwUPk8DvHroY3Pu8qLszmYXTA9hDhbW/vvBnLGzq73kzvn9KbTU58fpKgMtJ4fLuBkb
+ oDiD2Cqp7KbZMrz4QbPQoSL8GeIXF9YQQSolunrJ30cG9yV0YyGOQ7NwfW230ztZhgHVsvSiC
+ fRZzvpvuVOIDngkMfLNxMoUvpZC9lDfv+xk84wRXLBtnzVjgI+7V+OLH8l2BLmH1JJ9xpL6/C
+ nnzOge6xhYmvilm7WBsfbjBswT2FagA/z3LirptWEufMsovKO44gxHYKW8NrDVO3CwkQX/K8M
+ MvHtD734cBTEme4Ir3YgeT4niXTSW5dLBS9Brf5nycrt+OrGwwEvLV9HdYwRcBE+4bhzvJTX8
+ fdr7ARQegsDRMiYupwqOGX34Gh2noiaHA9m9xILeEQ7InxzxZEqswYoWL8Bd7BpdumxIgbNtS
+ vFLQ2efcIvCPQUpF/0B2qrZ9yyCahV3eFi+sXNf5TQr2BAd9bOHJ/r6Rthqo4uVPVzkhHm2hY
+ oKEgJjcusBCUX8k/NjnAyM8lDsNNTPya/EauTFD/wKc++9M1dYNEnwJ/jrJ6PCtlPy60shKq3
+ /z+V8I1KrPkvRhbGIpV1dxEykFzBJe8KCtX9R69RGWcPeRLlwW2oeg1KMVc0tgc4D8o6DmquW
+ Mh2LamFUs4osOQ=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190702_021709_705676_D73ED4A9 
-X-CRM114-Status: GOOD (  17.05  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190702_024105_614299_0250428D 
+X-CRM114-Status: UNSURE (   7.96  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [212.227.17.21 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,271 +91,45 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
- Louis Yu <louis.yu@mediatek.com>, linux-kernel@vger.kernel.org,
- Michael Kao <michael.kao@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Frank Wunderlich <frank-w@public-files.de>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Louis Yu <louis.yu@mediatek.com>
+i got this Patchset from josef friedl and want got get it in mainline
 
-Add suspend/resume callback to disable/enable Mediatek thermal sensor
-respectively. Since thermal power domain is off in suspend, thermal driver
-needs re-initialization during resume.
+tested on bananapi-r2 (mt7623)
 
-Signed-off-by: Louis Yu <louis.yu@mediatek.com>
-Signed-off-by: Michael Kao <michael.kao@mediatek.com>
----
-This patch series base on these patches [1][2][3].
+with this Patchset real power off (in mailine only "system halted") and
+reboot by power-key is working
 
-[1]thermal: mediatek: mt8183: fix bank number settings (https://patchwork.kernel.org/patch/10938817/)
-[2]thermal: mediatek: add another get_temp ops for thermal sensors (https://patchwork.kernel.org/patch/10938829/)
-[3]thermal: mediatek: use spinlock to protect PTPCORESEL (https://patchwork.kernel.org/patch/10938841/)
+Josef Friedl (3):
+  add doc and MAINTAINERS for poweroff
+  add dts for poweroff
+  add driver and MAINTAINERS for poweroff
 
- drivers/thermal/mtk_thermal.c | 134 +++++++++++++++++++++++++++++++++++++++---
- 1 file changed, 125 insertions(+), 9 deletions(-)
+ .../devicetree/bindings/mfd/mt6397.txt        |  10 +-
+ .../bindings/power/reset/mt6323-poweroff.txt  |  20 ++++
+ .../devicetree/bindings/rtc/rtc-mt6397.txt    |  29 +++++
+ MAINTAINERS                                   |   7 ++
+ arch/arm/boot/dts/mt6323.dtsi                 |  27 +++++
+ drivers/mfd/mt6397-core.c                     |  40 +++++--
+ drivers/power/reset/Kconfig                   |  10 ++
+ drivers/power/reset/Makefile                  |   1 +
+ drivers/power/reset/mt6323-poweroff.c         |  97 +++++++++++++++
+ drivers/rtc/rtc-mt6397.c                      | 110 ++++--------------
+ include/linux/mfd/mt6397/core.h               |   2 +
+ include/linux/mfd/mt6397/rtc.h                |  71 +++++++++++
+ 12 files changed, 325 insertions(+), 99 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
+ create mode 100644 Documentation/devicetree/bindings/rtc/rtc-mt6397.txt
+ create mode 100644 drivers/power/reset/mt6323-poweroff.c
+ create mode 100644 include/linux/mfd/mt6397/rtc.h
 
-diff --git a/drivers/thermal/mtk_thermal.c b/drivers/thermal/mtk_thermal.c
-index 3d01153..61d4114 100644
---- a/drivers/thermal/mtk_thermal.c
-+++ b/drivers/thermal/mtk_thermal.c
-@@ -30,6 +30,7 @@
- #include <linux/thermal.h>
- #include <linux/reset.h>
- #include <linux/types.h>
-+#include <linux/iopoll.h>
- 
- /* AUXADC Registers */
- #define AUXADC_CON1_SET_V	0x008
-@@ -39,6 +40,8 @@
- 
- #define APMIXED_SYS_TS_CON1	0x604
- 
-+#define APMIXED_SYS_TS_CON1_BUFFER_OFF	0x30
-+
- /* Thermal Controller Registers */
- #define TEMP_MONCTL0		0x000
- #define TEMP_MONCTL1		0x004
-@@ -46,6 +49,7 @@
- #define TEMP_MONIDET0		0x014
- #define TEMP_MONIDET1		0x018
- #define TEMP_MSRCTL0		0x038
-+#define TEMP_MSRCTL1		0x03c
- #define TEMP_AHBPOLL		0x040
- #define TEMP_AHBTO		0x044
- #define TEMP_ADCPNP0		0x048
-@@ -95,6 +99,9 @@
- #define TEMP_ADCVALIDMASK_VALID_HIGH		BIT(5)
- #define TEMP_ADCVALIDMASK_VALID_POS(bit)	(bit)
- 
-+#define TEMP_MSRCTL1_BUS_STA	(BIT(0) | BIT(7))
-+#define TEMP_MSRCTL1_SENSING_POINTS_PAUSE	0x10E
-+
- /* MT8173 thermal sensors */
- #define MT8173_TS1	0
- #define MT8173_TS2	1
-@@ -266,6 +273,10 @@ struct mtk_thermal_data {
- struct mtk_thermal {
- 	struct device *dev;
- 	void __iomem *thermal_base;
-+	void __iomem *apmixed_base;
-+	void __iomem *auxadc_base;
-+	u64 apmixed_phys_base;
-+	u64 auxadc_phys_base;
- 
- 	struct clk *clk_peri_therm;
- 	struct clk *clk_auxadc;
-@@ -795,6 +806,42 @@ static void mtk_thermal_init_bank(struct mtk_thermal *mt, int num,
- 	mtk_thermal_put_bank(bank);
- }
- 
-+static int mtk_thermal_disable_sensing(struct mtk_thermal *mt, int num)
-+{
-+	struct mtk_thermal_bank *bank = &mt->banks[num];
-+	u32 val;
-+	unsigned long timeout;
-+	void __iomem *addr;
-+	int ret = 0;
-+
-+	bank->id = num;
-+	bank->mt = mt;
-+
-+	mtk_thermal_get_bank(bank);
-+
-+	val = readl(mt->thermal_base + TEMP_MSRCTL1);
-+	/* pause periodic temperature measurement for sensing points */
-+	writel(val | TEMP_MSRCTL1_SENSING_POINTS_PAUSE,
-+	       mt->thermal_base + TEMP_MSRCTL1);
-+
-+	/* wait until temperature measurement bus idle */
-+	timeout = jiffies + HZ;
-+	addr = mt->thermal_base + TEMP_MSRCTL1;
-+
-+	ret = readl_poll_timeout(addr, val, (val & TEMP_MSRCTL1_BUS_STA) == 0x0,
-+				 0, timeout);
-+	if (ret < 0)
-+		goto out;
-+
-+	/* disable periodic temperature meausrement on sensing points */
-+	writel(0x0, mt->thermal_base + TEMP_MONCTL0);
-+
-+out:
-+	mtk_thermal_put_bank(bank);
-+
-+	return ret;
-+}
-+
- static u64 of_get_phys_base(struct device_node *np)
- {
- 	u64 size64;
-@@ -917,7 +964,6 @@ static int mtk_thermal_probe(struct platform_device *pdev)
- 	struct device_node *auxadc, *apmixedsys, *np = pdev->dev.of_node;
- 	struct mtk_thermal *mt;
- 	struct resource *res;
--	u64 auxadc_phys_base, apmixed_phys_base;
- 	struct thermal_zone_device *tzdev;
- 	struct mtk_thermal_zone *tz;
- 
-@@ -954,11 +1000,11 @@ static int mtk_thermal_probe(struct platform_device *pdev)
- 		return -ENODEV;
- 	}
- 
--	auxadc_phys_base = of_get_phys_base(auxadc);
-+	mt->auxadc_phys_base = of_get_phys_base(auxadc);
- 
- 	of_node_put(auxadc);
- 
--	if (auxadc_phys_base == OF_BAD_ADDR) {
-+	if (mt->auxadc_phys_base == OF_BAD_ADDR) {
- 		dev_err(&pdev->dev, "Can't get auxadc phys address\n");
- 		return -EINVAL;
- 	}
-@@ -969,11 +1015,12 @@ static int mtk_thermal_probe(struct platform_device *pdev)
- 		return -ENODEV;
- 	}
- 
--	apmixed_phys_base = of_get_phys_base(apmixedsys);
-+	mt->apmixed_phys_base = of_get_phys_base(apmixedsys);
-+	mt->apmixed_base = of_iomap(apmixedsys, 0);
- 
- 	of_node_put(apmixedsys);
- 
--	if (apmixed_phys_base == OF_BAD_ADDR) {
-+	if (mt->apmixed_phys_base == OF_BAD_ADDR) {
- 		dev_err(&pdev->dev, "Can't get auxadc phys address\n");
- 		return -EINVAL;
- 	}
-@@ -985,19 +1032,19 @@ static int mtk_thermal_probe(struct platform_device *pdev)
- 	ret = clk_prepare_enable(mt->clk_auxadc);
- 	if (ret) {
- 		dev_err(&pdev->dev, "Can't enable auxadc clk: %d\n", ret);
--		return ret;
-+		goto err_disable_clk_auxadc;
- 	}
- 
- 	ret = clk_prepare_enable(mt->clk_peri_therm);
- 	if (ret) {
- 		dev_err(&pdev->dev, "Can't enable peri clk: %d\n", ret);
--		goto err_disable_clk_auxadc;
-+		goto err_disable_clk_peri_therm;
- 	}
- 
- 	for (ctrl_id = 0; ctrl_id < mt->conf->num_controller ; ctrl_id++)
- 		for (i = 0; i < mt->conf->num_banks; i++)
--			mtk_thermal_init_bank(mt, i, apmixed_phys_base,
--					      auxadc_phys_base, ctrl_id);
-+			mtk_thermal_init_bank(mt, i, mt->apmixed_phys_base,
-+					      mt->auxadc_phys_base, ctrl_id);
- 
- 	platform_set_drvdata(pdev, mt);
- 
-@@ -1041,11 +1088,80 @@ static int mtk_thermal_remove(struct platform_device *pdev)
- 	return 0;
- }
- 
-+static int __maybe_unused mtk_thermal_suspend(struct device *dev)
-+{
-+	struct platform_device *pdev = to_platform_device(dev);
-+	struct mtk_thermal *mt = platform_get_drvdata(pdev);
-+	int i, ret;
-+
-+	for (i = 0; i < mt->conf->num_banks; i++) {
-+		ret = mtk_thermal_disable_sensing(mt, i);
-+		if (ret)
-+			goto out;
-+	}
-+
-+	/* disable buffer */
-+	writel(readl(mt->apmixed_base + APMIXED_SYS_TS_CON1) |
-+	       APMIXED_SYS_TS_CON1_BUFFER_OFF,
-+	       mt->apmixed_base + APMIXED_SYS_TS_CON1);
-+
-+	clk_disable_unprepare(mt->clk_peri_therm);
-+	clk_disable_unprepare(mt->clk_auxadc);
-+
-+	return 0;
-+
-+out:
-+	dev_err(&pdev->dev, "Failed to wait until bus idle\n");
-+
-+	return ret;
-+}
-+
-+static int __maybe_unused mtk_thermal_resume(struct device *dev)
-+{
-+	struct platform_device *pdev = to_platform_device(dev);
-+	struct mtk_thermal *mt = platform_get_drvdata(pdev);
-+	int i, ret, ctrl_id;
-+
-+	ret = device_reset(&pdev->dev);
-+	if (ret)
-+		return ret;
-+
-+	ret = clk_prepare_enable(mt->clk_auxadc);
-+	if (ret) {
-+		dev_err(&pdev->dev, "Can't enable auxadc clk: %d\n", ret);
-+		goto err_disable_clk_auxadc;
-+	}
-+
-+	ret = clk_prepare_enable(mt->clk_peri_therm);
-+	if (ret) {
-+		dev_err(&pdev->dev, "Can't enable peri clk: %d\n", ret);
-+		goto err_disable_clk_peri_therm;
-+	}
-+
-+	for (ctrl_id = 0; ctrl_id < mt->conf->num_controller ; ctrl_id++)
-+		for (i = 0; i < mt->conf->num_banks; i++)
-+			mtk_thermal_init_bank(mt, i, mt->apmixed_phys_base,
-+					      mt->auxadc_phys_base, ctrl_id);
-+
-+	return 0;
-+
-+err_disable_clk_peri_therm:
-+	clk_disable_unprepare(mt->clk_peri_therm);
-+err_disable_clk_auxadc:
-+	clk_disable_unprepare(mt->clk_auxadc);
-+
-+	return ret;
-+}
-+
-+static SIMPLE_DEV_PM_OPS(mtk_thermal_pm_ops,
-+			 mtk_thermal_suspend, mtk_thermal_resume);
-+
- static struct platform_driver mtk_thermal_driver = {
- 	.probe = mtk_thermal_probe,
- 	.remove = mtk_thermal_remove,
- 	.driver = {
- 		.name = "mtk-thermal",
-+		.pm = &mtk_thermal_pm_ops,
- 		.of_match_table = mtk_thermal_of_match,
- 	},
- };
--- 
-1.9.1
-
+--
+2.17.1
 
 _______________________________________________
 Linux-mediatek mailing list
