@@ -2,80 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C2B355C7C6
-	for <lists+linux-mediatek@lfdr.de>; Tue,  2 Jul 2019 05:24:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 527665C90D
+	for <lists+linux-mediatek@lfdr.de>; Tue,  2 Jul 2019 08:06:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sJr63nR3joqEW4nMOroDJBRx0/iXCuvDPKMXFaZniJI=; b=S0x6nhQv5f/Zhm
-	oFJDwzUOX+AXbSquNpRTuXByckY0l8B1WcGtWiKQCKU2RqpJcgaVAgYfbykjuMm7F7OHiyWXWcC4Z
-	1KeeDsGQCsK7sp2Idvj8RaXD2eByVQTs3lQEbSlOBWGWzRWeYoHDmMKSMwb2X/gkEWZPH4wy4hFAE
-	iGOBlXQx8X0/fb0Int6AXe1jaAf7shZT45v/PjDx5SIZvcj0iJnw2A4ctNwlT7sBfC5Kdv70J0Bku
-	lCEHM6bp8wy93CjlNY9NJCRSCU2yH1Mt6Ko9njLIeVC13Y01o8uEehFOHxFWH5jv7L+MZD8T8SD+8
-	e/xW6lwvJ9Onh2C2mcIw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=5e/4FvkaeR/j4JdIL1KXB4tEtVUPphhs3w2E6ysliho=; b=epcB3gYtRO0Xkg
+	FWZgxL7wRnrmF/0izT4IlUWgSMwsQFVFkrEEO9p8cV5ZUWLXPKrStipaOE5HDHz+NZeXfsjF+75NP
+	+NN+ihO7T9ZZkNMtxM/fz/uQlnpRBiT58UDBdxJ4g/gXqyr5WPWrwb/f1sVC3IaeJy9xpYij2zFhX
+	Oq9jiAF+jR+T4rN+AR8hoRuOiygdQVVqo3a3YS1cjij1FJgdeBSrFijYom+kZ6nhmZrC57jxodGVP
+	hzPBcm99SF+99iYYbzb54Oxaa69lIq+Nj+n+HUnUlktYpyJE4Ol9CA0xAocg2ysG/pSRxO2IPpXI+
+	nJIaMpmU8QcOhNBBDUFA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hi9P9-0005hp-6z; Tue, 02 Jul 2019 03:24:27 +0000
-Received: from mail-vs1-xe42.google.com ([2607:f8b0:4864:20::e42])
+	id 1hiBvt-0006lb-GG; Tue, 02 Jul 2019 06:06:25 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hi9P1-0005gH-LN
- for linux-mediatek@lists.infradead.org; Tue, 02 Jul 2019 03:24:24 +0000
-Received: by mail-vs1-xe42.google.com with SMTP id 2so10290515vso.8
- for <linux-mediatek@lists.infradead.org>; Mon, 01 Jul 2019 20:24:15 -0700 (PDT)
+ id 1hiBvU-0006U6-Cb
+ for linux-mediatek@lists.infradead.org; Tue, 02 Jul 2019 06:06:02 +0000
+Received: by mail-pf1-x442.google.com with SMTP id 81so7696212pfy.13
+ for <linux-mediatek@lists.infradead.org>; Mon, 01 Jul 2019 23:05:59 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=NF9sKdd1kTn5hPJQxmdOYAoq8V4x3KJMw7Y6I60fnA0=;
- b=VOTidcWX/vtw+RMbBDMJUzDasnoGqq6CHYdrWRZz3nA3y8ARzIg+9ZV0Mde+Xn055l
- 72eOksANj/TrjSKI9swRwHr/3/J1SxmgmB+I9cP1D0bWxRA0UqDlSAmO/qVMBrznaHJ0
- fj8lvRTJAO22Wz0k7X76NClEAN673VrwZ8Fe8=
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=bEIwKMmTJMQNc6cChPg2bTrfjiNFCNKp7eNnSy3mZrU=;
+ b=E6o0HywKABOOXkjDGPU/C7z19YwetOJjfUTuePoL5nFksbWw9cY2JNeVWxDvGfGMwb
+ 2i7CGkrQ7DKdpdo0HDFiA75i+9wha/Z7GZy3UlCbqRFYkpX0a3TgVRzX/DTyL/BFUHI7
+ YdMhtY3b2Vs61f0VzIJZ1E9imUTLf/SFTUj9E=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=NF9sKdd1kTn5hPJQxmdOYAoq8V4x3KJMw7Y6I60fnA0=;
- b=phUZsS8ghqLafLMKmvF08IBo+8gA6RBWLkj0VmPWql7qKMIWkFpVgqcBPXx3gMFkOQ
- gHEfCfpS2HaDssNvRecLa5qCRZz2VmDN8AO9rVh81psiRQuJGrhO8CO15JHWpaxKG8np
- z81EbWxzGsLzZ5/gHYzx/yU++28IrwIxwPGVXA5AdlUrZWpUDqWHn8xQpfiMdvw9GKzO
- 165jzjikBsJ2kgKX9+HDbjzNTrYqMNOr7bAojQ+eFL1KsmtOxEiZBhbBdyItZpCwxEKc
- t5VyY7/k1lY+dq7jfLd2YTIXrtog5KWrVb309f9p5okX4k7ZJMXiBrJB/3KN/uxaOmOs
- YRSg==
-X-Gm-Message-State: APjAAAWor1rfPqIBRYCUaryVZQ5m4ULtMSRNODW7F5E6pMq29MSQhmiI
- PnWrevtsFZWQIYDOtT6Yb7ORJ48uVIo0hQOSEh1hcw==
-X-Google-Smtp-Source: APXvYqz+Qs9OSpISvLsVtvlCKaQDDzKFeS7ZErnVs6OE/TEItC6SlKxAzJ4IUK1ZOIt0hue4JXmvkCpPszGYyssZDFA=
-X-Received: by 2002:a67:7d13:: with SMTP id y19mr16261630vsc.232.1562037854259; 
- Mon, 01 Jul 2019 20:24:14 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=bEIwKMmTJMQNc6cChPg2bTrfjiNFCNKp7eNnSy3mZrU=;
+ b=B8l3EjD593dgFJLZEAS6+g3egH7XJbnWRJNwEHbOT1Zl5vwmqJoqOxQsT49PhB8sHW
+ csHD09xwljVTxcnUm+gy4LzH0e8rRPz2gQnnx0FFNhbzZ+vUFXs3S1vVRfWg0V2u/Orc
+ NPzcfp0gnui6tgtXhf4RTChXx2y68MM4OHuiz1GPOU8doZ4WL5a/b+Gi+MNZpIp9MtLo
+ j5Blx6whPdvJVgIyaVMer0barj4M4qqvY8dfZaGe06To2fjKe7PcmEXuLf9swKDwKoT9
+ WempELfLWc5/sy1em+RJtjvtqDo0YqAfSptEiMb+K27e1Gri1NdW5GeyXZTxyeDFfufv
+ m2jQ==
+X-Gm-Message-State: APjAAAUu2tR7T6RGUr9oJukQo9N+oKl0xrdgPYsIeZ72SH2LhJA59ubt
+ yIhjpzj57Pc9GWOrTohmBNuDtw==
+X-Google-Smtp-Source: APXvYqwLqQfcXef68NqInXgd1aLZas8KCW/D9JJ863T0uE5Jsuhrkdo/pYtJDjeqxjDQdKjKePaOvA==
+X-Received: by 2002:a17:90a:360c:: with SMTP id
+ s12mr3705655pjb.30.1562047558906; 
+ Mon, 01 Jul 2019 23:05:58 -0700 (PDT)
+Received: from pihsun-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:7889:7a43:f899:134c])
+ by smtp.googlemail.com with ESMTPSA id d1sm10284013pgd.50.2019.07.01.23.05.56
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 01 Jul 2019 23:05:58 -0700 (PDT)
+From: Pi-Hsun Shih <pihsun@chromium.org>
+To: 
+Subject: [PATCH v12 0/5] Add support for mt8183 SCP.
+Date: Tue,  2 Jul 2019 14:05:23 +0800
+Message-Id: <20190702060546.222934-1-pihsun@chromium.org>
+X-Mailer: git-send-email 2.22.0.410.gd8fdbe21b5-goog
 MIME-Version: 1.0
-References: <20190622034105.188454-1-dbasehore@chromium.org>
- <20190622034105.188454-4-dbasehore@chromium.org>
- <20190624132413.GN5942@intel.com>
-In-Reply-To: <20190624132413.GN5942@intel.com>
-From: "dbasehore ." <dbasehore@chromium.org>
-Date: Mon, 1 Jul 2019 20:24:03 -0700
-Message-ID: <CAGAzgsreBg1kpVUtvi70P6ufJ+b6m=LdJk+E9hB4yp3N_ZePkg@mail.gmail.com>
-Subject: Re: [Intel-gfx] [PATCH v3 3/4] drm/connector: Split out orientation
- quirk detection
-To: =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190701_202422_992789_0B52FAC2 
-X-CRM114-Status: GOOD (  21.49  )
-X-Spam-Score: -7.6 (-------)
+X-CRM114-CacheID: sfid-20190701_230600_426424_C37B3A14 
+X-CRM114-Status: GOOD (  14.88  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-7.6 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:e42 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -93,154 +93,132 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Maxime Ripard <maxime.ripard@bootlin.com>,
- Intel Graphics <intel-gfx@lists.freedesktop.org>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- dri-devel <dri-devel@lists.freedesktop.org>, David Airlie <airlied@linux.ie>,
- CK Hu <ck.hu@mediatek.com>,
+Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
+ Erin Lo <erin.lo@mediatek.com>,
+ "open list:REMOTE PROCESSOR REMOTEPROC SUBSYSTEM"
+ <linux-remoteproc@vger.kernel.org>, open list <linux-kernel@vger.kernel.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sam Ravnborg <sam@ravnborg.org>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ Pi-Hsun Shih <pihsun@chromium.org>,
+ "moderated list:ARM/Mediatek SoC support"
  <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gTW9uLCBKdW4gMjQsIDIwMTkgYXQgNjoyNCBBTSBWaWxsZSBTeXJqw6Rsw6QKPHZpbGxlLnN5
-cmphbGFAbGludXguaW50ZWwuY29tPiB3cm90ZToKPgo+IE9uIEZyaSwgSnVuIDIxLCAyMDE5IGF0
-IDA4OjQxOjA0UE0gLTA3MDAsIERlcmVrIEJhc2Vob3JlIHdyb3RlOgo+ID4gTm90IGV2ZXJ5IHBs
-YXRmb3JtIG5lZWRzIHF1aXJrIGRldGVjdGlvbiBmb3IgcGFuZWwgb3JpZW50YXRpb24sIHNvCj4g
-PiBzcGxpdCB0aGUgZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9uX3Byb3BlcnR5
-IGludG8gdHdvCj4gPiBmdW5jdGlvbnMuIE9uZSBmb3IgcGxhdGZvcm1zIHdpdGhvdXQgdGhlIG5l
-ZWQgZm9yIHF1aXJrcywgYW5kIHRoZQo+ID4gb3RoZXIgZm9yIHBsYXRmb3JtcyB0aGF0IG5lZWQg
-cXVpcmtzLgo+ID4KPiA+IFNpZ25lZC1vZmYtYnk6IERlcmVrIEJhc2Vob3JlIDxkYmFzZWhvcmVA
-Y2hyb21pdW0ub3JnPgo+ID4gLS0tCj4gPiAgZHJpdmVycy9ncHUvZHJtL2RybV9jb25uZWN0b3Iu
-YyB8IDQ1ICsrKysrKysrKysrKysrKysrKysrKysrKy0tLS0tLS0tLQo+ID4gIGRyaXZlcnMvZ3B1
-L2RybS9pOTE1L2ludGVsX2RwLmMgfCAgNCArLS0KPiA+ICBkcml2ZXJzL2dwdS9kcm0vaTkxNS92
-bHZfZHNpLmMgIHwgIDUgKystLQo+ID4gIGluY2x1ZGUvZHJtL2RybV9jb25uZWN0b3IuaCAgICAg
-fCAgMiArKwo+ID4gIDQgZmlsZXMgY2hhbmdlZCwgMzkgaW5zZXJ0aW9ucygrKSwgMTcgZGVsZXRp
-b25zKC0pCj4gPgo+ID4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvZ3B1L2RybS9kcm1fY29ubmVjdG9y
-LmMgYi9kcml2ZXJzL2dwdS9kcm0vZHJtX2Nvbm5lY3Rvci5jCj4gPiBpbmRleCBlMTc1ODZhYWE4
-MGYuLmM0YjAxYWRmOTI3YSAxMDA2NDQKPiA+IC0tLSBhL2RyaXZlcnMvZ3B1L2RybS9kcm1fY29u
-bmVjdG9yLmMKPiA+ICsrKyBiL2RyaXZlcnMvZ3B1L2RybS9kcm1fY29ubmVjdG9yLmMKPiA+IEBA
-IC0xODk0LDMxICsxODk0LDIzIEBAIEVYUE9SVF9TWU1CT0woZHJtX2Nvbm5lY3Rvcl9zZXRfdnJy
-X2NhcGFibGVfcHJvcGVydHkpOwo+ID4gICAqIGRybV9jb25uZWN0b3JfaW5pdF9wYW5lbF9vcmll
-bnRhdGlvbl9wcm9wZXJ0eSAtCj4gPiAgICogICBpbml0aWFsaXplIHRoZSBjb25uZWN0ZXJzIHBh
-bmVsX29yaWVudGF0aW9uIHByb3BlcnR5Cj4gPiAgICogQGNvbm5lY3RvcjogY29ubmVjdG9yIGZv
-ciB3aGljaCB0byBpbml0IHRoZSBwYW5lbC1vcmllbnRhdGlvbiBwcm9wZXJ0eS4KPiA+IC0gKiBA
-d2lkdGg6IHdpZHRoIGluIHBpeGVscyBvZiB0aGUgcGFuZWwsIHVzZWQgZm9yIHBhbmVsIHF1aXJr
-IGRldGVjdGlvbgo+ID4gLSAqIEBoZWlnaHQ6IGhlaWdodCBpbiBwaXhlbHMgb2YgdGhlIHBhbmVs
-LCB1c2VkIGZvciBwYW5lbCBxdWlyayBkZXRlY3Rpb24KPiA+ICAgKgo+ID4gICAqIFRoaXMgZnVu
-Y3Rpb24gc2hvdWxkIG9ubHkgYmUgY2FsbGVkIGZvciBidWlsdC1pbiBwYW5lbHMsIGFmdGVyIHNl
-dHRpbmcKPiA+ICAgKiBjb25uZWN0b3ItPmRpc3BsYXlfaW5mby5wYW5lbF9vcmllbnRhdGlvbiBm
-aXJzdCAoaWYga25vd24pLgo+ID4gICAqCj4gPiAtICogVGhpcyBmdW5jdGlvbiB3aWxsIGNoZWNr
-IGZvciBwbGF0Zm9ybSBzcGVjaWZpYyAoZS5nLiBETUkgYmFzZWQpIHF1aXJrcwo+ID4gLSAqIG92
-ZXJyaWRpbmcgZGlzcGxheV9pbmZvLnBhbmVsX29yaWVudGF0aW9uIGZpcnN0LCB0aGVuIGlmIHBh
-bmVsX29yaWVudGF0aW9uCj4gPiAtICogaXMgbm90IERSTV9NT0RFX1BBTkVMX09SSUVOVEFUSU9O
-X1VOS05PV04gaXQgd2lsbCBhdHRhY2ggdGhlCj4gPiAtICogInBhbmVsIG9yaWVudGF0aW9uIiBw
-cm9wZXJ0eSB0byB0aGUgY29ubmVjdG9yLgo+ID4gKyAqIFRoaXMgZnVuY3Rpb24gd2lsbCBjaGVj
-ayBpZiB0aGUgcGFuZWxfb3JpZW50YXRpb24gaXMgbm90Cj4gPiArICogRFJNX01PREVfUEFORUxf
-T1JJRU5UQVRJT05fVU5LTk9XTi4gSWYgbm90LCBpdCB3aWxsIGF0dGFjaCB0aGUgInBhbmVsCj4g
-PiArICogb3JpZW50YXRpb24iIHByb3BlcnR5IHRvIHRoZSBjb25uZWN0b3IuCj4gPiAgICoKPiA+
-ICAgKiBSZXR1cm5zOgo+ID4gICAqIFplcm8gb24gc3VjY2VzcywgbmVnYXRpdmUgZXJybm8gb24g
-ZmFpbHVyZS4KPiA+ICAgKi8KPiA+ICBpbnQgZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVu
-dGF0aW9uX3Byb3BlcnR5KAo+ID4gLSAgICAgc3RydWN0IGRybV9jb25uZWN0b3IgKmNvbm5lY3Rv
-ciwgaW50IHdpZHRoLCBpbnQgaGVpZ2h0KQo+ID4gKyAgICAgc3RydWN0IGRybV9jb25uZWN0b3Ig
-KmNvbm5lY3RvcikKPiA+ICB7Cj4gPiAgICAgICBzdHJ1Y3QgZHJtX2RldmljZSAqZGV2ID0gY29u
-bmVjdG9yLT5kZXY7Cj4gPiAgICAgICBzdHJ1Y3QgZHJtX2Rpc3BsYXlfaW5mbyAqaW5mbyA9ICZj
-b25uZWN0b3ItPmRpc3BsYXlfaW5mbzsKPiA+ICAgICAgIHN0cnVjdCBkcm1fcHJvcGVydHkgKnBy
-b3A7Cj4gPiAtICAgICBpbnQgb3JpZW50YXRpb25fcXVpcms7Cj4gPiAtCj4gPiAtICAgICBvcmll
-bnRhdGlvbl9xdWlyayA9IGRybV9nZXRfcGFuZWxfb3JpZW50YXRpb25fcXVpcmsod2lkdGgsIGhl
-aWdodCk7Cj4gPiAtICAgICBpZiAob3JpZW50YXRpb25fcXVpcmsgIT0gRFJNX01PREVfUEFORUxf
-T1JJRU5UQVRJT05fVU5LTk9XTikKPiA+IC0gICAgICAgICAgICAgaW5mby0+cGFuZWxfb3JpZW50
-YXRpb24gPSBvcmllbnRhdGlvbl9xdWlyazsKPiA+Cj4gPiAgICAgICBpZiAoaW5mby0+cGFuZWxf
-b3JpZW50YXRpb24gPT0gRFJNX01PREVfUEFORUxfT1JJRU5UQVRJT05fVU5LTk9XTikKPiA+ICAg
-ICAgICAgICAgICAgcmV0dXJuIDA7Cj4gPiBAQCAtMTk0MSw2ICsxOTMzLDM1IEBAIGludCBkcm1f
-Y29ubmVjdG9yX2luaXRfcGFuZWxfb3JpZW50YXRpb25fcHJvcGVydHkoCj4gPiAgfQo+ID4gIEVY
-UE9SVF9TWU1CT0woZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9uX3Byb3BlcnR5
-KTsKPiA+Cj4gPiArLyoqCj4gPiArICogZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0
-aW9uX3Byb3BlcnR5X3F1aXJrIC0KPiA+ICsgKiAgIGluaXRpYWxpemUgdGhlIGNvbm5lY3RlcnMg
-cGFuZWxfb3JpZW50YXRpb24gcHJvcGVydHkgd2l0aCBhIHF1aXJrCj4gPiArICogICBvdmVycmlk
-ZQo+ID4gKyAqIEBjb25uZWN0b3I6IGNvbm5lY3RvciBmb3Igd2hpY2ggdG8gaW5pdCB0aGUgcGFu
-ZWwtb3JpZW50YXRpb24gcHJvcGVydHkuCj4gPiArICogQHdpZHRoOiB3aWR0aCBpbiBwaXhlbHMg
-b2YgdGhlIHBhbmVsLCB1c2VkIGZvciBwYW5lbCBxdWlyayBkZXRlY3Rpb24KPiA+ICsgKiBAaGVp
-Z2h0OiBoZWlnaHQgaW4gcGl4ZWxzIG9mIHRoZSBwYW5lbCwgdXNlZCBmb3IgcGFuZWwgcXVpcmsg
-ZGV0ZWN0aW9uCj4gPiArICoKPiA+ICsgKiBUaGlzIGZ1bmN0aW9uIHdpbGwgY2hlY2sgZm9yIHBs
-YXRmb3JtIHNwZWNpZmljIChlLmcuIERNSSBiYXNlZCkgcXVpcmtzCj4gPiArICogb3ZlcnJpZGlu
-ZyBkaXNwbGF5X2luZm8ucGFuZWxfb3JpZW50YXRpb24gZmlyc3QsIHRoZW4gaWYgcGFuZWxfb3Jp
-ZW50YXRpb24KPiA+ICsgKiBpcyBub3QgRFJNX01PREVfUEFORUxfT1JJRU5UQVRJT05fVU5LTk9X
-TiBpdCB3aWxsIGF0dGFjaCB0aGUKPiA+ICsgKiAicGFuZWwgb3JpZW50YXRpb24iIHByb3BlcnR5
-IHRvIHRoZSBjb25uZWN0b3IuCj4gPiArICoKPiA+ICsgKiBSZXR1cm5zOgo+ID4gKyAqIFplcm8g
-b24gc3VjY2VzcywgbmVnYXRpdmUgZXJybm8gb24gZmFpbHVyZS4KPiA+ICsgKi8KPiA+ICtpbnQg
-ZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9uX3Byb3BlcnR5X3F1aXJrKAo+ID4g
-KyAgICAgc3RydWN0IGRybV9jb25uZWN0b3IgKmNvbm5lY3RvciwgaW50IHdpZHRoLCBpbnQgaGVp
-Z2h0KQo+ID4gK3sKPiA+ICsgICAgIGludCBvcmllbnRhdGlvbl9xdWlyazsKPiA+ICsKPiA+ICsg
-ICAgIG9yaWVudGF0aW9uX3F1aXJrID0gZHJtX2dldF9wYW5lbF9vcmllbnRhdGlvbl9xdWlyayh3
-aWR0aCwgaGVpZ2h0KTsKPiA+ICsgICAgIGlmIChvcmllbnRhdGlvbl9xdWlyayAhPSBEUk1fTU9E
-RV9QQU5FTF9PUklFTlRBVElPTl9VTktOT1dOKQo+ID4gKyAgICAgICAgICAgICBjb25uZWN0b3It
-PmRpc3BsYXlfaW5mby5wYW5lbF9vcmllbnRhdGlvbiA9IG9yaWVudGF0aW9uX3F1aXJrOwo+ID4g
-Kwo+ID4gKyAgICAgcmV0dXJuIGRybV9jb25uZWN0b3JfaW5pdF9wYW5lbF9vcmllbnRhdGlvbl9w
-cm9wZXJ0eShjb25uZWN0b3IpOwo+ID4gK30KPiA+ICtFWFBPUlRfU1lNQk9MKGRybV9jb25uZWN0
-b3JfaW5pdF9wYW5lbF9vcmllbnRhdGlvbl9wcm9wZXJ0eV9xdWlyayk7Cj4gPiArCj4gPiAgaW50
-IGRybV9jb25uZWN0b3Jfc2V0X29ial9wcm9wKHN0cnVjdCBkcm1fbW9kZV9vYmplY3QgKm9iaiwK
-PiA+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJ1Y3QgZHJtX3Byb3BlcnR5
-ICpwcm9wZXJ0eSwKPiA+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB1aW50NjRf
-dCB2YWx1ZSkKPiA+IGRpZmYgLS1naXQgYS9kcml2ZXJzL2dwdS9kcm0vaTkxNS9pbnRlbF9kcC5j
-IGIvZHJpdmVycy9ncHUvZHJtL2k5MTUvaW50ZWxfZHAuYwo+ID4gaW5kZXggYjA5OWE5ZGMyOGZk
-Li43ZDRlNjFjZjU0NjMgMTAwNjQ0Cj4gPiAtLS0gYS9kcml2ZXJzL2dwdS9kcm0vaTkxNS9pbnRl
-bF9kcC5jCj4gPiArKysgYi9kcml2ZXJzL2dwdS9kcm0vaTkxNS9pbnRlbF9kcC5jCj4gPiBAQCAt
-NzI4Miw4ICs3MjgyLDggQEAgc3RhdGljIGJvb2wgaW50ZWxfZWRwX2luaXRfY29ubmVjdG9yKHN0
-cnVjdCBpbnRlbF9kcCAqaW50ZWxfZHAsCj4gPiAgICAgICBpbnRlbF9wYW5lbF9zZXR1cF9iYWNr
-bGlnaHQoY29ubmVjdG9yLCBwaXBlKTsKPiA+Cj4gPiAgICAgICBpZiAoZml4ZWRfbW9kZSkKPiA+
-IC0gICAgICAgICAgICAgZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9uX3Byb3Bl
-cnR5KAo+ID4gLSAgICAgICAgICAgICAgICAgICAgIGNvbm5lY3RvciwgZml4ZWRfbW9kZS0+aGRp
-c3BsYXksIGZpeGVkX21vZGUtPnZkaXNwbGF5KTsKPiA+ICsgICAgICAgICAgICAgZHJtX2Nvbm5l
-Y3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9uX3Byb3BlcnR5X3F1aXJrKGNvbm5lY3RvciwKPiA+
-ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpeGVkX21vZGUtPmhkaXNwbGF5LCBmaXhl
-ZF9tb2RlLT52ZGlzcGxheSk7Cj4gPgo+ID4gICAgICAgcmV0dXJuIHRydWU7Cj4gPgo+ID4gZGlm
-ZiAtLWdpdCBhL2RyaXZlcnMvZ3B1L2RybS9pOTE1L3Zsdl9kc2kuYyBiL2RyaXZlcnMvZ3B1L2Ry
-bS9pOTE1L3Zsdl9kc2kuYwo+ID4gaW5kZXggYmZlMjg5MWVhYzM3Li5mYTk4MzNkYmUzNTkgMTAw
-NjQ0Cj4gPiAtLS0gYS9kcml2ZXJzL2dwdS9kcm0vaTkxNS92bHZfZHNpLmMKPiA+ICsrKyBiL2Ry
-aXZlcnMvZ3B1L2RybS9pOTE1L3Zsdl9kc2kuYwo+ID4gQEAgLTE2NTAsNiArMTY1MCw3IEBAIHN0
-YXRpYyB2b2lkIGludGVsX2RzaV9hZGRfcHJvcGVydGllcyhzdHJ1Y3QgaW50ZWxfY29ubmVjdG9y
-ICpjb25uZWN0b3IpCj4gPgo+ID4gICAgICAgaWYgKGNvbm5lY3Rvci0+cGFuZWwuZml4ZWRfbW9k
-ZSkgewo+ID4gICAgICAgICAgICAgICB1MzIgYWxsb3dlZF9zY2FsZXJzOwo+ID4gKyAgICAgICAg
-ICAgICBpbnQgb3JpZW50YXRpb247Cj4gPgo+ID4gICAgICAgICAgICAgICBhbGxvd2VkX3NjYWxl
-cnMgPSBCSVQoRFJNX01PREVfU0NBTEVfQVNQRUNUKSB8IEJJVChEUk1fTU9ERV9TQ0FMRV9GVUxM
-U0NSRUVOKTsKPiA+ICAgICAgICAgICAgICAgaWYgKCFIQVNfR01DSChkZXZfcHJpdikpCj4gPiBA
-QCAtMTY2MCw5ICsxNjYxLDcgQEAgc3RhdGljIHZvaWQgaW50ZWxfZHNpX2FkZF9wcm9wZXJ0aWVz
-KHN0cnVjdCBpbnRlbF9jb25uZWN0b3IgKmNvbm5lY3RvcikKPiA+Cj4gPiAgICAgICAgICAgICAg
-IGNvbm5lY3Rvci0+YmFzZS5zdGF0ZS0+c2NhbGluZ19tb2RlID0gRFJNX01PREVfU0NBTEVfQVNQ
-RUNUOwo+ID4KPiA+IC0gICAgICAgICAgICAgY29ubmVjdG9yLT5iYXNlLmRpc3BsYXlfaW5mby5w
-YW5lbF9vcmllbnRhdGlvbiA9Cj4gPiAtICAgICAgICAgICAgICAgICAgICAgdmx2X2RzaV9nZXRf
-cGFuZWxfb3JpZW50YXRpb24oY29ubmVjdG9yKTsKPgo+IFdoZXJlIGRpZCB0aGF0IGdvPwoKT29w
-cy4gTmljZSBjYXRjaC4KCj4KPiA+IC0gICAgICAgICAgICAgZHJtX2Nvbm5lY3Rvcl9pbml0X3Bh
-bmVsX29yaWVudGF0aW9uX3Byb3BlcnR5KAo+ID4gKyAgICAgICAgICAgICBkcm1fY29ubmVjdG9y
-X2luaXRfcGFuZWxfb3JpZW50YXRpb25fcHJvcGVydHlfcXVpcmsoCj4gPiAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAmY29ubmVjdG9yLT5iYXNlLAo+ID4gICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgY29ubmVjdG9yLT5wYW5lbC5maXhlZF9tb2RlLT5oZGlzcGxheSwKPiA+ICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbm5lY3Rvci0+cGFuZWwuZml4ZWRfbW9kZS0+
-dmRpc3BsYXkpOwo+ID4gZGlmZiAtLWdpdCBhL2luY2x1ZGUvZHJtL2RybV9jb25uZWN0b3IuaCBi
-L2luY2x1ZGUvZHJtL2RybV9jb25uZWN0b3IuaAo+ID4gaW5kZXggNDdlNzQ5Yjc0ZTVmLi4wNDY4
-ZmQ5YTQ0MTggMTAwNjQ0Cj4gPiAtLS0gYS9pbmNsdWRlL2RybS9kcm1fY29ubmVjdG9yLmgKPiA+
-ICsrKyBiL2luY2x1ZGUvZHJtL2RybV9jb25uZWN0b3IuaAo+ID4gQEAgLTEzNzAsNiArMTM3MCw4
-IEBAIHZvaWQgZHJtX2Nvbm5lY3Rvcl9zZXRfbGlua19zdGF0dXNfcHJvcGVydHkoc3RydWN0IGRy
-bV9jb25uZWN0b3IgKmNvbm5lY3RvciwKPiA+ICB2b2lkIGRybV9jb25uZWN0b3Jfc2V0X3Zycl9j
-YXBhYmxlX3Byb3BlcnR5KAo+ID4gICAgICAgICAgICAgICBzdHJ1Y3QgZHJtX2Nvbm5lY3RvciAq
-Y29ubmVjdG9yLCBib29sIGNhcGFibGUpOwo+ID4gIGludCBkcm1fY29ubmVjdG9yX2luaXRfcGFu
-ZWxfb3JpZW50YXRpb25fcHJvcGVydHkoCj4gPiArICAgICBzdHJ1Y3QgZHJtX2Nvbm5lY3RvciAq
-Y29ubmVjdG9yKTsKPiA+ICtpbnQgZHJtX2Nvbm5lY3Rvcl9pbml0X3BhbmVsX29yaWVudGF0aW9u
-X3Byb3BlcnR5X3F1aXJrKAo+ID4gICAgICAgc3RydWN0IGRybV9jb25uZWN0b3IgKmNvbm5lY3Rv
-ciwgaW50IHdpZHRoLCBpbnQgaGVpZ2h0KTsKPiA+ICBpbnQgZHJtX2Nvbm5lY3Rvcl9hdHRhY2hf
-bWF4X2JwY19wcm9wZXJ0eShzdHJ1Y3QgZHJtX2Nvbm5lY3RvciAqY29ubmVjdG9yLAo+ID4gICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGludCBtaW4sIGludCBtYXgpOwo+
-ID4gLS0KPiA+IDIuMjIuMC40MTAuZ2Q4ZmRiZTIxYjUtZ29vZwo+ID4KPiA+IF9fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCj4gPiBJbnRlbC1nZnggbWFpbGlu
-ZyBsaXN0Cj4gPiBJbnRlbC1nZnhAbGlzdHMuZnJlZWRlc2t0b3Aub3JnCj4gPiBodHRwczovL2xp
-c3RzLmZyZWVkZXNrdG9wLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2ludGVsLWdmeAo+Cj4gLS0KPiBW
-aWxsZSBTeXJqw6Rsw6QKPiBJbnRlbAoKVGhhbmtzIGZvciB0aGUgcmV2aWV3CgpfX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWls
-aW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMu
-aW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+Add support for controlling and communicating with mt8183's system
+control processor (SCP), using the remoteproc & rpmsg framework.
+And also add a cros_ec driver for CrOS EC host command over rpmsg.
+
+The overall structure of the series is:
+* remoteproc/mtk_scp.c: Control the start / stop of SCP (Patch 2, 3).
+* remoteproc/mtk_scp_ipi.c: Communicates to SCP using inter-processor
+  interrupt (IPI) and shared memory (Patch 2, 3).
+* rpmsg/mtk_rpmsg.c: Wrapper to wrap the IPI communication into a rpmsg
+  device. Supports name service for SCP firmware to
+  announce channels (Patch 4).
+* add scp dts node to mt8183 platform (Patch 5).
+
+Changes from v11:
+ - Fixed a bug that mtk_rpmsg_endpoint is not properly cleaned up if
+   rproc_boot fails.
+ - Add missing documentation in comment.
+
+Changes from v10:
+ - Drop applied cros_ec_rpmsg patches.
+ - Add clock reset before loading SCP firmware.
+ - Fix some type mismatch warnings when printing debug messages.
+
+Changes from v9:
+ - Remove reserve-memory-vpu_share node.
+ - Remove change to cros_ec_commands.h (That is already in
+   https://lore.kernel.org/lkml/20190518063949.GY4319@dell/T/)
+
+Changes from v8:
+ - Rebased onto https://patchwork.kernel.org/cover/10962385/.
+ - Drop merged cros_ec_rpmsg patch, and add scp dts node patch.
+ - Add more reserved memory region.
+
+Changes from v7:
+ - Rebase onto https://lore.kernel.org/patchwork/patch/1059196/.
+ - Fix clock enable/disable timing for SCP driver.
+ - Add more SCP IPI ID.
+
+Changes from v6:
+ - Decouple mtk_rpmsg from mtk_scp.
+ - Change data of EC response to be aligned to 4 bytes.
+
+Changes from v5:
+ - Add device tree binding document for cros_ec_rpmsg.
+ - Better document in comments for cros_ec_rpmsg.
+ - Remove dependency on CONFIG_ in binding tree document.
+
+Changes from v4:
+ - Merge patch 6 (Load ELF firmware) into patch 2, so the driver loads
+   ELF firmware by default, and no longer accept plain binary.
+ - rpmsg_device listed in device tree (as a child of the SCP node) would
+   have it's device tree node mapped to the rpmsg_device, so the rpmsg
+   driver can use the properties on device tree.
+
+Changes from v3:
+ - Make writing to SCP SRAM aligned.
+ - Add a new patch (Patch 6) to load ELF instead of bin firmware.
+ - Add host event support for EC driver.
+ - Fix some bugs found in testing (missing spin_lock_init,
+   rproc_subdev_unprepare to rproc_subdev_stop).
+ - Fix some coding style issue found by checkpatch.pl.
+
+Changes from v2:
+ - Fold patch 3 into patch 2 in v2.
+ - Move IPI id around to support cross-testing for old and new firmware.
+ - Finish more TODO items.
+
+Changes from v1:
+ - Extract functions and rename variables in mtk_scp.c.
+ - Do cleanup properly in mtk_rpmsg.c, which also removes the problem of
+   short-lived work items.
+ - Code format fix based on feedback for cros_ec_rpmsg.c.
+ - Extract feature detection for SCP into separate patch (Patch 6).
+
+Eddie Huang (1):
+  arm64: dts: mt8183: add scp node
+
+Erin Lo (3):
+  dt-bindings: Add a binding for Mediatek SCP
+  remoteproc/mediatek: add SCP support for mt8183
+  remoteproc: mt8183: add reserved memory manager API
+
+Pi-Hsun Shih (1):
+  rpmsg: add rpmsg support for mt8183 SCP.
+
+ .../bindings/remoteproc/mtk,scp.txt           |  36 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |  11 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  12 +
+ drivers/remoteproc/Kconfig                    |  10 +
+ drivers/remoteproc/Makefile                   |   1 +
+ drivers/remoteproc/mtk_common.h               |  79 ++
+ drivers/remoteproc/mtk_scp.c                  | 683 ++++++++++++++++++
+ drivers/remoteproc/mtk_scp_ipi.c              | 163 +++++
+ drivers/rpmsg/Kconfig                         |   9 +
+ drivers/rpmsg/Makefile                        |   1 +
+ drivers/rpmsg/mtk_rpmsg.c                     | 414 +++++++++++
+ include/linux/platform_data/mtk_scp.h         | 167 +++++
+ include/linux/rpmsg/mtk_rpmsg.h               |  38 +
+ 13 files changed, 1624 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/remoteproc/mtk,scp.txt
+ create mode 100644 drivers/remoteproc/mtk_common.h
+ create mode 100644 drivers/remoteproc/mtk_scp.c
+ create mode 100644 drivers/remoteproc/mtk_scp_ipi.c
+ create mode 100644 drivers/rpmsg/mtk_rpmsg.c
+ create mode 100644 include/linux/platform_data/mtk_scp.h
+ create mode 100644 include/linux/rpmsg/mtk_rpmsg.h
+
+-- 
+2.22.0.410.gd8fdbe21b5-goog
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
