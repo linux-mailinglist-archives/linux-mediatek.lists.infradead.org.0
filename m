@@ -2,65 +2,98 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 52B0C5E925
-	for <lists+linux-mediatek@lfdr.de>; Wed,  3 Jul 2019 18:33:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 093555E9BD
+	for <lists+linux-mediatek@lfdr.de>; Wed,  3 Jul 2019 18:51:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m5uZrtFd4CNBcYjiqDheKL7yWxjHSvE5oDqLsx251LM=; b=bSC0bA8C42OPq1
-	afn8Bpq50zsEzs9SsdXjxGLEjzbp0okhn3GmQPlci/OvGEBC5ef0xi0wO1DSzQX0fF73LuOjhUCre
-	mhs2yZILmcB6zx2mv3HKMT0AZnvP+s64EGm15JYbZRHxdI8F1JFw5ha7I77YUwGBAV4BgATD6RfHu
-	clVePC72dmhO44wCcD7lojegxEb8IojiXHB0Od8lj9CbPwDdSSkvfIrrYC1GbD+Ve2D+9fuUTy9cs
-	ZEUkiN3H3D3nPoQkuwMB4Uiq5Iu4FjOTX/KtX8/fWAezlY0/lN+4pNEl1v/Ijnm+MkRae437A242g
-	WbtTAdT2hsj3VvNsWRdg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=lOwP6ydnxC1KJ8+Um95sKEPlGugw+c58kZHTDguNmag=; b=lsZ
+	6P7yKevke1vC+90+wNPKSbAB2tVDIkC9I2+QgnNI1pH+pYVCXSj47twaDDt/E2870bmPgDu5hnk+P
+	16/XcrCQAlCuNtLQ+5sNVwMY51ptsRNvwOk8tXVqX5wd7g+aVbXOwUUnPEUG1jURy3S0UzCcWPcq0
+	FN/jJbIBzqJ+xlTHJ/BD5LcOiQNpk0vnfEtw0RVz2PTKw179YnAX2XCOpfKrrmvQdqhaWX9d1WGtP
+	Wc157dUSwtwspVPucoayADeYYlV26w5RWJ9U27ZM4b+zVmSGwek01inS9dUBrTC1FCjMDDSKgkfN9
+	wCQbWjOeBX0Ofv0YAZcQxooZQCQIpHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hiiBi-0001Cq-5p; Wed, 03 Jul 2019 16:32:54 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hiiU5-0004CB-Vy; Wed, 03 Jul 2019 16:51:53 +0000
+Received: from mout.gmx.net ([212.227.15.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hiiBP-00011O-V0; Wed, 03 Jul 2019 16:32:37 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 5FB002187F;
- Wed,  3 Jul 2019 16:32:34 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1562171554;
- bh=8hkx9D6cVHuLlyuoRR6plS3cZoqyazckirKKEEaVDhc=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=HlXDW6vx8wTFxhwAjRJH4wSDIXbJZ3SjmBvcvttiyLCS63EFVOW8+dJPOytcTUxD4
- dIv7CTcdJKQrr2CVJHK32yAfvGXwaHezOLLG7CvxC4ztyPsXl7CsCKC3nJ3+MiTBtk
- vwyZ4dKaKJ/Y08WQBFNAg/BcSzS9zX0nRZy79KOk=
-Date: Wed, 3 Jul 2019 18:32:32 +0200
-From: Greg KH <gregkh@linuxfoundation.org>
-To: fatihaltinpinar@gmail.com
-Subject: Re: [PATCH] Staging: mt7621-dma: mtk-hsdma: fix a coding style issue
-Message-ID: <20190703163232.GA29325@kroah.com>
-References: <20190702080632.27470-1-fatihaltinpinar@gmail.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190702080632.27470-1-fatihaltinpinar@gmail.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+ id 1hiiRr-0001DH-1N; Wed, 03 Jul 2019 16:49:38 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1562172510;
+ bh=Me1SvsLDyMMGaUAM+H2U6QR3rP8Y3XVwEjAtU6m8VUA=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date;
+ b=MV6Va6oTlm89ruMxAxb87nEE2pPoh3n4vLdyHMS/pwe0XAqsgXSoh6piSJ85L+fZ+
+ sgvmA53g2n+XMMAAp0AJk0bPzDzrj4b4WNENRhxpuD3EyGTX/635+Twttk5ALFoVPE
+ XNxzEw/MJF8MVJWtuWJW4wXKFLb44ksoCMESeWpA=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from localhost.localdomain ([217.61.158.204]) by mail.gmx.com
+ (mrgmx004 [212.227.17.190]) with ESMTPSA (Nemesis) id
+ 1Mv2xO-1iZJ3G21eS-00r1tZ; Wed, 03 Jul 2019 18:48:30 +0200
+From: Frank Wunderlich <frank-w@public-files.de>
+To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>,
+ Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
+ Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-pm@vger.kernel.org, linux-rtc@vger.kernel.org,
+ Eddie Huang <eddie.huang@mediatek.com>,
+ Thomas Gleixner <tglx@linutronix.de>,
+ Richard Fontana <rfontana@redhat.com>,
+ Allison Randal <allison@lohutok.net>,
+ "David S . Miller" <davem@davemloft.net>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Rob Herring <robh@kernel.org>, Linus Walleij <linus.walleij@linaro.org>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>,
+ "Paul E . McKenney" <paulmck@linux.ibm.com>
+Subject: [PATCH v2 0/7] implement poweroff for mt6323/6397
+Date: Wed,  3 Jul 2019 18:48:15 +0200
+Message-Id: <20190703164822.17924-1-frank-w@public-files.de>
+X-Mailer: git-send-email 2.17.1
+X-Provags-ID: V03:K1:Q7bwDdrEsaphQYrmHhp90HE//kekmdWGTaievfmTLBQ650JdlG0
+ ZFc89t3IpqF6r+6VIT+crsEBq/Xze1pedGbOYkWYQfBHJcBZWJae3I7ecQ1H/v2yoJF8OpX
+ Pf8SwioVIe5yR86V2HhD2iyrRPnU9EZxKaK/fDp6sj/cNdKzfwD7IhaXPNReS4u11f3x2QB
+ D7KWSsmavk+XqjXkrbOpA==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:80cN8sB+jW0=:MrqNVi7o1rXFaCcRKYMpMr
+ w42OIhPPamz4BFUxxD4WMAHwfFtF5Af/vkftOIq7mwDnmmLVjvzpDCY9WCe+26/fmhm9ILqrW
+ FlaWUzNwCyTbmexafmmy0f91BemYMTQny1Fh37Gy7/GX3Xw+J5/nUfZOCJ2exG/XYIluMDmy1
+ 0q4mBFg7UmyUtQO+ytaMzkxVjE2oF/JKKZ5drh/6iOFGqbGHl6EbrcaI0NGLIiQXE3xynUQaY
+ WW1Yre6qDx+HjMJ9Lk5dJMbEI57lMR5YuwgjOebQDEBq6Xe1uYXOrzQR1wkevI09OhmGYYLlT
+ AimTIiXaIOSqccv46iS0RLais/yHBL82Mz0q6lDrlsJNUJsxltDWWK8DBL2OcuT4ruWkeM1ea
+ BRuglTOqIvDTmPPygFhbdvUPT6iPFC7afxNXsGefI4bbjeNhYX6nS0F6cwLQ2LIWga4XZkEZd
+ z6sIuSnVYTe+hqvFwc+wKCzx53SS1hI7i5L0KpagtNitCMJqykKo0ImhRAKAg080rNWownjRu
+ IPF/cHMBG0dPqoq4tjWbz8fm1ABB8geWNY2G5YJw+XustSCnZIeRDuYUn3vntf3hSxyCvx/h6
+ MUbKc6EOnU3cwHaV2hAPdxdQaQVe0v5g5AqlyYzLoEe7LdHwl/8Ck/aMLs/1/dJgRKxLbPsgC
+ UyZqBeY7unxw19J2xnG0Rh0BmWuPeaNKNP+zSqXTSQtW0xKi6IF4r3mcK8qS4aF+fx1jPOjPU
+ FJ/4FPuvumLOfqR2xMCUtQ6ttO9gm7EQrFRiOoerJYoin92K1LI3mvoWpSnTnqjVhQycnPTH1
+ MeV3DKDczqlWEV/1LfDYSeSftVblK3KgGgG4cTpn710t5TFBO5gsiAHq88wJmaWek/LpO45iM
+ lfH96Cnhp+nsfsx6Zf44h1aGTG813Gh62z+M9mCsiiKkDVkBwA8dthC2A5gYrTY8a+bpgDYYq
+ a/PprCwYWXTxAJDQUXN9vx6seI1oJ1RF8Dn4qKzj8/2YFP3OpbfqnIVlrgV52vYoI/gQq8HBW
+ EDEaEam7lcXmITZU6/tZX/iLapG/9XXkG0MhyT4QusnNpUDoDd0WocRAYIjyBDgPfyREQFliV
+ HSgBUVFAVXoG6U=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190703_093236_018288_E2CB893E 
-X-CRM114-Status: GOOD (  14.17  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190703_094935_402367_EBFFBAFC 
+X-CRM114-Status: GOOD (  11.60  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [212.227.15.15 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,47 +105,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: matthias.bgg@gmail.com, devel@driverdev.osuosl.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Frank Wunderlich <frank-w@public-files.de>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jul 02, 2019 at 11:06:32AM +0300, fatihaltinpinar@gmail.com wrote:
-> From: Fatih ALTINPINAR <fatihaltinpinar@gmail.com>
-> 
-> Fixed a coding style issue. Removed curly brackets of an one
-> line if statement.
-> 
-> Signed-off-by: Fatih ALTINPINAR <fatihaltinpinar@gmail.com>
-> ---
->  drivers/staging/mt7621-dma/mtk-hsdma.c | 3 +--
->  1 file changed, 1 insertion(+), 2 deletions(-)
-> 
-> diff --git a/drivers/staging/mt7621-dma/mtk-hsdma.c b/drivers/staging/mt7621-dma/mtk-hsdma.c
-> index 0fbb9932d6bb..a58725dd2611 100644
-> --- a/drivers/staging/mt7621-dma/mtk-hsdma.c
-> +++ b/drivers/staging/mt7621-dma/mtk-hsdma.c
-> @@ -664,9 +664,8 @@ static int mtk_hsdma_probe(struct platform_device *pdev)
->  		return -EINVAL;
->  
->  	hsdma = devm_kzalloc(&pdev->dev, sizeof(*hsdma), GFP_KERNEL);
-> -	if (!hsdma) {
-> +	if (!hsdma)
->  		return -EINVAL;
-> -	}
->  
->  	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->  	base = devm_ioremap_resource(&pdev->dev, res);
+mainline-driver does not support mt6323
 
-This change is already in my tree, always be sure to work against the
-proper kernel tree for doing new development.
+this series adds mt6323 to mt6397-rtc-driver and implement
+power-controller on it.
 
-thanks,
+with this poweroff is working on bananapi-r2
 
-greg k-h
+Original Patch from Josef Friedl
+
+changes since v1:
+	- splitted into functional parts
+	- more infos about changes
+
+Josef Friedl (7):
+  docs: dt-bindings: add poweroff
+  rtc: mt6397: move some common definitions into rtc.h
+  rtc: mt6397: improvements of rtc driver
+  mfd: mt6323: some improvements of mt6397-core
+  power: reset: add driver for mt6323 poweroff
+  MAINTAINERS: add Mediatek shutdown drivers
+  arm: dts: mt6323: add keys, power-controller, rtc and codec
+
+ .../devicetree/bindings/mfd/mt6397.txt        |  10 +-
+ .../bindings/power/reset/mt6323-poweroff.txt  |  20 ++++
+ .../devicetree/bindings/rtc/rtc-mt6397.txt    |  29 +++++
+ MAINTAINERS                                   |   7 ++
+ arch/arm/boot/dts/mt6323.dtsi                 |  27 +++++
+ drivers/mfd/mt6397-core.c                     |  40 +++++--
+ drivers/power/reset/Kconfig                   |  10 ++
+ drivers/power/reset/Makefile                  |   1 +
+ drivers/power/reset/mt6323-poweroff.c         |  97 +++++++++++++++
+ drivers/rtc/rtc-mt6397.c                      | 110 ++++--------------
+ include/linux/mfd/mt6397/core.h               |   2 +
+ include/linux/mfd/mt6397/rtc.h                |  71 +++++++++++
+ 12 files changed, 325 insertions(+), 99 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
+ create mode 100644 Documentation/devicetree/bindings/rtc/rtc-mt6397.txt
+ create mode 100644 drivers/power/reset/mt6323-poweroff.c
+ create mode 100644 include/linux/mfd/mt6397/rtc.h
+
+--
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
