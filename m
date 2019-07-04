@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0FD6F5F53C
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 11:14:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B8E4D5F54E
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 11:16:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=i2PLVUl234GZAucZEaxuIUQLUpo29rk1fJPE+xf51jw=; b=miiqwA++dqRRVL
-	aUzdVudnwK/m1nhcXVmWWBWlsk+QNtLIW6+C6VMLFzDGHjweZxCo70osJ8vtIaMP5xfq2kuKXyosG
-	iT7GqfFi2skfcIGWAzCEgt+FDDaGGUopKu4B4QHvQ+BGZLE3GbIdY0E2pWDQjo+VPMiLm4B0X9PVO
-	RkzYYLj/8kZyLtddhdpN7V4W+KOpOJTNAyYskvA+CHDcZj4cKMOM4MdAoGfPxUay5QklrzBHBgLih
-	YvLXCM5Uft4rRBq2rEoh/4kem9Id0DmN3SkmjI9B7snJqhHgJM0sAk8yT3sjAVm/O51hQbsoc40dn
-	h2uXmrtd+wN3C2dz8WEQ==;
+	List-Owner; bh=9SGOhpXmDwU0V0dLQYEeQy2TxR29LpsiBJK2r9n18mA=; b=I1vJcSda24cyUj
+	R6hAcmBU7ablWXQljJgTT+AydUi2Oh/f3TadrfiEAxYMIScbBB6+uMmpcom+OUr4L9MUSBruDrb0D
+	24wm5ZTmSLJZz7ChqiivX0dRvL23D93KbDHVZ9Fw7EHgHwubODcNDBdAPlDzebzt7ZgjLKeaiR2RG
+	d2MElL/+bezEH7/XlfXWrtMQS41XtrsPjWGSVYCm3fCMYIr9ia7g8fxz3YD4rM/n3VTCUgV9D1XEt
+	k98qg+ekeaTSjBSXgb4tV6Zc36BDD5rU9wOtS6Syp/0YFtV+RqHjZjjSLx6zzZnqiAtFu8CZwxQo4
+	f84YqyiU/p1O4caGFyfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hixoV-0003Ew-SN; Thu, 04 Jul 2019 09:13:59 +0000
+	id 1hixqS-000582-Od; Thu, 04 Jul 2019 09:16:00 +0000
 Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hixoS-0003E9-1W; Thu, 04 Jul 2019 09:13:57 +0000
-Received: by mail-ed1-x542.google.com with SMTP id z25so4725361edq.9;
- Thu, 04 Jul 2019 02:13:55 -0700 (PDT)
+ id 1hixqI-00052K-KV; Thu, 04 Jul 2019 09:15:52 +0000
+Received: by mail-ed1-x542.google.com with SMTP id k21so4762116edq.3;
+ Thu, 04 Jul 2019 02:15:50 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=c7ee4EzpqvBBOD97Gue2pS9SUFXP5n2zFCHJywZAxT8=;
- b=FqFaVodLiLp4J2FtMlqeGMhJhqBITVh3ygcJyKAysJUQUyUokLURSC3l/LueFGxjUP
- LmjZyUzwIgxYxPGwUIOWFu3QpBuS0meh9m88eTwr+EQIn1cL2HZlUgAnsLN+qMFDJfps
- Sbtj3W183v1J8y0hDuMF5iChitciI5Bs3/jfNahmk08TP+yurOdiIiOWMd6yov4/ty+R
- Tx7GQA2MbsSHgRl2bJtAal2vA7IbLw/Ah7Y95+jwqujXSa1G+JujFJ5O7rdWsLEWIjz0
- /4KE6/+oXPCc6m/wn3jKoj3JVuE8wdvEYdDUIOU2rQuIJPfYM4Zi8WPLm+fzh+CBhtnz
- EWXQ==
+ bh=HYh8uIsv5SY3upo+7MXL8T7kCOGTod8uAtZ1But3kW8=;
+ b=OY8QOJDOrhMyQ5dDb6kKTo4d6AQsIFgtYQlMTIVeick9XEDxS+U3Ycj3KcieRs9kB7
+ VQL48xQY7SV+/Xj7jnl0PYWzC2/ME8qD9SP17GQN+iBykJXI/pspXSkO1ec3XB0WGOhx
+ OhbfHAKTUEvm/G8HtmCZKGkxf4EyVsXR1HaJ6YWA/toL5oC6DYZAQc+a+X99UUtcLbm1
+ SzpsQcj8czCDhxclPriUuRcvkBERQKaiGq0X4x/iZVzkpksRkWpkPIQq5q8n57v/x4wn
+ 6Bd0wd9nBgp/NBF9dlsVufvKRXuDKwzi40G3r+8CgWS36AdnWXGwQiBqj49h159Tkwqw
+ pFLA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=c7ee4EzpqvBBOD97Gue2pS9SUFXP5n2zFCHJywZAxT8=;
- b=pj8R7P1O5KTn0uF3/5jn7yADmjDscl9rXd8Lf3wLsHYRC+8JuIzziydznwUplGPJpx
- LXW/NEknJlqz+QhFGCTQ3wpl4we8EI6y1KGHCVegIU+D4fxrNlmfv0HukjrB/KGRRcSe
- OLyjfE8iiIKbmo6aNk1Y2WHnZYdWCOYIZlahHS7ztZBDl7MKzeopismBr69xJ+g3sL4N
- GBtcvujvv5MhPkrd/N7OI0XRlnMIHSrUMJi6C34Q3wbt6UxIQXHGEwHrcCDFsvv/9cEv
- 5qiMev8jkxQxTYrbi/SX6YQAQodly1SyoediIiuD86V6Prxk+dIl3rziPGdvePUGDnt+
- rF1Q==
-X-Gm-Message-State: APjAAAUjqUtHKPEWemHhq+V2zARA1hHb8VbFWRDPhA6IMblp3k0n7GmE
- Dd2LbnfInZ2X6zECdgb6cfA=
-X-Google-Smtp-Source: APXvYqz3tv9O9odSgz+mz43n9dqAmWCiKrEJStGGHRYX37If9pKfT/my/9ubNfMao/owx0aiXr7bJQ==
-X-Received: by 2002:aa7:c509:: with SMTP id o9mr46478318edq.164.1562231634296; 
- Thu, 04 Jul 2019 02:13:54 -0700 (PDT)
+ bh=HYh8uIsv5SY3upo+7MXL8T7kCOGTod8uAtZ1But3kW8=;
+ b=WvhH9KkXt913+zeo7LMTQECy+RYkDdwT9cFJIeHZAgnJWYTKjmlXKwVVGoVA6kaXN5
+ JzQ9rHAibELo/cymu5sU1v71Nihy+3NYXDZdosZL9n5iMoSxTJYxJCJusbzlf71Bc0lJ
+ 0Nb/KIUowfzgQzj0P+uJ2ewWlNXAOwYlHOqYGwyQ04IWaCF/lHJpC4lbfWVpjqVMlY2A
+ FUDCsgJRy5wXhBZpYhKmSncibvydDbqW8WNLU6zoIChgZYAcXc8vsKa61W5sJexYF4HT
+ iA+B4ZuIa48taNgs+4uKcA0lYCwY8o+Hj2n3PejnOqnFVH9ndT6KeMnBUgeoSN7cK1lg
+ X7RA==
+X-Gm-Message-State: APjAAAURN41ir7nS+NSuA2Ozj5EfxP3ixg0GCsavn/isp41JNFg7VQqx
+ NPU5ZoohZMDaeeUFcPVIRrg=
+X-Google-Smtp-Source: APXvYqwSed+Z6lgrrgoqKwEoCliO+eHU8uiNycKmvDZMK+ib0MoCExlkCL7yM8bCeirQJD1QBSi20A==
+X-Received: by 2002:a05:6402:397:: with SMTP id
+ o23mr48488412edv.68.1562231749382; 
+ Thu, 04 Jul 2019 02:15:49 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.141.54])
- by smtp.gmail.com with ESMTPSA id h10sm1495224ede.93.2019.07.04.02.13.52
+ by smtp.gmail.com with ESMTPSA id v47sm1495559edc.80.2019.07.04.02.15.47
  (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Thu, 04 Jul 2019 02:13:53 -0700 (PDT)
-Subject: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
+ Thu, 04 Jul 2019 02:15:48 -0700 (PDT)
+Subject: Re: [PATCH v2 5/7] power: reset: add driver for mt6323 poweroff
 To: Frank Wunderlich <frank-w@public-files.de>,
  Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>,
  Mark Rutland <mark.rutland@arm.com>, Sean Wang <sean.wang@mediatek.com>,
@@ -74,7 +75,7 @@ To: Frank Wunderlich <frank-w@public-files.de>,
  Nicolas Ferre <nicolas.ferre@microchip.com>,
  "Paul E . McKenney" <paulmck@linux.ibm.com>
 References: <20190703164822.17924-1-frank-w@public-files.de>
- <20190703164822.17924-4-frank-w@public-files.de>
+ <20190703164822.17924-6-frank-w@public-files.de>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -170,16 +171,16 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <24975910-cb06-7faf-998f-def23ca0891f@gmail.com>
-Date: Thu, 4 Jul 2019 11:13:51 +0200
+Message-ID: <d162c95d-773e-f364-0e06-07f67c5b0cbc@gmail.com>
+Date: Thu, 4 Jul 2019 11:15:47 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.6.1
 MIME-Version: 1.0
-In-Reply-To: <20190703164822.17924-4-frank-w@public-files.de>
+In-Reply-To: <20190703164822.17924-6-frank-w@public-files.de>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_021356_117100_0E509D25 
-X-CRM114-Status: GOOD (  18.03  )
+X-CRM114-CacheID: sfid-20190704_021550_986029_67E2E586 
+X-CRM114-Status: GOOD (  13.33  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -222,29 +223,10 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 On 03/07/2019 18:48, Frank Wunderlich wrote:
 > From: Josef Friedl <josef.friedl@speed.at>
 > 
-> - use regmap_read_poll_timeout to drop while-loop
-> - use devm-api to drop remove-callback
-> - add new compatible for mt6323
->
+> Suggested-by: Frank Wunderlich <frank-w@public-files.de>
+> Signed-off-by: Josef Friedl <josef.friedl@speed.at>
 
-It's up to the maintainer but I don't like patches doing clean-ups together with
-adding support for new HW, although it's a trivial one here.
-
-
-> Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
-> =2D--
->  drivers/rtc/rtc-mt6397.c | 55 ++++++++++++++++------------------------
->  1 file changed, 22 insertions(+), 33 deletions(-)
-> 
-> diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
-> index c08ee5edf865..e5ddf0d0b6f1 100644
-> =2D-- a/drivers/rtc/rtc-mt6397.c
-> +++ b/drivers/rtc/rtc-mt6397.c
-> @@ -4,16 +4,19 @@
->  * Author: Tianping.Fang <tianping.fang@mediatek.com>
-
-Missing in the CC list.
-
+Why is there a Signed-off-by from Josef for this patch but not for the others?
 
 _______________________________________________
 Linux-mediatek mailing list
