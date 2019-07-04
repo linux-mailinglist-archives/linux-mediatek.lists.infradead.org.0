@@ -2,57 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 95C175F8FF
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 15:17:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B680C5FAEA
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 17:34:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=y3G59/N+OcmDAaacdXLDc/h56bt0+uvoTuwvl9b4mjs=; b=sKMIbm1ZWg+fLOLPc1XLUCYUh
-	MzJxlUwLTqkeRUhLJKZXK0uP9j9Oit6mCymiUgxJTHhUbykHsyXDBdQBCNXIqVcIDVkvXpwj8zm5q
-	h9ZvdBg4POhOF+JldA+E/kCaL9jAqpkmwQAfBEYhGeaaZU1cy7ls9dfMxFt7eySJVh2kcSsbZqDZy
-	OJP1ixPvEXylHqlASwuq3d9e5Y0fcclfSCeKpyZYqWVLdlQdwmUyWtwbh2ZPQjQ6aNj8pmMHTdm8R
-	qrBAPH1xcD8J/PPlh0haD4vyv1zGAc/6u4kKV5yfaAF383zCVMiwcQOKap1bDKL05VQlgq17B9Lsl
-	jE57iiSHA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Subject:References:
+	In-Reply-To:Message-ID:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=O2Ix7rWYauFKygccscHgDAhheCTITPWnj20B6VZH8PY=; b=D/WsF/oyzgNEsM
+	eIUeNVWl3ewDw3mYYrFVaJJ8Xw9cqWmwOaxBv+zADaAWE/5TenQfydtyrDU3Mr9ehQ6lzhQJGo0LJ
+	osOPmz4+O5xJcz4M9kztl7sV3ZNb+PDkA7zPREbD5LbaEvIvCBTLdl8XjsDXgE5tShVbsBZZN6lk+
+	AwM0QIrc0JvBYr7nGT00yy1g+OxSF6Hv1VDRkJqWCrULeZHicFA8nx7UN72WWh3LosjKeF4FEaaAH
+	gC8OPysHX1wq2fMjinn7CI/yyMn7NxgaNE1PHodloa7OtjK8FMp0JaiDEDU04zOfPIQ0JQjiAMuwk
+	jw2VOGzPGoLffHjDpY8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hj1bu-00070m-F4; Thu, 04 Jul 2019 13:17:14 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hj3kD-0007C3-5s; Thu, 04 Jul 2019 15:33:57 +0000
+Received: from mo6-p02-ob.smtp.rzone.de ([2a01:238:20a:202:5302::5])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hj1bq-0006zc-6v; Thu, 04 Jul 2019 13:17:11 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 1FBA128AE27
-Subject: Re: [PATCH v3 21/22] drm/amdgpu: Provide ddc symlink in connector
- sysfs directory
-To: Alex Deucher <alexdeucher@gmail.com>
-References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
- <cover.1561735433.git.andrzej.p@collabora.com>
- <5e355b8bec8fb3907566a741db8cc3e356246a32.1561735433.git.andrzej.p@collabora.com>
- <CADnq5_MrVoScVFgj3TP2Z+Ky8_32k=Cou5jebuMT5gE1+GZ0cA@mail.gmail.com>
-From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-Message-ID: <fc26ac17-dc18-f995-53cf-42b50754c916@collabora.com>
-Date: Thu, 4 Jul 2019 15:17:01 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.2
+ id 1hj3k6-00071a-Hl; Thu, 04 Jul 2019 15:33:52 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1562254424;
+ s=strato-dkim-0002; d=fpond.eu;
+ h=Subject:References:In-Reply-To:Message-ID:Cc:To:From:Date:
+ X-RZG-CLASS-ID:X-RZG-AUTH:From:Subject:Sender;
+ bh=gou5Zh0HIbQCcM7c2CWEWnJ04+a+qFsD/mEWP+ODjjE=;
+ b=J234T43gvxKe/gjHLYNWzODXb761nfwLa+rSoVZTcgN1QUyceMdxAcxi56dx2Ejmpd
+ nADwFLWCb+5QjnsWFdixlfqxiuLLm6OAkv/WhdnczLpEKiKixPXVJgQEwPOrGbit24+3
+ NOWVrz+AwH5T4r15ZGC4sLWDIhty7zsRqk0ovQUFcd7RGNEKXg2AzOJALYwVsK8umLUI
+ hgLm+NBlFy3KoTimyAG6z1dDR20PMRwjH7nriy1b30zdPiDDujgDHHaqaFhBA2xrS62X
+ ONag4hTK62Y+KA2SRFHFJraQY+wgwiLKGfpzvrgjjqWZczamd/UTJi+l4jQMlhIQGx7b
+ Ugyg==
+X-RZG-AUTH: ":OWANVUa4dPFUgKR/3dpvnYP0Np73amq+g13rqGzmt2bYDnKIKaws6YXTsc4="
+X-RZG-CLASS-ID: mo00
+Received: from oxapp01-01.back.ox.d0m.de by smtp-ox.front (RZmta 44.24 AUTH)
+ with ESMTPSA id h0a328v64FXe11g
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (curve X9_62_prime256v1
+ with 256 ECDH bits, eq. 3072 bits RSA))
+ (Client did not present a certificate);
+ Thu, 4 Jul 2019 17:33:40 +0200 (CEST)
+Date: Thu, 4 Jul 2019 17:33:40 +0200 (CEST)
+From: Ulrich Hecht <uli@fpond.eu>
+To: Matthias Brugger <matthias.bgg@gmail.com>, CK Hu <ck.hu@mediatek.com>,
+ Matthias Brugger <mbrugger@suse.com>
+Message-ID: <100944512.353257.1562254420397@webmail.strato.com>
+In-Reply-To: <84d1c444-d6cb-9537-1bf5-b4e736443239@gmail.com>
+References: <20181116125449.23581-1-matthias.bgg@kernel.org>
+ <20181116125449.23581-9-matthias.bgg@kernel.org>
+ <20181116231522.GA18006@bogus>
+ <2a23e407-4cd4-2e2b-97a5-4e2bb96846e0@gmail.com>
+ <CAL_JsqKJQwfDJbpmwW+oCxiDkSp5+6mG-uoURmCQVEMP_jFOEg@mail.gmail.com>
+ <154281878765.88331.10581984256202566195@swboyd.mtv.corp.google.com>
+ <458178ac-c0fc-9671-7fc8-ed2d6f61424c@suse.com>
+ <154356023767.88331.18401188808548429052@swboyd.mtv.corp.google.com>
+ <a229bfc7-683f-5b0d-7b71-54f934de6214@suse.com>
+ <1561953318.25914.9.camel@mtksdaap41>
+ <84d1c444-d6cb-9537-1bf5-b4e736443239@gmail.com>
+Subject: Re: [PATCH v5 08/12] dt-bindings: mediatek: Change the binding for
+ mmsys clocks
 MIME-Version: 1.0
-In-Reply-To: <CADnq5_MrVoScVFgj3TP2Z+Ky8_32k=Cou5jebuMT5gE1+GZ0cA@mail.gmail.com>
-Content-Language: en-US
+X-Priority: 3
+Importance: Medium
+X-Mailer: Open-Xchange Mailer v7.8.4-Rev59
+X-Originating-IP: 85.212.144.69
+X-Originating-Client: open-xchange-appsuite
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_061710_522481_B2D523C9 
-X-CRM114-Status: GOOD (  18.07  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190704_083351_201946_F3BD1335 
+X-CRM114-Status: UNSURE (   7.25  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [2a01:238:20a:202:5302:0:0:5 listed in]
+ [list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,81 +98,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
- =?UTF-8?Q?Heiko_St=c3=bcbner?= <heiko@sntech.de>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, Liviu Dudau <liviu.dudau@arm.com>,
- Maling list - DRI developers <dri-devel@lists.freedesktop.org>,
- Sandy Huang <hjc@rock-chips.com>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
- Benjamin Gaignard <benjamin.gaignard@linaro.org>,
- Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
- Fabio Estevam <festevam@gmail.com>,
- =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
- "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
- linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
- Sam Ravnborg <sam@ravnborg.org>, Kyungmin Park <kyungmin.park@samsung.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
- linux-rockchip@lists.infradead.org, Chen-Yu Tsai <wens@csie.org>,
- Kukjin Kim <kgene@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
- Dave Airlie <airlied@redhat.com>, Sascha Hauer <s.hauer@pengutronix.de>,
- Philipp Zabel <p.zabel@pengutronix.de>, Daniel Vetter <daniel@ffwll.ch>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm <linux-arm-msm@vger.kernel.org>,
- David Airlie <airlied@linux.ie>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Jyri Sarha <jsarha@ti.com>, Inki Dae <inki.dae@samsung.com>,
- Alexios Zavras <alexios.zavras@intel.com>,
- Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
- linux-tegra@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
- Vincent Abriou <vincent.abriou@st.com>,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
- Sean Paul <sean@poorly.run>, amd-gfx list <amd-gfx@lists.freedesktop.org>,
- Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
- Thomas Zimmermann <tzimmermann@suse.de>,
- Seung-Woo Kim <sw0312.kim@samsung.com>,
- Douglas Anderson <dianders@chromium.org>, LKML <linux-kernel@vger.kernel.org>,
- Todor Tomov <todor.tomov@linaro.org>, Rob Clark <robdclark@gmail.com>,
- Huang Rui <ray.huang@amd.com>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- Alex Deucher <alexander.deucher@amd.com>,
- freedreno <freedreno@lists.freedesktop.org>,
- =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>,
- Gerd Hoffmann <kraxel@redhat.com>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: Mark Rutland <mark.rutland@arm.com>, Rob Herring <robh@kernel.org>,
+ Sean Wang <Sean.Wang@mediatek.com>, devicetree@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Michael Turquette <mturquette@baylibre.com>,
+ Sean Wang <sean.wang@kernel.org>, Stephen Boyd <sboyd@codeaurora.org>,
+ linux-kernel@vger.kernel.org, dri-devel <dri-devel@lists.freedesktop.org>,
+ David Airlie <airlied@linux.ie>, Chen-Yu Tsai <wens@csie.org>,
+ linux-mediatek@lists.infradead.org, Randy Dunlap <rdunlap@infradead.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, matthias.bgg@kernel.org,
+ Ulrich Hecht <ulrich.hecht+renesas@gmail.com>,
+ linux-clk <linux-clk@vger.kernel.org>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-VyBkbml1IDAyLjA3LjIwMTkgb8KgMjI6NTQsIEFsZXggRGV1Y2hlciBwaXN6ZToKPiBPbiBGcmks
-IEp1biAyOCwgMjAxOSBhdCAxMjozMSBQTSBBbmRyemVqIFBpZXRyYXNpZXdpY3oKPiA8YW5kcnpl
-ai5wQGNvbGxhYm9yYS5jb20+IHdyb3RlOgo+Pgo+PiBVc2UgdGhlIGRkYyBwb2ludGVyIHByb3Zp
-ZGVkIGJ5IHRoZSBnZW5lcmljIGNvbm5lY3Rvci4KPj4KPj4gU2lnbmVkLW9mZi1ieTogQW5kcnpl
-aiBQaWV0cmFzaWV3aWN6IDxhbmRyemVqLnBAY29sbGFib3JhLmNvbT4KPj4gLS0tCj4+ICAgLi4u
-L2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29ubmVjdG9ycy5jICAgIHwgNzAgKysrKysrKysr
-KysrKystLS0tLQo+PiAgIDEgZmlsZSBjaGFuZ2VkLCA1MSBpbnNlcnRpb25zKCspLCAxOSBkZWxl
-dGlvbnMoLSkKPj4KPj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvZ3B1L2RybS9hbWQvYW1kZ3B1L2Ft
-ZGdwdV9jb25uZWN0b3JzLmMgYi9kcml2ZXJzL2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29u
-bmVjdG9ycy5jCj4+IGluZGV4IDczYjJlZGU3NzNkMy4uNWY4YTdlMzgxOGI5IDEwMDY0NAo+PiAt
-LS0gYS9kcml2ZXJzL2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29ubmVjdG9ycy5jCj4+ICsr
-KyBiL2RyaXZlcnMvZ3B1L2RybS9hbWQvYW1kZ3B1L2FtZGdwdV9jb25uZWN0b3JzLmMKPj4gQEAg
-LTE1NzMsMTEgKzE1NzMsMTUgQEAgYW1kZ3B1X2Nvbm5lY3Rvcl9hZGQoc3RydWN0IGFtZGdwdV9k
-ZXZpY2UgKmFkZXYsCj4+ICAgICAgICAgICAgICAgICAgICAgICAgICBnb3RvIGZhaWxlZDsKPj4g
-ICAgICAgICAgICAgICAgICBhbWRncHVfY29ubmVjdG9yLT5jb25fcHJpdiA9IGFtZGdwdV9kaWdf
-Y29ubmVjdG9yOwo+PiAgICAgICAgICAgICAgICAgIGlmIChpMmNfYnVzLT52YWxpZCkgewo+PiAt
-ICAgICAgICAgICAgICAgICAgICAgICBhbWRncHVfY29ubmVjdG9yLT5kZGNfYnVzID0gYW1kZ3B1
-X2kyY19sb29rdXAoYWRldiwgaTJjX2J1cyk7Cj4+IC0gICAgICAgICAgICAgICAgICAgICAgIGlm
-IChhbWRncHVfY29ubmVjdG9yLT5kZGNfYnVzKQo+PiArICAgICAgICAgICAgICAgICAgICAgICBz
-dHJ1Y3QgYW1kZ3B1X2Nvbm5lY3RvciAqYWNuID0gYW1kZ3B1X2Nvbm5lY3RvcjsKPj4gKwo+PiAr
-ICAgICAgICAgICAgICAgICAgICAgICBhY24tPmRkY19idXMgPSBhbWRncHVfaTJjX2xvb2t1cChh
-ZGV2LCBpMmNfYnVzKTsKPj4gKyAgICAgICAgICAgICAgICAgICAgICAgaWYgKGFjbi0+ZGRjX2J1
-cykgewo+IAo+IFRoaXMgaHVuayBzZWVtcyBwb2ludGxlc3MgdW5sZXNzIEknbSBtaXNzaW5nIHNv
-bWV0aGluZy4gIENhbiB5b3UgZHJvcAo+IHRoaXMgaHVuaz8gIFNhbWUgY29tbWVudCBvbiBlYWNo
-IGluc3RhbmNlIG9mIHRoaXMgYmVsb3cuICBUaGlzIGFsc28KPiBvbmx5IGNvdmVycyB0aGUgbGVn
-YWN5IG1vZGVzZXR0aW5nIGNvZGUgd2hpY2ggaXMgbm90IHVzZWQgYnkgZGVmYXVsdAo+IG9uIG1v
-c3QgY2hpcHMuICBUaGUgREMgY29kZSBpbiBhbWQvZGlzcGxheS8gaXMgcHJvYmFibHkgbW9yZSBy
-ZWxldmFudC4KPiAKCklmIEkgZG9uJ3QgZG8gdGhhdCBjaGVja3BhdGNoIHJlcG9ydHMgdGhhdCBs
-aW5lcyBJIGNyZWF0ZWQgZXhjZWVkIDgwIGNoYXJhY3RlcnMuCgpBbmRyemVqCgpfX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWls
-aW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMu
-aW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+
+> On July 4, 2019 at 11:08 AM Matthias Brugger <matthias.bgg@gmail.com> wrote:
+> You are right, it took far too long for me to respond with a new version of the
+> series. The problem I face is, that I use my mt8173 based chromebook for
+> testing. It needs some downstream patches and broke somewhere between my last
+> email and a few month ago.
+
+If that Chromebook is an Acer R13 and you need a working kernel, you may want to have a look at https://github.com/uli/kernel/tree/elm-working-5.2 .
+
+CU
+Uli
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
