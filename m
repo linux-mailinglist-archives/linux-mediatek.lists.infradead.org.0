@@ -2,80 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7EC2F5F709
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 13:10:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B6F5A5F779
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 13:50:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:
-	From:Message-ID:MIME-Version:Reply-To:To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:To:
+	From:Message-ID:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pkxpAbtZeu7XdXO1LI9tk850sFp5cqdtkItnt5pxWQM=; b=uCgKuT7zvyNorX
-	7ER3OBSO8X7MMlD0HuUaKDP+yQDH3iwWqKFS7EOZKNOfdY+oVAVuyxgy0LAZuZ9ecgUreWOalbXYY
-	MWd/vYzWBDcjmKt+HI6Vwh2IDwdixM6e87sKzgLEr06F3quwwyfOgY2D9TMe2Dxec7VEtAAhdk1sA
-	6LmeiCYbrbeIDXcmH1GKRZ6O2kP/udXbk8Thy+ixwNfkHSmTI2FVPtt65kNsoiz657IX23NpatQ1u
-	PVdA9PSp6r9MqZhFAmwN7BTG2e/+q8PnH1ngIEr86czxOOcMB1eJu6PKH8wmMALE/OjXsThDYxAVC
-	SsTakksOCPaWii8baV8Q==;
+	List-Owner; bh=eKiP410ghLpVwYSTnmOsUBYOtLY1R9FUu1ZbsRH6LI0=; b=RpidbwLIqDjrfD
+	Emqragt60MAJ9h2iM/9My+MjUm0wD2VpzZimfi/hdnay1mqECxsRcOzloyrX7KE3k1FBLZCM6Iolv
+	2ZAcw3zr/Rc8XiAYwAQl1W0VR4gLwDJZ6z+smPlWzG6TQ2jv7cfwK+Onv0Edu3hTRloyu76KoJM3T
+	YHj6QziLYrqvmOfrNXfNGzDVrQj0de3HSIv3dzRGs81BmPOrHyfoX+5f8sOYksrRneki9s8r2zUDf
+	iwYZnx/NFELvnOnxw3zH0f0PHyIDYAHEKcBjKjf8mx4hRxHDBhmRuhm7K4RSp0MbDZ6YfgU+W3KIs
+	cpfwy5hrSIkgwNXHdtcA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hizck-000336-DN; Thu, 04 Jul 2019 11:09:58 +0000
-Received: from mout.gmx.net ([212.227.17.22])
+	id 1hj0GA-0001kH-Be; Thu, 04 Jul 2019 11:50:42 +0000
+Received: from mout.gmx.net ([212.227.15.19])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hizcT-0002s8-LC; Thu, 04 Jul 2019 11:09:43 +0000
+ id 1hj0Fg-0001Xu-Ou; Thu, 04 Jul 2019 11:50:14 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
- s=badeba3b8450; t=1562238524;
- bh=xewwvH1K14MpwmyPyoSVm3soCqhRG4coEguzC5XFyRU=;
- h=X-UI-Sender-Class:From:Cc:Subject:Date:In-Reply-To:References;
- b=F5ztQ6oLQDxWBeKJRudGw4uO/Od6NHcZR42iKjQZwFNvXMU1LDkJcz++vnGjhGhkT
- rhKPJAk0CjVGVx6E4KYrz4r/6zYDVOF8Z62oh4MlWCmTeJdmMyWg6nyBRNPHdnNkk6
- 4qALyoONjlAPb/+iANBotiT6pDWpFqR33aTqbqDk=
+ s=badeba3b8450; t=1562240946;
+ bh=3XgfK29g7vLa/3fkH4yqnV5cnFE1yxc49nWYpw/CAjE=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+ b=knmHJll2oZI2vMmwAv/1ME4hVpqS0PWrF9Ii8PkJp7W5/sqfcY/qrsUAkKjVViwQn
+ 3CxBSzc/FCwAmnBG2/JJ/9Qcs9UnGrsKgur1158+rpQ4xA/L8ZOOZucSZQ+H3zoH/H
+ r8/kl+3pUg6RVhZL4FTDAvNzcrsZD9G5hCVre2hI=
 X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
 Received: from [217.61.145.121] ([217.61.145.121]) by web-mail.gmx.net
  (3c-app-gmx-bs27.server.lan [172.19.170.79]) (via HTTP); Thu, 4 Jul 2019
- 13:08:44 +0200
+ 13:49:06 +0200
 MIME-Version: 1.0
-Message-ID: <trinity-bad65b37-f133-4f92-9513-965ecc0e0a0b-1562238524435@3c-app-gmx-bs27>
+Message-ID: <trinity-cc209a43-af34-4788-8b7a-8495052c8ca6-1562240946454@3c-app-gmx-bs27>
 From: "Frank Wunderlich" <frank-w@public-files.de>
-Subject: Aw: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
-Date: Thu, 4 Jul 2019 13:08:44 +0200
+To: "Matthias Brugger" <matthias.bgg@gmail.com>
+Subject: Aw: Re: [PATCH v2 2/7] rtc: mt6397: move some common definitions
+ into rtc.h
+Date: Thu, 4 Jul 2019 13:49:06 +0200
 Importance: normal
 Sensitivity: Normal
-In-Reply-To: <24975910-cb06-7faf-998f-def23ca0891f@gmail.com>
+In-Reply-To: <62a4c4ce-7ab3-2f9d-a85e-be92340724a9@gmail.com>
 References: <20190703164822.17924-1-frank-w@public-files.de>
- <20190703164822.17924-4-frank-w@public-files.de>
- <24975910-cb06-7faf-998f-def23ca0891f@gmail.com>
+ <20190703164822.17924-3-frank-w@public-files.de>
+ <62a4c4ce-7ab3-2f9d-a85e-be92340724a9@gmail.com>
 X-UI-Message-Type: mail
 X-Priority: 3
-X-Provags-ID: V03:K1:jnRruknwXBDel+OIwmAlBlpZCo1GUcWSFiGCMCvsYCxnT6gNPN47MfQ8d+npte2+5ba3C
- pK6nsUiE1pbreDN5g7uwxCqoVPtzGFjzwnicn7H2HiakjJVH++0nWUZcvMTNbDw41XYyfHz1rvP5
- tyG636rnPhcTQmqemF8FuioIckboC/V+PRYo5xPNkhqnJzTMPGV8c9mOlJm7mL9gNnKhsJ51sgaA
- F2utj5iZ0sWUH8hx4axdegf1shPw2ITfHHB8OiUIm42I/vflDVjo4pyNj0d7P0Z8P9Qmr9ogiFQj
- I8=
+X-Provags-ID: V03:K1:7WCJDoI4ExT7kJKMPI6fq7FNUW7pRNwLc1tUO/5cmP72zZnoBU2v1Y8uix/fw2i48d5FF
+ Wd8wvTQJl1I2afIhS99OdBd4Iyh67OTcrpdbEQzhKKf6oNe+8evBVlNA3mdt3sLZ9EfauHTySxHm
+ DPZWCXm6h5c0Phecn2JIbp8F6eSFLCyZzdI2+ijkEM1IUpZ0cT5dqCmnk8hPwd9Sd1EJDKwLDMdM
+ fnT5RJ/tuLvBBpxa3bA56T8T1C/9SuiwHF1TDpcf69rvk2/9SvDHsBp3GT6hMIlCS4ZRbzcYD2dP
+ 58=
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:5dO1uuC4GHI=:HuT9N7g5VLRtNrhu9OZLWM
- s4oHLi+F4JnZ1iuiGNv5fWp6Cawu+ZAFh+3ySZ/XyVDWcO/IoLj6PmevaQtIHibcXyMfldhFr
- H774L3+0s3jPi4KGidGirvKsHonDduG2z+L3Hn5rHCEArBIdknXuOxWNhrmImQjNPngJJeLcN
- AJAbSiX3wEcJQeshB2wsEWtNRopMrBOxtJZbIFBfnOPeRwwo8DEuVkaCYlpp4hz+0/zfIXXQi
- C97yBiCjPLdCIHjsXZ5FIKvjW49IX0pBxKczAEpkfnS2I9CRZNj/n/cISuJ58TiX3s4IcsraE
- +cxkjIKRljQ8Hva6SIjS3R6dPeEXAgsIsIxHYoGiSLg7IjKggeCViPlkbocioMjnsimIFQC1V
- DuNLmHO4HtIuuMWPuDlM7liEmbM9toxtmxxrq02GY+5zxJjdg/CN0JjoKEMogwcNSvPSUJSQ8
- FAKuYh05I68HWtL6BpvPtIfRieUKWEh7fVgNqET3U5VGelkjd5RuHrVWi6gF+quRLHFZdKXzx
- dRRAViLmvut6WTLCuFMLnYaIMCg7WkcaJkU0Ca+zAJNai39ND4MXdE2mvPGhy5qugJUijobm8
- 0iieYHmAd1P9kqyoWbTqNZhVd2cK0Kh6doCKz0cYxypBjEwSttY0c7BBcptAgDVtFMz7wJlco
- CaQE=
+X-UI-Out-Filterresults: notjunk:1;V03:K0:mW1rCx44iLA=:/Gajeu7to3A6Ht4fEOGmOM
+ VrVkYrIOaOWFbVz0dUB19QotgPqpUaNZ9s5JK+j8PjaEBomafj/raSFiwvRW1i7F+V8c1yXi3
+ 7UJr7dAlUe5CK5xzgHEMiBNl7adKcmNKYRE/o0poTjKZAwuMVnHV9J+fkUdRrQDVrVkNZQDtY
+ LHvQnas9brIhuezksYFzH9Pol+hd3YXpTP1J/k9Tep1e6ppE6zX3awixfJVVyPXj09b9iFFPP
+ nPpETdXzqQspp2OaySgm9TbPNosj+TI6fbPcuIA9018AH3QcfASNas9uoobDSzUAKc7u2CYCl
+ SmsdGV0F41hBk0LaPWMD5JmQE14GDfYBjsG1BP29GHify4oGtvVCBqrZwZKRCtbUz3G7i9KQG
+ IknEjSp92+qsc71cN9DiVh3WD72v2MeCIqH32Vt5HLNfOb2hbBvkYRepx+55v6D+PY0s0xKDY
+ ld9U5E2roDTiHXZ+GymN4caVOKAi3lsJT8kr9E3JCAEFOuqkGsPN8VrnmnDmvFOlxOumyBJki
+ NqU8IwX2kaZfTf99CDBU5Ortk+6ZMl98egmxvVuWkpX9nml7w1lACPqpLuB1FFc0rFvC1MzXB
+ wDNcELXrKOYz9pdcvEr6jUKFQoA9gQsQbd6KNaUd8V3CtnvF7ZGL1GdRH8I4RJ7AKDsyEeUsy
+ Ekr8=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_040941_994521_9FB93E4D 
-X-CRM114-Status: UNSURE (   6.73  )
+X-CRM114-CacheID: sfid-20190704_045013_107450_440669E4 
+X-CRM114-Status: UNSURE (   5.76  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.22 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [212.227.15.19 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.2 MISSING_HEADERS        Missing To: header
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -113,13 +114,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> Gesendet: Donnerstag, 04. Juli 2019 um 11:13 Uhr
-> Von: "Matthias Brugger" <matthias.bgg@gmail.com>
+> Still missing commit message. Describe here why you need to do that.
 
-> It's up to the maintainer but I don't like patches doing clean-ups together with
-> adding support for new HW, although it's a trivial one here.
+ok, added note that headers are reused in power-off-driver
 
-i can split again to have clean-up and new functions separated
+https://github.com/frank-w/BPI-R2-4.14/commits/5.2-poweroff-mainline
+
+> Please check your email setting as discussed offline. Otherwise your patches
+> won't get accepted.
+
+tested with webmailer where it looks good :(
+
+seems the problem is only shown when imported to patchwork
+
+using only git sendemail in ubuntu 18.4 without any mta (have sendmail not installed) and no changes made to git sendemail except authentication.
+
+i see that (except cover-letter which is quoted-printable) all is send with
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+so i have forced git sendemail now to
+sendemail.composeencoding UTF-8
+
+if this does not work i can try instead
+sendemail.transferEncoding 8bit
+
+regards Frank
 
 _______________________________________________
 Linux-mediatek mailing list
