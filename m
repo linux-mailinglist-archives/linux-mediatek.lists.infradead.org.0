@@ -2,85 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B6F5A5F779
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 13:50:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 95C175F8FF
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 15:17:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:To:
-	From:Message-ID:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eKiP410ghLpVwYSTnmOsUBYOtLY1R9FUu1ZbsRH6LI0=; b=RpidbwLIqDjrfD
-	Emqragt60MAJ9h2iM/9My+MjUm0wD2VpzZimfi/hdnay1mqECxsRcOzloyrX7KE3k1FBLZCM6Iolv
-	2ZAcw3zr/Rc8XiAYwAQl1W0VR4gLwDJZ6z+smPlWzG6TQ2jv7cfwK+Onv0Edu3hTRloyu76KoJM3T
-	YHj6QziLYrqvmOfrNXfNGzDVrQj0de3HSIv3dzRGs81BmPOrHyfoX+5f8sOYksrRneki9s8r2zUDf
-	iwYZnx/NFELvnOnxw3zH0f0PHyIDYAHEKcBjKjf8mx4hRxHDBhmRuhm7K4RSp0MbDZ6YfgU+W3KIs
-	cpfwy5hrSIkgwNXHdtcA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=y3G59/N+OcmDAaacdXLDc/h56bt0+uvoTuwvl9b4mjs=; b=sKMIbm1ZWg+fLOLPc1XLUCYUh
+	MzJxlUwLTqkeRUhLJKZXK0uP9j9Oit6mCymiUgxJTHhUbykHsyXDBdQBCNXIqVcIDVkvXpwj8zm5q
+	h9ZvdBg4POhOF+JldA+E/kCaL9jAqpkmwQAfBEYhGeaaZU1cy7ls9dfMxFt7eySJVh2kcSsbZqDZy
+	OJP1ixPvEXylHqlASwuq3d9e5Y0fcclfSCeKpyZYqWVLdlQdwmUyWtwbh2ZPQjQ6aNj8pmMHTdm8R
+	qrBAPH1xcD8J/PPlh0haD4vyv1zGAc/6u4kKV5yfaAF383zCVMiwcQOKap1bDKL05VQlgq17B9Lsl
+	jE57iiSHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hj0GA-0001kH-Be; Thu, 04 Jul 2019 11:50:42 +0000
-Received: from mout.gmx.net ([212.227.15.19])
+	id 1hj1bu-00070m-F4; Thu, 04 Jul 2019 13:17:14 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hj0Fg-0001Xu-Ou; Thu, 04 Jul 2019 11:50:14 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
- s=badeba3b8450; t=1562240946;
- bh=3XgfK29g7vLa/3fkH4yqnV5cnFE1yxc49nWYpw/CAjE=;
- h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
- b=knmHJll2oZI2vMmwAv/1ME4hVpqS0PWrF9Ii8PkJp7W5/sqfcY/qrsUAkKjVViwQn
- 3CxBSzc/FCwAmnBG2/JJ/9Qcs9UnGrsKgur1158+rpQ4xA/L8ZOOZucSZQ+H3zoH/H
- r8/kl+3pUg6RVhZL4FTDAvNzcrsZD9G5hCVre2hI=
-X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
-Received: from [217.61.145.121] ([217.61.145.121]) by web-mail.gmx.net
- (3c-app-gmx-bs27.server.lan [172.19.170.79]) (via HTTP); Thu, 4 Jul 2019
- 13:49:06 +0200
+ id 1hj1bq-0006zc-6v; Thu, 04 Jul 2019 13:17:11 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: andrzej.p) with ESMTPSA id 1FBA128AE27
+Subject: Re: [PATCH v3 21/22] drm/amdgpu: Provide ddc symlink in connector
+ sysfs directory
+To: Alex Deucher <alexdeucher@gmail.com>
+References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
+ <cover.1561735433.git.andrzej.p@collabora.com>
+ <5e355b8bec8fb3907566a741db8cc3e356246a32.1561735433.git.andrzej.p@collabora.com>
+ <CADnq5_MrVoScVFgj3TP2Z+Ky8_32k=Cou5jebuMT5gE1+GZ0cA@mail.gmail.com>
+From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Message-ID: <fc26ac17-dc18-f995-53cf-42b50754c916@collabora.com>
+Date: Thu, 4 Jul 2019 15:17:01 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.2
 MIME-Version: 1.0
-Message-ID: <trinity-cc209a43-af34-4788-8b7a-8495052c8ca6-1562240946454@3c-app-gmx-bs27>
-From: "Frank Wunderlich" <frank-w@public-files.de>
-To: "Matthias Brugger" <matthias.bgg@gmail.com>
-Subject: Aw: Re: [PATCH v2 2/7] rtc: mt6397: move some common definitions
- into rtc.h
-Date: Thu, 4 Jul 2019 13:49:06 +0200
-Importance: normal
-Sensitivity: Normal
-In-Reply-To: <62a4c4ce-7ab3-2f9d-a85e-be92340724a9@gmail.com>
-References: <20190703164822.17924-1-frank-w@public-files.de>
- <20190703164822.17924-3-frank-w@public-files.de>
- <62a4c4ce-7ab3-2f9d-a85e-be92340724a9@gmail.com>
-X-UI-Message-Type: mail
-X-Priority: 3
-X-Provags-ID: V03:K1:7WCJDoI4ExT7kJKMPI6fq7FNUW7pRNwLc1tUO/5cmP72zZnoBU2v1Y8uix/fw2i48d5FF
- Wd8wvTQJl1I2afIhS99OdBd4Iyh67OTcrpdbEQzhKKf6oNe+8evBVlNA3mdt3sLZ9EfauHTySxHm
- DPZWCXm6h5c0Phecn2JIbp8F6eSFLCyZzdI2+ijkEM1IUpZ0cT5dqCmnk8hPwd9Sd1EJDKwLDMdM
- fnT5RJ/tuLvBBpxa3bA56T8T1C/9SuiwHF1TDpcf69rvk2/9SvDHsBp3GT6hMIlCS4ZRbzcYD2dP
- 58=
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:mW1rCx44iLA=:/Gajeu7to3A6Ht4fEOGmOM
- VrVkYrIOaOWFbVz0dUB19QotgPqpUaNZ9s5JK+j8PjaEBomafj/raSFiwvRW1i7F+V8c1yXi3
- 7UJr7dAlUe5CK5xzgHEMiBNl7adKcmNKYRE/o0poTjKZAwuMVnHV9J+fkUdRrQDVrVkNZQDtY
- LHvQnas9brIhuezksYFzH9Pol+hd3YXpTP1J/k9Tep1e6ppE6zX3awixfJVVyPXj09b9iFFPP
- nPpETdXzqQspp2OaySgm9TbPNosj+TI6fbPcuIA9018AH3QcfASNas9uoobDSzUAKc7u2CYCl
- SmsdGV0F41hBk0LaPWMD5JmQE14GDfYBjsG1BP29GHify4oGtvVCBqrZwZKRCtbUz3G7i9KQG
- IknEjSp92+qsc71cN9DiVh3WD72v2MeCIqH32Vt5HLNfOb2hbBvkYRepx+55v6D+PY0s0xKDY
- ld9U5E2roDTiHXZ+GymN4caVOKAi3lsJT8kr9E3JCAEFOuqkGsPN8VrnmnDmvFOlxOumyBJki
- NqU8IwX2kaZfTf99CDBU5Ortk+6ZMl98egmxvVuWkpX9nml7w1lACPqpLuB1FFc0rFvC1MzXB
- wDNcELXrKOYz9pdcvEr6jUKFQoA9gQsQbd6KNaUd8V3CtnvF7ZGL1GdRH8I4RJ7AKDsyEeUsy
- Ekr8=
+In-Reply-To: <CADnq5_MrVoScVFgj3TP2Z+Ky8_32k=Cou5jebuMT5gE1+GZ0cA@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_045013_107450_440669E4 
-X-CRM114-Status: UNSURE (   5.76  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190704_061710_522481_B2D523C9 
+X-CRM114-Status: GOOD (  18.07  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.15.19 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,56 +64,81 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, Linus
- Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
- Richard Fontana <rfontana@redhat.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- "Paul E . McKenney" <paulmck@linux.ibm.com>, Lee Jones <lee.jones@linaro.org>,
- linux-rtc@vger.kernel.org, Rob Herring <robh@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
- linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Allison Randal <allison@lohutok.net>, Alessandro
- Zummo <a.zummo@towertech.it>, Josef Friedl <josef.friedl@speed.at>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sebastian Reichel <sre@kernel.org>, "David S .
- Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
+ =?UTF-8?Q?Heiko_St=c3=bcbner?= <heiko@sntech.de>,
+ Neil Armstrong <narmstrong@baylibre.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, Liviu Dudau <liviu.dudau@arm.com>,
+ Maling list - DRI developers <dri-devel@lists.freedesktop.org>,
+ Sandy Huang <hjc@rock-chips.com>, Andrzej Hajda <a.hajda@samsung.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Benjamin Gaignard <benjamin.gaignard@linaro.org>,
+ Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
+ Fabio Estevam <festevam@gmail.com>,
+ =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
+ "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
+ linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
+ Sam Ravnborg <sam@ravnborg.org>, Kyungmin Park <kyungmin.park@samsung.com>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
+ linux-rockchip@lists.infradead.org, Chen-Yu Tsai <wens@csie.org>,
+ Kukjin Kim <kgene@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
+ Dave Airlie <airlied@redhat.com>, Sascha Hauer <s.hauer@pengutronix.de>,
+ Philipp Zabel <p.zabel@pengutronix.de>, Daniel Vetter <daniel@ffwll.ch>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm <linux-arm-msm@vger.kernel.org>,
+ David Airlie <airlied@linux.ie>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ Jyri Sarha <jsarha@ti.com>, Inki Dae <inki.dae@samsung.com>,
+ Alexios Zavras <alexios.zavras@intel.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ linux-tegra@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
+ Vincent Abriou <vincent.abriou@st.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
+ Sean Paul <sean@poorly.run>, amd-gfx list <amd-gfx@lists.freedesktop.org>,
+ Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
+ Thomas Zimmermann <tzimmermann@suse.de>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Douglas Anderson <dianders@chromium.org>, LKML <linux-kernel@vger.kernel.org>,
+ Todor Tomov <todor.tomov@linaro.org>, Rob Clark <robdclark@gmail.com>,
+ Huang Rui <ray.huang@amd.com>, Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Alex Deucher <alexander.deucher@amd.com>,
+ freedreno <freedreno@lists.freedesktop.org>,
+ =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> Still missing commit message. Describe here why you need to do that.
-
-ok, added note that headers are reused in power-off-driver
-
-https://github.com/frank-w/BPI-R2-4.14/commits/5.2-poweroff-mainline
-
-> Please check your email setting as discussed offline. Otherwise your patches
-> won't get accepted.
-
-tested with webmailer where it looks good :(
-
-seems the problem is only shown when imported to patchwork
-
-using only git sendemail in ubuntu 18.4 without any mta (have sendmail not installed) and no changes made to git sendemail except authentication.
-
-i see that (except cover-letter which is quoted-printable) all is send with
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
-
-so i have forced git sendemail now to
-sendemail.composeencoding UTF-8
-
-if this does not work i can try instead
-sendemail.transferEncoding 8bit
-
-regards Frank
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+VyBkbml1IDAyLjA3LjIwMTkgb8KgMjI6NTQsIEFsZXggRGV1Y2hlciBwaXN6ZToKPiBPbiBGcmks
+IEp1biAyOCwgMjAxOSBhdCAxMjozMSBQTSBBbmRyemVqIFBpZXRyYXNpZXdpY3oKPiA8YW5kcnpl
+ai5wQGNvbGxhYm9yYS5jb20+IHdyb3RlOgo+Pgo+PiBVc2UgdGhlIGRkYyBwb2ludGVyIHByb3Zp
+ZGVkIGJ5IHRoZSBnZW5lcmljIGNvbm5lY3Rvci4KPj4KPj4gU2lnbmVkLW9mZi1ieTogQW5kcnpl
+aiBQaWV0cmFzaWV3aWN6IDxhbmRyemVqLnBAY29sbGFib3JhLmNvbT4KPj4gLS0tCj4+ICAgLi4u
+L2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29ubmVjdG9ycy5jICAgIHwgNzAgKysrKysrKysr
+KysrKystLS0tLQo+PiAgIDEgZmlsZSBjaGFuZ2VkLCA1MSBpbnNlcnRpb25zKCspLCAxOSBkZWxl
+dGlvbnMoLSkKPj4KPj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvZ3B1L2RybS9hbWQvYW1kZ3B1L2Ft
+ZGdwdV9jb25uZWN0b3JzLmMgYi9kcml2ZXJzL2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29u
+bmVjdG9ycy5jCj4+IGluZGV4IDczYjJlZGU3NzNkMy4uNWY4YTdlMzgxOGI5IDEwMDY0NAo+PiAt
+LS0gYS9kcml2ZXJzL2dwdS9kcm0vYW1kL2FtZGdwdS9hbWRncHVfY29ubmVjdG9ycy5jCj4+ICsr
+KyBiL2RyaXZlcnMvZ3B1L2RybS9hbWQvYW1kZ3B1L2FtZGdwdV9jb25uZWN0b3JzLmMKPj4gQEAg
+LTE1NzMsMTEgKzE1NzMsMTUgQEAgYW1kZ3B1X2Nvbm5lY3Rvcl9hZGQoc3RydWN0IGFtZGdwdV9k
+ZXZpY2UgKmFkZXYsCj4+ICAgICAgICAgICAgICAgICAgICAgICAgICBnb3RvIGZhaWxlZDsKPj4g
+ICAgICAgICAgICAgICAgICBhbWRncHVfY29ubmVjdG9yLT5jb25fcHJpdiA9IGFtZGdwdV9kaWdf
+Y29ubmVjdG9yOwo+PiAgICAgICAgICAgICAgICAgIGlmIChpMmNfYnVzLT52YWxpZCkgewo+PiAt
+ICAgICAgICAgICAgICAgICAgICAgICBhbWRncHVfY29ubmVjdG9yLT5kZGNfYnVzID0gYW1kZ3B1
+X2kyY19sb29rdXAoYWRldiwgaTJjX2J1cyk7Cj4+IC0gICAgICAgICAgICAgICAgICAgICAgIGlm
+IChhbWRncHVfY29ubmVjdG9yLT5kZGNfYnVzKQo+PiArICAgICAgICAgICAgICAgICAgICAgICBz
+dHJ1Y3QgYW1kZ3B1X2Nvbm5lY3RvciAqYWNuID0gYW1kZ3B1X2Nvbm5lY3RvcjsKPj4gKwo+PiAr
+ICAgICAgICAgICAgICAgICAgICAgICBhY24tPmRkY19idXMgPSBhbWRncHVfaTJjX2xvb2t1cChh
+ZGV2LCBpMmNfYnVzKTsKPj4gKyAgICAgICAgICAgICAgICAgICAgICAgaWYgKGFjbi0+ZGRjX2J1
+cykgewo+IAo+IFRoaXMgaHVuayBzZWVtcyBwb2ludGxlc3MgdW5sZXNzIEknbSBtaXNzaW5nIHNv
+bWV0aGluZy4gIENhbiB5b3UgZHJvcAo+IHRoaXMgaHVuaz8gIFNhbWUgY29tbWVudCBvbiBlYWNo
+IGluc3RhbmNlIG9mIHRoaXMgYmVsb3cuICBUaGlzIGFsc28KPiBvbmx5IGNvdmVycyB0aGUgbGVn
+YWN5IG1vZGVzZXR0aW5nIGNvZGUgd2hpY2ggaXMgbm90IHVzZWQgYnkgZGVmYXVsdAo+IG9uIG1v
+c3QgY2hpcHMuICBUaGUgREMgY29kZSBpbiBhbWQvZGlzcGxheS8gaXMgcHJvYmFibHkgbW9yZSBy
+ZWxldmFudC4KPiAKCklmIEkgZG9uJ3QgZG8gdGhhdCBjaGVja3BhdGNoIHJlcG9ydHMgdGhhdCBs
+aW5lcyBJIGNyZWF0ZWQgZXhjZWVkIDgwIGNoYXJhY3RlcnMuCgpBbmRyemVqCgpfX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWls
+aW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMu
+aW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
