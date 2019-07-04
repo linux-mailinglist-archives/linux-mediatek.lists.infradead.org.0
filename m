@@ -2,56 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BC01F5FD7C
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 21:38:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0DBED5FDD7
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jul 2019 22:44:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
-	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QJ4SOqh4MuZ93FrZXUHMp8UW/am66G4FO9kYqULDt74=; b=bI8yOkVeYR9l5b
-	F8zIp5sjsnalT+nK5eg3DgqslSUUFtEmOCZ+5yOSvTA8JiA38zJH4fFfCf5sr+NeucQ1e8dsceqH0
-	DUBL8rfRT+HiZOuG7lKAFkcVvu0CfN9ZAYutEOXiSJ+u5YiyXR3BuF75OzER0sAYwbmyjRKlzPGOr
-	StKtxxdIVYCUzBK+xO1eZPWSabqMjalxmYjrvXJNWYR7S5G3xiOfit4T/OeHYnhy41cnpdYEYiEt9
-	evY8Ev1//wuLsN+EAhjYPGILFYQ/jIVKQOc5aOsOeKn86j73bELig6KoBoK7DSdWNy2aL09sqNNFm
-	JFeLp999KKrHw21ojcOQ==;
+	List-Owner; bh=RmSvI/2WgCci3aypeJjWVQ/StXVwYSW9gTWj5jzv8nU=; b=Xt6XuzSwOhjn1s
+	o4E8/LoPJKd8iIx0xq8PBCQDbhblSQJLxKSlou5tdV75nymNOtQS7iFH84JNFtrQhI5b+q+fZD9nD
+	4KJiw4ICR7D/tqluaQAUwu9ITQYxt3tc7OaQhQDF79banwOzjcjTTPzY6MFagEn8wP4raMLIi1x/N
+	zR/b+gpK1UGjxRVJ3VPryvjAsTAoFVlmZ8mk3BvUaHS5Kf9s5tuQNa4fDndPQ1gW63LxG0DmuiSva
+	kPPvPPZqZvDVI6NQh5jIT5hrDFD6mTLAcOUdd7dDaqpx/z1zuJg4ltdUdBMzE6VM0aAP7bpSv7k7Q
+	VAYy+8gtuwXBcaaFqbww==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hj7Ya-0004pL-IM; Thu, 04 Jul 2019 19:38:12 +0000
-Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
+	id 1hj8aY-0002f2-RF; Thu, 04 Jul 2019 20:44:19 +0000
+Received: from relay11.mail.gandi.net ([217.70.178.231])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hj7YW-0004of-UX
- for linux-mediatek@lists.infradead.org; Thu, 04 Jul 2019 19:38:10 +0000
-Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::d71])
- (using TLSv1 with cipher AES256-SHA (256/256 bits))
- (Client did not present a certificate)
- (Authenticated sender: davem-davemloft)
- by shards.monkeyblade.net (Postfix) with ESMTPSA id CDF31144B3812;
- Thu,  4 Jul 2019 12:38:00 -0700 (PDT)
-Date: Thu, 04 Jul 2019 12:38:00 -0700 (PDT)
-Message-Id: <20190704.123800.788232773059713763.davem@davemloft.net>
-To: opensource@vdorst.com
-Subject: Re: [PATCH net-next v2] net: ethernet: mediatek: Fix overlapping
- capability bits.
-From: David Miller <davem@davemloft.net>
-In-Reply-To: <20190703184203.20137-1-opensource@vdorst.com>
-References: <20190703184203.20137-1-opensource@vdorst.com>
-X-Mailer: Mew version 6.8 on Emacs 26.1
-Mime-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
- (shards.monkeyblade.net [149.20.54.216]);
- Thu, 04 Jul 2019 12:38:01 -0700 (PDT)
+ id 1hj8aH-0002V0-Lu; Thu, 04 Jul 2019 20:44:03 +0000
+Received: from localhost (lfbn-1-1545-137.w90-65.abo.wanadoo.fr
+ [90.65.161.137])
+ (Authenticated sender: alexandre.belloni@bootlin.com)
+ by relay11.mail.gandi.net (Postfix) with ESMTPSA id E568E100006;
+ Thu,  4 Jul 2019 20:43:37 +0000 (UTC)
+Date: Thu, 4 Jul 2019 22:43:36 +0200
+From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+To: Frank Wunderlich <frank-w@public-files.de>
+Subject: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
+Message-ID: <20190704204336.GJ3692@piout.net>
+References: <20190703164822.17924-1-frank-w@public-files.de>
+ <20190703164822.17924-4-frank-w@public-files.de>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190703164822.17924-4-frank-w@public-files.de>
+User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_123808_989825_5ED3F167 
-X-CRM114-Status: GOOD (  11.33  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190704_134402_034645_0D288FA9 
+X-CRM114-Status: GOOD (  15.43  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.178.231 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,42 +61,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, f.fainelli@gmail.com, frank-w@public-files.de,
- netdev@vger.kernel.org, sean.wang@mediatek.com, linux@armlinux.org.uk,
- linux-mips@vger.kernel.org, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, vivien.didelot@gmail.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
+ Richard Fontana <rfontana@redhat.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ "Paul E . McKenney" <paulmck@linux.ibm.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-rtc@vger.kernel.org, Rob Herring <robh@kernel.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
+ linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ Allison Randal <allison@lohutok.net>, Alessandro Zummo <a.zummo@towertech.it>,
+ Josef Friedl <josef.friedl@speed.at>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Sebastian Reichel <sre@kernel.org>, "David S . Miller" <davem@davemloft.net>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RnJvbTogUmVuw6kgdmFuIERvcnN0IDxvcGVuc291cmNlQHZkb3JzdC5jb20+DQpEYXRlOiBXZWQs
-ICAzIEp1bCAyMDE5IDIwOjQyOjA0ICswMjAwDQoNCj4gQm90aCBNVEtfVFJHTUlJX01UNzYyMV9D
-TEsgYW5kIE1US19QQVRIX0JJVCBhcmUgZGVmaW5lZCBhcyBiaXQgMTAuDQo+IA0KPiBUaGlzIGNh
-biBjYXVzZXMgaXNzdWVzIG9uIG5vbi1NVDc2MjEgZGV2aWNlcyB3aGljaCBoYXMgdGhlDQo+IE1U
-S19QQVRIX0JJVChNVEtfRVRIX1BBVEhfR01BQzFfUkdNSUkpIGFuZCBNVEtfVFJHTUlJIGNhcGFi
-aWxpdHkgc2V0Lg0KPiBUaGUgd3JvbmcgVFJHTUlJIHNldHVwIGNvZGUgY2FuIGJlIGV4ZWN1dGVk
-LiBUaGUgY3VycmVudCB3cm9uZ2x5IGV4ZWN1dGVkDQo+IGNvZGUgZG9lc27igJl0IGRvIGFueSBo
-YXJtIG9uIE1UNzYyMyBhbmQgdGhlIFRSR01JSSBzZXR1cCBmb3IgdGhlIE1UNzYyMw0KPiBTT0Mg
-c2lkZSBpcyBkb25lIGluIE1UNzUzMCBkcml2ZXIgU28gaXQgd2FzbuKAmXQgbm90aWNlZCBpbiB0
-aGUgdGVzdC4NCj4gDQo+IE1vdmUgYWxsIGNhcGFiaWxpdHkgYml0cyBpbiBvbmUgZW51bSBzbyB0
-aGF0IHRoZXkgYXJlIGFsbCB1bmlxdWUgYW5kIGVhc3kNCj4gdG8gZXhwYW5kIGluIHRoZSBmdXR1
-cmUuDQo+IA0KPiBCZWNhdXNlIG10a19ldGhfcGF0aCBlbnVtIGlzIG1lcmdlZCBpbiB0byBta3Rf
-ZXRoX2NhcGFiaWxpdGllcywgdGhlDQo+IHZhcmlhYmxlIHBhdGggdmFsdWUgaXMgbm8gbG9uZ2Vy
-IGJldHdlZW4gMCB0byBudW1iZXIgb2YgcGF0aHMsDQo+IG10a19ldGhfcGF0aF9uYW1lIGNhbuKA
-mXQgYmUgdXNlZCBhbnltb3JlIGluIHRoaXMgZm9ybS4gQ29udmVydCB0aGUNCj4gbXRrX2V0aF9w
-YXRoX25hbWUgYXJyYXkgdG8gYSBmdW5jdGlvbiB0byBsb29rdXAgdGhlIHBhdGhuYW1lLg0KPiAN
-Cj4gVGhlIG9sZCBjb2RlIHdhbGtlZCB0aHJ1IHRoZSBtdGtfZXRoX3BhdGggZW51bSwgd2hpY2gg
-aXMgYWxzbyBtZXJnZWQNCj4gd2l0aCBta3RfZXRoX2NhcGFiaWxpdGllcy4gRXhwYW5kIGFycmF5
-IG10a19ldGhfbXV4YyBzbyBpdCBjYW4gc3RvcmUgdGhlDQo+IG5hbWUgYW5kIGNhcGFiaWxpdHkg
-Yml0IG9mIHRoZSBtdXguIENvbnZlcnQgdGhlIGNvZGUgc28gaXQgY2FuIHdhbGsgdGhydQ0KPiB0
-aGUgbXRrX2V0aF9tdXhjIGFycmF5Lg0KPiANCj4gRml4ZXM6IDhlZmFhNjUzYThhNSAoIm5ldDog
-ZXRoZXJuZXQ6IG1lZGlhdGVrOiBBZGQgTVQ3NjIxIFRSR01JSSBtb2RlDQo+IHN1cHBvcnQiKQ0K
-DQpQbGVhc2UgaW4gdGhlIGZ1dHVyZSBkbyBub3Qgc3BsaXQgRml4ZXM6IHRhZ3Mgb250byBtdXRs
-aXBsZSBsaW5lcywgaXQNCm11c3QgYmUgb25lIGNvbnRpZ3VvdXMgbGluZSBubyBtYXR0ZXIgaG93
-IGxvbmcuICBJIGZpeGVkIGl0IHVwIHRoaXMNCnRpbWUuDQoNCj4gU2lnbmVkLW9mZi1ieTogUmVu
-w6kgdmFuIERvcnN0IDxvcGVuc291cmNlQHZkb3JzdC5jb20+DQoNCkFwcGxpZWQsIHRoYW5rIHlv
-dS4NCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4
-LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3Jn
-Cmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0
-ZWsK
+On 03/07/2019 18:48:18+0200, Frank Wunderlich wrote:
+> @@ -271,14 +268,11 @@ static int mtk_rtc_probe(struct platform_device *pdev)
+> 
+>  	platform_set_drvdata(pdev, rtc);
+> 
+> -	rtc->rtc_dev = devm_rtc_allocate_device(rtc->dev);
+> -	if (IS_ERR(rtc->rtc_dev))
+> -		return PTR_ERR(rtc->rtc_dev);
+> +	ret = devm_request_threaded_irq(&pdev->dev, rtc->irq, NULL,
+> +					mtk_rtc_irq_handler_thread,
+> +					IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
+> +					"mt6397-rtc", rtc);
+> 
+
+This change may lead to a crash and the allocation was intentionally
+placed before the irq request.
+
+> -	ret = request_threaded_irq(rtc->irq, NULL,
+> -				   mtk_rtc_irq_handler_thread,
+> -				   IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
+> -				   "mt6397-rtc", rtc);
+>  	if (ret) {
+>  		dev_err(&pdev->dev, "Failed to request alarm IRQ: %d: %d\n",
+>  			rtc->irq, ret);
+> @@ -287,6 +281,10 @@ static int mtk_rtc_probe(struct platform_device *pdev)
+> 
+>  	device_init_wakeup(&pdev->dev, 1);
+> 
+> +	rtc->rtc_dev = devm_rtc_allocate_device(&pdev->dev);
+> +	if (IS_ERR(rtc->rtc_dev))
+> +		return PTR_ERR(rtc->rtc_dev);
+> +
+>  	rtc->rtc_dev->ops = &mtk_rtc_ops;
+> 
+>  	ret = rtc_register_device(rtc->rtc_dev);
+> @@ -302,15 +300,6 @@ static int mtk_rtc_probe(struct platform_device *pdev)
+>  	return ret;
+>  }
+> 
+> -static int mtk_rtc_remove(struct platform_device *pdev)
+> -{
+> -	struct mt6397_rtc *rtc = platform_get_drvdata(pdev);
+> -
+> -	free_irq(rtc->irq, rtc);
+> -
+> -	return 0;
+> -}
+> -
+>  #ifdef CONFIG_PM_SLEEP
+>  static int mt6397_rtc_suspend(struct device *dev)
+>  {
+> @@ -337,6 +326,7 @@ static SIMPLE_DEV_PM_OPS(mt6397_pm_ops, mt6397_rtc_suspend,
+>  			mt6397_rtc_resume);
+> 
+>  static const struct of_device_id mt6397_rtc_of_match[] = {
+> +	{ .compatible = "mediatek,mt6323-rtc", },
+
+Unrelated change, this is not an improvement and must be accompanied by
+a documentation change.
+
+>  	{ .compatible = "mediatek,mt6397-rtc", },
+>  	{ }
+>  };
+> @@ -349,7 +339,6 @@ static struct platform_driver mtk_rtc_driver = {
+>  		.pm = &mt6397_pm_ops,
+>  	},
+>  	.probe	= mtk_rtc_probe,
+> -	.remove = mtk_rtc_remove,
+>  };
+> 
+>  module_platform_driver(mtk_rtc_driver);
+> --
+> 2.17.1
+> 
+
+-- 
+Alexandre Belloni, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
