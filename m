@@ -2,110 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AAEBA60840
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 16:47:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4DD0360970
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 17:37:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:To:
+	From:Message-ID:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qIxBoUUtBKGifsa9uHEKpltV7teSXHLGLz3yAafivuw=; b=jFIuTz9nrTG8d5
-	JFDtFxwatnH9furwBuJQhI1Uy12M+3R6qNVNfkC0ER89p34ssbx7L5QcgAyWlVfZucQye+ZEB1EXu
-	ZVdgmTqyhKr+qmbOL34XDqUEY+1+Qvr8HaGuZYrV6Jy5PFijFhDA6rsu43pbAOE10AqSRvYSgmKmF
-	5/IEvoNNUdFtfhotvshzRMjIW/O+quopgAQA24Tkf2cgWZWVb/jeVixZ2A3wuvpLHAcX+ssEffROw
-	zMCNPHdtqzZRpTEMNkEqXUuFS2w7XhnLNNG25+XwM/BsIx1b/ZUHR6hIoVLcuWNS54xd3sIkG+mLl
-	MlSSl/zgLusDgCGVLcZQ==;
+	List-Owner; bh=7Z3vwy2p0+5g+3IjUNYyvGJO0JU6KqoVAY5RNb7OOH8=; b=sYkDD8I4CJCxxi
+	EPg861PhqVfe467KAINHqbXypJQIvybx4JT8xMXQQrlgnWxLN96bMeId70VpUyJAT2dAAwDNk07CU
+	1Y8TAQG9yamG99szGEEzxNkh48bN9exXMwuStAzoGDVpkedSE2kjjzzXiafBIoWJdfyE22qiQCa8C
+	xMc3ACenevNND8BSs/RyX1HpU9JFHD1lshKx6Dd+xBKCh4GUpg0hK6a2hDEP37sNJZ1d4Z29A2p7o
+	1pAQSUDQCl3/kvi9xRhg0xh54vW6BREmjzFuZi6G+jFVUYfqiLlKpqJiFPJB3HSp9QUi4BqnYPh9a
+	aCg3YoDwK9vzcIaDeBww==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjPV3-00034a-3a; Fri, 05 Jul 2019 14:47:45 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hjQH2-0002vO-VC; Fri, 05 Jul 2019 15:37:20 +0000
+Received: from mout.gmx.net ([212.227.15.19])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjPRi-0006J8-J2
- for linux-mediatek@bombadil.infradead.org; Fri, 05 Jul 2019 14:44:18 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Content-Type:Cc:To:Subject:Message-ID:
- Date:From:In-Reply-To:References:MIME-Version:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Z1fWimE5LBhG/grVg6eI87RotqFb0roHvhFn0bvlYoY=; b=QO2bWmRsJWjD0w5RbBTeo5M1J
- yqeO64U4NDbduQBGx6gKNaDpLu4Xu5CdjNNi5ejwZr8iSvaAk/3I1atBiR7JXHMGVJbdj3RjfJ7I4
- jWlvuWi7JkUtEmIuC9kUFmh1576kEqqvxX2/X2vDJxE7o3V7usOh4Hq3tzebCcbkMqGqsm782zTsm
- DXIfybPQNOMFegU2ekpIdlQJxlEn6qb8zbyhBPSt5w5LgshuLTrpuUrdjHwrLrQ3jApkCKpL2rOzb
- rdZwT+lvS7Eil52mF+XNmMzUtteCv5TIg9F6FqXEfkpTr9N4qAcq4sQtL6I1al5akgXJPsWUSuR89
- iOa5SsavA==;
-Received: from mail-io1-xd43.google.com ([2607:f8b0:4864:20::d43])
- by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjOOB-0002GK-7L
- for linux-mediatek@lists.infradead.org; Fri, 05 Jul 2019 13:36:37 +0000
-Received: by mail-io1-xd43.google.com with SMTP id z3so4228140iog.0
- for <linux-mediatek@lists.infradead.org>; Fri, 05 Jul 2019 06:36:34 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Z1fWimE5LBhG/grVg6eI87RotqFb0roHvhFn0bvlYoY=;
- b=Lnxerxt4jClA4MjKorP5iPnUVKYLaeN7x1LmQadqGzya9Hnsuvt1Nz9wAb5OsXmo9W
- v0cdoNBys7WZ955ZU3Jp3CS0nnG6UTbc7pTHuCw0PabUUK7ZcvnR2yAHDyUPJ31EssJA
- 6eMIDFB8tZH9Tpq0HXoieDMIekGtVcLMioTtdx1aSD/MF6JcRI0wtkMg8NVsk4ncTIIT
- rAjOBCDqtFVernkxMTFQQZtxwhWs4xm6Y6W7WNCQZFq2IxBO8AIdiirHi+GkubXfRP0Z
- o6UFPOYlSIwvMSq0BNEidnCK5ORfTbGJuSi9ZkzUtHkMWj0KgL15xS6yG4sCnz5cW0Lj
- Io7g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Z1fWimE5LBhG/grVg6eI87RotqFb0roHvhFn0bvlYoY=;
- b=XtPtoe53/j6OLENP7zzSPoU6KKy9ZzGdoxxuuQHi5zsa2jdmF8pW65Xm0kV+Gj+JbZ
- 0jzy3A7Y7E+iqlwQ33vkBL9cq5DlgK7zJOk16sqkC88JCFR0Zqf552KUmdbeMlXjcnqJ
- We01MNOenfQO3KJAeM7m7U7HIRIXiYUEfnrR4rkb/i5fW6qxc7Be84MQZXaT8An3GHB4
- Xr4r3zVmH7lNgrWH7bATDMbylvBaxqIYck3cgg7DwT8xxLpE0kEg8YBPDbPCAxdjWgpK
- EsS81ZNMYxsOOYxu8tq0C9cbX9pj5uYljQRbzk8yEYdOOH8mysrAJJFLYlhjpoNRzZC0
- 6uTA==
-X-Gm-Message-State: APjAAAXpytOHwdYyIGF/7loeCTrcG2LsnN/QfjGwW/qH+OYUhcW9a2d5
- f3CDhd7GmuAEMT1H9/NTxIScjp9O4csHSySWKKTwRw==
-X-Google-Smtp-Source: APXvYqyUsHHTlKMctHpic07R1doMCk0jHwk68Y9gsTeKbOEsxX+msCvOmfkff5qNb2py5BNyBqvtJ2UV3fs+Wa7D2BY=
-X-Received: by 2002:a5e:c241:: with SMTP id w1mr4038131iop.58.1562333701423;
- Fri, 05 Jul 2019 06:35:01 -0700 (PDT)
+ id 1hjQGq-0002lV-RW; Fri, 05 Jul 2019 15:37:10 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1562340946;
+ bh=+xG973BWcEz2x94VZcUAPePu5GwCe5fwDn2xc5iFqo0=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+ b=N0/iBvJc6HtX2nJ4b7IPEhJQHze0yGnFVfDsrmD7ZCrkY1o/NEmt/GfIh0sEBoPZk
+ pUwgP+xFM6zSWbqJykxww7GN6eLJ2skqyA7owjZiCfEOBg042cwWIgn7mjUyrBCEpv
+ jE/dN7C0LP0estl9Ivtpd/Id2IV8oTVe4Tp9sxUo=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [185.53.41.182] ([185.53.41.182]) by web-mail.gmx.net
+ (3c-app-gmx-bs68.server.lan [172.19.170.213]) (via HTTP); Fri, 5 Jul 2019
+ 17:35:46 +0200
 MIME-Version: 1.0
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07>
- <1560479520.15814.34.camel@mtksdccf07> <1560744017.15814.49.camel@mtksdccf07>
- <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
- <1560774735.15814.54.camel@mtksdccf07> <1561974995.18866.1.camel@mtksdccf07>
-In-Reply-To: <1561974995.18866.1.camel@mtksdccf07>
-From: Dmitry Vyukov <dvyukov@google.com>
-Date: Fri, 5 Jul 2019 15:34:49 +0200
-Message-ID: <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-To: Walter Wu <walter-zh.wu@mediatek.com>
-X-Spam-Note: CRM114 invocation failed
-X-Spam-Score: -15.7 (---------------)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
- Content analysis details:   (-15.7 points)
+Message-ID: <trinity-7b1977bd-252b-4482-b708-cf704a9d3da1-1562340946396@3c-app-gmx-bs68>
+From: "Frank Wunderlich" <frank-w@public-files.de>
+To: "Alexandre Belloni" <alexandre.belloni@bootlin.com>
+Subject: Aw: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
+Date: Fri, 5 Jul 2019 17:35:46 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <20190704204336.GJ3692@piout.net>
+References: <20190703164822.17924-1-frank-w@public-files.de>
+ <20190703164822.17924-4-frank-w@public-files.de>
+ <20190704204336.GJ3692@piout.net>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K1:3DQjnrcP0qQkneq0N2KGXDypFxKC70Y6B/6Wz6gG83c+zzU8tPfyJ7R1HE1HqAXh3hB2I
+ tgJSbOVBlcwfm2+5WrNhSjWxrIe4AmFQkfXZmEFAprfzxqChBFn9HnyAR9YWrNvCPuG17yU7Op4d
+ ugpFGrIo4Tf+JcmINzOK23uQEhN2f8orMVc5A246lEDzSCXmCflOxlZ6PHU1xgJelMk9hVPkR8fZ
+ DhVDomXvArd2HR4UT+Ec00/BFdO1KKd8+sxf1crLqLghjGrqQGEuEjQemQPPAcQJzokFsPSPjEgJ
+ Ok=
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:U5UYnBEkf+0=:lL1CL6XEoZrqJz8T2zwkL5
+ 4VYvmDYvZ5WzNABcDNBejMTkwRG1c67XpMAnjTSAn1VKRZ87YyW8Fes8PHzncewehLQUqaLue
+ LVS2SFGPFzRxC0khTzvlus1KUr5oZY7QijfOK9hocquUSx+iHzpI9TDlAnmWe4UaoMF/42CDH
+ WGqzSesYNDhJ7QrAjfxtUFBYbMU6YGR/80HNhJeKizPb9hMhw1PNX2FTuEKhB9AhTNWDwj9jf
+ iz2TYEYzFWXqIjVYcbNyIpCk5fhnRvSvMFgGnv8nXdIrk/aesBOoI1tMC5dY47eKVhwcxbF3G
+ D+sXhAC/j9gEmrB19oC5cSMkvSvUHyXuG49+ftF/sz8bwRecT//qfKlBN/CWfLF+KTKQ0W48R
+ xrcCxWA4aVF7JhOIHm0iuSzma7jniESyMdd9UufoYSt+hBWPgp+BB9+EF6Ufu4+PeO1WxdTxr
+ CO5FuMMppqZq0zy35n31R7Y7AqTSK4X0aeIIY0rtWO4BOnrtCnxD4Kxjj93N0FpJ/y3CWdPFE
+ r2AHMveJE7FwuKD4IPTmai0ubwLDHQJximoqtKtj7ibjV+W5K1jLBN8QCGyFm+7WaavnB4il9
+ jtB6YIWXJrrwvYpdopClbcSNQtobLh8iTwP4OAZnwlQXtwCqyeKBff4O3dDbmq/Ihzy05qfUB
+ Zrmc=
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190705_083709_223640_1BD8828A 
+X-CRM114-Status: GOOD (  12.22  )
+X-Spam-Score: 0.0 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d43 listed in]
- [list.dnswl.org]
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
+ no trust [212.227.15.19 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match
- 0.0 T_PDS_NO_HELO_DNS      High profile HELO but no A record
- -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -117,126 +90,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily Gorbik <gor@linux.ibm.com>,
- Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
- Andrey Konovalov <andreyknvl@google.com>, linux-mediatek@lists.infradead.org,
- LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
- Pekka Enberg <penberg@kernel.org>, Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- David Rientjes <rientjes@google.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, Linus
+ Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
+ Richard Fontana <rfontana@redhat.com>, Mauro
+ Carvalho Chehab <mchehab+samsung@kernel.org>,
+ "Paul E . McKenney" <paulmck@linux.ibm.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-rtc@vger.kernel.org, Rob Herring <robh@kernel.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
+ linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>, Christoph Lameter <cl@linux.com>,
- Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ Allison Randal <allison@lohutok.net>, Alessandro Zummo <a.zummo@towertech.it>,
+ Josef Friedl <josef.friedl@speed.at>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Sebastian
+ Reichel <sre@kernel.org>, "David S . Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Jul 1, 2019 at 11:56 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
-> > > > > > > > This patch adds memory corruption identification at bug report for
-> > > > > > > > software tag-based mode, the report show whether it is "use-after-free"
-> > > > > > > > or "out-of-bound" error instead of "invalid-access" error.This will make
-> > > > > > > > it easier for programmers to see the memory corruption problem.
-> > > > > > > >
-> > > > > > > > Now we extend the quarantine to support both generic and tag-based kasan.
-> > > > > > > > For tag-based kasan, the quarantine stores only freed object information
-> > > > > > > > to check if an object is freed recently. When tag-based kasan reports an
-> > > > > > > > error, we can check if the tagged addr is in the quarantine and make a
-> > > > > > > > good guess if the object is more like "use-after-free" or "out-of-bound".
-> > > > > > > >
-> > > > > > >
-> > > > > > >
-> > > > > > > We already have all the information and don't need the quarantine to make such guess.
-> > > > > > > Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
-> > > > > > > otherwise it's use-after-free.
-> > > > > > >
-> > > > > > > In pseudo-code it's something like this:
-> > > > > > >
-> > > > > > > u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
-> > > > > > >
-> > > > > > > if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
-> > > > > > >   // out-of-bounds
-> > > > > > > else
-> > > > > > >   // use-after-free
-> > > > > >
-> > > > > > Thanks your explanation.
-> > > > > > I see, we can use it to decide corruption type.
-> > > > > > But some use-after-free issues, it may not have accurate free-backtrace.
-> > > > > > Unfortunately in that situation, free-backtrace is the most important.
-> > > > > > please see below example
-> > > > > >
-> > > > > > In generic KASAN, it gets accurate free-backrace(ptr1).
-> > > > > > In tag-based KASAN, it gets wrong free-backtrace(ptr2). It will make
-> > > > > > programmer misjudge, so they may not believe tag-based KASAN.
-> > > > > > So We provide this patch, we hope tag-based KASAN bug report is the same
-> > > > > > accurate with generic KASAN.
-> > > > > >
-> > > > > > ---
-> > > > > >     ptr1 = kmalloc(size, GFP_KERNEL);
-> > > > > >     ptr1_free(ptr1);
-> > > > > >
-> > > > > >     ptr2 = kmalloc(size, GFP_KERNEL);
-> > > > > >     ptr2_free(ptr2);
-> > > > > >
-> > > > > >     ptr1[size] = 'x';  //corruption here
-> > > > > >
-> > > > > >
-> > > > > > static noinline void ptr1_free(char* ptr)
-> > > > > > {
-> > > > > >     kfree(ptr);
-> > > > > > }
-> > > > > > static noinline void ptr2_free(char* ptr)
-> > > > > > {
-> > > > > >     kfree(ptr);
-> > > > > > }
-> > > > > > ---
-> > > > > >
-> > > > > We think of another question about deciding by that shadow of the first
-> > > > > byte.
-> > > > > In tag-based KASAN, it is immediately released after calling kfree(), so
-> > > > > the slub is easy to be used by another pointer, then it will change
-> > > > > shadow memory to the tag of new pointer, it will not be the
-> > > > > KASAN_TAG_INVALID, so there are many false negative cases, especially in
-> > > > > small size allocation.
-> > > > >
-> > > > > Our patch is to solve those problems. so please consider it, thanks.
-> > > > >
-> > > > Hi, Andrey and Dmitry,
-> > > >
-> > > > I am sorry to bother you.
-> > > > Would you tell me what you think about this patch?
-> > > > We want to use tag-based KASAN, so we hope its bug report is clear and
-> > > > correct as generic KASAN.
-> > > >
-> > > > Thanks your review.
-> > > > Walter
-> > >
-> > > Hi Walter,
-> > >
-> > > I will probably be busy till the next week. Sorry for delays.
+Hi Alexander,
+
+thank you for the Review
+
+> Gesendet: Donnerstag, 04. Juli 2019 um 22:43 Uhr
+> Von: "Alexandre Belloni" <alexandre.belloni@bootlin.com>
+> > -	rtc->rtc_dev = devm_rtc_allocate_device(rtc->dev);
+> > -	if (IS_ERR(rtc->rtc_dev))
+> > -		return PTR_ERR(rtc->rtc_dev);
+> > +	ret = devm_request_threaded_irq(&pdev->dev, rtc->irq, NULL,
+> > +					mtk_rtc_irq_handler_thread,
+> > +					IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
+> > +					"mt6397-rtc", rtc);
 > >
-> > It's ok. Thanks your kindly help.
-> > I hope I can contribute to tag-based KASAN. It is a very important tool
-> > for us.
 >
-> Hi, Dmitry,
+> This change may lead to a crash and the allocation was intentionally
+> placed before the irq request.
+
+i got no crash till now, but i will try to move the allocation before irq-request
+
+> > -	ret = request_threaded_irq(rtc->irq, NULL,
+> > -				   mtk_rtc_irq_handler_thread,
+> > -				   IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
+> > -				   "mt6397-rtc", rtc);
+> >  	if (ret) {
+> >  		dev_err(&pdev->dev, "Failed to request alarm IRQ: %d: %d\n",
+> >  			rtc->irq, ret);
+> > @@ -287,6 +281,10 @@ static int mtk_rtc_probe(struct platform_device *pdev)
+> >
+> >  	device_init_wakeup(&pdev->dev, 1);
+> >
+> > +	rtc->rtc_dev = devm_rtc_allocate_device(&pdev->dev);
+> > +	if (IS_ERR(rtc->rtc_dev))
+> > +		return PTR_ERR(rtc->rtc_dev);
+> > +
+> >  	rtc->rtc_dev->ops = &mtk_rtc_ops;
+
+
+> >  static const struct of_device_id mt6397_rtc_of_match[] = {
+> > +	{ .compatible = "mediatek,mt6323-rtc", },
 >
-> Would you have free time to discuss this patch together?
-> Thanks.
+> Unrelated change, this is not an improvement and must be accompanied by
+> a documentation change.
 
-Sorry for delays. I am overwhelm by some urgent work. I afraid to
-promise any dates because the next week I am on a conference, then
-again a backlog and an intern starting...
+documentation is changed in 1/7 defining this compatible. i called it improvement because existing driver now supports another chip
 
-Andrey, do you still have concerns re this patch? This change allows
-to print the free stack.
-We also have a quarantine for hwasan in user-space. Though it works a
-bit differently then the normal asan quarantine. We keep a per-thread
-fixed-size ring-buffer of recent allocations:
-https://github.com/llvm-mirror/compiler-rt/blob/master/lib/hwasan/hwasan_report.cpp#L274-L284
-and scan these ring buffers during reports.
+regards Frank
 
 _______________________________________________
 Linux-mediatek mailing list
