@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D3B960830
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 16:45:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 10C676071D
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 16:02:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZNMKWPQBdQW64m+QWWaIMxkBual3OR3Vo1ALAQKypkE=; b=aeUhhOivINbl0X
-	Tw0/l9vHd9WUOrrdI32Kc0snDAvdCbJXJMBUr8jZJ0BrMHNE1cHxuWAC0vYepUsHyq4i5c8dS1urL
-	Lk8MY4s6K7FHxdp51E/0VzPhdKZCyTTSnRQLP3aU8U2DSys6bPNYwAh7EUjLqwBgqDlhI7FJPI607
-	wuMgnD4TORahobPQZK3RhFUvM9X+qH6lJMZTUk5OF80WgpkGwGuv4Y5zF34/+si7xsNXj/gDxZyvv
-	3rsc+6Jzo9Hamvv96yXBLkSZakYDIH8p+S2sFm8xGaiT5LhhgqXrxy52rfaOgRLiy30IjAV4XNiz3
-	vxZ4mutZXv20Ca3hvcmw==;
+	List-Owner; bh=ibNg5hKu8tIuLUP07yj+cP+8x/uMQSRYZlcVi/XAV1o=; b=CehqobO7t44VDA
+	MKFnxnpyBS1c89q40/Nzowml7PCozAnC5h/cfNP7gKsX2SiMAtJ76kFmX17vZN+UFYfiWrfST6ZxL
+	8zs17UaWGlecDtaoGoa9V4HjZe0N2j9Hzl2haWqo/mw/gIpOxgoD/N8+Abg77N/qPWvor8VhDv2KB
+	llhLGP4Kdm4JtlTQRhPcbYp+RAm4sJnPBpilP41RQ7oryzblWdJ3AUH9OxCl6NDtNpZe8oGl4bDlT
+	5fjwpoiahEG3lgONVbZo4dloOIJ3nENJqwcuFw797tX72ZXn1ooFpkEx4hJID9rh7NROgh6cwJECN
+	c8Kervd1C+8tnthzchQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjPSY-0007LI-1M; Fri, 05 Jul 2019 14:45:10 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hjOnU-0006km-Cj; Fri, 05 Jul 2019 14:02:44 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjPR9-0005ji-9e; Fri, 05 Jul 2019 14:43:43 +0000
+ id 1hjOfp-000544-QV; Fri, 05 Jul 2019 13:54:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=MIME-Version:Content-Transfer-Encoding:
+ d=infradead.org; s=casper.20170209; h=MIME-Version:Content-Transfer-Encoding:
  Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID:Sender
  :Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
  Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
  List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=CvvjHghZYU6vLLbZX/ZNhwrWjI+6NUrtmnEBcny3ncU=; b=o171gWqUI08dyfWFy4jPIbBIYZ
- zrXntRs7mV53mYVwXkQQywhmQe1X2xvPuJ+sLJ1EaehcFq+jZoWksVCQFksiE++0kHhEP+BTetkhf
- JimN7LBrgiJjl7Vcc7R8VqsEoB4An3fO4kmN4rm7i70bJluovXvix8SSwJWNre5YyH/KjYn+VVO6m
- Pc8vuwaebP7YjKnu2+w9IFr+gqEpx0Hmgq4S4QUp+dcgeoZBi3HzCCch7fTJ3xC+uYHnrj/qyabLJ
- sFDeumg6JurBOGxbkYhcTMxPsfiUGGI3617QjyulQe2zk3C1zuI14B7HAR3c6SOEYuSehThdAWo7c
- ChZfx6Eg==;
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjH3w-0007jl-PS; Fri, 05 Jul 2019 05:47:14 +0000
-X-UUID: cb6ddac5f788497e85c4fc62b0c81b52-20190704
-X-UUID: cb6ddac5f788497e85c4fc62b0c81b52-20190704
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=hyudu+hNNSmtU4eC9sn2X8JbiWNZ+/c2Se38zvMvqEE=; b=CrZsFedOrrfOfur4bWmBSfR2Wg
+ iNS/Nc8ubW13Igr2B2PAeUaXF9yzg7mG2aKOjYyCURQaRteV3O5SBTDPJOAvuzi5cmqcVBQJ33BPm
+ veKVir37xEt3e4BvhDpjq26vkATWCgPhqDlr5QN8spBPYwGMvJDWSbUnfY1e1Rzw3/1b3t1K+z5C/
+ GJulrPD2XPfJw716h0f5TffUsuYB/YK5XvXCKTDm5VGqgUzyB76U4fCNxQomPCBouQCbbIf16AKTc
+ YqR5MYzZjq+pJaJNEkG0BpuBxVA1qbcgMQN8fpnc1By39RjvGdh/VAOmAWNhA9bzQ7n0SZrvcYKfD
+ pDxwkseQ==;
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjJ9o-0004d0-P7; Fri, 05 Jul 2019 08:01:28 +0000
+X-UUID: 7c1c13ac422641fa922e06f1d471fa6b-20190704
+X-UUID: 7c1c13ac422641fa922e06f1d471fa6b-20190704
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <jungo.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 152100366; Thu, 04 Jul 2019 21:44:35 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 4 Jul 2019 22:44:33 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 5 Jul 2019 13:44:31 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ with ESMTP id 969946169; Thu, 04 Jul 2019 23:59:43 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 5 Jul 2019 00:59:41 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 5 Jul 2019 15:59:39 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 5 Jul 2019 13:44:31 +0800
-Message-ID: <1562305471.1212.58.camel@mtksdccf07>
+ Transport; Fri, 5 Jul 2019 15:59:39 +0800
+Message-ID: <1562313579.1212.73.camel@mtksdccf07>
 Subject: Re: [RFC,v3 9/9] media: platform: Add Mediatek ISP P1 shared memory
  device
 From: Jungo Lin <jungo.lin@mediatek.com>
 To: Tomasz Figa <tfiga@chromium.org>
-Date: Fri, 5 Jul 2019 13:44:31 +0800
+Date: Fri, 5 Jul 2019 15:59:39 +0800
 In-Reply-To: <CAAFQd5BaTQ-Q7gsE0X+d4_81OZq9WHaCYkmALt7_4A1JFo=_8g@mail.gmail.com>
 References: <jungo.lin@mediatek.com>
  <20190611035344.29814-1-jungo.lin@mediatek.com>
@@ -68,16 +68,16 @@ References: <jungo.lin@mediatek.com>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
-X-Spam-Note: CRM114 invocation failed
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190705_090125_103672_56AFF3A6 
+X-CRM114-Status: GOOD (  22.16  )
 X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
- Content analysis details:   (0.0 points)
+X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
+ Content analysis details:   (0.0 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -113,56 +113,17 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Tomasz:
+Hi Tomasz:
+
 On Fri, 2019-07-05 at 13:22 +0900, Tomasz Figa wrote:
 > Hi Jungo,
 > 
 > On Fri, Jul 5, 2019 at 12:33 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
 > >
 > > Hi Tomasz,
-> >
-> > On Mon, 2019-07-01 at 16:25 +0900, Tomasz Figa wrote:
-> > > Hi Jungo,
-> > >
-> > > On Tue, Jun 11, 2019 at 11:53:44AM +0800, Jungo Lin wrote:
-> > > > The purpose of this child device is to provide shared
-> > > > memory management for exchanging tuning data between co-processor
-> > > > and the Pass 1 unit of the camera ISP system, including cache
-> > > > buffer handling.
-> > > >
-> > >
-> > > Looks like we haven't really progressed on getting this replaced with
-> > > something that doesn't require so much custom code. Let me propose something
-> > > better then.
-> > >
-> > > We already have a reserved memory mode in DT. If it has a compatible string
-> > > of "shared-dma-pool", it would be registered in the coherent DMA framework
-> > > [1]. That would make it available for consumer devices to look-up.
-> > >
-> > > Now if we add a "memory-region" property to the SCP device node and point it
-> > > to our reserved memory node, the SCP driver could look it up and hook to the
-> > > DMA mapping API using of_reserved_mem_device_init_by_idx[2].
-> > >
-> > > That basically makes any dma_alloc_*(), dma_map_*(), etc. calls on the SCP
-> > > struct device use the coherent DMA ops, which operate on the assigned memory
-> > > pool. With that, the P1 driver could just directly use those calls to
-> > > manage the memory, without any custom code.
-> > >
-> > > There is an example how this setup works in the s5p-mfc driver[3], but it
-> > > needs to be noted that it creates child nodes, because it can have more than
-> > > 1 DMA port, which may need its own memory pool. In our case, we wouldn't
-> > > need child nodes and could just use the SCP device directly.
-> > >
-> > > [1] https://elixir.bootlin.com/linux/v5.2-rc7/source/kernel/dma/coherent.c#L345
-> > > [2] https://elixir.bootlin.com/linux/v5.2-rc7/source/drivers/of/of_reserved_mem.c#L312
-> > > [3] https://elixir.bootlin.com/linux/v5.2-rc7/source/drivers/media/platform/s5p-mfc/s5p_mfc.c#L1075
-> > >
-> > > Let me also post some specific comments below, in case we end up still
-> > > needing any of the code.
-> > >
-> >
-> > Thanks your suggestions.
-> >
+
+[snip]
+
 > > After applying your suggestion in SCP device driver, we could remove
 > > mtk_cam-smem.h/c. Currently, we use dma_alloc_coherent with SCP device
 > > to get SCP address. We could touch the buffer with this SCP address in
@@ -185,9 +146,6 @@ On Fri, 2019-07-05 at 13:22 +0900, Tomasz Figa wrote:
 > addr contains a DMA address, not a physical address. Could we call it
 > scp_mem_dma instead?
 > 
-
-Ok, we will rename this.
-
 > >         dev_dbg(dev, "scp addr:%pad\n", &addr);
 > >
 > >         /* get iova address */
@@ -198,96 +156,51 @@ Ok, we will rename this.
 > CPU address expected.
 > 
 
-Got it. We will revise to use dma_map_single() with ptr.
+We have changed to use ma_map_single() with ptr, but encounter IOMMU
+error. From the debug log of iommu_dma_map_page[3], we got
+0x0000000054800000 instead of expected address: 0x0000000050800000[2].
+There is a address offset(0x4000000). If we change to use
+dma_map_page_attrs with phys_to_page(addr), the address is correct as we
+expected[2]. Do you have any suggestion on this issue? Do we miss
+something?
 
-> >                                   MAX_COMPOSER_SIZE, DMA_BIDIRECTIONAL,
-> >                                   DMA_ATTR_SKIP_CPU_SYNC);
-> >         if (dma_mapping_error(dev, addr)) {
-> >                 isp_ctx->scp_mem_pa = 0;
-> 
-> We also need to free the allocated memory.
-> 
+[1]
+[    1.344786] __dma_alloc_from_coherent: 0x800000 PAGE_SHIFT:12
+device_base:0x0000000050000000 dma:0x0000000050800000
+virt_base:ffffff8014000000 va:ffffff8014800000
 
-Ok, we will add the dma_unmap_single to free the allocated memory.
+[    1.346890] mtk-cam 1a000000.camisp: scp addr:0x0000000050800000
+va:ffffff8014800000
 
-> >                 dev_err(dev, "Failed to map scp iova\n");
-> >                 return -ENOMEM;
-> >         }
-> >         isp_ctx->scp_mem_iova = addr;
-> >
-> > Moreover, we have another meta input buffer usage.
-> > For this kind of buffer, it will be allocated by V4L2 framework
-> > with dma_alloc_coherent with SCP device. In order to get IOVA,
-> > we will add dma_map_page_attrs in vb2_ops' buf_init function.
-> > In buf_cleanup function, we will call dma_unmap_page_attrs function.
-> 
-> As per above, we don't have access to the struct page we want to map.
-> We probably want to get the CPU VA using vb2_plane_vaddr() and call
-> dma_map_single() instead.
-> 
+[    1.347864] iommu_dma_map_page:0x0000000054800000 offset:0
+[    1.348562] mtk-cam 1a000000.camisp: iova addr:0x00000000fde00000
 
-Got it. We will revise this to use dma_map_single() with CPU VA which is
-got from vb2_plane_vaddr() function.
+[2]
+[    1.346738] __dma_alloc_from_coherent: 0x800000 PAGE_SHIFT:12
+device_base:0x0000000050000000 dma:0x0000000050800000
+virt_base:ffffff8014000000 va:ffffff8014800000
+[    1.348841] mtk-cam 1a000000.camisp: scp addr:0x0000000050800000
+va:ffffff8014800000
+[    1.349816] iommu_dma_map_page:0x0000000050800000 offset:0
+[    1.350514] mtk-cam 1a000000.camisp: iova addr:0x00000000fde00000
 
-> >
-> > Based on these current implementation, do you think it is correct?
-> > If we got any wrong, please let us know.
-> >
-> > Btw, we also DMA_ATTR_NO_KERNEL_MAPPING DMA attribte to
-> > avoid dma_sync_sg_for_device. Othewise, it will hit the KE.
-> > Maybe we could not get the correct sg_table.
-> > Do you think it is a bug and need to fix?
-> 
-> I think DMA_ATTR_NO_KERNEL_MAPPING is good to have for all the buffers
-> that don't need to be accessed from the kernel anyway, to avoid
-> unnecessary kernel mapping operations. However, for coherent memory
-> pool, it doesn't change anything, because the memory always has a
-> kernel mapping. We also need the kernel virtual address for
-> dma_map_single(). Also the flag doesn't eliminate the need to do the
-> sync, e.g. if the userspace accesses the buffer.
-> 
-> Could you give me more information about the failure you're seeing?
-> Where is the dma_sync_sg_for_device() called from? Where do you get
-> the sgtable from?
-> 
-> Best regards,
-> Tomasz
 
-Sorry. I forgot provide one information related to this issue.
-Here is the call stack of panic KE if we enable DMA_ATTR_NON_CONSISTENT
-DMA flag. Maybe we should not enable this flag for coherent memory pool.
+[3]
+dma_addr_t iommu_dma_map_page(struct device *dev, struct page *page,
+		unsigned long offset, size_t size, int prot)
+{
+	phys_addr_t phys = page_to_phys(page);
+	pr_err("iommu_dma_map_page:%pa offset:%lu\n", &phys, offset);
 
-[Function]
-vb2_dc_alloc
+	return __iommu_dma_map(dev, page_to_phys(page) + offset, size, prot,
+			iommu_get_dma_domain(dev));
+}
 
-[Code]
-	if (!(buf->attrs & DMA_ATTR_NO_KERNEL_MAPPING) &&
-	    (buf->attrs & DMA_ATTR_NON_CONSISTENT))
-		buf->dma_sgt = vb2_dc_get_base_sgt(buf);
+[snip]
 
-[KE]
-[   59.234326] pstate: 80000005 (Nzcv daif -PAN -UAO)
-[   59.234935] pc : __clean_dcache_area_poc+0x20/0x38
-[   59.235537] lr : __swiotlb_sync_sg_for_device+0x74/0x9c
-[   59.249430] Call trace:
-[   59.249742]  __clean_dcache_area_poc+0x20/0x38
-[   59.250303]  vb2_dc_prepare+0x5c/0x6c
-[   59.250763]  __buf_prepare+0x790/0x8a4
-[   59.251234]  vb2_req_prepare+0x38/0x68
-[   59.251707]  vb2_request_validate+0x40/0x9c
-[   59.252235]  media_request_ioctl+0x124/0x2a4
-[   59.252774]  __arm64_compat_sys_ioctl+0xf4/0x25c
-[   59.253356]  el0_svc_common+0xa4/0x154
-[   59.253828]  el0_svc_compat_handler+0x2c/0x38
-[   59.254377]  el0_svc_compat+0x8/0x18
-[   59.254827] Code: 9ac32042 8b010001 d1000443 8a230000 (d50b7a20)
-[   59.255592] ---[ end trace eb37ebade032c2fc ]---
-[   59.256173] Kernel panic - not syncing: Fatal exception
-
-Thanks,
+Best regards,
 
 Jungo
-
 
 
 _______________________________________________
