@@ -2,63 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 40D815FF5B
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 03:36:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7861F5FF68
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 04:06:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yDaHIEP8EcTHRXaSOxEGTDqBLx9ynGC4betAtIqewn0=; b=nGfx5XZlvZ3In3
-	oajpHm13+LanQx4Xcyhm4aMrblcC6IP/6PZ5ZVBdw0CCAiySqmfa71ldKNY08RVlzoAgbgx0bi3Ha
-	jRJnO8BfzopBapakYIUHCtZamrnYjDS+AgMslaOEuqbQ2w2K7Wq62XUqigrDyAPKkxdw2aDeDK6Eo
-	vpL+IMCeY5xKiYir6Pp8JPwZtRdfkr8VnFIKkIk+V+EslqJ/f43OAfys6dg8/mCyd6XDPSdFllHTQ
-	U2RFziJYu2bbPqvxj6jlF06jPIoivXWH4Xkpvr8nxtz57whdexmFkK+RKNtb+P/9YG4vZJw+lsx2t
-	8IuPmCF7+tgRdaaHO6ng==;
+	List-Owner; bh=YQflMOWPapyg3shtEdyjJcLQxNe3uYmK3NfEaoSMt1Y=; b=Igh8qKXRge0PwL
+	PHUosJHhkZihRbBBSuz8VP3nhvkLDgVrRn5rEiU+7wUG1nXgWAUFuTnWHgF+0nbCxkqNPyStfy+2t
+	7kshAY/i7E6+ebuXbY59DWE/OJ1p148TFuNBtEYPaCe2mAuNqrU4V3AABhUGZgqZWShSlJ+dd+eqn
+	+OxeAn5jkG+IM5lWX7/leLuVe2IKPOhxYHH5sHV0DJ4RDCX13/IZScsfRIJES7VOklioe4pk1zDvI
+	LpDppY5nBAzc+WacXHER0PQENpT74zOAHMUfTBJuKNnjlkipCnvgH4JtAc/dTzviC+Nrja5xADLtG
+	vQaACCi2fsubkb2W3pMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjD8l-00027s-TM; Fri, 05 Jul 2019 01:35:56 +0000
+	id 1hjDcL-0003RO-P3; Fri, 05 Jul 2019 02:06:29 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjD8W-0001yI-GJ; Fri, 05 Jul 2019 01:35:42 +0000
-X-UUID: d48bf886351f479887c7a19478118889-20190704
-X-UUID: d48bf886351f479887c7a19478118889-20190704
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1hjDcI-0003Qq-AJ
+ for linux-mediatek@lists.infradead.org; Fri, 05 Jul 2019 02:06:28 +0000
+X-UUID: bed739e85ce9437eafef3907d3de97da-20190704
+X-UUID: bed739e85ce9437eafef3907d3de97da-20190704
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <miles.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1893063723; Thu, 04 Jul 2019 17:35:33 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 4 Jul 2019 18:35:32 -0700
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ with ESMTP id 1940558900; Thu, 04 Jul 2019 18:06:14 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 4 Jul 2019 19:06:12 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 5 Jul 2019 10:06:04 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 5 Jul 2019 09:35:30 +0800
-Message-ID: <1562290530.10428.6.camel@mtksdaap41>
-Subject: Re: [PATCH v5 08/12] dt-bindings: mediatek: Change the binding for
- mmsys clocks
-From: CK Hu <ck.hu@mediatek.com>
-To: Ulrich Hecht <uli@fpond.eu>
-Date: Fri, 5 Jul 2019 09:35:30 +0800
-In-Reply-To: <100944512.353257.1562254420397@webmail.strato.com>
-References: <20181116125449.23581-1-matthias.bgg@kernel.org>
- <20181116125449.23581-9-matthias.bgg@kernel.org>
- <20181116231522.GA18006@bogus>
- <2a23e407-4cd4-2e2b-97a5-4e2bb96846e0@gmail.com>
- <CAL_JsqKJQwfDJbpmwW+oCxiDkSp5+6mG-uoURmCQVEMP_jFOEg@mail.gmail.com>
- <154281878765.88331.10581984256202566195@swboyd.mtv.corp.google.com>
- <458178ac-c0fc-9671-7fc8-ed2d6f61424c@suse.com>
- <154356023767.88331.18401188808548429052@swboyd.mtv.corp.google.com>
- <a229bfc7-683f-5b0d-7b71-54f934de6214@suse.com>
- <1561953318.25914.9.camel@mtksdaap41>
- <84d1c444-d6cb-9537-1bf5-b4e736443239@gmail.com>
- <100944512.353257.1562254420397@webmail.strato.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Fri, 5 Jul 2019 10:06:04 +0800
+Message-ID: <1562292364.23476.4.camel@mtkswgap22>
+Subject: Re: [PATCH v2] checkpatch: add several Kconfig default value tests
+From: Miles Chen <miles.chen@mediatek.com>
+To: Joe Perches <joe@perches.com>
+Date: Fri, 5 Jul 2019 10:06:04 +0800
+In-Reply-To: <53b2351f14f246b57871226f7cf45b9800e264a8.camel@perches.com>
+References: <20190704094024.16162-1-miles.chen@mediatek.com>
+ <53b2351f14f246b57871226f7cf45b9800e264a8.camel@perches.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: FDE15EDAF12E67EF2B3A8083FFDFD53EA54C2081AFEDDA8A13D8C58C1C29F02C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_183540_550042_907E00CA 
-X-CRM114-Status: GOOD (  12.78  )
+X-CRM114-CacheID: sfid-20190704_190626_364233_7D7B447C 
+X-CRM114-Status: GOOD (  25.14  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -81,56 +75,229 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Randy Dunlap <rdunlap@infradead.org>,
- David Airlie <airlied@linux.ie>, Michael
- Turquette <mturquette@baylibre.com>,
- dri-devel <dri-devel@lists.freedesktop.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Ulrich Hecht <ulrich.hecht+renesas@gmail.com>,
- linux-clk <linux-clk@vger.kernel.org>, Rob Herring <robh@kernel.org>,
- Chen-Yu Tsai <wens@csie.org>, devicetree@vger.kernel.org,
- Sean Wang <Sean.Wang@mediatek.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, "moderated list:ARM/FREESCALE IMX /
- MXC ARM ARCHITECTURE" <linux-arm-kernel@lists.infradead.org>,
- Matthias Brugger <mbrugger@suse.com>, Stephen Boyd <sboyd@kernel.org>,
- Sean Wang <sean.wang@kernel.org>, Stephen Boyd <sboyd@codeaurora.org>,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- matthias.bgg@kernel.org
+Cc: Andy Whitcroft <apw@canonical.com>, Yingjoe
+ Chen <yingjoe.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Uli:
-
-On Thu, 2019-07-04 at 17:33 +0200, Ulrich Hecht wrote:
-> > On July 4, 2019 at 11:08 AM Matthias Brugger <matthias.bgg@gmail.com> wrote:
-> > You are right, it took far too long for me to respond with a new version of the
-> > series. The problem I face is, that I use my mt8173 based chromebook for
-> > testing. It needs some downstream patches and broke somewhere between my last
-> > email and a few month ago.
+On Thu, 2019-07-04 at 11:49 -0700, Joe Perches wrote:
+> On Thu, 2019-07-04 at 17:40 +0800, Miles Chen wrote:
+> > This change adds 3 Kconfig default value tests:
+> []
+> > diff --git a/scripts/checkpatch.pl b/scripts/checkpatch.pl
+> []
+> > @@ -3005,6 +3005,27 @@ sub process {
+> >  			     "Use of boolean is deprecated, please use bool instead.\n" . $herecurr);
+> >  		}
+> >  
+> > +# discourage redundant 'default n'
+> > +		if ($realfile =~ /Kconfig/ &&
+> > +		    $line =~ /^\+\s*default n$/) {
+> > +			WARN("DEFAULT_VALUE_STYLE",
+> > +			     "'default n' is the default value, no need to write it explicitly.\n" . $herecurr);
+> > +		}
+> > +
+> > +# discourage quote: use default [ynm], not default "[ynm]"
+> > +		if ($realfile =~ /Kconfig/ &&
+> > +		    $rawline =~ /^\+\s*default\s*"[ynm]"/) {
+> > +			WARN("DEFAULT_VALUE_STYLE",
+> > +			     "Use default [ynm] instead of default \"[ynm]\"\n" . $herecurr);
+> > +		}
+> > +
+> > +# discourage default \!?EXPERT
+> > +		if ($realfile =~ /Kconfig/ &&
+> > +		    $line =~ /^\+\s*default \!?EXPERT/) {
+> > +			WARN("DEFAULT_VALUE_STYLE",
+> > +			     "Avoid default turn on kernel configs by default !?EXPERT\n" . $herecurr);
+> > +		}
+> > +
 > 
-> If that Chromebook is an Acer R13 and you need a working kernel, you may want to have a look at https://github.com/uli/kernel/tree/elm-working-5.2 .
-
-Thanks for your sample code, and your implementation is different than
-Matthias' version. In your version, mmsys is a single device which has
-clock function and display function, the clock function is placed in
-clock driver folder and display function is placed in drm driver folder.
-In Matthias' version, clock function is a sub device of mmsys. I've no
-idea of which one is better. I would get more information to make better
-decision.
-
-Regards,
-CK
-
+> I'd prefer to create a block for all the Kconfig file tests and
+> avoid multiply determining if the filename includes Kconfig so
+> the script runs a bit faster.
 > 
-> CU
-> Uli
+
+Thanks for your comments.
+yes, the script runs faster this way.
+
+> Also some trivial changes to the added tests with added --fix
+> capability.  Something like:
+
+Thanks for posting the patch, I'll verify it and post as patch v3.
+
+> ---
+>  scripts/checkpatch.pl | 139 ++++++++++++++++++++++++++++++--------------------
+>  1 file changed, 85 insertions(+), 54 deletions(-)
 > 
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> diff --git a/scripts/checkpatch.pl b/scripts/checkpatch.pl
+> index 6cb99ec62000..4780149a8d30 100755
+> --- a/scripts/checkpatch.pl
+> +++ b/scripts/checkpatch.pl
+> @@ -2934,60 +2934,98 @@ sub process {
+>  				      "Do not include the paragraph about writing to the Free Software Foundation's mailing address from the sample GPL notice. The FSF has changed addresses in the past, and may do so again. Linux already includes a copy of the GPL.\n" . $herevet)
+>  		}
+>  
+> -# check for Kconfig help text having a real description
+> -# Only applies when adding the entry originally, after that we do not have
+> -# sufficient context to determine whether it is indeed long enough.
+> -		if ($realfile =~ /Kconfig/ &&
+> -		    # 'choice' is usually the last thing on the line (though
+> -		    # Kconfig supports named choices), so use a word boundary
+> -		    # (\b) rather than a whitespace character (\s)
+> -		    $line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
+> -			my $length = 0;
+> -			my $cnt = $realcnt;
+> -			my $ln = $linenr + 1;
+> -			my $f;
+> -			my $is_start = 0;
+> -			my $is_end = 0;
+> -			for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
+> -				$f = $lines[$ln - 1];
+> -				$cnt-- if ($lines[$ln - 1] !~ /^-/);
+> -				$is_end = $lines[$ln - 1] =~ /^\+/;
+> -
+> -				next if ($f =~ /^-/);
+> -				last if (!$file && $f =~ /^\@\@/);
+> -
+> -				if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
+> -					$is_start = 1;
+> -				} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
+> -					if ($lines[$ln - 1] =~ "---help---") {
+> -						WARN("CONFIG_DESCRIPTION",
+> -						     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
+> +# Kconfig tests
+> +		if ($realfile =~ /Kconfig/) {
+> +			# check for Kconfig help text having a real description
+> +			# Only applies when adding the entry originally, after
+> +			# that we do not have sufficient context to determine
+> +			# whether it is indeed long enough.
+> +			# 'choice' is usually the last thing on the line (though
+> +			# Kconfig supports named choices), so use a word
+> +			# boundary (\b) rather than a whitespace character (\s)
+> +			if ($line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
+> +				my $length = 0;
+> +				my $cnt = $realcnt;
+> +				my $ln = $linenr + 1;
+> +				my $f;
+> +				my $is_start = 0;
+> +				my $is_end = 0;
+> +				for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
+> +					$f = $lines[$ln - 1];
+> +					$cnt-- if ($lines[$ln - 1] !~ /^-/);
+> +					$is_end = $lines[$ln - 1] =~ /^\+/;
+> +
+> +					next if ($f =~ /^-/);
+> +					last if (!$file && $f =~ /^\@\@/);
+> +
+> +					if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
+> +						$is_start = 1;
+> +					} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
+> +						if ($lines[$ln - 1] =~ "---help---") {
+> +							WARN("CONFIG_DESCRIPTION",
+> +							     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
+> +						}
+> +						$length = -1;
+> +					}
+> +
+> +					$f =~ s/^.//;
+> +					$f =~ s/#.*//;
+> +					$f =~ s/^\s+//;
+> +					next if ($f =~ /^$/);
+> +
+> +					# This only checks context lines in the patch
+> +					# and so hopefully shouldn't trigger false
+> +					# positives, even though some of these are
+> +					# common words in help texts
+> +					if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
+> +							   if|endif|menu|endmenu|source)\b/x) {
+> +						$is_end = 1;
+> +						last;
+>  					}
+> -					$length = -1;
+> +					$length++;
+> +				}
+> +				if ($is_start && $is_end && $length < $min_conf_desc_length) {
+> +					WARN("CONFIG_DESCRIPTION",
+> +					     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
+>  				}
+> +				#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
+> +			}
+>  
+> -				$f =~ s/^.//;
+> -				$f =~ s/#.*//;
+> -				$f =~ s/^\s+//;
+> -				next if ($f =~ /^$/);
+> -
+> -				# This only checks context lines in the patch
+> -				# and so hopefully shouldn't trigger false
+> -				# positives, even though some of these are
+> -				# common words in help texts
+> -				if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
+> -						  if|endif|menu|endmenu|source)\b/x) {
+> -					$is_end = 1;
+> -					last;
+> +# discourage the use of boolean for type definition attributes
+> +			if ($line =~ /^\+\s*\bboolean\b/) {
+> +				if (WARN("CONFIG_TYPE_BOOLEAN",
+> +					 "Use of boolean is deprecated, please use bool instead\n" . $herecurr) &&
+> +				    $fix) {
+> +					$fixed[$fixlinenr] =~ s/\bboolean\b/bool/;
+> +				}
+> +			}
+> +
+> +# Kconfig: discourage redundant 'default n'
+> +			if ($line =~ /^\+\s*default\s+n$/) {
+> +				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
+> +					 "'default n' is the default value, no need to write it explicitly\n" . $herecurr) &&
+> +				    $fix) {
+> +					fix_delete_line($fixlinenr, $rawline);
+>  				}
+> -				$length++;
+>  			}
+> -			if ($is_start && $is_end && $length < $min_conf_desc_length) {
+> -				WARN("CONFIG_DESCRIPTION",
+> -				     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
+> +
+> +# Kconfig: discourage quoted defaults: use default [ynm], not default "[ynm]"
+> +			if ($rawline =~ /^\+\s*default\s+"([ynm])"/) {
+> +				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
+> +					 "Use 'default $1' not 'default \"$1\"'\n" . $herecurr) &&
+> +				    $fix) {
+> +					$fixed[$fixlinenr] =~ s/\b(default\s+)"(.)"/$1$2/;
+> +				}
+> +			}
+> +
+> +# Kconfig: discourage using default EXPERT or !EXPERT
+> +			if ($line =~ /^\+\s*default\s+\!?\s*EXPERT\b/) {
+> +				WARN("CONFIG_DEFAULT_VALUE_STYLE",
+> +				     "Avoid using default EXPERT\n" . $herecurr);
+>  			}
+> -			#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
+>  		}
+> +# End of Kconfig tests
+> +
+>  
+>  # check for MAINTAINERS entries that don't have the right form
+>  		if ($realfile =~ /^MAINTAINERS$/ &&
+> @@ -3000,13 +3038,6 @@ sub process {
+>  			}
+>  		}
+>  
+> -# discourage the use of boolean for type definition attributes of Kconfig options
+> -		if ($realfile =~ /Kconfig/ &&
+> -		    $line =~ /^\+\s*\bboolean\b/) {
+> -			WARN("CONFIG_TYPE_BOOLEAN",
+> -			     "Use of boolean is deprecated, please use bool instead.\n" . $herecurr);
+> -		}
+> -
+>  		if (($realfile =~ /Makefile.*/ || $realfile =~ /Kbuild.*/) &&
+>  		    ($line =~ /\+(EXTRA_[A-Z]+FLAGS).*/)) {
+>  			my $flag = $1;
+> 
+> 
 
 
 
