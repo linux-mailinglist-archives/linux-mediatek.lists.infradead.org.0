@@ -2,66 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 73E1F606E9
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 15:55:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3753F606EC
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 15:55:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=SWkRqB1uAAQ1a2AwfswUX31RysZO/ZPRNVRXiPhwQf0=; b=aQTJ3leaTzjNcTju2Yq8drbbK
-	G4VbP/nBwXj+kg/puIAHQsH1aqhooNcZQo0Lq3KFkXUPgbow+9QdO6urFplvf8eMovkEGs+4CB5S+
-	x1Toqb8tgR3jn0TyFlqAxjiRrvl71LcbXozOSIaET3ELaKQ+73rWc+iJ4P1QFbYoaw/+6FFuZafYe
-	95gvZCbOAlzU6q1aLHpbVrhFkdeziMBprowsAblUoIlbG7MYB5Oj42rBSqg79fd7y74Kk3d0E4v95
-	BqaMOnmOHXYxGvW8yEjJQF5hhfn6nWZgl/3dYeq/PsAJFTs/WwRnWwd4/DENtPV9FyY3uAJpwncOv
-	zH7ebX5HQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=EiaEp6+1e5hIDosTwEwmsDFhYGjx2IfE41LvcKnyGcY=; b=FSxqBpKqK5e7tv
+	XeVPD3UQgz0SFArBPUBFzCuUjeb2Byqjx6ZsWiU6VpQXygAyeLtNkSZ42NVplfETOQCj54ZvJNHJ3
+	sknE8oSoFQMl7q2zQ3O7yduhIx81mZvaZQYGYtkgwNjQr26ZXPCWmbyEM4VgYVxTXyClLR4n3oR43
+	5msRjS8k2Il9OvC5ANBuXkpwuHkXttChjf+xKHpiIqvtzOJvMieIFp+MZRh+yJbwsiXXW9wcns4KP
+	7/pTUtPnYGn+jBW8/KouiCQ/yO7hmb/yu/YSg0xVEruuTCnmWLGnHPudkpSqx4YYHCPEZmjFoL3Ud
+	Ouv14uZ4SnKgOxsZ1QRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjOgY-0006jn-HC; Fri, 05 Jul 2019 13:55:34 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hjOgd-0006nh-MX; Fri, 05 Jul 2019 13:55:39 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjJl7-0001JA-0E; Fri, 05 Jul 2019 08:39:57 +0000
+ id 1hjJnJ-0002WT-Rr; Fri, 05 Jul 2019 08:42:13 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Content-Transfer-Encoding:Content-Type:
- In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender
- :Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+ d=infradead.org; s=casper.20170209; h=In-Reply-To:Content-Transfer-Encoding:
+ Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:
+ Sender:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
  Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
  List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Jsv8xFcB6MKIEUL01wdqsJxs1kpSR6IPmJpVVpxwD5g=; b=eJNttkRHD8021MWGArqy8luZgz
- F0SO+uQotQdSqf2MgI89324NEAV3v7RMWzUtgSekxXU5ubZYpia2KHSrIHmJ19MsbOgUNP7godk/U
- lyooKoiS+UZNyEQlR+uleBGCI8VDmLjUIo4n5cm/Xjan0KzpcCBjsuFV6I9IrmdNbpX4fXzrgFmXa
- LAGE5XVXURWSd0f0G/z11szfabrjHGqw77c9VRP5CQ0BOAyN2dE4l7f2N6Ibt82pWIlLnrcQK5na/
- qdUnxJmEr7G4JswF+Y4uiLuPEEbD1qGKzbU3eCcPUlTgbaAUZQHwju8N1mXzL5liq16sYsCcGX9Gf
- iycCIaUQ==;
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
- by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjJkk-0000bc-Lj; Fri, 05 Jul 2019 08:39:35 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 88D8228627A
+ bh=K7sL+m5x/xqXs2m8tJ8v5lJGrF/Wg1eiHZNpl7Fhpi0=; b=eL2B021Wk0ePIPsP1AKH+71c8T
+ WWxD+q2IY9OCzVKWZUzg10q6qo7NYSs9P3nV0zsAj8vm6sbKEwmIHkN5yVUcH7weQPlDu7tziN+4x
+ 68tDPiSUjWCeQOliI9h1qvbsZDOqgV8lDb92gn2uPwo02qYZGMQsM+JVRFwYumMZ1cN/3Shmiy5O9
+ Cnhe34NDqVgIk3ulLc3V2SfT/wj4n31kGQzgWC7KRJXezU7jtOkUtrjuozjNVN7LCAqoeohw+AQSa
+ MnDyk6+cYWAAGlDN/yNP3z5SbGVghiZ+m4fAH1DkM8xFP+Cz1p0dGvrz58R10aWkIG1Ofady/kByv
+ QVBY3/Zw==;
+Received: from perceval.ideasonboard.com ([213.167.242.64])
+ by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjJms-0006GD-6R; Fri, 05 Jul 2019 08:41:48 +0000
+Received: from pendragon.ideasonboard.com
+ (dfj612yhrgyx302h3jwwy-3.rev.dnainternet.fi
+ [IPv6:2001:14ba:21f5:5b00:ce28:277f:58d7:3ca4])
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id DADF324B;
+ Fri,  5 Jul 2019 10:39:54 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
+ s=mail; t=1562315995;
+ bh=USKu7A4PWilgTTdXdxKtoXPECYgfrGM8DlEj3pQAAto=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=X1pwwLHVR/7eXdMJTO0WkEhUPtQkbyKj4lTdqiGuGovVQhxKvRxa7vEFFHzwMxUzs
+ KX9kqTU82CYRsTLJToik+vtuoqGa2AcS0KkMZZSIIaakDJZZeoZQPm4UvzcK9CQVWb
+ N0LtHMV3M7CG297W0BtkxJNNTlmHsl9sFp/OidcE=
+Date: Fri, 5 Jul 2019 11:39:34 +0300
+From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 Subject: Re: [PATCH v3 00/22] Associate ddc adapters with connectors
-To: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Message-ID: <20190705083934.GB4994@pendragon.ideasonboard.com>
 References: <3fb19371-db7d-f9dc-31a7-1ccd126f6784@collabora.com>
  <cover.1561735433.git.andrzej.p@collabora.com>
  <20190628161137.GH4779@pendragon.ideasonboard.com>
-From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-Message-ID: <44f98134-bc8a-133a-b702-589f007b175e@collabora.com>
-Date: Fri, 5 Jul 2019 10:38:27 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.2
+ <44f98134-bc8a-133a-b702-589f007b175e@collabora.com>
 MIME-Version: 1.0
-In-Reply-To: <20190628161137.GH4779@pendragon.ideasonboard.com>
-Content-Language: en-US
-X-Spam-Note: CRM114 invocation failed
-X-Spam-Score: -0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
- Content analysis details:   (-0.0 points)
+Content-Disposition: inline
+In-Reply-To: <44f98134-bc8a-133a-b702-589f007b175e@collabora.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190705_094146_346305_5F746CEB 
+X-CRM114-Status: GOOD (  16.52  )
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
+ Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,14 +91,14 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
- =?UTF-8?Q?Heiko_St=c3=bcbner?= <heiko@sntech.de>,
+ Heiko =?utf-8?Q?St=C3=BCbner?= <heiko@sntech.de>,
  Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>, dri-devel@lists.freedesktop.org,
  Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
  Thierry Reding <thierry.reding@gmail.com>, Gerd Hoffmann <kraxel@redhat.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
- =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
+ Ville =?utf-8?B?U3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
  linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
  linux-rockchip@lists.infradead.org, Vincent Abriou <vincent.abriou@st.com>,
@@ -108,21 +125,27 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Philipp Zabel <p.zabel@pengutronix.de>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
  Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
- =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>
+ Christian =?utf-8?B?S8O2bmln?= <christian.koenig@amd.com>
+Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-VyBkbml1IDI4LjA2LjIwMTkgb8KgMTg6MTEsIExhdXJlbnQgUGluY2hhcnQgcGlzemU6Cj4gSGkg
-QW5kcnplaiwKPiAKPiBKdXN0IEZZSSwgSSBoYXZlIGEgcGF0Y2ggc2VyaWVzIHRoYXQgcmV3b3Jr
-cyBob3cgYnJpZGdlcyBhbmQgY29ubmVjdG9ycwo+IGFyZSBoYW5kbGVkLCBhbmQgaXQgd2lsbCBo
-ZWF2aWx5IGNvbmZsaWN0IHdpdGggdGhpcy4gVGhlIHB1cnBvc2Ugb2YgdGhlCj4gdHdvIHNlcmll
-cyBpc24ndCB0aGUgc2FtZSwgc28gYm90aCBtYWtlIHNlbnNlLiBJIHdpbGwgcG9zdCB0aGUgcGF0
-Y2hlcwo+IHRoaXMgd2Vla2VuZCwgYW5kIHdpbGwgdGhlbiByZXZpZXcgdGhpcyBzZXJpZXMgaW4g
-dGhhdCBjb250ZXh0Lgo+IEhvcGVmdWxseSB3ZSdsbCBnZXQgdGhlIGJlc3Qgb2YgYm90aCB3b3Js
-ZHMgOi0pCgpIaSBMYXVyZW50LAoKRGlkIHlvdSBoYXZlIGEgY2hhbmNlIHRvIHJldmlldyBteSBw
-YXRjaCBzZXJpZXM/CgpBbmRyemVqCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVr
-QGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9s
-aXN0aW5mby9saW51eC1tZWRpYXRlawo=
+SGkgQW5kcnplaiwKCk9uIEZyaSwgSnVsIDA1LCAyMDE5IGF0IDEwOjM4OjI3QU0gKzAyMDAsIEFu
+ZHJ6ZWogUGlldHJhc2lld2ljeiB3cm90ZToKPiBXIGRuaXUgMjguMDYuMjAxOSBvwqAxODoxMSwg
+TGF1cmVudCBQaW5jaGFydCBwaXN6ZToKPiA+IEhpIEFuZHJ6ZWosCj4gPiAKPiA+IEp1c3QgRllJ
+LCBJIGhhdmUgYSBwYXRjaCBzZXJpZXMgdGhhdCByZXdvcmtzIGhvdyBicmlkZ2VzIGFuZCBjb25u
+ZWN0b3JzCj4gPiBhcmUgaGFuZGxlZCwgYW5kIGl0IHdpbGwgaGVhdmlseSBjb25mbGljdCB3aXRo
+IHRoaXMuIFRoZSBwdXJwb3NlIG9mIHRoZQo+ID4gdHdvIHNlcmllcyBpc24ndCB0aGUgc2FtZSwg
+c28gYm90aCBtYWtlIHNlbnNlLiBJIHdpbGwgcG9zdCB0aGUgcGF0Y2hlcwo+ID4gdGhpcyB3ZWVr
+ZW5kLCBhbmQgd2lsbCB0aGVuIHJldmlldyB0aGlzIHNlcmllcyBpbiB0aGF0IGNvbnRleHQuCj4g
+PiBIb3BlZnVsbHkgd2UnbGwgZ2V0IHRoZSBiZXN0IG9mIGJvdGggd29ybGRzIDotKQo+IAo+IEhp
+IExhdXJlbnQsCj4gCj4gRGlkIHlvdSBoYXZlIGEgY2hhbmNlIHRvIHJldmlldyBteSBwYXRjaCBz
+ZXJpZXM/CgpOb3QgeWV0IEknbSBhZnJhaWQuIEkndmUgYmVlbiBmYWlybHkgYnVzeSB0aGlzIHdl
+ZWssIGFuZCBjb3VwbGVkIHdpdGgKc29tZSBoZWFsdGggaXNzdWVzIChidXQgSSdtIGZlZWxpbmcg
+YmV0dGVyIG5vdywgc28gbm90aGluZyB0byB3b3JyeQphYm91dCkgaXQgZGVsYXllZCBteSByZXZp
+ZXdzLiBJJ2xsIGdldCB0byBpdCBhcyBzb29uIGFzIHBvc3NpYmxlLiBUaGFuawp5b3UgZm9yIHBp
+bmdpbmcgbWUuCgotLSAKUmVnYXJkcywKCkxhdXJlbnQgUGluY2hhcnQKCl9fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcg
+bGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZy
+YWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
