@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C821A607CA
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 16:27:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8455B60728
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 16:04:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
@@ -18,29 +18,13 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	sbKBugodujrRjAFiVu+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjPAx-0000bf-Eg; Fri, 05 Jul 2019 14:26:59 +0000
-Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
+	id 1hjFn5-00058p-4n; Fri, 05 Jul 2019 04:25:43 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjPAv-0000aR-Ba
- for linux-mediatek@bombadil.infradead.org; Fri, 05 Jul 2019 14:26:57 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=casper.20170209; h=Content-Type:Cc:To:Subject:Message-ID:
- Date:From:In-Reply-To:References:MIME-Version:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=b/iqhNLUC3DokEFuYS2ehal98gCGJpPh7k8hIbKXDDw=; b=K5QADdoyEQ6riu47YWZLd/TQE
- hUKq96lCorwpv+VxJDWPBCNcWFrfkqkezm7QS3Kb56DNSC+aPGgsk5riUcUoC/EaCoaSrdZ7tpsz0
- 9w0i+4knUrhNzj/3oxpFd6IMx6ubtiTl5Y0XuBOBZnpefHlph9knR5Kaol16IXVZ7XqPDbRNgLlE4
- Zizhcvx7+Ee3v72uT+ZFIWbS4dzrZ1WeeOeWKh8dL8kTMkpGzFtrbpNg4EhxHTkLHicFRj3vkIP8m
- Y1r4KiAV+HFf3pWLJjIFFu3TvsuCCmsraDNBz4MwdRiHH8GRiY6dRor1936KjrrO6TlF0xNzJSVUL
- 6GxAgpcnA==;
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
- by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjG1c-0006qg-Ba
- for linux-mediatek@lists.infradead.org; Fri, 05 Jul 2019 04:40:46 +0000
-Received: by mail-ed1-x542.google.com with SMTP id r12so7038855edo.5
- for <linux-mediatek@lists.infradead.org>; Thu, 04 Jul 2019 21:40:38 -0700 (PDT)
+ id 1hjFmo-0003ug-85
+ for linux-mediatek@lists.infradead.org; Fri, 05 Jul 2019 04:25:41 +0000
+Received: by mail-ed1-x541.google.com with SMTP id s49so7047654edb.1
+ for <linux-mediatek@lists.infradead.org>; Thu, 04 Jul 2019 21:22:45 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
  :cc; bh=b/iqhNLUC3DokEFuYS2ehal98gCGJpPh7k8hIbKXDDw=;
@@ -52,14 +36,14 @@ X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
  bh=b/iqhNLUC3DokEFuYS2ehal98gCGJpPh7k8hIbKXDDw=;
- b=N7Bu1aRp/p86lDcTp6eu6jFINTUhCLHWoDMqbPHeHGZ8pzCBnjeWoeGdWVYJkkBUf8
- gbpgxABkkbBfZBfqlYhQDAja0qa0o+4r0D4dMnxeuU+hJ60MVjm7MVzwLPUjCAgMNeWo
- hGKbvWLqpolY8AwVf1HvP+Ao22e/ABQL1J94GqKT6YaDtJzZJUsIMmaqkXO6ZgfquU6a
- Hg7wKqhBJ8/1OaeyItmOXSb37mHfGJhQmN+g3LrSgaPUgIEW6DgBWJgkLTULiCYz3UHz
- 06DrcIiaKQiKxs/MB0m1JJdLbwkC8kAxPPxQfZXt5kg+KYR0HZtM4MteHpjzxvuMFAne
- kWtw==
-X-Gm-Message-State: APjAAAVlKUH3esJLS3KsYR/btTT+UthR8mDldwDOFMKHW+HHts4tYMvD
- eVMoAE3hfTFDx0cZIFUUUUV4EdciE9s=
+ b=moJygkwlsWbI0PxOFWQR2gVPw5BjvQizn1S5N7PUkk8DQt3VDVjqir6vtVjMmBvE50
+ XHWhg9jcukZJu/KRhp7lZl6Yfe4skF6D5F3VpEDwWmNjk302NWWyLcM49giZpRNOSB/H
+ yw+4cLi4fcIEXfEW8C1t8LoXeaYt7T3S02FBhuhcIn+5ccL6bOQw0nvhPQLBfExfjxBc
+ 1AqllYq7qIIImaMIl/Ri5W6lr/yoxAH96jPic5boTzFx1h8YNBjdTtd2tfImqy2vQDn7
+ AY1bnUoONhkGTXU6Ou47C34HvrRnhg4URavpsPOEHVAlGXM5990g6MgotMQoHbcphPD6
+ YDCg==
+X-Gm-Message-State: APjAAAW7xLNPMNsO77JGjQr846TSfAN8e1Fwolngk6T3v1L3KufCKGYR
+ JJuGDaL+eAj/cPzSw057yg+Yo8KJUrE=
 X-Google-Smtp-Source: APXvYqy1+ZZPHDYIc1AURByLSDVDMejSXo3wZTr1a0bGFxdUVmjYqWaoDHkCr5OkwaIGuAI9MzsIUw==
 X-Received: by 2002:a50:92fc:: with SMTP id l57mr2119651eda.206.1562300564006; 
  Thu, 04 Jul 2019 21:22:44 -0700 (PDT)
@@ -88,25 +72,25 @@ Subject: Re: [RFC,
  v3 9/9] media: platform: Add Mediatek ISP P1 shared memory device
 To: Jungo Lin <jungo.lin@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190705_054044_421067_1A4FF255 
-X-CRM114-Status: GOOD (  45.56  )
+X-CRM114-CacheID: sfid-20190704_212529_383373_21942F1F 
+X-CRM114-Status: GOOD (  30.03  )
 X-Spam-Score: -0.2 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
- Content analysis details:   (-0.2 points, 5.0 required)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  0.0 T_PDS_NO_HELO_DNS      High profile HELO but no A record
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
