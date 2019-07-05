@@ -2,58 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D99325FFB2
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 05:16:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 971A95FFC5
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 05:34:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=RI6GlH/edv5qnzrLiUvoItnF9whGAA64Dz9r8O4I1aE=; b=cy2XeaR9hfBug0
-	zKmkI9V88LuQSj5YF20o03yk6XyVrsskIMpFnsV1Mjxx/npxuQ8WzvU6JMNESGOfsP7npfdFCYveX
-	n/DJWycWOzuowWy0rO4+R8gHmyIhQzXXJzZ3UfBQxjR8aWnp0B4htwFc8MLycpmUFs2xbJx5TQeFN
-	z2RSbI148e6HUsRVIBMyeapOeOung63k0NwAFd3SfFl7TUJddKf+w9mLNPn6o8zgJY8lWtAfBCsi8
-	Yb/5zyyDN/34LJJKBG18+PfG96BMvvcHHx0h5FNLxfe8JupjNf0Zh6dlXydc2exgS6oKhtfrQoWp/
-	ccp5+d9YeXmZPZVkSIqQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=vomIJVY4nPyJEvq80YmyPYudfXdsIsPnWBFJvQBwyBc=; b=BEQ7Lz9ImWrjOq
+	Aro6d2hkOivcr0fpoGXozehSjRGv+cY5fZ2BpLXIQSyrqmeUaNL3nctV2pFHTvAP0FcQuuqrOFsc0
+	K6IU9YCLZ+OeBCasS3rD+HTA9s8WCjjvtra1eJeWU0+cBFH3RaYs0Ql1K08JlGKZEQfUY5fNxJvkj
+	bWJxGa6ozac0d2ieS31YlB6Ycuybw6fs8yKO8VcE1LzTHqUY8NYfBVqETKcCHYvFOxqGIDeAqeuHg
+	fOR8FQjpwx7oKM6bTcg3csRDSda/9uMUxkdcxHUBsILQxfb29R8KQK83YR0O/ZzoRL7neNRhA00q8
+	nDfjnkb9so9/JjOH05Dw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjEiO-0000bJ-8T; Fri, 05 Jul 2019 03:16:48 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hjEz7-0005Px-M3; Fri, 05 Jul 2019 03:34:05 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjEiJ-0000at-BZ
- for linux-mediatek@lists.infradead.org; Fri, 05 Jul 2019 03:16:45 +0000
-X-UUID: 8a5fa8e5a8064b4e9526ec3840d1d8f7-20190704
-X-UUID: 8a5fa8e5a8064b4e9526ec3840d1d8f7-20190704
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <miles.chen@mediatek.com>)
+ id 1hjEz1-0005P0-JH; Fri, 05 Jul 2019 03:34:02 +0000
+X-UUID: b5ca752380d54acf8a86064ac61808b9-20190704
+X-UUID: b5ca752380d54acf8a86064ac61808b9-20190704
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jungo.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1509915045; Thu, 04 Jul 2019 19:16:37 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 725953486; Thu, 04 Jul 2019 19:33:43 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 4 Jul 2019 20:16:36 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 5 Jul 2019 11:16:27 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 5 Jul 2019 11:16:27 +0800
-From: Miles Chen <miles.chen@mediatek.com>
-To: Andy Whitcroft <apw@canonical.com>, Joe Perches <joe@perches.com>
-Subject: [PATCH v3] checkpatch: add several Kconfig default value tests
-Date: Fri, 5 Jul 2019 11:16:26 +0800
-Message-ID: <20190705031626.13859-1-miles.chen@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ 15.0.1395.4; Thu, 4 Jul 2019 20:33:41 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 5 Jul 2019 11:33:38 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 5 Jul 2019 11:33:38 +0800
+Message-ID: <1562297618.1212.46.camel@mtksdccf07>
+Subject: Re: [RFC,v3 9/9] media: platform: Add Mediatek ISP P1 shared memory
+ device
+From: Jungo Lin <jungo.lin@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Fri, 5 Jul 2019 11:33:38 +0800
+In-Reply-To: <20190701072532.GB137710@chromium.org>
+References: <jungo.lin@mediatek.com>
+ <20190611035344.29814-1-jungo.lin@mediatek.com>
+ <20190611035344.29814-10-jungo.lin@mediatek.com>
+ <20190701072532.GB137710@chromium.org>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 7BEF9DF5697C2F12ECF156EE294B426CF4C5ABEF37112D595BCD108E81DA91962000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190704_201643_405161_975DA8C4 
-X-CRM114-Status: GOOD (  14.74  )
+X-CRM114-CacheID: sfid-20190704_203359_650250_377D6FC1 
+X-CRM114-Status: GOOD (  33.73  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -69,262 +77,479 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Yingjoe
- Chen <yingjoe.chen@mediatek.com>, Miles Chen <miles.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- wsd_upstream@mediatek.com
+Cc: devicetree@vger.kernel.org, sean.cheng@mediatek.com, mchehab@kernel.org,
+ rynn.wu@mediatek.com, srv_heupstream@mediatek.com, robh@kernel.org,
+ ryan.yu@mediatek.com, frankie.chiu@mediatek.com, hverkuil@xs4all.nl,
+ matthias.bgg@gmail.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, laurent.pinchart@ideasonboard.com,
+ ddavenport@chromium.org, frederic.chen@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This change adds 3 Kconfig default value tests.
+Hi Tomasz,
 
-1. discourage default n cases:
-e.g.,
-default n
+On Mon, 2019-07-01 at 16:25 +0900, Tomasz Figa wrote:
+> Hi Jungo,
+> 
+> On Tue, Jun 11, 2019 at 11:53:44AM +0800, Jungo Lin wrote:
+> > The purpose of this child device is to provide shared
+> > memory management for exchanging tuning data between co-processor
+> > and the Pass 1 unit of the camera ISP system, including cache
+> > buffer handling.
+> > 
+> 
+> Looks like we haven't really progressed on getting this replaced with
+> something that doesn't require so much custom code. Let me propose something
+> better then.
+> 
+> We already have a reserved memory mode in DT. If it has a compatible string
+> of "shared-dma-pool", it would be registered in the coherent DMA framework
+> [1]. That would make it available for consumer devices to look-up.
+> 
+> Now if we add a "memory-region" property to the SCP device node and point it
+> to our reserved memory node, the SCP driver could look it up and hook to the
+> DMA mapping API using of_reserved_mem_device_init_by_idx[2].
+> 
+> That basically makes any dma_alloc_*(), dma_map_*(), etc. calls on the SCP
+> struct device use the coherent DMA ops, which operate on the assigned memory
+> pool. With that, the P1 driver could just directly use those calls to
+> manage the memory, without any custom code.
+> 
+> There is an example how this setup works in the s5p-mfc driver[3], but it
+> needs to be noted that it creates child nodes, because it can have more than
+> 1 DMA port, which may need its own memory pool. In our case, we wouldn't
+> need child nodes and could just use the SCP device directly.
+> 
+> [1] https://elixir.bootlin.com/linux/v5.2-rc7/source/kernel/dma/coherent.c#L345
+> [2] https://elixir.bootlin.com/linux/v5.2-rc7/source/drivers/of/of_reserved_mem.c#L312
+> [3] https://elixir.bootlin.com/linux/v5.2-rc7/source/drivers/media/platform/s5p-mfc/s5p_mfc.c#L1075
+> 
+> Let me also post some specific comments below, in case we end up still
+> needing any of the code.
+> 
 
-2. discourage default "[ynm]" cases:
-e.g.,
-arch/powerpc/Kconfig:   default "y" if PPC_POWERNV
-arch/powerpc/Kconfig:   default "y" if PPC_POWERNV
-arch/powerpc/Kconfig:   default "n"
-drivers/auxdisplay/Kconfig:     default "n"
-drivers/crypto/Kconfig: default "m"
-drivers/rapidio/devices/Kconfig:        default "n"
+Thanks your suggestions.
 
-3. discourage default EXPERT or default !EXPERT cases:
-e.g.,
-drivers/hid/Kconfig:    default !EXPERT
+After applying your suggestion in SCP device driver, we could remove
+mtk_cam-smem.h/c. Currently, we use dma_alloc_coherent with SCP device
+to get SCP address. We could touch the buffer with this SCP address in
+SCP processor. 
 
-tested cases:
-default m
-default n if ALPHA_EV5 || ALPHA_EV56 || (ALPHA_EV4 && !ALPHA_LCA)
-default y if ALPHA_QEMU
-default n if PPC_POWERNV
-default n
-default EXPERT
-default !EXPERT
-default "m"
-default "n"
-default "y" if EXPERT
-default "y" if PPC_POWERNV
+After that, we use dma_map_page_attrs with P1 device which supports
+IOMMU domain to get IOVA address. For this address, we will assign
+it to our ISP HW device to proceed.
 
-test result:
-WARNING: 'default n' is the default value, no need to write it explicitly
-+       default n
+Below is the snippet for ISP P1 compose buffer initialization.
 
-WARNING: Avoid using default EXPERT
-+       default EXPERT
+	ptr = dma_alloc_coherent(p1_dev->cam_dev.smem_dev,
+				 MAX_COMPOSER_SIZE, &addr, GFP_KERNEL);
+	if (!ptr) {
+		dev_err(dev, "failed to allocate compose memory\n");
+		return -ENOMEM;
+	}
+	isp_ctx->scp_mem_pa = addr;
+	dev_dbg(dev, "scp addr:%pad\n", &addr);
 
-WARNING: Avoid using default EXPERT
-+       default !EXPERT
+	/* get iova address */
+	addr = dma_map_page_attrs(dev, phys_to_page(addr), 0,
+				  MAX_COMPOSER_SIZE, DMA_BIDIRECTIONAL,
+				  DMA_ATTR_SKIP_CPU_SYNC);
+	if (dma_mapping_error(dev, addr)) {
+		isp_ctx->scp_mem_pa = 0;
+		dev_err(dev, "Failed to map scp iova\n");
+		return -ENOMEM;
+	}
+	isp_ctx->scp_mem_iova = addr;
 
-WARNING: Use 'default m' not 'default "m"'
-+       default "m"
+Moreover, we have another meta input buffer usage.
+For this kind of buffer, it will be allocated by V4L2 framework
+with dma_alloc_coherent with SCP device. In order to get IOVA,
+we will add dma_map_page_attrs in vb2_ops' buf_init function.
+In buf_cleanup function, we will call dma_unmap_page_attrs function.
 
-WARNING: Use 'default n' not 'default "n"'
-+       default "n"
+Based on these current implementation, do you think it is correct?
+If we got any wrong, please let us know. 
 
-WARNING: Use 'default y' not 'default "y"'
-+       default "y" if EXPERT
+Btw, we also DMA_ATTR_NO_KERNEL_MAPPING DMA attribte to
+avoid dma_sync_sg_for_device. Othewise, it will hit the KE.
+Maybe we could not get the correct sg_table.
+Do you think it is a bug and need to fix?
 
-WARNING: Use 'default y' not 'default "y"'
-+       default "y" if PPC_POWERNV
+For this new implementation, it will apply ISP P1 & P2 drivers[1].
 
-test --fix capability:
-default n => delete line
-default "m" => default m
-default "n" => default n
-default "y" if EXPERT => default y if EXPERT
-default "y" if PPC_POWERNV => default y if PPC_POWERNV
-default !EXPERT => no change
-default EXPERT => no change
+[1] https://patchwork.kernel.org/cover/10905221/
 
-Change since v1:
-discourage default n$
-discourage default "[ynm]"
-discourage default \!?EXPERT
+> > Signed-off-by: Jungo Lin <jungo.lin@mediatek.com>
+> > ---
+> > This patch depends on "Add support for mt8183 SCP"[1].
+> > 
+> > [1] https://patchwork.kernel.org/cover/10972143/
+> > ---
+> >  .../platform/mtk-isp/isp_50/cam/Makefile      |   1 +
+> >  .../mtk-isp/isp_50/cam/mtk_cam-smem.c         | 304 ++++++++++++++++++
+> >  .../mtk-isp/isp_50/cam/mtk_cam-smem.h         |  18 ++
+> >  3 files changed, 323 insertions(+)
+> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-smem.c
+> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-smem.h
+> > 
+> > diff --git a/drivers/media/platform/mtk-isp/isp_50/cam/Makefile b/drivers/media/platform/mtk-isp/isp_50/cam/Makefile
+> > index 95f0b1c8fa1c..d545ca6f09c5 100644
+> > --- a/drivers/media/platform/mtk-isp/isp_50/cam/Makefile
+> > +++ b/drivers/media/platform/mtk-isp/isp_50/cam/Makefile
+> > @@ -4,5 +4,6 @@ mtk-cam-isp-objs += mtk_cam-ctrl.o
+> >  mtk-cam-isp-objs += mtk_cam-v4l2-util.o
+> >  mtk-cam-isp-objs += mtk_cam.o
+> >  mtk-cam-isp-objs += mtk_cam-scp.o
+> > +mtk-cam-isp-objs += mtk_cam-smem.o
+> >  
+> >  obj-$(CONFIG_VIDEO_MEDIATEK_ISP_PASS1) += mtk-cam-isp.o
+> > \ No newline at end of file
+> > diff --git a/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-smem.c b/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-smem.c
+> > new file mode 100644
+> > index 000000000000..a9845668ce10
+> > --- /dev/null
+> > +++ b/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-smem.c
+> > @@ -0,0 +1,304 @@
+> > +// SPDX-License-Identifier: GPL-2.0
+> > +//
+> > +// Copyright (c) 2018 MediaTek Inc.
+> > +
+> > +#include <asm/cacheflush.h>
+> > +#include <linux/device.h>
+> > +#include <linux/io.h>
+> > +#include <linux/iommu.h>
+> > +#include <linux/of.h>
+> > +#include <linux/of_fdt.h>
+> > +#include <linux/of_reserved_mem.h>
+> > +#include <linux/platform_device.h>
+> > +#include <linux/platform_data/mtk_scp.h>
+> > +#include <media/videobuf2-dma-contig.h>
+> > +
+> > +#include "mtk_cam-smem.h"
+> > +
+> > +static struct dma_map_ops smem_dma_ops;
+> > +
+> > +struct mtk_cam_smem_dev {
+> > +	struct device *dev;
+> > +	struct sg_table sgt;
+> > +	struct page **smem_pages;
+> > +	dma_addr_t smem_base;
+> > +	dma_addr_t smem_dma_base;
+> > +	int smem_size;
+> > +};
+> > +
+> > +struct dma_coherent_mem {
+> > +	void		*virt_base;
+> > +	dma_addr_t	device_base;
+> > +	unsigned long	pfn_base;
+> > +	int		size;
+> > +	int		flags;
+> > +	unsigned long	*bitmap;
+> > +	spinlock_t	spinlock; /* dma_coherent_mem attributes protection */
+> > +	bool		use_dev_dma_pfn_offset;
+> > +};
+> > +
+> > +dma_addr_t mtk_cam_smem_iova_to_scp_addr(struct device *dev,
+> > +					 dma_addr_t iova)
+> > +{
+> > +	struct iommu_domain *domain;
+> > +	dma_addr_t addr, limit;
+> > +	struct mtk_cam_smem_dev *smem_dev = dev_get_drvdata(dev);
+> > +
+> > +	domain = iommu_get_domain_for_dev(dev);
+> > +	if (!domain) {
+> > +		dev_warn(dev, "No iommu group domain\n");
+> > +		return 0;
+> > +	}
+> > +
+> > +	addr = iommu_iova_to_phys(domain, iova);
+> > +	limit = smem_dev->smem_base + smem_dev->smem_size;
+> > +	if (addr < smem_dev->smem_base || addr >= limit) {
+> > +		dev_err(dev,
+> > +			"Unexpected scp_addr:%pad must >= %pad and < %pad)\n",
+> > +			&addr, &smem_dev->smem_base, &limit);
+> > +		return 0;
+> > +	}
+> > +	return addr;
+> > +}
+> 
+> This isn't correct. One could pass an IOVA that wasn't allocated for the SCP
+> and then the address wouldn't be valid, because it would point outside of
+> the address range allowed for SCP to access and also it would only point to
+> the first page backing the IOVA.
+> 
+> The correct approach would be to always carry SCP DMA address and IOVA
+> together in some kind of struct describing such buffers.
+> 
 
-Change since v2:
-(Joe has provided the whole patch and I just post it)
-test Kconfig in a single block
-print precise message such as 'default "m"', not 'default "[ynm]"'
-provide --fix capability
+We will remove this function in next patch & handle this in buf_init
+function.
 
-Cc: Joe Perches <joe@perches.com>
-Cc: Yingjoe Chen <yingjoe.chen@mediatek.com>
-Signed-off-by: Miles Chen <miles.chen@mediatek.com>
----
- scripts/checkpatch.pl | 139 ++++++++++++++++++++++++++----------------
- 1 file changed, 85 insertions(+), 54 deletions(-)
+> > +
+> > +static int mtk_cam_smem_get_sgtable(struct device *dev,
+> > +				    struct sg_table *sgt,
+> > +				    void *cpu_addr, dma_addr_t dma_addr,
+> > +				    size_t size, unsigned long attrs)
+> > +{
+> > +	struct mtk_cam_smem_dev *smem_dev = dev_get_drvdata(dev);
+> > +	size_t pages_count = PAGE_ALIGN(size) >> PAGE_SHIFT;
+> > +	dma_addr_t scp_addr = mtk_cam_smem_iova_to_scp_addr(dev, dma_addr);
+> > +	u32 pages_start = (scp_addr - smem_dev->smem_base) >> PAGE_SHIFT;
+> > +
+> > +	dev_dbg(dev,
+> > +		"%s:page:%u va:%pK scp addr:%pad, aligned size:%zu pages:%zu\n",
+> > +		__func__, pages_start, cpu_addr, &scp_addr, size, pages_count);
+> > +
+> > +	return sg_alloc_table_from_pages(sgt,
+> > +		smem_dev->smem_pages + pages_start,
+> > +		pages_count, 0, size, GFP_KERNEL);
+> > +}
+> 
+> This should be just dma_get_sgtable_attrs(), in the approach I suggested at
+> the top.
+> 
 
-diff --git a/scripts/checkpatch.pl b/scripts/checkpatch.pl
-index 342c7c781ba5..94799f23339c 100755
---- a/scripts/checkpatch.pl
-+++ b/scripts/checkpatch.pl
-@@ -2932,60 +2932,98 @@ sub process {
- 				      "Do not include the paragraph about writing to the Free Software Foundation's mailing address from the sample GPL notice. The FSF has changed addresses in the past, and may do so again. Linux already includes a copy of the GPL.\n" . $herevet)
- 		}
- 
--# check for Kconfig help text having a real description
--# Only applies when adding the entry originally, after that we do not have
--# sufficient context to determine whether it is indeed long enough.
--		if ($realfile =~ /Kconfig/ &&
--		    # 'choice' is usually the last thing on the line (though
--		    # Kconfig supports named choices), so use a word boundary
--		    # (\b) rather than a whitespace character (\s)
--		    $line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
--			my $length = 0;
--			my $cnt = $realcnt;
--			my $ln = $linenr + 1;
--			my $f;
--			my $is_start = 0;
--			my $is_end = 0;
--			for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
--				$f = $lines[$ln - 1];
--				$cnt-- if ($lines[$ln - 1] !~ /^-/);
--				$is_end = $lines[$ln - 1] =~ /^\+/;
--
--				next if ($f =~ /^-/);
--				last if (!$file && $f =~ /^\@\@/);
--
--				if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
--					$is_start = 1;
--				} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
--					if ($lines[$ln - 1] =~ "---help---") {
--						WARN("CONFIG_DESCRIPTION",
--						     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
-+# Kconfig tests
-+		if ($realfile =~ /Kconfig/) {
-+			# check for Kconfig help text having a real description
-+			# Only applies when adding the entry originally, after
-+			# that we do not have sufficient context to determine
-+			# whether it is indeed long enough.
-+			# 'choice' is usually the last thing on the line (though
-+			# Kconfig supports named choices), so use a word
-+			# boundary (\b) rather than a whitespace character (\s)
-+			if ($line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
-+				my $length = 0;
-+				my $cnt = $realcnt;
-+				my $ln = $linenr + 1;
-+				my $f;
-+				my $is_start = 0;
-+				my $is_end = 0;
-+				for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
-+					$f = $lines[$ln - 1];
-+					$cnt-- if ($lines[$ln - 1] !~ /^-/);
-+					$is_end = $lines[$ln - 1] =~ /^\+/;
-+
-+					next if ($f =~ /^-/);
-+					last if (!$file && $f =~ /^\@\@/);
-+
-+					if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
-+						$is_start = 1;
-+					} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
-+						if ($lines[$ln - 1] =~ "---help---") {
-+							WARN("CONFIG_DESCRIPTION",
-+							     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
-+						}
-+						$length = -1;
-+					}
-+
-+					$f =~ s/^.//;
-+					$f =~ s/#.*//;
-+					$f =~ s/^\s+//;
-+					next if ($f =~ /^$/);
-+
-+					# This only checks context lines in the patch
-+					# and so hopefully shouldn't trigger false
-+					# positives, even though some of these are
-+					# common words in help texts
-+					if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
-+							   if|endif|menu|endmenu|source)\b/x) {
-+						$is_end = 1;
-+						last;
- 					}
--					$length = -1;
-+					$length++;
-+				}
-+				if ($is_start && $is_end && $length < $min_conf_desc_length) {
-+					WARN("CONFIG_DESCRIPTION",
-+					     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
- 				}
-+				#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
-+			}
- 
--				$f =~ s/^.//;
--				$f =~ s/#.*//;
--				$f =~ s/^\s+//;
--				next if ($f =~ /^$/);
--
--				# This only checks context lines in the patch
--				# and so hopefully shouldn't trigger false
--				# positives, even though some of these are
--				# common words in help texts
--				if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
--						  if|endif|menu|endmenu|source)\b/x) {
--					$is_end = 1;
--					last;
-+# discourage the use of boolean for type definition attributes
-+			if ($line =~ /^\+\s*\bboolean\b/) {
-+				if (WARN("CONFIG_TYPE_BOOLEAN",
-+					 "Use of boolean is deprecated, please use bool instead\n" . $herecurr) &&
-+				    $fix) {
-+					$fixed[$fixlinenr] =~ s/\bboolean\b/bool/;
-+				}
-+			}
-+
-+# Kconfig: discourage redundant 'default n'
-+			if ($line =~ /^\+\s*default\s+n$/) {
-+				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
-+					 "'default n' is the default value, no need to write it explicitly\n" . $herecurr) &&
-+				    $fix) {
-+					fix_delete_line($fixlinenr, $rawline);
- 				}
--				$length++;
- 			}
--			if ($is_start && $is_end && $length < $min_conf_desc_length) {
--				WARN("CONFIG_DESCRIPTION",
--				     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
-+
-+# Kconfig: discourage quoted defaults: use default [ynm], not default "[ynm]"
-+			if ($rawline =~ /^\+\s*default\s+"([ynm])"/) {
-+				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
-+					 "Use 'default $1' not 'default \"$1\"'\n" . $herecurr) &&
-+				    $fix) {
-+					$fixed[$fixlinenr] =~ s/\b(default\s+)"(.)"/$1$2/;
-+				}
-+			}
-+
-+# Kconfig: discourage using default EXPERT or !EXPERT
-+			if ($line =~ /^\+\s*default\s+\!?\s*EXPERT\b/) {
-+				WARN("CONFIG_DEFAULT_VALUE_STYLE",
-+				     "Avoid using default EXPERT\n" . $herecurr);
- 			}
--			#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
- 		}
-+# End of Kconfig tests
-+
- 
- # check for MAINTAINERS entries that don't have the right form
- 		if ($realfile =~ /^MAINTAINERS$/ &&
-@@ -2998,13 +3036,6 @@ sub process {
- 			}
- 		}
- 
--# discourage the use of boolean for type definition attributes of Kconfig options
--		if ($realfile =~ /Kconfig/ &&
--		    $line =~ /^\+\s*\bboolean\b/) {
--			WARN("CONFIG_TYPE_BOOLEAN",
--			     "Use of boolean is deprecated, please use bool instead.\n" . $herecurr);
--		}
--
- 		if (($realfile =~ /Makefile.*/ || $realfile =~ /Kbuild.*/) &&
- 		    ($line =~ /\+(EXTRA_[A-Z]+FLAGS).*/)) {
- 			my $flag = $1;
--- 
-2.18.0
+Yes, we will remove this in next patch.
+
+> > +
+> > +static void *mtk_cam_smem_get_cpu_addr(struct mtk_cam_smem_dev *smem_dev,
+> > +				       dma_addr_t addr)
+> > +{
+> > +	struct device *dev = smem_dev->dev;
+> > +	struct dma_coherent_mem *dma_mem = dev->dma_mem;
+> > +
+> > +	if (addr < smem_dev->smem_base ||
+> > +	    addr > smem_dev->smem_base + smem_dev->smem_size) {
+> 
+> This is off by one, should be >=.
+> 
+> Also, this wouldn't really guarantee the CPU access the caller is going to
+> do is valid, because it doesn't consider the access operation size.
+> 
+> Generally I'd suggest designing the code so that it doesn't have to convert
+> offset addresses between different address spaces.
+> 
+
+Yes, we will remove this in next patch.
+
+> > +		dev_err(dev, "Invalid scp_addr %pad from sg\n", &addr);
+> > +		return NULL;
+> > +	}
+> > +	return dma_mem->virt_base + (addr - smem_dev->smem_base);
+> > +}
+> > +
+> > +static void mtk_cam_smem_sync_sg_for_cpu(struct device *dev,
+> > +					 struct scatterlist *sgl, int nelems,
+> > +					 enum dma_data_direction dir)
+> > +{
+> > +	struct mtk_cam_smem_dev *smem_dev = dev_get_drvdata(dev);
+> > +	dma_addr_t scp_addr = sg_phys(sgl);
+> > +	void *cpu_addr = mtk_cam_smem_get_cpu_addr(smem_dev, scp_addr);
+> > +
+> > +	dev_dbg(dev,
+> > +		"__dma_unmap_area:scp_addr:%pad,vaddr:%pK,size:%d,dir:%d\n",
+> > +		&scp_addr, cpu_addr, sgl->length, dir);
+> > +	__dma_unmap_area(cpu_addr, sgl->length, dir);
+> 
+> It's not allowed to use this function anywhere outside of the DMA API
+> internals. See the comment [4].
+> 
+> [4] https://elixir.bootlin.com/linux/v5.2-rc7/source/arch/arm64/include/asm/cacheflush.h#L112
+> 
+
+Ok, got it and remove this next patch.
+
+> > +}
+> > +
+> > +static void mtk_cam_smem_sync_sg_for_device(struct device *dev,
+> > +					    struct scatterlist *sgl,
+> > +					    int nelems,
+> > +					    enum dma_data_direction dir)
+> > +{
+> > +	struct mtk_cam_smem_dev *smem_dev = dev_get_drvdata(dev);
+> > +	dma_addr_t scp_addr = sg_phys(sgl);
+> > +	void *cpu_addr = mtk_cam_smem_get_cpu_addr(smem_dev, scp_addr);
+> > +
+> > +	dev_dbg(dev,
+> > +		"__dma_map_area:scp_addr:%pad,vaddr:%pK,size:%d,dir:%d\n",
+> > +		&scp_addr, cpu_addr, sgl->length, dir);
+> > +	__dma_map_area(cpu_addr, sgl->length, dir);
+> 
+> Ditto.
+> 
+
+Ok, got it and remove this next patch.
+
+> > +}
+> > +
+> > +static void mtk_cam_smem_setup_dma_ops(struct device *dev,
+> > +				       struct dma_map_ops *smem_ops)
+> > +{
+> > +	memcpy((void *)smem_ops, dev->dma_ops, sizeof(*smem_ops));
+> > +	smem_ops->get_sgtable = mtk_cam_smem_get_sgtable;
+> > +	smem_ops->sync_sg_for_device = mtk_cam_smem_sync_sg_for_device;
+> > +	smem_ops->sync_sg_for_cpu = mtk_cam_smem_sync_sg_for_cpu;
+> > +	set_dma_ops(dev, smem_ops);
+> > +}
+> > +
+> > +static int mtk_cam_reserved_drm_sg_init(struct mtk_cam_smem_dev *smem_dev)
+> > +{
+> > +	u32 size_align, n_pages;
+> > +	struct device *dev = smem_dev->dev;
+> > +	struct sg_table *sgt = &smem_dev->sgt;
+> > +	struct page **pages;
+> > +	dma_addr_t dma_addr;
+> > +	unsigned int i;
+> > +	int ret;
+> > +
+> > +	smem_dev->smem_base = scp_get_reserve_mem_phys(SCP_ISP_MEM2_ID);
+> > +	smem_dev->smem_size = scp_get_reserve_mem_size(SCP_ISP_MEM2_ID);
+> > +	if (!smem_dev->smem_base || !smem_dev->smem_size)
+> > +		return -EPROBE_DEFER;
+> > +
+> > +	dev_info(dev, "%s dev:0x%pK base:%pad size:%u MiB\n",
+> > +		 __func__,
+> > +		 smem_dev->dev,
+> > +		 &smem_dev->smem_base,
+> > +		 (smem_dev->smem_size / SZ_1M));
+> > +
+> > +	size_align = PAGE_ALIGN(smem_dev->smem_size);
+> > +	n_pages = size_align >> PAGE_SHIFT;
+> > +
+> > +	pages = kmalloc_array(n_pages, sizeof(struct page *), GFP_KERNEL);
+> > +	if (!pages)
+> > +		return -ENOMEM;
+> > +
+> > +	for (i = 0; i < n_pages; i++)
+> > +		pages[i] = phys_to_page(smem_dev->smem_base + i * PAGE_SIZE);
+> > +
+> > +	ret = sg_alloc_table_from_pages(sgt, pages, n_pages, 0,
+> > +					size_align, GFP_KERNEL);
+> > +	if (ret) {
+> > +		dev_err(dev, "failed to alloca sg table:%d\n", ret);
+> > +		goto fail_table_alloc;
+> > +	}
+> > +	sgt->nents = dma_map_sg_attrs(dev, sgt->sgl, sgt->orig_nents,
+> > +				      DMA_BIDIRECTIONAL,
+> > +				      DMA_ATTR_SKIP_CPU_SYNC);
+> > +	if (!sgt->nents) {
+> > +		dev_err(dev, "failed to dma sg map\n");
+> > +		goto fail_map;
+> > +	}
+> > +
+> > +	dma_addr = sg_dma_address(sgt->sgl);
+> > +	ret = dma_declare_coherent_memory(dev, smem_dev->smem_base,
+> > +					  dma_addr, size_align,
+> > +					  DMA_MEMORY_EXCLUSIVE);
+> > +	if (ret) {
+> > +		dev_err(dev, "Unable to declare smem  memory:%d\n", ret);
+> > +		goto fail_map;
+> > +	}
+> > +
+> > +	dev_info(dev, "Coherent mem pa:%pad/%pad, size:%d\n",
+> > +		 &smem_dev->smem_base, &dma_addr, size_align);
+> > +
+> > +	smem_dev->smem_size = size_align;
+> > +	smem_dev->smem_pages = pages;
+> > +	smem_dev->smem_dma_base = dma_addr;
+> > +
+> > +	return 0;
+> > +
+> > +fail_map:
+> > +	sg_free_table(sgt);
+> > +fail_table_alloc:
+> > +	while (n_pages--)
+> > +		__free_page(pages[n_pages]);
+> > +	kfree(pages);
+> > +
+> > +	return -ENOMEM;
+> > +}
+> > +
+> > +/* DMA memory related helper functions */
+> > +static void mtk_cam_memdev_release(struct device *dev)
+> > +{
+> > +	vb2_dma_contig_clear_max_seg_size(dev);
+> > +}
+> > +
+> > +static struct device *mtk_cam_alloc_smem_dev(struct device *dev,
+> > +					     const char *name)
+> > +{
+> > +	struct device *child;
+> > +	int ret;
+> > +
+> > +	child = devm_kzalloc(dev, sizeof(*child), GFP_KERNEL);
+> > +	if (!child)
+> > +		return NULL;
+> > +
+> > +	child->parent = dev;
+> > +	child->iommu_group = dev->iommu_group;
+> 
+> This isn't something that can be set explicitly. It's an internal field of
+> the IOMMU subsystem.
+> 
+> > +	child->release = mtk_cam_memdev_release;
+> > +	dev_set_name(child, name);
+> > +	set_dma_ops(child, get_dma_ops(dev));
+> > +	child->dma_mask = dev->dma_mask;
+> > +	ret = dma_set_coherent_mask(child, DMA_BIT_MASK(32));
+> > +	if (ret)
+> > +		return NULL;
+> > +
+> > +	vb2_dma_contig_set_max_seg_size(child, DMA_BIT_MASK(32));
+> > +
+> > +	if (device_register(child)) {
+> > +		device_del(child);
+> > +		return NULL;
+> > +	}
+> > +
+> > +	return child;
+> > +}
+> 
+> We shouldn't need child devices, just one SCP device, as I mentioned above.
+> 
+
+Ok, got your point. Just keep one single SCP device for single reserved
+memory range.
+
+> > +
+> > +static int mtk_cam_composer_dma_init(struct mtk_isp_p1_ctx *isp_ctx)
+> > +{
+> > +	struct isp_p1_device *p1_dev = p1_ctx_to_dev(isp_ctx);
+> > +	struct device *dev = &p1_dev->pdev->dev;
+> > +	u32 size;
+> > +	dma_addr_t addr;
+> > +
+> > +	isp_ctx->scp_mem_pa = scp_get_reserve_mem_phys(SCP_ISP_MEM_ID);
+> > +	size = PAGE_ALIGN(scp_get_reserve_mem_size(SCP_ISP_MEM_ID));
+> > +	if (!isp_ctx->scp_mem_pa || !size)
+> > +		return -EPROBE_DEFER;
+> > +
+> > +	dev_info(dev, "scp addr:%pad size:0x%x\n", &isp_ctx->scp_mem_pa, size);
+> 
+> This isn't something that deserves the "info" log level. Should be "dbg"
+> or removed.
+> 
+
+Ok, we will change the log level from info to debug.
+
+> Best regards,
+> Tomasz
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+Thanks for your valued comments.
+
+Best regards,
+
+
+Jungo
+
 
 
 _______________________________________________
