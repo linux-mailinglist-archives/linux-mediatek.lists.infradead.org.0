@@ -2,92 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9F74B610D2
-	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 15:31:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E4C39611CC
+	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 17:05:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=hfgAXOYobyp8ijMUUuN6SaMJSLOxYKSTyl+Or60srLI=; b=C6zmclNK2xGOT9
-	k6F59iUj9nfcqZgaX0WDfMg3rByVgi9FPbOXoHipYOa/+VDfBa8h/GBbgBhc4Ri9QOWrraSxPgucZ
-	/TweJCL0EmsxNGM/p3oOlq7Johr5d969uaHcyn9dh1oe+DmNkhSEEq4XpEF4g2daiZIhYA6su0iMC
-	gr6CbfLx+4aONPMVsL0v4j+SqG4jjpbG/lhBJ8wrgbAvV6V2RInZQ9ykuA1uhJRHSUdMdNxer5RiI
-	b9UfbnsTzjPutURQsiVpMsEE+nB7tBJqNh/AtTp5uAP/L1fv5jB0JdRUA//VDIIKrYJrId40THNYy
-	EVX2xISAVTKdSvnS+0Cw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=EDiaqzdn6e7pU+fMMJ2rC2ohFUteDPwCvva7nL66W/g=; b=mrEJglWzdY3wK3EcXzdfA1voN
+	vbmZg8OEjc3wgvq9yf2RMWwIB43u82lOVbKempdEra5v4T11vK3OJtg8EdsqGaC/3/rib8teZV0iu
+	j5SJEAnS/PFQdsQ/3PbPYoQesj429iPgJyODlyaWsB/LluXRUPdeaZSwFijBhE3e3UZtVucFp8bfz
+	VkqaoDbVG8J65TaXv5KSF64656M9xQ/CWf10Esc9lA0Qgi2SIOi/mY8di+xGGn7aJulUL1JoL4MnD
+	1+6aWjq0y9qxJVPL0X4SbTwYT1SQ1G1D/sXtArzum/iWztR3opvFInGZatJdsqnDuZXQsu2Hx17ue
+	nDH5j8pXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjkmD-0008Th-3L; Sat, 06 Jul 2019 13:30:53 +0000
-Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjklx-0008Ln-8W; Sat, 06 Jul 2019 13:30:38 +0000
-Received: by mail-pg1-x541.google.com with SMTP id i18so5460807pgl.11;
- Sat, 06 Jul 2019 06:30:34 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=ut6IeCO94UUbJJFbHPkNN9BlqXZJ9Hk6d+0wH2eLEVU=;
- b=MAt2GM7NCEcrkO3H0T05ygT6Nn6q6eQ8iEBeY7KUf4FyV7cXqevSW41QpUSbOjLmij
- MUQVjQp+Jj0tdismhDEBdVFXrcv0Aao1Eryu5mJ4nylkHtaZMsPDHiA/QQwDkcUIVfoI
- tmscRnDD2vHqSCnmaCahVEYkZcfMb35fZ2tdJWP90CIxpA8/x5Dld9f5dG38EcGXykVu
- vlykA7k2ZcsZHcp1TlaQ7OoX9c0CxIuEm0Ad4bu8mkUtRRBrrwJr4k1toOWk3dtzMrFj
- ruroSybQRd23RDoTtATAiFusLOXeVxdOvsFPWhLAofuD8xgr6LFkdb50BbkDbNqV+F1r
- 8RKQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=ut6IeCO94UUbJJFbHPkNN9BlqXZJ9Hk6d+0wH2eLEVU=;
- b=GmYGAZr+MT8lVZe02GkuepiNZXLpWuzJ41MaexERK7I2dDBnmsefcUM8rGUUTLYbae
- 1hTrl8E20P008+xVk4cstKbexW7XobfUDu2rLb+dabRZZHKBPwYwxqjSWZq6Bdj9NhQH
- 9fhAxH4pU0XlXyf/K/zZ+lSEdoJAbVkZDBirF3eZMKcoi0sJOsZZqNWoBYrLGPHGIR3Q
- wCvs7ZGrAL+FfKhJGN58zjW7A+AC3x8hXwgdX5wG1XBh8zU//Ozok9TSXHKyE1BHi0WD
- 7ZT2Y8SAHDZzb0cYHiatXjwvo8e4clYqyakZ9ancb48lzrE/51xhXiqENSygMDlokE4A
- a9GA==
-X-Gm-Message-State: APjAAAVS8Rd0yUeveD062e3ytJrpa7d8X/EWjsxIk89VRZ+u3w/8uHbQ
- ccLAcDOh1qUDi8s0B5w5LRE=
-X-Google-Smtp-Source: APXvYqz5aMcqwlQglCOlf2ZKj5MRm4E9DEfSPhzDEheTgbBtCem0FQPO8JmcdQU6AEUnJor5Wa4YPg==
-X-Received: by 2002:a63:358a:: with SMTP id c132mr2390181pga.375.1562419834089; 
- Sat, 06 Jul 2019 06:30:34 -0700 (PDT)
-Received: from localhost.localdomain ([122.163.64.117])
- by smtp.gmail.com with ESMTPSA id 2sm11494343pff.174.2019.07.06.06.30.30
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Sat, 06 Jul 2019 06:30:33 -0700 (PDT)
-From: Nishka Dasgupta <nishkadg.linux@gmail.com>
-To: ck.hu@mediatek.com, p.zabel@pengutronix.de, matthias.bgg@gmail.com,
- airlie@linux.ie, daniel@ffwll.ch, dri-devel@lists.freedesktop.org,
- linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org
-Subject: [PATCH] gpu: drm: mediatek: mtk_drm_drv.c: Add of_node_put() before
- goto
-Date: Sat,  6 Jul 2019 19:00:21 +0530
-Message-Id: <20190706133021.3308-1-nishkadg.linux@gmail.com>
-X-Mailer: git-send-email 2.19.1
+	id 1hjmFc-0007TU-0N; Sat, 06 Jul 2019 15:05:20 +0000
+Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjmFF-00065k-FP; Sat, 06 Jul 2019 15:04:58 +0000
+Received: from localhost (p5486CF0A.dip0.t-ipconnect.de [84.134.207.10])
+ by pokefinder.org (Postfix) with ESMTPSA id ADFC22C376D;
+ Sat,  6 Jul 2019 17:04:55 +0200 (CEST)
+Date: Sat, 6 Jul 2019 17:04:55 +0200
+From: Wolfram Sang <wsa@the-dreams.de>
+To: YueHaibing <yuehaibing@huawei.com>
+Subject: Re: [PATCH -next] i2c: mt7621: Fix platform_no_drv_owner.cocci
+ warnings
+Message-ID: <20190706150455.GB7429@kunai>
+References: <20190629024421.177153-1-yuehaibing@huawei.com>
 MIME-Version: 1.0
+In-Reply-To: <20190629024421.177153-1-yuehaibing@huawei.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190706_063037_330988_07CB0014 
-X-CRM114-Status: UNSURE (   9.26  )
+X-CRM114-CacheID: sfid-20190706_080457_668653_C1BEACBA 
+X-CRM114-Status: UNSURE (   4.54  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
- [list.dnswl.org]
+ no trust [88.99.104.3 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (nishkadg.linux[at]gmail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 PDS_NO_HELO_DNS        High profile HELO but no A record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,49 +59,67 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: kernel-janitors@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-i2c@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Stefan Roese <sr@denx.de>, linux-arm-kernel@lists.infradead.org
+Content-Type: multipart/mixed; boundary="===============2933834613971293780=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Each iteration of for_each_child_of_node puts the previous
-node, but in the case of a goto from the middle of the loop, there is
-no put, thus causing a memory leak. Hence add an of_node_put before the
-goto in two places.
-Issue found with Coccinelle.
 
-Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
----
- drivers/gpu/drm/mediatek/mtk_drm_drv.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+--===============2933834613971293780==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="QKdGvSO+nmPlgiQ/"
+Content-Disposition: inline
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-index 95fdbd0fbcac..2dffbc8c6d73 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-@@ -524,12 +524,15 @@ static int mtk_drm_probe(struct platform_device *pdev)
- 			comp = devm_kzalloc(dev, sizeof(*comp), GFP_KERNEL);
- 			if (!comp) {
- 				ret = -ENOMEM;
-+				of_node_put(node);
- 				goto err_node;
- 			}
- 
- 			ret = mtk_ddp_comp_init(dev, node, comp, comp_id, NULL);
--			if (ret)
-+			if (ret) {
-+				of_node_put(node);
- 				goto err_node;
-+			}
- 
- 			private->ddp_comp[comp_id] = comp;
- 		}
--- 
-2.19.1
 
+--QKdGvSO+nmPlgiQ/
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Sat, Jun 29, 2019 at 02:44:21AM +0000, YueHaibing wrote:
+> Remove .owner field if calls are used which set it automatically
+> Generated by: scripts/coccinelle/api/platform_no_drv_owner.cocci
+>=20
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+
+Applied to for-next, thanks!
+
+
+--QKdGvSO+nmPlgiQ/
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl0guJcACgkQFA3kzBSg
+KbZvhRAAo4+3YhI39rG4rBWsbdNyRoz5yDVMxqJcCWGiGnwMuR6RATNCRLJGpdP6
+MJUjKMsYiRGVgFM/DeUxxM0/EwxYu5bYVdcD8pVz/rb5Cz89bjlGQgKeQ1qE/f1x
+p8tneSHQmebUv9RVyC3ip+/cyI2JdmRdZF/q2BhRTgXJKgKbzUcBgO5o8j+fdGIz
+GTG9t6WNui6q4cYgnhkD5C9Rsp+e13I1EP14h5AhPVMlvM06xy5fjyzw2OMd+khR
+bK8mOlMqXc391eD7Sslakz4w3mu8zjLT9jedSWyp/621EV5RSyrstFZZaG9StWxD
+mNY0amrWqg3jZxZElj8+CqkQnJt+n8P9jbtI8tKe2m5AmwoKjRB/QUrj8QDK2DsW
+QmGcHumPvGJVBFSP03MB4M9VJ9pp3rwuf5Mm7pQdK4jgdLgNs71G1FYlBzoW7JAP
+Qptvwkt9A4BE2gpWokgtu7O3nb12LfZbe3ot86yRmKQlWlxZGoG/BVuyMUyD/HsE
+42KxXykKAokiovUt049RIQyMLB4IZBLGBuuuwEcaTiUfkDVb1/h8fCiVQX+S6C5v
+BnePbGuf9M0zNPGeBS1NYn0+CkOO4mkR0aiS+2q0KQjuypmdeHbnWXrjl4MfVk7k
+WpMHEHUFGvHQ2LNQsqxUAq4VUtGapi0d0RsNPX4cL+4HhWDqyAo=
+=5oAP
+-----END PGP SIGNATURE-----
+
+--QKdGvSO+nmPlgiQ/--
+
+
+--===============2933834613971293780==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============2933834613971293780==--
+
