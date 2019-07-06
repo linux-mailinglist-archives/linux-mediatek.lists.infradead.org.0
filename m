@@ -2,57 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 769D260D22
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jul 2019 23:25:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7681F60F13
+	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 07:20:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dtRYqmumc+9nPGRmsDzV2ZyA1koR/salBrGJTLNlyss=; b=QuXP4t6QeVBvSQ
-	tP5tF15C+mJ5oA67KAH3KQsz7pM/Finmew8j8F2y4Lkjox2cVxnHiyJZ9q7vIIsWJD1jz9z2xOX7B
-	6Sdf61EAcEcuAyvR+Wwws6zcSmvpdmTXHCOjrfd43KI0WhbJipYZ0HiPxID0ZjfIm7pLJHpLlSqCB
-	rRSUfQ7nmKlQZ6NZTsJAX06Npi3lW3AKDqvSpZwn6ZX1Wj1c+OJ5/tqc63IHGGUZZvi7KnSHBph9W
-	xKSX4eJfxi7Mocgyz8KvaQ9rqtc8HWi1QJU5CiymPui3t/bts5JaFibfpsvedAnkf9x3HLlYLz+os
-	4+6eE1oGQ3sALtslcRiQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=Rpip9uEgOk1LD8gnK8wCyf+XwxM+gCEuVuoamOs116U=; b=caAENO8x2y4qNGlgJfBz8ryAI
+	6iipUIcJ9LfAYXDln6NfmXAuZvD/aIT4r1dNKSALv7piwjUvJin3VoxlHZSpKoFP68E5bbBgxF95E
+	KQSbAKprQMmX1lVpiu3EcoyVCca5Wls/i99MmU1uClhq+paiWBD5Rk8g972bSvnlcgBVhSgYdaOM/
+	KtvpEEln8zKQJ6eexmvpFBCpyF2v5dPCwrKLu/QLQOepZjUR5j7pJQhCN2mfeEI++YBaaiPbVQtIP
+	GYyWGwxip6uxPt9zY/TgkQlW7zLdj20q9Ki2hGeZwSsGvcCrKvpPFvnt7IOiMzgcR/nuLnC6UYnmt
+	FSVDfIUOA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjVhv-0006S6-PA; Fri, 05 Jul 2019 21:25:28 +0000
-Received: from relay5-d.mail.gandi.net ([217.70.183.197])
+	id 1hjd6o-0002MW-GD; Sat, 06 Jul 2019 05:19:38 +0000
+Received: from mx2.mailbox.org ([80.241.60.215])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hjVhf-0005vx-LZ; Fri, 05 Jul 2019 21:25:13 +0000
-X-Originating-IP: 90.65.161.137
-Received: from localhost (lfbn-1-1545-137.w90-65.abo.wanadoo.fr
- [90.65.161.137])
- (Authenticated sender: alexandre.belloni@bootlin.com)
- by relay5-d.mail.gandi.net (Postfix) with ESMTPSA id 5B1981C0003;
- Fri,  5 Jul 2019 21:24:48 +0000 (UTC)
-Date: Fri, 5 Jul 2019 23:24:48 +0200
-From: Alexandre Belloni <alexandre.belloni@bootlin.com>
-To: Frank Wunderlich <frank-w@public-files.de>
-Subject: Re: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
-Message-ID: <20190705212448.GB12409@piout.net>
-References: <20190703164822.17924-1-frank-w@public-files.de>
- <20190703164822.17924-4-frank-w@public-files.de>
- <20190704204336.GJ3692@piout.net>
- <trinity-7b1977bd-252b-4482-b708-cf704a9d3da1-1562340946396@3c-app-gmx-bs68>
+ id 1hjd6M-0002Bb-NZ; Sat, 06 Jul 2019 05:19:12 +0000
+Received: from smtp1.mailbox.org (smtp1.mailbox.org
+ [IPv6:2001:67c:2050:105:465:1:1:0])
+ (using TLSv1.2 with cipher ECDHE-RSA-CHACHA20-POLY1305 (256/256 bits))
+ (No client certificate requested)
+ by mx2.mailbox.org (Postfix) with ESMTPS id 89B92A0142;
+ Sat,  6 Jul 2019 07:19:05 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at heinlein-support.de
+Received: from smtp1.mailbox.org ([80.241.60.240])
+ by spamfilter01.heinlein-hosting.de (spamfilter01.heinlein-hosting.de
+ [80.241.56.115]) (amavisd-new, port 10030)
+ with ESMTP id M3-2ntrIuL15; Sat,  6 Jul 2019 07:18:58 +0200 (CEST)
+Subject: Re: [PATCH -next] i2c: mt7621: Fix platform_no_drv_owner.cocci
+ warnings
+To: YueHaibing <yuehaibing@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+References: <20190629024421.177153-1-yuehaibing@huawei.com>
+From: Stefan Roese <sr@denx.de>
+Message-ID: <4fc5562f-c760-6f0d-46c6-c750ad70151e@denx.de>
+Date: Sat, 6 Jul 2019 07:18:56 +0200
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <trinity-7b1977bd-252b-4482-b708-cf704a9d3da1-1562340946396@3c-app-gmx-bs68>
-User-Agent: Mutt/1.12.0 (2019-05-25)
+In-Reply-To: <20190629024421.177153-1-yuehaibing@huawei.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190705_142512_024568_68E4C74A 
-X-CRM114-Status: GOOD (  19.20  )
+X-CRM114-CacheID: sfid-20190705_221910_921673_DDBD82A6 
+X-CRM114-Status: GOOD (  14.74  )
 X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.197 listed in list.dnswl.org]
+ low trust [80.241.60.215 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,90 +67,39 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Linus Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
- Richard Fontana <rfontana@redhat.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- "Paul E . McKenney" <paulmck@linux.ibm.com>, Lee Jones <lee.jones@linaro.org>,
- linux-rtc@vger.kernel.org, Rob Herring <robh@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
- linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Allison Randal <allison@lohutok.net>, Alessandro Zummo <a.zummo@towertech.it>,
- Josef Friedl <josef.friedl@speed.at>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sebastian Reichel <sre@kernel.org>, "David S . Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
+Cc: kernel-janitors@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-i2c@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 05/07/2019 17:35:46+0200, Frank Wunderlich wrote:
-> Hi Alexander,
+On 29.06.19 04:44, YueHaibing wrote:
+> Remove .owner field if calls are used which set it automatically
+> Generated by: scripts/coccinelle/api/platform_no_drv_owner.cocci
 > 
-> thank you for the Review
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+> ---
+>   drivers/i2c/busses/i2c-mt7621.c | 1 -
+>   1 file changed, 1 deletion(-)
 > 
-> > Gesendet: Donnerstag, 04. Juli 2019 um 22:43 Uhr
-> > Von: "Alexandre Belloni" <alexandre.belloni@bootlin.com>
-> > > -	rtc->rtc_dev = devm_rtc_allocate_device(rtc->dev);
-> > > -	if (IS_ERR(rtc->rtc_dev))
-> > > -		return PTR_ERR(rtc->rtc_dev);
-> > > +	ret = devm_request_threaded_irq(&pdev->dev, rtc->irq, NULL,
-> > > +					mtk_rtc_irq_handler_thread,
-> > > +					IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
-> > > +					"mt6397-rtc", rtc);
-> > >
-> >
-> > This change may lead to a crash and the allocation was intentionally
-> > placed before the irq request.
-> 
-> i got no crash till now, but i will try to move the allocation before irq-request
-> 
+> diff --git a/drivers/i2c/busses/i2c-mt7621.c b/drivers/i2c/busses/i2c-mt7621.c
+> index 2a1cb414766d..62df8379bc89 100644
+> --- a/drivers/i2c/busses/i2c-mt7621.c
+> +++ b/drivers/i2c/busses/i2c-mt7621.c
+> @@ -343,7 +343,6 @@ static struct platform_driver mtk_i2c_driver = {
+>   	.probe		= mtk_i2c_probe,
+>   	.remove		= mtk_i2c_remove,
+>   	.driver		= {
+> -		.owner	= THIS_MODULE,
+>   		.name	= "i2c-mt7621",
+>   		.of_match_table = i2c_mtk_dt_ids,
+>   	},
 
-Let's say the RTC has been used to start your platform, then the irq
-handler will be called as soon as the irq is requested, leading to a
-null pointer dereference.
+Reviewed-by: Stefan Roese <sr@denx.de>
 
-> > > -	ret = request_threaded_irq(rtc->irq, NULL,
-> > > -				   mtk_rtc_irq_handler_thread,
-> > > -				   IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
-> > > -				   "mt6397-rtc", rtc);
-> > >  	if (ret) {
-> > >  		dev_err(&pdev->dev, "Failed to request alarm IRQ: %d: %d\n",
-> > >  			rtc->irq, ret);
-> > > @@ -287,6 +281,10 @@ static int mtk_rtc_probe(struct platform_device *pdev)
-> > >
-> > >  	device_init_wakeup(&pdev->dev, 1);
-> > >
-> > > +	rtc->rtc_dev = devm_rtc_allocate_device(&pdev->dev);
-> > > +	if (IS_ERR(rtc->rtc_dev))
-> > > +		return PTR_ERR(rtc->rtc_dev);
-> > > +
-> > >  	rtc->rtc_dev->ops = &mtk_rtc_ops;
-> 
-> 
-> > >  static const struct of_device_id mt6397_rtc_of_match[] = {
-> > > +	{ .compatible = "mediatek,mt6323-rtc", },
-> >
-> > Unrelated change, this is not an improvement and must be accompanied by
-> > a documentation change.
-> 
-> documentation is changed in 1/7 defining this compatible. i called it improvement because existing driver now supports another chip
-> 
-
-Yes and IIRC, I did comment that the rtc change also had to be separated
-from 1/7.
-
-Also, I really doubt this new compatible is necessary at all as you
-could simply directly use mediatek,mt6397-rtc.
-
--- 
-Alexandre Belloni, Bootlin
-Embedded Linux and Kernel engineering
-https://bootlin.com
+Thanks,
+Stefan
 
 _______________________________________________
 Linux-mediatek mailing list
