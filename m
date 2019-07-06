@@ -2,53 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC428612DB
-	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 21:48:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BC74612E5
+	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 22:05:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:References:Message-Id:Date:
-	In-Reply-To:From:Subject:Mime-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m0r19TlPq83HvvBThzOTcvSDzUBZN8dMp4wUEBKMvVI=; b=CyJiE7HKJaJSZr
-	Wy4J/UZqhOxW8L2uQlbEsEGJKZ5SSpxpnVRuR90QSn4qdzTSCOjhBmpRDzLejAIjpq75P8ME5SuKc
-	oMr7/0IuhjtbfXF1WqyiofpqqUYhrSDIOuObgYo+aLL/YjJ3iTTs3+nsiTa0nBGsDHQPBtPhQ1Ohi
-	c/WyHX/891TGNEfbk9R1jrdnamve46h/ShFkhufxz0VgbFxH45TGekdAOLr5ykwnYFhB85yh1SR+A
-	9CxKk9IWtOn/61DOoD9FQtENX6US3PZxc9aOzEEFLE+MK8v2pNSIU1+mzqM9M4NUhTyDKMNGqn6fF
-	6/9ONbxubq51600JXUdQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=9i9D40jySllr+ufslVSi4Vnn5fldFY8P2JtTs2TZHyg=; b=Wz00a/MbsSUtql
+	Qvr3wum4VgYSYVFX3/1TvVkl3I3bSnr6ryKJoVxKOAsRE/7/r9hhzIuUCyIBRBvor8+EUbAnbY/2r
+	2uHtDHTNHbbM5P4APirAI7+0km92mCdRybLl+5PwAABhciaf5VNJ7vCc+xzuzciTA/tjYK3Af1iL/
+	6N0s9Fseik2G76OKAAvidkaLDcadyNIv50aKGOe+J5xgm7EnayE7JvUoMsO5YS67aFRJphcivSU8j
+	mLsgtw7m0kcz9HdrsaORVf2BJDt5V4urNu2QDt6+afuypYPCBy44ByGnvtfJTFDutYTWsKhZFxmBt
+	mjw9Y4Nl2I2C+eWVJe1Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjqf6-0003lK-HL; Sat, 06 Jul 2019 19:47:56 +0000
-Received: from coyote.holtmann.net ([212.227.132.17] helo=mail.holtmann.org)
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hjqf3-0003kI-Jy
- for linux-mediatek@lists.infradead.org; Sat, 06 Jul 2019 19:47:55 +0000
-Received: from [192.168.1.175] (apn-37-247-209-172.dynamic.gprs.plus.pl
- [37.247.209.172])
- by mail.holtmann.org (Postfix) with ESMTPSA id 288F5CF165;
- Sat,  6 Jul 2019 21:54:20 +0200 (CEST)
-Mime-Version: 1.0 (Mac OS X Mail 12.4 \(3445.104.11\))
-Subject: Re: [PATCH v7 0/2] Bluetooth: btusb: Add protocol support for
- MediaTek USB devices
-From: Marcel Holtmann <marcel@holtmann.org>
-In-Reply-To: <1559433769-23749-1-git-send-email-sean.wang@mediatek.com>
-Date: Sat, 6 Jul 2019 21:45:31 +0200
-Message-Id: <CB48D0A4-0564-42A6-847F-08E64AAF4842@holtmann.org>
-References: <1559433769-23749-1-git-send-email-sean.wang@mediatek.com>
-To: Sean Wang <sean.wang@mediatek.com>
-X-Mailer: Apple Mail (2.3445.104.11)
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190706_124753_809714_B6CFAE1C 
-X-CRM114-Status: GOOD (  10.91  )
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+	id 1hjqvt-00017Z-Ru; Sat, 06 Jul 2019 20:05:17 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjqvf-0008B4-5j; Sat, 06 Jul 2019 20:05:03 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=xPPW0Y+V/+W7+A623cn0ORRSiYMjDSZxwPi+8VYEw+8=; b=zZlZPQnWO7vWzTIv2p5qgeWLA
+ GnIK2ck7h40M9+OXU5EUmQBqTzoVieREz8v3gF+fPLzkxcs2o6GSOeV2O9vSwrVle6c7TR5MGjq16
+ 1vtuLsc0X6YvKC6kMMGMR4GkNKBuhx4l7+lpeU5Fta0naCQ8wX/WZLPlw1AAnznZ46/3A+rVPfbrf
+ wHycg9H0AvLwT2mGeJlTdtq4+qJvrzMbSnbXySCaa3djbTVK7A5jUZBHwALMHay2AT/GJM+undWJd
+ LZGKOlU+OP7NWviz17K36FI5aXzCDSsEeuYDbAlob/Re5e+SROgktANwFH0NaHr64yTt4lH5JYAOL
+ pcwXiKXWA==;
+Received: from relay4-d.mail.gandi.net ([217.70.183.196])
+ by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjqva-000360-CV; Sat, 06 Jul 2019 20:04:59 +0000
+X-Originating-IP: 90.65.161.137
+Received: from localhost (lfbn-1-1545-137.w90-65.abo.wanadoo.fr
+ [90.65.161.137])
+ (Authenticated sender: alexandre.belloni@bootlin.com)
+ by relay4-d.mail.gandi.net (Postfix) with ESMTPSA id 4B50AE0003;
+ Sat,  6 Jul 2019 20:04:20 +0000 (UTC)
+Date: Sat, 6 Jul 2019 22:04:20 +0200
+From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+To: Frank Wunderlich <frank-w@public-files.de>
+Subject: Re: Re: Re: [PATCH v2 3/7] rtc: mt6397: improvements of rtc driver
+Message-ID: <20190706200420.GE12409@piout.net>
+References: <20190703164822.17924-1-frank-w@public-files.de>
+ <20190703164822.17924-4-frank-w@public-files.de>
+ <20190704204336.GJ3692@piout.net>
+ <trinity-7b1977bd-252b-4482-b708-cf704a9d3da1-1562340946396@3c-app-gmx-bs68>
+ <20190705212448.GB12409@piout.net>
+ <trinity-a4e5f99f-00bc-4e90-9a48-64dbc6ba9c08-1562429720701@3c-app-gmx-bs42>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <trinity-a4e5f99f-00bc-4e90-9a48-64dbc6ba9c08-1562429720701@3c-app-gmx-bs42>
+User-Agent: Mutt/1.12.0 (2019-05-25)
+X-Spam-Note: CRM114 invocation failed
+X-Spam-Score: -0.7 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.132.17 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.196 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -60,87 +79,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-bluetooth@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Johan Hedberg <johan.hedberg@gmail.com>, linux-kernel@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
+ Richard Fontana <rfontana@redhat.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ "Paul E . McKenney" <paulmck@linux.ibm.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-rtc@vger.kernel.org, Rob Herring <robh@kernel.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
+ linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ Allison Randal <allison@lohutok.net>, Alessandro Zummo <a.zummo@towertech.it>,
+ Josef Friedl <josef.friedl@speed.at>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Sebastian Reichel <sre@kernel.org>, "David S . Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Sean,
+On 06/07/2019 18:15:20+0200, Frank Wunderlich wrote:
+> > Gesendet: Freitag, 05. Juli 2019 um 23:24 Uhr
+> > Von: "Alexandre Belloni" <alexandre.belloni@bootlin.com>
+> 
+> > Let's say the RTC has been used to start your platform, then the irq
+> > handler will be called as soon as the irq is requested, leading to a
+> > null pointer dereference.
+> 
+> i cannot test this with my platform, but i have changed it in my repo
+> 
+> https://github.com/frank-w/BPI-R2-4.14/commits/5.2-poweroff-mainline
+> 
+> > Yes and IIRC, I did comment that the rtc change also had to be separated
+> > from 1/7.
+> 
+> also this is put in separate commit, can you take a look before i post v3?
+> 
+> > Also, I really doubt this new compatible is necessary at all as you
+> > could simply directly use mediatek,mt6397-rtc.
+> 
+> imho this can confuse because the wrong chip-name is used in dts
+> 
 
-> v7:
-> * rebase to latest code base.
-> 
-> v6:
-> * fix drivers/bluetooth/btusb.c:2683:2-3: Unneeded semicolon based reported by [1]
-> * update power-on sequence with adding neccesary tci sleep comand to set up
->  low-power environmnet and a delay to wait the device to be stable.
-> * sort variables declarations in reverse xmas order.
-> 
-> [1]
-> http://lists.infradead.org/pipermail/linux-mediatek/2019-January/017017.html
-> 
-> v5:
-> * rebase to latest code base.
-> * change the subject prefix.
-> * change the place the firmware located at.
-> 
-> v4:
-> * use new BTUSB_TX_WAIT_VND_EVT instead of BTMTKUSB_TX_WAIT_VND_EVT
->  to avoid definition conflict and to fix bulk data transfer fails.
-> * use the bluetooth-next as the base
-> 
-> v3:
-> add fixes and enhancements based on [1]
-> * reuse flags and evt_skb btusb already had
-> * add ctrl_anchor and the corresponding handling
-> * apply mtk specific recv function
-> * add more comments explaining wmt ctrl urbs behavior.
-> 
-> [1]
-> http://lists.infradead.org/pipermail/linux-mediatek/2018-August/014724.html
-> 
-> v2:
-> 
-> add fixes and enhancements based on [1]
-> * include /sys/kernel/debug/usb/devices portion in the commit message.
-> * turn default into n for config BT_HCIBTUSB_MTK in Kconfig
-> * only add MediaTek support to btusb.c
-> * drop cmd_sync callback usage
-> * use __hci_cmd_send to send WMT commands
-> * add wait event handling similar to what is being done in btmtkuart.c
-> * submit a control IN URB similar to interrupt IN URB on demand for the WMT
->  commands during setup 
-> * add cosmetic changes
-> 
-> [1]
-> http://lists.infradead.org/pipermail/linux-mediatek/2018-August/014650.html
-> http://lists.infradead.org/pipermail/linux-mediatek/2018-August/014656.html
-> 
-> v1:
-> 
-> This adds the support of enabling MT7668U and MT7663U Bluetooth
-> function running on the top of btusb driver. The patch also adds
-> a newly created file mtkbt.c able to be reused independently from
-> the transport type such as UART, USB and SDIO.
-> 
-> Sean Wang (2):
->  Bluetooth: btusb: Add protocol support for MediaTek MT7668U USB
->    devices
->  Bluetooth: btusb: Add protocol support for MediaTek MT7663U USB
->    devices
-> 
-> drivers/bluetooth/Kconfig |  11 +
-> drivers/bluetooth/btusb.c | 581 ++++++++++++++++++++++++++++++++++++++
-> 2 files changed, 592 insertions(+)
+This is not true, we do that all the time and the immediate benefit of
+using the mt6397 compatible is that then there is no need to
+synchronize between subsystems. If you want to be absolutely
+conservative, you could use
 
-both patches have been applied to bluetooth-next tree.
+compatible = "mediatek,mt6323-rtc", "mediatek,mt6397-rtc";
 
-Regards
+in your DT.
 
-Marcel
 
+-- 
+Alexandre Belloni, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
 
 _______________________________________________
 Linux-mediatek mailing list
