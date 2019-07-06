@@ -2,52 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A865961037
-	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 13:02:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F74B610D2
+	for <lists+linux-mediatek@lfdr.de>; Sat,  6 Jul 2019 15:31:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:References:Message-Id:Date:
-	In-Reply-To:From:Subject:Mime-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=k+l342olC4tFgbm+nAoofDtqi+auNaqq+fMEieAbZTE=; b=Hvscnb77yK3yy8
-	cjCzdPfJNa7olMqK+FxulVQq2wv/kzd1LxsDoMQ1bA5Zpo+tKWmeFJU3B+aep2c0tQ9IeSbwQh44U
-	F4w5CKpmMGQYX92QmU7QEgucrS8POS3r7YuH9hJCk8kQvYELo7eNUYoAFP7IaskqAYdGmPYkx+Jc2
-	cYTeNa/KvjqtK4QCivpl+3tbvbPjT5uDNsO+MTMCJzbIyWUACdKuS4zACSczPMbTzDkX1+sutKTwl
-	lXUeuWhD6fwgY/K3v4ggM409CyW8TNZO/TlarElTp2vIHYbofboojp600lGW6oyc5r68Y/uQEbkAd
-	NJAz/m5msOMVymXYP2oA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=hfgAXOYobyp8ijMUUuN6SaMJSLOxYKSTyl+Or60srLI=; b=C6zmclNK2xGOT9
+	k6F59iUj9nfcqZgaX0WDfMg3rByVgi9FPbOXoHipYOa/+VDfBa8h/GBbgBhc4Ri9QOWrraSxPgucZ
+	/TweJCL0EmsxNGM/p3oOlq7Johr5d969uaHcyn9dh1oe+DmNkhSEEq4XpEF4g2daiZIhYA6su0iMC
+	gr6CbfLx+4aONPMVsL0v4j+SqG4jjpbG/lhBJ8wrgbAvV6V2RInZQ9ykuA1uhJRHSUdMdNxer5RiI
+	b9UfbnsTzjPutURQsiVpMsEE+nB7tBJqNh/AtTp5uAP/L1fv5jB0JdRUA//VDIIKrYJrId40THNYy
+	EVX2xISAVTKdSvnS+0Cw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hjiS7-0005xg-HA; Sat, 06 Jul 2019 11:01:59 +0000
-Received: from coyote.holtmann.net ([212.227.132.17] helo=mail.holtmann.org)
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hjiRf-0005oS-CD; Sat, 06 Jul 2019 11:01:33 +0000
-Received: from [192.168.0.113] (CMPC-089-239-107-172.CNet.Gawex.PL
- [89.239.107.172])
- by mail.holtmann.org (Postfix) with ESMTPSA id 1D63CCEFAE;
- Sat,  6 Jul 2019 13:09:41 +0200 (CEST)
-Mime-Version: 1.0 (Mac OS X Mail 12.4 \(3445.104.11\))
-Subject: Re: [PATCH v1 0/4] add boot-gpios and clock property to btmtkuart
-From: Marcel Holtmann <marcel@holtmann.org>
-In-Reply-To: <1559437457-26766-1-git-send-email-sean.wang@mediatek.com>
-Date: Sat, 6 Jul 2019 13:01:08 +0200
-Message-Id: <1E60D580-3D91-4AF0-8CCC-4576C54D2258@holtmann.org>
-References: <1559437457-26766-1-git-send-email-sean.wang@mediatek.com>
-To: Sean Wang <sean.wang@mediatek.com>
-X-Mailer: Apple Mail (2.3445.104.11)
+	id 1hjkmD-0008Th-3L; Sat, 06 Jul 2019 13:30:53 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hjklx-0008Ln-8W; Sat, 06 Jul 2019 13:30:38 +0000
+Received: by mail-pg1-x541.google.com with SMTP id i18so5460807pgl.11;
+ Sat, 06 Jul 2019 06:30:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ut6IeCO94UUbJJFbHPkNN9BlqXZJ9Hk6d+0wH2eLEVU=;
+ b=MAt2GM7NCEcrkO3H0T05ygT6Nn6q6eQ8iEBeY7KUf4FyV7cXqevSW41QpUSbOjLmij
+ MUQVjQp+Jj0tdismhDEBdVFXrcv0Aao1Eryu5mJ4nylkHtaZMsPDHiA/QQwDkcUIVfoI
+ tmscRnDD2vHqSCnmaCahVEYkZcfMb35fZ2tdJWP90CIxpA8/x5Dld9f5dG38EcGXykVu
+ vlykA7k2ZcsZHcp1TlaQ7OoX9c0CxIuEm0Ad4bu8mkUtRRBrrwJr4k1toOWk3dtzMrFj
+ ruroSybQRd23RDoTtATAiFusLOXeVxdOvsFPWhLAofuD8xgr6LFkdb50BbkDbNqV+F1r
+ 8RKQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ut6IeCO94UUbJJFbHPkNN9BlqXZJ9Hk6d+0wH2eLEVU=;
+ b=GmYGAZr+MT8lVZe02GkuepiNZXLpWuzJ41MaexERK7I2dDBnmsefcUM8rGUUTLYbae
+ 1hTrl8E20P008+xVk4cstKbexW7XobfUDu2rLb+dabRZZHKBPwYwxqjSWZq6Bdj9NhQH
+ 9fhAxH4pU0XlXyf/K/zZ+lSEdoJAbVkZDBirF3eZMKcoi0sJOsZZqNWoBYrLGPHGIR3Q
+ wCvs7ZGrAL+FfKhJGN58zjW7A+AC3x8hXwgdX5wG1XBh8zU//Ozok9TSXHKyE1BHi0WD
+ 7ZT2Y8SAHDZzb0cYHiatXjwvo8e4clYqyakZ9ancb48lzrE/51xhXiqENSygMDlokE4A
+ a9GA==
+X-Gm-Message-State: APjAAAVS8Rd0yUeveD062e3ytJrpa7d8X/EWjsxIk89VRZ+u3w/8uHbQ
+ ccLAcDOh1qUDi8s0B5w5LRE=
+X-Google-Smtp-Source: APXvYqz5aMcqwlQglCOlf2ZKj5MRm4E9DEfSPhzDEheTgbBtCem0FQPO8JmcdQU6AEUnJor5Wa4YPg==
+X-Received: by 2002:a63:358a:: with SMTP id c132mr2390181pga.375.1562419834089; 
+ Sat, 06 Jul 2019 06:30:34 -0700 (PDT)
+Received: from localhost.localdomain ([122.163.64.117])
+ by smtp.gmail.com with ESMTPSA id 2sm11494343pff.174.2019.07.06.06.30.30
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Sat, 06 Jul 2019 06:30:33 -0700 (PDT)
+From: Nishka Dasgupta <nishkadg.linux@gmail.com>
+To: ck.hu@mediatek.com, p.zabel@pengutronix.de, matthias.bgg@gmail.com,
+ airlie@linux.ie, daniel@ffwll.ch, dri-devel@lists.freedesktop.org,
+ linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org
+Subject: [PATCH] gpu: drm: mediatek: mtk_drm_drv.c: Add of_node_put() before
+ goto
+Date: Sat,  6 Jul 2019 19:00:21 +0530
+Message-Id: <20190706133021.3308-1-nishkadg.linux@gmail.com>
+X-Mailer: git-send-email 2.19.1
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190706_040131_565532_9A4A35BA 
-X-CRM114-Status: UNSURE (   6.45  )
+X-CRM114-CacheID: sfid-20190706_063037_330988_07CB0014 
+X-CRM114-Status: UNSURE (   9.26  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.132.17 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (nishkadg.linux[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 PDS_NO_HELO_DNS        High profile HELO but no A record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,36 +99,46 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- Johan Hedberg <johan.hedberg@gmail.com>, linux-kernel@vger.kernel.org,
- linux-bluetooth@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Sean,
+Each iteration of for_each_child_of_node puts the previous
+node, but in the case of a goto from the middle of the loop, there is
+no put, thus causing a memory leak. Hence add an of_node_put before the
+goto in two places.
+Issue found with Coccinelle.
 
-> Update dt-binding and the corresponding implmentation of boot-gpios and clock
-> property to btmtkuart.
-> 
-> Sean Wang (4):
->  dt-bindings: net: bluetooth: add boot-gpios property to UART-based
->    device
->  dt-bindings: net: bluetooth: add clock property to UART-based device
->  Bluetooth: btmtkuart: add an implementation for boot-gpios property
->  Bluetooth: btmtkuart: add an implementation for clock osc property
-> 
-> .../bindings/net/mediatek-bluetooth.txt       | 17 +++++++
-> drivers/bluetooth/btmtkuart.c                 | 51 +++++++++++++++----
-> 2 files changed, 58 insertions(+), 10 deletions(-)
+Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
+---
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
-all four patches have been applied to bluetooth-next tree.
-
-Regards
-
-Marcel
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+index 95fdbd0fbcac..2dffbc8c6d73 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
++++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+@@ -524,12 +524,15 @@ static int mtk_drm_probe(struct platform_device *pdev)
+ 			comp = devm_kzalloc(dev, sizeof(*comp), GFP_KERNEL);
+ 			if (!comp) {
+ 				ret = -ENOMEM;
++				of_node_put(node);
+ 				goto err_node;
+ 			}
+ 
+ 			ret = mtk_ddp_comp_init(dev, node, comp, comp_id, NULL);
+-			if (ret)
++			if (ret) {
++				of_node_put(node);
+ 				goto err_node;
++			}
+ 
+ 			private->ddp_comp[comp_id] = comp;
+ 		}
+-- 
+2.19.1
 
 
 _______________________________________________
