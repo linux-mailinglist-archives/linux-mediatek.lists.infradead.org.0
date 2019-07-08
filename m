@@ -2,68 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B542361D9B
-	for <lists+linux-mediatek@lfdr.de>; Mon,  8 Jul 2019 13:06:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 695DC62670
+	for <lists+linux-mediatek@lfdr.de>; Mon,  8 Jul 2019 18:34:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Nn4cAEM46TD6v1ufKyJodmdpDcDVtNPBWLCDItEAvp0=; b=IQNngKbGEtuycj
-	mQ/cK6wK68+RpBfa06mRcvyv+jjKD5B/drj1Df7wTFCkO2wm0UalvCLuxudPmVf/DFP52PORaEUMV
-	qIIrF6jMsG67+RTSGXn4gCMn1u2/NFU7lFw/CxCqxYWvBTp/nF9mZMnguSNKsXbAKVagFHPeEdgmZ
-	dXXoLKDsnpVepTF+KdFt+3rueLxixkxHGjaCMS+h2OJlGv3QUCoCiqDyZl4LXPbqwapIsytVvduKI
-	a9mVhJSAPxpJRkFOHS9dAuGUWHkjzQtCS44HYdpRkBb7x3SYUTaEqWG+hT9yvmHc3UAEN5mRwUYIR
-	aNRPvEKYNGTCK782vDEA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=PxNFn4R8zx01a+yJAlxfABHudPuLmRChjwX57Oi9SaE=; b=fbAcAzcbxRtWmy
+	2rZKsfYCYlmEbBUITcPtlzu29EQnWbKy7EQX7AxSQN3YXEONg+cwsKOKUi3/ExU7Y2gYVbHUmBjnx
+	FDQcNUQxVCQadTJ/Uq2l9IZdaEr6+LhW8DbREqv/8uyiVg09eHxtGDlX2U5rF4vCq3Qs69tUeoIQI
+	2/XRv361EkihTi04VH7RTPcEBCQ9Lr9bMdUNHUJl28d85CUmtUkOe3juwySznBtNbqqMsLdMVPu3V
+	DMxB5JJrd2H4hIK5o3esUtiGP970XcWXbnhnifN9sZt+jvPOkKnW0PoiKypaDrqa8VdSmI98xHiuc
+	dUBICsgjg00Rc6TybXcA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkRT6-0003C1-TP; Mon, 08 Jul 2019 11:06:01 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hkWaU-00087B-3p; Mon, 08 Jul 2019 16:33:58 +0000
+Received: from relay.sw.ru ([185.231.240.75])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkRST-0002jR-Ks; Mon, 08 Jul 2019 11:05:23 +0000
-X-UUID: 505852f5c65a443196f68bbed4ef5e84-20190708
-X-UUID: 505852f5c65a443196f68bbed4ef5e84-20190708
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <frederic.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 332433345; Mon, 08 Jul 2019 03:05:20 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 8 Jul 2019 04:05:18 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 8 Jul 2019 19:05:16 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 8 Jul 2019 19:05:17 +0800
-From: <frederic.chen@mediatek.com>
-To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
- <tfiga@chromium.org>, <matthias.bgg@gmail.com>, <mchehab@kernel.org>
-Subject: [RFC PATCH V2 6/6] media: platform: mtk-mdp3: Add struct tuning_addr
- to identify user tuning data
-Date: Mon, 8 Jul 2019 19:05:00 +0800
-Message-ID: <20190708110500.7242-7-frederic.chen@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190708110500.7242-1-frederic.chen@mediatek.com>
-References: <20190708110500.7242-1-frederic.chen@mediatek.com>
+ id 1hkWaM-00086R-Bg; Mon, 08 Jul 2019 16:33:52 +0000
+Received: from [172.16.25.12] by relay.sw.ru with esmtp (Exim 4.92)
+ (envelope-from <aryabinin@virtuozzo.com>)
+ id 1hkWa8-00028e-L6; Mon, 08 Jul 2019 19:33:36 +0300
+Subject: Re: [PATCH v3] kasan: add memory corruption identification for
+ software tag-based mode
+To: Dmitry Vyukov <dvyukov@google.com>, Walter Wu <walter-zh.wu@mediatek.com>
+References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
+ <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
+ <1560447999.15814.15.camel@mtksdccf07> <1560479520.15814.34.camel@mtksdccf07>
+ <1560744017.15814.49.camel@mtksdccf07>
+ <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
+ <1560774735.15814.54.camel@mtksdccf07> <1561974995.18866.1.camel@mtksdccf07>
+ <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
+From: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Message-ID: <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
+Date: Mon, 8 Jul 2019 19:33:41 +0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.2
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190708_040521_827908_765F8669 
-X-CRM114-Status: UNSURE (   9.06  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190708_093350_396544_1E2216FF 
+X-CRM114-Status: GOOD (  21.25  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,58 +64,134 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: shik@chromium.org, devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- Rynn.Wu@mediatek.com, Allan.Yang@mediatek.com, srv_heupstream@mediatek.com,
- holmes.chiou@mediatek.com, suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
- jungo.lin@mediatek.com, sj.huang@mediatek.com, yuzhao@chromium.org,
- linux-mediatek@lists.infradead.org, zwisler@chromium.org,
- christie.yu@mediatek.com, frederic.chen@mediatek.com,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: wsd_upstream <wsd_upstream@mediatek.com>,
+ "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily Gorbik <gor@linux.ibm.com>,
+ Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
+ Andrey Konovalov <andreyknvl@google.com>, LKML <linux-kernel@vger.kernel.org>,
+ kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
+ Martin Schwidefsky <schwidefsky@de.ibm.com>,
+ Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Frederic Chen <frederic.chen@mediatek.com>
 
-We added a struct tuning_addr which contains a field "present"
-so that the driver can tell the firmware if we have user tuning
-dataor not.
 
-Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
----
- drivers/media/platform/mtk-mdp3/mtk-img-ipi.h | 8 +++++++-
- 1 file changed, 7 insertions(+), 1 deletion(-)
+On 7/5/19 4:34 PM, Dmitry Vyukov wrote:
+> On Mon, Jul 1, 2019 at 11:56 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+>>>>>>>>> This patch adds memory corruption identification at bug report for
+>>>>>>>>> software tag-based mode, the report show whether it is "use-after-free"
+>>>>>>>>> or "out-of-bound" error instead of "invalid-access" error.This will make
+>>>>>>>>> it easier for programmers to see the memory corruption problem.
+>>>>>>>>>
+>>>>>>>>> Now we extend the quarantine to support both generic and tag-based kasan.
+>>>>>>>>> For tag-based kasan, the quarantine stores only freed object information
+>>>>>>>>> to check if an object is freed recently. When tag-based kasan reports an
+>>>>>>>>> error, we can check if the tagged addr is in the quarantine and make a
+>>>>>>>>> good guess if the object is more like "use-after-free" or "out-of-bound".
+>>>>>>>>>
+>>>>>>>>
+>>>>>>>>
+>>>>>>>> We already have all the information and don't need the quarantine to make such guess.
+>>>>>>>> Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
+>>>>>>>> otherwise it's use-after-free.
+>>>>>>>>
+>>>>>>>> In pseudo-code it's something like this:
+>>>>>>>>
+>>>>>>>> u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
+>>>>>>>>
+>>>>>>>> if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
+>>>>>>>>   // out-of-bounds
+>>>>>>>> else
+>>>>>>>>   // use-after-free
+>>>>>>>
+>>>>>>> Thanks your explanation.
+>>>>>>> I see, we can use it to decide corruption type.
+>>>>>>> But some use-after-free issues, it may not have accurate free-backtrace.
+>>>>>>> Unfortunately in that situation, free-backtrace is the most important.
+>>>>>>> please see below example
+>>>>>>>
+>>>>>>> In generic KASAN, it gets accurate free-backrace(ptr1).
+>>>>>>> In tag-based KASAN, it gets wrong free-backtrace(ptr2). It will make
+>>>>>>> programmer misjudge, so they may not believe tag-based KASAN.
+>>>>>>> So We provide this patch, we hope tag-based KASAN bug report is the same
+>>>>>>> accurate with generic KASAN.
+>>>>>>>
+>>>>>>> ---
+>>>>>>>     ptr1 = kmalloc(size, GFP_KERNEL);
+>>>>>>>     ptr1_free(ptr1);
+>>>>>>>
+>>>>>>>     ptr2 = kmalloc(size, GFP_KERNEL);
+>>>>>>>     ptr2_free(ptr2);
+>>>>>>>
+>>>>>>>     ptr1[size] = 'x';  //corruption here
+>>>>>>>
+>>>>>>>
+>>>>>>> static noinline void ptr1_free(char* ptr)
+>>>>>>> {
+>>>>>>>     kfree(ptr);
+>>>>>>> }
+>>>>>>> static noinline void ptr2_free(char* ptr)
+>>>>>>> {
+>>>>>>>     kfree(ptr);
+>>>>>>> }
+>>>>>>> ---
+>>>>>>>
+>>>>>> We think of another question about deciding by that shadow of the first
+>>>>>> byte.
+>>>>>> In tag-based KASAN, it is immediately released after calling kfree(), so
+>>>>>> the slub is easy to be used by another pointer, then it will change
+>>>>>> shadow memory to the tag of new pointer, it will not be the
+>>>>>> KASAN_TAG_INVALID, so there are many false negative cases, especially in
+>>>>>> small size allocation.
+>>>>>>
+>>>>>> Our patch is to solve those problems. so please consider it, thanks.
+>>>>>>
+>>>>> Hi, Andrey and Dmitry,
+>>>>>
+>>>>> I am sorry to bother you.
+>>>>> Would you tell me what you think about this patch?
+>>>>> We want to use tag-based KASAN, so we hope its bug report is clear and
+>>>>> correct as generic KASAN.
+>>>>>
+>>>>> Thanks your review.
+>>>>> Walter
+>>>>
+>>>> Hi Walter,
+>>>>
+>>>> I will probably be busy till the next week. Sorry for delays.
+>>>
+>>> It's ok. Thanks your kindly help.
+>>> I hope I can contribute to tag-based KASAN. It is a very important tool
+>>> for us.
+>>
+>> Hi, Dmitry,
+>>
+>> Would you have free time to discuss this patch together?
+>> Thanks.
+> 
+> Sorry for delays. I am overwhelm by some urgent work. I afraid to
+> promise any dates because the next week I am on a conference, then
+> again a backlog and an intern starting...
+> 
+> Andrey, do you still have concerns re this patch? This change allows
+> to print the free stack.
 
-diff --git a/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h b/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-index 9fabe7e8b71d..0944fe911d97 100644
---- a/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-+++ b/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-@@ -38,6 +38,12 @@ struct img_addr {
- 	u32	iova;	/* Used by IOMMU HW access */
- } __attribute__ ((__packed__));
- 
-+struct tuning_addr {
-+	u32	present;
-+	u32	pa;	/* Used by CM4 access */
-+	u32	iova;	/* Used by IOMMU HW access */
-+} __attribute__ ((__packed__));
-+
- struct img_sw_addr {
- 	u64	va;	/* Used by APMCU access */
- 	u32	pa;	/* Used by CM4 access */
-@@ -105,7 +111,7 @@ struct img_ipi_frameparam {
- 	u64		drv_data;
- 	struct img_input	inputs[IMG_MAX_HW_INPUTS];
- 	struct img_output	outputs[IMG_MAX_HW_OUTPUTS];
--	struct img_addr		tuning_data;
-+	struct tuning_addr	tuning_data;
- 	struct img_addr		subfrm_data;
- 	struct img_sw_addr	config_data;
- 	struct img_sw_addr  self_data;
--- 
-2.18.0
+I 'm not sure that quarantine is a best way to do that. Quarantine is made to delay freeing, but we don't that here.
+If we want to remember more free stacks wouldn't be easier simply to remember more stacks in object itself?
+Same for previously used tags for better use-after-free identification.
 
+> We also have a quarantine for hwasan in user-space. Though it works a
+> bit differently then the normal asan quarantine. We keep a per-thread
+> fixed-size ring-buffer of recent allocations:
+> https://github.com/llvm-mirror/compiler-rt/blob/master/lib/hwasan/hwasan_report.cpp#L274-L284
+> and scan these ring buffers during reports.
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
