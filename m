@@ -2,83 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E861763A62
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 20:00:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 451F263AE7
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 20:26:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=t69DifNmg3JBh6zkoJPD/U/rOi7EXfsHGRFLDrI4fNI=; b=lkY/aCn/BrX0mZ
-	yAgUynhN+zlSjN+umnteByR0oC4rz4aRVLk+mPxK2lqEUDaGFRzwSAFFmXkL7IJrQIy+0/waC7PyM
-	OtorlwEjHmaX0zbcAM4g41S8VCSIjPZiwFuYyfqIRC9XW6ovoqYJaCVj3ZDtPBUoKUbbCg5/XPGE+
-	IMF5BOJ0S0OBmvGViIfegTWvPjtSSfwyk0gXAz9TMoUEk0xsbFZrtlt5Gp8Tt9+3Dv+KOS8M+4VLj
-	wv3PDHKhPK+Hylgj3uSM/pXAnsZ2KXIGOQdnYV/g6PHndFsu/Bzq+gmx6+hWYkA8zfG/SwxK37lZH
-	gSrGy2HpdD7VrUGkujoQ==;
+	List-Owner; bh=xMD2O+fwxnC7BYHiKuQ7SKE86xchHwy3XelGurp8osc=; b=rEJ5P1tNtaUC9T
+	xrEk7YgEgoSayCu/vHph0xTtUml5BH++3Wae9ovsOHKtaP/e4huSkNzJCMaek/gV9E41kCO3e6rBX
+	kuCWRfTu4aKlPp4tioyZTgAVK/cPZZWXTsCh8073d1ow0ukl0LWfyVRSGlTzuTxvKZ/e2yNfb/ycH
+	QeyetMsCz8t/HdxbJPAHcP7rRHiw9AEu7jFntluDXgH+IWVVVQAd8roB+rIflr55mCZQbECq8uWEh
+	elCD+JRiJQD+327MKYNDuHv5whXAU3X2BpREckRVqF4zYtAcsiPBwblffEp/mzdJ3VsYlqyb5X6Pd
+	I/bgh7fEFmVrjrPnsC2Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkuQ3-0007tT-BX; Tue, 09 Jul 2019 18:00:47 +0000
-Received: from mail-pl1-x642.google.com ([2607:f8b0:4864:20::642])
+	id 1hkuoV-0003Mj-5r; Tue, 09 Jul 2019 18:26:03 +0000
+Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkuPo-0007fS-PG; Tue, 09 Jul 2019 18:00:34 +0000
-Received: by mail-pl1-x642.google.com with SMTP id az7so3021918plb.5;
- Tue, 09 Jul 2019 11:00:32 -0700 (PDT)
+ id 1hkuoJ-0003Df-SE; Tue, 09 Jul 2019 18:25:53 +0000
+Received: by mail-pf1-x443.google.com with SMTP id c73so5037465pfb.13;
+ Tue, 09 Jul 2019 11:25:51 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=gIm1hPdGKhQmW9ErbwFuKhHNbmgcrYySHT3l4GVOH6c=;
- b=vSYNGu27hbFUbPkKzkmaX8CVuWVjLxzg3Or8kFkrstXu4gbnhVmH3N371zBH5lRaj7
- HXJupA9bVnLjJXu/9teZuuFJuDzrq7UC8SOENweH+4XSMMzTvdsKapJeUXUsPHTYrT+y
- F5gWpkYp8FixFjs0ZrK+kTJxpEfwLvq8VTkojG/9z8j+BJhBOjpycgVdd3WGyTICiUQi
- p3Qj/7BrV8fMlJw/iPRjnFVVBkPyhFbPW9IL6hWjvWk+1Zxcpsbb06mWGxeXVG5dptnu
- cUjsQ0Q5/c4/bK9xjUUd0htzo6sHX/ab4iOFumViqJr0kDQ4FzcQA77Tr0ghmOH7MxYQ
- /2Iw==
+ h=date:from:to:subject:message-id:mime-version:content-disposition
+ :user-agent; bh=F53dI+T31MQO7QsmvZEQqUD+Bsf7Au5f6Ym6GihKyBU=;
+ b=dY0SKwLV9k80CMp0A2x+iTnnhV5A92BoDgH5N8dKXZsQJo/haO6q4csQICb21yuckh
+ UoHQx1dad/dqKIH5no1Q0PzDgicSMi7Y5RCJHrokKzaFn1A0jUIaCZEyYPEx/1O50Qqj
+ EaVisjg4hQjAn7fvBEoThlflmA8uYcC+eluRgi0rKci9zKgK9q9hW49KSneUgU1uZFTX
+ qUfI+GJsUpt2ojpAt1tD1dNxRyHN3xUFdvEW9T1s38tIAtBJ2Leab/lwjLq9eZWs75TB
+ yMg2KLtL3F4aaIrioY7PRjrarbnUbrJMOcIs4N1wN6MtlaB47ttLlWxH++h7D2shfR+O
+ b55g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=gIm1hPdGKhQmW9ErbwFuKhHNbmgcrYySHT3l4GVOH6c=;
- b=qF/sfbRc5yCJXYJL0hdOL9E/SiJtsZPahMG+sc6PWyAOIwVT2JPufAoRKcMo4AVgQW
- S87r++2+TCH7WOtyp4VpxsJ7IAdDfE62vo1OhSCfKB072yo2hp5SoWnq6pacUpyozvZL
- QFhkRQH4pblewilxgna5x6vMo4KEvz/g3U3KZauDmmBXNqTM9fxJ6W2TKrxFyzinXDYw
- HTTS1T2qHgiLdSsny4NtYKeGeujOIemptZTa/qK1nYHUGyPOUAyNxuLcuEYB+uDsd96A
- CqNZSn9fJ3v+k5xGi+xdZzECGuLuWxJdhvNGHgeWv2quPhucBSSJD4G0Qah/8K7cwlKN
- URJA==
-X-Gm-Message-State: APjAAAXiWvwze9rlG3HKQHmUIMzi/mbw1jQ9qs8qwaWCqC1BdH0d7uJR
- zBlPJMUoD0Id7j1A7UnOn9OSa3zW
-X-Google-Smtp-Source: APXvYqxXpHfvlVzg5Zzf4I3fBMs0VkzZWs3fA4YyAdnXSG0FgM7Vq+GaeeCH2ulBoLKAG2o4wXvdLA==
-X-Received: by 2002:a17:902:bc83:: with SMTP id
- bb3mr34405078plb.56.1562695232327; 
- Tue, 09 Jul 2019 11:00:32 -0700 (PDT)
-Received: from localhost.localdomain ([110.227.64.207])
- by smtp.gmail.com with ESMTPSA id x8sm19094651pfa.46.2019.07.09.11.00.29
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 09 Jul 2019 11:00:31 -0700 (PDT)
-From: Nishka Dasgupta <nishkadg.linux@gmail.com>
-To: matthias.bgg@gmail.com, dmitry.torokhov@gmail.com,
- linux-input@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-Subject: [PATCH] input: keyboard: mtk-pmic-keys: Add of_node_put() before
- return
-Date: Tue,  9 Jul 2019 23:30:19 +0530
-Message-Id: <20190709180019.14339-1-nishkadg.linux@gmail.com>
-X-Mailer: git-send-email 2.19.1
+ h=x-gm-message-state:date:from:to:subject:message-id:mime-version
+ :content-disposition:user-agent;
+ bh=F53dI+T31MQO7QsmvZEQqUD+Bsf7Au5f6Ym6GihKyBU=;
+ b=HID0PngPTC22SHIuI2q2QZ1h9t7aVSp5d8RfKxQl8rLjOFzGHiuALBu7fzhuyRnBBi
+ xNHzSbGj+yi10pUaRk4OWJwlARnIB/dinP9PS3Xjf9ZSOmAgV74LmbOvo5IwbONyfYoN
+ d5LXt65jJxa0zuDiHkF6ZNAhZfz/kG8OmPw5VwNotvA8pHdInNeqguAu0XcfVYYF90qz
+ DnNT0wDtibEe/HxkHKRqf//4WWegmEmlhw67z1Ul65Rs/0JshuLsJo+j08SItXpV90vF
+ SExcmUQpYp9qpK6I1hdG8AXgKv/Eg0sfX0CJwBhgbEnm865M7cq08sIYVXBXBQSbmS73
+ KF1w==
+X-Gm-Message-State: APjAAAXOv55SQnfksDr/QbabuNVzr4ElEevPLBNYbM1Tw2Q0FDx9q+hv
+ k+AixIqR0Z25LQSiCww/iXc=
+X-Google-Smtp-Source: APXvYqxPF2ZglfLFUEIjNK+xpEPSth8BelId/59gN0t4fpsSCcw0Ul22LI6xyEHQdp/Z7aYDfK8lIw==
+X-Received: by 2002:a65:5888:: with SMTP id d8mr31623341pgu.124.1562696750983; 
+ Tue, 09 Jul 2019 11:25:50 -0700 (PDT)
+Received: from hari-Inspiron-1545 ([183.83.86.126])
+ by smtp.gmail.com with ESMTPSA id x13sm13084575pfn.6.2019.07.09.11.25.46
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Tue, 09 Jul 2019 11:25:50 -0700 (PDT)
+Date: Tue, 9 Jul 2019 23:55:43 +0530
+From: Hariprasad Kelam <hariprasad.kelam@gmail.com>
+To: Liam Girdwood <lgirdwood@gmail.com>, Mark Brown <broonie@kernel.org>,
+ Jaroslav Kysela <perex@perex.cz>, Takashi Iwai <tiwai@suse.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Tzung-Bi Shih <tzungbi@google.com>, Shunli Wang <shunli.wang@mediatek.com>,
+ Hariprasad Kelam <hariprasad.kelam@gmail.com>,
+ alsa-devel@alsa-project.org, linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: [PATCH] sound: soc: codecs: mt6358: change return type of
+ mt6358_codec_init_reg
+Message-ID: <20190709182543.GA6611@hari-Inspiron-1545>
 MIME-Version: 1.0
+Content-Disposition: inline
+User-Agent: Mutt/1.5.24 (2015-08-30)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_110032_825124_B5C934A5 
-X-CRM114-Status: GOOD (  10.42  )
+X-CRM114-CacheID: sfid-20190709_112551_935200_15E141F4 
+X-CRM114-Status: GOOD (  11.37  )
 X-Spam-Score: 1.1 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (1.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:642 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (nishkadg.linux[at]gmail.com)
+ provider (hariprasad.kelam[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -99,61 +102,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Each iteration of for_each_child_of_node puts the previous
-node, but in the case of a return from the middle of the loop, there is
-no put, thus causing a memory leak. Hence add an of_node_put before the
-return in three places.
-Issue found with Coccinelle.
+As mt6358_codec_init_reg function always returns 0 , change return type
+from int to void.
 
-Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
+fixes below issue reported by coccicheck
+sound/soc/codecs/mt6358.c:2260:5-8: Unneeded variable: "ret". Return "0"
+on line 2289
+
+Signed-off-by: Hariprasad Kelam <hariprasad.kelam@gmail.com>
 ---
- drivers/input/keyboard/mtk-pmic-keys.c | 9 +++++++--
- 1 file changed, 7 insertions(+), 2 deletions(-)
+ sound/soc/codecs/mt6358.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
-diff --git a/drivers/input/keyboard/mtk-pmic-keys.c b/drivers/input/keyboard/mtk-pmic-keys.c
-index 746ff06eaf8d..62391d6c7da6 100644
---- a/drivers/input/keyboard/mtk-pmic-keys.c
-+++ b/drivers/input/keyboard/mtk-pmic-keys.c
-@@ -277,8 +277,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
- 		keys->keys[index].regs = &mtk_pmic_regs->keys_regs[index];
+diff --git a/sound/soc/codecs/mt6358.c b/sound/soc/codecs/mt6358.c
+index 50b3fc5..c17250a 100644
+--- a/sound/soc/codecs/mt6358.c
++++ b/sound/soc/codecs/mt6358.c
+@@ -2255,10 +2255,8 @@ static struct snd_soc_dai_driver mt6358_dai_driver[] = {
+ 	},
+ };
  
- 		keys->keys[index].irq = platform_get_irq(pdev, index);
--		if (keys->keys[index].irq < 0)
-+		if (keys->keys[index].irq < 0) {
-+			of_node_put(child);
- 			return keys->keys[index].irq;
-+		}
+-static int mt6358_codec_init_reg(struct mt6358_priv *priv)
++static void mt6358_codec_init_reg(struct mt6358_priv *priv)
+ {
+-	int ret = 0;
+-
+ 	/* Disable HeadphoneL/HeadphoneR short circuit protection */
+ 	regmap_update_bits(priv->regmap, MT6358_AUDDEC_ANA_CON0,
+ 			   RG_AUDHPLSCDISABLE_VAUDP15_MASK_SFT,
+@@ -2285,8 +2283,6 @@ static int mt6358_codec_init_reg(struct mt6358_priv *priv)
+ 	/* set gpio */
+ 	playback_gpio_reset(priv);
+ 	capture_gpio_reset(priv);
+-
+-	return ret;
+ }
  
- 		error = of_property_read_u32(child,
- 			"linux,keycodes", &keys->keys[index].keycode);
-@@ -286,6 +288,7 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
- 			dev_err(keys->dev,
- 				"failed to read key:%d linux,keycode property: %d\n",
- 				index, error);
-+			of_node_put(child);
- 			return error;
- 		}
- 
-@@ -293,8 +296,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
- 			keys->keys[index].wakeup = true;
- 
- 		error = mtk_pmic_key_setup(keys, &keys->keys[index]);
--		if (error)
-+		if (error) {
-+			of_node_put(child);
- 			return error;
-+		}
- 
- 		index++;
- 	}
+ static int mt6358_codec_probe(struct snd_soc_component *cmpnt)
 -- 
-2.19.1
+2.7.4
 
 
 _______________________________________________
