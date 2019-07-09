@@ -2,72 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AA31462E52
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 04:54:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB6C262EB5
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 05:22:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=54EQJux0LMdabXp5mYBzMH3Abpqk2690bbXhcTatAKA=; b=IoEP1Mv1gxRLGM
-	Mf1HLcjdQyqK4sPb+YwbQHSR8s5i51lYfk6RTJec3ns6laK6ChWJLMpeXO9hmzIYLkdOF1FweBhzo
-	byhPhLcP8LDX0Tn/U2cnkmqHueAmWx7QGgb0JBrWUU+4gub7b5tdyqe5WkA10vEoBKw4/lIb14yeF
-	SzilhPg4rzZno2w9axCfMLvw1AfpMYkI5eo6oZ5PluRvG0UoZHGVbSlJVbBWJ6mxcgjndtsyS+Rfv
-	uGv7OxMzOCCSHHvcNlW25qaFzRfAhKM2uhWneuM1F1rWfq0lHaUJsxULXVdfBllAFHBbyJJXRU/77
-	fIGWywo2bhLYGXlCPsJg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=3OV70kqojy/8/Bz5M7roxwRX5azx2thfO4EZIPLJIdU=; b=h3in8mTBaaxiVQ
+	LUJOWhRkZXJOmBxFWoetB5b1DkwA8mLq8/XbUcnsH2wCVBngbHL5nmOu3KTx3ZDScrKqjQ4+1qrGM
+	wg6HImktHTt3wwg4OpqNBKdhzVRQEw2HD1UPnt4oUOZCaXI8kZ4bqoRHuhj2yKipuOu5YpxcccW11
+	mK6GDGq76D2IyhiEUO/3kkFS9uE2p/+nTahXFtOG0OfMgRTF3NNXm+TZnUWO4dhn3M3gTXxcZmmwO
+	yV+rtVOpktGqhNZ6Zt4CW/Le9dEa+EJIAHEzUMIdh9vZPKhZrld8Qm+6h2iZuiEawnaMLeMXVMNUB
+	wb2D85YAIm3GHRc/2qOQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkgGd-0007Di-H2; Tue, 09 Jul 2019 02:54:07 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hkghZ-0000Oj-4I; Tue, 09 Jul 2019 03:21:57 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkgGY-0007Cm-Ox; Tue, 09 Jul 2019 02:54:04 +0000
-X-UUID: c57abe65623d46d79887a824a29c78f9-20190708
-X-UUID: c57abe65623d46d79887a824a29c78f9-20190708
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ id 1hkghI-0000Eb-AJ; Tue, 09 Jul 2019 03:21:42 +0000
+X-UUID: c9963ee9fa0d4068b20d6e247cd28e41-20190708
+X-UUID: c9963ee9fa0d4068b20d6e247cd28e41-20190708
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <xia.jiang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 371221610; Mon, 08 Jul 2019 18:53:56 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 8 Jul 2019 19:53:54 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 9 Jul 2019 10:53:52 +0800
-Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
+ with ESMTP id 511402212; Mon, 08 Jul 2019 19:21:35 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 8 Jul 2019 20:21:34 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 11:21:32 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 9 Jul 2019 10:53:52 +0800
-Message-ID: <1562640832.9077.32.camel@mtksdccf07>
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Dmitry Vyukov
- <dvyukov@google.com>
-Date: Tue, 9 Jul 2019 10:53:52 +0800
-In-Reply-To: <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07>
- <1560479520.15814.34.camel@mtksdccf07>
- <1560744017.15814.49.camel@mtksdccf07>
- <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
- <1560774735.15814.54.camel@mtksdccf07>
- <1561974995.18866.1.camel@mtksdccf07>
- <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
- <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ Transport; Tue, 9 Jul 2019 11:21:31 +0800
+From: Xia Jiang <xia.jiang@mediatek.com>
+To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Rob Herring <robh+dt@kernel.org>, 
+ Matthias Brugger <matthias.bgg@gmail.com>, Rick Chang
+ <rick.chang@mediatek.com>
+Subject: [PATCH 0/5]Add support for mt2701 JPEG ENC support
+Date: Tue, 9 Jul 2019 11:20:58 +0800
+Message-ID: <20190709032103.10291-1-xia.jiang@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190708_195402_827362_5104FD1C 
-X-CRM114-Status: GOOD (  29.66  )
+X-CRM114-CacheID: sfid-20190708_202140_364677_62A02D60 
+X-CRM114-Status: GOOD (  10.16  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -83,152 +70,256 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily Gorbik <gor@linux.ibm.com>,
- Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
- Andrey Konovalov <andreyknvl@google.com>, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
- Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- David Rientjes <rientjes@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Tomasz Figa <tfiga@chromium.org>,
+ linux-mediatek@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org,
+ Marek Szyprowski <m.szyprowski@samsung.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-07-08 at 19:33 +0300, Andrey Ryabinin wrote:
-> 
-> On 7/5/19 4:34 PM, Dmitry Vyukov wrote:
-> > On Mon, Jul 1, 2019 at 11:56 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
-> >>>>>>>>> This patch adds memory corruption identification at bug report for
-> >>>>>>>>> software tag-based mode, the report show whether it is "use-after-free"
-> >>>>>>>>> or "out-of-bound" error instead of "invalid-access" error.This will make
-> >>>>>>>>> it easier for programmers to see the memory corruption problem.
-> >>>>>>>>>
-> >>>>>>>>> Now we extend the quarantine to support both generic and tag-based kasan.
-> >>>>>>>>> For tag-based kasan, the quarantine stores only freed object information
-> >>>>>>>>> to check if an object is freed recently. When tag-based kasan reports an
-> >>>>>>>>> error, we can check if the tagged addr is in the quarantine and make a
-> >>>>>>>>> good guess if the object is more like "use-after-free" or "out-of-bound".
-> >>>>>>>>>
-> >>>>>>>>
-> >>>>>>>>
-> >>>>>>>> We already have all the information and don't need the quarantine to make such guess.
-> >>>>>>>> Basically if shadow of the first byte of object has the same tag as tag in pointer than it's out-of-bounds,
-> >>>>>>>> otherwise it's use-after-free.
-> >>>>>>>>
-> >>>>>>>> In pseudo-code it's something like this:
-> >>>>>>>>
-> >>>>>>>> u8 object_tag = *(u8 *)kasan_mem_to_shadow(nearest_object(cacche, page, access_addr));
-> >>>>>>>>
-> >>>>>>>> if (access_addr_tag == object_tag && object_tag != KASAN_TAG_INVALID)
-> >>>>>>>>   // out-of-bounds
-> >>>>>>>> else
-> >>>>>>>>   // use-after-free
-> >>>>>>>
-> >>>>>>> Thanks your explanation.
-> >>>>>>> I see, we can use it to decide corruption type.
-> >>>>>>> But some use-after-free issues, it may not have accurate free-backtrace.
-> >>>>>>> Unfortunately in that situation, free-backtrace is the most important.
-> >>>>>>> please see below example
-> >>>>>>>
-> >>>>>>> In generic KASAN, it gets accurate free-backrace(ptr1).
-> >>>>>>> In tag-based KASAN, it gets wrong free-backtrace(ptr2). It will make
-> >>>>>>> programmer misjudge, so they may not believe tag-based KASAN.
-> >>>>>>> So We provide this patch, we hope tag-based KASAN bug report is the same
-> >>>>>>> accurate with generic KASAN.
-> >>>>>>>
-> >>>>>>> ---
-> >>>>>>>     ptr1 = kmalloc(size, GFP_KERNEL);
-> >>>>>>>     ptr1_free(ptr1);
-> >>>>>>>
-> >>>>>>>     ptr2 = kmalloc(size, GFP_KERNEL);
-> >>>>>>>     ptr2_free(ptr2);
-> >>>>>>>
-> >>>>>>>     ptr1[size] = 'x';  //corruption here
-> >>>>>>>
-> >>>>>>>
-> >>>>>>> static noinline void ptr1_free(char* ptr)
-> >>>>>>> {
-> >>>>>>>     kfree(ptr);
-> >>>>>>> }
-> >>>>>>> static noinline void ptr2_free(char* ptr)
-> >>>>>>> {
-> >>>>>>>     kfree(ptr);
-> >>>>>>> }
-> >>>>>>> ---
-> >>>>>>>
-> >>>>>> We think of another question about deciding by that shadow of the first
-> >>>>>> byte.
-> >>>>>> In tag-based KASAN, it is immediately released after calling kfree(), so
-> >>>>>> the slub is easy to be used by another pointer, then it will change
-> >>>>>> shadow memory to the tag of new pointer, it will not be the
-> >>>>>> KASAN_TAG_INVALID, so there are many false negative cases, especially in
-> >>>>>> small size allocation.
-> >>>>>>
-> >>>>>> Our patch is to solve those problems. so please consider it, thanks.
-> >>>>>>
-> >>>>> Hi, Andrey and Dmitry,
-> >>>>>
-> >>>>> I am sorry to bother you.
-> >>>>> Would you tell me what you think about this patch?
-> >>>>> We want to use tag-based KASAN, so we hope its bug report is clear and
-> >>>>> correct as generic KASAN.
-> >>>>>
-> >>>>> Thanks your review.
-> >>>>> Walter
-> >>>>
-> >>>> Hi Walter,
-> >>>>
-> >>>> I will probably be busy till the next week. Sorry for delays.
-> >>>
-> >>> It's ok. Thanks your kindly help.
-> >>> I hope I can contribute to tag-based KASAN. It is a very important tool
-> >>> for us.
-> >>
-> >> Hi, Dmitry,
-> >>
-> >> Would you have free time to discuss this patch together?
-> >> Thanks.
-> > 
-> > Sorry for delays. I am overwhelm by some urgent work. I afraid to
-> > promise any dates because the next week I am on a conference, then
-> > again a backlog and an intern starting...
-> > 
-> > Andrey, do you still have concerns re this patch? This change allows
-> > to print the free stack.
-> 
-> I 'm not sure that quarantine is a best way to do that. Quarantine is made to delay freeing, but we don't that here.
-> If we want to remember more free stacks wouldn't be easier simply to remember more stacks in object itself?
-> Same for previously used tags for better use-after-free identification.
-> 
+This patchset add support for mt2701 JPEG ENC support.
 
-Hi Andrey,
+This is the compliance test result for jpeg dec and enc.
 
-We ever tried to use object itself to determine use-after-free
-identification, but tag-based KASAN immediately released the pointer
-after call kfree(), the original object will be used by another
-pointer, if we use object itself to determine use-after-free issue, then
-it has many false negative cases. so we create a lite quarantine(ring
-buffers) to record recent free stacks in order to avoid those false
-negative situations.
+The JPEG dec log:
+------------------------------------------------------------
+v4l2-compliance -d /dev/video0
+v4l2-compliance SHA: 08fed4d0edb1492b91d9d1054c36fed95c372eaa, 32 bits
 
-We hope to have one solution to cover all cases and be accurate. Our
-patch is configurable feature option, it can provide some programmers to
-easy see the tag-based KASAN report.
+Compliance test for mtk-jpeg device /dev/video0:
 
+Driver Info:
+        Driver name      : mtk-jpeg
+        Card type        : mtk-jpeg decoder
+        Bus info         : platform:15004000.jpegdec
+        Driver version   : 5.2.0
+        Capabilities     : 0x84204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+                Device Capabilities
+        Device Caps      : 0x04204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+        Detected JPEG Decoder
 
-> > We also have a quarantine for hwasan in user-space. Though it works a
-> > bit differently then the normal asan quarantine. We keep a per-thread
-> > fixed-size ring-buffer of recent allocations:
-> > https://github.com/llvm-mirror/compiler-rt/blob/master/lib/hwasan/hwasan_report.cpp#L274-L284
-> > and scan these ring buffers during reports.
-> > 
+Required ioctls:
+        test VIDIOC_QUERYCAP: OK
 
-Thanks your information, it looks like the same idea with our patch.
+Allow for multiple opens:
+        test second /dev/video0 open: OK
+        test VIDIOC_QUERYCAP: OK
+        test VIDIOC_G/S_PRIORITY: OK
+        test for unlimited opens: OK
+
+Debug ioctls:
+        test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+        test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+        test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+        test VIDIOC_ENUMAUDIO: OK (Not Supported)
+        test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDIO: OK (Not Supported)
+        Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+        test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+        test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+        Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+        test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+        test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+        test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+        test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+        test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+        test VIDIOC_QUERYCTRL: OK
+        test VIDIOC_G/S_CTRL: OK
+        test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+        test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK (Not Supported)
+        test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+        Standard Controls: 0 Private Controls: 0
+
+Format ioctls:
+        test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+        test VIDIOC_G/S_PARM: OK (Not Supported)
+        test VIDIOC_G_FBUF: OK (Not Supported)
+        test VIDIOC_G_FMT: OK
+        test VIDIOC_TRY_FMT: OK
+        test VIDIOC_S_FMT: OK
+        test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+        test Cropping: OK (Not Supported)
+        test Composing: OK
+        test Scaling: OK
+
+Codec ioctls:
+        test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+        test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+        test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+                fail: v4l2-test-buffers.cpp(713): q.create_bufs(node, 1, &fmt) != EINVAL
+        test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: FAIL
+        test VIDIOC_EXPBUF: OK
+        test Requests: OK (Not Supported)
+
+Total for mtk-jpeg device /dev/video0: 44, Succeeded: 43, Failed: 1, Warnings: 0
+------------------------------------------------------------
+
+The JPEG enc log:
+
+------------------------------------------------------------
+v4l2-compliance -d /dev/video1 
+v4l2-compliance SHA: 08fed4d0edb1492b91d9d1054c36fed95c372eaa, 32 bits
+
+Compliance test for mtk-jpeg device /dev/video1:
+
+Driver Info:
+        Driver name      : mtk-jpeg
+        Card type        : mtk-jpeg encoder
+        Bus info         : platform:1500a000.jpegenc
+        Driver version   : 5.2.0
+        Capabilities     : 0x84204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+                Device Capabilities
+        Device Caps      : 0x04204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+        Detected JPEG Encoder
+
+Required ioctls:
+        test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+        test second /dev/video1 open: OK
+        test VIDIOC_QUERYCAP: OK
+        test VIDIOC_G/S_PRIORITY: OK
+        test for unlimited opens: OK
+
+Debug ioctls:
+        test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+        test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+        test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+        test VIDIOC_ENUMAUDIO: OK (Not Supported)
+        test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDIO: OK (Not Supported)
+        Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+        test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+        test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+        Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+        test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+        test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+        test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+        test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+        test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+        test VIDIOC_QUERYCTRL: OK
+        test VIDIOC_G/S_CTRL: OK
+        test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+        test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+        test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+        Standard Controls: 4 Private Controls: 0
+
+Format ioctls:
+        test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+        test VIDIOC_G/S_PARM: OK (Not Supported)
+        test VIDIOC_G_FBUF: OK (Not Supported)
+        test VIDIOC_G_FMT: OK
+        test VIDIOC_TRY_FMT: OK
+        test VIDIOC_S_FMT: OK
+        test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+        test Cropping: OK (Not Supported)
+        test Composing: OK
+        test Scaling: OK
+
+Codec ioctls:
+        test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+        test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+        test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+                fail: v4l2-test-buffers.cpp(713): q.create_bufs(node, 1, &fmt) != EINVAL
+        test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: FAIL
+        test VIDIOC_EXPBUF: OK
+        test Requests: OK (Not Supported)
+
+Total for mtk-jpeg device /dev/video1: 44, Succeeded: 43, Failed: 1, Warnings: 0
+------------------------------------------------------------
+
+Xia Jiang (5):
+  media: dt-bindings: Add JPEG ENC device tree node document
+  media: platform: Rename jpeg dec file name
+  media: platform: Add jpeg enc feature
+  media: platform: change GPLv2 license to SPDX
+  arm: dts: add jpeg enc device tree node
+
+ .../bindings/media/mediatek-jpeg-encoder.txt       |  33 +
+ arch/arm/boot/dts/mt2701.dtsi                      |  12 +
+ arch/arm/configs/multi_v7_defconfig                |  14 +-
+ drivers/media/platform/mtk-jpeg/Makefile           |   5 +-
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c    | 746 ++++++++++++++++-----
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h    | 123 +++-
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_hw.c  | 410 +++++++++++
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_hw.h  |  85 +++
+ .../media/platform/mtk-jpeg/mtk_jpeg_dec_parse.c   | 153 +++++
+ .../media/platform/mtk-jpeg/mtk_jpeg_dec_parse.h   |  18 +
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_reg.h |  51 ++
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c  | 175 +++++
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h  |  60 ++
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_reg.h |  49 ++
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c      | 417 ------------
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h      |  91 ---
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_parse.c   | 160 -----
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_parse.h   |  25 -
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_reg.h     |  58 --
+ drivers/media/v4l2-core/v4l2-ctrls.c               |   1 +
+ include/uapi/linux/v4l2-controls.h                 |   2 +
+ 21 files changed, 1754 insertions(+), 934 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_hw.c
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_hw.h
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_parse.c
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_parse.h
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_reg.h
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_reg.h
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_parse.c
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_parse.h
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_reg.h
+
+-- 
+1.9.1 
+
 
 
 _______________________________________________
