@@ -2,84 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BF64962E24
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 04:33:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C541362E36
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 04:37:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=C5JFJwHU7YsMt7kb9By7NWkKbNYDzXvwtCFBQ8QgKY4=; b=rgfChZduP9+r5g
-	vA2Ev6ltx0moGeYjzPS3Mtj6lH1tsvUAhgv5cniNfZuw5UiduRvWv2TXr7P3xh7/Kt9EEDl6Ff1Mi
-	N+8ofMAWOmdGrCR6Xjo3VMCB1EpAvxx/IEH/spu3d24NfaV1YkQRDGxfSf3B2BuHtfC2uYosKY/Bq
-	5Vm8Igv6dSqEy0qf2C4Ey4ArQuhXBPDuFP/UfClLOiHHTuN/spzBgTKMXzIWeZsNBu1CgRO8clkN5
-	bDBALaVCanr9I1ZYQ92vpavQWVozwIrvcpwsRcetUD0nXnQG+JnCk94pNWeJfIerEnMpWHcjROgrI
-	TTMxPK8BHQFrwGQn+PJQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HjXL12E1sCGs2K+0Wwk4hfPYRsZXKH8a5uyOYPmFmVE=; b=eaIm+o/0ftXIiU
+	enVcupQMp2a+C0mUXCkXrfVR6Z4UmYEUXlm5N8P0S53ZvHIRwF1+5BBYn6SLMN+7oOSDUvaoTdwVf
+	x7U6NqCOMDTFIJMLmjZMKNTpr6F8X1FbbjWAhhsMIfnLPoGIgKkN9HQyE48x/KIm9FYJg8yHByy3E
+	G2hmLwBoNYGWs1GVOzVO0CVfuDWCcDLRGkdx6/sGvwg8Xvlu78qDAI3i8fSkKnMC4HhKyPSlqsRMJ
+	sa00y3H2+T72DSK5Wg2rOS1tZ3S62IJ3dMOe/t6K3dB3WiBcdskW4k6r71UoqG63at5+LrLwHbU1d
+	WOhxzDFrVdcvbSHokFhg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkfx5-0000bU-7p; Tue, 09 Jul 2019 02:33:55 +0000
-Received: from mail-io1-f68.google.com ([209.85.166.68])
+	id 1hkg0g-0002wM-3R; Tue, 09 Jul 2019 02:37:38 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkfwa-0000Bj-I6; Tue, 09 Jul 2019 02:33:25 +0000
-Received: by mail-io1-f68.google.com with SMTP id m24so30401172ioo.2;
- Mon, 08 Jul 2019 19:33:24 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=ecEsPgHi6Qvo6EJzKEnD4OCkuoJ/yms2Gr44dyNSi+0=;
- b=rVPp5fiyJRX+IYjXfMFVa2F4Z93Jwka5mvNqRFsCNAcLO6HoguXIKOez1Ar4afKU4e
- Ama/8xN2MpQibQRVJSoOFV9Gr8Qpy40b9YojF12X8FpllpDMsqVx9X75dp9386NMlVJg
- ZvbBP8nEUmQq9O269xw6BZW7Z83alSjFtU0yk5tpKtoLBY6O22RSypcG8fX4r08XVkqk
- dRKfm590L52E/IZLTdiXi+7T3rJ1PAKZSLMRUh3yE5MTxsG8eb/KnUWV3oiBiymhrQO2
- i0YFzAkn5ScLGJi7dKSjRB9MRjXY2JwrW7Q/N0Be9bU8L8sgLlSb2KoOcAtKcTlVWvYV
- VKEg==
-X-Gm-Message-State: APjAAAXY5tVV1v1S3pzw6jvpw6k27TgGhclc2jQJmlooFc8+s5OpFY9K
- SOoyW3FcLWb/rMJTD7SLlw==
-X-Google-Smtp-Source: APXvYqy3mZk30mYkqfKXfCPVRP/D5lbixYB5eUCl1BDUmEktnw8E6DsRRshp215GSty3pkURJ2nNEw==
-X-Received: by 2002:a02:3b62:: with SMTP id i34mr25585721jaf.91.1562639603766; 
- Mon, 08 Jul 2019 19:33:23 -0700 (PDT)
-Received: from localhost ([64.188.179.252])
- by smtp.gmail.com with ESMTPSA id p63sm20342322iof.45.2019.07.08.19.33.23
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 08 Jul 2019 19:33:23 -0700 (PDT)
-Date: Mon, 8 Jul 2019 20:33:22 -0600
-From: Rob Herring <robh@kernel.org>
-To: Dehui Sun <dehui.sun@mediatek.com>
-Subject: Re: [PATCH v1 1/2] dt-bindings: mediatek: update bindings for MT8183
- systimer
-Message-ID: <20190709023322.GA5141@bogus>
-References: <1560252534-11412-1-git-send-email-dehui.sun@mediatek.com>
- <1560252534-11412-2-git-send-email-dehui.sun@mediatek.com>
+ id 1hkfzq-0002BD-OY; Tue, 09 Jul 2019 02:36:48 +0000
+X-UUID: 5eaa5c62cd8040579460b69041f65fa8-20190708
+X-UUID: 5eaa5c62cd8040579460b69041f65fa8-20190708
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1301266761; Mon, 08 Jul 2019 18:36:37 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 8 Jul 2019 19:36:36 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 10:36:34 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 9 Jul 2019 10:36:34 +0800
+From: Biao Huang <biao.huang@mediatek.com>
+To: <davem@davemloft.net>, Jose Abreu <joabreu@synopsys.com>, <andrew@lunn.ch>
+Subject: [PATCH 0/2 net-next] fix out-of-boundary issue and add taller hash
+ table support
+Date: Tue, 9 Jul 2019 10:36:21 +0800
+Message-ID: <20190709023623.8358-1-biao.huang@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1560252534-11412-2-git-send-email-dehui.sun@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190708_193324_829836_750B2273 
-X-CRM114-Status: UNSURE (   9.51  )
+X-CRM114-CacheID: sfid-20190708_193646_827203_15C65D4E 
+X-CRM114-Status: UNSURE (   6.64  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 2.1 (++)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.68 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.68 listed in wl.mailspike.net]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,27 +70,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- weiyi.lu@mediatek.com, srv_heupstream@mediatek.com, erin.lo@mediatek.com,
- Daniel Lezcano <daniel.lezcano@linaro.org>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, dehui.sun@mediatek.com,
- linux-arm-kernel@lists.infradead.org
+Cc: jianguo.zhang@mediatek.com, Alexandre Torgue <alexandre.torgue@st.com>,
+ boon.leong.ong@intel.com, biao.huang@mediatek.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 11 Jun 2019 19:28:53 +0800, Dehui Sun wrote:
-> This commit adds mt8183 compatible node in mtk-timer binding document.
-> 
-> Signed-off-by: Dehui Sun <dehui.sun@mediatek.com>
-> ---
->  Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt | 1 +
->  1 file changed, 1 insertion(+)
-> 
+Fix mac address out-of-boundary issue in net-next tree.
+and resend the patch which was discussed in
+https://lore.kernel.org/patchwork/patch/1082117
+but with no further progress.
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Biao Huang (2):
+  net: stmmac: dwmac4: mac address array boudary violation issue
+  net: stmmac: add support for hash table size 128/256 in dwmac4
+
+ drivers/net/ethernet/stmicro/stmmac/common.h  |  7 +--
+ drivers/net/ethernet/stmicro/stmmac/dwmac4.h  |  4 +-
+ .../net/ethernet/stmicro/stmmac/dwmac4_core.c | 51 +++++++++++--------
+ .../net/ethernet/stmicro/stmmac/dwmac4_dma.c  |  1 +
+ .../net/ethernet/stmicro/stmmac/stmmac_main.c |  6 +++
+ 5 files changed, 43 insertions(+), 26 deletions(-)
+
+-- 
+2.18.0
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
