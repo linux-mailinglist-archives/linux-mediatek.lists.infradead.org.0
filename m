@@ -2,88 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0D91263211
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 09:28:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 06812632FA
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 10:42:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MrofZ++732dPGWKT/foeZDo5ujB/4ksg6+xyfPfSG0w=; b=hPKz0sBnv3THs+
-	WmNzCyF+dl8tNUOrQ50vorbBU+2PIiEu7kvHjobV353ZjBh/BQIHupXH4a38HOkXQqX6us0NwJWCw
-	zogPYGn5OiiUWw3rMuIk3yJuwCfvuF1uAWxjHSTw155A/9hUFApTAwrlAxsxE9G/qVVadpvvDogNJ
-	9kcSeTzKBhhOrKyjjMfMZaCfYoKRubOd1g9DL8jeRwtT/CC7aJ6+SWURFBldEMIEzDuKEaDfiH4/s
-	Xc9wkwmyTiQsbhurQ7aNPAJGMKefM264Azb1FC6HuM5Jyk2bOprzDH/qabb6z1VjLiulYKv9hEAEb
-	YQEN3jfYzud8N8f52hCg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=LMlLA+Jtfdb4REIb4Lp4OKDB+rYY1BHnR+XGzdjgpJo=; b=s7Fly86ly6aKJC
+	C3G4bYcN++REi5S5fizuM1o/pfo2Iixlo/nfLucv8Q/n/zccsq26RKoUbE90SUPi7Y9vMB+5z0MMg
+	/bbe81oJOIGG5tWVpQfej1BuTm4L7v0GlQFCM397Nibr+g8Xq8SpWWjkXayy+8fz3n5ie4YwSt16z
+	oV8xuVeC+NUJaFBOJzVvdgqM8AlZ+Y2j7sCxrUPLNV+IwIXIzomE7kiPBhO/lSSzTXTGIzRa05guv
+	ft7I7RRFis4W3QvqohYoO/qmKxIneO7OAdx8SiVm5j+PWyuNdPMu7BHLbOYGroYJ/7NEcUrzao4PR
+	i8Wi4bAhlDN5VwgefI4A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkkY2-00009Z-94; Tue, 09 Jul 2019 07:28:22 +0000
-Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
+	id 1hkli8-0004KV-Fl; Tue, 09 Jul 2019 08:42:52 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkkWH-00079u-6S
- for linux-mediatek@lists.infradead.org; Tue, 09 Jul 2019 07:26:35 +0000
-Received: by mail-pf1-x441.google.com with SMTP id r7so8855617pfl.3
- for <linux-mediatek@lists.infradead.org>; Tue, 09 Jul 2019 00:26:33 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=ArHGhhb9Oek4s8DL5cUvHYNj+PCdXUKKJXXZEMG05Gg=;
- b=ZGa3F1ywhkopQ29J1iJD2QyNsq/4SKX590Zq8j9+JeaErhTza9asz+D7oR02xoNCLu
- SEptfK8bXlxBtkZZSQfpKso3AhomaMMck9vXgPctMBPAEeJr57cE7hFctmA/ZIirdg+m
- 9JlxVuCA9FHw/RKWczO+ylWGM1WfRr8J40yZo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=ArHGhhb9Oek4s8DL5cUvHYNj+PCdXUKKJXXZEMG05Gg=;
- b=M9cwHDXSucgghlSqRRnDIUSpIhSti05FPnPkWrR1EGQiO9bQIeP29o3zj8+khJ9zUF
- T1jMz7GgmTjcoaC1iO4QOxVMtuNMdUjF/ma1uDMLjz+vAK3XDEq3Vj0MLzeI2XmaNnaL
- Lu8fZjpxjya1EzJpg6LXdkLhUpOlTQWIGEgjttsrA5902x429eImGZYDB1Lk+c/hjm7f
- biuWOStoNjptJVa0tuD2/qmVw0BMmJ/vWXG5+zjeW4Uj/1ZUQhs9Q95EENukIafOJtQ4
- k4Hz1evr8lRQNAY7vYAgwb2GFjbt+Tz3txNKarHJqAwY3YUdTjNVvhCpyKym+cgo0LoU
- zv1Q==
-X-Gm-Message-State: APjAAAWuvOolGj4E1DvnHNV8AfECQwTBmAWQCvCd/raBFD7NyvHfCcVL
- ahaD+dbyEX6YIJ6NLqUq3BzZCA==
-X-Google-Smtp-Source: APXvYqw3MVaPVtZAnNVSUv335XBgF+fD0gB2fxT+sm1/DfkX0biG/8S/+07tgB8k8OChsDBzhf7Jlg==
-X-Received: by 2002:a63:6b07:: with SMTP id g7mr29601088pgc.325.1562657192295; 
- Tue, 09 Jul 2019 00:26:32 -0700 (PDT)
-Received: from pihsun-z840.tpe.corp.google.com
- ([2401:fa00:1:10:7889:7a43:f899:134c])
- by smtp.googlemail.com with ESMTPSA id 81sm12738135pfx.111.2019.07.09.00.26.30
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 09 Jul 2019 00:26:31 -0700 (PDT)
-From: Pi-Hsun Shih <pihsun@chromium.org>
-To: 
-Subject: [PATCH v13 5/5] arm64: dts: mt8183: add scp node
-Date: Tue,  9 Jul 2019 15:25:29 +0800
-Message-Id: <20190709072547.217957-6-pihsun@chromium.org>
-X-Mailer: git-send-email 2.22.0.410.gd8fdbe21b5-goog
-In-Reply-To: <20190709072547.217957-1-pihsun@chromium.org>
-References: <20190709072547.217957-1-pihsun@chromium.org>
+ id 1hklhW-0003sZ-0Z; Tue, 09 Jul 2019 08:42:15 +0000
+X-UUID: f8fb4daaa350474d9450731ed496b46d-20190709
+X-UUID: f8fb4daaa350474d9450731ed496b46d-20190709
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <jerry-ch.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1034274432; Tue, 09 Jul 2019 00:41:47 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 01:41:42 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 16:41:40 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 9 Jul 2019 16:41:40 +0800
+From: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
+To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
+ <tfiga@chromium.org>, <matthias.bgg@gmail.com>, <mchehab@kernel.org>
+Subject: [RFC PATCH V2 0/4] media: platform: Add support for Face Detection
+ (FD) on mt8183 SoC
+Date: Tue, 9 Jul 2019 16:41:08 +0800
+Message-ID: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 3ABE9780289E424823807A67299219B665119384ECA2E209DEDC6A857B5D82822000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_002633_368035_C81DE3DD 
-X-CRM114-Status: GOOD (  10.30  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190709_014214_059054_FB4F7C2E 
+X-CRM114-Status: UNSURE (   9.46  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -95,88 +74,249 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Erin Lo <erin.lo@mediatek.com>,
- open list <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Pi-Hsun Shih <pihsun@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Eddie Huang <eddie.huang@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: shik@chromium.org, devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
+ Rynn.Wu@mediatek.com, srv_heupstream@mediatek.com, po-yang.huang@mediatek.com,
+ suleiman@chromium.org, Jerry-ch.Chen@mediatek.com, jungo.lin@mediatek.com,
+ sj.huang@mediatek.com, yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
+ zwisler@chromium.org, christie.yu@mediatek.com, frederic.chen@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Eddie Huang <eddie.huang@mediatek.com>
+Hello,
 
-Add scp node to mt8183 and mt8183-evb
+This RFC patch series is adding Face Detection (FD) driver on Mediatek
+mt8183 SoC. It belongs to the first Mediatek's camera driver series based
+on V4L2 and media controller framework. I posted the main part of the FD
+driver as RFC to discuss first and would like some review comments.
 
-Signed-off-by: Erin Lo <erin.lo@mediatek.com>
-Signed-off-by: Pi-Hsun Shih <pihsun@chromium.org>
-Signed-off-by: Eddie Huang <eddie.huang@mediatek.com>
----
-Changes from v12, v11, v10:
- - No change.
+==============
+Introduction
+==============
 
-Changes from v9:
- - Remove extra reserve-memory-vpu_share node.
+Face Detection (FD) unit provides hardware accelerated face detection
+feature. It can detect different sizes of faces in a given image.
 
-Changes from v8:
- - New patch.
----
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 11 +++++++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 12 ++++++++++++
- 2 files changed, 23 insertions(+)
+The driver is implemented as a normal V4L2 memory-to-memory device and
+supports V4L2 controls for detection settings. It has two buffer queues.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-index d8e555cbb5d3..e46e34ce3159 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-@@ -24,6 +24,17 @@
- 	chosen {
- 		stdout-path = "serial0:921600n8";
- 	};
-+
-+	reserved-memory {
-+		#address-cells = <2>;
-+		#size-cells = <2>;
-+		ranges;
-+		scp_mem_reserved: scp_mem_region {
-+			compatible = "shared-dma-pool";
-+			reg = <0 0x50000000 0 0x2900000>;
-+			no-map;
-+		};
-+	};
- };
- 
- &auxadc {
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index c2749c4631bc..133146b52904 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -254,6 +254,18 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		scp: scp@10500000 {
-+			compatible = "mediatek,mt8183-scp";
-+			reg = <0 0x10500000 0 0x80000>,
-+			      <0 0x105c0000 0 0x5000>;
-+			reg-names = "sram", "cfg";
-+			interrupts = <GIC_SPI 174 IRQ_TYPE_LEVEL_HIGH>;
-+			clocks = <&infracfg CLK_INFRA_SCPSYS>;
-+			clock-names = "main";
-+			memory-region = <&scp_mem_reserved>;
-+			status = "disabled";
-+		};
-+
- 		auxadc: auxadc@11001000 {
- 			compatible = "mediatek,mt8183-auxadc",
- 				     "mediatek,mt8173-auxadc";
+1. Video output buffer: RAW image for face detection.
+
+2. Meta capture buffer: Result of the detected faces.
+
+==================
+Changes in v2
+==================
+
+RFC v2 includes the following modification:
+1. Implement FD as a V4L2 mem2mem driver
+
+2. Replace meta input with V4L2 controls
+
+==================
+Changes in v1
+==================
+
+RFC v1 includes the following modification:
+1. Uses Request API instead of FD's buffer collection design
+
+2. removed unnecessary abstraction structurally, including mtk_fd_ctx and
+related ops
+
+3. removed the fd_smem node from device tree
+
+4. Fixed the common issues Tomasz commented on Mediatek ISP Pass 1's RFC v0
+patch series
+
+==================
+Dependent patch
+==================
+
+FD driver depends on SCP driver. The patches are as following:
+
+[1]. Add support for mt8183 SCP
+https://patchwork.kernel.org/cover/10991065/
+
+==================
+Compliance test
+==================
+
+* Version: https://git.linuxtv.org/v4l-utils.git/commit/?id=b16f9e945d74aa5
+* Note: Those 4 failures are caused by the implementation of FD driver,
+        whic is a m2m device with VIDEO_OUT and META_CAPTURE queues,
+        therefore we can't set V4L2_CAP_VIDEO_M2M in device capability, and
+        fail in some non-m2m v4l2 test cases.
+* Test command: v4l2-compliance -m 2
+* test output:
+
+v4l2-compliance SHA: not available, 32 bits
+
+Compliance test for mtk-fd-4.0 device /dev/media2:
+
+Media Driver Info:
+        Driver name      : mtk-fd-4.0
+        Model            : MTK-FD-V4L2
+        Serial           :
+        Bus info         : platform:1502b000.fd
+        Media version    : 4.19.56
+        Hardware revision: 0x00000000 (0)
+        Driver version   : 4.19.56
+
+Required ioctls:
+        test MEDIA_IOC_DEVICE_INFO: OK
+
+Allow for multiple opens:
+        test second /dev/media2 open: OK
+        test MEDIA_IOC_DEVICE_INFO: OK
+        test for unlimited opens: OK
+
+Media Controller ioctls:
+        test MEDIA_IOC_G_TOPOLOGY: OK
+        Entities: 3 Interfaces: 1 Pads: 4 Links: 4
+        test MEDIA_IOC_ENUM_ENTITIES/LINKS: OK
+        test MEDIA_IOC_SETUP_LINK: OK
+
+Total for mtk-fd-4.0 device /dev/media2: 7, Succeeded: 7, Failed: 0, Warnings: 0
+--------------------------------------------------------------------------------
+Compliance test for mtk-fd-4.0 device /dev/video31:
+
+Driver Info:
+        Driver name      : mtk-fd-4.0
+        Card type        : MTK-FD-V4L2
+        Bus info         : platform:1502b000.fd
+        Driver version   : 4.19.56
+        Capabilities     : 0x84a02000
+                Video Output Multiplanar
+                Metadata Capture
+                Streaming
+                Extended Pix Format
+                Device Capabilities
+        Device Caps      : 0x04a02000
+                Video Output Multiplanar
+                Metadata Capture
+                Streaming
+                Extended Pix Format
+Media Driver Info:
+        Driver name      : mtk-fd-4.0
+        Model            : MTK-FD-V4L2
+        Serial           :
+        Bus info         : platform:1502b000.fd
+        Media version    : 4.19.56
+        Hardware revision: 0x00000000 (0)
+        Driver version   : 4.19.56
+Interface Info:
+        ID               : 0x0300000c
+        Type             : V4L Video
+Entity Info:
+        ID               : 0x00000001 (1)
+        Name             : MTK-FD-V4L2-source
+        Function         : V4L2 I/O
+        Pad 0x01000002   : 0: Source
+          Link 0x02000008: to remote pad 0x1000005 of entity 'MTK-FD-V4L2-proc': Data, Enabled, Immutable
+
+Required ioctls:
+        test MC information (see 'Media Driver Info' above): OK
+                fail: v4l2-compliance.cpp(668): dcaps & output_caps
+        test VIDIOC_QUERYCAP: FAIL
+
+Allow for multiple opens:
+        test second /dev/video31 open: OK
+                fail: v4l2-compliance.cpp(668): dcaps & output_caps
+        test VIDIOC_QUERYCAP: FAIL
+        test VIDIOC_G/S_PRIORITY: OK
+        test for unlimited opens: OK
+
+Debug ioctls:
+        test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+        test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+        test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+        test VIDIOC_ENUMAUDIO: OK (Not Supported)
+        test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDIO: OK (Not Supported)
+        Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+        test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+        test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+        Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+        test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+        test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+        test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+        test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+        test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+        test VIDIOC_QUERYCTRL: OK
+        test VIDIOC_G/S_CTRL: OK
+        test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+        test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+        test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+        Standard Controls: 1 Private Controls: 6
+
+Format ioctls:
+        test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+        test VIDIOC_G/S_PARM: OK (Not Supported)
+        test VIDIOC_G_FBUF: OK (Not Supported)
+        test VIDIOC_G_FMT: OK
+        test VIDIOC_TRY_FMT: OK
+                fail: v4l2-test-formats.cpp(1014): Global format mismatch: 59555956(VYUY)/26x26 vs 56595559(YUYV)/26x26
+        test VIDIOC_S_FMT: FAIL
+        test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+        test Cropping: OK (Not Supported)
+        test Composing: OK (Not Supported)
+        test Scaling: OK (Not Supported)
+
+Codec ioctls:
+        test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+        test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+        test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+                fail: v4l2-test-buffers.cpp(667): q2.reqbufs(node->node2, 1) != EBUSY
+        test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: FAIL
+        test VIDIOC_EXPBUF: OK
+        test Requests: OK
+
+Total for mtk-fd-4.0 device /dev/video31: 45, Succeeded: 41, Failed: 4, Warnings: 0
+
+Grand Total for mtk-fd-4.0 device /dev/media2: 52, Succeeded: 48, Failed: 4, Warnings: 0
+
+Jerry-ch Chen (4):
+  dt-bindings: mt8183: Added FD dt-bindings
+  dts: arm64: mt8183: Add FD nodes
+  media: platform: Add Mediatek FD driver KConfig
+  platform: mtk-isp: Add Mediatek FD driver
+
+ .../bindings/media/mediatek,mt8183-fd.txt     |   33 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |   12 +
+ drivers/media/platform/Kconfig                |    2 +
+ drivers/media/platform/Makefile               |    2 +
+ drivers/media/platform/mtk-isp/fd/Kconfig     |   17 +
+ drivers/media/platform/mtk-isp/fd/Makefile    |    5 +
+ drivers/media/platform/mtk-isp/fd/mtk_fd.h    |  157 ++
+ drivers/media/platform/mtk-isp/fd/mtk_fd_40.c | 1259 +++++++++++++++++
+ include/uapi/linux/v4l2-controls.h            |    4 +
+ 9 files changed, 1491 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
+ create mode 100644 drivers/media/platform/mtk-isp/fd/Kconfig
+ create mode 100644 drivers/media/platform/mtk-isp/fd/Makefile
+ create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd.h
+ create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd_40.c
+
 -- 
-2.22.0.410.gd8fdbe21b5-goog
+2.18.0
+
 
 
 _______________________________________________
