@@ -2,74 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E3736349E
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 12:56:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1D88063685
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 15:10:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AQUnnhPwhqnDcPMkxRESsJVboxNxpMyMyO6xgSbYQgA=; b=FBuF8HtYe3J5DO
-	rtICOAVBHEuxFHBiSjZfT274DVpNfmaxeZRkWhl+IG6NFiMMxC3sTnN6bP/rMCKob57T7QPQN48xh
-	/La2/NiPMmHsPQ30007yi6yMAWjg+By5kowk2OBdQVTSW9WYF0+qjreZibVqLp41rUcqfxZliX8xC
-	jSee2/7DqWVXwHsSmc7DZCqpq8TKiNhhkY+5ZlfBey+AsqVlX28wvIN2KXorfY/xDD6jKg0GMlzoW
-	D1w55T/+GImD+hU1W3EwpHEX6fNQI6DbuL9dppuq31Cymzep9GBiizKXmN8wzm2hmtRbUAtcqb+Dp
-	nGaieDoDOswIiTaJhCCg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=PCyOQnsKGWJNFEVKh8ZaCNP/qbtAE5YUgQf9smd0wKo=; b=odn/gLnIlLzdPv
+	v/4fcgmz0SdxzJiK/uli72v19UjelFsUx0+4RBYrHJ7iXbr5876fD0tMtVYko6JOy54hSlu6dpcJ5
+	bIaXl8AlMBdr4RXKLRCHsnT2ndUHXUqTCvMrRsw1CcZeXcl2RAhhCmpJxkt8iAqPa/qUnJHCgMQ/B
+	+SFYRyWwWRtyrmOZSmlmybDYGQpfxgs5xrWPsGPSNMXbD6QLTwVj7fep8EZnofXDkrvRrrezvoQyg
+	CL3bgzO3bKTlnzAk5NaqlGsAbKNQburRZndZdr1dmc0uzPSbKgSAtjbupbjJsMughSTvIzC8qkAO1
+	i5Nz1XlOGSdSlbmq7Hkg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hknni-0001y9-8j; Tue, 09 Jul 2019 10:56:46 +0000
-Received: from mout.kundenserver.de ([212.227.126.131])
+	id 1hkptA-0004Sq-P7; Tue, 09 Jul 2019 13:10:32 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hknnN-0001bc-6N; Tue, 09 Jul 2019 10:56:27 +0000
-Received: from [192.168.1.110] ([95.118.92.226]) by mrelayeu.kundenserver.de
- (mreue012 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1MNOZO-1i9TFY3wZG-00Opru; Tue, 09 Jul 2019 12:56:11 +0200
-Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
-To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>, hans.verkuil@cisco.com,
- laurent.pinchart+renesas@ideasonboard.com, tfiga@chromium.org,
- matthias.bgg@gmail.com, mchehab@kernel.org
-References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
- <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
-From: "Enrico Weigelt, metux IT consult" <lkml@metux.net>
-Organization: metux IT consult
-Message-ID: <eb3bb92d-5d44-0d45-2e90-abcdb96f595d@metux.net>
-Date: Tue, 9 Jul 2019 12:56:08 +0200
-User-Agent: Mozilla/5.0 (X11; Linux i686 on x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.2.1
+ id 1hkpsX-0002mH-3C; Tue, 09 Jul 2019 13:09:54 +0000
+X-UUID: 20412abf2791437ca2b97a01ef2c04a1-20190709
+X-UUID: 20412abf2791437ca2b97a01ef2c04a1-20190709
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <qii.wang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 974708136; Tue, 09 Jul 2019 05:09:47 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 06:09:46 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 21:09:44 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 9 Jul 2019 21:09:44 +0800
+From: Qii Wang <qii.wang@mediatek.com>
+To: <bbrezillon@kernel.org>
+Subject: [PATCH v3 0/2] Add MediaTek I3C master controller driver
+Date: Tue, 9 Jul 2019 21:09:20 +0800
+Message-ID: <1562677762-24067-1-git-send-email-qii.wang@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-In-Reply-To: <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
-Content-Language: en-US
-X-Provags-ID: V03:K1:9oj8UdHJ6t/wVt9wG2RH64WnZHfuyRvuaL96Jz4wR4j6R+hcGHo
- K7u++aSF8H5+LIGL3GOrnpTy5Sbs1XDdM3JmDcbW7W/tYhhk3dcB+f8k9Gmva4P+YtAVbju
- SltL4ckjdz99PBeuTzWE5fVokOF0XBFiBViam5eq1YEwddtEjdFA6Wne1LNOkF5l536Vgk6
- V1bNYNfs5mTbDATvUp/iQ==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:BIsBq3Xtv6U=:RbuUXGVxT51ZgbnCRpe2IO
- NZoqYL5klmbXWLgIEI8OCsjclrzCoKgHwlWO5pS6OT/C31sSfpmYkqIBw6ONMCS/qEv+JtE6R
- nAqnjKVjG+fT5aWvmNnB19X3elUgdm7HInzT7s6jnPnDLWwwsOGfF0nFGUntux7xRKtjXhbsH
- Eiu0cghyxxqmgEZ5LXsim950Ir4KmiS0zzhkJCd9Icc54FlIbRaLRr4VNM3eXMcO0BIv24LI9
- s9KW8YpPm5G3kxH2uwTLODtlYvolXSIGNPlYS8RuUjmfNJFYlW+VE3LRxIzhaAYYb7M/BIqgW
- O7s3I/M4ivy2TWlWmp3pWnjBfnPWRmmbayV+dQnnPMeVVeVrc/huMcEp+NYUMmcC+YjrgkMbb
- LDqHvWp4b9W818rHLpN91umbS4b1wV/32dkUoI0PoUNW1lZdFjbrzrJTQ2JleKLCUXltbNY9K
- fJ1LVsxTpXdx67bEXsC4NK+doMEfzTnYNi2VMLPSHKRrQ4kqWuI1VW7f0C6zidYpIKN0AYq1b
- Dy52APKD0IHgjPKIDt+3noc8zLJQdq64MEs+0KYn44QCv4wNpkIYJG8sbq0OFmcLvZKEh8sP5
- xcKwj1ifsRLjhPdjTEwqKlQLHAGGD++Fhv3yK+Yo5/DgE1cmlbIlprSk8R3Sxp846BkbzJwY2
- isc3a0E7WNbXWHNSScTh8xLuFL3+HzJbXAwZztHm0g94rgGPHHF9tAdnHEzqff90JkAc3UmQP
- zxcGa0mVwdpPnZEkk7JDEyxRxE+BxhybhnXi7fGaU+irDQkXA5a3pX7XEMN53olcDj2+QW4HT
- w5b46acg6W05ERHS72c4/r6RvGok/oaoMe+peTrf4OBEjsSgduu0P8/s/SAnQJQ7woo58KV
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_035625_553618_75059814 
-X-CRM114-Status: GOOD (  15.41  )
+X-CRM114-CacheID: sfid-20190709_060953_138253_FDEB59F8 
+X-CRM114-Status: UNSURE (   6.89  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.131 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,98 +71,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com, Rynn.Wu@mediatek.com,
- srv_heupstream@mediatek.com, po-yang.huang@mediatek.com, suleiman@chromium.org,
- sj.huang@mediatek.com, jungo.lin@mediatek.com, shik@chromium.org,
- yuzhao@chromium.org, linux-mediatek@lists.infradead.org, zwisler@chromium.org,
- christie.yu@mediatek.com, frederic.chen@mediatek.com,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, leilk.liu@mediatek.com, xinping.qian@mediatek.com,
+ linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, qii.wang@mediatek.com,
+ matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 09.07.19 10:41, Jerry-ch Chen wrote:
+This series are based on 5.2-rc1, we provide two patches to
+support MediaTek I3C master controller.
 
-Hi,
+Main changes compared to v2:
+--modify the description of clock and interrupt in bindings
+--use correct cells for I2C device in bindings
 
+Main changes compared to v1:
+--remove clock-div, let clock driver handle it
+--let sample_cnt and step_cnt start from two
 
-> diff --git a/drivers/media/platform/mtk-isp/fd/mtk_fd.h b/drivers/media/platform/mtk-isp/fd/mtk_fd.h
-> new file mode 100644
-> index 0000000..289999b
-> --- /dev/null
-> +++ b/drivers/media/platform/mtk-isp/fd/mtk_fd.h
-> @@ -0,0 +1,157 @@
-> +/* SPDX-License-Identifier: GPL-2.0 */
-> +//
-> +// Copyright (c) 2018 MediaTek Inc.
-> +
-> +#ifndef __MTK_FD_HW_H__
-> +#define __MTK_FD_HW_H__
-> +
-> +#include <linux/io.h>
-> +#include <linux/types.h>
-> +#include <linux/platform_device.h>
-> +#include <media/v4l2-ctrls.h>
-> +#include <media/v4l2-device.h>
-> +#include <media/videobuf2-v4l2.h>
-> +
-> +#define MTK_FD_OUTPUT_MIN_WIDTH			26U
-> +#define MTK_FD_OUTPUT_MIN_HEIGHT		26U
-> +#define MTK_FD_OUTPUT_MAX_WIDTH			640U
-> +#define MTK_FD_OUTPUT_MAX_HEIGHT		480U
-> +
-> +/* Control the user defined image widths and heights
-> + * to be scaled and performed face detection in FD HW.
-> + * MTK FD support up to 14 user defined image sizes to perform face detection.
-> + */
-> +#define V4L2_CID_MTK_FD_SCALE_IMG_WIDTH		(V4L2_CID_USER_MTK_FD_BASE + 1)
-> +#define V4L2_CID_MTK_FD_SCALE_IMG_HEIGHT	(V4L2_CID_USER_MTK_FD_BASE + 2)
+Qii Wang (2):
+  dt-bindings: i3c: Document MediaTek I3C master bindings
+  i3c: master: Add driver for MediaTek IP
 
-I've got a *really* bad feeling about introducing chip specific
-uapi stuff. (by the way: uapi stuff belongs into include/uapi/...)
-
-Maybe you could tell us what that's *really* about, so we can find some
-standard / chip-independent api for these things. That's one of the
-major point of the kernel: hardware abstraction.
-
-> +#define ENABLE_FD				0x111
-> +#define FD_HW_ENABLE				0x4
-> +#define FD_INT_EN				0x15c
-> +#define FD_INT					0x168
-> +#define FD_RESULT				0x178
-> +#define FD_IRQ_MASK				0x001
-> +
-> +#define RS_MAX_BUF_SIZE				2288788
-> +#define FD_MAX_SPEEDUP				7
-> +#define FD_MAX_POSE_VAL				0xfffffffffffffff
-> +#define FD_DEF_POSE_VAL				0x3ff
-> +#define MAX_FD_SEL_NUM				1026
-
-If that file is supposed to be included by anything beyond the driver
-itself, we need proper prefixing. (same for anything else in here)
-
-> diff --git a/include/uapi/linux/v4l2-controls.h b/include/uapi/linux/v4l2-controls.h
-> index 3dcfc61..eae876e 100644
-> --- a/include/uapi/linux/v4l2-controls.h
-> +++ b/include/uapi/linux/v4l2-controls.h
-> @@ -192,6 +192,10 @@ enum v4l2_colorfx {
->   * We reserve 16 controls for this driver. */
->  #define V4L2_CID_USER_IMX_BASE			(V4L2_CID_USER_BASE + 0x10b0)
->  
-> +/* The base for the mediatek FD driver controls */
-> +/* We reserve 16 controls for this driver. */
-> +#define V4L2_CID_USER_MTK_FD_BASE		(V4L2_CID_USER_BASE + 0x10d0)
-
-Why only the base, but not the actual IDs in uapi ?
-
-
---mtx
+ .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   48 +
+ drivers/i3c/master/Kconfig                         |   10 +
+ drivers/i3c/master/Makefile                        |    1 +
+ drivers/i3c/master/i3c-master-mtk.c                | 1239 ++++++++++++++++++++
+ 4 files changed, 1298 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+ create mode 100644 drivers/i3c/master/i3c-master-mtk.c
 
 -- 
-Enrico Weigelt, metux IT consult
-Free software and Linux embedded engineering
-info@metux.net -- +49-151-27565287
+1.7.9.5
 
 _______________________________________________
 Linux-mediatek mailing list
