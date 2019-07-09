@@ -2,80 +2,93 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 02472637D7
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 16:23:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E63763A1F
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 19:25:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HTncIh1uusqNe9xTuNZ0YHzYKNgcr1TNEAUjLtFzwqQ=; b=Z0T/XqIkKGsTdc
-	Uy463fODidD6lXFpKU8dW2UZwG3Mcm5QELUlulx6p+9IU7VYTLgp41ZTD/jF1rHsmTalXm0YOjtrM
-	l6JpbTQzh0nWGVCOUm/3JWseqY15OF7NuqTE1BNI27Jcr/bAYPy3yr1Q4iMLFuy5WX12oz3t43kjn
-	Y+OsuPsNrTIh75qdmPKQUUKh4a8Hq0kRtOW6Owx6OMX9ZQphJdPaVUfaGBq1Qobvdgtzstslri0R7
-	C47ECG1o2ymCTCUxRfPR90Mlo62yE+mNsQa1TQBE3tuScDXeScq4zYd7tzmgN7ugZpq0xjX/geHbw
-	YcWUj4lMv7hDksypEqvQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=mUr/XX2jUKHqIkAWOluPFcAr11iZh//8mcgdo+G4Ru0=; b=hWTHaHdJ3eDJy8
+	ERuxeWmhDlT4AS4Aph49aDcAe9LEKxGAQ/YTmUI+5emfIy92fgz7HOsUEzV20pKcYT5Gd9oXONw7j
+	oiSaXohNO0H1iDGtlN6w429eYA9UG8ZF7luyo+1ifs21DU13nCokTFgmsN6nOLTRgrtmcE0I1lQID
+	kFcfPAcjaApSiVocLw7+1ETboQUBrC6gsnDl4yc6SOL7o9qwmGS5ikFkfx0bk9w9B/CJT8TObKvnX
+	kKOZoZsJ+/Nch5cTdm7Oi5u6VkuBSbRDAbAwYlsdH1zmRyodsjo/ErCGrNfce1cLUTBN356UrfwKi
+	uFCv/W9/J8elDNb1JcQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkr1V-00044s-Hy; Tue, 09 Jul 2019 14:23:13 +0000
-Received: from mail-io1-f67.google.com ([209.85.166.67])
+	id 1hktrj-0004yx-LZ; Tue, 09 Jul 2019 17:25:19 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkr0w-0003aU-Jl; Tue, 09 Jul 2019 14:22:39 +0000
-Received: by mail-io1-f67.google.com with SMTP id q22so21710368iog.4;
- Tue, 09 Jul 2019 07:22:38 -0700 (PDT)
+ id 1hktrX-0004Wo-Cu; Tue, 09 Jul 2019 17:25:08 +0000
+Received: by mail-pg1-x541.google.com with SMTP id u17so9305660pgi.6;
+ Tue, 09 Jul 2019 10:25:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=+XOGAmvM9zKXLd7snltlz7p/GLyc46ilwqyDiqBZzWE=;
+ b=ZLgjzz1KVtsioZuBLGHb69PORJxE1ZDIz2hO09tJG4HqTHrd8gzEE3+lBInpEOP++z
+ uWXBvyAa04SdBddiZOory6OjM1PGsck6p98eR/nYwISlHFYOUKaqfdGtcqcfCFeJjpjU
+ Ve/4+JwO8UVKInXVoFSx9Eb7QPSuYiDShZJw6Wfn/mGj3FpzEndERMAii85VmO3G5wT9
+ ethTL/4vSVyLBYSm0erbJdtDfxdV86tEvJACtX/7R7Z4tsYpv6aRei5tDN2a+MQB8C4y
+ XYRC7dy6PPRUNUfxdjbaIt9y8nPfEFq19acGb/lXTVoFbDkpaunwFAEiIfkdQ4QAaus0
+ KE0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=Nyw3ayYjb6xxz+TXQiu0yImt7hvULSuFd6no466kGDg=;
- b=RAPIIrHFwlbSd7XJDM3jfpvlroKTAvoILeBAeZl6LKxyb0natdhQJqkDE3uXCmm8+S
- vD+S5xEIw/Zuc5hDUDR1Xj+Sy+pWC4a0AceYtmMzdYKI/+wRHOKXSpqCsxngLsrW/15z
- lCXi8BXeh4h6tFIAnv5GYY0fPKfKsWvp8KUhFl5eo497OKyMZSgF4IQt9iKrCE8zHNIS
- +WVLxOD+wIuv5BDLuoMmcBW3sO04MhkScGTdEFH12YhnZvKOI6NAGaxupn9jZNQv4G1W
- qUcsYVRERH2rzzwS1vb0BXHy+nUrzcNDu9SAeurM54blScm9RmDFz5Mo87JU137asNmK
- siIA==
-X-Gm-Message-State: APjAAAVA6LKHGPfuOM1bfIl4cGNF8mqtQDWC/HhUkKR24CJnSaG8DT/C
- 06fyz1YpTA/TsCPySpXPSRpfWwg=
-X-Google-Smtp-Source: APXvYqwGEmLaEm/oSVALxwoDJQLE4Vi1IOoNxGbBog+3P1/ET15BHO6JQdjBS6+02vhPwx0mCo0XXw==
-X-Received: by 2002:a6b:dc08:: with SMTP id s8mr10053113ioc.209.1562682157639; 
- Tue, 09 Jul 2019 07:22:37 -0700 (PDT)
-Received: from localhost ([64.188.179.251])
- by smtp.gmail.com with ESMTPSA id n17sm19238636iog.63.2019.07.09.07.22.36
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=+XOGAmvM9zKXLd7snltlz7p/GLyc46ilwqyDiqBZzWE=;
+ b=bEfBCvhfdUh5wmX1OgvDipNDn1zmZiuIs8cgQIn0A2aTaf4+cBTyJO39cuRnnQZqT5
+ mBxgK3c7/zp4SX2bfhKiTDdcPaNH7qUE5xD9m4akgmrPmvzeGNGsMB98VgWLmZAOLQvB
+ BYPKY4YZNnJuDIqtpD+LZocgxwUtk0402z3wksxaZD2xvtd9zxScsTo2MkwYkiAlzQDD
+ ZdALOO4D9kLs/sk1RgapYQfRLInwf5j3m744TvMVNtZfyjHGz5Sk4w+SFE5nFu7MzeIM
+ zskI2frejGzKcOKQLAicIEzKBGeOnXDfs/4MdmHjoaXRFzv5xrzB/99dQNilQ+fdopm8
+ oDWw==
+X-Gm-Message-State: APjAAAXV5u37lQueWKvezYHR0cvDta181HSZvDT7iAnQ1sW2aO+2Llzz
+ eqo7km4BzRCAnZjkFJZ+03I=
+X-Google-Smtp-Source: APXvYqwLXsIz8247u+t2R6KRU6rsLxmsDMUTOhViknbtHjRrTGKfJhgq0XtVYDXMIgsn6RwRsAnqoA==
+X-Received: by 2002:a17:90a:32ed:: with SMTP id
+ l100mr1308051pjb.11.1562693106952; 
+ Tue, 09 Jul 2019 10:25:06 -0700 (PDT)
+Received: from localhost.localdomain ([110.227.64.207])
+ by smtp.gmail.com with ESMTPSA id 97sm4011201pjz.12.2019.07.09.10.25.03
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 09 Jul 2019 07:22:36 -0700 (PDT)
-Date: Tue, 9 Jul 2019 08:22:35 -0600
-From: Rob Herring <robh@kernel.org>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH 3/5] dt-bindings: usb: mtk-xhci: add an optional xhci_ck
- clock
-Message-ID: <20190709142235.GA11951@bogus>
-References: <5e06482a0be15476c7b5825f155accf98275afa8.1560246390.git.chunfeng.yun@mediatek.com>
- <9b6ad8dee142d73b56d653ecb7475c4ed28e5eb8.1560246390.git.chunfeng.yun@mediatek.com>
+ Tue, 09 Jul 2019 10:25:06 -0700 (PDT)
+From: Nishka Dasgupta <nishkadg.linux@gmail.com>
+To: minghsiu.tsai@mediatek.com, houlong.wei@mediatek.com,
+ andrew-ct.chen@mediatek.com, mchehab@kernel.org, matthias.bgg@gmail.com,
+ linux-media@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org
+Subject: [PATCH] media: platform: mtk-mdp: mtk_mdp_core: Add of_node_put()
+ before goto
+Date: Tue,  9 Jul 2019 22:54:54 +0530
+Message-Id: <20190709172454.13648-1-nishkadg.linux@gmail.com>
+X-Mailer: git-send-email 2.19.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <9b6ad8dee142d73b56d653ecb7475c4ed28e5eb8.1560246390.git.chunfeng.yun@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_072238_659499_DD8A3FB1 
-X-CRM114-Status: GOOD (  14.46  )
-X-Spam-Score: 2.0 (++)
+X-CRM114-CacheID: sfid-20190709_102507_450245_FABAAE4E 
+X-CRM114-Status: UNSURE (   9.82  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 1.1 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.0 points)
+ Content analysis details:   (1.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.67 listed in list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
+ provider (nishkadg.linux[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -88,52 +101,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Mathias Nyman <mathias.nyman@intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Jumin Li <jumin.li@mediatek.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Jun 12, 2019 at 01:55:19PM +0800, Chunfeng Yun wrote:
-> Add a new optional clock xhci_ck
-> 
-> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> ---
->  Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt | 3 ++-
->  1 file changed, 2 insertions(+), 1 deletion(-)
-> 
-> diff --git a/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt b/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
-> index 266c2d917a28..91c0704b586b 100644
-> --- a/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
-> +++ b/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
-> @@ -29,6 +29,7 @@ Required properties:
->  	"sys_ck": controller clock used by normal mode,
->  	the following ones are optional:
->  	"ref_ck": reference clock used by low power mode etc,
-> +	"xhci_ck": controller clock,
->  	"mcu_ck": mcu_bus clock for register access,
->  	"dma_ck": dma_bus clock for data transfer by DMA
+Each iteration of for_each_child_of_node puts the previous node, but in
+the case of a goto from the middle of the loop, there is no put, thus
+causing a memory leak. Hence add an of_node_put before the goto in two
+places.
+Issue found with Coccinelle.
 
-A new clock should go at the end to stay backwards compatible.
+Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
+---
+ drivers/media/platform/mtk-mdp/mtk_mdp_core.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
->  
-> @@ -100,7 +101,7 @@ Required properties:
->   - clocks : a list of phandle + clock-specifier pairs, one for each
->  	entry in clock-names
->   - clock-names : must contain "sys_ck", and the following ones are optional:
-> -	"ref_ck", "mcu_ck" and "dma_ck"
-> +	"ref_ck", "xhci_ck", "mcu_ck" and "dma_ck"
->  
->  Optional properties:
->   - vbus-supply : reference to the VBUS regulator;
-> -- 
-> 2.21.0
-> 
+diff --git a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
+index fc9faec85edb..d0a3f06ad83d 100644
+--- a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
++++ b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
+@@ -145,13 +145,16 @@ static int mtk_mdp_probe(struct platform_device *pdev)
+ 		comp = devm_kzalloc(dev, sizeof(*comp), GFP_KERNEL);
+ 		if (!comp) {
+ 			ret = -ENOMEM;
++			of_node_put(node);
+ 			goto err_comp;
+ 		}
+ 		mdp->comp[comp_id] = comp;
+ 
+ 		ret = mtk_mdp_comp_init(dev, node, comp, comp_id);
+-		if (ret)
++		if (ret) {
++			of_node_put(node);
+ 			goto err_comp;
++		}
+ 	}
+ 
+ 	mdp->job_wq = create_singlethread_workqueue(MTK_MDP_MODULE_NAME);
+-- 
+2.19.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
