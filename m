@@ -2,81 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E63763A1F
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 19:25:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E861763A62
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 20:00:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=mUr/XX2jUKHqIkAWOluPFcAr11iZh//8mcgdo+G4Ru0=; b=hWTHaHdJ3eDJy8
-	ERuxeWmhDlT4AS4Aph49aDcAe9LEKxGAQ/YTmUI+5emfIy92fgz7HOsUEzV20pKcYT5Gd9oXONw7j
-	oiSaXohNO0H1iDGtlN6w429eYA9UG8ZF7luyo+1ifs21DU13nCokTFgmsN6nOLTRgrtmcE0I1lQID
-	kFcfPAcjaApSiVocLw7+1ETboQUBrC6gsnDl4yc6SOL7o9qwmGS5ikFkfx0bk9w9B/CJT8TObKvnX
-	kKOZoZsJ+/Nch5cTdm7Oi5u6VkuBSbRDAbAwYlsdH1zmRyodsjo/ErCGrNfce1cLUTBN356UrfwKi
-	uFCv/W9/J8elDNb1JcQw==;
+	List-Owner; bh=t69DifNmg3JBh6zkoJPD/U/rOi7EXfsHGRFLDrI4fNI=; b=lkY/aCn/BrX0mZ
+	yAgUynhN+zlSjN+umnteByR0oC4rz4aRVLk+mPxK2lqEUDaGFRzwSAFFmXkL7IJrQIy+0/waC7PyM
+	OtorlwEjHmaX0zbcAM4g41S8VCSIjPZiwFuYyfqIRC9XW6ovoqYJaCVj3ZDtPBUoKUbbCg5/XPGE+
+	IMF5BOJ0S0OBmvGViIfegTWvPjtSSfwyk0gXAz9TMoUEk0xsbFZrtlt5Gp8Tt9+3Dv+KOS8M+4VLj
+	wv3PDHKhPK+Hylgj3uSM/pXAnsZ2KXIGOQdnYV/g6PHndFsu/Bzq+gmx6+hWYkA8zfG/SwxK37lZH
+	gSrGy2HpdD7VrUGkujoQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hktrj-0004yx-LZ; Tue, 09 Jul 2019 17:25:19 +0000
-Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
+	id 1hkuQ3-0007tT-BX; Tue, 09 Jul 2019 18:00:47 +0000
+Received: from mail-pl1-x642.google.com ([2607:f8b0:4864:20::642])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hktrX-0004Wo-Cu; Tue, 09 Jul 2019 17:25:08 +0000
-Received: by mail-pg1-x541.google.com with SMTP id u17so9305660pgi.6;
- Tue, 09 Jul 2019 10:25:07 -0700 (PDT)
+ id 1hkuPo-0007fS-PG; Tue, 09 Jul 2019 18:00:34 +0000
+Received: by mail-pl1-x642.google.com with SMTP id az7so3021918plb.5;
+ Tue, 09 Jul 2019 11:00:32 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=+XOGAmvM9zKXLd7snltlz7p/GLyc46ilwqyDiqBZzWE=;
- b=ZLgjzz1KVtsioZuBLGHb69PORJxE1ZDIz2hO09tJG4HqTHrd8gzEE3+lBInpEOP++z
- uWXBvyAa04SdBddiZOory6OjM1PGsck6p98eR/nYwISlHFYOUKaqfdGtcqcfCFeJjpjU
- Ve/4+JwO8UVKInXVoFSx9Eb7QPSuYiDShZJw6Wfn/mGj3FpzEndERMAii85VmO3G5wT9
- ethTL/4vSVyLBYSm0erbJdtDfxdV86tEvJACtX/7R7Z4tsYpv6aRei5tDN2a+MQB8C4y
- XYRC7dy6PPRUNUfxdjbaIt9y8nPfEFq19acGb/lXTVoFbDkpaunwFAEiIfkdQ4QAaus0
- KE0A==
+ bh=gIm1hPdGKhQmW9ErbwFuKhHNbmgcrYySHT3l4GVOH6c=;
+ b=vSYNGu27hbFUbPkKzkmaX8CVuWVjLxzg3Or8kFkrstXu4gbnhVmH3N371zBH5lRaj7
+ HXJupA9bVnLjJXu/9teZuuFJuDzrq7UC8SOENweH+4XSMMzTvdsKapJeUXUsPHTYrT+y
+ F5gWpkYp8FixFjs0ZrK+kTJxpEfwLvq8VTkojG/9z8j+BJhBOjpycgVdd3WGyTICiUQi
+ p3Qj/7BrV8fMlJw/iPRjnFVVBkPyhFbPW9IL6hWjvWk+1Zxcpsbb06mWGxeXVG5dptnu
+ cUjsQ0Q5/c4/bK9xjUUd0htzo6sHX/ab4iOFumViqJr0kDQ4FzcQA77Tr0ghmOH7MxYQ
+ /2Iw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=+XOGAmvM9zKXLd7snltlz7p/GLyc46ilwqyDiqBZzWE=;
- b=bEfBCvhfdUh5wmX1OgvDipNDn1zmZiuIs8cgQIn0A2aTaf4+cBTyJO39cuRnnQZqT5
- mBxgK3c7/zp4SX2bfhKiTDdcPaNH7qUE5xD9m4akgmrPmvzeGNGsMB98VgWLmZAOLQvB
- BYPKY4YZNnJuDIqtpD+LZocgxwUtk0402z3wksxaZD2xvtd9zxScsTo2MkwYkiAlzQDD
- ZdALOO4D9kLs/sk1RgapYQfRLInwf5j3m744TvMVNtZfyjHGz5Sk4w+SFE5nFu7MzeIM
- zskI2frejGzKcOKQLAicIEzKBGeOnXDfs/4MdmHjoaXRFzv5xrzB/99dQNilQ+fdopm8
- oDWw==
-X-Gm-Message-State: APjAAAXV5u37lQueWKvezYHR0cvDta181HSZvDT7iAnQ1sW2aO+2Llzz
- eqo7km4BzRCAnZjkFJZ+03I=
-X-Google-Smtp-Source: APXvYqwLXsIz8247u+t2R6KRU6rsLxmsDMUTOhViknbtHjRrTGKfJhgq0XtVYDXMIgsn6RwRsAnqoA==
-X-Received: by 2002:a17:90a:32ed:: with SMTP id
- l100mr1308051pjb.11.1562693106952; 
- Tue, 09 Jul 2019 10:25:06 -0700 (PDT)
+ bh=gIm1hPdGKhQmW9ErbwFuKhHNbmgcrYySHT3l4GVOH6c=;
+ b=qF/sfbRc5yCJXYJL0hdOL9E/SiJtsZPahMG+sc6PWyAOIwVT2JPufAoRKcMo4AVgQW
+ S87r++2+TCH7WOtyp4VpxsJ7IAdDfE62vo1OhSCfKB072yo2hp5SoWnq6pacUpyozvZL
+ QFhkRQH4pblewilxgna5x6vMo4KEvz/g3U3KZauDmmBXNqTM9fxJ6W2TKrxFyzinXDYw
+ HTTS1T2qHgiLdSsny4NtYKeGeujOIemptZTa/qK1nYHUGyPOUAyNxuLcuEYB+uDsd96A
+ CqNZSn9fJ3v+k5xGi+xdZzECGuLuWxJdhvNGHgeWv2quPhucBSSJD4G0Qah/8K7cwlKN
+ URJA==
+X-Gm-Message-State: APjAAAXiWvwze9rlG3HKQHmUIMzi/mbw1jQ9qs8qwaWCqC1BdH0d7uJR
+ zBlPJMUoD0Id7j1A7UnOn9OSa3zW
+X-Google-Smtp-Source: APXvYqxXpHfvlVzg5Zzf4I3fBMs0VkzZWs3fA4YyAdnXSG0FgM7Vq+GaeeCH2ulBoLKAG2o4wXvdLA==
+X-Received: by 2002:a17:902:bc83:: with SMTP id
+ bb3mr34405078plb.56.1562695232327; 
+ Tue, 09 Jul 2019 11:00:32 -0700 (PDT)
 Received: from localhost.localdomain ([110.227.64.207])
- by smtp.gmail.com with ESMTPSA id 97sm4011201pjz.12.2019.07.09.10.25.03
+ by smtp.gmail.com with ESMTPSA id x8sm19094651pfa.46.2019.07.09.11.00.29
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 09 Jul 2019 10:25:06 -0700 (PDT)
+ Tue, 09 Jul 2019 11:00:31 -0700 (PDT)
 From: Nishka Dasgupta <nishkadg.linux@gmail.com>
-To: minghsiu.tsai@mediatek.com, houlong.wei@mediatek.com,
- andrew-ct.chen@mediatek.com, mchehab@kernel.org, matthias.bgg@gmail.com,
- linux-media@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+To: matthias.bgg@gmail.com, dmitry.torokhov@gmail.com,
+ linux-input@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
  linux-mediatek@lists.infradead.org
-Subject: [PATCH] media: platform: mtk-mdp: mtk_mdp_core: Add of_node_put()
- before goto
-Date: Tue,  9 Jul 2019 22:54:54 +0530
-Message-Id: <20190709172454.13648-1-nishkadg.linux@gmail.com>
+Subject: [PATCH] input: keyboard: mtk-pmic-keys: Add of_node_put() before
+ return
+Date: Tue,  9 Jul 2019 23:30:19 +0530
+Message-Id: <20190709180019.14339-1-nishkadg.linux@gmail.com>
 X-Mailer: git-send-email 2.19.1
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_102507_450245_FABAAE4E 
-X-CRM114-Status: UNSURE (   9.82  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190709_110032_825124_B5C934A5 
+X-CRM114-Status: GOOD (  10.42  )
 X-Spam-Score: 1.1 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (1.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:642 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -107,39 +105,53 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Each iteration of for_each_child_of_node puts the previous node, but in
-the case of a goto from the middle of the loop, there is no put, thus
-causing a memory leak. Hence add an of_node_put before the goto in two
-places.
+Each iteration of for_each_child_of_node puts the previous
+node, but in the case of a return from the middle of the loop, there is
+no put, thus causing a memory leak. Hence add an of_node_put before the
+return in three places.
 Issue found with Coccinelle.
 
 Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
 ---
- drivers/media/platform/mtk-mdp/mtk_mdp_core.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ drivers/input/keyboard/mtk-pmic-keys.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
-index fc9faec85edb..d0a3f06ad83d 100644
---- a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
-+++ b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
-@@ -145,13 +145,16 @@ static int mtk_mdp_probe(struct platform_device *pdev)
- 		comp = devm_kzalloc(dev, sizeof(*comp), GFP_KERNEL);
- 		if (!comp) {
- 			ret = -ENOMEM;
-+			of_node_put(node);
- 			goto err_comp;
- 		}
- 		mdp->comp[comp_id] = comp;
+diff --git a/drivers/input/keyboard/mtk-pmic-keys.c b/drivers/input/keyboard/mtk-pmic-keys.c
+index 746ff06eaf8d..62391d6c7da6 100644
+--- a/drivers/input/keyboard/mtk-pmic-keys.c
++++ b/drivers/input/keyboard/mtk-pmic-keys.c
+@@ -277,8 +277,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
+ 		keys->keys[index].regs = &mtk_pmic_regs->keys_regs[index];
  
- 		ret = mtk_mdp_comp_init(dev, node, comp, comp_id);
--		if (ret)
-+		if (ret) {
-+			of_node_put(node);
- 			goto err_comp;
+ 		keys->keys[index].irq = platform_get_irq(pdev, index);
+-		if (keys->keys[index].irq < 0)
++		if (keys->keys[index].irq < 0) {
++			of_node_put(child);
+ 			return keys->keys[index].irq;
 +		}
- 	}
  
- 	mdp->job_wq = create_singlethread_workqueue(MTK_MDP_MODULE_NAME);
+ 		error = of_property_read_u32(child,
+ 			"linux,keycodes", &keys->keys[index].keycode);
+@@ -286,6 +288,7 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
+ 			dev_err(keys->dev,
+ 				"failed to read key:%d linux,keycode property: %d\n",
+ 				index, error);
++			of_node_put(child);
+ 			return error;
+ 		}
+ 
+@@ -293,8 +296,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
+ 			keys->keys[index].wakeup = true;
+ 
+ 		error = mtk_pmic_key_setup(keys, &keys->keys[index]);
+-		if (error)
++		if (error) {
++			of_node_put(child);
+ 			return error;
++		}
+ 
+ 		index++;
+ 	}
 -- 
 2.19.1
 
