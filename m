@@ -2,94 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 451F263AE7
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 20:26:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E2A3C63C66
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 22:04:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=xMD2O+fwxnC7BYHiKuQ7SKE86xchHwy3XelGurp8osc=; b=rEJ5P1tNtaUC9T
-	xrEk7YgEgoSayCu/vHph0xTtUml5BH++3Wae9ovsOHKtaP/e4huSkNzJCMaek/gV9E41kCO3e6rBX
-	kuCWRfTu4aKlPp4tioyZTgAVK/cPZZWXTsCh8073d1ow0ukl0LWfyVRSGlTzuTxvKZ/e2yNfb/ycH
-	QeyetMsCz8t/HdxbJPAHcP7rRHiw9AEu7jFntluDXgH+IWVVVQAd8roB+rIflr55mCZQbECq8uWEh
-	elCD+JRiJQD+327MKYNDuHv5whXAU3X2BpREckRVqF4zYtAcsiPBwblffEp/mzdJ3VsYlqyb5X6Pd
-	I/bgh7fEFmVrjrPnsC2Q==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=YgGzK4uazRjes0lRZUWjFAWTmxFhFUCo5iTqSq83fQA=; b=eEUUWe4Q6Xb4Av
+	zHPL5imz0hPp3z/3NkvDzSQTyiOC5VwR2olvqgx9+W/OtDgxgaCX5NVNAiunpv2M6g+AEDDkYQKnC
+	w4LVG0QMcD+xqhBDjIl9QPkRPtYHOVt5KTFFTGYFha7i4VdJmMpnIIetxCuYnrRMScnpaJisOF1cN
+	WMGht3CDB6Ptpq+dRygrWhSmcNEI2DZbKhi9ORfJwB0mWfvNX1tEPz1T83K6N1QyxD01cA4kuGn9+
+	L1bawGu+yvrMKzsSgTZ29+dpmESu0UDxf+JPWvpPwsrONR0DS4UCTu4A4NP16nVPRmLyKaxeoAi94
+	vq0Ap+bZeJZOG0CaeD+Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkuoV-0003Mj-5r; Tue, 09 Jul 2019 18:26:03 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1hkwLc-0004Aj-Mk; Tue, 09 Jul 2019 20:04:20 +0000
+Received: from mail-io1-f68.google.com ([209.85.166.68])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkuoJ-0003Df-SE; Tue, 09 Jul 2019 18:25:53 +0000
-Received: by mail-pf1-x443.google.com with SMTP id c73so5037465pfb.13;
- Tue, 09 Jul 2019 11:25:51 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:subject:message-id:mime-version:content-disposition
- :user-agent; bh=F53dI+T31MQO7QsmvZEQqUD+Bsf7Au5f6Ym6GihKyBU=;
- b=dY0SKwLV9k80CMp0A2x+iTnnhV5A92BoDgH5N8dKXZsQJo/haO6q4csQICb21yuckh
- UoHQx1dad/dqKIH5no1Q0PzDgicSMi7Y5RCJHrokKzaFn1A0jUIaCZEyYPEx/1O50Qqj
- EaVisjg4hQjAn7fvBEoThlflmA8uYcC+eluRgi0rKci9zKgK9q9hW49KSneUgU1uZFTX
- qUfI+GJsUpt2ojpAt1tD1dNxRyHN3xUFdvEW9T1s38tIAtBJ2Leab/lwjLq9eZWs75TB
- yMg2KLtL3F4aaIrioY7PRjrarbnUbrJMOcIs4N1wN6MtlaB47ttLlWxH++h7D2shfR+O
- b55g==
+ id 1hkwLX-0004AK-So
+ for linux-mediatek@lists.infradead.org; Tue, 09 Jul 2019 20:04:17 +0000
+Received: by mail-io1-f68.google.com with SMTP id h6so37650283iom.7
+ for <linux-mediatek@lists.infradead.org>; Tue, 09 Jul 2019 13:04:15 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:subject:message-id:mime-version
- :content-disposition:user-agent;
- bh=F53dI+T31MQO7QsmvZEQqUD+Bsf7Au5f6Ym6GihKyBU=;
- b=HID0PngPTC22SHIuI2q2QZ1h9t7aVSp5d8RfKxQl8rLjOFzGHiuALBu7fzhuyRnBBi
- xNHzSbGj+yi10pUaRk4OWJwlARnIB/dinP9PS3Xjf9ZSOmAgV74LmbOvo5IwbONyfYoN
- d5LXt65jJxa0zuDiHkF6ZNAhZfz/kG8OmPw5VwNotvA8pHdInNeqguAu0XcfVYYF90qz
- DnNT0wDtibEe/HxkHKRqf//4WWegmEmlhw67z1Ul65Rs/0JshuLsJo+j08SItXpV90vF
- SExcmUQpYp9qpK6I1hdG8AXgKv/Eg0sfX0CJwBhgbEnm865M7cq08sIYVXBXBQSbmS73
- KF1w==
-X-Gm-Message-State: APjAAAXOv55SQnfksDr/QbabuNVzr4ElEevPLBNYbM1Tw2Q0FDx9q+hv
- k+AixIqR0Z25LQSiCww/iXc=
-X-Google-Smtp-Source: APXvYqxPF2ZglfLFUEIjNK+xpEPSth8BelId/59gN0t4fpsSCcw0Ul22LI6xyEHQdp/Z7aYDfK8lIw==
-X-Received: by 2002:a65:5888:: with SMTP id d8mr31623341pgu.124.1562696750983; 
- Tue, 09 Jul 2019 11:25:50 -0700 (PDT)
-Received: from hari-Inspiron-1545 ([183.83.86.126])
- by smtp.gmail.com with ESMTPSA id x13sm13084575pfn.6.2019.07.09.11.25.46
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 09 Jul 2019 11:25:50 -0700 (PDT)
-Date: Tue, 9 Jul 2019 23:55:43 +0530
-From: Hariprasad Kelam <hariprasad.kelam@gmail.com>
-To: Liam Girdwood <lgirdwood@gmail.com>, Mark Brown <broonie@kernel.org>,
- Jaroslav Kysela <perex@perex.cz>, Takashi Iwai <tiwai@suse.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Tzung-Bi Shih <tzungbi@google.com>, Shunli Wang <shunli.wang@mediatek.com>,
- Hariprasad Kelam <hariprasad.kelam@gmail.com>,
- alsa-devel@alsa-project.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
-Subject: [PATCH] sound: soc: codecs: mt6358: change return type of
- mt6358_codec_init_reg
-Message-ID: <20190709182543.GA6611@hari-Inspiron-1545>
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=+sg0UyNjWzyl9UoPX5uT2MaLOsmSi9S3hgZlVeDp1RI=;
+ b=DA73kHsp7yz+QoLhV/O3GcOzbce4GrtQsDXmh1WL91F4Ir7ixiNpjh1BPri+RuzrQf
+ rs0yiXjSzcAQWFB64arfBvLb2ZOynUMJfUo1KPQs0tU1g7sUG3aOS1/UEmScdwdL2Mff
+ Q1IyFCpg1QvGACUf2i99R3KXKI+Z8iiHlpYWKHdnvXjJ8KAsY+QGX69ky/2SqNnCH5Ig
+ YoryCbbPkq68pky62jpXWCns3dX6z/Y0klz+NF5YxO+tDI0QYOwmSVPbT2QLzulvRuUW
+ er0Q+0cCQG3OU6nlmZXEffKxeWZu2wrSu3iNygvYtql3G3UmTj5YjJbfwu5wytY9PK2/
+ UWgw==
+X-Gm-Message-State: APjAAAWkOP3KrK743qKa43vRZuYnjOxoQXCV5klMLrZa0ujH+jsABpZN
+ 3K5aCiJYFOCR6ACU6MFRgw==
+X-Google-Smtp-Source: APXvYqwNBbbM+5EwluWGAGRnJzyxhFhXIpqQVpCldduopah8wyZu2MowBNaCukNHrB2XA+YLzVEGuQ==
+X-Received: by 2002:a02:5a89:: with SMTP id
+ v131mr30764937jaa.130.1562702654827; 
+ Tue, 09 Jul 2019 13:04:14 -0700 (PDT)
+Received: from localhost ([64.188.179.251])
+ by smtp.gmail.com with ESMTPSA id e188sm18828101ioa.3.2019.07.09.13.04.14
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Tue, 09 Jul 2019 13:04:14 -0700 (PDT)
+Date: Tue, 9 Jul 2019 14:04:13 -0600
+From: Rob Herring <robh@kernel.org>
+To: Claire Chang <tientzu@chromium.org>
+Subject: Re: [PATCH v2] dt-bindings: serial: add documentation for Rx in-band
+ wakeup support
+Message-ID: <20190709200413.GA31193@bogus>
+References: <20190619084110.136713-1-tientzu@chromium.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-User-Agent: Mutt/1.5.24 (2015-08-30)
+In-Reply-To: <20190619084110.136713-1-tientzu@chromium.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_112551_935200_15E141F4 
-X-CRM114-Status: GOOD (  11.37  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190709_130415_927517_FC95A2E1 
+X-CRM114-Status: UNSURE (   8.68  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 2.0 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [209.85.166.68 listed in list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (hariprasad.kelam[at]gmail.com)
+ provider (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.68 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
  1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -102,51 +92,34 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, drinkcat@chromium.org,
+ changqi.hu@mediatek.com, gregkh@linuxfoundation.org, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
+ Claire Chang <tientzu@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-As mt6358_codec_init_reg function always returns 0 , change return type
-from int to void.
+On Wed, 19 Jun 2019 16:41:10 +0800, Claire Chang wrote:
+> To support Rx in-band wakeup, one must create an interrupt specifier with
+> edge sensitivity on Rx pin and an addtional pinctrl to reconfigure Rx pin
+> to normal GPIO in sleep state. Driver will switch to sleep mode pinctrl and
+> enable irq wake before suspend and restore to default settings when
+> resuming.
+> 
+> Signed-off-by: Claire Chang <tientzu@chromium.org>
+> ---
+> changes in v2:
+> just document 'interrupts' instead of 'interrupts-extended'
+> 
+>  .../devicetree/bindings/serial/mtk-uart.txt         | 13 +++++++++++--
+>  1 file changed, 11 insertions(+), 2 deletions(-)
+> 
 
-fixes below issue reported by coccicheck
-sound/soc/codecs/mt6358.c:2260:5-8: Unneeded variable: "ret". Return "0"
-on line 2289
+Applied, thanks.
 
-Signed-off-by: Hariprasad Kelam <hariprasad.kelam@gmail.com>
----
- sound/soc/codecs/mt6358.c | 6 +-----
- 1 file changed, 1 insertion(+), 5 deletions(-)
-
-diff --git a/sound/soc/codecs/mt6358.c b/sound/soc/codecs/mt6358.c
-index 50b3fc5..c17250a 100644
---- a/sound/soc/codecs/mt6358.c
-+++ b/sound/soc/codecs/mt6358.c
-@@ -2255,10 +2255,8 @@ static struct snd_soc_dai_driver mt6358_dai_driver[] = {
- 	},
- };
- 
--static int mt6358_codec_init_reg(struct mt6358_priv *priv)
-+static void mt6358_codec_init_reg(struct mt6358_priv *priv)
- {
--	int ret = 0;
--
- 	/* Disable HeadphoneL/HeadphoneR short circuit protection */
- 	regmap_update_bits(priv->regmap, MT6358_AUDDEC_ANA_CON0,
- 			   RG_AUDHPLSCDISABLE_VAUDP15_MASK_SFT,
-@@ -2285,8 +2283,6 @@ static int mt6358_codec_init_reg(struct mt6358_priv *priv)
- 	/* set gpio */
- 	playback_gpio_reset(priv);
- 	capture_gpio_reset(priv);
--
--	return ret;
- }
- 
- static int mt6358_codec_probe(struct snd_soc_component *cmpnt)
--- 
-2.7.4
-
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
