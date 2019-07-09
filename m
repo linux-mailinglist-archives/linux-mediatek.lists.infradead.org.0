@@ -2,77 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 17FE1637C9
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 16:22:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 02472637D7
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jul 2019 16:23:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9LKJTNp2fejYj/BKXp4985ZF8+plrsURKZV17PtMx9Q=; b=oiLMiyz7mSNXF5
-	3hFmzcvmJ2sAEmqxc4IdtxL/vjX7FYK3BZzcbhyd9Fj5wMXqIB73aeUsqp4/cCdoMAwXQXHSybTal
-	HTArkcFpsOUmZ3jEPjffBL17CKxgqaVwnvFYjs3/J1mCYoPQ6mXG5ClhjydLJcxCV/lt44TbpclU3
-	jN+PLHEZM0A3t2oMyCibuCDOrB6k+Fy5yQZU4i9nZSOMukAaEKDMrTDQStW4lg7g0l31LXRGIx4t6
-	/+WatdI2WQ/1IdlV3j+n6/HYj93aiPUSf68HchA/fXUwX5TOShO5zkvtFCBtt+eYEp3fc46C8fmoY
-	FGKpmSRk/0UYJBgVI/sg==;
+	List-Owner; bh=HTncIh1uusqNe9xTuNZ0YHzYKNgcr1TNEAUjLtFzwqQ=; b=Z0T/XqIkKGsTdc
+	Uy463fODidD6lXFpKU8dW2UZwG3Mcm5QELUlulx6p+9IU7VYTLgp41ZTD/jF1rHsmTalXm0YOjtrM
+	l6JpbTQzh0nWGVCOUm/3JWseqY15OF7NuqTE1BNI27Jcr/bAYPy3yr1Q4iMLFuy5WX12oz3t43kjn
+	Y+OsuPsNrTIh75qdmPKQUUKh4a8Hq0kRtOW6Owx6OMX9ZQphJdPaVUfaGBq1Qobvdgtzstslri0R7
+	C47ECG1o2ymCTCUxRfPR90Mlo62yE+mNsQa1TQBE3tuScDXeScq4zYd7tzmgN7ugZpq0xjX/geHbw
+	YcWUj4lMv7hDksypEqvQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkr0G-0003Di-NU; Tue, 09 Jul 2019 14:21:56 +0000
-Received: from mail-io1-f68.google.com ([209.85.166.68])
+	id 1hkr1V-00044s-Hy; Tue, 09 Jul 2019 14:23:13 +0000
+Received: from mail-io1-f67.google.com ([209.85.166.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkqzq-0002qU-CP; Tue, 09 Jul 2019 14:21:31 +0000
-Received: by mail-io1-f68.google.com with SMTP id j5so24151634ioj.8;
- Tue, 09 Jul 2019 07:21:29 -0700 (PDT)
+ id 1hkr0w-0003aU-Jl; Tue, 09 Jul 2019 14:22:39 +0000
+Received: by mail-io1-f67.google.com with SMTP id q22so21710368iog.4;
+ Tue, 09 Jul 2019 07:22:38 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=f+ADFttYA/V+/O077+27AshpU1PxQ349Mul0CkZ+ZM8=;
- b=IHldoA8w1bGwzMO19rtLUrKoC3Z3wNHUWC0pFBmBlfH3XwapHZF6lUdvHvtQBjkGzZ
- gvezmapb6RU3LmW1nVxXzH2t0k0GXLshkgmIMHd+zxvcd8FEdchBWKgfcf2xBreyN8sL
- jqYXRhayIpN65UEhF08eLRGar0bMjZ3E39LbP4OI5GI1i9NVGIbabGpG41NeYo1FfYsA
- xrtW4UwuNfyP2+3GrRw95M0U0Mxm9h+pOZs1Li1lY8HMMtUhEZ7yLuAmM4j25E5boz+A
- 3t4HwYE5k7OamNmyxivbG3XtFhnsUQoQoOb5c3aO1zAAMoOLS2Bli1maMCieutNfgHHm
- nYhA==
-X-Gm-Message-State: APjAAAXQ+2hnyjOJRf008wzr+F+jkz2OJuneZjqMtxsuELv1VASP7KGU
- QaBG1YXuWhEorWuSGm3bgA==
-X-Google-Smtp-Source: APXvYqzbsid7dTL3N+pWXFiO0kKMIqliSgYTpkA/OGN2Sn45du3OpebITY3EKGINiVg4qHcN9Zad3Q==
-X-Received: by 2002:a6b:fd10:: with SMTP id c16mr24143731ioi.217.1562682089211; 
- Tue, 09 Jul 2019 07:21:29 -0700 (PDT)
+ bh=Nyw3ayYjb6xxz+TXQiu0yImt7hvULSuFd6no466kGDg=;
+ b=RAPIIrHFwlbSd7XJDM3jfpvlroKTAvoILeBAeZl6LKxyb0natdhQJqkDE3uXCmm8+S
+ vD+S5xEIw/Zuc5hDUDR1Xj+Sy+pWC4a0AceYtmMzdYKI/+wRHOKXSpqCsxngLsrW/15z
+ lCXi8BXeh4h6tFIAnv5GYY0fPKfKsWvp8KUhFl5eo497OKyMZSgF4IQt9iKrCE8zHNIS
+ +WVLxOD+wIuv5BDLuoMmcBW3sO04MhkScGTdEFH12YhnZvKOI6NAGaxupn9jZNQv4G1W
+ qUcsYVRERH2rzzwS1vb0BXHy+nUrzcNDu9SAeurM54blScm9RmDFz5Mo87JU137asNmK
+ siIA==
+X-Gm-Message-State: APjAAAVA6LKHGPfuOM1bfIl4cGNF8mqtQDWC/HhUkKR24CJnSaG8DT/C
+ 06fyz1YpTA/TsCPySpXPSRpfWwg=
+X-Google-Smtp-Source: APXvYqwGEmLaEm/oSVALxwoDJQLE4Vi1IOoNxGbBog+3P1/ET15BHO6JQdjBS6+02vhPwx0mCo0XXw==
+X-Received: by 2002:a6b:dc08:: with SMTP id s8mr10053113ioc.209.1562682157639; 
+ Tue, 09 Jul 2019 07:22:37 -0700 (PDT)
 Received: from localhost ([64.188.179.251])
- by smtp.gmail.com with ESMTPSA id v3sm11643441iom.53.2019.07.09.07.21.28
+ by smtp.gmail.com with ESMTPSA id n17sm19238636iog.63.2019.07.09.07.22.36
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Tue, 09 Jul 2019 07:21:28 -0700 (PDT)
-Date: Tue, 9 Jul 2019 08:21:27 -0600
+ Tue, 09 Jul 2019 07:22:36 -0700 (PDT)
+Date: Tue, 9 Jul 2019 08:22:35 -0600
 From: Rob Herring <robh@kernel.org>
 To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH 2/5] dt-bindings: usb: mtu3: support force_vbus mode
-Message-ID: <20190709142127.GA11737@bogus>
+Subject: Re: [PATCH 3/5] dt-bindings: usb: mtk-xhci: add an optional xhci_ck
+ clock
+Message-ID: <20190709142235.GA11951@bogus>
 References: <5e06482a0be15476c7b5825f155accf98275afa8.1560246390.git.chunfeng.yun@mediatek.com>
- <65f025186332b2b44f7b27f58af893217df1adb5.1560246390.git.chunfeng.yun@mediatek.com>
+ <9b6ad8dee142d73b56d653ecb7475c4ed28e5eb8.1560246390.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <65f025186332b2b44f7b27f58af893217df1adb5.1560246390.git.chunfeng.yun@mediatek.com>
+In-Reply-To: <9b6ad8dee142d73b56d653ecb7475c4ed28e5eb8.1560246390.git.chunfeng.yun@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_072130_562218_50371573 
-X-CRM114-Status: UNSURE (   9.72  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190709_072238_659499_DD8A3FB1 
+X-CRM114-Status: GOOD (  14.46  )
 X-Spam-Score: 2.0 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.68 listed in list.dnswl.org]
+ no trust [209.85.166.67 listed in list.dnswl.org]
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.68 listed in wl.mailspike.net]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -91,28 +89,51 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Jumin Li <jumin.li@mediatek.com>, Mathias Nyman <mathias.nyman@intel.com>,
+ Mathias Nyman <mathias.nyman@intel.com>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Chunfeng Yun <chunfeng.yun@mediatek.com>, linux-arm-kernel@lists.infradead.org
+ linux-kernel@vger.kernel.org, Jumin Li <jumin.li@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 12 Jun 2019 13:55:18 +0800, Chunfeng Yun wrote:
-> Add a new property to indicate that the controller doesn't support Vbus
-> detection due to non-exist Vbus PIN, and the driver should set force_vbus
-> state for device mode
+On Wed, Jun 12, 2019 at 01:55:19PM +0800, Chunfeng Yun wrote:
+> Add a new optional clock xhci_ck
 > 
 > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 > ---
->  Documentation/devicetree/bindings/usb/mediatek,mtu3.txt | 2 ++
->  1 file changed, 2 insertions(+)
+>  Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt | 3 ++-
+>  1 file changed, 2 insertions(+), 1 deletion(-)
 > 
+> diff --git a/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt b/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
+> index 266c2d917a28..91c0704b586b 100644
+> --- a/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
+> +++ b/Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
+> @@ -29,6 +29,7 @@ Required properties:
+>  	"sys_ck": controller clock used by normal mode,
+>  	the following ones are optional:
+>  	"ref_ck": reference clock used by low power mode etc,
+> +	"xhci_ck": controller clock,
+>  	"mcu_ck": mcu_bus clock for register access,
+>  	"dma_ck": dma_bus clock for data transfer by DMA
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+A new clock should go at the end to stay backwards compatible.
+
+>  
+> @@ -100,7 +101,7 @@ Required properties:
+>   - clocks : a list of phandle + clock-specifier pairs, one for each
+>  	entry in clock-names
+>   - clock-names : must contain "sys_ck", and the following ones are optional:
+> -	"ref_ck", "mcu_ck" and "dma_ck"
+> +	"ref_ck", "xhci_ck", "mcu_ck" and "dma_ck"
+>  
+>  Optional properties:
+>   - vbus-supply : reference to the VBUS regulator;
+> -- 
+> 2.21.0
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
