@@ -2,68 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B8CC364464
-	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 11:30:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4DBC364498
+	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 11:46:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gNVQuhBJE7kdrnjF0JWnny7ZIHUd6qIs2CDThjEHzD0=; b=bNDji7T0MY/NAe
-	P7TRzQQT+it/522HjrR4SM8vQ5RbrZFETWxcPy0LvAHX3XZ4neA/vHygxQcB716DgF5DwoQsq0i7L
-	nH6WrJdP9Sa+A/pTU0uc7gpnHCBIuPG64ZcztjeYApkVLyNsuP4vXEGEAjsnhY8WhRr7xdYmD6n5s
-	Hs4/CC7HQwznZWdcTR3lURWH3vw51+XHRsVbTibVFgoFQJYyUmMeloWNhFkS6vKnoOPH61WftNAHo
-	Cz9k/xipkPeVzseLkZGgWcZco2VzDGopaEAG4n82DK3CYnqhD186vT11rKkVvMhwSIebPt7fYbmxL
-	QW0EWWcMn1AP0ZEZ1/zA==;
+	List-Owner; bh=N57cIqwF1b4nTtbBcOgQ1Y3PVqW6hjxVay72jrDHdOw=; b=I9fCKHHdM+8SeG
+	LLrVUyrpNWJQpQuEQi6OwLM4UGevtlQcmYpCX9Xv3Fq+WQhbkc5KfExZmpBj0sxDWbzIwaQGAP3Kh
+	IbUhcgmjIrNb3w8bUeVo9oVZ0wWfqaUKM8Dkj1n9ImHsIIa9KIroFQ+TqdIbMQFt7pMTHb394eRLH
+	tUZbviYENj0VeFZaMN8zm5tFpegJnYg9CpAN5irwWu2acxT0weJjMs5WcNVlxDvXTFahnmagxj5p9
+	Asg7gY/SRHLWsHJqx+m/TzwD6ETH36hD3Jp1kl0zCQxrkD5W9KNVTbol9hLAaQeG41t651xXghV+6
+	I1MpxjoFnqlm+r2jp3vg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hl8vr-0003G9-Jp; Wed, 10 Jul 2019 09:30:35 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hl9Ba-0001fI-3i; Wed, 10 Jul 2019 09:46:50 +0000
+Received: from pandora.armlinux.org.uk
+ ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hl8uZ-0001on-Ag; Wed, 10 Jul 2019 09:29:30 +0000
-X-UUID: 2ce05d5c6727429f872eda1f17152f2b-20190710
-X-UUID: 2ce05d5c6727429f872eda1f17152f2b-20190710
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 379415551; Wed, 10 Jul 2019 01:29:00 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 10 Jul 2019 02:28:58 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 10 Jul 2019 17:28:56 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 10 Jul 2019 17:28:56 +0800
-Message-ID: <1562750936.7235.3.camel@mtkswgap22>
-Subject: RE: [PATCH v2 4/4] scsi: ufs: Add history of fatal events
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: Avri Altman <Avri.Altman@wdc.com>
-Date: Wed, 10 Jul 2019 17:28:56 +0800
-In-Reply-To: <SN6PR04MB4925D29D16757A57B25DE369FCF00@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1562736017-29461-1-git-send-email-stanley.chu@mediatek.com>
- <1562736017-29461-5-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB4925D29D16757A57B25DE369FCF00@SN6PR04MB4925.namprd04.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hl9BF-00005L-Md; Wed, 10 Jul 2019 09:46:31 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=j/WSDXca8rXK9NsDZMmI4ZGVD5lmMYmQNn9cX+c1P0c=; b=SuuW/7NN1z53N126yQd0mfU0n
+ ntWsBeL22jFfrqe6UV7yYYjaWAb/mGvo82v/VpffWPeHAXC8qvHdMVqjvTeqQYorTqKjPyjcVkd0Y
+ ehhidoReYAcrBOGYvK5hg+mxgyuD5Njr2SLIjID07Kvs0w8adz+Czb2UlD+NlXUjcnJQShORaFQ6X
+ Xl3J1vYZGJzoNp6wHmHn8OimwqiNyO9IG6bSDFpjxItLMpKnIWdEU05QuowI2tkahamV/uty376Ez
+ mf5JMQomwfeTQc+3SQ9pZj0NiYOkjfuIR3hSKUK/aQunmlQ7Q5KSFX7XpTfFzFgMc9EjJ+4N1wSfg
+ nEpyIjNkA==;
+Received: from shell.armlinux.org.uk
+ ([2001:4d48:ad52:3201:5054:ff:fe00:4ec]:59340)
+ by pandora.armlinux.org.uk with esmtpsa
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <linux@armlinux.org.uk>)
+ id 1hl98c-0005tt-RN; Wed, 10 Jul 2019 10:43:47 +0100
+Received: from linux by shell.armlinux.org.uk with local (Exim 4.89)
+ (envelope-from <linux@shell.armlinux.org.uk>)
+ id 1hl98T-0003nw-5z; Wed, 10 Jul 2019 10:43:37 +0100
+Date: Wed, 10 Jul 2019 10:43:37 +0100
+From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
+To: Johannes Berg <johannes@sipsolutions.net>
+Subject: Re: [PATCH 00/12] treewide: Fix GENMASK misuses
+Message-ID: <20190710094337.wf2lftxzfjq2etro@shell.armlinux.org.uk>
+References: <cover.1562734889.git.joe@perches.com>
+ <5fa1fa6998332642c49e2d5209193ffe2713f333.camel@sipsolutions.net>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5119A67BB2928397B5A654C3EA45125DE60CF336EA6D500ED74F4F4ACE9CE82C2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <5fa1fa6998332642c49e2d5209193ffe2713f333.camel@sipsolutions.net>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190710_022921_637422_15F1DF06 
-X-CRM114-Status: GOOD (  13.75  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190710_024629_747276_10950746 
+X-CRM114-Status: GOOD (  13.22  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,105 +86,72 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "sthumma@codeaurora.org" <sthumma@codeaurora.org>,
- "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: devel@driverdev.osuosl.org, linux-mmc@vger.kernel.org,
+ alsa-devel@alsa-project.org, Benjamin Fair <benjaminfair@google.com>,
+ linux-aspeed@lists.ozlabs.org, Andrew Jeffery <andrew@aj.id.au>,
+ Patrick Venture <venture@google.com>, openbmc@lists.ozlabs.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-iio@vger.kernel.org, Nancy Yuen <yuenn@google.com>,
+ linux-mediatek@lists.infradead.org, dri-devel@lists.freedesktop.org,
+ netdev@vger.kernel.org, Joe Perches <joe@perches.com>,
+ linux-amlogic@lists.infradead.org, Andrew Morton <akpm@linux-foundation.org>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Avri,
-
-On Wed, 2019-07-10 at 08:04 +0000, Avri Altman wrote:
-> Hi Stanley,
-> 
-> > +					       (u32)ret);
-> >  			goto out;
-> > +		}
-> >  	} while (ret && retries--);
+On Wed, Jul 10, 2019 at 11:17:31AM +0200, Johannes Berg wrote:
+> On Tue, 2019-07-09 at 22:04 -0700, Joe Perches wrote:
+> > These GENMASK uses are inverted argument order and the
+> > actual masks produced are incorrect.  Fix them.
 > > 
-> >  	if (ret)
-> Here also link startup fails...
-
-Thanks! Will track this place as well in next version.
-
-> >   * ufshcd_update_uic_error - check and set fatal UIC error flags.
-> >   * @hba: per-adapter instance
-> > @@ -6043,6 +6056,7 @@ static int ufshcd_abort(struct scsi_cmnd *cmd)
-> >  	 */
-> >  	scsi_print_command(hba->lrb[tag].cmd);
-> >  	if (!hba->req_abort_count) {
-> > +		ufshcd_update_reg_hist(&hba->ufs_stats.task_abort_err,
-> > 0);
-> Here you are collecting abort events statistics, not abort errors.
-> If this is what you meant, then it's not task_abort_err, but task_abort.
-> And if indeed you are tracking task aborts, maybe add lun resets as well?
-
-Good suggestion! I would add history of lun reset and host reset as well
-in next version.
-
-> > diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-> > index c6ec5c749ceb..f9f109da7f18 100644
-> > --- a/drivers/scsi/ufs/ufshcd.h
-> > +++ b/drivers/scsi/ufs/ufshcd.h
-> > @@ -438,6 +438,10 @@ struct ufs_err_reg_hist {
-> >   * @dme_err: tracks dme errors
-> >   * @fatal_err: tracks fatal errors
-> >   * @auto_hibern8_err: tracks auto-hibernate errors
-> > + * @tsk_abort_err: tracks task abort events
-> > + * @linkup_err: tracks link-startup fail events
-> > + * @suspend_err: tracks suspend fail events
-> > + * @resume_err: tracks resume fail events
-> >   */
-> >  struct ufs_stats {
-> >  	u32 hibern8_exit_cnt;
-> > @@ -453,6 +457,12 @@ struct ufs_stats {
-> >  	/* fatal errors */
-> >  	struct ufs_err_reg_hist fatal_err;
-> >  	struct ufs_err_reg_hist auto_hibern8_err;
-> > +
-> > +	/* fatal events */
-> Maybe move here fatal_err as well?
-
-OK! these could be classified as fatal errors as well.
-Will fix them in next version.
-
-> 
-> > +	struct ufs_err_reg_hist task_abort_err;
-> > +	struct ufs_err_reg_hist link_startup_err;
-> > +	struct ufs_err_reg_hist suspend_err;
-> > +	struct ufs_err_reg_hist resume_err;
-> >  };
+> > Add checkpatch tests to help avoid more misuses too.
 > > 
-> >  /**
-> > --
-> > 2.18.0
+> > Joe Perches (12):
+> >   checkpatch: Add GENMASK tests
 > 
-> 
-> Thanks,
-> Avri
-> 
+> IMHO this doesn't make a lot of sense as a checkpatch test - just throw
+> in a BUILD_BUG_ON()?
 
-Thanks,
-Stanley
+My personal take on this is that GENMASK() is really not useful, it's
+just pure obfuscation and leads to exactly these kinds of mistakes.
 
+Yes, I fully understand the argument that you can just specify the
+start and end bits, and it _in theory_ makes the code more readable.
 
+However, the problem is when writing code.  GENMASK(a, b).  Is a the
+starting bit or ending bit?  Is b the number of bits?  It's confusing
+and causes mistakes resulting in incorrect code.  A BUILD_BUG_ON()
+can catch some of the cases, but not all of them.
 
+For example:
+
+	GENMASK(6, 2)
+
+would satisify the requirement that a > b, so a BUILD_BUG_ON() will
+not trigger, but was the author meaning 0x3c or 0xc0?
+
+Personally, I've decided I am _not_ going to use GENMASK() in my code
+because I struggle to get the macro arguments correct - I'm _much_
+happier, and it is way more reliable for me to write the mask in hex
+notation.
+
+I think this is where use of a ternary operator would come in use.  The
+normal way of writing a number of bits tends to be "a:b", so if GENMASK
+took something like GENMASK(6:2), then I'd have less issue with it,
+because it's argument is then in a familiar notation.
+
+Yes, I'm sure that someone will point out that the GENMASK arguments
+are just in the same order, but that doesn't prevent _me_ frequently
+getting it wrong - and that's the point.  The macro seems to me to
+cause more problems than it solves.
+
+-- 
+RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
+FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps up
+According to speedtest.net: 11.9Mbps down 500kbps up
 
 _______________________________________________
 Linux-mediatek mailing list
