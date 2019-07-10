@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4704A64730
-	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 15:40:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 583D66472E
+	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 15:40:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=a0WjfIz5wmjQot98yhMYQ0gYAmwfd6JQ0BiREDqZahA=; b=YksfurZV5vC669
-	WzviIXT8yPCJeNMT/i5cLR/pTP3EXVLz/9bec8sttuslSSZUAKk++17ylD7h21emlf4TM1BNLBLNP
-	D91DwCzyhWgA20kO2GThtd1eecVaqfrB4BE7Hy3HTl+d9DygXHBHvW245OA0D4NqoHxySi6Wve606
-	rZeH8sQ3n7eAxZ5aESFKyx13dG3sWfJqi2770rS9WsJC3iGTB2/JFgoucHXd4zuj+eYnJe4fHqfhF
-	Rpv2aUvgP51+oy3YKjUE5h37xmybBn78tI470gmWeq4dSZTCoOTxlgpzrQP4nlMInj2og7djMWZ3I
-	8EWjGl8xGIf0xA1btkZw==;
+	List-Owner; bh=uzP7xYxT6ULKGQemniJoVAukODaY0JAlPu2Y5yKdCA4=; b=VWg4/OhCo4VoIH
+	flKY4sjYpFtfrkhFXyRdz35pCU4q1O6z+pyUo0QiY/Rhd2RohYdunZIGp1hGTgkxCA/prmz3cIerG
+	NjokS+Gi+iaxACkCm1e6EPNbdfpBmli8kNAUIdVpWCQqKnZEzb+YOsMK/XFGPTQMSsN6gnqP+tbyk
+	RUfWG+ah5ol5U0pQWd6Og4G6/dSZSaUXdUZOJlA09eL9ZG9gbI6cplIHRI+SG23nQwkVmR/ASViUi
+	2zYENYesmy/ZUm2EtHl4EZdNGCIkDM/3R4GqaXi2r5I1cLSHsus8aOXqwIJaHZyV/MHOkngGkO2/x
+	B4wKo7df+Zk74OyMGH+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlCq1-0000ZQ-St; Wed, 10 Jul 2019 13:40:49 +0000
+	id 1hlCpg-0000IO-KU; Wed, 10 Jul 2019 13:40:28 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlCns-0006ZO-CC; Wed, 10 Jul 2019 13:38:37 +0000
-X-UUID: e2402844234f4532ab877e0a1f719453-20190710
-X-UUID: e2402844234f4532ab877e0a1f719453-20190710
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1hlCnr-0006bA-Hs; Wed, 10 Jul 2019 13:38:37 +0000
+X-UUID: ad1ebeaad12c4e69a5d0004b4f9a0ff9-20190710
+X-UUID: ad1ebeaad12c4e69a5d0004b4f9a0ff9-20190710
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1374975181; Wed, 10 Jul 2019 05:38:33 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 10 Jul 2019 06:38:32 -0700
+ with ESMTP id 1074925064; Wed, 10 Jul 2019 05:38:32 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 10 Jul 2019 06:38:30 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 10 Jul 2019 21:38:23 +0800
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 10 Jul 2019 21:38:24 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 10 Jul 2019 21:38:23 +0800
+ Frontend Transport; Wed, 10 Jul 2019 21:38:24 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH v3 2/4] scsi: ufs: Add fatal and auto-hibern8 error history
-Date: Wed, 10 Jul 2019 21:38:19 +0800
-Message-ID: <1562765901-18328-3-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v3 3/4] scsi: ufs: Do not reset error history during host reset
+Date: Wed, 10 Jul 2019 21:38:20 +0800
+Message-ID: <1562765901-18328-4-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1562765901-18328-1-git-send-email-stanley.chu@mediatek.com>
 References: <1562765901-18328-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190710_063836_442048_9D03BFB9 
-X-CRM114-Status: UNSURE (   9.88  )
+X-CRM114-CacheID: sfid-20190710_063835_594154_027D543F 
+X-CRM114-Status: UNSURE (   8.61  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -83,98 +83,53 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Provide more information of fatal errros and auto-hibern8 errors
-to improve debugging by extending extend existed UFS error history
-framework.
+Currently UFS error history will be reset and lost during host reset
+flow by ufschd_probe_hba().
+
+We shall not reset it and then error history can be kept as completed
+as possible to improve debugging.
+
+In addition, fix a minor display error in ufshcd_print_err_hist().
 
 Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
 Reviewed-by: Avri Altman <avri.altman@wdc.com>
 ---
- drivers/scsi/ufs/ufshcd.c | 11 ++++++++++-
- drivers/scsi/ufs/ufshcd.h | 10 +++++++++-
- 2 files changed, 19 insertions(+), 2 deletions(-)
+ drivers/scsi/ufs/ufshcd.c | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
 
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index eb062aba0d21..b8b874311509 100644
+index b8b874311509..a46c3d2b2ea3 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
-@@ -429,6 +429,9 @@ static void ufshcd_print_host_regs(struct ufs_hba *hba)
- 	ufshcd_print_err_hist(hba, &hba->ufs_stats.nl_err, "nl_err");
- 	ufshcd_print_err_hist(hba, &hba->ufs_stats.tl_err, "tl_err");
- 	ufshcd_print_err_hist(hba, &hba->ufs_stats.dme_err, "dme_err");
-+	ufshcd_print_err_hist(hba, &hba->ufs_stats.fatal_err, "fatal_err");
-+	ufshcd_print_err_hist(hba, &hba->ufs_stats.auto_hibern8_err,
-+			      "auto_hibern8_err");
+@@ -402,7 +402,7 @@ static void ufshcd_print_err_hist(struct ufs_hba *hba,
  
- 	ufshcd_print_clk_freqs(hba);
- 
-@@ -5440,8 +5443,10 @@ static void ufshcd_check_errors(struct ufs_hba *hba)
- {
- 	bool queue_eh_work = false;
- 
--	if (hba->errors & INT_FATAL_ERRORS)
-+	if (hba->errors & INT_FATAL_ERRORS) {
-+		ufshcd_update_reg_hist(&hba->ufs_stats.fatal_err, hba->errors);
- 		queue_eh_work = true;
-+	}
- 
- 	if (hba->errors & UIC_ERROR) {
- 		hba->uic_error = 0;
-@@ -5456,6 +5461,8 @@ static void ufshcd_check_errors(struct ufs_hba *hba)
- 			__func__, (hba->errors & UIC_HIBERNATE_ENTER) ?
- 			"Enter" : "Exit",
- 			hba->errors, ufshcd_get_upmcrs(hba));
-+		ufshcd_update_reg_hist(&hba->ufs_stats.auto_hibern8_err,
-+				       hba->errors);
- 		queue_eh_work = true;
+ 		if (err_hist->reg[p] == 0)
+ 			continue;
+-		dev_err(hba->dev, "%s[%d] = 0x%x at %lld us\n", err_name, i,
++		dev_err(hba->dev, "%s[%d] = 0x%x at %lld us\n", err_name, p,
+ 			err_hist->reg[p], ktime_to_us(err_hist->tstamp[p]));
+ 		found = true;
  	}
+@@ -6690,19 +6690,8 @@ static void ufshcd_tune_unipro_params(struct ufs_hba *hba)
  
-@@ -6693,6 +6700,8 @@ static void ufshcd_clear_dbg_ufs_stats(struct ufs_hba *hba)
- 	memset(&hba->ufs_stats.nl_err, 0, err_reg_hist_size);
- 	memset(&hba->ufs_stats.tl_err, 0, err_reg_hist_size);
- 	memset(&hba->ufs_stats.dme_err, 0, err_reg_hist_size);
-+	memset(&hba->ufs_stats.fatal_err, 0, err_reg_hist_size);
-+	memset(&hba->ufs_stats.auto_hibern8_err, 0, err_reg_hist_size);
- 
+ static void ufshcd_clear_dbg_ufs_stats(struct ufs_hba *hba)
+ {
+-	int err_reg_hist_size = sizeof(struct ufs_err_reg_hist);
+-
+ 	hba->ufs_stats.hibern8_exit_cnt = 0;
+ 	hba->ufs_stats.last_hibern8_exit_tstamp = ktime_set(0, 0);
+-
+-	memset(&hba->ufs_stats.pa_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.dl_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.nl_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.tl_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.dme_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.fatal_err, 0, err_reg_hist_size);
+-	memset(&hba->ufs_stats.auto_hibern8_err, 0, err_reg_hist_size);
+-
  	hba->req_abort_count = 0;
  }
-diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index dcc61f857c38..c6ec5c749ceb 100644
---- a/drivers/scsi/ufs/ufshcd.h
-+++ b/drivers/scsi/ufs/ufshcd.h
-@@ -414,7 +414,7 @@ struct ufs_init_prefetch {
  
- #define UFS_ERR_REG_HIST_LENGTH 8
- /**
-- * struct ufs_err_reg_hist - keeps history of uic errors
-+ * struct ufs_err_reg_hist - keeps history of errors
-  * @pos: index to indicate cyclic buffer position
-  * @reg: cyclic buffer for registers value
-  * @tstamp: cyclic buffer for time stamp
-@@ -436,15 +436,23 @@ struct ufs_err_reg_hist {
-  * @nl_err: tracks nl-uic errors
-  * @tl_err: tracks tl-uic errors
-  * @dme_err: tracks dme errors
-+ * @fatal_err: tracks fatal errors
-+ * @auto_hibern8_err: tracks auto-hibernate errors
-  */
- struct ufs_stats {
- 	u32 hibern8_exit_cnt;
- 	ktime_t last_hibern8_exit_tstamp;
-+
-+	/* uic specific errors */
- 	struct ufs_err_reg_hist pa_err;
- 	struct ufs_err_reg_hist dl_err;
- 	struct ufs_err_reg_hist nl_err;
- 	struct ufs_err_reg_hist tl_err;
- 	struct ufs_err_reg_hist dme_err;
-+
-+	/* fatal errors */
-+	struct ufs_err_reg_hist fatal_err;
-+	struct ufs_err_reg_hist auto_hibern8_err;
- };
- 
- /**
 -- 
 2.18.0
 
