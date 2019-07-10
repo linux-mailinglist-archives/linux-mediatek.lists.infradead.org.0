@@ -2,56 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 90B24640E7
-	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 08:07:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 48D086416B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 10 Jul 2019 08:39:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=5ikPItupWHT0/GuUjZkBtgmnAIGt5/mqNplmIYwWtLg=; b=D5JjnnyffqCwQX
-	6NQ+5XThz83/f0BRhDAw3XuhIYVliaaFY8jWpBZ92I2khgLf8MkJR2hcCL08ApRaisCx/GvxsSiWi
-	MZGSwpH3ZcwzqI91N55WjUctJj/9JZeDLDlQmWX2xgNDerVyxl21/oBUg3M3+UmBo4JYxbuWRSin3
-	FaGaYo7R5pbyUtBjWfoJUKbGKLbF2rtvOqzpFa1RAsvzuZ1KKqpBEnUSZs0znRsen9ctY4TKz/YDA
-	XSPtSVOHGFMuWp0pqf5L9z4HZ3h2DaQjEFPAKUBp9lCjMuq7aKvf2420fTjj3U2pWVikPxvx0VqB0
-	d2B8Nva0AzixgxmC1xNA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ATHV1XIBIcF60RQD75zJl0GZ61cgVROuJlxwBhdtKAs=; b=EHFa+cBD9TSzb4
+	jBZFvCW5Ra1YnozcMptCEUu+a83TAJQQK6tgISqCxggHz/Ldx3rSchyvdcZzLne1nPDXi42B9k33E
+	XUri84GxbBSr+PDOsgKvsQYQiXFDEEQk1O39TQ9dsU8L6ulFvkjrDJnBe2IldQc7XW4TXomcouxFk
+	EprrJtbtYWKmVHbD5jdM9yLkw/0VIWTS16tK3FxKqTMA8m+q4tTQXnywT+/jDq+I/Ey+pD3Pj5xPZ
+	3odfwMJuGFWygqV28NewcT4MRWGhej4MuEoxhxjfy1+dW5gjxwqrD4kxLtGccS+puut6Vc8OWFbfR
+	RmZJ0cB4PA7HYJXEerHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hl5ko-0005VD-Am; Wed, 10 Jul 2019 06:06:58 +0000
-Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
+	id 1hl6GU-0002MW-Oe; Wed, 10 Jul 2019 06:39:42 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hl5kW-0005BI-8g; Wed, 10 Jul 2019 06:06:43 +0000
-Received: from DGGEMS402-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id C9567DB7EBE5D5FCFC01;
- Wed, 10 Jul 2019 14:06:23 +0800 (CST)
-Received: from localhost.localdomain.localdomain (10.175.113.25) by
- DGGEMS402-HUB.china.huawei.com (10.3.19.202) with Microsoft SMTP Server id
- 14.3.439.0; Wed, 10 Jul 2019 14:06:13 +0800
-From: Wei Yongjun <weiyongjun1@huawei.com>
-To: Marcel Holtmann <marcel@holtmann.org>, Johan Hedberg
- <johan.hedberg@gmail.com>, Matthias Brugger <matthias.bgg@gmail.com>, "Sean
- Wang" <sean.wang@mediatek.com>
-Subject: [PATCH -next] Bluetooth: btusb: Fix error return code in
- btusb_mtk_setup_firmware()
-Date: Wed, 10 Jul 2019 06:12:22 +0000
-Message-ID: <20190710061222.141247-1-weiyongjun1@huawei.com>
-X-Mailer: git-send-email 2.20.1
+ id 1hl6GP-0002LZ-Mq; Wed, 10 Jul 2019 06:39:39 +0000
+X-UUID: 37a01a0f7db9468f8ec6cc98fa1fa5f8-20190709
+X-UUID: 37a01a0f7db9468f8ec6cc98fa1fa5f8-20190709
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 129992997; Tue, 09 Jul 2019 22:39:19 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 9 Jul 2019 23:39:17 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 10 Jul 2019 14:39:16 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 10 Jul 2019 14:39:16 +0800
+Message-ID: <1562740756.1879.1.camel@mtksdaap41>
+Subject: Re: [PATCH v10 03/12] dt-binding: gce: add binding for gce client
+ reg property
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: Rob Herring <robh@kernel.org>
+Date: Wed, 10 Jul 2019 14:39:16 +0800
+In-Reply-To: <20190701074842.15401-4-bibby.hsieh@mediatek.com>
+References: <20190701074842.15401-1-bibby.hsieh@mediatek.com>
+ <20190701074842.15401-4-bibby.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-Originating-IP: [10.175.113.25]
-X-CFilter-Loop: Reflected
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190709_230641_368336_808D4EC8 
-X-CRM114-Status: GOOD (  10.24  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190709_233937_754493_AB37CDE9 
+X-CRM114-Status: GOOD (  16.43  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.190 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,41 +74,89 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-bluetooth@vger.kernel.org, kernel-janitors@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Wei Yongjun <weiyongjun1@huawei.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
+ Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
+ linux-kernel@vger.kernel.org, CK HU <ck.hu@mediatek.com>,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Sascha Hauer <kernel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Fix to return error code -EINVAL from the error handling
-case instead of 0, as done elsewhere in this function.
+Hi, Rob,
 
-Fixes: a1c49c434e15 ("Bluetooth: btusb: Add protocol support for MediaTek MT7668U USB devices")
-Signed-off-by: Wei Yongjun <weiyongjun1@huawei.com>
----
- drivers/bluetooth/btusb.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
-
-diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 3876fee6ad13..5cf0734eb31b 100644
---- a/drivers/bluetooth/btusb.c
-+++ b/drivers/bluetooth/btusb.c
-@@ -2762,8 +2762,10 @@ static int btusb_mtk_setup_firmware(struct hci_dev *hdev, const char *fwname)
- 	fw_size = fw->size;
- 
- 	/* The size of patch header is 30 bytes, should be skip */
--	if (fw_size < 30)
-+	if (fw_size < 30) {
-+		err = -EINVAL;
- 		goto err_release_fw;
-+	}
- 
- 	fw_size -= 30;
- 	fw_ptr += 30;
+Sorry to bother you, could you please review this patch when you are
+available? Thanks.
 
 
+On Mon, 2019-07-01 at 15:48 +0800, Bibby Hsieh wrote:
+> cmdq driver provide a function that get the relationship
+> of sub system number from device node for client.
+> add specification for #subsys-cells, mediatek,gce-client-reg.
+> 
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> ---
+>  .../devicetree/bindings/mailbox/mtk-gce.txt    | 18 ++++++++++++++----
+>  1 file changed, 14 insertions(+), 4 deletions(-)
+> 
+> diff --git a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> index 1f7f8f2a3f49..d48282d6b02d 100644
+> --- a/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> +++ b/Documentation/devicetree/bindings/mailbox/mtk-gce.txt
+> @@ -21,12 +21,21 @@ Required properties:
+>  	priority: Priority of GCE thread.
+>  	atomic_exec: GCE processing continuous packets of commands in atomic
+>  		way.
+> +- #subsys-cells: Should be 3.
+> +	<&phandle subsys_number start_offset size>
+> +	phandle: Label name of a gce node.
+> +	subsys_number: specify the sub-system id which is corresponding
+> +		       to the register address.
+> +	start_offset: the start offset of register address that GCE can access.
+> +	size: the total size of register address that GCE can access.
+>  
+>  Required properties for a client device:
+>  - mboxes: Client use mailbox to communicate with GCE, it should have this
+>    property and list of phandle, mailbox specifiers.
+> -- mediatek,gce-subsys: u32, specify the sub-system id which is corresponding
+> -  to the register address.
+> +Optional properties for a client device:
+> +- mediatek,gce-client-reg: Specify the sub-system id which is corresponding
+> +  to the register address, it should have this property and list of phandle,
+> +  sub-system specifiers.
+>  
+>  Some vaules of properties are defined in 'dt-bindings/gce/mt8173-gce.h'
+>  or 'dt-binding/gce/mt8183-gce.h'. Such as sub-system ids, thread priority, event ids.
+> @@ -40,6 +49,7 @@ Example:
+>  		clocks = <&infracfg CLK_INFRA_GCE>;
+>  		clock-names = "gce";
+>  		#mbox-cells = <3>;
+> +		#subsys-cells = <3>;
+>  	};
+>  
+>  Example for a client device:
+> @@ -48,9 +58,9 @@ Example for a client device:
+>  		compatible = "mediatek,mt8173-mmsys";
+>  		mboxes = <&gce 0 CMDQ_THR_PRIO_LOWEST 1>,
+>  			 <&gce 1 CMDQ_THR_PRIO_LOWEST 1>;
+> -		mediatek,gce-subsys = <SUBSYS_1400XXXX>;
+>  		mutex-event-eof = <CMDQ_EVENT_MUTEX0_STREAM_EOF
+>  				CMDQ_EVENT_MUTEX1_STREAM_EOF>;
+> -
+> +		mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x3000 0x1000>,
+> +					  <&gce SUBSYS_1401XXXX 0x2000 0x100>;
+>  		...
+>  	};
+
+-- 
+Bibby
 
 
 _______________________________________________
