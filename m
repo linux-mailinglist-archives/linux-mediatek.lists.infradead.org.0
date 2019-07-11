@@ -2,53 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 62A8365446
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 12:03:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 90B326544F
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 12:06:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6LidqJ+GPMqQkyjDEGYkB1j0g5yt23va/lAoDoFSEfg=; b=uZD3uB3SyAv8uS
-	HNPmcqhIjxOCgFQ3i2ZS4WMGDSp+wuqdS6urWo2NiLgtNesFoAJeX1TLukddnnaQ9R7JZrEh8K9O7
-	QXqfRKwl7LoAwn03OUldRHdiTpZJ+5GuaMrp5RimzC71blHSPzLyl38WrTdlNYvaLIOTAf1nt3wdf
-	ihSY4tJR2y5gg2Y+2wp0/iYDblKsoihB31O2SScMQBGDgb/yl/YXwP9L6udkMCR0CtLzXks1L0LTC
-	L3XF0kA9QhE6nazi2XrN66cJcJ5mRT7JjG27YzPKlFd1QVojPHgb6n3BghrwT4OthHuhfZMErp7ia
-	FJjW8ucKkE9gCQdS8xmw==;
+	List-Owner; bh=K2ZxCGyUPGjIwmv5YkjZHbgt94SZucEv5cZse0Kjg1k=; b=Xz+i6Kn78TbnK3
+	yQSUOuECNLfx3tbZmZbcL4ZNHPjH9png1thJX/aR9SPYBxhF8iJQsUcWXPw0AbYmc3LC/1Mws5HNC
+	AjZLS+wLxHjzszm61+A4q/aPfU04mbOIGPQaoRBa/MBxdjz+aUNfIxLA6YWfY8exf6XLbRDj8FOSh
+	K934SvIhNJ2WDCJIWA1Sbb1qvgJ6h19KVYrj9TYgNfLZqobt5AMyKXJxBYo7stMqTWD65AsPw3ZnL
+	ZsnZMw0UkS/C4n0WehxgnZZ1MfG80EJSOd290p2NEqfReqxgrBU1sgM6cmF4Z+2XWTaUzVxx4lPm9
+	84XvluW6AIQt99U9NK7g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlVvT-00026Q-5G; Thu, 11 Jul 2019 10:03:43 +0000
-Received: from verein.lst.de ([213.95.11.211])
+	id 1hlVyI-0003mI-8Z; Thu, 11 Jul 2019 10:06:38 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlVvO-0001ya-LC
- for linux-mediatek@lists.infradead.org; Thu, 11 Jul 2019 10:03:40 +0000
-Received: by verein.lst.de (Postfix, from userid 2407)
- id 3471C68B05; Thu, 11 Jul 2019 12:03:33 +0200 (CEST)
-Date: Thu, 11 Jul 2019 12:03:32 +0200
-From: Christoph Hellwig <hch@lst.de>
-To: Robin Murphy <robin.murphy@arm.com>
-Subject: Re: [PATCH] kernel/dma: export dma_alloc_from_contiguous to modules
-Message-ID: <20190711100332.GA5853@lst.de>
-References: <20190711053343.28873-1-miles.chen@mediatek.com>
- <7d14b94f-454f-d512-bc8f-589f71bc07ea@arm.com>
+ id 1hlVyD-0003lv-UK; Thu, 11 Jul 2019 10:06:35 +0000
+X-UUID: e50d150dedd24ea89fb7f9fb98f64476-20190711
+X-UUID: e50d150dedd24ea89fb7f9fb98f64476-20190711
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1877396440; Thu, 11 Jul 2019 02:06:22 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 11 Jul 2019 03:06:20 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 11 Jul 2019 18:06:19 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 11 Jul 2019 18:06:19 +0800
+Message-ID: <1562839579.5846.12.camel@mtksdccf07>
+Subject: Re: [PATCH v3] kasan: add memory corruption identification for
+ software tag-based mode
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Date: Thu, 11 Jul 2019 18:06:19 +0800
+In-Reply-To: <d9fd1d5b-9516-b9b9-0670-a1885e79f278@virtuozzo.com>
+References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
+ <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
+ <1560447999.15814.15.camel@mtksdccf07>
+ <1560479520.15814.34.camel@mtksdccf07>
+ <1560744017.15814.49.camel@mtksdccf07>
+ <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
+ <1560774735.15814.54.camel@mtksdccf07>
+ <1561974995.18866.1.camel@mtksdccf07>
+ <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
+ <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
+ <1562640832.9077.32.camel@mtksdccf07>
+ <d9fd1d5b-9516-b9b9-0670-a1885e79f278@virtuozzo.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <7d14b94f-454f-d512-bc8f-589f71bc07ea@arm.com>
-User-Agent: Mutt/1.5.17 (2007-11-01)
+X-TM-SNTS-SMTP: FCA1495ABCFBF051C3A138F429F412BB004A5166313DECBCF8F5873EED71160F2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_030338_840548_1FD1C8DC 
-X-CRM114-Status: UNSURE (   8.95  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190711_030633_981420_2518FF10 
+X-CRM114-Status: GOOD (  21.25  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [213.95.11.211 listed in list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -60,35 +85,101 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- iommu@lists.linux-foundation.org, miles.chen@mediatek.com,
- linux-mediatek@lists.infradead.org, Christoph Hellwig <hch@lst.de>,
- Marek Szyprowski <m.szyprowski@samsung.com>
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Jason
+ A . Donenfeld" <Jason@zx2c4.com>, Vasily
+ Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>,
+ Linux-MM <linux-mm@kvack.org>, Andrey Konovalov <andreyknvl@google.com>,
+ LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
+ Pekka Enberg <penberg@kernel.org>, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>, Miles Chen <miles.chen@mediatek.com>,
+ Alexander Potapenko <glider@google.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jul 11, 2019 at 09:50:58AM +0100, Robin Murphy wrote:
-> On 11/07/2019 06:33, miles.chen@mediatek.com wrote:
->> From: Miles Chen <miles.chen@mediatek.com>
->>
->> This change exports dma_alloc_from_contiguous and
->> dma_release_from_contiguous to modules.
->>
->> Currently, we can add a reserve a memory node in dts files, make
->> it a CMA memory by setting compatible = "shared-dma-pool",
->> and setup the dev->cma_area by using of_reserved_mem_device_init_by_idx().
->>
->> Export dma_alloc_from_contiguous and dma_release_from_contiguous, so we
->> can allocate/free from/to dev->cma_area in kernel modules.
->
-> As far as I understand, this was never intended for drivers to call 
-> directly. If a device has its own private CMA area, then regular 
-> dma_alloc_attrs() should allocate from that automatically; if that's not 
-> happening already, then there's a bug somewhere.
+On Wed, 2019-07-10 at 21:24 +0300, Andrey Ryabinin wrote:
+> 
+> On 7/9/19 5:53 AM, Walter Wu wrote:
+> > On Mon, 2019-07-08 at 19:33 +0300, Andrey Ryabinin wrote:
+> >>
+> >> On 7/5/19 4:34 PM, Dmitry Vyukov wrote:
+> >>> On Mon, Jul 1, 2019 at 11:56 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> 
+> >>>
+> >>> Sorry for delays. I am overwhelm by some urgent work. I afraid to
+> >>> promise any dates because the next week I am on a conference, then
+> >>> again a backlog and an intern starting...
+> >>>
+> >>> Andrey, do you still have concerns re this patch? This change allows
+> >>> to print the free stack.
+> >>
+> >> I 'm not sure that quarantine is a best way to do that. Quarantine is made to delay freeing, but we don't that here.
+> >> If we want to remember more free stacks wouldn't be easier simply to remember more stacks in object itself?
+> >> Same for previously used tags for better use-after-free identification.
+> >>
+> > 
+> > Hi Andrey,
+> > 
+> > We ever tried to use object itself to determine use-after-free
+> > identification, but tag-based KASAN immediately released the pointer
+> > after call kfree(), the original object will be used by another
+> > pointer, if we use object itself to determine use-after-free issue, then
+> > it has many false negative cases. so we create a lite quarantine(ring
+> > buffers) to record recent free stacks in order to avoid those false
+> > negative situations.
+> 
+> I'm telling that *more* than one free stack and also tags per object can be stored.
+> If object reused we would still have information about n-last usages of the object.
+> It seems like much easier and more efficient solution than patch you proposing.
+> 
+To make the object reused, we must ensure that no other pointers uses it
+after kfree() release the pointer.
+Scenario:
+1). The object reused information is valid when no another pointer uses
+it.
+2). The object reused information is invalid when another pointer uses
+it.
+Do you mean that the object reused is scenario 1) ?
+If yes, maybe we can change the calling quarantine_put() location. It
+will be fully use that quarantine, but at scenario 2) it looks like to
+need this patch.
+If no, maybe i miss your meaning, would you tell me how to use invalid
+object information? or?
 
-Agreed.
+> As for other concern about this particular patch
+>  - It wasn't tested. There is deadlock (sleep in atomic) on the report path which would have been noticed it tested.
+we already used it on qemu and ran kasan UT. It look like ok.
+
+>    Also GFP_NOWAIT allocation which fails very noisy and very often, especially in memory constraint enviromnent where tag-based KASAN supposed to be used.
+> 
+Maybe, we can change it into GFP_KERNEL.
+
+>  - Inefficient usage of memory:
+> 	48 bytes (sizeof (qlist_object) + sizeof(kasan_alloc_meta)) per kfree() call seems like a lot. It could be less.
+> 
+We will think it.
+
+> 	The same 'struct kasan_track' stored twice in two different places (in object and in quarantine).
+> 	Basically, at least some part of the quarantine always duplicates information that we already know about
+> 	recently freed object. 
+> 
+> 	Since now we call kmalloc() from kfree() path, every unique kfree() stacktrace now generates additional unique stacktrace that
+> 	takes space in stackdepot.
+> 
+Duplicate information is solved after change the calling
+quarantine_put() location.
+
+
+
+
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
