@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3A1266553E
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 13:28:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C7FA065544
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 13:28:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,41 +11,39 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=lIcLrhYZnP7hBVDVwbk6xKt2LPTXzCTCJhMtqPW6hQM=; b=pjw3oGViIDPNCjUOzKGJv/7ikq
-	7xbKTfh1bzQ5O3MZwxZW0AQgwfu2tjQOCe+01qqU83tl1H5BnHX9yHCwnEdEcceJMuF4/2GAVy1iP
-	cuPDlDfms9KXeQXeADyZ6g9I/eSfdwJ66EycEemGjJi/SOYr69tae0/a2Ll6jCJRB5J7zOf3m4zX3
-	7lLqcdWw6ukHvxV9rHUs9RbbcKk0TrfoqFe5cVcHsJlaedolflc/Za9wWnIXV1cB3W+Y+sKG2WEZZ
-	zBrhJCPdbM5nzwhufNxsxxxfww5ODjgDm+/X4Z+VDjlw8o6WCxM4/09xuOhwv9/en/MuNjXqa65+o
-	SUQdE0TA==;
+	bh=JUkF73fT2tfLDuNWpqTwb+2BksAbOi7DxFH/cYAq3yk=; b=WYfkYQAgAtILJAXdffaH3iDDmN
+	atD4Ekf8zCwN5S/sGdY0aD/c0d9+8we3CWn6BaBYDAGOrV3BPxSkYXyiZrNUD3fF9BeNEwofkjb8w
+	djZajk8ZYvo2O/ALIKDMwhqgpFKi1lzjs/CSiW1CK2hIM09lbaiPt0Qil9DzzHooyTXvkeLnqt8UY
+	PYLo1wZp3rUQJ7yacpQP9XJrstxAucDjxrXvab1KMWzhEd5zL1L6jjgUs/DnHp7ttl78IYMLN6/Ji
+	HCIM5cDepvcTPeyXpaeG43PpyWtcSZfnGq6eWljoiZoWx//n8hS8V91er6C8JOxovCJuytYOtD5bB
+	PX3IPRjA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlXEz-0005bG-Ry; Thu, 11 Jul 2019 11:27:57 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hlXFC-0005gu-H4; Thu, 11 Jul 2019 11:28:10 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlXEv-0005aS-PT; Thu, 11 Jul 2019 11:27:55 +0000
+ id 1hlXF8-0005gA-Rd; Thu, 11 Jul 2019 11:28:08 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 4138F28B554
+ (Authenticated sender: andrzej.p) with ESMTPSA id 8792328B58A
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v4 03/23] drm: rockchip: Provide ddc symlink in rk3066_hdmi
+Subject: [PATCH v4 04/23] drm: rockchip: Provide ddc symlink in inno_hdmi
  sysfs directory
-Date: Thu, 11 Jul 2019 13:26:30 +0200
-Message-Id: <1137bb1a84fb38cd5313bbf7076647c268c8cc39.1562843413.git.andrzej.p@collabora.com>
+Date: Thu, 11 Jul 2019 13:26:31 +0200
+Message-Id: <5ce8b3cf60575b515368d9184e7fd7d4306eddc5.1562843413.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1562843413.git.andrzej.p@collabora.com>
 References: <cover.1562843413.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1562843413.git.andrzej.p@collabora.com>
 References: <cover.1562843413.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_042754_087601_7EB45B7B 
-X-CRM114-Status: GOOD (  14.20  )
+X-CRM114-CacheID: sfid-20190711_042807_153501_80874A72 
+X-CRM114-Status: GOOD (  13.81  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -67,8 +65,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>,
  Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -87,7 +85,6 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
- Alexios Zavras <alexios.zavras@intel.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Jyri Sarha <jsarha@ti.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
@@ -113,65 +110,65 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/rockchip/rk3066_hdmi.c | 17 ++++++++---------
+ drivers/gpu/drm/rockchip/inno_hdmi.c | 17 ++++++++---------
  1 file changed, 8 insertions(+), 9 deletions(-)
 
-diff --git a/drivers/gpu/drm/rockchip/rk3066_hdmi.c b/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-index 85fc5f01f761..1f3e630ecdab 100644
---- a/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-+++ b/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-@@ -49,7 +49,6 @@ struct rk3066_hdmi {
- 	struct drm_encoder encoder;
+diff --git a/drivers/gpu/drm/rockchip/inno_hdmi.c b/drivers/gpu/drm/rockchip/inno_hdmi.c
+index f8ca98d294d0..d64b119c2649 100644
+--- a/drivers/gpu/drm/rockchip/inno_hdmi.c
++++ b/drivers/gpu/drm/rockchip/inno_hdmi.c
+@@ -59,7 +59,6 @@ struct inno_hdmi {
+ 	struct drm_encoder	encoder;
  
- 	struct rk3066_hdmi_i2c *i2c;
+ 	struct inno_hdmi_i2c *i2c;
 -	struct i2c_adapter *ddc;
  
- 	unsigned int tmdsclk;
+ 	unsigned int tmds_rate;
  
-@@ -470,10 +469,10 @@ static int rk3066_hdmi_connector_get_modes(struct drm_connector *connector)
+@@ -552,10 +551,10 @@ static int inno_hdmi_connector_get_modes(struct drm_connector *connector)
  	struct edid *edid;
  	int ret = 0;
  
 -	if (!hdmi->ddc)
-+	if (!connector->ddc)
++	if (!hdmi->connector.ddc)
  		return 0;
  
 -	edid = drm_get_edid(connector, hdmi->ddc);
-+	edid = drm_get_edid(connector, connector->ddc);
++	edid = drm_get_edid(connector, hdmi->connector.ddc);
  	if (edid) {
  		hdmi->hdmi_data.sink_is_hdmi = drm_detect_hdmi_monitor(edid);
- 		drm_connector_update_edid_property(connector, edid);
-@@ -789,10 +788,10 @@ static int rk3066_hdmi_bind(struct device *dev, struct device *master,
- 	/* internal hclk = hdmi_hclk / 25 */
- 	hdmi_writeb(hdmi, HDMI_INTERNAL_CLK_DIVIDER, 25);
+ 		hdmi->hdmi_data.sink_has_audio = drm_detect_monitor_audio(edid);
+@@ -850,10 +849,10 @@ static int inno_hdmi_bind(struct device *dev, struct device *master,
  
--	hdmi->ddc = rk3066_hdmi_i2c_adapter(hdmi);
+ 	inno_hdmi_reset(hdmi);
+ 
+-	hdmi->ddc = inno_hdmi_i2c_adapter(hdmi);
 -	if (IS_ERR(hdmi->ddc)) {
 -		ret = PTR_ERR(hdmi->ddc);
 -		hdmi->ddc = NULL;
-+	hdmi->connector.ddc = rk3066_hdmi_i2c_adapter(hdmi);
++	hdmi->connector.ddc = inno_hdmi_i2c_adapter(hdmi);
 +	if (IS_ERR(hdmi->connector.ddc)) {
 +		ret = PTR_ERR(hdmi->connector.ddc);
 +		hdmi->connector.ddc = NULL;
- 		goto err_disable_hclk;
+ 		goto err_disable_clk;
  	}
  
-@@ -824,7 +823,7 @@ static int rk3066_hdmi_bind(struct device *dev, struct device *master,
+@@ -886,7 +885,7 @@ static int inno_hdmi_bind(struct device *dev, struct device *master,
  	hdmi->connector.funcs->destroy(&hdmi->connector);
  	hdmi->encoder.funcs->destroy(&hdmi->encoder);
- err_disable_i2c:
+ err_put_adapter:
 -	i2c_put_adapter(hdmi->ddc);
 +	i2c_put_adapter(hdmi->connector.ddc);
- err_disable_hclk:
- 	clk_disable_unprepare(hdmi->hclk);
- 
-@@ -839,7 +838,7 @@ static void rk3066_hdmi_unbind(struct device *dev, struct device *master,
+ err_disable_clk:
+ 	clk_disable_unprepare(hdmi->pclk);
+ 	return ret;
+@@ -900,7 +899,7 @@ static void inno_hdmi_unbind(struct device *dev, struct device *master,
  	hdmi->connector.funcs->destroy(&hdmi->connector);
  	hdmi->encoder.funcs->destroy(&hdmi->encoder);
  
 -	i2c_put_adapter(hdmi->ddc);
 +	i2c_put_adapter(hdmi->connector.ddc);
- 	clk_disable_unprepare(hdmi->hclk);
+ 	clk_disable_unprepare(hdmi->pclk);
  }
  
 -- 
