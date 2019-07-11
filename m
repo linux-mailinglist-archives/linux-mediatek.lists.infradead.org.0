@@ -2,67 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE68665633
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 13:54:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C968E656E9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 14:31:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=owthPWMgR2asGIQURjIiwLxF5U9Nk29geQrJIwRy/vc=; b=St6mMeYth6EvwR
-	bG7KlRekZi++yavtZej3KyKJznqUfkjqPofQYkQXUxqXzH9lJPQD/lk28C7eOwgKreQSKqodTCpK4
-	ZbKDGaZpslyFruKYnA/rTDNfEmBScddB8hoHcQtrHC9r78SpMWfkzx2CTLVyVYoqmt1H6sVbE2IXy
-	dOpB19iYbaICQOjm+GVzQzQuQf3uSlE8wlP/Ha1Y20z0IvsTddVp5RUcKbRCjVmMsb7zujSz0z2pR
-	U41qjfRoDjmPP+ZkpjCADN63yreg7LlYNuMtf7EYO3tghOpT9OY6VMStd3MiYnHryC5Z33EYM6WBo
-	e/2KylRlk2lev6l7kP+A==;
+	List-Owner; bh=QI01ddryM/ewfFm4b8wkOzOQWvRXaDnCITKAE1O1fUc=; b=STeOCUHFEbf7vW
+	7tH7AExJACI/r/t/wWsMbJp7m/MEO79ctXqG/iHz/jWKIPmcY3q/LIi3cEJcuahLiZdGWr+C8OF3U
+	l75oRXZVM6nAjphi/BxcNgjAPmyd5vXxgrawaObtkwbtLOM4s1HJVt7Zu/VAU/GQR9Wka2EVxsN0P
+	NjGb/kZAvs9LzNXxggWI2iFx5K5Ad+YpWYcuUhnYtQV+cNcqUWE51NNJt7OX82zbVnSlA7KJS2l2i
+	dDVK8laktBtHkR2X1DlTkS7T1GTGRnmxbeH+Miez1DEx5QCJewBGaVFfl/Ppw4otlCuhDhtHM0LnV
+	G8V6OH4VoznWG/1veLQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlXeP-00078v-Eh; Thu, 11 Jul 2019 11:54:13 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hlYEm-0008Vd-Bs; Thu, 11 Jul 2019 12:31:48 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlXeM-00078S-0E; Thu, 11 Jul 2019 11:54:11 +0000
-X-UUID: 332befba0ed34ab1b919ca20e4ef41c4-20190711
-X-UUID: 332befba0ed34ab1b919ca20e4ef41c4-20190711
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <yong.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 225495655; Thu, 11 Jul 2019 03:54:02 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 11 Jul 2019 04:54:00 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 11 Jul 2019 19:53:57 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 11 Jul 2019 19:53:56 +0800
-Message-ID: <1562846036.31342.10.camel@mhfsdcap03>
+ id 1hlYEa-0008Ky-Pb; Thu, 11 Jul 2019 12:31:38 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id F26FC20872;
+ Thu, 11 Jul 2019 12:31:32 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1562848296;
+ bh=taKYFaL4w66TAwI7MPXQRwN1YVw6ACtaT/WEv3sNJm4=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=I8t08CD65eN+1vdURSKrXiClbKBzmqV8BxOEB+RYrcsXeEC7JGnv38XHWFNfuEhZe
+ Fg3LNEGKB0Iy9Pmb7WmH+bzDCXLlNMZfPl3pfgJFwSxLmeRBm8cerDcIEVHkJX0JpZ
+ TevDVShZM2RAlid5HYXefWAbG56bGpv9Y1KjKVJo=
+Date: Thu, 11 Jul 2019 13:31:29 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
 Subject: Re: [PATCH v8 07/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
  Mode
-From: Yong Wu <yong.wu@mediatek.com>
-To: Will Deacon <will@kernel.org>
-Date: Thu, 11 Jul 2019 19:53:56 +0800
-In-Reply-To: <20190710143649.w5dplhzdpi3bxp7e@willie-the-truck>
+Message-ID: <20190711123129.da4rg35b54u4svfw@willie-the-truck>
 References: <1561774167-24141-1-git-send-email-yong.wu@mediatek.com>
  <1561774167-24141-8-git-send-email-yong.wu@mediatek.com>
  <20190710143649.w5dplhzdpi3bxp7e@willie-the-truck>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ <1562846036.31342.10.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 0C86952889D210679121FAA38297439300932F8917CA01830F3FF75C994BE39B2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1562846036.31342.10.camel@mhfsdcap03>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_045410_051478_77D525CD 
-X-CRM114-Status: GOOD (  30.73  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190711_053136_866215_7B0BD4B4 
+X-CRM114-Status: GOOD (  27.93  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,189 +83,106 @@ Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
  Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
  srv_heupstream@mediatek.com, chao.hao@mediatek.com,
  Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
- linux-kernel@vger.kernel.org, Evan
- Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- yingjoe.chen@mediatek.com, anan.sun@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
+ anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-07-10 at 15:36 +0100, Will Deacon wrote:
-> On Sat, Jun 29, 2019 at 10:09:13AM +0800, Yong Wu wrote:
-> > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
+On Thu, Jul 11, 2019 at 07:53:56PM +0800, Yong Wu wrote:
+> On Wed, 2019-07-10 at 15:36 +0100, Will Deacon wrote:
+> > On Sat, Jun 29, 2019 at 10:09:13AM +0800, Yong Wu wrote:
+> > > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
+> > > 
+> > > In the mt2712 and mt8173, it's called "4GB mode", the physical address
+> > > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
+> > > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
+> > > bit32 is always enabled. thus, in the M4U, we always enable the bit9
+> > > for all PTEs which means to enable bit32 of physical address.
+> > > 
+> > > but in mt8183, M4U support the dram from 0x4000_0000 to 0x3_ffff_ffff
+> > > which isn't remaped. We extend the PTEs: the bit9 represent bit32 of
+> > > PA and the bit4 represent bit33 of PA. Meanwhile the iova still is
+> > > 32bits.
 > > 
-> > In the mt2712 and mt8173, it's called "4GB mode", the physical address
-> > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
-> > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
-> > bit32 is always enabled. thus, in the M4U, we always enable the bit9
-> > for all PTEs which means to enable bit32 of physical address.
-> > 
-> > but in mt8183, M4U support the dram from 0x4000_0000 to 0x3_ffff_ffff
-> > which isn't remaped. We extend the PTEs: the bit9 represent bit32 of
-> > PA and the bit4 represent bit33 of PA. Meanwhile the iova still is
-> > 32bits.
+> > What happens if bit4 is set in the pte for mt2712 or mt8173? Perhaps the
 > 
-> What happens if bit4 is set in the pte for mt2712 or mt8173? Perhaps the
-
-bit4 is ignored in mt2712 and mt8173(No effect).
-
-> io-pgtable backend should be allowing oas > 32 when
-> IO_PGTABLE_QUIRK_ARM_MTK_4GB is set, and then enforcing that itself.
-
-About oas, It looks the oas doesn't work in current the v7s. 
-
-How about I add a new simple preparing patch like this(copy from
-io-pgtable-arm.c)?
-
-==========================================
---- a/drivers/iommu/io-pgtable-arm-v7s.c
-+++ b/drivers/iommu/io-pgtable-arm-v7s.c
-@@ -495,7 +495,8 @@ static int arm_v7s_map(struct io_pgtable_ops *ops,
-unsigned long iova,
-        if (!(prot & (IOMMU_READ | IOMMU_WRITE)))
-                return 0;
-
--       if (WARN_ON(upper_32_bits(iova) || upper_32_bits(paddr)))
-+       if (WARN_ON(iova >= (1ULL << data->iop.cfg.ias) ||
-+                   paddr >= (1ULL << data->iop.cfg.oas)))
-                return -ERANGE;
-
-===============================================
-
-Then, change the oas in MTK 4GB mode, like this:
-
-================================================
---- a/drivers/iommu/io-pgtable-arm-v7s.c
-+++ b/drivers/iommu/io-pgtable-arm-v7s.c
-@@ -721,7 +721,9 @@ static struct io_pgtable
-*arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
- {
-        struct arm_v7s_io_pgtable *data;
-
--       if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas >
-ARM_V7S_ADDR_BITS)
-+       if (cfg->ias > ARM_V7S_ADDR_BITS ||
-+           (cfg->oas > ARM_V7S_ADDR_BITS &&
-+            !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB)))
-                return NULL;
-
-        if (cfg->quirks & ~(IO_PGTABLE_QUIRK_ARM_NS |
-
---- a/drivers/iommu/mtk_iommu.c
-+++ b/drivers/iommu/mtk_iommu.c
-@@ -274,7 +274,7 @@ static int mtk_iommu_domain_finalise(struct
-mtk_iommu_domain *dom)
-                        IO_PGTABLE_QUIRK_TLBI_ON_MAP,
-                .pgsize_bitmap = mtk_iommu_ops.pgsize_bitmap,
-                .ias = 32,
--               .oas = 32,
-+               .oas = 34,
-                .tlb = &mtk_iommu_gather_ops,
-                .iommu_dev = data->dev,
-        };
-================================================
-
-
+> bit4 is ignored in mt2712 and mt8173(No effect).
 > 
-> > In order to unify code, in the "4GB mode", we add the bit32 for the
-> > physical address manually in our driver.
-> > 
-> > Correspondingly, Adding bit32 and bit33 for the PA in the iova_to_phys
-> > has to been moved into v7s.
-> > 
-> > Regarding whether the pagetable address could be over 4GB, the mt8183
-> > support it while the previous mt8173 don't. thus keep it as is.
-> > 
-> > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> > Reviewed-by: Robin Murphy <robin.murphy@arm.com>
-> > Reviewed-by: Evan Green <evgreen@chromium.org>
-> > ---
-> > Comparing with the previous one:
-> > 1). Add a new patch "iommu/mediatek: Fix iova_to_phys PA start for 4GB
-> > mode" before this one. Thus rebase it.
-> > A little difference: in the 4gb mode, we add bit32 for PA. and the PA got
-> > from iova_to_phys always have bit32 here, thus we should adjust it to locate
-> > the valid pa.
-> > 2). Add this code suggested from Evan.
-> >  if (!data->plat_data->has_4gb_mode)
-> > 	       data->enable_4GB = false;
-> > ---
-> >  drivers/iommu/io-pgtable-arm-v7s.c | 31 ++++++++++++++++++++++++-------
-> >  drivers/iommu/mtk_iommu.c          | 29 ++++++++++++++++++-----------
-> >  drivers/iommu/mtk_iommu.h          |  1 +
-> >  3 files changed, 43 insertions(+), 18 deletions(-)
-> > 
-> > diff --git a/drivers/iommu/io-pgtable-arm-v7s.c b/drivers/iommu/io-pgtable-arm-v7s.c
-> > index 94c38db..4077822 100644
-> > --- a/drivers/iommu/io-pgtable-arm-v7s.c
-> > +++ b/drivers/iommu/io-pgtable-arm-v7s.c
-> > @@ -123,7 +123,9 @@
-> >  #define ARM_V7S_TEX_MASK		0x7
-> >  #define ARM_V7S_ATTR_TEX(val)		(((val) & ARM_V7S_TEX_MASK) << ARM_V7S_TEX_SHIFT)
-> >  
-> > -#define ARM_V7S_ATTR_MTK_4GB		BIT(9) /* MTK extend it for 4GB mode */
-> > +/* MediaTek extend the two bits below for over 4GB mode */
-> > +#define ARM_V7S_ATTR_MTK_PA_BIT32	BIT(9)
-> > +#define ARM_V7S_ATTR_MTK_PA_BIT33	BIT(4)
-> >  
-> >  /* *well, except for TEX on level 2 large pages, of course :( */
-> >  #define ARM_V7S_CONT_PAGE_TEX_SHIFT	6
-> > @@ -190,13 +192,22 @@ static dma_addr_t __arm_v7s_dma_addr(void *pages)
-> >  static arm_v7s_iopte paddr_to_iopte(phys_addr_t paddr, int lvl,
-> >  				    struct io_pgtable_cfg *cfg)
-> >  {
-> > -	return paddr & ARM_V7S_LVL_MASK(lvl);
-> > +	arm_v7s_iopte pte = paddr & ARM_V7S_LVL_MASK(lvl);
-> > +
-> > +	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB) {
-> > +		if (paddr & BIT_ULL(32))
-> > +			pte |= ARM_V7S_ATTR_MTK_PA_BIT32;
-> > +		if (paddr & BIT_ULL(33))
-> > +			pte |= ARM_V7S_ATTR_MTK_PA_BIT33;
-> > +	}
-> > +	return pte;
-> >  }
-> >  
-> >  static phys_addr_t iopte_to_paddr(arm_v7s_iopte pte, int lvl,
-> >  				  struct io_pgtable_cfg *cfg)
-> >  {
-> >  	arm_v7s_iopte mask;
-> > +	phys_addr_t paddr;
-> >  
-> >  	if (ARM_V7S_PTE_IS_TABLE(pte, lvl))
-> >  		mask = ARM_V7S_TABLE_MASK;
-> > @@ -205,7 +216,14 @@ static phys_addr_t iopte_to_paddr(arm_v7s_iopte pte, int lvl,
-> >  	else
-> >  		mask = ARM_V7S_LVL_MASK(lvl);
-> >  
-> > -	return pte & mask;
-> > +	paddr = pte & mask;
-> > +	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB) {
-> > +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
-> > +			paddr |= BIT_ULL(32);
-> > +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
-> > +			paddr |= BIT_ULL(33);
-> > +	}
-> > +	return paddr;
+> > io-pgtable backend should be allowing oas > 32 when
+> > IO_PGTABLE_QUIRK_ARM_MTK_4GB is set, and then enforcing that itself.
 > 
-> I think this relies on CONFIG_PHYS_ADDR_T_64BIT, which isn't always set on
-> 32-bit ARM.
-
-This was discussed at [1]. Robin commented that this is not needed and
-build won't complain about this.
-
-[1]
-http://lists.infradead.org/pipermail/linux-mediatek/2018-November/015688.html
-
+> About oas, It looks the oas doesn't work in current the v7s. 
 > 
-> Will
+> How about I add a new simple preparing patch like this(copy from
+> io-pgtable-arm.c)?
 
+This looks like the right sort of idea. Basically, I was thinking that you
+can use the oas in conjunction with the quirk to specify whether or not
+your two magic bits should be set. You could also then cap the oas using
+the size of phys_addr_t to deal with my other comment.
 
+Finally, I was hoping you could drop the |= BIT_ULL(32) and the &=
+~BIT_ULL(32) bits of the mtk driver if the pgtable code now accepts higher
+addresses. Did that not work out?
+> 
+> ==========================================
+> --- a/drivers/iommu/io-pgtable-arm-v7s.c
+> +++ b/drivers/iommu/io-pgtable-arm-v7s.c
+> @@ -495,7 +495,8 @@ static int arm_v7s_map(struct io_pgtable_ops *ops,
+> unsigned long iova,
+>         if (!(prot & (IOMMU_READ | IOMMU_WRITE)))
+>                 return 0;
+> 
+> -       if (WARN_ON(upper_32_bits(iova) || upper_32_bits(paddr)))
+> +       if (WARN_ON(iova >= (1ULL << data->iop.cfg.ias) ||
+> +                   paddr >= (1ULL << data->iop.cfg.oas)))
+>                 return -ERANGE;
+> 
+> ===============================================
+> 
+> Then, change the oas in MTK 4GB mode, like this:
+> 
+> ================================================
+> --- a/drivers/iommu/io-pgtable-arm-v7s.c
+> +++ b/drivers/iommu/io-pgtable-arm-v7s.c
+> @@ -721,7 +721,9 @@ static struct io_pgtable
+> *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+>  {
+>         struct arm_v7s_io_pgtable *data;
+> 
+> -       if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas >
+> ARM_V7S_ADDR_BITS)
+> +       if (cfg->ias > ARM_V7S_ADDR_BITS ||
+> +           (cfg->oas > ARM_V7S_ADDR_BITS &&
+> +            !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB)))
+
+This should probably still be capped at 34 bits.
+
+> > > +	paddr = pte & mask;
+> > > +	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB) {
+> > > +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
+> > > +			paddr |= BIT_ULL(32);
+> > > +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
+> > > +			paddr |= BIT_ULL(33);
+> > > +	}
+> > > +	return paddr;
+> > 
+> > I think this relies on CONFIG_PHYS_ADDR_T_64BIT, which isn't always set on
+> > 32-bit ARM.
+> 
+> This was discussed at [1]. Robin commented that this is not needed and
+> build won't complain about this.
+
+It's not so much the build I was worried about, but more that we'd silently
+be doing the wrong thing and I think we can fix that as I mentioned above.
+
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
