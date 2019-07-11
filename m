@@ -2,137 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DB268651C1
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 08:15:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3D940651E2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 08:37:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FU1JPHGnSM2tSCNe+KGhkb2RKYJ8Dpr8Nd7hMJOlU74=; b=Muko5WzQQEBQP0
-	a7rf1SCNg877SBhLTTj2AEWM678Lgq2GQqQQy1dWrykmOy4cvbvXNdDorpvjQ8NRzk8QzVe5h+uLV
-	eQNX+K2PyhOhFIEUwskXpYmPEQo5th411Z/0YCo16nOaABF2SNhyXJk0fdAbYRFmXoBit6ySEGTW5
-	jRzbRPnVb0qkIoZw3/7Ryax3jsKz2wi4L58vPklMweLwkvz471xfpa3cooh0NlRAQmnr75+SO2bgr
-	k76fcOYjXbVn01bOYycR+sqh0ZfefdM5RnS0XoPnMpc6G6qud6NublWyXQKhpZw1pSZwfDgHvGZam
-	D2V8F6GxOMFHmlqJ6Cow==;
+	List-Owner; bh=1Ou6fv+uyiVBPAPxTk7yZkUg0fRmKe3MpP2l5G2LHjY=; b=dBdZglbfZ8qqBA
+	bd/0emMxUhIDmuXb6tQFDSCfTm3Z6DtCKzLAWsHRdPTtAB1kzczcTbKGDTZoykgMOi+2CAqdAnMuz
+	9JabcyQXlxZqsTGQqxl5OPTec+Fy501LcWQOhj4NDKvQO5Ff1yeLCAi4uPHEmfHk+pfD6XxOgQppy
+	tKARDwy0dAS4diQGqbFL9uBzMTXBEisLUN65Q2tm7HcPYby85FJJc2DJVW6TUUvxy4wGVideOSa1r
+	Fay4l8Tc4lTaqTPqj03gTHROixtqsFfopnJh1lFq5SMcu2YW1aKjzvQD5S8GvVeAfMOHP/vgXtZ2l
+	EBS420XHxlyVh+rEr8jA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlSMm-0001GH-AI; Thu, 11 Jul 2019 06:15:40 +0000
-Received: from esa2.hgst.iphmx.com ([68.232.143.124])
+	id 1hlSi4-0007ND-Hv; Thu, 11 Jul 2019 06:37:40 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlSMh-0001FS-10; Thu, 11 Jul 2019 06:15:37 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
- t=1562825746; x=1594361746;
- h=from:to:cc:subject:date:message-id:references:
- in-reply-to:content-transfer-encoding:mime-version;
- bh=1YrGGyNlRB9hb3RBUHcYaJSdfrvxqWNsTUeEdON888A=;
- b=fpP3EQKwTVk+Aiwje7rOH8uzeaT42+J+o3HwJySxlFWjf+3q/92ahCif
- qB60WJivOB908tXOrHSbAKHDpO50HLMXb6GSro7bTgHgUm4QxSGvXQR52
- TFHNyum/7dJY3eJGKUfeRHZIq09nc5SuKZA5aGMBa0SFyH74C+PUIt5Ef
- o9UNhDCeokkyBwjaS6sFgiP4uUmILCsxO0wMD5MMp/SC5i9C9f4+ZWkKk
- EQsCZI+Ud4izF8AyMJtiuyVQ8ktLVYXZF0zxUYwG2Vt8udeZT2geuIpUO
- Ril7MGNlJf6ltIC6Ofo9IIBrbq6rWzdy4c5QSPc1TgO6ryQIgr5qDGbmA g==;
-IronPort-SDR: o234wHZ08xdc7I7+V3mMEvsfOuTf9YxvzkzMQqfCEA/PaAlPyps2drwditFAiReTC/LF2FfOB0
- eimMOFB1aTtJdsy1mKa9I/OErI1/e/s7Vjl/oHt118ygNUh/b+0dEz5eqRPLXDU+vWaBG8VBvW
- ipSvQUG1ST36VlC1ZdntSYJoQcBFE78bWbaHe6gSxz/js3ORaz3Y/oLWLRNE2SKnT/C1ZMFFhS
- ndFdTdzv33L5aWupYjyZAvqA+19MQMile7mda0IDDa5cdeNkJXd8htwiCicqoled5gbmIxwZ2/
- srE=
-X-IronPort-AV: E=Sophos;i="5.63,476,1557158400"; d="scan'208";a="212667730"
-Received: from mail-sn1nam04lp2050.outbound.protection.outlook.com (HELO
- NAM04-SN1-obe.outbound.protection.outlook.com) ([104.47.44.50])
- by ob1.hgst.iphmx.com with ESMTP; 11 Jul 2019 14:15:26 +0800
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=gX/A5UCiyCH9HbKlu2jcYbNg/3d2J5L+6SSUSukvsJUypjSIoPLweu7Wn859jnsAanJkos38I3SToRFsJRpyLPI/YHwZ5pY6vL0lljsCisfIMfrjSn2adVZpc1Kt/HXCGq7uWRGEW8Pl5BPeyY7GfXAQpvLbduDwxIemLm6YT4J3GO62OYEqztvHqGFni9s9jzUTaBZClMyzW6ZPMyOvy0tcMmvCLpVxXUJBiQ3966A2nH0JxfJq1vQfh2VpPeOw1iHcJR1OBMnDzhwcMbN7RnxF8AMb6cMrqcTU2m+8M7XBgRZa855QS97GuniFvMO9zUWRrFFKM3Ht5DmMNxFsuw==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=/spphAd0K8MM7F1/9AFl9NDmoF4CClkrJ4E2ZcsKmLQ=;
- b=dTyU83eFhrlDrZfdETGU8eodvso/AXw/yBMls161hEwCv+GdfzHO3Qi+PZ5XnWIuH3MNsJqQDkdk5On+iSO7pXLuhCRDOShWM56uppQZKjj5UwSEfQvBVPZtaLQmPgoKtPzr9NJZsvEq2ltzRQDJvDlb/g5FyR9/mrBRt/S4jUeVFHZUtQe8MpEHQFTRetgxi8n78/FqJdcR64IHuHdWGO62YAR5AREI0IMc9TwHQs+CqTjSo4dDL2V9Oj6f72L3zg5WV4PyKUccw0cTdUQV6tMythnP8ret13A0pFeuQ2Lz6YTPk0R6fWsPVHUAo9RmCvBYny9r6L+bH0iqFwXiQw==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
- smtp.mailfrom=wdc.com;dmarc=pass action=none header.from=wdc.com;dkim=pass
- header.d=wdc.com;arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=/spphAd0K8MM7F1/9AFl9NDmoF4CClkrJ4E2ZcsKmLQ=;
- b=D+VOK+kCqS1ZWDzvzHby2abGJe3tYXE9bwpiv32ufdhaVeMb7Lc7GDhw7gWmQVqCHN0HuMyW0O1v30YdlmAUHnJno3Txh11hvxPNM9UVw82vDvUcXaDDIIGxxlAgezkE5/yd71pBQ4Euqyp5il2kS9mufaQ6DvXqeiuOiWQfqyw=
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
- SN6PR04MB5262.namprd04.prod.outlook.com (20.178.7.13) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2073.11; Thu, 11 Jul 2019 06:15:20 +0000
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::541e:d74b:98bf:c319]) by SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::541e:d74b:98bf:c319%5]) with mapi id 15.20.2073.008; Thu, 11 Jul 2019
- 06:15:20 +0000
-From: Avri Altman <Avri.Altman@wdc.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
- <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
- <pedrom.sousa@synopsys.com>
-Subject: RE: [PATCH v3 4/4] scsi: ufs: Add history of fatal events
-Thread-Topic: [PATCH v3 4/4] scsi: ufs: Add history of fatal events
-Thread-Index: AQHVNyTGnP9of7OWlUuyDLJWlYUyBKbE7K7g
-Date: Thu, 11 Jul 2019 06:15:20 +0000
-Message-ID: <SN6PR04MB4925157680BCEE559ED6F038FCF30@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1562765901-18328-1-git-send-email-stanley.chu@mediatek.com>
- <1562765901-18328-5-git-send-email-stanley.chu@mediatek.com>
-In-Reply-To: <1562765901-18328-5-git-send-email-stanley.chu@mediatek.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=Avri.Altman@wdc.com; 
-x-originating-ip: [212.25.79.133]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 2e9d2b2b-5426-46e8-01a4-08d705c72722
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
- SRVR:SN6PR04MB5262; 
-x-ms-traffictypediagnostic: SN6PR04MB5262:
-x-microsoft-antispam-prvs: <SN6PR04MB52625D007B9581F6CD1C0B8CFCF30@SN6PR04MB5262.namprd04.prod.outlook.com>
-wdcipoutbound: EOP-TRUE
-x-ms-oob-tlc-oobclassifiers: OLM:2150;
-x-forefront-prvs: 0095BCF226
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(4636009)(366004)(136003)(376002)(39860400002)(346002)(396003)(189003)(199004)(76116006)(66946007)(26005)(66556008)(66446008)(66476007)(64756008)(229853002)(478600001)(25786009)(55016002)(316002)(186003)(66066001)(2906002)(446003)(74316002)(476003)(11346002)(110136005)(486006)(54906003)(2501003)(7696005)(5660300002)(99286004)(4326008)(7416002)(6506007)(68736007)(102836004)(53936002)(33656002)(76176011)(9686003)(52536014)(14454004)(6116002)(81156014)(6436002)(8936002)(86362001)(3846002)(256004)(81166006)(14444005)(71200400001)(71190400001)(7736002)(305945005)(2201001)(8676002)(6246003);
- DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB5262;
- H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; MX:1; A:1; 
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: j0aSW+m1PKWHBPlxb9OjZfK4YSjch5TLrSGzVREN4zLsZLEUrXQsNQ5KS2Y0s/mvOp2T//o2CPnGKgE7U8Bfmv6qW+2xlj4DQZKE7FAEmN56fmG6iSgKAt7dtcey8ymrrsDc6yxL3CPUrsxPYudK54piJAUPfDBTDPwvIevwpikYsn4TgK/gdDtMEJHejMFHZpQlBg2apW1aHP82YWO5KI7HPP6comnKmtD0Y6PpWcMeT4ez3S+pNR04namZtR79lKCOrUlmy/cvWzZObYfBO3xy8tE79CGh+6vfUbjYcygbcK77jgqDQO0xR+ZHgLc34T9KH01MwOANIbfBw4qAe7MmXkHNVi6kIFCUv01yH8xqtBqJw5CAa6CuPss9nQE9cgCNyM9FBJg0q0vc4ES5rK5FdENSNLRdxfNrCpDVYG0=
+ id 1hlSi0-0007Mg-QJ
+ for linux-mediatek@lists.infradead.org; Thu, 11 Jul 2019 06:37:38 +0000
+X-UUID: fce151d3d860489698230aafadac4820-20190710
+X-UUID: fce151d3d860489698230aafadac4820-20190710
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <xixi.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 582755557; Wed, 10 Jul 2019 22:37:17 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 10 Jul 2019 23:37:16 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs07n2.mediatek.inc
+ (172.21.101.141) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 11 Jul 2019 14:37:14 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 11 Jul 2019 14:37:13 +0800
+Message-ID: <1562827033.22938.0.camel@mhfsdcap03>
+Subject: Re: [PATCH v2, 1/3] dt-bindings: soc: Add MT8183 emi dt-bindings
+From: Xi Chen <xixi.chen@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Thu, 11 Jul 2019 14:37:13 +0800
+In-Reply-To: <668e6ccb-709b-a93a-7113-a22362048972@gmail.com>
+References: <1558670066-22484-1-git-send-email-xixi.chen@mediatek.com>
+ <1558670066-22484-2-git-send-email-xixi.chen@mediatek.com>
+ <668e6ccb-709b-a93a-7113-a22362048972@gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-OriginatorOrg: wdc.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 2e9d2b2b-5426-46e8-01a4-08d705c72722
-X-MS-Exchange-CrossTenant-originalarrivaltime: 11 Jul 2019 06:15:20.8475 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: Avri.Altman@wdc.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB5262
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190710_231535_209285_593454E1 
-X-CRM114-Status: GOOD (  12.10  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190710_233736_861159_5FE24C78 
+X-CRM114-Status: GOOD (  13.75  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [68.232.143.124 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -144,61 +75,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "sthumma@codeaurora.org" <sthumma@codeaurora.org>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "ygardi@codeaurora.org" <ygardi@codeaurora.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: mark.rutland@arm.com, ck.hu@mediatek.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, srv_heupstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
 
-> Currently only "interrupt-based" errors have their own history,
-> however there are some "non-interrupt-based" errors or events
-> which need history to improve debugging or help know the health
-> status of UFS devices.
+On Tue, 2019-06-18 at 23:32 +0200, Matthias Brugger wrote:
 > 
-> Example of fatal errors,
-> - Link startup error
-> - Suspend error
-> - Resume error
+> On 24/05/2019 05:54, Xi Chen wrote:
+> > Add emi dt-bindings of MT8183 in binding document.
+> > 
+> > Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
+> > ---
+> >  .../bindings/memory-controllers/mediatek,emi.txt      | 19 +++++++++++++++++++
+> >  1 file changed, 19 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+> > new file mode 100644
+> > index 0000000..a19e3b3
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/memory-controllers/mediatek,emi.txt
+> > @@ -0,0 +1,19 @@
+> > +EMI (External Memory Interface)
+> > +
+> > +Required properties:
+> > +- compatible : must be one of :
+> > +	"mediatek,mt8183-emi"
+> > +- reg : the register and size of the EMI block.
 > 
-> Example of abnormal events,
-> - Task or request abort
-> - Device reset (now equals to Logical Unit Reset)
-> - Host reset
+> Please name the registers explicitly.
+	the "reg" is emi reg base.
 > 
-> This patch tries to track above errors and events by existed UFS error
-> history mechanism.
+> > +- interrupts : includes MPU, CGM, ELM.
+> > +
+> > +Example:
+> > +	emi@10219000 {
+> > +	compatible = "mediatek,mt8183-emi";
 > 
-> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Avri Altman <avri.altman@wdc.com>
+> Please do the indention right.
+	Yes, I do the indention right.
+> 
+> > +	reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
+> > +		  <0 0x10226000 0 0x1000>, /* EMI MPU */
+> > +		  <0 0x1022d000 0 0x1000>, /* CHA EMI */
+> > +		  <0 0x10235000 0 0x1000>; /* CHB EMI */
+> 
+> This looks quite spread out over the IO space. Is this really one HW block or
+> did you add various blocks into one driver?
+	Yes, you are right. I removed the unused reg addr and interrupts.
+> 
+> > +	interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
+> > +			 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
+> > +			 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
+> > +};
+> > 
 
->  /**
->   * ufshcd_link_startup - Initialize unipro link startup
->   * @hba: per adapter instance
-> @@ -4356,6 +4372,8 @@ static int ufshcd_link_startup(struct ufs_hba
-> *hba)
-> 
->  		/* check if device is detected by inter-connect layer */
->  		if (!ret && !ufshcd_is_device_present(hba)) {
-> +			ufshcd_update_reg_hist(&hba-
-> >ufs_stats.link_startup_err,
-> +					       0);
-So no device = no error, instead of ENXIO.
-Well I guess this is a fair choice,
-although less informative if the device stop responding.
 
 
 
