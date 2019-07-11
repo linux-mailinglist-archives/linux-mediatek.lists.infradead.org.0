@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71D346558C
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 13:30:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D881365592
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 13:31:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,41 +11,39 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=GY2CPuxpp8Tkk+SUzZ0ntcVxtg0s1JqJqrMZ+0gQGgY=; b=mtajJc+yway4eZNAfjP8Z5iIb8
-	st8ZpzS5NEzBYUh0rOlhpRJyZNsHEcLwkWjMETLOxfjxoI9bZ2B5esZzbGC0cCJGyXyzYmjtRiwMi
-	qBdClPl/Yq+G5wcI6R2dI8fp/j6yRWIOVfNS3mJqOiAg641KWrzFG7gaotDKbca2et3Ozrk21sSE1
-	Pr7EoCc48X2ZL82m/WiBQyCz/Lrx5Ty4y4MG2PRTXrqRu+fB2SN8sZV2VuBYSxNYU2KAhpfxkPeir
-	C2lvq14LbsP5ntkWRC5xsZOLV/wSRpGDMtmnhG4eILzI3SgARQNoz+Qj4s67CuRNS+uLw8+fQork2
-	HdA9yiZw==;
+	bh=Kc7GP9EqCYCvBHISSqUOYlCwcLAacC+mPUuqxL8IdTU=; b=t81xmbqHQWb8jQdTdoqVODWOcI
+	b1m0TUWwugcF1L7opV19E8050BumPwsArx3MhUrD8YGGhnNaxXx3+0ESfckEZwbj2/dPEQvlmIlsW
+	oIHpGATO7E9FK2L69aTsQOde/keZqmM52e/5azYZv5xEt9I09zYw2rAhRr66lhsdMOfjrIt+irllO
+	ElpvSmsqnX6FgW7IelVT2elasfcytdLc1GLcDr/OaRzkyS+zsmTLEj5vGKOdyrgLMCUYh7UAX5HIU
+	hy4dv8vDWJoNsu0xuzPzhz7NcAGo5eIXv0B0XQXrqGwRjS/jQxUtYzd0WulHx+eNCyTfUxB+4CcGE
+	A6DddEzw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlXHo-00084u-3m; Thu, 11 Jul 2019 11:30:52 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hlXI1-0008Ab-Mu; Thu, 11 Jul 2019 11:31:05 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlXHk-00084L-Ed; Thu, 11 Jul 2019 11:30:49 +0000
+ id 1hlXHx-00089w-LP; Thu, 11 Jul 2019 11:31:03 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 1D0E828B695
+ (Authenticated sender: andrzej.p) with ESMTPSA id 3B16128B554
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v4 16/23] drm/mgag200: Provide ddc symlink in connector sysfs
+Subject: [PATCH v4 17/23] drm/ast: Provide ddc symlink in connector sysfs
  directory
-Date: Thu, 11 Jul 2019 13:26:43 +0200
-Message-Id: <d32a6b1f0a3b79f1fbc8d0894080908526f6e61e.1562843413.git.andrzej.p@collabora.com>
+Date: Thu, 11 Jul 2019 13:26:44 +0200
+Message-Id: <d3651bd2fd8ba69b8380304bca4c629a8c1da4e9.1562843413.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1562843413.git.andrzej.p@collabora.com>
 References: <cover.1562843413.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1562843413.git.andrzej.p@collabora.com>
 References: <cover.1562843413.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_043048_752360_D5E8D52E 
-X-CRM114-Status: GOOD (  10.88  )
+X-CRM114-CacheID: sfid-20190711_043101_958154_B0A0C582 
+X-CRM114-Status: GOOD (  11.38  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -67,8 +65,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>,
  Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -93,7 +91,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, amd-gfx@lists.freedesktop.org,
+ linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
+ Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
  Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
  Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
@@ -113,34 +112,34 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/mgag200/mgag200_mode.c | 9 +++++----
+ drivers/gpu/drm/ast/ast_mode.c | 9 +++++----
  1 file changed, 5 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/gpu/drm/mgag200/mgag200_mode.c b/drivers/gpu/drm/mgag200/mgag200_mode.c
-index a25054015e8c..8fb9444b2142 100644
---- a/drivers/gpu/drm/mgag200/mgag200_mode.c
-+++ b/drivers/gpu/drm/mgag200/mgag200_mode.c
-@@ -1703,6 +1703,11 @@ static struct drm_connector *mga_vga_init(struct drm_device *dev)
- 		return NULL;
+diff --git a/drivers/gpu/drm/ast/ast_mode.c b/drivers/gpu/drm/ast/ast_mode.c
+index ffccbef962a4..1ca9bc4aa3bb 100644
+--- a/drivers/gpu/drm/ast/ast_mode.c
++++ b/drivers/gpu/drm/ast/ast_mode.c
+@@ -890,6 +890,11 @@ static int ast_connector_init(struct drm_device *dev)
+ 		return -ENOMEM;
  
- 	connector = &mga_connector->base;
-+	mga_connector->i2c = mgag200_i2c_create(dev);
-+	if (!mga_connector->i2c)
-+		DRM_ERROR("failed to add ddc bus\n");
+ 	connector = &ast_connector->base;
++	ast_connector->i2c = ast_i2c_create(dev);
++	if (!ast_connector->i2c)
++		DRM_ERROR("failed to add ddc bus for connector\n");
 +
-+	connector->ddc = &mga_connector->i2c->adapter;
++	connector->ddc = &ast_connector->i2c->adapter;
+ 	drm_connector_init(dev, connector, &ast_connector_funcs, DRM_MODE_CONNECTOR_VGA);
  
- 	drm_connector_init(dev, connector,
- 			   &mga_vga_connector_funcs, DRM_MODE_CONNECTOR_VGA);
-@@ -1711,10 +1716,6 @@ static struct drm_connector *mga_vga_init(struct drm_device *dev)
+ 	drm_connector_helper_add(connector, &ast_connector_helper_funcs);
+@@ -904,10 +909,6 @@ static int ast_connector_init(struct drm_device *dev)
+ 	encoder = list_first_entry(&dev->mode_config.encoder_list, struct drm_encoder, head);
+ 	drm_connector_attach_encoder(connector, encoder);
  
- 	drm_connector_register(connector);
- 
--	mga_connector->i2c = mgag200_i2c_create(dev);
--	if (!mga_connector->i2c)
--		DRM_ERROR("failed to add ddc bus\n");
+-	ast_connector->i2c = ast_i2c_create(dev);
+-	if (!ast_connector->i2c)
+-		DRM_ERROR("failed to add ddc bus for connector\n");
 -
- 	return connector;
+ 	return 0;
  }
  
 -- 
