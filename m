@@ -2,57 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5B718651E3
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 08:38:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F12F651EC
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jul 2019 08:42:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=EoCVe4yEj+NuC1fWj5ZIhDaSZ4TaI4eblc2RG4v0rAo=; b=OX97KwKj+GKD23
-	LGU0JStxY3SBlBhhwI8slEOdb1+t4JMHlhmyT8vUkVJUrh30yCBylMM8TAjzGiy6KTclzyrRAzzIb
-	aZuESHNBn6vND2WrS0jTg05Gf0J/yZYB8GuAObh81jUSJ3hQFpQvZM7XTuNNa2GJMlstsM5bQZG2y
-	Wln6uI9Oi3Ga/NXCtDdwbBU/eFRaRVkKFwplUi2cCuWatDlPks/p6P2FSbfj+3eVzPGHw5LwNa+5Z
-	ibd4MeLrL7A2B9fgwp5Y295muJ90L+nCW2OnTBRi+Sk+t+U76jf7yQ0ZKGmmWdWICO3l5FNbR4GA0
-	UmxCyL5VbD54FlbDwCwg==;
+	List-Owner; bh=tSEq/WReSVVnJ8s+2pOFLjjuLjwqEORqtB3I3QhmFpA=; b=YE0heEDsiuZRKO
+	5BpcI9CeVJOMuSflro+RM9NIe31fG/vfbJ8nYjycxK2s3i4/Y+9waPg9r/GeK1A691bBEdqtmclFD
+	0kNNmJ2WHVCJVpJWK3XYq3j6wN3l+Uk8zD/nufV/0o/XJyOPSKdYFxMgO7B2u2w3V17mTZX1sfGm2
+	7Q1dEL//gXziLHmEzwKbzUCCKj/vaQO+w4lFBzdcpv1cFLboGOkYnHgpjqY6OiNankRGinRIxFvK7
+	XgA8xrHh6dFPjMO8Doz0rmEKQKBGl+IFS/20XU2wp3H1nvITigYeir5WSivnnt+ezPGGbIE6jyABv
+	KnogyQ5xF1w/oiLcefFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlSir-0007R9-Mk; Thu, 11 Jul 2019 06:38:29 +0000
+	id 1hlSn1-0000n2-W1; Thu, 11 Jul 2019 06:42:48 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlSio-0007QS-I2
- for linux-mediatek@lists.infradead.org; Thu, 11 Jul 2019 06:38:28 +0000
-X-UUID: e835914512c84c45b2dd016eeafccdea-20190710
-X-UUID: e835914512c84c45b2dd016eeafccdea-20190710
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <xixi.chen@mediatek.com>)
+ id 1hlSmm-0000dh-Sv; Thu, 11 Jul 2019 06:42:34 +0000
+X-UUID: b8ffe327d62240c1840bb80222c8dcd8-20190710
+X-UUID: b8ffe327d62240c1840bb80222c8dcd8-20190710
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1860752918; Wed, 10 Jul 2019 22:38:12 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 10 Jul 2019 23:38:10 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs07n1.mediatek.inc
- (172.21.101.16) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 11 Jul 2019 14:38:09 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 11 Jul 2019 14:38:07 +0800
-Message-ID: <1562827087.22938.1.camel@mhfsdcap03>
-Subject: Re: [PATCH v2, 2/3] arm64: dts: mt8183: add emi node
-From: Xi Chen <xixi.chen@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Thu, 11 Jul 2019 14:38:07 +0800
-In-Reply-To: <768b95c9-b0d4-844e-906d-0d8d3bb4fe65@gmail.com>
-References: <1558670066-22484-1-git-send-email-xixi.chen@mediatek.com>
- <1558670066-22484-3-git-send-email-xixi.chen@mediatek.com>
- <768b95c9-b0d4-844e-906d-0d8d3bb4fe65@gmail.com>
+ with ESMTP id 524448865; Wed, 10 Jul 2019 22:42:20 -0800
+Received: from mtkexhb01.mediatek.inc (172.21.101.102) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 10 Jul 2019 23:42:18 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by mtkexhb01.mediatek.inc
+ (172.21.101.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 11 Jul 2019 14:41:58 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 11 Jul 2019 14:41:58 +0800
+Message-ID: <1562827318.5818.0.camel@mtksdaap41>
+Subject: Re: [PATCH v7 4/4] drm/mtk: add panel orientation property
+From: CK Hu <ck.hu@mediatek.com>
+To: Derek Basehore <dbasehore@chromium.org>
+Date: Thu, 11 Jul 2019 14:41:58 +0800
+In-Reply-To: <20190710021659.177950-5-dbasehore@chromium.org>
+References: <20190710021659.177950-1-dbasehore@chromium.org>
+ <20190710021659.177950-5-dbasehore@chromium.org>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190710_233826_605876_1F9922DC 
-X-CRM114-Status: GOOD (  11.38  )
+X-CRM114-CacheID: sfid-20190710_234232_941092_48C2B2D2 
+X-CRM114-Status: GOOD (  13.30  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,55 +71,60 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, ck.hu@mediatek.com, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, srv_heupstream@mediatek.com
+Cc: Philipp Zabel <p.zabel@pengutronix.de>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, Sam Ravnborg <sam@ravnborg.org>,
+ intel-gfx@lists.freedesktop.org,
+ Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ linux-kernel@vger.kernel.org, Jani Nikula <jani.nikula@linux.intel.com>,
+ David Airlie <airlied@linux.ie>, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, dri-devel@lists.freedesktop.org,
+ Daniel Vetter <daniel@ffwll.ch>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-06-18 at 23:32 +0200, Matthias Brugger wrote:
+Hi, Derek:
+
+On Tue, 2019-07-09 at 19:16 -0700, Derek Basehore wrote:
+> This inits the panel orientation property for the mediatek dsi driver
+> if the panel orientation (connector.display_info.panel_orientation) is
+> not DRM_MODE_PANEL_ORIENTATION_UNKNOWN.
 > 
-> On 24/05/2019 05:54, Xi Chen wrote:
-> > Add emi dts node.
-> > 
-> > Signed-off-by: Xi Chen <xixi.chen@mediatek.com>
-> > ---
-> >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 11 +++++++++++
-> >  1 file changed, 11 insertions(+)
-> > 
-> > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > index 75c4881..2a176e9 100644
-> > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > @@ -269,6 +269,17 @@
-> >  			clock-names = "spi", "wrap";
-> >  		};
-> >  
-> > +		emi@10219000 {
-> > +			compatible = "mediatek,mt8183-emi";
-> > +			reg = <0 0x10219000 0 0x1000>, /* CEN EMI */
-> > +				  <0 0x10226000 0 0x1000>, /* EMI MPU */
-> > +				  <0 0x1022d000 0 0x1000>, /* CHA EMI */
-> > +			      <0 0x10235000 0 0x1000>; /* CHB EMI */
-> > +			interrupts = <GIC_SPI 147 IRQ_TYPE_LEVEL_LOW>, /* MPU */
-> > +						 <GIC_SPI 148 IRQ_TYPE_LEVEL_HIGH>, /* CGM */
-> > +						 <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>; /* ELM */
+
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+> Signed-off-by: Derek Basehore <dbasehore@chromium.org>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 8 ++++++++
+>  1 file changed, 8 insertions(+)
 > 
-> indentation seems borken here.
-	sorry, broken some blanks.
-> 
-> > +		};
-> > +
-> >  		uart0: serial@11002000 {
-> >  			compatible = "mediatek,mt8183-uart",
-> >  				     "mediatek,mt6577-uart";
-> > 
-> 
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index b91c4616644a..2920458ae2fb 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -790,10 +790,18 @@ static int mtk_dsi_create_connector(struct drm_device *drm, struct mtk_dsi *dsi)
+>  			DRM_ERROR("Failed to attach panel to drm\n");
+>  			goto err_connector_cleanup;
+>  		}
+> +
+> +		ret = drm_connector_init_panel_orientation_property(&dsi->conn);
+> +		if (ret) {
+> +			DRM_ERROR("Failed to init panel orientation\n");
+> +			goto err_panel_detach;
+> +		}
+>  	}
+>  
+>  	return 0;
+>  
+> +err_panel_detach:
+> +	drm_panel_detach(dsi->panel);
+>  err_connector_cleanup:
+>  	drm_connector_cleanup(&dsi->conn);
+>  	return ret;
 
 
 
