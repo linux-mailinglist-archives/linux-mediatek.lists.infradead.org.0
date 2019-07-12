@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1DDC96679F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jul 2019 09:18:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0083A667BA
+	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jul 2019 09:24:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WsskRqnhTkPVim4YwGCnfFxUyFO8+55NOzC/SSY9R3M=; b=NGA1R83SXEsCDQ
-	gF/2xjupCxNOBTMrXJcL5ZYCUWrUxEOet4fH1Rege91O7AJDgGsNfSsRqoF1EuKL636u/LC/zyJB8
-	1YwcOkKhYP2kOeoq/Uu8S65Tt4JuI8tLL4l81pWIvMyKwd23peQ6y2mNNwSFA5JONpTJYvS2uT8P2
-	VPEJm3m+bEWm5is50jGgzDhixzjiv4Xrjh4O3LIMWiA2J9EAvX8bRbu9s45GKOoN5ToZJQPyS4/6t
-	xdR6/eTHeD0FLENGzMJ5uZp4wkRJB/jUx7di/gcQTSKgOudzRtCa4URIUKExnVg0kwiFVWrXKPZX4
-	qhyWqxIOZt1v3V3V/bCw==;
+	List-Owner; bh=Cgp75iTf0ZGaHTU9CZmrKL3hkvGXd9R9fYwwx1Cc0Sc=; b=WFAFVvJbgrXKV6
+	0GIMNJsJheL6fsbJ9/UnLjT9xAWhekhuIQuUhpW/6xhBo5A0/yhV+sxPvoAWPFdE8UgtgbLsg1Bq/
+	ssunBz9qwsA5kbjv1T2vry+3OBQmyGTWs6Y7ElPJhrhMVscMAX2Cgnfm/2eB3uor8VKr/MB9rInWR
+	Broc4szDgqDktenoBxijMaP3CChiM2WxbsmbgRBqSzG50CpXzxyFQM/oA3eE7+wfNdTxsy4rUhqam
+	pND1ARel9UXAflzAwLi7OOc7O2Tax2pgZoN7iCaplSNRQ+3kWD/+WtOqMXxa0NkQd5oXoUw9HpflK
+	SSUddZ+JA6FSrkbwyYig==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlpoj-0000AU-BM; Fri, 12 Jul 2019 07:18:05 +0000
+	id 1hlpuh-0003Cc-UE; Fri, 12 Jul 2019 07:24:15 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlpoM-0008P7-Ls; Fri, 12 Jul 2019 07:17:44 +0000
-X-UUID: 1756fefe78a0491b82d728b465b589fd-20190711
-X-UUID: 1756fefe78a0491b82d728b465b589fd-20190711
+ id 1hlpuR-00031e-22; Fri, 12 Jul 2019 07:24:00 +0000
+X-UUID: b5d97d5d317e497db47dd0e62f316301-20190711
+X-UUID: b5d97d5d317e497db47dd0e62f316301-20190711
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ (envelope-from <houlong.wei@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2107442166; Thu, 11 Jul 2019 23:17:04 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 12 Jul 2019 00:17:03 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 12 Jul 2019 15:16:54 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 12 Jul 2019 15:16:55 +0800
-Message-ID: <1562915814.27825.2.camel@mtksdaap41>
-Subject: Re: [RFC PATCH V2 1/4] dt-bindings: mt8183: Added FD dt-bindings
-From: CK Hu <ck.hu@mediatek.com>
-To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
-Date: Fri, 12 Jul 2019 15:16:54 +0800
-In-Reply-To: <1562661672-22439-2-git-send-email-Jerry-Ch.chen@mediatek.com>
-References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
- <1562661672-22439-2-git-send-email-Jerry-Ch.chen@mediatek.com>
+ with ESMTP id 567170698; Thu, 11 Jul 2019 23:23:54 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 12 Jul 2019 00:23:52 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs08n1.mediatek.inc
+ (172.21.101.55) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 12 Jul 2019 15:23:38 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 12 Jul 2019 15:23:38 +0800
+Message-ID: <1562916217.29653.4.camel@mhfsdcap03>
+Subject: Re: [PATCH] [media] media: mtk-mdp: fix reference count on old
+ device tree
+From: houlong wei <houlong.wei@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Fri, 12 Jul 2019 15:23:37 +0800
+In-Reply-To: <e4d178ae-f43e-21d0-b0ab-78cc2ac71e7e@gmail.com>
+References: <20190621113250.4946-1-matthias.bgg@gmail.com>
+ <e4d178ae-f43e-21d0-b0ab-78cc2ac71e7e@gmail.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 01D485D90E4193B16D3DAB4E8F27AE66C4A63D8F503F77DC805346543E9061B22000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190712_001742_714463_35BD949F 
-X-CRM114-Status: GOOD (  14.83  )
+X-CRM114-CacheID: sfid-20190712_002359_102293_12799EA1 
+X-CRM114-Status: GOOD (  14.64  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,79 +74,63 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- christie.yu@mediatek.com, srv_heupstream@mediatek.com,
- po-yang.huang@mediatek.com, suleiman@chromium.org, sj.huang@mediatek.com,
- tfiga@chromium.org, jungo.lin@mediatek.com, shik@chromium.org,
- yuzhao@chromium.org, hans.verkuil@cisco.com, zwisler@chromium.org,
- frederic.chen@mediatek.com, matthias.bgg@gmail.com,
- linux-mediatek@lists.infradead.org, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: Andrew-CT Chen =?UTF-8?Q?=28=E9=99=B3=E6=99=BA=E8=BF=AA=29?=
+ <Andrew-CT.Chen@mediatek.com>,
+ Minghsiu Tsai =?UTF-8?Q?=28=E8=94=A1=E6=98=8E=E4=BF=AE=29?=
+ <Minghsiu.Tsai@mediatek.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Hans Verkuil <hans.verkuil@cisco.com>,
+ "stable@vger.kernel.org" <stable@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "mchehab@kernel.org" <mchehab@kernel.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jerry:
 
-On Tue, 2019-07-09 at 16:41 +0800, Jerry-ch Chen wrote:
-> From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+
+On Mon, 2019-07-08 at 17:06 +0800, Matthias Brugger wrote:
 > 
-> This patch adds DT binding documentation for the Face Detection (FD)
-> unit of the Mediatek's mt8183 SoC.
+> On 21/06/2019 13:32, Matthias Brugger wrote:
+> > of_get_next_child() increments the reference count of the returning
+> > device_node. Decrement it in the check if we are using the old or the
+> > new DTB.
+> > 
+> > Fixes: ba1f1f70c2c0 ("[media] media: mtk-mdp: Fix mdp device tree")
+> > Signed-off-by: Matthias Brugger <matthias.bgg@gmail.com>
 > 
-> Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> ---
->  .../bindings/media/mediatek,mt8183-fd.txt          | 33 ++++++++++++++++++++++
->  1 file changed, 33 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
+> Any comments on that?
 > 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
-> new file mode 100644
-> index 0000000..0837223
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
-> @@ -0,0 +1,33 @@
-> +* Mediatek Face Detection Unit (FD)
-> +
-> +Face Detection (FD) unit is a typical memory-to-memory HW device.
-> +It provides hardware accelerated face detection function, and it
-> +is able to detect different poses of faces. FD will writre result
-> +of detected face into memory as output.
-> +
-> +Required properties:
-> +- compatible: "mediatek,mt8183-fd"
-> +- mediatek,scp : the node of system control processor (SCP), see
-> +  Documentation/devicetree/bindings/remoteproc/mtk,scp.txt for details.
-> +- iommus: should point to the 3 entries:  M4U_PORT_CAM_FDVT_RP,
-> +  M4U_PORT_CAM_FDVT_WR and M4U_PORT_CAM_FDVT_RB.  (Please see
-> +  Documentation/devicetree/bindings/iommu/mediatek,iommu.txt for details.)
-> +- reg: Physical base address and length of the register space.
-> +- interrupts: interrupt number to the cpu.
-> +- clocks : must contain the FDVT clock, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
-> +- clock-names: must be "fd".
-> +
-> +Example:
-> +	fd: fd@1502b000 {
-> +		compatible = "mediatek,mt8183-fd";
-> +		mediatek,scp = <&scp>;
-> +		iommus = <&iommu M4U_PORT_CAM_FDVT_RP>,
-> +			 <&iommu M4U_PORT_CAM_FDVT_WR>,
-> +			 <&iommu M4U_PORT_CAM_FDVT_RB>;
-> +		reg = <0 0x1502b000 0 0x1000>;
-> +		interrupts = <GIC_SPI 269 IRQ_TYPE_LEVEL_LOW>;
-> +		clocks = <&imgsys CLK_IMG_FDVT>;
-> +		clock-names = "fd";
 
-This device has no power-domain?
+Hi Matthias,
+Thanks for fixing the bug. Sorry to reply late~
 
-Regards,
-CK
+Acked-by: Houlong Wei <houlong.wei@mediatek.com>
 
-> +	};
-> +
+
+> > ---
+> >  drivers/media/platform/mtk-mdp/mtk_mdp_core.c | 4 +++-
+> >  1 file changed, 3 insertions(+), 1 deletion(-)
+> > 
+> > diff --git a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
+> > index bbb24fb95b95..bafe53c5d54a 100644
+> > --- a/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
+> > +++ b/drivers/media/platform/mtk-mdp/mtk_mdp_core.c
+> > @@ -118,7 +118,9 @@ static int mtk_mdp_probe(struct platform_device *pdev)
+> >  	mutex_init(&mdp->vpulock);
+> >  
+> >  	/* Old dts had the components as child nodes */
+> > -	if (of_get_next_child(dev->of_node, NULL)) {
+> > +	parent = of_get_next_child(dev->of_node, NULL);
+> > +	if (parent) {
+> > +		of_node_put(parent);
+> >  		parent = dev->of_node;
+> >  		dev_warn(dev, "device tree is out of date\n");
+> >  	} else {
+> > 
 
 
 
