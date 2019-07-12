@@ -2,39 +2,41 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 131B4676A8
-	for <lists+linux-mediatek@lfdr.de>; Sat, 13 Jul 2019 00:47:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BD282676A7
+	for <lists+linux-mediatek@lfdr.de>; Sat, 13 Jul 2019 00:47:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=MfqCAsbx3+znqcgLpZLwudUIcjAnnhx+HDUcR3+2u4k=; b=h3P
-	99/tA5x3l5Kw9sGwrd9sOY0rEgtt8iZpEJJ4QEDVhPBlkkns6Bor07giQIt5d/IWd1L4emG5ueWMt
-	jlauc9eh7zFyyEa519Sk2huuULgG5YWL9rWJs7NGo70+HTGgSf/zqu1pcerdYhs6m7nbVrt+XIskJ
-	DOrFoZAIH+7Ny1Y6BUpErzhuKpqoOOzt+T1SiIWGZsG13U3Aw5kyBvTBg+0efVJC0+N9ZOnvgf3KP
-	BZeDAEobLK8Yd+qFpb9Pa5aE5bwYdZrE2Ig44Lttyz7+mkzZxlyvZ3nndh2ivSzmVJp8eUsK9+tIF
-	lIDllErFGBOzpcggHdBXBL8L2N6j+0w==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=DLFXHMbs7rqOXJ5ctqFxjJMg5S4V+Lgggctvd39D95s=; b=uaETlOPUP2aGSt/S0HbWN19I3e
+	0FupjUDx/DXNwVYdPJsn59+rXzX97R46H9z0DBVz0ca5wKIQTeofbBsItOWBV15DKm7v8CIQaZ1/g
+	xdkCQPsBEoU2a0T4io9qN7YD6FysuQ+vK2yx5siIFnBprPchl3tu1z9Xwc/tY83sYg/2n116Qc/+5
+	rLbEJbTKh59feyKHYjubcEHTovRaIzwLc2Vbk4XvvC/9h+6HwnL2Elyym3mn2Ulp4VqStHBxzgrR0
+	/y5iTpwr/dSDdmUyzxAMxklp/IYKtQS+IIQwRzx/9f0HEg9WhmZesVxqOQ5Ozjin+X1dFHpd3FEkc
+	WsOBA13A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hm4Jw-0002I0-WA; Fri, 12 Jul 2019 22:47:17 +0000
+	id 1hm4Jz-0002Ig-RP; Fri, 12 Jul 2019 22:47:19 +0000
 Received: from gofer.mess.org ([2a02:8011:d000:212::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hm4Jr-0002H8-Bq
+ id 1hm4Jr-0002H7-C9
  for linux-mediatek@lists.infradead.org; Fri, 12 Jul 2019 22:47:13 +0000
 Received: by gofer.mess.org (Postfix, from userid 1000)
- id ABB956047B; Fri, 12 Jul 2019 23:47:00 +0100 (BST)
+ id 1A91060665; Fri, 12 Jul 2019 23:47:01 +0100 (BST)
 From: Sean Young <sean@mess.org>
 To: linux-media@vger.kernel.org
-Subject: [PATCH 1/3] media: mtk-cir: only allow protocols that have software
- decoders
-Date: Fri, 12 Jul 2019 23:46:58 +0100
-Message-Id: <20190712224700.11285-1-sean@mess.org>
+Subject: [PATCH 3/3] media: mtk-cir: lower de-glitch counter for rc-mm protocol
+Date: Fri, 12 Jul 2019 23:47:00 +0100
+Message-Id: <20190712224700.11285-3-sean@mess.org>
 X-Mailer: git-send-email 2.11.0
+In-Reply-To: <20190712224700.11285-1-sean@mess.org>
+References: <20190712224700.11285-1-sean@mess.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190712_154711_547982_7A12A015 
-X-CRM114-Status: UNSURE (   8.61  )
+X-CRM114-CacheID: sfid-20190712_154711_547982_34FAE5AF 
+X-CRM114-Status: UNSURE (   6.93  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -63,29 +65,42 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RC_PROTO_BIT_ALL includes protocols like unknown and other that do not
-have IR decoders by definition. If these protocols are set in the
-allowed_protocols, they will show in the protocols sysfs file but cannot
-be enabled.
+The rc-mm protocol can't be decoded by the mtk-cir since the de-glitch
+filter removes pulses/spaces shorter than 294 microseconds.
+
+Tested on a BananaPi R2.
 
 Signed-off-by: Sean Young <sean@mess.org>
 ---
- drivers/media/rc/mtk-cir.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/media/rc/mtk-cir.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
 
 diff --git a/drivers/media/rc/mtk-cir.c b/drivers/media/rc/mtk-cir.c
-index 46101efe017b..9dc467ebae24 100644
+index 9dc467ebae24..8027181de985 100644
 --- a/drivers/media/rc/mtk-cir.c
 +++ b/drivers/media/rc/mtk-cir.c
-@@ -342,7 +342,7 @@ static int mtk_ir_probe(struct platform_device *pdev)
- 	ir->rc->map_name = map_name ?: RC_MAP_EMPTY;
- 	ir->rc->dev.parent = dev;
- 	ir->rc->driver_name = MTK_IR_DEV;
--	ir->rc->allowed_protocols = RC_PROTO_BIT_ALL;
-+	ir->rc->allowed_protocols = RC_PROTO_BIT_ALL_IR_DECODER;
- 	ir->rc->rx_resolution = MTK_IR_SAMPLE;
- 	ir->rc->timeout = MTK_MAX_SAMPLES * (MTK_IR_SAMPLE + 1);
+@@ -35,6 +35,11 @@
+ /* Fields containing pulse width data */
+ #define MTK_WIDTH_MASK		  (GENMASK(7, 0))
  
++/* IR threshold */
++#define MTK_IRTHD		 0x14
++#define MTK_DG_CNT_MASK		 (GENMASK(12, 8))
++#define MTK_DG_CNT(x)		 ((x) << 8)
++
+ /* Bit to enable interrupt */
+ #define MTK_IRINT_EN		  BIT(0)
+ 
+@@ -400,6 +405,9 @@ static int mtk_ir_probe(struct platform_device *pdev)
+ 	mtk_w32_mask(ir, val, ir->data->fields[MTK_HW_PERIOD].mask,
+ 		     ir->data->fields[MTK_HW_PERIOD].reg);
+ 
++	/* Set de-glitch counter */
++	mtk_w32_mask(ir, MTK_DG_CNT(1), MTK_DG_CNT_MASK, MTK_IRTHD);
++
+ 	/* Enable IR and PWM */
+ 	val = mtk_r32(ir, MTK_CONFIG_HIGH_REG);
+ 	val |= MTK_OK_COUNT(ir->data->ok_count) |  MTK_PWM_EN | MTK_IR_EN;
 -- 
 2.21.0
 
