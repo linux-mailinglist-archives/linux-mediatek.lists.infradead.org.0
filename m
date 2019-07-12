@@ -2,92 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F2A0066740
-	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jul 2019 08:51:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1DDC96679F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jul 2019 09:18:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Q0Hq/YjdsZFUir8p7O2hmomNyEqE85nhK7cFMsX/RsU=; b=L+MBOAeYMQD/La
-	NORj+fex15OQHIUIlQi+7ELRr4Y+LodUOGtCLjwhfdCx0lKzdyWmoz+9r7/CKBZD8UZMGF0LE5EPD
-	qV+SQekEGo3ukt1r9+B8Q1yKehWp1mLvlGMLC2vnZ7EpnZ2SyMPMeBPL4SmL2CG+YLTEZoEuXO04i
-	OEiNiP3TQ0brpHouPrjpbw0zEJGL+qEIlg3Dn6R7gDKZNUDdOYeyeR43yXSNGOHogbvGA2nMEIXs3
-	bHyfZ4Pqd2LCnwcsrOaGNHPSPjVWWMTuH7KlVAGEz4oppvHBJ+cFQ49rac/+EZB3mEOvMD2jchAG0
-	le/OLSeTIRURLrn4nTDg==;
+	List-Owner; bh=WsskRqnhTkPVim4YwGCnfFxUyFO8+55NOzC/SSY9R3M=; b=NGA1R83SXEsCDQ
+	gF/2xjupCxNOBTMrXJcL5ZYCUWrUxEOet4fH1Rege91O7AJDgGsNfSsRqoF1EuKL636u/LC/zyJB8
+	1YwcOkKhYP2kOeoq/Uu8S65Tt4JuI8tLL4l81pWIvMyKwd23peQ6y2mNNwSFA5JONpTJYvS2uT8P2
+	VPEJm3m+bEWm5is50jGgzDhixzjiv4Xrjh4O3LIMWiA2J9EAvX8bRbu9s45GKOoN5ToZJQPyS4/6t
+	xdR6/eTHeD0FLENGzMJ5uZp4wkRJB/jUx7di/gcQTSKgOudzRtCa4URIUKExnVg0kwiFVWrXKPZX4
+	qhyWqxIOZt1v3V3V/bCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlpOR-0007F0-MR; Fri, 12 Jul 2019 06:50:56 +0000
-Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
+	id 1hlpoj-0000AU-BM; Fri, 12 Jul 2019 07:18:05 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlpNt-0006r2-F7; Fri, 12 Jul 2019 06:50:22 +0000
-Received: by mail-pg1-x543.google.com with SMTP id s27so4107278pgl.2;
- Thu, 11 Jul 2019 23:50:21 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=nunM8EbMx8v6iauP2cPpdPNrk0NnDajKR4vWDYT01Xk=;
- b=iBft0C0HVos4tltf5LODpwQDILpaS8gGULpyrrSpgR2rrBFNotQ5rRfkQjeyhAUXKN
- /zUFfzkOcsFSuF76M8WstPCXUBey8SdLYYYSi9h0QR/WQ/EO4CgqoYM/ebyRq6XMdXNo
- TT3JHx9HR21hObmgoJqw7CIJBjp9XgpHkd74s4RRIFzvCRM7kNByB9tqvIitkVuWdBeN
- Z4JZcwkxGTie4QAVczcWFSwigA7H3Ip9cwr/QyyhP6TNgckO9tzJ1NodTzODYolHdPcB
- UbJEgCNv6g529cBZVjZXYWIViqCmUlsq/eFnNCUVJfbrV945+qyfkneSdQG6OwpLBfdB
- YF0w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=nunM8EbMx8v6iauP2cPpdPNrk0NnDajKR4vWDYT01Xk=;
- b=k2tUthDDqh4A7/BvV3IoqnrUNkWOJPza5gZmAQVl5Nn7eRxYNEpqwYAiwGBwFo0MB/
- 81zG4uBtwMyduo+kwjlA/xOiwxqgqVAoPQYwL+hqFMfya75Ed3GG3fqqCmvRemYGW+3+
- os0YS0a4QJERKgvrxrZNX9xTGw+lKgqICyyCZA0iRU1cLy/wuBx3hJD0D3V0xX8nnySR
- 0mhHH6D/fe0ia3gyF6oNK09qXue29WbyDKSy0s11pVnome71YcCo+rv6eASinJR4bsHQ
- CF+Ekm1FX7gUjc27qyd6G3NGTTF2cwei2iNCSJF3pcEdPTNNiHNC3Dd5DUakhIsjQzck
- F3eA==
-X-Gm-Message-State: APjAAAVQvY6/wFaNfzT8oIwPcAl3hTNxzNlBzYT+ejBeZ1uNdhqjfnN+
- n7xgo2Vkuf4vlgKBVGTpErdhBgyguBM=
-X-Google-Smtp-Source: APXvYqzK1qh1Vj/ulA4pekaBdPxj0EeE2flqAmPZtwiASLmygbcbdwa0L7WHSYjzYLBaONH9v/hNfw==
-X-Received: by 2002:a63:ab08:: with SMTP id p8mr9230016pgf.340.1562914220292; 
- Thu, 11 Jul 2019 23:50:20 -0700 (PDT)
-Received: from dtor-ws ([2620:15c:202:201:3adc:b08c:7acc:b325])
- by smtp.gmail.com with ESMTPSA id 3sm8494091pfg.186.2019.07.11.23.50.19
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 11 Jul 2019 23:50:19 -0700 (PDT)
-Date: Thu, 11 Jul 2019 23:50:17 -0700
-From: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-To: Nishka Dasgupta <nishkadg.linux@gmail.com>
-Subject: Re: [PATCH] input: keyboard: mtk-pmic-keys: Add of_node_put() before
- return
-Message-ID: <20190712065017.GF150689@dtor-ws>
-References: <20190709180019.14339-1-nishkadg.linux@gmail.com>
+ id 1hlpoM-0008P7-Ls; Fri, 12 Jul 2019 07:17:44 +0000
+X-UUID: 1756fefe78a0491b82d728b465b589fd-20190711
+X-UUID: 1756fefe78a0491b82d728b465b589fd-20190711
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2107442166; Thu, 11 Jul 2019 23:17:04 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 12 Jul 2019 00:17:03 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 12 Jul 2019 15:16:54 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 12 Jul 2019 15:16:55 +0800
+Message-ID: <1562915814.27825.2.camel@mtksdaap41>
+Subject: Re: [RFC PATCH V2 1/4] dt-bindings: mt8183: Added FD dt-bindings
+From: CK Hu <ck.hu@mediatek.com>
+To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
+Date: Fri, 12 Jul 2019 15:16:54 +0800
+In-Reply-To: <1562661672-22439-2-git-send-email-Jerry-Ch.chen@mediatek.com>
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-2-git-send-email-Jerry-Ch.chen@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190709180019.14339-1-nishkadg.linux@gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 01D485D90E4193B16D3DAB4E8F27AE66C4A63D8F503F77DC805346543E9061B22000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_235021_554593_13724D27 
-X-CRM114-Status: GOOD (  14.63  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190712_001742_714463_35BD949F 
+X-CRM114-Status: GOOD (  14.83  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (dmitry.torokhov[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,70 +74,81 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: matthias.bgg@gmail.com, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, linux-input@vger.kernel.org
+Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
+ laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ christie.yu@mediatek.com, srv_heupstream@mediatek.com,
+ po-yang.huang@mediatek.com, suleiman@chromium.org, sj.huang@mediatek.com,
+ tfiga@chromium.org, jungo.lin@mediatek.com, shik@chromium.org,
+ yuzhao@chromium.org, hans.verkuil@cisco.com, zwisler@chromium.org,
+ frederic.chen@mediatek.com, matthias.bgg@gmail.com,
+ linux-mediatek@lists.infradead.org, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jul 09, 2019 at 11:30:19PM +0530, Nishka Dasgupta wrote:
-> Each iteration of for_each_child_of_node puts the previous
-> node, but in the case of a return from the middle of the loop, there is
-> no put, thus causing a memory leak. Hence add an of_node_put before the
-> return in three places.
-> Issue found with Coccinelle.
+Hi, Jerry:
+
+On Tue, 2019-07-09 at 16:41 +0800, Jerry-ch Chen wrote:
+> From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
 > 
-> Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
-
-Applied, thank you.
-
+> This patch adds DT binding documentation for the Face Detection (FD)
+> unit of the Mediatek's mt8183 SoC.
+> 
+> Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
 > ---
->  drivers/input/keyboard/mtk-pmic-keys.c | 9 +++++++--
->  1 file changed, 7 insertions(+), 2 deletions(-)
+>  .../bindings/media/mediatek,mt8183-fd.txt          | 33 ++++++++++++++++++++++
+>  1 file changed, 33 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
 > 
-> diff --git a/drivers/input/keyboard/mtk-pmic-keys.c b/drivers/input/keyboard/mtk-pmic-keys.c
-> index 746ff06eaf8d..62391d6c7da6 100644
-> --- a/drivers/input/keyboard/mtk-pmic-keys.c
-> +++ b/drivers/input/keyboard/mtk-pmic-keys.c
-> @@ -277,8 +277,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
->  		keys->keys[index].regs = &mtk_pmic_regs->keys_regs[index];
->  
->  		keys->keys[index].irq = platform_get_irq(pdev, index);
-> -		if (keys->keys[index].irq < 0)
-> +		if (keys->keys[index].irq < 0) {
-> +			of_node_put(child);
->  			return keys->keys[index].irq;
-> +		}
->  
->  		error = of_property_read_u32(child,
->  			"linux,keycodes", &keys->keys[index].keycode);
-> @@ -286,6 +288,7 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
->  			dev_err(keys->dev,
->  				"failed to read key:%d linux,keycode property: %d\n",
->  				index, error);
-> +			of_node_put(child);
->  			return error;
->  		}
->  
-> @@ -293,8 +296,10 @@ static int mtk_pmic_keys_probe(struct platform_device *pdev)
->  			keys->keys[index].wakeup = true;
->  
->  		error = mtk_pmic_key_setup(keys, &keys->keys[index]);
-> -		if (error)
-> +		if (error) {
-> +			of_node_put(child);
->  			return error;
-> +		}
->  
->  		index++;
->  	}
-> -- 
-> 2.19.1
-> 
+> diff --git a/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
+> new file mode 100644
+> index 0000000..0837223
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/media/mediatek,mt8183-fd.txt
+> @@ -0,0 +1,33 @@
+> +* Mediatek Face Detection Unit (FD)
+> +
+> +Face Detection (FD) unit is a typical memory-to-memory HW device.
+> +It provides hardware accelerated face detection function, and it
+> +is able to detect different poses of faces. FD will writre result
+> +of detected face into memory as output.
+> +
+> +Required properties:
+> +- compatible: "mediatek,mt8183-fd"
+> +- mediatek,scp : the node of system control processor (SCP), see
+> +  Documentation/devicetree/bindings/remoteproc/mtk,scp.txt for details.
+> +- iommus: should point to the 3 entries:  M4U_PORT_CAM_FDVT_RP,
+> +  M4U_PORT_CAM_FDVT_WR and M4U_PORT_CAM_FDVT_RB.  (Please see
+> +  Documentation/devicetree/bindings/iommu/mediatek,iommu.txt for details.)
+> +- reg: Physical base address and length of the register space.
+> +- interrupts: interrupt number to the cpu.
+> +- clocks : must contain the FDVT clock, see
+> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
+> +- clock-names: must be "fd".
+> +
+> +Example:
+> +	fd: fd@1502b000 {
+> +		compatible = "mediatek,mt8183-fd";
+> +		mediatek,scp = <&scp>;
+> +		iommus = <&iommu M4U_PORT_CAM_FDVT_RP>,
+> +			 <&iommu M4U_PORT_CAM_FDVT_WR>,
+> +			 <&iommu M4U_PORT_CAM_FDVT_RB>;
+> +		reg = <0 0x1502b000 0 0x1000>;
+> +		interrupts = <GIC_SPI 269 IRQ_TYPE_LEVEL_LOW>;
+> +		clocks = <&imgsys CLK_IMG_FDVT>;
+> +		clock-names = "fd";
 
--- 
-Dmitry
+This device has no power-domain?
+
+Regards,
+CK
+
+> +	};
+> +
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
