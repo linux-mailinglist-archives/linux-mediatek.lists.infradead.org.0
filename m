@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 02C8167DD5
-	for <lists+linux-mediatek@lfdr.de>; Sun, 14 Jul 2019 08:59:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 10F7567DD8
+	for <lists+linux-mediatek@lfdr.de>; Sun, 14 Jul 2019 09:01:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QBSnmHM/fDyDRBSNN27brgHG5FW0mK6vSMJ8k7Cfi/I=; b=BQQ/LQ35hLOTOd
-	ZVX1jAU5YSApFOQANHFsJ0lW7/bFupEy7lCfNmKXpeS1riMVR6OOOtbOokqVT7Ia41aSGiv6Dx3E+
-	fIZYctQxLMussDu0616uswb1ph29xfkrNJ+zjYaW2wu175Ci0izgNX4ayb5OMAOnUCXob7v6DGkDT
-	a2iet6EZE0HL7ADZn+Z3HfdCgyYaEc9PGdx62MrwPI6v6yD4tiy5uxuCFh3mvXmSzVzKU+VDfrRnv
-	DrNKlI+/izgOtBuwzoI8NoE2fAdF1fkaKSUNcj9AeH1HGM8v2FooIEQrMGRS7dVJV4PZMKSLqGf3G
-	lljt06mHNErWbwqJNS+Q==;
+	List-Owner; bh=iSe1VBucSk0aWoJOSKF93W2Uz0NNMS3hjKtlFBJxsxc=; b=da3/oeKbTYpQfT
+	foQgRdLkaEucwdf1N8feVQKCq0vUae4ayDfSrc2A68EC47F7RyaWn0Pe3bd6MKL05MaDylHI6KDPR
+	tPR1JkbgkfG2Ae01efSW8lVd7Mi7JCruGr/CBWr4ZphrEDoF0epSkF4FW/hkwBWJB9opS+NB/DrLq
+	ss6rsl7GDuddv2buRmVG43erJIXmJhtRPcYUyG0go6qnIST/SaM3EMeZ7wFWO/Tor/IVQZFrmC9kf
+	eI4lXsf9i88p9rK/muBKI8Uqb+BolkA4CgH5e+kZpXqzibd0QAgLEXuIK2hY8gn931g6JLqX5bSGA
+	ad9x8VPYnUznzkljMMSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hmYTK-000687-Dc; Sun, 14 Jul 2019 06:58:58 +0000
+	id 1hmYVV-0007Ze-ST; Sun, 14 Jul 2019 07:01:13 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hmYTG-00067m-7T
- for linux-mediatek@lists.infradead.org; Sun, 14 Jul 2019 06:58:55 +0000
-Received: from mail-wm1-f51.google.com (mail-wm1-f51.google.com
- [209.85.128.51])
+ id 1hmYVN-0007Z4-EX
+ for linux-mediatek@lists.infradead.org; Sun, 14 Jul 2019 07:01:10 +0000
+Received: from mail-wr1-f48.google.com (mail-wr1-f48.google.com
+ [209.85.221.48])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C51ED20C01
- for <linux-mediatek@lists.infradead.org>; Sun, 14 Jul 2019 06:58:52 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 7CEE6214C6
+ for <linux-mediatek@lists.infradead.org>; Sun, 14 Jul 2019 07:01:03 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563087533;
- bh=zKf8zOTbNEkJeWxR2L5x+aUe18MAd+GlbNHFKT3IklE=;
+ s=default; t=1563087663;
+ bh=adBrjHSpkk22mnLLbl/iv2929KizSrVFZ5lreBod0hA=;
  h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=F0CL7/fOf4I0dfT9nkKTVl0hequOYYgagU3kIN6PI72d03PXP/k9dZjMhhfQIXe5/
- 6rFm9aZyIz2l/rWtR7TFs95IFtq4qCqRPZeaw2RCOs71l8nU3fTPVEHybvyaceaTVe
- hlKNDxLGX9njz857e5WWdEsDbXW6/KF0ECyts8Bk=
-Received: by mail-wm1-f51.google.com with SMTP id g67so8098731wme.1
- for <linux-mediatek@lists.infradead.org>; Sat, 13 Jul 2019 23:58:52 -0700 (PDT)
-X-Gm-Message-State: APjAAAVaxlcscGHR+mexeilHulLkVFAhzUHIx71QsELTCUUXttCSZz1Y
- F2LGA+dcBEbnIQNgaYTJbLOkFjJPSVERDUZZW0g=
-X-Google-Smtp-Source: APXvYqza6QMmdfCOUlCkE/k1A3puE3espph5WDClbPv/gPN9SBkDRuznnEDTsIdSTaUndJF9LPH/eVlUPrKxDPQxYus=
-X-Received: by 2002:a05:600c:20c3:: with SMTP id
- y3mr18302011wmm.3.1563087531365; 
- Sat, 13 Jul 2019 23:58:51 -0700 (PDT)
+ b=ZaiE02rqd6G1ZfKrkA/mfUKEUS+ISsBIh9IAg0HongEUxTgbx2ozIkv0Nvq7WspTu
+ lOgaoK0tgxoXP+EwKXh0POA16C6XUD/lEK1EksJZEVNE75FnTKaH91nIcllyFQBg+V
+ dD38LXjoJ9h0iaF81Wqt6jtJhvnPEKXtCJfkASaU=
+Received: by mail-wr1-f48.google.com with SMTP id p17so13785634wrf.11
+ for <linux-mediatek@lists.infradead.org>; Sun, 14 Jul 2019 00:01:03 -0700 (PDT)
+X-Gm-Message-State: APjAAAUYL4oi8rFKew1w4BPYHJwKMJ85xTEJ24fqcNsPlspVkmjXT7ve
+ 0XQkB9cEMTWgd1mf+llzI6bElKF98/CEVQ/3pQM=
+X-Google-Smtp-Source: APXvYqwvuEQL8FEpumbvIIJm+cxQ5xe4+F60oXxmbyI8CcmjYg+8gQiJWbyNuLyDYFCJyMYz7zY5tM//mPwRq4LcVkY=
+X-Received: by 2002:a5d:50d1:: with SMTP id f17mr19352083wrt.124.1563087662038; 
+ Sun, 14 Jul 2019 00:01:02 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190712224700.11285-1-sean@mess.org>
-In-Reply-To: <20190712224700.11285-1-sean@mess.org>
+ <20190712224700.11285-3-sean@mess.org>
+In-Reply-To: <20190712224700.11285-3-sean@mess.org>
 From: Sean Wang <sean.wang@kernel.org>
-Date: Sat, 13 Jul 2019 23:58:40 -0700
-X-Gmail-Original-Message-ID: <CAGp9LzpVUExzvNZM2U2EcbTKg016xx3q0CGYXxqgaD+Y+UoRFA@mail.gmail.com>
-Message-ID: <CAGp9LzpVUExzvNZM2U2EcbTKg016xx3q0CGYXxqgaD+Y+UoRFA@mail.gmail.com>
-Subject: Re: [PATCH 1/3] media: mtk-cir: only allow protocols that have
- software decoders
+Date: Sun, 14 Jul 2019 00:00:50 -0700
+X-Gmail-Original-Message-ID: <CAGp9Lzq+RcizFgP4LJMxaH3K6Jcbk8jit8bv+3M2fwqwwV4NvA@mail.gmail.com>
+Message-ID: <CAGp9Lzq+RcizFgP4LJMxaH3K6Jcbk8jit8bv+3M2fwqwwV4NvA@mail.gmail.com>
+Subject: Re: [PATCH 3/3] media: mtk-cir: lower de-glitch counter for rc-mm
+ protocol
 To: Sean Young <sean@mess.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190713_235854_290938_5B12CF16 
-X-CRM114-Status: GOOD (  14.45  )
+X-CRM114-CacheID: sfid-20190714_000108_361464_1E3EB412 
+X-CRM114-Status: GOOD (  14.62  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -96,32 +96,48 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 On Fri, Jul 12, 2019 at 3:47 PM Sean Young <sean@mess.org> wrote:
 >
-> RC_PROTO_BIT_ALL includes protocols like unknown and other that do not
-> have IR decoders by definition. If these protocols are set in the
-> allowed_protocols, they will show in the protocols sysfs file but cannot
-> be enabled.
+> The rc-mm protocol can't be decoded by the mtk-cir since the de-glitch
+> filter removes pulses/spaces shorter than 294 microseconds.
+>
+> Tested on a BananaPi R2.
+
+Thanks for grabbing the board and do the test voluntarily.
+
 >
 > Signed-off-by: Sean Young <sean@mess.org>
 
 Acked-by: Sean Wang <sean.wang@kernel.org>
 
 > ---
->  drivers/media/rc/mtk-cir.c | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
+>  drivers/media/rc/mtk-cir.c | 8 ++++++++
+>  1 file changed, 8 insertions(+)
 >
 > diff --git a/drivers/media/rc/mtk-cir.c b/drivers/media/rc/mtk-cir.c
-> index 46101efe017b..9dc467ebae24 100644
+> index 9dc467ebae24..8027181de985 100644
 > --- a/drivers/media/rc/mtk-cir.c
 > +++ b/drivers/media/rc/mtk-cir.c
-> @@ -342,7 +342,7 @@ static int mtk_ir_probe(struct platform_device *pdev)
->         ir->rc->map_name = map_name ?: RC_MAP_EMPTY;
->         ir->rc->dev.parent = dev;
->         ir->rc->driver_name = MTK_IR_DEV;
-> -       ir->rc->allowed_protocols = RC_PROTO_BIT_ALL;
-> +       ir->rc->allowed_protocols = RC_PROTO_BIT_ALL_IR_DECODER;
->         ir->rc->rx_resolution = MTK_IR_SAMPLE;
->         ir->rc->timeout = MTK_MAX_SAMPLES * (MTK_IR_SAMPLE + 1);
+> @@ -35,6 +35,11 @@
+>  /* Fields containing pulse width data */
+>  #define MTK_WIDTH_MASK           (GENMASK(7, 0))
 >
+> +/* IR threshold */
+> +#define MTK_IRTHD               0x14
+> +#define MTK_DG_CNT_MASK                 (GENMASK(12, 8))
+> +#define MTK_DG_CNT(x)           ((x) << 8)
+> +
+>  /* Bit to enable interrupt */
+>  #define MTK_IRINT_EN             BIT(0)
+>
+> @@ -400,6 +405,9 @@ static int mtk_ir_probe(struct platform_device *pdev)
+>         mtk_w32_mask(ir, val, ir->data->fields[MTK_HW_PERIOD].mask,
+>                      ir->data->fields[MTK_HW_PERIOD].reg);
+>
+> +       /* Set de-glitch counter */
+> +       mtk_w32_mask(ir, MTK_DG_CNT(1), MTK_DG_CNT_MASK, MTK_IRTHD);
+> +
+>         /* Enable IR and PWM */
+>         val = mtk_r32(ir, MTK_CONFIG_HIGH_REG);
+>         val |= MTK_OK_COUNT(ir->data->ok_count) |  MTK_PWM_EN | MTK_IR_EN;
 > --
 > 2.21.0
 >
