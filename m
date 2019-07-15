@@ -2,67 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 40E60685FC
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jul 2019 11:07:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B1B5D686AC
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jul 2019 11:52:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UixML0QpljIDi1h1S+HiOGLDM+UDEiWGtGhZuuIrP8I=; b=oGdQLZ8HYC9xQX
-	nz3LaVseHfT6OOGsMHAdINgKdO6BOEul6KfNqwPuQfB1bUWSYZa8qGMmkyW+Andr2WXK5nHESucZY
-	CBPCnkOBdhze2QLdgAo//uLUEWiiawezboZsbAtgE3Pry35T6QakzN/DgF0uP8Dgw0CepXpdoIc8J
-	uYEWvsWIlUeHX8orPPSpB/nUnVIA9v4a2NH40fBSqj0mdV8Mb77+wsEoOVKeVLBynRVtU2eccUJa6
-	O8vMHkoSxPgYimJbiHNLrP/rGiR+tXXxlSE8zdCcyFOTWlVYsoh/nskbDooIvfVUhhvBevcgmqtHC
-	xl8ySl8iv1k04wzcwHHg==;
+	List-Owner; bh=1ubRsrLQFQf4JFRd4uZ8HhfAXrYWv5vJes8TYLmBcJw=; b=nI74GNQXv9FA79
+	HlYW6DNC2fKySQ+AcougI6zROSnsTfULn3IoYi5UlMTij6p+3HXlwBBBn/aqh/wFs7UaZmQTgUmD4
+	XfEL332gwWfsKmdqOjf/byhKkUhYiB7uzRt+Af4LfGFh/cHRSAcDQl39sMtrpJqB00M1xIGST1cLp
+	KgViDSHy/u0feYRaNCwSby07o79lUzXPk6i8xKqZ6FDCIB8+b8fAcZoxAgU00CoL1JQ43+x3BDynb
+	jSl2bPY03nK5ikJR8U52IBzQYm5YicP2LC/0/N56ONjtkgXYg/b5NTt+nEuZfedjSiZDvfdKcKQKx
+	AzgpOhpDyawvUjzbolmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hmwxJ-0003a3-7J; Mon, 15 Jul 2019 09:07:33 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hmxej-0006hg-Rl; Mon, 15 Jul 2019 09:52:25 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hmwxC-0003Yb-Sl; Mon, 15 Jul 2019 09:07:28 +0000
-X-UUID: 7b0de748f132453497bca62cd9e6db63-20190715
-X-UUID: 7b0de748f132453497bca62cd9e6db63-20190715
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <weiyi.lu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 87405591; Mon, 15 Jul 2019 01:07:21 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 15 Jul 2019 02:07:19 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 15 Jul 2019 17:07:17 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 15 Jul 2019 17:07:17 +0800
-Message-ID: <1563181637.6212.1.camel@mtksdaap41>
-Subject: Re: [PATCH v6 14/14] arm64: dts: Add power controller device node
- of MT8183
-From: Weiyi Lu <weiyi.lu@mediatek.com>
-To: CK Hu <ck.hu@mediatek.com>
-Date: Mon, 15 Jul 2019 17:07:17 +0800
-In-Reply-To: <1563178045.17756.5.camel@mtksdaap41>
-References: <1560998286-9189-1-git-send-email-weiyi.lu@mediatek.com>
- <1560998286-9189-15-git-send-email-weiyi.lu@mediatek.com>
- <1561971461.12937.8.camel@mtksdaap41> <1563178045.17756.5.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hmxeO-0006WA-PN; Mon, 15 Jul 2019 09:52:06 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id C6F1C20868;
+ Mon, 15 Jul 2019 09:52:00 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1563184324;
+ bh=Sehveqjg8zwSH5xO1XpEINg8wkrvEYGXw3Z1knB6BbE=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=BhsQfTxgg8czwGQZz8JkgGjKDf1ZGfgLfcdEUEeuBK59aMQv0s0KkpWQli8kmNZu+
+ PYYQ5VTcRmhQQCSkuwCfjagxTyWoUkGvUbZlEV6y192UxDDiz41REyR9BaplKLTNNE
+ jV2NKFA41J30+3Siqmv1Yv+aWyjmNAWRQ8axIH+U=
+Date: Mon, 15 Jul 2019 10:51:57 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH v8 07/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
+ Mode
+Message-ID: <20190715095156.xczfkbm6zpjueq32@willie-the-truck>
+References: <1561774167-24141-1-git-send-email-yong.wu@mediatek.com>
+ <1561774167-24141-8-git-send-email-yong.wu@mediatek.com>
+ <20190710143649.w5dplhzdpi3bxp7e@willie-the-truck>
+ <1562846036.31342.10.camel@mhfsdcap03>
+ <20190711123129.da4rg35b54u4svfw@willie-the-truck>
+ <1563079280.31342.22.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E85F5C133B8ECC2E8D1DE3A88F2319535B6D2C018EE2364BE17426B7BBCAD5252000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1563079280.31342.22.camel@mhfsdcap03>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_020726_938538_D15EB0BA 
-X-CRM114-Status: GOOD (  26.81  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190715_025204_864982_2CC7B0FF 
+X-CRM114-Status: GOOD (  28.78  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,253 +81,125 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, James Liao <jamesjj.liao@mediatek.com>,
- linux-kernel@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Yong Wu <yong.wu@mediatek.com>
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
+ Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ chao.hao@mediatek.com, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
+ anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-07-15 at 16:07 +0800, CK Hu wrote:
-> Hi, Weiyi:
-> 
-> On Mon, 2019-07-01 at 16:57 +0800, CK Hu wrote:
-> > Hi, Weiyi:
+On Sun, Jul 14, 2019 at 12:41:20PM +0800, Yong Wu wrote:
+> On Thu, 2019-07-11 at 13:31 +0100, Will Deacon wrote:
+> > This looks like the right sort of idea. Basically, I was thinking that you
+> > can use the oas in conjunction with the quirk to specify whether or not
+> > your two magic bits should be set. You could also then cap the oas using
+> > the size of phys_addr_t to deal with my other comment.
 > > 
-> > On Thu, 2019-06-20 at 10:38 +0800, Weiyi Lu wrote:
-> > > Add power controller node and smi-common node for MT8183
-> > > In scpsys node, it contains clocks and regmapping of
-> > > infracfg and smi-common for bus protection.
-> > > 
-> > > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
-> > > ---
-> > >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 62 ++++++++++++++++++++++++++++++++
-> > >  1 file changed, 62 insertions(+)
-> > > 
-> > > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > index 08274bf..75c4881 100644
-> > > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > @@ -8,6 +8,7 @@
-> > >  #include <dt-bindings/clock/mt8183-clk.h>
-> > >  #include <dt-bindings/interrupt-controller/arm-gic.h>
-> > >  #include <dt-bindings/interrupt-controller/irq.h>
-> > > +#include <dt-bindings/power/mt8183-power.h>
-> > >  
-> > >  / {
-> > >  	compatible = "mediatek,mt8183";
-> > > @@ -196,6 +197,62 @@
-> > >  			#clock-cells = <1>;
-> > >  		};
-> > >  
-> > > +		scpsys: syscon@10006000 {
-> > > +			compatible = "mediatek,mt8183-scpsys", "syscon";
-> > > +			#power-domain-cells = <1>;
-> > > +			reg = <0 0x10006000 0 0x1000>;
-> > > +			clocks = <&topckgen CLK_TOP_MUX_AUD_INTBUS>,
-> > > +				 <&infracfg CLK_INFRA_AUDIO>,
-> > > +				 <&infracfg CLK_INFRA_AUDIO_26M_BCLK>,
-> > > +				 <&topckgen CLK_TOP_MUX_MFG>,
-> > > +				 <&topckgen CLK_TOP_MUX_MM>,
-> > > +				 <&topckgen CLK_TOP_MUX_CAM>,
-> > > +				 <&topckgen CLK_TOP_MUX_IMG>,
-> > > +				 <&topckgen CLK_TOP_MUX_IPU_IF>,
-> > > +				 <&topckgen CLK_TOP_MUX_DSP>,
-> > > +				 <&topckgen CLK_TOP_MUX_DSP1>,
-> > > +				 <&topckgen CLK_TOP_MUX_DSP2>,
-> > > +				 <&mmsys CLK_MM_SMI_COMMON>,
-> > > +				 <&mmsys CLK_MM_SMI_LARB0>,
-> > > +				 <&mmsys CLK_MM_SMI_LARB1>,
-> > > +				 <&mmsys CLK_MM_GALS_COMM0>,
-> > > +				 <&mmsys CLK_MM_GALS_COMM1>,
-> > > +				 <&mmsys CLK_MM_GALS_CCU2MM>,
-> > > +				 <&mmsys CLK_MM_GALS_IPU12MM>,
-> > > +				 <&mmsys CLK_MM_GALS_IMG2MM>,
-> > > +				 <&mmsys CLK_MM_GALS_CAM2MM>,
-> > > +				 <&mmsys CLK_MM_GALS_IPU2MM>,
+> > Finally, I was hoping you could drop the |= BIT_ULL(32) and the &=
+> > ~BIT_ULL(32) bits of the mtk driver if the pgtable code now accepts higher
+> > addresses. Did that not work out?
 > 
-> I've removed all mmsys clock in scpsys node and display still works, so
-> I think these subsys clock could be removed from scpsys node. It's
-> reasonable that subsys clock is controlled by subsys device or the
-> device use it. In MT2712 [1], the scpsys does not control subsys clock
-> and it works, so I think you should remove subsys clock in scpsys device
-> node.
+> After the current patch, the pgtable has accepted the higher address.
+> the " |= BIT_ULL(32)" and "& = ~ BIT_ULL(32)" is for a special case(we
+> call it 4GB mode).
 > 
-> [1]
-> https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm64/boot/dts/mediatek/mt2712e.dtsi?h=v5.2
+> Now MediaTek IOMMU support 2 kind memory:
+> 1) normal case: PA is 0x4000_0000 - 0x3_ffff_ffff. the PA won't be
+> remapped. mt8183 and the non-4GB mode of mt8173/mt2712 use this mode.
 > 
-> Regards,
-> CK
+> 2) 4GB Mode: PA is 0x4000_0000 - 0x1_3fff_ffff. But the PA will remapped
+> to 0x1_0000_0000 to 0x1_ffff_ffff. This is for the 4GB mode of
+> mt8173/mt2712. This case is so special that we should change the PA
+> manually(add bit32).
+> (mt2712 and mt8173 have both mode: 4GB and non-4GB.)
 > 
+> If we try to use oas and our quirk to cover this two case. Then I can
+> use "oas == 33" only for this 4GB mode. and "oas == 34" for the normal
+> case even though the PA mayn't reach 34bit. Also I should add some
+> "workaround" for the 4GB mode(oas==33).
+> 
+> I copy the new patch in the mail below(have dropped the "|= BIT_ULL(32)"
+> and the "&= ~BIT_ULL(32)) in mtk iommu". please help have a look if it
+> is ok.
+> (another thing: Current the PA can support over 4GB. So the quirk name
+> "MTK_4GB" looks not suitable, I used a new patch rename to "MTK_EXT").
 
-Hello CK,
+Makes sense, thanks. One comment below.
 
-Sorry, I can't agree with you at all.
-I thought you just created an environment where the MM (DISP) power
-domain could not be turned on and off properly.
-If you delete those mmsys clocks listed, bus protection will not work.
-These clocks are used for bus protection that I mentioned in patch [2].
-I guess you are now trying to solve the problem that mmsys blocks are
-used for probing two drivers. One for the display and another for the
-clock. Right?
-In the previous test you mentioned, you have affected the registration
-of mmsys clock first. This is why you saw the boot failure. I think boot
-failure is the real problem I should avoid if mmsys clock cannot probe.
+> @@ -205,7 +216,20 @@ static phys_addr_t iopte_to_paddr(arm_v7s_iopte
+> pte, int lvl,
+>  	else
+>  		mask = ARM_V7S_LVL_MASK(lvl);
+>  
+> -	return pte & mask;
+> +	paddr = pte & mask;
+> +	if (IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT) &&
+> +	    (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)) {
+> +		/*
+> +		 * Workaround for MTK 4GB Mode:
+> +		 * Add BIT32 only when PA < 0x4000_0000.
+> +		 */
+> +		if ((cfg->oas == 33 && paddr < 0x40000000UL) ||
+> +		    (cfg->oas > 33 && (pte & ARM_V7S_ATTR_MTK_PA_BIT32)))
+> +			paddr |= BIT_ULL(32);
+> +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
+> +			paddr |= BIT_ULL(33);
+> +	}
+> +	return paddr;
+>  }
+>  
+>  static arm_v7s_iopte *iopte_deref(arm_v7s_iopte pte, int lvl,
+> @@ -326,9 +350,6 @@ static arm_v7s_iopte arm_v7s_prot_to_pte(int prot,
+> int lvl,
+>  	if (lvl == 1 && (cfg->quirks & IO_PGTABLE_QUIRK_ARM_NS))
+>  		pte |= ARM_V7S_ATTR_NS_SECTION;
+>  
+> -	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)
+> -		pte |= ARM_V7S_ATTR_MTK_4GB;
+> -
+>  	return pte;
+>  }
+>  
+> @@ -742,7 +763,9 @@ static struct io_pgtable
+> *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+>  {
+>  	struct arm_v7s_io_pgtable *data;
+>  
+> -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+> +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+> +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+> +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+>  		return NULL;
 
-[2] https://patchwork.kernel.org/patch/11005747/
+I think you can rework this to do something like:
 
-> 
-> > 
-> > Up to now, MT8183 mmsys has the same resource with another device node:
-> > 
-> > 		mmsys: syscon@14000000 {
-> > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > 			reg = <0 0x14000000 0 0x1000>;
-> > 			#clock-cells = <1>;
-> > 		};
-> > 
-> > 		display_components: dispsys@14000000 {
-> > 			compatible = "mediatek,mt8183-display";
-> > 			reg = <0 0x14000000 0 0x1000>;
-> > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > 		};
-> > 
-> > I think this two node should be merge into one node, so I've try to
-> > merge them:
-> > 
-> > 		mmsys: syscon@14000000 {
-> > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > 			reg = <0 0x14000000 0 0x1000>;
-> > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > 			#clock-cells = <1>;
-> > 		};
-> > 
-> > But I got a kernel panic when boot,
-> > 
-> > [    3.458523] Unable to handle kernel paging request at virtual address
-> > fffffffffffffdfb
-> > [    3.466999] Mem abort info:
-> > [    3.470116]   ESR = 0x96000005
-> > [    3.473268]   Exception class = DABT (current EL), IL = 32 bits
-> > [    3.479375]   SET = 0, FnV = 0
-> > [    3.482530]   EA = 0, S1PTW = 0
-> > [    3.485785] Data abort info:
-> > [    3.488831]   ISV = 0, ISS = 0x00000005
-> > [    3.493067]   CM = 0, WnR = 0
-> > [    3.496229] swapper pgtable: 4k pages, 39-bit VAs, pgdp =
-> > 000000004f8fa26d
-> > [    3.503214] [fffffffffffffdfb] pgd=0000000000000000,
-> > pud=0000000000000000
-> > [    3.510408] Internal error: Oops: 96000005 [#1] PREEMPT SMP
-> > [    3.515974] Modules linked in:
-> > [    3.519023] Process kworker/0:3 (pid: 106, stack limit =
-> > 0x00000000281d0651)
-> > [    3.526066] CPU: 0 PID: 106 Comm: kworker/0:3 Tainted: G        W
-> > 4.19.43 #208
-> > [    3.533974] Hardware name: MediaTek kukui rev1 board (DT)
-> > [    3.539374] Workqueue: events deferred_probe_work_func
-> > [    3.544507] pstate: 20000005 (nzCv daif -PAN -UAO)
-> > [    3.549294] pc : clk_prepare+0x18/0x40
-> > [    3.553038] lr : scpsys_clk_enable+0x40/0xb4
-> > [    3.557299] sp : ffffff800855b9e0
-> > [    3.560606] x29: ffffff800855b9f0 x28: ffffff93e1e5f594
-> > [    3.565911] x27: 000000000000000f x26: ffffff93e1e5e9b8
-> > [    3.571217] x25: 000000003b9aca00 x24: ffffff800858530c
-> > [    3.576522] x23: ffffffffffffffff x22: fffffffffffffdfb
-> > [    3.581827] x21: 000000000000000a x20: ffffffccb89aafc8
-> > [    3.587132] x19: fffffffffffffdfb x18: 00005a5c77082016
-> > [    3.592438] x17: 0000000000000400 x16: 0000000000000001
-> > [    3.597743] x15: 0000000000000009 x14: ffffff93e271c908
-> > [    3.603048] x13: 0000000000000b22 x12: 0000000000000008
-> > [    3.608353] x11: 0000000001d063de x10: 0000000000000008
-> > [    3.613659] x9 : 00000000ffffffed x8 : 0000000000000000
-> > [    3.618964] x7 : 736d6c2dff7224fe x6 : 0000008000000000
-> > [    3.624269] x5 : 0000000000000000 x4 : 0000000080000000
-> > [    3.629575] x3 : 002f6d6e74000000 x2 : 0000000000000000
-> > [    3.634880] x1 : 000000000000000a x0 : fffffffffffffdfb
-> > [    3.640185] Call trace:
-> > [    3.642625]  clk_prepare+0x18/0x40
-> > [    3.646019]  scpsys_clk_enable+0x40/0xb4
-> > [    3.649935]  scpsys_power_on+0x13c/0x304
-> > [    3.653850]  scpsys_probe+0xe0/0x5fc
-> > [    3.657419]  platform_drv_probe+0x80/0xb0
-> > [    3.661420]  really_probe+0x114/0x28c
-> > [    3.665075]  driver_probe_device+0x64/0xfc
-> > [    3.669164]  __device_attach_driver+0xb8/0xd0
-> > [    3.673513]  bus_for_each_drv+0x88/0xd0
-> > [    3.677341]  __device_attach+0xac/0x130
-> > [    3.681169]  device_initial_probe+0x20/0x2c
-> > [    3.685344]  bus_probe_device+0x34/0x90
-> > [    3.689172]  deferred_probe_work_func+0x74/0xac
-> > [    3.693698]  process_one_work+0x210/0x420
-> > [    3.697700]  worker_thread+0x278/0x3e4
-> > [    3.701443]  kthread+0x11c/0x12c
-> > [    3.704665]  ret_from_fork+0x10/0x18
-> > 
-> > I'm not really understand what happen, but scpsys and mmsys point to
-> > each other in MT8183. Why these two node point to each other in MT8183?
-> > If this is really hardware limitation, we need to solve this in driver.
-> > If this is not a hardware limitation, I would like to re-organize device
-> > tree to prevent this problem.
-> > 
-> > Regards,
-> > CK
-> > 
-> > 
-> > > +				 <&imgsys CLK_IMG_LARB5>,
-> > > +				 <&imgsys CLK_IMG_LARB2>,
-> > > +				 <&camsys CLK_CAM_LARB6>,
-> > > +				 <&camsys CLK_CAM_LARB3>,
-> > > +				 <&camsys CLK_CAM_SENINF>,
-> > > +				 <&camsys CLK_CAM_CAMSV0>,
-> > > +				 <&camsys CLK_CAM_CAMSV1>,
-> > > +				 <&camsys CLK_CAM_CAMSV2>,
-> > > +				 <&camsys CLK_CAM_CCU>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_IPU>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_AHB>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_AXI>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_ISP>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_CAM_ADL>,
-> > > +				 <&ipu_conn CLK_IPU_CONN_IMG_ADL>;
-> > > +			clock-names = "audio", "audio1", "audio2",
-> > > +				      "mfg", "mm", "cam",
-> > > +				      "isp", "vpu", "vpu1",
-> > > +				      "vpu2", "vpu3", "mm-0",
-> > > +				      "mm-1", "mm-2", "mm-3",
-> > > +				      "mm-4", "mm-5", "mm-6",
-> > > +				      "mm-7", "mm-8", "mm-9",
-> > > +				      "isp-0", "isp-1", "cam-0",
-> > > +				      "cam-1", "cam-2", "cam-3",
-> > > +				      "cam-4", "cam-5", "cam-6",
-> > > +				      "vpu-0", "vpu-1", "vpu-2",
-> > > +				      "vpu-3", "vpu-4", "vpu-5";
-> > > +			infracfg = <&infracfg>;
-> > > +			smi_comm = <&smi_common>;
-> > > +		};
-> > > +
-> > >  		apmixedsys: syscon@1000c000 {
-> > >  			compatible = "mediatek,mt8183-apmixedsys", "syscon";
-> > >  			reg = <0 0x1000c000 0 0x1000>;
-> > > @@ -260,6 +317,11 @@
-> > >  			#clock-cells = <1>;
-> > >  		};
-> > >  
-> > > +		smi_common: smi@14019000 {
-> > > +			compatible = "mediatek,mt8183-smi-common", "syscon";
-> > > +			reg = <0 0x14019000 0 0x1000>;
-> > > +		};
-> > > +
-> > >  		imgsys: syscon@15020000 {
-> > >  			compatible = "mediatek,mt8183-imgsys", "syscon";
-> > >  			reg = <0 0x15020000 0 0x1000>;
-> > 
-> 
-> 
+	if (cfg->ias > ARM_V7S_ADDR_BITS)
+		return NULL;
 
+	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
+		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
+			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
+		else if (cfg->oas > 34)
+			return NULL;
+	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
+		return NULL;
+	}
 
+so that we clamp the oas when phys_addr_t is 32-bit for you. That should
+allow you to remove lots of the checking from iopte_to_paddr() too if you
+check against oas in the map() function.
+
+Does that make sense?
+
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
