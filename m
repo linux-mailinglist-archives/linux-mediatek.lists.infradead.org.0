@@ -2,68 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 19A5D6826B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jul 2019 05:07:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 96004684D6
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jul 2019 10:08:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hpr5g/rZfU15tzMVMMxCVP6+CT+zYpd4jJ3OjFomPCU=; b=irgaMEk+FiAOK1
-	SP9nVZn9Wv4pNoVWN4nJ5bPBLgvsNYZWFOmP4/60/2UWnNeRmsSLOOAkppaJzXbkzXhsZXyshdSqo
-	8DFVVqOCyXGOIaQDozRoZawlxtJ9UIhTCelb14VxeIPeIG9vHohT/WkZTO5PCq41favBWzXMPfk34
-	Wm0RRYwN9Qxfi6qj2uZq8xQRIDHIbc28lMpGnPSI1MGSaNal+Ajy808gyNpjIE0EfaeHmJ5GpSyHM
-	Mwc3uNpUfxY6CoF+c5ehheWel3iMYmRW6rrOws3gQhPZQ0lo6WmU9nxaMM4a+Tj1XwFC2nLT/lpN2
-	Dv5cxO77vofRUQY/sBGg==;
+	List-Owner; bh=Fao2+19ev/bgsFJ+1uXlaASdXCUtSDwCQPg6XUiR0RM=; b=D2rOMl/N/oBERo
+	DTCuyhQStUQow8KuRvOPX1c61Pzh4yqT/zm+4TGTxZ7/zNDHW1lbgatTwFQ5Naw3uSh3MAzzQ2AqT
+	4kXuWxaJSO8wwL4Gh5klQYiHMzipYYONRH/5uuv9y0LgLjQVKiannAxjmkYM4MQHFVuqMvENe/7no
+	acOKWgqEpS+JBhDGWyvfkCdVI5BQO0vlmT9o6YakNuAo5HM6O7JLeQPDc/0LxVgzYbFHRsmFYUhPu
+	1z0uWjzwoEY3jrBU02FTBrS2fpnSYWDbn66ZmA/ftEQB9ZCdXbVzAAiRFZeaxMSnmwtyBb7qo1Uhg
+	m8liVoYabzZNMLmWWTlw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hmrKN-0007jy-TI; Mon, 15 Jul 2019 03:06:59 +0000
+	id 1hmw1d-0005t9-Gk; Mon, 15 Jul 2019 08:07:57 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hmrKH-0007j9-EE; Mon, 15 Jul 2019 03:06:55 +0000
-X-UUID: 818553dd33224673bda5619ed769cd28-20190714
-X-UUID: 818553dd33224673bda5619ed769cd28-20190714
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ id 1hmw1V-0005sW-8J; Mon, 15 Jul 2019 08:07:51 +0000
+X-UUID: 85d7f2a314d64bafa353643d4280f63b-20190715
+X-UUID: 85d7f2a314d64bafa353643d4280f63b-20190715
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1448161256; Sun, 14 Jul 2019 19:06:44 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 1413346730; Mon, 15 Jul 2019 00:07:35 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 14 Jul 2019 20:06:42 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 15 Jul 2019 11:06:41 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ 15.0.1395.4; Mon, 15 Jul 2019 01:07:34 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 15 Jul 2019 16:07:25 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 15 Jul 2019 11:06:40 +0800
-Message-ID: <1563160001.4793.4.camel@mtksdccf07>
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Date: Mon, 15 Jul 2019 11:06:41 +0800
-In-Reply-To: <37897fb7-88c1-859a-dfcc-0a5e89a642e0@virtuozzo.com>
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07>
- <1560479520.15814.34.camel@mtksdccf07>
- <1560744017.15814.49.camel@mtksdccf07>
- <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
- <1560774735.15814.54.camel@mtksdccf07>
- <1561974995.18866.1.camel@mtksdccf07>
- <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
- <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
- <1562640832.9077.32.camel@mtksdccf07>
- <d9fd1d5b-9516-b9b9-0670-a1885e79f278@virtuozzo.com>
- <1562839579.5846.12.camel@mtksdccf07>
- <37897fb7-88c1-859a-dfcc-0a5e89a642e0@virtuozzo.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ Transport; Mon, 15 Jul 2019 16:07:25 +0800
+Message-ID: <1563178045.17756.5.camel@mtksdaap41>
+Subject: Re: [PATCH v6 14/14] arm64: dts: Add power controller device node
+ of MT8183
+From: CK Hu <ck.hu@mediatek.com>
+To: Weiyi Lu <weiyi.lu@mediatek.com>
+Date: Mon, 15 Jul 2019 16:07:25 +0800
+In-Reply-To: <1561971461.12937.8.camel@mtksdaap41>
+References: <1560998286-9189-1-git-send-email-weiyi.lu@mediatek.com>
+ <1560998286-9189-15-git-send-email-weiyi.lu@mediatek.com>
+ <1561971461.12937.8.camel@mtksdaap41>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 00265334C7C4C211B255AB08A6A2B83B0965001444E0DE4F22F6DBA032388C482000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190714_200653_488405_3C9A1EF1 
-X-CRM114-Status: GOOD (  21.33  )
+X-CRM114-CacheID: sfid-20190715_010749_302593_C7617414 
+X-CRM114-Status: GOOD (  21.32  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -84,86 +74,235 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Jason
- A . Donenfeld" <Jason@zx2c4.com>, Vasily
- Gorbik <gor@linux.ibm.com>, Arnd Bergmann <arnd@arndb.de>,
- Linux-MM <linux-mm@kvack.org>, Andrey Konovalov <andreyknvl@google.com>,
- LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
- Pekka Enberg <penberg@kernel.org>, Martin
- Schwidefsky <schwidefsky@de.ibm.com>, Miles Chen <miles.chen@mediatek.com>,
- Alexander Potapenko <glider@google.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- David Rientjes <rientjes@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Dmitry Vyukov <dvyukov@google.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Rob Herring <robh@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream@mediatek.com, James Liao <jamesjj.liao@mediatek.com>,
+ linux-kernel@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Yong Wu <yong.wu@mediatek.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gRnJpLCAyMDE5LTA3LTEyIGF0IDEzOjUyICswMzAwLCBBbmRyZXkgUnlhYmluaW4gd3JvdGU6
-Cj4gCj4gT24gNy8xMS8xOSAxOjA2IFBNLCBXYWx0ZXIgV3Ugd3JvdGU6Cj4gPiBPbiBXZWQsIDIw
-MTktMDctMTAgYXQgMjE6MjQgKzAzMDAsIEFuZHJleSBSeWFiaW5pbiB3cm90ZToKPiA+Pgo+ID4+
-IE9uIDcvOS8xOSA1OjUzIEFNLCBXYWx0ZXIgV3Ugd3JvdGU6Cj4gPj4+IE9uIE1vbiwgMjAxOS0w
-Ny0wOCBhdCAxOTozMyArMDMwMCwgQW5kcmV5IFJ5YWJpbmluIHdyb3RlOgo+ID4+Pj4KPiA+Pj4+
-IE9uIDcvNS8xOSA0OjM0IFBNLCBEbWl0cnkgVnl1a292IHdyb3RlOgo+ID4+Pj4+IE9uIE1vbiwg
-SnVsIDEsIDIwMTkgYXQgMTE6NTYgQU0gV2FsdGVyIFd1IDx3YWx0ZXItemgud3VAbWVkaWF0ZWsu
-Y29tPiB3cm90ZToKPiA+Pgo+ID4+Pj4+Cj4gPj4+Pj4gU29ycnkgZm9yIGRlbGF5cy4gSSBhbSBv
-dmVyd2hlbG0gYnkgc29tZSB1cmdlbnQgd29yay4gSSBhZnJhaWQgdG8KPiA+Pj4+PiBwcm9taXNl
-IGFueSBkYXRlcyBiZWNhdXNlIHRoZSBuZXh0IHdlZWsgSSBhbSBvbiBhIGNvbmZlcmVuY2UsIHRo
-ZW4KPiA+Pj4+PiBhZ2FpbiBhIGJhY2tsb2cgYW5kIGFuIGludGVybiBzdGFydGluZy4uLgo+ID4+
-Pj4+Cj4gPj4+Pj4gQW5kcmV5LCBkbyB5b3Ugc3RpbGwgaGF2ZSBjb25jZXJucyByZSB0aGlzIHBh
-dGNoPyBUaGlzIGNoYW5nZSBhbGxvd3MKPiA+Pj4+PiB0byBwcmludCB0aGUgZnJlZSBzdGFjay4K
-PiA+Pj4+Cj4gPj4+PiBJICdtIG5vdCBzdXJlIHRoYXQgcXVhcmFudGluZSBpcyBhIGJlc3Qgd2F5
-IHRvIGRvIHRoYXQuIFF1YXJhbnRpbmUgaXMgbWFkZSB0byBkZWxheSBmcmVlaW5nLCBidXQgd2Ug
-ZG9uJ3QgdGhhdCBoZXJlLgo+ID4+Pj4gSWYgd2Ugd2FudCB0byByZW1lbWJlciBtb3JlIGZyZWUg
-c3RhY2tzIHdvdWxkbid0IGJlIGVhc2llciBzaW1wbHkgdG8gcmVtZW1iZXIgbW9yZSBzdGFja3Mg
-aW4gb2JqZWN0IGl0c2VsZj8KPiA+Pj4+IFNhbWUgZm9yIHByZXZpb3VzbHkgdXNlZCB0YWdzIGZv
-ciBiZXR0ZXIgdXNlLWFmdGVyLWZyZWUgaWRlbnRpZmljYXRpb24uCj4gPj4+Pgo+ID4+Pgo+ID4+
-PiBIaSBBbmRyZXksCj4gPj4+Cj4gPj4+IFdlIGV2ZXIgdHJpZWQgdG8gdXNlIG9iamVjdCBpdHNl
-bGYgdG8gZGV0ZXJtaW5lIHVzZS1hZnRlci1mcmVlCj4gPj4+IGlkZW50aWZpY2F0aW9uLCBidXQg
-dGFnLWJhc2VkIEtBU0FOIGltbWVkaWF0ZWx5IHJlbGVhc2VkIHRoZSBwb2ludGVyCj4gPj4+IGFm
-dGVyIGNhbGwga2ZyZWUoKSwgdGhlIG9yaWdpbmFsIG9iamVjdCB3aWxsIGJlIHVzZWQgYnkgYW5v
-dGhlcgo+ID4+PiBwb2ludGVyLCBpZiB3ZSB1c2Ugb2JqZWN0IGl0c2VsZiB0byBkZXRlcm1pbmUg
-dXNlLWFmdGVyLWZyZWUgaXNzdWUsIHRoZW4KPiA+Pj4gaXQgaGFzIG1hbnkgZmFsc2UgbmVnYXRp
-dmUgY2FzZXMuIHNvIHdlIGNyZWF0ZSBhIGxpdGUgcXVhcmFudGluZShyaW5nCj4gPj4+IGJ1ZmZl
-cnMpIHRvIHJlY29yZCByZWNlbnQgZnJlZSBzdGFja3MgaW4gb3JkZXIgdG8gYXZvaWQgdGhvc2Ug
-ZmFsc2UKPiA+Pj4gbmVnYXRpdmUgc2l0dWF0aW9ucy4KPiA+Pgo+ID4+IEknbSB0ZWxsaW5nIHRo
-YXQgKm1vcmUqIHRoYW4gb25lIGZyZWUgc3RhY2sgYW5kIGFsc28gdGFncyBwZXIgb2JqZWN0IGNh
-biBiZSBzdG9yZWQuCj4gPj4gSWYgb2JqZWN0IHJldXNlZCB3ZSB3b3VsZCBzdGlsbCBoYXZlIGlu
-Zm9ybWF0aW9uIGFib3V0IG4tbGFzdCB1c2FnZXMgb2YgdGhlIG9iamVjdC4KPiA+PiBJdCBzZWVt
-cyBsaWtlIG11Y2ggZWFzaWVyIGFuZCBtb3JlIGVmZmljaWVudCBzb2x1dGlvbiB0aGFuIHBhdGNo
-IHlvdSBwcm9wb3NpbmcuCj4gPj4KPiA+IFRvIG1ha2UgdGhlIG9iamVjdCByZXVzZWQsIHdlIG11
-c3QgZW5zdXJlIHRoYXQgbm8gb3RoZXIgcG9pbnRlcnMgdXNlcyBpdAo+ID4gYWZ0ZXIga2ZyZWUo
-KSByZWxlYXNlIHRoZSBwb2ludGVyLgo+ID4gU2NlbmFyaW86Cj4gPiAxKS4gVGhlIG9iamVjdCBy
-ZXVzZWQgaW5mb3JtYXRpb24gaXMgdmFsaWQgd2hlbiBubyBhbm90aGVyIHBvaW50ZXIgdXNlcwo+
-ID4gaXQuCj4gPiAyKS4gVGhlIG9iamVjdCByZXVzZWQgaW5mb3JtYXRpb24gaXMgaW52YWxpZCB3
-aGVuIGFub3RoZXIgcG9pbnRlciB1c2VzCj4gPiBpdC4KPiA+IERvIHlvdSBtZWFuIHRoYXQgdGhl
-IG9iamVjdCByZXVzZWQgaXMgc2NlbmFyaW8gMSkgPwo+ID4gSWYgeWVzLCBtYXliZSB3ZSBjYW4g
-Y2hhbmdlIHRoZSBjYWxsaW5nIHF1YXJhbnRpbmVfcHV0KCkgbG9jYXRpb24uIEl0Cj4gPiB3aWxs
-IGJlIGZ1bGx5IHVzZSB0aGF0IHF1YXJhbnRpbmUsIGJ1dCBhdCBzY2VuYXJpbyAyKSBpdCBsb29r
-cyBsaWtlIHRvCj4gPiBuZWVkIHRoaXMgcGF0Y2guCj4gPiBJZiBubywgbWF5YmUgaSBtaXNzIHlv
-dXIgbWVhbmluZywgd291bGQgeW91IHRlbGwgbWUgaG93IHRvIHVzZSBpbnZhbGlkCj4gPiBvYmpl
-Y3QgaW5mb3JtYXRpb24/IG9yPwo+ID4gCj4gCj4gCj4gS0FTQU4ga2VlcHMgaW5mb3JtYXRpb24g
-YWJvdXQgb2JqZWN0IHdpdGggdGhlIG9iamVjdCwgcmlnaHQgYWZ0ZXIgcGF5bG9hZCBpbiB0aGUg
-a2FzYW5fYWxsb2NfbWV0YSBzdHJ1Y3QuCj4gVGhpcyBpbmZvcm1hdGlvbiBpcyBhbHdheXMgdmFs
-aWQgYXMgbG9uZyBhcyBzbGFiIHBhZ2UgYWxsb2NhdGVkLiBDdXJyZW50bHkgaXQga2VlcHMgb25s
-eSBvbmUgbGFzdCBmcmVlIHN0YWNrdHJhY2UuCj4gSXQgY291bGQgYmUgZXh0ZW5kZWQgdG8gcmVj
-b3JkIG1vcmUgZnJlZSBzdGFja3RyYWNlcyBhbmQgYWxzbyByZWNvcmQgcHJldmlvdXNseSB1c2Vk
-IHRhZ3Mgd2hpY2ggd2lsbCBhbGxvdyB5b3UKPiB0byBpZGVudGlmeSB1c2UtYWZ0ZXItZnJlZSBh
-bmQgZXh0cmFjdCByaWdodCBmcmVlIHN0YWNrdHJhY2UuCgpUaGFua3MgZm9yIHlvdXIgZXhwbGFu
-YXRpb24uCgpGb3IgZXh0ZW5kIHNsdWIgb2JqZWN0LCBpZiBvbmUgcmVjb3JkIGlzIDlCIChzaXpl
-b2YodTgpKyBzaXplb2Yoc3RydWN0Cmthc2FuX3RyYWNrKSkgYW5kIGFkZCBmaXZlIHJlY29yZHMg
-aW50byBzbHViIG9iamVjdCwgZXZlcnkgc2x1YiBvYmplY3QKbWF5IGFkZCA0NUIgdXNhZ2UgYWZ0
-ZXIgdGhlIHN5c3RlbSBydW5zIGxvbmdlci4gClNsdWIgb2JqZWN0IG51bWJlciBpcyBlYXN5IG1v
-cmUgdGhhbiAxLDAwMCwwMDAobWF5YmUgaXQgbWF5IGJlIG1vcmUKYmlnZ2VyKSwgdGhlbiB0aGUg
-ZXh0ZW5kaW5nIG9iamVjdCBtZW1vcnkgdXNhZ2Ugc2hvdWxkIGJlIDQ1TUIsIGFuZAp1bmZvcnR1
-bmF0ZWx5IGl0IGlzIG5vIGxpbWl0LiBUaGUgbWVtb3J5IHVzYWdlIGlzIG1vcmUgYmlnZ2VyIHRo
-YW4gb3VyCnBhdGNoLgoKV2UgaG9wZSB0YWctYmFzZWQgS0FTQU4gYWR2YW50YWdlIGlzIHNtYWxs
-ZXIgbWVtb3J5IHVzYWdlLiBJZiBpdOKAmXMKcG9zc2libGUsIHdlIHNob3VsZCBzcGVuZCBsZXNz
-IG1lbW9yeSBpbiBvcmRlciB0byBpZGVudGlmeQp1c2UtYWZ0ZXItZnJlZS4gV291bGQgeW91IGFj
-Y2VwdCBvdXIgcGF0Y2ggYWZ0ZXIgZmluZSB0dW5lIGl0PwoKCl9fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApM
-aW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQu
-b3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+Hi, Weiyi:
+
+On Mon, 2019-07-01 at 16:57 +0800, CK Hu wrote:
+> Hi, Weiyi:
+> 
+> On Thu, 2019-06-20 at 10:38 +0800, Weiyi Lu wrote:
+> > Add power controller node and smi-common node for MT8183
+> > In scpsys node, it contains clocks and regmapping of
+> > infracfg and smi-common for bus protection.
+> > 
+> > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
+> > ---
+> >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 62 ++++++++++++++++++++++++++++++++
+> >  1 file changed, 62 insertions(+)
+> > 
+> > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> > index 08274bf..75c4881 100644
+> > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> > @@ -8,6 +8,7 @@
+> >  #include <dt-bindings/clock/mt8183-clk.h>
+> >  #include <dt-bindings/interrupt-controller/arm-gic.h>
+> >  #include <dt-bindings/interrupt-controller/irq.h>
+> > +#include <dt-bindings/power/mt8183-power.h>
+> >  
+> >  / {
+> >  	compatible = "mediatek,mt8183";
+> > @@ -196,6 +197,62 @@
+> >  			#clock-cells = <1>;
+> >  		};
+> >  
+> > +		scpsys: syscon@10006000 {
+> > +			compatible = "mediatek,mt8183-scpsys", "syscon";
+> > +			#power-domain-cells = <1>;
+> > +			reg = <0 0x10006000 0 0x1000>;
+> > +			clocks = <&topckgen CLK_TOP_MUX_AUD_INTBUS>,
+> > +				 <&infracfg CLK_INFRA_AUDIO>,
+> > +				 <&infracfg CLK_INFRA_AUDIO_26M_BCLK>,
+> > +				 <&topckgen CLK_TOP_MUX_MFG>,
+> > +				 <&topckgen CLK_TOP_MUX_MM>,
+> > +				 <&topckgen CLK_TOP_MUX_CAM>,
+> > +				 <&topckgen CLK_TOP_MUX_IMG>,
+> > +				 <&topckgen CLK_TOP_MUX_IPU_IF>,
+> > +				 <&topckgen CLK_TOP_MUX_DSP>,
+> > +				 <&topckgen CLK_TOP_MUX_DSP1>,
+> > +				 <&topckgen CLK_TOP_MUX_DSP2>,
+> > +				 <&mmsys CLK_MM_SMI_COMMON>,
+> > +				 <&mmsys CLK_MM_SMI_LARB0>,
+> > +				 <&mmsys CLK_MM_SMI_LARB1>,
+> > +				 <&mmsys CLK_MM_GALS_COMM0>,
+> > +				 <&mmsys CLK_MM_GALS_COMM1>,
+> > +				 <&mmsys CLK_MM_GALS_CCU2MM>,
+> > +				 <&mmsys CLK_MM_GALS_IPU12MM>,
+> > +				 <&mmsys CLK_MM_GALS_IMG2MM>,
+> > +				 <&mmsys CLK_MM_GALS_CAM2MM>,
+> > +				 <&mmsys CLK_MM_GALS_IPU2MM>,
+
+I've removed all mmsys clock in scpsys node and display still works, so
+I think these subsys clock could be removed from scpsys node. It's
+reasonable that subsys clock is controlled by subsys device or the
+device use it. In MT2712 [1], the scpsys does not control subsys clock
+and it works, so I think you should remove subsys clock in scpsys device
+node.
+
+[1]
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm64/boot/dts/mediatek/mt2712e.dtsi?h=v5.2
+
+Regards,
+CK
+
+
+> 
+> Up to now, MT8183 mmsys has the same resource with another device node:
+> 
+> 		mmsys: syscon@14000000 {
+> 			compatible = "mediatek,mt8183-mmsys", "syscon";
+> 			reg = <0 0x14000000 0 0x1000>;
+> 			#clock-cells = <1>;
+> 		};
+> 
+> 		display_components: dispsys@14000000 {
+> 			compatible = "mediatek,mt8183-display";
+> 			reg = <0 0x14000000 0 0x1000>;
+> 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+> 		};
+> 
+> I think this two node should be merge into one node, so I've try to
+> merge them:
+> 
+> 		mmsys: syscon@14000000 {
+> 			compatible = "mediatek,mt8183-mmsys", "syscon";
+> 			reg = <0 0x14000000 0 0x1000>;
+> 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+> 			#clock-cells = <1>;
+> 		};
+> 
+> But I got a kernel panic when boot,
+> 
+> [    3.458523] Unable to handle kernel paging request at virtual address
+> fffffffffffffdfb
+> [    3.466999] Mem abort info:
+> [    3.470116]   ESR = 0x96000005
+> [    3.473268]   Exception class = DABT (current EL), IL = 32 bits
+> [    3.479375]   SET = 0, FnV = 0
+> [    3.482530]   EA = 0, S1PTW = 0
+> [    3.485785] Data abort info:
+> [    3.488831]   ISV = 0, ISS = 0x00000005
+> [    3.493067]   CM = 0, WnR = 0
+> [    3.496229] swapper pgtable: 4k pages, 39-bit VAs, pgdp =
+> 000000004f8fa26d
+> [    3.503214] [fffffffffffffdfb] pgd=0000000000000000,
+> pud=0000000000000000
+> [    3.510408] Internal error: Oops: 96000005 [#1] PREEMPT SMP
+> [    3.515974] Modules linked in:
+> [    3.519023] Process kworker/0:3 (pid: 106, stack limit =
+> 0x00000000281d0651)
+> [    3.526066] CPU: 0 PID: 106 Comm: kworker/0:3 Tainted: G        W
+> 4.19.43 #208
+> [    3.533974] Hardware name: MediaTek kukui rev1 board (DT)
+> [    3.539374] Workqueue: events deferred_probe_work_func
+> [    3.544507] pstate: 20000005 (nzCv daif -PAN -UAO)
+> [    3.549294] pc : clk_prepare+0x18/0x40
+> [    3.553038] lr : scpsys_clk_enable+0x40/0xb4
+> [    3.557299] sp : ffffff800855b9e0
+> [    3.560606] x29: ffffff800855b9f0 x28: ffffff93e1e5f594
+> [    3.565911] x27: 000000000000000f x26: ffffff93e1e5e9b8
+> [    3.571217] x25: 000000003b9aca00 x24: ffffff800858530c
+> [    3.576522] x23: ffffffffffffffff x22: fffffffffffffdfb
+> [    3.581827] x21: 000000000000000a x20: ffffffccb89aafc8
+> [    3.587132] x19: fffffffffffffdfb x18: 00005a5c77082016
+> [    3.592438] x17: 0000000000000400 x16: 0000000000000001
+> [    3.597743] x15: 0000000000000009 x14: ffffff93e271c908
+> [    3.603048] x13: 0000000000000b22 x12: 0000000000000008
+> [    3.608353] x11: 0000000001d063de x10: 0000000000000008
+> [    3.613659] x9 : 00000000ffffffed x8 : 0000000000000000
+> [    3.618964] x7 : 736d6c2dff7224fe x6 : 0000008000000000
+> [    3.624269] x5 : 0000000000000000 x4 : 0000000080000000
+> [    3.629575] x3 : 002f6d6e74000000 x2 : 0000000000000000
+> [    3.634880] x1 : 000000000000000a x0 : fffffffffffffdfb
+> [    3.640185] Call trace:
+> [    3.642625]  clk_prepare+0x18/0x40
+> [    3.646019]  scpsys_clk_enable+0x40/0xb4
+> [    3.649935]  scpsys_power_on+0x13c/0x304
+> [    3.653850]  scpsys_probe+0xe0/0x5fc
+> [    3.657419]  platform_drv_probe+0x80/0xb0
+> [    3.661420]  really_probe+0x114/0x28c
+> [    3.665075]  driver_probe_device+0x64/0xfc
+> [    3.669164]  __device_attach_driver+0xb8/0xd0
+> [    3.673513]  bus_for_each_drv+0x88/0xd0
+> [    3.677341]  __device_attach+0xac/0x130
+> [    3.681169]  device_initial_probe+0x20/0x2c
+> [    3.685344]  bus_probe_device+0x34/0x90
+> [    3.689172]  deferred_probe_work_func+0x74/0xac
+> [    3.693698]  process_one_work+0x210/0x420
+> [    3.697700]  worker_thread+0x278/0x3e4
+> [    3.701443]  kthread+0x11c/0x12c
+> [    3.704665]  ret_from_fork+0x10/0x18
+> 
+> I'm not really understand what happen, but scpsys and mmsys point to
+> each other in MT8183. Why these two node point to each other in MT8183?
+> If this is really hardware limitation, we need to solve this in driver.
+> If this is not a hardware limitation, I would like to re-organize device
+> tree to prevent this problem.
+> 
+> Regards,
+> CK
+> 
+> 
+> > +				 <&imgsys CLK_IMG_LARB5>,
+> > +				 <&imgsys CLK_IMG_LARB2>,
+> > +				 <&camsys CLK_CAM_LARB6>,
+> > +				 <&camsys CLK_CAM_LARB3>,
+> > +				 <&camsys CLK_CAM_SENINF>,
+> > +				 <&camsys CLK_CAM_CAMSV0>,
+> > +				 <&camsys CLK_CAM_CAMSV1>,
+> > +				 <&camsys CLK_CAM_CAMSV2>,
+> > +				 <&camsys CLK_CAM_CCU>,
+> > +				 <&ipu_conn CLK_IPU_CONN_IPU>,
+> > +				 <&ipu_conn CLK_IPU_CONN_AHB>,
+> > +				 <&ipu_conn CLK_IPU_CONN_AXI>,
+> > +				 <&ipu_conn CLK_IPU_CONN_ISP>,
+> > +				 <&ipu_conn CLK_IPU_CONN_CAM_ADL>,
+> > +				 <&ipu_conn CLK_IPU_CONN_IMG_ADL>;
+> > +			clock-names = "audio", "audio1", "audio2",
+> > +				      "mfg", "mm", "cam",
+> > +				      "isp", "vpu", "vpu1",
+> > +				      "vpu2", "vpu3", "mm-0",
+> > +				      "mm-1", "mm-2", "mm-3",
+> > +				      "mm-4", "mm-5", "mm-6",
+> > +				      "mm-7", "mm-8", "mm-9",
+> > +				      "isp-0", "isp-1", "cam-0",
+> > +				      "cam-1", "cam-2", "cam-3",
+> > +				      "cam-4", "cam-5", "cam-6",
+> > +				      "vpu-0", "vpu-1", "vpu-2",
+> > +				      "vpu-3", "vpu-4", "vpu-5";
+> > +			infracfg = <&infracfg>;
+> > +			smi_comm = <&smi_common>;
+> > +		};
+> > +
+> >  		apmixedsys: syscon@1000c000 {
+> >  			compatible = "mediatek,mt8183-apmixedsys", "syscon";
+> >  			reg = <0 0x1000c000 0 0x1000>;
+> > @@ -260,6 +317,11 @@
+> >  			#clock-cells = <1>;
+> >  		};
+> >  
+> > +		smi_common: smi@14019000 {
+> > +			compatible = "mediatek,mt8183-smi-common", "syscon";
+> > +			reg = <0 0x14019000 0 0x1000>;
+> > +		};
+> > +
+> >  		imgsys: syscon@15020000 {
+> >  			compatible = "mediatek,mt8183-imgsys", "syscon";
+> >  			reg = <0 0x15020000 0 0x1000>;
+> 
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
