@@ -2,66 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E9C866A329
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jul 2019 09:44:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C189E6AA32
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jul 2019 16:03:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iRY+G7t0AX4P6aS/R0lNFTvJ8eLyCENrMBPfcmZoMSI=; b=pBS1INLYeUQuCI
-	4k68xywBVLx5UORDCa1m7v/RdPkLoWJ+KdVqZfwyqceKF/BFnR5Ozr13r9+HYQnYPkublBvUVqe4X
-	i2V/7fa7IRl1ViKrvqy/pn4JGSWl1ECiu1o0nCUXppwxbVlxNsnhjbuRm3uSucaVPg3DJFCUmky7g
-	q9HMaU3lz7NZJNLsFEv21ENh8rFMejG0NImS4rFIdBXJvvAZQCymkdmk82/b3+G28wkaCnjOuGPt8
-	3zDyfkizIghqjlycuI8SC6yfQtbn+vOhSUbz7pEsF3Pv2edGUZuaZhaF/6eC6mO0ss82/99bUe70w
-	bPzNlPzqoggGlG7LL0GA==;
+	List-Owner; bh=fKBGuGZDtoUN4o+Ahu+nzTrFSZ5MDo2DTRnXZ8exMZs=; b=hp2KRnOET26+bh
+	Q7Ai0fjqNxA0ih+vVVP1e5+P0bDBozbtmsqDMhmXgHWip3Bsarh3VXuvZQ+lNZFv8bMtZITxIeLdL
+	G0/tmokwoGKCNjfzXu9SR9BWkml7E84srthbklwYCJ6U/ZSNCbzYyy/RUXzeVSgY+FLBXmYyQF9g6
+	VXDttUNmEknwGGlnLUAYVOrUDWvCuvjEGaL7w7gSJ/vhghvQWpL9JGgaKpMsziORj7VbxlhYGRcnG
+	s5ZH+blreF8tX9Okum29HQtxAYgWny9oniBlOsZxooaK6EP1Ix24VG2xOcjHEXyFib+j4dNyQAFZu
+	CLSYamd3VjCDkbqXl2CA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnI8j-0007IJ-8Y; Tue, 16 Jul 2019 07:44:45 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hnO2y-0005kj-Go; Tue, 16 Jul 2019 14:03:12 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnI8d-0007G3-TT; Tue, 16 Jul 2019 07:44:42 +0000
-X-UUID: 00a57ab1080c44b19d140dc2325fe7f1-20190715
-X-UUID: 00a57ab1080c44b19d140dc2325fe7f1-20190715
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 249397174; Mon, 15 Jul 2019 23:44:37 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 16 Jul 2019 00:44:35 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by mtkcas07.mediatek.inc
- (172.21.101.84) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 16 Jul 2019 15:44:33 +0800
-Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 16 Jul 2019 15:44:34 +0800
-Message-ID: <1563263074.6904.1.camel@mtksdaap41>
-Subject: Re: [PATCH v2 19/19] drm/mediatek: drop use of drmP.h
-From: CK Hu <ck.hu@mediatek.com>
-To: Sam Ravnborg <sam@ravnborg.org>
-Date: Tue, 16 Jul 2019 15:44:34 +0800
-In-Reply-To: <20190716064220.18157-20-sam@ravnborg.org>
+ id 1hnO2t-0005jx-UG; Tue, 16 Jul 2019 14:03:10 +0000
+Received: by mail-wr1-x444.google.com with SMTP id f9so21066103wre.12;
+ Tue, 16 Jul 2019 07:03:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=HZsItjPjDhQYPiLA6jmNU77ULk0G5DWzpiz/8LZXXSk=;
+ b=VRHAZYMT9D42bjajdP/6USvr9GlsAxFcKo5j4w9FQt1ZG9pUDYWAlIh625DEtEbyET
+ uSnnyqMAMjyqMfuk9P7YJ39a9xPF17UFEVIkFR1EZ6e8CkoOgkK9aH1q9EEtHMf8zR8k
+ D0zLhVoxinPZLVP5xYqwZ76Q8XemLQxxFpnpjL30sTswQDSXxunRxu97DpIkFIyUVgcE
+ f1YEnuy9F0dBmwh1u59Ny/9TjPBrdBOP2D42D22pMIsVEcQXUUa/KisIfXeMwW70Hf9+
+ k64GEzaYVL3E5l0vPpojvythV1DX2YOXJJXtOBub3ROzfDAFOQVOEbhoz3YvpbNbfihs
+ zJ0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=HZsItjPjDhQYPiLA6jmNU77ULk0G5DWzpiz/8LZXXSk=;
+ b=KW5r0+ai3bOLNB4dlxhmFNtBh1Dkj5uqO3LdYvPCYW2WkungohjbcnEA2EI2v5Eb+1
+ iMzgrN7b684HfOv4TmQhjJZRqhM7yOwTvMNszMrvJfiXk7A2jp4RJ730fcY6j9IpezVB
+ kJML7P/CD7rtdX4o3SrJNEHQN7eUIr9SczQK8QvKkwBwUGhakQV7sMfgdjsqIdr4duFl
+ 6E+HyPIC8RUU5mcQrTiDiFPBCtzsTClXIquuKJZ487WORmNpMdthgnUxO79bYQz8mI/H
+ iRoR7vc0fkhs7Lz5PA4cN8JzerbtfcY1Gay9dOf+ZZbpg1RP7eQq/7BTZ16VFNget4yC
+ nBaQ==
+X-Gm-Message-State: APjAAAWKjgNZAhJnRTGUfJhdlBhIBDMpdMy71Y/d5Yuvl5R+61M85Ju4
+ Y1h3oDwv33HOFvvIRuQAsAhdFStcyhpC1FR/yqQ=
+X-Google-Smtp-Source: APXvYqyrTALRgwm52FtUUSHJC/fTjOAydgpAzcUmYUQvpIlNqt7flB2n3sMgMFbOCc2q1aK2KOMDEz5r2YaTBLJ4VnI=
+X-Received: by 2002:adf:a299:: with SMTP id s25mr29029454wra.74.1563285784578; 
+ Tue, 16 Jul 2019 07:03:04 -0700 (PDT)
+MIME-Version: 1.0
 References: <20190716064220.18157-1-sam@ravnborg.org>
  <20190716064220.18157-20-sam@ravnborg.org>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
-MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20190716064220.18157-20-sam@ravnborg.org>
+From: Alex Deucher <alexdeucher@gmail.com>
+Date: Tue, 16 Jul 2019 10:02:53 -0400
+Message-ID: <CADnq5_NL0v941Pg0+=ova-6N4jm1nmFzj9To5oQBRSqeYbzLWA@mail.gmail.com>
+Subject: Re: [PATCH v2 19/19] drm/mediatek: drop use of drmP.h
+To: Sam Ravnborg <sam@ravnborg.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190716_004440_032597_FE452AB2 
-X-CRM114-Status: GOOD (  13.25  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190716_070308_015482_60504136 
+X-CRM114-Status: GOOD (  15.25  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (alexdeucher[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,40 +91,34 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, David
- Airlie <airlied@linux.ie>, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>, Matthias
- Brugger <matthias.bgg@gmail.com>, linux-arm-kernel@lists.infradead.org,
+Cc: David Airlie <airlied@linux.ie>,
+ Maling list - DRI developers <dri-devel@lists.freedesktop.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
  Emil Velikov <emil.velikov@collabora.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Sam:
-
-On Tue, 2019-07-16 at 08:42 +0200, Sam Ravnborg wrote:
+On Tue, Jul 16, 2019 at 2:45 AM Sam Ravnborg <sam@ravnborg.org> wrote:
+>
 > Drop use of the deprecated drmP.h header file.
-> 
+>
 > While touching the include files divide them up in blocks
 > in the typical order:
-> 
+>
 > \#include <linux/*>
-> 
+>
 > \#include <video/*>
-> 
+>
 > \#include <drm/*>
-> 
+>
 > \#include ""
-> 
+>
 > And sort the includes in the blocks
 > Add the necessary includes to fix build after removal of drmP.h
-
-Reviewed-by: CK Hu <ck.hu@mediatek.com>
-
-Thanks.
-
-> 
+>
 > Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
 > Acked-by: Emil Velikov <emil.velikov@collabora.com>
 > Cc: CK Hu <ck.hu@mediatek.com>
@@ -116,6 +128,10 @@ Thanks.
 > Cc: Matthias Brugger <matthias.bgg@gmail.com>
 > Cc: linux-arm-kernel@lists.infradead.org
 > Cc: linux-mediatek@lists.infradead.org
+
+
+Reviewed-by: Alex Deucher <alexander.deucher@amd.com>
+
 > ---
 >  drivers/gpu/drm/mediatek/mtk_disp_color.c   |  2 +-
 >  drivers/gpu/drm/mediatek/mtk_disp_ovl.c     |  2 +-
@@ -130,7 +146,7 @@ Thanks.
 >  drivers/gpu/drm/mediatek/mtk_dsi.c          | 14 ++++++++------
 >  drivers/gpu/drm/mediatek/mtk_hdmi.c         | 14 +++++++++-----
 >  12 files changed, 56 insertions(+), 39 deletions(-)
-> 
+>
 > diff --git a/drivers/gpu/drm/mediatek/mtk_disp_color.c b/drivers/gpu/drm/mediatek/mtk_disp_color.c
 > index f33d98b356d6..59de2a46aa49 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_disp_color.c
@@ -138,7 +154,7 @@ Thanks.
 > @@ -3,9 +3,9 @@
 >   * Copyright (c) 2017 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 >  #include <linux/clk.h>
 >  #include <linux/component.h>
@@ -153,7 +169,7 @@ Thanks.
 > @@ -3,9 +3,9 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 >  #include <linux/clk.h>
 >  #include <linux/component.h>
@@ -168,7 +184,7 @@ Thanks.
 > @@ -3,9 +3,9 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 >  #include <linux/clk.h>
 >  #include <linux/component.h>
@@ -204,14 +220,14 @@ Thanks.
 > -#include <linux/clk.h>
 > +
 >  #include <video/videomode.h>
->  
+>
 > +#include <drm/drm_atomic_helper.h>
 > +#include <drm/drm_crtc.h>
 > +#include <drm/drm_of.h>
 > +
 >  #include "mtk_dpi_regs.h"
 >  #include "mtk_drm_ddp_comp.h"
->  
+>
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
 > index a9007210dda1..34a731755791 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
@@ -219,7 +235,7 @@ Thanks.
 > @@ -3,14 +3,16 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > +#include <linux/clk.h>
 > +#include <linux/pm_runtime.h>
 > +
@@ -234,7 +250,7 @@ Thanks.
 > -#include <linux/pm_runtime.h>
 > -#include <soc/mediatek/smi.h>
 > +#include <drm/drm_vblank.h>
->  
+>
 >  #include "mtk_drm_drv.h"
 >  #include "mtk_drm_crtc.h"
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
@@ -257,7 +273,7 @@ Thanks.
 > @@ -4,22 +4,26 @@
 >   * Author: YT SHEN <yt.shen@mediatek.com>
 >   */
->  
+>
 > -#include <drm/drmP.h>
 > +#include <linux/component.h>
 > +#include <linux/iommu.h>
@@ -280,7 +296,7 @@ Thanks.
 > -#include <linux/of_platform.h>
 > -#include <linux/pm_runtime.h>
 > +#include <drm/drm_vblank.h>
->  
+>
 >  #include "mtk_drm_crtc.h"
 >  #include "mtk_drm_ddp.h"
 > +#include "mtk_drm_ddp.h"
@@ -294,7 +310,7 @@ Thanks.
 > @@ -3,13 +3,14 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 > +#include <linux/dma-buf.h>
 > +#include <linux/reservation.h>
@@ -306,7 +322,7 @@ Thanks.
 >  #include <drm/drm_gem_framebuffer_helper.h>
 > -#include <linux/dma-buf.h>
 > -#include <linux/reservation.h>
->  
+>
 >  #include "mtk_drm_drv.h"
 >  #include "mtk_drm_fb.h"
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_gem.c b/drivers/gpu/drm/mediatek/mtk_drm_gem.c
@@ -316,18 +332,18 @@ Thanks.
 > @@ -3,10 +3,12 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 > -#include <drm/drm_gem.h>
 >  #include <linux/dma-buf.h>
->  
+>
 > +#include <drm/drm_device.h>
 > +#include <drm/drm_gem.h>
 > +#include <drm/drm_prime.h>
 > +
 >  #include "mtk_drm_drv.h"
 >  #include "mtk_drm_gem.h"
->  
+>
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_plane.c b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
 > index 42cc9823eaaa..584a9ecadce6 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_drm_plane.c
@@ -335,14 +351,14 @@ Thanks.
 > @@ -4,9 +4,9 @@
 >   * Author: CK Hu <ck.hu@mediatek.com>
 >   */
->  
+>
 > -#include <drm/drmP.h>
 >  #include <drm/drm_atomic.h>
 >  #include <drm/drm_atomic_helper.h>
 > +#include <drm/drm_fourcc.h>
 >  #include <drm/drm_plane_helper.h>
 >  #include <drm/drm_gem_framebuffer_helper.h>
->  
+>
 > diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
 > index b91c4616644a..224afb666881 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
@@ -350,7 +366,7 @@ Thanks.
 > @@ -3,12 +3,6 @@
 >   * Copyright (c) 2015 MediaTek Inc.
 >   */
->  
+>
 > -#include <drm/drmP.h>
 > -#include <drm/drm_atomic_helper.h>
 > -#include <drm/drm_mipi_dsi.h>
@@ -367,7 +383,7 @@ Thanks.
 > +
 >  #include <video/mipi_display.h>
 >  #include <video/videomode.h>
->  
+>
 > +#include <drm/drm_atomic_helper.h>
 > +#include <drm/drm_mipi_dsi.h>
 > +#include <drm/drm_of.h>
@@ -376,8 +392,8 @@ Thanks.
 > +#include <drm/drm_probe_helper.h>
 > +
 >  #include "mtk_drm_ddp_comp.h"
->  
->  #define DSI_START		0x00
+>
+>  #define DSI_START              0x00
 > diff --git a/drivers/gpu/drm/mediatek/mtk_hdmi.c b/drivers/gpu/drm/mediatek/mtk_hdmi.c
 > index 5d6a9f094df5..ce91b61364eb 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_hdmi.c
@@ -411,8 +427,13 @@ Thanks.
 >  #include "mtk_cec.h"
 >  #include "mtk_hdmi.h"
 >  #include "mtk_hdmi_regs.h"
-
-
+> --
+> 2.20.1
+>
+> _______________________________________________
+> dri-devel mailing list
+> dri-devel@lists.freedesktop.org
+> https://lists.freedesktop.org/mailman/listinfo/dri-devel
 
 _______________________________________________
 Linux-mediatek mailing list
