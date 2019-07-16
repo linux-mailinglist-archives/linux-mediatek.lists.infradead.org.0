@@ -2,67 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3CF396A06A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jul 2019 03:51:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5A2D96A1FA
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jul 2019 07:55:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=T57e3mZ0CZd4CgPyRL/GQ+KL8GIGxWrbGuV06rQw2as=; b=Ylq8D1uLenCBna
-	HAXs6zuMc1VPFtztqVrfR/SmJLe1ayUuiS/lJlLYkjiD3RZpLXKU7AVY8w2R9BhwG84ZVgCtMppd4
-	/GrnNlfy1k+StkWc5Id6DavYyUBc/J/n3V+xOJ85C2+p8Xeer3EbD7J6gAKPDnHtnWoTabBlvtaP7
-	e2v0tBKRIhb9rV8XBa7o+t/pF3fxufIZ8ROAfaGEjsGig92WZtZtwCBHP7EEMp2EoAGoOm/XIRrj5
-	OPWwA5HdKvmyRoAexagjkv8qEKxEqeNbBM6DuG3UHsmBwxfk9k34copsblO9fe3B8+ZUd6Ry3Pkhz
-	GCTzxKyUFEDdz/15p9rw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=xuhmJ+mhfPw9ffOlxeIplbnRlle3w1ifzdHIRMuZwNA=; b=as/zWucY/5AlDI
+	/ycJhytz7SDu+s44OPnT+umVXTBkoa0DHQMEI0COjlT0J0p1H00ucJlVf5lbux1G4EYihJ8zS1wr4
+	WGoVD/UQzSLxNIbIz1sZEXb68FRNKkqxT+rmVgeiNyCU5a0aka/U+0VSKuUaYYAJpJ4kEGDeifPXb
+	jgG1QuDMjMD7RMN9JNkok1Ygl3YYyXI0sGK6zxd0etOZXDYk0x7d1La94X7vRw9+XuI+HxHe5ZDeH
+	GJjr4rQ7n27GHLmQg3NuEZik6akLfXDd5ipf9Ih4Dd4aFZNU7jv7bR2dV72/JdmV+aIDGWN7FKoJO
+	/eU4Ro/BMj6I/dkGsPng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnCck-0004VW-2q; Tue, 16 Jul 2019 01:51:22 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hnGR2-0000Ck-G0; Tue, 16 Jul 2019 05:55:32 +0000
+Received: from mail-pl1-x643.google.com ([2607:f8b0:4864:20::643])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnCca-0004Uq-V3; Tue, 16 Jul 2019 01:51:15 +0000
-X-UUID: 78158cfd752a4d3584405b2e339de6cf-20190715
-X-UUID: 78158cfd752a4d3584405b2e339de6cf-20190715
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1922562369; Mon, 15 Jul 2019 17:51:02 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 15 Jul 2019 18:51:00 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 16 Jul 2019 09:50:52 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 16 Jul 2019 09:50:52 +0800
-Message-ID: <1563241851.796.7.camel@mtksdaap41>
-Subject: Re: [PATCH v6 14/14] arm64: dts: Add power controller device node
- of MT8183
-From: CK Hu <ck.hu@mediatek.com>
-To: Weiyi Lu <weiyi.lu@mediatek.com>
-Date: Tue, 16 Jul 2019 09:50:51 +0800
-In-Reply-To: <1563181637.6212.1.camel@mtksdaap41>
-References: <1560998286-9189-1-git-send-email-weiyi.lu@mediatek.com>
- <1560998286-9189-15-git-send-email-weiyi.lu@mediatek.com>
- <1561971461.12937.8.camel@mtksdaap41> <1563178045.17756.5.camel@mtksdaap41>
- <1563181637.6212.1.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hnGQn-0008UI-Kq; Tue, 16 Jul 2019 05:55:18 +0000
+Received: by mail-pl1-x643.google.com with SMTP id 4so2551004pld.10;
+ Mon, 15 Jul 2019 22:55:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=RlCA90112tAvbzPxVBehLoEGm+dZ8qWusJBsaqezzKQ=;
+ b=HJ0GlqX9vNn5vyxctp74cdCbjz9LEVbhrk+p9eA0p2nK9nPpRuTOort7hvWFlkEQZ1
+ Ew7LwFerYdTHFIFvbadzxE6pOIveTNOWTcYInHyxxXbvcpvZ+2gR5FAOkqn4Kf2IfJwR
+ A2rfO5rcuggbU94Cq/khoqv2jp11FtO2+ROyczZyLA4fvbTVcLGXXhndCw3Tgq6Qyedm
+ wUIVNdsj8uHgxz7DWBwTvuLe4aJDGIHsPyrjAnwx3B/miZ7wNRAbBvaewiKh54ni9JDn
+ F39jfn5yoQS1rt86M8KDzvEJ863o1kDCYTSC464UQbv7k0eZ0FQhs3Z57S0k1bRSLSiO
+ RRpw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=RlCA90112tAvbzPxVBehLoEGm+dZ8qWusJBsaqezzKQ=;
+ b=OeTPA2m45irxHVztiii6loOKa5qAPY4nhEmLEKRsweb3IALtlqrEpGGktL45QpDXSe
+ h99/2BdF0w8AKqDy92I3Owi+2GGAJwrlXDTGnZYN6imPH+EKmNK+rbh8nLqT+EIevbgh
+ wgxqwoekX/uaIVMYWycMlSGoeFlndG0IWXNo8HvPJdoXhV3DZ8T8Rega+tRaNKn/qK6i
+ XDXW8sY/FGU+SnMyx4YM3q6zKuYFEkW9D2HtB/J7dgqFyuKFKnMxx0Zm8XzzAf13JPUn
+ gNXcyeLIrO9Mfm4Dv+nC1bdqoDxLdrQFumgk+KuNmT+KQfM2xEcl5+8hz/31ujvQnVWp
+ 6XYA==
+X-Gm-Message-State: APjAAAUzqRPyIvkQnYRDcbrFfQcDsUZm5lJrMSGoxBeFC80m85MKOcvG
+ +HtDX7qTxGgiQ7Ipc/IS/YQ=
+X-Google-Smtp-Source: APXvYqxIcfcb9KUVUeGLcIrM9l2ZeilXyPBlIyHa8kHAGZnRTQBO3fAUfhL61rCxNjOQG/fTtECgpw==
+X-Received: by 2002:a17:902:b186:: with SMTP id
+ s6mr32909467plr.343.1563256517040; 
+ Mon, 15 Jul 2019 22:55:17 -0700 (PDT)
+Received: from localhost.localdomain ([110.227.64.207])
+ by smtp.gmail.com with ESMTPSA id d8sm14787330pgh.45.2019.07.15.22.55.13
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 15 Jul 2019 22:55:16 -0700 (PDT)
+From: Nishka Dasgupta <nishkadg.linux@gmail.com>
+To: nbd@openwrt.org, john@phrozen.org, sean.wang@mediatek.com,
+ davem@davemloft.net, netdev@vger.kernel.org, matthias.bgg@gmail.com,
+ linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org
+Subject: [PATCH] net: ethernet: mediatek: mtk_eth_soc: Add of_node_put()
+ before goto
+Date: Tue, 16 Jul 2019 11:25:04 +0530
+Message-Id: <20190716055504.3113-1-nishkadg.linux@gmail.com>
+X-Mailer: git-send-email 2.19.1
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_185113_010166_8BAA4621 
-X-CRM114-Status: GOOD (  31.17  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190715_225517_709951_101227DA 
+X-CRM114-Status: UNSURE (   9.34  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:643 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (nishkadg.linux[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,266 +99,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, James Liao <jamesjj.liao@mediatek.com>,
- linux-kernel@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Yong Wu <yong.wu@mediatek.com>
+Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Weiyi:
+Each iteration of for_each_child_of_node puts the previous node, but in
+the case of a goto from the middle of the loop, there is no put, thus
+causing a memory leak. Hence add an of_node_put before the goto.
+Issue found with Coccinelle.
 
-On Mon, 2019-07-15 at 17:07 +0800, Weiyi Lu wrote:
-> On Mon, 2019-07-15 at 16:07 +0800, CK Hu wrote:
-> > Hi, Weiyi:
-> > 
-> > On Mon, 2019-07-01 at 16:57 +0800, CK Hu wrote:
-> > > Hi, Weiyi:
-> > > 
-> > > On Thu, 2019-06-20 at 10:38 +0800, Weiyi Lu wrote:
-> > > > Add power controller node and smi-common node for MT8183
-> > > > In scpsys node, it contains clocks and regmapping of
-> > > > infracfg and smi-common for bus protection.
-> > > > 
-> > > > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
-> > > > ---
-> > > >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 62 ++++++++++++++++++++++++++++++++
-> > > >  1 file changed, 62 insertions(+)
-> > > > 
-> > > > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > index 08274bf..75c4881 100644
-> > > > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > @@ -8,6 +8,7 @@
-> > > >  #include <dt-bindings/clock/mt8183-clk.h>
-> > > >  #include <dt-bindings/interrupt-controller/arm-gic.h>
-> > > >  #include <dt-bindings/interrupt-controller/irq.h>
-> > > > +#include <dt-bindings/power/mt8183-power.h>
-> > > >  
-> > > >  / {
-> > > >  	compatible = "mediatek,mt8183";
-> > > > @@ -196,6 +197,62 @@
-> > > >  			#clock-cells = <1>;
-> > > >  		};
-> > > >  
-> > > > +		scpsys: syscon@10006000 {
-> > > > +			compatible = "mediatek,mt8183-scpsys", "syscon";
-> > > > +			#power-domain-cells = <1>;
-> > > > +			reg = <0 0x10006000 0 0x1000>;
-> > > > +			clocks = <&topckgen CLK_TOP_MUX_AUD_INTBUS>,
-> > > > +				 <&infracfg CLK_INFRA_AUDIO>,
-> > > > +				 <&infracfg CLK_INFRA_AUDIO_26M_BCLK>,
-> > > > +				 <&topckgen CLK_TOP_MUX_MFG>,
-> > > > +				 <&topckgen CLK_TOP_MUX_MM>,
-> > > > +				 <&topckgen CLK_TOP_MUX_CAM>,
-> > > > +				 <&topckgen CLK_TOP_MUX_IMG>,
-> > > > +				 <&topckgen CLK_TOP_MUX_IPU_IF>,
-> > > > +				 <&topckgen CLK_TOP_MUX_DSP>,
-> > > > +				 <&topckgen CLK_TOP_MUX_DSP1>,
-> > > > +				 <&topckgen CLK_TOP_MUX_DSP2>,
-> > > > +				 <&mmsys CLK_MM_SMI_COMMON>,
-> > > > +				 <&mmsys CLK_MM_SMI_LARB0>,
-> > > > +				 <&mmsys CLK_MM_SMI_LARB1>,
-> > > > +				 <&mmsys CLK_MM_GALS_COMM0>,
-> > > > +				 <&mmsys CLK_MM_GALS_COMM1>,
-> > > > +				 <&mmsys CLK_MM_GALS_CCU2MM>,
-> > > > +				 <&mmsys CLK_MM_GALS_IPU12MM>,
-> > > > +				 <&mmsys CLK_MM_GALS_IMG2MM>,
-> > > > +				 <&mmsys CLK_MM_GALS_CAM2MM>,
-> > > > +				 <&mmsys CLK_MM_GALS_IPU2MM>,
-> > 
-> > I've removed all mmsys clock in scpsys node and display still works, so
-> > I think these subsys clock could be removed from scpsys node. It's
-> > reasonable that subsys clock is controlled by subsys device or the
-> > device use it. In MT2712 [1], the scpsys does not control subsys clock
-> > and it works, so I think you should remove subsys clock in scpsys device
-> > node.
-> > 
-> > [1]
-> > https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm64/boot/dts/mediatek/mt2712e.dtsi?h=v5.2
-> > 
-> > Regards,
-> > CK
-> > 
-> 
-> Hello CK,
-> 
-> Sorry, I can't agree with you at all.
-> I thought you just created an environment where the MM (DISP) power
-> domain could not be turned on and off properly.
-> If you delete those mmsys clocks listed, bus protection will not work.
-> These clocks are used for bus protection that I mentioned in patch [2].
-> I guess you are now trying to solve the problem that mmsys blocks are
-> used for probing two drivers. One for the display and another for the
-> clock. Right?
-> In the previous test you mentioned, you have affected the registration
-> of mmsys clock first. This is why you saw the boot failure. I think boot
-> failure is the real problem I should avoid if mmsys clock cannot probe.
-> 
-> [2] https://patchwork.kernel.org/patch/11005747/
-> 
+Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
+---
+ drivers/net/ethernet/mediatek/mtk_eth_soc.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
-OK, I'll try another way to fix the probe problem, but I still have
-question about bus protection. I'm not sure how bus protection works,
-but I think that what mtk_scpsys_ext_clear_bus_protection() do could be
-moved in mtk_smi_clk_enable(). How do you think?
-
-Regards,
-CK
-
-> > 
-> > > 
-> > > Up to now, MT8183 mmsys has the same resource with another device node:
-> > > 
-> > > 		mmsys: syscon@14000000 {
-> > > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > > 			reg = <0 0x14000000 0 0x1000>;
-> > > 			#clock-cells = <1>;
-> > > 		};
-> > > 
-> > > 		display_components: dispsys@14000000 {
-> > > 			compatible = "mediatek,mt8183-display";
-> > > 			reg = <0 0x14000000 0 0x1000>;
-> > > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > > 		};
-> > > 
-> > > I think this two node should be merge into one node, so I've try to
-> > > merge them:
-> > > 
-> > > 		mmsys: syscon@14000000 {
-> > > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > > 			reg = <0 0x14000000 0 0x1000>;
-> > > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > > 			#clock-cells = <1>;
-> > > 		};
-> > > 
-> > > But I got a kernel panic when boot,
-> > > 
-> > > [    3.458523] Unable to handle kernel paging request at virtual address
-> > > fffffffffffffdfb
-> > > [    3.466999] Mem abort info:
-> > > [    3.470116]   ESR = 0x96000005
-> > > [    3.473268]   Exception class = DABT (current EL), IL = 32 bits
-> > > [    3.479375]   SET = 0, FnV = 0
-> > > [    3.482530]   EA = 0, S1PTW = 0
-> > > [    3.485785] Data abort info:
-> > > [    3.488831]   ISV = 0, ISS = 0x00000005
-> > > [    3.493067]   CM = 0, WnR = 0
-> > > [    3.496229] swapper pgtable: 4k pages, 39-bit VAs, pgdp =
-> > > 000000004f8fa26d
-> > > [    3.503214] [fffffffffffffdfb] pgd=0000000000000000,
-> > > pud=0000000000000000
-> > > [    3.510408] Internal error: Oops: 96000005 [#1] PREEMPT SMP
-> > > [    3.515974] Modules linked in:
-> > > [    3.519023] Process kworker/0:3 (pid: 106, stack limit =
-> > > 0x00000000281d0651)
-> > > [    3.526066] CPU: 0 PID: 106 Comm: kworker/0:3 Tainted: G        W
-> > > 4.19.43 #208
-> > > [    3.533974] Hardware name: MediaTek kukui rev1 board (DT)
-> > > [    3.539374] Workqueue: events deferred_probe_work_func
-> > > [    3.544507] pstate: 20000005 (nzCv daif -PAN -UAO)
-> > > [    3.549294] pc : clk_prepare+0x18/0x40
-> > > [    3.553038] lr : scpsys_clk_enable+0x40/0xb4
-> > > [    3.557299] sp : ffffff800855b9e0
-> > > [    3.560606] x29: ffffff800855b9f0 x28: ffffff93e1e5f594
-> > > [    3.565911] x27: 000000000000000f x26: ffffff93e1e5e9b8
-> > > [    3.571217] x25: 000000003b9aca00 x24: ffffff800858530c
-> > > [    3.576522] x23: ffffffffffffffff x22: fffffffffffffdfb
-> > > [    3.581827] x21: 000000000000000a x20: ffffffccb89aafc8
-> > > [    3.587132] x19: fffffffffffffdfb x18: 00005a5c77082016
-> > > [    3.592438] x17: 0000000000000400 x16: 0000000000000001
-> > > [    3.597743] x15: 0000000000000009 x14: ffffff93e271c908
-> > > [    3.603048] x13: 0000000000000b22 x12: 0000000000000008
-> > > [    3.608353] x11: 0000000001d063de x10: 0000000000000008
-> > > [    3.613659] x9 : 00000000ffffffed x8 : 0000000000000000
-> > > [    3.618964] x7 : 736d6c2dff7224fe x6 : 0000008000000000
-> > > [    3.624269] x5 : 0000000000000000 x4 : 0000000080000000
-> > > [    3.629575] x3 : 002f6d6e74000000 x2 : 0000000000000000
-> > > [    3.634880] x1 : 000000000000000a x0 : fffffffffffffdfb
-> > > [    3.640185] Call trace:
-> > > [    3.642625]  clk_prepare+0x18/0x40
-> > > [    3.646019]  scpsys_clk_enable+0x40/0xb4
-> > > [    3.649935]  scpsys_power_on+0x13c/0x304
-> > > [    3.653850]  scpsys_probe+0xe0/0x5fc
-> > > [    3.657419]  platform_drv_probe+0x80/0xb0
-> > > [    3.661420]  really_probe+0x114/0x28c
-> > > [    3.665075]  driver_probe_device+0x64/0xfc
-> > > [    3.669164]  __device_attach_driver+0xb8/0xd0
-> > > [    3.673513]  bus_for_each_drv+0x88/0xd0
-> > > [    3.677341]  __device_attach+0xac/0x130
-> > > [    3.681169]  device_initial_probe+0x20/0x2c
-> > > [    3.685344]  bus_probe_device+0x34/0x90
-> > > [    3.689172]  deferred_probe_work_func+0x74/0xac
-> > > [    3.693698]  process_one_work+0x210/0x420
-> > > [    3.697700]  worker_thread+0x278/0x3e4
-> > > [    3.701443]  kthread+0x11c/0x12c
-> > > [    3.704665]  ret_from_fork+0x10/0x18
-> > > 
-> > > I'm not really understand what happen, but scpsys and mmsys point to
-> > > each other in MT8183. Why these two node point to each other in MT8183?
-> > > If this is really hardware limitation, we need to solve this in driver.
-> > > If this is not a hardware limitation, I would like to re-organize device
-> > > tree to prevent this problem.
-> > > 
-> > > Regards,
-> > > CK
-> > > 
-> > > 
-> > > > +				 <&imgsys CLK_IMG_LARB5>,
-> > > > +				 <&imgsys CLK_IMG_LARB2>,
-> > > > +				 <&camsys CLK_CAM_LARB6>,
-> > > > +				 <&camsys CLK_CAM_LARB3>,
-> > > > +				 <&camsys CLK_CAM_SENINF>,
-> > > > +				 <&camsys CLK_CAM_CAMSV0>,
-> > > > +				 <&camsys CLK_CAM_CAMSV1>,
-> > > > +				 <&camsys CLK_CAM_CAMSV2>,
-> > > > +				 <&camsys CLK_CAM_CCU>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_IPU>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_AHB>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_AXI>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_ISP>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_CAM_ADL>,
-> > > > +				 <&ipu_conn CLK_IPU_CONN_IMG_ADL>;
-> > > > +			clock-names = "audio", "audio1", "audio2",
-> > > > +				      "mfg", "mm", "cam",
-> > > > +				      "isp", "vpu", "vpu1",
-> > > > +				      "vpu2", "vpu3", "mm-0",
-> > > > +				      "mm-1", "mm-2", "mm-3",
-> > > > +				      "mm-4", "mm-5", "mm-6",
-> > > > +				      "mm-7", "mm-8", "mm-9",
-> > > > +				      "isp-0", "isp-1", "cam-0",
-> > > > +				      "cam-1", "cam-2", "cam-3",
-> > > > +				      "cam-4", "cam-5", "cam-6",
-> > > > +				      "vpu-0", "vpu-1", "vpu-2",
-> > > > +				      "vpu-3", "vpu-4", "vpu-5";
-> > > > +			infracfg = <&infracfg>;
-> > > > +			smi_comm = <&smi_common>;
-> > > > +		};
-> > > > +
-> > > >  		apmixedsys: syscon@1000c000 {
-> > > >  			compatible = "mediatek,mt8183-apmixedsys", "syscon";
-> > > >  			reg = <0 0x1000c000 0 0x1000>;
-> > > > @@ -260,6 +317,11 @@
-> > > >  			#clock-cells = <1>;
-> > > >  		};
-> > > >  
-> > > > +		smi_common: smi@14019000 {
-> > > > +			compatible = "mediatek,mt8183-smi-common", "syscon";
-> > > > +			reg = <0 0x14019000 0 0x1000>;
-> > > > +		};
-> > > > +
-> > > >  		imgsys: syscon@15020000 {
-> > > >  			compatible = "mediatek,mt8183-imgsys", "syscon";
-> > > >  			reg = <0 0x15020000 0 0x1000>;
-> > > 
-> > 
-> > 
-> 
-> 
-
+diff --git a/drivers/net/ethernet/mediatek/mtk_eth_soc.c b/drivers/net/ethernet/mediatek/mtk_eth_soc.c
+index b20b3a5a1ebb..c39d7f4ab1d4 100644
+--- a/drivers/net/ethernet/mediatek/mtk_eth_soc.c
++++ b/drivers/net/ethernet/mediatek/mtk_eth_soc.c
+@@ -2548,8 +2548,10 @@ static int mtk_probe(struct platform_device *pdev)
+ 			continue;
+ 
+ 		err = mtk_add_mac(eth, mac_np);
+-		if (err)
++		if (err) {
++			of_node_put(mac_np);
+ 			goto err_deinit_hw;
++		}
+ 	}
+ 
+ 	if (MTK_HAS_CAPS(eth->soc->caps, MTK_SHARED_INT)) {
+-- 
+2.19.1
 
 
 _______________________________________________
