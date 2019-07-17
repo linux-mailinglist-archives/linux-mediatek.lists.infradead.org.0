@@ -2,54 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7CCB66BD07
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 15:29:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AC1336BE2B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 16:24:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=WFpR+kEs/JlsQMy3kjWRjLd8Ujgu6nOld4wGxHjTh7U=; b=mUuRNL1C7iejahr3c3HEiRg94
-	9r3JwRKLgJCsLjMiXkmvLtLohvGEs4mWT2C2vvbg8krDaB18JZNOD8L1IcxpbfWAjHcwJmEzZDdZd
-	p1XbnIVPt2JpjO+T9YxnT4feXWcHzYt1l+WUu457Gd5fMc4YV2Jn5CWNBtFYHvCxquY9vBEJQU10v
-	vW70dpdxy0cUG6zPruiggtBxm//GhfeI4O2tJ36vQhb0Kf28FQXHr5fC95uVTmzihcgO817Wae28S
-	o2LMAGqi67aZ4wXCg1jwNy+dy/ZhPFf24Wan5hi9VONP8hycjWfTsgTdoSzAz9XYqmn1oTjVqYzR6
-	3id45Uh3A==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4C3/7ebERkrItoI/ZkRd+QHFSawHrUI3gjCx9rxM5MY=; b=EGm7AOxGEfp3VP
+	I+xeurk7Xx8FBDz3x+udi9dWvAgd81tEsktLNyDI8M9iawME2mwvPfQfEPjaKYrZZQ9jBsJdXP64S
+	nU31H/Hghn2kK9X+1OEvnTL/f6SXRX7T6Sx3HjvdoDv/vuCIZydMW9hn58TyGkElkv6on0oN9OtQq
+	hjKiGdS2C2m2NuA/eX3mWx1GJAUMQyoJTG1kAFl8a//HCkWrV0XG33YfoZ5eNyDlk2VNFuixmasTP
+	2kbWXckS77EH/WukinmJRsAwi8A+vWkSec5UqmMKurtzPiP7qBc8oI4jBpLVng2aA4XUgAmUIVjII
+	jquCb+pUEHY89zL4zA7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnjzy-0008QG-PA; Wed, 17 Jul 2019 13:29:34 +0000
-Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hnjzo-0008HG-FJ; Wed, 17 Jul 2019 13:29:25 +0000
-Received: from localhost (p54B3309B.dip0.t-ipconnect.de [84.179.48.155])
- by pokefinder.org (Postfix) with ESMTPSA id BAEC23E4757;
- Wed, 17 Jul 2019 15:29:23 +0200 (CEST)
-Date: Wed, 17 Jul 2019 15:29:23 +0200
-From: Wolfram Sang <wsa@the-dreams.de>
-To: Qii Wang <qii.wang@mediatek.com>
-Subject: Re: [PATCH 1/2] dt-bindings: i2c: Add MediaTek i2c AC timing binding
-Message-ID: <20190717132923.GC1458@kunai>
-References: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
- <1560240715-22595-2-git-send-email-qii.wang@mediatek.com>
- <20190626133941.GL801@ninjato>
- <1563368121.16970.7.camel@mhfsdcap03>
+	id 1hnkqj-0000cT-L4; Wed, 17 Jul 2019 14:24:05 +0000
+Received: from mail.kernel.org ([198.145.29.99])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hnkqR-0000Dx-CC; Wed, 17 Jul 2019 14:23:48 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 8568E21743;
+ Wed, 17 Jul 2019 14:23:43 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1563373426;
+ bh=GlgM6Flb7U5FvLBrim3MfffxSY9Cf03irtwOwK4KS08=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=nEGGSoDItNpMBm7fRxdhPxrr5B8dn0+K1xshnV+ZF9QLHM9kqfyNzbDovXpkWgi6k
+ L1J4PtnDOWbmj7aboaApmgn03y0Svo7KOZS+F8Ko1wo7KUVWvLev86ahSBecZnjw41
+ 6fwNTWZl/I9y305D5xAlquohPhYf8EeD99abhAPI=
+Date: Wed, 17 Jul 2019 15:23:40 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH v8 07/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
+ Mode
+Message-ID: <20190717142339.wltamw6wktwixqqn@willie-the-truck>
+References: <1561774167-24141-1-git-send-email-yong.wu@mediatek.com>
+ <1561774167-24141-8-git-send-email-yong.wu@mediatek.com>
+ <20190710143649.w5dplhzdpi3bxp7e@willie-the-truck>
+ <1562846036.31342.10.camel@mhfsdcap03>
+ <20190711123129.da4rg35b54u4svfw@willie-the-truck>
+ <1563079280.31342.22.camel@mhfsdcap03>
+ <20190715095156.xczfkbm6zpjueq32@willie-the-truck>
+ <1563367459.31342.34.camel@mhfsdcap03>
 MIME-Version: 1.0
-In-Reply-To: <1563368121.16970.7.camel@mhfsdcap03>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Content-Disposition: inline
+In-Reply-To: <1563367459.31342.34.camel@mhfsdcap03>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190717_062924_660365_1D535CEE 
-X-CRM114-Status: UNSURE (   8.36  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190717_072347_461948_96234FBD 
+X-CRM114-Status: GOOD (  20.51  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [88.99.104.3 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,71 +83,83 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- leilk.liu@mediatek.com, linux-kernel@vger.kernel.org, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, linux-i2c@vger.kernel.org,
- matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
-Content-Type: multipart/mixed; boundary="===============6103466214273817831=="
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
+ Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ chao.hao@mediatek.com, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
+ anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>,
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+On Wed, Jul 17, 2019 at 08:44:19PM +0800, Yong Wu wrote:
+> On Mon, 2019-07-15 at 10:51 +0100, Will Deacon wrote:
+> > On Sun, Jul 14, 2019 at 12:41:20PM +0800, Yong Wu wrote:
+> > > @@ -742,7 +763,9 @@ static struct io_pgtable
+> > > *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+> > >  {
+> > >  	struct arm_v7s_io_pgtable *data;
+> > >  
+> > > -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+> > > +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+> > > +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+> > > +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+> > >  		return NULL;
+> > 
+> > I think you can rework this to do something like:
+> > 
+> > 	if (cfg->ias > ARM_V7S_ADDR_BITS)
+> > 		return NULL;
+> > 
+> > 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
+> > 		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
+> > 			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
+> > 		else if (cfg->oas > 34)
+> > 			return NULL;
+> > 	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
+> > 		return NULL;
+> > 	}
+> > 
+> > so that we clamp the oas when phys_addr_t is 32-bit for you. That should
+> > allow you to remove lots of the checking from iopte_to_paddr() too if you
+> > check against oas in the map() function.
+> > 
+> > Does that make sense?
+> 
+> Of course I'm ok for this. I'm only afraid that this function has
+> already 3 checking "if (x) return NULL", Here we add a new one and so
+> many lines... Maybe the user should guarantee the right value of oas.
+> How about move it into mtk_iommu.c?
+> 
+> About the checking of iopte_to_paddr, I can not remove them. I know it
+> may be a bit special and not readable. Hmm, I guess I should use a MACRO
+> instead of the hard code 33 for the special 4GB mode case.
 
---===============6103466214273817831==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="GZVR6ND4mMseVXL/"
-Content-Disposition: inline
+Why can't you just do something like:
 
+	if (!(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT))
+		return paddr;
 
---GZVR6ND4mMseVXL/
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
+	if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
+		paddr |= BIT_ULL(33);
 
+	if (pte & ARM_V&S_ATTR_MTK_PA_BIT32)
+		paddr |= BIT_ULL(32);
 
-> > Can't you use those to derive your values from that? Which ones are you=
- missing
-> > if not?
->=20
-> I have take a little time to develop a new patch which based on your
-> suggestions, and it tested OK. Thanks for your suggestions, I will
-> update the patch after I test it fully.
+	return paddr;
 
-Great news, thanks!
+The diff I sent previously sanitises the oas at init time, and then you
+can just enforce it in map().
 
-
---GZVR6ND4mMseVXL/
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl0vIrMACgkQFA3kzBSg
-KbZc3A/+MaKqaXoxfLhF7cf/4W3pivQuZ1XwN1uUj0ywybWz2dxrakkTsTS5kCSF
-D2GRUcGvTLGKod/BaV/wIfdFVeyYPGoh38C2LSEcc2zTWl3CO+CyiJ35rAUvVhKe
-DoxAxfkR4LSUpzTJUi26asAWZggVjEBZkWQQxhyJma8txPhAtuOg2Dp9J6w8oZtO
-Ufj5c1FbF8r3q82ah5dmHqs924Q6WHUhBQXQf3eGNRJgqY/np4XHB5TZkOVj1uCW
-qQhUIx4xBooJa1cSXGr7kA6nSay+zIX++F5R9hbxkGSCFcGZXei0owslreNQsyDf
-rHMEc9JoZ5wXIMVjzPoxRwWrxDVIGdqfkqrmSDBjmYq4CDOAWvBZUIjgsy1E9d9R
-YPX5zj3Fvinui4/dxqADBLuAoinkw3NAYg14KCAzIzXbOLwetnGXxoIaiLE2v8PT
-qaTbtnIIhG9n/gaSQIQ3lDwTsa6dxv7FS3++6h+RFhAQ8XsaNKvYTgvmVrV4jKvs
-Rr3Kg+m/MdEiWHceoa6tPM96kiWlQAQLq1yN1B06DMoFBkr4S7pjOe6LCYFG7AfP
-Cu8nEykpDz6DT6KVwjefQpH14gTGH4TSjvpuXQLfjKB5k5sfi+NIif3+v3tJUBoE
-8KH9/iRcWMwVKm36gyugDLIa4xfsb5fj0v2Lk1ZL4dvw75Z2JiU=
-=K/nF
------END PGP SIGNATURE-----
-
---GZVR6ND4mMseVXL/--
-
-
---===============6103466214273817831==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============6103466214273817831==--
-
