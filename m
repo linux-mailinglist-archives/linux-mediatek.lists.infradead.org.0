@@ -2,66 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 793706B93F
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 11:33:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EDCF76BAE0
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 13:00:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bF0k+L32txut3Qi3C0QH7grht+JYNSpxTqXIrjaNyRw=; b=ltgZOClh6Ylueb
-	ZTYPypKA3ZQCcivG/89cOSohyDws5kyyH5dafhRvkVDo3SO9eP39ZhV+5vZeHITUb7bilWemphfLv
-	9crO7wv2oRtloP091rPQNvAZgOnv/QURUhdfSll7eHu+Y/YwIHF6Pm4r3arqB0EyEh3RyMYtaUkV9
-	9YYL5uMqmtAaa97IKzU+eEfOXu7Fe29XpMWdf3EGoW3hWJHSzny+mOPksVg2o9SYKzrw8HBvWDE8F
-	aQ2d4QnPFLe6fFP+MvwkZJj2jwEctWGmxHxcusHCOG0fjZZHQat7ZLIDY1ARjBYMqa3VOrESyXwt2
-	j/FFwDP9NLUd/UTWZFRA==;
+	List-Owner; bh=N8MzTSdy/lgieWiIoodVD0zl09UaTrKwBosazM4gDQk=; b=dgtJGi1HXZNc46
+	BkCVoUOH4buMIdX+yQW7DdjgCiWNPgaiZxIr98uxl2AVTOhvEK3L/Seiu9XHH2mCmQGVxwWNW+4Ut
+	it7ctRCsbGk4kHrSwif8wiLtT6h25dtSogMDa2HMzxCIvmklTXQ0aM/5VXhLpz39hWLtRbowfgGi7
+	ADcEvKzBQLIO1flde5wjUJOmEjGllzrNZjHsP6DEPTcK3/uTq3c/tTqoxA16FClebX+c8UF3CQ/sm
+	YkpT8q6UCfHd7ED6G+F2E5Rz0HitJCibbXrB8IuVifDvNW+ZS1kt9vwJNrxqcFplQkIGmMT4oxao9
+	yEWznxQIPcYK7vmrB/Ww==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hngJY-0001xg-R7; Wed, 17 Jul 2019 09:33:33 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hnhfE-0001xE-FP; Wed, 17 Jul 2019 11:00:00 +0000
+Received: from asavdk4.altibox.net ([109.247.116.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hngIr-0001U1-KF; Wed, 17 Jul 2019 09:32:51 +0000
-X-UUID: 35fa26bdbb3c4a3ca8cbb05012635ee1-20190717
-X-UUID: 35fa26bdbb3c4a3ca8cbb05012635ee1-20190717
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <xia.jiang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1157696841; Wed, 17 Jul 2019 01:32:31 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 17 Jul 2019 02:32:29 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 17 Jul 2019 17:32:28 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 17 Jul 2019 17:32:27 +0800
-From: Xia Jiang <xia.jiang@mediatek.com>
-To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Rob Herring <robh+dt@kernel.org>, 
- Matthias Brugger <matthias.bgg@gmail.com>, Rick Chang
- <rick.chang@mediatek.com>
-Subject: [PATCH 5/5] arm: dts: add jpeg enc device tree node
-Date: Wed, 17 Jul 2019 17:30:34 +0800
-Message-ID: <20190717093034.22826-6-xia.jiang@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190717093034.22826-1-xia.jiang@mediatek.com>
-References: <20190717093034.22826-1-xia.jiang@mediatek.com>
+ id 1hnhez-0001lB-Hj; Wed, 17 Jul 2019 10:59:47 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk4.altibox.net (Postfix) with ESMTPS id F142F8034E;
+ Wed, 17 Jul 2019 12:59:33 +0200 (CEST)
+Date: Wed, 17 Jul 2019 12:59:32 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: dri-devel@lists.freedesktop.org
+Subject: Re: [PATCH v2 0/19] drm: drop use of drmp.h in drm-misc
+Message-ID: <20190717105932.GA5188@ravnborg.org>
+References: <20190716064220.18157-1-sam@ravnborg.org>
+ <20190716065022.GA18452@ravnborg.org>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190716065022.GA18452@ravnborg.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=VcLZwmh9 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10
+ a=e1VmrhLkSVZGwi_aLusA:9 a=CjuIK1q_8ugA:10
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190717_023249_766599_AA995711 
-X-CRM114-Status: UNSURE (   8.17  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190717_035945_768087_899047AB 
+X-CRM114-Status: GOOD (  18.23  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [109.247.116.15 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,50 +66,68 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Xia Jiang <xia.jiang@mediatek.com>, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Tomasz Figa <tfiga@chromium.org>, linux-mediatek@lists.infradead.org,
- linux-media@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Marek Szyprowski <m.szyprowski@samsung.com>
+Cc: Maxime Jourdan <mjourdan@baylibre.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
+ Alexandru-Cosmin Gheorghe <Alexandru-Cosmin.Gheorghe@arm.com>,
+ Jerome Brunet <jbrunet@baylibre.com>, Deepak Sharma <deepak.sharma@amd.com>,
+ Oleksandr Andrushchenko <oleksandr_andrushchenko@epam.com>,
+ Kevin Hilman <khilman@baylibre.com>, Maxime Ripard <maxime.ripard@bootlin.com>,
+ Chen-Yu Tsai <wens@csie.org>, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ NXP Linux Team <linux-imx@nxp.com>, linux-rockchip@lists.infradead.org,
+ Eugeniy Paltsev <Eugeniy.Paltsev@synopsys.com>,
+ Dan Carpenter <dan.carpenter@oracle.com>,
+ Robert Tarasov <tutankhamen@chromium.org>, Emil Lundmark <lndmrk@chromium.org>,
+ Jani Nikula <jani.nikula@intel.com>, Jyri Sarha <jsarha@ti.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-amlogic@lists.infradead.org, Sean Paul <sean@poorly.run>,
+ linux-arm-kernel@lists.infradead.org, Thomas Zimmermann <tzimmermann@suse.de>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Alex Deucher <alexander.deucher@amd.com>,
+ Mikulas Patocka <mpatocka@redhat.com>, Shawn Guo <shawnguo@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-add jpeg enc device tree node
+On Tue, Jul 16, 2019 at 08:50:22AM +0200, Sam Ravnborg wrote:
+> Copied all recipients on the cover letter.
+> As the list is long this mail may not hit the mailing lists.
+> 
+> 	Sam
+> 
+> On Tue, Jul 16, 2019 at 08:42:01AM +0200, Sam Ravnborg wrote:
+> > This patch set removes a far share of the remaining uses of drmP.h.
+> > Common for all patches are that the respective files are maintained
+> > in drm-misc.
+> > All patches are independent.
+> > 
+> > Patches have all been build tested with various configs and various
+> > architectures.
+> > There are likely introduced a few build issues that randconfig
+> > build will reveal, but for all configs I have used the build was OK.
+> > 
+> > This patchset does not conclude the quest to kill all uses
+> > of drmP.h, but it is a major step towards the goal.
+> > 
+> > Please review/ack.
+> > I plan to apply the patches to drm-misc, but feel free
+> > to do it yourself.
+> > 
+> > There will be conflicts with the ongoing work on ttm, gem etc.
+> > But let's deal with the conflicts when they hit us - it
+> > is simple conflicts in the list of include files.
+> > 
+> > v2:
+> > - Removed merged patches
+> > - Added ack from Emil Velikov to the full series
+> > - Rebased on top of drm-misc-next
+> > - Hand-edited the list of Cc: as get_maintainer.pl in some
+> >   cases looks up too much people, due to cross kernel commits
 
-Change-Id: I901602f04540d619a490746ed61c8cd8b420b051
-Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
----
- arch/arm/boot/dts/mt2701.dtsi | 12 ++++++++++++
- 1 file changed, 12 insertions(+)
+I have collected the additional r-bs and acks and pushed out the full
+series. Thanks for feedback to everyone!
 
-diff --git a/arch/arm/boot/dts/mt2701.dtsi b/arch/arm/boot/dts/mt2701.dtsi
-index 51e1305c6471..560f27fd9d9e 100644
---- a/arch/arm/boot/dts/mt2701.dtsi
-+++ b/arch/arm/boot/dts/mt2701.dtsi
-@@ -569,6 +569,18 @@
- 			 <&iommu MT2701_M4U_PORT_JPGDEC_BSDMA>;
- 	};
- 
-+	jpegenc: jpegenc@1500a000 {
-+		compatible = "mediatek,mt2701-jpgenc", "mediatek,mtk-jpgenc";
-+		reg = <0 0x1500a000 0 0x1000>;
-+		interrupts = <GIC_SPI 141 IRQ_TYPE_LEVEL_LOW>;
-+		clocks =  <&imgsys CLK_IMG_VENC>;
-+		clock-names = "jpgenc";
-+		power-domains = <&scpsys MT2701_POWER_DOMAIN_ISP>;
-+		mediatek,larb = <&larb2>;
-+		iommus = <&iommu MT2701_M4U_PORT_JPGENC_RDMA>,
-+			<&iommu MT2701_M4U_PORT_JPGENC_BSDMA>;
-+	};
-+
- 	vdecsys: syscon@16000000 {
- 		compatible = "mediatek,mt2701-vdecsys", "syscon";
- 		reg = <0 0x16000000 0 0x1000>;
--- 
-2.18.0
-
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
