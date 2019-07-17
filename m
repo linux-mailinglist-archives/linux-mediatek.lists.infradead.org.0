@@ -2,56 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3EFDC6B8DE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 11:07:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0B2416B933
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 11:31:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zLAAcKwWefxPfJsWCU1yuG6bbAvDtYtgycVkoqyusMY=; b=MpS3/jP+uPHP1N
-	L9khFoqs5MQTWf0v/XzlsX+dOOXND4wWwWonAiWWUQsEbiUyvDIZOECdI7O5juMATMO+cpvioXBQE
-	as1UbWNc0QBZ0o+6vyXHyBkVQUFBBbTU6J1PTaWsoiAea0Q6nWEI81DTvC8Gu73oettjNQb30t0Az
-	fxF31Nzx70QHJVFxZ/Z6d0+Y7sU4SPzN7Tsm5GmLDv/qrmLaVUyLRErXXpiVxwY5koHaoFWse1JeN
-	cq3/fUPw7SDP5HmV8XZyRVCGGGhogVSISp0fzwY9CDbpsbr5zgcAWrFU1se/dvqxNnh8ZID5T+Khg
-	mqo2NcNxjFRMikdWgJBw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=VjiDwFnlSjOqdPVlkh01DNeu4vGFqMtZNr3YhQ/mhWE=; b=HYTQV1XBxJI+Cp
+	zi78DRxiroRSpLgoepz8ZNVGHm6vTEBFQsS5ngs+ynwJg37k2XYPyycHiYpllONf5DtA4mGZWbY3d
+	prCyy9RdNKJsqC02cVq9Fs9xJtbCZL476vfrzEl47pt3BS+qVS69Rqt6cTJF9r7UcXb2qj4YP351O
+	ZZiC6B4iJiVQIhhMrPpGc5E/cxo2xphdJZIJi2OlxoraAazBAYpxAK6OKY/TiXUvbIQ4ePwMIkqyc
+	OZgES3J/JOcZFh2gfho7sfkmwrhSil9PVraJt7OtZqfkbDWPMUppNh36PnlM4x1rYCb/1DR0jcU3j
+	8CDbZ+re44irZFTBOnTQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnfuN-0006j4-4p; Wed, 17 Jul 2019 09:07:31 +0000
-Received: from relay10.mail.gandi.net ([217.70.178.230])
+	id 1hngHE-0000D8-F6; Wed, 17 Jul 2019 09:31:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnfu1-0006Wk-Ra; Wed, 17 Jul 2019 09:07:12 +0000
-Received: from localhost (alyon-656-1-672-152.w92-137.abo.wanadoo.fr
- [92.137.69.152])
- (Authenticated sender: alexandre.belloni@bootlin.com)
- by relay10.mail.gandi.net (Postfix) with ESMTPSA id 34A23240008;
- Wed, 17 Jul 2019 09:06:55 +0000 (UTC)
-Date: Wed, 17 Jul 2019 11:06:55 +0200
-From: Alexandre Belloni <alexandre.belloni@bootlin.com>
-To: Ran Bi <ran.bi@mediatek.com>
-Subject: Re: [PATCH 2/3] rtc: Add support for the MediaTek MT2712 RTC
-Message-ID: <20190717090655.GA21823@piout.net>
-References: <20190702032120.16539-1-ran.bi@mediatek.com>
- <20190702032120.16539-3-ran.bi@mediatek.com>
- <20190713211231.GD4732@piout.net>
- <1563353694.19945.33.camel@mhfsdcap03>
+ id 1hngGy-0008Rl-KT; Wed, 17 Jul 2019 09:30:54 +0000
+X-UUID: 9aae1c4a075b4b52b2dc4c11b0ed2f49-20190717
+X-UUID: 9aae1c4a075b4b52b2dc4c11b0ed2f49-20190717
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <xia.jiang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 949440579; Wed, 17 Jul 2019 01:30:43 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 17 Jul 2019 02:30:42 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 17 Jul 2019 17:30:40 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 17 Jul 2019 17:30:40 +0800
+From: Xia Jiang <xia.jiang@mediatek.com>
+To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Rob Herring <robh+dt@kernel.org>, 
+ Matthias Brugger <matthias.bgg@gmail.com>, Rick Chang
+ <rick.chang@mediatek.com>
+Subject: [PATCH v2 0/5]Add support for mt2701 JPEG ENC support
+Date: Wed, 17 Jul 2019 17:30:29 +0800
+Message-ID: <20190717093034.22826-1-xia.jiang@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1563353694.19945.33.camel@mhfsdcap03>
-User-Agent: Mutt/1.12.0 (2019-05-25)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190717_020710_055441_E3AB4ED4 
-X-CRM114-Status: GOOD (  19.56  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190717_023052_682416_05548B39 
+X-CRM114-Status: GOOD (  10.34  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.178.230 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,84 +70,249 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>, Flora Fu <flora.fu@mediatek.com>,
- srv_heupstream@mediatek.com, devicetree@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>,
- Eddie Huang <eddie.huang@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- linux-rtc@vger.kernel.org
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Tomasz Figa <tfiga@chromium.org>,
+ linux-mediatek@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org,
+ Marek Szyprowski <m.szyprowski@samsung.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 17/07/2019 16:54:54+0800, Ran Bi wrote:
-> > > +
-> > > +/* we map HW YEAR 0 to 1968 not 1970 because 2000 is the leap year */
-> > > +#define RTC_MIN_YEAR		1968
-> > > +#define RTC_BASE_YEAR		1900
-> > > +#define RTC_MIN_YEAR_OFFSET	(RTC_MIN_YEAR - RTC_BASE_YEAR)
-> > 
-> > Do not do that. If this RTC range starts in 200, ths is what the driver
-> > has to support, you should not care about dates before 2000. Note that
-> > the RTC core can still properly shift the range if it is absolutely
-> > necessary.
-> > 
-> 
-> Do we need to care about default alarm date 1970-01-01? Or can I just
-> set it to 2000-01-01?
-> 
+This patchset add support for mt2701 JPEG ENC support.
 
-You never have to set a default value. It doesn't add any value versus
-an unknown value.
+This is the compliance test result for jpeg dec and enc.
 
-> > > +
-> > > +static inline u32 rtc_readl(struct mt2712_rtc *rtc, u32 reg)
-> > 
-> > Please use a more descriptive prefix than just rtc_.
-> > 
-> 
-> Do you mean it's better to use prefix "mt2712_rtc_"?
-> 
+The JPEG dec log:
+------------------------------------------------------------
+v4l2-compliance -d /dev/video0
+v4l2-compliance SHA: 1b961f5e82b0805faea0ba68bfa8037213a02351, 32 bits
 
-Yes.
+Compliance test for mtk-jpeg device /dev/video0:
 
-> > > +
-> > > +	/*
-> > > +	 * register status was not correct,
-> > > +	 * need set time and alarm to default
-> > > +	 */
-> > > +	if (p1 != RTC_POWERKEY1_KEY || p2 != RTC_POWERKEY2_KEY
-> > > +	    || !valid_rtc_time(rtc)) {
-> > > +		reset_rtc_time(rtc);
-> > 
-> > Do not do that. This is valuable information. If the time is invalid,
-> > report it as such in read_time and read_alarm. Resetting the time here
-> > will lead to more issues later (i.e. userspace is not able to know
-> > whether the time is set correctly or not).
-> > 
-> 
-> When RTC's power run out, RTC will lost it's registers value and time
-> data at next boot up. We even cannot know what the date and time it
-> shows. We want to check this state here and set a default RTC date. Do
-> you think it's no need here and the date should be set by system?
-> 
+Driver Info:
+        Driver name      : mtk-jpeg
+        Card type        : mtk-jpeg decoder
+        Bus info         : platform:15004000.jpegdec
+        Driver version   : 5.2.0
+        Capabilities     : 0x84204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+                Device Capabilities
+        Device Caps      : 0x04204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+        Detected JPEG Decoder
 
-If I understand correctly, the POWERKEY register will lose their value.
-This means that you know that the time is incorrect. instead of setting
-it to a default value and losing that valuable information, simply check
-for that in read_time and return EINVAL in that case. then on the next
-set_time invocation, you can set the POWERKEY registers and set the time
-to a known value.
+Required ioctls:
+        test VIDIOC_QUERYCAP: OK
 
+Allow for multiple opens:
+        test second /dev/video0 open: OK
+        test VIDIOC_QUERYCAP: OK
+        test VIDIOC_G/S_PRIORITY: OK
+        test for unlimited opens: OK
+
+Debug ioctls:
+        test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+        test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+        test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+        test VIDIOC_ENUMAUDIO: OK (Not Supported)
+        test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDIO: OK (Not Supported)
+        Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+        test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+        test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+        Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+        test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+        test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+        test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+        test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+        test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+        test VIDIOC_QUERYCTRL: OK
+        test VIDIOC_G/S_CTRL: OK
+        test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+        test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK (Not Supported)
+        test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+        Standard Controls: 0 Private Controls: 0
+
+Format ioctls:
+        test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+        test VIDIOC_G/S_PARM: OK (Not Supported)
+        test VIDIOC_G_FBUF: OK (Not Supported)
+        test VIDIOC_G_FMT: OK
+        test VIDIOC_TRY_FMT: OK
+        test VIDIOC_S_FMT: OK
+        test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+        test Cropping: OK (Not Supported)
+        test Composing: OK
+        test Scaling: OK
+
+Codec ioctls:
+        test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+        test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+        test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+        test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+        test VIDIOC_EXPBUF: OK
+        test Requests: OK (Not Supported)
+
+Total for mtk-jpeg device /dev/video0: 44, Succeeded: 44, Failed: 0, Warnings: 0
+------------------------------------------------------------
+
+The JPEG enc log:
+
+------------------------------------------------------------
+v4l2-compliance -d /dev/video1 
+v4l2-compliance SHA: 1b961f5e82b0805faea0ba68bfa8037213a02351, 32 bits
+
+Compliance test for mtk-jpeg device /dev/video1:
+
+Driver Info:
+        Driver name      : mtk-jpeg
+        Card type        : mtk-jpeg encoder
+        Bus info         : platform:1500a000.jpegenc
+        Driver version   : 5.2.0
+        Capabilities     : 0x84204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+                Device Capabilities
+        Device Caps      : 0x04204000
+                Video Memory-to-Memory Multiplanar
+                Streaming
+                Extended Pix Format
+        Detected JPEG Encoder
+
+Required ioctls:
+        test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+        test second /dev/video1 open: OK
+        test VIDIOC_QUERYCAP: OK
+        test VIDIOC_G/S_PRIORITY: OK
+        test for unlimited opens: OK
+
+Debug ioctls:
+        test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+        test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+        test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+        test VIDIOC_ENUMAUDIO: OK (Not Supported)
+        test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDIO: OK (Not Supported)
+        Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+        test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+        test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+        test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+        test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+        test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+        Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+        test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+        test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+        test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+        test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+        test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+        test VIDIOC_QUERYCTRL: OK
+        test VIDIOC_G/S_CTRL: OK
+        test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+        test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+        test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+        Standard Controls: 4 Private Controls: 0
+
+Format ioctls:
+        test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+        test VIDIOC_G/S_PARM: OK (Not Supported)
+        test VIDIOC_G_FBUF: OK (Not Supported)
+        test VIDIOC_G_FMT: OK
+        test VIDIOC_TRY_FMT: OK
+        test VIDIOC_S_FMT: OK
+        test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+        test Cropping: OK (Not Supported)
+        test Composing: OK
+        test Scaling: OK
+
+Codec ioctls:
+        test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+        test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+        test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+        test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+        test VIDIOC_EXPBUF: OK
+        test Requests: OK (Not Supported)
+
+Total for mtk-jpeg device /dev/video1: 44, Succeeded: 44, Failed: 0, Warnings: 0
+------------------------------------------------------------
+
+Change compared to v1:
+-fix compliance test fail, check created buffer size in driver
+
+Xia Jiang (5):
+  media: dt-bindings: Add JPEG ENC device tree node document
+  media: platform: Rename jpeg dec file name
+  media: platform: Add jpeg enc feature
+  media: platform: change GPLv2 license to SPDX
+  arm: dts: add jpeg enc device tree node
+
+ .../bindings/media/mediatek-jpeg-encoder.txt  |  33 +
+ arch/arm/boot/dts/mt2701.dtsi                 |  12 +
+ drivers/media/platform/mtk-jpeg/Makefile      |   5 +-
+ .../media/platform/mtk-jpeg/mtk_jpeg_core.c   | 753 ++++++++++++++----
+ .../media/platform/mtk-jpeg/mtk_jpeg_core.h   | 123 ++-
+ .../{mtk_jpeg_hw.c => mtk_jpeg_dec_hw.c}      |  11 +-
+ .../{mtk_jpeg_hw.h => mtk_jpeg_dec_hw.h}      |  18 +-
+ ...{mtk_jpeg_parse.c => mtk_jpeg_dec_parse.c} |  11 +-
+ .../platform/mtk-jpeg/mtk_jpeg_dec_parse.h    |  18 +
+ .../{mtk_jpeg_reg.h => mtk_jpeg_dec_reg.h}    |   9 +-
+ .../media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c | 175 ++++
+ .../media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h |  60 ++
+ .../platform/mtk-jpeg/mtk_jpeg_enc_reg.h      |  49 ++
+ .../media/platform/mtk-jpeg/mtk_jpeg_parse.h  |  25 -
+ drivers/media/v4l2-core/v4l2-ctrls.c          |   1 +
+ include/uapi/linux/v4l2-controls.h            |   2 +
+ 16 files changed, 1060 insertions(+), 245 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+ rename drivers/media/platform/mtk-jpeg/{mtk_jpeg_hw.c => mtk_jpeg_dec_hw.c} (96%)
+ rename drivers/media/platform/mtk-jpeg/{mtk_jpeg_hw.h => mtk_jpeg_dec_hw.h} (76%)
+ rename drivers/media/platform/mtk-jpeg/{mtk_jpeg_parse.c => mtk_jpeg_dec_parse.c} (85%)
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_dec_parse.h
+ rename drivers/media/platform/mtk-jpeg/{mtk_jpeg_reg.h => mtk_jpeg_dec_reg.h} (78%)
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h
+ create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_reg.h
+ delete mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_parse.h
 
 -- 
-Alexandre Belloni, Bootlin
-Embedded Linux and Kernel engineering
-https://bootlin.com
+2.18.0
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
