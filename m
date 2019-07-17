@@ -2,82 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 802196B297
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 01:59:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B9B56B4FB
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 05:24:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=s4pPvPGk68ICxvXJ56SYnvYGEWO4asTUXSfJrQVjyps=; b=Uxyid80SdUg1QI
-	7huyBPxX/E0dbM4p3YKzEKHAxuweN4O66LitARWgStyILhfCNapCiInZN42cKl0Gn/8hYCBvu4o4W
-	ChpKK1VeW9KjezBGlNq0YfrV9SJzXstYTY/syb8EPge9nVirogT0wPN9oH9d7+kHDQ9DkkChkDlvz
-	DhW7mZ1yt1Ep/Ef5IBlOgcB3/ogybT+ZxADGwMyV2V0ONY3yZMUDn+4oZLH5gHz4OlMSURvYsLclD
-	Zp/0M5hY6vwsJ/UkTTt59NvxeQ/DXvYB3Nvu6sm9xiunlXSOMc/KZgFm7U5cDzJaMsUFv5u8seyGi
-	opt0TCNRDTsLHGcn2DDg==;
+	List-Owner; bh=CjkYhgMuWV3BXFjWzr4XeHcULR3zn3MtsGa3I5r5YDw=; b=SWkEWygwDkQt7T
+	XaQhgrOyPkhwVY8Xwiy/Sk7arwjoPWPvJexL3U1G8nYZq2xQ5RTO3BkTiS/nnMRPTQlWTzp2prUZs
+	CiLkpwgZH3/9vy1V3h8kZAv91YQEddHcaWbSl6hyEJfTlVQMWsyz2AbMGfS7fLaq6SvyBkBQhU7IH
+	YXZ/DwUmt9l3DNBVORtlxay2MtWp6Ltm7/KYoEGiEIq8/549kindC1c58bGnTWjoBda1Lv07ATSo9
+	xwPX+U6kTA9+7YaIkTOUFSyf54sGeezuQSe1wWwJcmokouFs8XXs1dm456MejwDrNWbwPYMJzIvM0
+	fgP+zhidvKryakUJwiGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnXMP-0003PD-Ns; Tue, 16 Jul 2019 23:59:53 +0000
-Received: from mail-qt1-x844.google.com ([2607:f8b0:4864:20::844])
+	id 1hnaXo-0008HF-UX; Wed, 17 Jul 2019 03:23:52 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnXMA-0003E8-C8
- for linux-mediatek@lists.infradead.org; Tue, 16 Jul 2019 23:59:39 +0000
-Received: by mail-qt1-x844.google.com with SMTP id x22so16598424qtp.12
- for <linux-mediatek@lists.infradead.org>; Tue, 16 Jul 2019 16:59:36 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=zfE+1oH2ev9A7CB6B7OCM0HfuvGIKPETwgwy1wYPeZk=;
- b=myAjYl3qrrjUdybw3rfkkqgxLpxX2EWxa6gWin7tovqVhvuC1kAEj0YUMz0a+INMKn
- k34dHtcAcHsWoDetwCiVgDi03O2ZbX6tn7T6FBnKsTPf2BLewHVVFqVnoOY7p/UiUCEe
- +2TMI/XehWPm3bOXRcM82WCBDwbCShBjLtw7Y=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=zfE+1oH2ev9A7CB6B7OCM0HfuvGIKPETwgwy1wYPeZk=;
- b=cqJBMT4JItxxo9e/vpjPaZDgGEZd9MD4U9x4SdIrLqu4IcWwzWoIWQoaE5ByRStFIE
- aDSgHsEHuyKhGp6nNp7+2yF95nQoxwtOfzzuSXAnqvfl4HQZHsbaA6XIvniAw8NM5ek5
- 71W7MGCjsgjBGqz5rNxpyJPr+ZBRM6fRniviFYaLIe7eX0LB39G6XWe2wYOGUpVwX9ut
- ayxzyFuZb6qLuKqAGoDWnXPiOnExJXnCmO/iDZnlwbGf7I2gTEDdPV5eRpetrIVRtkqC
- C8FnNQrjUMD0ioCKDnPHD5mAjhUxq4AEJzvV3CEO5JK0w94f8DAJtsgAVJBljNa5RK+3
- i93w==
-X-Gm-Message-State: APjAAAXAaxkXtGgilSgb76aise+jwmmAatqqtpOsVALSkGtP3g0pS0E2
- LpAIhsdb/3jbI5cO7DDT0+MQtrwpMdnT2z8ManYYgg==
-X-Google-Smtp-Source: APXvYqyCn5WDabT9u/P+OGBvnjMb2lK0frfpzoQz2UZeeBoGFN9gytFn4nfFqeUwNxxQx3qvg3WhGoAnUFfps5oKIQ4=
-X-Received: by 2002:aed:3b1c:: with SMTP id p28mr24024945qte.312.1563321575377; 
- Tue, 16 Jul 2019 16:59:35 -0700 (PDT)
-MIME-Version: 1.0
+ id 1hnaXS-00086N-Fu; Wed, 17 Jul 2019 03:23:32 +0000
+X-UUID: b99e4391db044176a124b1479b271865-20190716
+X-UUID: b99e4391db044176a124b1479b271865-20190716
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 562888130; Tue, 16 Jul 2019 19:23:03 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 16 Jul 2019 20:23:02 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 17 Jul 2019 11:22:59 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 17 Jul 2019 11:22:58 +0800
+Message-ID: <1563333778.29169.5.camel@mtksdaap41>
+Subject: Re: [PATCH v4, 01/33] dt-bindings: mediatek: add binding for mt8183
+ display
+From: CK Hu <ck.hu@mediatek.com>
+To: <yongqiang.niu@mediatek.com>
+Date: Wed, 17 Jul 2019 11:22:58 +0800
+In-Reply-To: <1562625253-29254-2-git-send-email-yongqiang.niu@mediatek.com>
 References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
- <1562625253-29254-7-git-send-email-yongqiang.niu@mediatek.com>
-In-Reply-To: <1562625253-29254-7-git-send-email-yongqiang.niu@mediatek.com>
-From: Ryan Case <ryandcase@chromium.org>
-Date: Tue, 16 Jul 2019 16:59:23 -0700
-Message-ID: <CACjz--k0wVpxWTBXQeUHqm50RgvaCNkNb3DO+KviCOtq-e9gTQ@mail.gmail.com>
-Subject: Re: [PATCH v4, 06/33] dt-bindings: mediatek: add mutex description
- for mt8183 display
-To: yongqiang.niu@mediatek.com
+ <1562625253-29254-2-git-send-email-yongqiang.niu@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+MIME-Version: 1.0
+X-TM-SNTS-SMTP: B08C90B4972A6A74DF94ECDCEBA3A927F8F9ECC3D464E9044F2A116F6D54F9162000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190716_165938_469350_A6994DA9 
-X-CRM114-Status: GOOD (  14.56  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190716_202330_534888_CF97DE2E 
+X-CRM114-Status: GOOD (  16.01  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:844 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,47 +78,70 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
  linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- CK Hu <ck.hu@mediatek.com>, linux-arm-kernel@lists.infradead.org
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Jul 8, 2019 at 3:37 PM <yongqiang.niu@mediatek.com> wrote:
->
+Hi, Yongqiang:
+
+On Tue, 2019-07-09 at 06:33 +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
->
-> This patch add mutex description for mt8183 display
->
+> 
+> Update device tree binding documention for the display subsystem for
+> Mediatek MT8183 SOCs
+> 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > ---
->  Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt | 1 +
->  1 file changed, 1 insertion(+)
->
-> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> index bb9274a..4a22d49 100644
-> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> @@ -53,6 +53,7 @@ Required properties (all function blocks):
->    For most function blocks this is just a single clock input. Only the DSI and
->    DPI controller nodes have multiple clock inputs. These are documented in
->    mediatek,dsi.txt and mediatek,dpi.txt, respectively.
-> +  for MT8183 mutex, this hardware is always free run, has no clocks control
+>  .../bindings/display/mediatek/mediatek,display.txt  | 21 +++++++++++++++++++++
+>  1 file changed, 21 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,display.txt
+> 
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,display.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,display.txt
+> new file mode 100644
+> index 0000000..951d2a8
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,display.txt
+> @@ -0,0 +1,21 @@
+> +Mediatek Display Device
+> +============================
+> +
+> +The Mediatek Display Device provides power control to the system.
+> +
+> +Required Properties:
+> +
+> +- compatible: Should be one of:
+> +	- "mediatek,mt8183-display"
 
-This should have capitalization, punctuation, and drop the trailing space.
+I think this is "mediatek,mt8183-mmsys". In [1], Matthias has agreed
+that we could keep work on his patch, so you should apply his patch and
+remove this patch. In [2], I've found that MT8183 scpsys has some
+problem with Matthias' patch, so please also fix this problem.
 
-It also reads a little strangely. You may want something like "An
-exception is that the mt8183 mutex is always free running with no
-clocks property."
+[1] https://patchwork.kernel.org/patch/10686327/
+[2] https://patchwork.kernel.org/patch/11005731/
 
->
->  Required properties (DMA function blocks):
->  - compatible: Should be one of
-> --
-> 1.8.1.1.dirty
->
+Regards,
+CK
+
+> +
+> +The Display Device power name are defined in
+> +include\dt-bindings\power\mt*-power.h
+> +
+> +
+> +Example:
+> +
+> +display_components: dispsys@14000000 {
+> +	compatible = "mediatek,mt8183-display";
+> +	reg = <0 0x14000000 0 0x1000>;
+> +	power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+> +};
+> \ No newline at end of file
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
