@@ -2,68 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CA1886BCA3
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 14:55:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7CCB66BD07
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 15:29:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=J21gfoNfi613PvHBNWkw0QIn8FMqvXulsARXo80kjCo=; b=bGHnO9WkI+bUgu
-	vIShjHNSUtuI3JhKV+Q+06M84FXu/s/HCC8PR1MwcZn0SGn8gxYCi4qdBkd5SrnloerkKJlpwcWal
-	7lwaso3M16AAu6Q4awpQk+HBVCoGhycPnS+Dnn5+IaEpOJ/w/9Ae0SDCkRKcfom9q884piJ+QIK4R
-	ln2Iz7Z6x2fJUFr0LBAMxKE2o16dEHbRWiRszheoHRLMLmHptPDOY7LxuT0lHNSc/G6Mln2wkRt8P
-	CvuaZ8i6KyEdqAMTQAoFi5f7Rji26E+Da+3IwnOGo+sbCTkEGzmF7CeGufzd1WwJWlrLEkN/zck6c
-	jKqd/S9YP3ohoEQXoWew==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=WFpR+kEs/JlsQMy3kjWRjLd8Ujgu6nOld4wGxHjTh7U=; b=mUuRNL1C7iejahr3c3HEiRg94
+	9r3JwRKLgJCsLjMiXkmvLtLohvGEs4mWT2C2vvbg8krDaB18JZNOD8L1IcxpbfWAjHcwJmEzZDdZd
+	p1XbnIVPt2JpjO+T9YxnT4feXWcHzYt1l+WUu457Gd5fMc4YV2Jn5CWNBtFYHvCxquY9vBEJQU10v
+	vW70dpdxy0cUG6zPruiggtBxm//GhfeI4O2tJ36vQhb0Kf28FQXHr5fC95uVTmzihcgO817Wae28S
+	o2LMAGqi67aZ4wXCg1jwNy+dy/ZhPFf24Wan5hi9VONP8hycjWfTsgTdoSzAz9XYqmn1oTjVqYzR6
+	3id45Uh3A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnjT9-0001jX-2A; Wed, 17 Jul 2019 12:55:39 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnjT5-0001j4-MW; Wed, 17 Jul 2019 12:55:36 +0000
-X-UUID: a026176e0a354c0c95b2fcc52a902aaa-20190717
-X-UUID: a026176e0a354c0c95b2fcc52a902aaa-20190717
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <qii.wang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 15997465; Wed, 17 Jul 2019 04:55:26 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 17 Jul 2019 05:55:24 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 17 Jul 2019 20:55:21 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 17 Jul 2019 20:55:21 +0800
-Message-ID: <1563368121.16970.7.camel@mhfsdcap03>
+	id 1hnjzy-0008QG-PA; Wed, 17 Jul 2019 13:29:34 +0000
+Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hnjzo-0008HG-FJ; Wed, 17 Jul 2019 13:29:25 +0000
+Received: from localhost (p54B3309B.dip0.t-ipconnect.de [84.179.48.155])
+ by pokefinder.org (Postfix) with ESMTPSA id BAEC23E4757;
+ Wed, 17 Jul 2019 15:29:23 +0200 (CEST)
+Date: Wed, 17 Jul 2019 15:29:23 +0200
+From: Wolfram Sang <wsa@the-dreams.de>
+To: Qii Wang <qii.wang@mediatek.com>
 Subject: Re: [PATCH 1/2] dt-bindings: i2c: Add MediaTek i2c AC timing binding
-From: Qii Wang <qii.wang@mediatek.com>
-To: Wolfram Sang <wsa@the-dreams.de>
-Date: Wed, 17 Jul 2019 20:55:21 +0800
-In-Reply-To: <20190626133941.GL801@ninjato>
+Message-ID: <20190717132923.GC1458@kunai>
 References: <1560240715-22595-1-git-send-email-qii.wang@mediatek.com>
  <1560240715-22595-2-git-send-email-qii.wang@mediatek.com>
  <20190626133941.GL801@ninjato>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ <1563368121.16970.7.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: B257EECAC12F9671783A098BEBB779091CBD86B878109E3D551FAA2FD10A1FD32000:8
-X-MTK: N
+In-Reply-To: <1563368121.16970.7.camel@mhfsdcap03>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190717_055535_737462_91697165 
-X-CRM114-Status: GOOD (  13.06  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190717_062924_660365_1D535CEE 
+X-CRM114-Status: UNSURE (   8.36  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [88.99.104.3 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,57 +65,67 @@ Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
  leilk.liu@mediatek.com, linux-kernel@vger.kernel.org, robh+dt@kernel.org,
  linux-mediatek@lists.infradead.org, linux-i2c@vger.kernel.org,
  matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: multipart/mixed; boundary="===============6103466214273817831=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-06-26 at 15:39 +0200, Wolfram Sang wrote:
-> Hi,
-> 
-> On Tue, Jun 11, 2019 at 04:11:54PM +0800, Qii Wang wrote:
-> > Add i2c AC timing binding to binding file. It can give the AC
-> > timing parameters to meet I2C specification at different speed.
-> > 
-> > Signed-off-by: Qii Wang <qii.wang@mediatek.com>
-> 
-> I think this is a too specific 1:1 mapping of your register set into DT
-> world. We already have these generic parameters:
-> 
-> - clock-frequency
->         frequency of bus clock in Hz.
-> 
-> - i2c-scl-falling-time-ns
->         Number of nanoseconds the SCL signal takes to fall; t(f) in the I2C
->         specification.
-> 
-> - i2c-scl-internal-delay-ns
->         Number of nanoseconds the IP core additionally needs to setup SCL.
-> 
-> - i2c-scl-rising-time-ns
->         Number of nanoseconds the SCL signal takes to rise; t(r) in the I2C
->         specification.
-> 
-> - i2c-sda-falling-time-ns
->         Number of nanoseconds the SDA signal takes to fall; t(f) in the I2C
->         specification.
-> 
-> (check Documentation/devicetree/bindings/i2c/i2c.txt)
-> 
-> Can't you use those to derive your values from that? Which ones are you missing
-> if not?
-> 
-> Regards,
-> 
->    Wolfram
 
-I have take a little time to develop a new patch which based on your
-suggestions, and it tested OK. Thanks for your suggestions, I will
-update the patch after I test it fully.
+--===============6103466214273817831==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="GZVR6ND4mMseVXL/"
+Content-Disposition: inline
 
 
+--GZVR6ND4mMseVXL/
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+> > Can't you use those to derive your values from that? Which ones are you=
+ missing
+> > if not?
+>=20
+> I have take a little time to develop a new patch which based on your
+> suggestions, and it tested OK. Thanks for your suggestions, I will
+> update the patch after I test it fully.
+
+Great news, thanks!
+
+
+--GZVR6ND4mMseVXL/
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl0vIrMACgkQFA3kzBSg
+KbZc3A/+MaKqaXoxfLhF7cf/4W3pivQuZ1XwN1uUj0ywybWz2dxrakkTsTS5kCSF
+D2GRUcGvTLGKod/BaV/wIfdFVeyYPGoh38C2LSEcc2zTWl3CO+CyiJ35rAUvVhKe
+DoxAxfkR4LSUpzTJUi26asAWZggVjEBZkWQQxhyJma8txPhAtuOg2Dp9J6w8oZtO
+Ufj5c1FbF8r3q82ah5dmHqs924Q6WHUhBQXQf3eGNRJgqY/np4XHB5TZkOVj1uCW
+qQhUIx4xBooJa1cSXGr7kA6nSay+zIX++F5R9hbxkGSCFcGZXei0owslreNQsyDf
+rHMEc9JoZ5wXIMVjzPoxRwWrxDVIGdqfkqrmSDBjmYq4CDOAWvBZUIjgsy1E9d9R
+YPX5zj3Fvinui4/dxqADBLuAoinkw3NAYg14KCAzIzXbOLwetnGXxoIaiLE2v8PT
+qaTbtnIIhG9n/gaSQIQ3lDwTsa6dxv7FS3++6h+RFhAQ8XsaNKvYTgvmVrV4jKvs
+Rr3Kg+m/MdEiWHceoa6tPM96kiWlQAQLq1yN1B06DMoFBkr4S7pjOe6LCYFG7AfP
+Cu8nEykpDz6DT6KVwjefQpH14gTGH4TSjvpuXQLfjKB5k5sfi+NIif3+v3tJUBoE
+8KH9/iRcWMwVKm36gyugDLIa4xfsb5fj0v2Lk1ZL4dvw75Z2JiU=
+=K/nF
+-----END PGP SIGNATURE-----
+
+--GZVR6ND4mMseVXL/--
+
+
+--===============6103466214273817831==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============6103466214273817831==--
+
