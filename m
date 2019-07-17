@@ -2,56 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 475DF6B6EE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 08:48:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2E7F36B707
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jul 2019 08:55:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mxOzA6IZ/Dxrr+TilMj024Z4s//xLOsLFJtOAlkNmfc=; b=bC8tNsgjQBFHaX
-	BfMnaUKKPNP9EWI7I0Ay4GOtTma9qJORDyCgkQTxL8DJXC9wnQ4dVs//GUogqJ0oQdZBSW3lUDFQ9
-	uPUNiE09AtdIjeEi3hr/XC1KYv2Wwk8A96iI3t36G1jebS+Y+amZSL95RezavuianFtIz8ADWOS38
-	KxEpkYPh9WLY9JyZmOYwNHbJ8ScByCs+EbseI+pPtE+P0Sj3X2QDaSV0kFyPkbgj05Td001cyp0WC
-	zC/uyi+ekawWK9U51fjbOO6RC3C04/Zp+uVPoZPy95DC3BIQWRV80jFZBY53U8J80igAH0gsOKrg0
-	c20aQZoy7zlELLHVOUBg==;
+	List-Owner; bh=z1izYq0OH8MdMGQMGHyjRufAt9icpsUaXtMLDETO22o=; b=dmSN7l6z9vc1tO
+	TT+G1mU9IwWGB4en2dThhN3A8eL/H+GDKnMs7DM9t+l1F3VfEYxcRLJi2igPbAzFeOFhdGIlolVWV
+	k+Eqc0du2DhF4NTX5g/uA+x7TOJ1OsbxAFckZSwVgrnDJ69Ryibq96AxVZTesK+KFVWzkAYgFWWA/
+	kZKNf0az9Pm0FMIA3sMXYEMFbb8SS5BKLU2Zgfe4wUuvJItfWTU2N4igqyq0Ew0/ihhIp4rY6wKLq
+	AoIIBDZ5yoypmkSe4BUSsQ8x4rHHoE5lyL+jLaTKzhlD/xsQRiEaZsL3jHB5vcbYOrazBmzPXdLO6
+	fQuq7vkSsbN8HzsMGlKQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hndjl-0007wj-0O; Wed, 17 Jul 2019 06:48:25 +0000
+	id 1hndqy-0003KO-PJ; Wed, 17 Jul 2019 06:55:52 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hndjM-0007kL-Ay; Wed, 17 Jul 2019 06:48:01 +0000
-X-UUID: c25fc237a6d24adaa6dce40846a2f738-20190716
-X-UUID: c25fc237a6d24adaa6dce40846a2f738-20190716
+ id 1hndqe-00037l-Hk; Wed, 17 Jul 2019 06:55:34 +0000
+X-UUID: 0d04b852cfc24fc3af28d17c7e6efd1b-20190716
+X-UUID: 0d04b852cfc24fc3af28d17c7e6efd1b-20190716
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 347045516; Tue, 16 Jul 2019 22:47:54 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 16 Jul 2019 23:47:52 -0700
+ with ESMTP id 1544915712; Tue, 16 Jul 2019 22:55:05 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 16 Jul 2019 23:55:04 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 17 Jul 2019 14:47:44 +0800
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 17 Jul 2019 14:55:01 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 17 Jul 2019 14:47:44 +0800
-Message-ID: <1563346064.29169.24.camel@mtksdaap41>
-Subject: Re: [PATCH v4, 23/33] drm/mediatek: add ovl0/ovl_2l0 usecase
+ Transport; Wed, 17 Jul 2019 14:55:01 +0800
+Message-ID: <1563346501.29169.25.camel@mtksdaap41>
+Subject: Re: [PATCH v4, 24/33] drm/mediatek: distinguish ovl and ovl_2l by
+ layer_nr
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Wed, 17 Jul 2019 14:47:44 +0800
-In-Reply-To: <1562625253-29254-24-git-send-email-yongqiang.niu@mediatek.com>
+Date: Wed, 17 Jul 2019 14:55:01 +0800
+In-Reply-To: <1562625253-29254-25-git-send-email-yongqiang.niu@mediatek.com>
 References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
- <1562625253-29254-24-git-send-email-yongqiang.niu@mediatek.com>
+ <1562625253-29254-25-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: A5A28C9657D5B5F25C8B81486A932DBAE9B3E8F9A39C0F7D0938311551FCC0742000:8
+X-TM-SNTS-SMTP: 11F1DE6BD2C0561D80B2B9B084DC8B4CE48F7F7536BCB170DD002279A4AB79AD2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190716_234800_386296_9EAA6DC6 
-X-CRM114-Status: GOOD (  19.25  )
+X-CRM114-CacheID: sfid-20190716_235532_587801_7C8BECFF 
+X-CRM114-Status: GOOD (  12.79  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -90,113 +91,44 @@ Hi, Yongqiang:
 On Tue, 2019-07-09 at 06:34 +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> This patch add ovl0/ovl_2l0 usecase
-> in ovl->ovl_2l0 direct link usecase:
-> 1. the crtc support layer number will 4+2
-> 2. ovl_2l0 background color input select ovl0 when crtc init
-> and disable it when crtc finish
-> 3. config ovl_2l0 layer, if crtc config layer number is
-> bigger than ovl0 support layers(max is 4)
+> distinguish ovl and ovl_2l by layer_nr when get comp
+> id
 > 
+
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > ---
->  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 38 +++++++++++++++++++++++++++++++--
->  1 file changed, 36 insertions(+), 2 deletions(-)
+>  drivers/gpu/drm/mediatek/mtk_disp_ovl.c | 9 ++++++---
+>  1 file changed, 6 insertions(+), 3 deletions(-)
 > 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> index 5eac376..9ee9ce2 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> @@ -282,6 +282,15 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
+> diff --git a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
+> index 8ca4965..7e99827 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
+> @@ -326,7 +326,12 @@ static int mtk_disp_ovl_probe(struct platform_device *pdev)
+>  	if (irq < 0)
+>  		return irq;
 >  
->  	for (i = 0; i < mtk_crtc->ddp_comp_nr; i++) {
->  		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[i];
-> +		enum mtk_ddp_comp_id prev;
+> -	comp_id = mtk_ddp_comp_get_id(dev->of_node, MTK_DISP_OVL);
+> +	priv->data = of_device_get_match_data(dev);
 > +
-> +		if (i > 0)
-> +			prev = mtk_crtc->ddp_comp[i - 1]->id;
-> +		else
-> +			prev = DDP_COMPONENT_ID_MAX;
-> +
-> +		if (prev == DDP_COMPONENT_OVL0)
-> +			mtk_ddp_comp_bgclr_in_on(comp);
-
-I does not like to use a specific component id to check, that is not
-general. For now, you could simply call mtk_ddp_comp_bgclr_in_on(comp);
-for all component because only ovl_2l has implemented it.
-
-Regards,
-CK
-
->  
->  		mtk_ddp_comp_config(comp, width, height, vrefresh, bpc);
->  		mtk_ddp_comp_start(comp);
-> @@ -291,9 +300,18 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
->  	for (i = 0; i < mtk_crtc->layer_nr; i++) {
->  		struct drm_plane *plane = &mtk_crtc->planes[i];
->  		struct mtk_plane_state *plane_state;
-> +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
-> +		unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
-> +		unsigned int local_layer;
->  
->  		plane_state = to_mtk_plane_state(plane->state);
-> -		mtk_ddp_comp_layer_config(mtk_crtc->ddp_comp[0], i,
-> +
-> +		if (i >= comp_layer_nr) {
-> +			comp = mtk_crtc->ddp_comp[1];
-> +			local_layer = i - comp_layer_nr;
-> +		} else
-> +			local_layer = i;
-> +		mtk_ddp_comp_layer_config(comp , local_layer,
->  					  plane_state);
+> +	comp_id = mtk_ddp_comp_get_id(dev->of_node,
+> +				      priv->data->layer_nr == 4 ?
+> +				      MTK_DISP_OVL :
+> +				      MTK_DISP_OVL_2L);
+>  	if (comp_id < 0) {
+>  		dev_err(dev, "Failed to identify by alias: %d\n", comp_id);
+>  		return comp_id;
+> @@ -339,8 +344,6 @@ static int mtk_disp_ovl_probe(struct platform_device *pdev)
+>  		return ret;
 >  	}
 >  
-> @@ -319,6 +337,7 @@ static void mtk_crtc_ddp_hw_fini(struct mtk_drm_crtc *mtk_crtc)
->  					   mtk_crtc->ddp_comp[i]->id);
->  	mtk_disp_mutex_disable(mtk_crtc->mutex);
->  	for (i = 0; i < mtk_crtc->ddp_comp_nr - 1; i++) {
-> +		mtk_ddp_comp_bgclr_in_off(mtk_crtc->ddp_comp[i]);
->  		mtk_ddp_remove_comp_from_path(mtk_crtc->config_regs,
->  					      mtk_crtc->mmsys_reg_data,
->  					      mtk_crtc->ddp_comp[i]->id,
-> @@ -339,6 +358,8 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
->  	struct mtk_crtc_state *state = to_mtk_crtc_state(mtk_crtc->base.state);
->  	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
->  	unsigned int i;
-> +	unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
-> +	unsigned int local_layer;
+> -	priv->data = of_device_get_match_data(dev);
+> -
+>  	platform_set_drvdata(pdev, priv);
 >  
->  	/*
->  	 * TODO: instead of updating the registers here, we should prepare
-> @@ -361,7 +382,14 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
->  			plane_state = to_mtk_plane_state(plane->state);
->  
->  			if (plane_state->pending.config) {
-> -				mtk_ddp_comp_layer_config(comp, i, plane_state);
-> +				if (i >= comp_layer_nr) {
-> +					comp = mtk_crtc->ddp_comp[1];
-> +					local_layer = i - comp_layer_nr;
-> +				} else
-> +					local_layer = i;
-> +
-> +				mtk_ddp_comp_layer_config(comp, local_layer,
-> +							  plane_state);
->  				plane_state->pending.config = false;
->  			}
->  		}
-> @@ -592,6 +620,12 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
->  	}
->  
->  	mtk_crtc->layer_nr = mtk_ddp_comp_layer_nr(mtk_crtc->ddp_comp[0]);
-> +	if (mtk_crtc->ddp_comp_nr > 1) {
-> +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[1];
-> +
-> +		if (comp->funcs->bgclr_in_on)
-> +			mtk_crtc->layer_nr += mtk_ddp_comp_layer_nr(comp);
-> +	}
->  	mtk_crtc->planes = devm_kcalloc(dev, mtk_crtc->layer_nr,
->  					sizeof(struct drm_plane),
->  					GFP_KERNEL);
+>  	ret = devm_request_irq(dev, irq, mtk_disp_ovl_irq_handler,
 
 
 
