@@ -2,80 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 254DA6D1D8
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 18:19:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 388646D1DC
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 18:19:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mbtGeeo3klQhZeIE3KklOwYtDpIS/EyFve+5rutpEt4=; b=T7t5zLHOOYDzdH
-	BZsfmL5Q8BxRrqI5WkXdz+qcd8hy5sQCVg7JZBqtTpgPaDUca3Om5pjM84Dl7M5MmWmmoGbTctw4u
-	1AIh/6UE/lpV8m7oz7kTArdRG7d4aW/4aPS6MwLgPC518+CoggTVfEBxtW0Xp3EuoDyAhSpczI2dQ
-	4d5L5YZQXLKJz6e+N/Ti4Ebiy0agdud5zkmqtndXNMUmkKhqAlHXcFc6HMA/VqBvzpzZCOhU+tO4A
-	5OBZlJ0qzJjS1Nylmwd7yF504Sa0eAW5WLi5vcwp0YlY7rqoAn41nyQx8NFDuUhfdEuMz/bnfXOlT
-	cFozvmRkfvoAXTwybn/Q==;
+	List-Owner; bh=C5EJtCNnEQFMZPvaOn3J7AmweOF6B4uR1yuciOuoNAw=; b=YUGGijaL7F5//A
+	yK008q1L+LbGltpWDxCoSx994QmONotmJXngkMPSOSWkRi+k8xXR2q6SOGb4R24Tmz82U/coZfDcX
+	Qf4voOOky9cfO5+yN7UQ/ci4insPj3nk6yBbQcKd7g41Ge5bz0QVfHUZxMO4y8JTRxftgOqq+kGVc
+	jf6hMFF6k2LpeN+nIndukm6g52jx2Z6K4fckgmUubfVoGmVlwZu9rBXe2NoPYJcA7/GYDlZx+NSpn
+	fSMXvckU5WXujqK+Q67qAEG3WJTzOKD3AQ/qZxSWCG45WNJ9w8dLDZUtvjFndFwMwS+PdU7g2Iuo/
+	Q/YXQcOFSZXSPInvbnFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ho97u-0003qq-Sa; Thu, 18 Jul 2019 16:19:26 +0000
-Received: from mail-lj1-x241.google.com ([2a00:1450:4864:20::241])
+	id 1ho980-0003wC-Gk; Thu, 18 Jul 2019 16:19:32 +0000
+Received: from mail-lf1-x143.google.com ([2a00:1450:4864:20::143])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ho94D-00080Z-17; Thu, 18 Jul 2019 16:15:39 +0000
-Received: by mail-lj1-x241.google.com with SMTP id v18so27901041ljh.6;
- Thu, 18 Jul 2019 09:15:36 -0700 (PDT)
+ id 1ho94E-00082A-M0; Thu, 18 Jul 2019 16:15:40 +0000
+Received: by mail-lf1-x143.google.com with SMTP id x3so19711865lfc.0;
+ Thu, 18 Jul 2019 09:15:38 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=sender:from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=5iHBuVq6OVoL5g2SO+kAMAMUgwsbAup21Am8Hz+Y/h8=;
- b=E9gugjjWV1jLxjI45/LuVHSYg55YE91n6oSkaD3jd6eUsNv0C8K0Ovk+0vwwvx8+YS
- TVeVeVXEseK36WOlEQy2UyV0qhuvVuaCKZ5csLO4yo2jQav5j7MLXWtBPYRRatgSignP
- b6gJwXiHGR2s/H3eZtzhw/bRUeunyxT8PKYFacKSnaERK9T2ymCVsdtyVNT6hGHm2aYB
- Z/D6scPpvrdeZaops4w5/6dMz2egQ1NvbbE99eqmGAPFKqLmzXdm4FvRsF3cIfCgFXGE
- r2qFAAsP6tqaqWO6zU9IsDJX08BwWCLbg6nvlb8NWDlR0oVoxQ6UFBofC1PtR7Vq8cuW
- MYyg==
+ bh=UMsHXLcffq4kVBGwbAWt4MyCInwVzwfnZOh0ymiPKms=;
+ b=EonVsOPgtzdjOmu2KTHYu6tyqRmy1CssTiTEJ6xcS0g0zslbXsaHVrlLUZkbSwX10q
+ A4hMc7QAaF7jvVQnW9PJ814v5wKMd7WQ598kCF7ofKnIb592UuQL31JF64vkxFp4A5Zh
+ Ofh46skvrJJDW3WCLReJoAfP0M5vJ4iofO9Mn21638S3ul/OREU9EydPh/5jATMne+JT
+ syIQ3W2U2Ko7AWDujzxl2ZwOYG4ProQeFYyWvZQx71rpyQYHC4y29pDL1en08l8LTgXF
+ eOU9XfPybRSU5bMM2rVzWuxPo185Q+3Gv/RkRW4Aoz2fSy0+/PQUlAYuZnC0SypdAMA6
+ d9RQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:sender:from:to:cc:subject:date:message-id
  :in-reply-to:references:mime-version:content-transfer-encoding;
- bh=5iHBuVq6OVoL5g2SO+kAMAMUgwsbAup21Am8Hz+Y/h8=;
- b=AVZbyI4K7kDG16GqV1trYiRCRWEcFqJPO6CGQWk3w6+EmDjfwZfcbV3mHQYwDVrAO5
- 1CER9NCKaodhoKdUyDRA2e4RXK4j+4Nm3K2cBfbJqcpJ5dLtbn6kaIt7Nxt8iU3p4wZv
- N9sKOXc5o7//eYp7PkddJLatgkIsO1WzhWWZAzew6jdWe0c0Ez5FTktQutC1/hpZZ8aH
- CfWQnMmWy6oLBjgDyW6BvOaikKSqu/9SmVZ1ybI/JQ/Zk4/dJg8aRCXLNDTqX1N6MAuG
- 5QUEzX0CrAU+7kG390Zcw/XmSjoAAbAZ2bs1GjudWHfz5f1WTr19WZHVQqv5+UfPkcbk
- daIw==
-X-Gm-Message-State: APjAAAULIGFh5H4yuCKTzD1kJa7qPZwdSxo+WMdPZQ+vldt1DyoXavkU
- PeKzdDoDmKzQydv8JZd2Z7A=
-X-Google-Smtp-Source: APXvYqygrJMJtCucev6Ri5vM6W9Y/vQi+gWsKgWZ7kWFT2xIA7iXrlP3B0wYUJ6SqdZxmRzieBQObA==
-X-Received: by 2002:a2e:8007:: with SMTP id j7mr24880722ljg.191.1563466535069; 
- Thu, 18 Jul 2019 09:15:35 -0700 (PDT)
+ bh=UMsHXLcffq4kVBGwbAWt4MyCInwVzwfnZOh0ymiPKms=;
+ b=uNkGUP/fIS+MEAGZnxsUA5yEnWpJtjpLkysSIgxfMtUWOvD5p/alqWlOQw8j0t/j7V
+ Z/qwsln4qRowAmV5gEBgNY0jEb4n1gWetPK0cA5iKdOIJ6wmwc55oLnx/GLIhvGOekjh
+ loa4r44IqSoNGjTV9JvP2bnpFSWNAV64seZSgm7yduGxDLS1hvt1b4a1noO018p1fprH
+ sGFxbuwCWT/AxHfde6KnfzdgonETE6fzNvAnB4nSr3eoKJM7pfpfwXLdfJ7UeBzs6KLD
+ AMdg3akYYg8/ctg8MPNLwaoiTB4A4q3mW/Y5b25uMDSRUPA7btaFqxA9u4EX07DeKbBj
+ fDFw==
+X-Gm-Message-State: APjAAAUcrDdIAhXcBFci935e8YurvcaTCv/svEBJfDMpIJ7vfmSbJgxL
+ 7REZdPrs0iNVRW3Lmd4uNTI=
+X-Google-Smtp-Source: APXvYqwKEyV/QURAB6l1p/PHUoaF3m5z/KSDHpTQLYRIw8SpxKMs5YpxVSZB62m5FHY1r6kO+3s/fQ==
+X-Received: by 2002:ac2:51ab:: with SMTP id f11mr8745888lfk.55.1563466536490; 
+ Thu, 18 Jul 2019 09:15:36 -0700 (PDT)
 Received: from saturn.lan (18.158-248-194.customer.lyse.net. [158.248.194.18])
  by smtp.gmail.com with ESMTPSA id
- d21sm4057995lfc.73.2019.07.18.09.15.33
+ d21sm4057995lfc.73.2019.07.18.09.15.35
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 18 Jul 2019 09:15:34 -0700 (PDT)
+ Thu, 18 Jul 2019 09:15:36 -0700 (PDT)
 From: Sam Ravnborg <sam@ravnborg.org>
 To: dri-devel@lists.freedesktop.org,
  Intel Graphics Development <intel-gfx@lists.freedesktop.org>
-Subject: [PATCH v1 07/11] drm: direct include of drm.h in
- drm_gem_shmem_helper.c
-Date: Thu, 18 Jul 2019 18:15:03 +0200
-Message-Id: <20190718161507.2047-8-sam@ravnborg.org>
+Subject: [PATCH v1 08/11] drm: direct include of drm.h in drm_prime.c
+Date: Thu, 18 Jul 2019 18:15:04 +0200
+Message-Id: <20190718161507.2047-9-sam@ravnborg.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190718161507.2047-1-sam@ravnborg.org>
 References: <20190718161507.2047-1-sam@ravnborg.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190718_091537_306448_3FEB7DAE 
-X-CRM114-Status: GOOD (  10.77  )
+X-CRM114-CacheID: sfid-20190718_091538_819333_9EE92645 
+X-CRM114-Status: GOOD (  10.70  )
 X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:241 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:143 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (sam.ravnborg[at]gmail.com)
@@ -116,44 +115,28 @@ Cc: David Airlie <airlied@linux.ie>, Liviu Dudau <Liviu.Dudau@arm.com>,
  =?UTF-8?q?Noralf=20Tr=C3=B8nnes?= <noralf@tronnes.org>,
  Philipp Zabel <p.zabel@pengutronix.de>,
  =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Do not rely on including drm.h from drm_file.h,
-as the include in drm_file.h will be dropped.
-
-Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
-Cc: Maarten Lankhorst <maarten.lankhorst@linux.intel.com>
-Cc: Maxime Ripard <maxime.ripard@bootlin.com>
-Cc: Sean Paul <sean@poorly.run>
-Cc: David Airlie <airlied@linux.ie>
-Cc: Daniel Vetter <daniel@ffwll.ch>
-Cc: Eric Anholt <eric@anholt.net>
-Cc: Thomas Zimmermann <tzimmermann@suse.de>
-Cc: Rob Herring <robh@kernel.org>
----
- drivers/gpu/drm/drm_gem_shmem_helper.c | 1 +
- 1 file changed, 1 insertion(+)
-
-diff --git a/drivers/gpu/drm/drm_gem_shmem_helper.c b/drivers/gpu/drm/drm_gem_shmem_helper.c
-index 472ea5d81f82..2f64667ac805 100644
---- a/drivers/gpu/drm/drm_gem_shmem_helper.c
-+++ b/drivers/gpu/drm/drm_gem_shmem_helper.c
-@@ -10,6 +10,7 @@
- #include <linux/slab.h>
- #include <linux/vmalloc.h>
- 
-+#include <drm/drm.h>
- #include <drm/drm_device.h>
- #include <drm/drm_drv.h>
- #include <drm/drm_gem_shmem_helper.h>
--- 
-2.20.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+RG8gbm90IHJlbHkgb24gaW5jbHVkaW5nIGRybS5oIGZyb20gZHJtX2ZpbGUuaCwKYXMgdGhlIGlu
+Y2x1ZGUgaW4gZHJtX2ZpbGUuaCB3aWxsIGJlIGRyb3BwZWQuCgpTaWduZWQtb2ZmLWJ5OiBTYW0g
+UmF2bmJvcmcgPHNhbUByYXZuYm9yZy5vcmc+CkNjOiBNYWFydGVuIExhbmtob3JzdCA8bWFhcnRl
+bi5sYW5raG9yc3RAbGludXguaW50ZWwuY29tPgpDYzogTWF4aW1lIFJpcGFyZCA8bWF4aW1lLnJp
+cGFyZEBib290bGluLmNvbT4KQ2M6IFNlYW4gUGF1bCA8c2VhbkBwb29ybHkucnVuPgpDYzogRGF2
+aWQgQWlybGllIDxhaXJsaWVkQGxpbnV4LmllPgpDYzogRGFuaWVsIFZldHRlciA8ZGFuaWVsQGZm
+d2xsLmNoPgpDYzogQ2hyaXN0aWFuIEvDtm5pZyA8Y2hyaXN0aWFuLmtvZW5pZ0BhbWQuY29tPgpD
+YzogTm9yYWxmIFRyw7hubmVzIDxub3JhbGZAdHJvbm5lcy5vcmc+CkNjOiBDaHJpcyBXaWxzb24g
+PGNocmlzQGNocmlzLXdpbHNvbi5jby51az4KQ2M6IEVyaWMgQW5ob2x0IDxlcmljQGFuaG9sdC5u
+ZXQ+Ci0tLQogZHJpdmVycy9ncHUvZHJtL2RybV9wcmltZS5jIHwgMSArCiAxIGZpbGUgY2hhbmdl
+ZCwgMSBpbnNlcnRpb24oKykKCmRpZmYgLS1naXQgYS9kcml2ZXJzL2dwdS9kcm0vZHJtX3ByaW1l
+LmMgYi9kcml2ZXJzL2dwdS9kcm0vZHJtX3ByaW1lLmMKaW5kZXggMTg5ZDk4MDQwMmFkLi5lY2E0
+ODQxMDZjYzIgMTAwNjQ0Ci0tLSBhL2RyaXZlcnMvZ3B1L2RybS9kcm1fcHJpbWUuYworKysgYi9k
+cml2ZXJzL2dwdS9kcm0vZHJtX3ByaW1lLmMKQEAgLTMwLDYgKzMwLDcgQEAKICNpbmNsdWRlIDxs
+aW51eC9kbWEtYnVmLmg+CiAjaW5jbHVkZSA8bGludXgvcmJ0cmVlLmg+CiAKKyNpbmNsdWRlIDxk
+cm0vZHJtLmg+CiAjaW5jbHVkZSA8ZHJtL2RybV9kcnYuaD4KICNpbmNsdWRlIDxkcm0vZHJtX2Zp
+bGUuaD4KICNpbmNsdWRlIDxkcm0vZHJtX2ZyYW1lYnVmZmVyLmg+Ci0tIAoyLjIwLjEKCgpfX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRl
+ayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8v
+bGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
