@@ -2,63 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0FB3A6D188
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 18:11:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BDD896D1B6
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 18:15:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BcBluXkSrGkduxFcW2eTZqyVh9pjZUR0lMWbpKceo3g=; b=SW+vHy6HTvGAHL
-	toDllw2T2CKm7VAJrenayXHG4T0REWXRrYdESzv+xEC+2S4a4aBryxoaSpgLVnsFTfUlzEAdXx2+i
-	gWdudDeN+uefCF5zJ6fyu9jM1cNhrZq0YbfjyX4up0IS4Mv4cQ24FC0u4FBDTm7BfduHunk4g9iOW
-	oESMNcpDX14kEITXjXf7VqiD5zvj10uoKLNpy/CCJawJyEY2ua1vhphdm5o7AaJWiGyRQluug6V4s
-	A9GqidaEa4HN4e+NApOPzaJc8MVxoDlhiZrkNloJYbph2ZihtD6CiGdXOJouo8jqhZBvx7sIlI1pX
-	3lEa05c8GgUqDW2553LA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=zSiNRxSEFWG3FA/ugdGbkoV0WxZZR4fRl4HaQSqcXis=; b=OW8K0LmGDNAAzL
+	F1tj2dyJ1755CqYDkUQs1ceXRVwD1uFcCDuOLK7qUCVmJKUr1cxCrOMcOsjYyU8BuSq7EqzUIF8CJ
+	HY9jcWWWQuQ5FIFjIx/U9T9niOBpsImmneRykB4c0YHypNft0154gyX9LVTMfY8ClWrx48fvmTKlT
+	lEpH2cD5JX2kN4rBhSnwm+UahCguccWLSahRU4A7Vp41TyIuANHLkzIdUfFBM+4PCkTu/2OmmIwRi
+	C+x1GfOSz/cmlpoK86SFidXzqr9CanH3KPF2a/yz+eyGh21PiDGAGse4QNjTjYFljDpISt5E7XFFb
+	lsmCg40Thm6yniQcXVmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ho90Q-0004mM-MM; Thu, 18 Jul 2019 16:11:42 +0000
-Received: from relay.sw.ru ([185.231.240.75])
+	id 1ho94S-0008Au-GR; Thu, 18 Jul 2019 16:15:52 +0000
+Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ho90I-0004l2-IF; Thu, 18 Jul 2019 16:11:37 +0000
-Received: from [172.16.25.12] by relay.sw.ru with esmtp (Exim 4.92)
- (envelope-from <aryabinin@virtuozzo.com>)
- id 1ho902-00080M-Ln; Thu, 18 Jul 2019 19:11:18 +0300
-Subject: Re: [PATCH v3] kasan: add memory corruption identification for
- software tag-based mode
-To: Walter Wu <walter-zh.wu@mediatek.com>
-References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
- <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
- <1560447999.15814.15.camel@mtksdccf07> <1560479520.15814.34.camel@mtksdccf07>
- <1560744017.15814.49.camel@mtksdccf07>
- <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
- <1560774735.15814.54.camel@mtksdccf07> <1561974995.18866.1.camel@mtksdccf07>
- <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
- <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
- <1562640832.9077.32.camel@mtksdccf07>
- <d9fd1d5b-9516-b9b9-0670-a1885e79f278@virtuozzo.com>
- <1562839579.5846.12.camel@mtksdccf07>
- <37897fb7-88c1-859a-dfcc-0a5e89a642e0@virtuozzo.com>
- <1563160001.4793.4.camel@mtksdccf07>
-From: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Message-ID: <9ab1871a-2605-ab34-3fd3-4b44a0e17ab7@virtuozzo.com>
-Date: Thu, 18 Jul 2019 19:11:21 +0300
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ id 1ho942-0007kr-PL; Thu, 18 Jul 2019 16:15:28 +0000
+Received: by mail-lj1-x242.google.com with SMTP id x25so27968844ljh.2;
+ Thu, 18 Jul 2019 09:15:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=sender:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=EY90CNEDdHNbOElz8YZpDtXjzPT/Q84D5PZmTmIpGX8=;
+ b=itZM25Ur2DNSgdCPTYxc1+6AWdelUsfTCuPKiH4yU0Vxvl/HFKVUgLIbY0oYYwPT4n
+ 5xegi+nIKfQQDNCkDw5ccvNyOYjupF/8DHrwJSYqXf+M3AqvdYj7L2O1E/y/QZc3jiL7
+ USryYEk/mVNS/AjvpUEKhtWHJB7WekMcwvrx0Yjy5ispcLeDsDGH7iwm2OaUZWrHN5ln
+ m+Qz2ysC2BChEippJPXiRw4C3gld6ecmxppxIrOJ5rTT2B4uZH4qttge580bz4xXgQv1
+ 71M/11WaguMQMZi6Xj8bdlbWW3UVQEiMmIjy6JWDnWYeBLMkspFvdfzw/EtNtJ973MH9
+ Ox9w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:sender:from:to:cc:subject:date:message-id
+ :mime-version:content-transfer-encoding;
+ bh=EY90CNEDdHNbOElz8YZpDtXjzPT/Q84D5PZmTmIpGX8=;
+ b=rvgaMfWFgRSwnMyiao2QqyQ2CxGkUQb9rhWdF7joxk3lyj97WztGglcid7OfP7oT9p
+ +Ni8qMucbHiqKPykgC+wnsHJE0ubhyv7wXPpBflaM/recCrPJvpm6ztqAX+qFEly0c0t
+ iI99L603mIuXgLyBtk4sv1lPuNOjnt+dAw3IdcZchGERLcgG5yxqJs/2EdC0nxIKGQn0
+ um7ivngvKr86FiWjcZN6TrFTARO7tyyak7sez+R02r7eCTVbE+B37RgIeX3GF6Cl59yK
+ K+8gmWyLfhlbDc5OEFQWALr7H7V/1Ei27doW7TalVNmXA485yqTUIPEYzj4sVoASZY8u
+ bA5A==
+X-Gm-Message-State: APjAAAX8sv2rQOPNuZEqC4Zro7qRi+wf8Wg9TTbskbV7RVfJ3UMd+LHO
+ PObbiTqzDzpmwhag/8n0k3A=
+X-Google-Smtp-Source: APXvYqzVjo2ZCjNil0fwN9rUrxtrZjDevN1yhDPv0wEE2mg0vhc7qvUO5C/iYAPZpjsQ0AAV3icYmA==
+X-Received: by 2002:a2e:8741:: with SMTP id q1mr24568969ljj.144.1563466524176; 
+ Thu, 18 Jul 2019 09:15:24 -0700 (PDT)
+Received: from saturn.lan (18.158-248-194.customer.lyse.net. [158.248.194.18])
+ by smtp.gmail.com with ESMTPSA id
+ d21sm4057995lfc.73.2019.07.18.09.15.22
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Thu, 18 Jul 2019 09:15:23 -0700 (PDT)
+From: Sam Ravnborg <sam@ravnborg.org>
+To: dri-devel@lists.freedesktop.org,
+ Intel Graphics Development <intel-gfx@lists.freedesktop.org>
+Subject: [PATCH v1 0/11] drm: header maintenance
+Date: Thu, 18 Jul 2019 18:14:56 +0200
+Message-Id: <20190718161507.2047-1-sam@ravnborg.org>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-In-Reply-To: <1563160001.4793.4.camel@mtksdccf07>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190718_091134_608443_9B827A0F 
-X-CRM114-Status: GOOD (  19.65  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190718_091526_856679_DC40354C 
+X-CRM114-Status: UNSURE (   8.50  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:242 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (sam.ravnborg[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,91 +99,76 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily Gorbik <gor@linux.ibm.com>,
- Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
- Andrey Konovalov <andreyknvl@google.com>, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
- Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- David Rientjes <rientjes@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Dmitry Vyukov <dvyukov@google.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: David Airlie <airlied@linux.ie>, Liviu Dudau <Liviu.Dudau@arm.com>,
+ Lionel Landwerlin <lionel.g.landwerlin@intel.com>,
+ Chris Wilson <chris@chris-wilson.co.uk>, Eric Anholt <eric@anholt.net>,
+ Rob Herring <robh@kernel.org>, Maxime Ripard <maxime.ripard@bootlin.com>,
+ CK Hu <ck.hu@mediatek.com>, Thierry Reding <treding@nvidia.com>,
+ Daniel Vetter <daniel@ffwll.ch>, Chunming Zhou <david1.zhou@amd.com>,
+ Jani Nikula <jani.nikula@intel.com>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ linux-mediatek@lists.infradead.org, Stefan Agner <stefan@agner.ch>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
+ linux-arm-kernel@lists.infradead.org, Boris Brezillon <bbrezillon@kernel.org>,
+ Thomas Zimmermann <tzimmermann@suse.de>, Rob Clark <robdclark@gmail.com>,
+ =?UTF-8?q?Noralf=20Tr=C3=B8nnes?= <noralf@tronnes.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>,
+ =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-CgpPbiA3LzE1LzE5IDY6MDYgQU0sIFdhbHRlciBXdSB3cm90ZToKPiBPbiBGcmksIDIwMTktMDct
-MTIgYXQgMTM6NTIgKzAzMDAsIEFuZHJleSBSeWFiaW5pbiB3cm90ZToKPj4KPj4gT24gNy8xMS8x
-OSAxOjA2IFBNLCBXYWx0ZXIgV3Ugd3JvdGU6Cj4+PiBPbiBXZWQsIDIwMTktMDctMTAgYXQgMjE6
-MjQgKzAzMDAsIEFuZHJleSBSeWFiaW5pbiB3cm90ZToKPj4+Pgo+Pj4+IE9uIDcvOS8xOSA1OjUz
-IEFNLCBXYWx0ZXIgV3Ugd3JvdGU6Cj4+Pj4+IE9uIE1vbiwgMjAxOS0wNy0wOCBhdCAxOTozMyAr
-MDMwMCwgQW5kcmV5IFJ5YWJpbmluIHdyb3RlOgo+Pj4+Pj4KPj4+Pj4+IE9uIDcvNS8xOSA0OjM0
-IFBNLCBEbWl0cnkgVnl1a292IHdyb3RlOgo+Pj4+Pj4+IE9uIE1vbiwgSnVsIDEsIDIwMTkgYXQg
-MTE6NTYgQU0gV2FsdGVyIFd1IDx3YWx0ZXItemgud3VAbWVkaWF0ZWsuY29tPiB3cm90ZToKPj4+
-Pgo+Pj4+Pj4+Cj4+Pj4+Pj4gU29ycnkgZm9yIGRlbGF5cy4gSSBhbSBvdmVyd2hlbG0gYnkgc29t
-ZSB1cmdlbnQgd29yay4gSSBhZnJhaWQgdG8KPj4+Pj4+PiBwcm9taXNlIGFueSBkYXRlcyBiZWNh
-dXNlIHRoZSBuZXh0IHdlZWsgSSBhbSBvbiBhIGNvbmZlcmVuY2UsIHRoZW4KPj4+Pj4+PiBhZ2Fp
-biBhIGJhY2tsb2cgYW5kIGFuIGludGVybiBzdGFydGluZy4uLgo+Pj4+Pj4+Cj4+Pj4+Pj4gQW5k
-cmV5LCBkbyB5b3Ugc3RpbGwgaGF2ZSBjb25jZXJucyByZSB0aGlzIHBhdGNoPyBUaGlzIGNoYW5n
-ZSBhbGxvd3MKPj4+Pj4+PiB0byBwcmludCB0aGUgZnJlZSBzdGFjay4KPj4+Pj4+Cj4+Pj4+PiBJ
-ICdtIG5vdCBzdXJlIHRoYXQgcXVhcmFudGluZSBpcyBhIGJlc3Qgd2F5IHRvIGRvIHRoYXQuIFF1
-YXJhbnRpbmUgaXMgbWFkZSB0byBkZWxheSBmcmVlaW5nLCBidXQgd2UgZG9uJ3QgdGhhdCBoZXJl
-Lgo+Pj4+Pj4gSWYgd2Ugd2FudCB0byByZW1lbWJlciBtb3JlIGZyZWUgc3RhY2tzIHdvdWxkbid0
-IGJlIGVhc2llciBzaW1wbHkgdG8gcmVtZW1iZXIgbW9yZSBzdGFja3MgaW4gb2JqZWN0IGl0c2Vs
-Zj8KPj4+Pj4+IFNhbWUgZm9yIHByZXZpb3VzbHkgdXNlZCB0YWdzIGZvciBiZXR0ZXIgdXNlLWFm
-dGVyLWZyZWUgaWRlbnRpZmljYXRpb24uCj4+Pj4+Pgo+Pj4+Pgo+Pj4+PiBIaSBBbmRyZXksCj4+
-Pj4+Cj4+Pj4+IFdlIGV2ZXIgdHJpZWQgdG8gdXNlIG9iamVjdCBpdHNlbGYgdG8gZGV0ZXJtaW5l
-IHVzZS1hZnRlci1mcmVlCj4+Pj4+IGlkZW50aWZpY2F0aW9uLCBidXQgdGFnLWJhc2VkIEtBU0FO
-IGltbWVkaWF0ZWx5IHJlbGVhc2VkIHRoZSBwb2ludGVyCj4+Pj4+IGFmdGVyIGNhbGwga2ZyZWUo
-KSwgdGhlIG9yaWdpbmFsIG9iamVjdCB3aWxsIGJlIHVzZWQgYnkgYW5vdGhlcgo+Pj4+PiBwb2lu
-dGVyLCBpZiB3ZSB1c2Ugb2JqZWN0IGl0c2VsZiB0byBkZXRlcm1pbmUgdXNlLWFmdGVyLWZyZWUg
-aXNzdWUsIHRoZW4KPj4+Pj4gaXQgaGFzIG1hbnkgZmFsc2UgbmVnYXRpdmUgY2FzZXMuIHNvIHdl
-IGNyZWF0ZSBhIGxpdGUgcXVhcmFudGluZShyaW5nCj4+Pj4+IGJ1ZmZlcnMpIHRvIHJlY29yZCBy
-ZWNlbnQgZnJlZSBzdGFja3MgaW4gb3JkZXIgdG8gYXZvaWQgdGhvc2UgZmFsc2UKPj4+Pj4gbmVn
-YXRpdmUgc2l0dWF0aW9ucy4KPj4+Pgo+Pj4+IEknbSB0ZWxsaW5nIHRoYXQgKm1vcmUqIHRoYW4g
-b25lIGZyZWUgc3RhY2sgYW5kIGFsc28gdGFncyBwZXIgb2JqZWN0IGNhbiBiZSBzdG9yZWQuCj4+
-Pj4gSWYgb2JqZWN0IHJldXNlZCB3ZSB3b3VsZCBzdGlsbCBoYXZlIGluZm9ybWF0aW9uIGFib3V0
-IG4tbGFzdCB1c2FnZXMgb2YgdGhlIG9iamVjdC4KPj4+PiBJdCBzZWVtcyBsaWtlIG11Y2ggZWFz
-aWVyIGFuZCBtb3JlIGVmZmljaWVudCBzb2x1dGlvbiB0aGFuIHBhdGNoIHlvdSBwcm9wb3Npbmcu
-Cj4+Pj4KPj4+IFRvIG1ha2UgdGhlIG9iamVjdCByZXVzZWQsIHdlIG11c3QgZW5zdXJlIHRoYXQg
-bm8gb3RoZXIgcG9pbnRlcnMgdXNlcyBpdAo+Pj4gYWZ0ZXIga2ZyZWUoKSByZWxlYXNlIHRoZSBw
-b2ludGVyLgo+Pj4gU2NlbmFyaW86Cj4+PiAxKS4gVGhlIG9iamVjdCByZXVzZWQgaW5mb3JtYXRp
-b24gaXMgdmFsaWQgd2hlbiBubyBhbm90aGVyIHBvaW50ZXIgdXNlcwo+Pj4gaXQuCj4+PiAyKS4g
-VGhlIG9iamVjdCByZXVzZWQgaW5mb3JtYXRpb24gaXMgaW52YWxpZCB3aGVuIGFub3RoZXIgcG9p
-bnRlciB1c2VzCj4+PiBpdC4KPj4+IERvIHlvdSBtZWFuIHRoYXQgdGhlIG9iamVjdCByZXVzZWQg
-aXMgc2NlbmFyaW8gMSkgPwo+Pj4gSWYgeWVzLCBtYXliZSB3ZSBjYW4gY2hhbmdlIHRoZSBjYWxs
-aW5nIHF1YXJhbnRpbmVfcHV0KCkgbG9jYXRpb24uIEl0Cj4+PiB3aWxsIGJlIGZ1bGx5IHVzZSB0
-aGF0IHF1YXJhbnRpbmUsIGJ1dCBhdCBzY2VuYXJpbyAyKSBpdCBsb29rcyBsaWtlIHRvCj4+PiBu
-ZWVkIHRoaXMgcGF0Y2guCj4+PiBJZiBubywgbWF5YmUgaSBtaXNzIHlvdXIgbWVhbmluZywgd291
-bGQgeW91IHRlbGwgbWUgaG93IHRvIHVzZSBpbnZhbGlkCj4+PiBvYmplY3QgaW5mb3JtYXRpb24/
-IG9yPwo+Pj4KPj4KPj4KPj4gS0FTQU4ga2VlcHMgaW5mb3JtYXRpb24gYWJvdXQgb2JqZWN0IHdp
-dGggdGhlIG9iamVjdCwgcmlnaHQgYWZ0ZXIgcGF5bG9hZCBpbiB0aGUga2FzYW5fYWxsb2NfbWV0
-YSBzdHJ1Y3QuCj4+IFRoaXMgaW5mb3JtYXRpb24gaXMgYWx3YXlzIHZhbGlkIGFzIGxvbmcgYXMg
-c2xhYiBwYWdlIGFsbG9jYXRlZC4gQ3VycmVudGx5IGl0IGtlZXBzIG9ubHkgb25lIGxhc3QgZnJl
-ZSBzdGFja3RyYWNlLgo+PiBJdCBjb3VsZCBiZSBleHRlbmRlZCB0byByZWNvcmQgbW9yZSBmcmVl
-IHN0YWNrdHJhY2VzIGFuZCBhbHNvIHJlY29yZCBwcmV2aW91c2x5IHVzZWQgdGFncyB3aGljaCB3
-aWxsIGFsbG93IHlvdQo+PiB0byBpZGVudGlmeSB1c2UtYWZ0ZXItZnJlZSBhbmQgZXh0cmFjdCBy
-aWdodCBmcmVlIHN0YWNrdHJhY2UuCj4gCj4gVGhhbmtzIGZvciB5b3VyIGV4cGxhbmF0aW9uLgo+
-IAo+IEZvciBleHRlbmQgc2x1YiBvYmplY3QsIGlmIG9uZSByZWNvcmQgaXMgOUIgKHNpemVvZih1
-OCkrIHNpemVvZihzdHJ1Y3QKPiBrYXNhbl90cmFjaykpIGFuZCBhZGQgZml2ZSByZWNvcmRzIGlu
-dG8gc2x1YiBvYmplY3QsIGV2ZXJ5IHNsdWIgb2JqZWN0Cj4gbWF5IGFkZCA0NUIgdXNhZ2UgYWZ0
-ZXIgdGhlIHN5c3RlbSBydW5zIGxvbmdlci4gCj4gU2x1YiBvYmplY3QgbnVtYmVyIGlzIGVhc3kg
-bW9yZSB0aGFuIDEsMDAwLDAwMChtYXliZSBpdCBtYXkgYmUgbW9yZQo+IGJpZ2dlciksIHRoZW4g
-dGhlIGV4dGVuZGluZyBvYmplY3QgbWVtb3J5IHVzYWdlIHNob3VsZCBiZSA0NU1CLCBhbmQKPiB1
-bmZvcnR1bmF0ZWx5IGl0IGlzIG5vIGxpbWl0LiBUaGUgbWVtb3J5IHVzYWdlIGlzIG1vcmUgYmln
-Z2VyIHRoYW4gb3VyCj4gcGF0Y2guCgpObywgaXQncyBub3QgbmVjZXNzYXJpbHkgbW9yZS4KQW5k
-IHRoZXJlIGFyZSBvdGhlciBhc3BlY3RzIHRvIGNvbnNpZGVyIHN1Y2ggYXMgcGVyZm9ybWFuY2Us
-IGhvdyBzaW1wbGUgcmVsaWFibGUgdGhlIGNvZGUgaXMuCgo+IAo+IFdlIGhvcGUgdGFnLWJhc2Vk
-IEtBU0FOIGFkdmFudGFnZSBpcyBzbWFsbGVyIG1lbW9yeSB1c2FnZS4gSWYgaXTigJlzCj4gcG9z
-c2libGUsIHdlIHNob3VsZCBzcGVuZCBsZXNzIG1lbW9yeSBpbiBvcmRlciB0byBpZGVudGlmeQo+
-IHVzZS1hZnRlci1mcmVlLiBXb3VsZCB5b3UgYWNjZXB0IG91ciBwYXRjaCBhZnRlciBmaW5lIHR1
-bmUgaXQ/CgpTdXJlLCBpZiB5b3UgbWFuYWdlIHRvIGZpeCBpc3N1ZXMgYW5kIGRlbW9uc3RyYXRl
-IHRoYXQgcGVyZm9ybWFuY2UgcGVuYWx0eSBvZiB5b3VyCnBhdGNoIGlzIGNsb3NlIHRvIHplcm8u
-CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1t
-ZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpo
-dHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVr
-Cg==
+First patch from Jani fixes so drm_print.h is self-contained.
+Next two patches are trivial removal of uapi dependencies.
+
+ati_pcigart is fixed to drop use of drm_os_linux.h
+
+drm_vblank is likewise fixed to drop use of drm_os_linux.h
+This was a non-trivial conversion, *review requested!*
+
+The remaining patches are preparation for and removal of
+uapi/drm/drmh from drm_file.h.
+There were a few files where we had to push include
+of drm/drm.h out to to have a clean build.
+
+CK Hu - please let me apply the mediatek patch to
+drm-misc-next, as it is required for the final patch.
+Or push it to drm-misc-next yourself.
+
+	Sam
+
+Jani Nikula (1):
+      drm/panel: make drm_panel.h self-contained
+
+Sam Ravnborg (10):
+      drm: drop uapi dependency from drm_print.h
+      drm: drop uapi dependency from drm_vblank.h
+      drm/ati_pcigart: drop dependency on drm_os_linux.h
+      drm/vblank: drop use of DRM_WAIT_ON()
+      drm: direct include of drm.h in drm_gem.c
+      drm: direct include of drm.h in drm_gem_shmem_helper.c
+      drm: direct include of drm.h in drm_prime.c
+      drm: direct include of drm.h in drm_syncobj.c
+      drm/mediatek: direct include of drm.h in mtk_drm_gem.c
+      drm: drop uapi dependency from drm_file.h
+
+ drivers/gpu/drm/ati_pcigart.c          | 10 ++++++----
+ drivers/gpu/drm/drm_gem.c              |  1 +
+ drivers/gpu/drm/drm_gem_shmem_helper.c |  1 +
+ drivers/gpu/drm/drm_prime.c            |  1 +
+ drivers/gpu/drm/drm_syncobj.c          |  1 +
+ drivers/gpu/drm/drm_vblank.c           | 29 ++++++++++++++++++++---------
+ drivers/gpu/drm/mediatek/mtk_drm_gem.c |  1 +
+ include/drm/drm_file.h                 |  4 +---
+ include/drm/drm_panel.h                |  1 +
+ include/drm/drm_print.h                |  4 +---
+ include/drm/drm_vblank.h               |  1 -
+ 11 files changed, 34 insertions(+), 20 deletions(-)
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
