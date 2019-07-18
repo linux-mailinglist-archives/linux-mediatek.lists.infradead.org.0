@@ -2,59 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BEB376C8B2
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 07:21:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C0EC56C8C6
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 07:37:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=diAGo25WwiHBSgmYICSGBY/jqbQUP8ue+CLbniUx1Ig=; b=mnUQhXGaZJQwMY
-	w4gu/bJeKWhWYWnAsm24cf+j7gLEq0AsccvpamETj4hSVvdJHSTy0E+/TAnPRz/TEkZvarhw2U6H+
-	iRjqUBqsAS8WDJbtbOiImjZEYzhTcYPQwIswlZQf4cqcfo9OrTyrBcQhOasWJOR7XUPvLHEjsOWa+
-	hfs7n4ZsXFtLddQbdxpFxHOVbzYzCT2WwtB3AD54w8oDm7zJwg1RR0+t3trDXL/AujXVnCC+ObPYb
-	uwx2z2wQ4v+T/1xEZJpo91L9HdzJryTSRtLJRrb7oTxCJ0uS3P4AJVux8Sm5g4f3vado7yr07fgJu
-	ddWi2kPIe0k5KQCnocBA==;
+	List-Owner; bh=Ygam+IOcAUbV27xT3PGs9EckHbE9IDbyM3jdoHYIk9o=; b=S6vgWychXBmZxC
+	QjZGMn+G7Qoh+H2qFtEjiLSGKS6qfs4NG0ldUT1zMAZBFX/cJenL18Sj0Flr8oCTDJYL8znSxGwZb
+	9BXMyY4N/4OTnPTJF7SS/ePJAAHoMJxTsCh5UGE0FePLYddMPmCBZ8EOYYLfbgEK41MIkiRJ2VPH8
+	Xxm+Cg4XeNLaFEWCGeZAWIJ72x2Qoagtgw7r647o2s2yR0BzJlcfLJ6+Ddd6dmIX8rCFnnw5eUDm3
+	upeqgGI/gwO1nvv/8V0ic94IqeFWaoyO7Oec+4f48SNIrAadWG39es1MxO6eEeLT/OrRa96SmJaDq
+	mvXit9nROaxEpRfNSIPA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hnyrK-0007oh-Rs; Thu, 18 Jul 2019 05:21:38 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hnz6s-0005JB-F0; Thu, 18 Jul 2019 05:37:42 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hnyr2-0007ck-30; Thu, 18 Jul 2019 05:21:21 +0000
-X-UUID: 162bfb5dfd544dfab6e7669d4f1718e0-20190717
-X-UUID: 162bfb5dfd544dfab6e7669d4f1718e0-20190717
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ id 1hnz6p-0005Ij-Ce; Thu, 18 Jul 2019 05:37:41 +0000
+X-UUID: 92863a26e45b4781b3fa0b783bcb0d0f-20190717
+X-UUID: 92863a26e45b4781b3fa0b783bcb0d0f-20190717
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1187760907; Wed, 17 Jul 2019 21:21:06 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 17 Jul 2019 22:21:04 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 18 Jul 2019 13:21:03 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 18 Jul 2019 13:21:02 +0800
-Message-ID: <1563427263.7235.6.camel@mtkswgap22>
-Subject: Re: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>
-Date: Thu, 18 Jul 2019 13:21:03 +0800
-In-Reply-To: <1562906656-27154-1-git-send-email-stanley.chu@mediatek.com>
-References: <1562906656-27154-1-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 1522020798; Wed, 17 Jul 2019 21:37:32 -0800
+Received: from MTKMBS32DR.mediatek.inc (172.27.6.104) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 17 Jul 2019 22:37:30 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS32DR.mediatek.inc
+ (172.27.6.104) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 18 Jul 2019 13:37:24 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 18 Jul 2019 13:37:23 +0800
+Message-ID: <1563428243.31342.39.camel@mhfsdcap03>
+Subject: Re: [PATCH v8 07/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
+ Mode
+From: Yong Wu <yong.wu@mediatek.com>
+To: Will Deacon <will@kernel.org>
+Date: Thu, 18 Jul 2019 13:37:23 +0800
+In-Reply-To: <20190717142339.wltamw6wktwixqqn@willie-the-truck>
+References: <1561774167-24141-1-git-send-email-yong.wu@mediatek.com>
+ <1561774167-24141-8-git-send-email-yong.wu@mediatek.com>
+ <20190710143649.w5dplhzdpi3bxp7e@willie-the-truck>
+ <1562846036.31342.10.camel@mhfsdcap03>
+ <20190711123129.da4rg35b54u4svfw@willie-the-truck>
+ <1563079280.31342.22.camel@mhfsdcap03>
+ <20190715095156.xczfkbm6zpjueq32@willie-the-truck>
+ <1563367459.31342.34.camel@mhfsdcap03>
+ <20190717142339.wltamw6wktwixqqn@willie-the-truck>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: FCC812B93959C45D6AFBE2DE9BA4C64EE9C5BF014909D9D18086284D23A8FC762000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190717_222120_138412_0CA06761 
-X-CRM114-Status: GOOD (  12.28  )
+X-CRM114-CacheID: sfid-20190717_223739_445697_B0EB0026 
+X-CRM114-Status: GOOD (  23.44  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -70,52 +82,117 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- Andy Teng =?UTF-8?Q?=28=E9=84=A7=E5=A6=82=E5=AE=8F=29?=
- <Andy.Teng@mediatek.com>,
- Chun-Hung Wu =?UTF-8?Q?=28=E5=B7=AB=E9=A7=BF=E5=AE=8F=29?=
- <Chun-hung.Wu@mediatek.com>,
- Kuohong Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=8B=E9=B4=BB=29?=
- <kuohong.wang@mediatek.com>, "evgreen@chromium.org" <evgreen@chromium.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Peter Wang =?UTF-8?Q?=28=E7=8E=8B=E4=BF=A1=E5=8F=8B=29?=
- <peter.wang@mediatek.com>, "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz
+ Figa <tfiga@google.com>, Joerg Roedel <joro@8bytes.org>,
+ Will Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
+ iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ yingjoe.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias
+ Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgQXZyaSwgQWxpbSBhbmQgUGVkcm9tLAoKR2VudGxlIHBpbmcgZm9yIHRoaXMgZml4LgoKT24g
-RnJpLCAyMDE5LTA3LTEyIGF0IDEyOjQ0ICswODAwLCBTdGFubGV5IENodSB3cm90ZToKPiBDdXJy
-ZW50bHkgYml0cyBpbiBoYmEtPm91dHN0YW5kaW5nX3Rhc2tzIGFyZSBjbGVhcmVkIG9ubHkgYWZ0
-ZXIgdGhlaXIKPiBjb3JyZXNwb25kaW5nIHRhc2sgbWFuYWdlbWVudCBjb21tYW5kcyBhcmUgc3Vj
-Y2Vzc2Z1bGx5IGRvbmUgYnkKPiBfX3Vmc2hjZF9pc3N1ZV90bV9jbWQoKS4KPiAKPiBJZiB0aW1l
-b3V0IGhhcHBlbnMgaW4gYSB0YXNrIG1hbmFnZW1lbnQgY29tbWFuZCwgaXRzIGNvcnJlc3BvbmRp
-bmcKPiBiaXQgaW4gaGJhLT5vdXRzdGFuZGluZ190YXNrcyB3aWxsIG5vdCBiZSBjbGVhcmVkIHVu
-dGlsIG5leHQgdGFzawo+IG1hbmFnZW1lbnQgY29tbWFuZCB3aXRoIHRoZSBzYW1lIHRhZyB1c2Vk
-IHN1Y2Nlc3NmdWxseSBmaW5pc2hlcy7igKcKPiAKPiBUaGlzIGlzIHdyb25nIGFuZCBjYW4gbGVh
-ZCB0byBzb21lIGlzc3VlcywgbGlrZSBwb3dlciBjb25zdW1wdG9uIGlzc3VlLgo+IEZvciBleGFt
-cGxlLCB1ZnNoY2RfcmVsZWFzZSgpIGFuZCB1ZnNoY2RfZ2F0ZV93b3JrKCkgd2lsbCBkbyBub3Ro
-aW5nCj4gaWYgaGJhLT5vdXRzdGFuZGluZ190YXNrcyBpcyBub3QgemVybyBldmVuIGlmIGJvdGgg
-VUZTIGhvc3QgYW5kIGRldmljZXMKPiBhcmUgYWN0dWFsbHkgaWRsZS4KPiAKPiBCZWNhdXNlIGVy
-cm9yIGhhbmRsaW5nIGZsb3csIGkuZS4sIHVmc2hjZF9yZXNldF9hbmRfcmVzdG9yZSgpLCB3aWxs
-IGJlCj4gdHJpZ2dlcmVkIGFmdGVyIGFueSB0YXNrIG1hbmFnZW1lbnQgY29tbWFuZCB0aW1lcyBv
-dXQsIHdlIGZpeCB0aGlzIGJ5Cj4gY2xlYXJpbmcgY29ycmVzcG9uZGluZyBoYmEtPm91dHN0YW5k
-aW5nX3Rhc2tzIGJpdHMgZHVyaW5nIHRoaXMgZmxvdy4KPiBUbyBhY2hpZXZlIHRoaXMsIHdlIG5l
-ZWQgYSBtYXNrIHRvIHRyYWNrIHRpbWVkLW91dCBjb21tYW5kcyBhbmQgdGh1cwo+IGVycm9yIGhh
-bmRsaW5nIGZsb3cgY2FuIGNsZWFyIHRoZWlyIHRhZ3Mgc3BlY2lmaWNhbGx5Lgo+IAo+IFN0YW5s
-ZXkgQ2h1ICgyKToKPiAgIHNjc2k6IHVmczogTWFrZSBuZXcgZnVuY3Rpb24gZm9yIGNsZWFyaW5n
-IG91dHN0YW5kaW5nIHRhc2sgYml0cwo+ICAgc2NzaTogdWZzOiBGaXggYnJva2VuIGhiYS0+b3V0
-c3RhbmRpbmdfdGFza3MKPiAKPiAgZHJpdmVycy9zY3NpL3Vmcy91ZnNoY2QuYyB8IDQ5ICsrKysr
-KysrKysrKysrKysrKysrKysrKysrKysrKysrKy0tLS0tLQo+ICBkcml2ZXJzL3Njc2kvdWZzL3Vm
-c2hjZC5oIHwgIDEgKwo+ICAyIGZpbGVzIGNoYW5nZWQsIDQzIGluc2VydGlvbnMoKyksIDcgZGVs
-ZXRpb25zKC0pCj4gCgpUaGFua3MsClN0YW5sZXkKCgpfX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgt
-bWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9t
-YWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+On Wed, 2019-07-17 at 15:23 +0100, Will Deacon wrote:
+> On Wed, Jul 17, 2019 at 08:44:19PM +0800, Yong Wu wrote:
+> > On Mon, 2019-07-15 at 10:51 +0100, Will Deacon wrote:
+> > > On Sun, Jul 14, 2019 at 12:41:20PM +0800, Yong Wu wrote:
+> > > > @@ -742,7 +763,9 @@ static struct io_pgtable
+> > > > *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+> > > >  {
+> > > >  	struct arm_v7s_io_pgtable *data;
+> > > >  
+> > > > -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+> > > > +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+> > > > +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+> > > > +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+> > > >  		return NULL;
+> > > 
+> > > I think you can rework this to do something like:
+> > > 
+> > > 	if (cfg->ias > ARM_V7S_ADDR_BITS)
+> > > 		return NULL;
+> > > 
+> > > 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
+> > > 		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
+> > > 			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
+> > > 		else if (cfg->oas > 34)
+> > > 			return NULL;
+> > > 	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
+> > > 		return NULL;
+> > > 	}
+> > > 
+> > > so that we clamp the oas when phys_addr_t is 32-bit for you. That should
+> > > allow you to remove lots of the checking from iopte_to_paddr() too if you
+> > > check against oas in the map() function.
+> > > 
+> > > Does that make sense?
+> > 
+> > Of course I'm ok for this. I'm only afraid that this function has
+> > already 3 checking "if (x) return NULL", Here we add a new one and so
+> > many lines... Maybe the user should guarantee the right value of oas.
+> > How about move it into mtk_iommu.c?
+> > 
+> > About the checking of iopte_to_paddr, I can not remove them. I know it
+> > may be a bit special and not readable. Hmm, I guess I should use a MACRO
+> > instead of the hard code 33 for the special 4GB mode case.
+> 
+> Why can't you just do something like:
+> 
+> 	if (!(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT))
+> 		return paddr;
+> 
+> 	if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
+> 		paddr |= BIT_ULL(33);
+
+OK here.
+
+> 
+> 	if (pte & ARM_V&S_ATTR_MTK_PA_BIT32)
+> 		paddr |= BIT_ULL(32);
+
+No here, The flow is a bit special for 4GB mode here.
+
+This is the detailed remap relationship for our 4GB mode.
+           CPU PA               ->    HW PA
+register: 0x0 ~ 0x3fff_ffff
+dram 1G:0x4000_0000~0x7fff_ffff ->0x1_4000_0000~0x1_7fff_ffff(Add bit32)
+dram 2G:0x8000_0000~0xbfff_ffff ->0x1_8000_0000~0x1_bfff_ffff(Add bit32)
+dram 3G:0xc000_0000~0xffff_ffff ->0x1_c000_0000~0x1_ffff_ffff(Add bit32)
+dram 4G:0x1_0000_0000~0x1_3fff_ffff->0x1_0000_0000~0x1_3fff_ffff
+
+Thus, in the 4GB mode, we should add always add bit9 in pte(for bit32
+PA). But we can not always add bit32 in the iova_to_phys. The valid PA
+range should be 0x4000_0000 - 0x1_3fff_ffff. Thus, we can only add bit32
+when the PA in pte < 0x4000_0000, keep it as-is if the PA in pte located
+from 0x4000_0000 to 0xffff_ffff.
+
+This issue exist all the time after we added 4GB mode for mt8173.
+
+Thus, I have to add a special flow for 4gb mode here:
+
+	/* Workaround for MTK 4GB Mode: Add BIT32 only when PA < 0x4000_0000.*/
+	if (cfg->oas == ARM_V7S_MTK_4GB_OAS && paddr < 0x40000000UL)
+		paddr |= BIT_ULL(32);
+	else if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
+		paddr |= BIT_ULL(32);
+
+> 
+> 	return paddr;
+> 
+> The diff I sent previously sanitises the oas at init time, and then you
+> can just enforce it in map().
+> 
+> Will
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
