@@ -2,80 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4FB9C6D325
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 19:51:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EE5CC6D32E
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jul 2019 19:51:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=EgyATIThNa2lGo88CuxEipdhA/2GhnweDPgcnLPdzvQ=; b=gy+nNPupuXuN1T
-	g+n0HVwgjTzxdyXHCojppao3w+E80LVUPqIiSHFB1zQ/iVqVCRyuuDDKHaLt8SCN2DoV9IddlNNk2
-	AhcrWdQFqZAJJqwbonUTF20riz+t85Oqxz5dl7XvZkpxuJ0xcOiYcgpZnMZuVRoS9AXjdGOoa4UKf
-	x7gaUNfkSd0LM4sMfXlMalbH+PPHu5jSqbImBuDSXr2ysNGddbEkCwA+9j+kOJRbg8/3rICAEOOdK
-	LTllL9VppfCyuWWgLDOoB/iy2F3Bj9qEMsJq3tt9vXowTTyOvu5fDUw8svYgk70bjeabwEA1KUHit
-	Kf1nG/kcDuy23IWytD7Q==;
+	List-Owner; bh=lE3No+iYnJv7HaHK3khBvbWU40ocaKHDP8E7U455JZ8=; b=d1NjG/oYvNNOHP
+	MZ4ra72uBh5XUqrMK3BWYXPXzAE9kOGPfKpICvUDSrnYx8QJgAlsiojP3ClKwYm/h6Efc/+SyA2CE
+	Op1Ze8UefAnQqus868JKVsLoHciWQAYsEGb/70V1kH67reow13HqurOVlxnRH5Q/qoXcsxZFOBEbn
+	otElFNhz/pC7nTOTHt3Po1tUxWrvXoJJuRBrPWWpOkUHKJSz/OFkLF1ZPw6WRNcjfdhcVhOlESjW4
+	CdcAvTJ3Q1TZGzAYyk1Rc7CA8y9GoX+4Og6iK8B7rAfk2eGD1W6Kvu1IexEhwKpswp6k8Ps0sZgdt
+	AsNDKL0A3HN/xsuKq8lQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hoAYa-0006kE-31; Thu, 18 Jul 2019 17:51:04 +0000
-Received: from mail-yw1-xc41.google.com ([2607:f8b0:4864:20::c41])
+	id 1hoAZD-0007Iu-66; Thu, 18 Jul 2019 17:51:43 +0000
+Received: from mail-yw1-xc44.google.com ([2607:f8b0:4864:20::c44])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hoAYW-0006jb-5v
- for linux-mediatek@lists.infradead.org; Thu, 18 Jul 2019 17:51:01 +0000
-Received: by mail-yw1-xc41.google.com with SMTP id z63so12547349ywz.9
- for <linux-mediatek@lists.infradead.org>; Thu, 18 Jul 2019 10:51:00 -0700 (PDT)
+ id 1hoAYn-0006xM-JG
+ for linux-mediatek@lists.infradead.org; Thu, 18 Jul 2019 17:51:20 +0000
+Received: by mail-yw1-xc44.google.com with SMTP id f187so12537515ywa.5
+ for <linux-mediatek@lists.infradead.org>; Thu, 18 Jul 2019 10:51:17 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=poorly.run; s=google;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to:user-agent;
- bh=QQ8jJ1h1Snanwd8TvBGLmAI2GMlwl3iAL1taWT0sP4E=;
- b=cxxwTkoRHbPr8y5tYuJ0j466+9eTcLCTqihDg6tBsZXX30kIUIYlGBYRUt6fYC6CSy
- G1wrGJ4FBaY2zisW+Y4CcpxSBdU51SzivYwochDSgG8hLQ/1LkM/d2iDACoCC7qUoWl+
- rLho3UcVfPOua4SFgZpckC6OV6fnC4HGEuzrlALSPDBEsnmrOcbIk4ZvAaKuBsfWJMD2
- WEqPf6ba5vfKuvtsgOuXbfTY4PiZ65k8g7prl4m6blb2JXkvpbHkOBea9hRmxAIBp6Ou
- GuhOIsT1QalyA+yL1DA4pPh+HME/s7tMxTkxmKulg7V5SLHb3pjzDU/YYsNCnF1/Ktit
- mZpw==
+ bh=JuMhT0HKuYtEVUP5Y0F3NAGMIA0qzfXKwQ9hRAJo24c=;
+ b=ISg9avvWTVXWzSxqKUeFrRTKYVfv4fF0925BqDiHXTtvk3iY4OIh6eeGihXOX50rsW
+ 8jsqf1KErZ9Nf+penk0bECSvA9VmEgl0F/lEkji23HMzjwwGn4dIFA2N4LsfF1TSTg5g
+ GpsCzq2Ea7XhzNNdwoTHlL3Suej/Q/do+C/CpHii3kTwjNkCyhKw3A0zikRASnbRAD2f
+ 84Q5390Uxu1lscTlFFn6wKXiqgCX6Uns0tvB8ndDCBljIZE3Muv0NBUV/QHpCxF/Cq0I
+ Qd97YAXzkAZd/eWFvtqbj8bxf8En7ikjkM47oQGhbIxjBYvwdetc10uYcF9tQmgEu6jU
+ sWpg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=QQ8jJ1h1Snanwd8TvBGLmAI2GMlwl3iAL1taWT0sP4E=;
- b=jE+AvSej0ePo9bYSeryKTBEeXS1qx8/aCCJyyGDA1HIqFziwc7f52VdcbdINnK1Tl7
- 7FVhWgcntCPVq+o8R7cxzo9c597l4SrRBVoYD4p6Bv8vhIBjKfJqPExe71rCmSeaa6Ar
- A5W7tAlKCf5UIpYqGLGyv/6R7D5RiZtLpIL9dUAiyjCPv3GcF3JgvaQfWuyvgBqBvMQj
- GFLZjgpH/ZRymG78R1wGuNfRgyvVknjcWS80KvOx3j3lHnkADyImBBMSbCIwflAtvOuA
- nXBTBnSsnmNSXzeKfP4qfe25cBbax7d/M42pRShMxXdebv+FgKlks4h0d9bHbtLY/XSB
- dGVw==
-X-Gm-Message-State: APjAAAXhDJSEgbFv3dfPlSYEN1kWuTZsyyxab9Y59smHAzBmc11QyHmq
- zhzallIAXsxSYBj0HpPDyHLDvQ==
-X-Google-Smtp-Source: APXvYqzlBIY7jasoBtGNQmGxbVmXlBgz58CHxJFEnCz2UlyQgKK93zt9xQq1k7ZFSQo3M+6EG2QpGA==
-X-Received: by 2002:a81:b60c:: with SMTP id u12mr27070377ywh.79.1563472259335; 
- Thu, 18 Jul 2019 10:50:59 -0700 (PDT)
+ bh=JuMhT0HKuYtEVUP5Y0F3NAGMIA0qzfXKwQ9hRAJo24c=;
+ b=s6GZk3OT9LOW8b4C7qPQmRO70QSf1sq3sSWC2WSeWQrXgwFryrzCOUBSn1V5v/mt1I
+ RK5/gPoWyMJs3V+oJo9KahC+V6Ex7C4xE5zyZNaMoNzm4lkNyYMrwwvSBUKBrl+7CfgO
+ wrinA3ujVPfg9tTF/MvpJWWNXqquRPCFqwVMN0Eq2rExbU6trtRQSFlUk7SJ24qve5aS
+ hLDUII3MBuN+bHbwNNGwMYZJf6+KrFLmzbHcG5ExeyIbz+DFoH5kCplWhcBt6EPKLPvS
+ +OW1vqFF55T2i7xavGYxV0axUcWQyMJOO9RfL7XzXIMGhKGeUFSbA72ax91g6Y5rdr0u
+ xM1A==
+X-Gm-Message-State: APjAAAXnV2J3pbzgZ6d4Qk3rvrQykc0N04o2tRsKfQujUd99/dPbbY0Y
+ 8BQDDCoZFaKxAc2ohXE0jMNt5w==
+X-Google-Smtp-Source: APXvYqwuJzFtzgQESxcgghViBQHUytRxwHQCDFElqyu/mxGd+RBXaA8FGHOYounVgJinWdQSQCtI/A==
+X-Received: by 2002:a81:4ec7:: with SMTP id
+ c190mr27962174ywb.160.1563472276256; 
+ Thu, 18 Jul 2019 10:51:16 -0700 (PDT)
 Received: from localhost ([2620:0:1013:11:89c6:2139:5435:371d])
- by smtp.gmail.com with ESMTPSA id z6sm6964745ywg.40.2019.07.18.10.50.58
+ by smtp.gmail.com with ESMTPSA id m124sm5282541ywb.13.2019.07.18.10.51.15
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 18 Jul 2019 10:50:58 -0700 (PDT)
-Date: Thu, 18 Jul 2019 13:50:58 -0400
+ Thu, 18 Jul 2019 10:51:15 -0700 (PDT)
+Date: Thu, 18 Jul 2019 13:51:15 -0400
 From: Sean Paul <sean@poorly.run>
 To: Sam Ravnborg <sam@ravnborg.org>
-Subject: Re: [PATCH v1 05/11] drm/vblank: drop use of DRM_WAIT_ON()
-Message-ID: <20190718175058.GH31819@art_vandelay>
+Subject: Re: [PATCH v1 06/11] drm: direct include of drm.h in drm_gem.c
+Message-ID: <20190718175115.GI31819@art_vandelay>
 References: <20190718161507.2047-1-sam@ravnborg.org>
- <20190718161507.2047-6-sam@ravnborg.org>
+ <20190718161507.2047-7-sam@ravnborg.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190718161507.2047-6-sam@ravnborg.org>
+In-Reply-To: <20190718161507.2047-7-sam@ravnborg.org>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190718_105100_234420_611F90AB 
-X-CRM114-Status: GOOD (  17.27  )
+X-CRM114-CacheID: sfid-20190718_105117_753146_FE3955EB 
+X-CRM114-Status: GOOD (  13.86  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:c41 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:c44 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -119,14 +120,9 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jul 18, 2019 at 06:15:01PM +0200, Sam Ravnborg wrote:
-> DRM_WAIT_ON() is from the deprecated drm_os_linux header and
-> the modern replacement is the wait_event_*.
-> 
-> The return values differ, so a conversion is needed to
-> keep the original interface towards userspace.
-> Introduced a switch/case to make code obvious and to allow
-> different debug prints depending on the result.
+On Thu, Jul 18, 2019 at 06:15:02PM +0200, Sam Ravnborg wrote:
+> Do not rely on including drm.h from drm_file.h,
+> as the include in drm_file.h will be dropped.
 > 
 > Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
 
@@ -137,62 +133,25 @@ Reviewed-by: Sean Paul <sean@poorly.run>
 > Cc: Sean Paul <sean@poorly.run>
 > Cc: David Airlie <airlied@linux.ie>
 > Cc: Daniel Vetter <daniel@ffwll.ch>
+> Cc: Eric Anholt <eric@anholt.net>
+> Cc: Thomas Zimmermann <tzimmermann@suse.de>
+> Cc: Rob Herring <robh@kernel.org>
 > ---
->  drivers/gpu/drm/drm_vblank.c | 29 ++++++++++++++++++++---------
->  1 file changed, 20 insertions(+), 9 deletions(-)
+>  drivers/gpu/drm/drm_gem.c | 1 +
+>  1 file changed, 1 insertion(+)
 > 
-> diff --git a/drivers/gpu/drm/drm_vblank.c b/drivers/gpu/drm/drm_vblank.c
-> index 603ab105125d..8e9ac187500e 100644
-> --- a/drivers/gpu/drm/drm_vblank.c
-> +++ b/drivers/gpu/drm/drm_vblank.c
-> @@ -31,7 +31,6 @@
+> diff --git a/drivers/gpu/drm/drm_gem.c b/drivers/gpu/drm/drm_gem.c
+> index e6c12c6ec728..243f43d70f42 100644
+> --- a/drivers/gpu/drm/drm_gem.c
+> +++ b/drivers/gpu/drm/drm_gem.c
+> @@ -39,6 +39,7 @@
+>  #include <linux/mem_encrypt.h>
+>  #include <linux/pagevec.h>
+>  
+> +#include <drm/drm.h>
+>  #include <drm/drm_device.h>
 >  #include <drm/drm_drv.h>
->  #include <drm/drm_framebuffer.h>
->  #include <drm/drm_print.h>
-> -#include <drm/drm_os_linux.h>
->  #include <drm/drm_vblank.h>
->  
->  #include "drm_internal.h"
-> @@ -1672,19 +1671,31 @@ int drm_wait_vblank_ioctl(struct drm_device *dev, void *data,
->  	if (req_seq != seq) {
->  		DRM_DEBUG("waiting on vblank count %llu, crtc %u\n",
->  			  req_seq, pipe);
-> -		DRM_WAIT_ON(ret, vblank->queue, 3 * HZ,
-> -			    vblank_passed(drm_vblank_count(dev, pipe),
-> -					  req_seq) ||
-> -			    !READ_ONCE(vblank->enabled));
-> +		ret = wait_event_interruptible_timeout(vblank->queue,
-> +			vblank_passed(drm_vblank_count(dev, pipe), req_seq) ||
-> +				      !READ_ONCE(vblank->enabled),
-> +			msecs_to_jiffies(3000));
->  	}
->  
-> -	if (ret != -EINTR) {
-> +	switch (ret) {
-> +	case 0:
-> +		/* timeout */
-> +		ret = -EBUSY;
->  		drm_wait_vblank_reply(dev, pipe, &vblwait->reply);
-> -
-> -		DRM_DEBUG("crtc %d returning %u to client\n",
-> +		DRM_DEBUG("timeout waiting for vblank. crtc %d returning %u to client\n",
->  			  pipe, vblwait->reply.sequence);
-> -	} else {
-> +		break;
-> +	case -ERESTARTSYS:
-> +		/* interrupted by signal */
-> +		ret = -EINTR;
->  		DRM_DEBUG("crtc %d vblank wait interrupted by signal\n", pipe);
-> +		break;
-> +	default:
-> +		ret = 0;
-> +		drm_wait_vblank_reply(dev, pipe, &vblwait->reply);
-> +		DRM_DEBUG("crtc %d returning %u to client\n",
-> +			  pipe, vblwait->reply.sequence);
-> +		break;
->  	}
->  
->  done:
+>  #include <drm/drm_file.h>
 > -- 
 > 2.20.1
 > 
