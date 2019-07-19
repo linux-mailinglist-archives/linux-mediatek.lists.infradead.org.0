@@ -2,67 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D03A16E413
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jul 2019 12:18:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A5DF96E4B4
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jul 2019 13:08:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wr3yboctbz+RdqI7Du7sct5+TbYuTyGMaEW9Vlyl+4I=; b=jLHj8lAkLex6qv
-	5Ab1ACHX33VFDeDd52bL7smLTLjfCZVXZ4iup/qW6U3ojwykoqZN/O4qZI+YtYCNpjBsjUYgIB5b7
-	RC+nAD/6zI08EZRvzNP4NXnOpeuKh/rb8lCOcOSAZh3y/9mYoaqhu4UKX7GlGUdgzAdF4FX21XWMk
-	3dljXra/RlMQi1MauhilGuJfN1qar4lWbDX/ACVE7GZb5rIoeAodfgpw4rhjXV93Z3O4qXM5XCFwf
-	ojsq1O2pYgAnoV96IvDa6oeoakxjtFbxcqyFKwvg7QyjiTqjmJkzz10VJ1b33JB6EoSUBeRpth99X
-	QSc6ayr2II3RVPUgHz7Q==;
+	List-Owner; bh=YxhjzD3V4dRvxRkhOHLkH0iHlvaYmxmxE4vkTVu8Qko=; b=WajJ/15X93cytU
+	NNhujwyzsARakTbKfN8mV8wFOYvJ67DlHWBrHAeEM/78T3dd7LqPrJgqqG9fId2AT2y4gPU/dMzNI
+	JTXpn75bRjYwM47OvOHx07cMfCxIlNdQoIQj6QbEyLGYJ07QYDECwphBY4+xLRPYVSddQISaCoSvn
+	JyIFQ4/iMaktguasucDwQiMB6FzQY+/9JPrPRl6GU/AV78kaGUyubxuVzmSSQaJqio9ND5OR0hJRi
+	y4fde2LVO7+vf2cZ4thEtMpX+aVCzLm+bcLyW/3jN4Qu+sCCdWcYJNkhpjdkNSMIN1BK8ZFXK/MuQ
+	vOXJ3GzRG6DD15PFvZ0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hoPxl-0007iq-OY; Fri, 19 Jul 2019 10:18:05 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hoQkk-0002xz-Gt; Fri, 19 Jul 2019 11:08:42 +0000
+Received: from asavdk3.altibox.net ([109.247.116.14])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hoPxi-0007iL-IN
- for linux-mediatek@lists.infradead.org; Fri, 19 Jul 2019 10:18:04 +0000
-X-UUID: 7a96b561e76843f28d8452a3b59d8a87-20190719
-X-UUID: 7a96b561e76843f28d8452a3b59d8a87-20190719
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ryder.lee@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1570126357; Fri, 19 Jul 2019 02:17:59 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 19 Jul 2019 03:17:57 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 19 Jul 2019 18:17:56 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 19 Jul 2019 18:17:56 +0800
-Message-ID: <1563531476.17970.2.camel@mtkswgap22>
-Subject: Re: [PATCH 3/3] mt76: mt7615: add cwmin/cwmax initial values
-From: Ryder Lee <ryder.lee@mediatek.com>
-To: Felix Fietkau <nbd@nbd.name>
-Date: Fri, 19 Jul 2019 18:17:56 +0800
-In-Reply-To: <c83e14787bc86f8f8062e0aa44e03ef80c3fd38a.1563518381.git.ryder.lee@mediatek.com>
-References: <50d28c9b0f9e7d6b277d36fc93f55142d7535259.1563518381.git.ryder.lee@mediatek.com>
- <c83e14787bc86f8f8062e0aa44e03ef80c3fd38a.1563518381.git.ryder.lee@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hoQkB-0002hk-WC; Fri, 19 Jul 2019 11:08:09 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk3.altibox.net (Postfix) with ESMTPS id 24E792008A;
+ Fri, 19 Jul 2019 13:08:01 +0200 (CEST)
+Date: Fri, 19 Jul 2019 13:08:00 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: "Koenig, Christian" <Christian.Koenig@amd.com>
+Subject: Re: [PATCH v1 11/11] drm: drop uapi dependency from drm_file.h
+Message-ID: <20190719110800.GA3247@ravnborg.org>
+References: <20190718161507.2047-1-sam@ravnborg.org>
+ <20190718161507.2047-12-sam@ravnborg.org>
+ <57ad927c-4b7f-d6e2-edda-720386190054@amd.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <57ad927c-4b7f-d6e2-edda-720386190054@amd.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10
+ a=eF2l136HLxNaSI10T0kA:9 a=CjuIK1q_8ugA:10
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190719_031802_610225_F04A4460 
-X-CRM114-Status: GOOD (  11.87  )
+X-CRM114-CacheID: sfid-20190719_040808_216702_84C76961 
+X-CRM114-Status: GOOD (  14.59  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [109.247.116.14 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,68 +67,68 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
- Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+Cc: David Airlie <airlied@linux.ie>, Daniel Vetter <daniel.vetter@ffwll.ch>,
+ Liviu Dudau <Liviu.Dudau@arm.com>,
+ "dri-devel@lists.freedesktop.org" <dri-devel@lists.freedesktop.org>,
+ Chris Wilson <chris@chris-wilson.co.uk>, Eric Anholt <eric@anholt.net>, "Zhou,
+ David\(ChunMing\)" <David1.Zhou@amd.com>, Stefan Agner <stefan@agner.ch>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, CK Hu <ck.hu@mediatek.com>,
+ Thierry Reding <treding@nvidia.com>, Daniel Vetter <daniel@ffwll.ch>,
+ Rob Herring <robh@kernel.org>, Jani Nikula <jani.nikula@intel.com>,
+ Intel Graphics Development <intel-gfx@lists.freedesktop.org>,
+ Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Lionel Landwerlin <lionel.g.landwerlin@intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Boris Brezillon <bbrezillon@kernel.org>,
+ Thomas Zimmermann <tzimmermann@suse.de>, Rob Clark <robdclark@gmail.com>,
+ Noralf =?iso-8859-1?Q?Tr=F8nnes?= <noralf@tronnes.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-07-19 at 14:55 +0800, Ryder Lee wrote:
-> Add initial values in mt7615_mcu_set_wmm() to cleanup setup flow.
+Hi Christian.
+
+Thanks for your comments and very valid question.
+
+On Fri, Jul 19, 2019 at 06:56:47AM +0000, Koenig, Christian wrote:
+> Am 18.07.19 um 18:15 schrieb Sam Ravnborg:
+> > drm_file used drm_magic_t from uapi/drm/drm.h.
+> > This is a simple unsigned int.
+> > Just opencode it as such to break the dependency from this header file
+> > to uapi.
 > 
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> ---
->  drivers/net/wireless/mediatek/mt76/mt7615/mcu.c | 17 ++++++-----------
->  1 file changed, 6 insertions(+), 11 deletions(-)
-> 
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> index 5fd162be3654..154c09428b69 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> @@ -622,10 +622,7 @@ int mt7615_mcu_set_rts_thresh(struct mt7615_dev *dev, u32 val)
->  int mt7615_mcu_set_wmm(struct mt7615_dev *dev, u8 queue,
->  		       const struct ieee80211_tx_queue_params *params)
->  {
-> -#define WMM_AIFS_SET	BIT(0)
-> -#define WMM_CW_MIN_SET	BIT(1)
-> -#define WMM_CW_MAX_SET	BIT(2)
-> -#define WMM_TXOP_SET	BIT(3)
-> +#define WMM_PARAM_SET	GENMASK(3, 0)
->  	struct req_data {
->  		u8 number;
->  		u8 rsv[3];
-> @@ -638,19 +635,17 @@ int mt7615_mcu_set_wmm(struct mt7615_dev *dev, u8 queue,
->  	} __packed req = {
->  		.number = 1,
->  		.queue = queue,
-> -		.valid = WMM_AIFS_SET | WMM_TXOP_SET,
-> +		.valid = WMM_PARAM_SET,
->  		.aifs = params->aifs,
-> +		.cw_min = BIT(5) - 1,
-> +		.cw_max = cpu_to_le16(BIT(10) - 1),
->  		.txop = cpu_to_le16(params->txop),
->  	};
->  
-> -	if (params->cw_min) {
-> -		req.valid |= WMM_CW_MIN_SET;
-> +	if (params->cw_min)
->  		req.cw_min = params->cw_min;
-> -	}
-> -	if (params->cw_max) {
-> -		req.valid |= WMM_CW_MAX_SET;
-> +	if (params->cw_max)
->  		req.cw_max = cpu_to_le16(params->cw_max);
-> -	}
+> Mhm, why do you want to remove UAPI dependency here in the first place?
 
-I should use fls() here and will send a v2
+The idea is to make include/drm/* independent of uapi/drm/* so the
+header files are less tangled up thus easier to read and comprehend.
 
->  	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_EDCA_UPDATE,
->  				   &req, sizeof(req), true);
+.c files that requires uapi can then include the uapi headers.
 
+For now my focus was solely on uapi/drm/drm.h - so I dunno if this
+is an achievable goal for include/drm/*.
 
+For uapi/drm/* headers things are more clear. They shall be
+independent of include/drm/* as they are exported.
+
+> I mean the type can't change because it is UAPI, but it is rather bad 
+> for a documentation point of view.
+
+For a widely used type I would agree.
+For struct auth, that is ony used in drm_auth.c then the documentation
+impact is minor. But your point is indeed valid.
+(struct auth has one field of type magic_t).
+
+I will await further feedback before we decide to apply this patch or
+not.
+The patches that pushes include of drm/drm.h to the respective .c
+files are legit as we drop the dependency on an indirectly included
+header file. I will process these patches.
+
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
