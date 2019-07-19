@@ -2,72 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C769A6E3BD
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jul 2019 11:50:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D03A16E413
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jul 2019 12:18:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=RVjcZ2KDIUVOERlI021v+JBKYNzr3clh0RqHcyWH5rs=; b=cqi
-	crENI/2LYTUPNt+0OC26EkLWbR2+Yo1zRmNdVKO3NXcZ5CdFZu1xtin6Q1qbgK/FS8+xUfx7Eau7P
-	GC/e/ZSMwfI6asXucgsEtbHQx+Jf7KhcqW0O9Zue368rUBvRleXFgAHfJVW1obrppuwWw3sn6cTSd
-	0aYZ3GMbVSvw+yRJt4TAgRDT5jiYh03uwotqmi6f5ICIXkeELA06gMJqrcV5TDuekRdcM4tBWXrok
-	zMzOub+z2n3owwkagXF/UACte6aqXKlrsMW+A7HIjMs6zKCZ0YDylJlvNjxhT8p8oI4/Y7BaSy68j
-	kuRzQprIb4KUxMz9Y9+O6G34It6Iisg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=wr3yboctbz+RdqI7Du7sct5+TbYuTyGMaEW9Vlyl+4I=; b=jLHj8lAkLex6qv
+	5Ab1ACHX33VFDeDd52bL7smLTLjfCZVXZ4iup/qW6U3ojwykoqZN/O4qZI+YtYCNpjBsjUYgIB5b7
+	RC+nAD/6zI08EZRvzNP4NXnOpeuKh/rb8lCOcOSAZh3y/9mYoaqhu4UKX7GlGUdgzAdF4FX21XWMk
+	3dljXra/RlMQi1MauhilGuJfN1qar4lWbDX/ACVE7GZb5rIoeAodfgpw4rhjXV93Z3O4qXM5XCFwf
+	ojsq1O2pYgAnoV96IvDa6oeoakxjtFbxcqyFKwvg7QyjiTqjmJkzz10VJ1b33JB6EoSUBeRpth99X
+	QSc6ayr2II3RVPUgHz7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hoPXA-0007Fd-PY; Fri, 19 Jul 2019 09:50:36 +0000
-Received: from mo6-p00-ob.smtp.rzone.de ([2a01:238:20a:202:5300::6])
+	id 1hoPxl-0007iq-OY; Fri, 19 Jul 2019 10:18:05 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hoPX5-0007Dn-03
- for linux-mediatek@lists.infradead.org; Fri, 19 Jul 2019 09:50:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1563529825;
- s=strato-dkim-0002; d=fpond.eu;
- h=Message-Id:Date:Subject:Cc:To:From:X-RZG-CLASS-ID:X-RZG-AUTH:From:
- Subject:Sender;
- bh=D4xVnEMZt4ha1PgIER/TPU4P5PQuWjmsySU7LQEnfaE=;
- b=XfnYdh8lYa9xSA0YEDrOtqBfRBP3IeIbwH9LGi3sThvlkIfpGPikBL6bdBeSDKnrWC
- jPN4Q23ZaPjtMGTdtefPoLNI6NanUbU4FBMpe+DUORQM7Ur9d14lVOcWs6+VMREwTUsu
- 1ku9TNkQxR6j7flA9FVV8Qi65yi0IiSklQATKSYOm2LAEw7hubuJjBsLJ2fDzyor7nMp
- h8NJAisXAbg/sY7UtIa1x+L0flCeFMNcur+Ub7VlPwMY6nAOnpwpxgi6yrii138meSZg
- k9OzDPd/DyGdZYD5pgkDSh9wRlLRmeOgae8rV8x4xeM6eO2hziyK3UIJ8AS04rTFrqAF
- owSA==
-X-RZG-AUTH: ":OWANVUa4dPFUgKR/3dpvnYP0Np73dmm4I5W0/AvA67Ot4fvR82JedweDVac="
-X-RZG-CLASS-ID: mo00
-Received: from groucho.site by smtp.strato.de (RZmta 44.24 DYNA|AUTH)
- with ESMTPSA id h0a328v6J9oOscz
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA (curve secp521r1 with 521 ECDH
- bits, eq. 15360 bits RSA)) (Client did not present a certificate);
- Fri, 19 Jul 2019 11:50:24 +0200 (CEST)
-From: Ulrich Hecht <uli@fpond.eu>
-To: linux-mediatek@lists.infradead.org
-Subject: [PATCH] arm64: dts: mt8173: Add capacity-dmips-mhz attributes
-Date: Fri, 19 Jul 2019 11:50:16 +0200
-Message-Id: <1563529816-3992-1-git-send-email-uli@fpond.eu>
-X-Mailer: git-send-email 2.7.4
+ id 1hoPxi-0007iL-IN
+ for linux-mediatek@lists.infradead.org; Fri, 19 Jul 2019 10:18:04 +0000
+X-UUID: 7a96b561e76843f28d8452a3b59d8a87-20190719
+X-UUID: 7a96b561e76843f28d8452a3b59d8a87-20190719
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1570126357; Fri, 19 Jul 2019 02:17:59 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 19 Jul 2019 03:17:57 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 19 Jul 2019 18:17:56 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 19 Jul 2019 18:17:56 +0800
+Message-ID: <1563531476.17970.2.camel@mtkswgap22>
+Subject: Re: [PATCH 3/3] mt76: mt7615: add cwmin/cwmax initial values
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>
+Date: Fri, 19 Jul 2019 18:17:56 +0800
+In-Reply-To: <c83e14787bc86f8f8062e0aa44e03ef80c3fd38a.1563518381.git.ryder.lee@mediatek.com>
+References: <50d28c9b0f9e7d6b277d36fc93f55142d7535259.1563518381.git.ryder.lee@mediatek.com>
+ <c83e14787bc86f8f8062e0aa44e03ef80c3fd38a.1563518381.git.ryder.lee@mediatek.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190719_025031_664664_5B36AD0D 
-X-CRM114-Status: UNSURE (   5.19  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.9 (/)
+X-CRM114-CacheID: sfid-20190719_031802_610225_F04A4460 
+X-CRM114-Status: GOOD (  11.87  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.9 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [2a01:238:20a:202:5300:0:0:6 listed in]
- [list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,60 +74,67 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: matthias.bgg@gmail.com, Ulrich Hecht <uli@fpond.eu>
-MIME-Version: 1.0
+Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dhrystone benchmark on Acer Chromebook R13 CB5-312T:
-A72: 15698587 dps @ 1807 MHz
-A53:  7598784 dps @ 1703 MHz
+On Fri, 2019-07-19 at 14:55 +0800, Ryder Lee wrote:
+> Add initial values in mt7615_mcu_set_wmm() to cleanup setup flow.
+> 
+> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> ---
+>  drivers/net/wireless/mediatek/mt76/mt7615/mcu.c | 17 ++++++-----------
+>  1 file changed, 6 insertions(+), 11 deletions(-)
+> 
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> index 5fd162be3654..154c09428b69 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+> @@ -622,10 +622,7 @@ int mt7615_mcu_set_rts_thresh(struct mt7615_dev *dev, u32 val)
+>  int mt7615_mcu_set_wmm(struct mt7615_dev *dev, u8 queue,
+>  		       const struct ieee80211_tx_queue_params *params)
+>  {
+> -#define WMM_AIFS_SET	BIT(0)
+> -#define WMM_CW_MIN_SET	BIT(1)
+> -#define WMM_CW_MAX_SET	BIT(2)
+> -#define WMM_TXOP_SET	BIT(3)
+> +#define WMM_PARAM_SET	GENMASK(3, 0)
+>  	struct req_data {
+>  		u8 number;
+>  		u8 rsv[3];
+> @@ -638,19 +635,17 @@ int mt7615_mcu_set_wmm(struct mt7615_dev *dev, u8 queue,
+>  	} __packed req = {
+>  		.number = 1,
+>  		.queue = queue,
+> -		.valid = WMM_AIFS_SET | WMM_TXOP_SET,
+> +		.valid = WMM_PARAM_SET,
+>  		.aifs = params->aifs,
+> +		.cw_min = BIT(5) - 1,
+> +		.cw_max = cpu_to_le16(BIT(10) - 1),
+>  		.txop = cpu_to_le16(params->txop),
+>  	};
+>  
+> -	if (params->cw_min) {
+> -		req.valid |= WMM_CW_MIN_SET;
+> +	if (params->cw_min)
+>  		req.cw_min = params->cw_min;
+> -	}
+> -	if (params->cw_max) {
+> -		req.valid |= WMM_CW_MAX_SET;
+> +	if (params->cw_max)
+>  		req.cw_max = cpu_to_le16(params->cw_max);
+> -	}
 
-Signed-off-by: Ulrich Hecht <uli@fpond.eu>
----
- arch/arm64/boot/dts/mediatek/mt8173.dtsi | 4 ++++
- 1 file changed, 4 insertions(+)
+I should use fls() here and will send a v2
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8173.dtsi b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
-index 15f1842..0b590fa 100644
---- a/arch/arm64/boot/dts/mediatek/mt8173.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
-@@ -161,6 +161,7 @@
- 				 <&apmixedsys CLK_APMIXED_MAINPLL>;
- 			clock-names = "cpu", "intermediate";
- 			operating-points-v2 = <&cluster0_opp>;
-+			capacity-dmips-mhz = <526>;
- 		};
- 
- 		cpu1: cpu@1 {
-@@ -174,6 +175,7 @@
- 				 <&apmixedsys CLK_APMIXED_MAINPLL>;
- 			clock-names = "cpu", "intermediate";
- 			operating-points-v2 = <&cluster0_opp>;
-+			capacity-dmips-mhz = <526>;
- 		};
- 
- 		cpu2: cpu@100 {
-@@ -187,6 +189,7 @@
- 				 <&apmixedsys CLK_APMIXED_MAINPLL>;
- 			clock-names = "cpu", "intermediate";
- 			operating-points-v2 = <&cluster1_opp>;
-+			capacity-dmips-mhz = <1024>;
- 		};
- 
- 		cpu3: cpu@101 {
-@@ -200,6 +203,7 @@
- 				 <&apmixedsys CLK_APMIXED_MAINPLL>;
- 			clock-names = "cpu", "intermediate";
- 			operating-points-v2 = <&cluster1_opp>;
-+			capacity-dmips-mhz = <1024>;
- 		};
- 
- 		idle-states {
--- 
-2.7.4
+>  	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_EDCA_UPDATE,
+>  				   &req, sizeof(req), true);
+
 
 
 _______________________________________________
