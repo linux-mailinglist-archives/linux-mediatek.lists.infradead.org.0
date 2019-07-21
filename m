@@ -2,137 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DDD8E6F34A
-	for <lists+linux-mediatek@lfdr.de>; Sun, 21 Jul 2019 14:53:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0CDF56F43C
+	for <lists+linux-mediatek@lfdr.de>; Sun, 21 Jul 2019 18:56:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ez1oKSa0W4oPAbNYp6WKq2+ywEx8DKjxNB/3ydzl4WE=; b=K5XqzD406W3Tl8
-	7Qu8CfbGEb25CKj2RfltdMQy7X2ljbIxAOI/eZJBH4m4YfypS2Fv1QGQrTfO0w8XV0y7i2H8DoB/U
-	J/1g53WwaZRXzVfOy9rKiADyhy+R3ewjRl91lAcvQi3iw3/ctsoy3S4qp/X28oxRjTRB5MZr1x9Bg
-	vB0q5YbqQePDhM/P/jATZS2Y02jInKdzLqj0e7/VlzDA7uNFFqBG90+TPngBFQ78Z0U7HLW20loIl
-	lKBplJGGU7ntgiGO9lFRc8k0K9Zl7vwcRPR0IjUsqkfca30b2ctTGWdzlDn8VSHGNDE4G51YUsfJP
-	NXMcWQpPfWrH4/gRaEJw==;
+	List-Owner; bh=TL9dfee8JyEpYTH1cB7kV+Y9G4O5I2ms70CZ6n1A/6M=; b=NToamgiBcq3rtc
+	MGfxAFORcEDAlKb2AQrtd9+nC5PIvKfLIu52ESYmA7RypZD8rrUK8+DJWGB4Obl8wQj7E4gfaSsah
+	DWSAKrQJhOIkTiEgyIZIN4MkckeDE2FqfaxRvhD4vOxJ/kCXZaFkyRlqbmb3sIDopylwC2p+U4Fft
+	IYEHFthCfa+RYawWebgKOlUJZIOs91xVVB2I6a3WqH4QAspbFFRlp7QETozkSHO0U8GqqRBV1T2vD
+	UyLsn3EnwrrSGjP2/vuh4uQO6uYNS5F4Y0sSZzldqkNBjgAYkrbVOqg8QjDfh8Z71IrjtiZuWcrDi
+	KBc2oBZBTXlwF5X+VJyQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpBKl-0003WN-GH; Sun, 21 Jul 2019 12:52:59 +0000
-Received: from esa5.hgst.iphmx.com ([216.71.153.144])
+	id 1hpF8Z-000819-RG; Sun, 21 Jul 2019 16:56:39 +0000
+Received: from smtprelay0189.hostedemail.com ([216.40.44.189]
+ helo=smtprelay.hostedemail.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpBKi-0003VZ-Ho; Sun, 21 Jul 2019 12:52:58 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
- t=1563713576; x=1595249576;
- h=from:to:cc:subject:date:message-id:references:
- in-reply-to:content-transfer-encoding:mime-version;
- bh=jr/9iVwfIsb8WMeguz+EcBRhicX7u1nuWFZ7yQfaR3g=;
- b=B/oAZnuO/Nirp5duZ5HwV5bQaSVYwK45dr6y8zdA4/KIXuTcBgvizZ0A
- XjvYejm4nwFYvwbhQQdPXC+K9FXh8TkiE8hDxSXfydeOpNobDeZB++o8U
- XlkBd0ogRbUb9DR5gVmdVcpPtarKyWcOFQfmz4DBOnj+ucJ5CQqgmNM/t
- bi9KJQqgzF2hXtiEAtOmly/WGda7Efe6fjM8gp2MrFvnQ5fLWwk0CdIYM
- dA4Cpd1sGtc5S6G7djLkeSjg5IVESDeteGCzMQ08QB7nteImpl2eN6dT3
- kLx97osmZZF7QU7atoB2jRQNcDz7Rg+yqzwcFFi45Q4iYyLYFlvoF1ju9 A==;
-IronPort-SDR: bRaC+u2BWF7b57H2NfjCi0RC0KYH3n36VG4Rg2Pq0MNzT/+RKPj4mqP2FstqbrN5VLiEspX5Bx
- cdxbwtbgpJUrYYPsljVz2Y0h7xpKRa3Tps9qzcHwg9m1dSMT6M76415F8QznU3kc3AVXOqa1iQ
- yJDwfJRr04mXpOyQUWfOCi9hxJsyTP6S3/i16BtspObzJyTtPh/SUdE2X2SwWt7RAvhrBw+AQR
- a+3dG+xU/+PvxDuL975Hj/1NsIll5GXSEviA8meGIF4Pmfu8dNY9SMWgTPShUkVz6TbnxH4mrH
- Gw8=
-X-IronPort-AV: E=Sophos;i="5.64,290,1559491200"; d="scan'208";a="114700015"
-Received: from mail-sn1nam04lp2057.outbound.protection.outlook.com (HELO
- NAM04-SN1-obe.outbound.protection.outlook.com) ([104.47.44.57])
- by ob1.hgst.iphmx.com with ESMTP; 21 Jul 2019 20:52:49 +0800
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=iDja1mMlaTkvsIPn7PJIZZj3X0bnp5nanPd897A3uHtbComFyFmRYBb+K/dlT5/fTr1F63BI5PVdaMso2Xx6NNXPQWUjKGvy5wFr726hYOb/dGg8/D8p2kWS89hmDTWzuf0MLEco6v+ofOJ7Nsq+UaeC04jhrLNAVoJpzXaNp0CZ5RtAUZaP3qEPvOtHq1Tb1lBMkuPeQrZd7SoAh8M+lpFUQG/nMMyP+TDFwYGo49gEA590DLjhBkfvwexZEOesID5J0KaNlsBdjGdrTpIDhWlJAKWcIUv/44Rn4XPsCGevNziYh4dj0L+RSdzjWABPu2H87XhntN74dnXxzfLIcQ==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=jr/9iVwfIsb8WMeguz+EcBRhicX7u1nuWFZ7yQfaR3g=;
- b=e41gmSt7FZ1ve1pM16h923WIKQ9ilEkmiY/YYdTzJfYjSRuq6A7Fs6iLFlh3uptiKoS+RWiwqBt+QYGUcthB3FfgIWY7JbZx23KxBplEoTjm4zDApKLazWeC1r12Hu0jNiU7/c1fp1bUKam0Ujsidmbvn30tEeMNJ3M7oSGq7q4KKhghY+OaZ1fMLSH+1pUs27hNb1BQ/6sbceVOq/LNqUmtei8CVBbkrERIVMy1nKGed/VtJrLwR5OdOBy2oaHtDgxNJp6PoVbpCgnFQhqDd7vbBeRQDXC53r+vn8tYxYQz91susDvEyKFSNI5KoQbQeeJkg7vSz0iv1fNT9eubsA==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
- smtp.mailfrom=wdc.com;dmarc=pass action=none header.from=wdc.com;dkim=pass
- header.d=wdc.com;arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=jr/9iVwfIsb8WMeguz+EcBRhicX7u1nuWFZ7yQfaR3g=;
- b=Ds64fUyr+sVWndcP45+iDYV3di3uBdW5vFWERUlZkV8ayzYdA4mN818e28h8R+UGuNlMbGwHkBU3/UZR/6sOnoO4kExTn05m/Uq2jC223a87hmJRlSpTeMuNoHDAkbUtdm3AGxLjxjb7HXqEIekdqRFqDp80mQ9B9RmHwfCUzBs=
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
- SN6PR04MB4110.namprd04.prod.outlook.com (52.135.82.159) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2094.16; Sun, 21 Jul 2019 12:52:47 +0000
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::a102:1701:9c05:96b3]) by SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::a102:1701:9c05:96b3%5]) with mapi id 15.20.2094.011; Sun, 21 Jul 2019
- 12:52:47 +0000
-From: Avri Altman <Avri.Altman@wdc.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
- <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
- <pedrom.sousa@synopsys.com>
-Subject: RE: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-Thread-Topic: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-Thread-Index: AQHVOGx9NdHB1Jz3wEWNwY1jARxa+abVESuAgAADy1A=
-Date: Sun, 21 Jul 2019 12:52:47 +0000
-Message-ID: <SN6PR04MB4925BD03422B827F76A5F7E5FCC50@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1562906656-27154-1-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB4925208835D4760249E82DB7FCC50@SN6PR04MB4925.namprd04.prod.outlook.com>
-In-Reply-To: <SN6PR04MB4925208835D4760249E82DB7FCC50@SN6PR04MB4925.namprd04.prod.outlook.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=Avri.Altman@wdc.com; 
-x-originating-ip: [212.25.79.133]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 9841e0cd-f76d-4092-a333-08d70dda54ee
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
- SRVR:SN6PR04MB4110; 
-x-ms-traffictypediagnostic: SN6PR04MB4110:
-x-microsoft-antispam-prvs: <SN6PR04MB4110B6E5E8F863C6CD48245BFCC50@SN6PR04MB4110.namprd04.prod.outlook.com>
-wdcipoutbound: EOP-TRUE
-x-ms-oob-tlc-oobclassifiers: OLM:6430;
-x-forefront-prvs: 0105DAA385
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(4636009)(136003)(396003)(346002)(366004)(39860400002)(376002)(199004)(189003)(478600001)(76116006)(66946007)(256004)(25786009)(110136005)(2201001)(54906003)(76176011)(66476007)(66556008)(64756008)(66446008)(476003)(446003)(11346002)(316002)(486006)(6506007)(2501003)(8676002)(186003)(7696005)(7736002)(102836004)(99286004)(305945005)(74316002)(52536014)(26005)(6116002)(6436002)(55016002)(2906002)(81156014)(33656002)(81166006)(6246003)(9686003)(2940100002)(86362001)(66066001)(229853002)(4744005)(5660300002)(71190400001)(71200400001)(8936002)(68736007)(53936002)(4326008)(7416002)(3846002)(14454004);
- DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB4110;
- H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; A:1; MX:1; 
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: /8E5USBtaTOhNNdSxYUVpLthBdAeOQHTDAAU58S2IJyP40X2vSQbPvUK6TAatNE/wmdwzt1YCpOKrGgMXeSaj9RfEhOuwtndfKqiotlKOzP9sfVD9FfxyU/pbHi/QI0tJCiY8PNhetVQeYoS7+tdTy2eu3S0pmxzXJiv1+3G21wGqGnMj5bHlP0pRalCRe9xji/VdU/ZOXm5PsREoIUmjPCVKggQfOrqQcfGqHvOsWHNnX9n1vlFcRGFX6rj6DiIpfmVySNGhiF4KUbaxoOqpvVvw4D3xakAe2W2T3CBpyfpXsKplTuEwuBJrzPyzq7iQmzk4Kmzc3dvQFjl41MnBHxrxRGVFd7U0O2fJLz6lrrqDcHwecKUmYzPUkcsBmtcCxd7cjD7chgrIDA5Cu3BY4mzEi5GOl1VF1vSg81i9ZY=
+ id 1hpF8V-00080C-GK
+ for linux-mediatek@lists.infradead.org; Sun, 21 Jul 2019 16:56:37 +0000
+Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
+ [216.40.38.60])
+ by smtprelay01.hostedemail.com (Postfix) with ESMTP id 11E49100E86C1;
+ Sun, 21 Jul 2019 16:56:23 +0000 (UTC)
+X-Session-Marker: 6A6F6540706572636865732E636F6D
+X-Spam-Summary: 2, 0, 0, , d41d8cd98f00b204, joe@perches.com,
+ :::::::::::::::::::::,
+ RULES_HIT:41:355:379:599:800:960:967:973:982:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1539:1593:1594:1711:1730:1747:1777:1792:2393:2525:2559:2563:2682:2685:2828:2859:2895:2933:2937:2939:2942:2945:2947:2951:2954:3022:3138:3139:3140:3141:3142:3352:3622:3743:3865:3866:3867:3868:3870:3871:3872:3873:3874:3934:3936:3938:3941:3944:3947:3950:3953:3956:3959:4321:5007:8985:9025:10004:10400:10848:11232:11473:11658:11914:12043:12297:12555:12740:12760:12895:12986:13069:13071:13311:13357:13439:14180:14181:14659:14721:21080:21627:30054:30070:30091,
+ 0,
+ RBL:23.242.196.136:@perches.com:.lbl8.mailshell.net-62.8.0.180 64.201.201.201,
+ CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none, DomainCache:0,
+ MSF:not bulk, SPF:fn, MSBL:0, DNSBL:neutral, Custom_rules:0:0:0, LFtime:27,
+ LUA_SUMMARY:none
+X-HE-Tag: mist98_1a5900528f025
+X-Filterd-Recvd-Size: 1887
+Received: from XPS-9350.home (cpe-23-242-196-136.socal.res.rr.com
+ [23.242.196.136]) (Authenticated sender: joe@perches.com)
+ by omf17.hostedemail.com (Postfix) with ESMTPA;
+ Sun, 21 Jul 2019 16:56:20 +0000 (UTC)
+Message-ID: <3a2d6eb86fc211002607aad12b35648736e46342.camel@perches.com>
+Subject: Re: [PATCH 1/3] mt76: fix checkpatch warnings and errors
+From: Joe Perches <joe@perches.com>
+To: Kalle Valo <kvalo@codeaurora.org>, Ryder Lee <ryder.lee@mediatek.com>
+Date: Sun, 21 Jul 2019 09:56:18 -0700
+In-Reply-To: <87blxnsmxm.fsf@purkki.adurom.net>
+References: <50d28c9b0f9e7d6b277d36fc93f55142d7535259.1563518381.git.ryder.lee@mediatek.com>
+ <87blxnsmxm.fsf@purkki.adurom.net>
+User-Agent: Evolution 3.30.5-0ubuntu0.18.10.1 
 MIME-Version: 1.0
-X-OriginatorOrg: wdc.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 9841e0cd-f76d-4092-a333-08d70dda54ee
-X-MS-Exchange-CrossTenant-originalarrivaltime: 21 Jul 2019 12:52:47.4062 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: Avri.Altman@wdc.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB4110
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190721_055256_712589_B9830BEF 
-X-CRM114-Status: GOOD (  11.50  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190721_095635_612133_FF09AF01 
+X-CRM114-Status: UNSURE (   6.15  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [216.71.153.144 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.40.44.189 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -144,33 +77,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
+ Felix Fietkau <nbd@nbd.name>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-PiANCj4gSGksDQo+IA0KPiA+DQo+ID4gQ3VycmVudGx5IGJpdHMgaW4gaGJhLT5vdXRzdGFuZGlu
-Z190YXNrcyBhcmUgY2xlYXJlZCBvbmx5IGFmdGVyIHRoZWlyDQo+ID4gY29ycmVzcG9uZGluZyB0
-YXNrIG1hbmFnZW1lbnQgY29tbWFuZHMgYXJlIHN1Y2Nlc3NmdWxseSBkb25lIGJ5DQo+ID4gX191
-ZnNoY2RfaXNzdWVfdG1fY21kKCkuDQo+ID4NCj4gPiBJZiB0aW1lb3V0IGhhcHBlbnMgaW4gYSB0
-YXNrIG1hbmFnZW1lbnQgY29tbWFuZCwgaXRzIGNvcnJlc3BvbmRpbmcNCj4gPiBiaXQgaW4gaGJh
-LT5vdXRzdGFuZGluZ190YXNrcyB3aWxsIG5vdCBiZSBjbGVhcmVkIHVudGlsIG5leHQgdGFzaw0K
-PiA+IG1hbmFnZW1lbnQgY29tbWFuZCB3aXRoIHRoZSBzYW1lIHRhZyB1c2VkIHN1Y2Nlc3NmdWxs
-eSBmaW5pc2hlcy7igKcNCj4gdWZzaGNkX2NsZWFyX3RtX2NtZCBpcyBhbHNvIGNhbGxlZCBhcyBw
-YXJ0IG9mIHVmc2hjZF9lcnJfaGFuZGxlci4NCj4gRG9lcyB0aGlzIGNoYW5nZSBzb21ldGhpbmcg
-aW4geW91ciBhc3N1bXB0aW9ucz8NCkFuZCBCVFcgdGhlcmUgaXMgYSBzcGVjaWZpYyBfX2NsZWFy
-X2JpdCBpbiBfX3Vmc2hjZF9pc3N1ZV90bV9jbWQoKSBpbiBjYXNlIG9mIGEgVE8uDQoNCj4gDQo+
-IFRoYW5rcywNCj4gQXZyaQ0KPiANCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0Bs
-aXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlz
-dGluZm8vbGludXgtbWVkaWF0ZWsK
+On Sun, 2019-07-21 at 13:26 +0300, Kalle Valo wrote:
+> Ryder Lee <ryder.lee@mediatek.com> writes:
+> > Fix warnings and errors as much as possible.
+[]
+> This is way too big and the commit log is too vague, please fix one
+> problem at a time and describe in the commit log what you fixed.
+
+Hello Ryder.
+
+One option is to perform all the whitespace corrections
+in a single patch and then show that the object files
+have not changed.
+
+I posted a trivial script several years ago that might
+be of some help here.
+
+https://lore.kernel.org/lkml/1405128087.6751.12.camel@joe-AO725/
+
+It trivially reformats using checkpatch and produces a
+possible set of changes that can be used to update a
+git tree.
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
