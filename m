@@ -2,70 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 838C570CDD
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 00:52:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CB1B370D9F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 01:49:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7Av38ys5+yMjgDbGYoJi6Gtwn5TOvG7R2PsZNo3GAj0=; b=nB7Pv0bNucpcYY
-	pYSxaJn+8y3s3jy0VjAwq08x+PvQk5Ctty3ij9qt/v6PwykSOfSQuJI5q1cXfMF7L3h7j1X4PEbRr
-	CfKM78SidRNpzfYbyyHgw0mfAr1fMm8gflL3I4K2TFcslE3WtYCTw9dIi7XwG1tI2NA4pVe7nATJQ
-	A+06uYstgJtrlfDRV11uuXz6nCUiMKj4iU9/TcQ6BYZKjw+0BVcQAIAUCJ6TqnfDD2BXKsypufTMi
-	hH0n49YKLHzZD39PELgIsTAkMiifgGiG0m9jP9V8DDyyHYyx2kz80XuXsycvp2AQsMfJuuJBCp0Vb
-	2jqMoXOuDZsBcolOvsTg==;
+	List-Owner; bh=LJolSse4HAdiNzQv1JUbg4jH9BzzQo64c6p7cVvQpLQ=; b=PbvxJAmnaXBwRw
+	vX1pp9/WQbAAi3IoZERgW+2Bu9RrHbeJ55wKOj6gW0B/A46xZuRPxO96IW3xVZnobSguELi3ip+l2
+	Qtz1rDjqBcpqtOYlPWGhaiuwnHt0FcWhbcimGE8rj8eyQTNkdhIJM0QlEFos7ngu0QBawmCWeid1F
+	CeiqJG0zPGSCzZeD+qiioLI9RUH+zn9+v1oOgVHaeIOvLv9tGNQwr4GeG4J1m3bmqDU3jzq4js3CX
+	9eDAv0JhtLMs0OsTYajd6jsIQlcXIXIZyMMGDJW/SDLqfiJ1HQidERuOdYeq3mnJVaMFm71YKdCFJ
+	4Pl5iy0r6Yp5nnnZel9A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hphAX-0004Vn-Tt; Mon, 22 Jul 2019 22:52:34 +0000
-Received: from mail-io1-f65.google.com ([209.85.166.65])
+	id 1hpi3z-0004xF-52; Mon, 22 Jul 2019 23:49:51 +0000
+Received: from mail-io1-f67.google.com ([209.85.166.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hph9i-0004Ig-55; Mon, 22 Jul 2019 22:51:43 +0000
-Received: by mail-io1-f65.google.com with SMTP id g20so77647873ioc.12;
- Mon, 22 Jul 2019 15:51:42 -0700 (PDT)
+ id 1hpi3d-0004qx-4U; Mon, 22 Jul 2019 23:49:39 +0000
+Received: by mail-io1-f67.google.com with SMTP id k8so77954679iot.1;
+ Mon, 22 Jul 2019 16:49:27 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=sYRqGzsa2Mqfa8UCEWc+Q6d3arkBPq6mEZsIpfw+fso=;
- b=qGUyQ8+eWbLU7Y0y0gxcUlOYh3UPiHl3jiO1tL2Ani4Ski45a4xRcjvEpi8dMeDJKh
- epLW1vpiyc/ugFUra41ssZJM29OBSkNB7ExNVpkv1btQCCFU8KCTPM/u/3HGPh6QWpcf
- B7LT9ma73d9qsq0rvkHcOVSQLYtzcRS2u9tUMs252p9e7XMBB8ym/OpKiUmL+H5HwmvT
- l5/eZuIFQVp0r49aAqihs/OtzfIUEaUuoriDwHebKJ5Bu6M48gHYHUN5yx1HNdYt92EV
- TceGANHQFNsKv+rJ35mmxojBB0eUBA/NgjTI7pTKUVnHtyOBGrMWYHYDiX3wJpqUYSi0
- lcVA==
-X-Gm-Message-State: APjAAAXNPlL6kA9eGq/oqsxS1KL9S51PiPQvRSgoWLiTJuC440VW/SYT
- Zrc+6Fa2x7Pbfg1vbml4dQ==
-X-Google-Smtp-Source: APXvYqxFG3cem2D0uzg43tQTtA1WyJdJngPhgAlqWXVNUVcQmwLGOFIjnFebC9eNH3FaJ4tc0VmjRg==
-X-Received: by 2002:a5d:8d12:: with SMTP id p18mr65859087ioj.251.1563835901424; 
- Mon, 22 Jul 2019 15:51:41 -0700 (PDT)
+ bh=OJLmbuthXALsnhPZhxE7MeJBMmONjl7w8T5HPyeenvc=;
+ b=gaDOh2jJruuL2SMVRr9m0D5cLwNzqaYVSQ2VAqtUdq7K5UPu+AU49mROJVHiQ2GPzt
+ GFnARBD83pGEj4cciIrykn28V+pnjBfGbBIxtBWhi6YofeS7odej8DpWK+JbTQ8pcgvu
+ vXDic9xc1Fofx0lOifnOL3qDSjgBi9rIn+mWgjZPwetGqZ8xgePxKhuSG8pJKad38Ij+
+ ZzCqZsAEmFXq/dgOweV8ncjg/lAOiAu8rtwqvQTr2lY8UYNJXbubpar/xg97sc9YSsh3
+ QMgBA/Mz+TAx8HZzuRsAV1iC4C+3sBI/eU+YUW02pkjg4svumvnFjqm30doFH0rshiJP
+ V0vw==
+X-Gm-Message-State: APjAAAXHm1a7dNvdDOxsfsV1PCe2MnpKbRm2rtLRT4qan1tO3Jg/VaE5
+ TcyMz94qtGnBVRtDunNyDg==
+X-Google-Smtp-Source: APXvYqzkH8Tnp7m9jxTvF2W3kkBnlZgivGKMGBtOnCdqqnMHosHOQ0blCrKEmssR6DnsieQ9XjyLqw==
+X-Received: by 2002:a5d:8ccc:: with SMTP id k12mr67931100iot.141.1563839365957; 
+ Mon, 22 Jul 2019 16:49:25 -0700 (PDT)
 Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id k5sm46038653ioj.47.2019.07.22.15.51.40
+ by smtp.gmail.com with ESMTPSA id m4sm36990247iok.68.2019.07.22.16.49.25
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 22 Jul 2019 15:51:40 -0700 (PDT)
-Date: Mon, 22 Jul 2019 16:51:40 -0600
+ Mon, 22 Jul 2019 16:49:25 -0700 (PDT)
+Date: Mon, 22 Jul 2019 17:49:24 -0600
 From: Rob Herring <robh@kernel.org>
-To: Ran Bi <ran.bi@mediatek.com>
-Subject: Re: [PATCH 1/3] bindings: rtc: add bindings for MT2712 RTC
-Message-ID: <20190722225140.GA30571@bogus>
-References: <20190702032120.16539-1-ran.bi@mediatek.com>
- <20190702032120.16539-2-ran.bi@mediatek.com>
+To: dongchun.zhu@mediatek.com
+Subject: Re: [RFC,V2,1/2] media: dt-bindings: media: i2c: Add bindings for
+ OV02A10
+Message-ID: <20190722234924.GA22604@bogus>
+References: <20190704084651.3105-1-dongchun.zhu@mediatek.com>
+ <20190704084651.3105-2-dongchun.zhu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190702032120.16539-2-ran.bi@mediatek.com>
+In-Reply-To: <20190704084651.3105-2-dongchun.zhu@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190722_155142_199964_38204B58 
-X-CRM114-Status: UNSURE (   8.67  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190722_164930_922207_083485ED 
+X-CRM114-Status: GOOD (  15.34  )
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.65 listed in list.dnswl.org]
+ no trust [209.85.166.67 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -87,33 +87,103 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Flora Fu <flora.fu@mediatek.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Ran Bi <ran.bi@mediatek.com>,
- Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>,
- Eddie Huang <eddie.huang@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- linux-rtc@vger.kernel.org
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, shengnan.wang@mediatek.com,
+ --to=drinkcat@chromium.org, tfiga@chromium.org, louis.kuo@mediatek.com,
+ sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
+ sakari.ailus@linux.intel.com, matthias.bgg@gmail.com, bingbu.cao@intel.com,
+ mchehab@kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2 Jul 2019 11:21:18 +0800, Ran Bi wrote:
-> Document the binding for MT2712 RTC implemented by rtc-mt2712.
+On Thu, Jul 04, 2019 at 04:46:50PM +0800, dongchun.zhu@mediatek.com wrote:
+> From: Dongchun Zhu <dongchun.zhu@mediatek.com>
 > 
-> Signed-off-by: Ran Bi <ran.bi@mediatek.com>
+> Add device tree binding documentation for the OV02A10 camera sensor.
+> 
+> Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
 > ---
->  .../devicetree/bindings/rtc/rtc-mt2712.txt         | 14 ++++++++++++++
->  1 file changed, 14 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/rtc/rtc-mt2712.txt
+>  .../devicetree/bindings/media/i2c/ov02a10.txt      | 43 ++++++++++++++++++++++
+>  MAINTAINERS                                        |  7 ++++
+>  2 files changed, 50 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/i2c/ov02a10.txt
 > 
+> diff --git a/Documentation/devicetree/bindings/media/i2c/ov02a10.txt b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> new file mode 100644
+> index 0000000..d40aa87
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> @@ -0,0 +1,43 @@
+> +* Omnivision OV02A10 MIPI CSI-2 sensor
+> +
+> +Required Properties:
+> +- compatible: shall be "ovti,ov02a10"
+> +- clocks: reference to the xvclk input clock
+> +- clock-names: shall be "xvclk"
+> +- avdd-supply: Analog voltage supply, 2.8 volts
+> +- dovdd-supply: Digital I/O voltage supply, 1.8 volts
+> +- dvdd-supply: Digital core voltage supply, 1.8 volts
+> +- reset-gpios: Low active reset gpio
+> +
+> +The device node shall contain one 'port' child node with an
+> +'endpoint' subnode for its digital output video port,
+> +in accordance with the video interface bindings defined in
+> +Documentation/devicetree/bindings/media/video-interfaces.txt.
+> +The endpoint optional property 'data-lanes' shall be "<1>".
+> +
+> +Example:
+> +&i2c4 {
+> +	ov02a10: camera-sensor@3d {
+> +		compatible = "ovti,ov02a10";
+> +		reg = <0x3d>;
+> +		pinctrl-names = "default";
+> +		pinctrl-0 = <&camera_pins_cam1_mclk_on>;
+> +
+> +		clocks = <&topckgen CLK_TOP_MUX_CAMTG2>,
+> +			<&topckgen CLK_TOP_UNIVP_192M_D8>;
+> +		clock-names = "xvclk", "freq_mux";
+> +
+> +		avdd-supply = <&mt6358_vcama1_reg>;
+> +		dvdd-supply = <&mt6358_vcn18_reg>;
+> +		dovdd-supply = <&mt6358_vcamio_reg>;
+> +		pwdn-gpios = <&pio 107 1>;
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Not documented. If you need this, use 'powerdown-gpios' instead.
+
+> +		reset-gpios = <&pio 109 1>;
+> +
+> +		port {
+> +		   ov02a10_core: endpoint {
+> +		       remote-endpoint = <&ov02a10_0>;
+> +			   data-lanes = <1>;
+> +			};
+> +		};
+> +	};
+> +};
+> diff --git a/MAINTAINERS b/MAINTAINERS
+> index 5cfbea4..62b81ff 100644
+> --- a/MAINTAINERS
+> +++ b/MAINTAINERS
+> @@ -11571,6 +11571,13 @@ T:	git git://linuxtv.org/media_tree.git
+>  S:	Maintained
+>  F:	drivers/media/i2c/ov13858.c
+>  
+> +OMNIVISION OV02A10 SENSOR DRIVER
+> +M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
+> +L:	linux-media@vger.kernel.org
+> +T:	git git://linuxtv.org/media_tree.git
+> +S:	Maintained
+> +F:	Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> +
+>  OMNIVISION OV2680 SENSOR DRIVER
+>  M:	Rui Miguel Silva <rmfrfs@gmail.com>
+>  L:	linux-media@vger.kernel.org
+> -- 
+> 2.9.2
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
