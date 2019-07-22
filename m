@@ -2,81 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9A2DA707A0
-	for <lists+linux-mediatek@lfdr.de>; Mon, 22 Jul 2019 19:40:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7883270965
+	for <lists+linux-mediatek@lfdr.de>; Mon, 22 Jul 2019 21:12:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fOpevtpDVOJTjF43cnKg6kCQoShW9i/6aGAwo/oo064=; b=Zzx7NQwrb4OsBi
-	+JIzQLJ+58iNc2PcM+RpNyCXwXaMJ8tQVxJpaAQI7QT8HA0DzqfJEF0jjcm9UwHiDJdDPOWK35R6F
-	vWl2gD3/cV2AaKV1ydekk7ODOZZoCntEaYAs+H2XsnjTnUVQrSU4vaODDPWQ8VLF0J8xChb3W69om
-	rLmysUdtEDfWE1Flns+ixf1Ry3NQgpTPa9jktAJ3sFDr+ha3ge0TW1l5l3tPVrm1fsoVHXdDugY8p
-	wL29NKhdCtmI2eDaBGjdvtXpBFApi4sF2oCqB4CA5uDl/UXHLWzU5c5ZFGLxlPh4eYgh/dAbcdKQg
-	QnTHd1jYqa4NEkHZBvtw==;
+	List-Owner; bh=ZSIyMY3r5+uHevqoQ//oDZXPbdmiYa6nm/NWhVPPRcA=; b=c12ESHCXk1a4Tb
+	YFLAfGe8YtNkYvGW3UcJrQTc2rG1WWtUGg3ch3uWzqD3qvVg0YO8YyJrq5l/hzMwfj1k5JnmOrihQ
+	483Zf4ANHEdtt+VWf0vKQFOsMwJINobJYJ01gb4kLppYKWlh2QWfBEwAX6Exs4P5DqLbZ1QH0AwCQ
+	isPbonSCO5RwTDDIVUOWs+4BQ895rnKgkEZ9YwizoV6Zwznj0YDN7xM2yaBdWWLo0WU7EPpwEDpvv
+	3l+iosh9B/VGoYPIYDn8SIL4RYm00rC339Fotpm3kphJdHiW9di3kXepINLFn17NENjpFgnVW49aY
+	oapzmJWL+lYlf+OGENxQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpcId-00014t-5d; Mon, 22 Jul 2019 17:40:35 +0000
-Received: from mail-io1-f67.google.com ([209.85.166.67])
+	id 1hpdjc-0005NX-Gr; Mon, 22 Jul 2019 19:12:32 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpcHl-0007wm-Fv; Mon, 22 Jul 2019 17:39:45 +0000
-Received: by mail-io1-f67.google.com with SMTP id m24so75823669ioo.2;
- Mon, 22 Jul 2019 10:39:38 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=yuyB8pILujpflF/Q/M9APeaT5IXpHOGkbQKNsVipriU=;
- b=kg+GhoZruKmlX1DnZXYtQLKGZWwI9gJq+JyBxa6tde9TP7omzhhODFRXfcG6l59CAr
- 4QassbFQOz5/v+rEz4VVhbAMJIpRJHHbdPMSOEriXTXXUj7rLtw7FGeU72s2w0SDCx1g
- GpMvKPMkSLIGJAbweREdP+uPltdBMnzSUYut8PI3k1anbvJVWoJURxw5yCdIr9teJ+pX
- uP+RrdSjKi6VcGA1k+sMivMOwWILqM4CvbCdT3tRCfDGeqXh0sYZdA+Z4rmCTTTJ9zY5
- AhD4Yz6dJkq/sC2iRcphm8SnoZzUc5igGCFqMD67vwAd76UYRyxTdeHjZQDDVqK8uKqd
- tBsQ==
-X-Gm-Message-State: APjAAAVbiqe4PsrZlw1imcbmRaDoPswwwyyYndIYVhlQziCcAp6ToNSU
- AZxQRWXtmrfCUHJb8JvlxQ==
-X-Google-Smtp-Source: APXvYqxNSkCw3W+oC2a+dAbLpos4fIcmpa8N1UVKkDaxst8+m0rwQM+coXmVvshQIkATlSLf6D7EeA==
-X-Received: by 2002:a02:b713:: with SMTP id g19mr74167358jam.77.1563817177425; 
- Mon, 22 Jul 2019 10:39:37 -0700 (PDT)
-Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id i3sm37295539ion.9.2019.07.22.10.39.36
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 22 Jul 2019 10:39:36 -0700 (PDT)
-Date: Mon, 22 Jul 2019 11:39:36 -0600
-From: Rob Herring <robh@kernel.org>
+ id 1hpdjX-0005Kb-Bh
+ for linux-mediatek@lists.infradead.org; Mon, 22 Jul 2019 19:12:28 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1hpdjA-0007At-D8; Mon, 22 Jul 2019 21:12:04 +0200
+Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1hpdj1-0005Fy-Qr; Mon, 22 Jul 2019 21:11:55 +0200
+Date: Mon, 22 Jul 2019 21:11:55 +0200
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
 To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [v3 3/4] dt-bindings: display: panel: add auo kd101n80-45na
- panel bindings
-Message-ID: <20190722173936.GA26950@bogus>
+Subject: Re: [v3 1/4] dt-bindngs: display: panel: Add BOE tv101wum-n16 panel
+ bindings
+Message-ID: <20190722191155.jc2z5bvayjwpe4bz@pengutronix.de>
 References: <20190626025400.109567-1-jitao.shi@mediatek.com>
- <20190626025400.109567-4-jitao.shi@mediatek.com>
+ <20190626025400.109567-2-jitao.shi@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190626025400.109567-4-jitao.shi@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <20190626025400.109567-2-jitao.shi@mediatek.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190722_103942_378442_E038C304 
-X-CRM114-Status: UNSURE (   8.34  )
+X-CRM114-CacheID: sfid-20190722_121227_407603_3A83D3B7 
+X-CRM114-Status: UNSURE (   5.68  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.67 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,36 +73,32 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  David Airlie <airlied@linux.ie>, stonea168@163.com,
  dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Sam Ravnborg <sam@ravnborg.org>, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
  Russell King <rmk+kernel@arm.linux.org.uk>,
  Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Jitao Shi <jitao.shi@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
- Pawel Moll <pawel.moll@arm.com>, Ian Campbell <ijc+devicetree@hellion.org.uk>,
- Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
+ Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
  Andy Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
  eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
  Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
  linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
  Sean Paul <seanpaul@chromium.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 26 Jun 2019 10:53:59 +0800, Jitao Shi wrote:
-> Add documentation for auo kd101n80-45na panel.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> Reviewed-by: Sam Ravnborg <sam@ravnborg.org>
-> ---
->  .../display/panel/auo,kd101n80-45na.txt       | 34 +++++++++++++++++++
->  1 file changed, 34 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/display/panel/auo,kd101n80-45na.txt
-> 
+$Subject ~=3D s/bindngs/bindings/
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Best regards
+Uwe
+
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | http://www.pengutronix.de/  |
 
 _______________________________________________
 Linux-mediatek mailing list
