@@ -2,84 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 34DFA6F57D
-	for <lists+linux-mediatek@lfdr.de>; Sun, 21 Jul 2019 22:16:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9BE916F8E5
+	for <lists+linux-mediatek@lfdr.de>; Mon, 22 Jul 2019 07:31:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uj20jc7Qt0wXccqObJEPRX9557+fT0ZbwDSC3Tm9kTc=; b=EHdspWsfxSSvLl
-	0DXhI+Hlh7Ky76nyb6jBxyrniUq5PCtww9SVq8B6cMKR1aGgWzZFjY09MbPEbp86I2bD8yfut3Gmg
-	8Ay/xUh3azrtUdhe49U1QVymxbUBqZ66qvzvwrCTQnDQGOHRgcwAEDNwwnG28uT5b1qdS39v5mFlB
-	2e8aYAocGmRmSVxic792g+CmzQy4AcRFRoV4I7Go/8ZLGNBkQdtnxJbHPExCqw7PA6YbWSDHDYl5r
-	QQ8M3lh2Gh+lIAY/J4tHwc1h8E/RhAyZ1CEU3d3IeYQsQ3ZjLCfdKrqS5Oh/tVDsDO2E2DYWHmzYi
-	dZaaJXZF9FubFgvkoA3w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=3qi5Us7TR6VWGPK1avemynXx42RhzBDVkZqnyY/uT0w=; b=lahlZ1y2XmkF2p
+	BsFaWbZUGw4c7QD5KmwNOyZ73sjkqaPtrHc11NFGLwkXc1dWGpSChl/di5SdQo6JG097fLH+auhar
+	Tc58FEW/xOK9jxZJPxVdHlFymqbTIm9PiUbBQbyVHu9/Uky4gxIPxofQC7Zv3IVuUPd0qgL+xGh4o
+	eNZ4r9I+4VejY8invawpGiKfQqzXNAcmWxNu90rjfnNQqV9W9mUGTPxkARCce3dhJyUKBFdomnbft
+	D5MZYdureP5QGdvBNvSx1hkOMuAG/+rABnlXGkVlT1PMlFJpnvLq55G8hv00TDTWDa89W7joo737v
+	xj/iS/ZqLOpAj7FhYSrA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpIFw-0005U2-3L; Sun, 21 Jul 2019 20:16:28 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1hpQvG-0004gl-FW; Mon, 22 Jul 2019 05:31:42 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpIFf-0005JH-9I; Sun, 21 Jul 2019 20:16:13 +0000
-Received: by mail-wm1-x341.google.com with SMTP id s3so33176235wms.2;
- Sun, 21 Jul 2019 13:16:07 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=5mQURU8XMwBF9h8OyYB1FlQtcwcpgbnQ5NpLm9894DM=;
- b=ajmWzmJ2BZN67FkDAqc/2VVH+HZwyx7YqJkrdYmLSAR+31FdDgla9oyBcD5z0NdIaf
- oXJ7ojT34P5AXnhnJqqtZq/Rth8ClcZyN+fcUzozo3C4Wnz2+mDDdOfw5ls4licNsrFm
- anH1ywRXm/kz3Zz5WAfEgL388SZtjqvIJzo+y3Q7BzTzA+OLVQFXZgL31OseO3hnY3cU
- f8qJWMFKVdH057pZkcFxYwzGvTFiIJNWKcRaVU/Hn+z1eQcTXltLSyRZW6Yi3/j1ReJn
- z16QxpItA85gY9BxRpKp5RgNHG9XpJTDC4rV/ejUHNezCm7S0UuHZW5awX9wrifhaCGy
- TbBA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=5mQURU8XMwBF9h8OyYB1FlQtcwcpgbnQ5NpLm9894DM=;
- b=pqzd5BQBdLglw4dxey6/OinUSSRV2Yuux6JcPBcgIy9kjt98r2l7jBPXgV9r+c97iS
- /hPZOY/Pwpkb5dmSLdnZm8N9nqrLJhXo780hujPM2hNsu+33U6BhUv7eSRFTtapdJBDW
- zZDXZRGOnq6P5f3QMy9wtCKaqTI89lkOBBssVBsSGlZJsfr7p5KaY3/onzXVSzM5MSwR
- jjrzKtg28Kpap5q4/U4Lgw8ox9l5NIO+rle4T++4XRNbDSKKQq2AfhJrTQfrq7ZcO542
- TEA0sFzmNRUiebzICjECO4O3UP4NqkAnP6R1VoaMw+r39XMbsvLFnEEmznh81mD9dfgT
- uQ3A==
-X-Gm-Message-State: APjAAAVCFzG5jJ9esrNyYwct/icXLb1qBoctNgC9p7T7INZHUEGOHKMf
- KTnBUZU51ZqDa0jYuaVRfM1nKMALnx2x65mK3go=
-X-Google-Smtp-Source: APXvYqzU1ipDd7z11gYlgbmMIrcaaVPCBINgAjXEUbNhWnpzSlGLMdHtlVTzwYZLvYGsn7Wr+rXtxlWkSm9DOzIIv5k=
-X-Received: by 2002:a1c:1f41:: with SMTP id f62mr61089998wmf.176.1563740166737; 
- Sun, 21 Jul 2019 13:16:06 -0700 (PDT)
+ id 1hpQv9-0004cI-O5
+ for linux-mediatek@lists.infradead.org; Mon, 22 Jul 2019 05:31:37 +0000
+X-UUID: b2922fca31be445fa6235cc4eda3d329-20190721
+X-UUID: b2922fca31be445fa6235cc4eda3d329-20190721
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1133795606; Sun, 21 Jul 2019 21:31:26 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 21 Jul 2019 22:31:25 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 22 Jul 2019 13:31:16 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 22 Jul 2019 13:31:16 +0800
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
+ <lorenzo.bianconi@redhat.com>
+Subject: [PATCH 0/5] fix many checkpatch.pl warnings
+Date: Mon, 22 Jul 2019 13:31:10 +0800
+Message-ID: <cover.1563772403.git.ryder.lee@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-References: <1563451437-15725-1-git-send-email-stanley.chu@mediatek.com>
-In-Reply-To: <1563451437-15725-1-git-send-email-stanley.chu@mediatek.com>
-From: Richard Weinberger <richard.weinberger@gmail.com>
-Date: Sun, 21 Jul 2019 22:15:55 +0200
-Message-ID: <CAFLxGvwLTTN+S=Bd0gZWKJbjvanCe_HV_dfmoZzyb1hzWkkGpQ@mail.gmail.com>
-Subject: Re: [PATCH v1] ubifs: support page statistics in vmstat
-To: Stanley Chu <stanley.chu@mediatek.com>
+X-TM-SNTS-SMTP: D88AAD105EC9225DD30B2F9F5271DCFFB9D4DF55DF588392D29FB6F86391F2712000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190721_131611_350994_CADF4AF6 
-X-CRM114-Status: UNSURE (   9.46  )
+X-CRM114-CacheID: sfid-20190721_223136_143520_13ADE2CD 
+X-CRM114-Status: UNSURE (   7.95  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (richard.weinberger[at]gmail.com)
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,30 +72,77 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linger.lee@mediatek.com, Artem Bityutskiy <dedekind1@gmail.com>,
- Richard Weinberger <richard@nod.at>, kuohong.wang@mediatek.com,
- Adrian Hunter <adrian.hunter@intel.com>, linux-mtd@lists.infradead.org,
- chienwei.chang@mediatek.com, matthias.bgg@gmail.com,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
+ linux-wireless@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
+ Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Roy Luo <royluo@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jul 18, 2019 at 2:04 PM Stanley Chu <stanley.chu@mediatek.com> wrote:
->
-> Currently PGPGIN and PGPGOUT statistics in vmstat is only
-> hooked in submit_bio() for block device I/O path.
->
-> This patch adds this feature for ubifs as well.
+This gathers many subsets to fix checkpatch.pl warnings.
+I still keep some warnings there due to readability.
+(The most of them are - networking block comments or 80 characters limit)
 
-While I think updating these counter for raw flash makes sense,
-I wonder whether UBIFS is the right layer.
-Why not directly in MTD or at least UBI?
+Ryder Lee (5):
+  mt76: Add paragraphs to describe the config symbols fully
+  mt76: mt7603: fix some checkpatch warnings
+  mt76: mt7615: fix some checkpatch warnings
+  mt76: mt76x02: fix some checkpatch warnings
+  mt76: fix some checkpatch warnings
+
+ drivers/net/wireless/mediatek/mt76/agg-rx.c   | 21 +++++----
+ drivers/net/wireless/mediatek/mt76/dma.c      |  2 +-
+ drivers/net/wireless/mediatek/mt76/mac80211.c | 30 ++++++------
+ drivers/net/wireless/mediatek/mt76/mt76.h     | 46 +++++++++----------
+ .../net/wireless/mediatek/mt76/mt7603/Kconfig |  6 ++-
+ .../wireless/mediatek/mt76/mt7603/beacon.c    |  2 +-
+ .../net/wireless/mediatek/mt76/mt7603/core.c  |  2 +-
+ .../wireless/mediatek/mt76/mt7603/debugfs.c   |  2 +-
+ .../net/wireless/mediatek/mt76/mt7603/dma.c   |  7 +--
+ .../wireless/mediatek/mt76/mt7603/eeprom.c    |  2 +-
+ .../net/wireless/mediatek/mt76/mt7603/init.c  |  3 +-
+ .../net/wireless/mediatek/mt76/mt7603/mac.c   |  6 +--
+ .../net/wireless/mediatek/mt76/mt7603/main.c  |  7 +--
+ .../net/wireless/mediatek/mt76/mt7603/mcu.c   |  2 +-
+ .../net/wireless/mediatek/mt76/mt7603/pci.c   |  2 +-
+ .../net/wireless/mediatek/mt76/mt7603/soc.c   |  2 +-
+ .../net/wireless/mediatek/mt76/mt7615/Kconfig |  7 ++-
+ .../wireless/mediatek/mt76/mt7615/debugfs.c   |  2 +-
+ .../net/wireless/mediatek/mt76/mt7615/mac.c   |  5 +-
+ .../net/wireless/mediatek/mt76/mt7615/mcu.c   |  2 -
+ .../net/wireless/mediatek/mt76/mt76x0/Kconfig | 12 ++++-
+ .../wireless/mediatek/mt76/mt76x0/mt76x0.h    |  2 +-
+ .../net/wireless/mediatek/mt76/mt76x0/phy.c   | 23 ++++++----
+ .../net/wireless/mediatek/mt76/mt76x0/phy.h   | 10 ++--
+ .../net/wireless/mediatek/mt76/mt76x0/usb.c   |  6 +--
+ drivers/net/wireless/mediatek/mt76/mt76x02.h  | 25 +++++-----
+ .../wireless/mediatek/mt76/mt76x02_beacon.c   |  4 +-
+ .../net/wireless/mediatek/mt76/mt76x02_mac.c  | 16 +++----
+ .../net/wireless/mediatek/mt76/mt76x02_mcu.c  | 13 +++---
+ .../net/wireless/mediatek/mt76/mt76x02_mmio.c | 11 +++--
+ .../net/wireless/mediatek/mt76/mt76x02_phy.c  |  3 +-
+ .../net/wireless/mediatek/mt76/mt76x02_regs.h | 28 +++++------
+ .../wireless/mediatek/mt76/mt76x02_trace.h    |  3 +-
+ .../wireless/mediatek/mt76/mt76x02_usb_core.c |  2 +-
+ .../net/wireless/mediatek/mt76/mt76x02_util.c | 20 ++++----
+ .../net/wireless/mediatek/mt76/mt76x2/Kconfig | 14 ++++--
+ .../wireless/mediatek/mt76/mt76x2/eeprom.c    | 10 ++--
+ .../net/wireless/mediatek/mt76/mt76x2/mcu.h   |  3 +-
+ .../wireless/mediatek/mt76/mt76x2/pci_init.c  |  1 -
+ .../wireless/mediatek/mt76/mt76x2/pci_mcu.c   |  4 +-
+ .../net/wireless/mediatek/mt76/mt76x2/phy.c   |  3 +-
+ drivers/net/wireless/mediatek/mt76/trace.h    |  9 ++--
+ drivers/net/wireless/mediatek/mt76/tx.c       | 18 ++++----
+ drivers/net/wireless/mediatek/mt76/usb.c      | 31 +++++++------
+ .../net/wireless/mediatek/mt76/usb_trace.h    | 11 +++--
+ drivers/net/wireless/mediatek/mt76/util.h     |  4 +-
+ 46 files changed, 242 insertions(+), 202 deletions(-)
 
 -- 
-Thanks,
-//richard
+2.18.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
