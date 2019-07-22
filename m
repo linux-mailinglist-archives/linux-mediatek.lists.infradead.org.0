@@ -2,127 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB1186F95B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 22 Jul 2019 08:11:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 58B1A6F9C8
+	for <lists+linux-mediatek@lfdr.de>; Mon, 22 Jul 2019 08:56:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:Date
-	:Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	List-Owner; bh=dU0qe3XoOMyrIGsGMzzzHYE0JBeZLhEorxPP33V3W3Q=; b=BexljMaWy0AaWw
-	pn63Z9/NZk24pv7cMUVOGcBEHxrSupzmm5zEsx3WtcWKYNZnBddw8/xEg0//qCbBiS84EprL8pgMR
-	xg4YlQ1hgXai8ueg3wzD8LmOhCTyOb00iNgq2q3iZ00EU1sI9PXtcb+e/dEvKkhMqU4A8FmZh9QlQ
-	wZOdt9a+DrZM1WKFNLwrRQwQ7ZfsnIbjnhQ4cpYw0EzMbech1BrXBty9TK+10SU/SmRfQrHTez18O
-	hxNNh2sSyHscQIJPIuZlNuj+60qyzmAkzaMBvYCbnBK93iua1X9SwmWlYjbJWdpw2hBjljiCWFOTY
-	33+XEqUwrLniIjkgHYBQ==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=L+1hlBo4FrnF8pHjPcXySqOMs/XT+YFynyI3NL874pA=; b=QU7RuEdzCppza0
+	ARcgjjfFjDr9DNOegkv9A4E9bfze5rKxRSBAWC6N9C8n2q4LCsADJTF5el7Hg2o/br2/6V/RJQpI2
+	dTOO+ZXFjO020nDJ9NB3jOtc/e69jtv7dKSFTSn2/DF4U/7hTQ9l5y3mmNARXSHnaN5G4ts4nkzzK
+	RfQxJgUAv+T22z2ZV9LV0U0xVCYKq+ByJH7+9aKBjsLhLq3GyzRfnjWhasKFB6oPaWhZwtqhguC5u
+	pjqy81UKErX2gYLeGcIuuuRJChrBqjjxbKbDRKEiWSjHO6Ee2uKepfpJ2yVN7hH1syL7sQTmyFafq
+	ccZc3MVkvjKTe5m1qoLQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpRXK-0006mP-83; Mon, 22 Jul 2019 06:11:02 +0000
-Received: from esa1.hgst.iphmx.com ([68.232.141.245])
+	id 1hpSFI-0006XS-MW; Mon, 22 Jul 2019 06:56:28 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpRXE-0006lO-IN; Mon, 22 Jul 2019 06:10:58 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
- t=1563775856; x=1595311856;
- h=from:to:cc:subject:date:message-id:references:
- content-transfer-encoding:mime-version;
- bh=1z0fPG4ODXUuRK5B2usOH1yIwOkSIaN900JZfbTFX8M=;
- b=dYbrNlmbS5lI1/tsXSOyHJyCcVLg/MfuuBI9sKsS9lpsWW3tEtvBsgTK
- J+nbrrU3wI+YEBU82rjiHb3mGMr0KeaTSRDvZ8UhJDbcdrLQZFDEqUZkp
- Rt5cpDjOAkVP+SJbvMu+xM56D99iaqHfctMXW48BQLEfIbplECc5Sin+0
- Lnn8S0lLiSxxFFvMZzjLpb/pFU+dPl7G2+w12tocdV9wgGd44Q9xjpBcD
- dd6+KYlRHnTznwUvpRtwwaA2KFWhck/zjaADNUzNujN+3bQrg6e1RO8ai
- LLk7DyQySQnZYwpEfLGj4Kg1KJxZDJ3hXaUjfTwZkfQqRhV132T+5Z2k3 A==;
-IronPort-SDR: TMsJvBfOFpSpZt+SRvrM/LIgqY8DOU1JclVoxx+It/mNjOj4iq4rBkuiwgAYAWw5R+f5ZJmBJR
- 9nfTK+9o/a7Gfm8FvBkoVmZDPPtM6RSmIgt7B/YLHY4mx5+wIJGbl0UlOPD2nnfdnsw2l8BHXT
- ccJ48Wg48dnimvosiDMrMxgLPq7o0hDoWXjN1jiPdeRTasTHQGGENzF27JGIhjWOl/ZOce2CHn
- pV86FrYp6824LuZrmrxKzVnnWNUk2fOLb6R+nvhPXF14VkE3UFRGU01iL/0QM4V74wi4MLrebC
- gww=
-X-IronPort-AV: E=Sophos;i="5.64,294,1559491200"; d="scan'208";a="220092472"
-Received: from mail-by2nam05lp2059.outbound.protection.outlook.com (HELO
- NAM05-BY2-obe.outbound.protection.outlook.com) ([104.47.50.59])
- by ob1.hgst.iphmx.com with ESMTP; 22 Jul 2019 14:10:26 +0800
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=jWOm+ro7sYhFa8Bi2crXa/4kfvtclXGkmcWs9Zv6oa95uEzEsK0+IbvqcpMzWmXOqlIqs8ECIKhzE4yNQwCRQKcMn5BPjhY/iXkwd19QdvkwGA6zVZVVoEsbRp3PcRNNnuvml+snrZ6kZf5u7nstNcpu+XUE0U+a50a9H2err30tLLcn+5A/4iLS1AI/S/oRAEpFQyrdQzRtxxMvcVSYbeqDkN0jsKdCvCeIhxiIh+cIgzPR6rZ7QLIE8L9KwzIuJqEaQk03h7wsksAs8tPU8s0TAe3+dW8UDfcdiYun2AlW5EiTlhT1CVLzrNyCFfpD19qM4VepaDBmA7pOZM6VWA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=1z0fPG4ODXUuRK5B2usOH1yIwOkSIaN900JZfbTFX8M=;
- b=TxyFnGLDXzTYjWWfrUaT3ci7jG+HGzobMbgO3gzGXVpZnCGz6pSP7HIWr9J3MTyqyKD74HiyLiq1bsy/tV5kK1hovABnJWxJSFYXyyPP5e+7KTT1XFPTFMsPoW85p96rIs9n8rPs1fLtkJkK7XAZRbyYBzJ/JMt1e2liR6Gl+eD2bosbLNOYTAo18MEeIsBvuu7eFBxANkJ51kaxo+32l/lJ3FSXDO78US1HOaf/r6XzUDWlIZI2SWo1gW+HbKP3GbmulflyANgAYCUFjUKzRzt+TY7Q5/X8FbWhqSf4mkKBqHw8vHgBDUcrtT8/gYlhaLyAtP74qKkM+V8gHTsUlQ==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
- smtp.mailfrom=wdc.com;dmarc=pass action=none header.from=wdc.com;dkim=pass
- header.d=wdc.com;arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=1z0fPG4ODXUuRK5B2usOH1yIwOkSIaN900JZfbTFX8M=;
- b=s81HSn6NWlLlQ+eed9EckkJnhkcJJva1y/yCAIyexF5qQ+whNByqn2+PptToZOM4/lTe+6xM53qTVgDttSK5eLAIe1Ib2v4QC29N6tODFaJLNo/5pqOLR9uYKoZs92vSZ3fyXOkBV9PSqW36PMMXC+YHKaQk+YornMr9t8A28AM=
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com (52.135.114.82) by
- SN6PR04MB5200.namprd04.prod.outlook.com (20.178.6.144) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2094.16; Mon, 22 Jul 2019 06:10:25 +0000
-Received: from SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::a102:1701:9c05:96b3]) by SN6PR04MB4925.namprd04.prod.outlook.com
- ([fe80::a102:1701:9c05:96b3%5]) with mapi id 15.20.2094.011; Mon, 22 Jul 2019
- 06:10:25 +0000
-From: Avri Altman <Avri.Altman@wdc.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
- <alim.akhtar@samsung.com>, "pedrom.sousa@synopsys.com"
- <pedrom.sousa@synopsys.com>
-Subject: RE: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-Thread-Topic: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-Thread-Index: AQHVOGx9NdHB1Jz3wEWNwY1jARxa+abVESuAgAADy1CAAR6tgA==
-Date: Mon, 22 Jul 2019 06:10:25 +0000
-Message-ID: <SN6PR04MB49256F66F259185F3876CCABFCC40@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1562906656-27154-1-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB4925208835D4760249E82DB7FCC50@SN6PR04MB4925.namprd04.prod.outlook.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=Avri.Altman@wdc.com; 
-x-originating-ip: [212.25.79.133]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 4230b482-7ea0-4486-2546-08d70e6b49db
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
- SRVR:SN6PR04MB5200; 
-x-ms-traffictypediagnostic: SN6PR04MB5200:
-x-microsoft-antispam-prvs: <SN6PR04MB5200518FA375111CD6C9B3D4FCC40@SN6PR04MB5200.namprd04.prod.outlook.com>
-wdcipoutbound: EOP-TRUE
-x-ms-oob-tlc-oobclassifiers: OLM:9508;
-x-forefront-prvs: 01068D0A20
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(4636009)(376002)(366004)(39860400002)(346002)(396003)(136003)(189003)(199004)(66066001)(64756008)(66946007)(66446008)(66476007)(66556008)(81166006)(81156014)(2201001)(76116006)(8936002)(25786009)(256004)(4326008)(7416002)(86362001)(478600001)(99286004)(14454004)(110136005)(54906003)(316002)(486006)(76176011)(476003)(26005)(5660300002)(6246003)(305945005)(7696005)(2906002)(6436002)(74316002)(229853002)(53936002)(6506007)(102836004)(52536014)(33656002)(186003)(71190400001)(71200400001)(2501003)(8676002)(9686003)(3846002)(55016002)(7736002)(6116002)(446003)(68736007);
- DIR:OUT; SFP:1102; SCL:1; SRVR:SN6PR04MB5200;
- H:SN6PR04MB4925.namprd04.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; MX:1; A:1; 
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: UN4gjd8vM8Y28stlW6bY/iJhHEO1YnhfYZbcaIJ8ojZmIFtM6II9CQERWsndLVBpMCww4ABXCEGYiga06eWOte2A1SoEXdKyvBdEydflCOyXu+S1vPDEyPEKQBRqucdPfrinBQmlHdDgN206+hNpXJSr1IB/km/TDhvI9Fo8z+GpNG65oixgkz+qEhSq3PS1W66b5+k8qkE0zhkT7ic35VETBX5/41aq9cz1ezf71OPiN4FiZQhGkGCGuqvLKwZklSvi+PJc9iqXXO4qqzUfK8BfdHliIztX/KaZWu3BQYQ7QIh70spqEDXif6YufyRmO3DkDhxQfPT/pYw7QvOpr9278IxfIVuTSnI3rx4EcZ4/TFimyHbHL2hRkl7UWFEutzs/h3+NCoGVGVQj+Y6bvXQ5Q8NFl990x+LsI875SYM=
+ id 1hpSF3-0006Ru-Nf
+ for linux-mediatek@lists.infradead.org; Mon, 22 Jul 2019 06:56:15 +0000
+Received: by mail-wr1-x442.google.com with SMTP id n9so13049019wrr.4
+ for <linux-mediatek@lists.infradead.org>; Sun, 21 Jul 2019 23:56:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=1scnAc3sjeh3WnhlFA65T1sb9Wb1g8NqJ7QEYKWinXI=;
+ b=dcq8pFqd4whWmN0hnHjTTI8gBlxfAFygZQYCUnkKG6l5Dnep7c1/qbOjMP1b8376Rg
+ xHUZOwwOLr3SuWX+LHjx1Gunrx3InG2MC335OZ9KQON3Q/+xtzeZI5b2V7BkvV19N4s6
+ D9w1mNn8rrFiGVPbDFWx2F8bROD6olINKM7DA=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=1scnAc3sjeh3WnhlFA65T1sb9Wb1g8NqJ7QEYKWinXI=;
+ b=Naw9GXNGEdSuEPy+pON593d7UF2zOEiCl1LWDhqfkD+Q3ZAniwgY0TKa84qqQiubB4
+ LLtNttT+b5krN8aUIcIJFhfugp8T6hpqm8CwdWUY8Al1/yjWXeiUKlK0iLOSZWfFTR0o
+ BN4tG0Fxwaqc4obee3FqZRfmmjxdxR8gKx+TGs7VDCYZ3OJHGVKpeBMT6mgO1NeaSagZ
+ l9AzQtP5j8wc0e4IFFR4ZIm3TUBUQK2e/v/f5M4roo1AKP0Zyg1z+Vu/kAJots9VVSA3
+ xyq6cnrSGA1gQvoHOsxvItycQe8uuxJILl+ec4c7j57sI3s8Fkdl+iKjoqJ/fUOsmvhe
+ 3cRA==
+X-Gm-Message-State: APjAAAXxypPptLbEiPnUlCXDRE3R5LF/Wy7vXV/BRlXeOIoMU8LR8Q4M
+ SQU1/GBVUoGgBwUbniOVYe6dtosRYQgTZbweV+yLRQ==
+X-Google-Smtp-Source: APXvYqwCsFlLcZIboFmBzsjOKnB2+3vm3wBmHSjjERq1FdF1fyAUmXB8XhbTC41jULay24oeapefuqgs+ZsLgVKZXYk=
+X-Received: by 2002:a5d:4284:: with SMTP id k4mr70423576wrq.194.1563778571585; 
+ Sun, 21 Jul 2019 23:56:11 -0700 (PDT)
 MIME-Version: 1.0
-X-OriginatorOrg: wdc.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 4230b482-7ea0-4486-2546-08d70e6b49db
-X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Jul 2019 06:10:25.7923 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: Avri.Altman@wdc.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB5200
+References: <20190708100641.2702-1-dongchun.zhu@mediatek.com>
+In-Reply-To: <20190708100641.2702-1-dongchun.zhu@mediatek.com>
+From: Tomasz Figa <tfiga@chromium.org>
+Date: Mon, 22 Jul 2019 15:56:00 +0900
+Message-ID: <CAHD77HkDrGgiTceE2jLX8Tqc8GH9R1UyRhiU83=HRvZKjoDYjw@mail.gmail.com>
+Subject: Re: [PATCH 0/2] media: add support for DW9768 VCM driver
+To: Linux Media Mailing List <linux-media@vger.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190721_231056_729566_B9F7C12D 
-X-CRM114-Status: GOOD (  13.95  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190721_235613_818333_75DCF0ED 
+X-CRM114-Status: GOOD (  14.78  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [68.232.141.245 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -132,6 +75,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -143,42 +87,68 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ srv_heupstream <srv_heupstream@mediatek.com>, shengnan.wang@mediatek.com,
+ Louis Kuo <louis.kuo@mediatek.com>, Sj Huang <sj.huang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ dongchun.zhu@mediatek.com, Sakari Ailus <sakari.ailus@linux.intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Cao Bing Bu <bingbu.cao@intel.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-PiANCj4gPg0KPiA+IEhpLA0KPiA+DQo+ID4gPg0KPiA+ID4gQ3VycmVudGx5IGJpdHMgaW4gaGJh
-LT5vdXRzdGFuZGluZ190YXNrcyBhcmUgY2xlYXJlZCBvbmx5IGFmdGVyIHRoZWlyDQo+ID4gPiBj
-b3JyZXNwb25kaW5nIHRhc2sgbWFuYWdlbWVudCBjb21tYW5kcyBhcmUgc3VjY2Vzc2Z1bGx5IGRv
-bmUgYnkNCj4gPiA+IF9fdWZzaGNkX2lzc3VlX3RtX2NtZCgpLg0KPiA+ID4NCj4gPiA+IElmIHRp
-bWVvdXQgaGFwcGVucyBpbiBhIHRhc2sgbWFuYWdlbWVudCBjb21tYW5kLCBpdHMgY29ycmVzcG9u
-ZGluZw0KPiA+ID4gYml0IGluIGhiYS0+b3V0c3RhbmRpbmdfdGFza3Mgd2lsbCBub3QgYmUgY2xl
-YXJlZCB1bnRpbCBuZXh0IHRhc2sNCj4gPiA+IG1hbmFnZW1lbnQgY29tbWFuZCB3aXRoIHRoZSBz
-YW1lIHRhZyB1c2VkIHN1Y2Nlc3NmdWxseSBmaW5pc2hlcy7igKcNCj4gPiB1ZnNoY2RfY2xlYXJf
-dG1fY21kIGlzIGFsc28gY2FsbGVkIGFzIHBhcnQgb2YgdWZzaGNkX2Vycl9oYW5kbGVyLg0KPiA+
-IERvZXMgdGhpcyBjaGFuZ2Ugc29tZXRoaW5nIGluIHlvdXIgYXNzdW1wdGlvbnM/DQo+IEFuZCBC
-VFcgdGhlcmUgaXMgYSBzcGVjaWZpYyBfX2NsZWFyX2JpdCBpbiBfX3Vmc2hjZF9pc3N1ZV90bV9j
-bWQoKSBpbiBjYXNlDQo+IG9mIGEgVE8uDQoNCkdhdmUgaXQgYW5vdGhlciBsb29rIC0gDQpJZiBp
-bmRlZWQgdGhpcyBiaXQgaXNuJ3QgY2xlYXJlZCBhcyBwYXJ0IG9mIHRoZSBlcnJvciBmbG93IHRo
-YXQgdGhlIHRpbWVvdXQgdHJpZ2dlcnMsDQpJIHRoaW5rIHlvdSBzaG91bGQgcmVsYXRlIHRvIHVm
-c2hjZF9jbGVhcl90bV9jbWQgc3BlY2lmaWNhbGx5IGluIHlvdXIgY29tbWl0IGxvZyAtIA0KQmVj
-YXVzZSB0aGlzIGlzIHRoZSBvYnZpb3VzIHBsYWNlIHdoZXJlIHRoZSBiaXQgY2xlYW51cCBzaG91
-bGQgdGFrZSBwbGFjZS4NCg0KQWxzbyB0aGUgZml4IHNob3VsZCBiZSBtdWNoIG1vcmUgaW50dWl0
-aXZlIElNTyAtIA0KVG9kYXkgd2UgZG8gX19jbGVhcl9iaXQoKSBvbiBzdWNjZXNzLCB1ZnNoY2Rf
-Y2xlYXJfdG1fY21kKCkgb24gZXJyb3IsDQpBbmQgYWxzbyB1ZnNoY2RfcHV0X3RtX3Nsb3QoKSBl
-aXRoZXIgd2F5Pw0KDQpNYXliZSB5b3UgY2FuIGNob29zZSBhIHNpbmdsZSBwbGFjZSB0byBjbGVh
-ciBpdCwgd2l0aG91dCBhbnkgYWRkaXRpb25hbCBjb2RlPw0KDQpUaGFua3MsDQpBdnJpDQpfX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRl
-ayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8v
-bGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+On Mon, Jul 8, 2019 at 7:12 PM <dongchun.zhu@mediatek.com> wrote:
+>
+> From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+>
+> Hello,
+>
+> Add a v4l2 sub-device driver for Dongwoon's DW9768 lens voice coil.
+> This is a voice coil module using the i2c bus to control the focus position.
+>
+> The DW9768 can control the position with 10 bits value and
+> consists of two 8 bit registers show as below:
+> register 0x04(DW9768_REG_POSITION):
+>     +---+---+---+---+---+---+---+---+
+>     |D07|D06|D05|D04|D03|D02|D01|D00|
+>     +---+---+---+---+---+---+---+---+
+> register 0x03:
+>     +---+---+---+---+---+---+---+---+
+>     |---|---|---|---|---|---|D09|D08|
+>     +---+---+---+---+---+---+---+---+
+>
+> This driver support :
+>  - set DW9768 to standby mode once suspend and turn it back to active if resume
+>  - set the position via V4L2_CID_FOCUS_ABSOLUTE ctrl
+>
+> Dongchun Zhu (2):
+>   media: i2c: dw9768: Add DT support and MAINTAINERS entry
+>   media: i2c: dw9768: Add DW9768 VCM driver
+>
+>  .../bindings/media/i2c/dongwoon,dw9768.txt         |   9 +
+>  MAINTAINERS                                        |   8 +
+>  drivers/media/i2c/Kconfig                          |  10 +
+>  drivers/media/i2c/Makefile                         |   1 +
+>  drivers/media/i2c/dw9768.c                         | 458 +++++++++++++++++++++
+>  5 files changed, 486 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.txt
+>  create mode 100644 drivers/media/i2c/dw9768.c
+>
+> --
+> 2.9.2
+>
+
+Gentle ping. Some help with review would be appreciated!
+
+Best regards,
+Tomasz
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
