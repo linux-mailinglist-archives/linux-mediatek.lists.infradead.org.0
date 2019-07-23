@@ -2,99 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EE8A8712B2
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 09:21:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8FA5871322
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 09:42:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8v+Lh8ZQ4k64PI0pgTI6GLJvbfgdnqBsyqxZ5Pe/Js4=; b=djRpOwUel0lDRK
-	8FeogS1x+IH7kxZ7WIsFvS4qiouV5DO/LC5WFmbDb0IAWrt6YZ6/P1vGDjvZzqLkeshEUHT6YvMo5
-	4okfIqSFS+l20tqZv4WDxq0UFrhxobBjZIpSMUHUqGRqCBfaod2k+ur07W7aDbFaXSTqZs3VhSI2K
-	H7pN3Y0ATilG4JOWyefkfaCSdFuEeUwgzi16ld7QdOvWseWc178dDgTXBbUw1zTv5KoaS7QL7atRf
-	e3fvQZeVlgaY2rWlJmFJyvZFQe4vcAoNfM8JFBLBIZQmRI2+WGJbYi1tjeZJic4EQM/df1m+t9QTc
-	xVLSk2lTdOegUUytZs8A==;
+	List-Owner; bh=OMd4XxyOv2fDkvp3hlxCG70DF+4K+pLK5/7aKpBAgy8=; b=heD29Xywl74EvO
+	U+JqIML4ygWs31QLBogi1lkgcnr+iesRALhJYqUAfDzQ2mwqkLwZSdCjKt2q5SmBczCI3MPJpWK80
+	i6Axmi42wwNjAy9/ymUAbBHlC2wUbHoUISCPQKBfgAij1983O+kgsQHIJX4/DLlRuulRPZSfvmh0v
+	LcLnMAb8jH3iUtkw7h2WThegPUqJCgDloEgdB5nUVTYZg3fQaIWUkO5KDuBdLUQjdUIRpwloHwKd4
+	q0Vj7DeVYJUv7GKC27WmiqltvO1o4hFGZjM0wLuLqV7k7S+/iP9/Pwrz1GXo3KKg1N6OZ1J3C2tcd
+	ep2kQbgIU+RH1U6IEcjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpp6X-00008g-DU; Tue, 23 Jul 2019 07:20:58 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1hppRR-0001Q3-TY; Tue, 23 Jul 2019 07:42:33 +0000
+Received: from mga02.intel.com ([134.134.136.20])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpp6F-000081-QZ
- for linux-mediatek@lists.infradead.org; Tue, 23 Jul 2019 07:20:45 +0000
-Received: by mail-ed1-x543.google.com with SMTP id m10so42830221edv.6
- for <linux-mediatek@lists.infradead.org>; Tue, 23 Jul 2019 00:20:37 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=1QlHARNuAEM55ng9LI2PK094YJbPBsPKwUhBWwwJxAE=;
- b=GNlo2z9/gRyz2tn6m0dlRs6mqPEnRbD/asUCRnl1aF44DAofjVcSqECn/MAtb7YBsK
- 3kkr5Z7cG4HEpFGvQteQf8ss4x44lWI+LqVF6bIvIwIzNXpvPNckKyaTqNU1yNm8B3G4
- 68CHD0Jycaot+EixnKORpvZMw2xDl8mRupMfA=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=1QlHARNuAEM55ng9LI2PK094YJbPBsPKwUhBWwwJxAE=;
- b=Jhq110HUpKnMaEKWLNhT9oooDX/np2xAb+XSEba+jMKL0AKEoKRZFZPjc9r9gTCjc0
- luP1HiiiLjH/xmi5amjFTv2IWjOnNtFix+Swe0wNYgO/Q0ltP0S0OdTLsoZ9j+gcpPQH
- xbyE1096f0pgfCzRv02gA1rSXJqB+vH/4CPSYZBqQnv8fDjZfI1L2edu+O7QgodK8YuY
- oEHvX4w9SbSv/bHMloS6tZRoQQwX4CVuVNtyF8S261N3ZiGd8xhZ85xY9KuxnmxiL17w
- Vid9EJhcMGLtuJ6NR0FmzZ/AIxj+rfQANH1CSEkCNFWa+VYJRXlwgRVRMZk/WBANR3fD
- xjuQ==
-X-Gm-Message-State: APjAAAVo9R8/xlC+wEJiAxQyqCcYPvOQte7kRQbR8lGuRYIdOXwJc2U+
- ulTDz2AvseRKXl0FyrEx3oajlFSkMxydZg==
-X-Google-Smtp-Source: APXvYqxdIZYumK4gJTf5Op6AgDbThctue+LtkBaUqWizv0XkGOyRyzY71NUlrKmo3L5GPhe+3aUCiw==
-X-Received: by 2002:a17:906:114d:: with SMTP id
- i13mr56509408eja.252.1563866436295; 
- Tue, 23 Jul 2019 00:20:36 -0700 (PDT)
-Received: from mail-wm1-f54.google.com (mail-wm1-f54.google.com.
- [209.85.128.54])
- by smtp.gmail.com with ESMTPSA id i8sm11896560edg.12.2019.07.23.00.20.35
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Tue, 23 Jul 2019 00:20:36 -0700 (PDT)
-Received: by mail-wm1-f54.google.com with SMTP id s3so37410226wms.2
- for <linux-mediatek@lists.infradead.org>; Tue, 23 Jul 2019 00:20:35 -0700 (PDT)
-X-Received: by 2002:a7b:c7d8:: with SMTP id z24mr67945684wmk.10.1563866435393; 
- Tue, 23 Jul 2019 00:20:35 -0700 (PDT)
+ id 1hppQw-0001DB-Md; Tue, 23 Jul 2019 07:42:04 +0000
+X-Amp-Result: UNSCANNABLE
+X-Amp-File-Uploaded: False
+Received: from fmsmga008.fm.intel.com ([10.253.24.58])
+ by orsmga101.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 23 Jul 2019 00:41:57 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.64,298,1559545200"; d="scan'208";a="169481701"
+Received: from paasikivi.fi.intel.com ([10.237.72.42])
+ by fmsmga008.fm.intel.com with ESMTP; 23 Jul 2019 00:41:54 -0700
+Received: by paasikivi.fi.intel.com (Postfix, from userid 1000)
+ id 981F4206FC; Tue, 23 Jul 2019 10:41:54 +0300 (EEST)
+Date: Tue, 23 Jul 2019 10:41:54 +0300
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+To: dongchun.zhu@mediatek.com
+Subject: Re: [RFC,V2,1/2] media: dt-bindings: media: i2c: Add bindings for
+ OV02A10
+Message-ID: <20190723074153.GA4606@paasikivi.fi.intel.com>
+References: <20190704084651.3105-1-dongchun.zhu@mediatek.com>
+ <20190704084651.3105-2-dongchun.zhu@mediatek.com>
 MIME-Version: 1.0
-References: <jungo.lin@mediatek.com>
- <20190611035344.29814-1-jungo.lin@mediatek.com>
- <20190611035344.29814-10-jungo.lin@mediatek.com>
- <20190701072532.GB137710@chromium.org>
- <1562297618.1212.46.camel@mtksdccf07>
- <CAAFQd5BaTQ-Q7gsE0X+d4_81OZq9WHaCYkmALt7_4A1JFo=_8g@mail.gmail.com>
- <1562313579.1212.73.camel@mtksdccf07>
-In-Reply-To: <1562313579.1212.73.camel@mtksdccf07>
-From: Tomasz Figa <tfiga@chromium.org>
-Date: Tue, 23 Jul 2019 16:20:23 +0900
-X-Gmail-Original-Message-ID: <CAAFQd5AaNFpMGCVJREY85n8UetEwd99TOka8-ECoLzMbMkos_g@mail.gmail.com>
-Message-ID: <CAAFQd5AaNFpMGCVJREY85n8UetEwd99TOka8-ECoLzMbMkos_g@mail.gmail.com>
-Subject: Re: [RFC,
- v3 9/9] media: platform: Add Mediatek ISP P1 shared memory device
-To: Jungo Lin <jungo.lin@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <20190704084651.3105-2-dongchun.zhu@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_002040_478685_72B06883 
-X-CRM114-Status: GOOD (  19.59  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190723_004202_778309_87A01DFE 
+X-CRM114-Status: GOOD (  17.34  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.20 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -106,127 +68,110 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org,
- =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <sean.cheng@mediatek.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <rynn.wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>, Rob Herring <robh@kernel.org>,
- =?UTF-8?B?UnlhbiBZdSAo5L2Z5a2f5L+uKQ==?= <ryan.yu@mediatek.com>,
- =?UTF-8?B?RnJhbmtpZSBDaGl1ICjpgrHmloflh7Ep?= <frankie.chiu@mediatek.com>,
- Hans Verkuil <hverkuil@xs4all.nl>, Matthias Brugger <matthias.bgg@gmail.com>,
- Sj Huang <sj.huang@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>, ddavenport@chromium.org,
- =?UTF-8?B?RnJlZGVyaWMgQ2hlbiAo6Zmz5L+K5YWDKQ==?= <frederic.chen@mediatek.com>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
- Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, shengnan.wang@mediatek.com,
+ --to=drinkcat@chromium.org, tfiga@chromium.org, louis.kuo@mediatek.com,
+ sj.huang@mediatek.com, robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
+ matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Jungo,
+Hi Dongchun,
 
-On Fri, Jul 5, 2019 at 4:59 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
->
-> Hi Tomasz:
->
-> On Fri, 2019-07-05 at 13:22 +0900, Tomasz Figa wrote:
-> > Hi Jungo,
-> >
-> > On Fri, Jul 5, 2019 at 12:33 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > >
-> > > Hi Tomasz,
->
-> [snip]
->
-> > > After applying your suggestion in SCP device driver, we could remove
-> > > mtk_cam-smem.h/c. Currently, we use dma_alloc_coherent with SCP device
-> > > to get SCP address. We could touch the buffer with this SCP address in
-> > > SCP processor.
-> > >
-> > > After that, we use dma_map_page_attrs with P1 device which supports
-> > > IOMMU domain to get IOVA address. For this address, we will assign
-> > > it to our ISP HW device to proceed.
-> > >
-> > > Below is the snippet for ISP P1 compose buffer initialization.
-> > >
-> > >         ptr = dma_alloc_coherent(p1_dev->cam_dev.smem_dev,
-> > >                                  MAX_COMPOSER_SIZE, &addr, GFP_KERNEL);
-> > >         if (!ptr) {
-> > >                 dev_err(dev, "failed to allocate compose memory\n");
-> > >                 return -ENOMEM;
-> > >         }
-> > >         isp_ctx->scp_mem_pa = addr;
-> >
-> > addr contains a DMA address, not a physical address. Could we call it
-> > scp_mem_dma instead?
-> >
-> > >         dev_dbg(dev, "scp addr:%pad\n", &addr);
-> > >
-> > >         /* get iova address */
-> > >         addr = dma_map_page_attrs(dev, phys_to_page(addr), 0,
-> >
-> > addr is a DMA address, so phys_to_page() can't be called on it. The
-> > simplest thing here would be to use dma_map_single() with ptr as the
-> > CPU address expected.
-> >
->
-> We have changed to use ma_map_single() with ptr, but encounter IOMMU
-> error. From the debug log of iommu_dma_map_page[3], we got
-> 0x0000000054800000 instead of expected address: 0x0000000050800000[2].
-> There is a address offset(0x4000000). If we change to use
-> dma_map_page_attrs with phys_to_page(addr), the address is correct as we
-> expected[2]. Do you have any suggestion on this issue? Do we miss
-> something?
+On Thu, Jul 04, 2019 at 04:46:50PM +0800, dongchun.zhu@mediatek.com wrote:
+> From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> 
+> Add device tree binding documentation for the OV02A10 camera sensor.
+> 
+> Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> ---
+>  .../devicetree/bindings/media/i2c/ov02a10.txt      | 43 ++++++++++++++++++++++
+>  MAINTAINERS                                        |  7 ++++
+>  2 files changed, 50 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> 
+> diff --git a/Documentation/devicetree/bindings/media/i2c/ov02a10.txt b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> new file mode 100644
+> index 0000000..d40aa87
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> @@ -0,0 +1,43 @@
+> +* Omnivision OV02A10 MIPI CSI-2 sensor
+> +
+> +Required Properties:
+> +- compatible: shall be "ovti,ov02a10"
+> +- clocks: reference to the xvclk input clock
+> +- clock-names: shall be "xvclk"
+> +- avdd-supply: Analog voltage supply, 2.8 volts
+> +- dovdd-supply: Digital I/O voltage supply, 1.8 volts
+> +- dvdd-supply: Digital core voltage supply, 1.8 volts
+> +- reset-gpios: Low active reset gpio
+> +
+> +The device node shall contain one 'port' child node with an
+> +'endpoint' subnode for its digital output video port,
+> +in accordance with the video interface bindings defined in
+> +Documentation/devicetree/bindings/media/video-interfaces.txt.
+> +The endpoint optional property 'data-lanes' shall be "<1>".
 
-Sorry for the late reply. Could you show me the code changes you made
-to use dma_map_single()? It would sound like the virtual address
-passed to dma_map_single() isn't correct.
+How many lanes does the module (or the sensor) have?
 
-Best regards,
-Tomasz
+> +
+> +Example:
+> +&i2c4 {
+> +	ov02a10: camera-sensor@3d {
+> +		compatible = "ovti,ov02a10";
+> +		reg = <0x3d>;
+> +		pinctrl-names = "default";
+> +		pinctrl-0 = <&camera_pins_cam1_mclk_on>;
+> +
+> +		clocks = <&topckgen CLK_TOP_MUX_CAMTG2>,
+> +			<&topckgen CLK_TOP_UNIVP_192M_D8>;
+> +		clock-names = "xvclk", "freq_mux";
+> +
+> +		avdd-supply = <&mt6358_vcama1_reg>;
+> +		dvdd-supply = <&mt6358_vcn18_reg>;
+> +		dovdd-supply = <&mt6358_vcamio_reg>;
+> +		pwdn-gpios = <&pio 107 1>;
+> +		reset-gpios = <&pio 109 1>;
+> +
+> +		port {
+> +		   ov02a10_core: endpoint {
+> +		       remote-endpoint = <&ov02a10_0>;
 
->
-> [1]
-> [    1.344786] __dma_alloc_from_coherent: 0x800000 PAGE_SHIFT:12
-> device_base:0x0000000050000000 dma:0x0000000050800000
-> virt_base:ffffff8014000000 va:ffffff8014800000
->
-> [    1.346890] mtk-cam 1a000000.camisp: scp addr:0x0000000050800000
-> va:ffffff8014800000
->
-> [    1.347864] iommu_dma_map_page:0x0000000054800000 offset:0
-> [    1.348562] mtk-cam 1a000000.camisp: iova addr:0x00000000fde00000
->
-> [2]
-> [    1.346738] __dma_alloc_from_coherent: 0x800000 PAGE_SHIFT:12
-> device_base:0x0000000050000000 dma:0x0000000050800000
-> virt_base:ffffff8014000000 va:ffffff8014800000
-> [    1.348841] mtk-cam 1a000000.camisp: scp addr:0x0000000050800000
-> va:ffffff8014800000
-> [    1.349816] iommu_dma_map_page:0x0000000050800000 offset:0
-> [    1.350514] mtk-cam 1a000000.camisp: iova addr:0x00000000fde00000
->
->
-> [3]
-> dma_addr_t iommu_dma_map_page(struct device *dev, struct page *page,
->                 unsigned long offset, size_t size, int prot)
-> {
->         phys_addr_t phys = page_to_phys(page);
->         pr_err("iommu_dma_map_page:%pa offset:%lu\n", &phys, offset);
->
->         return __iommu_dma_map(dev, page_to_phys(page) + offset, size, prot,
->                         iommu_get_dma_domain(dev));
-> }
->
-> [snip]
->
-> Best regards,
->
-> Jungo
->
+Indentation is still wrong. :-(
+
+> +			   data-lanes = <1>;
+> +			};
+> +		};
+> +	};
+> +};
+> diff --git a/MAINTAINERS b/MAINTAINERS
+> index 5cfbea4..62b81ff 100644
+> --- a/MAINTAINERS
+> +++ b/MAINTAINERS
+> @@ -11571,6 +11571,13 @@ T:	git git://linuxtv.org/media_tree.git
+>  S:	Maintained
+>  F:	drivers/media/i2c/ov13858.c
+>  
+> +OMNIVISION OV02A10 SENSOR DRIVER
+> +M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
+> +L:	linux-media@vger.kernel.org
+> +T:	git git://linuxtv.org/media_tree.git
+> +S:	Maintained
+> +F:	Documentation/devicetree/bindings/media/i2c/ov02a10.txt
+> +
+>  OMNIVISION OV2680 SENSOR DRIVER
+>  M:	Rui Miguel Silva <rmfrfs@gmail.com>
+>  L:	linux-media@vger.kernel.org
+
+-- 
+Kind regards,
+
+Sakari Ailus
+sakari.ailus@linux.intel.com
 
 _______________________________________________
 Linux-mediatek mailing list
