@@ -2,62 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 60FC771B77
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 17:20:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D59217224B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 00:22:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=y4zzoriqwnwwwEy3eXaZ1upx2iIaEUFckhQKcQSSK60=; b=BlMPjxCOzYUu/C
-	/GKjoXn7aVdpOt3/M93UWbU9oC+oCToc9opvN1IFHNBW0axDn5b2lWcu9afIaKEKPUjxQwDvhxtGT
-	3bR6lnpY9hyzRjvLedwlS0uc18V8x5AOAzLy20y3IcDE/WX0XeLm/ksIu/wGwvgEXpz3J7LBVM2rJ
-	ON8WVSt4hJW7yLsqacUq8H1ANccaCo8euyE1bvXAhN1OtFNcpWPl67BuP2kQH39G7DFYyCDGcTCvZ
-	dpPzbKW76aEQCH1aQFujIzStNG84fGQIWTzMEqm1k3AQh1W0IebdohrXbhI2p2wQ4SPxzitF7Y28U
-	2IEP8PiUc2zWmT/jbAJg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=vFoNboACFfxqpPoDKU+9FM241xwI3//wpRdVFTPqATo=; b=c5k
+	oaS/65fDbWp4a6NZwgDfLhB/caxJN9TwMXlpunLGZJO7PCC7GpL3MpR6ncsR56xsZfvh5Rm8HfzCV
+	MSVo9NO2+HF6YbP0Iu84HsD9A7vzYft4VrbobEGjngLa+vT9RFqgRWAz6gGWLwEFdBsOjovrs6fnA
+	UZsURDyFqJ9udw+UaD+JZDqbLNY8XCss5zVU9MKHacsM9GahoKZn3fXRMCqpBIhviZpsaj64SCGaq
+	ehYkmk5GgJpeYOEv51cshXqfH3/bVmd0gshvQu9FPdoyXy36yGL5SHD1Ou3sExCM+G/q8F05htnas
+	+iilbfc8BEb/CLqzf6bcRk4+iRUfmhw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpwaP-0005mu-Mp; Tue, 23 Jul 2019 15:20:17 +0000
-Received: from asavdk3.altibox.net ([109.247.116.14])
+	id 1hq3Aq-0001Ra-6n; Tue, 23 Jul 2019 22:22:20 +0000
+Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpwZy-00041L-GU; Tue, 23 Jul 2019 15:19:52 +0000
-Received: from ravnborg.org (unknown [158.248.194.18])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by asavdk3.altibox.net (Postfix) with ESMTPS id 54655200D5;
- Tue, 23 Jul 2019 17:19:41 +0200 (CEST)
-Date: Tue, 23 Jul 2019 17:19:39 +0200
-From: Sam Ravnborg <sam@ravnborg.org>
-To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-Subject: Re: [PATCH v4 14/23] drm/tilcdc: Provide ddc symlink in connector
- sysfs directory
-Message-ID: <20190723151939.GA13718@ravnborg.org>
-References: <cover.1562843413.git.andrzej.p@collabora.com>
- <d1d415022c598fb7acd033f0f322dd67250adaa9.1562843413.git.andrzej.p@collabora.com>
- <20190723090532.GA787@ravnborg.org>
- <3ad60be5-49cf-4017-4b74-53a2d6272deb@collabora.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <3ad60be5-49cf-4017-4b74-53a2d6272deb@collabora.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
-X-CMAE-Score: 0
-X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
- a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=8nJEP1OIZ-IA:10 a=QX4gbG5DAAAA:8
- a=6mu-9OIm9KcVJ4iDVDwA:9 a=wPNLvfGTeEIA:10 a=AbAUZ8qAyYyZVLSsDulk:22
+ id 1hq38i-00077Z-2n; Tue, 23 Jul 2019 22:20:09 +0000
+Received: by mail-io1-xd42.google.com with SMTP id j5so81112289ioj.8;
+ Tue, 23 Jul 2019 15:20:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id;
+ bh=pl9nO+hunkGocGh4P+3+7RACb7n3AOCHKdRk3PRyj78=;
+ b=jClr9tGO0M2uPdTqgL+wilDjNYPCY1lHULxJyU4k5vGRMTiCplHDR9talFGARjm7fM
+ WaQzedbOLIChWY2xd0aavGY1YIl0rc4yFY1QjuAdhFpLnHbnquNpQhnyWdCtpD/yh0wj
+ mic0mlosfXm6fh2jHggFADTo3xWjod0o0w9F7sh+It2QAgSNWfwcfcRKhDg4DFqN94+h
+ ji0X4ENlzZZuWoW70qUl9zRrs75DGINQ0bLoXjHq010Tx1Ahq71E4+ryf93RiyEK95rp
+ YvkGkm2a3vss0Nk42AMTYFrs7VsYkuxBS7APMVVSARpeApcEDLQ/NmTZMcXqTLfb6OxH
+ OCfA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=pl9nO+hunkGocGh4P+3+7RACb7n3AOCHKdRk3PRyj78=;
+ b=skWzpJXuWPi01o6kWh6BVdEIQoZfxtrS/yvA1xpnOjbd2oZD3H8n7W8NoRpVJxyXHN
+ wHO6oWL1z+9kjBqikBeb3nvYiYWeakUlw4UMKkVKTGenfXsOWaz0bRFxY7ReySkwcf0F
+ cUaZ9KGGk2IqQ+1/7ZXVTJj1CLBbluAHB3VRT0G31HCfqOntRM5n7Ux93LPnhd1CeilQ
+ lMI1yFm9x6PXWRQ5TUw9uPgWZ76SC/vt41g4ZWSk7BSydix58QCoIswZMWiHY/FRA4Is
+ Aqbimy/RUPzNFx8wxwVITqNjmFf/sJzoupJowTTK5F8fB396s8rnl10SwsK3xAqncafm
+ fjmA==
+X-Gm-Message-State: APjAAAXN/e83SV9Tnzn0vTDbQ6ipy6IUQ7De9ivxEoc1Hy5bnO3CyDD5
+ faF9M1hlL7r2atCow8D5pKw=
+X-Google-Smtp-Source: APXvYqzWffs9myy9EKo6r23AJN8vEydCexjw2y+Jif/lnPMEBM5O8yaoI59b8eVQgRLAxQMFdQQJNQ==
+X-Received: by 2002:a5e:c241:: with SMTP id w1mr68853307iop.58.1563920405893; 
+ Tue, 23 Jul 2019 15:20:05 -0700 (PDT)
+Received: from cs-dulles.cs.umn.edu (cs-dulles.cs.umn.edu. [128.101.35.54])
+ by smtp.googlemail.com with ESMTPSA id x22sm33378952iob.84.2019.07.23.15.20.04
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Tue, 23 Jul 2019 15:20:05 -0700 (PDT)
+From: Navid Emamdoost <navid.emamdoost@gmail.com>
+To: 
+Subject: [PATCH] mt76_init_sband_2g: null check the allocation
+Date: Tue, 23 Jul 2019 17:19:54 -0500
+Message-Id: <20190723221954.9233-1-navid.emamdoost@gmail.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_081950_894590_03A25196 
-X-CRM114-Status: GOOD (  17.92  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190723_152008_160553_F1FC5716 
+X-CRM114-Status: UNSURE (   8.28  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [109.247.116.14 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (navid.emamdoost[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,90 +92,43 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Neil Armstrong <narmstrong@baylibre.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>, dri-devel@lists.freedesktop.org,
- Douglas Anderson <dianders@chromium.org>, linux-tegra@vger.kernel.org,
- Thierry Reding <thierry.reding@gmail.com>,
- Laurent Pinchart <Laurent.pinchart@ideasonboard.com>, kernel@collabora.com,
- linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
- Vincent Abriou <vincent.abriou@st.com>, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
- Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
- NXP Linux Team <linux-imx@nxp.com>, Dave Airlie <airlied@redhat.com>,
- freedreno@lists.freedesktop.org,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- intel-gfx@lists.freedesktop.org, Jyri Sarha <jsarha@ti.com>,
- Alexios Zavras <alexios.zavras@intel.com>,
- Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
- Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
- linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
- amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Seung-Woo Kim <sw0312.kim@samsung.com>, linux-kernel@vger.kernel.org,
- Todor Tomov <todor.tomov@linaro.org>,
- Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Thomas Zimmermann <tzimmermann@suse.de>,
- Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
- Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
- Gerd Hoffmann <kraxel@redhat.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: secalert@redhat.com, Jakub Kicinski <kubakici@wp.pl>,
+ linux-wireless@vger.kernel.org, kjlu@umn.edu, linux-kernel@vger.kernel.org,
+ emamd001@umn.edu, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, smccaman@umn.edu,
+ Matthias Brugger <matthias.bgg@gmail.com>, netdev@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>,
+ Navid Emamdoost <navid.emamdoost@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Andrej.
+devm_kzalloc may fail and return NULL. So the null check is needed.
 
-On Tue, Jul 23, 2019 at 02:44:50PM +0200, Andrzej Pietrasiewicz wrote:
-> Hi Sam,
-> =
+Signed-off-by: Navid Emamdoost <navid.emamdoost@gmail.com>
+---
+ drivers/net/wireless/mediatek/mt7601u/init.c | 3 +++
+ 1 file changed, 3 insertions(+)
 
-> W dniu 23.07.2019 o=A011:05, Sam Ravnborg pisze:
-> > Hi Andrzej
-> > =
+diff --git a/drivers/net/wireless/mediatek/mt7601u/init.c b/drivers/net/wireless/mediatek/mt7601u/init.c
+index 9bfac9f1d47f..cada48800928 100644
+--- a/drivers/net/wireless/mediatek/mt7601u/init.c
++++ b/drivers/net/wireless/mediatek/mt7601u/init.c
+@@ -557,6 +557,9 @@ mt76_init_sband_2g(struct mt7601u_dev *dev)
+ {
+ 	dev->sband_2g = devm_kzalloc(dev->dev, sizeof(*dev->sband_2g),
+ 				     GFP_KERNEL);
++	if (!dev->sband_2g)
++		return -ENOMEM;
++
+ 	dev->hw->wiphy->bands[NL80211_BAND_2GHZ] = dev->sband_2g;
+ 
+ 	WARN_ON(dev->ee->reg.start - 1 + dev->ee->reg.num >
+-- 
+2.17.1
 
-> > On Thu, Jul 11, 2019 at 01:26:41PM +0200, Andrzej Pietrasiewicz wrote:
-> > > Use the ddc pointer provided by the generic connector.
-> > > =
-
-> > > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-> > > ---
-> > >   drivers/gpu/drm/tilcdc/tilcdc_tfp410.c | 1 +
-> > >   1 file changed, 1 insertion(+)
-> > > =
-
-> > > diff --git a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c b/drivers/gpu/drm=
-/tilcdc/tilcdc_tfp410.c
-> > > index 62d014c20988..c373edb95666 100644
-> > > --- a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
-> > > +++ b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
-> > > @@ -219,6 +219,7 @@ static struct drm_connector *tfp410_connector_cre=
-ate(struct drm_device *dev,
-> > >   	tfp410_connector->mod =3D mod;
-> > >   	connector =3D &tfp410_connector->base;
-> > > +	connector->ddc =3D mod->i2c;
-> > >   	drm_connector_init(dev, connector, &tfp410_connector_funcs,
-> > >   			DRM_MODE_CONNECTOR_DVID);
-> > =
-
-> > When reading this code, it looks strange that we set connector->ddc
-> > *before* the call to init the connector.
-> > One could risk that drm_connector_init() used memset(..) to clear all
-> > fields or so, and it would break this order.
-> =
-
-> I verified the code of drm_connector_init() and cannot find any memset()
-> invocations there. What is your actual concern?
-My concern is that drm_connector_init() maybe sometime in the future
-will init all fileds in drm_connector, so we loose any assingments
-done to drm_connector from *before* we called the init function.
-
-Moving the assignment to after drm_connector_init() would not
-let us depend on the actual implmentation of drm_connector_init().
-
-	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
