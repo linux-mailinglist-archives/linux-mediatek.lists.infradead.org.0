@@ -2,79 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 316FC71A88
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 16:36:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 60FC771B77
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 17:20:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eLu73/V3OagF7ISCIn99ewPh3Htq4jcJQDiH8ZPwRLM=; b=K/Kljs9hV/DUVp
-	R9PfaXpCWoizzfW1qFWgy/CoN/cPb6vEcDxA+dk9OGQQw2svmikYpLqBoXUckS1Y+pn2CWgii+7L0
-	6D8PDqeKavw+P7kVC7n1VP5Mlk1mwwjOEIB5Un/fOigUrt7ZQ0kwyDknKH3vo9fO7h5DU6XHf2DyT
-	H88Gcgcf4NhiK21TFrDWnoIj55uKDBPHFEdCKqCpo7YGCvtSnKPbe1U/IGB8v1oFnfvFQM9A92Ncj
-	5VwUUgJNxWj22l3724vBgOP4LlAs6d3ljv6rh81LTYwcRXsYI0pvlbeCQsPpBjiLlWiSfAOYZVOWR
-	n6HISdt7lFDANIwHBYag==;
+	List-Owner; bh=y4zzoriqwnwwwEy3eXaZ1upx2iIaEUFckhQKcQSSK60=; b=BlMPjxCOzYUu/C
+	/GKjoXn7aVdpOt3/M93UWbU9oC+oCToc9opvN1IFHNBW0axDn5b2lWcu9afIaKEKPUjxQwDvhxtGT
+	3bR6lnpY9hyzRjvLedwlS0uc18V8x5AOAzLy20y3IcDE/WX0XeLm/ksIu/wGwvgEXpz3J7LBVM2rJ
+	ON8WVSt4hJW7yLsqacUq8H1ANccaCo8euyE1bvXAhN1OtFNcpWPl67BuP2kQH39G7DFYyCDGcTCvZ
+	dpPzbKW76aEQCH1aQFujIzStNG84fGQIWTzMEqm1k3AQh1W0IebdohrXbhI2p2wQ4SPxzitF7Y28U
+	2IEP8PiUc2zWmT/jbAJg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpvtp-00060N-IH; Tue, 23 Jul 2019 14:36:17 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hpwaP-0005mu-Mp; Tue, 23 Jul 2019 15:20:17 +0000
+Received: from asavdk3.altibox.net ([109.247.116.14])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpvtZ-0005pl-FX; Tue, 23 Jul 2019 14:36:04 +0000
-Received: from mail-qk1-f178.google.com (mail-qk1-f178.google.com
- [209.85.222.178])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ id 1hpwZy-00041L-GU; Tue, 23 Jul 2019 15:19:52 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 7F05C218EA;
- Tue, 23 Jul 2019 14:36:00 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563892560;
- bh=RhgZmcSMrQfqbKW3yJR0qQgPijWPcwlwWIuyvyAMaj0=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=wLzKco/ArT5Dvfhgx+RaF8Fzo9J01LD8d96HbTMMRKdSTPSycFxvhs5LCOraxZkJZ
- JkUM874oADKHLP14egH8DMTatS/Yt2U7n9FBkCxywEqixwbZPny1z7mEeiOeM5TeiK
- jnDroFl49M4ihJT2TP4q5KB7tPiKJpsXJPqPjJX8=
-Received: by mail-qk1-f178.google.com with SMTP id r6so31314557qkc.0;
- Tue, 23 Jul 2019 07:36:00 -0700 (PDT)
-X-Gm-Message-State: APjAAAUq+wNcZS0QtSGCLtFSwwiRPc3fUEPmeFMQo5asnGBMU2z9cvRu
- xkHpabZ7kTopCya7ZbXyz7LH+/w51ttf8hef7Q==
-X-Google-Smtp-Source: APXvYqwO37a9Uf29MCK2pQZVWi4gKhtu8lPzPkbArTZ/nniUVYHOSr3nEpVeFoaSFAMyZM3mOkSYpKT/tr0qovfkO7M=
-X-Received: by 2002:a37:a48e:: with SMTP id
- n136mr51861407qke.223.1563892559731; 
- Tue, 23 Jul 2019 07:35:59 -0700 (PDT)
+ by asavdk3.altibox.net (Postfix) with ESMTPS id 54655200D5;
+ Tue, 23 Jul 2019 17:19:41 +0200 (CEST)
+Date: Tue, 23 Jul 2019 17:19:39 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Re: [PATCH v4 14/23] drm/tilcdc: Provide ddc symlink in connector
+ sysfs directory
+Message-ID: <20190723151939.GA13718@ravnborg.org>
+References: <cover.1562843413.git.andrzej.p@collabora.com>
+ <d1d415022c598fb7acd033f0f322dd67250adaa9.1562843413.git.andrzej.p@collabora.com>
+ <20190723090532.GA787@ravnborg.org>
+ <3ad60be5-49cf-4017-4b74-53a2d6272deb@collabora.com>
 MIME-Version: 1.0
-References: <1561361052-13072-1-git-send-email-neal.liu@mediatek.com>
- <1561361052-13072-3-git-send-email-neal.liu@mediatek.com>
- <20190722171320.GA9806@bogus> <1563848465.31451.4.camel@mtkswgap22>
-In-Reply-To: <1563848465.31451.4.camel@mtkswgap22>
-From: Rob Herring <robh@kernel.org>
-Date: Tue, 23 Jul 2019 08:35:47 -0600
-X-Gmail-Original-Message-ID: <CAL_Jsq+SRhd=-5O2G_CMfJX9Z188kvA05MQOXaU1J8iExwUixQ@mail.gmail.com>
-Message-ID: <CAL_Jsq+SRhd=-5O2G_CMfJX9Z188kvA05MQOXaU1J8iExwUixQ@mail.gmail.com>
-Subject: Re: [PATCH v4 2/3] dt-bindings: rng: add bindings for MediaTek ARMv8
- SoCs
-To: Neal Liu <neal.liu@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <3ad60be5-49cf-4017-4b74-53a2d6272deb@collabora.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=8nJEP1OIZ-IA:10 a=QX4gbG5DAAAA:8
+ a=6mu-9OIm9KcVJ4iDVDwA:9 a=wPNLvfGTeEIA:10 a=AbAUZ8qAyYyZVLSsDulk:22
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_073601_552622_AF68085B 
-X-CRM114-Status: GOOD (  22.92  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190723_081950_894590_03A25196 
+X-CRM114-Status: GOOD (  17.92  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [109.247.116.14 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,92 +69,90 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Herbert Xu <herbert@gondor.apana.org.au>,
- wsd_upstream <wsd_upstream@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- =?UTF-8?B?Q3J5c3RhbCBHdW8gKOmDreaZtik=?= <Crystal.Guo@mediatek.com>,
- "linux-crypto@vger.kernel.org" <linux-crypto@vger.kernel.org>,
- Matt Mackall <mpm@selenic.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, dri-devel@lists.freedesktop.org,
+ Douglas Anderson <dianders@chromium.org>, linux-tegra@vger.kernel.org,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>, kernel@collabora.com,
+ linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
+ Vincent Abriou <vincent.abriou@st.com>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
+ Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
+ NXP Linux Team <linux-imx@nxp.com>, Dave Airlie <airlied@redhat.com>,
+ freedreno@lists.freedesktop.org,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ intel-gfx@lists.freedesktop.org, Jyri Sarha <jsarha@ti.com>,
+ Alexios Zavras <alexios.zavras@intel.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
+ linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
+ amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>, linux-kernel@vger.kernel.org,
+ Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Thomas Zimmermann <tzimmermann@suse.de>,
+ Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Jul 22, 2019 at 8:21 PM Neal Liu <neal.liu@mediatek.com> wrote:
->
+Hi Andrej.
 
-Please don't top post to lists.
+On Tue, Jul 23, 2019 at 02:44:50PM +0200, Andrzej Pietrasiewicz wrote:
+> Hi Sam,
+> =
 
-> Dear Rob,
->         You can check my driver for detail:
->         http://patchwork.kernel.org/patch/11012475/ or patchset 3/3
+> W dniu 23.07.2019 o=A011:05, Sam Ravnborg pisze:
+> > Hi Andrzej
+> > =
 
-I could, or you could just answer my question.
+> > On Thu, Jul 11, 2019 at 01:26:41PM +0200, Andrzej Pietrasiewicz wrote:
+> > > Use the ddc pointer provided by the generic connector.
+> > > =
 
->
->         This driver is registered as hardware random number generator, and
-> combines with rng-core.
->         We want to add one rng hw based on the dts. Is this proper or do you
-> have other suggestion to meet this requirement?
-
-It depends. There doesn't appear to be any resource configuration, so
-why does it need to be in DT. DT is not the only way instantiate
-drivers.
-
-Rob
-
->
->         Thanks
->
->
-> On Tue, 2019-07-23 at 01:13 +0800, Rob Herring wrote:
-> > On Mon, Jun 24, 2019 at 03:24:11PM +0800, Neal Liu wrote:
-> > > Document the binding used by the MediaTek ARMv8 SoCs random
-> > > number generator with TrustZone enabled.
-> > >
-> > > Signed-off-by: Neal Liu <neal.liu@mediatek.com>
+> > > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 > > > ---
-> > >  .../devicetree/bindings/rng/mtk-sec-rng.txt        |   10 ++++++++++
-> > >  1 file changed, 10 insertions(+)
-> > >  create mode 100644 Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
-> > >
-> > > diff --git a/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
-> > > new file mode 100644
-> > > index 0000000..c04ce15
-> > > --- /dev/null
-> > > +++ b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
-> > > @@ -0,0 +1,10 @@
-> > > +MediaTek random number generator with TrustZone enabled
-> > > +
-> > > +Required properties:
-> > > +- compatible : Should be "mediatek,mtk-sec-rng"
-> >
-> > What's the interface to access this?
-> >
-> > A node with a 'compatible' and nothing else is a sign of something that
-> > a parent device should instantiate and doesn't need to be in DT. IOW,
-> > what do complete bindings for firmware functions look like?
-> >
-> > > +
-> > > +Example:
-> > > +
-> > > +hwrng: hwrng {
-> > > +   compatible = "mediatek,mtk-sec-rng";
-> > > +}
-> > > --
-> > > 1.7.9.5
-> > >
-> >
-> > _______________________________________________
-> > Linux-mediatek mailing list
-> > Linux-mediatek@lists.infradead.org
-> > http://lists.infradead.org/mailman/listinfo/linux-mediatek
->
->
+> > >   drivers/gpu/drm/tilcdc/tilcdc_tfp410.c | 1 +
+> > >   1 file changed, 1 insertion(+)
+> > > =
+
+> > > diff --git a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c b/drivers/gpu/drm=
+/tilcdc/tilcdc_tfp410.c
+> > > index 62d014c20988..c373edb95666 100644
+> > > --- a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+> > > +++ b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+> > > @@ -219,6 +219,7 @@ static struct drm_connector *tfp410_connector_cre=
+ate(struct drm_device *dev,
+> > >   	tfp410_connector->mod =3D mod;
+> > >   	connector =3D &tfp410_connector->base;
+> > > +	connector->ddc =3D mod->i2c;
+> > >   	drm_connector_init(dev, connector, &tfp410_connector_funcs,
+> > >   			DRM_MODE_CONNECTOR_DVID);
+> > =
+
+> > When reading this code, it looks strange that we set connector->ddc
+> > *before* the call to init the connector.
+> > One could risk that drm_connector_init() used memset(..) to clear all
+> > fields or so, and it would break this order.
+> =
+
+> I verified the code of drm_connector_init() and cannot find any memset()
+> invocations there. What is your actual concern?
+My concern is that drm_connector_init() maybe sometime in the future
+will init all fileds in drm_connector, so we loose any assingments
+done to drm_connector from *before* we called the init function.
+
+Moving the assignment to after drm_connector_init() would not
+let us depend on the actual implmentation of drm_connector_init().
+
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
