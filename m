@@ -2,90 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7609171449
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 10:44:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B13AA71493
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 11:07:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yHVX52Wi2RgMLCMdedDEtQMfc2oqMCSc8z9nlB5qTnc=; b=VodpJ1BbJAsaf8
-	pwaaHjxbF8qlXYQyI6jvrkbCqlWynUEXIzOV2CDtxjXUnjpVbeTnKt7p2dt0jxolxWFAEXZaxi8eh
-	kvfgBUxNKN8j+ETHdoH3gglSztaBhB44jTUj7QMS773mMLV0zkbDQwO1x1TKS2qcTJkr6Pa0FsD07
-	uTqeg2LdqiPBld8puXupV0SfWUMpdrRueDgNFOTfAlSqKl+yn0l7IyLCmnw9q6uQ06mCsPiiw+Wrv
-	xF4m77i73+C6M3G+EBjuYKlWuQ+RtUGF94HMoLrkQhk1Z3AF2KA5YjpihWuM20+NGLLVhrYmxZ6mA
-	5gUWHiSXS0G99xb8Bj8w==;
+	List-Owner; bh=Nb4KxGyFjm5IrCDBWLus676mE+JxufzWUVNl43nyO3w=; b=Rr0jzSXVz9R+r+
+	vewI9uzMYQe3z3eZlz7CkZ3O4r3TgFfmInVUVFPuDAEF/OGLpnsKd9Vy7KPgpHRU4R8A4OwJIlLVu
+	jt7QaeaOQ15/Zmzp6fR0mhto2/oLgknbl/z1qxwEkcGz/CfQBFdwwGaEZETKzjdMe/dhGCw/8X3b0
+	mFYcfXeUOC1/IUlaak2gi0JAZy8/Yyyqa+0J78iQtYkM+K41n76UmdlR/d43Yb+QldMsVHtv9xfXn
+	8Jmc9P69fsv7CbCEILnpt3CcMlzQhI9kogkJZAB35OaRHfPPjXngCtnRrndLsGvo7iqR7qry8HFFf
+	JggRpuj8ugfqKvyGMfkg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpqPl-0000s0-BP; Tue, 23 Jul 2019 08:44:53 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1hpql6-0002AX-1x; Tue, 23 Jul 2019 09:06:56 +0000
+Received: from asavdk4.altibox.net ([109.247.116.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpqPN-0000ZD-U3
- for linux-mediatek@lists.infradead.org; Tue, 23 Jul 2019 08:44:33 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 431BD60E59; Tue, 23 Jul 2019 08:44:21 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1563871467;
- bh=kxLkewl6Q0I7FEEg5DZ7f85vkdxTUMfxwv/cP5k0pDU=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=A5hc6X5yO7V5UiU3S+bl/GseWX/nUvUy++zDnLFXa29aP70vI0agR22onPyXAg9ip
- 7F6KQCcDUMkLJ8Vc0yjxhCCP+uQpzrFY6w4hT+8hTV74zT5Y1LNdl4tPIQ/L4Q9PBx
- LUM0bEX/1ggK2wQDLPRGyp1Wb86BuImQ2Jjv+7ek=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from purkki.adurom.net (purkki.adurom.net [80.68.90.206])
- (using TLSv1.2 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+ id 1hpqjz-0001Xy-Ow; Tue, 23 Jul 2019 09:05:52 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 3333B619D1;
- Tue, 23 Jul 2019 08:44:18 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1563871460;
- bh=kxLkewl6Q0I7FEEg5DZ7f85vkdxTUMfxwv/cP5k0pDU=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=bfGBP0tetY8pP6f/42+dnDskyxyBz2Z7A6NaSNlgcj2mcCc6eldKZjp5PAIjaaI1E
- NTgK9VK3+5hq+5FUk8EakAZ+C6UzOxOKfZDqIYApCe7SRfJc5wZMKTde1UbTxsEk0T
- nIeI3p6myEvivgORGgyBTpMGl9eKYYBjYa58h1vc=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3333B619D1
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Ryder Lee <ryder.lee@mediatek.com>
-Subject: Re: [PATCH 0/5] fix many checkpatch.pl warnings
-References: <cover.1563772403.git.ryder.lee@mediatek.com>
-Date: Tue, 23 Jul 2019 11:44:16 +0300
-In-Reply-To: <cover.1563772403.git.ryder.lee@mediatek.com> (Ryder Lee's
- message of "Mon, 22 Jul 2019 13:31:10 +0800")
-Message-ID: <8736ixrvhb.fsf@purkki.adurom.net>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/23.4 (gnu/linux)
+ by asavdk4.altibox.net (Postfix) with ESMTPS id 6855580489;
+ Tue, 23 Jul 2019 11:05:34 +0200 (CEST)
+Date: Tue, 23 Jul 2019 11:05:32 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Re: [PATCH v4 14/23] drm/tilcdc: Provide ddc symlink in connector
+ sysfs directory
+Message-ID: <20190723090532.GA787@ravnborg.org>
+References: <cover.1562843413.git.andrzej.p@collabora.com>
+ <d1d415022c598fb7acd033f0f322dd67250adaa9.1562843413.git.andrzej.p@collabora.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <d1d415022c598fb7acd033f0f322dd67250adaa9.1562843413.git.andrzej.p@collabora.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=VcLZwmh9 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=QX4gbG5DAAAA:8
+ a=A4d5gvsdyd3DzmHwh6gA:9 a=CjuIK1q_8ugA:10 a=AbAUZ8qAyYyZVLSsDulk:22
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_014430_012903_253F7CD6 
-X-CRM114-Status: UNSURE (   7.01  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190723_020548_417653_53FC4987 
+X-CRM114-Status: GOOD (  16.35  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [109.247.116.15 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,31 +67,68 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
- linux-wireless@vger.kernel.org, Yiwei Chung <yiwei.chung@mediatek.com>,
- linux-mediatek@lists.infradead.org, Roy Luo <royluo@google.com>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>, Felix Fietkau <nbd@nbd.name>
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, dri-devel@lists.freedesktop.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
+ linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
+ Sean Paul <sean@poorly.run>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
+ Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
+ NXP Linux Team <linux-imx@nxp.com>, Dave Airlie <airlied@redhat.com>,
+ Thomas Zimmermann <tzimmermann@suse.de>, Jonas Karlman <jonas@kwiboo.se>,
+ linux-arm-msm@vger.kernel.org, intel-gfx@lists.freedesktop.org,
+ Jyri Sarha <jsarha@ti.com>, Alexios Zavras <alexios.zavras@intel.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>, linux-tegra@vger.kernel.org,
+ Thomas Gleixner <tglx@linutronix.de>, Vincent Abriou <vincent.abriou@st.com>,
+ linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
+ amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Douglas Anderson <dianders@chromium.org>, Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Alex Deucher <alexander.deucher@amd.com>, freedreno@lists.freedesktop.org,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Ryder Lee <ryder.lee@mediatek.com> writes:
+Hi Andrzej
 
-> This gathers many subsets to fix checkpatch.pl warnings.
+On Thu, Jul 11, 2019 at 01:26:41PM +0200, Andrzej Pietrasiewicz wrote:
+> Use the ddc pointer provided by the generic connector.
+> 
+> Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+> ---
+>  drivers/gpu/drm/tilcdc/tilcdc_tfp410.c | 1 +
+>  1 file changed, 1 insertion(+)
+> 
+> diff --git a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+> index 62d014c20988..c373edb95666 100644
+> --- a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+> +++ b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+> @@ -219,6 +219,7 @@ static struct drm_connector *tfp410_connector_create(struct drm_device *dev,
+>  	tfp410_connector->mod = mod;
+>  
+>  	connector = &tfp410_connector->base;
+> +	connector->ddc = mod->i2c;
+>  
+>  	drm_connector_init(dev, connector, &tfp410_connector_funcs,
+>  			DRM_MODE_CONNECTOR_DVID);
 
-Thanks, this is much better now.
+When reading this code, it looks strange that we set connector->ddc
+*before* the call to init the connector.
+One could risk that drm_connector_init() used memset(..) to clear all
+fields or so, and it would break this order.
+As it is today the code works as I read it.
 
-> I still keep some warnings there due to readability.
-> (The most of them are - networking block comments or 80 characters limit)
-
-I do the same in ath10k. BTW, here's my simple script which I use to
-filter unwanted checkpatch warnings etc:
-
-https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check
-
--- 
-Kalle Valo
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
