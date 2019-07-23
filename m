@@ -2,80 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CB1B370D9F
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 01:49:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A39A770F1D
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 04:21:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LJolSse4HAdiNzQv1JUbg4jH9BzzQo64c6p7cVvQpLQ=; b=PbvxJAmnaXBwRw
-	vX1pp9/WQbAAi3IoZERgW+2Bu9RrHbeJ55wKOj6gW0B/A46xZuRPxO96IW3xVZnobSguELi3ip+l2
-	Qtz1rDjqBcpqtOYlPWGhaiuwnHt0FcWhbcimGE8rj8eyQTNkdhIJM0QlEFos7ngu0QBawmCWeid1F
-	CeiqJG0zPGSCzZeD+qiioLI9RUH+zn9+v1oOgVHaeIOvLv9tGNQwr4GeG4J1m3bmqDU3jzq4js3CX
-	9eDAv0JhtLMs0OsTYajd6jsIQlcXIXIZyMMGDJW/SDLqfiJ1HQidERuOdYeq3mnJVaMFm71YKdCFJ
-	4Pl5iy0r6Yp5nnnZel9A==;
+	List-Owner; bh=04qt9AJhDCir0JYrnj9wBeDoNj4bg5R+dpJ1AokDTMY=; b=I5x4vQILrQVMmO
+	6Q6Iz7A7bv/16H/xNq8wPN3LmvGVnMqAJm/XikwnvCSoJ4PtZgRVso/hiQrlvJj0zzW6A7/3D3xvn
+	GqX78kPlifmho5QSJJcIcjVrKdzPTyxUm4YqfDun2kFzZusYoL8jJMhZCYyM3UYTbo8pJg8C0Jhlk
+	+eWZLJzdTjIj9JNakZLt9QEwHTfGztrzqJZTIc4ezg0c+DrilqgiU0tyt1jiS4Kubl+x+HO9xxG8K
+	PwbUSrEbr1yXzWYXomfAmz6fcuWQ33BGWzUkDicA31TrhZtaiLv3yPcdtXG3gT5+HP1z9IoAgDdqp
+	nS0n+nLvP7WInoB8uOag==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpi3z-0004xF-52; Mon, 22 Jul 2019 23:49:51 +0000
-Received: from mail-io1-f67.google.com ([209.85.166.67])
+	id 1hpkQz-0002Pv-Ht; Tue, 23 Jul 2019 02:21:45 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpi3d-0004qx-4U; Mon, 22 Jul 2019 23:49:39 +0000
-Received: by mail-io1-f67.google.com with SMTP id k8so77954679iot.1;
- Mon, 22 Jul 2019 16:49:27 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=OJLmbuthXALsnhPZhxE7MeJBMmONjl7w8T5HPyeenvc=;
- b=gaDOh2jJruuL2SMVRr9m0D5cLwNzqaYVSQ2VAqtUdq7K5UPu+AU49mROJVHiQ2GPzt
- GFnARBD83pGEj4cciIrykn28V+pnjBfGbBIxtBWhi6YofeS7odej8DpWK+JbTQ8pcgvu
- vXDic9xc1Fofx0lOifnOL3qDSjgBi9rIn+mWgjZPwetGqZ8xgePxKhuSG8pJKad38Ij+
- ZzCqZsAEmFXq/dgOweV8ncjg/lAOiAu8rtwqvQTr2lY8UYNJXbubpar/xg97sc9YSsh3
- QMgBA/Mz+TAx8HZzuRsAV1iC4C+3sBI/eU+YUW02pkjg4svumvnFjqm30doFH0rshiJP
- V0vw==
-X-Gm-Message-State: APjAAAXHm1a7dNvdDOxsfsV1PCe2MnpKbRm2rtLRT4qan1tO3Jg/VaE5
- TcyMz94qtGnBVRtDunNyDg==
-X-Google-Smtp-Source: APXvYqzkH8Tnp7m9jxTvF2W3kkBnlZgivGKMGBtOnCdqqnMHosHOQ0blCrKEmssR6DnsieQ9XjyLqw==
-X-Received: by 2002:a5d:8ccc:: with SMTP id k12mr67931100iot.141.1563839365957; 
- Mon, 22 Jul 2019 16:49:25 -0700 (PDT)
-Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id m4sm36990247iok.68.2019.07.22.16.49.25
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 22 Jul 2019 16:49:25 -0700 (PDT)
-Date: Mon, 22 Jul 2019 17:49:24 -0600
-From: Rob Herring <robh@kernel.org>
-To: dongchun.zhu@mediatek.com
-Subject: Re: [RFC,V2,1/2] media: dt-bindings: media: i2c: Add bindings for
- OV02A10
-Message-ID: <20190722234924.GA22604@bogus>
-References: <20190704084651.3105-1-dongchun.zhu@mediatek.com>
- <20190704084651.3105-2-dongchun.zhu@mediatek.com>
+ id 1hpkQc-0002Ds-0c; Tue, 23 Jul 2019 02:21:23 +0000
+X-UUID: e307d8f80e8f4fd398f6befc7c690f48-20190722
+X-UUID: e307d8f80e8f4fd398f6befc7c690f48-20190722
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <neal.liu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1296704648; Mon, 22 Jul 2019 18:21:15 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 22 Jul 2019 19:21:14 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 23 Jul 2019 10:21:05 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 23 Jul 2019 10:21:05 +0800
+Message-ID: <1563848465.31451.4.camel@mtkswgap22>
+Subject: Re: [PATCH v4 2/3] dt-bindings: rng: add bindings for MediaTek
+ ARMv8 SoCs
+From: Neal Liu <neal.liu@mediatek.com>
+To: Rob Herring <robh@kernel.org>
+Date: Tue, 23 Jul 2019 10:21:05 +0800
+In-Reply-To: <20190722171320.GA9806@bogus>
+References: <1561361052-13072-1-git-send-email-neal.liu@mediatek.com>
+ <1561361052-13072-3-git-send-email-neal.liu@mediatek.com>
+ <20190722171320.GA9806@bogus>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190704084651.3105-2-dongchun.zhu@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190722_164930_922207_083485ED 
-X-CRM114-Status: GOOD (  15.34  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190722_192122_061933_EBA60130 
+X-CRM114-Status: GOOD (  19.87  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.67 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,103 +73,77 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, shengnan.wang@mediatek.com,
- --to=drinkcat@chromium.org, tfiga@chromium.org, louis.kuo@mediatek.com,
- sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
- sakari.ailus@linux.intel.com, matthias.bgg@gmail.com, bingbu.cao@intel.com,
- mchehab@kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Herbert Xu <herbert@gondor.apana.org.au>,
+ wsd_upstream <wsd_upstream@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Crystal Guo =?UTF-8?Q?=28=E9=83=AD=E6=99=B6=29?= <Crystal.Guo@mediatek.com>,
+ "linux-crypto@vger.kernel.org" <linux-crypto@vger.kernel.org>,
+ Matt Mackall <mpm@selenic.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Jul 04, 2019 at 04:46:50PM +0800, dongchun.zhu@mediatek.com wrote:
-> From: Dongchun Zhu <dongchun.zhu@mediatek.com>
-> 
-> Add device tree binding documentation for the OV02A10 camera sensor.
-> 
-> Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
-> ---
->  .../devicetree/bindings/media/i2c/ov02a10.txt      | 43 ++++++++++++++++++++++
->  MAINTAINERS                                        |  7 ++++
->  2 files changed, 50 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/i2c/ov02a10.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/i2c/ov02a10.txt b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
-> new file mode 100644
-> index 0000000..d40aa87
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/i2c/ov02a10.txt
-> @@ -0,0 +1,43 @@
-> +* Omnivision OV02A10 MIPI CSI-2 sensor
-> +
-> +Required Properties:
-> +- compatible: shall be "ovti,ov02a10"
-> +- clocks: reference to the xvclk input clock
-> +- clock-names: shall be "xvclk"
-> +- avdd-supply: Analog voltage supply, 2.8 volts
-> +- dovdd-supply: Digital I/O voltage supply, 1.8 volts
-> +- dvdd-supply: Digital core voltage supply, 1.8 volts
-> +- reset-gpios: Low active reset gpio
-> +
-> +The device node shall contain one 'port' child node with an
-> +'endpoint' subnode for its digital output video port,
-> +in accordance with the video interface bindings defined in
-> +Documentation/devicetree/bindings/media/video-interfaces.txt.
-> +The endpoint optional property 'data-lanes' shall be "<1>".
-> +
-> +Example:
-> +&i2c4 {
-> +	ov02a10: camera-sensor@3d {
-> +		compatible = "ovti,ov02a10";
-> +		reg = <0x3d>;
-> +		pinctrl-names = "default";
-> +		pinctrl-0 = <&camera_pins_cam1_mclk_on>;
-> +
-> +		clocks = <&topckgen CLK_TOP_MUX_CAMTG2>,
-> +			<&topckgen CLK_TOP_UNIVP_192M_D8>;
-> +		clock-names = "xvclk", "freq_mux";
-> +
-> +		avdd-supply = <&mt6358_vcama1_reg>;
-> +		dvdd-supply = <&mt6358_vcn18_reg>;
-> +		dovdd-supply = <&mt6358_vcamio_reg>;
-> +		pwdn-gpios = <&pio 107 1>;
+Dear Rob,
+	You can check my driver for detail:
+	http://patchwork.kernel.org/patch/11012475/ or patchset 3/3
 
-Not documented. If you need this, use 'powerdown-gpios' instead.
+	This driver is registered as hardware random number generator, and
+combines with rng-core.
+	We want to add one rng hw based on the dts. Is this proper or do you
+have other suggestion to meet this requirement?
 
-> +		reset-gpios = <&pio 109 1>;
-> +
-> +		port {
-> +		   ov02a10_core: endpoint {
-> +		       remote-endpoint = <&ov02a10_0>;
-> +			   data-lanes = <1>;
-> +			};
-> +		};
-> +	};
-> +};
-> diff --git a/MAINTAINERS b/MAINTAINERS
-> index 5cfbea4..62b81ff 100644
-> --- a/MAINTAINERS
-> +++ b/MAINTAINERS
-> @@ -11571,6 +11571,13 @@ T:	git git://linuxtv.org/media_tree.git
->  S:	Maintained
->  F:	drivers/media/i2c/ov13858.c
->  
-> +OMNIVISION OV02A10 SENSOR DRIVER
-> +M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
-> +L:	linux-media@vger.kernel.org
-> +T:	git git://linuxtv.org/media_tree.git
-> +S:	Maintained
-> +F:	Documentation/devicetree/bindings/media/i2c/ov02a10.txt
-> +
->  OMNIVISION OV2680 SENSOR DRIVER
->  M:	Rui Miguel Silva <rmfrfs@gmail.com>
->  L:	linux-media@vger.kernel.org
-> -- 
-> 2.9.2
+	Thanks
+
+
+On Tue, 2019-07-23 at 01:13 +0800, Rob Herring wrote:
+> On Mon, Jun 24, 2019 at 03:24:11PM +0800, Neal Liu wrote:
+> > Document the binding used by the MediaTek ARMv8 SoCs random
+> > number generator with TrustZone enabled.
+> > 
+> > Signed-off-by: Neal Liu <neal.liu@mediatek.com>
+> > ---
+> >  .../devicetree/bindings/rng/mtk-sec-rng.txt        |   10 ++++++++++
+> >  1 file changed, 10 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > new file mode 100644
+> > index 0000000..c04ce15
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > @@ -0,0 +1,10 @@
+> > +MediaTek random number generator with TrustZone enabled
+> > +
+> > +Required properties:
+> > +- compatible : Should be "mediatek,mtk-sec-rng"
 > 
+> What's the interface to access this? 
+> 
+> A node with a 'compatible' and nothing else is a sign of something that 
+> a parent device should instantiate and doesn't need to be in DT. IOW, 
+> what do complete bindings for firmware functions look like?
+> 
+> > +
+> > +Example:
+> > +
+> > +hwrng: hwrng {
+> > +	compatible = "mediatek,mtk-sec-rng";
+> > +}
+> > -- 
+> > 1.7.9.5
+> > 
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
