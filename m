@@ -2,67 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D36C7104E
-	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 06:06:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC7E07113D
+	for <lists+linux-mediatek@lfdr.de>; Tue, 23 Jul 2019 07:35:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IXnwa9VuKe9l9nf89XSsHVlWCkHpWjtmmqRQ8Nyd7Qw=; b=pDXollZ2G7wJ8b
-	IZU7wpJuhunsqAOo4bBpSthbQxhkbffKkbqw9RtF134HCiGgkvNgRG0YoC9kbEP/6EsGNqpVD+7iF
-	MY0HHpWYhlXzgaGk4LkpdnE1Z955/hHW2U9M/r6R/RCYX/mlQmRshcnYetDboVNbj+AS4a8/Blezw
-	wtis74xWOpWGDAkq6nF2YzbmprfRJGJsCTxHK0DuTmXoJwqm7axvqzNxI61DNdf0Zp7eke2XTxUQD
-	j8T+G5+2ZHJHxmeMf8y4Y4/2iP5Ma3d/xnuDhXunYsk7IseSYrUFbqlKQJru9OnqdpndwXGMIt9kJ
-	I44mSGij76K3T2m2eJ3Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=cn+Il9vj87APO6BUI1OoFNHV4yRz4PsKIUKmCajyOSk=; b=TzDO4zGNs3JNa7
+	3L4F5UK/syfznIK33gIFmEjXQIvX08kM24W/SNHst73zSXxMk/9cIuWp6AiiHu3SkzhmhMtLRWnNv
+	Ur61RCNiBGD8aZigki9xA8g0PmKx3H0VIQAY4opfCdXnQtE78V+y/5cSvoQYoH0jc/OCYqHEkrmCo
+	JWjKVigqd3DaEJBeoNC6W38ENf0tQKdjrd8+EiCjJBHYS4rF5uNiSijWqABDn6tXYoFNKOkh1XkPQ
+	T+MCR8ZMy6wjwkagRbMlhG+UGtfxk23QtV8Enj0Qr9598D+8ISo142M5PH2KbJgfNmUqYBwbRNKbZ
+	8dR4h6az/T4dj9/l0NSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpm4N-0000GS-69; Tue, 23 Jul 2019 04:06:31 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hpnSG-0004st-E9; Tue, 23 Jul 2019 05:35:16 +0000
+Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpm4E-0000G0-O2; Tue, 23 Jul 2019 04:06:24 +0000
-X-UUID: 5d7892d86ce44441a6dd6cea46074e8f-20190722
-X-UUID: 5d7892d86ce44441a6dd6cea46074e8f-20190722
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <weiyi.lu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 257153172; Mon, 22 Jul 2019 20:06:15 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 22 Jul 2019 21:06:13 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 23 Jul 2019 12:06:11 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 23 Jul 2019 12:06:12 +0800
-Message-ID: <1563854772.6751.11.camel@mtksdaap41>
-Subject: Re: [PATCH v6 14/14] arm64: dts: Add power controller device node
- of MT8183
-From: Weiyi Lu <weiyi.lu@mediatek.com>
-To: CK Hu <ck.hu@mediatek.com>
-Date: Tue, 23 Jul 2019 12:06:12 +0800
-In-Reply-To: <1563241851.796.7.camel@mtksdaap41>
-References: <1560998286-9189-1-git-send-email-weiyi.lu@mediatek.com>
- <1560998286-9189-15-git-send-email-weiyi.lu@mediatek.com>
- <1561971461.12937.8.camel@mtksdaap41> <1563178045.17756.5.camel@mtksdaap41>
- <1563181637.6212.1.camel@mtksdaap41> <1563241851.796.7.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hpnRf-0003ex-02
+ for linux-mediatek@lists.infradead.org; Tue, 23 Jul 2019 05:34:40 +0000
+Received: by mail-pl1-x641.google.com with SMTP id y8so20138160plr.12
+ for <linux-mediatek@lists.infradead.org>; Mon, 22 Jul 2019 22:34:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=RjH/NM5oVv7H9uBQXA0g2+9MGVMLUo5V2j2Ab6tkFdQ=;
+ b=e1kJc7Imcps/BQqLY9JmYE7KcH1qEhz6vGEQ+C0CKAzI/MjVacKJotEbbRy0agAQOz
+ 4nEtxt1HkMl/8nWwPwR66ZLEWyBveI3poPvukJtoGULPge/MvVnQV+k3KLC1TWG8xZfe
+ /b4J5AI4dM5RoSybeX1bjyIM2fCjBF8/ZKa5k=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=RjH/NM5oVv7H9uBQXA0g2+9MGVMLUo5V2j2Ab6tkFdQ=;
+ b=RLPczTglhgwkXmU0qYBByMhpMZk26XJv9LKFKoXlgmVVQHh4u3CZtsj0+sgsJY/hfU
+ 5Lv42SWCPl7l5TF+E815AKVWXU+sAWjAs6X4GmA4RcCZBVMaz1T5uDs/zTBN1w3l38dE
+ /Mft7Ak6+ADIskkh2opVwpw8/veCe/MGhjqoEYaiqrndf66rMQf4ZaMrvKH3YBuzfv70
+ I8fl+mcXwJH1vmj7wPfVwzmhEJ2u6fTOoFY9XSdwYQ9f/IidO5x5LeBLKoeCnaVEJNWP
+ Ltez4F9h4nPZTToW41a+WaFa6EV3u7wm8sfVxkso2TR7me8CGVCwkh+ZUR3qD3egk1eK
+ HQnQ==
+X-Gm-Message-State: APjAAAWnbATRku2yKiGMQgOlAmFjZ1uwQHVpZxvi+LNwDu2C19BuGiwZ
+ 0RAiif7LOW+UMDoQ+yhnGk5yXg==
+X-Google-Smtp-Source: APXvYqxYnjCQS0yig4uPvUOAHO/NOMq/4OMIXXTGrOWktJAfQ6s+A2dzqTm04IEgzj2OO9MW8RnltA==
+X-Received: by 2002:a17:902:e011:: with SMTP id
+ ca17mr80393568plb.328.1563860078113; 
+ Mon, 22 Jul 2019 22:34:38 -0700 (PDT)
+Received: from acourbot.tok.corp.google.com
+ ([2401:fa00:4:4:9712:8cf1:d0f:7d33])
+ by smtp.gmail.com with ESMTPSA id a3sm44030666pfi.63.2019.07.22.22.34.35
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 22 Jul 2019 22:34:37 -0700 (PDT)
+From: Alexandre Courbot <acourbot@chromium.org>
+To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
+ Tomasz Figa <tfiga@chromium.org>, David Airlie <airlied@linux.ie>,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH] drm/mediatek: make imported PRIME buffers contiguous
+Date: Tue, 23 Jul 2019 14:34:21 +0900
+Message-Id: <20190723053421.179679-1-acourbot@chromium.org>
+X-Mailer: git-send-email 2.22.0.657.g960e92d24f-goog
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190722_210622_819558_E49013CC 
-X-CRM114-Status: GOOD (  35.09  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190722_223439_070900_35765717 
+X-CRM114-Status: GOOD (  15.89  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,277 +95,142 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, James Liao <jamesjj.liao@mediatek.com>,
- linux-kernel@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
+Cc: Alexandre Courbot <acourbot@chromium.org>,
  linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Yong Wu <yong.wu@mediatek.com>
+ dri-devel@lists.freedesktop.org, linux-kernel@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-07-16 at 09:50 +0800, CK Hu wrote:
-> Hi, Weiyi:
-> 
-> On Mon, 2019-07-15 at 17:07 +0800, Weiyi Lu wrote:
-> > On Mon, 2019-07-15 at 16:07 +0800, CK Hu wrote:
-> > > Hi, Weiyi:
-> > > 
-> > > On Mon, 2019-07-01 at 16:57 +0800, CK Hu wrote:
-> > > > Hi, Weiyi:
-> > > > 
-> > > > On Thu, 2019-06-20 at 10:38 +0800, Weiyi Lu wrote:
-> > > > > Add power controller node and smi-common node for MT8183
-> > > > > In scpsys node, it contains clocks and regmapping of
-> > > > > infracfg and smi-common for bus protection.
-> > > > > 
-> > > > > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
-> > > > > ---
-> > > > >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 62 ++++++++++++++++++++++++++++++++
-> > > > >  1 file changed, 62 insertions(+)
-> > > > > 
-> > > > > diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > > index 08274bf..75c4881 100644
-> > > > > --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > > +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-> > > > > @@ -8,6 +8,7 @@
-> > > > >  #include <dt-bindings/clock/mt8183-clk.h>
-> > > > >  #include <dt-bindings/interrupt-controller/arm-gic.h>
-> > > > >  #include <dt-bindings/interrupt-controller/irq.h>
-> > > > > +#include <dt-bindings/power/mt8183-power.h>
-> > > > >  
-> > > > >  / {
-> > > > >  	compatible = "mediatek,mt8183";
-> > > > > @@ -196,6 +197,62 @@
-> > > > >  			#clock-cells = <1>;
-> > > > >  		};
-> > > > >  
-> > > > > +		scpsys: syscon@10006000 {
-> > > > > +			compatible = "mediatek,mt8183-scpsys", "syscon";
-> > > > > +			#power-domain-cells = <1>;
-> > > > > +			reg = <0 0x10006000 0 0x1000>;
-> > > > > +			clocks = <&topckgen CLK_TOP_MUX_AUD_INTBUS>,
-> > > > > +				 <&infracfg CLK_INFRA_AUDIO>,
-> > > > > +				 <&infracfg CLK_INFRA_AUDIO_26M_BCLK>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_MFG>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_MM>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_CAM>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_IMG>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_IPU_IF>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_DSP>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_DSP1>,
-> > > > > +				 <&topckgen CLK_TOP_MUX_DSP2>,
-> > > > > +				 <&mmsys CLK_MM_SMI_COMMON>,
-> > > > > +				 <&mmsys CLK_MM_SMI_LARB0>,
-> > > > > +				 <&mmsys CLK_MM_SMI_LARB1>,
-> > > > > +				 <&mmsys CLK_MM_GALS_COMM0>,
-> > > > > +				 <&mmsys CLK_MM_GALS_COMM1>,
-> > > > > +				 <&mmsys CLK_MM_GALS_CCU2MM>,
-> > > > > +				 <&mmsys CLK_MM_GALS_IPU12MM>,
-> > > > > +				 <&mmsys CLK_MM_GALS_IMG2MM>,
-> > > > > +				 <&mmsys CLK_MM_GALS_CAM2MM>,
-> > > > > +				 <&mmsys CLK_MM_GALS_IPU2MM>,
-> > > 
-> > > I've removed all mmsys clock in scpsys node and display still works, so
-> > > I think these subsys clock could be removed from scpsys node. It's
-> > > reasonable that subsys clock is controlled by subsys device or the
-> > > device use it. In MT2712 [1], the scpsys does not control subsys clock
-> > > and it works, so I think you should remove subsys clock in scpsys device
-> > > node.
-> > > 
-> > > [1]
-> > > https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm64/boot/dts/mediatek/mt2712e.dtsi?h=v5.2
-> > > 
-> > > Regards,
-> > > CK
-> > > 
-> > 
-> > Hello CK,
-> > 
-> > Sorry, I can't agree with you at all.
-> > I thought you just created an environment where the MM (DISP) power
-> > domain could not be turned on and off properly.
-> > If you delete those mmsys clocks listed, bus protection will not work.
-> > These clocks are used for bus protection that I mentioned in patch [2].
-> > I guess you are now trying to solve the problem that mmsys blocks are
-> > used for probing two drivers. One for the display and another for the
-> > clock. Right?
-> > In the previous test you mentioned, you have affected the registration
-> > of mmsys clock first. This is why you saw the boot failure. I think boot
-> > failure is the real problem I should avoid if mmsys clock cannot probe.
-> > 
-> > [2] https://patchwork.kernel.org/patch/11005747/
-> > 
-> 
-> OK, I'll try another way to fix the probe problem, but I still have
-> question about bus protection. I'm not sure how bus protection works,
-> but I think that what mtk_scpsys_ext_clear_bus_protection() do could be
-> moved in mtk_smi_clk_enable(). How do you think?
-> 
-> Regards,
-> CK
-> 
+This driver requires imported PRIME buffers to appear contiguously in
+its IO address space. Make sure this is the case by setting the maximum
+DMA segment size to a better value than the default 64K on the DMA
+device, and use said DMA device when importing PRIME buffers.
 
-I think we need to consider the disable case as well.
-And SMI may not be the only DISP power domain user. As far as I know and
-being requested, bus protection should only be set when DISP power
-domain is going to be turned OFF, and vise versa.
-But if SMI will turn ON before all the other multimedia drivers and be
-the last one to turn OFF DISP power domain, it might be worth trying.
+Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
+---
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c | 47 ++++++++++++++++++++++++--
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h |  2 ++
+ 2 files changed, 46 insertions(+), 3 deletions(-)
 
-> > > 
-> > > > 
-> > > > Up to now, MT8183 mmsys has the same resource with another device node:
-> > > > 
-> > > > 		mmsys: syscon@14000000 {
-> > > > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > > > 			reg = <0 0x14000000 0 0x1000>;
-> > > > 			#clock-cells = <1>;
-> > > > 		};
-> > > > 
-> > > > 		display_components: dispsys@14000000 {
-> > > > 			compatible = "mediatek,mt8183-display";
-> > > > 			reg = <0 0x14000000 0 0x1000>;
-> > > > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > > > 		};
-> > > > 
-> > > > I think this two node should be merge into one node, so I've try to
-> > > > merge them:
-> > > > 
-> > > > 		mmsys: syscon@14000000 {
-> > > > 			compatible = "mediatek,mt8183-mmsys", "syscon";
-> > > > 			reg = <0 0x14000000 0 0x1000>;
-> > > > 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> > > > 			#clock-cells = <1>;
-> > > > 		};
-> > > > 
-> > > > But I got a kernel panic when boot,
-> > > > 
-> > > > [    3.458523] Unable to handle kernel paging request at virtual address
-> > > > fffffffffffffdfb
-> > > > [    3.466999] Mem abort info:
-> > > > [    3.470116]   ESR = 0x96000005
-> > > > [    3.473268]   Exception class = DABT (current EL), IL = 32 bits
-> > > > [    3.479375]   SET = 0, FnV = 0
-> > > > [    3.482530]   EA = 0, S1PTW = 0
-> > > > [    3.485785] Data abort info:
-> > > > [    3.488831]   ISV = 0, ISS = 0x00000005
-> > > > [    3.493067]   CM = 0, WnR = 0
-> > > > [    3.496229] swapper pgtable: 4k pages, 39-bit VAs, pgdp =
-> > > > 000000004f8fa26d
-> > > > [    3.503214] [fffffffffffffdfb] pgd=0000000000000000,
-> > > > pud=0000000000000000
-> > > > [    3.510408] Internal error: Oops: 96000005 [#1] PREEMPT SMP
-> > > > [    3.515974] Modules linked in:
-> > > > [    3.519023] Process kworker/0:3 (pid: 106, stack limit =
-> > > > 0x00000000281d0651)
-> > > > [    3.526066] CPU: 0 PID: 106 Comm: kworker/0:3 Tainted: G        W
-> > > > 4.19.43 #208
-> > > > [    3.533974] Hardware name: MediaTek kukui rev1 board (DT)
-> > > > [    3.539374] Workqueue: events deferred_probe_work_func
-> > > > [    3.544507] pstate: 20000005 (nzCv daif -PAN -UAO)
-> > > > [    3.549294] pc : clk_prepare+0x18/0x40
-> > > > [    3.553038] lr : scpsys_clk_enable+0x40/0xb4
-> > > > [    3.557299] sp : ffffff800855b9e0
-> > > > [    3.560606] x29: ffffff800855b9f0 x28: ffffff93e1e5f594
-> > > > [    3.565911] x27: 000000000000000f x26: ffffff93e1e5e9b8
-> > > > [    3.571217] x25: 000000003b9aca00 x24: ffffff800858530c
-> > > > [    3.576522] x23: ffffffffffffffff x22: fffffffffffffdfb
-> > > > [    3.581827] x21: 000000000000000a x20: ffffffccb89aafc8
-> > > > [    3.587132] x19: fffffffffffffdfb x18: 00005a5c77082016
-> > > > [    3.592438] x17: 0000000000000400 x16: 0000000000000001
-> > > > [    3.597743] x15: 0000000000000009 x14: ffffff93e271c908
-> > > > [    3.603048] x13: 0000000000000b22 x12: 0000000000000008
-> > > > [    3.608353] x11: 0000000001d063de x10: 0000000000000008
-> > > > [    3.613659] x9 : 00000000ffffffed x8 : 0000000000000000
-> > > > [    3.618964] x7 : 736d6c2dff7224fe x6 : 0000008000000000
-> > > > [    3.624269] x5 : 0000000000000000 x4 : 0000000080000000
-> > > > [    3.629575] x3 : 002f6d6e74000000 x2 : 0000000000000000
-> > > > [    3.634880] x1 : 000000000000000a x0 : fffffffffffffdfb
-> > > > [    3.640185] Call trace:
-> > > > [    3.642625]  clk_prepare+0x18/0x40
-> > > > [    3.646019]  scpsys_clk_enable+0x40/0xb4
-> > > > [    3.649935]  scpsys_power_on+0x13c/0x304
-> > > > [    3.653850]  scpsys_probe+0xe0/0x5fc
-> > > > [    3.657419]  platform_drv_probe+0x80/0xb0
-> > > > [    3.661420]  really_probe+0x114/0x28c
-> > > > [    3.665075]  driver_probe_device+0x64/0xfc
-> > > > [    3.669164]  __device_attach_driver+0xb8/0xd0
-> > > > [    3.673513]  bus_for_each_drv+0x88/0xd0
-> > > > [    3.677341]  __device_attach+0xac/0x130
-> > > > [    3.681169]  device_initial_probe+0x20/0x2c
-> > > > [    3.685344]  bus_probe_device+0x34/0x90
-> > > > [    3.689172]  deferred_probe_work_func+0x74/0xac
-> > > > [    3.693698]  process_one_work+0x210/0x420
-> > > > [    3.697700]  worker_thread+0x278/0x3e4
-> > > > [    3.701443]  kthread+0x11c/0x12c
-> > > > [    3.704665]  ret_from_fork+0x10/0x18
-> > > > 
-> > > > I'm not really understand what happen, but scpsys and mmsys point to
-> > > > each other in MT8183. Why these two node point to each other in MT8183?
-> > > > If this is really hardware limitation, we need to solve this in driver.
-> > > > If this is not a hardware limitation, I would like to re-organize device
-> > > > tree to prevent this problem.
-> > > > 
-> > > > Regards,
-> > > > CK
-> > > > 
-> > > > 
-> > > > > +				 <&imgsys CLK_IMG_LARB5>,
-> > > > > +				 <&imgsys CLK_IMG_LARB2>,
-> > > > > +				 <&camsys CLK_CAM_LARB6>,
-> > > > > +				 <&camsys CLK_CAM_LARB3>,
-> > > > > +				 <&camsys CLK_CAM_SENINF>,
-> > > > > +				 <&camsys CLK_CAM_CAMSV0>,
-> > > > > +				 <&camsys CLK_CAM_CAMSV1>,
-> > > > > +				 <&camsys CLK_CAM_CAMSV2>,
-> > > > > +				 <&camsys CLK_CAM_CCU>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_IPU>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_AHB>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_AXI>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_ISP>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_CAM_ADL>,
-> > > > > +				 <&ipu_conn CLK_IPU_CONN_IMG_ADL>;
-> > > > > +			clock-names = "audio", "audio1", "audio2",
-> > > > > +				      "mfg", "mm", "cam",
-> > > > > +				      "isp", "vpu", "vpu1",
-> > > > > +				      "vpu2", "vpu3", "mm-0",
-> > > > > +				      "mm-1", "mm-2", "mm-3",
-> > > > > +				      "mm-4", "mm-5", "mm-6",
-> > > > > +				      "mm-7", "mm-8", "mm-9",
-> > > > > +				      "isp-0", "isp-1", "cam-0",
-> > > > > +				      "cam-1", "cam-2", "cam-3",
-> > > > > +				      "cam-4", "cam-5", "cam-6",
-> > > > > +				      "vpu-0", "vpu-1", "vpu-2",
-> > > > > +				      "vpu-3", "vpu-4", "vpu-5";
-> > > > > +			infracfg = <&infracfg>;
-> > > > > +			smi_comm = <&smi_common>;
-> > > > > +		};
-> > > > > +
-> > > > >  		apmixedsys: syscon@1000c000 {
-> > > > >  			compatible = "mediatek,mt8183-apmixedsys", "syscon";
-> > > > >  			reg = <0 0x1000c000 0 0x1000>;
-> > > > > @@ -260,6 +317,11 @@
-> > > > >  			#clock-cells = <1>;
-> > > > >  		};
-> > > > >  
-> > > > > +		smi_common: smi@14019000 {
-> > > > > +			compatible = "mediatek,mt8183-smi-common", "syscon";
-> > > > > +			reg = <0 0x14019000 0 0x1000>;
-> > > > > +		};
-> > > > > +
-> > > > >  		imgsys: syscon@15020000 {
-> > > > >  			compatible = "mediatek,mt8183-imgsys", "syscon";
-> > > > >  			reg = <0 0x15020000 0 0x1000>;
-> > > > 
-> > > 
-> > > 
-> > 
-> > 
-> 
-> 
-
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+index 95fdbd0fbcac..4ad4770fab13 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
++++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
+@@ -213,6 +213,7 @@ static int mtk_drm_kms_init(struct drm_device *drm)
+ 	struct mtk_drm_private *private = drm->dev_private;
+ 	struct platform_device *pdev;
+ 	struct device_node *np;
++	struct device *dma_dev;
+ 	int ret;
+ 
+ 	if (!iommu_present(&platform_bus_type))
+@@ -275,7 +276,27 @@ static int mtk_drm_kms_init(struct drm_device *drm)
+ 		goto err_component_unbind;
+ 	}
+ 
+-	private->dma_dev = &pdev->dev;
++	dma_dev = &pdev->dev;
++	private->dma_dev = dma_dev;
++
++	/*
++	 * Configure the DMA segment size to make sure we get contiguous IOVA
++	 * when importing PRIME buffers.
++	 */
++	if (!dma_dev->dma_parms) {
++		private->dma_parms_allocated = true;
++		dma_dev->dma_parms =
++			devm_kzalloc(drm->dev, sizeof(*dma_dev->dma_parms),
++				     GFP_KERNEL);
++	}
++	if (!dma_dev->dma_parms)
++		goto err_component_unbind;
++
++	ret = dma_set_max_seg_size(dma_dev, (unsigned int)DMA_BIT_MASK(32));
++	if (ret) {
++		dev_err(dma_dev, "Failed to set DMA segment size\n");
++		goto err_unset_dma_parms;
++	}
+ 
+ 	/*
+ 	 * We don't use the drm_irq_install() helpers provided by the DRM
+@@ -285,13 +306,16 @@ static int mtk_drm_kms_init(struct drm_device *drm)
+ 	drm->irq_enabled = true;
+ 	ret = drm_vblank_init(drm, MAX_CRTC);
+ 	if (ret < 0)
+-		goto err_component_unbind;
++		goto err_unset_dma_parms;
+ 
+ 	drm_kms_helper_poll_init(drm);
+ 	drm_mode_config_reset(drm);
+ 
+ 	return 0;
+ 
++err_unset_dma_parms:
++	if (private->dma_parms_allocated)
++		dma_dev->dma_parms = NULL;
+ err_component_unbind:
+ 	component_unbind_all(drm->dev, drm);
+ err_config_cleanup:
+@@ -302,9 +326,14 @@ static int mtk_drm_kms_init(struct drm_device *drm)
+ 
+ static void mtk_drm_kms_deinit(struct drm_device *drm)
+ {
++	struct mtk_drm_private *private = drm->dev_private;
++
+ 	drm_kms_helper_poll_fini(drm);
+ 	drm_atomic_helper_shutdown(drm);
+ 
++	if (private->dma_parms_allocated)
++		private->dma_dev->dma_parms = NULL;
++
+ 	component_unbind_all(drm->dev, drm);
+ 	drm_mode_config_cleanup(drm);
+ }
+@@ -320,6 +349,18 @@ static const struct file_operations mtk_drm_fops = {
+ 	.compat_ioctl = drm_compat_ioctl,
+ };
+ 
++/*
++ * We need to override this because the device used to import the memory is
++ * not dev->dev, as drm_gem_prime_import() expects.
++ */
++struct drm_gem_object *mtk_drm_gem_prime_import(struct drm_device *dev,
++						struct dma_buf *dma_buf)
++{
++	struct mtk_drm_private *private = dev->dev_private;
++
++	return drm_gem_prime_import_dev(dev, dma_buf, private->dma_dev);
++}
++
+ static struct drm_driver mtk_drm_driver = {
+ 	.driver_features = DRIVER_MODESET | DRIVER_GEM | DRIVER_PRIME |
+ 			   DRIVER_ATOMIC,
+@@ -331,7 +372,7 @@ static struct drm_driver mtk_drm_driver = {
+ 	.prime_handle_to_fd = drm_gem_prime_handle_to_fd,
+ 	.prime_fd_to_handle = drm_gem_prime_fd_to_handle,
+ 	.gem_prime_export = drm_gem_prime_export,
+-	.gem_prime_import = drm_gem_prime_import,
++	.gem_prime_import = mtk_drm_gem_prime_import,
+ 	.gem_prime_get_sg_table = mtk_gem_prime_get_sg_table,
+ 	.gem_prime_import_sg_table = mtk_gem_prime_import_sg_table,
+ 	.gem_prime_mmap = mtk_drm_gem_mmap_buf,
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.h b/drivers/gpu/drm/mediatek/mtk_drm_drv.h
+index 598ff3e70446..e03fea12ff59 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_drv.h
++++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.h
+@@ -51,6 +51,8 @@ struct mtk_drm_private {
+ 	} commit;
+ 
+ 	struct drm_atomic_state *suspend_state;
++
++	bool dma_parms_allocated;
+ };
+ 
+ extern struct platform_driver mtk_ddp_driver;
+-- 
+2.22.0.657.g960e92d24f-goog
 
 
 _______________________________________________
