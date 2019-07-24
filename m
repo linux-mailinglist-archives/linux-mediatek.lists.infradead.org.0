@@ -2,90 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E7917250D
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 05:04:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 374247251C
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 05:09:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Pr+ekeIkEcx9IkuOx0yN3wH5NK1BrM9yX5tCun8CpMw=; b=DBZsPI6oHGmvYD
-	UmQ7IRtcmJkdCjW6WQhuBsIy6mEEOfZhR93MuDU1W+k/AsDUuaOcrDIyG2qSL5fkAahCJQGAcEfmH
-	a+9urgiyEp9bVNXJitH+rnViwhX0nQAxnH0VrRZNc/sCsPoiIRVM1t0PlnoStnQ9OhkP8vMZYz4Jo
-	imQ1cglC0u7qJoBdY0Glzitj6WH9z8p/JkrqGX0t8iHaYUqm8NTkGRqU55JKgV8tAnRruJsllYEul
-	0fzDzoEYDnDHXwtzvt6g6nSr4J3B5qhiOdf5mCxQD7yYtISv8k40HALG4xMH09bk/NQVKQOH43v+L
-	W5WBweId0fCKI8HkatHg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=yLK7PB9IcGYrBkjIx728EJzLpWEdLRfLPP6W7nRzVwE=; b=F2iBrjfg4N9HVX
+	+twF8jXAiQYd4l4Hs8QVEgQKFfrvl0QnTmGAbTAOp0UvFYKRJzTWcmiqQYrdd0tzS5mI5me84IzGz
+	Ur/yCcoJ1582BxjtfmdRjBb71JTDKnbuROC0vTq0rtVwMfsn1MNpe3wz8SudBSsdBvPE8Vapq33Jj
+	kbcd9JaFk+66qytZ/sRBET2Vg8NHLM1H3N/e/S4BHXTk+CG3Z/Nbdae0q4wbQ/70cMt9eu+CISYlA
+	L8ucmuHdcucd6MU0Teluy5P+fv6Q71AaapIuiFY4sSWkHVtQCBv7/3bM1DEEDYU3RzVFjQpiyoxQ9
+	87AUfCV2jGh9c5Dm0tEw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hq7a3-0001V8-Mo; Wed, 24 Jul 2019 03:04:39 +0000
-Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+	id 1hq7eM-0003PQ-0Q; Wed, 24 Jul 2019 03:09:06 +0000
+Received: from mga18.intel.com ([134.134.136.126])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hq7Zv-0001UF-Qa
- for linux-mediatek@lists.infradead.org; Wed, 24 Jul 2019 03:04:37 +0000
-Received: by mail-oi1-x243.google.com with SMTP id g7so33934727oia.8
- for <linux-mediatek@lists.infradead.org>; Tue, 23 Jul 2019 20:04:30 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=SADKtokwNjPsVxdbHYiNYp3Qcp6LVuknSames6Hppwg=;
- b=E2Yp+gtWklAYbGwyROt0GcrMaMwX7uGZMCFHZ1xEMMX/vF5WHA2dB573o4W+xAwxma
- n5sYj/TyMkHJ8f7J1YSkTdkCuw+rPCNkgp1/PdpKmzwDc/1ntrxzk6PL9muLuvEEWbj6
- Dxn9fTiUedcMfImv2mMc1rAayK2Pu2pFhxHYkCssaMa6uvnfxTcoi/kkKo011eWAZhNc
- sCQA3SiRjNyowSm6rdQoKwRuWkOzd7Kkwh/+SkNoy32NWVcq96zp5rb1tYIeYMgyw4no
- Zgj9MEZcBFeu/I8NJhIYyI01roJuokc0TG77IlLNMfFfGlfarwfepxmOmpYbvfSkKJbX
- NxOw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=SADKtokwNjPsVxdbHYiNYp3Qcp6LVuknSames6Hppwg=;
- b=PqcQ36ZmOBVMqWfsce10G3iZN/2rqWhfTs5leYPlY7ISZcHGAL9QtquDNpbyitDciH
- 5rpI+S3grNvW0HMEbscFwhM5icCgbcgprBBjloVsTUMp2iflwMGik900WiIlyYLM6UTO
- ZVsAJgGWGdEGncIHvFPPdNO9oKOEdJpvMjarqvgD8rziaHXVfcu0oKlNknLAuYCHD7nj
- eY1j+0cLFp/xQC7qFYCgfZaDw2aTxVABLGc/SRaZH/PR1JHmMdeOiR0Umb2B0uIa/3Jy
- /cE1HM17kekngmqhU6yER5rWZck+I8+GVcuALc5A2Et15b7c7r6JRZRy4pHKnAFWyFcP
- 8J0w==
-X-Gm-Message-State: APjAAAWrbx9ZGvBjLBJn/2yUF5et5iaKN4y3uLiBKyqxs4wZADRWKdhw
- WMo3r1qzzGzlMk2nl2kIOQA7ElOnXye6JWR21jm6ng==
-X-Google-Smtp-Source: APXvYqzvs1ALB1LKYzLTbJpGcZVnWRhhHpaRn/lcG0Clhvcxi96bldTwomrnpaGhf9e8NPzN4iSHfiznqla3m+IYliw=
-X-Received: by 2002:a05:6808:3c5:: with SMTP id
- o5mr38524493oie.102.1563937468571; 
- Tue, 23 Jul 2019 20:04:28 -0700 (PDT)
+ id 1hq7dy-0003Co-7z; Wed, 24 Jul 2019 03:08:44 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from orsmga005.jf.intel.com ([10.7.209.41])
+ by orsmga106.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 23 Jul 2019 20:08:37 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.64,300,1559545200"; d="scan'208";a="344960870"
+Received: from ipu5-build.bj.intel.com (HELO [10.238.232.193])
+ ([10.238.232.193])
+ by orsmga005.jf.intel.com with ESMTP; 23 Jul 2019 20:08:33 -0700
+Subject: Re: [PATCH 2/2] media: i2c: dw9768: Add DW9768 VCM driver
+To: dongchun.zhu@mediatek.com, mchehab@kernel.org, robh+dt@kernel.org,
+ mark.rutland@arm.com, matthias.bgg@gmail.com, sakari.ailus@linux.intel.com,
+ tfiga@chromium.org, bingbu.cao@intel.com
+References: <20190708100641.2702-1-dongchun.zhu@mediatek.com>
+ <20190708100641.2702-3-dongchun.zhu@mediatek.com>
+From: Bingbu Cao <bingbu.cao@linux.intel.com>
+Message-ID: <576bb964-c16d-2ca2-e3ec-feff2e155d3c@linux.intel.com>
+Date: Wed, 24 Jul 2019 11:16:09 +0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.2
 MIME-Version: 1.0
-References: <6f6d5cf551a0b0d0dd1b902aca2c5417b7f98da7.1563864007.git.ryder.lee@mediatek.com>
-In-Reply-To: <6f6d5cf551a0b0d0dd1b902aca2c5417b7f98da7.1563864007.git.ryder.lee@mediatek.com>
-From: Roy Luo <royluo@google.com>
-Date: Wed, 24 Jul 2019 11:03:51 +0800
-Message-ID: <CA+zupgyq9VZkstdOOX4E_G9KWVN2WB+u0XnLiFAbxGws6Mt4qA@mail.gmail.com>
-Subject: Re: [PATCH] mt76: switch to SPDX tag instead of verbose boilerplate
- text
-To: Ryder Lee <ryder.lee@mediatek.com>
+In-Reply-To: <20190708100641.2702-3-dongchun.zhu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_200431_966764_E3DF6A7D 
-X-CRM114-Status: GOOD (  12.33  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20190723_200842_351663_95578383 
+X-CRM114-Status: GOOD (  32.89  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.126 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,1564 +69,551 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, YF Luo <yf.luo@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Yiwei Chung <yiwei.chung@mediatek.com>, linux-mediatek@lists.infradead.org,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>, Felix Fietkau <nbd@nbd.name>
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ shengnan.wang@mediatek.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, louis.kuo@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Ryder,
 
-Please follow the convention, some of your header files use //.
 
-C source: // SPDX-License-Identifier: <SPDX License Expression>
-C header: /* SPDX-License-Identifier: <SPDX License Expression> */
-
-Regards,
-Cheng-Hao (Roy) Luo
-
-On Tue, Jul 23, 2019 at 2:45 PM Ryder Lee <ryder.lee@mediatek.com> wrote:
->
-> Add SPDX identifiers to all remaining files in mt76/
->
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+On 7/8/19 6:06 PM, dongchun.zhu@mediatek.com wrote:
+> From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> 
+> This patch adds a V4L2 sub-device driver for DW9768 lens voice coil,
+> and provides control to set the desired focus.
+> 
+> The DW9807 is a 10 bit DAC from Dongwoon, designed for linear
+> control of voice coil motor.
+> 
+> Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
 > ---
->  drivers/net/wireless/mediatek/mt76/agg-rx.c         | 13 +------------
->  drivers/net/wireless/mediatek/mt76/debugfs.c        | 13 +------------
->  drivers/net/wireless/mediatek/mt76/dma.c            | 13 +------------
->  drivers/net/wireless/mediatek/mt76/dma.h            | 13 +------------
->  drivers/net/wireless/mediatek/mt76/eeprom.c         | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mac80211.c       | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mcu.c            | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mmio.c           | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76.h           | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x0/pci.c     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x0/pci_mcu.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02.h        | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x02_debugfs.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_dfs.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_dfs.h    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_dma.h    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.h | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_mac.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_mac.h    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_mcu.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_mcu.h    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c   | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_phy.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_phy.h    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_regs.h   | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_trace.c  | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_trace.h  | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_txrx.c   | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_usb.h    | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x02_usb_core.c   | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x02_usb_mcu.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x02_util.c   | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.c  | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.h  | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/init.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mac.c     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mac.h     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mcu.c     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mcu.h     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2.h  | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2u.h | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/pci.c     | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x2/pci_init.c    | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x2/pci_main.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/pci_mcu.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/pci_phy.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/phy.c     | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/usb.c     | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x2/usb_init.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/usb_mac.c | 13 +------------
->  .../net/wireless/mediatek/mt76/mt76x2/usb_main.c    | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/usb_mcu.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/mt76x2/usb_phy.c | 13 +------------
->  drivers/net/wireless/mediatek/mt76/trace.c          | 13 +------------
->  drivers/net/wireless/mediatek/mt76/trace.h          | 13 +------------
->  drivers/net/wireless/mediatek/mt76/tx.c             | 13 +------------
->  drivers/net/wireless/mediatek/mt76/usb.c            | 13 +------------
->  drivers/net/wireless/mediatek/mt76/usb_trace.c      | 13 +------------
->  drivers/net/wireless/mediatek/mt76/usb_trace.h      | 13 +------------
->  drivers/net/wireless/mediatek/mt76/util.c           | 13 +------------
->  63 files changed, 63 insertions(+), 756 deletions(-)
->
-> diff --git a/drivers/net/wireless/mediatek/mt76/agg-rx.c b/drivers/net/wireless/mediatek/mt76/agg-rx.c
-> index 4d33efdb3555..fa4ab17df210 100644
-> --- a/drivers/net/wireless/mediatek/mt76/agg-rx.c
-> +++ b/drivers/net/wireless/mediatek/mt76/agg-rx.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include "mt76.h"
->
-> diff --git a/drivers/net/wireless/mediatek/mt76/debugfs.c b/drivers/net/wireless/mediatek/mt76/debugfs.c
-> index c6a9fe2aef9d..d95b73fd0d2b 100644
-> --- a/drivers/net/wireless/mediatek/mt76/debugfs.c
-> +++ b/drivers/net/wireless/mediatek/mt76/debugfs.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include "mt76.h"
->
-> diff --git a/drivers/net/wireless/mediatek/mt76/dma.c b/drivers/net/wireless/mediatek/mt76/dma.c
-> index bb223faa740f..46f5223b4d89 100644
-> --- a/drivers/net/wireless/mediatek/mt76/dma.c
-> +++ b/drivers/net/wireless/mediatek/mt76/dma.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/dma-mapping.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/dma.h b/drivers/net/wireless/mediatek/mt76/dma.h
-> index 03dd2bafa4e8..54f94104fda1 100644
-> --- a/drivers/net/wireless/mediatek/mt76/dma.h
-> +++ b/drivers/net/wireless/mediatek/mt76/dma.h
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #ifndef __MT76_DMA_H
->  #define __MT76_DMA_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/eeprom.c b/drivers/net/wireless/mediatek/mt76/eeprom.c
-> index b7a49ae6b327..804224e81103 100644
-> --- a/drivers/net/wireless/mediatek/mt76/eeprom.c
-> +++ b/drivers/net/wireless/mediatek/mt76/eeprom.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include <linux/of.h>
->  #include <linux/of_net.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mac80211.c b/drivers/net/wireless/mediatek/mt76/mac80211.c
-> index 20b8c0f9048e..d1075e13ecf7 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mac80211.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mac80211.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include <linux/of.h>
->  #include "mt76.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mcu.c b/drivers/net/wireless/mediatek/mt76/mcu.c
-> index dbb57b593a87..2a976688804d 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2019 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mmio.c b/drivers/net/wireless/mediatek/mt76/mmio.c
-> index 83c96a47914f..e996bd551475 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mmio.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mmio.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76.h b/drivers/net/wireless/mediatek/mt76/mt76.h
-> index 376c944704c1..9e6061015131 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c b/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
-> index 4585e1b756c2..b2ff1fd20162 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x0/pci_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x0/pci_mcu.c
-> index 490c1869f2c4..038187b390ce 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x0/pci_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x0/pci_mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include <linux/kernel.h>
->  #include <linux/firmware.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c
-> index 4a282761ca58..888a930a5e08 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->  #include <linux/kernel.h>
->  #include <linux/firmware.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02.h b/drivers/net/wireless/mediatek/mt76/mt76x02.h
-> index 7fa0c9eab164..35cf92a0d775 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02.h
-> @@ -1,18 +1,7 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Stanislaw Gruszka <stf_xl@wp.pl>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c b/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-> index f8847fbd0ade..12ee1e796cb8 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-> @@ -1,19 +1,8 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
->   * Copyright (C) 2018 Stanislaw Gruszka <stf_xl@wp.pl>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x02.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_debugfs.c b/drivers/net/wireless/mediatek/mt76/mt76x02_debugfs.c
-> index 1b1e424ccbb2..0cb2a7b35fe5 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_debugfs.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_debugfs.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/debugfs.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.c b/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.c
-> index 50e9b310e496..5dec33ed8527 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x02.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.h b/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.h
-> index 0408613b45a4..491010a32247 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_dfs.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_DFS_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h b/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h
-> index 6394010a565f..4aff4f8e87b6 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_DMA_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.c b/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.c
-> index 07f0496d828a..c54c50fd639a 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <asm/unaligned.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.h b/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.h
-> index 0ba536de3d6e..99941a4700f3 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_eeprom.h
-> @@ -1,18 +1,7 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_EEPROM_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mac.c b/drivers/net/wireless/mediatek/mt76/mt76x02_mac.c
-> index a3917d0a5120..abacb4ea7179 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_mac.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mac.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Stanislaw Gruszka <stf_xl@wp.pl>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x02.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mac.h b/drivers/net/wireless/mediatek/mt76/mt76x02_mac.h
-> index cb39da79527a..e2bf741937e7 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_mac.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mac.h
-> @@ -1,18 +1,7 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Stanislaw Gruszka <stf_xl@wp.pl>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76X02_MAC_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.c
-> index c1fd28dc9244..4be7a24097cc 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.h b/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.h
-> index a7b0d3e5df1d..c81a9655c4c9 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mcu.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_MCU_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c b/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c
-> index 8bf93684febf..dc773070481d 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_phy.c b/drivers/net/wireless/mediatek/mt76/mt76x02_phy.c
-> index b86a33b2a16d..d7334267b530 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_phy.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_phy.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_phy.h b/drivers/net/wireless/mediatek/mt76/mt76x02_phy.h
-> index d2971db06f13..fc2e41006a0d 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_phy.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_phy.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_PHY_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_regs.h b/drivers/net/wireless/mediatek/mt76/mt76x02_regs.h
-> index b2868ae79290..21c0f351fa09 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_regs.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_regs.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76X02_REGS_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_trace.c b/drivers/net/wireless/mediatek/mt76/mt76x02_trace.c
-> index 5b42d2c87937..a812c3a1e258 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_trace.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_trace.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_trace.h b/drivers/net/wireless/mediatek/mt76/mt76x02_trace.h
-> index ae884f539f3f..61ecaf0fe065 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_trace.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_trace.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #if !defined(__MT76x02_TRACE_H) || defined(TRACE_HEADER_MULTI_READ)
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_txrx.c b/drivers/net/wireless/mediatek/mt76/mt76x02_txrx.c
-> index 04118f08debc..f27aade34c1e 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_txrx.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_txrx.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_usb.h b/drivers/net/wireless/mediatek/mt76/mt76x02_usb.h
-> index 7b53f9e57f29..98329debc033 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_usb.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_usb.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x02_USB_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
-> index e4332d5a5757..78dfc1e7f27b 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_core.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x02_usb.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_mcu.c
-> index 0cb8751321a1..a993cd7e9948 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_usb_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_usb_mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_util.c b/drivers/net/wireless/mediatek/mt76/mt76x02_util.c
-> index e84006cd6f9a..2a5695ab3b88 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x02_util.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x02_util.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Stanislaw Gruszka <stf_xl@wp.pl>
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.c b/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.c
-> index f17058346ff1..9f91556c7f38 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.h b/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.h
-> index 9e735524d367..4dcf6518cb0d 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/eeprom.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x2_EEPROM_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/init.c b/drivers/net/wireless/mediatek/mt76/mt76x2/init.c
-> index 97c3543eed8a..79e583eb066b 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/init.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/init.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mac.c b/drivers/net/wireless/mediatek/mt76/mt76x2/mac.c
-> index e99d4c9bd428..e08740ca3d0c 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mac.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mac.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mac.h b/drivers/net/wireless/mediatek/mt76/mt76x2/mac.h
-> index 42ff221d7706..a1583021e1e9 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mac.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mac.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x2_MAC_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.c
-> index cd3e082f486c..76d8cd37d4de 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.h b/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.h
-> index 75f1b2acb141..41fd66563e82 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mcu.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x2_MCU_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2.h b/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2.h
-> index d7abe3d73bad..41680c420cda 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x2_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2u.h b/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2u.h
-> index 76cb1f84eff5..c876bac43751 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2u.h
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/mt76x2u.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #ifndef __MT76x2U_H
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c b/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c
-> index e84d5c5911ea..73c3104f8858 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_init.c b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_init.c
-> index b8f657517f37..343127f2d621 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_init.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_init.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/delay.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_main.c b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_main.c
-> index 3a1467326f4d..3921d965a106 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_main.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_main.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_mcu.c
-> index e38715c1bcad..ca6f968411ac 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_phy.c b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_phy.c
-> index 2edf1bd0c18c..23f35bf8d47b 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci_phy.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci_phy.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/delay.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/phy.c b/drivers/net/wireless/mediatek/mt76/mt76x2/phy.c
-> index 57212b049ee2..e4c6313b563a 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/phy.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/phy.c
-> @@ -1,18 +1,7 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb.c
-> index 7a994a783510..0b76341738a6 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/kernel.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_init.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_init.c
-> index 94f52f98019b..2910068f4e79 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_init.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_init.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/delay.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mac.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mac.c
-> index 3b82345756ea..e7fea3a6f1fd 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mac.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mac.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2u.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_main.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_main.c
-> index e4dfc3bea3c5..6b4c94101fb8 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_main.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_main.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2u.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mcu.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mcu.c
-> index 152d41fe9ff5..dd22d8af0901 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_mcu.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/firmware.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_phy.c b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_phy.c
-> index dfd54f9b0e97..b1381f9df992 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt76x2/usb_phy.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt76x2/usb_phy.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76x2u.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/trace.c b/drivers/net/wireless/mediatek/mt76/trace.c
-> index ea4ab8729ae4..ed3df3c8b4b3 100644
-> --- a/drivers/net/wireless/mediatek/mt76/trace.c
-> +++ b/drivers/net/wireless/mediatek/mt76/trace.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/trace.h b/drivers/net/wireless/mediatek/mt76/trace.h
-> index 06fc21a43a1f..0b3e635da868 100644
-> --- a/drivers/net/wireless/mediatek/mt76/trace.h
-> +++ b/drivers/net/wireless/mediatek/mt76/trace.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #if !defined(__MT76_TRACE_H) || defined(TRACE_HEADER_MULTI_READ)
-> diff --git a/drivers/net/wireless/mediatek/mt76/tx.c b/drivers/net/wireless/mediatek/mt76/tx.c
-> index 3b73f3b3f576..fb86ad956478 100644
-> --- a/drivers/net/wireless/mediatek/mt76/tx.c
-> +++ b/drivers/net/wireless/mediatek/mt76/tx.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include "mt76.h"
-> diff --git a/drivers/net/wireless/mediatek/mt76/usb.c b/drivers/net/wireless/mediatek/mt76/usb.c
-> index 76fed459ae58..e0fc86ffe685 100644
-> --- a/drivers/net/wireless/mediatek/mt76/usb.c
-> +++ b/drivers/net/wireless/mediatek/mt76/usb.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/usb_trace.c b/drivers/net/wireless/mediatek/mt76/usb_trace.c
-> index 7e1f540f0b7a..9942bdd6177b 100644
-> --- a/drivers/net/wireless/mediatek/mt76/usb_trace.c
-> +++ b/drivers/net/wireless/mediatek/mt76/usb_trace.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> diff --git a/drivers/net/wireless/mediatek/mt76/usb_trace.h b/drivers/net/wireless/mediatek/mt76/usb_trace.h
-> index 518ad1a26e21..f5ab3215af80 100644
-> --- a/drivers/net/wireless/mediatek/mt76/usb_trace.h
-> +++ b/drivers/net/wireless/mediatek/mt76/usb_trace.h
-> @@ -1,17 +1,6 @@
-> +/* SPDX-License-Identifier: ISC */
->  /*
->   * Copyright (C) 2018 Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #if !defined(__MT76_USB_TRACE_H) || defined(TRACE_HEADER_MULTI_READ)
-> diff --git a/drivers/net/wireless/mediatek/mt76/util.c b/drivers/net/wireless/mediatek/mt76/util.c
-> index 69270c1a9091..23d1e1da78b2 100644
-> --- a/drivers/net/wireless/mediatek/mt76/util.c
-> +++ b/drivers/net/wireless/mediatek/mt76/util.c
-> @@ -1,17 +1,6 @@
-> +// SPDX-License-Identifier: ISC
->  /*
->   * Copyright (C) 2016 Felix Fietkau <nbd@nbd.name>
-> - *
-> - * Permission to use, copy, modify, and/or distribute this software for any
-> - * purpose with or without fee is hereby granted, provided that the above
-> - * copyright notice and this permission notice appear in all copies.
-> - *
-> - * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-> - * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-> - * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-> - * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-> - * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-> - * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-> - * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
->   */
->
->  #include <linux/module.h>
-> --
-> 2.18.0
->
+>  MAINTAINERS                |   1 +
+>  drivers/media/i2c/Kconfig  |  10 +
+>  drivers/media/i2c/Makefile |   1 +
+>  drivers/media/i2c/dw9768.c | 458 +++++++++++++++++++++++++++++++++++++++++++++
+>  4 files changed, 470 insertions(+)
+>  create mode 100644 drivers/media/i2c/dw9768.c
+> 
+> diff --git a/MAINTAINERS b/MAINTAINERS
+> index 8f6ac93..17152d7 100644
+> --- a/MAINTAINERS
+> +++ b/MAINTAINERS
+> @@ -4877,6 +4877,7 @@ M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
+>  L:	linux-media@vger.kernel.org
+>  T:	git git://linuxtv.org/media_tree.git
+>  S:	Maintained
+> +F:	drivers/media/i2c/dw9768.c
+>  F:	Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.txt
+>  
+>  DONGWOON DW9807 LENS VOICE COIL DRIVER
+> diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
+> index 7793358..8ff6c95 100644
+> --- a/drivers/media/i2c/Kconfig
+> +++ b/drivers/media/i2c/Kconfig
+> @@ -1014,6 +1014,16 @@ config VIDEO_DW9714
+>  	  capability. This is designed for linear control of
+>  	  voice coil motors, controlled via I2C serial interface.
+>  
+> +config VIDEO_DW9768
+> +	tristate "DW9768 lens voice coil support"
+> +	depends on I2C && VIDEO_V4L2 && MEDIA_CONTROLLER
+> +	depends on VIDEO_V4L2_SUBDEV_API
+> +	help
+> +	  This is a driver for the DW9768 camera lens voice coil.
+> +	  DW9768 is a 10 bit DAC with 100mA output current sink
+> +	  capability. This is designed for linear control of
+> +	  voice coil motors, controlled via I2C serial interface.
+> +
+>  config VIDEO_DW9807_VCM
+>  	tristate "DW9807 lens voice coil support"
+>  	depends on I2C && VIDEO_V4L2 && MEDIA_CONTROLLER
+> diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
+> index d8ad9da..944fbf6 100644
+> --- a/drivers/media/i2c/Makefile
+> +++ b/drivers/media/i2c/Makefile
+> @@ -24,6 +24,7 @@ obj-$(CONFIG_VIDEO_SAA6752HS) += saa6752hs.o
+>  obj-$(CONFIG_VIDEO_AD5820)  += ad5820.o
+>  obj-$(CONFIG_VIDEO_AK7375)  += ak7375.o
+>  obj-$(CONFIG_VIDEO_DW9714)  += dw9714.o
+> +obj-$(CONFIG_VIDEO_DW9768)  += dw9768.o
+>  obj-$(CONFIG_VIDEO_DW9807_VCM)  += dw9807-vcm.o
+>  obj-$(CONFIG_VIDEO_ADV7170) += adv7170.o
+>  obj-$(CONFIG_VIDEO_ADV7175) += adv7175.o
+> diff --git a/drivers/media/i2c/dw9768.c b/drivers/media/i2c/dw9768.c
+> new file mode 100644
+> index 0000000..f5b5591
+> --- /dev/null
+> +++ b/drivers/media/i2c/dw9768.c
+> @@ -0,0 +1,458 @@
+> +// SPDX-License-Identifier: GPL-2.0
+> +/*
+> + * Copyright (c) 2018 MediaTek Inc.
+> + */
+> +
+> +#include <linux/delay.h>
+> +#include <linux/i2c.h>
+> +#include <linux/module.h>
+> +#include <linux/regulator/consumer.h>
+> +#include <linux/pm_runtime.h>
+> +#include <media/v4l2-ctrls.h>
+> +#include <media/v4l2-device.h>
+> +#include <media/v4l2-subdev.h>
+> +
+> +#define DW9768_VOLTAGE_ANALOG			2800000
+> +#define DW9768_NAME				"dw9768"
+> +#define DW9768_MAX_FOCUS_POS			1023
+> +/*
+> + * This sets the minimum granularity for the focus positions.
+> + * A value of 1 gives maximum accuracy for a desired focus position
+> + */
+> +#define DW9768_FOCUS_STEPS			1
+> +
+> +#define DW9768_CTRL_DELAY_US			5000
+> +
+> +#define DW9768_REG_DAC_MSB			0x03
+> +#define DW9768_REG_DAC_LSB			0x04
+> +#define DW9768_REG_NULL				0xff
+> +
+> +#define DW9768_DAC_SHIFT			8
+> +
+> +#define DW9768_REG_VALUE_16BIT			2
+> +
+> +/* dw9768 device structure */
+> +struct dw9768_device {
+> +	struct v4l2_ctrl_handler ctrls;
+> +	struct v4l2_subdev sd;
+> +	struct regulator *analog_regulator;
+> +	/*
+> +	 * Serialize control access, get/set format, get selection
+> +	 * and start streaming.
+> +	 */
+> +	struct mutex power_lock;
+> +
+> +	int power_count;
+> +	bool standby;
+> +};
+> +
+> +static inline struct dw9768_device *to_dw9768_vcm(struct v4l2_ctrl *ctrl)
+> +{
+> +	return container_of(ctrl->handler, struct dw9768_device, ctrls);
+> +}
+> +
+> +static inline struct dw9768_device *sd_to_dw9768_vcm(struct v4l2_subdev *subdev)
+> +{
+> +	return container_of(subdev, struct dw9768_device, sd);
+> +}
+> +
+> +static int dw9768_i2c_write(struct dw9768_device *dw9768_dev, u8 *data,
+> +			    int size)
+> +{
+> +	struct i2c_client *client = v4l2_get_subdevdata(&dw9768_dev->sd);
+> +	struct i2c_msg msg;
+> +	u8 *w_buf = NULL;
+> +	u8 retry_cnt = 3;
+> +	int ret;
+> +
+> +	if (!client->adapter)
+> +		return -ENODEV;
+> +
+> +	if (size != 1 && size != 2)
+> +		return -EINVAL;
+> +
+> +	memset(&msg, 0, sizeof(struct i2c_msg));
+> +
+> +	w_buf = kzalloc(size, GFP_KERNEL);
+> +	if (!w_buf)
+> +		return -1;
+return -ENOMEM;
+> +
+> +	memcpy(w_buf, data, size);
+> +
+> +	msg.addr  = client->addr;
+> +	msg.flags = 0;
+> +	msg.len   = size;
+> +	msg.buf   = w_buf;
+> +
+> +	do {
+> +		ret = i2c_transfer(client->adapter, &msg, 1);
+> +		if (ret != 1)
+> +			dev_err(&client->dev, "write fail, ret:%d, retry:%d\n",
+> +				ret, retry_cnt);
+> +		else
+> +			break;
+> +		retry_cnt--;
+> +	} while (retry_cnt != 0);
+> +
+> +	if (retry_cnt == 0)	{
+> +		dev_err(&client->dev, "i2c write fail(%d)\n", ret);
+> +		return -EIO;
+> +	}
+> +
+> +	kfree(w_buf);
+> +
+> +	return 0;
+> +}
+> +
+> +static int dw9768_release(struct dw9768_device *dw9768_dev)
+> +{
+> +	unsigned char i;
+> +	int ret;
+> +
+> +	char puSendCmdArray[4][2] = {
+> +		{0x02, 0x00}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> +		{0x01, 0x00}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> +	};
+> +
+> +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {> +		if (puSendCmdArray[i][0] != DW9768_REG_NULL) {
+> +			ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> +					       DW9768_REG_VALUE_16BIT);
+> +			if (ret < 0)
+> +				return ret;
+> +		} else {
+> +			usleep_range(DW9768_CTRL_DELAY_US,
+> +				     DW9768_CTRL_DELAY_US + 100);
+> +		}
+> +	}
+Can we make this block more simple?  I think the loop is not necessary.
+> +
+> +	return 0;
+> +}
+> +
+> +static int dw9768_init(struct dw9768_device *dw9768_dev)
+> +{
+> +	unsigned char i;
+> +	int ret;
+> +
+> +	char puSendCmdArray[5][2] = {
+> +		{0x02, 0x02}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> +		{0x06, 0x41}, {0x07, 0x39}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> +	};
+> +
+> +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {
+> +		if (puSendCmdArray[i][0] != DW9768_REG_NULL) {
+> +			ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> +					       DW9768_REG_VALUE_16BIT);
+> +			if (ret < 0)
+> +				return ret;
+> +		} else {
+> +			usleep_range(DW9768_CTRL_DELAY_US,
+> +				     DW9768_CTRL_DELAY_US + 100);
+> +		}
+> +	}
+Ditto.
+> +
+> +	return 0;
+> +}
+> +
+> +/*
+> + * Power handling
+> + */
+> +static int dw9768_power_off(struct dw9768_device *dw9768_dev, bool standby)
+> +{
+> +	struct i2c_client *client = v4l2_get_subdevdata(&dw9768_dev->sd);
+> +	int ret;
+> +
+> +	/*
+> +	 * Go to standby first as real power off my be denied by the hardware
+typo? "may be denied"
+> +	 * (single power line control for both dw9768_dev and sensor).
+> +	 */
+> +	if (standby) {
+> +		dw9768_dev->standby = true;
+> +		ret = dw9768_release(dw9768_dev);
+> +		if (ret)
+> +			dev_err(&client->dev, "dw9768_release failed!\n");
+> +	}
+> +	ret = regulator_disable(dw9768_dev->analog_regulator);
+> +	if (ret)
+> +		return ret;
+> +
+> +	return 0;
+> +}
+> +
+> +static int dw9768_power_on(struct dw9768_device *dw9768_dev, bool restore)
+> +{
+> +	int ret;
+> +
+> +	ret = regulator_enable(dw9768_dev->analog_regulator);
+> +	if (ret < 0)
+> +		return ret;
+> +
+> +	if (restore) {
+> +		/* Restore the hardware settings. */
+> +		dw9768_dev->standby = false;
+> +		ret = dw9768_init(dw9768_dev);
+> +		if (ret < 0)
+> +			goto fail;
+> +	}
+> +
+> +	return 0;
+> +
+> +fail:
+> +	dw9768_dev->standby = true;
+> +	regulator_disable(dw9768_dev->analog_regulator);
+> +
+> +	return ret;
+> +}
+> +
+> +/*
+> + * Calculate status word and write it to the device based on current
+> + * values of V4L2 controls. It is assumed that the stored V4L2 control
+> + * values are properly limited and rounded.
+> + */
+> +static int dw9768_update_hw(struct dw9768_device *dw9768_dev, u16 val)
+> +{
+> +	unsigned char i;
+> +	int ret;
+> +
+> +	char puSendCmdArray[2][2] = {
+> +		{DW9768_REG_DAC_MSB, (char)(val >> DW9768_DAC_SHIFT)},
+> +		{DW9768_REG_DAC_LSB, (char)(val & 0xFF)},
+> +	};
+> +
+> +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {
+> +		ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> +				       DW9768_REG_VALUE_16BIT);
+> +		if (ret)
+> +			return ret;
+> +	}
+ditto.
+> +
+> +	return 0;
+> +}
+> +
+> +static int dw9768_set_ctrl(struct v4l2_ctrl *ctrl)
+> +{
+> +	struct dw9768_device *dw9768_dev = to_dw9768_vcm(ctrl);
+> +
+> +	if (ctrl->id == V4L2_CID_FOCUS_ABSOLUTE)
+> +		return dw9768_update_hw(dw9768_dev, ctrl->val);
+> +
+> +	return 0;
+> +}
+> +
+> +static const struct v4l2_ctrl_ops dw9768_vcm_ctrl_ops = {
+> +	.s_ctrl = dw9768_set_ctrl,
+> +};
+> +
+> +static int
+> +dw9768_set_power(struct v4l2_subdev *subdev, int on)
+> +{
+> +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(subdev);
+> +	int ret = 0;
+> +
+> +	mutex_lock(&dw9768_dev->power_lock);
+> +
+> +	/*
+> +	 * If the power count is modified from 0 to != 0 or from != 0 to 0,
+> +	 * update the power state.
+> +	 */
+> +	if (dw9768_dev->power_count == !on) {
+> +		ret = on ? dw9768_power_on(dw9768_dev, true) :
+> +			dw9768_power_off(dw9768_dev, true);
+> +		if (ret < 0)
+> +			goto done;
+> +	}
+> +
+> +	/* Update the power count. */
+> +	dw9768_dev->power_count += on ? 1 : -1;
+> +	WARN_ON(dw9768_dev->power_count < 0);
+> +
+> +done:
+> +	mutex_unlock(&dw9768_dev->power_lock);
+> +	return ret;
+> +}
+> +
+> +static int dw9768_open(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+> +{
+> +	return dw9768_set_power(sd, 1);
+> +}
+> +
+> +static int dw9768_close(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+> +{
+> +	return dw9768_set_power(sd, 0);
+> +}
+I am a little confused about the pm control here.
+Could we use the pm generic APIs to help do this?
+> +
+> +static const struct v4l2_subdev_internal_ops dw9768_int_ops = {
+> +	.open = dw9768_open,
+> +	.close = dw9768_close,
+> +};
+> +
+> +static const struct v4l2_subdev_ops dw9768_ops = { };
+> +
+> +static void dw9768_subdev_cleanup(struct dw9768_device *dw9768_dev)
+> +{
+> +	v4l2_async_unregister_subdev(&dw9768_dev->sd);
+> +	v4l2_ctrl_handler_free(&dw9768_dev->ctrls);
+> +	media_entity_cleanup(&dw9768_dev->sd.entity);
+> +}
+> +
+> +static int dw9768_init_controls(struct dw9768_device *dw9768_dev)
+> +{
+> +	struct v4l2_ctrl_handler *hdl = &dw9768_dev->ctrls;
+> +	const struct v4l2_ctrl_ops *ops = &dw9768_vcm_ctrl_ops;
+> +
+> +	v4l2_ctrl_handler_init(hdl, 1);
+> +
+> +	v4l2_ctrl_new_std(hdl, ops, V4L2_CID_FOCUS_ABSOLUTE,
+> +			  0, DW9768_MAX_FOCUS_POS, DW9768_FOCUS_STEPS, 0);
+> +
+> +	if (hdl->error) {
+> +		dev_err(dw9768_dev->sd.dev, "%s fail error: 0x%x\n",
+> +			__func__, hdl->error);
+> +		return hdl->error;
+> +	}
+> +
+> +	dw9768_dev->sd.ctrl_handler = hdl;
+> +
+> +	return 0;
+> +}
+> +
+> +static int dw9768_probe(struct i2c_client *client)
+> +{
+> +	struct device *dev = &client->dev;
+> +	struct dw9768_device *dw9768_dev;
+> +	int rval;
+> +
+> +	dw9768_dev = devm_kzalloc(&client->dev, sizeof(*dw9768_dev),
+> +				  GFP_KERNEL);
+> +	if (!dw9768_dev)
+> +		return -ENOMEM;
+> +
+> +	dw9768_dev->analog_regulator = devm_regulator_get(dev, "afvdd");
+> +	if (IS_ERR(dw9768_dev->analog_regulator)) {
+> +		dev_err(dev, "cannot get analog regulator\n");
+> +		return PTR_ERR(dw9768_dev->analog_regulator);
+> +	}
+> +
+> +	rval = regulator_set_voltage(dw9768_dev->analog_regulator,
+> +				     DW9768_VOLTAGE_ANALOG,
+> +				     DW9768_VOLTAGE_ANALOG);
+> +	if (rval < 0) {
+> +		dev_err(dev, "cannot set analog voltage\n");
+> +		return rval;
+> +	}
+> +
+> +	mutex_init(&dw9768_dev->power_lock);
+> +
+> +	v4l2_i2c_subdev_init(&dw9768_dev->sd, client, &dw9768_ops);
+> +	dw9768_dev->sd.flags |= V4L2_SUBDEV_FL_HAS_DEVNODE;
+> +	dw9768_dev->sd.internal_ops = &dw9768_int_ops;
+> +
+> +	rval = dw9768_init_controls(dw9768_dev);
+> +	if (rval)
+> +		goto err_cleanup;
+> +
+> +	rval = media_entity_pads_init(&dw9768_dev->sd.entity, 0, NULL);
+> +	if (rval < 0)
+> +		goto err_cleanup;
+> +
+> +	dw9768_dev->sd.entity.function = MEDIA_ENT_F_LENS;
+> +
+> +	rval = v4l2_async_register_subdev(&dw9768_dev->sd);
+> +	if (rval < 0)
+> +		goto err_cleanup;
+> +
+> +	pm_runtime_set_active(dev);
+> +	pm_runtime_enable(dev);
+> +	pm_runtime_idle(dev);
+> +
+> +	return 0;
+> +
+> +err_cleanup:
+> +	mutex_destroy(&dw9768_dev->power_lock);
+> +	dw9768_subdev_cleanup(dw9768_dev);
+> +	dev_err(dev, "Probe failed: %d\n", rval);
+> +	return rval;
+> +}
+> +
+> +static int dw9768_remove(struct i2c_client *client)
+> +{
+> +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> +
+> +	pm_runtime_disable(&client->dev);
+> +	dw9768_subdev_cleanup(dw9768_dev);
+> +
+> +	return 0;
+> +}
+> +
+> +/*
+> + * This function sets the vcm position, so it consumes least current
+> + * The lens position is gradually moved in units of DW9768_CTRL_STEPS,
+> + * to make the movements smoothly.
+> + */
+> +static int __maybe_unused dw9768_vcm_suspend(struct device *dev)
+> +{
+> +	struct i2c_client *client = to_i2c_client(dev);
+> +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> +
+> +	if (!dw9768_dev->power_count)
+> +		return 0;
+> +
+> +	return dw9768_power_off(dw9768_dev, false);
+> +}
+> +
+> +/*
+> + * This function sets the vcm position to the value set by the user
+> + * through v4l2_ctrl_ops s_ctrl handler
+> + * The lens position is gradually moved in units of DW9768_CTRL_STEPS,
+> + * to make the movements smoothly.
+> + */
+> +static int __maybe_unused dw9768_vcm_resume(struct device *dev)
+> +{
+> +	struct i2c_client *client = to_i2c_client(dev);
+> +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> +
+> +	if (!dw9768_dev->power_count)
+> +		return 0;
+> +
+> +	return dw9768_power_on(dw9768_dev, true);
+> +}
+> +
+> +static const struct i2c_device_id dw9768_id_table[] = {
+> +	{ DW9768_NAME, 0 },
+> +	{ { 0 } }
+> +};
+> +MODULE_DEVICE_TABLE(i2c, dw9768_id_table);
+> +
+> +static const struct of_device_id dw9768_of_table[] = {
+> +	{ .compatible = "dongwoon,dw9768" },
+> +	{ { 0 } }
+> +};
+> +MODULE_DEVICE_TABLE(of, dw9768_of_table);
+> +
+> +static const struct dev_pm_ops dw9768_pm_ops = {
+> +	SET_SYSTEM_SLEEP_PM_OPS(dw9768_vcm_suspend, dw9768_vcm_resume)
+> +	SET_RUNTIME_PM_OPS(dw9768_vcm_suspend, dw9768_vcm_resume, NULL)
+> +};
+> +
+> +static struct i2c_driver dw9768_i2c_driver = {
+> +	.driver = {
+> +		.name = DW9768_NAME,
+> +		.pm = &dw9768_pm_ops,
+> +		.of_match_table = dw9768_of_table,
+> +	},
+> +	.probe_new  = dw9768_probe,
+> +	.remove = dw9768_remove,
+> +	.id_table = dw9768_id_table,
+> +};
+> +
+> +module_i2c_driver(dw9768_i2c_driver);
+> +
+> +MODULE_AUTHOR("Dongchun Zhu <dongchun.zhu@mediatek.com>");
+> +MODULE_DESCRIPTION("DW9768 VCM driver");
+> +MODULE_LICENSE("GPL v2");
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
