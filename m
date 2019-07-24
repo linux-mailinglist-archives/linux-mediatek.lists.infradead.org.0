@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C6A6D730CA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:03:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BCD04730D5
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:03:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=F2lEAeN/zLUAQHk1k4fcX9hRKJel0dFO13cFUMtTf0Y=; b=Cgdo3M7+9mgSloT5ahOC/KgO09
-	rsr+aN6GCjyt6PrYaKQAISEmQ0SXL58TcV5AyExtLr8DjTGC1A9MO1gYGPFfSHBa0b2WJvl112xVM
-	0EJo/cFFy8O+g3WszGK//NI0Q4k7zpDPfU7Dh7SkZX/FYxIn8SyW8KZdzmpAFoO99R4leQmkkTni5
-	Mk1y2ou2TjbFL5xate3Ozk1+WN+LWmwS0S/TYLWL5a7nqcGbDpiBWZALcbXQekOqjStToGJ5t5bl6
-	8xNRK6MKOcrrO7+LXkRxSkdOYlaVc7mFVuhjPGQQmuzxvMoXA7rrLjONwF+2+N6RtWHkmkQ5f0BQ4
-	aWh/25Hg==;
+	bh=XFMxoQt0FakrJXJEeqBSC4VYoPjBm9+wXW+i7JabsNE=; b=nzg3Ku2+Atkk/w1D4shbUJ5q/+
+	cixfRASu+5rBvPKXmPq8MMFIIGZMR+MGdxjvFs26o0PD7lC8aZbwSUCp/kWRutizYwZbXW7TX5jsD
+	F9Zv4o2+R57+8S6sqK8bNkpoB5s+tq7iN0PMAxXmY5QkkGCf8rPRSkdPm+tWgu7T8IyzkFnIwYkQa
+	Jjg1j5cOmcCvYOL6wXK/fLXk1uji8pWOF2iRei5tiOCiuTXgNs/VHdrknbtHJ0k3SkYBDOHE41uCc
+	lB4I81eX0+/AX3WcuUrt7QuD0gOt65z4Aqzb/jKwtCzxULJ1DBjV5Gu/vUo6nWzC/52npQQWpxq5R
+	m7hr3uFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqHrk-00085p-F6; Wed, 24 Jul 2019 14:03:36 +0000
+	id 1hqHs1-0008CP-03; Wed, 24 Jul 2019 14:03:53 +0000
 Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqHrh-00084z-44; Wed, 24 Jul 2019 14:03:34 +0000
+ id 1hqHrx-0008BV-OV; Wed, 24 Jul 2019 14:03:51 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id B7C2E26D598
+ (Authenticated sender: andrzej.p) with ESMTPSA id CD83627E5D2
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v5 13/24] drm: zte: Provide ddc symlink in hdmi connector
- sysfs directory
-Date: Wed, 24 Jul 2019 15:59:35 +0200
-Message-Id: <acafbea21c1af8301afcfb8e56ea1a186163e39c.1563960855.git.andrzej.p@collabora.com>
+Subject: [PATCH v5 14/24] drm: zte: Provide ddc symlink in vga connector sysfs
+ directory
+Date: Wed, 24 Jul 2019 15:59:36 +0200
+Message-Id: <be7b7fc2e0b4e653e378a8e889c6f16c5bd47d1e.1563960855.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_070333_436975_13B44C74 
-X-CRM114-Status: GOOD (  14.38  )
+X-CRM114-CacheID: sfid-20190724_070350_084199_6AF32C3D 
+X-CRM114-Status: GOOD (  14.89  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -66,8 +66,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
  David Airlie <airlied@linux.ie>, Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -80,10 +80,11 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>, Chen-Yu Tsai <wens@csie.org>,
  Kukjin Kim <kgene@kernel.org>, NXP Linux Team <linux-imx@nxp.com>,
  CK Hu <ck.hu@mediatek.com>, Dave Airlie <airlied@redhat.com>,
- intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
- freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
- linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
+ Harry Wentland <harry.wentland@amd.com>, intel-gfx@lists.freedesktop.org,
+ Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
+ linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
  Alexios Zavras <alexios.zavras@intel.com>,
@@ -113,96 +114,97 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/zte/zx_hdmi.c | 31 +++++++++++++------------------
+ drivers/gpu/drm/zte/zx_vga.c | 31 +++++++++++++------------------
  1 file changed, 13 insertions(+), 18 deletions(-)
 
-diff --git a/drivers/gpu/drm/zte/zx_hdmi.c b/drivers/gpu/drm/zte/zx_hdmi.c
-index a50f5a1f09b8..502d357b40a5 100644
---- a/drivers/gpu/drm/zte/zx_hdmi.c
-+++ b/drivers/gpu/drm/zte/zx_hdmi.c
-@@ -29,15 +29,11 @@
- #define ZX_HDMI_INFOFRAME_SIZE		31
- #define DDC_SEGMENT_ADDR		0x30
+diff --git a/drivers/gpu/drm/zte/zx_vga.c b/drivers/gpu/drm/zte/zx_vga.c
+index 9b67e419280c..1bc6e9bce7e0 100644
+--- a/drivers/gpu/drm/zte/zx_vga.c
++++ b/drivers/gpu/drm/zte/zx_vga.c
+@@ -25,15 +25,11 @@ struct zx_vga_pwrctrl {
+ 	u32 mask;
+ };
  
--struct zx_hdmi_i2c {
+-struct zx_vga_i2c {
 -	struct i2c_adapter adap;
 -	struct mutex lock;
 -};
 -
- struct zx_hdmi {
+ struct zx_vga {
  	struct drm_connector connector;
  	struct drm_encoder encoder;
--	struct zx_hdmi_i2c *ddc;
+-	struct zx_vga_i2c *ddc;
 +	/* protects ddc access */
 +	struct mutex ddc_lock;
  	struct device *dev;
- 	struct drm_device *drm;
  	void __iomem *mmio;
-@@ -264,7 +260,7 @@ static int zx_hdmi_connector_get_modes(struct drm_connector *connector)
- 	struct edid *edid;
- 	int ret;
+ 	struct clk *i2c_wclk;
+@@ -88,7 +84,7 @@ static int zx_vga_connector_get_modes(struct drm_connector *connector)
+ 	 */
+ 	zx_writel(vga->mmio + VGA_AUTO_DETECT_SEL, 0);
  
--	edid = drm_get_edid(connector, &hdmi->ddc->adap);
+-	edid = drm_get_edid(connector, &vga->ddc->adap);
 +	edid = drm_get_edid(connector, connector->ddc);
- 	if (!edid)
- 		return 0;
+ 	if (!edid) {
+ 		/*
+ 		 * If EDID reading fails, we set the device state into
+@@ -165,8 +161,10 @@ static int zx_vga_register(struct drm_device *drm, struct zx_vga *vga)
  
-@@ -319,8 +315,10 @@ static int zx_hdmi_register(struct drm_device *drm, struct zx_hdmi *hdmi)
+ 	vga->connector.polled = DRM_CONNECTOR_POLL_HPD;
  
- 	hdmi->connector.polled = DRM_CONNECTOR_POLL_HPD;
- 
--	drm_connector_init(drm, &hdmi->connector, &zx_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	drm_connector_init_with_ddc(drm, &hdmi->connector,
-+				    &zx_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    hdmi->connector.ddc);
- 	drm_connector_helper_add(&hdmi->connector,
- 				 &zx_hdmi_connector_helper_funcs);
- 
-@@ -562,10 +560,9 @@ static int zx_hdmi_i2c_xfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
- 			    int num)
+-	ret = drm_connector_init(drm, connector, &zx_vga_connector_funcs,
+-				 DRM_MODE_CONNECTOR_VGA);
++	ret = drm_connector_init_with_ddc(drm, connector,
++					  &zx_vga_connector_funcs,
++					  DRM_MODE_CONNECTOR_VGA,
++					  connector->ddc);
+ 	if (ret) {
+ 		DRM_DEV_ERROR(dev, "failed to init connector: %d\n", ret);
+ 		goto clean_encoder;
+@@ -284,11 +282,10 @@ static int zx_vga_i2c_xfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
+ 			   int num)
  {
- 	struct zx_hdmi *hdmi = i2c_get_adapdata(adap);
--	struct zx_hdmi_i2c *ddc = hdmi->ddc;
- 	int i, ret = 0;
+ 	struct zx_vga *vga = i2c_get_adapdata(adap);
+-	struct zx_vga_i2c *ddc = vga->ddc;
+ 	int ret = 0;
+ 	int i;
  
 -	mutex_lock(&ddc->lock);
-+	mutex_lock(&hdmi->ddc_lock);
++	mutex_lock(&vga->ddc_lock);
  
- 	/* Enable DDC master access */
- 	hdmi_writeb_mask(hdmi, TPI_DDC_MASTER_EN, HW_DDC_MASTER, HW_DDC_MASTER);
-@@ -590,7 +587,7 @@ static int zx_hdmi_i2c_xfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
- 	/* Disable DDC master access */
- 	hdmi_writeb_mask(hdmi, TPI_DDC_MASTER_EN, HW_DDC_MASTER, 0);
+ 	for (i = 0; i < num; i++) {
+ 		if (msgs[i].flags & I2C_M_RD)
+@@ -303,7 +300,7 @@ static int zx_vga_i2c_xfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
+ 	if (!ret)
+ 		ret = num;
  
 -	mutex_unlock(&ddc->lock);
-+	mutex_unlock(&hdmi->ddc_lock);
++	mutex_unlock(&vga->ddc_lock);
  
  	return ret;
  }
-@@ -608,17 +605,15 @@ static const struct i2c_algorithm zx_hdmi_algorithm = {
- static int zx_hdmi_ddc_register(struct zx_hdmi *hdmi)
+@@ -322,17 +319,15 @@ static int zx_vga_ddc_register(struct zx_vga *vga)
  {
+ 	struct device *dev = vga->dev;
  	struct i2c_adapter *adap;
--	struct zx_hdmi_i2c *ddc;
+-	struct zx_vga_i2c *ddc;
  	int ret;
  
--	ddc = devm_kzalloc(hdmi->dev, sizeof(*ddc), GFP_KERNEL);
+-	ddc = devm_kzalloc(dev, sizeof(*ddc), GFP_KERNEL);
 -	if (!ddc)
-+	adap = devm_kzalloc(hdmi->dev, sizeof(*adap), GFP_KERNEL);
++	adap = devm_kzalloc(dev, sizeof(*adap), GFP_KERNEL);
 +	if (!adap)
  		return -ENOMEM;
  
--	hdmi->ddc = ddc;
+-	vga->ddc = ddc;
 -	mutex_init(&ddc->lock);
-+	hdmi->connector.ddc = adap;
-+	mutex_init(&hdmi->ddc_lock);
++	vga->connector.ddc = adap;
++	mutex_init(&vga->ddc_lock);
  
 -	adap = &ddc->adap;
  	adap->owner = THIS_MODULE;
  	adap->class = I2C_CLASS_DDC;
- 	adap->dev.parent = hdmi->dev;
+ 	adap->dev.parent = dev;
 -- 
 2.17.1
 
