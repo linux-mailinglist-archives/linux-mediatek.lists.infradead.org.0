@@ -2,63 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 49DA573DEE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:21:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C262E74058
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:45:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CRTeQJHYp4JpKE8Zl+qJdpTA59r9lk6+X+Wb0xoshNY=; b=PD5l0tDwsIZjT2
-	pjU6k8S8c54t+0IAFXuchk0YhQfMh7Ro7O2lBrfzMkFBn8Bske2Lpt+PTRlYvDvuSmi7pMBp1K8mY
-	9cbQ9mAqOykwE+6q7QpAjKmVSF3/U9Lq1R240pjwqoPmZB0cbhMYNpEUxAPxgfvJ/uAMFJCywvk7Y
-	YYsBGPa6W6ehWcd1mCo+Ad1hpuzW2Pl35dZ2m9w8UITyV4ZZPzC0IbKvvQ0Ic9aI/L/fFol8cSd2S
-	lVNEUxgSB/6Wv5PzeIu4CwC8KbCUjvEpx7+uVXzf7hNaSg34o0m2HR0w/OkLflMAjRs4b/A1sOjez
-	x5G479ZnPzZ0TzIdNRfQ==;
+	List-Owner; bh=oLScEr6Djes098g703fDb61WA/HeuwJp6c/gfJVHBUE=; b=V2o3I68h9XA8xz
+	XT1B1Dn8ZOgIwWT6NorJEP3PmsrpsIIzQ79QbsAII5IRla/YXX0OwYhnREgzNOFWC0GEJbEBULWnz
+	rEafpGlwfh6O4UQCkx3vx7fO08Y6+YkawaBprlp8XIau6L6eq1k0ZM65HWD4TkHGdCSljLAXZrF2v
+	x69aBsPkkxhPgZt9dOwfEeYLrXu1e72HPKHZEAeLUrvqFSXpgzxGiCkij/NIu5IMeN3UeRJwoUx32
+	TsXiSXdtFL6nOz9RUja5nLdrCWqV7s3CS9Dvi9OUYEeqJr58Jixs2tbJZmnRrMqE0Ibyr4rVothHu
+	OSe51gNkSenJRMRjRHrg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqNlc-0003xY-5L; Wed, 24 Jul 2019 20:21:40 +0000
+	id 1hqO8r-0005Ss-5f; Wed, 24 Jul 2019 20:45:41 +0000
 Received: from mail-io1-f66.google.com ([209.85.166.66])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqNlJ-0003lb-9p; Wed, 24 Jul 2019 20:21:22 +0000
-Received: by mail-io1-f66.google.com with SMTP id k20so92320159ios.10;
- Wed, 24 Jul 2019 13:21:21 -0700 (PDT)
+ id 1hqO8W-0005Fr-NT; Wed, 24 Jul 2019 20:45:22 +0000
+Received: by mail-io1-f66.google.com with SMTP id z3so92561297iog.0;
+ Wed, 24 Jul 2019 13:45:20 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=RJ9nHyNd7LCl6+mSB0G4S2X04kojrU0TsARgzmq3agw=;
- b=T4wyi7c8R/Bzq/TwZu4LQOAObp8rXxpSoHfIqS+kQfjcHQVgE4PpHrwCSOiwD1YoVn
- a8FEju98fGD1rQ5BHbLzeTEuMJ7soHxDEaSx1vFglUwqcksDQDZKJGSkXLfjArMh0Nnt
- 6lWPUBcpuD9gccpulJqUAxaHT4nYAK3GVOy7+KapPO2DR41ZvbomznNqdXAbm5JGMoLX
- +EDpt02FySjMUi3PtOFY/+VelLF6YWmIUpKKVAwSf6oBRLAL8EfzTsug2UiUuJ0VUaZf
- nXek6tQ4ch21p9VkBylCtQviMgN32NhrWgtoNZ3R8fcWhKOrmKUstqjY9oFgTBgu+SLT
- ChCQ==
-X-Gm-Message-State: APjAAAUqdlb/tWx6JhawJx1qLDyCHq1FMrcj85vYoMun8HAyLBTzB2cS
- /wjiw5b9bIbeh0NewyKwwA==
-X-Google-Smtp-Source: APXvYqwprV5ylAQXl6gUtT7NZHmcnqBWl3IgOcCq5QcBmtI4uojyhvDVa9K+DeOobOHPeGdMYTW9+Q==
-X-Received: by 2002:a5e:8a46:: with SMTP id o6mr45348991iom.36.1563999680305; 
- Wed, 24 Jul 2019 13:21:20 -0700 (PDT)
+ bh=CCC83gvr3zUqrHBBE2tCcnx8FJnOWLoIpaVrcWkgVNI=;
+ b=tZvy8089L87C0XQV3CRD8G6oJxs3qBGaTVtlk8qYZY1+8uKStuIYRxt2ZcGYugnHQn
+ OC9NJSsL8U8wz4StUclcjVbzObQIqbuLDcbHKEPWB57l6hadLDGRVK4U4go3RtHt+L0E
+ 0yiZeFSu0zUiIaqpBybPsNqRSytEEM+5g1qgFCikKAsSyTTi39nN9fl57x69D67i+d2E
+ 6t8I5CueZSwRRqUs7ow0SetVuWRkbT+kmNSUDxnJzJPW2WF1Al4CvekKHBDpXus3Fh0p
+ 00LWWdHxqWyshvj4APnjT+6Fdxltf7cvRgYbXRJHVlF1iyavCrRo4VKtCuaalrAIIB7q
+ NRNQ==
+X-Gm-Message-State: APjAAAWNaPTIvktrdsgxcCIcIuVR2BpAhYulgoHWGvZt6CYsitPwP6Tk
+ +m0BLg5LtbvgjVfQUomqhw==
+X-Google-Smtp-Source: APXvYqzZIXBI6PBNyEYZPD4Zfoy1oC3HcF0imTkHY6VNLfMnea8dJ9IXUk/wVjvDBjbfoxK8Wbqb/Q==
+X-Received: by 2002:a5d:9703:: with SMTP id h3mr11500009iol.152.1564001119366; 
+ Wed, 24 Jul 2019 13:45:19 -0700 (PDT)
 Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id r24sm34281026ioc.76.2019.07.24.13.21.19
+ by smtp.gmail.com with ESMTPSA id m20sm44917837ioh.4.2019.07.24.13.45.18
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 24 Jul 2019 13:21:19 -0700 (PDT)
-Date: Wed, 24 Jul 2019 14:21:19 -0600
+ Wed, 24 Jul 2019 13:45:18 -0700 (PDT)
+Date: Wed, 24 Jul 2019 14:45:18 -0600
 From: Rob Herring <robh@kernel.org>
-To: Qii Wang <qii.wang@mediatek.com>
-Subject: Re: [PATCH v3 1/2] dt-bindings: i3c: Document MediaTek I3C master
- bindings
-Message-ID: <20190724202119.GA26566@bogus>
-References: <1562677762-24067-1-git-send-email-qii.wang@mediatek.com>
- <1562677762-24067-2-git-send-email-qii.wang@mediatek.com>
+To: Macpaul Lin <macpaul.lin@mediatek.com>
+Subject: Re: [PATCH v6 1/8] dt-bindings: clock: mediatek: document clk
+ bindings for Mediatek MT6765 SoC
+Message-ID: <20190724204518.GA6997@bogus>
+References: <1562924653-10056-1-git-send-email-macpaul.lin@mediatek.com>
+ <1562924653-10056-2-git-send-email-macpaul.lin@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1562677762-24067-2-git-send-email-qii.wang@mediatek.com>
+In-Reply-To: <1562924653-10056-2-git-send-email-macpaul.lin@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_132121_344835_EC3037CB 
-X-CRM114-Status: GOOD (  15.15  )
+X-CRM114-CacheID: sfid-20190724_134520_772735_53F45F50 
+X-CRM114-Status: GOOD (  17.29  )
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.5 points)
@@ -87,85 +87,216 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, bbrezillon@kernel.org, leilk.liu@mediatek.com,
- linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
- linux-mediatek@lists.infradead.org, xinping.qian@mediatek.com,
- matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
+ wsd_upstream@mediatek.com, Marc Zyngier <marc.zyngier@arm.com>,
+ Sean Wang <sean.wang@mediatek.com>, Loda Chou <loda.chou@mediatek.com>,
+ linux-kernel@vger.kernel.org, Stephen Boyd <sboyd@kernel.org>,
+ CC Hwang <cc.hwang@mediatek.com>, Mars Cheng <mars.cheng@mediatek.com>,
+ linux-serial@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mediatek@lists.infradead.org, Owen Chen <owen.chen@mediatek.com>,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jul 09, 2019 at 09:09:21PM +0800, Qii Wang wrote:
-> Document MediaTek I3C master DT bindings.
+On Fri, Jul 12, 2019 at 05:43:37PM +0800, Macpaul Lin wrote:
+> From: Mars Cheng <mars.cheng@mediatek.com>
 > 
-> Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+> This patch adds the binding documentation for apmixedsys, audsys, camsys,
+> imgsys, infracfg, mipi0a, topckgen, vcodecsys
+> 
+> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
+> Signed-off-by: Owen Chen <owen.chen@mediatek.com>
+> Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
 > ---
->  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   48 ++++++++++++++++++++
->  1 file changed, 48 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+>  .../arm/mediatek/mediatek,apmixedsys.txt      |  1 +
+>  .../bindings/arm/mediatek/mediatek,audsys.txt |  1 +
+>  .../bindings/arm/mediatek/mediatek,camsys.txt |  1 +
+>  .../bindings/arm/mediatek/mediatek,imgsys.txt |  1 +
+>  .../arm/mediatek/mediatek,infracfg.txt        |  1 +
+>  .../bindings/arm/mediatek/mediatek,mipi0a.txt | 28 +++++++++++++++++++
+>  .../bindings/arm/mediatek/mediatek,mmsys.txt  |  1 +
+>  .../arm/mediatek/mediatek,pericfg.txt         |  1 +
+>  .../arm/mediatek/mediatek,topckgen.txt        |  1 +
+>  .../arm/mediatek/mediatek,vcodecsys.txt       | 27 ++++++++++++++++++
+>  10 files changed, 63 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/arm/mediatek/mediatek,mipi0a.txt
+>  create mode 100644 Documentation/devicetree/bindings/arm/mediatek/mediatek,vcodecsys.txt
 > 
-> diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,apmixedsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,apmixedsys.txt
+> index 161e63a6c254..5f2757e0f844 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,apmixedsys.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,apmixedsys.txt
+> @@ -8,6 +8,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-apmixedsys"
+>  	- "mediatek,mt2712-apmixedsys", "syscon"
+> +	- "mediatek,mt6765-apmixedsys", "syscon"
+>  	- "mediatek,mt6797-apmixedsys"
+>  	- "mediatek,mt7622-apmixedsys"
+>  	- "mediatek,mt7623-apmixedsys", "mediatek,mt2701-apmixedsys"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,audsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,audsys.txt
+> index f3cef1a6d95c..243db5275438 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,audsys.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,audsys.txt
+> @@ -7,6 +7,7 @@ Required Properties:
+>  
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-audsys", "syscon"
+> +	- "mediatek,mt6765-audsys", "syscon"
+>  	- "mediatek,mt7622-audsys", "syscon"
+>  	- "mediatek,mt7623-audsys", "mediatek,mt2701-audsys", "syscon"
+>  	- "mediatek,mt8183-audiosys", "syscon"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,camsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,camsys.txt
+> index d8930f64aa98..17acc4c5402c 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,camsys.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,camsys.txt
+> @@ -6,6 +6,7 @@ The MediaTek camsys controller provides various clocks to the system.
+>  Required Properties:
+>  
+>  - compatible: Should be one of:
+> +	- "mediatek,mt6765-camsys", "syscon"
+>  	- "mediatek,mt8183-camsys", "syscon"
+>  - #clock-cells: Must be 1
+>  
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,imgsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,imgsys.txt
+> index e3bc4a1e7a6e..4e7b617acfb6 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,imgsys.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,imgsys.txt
+> @@ -8,6 +8,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-imgsys", "syscon"
+>  	- "mediatek,mt2712-imgsys", "syscon"
+> +	- "mediatek,mt6765-imgsys", "syscon"
+>  	- "mediatek,mt6797-imgsys", "syscon"
+>  	- "mediatek,mt7623-imgsys", "mediatek,mt2701-imgsys", "syscon"
+>  	- "mediatek,mt8173-imgsys", "syscon"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,infracfg.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,infracfg.txt
+> index a90913988d7e..6a6ffb61dd29 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,infracfg.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,infracfg.txt
+> @@ -9,6 +9,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-infracfg", "syscon"
+>  	- "mediatek,mt2712-infracfg", "syscon"
+> +	- "mediatek,mt6765-infracfg", "syscon"
+>  	- "mediatek,mt6797-infracfg", "syscon"
+>  	- "mediatek,mt7622-infracfg", "syscon"
+>  	- "mediatek,mt7623-infracfg", "mediatek,mt2701-infracfg", "syscon"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,mipi0a.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,mipi0a.txt
 > new file mode 100644
-> index 0000000..d32eda6
+> index 000000000000..49313055e574
 > --- /dev/null
-> +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
-> @@ -0,0 +1,48 @@
-> +Bindings for MediaTek I3C master block
-> +=====================================
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,mipi0a.txt
+> @@ -0,0 +1,28 @@
+> +Mediatek mipi0a (mipi_rx_ana_csi0a) controller
+> +============================
 > +
-> +Required properties:
-> +--------------------
-> +- compatible: shall be "mediatek,i3c-master"
+> +The Mediatek mipi0a controller provides various clocks
+> +to the system.
 
-Needs to be SoC specific.
+Is that all it does?
 
-> +- reg: physical base address of the controller and apdma base, length of
-> +  memory mapped region.
-> +- reg-names: shall be "main" for master controller and "dma" for apdma.
-> +- interrupts: the interrupt line connected to this I3C master.
-> +- clocks: shall reference the i3c and apdma clocks.
-> +- clock-names: shall include "main" and "dma".
 > +
-> +Mandatory properties defined by the generic binding (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> +Required Properties:
 > +
-> +- #address-cells: shall be set to 3
-> +- #size-cells: shall be set to 0
+> +- compatible: Should be one of:
+> +	- "mediatek,mt6765-mipi0a", "syscon"
+> +- #clock-cells: Must be 1
 > +
-> +Optional properties defined by the generic binding (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> +The mipi0a controller uses the common clk binding from
+> +Documentation/devicetree/bindings/clock/clock-bindings.txt
+> +The available clocks are defined in dt-bindings/clock/mt*-clk.h.
 > +
-> +- i2c-scl-hz
-> +- i3c-scl-hz
-> +
-> +I3C device connected on the bus follow the generic description (see
-> +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
+> +The mipi0a controller also uses the common power domain from
+> +Documentation/devicetree/bindings/soc/mediatek/scpsys.txt
+> +The available power doamins are defined in dt-bindings/power/mt*-power.h.
 > +
 > +Example:
 > +
-> +	i3c0: i3c@1100d000 {
-> +		compatible = "mediatek,i3c-master";
-> +		reg = <0x1100d000 0x1000>,
-> +		      <0x11000300 0x80>;
-> +		reg-names = "main", "dma";
-> +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
-> +		clocks = <&infracfg CLK_INFRA_I3C0>,
-> +			 <&infracfg CLK_INFRA_AP_DMA>;
-> +		clock-names = "main", "dma";
-> +		#address-cells = <3>;
-> +		#size-cells = <0>;
-> +		i2c-scl-hz = <100000>;
+> +mipi0a: mipi0a@11c10000 {
+
+if so, then clock-controller@...
+
+Same question on the next one.
+
+> +	compatible = "mediatek,mt6765-mipi0a", "syscon";
+> +	reg = <0 0x11c10000 0 0x1000>;
+> +	power-domains = <&scpsys MT6765_POWER_DOMAIN_CAM>;
+> +	#clock-cells = <1>;
+> +};
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt
+> index 545eab717c96..0c7b1698b98e 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt
+> @@ -8,6 +8,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-mmsys", "syscon"
+>  	- "mediatek,mt2712-mmsys", "syscon"
+> +	- "mediatek,mt6765-mmsys", "syscon"
+>  	- "mediatek,mt6797-mmsys", "syscon"
+>  	- "mediatek,mt7623-mmsys", "mediatek,mt2701-mmsys", "syscon"
+>  	- "mediatek,mt8173-mmsys", "syscon"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,pericfg.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,pericfg.txt
+> index 4c7e478117a0..b49b40741be1 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,pericfg.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,pericfg.txt
+> @@ -9,6 +9,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-pericfg", "syscon"
+>  	- "mediatek,mt2712-pericfg", "syscon"
+> +	- "mediatek,mt6765-pericfg", "syscon"
+>  	- "mediatek,mt7622-pericfg", "syscon"
+>  	- "mediatek,mt7623-pericfg", "mediatek,mt2701-pericfg", "syscon"
+>  	- "mediatek,mt7629-pericfg", "syscon"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,topckgen.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,topckgen.txt
+> index a023b8338960..21ad416bfeec 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek/mediatek,topckgen.txt
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,topckgen.txt
+> @@ -8,6 +8,7 @@ Required Properties:
+>  - compatible: Should be one of:
+>  	- "mediatek,mt2701-topckgen"
+>  	- "mediatek,mt2712-topckgen", "syscon"
+> +	- "mediatek,mt6765-topckgen", "syscon"
+>  	- "mediatek,mt6797-topckgen"
+>  	- "mediatek,mt7622-topckgen"
+>  	- "mediatek,mt7623-topckgen", "mediatek,mt2701-topckgen"
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek/mediatek,vcodecsys.txt b/Documentation/devicetree/bindings/arm/mediatek/mediatek,vcodecsys.txt
+> new file mode 100644
+> index 000000000000..83f7f8634943
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/arm/mediatek/mediatek,vcodecsys.txt
+> @@ -0,0 +1,27 @@
+> +Mediatek vcodecsys controller
+> +============================
 > +
-> +		nunchuk: nunchuk@52 {
-> +			compatible = "nintendo,nunchuk";
-> +			reg = <0x52 0x0 0x10>;
-> +		};
-> +	};
+> +The Mediatek vcodecsys controller provides various clocks to the system.
+> +
+> +Required Properties:
+> +
+> +- compatible: Should be one of:
+> +	- "mediatek,mt6765-vcodecsys", "syscon"
+> +- #clock-cells: Must be 1
+> +
+> +The vcodecsys controller uses the common clk binding from
+> +Documentation/devicetree/bindings/clock/clock-bindings.txt
+> +The available clocks are defined in dt-bindings/clock/mt*-clk.h.
+> +
+> +The vcodecsys controller also uses the common power domain from
+> +Documentation/devicetree/bindings/soc/mediatek/scpsys.txt
+> +The available power doamins are defined in dt-bindings/power/mt*-power.h.
+> +
+> +Example:
+> +
+> +venc_gcon: venc_gcon@17000000 {
+> +	compatible = "mediatek,mt6765-vcodecsys", "syscon";
+> +	reg = <0 0x17000000 0 0x10000>;
+> +	power-domains = <&scpsys MT6765_POWER_DOMAIN_VCODEC>;
+> +	#clock-cells = <1>;
+> +};
 > -- 
-> 1.7.9.5
+> 2.18.0
 > 
 
 _______________________________________________
