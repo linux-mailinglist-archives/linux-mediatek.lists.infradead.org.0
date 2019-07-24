@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 24D00730A6
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:02:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E7E32730B2
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:02:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,41 +11,39 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=jPyDEa3oXGDrrJbhok9/1eOW1YIcuPnf9Qmgiookxno=; b=q913gROxxJwO8KLMSjB5xPGkIg
-	wrwIcIAgdk21rnwMyF9+a5aasvIB6p2yU3Q22t7nlWVbhfHRX/h83DcG94nZ4+U2Z1nWSHhHWP/lf
-	dxoxt3xR/U196jB9CK3aOoo+tROMVrYcu3zvUaYsSCYQCJe7enFFkZHNL0R/+0KHzDu8vqbbu/yPv
-	b4VCkzvEfQUWJYg+B9ZkdxkBKGQtQG4B/l6flPM2NI8eok6H1lxiDRfYrqmHyXHOcd7WjRmkW212K
-	JZOyzdXFminqon4K6M80j1wZP4CkViYkwRsJjrbzS/xKKnopE/dYVsgKDuWlUE5X/gbon+M/Oi5ny
-	8A2NOBUQ==;
+	bh=H2FB1HSiJ84gpJtU2HBU53JKUyyrZI4dX317PGSQMs8=; b=gfvfX4XbQ8AJRls4Nkq6XRHCA+
+	8ZCvVJSBmqqJUxFrfXFlpNVWNIgnX4UcXK+6VDp/K5zEVIgx+vNY33qHd464ZiCChriYXlhaDLt+1
+	PBfPOOYNb/1OXQmVWV5kuDwgc51a79MfD2M+uHe0hmML1MkWmDCPUm3Sp7DFVJe8zx0ZuF5D8iCmv
+	8Oh7B8ilZ6DHr1F95lYKinx0EmNpfIAMJes7M4tvPiyKfSIKKuI19FlDm2yBDCXvw4pRCIFJ3nnuE
+	fg/J0o3LE//B+kQ/3xXdEN7oeafsCXsnaaLIK2f/155UYbNR6HSfL6kymxcSlzfD6xGkVZXrdxgjo
+	L+lgcqRg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqHqX-0007Wc-Lb; Wed, 24 Jul 2019 14:02:21 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hqHqp-0007o2-9u; Wed, 24 Jul 2019 14:02:39 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqHqT-0007Vo-Ro; Wed, 24 Jul 2019 14:02:19 +0000
+ id 1hqHqk-0007iN-2A; Wed, 24 Jul 2019 14:02:35 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id BC4BC26CFD5
+ (Authenticated sender: andrzej.p) with ESMTPSA id 9C210263BB0
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v5 08/24] drm/mediatek: Provide ddc symlink in hdmi connector
+Subject: [PATCH v5 09/24] drm/tegra: Provide ddc symlink in output connector
  sysfs directory
-Date: Wed, 24 Jul 2019 15:59:30 +0200
-Message-Id: <5dbf162d824f9b6909b2a203aa050ccab05ae155.1563960855.git.andrzej.p@collabora.com>
+Date: Wed, 24 Jul 2019 15:59:31 +0200
+Message-Id: <fe644059eb44b16733999d7541934a8e502f249f.1563960855.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_070218_163075_CB0F3ACD 
-X-CRM114-Status: GOOD (  13.75  )
+X-CRM114-CacheID: sfid-20190724_070234_407335_4CCE0A74 
+X-CRM114-Status: GOOD (  14.32  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -70,14 +68,14 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>,
- Armijn Hemel <armijn@tjaldur.nl>, kernel@collabora.com,
+ linux-rockchip@lists.infradead.org, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
  =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
  linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
- linux-rockchip@lists.infradead.org, Vincent Abriou <vincent.abriou@st.com>,
- Rob Clark <robdclark@gmail.com>, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>,
+ Oleksandr Andrushchenko <oleksandr_andrushchenko@epam.com>,
+ Vincent Abriou <vincent.abriou@st.com>, Rob Clark <robdclark@gmail.com>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>, Chen-Yu Tsai <wens@csie.org>,
  Kukjin Kim <kgene@kernel.org>, NXP Linux Team <linux-imx@nxp.com>,
  CK Hu <ck.hu@mediatek.com>, Dave Airlie <airlied@redhat.com>,
@@ -88,6 +86,7 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
+ Alexios Zavras <alexios.zavras@intel.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Jyri Sarha <jsarha@ti.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
@@ -100,9 +99,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Daniel Vetter <daniel@ffwll.ch>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
+ Daniel Vetter <daniel@ffwll.ch>, Alex Deucher <alexander.deucher@amd.com>,
+ Shawn Guo <shawnguo@kernel.org>,
  =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
 MIME-Version: 1.0
@@ -115,60 +113,124 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/mediatek/mtk_hdmi.c | 16 ++++++++--------
- 1 file changed, 8 insertions(+), 8 deletions(-)
+ drivers/gpu/drm/tegra/drm.h    |  1 -
+ drivers/gpu/drm/tegra/hdmi.c   |  7 ++++---
+ drivers/gpu/drm/tegra/output.c | 12 ++++++------
+ drivers/gpu/drm/tegra/sor.c    | 13 +++++++------
+ 4 files changed, 17 insertions(+), 16 deletions(-)
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_hdmi.c b/drivers/gpu/drm/mediatek/mtk_hdmi.c
-index ce91b61364eb..cc4ab8b070a4 100644
---- a/drivers/gpu/drm/mediatek/mtk_hdmi.c
-+++ b/drivers/gpu/drm/mediatek/mtk_hdmi.c
-@@ -150,7 +150,6 @@ struct mtk_hdmi {
+diff --git a/drivers/gpu/drm/tegra/drm.h b/drivers/gpu/drm/tegra/drm.h
+index 86daa19fcf24..9bf72bcd3ec1 100644
+--- a/drivers/gpu/drm/tegra/drm.h
++++ b/drivers/gpu/drm/tegra/drm.h
+@@ -120,7 +120,6 @@ struct tegra_output {
  	struct device *dev;
- 	struct phy *phy;
- 	struct device *cec_dev;
--	struct i2c_adapter *ddc_adpt;
- 	struct clk *clk[MTK_HDMI_CLK_COUNT];
- 	struct drm_display_mode mode;
- 	bool dvi_mode;
-@@ -1217,10 +1216,10 @@ static int mtk_hdmi_conn_get_modes(struct drm_connector *conn)
- 	struct edid *edid;
- 	int ret;
  
--	if (!hdmi->ddc_adpt)
-+	if (!conn->ddc)
- 		return -ENODEV;
+ 	struct drm_panel *panel;
+-	struct i2c_adapter *ddc;
+ 	const struct edid *edid;
+ 	struct cec_notifier *cec;
+ 	unsigned int hpd_irq;
+diff --git a/drivers/gpu/drm/tegra/hdmi.c b/drivers/gpu/drm/tegra/hdmi.c
+index 334c4d7d238b..aac871847be4 100644
+--- a/drivers/gpu/drm/tegra/hdmi.c
++++ b/drivers/gpu/drm/tegra/hdmi.c
+@@ -1425,9 +1425,10 @@ static int tegra_hdmi_init(struct host1x_client *client)
  
--	edid = drm_get_edid(conn, hdmi->ddc_adpt);
-+	edid = drm_get_edid(conn, conn->ddc);
- 	if (!edid)
- 		return -ENODEV;
+ 	hdmi->output.dev = client->dev;
  
-@@ -1299,9 +1298,10 @@ static int mtk_hdmi_bridge_attach(struct drm_bridge *bridge)
- 	struct mtk_hdmi *hdmi = hdmi_ctx_from_bridge(bridge);
- 	int ret;
+-	drm_connector_init(drm, &hdmi->output.connector,
+-			   &tegra_hdmi_connector_funcs,
+-			   DRM_MODE_CONNECTOR_HDMIA);
++	drm_connector_init_with_ddc(drm, &hdmi->output.connector,
++				    &tegra_hdmi_connector_funcs,
++				    DRM_MODE_CONNECTOR_HDMIA,
++				    hdmi->output.connector.ddc);
+ 	drm_connector_helper_add(&hdmi->output.connector,
+ 				 &tegra_hdmi_connector_helper_funcs);
+ 	hdmi->output.connector.dpms = DRM_MODE_DPMS_OFF;
+diff --git a/drivers/gpu/drm/tegra/output.c b/drivers/gpu/drm/tegra/output.c
+index 274cb955e2e1..0b5037a29c63 100644
+--- a/drivers/gpu/drm/tegra/output.c
++++ b/drivers/gpu/drm/tegra/output.c
+@@ -30,8 +30,8 @@ int tegra_output_connector_get_modes(struct drm_connector *connector)
  
--	ret = drm_connector_init(bridge->encoder->dev, &hdmi->conn,
--				 &mtk_hdmi_connector_funcs,
--				 DRM_MODE_CONNECTOR_HDMIA);
-+	ret = drm_connector_init_with_ddc(bridge->encoder->dev, &hdmi->conn,
-+					  &mtk_hdmi_connector_funcs,
-+					  DRM_MODE_CONNECTOR_HDMIA,
-+					  hdmi->conn.ddc);
- 	if (ret) {
- 		dev_err(hdmi->dev, "Failed to initialize connector: %d\n", ret);
- 		return ret;
-@@ -1513,9 +1513,9 @@ static int mtk_hdmi_dt_parse_pdata(struct mtk_hdmi *hdmi,
- 	}
- 	of_node_put(remote);
+ 	if (output->edid)
+ 		edid = kmemdup(output->edid, sizeof(*edid), GFP_KERNEL);
+-	else if (output->ddc)
+-		edid = drm_get_edid(connector, output->ddc);
++	else if (connector->ddc)
++		edid = drm_get_edid(connector, connector->ddc);
  
--	hdmi->ddc_adpt = of_find_i2c_adapter_by_node(i2c_np);
-+	hdmi->conn.ddc = of_find_i2c_adapter_by_node(i2c_np);
- 	of_node_put(i2c_np);
--	if (!hdmi->ddc_adpt) {
-+	if (!hdmi->conn.ddc) {
- 		dev_err(dev, "Failed to get ddc i2c adapter by node\n");
- 		return -EINVAL;
- 	}
+ 	cec_notifier_set_phys_addr_from_edid(output->cec, edid);
+ 	drm_connector_update_edid_property(connector, edid);
+@@ -111,8 +111,8 @@ int tegra_output_probe(struct tegra_output *output)
+ 
+ 	ddc = of_parse_phandle(output->of_node, "nvidia,ddc-i2c-bus", 0);
+ 	if (ddc) {
+-		output->ddc = of_find_i2c_adapter_by_node(ddc);
+-		if (!output->ddc) {
++		output->connector.ddc = of_find_i2c_adapter_by_node(ddc);
++		if (!output->connector.ddc) {
+ 			err = -EPROBE_DEFER;
+ 			of_node_put(ddc);
+ 			return err;
+@@ -174,8 +174,8 @@ void tegra_output_remove(struct tegra_output *output)
+ 	if (output->hpd_gpio)
+ 		free_irq(output->hpd_irq, output);
+ 
+-	if (output->ddc)
+-		put_device(&output->ddc->dev);
++	if (output->connector.ddc)
++		put_device(&output->connector.ddc->dev);
+ }
+ 
+ int tegra_output_init(struct drm_device *drm, struct tegra_output *output)
+diff --git a/drivers/gpu/drm/tegra/sor.c b/drivers/gpu/drm/tegra/sor.c
+index 4ffe3794e6d3..63b6cfbbd17e 100644
+--- a/drivers/gpu/drm/tegra/sor.c
++++ b/drivers/gpu/drm/tegra/sor.c
+@@ -2311,7 +2311,7 @@ static void tegra_sor_hdmi_disable_scrambling(struct tegra_sor *sor)
+ 
+ static void tegra_sor_hdmi_scdc_disable(struct tegra_sor *sor)
+ {
+-	struct i2c_adapter *ddc = sor->output.ddc;
++	struct i2c_adapter *ddc = sor->output.connector.ddc;
+ 
+ 	drm_scdc_set_high_tmds_clock_ratio(ddc, false);
+ 	drm_scdc_set_scrambling(ddc, false);
+@@ -2339,7 +2339,7 @@ static void tegra_sor_hdmi_enable_scrambling(struct tegra_sor *sor)
+ 
+ static void tegra_sor_hdmi_scdc_enable(struct tegra_sor *sor)
+ {
+-	struct i2c_adapter *ddc = sor->output.ddc;
++	struct i2c_adapter *ddc = sor->output.connector.ddc;
+ 
+ 	drm_scdc_set_high_tmds_clock_ratio(ddc, true);
+ 	drm_scdc_set_scrambling(ddc, true);
+@@ -2350,7 +2350,7 @@ static void tegra_sor_hdmi_scdc_enable(struct tegra_sor *sor)
+ static void tegra_sor_hdmi_scdc_work(struct work_struct *work)
+ {
+ 	struct tegra_sor *sor = container_of(work, struct tegra_sor, scdc.work);
+-	struct i2c_adapter *ddc = sor->output.ddc;
++	struct i2c_adapter *ddc = sor->output.connector.ddc;
+ 
+ 	if (!drm_scdc_get_scrambling_status(ddc)) {
+ 		DRM_DEBUG_KMS("SCDC not scrambled\n");
+@@ -2832,9 +2832,10 @@ static int tegra_sor_init(struct host1x_client *client)
+ 
+ 	sor->output.dev = sor->dev;
+ 
+-	drm_connector_init(drm, &sor->output.connector,
+-			   &tegra_sor_connector_funcs,
+-			   connector);
++	drm_connector_init_with_ddc(drm, &sor->output.connector,
++				    &tegra_sor_connector_funcs,
++				    connector,
++				    sor->output.connector.ddc);
+ 	drm_connector_helper_add(&sor->output.connector,
+ 				 &tegra_sor_connector_helper_funcs);
+ 	sor->output.connector.dpms = DRM_MODE_DPMS_OFF;
 -- 
 2.17.1
 
