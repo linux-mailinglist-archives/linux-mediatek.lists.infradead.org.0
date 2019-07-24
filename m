@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7E32730B2
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:02:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5B44730B7
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 16:02:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,39 +11,41 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=H2FB1HSiJ84gpJtU2HBU53JKUyyrZI4dX317PGSQMs8=; b=gfvfX4XbQ8AJRls4Nkq6XRHCA+
-	8ZCvVJSBmqqJUxFrfXFlpNVWNIgnX4UcXK+6VDp/K5zEVIgx+vNY33qHd464ZiCChriYXlhaDLt+1
-	PBfPOOYNb/1OXQmVWV5kuDwgc51a79MfD2M+uHe0hmML1MkWmDCPUm3Sp7DFVJe8zx0ZuF5D8iCmv
-	8Oh7B8ilZ6DHr1F95lYKinx0EmNpfIAMJes7M4tvPiyKfSIKKuI19FlDm2yBDCXvw4pRCIFJ3nnuE
-	fg/J0o3LE//B+kQ/3xXdEN7oeafsCXsnaaLIK2f/155UYbNR6HSfL6kymxcSlzfD6xGkVZXrdxgjo
-	L+lgcqRg==;
+	bh=L4JMDEKPrl5po+S5ygTGqou69MYyDPr8ovPJu7QJPDc=; b=JtmqCY9keMaourGhN+pkGvNApj
+	1iXtNQK4oDIxxWKqNsOgeKiuHFUimHA+DmOZFW3n4wAveGvy73epA3D695ZZm1n0b93zJTs4rfrH7
+	heGKmZWPoozeBRReuQhfxkgMqIAfW4MNmzbcv4o99CdGuPWYuO3m3yc6o7wGAtOJi0a4MzlezRMBw
+	WBR2NESiZJYEMiLYPTF0VWi//Nk/byCmV/S3NECYsTmquLek3FwxxT+3HeNWmSwK9cEdrMzKDR72H
+	UAod4a41Re7c8cmy3hNIpTNTdApBmeZDUVEhO1h8msZfB2uHG8Opu2ljGcKYHm73scMDN/rxNLZXd
+	Zz6bHZlg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqHqp-0007o2-9u; Wed, 24 Jul 2019 14:02:39 +0000
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
+	id 1hqHr3-0007tr-Kw; Wed, 24 Jul 2019 14:02:53 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqHqk-0007iN-2A; Wed, 24 Jul 2019 14:02:35 +0000
+ id 1hqHqy-0007t5-Q2; Wed, 24 Jul 2019 14:02:51 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 9C210263BB0
+ (Authenticated sender: andrzej.p) with ESMTPSA id B0CAD263BB0
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v5 09/24] drm/tegra: Provide ddc symlink in output connector
- sysfs directory
-Date: Wed, 24 Jul 2019 15:59:31 +0200
-Message-Id: <fe644059eb44b16733999d7541934a8e502f249f.1563960855.git.andrzej.p@collabora.com>
+Subject: [PATCH v5 10/24] drm/imx: imx-ldb: Provide ddc symlink in connector's
+ sysfs
+Date: Wed, 24 Jul 2019 15:59:32 +0200
+Message-Id: <8e79f715659cbf092e4a79631bdd940c9a036d14.1563960855.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1563960855.git.andrzej.p@collabora.com>
 References: <cover.1563960855.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_070234_407335_4CCE0A74 
-X-CRM114-Status: GOOD (  14.32  )
+X-CRM114-CacheID: sfid-20190724_070249_107139_B1C741B2 
+X-CRM114-Status: GOOD (  15.28  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -68,8 +70,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>,
- linux-rockchip@lists.infradead.org, kernel@collabora.com,
- Fabio Estevam <festevam@gmail.com>,
+ Armijn Hemel <armijn@tjaldur.nl>, linux-rockchip@lists.infradead.org,
+ kernel@collabora.com, Fabio Estevam <festevam@gmail.com>,
  =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
  linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
@@ -79,11 +81,10 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Maxime Ripard <maxime.ripard@bootlin.com>, Chen-Yu Tsai <wens@csie.org>,
  Kukjin Kim <kgene@kernel.org>, NXP Linux Team <linux-imx@nxp.com>,
  CK Hu <ck.hu@mediatek.com>, Dave Airlie <airlied@redhat.com>,
- Harry Wentland <harry.wentland@amd.com>, intel-gfx@lists.freedesktop.org,
- Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
- linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- Sascha Hauer <s.hauer@pengutronix.de>,
+ intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
+ freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
+ linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
  Alexios Zavras <alexios.zavras@intel.com>,
@@ -113,124 +114,74 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/tegra/drm.h    |  1 -
- drivers/gpu/drm/tegra/hdmi.c   |  7 ++++---
- drivers/gpu/drm/tegra/output.c | 12 ++++++------
- drivers/gpu/drm/tegra/sor.c    | 13 +++++++------
- 4 files changed, 17 insertions(+), 16 deletions(-)
+ drivers/gpu/drm/imx/imx-ldb.c | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
 
-diff --git a/drivers/gpu/drm/tegra/drm.h b/drivers/gpu/drm/tegra/drm.h
-index 86daa19fcf24..9bf72bcd3ec1 100644
---- a/drivers/gpu/drm/tegra/drm.h
-+++ b/drivers/gpu/drm/tegra/drm.h
-@@ -120,7 +120,6 @@ struct tegra_output {
- 	struct device *dev;
+diff --git a/drivers/gpu/drm/imx/imx-ldb.c b/drivers/gpu/drm/imx/imx-ldb.c
+index de62a4cd4827..94945dd937cc 100644
+--- a/drivers/gpu/drm/imx/imx-ldb.c
++++ b/drivers/gpu/drm/imx/imx-ldb.c
+@@ -57,7 +57,6 @@ struct imx_ldb_channel {
+ 	struct drm_bridge *bridge;
  
- 	struct drm_panel *panel;
+ 	struct device_node *child;
 -	struct i2c_adapter *ddc;
- 	const struct edid *edid;
- 	struct cec_notifier *cec;
- 	unsigned int hpd_irq;
-diff --git a/drivers/gpu/drm/tegra/hdmi.c b/drivers/gpu/drm/tegra/hdmi.c
-index 334c4d7d238b..aac871847be4 100644
---- a/drivers/gpu/drm/tegra/hdmi.c
-+++ b/drivers/gpu/drm/tegra/hdmi.c
-@@ -1425,9 +1425,10 @@ static int tegra_hdmi_init(struct host1x_client *client)
+ 	int chno;
+ 	void *edid;
+ 	int edid_len;
+@@ -133,8 +132,8 @@ static int imx_ldb_connector_get_modes(struct drm_connector *connector)
+ 			return num_modes;
+ 	}
  
- 	hdmi->output.dev = client->dev;
+-	if (!imx_ldb_ch->edid && imx_ldb_ch->ddc)
+-		imx_ldb_ch->edid = drm_get_edid(connector, imx_ldb_ch->ddc);
++	if (!imx_ldb_ch->edid && connector->ddc)
++		imx_ldb_ch->edid = drm_get_edid(connector, connector->ddc);
  
--	drm_connector_init(drm, &hdmi->output.connector,
--			   &tegra_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	drm_connector_init_with_ddc(drm, &hdmi->output.connector,
-+				    &tegra_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    hdmi->output.connector.ddc);
- 	drm_connector_helper_add(&hdmi->output.connector,
- 				 &tegra_hdmi_connector_helper_funcs);
- 	hdmi->output.connector.dpms = DRM_MODE_DPMS_OFF;
-diff --git a/drivers/gpu/drm/tegra/output.c b/drivers/gpu/drm/tegra/output.c
-index 274cb955e2e1..0b5037a29c63 100644
---- a/drivers/gpu/drm/tegra/output.c
-+++ b/drivers/gpu/drm/tegra/output.c
-@@ -30,8 +30,8 @@ int tegra_output_connector_get_modes(struct drm_connector *connector)
+ 	if (imx_ldb_ch->edid) {
+ 		drm_connector_update_edid_property(connector,
+@@ -462,9 +461,10 @@ static int imx_ldb_register(struct drm_device *drm,
+ 		 */
+ 		drm_connector_helper_add(&imx_ldb_ch->connector,
+ 				&imx_ldb_connector_helper_funcs);
+-		drm_connector_init(drm, &imx_ldb_ch->connector,
+-				&imx_ldb_connector_funcs,
+-				DRM_MODE_CONNECTOR_LVDS);
++		drm_connector_init_with_ddc(drm, &imx_ldb_ch->connector,
++					    &imx_ldb_connector_funcs,
++					    DRM_MODE_CONNECTOR_LVDS,
++					    imx_ldb_ch->connector.ddc);
+ 		drm_connector_attach_encoder(&imx_ldb_ch->connector, encoder);
+ 	}
  
- 	if (output->edid)
- 		edid = kmemdup(output->edid, sizeof(*edid), GFP_KERNEL);
--	else if (output->ddc)
--		edid = drm_get_edid(connector, output->ddc);
-+	else if (connector->ddc)
-+		edid = drm_get_edid(connector, connector->ddc);
+@@ -552,15 +552,15 @@ static int imx_ldb_panel_ddc(struct device *dev,
  
- 	cec_notifier_set_phys_addr_from_edid(output->cec, edid);
- 	drm_connector_update_edid_property(connector, edid);
-@@ -111,8 +111,8 @@ int tegra_output_probe(struct tegra_output *output)
+ 	ddc_node = of_parse_phandle(child, "ddc-i2c-bus", 0);
+ 	if (ddc_node) {
+-		channel->ddc = of_find_i2c_adapter_by_node(ddc_node);
++		channel->connector.ddc = of_find_i2c_adapter_by_node(ddc_node);
+ 		of_node_put(ddc_node);
+-		if (!channel->ddc) {
++		if (!channel->connector.ddc) {
+ 			dev_warn(dev, "failed to get ddc i2c adapter\n");
+ 			return -EPROBE_DEFER;
+ 		}
+ 	}
  
- 	ddc = of_parse_phandle(output->of_node, "nvidia,ddc-i2c-bus", 0);
- 	if (ddc) {
--		output->ddc = of_find_i2c_adapter_by_node(ddc);
--		if (!output->ddc) {
-+		output->connector.ddc = of_find_i2c_adapter_by_node(ddc);
-+		if (!output->connector.ddc) {
- 			err = -EPROBE_DEFER;
- 			of_node_put(ddc);
- 			return err;
-@@ -174,8 +174,8 @@ void tegra_output_remove(struct tegra_output *output)
- 	if (output->hpd_gpio)
- 		free_irq(output->hpd_irq, output);
+-	if (!channel->ddc) {
++	if (!channel->connector.ddc) {
+ 		/* if no DDC available, fallback to hardcoded EDID */
+ 		dev_dbg(dev, "no ddc available\n");
  
--	if (output->ddc)
--		put_device(&output->ddc->dev);
-+	if (output->connector.ddc)
-+		put_device(&output->connector.ddc->dev);
+@@ -727,7 +727,7 @@ static void imx_ldb_unbind(struct device *dev, struct device *master,
+ 			drm_panel_detach(channel->panel);
+ 
+ 		kfree(channel->edid);
+-		i2c_put_adapter(channel->ddc);
++		i2c_put_adapter(channel->connector.ddc);
+ 	}
  }
  
- int tegra_output_init(struct drm_device *drm, struct tegra_output *output)
-diff --git a/drivers/gpu/drm/tegra/sor.c b/drivers/gpu/drm/tegra/sor.c
-index 4ffe3794e6d3..63b6cfbbd17e 100644
---- a/drivers/gpu/drm/tegra/sor.c
-+++ b/drivers/gpu/drm/tegra/sor.c
-@@ -2311,7 +2311,7 @@ static void tegra_sor_hdmi_disable_scrambling(struct tegra_sor *sor)
- 
- static void tegra_sor_hdmi_scdc_disable(struct tegra_sor *sor)
- {
--	struct i2c_adapter *ddc = sor->output.ddc;
-+	struct i2c_adapter *ddc = sor->output.connector.ddc;
- 
- 	drm_scdc_set_high_tmds_clock_ratio(ddc, false);
- 	drm_scdc_set_scrambling(ddc, false);
-@@ -2339,7 +2339,7 @@ static void tegra_sor_hdmi_enable_scrambling(struct tegra_sor *sor)
- 
- static void tegra_sor_hdmi_scdc_enable(struct tegra_sor *sor)
- {
--	struct i2c_adapter *ddc = sor->output.ddc;
-+	struct i2c_adapter *ddc = sor->output.connector.ddc;
- 
- 	drm_scdc_set_high_tmds_clock_ratio(ddc, true);
- 	drm_scdc_set_scrambling(ddc, true);
-@@ -2350,7 +2350,7 @@ static void tegra_sor_hdmi_scdc_enable(struct tegra_sor *sor)
- static void tegra_sor_hdmi_scdc_work(struct work_struct *work)
- {
- 	struct tegra_sor *sor = container_of(work, struct tegra_sor, scdc.work);
--	struct i2c_adapter *ddc = sor->output.ddc;
-+	struct i2c_adapter *ddc = sor->output.connector.ddc;
- 
- 	if (!drm_scdc_get_scrambling_status(ddc)) {
- 		DRM_DEBUG_KMS("SCDC not scrambled\n");
-@@ -2832,9 +2832,10 @@ static int tegra_sor_init(struct host1x_client *client)
- 
- 	sor->output.dev = sor->dev;
- 
--	drm_connector_init(drm, &sor->output.connector,
--			   &tegra_sor_connector_funcs,
--			   connector);
-+	drm_connector_init_with_ddc(drm, &sor->output.connector,
-+				    &tegra_sor_connector_funcs,
-+				    connector,
-+				    sor->output.connector.ddc);
- 	drm_connector_helper_add(&sor->output.connector,
- 				 &tegra_sor_connector_helper_funcs);
- 	sor->output.connector.dpms = DRM_MODE_DPMS_OFF;
 -- 
 2.17.1
 
