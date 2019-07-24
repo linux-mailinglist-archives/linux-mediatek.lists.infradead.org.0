@@ -2,79 +2,73 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CDAB173434
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 18:49:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E696F734D6
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 19:16:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YcunphrMyM56QToo/tg90LNPCBd1rZjPyww33bVhftY=; b=YAWGW1L4nWcMIi
-	cNHKsZt+BdiORdPkZ3dl63pFUkCuoKWunYAhmf5olUVb4/P+qASFnmSdkR3F2aGG6wlP1Ici9dLqM
-	Ime4AU3Fn7aVZ23U0dfkvoUN2Z168edUdHPBlEF25setR1tEg1divUYUkSFz87vWNYZ13FA19f699
-	6EQ/kLqepWBye9hb1re/mCGTql4Gk+GXC0gN8OqzW6bxhrWEHnVLIBzds47JZoIWov7xweuFf2jdc
-	J/TDoQfvGzD+NFTlOpIeiq8Abzudw15aEisFcK7Mfjz4BOTVW9vF6tNGJDc+Utby2Fq8hxOq7moOD
-	+V8/uHTxx2tOsJrqYPnw==;
+	List-Owner; bh=VaW/LB4E0rAsIQpKlYGcEIR21TK0BL4h5gs+ec6EL1c=; b=LRiv6+sNkUUc8S
+	BzKoWRoDrxBrn9jW9RwRT+OfBnQalDcbERO0dXIaZwbsfeUVY6o5XfTEhfwmjnqegLRkKCyhYWzot
+	uhqXjgu08/yEvSdLQsBTQzk8DBtG4Fn2YbSkrmJr1W8UlVOSboAhvMenTNzFBFcBQKA0TJMhbvFOP
+	Jko05UIvT7tHkuFb+RL+BGnd5MudZRIHS8BDCjWGa6/kOKcMtV+CZ6FtLiw/9U4/JtrxxCROYM2LF
+	MQfHSfCc8vLkciiyftFCvvRX+YaSZoOIsD07y00h60t9H70ERy/ZqD+mb23uYieI3lMEpouBETmJ8
+	spsEQBGwTyo9SawDsvmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqKSV-00045a-TC; Wed, 24 Jul 2019 16:49:43 +0000
-Received: from mail-io1-f65.google.com ([209.85.166.65])
+	id 1hqKrv-0000Nk-Ev; Wed, 24 Jul 2019 17:15:59 +0000
+Received: from mx3.wp.pl ([212.77.101.9])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqKSS-00044v-KG; Wed, 24 Jul 2019 16:49:42 +0000
-Received: by mail-io1-f65.google.com with SMTP id j5so86864028ioj.8;
- Wed, 24 Jul 2019 09:49:40 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=lzLxr/ZHFALs7HXjKuWkfuLA5VhCZtI1OXBLZOHTWp8=;
- b=rjABduqSIw1wv1zNtJvjLe4VE0pRe4TZl4pmim/hgxM5N68DsU+hhXAjzHlDkdQ7Am
- nlac+OpvPRnqldw27gMwX/lgbI0hD979ueJP8cRxi2fWZ9BON2kExevld4/QmouXDy61
- 5hN1qj3wZ3s4ggwtkUkyqGyHuZ4nWho5E0oNumsI3BCEj59Q52syqYTjYbM6d5+cBX5D
- e8eimCVruEgPULkFy8uqX6R6h4OVPk3n1ObZxF0VzUIZ5+r2oVkEe8sEZbW8XS2EFa8q
- XSBlRU4Xia9Ny8b7WnDo1lZh/7mSfM3n4/xTsWQ0NTGSm/BJEN6ITRIuNLX/VqzcdPmF
- 6nlA==
-X-Gm-Message-State: APjAAAWGf8eS01P+vmMBFsG/8mM/QZySj3Oant8peHLfntBxkQYkptCp
- aZ+kLdco+sh5NC/+MadeWw==
-X-Google-Smtp-Source: APXvYqycVXE/3Diq36JRVdilGAeFPoocp/x5uykh8vdo3CPw1BlwOUJzQuvKMNLrDaaaN0Mc+FiZ+Q==
-X-Received: by 2002:a5e:c70c:: with SMTP id f12mr1401889iop.293.1563986979919; 
- Wed, 24 Jul 2019 09:49:39 -0700 (PDT)
-Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id j23sm37899229ioo.6.2019.07.24.09.49.38
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 24 Jul 2019 09:49:39 -0700 (PDT)
-Date: Wed, 24 Jul 2019 10:49:38 -0600
-From: Rob Herring <robh@kernel.org>
-To: frederic.chen@mediatek.com
-Subject: Re: [RFC PATCH V2 1/6] dt-bindings: mt8183: Added DIP dt-bindings
-Message-ID: <20190724164938.GA25542@bogus>
-References: <20190708110500.7242-1-frederic.chen@mediatek.com>
- <20190708110500.7242-2-frederic.chen@mediatek.com>
+ id 1hqKrR-0007v4-Bc
+ for linux-mediatek@lists.infradead.org; Wed, 24 Jul 2019 17:15:31 +0000
+Received: (wp-smtpd smtp.wp.pl 7512 invoked from network);
+ 24 Jul 2019 19:15:23 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wp.pl; s=1024a;
+ t=1563988524; bh=gEkDwIuDO2Mlt47g7fHTqzHcSxdtZTDr5XQG+4+AvdU=;
+ h=From:To:Cc:Subject;
+ b=ntAPjIlLwGvOxgC2v+xm/bV3mQvMUDMExK5e9IszAZdswFVOM1CMFo9sCJ1pKqGLF
+ kpQZCuccigvIcEx+x1AdexCezOy9xB+tz6O3Y7xqR2h9mmc1Ypn5frAT1xfDiD+D4g
+ 91q1Fzzc/O8xKBgRvC2r2763CVpjRIG6Mu7bIfb0=
+Received: from 014.152-60-66-biz-static.surewest.net (HELO
+ cakuba.netronome.com) (kubakici@wp.pl@[66.60.152.14])
+ (envelope-sender <kubakici@wp.pl>)
+ by smtp.wp.pl (WP-SMTPD) with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP
+ for <navid.emamdoost@gmail.com>; 24 Jul 2019 19:15:23 +0200
+Date: Wed, 24 Jul 2019 10:15:14 -0700
+From: Jakub Kicinski <kubakici@wp.pl>
+To: Navid Emamdoost <navid.emamdoost@gmail.com>
+Subject: Re: [PATCH] mt76_init_sband_2g: null check the allocation
+Message-ID: <20190724101514.29efc10a@cakuba.netronome.com>
+In-Reply-To: <20190723221954.9233-1-navid.emamdoost@gmail.com>
+References: <20190723221954.9233-1-navid.emamdoost@gmail.com>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190708110500.7242-2-frederic.chen@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-WP-MailID: 3fa229c2b67e2a6425aaa1fc737c8941
+X-WP-AV: skaner antywirusowy Poczty Wirtualnej Polski
+X-WP-SPAM: NO 000000A [EYOU]                               
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_094940_661075_824C7A90 
-X-CRM114-Status: GOOD (  10.79  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190724_101529_761752_1E50F48D 
+X-CRM114-Status: UNSURE (   3.68  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.65 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ no trust [212.77.101.9 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
+ provider (kubakici[at]wp.pl)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,41 +80,25 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- Allan.Yang@mediatek.com, suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
- jungo.lin@mediatek.com, hans.verkuil@cisco.com, frederic.chen@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- holmes.chiou@mediatek.com, shik@chromium.org, yuzhao@chromium.org,
- linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
- christie.yu@mediatek.com, zwisler@chromium.org
+Cc: secalert@redhat.com, linux-wireless@vger.kernel.org, kjlu@umn.edu,
+ linux-kernel@vger.kernel.org, emamd001@umn.edu,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ smccaman@umn.edu, Matthias Brugger <matthias.bgg@gmail.com>,
+ netdev@vger.kernel.org, "David S. Miller" <davem@davemloft.net>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 8 Jul 2019 19:04:55 +0800, <frederic.chen@mediatek.com> wrote:
-> From: Frederic Chen <frederic.chen@mediatek.com>
+On Tue, 23 Jul 2019 17:19:54 -0500, Navid Emamdoost wrote:
+> devm_kzalloc may fail and return NULL. So the null check is needed.
 > 
-> This patch adds DT binding documentation for the Digital Image
-> Processing (DIP) unit of camera ISP system on Mediatek's SoCs.
-> 
-> It depends on the SCP and MDP 3 patch as following:
-> 
-> 1. dt-bindings: Add a binding for Mediatek SCP
->    https://patchwork.kernel.org/patch/11027247/
-> 2. dt-binding: mt8183: Add Mediatek MDP3 dt-bindings
->    https://patchwork.kernel.org/patch/10945603/
-> 
-> Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
-> ---
->  .../bindings/media/mediatek,mt8183-dip.txt    | 40 +++++++++++++++++++
->  1 file changed, 40 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-dip.txt
-> 
+> Signed-off-by: Navid Emamdoost <navid.emamdoost@gmail.com>
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Acked-by: Jakub Kicinski <kubakici@wp.pl>
+
+Thanks!
 
 _______________________________________________
 Linux-mediatek mailing list
