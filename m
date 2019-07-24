@@ -2,65 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F23317279B
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 07:52:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B12AD72792
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 07:51:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vPbBL0wzurszOSG4uOx7Xs4S4BQlnmFMpiqxDdAtY/E=; b=TsAp0mssCKhsCj
-	RRgt0Zc/WTKDCb2PsjS6ZwgKgwIJ6lJxfPHJVubEpS+OcgXva3klagA/zzfhfeW/YHofFrVZZFOcw
-	+m/8WekrZUl4iLtHelpbkTnusmgmVylWRyHNmPRlmvJ63sOpO4pjZ972AMJ24zeNcBkT2uABJ0yYo
-	feL1WqDgD45EdRZ+KTI/M4fenEoHpW/djsZUvTAx89PKORWFFLHlO/jU7QkJ42FCk8gdz4Q9Zukas
-	kCGdgaYfKV1Qr+yQK7BcEHoD6KnSPYPSV6M3GkQRdrkctEOkK1LixGq25gx5eMIyw53hk/UthHnsM
-	zlsMeJ/uqoT/aPu5o8LQ==;
+	List-Owner; bh=FQZ474c07GqazVTbzllA7CIj/5TWCuIOJL8PT+ekMtk=; b=K91ItNOV8HCqrD
+	MEGlaJ9xA/XDXFfw0ZlBNUZ+oKd9Q/7wa+sGh0watgVX1q7qahS+Bc+1zHSI91qlL83Ggi+0TZq8U
+	kNuv65PUz3gppKqvejhKT3AQbQzsx3ID2cvx7tUnB+bFKmcOoAsbcRONrnd5c54BSfeActmIF8w+e
+	KBJxE0hNAGLITy5aToGAHkygz4vUl3aIZ7WHY/T0Ozg2jzs22BdU7b/JqhIvRzkSqr1Am6KQ31JdQ
+	eVkKlY2rEdwflbbayzkc1/ERr9ExW2CeNhfZtBa2Z0uT/n2dHFmYMBdLhBQq08rqkXD7sh6fk0i2i
+	8tRmJACuKbRbXq4wGy9w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqAC7-0007Z1-AO; Wed, 24 Jul 2019 05:52:07 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hqAB4-0006a5-HO; Wed, 24 Jul 2019 05:51:02 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqAAr-0006U7-PE; Wed, 24 Jul 2019 05:50:51 +0000
-X-UUID: 7587757b08e544e987e67188a99fac60-20190723
-X-UUID: 7587757b08e544e987e67188a99fac60-20190723
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hqAAZ-0006Gv-7o; Wed, 24 Jul 2019 05:50:32 +0000
+X-UUID: 6ac57a6b11fa4d4d8f0c19ac1470ba0a-20190723
+X-UUID: 6ac57a6b11fa4d4d8f0c19ac1470ba0a-20190723
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1242917430; Tue, 23 Jul 2019 21:50:42 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 23 Jul 2019 22:50:41 -0700
+ with ESMTP id 583997347; Tue, 23 Jul 2019 21:50:30 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 23 Jul 2019 22:50:28 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 24 Jul 2019 13:50:26 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 24 Jul 2019 13:50:27 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 24 Jul 2019 13:50:20 +0800
+ Frontend Transport; Wed, 24 Jul 2019 13:50:27 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <pedrom.sousa@synopsys.com>
-Subject: [PATCH v2 2/3] scsi: ufs: introduce ufshcd_tm_cmd_compl() to refactor
- task cleanup
-Date: Wed, 24 Jul 2019 13:50:17 +0800
-Message-ID: <1563947418-16394-3-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v2 3/3] scsi: ufs: fix broken hba->outstanding_tasks
+Date: Wed, 24 Jul 2019 13:50:18 +0800
+Message-ID: <1563947418-16394-4-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1563947418-16394-1-git-send-email-stanley.chu@mediatek.com>
 References: <1563947418-16394-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: D701BA5A8A78953634D797ACCDCDFF18970D1593BE770D737F9A6BAB1F5FE6532000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_225050_018507_70497003 
-X-CRM114-Status: UNSURE (   8.44  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190723_225031_447622_062C995F 
+X-CRM114-Status: GOOD (  12.98  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -86,46 +81,62 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Introduce ufshcd_tm_cmd_compl() to re-factor taks cleanup jobs
-to make code more readable and for future wider usage by task error
-handling.
+Currently bits in hba->outstanding_tasks are cleared only after their
+corresponding task management commands are successfully done by
+__ufshcd_issue_tm_cmd().
+
+If timeout happens in a task management command, its corresponding
+bit in hba->outstanding_tasks will not be cleared until next task
+management command with the same tag used successfully finishes.
+
+This is wrong and can lead to some issues, like power issue.
+For example, ufshcd_release() and ufshcd_gate_work() will do nothing
+if hba->outstanding_tasks is not zero even if both UFS host and devices
+are actually idle.
+
+Referring to error handling flow of hba->outstanding_reqs, all timed-out
+bits will be cleared by
+ufshcd_reset_and_restore() => ufshcd_transfer_req_compl()
+after reset is done. Therefore similar handling for hba->outstanding_tasks
+could be applied, for example, by
+ufshcd_reset_and_restore() => ufshcd_tmc_handler().
 
 Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
 ---
- drivers/scsi/ufs/ufshcd.c | 11 ++++++++---
- 1 file changed, 8 insertions(+), 3 deletions(-)
+ drivers/scsi/ufs/ufshcd.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 66c8e7402001..114c15ed75f7 100644
+index 114c15ed75f7..3cb942ef64e2 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
-@@ -5522,6 +5522,13 @@ static void ufshcd_check_errors(struct ufs_hba *hba)
- 	 */
+@@ -5535,11 +5535,25 @@ static void ufshcd_tm_cmd_compl(struct ufs_hba *hba, int tag)
+  */
+ static void ufshcd_tmc_handler(struct ufs_hba *hba)
+ {
+-	u32 tm_doorbell;
++	u32 tm_doorbell, tag;
+ 
+ 	tm_doorbell = ufshcd_readl(hba, REG_UTP_TASK_REQ_DOOR_BELL);
+ 	hba->tm_condition = tm_doorbell ^ hba->outstanding_tasks;
++
++	/*
++	 * resource of timed-out tasks shall be cleaned.
++	 * No effect for normal tasks.
++	 */
++	for_each_set_bit(tag, &hba->tm_condition, hba->nutmrs)
++		ufshcd_tm_cmd_compl(hba, tag);
++
+ 	wake_up(&hba->tm_wq);
++
++	/*
++	 * If a timed-out task is cleaned done above,
++	 * free tag is available now for waiters.
++	 */
++	wake_up(&hba->tm_tag_wq);
  }
  
-+static void ufshcd_tm_cmd_compl(struct ufs_hba *hba, int tag)
-+{
-+	__clear_bit(tag, &hba->outstanding_tasks);
-+	__clear_bit(tag, &hba->tm_condition);
-+	ufshcd_put_tm_slot(hba, tag);
-+}
-+
  /**
-  * ufshcd_tmc_handler - handle task management function completion
-  * @hba: per adapter instance
-@@ -5687,11 +5694,9 @@ static int __ufshcd_issue_tm_cmd(struct ufs_hba *hba,
- 
- 	if (likely(cleanup)) {
- 		spin_lock_irqsave(hba->host->host_lock, flags);
--		__clear_bit(free_slot, &hba->outstanding_tasks);
-+		ufshcd_tm_cmd_compl(hba, free_slot);
- 		spin_unlock_irqrestore(hba->host->host_lock, flags);
- 
--		clear_bit(free_slot, &hba->tm_condition);
--		ufshcd_put_tm_slot(hba, free_slot);
- 		wake_up(&hba->tm_tag_wq);
- 	}
- 
 -- 
 2.18.0
 
