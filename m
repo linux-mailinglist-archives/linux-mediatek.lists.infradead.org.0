@@ -2,71 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EEDDA73D3D
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:15:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 39B3A73D6B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:17:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=clZ060eQsEWcHtV8oDSRquQSCiZQ1UWB3uouiA7S8qs=; b=IpX8FrTAag4+AE
-	j4obbhJpPf98dHobRyobVmCgNC5Y32OOZFqFzNcBto2DOZ68YNCMsXxTYtsMWVlvhAHm6sjHJbq4O
-	1Rrm3evp/2TRB9ryNe4YyutVIXIap8yikXV5CZrpdan2PKQgZj2UUbkDdqkXfGKRbydgY5g6bikt8
-	RBLiNDCckR5UgFh+tYwI9aAcODLPFCd1D/4DfkSZSw/UtjLiVgqEfoW6RVw8l75rD5By25g4NpgXz
-	0UyJGci2sV/pE0lwPdUuSVfUfE5t3QJ7zEUb6UauI3SHrYprU+ykHrfYzi/l0j7EMjQoFamQpgn0J
-	v4PZbqmTxCCC7+w+i8Pw==;
+	List-Owner; bh=ILlFpIqvLZ7s09O11fzHsHrgNhpc9heBVLRK/3gwAjc=; b=Sb+yNni5GRIlmG
+	FYVHq/CgqcuUcQx37QKGQePQv9Wc6cuhZHRZG7+HOsNmd7axqlS95DR+e8ajbZk3dfgVYUMrn25T9
+	K/O79DlDFLjY3DX92jyRofwAHELpllIteMxfIYxumi3/rOUW6+nYr0doQzzwZOeLTeiZF3LxgoFHT
+	fPKyUa7z62+Y1jrt0brmk1ukYdMovcLZcv7jngP56ZqkuI7hSM6xbttIUVu6L0pb73v9bWuqrKD7T
+	srmmsxGHsQdoEcrmw+KZG37JktvS5gZQlfLJayAZrfJ+xtUDDwDoFB4V9hw7TsPM/zU0/IX8VFLmU
+	xfNntqwm8Z77BwK9ALhA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqNfp-0000nd-Au; Wed, 24 Jul 2019 20:15:41 +0000
-Received: from mail-io1-f66.google.com ([209.85.166.66])
+	id 1hqNh5-0001BT-F9; Wed, 24 Jul 2019 20:16:59 +0000
+Received: from mail-io1-f65.google.com ([209.85.166.65])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqNfW-0000bH-2m; Wed, 24 Jul 2019 20:15:23 +0000
-Received: by mail-io1-f66.google.com with SMTP id k20so92285001ios.10;
- Wed, 24 Jul 2019 13:15:21 -0700 (PDT)
+ id 1hqNgk-0000yw-6J; Wed, 24 Jul 2019 20:16:39 +0000
+Received: by mail-io1-f65.google.com with SMTP id h6so5772957iom.7;
+ Wed, 24 Jul 2019 13:16:37 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=I8CjyViUUMDogLJ5VWVPS6e/PwcUeKuF+6IP3/vGsBs=;
- b=XOyPeU+Utpy9GgH4uRW40pFdM8xBuNUs9l0MudNepn0eLxNlBV4DM10yDq2xiKfbhf
- Yw9CDClCCzxEwvk/Dry6GHLoY35+xT5RbbxWRJnDGhgsmwErIqcm1hI7C1b/HgoXo/BS
- 7naJZHpx4K4sKgcq94w076JArU6h63KHnPOq86m9mMjR4GsegyEKqcbEvQx4GdmTZOQL
- ZPfq473NMqhG/AJLUfssIJHd1HHtJty6R6RuX5ptYH2OvpU5AikXBcYe97J9LDiUZDgW
- z5LrXtNyvDC64wER+4GP8l/7hXazloVhRNilGksmDKEHw8U4Mf3Q1cpLjaVA+uSn6JFo
- O43g==
-X-Gm-Message-State: APjAAAVq7PROfcT4XNZz2Si1EYIIo1ix4hhoI0JAKJ2/5Ri80jqMlp7P
- pblAJx1pKXocjGvqAsuYOw==
-X-Google-Smtp-Source: APXvYqybRcRkXoHjkdesxQbBTM2QuHB/KR5mvS2bWaUpVJ+8PZzHrz+31LV30zjboYU8LvifX/teOw==
-X-Received: by 2002:a6b:8e82:: with SMTP id q124mr68424936iod.68.1563999320721; 
- Wed, 24 Jul 2019 13:15:20 -0700 (PDT)
+ bh=SleUqq6V31kzUwMjIX1qfrELhcVA/KVuaspMZ04YgL4=;
+ b=Bvytiyf83ALb+k4TSL4OWX4+mMABdLnctFvffTmrf3OpcTciYjPwm/LBUWI9WpkBHe
+ OzmmQmyXVSqTz47kxFFvZoQ3P4dC5L99wW7gP3x+4+bh7LgjwKKmd25/8gVIBp1+tjcb
+ zuN/8ev6/qfMJoxgSuLiLoEj/4oKrQXkuejt/0Amp5SB/1jlusu2sxZAlrv7Te1NCxb5
+ Ld5rRHUpkQ67zzXnXLmwYlD/FMGBm8uJLaZuVzbnTW+eSweXm+/Q0m5bmtX/+gos3rQY
+ 5s3N28uavVnuOPuKYsh2r5A4o9miHVekxy310f1H52klhGqwVHGVX6Gw6mYGei0LTL2B
+ kQlw==
+X-Gm-Message-State: APjAAAUcgq839uGNh1e6Lf9zWgBs3rOt9GI9utWjcEe/DDpLSmjGDQRu
+ mpcz9WKErP7Z8T1iPehDxg==
+X-Google-Smtp-Source: APXvYqwqmUodaynFku7YClU/Ql2xFlbvkHEw7X/q17Yh5pYFol9maQFHH3YaP1av1prEvMzfEF8uMA==
+X-Received: by 2002:a6b:6f06:: with SMTP id k6mr2226288ioc.32.1563999397076;
+ Wed, 24 Jul 2019 13:16:37 -0700 (PDT)
 Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id v10sm41420293iob.43.2019.07.24.13.15.19
+ by smtp.gmail.com with ESMTPSA id i23sm33894203ioj.24.2019.07.24.13.16.36
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 24 Jul 2019 13:15:20 -0700 (PDT)
-Date: Wed, 24 Jul 2019 14:15:19 -0600
+ Wed, 24 Jul 2019 13:16:36 -0700 (PDT)
+Date: Wed, 24 Jul 2019 14:16:35 -0600
 From: Rob Herring <robh@kernel.org>
 To: yongqiang.niu@mediatek.com
-Subject: Re: [PATCH v4, 02/33] dt-bindings: mediatek: add ovl_2l description
+Subject: Re: [PATCH v4, 05/33] dt-bindings: mediatek: add RDMA1 description
  for mt8183 display
-Message-ID: <20190724201519.GA18133@bogus>
+Message-ID: <20190724201635.GA18345@bogus>
 References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
- <1562625253-29254-3-git-send-email-yongqiang.niu@mediatek.com>
+ <1562625253-29254-6-git-send-email-yongqiang.niu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1562625253-29254-3-git-send-email-yongqiang.niu@mediatek.com>
+In-Reply-To: <1562625253-29254-6-git-send-email-yongqiang.niu@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_131522_126555_ED587C5F 
-X-CRM114-Status: UNSURE (   8.76  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190724_131638_241135_42297B48 
+X-CRM114-Status: GOOD (  14.13  )
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.66 listed in list.dnswl.org]
+ no trust [209.85.166.65 listed in list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -91,28 +90,43 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
  linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Yongqiang Niu <yongqiang.niu@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- CK Hu <ck.hu@mediatek.com>, linux-arm-kernel@lists.infradead.org
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Daniel Vetter <daniel@ffwll.ch>, CK Hu <ck.hu@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 9 Jul 2019 06:33:42 +0800, <yongqiang.niu@mediatek.com> wrote:
+On Tue, Jul 09, 2019 at 06:33:45AM +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> Update device tree binding documention for the display subsystem for
-> Mediatek MT8183 SOCs
+> This patch add RDMA1 description for mt8183 display
 > 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > ---
->  .../bindings/display/mediatek/mediatek,disp.txt    | 27 +++++++++++-----------
->  1 file changed, 14 insertions(+), 13 deletions(-)
+>  Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt | 1 +
+>  1 file changed, 1 insertion(+)
 > 
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> index afd3c90..bb9274a 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> @@ -30,6 +30,7 @@ Required properties (all function blocks):
+>  	"mediatek,<chip>-disp-ovl"   		- overlay (4 layers, blending, csc)
+>  	"mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
+>  	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
+> +	"mediatek,<chip>-disp-rdma1"            - function is same with RDMA, fifo size is different
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+This can't be determined by which chip it is? IOW, a chip may have both 
+rdma and rdma1?
+
+>  	"mediatek,<chip>-disp-wdma"  		- write DMA
+>  	"mediatek,<chip>-disp-ccorr"            - color correction
+>  	"mediatek,<chip>-disp-color" 		- color processor
+> -- 
+> 1.8.1.1.dirty
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
