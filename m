@@ -2,70 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 39B3A73D6B
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:17:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 49DA573DEE
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 22:21:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ILlFpIqvLZ7s09O11fzHsHrgNhpc9heBVLRK/3gwAjc=; b=Sb+yNni5GRIlmG
-	FYVHq/CgqcuUcQx37QKGQePQv9Wc6cuhZHRZG7+HOsNmd7axqlS95DR+e8ajbZk3dfgVYUMrn25T9
-	K/O79DlDFLjY3DX92jyRofwAHELpllIteMxfIYxumi3/rOUW6+nYr0doQzzwZOeLTeiZF3LxgoFHT
-	fPKyUa7z62+Y1jrt0brmk1ukYdMovcLZcv7jngP56ZqkuI7hSM6xbttIUVu6L0pb73v9bWuqrKD7T
-	srmmsxGHsQdoEcrmw+KZG37JktvS5gZQlfLJayAZrfJ+xtUDDwDoFB4V9hw7TsPM/zU0/IX8VFLmU
-	xfNntqwm8Z77BwK9ALhA==;
+	List-Owner; bh=CRTeQJHYp4JpKE8Zl+qJdpTA59r9lk6+X+Wb0xoshNY=; b=PD5l0tDwsIZjT2
+	pjU6k8S8c54t+0IAFXuchk0YhQfMh7Ro7O2lBrfzMkFBn8Bske2Lpt+PTRlYvDvuSmi7pMBp1K8mY
+	9cbQ9mAqOykwE+6q7QpAjKmVSF3/U9Lq1R240pjwqoPmZB0cbhMYNpEUxAPxgfvJ/uAMFJCywvk7Y
+	YYsBGPa6W6ehWcd1mCo+Ad1hpuzW2Pl35dZ2m9w8UITyV4ZZPzC0IbKvvQ0Ic9aI/L/fFol8cSd2S
+	lVNEUxgSB/6Wv5PzeIu4CwC8KbCUjvEpx7+uVXzf7hNaSg34o0m2HR0w/OkLflMAjRs4b/A1sOjez
+	x5G479ZnPzZ0TzIdNRfQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqNh5-0001BT-F9; Wed, 24 Jul 2019 20:16:59 +0000
-Received: from mail-io1-f65.google.com ([209.85.166.65])
+	id 1hqNlc-0003xY-5L; Wed, 24 Jul 2019 20:21:40 +0000
+Received: from mail-io1-f66.google.com ([209.85.166.66])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqNgk-0000yw-6J; Wed, 24 Jul 2019 20:16:39 +0000
-Received: by mail-io1-f65.google.com with SMTP id h6so5772957iom.7;
- Wed, 24 Jul 2019 13:16:37 -0700 (PDT)
+ id 1hqNlJ-0003lb-9p; Wed, 24 Jul 2019 20:21:22 +0000
+Received: by mail-io1-f66.google.com with SMTP id k20so92320159ios.10;
+ Wed, 24 Jul 2019 13:21:21 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=SleUqq6V31kzUwMjIX1qfrELhcVA/KVuaspMZ04YgL4=;
- b=Bvytiyf83ALb+k4TSL4OWX4+mMABdLnctFvffTmrf3OpcTciYjPwm/LBUWI9WpkBHe
- OzmmQmyXVSqTz47kxFFvZoQ3P4dC5L99wW7gP3x+4+bh7LgjwKKmd25/8gVIBp1+tjcb
- zuN/8ev6/qfMJoxgSuLiLoEj/4oKrQXkuejt/0Amp5SB/1jlusu2sxZAlrv7Te1NCxb5
- Ld5rRHUpkQ67zzXnXLmwYlD/FMGBm8uJLaZuVzbnTW+eSweXm+/Q0m5bmtX/+gos3rQY
- 5s3N28uavVnuOPuKYsh2r5A4o9miHVekxy310f1H52klhGqwVHGVX6Gw6mYGei0LTL2B
- kQlw==
-X-Gm-Message-State: APjAAAUcgq839uGNh1e6Lf9zWgBs3rOt9GI9utWjcEe/DDpLSmjGDQRu
- mpcz9WKErP7Z8T1iPehDxg==
-X-Google-Smtp-Source: APXvYqwqmUodaynFku7YClU/Ql2xFlbvkHEw7X/q17Yh5pYFol9maQFHH3YaP1av1prEvMzfEF8uMA==
-X-Received: by 2002:a6b:6f06:: with SMTP id k6mr2226288ioc.32.1563999397076;
- Wed, 24 Jul 2019 13:16:37 -0700 (PDT)
+ bh=RJ9nHyNd7LCl6+mSB0G4S2X04kojrU0TsARgzmq3agw=;
+ b=T4wyi7c8R/Bzq/TwZu4LQOAObp8rXxpSoHfIqS+kQfjcHQVgE4PpHrwCSOiwD1YoVn
+ a8FEju98fGD1rQ5BHbLzeTEuMJ7soHxDEaSx1vFglUwqcksDQDZKJGSkXLfjArMh0Nnt
+ 6lWPUBcpuD9gccpulJqUAxaHT4nYAK3GVOy7+KapPO2DR41ZvbomznNqdXAbm5JGMoLX
+ +EDpt02FySjMUi3PtOFY/+VelLF6YWmIUpKKVAwSf6oBRLAL8EfzTsug2UiUuJ0VUaZf
+ nXek6tQ4ch21p9VkBylCtQviMgN32NhrWgtoNZ3R8fcWhKOrmKUstqjY9oFgTBgu+SLT
+ ChCQ==
+X-Gm-Message-State: APjAAAUqdlb/tWx6JhawJx1qLDyCHq1FMrcj85vYoMun8HAyLBTzB2cS
+ /wjiw5b9bIbeh0NewyKwwA==
+X-Google-Smtp-Source: APXvYqwprV5ylAQXl6gUtT7NZHmcnqBWl3IgOcCq5QcBmtI4uojyhvDVa9K+DeOobOHPeGdMYTW9+Q==
+X-Received: by 2002:a5e:8a46:: with SMTP id o6mr45348991iom.36.1563999680305; 
+ Wed, 24 Jul 2019 13:21:20 -0700 (PDT)
 Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id i23sm33894203ioj.24.2019.07.24.13.16.36
+ by smtp.gmail.com with ESMTPSA id r24sm34281026ioc.76.2019.07.24.13.21.19
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 24 Jul 2019 13:16:36 -0700 (PDT)
-Date: Wed, 24 Jul 2019 14:16:35 -0600
+ Wed, 24 Jul 2019 13:21:19 -0700 (PDT)
+Date: Wed, 24 Jul 2019 14:21:19 -0600
 From: Rob Herring <robh@kernel.org>
-To: yongqiang.niu@mediatek.com
-Subject: Re: [PATCH v4, 05/33] dt-bindings: mediatek: add RDMA1 description
- for mt8183 display
-Message-ID: <20190724201635.GA18345@bogus>
-References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
- <1562625253-29254-6-git-send-email-yongqiang.niu@mediatek.com>
+To: Qii Wang <qii.wang@mediatek.com>
+Subject: Re: [PATCH v3 1/2] dt-bindings: i3c: Document MediaTek I3C master
+ bindings
+Message-ID: <20190724202119.GA26566@bogus>
+References: <1562677762-24067-1-git-send-email-qii.wang@mediatek.com>
+ <1562677762-24067-2-git-send-email-qii.wang@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1562625253-29254-6-git-send-email-yongqiang.niu@mediatek.com>
+In-Reply-To: <1562677762-24067-2-git-send-email-qii.wang@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_131638_241135_42297B48 
-X-CRM114-Status: GOOD (  14.13  )
+X-CRM114-CacheID: sfid-20190724_132121_344835_EC3037CB 
+X-CRM114-Status: GOOD (  15.15  )
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.65 listed in list.dnswl.org]
+ no trust [209.85.166.66 listed in list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -87,45 +87,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Daniel Vetter <daniel@ffwll.ch>, CK Hu <ck.hu@mediatek.com>,
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, bbrezillon@kernel.org, leilk.liu@mediatek.com,
+ linux-kernel@vger.kernel.org, liguo.zhang@mediatek.com,
+ linux-mediatek@lists.infradead.org, xinping.qian@mediatek.com,
+ matthias.bgg@gmail.com, linux-i3c@lists.infradead.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jul 09, 2019 at 06:33:45AM +0800, yongqiang.niu@mediatek.com wrote:
-> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+On Tue, Jul 09, 2019 at 09:09:21PM +0800, Qii Wang wrote:
+> Document MediaTek I3C master DT bindings.
 > 
-> This patch add RDMA1 description for mt8183 display
-> 
-> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> Signed-off-by: Qii Wang <qii.wang@mediatek.com>
 > ---
->  Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt | 1 +
->  1 file changed, 1 insertion(+)
+>  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   48 ++++++++++++++++++++
+>  1 file changed, 48 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
 > 
-> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> index afd3c90..bb9274a 100644
-> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> @@ -30,6 +30,7 @@ Required properties (all function blocks):
->  	"mediatek,<chip>-disp-ovl"   		- overlay (4 layers, blending, csc)
->  	"mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
->  	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
-> +	"mediatek,<chip>-disp-rdma1"            - function is same with RDMA, fifo size is different
+> diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> new file mode 100644
+> index 0000000..d32eda6
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> @@ -0,0 +1,48 @@
+> +Bindings for MediaTek I3C master block
+> +=====================================
+> +
+> +Required properties:
+> +--------------------
+> +- compatible: shall be "mediatek,i3c-master"
 
-This can't be determined by which chip it is? IOW, a chip may have both 
-rdma and rdma1?
+Needs to be SoC specific.
 
->  	"mediatek,<chip>-disp-wdma"  		- write DMA
->  	"mediatek,<chip>-disp-ccorr"            - color correction
->  	"mediatek,<chip>-disp-color" 		- color processor
+> +- reg: physical base address of the controller and apdma base, length of
+> +  memory mapped region.
+> +- reg-names: shall be "main" for master controller and "dma" for apdma.
+> +- interrupts: the interrupt line connected to this I3C master.
+> +- clocks: shall reference the i3c and apdma clocks.
+> +- clock-names: shall include "main" and "dma".
+> +
+> +Mandatory properties defined by the generic binding (see
+> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> +
+> +- #address-cells: shall be set to 3
+> +- #size-cells: shall be set to 0
+> +
+> +Optional properties defined by the generic binding (see
+> +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> +
+> +- i2c-scl-hz
+> +- i3c-scl-hz
+> +
+> +I3C device connected on the bus follow the generic description (see
+> +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
+> +
+> +Example:
+> +
+> +	i3c0: i3c@1100d000 {
+> +		compatible = "mediatek,i3c-master";
+> +		reg = <0x1100d000 0x1000>,
+> +		      <0x11000300 0x80>;
+> +		reg-names = "main", "dma";
+> +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
+> +		clocks = <&infracfg CLK_INFRA_I3C0>,
+> +			 <&infracfg CLK_INFRA_AP_DMA>;
+> +		clock-names = "main", "dma";
+> +		#address-cells = <3>;
+> +		#size-cells = <0>;
+> +		i2c-scl-hz = <100000>;
+> +
+> +		nunchuk: nunchuk@52 {
+> +			compatible = "nintendo,nunchuk";
+> +			reg = <0x52 0x0 0x10>;
+> +		};
+> +	};
 > -- 
-> 1.8.1.1.dirty
+> 1.7.9.5
 > 
 
 _______________________________________________
