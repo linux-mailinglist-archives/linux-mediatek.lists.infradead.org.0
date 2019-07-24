@@ -2,65 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 75A5372728
-	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 07:08:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1EF6172771
+	for <lists+linux-mediatek@lfdr.de>; Wed, 24 Jul 2019 07:40:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DpZtxoL9vMxlCrn7YZ41DMiUqMc/WWhZ0WEsZj5YI5c=; b=MwhDgxvlRXyrxz
-	6QaLxcYbhuGjoUnWnYSiXonspV+V+ujJMf45nKkGNpkTgn2KiJ0vz9HtyqNFa26CPPzpog1vhWCgI
-	vgTyGSBe0px0BOuSxW2+dkWYw2qq7CnRAbZKh0CXo/nofzX0hiC6du//Yhk2gp6nlA/gp3MvnD2fO
-	n+TbzUO6IDRISM0gHe0hFPZMmx+PEswT19cwbiVhGjPU2AsR3qJ6whAvzNBYo5vQUuLxp48dZwOde
-	fgvkLi9XBHTEOk07IRRCsZLR8eVoxhionCla48F8bk/Mby8IUGmhkevnVsq84SsOWbUKUYcJaMmUF
-	k10P9IPEsHLLN6jxx8jQ==;
+	List-Owner; bh=Xq+KaLKpFOySBTslFsmbfdEDKwb4HjFIEGPFtWrlhaI=; b=JlUpbfjTDQij/9
+	iQmnaDHO3KcKNg4yKw4J9iiSK9psiowD79ZroS9Bqn7Yy/eEcCVLZR6VORHIaDEHI9aIIPMbgXnk/
+	7bplY8yhxkGupdz2ngSgcfEaMpNi5YZQ7/VfiT8BikfHu63sJPNHybLC9a9fHdqNqdXwVfqMTwXHZ
+	5+5GPc8kOMePb5sgU1vzbPUC4ARmE3ufrTpVwsacHKEN231rfQltvvCp2jFYb4zTjdzi7UBWuTApM
+	jaK8DKSxFhdqDfHdSKqa+K38FdccrtryoNPWgyW37nfv0v7LK9D6vbaKXNbHn+9n4NtQ01GZT/ZVc
+	bQN73uOJ+RgKUEu84QOw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hq9W3-0003yb-Ti; Wed, 24 Jul 2019 05:08:39 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hqA0l-0001d0-1T; Wed, 24 Jul 2019 05:40:23 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hq9W0-0003xu-2K; Wed, 24 Jul 2019 05:08:37 +0000
-X-UUID: 6faa80a21ce74b979748b4210eb36ecb-20190723
-X-UUID: 6faa80a21ce74b979748b4210eb36ecb-20190723
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1045683785; Tue, 23 Jul 2019 21:08:27 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 23 Jul 2019 22:08:26 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 24 Jul 2019 13:08:24 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 24 Jul 2019 13:08:25 +0800
-Message-ID: <1563944904.7235.8.camel@mtkswgap22>
-Subject: RE: [PATCH v1 0/2] scsi: ufs: Fix broken hba->outstanding_tasks
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: Avri Altman <Avri.Altman@wdc.com>
-Date: Wed, 24 Jul 2019 13:08:24 +0800
-In-Reply-To: <SN6PR04MB49256F66F259185F3876CCABFCC40@SN6PR04MB4925.namprd04.prod.outlook.com>
-References: <1562906656-27154-1-git-send-email-stanley.chu@mediatek.com>
- <SN6PR04MB4925208835D4760249E82DB7FCC50@SN6PR04MB4925.namprd04.prod.outlook.com>
- <SN6PR04MB49256F66F259185F3876CCABFCC40@SN6PR04MB4925.namprd04.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hqA0H-00007g-Sm; Wed, 24 Jul 2019 05:39:55 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 02CDC61947; Wed, 24 Jul 2019 05:39:53 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1563946793;
+ bh=MMhai2COm8cnkYrv/dvMLvXqAKcjY56ENAXvop82H7U=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=nb4y6vBnz9vkLD+pOIry/36Icm3pzibY3vWq8Hw/MKQk82eZN5Xu6Okz/p+xD/O/y
+ ptqssP+qM/GHEx2FfIlUYfZ691DgfRilOS8wG7jEGNl++sl3BwFuKqoiVbclW4Z5Fw
+ 5JADz9BIvRZB2Z5DxpSR28lazd8EYRCy8omMlSmw=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id D2C8760CED;
+ Wed, 24 Jul 2019 05:39:49 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1563946792;
+ bh=MMhai2COm8cnkYrv/dvMLvXqAKcjY56ENAXvop82H7U=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=D4xHNZx0wfHaVp+2Zls4zbfCKV0fk4Pci1I4X0elSeXXAysqDci8QeoH8tvJsPoCn
+ mRLFfiOzGaCcEshfsMkjJN1XN0KolGQb7SAuADNhT5iPtkHzpShOCeIimSYsxOnUgu
+ gXinv+XQvHWvapDGY0gjfSm7yP3ERjLIBR0LVE5Y=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D2C8760CED
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Navid Emamdoost <navid.emamdoost@gmail.com>
+Subject: Re: [PATCH] mt76_init_sband_2g: null check the allocation
+References: <20190723221954.9233-1-navid.emamdoost@gmail.com>
+Date: Wed, 24 Jul 2019 08:39:46 +0300
+In-Reply-To: <20190723221954.9233-1-navid.emamdoost@gmail.com> (Navid
+ Emamdoost's message of "Tue, 23 Jul 2019 17:19:54 -0500")
+Message-ID: <87d0i00z4t.fsf@kamboji.qca.qualcomm.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_220836_115431_3FD1ABF9 
-X-CRM114-Status: GOOD (  17.27  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190723_223954_087119_73545007 
+X-CRM114-Status: GOOD (  10.11  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,76 +96,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "evgreen@chromium.org" <evgreen@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: secalert@redhat.com, Jakub Kicinski <kubakici@wp.pl>,
+ linux-wireless@vger.kernel.org, kjlu@umn.edu, linux-kernel@vger.kernel.org,
+ emamd001@umn.edu, linux-mediatek@lists.infradead.org, smccaman@umn.edu,
+ Matthias Brugger <matthias.bgg@gmail.com>, netdev@vger.kernel.org,
+ "David S. Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgQXZyaSwKCk9uIE1vbiwgMjAxOS0wNy0yMiBhdCAwNjoxMCArMDAwMCwgQXZyaSBBbHRtYW4g
-d3JvdGU6Cj4gPiAKPiA+ID4KPiA+ID4gSGksCj4gPiA+Cj4gPiA+ID4KPiA+ID4gPiBDdXJyZW50
-bHkgYml0cyBpbiBoYmEtPm91dHN0YW5kaW5nX3Rhc2tzIGFyZSBjbGVhcmVkIG9ubHkgYWZ0ZXIg
-dGhlaXIKPiA+ID4gPiBjb3JyZXNwb25kaW5nIHRhc2sgbWFuYWdlbWVudCBjb21tYW5kcyBhcmUg
-c3VjY2Vzc2Z1bGx5IGRvbmUgYnkKPiA+ID4gPiBfX3Vmc2hjZF9pc3N1ZV90bV9jbWQoKS4KPiA+
-ID4gPgo+ID4gPiA+IElmIHRpbWVvdXQgaGFwcGVucyBpbiBhIHRhc2sgbWFuYWdlbWVudCBjb21t
-YW5kLCBpdHMgY29ycmVzcG9uZGluZwo+ID4gPiA+IGJpdCBpbiBoYmEtPm91dHN0YW5kaW5nX3Rh
-c2tzIHdpbGwgbm90IGJlIGNsZWFyZWQgdW50aWwgbmV4dCB0YXNrCj4gPiA+ID4gbWFuYWdlbWVu
-dCBjb21tYW5kIHdpdGggdGhlIHNhbWUgdGFnIHVzZWQgc3VjY2Vzc2Z1bGx5IGZpbmlzaGVzLuKA
-pwo+ID4gPiB1ZnNoY2RfY2xlYXJfdG1fY21kIGlzIGFsc28gY2FsbGVkIGFzIHBhcnQgb2YgdWZz
-aGNkX2Vycl9oYW5kbGVyLgo+ID4gPiBEb2VzIHRoaXMgY2hhbmdlIHNvbWV0aGluZyBpbiB5b3Vy
-IGFzc3VtcHRpb25zPwo+ID4gQW5kIEJUVyB0aGVyZSBpcyBhIHNwZWNpZmljIF9fY2xlYXJfYml0
-IGluIF9fdWZzaGNkX2lzc3VlX3RtX2NtZCgpIGluIGNhc2UKPiA+IG9mIGEgVE8uCj4gCj4gR2F2
-ZSBpdCBhbm90aGVyIGxvb2sgLSAKPiBJZiBpbmRlZWQgdGhpcyBiaXQgaXNuJ3QgY2xlYXJlZCBh
-cyBwYXJ0IG9mIHRoZSBlcnJvciBmbG93IHRoYXQgdGhlIHRpbWVvdXQgdHJpZ2dlcnMsCj4gSSB0
-aGluayB5b3Ugc2hvdWxkIHJlbGF0ZSB0byB1ZnNoY2RfY2xlYXJfdG1fY21kIHNwZWNpZmljYWxs
-eSBpbiB5b3VyIGNvbW1pdCBsb2cgLSAKPiBCZWNhdXNlIHRoaXMgaXMgdGhlIG9idmlvdXMgcGxh
-Y2Ugd2hlcmUgdGhlIGJpdCBjbGVhbnVwIHNob3VsZCB0YWtlIHBsYWNlLgo+IAo+IEFsc28gdGhl
-IGZpeCBzaG91bGQgYmUgbXVjaCBtb3JlIGludHVpdGl2ZSBJTU8gLSAKPiBUb2RheSB3ZSBkbyBf
-X2NsZWFyX2JpdCgpIG9uIHN1Y2Nlc3MsIHVmc2hjZF9jbGVhcl90bV9jbWQoKSBvbiBlcnJvciwK
-PiBBbmQgYWxzbyB1ZnNoY2RfcHV0X3RtX3Nsb3QoKSBlaXRoZXIgd2F5Pwo+IAo+IE1heWJlIHlv
-dSBjYW4gY2hvb3NlIGEgc2luZ2xlIHBsYWNlIHRvIGNsZWFyIGl0LCB3aXRob3V0IGFueSBhZGRp
-dGlvbmFsIGNvZGU/Cgp1ZnNoY2RfY2xlYXJfdG1fY21kKCkgaXMgc2ltaWxhciB0byB1ZnNoY2Rf
-Y2xlYXJfY21kKCkgd2hpY2ggdHJpZXMgdG8Kd3JpdGUgdGltZWQtb3V0IGJpdCBpbiAiY2xlYXIg
-cmVnaXN0ZXIiLiBUaGV5IGRvIG5vdCBjbGVhbiBiaXRzIGluIGJvdGgKb3V0c3RhbmRpbmcgbWFz
-a3MuCgpBbm90aGVyIHJlYXNvbiB0byBub3QgdG8gZG8gb3V0c3RhbmRpbmcgYml0cyBjbGVhbnVw
-IGluCnVmc2hjZF9jbGVhcl90bV9jbWQoKSBpczogaWYgaG9zdCBpcyB1bmFibGUgdG8gY2xlYXIg
-VE0gY29tbWFuZCBieQpzZXR0aW5nICJjbGVhciByZWdpc3RlciIsIHRoZSBUTSBjb21tYW5kIG1h
-eSBiZSBzdGlsbCAib3V0c3RhbmRpbmciIGluCnRoZSBkZXZpY2UuIEluIHRoaXMgY2FzZSwgaXQg
-bWF5IGJlIGJldHRlciB0byBkbyBjbGVhbnVwIGFmdGVyIHJlc2V0IGlzCmRvbmUuIENsZWFudXAg
-aW5jbHVkZXMgYml0cyBpbiBoYmEtPm91dHN0YW5kaW5nX3Rhc2tzIGFuZApoYmEtPnRtX3Nsb3Rz
-X2luX3VzZSB3aGljaCBpcyBwb3NzaWJseSBjbGVhbmVkIHRvbyBlYXJseSBieQp1ZnNoY2RfcHV0
-X3RtX3Nsb3QoKSBpZiBjb21tYW5kIGlzIHRpbWVkLW91dCBub3cuCgpSZWZlcnJpbmcgdG8gZXJy
-b3IgaGFuZGxpbmcgZmxvdyBvZiBoYmEtPm91dHN0YW5kaW5nX3JlcXMsIGFsbCB0aW1lZC1vdXQK
-Yml0cyB3aWxsIGJlIGNsZWFuZWQgYnkgdWZzaGNkX3Jlc2V0X2FuZF9yZXN0b3JlKCkgPT4KdWZz
-aGNkX3RyYW5zZmVyX3JlcV9jb21wbCgpIGFmdGVyIHJlc2V0IGlzIGRvbmUuIFNpbWlsYXIgaGFu
-ZGxpbmcgZm9yCmhiYS0+b3V0c3RhbmRpbmdfdGFza3MgY291bGQgYmUgYXBwbGllZCwgaS5lLiwg
-ZG8gY2xlYW51cCBieQp1ZnNoY2RfcmVzZXRfYW5kX3Jlc3RvcmUoKSA9PiB1ZnNoY2RfdG1jX2hh
-bmRsZXIoKS4KClRoZSBuZXh0IHRoaW5nIGlzIHdoYXQgeW91IHN1Z2dlc3RlZDogSG93IHRvIG1h
-a2UgdGhlIGZpeCBtb3JlCmludHVpdGl2ZS4gUGF0Y2hzZXQgdjIgd2lsbCBiZSB1cGxvYWRlZCBm
-b3IgcmV2aWV3OiBJdCB0cmllcyB0bwoicmUtZmFjdG9yIiBjbGVhbnVwIGpvYnMgZmlyc3QsIGFu
-ZCB0aGVuIGFkZCBmaXhlZCBmbG93IHRvIG1ha2UgdGhlCndob2xlIHBhdGNoIG1vcmUgcmVhZGFi
-bGUuCgpPbmUgbW9yZSB0aGluZywgYWJvdmUgZGVzY3JpcHRpb24gYW5kIGZsb3cgaXMgZG9uZSB0
-aHJvdWdoIFVGU0hDRCBTQ1NJCmVycm9yIGhhbmRsaW5nIHJvdXRpbmVzIHJlZ2lzdGVyZWQgd2l0
-aCBTQ1NJIE1pZGxheWVyLiBGb3IgVE0gY29tbWFuZAp0aW1lb3V0IGhhcHBlbmluZyBpbiBic2cg
-cGF0aCB3aXRob3V0IGVycm9yIGhhbmRsaW5nIHRyaWdnZXJlZCBieSBTQ1NJCmxheWVyLCB3ZSBt
-YXkgbmVlZCB0byBjb25zaWRlciB0byBoYW5kbGUgdGhvc2UgdGFza3MgaW4gZnV0dXJlIHBhdGNo
-ZXMuCgo+IAo+IFRoYW5rcywKPiBBdnJpCgpUaGFua3MsClN0YW5sZXkKCj4gX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KPiBMaW51eC1tZWRpYXRlayBtYWls
-aW5nIGxpc3QKPiBMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCj4gaHR0cDovL2xp
-c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawoKCgpfX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRl
-ayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8v
-bGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
+Navid Emamdoost <navid.emamdoost@gmail.com> writes:
+
+> devm_kzalloc may fail and return NULL. So the null check is needed.
+>
+> Signed-off-by: Navid Emamdoost <navid.emamdoost@gmail.com>
+> ---
+>  drivers/net/wireless/mediatek/mt7601u/init.c | 3 +++
+>  1 file changed, 3 insertions(+)
+
+The prefix in the title should be "mt7601u:".
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches#commit_title_is_wrong
+
+-- 
+Kalle Valo
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
