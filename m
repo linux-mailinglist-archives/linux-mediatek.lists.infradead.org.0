@@ -2,55 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BCF9975957
-	for <lists+linux-mediatek@lfdr.de>; Thu, 25 Jul 2019 23:11:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D994E75ABD
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 00:25:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:From:To:Subject:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FPSjTCr6SnUAk47ivrsA5bgZ9+ifMuVfwsMtv/tBUH4=; b=BBKWcPIQu8igfa
-	R2xZcV0LsfMttB+kvMnSvgIl/s0Scr2ORyEf6Ebj/xBOOKPUm0NLYJMUA8/CSkByeANSJ1WW4r2u2
-	ym0tW088TD6Wy8OsgET1mvvD/fh+4S4C/KahZ3rksemdRQ70Vdfj18r5755Q9i7v/GUUcBJgiJZze
-	9V3pqCvBELbAvW1YoXQ8gHfCeloyBOuCkzzw3nBAbcM8QreoSzEMQus8phMcEVpHJI/GhIPaWz9CF
-	VpfCuzuYTk1VNc5HT2co6mT/Jt958HMR7oXZg1aMzZ9lHsVesgd8AQCb1HfiOQcz00B341xDU3R0y
-	hSVdwIJjpyUR0RLuiShw==;
+	List-Owner; bh=qDnzekbtOrDHLbt8kWcXvoLNRg5CAXBOSD4Z2hCVbPQ=; b=A2f41NWxabhOeG
+	Cvphf7d9/ZHIr60xF9MYH1uDYnu1PTUmgvlvu6lFhPIYf902UK1ajXZN7UHlOd7NKv1bufaWZmoj7
+	p/la6FUFGRXc1J9xyCGViAsHjOlzi9S0/37z2gMLnzcCLn2V1qrXDdAhWugEwPlnBvAOQfLkteAiD
+	DpZR5XPtU9Nt7GMwUoJMO1dyU+ivXabHKz+R+A7oRtiljttBOAimVoa+veq4cNC91VPuiAKF1ikUC
+	ZPQyBymkcPTsSsMp9ZNBqDSDpLRJ0PyRyJVzJCQBSOd8xYa3RLrItv01EDlRIoKGGYnx1xAwmEuim
+	NH2zY43fATg1l4uvBhrg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hql1H-0005D0-JW; Thu, 25 Jul 2019 21:11:23 +0000
+	id 1hqmAd-0004FD-RP; Thu, 25 Jul 2019 22:25:08 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hql0z-0004kO-Fo; Thu, 25 Jul 2019 21:11:07 +0000
-Received: from kernel.org (unknown [104.132.0.74])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ id 1hqm9f-0003iW-7T; Thu, 25 Jul 2019 22:24:08 +0000
+Received: from mail-qt1-f179.google.com (mail-qt1-f179.google.com
+ [209.85.160.179])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 0FD50218EA;
- Thu, 25 Jul 2019 21:11:05 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 2584022BE8;
+ Thu, 25 Jul 2019 22:24:06 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1564089065;
- bh=CYo3ibcqoLW7F/S9064H4yTGj2/Ywl1wI1KXI8cO9jQ=;
- h=In-Reply-To:References:Subject:To:Cc:From:Date:From;
- b=wT8fbumh0wwybnsdU10c8jzKx0Z9uNF4KXmcnkTksF7ry3psFzsnrn+nlVPw9DyRT
- FPIfNzGFt8T1QQyEt8oAynRh4g7wAGeQWv77AVRPtyKlvq3tFI2409ySyy2PCD2tJ3
- r2D/no8G4Os9dQqO3qiC9TZVQaWd5F7TZWsGujo0=
+ s=default; t=1564093446;
+ bh=3JLogo6H+bSfeYeWtbaf6Mngs+H5aQPOTF5AdZi4JbQ=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=qQ0pmHASFnfLaGawnik5VEoSJv0ubNcBHj1bRacJYGJRhko66TxkYcoc0ZNJiWtRM
+ /okS464Oy2UMDzloZChf/rj6Bx3I39iCuYcOl2CWKKdV+eX2zOLVyfM4V+SctfAXHT
+ Rn+V2exDT35fhGJEVrOJoteHZDhoBpSCZFGmrwHA=
+Received: by mail-qt1-f179.google.com with SMTP id k10so50765862qtq.1;
+ Thu, 25 Jul 2019 15:24:06 -0700 (PDT)
+X-Gm-Message-State: APjAAAWYYyo/opnMkTE6+W8xq77jAoWdfIe896q5hBE/GxqNWZFjp1/y
+ FUdfoAOIj7Dxba+oIGbWZOSRlkECKk2n13XyAw==
+X-Google-Smtp-Source: APXvYqymuR/CfxglS3eGlra1LScgdzgYCXA7Zoh0YgXpzw19WOcSOu4dPi51w8tk0qDx2h76/kSXt+skkFTYNwydBEM=
+X-Received: by 2002:aed:3fb0:: with SMTP id s45mr65093826qth.136.1564093445297; 
+ Thu, 25 Jul 2019 15:24:05 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <20190725082002.17400-2-yong.liang@mediatek.com>
-References: <20190725082002.17400-1-yong.liang@mediatek.com>
- <20190725082002.17400-2-yong.liang@mediatek.com>
-Subject: Re: [PATCH v4,2/2] clk: reset: Modify reset-controller driver
-To: Yong Liang <yong.liang@mediatek.com>, chunhui.dai@mediatek.com,
- drinkcat@chromium.org, eddie.huang@mediatek.com, erin.lo@mediatek.com,
- jamesjj.liao@mediatek.com, jasu@njomotys.info, mark.rutland@arm.com,
- matthias.bgg@gmail.com, mturquette@baylibre.com, owen.chen@mediatek.com,
- robh+dt@kernel.org, weiyi.lu@mediatek.com
-From: Stephen Boyd <sboyd@kernel.org>
-User-Agent: alot/0.8.1
-Date: Thu, 25 Jul 2019 14:11:04 -0700
-Message-Id: <20190725211105.0FD50218EA@mail.kernel.org>
+References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
+ <1562625253-29254-6-git-send-email-yongqiang.niu@mediatek.com>
+ <20190724201635.GA18345@bogus> <1564024819.2621.4.camel@mtksdaap41>
+In-Reply-To: <1564024819.2621.4.camel@mtksdaap41>
+From: Rob Herring <robh@kernel.org>
+Date: Thu, 25 Jul 2019 16:23:54 -0600
+X-Gmail-Original-Message-ID: <CAL_JsqL439PCnG3B75uqCXb3-OfH2uK6qtU7XpUb-cEnPWRkkQ@mail.gmail.com>
+Message-ID: <CAL_JsqL439PCnG3B75uqCXb3-OfH2uK6qtU7XpUb-cEnPWRkkQ@mail.gmail.com>
+Subject: Re: [PATCH v4, 05/33] dt-bindings: mediatek: add RDMA1 description
+ for mt8183 display
+To: CK Hu <ck.hu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190725_141105_568320_9BF56C91 
-X-CRM114-Status: GOOD (  17.77  )
+X-CRM114-CacheID: sfid-20190725_152407_305114_9108016A 
+X-CRM114-Status: GOOD (  19.24  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,106 +85,54 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "yong.liang" <yong.liang@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ dri-devel <dri-devel@lists.freedesktop.org>, yongqiang.niu@mediatek.com,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting Yong Liang (2019-07-25 01:20:02)
-> From: "yong.liang" <yong.liang@mediatek.com>
-> 
-> Set reset signal by a register and clear reset signal by
-> another register for 8183.
-> 
-> Signed-off-by: yong.liang <yong.liang@mediatek.com>
-> ---
-> 
-> Base on https://git.kernel.org/pub/scm/linux/kernel/git/clk/linux.git branch clk-next and https://patchwork.kernel.org/patch/10856987/
+On Wed, Jul 24, 2019 at 9:20 PM CK Hu <ck.hu@mediatek.com> wrote:
+>
+> Hi, Rob:
+>
+> On Wed, 2019-07-24 at 14:16 -0600, Rob Herring wrote:
+> > On Tue, Jul 09, 2019 at 06:33:45AM +0800, yongqiang.niu@mediatek.com wrote:
+> > > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> > >
+> > > This patch add RDMA1 description for mt8183 display
+> > >
+> > > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> > > ---
+> > >  Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt | 1 +
+> > >  1 file changed, 1 insertion(+)
+> > >
+> > > diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> > > index afd3c90..bb9274a 100644
+> > > --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> > > +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> > > @@ -30,6 +30,7 @@ Required properties (all function blocks):
+> > >     "mediatek,<chip>-disp-ovl"              - overlay (4 layers, blending, csc)
+> > >     "mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
+> > >     "mediatek,<chip>-disp-rdma"             - read DMA / line buffer
+> > > +   "mediatek,<chip>-disp-rdma1"            - function is same with RDMA, fifo size is different
+> >
+> > This can't be determined by which chip it is? IOW, a chip may have both
+> > rdma and rdma1?
+>
+> In MT8183, there are two different rdma. The difference is the fifo size
+> in each one. I've a question: is it better to have two compatible string
+> for each one, or just one compatible string for both but with a property
+> to set fifo size?
 
-Use --base= in git format-patch instead.
-
-> diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-> index 9d8651033ae9..f695eb7eb5a1 100644
-> --- a/drivers/clk/mediatek/clk-mt8183.c
-> +++ b/drivers/clk/mediatek/clk-mt8183.c
-> @@ -1204,13 +1204,24 @@ static int clk_mt8183_infra_probe(struct platform_device *pdev)
->  {
->         struct clk_onecell_data *clk_data;
->         struct device_node *node = pdev->dev.of_node;
-> +       int r;
->  
->         clk_data = mtk_alloc_clk_data(CLK_INFRA_NR_CLK);
->  
->         mtk_clk_register_gates(node, infra_clks, ARRAY_SIZE(infra_clks),
->                 clk_data);
->  
-> -       return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-> +       r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-> +       if (r) {
-> +               dev_err(&pdev->dev,
-> +                       "%s(): could not register clock provider: %d\n"
-> +                       ,__func__, r);
-> +               return r;
-> +       }
-> +
-> +       mtk_register_reset_controller_set_clr(node, 4, 0x120);
-
-What is this line doing? Maybe add a comment so we understand what 0x120
-is.
-
-> +
-> +       return r;
->  }
->  
->  static int clk_mt8183_mcu_probe(struct platform_device *pdev)
-> diff --git a/drivers/clk/mediatek/reset.c b/drivers/clk/mediatek/reset.c
-> index d3551d5efef2..fccc8fcb6a20 100644
-> --- a/drivers/clk/mediatek/reset.c
-> +++ b/drivers/clk/mediatek/reset.c
-> @@ -95,3 +131,18 @@ void mtk_register_reset_controller(struct device_node *np,
->                 return;
->         }
->  }
-> +
-> +void mtk_register_reset_controller(struct device_node *np,
-> +       unsigned int num_regs, int regofs)
-> +{
-> +       mtk_register_reset_controller_common(np, num_regs, regofs,
-> +               &mtk_reset_ops);
-> +}
-> +
-> +void mtk_register_reset_controller_set_clr(struct device_node *np,
-> +       unsigned int num_regs, int regofs)
-> +{
-> +       mtk_register_reset_controller_common(np, num_regs, regofs,
-> +               &mtk_reset_ops_set_clr);
-> +}
-> +
-
-If this is an extra newline at the end of the file, please remove it.
-
-> diff --git a/include/dt-bindings/reset-controller/mt8183-resets.h b/include/dt-bindings/reset-controller/mt8183-resets.h
-> new file mode 100644
-> index 000000000000..81136c932f75
-> --- /dev/null
-> +++ b/include/dt-bindings/reset-controller/mt8183-resets.h
-> @@ -0,0 +1,88 @@
-> +/*
-> + * Copyright (c) 2017 MediaTek Inc.
-> + *
-> + * This program is free software; you can redistribute it and/or modify
-> + * it under the terms of the GNU General Public License version 2 as
-> + * published by the Free Software Foundation.
-> + *
-> + * This program is distributed in the hope that it will be useful,
-> + * but WITHOUT ANY WARRANTY; without even the implied warranty of
-> + * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-> + * See  http://www.gnu.org/licenses/gpl-2.0.html for more details.
-
-Please use SPDX tags instead of this boilerplate.
-
+If that's the only diff, then a property for fifo size is fine. We
+just don't want to be adding a new property for each new difference.
 
 _______________________________________________
 Linux-mediatek mailing list
