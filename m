@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 24EC177032
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:28:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E388A77037
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:28:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,41 +11,39 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=HpBmjHQ8F1Y8PSOhQYTOJidKKtTGvjaQnhgsi7oHko0=; b=HL/xYxs65phixyLzTTGWzygRDi
-	3L+5M7ImW3ZmqeiL/gGAEhIfjOF6vf+73FVqrn93YWpTmFNQTpmfaqaWH+8p5pJy+Wbt1kuGGyj0P
-	aXb0pISbyvn9PNe5FdAAUIatwZtAzaf6K8CCU20ntRazfLPcSi5QjxrbGdbQnTjO4ugRFXzJYliog
-	mJTAGTEkyfP3ANBbY7vjgb4n6ziBCSVktkN2cAd7S+ElvEbilky4mNE7r5fH0IO5McFpSHPfcojI+
-	SIuplM1ge2a1x1c2EirrCCSV+hwn/S1qtJaKjm3SoXVuy+OxaVhT0JIt3w7ssDHbXI1sVitck24Fk
-	ZIcyHHXg==;
+	bh=/u8Nhgo6vSMZ6hjCqB3/s4y3LdOwPt7l7GbzpNspiFM=; b=KM2rJ7igDk2Qg2OMUUuDNDOVwo
+	nxi0i3p72ZSUFTXBb75sVvvCSaq6fqT13JmMoFwmp28hXO+AODzAvJCrrsgNoO615ghMpL/GynPA2
+	drZQ7/2CFAbR0AEQFjaWaWCdiUniq7G/Ca5KSqqBW12genEOfG6vw6A+W3o+dgKzXlIhXKXy72XVO
+	v0x4VQzsUvq5yZN0y1K5hz/XLbm8ZME+VCTcy594vficVEitJC/fgndTFZIAf2v4rC4u/9Y8jq+Pw
+	oZuyckmHYWuuZySgUTUH7Y8U5zu3HD8nCdfGwGFJWfUlzj5ZfKHJqvMbI0WuXe9QuDo4sPmatGIgZ
+	DVMdCfhw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr412-0003uF-16; Fri, 26 Jul 2019 17:28:24 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hr41E-0004AR-OP; Fri, 26 Jul 2019 17:28:36 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr40y-0003tc-1v; Fri, 26 Jul 2019 17:28:21 +0000
+ id 1hr41B-00048S-4W; Fri, 26 Jul 2019 17:28:34 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id E619527EA8C
+ (Authenticated sender: andrzej.p) with ESMTPSA id 04F3227EA8C
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 20/24] drm/bridge: dw-hdmi: Provide ddc symlink in
+Subject: [PATCH v6 21/24] drm/bridge: ti-tfp410: Provide ddc symlink in
  connector sysfs directory
-Date: Fri, 26 Jul 2019 19:23:14 +0200
-Message-Id: <4bcf0f154c683c9787fa34f911ebc52de6b4a7a1.1564161140.git.andrzej.p@collabora.com>
+Date: Fri, 26 Jul 2019 19:23:15 +0200
+Message-Id: <3b61da77a6456805db0deffe6d1a2343dd784730.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102820_350719_55698793 
-X-CRM114-Status: GOOD (  11.20  )
+X-CRM114-CacheID: sfid-20190726_102833_441130_351C67F9 
+X-CRM114-Status: GOOD (  11.48  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -66,8 +64,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
  David Airlie <airlied@linux.ie>, Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -92,7 +90,7 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
+ Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
  Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
  Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
  Thomas Zimmermann <tzimmermann@suse.de>,
@@ -113,26 +111,26 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 6 ++++--
+ drivers/gpu/drm/bridge/ti-tfp410.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
-index 218a7b2308f7..83b94b66e464 100644
---- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
-+++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
-@@ -2200,8 +2200,10 @@ static int dw_hdmi_bridge_attach(struct drm_bridge *bridge)
+diff --git a/drivers/gpu/drm/bridge/ti-tfp410.c b/drivers/gpu/drm/bridge/ti-tfp410.c
+index dbf35c7bc85e..61cc2354ef1b 100644
+--- a/drivers/gpu/drm/bridge/ti-tfp410.c
++++ b/drivers/gpu/drm/bridge/ti-tfp410.c
+@@ -134,8 +134,10 @@ static int tfp410_attach(struct drm_bridge *bridge)
  
- 	drm_connector_helper_add(connector, &dw_hdmi_connector_helper_funcs);
- 
--	drm_connector_init(bridge->dev, connector, &dw_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	drm_connector_init_with_ddc(bridge->dev, connector,
-+				    &dw_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    hdmi->ddc);
- 
- 	drm_connector_attach_encoder(connector, encoder);
- 
+ 	drm_connector_helper_add(&dvi->connector,
+ 				 &tfp410_con_helper_funcs);
+-	ret = drm_connector_init(bridge->dev, &dvi->connector,
+-				 &tfp410_con_funcs, dvi->connector_type);
++	ret = drm_connector_init_with_ddc(bridge->dev, &dvi->connector,
++					  &tfp410_con_funcs,
++					  dvi->connector_type,
++					  dvi->ddc);
+ 	if (ret) {
+ 		dev_err(dvi->dev, "drm_connector_init() failed: %d\n", ret);
+ 		return ret;
 -- 
 2.17.1
 
