@@ -2,91 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC31F9EFC8
+	by mail.lfdr.de (Postfix) with ESMTPS id 1FE9C9EFC7
 	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 18:10:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:MIME-Version:Subject:To:
-	References:In-Reply-To:Message-ID:From:Date:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hLtm6zsZc1LVt7ATF+Op5bvcQjJnfOwSvTrjZK2vc0I=; b=iPqg+b2HOxngxL
-	NWJ7ukWqKTPVsVbsLgJGjD+Sv2FjSBeidAH23ti8tqWlP4KJ1LwOCqjrqZBZsCYOqJNTmoKWw2RIn
-	2435bO34q4fOELpN4tML1K7oQ3daVU435XS5GTrh8AsKlSt+62UfxwoUKmQ6fKDAdypZdgXmSbI49
-	u6TuCfRoyVUOg3U85fOr1NHrwZ/QFGyo2Tn87XOlcssMC7KkDJQBrNe16E9Jxl5dRlWI+mJXQqmpM
-	YFB6zGnZ3v8DLQ58mpGh1qjf80qho7hEtTgj57VjFHORhAuDRxV/BTuLqQFHoJkKgs6PI5PAXTaUP
-	v8utGdFm+PU95Y6QV6ZA==;
+	List-Owner; bh=DtDNYSdDfDHJg+MWUdhiRmGRB758sgh4UDfLQO3cyi8=; b=aL5JpY27PNl8BM
+	sVQXlU4jBzv8iARkA+GndPFuwh0tU24YXtChi4RBlvrdoekSuRDo+ZTD0YieTDFQqQyFL0HOjhuyZ
+	XjtziZs5NBmBysRYI1u/kt9Roll36btBh1yQGiLVTcvcHKbM3eBWs9ns8sW06dgKMkkIAlRmYiEvt
+	d8eLrC1hM7E9ymwf2u2SOf6xHMmuobY7d3/u3cwj00JeZIuwiEwX7V57F++y0onSTnuhceOqKV7Yr
+	skv97n9HXWS/mHXfq2AXoiRoBj4rNZjPJ9vVxAeDa3iBBQ0b3tUy7kyayAzhOF85TIUFdVXa8B/B4
+	KbkafCKEfTkNrHtudquw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2e2j-0002gc-1M; Tue, 27 Aug 2019 16:10:01 +0000
-Received: from terminus.zytor.com ([198.137.202.136])
+	id 1i2e2l-0002hL-E5; Tue, 27 Aug 2019 16:10:03 +0000
+Received: from asavdk3.altibox.net ([109.247.116.14])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfh7H-0005H2-QB
- for linux-mediatek@lists.infradead.org; Tue, 25 Jun 2019 08:47:54 +0000
-Received: from terminus.zytor.com (localhost [127.0.0.1])
- by terminus.zytor.com (8.15.2/8.15.2) with ESMTPS id x5P8lZV63536042
- (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NO);
- Tue, 25 Jun 2019 01:47:35 -0700
-DKIM-Filter: OpenDKIM Filter v2.11.0 terminus.zytor.com x5P8lZV63536042
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zytor.com;
- s=2019061801; t=1561452456;
- bh=ryX8v7tj7G7wPWNZ8zfZ0V7lLgGrMj2/mk3YLXLmFqo=;
- h=Date:From:Cc:Reply-To:In-Reply-To:References:To:Subject:From;
- b=iRe6+A1zvkV7CTyV1VLkPAdiozK1z1Qh2jVGN6riSJ02W8p8wo+PvIF4NMyJIAVR3
- WtulJVYExqt0z7qS78hV1RrmsCrJ2SrBeLYYzZMkBM2PIA17O4WBE/EV5sSNu1lgzt
- y7f4qVhuv1i4jAiim+oO5SXbBo00mBT1YKiLojBAh0XfAomPAahtqEMaogDyUM20Y9
- 1HlzgU89AzW+xF7yFBp1/820KbypDdPlBaxbSdJMdCQrYSaUImI0mSgbFqlvyH4tti
- KUt40cBZbemgcevBacQuYuzhCH1QdxazJ7xb8lldHkt661WfOpfmdpVfJ/FLsNd15v
- RJoOkf0130jLQ==
-Received: (from tipbot@localhost)
- by terminus.zytor.com (8.15.2/8.15.2/Submit) id x5P8lYtu3536038;
- Tue, 25 Jun 2019 01:47:34 -0700
-Date: Tue, 25 Jun 2019 01:47:34 -0700
-X-Authentication-Warning: terminus.zytor.com: tipbot set sender to
- tipbot@zytor.com using -f
-From: tip-bot for Kobe Wu <tipbot@zytor.com>
-Message-ID: <tip-9156e545765e467e6268c4814cfa609ebb16237e@git.kernel.org>
-In-Reply-To: <1561365348-16050-1-git-send-email-kobe-cp.wu@mediatek.com>
-References: <1561365348-16050-1-git-send-email-kobe-cp.wu@mediatek.com>
-To: linux-tip-commits@vger.kernel.org
-Subject: [tip:locking/core] locking/lockdep: increase size of counters for
- lockdep statistics
-Git-Commit-ID: 9156e545765e467e6268c4814cfa609ebb16237e
-X-Mailer: tip-git-log-daemon
-Robot-ID: <tip-bot.git.kernel.org>
-Robot-Unsubscribe: Contact <mailto:hpa@kernel.org> to get blacklisted from
- these emails
+ id 1hr5NZ-0002d3-6l; Fri, 26 Jul 2019 18:55:46 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk3.altibox.net (Postfix) with ESMTPS id CB69020127;
+ Fri, 26 Jul 2019 20:55:39 +0200 (CEST)
+Date: Fri, 26 Jul 2019 20:55:38 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Review required [Was: Associate ddc adapters with connectors]
+Message-ID: <20190726185538.GD14981@ravnborg.org>
+References: <cover.1564161140.git.andrzej.p@collabora.com>
+ <20190726183520.GA22572@ravnborg.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-Precedence: bulk
-X-Spam-Status: No, score=-3.1 required=5.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,DKIM_VALID_EF autolearn=ham
- autolearn_force=no version=3.4.2
-X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on terminus.zytor.com
+In-Reply-To: <20190726183520.GA22572@ravnborg.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=7gkXJVJtAAAA:8
+ a=e5mUnYsNAAAA:8 a=nTBMXhx45H-Va90dJ2EA:9 a=CjuIK1q_8ugA:10
+ a=E9Po1WZjFZOl8hwRPBS3:22 a=Vxmtnl_E_bksehYqCbjh:22
 X-Bad-Reply: References and In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_014751_856424_F752A0F2 
-X-CRM114-Status: UNSURE (   7.65  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190726_115545_603472_5B432659 
+X-CRM114-Status: GOOD (  20.07  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [198.137.202.136 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ no trust [109.247.116.14 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-Mailman-Approved-At: Tue, 27 Aug 2019 09:09:59 -0700
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
+Precedence: list
 List-Id: <linux-mediatek.lists.infradead.org>
 List-Unsubscribe: <http://lists.infradead.org/mailman/options/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=unsubscribe>
@@ -95,110 +69,101 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Reply-To: will.deacon@arm.com, wsd_upstream@mediatek.com,
- eason-yh.lin@mediatek.com, linux-mediatek@lists.infradead.org,
- torvalds@linux-foundation.org, tglx@linutronix.de, mingo@kernel.org,
- peterz@infradead.org, linux-kernel@vger.kernel.org, hpa@zytor.com,
- kobe-cp.wu@mediatek.com
-Cc: eason-yh.lin@mediatek.com, wsd_upstream@mediatek.com, peterz@infradead.org,
- kobe-cp.wu@mediatek.com, will.deacon@arm.com, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, hpa@zytor.com, tglx@linutronix.de,
- torvalds@linux-foundation.org, mingo@kernel.org
+Cc: Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
+ Liviu Dudau <liviu.dudau@arm.com>, dri-devel@lists.freedesktop.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
+ linux-samsung-soc@vger.kernel.org, Sean Paul <sean@poorly.run>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
+ linux-rockchip@lists.infradead.org, Chen-Yu Tsai <wens@csie.org>,
+ Kukjin Kim <kgene@kernel.org>, NXP Linux Team <linux-imx@nxp.com>,
+ Dave Airlie <airlied@redhat.com>, Thomas Zimmermann <tzimmermann@suse.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ intel-gfx@lists.freedesktop.org, Jyri Sarha <jsarha@ti.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ linux-tegra@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
+ Vincent Abriou <vincent.abriou@st.com>, linux-arm-kernel@lists.infradead.org,
+ Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
+ Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Douglas Anderson <dianders@chromium.org>, Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Alex Deucher <alexander.deucher@amd.com>, freedreno@lists.freedesktop.org,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Commit-ID:  9156e545765e467e6268c4814cfa609ebb16237e
-Gitweb:     https://git.kernel.org/tip/9156e545765e467e6268c4814cfa609ebb16237e
-Author:     Kobe Wu <kobe-cp.wu@mediatek.com>
-AuthorDate: Mon, 24 Jun 2019 16:35:48 +0800
-Committer:  Ingo Molnar <mingo@kernel.org>
-CommitDate: Tue, 25 Jun 2019 10:17:08 +0200
+Hi all.
 
-locking/lockdep: increase size of counters for lockdep statistics
+Andrzej have done a good job following up on feedback and this series is
+now ready.
 
-When system has been running for a long time, signed integer
-counters are not enough for some lockdep statistics. Using
-unsigned long counters can satisfy the requirement. Besides,
-most of lockdep statistics are unsigned. It is better to use
-unsigned int instead of int.
+We need ack on the patches touching the individual drivers before we can
+proceed.
+Please check your drivers and get back.
 
-Remove unused variables.
-- max_recursion_depth
-- nr_cyclic_check_recursions
-- nr_find_usage_forwards_recursions
-- nr_find_usage_backwards_recursions
+	Sam
 
-Signed-off-by: Kobe Wu <kobe-cp.wu@mediatek.com>
-Signed-off-by: Peter Zijlstra (Intel) <peterz@infradead.org>
-Cc: <linux-mediatek@lists.infradead.org>
-Cc: <wsd_upstream@mediatek.com>
-Cc: Eason Lin <eason-yh.lin@mediatek.com>
-Cc: Linus Torvalds <torvalds@linux-foundation.org>
-Cc: Peter Zijlstra <peterz@infradead.org>
-Cc: Thomas Gleixner <tglx@linutronix.de>
-Cc: Will Deacon <will.deacon@arm.com>
-Link: https://lkml.kernel.org/r/1561365348-16050-1-git-send-email-kobe-cp.wu@mediatek.com
-Signed-off-by: Ingo Molnar <mingo@kernel.org>
----
- kernel/locking/lockdep_internals.h | 36 ++++++++++++++++--------------------
- 1 file changed, 16 insertions(+), 20 deletions(-)
-
-diff --git a/kernel/locking/lockdep_internals.h b/kernel/locking/lockdep_internals.h
-index 150ec3f0c5b5..cc83568d5012 100644
---- a/kernel/locking/lockdep_internals.h
-+++ b/kernel/locking/lockdep_internals.h
-@@ -131,7 +131,6 @@ extern unsigned int nr_hardirq_chains;
- extern unsigned int nr_softirq_chains;
- extern unsigned int nr_process_chains;
- extern unsigned int max_lockdep_depth;
--extern unsigned int max_recursion_depth;
- 
- extern unsigned int max_bfs_queue_depth;
- 
-@@ -160,25 +159,22 @@ lockdep_count_backward_deps(struct lock_class *class)
-  * and we want to avoid too much cache bouncing.
-  */
- struct lockdep_stats {
--	int	chain_lookup_hits;
--	int	chain_lookup_misses;
--	int	hardirqs_on_events;
--	int	hardirqs_off_events;
--	int	redundant_hardirqs_on;
--	int	redundant_hardirqs_off;
--	int	softirqs_on_events;
--	int	softirqs_off_events;
--	int	redundant_softirqs_on;
--	int	redundant_softirqs_off;
--	int	nr_unused_locks;
--	int	nr_redundant_checks;
--	int	nr_redundant;
--	int	nr_cyclic_checks;
--	int	nr_cyclic_check_recursions;
--	int	nr_find_usage_forwards_checks;
--	int	nr_find_usage_forwards_recursions;
--	int	nr_find_usage_backwards_checks;
--	int	nr_find_usage_backwards_recursions;
-+	unsigned long  chain_lookup_hits;
-+	unsigned int   chain_lookup_misses;
-+	unsigned long  hardirqs_on_events;
-+	unsigned long  hardirqs_off_events;
-+	unsigned long  redundant_hardirqs_on;
-+	unsigned long  redundant_hardirqs_off;
-+	unsigned long  softirqs_on_events;
-+	unsigned long  softirqs_off_events;
-+	unsigned long  redundant_softirqs_on;
-+	unsigned long  redundant_softirqs_off;
-+	int            nr_unused_locks;
-+	unsigned int   nr_redundant_checks;
-+	unsigned int   nr_redundant;
-+	unsigned int   nr_cyclic_checks;
-+	unsigned int   nr_find_usage_forwards_checks;
-+	unsigned int   nr_find_usage_backwards_checks;
- 
- 	/*
- 	 * Per lock class locking operation stat counts
+> Hi Andezej.
+> 
+> On Fri, Jul 26, 2019 at 07:22:54PM +0200, Andrzej Pietrasiewicz wrote:
+> > It is difficult for a user to know which of the i2c adapters is for which
+> > drm connector. This series addresses this problem.
+> > 
+> > The idea is to have a symbolic link in connector's sysfs directory, e.g.:
+> > 
+> > ls -l /sys/class/drm/card0-HDMI-A-1/ddc
+> > lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
+> > 	-> ../../../../soc/13880000.i2c/i2c-2
+> > 
+> > The user then knows that their card0-HDMI-A-1 uses i2c-2 and can e.g. run
+> > ddcutil:
+> > 
+> > ddcutil -b 2 getvcp 0x10
+> > VCP code 0x10 (Brightness): current value =    90, max value =   100
+> > 
+> > The first patch in the series adds struct i2c_adapter pointer to struct
+> > drm_connector. If the field is used by a particular driver, then an
+> > appropriate symbolic link is created by the generic code, which is also added
+> > by this patch.
+> > 
+> > Patch 2 adds a new variant of drm_connector_init(), see the changelog
+> > below.
+> > 
+> > Patches 3..24 are examples of how to convert a driver to this new scheme.
+> > 
+> ...
+> > 
+> > v5..v6:
+> > 
+> > - improved subject line of patch 1
+> > - added kernel-doc for drm_connector_init_with_ddc()
+> > - improved kernel-doc for the ddc field of struct drm_connector
+> > - added Reviewed-by in patches 17 and 18
+> > - added Acked-by in patch 2
+> > - made the ownership of ddc i2c_adapter explicit in all patches,
+> > this made the affected patches much simpler
+> 
+> Looks good now.
+> Patch 1 and 2 are:
+> Reviewed-by: Sam Ravnborg <sam@ravnborg.org>
+> 
+> The remaining patches are:
+> Acked-by: Sam Ravnborg <sam@ravnborg.org>
+> 
+> 	Sam
+> _______________________________________________
+> dri-devel mailing list
+> dri-devel@lists.freedesktop.org
+> https://lists.freedesktop.org/mailman/listinfo/dri-devel
 
 _______________________________________________
 Linux-mediatek mailing list
