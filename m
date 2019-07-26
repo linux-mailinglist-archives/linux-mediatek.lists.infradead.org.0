@@ -2,54 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EE52B77049
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:29:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4913077153
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 20:35:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=LlYiq1f6+CVaxSyLsLJ22HJdpnDITio/q1BiUE2XsA4=; b=DeCFFpPtOGN2PIa34kNBDHx/j6
-	AHvekN+vCLVO4MKqc3PkL7OMRfoFaOrVnA/0J049JTsPfjOgsBj483e1pufklYTXMeXXn3c8n3F0t
-	/3q/Wlp25YgxwbvQQSD8a5LUkUVxqUPq99Oa5aPa+nnIJHzjovn0YA1pZuqlYWTNBvgQSKBnW2Qkh
-	agO7L24PXx3vi0y9ldEALGbZ/lEvtxsW4nX4QN4fDtU8c2AS0mO14eAUpEmBjmTpXvKBE+ycWhONe
-	ddd3Q36l8A82P0XPxGg3phVbXhmYpoQtjuu7WX7BqjWxrato7LsSIUj1dLubZJvVV7PjxvkFfnMU3
-	lIEe8kGg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Bqkyl3ywrPPsa7vp64jKjTH1v6/XnvwMkD5Xf5vAVW8=; b=BNvAVna3ZJyzk9
+	wT4tJlSBXeaLjor+cYjammeXjV8uX7ljF75bbp1B7E1m9KZIhxAB6X+SVkcbrGW52KOsUt8nvNyon
+	AcoorOI1D7scJb9745o1Jev6HLKL+TXRfE2S4DIcnxj5oa5KR1op52YjAe46YlY10sT5vYNO6Kf6j
+	iNOr5vTWJIdkutHIYB5H4XBx4WCohdEDslKNis+ZKLbptUCX3+r8BFMNXuhi33X35KBvoYULhTQZi
+	dEKeDB0Gvo2kOyMgnBtoz4See5nO9gIWl/fITIRtpdus25N+6N9vcwL6gx1lhglQ75mWvBTyk3fbw
+	mmOL2Quy9y3O3eAlI5sQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr41r-0004j1-JG; Fri, 26 Jul 2019 17:29:15 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hr547-00023D-Hg; Fri, 26 Jul 2019 18:35:39 +0000
+Received: from asavdk3.altibox.net ([109.247.116.14])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr41o-0004i9-9n; Fri, 26 Jul 2019 17:29:13 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 30AA227EA8C
-From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 24/24] drm/i915: Provide ddc symlink in hdmi connector
- sysfs directory
-Date: Fri, 26 Jul 2019 19:23:18 +0200
-Message-Id: <e2dd9c085e889f827ac281f9d9ce2a8916ae0200.1564161140.git.andrzej.p@collabora.com>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
+ id 1hr543-00022J-4g; Fri, 26 Jul 2019 18:35:36 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk3.altibox.net (Postfix) with ESMTPS id 30FDE2007C;
+ Fri, 26 Jul 2019 20:35:22 +0200 (CEST)
+Date: Fri, 26 Jul 2019 20:35:20 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Re: [PATCH v6 00/24] Associate ddc adapters with connectors
+Message-ID: <20190726183520.GA22572@ravnborg.org>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
+MIME-Version: 1.0
+Content-Disposition: inline
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
-References: <cover.1564161140.git.andrzej.p@collabora.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=dqr19Wo4 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=7gkXJVJtAAAA:8
+ a=aLplU-UxzNz5UvDdbIMA:9 a=CjuIK1q_8ugA:10 a=E9Po1WZjFZOl8hwRPBS3:22
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102912_602271_2FF3DBE4 
-X-CRM114-Status: GOOD (  11.38  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190726_113535_531990_FE02318B 
+X-CRM114-Status: GOOD (  18.24  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ no trust [109.247.116.14 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,16 +66,17 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
- =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
- Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
- David Airlie <airlied@linux.ie>, Ramalingam C <ramalingam.c@intel.com>,
+ Heiko =?iso-8859-1?Q?St=FCbner?= <heiko@sntech.de>,
+ Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
+ Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, dri-devel@lists.freedesktop.org,
  Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
  Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
- =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
+ Ville =?iso-8859-1?Q?Syrj=E4l=E4?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
  linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
  Jyri Sarha <jsarha@ti.com>, Vincent Abriou <vincent.abriou@st.com>,
@@ -85,10 +90,10 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
  Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
- Alexios Zavras <alexios.zavras@intel.com>,
+ Maxime Ripard <mripard@kernel.org>, Inki Dae <inki.dae@samsung.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
- Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Jani Nikula <jani.nikula@linux.intel.com>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
@@ -101,61 +106,61 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Daniel Vetter <daniel@ffwll.ch>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
  Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
- =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
-MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use the ddc pointer provided by the generic connector.
+Hi Andezej.
 
-Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
----
- drivers/gpu/drm/i915/display/intel_hdmi.c | 12 ++++++++----
- 1 file changed, 8 insertions(+), 4 deletions(-)
+On Fri, Jul 26, 2019 at 07:22:54PM +0200, Andrzej Pietrasiewicz wrote:
+> It is difficult for a user to know which of the i2c adapters is for which
+> drm connector. This series addresses this problem.
+> 
+> The idea is to have a symbolic link in connector's sysfs directory, e.g.:
+> 
+> ls -l /sys/class/drm/card0-HDMI-A-1/ddc
+> lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
+> 	-> ../../../../soc/13880000.i2c/i2c-2
+> 
+> The user then knows that their card0-HDMI-A-1 uses i2c-2 and can e.g. run
+> ddcutil:
+> 
+> ddcutil -b 2 getvcp 0x10
+> VCP code 0x10 (Brightness): current value =    90, max value =   100
+> 
+> The first patch in the series adds struct i2c_adapter pointer to struct
+> drm_connector. If the field is used by a particular driver, then an
+> appropriate symbolic link is created by the generic code, which is also added
+> by this patch.
+> 
+> Patch 2 adds a new variant of drm_connector_init(), see the changelog
+> below.
+> 
+> Patches 3..24 are examples of how to convert a driver to this new scheme.
+> 
+...
+> 
+> v5..v6:
+> 
+> - improved subject line of patch 1
+> - added kernel-doc for drm_connector_init_with_ddc()
+> - improved kernel-doc for the ddc field of struct drm_connector
+> - added Reviewed-by in patches 17 and 18
+> - added Acked-by in patch 2
+> - made the ownership of ddc i2c_adapter explicit in all patches,
+> this made the affected patches much simpler
 
-diff --git a/drivers/gpu/drm/i915/display/intel_hdmi.c b/drivers/gpu/drm/i915/display/intel_hdmi.c
-index 9bf28de10401..268f1bd20b99 100644
---- a/drivers/gpu/drm/i915/display/intel_hdmi.c
-+++ b/drivers/gpu/drm/i915/display/intel_hdmi.c
-@@ -3067,6 +3067,7 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 	struct intel_encoder *intel_encoder = &intel_dig_port->base;
- 	struct drm_device *dev = intel_encoder->base.dev;
- 	struct drm_i915_private *dev_priv = to_i915(dev);
-+	struct i2c_adapter *ddc;
- 	enum port port = intel_encoder->port;
- 
- 	DRM_DEBUG_KMS("Adding HDMI connector on port %c\n",
-@@ -3077,8 +3078,13 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 		 intel_dig_port->max_lanes, port_name(port)))
- 		return;
- 
--	drm_connector_init(dev, connector, &intel_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	intel_hdmi->ddc_bus = intel_hdmi_ddc_pin(dev_priv, port);
-+	ddc = intel_gmbus_get_adapter(dev_priv, intel_hdmi->ddc_bus);
-+
-+	drm_connector_init_with_ddc(dev, connector,
-+				    &intel_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    ddc);
- 	drm_connector_helper_add(connector, &intel_hdmi_connector_helper_funcs);
- 
- 	connector->interlace_allowed = 1;
-@@ -3088,8 +3094,6 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 	if (INTEL_GEN(dev_priv) >= 10 || IS_GEMINILAKE(dev_priv))
- 		connector->ycbcr_420_allowed = true;
- 
--	intel_hdmi->ddc_bus = intel_hdmi_ddc_pin(dev_priv, port);
--
- 	if (WARN_ON(port == PORT_A))
- 		return;
- 	intel_encoder->hpd_pin = intel_hpd_pin_default(dev_priv, port);
--- 
-2.17.1
+Looks good now.
+Patch 1 and 2 are:
+Reviewed-by: Sam Ravnborg <sam@ravnborg.org>
 
+The remaining patches are:
+Acked-by: Sam Ravnborg <sam@ravnborg.org>
+
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
