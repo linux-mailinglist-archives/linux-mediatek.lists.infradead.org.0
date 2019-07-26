@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2D9C576FF0
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:26:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 157AB76FF6
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:26:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=HQlS0JTMu5YBayl3bZuVU32d22XBfIHOmphh8Cdq/sk=; b=ndLvk/vdKcLgCRbe/ldlC5Ot9D
-	JPuoHaLOB+GOnkis8XLWs9H6qiX9tWNIJq/fWpxoN+q0bgLIdqXrfDPPINR2oVJweS4zwSziwyX5Q
-	3MoWmoQgLPk9PgnTYWu5S5UYRwV70JwAI4Ua3N/Pppzv7h8LVVoZGcoP683GRfhP5/SDfTa3nX0rp
-	ULMcWMBJ4n60/yTxBqSOkNmooVIIR5iqlCOkoRZlrJu/KEkBQ1NQs85xf8VAB6UF1eHpHwT6WUNCW
-	B3LPTuGys996F2g++ekcHGsy0bX5TITDmWOCc4+Dqezpf6H57K5x2bg8VlQ67hzGM07nK8mwAaO2z
-	OpQscUog==;
+	bh=wQT+cQ8/6p9AXEO+jm5g6NK4QzyHUgXlk1Ed/j4NiUA=; b=VH7iDg70UAxFD4P35w47DsnAcP
+	QZ+usvXL++ppA+tkACsfRE/Rxv7Z5kfnw+knr1yUhJLShlQilgQ2KCiJckOj9CY3nnWUlI9o5rq4K
+	fEs65CUyacpeANsrymCSuZLxwCUfZNhkWCwPBY7fLGxk4COHNi4zhPM5b6MLmZYoteL4n+XbgK29K
+	iZie+ge8ROjvW58/+xSQJPD4em0NIGQhwa3edQPOroNo/InBeSiKGp6F4t+hFyaYSzOnbBYe9el/d
+	OC3OLutF6yry2z8nuAYfrI2MsCi/synr957e0pQdR4aC1kJj/U01X8SODidppg/NX/6RWhKXo/PJb
+	BPrp1Q0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr3yi-0001gc-Ft; Fri, 26 Jul 2019 17:26:00 +0000
+	id 1hr3yw-0001wl-AM; Fri, 26 Jul 2019 17:26:14 +0000
 Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr3ye-0001g8-T2; Fri, 26 Jul 2019 17:25:58 +0000
+ id 1hr3yr-0001w1-Vp; Fri, 26 Jul 2019 17:26:11 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id C6A8927EA8C
+ (Authenticated sender: andrzej.p) with ESMTPSA id CE3D528C54D
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 09/24] drm/tegra: Provide ddc symlink in output connector
- sysfs directory
-Date: Fri, 26 Jul 2019 19:23:03 +0200
-Message-Id: <e48025c100e419c4f467da764c79bfc92ca16449.1564161140.git.andrzej.p@collabora.com>
+Subject: [PATCH v6 10/24] drm/imx: imx-ldb: Provide ddc symlink in connector's
+ sysfs
+Date: Fri, 26 Jul 2019 19:23:04 +0200
+Message-Id: <bcfe39a0333df951a7d160b3a946c2c32e7eac7f.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102557_195052_C1CBAAAA 
-X-CRM114-Status: GOOD (  10.56  )
+X-CRM114-CacheID: sfid-20190726_102610_287459_63D642AB 
+X-CRM114-Status: GOOD (  10.84  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -69,7 +69,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
  Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
- Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
+ Benjamin Gaignard <benjamin.gaignard@linaro.org>,
+ Armijn Hemel <armijn@tjaldur.nl>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
  =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
@@ -91,15 +92,15 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
+ Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
+ Enrico Weigelt <info@metux.net>, Jernej Skrabec <jernej.skrabec@siol.net>,
  amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
  Eric Anholt <eric@anholt.net>, Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Daniel Vetter <daniel@ffwll.ch>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
+ Daniel Vetter <daniel@ffwll.ch>, Alex Deucher <alexander.deucher@amd.com>,
+ Shawn Guo <shawnguo@kernel.org>,
  =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
 MIME-Version: 1.0
@@ -112,46 +113,27 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/tegra/hdmi.c | 7 ++++---
- drivers/gpu/drm/tegra/sor.c  | 7 ++++---
- 2 files changed, 8 insertions(+), 6 deletions(-)
+ drivers/gpu/drm/imx/imx-ldb.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
 
-diff --git a/drivers/gpu/drm/tegra/hdmi.c b/drivers/gpu/drm/tegra/hdmi.c
-index 334c4d7d238b..416a2862a84b 100644
---- a/drivers/gpu/drm/tegra/hdmi.c
-+++ b/drivers/gpu/drm/tegra/hdmi.c
-@@ -1425,9 +1425,10 @@ static int tegra_hdmi_init(struct host1x_client *client)
+diff --git a/drivers/gpu/drm/imx/imx-ldb.c b/drivers/gpu/drm/imx/imx-ldb.c
+index de62a4cd4827..db461b6a257f 100644
+--- a/drivers/gpu/drm/imx/imx-ldb.c
++++ b/drivers/gpu/drm/imx/imx-ldb.c
+@@ -462,9 +462,10 @@ static int imx_ldb_register(struct drm_device *drm,
+ 		 */
+ 		drm_connector_helper_add(&imx_ldb_ch->connector,
+ 				&imx_ldb_connector_helper_funcs);
+-		drm_connector_init(drm, &imx_ldb_ch->connector,
+-				&imx_ldb_connector_funcs,
+-				DRM_MODE_CONNECTOR_LVDS);
++		drm_connector_init_with_ddc(drm, &imx_ldb_ch->connector,
++					    &imx_ldb_connector_funcs,
++					    DRM_MODE_CONNECTOR_LVDS,
++					    imx_ldb_ch->ddc);
+ 		drm_connector_attach_encoder(&imx_ldb_ch->connector, encoder);
+ 	}
  
- 	hdmi->output.dev = client->dev;
- 
--	drm_connector_init(drm, &hdmi->output.connector,
--			   &tegra_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	drm_connector_init_with_ddc(drm, &hdmi->output.connector,
-+				    &tegra_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    hdmi->output.ddc);
- 	drm_connector_helper_add(&hdmi->output.connector,
- 				 &tegra_hdmi_connector_helper_funcs);
- 	hdmi->output.connector.dpms = DRM_MODE_DPMS_OFF;
-diff --git a/drivers/gpu/drm/tegra/sor.c b/drivers/gpu/drm/tegra/sor.c
-index 4ffe3794e6d3..3a69e387c62d 100644
---- a/drivers/gpu/drm/tegra/sor.c
-+++ b/drivers/gpu/drm/tegra/sor.c
-@@ -2832,9 +2832,10 @@ static int tegra_sor_init(struct host1x_client *client)
- 
- 	sor->output.dev = sor->dev;
- 
--	drm_connector_init(drm, &sor->output.connector,
--			   &tegra_sor_connector_funcs,
--			   connector);
-+	drm_connector_init_with_ddc(drm, &sor->output.connector,
-+				    &tegra_sor_connector_funcs,
-+				    connector,
-+				    sor->output.ddc);
- 	drm_connector_helper_add(&sor->output.connector,
- 				 &tegra_sor_connector_helper_funcs);
- 	sor->output.connector.dpms = DRM_MODE_DPMS_OFF;
 -- 
 2.17.1
 
