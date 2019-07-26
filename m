@@ -2,71 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1DBEC7605F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 10:08:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED95C7606B
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 10:09:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7OEYBQpMvAbJOSXFQV3zgs7Y7sglRX2S9Htgr7N9/6M=; b=VU7xlLaBWLAsys
-	OwXuTsk3rOSRDUgpYxDShXOVhi0OD3qVaY55XDX5OIAYNfXJqRq71tWgyzKrT3lcA6nEqcH+2oSvh
-	MEx992WkhIuLnweL3zvfJZ4BpevbgnMkZOQgVV9tkOTIVWffGCMxNAcOzglKxtte/ytvyGeuUOcEE
-	N7lcQDAgBx9bfuK9SQweWUE0jR/ISaWdByG/MzEAkMuhKgmFlkHPtn5tKeNTBnGzAwSqjNT2USfL3
-	AwDZEdAEvof9VFIjF5xLwGzrJjdJADyaxyf9gvrykRxd3Dp50bwYN8o05vJ0HKuW2vUOl3vV//Jb9
-	uN2bKHtiYUh7YMwKS+Kw==;
+	List-Owner; bh=S5xrVWgB1ooAc8KiBhJ/Awcu8NLrZS8xnwOi6g49Zvo=; b=A5EfNlnQM4jU2b
+	sKJpTAco7aPwr0kxUGvad4TrQITf6s27ko7x7RDXVtjcbTb2EY9ZXW57tLb87dciVix0r9YQuPxqF
+	FdzREjVJV8PTYXrDzkeR/apuJfeGzMgExtwVMQOMw1XHjSnTkAFVjelY7VChbvVZaEQcnXGHdAeWq
+	MmLNtdeX+aYUBHhdEpyp+NI10BiHG4qlcFSCDuFDLnHBrGadhoYqKuyHc7PVeIweo7NIWtALxc5lq
+	Tuo/R+0X07QhXcFvp4bQFaG/3bTaHV9/TyM2m0oL4d1UDnhBojvzTKjfjNpPPdfU6g9qkEC3JWT5S
+	IFSBtXM/S43yrNjtBfJA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqvGj-0007f9-BO; Fri, 26 Jul 2019 08:08:01 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hqvI6-0008Il-5i; Fri, 26 Jul 2019 08:09:26 +0000
+Received: from asavdk4.altibox.net ([109.247.116.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqvGG-0007Sw-VJ; Fri, 26 Jul 2019 08:07:34 +0000
-X-UUID: 686622a3cb524163b26db958b4c8a2eb-20190726
-X-UUID: 686622a3cb524163b26db958b4c8a2eb-20190726
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jungo.lin@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 164958814; Fri, 26 Jul 2019 00:07:27 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 26 Jul 2019 01:07:25 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 26 Jul 2019 16:07:17 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 26 Jul 2019 16:07:17 +0800
-Message-ID: <1564128437.1212.615.camel@mtksdccf07>
-Subject: Re: [RFC,v3 8/9] media: platform: Add Mediatek ISP P1 SCP
- communication
-From: Jungo Lin <jungo.lin@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Fri, 26 Jul 2019 16:07:17 +0800
-In-Reply-To: <CAAFQd5BT7M425AbFicYuX+wr-twgS_cxQ937+Rgxo6Y2fA6_gA@mail.gmail.com>
-References: <jungo.lin@mediatek.com>
- <20190611035344.29814-1-jungo.lin@mediatek.com>
- <20190611035344.29814-9-jungo.lin@mediatek.com>
- <20190710095827.GC181405@chromium.org>
- <1563675513.1212.444.camel@mtksdccf07>
- <CAAFQd5BT7M425AbFicYuX+wr-twgS_cxQ937+Rgxo6Y2fA6_gA@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hqvHk-00085j-9k; Fri, 26 Jul 2019 08:09:06 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk4.altibox.net (Postfix) with ESMTPS id 1040C803BB;
+ Fri, 26 Jul 2019 10:08:56 +0200 (CEST)
+Date: Fri, 26 Jul 2019 10:08:55 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Re: [PATCH v5 01/24] drm: Include ddc adapter pointer in struct
+ drm_connector
+Message-ID: <20190726080855.GA9143@ravnborg.org>
+References: <cover.1563960855.git.andrzej.p@collabora.com>
+ <e82d6aca4f8abc95834c8a36c101d153518bb1ac.1563960855.git.andrzej.p@collabora.com>
+ <20190726063759.GB6443@ravnborg.org>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190726063759.GB6443@ravnborg.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=VcLZwmh9 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=QX4gbG5DAAAA:8
+ a=hD80L64hAAAA:8 a=e5mUnYsNAAAA:8 a=qxXKUbxsVWwuiIGZjhEA:9
+ a=CjuIK1q_8ugA:10 a=AbAUZ8qAyYyZVLSsDulk:22 a=Vxmtnl_E_bksehYqCbjh:22
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_010733_024326_42436D2B 
-X-CRM114-Status: GOOD (  23.99  )
+X-CRM114-CacheID: sfid-20190726_010904_697420_612460AC 
+X-CRM114-Status: GOOD (  30.08  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [109.247.116.15 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,181 +69,180 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org,
- Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
- <sean.cheng@mediatek.com>,
- Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
- <frederic.chen@mediatek.com>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <rynn.wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>, Rob Herring <robh@kernel.org>,
- Ryan Yu =?UTF-8?Q?=28=E4=BD=99=E5=AD=9F=E4=BF=AE=29?= <ryan.yu@mediatek.com>,
- Frankie Chiu =?UTF-8?Q?=28=E9=82=B1=E6=96=87=E5=87=B1=29?=
- <frankie.chiu@mediatek.com>, Hans Verkuil <hverkuil@xs4all.nl>,
- ddavenport@chromium.org, Sj Huang <sj.huang@mediatek.com>, "moderated
- list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>, Joerg
- Roedel <joro@8bytes.org>," <linux-arm-kernel@lists.infradead.org>, Linux
- Media Mailing List <linux-media@vger.kernel.org>
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ Maxime Ripard <maxime.ripard@bootlin.com>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>, dri-devel@lists.freedesktop.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
+ linux-samsung-soc@vger.kernel.org,
+ Oleksandr Andrushchenko <oleksandr_andrushchenko@epam.com>,
+ Sean Paul <sean@poorly.run>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
+ Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
+ NXP Linux Team <linux-imx@nxp.com>, linux-rockchip@lists.infradead.org,
+ Thomas Zimmermann <tzimmermann@suse.de>, Jonas Karlman <jonas@kwiboo.se>,
+ linux-arm-msm@vger.kernel.org, intel-gfx@lists.freedesktop.org,
+ Jyri Sarha <jsarha@ti.com>, Alexios Zavras <alexios.zavras@intel.com>,
+ Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
+ Dave Airlie <airlied@redhat.com>, linux-tegra@vger.kernel.org,
+ Thomas Gleixner <tglx@linutronix.de>, Vincent Abriou <vincent.abriou@st.com>,
+ linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
+ amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Douglas Anderson <dianders@chromium.org>, Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Alex Deucher <alexander.deucher@amd.com>, freedreno@lists.freedesktop.org,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Tomasz:
+Hi Andrzej.
 
-On Thu, 2019-07-25 at 19:56 +0900, Tomasz Figa wrote:
-> Hi Jungo,
+After reading through the series a few more comments.
+
+1) The subject of this patch could be improved.
+   Consider something like:
+   drm: add ddc link in sysfs created by drm_connector
+
+   This spells out much better what the patch achieve.
+
+
+2) The purpsoe of drm_connector.ddc is to provide drm_connector with
+   info to create the symlink.
+   Yet in many follow-up patches the drivers are changed so
+   drm_connector.ddc is their only reference to struct i2c_adapter.
+
+   But the ownership is not clear here.
+   Who owns the reference to i2c_adapter - and who has the
+   responsibility to call put() on the adapter.
+
+   Looking at the conversions done then some drivers are converted
+   so they only use drm_connector.ddc, and other drivers have their own
+   reference to i2c_adapter.
+   The latter looks like the correct solution as the ownership of the
+   reference belongs to the driver and not drm_connector.
+
+   In other words - a conversion where the drivers only assigned
+   drm_connector.ddc (using drm_connector_init_with_ddc()),
+   seems like a more clean design that does not mix up ownership.
+   This is at least how I see it.
+   I did not take this type of look at the patches before. Sorry
+   for providing feedback this late.
+
+	Sam
+
+On Fri, Jul 26, 2019 at 08:37:59AM +0200, Sam Ravnborg wrote:
+> Hi Andrzej.
 > 
-> On Sun, Jul 21, 2019 at 11:18 AM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> [snip]
-> > > > +           wake_up_interruptible(&isp_ctx->composer_tx_thread.wq);
-> > > > +           isp_ctx->composer_tx_thread.thread = NULL;
-> > > > +   }
-> > > > +
-> > > > +   if (isp_ctx->composer_deinit_thread.thread) {
-> > > > +           wake_up(&isp_ctx->composer_deinit_thread.wq);
-> > > > +           isp_ctx->composer_deinit_thread.thread = NULL;
-> > > > +   }
-> > > > +   mutex_unlock(&isp_ctx->lock);
-> > > > +
-> > > > +   pm_runtime_put_sync(&p1_dev->pdev->dev);
-> > >
-> > > No need to use the sync variant.
-> > >
-> >
-> > We don't get this point. If we will call pm_runtime_get_sync in
-> > mtk_isp_hw_init function, will we need to call
-> > pm_runtime_put_sync_autosuspend in mtk_isp_hw_release in next patch?
-> > As we know, we should call runtime pm functions in pair.
-> >
+> Patch looks good, but one kernel-doc detail.
 > 
-> My point is that pm_runtime_put_sync() is only needed if one wants the
-> runtime count to be decremented after the function returns. Normally
-> there is no need to do so and one would call pm_runtime_put(), or if
-> autosuspend is used, pm_runtime_put_autosuspend() (note there is no
-> "sync" in the name).
+> On Wed, Jul 24, 2019 at 03:59:23PM +0200, Andrzej Pietrasiewicz wrote:
+> > Add generic code which creates symbolic links in sysfs, pointing to ddc
+> > interface used by a particular video output. For example:
+> > 
+> > ls -l /sys/class/drm/card0-HDMI-A-1/ddc
+> > lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
+> > 	-> ../../../../soc/13880000.i2c/i2c-2
+> > 
+> > This makes it easy for user to associate a display with its ddc adapter
+> > and use e.g. ddcutil to control the chosen monitor.
+> > 
+> > This patch adds an i2c_adapter pointer to struct drm_connector. Particular
+> > drivers can then use it instead of using their own private instance. If a
+> > connector contains a ddc, then create a symbolic link in sysfs.
+> > 
+> > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+> > Acked-by: Daniel Vetter <daniel.vetter@ffwll.ch>
+> > Reviewed-by: Andrzej Hajda <a.hajda@samsung.com>
+> > ---
+> >  drivers/gpu/drm/drm_sysfs.c |  8 ++++++++
+> >  include/drm/drm_connector.h | 11 +++++++++++
+> >  2 files changed, 19 insertions(+)
+> > 
+> > diff --git a/drivers/gpu/drm/drm_sysfs.c b/drivers/gpu/drm/drm_sysfs.c
+> > index ad10810bc972..e962a9d45f7e 100644
+> > --- a/drivers/gpu/drm/drm_sysfs.c
+> > +++ b/drivers/gpu/drm/drm_sysfs.c
+> > @@ -14,6 +14,7 @@
+> >  #include <linux/err.h>
+> >  #include <linux/export.h>
+> >  #include <linux/gfp.h>
+> > +#include <linux/i2c.h>
+> >  #include <linux/kdev_t.h>
+> >  #include <linux/slab.h>
+> >  
+> > @@ -294,6 +295,9 @@ int drm_sysfs_connector_add(struct drm_connector *connector)
+> >  	/* Let userspace know we have a new connector */
+> >  	drm_sysfs_hotplug_event(dev);
+> >  
+> > +	if (connector->ddc)
+> > +		return sysfs_create_link(&connector->kdev->kobj,
+> > +				 &connector->ddc->dev.kobj, "ddc");
+> >  	return 0;
+> >  }
+> >  
+> > @@ -301,6 +305,10 @@ void drm_sysfs_connector_remove(struct drm_connector *connector)
+> >  {
+> >  	if (!connector->kdev)
+> >  		return;
+> > +
+> > +	if (connector->ddc)
+> > +		sysfs_remove_link(&connector->kdev->kobj, "ddc");
+> > +
+> >  	DRM_DEBUG("removing \"%s\" from sysfs\n",
+> >  		  connector->name);
+> >  
+> > diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
+> > index 4c30d751487a..33a6fff85fdb 100644
+> > --- a/include/drm/drm_connector.h
+> > +++ b/include/drm/drm_connector.h
+> > @@ -41,6 +41,7 @@ struct drm_property;
+> >  struct drm_property_blob;
+> >  struct drm_printer;
+> >  struct edid;
+> > +struct i2c_adapter;
+> >  
+> >  enum drm_connector_force {
+> >  	DRM_FORCE_UNSPECIFIED,
+> > @@ -1311,6 +1312,16 @@ struct drm_connector {
+> >  	 * [0]: progressive, [1]: interlaced
+> >  	 */
+> >  	int audio_latency[2];
+> > +
+> > +	/**
+> > +	 * @ddc: associated ddc adapter.
+> > +	 * A connector usually has its associated ddc adapter. If a driver uses
+> > +	 * this field, then an appropriate symbolic link is created in connector
+> > +	 * sysfs directory to make it easy for the user to tell which i2c
+> > +	 * adapter is for a particular display.
+> > +	 */
+> > +	struct i2c_adapter *ddc;
 > 
-> [snip]
-
-Ok, got your point.
-We will change to use pm_runtime_put_autosuspend() which has ASYNC flag.
-
-> > > +static void isp_composer_handler(void *data, unsigned int len, void *priv)
-> > > > +{
-> > > > +   struct mtk_isp_p1_ctx *isp_ctx = (struct mtk_isp_p1_ctx *)priv;
-> > > > +   struct isp_p1_device *p1_dev = p1_ctx_to_dev(isp_ctx);
-> > > > +   struct device *dev = &p1_dev->pdev->dev;
-> > > > +   struct mtk_isp_scp_p1_cmd *ipi_msg;
-> > > > +
-> > > > +   ipi_msg = (struct mtk_isp_scp_p1_cmd *)data;
-> > >
-> > > Should we check that len == sizeof(*ipi_msg)? (Or at least >=, if data could
-> > > contain some extra bytes at the end.)
-> > >
-> >
-> > The len parameter is the actual sending bytes from SCP to kernel.
-> > In the runtime, it is only 6 bytes for isp_ack_info command
-> > However, sizeof(*ipi_msg) is large due to struct mtk_isp_scp_p1_cmd is
-> > union structure.
-> >
+> To help the reader could you add in the above a reference to
+> drm_connector_init_with_ddc() sp the reader is told how to init this
+> field.
 > 
-> That said we still should check if len is enough to cover the data
-> we're accessing below.
+> Either add it in PATCH 2 - or merge patch 1 and 2.
 > 
-
-Ok, we will add the len checking before accessing the data.
-
-> > > > +
-> > > > +   if (ipi_msg->cmd_id != ISP_CMD_ACK)
-> > > > +           return;
-> > > > +
-> > > > +   if (ipi_msg->ack_info.cmd_id == ISP_CMD_FRAME_ACK) {
-> > > > +           dev_dbg(dev, "ack frame_num:%d",
-> > > > +                   ipi_msg->ack_info.frame_seq_no);
-> > > > +           atomic_set(&isp_ctx->composed_frame_id,
-> > > > +                      ipi_msg->ack_info.frame_seq_no);
-> > >
-> > > I suppose we are expecting here that ipi_msg->ack_info.frame_seq_no would be
-> > > just isp_ctx->composed_frame_id + 1, right? If not, we probably dropped some
-> > > frames and we should handle that somehow.
-> > >
-> >
-> > No, we use isp_ctx->composed_frame_id to save which frame sequence
-> > number are composed done in SCP. In new design, we will move this from
-> > isp_ctx to p1_dev.
+> 	Sam
 > 
-> But we compose the frames in order, don't we? Wouldn't every composed
-> frame would be just previous frame ID + 1?
-> 
-> [snip]
-
-Yes, we compose the frames in order.
-At the same time, we already increased "frame ID + 1" in
-mtk_isp_req_enqueue() for each new request before sending to SCP for
-composing. After receiving the ACK from SCP, we think the frame ID is
-composed done and save by isp_ctx->composed_frame_id(v3).
-
-[RFC v3]
-void mtk_isp_req_enqueue(struct device *dev, struct media_request *req)
-{
-	...
-	frameparams.frame_seq_no = isp_ctx->frame_seq_no++;
-
-[RFC v4]
-void mtk_isp_req_enqueue(struct mtk_cam_dev *cam,
-			 struct mtk_cam_dev_request *req)
-{
-	struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(cam->dev);
-
-	/* Accumulated frame sequence number */
-	req->frame_params.frame_seq_no = ++p1_dev->enqueue_frame_seq_no;
-
- 
-
-> > > > +void isp_composer_hw_init(struct device *dev)
-> > > > +{
-> > > > +   struct mtk_isp_scp_p1_cmd composer_tx_cmd;
-> > > > +   struct isp_p1_device *p1_dev = get_p1_device(dev);
-> > > > +   struct mtk_isp_p1_ctx *isp_ctx = &p1_dev->isp_ctx;
-> > > > +
-> > > > +   memset(&composer_tx_cmd, 0, sizeof(composer_tx_cmd));
-> > > > +   composer_tx_cmd.cmd_id = ISP_CMD_INIT;
-> > > > +   composer_tx_cmd.frameparam.hw_module = isp_ctx->isp_hw_module;
-> > > > +   composer_tx_cmd.frameparam.cq_addr.iova = isp_ctx->scp_mem_iova;
-> > > > +   composer_tx_cmd.frameparam.cq_addr.scp_addr = isp_ctx->scp_mem_pa;
-> > >
-> > > Should we also specify the size of the buffer? Otherwise we could end up
-> > > with some undetectable overruns.
-> > >
-> >
-> > The size of SCP composer's memory is fixed to 0x200000.
-> > Is it necessary to specify the size of this buffer?
-> >
-> > #define MTK_ISP_COMPOSER_MEM_SIZE 0x200000
-> >
-> > ptr = dma_alloc_coherent(p1_dev->cam_dev.smem_dev,
-> >                         MTK_ISP_COMPOSER_MEM_SIZE, &addr, GFP_KERNEL);
-> >
-> 
-> Okay, but please add a comment saying that this is an implicit
-> requirement of the firmware.
-> 
-> Best regards,
-> Tomasz
-
-Ok, we will add comments.
-
-Best regards,
-
-
-Jungo
-
-
-
-
+> > +
+> >  	/**
+> >  	 * @null_edid_counter: track sinks that give us all zeros for the EDID.
+> >  	 * Needed to workaround some HW bugs where we get all 0s
+> > -- 
+> > 2.17.1
+> _______________________________________________
+> dri-devel mailing list
+> dri-devel@lists.freedesktop.org
+> https://lists.freedesktop.org/mailman/listinfo/dri-devel
 
 _______________________________________________
 Linux-mediatek mailing list
