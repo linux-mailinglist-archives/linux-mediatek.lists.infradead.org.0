@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 027E177012
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82D3677018
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=KYTorIaO58uir3d+hJvMtY7CBaEFOudol3Paj6oqsdk=; b=sY1eyJPQXpjZfCgndW4VrnjZkU
-	wXzyPTnIKbYtgFQSNbAawq2bHbKfyvDsFcGkKhn1mRx08mD2d3Xs4kKybNp2w/15/TIN8XJb94dEq
-	CKyrbj3AliRY+H2zGVFZ/56yf+k5Wf2ttlHqqpy3DkzeZQ4nOEyDG40ce+LSCQ4b7MRYaSU6SjJ3O
-	nfUUliW2WuxXBk//NmipbgK7iTdF1GmJdxxR+TQPCSIYpYD7R0vf3e5Rss1phXcA5ESB6m5sZn7ca
-	pT2ALn/4k1GsKYe5G7ugfaRpJOUW7EnWVgHy6GRPEY7bQnQZ76GO1hbjVlCgYXF45P58/xVaiu15j
-	R+tLnEmw==;
+	bh=RryP+U+tDlwy3jaU4jt2FuXYp0HdVOqMppQx1V5gQ2Y=; b=PiUMXsVtgMltmgvd6XgMtRHoHG
+	dgA5YaPnIAAKblHIC5KY34VUzNud53PHzs5YlINbAyJWua8cbpdOJRvamud46fkH9+x+4UDd6uHQ7
+	jI/G09sx6ueg4UEoDB+f3LmLw8YxLAmVmnOevuGtEBca550og033WRg9Gz+9qtUavQK/6n6g+b4XZ
+	PjneC4MiWw//pL/7nViSUQUYzF155L5MBXLpQNm3VkmoVoymGurO8l+uFeNf+moaKdivbIAiBQSvg
+	i36xfF0goX1q46cAcKa2tLmgG5Mf0pwIxh+2KVrU7rNrIEwGHm+rT/WN8zrSktO2SzpCgIMg7Syih
+	OLnOR5EQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr3zy-0002xR-12; Fri, 26 Jul 2019 17:27:18 +0000
+	id 1hr40C-00033Y-UE; Fri, 26 Jul 2019 17:27:32 +0000
 Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr3zu-0002n9-OF; Fri, 26 Jul 2019 17:27:16 +0000
+ id 1hr408-00032w-Ov; Fri, 26 Jul 2019 17:27:30 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id A35DA27EA8C
+ (Authenticated sender: andrzej.p) with ESMTPSA id C5F2D28C54D
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 15/24] drm/tilcdc: Provide ddc symlink in connector sysfs
- directory
-Date: Fri, 26 Jul 2019 19:23:09 +0200
-Message-Id: <fab2ffcf95c2caa1674ddc6e762d53b0c0ce9c78.1564161140.git.andrzej.p@collabora.com>
+Subject: [PATCH v6 16/24] drm: sti: Provide ddc symlink in hdmi connector
+ sysfs directory
+Date: Fri, 26 Jul 2019 19:23:10 +0200
+Message-Id: <510765aff8ef99683aa2da48bd08004376b1980a.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102715_053900_15317C29 
-X-CRM114-Status: GOOD (  11.07  )
+X-CRM114-CacheID: sfid-20190726_102729_073446_97953332 
+X-CRM114-Status: GOOD (  11.59  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -84,15 +84,15 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
- Alexios Zavras <alexios.zavras@intel.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
- amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
- Eric Anholt <eric@anholt.net>, Thomas Zimmermann <tzimmermann@suse.de>,
+ linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
+ Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
+ Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
+ Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
@@ -110,26 +110,26 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/tilcdc/tilcdc_tfp410.c | 6 ++++--
+ drivers/gpu/drm/sti/sti_hdmi.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
-index c6e4e52f32bc..d51776dd7a03 100644
---- a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
-+++ b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
-@@ -222,8 +222,10 @@ static struct drm_connector *tfp410_connector_create(struct drm_device *dev,
+diff --git a/drivers/gpu/drm/sti/sti_hdmi.c b/drivers/gpu/drm/sti/sti_hdmi.c
+index f03d617edc4c..33d06e0a9168 100644
+--- a/drivers/gpu/drm/sti/sti_hdmi.c
++++ b/drivers/gpu/drm/sti/sti_hdmi.c
+@@ -1284,8 +1284,10 @@ static int sti_hdmi_bind(struct device *dev, struct device *master, void *data)
  
- 	connector = &tfp410_connector->base;
+ 	drm_connector->polled = DRM_CONNECTOR_POLL_HPD;
  
--	drm_connector_init(dev, connector, &tfp410_connector_funcs,
--			DRM_MODE_CONNECTOR_DVID);
-+	drm_connector_init_with_ddc(dev, connector,
-+				    &tfp410_connector_funcs,
-+				    DRM_MODE_CONNECTOR_DVID,
-+				    mod->i2c);
- 	drm_connector_helper_add(connector, &tfp410_connector_helper_funcs);
+-	drm_connector_init(drm_dev, drm_connector,
+-			&sti_hdmi_connector_funcs, DRM_MODE_CONNECTOR_HDMIA);
++	drm_connector_init_with_ddc(drm_dev, drm_connector,
++				    &sti_hdmi_connector_funcs,
++				    DRM_MODE_CONNECTOR_HDMIA,
++				    hdmi->ddc_adapt);
+ 	drm_connector_helper_add(drm_connector,
+ 			&sti_hdmi_connector_helper_funcs);
  
- 	connector->polled = DRM_CONNECTOR_POLL_CONNECT |
 -- 
 2.17.1
 
