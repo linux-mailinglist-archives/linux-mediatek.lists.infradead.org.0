@@ -2,49 +2,49 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4DC8377328
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 23:03:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04E837732E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 23:04:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
 	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=A8IVOxFsE1kUAqhLDy1EBOBx534k+zeUKFsvxhxHNpA=; b=NCxDOnA9Q+TXMD
-	cn6rrJhcLRdZSHu5mUG5LR6YGfVWpCrw8cHDEEaaYvlGX1TtsnDXIwaD6fdGRYREzPef7V1MD7PBp
-	1WeJxg0iT81EusSLkLP+Gdog5kj1jZHIvLGJva3Fugscgw236uln8GsrgH5iM/KGYPjfdxGl3vUVj
-	bzKThfktKYWWUV189ijfQ5Eu6YyZJbhOeVfCcuXGoMDqhbqn/Kff/oiSZIkH/lat4zz3iKVNXumRn
-	r92NLk7VmELg/5VbDni7WK8DmzJZx4BAnvJnFGyIxLVPzaXWwn0PDa94fiVeRzG90AB//V5hRVU3j
-	r4Bz6JKYjq3eL3j3C6nQ==;
+	List-Owner; bh=8phmECUPIQ6/2SEOwyD9Z+3yCoKzKlrPTrz8thRVecY=; b=rtMJVN7NEonwI+
+	pTWpCat6OeTjemnuP+MqIZ8ganN/ZyZyr8hOXgsJYJir/RPIVYVfY+pauAH4xHYIsnsfrHK8soprI
+	KSWdR9v+qbH9ok0HT/zLJlwG8GMATHvHOaOZJuL0fj1blcrbctpsmT3DgGGwGYEUcwOvFKi2hr7dN
+	Kt7Sas15ZVla61aVpxfPLSNHtS7laOBrqrv2GikTCvet281U1p12UovftVTtbWLqd8o6n801OUyY0
+	odK0caeeCQfOO+3an1C+Of7BXgv3sH6BtnLFfF6CQohKmEP7w0suviWm4ayy2EnAVzuHzTOMUrPTx
+	j9GQgdbOvJIeYJvVYM+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr7Mg-0006YH-2a; Fri, 26 Jul 2019 21:02:58 +0000
+	id 1hr7O5-0006bh-2i; Fri, 26 Jul 2019 21:04:25 +0000
 Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr7Mb-0006Xl-B3
- for linux-mediatek@lists.infradead.org; Fri, 26 Jul 2019 21:02:54 +0000
+ id 1hr7O1-0006bK-F1
+ for linux-mediatek@lists.infradead.org; Fri, 26 Jul 2019 21:04:22 +0000
 Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::d71])
  (using TLSv1 with cipher AES256-SHA (256/256 bits))
  (Client did not present a certificate)
  (Authenticated sender: davem-davemloft)
- by shards.monkeyblade.net (Postfix) with ESMTPSA id 7EE3912665347;
- Fri, 26 Jul 2019 14:02:46 -0700 (PDT)
-Date: Fri, 26 Jul 2019 14:02:45 -0700 (PDT)
-Message-Id: <20190726.140245.129199617321965171.davem@davemloft.net>
+ by shards.monkeyblade.net (Postfix) with ESMTPSA id C8CF91266535F;
+ Fri, 26 Jul 2019 14:04:20 -0700 (PDT)
+Date: Fri, 26 Jul 2019 14:04:20 -0700 (PDT)
+Message-Id: <20190726.140420.688330328284393964.davem@davemloft.net>
 To: opensource@vdorst.com
-Subject: Re: [PATCH net-next 1/3] net: ethernet: mediatek: Add basic
- PHYLINK support
+Subject: Re: [PATCH net-next 3/3] net: dsa: mt7530: Add support for port 5
 From: David Miller <davem@davemloft.net>
-In-Reply-To: <20190724192340.18978-1-opensource@vdorst.com>
-References: <20190724192340.18978-1-opensource@vdorst.com>
+In-Reply-To: <20190724192549.24615-4-opensource@vdorst.com>
+References: <20190724192549.24615-1-opensource@vdorst.com>
+ <20190724192549.24615-4-opensource@vdorst.com>
 X-Mailer: Mew version 6.8 on Emacs 26.1
 Mime-Version: 1.0
 X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
  (shards.monkeyblade.net [149.20.54.216]);
- Fri, 26 Jul 2019 14:02:47 -0700 (PDT)
+ Fri, 26 Jul 2019 14:04:21 -0700 (PDT)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_140253_384658_1AD40D06 
-X-CRM114-Status: UNSURE (   7.31  )
+X-CRM114-CacheID: sfid-20190726_140421_505060_8DD8F922 
+X-CRM114-Status: UNSURE (   3.74  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -75,59 +75,20 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 From: Ren=E9 van Dorst <opensource@vdorst.com>
-Date: Wed, 24 Jul 2019 21:23:40 +0200
+Date: Wed, 24 Jul 2019 21:25:49 +0200
 
-> @@ -186,165 +187,219 @@ static void mtk_gmac0_rgmii_adjust(struct mtk_eth=
- *eth, int speed)
->  	mtk_w32(eth, val, TRGMII_TCK_CTRL);
->  }
->  =
+> @@ -1167,6 +1236,10 @@ mt7530_setup(struct dsa_switch *ds)
+>  	u32 id, val;
+>  	struct device_node *dn;
+>  	struct mt7530_dummy_poll p;
+> +	phy_interface_t interface;
+> +	struct device_node *mac_np;
+> +	struct device_node *phy_node;
+> +	const __be32 *_id;
 
-> -static void mtk_phy_link_adjust(struct net_device *dev)
-> +static void mtk_mac_config(struct phylink_config *config, unsigned int m=
-ode,
-> +			   const struct phylink_link_state *state)
->  {
-> -	struct mtk_mac *mac =3D netdev_priv(dev);
-> -	u16 lcl_adv =3D 0, rmt_adv =3D 0;
-> -	u8 flowctrl;
-> -	u32 mcr =3D MAC_MCR_MAX_RX_1536 | MAC_MCR_IPG_CFG |
-> -		  MAC_MCR_FORCE_MODE | MAC_MCR_TX_EN |
-> -		  MAC_MCR_RX_EN | MAC_MCR_BACKOFF_EN |
-> -		  MAC_MCR_BACKPR_EN;
-> +	struct mtk_mac *mac =3D container_of(config, struct mtk_mac,
-> +					   phylink_config);
-> +	struct mtk_eth *eth =3D mac->hw;
->  =
+Reverse christmas tree here please.
 
-> -	if (unlikely(test_bit(MTK_RESETTING, &mac->hw->state)))
-> -		return;
-> +	u32 ge_mode =3D 0, val, mcr_cur, mcr_new;
-
-Please elminiate the empty line in the middle of the local variabel
-declarations and adhere to reverse christmas tree ordering.
-> @@ -1798,6 +1853,13 @@ static int mtk_open(struct net_device *dev)
->  {
->  	struct mtk_mac *mac =3D netdev_priv(dev);
->  	struct mtk_eth *eth =3D mac->hw;
-> +	int err =3D phylink_of_phy_connect(mac->phylink, mac->of_node, 0);
-
-Reverse christmas tree please.
-
-> @@ -2375,9 +2407,10 @@ static const struct net_device_ops mtk_netdev_ops =
-=3D {
->  =
-
->  static int mtk_add_mac(struct mtk_eth *eth, struct device_node *np)
->  {
-> +	struct phylink *phylink;
->  	struct mtk_mac *mac;
->  	const __be32 *_id =3D of_get_property(np, "reg", NULL);
-> -	int id, err;
-> +	int phy_mode, id, err;
-
-While you are here please fix up the reverse christmas tree ordering, and
-definitely don't make it worse :)
+Thank you.
 
 _______________________________________________
 Linux-mediatek mailing list
