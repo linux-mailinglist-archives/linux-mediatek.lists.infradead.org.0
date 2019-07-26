@@ -2,69 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9C5CD75F6A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 09:02:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C481F75F96
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 09:20:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Ad39XNPtIcAAUcm7hh5xr6gYwY8+RjtBBYUpIhiYY3U=; b=pq9Ax8Mj4gnTZM
-	nrWexnlefKohhbuHdPF/yQ0/SYY7y6ne4a3+ITI2f6YvVSwoaZbhBZ6xCRabaVZXuztNlUOZSaWyx
-	yoqnf2IEqLkiPSyxjTnjriwzKyIClkxxFJA21T8Ea30NbYDTt3mujvasj2onrY8rKgnPogZipJgPF
-	2RAtEWtDT1+CYQjK58jfLOgPghnlS/UuAC7irgMkYRoIJD0IOEw9aMVW+LWJG7dHu7D0uuvGMRPwL
-	xhaZfEVpzo/PrKxJyvorxE+9w/nds3mpmh9o0WZi2YjI7qKoIbLSlC8LdDaXzpHxG4zevUD08R0Sx
-	IIV1XIZWhMJH1v4cQ5Gw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
+	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=6kgy4n659SrX9zVqw2EQ+hxYe2Z3k2QISL1H6uagTWw=; b=fGK80ZrlaM29Zp7ox/us2v8aQ
+	EgPswA/Racllo54M5A4xeNtaV26ehr5QlpmXjyqlxarG39vDoMWTQd5L09FV5l3QADITr3Xs6dBzO
+	r4nUIaFf1P5UjHDvN0JJh/bo8/qfAtEUvJ3pOWHOPhNdoTxX6inyHH/ch9JQcasBBspyvLztK/2Td
+	mHFZgn2gbsoz0OW25D5HcO5Li2GiIt3TSPVBSmEF7y0ePVZ21Pp0Eu+Y22D7lTpQUm0xTN2XktFEu
+	aSamwsSUJh5rVANRWUDWrdZs+XuxF46fTQEPl18Ro2eHViIHtMaWHKGF/m1Y0Ds35jUeHY93SPuWY
+	V823mhHgg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hquF0-0000vR-Jl; Fri, 26 Jul 2019 07:02:10 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hquEh-0000tD-QU; Fri, 26 Jul 2019 07:01:58 +0000
-X-UUID: ce8c115e627442b3ab938d87da34c58a-20190725
-X-UUID: ce8c115e627442b3ab938d87da34c58a-20190725
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <yong.liang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1118509785; Thu, 25 Jul 2019 23:01:44 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 26 Jul 2019 00:01:43 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 26 Jul 2019 15:01:41 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 26 Jul 2019 15:01:40 +0800
-From: Yong Liang <yong.liang@mediatek.com>
-To: <mturquette@baylibre.com>, <sboyd@kernel.org>, <matthias.bgg@gmail.com>,
- <robh+dt@kernel.org>, <mark.rutland@arm.com>, <drinkcat@chromium.org>,
- <weiyi.lu@mediatek.com>, <jamesjj.liao@mediatek.com>, <jasu@njomotys.info>,
- <owen.chen@mediatek.com>, <chunhui.dai@mediatek.com>, <erin.lo@mediatek.com>, 
- <eddie.huang@mediatek.com>
-Subject: [PATCH v5,2/2] clk: reset: Modify reset-controller driver
-Date: Fri, 26 Jul 2019 15:01:35 +0800
-Message-ID: <20190726070135.14347-2-yong.liang@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190726070135.14347-1-yong.liang@mediatek.com>
-References: <20190726070135.14347-1-yong.liang@mediatek.com>
+	id 1hquWM-0007Hh-Aa; Fri, 26 Jul 2019 07:20:06 +0000
+Received: from mx.0dd.nl ([2a04:52c0:101:921::25])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hquWI-0006o4-BI
+ for linux-mediatek@lists.infradead.org; Fri, 26 Jul 2019 07:20:04 +0000
+Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mx.0dd.nl (Postfix) with ESMTPS id CEE665FB2B;
+ Fri, 26 Jul 2019 09:19:56 +0200 (CEST)
+Authentication-Results: mx.0dd.nl; dkim=pass (2048-bit key;
+ secure) header.d=vdorst.com header.i=@vdorst.com header.b="R+SjCCX3"; 
+ dkim-atps=neutral
+Received: from www (www.vdorst.com [192.168.2.222])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.vdorst.com (Postfix) with ESMTPSA id 895E21D28756;
+ Fri, 26 Jul 2019 09:19:56 +0200 (CEST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com 895E21D28756
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
+ s=default; t=1564125596;
+ bh=+Hr304FY5Zea1KSklbNGrmwPH40tCpigRiaIOPfi1RQ=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=R+SjCCX3t+stiSOsHLt+RuKxZavYZr5Nma3Z+T79/74SyqB1MfgGWveqiesV40IYS
+ ElsHum7l9RTHy7CxUKVvWANJ7AtTThK48tui/25wjevLDn1Nuhvt6DO9NzzXqhu7yr
+ Z/IKbzuLRR1V2xHdEN5sD9B48Mk2wRBF0XUAFd0+iU3UWDddaTdioFn0fq7CXEGe5N
+ pxu19y0Er8Peo1tOTfkyHsf4UtsIAPa4tkTVLUfrR+i3Bw33V+6lEFA77VkyR7aLgI
+ L+aMyTahXnv2g9eVEdraRm6nbA81YDxHIjBOgyGhzTXNXeWDyQdFyK/EiLSoj6eLH2
+ vtWCg/nad6Zyw==
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
+ www.vdorst.com (Horde Framework) with HTTPS; Fri, 26 Jul 2019 07:19:56 +0000
+Date: Fri, 26 Jul 2019 07:19:56 +0000
+Message-ID: <20190726071956.Horde.s4rfuzovwXB-d3LnV0PLRc8@www.vdorst.com>
+From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
+To: Andrew Lunn <andrew@lunn.ch>
+Subject: Re: [PATCH net-next 3/3] dt-bindings: net: ethernet: Update mt7622
+ docs and dts to reflect the new phylink API
+References: <20190724192411.20639-1-opensource@vdorst.com>
+ <20190725193123.GA32542@lunn.ch>
+In-Reply-To: <20190725193123.GA32542@lunn.ch>
+User-Agent: Horde Application Framework 5
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_000153_412220_964E2AD3 
-X-CRM114-Status: GOOD (  14.96  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190726_002002_542167_CF14FB6F 
+X-CRM114-Status: UNSURE (   7.56  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,281 +91,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "yong.liang" <yong.liang@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, f.fainelli@gmail.com, frank-w@public-files.de,
+ netdev@vger.kernel.org, sean.wang@mediatek.com, linux@armlinux.org.uk,
+ vivien.didelot@gmail.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, john@phrozen.org, matthias.bgg@gmail.com,
+ linux-mips@vger.kernel.org, davem@davemloft.net
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "yong.liang" <yong.liang@mediatek.com>
-
-Set reset signal by a register and
-clear reset signal by another register for 8183.
-
-Signed-off-by: yong.liang <yong.liang@mediatek.com>
----
-
-Base on kernel 5.3
-
-Changes in patch v5:
-1. Add a comment for 0x120 in mtk_register_reset_controller_set_clr()
-2. Optimize code format
-
-Changes in patch v4:
-1. Optimize code logic of clk_mt8183_infra_probe() in clk-mt8183.c
-2. Optimize code format
-
-Changes in patch v3:
-Call mtk_register_reset_controller_set_clr function in clk_mt8183_infra_probe instead of clk_mt8183_apmixed_probe
-
-Changes in patch v2:
-Rollback modify for "_tuner_en_bit, _pcw_reg, _pcw_shift,"
-in drivers/clk/mediatek/clk-mt8183.c
-
----
- drivers/clk/mediatek/clk-mt8183.c             | 16 +++-
- drivers/clk/mediatek/clk-mtk.h                |  3 +
- drivers/clk/mediatek/reset.c                  | 56 ++++++++++++-
- .../reset-controller/mt8183-resets.h          | 81 +++++++++++++++++++
- 4 files changed, 152 insertions(+), 4 deletions(-)
- create mode 100644 include/dt-bindings/reset-controller/mt8183-resets.h
-
-diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-index 1aa5f4059251..3f1428ed619b 100644
---- a/drivers/clk/mediatek/clk-mt8183.c
-+++ b/drivers/clk/mediatek/clk-mt8183.c
-@@ -17,6 +17,9 @@
- 
- #include <dt-bindings/clock/mt8183-clk.h>
- 
-+/* Infra global controller reset set register */
-+#define INFRA_RST0_SET_OFFSET		0x120
-+
- static DEFINE_SPINLOCK(mt8183_clk_lock);
- 
- static const struct mtk_fixed_clk top_fixed_clks[] = {
-@@ -1185,13 +1188,24 @@ static int clk_mt8183_infra_probe(struct platform_device *pdev)
- {
- 	struct clk_onecell_data *clk_data;
- 	struct device_node *node = pdev->dev.of_node;
-+	int r;
- 
- 	clk_data = mtk_alloc_clk_data(CLK_INFRA_NR_CLK);
- 
- 	mtk_clk_register_gates(node, infra_clks, ARRAY_SIZE(infra_clks),
- 		clk_data);
- 
--	return of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-+	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
-+	if (r) {
-+		dev_err(&pdev->dev,
-+			"%s(): could not register clock provider: %d\n"
-+			,__func__, r);
-+		return r;
-+	}
-+
-+	mtk_register_reset_controller_set_clr(node, 4, INFRA_RST0_SET_OFFSET);
-+
-+	return r;
- }
- 
- static int clk_mt8183_mcu_probe(struct platform_device *pdev)
-diff --git a/drivers/clk/mediatek/clk-mtk.h b/drivers/clk/mediatek/clk-mtk.h
-index 733a11d1de94..2e9e26084798 100644
---- a/drivers/clk/mediatek/clk-mtk.h
-+++ b/drivers/clk/mediatek/clk-mtk.h
-@@ -240,4 +240,7 @@ struct clk *mtk_clk_register_ref2usb_tx(const char *name,
- void mtk_register_reset_controller(struct device_node *np,
- 			unsigned int num_regs, int regofs);
- 
-+void mtk_register_reset_controller_set_clr(struct device_node *np,
-+	unsigned int num_regs, int regofs);
-+
- #endif /* __DRV_CLK_MTK_H */
-diff --git a/drivers/clk/mediatek/reset.c b/drivers/clk/mediatek/reset.c
-index d8376b92349e..17df8f8b57ea 100644
---- a/drivers/clk/mediatek/reset.c
-+++ b/drivers/clk/mediatek/reset.c
-@@ -19,6 +19,24 @@ struct mtk_reset {
- 	struct reset_controller_dev rcdev;
- };
- 
-+static int mtk_reset_assert_set_clr(struct reset_controller_dev *rcdev,
-+	unsigned long id)
-+{
-+	struct mtk_reset *data = container_of(rcdev, struct mtk_reset, rcdev);
-+	unsigned int reg = data->regofs + ((id / 32) << 4);
-+
-+	return regmap_write(data->regmap, reg, 1);
-+}
-+
-+static int mtk_reset_deassert_set_clr(struct reset_controller_dev *rcdev,
-+	unsigned long id)
-+{
-+	struct mtk_reset *data = container_of(rcdev, struct mtk_reset, rcdev);
-+	unsigned int reg = data->regofs + ((id / 32) << 4) + 0x4;
-+
-+	return regmap_write(data->regmap, reg, 1);
-+}
-+
- static int mtk_reset_assert(struct reset_controller_dev *rcdev,
- 			      unsigned long id)
- {
-@@ -49,14 +67,32 @@ static int mtk_reset(struct reset_controller_dev *rcdev,
- 	return mtk_reset_deassert(rcdev, id);
- }
- 
-+static int mtk_reset_set_clr(struct reset_controller_dev *rcdev,
-+	unsigned long id)
-+{
-+	int ret;
-+
-+	ret = mtk_reset_assert_set_clr(rcdev, id);
-+	if (ret)
-+		return ret;
-+	return mtk_reset_deassert_set_clr(rcdev, id);
-+}
-+
- static const struct reset_control_ops mtk_reset_ops = {
- 	.assert = mtk_reset_assert,
- 	.deassert = mtk_reset_deassert,
- 	.reset = mtk_reset,
- };
- 
--void mtk_register_reset_controller(struct device_node *np,
--			unsigned int num_regs, int regofs)
-+static const struct reset_control_ops mtk_reset_ops_set_clr = {
-+	.assert = mtk_reset_assert_set_clr,
-+	.deassert = mtk_reset_deassert_set_clr,
-+	.reset = mtk_reset_set_clr,
-+};
-+
-+void mtk_register_reset_controller_common(struct device_node *np,
-+			unsigned int num_regs, int regofs,
-+			const struct reset_control_ops *reset_ops)
- {
- 	struct mtk_reset *data;
- 	int ret;
-@@ -77,7 +113,7 @@ void mtk_register_reset_controller(struct device_node *np,
- 	data->regofs = regofs;
- 	data->rcdev.owner = THIS_MODULE;
- 	data->rcdev.nr_resets = num_regs * 32;
--	data->rcdev.ops = &mtk_reset_ops;
-+	data->rcdev.ops = reset_ops;
- 	data->rcdev.of_node = np;
- 
- 	ret = reset_controller_register(&data->rcdev);
-@@ -87,3 +123,17 @@ void mtk_register_reset_controller(struct device_node *np,
- 		return;
- 	}
- }
-+
-+void mtk_register_reset_controller(struct device_node *np,
-+	unsigned int num_regs, int regofs)
-+{
-+	mtk_register_reset_controller_common(np, num_regs, regofs,
-+		&mtk_reset_ops);
-+}
-+
-+void mtk_register_reset_controller_set_clr(struct device_node *np,
-+	unsigned int num_regs, int regofs)
-+{
-+	mtk_register_reset_controller_common(np, num_regs, regofs,
-+		&mtk_reset_ops_set_clr);
-+}
-diff --git a/include/dt-bindings/reset-controller/mt8183-resets.h b/include/dt-bindings/reset-controller/mt8183-resets.h
-new file mode 100644
-index 000000000000..faa6bcbdb8da
---- /dev/null
-+++ b/include/dt-bindings/reset-controller/mt8183-resets.h
-@@ -0,0 +1,81 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ * Author: Yong Liang <yong.liang@mediatek.com>
-+ */
-+
-+#ifndef _DT_BINDINGS_RESET_CONTROLLER_MT8183
-+#define _DT_BINDINGS_RESET_CONTROLLER_MT8183
-+
-+/* INFRACFG AO resets */
-+#define MT8183_INFRACFG_AO_THERM_SW_RST				0
-+#define MT8183_INFRACFG_AO_USB_TOP_SW_RST			1
-+#define MT8183_INFRACFG_AO_MM_IOMMU_SW_RST			3
-+#define MT8183_INFRACFG_AO_MSDC3_SW_RST				4
-+#define MT8183_INFRACFG_AO_MSDC2_SW_RST				5
-+#define MT8183_INFRACFG_AO_MSDC1_SW_RST				6
-+#define MT8183_INFRACFG_AO_MSDC0_SW_RST				7
-+#define MT8183_INFRACFG_AO_APDMA_SW_RST				9
-+#define MT8183_INFRACFG_AO_MIMP_D_SW_RST			10
-+#define MT8183_INFRACFG_AO_BTIF_SW_RST				12
-+#define MT8183_INFRACFG_AO_DISP_PWM_SW_RST			14
-+#define MT8183_INFRACFG_AO_AUXADC_SW_RST			15
-+
-+#define MT8183_INFRACFG_AO_IRTX_SW_RST				32
-+#define MT8183_INFRACFG_AO_SPI0_SW_RST				33
-+#define MT8183_INFRACFG_AO_I2C0_SW_RST				34
-+#define MT8183_INFRACFG_AO_I2C1_SW_RST				35
-+#define MT8183_INFRACFG_AO_I2C2_SW_RST				36
-+#define MT8183_INFRACFG_AO_I2C3_SW_RST				37
-+#define MT8183_INFRACFG_AO_UART0_SW_RST				38
-+#define MT8183_INFRACFG_AO_UART1_SW_RST				39
-+#define MT8183_INFRACFG_AO_UART2_SW_RST				40
-+#define MT8183_INFRACFG_AO_PWM_SW_RST				41
-+#define MT8183_INFRACFG_AO_SPI1_SW_RST				42
-+#define MT8183_INFRACFG_AO_I2C4_SW_RST				43
-+#define MT8183_INFRACFG_AO_DVFSP_SW_RST				44
-+#define MT8183_INFRACFG_AO_SPI2_SW_RST				45
-+#define MT8183_INFRACFG_AO_SPI3_SW_RST				46
-+#define MT8183_INFRACFG_AO_UFSHCI_SW_RST			47
-+
-+#define MT8183_INFRACFG_AO_PMIC_WRAP_SW_RST			64
-+#define MT8183_INFRACFG_AO_SPM_SW_RST				65
-+#define MT8183_INFRACFG_AO_USBSIF_SW_RST			66
-+#define MT8183_INFRACFG_AO_KP_SW_RST				68
-+#define MT8183_INFRACFG_AO_APXGPT_SW_RST			69
-+#define MT8183_INFRACFG_AO_CLDMA_AO_SW_RST			70
-+#define MT8183_INFRACFG_AO_UNIPRO_UFS_SW_RST			71
-+#define MT8183_INFRACFG_AO_DX_CC_SW_RST				72
-+#define MT8183_INFRACFG_AO_UFSPHY_SW_RST			73
-+
-+#define MT8183_INFRACFG_AO_DX_CC_SEC_SW_RST			96
-+#define MT8183_INFRACFG_AO_GCE_SW_RST				97
-+#define MT8183_INFRACFG_AO_CLDMA_SW_RST				98
-+#define MT8183_INFRACFG_AO_TRNG_SW_RST				99
-+#define MT8183_INFRACFG_AO_AP_MD_CCIF_1_SW_RST			103
-+#define MT8183_INFRACFG_AO_AP_MD_CCIF_SW_RST			104
-+#define MT8183_INFRACFG_AO_I2C1_IMM_SW_RST			105
-+#define MT8183_INFRACFG_AO_I2C1_ARB_SW_RST			106
-+#define MT8183_INFRACFG_AO_I2C2_IMM_SW_RST			107
-+#define MT8183_INFRACFG_AO_I2C2_ARB_SW_RST			108
-+#define MT8183_INFRACFG_AO_I2C5_SW_RST				109
-+#define MT8183_INFRACFG_AO_I2C5_IMM_SW_RST			110
-+#define MT8183_INFRACFG_AO_I2C5_ARB_SW_RST			111
-+#define MT8183_INFRACFG_AO_SPI4_SW_RST				112
-+#define MT8183_INFRACFG_AO_SPI5_SW_RST				113
-+#define MT8183_INFRACFG_AO_INFRA2MFGAXI_CBIP_CLAS_SW_RST	114
-+#define MT8183_INFRACFG_AO_MFGAXI2INFRA_M0_CBIP_GLAS_OUT_SW_RST	115
-+#define MT8183_INFRACFG_AO_MFGAXI2INFRA_M1_CBIP_GLAS_OUT_SW_RST	116
-+#define MT8183_INFRACFG_AO_UFS_AES_SW_RST			117
-+#define MT8183_INFRACFG_AO_CCU_I2C_IRQ_SW_RST			118
-+#define MT8183_INFRACFG_AO_CCU_I2C_DMA_SW_RST			119
-+#define MT8183_INFRACFG_AO_I2C6_SW_RST				120
-+#define MT8183_INFRACFG_AO_CCU_GALS_SW_RST			121
-+#define MT8183_INFRACFG_AO_IPU_GALS_SW_RST			122
-+#define MT8183_INFRACFG_AO_CONN2AP_GALS_SW_RST			123
-+#define MT8183_INFRACFG_AO_AP_MD_CCIF2_SW_RST			124
-+#define MT8183_INFRACFG_AO_AP_MD_CCIF3_SW_RST			125
-+#define MT8183_INFRACFG_AO_I2C7_SW_RST				126
-+#define MT8183_INFRACFG_AO_I2C8_SW_RST				127
-+
-+#endif  /* _DT_BINDINGS_RESET_CONTROLLER_MT8183 */
--- 
-2.18.0
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+UXVvdGluZyBBbmRyZXcgTHVubiA8YW5kcmV3QGx1bm4uY2g+OgoKPj4gKwlnbWFjMDogbWFjQDAg
+ewo+PiArCQljb21wYXRpYmxlID0gIm1lZGlhdGVrLGV0aC1tYWMiOwo+PiArCQlyZWcgPSA8MD47
+Cj4+ICsJCXBoeS1tb2RlID0gInNnbWlpIjsKPj4gKwo+PiArCQlmaXhlZC1saW5rIHsKPj4gKwkJ
+CXNwZWVkID0gPDI1MDA+Owo+PiArCQkJZnVsbC1kdXBsZXg7Cj4+ICsJCQlwYXVzZTsKPj4gKwkJ
+fTsKPj4gKwl9Owo+Cj4gSGkgUmVuw6kKPgoKSGkgQW5kcmV3LAoKPiBTR01JSSBhbmQgZml4ZWQt
+bGluayBpcyByYXRoZXIgb2RkLiBXaHkgZG8geW91IG5lZWQgdGhpcyBjb21iaW5hdGlvbj8KCkJh
+bmFuYVBpIFI2NCBoYXMgYSBSVEw4MzY3UyA1KzItcG9ydCBzd2l0Y2gsIHN3aXRjaCBpbnRlcmZh
+Y2VzIHdpdGggIAp0aGUgU09DIGJ5IGEKKEgpU0dNSUkgYW5kL29yIFJHTUlJIGludGVyZmFjZS4g
+U0dNSUkgaXMgbWFpbmx5IHVzZWQgZm9yIHRoZSBMQU4gcG9ydHMgYW5kClJHTUlJIGZvciB0aGUg
+V0FOIHBvcnQuCgpJIG1pbWljIHRoZSBTREsgc29mdHdhcmUgd2hpY2ggcHV0cyBTR01JSSBpbnRl
+cmZhY2UgaW4gMi41R0JpdCAgCmZpeGVkLWxpbmsgbW9kZS4KVGhlIFJUTDgzNjdTIHN3aXRjaCBj
+b2RlIGFsc28gcHV0IHN3aXRjaCBtYWMgaW4gZm9yZ2UgMi41R0JpdCBtb2RlLgoKU28gdGhpcyBp
+cyB0aGUgcmVhc29uIHdoeSBJIHB1dCBhIGZpeGVkLWxpbmsgbW9kZSBoZXJlLgoKR3JlYXRzLAoK
+UmVuw6kKCj4gICAgICAgQW5kcmV3CgoKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0
+ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFu
+L2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
