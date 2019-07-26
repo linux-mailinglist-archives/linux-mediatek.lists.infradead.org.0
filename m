@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 794C27700C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 027E177012
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=AvQSUxbc0f+4xOQo1LtsKmOrff6m65J774C0l2jS6+Y=; b=lGZWtKfnkWJUJUTM4LTI8wwSnG
-	pCVdUjHTIS/+Ozpjx1YctOEDQqZf3QQ1IX+pkNzLOMkkN5Tr+yibIXxPUyxE2JjuKMIXm3jSFaMhW
-	TOeeLnugh+rUwZABI8rbWfY1xuxmJKQz6fO0oFWrnFwRjyqJpVU6pBtKjlqFO13NoMCwTUi0Is3Kg
-	VCIjHDA+devU+qjA5AnJA32DzxrPMYCjEq7GVjlS0xggyzSEoyRLvDWW1lPVISrXa6ynbCcChpqXr
-	VXswJBzzlkXX6XXXSk7cWrOnKjrD/facM6llFWwNdSLjn1tAHGmwarr+0MUX/0Quvoj0v3GuKVjfm
-	7XiDUPeA==;
+	bh=KYTorIaO58uir3d+hJvMtY7CBaEFOudol3Paj6oqsdk=; b=sY1eyJPQXpjZfCgndW4VrnjZkU
+	wXzyPTnIKbYtgFQSNbAawq2bHbKfyvDsFcGkKhn1mRx08mD2d3Xs4kKybNp2w/15/TIN8XJb94dEq
+	CKyrbj3AliRY+H2zGVFZ/56yf+k5Wf2ttlHqqpy3DkzeZQ4nOEyDG40ce+LSCQ4b7MRYaSU6SjJ3O
+	nfUUliW2WuxXBk//NmipbgK7iTdF1GmJdxxR+TQPCSIYpYD7R0vf3e5Rss1phXcA5ESB6m5sZn7ca
+	pT2ALn/4k1GsKYe5G7ugfaRpJOUW7EnWVgHy6GRPEY7bQnQZ76GO1hbjVlCgYXF45P58/xVaiu15j
+	R+tLnEmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr3zl-0002j5-1N; Fri, 26 Jul 2019 17:27:05 +0000
+	id 1hr3zy-0002xR-12; Fri, 26 Jul 2019 17:27:18 +0000
 Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr3zh-0002iO-RW; Fri, 26 Jul 2019 17:27:03 +0000
+ id 1hr3zu-0002n9-OF; Fri, 26 Jul 2019 17:27:16 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id AC4F927EA8C
+ (Authenticated sender: andrzej.p) with ESMTPSA id A35DA27EA8C
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 14/24] drm: zte: Provide ddc symlink in vga connector sysfs
+Subject: [PATCH v6 15/24] drm/tilcdc: Provide ddc symlink in connector sysfs
  directory
-Date: Fri, 26 Jul 2019 19:23:08 +0200
-Message-Id: <1feba127edaf5589d2b4f6331c43c7da16172f7e.1564161140.git.andrzej.p@collabora.com>
+Date: Fri, 26 Jul 2019 19:23:09 +0200
+Message-Id: <fab2ffcf95c2caa1674ddc6e762d53b0c0ce9c78.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102702_148311_248BDA61 
-X-CRM114-Status: GOOD (  11.66  )
+X-CRM114-CacheID: sfid-20190726_102715_053900_15317C29 
+X-CRM114-Status: GOOD (  11.07  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -77,11 +77,11 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
  Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
- Dave Airlie <airlied@redhat.com>, intel-gfx@lists.freedesktop.org,
- Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
- linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- Sascha Hauer <s.hauer@pengutronix.de>,
+ Dave Airlie <airlied@redhat.com>, Harry Wentland <harry.wentland@amd.com>,
+ intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
+ freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
+ linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
  Alexios Zavras <alexios.zavras@intel.com>,
@@ -90,11 +90,9 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
- Enrico Weigelt <info@metux.net>, Jernej Skrabec <jernej.skrabec@siol.net>,
+ linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
  amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
  Eric Anholt <eric@anholt.net>, Thomas Zimmermann <tzimmermann@suse.de>,
- Oleksandr Andrushchenko <oleksandr_andrushchenko@epam.com>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
@@ -112,26 +110,26 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/zte/zx_vga.c | 6 ++++--
+ drivers/gpu/drm/tilcdc/tilcdc_tfp410.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/gpu/drm/zte/zx_vga.c b/drivers/gpu/drm/zte/zx_vga.c
-index 9b67e419280c..c4fa3bbaba78 100644
---- a/drivers/gpu/drm/zte/zx_vga.c
-+++ b/drivers/gpu/drm/zte/zx_vga.c
-@@ -165,8 +165,10 @@ static int zx_vga_register(struct drm_device *drm, struct zx_vga *vga)
+diff --git a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+index c6e4e52f32bc..d51776dd7a03 100644
+--- a/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
++++ b/drivers/gpu/drm/tilcdc/tilcdc_tfp410.c
+@@ -222,8 +222,10 @@ static struct drm_connector *tfp410_connector_create(struct drm_device *dev,
  
- 	vga->connector.polled = DRM_CONNECTOR_POLL_HPD;
+ 	connector = &tfp410_connector->base;
  
--	ret = drm_connector_init(drm, connector, &zx_vga_connector_funcs,
--				 DRM_MODE_CONNECTOR_VGA);
-+	ret = drm_connector_init_with_ddc(drm, connector,
-+					  &zx_vga_connector_funcs,
-+					  DRM_MODE_CONNECTOR_VGA,
-+					  &vga->ddc->adap);
- 	if (ret) {
- 		DRM_DEV_ERROR(dev, "failed to init connector: %d\n", ret);
- 		goto clean_encoder;
+-	drm_connector_init(dev, connector, &tfp410_connector_funcs,
+-			DRM_MODE_CONNECTOR_DVID);
++	drm_connector_init_with_ddc(dev, connector,
++				    &tfp410_connector_funcs,
++				    DRM_MODE_CONNECTOR_DVID,
++				    mod->i2c);
+ 	drm_connector_helper_add(connector, &tfp410_connector_helper_funcs);
+ 
+ 	connector->polled = DRM_CONNECTOR_POLL_CONNECT |
 -- 
 2.17.1
 
