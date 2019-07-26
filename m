@@ -2,54 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BDCBB766B1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 14:55:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E34F176714
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 15:15:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hcuuOHatDZLnkZa5iwGt9+6dE2sGP9Skl99JvFoE/BU=; b=dIsttdCkrZMhMQ
-	AONj70brmbo+90PmxmtY+yqOYQe0P0yG/rBgF560DwSTFFLGvofnWzCjKHNaEiXBXUEYZfXPLtxbc
-	6JE10pR9fiCF2turFbenzg4Hjz8sCvMG1oHodMjyiJN9PWJEPyqqkNDQlbh1xxV54HQUqKPxemutv
-	fgSybORTD+IcVwd92VLpDUR2HsEv7KenhNfesoZpwzsd9AQ0GYU3rumga8K2zWykdXEGuPoCu1PmX
-	n5W8et9743J8uPZruSutoDFvUAdo+U1kKCu9y+QLwwfZWGt/w86SFqtO+IrWQFaEyShUD6qtVzbmb
-	Cyi6XaH2PggW/c2ef5hQ==;
+	List-Owner; bh=jgvKtp5M5whH/voUOM7292yAiLLobC3I4XBxDwhhL5k=; b=kwqMLWZBnGvBH7
+	t4ZW3hUoF9eU7Sd0c1dJHhjekt0dquwz3PfMMNguij8lWwBw9a5u9prwtNci237SUdK9edi65VCho
+	GTrXmoJ5u1RodY6tfoM7Zv4D9PpJz1xXefSyeDY660Ak/oj+Od/M8l8plKzByznlpe01cub0L89UX
+	H/Lt3pvxXZjca/MgMO5AAfs4sIZKwj2nq/vWtPPsuwzoGAGHcCjtEVTNmeu01Xrc6Yxr9waqJZZMS
+	Sc03chyZfZC7zKBCBKtHh/5di6VNOVEwuFRV/As6bC8vvQD1BLu4UPUDscRh41HtRfk5fS2aJDbSM
+	ftGKRadDk5UinQ9d3lWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqzl6-00014I-Hj; Fri, 26 Jul 2019 12:55:40 +0000
-Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
+	id 1hr04N-0000oU-9E; Fri, 26 Jul 2019 13:15:35 +0000
+Received: from asavdk4.altibox.net ([109.247.116.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqzl1-00013U-1w
- for linux-mediatek@lists.infradead.org; Fri, 26 Jul 2019 12:55:37 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx1.suse.de (Postfix) with ESMTP id BA2EFABB2;
- Fri, 26 Jul 2019 12:55:33 +0000 (UTC)
-Date: Fri, 26 Jul 2019 14:55:33 +0200
-From: Michal Hocko <mhocko@kernel.org>
-To: Miles Chen <miles.chen@mediatek.com>
-Subject: Re: [PATCH v2] mm: memcontrol: fix use after free in mem_cgroup_iter()
-Message-ID: <20190726125533.GO6142@dhcp22.suse.cz>
-References: <20190726021247.16162-1-miles.chen@mediatek.com>
- <20190726124933.GN6142@dhcp22.suse.cz>
+ id 1hr040-0000Y7-9g; Fri, 26 Jul 2019 13:15:14 +0000
+Received: from ravnborg.org (unknown [158.248.194.18])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by asavdk4.altibox.net (Postfix) with ESMTPS id 1C3B480502;
+ Fri, 26 Jul 2019 15:15:07 +0200 (CEST)
+Date: Fri, 26 Jul 2019 15:15:06 +0200
+From: Sam Ravnborg <sam@ravnborg.org>
+To: "dbasehore ." <dbasehore@chromium.org>
+Subject: Re: [PATCH v7 2/4] drm/panel: set display info in panel attach
+Message-ID: <20190726131506.GB17801@ravnborg.org>
+References: <20190710021659.177950-1-dbasehore@chromium.org>
+ <20190710021659.177950-3-dbasehore@chromium.org>
+ <20190723091945.GD787@ravnborg.org>
+ <CAGAzgsonxAcOLxPSoP6Swab+AFPxWaxmC_tg87J=6Nes_awACg@mail.gmail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190726124933.GN6142@dhcp22.suse.cz>
+In-Reply-To: <CAGAzgsonxAcOLxPSoP6Swab+AFPxWaxmC_tg87J=6Nes_awACg@mail.gmail.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.3 cv=VcLZwmh9 c=1 sm=1 tr=0
+ a=UWs3HLbX/2nnQ3s7vZ42gw==:117 a=UWs3HLbX/2nnQ3s7vZ42gw==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=kj9zAlcOel0A:10 a=7gkXJVJtAAAA:8
+ a=VwQbUJbxAAAA:8 a=CPKLS5VrouiAa9iZAqIA:9 a=CjuIK1q_8ugA:10
+ a=E9Po1WZjFZOl8hwRPBS3:22 a=AjGcO6oz07-iQ99wixmX:22
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_055535_385688_D11AA069 
-X-CRM114-Status: GOOD (  19.38  )
-X-Spam-Score: -1.3 (-)
+X-CRM114-CacheID: sfid-20190726_061512_521215_16AEE87A 
+X-CRM114-Status: GOOD (  17.58  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-1.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [109.247.116.15 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,188 +69,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, Vladimir Davydov <vdavydov.dev@gmail.com>,
- Johannes Weiner <hannes@cmpxchg.org>, cgroups@vger.kernel.org
+Cc: Maxime Ripard <maxime.ripard@bootlin.com>,
+ Intel Graphics <intel-gfx@lists.freedesktop.org>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ dri-devel <dri-devel@lists.freedesktop.org>, David Airlie <airlied@linux.ie>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri 26-07-19 14:49:33, Michal Hocko wrote:
-> On Fri 26-07-19 10:12:47, Miles Chen wrote:
-> > This patch is sent to report an use after free in mem_cgroup_iter()
-> > after merging commit: be2657752e9e "mm: memcg: fix use after free in
-> > mem_cgroup_iter()".
-> > 
-> > I work with android kernel tree (4.9 & 4.14), and the commit:
-> > be2657752e9e "mm: memcg: fix use after free in mem_cgroup_iter()" has
-> > been merged to the trees. However, I can still observe use after free
-> > issues addressed in the commit be2657752e9e.
-> > (on low-end devices, a few times this month)
-> > 
-> > backtrace:
-> > 	css_tryget <- crash here
-> > 	mem_cgroup_iter
-> > 	shrink_node
-> > 	shrink_zones
-> > 	do_try_to_free_pages
-> > 	try_to_free_pages
-> > 	__perform_reclaim
-> > 	__alloc_pages_direct_reclaim
-> > 	__alloc_pages_slowpath
-> > 	__alloc_pages_nodemask
-> > 
-> > To debug, I poisoned mem_cgroup before freeing it:
-> > 
-> > static void __mem_cgroup_free(struct mem_cgroup *memcg)
-> > 	for_each_node(node)
-> > 	free_mem_cgroup_per_node_info(memcg, node);
-> > 	free_percpu(memcg->stat);
-> > +       /* poison memcg before freeing it */
-> > +       memset(memcg, 0x78, sizeof(struct mem_cgroup));
-> > 	kfree(memcg);
-> > }
-> > 
-> > The coredump shows the position=0xdbbc2a00 is freed.
-> > 
-> > (gdb) p/x ((struct mem_cgroup_per_node *)0xe5009e00)->iter[8]
-> > $13 = {position = 0xdbbc2a00, generation = 0x2efd}
-> > 
-> > 0xdbbc2a00:     0xdbbc2e00      0x00000000      0xdbbc2800      0x00000100
-> > 0xdbbc2a10:     0x00000200      0x78787878      0x00026218      0x00000000
-> > 0xdbbc2a20:     0xdcad6000      0x00000001      0x78787800      0x00000000
-> > 0xdbbc2a30:     0x78780000      0x00000000      0x0068fb84      0x78787878
-> > 0xdbbc2a40:     0x78787878      0x78787878      0x78787878      0xe3fa5cc0
-> > 0xdbbc2a50:     0x78787878      0x78787878      0x00000000      0x00000000
-> > 0xdbbc2a60:     0x00000000      0x00000000      0x00000000      0x00000000
-> > 0xdbbc2a70:     0x00000000      0x00000000      0x00000000      0x00000000
-> > 0xdbbc2a80:     0x00000000      0x00000000      0x00000000      0x00000000
-> > 0xdbbc2a90:     0x00000001      0x00000000      0x00000000      0x00100000
-> > 0xdbbc2aa0:     0x00000001      0xdbbc2ac8      0x00000000      0x00000000
-> > 0xdbbc2ab0:     0x00000000      0x00000000      0x00000000      0x00000000
-> > 0xdbbc2ac0:     0x00000000      0x00000000      0xe5b02618      0x00001000
-> > 0xdbbc2ad0:     0x00000000      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2ae0:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2af0:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b00:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b10:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b20:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b30:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b40:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b50:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b60:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b70:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2b80:     0x78787878      0x78787878      0x00000000      0x78787878
-> > 0xdbbc2b90:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 0xdbbc2ba0:     0x78787878      0x78787878      0x78787878      0x78787878
-> > 
-> > In the reclaim path, try_to_free_pages() does not setup
-> > sc.target_mem_cgroup and sc is passed to do_try_to_free_pages(), ...,
-> > shrink_node().
-> > 
-> > In mem_cgroup_iter(), root is set to root_mem_cgroup because
-> > sc->target_mem_cgroup is NULL.
-> > It is possible to assign a memcg to root_mem_cgroup.nodeinfo.iter in
-> > mem_cgroup_iter().
-> > 
-> > 	try_to_free_pages
-> > 		struct scan_control sc = {...}, target_mem_cgroup is 0x0;
-> > 	do_try_to_free_pages
-> > 	shrink_zones
-> > 	shrink_node
-> > 		 mem_cgroup *root = sc->target_mem_cgroup;
-> > 		 memcg = mem_cgroup_iter(root, NULL, &reclaim);
-> > 	mem_cgroup_iter()
-> > 		if (!root)
-> > 			root = root_mem_cgroup;
-> > 		...
-> > 
-> > 		css = css_next_descendant_pre(css, &root->css);
-> > 		memcg = mem_cgroup_from_css(css);
-> > 		cmpxchg(&iter->position, pos, memcg);
-> > 
-> > My device uses memcg non-hierarchical mode.
-> > When we release a memcg: invalidate_reclaim_iterators() reaches only
-> > dead_memcg and its parents. If non-hierarchical mode is used,
-> > invalidate_reclaim_iterators() never reaches root_mem_cgroup.
-> > 
-> > static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
-> > {
-> > 	struct mem_cgroup *memcg = dead_memcg;
-> > 
-> > 	for (; memcg; memcg = parent_mem_cgroup(memcg)
-> > 	...
-> > }
-> > 
-> > So the use after free scenario looks like:
-> > 
-> > CPU1						CPU2
-> > 
-> > try_to_free_pages
-> > do_try_to_free_pages
-> > shrink_zones
-> > shrink_node
-> > mem_cgroup_iter()
-> >     if (!root)
-> >     	root = root_mem_cgroup;
-> >     ...
-> >     css = css_next_descendant_pre(css, &root->css);
-> >     memcg = mem_cgroup_from_css(css);
-> >     cmpxchg(&iter->position, pos, memcg);
-> > 
-> > 					invalidate_reclaim_iterators(memcg);
-> > 					...
-> > 					__mem_cgroup_free()
-> > 						kfree(memcg);
-> > 
-> > try_to_free_pages
-> > do_try_to_free_pages
-> > shrink_zones
-> > shrink_node
-> > mem_cgroup_iter()
-> >     if (!root)
-> >     	root = root_mem_cgroup;
-> >     ...
-> >     mz = mem_cgroup_nodeinfo(root, reclaim->pgdat->node_id);
-> >     iter = &mz->iter[reclaim->priority];
-> >     pos = READ_ONCE(iter->position);
-> >     css_tryget(&pos->css) <- use after free
-> 
-> Thanks for the write up. This is really useful.
-> 
-> > To avoid this, we should also invalidate root_mem_cgroup.nodeinfo.iter in
-> > invalidate_reclaim_iterators().
-> 
-> I am sorry, I didn't get to comment an earlier version but I am
-> wondering whether it makes more sense to do and explicit invalidation.
-> 
-> [...]
-> > +static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
-> > +{
-> > +	struct mem_cgroup *memcg = dead_memcg;
-> > +	int invalidate_root = 0;
-> > +
-> > +	for (; memcg; memcg = parent_mem_cgroup(memcg))
-> > +		__invalidate_reclaim_iterators(memcg, dead_memcg);
-> 
-> 	/* here goes your comment */
-> 	if (!dead_memcg->use_hierarchy)
-> 		__invalidate_reclaim_iterators(root_mem_cgroup,	dead_memcg);
-> > +
-> > +}
-> 
-> Other than that the patch looks good to me.
-> 
-> Acked-by: Michal Hocko <mhocko@suse.com>
+Hi Derek.
 
-Btw. I believe we want to push this to stable trees as well. I think it
-goes all the way down to 5ac8fb31ad2e ("mm: memcontrol: convert reclaim
-iterator to simple css refcounting"). Unless I am missing something a
-Fixes: tag would be really helpful.
--- 
-Michal Hocko
-SUSE Labs
+On Wed, Jul 24, 2019 at 03:15:19PM -0700, dbasehore . wrote:
+> Hi Sam, thanks for pointing out the potential conflict.
+> 
+> On Tue, Jul 23, 2019 at 2:19 AM Sam Ravnborg <sam@ravnborg.org> wrote:
+> >
+> > Hi Derek.
+> >
+> > On Tue, Jul 09, 2019 at 07:16:57PM -0700, Derek Basehore wrote:
+> > > Devicetree systems can set panel orientation via a panel binding, but
+> > > there's no way, as is, to propagate this setting to the connector,
+> > > where the property need to be added.
+> > > To address this, this patch sets orientation, as well as other fixed
+> > > values for the panel, in the drm_panel_attach function. These values
+> > > are stored from probe in the drm_panel struct.
+> >
+> > This approch seems to conflict with work done by Laurent where the
+> > ownership/creation of the connector will be moved to the display controller.
+> >
+> > If I understand it correct then there should not be a 1:1 relation
+> > between a panel and a connector anymore.
+> 
+> 
+> Can you point me to this work?
+Please take a look at the series with subject:
+"[PATCH 00/60] drm/omap: Replace custom display drivers with drm_bridge
+and drm_panel"
+Link: https://patchwork.kernel.org/cover/11034175/
+
+Laurent has done a great job explaining the background,
+If you look into the patched you will see the idea is that a drm_panel
+no longer get attached to a drm_controller - it will be an argument to
+get_modes().
+
+	Sam
 
 _______________________________________________
 Linux-mediatek mailing list
