@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82D3677018
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA7FC7701D
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:27:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=RryP+U+tDlwy3jaU4jt2FuXYp0HdVOqMppQx1V5gQ2Y=; b=PiUMXsVtgMltmgvd6XgMtRHoHG
-	dgA5YaPnIAAKblHIC5KY34VUzNud53PHzs5YlINbAyJWua8cbpdOJRvamud46fkH9+x+4UDd6uHQ7
-	jI/G09sx6ueg4UEoDB+f3LmLw8YxLAmVmnOevuGtEBca550og033WRg9Gz+9qtUavQK/6n6g+b4XZ
-	PjneC4MiWw//pL/7nViSUQUYzF155L5MBXLpQNm3VkmoVoymGurO8l+uFeNf+moaKdivbIAiBQSvg
-	i36xfF0goX1q46cAcKa2tLmgG5Mf0pwIxh+2KVrU7rNrIEwGHm+rT/WN8zrSktO2SzpCgIMg7Syih
-	OLnOR5EQ==;
+	bh=ohHG7Tv+cThDVYI3HxA0FyCcawFr6rZL/++Pms/wctE=; b=P+O0zgeMzuInCDM4ZY8RxAoRiO
+	tcxAwmaBaAN/wpGaglJJT6VP93YEAzmUpdhhLOXz4KFhTPmlSIi/PxHQMBXe4uqW0bVVYOWa6slxz
+	/kSqkW8/jE2zV22mdOYIyOaGtJoLt2cArWcQ6Z63OXQBQ8/v7by9FxTBVC5psA6bpXXnfDK5eYILW
+	eXZKL3V+kCxPMw+2LtrQiHsRnCinVIo8bEI1w9OdOYCIWP07o8uKZS5UBkONZ2aVQ5AZ3E1Yo6d4j
+	qoz/cHoPf4B4HowqMSKjAjGWz+EvV4kbNurA60GP/lWPpXydnbEk5OQZjqXxpuSzL+6BtiHx8e4Ls
+	xKWKx+lA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr40C-00033Y-UE; Fri, 26 Jul 2019 17:27:32 +0000
+	id 1hr40O-0003Jc-Mh; Fri, 26 Jul 2019 17:27:44 +0000
 Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr408-00032w-Ov; Fri, 26 Jul 2019 17:27:30 +0000
+ id 1hr40K-0003Ip-Sy; Fri, 26 Jul 2019 17:27:42 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id C5F2D28C54D
+ (Authenticated sender: andrzej.p) with ESMTPSA id BC66A28C553
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 16/24] drm: sti: Provide ddc symlink in hdmi connector
- sysfs directory
-Date: Fri, 26 Jul 2019 19:23:10 +0200
-Message-Id: <510765aff8ef99683aa2da48bd08004376b1980a.1564161140.git.andrzej.p@collabora.com>
+Subject: [PATCH v6 17/24] drm/mgag200: Provide ddc symlink in connector sysfs
+ directory
+Date: Fri, 26 Jul 2019 19:23:11 +0200
+Message-Id: <d9e8d4281f6778e5598410a44f1b29c85df1c16d.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102729_073446_97953332 
-X-CRM114-Status: GOOD (  11.59  )
+X-CRM114-CacheID: sfid-20190726_102741_199803_0830ED40 
+X-CRM114-Status: GOOD (  10.92  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -64,8 +64,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
  David Airlie <airlied@linux.ie>, Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -77,11 +77,11 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
  Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
- Dave Airlie <airlied@redhat.com>, Harry Wentland <harry.wentland@amd.com>,
- intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
- freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
- linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
+ Dave Airlie <airlied@redhat.com>, intel-gfx@lists.freedesktop.org,
+ Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
+ linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
@@ -89,10 +89,10 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
- Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
- Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
- Thomas Zimmermann <tzimmermann@suse.de>,
+ Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
+ Enrico Weigelt <info@metux.net>, Jernej Skrabec <jernej.skrabec@siol.net>,
+ amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Eric Anholt <eric@anholt.net>, Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
@@ -109,26 +109,40 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Reviewed-by: Thomas Zimmermann <tzimmermann@suse.de>
 ---
- drivers/gpu/drm/sti/sti_hdmi.c | 6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
+ drivers/gpu/drm/mgag200/mgag200_mode.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
 
-diff --git a/drivers/gpu/drm/sti/sti_hdmi.c b/drivers/gpu/drm/sti/sti_hdmi.c
-index f03d617edc4c..33d06e0a9168 100644
---- a/drivers/gpu/drm/sti/sti_hdmi.c
-+++ b/drivers/gpu/drm/sti/sti_hdmi.c
-@@ -1284,8 +1284,10 @@ static int sti_hdmi_bind(struct device *dev, struct device *master, void *data)
+diff --git a/drivers/gpu/drm/mgag200/mgag200_mode.c b/drivers/gpu/drm/mgag200/mgag200_mode.c
+index 822f2a13748f..5e778b5f1a10 100644
+--- a/drivers/gpu/drm/mgag200/mgag200_mode.c
++++ b/drivers/gpu/drm/mgag200/mgag200_mode.c
+@@ -1678,18 +1678,19 @@ static struct drm_connector *mga_vga_init(struct drm_device *dev)
+ 		return NULL;
  
- 	drm_connector->polled = DRM_CONNECTOR_POLL_HPD;
+ 	connector = &mga_connector->base;
++	mga_connector->i2c = mgag200_i2c_create(dev);
++	if (!mga_connector->i2c)
++		DRM_ERROR("failed to add ddc bus\n");
  
--	drm_connector_init(drm_dev, drm_connector,
--			&sti_hdmi_connector_funcs, DRM_MODE_CONNECTOR_HDMIA);
-+	drm_connector_init_with_ddc(drm_dev, drm_connector,
-+				    &sti_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    hdmi->ddc_adapt);
- 	drm_connector_helper_add(drm_connector,
- 			&sti_hdmi_connector_helper_funcs);
+-	drm_connector_init(dev, connector,
+-			   &mga_vga_connector_funcs, DRM_MODE_CONNECTOR_VGA);
++	drm_connector_init_with_ddc(dev, connector,
++				    &mga_vga_connector_funcs,
++				    DRM_MODE_CONNECTOR_VGA,
++				    &mga_connector->i2c->adapter);
+ 
+ 	drm_connector_helper_add(connector, &mga_vga_connector_helper_funcs);
+ 
+ 	drm_connector_register(connector);
+ 
+-	mga_connector->i2c = mgag200_i2c_create(dev);
+-	if (!mga_connector->i2c)
+-		DRM_ERROR("failed to add ddc bus\n");
+-
+ 	return connector;
+ }
  
 -- 
 2.17.1
