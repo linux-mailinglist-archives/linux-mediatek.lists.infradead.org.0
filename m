@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8779D76FE4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:25:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E3EC476FEA
+	for <lists+linux-mediatek@lfdr.de>; Fri, 26 Jul 2019 19:25:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=Pkdb75gW4cHKTstZGZYuNABc/K6/rSe6YZruyStS24E=; b=MiavnRqKQ01/Jxm0JvcZLDDC+6
-	TJYNAec267/cFWZO3j5SWQfTjkLBZ+rSbOD8ZoVAb7qQftjDc1MIByuEah+hv9XL1m5PZpl6kL8zx
-	Sx3D+Ejozq6fnjnMTGhc5qXaqQLtTl/d8MVIzskkt1Z2FiBPwflc5Q5c0zapZWwgsyfjYWPrfKWzc
-	oHN2f8YMSs37nYWAsCEet2phBr114zLJ38f8nqrsuXO4FC7S9wCxP5U7JIBH2D6fSTNEdaOhLZpPr
-	DCqi6ED/PyIehEQKnudqPQG6bcJlKZyOyTEqO8WrwunVc0ytvF5uox24q24ZGmcH9NZilktn43z/F
-	D9j21CCQ==;
+	bh=x0MvQvhGD419RcJYF2a7t0MprlygVS77OwTP2Br1ouA=; b=KB7iTsodmrHTmVtJVtkhuKPE65
+	+KExwhd2hFPRkEJantsC5pRQsK+dZa5zx0UNo5J9MmN+Nyo8fpVObpZWVSazBcYzDKRmxlUaB8K3j
+	ipfw+zIS8/PDiXBK864z+hXr4rsOr54uDnvxSTjoishD5V3RvjVDqo0htkDatVFP+pANTGu3k9s31
+	En+JzPGHg4JYBXlw2Md7d8WfsJhDdFahw+Bl6X9l44HvVqvQaO92M7Bw3G/wVMpAiTP3XS5zWtD3Y
+	C4FgvsMytu6cey9kTJz+eYENiHjWOlKL6tPdcfL7raDR8Xk+xBan1y/tFS3wlsCjX0vo7YB11S54n
+	o6QKiSRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hr3yI-0001Kh-1U; Fri, 26 Jul 2019 17:25:34 +0000
+	id 1hr3yV-0001bC-J4; Fri, 26 Jul 2019 17:25:47 +0000
 Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hr3yE-0001IQ-KE; Fri, 26 Jul 2019 17:25:32 +0000
+ id 1hr3yR-0001ad-DW; Fri, 26 Jul 2019 17:25:44 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 3689228C023
+ (Authenticated sender: andrzej.p) with ESMTPSA id 4991328C023
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v6 07/24] drm/sun4i: hdmi: Provide ddc symlink in sun4i hdmi
- connector sysfs directory
-Date: Fri, 26 Jul 2019 19:23:01 +0200
-Message-Id: <b5a8881b226a9af7d31eb6a57d7fe0fccdcb3a47.1564161140.git.andrzej.p@collabora.com>
+Subject: [PATCH v6 08/24] drm/mediatek: Provide ddc symlink in hdmi connector
+ sysfs directory
+Date: Fri, 26 Jul 2019 19:23:02 +0200
+Message-Id: <5fda698fc3c352efac47de9140e793f5a947156c.1564161140.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1564161140.git.andrzej.p@collabora.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_102530_927658_919DD8FC 
-X-CRM114-Status: GOOD (  11.27  )
+X-CRM114-CacheID: sfid-20190726_102543_720484_31FC4A5C 
+X-CRM114-Status: GOOD (  11.49  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -86,6 +86,7 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
+ Alexios Zavras <alexios.zavras@intel.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
@@ -112,27 +113,27 @@ Use the ddc pointer provided by the generic connector.
 
 Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 ---
- drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c | 7 ++++---
+ drivers/gpu/drm/mediatek/mtk_hdmi.c | 7 ++++---
  1 file changed, 4 insertions(+), 3 deletions(-)
 
-diff --git a/drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c b/drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c
-index b2df76addc75..eb8071a4d6d0 100644
---- a/drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c
-+++ b/drivers/gpu/drm/sun4i/sun4i_hdmi_enc.c
-@@ -640,9 +640,10 @@ static int sun4i_hdmi_bind(struct device *dev, struct device *master,
+diff --git a/drivers/gpu/drm/mediatek/mtk_hdmi.c b/drivers/gpu/drm/mediatek/mtk_hdmi.c
+index ce91b61364eb..f419765b7cc0 100644
+--- a/drivers/gpu/drm/mediatek/mtk_hdmi.c
++++ b/drivers/gpu/drm/mediatek/mtk_hdmi.c
+@@ -1299,9 +1299,10 @@ static int mtk_hdmi_bridge_attach(struct drm_bridge *bridge)
+ 	struct mtk_hdmi *hdmi = hdmi_ctx_from_bridge(bridge);
+ 	int ret;
  
- 	drm_connector_helper_add(&hdmi->connector,
- 				 &sun4i_hdmi_connector_helper_funcs);
--	ret = drm_connector_init(drm, &hdmi->connector,
--				 &sun4i_hdmi_connector_funcs,
+-	ret = drm_connector_init(bridge->encoder->dev, &hdmi->conn,
+-				 &mtk_hdmi_connector_funcs,
 -				 DRM_MODE_CONNECTOR_HDMIA);
-+	ret = drm_connector_init_with_ddc(drm, &hdmi->connector,
-+					  &sun4i_hdmi_connector_funcs,
++	ret = drm_connector_init_with_ddc(bridge->encoder->dev, &hdmi->conn,
++					  &mtk_hdmi_connector_funcs,
 +					  DRM_MODE_CONNECTOR_HDMIA,
-+					  hdmi->ddc_i2c);
++					  hdmi->ddc_adpt);
  	if (ret) {
- 		dev_err(dev,
- 			"Couldn't initialise the HDMI connector\n");
+ 		dev_err(hdmi->dev, "Failed to initialize connector: %d\n", ret);
+ 		return ret;
 -- 
 2.17.1
 
