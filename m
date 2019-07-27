@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4D3C277A05
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:17:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 504D777A06
+	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:17:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GBwEJvW91SFl4SQuhbe1k6fN13sGuu3mZWgI29tJaFE=; b=m4I6IzjPyjVBQ5
-	qlCLmEb3RcTTsrtWod+gCl2c2NgDoaRVgRCjXSdDbrSpAe4C9kcEw3jFEmLuXWthcYZj7yvKEZ3dD
-	KsplkkQKsIr3yQHFStXf6k+9YkN2DLv1d6wJpy5F8fCmC6/LqTrXoZtaG6sMRRNQ/KCndDf6J3Qio
-	vq5P4M7m3ISFNxhF1z0+/JTEXl28f1k1kzHtruMGYuUSb/7PW381FbEU2ESdzIH1reH+1sycRuvUl
-	LN33Pd35GhW10b/LurkI1t9Xo3rPLAoIDIN0K9nScookVn5wHo0qhfJhQ4syZj5SjvuhilwgSuvWC
-	wh7Fdoutqb+73JSYpnEQ==;
+	List-Owner; bh=MOXP91N7wcZqOd0ka922Wc53v07Cl5xae9XyRQZl2q0=; b=lPLImXKs+vR5I9
+	a5/x4UOlUfVICpxaE/bd+Ni1itEVfjD46Juvn8IVwEFS4a970ZCZHHvvKcjzJlM+dVqnuhDy+EzJD
+	xdIC9vHFhQFoQPenuxSYZ/eV0kOaI1oHgoejoNAN3wyTZyDa07rkLfh/YkQCoriHwJeku2Xjsw6mT
+	Wv35clcFTHsvuGUperyxo98AvPZKam6ozBSSlgcoIBUN6XGrMaqOkBxVhjkFsrDtO5yXxlaO+mEWE
+	Al3RrGd+MTW6j6pW+XLBLxWkGYFm1K649QBW7AHxVwVLdgIi55bMdZtTzFudXEJkJrNl5za8XXrgz
+	GTXCWVsokPNRe2lOwrfA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hrORs-0004D1-1q; Sat, 27 Jul 2019 15:17:28 +0000
+	id 1hrOS9-0004TD-MS; Sat, 27 Jul 2019 15:17:45 +0000
 Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hrOL7-0005uD-IG; Sat, 27 Jul 2019 15:10:31 +0000
-Received: from DGGEMS413-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 204F26CBACB8CC91259D;
- Sat, 27 Jul 2019 23:10:27 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS413-HUB.china.huawei.com
- (10.3.19.213) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
- 23:10:16 +0800
+ id 1hrOL8-0005vS-V3; Sat, 27 Jul 2019 15:10:32 +0000
+Received: from DGGEMS407-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 445BBE0CE35BE6B53BA0;
+ Sat, 27 Jul 2019 23:10:28 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS407-HUB.china.huawei.com
+ (10.3.19.207) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
+ 23:10:19 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <tiwai@suse.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -43,10 +43,10 @@ To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>,
  <jcmvbkbc@gmail.com>
-Subject: [PATCH -next 18/34] ASoC: mmp-sspa: use
+Subject: [PATCH -next 19/34] ASoC: jz4740: use
  devm_platform_ioremap_resource() to simplify code
-Date: Sat, 27 Jul 2019 23:07:22 +0800
-Message-ID: <20190727150738.54764-19-yuehaibing@huawei.com>
+Date: Sat, 27 Jul 2019 23:07:23 +0800
+Message-ID: <20190727150738.54764-20-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190727150738.54764-1-yuehaibing@huawei.com>
 References: <20190727150738.54764-1-yuehaibing@huawei.com>
@@ -54,8 +54,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190727_081029_917442_55A425EE 
-X-CRM114-Status: UNSURE (   7.85  )
+X-CRM114-CacheID: sfid-20190727_081031_203175_A65512A6 
+X-CRM114-Status: UNSURE (   7.67  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -94,30 +94,30 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- sound/soc/pxa/mmp-sspa.c | 4 +---
+ sound/soc/codecs/jz4740.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/pxa/mmp-sspa.c b/sound/soc/pxa/mmp-sspa.c
-index 72f4364..e3e5425 100644
---- a/sound/soc/pxa/mmp-sspa.c
-+++ b/sound/soc/pxa/mmp-sspa.c
-@@ -399,7 +399,6 @@ static const struct snd_soc_component_driver mmp_sspa_component = {
- static int asoc_mmp_sspa_probe(struct platform_device *pdev)
+diff --git a/sound/soc/codecs/jz4740.c b/sound/soc/codecs/jz4740.c
+index 974e17f..460aa1f 100644
+--- a/sound/soc/codecs/jz4740.c
++++ b/sound/soc/codecs/jz4740.c
+@@ -318,7 +318,6 @@ static int jz4740_codec_probe(struct platform_device *pdev)
  {
- 	struct sspa_priv *priv;
--	struct resource *res;
+ 	int ret;
+ 	struct jz4740_codec *jz4740_codec;
+-	struct resource *mem;
+ 	void __iomem *base;
  
- 	priv = devm_kzalloc(&pdev->dev,
- 				sizeof(struct sspa_priv), GFP_KERNEL);
-@@ -417,8 +416,7 @@ static int asoc_mmp_sspa_probe(struct platform_device *pdev)
- 	if (priv->dma_params == NULL)
+ 	jz4740_codec = devm_kzalloc(&pdev->dev, sizeof(*jz4740_codec),
+@@ -326,8 +325,7 @@ static int jz4740_codec_probe(struct platform_device *pdev)
+ 	if (!jz4740_codec)
  		return -ENOMEM;
  
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	priv->sspa->mmio_base = devm_ioremap_resource(&pdev->dev, res);
-+	priv->sspa->mmio_base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(priv->sspa->mmio_base))
- 		return PTR_ERR(priv->sspa->mmio_base);
+-	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	base = devm_ioremap_resource(&pdev->dev, mem);
++	base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
  
 -- 
 2.7.4
