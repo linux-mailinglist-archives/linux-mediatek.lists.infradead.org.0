@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3F609779EC
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:14:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D50B5779EF
+	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:15:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Jr6sWXCGH0/J0QlMXF3Vy9Q3yWeBrZiTfoc8UyR4czg=; b=UOUDiCJ7y1aGlC
-	9EyIBlwZ8c4Iegrfs3Mijrum9Nz8uAKiaWoZgDo17TaBZD5mB5A3Cth0Mc7bq6Z+kOmRKLNS5he2j
-	Ab64xyHP6+IoELHv7NlMU8uyFvERV7mo3zDLs3/MsUpHza2BlK6YzmKiBu8yzEjvxVHi5BCjbM/yO
-	D0g/qVsnlBhnCtSjkuQhf+dxUHe/bvG4uMuIogo+lrEXlcAwziiyil8lCyIYYK0ba0PI9M4aYTg8S
-	zDEF/2eUspnfsDssgKWMnlNIUi/eNXsmB7fGigyhi9rYWuXvWUYonNjsRhKrH+jSXo4EBAd3RpSbQ
-	jaJIZAqfajXxVWWw4Ajw==;
+	List-Owner; bh=P5c0UstZzvvTeTrrwMlZu769dxIBhKMQ1DTb4TVb454=; b=JpKzyHg6tWVv9t
+	M6qezvPDP02jGcahCZDEcucuHheVCBRpCa+Ogdz6eQqVtzZ5kIvxmaKDJVylx38fVWccYf5W+jmMr
+	0ovqnYbIwPn6xkH6f0sEo6Zc05IWH5GGZwtS5dwaodpK8LwfhxfTO28AeaomAvSv9tD0mTndh8NgV
+	98rMCzxnLqw0vC2Q2eV7WH9yniRGhz4ZOgFF0tsqBvTtLdtdepj1xVVLUVIWPxRS8sPsTfEvx6DuP
+	Kr63/QM9jg8S4kGvTcZgxJn0GrfvUkVmnh2cOve5an4Ziy2Io5MH4vKZEvGMO3Mj7scfcYRF5uYoT
+	haTymF0bGYOEEg+qXCyA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hrOPK-0000kV-QY; Sat, 27 Jul 2019 15:14:50 +0000
-Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
+	id 1hrOPl-0002G4-1k; Sat, 27 Jul 2019 15:15:17 +0000
+Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hrOKi-0004V4-Cz; Sat, 27 Jul 2019 15:10:06 +0000
-Received: from DGGEMS402-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 506BE4AE61FA2FC5AF70;
- Sat, 27 Jul 2019 23:10:01 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS402-HUB.china.huawei.com
- (10.3.19.202) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
- 23:09:52 +0800
+ id 1hrOKl-0004hc-D3; Sat, 27 Jul 2019 15:10:08 +0000
+Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.58])
+ by Forcepoint Email with ESMTP id 5847837D049430CC0E55;
+ Sat, 27 Jul 2019 23:10:02 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
+ (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
+ 23:09:55 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <tiwai@suse.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -43,10 +43,10 @@ To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>,
  <jcmvbkbc@gmail.com>
-Subject: [PATCH -next 10/34] ASoC: sirf: use devm_platform_ioremap_resource()
- to simplify code
-Date: Sat, 27 Jul 2019 23:07:14 +0800
-Message-ID: <20190727150738.54764-11-yuehaibing@huawei.com>
+Subject: [PATCH -next 11/34] ASoC: mxs-saif: use
+ devm_platform_ioremap_resource() to simplify code
+Date: Sat, 27 Jul 2019 23:07:15 +0800
+Message-ID: <20190727150738.54764-12-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190727150738.54764-1-yuehaibing@huawei.com>
 References: <20190727150738.54764-1-yuehaibing@huawei.com>
@@ -54,8 +54,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190727_081004_965434_883862CE 
-X-CRM114-Status: UNSURE (   7.09  )
+X-CRM114-CacheID: sfid-20190727_081007_629783_55303D88 
+X-CRM114-Status: UNSURE (   7.89  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -63,7 +63,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.35 listed in list.dnswl.org]
+ medium trust [45.249.212.190 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -94,31 +94,32 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- sound/soc/sirf/sirf-usp.c | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
+ sound/soc/mxs/mxs-saif.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
 
-diff --git a/sound/soc/sirf/sirf-usp.c b/sound/soc/sirf/sirf-usp.c
-index 8bab119c..2af0c6f 100644
---- a/sound/soc/sirf/sirf-usp.c
-+++ b/sound/soc/sirf/sirf-usp.c
-@@ -359,7 +359,6 @@ static int sirf_usp_pcm_probe(struct platform_device *pdev)
- 	int ret;
- 	struct sirf_usp *usp;
- 	void __iomem *base;
--	struct resource *mem_res;
+diff --git a/sound/soc/mxs/mxs-saif.c b/sound/soc/mxs/mxs-saif.c
+index 269b6d6..a2c7942 100644
+--- a/sound/soc/mxs/mxs-saif.c
++++ b/sound/soc/mxs/mxs-saif.c
+@@ -732,7 +732,6 @@ static int mxs_saif_mclk_init(struct platform_device *pdev)
+ static int mxs_saif_probe(struct platform_device *pdev)
+ {
+ 	struct device_node *np = pdev->dev.of_node;
+-	struct resource *iores;
+ 	struct mxs_saif *saif;
+ 	int irq, ret = 0;
+ 	struct device_node *master;
+@@ -786,9 +785,7 @@ static int mxs_saif_probe(struct platform_device *pdev)
+ 		return ret;
+ 	}
  
- 	usp = devm_kzalloc(&pdev->dev, sizeof(struct sirf_usp),
- 			GFP_KERNEL);
-@@ -368,8 +367,7 @@ static int sirf_usp_pcm_probe(struct platform_device *pdev)
+-	iores = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-
+-	saif->base = devm_ioremap_resource(&pdev->dev, iores);
++	saif->base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(saif->base))
+ 		return PTR_ERR(saif->base);
  
- 	platform_set_drvdata(pdev, usp);
- 
--	mem_res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	base = devm_ioremap_resource(&pdev->dev, mem_res);
-+	base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(base))
- 		return PTR_ERR(base);
- 	usp->regmap = devm_regmap_init_mmio(&pdev->dev, base,
 -- 
 2.7.4
 
