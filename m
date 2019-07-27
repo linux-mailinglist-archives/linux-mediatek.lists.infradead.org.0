@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 790F577A1C
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:20:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BB2877A23
+	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:20:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cSzI+UmImRzAD7bHN9bXUq3gbMYaefSPFftYwuEaQE4=; b=pilI5HnLSQrcus
-	pG2Vu1Sv1EwKcB7fH5ssI4bXoDf46T0HHdOHYbuI3UE9xo5BBjZrrj3zJay8fX/OQ7uod3BB9Wgf3
-	jNzwKGdRBlvztLfoZNylXvHq98PQvYWUoKMdBh4z9Iozx4ukVUDAiuf7spw9y9cu3p14moAY+4Q1Z
-	wPr1wyj+bt0yHhb3eql4j72BnJXh6xVAg67ZZqTAYve87a05oJ2IBogcxYGk4e5H532Z/lHfEsl1u
-	2IfjgbFGftPHXoAO+hrh+Guar2H9fT9sgu/DBsJe6KwK0np0+dQxmJFbtTHoZr/ghACuaE241y41P
-	sNLW2Xhk3oxzT0n9N1+g==;
+	List-Owner; bh=/NlKAaYjaSFA7ujHcBovitkHeXHfCd2ps2N1iCYeJFw=; b=ciY2Tb5xP715Jf
+	0Gt0XfT/CZZ1QbKMzgZgNVlXOQ8mP5v2xzCgM5R+GBN9D1N+X6/iofZ6zJDjlaJ3xXgDXwO5bSTf8
+	D2eipfnDDX8iD9qsBB4DDOj1kN4m++PPYJtLxSCRlpNbWBOpT/IUADMRvyF+3kwkFBw05sLMTOqMH
+	Nv7RpJPQtVW7TQ5V3wQ2OjcMGV52HgpVmfE//eYjLQCafujC7NzrX5Y3cCaLUURhGQt6YVFlbIXkH
+	8tTyeBrw6mtTW9lGtreSwjply+Pp+NWNPkOI0HqS4TSfP263ks4Hada50U2vPkLcpVz9jTcMjM2Zm
+	E30z/hvRkZUmW7IKzcMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hrOUI-0006OF-4M; Sat, 27 Jul 2019 15:19:58 +0000
-Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
+	id 1hrOV6-0008Bh-JG; Sat, 27 Jul 2019 15:20:48 +0000
+Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hrOLP-00069q-9K; Sat, 27 Jul 2019 15:10:48 +0000
-Received: from DGGEMS403-HUB.china.huawei.com (unknown [172.30.72.58])
- by Forcepoint Email with ESMTP id A5D4DC60B1121CA152E4;
- Sat, 27 Jul 2019 23:10:45 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS403-HUB.china.huawei.com
- (10.3.19.203) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
- 23:10:38 +0800
+ id 1hrOLV-0006Dm-Ju; Sat, 27 Jul 2019 15:10:55 +0000
+Received: from DGGEMS401-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 24576B60E5A2ED3E2B3F;
+ Sat, 27 Jul 2019 23:10:50 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS401-HUB.china.huawei.com
+ (10.3.19.201) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
+ 23:10:41 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <tiwai@suse.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -43,10 +43,10 @@ To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>,
  <jcmvbkbc@gmail.com>
-Subject: [PATCH -next 25/34] ASoC: meson: g12a-tohdmitx: use
+Subject: [PATCH -next 26/34] ASoC: meson: axg-tdm-formatter: use
  devm_platform_ioremap_resource() to simplify code
-Date: Sat, 27 Jul 2019 23:07:29 +0800
-Message-ID: <20190727150738.54764-26-yuehaibing@huawei.com>
+Date: Sat, 27 Jul 2019 23:07:30 +0800
+Message-ID: <20190727150738.54764-27-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190727150738.54764-1-yuehaibing@huawei.com>
 References: <20190727150738.54764-1-yuehaibing@huawei.com>
@@ -54,8 +54,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190727_081047_771161_CE8F943E 
-X-CRM114-Status: UNSURE (   7.00  )
+X-CRM114-CacheID: sfid-20190727_081054_367801_7B1F0D78 
+X-CRM114-Status: UNSURE (   6.99  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -63,7 +63,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.191 listed in list.dnswl.org]
+ medium trust [45.249.212.32 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -94,20 +94,24 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- sound/soc/meson/g12a-tohdmitx.c | 4 +---
+ sound/soc/meson/axg-tdm-formatter.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/meson/g12a-tohdmitx.c b/sound/soc/meson/g12a-tohdmitx.c
-index 707ccb1..6ae0c4f 100644
---- a/sound/soc/meson/g12a-tohdmitx.c
-+++ b/sound/soc/meson/g12a-tohdmitx.c
-@@ -378,12 +378,10 @@ MODULE_DEVICE_TABLE(of, g12a_tohdmitx_of_match);
- static int g12a_tohdmitx_probe(struct platform_device *pdev)
- {
+diff --git a/sound/soc/meson/axg-tdm-formatter.c b/sound/soc/meson/axg-tdm-formatter.c
+index 2e49820..21c735a 100644
+--- a/sound/soc/meson/axg-tdm-formatter.c
++++ b/sound/soc/meson/axg-tdm-formatter.c
+@@ -253,7 +253,6 @@ int axg_tdm_formatter_probe(struct platform_device *pdev)
  	struct device *dev = &pdev->dev;
+ 	const struct axg_tdm_formatter_driver *drv;
+ 	struct axg_tdm_formatter *formatter;
 -	struct resource *res;
  	void __iomem *regs;
- 	struct regmap *map;
+ 	int ret;
+ 
+@@ -269,8 +268,7 @@ int axg_tdm_formatter_probe(struct platform_device *pdev)
+ 	platform_set_drvdata(pdev, formatter);
+ 	formatter->drv = drv;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 -	regs = devm_ioremap_resource(dev, res);
