@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D69C1779E2
-	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:13:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C0C2B779E5
+	for <lists+linux-mediatek@lfdr.de>; Sat, 27 Jul 2019 17:14:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1T7fDXmsWkx6Uew55LYviJBEvMFi2tcoF6J9iQvFr3E=; b=BcmZKGXzurQu83
-	xrgs76Panyorze+QPrSLPVptlsa8+cABuycidq7s2KD4THyZFZcg0aI25I+Kgx+jrhRtDR863zG1M
-	dSs2Bhg0MKpzEi4fCBO7aQJzS8iqTF5xewVLeofaLTlCnMhG3nVljU+9GxA/iiSyFIPfZMn/LlrmN
-	qtA5/91yxArYG7Fst4863RWmHb98VKRnKRGQDPjx2FLY6lDlzkf+Ff+pmEDeOLfjwTXmgERXYPVnZ
-	0bu+oXRjUyM6f/P7x1ZjcpugssHTu02SPN2jNEtAxXMNz6CF+l2kz1zHE+Z+QZQyfv8PZcgdpzWGm
-	edhz8HXl26TqlNwy2lPg==;
+	List-Owner; bh=RzeccKeZwNMR8+U+dnUz6ggyYjbqp6oLdP3FNgVO/do=; b=FRFcvf7qvA54km
+	b0jcy6eKeAhYboBAtyBFolsQXzofNPL1Thcd1ggrDVT4yb6+nkErFxgcZwpGVYuNQDiy8wVA4ZSYj
+	daLIleV2tNu6DHGBevCEAc6g8z0azYpwCbzoWhddtjFV1cYqjQlmyCNqoxwWk0krxXzDIFJ3LfD+9
+	zal9YdXHKbFvxtl/YEHkwGEzfy7jstF2kl3MlOZrOND88U2uRq8vBkDliCuIT7GrIMc6ggshkGaQa
+	Yt7MpgzMx6zC6YUHWyZXex4NBouTof99Ratb18nn+q79K6lPW5v0i3RdDmTSoXMkKkli/4zTc7AsW
+	ECjwF2usi2Zutl75PKQg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hrOO3-00089c-Qt; Sat, 27 Jul 2019 15:13:31 +0000
-Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
+	id 1hrOOZ-00007y-MS; Sat, 27 Jul 2019 15:14:03 +0000
+Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hrOKc-0004KP-SM; Sat, 27 Jul 2019 15:10:00 +0000
-Received: from DGGEMS412-HUB.china.huawei.com (unknown [172.30.72.58])
- by Forcepoint Email with ESMTP id CE09D95BEE9DDD86176B;
- Sat, 27 Jul 2019 23:09:56 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS412-HUB.china.huawei.com
- (10.3.19.212) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
- 23:09:46 +0800
+ id 1hrOKg-0004Lc-6Z; Sat, 27 Jul 2019 15:10:04 +0000
+Received: from DGGEMS407-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id EB0D1A561A98382AC3E5;
+ Sat, 27 Jul 2019 23:09:57 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS407-HUB.china.huawei.com
+ (10.3.19.207) with Microsoft SMTP Server id 14.3.439.0; Sat, 27 Jul 2019
+ 23:09:49 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <tiwai@suse.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -43,10 +43,10 @@ To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>,
  <jcmvbkbc@gmail.com>
-Subject: [PATCH -next 08/34] ASoC: fsl_audmix: use
+Subject: [PATCH -next 09/34] ASoC: bcm2835-i2s: use
  devm_platform_ioremap_resource() to simplify code
-Date: Sat, 27 Jul 2019 23:07:12 +0800
-Message-ID: <20190727150738.54764-9-yuehaibing@huawei.com>
+Date: Sat, 27 Jul 2019 23:07:13 +0800
+Message-ID: <20190727150738.54764-10-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190727150738.54764-1-yuehaibing@huawei.com>
 References: <20190727150738.54764-1-yuehaibing@huawei.com>
@@ -54,8 +54,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190727_080959_114890_AE12ED7B 
-X-CRM114-Status: UNSURE (   8.02  )
+X-CRM114-CacheID: sfid-20190727_081002_707320_059FE17D 
+X-CRM114-Status: UNSURE (   7.57  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -63,7 +63,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.32 listed in list.dnswl.org]
+ medium trust [45.249.212.191 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -94,30 +94,30 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- sound/soc/fsl/fsl_audmix.c | 4 +---
+ sound/soc/bcm/bcm2835-i2s.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/fsl/fsl_audmix.c b/sound/soc/fsl/fsl_audmix.c
-index 3897a54..c7e4e97 100644
---- a/sound/soc/fsl/fsl_audmix.c
-+++ b/sound/soc/fsl/fsl_audmix.c
-@@ -458,7 +458,6 @@ static int fsl_audmix_probe(struct platform_device *pdev)
+diff --git a/sound/soc/bcm/bcm2835-i2s.c b/sound/soc/bcm/bcm2835-i2s.c
+index 5ef80f3..e6a12e2 100644
+--- a/sound/soc/bcm/bcm2835-i2s.c
++++ b/sound/soc/bcm/bcm2835-i2s.c
+@@ -828,7 +828,6 @@ static int bcm2835_i2s_probe(struct platform_device *pdev)
  {
- 	struct device *dev = &pdev->dev;
- 	struct fsl_audmix *priv;
--	struct resource *res;
- 	const char *mdrv;
- 	const struct of_device_id *of_id;
- 	void __iomem *regs;
-@@ -475,8 +474,7 @@ static int fsl_audmix_probe(struct platform_device *pdev)
- 		return -ENOMEM;
+ 	struct bcm2835_i2s_dev *dev;
+ 	int ret;
+-	struct resource *mem;
+ 	void __iomem *base;
+ 	const __be32 *addr;
+ 	dma_addr_t dma_base;
+@@ -848,8 +847,7 @@ static int bcm2835_i2s_probe(struct platform_device *pdev)
+ 	}
  
- 	/* Get the addresses */
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	regs = devm_ioremap_resource(dev, res);
-+	regs = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(regs))
- 		return PTR_ERR(regs);
+ 	/* Request ioarea */
+-	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	base = devm_ioremap_resource(&pdev->dev, mem);
++	base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
  
 -- 
 2.7.4
