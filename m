@@ -2,54 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53F9E78F65
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 17:34:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E269679051
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 18:07:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3uPS5+qbfIS5CP3bPBGt4+pfesmcmJuYTAMdNfUbliw=; b=EBKRYgKBtAeWF7
-	7j28LqLuda2AY7dyHT3u4MpkR5cgoAXnqa3/FMdcIPL1swdGau3MyQAL2++sXgHhr1Ip9o89e+ZWv
-	meVZAMNKi91p+chpLVhIFUIfLarku8EU9FjhA589YtIG0v5wpBr+JTnB82SV07xnuZMrdZ6go9Gz1
-	fcVMShfZaw/H4mJUb++0n7Ldkotpp90Gqn4rlVA/oIVw+H8zDHcT0M2SphagPAWMqNb9S+lTOaBrd
-	p2Zh7vWve231k7Kldw40SKzZX6PSEDtU6BKzpEdYEIlnplFwk4SQRbihm6g69cl04RQqS00ukwKN2
-	uow0QcgigueteRPtGAmg==;
+	List-Owner; bh=qugnTfK62DOeoPhlGrz4jpPD0lcBU4vXt+Imhoq5hWY=; b=VTvrOs3ZQO6rsy
+	9ayY1u3mb/o0aRIveslYXPXY5c5yT6rczN61z5wB/u0Y79GQWRnY5YU0JK8ksQxYQn4D7EYVCkzNF
+	c72Zy3hHmGoD+TvSplikBAggAOpZRJpgKDMkEA12jMD74sVfVL749g0pgYfKkvkxryiAulFSUscqR
+	Sb4Vl/ZGHwzRckWJtzH02SrWneQjEGyB/zRTbMfbj8be+lzzVctru99F/oRlim00taP1n+J0PUswo
+	yADiPK7iXht7LT7veBg4rqh7Jcc88qv+c8Nl6gbVrDYaVlz1RTcGDT3Tnm1nXbBmJekgiKSQ2i+mw
+	Bd81IwnYtamgmHggNE5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hs7f3-0007ZM-TL; Mon, 29 Jul 2019 15:34:06 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hs7en-0007Ns-AV; Mon, 29 Jul 2019 15:33:50 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id AEAE3337;
- Mon, 29 Jul 2019 08:33:48 -0700 (PDT)
-Received: from e121166-lin.cambridge.arm.com (unknown [10.1.196.255])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 1D6103F694;
- Mon, 29 Jul 2019 08:33:46 -0700 (PDT)
-Date: Mon, 29 Jul 2019 16:33:41 +0100
-From: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-To: Jianjun Wang <jianjun.wang@mediatek.com>
-Subject: Re: [v2,2/2] PCI: mediatek: Add controller support for MT7629
-Message-ID: <20190729153341.GA23266@e121166-lin.cambridge.arm.com>
-References: <20190628073425.25165-1-jianjun.wang@mediatek.com>
- <20190628073425.25165-3-jianjun.wang@mediatek.com>
- <1564385918.17211.6.camel@mhfsdcap03>
+	id 1hs8Ap-00071U-Vd; Mon, 29 Jul 2019 16:06:55 +0000
+Received: from mail-vs1-xe43.google.com ([2607:f8b0:4864:20::e43])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hs8Ak-00070n-FP
+ for linux-mediatek@lists.infradead.org; Mon, 29 Jul 2019 16:06:53 +0000
+Received: by mail-vs1-xe43.google.com with SMTP id 190so41158876vsf.9
+ for <linux-mediatek@lists.infradead.org>; Mon, 29 Jul 2019 09:06:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=cmpxchg-org.20150623.gappssmtp.com; s=20150623;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=Tpb97y9OJ2eW+E2YobxTQO2miCp0akwTJT0Z7aQfyeM=;
+ b=wDPRxrvTNueI8fNXL07B/ppCEVxTEcWA/TjAlf+5ovS5WynFHfhJ5ZfCW7SBr3Jxzw
+ 3gfrjs3Q+4lGG5fs/9LFj9wo7IxjqfjuL2iuoHq8ZBZTFDKs75eqXDcSbNHSTaeZIm29
+ 2zw+HjOpx+TLMbGbYNuWu8PqzkOYGhcwnTdmDDBDbiV0hgphz0IYpULyl0llBDghd4vq
+ 474Tvj7KUrhpirtRilT1vn3yl7gk7qpOXt8Co3GLYpLkDgn0AGdNUpRjUVpsEmR71gVj
+ PGoBIlvgQzsa+mD2kWc7evXvapP8gt2BCIkIEZ8rnb7UChOy1ls5NxkEyItfQ3HQZiyZ
+ s/3A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=Tpb97y9OJ2eW+E2YobxTQO2miCp0akwTJT0Z7aQfyeM=;
+ b=pNDQpWuCmvPWmGbHwKM1dDuslfD0ZctZH7TxvE0LrVC1zpTmzbKsVQKJ0K/VBNGtYh
+ mkfrGxfHe0HBF654DHLCEpVH0xsH3v5n/7WuQ/iW28HCALB3/rex/LkQF29GsRNBfXac
+ oii1ldHN8gungQWnK9XQIXzOWcNM6aPESz80O5DnhTqSFkdbt1YJyupY+Fy4wYdGPTep
+ yk+6elgkE2dyXbajNsbqouC2oY35B+oQpJ3NmeB1xhjmbvT/QP5dw3cYO7HrNMDHYsUc
+ rq00g5qWB2LuLotI80xBraEOmFzvRglPFPsFhfszx/WK5JimvbMtmxfHFzCjrMNtEUap
+ pS4w==
+X-Gm-Message-State: APjAAAVBQovP9lDb4vlCBdo9PVQ0OGmlP8riNdOsx62mC0XQdF2GIWuq
+ fFzm5s+hnq4/grtwUcj3oks=
+X-Google-Smtp-Source: APXvYqyDZ9drgNJSebHt9o3VcULIeACSV8agtfWqengWcrFfqwinUbEaEMuze3cTXq1Le+hE4h3rig==
+X-Received: by 2002:a67:1787:: with SMTP id 129mr65506861vsx.64.1564416407936; 
+ Mon, 29 Jul 2019 09:06:47 -0700 (PDT)
+Received: from localhost (pool-108-27-252-85.nycmny.fios.verizon.net.
+ [108.27.252.85])
+ by smtp.gmail.com with ESMTPSA id s10sm14260409vsr.7.2019.07.29.09.06.47
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 29 Jul 2019 09:06:47 -0700 (PDT)
+Date: Mon, 29 Jul 2019 12:06:46 -0400
+From: Johannes Weiner <hannes@cmpxchg.org>
+To: Miles Chen <miles.chen@mediatek.com>
+Subject: Re: [PATCH v2] mm: memcontrol: fix use after free in mem_cgroup_iter()
+Message-ID: <20190729160646.GD21958@cmpxchg.org>
+References: <20190726021247.16162-1-miles.chen@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1564385918.17211.6.camel@mhfsdcap03>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+In-Reply-To: <20190726021247.16162-1-miles.chen@mediatek.com>
+User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_083349_446689_C0D93C51 
-X-CRM114-Status: GOOD (  21.83  )
+X-CRM114-CacheID: sfid-20190729_090650_522646_89D04A2A 
+X-CRM114-Status: GOOD (  24.80  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:e43 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,112 +94,241 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, linux-pci@vger.kernel.org,
- youlin.pei@mediatek.com, linux-kernel@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Bjorn Helgaas <bhelgaas@google.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Michal Hocko <mhocko@kernel.org>, linux-mm@kvack.org,
+ linux-mediatek@lists.infradead.org, Vladimir Davydov <vdavydov.dev@gmail.com>,
+ cgroups@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Jul 29, 2019 at 03:38:38PM +0800, Jianjun Wang wrote:
-> On Fri, 2019-06-28 at 15:34 +0800, Jianjun Wang wrote:
-> > MT7629 is an ARM platform SoC which has the same PCIe IP with MT7622.
-> > 
-> > The HW default value of its Device ID is invalid, fix its Device ID to
-> > match the hardware implementation.
-> > 
-> > Acked-by: Ryder Lee <ryder.lee@mediatek.com>
-> > Signed-off-by: Jianjun Wang <jianjun.wang@mediatek.com>
-> > ---
-> >  drivers/pci/controller/pcie-mediatek.c | 18 ++++++++++++++++++
-> >  include/linux/pci_ids.h                |  1 +
-> >  2 files changed, 19 insertions(+)
-> > 
-> > diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
-> > index 80601e1b939e..e5e6740b635d 100644
-> > --- a/drivers/pci/controller/pcie-mediatek.c
-> > +++ b/drivers/pci/controller/pcie-mediatek.c
-> > @@ -73,6 +73,7 @@
-> >  #define PCIE_MSI_VECTOR		0x0c0
-> >  
-> >  #define PCIE_CONF_VEND_ID	0x100
-> > +#define PCIE_CONF_DEVICE_ID	0x102
-> >  #define PCIE_CONF_CLASS_ID	0x106
-> >  
-> >  #define PCIE_INT_MASK		0x420
-> > @@ -141,12 +142,16 @@ struct mtk_pcie_port;
-> >  /**
-> >   * struct mtk_pcie_soc - differentiate between host generations
-> >   * @need_fix_class_id: whether this host's class ID needed to be fixed or not
-> > + * @need_fix_device_id: whether this host's Device ID needed to be fixed or not
-> > + * @device_id: Device ID which this host need to be fixed
-> >   * @ops: pointer to configuration access functions
-> >   * @startup: pointer to controller setting functions
-> >   * @setup_irq: pointer to initialize IRQ functions
-> >   */
-> >  struct mtk_pcie_soc {
-> >  	bool need_fix_class_id;
-> > +	bool need_fix_device_id;
-> > +	unsigned int device_id;
-> >  	struct pci_ops *ops;
-> >  	int (*startup)(struct mtk_pcie_port *port);
-> >  	int (*setup_irq)(struct mtk_pcie_port *port, struct device_node *node);
-> > @@ -696,6 +701,9 @@ static int mtk_pcie_startup_port_v2(struct mtk_pcie_port *port)
-> >  		writew(val, port->base + PCIE_CONF_CLASS_ID);
-> >  	}
-> >  
-> > +	if (soc->need_fix_device_id)
-> > +		writew(soc->device_id, port->base + PCIE_CONF_DEVICE_ID);
-> > +
-> >  	/* 100ms timeout value should be enough for Gen1/2 training */
-> >  	err = readl_poll_timeout(port->base + PCIE_LINK_STATUS_V2, val,
-> >  				 !!(val & PCIE_PORT_LINKUP_V2), 20,
-> > @@ -1216,11 +1224,21 @@ static const struct mtk_pcie_soc mtk_pcie_soc_mt7622 = {
-> >  	.setup_irq = mtk_pcie_setup_irq,
-> >  };
-> >  
-> > +static const struct mtk_pcie_soc mtk_pcie_soc_mt7629 = {
-> > +	.need_fix_class_id = true,
-> > +	.need_fix_device_id = true,
-> > +	.device_id = PCI_DEVICE_ID_MEDIATEK_7629,
-> > +	.ops = &mtk_pcie_ops_v2,
-> > +	.startup = mtk_pcie_startup_port_v2,
-> > +	.setup_irq = mtk_pcie_setup_irq,
-> > +};
-> > +
-> >  static const struct of_device_id mtk_pcie_ids[] = {
-> >  	{ .compatible = "mediatek,mt2701-pcie", .data = &mtk_pcie_soc_v1 },
-> >  	{ .compatible = "mediatek,mt7623-pcie", .data = &mtk_pcie_soc_v1 },
-> >  	{ .compatible = "mediatek,mt2712-pcie", .data = &mtk_pcie_soc_mt2712 },
-> >  	{ .compatible = "mediatek,mt7622-pcie", .data = &mtk_pcie_soc_mt7622 },
-> > +	{ .compatible = "mediatek,mt7629-pcie", .data = &mtk_pcie_soc_mt7629 },
-> >  	{},
-> >  };
-> >  
-> > diff --git a/include/linux/pci_ids.h b/include/linux/pci_ids.h
-> > index 70e86148cb1e..aa32962759b2 100644
-> > --- a/include/linux/pci_ids.h
-> > +++ b/include/linux/pci_ids.h
-> > @@ -2131,6 +2131,7 @@
-> >  #define PCI_VENDOR_ID_MYRICOM		0x14c1
-> >  
-> >  #define PCI_VENDOR_ID_MEDIATEK		0x14c3
-> > +#define PCI_DEVICE_ID_MEDIATEK_7629	0x7629
-> >  
-> >  #define PCI_VENDOR_ID_TITAN		0x14D2
-> >  #define PCI_DEVICE_ID_TITAN_010L	0x8001
+On Fri, Jul 26, 2019 at 10:12:47AM +0800, Miles Chen wrote:
+> This patch is sent to report an use after free in mem_cgroup_iter()
+> after merging commit: be2657752e9e "mm: memcg: fix use after free in
+> mem_cgroup_iter()".
 > 
-> Hi Bjorn & Lorenzo,
+> I work with android kernel tree (4.9 & 4.14), and the commit:
+> be2657752e9e "mm: memcg: fix use after free in mem_cgroup_iter()" has
+> been merged to the trees. However, I can still observe use after free
+> issues addressed in the commit be2657752e9e.
+> (on low-end devices, a few times this month)
 > 
-> Is this patch ok or is there anything I need to fixed?
+> backtrace:
+> 	css_tryget <- crash here
+> 	mem_cgroup_iter
+> 	shrink_node
+> 	shrink_zones
+> 	do_try_to_free_pages
+> 	try_to_free_pages
+> 	__perform_reclaim
+> 	__alloc_pages_direct_reclaim
+> 	__alloc_pages_slowpath
+> 	__alloc_pages_nodemask
+> 
+> To debug, I poisoned mem_cgroup before freeing it:
+> 
+> static void __mem_cgroup_free(struct mem_cgroup *memcg)
+> 	for_each_node(node)
+> 	free_mem_cgroup_per_node_info(memcg, node);
+> 	free_percpu(memcg->stat);
+> +       /* poison memcg before freeing it */
+> +       memset(memcg, 0x78, sizeof(struct mem_cgroup));
+> 	kfree(memcg);
+> }
+> 
+> The coredump shows the position=0xdbbc2a00 is freed.
+> 
+> (gdb) p/x ((struct mem_cgroup_per_node *)0xe5009e00)->iter[8]
+> $13 = {position = 0xdbbc2a00, generation = 0x2efd}
+> 
+> 0xdbbc2a00:     0xdbbc2e00      0x00000000      0xdbbc2800      0x00000100
+> 0xdbbc2a10:     0x00000200      0x78787878      0x00026218      0x00000000
+> 0xdbbc2a20:     0xdcad6000      0x00000001      0x78787800      0x00000000
+> 0xdbbc2a30:     0x78780000      0x00000000      0x0068fb84      0x78787878
+> 0xdbbc2a40:     0x78787878      0x78787878      0x78787878      0xe3fa5cc0
+> 0xdbbc2a50:     0x78787878      0x78787878      0x00000000      0x00000000
+> 0xdbbc2a60:     0x00000000      0x00000000      0x00000000      0x00000000
+> 0xdbbc2a70:     0x00000000      0x00000000      0x00000000      0x00000000
+> 0xdbbc2a80:     0x00000000      0x00000000      0x00000000      0x00000000
+> 0xdbbc2a90:     0x00000001      0x00000000      0x00000000      0x00100000
+> 0xdbbc2aa0:     0x00000001      0xdbbc2ac8      0x00000000      0x00000000
+> 0xdbbc2ab0:     0x00000000      0x00000000      0x00000000      0x00000000
+> 0xdbbc2ac0:     0x00000000      0x00000000      0xe5b02618      0x00001000
+> 0xdbbc2ad0:     0x00000000      0x78787878      0x78787878      0x78787878
+> 0xdbbc2ae0:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2af0:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b00:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b10:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b20:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b30:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b40:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b50:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b60:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b70:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2b80:     0x78787878      0x78787878      0x00000000      0x78787878
+> 0xdbbc2b90:     0x78787878      0x78787878      0x78787878      0x78787878
+> 0xdbbc2ba0:     0x78787878      0x78787878      0x78787878      0x78787878
+> 
+> In the reclaim path, try_to_free_pages() does not setup
+> sc.target_mem_cgroup and sc is passed to do_try_to_free_pages(), ...,
+> shrink_node().
+> 
+> In mem_cgroup_iter(), root is set to root_mem_cgroup because
+> sc->target_mem_cgroup is NULL.
+> It is possible to assign a memcg to root_mem_cgroup.nodeinfo.iter in
+> mem_cgroup_iter().
+> 
+> 	try_to_free_pages
+> 		struct scan_control sc = {...}, target_mem_cgroup is 0x0;
+> 	do_try_to_free_pages
+> 	shrink_zones
+> 	shrink_node
+> 		 mem_cgroup *root = sc->target_mem_cgroup;
+> 		 memcg = mem_cgroup_iter(root, NULL, &reclaim);
+> 	mem_cgroup_iter()
+> 		if (!root)
+> 			root = root_mem_cgroup;
+> 		...
+> 
+> 		css = css_next_descendant_pre(css, &root->css);
+> 		memcg = mem_cgroup_from_css(css);
+> 		cmpxchg(&iter->position, pos, memcg);
+> 
+> My device uses memcg non-hierarchical mode.
+> When we release a memcg: invalidate_reclaim_iterators() reaches only
+> dead_memcg and its parents. If non-hierarchical mode is used,
+> invalidate_reclaim_iterators() never reaches root_mem_cgroup.
+> 
+> static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
+> {
+> 	struct mem_cgroup *memcg = dead_memcg;
+> 
+> 	for (; memcg; memcg = parent_mem_cgroup(memcg)
+> 	...
+> }
+> 
+> So the use after free scenario looks like:
+> 
+> CPU1						CPU2
+> 
+> try_to_free_pages
+> do_try_to_free_pages
+> shrink_zones
+> shrink_node
+> mem_cgroup_iter()
+>     if (!root)
+>     	root = root_mem_cgroup;
+>     ...
+>     css = css_next_descendant_pre(css, &root->css);
+>     memcg = mem_cgroup_from_css(css);
+>     cmpxchg(&iter->position, pos, memcg);
+> 
+> 					invalidate_reclaim_iterators(memcg);
+> 					...
+> 					__mem_cgroup_free()
+> 						kfree(memcg);
+> 
+> try_to_free_pages
+> do_try_to_free_pages
+> shrink_zones
+> shrink_node
+> mem_cgroup_iter()
+>     if (!root)
+>     	root = root_mem_cgroup;
+>     ...
+>     mz = mem_cgroup_nodeinfo(root, reclaim->pgdat->node_id);
+>     iter = &mz->iter[reclaim->priority];
+>     pos = READ_ONCE(iter->position);
+>     css_tryget(&pos->css) <- use after free
+> 
+> To avoid this, we should also invalidate root_mem_cgroup.nodeinfo.iter in
+> invalidate_reclaim_iterators().
+> 
+> Change since v1:
+> Add a comment to explain why we need to handle root_mem_cgroup separately.
+> Rename invalid_root to invalidate_root.
+> 
+> Cc: Johannes Weiner <hannes@cmpxchg.org>
+> Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+> ---
+>  mm/memcontrol.c | 38 ++++++++++++++++++++++++++++----------
+>  1 file changed, 28 insertions(+), 10 deletions(-)
+> 
+> diff --git a/mm/memcontrol.c b/mm/memcontrol.c
+> index cdbb7a84cb6e..09f2191f113b 100644
+> --- a/mm/memcontrol.c
+> +++ b/mm/memcontrol.c
+> @@ -1130,26 +1130,44 @@ void mem_cgroup_iter_break(struct mem_cgroup *root,
+>  		css_put(&prev->css);
+>  }
+>  
+> -static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
+> +static void __invalidate_reclaim_iterators(struct mem_cgroup *from,
+> +					struct mem_cgroup *dead_memcg)
+>  {
+> -	struct mem_cgroup *memcg = dead_memcg;
+>  	struct mem_cgroup_reclaim_iter *iter;
+>  	struct mem_cgroup_per_node *mz;
+>  	int nid;
+>  	int i;
+>  
+> -	for (; memcg; memcg = parent_mem_cgroup(memcg)) {
+> -		for_each_node(nid) {
+> -			mz = mem_cgroup_nodeinfo(memcg, nid);
+> -			for (i = 0; i <= DEF_PRIORITY; i++) {
+> -				iter = &mz->iter[i];
+> -				cmpxchg(&iter->position,
+> -					dead_memcg, NULL);
+> -			}
+> +	for_each_node(nid) {
+> +		mz = mem_cgroup_nodeinfo(from, nid);
+> +		for (i = 0; i <= DEF_PRIORITY; i++) {
+> +			iter = &mz->iter[i];
+> +			cmpxchg(&iter->position,
+> +				dead_memcg, NULL);
+>  		}
+>  	}
+>  }
+>  
+> +/*
+> + * When cgruop1 non-hierarchy mode is used, parent_mem_cgroup() does
+> + * not walk all the way up to the cgroup root (root_mem_cgroup). So
+> + * we have to handle dead_memcg from cgroup root separately.
+> + */
+> +static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
+> +{
+> +	struct mem_cgroup *memcg = dead_memcg;
+> +	int invalidate_root = 0;
+> +
+> +	for (; memcg; memcg = parent_mem_cgroup(memcg)) {
+> +		__invalidate_reclaim_iterators(memcg, dead_memcg);
+> +		if (memcg == root_mem_cgroup)
+> +			invalidate_root = 1;
+> +	}
+> +
+> +	if (!invalidate_root)
+> +		__invalidate_reclaim_iterators(root_mem_cgroup, dead_memcg);
 
-We are getting to it shortly, thanks for your patience.
+"invalidate_root" suggests we still have to invalidate the root, but
+the variable works the opposite way. How about dropping it altogether
+and moving the comment directly to where the decision is made:
 
-Lorenzo
+	struct mem_cgroup *memcg = dead_memcg;
+
+	do {
+		__invalidate_reclaim_iterators(memcg, dead_memcg);
+		last = memcg;
+	} while ((memcg = parent_mem_cgroup(memcg)));
+
+	/*
+	 * When cgruop1 non-hierarchy mode is used,
+	 * parent_mem_cgroup() does not walk all the way up to the
+	 * cgroup root (root_mem_cgroup). So we have to handle
+	 * dead_memcg from cgroup root separately.
+	 */
+	if (last != root_mem_cgroup)
+		__invalidate_reclaim_iterators(root_mem_cgroup, dead_memcg);
 
 _______________________________________________
 Linux-mediatek mailing list
