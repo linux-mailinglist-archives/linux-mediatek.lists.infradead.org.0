@@ -2,63 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55E2978BE9
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 14:41:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D28678DD5
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 16:27:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2bywlNUvWVzpzmdMzoU2kheso+zgRrd6Xts9Zr19if8=; b=MQyyrUgP8LkjQ1
-	tSt1f/Aor3UAceMA0v+oPuQSo4pmo1kb9on0pTLlkV5PULy6bbUp1ZxNZVooGIzNPhRbJ5+8u9f6+
-	SEz21zh3B9EfDkkyAH92Wa8tjTmaOdN+vaumdcnLlExTL5NKnYmaPSBBV/ufTfcnMwFn9M/5PVBnt
-	1JO4ewUpCRRkfzgWfjLtCB6mFqJWFvOQs0ocAQPNffY0+eai0ocNsKoiSbKAzK3NEDSQa81pzJg21
-	PcxG3+UfOQXGv8cy5GVu8iX4951U0D7fzj8t6hxinGdD1ujCZzTFX0C6ijiDxIfYs4S4970bc+m9i
-	UiLieHDYsdu6W2fhxPqg==;
+	List-Owner; bh=/0UuGCVqQfU6y9PpDKsMumX8MHOrJ6AFKtmjlHKqxf8=; b=aZRYU7jX/y6R8i
+	0W8rn4Erzv0fiJaEbGss58dhPiv6SyUoqqYvQIgGJSvPMkGKwz9GILO/qO1zan5QnRyKJuKoRdOZZ
+	g4yJQVsEUVXiK/QcrOhQXK4YxKGsC4pSR/5r6ABSQO/zADCrdUHSel5OrldyP8G2y7pNzHcOMDtl0
+	yZPMpqloJiB0+fUH2sW4foBMClxZxbYaxCNjda41utLACaXgN4UOYE6ZW890w5xkzYJBLFPEzTK0w
+	i7DWp5vWgmkBAg2ftyOFVISZlIkLsK78lfH45JJ+RfGs/XAUga18oGDx2wkGuur+Cra3Ejc+PKKbA
+	mpnHuWdFh6MsWh5TRL8A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hs4xs-00078G-6o; Mon, 29 Jul 2019 12:41:20 +0000
-Received: from mga09.intel.com ([134.134.136.24])
+	id 1hs6cb-0005Mh-Ue; Mon, 29 Jul 2019 14:27:29 +0000
+Received: from mga14.intel.com ([192.55.52.115])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hs4xp-00077t-MH; Mon, 29 Jul 2019 12:41:19 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
+ id 1hs6cG-0003ub-Pa; Mon, 29 Jul 2019 14:27:10 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
 X-Amp-File-Uploaded: False
 Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by orsmga102.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 29 Jul 2019 05:41:16 -0700
+ by fmsmga103.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 29 Jul 2019 07:25:06 -0700
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.64,322,1559545200"; d="scan'208";a="190561299"
-Received: from jnikula-mobl3.fi.intel.com (HELO localhost) ([10.237.66.150])
- by fmsmga001.fm.intel.com with ESMTP; 29 Jul 2019 05:41:11 -0700
-From: Jani Nikula <jani.nikula@intel.com>
-To: "Koenig\, Christian" <Christian.Koenig@amd.com>,
- Chris Wilson <chris@chris-wilson.co.uk>,
- Intel Graphics Development <intel-gfx@lists.freedesktop.org>,
- Sam Ravnborg <sam@ravnborg.org>,
- "dri-devel\@lists.freedesktop.org" <dri-devel@lists.freedesktop.org>
-Subject: Re: [PATCH v1 02/11] drm: drop uapi dependency from drm_print.h
-In-Reply-To: <460bf1e1-a38b-5f79-26e5-93764067f4e1@amd.com>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
-References: <20190718161507.2047-1-sam@ravnborg.org>
- <20190718161507.2047-3-sam@ravnborg.org>
- <156346840026.24728.936589728458336617@skylake-alporthouse-com>
- <460bf1e1-a38b-5f79-26e5-93764067f4e1@amd.com>
-Date: Mon, 29 Jul 2019 15:45:35 +0300
-Message-ID: <87tvb5nh5c.fsf@intel.com>
+X-IronPort-AV: E=Sophos;i="5.64,323,1559545200"; d="scan'208";a="190601545"
+Received: from kuha.fi.intel.com ([10.237.72.189])
+ by fmsmga001.fm.intel.com with SMTP; 29 Jul 2019 07:25:01 -0700
+Received: by kuha.fi.intel.com (sSMTP sendmail emulation);
+ Mon, 29 Jul 2019 17:25:00 +0300
+Date: Mon, 29 Jul 2019 17:25:00 +0300
+From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v8 08/11] usb: roles: get usb-role-switch from parent
+Message-ID: <20190729142500.GE28600@kuha.fi.intel.com>
+References: <1563958245-6321-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1563958245-6321-9-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <1563958245-6321-9-git-send-email-chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_054117_770402_DA2BE94B 
-X-CRM114-Status: GOOD (  15.69  )
+X-CRM114-CacheID: sfid-20190729_072708_846148_814B38A8 
+X-CRM114-Status: GOOD (  21.39  )
 X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [134.134.136.24 listed in list.dnswl.org]
+ high trust [192.55.52.115 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,99 +68,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Boris Brezillon <bbrezillon@kernel.org>, David Airlie <airlied@linux.ie>,
- Daniel Vetter <daniel.vetter@ffwll.ch>, Liviu Dudau <Liviu.Dudau@arm.com>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Thomas Zimmermann <tzimmermann@suse.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <seanpaul@chromium.org>,
- Thierry Reding <treding@nvidia.com>, Sean Paul <sean@poorly.run>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 19 Jul 2019, "Koenig, Christian" <Christian.Koenig@amd.com> wrote:
-> Am 18.07.19 um 18:46 schrieb Chris Wilson:
->> Quoting Sam Ravnborg (2019-07-18 17:14:58)
->>> drm_print.h used DRM_NAME - thus adding a dependency from
->>> include/drm/drm_print.h => uapi/drm/drm.h
->>>
->>> Hardcode the name "drm" to break this dependency.
->>> The idea is that there shall be a minimal dependency
->>> between include/drm/* and uapi/*
->>>
->>> Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
->>> Suggested-by: Daniel Vetter <daniel@ffwll.ch>
->>> Reviewed-by: Daniel Vetter <daniel.vetter@ffwll.ch>
->>> Cc: Maarten Lankhorst <maarten.lankhorst@linux.intel.com>
->>> Cc: Maxime Ripard <maxime.ripard@bootlin.com>
->>> Cc: Sean Paul <sean@poorly.run>
->>> Cc: David Airlie <airlied@linux.ie>
->>> Cc: Rob Clark <robdclark@gmail.com>
->>> Cc: Sean Paul <seanpaul@chromium.org>
->>> Cc: Chris Wilson <chris@chris-wilson.co.uk>
->>> Cc: Daniel Vetter <daniel@ffwll.ch>
->>> ---
->>>   include/drm/drm_print.h | 4 +---
->>>   1 file changed, 1 insertion(+), 3 deletions(-)
->>>
->>> diff --git a/include/drm/drm_print.h b/include/drm/drm_print.h
->>> index a5d6f2f3e430..760d1bd0eaf1 100644
->>> --- a/include/drm/drm_print.h
->>> +++ b/include/drm/drm_print.h
->>> @@ -32,8 +32,6 @@
->>>   #include <linux/device.h>
->>>   #include <linux/debugfs.h>
->>>   
->>> -#include <drm/drm.h>
->>> -
->>>   /**
->>>    * DOC: print
->>>    *
->>> @@ -287,7 +285,7 @@ void drm_err(const char *format, ...);
->>>   /* Macros to make printk easier */
->>>   
->>>   #define _DRM_PRINTK(once, level, fmt, ...)                             \
->>> -       printk##once(KERN_##level "[" DRM_NAME "] " fmt, ##__VA_ARGS__)
->>> +       printk##once(KERN_##level "[drm] " fmt, ##__VA_ARGS__)
->> I guess I'm th only one who
->>
->> #undef DRM_NAME
->> #define DRM_NAME i915
->>
->> just so that I didn't have inane logs?
->>
->> One might suggest that instead of hardcoding it, follow the pr_fmt()
->> pattern and only add "[drm]" for the drm core.
->>
->> Even then it so useless (which drm driver is this message for???) that I
->> want to remove them all :(
->
-> Yeah, agree. I mean it is nice if the core drm functions use a prefix 
-> for debug output.
->
-> But I actually don't see the point for individual drivers.
+On Wed, Jul 24, 2019 at 04:50:42PM +0800, Chunfeng Yun wrote:
+> when the USB host controller is the parent of the connector,
+> usually type-B, sometimes don't need the graph, so we should
+> check whether it's parent registers usb-role-switch or not
+> firstly, and get it if exists.
+> 
+> Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 
-We should all migrate to the versions with device...
+I don't think I actually wrote the patch. I may have proposed the code
+for you, but I never prepared a patch out out that. Please drop the
+above Signed-off-by line if that is the case. I case I really did
+write the patch, then you are missing the "From: Heikki..." first
+line, but I really don't remember preparing the patch.
 
-BR,
-Jani.
+If the idea came from me, you can use for example the suggested-by
+tag: "Suggested-by: Heikki Krogerus <heikki.krogerus...".
 
+> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> ---
+> v8: no changes
+> v7:
+>   add signed-off-by Chunfeng
+> 
+> v6:
+>   new patch
+> ---
+>  drivers/usb/roles/class.c | 25 +++++++++++++++++++++----
+>  1 file changed, 21 insertions(+), 4 deletions(-)
+> 
+> diff --git a/drivers/usb/roles/class.c b/drivers/usb/roles/class.c
+> index 5b637aaf311f..87439a84c983 100644
+> --- a/drivers/usb/roles/class.c
+> +++ b/drivers/usb/roles/class.c
+> @@ -114,6 +114,19 @@ static void *usb_role_switch_match(struct device_connection *con, int ep,
+>  	return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
+>  }
+>  
+> +static struct usb_role_switch *
+> +usb_role_switch_is_parent(struct fwnode_handle *fwnode)
+> +{
+> +	struct fwnode_handle *parent = fwnode_get_parent(fwnode);
+> +	struct device *dev;
+> +
+> +	if (!parent || !fwnode_property_present(parent, "usb-role-switch"))
+> +		return NULL;
+> +
+> +	dev = class_find_device(role_class, NULL, parent, switch_fwnode_match);
+> +	return dev ? to_role_switch(dev) : ERR_PTR(-EPROBE_DEFER);
+> +}
+> +
+>  /**
+>   * usb_role_switch_get - Find USB role switch linked with the caller
+>   * @dev: The caller device
+> @@ -125,8 +138,10 @@ struct usb_role_switch *usb_role_switch_get(struct device *dev)
+>  {
+>  	struct usb_role_switch *sw;
+>  
+> -	sw = device_connection_find_match(dev, "usb-role-switch", NULL,
+> -					  usb_role_switch_match);
+> +	sw = usb_role_switch_is_parent(dev_fwnode(dev));
+> +	if (!sw)
+> +		sw = device_connection_find_match(dev, "usb-role-switch", NULL,
+> +						  usb_role_switch_match);
+>  
+>  	if (!IS_ERR_OR_NULL(sw))
+>  		WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+> @@ -146,8 +161,10 @@ struct usb_role_switch *fwnode_usb_role_switch_get(struct fwnode_handle *fwnode)
+>  {
+>  	struct usb_role_switch *sw;
+>  
+> -	sw = fwnode_connection_find_match(fwnode, "usb-role-switch", NULL,
+> -					  usb_role_switch_match);
+> +	sw = usb_role_switch_is_parent(fwnode);
+> +	if (!sw)
+> +		sw = fwnode_connection_find_match(fwnode, "usb-role-switch",
+> +						  NULL, usb_role_switch_match);
+>  	if (!IS_ERR_OR_NULL(sw))
+>  		WARN_ON(!try_module_get(sw->dev.parent->driver->owner));
+>  
+> -- 
+> 2.21.0
 
->
-> Christian.
->
->> -Chris
->
-> _______________________________________________
-> dri-devel mailing list
-> dri-devel@lists.freedesktop.org
-> https://lists.freedesktop.org/mailman/listinfo/dri-devel
+thanks,
 
 -- 
-Jani Nikula, Intel Open Source Graphics Center
+heikki
 
 _______________________________________________
 Linux-mediatek mailing list
