@@ -2,120 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 949C878F35
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 17:28:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53F9E78F65
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 17:34:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
-	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=edk9Lr0R7T8qU0NYwQ8c/OUwAJ0pO7u8uDXW0Z696Jo=; b=q/v03QZqpzKXnY
-	xHv/jqvw9Ew+sYJsBHuAo7HM8zvrK1v4Jhz0Ivx3PftqRF/vVCLbJF5VuTf2h1aVL8+qmhPGVpAjN
-	u+mtgMpwjuSRGRNi/5OgdK0cG6JgqofqsgSQV1vq2sMPCdkOQcKNELOiD6PticzrOs8jxYvinjlxl
-	/X8syGQX2bGLKGExNoRZGfPD0+logxeMcZI455Y3jKJtw2yT8k5wDBz3LQw+RywmYYckT+TuR5pPA
-	cjL5PG+5wQLfaufkPQ3BwWTq8XhKDSxgihLrmwT3CpOufXq78LSFHpDAQoC5pg1mXzOj43MHCPegE
-	+kqDQ8PNJt+/+MzjaYQA==;
+	List-Owner; bh=3uPS5+qbfIS5CP3bPBGt4+pfesmcmJuYTAMdNfUbliw=; b=EBKRYgKBtAeWF7
+	7j28LqLuda2AY7dyHT3u4MpkR5cgoAXnqa3/FMdcIPL1swdGau3MyQAL2++sXgHhr1Ip9o89e+ZWv
+	meVZAMNKi91p+chpLVhIFUIfLarku8EU9FjhA589YtIG0v5wpBr+JTnB82SV07xnuZMrdZ6go9Gz1
+	fcVMShfZaw/H4mJUb++0n7Ldkotpp90Gqn4rlVA/oIVw+H8zDHcT0M2SphagPAWMqNb9S+lTOaBrd
+	p2Zh7vWve231k7Kldw40SKzZX6PSEDtU6BKzpEdYEIlnplFwk4SQRbihm6g69cl04RQqS00ukwKN2
+	uow0QcgigueteRPtGAmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hs7Zt-0004yp-M7; Mon, 29 Jul 2019 15:28:45 +0000
-Received: from mail-eopbgr720041.outbound.protection.outlook.com
- ([40.107.72.41] helo=NAM05-CO1-obe.outbound.protection.outlook.com)
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hs7ZX-0004n1-Gl; Mon, 29 Jul 2019 15:28:25 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=YNCDVOef6CJkNpB8/lR1R+lvqGxtfYMX87nk75eOz/K/CWOGr8+CmNxnEJ7a/eN1uSe7u9YquaG+IvlSI4llI5Med316IL7CAyInNcpj5Nm15Nl/nM0VkT4/U5uuGunT5JPTHioe4z6jhRlbTcjZ067vFvbGxYFxJ+5k+IvgcDgFYRJzydhMulV+NI0STh6yBvRhtuDqe8FbetFpXhASPpjhFkVNDAxjoaITHjyG4QGdTYNFwo1cAzkj2mB/dqOzF/SfBj9Q+kdQfAK/xwavaU1JCtytH/NB/Y/4v+GJDgZbBI2aiuKGNmFGys6fymgt+mnbaMULzHRchbYvPyXzxg==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=Du1A6EJe7Bev/MzUoECU3SbhpZvFkTx5zpRmfOsJUOE=;
- b=QanaQW0FFs3yGU9/Dhe1ccGG687fcQ9PHNNLTd5o23kB1okGk2bG65g2lBcKGjBpAnd2unqsx04iHIKkL488/Z0LsJ9udnqfin3q0tkSa9U6dRFCExtixlFaMEBV4KP2wztH760Wxaan35y/w2/GrazRhlBz654Cpv5aeN00fyzPRpsW85BMivjqsow+qv2PaInCSgUK2meaZ6z8FZt0wKQKQUON6sy9s0Vb5FoTIwy+g55bTo/mNZ8pTUum9IWfZIB2OKnJcAu1PCk/+m45sijmkN3DpxynyQxJlYiJJixGa3LAg3rLqoexCaFNCJVny5CJZ9ycOFCHQxHWhmtrlA==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
- smtp.mailfrom=amd.com;dmarc=pass action=none header.from=amd.com;dkim=pass
- header.d=amd.com;arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=amdcloud.onmicrosoft.com; s=selector1-amdcloud-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=Du1A6EJe7Bev/MzUoECU3SbhpZvFkTx5zpRmfOsJUOE=;
- b=uAgxDrO4b1c88/tOCqIor4s9IkWAaL3EQc9gKSDj/FVQRpWYdJFIqZ/Bac0i9+cpAQf9xarQDKqvhWSgnpsEUwUax2OCsOtOHpFsYj2il21X4kvZ4A6yKUstd6PzRJTku6vAwn0bhgNYkwaib7C0mTUe2c8sSJo+detkzaYVp/M=
-Received: from DM5PR12MB1546.namprd12.prod.outlook.com (10.172.36.23) by
- DM5PR12MB1628.namprd12.prod.outlook.com (10.172.35.141) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2094.17; Mon, 29 Jul 2019 15:28:15 +0000
-Received: from DM5PR12MB1546.namprd12.prod.outlook.com
- ([fe80::9ddf:934:8155:a6ff]) by DM5PR12MB1546.namprd12.prod.outlook.com
- ([fe80::9ddf:934:8155:a6ff%2]) with mapi id 15.20.2115.005; Mon, 29 Jul 2019
- 15:28:15 +0000
-From: "Koenig, Christian" <Christian.Koenig@amd.com>
-To: Sam Ravnborg <sam@ravnborg.org>, Jani Nikula <jani.nikula@intel.com>
-Subject: Re: [PATCH v1 02/11] drm: drop uapi dependency from drm_print.h
-Thread-Topic: [PATCH v1 02/11] drm: drop uapi dependency from drm_print.h
-Thread-Index: AQHVPYQGC1CUWl5tBEabUnuzJI4nDabQlbYAgADs0ICAEBl5gIAAHtSAgAAOlwA=
-Date: Mon, 29 Jul 2019 15:28:15 +0000
-Message-ID: <67c2807f-582c-49a9-5699-a8baab3d3a0f@amd.com>
-References: <20190718161507.2047-1-sam@ravnborg.org>
- <20190718161507.2047-3-sam@ravnborg.org>
- <156346840026.24728.936589728458336617@skylake-alporthouse-com>
- <460bf1e1-a38b-5f79-26e5-93764067f4e1@amd.com> <87tvb5nh5c.fsf@intel.com>
- <20190729143555.GA16927@ravnborg.org>
-In-Reply-To: <20190729143555.GA16927@ravnborg.org>
-Accept-Language: de-DE, en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
-x-originating-ip: [2a02:908:1252:fb60:be8a:bd56:1f94:86e7]
-x-clientproxiedby: PR0P264CA0093.FRAP264.PROD.OUTLOOK.COM
- (2603:10a6:100:18::33) To DM5PR12MB1546.namprd12.prod.outlook.com
- (2603:10b6:4:8::23)
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=Christian.Koenig@amd.com; 
-x-ms-exchange-messagesentrepresentingtype: 1
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: ecfe9b11-0583-41ec-38f1-08d714396000
-x-ms-office365-filtering-ht: Tenant
-x-microsoft-antispam: BCL:0; PCL:0;
- RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(4618075)(2017052603328)(7193020);
- SRVR:DM5PR12MB1628; 
-x-ms-traffictypediagnostic: DM5PR12MB1628:
-x-microsoft-antispam-prvs: <DM5PR12MB16283D0D7B70DCBDBEA0B41683DD0@DM5PR12MB1628.namprd12.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:9508;
-x-forefront-prvs: 01136D2D90
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10009020)(4636009)(39860400002)(376002)(366004)(346002)(136003)(396003)(199004)(189003)(486006)(54906003)(65956001)(64126003)(71190400001)(6512007)(476003)(11346002)(71200400001)(81156014)(68736007)(81166006)(99286004)(86362001)(65806001)(110136005)(31686004)(31696002)(14454004)(316002)(7736002)(76176011)(256004)(6116002)(446003)(6436002)(7416002)(58126008)(305945005)(46003)(66556008)(2616005)(4326008)(6246003)(8676002)(66946007)(8936002)(25786009)(65826007)(53936002)(6506007)(2906002)(64756008)(52116002)(66446008)(102836004)(5660300002)(386003)(6486002)(66476007)(186003)(229853002)(478600001)(36756003);
- DIR:OUT; SFP:1101; SCL:1; SRVR:DM5PR12MB1628;
- H:DM5PR12MB1546.namprd12.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; A:1; MX:1; 
-received-spf: None (protection.outlook.com: amd.com does not designate
- permitted sender hosts)
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: MrfBZZa7YTsENGQs76boff0KVwMKjlTh5kviiZI6BeeIpAQuSoOIuLz20fJTvz4TQ6fvEYZJCHedCC9lzQP+Oi3IGP0YC+zw3rxJQqgoN/2J2p6f6PJ4n1uM8qh6Wm7CIe8fOdyK3bVGkRM4EcJeLUUyB5BuYh1RbVD/umKsai3er7n7ztYlQMqzjASNQHZwMd141s97JyPMtcKYmUABCnXsJSdWV1ulYLYNHPXCUsV7EHi97ub8tvDkLmuPvCrrQD3XlCaIJJ4q7RT69uaaEb/1Y3dEMjH+nPkPx0ZanIY8P6CvVdX87UwqfWiz87ziYc3egoa+2YMRW2KJejpQ5uiuOZDfkJvBh6liOZqPv8OhpjbRSI0VqrLjGItuC1PSlgj4WKh14im39aQ7V3iNnpqLsfILoiHZl78ioo25lvQ=
-Content-ID: <84E71931003A7145BA52528F26BA144F@namprd12.prod.outlook.com>
+	id 1hs7f3-0007ZM-TL; Mon, 29 Jul 2019 15:34:06 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hs7en-0007Ns-AV; Mon, 29 Jul 2019 15:33:50 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id AEAE3337;
+ Mon, 29 Jul 2019 08:33:48 -0700 (PDT)
+Received: from e121166-lin.cambridge.arm.com (unknown [10.1.196.255])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 1D6103F694;
+ Mon, 29 Jul 2019 08:33:46 -0700 (PDT)
+Date: Mon, 29 Jul 2019 16:33:41 +0100
+From: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
+To: Jianjun Wang <jianjun.wang@mediatek.com>
+Subject: Re: [v2,2/2] PCI: mediatek: Add controller support for MT7629
+Message-ID: <20190729153341.GA23266@e121166-lin.cambridge.arm.com>
+References: <20190628073425.25165-1-jianjun.wang@mediatek.com>
+ <20190628073425.25165-3-jianjun.wang@mediatek.com>
+ <1564385918.17211.6.camel@mhfsdcap03>
 MIME-Version: 1.0
-X-OriginatorOrg: amd.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: ecfe9b11-0583-41ec-38f1-08d714396000
-X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Jul 2019 15:28:15.4855 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: 3dd8961f-e488-4e60-8e11-a82d994e183d
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: ckoenig@amd.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR12MB1628
+Content-Disposition: inline
+In-Reply-To: <1564385918.17211.6.camel@mhfsdcap03>
+User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_082823_627456_339935EE 
-X-CRM114-Status: GOOD (  17.09  )
+X-CRM114-CacheID: sfid-20190729_083349_446689_C0D93C51 
+X-CRM114-Status: GOOD (  21.83  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.72.41 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -127,68 +61,112 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Boris Brezillon <bbrezillon@kernel.org>, David Airlie <airlied@linux.ie>,
- Daniel Vetter <daniel.vetter@ffwll.ch>,
- Intel Graphics Development <intel-gfx@lists.freedesktop.org>,
- Liviu Dudau <Liviu.Dudau@arm.com>,
- "dri-devel@lists.freedesktop.org" <dri-devel@lists.freedesktop.org>,
- Chris Wilson <chris@chris-wilson.co.uk>,
- Maxime Ripard <maxime.ripard@bootlin.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Thomas Zimmermann <tzimmermann@suse.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <seanpaul@chromium.org>,
- Thierry Reding <treding@nvidia.com>, Sean Paul <sean@poorly.run>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, linux-pci@vger.kernel.org,
+ youlin.pei@mediatek.com, linux-kernel@vger.kernel.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Bjorn Helgaas <bhelgaas@google.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Am 29.07.19 um 16:35 schrieb Sam Ravnborg:
->>>> Even then it so useless (which drm driver is this message for???) that I
->>>> want to remove them all :(
->>> Yeah, agree. I mean it is nice if the core drm functions use a prefix
->>> for debug output.
->>>
->>> But I actually don't see the point for individual drivers.
->> We should all migrate to the versions with device...
-> Just to do an xkdc.com/927 I have considered:
->
-> drm_err(const struct drm_device *drm, ...)
-> drm_info(const struct drm_device *drm, ...)
->
-> drm_kms_err(const struct drm_device *drm, ...)
-> drm_kms_info(const struct drm_device *drm, ...))
+On Mon, Jul 29, 2019 at 03:38:38PM +0800, Jianjun Wang wrote:
+> On Fri, 2019-06-28 at 15:34 +0800, Jianjun Wang wrote:
+> > MT7629 is an ARM platform SoC which has the same PCIe IP with MT7622.
+> > 
+> > The HW default value of its Device ID is invalid, fix its Device ID to
+> > match the hardware implementation.
+> > 
+> > Acked-by: Ryder Lee <ryder.lee@mediatek.com>
+> > Signed-off-by: Jianjun Wang <jianjun.wang@mediatek.com>
+> > ---
+> >  drivers/pci/controller/pcie-mediatek.c | 18 ++++++++++++++++++
+> >  include/linux/pci_ids.h                |  1 +
+> >  2 files changed, 19 insertions(+)
+> > 
+> > diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
+> > index 80601e1b939e..e5e6740b635d 100644
+> > --- a/drivers/pci/controller/pcie-mediatek.c
+> > +++ b/drivers/pci/controller/pcie-mediatek.c
+> > @@ -73,6 +73,7 @@
+> >  #define PCIE_MSI_VECTOR		0x0c0
+> >  
+> >  #define PCIE_CONF_VEND_ID	0x100
+> > +#define PCIE_CONF_DEVICE_ID	0x102
+> >  #define PCIE_CONF_CLASS_ID	0x106
+> >  
+> >  #define PCIE_INT_MASK		0x420
+> > @@ -141,12 +142,16 @@ struct mtk_pcie_port;
+> >  /**
+> >   * struct mtk_pcie_soc - differentiate between host generations
+> >   * @need_fix_class_id: whether this host's class ID needed to be fixed or not
+> > + * @need_fix_device_id: whether this host's Device ID needed to be fixed or not
+> > + * @device_id: Device ID which this host need to be fixed
+> >   * @ops: pointer to configuration access functions
+> >   * @startup: pointer to controller setting functions
+> >   * @setup_irq: pointer to initialize IRQ functions
+> >   */
+> >  struct mtk_pcie_soc {
+> >  	bool need_fix_class_id;
+> > +	bool need_fix_device_id;
+> > +	unsigned int device_id;
+> >  	struct pci_ops *ops;
+> >  	int (*startup)(struct mtk_pcie_port *port);
+> >  	int (*setup_irq)(struct mtk_pcie_port *port, struct device_node *node);
+> > @@ -696,6 +701,9 @@ static int mtk_pcie_startup_port_v2(struct mtk_pcie_port *port)
+> >  		writew(val, port->base + PCIE_CONF_CLASS_ID);
+> >  	}
+> >  
+> > +	if (soc->need_fix_device_id)
+> > +		writew(soc->device_id, port->base + PCIE_CONF_DEVICE_ID);
+> > +
+> >  	/* 100ms timeout value should be enough for Gen1/2 training */
+> >  	err = readl_poll_timeout(port->base + PCIE_LINK_STATUS_V2, val,
+> >  				 !!(val & PCIE_PORT_LINKUP_V2), 20,
+> > @@ -1216,11 +1224,21 @@ static const struct mtk_pcie_soc mtk_pcie_soc_mt7622 = {
+> >  	.setup_irq = mtk_pcie_setup_irq,
+> >  };
+> >  
+> > +static const struct mtk_pcie_soc mtk_pcie_soc_mt7629 = {
+> > +	.need_fix_class_id = true,
+> > +	.need_fix_device_id = true,
+> > +	.device_id = PCI_DEVICE_ID_MEDIATEK_7629,
+> > +	.ops = &mtk_pcie_ops_v2,
+> > +	.startup = mtk_pcie_startup_port_v2,
+> > +	.setup_irq = mtk_pcie_setup_irq,
+> > +};
+> > +
+> >  static const struct of_device_id mtk_pcie_ids[] = {
+> >  	{ .compatible = "mediatek,mt2701-pcie", .data = &mtk_pcie_soc_v1 },
+> >  	{ .compatible = "mediatek,mt7623-pcie", .data = &mtk_pcie_soc_v1 },
+> >  	{ .compatible = "mediatek,mt2712-pcie", .data = &mtk_pcie_soc_mt2712 },
+> >  	{ .compatible = "mediatek,mt7622-pcie", .data = &mtk_pcie_soc_mt7622 },
+> > +	{ .compatible = "mediatek,mt7629-pcie", .data = &mtk_pcie_soc_mt7629 },
+> >  	{},
+> >  };
+> >  
+> > diff --git a/include/linux/pci_ids.h b/include/linux/pci_ids.h
+> > index 70e86148cb1e..aa32962759b2 100644
+> > --- a/include/linux/pci_ids.h
+> > +++ b/include/linux/pci_ids.h
+> > @@ -2131,6 +2131,7 @@
+> >  #define PCI_VENDOR_ID_MYRICOM		0x14c1
+> >  
+> >  #define PCI_VENDOR_ID_MEDIATEK		0x14c3
+> > +#define PCI_DEVICE_ID_MEDIATEK_7629	0x7629
+> >  
+> >  #define PCI_VENDOR_ID_TITAN		0x14D2
+> >  #define PCI_DEVICE_ID_TITAN_010L	0x8001
+> 
+> Hi Bjorn & Lorenzo,
+> 
+> Is this patch ok or is there anything I need to fixed?
 
-Why not get completely rid of those and just use dev_err, dev_warn, 
-pr_err, pr_warn etc?
+We are getting to it shortly, thanks for your patience.
 
-I mean is it useful to have this extra printing subsystem in DRM while 
-the standard Linux one actually does a better job?
-
-Christian.
-
->
-> And so on for vbl, primse. lease, state etc.
->
-> Then we could fish out relevant info from the drm device and present
-> this nicely.
->
-> For the cases where no drm_device is available the fallback is:
-> drm_dev_err(const struct drm_device *drm, ...)
-> drm_dev_info(const struct drm_device *drm, ...))
->
-> We could modify the existing UPPERCASE macros to be placeholders for
-> the more reader friendly lower cases variants and base it all on the
-> established infrastructure.
->
-> But this is just idle thinking, as only a serious patch would stir the
-> relevant discussions.
->
-> For now this is far from the top of my TODO list.
->
->
-> 	Sam
+Lorenzo
 
 _______________________________________________
 Linux-mediatek mailing list
