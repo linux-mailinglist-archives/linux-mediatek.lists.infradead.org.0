@@ -2,36 +2,36 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 940D9792F9
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 20:24:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EC7AE792FA
+	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 20:25:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
 	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=FYGGkua6jqf814BK2xGI1WTddiK+l8Ss4tb6g4zow24=; b=Wr7
-	PWaVWMe3bMYWcgVuP+H2mE0T9bYR/hR+MEW2dmJXMy/6zUQNgReIKgGNEfVPTNmTBrlCa0AfrAsyx
-	64ipAoNR7+1AnHqUY850JAqUFRJoogt96Grfkwqcs8tO/W12w4FTVhM6NMtqRuV7U35/7xrbbZxBi
-	paDpcX1uKrE8KbPpMwH7YIinunRZnXBFNKa4fxPhgOuW0besDUWGMF7otpykNCr+O2vmKeDZ7enWp
-	+iWdwvVZhLX54ZYy7kTQufSqhaBX91Wwq5IGck5lN70VfCv/v+n/nB0CuWLegO6/e7YM0AUXjdEWU
-	AGS4Bkmee+xAZslRYsDw9u9/neyGWxg==;
+	References:List-Owner; bh=5WHcmBI8snWuKe1Nj9Duhdguio4etjPESZ2oTsVAZA8=; b=ex7
+	2eXSLM8aO/49uqpKPnRNEdS2+Q3STYkphIi/JrI/iO17k6S9UuGLFVatqnYLbAI9KcJ6mMb/MVSnb
+	nwqVjCTiwj8SzRrHGa3Omj9y3vNYfSQxoQ9yLZIhiVBzt5EBweieMQO0YkHTfiNnRU1qCbKyF+7Om
+	0UatQmDJLSDwadyAuABJSHXkRQSz0SKoKVhb/K+4AQ+T9Pqp9zbI1LgzwNThNnynRXs07SEsgMzh8
+	FHV1j1nUsvWw3hkneZJl2ee5ydpSArcnuLo+Cdi4LCtA7/C/KkmP7elEvRtcrqZYBRyDGxngYNiSL
+	0aZKTtkPrZXLRgl9htnLBpDDdlhdWkg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsAK0-000678-1X; Mon, 29 Jul 2019 18:24:32 +0000
-Received: from mxwww.masterlogin.de ([95.129.51.220])
+	id 1hsAKQ-0006T0-GO; Mon, 29 Jul 2019 18:24:58 +0000
+Received: from mxwww.masterlogin.de ([2a03:2900:1:1::b])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsAJl-0005w6-Ki; Mon, 29 Jul 2019 18:24:19 +0000
-Received: from mxout2.routing.net (unknown [192.168.10.82])
- by new.mxwww.masterlogin.de (Postfix) with ESMTPS id E1DAD961CD;
- Mon, 29 Jul 2019 18:24:11 +0000 (UTC)
-Received: from mxbox2.masterlogin.de (unknown [192.168.10.253])
- by mxout2.routing.net (Postfix) with ESMTP id 1DB7D64896;
- Mon, 29 Jul 2019 18:24:12 +0000 (UTC)
+ id 1hsAJw-00063n-Um; Mon, 29 Jul 2019 18:24:30 +0000
+Received: from mxout1.routing.net (unknown [192.168.10.81])
+ by new.mxwww.masterlogin.de (Postfix) with ESMTPS id 94D8196323;
+ Mon, 29 Jul 2019 18:24:26 +0000 (UTC)
+Received: from mxbox1.masterlogin.de (unknown [192.168.10.253])
+ by mxout1.routing.net (Postfix) with ESMTP id C407B40983;
+ Mon, 29 Jul 2019 18:24:26 +0000 (UTC)
 Received: from localhost.localdomain (fttx-pool-185.76.97.79.bambit.de
  [185.76.97.79])
- by mxbox2.masterlogin.de (Postfix) with ESMTPSA id B23E5100051;
- Mon, 29 Jul 2019 20:24:10 +0200 (CEST)
+ by mxbox1.masterlogin.de (Postfix) with ESMTPSA id 78DB0405D3;
+ Mon, 29 Jul 2019 20:24:25 +0200 (CEST)
 From: Frank Wunderlich <frank-w@public-files.de>
 To: Alessandro Zummo <a.zummo@towertech.it>,
  Alexandre Belloni <alexandre.belloni@bootlin.com>,
@@ -52,21 +52,22 @@ To: Alessandro Zummo <a.zummo@towertech.it>,
  Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
  Thomas Gleixner <tglx@linutronix.de>,
  "Tianping . Fang" <tianping.fang@mediatek.com>
-Subject: [PATCH v3 09/10] MAINTAINERS: add Mediatek shutdown drivers
-Date: Mon, 29 Jul 2019 20:24:03 +0200
-Message-Id: <20190729182403.7128-1-frank-w@public-files.de>
+Subject: [PATCH v3 10/10] arm: dts: mt6323: add keys, power-controller,
+ rtc and codec
+Date: Mon, 29 Jul 2019 20:24:21 +0200
+Message-Id: <20190729182421.7192-1-frank-w@public-files.de>
 X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_112417_835883_5988FC3D 
-X-CRM114-Status: UNSURE (   8.29  )
+X-CRM114-CacheID: sfid-20190729_112429_219812_8D7EF50A 
+X-CRM114-Status: UNSURE (   8.92  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.4 (/)
+X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.4 points)
+ Content analysis details:   (-2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [95.129.51.220 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [2a03:2900:1:1:0:0:0:b listed in] [list.dnswl.org]
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -92,34 +93,54 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Josef Friedl <josef.friedl@speed.at>
 
-add Section in MAINTAINERS file for poweroff driver
+support poweroff and power-related keys on bpi-r2
 
-changes since v2: none (=v2 part 6)
+changes since v2: none (=v2 part 7)
 
-Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
+Suggested-by: Frank Wunderlich <frank-w@public-files.de>
 Signed-off-by: Josef Friedl <josef.friedl@speed.at>
+Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
 ---
- MAINTAINERS | 7 +++++++
- 1 file changed, 7 insertions(+)
+ arch/arm/boot/dts/mt6323.dtsi | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
 
-diff --git a/MAINTAINERS b/MAINTAINERS
-index 6426db5198f0..4172a3177633 100644
---- a/MAINTAINERS
-+++ b/MAINTAINERS
-@@ -10128,6 +10128,13 @@ S:	Maintained
- F:	drivers/net/dsa/mt7530.*
- F:	net/dsa/tag_mtk.c
- 
-+MEDIATEK BOARD LEVEL SHUTDOWN DRIVERS
-+M:	Sean Wang <sean.wang@mediatek.com>
-+L:	linux-pm@vger.kernel.org
-+S:	Maintained
-+F:	Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
-+F:	drivers/power/reset/mt6323-poweroff.c
+diff --git a/arch/arm/boot/dts/mt6323.dtsi b/arch/arm/boot/dts/mt6323.dtsi
+index ba397407c1dd..7fda40ab5fe8 100644
+--- a/arch/arm/boot/dts/mt6323.dtsi
++++ b/arch/arm/boot/dts/mt6323.dtsi
+@@ -238,5 +238,32 @@
+ 				regulator-enable-ramp-delay = <216>;
+ 			};
+ 		};
 +
- MEDIATEK JPEG DRIVER
- M:	Rick Chang <rick.chang@mediatek.com>
- M:	Bin Liu <bin.liu@mediatek.com>
++		mt6323keys: mt6323keys {
++			compatible = "mediatek,mt6323-keys";
++			mediatek,long-press-mode = <1>;
++			power-off-time-sec = <0>;
++
++			power {
++				linux,keycodes = <116>;
++				wakeup-source;
++			};
++
++			home {
++				linux,keycodes = <114>;
++			};
++		};
++
++		codec: mt6397codec {
++			compatible = "mediatek,mt6397-codec";
++		};
++
++		power-controller {
++			compatible = "mediatek,mt6323-pwrc";
++		};
++
++		rtc {
++			compatible = "mediatek,mt6323-rtc";
++		};
+ 	};
+ };
 -- 
 2.17.1
 
