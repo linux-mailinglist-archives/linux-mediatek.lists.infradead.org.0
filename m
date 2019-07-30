@@ -2,69 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 40D2A7A85E
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 14:27:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 459807A86A
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 14:28:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wVG7cruIunmMtfs/W9d/FFYy8sLf84PbuZI1HdmPpGY=; b=NAXxT6w0UjQ5TI
-	cwWlimpQLv61j+7B2bFAEK6ols61x+aKD+AIBrm9/vN2YGj8UPgCIqgUs3J/5TKN9lsOKhimIIf0m
-	GiHlngbM3BLVIavZbo75pwjwFOH2R1Wma11TukPToYYDYeAYr/Bp2NWMU8WNoRCBsZ8Lg8Xm1qat4
-	OMLsi/Vg98K7rx50cecc6NhrjoCCRhw84i9PYUb5xhnbY0CT0U7GiO7UGjC84v2lAG2Z+CjQIcmyl
-	+c26eAGDsdU4u13vbNXi+qS1cU8P9R6xuJbnKnq4o0LFiZ9PP+JuwtRiGuC+mKeDh8xwEtveH4F5o
-	PuiBcjOh7iGcXP8O7vGQ==;
+	List-Owner; bh=vpVLAAw/6N3V/cddlv6nfANKIb4RxLp52VEBzmWYaU4=; b=tymZ1cgKw/hDjp
+	ZP3hxRy7rG8wc/CWfRchzpdbG3kGFz0X5UNvYJVrVMQ45QIxkD3tnxJduQ60QTqtdSaT1p/TSd/1F
+	lt94NqIoIh4SRyzD1UK6tjZ3Z+uSxGps2G5VOH2I+754UfHI8Aauhcd2kfXPz0Oc3GgAKRseouqzu
+	4jd44kxxffrS6XN/F49Fyt73zAFnzXRxKYFIqCufbDvn/1mbSkcaO7iwr9k08PIHc+fMuFLNe1maI
+	TKywcT0udEkk7MrfFOtgpVj36a+eFosO76g5ToOfNVYsr1PM1sqS0saDW8g782pjEg1DC+D+gDuWx
+	UFZgjWfRhvPXxNQIKE/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsRDf-00047I-Cl; Tue, 30 Jul 2019 12:27:07 +0000
+	id 1hsREi-0004Ug-NS; Tue, 30 Jul 2019 12:28:12 +0000
 Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsRC5-0002lc-58
- for linux-mediatek@lists.infradead.org; Tue, 30 Jul 2019 12:25:31 +0000
-Received: by mail-wr1-x444.google.com with SMTP id 31so65588363wrm.1
- for <linux-mediatek@lists.infradead.org>; Tue, 30 Jul 2019 05:25:29 -0700 (PDT)
+ id 1hsREf-0004Tn-1S
+ for linux-mediatek@lists.infradead.org; Tue, 30 Jul 2019 12:28:10 +0000
+Received: by mail-wr1-x444.google.com with SMTP id p13so65542871wru.10
+ for <linux-mediatek@lists.infradead.org>; Tue, 30 Jul 2019 05:28:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=G84T7i+hKahDIBaf3hntlyO7eSX4L7f7zIVJ/lz1sxw=;
- b=dKxIer4V50Cr2UvVxXbeDXAxXMOPa7NzM8KWHlSXaaYDx4+Bb0NgH2TpYapRkygrCD
- aPB4/tTyz5ispAJM2XoGNiGyGPr38cdbYF6Ra8gRVc9mwv9pliMVcq0ODIuKVizBFAs3
- y6mok4JeCxVDq4y9B6ss4dZVbZ+3Dez2NA6VGsViCmz2tmYONTnKuRG2mfVv0rNRnicH
- vMzlaICatjglXWuMt+IyFmL/ciX8Xpr2K5nkznhWlzFCNVjO0BlFDo2ugpOnrIOupwQK
- UpIWMANCJt+aoQ2u/hT5s/twwHwujyKKKRp+rXGVN4GZSzKr9KyT4H2lq85orInc8Bw0
- sBQA==
+ bh=o6BWUJ5Omes0vGmH/kxsO2n7MvW9sU2T4J9qSJTdvZk=;
+ b=kz66EOZA0HoZobgs7JgchcuPY/cj9QE3B/uOxtPkPP2hqV0xDLWhMsCnml/XQAAdxF
+ pAbdjlMRH0M6P0E9lPcHqp63uBGVN3De7qJNMzwploY81Z9yFbvjmabcsqxTJ6hhYC6e
+ H+YUhB4EFELkhX7Diq+peHv13VGNxC/r2wFucWG8UG2g2BLQHTRyRfs/tLBWzINgdcPH
+ 1LOGlFx4kT2Jnvg6hA2Q//D1UV/4GPmlt2X8z1qrxPf7WB1PUbjrx45tUT3I643zrEHa
+ kabjqTZOXPSLp4Ol7DKnsA8khtC4yHZgbGCLUS+xVslxANQeMFQvYmd9b1j0Ulp57WjA
+ 6IwA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=G84T7i+hKahDIBaf3hntlyO7eSX4L7f7zIVJ/lz1sxw=;
- b=r02R4bE6HXSaycSea0lm9SFg8ayls5LHYwhuLcsSyiyHG5hr2AZyrnT+OXi7Fb3l28
- f+s+h/V2BHh3dP/9TTz3HgisIp41gg0PlV2tAT9w55qIcmHqq7TiTJENzXKLXY72EIr1
- ZFjKw4c9UVXbWsKawtBPyvVi+yDtOA7IclL6tdyWZQ6coRFcH6ATyBX1YtwXty+j4Juv
- YDUDl9qGILOVZXmRfoN8i+ozEpl6ZuYBvP+H2HQN6K2McXctavn6fZBiEGk3vdG/FdDQ
- 6gt4Pwaa3k2z0bRKeV+sHGGkJbtLi0GgI/8yPhdOBxa3EVTtZCipTpJFgbBLE5GDBjp7
- YCQg==
-X-Gm-Message-State: APjAAAWPs0uqkvGf3oDdpy6EhX8yBqULwLxNq50QOxxmLhtvR2b9osqe
- OgpuW34sFsVTbIolBuqF6wscww==
-X-Google-Smtp-Source: APXvYqzQH2i2sRnZ9oa4L3vFVyQCb0sUs0/25bYu02rPWjE6mSsQd53UMlPhy/48KXftSmPN5A0HbA==
-X-Received: by 2002:adf:e40e:: with SMTP id g14mr43472233wrm.161.1564489527656; 
- Tue, 30 Jul 2019 05:25:27 -0700 (PDT)
+ bh=o6BWUJ5Omes0vGmH/kxsO2n7MvW9sU2T4J9qSJTdvZk=;
+ b=ufMY5eCj2v35oSeM54qQXnbtHeiWBRNGMaQVZlhhdPzTyfWA1RcxK3IU51TNmpkZEs
+ RW5IWOB3rPQSiBgWJ1DkSrWdIktj4j+aeknfUxHMvE6hc+0Wjd5WNClUr+P9NDJ0ntnB
+ IRlapGDce2ayOz9ioHMivCGBRwRSGC+/iHv/67O6lZoHgpP9ldKy8AE8/zf/XYOgGNNJ
+ LgwAiLEVm8mLw8gBcqnK1gxCZteWOjdo/MHzSVt78PsNsUTKBXpI5L2FoawRsQRfB2Vw
+ PwOLmZQrcpL69i6T/nWGPw4Wm/acBWqup0sRI/gDTKjg0jYiSE2+ro2H4sxy8wXwLl6E
+ fT+w==
+X-Gm-Message-State: APjAAAVvLkXUSlfvk7O0c/6o2+E1xLpUO7nVUBbdXU9JV1W6a8WbKUnS
+ l6BbVToPDzGfaBWzw8tkR74knA==
+X-Google-Smtp-Source: APXvYqwh+uwh8UnbJJdzuw+IyMzM++n/sNgDeDj4wpRHJb7+i5k6zSwsKJBHpQroLZ3Mmus+2o4ycA==
+X-Received: by 2002:a5d:48cf:: with SMTP id p15mr79083014wrs.151.1564489687529; 
+ Tue, 30 Jul 2019 05:28:07 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id g131sm46677829wmf.37.2019.07.30.05.25.25
+ by smtp.gmail.com with ESMTPSA id h8sm66378347wmf.12.2019.07.30.05.28.02
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 30 Jul 2019 05:25:26 -0700 (PDT)
-Subject: Re: [PATCH v4 20/23] drm/bridge: ti-tfp410: Provide ddc symlink in
+ Tue, 30 Jul 2019 05:28:06 -0700 (PDT)
+Subject: Re: [PATCH v6 19/24] drm/bridge: dumb-vga-dac: Provide ddc symlink in
  connector sysfs directory
 To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>,
  dri-devel@lists.freedesktop.org
-References: <cover.1562843413.git.andrzej.p@collabora.com>
- <c665d01c4eacc61417519c40c54d5060b0bbe105.1562843413.git.andrzej.p@collabora.com>
+References: <cover.1564161140.git.andrzej.p@collabora.com>
+ <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -117,16 +117,16 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <d3115692-26ed-a041-c37f-5748b1662c9b@baylibre.com>
-Date: Tue, 30 Jul 2019 14:25:25 +0200
+Message-ID: <1c4fd617-1cb1-2a40-5b2b-6a55217b401b@baylibre.com>
+Date: Tue, 30 Jul 2019 14:28:02 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <c665d01c4eacc61417519c40c54d5060b0bbe105.1562843413.git.andrzej.p@collabora.com>
+In-Reply-To: <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190730_052529_341428_448496E8 
-X-CRM114-Status: GOOD (  20.49  )
+X-CRM114-CacheID: sfid-20190730_052809_092301_B2500D4B 
+X-CRM114-Status: GOOD (  18.79  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -153,7 +153,7 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  =?UTF-8?Q?Heiko_St=c3=bcbner?= <heiko@sntech.de>,
- Sam Ravnborg <sam@ravnborg.org>, Maxime Ripard <maxime.ripard@bootlin.com>,
+ Sam Ravnborg <sam@ravnborg.org>, David Airlie <airlied@linux.ie>,
  Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
  Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
@@ -164,20 +164,20 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>,
  "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
  linux-samsung-soc@vger.kernel.org, Joonyoung Shim <jy0922.shim@samsung.com>,
- linux-rockchip@lists.infradead.org, Vincent Abriou <vincent.abriou@st.com>,
+ Jyri Sarha <jsarha@ti.com>, Vincent Abriou <vincent.abriou@st.com>,
  Rob Clark <robdclark@gmail.com>, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, David Airlie <airlied@linux.ie>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
  Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
  Dave Airlie <airlied@redhat.com>, Harry Wentland <harry.wentland@amd.com>,
  intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
  freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
- Daniel Vetter <daniel@ffwll.ch>, Jonas Karlman <jonas@kwiboo.se>,
+ Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
  linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
- Jyri Sarha <jsarha@ti.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
@@ -188,7 +188,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Philipp Zabel <p.zabel@pengutronix.de>,
+ Daniel Vetter <daniel@ffwll.ch>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
  Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
  =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
@@ -197,81 +198,31 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 11/07/2019 13:26, Andrzej Pietrasiewicz wrote:
+On 26/07/2019 19:23, Andrzej Pietrasiewicz wrote:
 > Use the ddc pointer provided by the generic connector.
 > 
 > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 > ---
->  drivers/gpu/drm/bridge/ti-tfp410.c | 19 +++++++++----------
->  1 file changed, 9 insertions(+), 10 deletions(-)
+>  drivers/gpu/drm/bridge/dumb-vga-dac.c | 6 ++++--
+>  1 file changed, 4 insertions(+), 2 deletions(-)
 > 
-> diff --git a/drivers/gpu/drm/bridge/ti-tfp410.c b/drivers/gpu/drm/bridge/ti-tfp410.c
-> index dbf35c7bc85e..e55358f0a5ba 100644
-> --- a/drivers/gpu/drm/bridge/ti-tfp410.c
-> +++ b/drivers/gpu/drm/bridge/ti-tfp410.c
-> @@ -26,7 +26,6 @@ struct tfp410 {
->  	unsigned int		connector_type;
+> diff --git a/drivers/gpu/drm/bridge/dumb-vga-dac.c b/drivers/gpu/drm/bridge/dumb-vga-dac.c
+> index d32885b906ae..8ef6539ae78a 100644
+> --- a/drivers/gpu/drm/bridge/dumb-vga-dac.c
+> +++ b/drivers/gpu/drm/bridge/dumb-vga-dac.c
+> @@ -111,8 +111,10 @@ static int dumb_vga_attach(struct drm_bridge *bridge)
 >  
->  	u32			bus_format;
-> -	struct i2c_adapter	*ddc;
->  	struct gpio_desc	*hpd;
->  	int			hpd_irq;
->  	struct delayed_work	hpd_work;
-> @@ -55,10 +54,10 @@ static int tfp410_get_modes(struct drm_connector *connector)
->  	struct edid *edid;
->  	int ret;
->  
-> -	if (!dvi->ddc)
-> +	if (!dvi->connector.ddc)
->  		goto fallback;
->  
-> -	edid = drm_get_edid(connector, dvi->ddc);
-> +	edid = drm_get_edid(connector, dvi->connector.ddc);
->  	if (!edid) {
->  		DRM_INFO("EDID read failed. Fallback to standard modes\n");
->  		goto fallback;
-> @@ -98,8 +97,8 @@ tfp410_connector_detect(struct drm_connector *connector, bool force)
->  			return connector_status_disconnected;
->  	}
->  
-> -	if (dvi->ddc) {
-> -		if (drm_probe_ddc(dvi->ddc))
-> +	if (dvi->connector.ddc) {
-> +		if (drm_probe_ddc(dvi->connector.ddc))
->  			return connector_status_connected;
->  		else
->  			return connector_status_disconnected;
-> @@ -297,8 +296,8 @@ static int tfp410_get_connector_properties(struct tfp410 *dvi)
->  	if (!ddc_phandle)
->  		goto fail;
->  
-> -	dvi->ddc = of_get_i2c_adapter_by_node(ddc_phandle);
-> -	if (dvi->ddc)
-> +	dvi->connector.ddc = of_get_i2c_adapter_by_node(ddc_phandle);
-> +	if (dvi->connector.ddc)
->  		dev_info(dvi->dev, "Connector's ddc i2c bus found\n");
->  	else
->  		ret = -EPROBE_DEFER;
-> @@ -367,7 +366,7 @@ static int tfp410_init(struct device *dev, bool i2c)
->  
->  	return 0;
->  fail:
-> -	i2c_put_adapter(dvi->ddc);
-> +	i2c_put_adapter(dvi->connector.ddc);
->  	if (dvi->hpd)
->  		gpiod_put(dvi->hpd);
->  	return ret;
-> @@ -382,8 +381,8 @@ static int tfp410_fini(struct device *dev)
->  
->  	drm_bridge_remove(&dvi->bridge);
->  
-> -	if (dvi->ddc)
-> -		i2c_put_adapter(dvi->ddc);
-> +	if (dvi->connector.ddc)
-> +		i2c_put_adapter(dvi->connector.ddc);
->  	if (dvi->hpd)
->  		gpiod_put(dvi->hpd);
->  
+>  	drm_connector_helper_add(&vga->connector,
+>  				 &dumb_vga_con_helper_funcs);
+> -	ret = drm_connector_init(bridge->dev, &vga->connector,
+> -				 &dumb_vga_con_funcs, DRM_MODE_CONNECTOR_VGA);
+> +	ret = drm_connector_init_with_ddc(bridge->dev, &vga->connector,
+> +					  &dumb_vga_con_funcs,
+> +					  DRM_MODE_CONNECTOR_VGA,
+> +					  vga->ddc);
+>  	if (ret) {
+>  		DRM_ERROR("Failed to initialize connector\n");
+>  		return ret;
 > 
 
 Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
