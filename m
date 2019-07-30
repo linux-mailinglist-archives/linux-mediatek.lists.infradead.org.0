@@ -2,70 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 473F979E09
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 03:45:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8F0E79E69
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 03:57:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XRbY54JQbGTjxbXg6ZIn8TZTUB72Vrfsgqe8jD7MWH0=; b=MOqhhzaJ0k87tC
-	MPeqj6Tn/+v8rA51PDKde8ykE5BHmb5Gwphrstn6FibWw0rmfOib7cT8BbjB+LUHiMyyDh/U1/NmZ
-	MCR3fJQQl4UqZW7JZ/HwtFXzJzR/nlvzBZkxQdwywAybNeRzDQroAiXlt9O1MYTqjocFPJD/YEBcf
-	n+67pe5hTtEgRZxzpv3P+Y/Y13l27t4v/SeIT3rEKq4Ot8XdNVFiH9mad7xWVfYUbYjLuJDuY0kuL
-	YIBF8gmnL6LIvVOSt9R9hOjG2XygnyPpfFdOJPgOgwgA1TCcsXuIIMdG5tUwlWQE1HukuJ846OVRc
-	wCN1zBGZVD5CJDiXbV8w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=pfaFf2GySiju3zE/nRtjgPOYMhLzgdwC6Y3CYz/NrxQ=; b=GDBi/bIdCJyp6P
+	7HVg+nYaCmpcuzUmeDyRHZPwIJ6z9sJsqsLkl0evcx5s5xRGjy8JjvyRWRjQ/GP50b5IXIKDrM8YL
+	oMYraVRopQFVPCRkePhOAvVm+q1YfIHeJ5d4GdZZzHD37AE07qNrk/9hyZtTrSnsKB66RBkkFobLG
+	yyO5YfQH6Lr2qEw4wJ2pnIHfrMUK6LBY/0sxM/OTApvi3pmL/qRKMCBH65DV9H9oN7M+PeT8FC4Bu
+	X2p36ByVsBCe0NPXEuNIICdiXSEFKBGRsxE2bWh8fcdOzR3FRToa4FvoyVSci0N0rxfZdIfm7Mv00
+	J7gKCXUEbrooes5R8LzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsHCH-0004yG-B9; Tue, 30 Jul 2019 01:45:01 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hsHOa-0001Dk-Gc; Tue, 30 Jul 2019 01:57:44 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsHCD-0004xp-CO; Tue, 30 Jul 2019 01:44:59 +0000
-X-UUID: 7b83e80c48f444968c856bfc0ddacc9a-20190729
-X-UUID: 7b83e80c48f444968c856bfc0ddacc9a-20190729
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jungo.lin@mediatek.com>)
+ id 1hsHOW-0001BX-4W
+ for linux-mediatek@lists.infradead.org; Tue, 30 Jul 2019 01:57:42 +0000
+X-UUID: c2b2242ae9294db3a70fa893148ab10d-20190729
+X-UUID: c2b2242ae9294db3a70fa893148ab10d-20190729
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <miles.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1589039847; Mon, 29 Jul 2019 17:44:52 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 29 Jul 2019 18:44:51 -0700
+ with ESMTP id 2106811687; Mon, 29 Jul 2019 17:57:33 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Jul 2019 18:57:31 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 30 Jul 2019 09:44:49 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 30 Jul 2019 09:44:49 +0800
-Message-ID: <1564451089.1212.649.camel@mtksdccf07>
-Subject: Re: [RFC,v3 6/9] media: platform: Add Mediatek ISP P1 V4L2 functions
-From: Jungo Lin <jungo.lin@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Tue, 30 Jul 2019 09:44:49 +0800
-In-Reply-To: <CAAFQd5D4Roc05H1NnXSp=W+L1RN7LEPHY0EA0mRhpHAcZ3wvMg@mail.gmail.com>
-References: <jungo.lin@mediatek.com>
- <20190611035344.29814-1-jungo.lin@mediatek.com>
- <20190611035344.29814-7-jungo.lin@mediatek.com>
- <20190710095429.GA181405@chromium.org>
- <1563424741.1212.212.camel@mtksdccf07>
- <CAAFQd5CXeQv74RtqDxYYLVEpsnFbsm0m-kUBDpY_AFmCBO0PyA@mail.gmail.com>
- <1563942689.1212.494.camel@mtksdccf07>
- <CAAFQd5A8zW9s8cewmHnr9HFmrkxDnEqjrTiwLF2m8sKp0619hA@mail.gmail.com>
- <1564363089.1212.636.camel@mtksdccf07>
- <CAAFQd5D4Roc05H1NnXSp=W+L1RN7LEPHY0EA0mRhpHAcZ3wvMg@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 30 Jul 2019 09:57:30 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 30 Jul 2019 09:57:30 +0800
+From: Miles Chen <miles.chen@mediatek.com>
+To: Johannes Weiner <hannes@cmpxchg.org>, Michal Hocko <mhocko@kernel.org>,
+ Vladimir Davydov <vdavydov.dev@gmail.com>
+Subject: [PATCH v4] mm: memcontrol: fix use after free in mem_cgroup_iter()
+Date: Tue, 30 Jul 2019 09:57:29 +0800
+Message-ID: <20190730015729.4406-1-miles.chen@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_184457_431043_48A8D945 
-X-CRM114-Status: GOOD (  33.88  )
+X-CRM114-CacheID: sfid-20190729_185740_188968_B728D6C5 
+X-CRM114-Status: GOOD (  12.51  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -81,188 +70,235 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean
- Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?= <sean.cheng@mediatek.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <rynn.wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>, Rob Herring <robh@kernel.org>,
- Ryan Yu =?UTF-8?Q?=28=E4=BD=99=E5=AD=9F=E4=BF=AE=29?= <ryan.yu@mediatek.com>,
- Frankie Chiu =?UTF-8?Q?=28=E9=82=B1=E6=96=87=E5=87=B1=29?=
- <frankie.chiu@mediatek.com>, Hans Verkuil <hverkuil@xs4all.nl>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sj Huang <sj.huang@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>, ddavenport@chromium.org,
- Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
- <frederic.chen@mediatek.com>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>, Joerg
- Roedel <joro@8bytes.org>," <linux-arm-kernel@lists.infradead.org>, Linux
- Media Mailing List <linux-media@vger.kernel.org>
+Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org, linux-mm@kvack.org,
+ Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ cgroups@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-07-29 at 19:04 +0900, Tomasz Figa wrote:
-> On Mon, Jul 29, 2019 at 10:18 AM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > On Fri, 2019-07-26 at 14:49 +0900, Tomasz Figa wrote:
-> > > On Wed, Jul 24, 2019 at 1:31 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > > > On Tue, 2019-07-23 at 19:21 +0900, Tomasz Figa wrote:
-> > > > > On Thu, Jul 18, 2019 at 1:39 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > > > > > On Wed, 2019-07-10 at 18:54 +0900, Tomasz Figa wrote:
-> > > > > > > On Tue, Jun 11, 2019 at 11:53:41AM +0800, Jungo Lin wrote:
-> [snip]
-> > > >                 dev_dbg(cam->dev, "jobs are full\n");
-> > > >                 spin_unlock_irqrestore(&cam->pending_job_lock, flags);
-> > > >                 return;
-> > > >         }
-> > > >         list_for_each_entry_safe(req, req_prev, &cam->pending_job_list, list) {
-> > >
-> > > Could we instead check the counter here and break if it's >=
-> > > MTK_ISP_MAX_RUNNING_JOBS?
-> > > Then we could increment it here too to simplify the code.
-> > >
-> >
-> > Thanks for your advice.
-> > We simplified this function as below:
-> >
-> > void mtk_cam_dev_req_try_queue(struct mtk_cam_dev *cam)
-> > {
-> >         struct mtk_cam_dev_request *req, *req_prev;
-> >         unsigned long flags;
-> >
-> >         if (!cam->streaming) {
-> >                 dev_dbg(cam->dev, "stream is off\n");
-> >                 return;
-> >         }
-> >
-> >         spin_lock_irq(&cam->pending_job_lock);
-> >         spin_lock_irqsave(&cam->running_job_lock, flags);
-> 
-> Having the inner call spin_lock_irqsave() doesn't really do anything
-> useful, because the outer spin_lock_irq() disables the IRQs and flags
-> would always have the IRQ disabled state. Please use irqsave for the
-> outer call.
-> 
-> [snip]
+This patch is sent to report an use after free in mem_cgroup_iter()
+after merging commit: be2657752e9e "mm: memcg: fix use after free in
+mem_cgroup_iter()".
 
-Thanks for your comment.
-This is a bug which triggers one kernel warning about wrong ISR state as
-you said. We have fixed it.
+I work with android kernel tree (4.9 & 4.14), and the commit:
+be2657752e9e "mm: memcg: fix use after free in mem_cgroup_iter()" has
+been merged to the trees. However, I can still observe use after free
+issues addressed in the commit be2657752e9e.
+(on low-end devices, a few times this month)
 
-> > > > > > > > +
-> > > > > > > > +static struct v4l2_subdev *
-> > > > > > > > +mtk_cam_cio_get_active_sensor(struct mtk_cam_dev *cam_dev)
-> > > > > > > > +{
-> > > > > > > > +   struct media_device *mdev = cam_dev->seninf->entity.graph_obj.mdev;
-> > > > > > > > +   struct media_entity *entity;
-> > > > > > > > +   struct device *dev = &cam_dev->pdev->dev;
-> > > > > > > > +   struct v4l2_subdev *sensor;
-> > > > > > >
-> > > > > > > This variable would be unitialized if there is no streaming sensor. Was
-> > > > > > > there no compiler warning generated for this?
-> > > > > > >
-> > > > > >
-> > > > > > No, there is no compiler warning.
-> > > > > > But, we will assign sensor to NULL to avoid unnecessary compiler warning
-> > > > > > with different compiler options.
-> > > > > >
-> > > > >
-> > > > > Thanks. It would be useful if you could check why the compiler you're
-> > > > > using doesn't show a warning here. We might be missing other
-> > > > > uninitialized variables.
-> > > > >
-> > > >
-> > > > We will feedback to your project team to check the possible reason about
-> > > > compiler warning issue.
-> > > >
-> > >
-> > > Do you mean that it was the Clang toolchain used on Chromium OS (e.g.
-> > > emerge chromeos-kernel-4_19)?
-> >
-> > > [snip]
-> >
-> > Yes, I checked this comment in the Chromium OS build environment.
-> > But, I think I have made the mistake here. I need to check the build
-> > status in the Mediatek's kernel upstream environment. I will pay
-> > attention in next path set upstream.
-> >
-> 
-> Thanks a lot. I will recheck this in the Chromium OS toolchain too.
-> 
+backtrace:
+	css_tryget <- crash here
+	mem_cgroup_iter
+	shrink_node
+	shrink_zones
+	do_try_to_free_pages
+	try_to_free_pages
+	__perform_reclaim
+	__alloc_pages_direct_reclaim
+	__alloc_pages_slowpath
+	__alloc_pages_nodemask
 
-For these complier warnings, we have fixed them in Mediatek upstream
-environment[1]. In this build environment, we could observe some
-comelier warnings which are not generated by Chromium OS toolchain.
+To debug, I poisoned mem_cgroup before freeing it:
 
-[1]
-toolchain/aarch64/usr/bin/aarch64-poky-linux
+static void __mem_cgroup_free(struct mem_cgroup *memcg)
+	for_each_node(node)
+	free_mem_cgroup_per_node_info(memcg, node);
+	free_percpu(memcg->stat);
++       /* poison memcg before freeing it */
++       memset(memcg, 0x78, sizeof(struct mem_cgroup));
+	kfree(memcg);
+}
 
-> > > > > > > > +
-> > > > > > > > +   dev_dbg(dev, "%s: node:%d fd:%d idx:%d\n",
-> > > > > > > > +           __func__,
-> > > > > > > > +           node->id,
-> > > > > > > > +           buf->vbb.request_fd,
-> > > > > > > > +           buf->vbb.vb2_buf.index);
-> > > > > > > > +
-> > > > > > > > +   /* For request buffers en-queue, handled in mtk_cam_req_try_queue */
-> > > > > > > > +   if (vb->vb2_queue->uses_requests)
-> > > > > > > > +           return;
-> > > > > > >
-> > > > > > > I'd suggest removing non-request support from this driver. Even if we end up
-> > > > > > > with a need to provide compatibility for non-request mode, then it should be
-> > > > > > > built on top of the requests mode, so that the driver itself doesn't have to
-> > > > > > > deal with two modes.
-> > > > > > >
-> > > > > >
-> > > > > > The purpose of non-request function in this driver is needed by
-> > > > > > our camera middle-ware design. It needs 3A statistics buffers before
-> > > > > > image buffers en-queue. So we need to en-queue 3A statistics with
-> > > > > > non-request mode in this driver. After MW got the 3A statistics data, it
-> > > > > > will en-queue the images, tuning buffer and other meta buffers with
-> > > > > > request mode. Based on this requirement, do you have any suggestion?
-> > > > > > For upstream driver, should we only consider request mode?
-> > > > > >
-> > > > >
-> > > > > Where does that requirement come from? Why the timing of queuing of
-> > > > > the buffers to the driver is important?
-> > > > >
-> > > > > [snip]
-> > > >
-> > > > Basically, this requirement comes from our internal camera
-> > > > middle-ware/3A hal in user space. Since this is not generic requirement,
-> > > > we will follow your original suggestion to keep the request mode only
-> > > > and remove other non-request design in other files. For upstream driver,
-> > > > it should support request mode only.
-> > > >
-> > >
-> > > Note that Chromium OS will use the "upstream driver" and we don't want
-> > > to diverge, so please make the userspace also use only requests. I
-> > > don't see a reason why there would be any need to submit any buffers
-> > > outside of a request.
-> > >
-> > > [snip]
-> >
-> > Ok, I have raised your concern to our colleagues and let him to discuss
-> > with you in another communication channel.
-> >
-> 
-> Thanks!
-> 
-> Best regards,
-> Tomasz
+The coredump shows the position=0xdbbc2a00 is freed.
 
-Our colleague is preparing material to explain the our 3A/MW design. If
-he is ready, he will discuss this with you.
+(gdb) p/x ((struct mem_cgroup_per_node *)0xe5009e00)->iter[8]
+$13 = {position = 0xdbbc2a00, generation = 0x2efd}
 
-In the original plan, we will deliver P1 v4 patch set tomorrow (31th
-Jul.). But, there are some comments waiting for other experts' input.
-Do you suggest it is better to resolve all comments before v4 patch set
-submitting or continue to discuss these comments on v4?
+0xdbbc2a00:     0xdbbc2e00      0x00000000      0xdbbc2800      0x00000100
+0xdbbc2a10:     0x00000200      0x78787878      0x00026218      0x00000000
+0xdbbc2a20:     0xdcad6000      0x00000001      0x78787800      0x00000000
+0xdbbc2a30:     0x78780000      0x00000000      0x0068fb84      0x78787878
+0xdbbc2a40:     0x78787878      0x78787878      0x78787878      0xe3fa5cc0
+0xdbbc2a50:     0x78787878      0x78787878      0x00000000      0x00000000
+0xdbbc2a60:     0x00000000      0x00000000      0x00000000      0x00000000
+0xdbbc2a70:     0x00000000      0x00000000      0x00000000      0x00000000
+0xdbbc2a80:     0x00000000      0x00000000      0x00000000      0x00000000
+0xdbbc2a90:     0x00000001      0x00000000      0x00000000      0x00100000
+0xdbbc2aa0:     0x00000001      0xdbbc2ac8      0x00000000      0x00000000
+0xdbbc2ab0:     0x00000000      0x00000000      0x00000000      0x00000000
+0xdbbc2ac0:     0x00000000      0x00000000      0xe5b02618      0x00001000
+0xdbbc2ad0:     0x00000000      0x78787878      0x78787878      0x78787878
+0xdbbc2ae0:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2af0:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b00:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b10:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b20:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b30:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b40:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b50:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b60:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b70:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2b80:     0x78787878      0x78787878      0x00000000      0x78787878
+0xdbbc2b90:     0x78787878      0x78787878      0x78787878      0x78787878
+0xdbbc2ba0:     0x78787878      0x78787878      0x78787878      0x78787878
 
-Thanks,
+In the reclaim path, try_to_free_pages() does not setup
+sc.target_mem_cgroup and sc is passed to do_try_to_free_pages(), ...,
+shrink_node().
 
+In mem_cgroup_iter(), root is set to root_mem_cgroup because
+sc->target_mem_cgroup is NULL.
+It is possible to assign a memcg to root_mem_cgroup.nodeinfo.iter in
+mem_cgroup_iter().
 
-Jungo
+	try_to_free_pages
+		struct scan_control sc = {...}, target_mem_cgroup is 0x0;
+	do_try_to_free_pages
+	shrink_zones
+	shrink_node
+		 mem_cgroup *root = sc->target_mem_cgroup;
+		 memcg = mem_cgroup_iter(root, NULL, &reclaim);
+	mem_cgroup_iter()
+		if (!root)
+			root = root_mem_cgroup;
+		...
+
+		css = css_next_descendant_pre(css, &root->css);
+		memcg = mem_cgroup_from_css(css);
+		cmpxchg(&iter->position, pos, memcg);
+
+My device uses memcg non-hierarchical mode.
+When we release a memcg: invalidate_reclaim_iterators() reaches only
+dead_memcg and its parents. If non-hierarchical mode is used,
+invalidate_reclaim_iterators() never reaches root_mem_cgroup.
+
+static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
+{
+	struct mem_cgroup *memcg = dead_memcg;
+
+	for (; memcg; memcg = parent_mem_cgroup(memcg)
+	...
+}
+
+So the use after free scenario looks like:
+
+CPU1						CPU2
+
+try_to_free_pages
+do_try_to_free_pages
+shrink_zones
+shrink_node
+mem_cgroup_iter()
+    if (!root)
+    	root = root_mem_cgroup;
+    ...
+    css = css_next_descendant_pre(css, &root->css);
+    memcg = mem_cgroup_from_css(css);
+    cmpxchg(&iter->position, pos, memcg);
+
+					invalidate_reclaim_iterators(memcg);
+					...
+					__mem_cgroup_free()
+						kfree(memcg);
+
+try_to_free_pages
+do_try_to_free_pages
+shrink_zones
+shrink_node
+mem_cgroup_iter()
+    if (!root)
+    	root = root_mem_cgroup;
+    ...
+    mz = mem_cgroup_nodeinfo(root, reclaim->pgdat->node_id);
+    iter = &mz->iter[reclaim->priority];
+    pos = READ_ONCE(iter->position);
+    css_tryget(&pos->css) <- use after free
+
+To avoid this, we should also invalidate root_mem_cgroup.nodeinfo.iter in
+invalidate_reclaim_iterators().
+
+Change since v1:
+Add a comment to explain why we need to handle root_mem_cgroup separately.
+Rename invalid_root to invalidate_root.
+
+Change since v2:
+Add fix tag
+
+Change since v3:
+Remove confusing 'invalidate_root', make the code easier to read
+
+Fixes: 5ac8fb31ad2e ("mm: memcontrol: convert reclaim iterator to simple css refcounting")
+Cc: Johannes Weiner <hannes@cmpxchg.org>
+Cc: Michal Hocko <mhocko@kernel.org>
+Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+---
+ mm/memcontrol.c | 39 +++++++++++++++++++++++++++++----------
+ 1 file changed, 29 insertions(+), 10 deletions(-)
+
+diff --git a/mm/memcontrol.c b/mm/memcontrol.c
+index cdbb7a84cb6e..8a2a2d5cfc26 100644
+--- a/mm/memcontrol.c
++++ b/mm/memcontrol.c
+@@ -1130,26 +1130,45 @@ void mem_cgroup_iter_break(struct mem_cgroup *root,
+ 		css_put(&prev->css);
+ }
+ 
+-static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
++static void __invalidate_reclaim_iterators(struct mem_cgroup *from,
++					struct mem_cgroup *dead_memcg)
+ {
+-	struct mem_cgroup *memcg = dead_memcg;
+ 	struct mem_cgroup_reclaim_iter *iter;
+ 	struct mem_cgroup_per_node *mz;
+ 	int nid;
+ 	int i;
+ 
+-	for (; memcg; memcg = parent_mem_cgroup(memcg)) {
+-		for_each_node(nid) {
+-			mz = mem_cgroup_nodeinfo(memcg, nid);
+-			for (i = 0; i <= DEF_PRIORITY; i++) {
+-				iter = &mz->iter[i];
+-				cmpxchg(&iter->position,
+-					dead_memcg, NULL);
+-			}
++	for_each_node(nid) {
++		mz = mem_cgroup_nodeinfo(from, nid);
++		for (i = 0; i <= DEF_PRIORITY; i++) {
++			iter = &mz->iter[i];
++			cmpxchg(&iter->position,
++				dead_memcg, NULL);
+ 		}
+ 	}
+ }
+ 
++static void invalidate_reclaim_iterators(struct mem_cgroup *dead_memcg)
++{
++	struct mem_cgroup *memcg = dead_memcg;
++	struct mem_cgroup *last;
++
++	do {
++		__invalidate_reclaim_iterators(memcg, dead_memcg);
++		last = memcg;
++	} while (memcg = parent_mem_cgroup(memcg));
++
++	/*
++	 * When cgruop1 non-hierarchy mode is used,
++	 * parent_mem_cgroup() does not walk all the way up to the
++	 * cgroup root (root_mem_cgroup). So we have to handle
++	 * dead_memcg from cgroup root separately.
++	 */
++	if (last != root_mem_cgroup)
++		__invalidate_reclaim_iterators(root_mem_cgroup,
++						dead_memcg);
++}
++
+ /**
+  * mem_cgroup_scan_tasks - iterate over tasks of a memory cgroup hierarchy
+  * @memcg: hierarchy root
+-- 
+2.18.0
 
 
 _______________________________________________
