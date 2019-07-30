@@ -2,76 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EC7AE792FA
-	for <lists+linux-mediatek@lfdr.de>; Mon, 29 Jul 2019 20:25:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5564379E02
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 03:34:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=5WHcmBI8snWuKe1Nj9Duhdguio4etjPESZ2oTsVAZA8=; b=ex7
-	2eXSLM8aO/49uqpKPnRNEdS2+Q3STYkphIi/JrI/iO17k6S9UuGLFVatqnYLbAI9KcJ6mMb/MVSnb
-	nwqVjCTiwj8SzRrHGa3Omj9y3vNYfSQxoQ9yLZIhiVBzt5EBweieMQO0YkHTfiNnRU1qCbKyF+7Om
-	0UatQmDJLSDwadyAuABJSHXkRQSz0SKoKVhb/K+4AQ+T9Pqp9zbI1LgzwNThNnynRXs07SEsgMzh8
-	FHV1j1nUsvWw3hkneZJl2ee5ydpSArcnuLo+Cdi4LCtA7/C/KkmP7elEvRtcrqZYBRyDGxngYNiSL
-	0aZKTtkPrZXLRgl9htnLBpDDdlhdWkg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Lfg7J2ry1K6uLduJejBPZPLj9k2B6Ppuqhlhb2oVp5M=; b=is/YcU/bKpiWmg
+	igMGI5jm7NMZ0JLAxiqlMb8QWKQY8o0MWFHiM2sxFxph3zUk0T/wk5CJs3qhqzuHObncQVamRgzaL
+	8w/DfljHhUroZnhQctOw7JbJfcsGoJ1ylM4yTH+zVSK3qxzJVB5pLSdpHWd6Wbm1U5Oy9qv451ejH
+	HaJV7Pusgyz8WU7zHLpJUrKa5uGnCz39RUniTA6h3Tlq+dcez2VcOym569FJRLBmMYI6/FYSQPQho
+	bIFGlhpj+Dozg8lfjyjiWo77ZwruOO1pa29zDqQIV0pSCFvz+/2kU5XEX89OWm4DUdOWszgWmxG7G
+	oPf5mBPgcfsoQjik4w1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsAKQ-0006T0-GO; Mon, 29 Jul 2019 18:24:58 +0000
-Received: from mxwww.masterlogin.de ([2a03:2900:1:1::b])
+	id 1hsH2I-0001gv-I7; Tue, 30 Jul 2019 01:34:43 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsAJw-00063n-Um; Mon, 29 Jul 2019 18:24:30 +0000
-Received: from mxout1.routing.net (unknown [192.168.10.81])
- by new.mxwww.masterlogin.de (Postfix) with ESMTPS id 94D8196323;
- Mon, 29 Jul 2019 18:24:26 +0000 (UTC)
-Received: from mxbox1.masterlogin.de (unknown [192.168.10.253])
- by mxout1.routing.net (Postfix) with ESMTP id C407B40983;
- Mon, 29 Jul 2019 18:24:26 +0000 (UTC)
-Received: from localhost.localdomain (fttx-pool-185.76.97.79.bambit.de
- [185.76.97.79])
- by mxbox1.masterlogin.de (Postfix) with ESMTPSA id 78DB0405D3;
- Mon, 29 Jul 2019 20:24:25 +0200 (CEST)
-From: Frank Wunderlich <frank-w@public-files.de>
-To: Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Allison Randal <allison@lohutok.net>,
- "David S. Miller" <davem@davemloft.net>, devicetree@vger.kernel.org,
- Eddie Huang <eddie.huang@mediatek.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- Kate Stewart <kstewart@linuxfoundation.org>,
- Lee Jones <lee.jones@linaro.org>, linux-arm-kernel@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-pm@vger.kernel.org, linux-rtc@vger.kernel.org,
- Mark Rutland <mark.rutland@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Richard Fontana <rfontana@redhat.com>, Rob Herring <robh+dt@kernel.org>,
- Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
- Thomas Gleixner <tglx@linutronix.de>,
- "Tianping . Fang" <tianping.fang@mediatek.com>
-Subject: [PATCH v3 10/10] arm: dts: mt6323: add keys, power-controller,
- rtc and codec
-Date: Mon, 29 Jul 2019 20:24:21 +0200
-Message-Id: <20190729182421.7192-1-frank-w@public-files.de>
-X-Mailer: git-send-email 2.17.1
+ id 1hsH21-0001XW-1G; Tue, 30 Jul 2019 01:34:26 +0000
+X-UUID: f27e081685894299937c484349ff0376-20190729
+X-UUID: f27e081685894299937c484349ff0376-20190729
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <qii.wang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1882569551; Mon, 29 Jul 2019 17:34:18 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 29 Jul 2019 18:34:16 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 30 Jul 2019 09:34:13 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 30 Jul 2019 09:34:13 +0800
+Message-ID: <1564450453.24702.14.camel@mhfsdcap03>
+Subject: Re: [PATCH v3 1/2] dt-bindings: i3c: Document MediaTek I3C master
+ bindings
+From: Qii Wang <qii.wang@mediatek.com>
+To: Boris Brezillon <boris.brezillon@collabora.com>
+Date: Tue, 30 Jul 2019 09:34:13 +0800
+In-Reply-To: <20190727111859.315994c3@collabora.com>
+References: <1562677762-24067-1-git-send-email-qii.wang@mediatek.com>
+ <1562677762-24067-2-git-send-email-qii.wang@mediatek.com>
+ <20190724202119.GA26566@bogus>	<1564190613.24702.11.camel@mhfsdcap03>
+ <20190727111859.315994c3@collabora.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+MIME-Version: 1.0
+X-TM-SNTS-SMTP: 91A1554D3BC24F029BD720EAFB2775A8A7F8762EFAD65B4F447638B10A285CF22000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_112429_219812_8D7EF50A 
-X-CRM114-Status: UNSURE (   8.92  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.0 (--)
+X-CRM114-CacheID: sfid-20190729_183425_085459_F0F079FF 
+X-CRM114-Status: GOOD (  21.34  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2a03:2900:1:1:0:0:0:b listed in] [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,66 +77,109 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Josef Friedl <josef.friedl@speed.at>,
- Frank Wunderlich <frank-w@public-files.de>
-MIME-Version: 1.0
+Cc: mark.rutland@arm.com, Rob Herring <robh@kernel.org>,
+ srv_heupstream@mediatek.com, devicetree@vger.kernel.org,
+ leilk.liu@mediatek.com, bbrezillon@kernel.org, linux-kernel@vger.kernel.org,
+ liguo.zhang@mediatek.com, linux-mediatek@lists.infradead.org,
+ xinping.qian@mediatek.com, matthias.bgg@gmail.com,
+ linux-i3c@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Josef Friedl <josef.friedl@speed.at>
+On Sat, 2019-07-27 at 11:18 +0200, Boris Brezillon wrote:
+> On Sat, 27 Jul 2019 09:23:33 +0800
+> Qii Wang <qii.wang@mediatek.com> wrote:
+> 
+> > On Wed, 2019-07-24 at 14:21 -0600, Rob Herring wrote:
+> > > On Tue, Jul 09, 2019 at 09:09:21PM +0800, Qii Wang wrote:  
+> > > > Document MediaTek I3C master DT bindings.
+> > > > 
+> > > > Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+> > > > ---
+> > > >  .../devicetree/bindings/i3c/mtk,i3c-master.txt     |   48 ++++++++++++++++++++
+> > > >  1 file changed, 48 insertions(+)
+> > > >  create mode 100644 Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > > > 
+> > > > diff --git a/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > > > new file mode 100644
+> > > > index 0000000..d32eda6
+> > > > --- /dev/null
+> > > > +++ b/Documentation/devicetree/bindings/i3c/mtk,i3c-master.txt
+> > > > @@ -0,0 +1,48 @@
+> > > > +Bindings for MediaTek I3C master block
+> > > > +=====================================
+> > > > +
+> > > > +Required properties:
+> > > > +--------------------
+> > > > +- compatible: shall be "mediatek,i3c-master"  
+> > > 
+> > > Needs to be SoC specific.
+> > >   
+> > 
+> > We hope that the SOCs will use the same driver and try to avoid big
+> > changes. If there are inevitable changes in the future, then we will
+> > modify the compatible to be SoC specific. cdns,i3c-master.txt is not SoC
+> > specific either.
+> 
+> The cadence case is a bit different I think. When the driver was
+> developed there was no SoC integrating this IP. I guess Mediatek knows
+> already which SoC(s) will embed the I3C master block.
+> 
 
-support poweroff and power-related keys on bpi-r2
+ok, I will modify it as "mediatek,mt8183-i3c".
 
-changes since v2: none (=v2 part 7)
+> > 
+> > > > +- reg: physical base address of the controller and apdma base, length of
+> > > > +  memory mapped region.
+> > > > +- reg-names: shall be "main" for master controller and "dma" for apdma.
+> > > > +- interrupts: the interrupt line connected to this I3C master.
+> > > > +- clocks: shall reference the i3c and apdma clocks.
+> > > > +- clock-names: shall include "main" and "dma".
+> > > > +
+> > > > +Mandatory properties defined by the generic binding (see
+> > > > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> > > > +
+> > > > +- #address-cells: shall be set to 3
+> > > > +- #size-cells: shall be set to 0
+> > > > +
+> > > > +Optional properties defined by the generic binding (see
+> > > > +Documentation/devicetree/bindings/i3c/i3c.txt for more details):
+> > > > +
+> > > > +- i2c-scl-hz
+> > > > +- i3c-scl-hz
+> > > > +
+> > > > +I3C device connected on the bus follow the generic description (see
+> > > > +Documentation/devicetree/bindings/i3c/i3c.txt for more details).
+> > > > +
+> > > > +Example:
+> > > > +
+> > > > +	i3c0: i3c@1100d000 {
+> > > > +		compatible = "mediatek,i3c-master";
+> > > > +		reg = <0x1100d000 0x1000>,
+> > > > +		      <0x11000300 0x80>;
+> > > > +		reg-names = "main", "dma";
+> > > > +		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_LOW>;
+> > > > +		clocks = <&infracfg CLK_INFRA_I3C0>,
+> > > > +			 <&infracfg CLK_INFRA_AP_DMA>;
+> > > > +		clock-names = "main", "dma";
+> > > > +		#address-cells = <3>;
+> > > > +		#size-cells = <0>;
+> > > > +		i2c-scl-hz = <100000>;
+> > > > +
+> > > > +		nunchuk: nunchuk@52 {
+> > > > +			compatible = "nintendo,nunchuk";
+> > > > +			reg = <0x52 0x0 0x10>;
+> > > > +		};
+> > > > +	};
+> > > > -- 
+> > > > 1.7.9.5
+> > > >   
+> > 
+> > 
+> 
 
-Suggested-by: Frank Wunderlich <frank-w@public-files.de>
-Signed-off-by: Josef Friedl <josef.friedl@speed.at>
-Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
----
- arch/arm/boot/dts/mt6323.dtsi | 27 +++++++++++++++++++++++++++
- 1 file changed, 27 insertions(+)
-
-diff --git a/arch/arm/boot/dts/mt6323.dtsi b/arch/arm/boot/dts/mt6323.dtsi
-index ba397407c1dd..7fda40ab5fe8 100644
---- a/arch/arm/boot/dts/mt6323.dtsi
-+++ b/arch/arm/boot/dts/mt6323.dtsi
-@@ -238,5 +238,32 @@
- 				regulator-enable-ramp-delay = <216>;
- 			};
- 		};
-+
-+		mt6323keys: mt6323keys {
-+			compatible = "mediatek,mt6323-keys";
-+			mediatek,long-press-mode = <1>;
-+			power-off-time-sec = <0>;
-+
-+			power {
-+				linux,keycodes = <116>;
-+				wakeup-source;
-+			};
-+
-+			home {
-+				linux,keycodes = <114>;
-+			};
-+		};
-+
-+		codec: mt6397codec {
-+			compatible = "mediatek,mt6397-codec";
-+		};
-+
-+		power-controller {
-+			compatible = "mediatek,mt6323-pwrc";
-+		};
-+
-+		rtc {
-+			compatible = "mediatek,mt6323-rtc";
-+		};
- 	};
- };
--- 
-2.17.1
 
 
 _______________________________________________
