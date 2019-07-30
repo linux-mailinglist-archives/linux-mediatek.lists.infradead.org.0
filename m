@@ -2,69 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 459807A86A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 14:28:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F273A7A883
+	for <lists+linux-mediatek@lfdr.de>; Tue, 30 Jul 2019 14:30:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vpVLAAw/6N3V/cddlv6nfANKIb4RxLp52VEBzmWYaU4=; b=tymZ1cgKw/hDjp
-	ZP3hxRy7rG8wc/CWfRchzpdbG3kGFz0X5UNvYJVrVMQ45QIxkD3tnxJduQ60QTqtdSaT1p/TSd/1F
-	lt94NqIoIh4SRyzD1UK6tjZ3Z+uSxGps2G5VOH2I+754UfHI8Aauhcd2kfXPz0Oc3GgAKRseouqzu
-	4jd44kxxffrS6XN/F49Fyt73zAFnzXRxKYFIqCufbDvn/1mbSkcaO7iwr9k08PIHc+fMuFLNe1maI
-	TKywcT0udEkk7MrfFOtgpVj36a+eFosO76g5ToOfNVYsr1PM1sqS0saDW8g782pjEg1DC+D+gDuWx
-	UFZgjWfRhvPXxNQIKE/A==;
+	List-Owner; bh=B4SwIoAKt0ZO5/tWIIk7BS9Lf1OKDmQcwwy27ag+iKA=; b=CFJJhhcXFkZTDB
+	SgVGGE0BpWltU6v1W86m6cjHzaKi/ffYT4ovRAci+tQLMTX1ZHB19gQ7GPljpwHOln9AVpkB5fGFB
+	T53ncYkQ6XwkXM+wrFfiJvubPdkZFSL2geTZ7bZVPhmI3f2CrfRQdsZlPOV3HUXFM5tgbB2QGPWqn
+	qgCCdyJgd/ygtoo08yGVgQXQ33OuwlBTlylSlOsl5D0samJT0MapvemtpyDiNHtB3G3YGIv0ePk6c
+	CV7W+3FGDWW8ae7MDbZfh8mJ6QNqCeWOO8A6KiIEwXrmg5UTY3ViacutH+yG36OZXTZwVQU+DeHKk
+	YI9eYZ/ZhKii+h3Zb/1Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsREi-0004Ug-NS; Tue, 30 Jul 2019 12:28:12 +0000
+	id 1hsRHA-00065Z-89; Tue, 30 Jul 2019 12:30:44 +0000
 Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsREf-0004Tn-1S
- for linux-mediatek@lists.infradead.org; Tue, 30 Jul 2019 12:28:10 +0000
-Received: by mail-wr1-x444.google.com with SMTP id p13so65542871wru.10
- for <linux-mediatek@lists.infradead.org>; Tue, 30 Jul 2019 05:28:08 -0700 (PDT)
+ id 1hsRH4-000645-MM
+ for linux-mediatek@lists.infradead.org; Tue, 30 Jul 2019 12:30:41 +0000
+Received: by mail-wr1-x444.google.com with SMTP id z1so65545702wru.13
+ for <linux-mediatek@lists.infradead.org>; Tue, 30 Jul 2019 05:30:38 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=o6BWUJ5Omes0vGmH/kxsO2n7MvW9sU2T4J9qSJTdvZk=;
- b=kz66EOZA0HoZobgs7JgchcuPY/cj9QE3B/uOxtPkPP2hqV0xDLWhMsCnml/XQAAdxF
- pAbdjlMRH0M6P0E9lPcHqp63uBGVN3De7qJNMzwploY81Z9yFbvjmabcsqxTJ6hhYC6e
- H+YUhB4EFELkhX7Diq+peHv13VGNxC/r2wFucWG8UG2g2BLQHTRyRfs/tLBWzINgdcPH
- 1LOGlFx4kT2Jnvg6hA2Q//D1UV/4GPmlt2X8z1qrxPf7WB1PUbjrx45tUT3I643zrEHa
- kabjqTZOXPSLp4Ol7DKnsA8khtC4yHZgbGCLUS+xVslxANQeMFQvYmd9b1j0Ulp57WjA
- 6IwA==
+ bh=rVJ2b2XxkGYFRd/tEShYun7q/BtNfvc7wF8nAlKV2BI=;
+ b=HPhMljq2hUknHZHLSpW1skOB/cdSc9Ma22HhG+EINERW3HycnpgwhBeEjehXXgvXHL
+ 0AzLQ9NrnIObBDDNIbyV1us1moh06JTodqbCxYlsYerPCVO8BqfFHPSdXZuQ9u4KGjsv
+ SqIocl12MMahuysObSnCllhwVuiYHA+m1FWxO7VYNTxTDvM55EyR9RNvgIPwR8+lnH7s
+ tSHLxqhULtxATjqARVPOhUrijr04aTI4505boGVfrLNKqWYsuTFzzAXJgiCgjW8x4IWg
+ b6YSu7kK+591vMXHI2ztXribAP/r8k5SjHFsQs9QkEuI3Z7o+imNdVWMSbg5zC6EvEWI
+ 9nWA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=o6BWUJ5Omes0vGmH/kxsO2n7MvW9sU2T4J9qSJTdvZk=;
- b=ufMY5eCj2v35oSeM54qQXnbtHeiWBRNGMaQVZlhhdPzTyfWA1RcxK3IU51TNmpkZEs
- RW5IWOB3rPQSiBgWJ1DkSrWdIktj4j+aeknfUxHMvE6hc+0Wjd5WNClUr+P9NDJ0ntnB
- IRlapGDce2ayOz9ioHMivCGBRwRSGC+/iHv/67O6lZoHgpP9ldKy8AE8/zf/XYOgGNNJ
- LgwAiLEVm8mLw8gBcqnK1gxCZteWOjdo/MHzSVt78PsNsUTKBXpI5L2FoawRsQRfB2Vw
- PwOLmZQrcpL69i6T/nWGPw4Wm/acBWqup0sRI/gDTKjg0jYiSE2+ro2H4sxy8wXwLl6E
- fT+w==
-X-Gm-Message-State: APjAAAVvLkXUSlfvk7O0c/6o2+E1xLpUO7nVUBbdXU9JV1W6a8WbKUnS
- l6BbVToPDzGfaBWzw8tkR74knA==
-X-Google-Smtp-Source: APXvYqwh+uwh8UnbJJdzuw+IyMzM++n/sNgDeDj4wpRHJb7+i5k6zSwsKJBHpQroLZ3Mmus+2o4ycA==
-X-Received: by 2002:a5d:48cf:: with SMTP id p15mr79083014wrs.151.1564489687529; 
- Tue, 30 Jul 2019 05:28:07 -0700 (PDT)
+ bh=rVJ2b2XxkGYFRd/tEShYun7q/BtNfvc7wF8nAlKV2BI=;
+ b=pMt/IpX2xyIPVeFxZ6QixXKzISvF27JlSGEsmZFOHUGlMJH/nf4bWNAdt8cjWYjRDo
+ nr/LVrJ29Uwc9WJ3f+ZcyPOjZX9SZtoulxWOtJVMwupw9ltscmxgO3+tJ1LsQxniU7FB
+ JaVJOz1LkFofWedsRQ/ouTfPVoj1HKyC0hNcqUAx9Qx0sfgjeo7PUcPI+FzLqyIQyO42
+ UOGCpNJviJ9ygoNAm1Ejkfzk8l37sbCpjI+OMbOU4KX29jGXpzRBa8esE3RCA25+vYpA
+ N+RcDvZwP1aB0p8FlBU4PjVopa8tXwC1NMSQ9muIGaYW4w7Jc6s9cYGdUYgAEzyytPRT
+ YFzA==
+X-Gm-Message-State: APjAAAUEjYTnTiy7pwDMmzoMA9OT+qgBRhEaiyJ3we52YnA775t10Wwm
+ m45/6+XExUjOX2k+hJHFoyRUJA==
+X-Google-Smtp-Source: APXvYqzn9OdQ5em32Kjwirga5Sl4Or3ftfaC6zoK3ETHOUTTpbEtfTk6XlPpMxhs5aGqCC0EJAa0Ww==
+X-Received: by 2002:a5d:5647:: with SMTP id j7mr51136317wrw.191.1564489837064; 
+ Tue, 30 Jul 2019 05:30:37 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id h8sm66378347wmf.12.2019.07.30.05.28.02
+ by smtp.gmail.com with ESMTPSA id s188sm53666391wmf.40.2019.07.30.05.30.23
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 30 Jul 2019 05:28:06 -0700 (PDT)
-Subject: Re: [PATCH v6 19/24] drm/bridge: dumb-vga-dac: Provide ddc symlink in
+ Tue, 30 Jul 2019 05:30:36 -0700 (PDT)
+Subject: Re: [PATCH v6 21/24] drm/bridge: ti-tfp410: Provide ddc symlink in
  connector sysfs directory
 To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>,
  dri-devel@lists.freedesktop.org
 References: <cover.1564161140.git.andrzej.p@collabora.com>
- <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
+ <3b61da77a6456805db0deffe6d1a2343dd784730.1564161140.git.andrzej.p@collabora.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -117,16 +117,16 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <1c4fd617-1cb1-2a40-5b2b-6a55217b401b@baylibre.com>
-Date: Tue, 30 Jul 2019 14:28:02 +0200
+Message-ID: <6ebbb98e-b54b-6ed1-1b20-ef5acae5a232@baylibre.com>
+Date: Tue, 30 Jul 2019 14:30:22 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
+In-Reply-To: <3b61da77a6456805db0deffe6d1a2343dd784730.1564161140.git.andrzej.p@collabora.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190730_052809_092301_B2500D4B 
-X-CRM114-Status: GOOD (  18.79  )
+X-CRM114-CacheID: sfid-20190730_053038_734065_B07701E0 
+X-CRM114-Status: GOOD (  18.06  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -156,8 +156,8 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Sam Ravnborg <sam@ravnborg.org>, David Airlie <airlied@linux.ie>,
  Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Douglas Anderson <dianders@chromium.org>, Andrzej Hajda <a.hajda@samsung.com>,
- Thierry Reding <thierry.reding@gmail.com>,
+ Liviu Dudau <liviu.dudau@arm.com>, Douglas Anderson <dianders@chromium.org>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>, kernel@collabora.com,
  Fabio Estevam <festevam@gmail.com>,
@@ -169,28 +169,28 @@ Cc: "Y.C. Chen" <yc_chen@aspeedtech.com>,
  Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
  Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
  NXP Linux Team <linux-imx@nxp.com>, CK Hu <ck.hu@mediatek.com>,
- Dave Airlie <airlied@redhat.com>, Harry Wentland <harry.wentland@amd.com>,
- intel-gfx@lists.freedesktop.org, Shashank Sharma <shashank.sharma@intel.com>,
- freedreno@lists.freedesktop.org, linux-tegra@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
- linux-arm-msm@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
+ Dave Airlie <airlied@redhat.com>, intel-gfx@lists.freedesktop.org,
+ Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
+ linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
+ Sascha Hauer <s.hauer@pengutronix.de>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
+ Alexios Zavras <alexios.zavras@intel.com>,
  Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
  Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Thomas Gleixner <tglx@linutronix.de>, Chris Wilson <chris@chris-wilson.co.uk>,
  Sean Paul <sean@poorly.run>, Pengutronix Kernel Team <kernel@pengutronix.de>,
- linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
+ Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
  Jernej Skrabec <jernej.skrabec@siol.net>, amd-gfx@lists.freedesktop.org,
  Tomi Valkeinen <tomi.valkeinen@ti.com>, Eric Anholt <eric@anholt.net>,
  Thomas Zimmermann <tzimmermann@suse.de>,
  Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
  linux-kernel@vger.kernel.org, Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Daniel Vetter <daniel@ffwll.ch>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
+ Daniel Vetter <daniel@ffwll.ch>, Alex Deucher <alexander.deucher@amd.com>,
+ Shawn Guo <shawnguo@kernel.org>,
  =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>,
  Gerd Hoffmann <kraxel@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
@@ -203,25 +203,25 @@ On 26/07/2019 19:23, Andrzej Pietrasiewicz wrote:
 > 
 > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 > ---
->  drivers/gpu/drm/bridge/dumb-vga-dac.c | 6 ++++--
+>  drivers/gpu/drm/bridge/ti-tfp410.c | 6 ++++--
 >  1 file changed, 4 insertions(+), 2 deletions(-)
 > 
-> diff --git a/drivers/gpu/drm/bridge/dumb-vga-dac.c b/drivers/gpu/drm/bridge/dumb-vga-dac.c
-> index d32885b906ae..8ef6539ae78a 100644
-> --- a/drivers/gpu/drm/bridge/dumb-vga-dac.c
-> +++ b/drivers/gpu/drm/bridge/dumb-vga-dac.c
-> @@ -111,8 +111,10 @@ static int dumb_vga_attach(struct drm_bridge *bridge)
+> diff --git a/drivers/gpu/drm/bridge/ti-tfp410.c b/drivers/gpu/drm/bridge/ti-tfp410.c
+> index dbf35c7bc85e..61cc2354ef1b 100644
+> --- a/drivers/gpu/drm/bridge/ti-tfp410.c
+> +++ b/drivers/gpu/drm/bridge/ti-tfp410.c
+> @@ -134,8 +134,10 @@ static int tfp410_attach(struct drm_bridge *bridge)
 >  
->  	drm_connector_helper_add(&vga->connector,
->  				 &dumb_vga_con_helper_funcs);
-> -	ret = drm_connector_init(bridge->dev, &vga->connector,
-> -				 &dumb_vga_con_funcs, DRM_MODE_CONNECTOR_VGA);
-> +	ret = drm_connector_init_with_ddc(bridge->dev, &vga->connector,
-> +					  &dumb_vga_con_funcs,
-> +					  DRM_MODE_CONNECTOR_VGA,
-> +					  vga->ddc);
+>  	drm_connector_helper_add(&dvi->connector,
+>  				 &tfp410_con_helper_funcs);
+> -	ret = drm_connector_init(bridge->dev, &dvi->connector,
+> -				 &tfp410_con_funcs, dvi->connector_type);
+> +	ret = drm_connector_init_with_ddc(bridge->dev, &dvi->connector,
+> +					  &tfp410_con_funcs,
+> +					  dvi->connector_type,
+> +					  dvi->ddc);
 >  	if (ret) {
->  		DRM_ERROR("Failed to initialize connector\n");
+>  		dev_err(dvi->dev, "drm_connector_init() failed: %d\n", ret);
 >  		return ret;
 > 
 
