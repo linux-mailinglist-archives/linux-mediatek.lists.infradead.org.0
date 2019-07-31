@@ -2,55 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64E877C9C8
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 19:02:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 433377C9DA
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 19:05:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=nwmabv0K5rEVTFXpJoeqimTxwKFSe5F32T/kRroSQ1U=; b=b3lgaOtASQa6/FLaRGxwbSy03A
-	hRz/pmLsZu20wHw9ILAnomHkjU9Inoux6jFbX28lsQs6Ahd2Nropl8vEuB64jzpFy5NcVJJ9ftgR0
-	2vaCbB3rlRHT0PwVNlJ1GD9XWN/VenNyD8LrLqau4B2DQqZ/fvXZkMuIYb2V+4o8CfMBb00XoZwcY
-	Ah5zmEV6wPzzNJKbtYrfAAz8614/wfkDL0vxHy0JllAHDpZJ8bmhQfr19k/02BzMUybaGJedyPWDf
-	NpUELaiOUojeJs5Vk43mcW+hOavWEraIvllL3VbwDsPoPX9aFOqLu9ryqQbvWPHyC44vjNUxsXNrt
-	wtwMp5bA==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=TWXlFj17MNIqFR5r5apRCBnUqDIBRcrWI0aF8aOIXvg=; b=WLrkzvv6NeJU4F
+	Z8s8PXq/koj7HxryQ3P0LbbrSSkCcCiF8k7b5NM7qqMNGKT4C2/6moN1Mjig66r0U/BYdYFdMl5MX
+	xIEGQ8kdDJG79kmOaWHfL3xQbKUBxHxxwDiZA6IHX/VGcJ6Fu3pnzegAsc7BgLbCfO+iLxXXryi95
+	ls2JLQEUHZOs3W9Djuu06yqTHrjo07D3dw92wG9+8gBcEsN1KQHS1+gVMXis8+VVEkvQdzySAzPJZ
+	nIK6bmG2Fe+D4i0ptY6RQ0PEHghF0czjJRstjlnU7PghYca0oxHFpAq60cx9CY9ndCdDph4Ts4ZYO
+	LWsHr3ZdOFFSK9LB+eVQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsrzR-0004Q7-Pr; Wed, 31 Jul 2019 17:02:13 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1hss2G-00009R-GH; Wed, 31 Jul 2019 17:05:08 +0000
+Received: from relay.sw.ru ([185.231.240.75])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsrxv-0002M6-T1; Wed, 31 Jul 2019 17:00:43 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 1DAE328A758
-From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-To: dri-devel@lists.freedesktop.org
-Subject: [PATCH 13/13] drm/i915: Provide ddc symlink in hdmi connector sysfs
- directory
-Date: Wed, 31 Jul 2019 18:58:22 +0200
-Message-Id: <fcacfbfa9bbc1b721a630fec885782f98e84d356.1564591626.git.andrzej.p@collabora.com>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <cover.1564591626.git.andrzej.p@collabora.com>
-References: <65481afa-1104-4ee9-e53d-f2732a10d4b9@baylibre.com>
- <cover.1564591626.git.andrzej.p@collabora.com>
-In-Reply-To: <cover.1564591626.git.andrzej.p@collabora.com>
-References: <cover.1564591626.git.andrzej.p@collabora.com>
+ id 1hss2C-0007PS-BO; Wed, 31 Jul 2019 17:05:06 +0000
+Received: from [172.16.25.12] by relay.sw.ru with esmtp (Exim 4.92)
+ (envelope-from <aryabinin@virtuozzo.com>)
+ id 1hss1z-0001ux-M2; Wed, 31 Jul 2019 20:04:51 +0300
+Subject: Re: [PATCH v3] kasan: add memory corruption identification for
+ software tag-based mode
+To: Walter Wu <walter-zh.wu@mediatek.com>
+References: <20190613081357.1360-1-walter-zh.wu@mediatek.com>
+ <da7591c9-660d-d380-d59e-6d70b39eaa6b@virtuozzo.com>
+ <1560447999.15814.15.camel@mtksdccf07> <1560479520.15814.34.camel@mtksdccf07>
+ <1560744017.15814.49.camel@mtksdccf07>
+ <CACT4Y+Y3uS59rXf92ByQuFK_G4v0H8NNnCY1tCbr4V+PaZF3ag@mail.gmail.com>
+ <1560774735.15814.54.camel@mtksdccf07> <1561974995.18866.1.camel@mtksdccf07>
+ <CACT4Y+aMXTBE0uVkeZz+MuPx3X1nESSBncgkScWvAkciAxP1RA@mail.gmail.com>
+ <ebc99ee1-716b-0b18-66ab-4e93de02ce50@virtuozzo.com>
+ <1562640832.9077.32.camel@mtksdccf07>
+ <d9fd1d5b-9516-b9b9-0670-a1885e79f278@virtuozzo.com>
+ <1562839579.5846.12.camel@mtksdccf07>
+ <37897fb7-88c1-859a-dfcc-0a5e89a642e0@virtuozzo.com>
+ <1563160001.4793.4.camel@mtksdccf07>
+ <9ab1871a-2605-ab34-3fd3-4b44a0e17ab7@virtuozzo.com>
+ <1563789162.31223.3.camel@mtksdccf07>
+ <e62da62a-2a63-3a1c-faeb-9c5561a5170c@virtuozzo.com>
+ <1564144097.515.3.camel@mtksdccf07>
+ <71df2bd5-7bc8-2c82-ee31-3f68c3b6296d@virtuozzo.com>
+ <1564147164.515.10.camel@mtksdccf07>
+From: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Message-ID: <f29ee964-cf12-1b5d-e570-1d5baa49a580@virtuozzo.com>
+Date: Wed, 31 Jul 2019 20:04:59 +0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
+MIME-Version: 1.0
+In-Reply-To: <1564147164.515.10.camel@mtksdccf07>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_100040_655685_D4995F60 
-X-CRM114-Status: GOOD (  10.53  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190731_100504_392343_0AAB8B3D 
+X-CRM114-Status: GOOD (  11.77  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,98 +76,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
- Sam Ravnborg <sam@ravnborg.org>, David Airlie <airlied@linux.ie>,
- Ramalingam C <ramalingam.c@intel.com>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- Chris Wilson <chris@chris-wilson.co.uk>,
- Bhawanpreet Lakha <Bhawanpreet.Lakha@amd.com>, Eric Anholt <eric@anholt.net>,
- Thierry Reding <thierry.reding@gmail.com>,
- Mamta Shukla <mamtashukla555@gmail.com>, kernel@collabora.com,
- Anthony Koo <Anthony.Koo@amd.com>,
- =?UTF-8?q?Ville=20Syrj=C3=A4l=C3=A4?= <ville.syrjala@linux.intel.com>,
- "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
- Mario Kleiner <mario.kleiner.de@gmail.com>, linux-samsung-soc@vger.kernel.org,
- Joonyoung Shim <jy0922.shim@samsung.com>,
- Tomi Valkeinen <tomi.valkeinen@ti.com>, David Francis <David.Francis@amd.com>,
- Kyungmin Park <kyungmin.park@samsung.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
- linux-rockchip@lists.infradead.org, Kukjin Kim <kgene@kernel.org>,
- linux-arm-msm@vger.kernel.org, CK Hu <ck.hu@mediatek.com>,
- Harry Wentland <harry.wentland@amd.com>,
- Shashank Sharma <shashank.sharma@intel.com>, freedreno@lists.freedesktop.org,
- linux-tegra@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Leo Li <sunpeng.li@amd.com>, linux-kernel@vger.kernel.org,
- intel-gfx@lists.freedesktop.org,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Jani Nikula <jani.nikula@linux.intel.com>, Inki Dae <inki.dae@samsung.com>,
- linux-mediatek@lists.infradead.org, Jyri Sarha <jsarha@ti.com>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
- linux-arm-kernel@lists.infradead.org, Enrico Weigelt <info@metux.net>,
- amd-gfx@lists.freedesktop.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
- Nicholas Kazlauskas <nicholas.kazlauskas@amd.com>,
- Todor Tomov <todor.tomov@linaro.org>, Rob Clark <robdclark@gmail.com>,
- Daniel Vetter <daniel@ffwll.ch>, Alex Deucher <alexander.deucher@amd.com>,
- Shawn Guo <shawnguo@kernel.org>,
- =?UTF-8?q?Christian=20K=C3=B6nig?= <christian.koenig@amd.com>
-MIME-Version: 1.0
+Cc: wsd_upstream <wsd_upstream@mediatek.com>,
+ "Jason A . Donenfeld" <Jason@zx2c4.com>, Vasily Gorbik <gor@linux.ibm.com>,
+ Arnd Bergmann <arnd@arndb.de>, Linux-MM <linux-mm@kvack.org>,
+ Andrey Konovalov <andreyknvl@google.com>, LKML <linux-kernel@vger.kernel.org>,
+ kasan-dev <kasan-dev@googlegroups.com>, Pekka Enberg <penberg@kernel.org>,
+ Martin Schwidefsky <schwidefsky@de.ibm.com>,
+ Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ David Rientjes <rientjes@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use the ddc pointer provided by the generic connector.
 
-Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-Acked-by: Sam Ravnborg <sam@ravnborg.org>
-Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
----
- drivers/gpu/drm/i915/display/intel_hdmi.c | 12 ++++++++----
- 1 file changed, 8 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/gpu/drm/i915/display/intel_hdmi.c b/drivers/gpu/drm/i915/display/intel_hdmi.c
-index 0ebec69bbbfc..7e69e5782f6e 100644
---- a/drivers/gpu/drm/i915/display/intel_hdmi.c
-+++ b/drivers/gpu/drm/i915/display/intel_hdmi.c
-@@ -3084,6 +3084,7 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 	struct intel_encoder *intel_encoder = &intel_dig_port->base;
- 	struct drm_device *dev = intel_encoder->base.dev;
- 	struct drm_i915_private *dev_priv = to_i915(dev);
-+	struct i2c_adapter *ddc;
- 	enum port port = intel_encoder->port;
- 
- 	DRM_DEBUG_KMS("Adding HDMI connector on port %c\n",
-@@ -3094,8 +3095,13 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 		 intel_dig_port->max_lanes, port_name(port)))
- 		return;
- 
--	drm_connector_init(dev, connector, &intel_hdmi_connector_funcs,
--			   DRM_MODE_CONNECTOR_HDMIA);
-+	intel_hdmi->ddc_bus = intel_hdmi_ddc_pin(dev_priv, port);
-+	ddc = intel_gmbus_get_adapter(dev_priv, intel_hdmi->ddc_bus);
-+
-+	drm_connector_init_with_ddc(dev, connector,
-+				    &intel_hdmi_connector_funcs,
-+				    DRM_MODE_CONNECTOR_HDMIA,
-+				    ddc);
- 	drm_connector_helper_add(connector, &intel_hdmi_connector_helper_funcs);
- 
- 	connector->interlace_allowed = 1;
-@@ -3105,8 +3111,6 @@ void intel_hdmi_init_connector(struct intel_digital_port *intel_dig_port,
- 	if (INTEL_GEN(dev_priv) >= 10 || IS_GEMINILAKE(dev_priv))
- 		connector->ycbcr_420_allowed = true;
- 
--	intel_hdmi->ddc_bus = intel_hdmi_ddc_pin(dev_priv, port);
--
- 	if (WARN_ON(port == PORT_A))
- 		return;
- 	intel_encoder->hpd_pin = intel_hpd_pin_default(dev_priv, port);
--- 
-2.17.1
+On 7/26/19 4:19 PM, Walter Wu wrote:
+> On Fri, 2019-07-26 at 15:52 +0300, Andrey Ryabinin wrote:
+>>
+>> On 7/26/19 3:28 PM, Walter Wu wrote:
+>>> On Fri, 2019-07-26 at 15:00 +0300, Andrey Ryabinin wrote:
+>>>>
+>>>
+>>>>>
+>>>>>
+>>>>> I remember that there are already the lists which you concern. Maybe we
+>>>>> can try to solve those problems one by one.
+>>>>>
+>>>>> 1. deadlock issue? cause by kmalloc() after kfree()?
+>>>>
+>>>> smp_call_on_cpu()
+>>>
+>>>>> 2. decrease allocation fail, to modify GFP_NOWAIT flag to GFP_KERNEL?
+>>>>
+>>>> No, this is not gonna work. Ideally we shouldn't have any allocations there.
+>>>> It's not reliable and it hurts performance.
+>>>>
+>>> I dont know this meaning, we need create a qobject and put into
+>>> quarantine, so may need to call kmem_cache_alloc(), would you agree this
+>>> action?
+>>>
+>>
+>> How is this any different from what you have now?
+> 
+> I originally thought you already agreed the free-list(tag-based
+> quarantine) after fix those issue. If no allocation there,
 
+If no allocation there, than it must be somewhere else.
+We known exactly the amount of memory we need, so it's possible to preallocate it in advance.
+
+
+> i think maybe
+> only move generic quarantine into tag-based kasan, but its memory
+> consumption is more bigger our patch. what do you think?
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
