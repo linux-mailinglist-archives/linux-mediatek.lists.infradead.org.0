@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33E737BFBA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:31:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5C0CA7BFB5
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:31:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=Zf97Rs820BDbxZxwB4UV8H+eA8gsNGOypv87niTJhyU=; b=HkY
-	UynJiKyPakv+tmx6iT6HF+O7K/HmdP2+uGZCrg7xW3MPDIPz5uASwxcs2vQkDplvNymvGwV58KE+j
-	iP9CfgFLy0nKjn/6nlivtMgV1ym0+PsNTfaLC8nfg6UncZVg5EdD+mwg90452eDIhFgU42BliKxBT
-	TqYkD4QC34JzJHF3950EIzgEWUMh08HM/TCn4976vyWQnn1mJemClTi5Hxg5nntkM6tYO7kJ4t7b4
-	ZpQtTygG3esnYlksLkgLv0flDlqzOcC3808lWM8y9uDbrw0QDqCjG7dY/dRW4ElSZ8/7psLH9acTm
-	iBr/EFNIxnNB7aY3yvNrLauUueHva5g==;
+	References:List-Owner; bh=LoqWyd1Avcvtm/GwVCQh6j7rl7tyzD0eZMYDtGRq7B8=; b=Jxv
+	WttpNXoxqwBL91+5vqtzWBUcD2GwCXWhBIy746T8lOV7xdKwhwi3Qw0QeEVZTEU3bEbsyhKw0q0Ku
+	GkFImVTatF6EnjHxVjz/H2qEuB4hAjh1ZwvvGeTIy80QtRHv7q6FVLfG1zudiaJk30Yru2nwgMK64
+	sqhy68dLqWb/wvAJ2Yhsf5+fHV5KlhAXoHpZPtUxYmIXUjQoQpdv2bodvXHzAAueZ92yp/aJyzhdP
+	jOW0rNuU+Tg2UYo+dXhLxutqo38RQLy8y3POsZAx449ehSG4JrpRX3bq7aZVBDxPtBJhY7vXVM4AS
+	pc7DyLG0HndtZr1/jKlZgn3cLsIDEeg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmpl-0004YZ-TN; Wed, 31 Jul 2019 11:31:53 +0000
+	id 1hsmpd-0004LQ-F2; Wed, 31 Jul 2019 11:31:45 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmnv-0000ro-Ji; Wed, 31 Jul 2019 11:30:06 +0000
+ id 1hsmnv-0000rp-KC; Wed, 31 Jul 2019 11:30:07 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=8aPxbPzX12K8YvP3KgBIApYxjMFJoZqlhnC/uijFIZI=; b=pLLKVvhA0U5i
- HSorWl2d3QOdaOFqJ/GyAXduWDoY5IrN0eruRUmJLlv1yp0xoivAtbrkQyfGYjILHG4C74Peae4xr
- WFOzjznHo/9M6PN4gufB8W4vzQ2pURDKeIC4woampwNdFDJN8gs9C3H7lnC5rkBkdsSgN3DoWUkFM
- 1cAQ0=;
-Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
+ List-Archive; bh=LYS2TWunl0umuUPSWvasAE0nCSO1RPXL/p7pwlJsc88=; b=farXO/9rKhTS
+ cKMbTDlBxhygDYHcV5Lj97j9kZD1E3UV4IB7QL9B7Zc5ijvZLWJBxW45P8kC/ucfrye/4srKBloWR
+ 4MtIThC2SA3hq1CE01ny8rwqdi38PZLL+DCjNT9DRPATvjBYn+zp5jw64XvbiXoFxyUocv5u4L7rW
+ gXvOA=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnd-0001lG-Mj; Wed, 31 Jul 2019 11:29:41 +0000
+ id 1hsmne-0001lQ-BP; Wed, 31 Jul 2019 11:29:42 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 2119E2742C99; Wed, 31 Jul 2019 12:29:41 +0100 (BST)
+ id D8C9D2742C99; Wed, 31 Jul 2019 12:29:41 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: jz4740: use devm_platform_ioremap_resource() to
- simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-20-yuehaibing@huawei.com>
+Subject: Applied "ASoC: codecs: jz4725b: use devm_platform_ioremap_resource()
+ to simplify code" to the asoc tree
+In-Reply-To: <20190727150738.54764-18-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112941.2119E2742C99@ypsilon.sirena.org.uk>
+Message-Id: <20190731112941.D8C9D2742C99@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:41 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_042959_659092_A18BC371 
-X-CRM114-Status: GOOD (  12.67  )
+X-CRM114-CacheID: sfid-20190731_042959_671384_F92AD0E9 
+X-CRM114-Status: GOOD (  12.44  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
@@ -103,7 +104,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   ASoC: jz4740: use devm_platform_ioremap_resource() to simplify code
+   ASoC: codecs: jz4725b: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -128,44 +129,43 @@ to this mail.
 Thanks,
 Mark
 
-From a8dc106410a2c3c87917447fb8c132b66062443e Mon Sep 17 00:00:00 2001
+From 94db63761576a98279e19f51173dec85f803bad4 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:23 +0800
-Subject: [PATCH] ASoC: jz4740: use devm_platform_ioremap_resource() to
- simplify code
+Date: Sat, 27 Jul 2019 23:07:21 +0800
+Subject: [PATCH] ASoC: codecs: jz4725b: use devm_platform_ioremap_resource()
+ to simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
 This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-20-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-18-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/codecs/jz4740.c | 4 +---
+ sound/soc/codecs/jz4725b.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/codecs/jz4740.c b/sound/soc/codecs/jz4740.c
-index 974e17fa1911..460aa1fd1efe 100644
---- a/sound/soc/codecs/jz4740.c
-+++ b/sound/soc/codecs/jz4740.c
-@@ -318,7 +318,6 @@ static int jz4740_codec_probe(struct platform_device *pdev)
+diff --git a/sound/soc/codecs/jz4725b.c b/sound/soc/codecs/jz4725b.c
+index 766354c73076..2567a5d15b55 100644
+--- a/sound/soc/codecs/jz4725b.c
++++ b/sound/soc/codecs/jz4725b.c
+@@ -545,15 +545,13 @@ static int jz4725b_codec_probe(struct platform_device *pdev)
  {
- 	int ret;
- 	struct jz4740_codec *jz4740_codec;
+ 	struct device *dev = &pdev->dev;
+ 	struct jz_icdc *icdc;
 -	struct resource *mem;
- 	void __iomem *base;
+ 	int ret;
  
- 	jz4740_codec = devm_kzalloc(&pdev->dev, sizeof(*jz4740_codec),
-@@ -326,8 +325,7 @@ static int jz4740_codec_probe(struct platform_device *pdev)
- 	if (!jz4740_codec)
+ 	icdc = devm_kzalloc(dev, sizeof(*icdc), GFP_KERNEL);
+ 	if (!icdc)
  		return -ENOMEM;
  
 -	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	base = devm_ioremap_resource(&pdev->dev, mem);
-+	base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(base))
- 		return PTR_ERR(base);
+-	icdc->base = devm_ioremap_resource(dev, mem);
++	icdc->base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(icdc->base))
+ 		return PTR_ERR(icdc->base);
  
 -- 
 2.20.1
