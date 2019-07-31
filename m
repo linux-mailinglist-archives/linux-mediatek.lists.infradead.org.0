@@ -2,146 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 297487C4CE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 16:22:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 919727C5DD
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 17:13:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=piwpGzKRYSj7DCTNX0Q2E6oNP6ZgRMgWv4BSIazLr5E=; b=XogRRt+fn1pPSJ
-	Ef0OBbSPQzjL+925VrZRe/j9hK192WkL/YRPUUSTt5MsUPWRg74oPZ8JqRat8I8Ut9vot8T+vwSYD
-	LIyZKJTboQeZ4l3EnzaD1i5NQ8b0JdQ6qT2Zsn9/j94uY7FbLs7kUoe9DYPfcH0/WYxd0FIt0Y/uw
-	TNzPJvm8XNdcayo3ZbB0rDo8KMfXyrUFVZiW5wX37Pc3K04uaY5mTU2f9Vc/atcfQuWYX9pYtSctF
-	rISmewU75nhn19pI57djf7V26cndktfBP5riAOwQ6Zf5htPXeabNrJYf5ZWymcU+d2k1Y5oROqVHR
-	+YX1WQN11X+SSLNtEK7w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=rhq39utAnv9s0oTRrPROu8cLiGDm9y4QpPupR07tiBY=; b=TTNZGExy3A6NZj
+	TGWkpYnsGhO1CrXgBysFffs8oTvzEDS6EYBKpxp4Hr46nhJ2XZapLObdlFF1LxMB+FOJSSZFbXisi
+	gCSY32O5qYGCWhrIAV5T2O0j/e+ywMManv6ktUnzS/bnIEBB2zSngweibZxUKw6ECTaoUTWuKD8eh
+	lql7FiZhL/8okkmC6igkxFtCyjyVFjs+lDPNDUYj8Lk3cQLlRMX5bAT9j5zmtKpeabmjC1XsueJ11
+	CK2s1d8VXD5I0jsBmSN3nPQo3F2Liu7CU9LQK9z3q9TcEdcuVwYYK4p8pxpTey7lwjl3trtHOy5ns
+	QCQ7mEHxBmNdXDvpLDeQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hspV1-0005Ot-TR; Wed, 31 Jul 2019 14:22:39 +0000
-Received: from mail-wr1-x42f.google.com ([2a00:1450:4864:20::42f])
+	id 1hsqIA-0003GF-6x; Wed, 31 Jul 2019 15:13:26 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hspUx-0005DE-UB
- for linux-mediatek@lists.infradead.org; Wed, 31 Jul 2019 14:22:37 +0000
-Received: by mail-wr1-x42f.google.com with SMTP id y4so69916808wrm.2
- for <linux-mediatek@lists.infradead.org>; Wed, 31 Jul 2019 07:22:35 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:cc:references:from:openpgp:autocrypt:organization
- :message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=DgMcA6v/fzoyZ+8GMbMaZ4k0twZj3qquTJmJP5k3IO8=;
- b=l2hYYDt1ojhHhFewG4ODETJ0VwWUU/aoP1bXxKUHQQZLywJg6T1krxJdArKTDUzPRn
- qU9cbkvBt2yh1SpuAKfIUVk77hFycwF9T9aX63MTRCPatlNDj6rE6rqYG08Y05mQ83V6
- uUp1FaqYQmOn11+Uj30lmAdBEYfrOweqrbG3g/ezcvvUBIibjUqadseUFjgkClfwTo9L
- 3O4m0TwBb7NsDkhGn+Y/Q1qgOfEoQluGQz+GmbCFs7CEpupCaUEqey5d3jpjZtCW9O8b
- Er9U9ll0vpNxo95Y8dCk3Le9VP5lofbAnCJbwe+iGTugwc96hoywJLUhBR0perWhXl9b
- T08w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
- :organization:message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=DgMcA6v/fzoyZ+8GMbMaZ4k0twZj3qquTJmJP5k3IO8=;
- b=DeC1o03TjXEIOj6MCGtm65JaZuVGlT+PmKoqRUy7WZ6NUjRdyd8fM+8w6HElTJAdKX
- i+v33iStKPvHn/+kFL+r2q54pCjQObRKM/K7krhzupDnuS51RgC3nOip59UUflWtRzz9
- ou5zzA9YLRo4pJP9yFN2dsjHM/J41z1lkr2wqYJqL+Uz+1HGrqiw1nvSjV24hNrVmuAz
- Ze2Y9Xk+18ii3Xdq48gzSeNB8aWXxuKaLc4bbv8MNEYAnc32KnBNBiTE5Ynd80rEoqo/
- 99SmQ+Zo+OcPQYC8fuEEX2ahnCEGQYDfNVA7E7At94Y+csPKKxqo6K/BC88HGtkfs1ml
- 9LCw==
-X-Gm-Message-State: APjAAAXVq6hzMYkWRJtAoIj63vOEQygY8ri1vEv1u14CrQnGRIcsxX7k
- 2E+6ALSDhjxPeOuezzG+eyXxLA==
-X-Google-Smtp-Source: APXvYqwSxDEav9/aVCpWxzYL7ljaCBlICL3RUZGxhvk2wEbRC7Iy9uxTFCR7vbDqYs9uXZoYUfDOLQ==
-X-Received: by 2002:adf:e541:: with SMTP id z1mr43294553wrm.48.1564582954231; 
- Wed, 31 Jul 2019 07:22:34 -0700 (PDT)
-Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
- [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id c7sm62001218wro.70.2019.07.31.07.22.30
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 31 Jul 2019 07:22:33 -0700 (PDT)
-Subject: Re: Review required [Was: Associate ddc adapters with connectors]
-To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>,
- Sam Ravnborg <sam@ravnborg.org>
-References: <cover.1564161140.git.andrzej.p@collabora.com>
- <20190726183520.GA22572@ravnborg.org> <20190726185538.GD14981@ravnborg.org>
- <6560f93c-a48f-2a8c-afeb-d5e8e200480d@baylibre.com>
- <20190731104007.GA23138@ravnborg.org>
- <959cf323-c6b9-895b-592c-81c52aacae6e@collabora.com>
-From: Neil Armstrong <narmstrong@baylibre.com>
-Openpgp: preference=signencrypt
-Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
- mQENBE1ZBs8BCAD78xVLsXPwV/2qQx2FaO/7mhWL0Qodw8UcQJnkrWmgTFRobtTWxuRx8WWP
- GTjuhvbleoQ5Cxjr+v+1ARGCH46MxFP5DwauzPekwJUD5QKZlaw/bURTLmS2id5wWi3lqVH4
- BVF2WzvGyyeV1o4RTCYDnZ9VLLylJ9bneEaIs/7cjCEbipGGFlfIML3sfqnIvMAxIMZrvcl9
- qPV2k+KQ7q+aXavU5W+yLNn7QtXUB530Zlk/d2ETgzQ5FLYYnUDAaRl+8JUTjc0CNOTpCeik
- 80TZcE6f8M76Xa6yU8VcNko94Ck7iB4vj70q76P/J7kt98hklrr85/3NU3oti3nrIHmHABEB
- AAG0KE5laWwgQXJtc3Ryb25nIDxuYXJtc3Ryb25nQGJheWxpYnJlLmNvbT6JATsEEwEKACUC
- GyMGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheABQJXDO2CAhkBAAoJEBaat7Gkz/iubGIH/iyk
- RqvgB62oKOFlgOTYCMkYpm2aAOZZLf6VKHKc7DoVwuUkjHfIRXdslbrxi4pk5VKU6ZP9AKsN
- NtMZntB8WrBTtkAZfZbTF7850uwd3eU5cN/7N1Q6g0JQihE7w4GlIkEpQ8vwSg5W7hkx3yQ6
- 2YzrUZh/b7QThXbNZ7xOeSEms014QXazx8+txR7jrGF3dYxBsCkotO/8DNtZ1R+aUvRfpKg5
- ZgABTC0LmAQnuUUf2PHcKFAHZo5KrdO+tyfL+LgTUXIXkK+tenkLsAJ0cagz1EZ5gntuheLD
- YJuzS4zN+1Asmb9kVKxhjSQOcIh6g2tw7vaYJgL/OzJtZi6JlIW5AQ0ETVkGzwEIALyKDN/O
- GURaHBVzwjgYq+ZtifvekdrSNl8TIDH8g1xicBYpQTbPn6bbSZbdvfeQPNCcD4/EhXZuhQXM
- coJsQQQnO4vwVULmPGgtGf8PVc7dxKOeta+qUh6+SRh3vIcAUFHDT3f/Zdspz+e2E0hPV2hi
- SvICLk11qO6cyJE13zeNFoeY3ggrKY+IzbFomIZY4yG6xI99NIPEVE9lNBXBKIlewIyVlkOa
- YvJWSV+p5gdJXOvScNN1epm5YHmf9aE2ZjnqZGoMMtsyw18YoX9BqMFInxqYQQ3j/HpVgTSv
- mo5ea5qQDDUaCsaTf8UeDcwYOtgI8iL4oHcsGtUXoUk33HEAEQEAAYkBHwQYAQIACQUCTVkG
- zwIbDAAKCRAWmrexpM/4rrXiB/sGbkQ6itMrAIfnM7IbRuiSZS1unlySUVYu3SD6YBYnNi3G
- 5EpbwfBNuT3H8//rVvtOFK4OD8cRYkxXRQmTvqa33eDIHu/zr1HMKErm+2SD6PO9umRef8V8
- 2o2oaCLvf4WeIssFjwB0b6a12opuRP7yo3E3gTCSKmbUuLv1CtxKQF+fUV1cVaTPMyT25Od+
- RC1K+iOR0F54oUJvJeq7fUzbn/KdlhA8XPGzwGRy4zcsPWvwnXgfe5tk680fEKZVwOZKIEuJ
- C3v+/yZpQzDvGYJvbyix0lHnrCzq43WefRHI5XTTQbM0WUIBIcGmq38+OgUsMYu4NzLu7uZF
- Acmp6h8guQINBFYnf6QBEADQ+wBYa+X2n/xIQz/RUoGHf84Jm+yTqRT43t7sO48/cBW9vAn9
- GNwnJ3HRJWKATW0ZXrCr40ES/JqM1fUTfiFDB3VMdWpEfwOAT1zXS+0rX8yljgsWR1UvqyEP
- 3xN0M/40Zk+rdmZKaZS8VQaXbveaiWMEmY7sBV3QvgOzB7UF2It1HwoCon5Y+PvyE3CguhBd
- 9iq5iEampkMIkbA3FFCpQFI5Ai3BywkLzbA3ZtnMXR8Qt9gFZtyXvFQrB+/6hDzEPnBGZOOx
- zkd/iIX59SxBuS38LMlhPPycbFNmtauOC0DNpXCv9ACgC9tFw3exER/xQgSpDVc4vrL2Cacr
- wmQp1k9E0W+9pk/l8S1jcHx03hgCxPtQLOIyEu9iIJb27TjcXNjiInd7Uea195NldIrndD+x
- 58/yU3X70qVY+eWbqzpdlwF1KRm6uV0ZOQhEhbi0FfKKgsYFgBIBchGqSOBsCbL35f9hK/JC
- 6LnGDtSHeJs+jd9/qJj4WqF3x8i0sncQ/gszSajdhnWrxraG3b7/9ldMLpKo/OoihfLaCxtv
- xYmtw8TGhlMaiOxjDrohmY1z7f3rf6njskoIXUO0nabun1nPAiV1dpjleg60s3OmVQeEpr3a
- K7gR1ljkemJzM9NUoRROPaT7nMlNYQL+IwuthJd6XQqwzp1jRTGG26J97wARAQABiQM+BBgB
- AgAJBQJWJ3+kAhsCAikJEBaat7Gkz/iuwV0gBBkBAgAGBQJWJ3+kAAoJEHfc29rIyEnRk6MQ
- AJDo0nxsadLpYB26FALZsWlN74rnFXth5dQVQ7SkipmyFWZhFL8fQ9OiIoxWhM6rSg9+C1w+
- n45eByMg2b8H3mmQmyWztdI95OxSREKwbaXVapCcZnv52JRjlc3DoiiHqTZML5x1Z7lQ1T3F
- 8o9sKrbFO1WQw1+Nc91+MU0MGN0jtfZ0Tvn/ouEZrSXCE4K3oDGtj3AdC764yZVq6CPigCgs
- 6Ex80k6QlzCdVP3RKsnPO2xQXXPgyJPJlpD8bHHHW7OLfoR9DaBNympfcbQJeekQrTvyoASw
- EOTPKE6CVWrcQIztUp0WFTdRGgMK0cZB3Xfe6sOp24PQTHAKGtjTHNP/THomkH24Fum9K3iM
- /4Wh4V2eqGEgpdeSp5K+LdaNyNgaqzMOtt4HYk86LYLSHfFXywdlbGrY9+TqiJ+ZVW4trmui
- NIJCOku8SYansq34QzYM0x3UFRwff+45zNBEVzctSnremg1mVgrzOfXU8rt+4N1b2MxorPF8
- 619aCwVP7U16qNSBaqiAJr4e5SNEnoAq18+1Gp8QsFG0ARY8xp+qaKBByWES7lRi3QbqAKZf
- yOHS6gmYo9gBmuAhc65/VtHMJtxwjpUeN4Bcs9HUpDMDVHdfeRa73wM+wY5potfQ5zkSp0Jp
- bxnv/cRBH6+c43stTffprd//4Hgz+nJcCgZKtCYIAPkUxABC85ID2CidzbraErVACmRoizhT
- KR2OiqSLW2x4xdmSiFNcIWkWJB6Qdri0Fzs2dHe8etD1HYaht1ZhZ810s7QOL7JwypO8dscN
- KTEkyoTGn6cWj0CX+PeP4xp8AR8ot4d0BhtUY34UPzjE1/xyrQFAdnLd0PP4wXxdIUuRs0+n
- WLY9Aou/vC1LAdlaGsoTVzJ2gX4fkKQIWhX0WVk41BSFeDKQ3RQ2pnuzwedLO94Bf6X0G48O
- VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
- ZaTUOEkgIor5losDrePdPgE=
-Organization: Baylibre
-Message-ID: <ce68a0df-1719-7b53-b0ed-89caa9afc4a0@baylibre.com>
-Date: Wed, 31 Jul 2019 16:22:30 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ id 1hsqI5-000351-VZ
+ for linux-mediatek@lists.infradead.org; Wed, 31 Jul 2019 15:13:24 +0000
+X-UUID: 31a3f2b199134b95890b062754e803d6-20190731
+X-UUID: 31a3f2b199134b95890b062754e803d6-20190731
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <miles.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1903271455; Wed, 31 Jul 2019 07:13:13 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 31 Jul 2019 08:13:11 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 31 Jul 2019 23:13:10 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 31 Jul 2019 23:13:10 +0800
+From: Miles Chen <miles.chen@mediatek.com>
+To: Andy Whitcroft <apw@canonical.com>, Joe Perches <joe@perches.com>
+Subject: [PATCH v3] checkpatch: add several Kconfig default value tests
+Date: Wed, 31 Jul 2019 23:13:09 +0800
+Message-ID: <20190731151309.1167-1-miles.chen@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-In-Reply-To: <959cf323-c6b9-895b-592c-81c52aacae6e@collabora.com>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_072236_024179_CDBF837A 
-X-CRM114-Status: GOOD (  12.70  )
+X-CRM114-CacheID: sfid-20190731_081322_029816_D1A7C3E5 
+X-CRM114-Status: GOOD (  15.89  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:42f listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -153,55 +69,265 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: David Airlie <airlied@linux.ie>, Liviu Dudau <liviu.dudau@arm.com>,
- dri-devel@lists.freedesktop.org, Douglas Anderson <dianders@chromium.org>,
- linux-tegra@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
- Laurent Pinchart <Laurent.pinchart@ideasonboard.com>, kernel@collabora.com,
- linux-samsung-soc@vger.kernel.org, Vincent Abriou <vincent.abriou@st.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
- linux-rockchip@lists.infradead.org, Chen-Yu Tsai <wens@csie.org>,
- Kukjin Kim <kgene@kernel.org>, NXP Linux Team <linux-imx@nxp.com>,
- Dave Airlie <airlied@redhat.com>, freedreno@lists.freedesktop.org,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Jonas Karlman <jonas@kwiboo.se>, linux-arm-msm@vger.kernel.org,
- intel-gfx@lists.freedesktop.org, Jyri Sarha <jsarha@ti.com>,
- Mamta Shukla <mamtashukla555@gmail.com>, linux-mediatek@lists.infradead.org,
- Maxime Ripard <mripard@kernel.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
- linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
- amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Seung-Woo Kim <sw0312.kim@samsung.com>, linux-kernel@vger.kernel.org,
- Todor Tomov <todor.tomov@linaro.org>,
- Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
- Thomas Zimmermann <tzimmermann@suse.de>,
- Alex Deucher <alexander.deucher@amd.com>, Shawn Guo <shawnguo@kernel.org>,
- =?UTF-8?Q?Christian_K=c3=b6nig?= <christian.koenig@amd.com>,
- Gerd Hoffmann <kraxel@redhat.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Yingjoe
+ Chen <yingjoe.chen@mediatek.com>, Miles Chen <miles.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ wsd_upstream@mediatek.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gMzEvMDcvMjAxOSAxNToxMCwgQW5kcnplaiBQaWV0cmFzaWV3aWN6IHdyb3RlOgo+IFcgZG5p
-dSAzMS4wNy4yMDE5IG/CoDEyOjQwLCBTYW0gUmF2bmJvcmcgcGlzemU6Cj4+IEhpIE5laWwuCj4+
-Cj4+IE9uIFdlZCwgSnVsIDMxLCAyMDE5IGF0IDEwOjAwOjE0QU0gKzAyMDAsIE5laWwgQXJtc3Ry
-b25nIHdyb3RlOgo+Pj4gSGkgU2FtLAo+Pj4KPj4+IE9uIDI2LzA3LzIwMTkgMjA6NTUsIFNhbSBS
-YXZuYm9yZyB3cm90ZToKPj4+PiBIaSBhbGwuCj4+Pj4KPj4+PiBBbmRyemVqIGhhdmUgZG9uZSBh
-IGdvb2Qgam9iIGZvbGxvd2luZyB1cCBvbiBmZWVkYmFjayBhbmQgdGhpcyBzZXJpZXMgaXMKPj4+
-PiBub3cgcmVhZHkuCj4+Pj4KPj4+PiBXZSBuZWVkIGFjayBvbiB0aGUgcGF0Y2hlcyB0b3VjaGlu
-ZyB0aGUgaW5kaXZpZHVhbCBkcml2ZXJzIGJlZm9yZSB3ZSBjYW4KPj4+PiBwcm9jZWVkLgo+Pj4+
-IFBsZWFzZSBjaGVjayB5b3VyIGRyaXZlcnMgYW5kIGdldCBiYWNrLgo+Pj4KPj4+IEkgY2FuIGFw
-cGx5IGFsbCBjb3JlIGFuZCBtYWludGFpbmVyLWFja2VkIHBhdGNoZXMgZm9yIG5vdyA6Cj4+PiAx
-LCAyLCA3LCAxMCwgMTEsIDE2LCAxNywgMTgsIDE5LCAyMCwgMjEsIDIyLCAyMwo+Pj4KPj4+IGFu
-ZCBBbmRyemVqIGNhbiByZXNlbmQgbm90IGFwcGxpZWQgcGF0Y2hlcyB3aXRoIFlvdXJzIGFuZCBF
-bWlsJ3MgUmV2aWV3ZWQtYnksCj4+PiBzbyB3ZSBjYW4gd2FpdCBhIGZldyBtb3JlIGRheXMgdG8g
-YXBwbHkgdGhlbS4KPj4KPj4gU291bmRzIGxpa2UgYSBnb29kIHBsYW4uCj4+IFRoYW5rcyBmb3Ig
-dGhha2luZyBjYXJlIG9mIHRoaXMuCj4gCj4gV2hlbiBpcyBpdCBnb29kIHRpbWUgdG8gcmVzZW5k
-IHBhdGNoZXMgMywgNCwgNSwgNiwgOCwgOSwgMTIsIDEzLCAxNCwgMTUsIDI0IGFzIGEKPiBuZXcg
-c2VyaWVzPwoKSSdsbCBwaW5nIHlvdSB3aGVuIGV2ZXJ5dGhpbmcgaXMgYXBwbGllZCwgYnVpbGQt
-dGVzdGVkIGFuZCBwdXNoZWQgb24gZHJtLW1pc2MtbmV4dAoKTmVpbAoKPiAKPiBBbmRyemVqCgoK
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVk
-aWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0
-cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+This change adds 3 Kconfig default value tests.
+Repost patch v3 (Follow Joe's suggestion in v2)
+
+1. discourage default n cases:
+e.g.,
+default n
+
+2. discourage default "[ynm]" cases:
+e.g.,
+arch/powerpc/Kconfig:   default "y" if PPC_POWERNV
+arch/powerpc/Kconfig:   default "y" if PPC_POWERNV
+arch/powerpc/Kconfig:   default "n"
+drivers/auxdisplay/Kconfig:     default "n"
+drivers/crypto/Kconfig: default "m"
+drivers/rapidio/devices/Kconfig:        default "n"
+
+3. discourage default EXPERT or default !EXPERT cases:
+e.g.,
+drivers/hid/Kconfig:    default !EXPERT
+
+tested cases:
+default m
+default n if ALPHA_EV5 || ALPHA_EV56 || (ALPHA_EV4 && !ALPHA_LCA)
+default y if ALPHA_QEMU
+default n if PPC_POWERNV
+default n
+default EXPERT
+default !EXPERT
+default "m"
+default "n"
+default "y" if EXPERT
+default "y" if PPC_POWERNV
+
+test result:
+WARNING: 'default n' is the default value, no need to write it explicitly
++       default n
+
+WARNING: Avoid using default EXPERT
++       default EXPERT
+
+WARNING: Avoid using default EXPERT
++       default !EXPERT
+
+WARNING: Use 'default m' not 'default "m"'
++       default "m"
+
+WARNING: Use 'default n' not 'default "n"'
++       default "n"
+
+WARNING: Use 'default y' not 'default "y"'
++       default "y" if EXPERT
+
+WARNING: Use 'default y' not 'default "y"'
++       default "y" if PPC_POWERNV
+
+test --fix capability:
+default n => delete line
+default "m" => default m
+default "n" => default n
+default "y" if EXPERT => default y if EXPERT
+default "y" if PPC_POWERNV => default y if PPC_POWERNV
+default !EXPERT => no change
+default EXPERT => no change
+
+Change since v1:
+discourage default n$
+discourage default "[ynm]"
+discourage default \!?EXPERT
+
+Change since v2:
+test Kconfig in a single block
+print precise message such as 'default "m"', not 'default "[ynm]"'
+provide --fix capability
+
+Cc: Joe Perches <joe@perches.com>
+Cc: Yingjoe Chen <yingjoe.chen@mediatek.com>
+Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+---
+ scripts/checkpatch.pl | 139 ++++++++++++++++++++++++++----------------
+ 1 file changed, 85 insertions(+), 54 deletions(-)
+
+diff --git a/scripts/checkpatch.pl b/scripts/checkpatch.pl
+index 93a7edfe0f05..b080eea68cf6 100755
+--- a/scripts/checkpatch.pl
++++ b/scripts/checkpatch.pl
+@@ -2932,60 +2932,98 @@ sub process {
+ 				      "Do not include the paragraph about writing to the Free Software Foundation's mailing address from the sample GPL notice. The FSF has changed addresses in the past, and may do so again. Linux already includes a copy of the GPL.\n" . $herevet)
+ 		}
+ 
+-# check for Kconfig help text having a real description
+-# Only applies when adding the entry originally, after that we do not have
+-# sufficient context to determine whether it is indeed long enough.
+-		if ($realfile =~ /Kconfig/ &&
+-		    # 'choice' is usually the last thing on the line (though
+-		    # Kconfig supports named choices), so use a word boundary
+-		    # (\b) rather than a whitespace character (\s)
+-		    $line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
+-			my $length = 0;
+-			my $cnt = $realcnt;
+-			my $ln = $linenr + 1;
+-			my $f;
+-			my $is_start = 0;
+-			my $is_end = 0;
+-			for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
+-				$f = $lines[$ln - 1];
+-				$cnt-- if ($lines[$ln - 1] !~ /^-/);
+-				$is_end = $lines[$ln - 1] =~ /^\+/;
+-
+-				next if ($f =~ /^-/);
+-				last if (!$file && $f =~ /^\@\@/);
+-
+-				if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
+-					$is_start = 1;
+-				} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
+-					if ($lines[$ln - 1] =~ "---help---") {
+-						WARN("CONFIG_DESCRIPTION",
+-						     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
++# Kconfig tests
++		if ($realfile =~ /Kconfig/) {
++			# check for Kconfig help text having a real description
++			# Only applies when adding the entry originally, after
++			# that we do not have sufficient context to determine
++			# whether it is indeed long enough.
++			# 'choice' is usually the last thing on the line (though
++			# Kconfig supports named choices), so use a word
++			# boundary (\b) rather than a whitespace character (\s)
++			if ($line =~ /^\+\s*(?:config|menuconfig|choice)\b/) {
++				my $length = 0;
++				my $cnt = $realcnt;
++				my $ln = $linenr + 1;
++				my $f;
++				my $is_start = 0;
++				my $is_end = 0;
++				for (; $cnt > 0 && defined $lines[$ln - 1]; $ln++) {
++					$f = $lines[$ln - 1];
++					$cnt-- if ($lines[$ln - 1] !~ /^-/);
++					$is_end = $lines[$ln - 1] =~ /^\+/;
++
++					next if ($f =~ /^-/);
++					last if (!$file && $f =~ /^\@\@/);
++
++					if ($lines[$ln - 1] =~ /^\+\s*(?:bool|tristate|prompt)\s*["']/) {
++						$is_start = 1;
++					} elsif ($lines[$ln - 1] =~ /^\+\s*(?:help|---help---)\s*$/) {
++						if ($lines[$ln - 1] =~ "---help---") {
++							WARN("CONFIG_DESCRIPTION",
++							     "prefer 'help' over '---help---' for new help texts\n" . $herecurr);
++						}
++						$length = -1;
++					}
++
++					$f =~ s/^.//;
++					$f =~ s/#.*//;
++					$f =~ s/^\s+//;
++					next if ($f =~ /^$/);
++
++					# This only checks context lines in the patch
++					# and so hopefully shouldn't trigger false
++					# positives, even though some of these are
++					# common words in help texts
++					if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
++							   if|endif|menu|endmenu|source)\b/x) {
++						$is_end = 1;
++						last;
+ 					}
+-					$length = -1;
++					$length++;
++				}
++				if ($is_start && $is_end && $length < $min_conf_desc_length) {
++					WARN("CONFIG_DESCRIPTION",
++					     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
+ 				}
++				#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
++			}
+ 
+-				$f =~ s/^.//;
+-				$f =~ s/#.*//;
+-				$f =~ s/^\s+//;
+-				next if ($f =~ /^$/);
+-
+-				# This only checks context lines in the patch
+-				# and so hopefully shouldn't trigger false
+-				# positives, even though some of these are
+-				# common words in help texts
+-				if ($f =~ /^\s*(?:config|menuconfig|choice|endchoice|
+-						  if|endif|menu|endmenu|source)\b/x) {
+-					$is_end = 1;
+-					last;
++# discourage the use of boolean for type definition attributes
++			if ($line =~ /^\+\s*\bboolean\b/) {
++				if (WARN("CONFIG_TYPE_BOOLEAN",
++					 "Use of boolean is deprecated, please use bool instead\n" . $herecurr) &&
++				    $fix) {
++					$fixed[$fixlinenr] =~ s/\bboolean\b/bool/;
++				}
++			}
++
++# Kconfig: discourage redundant 'default n'
++			if ($line =~ /^\+\s*default\s+n$/) {
++				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
++					 "'default n' is the default value, no need to write it explicitly\n" . $herecurr) &&
++				    $fix) {
++					fix_delete_line($fixlinenr, $rawline);
+ 				}
+-				$length++;
+ 			}
+-			if ($is_start && $is_end && $length < $min_conf_desc_length) {
+-				WARN("CONFIG_DESCRIPTION",
+-				     "please write a paragraph that describes the config symbol fully\n" . $herecurr);
++
++# Kconfig: discourage quoted defaults: use default [ynm], not default "[ynm]"
++			if ($rawline =~ /^\+\s*default\s+"([ynm])"/) {
++				if (WARN("CONFIG_DEFAULT_VALUE_STYLE",
++					 "Use 'default $1' not 'default \"$1\"'\n" . $herecurr) &&
++				    $fix) {
++					$fixed[$fixlinenr] =~ s/\b(default\s+)"(.)"/$1$2/;
++				}
++			}
++
++# Kconfig: discourage using default EXPERT or !EXPERT
++			if ($line =~ /^\+\s*default\s+\!?\s*EXPERT\b/) {
++				WARN("CONFIG_DEFAULT_VALUE_STYLE",
++				     "Avoid using default EXPERT\n" . $herecurr);
+ 			}
+-			#print "is_start<$is_start> is_end<$is_end> length<$length>\n";
+ 		}
++# End of Kconfig tests
++
+ 
+ # check for MAINTAINERS entries that don't have the right form
+ 		if ($realfile =~ /^MAINTAINERS$/ &&
+@@ -2998,13 +3036,6 @@ sub process {
+ 			}
+ 		}
+ 
+-# discourage the use of boolean for type definition attributes of Kconfig options
+-		if ($realfile =~ /Kconfig/ &&
+-		    $line =~ /^\+\s*\bboolean\b/) {
+-			WARN("CONFIG_TYPE_BOOLEAN",
+-			     "Use of boolean is deprecated, please use bool instead.\n" . $herecurr);
+-		}
+-
+ 		if (($realfile =~ /Makefile.*/ || $realfile =~ /Kbuild.*/) &&
+ 		    ($line =~ /\+(EXTRA_[A-Z]+FLAGS).*/)) {
+ 			my $flag = $1;
+-- 
+2.18.0
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
