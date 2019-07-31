@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 141B87BFBE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2EB9B7BFCE
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=m2e2sBWQtwOSUUf8Ni2CtO0g8o05HpJ7CXb1iRApP0c=; b=SjZ
-	LeS/ugAYjcXIit2yte6LK5ByDb4D6LzDMWD6Nlu0gsuAxfnsslOS0S4B0O36SyvAyC+QERysEqn7i
-	tNw0RveVsOZMCuUN40ZM0/DbZ1XPA3Jg+ToxATxq/piyXZmbqPWjE9QH5si1s33ruMrMa91JPEsRy
-	DIRr8yWo5TN5hOkK9rrbUUjjo4jHLJYdOJo78lzOrIXzV0BvvyGr1LW80NsRk46r2uDk73rwYDXBq
-	tqzVbnY7eHAkkqq1bUAwEQ/MLWgvbFL24lHtNt8dQ5pd/4e4bHZBFRmj14oPtjQEYF9RYXAMoafcX
-	IiJsjO3sQZOZr3DV3rWR/IEwwHMrfWA==;
+	References:List-Owner; bh=nFaZ/y/s+uPnA76csxLI3u3l/KctSPM818W9VS/Rjvw=; b=QKw
+	gsFTUOLGl37byR4mEuX7vbuRP7dma5d5VvQceZWISZDekwMkPS9w6wzCajlhjZ/1yCOZNwmcMvekV
+	kVhyh+ELoNPI6rMZASr5ySeMyMW6KkG5fQJUQugmUO3mWL9PsdNSLLvkgEbt2B0bBQWA0qap8i31Q
+	X6Mb9XLEcks8nPFXzEsMO2x+lXbKpdBm9eDs0dyiRbRcbHlVZzBgIwUDSMMXBumqNOf9ytHJrem3W
+	6YFt6mka3PpCcsrNQkaGBdACSD9ZhtgRVqkhDTev+Mxebu/34jQ68MBG3DhpxTKYn0coDTHja35yr
+	1t9QzXTanKn0tywvU3WkYoUFlz59+Fw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmpp-0004j2-Pk; Wed, 31 Jul 2019 11:31:57 +0000
+	id 1hsmq2-0005H6-RZ; Wed, 31 Jul 2019 11:32:10 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmnx-0000ta-Du; Wed, 31 Jul 2019 11:30:08 +0000
+ id 1hsmnz-0000vh-7X; Wed, 31 Jul 2019 11:30:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=GsZQOFzfLgb4EaZbfxrczc72v2GJRkJ+lSay3DR9Pw0=; b=tPr17IyTupQo
- L0DnmHqaGdx23Ki0pBwJRv8s8cls9OWQb8dWYYpyY5Cf4wj43iIZeT7S7GdOa+laid8405PQYid+S
- 1FjyR7B0fpEmsd4+YR464UpszpmRbvMhjRCwpSwCZvnEBNEO2uR/hIzdDtidMAa8KGkih/rbK6LZ3
- RmDG8=;
+ List-Archive; bh=1+pT3ctx398IjJGsV4QKspIhkRKYicy/NIkBKdhKy/4=; b=hNkfTKOqNoyX
+ 5XkBXUgM40eLNZinRxNMeWdOfK9Qg5zMC+sf16W8TCCEcx3YBEUDHiwJJh1mcv9yaeggc2HsyTuo1
+ zRtdWBAS1IJyTfnpfR82warrFeYVNcU1aHaytOwG66ZdpTysjdjj40C9y9GgJI/nLc9x+k4bEdIiT
+ g0N4k=;
 Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
  ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnb-0001kw-FS; Wed, 31 Jul 2019 11:29:39 +0000
+ id 1hsmnb-0001kv-4a; Wed, 31 Jul 2019 11:29:39 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 015D42742CDE; Wed, 31 Jul 2019 12:29:38 +0100 (BST)
+ id 99BC02742C99; Wed, 31 Jul 2019 12:29:38 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: meson: g12a-tohdmitx: use
+Subject: Applied "ASoC: meson: axg-tdm-formatter: use
  devm_platform_ioremap_resource() to simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-26-yuehaibing@huawei.com>
+In-Reply-To: <20190727150738.54764-27-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112939.015D42742CDE@ypsilon.sirena.org.uk>
+Message-Id: <20190731112938.99BC02742C99@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:38 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_043001_570172_E55CCA40 
-X-CRM114-Status: GOOD (  11.92  )
+X-CRM114-CacheID: sfid-20190731_043003_763889_97BCA75B 
+X-CRM114-Status: GOOD (  11.91  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
@@ -104,7 +104,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   ASoC: meson: g12a-tohdmitx: use devm_platform_ioremap_resource() to simplify code
+   ASoC: meson: axg-tdm-formatter: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -129,10 +129,10 @@ to this mail.
 Thanks,
 Mark
 
-From a95c901248642d62dc7462a2d2190c8ac183c84f Mon Sep 17 00:00:00 2001
+From 10392fcad7dfc8ea38959b18327ff18b81b1c161 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:29 +0800
-Subject: [PATCH] ASoC: meson: g12a-tohdmitx: use
+Date: Sat, 27 Jul 2019 23:07:30 +0800
+Subject: [PATCH] ASoC: meson: axg-tdm-formatter: use
  devm_platform_ioremap_resource() to simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
@@ -140,23 +140,27 @@ This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-26-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-27-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/g12a-tohdmitx.c | 4 +---
+ sound/soc/meson/axg-tdm-formatter.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/meson/g12a-tohdmitx.c b/sound/soc/meson/g12a-tohdmitx.c
-index 9943c807ec5d..9cfbd343a00c 100644
---- a/sound/soc/meson/g12a-tohdmitx.c
-+++ b/sound/soc/meson/g12a-tohdmitx.c
-@@ -376,12 +376,10 @@ MODULE_DEVICE_TABLE(of, g12a_tohdmitx_of_match);
- static int g12a_tohdmitx_probe(struct platform_device *pdev)
- {
+diff --git a/sound/soc/meson/axg-tdm-formatter.c b/sound/soc/meson/axg-tdm-formatter.c
+index 2e498201139f..21c735afab35 100644
+--- a/sound/soc/meson/axg-tdm-formatter.c
++++ b/sound/soc/meson/axg-tdm-formatter.c
+@@ -253,7 +253,6 @@ int axg_tdm_formatter_probe(struct platform_device *pdev)
  	struct device *dev = &pdev->dev;
+ 	const struct axg_tdm_formatter_driver *drv;
+ 	struct axg_tdm_formatter *formatter;
 -	struct resource *res;
  	void __iomem *regs;
- 	struct regmap *map;
+ 	int ret;
+ 
+@@ -269,8 +268,7 @@ int axg_tdm_formatter_probe(struct platform_device *pdev)
+ 	platform_set_drvdata(pdev, formatter);
+ 	formatter->drv = drv;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 -	regs = devm_ioremap_resource(dev, res);
