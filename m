@@ -2,82 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A87A57BFB9
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:31:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E0987BFC4
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=qmud80GUGHwCKTGTLV5LgqnJZHW+CCTP5iJazTkzm4A=; b=aUU
-	BVVtmxe9lVUWY3yba8lzHNACyB2MFBSnmXP6NXAJcyGBIqJCavzPAUJ4b+Mk+Akz0ASvAwljNrpbI
-	/GMNgX0YSd2fEpJKy0E1nLYC5xTMn1Dg7PWjpNfWpPWuokZRGwsK94eO2nKsLI51m9XP3clnDFvt7
-	R8+xdKR/DvV5Q393UwJ7U4PUKs3rbgw9JYvSuaSA6cR8Fb5CxRHHxNdtITJ3REmQNa/zERGBMZPs/
-	DzVHKA7+prqu3AGlOuNqSckrghhBbHx/vVoyyhXbfKHUx6V5WBRkCJnIJeyrYFbxvrU2ERixeLcd3
-	9+1aMLyHwAWtbO1KPiG5lQ9MMiXY1sQ==;
+	References:List-Owner; bh=C47zvc8laZQn32wyqAf8u1wmW2qgXb37wqCeW7MZGtM=; b=EFw
+	Fjg4euS/sNNCSJwApu7eqj+UN+HD3TwJSXfeGAyi0h0OuhDEevvBwVoONp4fiMAS8O3V/dq1a2l+7
+	yJMEHpEKXxpAahwW41802xEBUUlQLIvJFc/PgmiRZpExpPcyAQ60kEFP/6+dBwKbldntAOy+OiIV5
+	mtnFhTMorcCV6ZjIO6G1t88csix3LmOvgNQ/tbigc1c6p2Gj47F1zwUg0Cu6WsxJqoeAnQBy+gvyr
+	bY6A/iQW81FLOz0yVYG8FP2ikDGeBVJKVRC5C1xdTq4AkeaGuMfcIe8DbbCCpGs3Rng1+A1PEg7I9
+	Y7iQCkGE6lJkWE7VTyBWrSYHBcF0kDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmpk-0004Wi-Uw; Wed, 31 Jul 2019 11:31:52 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hsmpu-0004v2-El; Wed, 31 Jul 2019 11:32:02 +0000
+Received: from casper.infradead.org ([85.118.1.10])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo8-0001ZR-3S; Wed, 31 Jul 2019 11:30:12 +0000
+ id 1hsmo7-0001n6-OZ; Wed, 31 Jul 2019 11:30:11 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
+ d=infradead.org; s=casper.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
  To:From:Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:References:List-Id:List-Help:
  List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=x9Az2l9jRA1fvbltqAEskyHx15EQpvhr5JUZPqMPcJg=; b=i/xJjDC1HizgU85F63cVICEeN/
- 92wYFgMZDkNRN0c6L4USDGhQNlVH1ixKpDOqg0psw/XF5SbSDVdYSbUAwGGUygYuAG2BLaeZGiqOs
- HGATgPS80a0j3dvJZG9Ei8l/44RyjAAF/yL6uOJGjpia5Yv53yg4j8GHQSp7rlXqNFnHV+gP/pj44
- A+wxrsaa3ReG8Zo0N9AN55y8UQy18lz1QWnZjO5EwO3hnyclIxF7QsNoS7rJ7AoMGs871ZoeYgkfc
- YQEwK7u/GdzZj04XNOJlmS6Ag7gblEmbPBNhOHEShUBFU4Nx7VAOCt87A/VtnXXD6K9T3gVJcEL2W
- L/0o1eoQ==;
+ bh=1Z+F6QUabMuhysJXB4rv5gFQzac5zbJf3kwbZUm/7OU=; b=aNmlscemrweOAvBXtmm8V+sQxm
+ yFjz3uH5L0/j8Zk8Qu/MfBoeWLOhnyaTW5T7l1f1HEIRA6/y2/C2bDUSFSWVax0bR3T/9OXrKQ1qM
+ NOkD/NwvYyQ9cjWMWSm2DGByhrqNGsmxc4Q7JishkbJSNfzxeHv0dzE3Jw/KD/HdCe63jNMZK4l/Q
+ XhOGKbcGgxjZRLIP1fH983atOFtk/suckkHEQcLtJTf2rtE1YW8PB5QgNxznd9DC+AoKKdyDhHBTo
+ I1oZwM51HPuihXKjHMkHuafI3b4c6MM4FfkII/0fRZbkNBSa0KLQkeUGGHgqBPrDflPUcWHPK3ggE
+ 8H/AAR3g==;
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
- by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo3-0001Nc-Cr; Wed, 31 Jul 2019 11:30:09 +0000
+ by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hsmoF-0008Vr-DQ; Wed, 31 Jul 2019 11:30:23 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=x9Az2l9jRA1fvbltqAEskyHx15EQpvhr5JUZPqMPcJg=; b=r9mBPI6mq1Wt
- 9wWcxy04DISQgMzTe9zjN17SICHierskov65a5G/KTGzIPfLYk6OdBqGBKCHjQx/7yuNoZErFaONO
- V34xTi/pyn0mJ38McNc0yybWE278vdQR+qmyytMH/MUuqGWupGkQrfmbWkiNlcMS3ZFiL3ZMZnePy
- 8qAow=;
-Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
+ List-Archive; bh=1Z+F6QUabMuhysJXB4rv5gFQzac5zbJf3kwbZUm/7OU=; b=RlIk0YLHjEkQ
+ Sb8ghmQr/T709OmLHv8onYWg5ir/BTCRkGpT4qPb3Xci7ZxUNouYfg/BcOajeILMLPHdmh/zcsEPy
+ 4opSlct2h1yQQBravf+rp+UBHg25J+yIqgmYrDdOzfMx16pabL4C11TBWc6XM+HqzzafQ+65GiOnE
+ NcrNs=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnl-0001ne-1i; Wed, 31 Jul 2019 11:29:49 +0000
+ id 1hsmnl-0001oA-Fw; Wed, 31 Jul 2019 11:29:49 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 339E92742C99; Wed, 31 Jul 2019 12:29:48 +0100 (BST)
+ id E90DA2742CDE; Wed, 31 Jul 2019 12:29:48 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: bcm2835-i2s: use devm_platform_ioremap_resource() to
+Subject: Applied "ASoC: imx-audmux: use devm_platform_ioremap_resource() to
  simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-10-yuehaibing@huawei.com>
+In-Reply-To: <20190727150738.54764-8-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112948.339E92742C99@ypsilon.sirena.org.uk>
+Message-Id: <20190731112948.E90DA2742CDE@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:48 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
-X-Spam-Note: CRM114 invocation failed
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190731_123019_528014_D54A843B 
+X-CRM114-Status: GOOD (  16.39  )
 X-Spam-Score: 0.2 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
- Content analysis details:   (0.2 points)
+X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
+ Content analysis details:   (0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -116,7 +119,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   ASoC: bcm2835-i2s: use devm_platform_ioremap_resource() to simplify code
+   ASoC: imx-audmux: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -141,10 +144,10 @@ to this mail.
 Thanks,
 Mark
 
-From d400b1b30cbff1c0962bbb3f895e839ccd120cb7 Mon Sep 17 00:00:00 2001
+From d003e3081c1d069b94d1b5f4c3bc8234d4603282 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:13 +0800
-Subject: [PATCH] ASoC: bcm2835-i2s: use devm_platform_ioremap_resource() to
+Date: Sat, 27 Jul 2019 23:07:11 +0800
+Subject: [PATCH] ASoC: imx-audmux: use devm_platform_ioremap_resource() to
  simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
@@ -152,33 +155,29 @@ This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-10-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-8-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/bcm/bcm2835-i2s.c | 4 +---
+ sound/soc/fsl/imx-audmux.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/bcm/bcm2835-i2s.c b/sound/soc/bcm/bcm2835-i2s.c
-index 5ef80f3d446a..e6a12e271b07 100644
---- a/sound/soc/bcm/bcm2835-i2s.c
-+++ b/sound/soc/bcm/bcm2835-i2s.c
-@@ -828,7 +828,6 @@ static int bcm2835_i2s_probe(struct platform_device *pdev)
- {
- 	struct bcm2835_i2s_dev *dev;
- 	int ret;
--	struct resource *mem;
- 	void __iomem *base;
- 	const __be32 *addr;
- 	dma_addr_t dma_base;
-@@ -848,8 +847,7 @@ static int bcm2835_i2s_probe(struct platform_device *pdev)
- 	}
+diff --git a/sound/soc/fsl/imx-audmux.c b/sound/soc/fsl/imx-audmux.c
+index b2351cd33b0f..7595f24a006e 100644
+--- a/sound/soc/fsl/imx-audmux.c
++++ b/sound/soc/fsl/imx-audmux.c
+@@ -298,12 +298,10 @@ static int imx_audmux_parse_dt_defaults(struct platform_device *pdev,
  
- 	/* Request ioarea */
--	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	base = devm_ioremap_resource(&pdev->dev, mem);
-+	base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(base))
- 		return PTR_ERR(base);
+ static int imx_audmux_probe(struct platform_device *pdev)
+ {
+-	struct resource *res;
+ 	const struct of_device_id *of_id =
+ 			of_match_device(imx_audmux_dt_ids, &pdev->dev);
+ 
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	audmux_base = devm_ioremap_resource(&pdev->dev, res);
++	audmux_base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(audmux_base))
+ 		return PTR_ERR(audmux_base);
  
 -- 
 2.20.1
