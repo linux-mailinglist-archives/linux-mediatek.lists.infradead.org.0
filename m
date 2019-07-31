@@ -2,56 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 91C8A7BF82
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:31:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AECB67BFD2
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=XuUo2fZTAlEPKqj0/ALqUtN5kW8HwTlyjBzJK2fqUzY=; b=EM3
-	FKJtI3jktwB1KLMJ3Gv9bl4ZGiiJTfObjITTWrL4nqn061leCz6+myDbyYnuZCGvd+TqqblDT304c
-	EJI5f6EjVMhWSZtMN1vKkLkCPE6alTl0UUQdV61eB9rOWLtaNeE6vXyBLnZn8Y9DeJORPEFF6NNy+
-	B3ahPA+hLgE87SaQvN63yeaTqKHk8uph6wLBJIPnBne4m5SO+uwt1Ak+6qN38ZowfuJERnRzGtmvu
-	sA8uwAvwlvRyKuVN6KJSCLz5wrDtDlAoaNtBaPfaopX/oTWBkTUs4SNw0omz0jgty5TOySH40vDkb
-	qXdyCsL+9vYBLAzV77bUXdqYK9/Gmgw==;
+	References:List-Owner; bh=kssjU/RaQ6duyIZ9m5l43MgosVfW0K4BBG+Cfa/gfZ8=; b=VFn
+	YDP4pYIiBlAk2YdZcL5trXwWSa7cglF03sbgOtOFEiQ1EJ9SmEFhz3ScLvY5wYBmcvMdpvOk+zEAW
+	J6nRvSmr8cNP4R01LwSRc0bUwHFsQVaN4uqQfwukA+YPseszSovCK1mOuQpuHbxJ+XiMSE4U5IynM
+	IzhsByVYDBrBhYL91Wt7E0T91lOd7JbeIVpeMG2nPuUewxcGb5b+kQjXV8uVBHMbixLa+D73ILAqr
+	IgSTgJQJmSc8ZbfpLebetf8zsrsf6siaW0d9JZbCHdeWJ10xE4brRBJRWuTxgHmKPNB/2ADmr6VNk
+	2lxgdS43Nsw0p+I1t260iS+gmolyyAA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmp2-0003Nq-G6; Wed, 31 Jul 2019 11:31:08 +0000
+	id 1hsmqA-0005Yg-Cs; Wed, 31 Jul 2019 11:32:18 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmnv-0000rn-HK; Wed, 31 Jul 2019 11:30:03 +0000
+ id 1hsmnx-0000tf-RI; Wed, 31 Jul 2019 11:30:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=PdT/eIhyr6y3H0l5rgN8DPLYN6B+GE6VkE6u1jqDo4M=; b=TZ07R/Bq7JWG
- Ug2noyqlEHi+TCjSinpappZdtelQXXTyvbK6HZcYFXfRlljPKDvtVgXjP/llSeESoLlOCz0StuOsP
- FyV+rxxYGy6DNICaVt50U83yMZmtA6sOxnRx/vk/uDnHFmbCie3Z1kPaBA8INm45YgOOwpr5gwiHO
- n1b4k=;
-Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
- ([82.37.168.47] helo=ypsilon.sirena.org.uk)
+ List-Archive; bh=eTlh4lvM63+Wx0DzBrmZ0tzksgKJVQojvvLUdCsPwUA=; b=ptiskyC7AuFD
+ XFnW3gNje3mu5imMWSxNCSDDUac5sGXS2eNwaQrGNd2bUVueDxyIrCCVt7TdFqepH/vfy5p6yJd5f
+ ON4tmFUsHpJmBMdrCq/QR5PB5O8WqUZAj1se4LRFM9ZvP3AW+ITXLRoGhGEDXf9AwqB/5FB4EF1xv
+ AExDA=;
+Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnf-0001lY-2E; Wed, 31 Jul 2019 11:29:43 +0000
+ id 1hsmne-0001lS-R2; Wed, 31 Jul 2019 11:29:42 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 8BDF32742C99; Wed, 31 Jul 2019 12:29:42 +0100 (BST)
+ id 3841B2742CDE; Wed, 31 Jul 2019 12:29:42 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: stm32: sai: use devm_platform_ioremap_resource() to
- simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-16-yuehaibing@huawei.com>
+Subject: Applied "ASoC: codecs: msm8916-wcd: use
+ devm_platform_ioremap_resource() to simplify code" to the asoc tree
+In-Reply-To: <20190727150738.54764-17-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112942.8BDF32742C99@ypsilon.sirena.org.uk>
+Message-Id: <20190731112942.3841B2742CDE@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:42 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_042959_598902_61B833B2 
-X-CRM114-Status: GOOD (  12.30  )
+X-CRM114-CacheID: sfid-20190731_043001_920625_077A6BE5 
+X-CRM114-Status: GOOD (  12.22  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
@@ -104,7 +103,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   ASoC: stm32: sai: use devm_platform_ioremap_resource() to simplify code
+   ASoC: codecs: msm8916-wcd: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -129,44 +128,44 @@ to this mail.
 Thanks,
 Mark
 
-From 1c63223cda84fb10643938e4e4eb02110f8ae9a2 Mon Sep 17 00:00:00 2001
+From f62d6426718837663484bbf0ed94e56573cbc365 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:19 +0800
-Subject: [PATCH] ASoC: stm32: sai: use devm_platform_ioremap_resource() to
- simplify code
+Date: Sat, 27 Jul 2019 23:07:20 +0800
+Subject: [PATCH] ASoC: codecs: msm8916-wcd: use
+ devm_platform_ioremap_resource() to simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
 This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-16-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-17-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/stm/stm32_sai.c | 4 +---
+ sound/soc/codecs/msm8916-wcd-digital.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/stm/stm32_sai.c b/sound/soc/stm/stm32_sai.c
-index 63f68e663676..1ac5103cea78 100644
---- a/sound/soc/stm/stm32_sai.c
-+++ b/sound/soc/stm/stm32_sai.c
-@@ -152,7 +152,6 @@ static int stm32_sai_probe(struct platform_device *pdev)
- {
- 	struct stm32_sai_data *sai;
- 	struct reset_control *rst;
--	struct resource *res;
- 	const struct of_device_id *of_id;
- 	u32 val;
+diff --git a/sound/soc/codecs/msm8916-wcd-digital.c b/sound/soc/codecs/msm8916-wcd-digital.c
+index 1db7e43ec203..9fa5d44fdc79 100644
+--- a/sound/soc/codecs/msm8916-wcd-digital.c
++++ b/sound/soc/codecs/msm8916-wcd-digital.c
+@@ -1143,7 +1143,6 @@ static int msm8916_wcd_digital_probe(struct platform_device *pdev)
+ 	struct msm8916_wcd_digital_priv *priv;
+ 	struct device *dev = &pdev->dev;
+ 	void __iomem *base;
+-	struct resource *mem_res;
+ 	struct regmap *digital_map;
  	int ret;
-@@ -161,8 +160,7 @@ static int stm32_sai_probe(struct platform_device *pdev)
- 	if (!sai)
+ 
+@@ -1151,8 +1150,7 @@ static int msm8916_wcd_digital_probe(struct platform_device *pdev)
+ 	if (!priv)
  		return -ENOMEM;
  
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	sai->base = devm_ioremap_resource(&pdev->dev, res);
-+	sai->base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(sai->base))
- 		return PTR_ERR(sai->base);
+-	mem_res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	base = devm_ioremap_resource(&pdev->dev, mem_res);
++	base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
  
 -- 
 2.20.1
