@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0F2837BFD6
-	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 55F7B7BFD4
+	for <lists+linux-mediatek@lfdr.de>; Wed, 31 Jul 2019 13:32:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=g1EoEND0vwTn+76ujWpwUHcn+ZuXscJTbnPu+KuuQZM=; b=mRs
-	fwfY3EIFinF/ggsVL5sFWDQVevqeAXANBvFCuxkU36eEmXTffjgB/R7D1n/Pu5LNgMaeZFvIVH/cr
-	y9gsSwLrEL5hnYlvWc7M8+z32inJx2Vn7FEY3oF/PqFZz5FdrYwQbLgLqPbaM7XqkfxfRklG9OKg6
-	1tOwhJ65VU7t8oyvdqJ6iL2bEOsaKUVa/AkUY98lTkqA4lkXLhqCDBAmjzddRSxwZJoDkjdchAm51
-	ZvTp2b8xaKbSfNuwT+BNNWZ6RE+yGasqy/+HQDf57DuUs2PKjN7C4JLaGyXlyBnheT6KQLMi/OJ4E
-	mv8SzTX1fwrgfumBWQBdOfr37JN82dQ==;
+	References:List-Owner; bh=iUSQehVo055GK50Ui46RvFQHgd0WoQuZmUcItOYeQnQ=; b=Nqv
+	mReYZwtKVCSIbLjaZh8F6Hz6cbfxJYs5ct70zUPsqirvs/+m5E2vs+alTbFdBbF40W4o2cisvi6dX
+	SdXy4GEMgJLIM5+iYs2AAZcMA/g44mMsE1kmeH2UxQvrG3VeJHjSPCwUAxdDQIix+m3n/6PL8RIz7
+	DlXPTi767It+Yt8GKvr6m0TMmjmibyLcG3XakEV3CC5gl0tjBGRWsuO+zgUeKE6FEYYw6mV+D5Qu0
+	FihvReWJwnv9wpaC11h+PlGe6enEDkzW2NKW1buOm1XxMfZXOJxYQ80JlwvZbowT7oP1T2BhEmiPz
+	FHOABEJPD9ycW6mI9+AESQvItRwavjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmqD-0005gU-QD; Wed, 31 Jul 2019 11:32:21 +0000
+	id 1hsmqB-0005cB-Vd; Wed, 31 Jul 2019 11:32:19 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo5-0001TU-Af; Wed, 31 Jul 2019 11:30:17 +0000
+ id 1hsmo5-0001UX-AD; Wed, 31 Jul 2019 11:30:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=OK1qfP6SGmbQHUIYgf6InFAdJuQ6Az7VgLYIKL/9SvY=; b=QXGtYpMyBZf9
- Q0ld8V/rb/34AocCTqq9hFoFsKLewLCkhHu/6Y3KjnbvsjslY1m7w5JJ6UsPuRYrg9Gonqk0XL6OM
- Ay0v4uHwPjyXIFZO9tmAjW50hhlDbO5zgmb6ZiXTRVk82//jxqL53JID/RUxasdKuWc9W+P1pujIB
- Jff2c=;
+ List-Archive; bh=h+Xx9FiVpbRvfYOcI/smNIhXGYSuLtkKazWAN6uMezg=; b=cNrlwJfBF0Nr
+ 5IihI8TGGii6ytfroK+ew1KnkXGoxpyVk055LyO1djzLRaxh/lhhBqcFAvtL59h36JDuKyWSmUgKL
+ 5tSJpONvpHBetLFKMV0mqxCwUXCLAx3JrpurhI0vGKSOlAdLwg3FRxg3SfGD52510093ND8p/AJgz
+ w931A=;
 Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
  ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnn-0001pE-H6; Wed, 31 Jul 2019 11:29:51 +0000
+ id 1hsmnn-0001pB-AK; Wed, 31 Jul 2019 11:29:51 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id AF2942742C99; Wed, 31 Jul 2019 12:29:50 +0100 (BST)
+ id 5786F2742D4F; Wed, 31 Jul 2019 12:29:50 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: tegra: use devm_platform_ioremap_resource() to
+Subject: Applied "ASoC: rockchip: use devm_platform_ioremap_resource() to
  simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-3-yuehaibing@huawei.com>
+In-Reply-To: <20190727150738.54764-4-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112950.AF2942742C99@ypsilon.sirena.org.uk>
+Message-Id: <20190731112950.5786F2742D4F@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:50 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_043009_585364_9415109C 
-X-CRM114-Status: GOOD (  12.64  )
+X-CRM114-CacheID: sfid-20190731_043009_724445_620C408E 
+X-CRM114-Status: GOOD (  13.05  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
@@ -104,7 +104,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   ASoC: tegra: use devm_platform_ioremap_resource() to simplify code
+   ASoC: rockchip: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -129,45 +129,45 @@ to this mail.
 Thanks,
 Mark
 
-From 7d22808641cdea50baeae636acf5d592a7aa1239 Mon Sep 17 00:00:00 2001
+From f052172a5bb474fef2d0c3911655c9e107a3c024 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:06 +0800
-Subject: [PATCH] ASoC: tegra: use devm_platform_ioremap_resource() to simplify
- code
+Date: Sat, 27 Jul 2019 23:07:07 +0800
+Subject: [PATCH] ASoC: rockchip: use devm_platform_ioremap_resource() to
+ simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
 This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-3-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-4-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/tegra/tegra30_i2s.c | 4 +---
+ sound/soc/codecs/rk3328_codec.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/tegra/tegra30_i2s.c b/sound/soc/tegra/tegra30_i2s.c
-index ac6983c6bd72..e6d548fa980b 100644
---- a/sound/soc/tegra/tegra30_i2s.c
-+++ b/sound/soc/tegra/tegra30_i2s.c
-@@ -368,7 +368,6 @@ static int tegra30_i2s_platform_probe(struct platform_device *pdev)
- 	struct tegra30_i2s *i2s;
- 	const struct of_device_id *match;
- 	u32 cif_ids[2];
--	struct resource *mem;
- 	void __iomem *regs;
- 	int ret;
- 
-@@ -406,8 +405,7 @@ static int tegra30_i2s_platform_probe(struct platform_device *pdev)
- 		goto err;
+diff --git a/sound/soc/codecs/rk3328_codec.c b/sound/soc/codecs/rk3328_codec.c
+index 24f8f86d58e9..287c962ba00d 100644
+--- a/sound/soc/codecs/rk3328_codec.c
++++ b/sound/soc/codecs/rk3328_codec.c
+@@ -432,7 +432,6 @@ static int rk3328_platform_probe(struct platform_device *pdev)
+ {
+ 	struct device_node *rk3328_np = pdev->dev.of_node;
+ 	struct rk3328_codec_priv *rk3328;
+-	struct resource *res;
+ 	struct regmap *grf;
+ 	void __iomem *base;
+ 	int ret = 0;
+@@ -482,8 +481,7 @@ static int rk3328_platform_probe(struct platform_device *pdev)
+ 		return ret;
  	}
  
--	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	regs = devm_ioremap_resource(&pdev->dev, mem);
-+	regs = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(regs)) {
- 		ret = PTR_ERR(regs);
- 		goto err_clk_put;
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	base = devm_ioremap_resource(&pdev->dev, res);
++	base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
+ 
 -- 
 2.20.1
 
