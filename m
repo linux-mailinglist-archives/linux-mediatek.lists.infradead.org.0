@@ -2,52 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4011F7FE50
-	for <lists+linux-mediatek@lfdr.de>; Fri,  2 Aug 2019 18:10:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B190C7FE76
+	for <lists+linux-mediatek@lfdr.de>; Fri,  2 Aug 2019 18:17:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=feLIyzPOkLuPDQvZBo7bkwMlxrlQGx7Vaz+qcqvTD3A=; b=RzmKB90GcqwBrw
-	8L9Y2HGrpzmFUi0fFNcF58gTwqZcSLrUpzEg5B8z3HGyWHet66M1qAHUhEPU925E/U9NZILQiEHLT
-	JbqvoP+IEpsgojRZ/tgwLbLQvx1j4b08U6IL03R3qfmNKGKuBfwYPqNzYyUNcn7J+ECapldys14nV
-	RZ4JSCCb9dEolyS3DvrIOXAGHV5at2SEE6TT4558ud8ZlVSYikBV+oknOZILMClvciWdN7Om9m6vH
-	P2jAtfFQRMUH+9uVFsK6ImV2qCvR7wLRbWEviaR2Vp7SLJJZQbUbWLZRBSbak+3GqQCeNRKVGabZt
-	new8OLFmMbtAFdi3T6jw==;
+	List-Owner; bh=CpJnEBnUTtpM6t66SbNKFtzNG0HAQrsYqyFhPYNVAQY=; b=S0iOGvFZgj30WI
+	04wFMmhh71NiSgJSIrTJyHWynyc5XHc9VRa7mUNedSD5LRRpfKPDt68og1vRwLT7jk90OgsyAg7wm
+	Pui40w/CJ7vyXHpVbDzGCAymuRLPYuSwOIgbxMPvufJP+8o1mtIVugZZ1xp+MnPA3ZeQmvRvGAdup
+	szpToKYg0hLYDQNAG4iym9vDxSSMr1/xizRAPKtDY5Rcz81QKMgZJeq2rwv+ifxaRC41m+7O8xSa6
+	RMCzA5DpCl1AryCesOau10PYIYUzL5l8CvlX2nTwEw12NGb1Z7vIRkRLC7O+QN6kGduvd1tOWLDCG
+	Vx+WWZ6xaWJq73TICedA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hta8f-0008DM-V2; Fri, 02 Aug 2019 16:10:41 +0000
-Received: from gloria.sntech.de ([185.11.138.130])
+	id 1htaFH-0001zm-Sc; Fri, 02 Aug 2019 16:17:31 +0000
+Received: from relay9-d.mail.gandi.net ([217.70.183.199])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hta8Y-00086Z-3K; Fri, 02 Aug 2019 16:10:35 +0000
-Received: from p508fd160.dip0.t-ipconnect.de ([80.143.209.96]
- helo=phil.localnet)
- by gloria.sntech.de with esmtpsa (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
- (Exim 4.89) (envelope-from <heiko@sntech.de>)
- id 1hta7x-00041C-8t; Fri, 02 Aug 2019 18:09:57 +0200
-From: Heiko Stuebner <heiko@sntech.de>
+ id 1htaF9-0001sN-EV; Fri, 02 Aug 2019 16:17:25 +0000
+X-Originating-IP: 90.76.143.236
+Received: from localhost (lfbn-1-2078-236.w90-76.abo.wanadoo.fr
+ [90.76.143.236]) (Authenticated sender: antoine.tenart@bootlin.com)
+ by relay9-d.mail.gandi.net (Postfix) with ESMTPSA id E0A5DFF807;
+ Fri,  2 Aug 2019 16:17:03 +0000 (UTC)
+Date: Fri, 2 Aug 2019 18:17:01 +0200
+From: Antoine Tenart <antoine.tenart@bootlin.com>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Re: [PATCH -next 09/12] crypto: rockchip - use
+Subject: Re: [PATCH -next 05/12] crypto: inside-secure - use
  devm_platform_ioremap_resource() to simplify code
-Date: Fri, 02 Aug 2019 18:09:56 +0200
-Message-ID: <2422935.Q2t5okTyEj@phil>
-In-Reply-To: <20190802132809.8116-10-yuehaibing@huawei.com>
+Message-ID: <20190802161701.GD14470@kwain>
 References: <20190802132809.8116-1-yuehaibing@huawei.com>
- <20190802132809.8116-10-yuehaibing@huawei.com>
+ <20190802132809.8116-6-yuehaibing@huawei.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190802132809.8116-6-yuehaibing@huawei.com>
+User-Agent: Mutt/1.12.0 (2019-05-25)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190802_091034_289974_5D76E89C 
-X-CRM114-Status: UNSURE (   8.15  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190802_091723_649379_30DB39B7 
+X-CRM114-Status: GOOD (  13.67  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.199 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,36 +62,83 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: gary.hook@amd.com, clabbe.montjoie@gmail.com, linux-arm-kernel@axis.com,
- jamie@jamieiles.com, linux-stm32@st-md-mailman.stormreply.com,
- jesper.nilsson@axis.com, linux-samsung-soc@vger.kernel.org,
- herbert@gondor.apana.org.au, krzk@kernel.org,
- linux-rockchip@lists.infradead.org, wens@csie.org, agross@kernel.org,
- thomas.lendacky@amd.com, alexandre.torgue@st.com, antoine.tenart@bootlin.com,
- linux-arm-msm@vger.kernel.org, mripard@kernel.org,
+Cc: heiko@sntech.de, gary.hook@amd.com, clabbe.montjoie@gmail.com,
+ linux-arm-kernel@axis.com, jamie@jamieiles.com,
+ linux-stm32@st-md-mailman.stormreply.com, jesper.nilsson@axis.com,
+ linux-samsung-soc@vger.kernel.org, herbert@gondor.apana.org.au,
+ krzk@kernel.org, linux-rockchip@lists.infradead.org, wens@csie.org,
+ agross@kernel.org, thomas.lendacky@amd.com, alexandre.torgue@st.com,
+ antoine.tenart@bootlin.com, linux-arm-msm@vger.kernel.org, mripard@kernel.org,
  linux-mediatek@lists.infradead.org, lars.persson@axis.com,
  matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org,
  linux-kernel@vger.kernel.org, linux-crypto@vger.kernel.org,
  mcoquelin.stm32@gmail.com, kgene@kernel.org, davem@davemloft.net
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Am Freitag, 2. August 2019, 15:28:06 CEST schrieb YueHaibing:
+Hello,
+
+On Fri, Aug 02, 2019 at 09:28:02PM +0800, YueHaibing wrote:
 > Use devm_platform_ioremap_resource() to simplify the code a bit.
 > This is detected by coccinelle.
-> 
+> =
+
 > Reported-by: Hulk Robot <hulkci@huawei.com>
 > Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 
-looks like nice and simple improvement
-Reviewed-by: Heiko Stuebner <heiko@sntech.de>
+Acked-by: Antoine Tenart <antoine.tenart@bootlin.com>
 
-Thanks
-Heiko
+Thanks,
+Antoine
+
+> ---
+>  drivers/crypto/inside-secure/safexcel.c | 4 +---
+>  1 file changed, 1 insertion(+), 3 deletions(-)
+> =
+
+> diff --git a/drivers/crypto/inside-secure/safexcel.c b/drivers/crypto/ins=
+ide-secure/safexcel.c
+> index d1f60fd..822744d 100644
+> --- a/drivers/crypto/inside-secure/safexcel.c
+> +++ b/drivers/crypto/inside-secure/safexcel.c
+> @@ -999,7 +999,6 @@ static void safexcel_init_register_offsets(struct saf=
+excel_crypto_priv *priv)
+>  static int safexcel_probe(struct platform_device *pdev)
+>  {
+>  	struct device *dev =3D &pdev->dev;
+> -	struct resource *res;
+>  	struct safexcel_crypto_priv *priv;
+>  	int i, ret;
+>  =
+
+> @@ -1015,8 +1014,7 @@ static int safexcel_probe(struct platform_device *p=
+dev)
+>  =
+
+>  	safexcel_init_register_offsets(priv);
+>  =
+
+> -	res =3D platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> -	priv->base =3D devm_ioremap_resource(dev, res);
+> +	priv->base =3D devm_platform_ioremap_resource(pdev, 0);
+>  	if (IS_ERR(priv->base)) {
+>  		dev_err(dev, "failed to get resource\n");
+>  		return PTR_ERR(priv->base);
+> -- =
+
+> 2.7.4
+> =
+
+> =
 
 
+-- =
+
+Antoine T=E9nart, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
 
 _______________________________________________
 Linux-mediatek mailing list
