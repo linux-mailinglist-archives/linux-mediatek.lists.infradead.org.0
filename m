@@ -2,57 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4378C7E0FC
-	for <lists+linux-mediatek@lfdr.de>; Thu,  1 Aug 2019 19:22:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1223C7E78C
+	for <lists+linux-mediatek@lfdr.de>; Fri,  2 Aug 2019 03:36:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
-	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZwfqWptaiOiuJu54EBZwKuZyV8gpPq10QlQnaOSZKpM=; b=S/qGDki0BVvF2T
-	w2CLZiFzDb4sPfP0xj31DmIhJCVllZgHzNVN8p7gjVXDGTA29X0herpf8bYQYSZSVynkezdN/peU2
-	LauJKnF9xFF8pMAPJqXlAQBgglAGegyLIZkdHMYWPXZJBvHklAxg5QUn94n8Yl9BD1QLmM3m0CeBT
-	F4TejN1W8Ais3sRqtdYEpeweYfXPN3gnJsjlgQK4hR2WVxTWtxhc0SGAePiQ8TlOK+VRGFdaqeB57
-	bKhRFUPqRG8W/cSggxXopMAD6fsDVOrX5zuKEu2duQJwzC2boebZTKDXYodnVhnL/fZf06YWWQiME
-	F0wUX+60YqbXnLJwgg/w==;
+	List-Owner; bh=R3F2D+6Zm0NIgRrmNUEWQzOFWTe/Y3oOHW+pE1JHFCo=; b=d+0nRe/jY5O1W5
+	p+NPb+30thYzqAYX+QmDuyIrT8ZSseR8DP43AiV4X+7GPrKuKUIAlLYSL7rR89NU/ABRqNvZ4JJBu
+	tDnTJyKUyTbGoUa1kCw2O++gjL+3fHInMhzGwOJx8SZWlPAX0EdJjrXuZuqsorzMEtFPl2Bndwebb
+	tvfpA7C985cDPmXXvQlbas6yN3TXMVjTUkCLUxq44bjO9Y4EhHKj0r0gKXQgBKSG3isyIrVoPKUDw
+	HCCbIK0bvGkrE+Uj9FdfviD79/0NlMIETky4qsh7y0r1zMBs3JFJP3sBeIoS2rCSEDFVAvDAwRzKZ
+	9u5pN4CeoHebll6UBkaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1htEmv-0004xQ-B4; Thu, 01 Aug 2019 17:22:49 +0000
-Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
+	id 1htMUN-0003Zf-Hm; Fri, 02 Aug 2019 01:36:11 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1htEmr-0004x2-QD
- for linux-mediatek@lists.infradead.org; Thu, 01 Aug 2019 17:22:47 +0000
-Received: from localhost (c-24-22-75-21.hsd1.or.comcast.net [24.22.75.21])
- (using TLSv1 with cipher AES256-SHA (256/256 bits))
- (Client did not present a certificate)
- (Authenticated sender: davem-davemloft)
- by shards.monkeyblade.net (Postfix) with ESMTPSA id 065E0153F53E0;
- Thu,  1 Aug 2019 10:22:44 -0700 (PDT)
-Date: Thu, 01 Aug 2019 13:22:44 -0400 (EDT)
-Message-Id: <20190801.132244.614118963896811192.davem@davemloft.net>
-To: opensource@vdorst.com
-Subject: Re: [PATCH net-next 1/3] net: dsa: mt7530: Convert to PHYLINK API
-From: David Miller <davem@davemloft.net>
-In-Reply-To: <20190801172104.Horde.Cuwt4jywUX_mcO9-n8QpWTN@www.vdorst.com>
-References: <20190724192549.24615-2-opensource@vdorst.com>
- <20190727184828.GT1330@shell.armlinux.org.uk>
- <20190801172104.Horde.Cuwt4jywUX_mcO9-n8QpWTN@www.vdorst.com>
-X-Mailer: Mew version 6.8 on Emacs 26.1
-Mime-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
- (shards.monkeyblade.net [149.20.54.216]);
- Thu, 01 Aug 2019 10:22:45 -0700 (PDT)
+ id 1htMU5-0003KC-TE; Fri, 02 Aug 2019 01:35:55 +0000
+X-UUID: aa595f9cc79d418d959798958be9536f-20190801
+X-UUID: aa595f9cc79d418d959798958be9536f-20190801
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <neal.liu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1536259290; Thu, 01 Aug 2019 17:35:47 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 1 Aug 2019 18:35:45 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 2 Aug 2019 09:35:44 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 2 Aug 2019 09:35:44 +0800
+Message-ID: <1564709744.8481.2.camel@mtkswgap22>
+Subject: Re: [PATCH v4 0/3] MediaTek Security random number generator support
+From: Neal Liu <neal.liu@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Mark Rutland <mark.rutland@arm.com>
+Date: Fri, 2 Aug 2019 09:35:44 +0800
+In-Reply-To: <1563789042.14676.3.camel@mtkswgap22>
+References: <1561361052-13072-1-git-send-email-neal.liu@mediatek.com>
+ <1563789042.14676.3.camel@mtkswgap22>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_102245_853635_DA2C1973 
-X-CRM114-Status: GOOD (  11.20  )
+X-CRM114-CacheID: sfid-20190801_183553_953380_17A2FAA0 
+X-CRM114-Status: GOOD (  14.97  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,81 +72,72 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, f.fainelli@gmail.com, frank-w@public-files.de,
- netdev@vger.kernel.org, sean.wang@mediatek.com, linux-mips@vger.kernel.org,
- linux@armlinux.org.uk, devicetree@vger.kernel.org, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, john@phrozen.org, matthias.bgg@gmail.com,
- vivien.didelot@gmail.com
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Herbert Xu <herbert@gondor.apana.org.au>,
+ wsd_upstream <wsd_upstream@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Crystal Guo =?UTF-8?Q?=28=E9=83=AD=E6=99=B6=29?= <Crystal.Guo@mediatek.com>,
+ "linux-crypto@vger.kernel.org" <linux-crypto@vger.kernel.org>,
+ Matt Mackall <mpm@selenic.com>, Neal Liu <neal.liu@mediatek.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ren=E9 van Dorst <opensource@vdorst.com>
-Date: Thu, 01 Aug 2019 17:21:04 +0000
+Dear Matthias, Rob, Mark,
+	Just gentle ping.
+	Thanks
 
-> Quoting Russell King - ARM Linux admin <linux@armlinux.org.uk>:
-> =
 
->> Hi,
->>
->> Just a couple of minor points.
->>
->> On Wed, Jul 24, 2019 at 09:25:47PM +0200, Ren=E9 van Dorst wrote:
-> =
+> On Mon, 2019-06-24 at 15:24 +0800, Neal Liu wrote:
+> > These patch series introduce a generic rng driver for Trustzone
+> > based kernel driver which would like to communicate with ATF
+> > SIP services.
+> > 
+> > Patch #1 initials SMC fid table for Mediatek SIP interfaces and
+> > adds HWRNG related SMC call.
+> > 
+> > Patch #2..3 adds mtk-sec-rng kernel driver for Trustzone based SoCs.
+> > For MediaTek SoCs on ARMv8 with TrustZone enabled, peripherals like
+> > entropy sources is not accessible from normal world (linux) and
+> > rather accessible from secure world (ATF/TEE) only. This driver aims
+> > to provide a generic interface to ATF rng service.
+> > 
+> > 
+> > changes since v1:
+> > - rename mt67xx-rng to mtk-sec-rng since all MediaTek ARMv8 SoCs
+> > can reuse this driver.
+> > - refine coding style and unnecessary check.
+> > 
+> > changes since v2:
+> > - remove unused comments.
+> > - remove redundant variable.
+> > 
+> > changes since v3:
+> > - add dt-bindings for MediaTek rng with TrustZone enabled
+> > - revise HWRNG SMC call fid
+> > 
+> > 
+> > Neal Liu (3):
+> >   soc: mediatek: add SMC fid table for SIP interface
+> >   dt-bindings: rng: add bindings for MediaTek ARMv8 SoCs
+> >   hwrng: add mtk-sec-rng driver
+> > 
+> >  .../devicetree/bindings/rng/mtk-sec-rng.txt   | 10 ++
+> >  drivers/char/hw_random/Kconfig                | 16 +++
+> >  drivers/char/hw_random/Makefile               |  1 +
+> >  drivers/char/hw_random/mtk-sec-rng.c          | 97 +++++++++++++++++++
+> >  include/linux/soc/mediatek/mtk_sip_svc.h      | 33 +++++++
+> >  5 files changed, 157 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> >  create mode 100644 drivers/char/hw_random/mtk-sec-rng.c
+> >  create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+> > 
+> 
 
-> <snip>
-> =
 
->>> +
->>> +static void mt7530_phylink_validate(struct dsa_switch *ds, int port,
->>> +				    unsigned long *supported,
->>> +				    struct phylink_link_state *state)
->>> +{
->>> +	__ETHTOOL_DECLARE_LINK_MODE_MASK(mask) =3D { 0, };
->>> +
->>> +	switch (port) {
->>> +	case 0: /* Internal phy */
->>> +	case 1:
->>> +	case 2:
->>> +	case 3:
->>> +	case 4:
->>> +		if (state->interface !=3D PHY_INTERFACE_MODE_NA &&
->>> +		    state->interface !=3D PHY_INTERFACE_MODE_GMII)
->>> +			goto unsupported;
->>> +		break;
->>> +	/* case 5: Port 5 not supported! */
->>> +	case 6: /* 1st cpu port */
->>> +		if (state->interface !=3D PHY_INTERFACE_MODE_NA &&
->>> +		    state->interface !=3D PHY_INTERFACE_MODE_RGMII &&
->>> +		    state->interface !=3D PHY_INTERFACE_MODE_TRGMII)
->>> +			goto unsupported;
->>> +		break;
->>> +	default:
->>> +		linkmode_zero(supported);
->>> + dev_err(ds->dev, "%s: unsupported port: %i\n", __func__, port);
->>
->> You could reorder this as:
->>
->> 	default:
->> 		dev_err(ds->dev, "%s: unsupported port: %i\n", __func__, port);
->> 	unsupported:
->> 		linkmode_zero(supported);
->>
-> =
-
-> Hi David,
-> =
-
->> and save having the "unsupported" at the end of the function.  Not
->> sure
->> what DaveM would think of it though.
-> =
-
-> Can you give your option about this?
-> So I know what to do with it and make a new series.
-
-Russell's suggestion is fine.
 
 _______________________________________________
 Linux-mediatek mailing list
