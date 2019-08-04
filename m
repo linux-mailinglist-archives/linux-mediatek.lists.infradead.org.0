@@ -2,53 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08DCF80ACF
-	for <lists+linux-mediatek@lfdr.de>; Sun,  4 Aug 2019 14:05:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8BE080AE5
+	for <lists+linux-mediatek@lfdr.de>; Sun,  4 Aug 2019 14:27:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=onHkSp9ToQqJsdC543dONp+cATFsMSPd4pXuE89GxiQ=; b=FjBw5xne1HAtku
-	koqAoqTldufLkLzynU02v0NjbWvWGlng5srOiIpZonwFh8typ4i1vjJLKJbfVAfbmyA4lUCx57Ud9
-	eOf8rgNRZIPUcXNMXXgGTDNzm0OMBAX3IK95cXLTDY1FGuFTy+9VHU9LOZXXzZsdw8jf8yonXgYDV
-	H7SzZDGT528ujnEd/3IKq0V0nI/QxVFOshrBLCPszSx1fTDrhJTpDNmUB6MuMJwmZ6JayngqP/n2y
-	m3VNIK4F/1SS65o8xvuzjNQ5F8yWc0Nh0UCQaKeELZALaQEMEgtx5sSAn4wm9RAF3MtXkRr+88XY6
-	7eQjBViymrqGxxvsw8xg==;
+	List-Owner; bh=DcXGJHYZ2ediKe7awez91w6E+zldx6l+qdgYQwWm6AM=; b=YHcCqJ3iXFC6qu
+	nVhmzuqTsf+WuLQyJx+iKL+f4Op0/kRT4FSq88Rj4LKOyK5FmPf7HPKd4vq8XTH0FxXgxcCOnwKm2
+	a22yg1ObgzV3Ldy72Jz5nHqgG7MIpVD8s8vKjj5n/Ctq2WWOxgh4oc9Cm+BAMGIrSdFEIs68sNzLA
+	/Z6rufX89b1+McoYepwGXJIo/amiN1vXe+sdRbawWHA/UhZNQ1yb1GDrPcI1O74y1S7EAeMfEGh97
+	bBF+eiFESmez7rkNF4T4OrxzIMQSGwGkb1/02QWBIAuKydAsLH9Dz68ssCWSCI533Dq5lj5DGlb2n
+	9k0YC7TS5YlKd/NyNS1Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1huFFu-0006QF-0L; Sun, 04 Aug 2019 12:04:54 +0000
+	id 1huFbT-0004ib-1N; Sun, 04 Aug 2019 12:27:11 +0000
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1huFFp-0006Pl-Vt; Sun, 04 Aug 2019 12:04:51 +0000
+ id 1huFbP-0004i5-BH; Sun, 04 Aug 2019 12:27:09 +0000
 Received: from pendragon.ideasonboard.com
  (dfj612yhrgyx302h3jwwy-3.rev.dnainternet.fi
  [IPv6:2001:14ba:21f5:5b00:ce28:277f:58d7:3ca4])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 91C9ECC;
- Sun,  4 Aug 2019 14:04:38 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 1F19499B;
+ Sun,  4 Aug 2019 14:27:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1564920278;
- bh=2SwOpdn+JsWJJ3YIUkfnJDRn8tRwvwWSqCNnPU/obLI=;
+ s=mail; t=1564921625;
+ bh=TTcZ5zxHoEJlFyD4sUupeUJV7D7H8MNtMjjpLdb9sFk=;
  h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=e2qrSDC4m+7linuh4U0tX4WoTZLFLbWRikNUExG6T9mFEmXNNOgQ6bdB98G52bGcP
- b1qK/sMG06Mg9KraeCPnsSRfKXGEgIfbHXSwjDSiMkTDA4/z/LMPkVy6upg6msNkM0
- Y/l4WVpFHToSRb14NgmDlrX6OGlG9rTwrzLOXtUM=
-Date: Sun, 4 Aug 2019 15:04:37 +0300
+ b=hLm16nBryxA3xsFc/9Y3E16EUjRZl+9oMozO9kxU25Prw9S8EhS7a2odqbTMoTOjC
+ lv/qqxj0rg0W/AvKF/fZzkBQ62Y3MHSMyYUWiAbUFci7QQd+oTl4e6lrxHCf5RIgEo
+ 4cs5b/9/3DBsjWE9PWxh+Z0K8cBhTOF5coXD/kkM=
+Date: Sun, 4 Aug 2019 15:27:04 +0300
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 Subject: Re: [PATCH v6 01/24] drm: Add ddc link in sysfs created by
  drm_connector
-Message-ID: <20190804120437.GB4984@pendragon.ideasonboard.com>
+Message-ID: <20190804122704.GC4984@pendragon.ideasonboard.com>
 References: <cover.1564161140.git.andrzej.p@collabora.com>
  <d470def6cd661b777faeee67b5838a4623c4010e.1564161140.git.andrzej.p@collabora.com>
+ <20190804120437.GB4984@pendragon.ideasonboard.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <d470def6cd661b777faeee67b5838a4623c4010e.1564161140.git.andrzej.p@collabora.com>
+In-Reply-To: <20190804120437.GB4984@pendragon.ideasonboard.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190804_050450_383954_8E97D28E 
-X-CRM114-Status: GOOD (  23.40  )
+X-CRM114-CacheID: sfid-20190804_052707_682343_307B1A9F 
+X-CRM114-Status: GOOD (  29.23  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -123,118 +124,126 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi Andrzej,
 
-Thank you for the patch, and sorry for the late review (I've been
-travelling for the past few weeks).
-
-On Fri, Jul 26, 2019 at 07:22:55PM +0200, Andrzej Pietrasiewicz wrote:
-> Add generic code which creates symbolic links in sysfs, pointing to ddc
-> interface used by a particular video output. For example:
+On Sun, Aug 04, 2019 at 03:04:37PM +0300, Laurent Pinchart wrote:
+> Hi Andrzej,
 > 
-> ls -l /sys/class/drm/card0-HDMI-A-1/ddc
-> lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
-> 	-> ../../../../soc/13880000.i2c/i2c-2
+> Thank you for the patch, and sorry for the late review (I've been
+> travelling for the past few weeks).
 > 
-> This makes it easy for user to associate a display with its ddc adapter
-> and use e.g. ddcutil to control the chosen monitor.
+> On Fri, Jul 26, 2019 at 07:22:55PM +0200, Andrzej Pietrasiewicz wrote:
+> > Add generic code which creates symbolic links in sysfs, pointing to ddc
+> > interface used by a particular video output. For example:
+> > 
+> > ls -l /sys/class/drm/card0-HDMI-A-1/ddc
+> > lrwxrwxrwx 1 root root 0 Jun 24 10:42 /sys/class/drm/card0-HDMI-A-1/ddc \
+> > 	-> ../../../../soc/13880000.i2c/i2c-2
+> > 
+> > This makes it easy for user to associate a display with its ddc adapter
+> > and use e.g. ddcutil to control the chosen monitor.
+> > 
+> > This patch adds an i2c_adapter pointer to struct drm_connector. Particular
+> > drivers can then use it instead of using their own private instance. If a
+> > connector contains a ddc, then create a symbolic link in sysfs.
+> > 
+> > Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+> > Acked-by: Daniel Vetter <daniel.vetter@ffwll.ch>
+> > Reviewed-by: Andrzej Hajda <a.hajda@samsung.com>
+> > ---
+> >  drivers/gpu/drm/drm_sysfs.c |  8 ++++++++
+> >  include/drm/drm_connector.h | 11 +++++++++++
+> >  2 files changed, 19 insertions(+)
+> > 
+> > diff --git a/drivers/gpu/drm/drm_sysfs.c b/drivers/gpu/drm/drm_sysfs.c
+> > index ad10810bc972..e962a9d45f7e 100644
+> > --- a/drivers/gpu/drm/drm_sysfs.c
+> > +++ b/drivers/gpu/drm/drm_sysfs.c
+> > @@ -14,6 +14,7 @@
+> >  #include <linux/err.h>
+> >  #include <linux/export.h>
+> >  #include <linux/gfp.h>
+> > +#include <linux/i2c.h>
+> >  #include <linux/kdev_t.h>
+> >  #include <linux/slab.h>
+> >  
+> > @@ -294,6 +295,9 @@ int drm_sysfs_connector_add(struct drm_connector *connector)
+> >  	/* Let userspace know we have a new connector */
+> >  	drm_sysfs_hotplug_event(dev);
+> >  
+> > +	if (connector->ddc)
+> > +		return sysfs_create_link(&connector->kdev->kobj,
+> > +				 &connector->ddc->dev.kobj, "ddc");
+> >  	return 0;
+> >  }
+> >  
+> > @@ -301,6 +305,10 @@ void drm_sysfs_connector_remove(struct drm_connector *connector)
+> >  {
+> >  	if (!connector->kdev)
+> >  		return;
+> > +
+> > +	if (connector->ddc)
+> > +		sysfs_remove_link(&connector->kdev->kobj, "ddc");
+> > +
+> >  	DRM_DEBUG("removing \"%s\" from sysfs\n",
+> >  		  connector->name);
+> >  
+> > diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
+> > index 4c30d751487a..33a6fff85fdb 100644
+> > --- a/include/drm/drm_connector.h
+> > +++ b/include/drm/drm_connector.h
+> > @@ -41,6 +41,7 @@ struct drm_property;
+> >  struct drm_property_blob;
+> >  struct drm_printer;
+> >  struct edid;
+> > +struct i2c_adapter;
+> >  
+> >  enum drm_connector_force {
+> >  	DRM_FORCE_UNSPECIFIED,
+> > @@ -1311,6 +1312,16 @@ struct drm_connector {
+> >  	 * [0]: progressive, [1]: interlaced
+> >  	 */
+> >  	int audio_latency[2];
+> > +
+> > +	/**
+> > +	 * @ddc: associated ddc adapter.
+> > +	 * A connector usually has its associated ddc adapter. If a driver uses
+> > +	 * this field, then an appropriate symbolic link is created in connector
+> > +	 * sysfs directory to make it easy for the user to tell which i2c
+> > +	 * adapter is for a particular display.
 > 
-> This patch adds an i2c_adapter pointer to struct drm_connector. Particular
-> drivers can then use it instead of using their own private instance. If a
-> connector contains a ddc, then create a symbolic link in sysfs.
+> The first sentence isn't very clear. The rest is mixing "ddc adapter"
+> and "i2c adapter". How about the following ?
 > 
-> Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
-> Acked-by: Daniel Vetter <daniel.vetter@ffwll.ch>
-> Reviewed-by: Andrzej Hajda <a.hajda@samsung.com>
-> ---
->  drivers/gpu/drm/drm_sysfs.c |  8 ++++++++
->  include/drm/drm_connector.h | 11 +++++++++++
->  2 files changed, 19 insertions(+)
+> "When the connector carries DDC signals, this field points to the I2C
+> adapter connected to the DDC signals, if any. When this field is not
+> NULL a symbolic link is created in the connector's sysfs directory to
+> expose the I2C adapter used by the connector."
 > 
-> diff --git a/drivers/gpu/drm/drm_sysfs.c b/drivers/gpu/drm/drm_sysfs.c
-> index ad10810bc972..e962a9d45f7e 100644
-> --- a/drivers/gpu/drm/drm_sysfs.c
-> +++ b/drivers/gpu/drm/drm_sysfs.c
-> @@ -14,6 +14,7 @@
->  #include <linux/err.h>
->  #include <linux/export.h>
->  #include <linux/gfp.h>
-> +#include <linux/i2c.h>
->  #include <linux/kdev_t.h>
->  #include <linux/slab.h>
->  
-> @@ -294,6 +295,9 @@ int drm_sysfs_connector_add(struct drm_connector *connector)
->  	/* Let userspace know we have a new connector */
->  	drm_sysfs_hotplug_event(dev);
->  
-> +	if (connector->ddc)
-> +		return sysfs_create_link(&connector->kdev->kobj,
-> +				 &connector->ddc->dev.kobj, "ddc");
->  	return 0;
->  }
->  
-> @@ -301,6 +305,10 @@ void drm_sysfs_connector_remove(struct drm_connector *connector)
->  {
->  	if (!connector->kdev)
->  		return;
-> +
-> +	if (connector->ddc)
-> +		sysfs_remove_link(&connector->kdev->kobj, "ddc");
-> +
->  	DRM_DEBUG("removing \"%s\" from sysfs\n",
->  		  connector->name);
->  
-> diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-> index 4c30d751487a..33a6fff85fdb 100644
-> --- a/include/drm/drm_connector.h
-> +++ b/include/drm/drm_connector.h
-> @@ -41,6 +41,7 @@ struct drm_property;
->  struct drm_property_blob;
->  struct drm_printer;
->  struct edid;
-> +struct i2c_adapter;
->  
->  enum drm_connector_force {
->  	DRM_FORCE_UNSPECIFIED,
-> @@ -1311,6 +1312,16 @@ struct drm_connector {
->  	 * [0]: progressive, [1]: interlaced
->  	 */
->  	int audio_latency[2];
-> +
-> +	/**
-> +	 * @ddc: associated ddc adapter.
-> +	 * A connector usually has its associated ddc adapter. If a driver uses
-> +	 * this field, then an appropriate symbolic link is created in connector
-> +	 * sysfs directory to make it easy for the user to tell which i2c
-> +	 * adapter is for a particular display.
+> Should we also mention that the field isn't meant to be set directly,
+> but shall be set with drm_connector_init_with_ddc() ?
+> 
+> "This field shall not be set directly by drivers, use
+> drm_connector_init_with_ddc() instead."
 
-The first sentence isn't very clear. The rest is mixing "ddc adapter"
-and "i2c adapter". How about the following ?
+I should have read patch 02/24 before answering this :-)
 
-"When the connector carries DDC signals, this field points to the I2C
-adapter connected to the DDC signals, if any. When this field is not
-NULL a symbolic link is created in the connector's sysfs directory to
-expose the I2C adapter used by the connector."
+> I'm also slightly concerned about the lifetime of this pointer, and what
+> would happen if the I2C adapter disappears while the connector is still
+> exposed to userspace, but I suppose this isn't a new issue, existing
+> code likely suffers from this.
+> 
+> With the updated documentation,
+> 
+> Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
-Should we also mention that the field isn't meant to be set directly,
-but shall be set with drm_connector_init_with_ddc() ?
+I've just realised that this patch has been applied already. I'll send
+the above as a documentation update patch.
 
-"This field shall not be set directly by drivers, use
-drm_connector_init_with_ddc() instead."
-
-I'm also slightly concerned about the lifetime of this pointer, and what
-would happen if the I2C adapter disappears while the connector is still
-exposed to userspace, but I suppose this isn't a new issue, existing
-code likely suffers from this.
-
-With the updated documentation,
-
-Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-
-> +	 */
-> +	struct i2c_adapter *ddc;
-> +
->  	/**
->  	 * @null_edid_counter: track sinks that give us all zeros for the EDID.
->  	 * Needed to workaround some HW bugs where we get all 0s
+> > +	 */
+> > +	struct i2c_adapter *ddc;
+> > +
+> >  	/**
+> >  	 * @null_edid_counter: track sinks that give us all zeros for the EDID.
+> >  	 * Needed to workaround some HW bugs where we get all 0s
 
 -- 
 Regards,
