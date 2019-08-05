@@ -2,75 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 945578168B
-	for <lists+linux-mediatek@lfdr.de>; Mon,  5 Aug 2019 12:11:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8CCC681719
+	for <lists+linux-mediatek@lfdr.de>; Mon,  5 Aug 2019 12:32:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HUbrtKYCVK3TrD3nx+LN5IjW1/IALCUYmcER1Dlj/mI=; b=uNJ2+JzSrs0Nbk
-	JGor9fmdozCEFJ6Bda1hebBBdtTo8h+xNDPhurjxz8JhgzKfka7CoDUWlJnLSbtOZFwIC4L/RYw+Z
-	Rsu8JDl7q+2C9Pn1nXEczov2Q+bdkUyYaStN57DUzZxYtwpHhCNrOjkM2MVzw0nz+LOPPFKN3MvYY
-	nvX1x959/JB6ogjHsdUmgRwX8rMfUpG9rdyXVJbGrK19DiEGIKlokE1Iny5aLb4hIDc3HeDKX0Wte
-	ti78gY9Tl9zvXm/YQCROrYWxsXTcEImqan3is8TcFiMpv2/W3Jo5+qoQ5qtWkax16+gbsy7S0VrGq
-	dN8yxq0rV3/qL3n6z4Og==;
+	List-Owner; bh=DDdsL/bvGNb3RMjf5WZNYEgk4ir7XoaAj70eFF14AiI=; b=V/nwT9xA9Djlv+
+	eGM3sEo7lr+yhBZtC5+sKX8y8Wp+2EEY2Ln1ICcJyNtvnNvTR0JQf4TBhpJSAHe8n37EJCG6N0Hg5
+	bGBU22avJpFWdeXwMRmo4oWIYZoGwTh488nVdDWo2AGEycN7dUSAWy5kwlS+r52o72QIdadQzNhxZ
+	Ig64y8Iv7wKOVY35iZuYkqBS7ikU8e3d9c4h7zuBHtLULyQwDLQmdB7BeAK3r5U0rYujQUQycZULh
+	Tm1vb5yaSuLwFmCh2pzjYXklViIkHWkt6SHSZHeHFvle0XhqHrTJLVxBG7YhrSnEhKmgj9/PMCYDn
+	sSzsG+06TXkcfGdwBq/g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1huZxA-0001kv-Jx; Mon, 05 Aug 2019 10:10:56 +0000
-Received: from mail-lf1-x142.google.com ([2a00:1450:4864:20::142])
+	id 1huaHx-0003FQ-3d; Mon, 05 Aug 2019 10:32:25 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1huZx7-0001k9-EA
- for linux-mediatek@lists.infradead.org; Mon, 05 Aug 2019 10:10:54 +0000
-Received: by mail-lf1-x142.google.com with SMTP id v16so3603503lfg.11
- for <linux-mediatek@lists.infradead.org>; Mon, 05 Aug 2019 03:10:53 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ id 1huaHd-0002zW-Bj
+ for linux-mediatek@lists.infradead.org; Mon, 05 Aug 2019 10:32:08 +0000
+Received: by mail-ed1-x542.google.com with SMTP id d4so78219278edr.13
+ for <linux-mediatek@lists.infradead.org>; Mon, 05 Aug 2019 03:32:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=38PNBCxR8E/gwN5SobPXrhNr+MV57GD7N/MEMGkZI8M=;
- b=i+KWdtoyatpzpphFY2WaJrES1l5iH+km4ZzYvw9Pj8U6cQ9EV8MJo50y2rFheh0sQf
- If1EUHTnLQYMu1Ufh+wue461SW1p3twp+YJYSThodXvheiQUsdX1L8q7rXNN2TVo0+3B
- AKc9XtG1SJ9qwu3cUsAOEB0/PEAlpEV0pI3GTyAtzv0nfOLW4nFFD7clhV75F/w+aNzw
- 5Au5ijk2hYONfmLVa0NPleuXW4f9ejdIYsinAsw4Q3fUPuxVvWzGPkZjRvrNsqnWdOJV
- NxZUss8V+kueLKH5812GcCc8+NKYiY0vtDZRGWS4hLJ3JfWGkDXuNt2TcdfZM9DVT3R7
- j+mQ==
+ :cc; bh=2t8NpBMFz+vZWj7uMv0mNnSRA2UuSvBBLYkX3l+9iFg=;
+ b=OlUQn9n1XfLu7teP0KKGlghRXxE6YfdgOYBt+po0ODAQAZtrX33RsFC7JrwnExa8cL
+ MSNWxapbzgtY/jV/tmPXt03VuurAMp7FYIh6dN5w7vOK4bqXapuRztsQMw4XbnFxCq5j
+ qi6USnwHuwJmQK4LdK0w4JDAEpdOA4Bo7Sw3s=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=38PNBCxR8E/gwN5SobPXrhNr+MV57GD7N/MEMGkZI8M=;
- b=idoEZaTQCi/scsTOM6UfvJIv8b7a+iyUBSuIZdtD90R4KYxSMK54ZIBJf/sZ/wSkdm
- 8DUWtYERTzwErQ3l9bQ6BdDhcFFVX5SnBmBLJaMNwCuXT2C3+moeE/uDaCt4HW5ivR5E
- 41WlZH+6bx91gwwUZPExhuv30Jg+f+Kmi9UGYpYf7A4sIBB2rmvoDgNtynGMhDEbpy65
- k4WDs5tmReIvhwSsoK/pkVUML6w7Q4hsftGu7SIVPoTxYT/eCL1cHyoqEcP7HrnE5Ok+
- tujtOVz0nIrkA7ZRqtjbAs/sD/T7GsRP4IVNVpPj7Q6U39+fGcyL3IPgCmiS/u+Y8Ea5
- pKbQ==
-X-Gm-Message-State: APjAAAXuCbAjNJxLfVYFBO4dkoA3xDn7fD+mleuuJ9MoDeVAkaQwyWeq
- 6OP7sRLm19mTZmLzJWFDkFgxLI1692CjpYmIHth2tw==
-X-Google-Smtp-Source: APXvYqxusHjcjpDv1JZyVr5ijdjJU9V1dMWbb6Wlipx267US9qZGpWDr37CqWIealFc9Ew2Cd3rGlJafBijXpEfIUBo=
-X-Received: by 2002:ac2:5382:: with SMTP id g2mr68758068lfh.92.1564999852084; 
- Mon, 05 Aug 2019 03:10:52 -0700 (PDT)
+ bh=2t8NpBMFz+vZWj7uMv0mNnSRA2UuSvBBLYkX3l+9iFg=;
+ b=sllZHPCMtXkMebBUO0WUOxHgu/Y8+g6AK1hPGjExenemfvfmmoAlmmAIE2bZPyEWSY
+ 0hqsbdX8zchlyN/WHpTGlJzuY+Jg7VrB0VzpNHZtpZ0+wYH5JMssaewDi/8KlIPZewCI
+ afr6Y+9X97TWZQRSJ8/igXyQngp8gd7FHy9ZfY4Vvgc8O0gJUcA90Sl/xKvgG/aDyhek
+ jV9eQf1lsIdHnmeQ7ZmZbozRvEE+bB1Ad5XRaIAcrkqbiSxe3h7PIhsOaGZCJ/un9OI/
+ dofBXgTiXQAJMnGWqfdCyLDlLCPsjDSqJWpui4qd6Lkq0syKQ/VtzCAL/pGf2tqut1/R
+ SomA==
+X-Gm-Message-State: APjAAAXMovr5V81OfD/SBOwmmX3zDj2tbLu7aYMMbYNk5CFQLebyN4PG
+ OXYtP185SMYke+2Yx/qF+PYKXGdXleDnCdj7GfN5h3cyGY4=
+X-Google-Smtp-Source: APXvYqzAn+oC3iie4UJoTUwTGxe/UPUNm7dP1YnY1Jv/HqewkbGk9qXU4qTnKQnQjKvN1dc2A2il3n7AnKDHmWIRPmg=
+X-Received: by 2002:a17:906:644c:: with SMTP id
+ l12mr112559234ejn.142.1565001123236; 
+ Mon, 05 Aug 2019 03:32:03 -0700 (PDT)
 MIME-Version: 1.0
-References: <1563958245-6321-1-git-send-email-chunfeng.yun@mediatek.com>
- <1563958245-6321-11-git-send-email-chunfeng.yun@mediatek.com>
-In-Reply-To: <1563958245-6321-11-git-send-email-chunfeng.yun@mediatek.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Mon, 5 Aug 2019 12:10:40 +0200
-Message-ID: <CACRpkdbq1rEpTm3Lqqb11WrKumV7bjUancuu-u2Ow0PQsCoLsg@mail.gmail.com>
-Subject: Re: [PATCH v8 10/11] usb: common: add USB GPIO based connection
- detection driver
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+References: <20190709072547.217957-1-pihsun@chromium.org>
+ <20190709072547.217957-3-pihsun@chromium.org>
+ <CAPBb6MUsKYsG2qYFsj8DhtAWipRw887nk_gi68Gt+DcuHzApgw@mail.gmail.com>
+In-Reply-To: <CAPBb6MUsKYsG2qYFsj8DhtAWipRw887nk_gi68Gt+DcuHzApgw@mail.gmail.com>
+From: Pi-Hsun Shih <pihsun@chromium.org>
+Date: Mon, 5 Aug 2019 18:31:26 +0800
+Message-ID: <CANdKZ0cb8OZVjOb9j7ivCCs3afXgshFWgrYkkZJOrGkHNWcEPg@mail.gmail.com>
+Subject: Re: [PATCH v13 2/5] remoteproc/mediatek: add SCP support for mt8183
+To: Alexandre Courbot <acourbot@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_031053_475880_3FD93C00 
-X-CRM114-Status: UNSURE (   9.11  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190805_033205_427185_B1CED2AC 
+X-CRM114-Status: GOOD (  17.33  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:142 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -81,6 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,43 +90,102 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>,
- Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-usb <linux-usb@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
- Andy Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+Cc: Ohad Ben-Cohen <ohad@wizery.com>, Nicolas Boichat <drinkcat@chromium.org>,
+ Erin Lo <erin.lo@mediatek.com>,
+ "open list:REMOTE PROCESSOR REMOTEPROC SUBSYSTEM"
+ <linux-remoteproc@vger.kernel.org>, open list <linux-kernel@vger.kernel.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Min Guo <min.guo@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>, Li Jun <jun.li@nxp.com>
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Jul 24, 2019 at 10:51 AM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
+Thanks for the review. I'll address most of the comments in the next version.
 
-> Due to the requirement of usb-connector.txt binding, the old way
-> using extcon to support USB Dual-Role switch is now deprecated
-> when use Type-B connector.
-> This patch introduces a driver of Type-B connector which typically
-> uses an input GPIO to detect USB ID pin, and try to replace the
-> function provided by extcon-usb-gpio driver
+On Mon, Jul 22, 2019 at 5:37 PM Alexandre Courbot <acourbot@chromium.org> wrote:
 >
-> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> Tested-by: Nagarjuna Kristam <nkristam@nvidia.com>
-> ---
-> v8 changes:
+> Hi Pi-Hsun,
+>
+> On Tue, Jul 9, 2019 at 4:27 PM Pi-Hsun Shih <pihsun@chromium.org> wrote:
+> > +static void *scp_da_to_va(struct rproc *rproc, u64 da, int len)
+> > +{
+> > +       struct mtk_scp *scp = (struct mtk_scp *)rproc->priv;
+> > +       int offset;
+> > +
+> > +       if (da < scp->sram_size) {
+> > +               offset = da;
+> > +               if (offset >= 0 && ((offset + len) < scp->sram_size))
+> > +                       return (__force void *)(scp->sram_base + offset);
+> > +       } else if (da >= scp->sram_size &&
+> > +                  da < (scp->sram_size + MAX_CODE_SIZE)) {
+> > +               offset = da;
+>
+> This line looks suspicious. Shouldn't it be
+>
+>     offset = da - scp->sram_size?
+>
 
-Reviewed-by: Linus Walleij <linus.walleij@linaro.org>
+Actually the whole "else if (...)" is not used. Would remove this in
+next version.
 
-Yours,
-Linus Walleij
+> > +
+> > +/*
+> > + * Copy src to dst, where dst is in SCP SRAM region.
+> > + * Since AP access of SCP SRAM don't support byte write, this always write a
+> > + * full word at a time, and may cause some extra bytes to be written at the
+> > + * beginning & ending of dst.
+> > + */
+> > +void scp_memcpy_aligned(void *dst, const void *src, unsigned int len)
+> > +{
+> > +       void *ptr;
+> > +       u32 val;
+> > +       unsigned int i = 0;
+> > +
+> > +       if (!IS_ALIGNED((unsigned long)dst, 4)) {
+> > +               ptr = (void *)ALIGN_DOWN((unsigned long)dst, 4);
+> > +               i = 4 - (dst - ptr);
+> > +               val = readl_relaxed(ptr);
+> > +               memcpy((u8 *)&val + (4 - i), src, i);
+> > +               writel_relaxed(val, ptr);
+> > +       }
+> > +
+> > +       while (i + 4 <= len) {
+> > +               val = *((u32 *)(src + i));
+> > +               writel_relaxed(val, dst + i);
+>
+> If dst is not aligned to 4, this is going to write to an address that
+> is not a multiple of 4, even though it writes a long. Is this ok?
+> Typically limitations in write size come with alignment limitations.
+>
+
+If dst is not aligned to 4, the first if (!IS_ALIGNED(...)) block
+should make that the (dst + i) is a multiple of 4, so the write here
+is aligned.
+
+> > +               i += 4;
+> > +       }
+> > +       if (i < len) {
+> > +               val = readl_relaxed(dst + i);
+> > +               memcpy(&val, src + i, len - i);
+> > +               writel_relaxed(val, dst + i);
+> > +       }
+> > +}
+> > +EXPORT_SYMBOL_GPL(scp_memcpy_aligned);
+>
+> IIUC this function's symbol does not need to be exported since it is
+> only used in the current kernel module.
+>
+
+I've tried to remove this EXPORT line, but then there would be error
+while compiling:
+ERROR: "scp_memcpy_aligned" [drivers/remoteproc/mtk_scp.ko] undefined!
+I think it's because the mtk_scp.c and mtk_scp_ipi.c both use the
+scp_memcpy_aligned, but is compiled as separate .o files. So the
+EXPORT_SYMBOL is needed.
 
 _______________________________________________
 Linux-mediatek mailing list
