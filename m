@@ -2,55 +2,101 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9BE8C836A5
-	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 18:25:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 11D5F836BF
+	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 18:29:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QAiopXq14PrJpoosTwpfoapMLXDHFCQ1tD6Geh+MnBc=; b=k0JnsvQvW8JJY8
-	ewOLS3TZxwv8OrUojtCOf/7tLD34jFClGO/ZoNTfWZZrc6HMX7JITl1GmJDLITlQMa1SkKAHbpjea
-	gYuGQSkzkU82lw0ZSbYCrnd+hYBULF2ql58yx7XyQdkQ85qe/S2ql14at/zaHezzbU+DBj1Fi4yte
-	J7nN+9fxvl24OIjiFobm+r155iR/WIpqGfBV5YWDzIhW8PLpZQdn3Tpa6YcfTkTfYGnnHlgFS+830
-	Yg+KYKuE3Ou2LwPbxZF1eN4tfAAvGKiCNVx3oO8VMy33d6riCsdFdJ4sregceYySYrWdvyNNsBtPS
-	yYhgSZCkw6LS2LIuzANA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=7IY81CzUb0oeH94Uapr4wnF5kvWEQczclsyS6saChz4=; b=dzMA94AQxpH4hClhR2vb5K2IQy
+	rStCHHsAuRCE/CrtZwTpBt3Ki3mKgGs25gxpwGNpZzEtz7bTduQ2ogQvf6Nklz6o+y9BA6sD1gXQX
+	+sycnQfjlLAD1nEA73/iv3qRYdjH9VtKLzg9ON77KoWhakOHQzvmHLKOZTy1DDOcIu1qVSqEk2Gfg
+	bGxELgUj9FKr0aThghHoBGAOj8c6b7J5CASoF/e+MzN/7Fpw79Yw49TUm9JEsBUUXM7/MD98P7ZIg
+	rcnb5N+1QnoMhkwxRu573Xx54p2+QfJXSfKKUjYIJ8DrjHPuj6611rTzmYh7BWJ3as2QnzsNo/ApD
+	ltvNKmNw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hv2Gm-0006pO-UJ; Tue, 06 Aug 2019 16:25:05 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hv2GY-0006VJ-Fr; Tue, 06 Aug 2019 16:24:52 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id A3A38344;
- Tue,  6 Aug 2019 09:24:49 -0700 (PDT)
-Received: from e121166-lin.cambridge.arm.com (unknown [10.1.196.255])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 19C013F575;
- Tue,  6 Aug 2019 09:24:47 -0700 (PDT)
-Date: Tue, 6 Aug 2019 17:24:39 +0100
-From: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-To: Jianjun Wang <jianjun.wang@mediatek.com>,
- Bjorn Helgaas <bhelgaas@google.com>
-Subject: Re: [v2,2/2] PCI: mediatek: Add controller support for MT7629
-Message-ID: <20190806162432.GA15498@e121166-lin.cambridge.arm.com>
-References: <20190628073425.25165-1-jianjun.wang@mediatek.com>
- <20190628073425.25165-3-jianjun.wang@mediatek.com>
- <1564385918.17211.6.camel@mhfsdcap03>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1564385918.17211.6.camel@mhfsdcap03>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+	id 1hv2Kh-0000gy-5n; Tue, 06 Aug 2019 16:29:07 +0000
+Received: from mout.gmx.net ([212.227.17.20])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hv2KT-0000Ta-Ia; Tue, 06 Aug 2019 16:28:55 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1565108888;
+ bh=HzEHIxIKYm6KPLL0JPFew9mFnKGyvVsgusVw6nRHTTw=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+ b=S+FiRh76N9kjTLJHbv400S0ijDXh2zkWxH5w5CLk030WIBkRI06GV8ukh3RO0ol64
+ YBYy/K7BYNGLXIk4f6J802F9eai4Y6/ikli5H8+0yxkUxmQTSWK2buGWhmUSEpVIU3
+ qb32jY7S6ebeUhWIXNfwOsWgIsO1m8GTapkJI3Ig=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from localhost.localdomain ([217.61.153.94]) by mail.gmx.com
+ (mrgmx103 [212.227.17.168]) with ESMTPSA (Nemesis) id
+ 0MMkgl-1hycgK36Ct-008YWc; Tue, 06 Aug 2019 18:28:08 +0200
+From: Frank Wunderlich <frank-w@public-files.de>
+To: Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ Allison Randal <allison@lohutok.net>,
+ "David S. Miller" <davem@davemloft.net>, devicetree@vger.kernel.org,
+ Eddie Huang <eddie.huang@mediatek.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Kate Stewart <kstewart@linuxfoundation.org>,
+ Lee Jones <lee.jones@linaro.org>, linux-arm-kernel@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-pm@vger.kernel.org, linux-rtc@vger.kernel.org,
+ Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>,
+ Richard Fontana <rfontana@redhat.com>, Rob Herring <robh+dt@kernel.org>,
+ Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
+ Thomas Gleixner <tglx@linutronix.de>,
+ "Tianping . Fang" <tianping.fang@mediatek.com>
+Subject: [PATCH v4 03/10] rtc: mt6397: move some common definitions into rtc.h
+Date: Tue,  6 Aug 2019 18:27:38 +0200
+Message-Id: <20190806162745.8414-4-frank-w@public-files.de>
+X-Mailer: git-send-email 2.17.1
+In-Reply-To: <20190806162745.8414-1-frank-w@public-files.de>
+References: <20190806162745.8414-1-frank-w@public-files.de>
+X-Provags-ID: V03:K1:u9hdvNiTHJABtB4jUq16WoTMdaMAfx9o4ccbdvchDpyvkEG5xf/
+ RNkuAZBPOx/Ddf7gtrBUcv2FiFU+MmFN46QBEnpkNfei3idXzfMaDVp0L17g/wQdJuCx5ix
+ hzU2kWnFpbiwgiDDa8F9HIgDKbxWWpB9nY0pDRoPPrfRo+EFiih5VPQ+LNxL96k8/AryIra
+ BuE+fOnKU++LTNRtQfUtA==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:cMUz6x+Gsec=:eEPPRAYpOPjYGPdy4lEqJg
+ YKfxGrOEh+0c/i4LKTG6X3aiqybpgwtA1h7e9rp2uP3Wd3mK3XNAVmlzF0oqL2IVGBGfVCs41
+ /kEWgjmAyxaZbP+KCUP5NhsWhyMysyTdeTaRDRy3RrB/pCy4hUSeerb21H8wi2/8eLJCxD0Wd
+ QKdi6P5YLA5E16EY3ReI3i3EJ7pffskC9iCnCUZCnHqqma20B/VgonSyLeEEEvBafKhw+U+OR
+ +NPyg7YzrjXTN/5Xx8aL047QaUAlxwfbYsiXApyZEtqTuSRA6VJ8dA0a2OM97PJUdCEJ8mP1B
+ NUdTJ7IdqAWHy/vdFpHE2Si0V885aHceu6R5edSHQ+FpqKuzR/Y4xbhTctTwOu1D6n5mnYpXx
+ j+XoBqJGGLQfOzxns1nM8V+MYMtGjeq3yWn1rzXyACrqaMm3Eq0SYUvErsJbVfJfGmXzTifiz
+ ueUB/HTsMzkOkfCYN5WJDuZhPl7WNg/bqQd2cxeR5w1bZSfBR1E4W6ZDfIKVsRvXWjH+8QtoN
+ vaou6TupBywkEDMXGLg+46gOOniLxZBjCA+Y0g42D5sUcqb0XvOjvwkFKn4Z6o0T3mwmQhU6d
+ 1fv4/SMxvmiTvQ6tPBa/TdX0sNsQtLGWRcmxm0GaQnGY/pGim/AtFVirjObFXPz007oNe9sqW
+ UOSDDjACW5EMiiwLYyW3CnORQ3BfEhrlLAZDkf7DY9mhhjYspr1k4XvX4YGtzJMk9s4/gW4ro
+ Ws5hWSMKYo+Ofj6mu1hMLjQrO6eA5DTGleh1N1PnpyiXXCwFvJEJ0Gs3uuPMlT6t6TBH1rZzQ
+ UdYysD7xZ2jCE05v3oITyhxoFVxIByYsLWzWspKiu7x55BD+PBps65he/4nuB/1KBH04VDMGM
+ xGJ5CcEGogagIse3Agzw7Cubv2TqY0c2LY38vX/0/bZrpRgaVEaE/7uYodsX3TLWo29XQukKo
+ BxAe3FDp7ZW5OGjLDZhH5ROWMA5LSingpR/45TylfuA/R88cfv8HVSvx7Uh7Zd6rYyEuN2FXT
+ FAlyO2Qymn/B51JAM8+byz6qN9xW6Ee8+eGc625/E0Cd8DejuinuSHwlonGTa1q9e0f5t/0dQ
+ slNfV5m+FZL9gere6jpwZDdeCDuhrjjsT2G3mXfTJ2mGNp+EXOps1wYjQ==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190806_092450_957958_56D1E476 
-X-CRM114-Status: GOOD (  22.12  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190806_092853_926071_90F73ADB 
+X-CRM114-Status: GOOD (  12.43  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [212.227.17.20 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,115 +108,177 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, linux-pci@vger.kernel.org,
- youlin.pei@mediatek.com, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Josef Friedl <josef.friedl@speed.at>,
+ Frank Wunderlich <frank-w@public-files.de>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-[trim the CC list please to keep only required maintainers]
+From: Josef Friedl <josef.friedl@speed.at>
 
-On Mon, Jul 29, 2019 at 03:38:38PM +0800, Jianjun Wang wrote:
-> On Fri, 2019-06-28 at 15:34 +0800, Jianjun Wang wrote:
-> > MT7629 is an ARM platform SoC which has the same PCIe IP with MT7622.
-> > 
-> > The HW default value of its Device ID is invalid, fix its Device ID to
-> > match the hardware implementation.
-> > 
-> > Acked-by: Ryder Lee <ryder.lee@mediatek.com>
-> > Signed-off-by: Jianjun Wang <jianjun.wang@mediatek.com>
-> > ---
-> >  drivers/pci/controller/pcie-mediatek.c | 18 ++++++++++++++++++
-> >  include/linux/pci_ids.h                |  1 +
-> >  2 files changed, 19 insertions(+)
-> > 
-> > diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
-> > index 80601e1b939e..e5e6740b635d 100644
-> > --- a/drivers/pci/controller/pcie-mediatek.c
-> > +++ b/drivers/pci/controller/pcie-mediatek.c
-> > @@ -73,6 +73,7 @@
-> >  #define PCIE_MSI_VECTOR		0x0c0
-> >  
-> >  #define PCIE_CONF_VEND_ID	0x100
-> > +#define PCIE_CONF_DEVICE_ID	0x102
-> >  #define PCIE_CONF_CLASS_ID	0x106
-> >  
-> >  #define PCIE_INT_MASK		0x420
-> > @@ -141,12 +142,16 @@ struct mtk_pcie_port;
-> >  /**
-> >   * struct mtk_pcie_soc - differentiate between host generations
-> >   * @need_fix_class_id: whether this host's class ID needed to be fixed or not
-> > + * @need_fix_device_id: whether this host's Device ID needed to be fixed or not
-> > + * @device_id: Device ID which this host need to be fixed
-> >   * @ops: pointer to configuration access functions
-> >   * @startup: pointer to controller setting functions
-> >   * @setup_irq: pointer to initialize IRQ functions
-> >   */
-> >  struct mtk_pcie_soc {
-> >  	bool need_fix_class_id;
-> > +	bool need_fix_device_id;
-> > +	unsigned int device_id;
-> >  	struct pci_ops *ops;
-> >  	int (*startup)(struct mtk_pcie_port *port);
-> >  	int (*setup_irq)(struct mtk_pcie_port *port, struct device_node *node);
-> > @@ -696,6 +701,9 @@ static int mtk_pcie_startup_port_v2(struct mtk_pcie_port *port)
-> >  		writew(val, port->base + PCIE_CONF_CLASS_ID);
-> >  	}
-> >  
-> > +	if (soc->need_fix_device_id)
-> > +		writew(soc->device_id, port->base + PCIE_CONF_DEVICE_ID);
-> > +
-> >  	/* 100ms timeout value should be enough for Gen1/2 training */
-> >  	err = readl_poll_timeout(port->base + PCIE_LINK_STATUS_V2, val,
-> >  				 !!(val & PCIE_PORT_LINKUP_V2), 20,
-> > @@ -1216,11 +1224,21 @@ static const struct mtk_pcie_soc mtk_pcie_soc_mt7622 = {
-> >  	.setup_irq = mtk_pcie_setup_irq,
-> >  };
-> >  
-> > +static const struct mtk_pcie_soc mtk_pcie_soc_mt7629 = {
-> > +	.need_fix_class_id = true,
-> > +	.need_fix_device_id = true,
-> > +	.device_id = PCI_DEVICE_ID_MEDIATEK_7629,
-> > +	.ops = &mtk_pcie_ops_v2,
-> > +	.startup = mtk_pcie_startup_port_v2,
-> > +	.setup_irq = mtk_pcie_setup_irq,
-> > +};
-> > +
-> >  static const struct of_device_id mtk_pcie_ids[] = {
-> >  	{ .compatible = "mediatek,mt2701-pcie", .data = &mtk_pcie_soc_v1 },
-> >  	{ .compatible = "mediatek,mt7623-pcie", .data = &mtk_pcie_soc_v1 },
-> >  	{ .compatible = "mediatek,mt2712-pcie", .data = &mtk_pcie_soc_mt2712 },
-> >  	{ .compatible = "mediatek,mt7622-pcie", .data = &mtk_pcie_soc_mt7622 },
-> > +	{ .compatible = "mediatek,mt7629-pcie", .data = &mtk_pcie_soc_mt7629 },
-> >  	{},
-> >  };
-> >  
-> > diff --git a/include/linux/pci_ids.h b/include/linux/pci_ids.h
-> > index 70e86148cb1e..aa32962759b2 100644
-> > --- a/include/linux/pci_ids.h
-> > +++ b/include/linux/pci_ids.h
-> > @@ -2131,6 +2131,7 @@
-> >  #define PCI_VENDOR_ID_MYRICOM		0x14c1
-> >  
-> >  #define PCI_VENDOR_ID_MEDIATEK		0x14c3
-> > +#define PCI_DEVICE_ID_MEDIATEK_7629	0x7629
-> >  
-> >  #define PCI_VENDOR_ID_TITAN		0x14D2
-> >  #define PCI_DEVICE_ID_TITAN_010L	0x8001
-> 
-> Hi Bjorn & Lorenzo,
-> 
-> Is this patch ok or is there anything I need to fixed?
+move code to separate header-file to reuse definitions later
+in poweroff-driver (drivers/power/reset/mt6323-poweroff.c)
 
-The commit log need to be fixed and I will do it, the code if
-Bjorn is OK with it I can merge it.
+Suggested-by: Frank Wunderlich <frank-w@public-files.de>
+Signed-off-by: Josef Friedl <josef.friedl@speed.at>
+Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
+---
+changes since v3: none
+changes since v2: add missing commit-message
 
-Lorenzo
+ drivers/rtc/rtc-mt6397.c       | 55 +-------------------------
+ include/linux/mfd/mt6397/rtc.h | 71 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 72 insertions(+), 54 deletions(-)
+ create mode 100644 include/linux/mfd/mt6397/rtc.h
+
+diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
+index b46ed4dc7015..c08ee5edf865 100644
+--- a/drivers/rtc/rtc-mt6397.c
++++ b/drivers/rtc/rtc-mt6397.c
+@@ -9,60 +9,7 @@
+ #include <linux/module.h>
+ #include <linux/regmap.h>
+ #include <linux/rtc.h>
+-#include <linux/irqdomain.h>
+-#include <linux/platform_device.h>
+-#include <linux/of_address.h>
+-#include <linux/of_irq.h>
+-#include <linux/io.h>
+-#include <linux/mfd/mt6397/core.h>
+-
+-#define RTC_BBPU		0x0000
+-#define RTC_BBPU_CBUSY		BIT(6)
+-
+-#define RTC_WRTGR		0x003c
+-
+-#define RTC_IRQ_STA		0x0002
+-#define RTC_IRQ_STA_AL		BIT(0)
+-#define RTC_IRQ_STA_LP		BIT(3)
+-
+-#define RTC_IRQ_EN		0x0004
+-#define RTC_IRQ_EN_AL		BIT(0)
+-#define RTC_IRQ_EN_ONESHOT	BIT(2)
+-#define RTC_IRQ_EN_LP		BIT(3)
+-#define RTC_IRQ_EN_ONESHOT_AL	(RTC_IRQ_EN_ONESHOT | RTC_IRQ_EN_AL)
+-
+-#define RTC_AL_MASK		0x0008
+-#define RTC_AL_MASK_DOW		BIT(4)
+-
+-#define RTC_TC_SEC		0x000a
+-/* Min, Hour, Dom... register offset to RTC_TC_SEC */
+-#define RTC_OFFSET_SEC		0
+-#define RTC_OFFSET_MIN		1
+-#define RTC_OFFSET_HOUR		2
+-#define RTC_OFFSET_DOM		3
+-#define RTC_OFFSET_DOW		4
+-#define RTC_OFFSET_MTH		5
+-#define RTC_OFFSET_YEAR		6
+-#define RTC_OFFSET_COUNT	7
+-
+-#define RTC_AL_SEC		0x0018
+-
+-#define RTC_PDN2		0x002e
+-#define RTC_PDN2_PWRON_ALARM	BIT(4)
+-
+-#define RTC_MIN_YEAR		1968
+-#define RTC_BASE_YEAR		1900
+-#define RTC_NUM_YEARS		128
+-#define RTC_MIN_YEAR_OFFSET	(RTC_MIN_YEAR - RTC_BASE_YEAR)
+-
+-struct mt6397_rtc {
+-	struct device		*dev;
+-	struct rtc_device	*rtc_dev;
+-	struct mutex		lock;
+-	struct regmap		*regmap;
+-	int			irq;
+-	u32			addr_base;
+-};
++#include <linux/mfd/mt6397/rtc.h>
+
+ static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
+ {
+diff --git a/include/linux/mfd/mt6397/rtc.h b/include/linux/mfd/mt6397/rtc.h
+new file mode 100644
+index 000000000000..b702c29e8c74
+--- /dev/null
++++ b/include/linux/mfd/mt6397/rtc.h
+@@ -0,0 +1,71 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Copyright (C) 2014-2018 MediaTek Inc.
++ *
++ * Author: Tianping.Fang <tianping.fang@mediatek.com>
++ *        Sean Wang <sean.wang@mediatek.com>
++ */
++
++#ifndef _LINUX_MFD_MT6397_RTC_H_
++#define _LINUX_MFD_MT6397_RTC_H_
++
++#include <linux/jiffies.h>
++#include <linux/mutex.h>
++#include <linux/regmap.h>
++#include <linux/rtc.h>
++
++#define RTC_BBPU               0x0000
++#define RTC_BBPU_CBUSY         BIT(6)
++#define RTC_BBPU_KEY            (0x43 << 8)
++
++#define RTC_WRTGR              0x003c
++
++#define RTC_IRQ_STA            0x0002
++#define RTC_IRQ_STA_AL         BIT(0)
++#define RTC_IRQ_STA_LP         BIT(3)
++
++#define RTC_IRQ_EN             0x0004
++#define RTC_IRQ_EN_AL          BIT(0)
++#define RTC_IRQ_EN_ONESHOT     BIT(2)
++#define RTC_IRQ_EN_LP          BIT(3)
++#define RTC_IRQ_EN_ONESHOT_AL  (RTC_IRQ_EN_ONESHOT | RTC_IRQ_EN_AL)
++
++#define RTC_AL_MASK            0x0008
++#define RTC_AL_MASK_DOW                BIT(4)
++
++#define RTC_TC_SEC             0x000a
++/* Min, Hour, Dom... register offset to RTC_TC_SEC */
++#define RTC_OFFSET_SEC         0
++#define RTC_OFFSET_MIN         1
++#define RTC_OFFSET_HOUR                2
++#define RTC_OFFSET_DOM         3
++#define RTC_OFFSET_DOW         4
++#define RTC_OFFSET_MTH         5
++#define RTC_OFFSET_YEAR                6
++#define RTC_OFFSET_COUNT       7
++
++#define RTC_AL_SEC             0x0018
++
++#define RTC_PDN2               0x002e
++#define RTC_PDN2_PWRON_ALARM   BIT(4)
++
++#define RTC_MIN_YEAR           1968
++#define RTC_BASE_YEAR          1900
++#define RTC_NUM_YEARS          128
++#define RTC_MIN_YEAR_OFFSET    (RTC_MIN_YEAR - RTC_BASE_YEAR)
++
++#define MTK_RTC_POLL_DELAY_US  10
++#define MTK_RTC_POLL_TIMEOUT   (jiffies_to_usecs(HZ))
++
++struct mt6397_rtc {
++	struct device           *dev;
++	struct rtc_device       *rtc_dev;
++
++	/* Protect register access from multiple tasks */
++	struct mutex            lock;
++	struct regmap           *regmap;
++	int                     irq;
++	u32                     addr_base;
++};
++
++#endif /* _LINUX_MFD_MT6397_RTC_H_ */
+--
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
