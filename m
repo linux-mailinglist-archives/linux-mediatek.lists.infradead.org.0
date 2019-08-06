@@ -2,64 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1644482CBA
-	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 09:29:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4480482D21
+	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 09:49:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HXZBjr11gCqF9F1JOXjOH7LxF3VRcP3kE9RljQRwLm0=; b=mOnl1FpRgIkQuk
-	nFfLDpJz4otKYWKu92FZgWNwh0pXYdX4Uk2vNo5sippBSa09PfZ4NQ/iCqFidchQyp7tlKrbakJV3
-	1Xr9yCzWVGlrpU1RyvDzBS/wbqfPBEoVOFJjphjMzauNnd59rlCw86NJjcgXEKF49wUQWlJB1GfGh
-	pS4WbMYTb2NolvGKlXtv6ynelijv+AQkTedmpTZmEYUFF6QWJcWK1ZYv68ncym40Khw6CpahsLxRc
-	5ccFeagfzpbyRzr2FJtj3ASlTEDlvbvoMgukdAqwztH+1CcyoypyzyHEfXr6obhnzT6luAr/8pWEC
-	X7jzcI15k7POZsdjKoCA==;
+	List-Owner; bh=IXyyAY+abxovFhvAhf2DSaL8bS7pCyJrqSONKqMjdUU=; b=d5XpqH5BX/zSMM
+	+Hsv9jMZLOkS+FaETP8m1eEAxGux5kJw8wfezvRbN75Ly82qNdAR8NbBcXSbLUYqzLXJvSEHX0hm2
+	PYe1NNTv+iIuvhmsFqXD1PW2HlvxkRC8F8ixiLIa11oAlxpbAy21wpUsaPPOthpyTM6rCZuBYw1fN
+	MFYX00VHxoHp7gpONPwNVDpPi1fz9gyIxAIVlAeDzeTCLqzq/pa3dvbZC3bWouijxylfIlqWoKVrz
+	T7zkT7H2lr089Pil5z1djHgYqcLgKYd95uKu4/UYlMvcaI8XIm3OaZohTFgbSWJgSJVnrFRx07WiA
+	WKFMRc3jIrQ3VRm2FzLA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hutu8-0005MO-SH; Tue, 06 Aug 2019 07:29:09 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1huuDP-0004wh-CV; Tue, 06 Aug 2019 07:49:03 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1huttz-0005LZ-Uy; Tue, 06 Aug 2019 07:29:01 +0000
-X-UUID: d656105de0e341d08353ab4b4ee14bc8-20190805
-X-UUID: d656105de0e341d08353ab4b4ee14bc8-20190805
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <hsin-hsiung.wang@mediatek.com>)
+ id 1huuD8-0004lv-EF; Tue, 06 Aug 2019 07:48:47 +0000
+X-UUID: c8d2bd2768ef4def8ecdb4bbe95dcd75-20190805
+X-UUID: c8d2bd2768ef4def8ecdb4bbe95dcd75-20190805
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 263845327; Mon, 05 Aug 2019 23:28:50 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 6 Aug 2019 00:28:49 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 6 Aug 2019 15:28:47 +0800
-Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 6 Aug 2019 15:28:47 +0800
-Message-ID: <1565076527.23984.5.camel@mtksdaap41>
-Subject: Re: [PATCH v4 07/10] regulator: mt6358: Add support for MT6358
- regulator
-From: Hsin-hsiung Wang <hsin-hsiung.wang@mediatek.com>
-To: Mark Brown <broonie@kernel.org>
-Date: Tue, 6 Aug 2019 15:28:47 +0800
-In-Reply-To: <20190805131030.GE6432@sirena.org.uk>
-References: <1564982518-32163-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1564982518-32163-8-git-send-email-hsin-hsiung.wang@mediatek.com>
- <20190805131030.GE6432@sirena.org.uk>
+ with ESMTP id 737868651; Mon, 05 Aug 2019 23:48:36 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 6 Aug 2019 00:48:34 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 6 Aug 2019 15:48:31 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 6 Aug 2019 15:48:30 +0800
+Message-ID: <1565077710.23705.21.camel@mhfsdcap03>
+Subject: Re: [PATCH v8 00/11] add USB GPIO based connection detection driver
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Linus Walleij <linus.walleij@linaro.org>
+Date: Tue, 6 Aug 2019 15:48:30 +0800
+In-Reply-To: <CACRpkdaBT24JPH_VsKtgp6fjWtVuqM50rXkDVYKmLHgR5hdJzA@mail.gmail.com>
+References: <1563958245-6321-1-git-send-email-chunfeng.yun@mediatek.com>
+ <CACRpkdaBT24JPH_VsKtgp6fjWtVuqM50rXkDVYKmLHgR5hdJzA@mail.gmail.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 5974D75886B44E4363446BA9394912791E53F3E9496FF92EBA64D74B9A80C30C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190806_002900_004858_94F7880C 
-X-CRM114-Status: GOOD (  18.83  )
+X-CRM114-CacheID: sfid-20190806_004846_483756_8294677A 
+X-CRM114-Status: GOOD (  17.20  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -76,96 +73,65 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Kate Stewart <kstewart@linuxfoundation.org>,
- Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>, Rob
- Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ linux-usb <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
+ Andy
+ Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC
+ support" <linux-mediatek@lists.infradead.org>, Min Guo <min.guo@mediatek.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Lee Jones <lee.jones@linaro.org>, Allison
- Randal <allison@lohutok.net>, linux-rtc@vger.kernel.org
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>, Linux
+ ARM <linux-arm-kernel@lists.infradead.org>, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Mark,
+On Mon, 2019-08-05 at 12:06 +0200, Linus Walleij wrote:
+> On Wed, Jul 24, 2019 at 10:51 AM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
+> 
+> > Because the USB Connector is introduced and the requirement of
+> > usb-connector.txt binding, the old way using extcon to support
+> > USB Dual-Role switch is now deprecated, meanwhile there is no
+> > available common driver when use Type-B connector, typically
+> > using an input GPIO to detect USB ID pin.
+> 
+> However while this was going on,
+> drivers/extcon/extcon-fsa9480.c was merged and that detects
+> not only GPIO on the USB port but multiplexed usecases such
+> as UART over the USB micro PHY (and no that UART is not
+> a USB UART, but an actual RX/TX over D-/D+).
+> 
+> That driver also measure a whole slew of funny resistance
+> values on the ID pin, that is how it does its job.
+I look into the spec of fsa9480, it indeed detect many USB accessories.
+But this driver is used for simplest cases that only uses micro
+receptacle with id-pin/vbus-pin
 
-On Mon, 2019-08-05 at 14:10 +0100, Mark Brown wrote:
-> On Mon, Aug 05, 2019 at 01:21:55PM +0800, Hsin-Hsiung Wang wrote:
 > 
-> > +static const u32 vmch_voltages[] = {
-> > +	2900000, 3000000, 3300000,
-> > +};
-> 
-> > +static const u32 vemc_voltages[] = {
-> > +	2900000, 3000000, 3300000,
-> > +};
-> 
-> Several of these tables appear to be identical.
-> 
-I will use the same voltage table in the next patch.
+> But for just "hey I'm plugged in" we can surely keep this
+> ID on GPIO detection in the USB subsystem.
+Sorry, you mean provide a common API? could you please describe more
+clearer about your suggestion?
 
-> > +static inline unsigned int mt6358_map_mode(unsigned int mode)
-> > +{
-> > +	return mode == MT6358_BUCK_MODE_AUTO ?
-> > +		REGULATOR_MODE_NORMAL : REGULATOR_MODE_FAST;
-> > +}
-> 
-> There is no need for this to be an inline and please write normal
-> conditional statements to improve legibility.  There's other examples in
-> the driver.
-> 
-will fix it in the next patch.
 
-> > +static int mt6358_get_buck_voltage_sel(struct regulator_dev *rdev)
-> > +{
-> > +	int ret, regval;
-> > +	struct mt6358_regulator_info *info = rdev_get_drvdata(rdev);
-> > +
-> > +	ret = regmap_read(rdev->regmap, info->da_vsel_reg, &regval);
-> > +	if (ret != 0) {
-> > +		dev_info(&rdev->dev,
-> > +			 "Failed to get mt6358 Buck %s vsel reg: %d\n",
-> > +			 info->desc.name, ret);
-> 
-> dev_err() for errors here and throughout the driver.
-> 
-will fix it in the next patch.
+Introducing a single driver using usb_role_switch will help to keep
+transparent for USB controller driver, no matter it uses type-c or micro
 
-> > +		return ret;
-> > +	}
-> > +
-> > +	ret = (regval >> info->da_vsel_shift) & info->da_vsel_mask;
-> > +
-> > +	return ret;
-> > +}
+Thanks a lot
 > 
-> This looks like a standard get_voltage_sel_regmap()?
-> 
-MT6358 has buck voltage status registers to show the actual output
-voltage and the registers are different from the voltage setting
-registers.
-We want to get the actual voltage output, so we use the da_vsel status
-registers here.
+> I just get a bit insecure about how we should ideally
+> handle these "funny-PHY's".
 
-> > +err_mode:
-> > +	if (ret != 0)
-> > +		return ret;
-> > +
-> > +	return 0;
 > 
-> Or just return ret unconditionally?
-will modify it to return ret unconditionally in the next patch.
-
-Thanks a lot.
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> Yours,
+> Linus Walleij
 
 
 
