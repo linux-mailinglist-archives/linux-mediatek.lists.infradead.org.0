@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 94A80836F5
-	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 18:30:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6C4B7836F9
+	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 18:30:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,29 +11,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=+Kn9K1HhP9//AM9uC6ydKXH0wNvvgMK4pNEK6oZVju8=; b=VdVI2ZsGHjfSwddbdxBAxQjQwW
-	a9+BXFcGa45uJ6otGW6IK2jfKro0AXC0jAn7SJc7+yDjPIq8/wuzwcP/Gj9915OLIQ2o1CcJTywvc
-	UxkEGzBZ4mVWOwLvYfQihEI0eObC5ZjLpZbpkaA237gr54d7lYecjdSSEQh1UYhvl7qJdqMKrsOKO
-	GPSzN0P+UC5Um4V4q0imRj2kUk6FWH/sib9cjJYYzULsjNkOn02YOikc18ZpKXVvFmqqyuQRfMjGK
-	JypUKdvTxqjOgRC2XrqlMjxQ1S8dCmuS8hznUOtnDpQe9pyIrcK4vSU8/Kbic2GSfTtWVe1mheecO
-	fjMou5Ag==;
+	bh=omlfWOOwfgNUAP+JamZ+lpkWFMKnNoS4svgUJnLa8c0=; b=UQaEmTG4rHHlyYCX+ztbWwWvtI
+	rlc6Ox1Og4+QgzPRdhC62MxMRQn7MBfPXIp1un4Jo2wjFczllznXHaVy+Qo0h7+1lyqHTs9aYCwnt
+	9K72VLODQUlhCJFqGKxsjRyVGYGJMTxwyp3queX8a4EBdeIQ3xT1iWdUtiVyZfMxJf955hd1+pX4g
+	gy+cdhcS07/GQ2jTBVIhQ+wnhAP4mRInaA4oQBwgM/BHX1pMNUTvcu6jVOF1iTLhmX3efd0GTG16s
+	RD95rMQ1/M0w2n10eLKzo0dWiJp8zXnlW4syI051jmOlNeBR7886PcCqBCr1rbSboP7+I0toeHt04
+	XOYZC1oA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hv2Lg-0002Jd-LL; Tue, 06 Aug 2019 16:30:08 +0000
-Received: from mout.gmx.net ([212.227.17.20])
+	id 1hv2MA-0003hX-FJ; Tue, 06 Aug 2019 16:30:38 +0000
+Received: from mout.gmx.net ([212.227.17.22])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hv2KT-0000TZ-IS; Tue, 06 Aug 2019 16:28:57 +0000
+ id 1hv2KT-0000TN-IS; Tue, 06 Aug 2019 16:28:56 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
- s=badeba3b8450; t=1565108889;
- bh=JOUQ+oPDKcgPIIjUYlOez/IGFEXhWH3PKrXpZ/Nj0Pw=;
+ s=badeba3b8450; t=1565108892;
+ bh=3PISsFhP2p4tj5ULA7y6xFGMEsiPJROECIygBRA4/zw=;
  h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
- b=iZL6rIKkgpSRvIyMJ7yrjA1AvAGWJeQUirgBbXGAm2djIScT7P1VbcGWwAYsyjJVX
- /Ou8ir8pEc6TsXU+9CPn+sk0JaVDzBPqENOVYqoCIbnYfvZQf5wXsmyEinlA5s75VD
- ux5tlFXELueinyIkBF7heHsH/HCMBOOJO52dfs1Q=
+ b=T0iVRuoT39ebTrgaB4OPmg8iKCMVi7occ3T/FDP4lznR919TIUhhex3qNkfFO/XJD
+ JB6x5QXGcc2Z6dMM/2LvbOOXTTMb4Cf/Dt0uU3pTZBAWBzxa2c+kwIn/aHF02ERY+i
+ RXrbehwbzB2PTGqqOMRELCEwuNmrVkUTeHdIiz1s=
 X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
 Received: from localhost.localdomain ([217.61.153.94]) by mail.gmx.com
  (mrgmx103 [212.227.17.168]) with ESMTPSA (Nemesis) id
- 0MS5jy-1hkbwp1SOo-00TGKh; Tue, 06 Aug 2019 18:28:09 +0200
+ 0M1nOg-1iAuD01Mxm-00tlSl; Tue, 06 Aug 2019 18:28:12 +0200
 From: Frank Wunderlich <frank-w@public-files.de>
 To: Alessandro Zummo <a.zummo@towertech.it>,
  Alexandre Belloni <alexandre.belloni@bootlin.com>,
@@ -54,44 +54,44 @@ To: Alessandro Zummo <a.zummo@towertech.it>,
  Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
  Thomas Gleixner <tglx@linutronix.de>,
  "Tianping . Fang" <tianping.fang@mediatek.com>
-Subject: [PATCH v4 04/10] rtc: mt6397: improvements of rtc driver
-Date: Tue,  6 Aug 2019 18:27:39 +0200
-Message-Id: <20190806162745.8414-5-frank-w@public-files.de>
+Subject: [PATCH v4 06/10] rtc: mt6397: add compatible for mt6323
+Date: Tue,  6 Aug 2019 18:27:41 +0200
+Message-Id: <20190806162745.8414-7-frank-w@public-files.de>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20190806162745.8414-1-frank-w@public-files.de>
 References: <20190806162745.8414-1-frank-w@public-files.de>
-X-Provags-ID: V03:K1:Fo7b1eCTmtbEceNwBLDjCvbnWHtd4rgJki9dQjNxSmpo7n+DzFO
- 6t+DoUaDcg1ZnqfqkptI6EYT1AkV9a+JcNZFDn6akif1zuOloZoIuqUcOEvJE+xc6IpmC69
- yul5ZHuc/3dJYrkQyZHwfAIJg9NM/OdUBNNLJWh0anxKOOf3rT10idQ/mJD2y6zQOyAtMew
- egld+N2kVA/30bFa7BObg==
+X-Provags-ID: V03:K1:DIhRHK2hht0aS3gGjUBdMit/fe5lr9+ny2VtU0f6VLpF4RgJt8C
+ Ny5zDjYzK3kf7a1hq2zGlC6rBLjIORmId4UnzIKKaj3aDh+S033M7zD5wxBBv7c9usz0me8
+ lAPNLVND/HByjaQNmrq7dlxPC/nk3seTF7rC6T4zZWTZoX3Myf0SkR6QS/2uCrRC8FqNBIj
+ RpFLUf40mm8Ixb9lHkRaA==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:AbPc73zCr+k=:tTtvNHVMujzgME3Cq+L3Gt
- cQgc4Xk9AOFahoyHHEqmUkzRr2E2p91APx2A/Ib0UKADE0t1zG/dZZkH8WjQRtEszbQ49aX2u
- c6Jq3vI2g3FjnANQ/197dcqwTJ0oaU+0NGOsGuGeG45ClWTovd/Ju0QaUCiUinAraUJjk+6o2
- lOm6PMIXslC3t9xqLhtOh8lRxKPfeixR4i3GLKkucXoToW6E2MJpwE2szKwB6rA+Ucl/JGsu4
- VrsbmX5C/EfRnLGgYfSv4JR2itePj4WdKfNXQA0viVYYOLWkxs7z0YT6B3cZTAwJVm14ocbGC
- KSUUtLIVKQWqDQ/hBAqr3FguJ+pTlaZoabYrgslHBvbeytGaQJEngFhsZZqM+rZbCCOcUfzGi
- KGpGAyYgMlLyIhu+XX3lscrwRYuHW9yTotsHQA1W2nA7Vtlf0x9mOfcPtH8rYsFPfh+cDZ78E
- P3njoqHFBXaOm5jPEwkvtANw6Us2cTcHEMfSI4XSUv0IJTfaukLbunpItOEZr0IlYDwwgSWCn
- o66/NYiWQ9uUmMWUSurpaBnSkyHepr88eh54D9+YlcjElK4usnwDswjVxOjZVJzN6DKzrEe53
- r6z2itizisGr7ZYQRgDd1KX7jo29ei7N03HSI5xpGm2n1x7EwNVycim2lpzAV+7z4gRiNuNx3
- 5GkrioMqExCxUDkDZMqapJXzcPriFEXU9KYA2pUHB1TKbQJAlpDS8oeBeYHHggpH5qYoDxJU6
- slzQZOPoWLmG60y9lFklbWjDfNgsBH/iTN9ymDgkhegRyYIOvDRsXshnbo++c3OIoBh0aYdrh
- NubfVq5LGHFue4fQL9Ys8RxwdnNYIC5GsXe199Mp/NkmZMVuMhv7cR3pVoVR8dVCFreyWFiAq
- qplgDMZ24R+uovA37Rm0YWABHLWz3pH84P86liMg5nh+/TQXpVTw9OJ5S8wlT3tF1cfaFJZAG
- epEPr6kykVOLm3dgy4d8wWRXDC5/X7W17XRZ9UDMY28fPyt6v64FHSwA4V2puBnpQvC0XmoPG
- UE07pbFu2E+vfMQyz94yIWdI0MPY9U8Q1BqAozNN5ubluhZCjWc55K+ZE4A32ayDCb0V2STln
- 9VagosHuyciUb65sEFfPOgLKGw1HMFX3xXQ94VcYcBH2nDsXOxVm3/pNA==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:E2LKdkfghHA=:FNem/ARHXV0uE2yKyiYHq5
+ gY2PBWiTOl70HXT2nYwno+ily3sUA4zF6RH2X6jPdcezoNtDW0fpVgTll1zlwPeq6Tw2ub8Rh
+ 2DLriMUfIv4XlI/ncDzyEsiBAjtRLwzGfzPsHMwUj/Wl9ZfBUgZHNcwMGRrKMWpEBZDMQe3MA
+ 40RANSqPGoLq8gRDOILBjzXQ/2BuDR9gCOEuupkUc2lXuDRHXHbD4ThS6RYnu5Z0cn+Gi1KFD
+ LYMHR+GzdSqPtFAy+XhcGSA/I5KpbH6J8GLn/LOJNfWQz9SyQDrY5PmNbYwWthglBYrE9hiBM
+ 2dyibsQZIos8kXbtwoYjpC6xQ6zuaoOc+LNJtSELPkyn0a6YoHAvapE+enMJ13xzXqFry9Sm+
+ jaIWjOOJwJX5oBn9vmD8xD16S9Vdpo5TF1uWeDcgLFnF5nqrqPKksW/Br+h6/AC/8T3k7LwnV
+ DPspmn7LgPYxWTYu5gm7BGQcz2xh0/CIi0I9rRMC/QwJUBsPv1NOpINrzBQ5cscHM1/JeX4yg
+ UddkmfaCEOZK5J64UCYbahuJVmvyr0GJL9eYhVMaYgH6U8sBnr2ffYzBRLTTafV5mBqhO3dy+
+ Bx2Rs8b3QG44khaV9pZ7wcGjl7cGKUHzsS/3tF6MD54cRvPBGrlzTPMOG/L7QsoVqhJwJjxyK
+ 1bcmddHtIQEVPdd0UbPJz7Rb9dQqwd509SQEE9EHOob1v4Lc75sXYIF5Dy+s+7PTvEg9ExrTU
+ oUknbl01i9Ro0FT+8HcYIWXwFBfOPRxq+TPqkl7RE+dKTAkYt9J2dqt4Ti3jTxyspfevS2dVi
+ wAVKFf+bEijKxm4qvqTNLNz6iZUYVETBgVCFh1pry7t7Xl4t+muKh+YdDmFBEKUJB5QzVN9nL
+ 2KXBIRoKtZONJ5pFopJyRjfPjLnrqICzU5ZD2Th8JDqeVjJOWddlHsNtYyT2jbr6sGshe/Ak/
+ fnRiizWw3kUvQ6xUX/Mit6facC85cft/l/ziBX6Ozlhz9dND526CTsRN4Ym56T5SAjC7O9/LM
+ zqpKrMeRZNwABkCelzWUxfKrTOI/7YumvfaTL55UMibw9pwOMmkMo7HI24Mxb5UJZHgVCCFn4
+ JukOcDmXXHQvKfHc4/TxuTbdyIKcKMo8Xcg/uHjyZE9VlfLbTbE66IFDw==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190806_092853_930019_10A5383A 
-X-CRM114-Status: GOOD (  14.38  )
+X-CRM114-CacheID: sfid-20190806_092853_927718_1960C6B7 
+X-CRM114-Status: GOOD (  10.40  )
 X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.20 listed in list.dnswl.org]
+ low trust [212.227.17.22 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -118,125 +118,30 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Josef Friedl <josef.friedl@speed.at>
 
-- use regmap_read_poll_timeout to drop while-loop
-- use devm-api to drop remove-callback
+use mt6397 rtc driver also for mt6323 but with different
+base/size see "mfd: mt6323: add mt6323 rtc+pwrc"
 
-Suggested-by: Alexandre Belloni <alexandre.belloni@bootlin.com>
 Signed-off-by: Josef Friedl <josef.friedl@speed.at>
 Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
 ---
-changes since v3: none
-changes since v2:
-- fix allocation after irq-request
-- compatible for mt6323 in separate commit => part 5
+changes since v3: moved (was part 5)
+changes since v2: splitted this from v2.3 suggested-by Alexandre Belloni
 
- drivers/rtc/rtc-mt6397.c | 51 +++++++++++++++-------------------------
- 1 file changed, 19 insertions(+), 32 deletions(-)
+ drivers/rtc/rtc-mt6397.c | 1 +
+ 1 file changed, 1 insertion(+)
 
 diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
-index c08ee5edf865..9370b7fc9f81 100644
+index 9370b7fc9f81..21cd9cc8b4c7 100644
 --- a/drivers/rtc/rtc-mt6397.c
 +++ b/drivers/rtc/rtc-mt6397.c
-@@ -4,16 +4,19 @@
- * Author: Tianping.Fang <tianping.fang@mediatek.com>
- */
+@@ -325,6 +325,7 @@ static SIMPLE_DEV_PM_OPS(mt6397_pm_ops, mt6397_rtc_suspend,
+ 			mt6397_rtc_resume);
 
--#include <linux/delay.h>
--#include <linux/init.h>
-+#include <linux/err.h>
-+#include <linux/interrupt.h>
-+#include <linux/mfd/mt6397/core.h>
- #include <linux/module.h>
-+#include <linux/mutex.h>
-+#include <linux/platform_device.h>
- #include <linux/regmap.h>
- #include <linux/rtc.h>
- #include <linux/mfd/mt6397/rtc.h>
-+#include <linux/mod_devicetable.h>
-
- static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
- {
--	unsigned long timeout = jiffies + HZ;
- 	int ret;
- 	u32 data;
-
-@@ -21,19 +24,13 @@ static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
- 	if (ret < 0)
- 		return ret;
-
--	while (1) {
--		ret = regmap_read(rtc->regmap, rtc->addr_base + RTC_BBPU,
--				  &data);
--		if (ret < 0)
--			break;
--		if (!(data & RTC_BBPU_CBUSY))
--			break;
--		if (time_after(jiffies, timeout)) {
--			ret = -ETIMEDOUT;
--			break;
--		}
--		cpu_relax();
--	}
-+	ret = regmap_read_poll_timeout(rtc->regmap,
-+					rtc->addr_base + RTC_BBPU, data,
-+					!(data & RTC_BBPU_CBUSY),
-+					MTK_RTC_POLL_DELAY_US,
-+					MTK_RTC_POLL_TIMEOUT);
-+	if (ret < 0)
-+		dev_err(rtc->dev, "failed to write WRTGE: %d\n", ret);
-
- 	return ret;
- }
-@@ -266,19 +263,19 @@ static int mtk_rtc_probe(struct platform_device *pdev)
- 		return rtc->irq;
-
- 	rtc->regmap = mt6397_chip->regmap;
--	rtc->dev = &pdev->dev;
- 	mutex_init(&rtc->lock);
-
- 	platform_set_drvdata(pdev, rtc);
-
--	rtc->rtc_dev = devm_rtc_allocate_device(rtc->dev);
-+	rtc->rtc_dev = devm_rtc_allocate_device(&pdev->dev);
- 	if (IS_ERR(rtc->rtc_dev))
- 		return PTR_ERR(rtc->rtc_dev);
-
--	ret = request_threaded_irq(rtc->irq, NULL,
--				   mtk_rtc_irq_handler_thread,
--				   IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
--				   "mt6397-rtc", rtc);
-+	ret = devm_request_threaded_irq(&pdev->dev, rtc->irq, NULL,
-+					mtk_rtc_irq_handler_thread,
-+					IRQF_ONESHOT | IRQF_TRIGGER_HIGH,
-+					"mt6397-rtc", rtc);
-+
- 	if (ret) {
- 		dev_err(&pdev->dev, "Failed to request alarm IRQ: %d: %d\n",
- 			rtc->irq, ret);
-@@ -302,15 +299,6 @@ static int mtk_rtc_probe(struct platform_device *pdev)
- 	return ret;
- }
-
--static int mtk_rtc_remove(struct platform_device *pdev)
--{
--	struct mt6397_rtc *rtc = platform_get_drvdata(pdev);
--
--	free_irq(rtc->irq, rtc);
--
--	return 0;
--}
--
- #ifdef CONFIG_PM_SLEEP
- static int mt6397_rtc_suspend(struct device *dev)
- {
-@@ -349,7 +337,6 @@ static struct platform_driver mtk_rtc_driver = {
- 		.pm = &mt6397_pm_ops,
- 	},
- 	.probe	= mtk_rtc_probe,
--	.remove = mtk_rtc_remove,
+ static const struct of_device_id mt6397_rtc_of_match[] = {
++	{ .compatible = "mediatek,mt6323-rtc", },
+ 	{ .compatible = "mediatek,mt6397-rtc", },
+ 	{ }
  };
-
- module_platform_driver(mtk_rtc_driver);
 --
 2.17.1
 
