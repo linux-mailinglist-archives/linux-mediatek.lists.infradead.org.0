@@ -2,65 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4480482D21
-	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 09:49:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DCA7282DDD
+	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 10:36:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IXyyAY+abxovFhvAhf2DSaL8bS7pCyJrqSONKqMjdUU=; b=d5XpqH5BX/zSMM
-	+Hsv9jMZLOkS+FaETP8m1eEAxGux5kJw8wfezvRbN75Ly82qNdAR8NbBcXSbLUYqzLXJvSEHX0hm2
-	PYe1NNTv+iIuvhmsFqXD1PW2HlvxkRC8F8ixiLIa11oAlxpbAy21wpUsaPPOthpyTM6rCZuBYw1fN
-	MFYX00VHxoHp7gpONPwNVDpPi1fz9gyIxAIVlAeDzeTCLqzq/pa3dvbZC3bWouijxylfIlqWoKVrz
-	T7zkT7H2lr089Pil5z1djHgYqcLgKYd95uKu4/UYlMvcaI8XIm3OaZohTFgbSWJgSJVnrFRx07WiA
-	WKFMRc3jIrQ3VRm2FzLA==;
+	List-Owner; bh=iGDApkjI1t7sdBS2qkQ8tI0ZZw0H5LrThNKvNmj1+e8=; b=i5Q1yAusCGYd46
+	ZUmt9v5XI7c3siyo5rwzi3jv/W1hIQW9vOAPUPNqWf/w92ZF+2veI3qktJ8qBfDOlQMkEpx+WlzXL
+	/3V90OSKweSJj9RUfRbzGPoVVsStzJz/UGLDV0WsD2xFrtA9mQ/aiFm7avbfAZLCgfbwMfKtjL90T
+	nP+ubbFZjyk6WXDFGOQXLjLcuu/ecHPXpw8oVfeFR7/8dE7PDSIlicyYyewxIfx+OHLv2Itd1f41Y
+	iaz3+7+Z9IvWk997UnOjK2NEK3TtMU6fmcDaZt+pbZszoUEYjfyD0N6sKpjYLbYxoBM/Lo8AgF+NY
+	K3QU9gMTyBd37WXhaQRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1huuDP-0004wh-CV; Tue, 06 Aug 2019 07:49:03 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1huuxg-0006F3-Rm; Tue, 06 Aug 2019 08:36:52 +0000
+Received: from gloria.sntech.de ([185.11.138.130])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1huuD8-0004lv-EF; Tue, 06 Aug 2019 07:48:47 +0000
-X-UUID: c8d2bd2768ef4def8ecdb4bbe95dcd75-20190805
-X-UUID: c8d2bd2768ef4def8ecdb4bbe95dcd75-20190805
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 737868651; Mon, 05 Aug 2019 23:48:36 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 6 Aug 2019 00:48:34 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 6 Aug 2019 15:48:31 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 6 Aug 2019 15:48:30 +0800
-Message-ID: <1565077710.23705.21.camel@mhfsdcap03>
-Subject: Re: [PATCH v8 00/11] add USB GPIO based connection detection driver
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Linus Walleij <linus.walleij@linaro.org>
-Date: Tue, 6 Aug 2019 15:48:30 +0800
-In-Reply-To: <CACRpkdaBT24JPH_VsKtgp6fjWtVuqM50rXkDVYKmLHgR5hdJzA@mail.gmail.com>
-References: <1563958245-6321-1-git-send-email-chunfeng.yun@mediatek.com>
- <CACRpkdaBT24JPH_VsKtgp6fjWtVuqM50rXkDVYKmLHgR5hdJzA@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1huuxO-00063t-Lh; Tue, 06 Aug 2019 08:36:36 +0000
+Received: from wf0413.dip.tu-dresden.de ([141.76.181.157] helo=phil.localnet)
+ by gloria.sntech.de with esmtpsa
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.89)
+ (envelope-from <heiko@sntech.de>)
+ id 1huux4-0003Qy-MP; Tue, 06 Aug 2019 10:36:14 +0200
+From: Heiko Stuebner <heiko@sntech.de>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>,
+ amd-gfx@lists.freedesktop.org, linux-kernel@vger.kernel.org,
+ Sean Paul <sean@poorly.run>
+Subject: Re: [PATCH 05/13] drm: rockchip: Provide ddc symlink in inno_hdmi
+ sysfs directory
+Date: Tue, 06 Aug 2019 10:36:13 +0200
+Message-ID: <5678760.RHkh9mv3Rf@phil>
+In-Reply-To: <52272b8ebf403361ff96e04bf14f5a7389116f73.1564591626.git.andrzej.p@collabora.com>
+References: <65481afa-1104-4ee9-e53d-f2732a10d4b9@baylibre.com>
+ <cover.1564591626.git.andrzej.p@collabora.com>
+ <52272b8ebf403361ff96e04bf14f5a7389116f73.1564591626.git.andrzej.p@collabora.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5974D75886B44E4363446BA9394912791E53F3E9496FF92EBA64D74B9A80C30C2000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190806_004846_483756_8294677A 
-X-CRM114-Status: GOOD (  17.20  )
+X-CRM114-CacheID: sfid-20190806_013634_857472_0A5FDEDD 
+X-CRM114-Status: UNSURE (   7.36  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,66 +62,32 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>,
- Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-usb <linux-usb@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Biju Das <biju.das@bp.renesas.com>, Badhri Jagan Sridharan <badhri@google.com>,
- Andy
- Shevchenko <andy.shevchenko@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC
- support" <linux-mediatek@lists.infradead.org>, Min Guo <min.guo@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>, Linux
- ARM <linux-arm-kernel@lists.infradead.org>, Li Jun <jun.li@nxp.com>
+Cc: "David \(ChunMing\) Zhou" <David1.Zhou@amd.com>,
+ linux-samsung-soc@vger.kernel.org, linux-tegra@vger.kernel.org,
+ linux-rockchip@lists.infradead.org, Leo Li <sunpeng.li@amd.com>,
+ linux-arm-msm@vger.kernel.org, intel-gfx@lists.freedesktop.org,
+ freedreno@lists.freedesktop.org, Sandy Huang <hjc@rock-chips.com>,
+ dri-devel@lists.freedesktop.org, David Airlie <airlied@linux.ie>,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+ Alex Deucher <alexander.deucher@amd.com>, kernel@collabora.com,
+ Harry Wentland <harry.wentland@amd.com>,
+ Christian =?ISO-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-08-05 at 12:06 +0200, Linus Walleij wrote:
-> On Wed, Jul 24, 2019 at 10:51 AM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
+Am Mittwoch, 31. Juli 2019, 18:58:14 CEST schrieb Andrzej Pietrasiewicz:
+> Use the ddc pointer provided by the generic connector.
 > 
-> > Because the USB Connector is introduced and the requirement of
-> > usb-connector.txt binding, the old way using extcon to support
-> > USB Dual-Role switch is now deprecated, meanwhile there is no
-> > available common driver when use Type-B connector, typically
-> > using an input GPIO to detect USB ID pin.
-> 
-> However while this was going on,
-> drivers/extcon/extcon-fsa9480.c was merged and that detects
-> not only GPIO on the USB port but multiplexed usecases such
-> as UART over the USB micro PHY (and no that UART is not
-> a USB UART, but an actual RX/TX over D-/D+).
-> 
-> That driver also measure a whole slew of funny resistance
-> values on the ID pin, that is how it does its job.
-I look into the spec of fsa9480, it indeed detect many USB accessories.
-But this driver is used for simplest cases that only uses micro
-receptacle with id-pin/vbus-pin
+> Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+> Acked-by: Sam Ravnborg <sam@ravnborg.org>
+> Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
 
-> 
-> But for just "hey I'm plugged in" we can surely keep this
-> ID on GPIO detection in the USB subsystem.
-Sorry, you mean provide a common API? could you please describe more
-clearer about your suggestion?
+Acked-by: Heiko Stuebner <heiko@sntech.de>
 
 
-Introducing a single driver using usb_role_switch will help to keep
-transparent for USB controller driver, no matter it uses type-c or micro
-
-Thanks a lot
-> 
-> I just get a bit insecure about how we should ideally
-> handle these "funny-PHY's".
-
-> 
-> Yours,
-> Linus Walleij
 
 
 
