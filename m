@@ -2,60 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3BFE3830A8
-	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 13:30:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D6CD830E2
+	for <lists+linux-mediatek@lfdr.de>; Tue,  6 Aug 2019 13:42:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=x8CespvWWnPV+nzOpseZEAwusB+4Etlu1FEgSU1LY5w=; b=E/XgjRC44fFNTR
-	2Bae+Qa2cBKAaG3KxXASaft+Ytb8IZEHa7j0VfKoXDClX2xZDrV8oe7AcdUV4GRPMo+Ph4IR34vmE
-	c+fWzRGLxqVd9ePsH+AGC2fKYD40a0H+S2FOlbS0oOF9pcT7344YjuzKR2K94Km01kL/tO6NT/qx8
-	woRrHkr/Rod3w08OwHBbNXnILQQgXq4b6P7mRJtpAutB42ITObV3ut2YgFWHRRZQQP8++pvT/6xky
-	a/CCt9gQhDg7O7OzmocBqn6P2nNkwQ2TJXiql+3ZYDx1ohv+UpuiszMvg91bOrB8wXIQvmZEdO5Eq
-	aYld2obNmTp/B1KkckzQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ud6aInbY1AG7vm0yXsfSgd8ruVbFvPfWqkugZ98x7hk=; b=b0hci2FXIpvU3M
+	4i8CS4NKkFAH1iOEAnpTE6r1rgVbby2XrWSje0a9W0N4lOUcTIYaBbQXQd0ifppd+cFiqzKfSke9d
+	67r8eNHFaxNweJZfa6RbbbKcpnVOtInBZc3e+xZT7ymSclBbbQcYo3BG+1OhjB/nvnVk/uTpiT4O1
+	1R3oaB7crq/9gl7ovFgHXIobhTRpxNzkTYUDumu9U4W1kwVghekwJGFUTVoVd4XPMcR5Yv6spcowJ
+	jsxkxMpLGhy6IpILNzEjM9Cg4FTgeQEDIQwL6HPBdoJlrn4Qcbt34Yd3YzNDob8O6Cy4IW8I4PU91
+	As8EqIba8Q1Y3wAqWKfw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1huxfQ-0006az-HU; Tue, 06 Aug 2019 11:30:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1huxqk-0002gn-Iu; Tue, 06 Aug 2019 11:41:54 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1huxfL-0005w2-Vq; Tue, 06 Aug 2019 11:30:09 +0000
-X-UUID: 986e0643415a461996fda545f1cf4b8a-20190806
-X-UUID: 986e0643415a461996fda545f1cf4b8a-20190806
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <miles.chen@mediatek.com>)
+ id 1huxqg-0002gG-UK; Tue, 06 Aug 2019 11:41:52 +0000
+X-UUID: 9f2298722b5241ad995a982500137f52-20190806
+X-UUID: 9f2298722b5241ad995a982500137f52-20190806
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ran.bi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2111948725; Tue, 06 Aug 2019 03:29:52 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 6 Aug 2019 04:29:50 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 6 Aug 2019 19:29:49 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 6 Aug 2019 19:29:49 +0800
-From: Miles Chen <miles.chen@mediatek.com>
-To: Catalin Marinas <catalin.marinas@arm.com>, Will Deacon
- <will.deacon@arm.com>
-Subject: [PATCH] arm64: mm: print hexadecimal EC value in mem_abort_decode()
-Date: Tue, 6 Aug 2019 19:29:48 +0800
-Message-ID: <20190806112948.4357-1-miles.chen@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ with ESMTP id 411563617; Tue, 06 Aug 2019 03:41:43 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 6 Aug 2019 04:41:42 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs08n1.mediatek.inc
+ (172.21.101.55) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 6 Aug 2019 19:41:34 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 6 Aug 2019 19:41:32 +0800
+Message-ID: <1565091692.24748.3.camel@mhfsdcap03>
+Subject: Re: [PATCH v4 10/10] rtc: Add support for the MediaTek MT6358 RTC
+From: Ran Bi <ran.bi@mediatek.com>
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>
+Date: Tue, 6 Aug 2019 19:41:32 +0800
+In-Reply-To: <20190805072338.GB3600@piout.net>
+References: <1564982518-32163-1-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <1564982518-32163-11-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <20190805072338.GB3600@piout.net>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190806_043008_037428_7072841B 
-X-CRM114-Status: GOOD (  10.55  )
+X-CRM114-CacheID: sfid-20190806_044151_267788_8F27F844 
+X-CRM114-Status: GOOD (  14.42  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -71,79 +72,60 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <Mark.rutland@arm.com>, wsd_upstream@mediatek.com, Anshuman
- Khandual <anshuman.khandual@arm.com>, linux-kernel@vger.kernel.org,
- Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- James Morse <james.morse@arm.com>, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, Alessandro
+ Zummo <a.zummo@towertech.it>, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, Kate Stewart <kstewart@linuxfoundation.org>,
+ Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-kernel@vger.kernel.org, Richard
+ Fontana <rfontana@redhat.com>, Mark Brown <broonie@kernel.org>,
+ linux-mediatek@lists.infradead.org, Allison Randal <allison@lohutok.net>,
+ linux-rtc@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ Lee Jones <lee.jones@linaro.org>,
+ Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This change prints the hexadecimal EC value in mem_abort_decode(),
-which makes it easier to lookup the corresponding EC in
-the ARM Architecture Reference Manual.
+Hi Belloni,
 
-The commit 1f9b8936f36f ("arm64: Decode information from ESR upon mem
-faults") prints useful information when memory abort occurs. It would
-be easier to lookup "0x25" instead of "DABT" in the document. Then we
-can check the corresponding ISS.
+On Mon, 2019-08-05 at 09:23 +0200, Alexandre Belloni wrote:
+> Hi,
+> 
+> The subject should be:
+> 
+> "rtc: mt6397: Add support for the MediaTek MT6358 RTC"
 
-For example:
-Current	info	  	Document
-		  	EC	Exception class
-"CP15 MCR/MRC"		0x3	"MCR or MRC access to CP15a..."
-"ASIMD"			0x7	"Access to SIMD or floating-point..."
-"DABT (current EL)" 	0x25	"Data Abort taken without..."
-...
+Will be changed at next patch.
 
-Before:
-Unable to handle kernel paging request at virtual address 000000000000c000
-Mem abort info:
-  ESR = 0x96000046
-  Exception class = DABT (current EL), IL = 32 bits
-  SET = 0, FnV = 0
-  EA = 0, S1PTW = 0
-Data abort info:
-  ISV = 0, ISS = 0x00000046
-  CM = 0, WnR = 1
+> > +struct mtk_rtc_compatible {
+> 
+> I would name that struct mtk_rtc_data
+> 
+> > +	u32			wrtgr_addr;
+> 
+> and this member should be wrtgr_offset or simply wrtgr.
+> 
 
-After:
-Unable to handle kernel paging request at virtual address 000000000000c000
-Mem abort info:
-  ESR = 0x96000046
-  EC = 0x25, Exception class = DABT (current EL), IL = 32 bits
-  SET = 0, FnV = 0
-  EA = 0, S1PTW = 0
-Data abort info:
-  ISV = 0, ISS = 0x00000046
-  CM = 0, WnR = 1
+Will be changed at next patch.
 
-Cc: Mark Rutland <Mark.rutland@arm.com>
-Cc: Anshuman Khandual <anshuman.khandual@arm.com>
-Cc: James Morse <james.morse@arm.com>
-Signed-off-by: Miles Chen <miles.chen@mediatek.com>
----
- arch/arm64/mm/fault.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+> >  
+> > +	of_id = of_match_device(mt6397_rtc_of_match, &pdev->dev);
+> > +	if (!of_id) {
+> > +		dev_err(&pdev->dev, "Failed to probe of_node\n");
+> > +		return -EINVAL;
+> 
+> This will never happen because probe would not be called if there is no
+> match. You could also use of_device_get_match_data to avoid having to
+> move the of_device_id table.
+> 
 
-diff --git a/arch/arm64/mm/fault.c b/arch/arm64/mm/fault.c
-index cfd65b63f36f..afb6041e25e6 100644
---- a/arch/arm64/mm/fault.c
-+++ b/arch/arm64/mm/fault.c
-@@ -86,8 +86,8 @@ static void mem_abort_decode(unsigned int esr)
- 	pr_alert("Mem abort info:\n");
- 
- 	pr_alert("  ESR = 0x%08x\n", esr);
--	pr_alert("  Exception class = %s, IL = %u bits\n",
--		 esr_get_class_string(esr),
-+	pr_alert("  EC = 0x%lx, Exception class = %s, IL = %u bits\n",
-+		 ESR_ELx_EC(esr), esr_get_class_string(esr),
- 		 (esr & ESR_ELx_IL) ? 32 : 16);
- 	pr_alert("  SET = %lu, FnV = %lu\n",
- 		 (esr & ESR_ELx_SET_MASK) >> ESR_ELx_SET_SHIFT,
--- 
-2.18.0
+Will use of_device_get_match_data() function instead of
+of_match_device() function.
+
+
 
 
 _______________________________________________
