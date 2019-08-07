@@ -2,67 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 46ED784801
-	for <lists+linux-mediatek@lfdr.de>; Wed,  7 Aug 2019 10:47:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DEF2384803
+	for <lists+linux-mediatek@lfdr.de>; Wed,  7 Aug 2019 10:47:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=B3hMP6ArMDAzWyx1u6/QmKDoGlA3/ewdeyrfa8TTj6c=; b=PS1LX69c4Ns5Hj
-	HdjFBhVzF50/MNbON9A4qEXh2ACEkZKe3MbjSqQoiZg+zL0Jpk1bW/CN8WSs0xTItwKcKRgOTLPVX
-	+CHp5Q9t8ktreqP4p2L+q7Ttu151gh4HjzAqmIKu8NY991igVpA5bEMcYqKarjoAfoiLmOawU8y0w
-	bnp6iAU4oqrOWbm+sfv8yfpjeVHMhSnxpnIMMll32GPLVKBA/afCn/lo3Flo9ZCUUwm2KYiJSknS/
-	hFpDJClZeB+6PiJ2vopC3ie2tcG6UuGpgVlzI+JLeMN5kPJAx1U2JhJJbE0UUGeI6q2dP1vYI5zfe
-	JWOGiKYMrIS5uYkdvuSA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ktjdgkxHNvwClq3n+tMt8Kt1+CWVLk01TbqoHXLrHcQ=; b=igDM8EwYXwOxq+
+	TTqgMcjJCnJ0eu41tvdNW8U7RMPhV9Yu7HexNMQ3WfQ/HSZP12JTBjouB9N9WrHOy2YleLIbbKvIU
+	I64XqwFf4YphiF4ZTaMMJkv6ONxG4UITXv7TTAjqZQs0Q7OZOapKCu7zm80uye02jTAZkWkwWX/Tq
+	/LI0yrjCzOO8WYLCZOWuFUEZ9DrHlTt8+iv0dEm/99OuF03mmMbUiwazunjNog2BQpnALyCzA6F/N
+	tux/tye+Z9wEJ6TGIXXJy5ZvyQRwwL9xWhtUERnW6t3r/c2HB7WF3NuH29ksIjIw+AyUhNHdz4UEW
+	3Qul7rSenpIS5r+dvAKQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hvHbG-0006q9-VA; Wed, 07 Aug 2019 08:47:15 +0000
+	id 1hvHbk-00078r-NW; Wed, 07 Aug 2019 08:47:44 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hvHb7-0006kt-0O; Wed, 07 Aug 2019 08:47:06 +0000
-X-UUID: ca9be5d934934f5da0521c1625c7c5fa-20190807
-X-UUID: ca9be5d934934f5da0521c1625c7c5fa-20190807
+ id 1hvHb7-0006kQ-0N; Wed, 07 Aug 2019 08:47:07 +0000
+X-UUID: f34ee9d28b6c4c78b48f912360c4c494-20190807
+X-UUID: f34ee9d28b6c4c78b48f912360c4c494-20190807
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 743791507; Wed, 07 Aug 2019 00:46:55 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ with ESMTP id 1495340810; Wed, 07 Aug 2019 00:46:55 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 7 Aug 2019 01:46:54 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 7 Aug 2019 16:46:48 +0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 7 Aug 2019 16:46:49 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Wed, 7 Aug 2019 16:46:46 +0800
+ 15.0.1395.4 via Frontend Transport; Wed, 7 Aug 2019 16:46:48 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
  Rutland" <mark.rutland@arm.com>, Ian Campbell
  <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
- <airlied@linux.ie>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v6 0/3] Support mipitx for mt8183
-Date: Wed, 7 Aug 2019 16:46:42 +0800
-Message-ID: <20190807084645.63738-1-jitao.shi@mediatek.com>
+ <airlied@linux.ie>, "Matthias Brugger" <matthias.bgg@gmail.com>
+Subject: [PATCH v6 1/3] dt-bindings: display: mediatek: update dsi supported
+ chips
+Date: Wed, 7 Aug 2019 16:46:43 +0800
+Message-ID: <20190807084645.63738-2-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
+In-Reply-To: <20190807084645.63738-1-jitao.shi@mediatek.com>
+References: <20190807084645.63738-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-AS-Product-Ver: SMEX-12.5.0.1684-8.5.1010-24828.001
-X-TM-AS-Result: No-6.934100-8.000000-10
-X-TMASE-MatchedRID: angWuI+ZklDHO8eAxCOj9iAI8aJmq0jwEypq3q87aEEL9Tj77wy87Pib
- PPdYWnRM+F2zlPAdpe6A45NLifUOpj3qUaC7D/bC/1dEgwtQ6NBcaNB/u5yQq8z/SxKo9mJ4NHw
- BAGIh28uVta6x57a42xw8w8GZWTrwoqClLVAxl2VDiyuN5FvFNj+k5IvvZ1N/mvnco5r4a3OjxY
- yRBa/qJcFwgTvxipFajoczmuoPCq1guV9FslmIPhw7K8UtBQeEp3IVzZN0+VdcN1xZFcfLHXIs9
- fkcQeBP
-X-TM-AS-User-Approved-Sender: No
-X-TM-AS-User-Blocked-Sender: No
-X-TMASE-Result: 10--6.934100-8.000000
-X-TMASE-Version: SMEX-12.5.0.1684-8.5.1010-24828.001
-X-TM-SNTS-SMTP: 64327E99D620C0FC25FBF80F2165C701713A62B3F7AA8C8E730E2B111128E7202000:8
+X-TM-SNTS-SMTP: 22670FF7270DC485EDD85179ACBA4B96868D55C5AD40A0C2D3336C185162785B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190807_014705_077352_FE9EC6DA 
-X-CRM114-Status: UNSURE (   7.67  )
+X-CRM114-CacheID: sfid-20190807_014705_076707_971EDD83 
+X-CRM114-Status: UNSURE (   9.31  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -88,8 +80,8 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
  Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Rob Herring <robh@kernel.org>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
  Russell King <rmk+kernel@arm.linux.org.uk>,
  Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
  Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
@@ -103,46 +95,37 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Change since v5:
- - remove mipi_tx->ref_clk
- - remove mt8183 pll prepare unprepare
+Update device tree binding documentation for the dsi for
+Mediatek MT8183 SoCs.
 
-Change since v4:
- - fine tune the mipi_tx->ref_clk and mipi_tx->pll sequence
-   1. Prepare mipi_tx->ref_clk
-   2. Prepare mipi_tx->pll
-   3. Enable mipi_tx->ref_clk
-   4. Enable mipi_tx->pll
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Acked-by: Rob Herring <robh@kernel.org>
+---
+ .../devicetree/bindings/display/mediatek/mediatek,dsi.txt     | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
-Changes since v3:
- - turn off PLL before setting PLL parameters.
-
-Changes since v2:
- - update Acked-by: Rob Herring <robh@kernel.org>
- - update mt8183 max bit rate support
-
-Changes since v1:
- - update dt-bindings document for mt8183 mipitx.
- - remove mtk_mipitx_clk_get_ops and assign clk_ops in probe.
- - fix the lincence
- - remove txdiv1 from mtk_mipi_tx_pll_prepare
-
-Jitao Shi (3):
-  dt-bindings: display: mediatek: update dsi supported chips
-  drm/mediatek: separate mipi_tx to different file
-  drm/mediatek: add mipi_tx driver for mt8183
-
- .../display/mediatek/mediatek,dsi.txt         |   4 +-
- drivers/gpu/drm/mediatek/Makefile             |   2 +
- drivers/gpu/drm/mediatek/mtk_mipi_tx.c        | 338 ++----------------
- drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |  49 +++
- drivers/gpu/drm/mediatek/mtk_mt8173_mipi_tx.c | 289 +++++++++++++++
- drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 150 ++++++++
- 6 files changed, 515 insertions(+), 317 deletions(-)
- create mode 100644 drivers/gpu/drm/mediatek/mtk_mipi_tx.h
- create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8173_mipi_tx.c
- create mode 100644 drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-
+diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
+index fadf327c7cdf..a19a6cc375ed 100644
+--- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
++++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
+@@ -7,7 +7,7 @@ channel output.
+ 
+ Required properties:
+ - compatible: "mediatek,<chip>-dsi"
+-  the supported chips are mt2701 and mt8173.
++  the supported chips are mt2701, mt8173 and mt8183.
+ - reg: Physical base address and length of the controller's registers
+ - interrupts: The interrupt signal from the function block.
+ - clocks: device clocks
+@@ -26,7 +26,7 @@ The MIPI TX configuration module controls the MIPI D-PHY.
+ 
+ Required properties:
+ - compatible: "mediatek,<chip>-mipi-tx"
+-  the supported chips are mt2701 and mt8173.
++  the supported chips are mt2701, mt8173 and mt8183.
+ - reg: Physical base address and length of the controller's registers
+ - clocks: PLL reference clock
+ - clock-output-names: name of the output clock line to the DSI encoder
 -- 
 2.21.0
 
