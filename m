@@ -2,99 +2,96 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9046284CE0
-	for <lists+linux-mediatek@lfdr.de>; Wed,  7 Aug 2019 15:26:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C7C83858A8
+	for <lists+linux-mediatek@lfdr.de>; Thu,  8 Aug 2019 05:42:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dHNKsX6e/y12nHgj6q1uAgL0GaJW9PCQ3zIgRxA29LY=; b=rH72uB9IgZpaWZ
-	yK+Eef2qxdadqbmcP4ht8CBDdIynUB21etsVxatUFQibjhELyB6C/T5qmGUPT2O5tAW6tpWcrLx3I
-	xX6ubCDoll/988rCr00yIxAgA1Qed8lAcxZUZF3DeivIWeXt2hXb5NS1G8S/rVe+no1pgPocYkhog
-	Nep73IMvhCLYwmCyZXQb0M5OF7mq5yquJrgN5V25zTQXEHYLi6K6+LT36toirkuoZId94mEbHtfH8
-	T3RE79KJ8tU5UkyM4Qm068job3s4ooidG1Vnjhqf5JWcvmbqzm2DWi+chLNnvY97D2RSf6oVjIjPi
-	taxN04eoS1x/3JS4rhQg==;
+	List-Owner; bh=ybJ2K72YiE6xlvbT1zVOODU+FdjwDySBHJXKsTez4QE=; b=gN5AgHvhs7B0RE
+	8tiw0gDDs+fxV/3XbjLI7lUCbrCKyNC5cHbdScey86PRu0+JpnGXCFP0/BqHzsGTnRxpWrN+8dm7l
+	r7IpVwjYTW5CdNWBoMmKkwtPVlzForYEPXixb1w9cbpd+Wkw34oeEecEzVldl7sqlbxkdbawdzBFc
+	uu4ZoFsiMiFwNSV1zb4t8HNs97782SYDW6p50jME5Q36kS01SBH6+VIP6KDJIwwL1uEDG5h2hLJ2f
+	v6IdtaNWq8OLwif7N45ywe8brU/B5LA8Ds+agmgwN5COE7afYXK3KUxtbQYzHc6w7B26WXwJtbtU5
+	UfOOQ6h51+rlq+AEEjng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hvLxZ-0004wk-VF; Wed, 07 Aug 2019 13:26:34 +0000
-Received: from mail-ed1-x52e.google.com ([2a00:1450:4864:20::52e])
+	id 1hvZK6-0000p4-2a; Thu, 08 Aug 2019 03:42:42 +0000
+Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hvLxC-0004hv-9X
- for linux-mediatek@lists.infradead.org; Wed, 07 Aug 2019 13:26:12 +0000
-Received: by mail-ed1-x52e.google.com with SMTP id r12so51436848edo.5
- for <linux-mediatek@lists.infradead.org>; Wed, 07 Aug 2019 06:26:09 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=0QjvmREjR45+76WZT5ZncbNe7ZAOKj+et9L3PIgmwQw=;
- b=oYuUKvAzdP81mVXUtzj+k6v54pdMGU1p5UK5sB62IYRmd5SSHUkIDZB7WieiTik0ZH
- LF94L0AF/0JyJoq+bfHes/U1HX3sFPQDSTVseCCBP8OyP4nErrFHEQ1cWmNgVyeZJOlj
- cT9iEDoYyRObTElNDzF/9Ig1NC8m34WFPknk4=
+ id 1hvZJc-0000Rs-2b; Thu, 08 Aug 2019 03:42:14 +0000
+Received: by mail-pg1-x542.google.com with SMTP id u17so43270636pgi.6;
+ Wed, 07 Aug 2019 20:42:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=sender:date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=FHolsiwWSPK3z68u5+4IFkU4FrvTDNnneyKNgnxhlM8=;
+ b=KJryp3crxEZ8mYmMhpkpOFKH+C23pqVC+7N4zvT7LaArh/Oo7dioHWTPAnBMk8JtBI
+ 7VleyuKLlDK4/k4l8RYeG0V7qpqXSt3gwL7/h4xn+psIq/V5yhA6BRHENO5KnYMpVIJi
+ z9LvvXj6S1mfESoTZ+Wjas7xK2xcCXd8+eSDIHukyBq7UPwmd6J4iG+6MLo5ICLeJMBf
+ cYyCU7yALIbTvDlI0KfYLQG/RV3EdZhmQoinQLNkRIe0/S3bhCEIWCC9ni7bDhY+hEop
+ rwerFa5mTAwv64cWG4R9YhA4Uqsk0fwJMua0HgVkbAABq2OZELVjmlQnl/REU0asq4C9
+ CMAg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=0QjvmREjR45+76WZT5ZncbNe7ZAOKj+et9L3PIgmwQw=;
- b=Akfo34793uTBTJPJc07ldKb2CaMAOjs/dkyqZRha7W9dBML8k8bttjc4TzfKRcK6EN
- 9DcrIBQ8vvbcYj8SNqEX4W8Y8JyZA+y/nu1ucP8PySIZtyoebe/oUlyxERI6WTgmJQpt
- p9ddHrXmHajBrM/nU96dnzVLj8KfKHjcWLBbblsCHhIXZfWEfq+KUs2xfwzrmonaJ/B9
- dXB1idOpoIYIjG2jAJLvo4PYGf2TelS2u3ZFufr7i52bpArKFeec9porCqoLK0schfdy
- SSQRmWVncQSyNkyxnWOcmFPCBfsQx0qgvPOfbA3fU53BN61CoU/veOXa0DqXEin0ZtIK
- JLYg==
-X-Gm-Message-State: APjAAAUr2uMWXpa2LL3TdDqzWm5GNKFZumg7QVCXNCrqIWTIZqXuENLe
- mNYM+7vjLUTD8tLiy+15tgVlNPzMjTQADw==
-X-Google-Smtp-Source: APXvYqw2wPpp8DFbTTrfSRIpCY+sZmhAi0WPmivyGX5vj6SpfwD0xR7B4hsltyUUTvqTCtC2CN1DKw==
-X-Received: by 2002:aa7:c0cf:: with SMTP id j15mr9753726edp.138.1565184368520; 
- Wed, 07 Aug 2019 06:26:08 -0700 (PDT)
-Received: from mail-wr1-f47.google.com (mail-wr1-f47.google.com.
- [209.85.221.47])
- by smtp.gmail.com with ESMTPSA id t7sm8469029edw.87.2019.08.07.06.26.06
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Wed, 07 Aug 2019 06:26:06 -0700 (PDT)
-Received: by mail-wr1-f47.google.com with SMTP id p13so16803861wru.10
- for <linux-mediatek@lists.infradead.org>; Wed, 07 Aug 2019 06:26:06 -0700 (PDT)
-X-Received: by 2002:adf:fe10:: with SMTP id n16mr10531176wrr.92.1565184365643; 
- Wed, 07 Aug 2019 06:26:05 -0700 (PDT)
+ h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
+ :references:mime-version:content-disposition:in-reply-to:user-agent;
+ bh=FHolsiwWSPK3z68u5+4IFkU4FrvTDNnneyKNgnxhlM8=;
+ b=MxwOMCH6SQw6985Q9W4edMm5vhZirKV+oZMtQe3BotNE2Gp61R/B1nURcTtgKmEFnb
+ ur3TAbw+ng+Zi/1l8b7LegAUqfDitQbt427+icXlE5WSjLDy8GS+caQ0lyR1TCf7RjEP
+ zQad2J1vlKBHT8vnpTtsCYR2OzA0XVCCm9hFByASARu6fW/Brio7/W96kIqn+2r9ORoD
+ nKJZYb+2bYrJrPAi3i3gK+Qt1THaH6nlAiYmEvcQwv4DBdssxsjr2ZctW0Ra6Dapmn+6
+ uZ4hjIEK9Bej72juOQevHk3pVumQg1uXP5Y0Xuldt3BaT3SD88Ggf/VQV6HP75R/vooZ
+ sE2A==
+X-Gm-Message-State: APjAAAUAKfDGq5CxgxDKgd28jwsIo91PE5FCzSz2QuTTXEbR0WRcaKou
+ U/QlvWJYRGGaY77lUcTPZBE=
+X-Google-Smtp-Source: APXvYqynMgacljQ9i7/6uwSu9u8psBdbvgQsL/ftx7dSTSI/a3MoN1x6pTxxy7xDlwQNn/mND4IMLw==
+X-Received: by 2002:a62:8643:: with SMTP id x64mr13370677pfd.7.1565235731183; 
+ Wed, 07 Aug 2019 20:42:11 -0700 (PDT)
+Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
+ by smtp.gmail.com with ESMTPSA id f64sm99667598pfa.115.2019.08.07.20.42.09
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Wed, 07 Aug 2019 20:42:10 -0700 (PDT)
+Date: Wed, 7 Aug 2019 20:42:08 -0700
+From: Guenter Roeck <linux@roeck-us.net>
+To: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+Subject: Re: [PATCH v6 19/24] drm/bridge: dumb-vga-dac: Provide ddc symlink
+ in connector sysfs directory
+Message-ID: <20190808034208.GA31284@roeck-us.net>
+References: <cover.1564161140.git.andrzej.p@collabora.com>
+ <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
 MIME-Version: 1.0
-References: <jungo.lin@mediatek.com>
- <20190611035344.29814-1-jungo.lin@mediatek.com>
- <20190611035344.29814-8-jungo.lin@mediatek.com>
- <20190710095646.GB181405@chromium.org>
- <1563616681.1212.386.camel@mtksdccf07>
- <CAAFQd5AmAXm1T0eLPiUTFLv9qiKxe-wZGyXxk0jvge+EanZ3FQ@mail.gmail.com>
- <1564125828.1212.600.camel@mtksdccf07>
- <CAAFQd5D5m=gGViSY++r5uUS1+91y9=Gpcss1dEXrin_T07H+uQ@mail.gmail.com>
- <1565143899.9157.19.camel@mtksdccf07>
-In-Reply-To: <1565143899.9157.19.camel@mtksdccf07>
-From: Tomasz Figa <tfiga@chromium.org>
-Date: Wed, 7 Aug 2019 22:25:52 +0900
-X-Gmail-Original-Message-ID: <CAAFQd5CfWOvGTUZLJ3Gu6L6ptjQiL7z7sSGG4ktonzCdqieqbQ@mail.gmail.com>
-Message-ID: <CAAFQd5CfWOvGTUZLJ3Gu6L6ptjQiL7z7sSGG4ktonzCdqieqbQ@mail.gmail.com>
-Subject: Re: [RFC,v3 7/9] media: platform: Add Mediatek ISP P1 device driver
-To: Jungo Lin <jungo.lin@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <ebb75e71b8b7c8d65d54a947a03fd21b8969fb3a.1564161140.git.andrzej.p@collabora.com>
+User-Agent: Mutt/1.5.24 (2015-08-30)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190807_062610_330544_09EF693A 
-X-CRM114-Status: GOOD (  43.99  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190807_204212_240182_31137099 
+X-CRM114-Status: GOOD (  13.55  )
+X-Spam-Score: 0.6 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:52e listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
  [list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (groeck7[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (groeck7[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -106,389 +103,145 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org,
- =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <sean.cheng@mediatek.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <rynn.wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>, Rob Herring <robh@kernel.org>,
- =?UTF-8?B?UnlhbiBZdSAo5L2Z5a2f5L+uKQ==?= <ryan.yu@mediatek.com>,
- =?UTF-8?B?RnJhbmtpZSBDaGl1ICjpgrHmloflh7Ep?= <frankie.chiu@mediatek.com>,
- Hans Verkuil <hverkuil@xs4all.nl>, Matthias Brugger <matthias.bgg@gmail.com>,
- Sj Huang <sj.huang@mediatek.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>, ddavenport@chromium.org,
- =?UTF-8?B?RnJlZGVyaWMgQ2hlbiAo6Zmz5L+K5YWDKQ==?= <frederic.chen@mediatek.com>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
- Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
+ dri-devel@lists.freedesktop.org, linux-kernel@vger.kernel.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Shawn Guo <shawnguo@kernel.org>, kernel@collabora.com,
+ Sam Ravnborg <sam@ravnborg.org>, linux-samsung-soc@vger.kernel.org,
+ Sean Paul <sean@poorly.run>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Chen-Yu Tsai <wens@csie.org>, Kukjin Kim <kgene@kernel.org>,
+ NXP Linux Team <linux-imx@nxp.com>, Dave Airlie <airlied@redhat.com>,
+ Thomas Zimmermann <tzimmermann@suse.de>, Jonas Karlman <jonas@kwiboo.se>,
+ linux-arm-msm@vger.kernel.org, intel-gfx@lists.freedesktop.org,
+ Jyri Sarha <jsarha@ti.com>, Mamta Shukla <mamtashukla555@gmail.com>,
+ linux-mediatek@lists.infradead.org, Maxime Ripard <mripard@kernel.org>,
+ Rodrigo Vivi <rodrigo.vivi@intel.com>, linux-tegra@vger.kernel.org,
+ Thomas Gleixner <tglx@linutronix.de>, Vincent Abriou <vincent.abriou@st.com>,
+ linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
+ amd-gfx@lists.freedesktop.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
+ Enrico Weigelt <info@metux.net>, Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Douglas Anderson <dianders@chromium.org>, Todor Tomov <todor.tomov@linaro.org>,
+ Kyungmin Park <kyungmin.park@samsung.com>, Huang Rui <ray.huang@amd.com>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Alex Deucher <alexander.deucher@amd.com>, freedreno@lists.freedesktop.org,
+ Christian =?iso-8859-1?Q?K=F6nig?= <christian.koenig@amd.com>,
+ Gerd Hoffmann <kraxel@redhat.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Aug 7, 2019 at 11:11 AM Jungo Lin <jungo.lin@mediatek.com> wrote:
->
-> Hi, Tomasz:
->
-> On Tue, 2019-08-06 at 18:47 +0900, Tomasz Figa wrote:
-> > Hi Jungo,
-> >
-> > On Fri, Jul 26, 2019 at 4:24 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > >
-> > > Hi, Tomasz:
-> > >
-> > > On Thu, 2019-07-25 at 18:23 +0900, Tomasz Figa wrote:
-> > > > .Hi Jungo,
-> > > >
-> > > > On Sat, Jul 20, 2019 at 6:58 PM Jungo Lin <jungo.lin@mediatek.com> wrote:
-> > > > >
-> > > > > Hi, Tomasz:
-> > > > >
-> > > > > On Wed, 2019-07-10 at 18:56 +0900, Tomasz Figa wrote:
-> > > > > > Hi Jungo,
-> > > > > >
-> > > > > > On Tue, Jun 11, 2019 at 11:53:42AM +0800, Jungo Lin wrote:
-> > [snip]
->
-> I just keep some questions to be clarified.
-> [snip]
->
-> > > > > > > +           isp_dev->meta0_vb2_index = meta0_vb2_index;
-> > > > > > > +           isp_dev->meta1_vb2_index = meta1_vb2_index;
-> > > > > > > +   } else {
-> > > > > > > +           if (irq_status & SOF_INT_ST) {
-> > > > > > > +                   isp_dev->current_frame = hw_frame_num;
-> > > > > > > +                   isp_dev->meta0_vb2_index = meta0_vb2_index;
-> > > > > > > +                   isp_dev->meta1_vb2_index = meta1_vb2_index;
-> > > > > > > +           }
-> > > > > > > +           irq_handle_notify_event(isp_dev, irq_status, dma_status, 1);
-> > > > > > > +   }
-> > > > > >
-> > > > > > The if and else blocks do almost the same things just in different order. Is
-> > > > > > it really expected?
-> > > > > >
-> > > > >
-> > > > > If we receive HW_PASS1_DON_ST & SOF_INT_ST IRQ events at the same time,
-> > > > > the correct sequence should be handle HW_PASS1_DON_ST firstly to check
-> > > > > any de-queued frame and update the next frame setting later.
-> > > > > Normally, this is a corner case or system performance issue.
-> > > >
-> > > > So it sounds like HW_PASS1_DON_ST means that all data from current
-> > > > frame has been written, right? If I understand your explanation above
-> > > > correctly, that would mean following handling of each interrupt:
-> > > >
-> > > > HW_PASS1_DON_ST:
-> > > >  - CQ executes with next CQ buffer to prepare for next frame. <- how
-> > > > is this handled? does the CQ hardware automatically receive this event
-> > > > from the ISP hadware?
-> > > >  - return VB2 buffers,
-> > > >  - complete requests.
-> > > >
-> > > > SOF_INT_ST:
-> > > >  - send VSYNC event to userspace,
-> > > >  - program next CQ buffer to CQ,
-> > > >
-> > > > SW_PASS1_DON_ST:
-> > > >  - reclaim CQ buffer and enqueue next frame to composing if available
-> > > >
-> > >
-> > > Sorry for our implementation of HW_PASS1_DON_ST.
-> > > It is confusing.
-> > > Below is the revised version based on your conclusion.
-> > > So in our new implemmenation, we just handle SOF_INT_ST &
-> > > SW_PASS1_DON_ST events. We just add one warning message for
-> > > HW_PASS1_DON_ST
-> > >
-> > > HW_PASS1_DON_ST:
-> > > - CQ executes with next CQ buffer to prepare for next frame.
-> > >
-> > > SOF_INT_ST:
-> > > - send VSYNC event to userspace,
-> > > - program next CQ buffer to CQ,
-> > >
-> > > SW_PASS1_DON_ST:
-> > > - reclaim CQ buffer and enqueue next frame to composing if available
-> > > - return VB2 buffers,
-> > > - complete requests.
-> > >
-> > > For CQ HW operations, it is listed below:
-> > >
-> > > a. The CQ buffer has two kinds of information
-> > >  - Which ISP registers needs to be updated.
-> > >  - Where the corresponding ISP register data to be read.
-> > > b. The CQ buffer loading procedure is triggered by HW_PASS1_DONT_ST IRQ
-> > > event periodically.
-> > >  - Normally, if the ISP HW receives the completed frame and it will
-> > > trigger W_PASS1_DONT_ST IRQ and perform CQ buffer loading immediately.
-> > > -  So the CQ buffer loading is performed by ISP HW automatically.
-> > > c. The ISP HW will read CQ base address register(REG_CQ_THR0_BASEADDR)
-> > > to decide which CQ buffer is loaded.
-> > >    - So we configure the next CQ base address in SOF.
-> > > d. For CQ buffer loading, CQ will read the ISP registers from CQ buffer
-> > > and update the ISP register values into HW.
-> > >    - SCP composer will compose one dummy CQ buffer and assign it to
-> > > REG_CQ_THR0_BASEADDR of each CQ buffer.
-> > >    - Dummy CQ buffer has no updated ISP registers comparing with other
-> > > CQ buffers.
-> > >    - With this design, if there is no updated new CQ buffer by driver
-> > > which may be caused no en-queue frames from user space. The CQ HW will
-> > > load dummy CQ buffer and do nothing.
-> >
-> > Does the set of registers programmed by CQ include destination buffer
-> > addresses to? If yes, we would end up overwriting previous frames if
-> > no new buffers are provided.
-> >
->
-> Yes, the buffer addresses are changed per frame request. We need to
-> compose CQ to include these DMA destination addresses. For your concern,
-> we have DMA flow buffer control (FBC) in HW. If there is no FBC counter
-> increased due to no buffer for each DMA, the ISP HW doesn't output the
-> data to the corresponding DMA address.
->
-> Below is the simple descriptor of CQ buffer.
-> a. ISP registers in tuning buffer, including 3A registers.
-> b. All capture buffers informations.
->    - DMA buffer destination address
->    - FBC counter
-> c. Some specif ISP registers for meta DMAs, such as LCE or LMVO.
-> d. frame sequence number register
->
+On Fri, Jul 26, 2019 at 07:23:13PM +0200, Andrzej Pietrasiewicz wrote:
+> Use the ddc pointer provided by the generic connector.
+> 
+> Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
+> Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
 
-Okay, with the FBC counter it sounds fine. Thanks for clarifying.
+This patch results in a crash when running qemu:versatilepb.
 
-> > > f. The CQ buffer loading is guaranteed by HW to finish before the next
-> > > SOF.
-> > >
-> >
-> > Okay, thanks a lot for the explanation. This is much more clear now.
-> >
-> > [snip]
-> > > > > > > +static const struct dev_pm_ops mtk_isp_pm_ops = {
-> > > > > > > +   SET_SYSTEM_SLEEP_PM_OPS(mtk_isp_suspend, mtk_isp_resume)
-> > > > > > > +   SET_RUNTIME_PM_OPS(mtk_isp_suspend, mtk_isp_resume, NULL)
-> > > > > >
-> > > > > > For V4L2 drivers system and runtime PM ops would normally be completely
-> > > > > > different. Runtime PM ops would be called when the hardware is idle already
-> > > > > > or is about to become active. System PM ops would be called at system power
-> > > > > > state change and the hardware might be both idle or active. Please also see
-> > > > > > my comments to mtk_isp_suspend() and mtk_isp_resume() above.
-> > > > > >
-> > > > >
-> > > > > Here is the new implementation. It should be clear to show the
-> > > > > difference between system and runtime PM ops.
-> > > > >
-> > > > > static const struct dev_pm_ops mtk_isp_pm_ops = {
-> > > > >         SET_SYSTEM_SLEEP_PM_OPS(pm_runtime_force_suspend,
-> > > > >                                 pm_runtime_force_resume)
-> > > > >         SET_RUNTIME_PM_OPS(mtk_isp_runtime_suspend, mtk_isp_runtime_resume,
-> > > > > NULL)
-> > > > > };
-> > > >
-> > > > That's still not correct. In runtime suspend/resume ops we already are
-> > > > not streaming anymore, because we call pm_runtime_get/put_*() when
-> > > > starting and stopping streaming. In system suspend/resume ops we might
-> > > > be streaming and that's when we need to stop the hardware and wait for
-> > > > it to finish. Please implement these ops separately.
-> > > >
-> > > > Best regards,
-> > > > Tomasz
-> > >
-> > >
-> > > Ok, got your point.
-> > > Below is the new implementation for your review.
-> > >
-> > > static int mtk_isp_pm_suspend(struct device *dev)
-> > > {
-> > >         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
-> > >         u32 val;
-> > >         int ret;
-> > >
-> > >         dev_dbg(dev, "- %s\n", __func__);
-> > >
-> > >         /* Check ISP is streaming or not */
-> > >         if (!p1_dev->cam_dev.streaming)
-> > >                 goto done;
-> >
-> > We would normally check here for pm_runtime_suspended(). Although they
-> > both should be equivalent. Still, there is no need to call
-> > pm_runtime_force_suspend() if the latter is true, so we could just
-> > return 0 instantly.
-> >
->
-> Ok, here is the fixed version.
->
-> static int mtk_isp_pm_suspend(struct device *dev)
-> {
->         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
->         u32 val;
->         int ret;
->
->         dev_dbg(dev, "- %s\n", __func__);
->
->         if (pm_runtime_suspended(dev))
->                 return 0;
->
->         /* Disable ISP's view finder and wait for TG idle */
->         dev_dbg(dev, "cam suspend, disable VF\n");
->         val = readl(p1_dev->regs + REG_TG_VF_CON);
->         writel(val & (~TG_VF_CON_VFDATA_EN), p1_dev->regs + REG_TG_VF_CON);
->         ret = readl_poll_timeout_atomic(p1_dev->regs + REG_TG_INTER_ST, val,
->                                         (val & TG_CS_MASK) == TG_IDLE_ST,
->                                         USEC_PER_MSEC, MTK_ISP_STOP_HW_TIMEOUT);
->         if (ret)
->                 dev_warn(dev, "can't stop HW:%d:0x%x\n", ret, val);
+Unable to handle kernel NULL pointer dereference at virtual address 000000c5
+pgd = (ptrval)
+[000000c5] *pgd=00000000
+Internal error: Oops: 5 [#1] ARM
+Modules linked in:
+CPU: 0 PID: 1 Comm: swapper Not tainted 5.3.0-rc1+ #1
+Hardware name: ARM-Versatile (Device Tree Support)
+PC is at sysfs_do_create_link_sd+0x38/0xd8
+LR is at sysfs_do_create_link_sd+0x38/0xd8
+pc : [<c01ac94c>]    lr : [<c01ac94c>]    psr: a0000153
+sp : c783bd18  ip : 00000000  fp : c783bde8
+r10: c7ef5ea8  r9 : 00000001  r8 : c0955dc0
+r7 : c73cb5b0  r6 : c73cd800  r5 : 000000ad  r4 : 00000000
+r3 : c7838ae0  r2 : 00000000  r1 : 00000008  r0 : c0aa2898
+Flags: NzCv  IRQs on  FIQs off  Mode SVC_32  ISA ARM  Segment none
+Control: 00093177  Table: 00004000  DAC: 00000053
+Process swapper (pid: 1, stack limit = 0x(ptrval))
+Stack: (0xc783bd18 to 0xc783c000)
+bd00:                                                       c73ccc48 c73ccc74
+bd20: c73cd800 c0ac7c88 00000000 c729cc80 c7ef5ea8 c04c7fc0 c73ccc48 c0a73068
+bd40: c73cd800 c0ac7c88 00000000 c04c87e0 00000001 00000000 c04cefcc c04dc3f8
+bd60: c73a9030 c73cd800 c73ccc48 7fc2ce37 00000000 c73cd800 00000000 c04cefcc
+bd80: c73cd800 00000000 00000000 c04b4ebc c0a73068 c7ef5ea8 c783bde8 c049ffcc
+bda0: c73a9020 c73cd800 c78e6000 c73a9020 00000000 c73a9020 c0a73068 c04df2f8
+bdc0: c783bde8 c095a76c c73a9020 c0065744 c73ccc20 c73a9020 00000000 00000001
+bde0: c7838ae0 00000000 c73ccc20 7fc2ce37 00000000 c78e6000 00000000 c0ac7c34
+be00: c07dc1f8 00000000 00000000 c0a6b384 c0a59858 c045e8d8 c78e6000 c1173a78
+be20: 00000000 c0ac7c34 00000000 c04e77c4 c78e6000 c0ac7c34 c0ac7c34 c0a73068
+be40: 00000000 ffffe000 c0a6b384 c04e7a34 c0ac7c34 c0ac7c34 c0a73068 c78e6000
+be60: 00000000 c0ac7c34 c0a73068 00000000 ffffe000 c0a6b384 c0a59858 c04e7cf0
+be80: 00000000 c0ac7c34 c78e6000 c04e7d7c 00000000 c0ac7c34 c04e7cf8 c04e5928
+bea0: c73b2800 c78d88a0 c78dd110 7fc2ce37 ffffe000 c0ac7c34 c73b2800 c0ac16e0
+bec0: 00000000 c04e6b28 c095a73c c0af0a60 c0a73068 c0ac7c34 c0af0a60 c0a73068
+bee0: c0a401c4 c04e8968 ffffe000 c0af0a60 c0a73068 c000b3bc 00000115 00000000
+bf00: c7ffce6c c7ffce00 c09e15b0 00000115 00000115 c0048844 c09e000c c097cfd4
+bf20: 00000000 00000006 00000006 00000000 00000000 c7ffce6c ffffe000 c006954c
+bf40: ffffe000 7fc2ce37 c0afb000 c0af0a60 00000115 c0afb000 00000007 c0a59850
+bf60: ffffe000 c0a111e8 00000006 00000006 00000000 c0a10678 00000000 7fc2ce37
+bf80: 00000000 00000000 c07824cc 00000000 00000000 00000000 00000000 00000000
+bfa0: 00000000 c07824d4 00000000 c00090b0 00000000 00000000 00000000 00000000
+bfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+bfe0: 00000000 00000000 00000000 00000000 00000013 00000000 00000000 00000000
+[<c01ac94c>] (sysfs_do_create_link_sd) from [<c04c7fc0>] (drm_connector_register.part.1+0x40/0xa0)
+[<c04c7fc0>] (drm_connector_register.part.1) from [<c04c87e0>] (drm_connector_register_all+0x90/0xb8)
+[<c04c87e0>] (drm_connector_register_all) from [<c04cefcc>] (drm_modeset_register_all+0x44/0x6c)
+[<c04cefcc>] (drm_modeset_register_all) from [<c04b4ebc>] (drm_dev_register+0x15c/0x1c0)
+[<c04b4ebc>] (drm_dev_register) from [<c04df2f8>] (pl111_amba_probe+0x2e0/0x4ac)
+[<c04df2f8>] (pl111_amba_probe) from [<c045e8d8>] (amba_probe+0x9c/0x118)
+[<c045e8d8>] (amba_probe) from [<c04e77c4>] (really_probe+0x1c0/0x2bc)
+[<c04e77c4>] (really_probe) from [<c04e7a34>] (driver_probe_device+0x5c/0x170)
+[<c04e7a34>] (driver_probe_device) from [<c04e7cf0>] (device_driver_attach+0x58/0x60)
+[<c04e7cf0>] (device_driver_attach) from [<c04e7d7c>] (__driver_attach+0x84/0xc0)
+[<c04e7d7c>] (__driver_attach) from [<c04e5928>] (bus_for_each_dev+0x70/0xb4)
+[<c04e5928>] (bus_for_each_dev) from [<c04e6b28>] (bus_add_driver+0x154/0x1e0)
+[<c04e6b28>] (bus_add_driver) from [<c04e8968>] (driver_register+0x74/0x108)
+[<c04e8968>] (driver_register) from [<c000b3bc>] (do_one_initcall+0x84/0x2e4)
+[<c000b3bc>] (do_one_initcall) from [<c0a111e8>] (kernel_init_freeable+0x2bc/0x394)
+[<c0a111e8>] (kernel_init_freeable) from [<c07824d4>] (kernel_init+0x8/0xf0)
+[<c07824d4>] (kernel_init) from [<c00090b0>] (ret_from_fork+0x14/0x24)
+Exception stack(0xc783bfb0 to 0xc783bff8)
+bfa0:                                     00000000 00000000 00000000 00000000
+bfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+bfe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Code: e59f00a0 e1a09003 e1a08002 eb176e54 (e5955018) 
+---[ end trace f503b374936886c5 ]---
 
-What happens in this case? Is it safe to continue?
+Bisect log attached.
 
->
->         /* Disable CMOS */
->         val = readl(p1_dev->regs + REG_TG_SEN_MODE);
->         writel(val & (~TG_SEN_MODE_CMOS_EN), p1_dev->regs + REG_TG_SEN_MODE);
->
->         /* Force ISP HW to idle */
->         ret = pm_runtime_force_suspend(dev);
->         if (ret)
->                 return ret;
+Guenter
 
-We should probably reenable the hardware if the above failed, so that
-we hopefully end up in the same state as before the suspend.
-
->
->         return 0;
-> }
-> [snip]
->
-> > > static int mtk_isp_pm_resume(struct device *dev)
-> > > {
-> > >         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
-> > >         u32 val;
-> > >         int ret;
-> > >
-> > >         dev_dbg(dev, "- %s\n", __func__);
-> > >
-> > >         /* Force ISP HW to resume if needed */
-> > >         ret = pm_runtime_force_resume(dev);
-> > >         if (ret)
-> > >                 return ret;
-> >
-> > We should do this conditionally based on what pm_runtime_suspended()
-> > returns. If it's non-zero then we can just return 0 instantly.
-> >
->
-> Ok, here is the fixed version.
->
-> static int mtk_isp_pm_resume(struct device *dev)
-> {
->         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
->         u32 val;
->         int ret;
->
->         dev_dbg(dev, "- %s\n", __func__);
->
->         if (pm_runtime_suspended(dev))
->                 return 0;
->
->         /* Force ISP HW to resume */
->         ret = pm_runtime_force_resume(dev);
->         if (ret)
->                 return ret;
->
->         /* Enable CMOS */
->         dev_dbg(dev, "cam resume, enable CMOS/VF\n");
->         val = readl(p1_dev->regs + REG_TG_SEN_MODE);
->         writel(val | TG_SEN_MODE_CMOS_EN, p1_dev->regs + REG_TG_SEN_MODE);
->
->         /* Enable VF */
->         val = readl(p1_dev->regs + REG_TG_VF_CON);
->         writel(val | TG_VF_CON_VFDATA_EN, p1_dev->regs + REG_TG_VF_CON);
->
->         return 0;
-> }
->
-> [snip]
->
-> > > static int mtk_isp_runtime_suspend(struct device *dev)
-> > > {
-> > >         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
-> > >
-> > >         dev_dbg(dev, "- %s\n", __func__);
-> > >
-> > >         if (pm_runtime_suspended(dev))
-> > >                 return 0;
-> >
-> > Sorry, I guess I wasn't clear in my reply. It's not possible to get
-> > this callback called if the device is already runtime suspended.
-> >
->
-> Ok, got it. Need to remove pm_runtime_suspended(dev) checking and move
-> it into mtk_isp_pm_* functions. If I still don't get your point, could
-> you kindly provide one sample driver for reference?
-
-The above implementation is okay, thanks. :)
-
-> Based on current
-> implementation, it is similar to below drivers.
-> https://elixir.bootlin.com/linux/latest/source/drivers/media/platform/mtk-mdp/mtk_mdp_core.c#L255
-> https://elixir.bootlin.com/linux/latest/source/drivers/media/platform/exynos4-is/fimc-is-i2c.c#L113
->
-
-The first one is an m2m device so it has slightly different rules -
-the runtime PM is allowed to suspend between frames if the idle time
-is long enough. The second one is a dummy driver for some fake i2c
-bus, so it doesn't really have any meaningful implementation.
-
-I think you could take a look at
-https://elixir.bootlin.com/linux/v5.3-rc3/source/drivers/media/platform/exynos4-is/fimc-lite.c#L1550
-, which is an online capture device too.
-
->
-> static int mtk_isp_runtime_suspend(struct device *dev)
-> {
->         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
->
->         dev_dbg(dev, "%s:disable clock\n", __func__);
->         clk_bulk_disable_unprepare(p1_dev->num_clks, p1_dev->clks);
->
->         return 0;
-> }
->
-> [snip]
->
-> > > static int mtk_isp_runtime_resume(struct device *dev)
-> > > {
-> > >         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
-> > >         int ret;
-> > >
-> > >         dev_dbg(dev, "- %s\n", __func__);
-> > >
-> > >         if (pm_runtime_suspended(dev))
-> > >                 return 0;
-> >
-> > In this case the above call would always return non-zero, so the
-> > behavior wouldn't be very good.
-> >
->
-> Same as above.
->
-> static int mtk_isp_runtime_resume(struct device *dev)
-> {
->         struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(dev);
->         int ret;
->
->         dev_dbg(dev, "%s:enable clock\n", __func__);
->         ret = clk_bulk_prepare_enable(p1_dev->num_clks, p1_dev->clks);
->         if (ret) {
->                 dev_err(dev, "failed to enable clock:%d\n", ret);
->                 return ret;
->         }
->
->         return 0;
-> }
-
-Makes sense, thanks!
-
-Best regards,
-Tomasz
+---
+# bad: [3880be629e26f6c407593602398c6651860d5fae] Add linux-next specific files for 20190807
+# good: [e21a712a9685488f5ce80495b37b9fdbe96c230d] Linux 5.3-rc3
+git bisect start 'HEAD' 'v5.3-rc3'
+# good: [83d74da9e6d2ca78b32e9e794c6bcbd433d5efaa] Merge remote-tracking branch 'crypto/master'
+git bisect good 83d74da9e6d2ca78b32e9e794c6bcbd433d5efaa
+# bad: [3add021bff629f1792a5e4268afe13b3047b5523] Merge remote-tracking branch 'sound/for-next'
+git bisect bad 3add021bff629f1792a5e4268afe13b3047b5523
+# good: [4ef58ee18a654b1992d00281501d6eff051a0c5e] Merge remote-tracking branch 'amdgpu/drm-next'
+git bisect good 4ef58ee18a654b1992d00281501d6eff051a0c5e
+# good: [f729d8d9628d4093675abfd62d8d3a06d3d11732] drm/tinydrm: Move tinydrm_machine_little_endian()
+git bisect good f729d8d9628d4093675abfd62d8d3a06d3d11732
+# bad: [178e5f3a5bc1d67d1248a74c0abab41040abe7c4] drm/crc-debugfs: Add notes about CRC<->commit interactions
+git bisect bad 178e5f3a5bc1d67d1248a74c0abab41040abe7c4
+# good: [0486ad20e73d03c82208b802ac41e80b942b23f6] drm/rockchip: Make analogix_dp_atomic_check static
+git bisect good 0486ad20e73d03c82208b802ac41e80b942b23f6
+# bad: [92cb3e5980638a37c56091e605aa837d0af05a9d] dma-buf: fix stack corruption in dma_fence_chain_release
+git bisect bad 92cb3e5980638a37c56091e605aa837d0af05a9d
+# good: [350fd554ee44325661d0d3c3831f428f4fbb0f2d] drm/ast: Provide ddc symlink in connector sysfs directory
+git bisect good 350fd554ee44325661d0d3c3831f428f4fbb0f2d
+# bad: [28ba1b1da49a20ba8fb767d6ddd7c521ec79a119] drm: mali-dp: Mark expected switch fall-through
+git bisect bad 28ba1b1da49a20ba8fb767d6ddd7c521ec79a119
+# bad: [5b50fa2b35a4ddad11cb3d06231bf71759b49566] drm/amdgpu: Provide ddc symlink in connector sysfs directory
+git bisect bad 5b50fa2b35a4ddad11cb3d06231bf71759b49566
+# bad: [9ebc4d2140adcdea2399b42d3f0d2f7e141ac1a8] drm/bridge: dw-hdmi: Provide ddc symlink in connector sysfs directory
+git bisect bad 9ebc4d2140adcdea2399b42d3f0d2f7e141ac1a8
+# bad: [a4f9087e85de141e4e6d21ac2c583ae096cc9aba] drm/bridge: dumb-vga-dac: Provide ddc symlink in connector sysfs directory
+git bisect bad a4f9087e85de141e4e6d21ac2c583ae096cc9aba
+# first bad commit: [a4f9087e85de141e4e6d21ac2c583ae096cc9aba] drm/bridge: dumb-vga-dac: Provide ddc symlink in connector sysfs directory
 
 _______________________________________________
 Linux-mediatek mailing list
