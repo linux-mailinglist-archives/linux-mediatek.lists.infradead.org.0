@@ -2,62 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 31E018895D
-	for <lists+linux-mediatek@lfdr.de>; Sat, 10 Aug 2019 09:59:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B381888977
+	for <lists+linux-mediatek@lfdr.de>; Sat, 10 Aug 2019 10:00:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0RS/hsDLETBgMxXasCrrel4M/S9L+ZjQlFkeFRgB9Vg=; b=FcpDRcfV/SsUNr
-	CCLUv2LODH/U92dy7xxbfSFBPO+qf7d5WOsig9AJYAfelS9sRO2skNwmnI7celwuQlhVpIq3n0b4h
-	Yu0XtZSMyj93u3IVHRs5pqTHUSBPsttL8x+i5PghilA8r7aADdYFtG5VFVtpieXkplWrO/m0jJ2wr
-	yqVuy0sI/6XY6cd5vYLRniLoLL13mVAMc1Tw23aV8p9TnitIqRiwnzolehpy4htMfW6SeXc9CkctK
-	UK3sY3jMMSMaODUuX7A6o8GXZddtXlx02lOeOfJVzTYYj9SNModo29LgBU7Z03x7qxZH2q0ayEaTY
-	ATvqQleqntApZGp8c7cQ==;
+	List-Owner; bh=NaG4E/hOt9fNO2zB2kkyK7gkG7o40CSurn0b5z5JRPk=; b=G//PREQBrJH4uV
+	p/bCGRWmznU18ZiwlTvuWFXNbxWeoGyROwq6bCyfF4A1hCHceRQHWCqWeh8wankJ1uv372EYfPu+b
+	yzC5j0fGRgNw9dH9bDMWQE7HgR3qqYIk4jzQmaj9/KW4nYMy2Yrt5MbzJsOVhLn+iMeY2DcnpW/6b
+	RTMtDuQvfCoHiYsn2rBwn17eZXIhEBR0N2Pxvcj7dL31uhY4oX5bzvwJd+QSO0pYdS7EP5g3TYMY3
+	nfKvCotSQ7JbfuWkhzGDSvD24fbQcnp8VxLcJ9QPecstqQaOzXMiBkV7f/+vkhZJuErPB80a1HWFw
+	93Il0cfcrGjfYDh8m80g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hwMHf-00040d-Kn; Sat, 10 Aug 2019 07:59:27 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hwMIk-00065w-VM; Sat, 10 Aug 2019 08:00:35 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hwMHa-0003ue-U5; Sat, 10 Aug 2019 07:59:25 +0000
-X-UUID: ebbc8457fa3a4490838f4089cc265bda-20190809
-X-UUID: ebbc8457fa3a4490838f4089cc265bda-20190809
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1hwMIJ-0005FW-Uq; Sat, 10 Aug 2019 08:00:12 +0000
+X-UUID: 38ab77bdf4834788883c5edc2305f52b-20190809
+X-UUID: 38ab77bdf4834788883c5edc2305f52b-20190809
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 432116586; Fri, 09 Aug 2019 23:59:15 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 10 Aug 2019 00:59:13 -0700
+ with ESMTP id 549579661; Fri, 09 Aug 2019 23:59:25 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 10 Aug 2019 00:59:23 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 10 Aug 2019 15:59:12 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 10 Aug 2019 15:59:21 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sat, 10 Aug 2019 15:59:10 +0800
+ Transport; Sat, 10 Aug 2019 15:59:20 +0800
 From: Yong Wu <yong.wu@mediatek.com>
 To: Joerg Roedel <joro@8bytes.org>, Matthias Brugger <matthias.bgg@gmail.com>, 
  Robin Murphy <robin.murphy@arm.com>, Will Deacon <will@kernel.org>
-Subject: [PATCH v9 02/21] iommu/mediatek: Use a struct as the platform data
-Date: Sat, 10 Aug 2019 15:58:02 +0800
-Message-ID: <1565423901-17008-3-git-send-email-yong.wu@mediatek.com>
+Subject: [PATCH v9 03/21] memory: mtk-smi: Use a general config_port interface
+Date: Sat, 10 Aug 2019 15:58:03 +0800
+Message-ID: <1565423901-17008-4-git-send-email-yong.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
 References: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190810_005923_548025_6182AE4E 
-X-CRM114-Status: GOOD (  13.02  )
+X-CRM114-CacheID: sfid-20190810_010008_263926_26E467F3 
+X-CRM114-Status: GOOD (  14.76  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -86,118 +84,67 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use a struct as the platform special data instead of the enumeration.
-This is a prepare patch for adding mt8183 iommu support.
+The config_port of mt2712 and mt8183 are the same. Use a general
+config_port interface instead.
+
+In addition, in mt2712, larb8 and larb9 are the bdpsys larbs which
+are not the normal larb, their register space are different from the
+normal one. thus, we can not call the general config_port. In mt8183,
+IPU0/1 and CCU connect with smi-common directly, they also are not
+the normal larb. Hence, we add a "larb_direct_to_common_mask" for these
+larbs which connect to smi-commmon directly.
+
+This is also a preparing patch for adding mt8183 SMI support.
 
 Signed-off-by: Yong Wu <yong.wu@mediatek.com>
 Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 Reviewed-by: Evan Green <evgreen@chromium.org>
 ---
- drivers/iommu/mtk_iommu.c | 24 ++++++++++++++++--------
- drivers/iommu/mtk_iommu.h |  6 +++++-
- 2 files changed, 21 insertions(+), 9 deletions(-)
+ drivers/memory/mtk-smi.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
 
-diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index 82e4be4..c6e6dc3 100644
---- a/drivers/iommu/mtk_iommu.c
-+++ b/drivers/iommu/mtk_iommu.c
-@@ -46,7 +46,7 @@
- #define REG_MMU_CTRL_REG			0x110
- #define F_MMU_PREFETCH_RT_REPLACE_MOD		BIT(4)
- #define F_MMU_TF_PROTECT_SEL_SHIFT(data) \
--	((data)->m4u_plat == M4U_MT2712 ? 4 : 5)
-+	((data)->plat_data->m4u_plat == M4U_MT2712 ? 4 : 5)
- /* It's named by F_MMU_TF_PROT_SEL in mt2712. */
- #define F_MMU_TF_PROTECT_SEL(prot, data) \
- 	(((prot) & 0x3) << F_MMU_TF_PROTECT_SEL_SHIFT(data))
-@@ -512,7 +512,7 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
- 	}
- 
- 	regval = F_MMU_TF_PROTECT_SEL(2, data);
--	if (data->m4u_plat == M4U_MT8173)
-+	if (data->plat_data->m4u_plat == M4U_MT8173)
- 		regval |= F_MMU_PREFETCH_RT_REPLACE_MOD;
- 	writel_relaxed(regval, data->base + REG_MMU_CTRL_REG);
- 
-@@ -533,14 +533,14 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
- 		F_INT_PRETETCH_TRANSATION_FIFO_FAULT;
- 	writel_relaxed(regval, data->base + REG_MMU_INT_MAIN_CONTROL);
- 
--	if (data->m4u_plat == M4U_MT8173)
-+	if (data->plat_data->m4u_plat == M4U_MT8173)
- 		regval = (data->protect_base >> 1) | (data->enable_4GB << 31);
- 	else
- 		regval = lower_32_bits(data->protect_base) |
- 			 upper_32_bits(data->protect_base);
- 	writel_relaxed(regval, data->base + REG_MMU_IVRP_PADDR);
- 
--	if (data->enable_4GB && data->m4u_plat != M4U_MT8173) {
-+	if (data->enable_4GB && data->plat_data->m4u_plat != M4U_MT8173) {
- 		/*
- 		 * If 4GB mode is enabled, the validate PA range is from
- 		 * 0x1_0000_0000 to 0x1_ffff_ffff. here record bit[32:30].
-@@ -551,7 +551,7 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
- 	writel_relaxed(0, data->base + REG_MMU_DCM_DIS);
- 
- 	/* It's MISC control register whose default value is ok except mt8173.*/
--	if (data->m4u_plat == M4U_MT8173)
-+	if (data->plat_data->m4u_plat == M4U_MT8173)
- 		writel_relaxed(0, data->base + REG_MMU_STANDARD_AXI_MODE);
- 
- 	if (devm_request_irq(data->dev, data->irq, mtk_iommu_isr, 0,
-@@ -584,7 +584,7 @@ static int mtk_iommu_probe(struct platform_device *pdev)
- 	if (!data)
- 		return -ENOMEM;
- 	data->dev = dev;
--	data->m4u_plat = (enum mtk_iommu_plat)of_device_get_match_data(dev);
-+	data->plat_data = of_device_get_match_data(dev);
- 
- 	/* Protect memory. HW will access here while translation fault.*/
- 	protect = devm_kzalloc(dev, MTK_PROTECT_PA_ALIGN * 2, GFP_KERNEL);
-@@ -732,9 +732,17 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
- 	SET_NOIRQ_SYSTEM_SLEEP_PM_OPS(mtk_iommu_suspend, mtk_iommu_resume)
+diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
+index 42ab43a..14f70cf 100644
+--- a/drivers/memory/mtk-smi.c
++++ b/drivers/memory/mtk-smi.c
+@@ -45,6 +45,7 @@ struct mtk_smi_larb_gen {
+ 	bool need_larbid;
+ 	int port_in_larb[MTK_LARB_NR_MAX + 1];
+ 	void (*config_port)(struct device *);
++	unsigned int			larb_direct_to_common_mask;
  };
  
-+static const struct mtk_iommu_plat_data mt2712_data = {
-+	.m4u_plat     = M4U_MT2712,
-+};
-+
-+static const struct mtk_iommu_plat_data mt8173_data = {
-+	.m4u_plat     = M4U_MT8173,
-+};
-+
- static const struct of_device_id mtk_iommu_of_ids[] = {
--	{ .compatible = "mediatek,mt2712-m4u", .data = (void *)M4U_MT2712},
--	{ .compatible = "mediatek,mt8173-m4u", .data = (void *)M4U_MT8173},
-+	{ .compatible = "mediatek,mt2712-m4u", .data = &mt2712_data},
-+	{ .compatible = "mediatek,mt8173-m4u", .data = &mt8173_data},
- 	{}
+ struct mtk_smi {
+@@ -168,17 +169,13 @@ void mtk_smi_larb_put(struct device *larbdev)
+ 	return -ENODEV;
+ }
+ 
+-static void mtk_smi_larb_config_port_mt2712(struct device *dev)
++static void mtk_smi_larb_config_port_gen2_general(struct device *dev)
+ {
+ 	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
+ 	u32 reg;
+ 	int i;
+ 
+-	/*
+-	 * larb 8/9 is the bdpsys larb, the iommu_en is enabled defaultly.
+-	 * Don't need to set it again.
+-	 */
+-	if (larb->larbid == 8 || larb->larbid == 9)
++	if (BIT(larb->larbid) & larb->larb_gen->larb_direct_to_common_mask)
+ 		return;
+ 
+ 	for_each_set_bit(i, (unsigned long *)larb->mmu, 32) {
+@@ -253,7 +250,8 @@ static void mtk_smi_larb_config_port_gen1(struct device *dev)
+ 
+ static const struct mtk_smi_larb_gen mtk_smi_larb_mt2712 = {
+ 	.need_larbid = true,
+-	.config_port = mtk_smi_larb_config_port_mt2712,
++	.config_port                = mtk_smi_larb_config_port_gen2_general,
++	.larb_direct_to_common_mask = BIT(8) | BIT(9),      /* bdpsys */
  };
  
-diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
-index 59337323..9725b08 100644
---- a/drivers/iommu/mtk_iommu.h
-+++ b/drivers/iommu/mtk_iommu.h
-@@ -32,6 +32,10 @@ enum mtk_iommu_plat {
- 	M4U_MT8173,
- };
- 
-+struct mtk_iommu_plat_data {
-+	enum mtk_iommu_plat m4u_plat;
-+};
-+
- struct mtk_iommu_domain;
- 
- struct mtk_iommu_data {
-@@ -48,7 +52,7 @@ struct mtk_iommu_data {
- 	bool				tlb_flush_active;
- 
- 	struct iommu_device		iommu;
--	enum mtk_iommu_plat		m4u_plat;
-+	const struct mtk_iommu_plat_data *plat_data;
- 
- 	struct list_head		list;
- };
+ static const struct of_device_id mtk_smi_larb_of_ids[] = {
 -- 
 1.9.1
 
