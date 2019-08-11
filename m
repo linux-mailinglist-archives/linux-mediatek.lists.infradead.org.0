@@ -2,59 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 651CC88C4C
-	for <lists+linux-mediatek@lfdr.de>; Sat, 10 Aug 2019 18:38:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 248D0890EA
+	for <lists+linux-mediatek@lfdr.de>; Sun, 11 Aug 2019 11:10:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KvBpomdF/MOAmrBuFA3hCzvQ2objgLxzhF95FM1RKN0=; b=bQx64Zjz1ecQz2
-	IFiKSBK8u18vsbJRtfUk2pOoKTijvikTR4p4jmU59QUx3URsM6oQCII+8vZtms4Y4KEIpd6HaVirm
-	aJpDC7ZUsGdYHWGHQJKaE2Ar3q28eLCmAQMEAtipjjHpgjPX3JNSdA6nhmNLsZ/l+E2ObXD9jTOuB
-	bdGtiOeIwissmhLJA5JEqR6Ejq96lkatTiGLlC/v0aqzYWNzkqCNcKvMmBKg9awko/K4Cm69XBfSL
-	M8x45Zt2G4tM0mAxfBIV+w6RqMNDzVUO2QWXgUr2L7fr+3JhxLJQyZBC5M+VMv1P4hAr19HPY6oVD
-	zp5DaoigBBXDI4O0MvMg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=wPfyMYQrOLRVEsB75banRR2q+mZgT4XyZSAW1b6pTsk=; b=nUTucrbvV6sgc+
+	U9eld5mP+zLQDleTQcVmIJ+abHbDvYgvVh3zdVmhUcC0ZVYpUm8fSRs6B+YBF9GIRnCWhi6LLFowY
+	0GhsNc7uLtNyZ16Jb30CM3wEbky3TfPzUl/e/CRGAuZkvyrhfVB3iKKpgv7NXCDTPczG6kaNf10QI
+	H1Mt5YRVL6Ob9lARMktpEd8FRZE8YHJsOIZoILlHHVjyczSp85+LITnRDlZUV1Bvi+4d1S/W2Lugr
+	faEdqd1BG/ApLQ0z73DJXvGWczrgMPO9QZA7CKiZ+vQAXhOb4Y/JBtwaSWaamCtzqeU0L5fHUTmpr
+	/AQDFmcimKmmFs4DxuWw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hwUNx-0006GC-5g; Sat, 10 Aug 2019 16:38:29 +0000
+	id 1hwjrt-0000D2-Kd; Sun, 11 Aug 2019 09:10:26 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hwUNf-00066H-Ku; Sat, 10 Aug 2019 16:38:13 +0000
-X-UUID: 502423d9bda3484b907f66e685f52837-20190810
-X-UUID: 502423d9bda3484b907f66e685f52837-20190810
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <houlong.wei@mediatek.com>)
+ id 1hwjro-0000Bs-Vn; Sun, 11 Aug 2019 09:10:22 +0000
+X-UUID: 3d77b7591afa4ef4a3530aa028fe04d4-20190811
+X-UUID: 3d77b7591afa4ef4a3530aa028fe04d4-20190811
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 95557214; Sat, 10 Aug 2019 08:38:07 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 10 Aug 2019 09:38:06 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Sun, 11 Aug 2019 00:38:03 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 11 Aug 2019 00:38:01 +0800
-Message-ID: <1565455081.19079.36.camel@mhfsdcap03>
-Subject: Re: [PATCH v11 09/12] soc: mediatek: cmdq: define the instruction
- struct
-From: houlong wei <houlong.wei@mediatek.com>
-To: Bibby Hsieh =?UTF-8?Q?=28=E8=AC=9D=E6=BF=9F=E9=81=A0=29?=
- <Bibby.Hsieh@mediatek.com>
-Date: Sun, 11 Aug 2019 00:38:01 +0800
-In-Reply-To: <1565453520.19079.17.camel@mhfsdcap03>
-References: <20190729070106.9332-1-bibby.hsieh@mediatek.com>
- <20190729070106.9332-10-bibby.hsieh@mediatek.com>
- <1565453520.19079.17.camel@mhfsdcap03>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 2046977571; Sun, 11 Aug 2019 01:10:14 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 11 Aug 2019 02:10:12 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 11 Aug 2019 17:10:06 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS32.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Sun, 11 Aug 2019 17:10:04 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
+ Rutland" <mark.rutland@arm.com>, Ian Campbell
+ <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
+ <airlied@linux.ie>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v4 0/4] Add drivers for auo, kd101n80-45na and boe,
+ tv101wum-nl6 panels
+Date: Sun, 11 Aug 2019 17:09:57 +0800
+Message-ID: <20190811091001.49555-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 8232FFF279301A39457DCF48E56192120E1B5723579B6362CE045B6813A8FDA22000:8
+X-TM-SNTS-SMTP: 13D0A12DC02939C6C15BF9FF5D1853EE5ED675A5B964FD3864D887C10CD6F7A02000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190810_093811_694490_36E9A589 
-X-CRM114-Status: GOOD (  14.80  )
+X-CRM114-CacheID: sfid-20190811_021021_029983_07FA21D3 
+X-CRM114-Status: UNSURE (   9.60  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -75,83 +74,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Nicolas Boichat <drinkcat@chromium.org>, Philipp
- Zabel <p.zabel@pengutronix.de>, srv_heupstream <srv_heupstream@mediatek.com>,
- Daoyuan Huang =?UTF-8?Q?=28=E9=BB=83=E9=81=93=E5=8E=9F=29?=
- <Daoyuan.Huang@mediatek.com>, Sascha Hauer <s.hauer@pengutronix.de>,
- Jassi Brar <jassisinghbrar@gmail.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- houlong.wei@mediatek.com,
- CK Hu =?UTF-8?Q?=28=E8=83=A1=E4=BF=8A=E5=85=89=29?= <ck.hu@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Ginny Chen =?UTF-8?Q?=28=E9=99=B3=E6=B2=BB=E5=82=91=29?=
- <ginny.chen@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Jiaguang Zhang =?UTF-8?Q?=28=E5=BC=A0=E5=8A=A0=E5=B9=BF=29?=
- <Jiaguang.Zhang@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Dennis-YC Hsieh =?UTF-8?Q?=28=E8=AC=9D=E5=AE=87=E5=93=B2=29?=
- <Dennis-YC.Hsieh@mediatek.com>
+Cc: stonea168@163.com, dri-devel@lists.freedesktop.org,
+ Andy Yan <andy.yan@rock-chips.com>, Ajay Kumar <ajaykumar.rs@samsung.com>,
+ Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, devicetree@vger.kernel.org,
+ Jitao Shi <jitao.shi@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
+ Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
+ yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sun, 2019-08-11 at 00:12 +0800, houlong wei wrote:
-> Hi Bibby, I have inline comment in function cmdq_pkt_write_mask().
-> 
-> On Mon, 2019-07-29 at 15:01 +0800, Bibby Hsieh wrote:
-> > Define an instruction structure for gce driver to append command.
-> > This structure can make the client's code more readability.
-> > 
-> > Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> > Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> > ---
-> >  drivers/soc/mediatek/mtk-cmdq-helper.c   | 103 +++++++++++++++--------
-> >  include/linux/mailbox/mtk-cmdq-mailbox.h |   2 +
-> >  2 files changed, 72 insertions(+), 33 deletions(-)
-> > 
-> > diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > index 7aa0517ff2f3..0886c4967ca4 100644
-> > --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > @@ -9,12 +9,24 @@
-> >  #include <linux/mailbox_controller.h>
-> >  #include <linux/soc/mediatek/mtk-cmdq.h>
-[...]
-> >  
-> >  int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
-> >  			u16 offset, u32 value, u32 mask)
-> >  {
-> > +	struct cmdq_instruction *inst;
-> >  	u32 offset_mask = offset;
-> > -	int err = 0;
-> >  
-> >  	if (mask != 0xffffffff) {
-> > -		err = cmdq_pkt_append_command(pkt, CMDQ_CODE_MASK, 0, ~mask);
-> > +		inst = cmdq_pkt_append_command(pkt);
-> > +		if (!inst)
-> > +			return -ENOMEM;
-> > +
-> > +		inst->op = CMDQ_CODE_MASK;
-> > +		inst->mask = ~mask;
+Changes since v3:
+ - remove check enable_gpio.
+ - fine tune the auo,kd101n80-45na panel's power on timing.
 
-> >  		offset_mask |= CMDQ_WRITE_ENABLE_MASK;
-> >  	}
-> > -	err |= cmdq_pkt_write(pkt, value, subsys, offset_mask);
-> >  
-> > -	return err;
-> > +	return cmdq_pkt_write(pkt, subsys, offset_mask, value);
+Changes since v2:
+ - correct the panel size
+ - remove blank line in Kconfig
+ - move auo,kd101n80-45na panel driver in this series.
 
-We need add a type conversion here, (u8)offset_mask, for your new
-function type. Er... it's better to remove local variable 'offset_mask'
-and replace it with 'offset'.
+Changes since v1:
 
-> >  }
-[...]
+ - update typo nl6 -> n16.
+ - update new panel config and makefile are added in alphabetically order.
+ - add the panel mode and panel info in driver data.
+ - merge auo,kd101n80-45a and boe,tv101wum-nl6 in one driver
 
+Jitao Shi (4):
+  dt-bindings: display: panel: Add BOE tv101wum-n16 panel bindings
+  drm/panel: support for BOE tv101wum-nl6 wuxga dsi video mode panel
+  dt-bindings: display: panel: add auo kd101n80-45na panel bindings
+  drm/panel: support for auo,kd101n80-45na wuxga dsi video mode panel
+
+ .../display/panel/auo,kd101n80-45na.txt       |  34 +
+ .../display/panel/boe,tv101wum-nl6.txt        |  34 +
+ drivers/gpu/drm/panel/Kconfig                 |   9 +
+ drivers/gpu/drm/panel/Makefile                |   1 +
+ .../gpu/drm/panel/panel-boe-tv101wum-nl6.c    | 761 ++++++++++++++++++
+ 5 files changed, 839 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/display/panel/auo,kd101n80-45na.txt
+ create mode 100644 Documentation/devicetree/bindings/display/panel/boe,tv101wum-nl6.txt
+ create mode 100644 drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
+
+-- 
+2.21.0
 
 
 _______________________________________________
