@@ -2,59 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A5F1A89174
-	for <lists+linux-mediatek@lfdr.de>; Sun, 11 Aug 2019 12:42:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A73AE89170
+	for <lists+linux-mediatek@lfdr.de>; Sun, 11 Aug 2019 12:41:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OsGZTB6WVzgPznD30IVCbmSbauXgGMSkr3mhYGMvT0M=; b=sK32u5zjOme+0G
-	TH9tLsy0C5B0RYCJIaWZnjzP0tbP4bHPZNeDnM1JYI6R2slg/iiwYokqiQVnHT/WLq4CIeFgcogqR
-	rD8AJaZwedsWfQb2+wtc4TLqVWqTqF2uX/YtDFQ76EoBPoBADkFRKD+WEzI6PKWzhqzDfWd6PprBt
-	r4guvJjpObaw2FuiEkNLhX+0zuRsjcxi5im+TCgBcNf4ZhFi3OFfsoVSwOP6yigjpkodAMXLMANZu
-	Cp2v61rk1eW7LnMK6RzRNj+x7ji7liKq4pU5iUARKY2zvCirFZ///fEiZtHjAc5a1n8NWQViHpqO9
-	nCSykD0IMZHBUlidyO3g==;
+	List-Owner; bh=8Y4fuFAZoBkKR4aRC0uYQO7tP4ck4r54oFaDZx1TbXM=; b=UZhX1GpmS3mNP/
+	MDC2YX185wVAxI8hmhsyhgHbauJ7RIi08QIyP8RAFctje3aMwUCI0GAUASw74+wKh19Cl7mY1kiE3
+	E45rX0i80+Y59iUzC7cozjL7V81EZYFz5GR4B83NmA3KG0OoW4BysxRW+h4hSa6PvAWd0H1BsQhLd
+	dTcvOp1OgXS532YLCxqF7NtfLneV7+aLyvmifWasaXIAILBswO984HW8PV9DsX+DwR5lenaPEhHgz
+	lJ0Ua9M9ODnb+wNHQ5VEy8ilJIn2lWBf8+NQrvaajxqcMGSF2mjcD8UlGrIzAryIKg/2O0ve69Tfy
+	7dTBiVJJpJNJok7bU2+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hwlIj-0004z6-9J; Sun, 11 Aug 2019 10:42:13 +0000
+	id 1hwlIP-0004Ub-7p; Sun, 11 Aug 2019 10:41:53 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hwlHq-0003iI-97; Sun, 11 Aug 2019 10:41:19 +0000
-X-UUID: 87ad3a1aa14748beafb670b2ea3a4829-20190811
-X-UUID: 87ad3a1aa14748beafb670b2ea3a4829-20190811
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1hwlHn-0003iI-Vv; Sun, 11 Aug 2019 10:41:18 +0000
+X-UUID: 890fe956c8b34acaab496d3c754e8abf-20190811
+X-UUID: 890fe956c8b34acaab496d3c754e8abf-20190811
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 142816353; Sun, 11 Aug 2019 02:40:44 -0800
-Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ with ESMTP id 309110145; Sun, 11 Aug 2019 02:40:51 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 11 Aug 2019 03:40:43 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33N1.mediatek.inc
- (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Sun, 11 Aug 2019 18:40:39 +0800
+ 15.0.1395.4; Sun, 11 Aug 2019 03:40:50 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33DR.mediatek.inc
+ (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sun, 11 Aug 2019 18:40:42 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS32.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Sun, 11 Aug 2019 18:40:37 +0800
+ 15.0.1395.4 via Frontend Transport; Sun, 11 Aug 2019 18:40:40 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Pawel Moll <pawel.moll@arm.com>, "Mark
  Rutland" <mark.rutland@arm.com>, Ian Campbell
  <ijc+devicetree@hellion.org.uk>, <linux-pwm@vger.kernel.org>, David Airlie
- <airlied@linux.ie>, "Matthias Brugger" <matthias.bgg@gmail.com>
-Subject: [PATCH v6 2/7] drm/mediatek: fixes CMDQ reg address of mt8173 is
- different with mt2701
-Date: Sun, 11 Aug 2019 18:40:03 +0800
-Message-ID: <20190811104008.53372-3-jitao.shi@mediatek.com>
+ <airlied@linux.ie>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v6 3/7] drm/mediatek: add dsi reg commit disable control
+Date: Sun, 11 Aug 2019 18:40:04 +0800
+Message-ID: <20190811104008.53372-4-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190811104008.53372-1-jitao.shi@mediatek.com>
 References: <20190811104008.53372-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 027EAB396C58E8C1908C7AE3B3FC98645EEBBD8C23FD3E8387C79EFEF20D3AE02000:8
+X-TM-AS-Product-Ver: SMEX-12.5.0.1684-8.5.1010-24840.000
+X-TM-AS-Result: No-2.463500-8.000000-10
+X-TMASE-MatchedRID: oPR0E2xDvMj83RazFYjhB26yfYFZzrGdZ9PKbshf5c4da1Vk3RqxONeu
+ l29/x8ODkREoYNKTmnm1bKejN6nC5P1PYuSZ5yXpqJSK+HSPY++eEP0DdJrulgdkFovAReUovqn
+ FtM6Nq/JrfJNHzOv42smzFW0zy93H2e1cwoB4RlggCPGiZqtI8LtubiieweWumyiLZetSf8mfop
+ 0ytGwvXiq2rl3dzGQ1F16aXoi8Z1nsRNjyF6mdIvibNsxjIyOzZ1+mV30ImeB7xZt7nWevYp7T7
+ ZmkgQ/6rQnglSC76Hi7PnY3br2onAjrF1fOOaVbU6d6SdlHFEb4hUcAI3yp/uK9rB3JzW5/EdpX
+ 6vXt2EbHJ1PhMfPBow==
+X-TM-AS-User-Approved-Sender: No
+X-TM-AS-User-Blocked-Sender: No
+X-TMASE-Result: 10--2.463500-8.000000
+X-TMASE-Version: SMEX-12.5.0.1684-8.5.1010-24840.000
+X-TM-SNTS-SMTP: EDBE0AC4A9314A126DA0109F93C21AC6DABF309848B6EC1F8A5625B92627F2452000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190811_034118_421371_401F381A 
-X-CRM114-Status: GOOD (  12.31  )
+X-CRM114-CacheID: sfid-20190811_034116_116751_3BDDDF14 
+X-CRM114-Status: UNSURE (   9.37  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -94,96 +106,53 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Config the different CMDQ reg address in driver data.
+New DSI IP has shadow register and working reg. The register
+values are writen to shadow register. And then trigger with
+commit reg, the register values will be moved working register.
+
+This fucntion is defualt on. But this driver doesn't use this
+function. So add the disable control.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
 ---
- drivers/gpu/drm/mediatek/mtk_dsi.c | 29 ++++++++++++++++++++++++-----
- 1 file changed, 24 insertions(+), 5 deletions(-)
+ drivers/gpu/drm/mediatek/mtk_dsi.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
 
 diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-index 52b49daeed9f..ac8e80e379f7 100644
+index ac8e80e379f7..314bfb1c827b 100644
 --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
 +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-@@ -123,7 +123,6 @@
+@@ -123,6 +123,10 @@
  #define VM_CMD_EN			BIT(0)
  #define TS_VFP_EN			BIT(5)
  
--#define DSI_CMDQ0		0x180
++#define DSI_SHADOW_DEBUG	0x190U
++#define FORCE_COMMIT			BIT(0)
++#define BYPASS_SHADOW			BIT(1)
++
  #define CONFIG				(0xff << 0)
  #define SHORT_PACKET			0
  #define LONG_PACKET			2
-@@ -148,6 +147,10 @@
+@@ -149,6 +153,7 @@ struct phy;
  
- struct phy;
- 
-+struct mtk_dsi_driver_data {
-+	const u32 reg_cmdq_off;
-+};
-+
- struct mtk_dsi {
- 	struct mtk_ddp_comp ddp_comp;
- 	struct device *dev;
-@@ -174,6 +177,7 @@ struct mtk_dsi {
- 	bool enabled;
- 	u32 irq_data;
- 	wait_queue_head_t irq_wait_queue;
-+	const struct mtk_dsi_driver_data *driver_data;
+ struct mtk_dsi_driver_data {
+ 	const u32 reg_cmdq_off;
++	bool has_shadow_ctl;
  };
  
- static inline struct mtk_dsi *encoder_to_dsi(struct drm_encoder *e)
-@@ -936,6 +940,7 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
- 	const char *tx_buf = msg->tx_buf;
- 	u8 config, cmdq_size, cmdq_off, type = msg->type;
- 	u32 reg_val, cmdq_mask, i;
-+	u32 reg_cmdq_off = dsi->driver_data->reg_cmdq_off;
- 
- 	if (MTK_DSI_HOST_IS_READ(type))
- 		config = BTA;
-@@ -955,9 +960,11 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
+ struct mtk_dsi {
+@@ -586,6 +591,11 @@ static int mtk_dsi_poweron(struct mtk_dsi *dsi)
  	}
  
- 	for (i = 0; i < msg->tx_len; i++)
--		writeb(tx_buf[i], dsi->regs + DSI_CMDQ0 + cmdq_off + i);
-+		mtk_dsi_mask(dsi, (reg_cmdq_off + cmdq_off + i) & (~0x3U),
-+			     (0xffUL << (((i + cmdq_off) & 3U) * 8U)),
-+			     tx_buf[i] << (((i + cmdq_off) & 3U) * 8U));
- 
--	mtk_dsi_mask(dsi, DSI_CMDQ0, cmdq_mask, reg_val);
-+	mtk_dsi_mask(dsi, reg_cmdq_off, cmdq_mask, reg_val);
- 	mtk_dsi_mask(dsi, DSI_CMDQ_SIZE, CMDQ_SIZE, cmdq_size);
- }
- 
-@@ -1101,6 +1108,8 @@ static int mtk_dsi_probe(struct platform_device *pdev)
- 	if (ret)
- 		goto err_unregister_host;
- 
-+	dsi->driver_data = of_device_get_match_data(dev);
+ 	mtk_dsi_enable(dsi);
 +
- 	dsi->engine_clk = devm_clk_get(dev, "engine");
- 	if (IS_ERR(dsi->engine_clk)) {
- 		ret = PTR_ERR(dsi->engine_clk);
-@@ -1194,9 +1203,19 @@ static int mtk_dsi_remove(struct platform_device *pdev)
- 	return 0;
- }
- 
-+static const struct mtk_dsi_driver_data mt8173_dsi_driver_data = {
-+	.reg_cmdq_off = 0x200,
-+};
++	if (dsi->driver_data->has_shadow_ctl)
++		writel(FORCE_COMMIT | BYPASS_SHADOW,
++		       dsi->regs + DSI_SHADOW_DEBUG);
 +
-+static const struct mtk_dsi_driver_data mt2701_dsi_driver_data = {
-+	.reg_cmdq_off = 0x180,
-+};
-+
- static const struct of_device_id mtk_dsi_of_match[] = {
--	{ .compatible = "mediatek,mt2701-dsi" },
--	{ .compatible = "mediatek,mt8173-dsi" },
-+	{ .compatible = "mediatek,mt2701-dsi",
-+	  .data = &mt2701_dsi_driver_data },
-+	{ .compatible = "mediatek,mt8173-dsi",
-+	  .data = &mt8173_dsi_driver_data },
- 	{ },
- };
+ 	mtk_dsi_reset_engine(dsi);
+ 	mtk_dsi_phy_timconfig(dsi);
  
 -- 
 2.21.0
