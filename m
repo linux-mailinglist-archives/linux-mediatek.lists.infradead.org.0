@@ -2,82 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 32FD189C2F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 13:01:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6D1E689C33
+	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 13:01:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nf3BLxGEcvj7Zgx/g3hgBYPEHLVFiS6SvDBSck0u3YY=; b=ZBzzs7vEFqivzu
-	KMAZ4rL3g49maAD1imG8DzADQ76ugNiC5dBGuarStU2IznDNrEwmtqbCux4o5OYSIgUHnCzQR5D44
-	eklmGoXkK7tKfTdyjEi6/DNB3CheXXB8Hp8td3hgNJnBxgVipLNyW0k9Q9RkDNaEvaiqpF+4DGSXZ
-	WhlGM4tv3cOz4Qq3hzD+qhCF3t12BY+Z+6n6VtR81tjvF9d1GFQNCi5SGRUtiqiQFY9hEmBvIzHY9
-	dvFLiqB7kUV00ChWGlA5tPJRGLCmPWCR8CTZFNRxFqt+0Q8QOhHmOOzbn0VYwPNfLOpgMMdxj4mcd
-	Roqgz95TCepYpsR+h4+w==;
+	List-Owner; bh=r073DVICCXWc879RFHQZKZW6z1Bydoeq5y243Y5yKAk=; b=mwiIEua3vHYIuv
+	LY/AHD/knEL8V02ZcTN6A4hza7cELDqKI2sdfxwkmzchRiRtQt3xSVSDa5PnVUo1mGznCQpvfuQV2
+	JvtZuLqdFPCmhjOzTXMXW+tRyjCjiJtR5lCG5J+nkERuDiwvZKPDP+ZYte0Hz7RpHzElCBC4texEr
+	uw9jPrYTCel2iibAdLpOyXfmqv5rEpVSGxxB74V95kK23kqEFbIHxR7lsi6O7ZFteiOeJo2tayu8r
+	G5EE9hSr/j4F4O7a0aP0v3DLZ0ZSYKx7K5gmr+QAhfN5bQX19PLVCT4wcT0vJmQLKDK2naA24TmiN
+	YxMsxKyVPcnnCMJFQ6kA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hx84b-0006bb-Ge; Mon, 12 Aug 2019 11:01:09 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hx84u-0006rh-GL; Mon, 12 Aug 2019 11:01:28 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hx83U-0004pR-NS
- for linux-mediatek@lists.infradead.org; Mon, 12 Aug 2019 11:00:02 +0000
-Received: by mail-wr1-x442.google.com with SMTP id j16so1903960wrr.8
- for <linux-mediatek@lists.infradead.org>; Mon, 12 Aug 2019 04:00:00 -0700 (PDT)
+ id 1hx83i-000669-4d
+ for linux-mediatek@lists.infradead.org; Mon, 12 Aug 2019 11:00:17 +0000
+Received: by mail-wr1-x441.google.com with SMTP id n9so104284680wru.0
+ for <linux-mediatek@lists.infradead.org>; Mon, 12 Aug 2019 04:00:14 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:content-transfer-encoding:in-reply-to
- :user-agent; bh=Se9XSbsfGDt4BhyzlQIMi1S9/MkvfhBPx11WicajSSg=;
- b=yaHiSpqBDdc2sT6zI2Dw8zIEtpSIuQSkOCCSmj9RJNlb1WEg3hBK3DieiAioZ8alKu
- AhP6xz8HC1xq2zeOzZD/CESJhRrdOgr9LS9ALNZnKZ7qQmpeLUV9bDwnT3EpLlwruIiP
- qw6Wfo9LBJzqQuQkLSFwdLolV8LwmnGKEdztwiHvhxo4Su+Amv+FnsR+5zM2D+cajBpc
- ylXscLIIU6eUjTydGSw0LQX8ETWkvZ56eeYt1TiS0+Pe7xUOVQiHuRDq1jqfF+s8ugmx
- Yb3gupA+zwYIsrVaxjBkVmzYbfHGadHGrRwNto9vTAoF1Gi8UzYRJPde3HbA0jbocbzQ
- ck9A==
+ :user-agent; bh=8QwbDdz8xqQedTgCl59sT1FB6qWBgfpvrd6AWSplSFM=;
+ b=un9eNtBw+OwLU4ECOEq/jaCjwbqDOeyKlR1jeFZysKarWaE6LfHAgOtOToynNr73TD
+ IZ8RZq2G/h9HmZnRr8fH+UdbzJ7j1OQuTnNMaM7uYcg75t14SgAdPY9xb+6btm5hMtD7
+ cM1JOj4QSiFAo09HIW/yEprtgbD/yD2CipP/o9bOD1GAJ9px4//v9vxW3QEYa8TMGaqq
+ gnZ5KsRxHaRN9gTZ6mYC2ocXexOr4l/Rb5JUtRUU9c+OkT1KiY0ros3uUgjcXImhsclZ
+ qVIkzEq4vwaJXR3D53rcVvMFEhWfew+kbFWC33VcCJGkMJ2v7lyTkTXiBX7JRCc/YjbH
+ Qehw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:content-transfer-encoding
  :in-reply-to:user-agent;
- bh=Se9XSbsfGDt4BhyzlQIMi1S9/MkvfhBPx11WicajSSg=;
- b=rR4L2eC5AtaIoMM416zIHprbCsMz/g/JO2zxJmPq54MpSzJ3itzC5ZCaePoIPnKOAF
- NmTg3Jpr6dwBqqU0udht/bSQNyPzT//iMzP5Bre/WuX3pN1BFDKI+ucsqkdEIFfMht+L
- V0RXHReroppdBg+KEwUTMeC8WUl4Sytubq07JNVjahj2p7GFclVU4oYguWCcsW/axpfi
- 2qyZYodKgIgwKtEte0bz+91UYCga6S10Y4FfgoLm16SI3MaEXz1rH6fbqd4sY8kapY5y
- t0o4jI7lGxntdT3uJ80OD+5t/IQEKK9IuFccglULbZ/007zQtTugmaGtwJlnnDXGnpyz
- xgCA==
-X-Gm-Message-State: APjAAAWMNljYruAZIHDWTR8EjkrjQKNfqYFqLhkohwenFgW30zCBdRcT
- 7R5mgyhKdhlBSghYQpd+3zkffw==
-X-Google-Smtp-Source: APXvYqz8c1NJgqCLXi1ZOgbjqMY0Kt0jc3i39Y6I1YxE2q8hdoWNcdXIgZA0cAg94/5QZFrH+80nhg==
-X-Received: by 2002:adf:dc51:: with SMTP id m17mr41748135wrj.256.1565607599334; 
- Mon, 12 Aug 2019 03:59:59 -0700 (PDT)
+ bh=8QwbDdz8xqQedTgCl59sT1FB6qWBgfpvrd6AWSplSFM=;
+ b=ej+1C+BzzP/HgCNegBMB8MmvPxui2asJyz2KNneJtkOutaBL1x+3qsEGZ74tLX/Y9F
+ KH5oQN/l/ZpjXvdF7a3OcCtxlsQTeLKbsuBkDS+maXfcEnLSIKrH+uSv7l7LpekmGhu0
+ YIochBD2fYjOtLmtRGZJ1qqC7N72bxWGy0ciOBuc2v7317Av4L/5490LJyacwldNpnfA
+ gJ3gQyFOW/OQVnNKIG/89/d5V4RreC6uYv1rRUW8cDfchmkyhQ8YJK2BucelWKtjMGKb
+ Y27st0nYl0QeMaHwQ75uOwB1CaTITEBwZ9uLPYrWqcF83/Dwp47RbkLkixXbTHDDkakq
+ QRIw==
+X-Gm-Message-State: APjAAAU7mGWMNb8G8Jy1IN7wl3QDyDbbO24guLbqzy7+11VliNl6g7VE
+ gkpJMo0Cl0zBmGp1AtWYizZarg==
+X-Google-Smtp-Source: APXvYqwghxYdeRuqVzPuYU2ropqG0cb6TCIVcqdi0Kn7ZW3EZH/gvO+aYyOhLrZXyhKsuMQmxwRNAw==
+X-Received: by 2002:a5d:6406:: with SMTP id z6mr39714762wru.280.1565607612886; 
+ Mon, 12 Aug 2019 04:00:12 -0700 (PDT)
 Received: from dell ([2.27.35.255])
- by smtp.gmail.com with ESMTPSA id a81sm5608087wma.3.2019.08.12.03.59.58
+ by smtp.gmail.com with ESMTPSA id k124sm20536169wmk.47.2019.08.12.04.00.11
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 12 Aug 2019 03:59:58 -0700 (PDT)
-Date: Mon, 12 Aug 2019 11:59:57 +0100
+ Mon, 12 Aug 2019 04:00:12 -0700 (PDT)
+Date: Mon, 12 Aug 2019 12:00:10 +0100
 From: Lee Jones <lee.jones@linaro.org>
 To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-Subject: Re: [PATCH v4 02/10] mfd: mt6397: extract irq related code from core
- driver
-Message-ID: <20190812105957.GP26727@dell>
+Subject: Re: [PATCH v4 03/10] mfd: mt6397: modify suspend/resume behavior
+Message-ID: <20190812110010.GQ26727@dell>
 References: <1564982518-32163-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1564982518-32163-3-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <1564982518-32163-4-git-send-email-hsin-hsiung.wang@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1564982518-32163-3-git-send-email-hsin-hsiung.wang@mediatek.com>
+In-Reply-To: <1564982518-32163-4-git-send-email-hsin-hsiung.wang@mediatek.com>
 User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_040000_849404_15ADA0F6 
-X-CRM114-Status: GOOD (  11.45  )
+X-CRM114-CacheID: sfid-20190812_040014_958752_71FFC6CE 
+X-CRM114-Status: GOOD (  10.92  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -116,18 +115,15 @@ Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gTW9uLCAwNSBBdWcgMjAxOSwgSHNpbi1Ic2l1bmcgV2FuZyB3cm90ZToKCj4gSW4gb3JkZXIg
-dG8gc3VwcG9ydCBkaWZmZXJlbnQgdHlwZXMgb2YgaXJxIGRlc2lnbiwgd2UgZGVjaWRlIHRvIGFk
-ZAo+IHNlcGFyYXRlIGlycSBkcml2ZXJzIGZvciBkaWZmZXJlbnQgZGVzaWduIGFuZCBrZWVwIG10
-NjM5NyBtZmQgY29yZQo+IHNpbXBsZSBhbmQgcmV1c2FibGUgdG8gYWxsIGdlbmVyYXRpb25zIG9m
-IFBNSUNzIHNvIGZhci4KPiAKPiBTaWduZWQtb2ZmLWJ5OiBIc2luLUhzaXVuZyBXYW5nIDxoc2lu
-LWhzaXVuZy53YW5nQG1lZGlhdGVrLmNvbT4KPiAtLS0KPiAgZHJpdmVycy9tZmQvTWFrZWZpbGUg
-ICAgICAgICAgICB8ICAgMyArLQo+ICBkcml2ZXJzL21mZC9tdDYzOTctY29yZS5jICAgICAgIHwg
-MTQ2IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCj4gIGRyaXZlcnMvbWZkL210NjM5
-Ny1pcnEuYyAgICAgICAgfCAxODEgKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysr
-KysrKwo+ICBpbmNsdWRlL2xpbnV4L21mZC9tdDYzOTcvY29yZS5oIHwgICA5ICsrCj4gIDQgZmls
-ZXMgY2hhbmdlZCwgMTkyIGluc2VydGlvbnMoKyksIDE0NyBkZWxldGlvbnMoLSkKPiAgY3JlYXRl
-IG1vZGUgMTAwNjQ0IGRyaXZlcnMvbWZkL210NjM5Ny1pcnEuYwoKRm9yIG15IG93biByZWZlcmVu
+T24gTW9uLCAwNSBBdWcgMjAxOSwgSHNpbi1Ic2l1bmcgV2FuZyB3cm90ZToKCj4gU29tZSBwbWlj
+cyBkb24ndCBuZWVkIGJhY2t1cCBpbnRlcnJ1cHQgc2V0dGluZ3MsIHNvIHdlIGNoYW5nZSB0byB1
+c2UKPiBwbSBub3RpZmllciBmb3IgdGhlIHBtaWNzIHdoaWNoIGFyZSBuZWNlc3NhcnkgdG8gc3Rv
+cmUgc2V0dGluZ3MuCj4gCj4gU2lnbmVkLW9mZi1ieTogSHNpbi1Ic2l1bmcgV2FuZyA8aHNpbi1o
+c2l1bmcud2FuZ0BtZWRpYXRlay5jb20+Cj4gLS0tCj4gIGRyaXZlcnMvbWZkL210NjM5Ny1jb3Jl
+LmMgICAgICAgfCA4OSArKysrKysrKysrKysrKysrKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQo+
+ICBkcml2ZXJzL21mZC9tdDYzOTctaXJxLmMgICAgICAgIHwgMzMgKysrKysrKysrKysrKysrCj4g
+IGluY2x1ZGUvbGludXgvbWZkL210NjM5Ny9jb3JlLmggfCAgMyArKwo+ICAzIGZpbGVzIGNoYW5n
+ZWQsIDczIGluc2VydGlvbnMoKyksIDUyIGRlbGV0aW9ucygtKQoKRm9yIG15IG93biByZWZlcmVu
 Y2U6CiAgQWNrZWQtZm9yLU1GRC1ieTogTGVlIEpvbmVzIDxsZWUuam9uZXNAbGluYXJvLm9yZz4K
 Ci0tIApMZWUgSm9uZXMgW+adjueQvOaWr10KTGluYXJvIFNlcnZpY2VzIFRlY2huaWNhbCBMZWFk
 CkxpbmFyby5vcmcg4pSCIE9wZW4gc291cmNlIHNvZnR3YXJlIGZvciBBUk0gU29DcwpGb2xsb3cg
