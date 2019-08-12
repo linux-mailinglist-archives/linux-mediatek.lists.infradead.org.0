@@ -2,78 +2,93 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5EDBC898D5
-	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 10:41:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5503D89B30
+	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 12:19:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=l5c/L4x1AOiDfJfE/ldZtsbzLZdG1FDYQ8uiVQa79t8=; b=T1Ti0N7fKWFtof
-	/YEQmqHtdFaRwH4vFkG3SswP0wNm1n2GXrCcMmbtB5IAnBDrNDj3TZPUSVvxbTd6BLOyhlRV41suT
-	zc4AykCw2ahF5KPdlJtP1mO+RsngQZYCRHEHaB0xY56DdxJlOImBpU6kbqkmJAQ0VSfloCJEVcMI0
-	P9UEzmSj4yN4rsB4efU1r5ZnXlDpvM+qVd9sxkOTJDn+yEm4PUAvZpHGo1x10PYI0n34rHtxGxU5L
-	tLkA7QiC1GeEizZu6fWF+IBECZX9bi28hTEymij1ZNWUtoMz/sccUik91lZAq+ZjGPgGgP2eRPh6o
-	8YHPuMt5O5PNqUNC/IkQ==;
+	List-Owner; bh=ModbXgTHUo9ZvlEKRlgJTT3Yq1haIUFBGjbCRA09ELo=; b=cK960VLfhkU6Ss
+	g7xa4pQ1bf5mGuk9bxwFWnNiigBQgmzZP4MdFzHsYD/kg/fo7kylACIiHaqjeL2qcPd+fbmnSmO9T
+	ML6eEylChA+ug+TBJ1nyYZDalMNrK6ShaDOiq0Y1+bG0yXZ6CJT+nqTzBrjoJgkghOO8YJ2AfUhJ1
+	HbDnsuTxnIrNumn2ffe4vEemJRXKtBPHzJbHRMANPZLrkxsviNquYEunXwOQV/H37dQqpvHGEH6fG
+	kUgDNJsOq3WxjhT0gsuxi0NLrlJChTwCVB3+Ry7KepRpejvkZ/BUEjcZCw5t1GXZDClkSa+IuEMRN
+	PQ0pLflz2aDsIc+T6Xxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hx5su-0006vi-55; Mon, 12 Aug 2019 08:40:56 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hx7Pl-0002CG-GD; Mon, 12 Aug 2019 10:18:57 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hx5sq-0006vL-7K; Mon, 12 Aug 2019 08:40:53 +0000
-X-UUID: 7a327fd46cbe41f7bab10cc65cd26831-20190812
-X-UUID: 7a327fd46cbe41f7bab10cc65cd26831-20190812
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 955060321; Mon, 12 Aug 2019 00:40:47 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 12 Aug 2019 01:40:46 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS33DR.mediatek.inc (172.27.6.106) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 12 Aug 2019 16:40:39 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 12 Aug 2019 16:40:39 +0800
-Message-ID: <1565599241.3510.0.camel@mtksdaap41>
-Subject: Re: [PATCH v6 2/7] drm/mediatek: fixes CMDQ reg address of mt8173
- is different with mt2701
-From: CK Hu <ck.hu@mediatek.com>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Mon, 12 Aug 2019 16:40:41 +0800
-In-Reply-To: <20190811104008.53372-3-jitao.shi@mediatek.com>
-References: <20190811104008.53372-1-jitao.shi@mediatek.com>
- <20190811104008.53372-3-jitao.shi@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hx7PW-000210-1s
+ for linux-mediatek@lists.infradead.org; Mon, 12 Aug 2019 10:18:43 +0000
+Received: by mail-wr1-x443.google.com with SMTP id b16so7360177wrq.9
+ for <linux-mediatek@lists.infradead.org>; Mon, 12 Aug 2019 03:18:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to
+ :user-agent; bh=7tZV/C+CttVM58WgI5MskpQ9uHYkdrjmm3CFUmvewno=;
+ b=W+MxhXPlqRndnSDLfszOAzcHmVOW3zepwOG16SrxUolE+YVOJWBRuiuxxU4d/tK5ib
+ eQc/dIBIFwTcCmLQhoZQwpHSv0Z9GeNPNm2xWCPE0fgp4Rh9yoW+7ATA94jKrSXX4WrQ
+ 0PUIZNkQIQMW0/ttZeHjwewCrBJc8dHUMnE8Cn+DuD1QiGxzXoM6iqtK0sO+mBwI+ZR7
+ zwQC+FQ8Ksc9TIrTKQATDtnIIWAni1AXI50QDu2qvmTx5JqDjheXwahx+Ou0JnK5ao+T
+ NOfUqJsGdgFTyM+0k1m2xkbZ6ucKIp08KA+67ZZzOLTy8Ejuzu78IbvQb3BAsjDxDHHV
+ TuAw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to:user-agent;
+ bh=7tZV/C+CttVM58WgI5MskpQ9uHYkdrjmm3CFUmvewno=;
+ b=JBPneLk68BJxwzVUPKazv9Um0tPxaciPpZHSy2b6ZKnJcHI5aHtbo5rhUnX3+CTjdX
+ M/EPCmzKcsnKC5EGd7Ak3i5KgULrBdtm3loSvxHmH1REdpEdAVvFl/v0E2roo6I4MH1P
+ HksVj3fk6t03D4rMso9+HYaRv9JZKLGUlvVZX+Bi42kOiDuBSvRqAzTdw9FstbFgdzGR
+ S7KysS9Vx8fpDUtP+Sl2snODvzO/a4UQPStS/DCE2aeUmw5TWp+EFU5LYZzcwv+CtXjk
+ T25d52NPmpVdwqa6pyGRAOk5tr3nPyf9EcYny2IVxLzuWOw1xpoVKHMrqHwNO64IuhmW
+ 3vMQ==
+X-Gm-Message-State: APjAAAUdl7uy/RdNBIlLNQ24ADt6ZfuTj3H0tPJ0NS/xRF1M1Mwz6Xq1
+ O8eQyxzV0Y0WG8lZKiXngrNKdg==
+X-Google-Smtp-Source: APXvYqwaN+jzxqGhqbcsiExg1wesaEC2LCxVh6tSbvfJCScUe6zZHJ2RcSBvMSMOl0MzKlQhkyBhKw==
+X-Received: by 2002:a5d:408c:: with SMTP id o12mr37516277wrp.176.1565605120486; 
+ Mon, 12 Aug 2019 03:18:40 -0700 (PDT)
+Received: from dell ([2.27.35.255])
+ by smtp.gmail.com with ESMTPSA id d20sm10642375wmb.24.2019.08.12.03.18.39
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Mon, 12 Aug 2019 03:18:39 -0700 (PDT)
+Date: Mon, 12 Aug 2019 11:18:38 +0100
+From: Lee Jones <lee.jones@linaro.org>
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>
+Subject: Re: [PATCH v3 03/10] rtc: mt6397: move some common definitions into
+ rtc.h
+Message-ID: <20190812101838.GG26727@dell>
+References: <20190729174154.4335-1-frank-w@public-files.de>
+ <20190729174154.4335-4-frank-w@public-files.de>
+ <20190805134842.GG3600@piout.net>
 MIME-Version: 1.0
-X-TM-AS-Product-Ver: SMEX-12.5.0.1684-8.5.1010-24842.000
-X-TM-AS-Result: No-13.018600-8.000000-10
-X-TMASE-MatchedRID: L8tZF6zWW2rmLzc6AOD8DfHkpkyUphL9SWg+u4ir2NNquuOqohJ0c+8i
- 8dew1/WnrdoLblq9S5olCvqYcPZDx7VdhtJxXnUI8pRHzcG+oi1vV3/OnMClWlVkJxysad/Iu/0
- GhfXBucU9osQh+w/oGQ81SqsdNAtCQSWnAG0egjGiAZ3zAhQYgn607foZgOWyf2dEskHXJhBRLT
- ERhRg1g3YZvR6JDTidiNK3wKXSWGL+651tSm/JkUeDzzDviY0OGEfoClqBl86bKItl61J/ycnjL
- TA/UDoAoTCA5Efyn8CNo+PRbWqfRDsAVzN+Ov/sSGDwQigllyZJi14HLH6kDpCPr2awuHdZ/xhI
- NXxE7nbxWl/hXOyjTA==
-X-TM-AS-User-Approved-Sender: No
-X-TM-AS-User-Blocked-Sender: No
-X-TMASE-Result: 10--13.018600-8.000000
-X-TMASE-Version: SMEX-12.5.0.1684-8.5.1010-24842.000
-X-TM-SNTS-SMTP: C14B02D73BB3E63EA400F57743FC20A46C0A1B48032BFB28AC7C29B36717EC8C2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20190805134842.GG3600@piout.net>
+User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_014052_271676_694A7338 
-X-CRM114-Status: GOOD (  17.17  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190812_031842_091862_71CB19BA 
+X-CRM114-Status: GOOD (  13.48  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,133 +100,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
- cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>, Thierry
- Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki
- Dae <inki.dae@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Andy
- Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>, Sean
- Paul <seanpaul@chromium.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Kate Stewart <kstewart@linuxfoundation.org>,
+ Mark Rutland <mark.rutland@arm.com>, linux-kernel@vger.kernel.org,
+ Richard Fontana <rfontana@redhat.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>, linux-rtc@vger.kernel.org,
+ Frank Wunderlich <frank-w@public-files.de>,
+ Allison Randal <allison@lohutok.net>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
+ linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ "Tianping . Fang" <tianping.fang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, Alessandro Zummo <a.zummo@towertech.it>,
+ Josef Friedl <josef.friedl@speed.at>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Sebastian Reichel <sre@kernel.org>, "David S. Miller" <davem@davemloft.net>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
-
-On Sun, 2019-08-11 at 18:40 +0800, Jitao Shi wrote:
-> Config the different CMDQ reg address in driver data.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_dsi.c | 29 ++++++++++++++++++++++++-----
->  1 file changed, 24 insertions(+), 5 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> index 52b49daeed9f..ac8e80e379f7 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-> @@ -123,7 +123,6 @@
->  #define VM_CMD_EN			BIT(0)
->  #define TS_VFP_EN			BIT(5)
->  
-> -#define DSI_CMDQ0		0x180
->  #define CONFIG				(0xff << 0)
->  #define SHORT_PACKET			0
->  #define LONG_PACKET			2
-> @@ -148,6 +147,10 @@
->  
->  struct phy;
->  
-> +struct mtk_dsi_driver_data {
-> +	const u32 reg_cmdq_off;
-> +};
-> +
->  struct mtk_dsi {
->  	struct mtk_ddp_comp ddp_comp;
->  	struct device *dev;
-> @@ -174,6 +177,7 @@ struct mtk_dsi {
->  	bool enabled;
->  	u32 irq_data;
->  	wait_queue_head_t irq_wait_queue;
-> +	const struct mtk_dsi_driver_data *driver_data;
->  };
->  
->  static inline struct mtk_dsi *encoder_to_dsi(struct drm_encoder *e)
-> @@ -936,6 +940,7 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
->  	const char *tx_buf = msg->tx_buf;
->  	u8 config, cmdq_size, cmdq_off, type = msg->type;
->  	u32 reg_val, cmdq_mask, i;
-> +	u32 reg_cmdq_off = dsi->driver_data->reg_cmdq_off;
->  
->  	if (MTK_DSI_HOST_IS_READ(type))
->  		config = BTA;
-> @@ -955,9 +960,11 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
->  	}
->  
->  	for (i = 0; i < msg->tx_len; i++)
-> -		writeb(tx_buf[i], dsi->regs + DSI_CMDQ0 + cmdq_off + i);
-> +		mtk_dsi_mask(dsi, (reg_cmdq_off + cmdq_off + i) & (~0x3U),
-> +			     (0xffUL << (((i + cmdq_off) & 3U) * 8U)),
-> +			     tx_buf[i] << (((i + cmdq_off) & 3U) * 8U));
-
-If writeb() has the same problem in MT2701, I think we need a patch that
-just change writeb() to mtk_dsi_mask(), and then a patch to fix CMDQ reg
-address of MT8173. So break this patch into two patches.
-
-Regards,
-CK
-
->  
-> -	mtk_dsi_mask(dsi, DSI_CMDQ0, cmdq_mask, reg_val);
-> +	mtk_dsi_mask(dsi, reg_cmdq_off, cmdq_mask, reg_val);
->  	mtk_dsi_mask(dsi, DSI_CMDQ_SIZE, CMDQ_SIZE, cmdq_size);
->  }
->  
-> @@ -1101,6 +1108,8 @@ static int mtk_dsi_probe(struct platform_device *pdev)
->  	if (ret)
->  		goto err_unregister_host;
->  
-> +	dsi->driver_data = of_device_get_match_data(dev);
-> +
->  	dsi->engine_clk = devm_clk_get(dev, "engine");
->  	if (IS_ERR(dsi->engine_clk)) {
->  		ret = PTR_ERR(dsi->engine_clk);
-> @@ -1194,9 +1203,19 @@ static int mtk_dsi_remove(struct platform_device *pdev)
->  	return 0;
->  }
->  
-> +static const struct mtk_dsi_driver_data mt8173_dsi_driver_data = {
-> +	.reg_cmdq_off = 0x200,
-> +};
-> +
-> +static const struct mtk_dsi_driver_data mt2701_dsi_driver_data = {
-> +	.reg_cmdq_off = 0x180,
-> +};
-> +
->  static const struct of_device_id mtk_dsi_of_match[] = {
-> -	{ .compatible = "mediatek,mt2701-dsi" },
-> -	{ .compatible = "mediatek,mt8173-dsi" },
-> +	{ .compatible = "mediatek,mt2701-dsi",
-> +	  .data = &mt2701_dsi_driver_data },
-> +	{ .compatible = "mediatek,mt8173-dsi",
-> +	  .data = &mt8173_dsi_driver_data },
->  	{ },
->  };
->  
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gTW9uLCAwNSBBdWcgMjAxOSwgQWxleGFuZHJlIEJlbGxvbmkgd3JvdGU6Cgo+IE9uIDI5LzA3
+LzIwMTkgMTk6NDE6NDcrMDIwMCwgRnJhbmsgV3VuZGVybGljaCB3cm90ZToKPiA+IEZyb206IEpv
+c2VmIEZyaWVkbCA8am9zZWYuZnJpZWRsQHNwZWVkLmF0Pgo+ID4gCj4gPiBtb3ZlIGNvZGUgdG8g
+c2VwYXJhdGUgaGVhZGVyLWZpbGUgdG8gcmV1c2UgZGVmaW5pdGlvbnMgbGF0ZXIKPiA+IGluIHBv
+d2Vyb2ZmLWRyaXZlciAoZHJpdmVycy9wb3dlci9yZXNldC9tdDYzMjMtcG93ZXJvZmYuYykKPiA+
+IAo+ID4gY2hhbmdlcyBzaW5jZSB2MjogYWRkIG1pc3NpbmcgY29tbWl0LW1lc3NhZ2UKPiAKPiBU
+aGUgY2hhbmdlbG9nIHNob3VsZCBiZSBhZnRlciB0aGUgLS0tIG1hcmtlci4KPiA+IAo+ID4gU3Vn
+Z2VzdGVkLWJ5OiBGcmFuayBXdW5kZXJsaWNoIDxmcmFuay13QHB1YmxpYy1maWxlcy5kZT4KPiA+
+IFNpZ25lZC1vZmYtYnk6IEpvc2VmIEZyaWVkbCA8am9zZWYuZnJpZWRsQHNwZWVkLmF0Pgo+ID4g
+U2lnbmVkLW9mZi1ieTogRnJhbmsgV3VuZGVybGljaCA8ZnJhbmstd0BwdWJsaWMtZmlsZXMuZGU+
+Cj4gPiAtLS0KPiA+ICBkcml2ZXJzL3J0Yy9ydGMtbXQ2Mzk3LmMgICAgICAgfCA1NSArLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLQo+ID4gIGluY2x1ZGUvbGludXgvbWZkL210NjM5Ny9ydGMuaCB8
+IDcxICsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysKCkkgdGhpbmsgaW5jbHVkZS9s
+aW51eC9ydGMvbXQ2Mzk3Lmggd291bGQgYmUgYmV0dGVyPwoKQ2VydGFpbmx5IGZyb20gYSBtYWlu
+dGFpbmFuY2UgUG9WLCBpdCB3b3VsZCBiZSBiZXR0ZXIgcmV2aWV3ZWQgYW5kCmxvb2tlZCBhZnRl
+ciBieSBhbiBSVEMgZXhwZXJ0LgoKPiA+ICAyIGZpbGVzIGNoYW5nZWQsIDcyIGluc2VydGlvbnMo
+KyksIDU0IGRlbGV0aW9ucygtKQo+ID4gIGNyZWF0ZSBtb2RlIDEwMDY0NCBpbmNsdWRlL2xpbnV4
+L21mZC9tdDYzOTcvcnRjLmgKCi0tIApMZWUgSm9uZXMgW+adjueQvOaWr10KTGluYXJvIFNlcnZp
+Y2VzIFRlY2huaWNhbCBMZWFkCkxpbmFyby5vcmcg4pSCIE9wZW4gc291cmNlIHNvZnR3YXJlIGZv
+ciBBUk0gU29DcwpGb2xsb3cgTGluYXJvOiBGYWNlYm9vayB8IFR3aXR0ZXIgfCBCbG9nCgpfX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1tZWRpYXRl
+ayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8v
+bGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVrCg==
