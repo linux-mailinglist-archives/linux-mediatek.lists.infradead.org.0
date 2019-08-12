@@ -2,57 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F051F8A278
-	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 17:39:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0E82F8A9B1
+	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 23:50:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CIhuDVv7am6CDqRJtGqsHXy4VGVnceGGnNYMOjcOuWA=; b=El4C1HI9q++Y4O
-	VDJYC4oQEkoX8zBEiyAgMnivYuUv4LsY87vrX4sKFCwCWJIpvoFA7hfWbfE/d+1gxA64a9q4yhxMb
-	oLcKw9/XGUdj+b8J7OD/Kv/aY28Smj+RAubMT83ElqmU18roEAAxpCsDakR7jX+W+6J7COTS4Wq5p
-	/dn04rxGZtYJ9Dt9gpwYuc/kUQsp/kiut6smM7Y7M1Q9ym58v9hGGKlE3+5LSu7EAZyNuHfEq8R8n
-	/RNTEvqwlxfX/7v6ix2Rn40nguiIJzWeqHvgTQdXmxOaqqGQ4iHOFdpwV5GOqibjpteVH296PKTTI
-	6E5cKrtLFmmfw+c2/D6w==;
+	List-Owner; bh=EYnobB0Ihaf3wY0IgDexAd9H6F0KB4gxsbAMe/xIIOQ=; b=N3e84Peh0E9nzw
+	CDOX8Ez84KgUHlaDwv0SSu2GIz8D+jGL9BbmtkPls7W0nEVzEbeFAx5ZhTUJ+Zy5Ck/A0kaIR19P1
+	/8066KpmhSddCHOmKKRtvRwsJcumzs17Ujd6iX3dL5mu4B69Qd665Pedu2VALrZR1D+bH+AHwOWHe
+	eM4cfgI1dTBgGjEihtekUwm52hQiw2bezdkYWYjIGXgxt+9fCGfCdgKUO5pO8j1rJ87INQW8iO09z
+	O0T2KYmAPaTpU2vjsWQItn97iyscRiTvFsMJTor1vjcwW8O312Jrj3Bjg1PZxc1CAnxxpjnb5fJ6V
+	9YljR/POVTSzaHWOcV0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxCPm-0002Gf-Cx; Mon, 12 Aug 2019 15:39:18 +0000
-Received: from relay5-d.mail.gandi.net ([217.70.183.197])
+	id 1hxICQ-0002Ng-Sp; Mon, 12 Aug 2019 21:49:55 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxCPV-00023e-F7; Mon, 12 Aug 2019 15:39:03 +0000
-X-Originating-IP: 92.137.69.152
-Received: from localhost (alyon-656-1-672-152.w92-137.abo.wanadoo.fr
- [92.137.69.152])
- (Authenticated sender: alexandre.belloni@bootlin.com)
- by relay5-d.mail.gandi.net (Postfix) with ESMTPSA id 84BE91C0009;
- Mon, 12 Aug 2019 15:38:56 +0000 (UTC)
-Date: Mon, 12 Aug 2019 17:38:56 +0200
-From: Alexandre Belloni <alexandre.belloni@bootlin.com>
-To: Lee Jones <lee.jones@linaro.org>
-Subject: Re: [PATCH v5 03/10] rtc: mt6397: move some common definitions into
- rtc.h
-Message-ID: <20190812153856.GR3600@piout.net>
-References: <20190812121511.4169-1-frank-w@public-files.de>
- <20190812121511.4169-4-frank-w@public-files.de>
- <20190812151128.GV26727@dell>
+ id 1hxIC8-0002DF-B3; Mon, 12 Aug 2019 21:49:38 +0000
+Received: by mail-ot1-f66.google.com with SMTP id k18so32668640otr.3;
+ Mon, 12 Aug 2019 14:49:36 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=bId57j+xCMgHmNke4H/rs1zm5GrySxRkVxKOzngNvUM=;
+ b=PrQkr6WCEafbVLsbj1z6Cb0ZrlCi8lnmoTvcfOeinCIxXllIbNPIC1FSoSJS+z9Q3V
+ IWisykehFhRlN5NJ4a82Gvhc/7ORFpSmfgAOW+MK79XSmQ6bQynDFZwtiHgkT1TS987A
+ ehMwHgaJPoLqB/iXzWhguk9rP9y6YZTUWLV3IIWxkNGLH4j8mzXqtkUXJe1iAoe5J6vF
+ RU8yjONIB2fh3bYnlBBtPQUIwMlZZUeYXPmQk++i9sy1965bhnLGLv7ofG2ji8QSjTTE
+ 86wFNVSJKKfUUdvTXQ3hR80euYVbmxQNIgFNu6HVLMv7tc6HlGc4TOQ6/4lkOA0tjQYn
+ imxw==
+X-Gm-Message-State: APjAAAWd0e1zW/fldBHAo84+ltvMLEmPyidRA05OtZx760Viz4t+Iq+J
+ VQabXXhHRh+8v18oX1yaNg==
+X-Google-Smtp-Source: APXvYqydXCuTRQqJ+qulK7XUYr9oCHuac1Wfp89EYjWA89p2UUzerGucxvamiLfRUxWnafYzdRe2lA==
+X-Received: by 2002:a6b:fd10:: with SMTP id c16mr34339686ioi.217.1565646575229; 
+ Mon, 12 Aug 2019 14:49:35 -0700 (PDT)
+Received: from localhost ([74.118.88.158])
+ by smtp.gmail.com with ESMTPSA id r5sm86648270iom.42.2019.08.12.14.49.34
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 12 Aug 2019 14:49:34 -0700 (PDT)
+Date: Mon, 12 Aug 2019 15:49:33 -0600
+From: Rob Herring <robh@kernel.org>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Subject: Re: [PATCH v5 1/4] dt-bindings: display: mediatek: update dpi
+ supported chips
+Message-ID: <20190812214933.GA5954@bogus>
+References: <20190807060257.57007-1-jitao.shi@mediatek.com>
+ <20190807060257.57007-2-jitao.shi@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190812151128.GV26727@dell>
-User-Agent: Mutt/1.12.0 (2019-05-25)
+In-Reply-To: <20190807060257.57007-2-jitao.shi@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_083901_657235_B1DB8C7A 
-X-CRM114-Status: GOOD (  10.29  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190812_144936_979893_4E32228F 
+X-CRM114-Status: GOOD (  13.97  )
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.197 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.66 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.66 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,58 +90,60 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>,
- Mark Rutland <mark.rutland@arm.com>, linux-kernel@vger.kernel.org,
- Richard Fontana <rfontana@redhat.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>, linux-rtc@vger.kernel.org,
- Frank Wunderlich <frank-w@public-files.de>,
- Allison Randal <allison@lohutok.net>,
- Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
- linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
- "Tianping . Fang" <tianping.fang@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, Alessandro Zummo <a.zummo@towertech.it>,
- Josef Friedl <josef.friedl@speed.at>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sebastian Reichel <sre@kernel.org>, "David S. Miller" <davem@davemloft.net>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ David Airlie <airlied@linux.ie>, stonea168@163.com,
+ dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
+ Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
+ cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
+ Russell King <rmk+kernel@arm.linux.org.uk>,
+ Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
+ Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
+ linux-mediatek@lists.infradead.org, Andy Yan <andy.yan@rock-chips.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, eddie.huang@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, Rahul Sharma <rahul.sharma@samsung.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Sascha Hauer <kernel@pengutronix.de>, Sean Paul <seanpaul@chromium.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 12/08/2019 16:11:29+0100, Lee Jones wrote:
-> On Mon, 12 Aug 2019, Frank Wunderlich wrote:
+On Wed, Aug 07, 2019 at 02:02:54PM +0800, Jitao Shi wrote:
+> Add decriptions about supported chips, including MT2701 & MT8173 &
+> mt8183
 > 
-> > From: Josef Friedl <josef.friedl@speed.at>
-> > 
-> > move code to separate header-file to reuse definitions later
-> > in poweroff-driver (drivers/power/reset/mt6323-poweroff.c)
-> > 
-> > Suggested-by: Frank Wunderlich <frank-w@public-files.de>
-> > Signed-off-by: Josef Friedl <josef.friedl@speed.at>
-> > Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
-> > ---
-> > changes since v4: none
-> > changes since v3: none
-> > changes since v2: add missing commit-message
-> > ---
-> >  drivers/rtc/rtc-mt6397.c       | 55 +-------------------------
-> >  include/linux/mfd/mt6397/rtc.h | 71 ++++++++++++++++++++++++++++++++++
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> ---
+>  .../bindings/display/mediatek/mediatek,dpi.txt        | 11 +++++++++++
+>  1 file changed, 11 insertions(+)
 > 
-> include/linux/rtc/mt6397.h?
-> 
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> index b6a7e7397b8b..cd6a1469c8b7 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> @@ -7,6 +7,7 @@ output bus.
+>  
+>  Required properties:
+>  - compatible: "mediatek,<chip>-dpi"
+> +  the supported chips are mt2701 , mt8173 and mt8183.
+>  - reg: Physical base address and length of the controller's registers
+>  - interrupts: The interrupt signal from the function block.
+>  - clocks: device clocks
+> @@ -16,6 +17,11 @@ Required properties:
+>    Documentation/devicetree/bindings/graph.txt. This port should be connected
+>    to the input port of an attached HDMI or LVDS encoder chip.
+>  
+> +Optional properties:
+> +- dpi_pin_mode_swap: Swap the pin mode between dpi mode and gpio mode.
+> +- pinctrl-names: Contain "gpiomode" and "dpimode".
+> +- dpi_dual_edge: Control the RGB 24bit data on 12 pins or 24 pins.
 
-It's just a bunch of registers and bit definitions so it may as well
-stay close to include/linux/mfd/mt6397/registers.h
+Nothing about this in the commit msg...
 
+The dpi* properties need vendor prefixes and use '-' rather than '_'.
 
--- 
-Alexandre Belloni, Bootlin
-Embedded Linux and Kernel engineering
-https://bootlin.com
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
