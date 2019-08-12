@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EF2ED89DDF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 14:18:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5A14B89DE2
+	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 14:18:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,28 +11,28 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=r0HnEOnEyWWzjwhqJEf9mwk2PK9F23HAKp4glgYjRMU=; b=aJofNHsa3MERnUHbqgrLWnLGXg
-	wFfCa7lK357bO0gojfCvrl4Bkd+sDDjUZ121LnHYb4JLNfvCJYChx1TYAvFJk82MrV5SdazSccKdB
-	2f/tF21FlJnQUTXgPxDkCQZtk2hq5kYiac4B8ycP7TZhX2/5gvjDxgIx9hswi2Z24LXQafMD3pB3f
-	vzYsH12ZgiwfhyJWJnBqBNyzoaYeenr1e8k1vu01L3rCQTyTGvVrA9PJBBnf1bEBABe/56a9Dffc4
-	JvAenqKtQXJ7qmcBylUtL6xx3aMKrKHxnfk5OWtODswTOO0xYBQiVhDLh43sT3pyDIxF3CcTwch58
-	k6GnhZlQ==;
+	bh=gfKygdKBD30aMQjwRr95BY6hHYbiLszZ6QvygWXnRec=; b=kAYFPEwP21jciZl4GYhSGPgGFr
+	K56YRO25ayxVU8ngQVecST1zjeM1blfW+8211/WldKuoVxG3zZjLEel0gv4ZUP+DLqk91uo0y7gY1
+	tN1hfAGnqfQipLJyyEBzCb2mqcF3uqL0zAZrX805ni3FDJIilWpQ1zE5nzYoJKIe+pQDXVbHPm1D+
+	gkTJbmSc4i7urPWgpT0Axk2PZuFiWoRxXb0V/GvMH4rx27peKtR5Gs03XHBjFaP0ka7r+FvF20rji
+	A039EBc9PtYD/YFl6JBuOJc9stBENry4/D05FTTmLhL49nN9LWfzAqdIZUPBEzUW0qcqJMmYUTfJB
+	uH1+jXxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hx9H3-0004EY-AL; Mon, 12 Aug 2019 12:18:05 +0000
+	id 1hx9HT-0004Z7-EU; Mon, 12 Aug 2019 12:18:31 +0000
 Received: from mxwww.masterlogin.de ([2a03:2900:1:1::b])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hx9Ee-0002af-2r; Mon, 12 Aug 2019 12:15:37 +0000
+ id 1hx9Ee-0002am-Jt; Mon, 12 Aug 2019 12:15:37 +0000
 Received: from mxout2.routing.net (unknown [192.168.10.82])
- by new.mxwww.masterlogin.de (Postfix) with ESMTPS id BB9AA96DC9;
- Mon, 12 Aug 2019 12:15:33 +0000 (UTC)
-Received: from mxbox2.masterlogin.de (unknown [192.168.10.253])
- by mxout2.routing.net (Postfix) with ESMTP id 1504B647BC;
+ by new.mxwww.masterlogin.de (Postfix) with ESMTPS id C8BF696DCC;
  Mon, 12 Aug 2019 12:15:34 +0000 (UTC)
+Received: from mxbox2.masterlogin.de (unknown [192.168.10.253])
+ by mxout2.routing.net (Postfix) with ESMTP id 2B5F6647BC;
+ Mon, 12 Aug 2019 12:15:35 +0000 (UTC)
 Received: from localhost.localdomain (fttx-pool-217.61.152.193.bambit.de
  [217.61.152.193])
- by mxbox2.masterlogin.de (Postfix) with ESMTPSA id EBC66100D7A;
- Mon, 12 Aug 2019 14:15:32 +0200 (CEST)
+ by mxbox2.masterlogin.de (Postfix) with ESMTPSA id 0B06610083A;
+ Mon, 12 Aug 2019 14:15:34 +0200 (CEST)
 From: Frank Wunderlich <frank-w@public-files.de>
 To: Alessandro Zummo <a.zummo@towertech.it>,
  Alexandre Belloni <alexandre.belloni@bootlin.com>,
@@ -53,15 +53,15 @@ To: Alessandro Zummo <a.zummo@towertech.it>,
  Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
  Thomas Gleixner <tglx@linutronix.de>,
  "Tianping . Fang" <tianping.fang@mediatek.com>
-Subject: [PATCH v5 05/10] mfd: mt6323: some improvements of mt6397-core
-Date: Mon, 12 Aug 2019 14:15:06 +0200
-Message-Id: <20190812121511.4169-6-frank-w@public-files.de>
+Subject: [PATCH v5 06/10] rtc: mt6397: add compatible for mt6323
+Date: Mon, 12 Aug 2019 14:15:07 +0200
+Message-Id: <20190812121511.4169-7-frank-w@public-files.de>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20190812121511.4169-1-frank-w@public-files.de>
 References: <20190812121511.4169-1-frank-w@public-files.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_051536_293126_4D7F64E5 
-X-CRM114-Status: GOOD (  10.96  )
+X-CRM114-CacheID: sfid-20190812_051536_805514_8A0D73F3 
+X-CRM114-Status: GOOD (  10.69  )
 X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.0 points)
@@ -94,50 +94,31 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Josef Friedl <josef.friedl@speed.at>
 
-simplyfications (resource definitions my DEFINE_RES_* macros)
+use mt6397 rtc driver also for mt6323 but with different
+base/size see "mfd: mt6323: add mt6323 rtc+pwrc"
 
 Signed-off-by: Josef Friedl <josef.friedl@speed.at>
 Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
-Acked-for-MFD-by: Lee Jones <lee.jones@linaro.org>
 ---
-changes since v4: do not touch year of copyright
-changes since v3: moved part 6 forward to let compatible and driver be together
-changes since v2: splitted v2 part 4 into 6+7
+changes since v4: none
+changes since v3: moved (was part 5)
+changes since v2: splitted this from v2.3 suggested-by Alexandre Belloni
 ---
- drivers/mfd/mt6397-core.c | 13 +++----------
- 1 file changed, 3 insertions(+), 10 deletions(-)
+ drivers/rtc/rtc-mt6397.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/drivers/mfd/mt6397-core.c b/drivers/mfd/mt6397-core.c
-index 337bcccdb914..c9a81087fa55 100644
---- a/drivers/mfd/mt6397-core.c
-+++ b/drivers/mfd/mt6397-core.c
-@@ -5,6 +5,7 @@
-  */
+diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
+index 9370b7fc9f81..21cd9cc8b4c7 100644
+--- a/drivers/rtc/rtc-mt6397.c
++++ b/drivers/rtc/rtc-mt6397.c
+@@ -325,6 +325,7 @@ static SIMPLE_DEV_PM_OPS(mt6397_pm_ops, mt6397_rtc_suspend,
+ 			mt6397_rtc_resume);
  
- #include <linux/interrupt.h>
-+#include <linux/ioport.h>
- #include <linux/module.h>
- #include <linux/of_device.h>
- #include <linux/of_irq.h>
-@@ -23,16 +24,8 @@
- #define MT6397_CID_CODE		0x97
- 
- static const struct resource mt6397_rtc_resources[] = {
--	{
--		.start = MT6397_RTC_BASE,
--		.end   = MT6397_RTC_BASE + MT6397_RTC_SIZE,
--		.flags = IORESOURCE_MEM,
--	},
--	{
--		.start = MT6397_IRQ_RTC,
--		.end   = MT6397_IRQ_RTC,
--		.flags = IORESOURCE_IRQ,
--	},
-+	DEFINE_RES_MEM(MT6397_RTC_BASE, MT6397_RTC_SIZE),
-+	DEFINE_RES_IRQ(MT6397_IRQ_RTC),
+ static const struct of_device_id mt6397_rtc_of_match[] = {
++	{ .compatible = "mediatek,mt6323-rtc", },
+ 	{ .compatible = "mediatek,mt6397-rtc", },
+ 	{ }
  };
- 
- static const struct resource mt6323_keys_resources[] = {
 -- 
 2.17.1
 
