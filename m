@@ -2,70 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AEB0B8AA46
-	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 00:15:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 396D08AAE6
+	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 01:00:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=y6qVKKPyh9VE/GuWqQcfD/yDAcmC1Rnp5g3uYQXxH2U=; b=gVshi50C3gYkt7
-	PcxLi1TXBdIMpIo9u5zPhgVVDmIqNh78EZgSK6cRhkB6/6RsGSrP2XZq8T8BYwA4RYaIrRkreTXzP
-	pVLKiyKRbTgRMoOKukvCeXuvzOFOvkw0dINOfqcu7iLeNv+rUrYDrgT57A02+XjMXUiNmgMVqma5o
-	8RWyoob78Uy01FflGUv1qHKRztQWPRzrOfwUM+lDgABI3srlXZq60nz9Z5X0/O0DyjIraT4F+YoOs
-	M0oz2880ycWBN5Z2JBBWxZnZ1TPtEC2iD2Q87VfXxE8TQ6MT1xZN9iQJmep7rLvHK7r9TY9ph4ui5
-	VeIsyObOCI4efkZc8gMg==;
+	List-Owner; bh=bUb5BzzoRn+g2j9nBjP2zHeiIgHUKg792BcTpasfLMs=; b=luXtfFc2OJ0c1b
+	f2egjS0WJf1l1et723CRIK/0uhqVarWImpdo+qoc2TEnqTWMJL9+SYlXIUcA97O1bqd3j/V16TWB3
+	phLPaNcFBbC1NKAnbPcVxQHFPs2f0Xw10OgPQl46pFOxKf3JDTa0TjXcje15POvh8r9Fela1yy4Sc
+	J6BpBIpAoYIzvm8I5zV+jJlrZZkmJWm0oHSfPypOv6H1m3w0YO+cqDrcpRp2xAM+cJApll7c/nixx
+	Pg/l5MOIZuj1nUYHsB73FwvJpDGULyAEUSmdBWyXhWBo/5sJrZiqkp/mTvGfdLoMo8ESpw1VzSHdC
+	vNQqgCtln31XGnLhMxEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxIbF-0004NW-BH; Mon, 12 Aug 2019 22:15:33 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1hxJIS-0001Uc-IV; Mon, 12 Aug 2019 23:00:12 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxIax-0004BO-F5; Mon, 12 Aug 2019 22:15:16 +0000
-Received: by mail-ot1-f68.google.com with SMTP id b7so114749811otl.11;
- Mon, 12 Aug 2019 15:15:14 -0700 (PDT)
+ id 1hxJIC-0000JY-0L; Mon, 12 Aug 2019 22:59:57 +0000
+Received: by mail-ot1-f67.google.com with SMTP id z17so46923994otk.13;
+ Mon, 12 Aug 2019 15:59:55 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=5Hl8Ot2aSHBMEKcD9YMEz708iweSmdqsv8l8Mi9vl6U=;
- b=X5i/RSbOn848C5DvAy+X9iR4dU8Ei7DGcuBbdBb5T6LHacAboUZ8q73WX/zpji0gkc
- wPzBJv1/hdgh292T0Ygl7I5hGTRgLLpvMOJJbk87VuaJVLKRp0Vw4HyKTknEzhh2AcVF
- MIJHuykxX1l+/YWrmbzjUkUtr5TsGCfaVnuhiuG5RzgEwFPpIXIUyPTmINcLH99L4tMh
- LJT/8OTyYWsozOGFUgzxri62lC9EzonzF1uheJFnJ81qdI/jd8xtBK33+sBfM/db7L/M
- DER63j5qq20VPQs/rrryJymKDQQnjmooBrWYbacH5ms/PAmzavNIn4LaCiE2sL2KebZ1
- n9UA==
-X-Gm-Message-State: APjAAAVywAq5fqLVxOamadQpT/K2abuU2supHcYLyPzfxL5OllkCBACu
- 9wLEShMzGk8g3i4xaVsoHAOWzm0=
-X-Google-Smtp-Source: APXvYqxITl4/8wD2qF1OX3crvab5FCfVn+l0zPlE0D/ekVjf18e2o5f8bw/6PsZEPiWUQhTL3E0zOg==
-X-Received: by 2002:a02:c996:: with SMTP id b22mr16399239jap.39.1565648113681; 
- Mon, 12 Aug 2019 15:15:13 -0700 (PDT)
+ bh=wfqkapTLzty9tIGiNjJX/GNLl3mKFpBX5RHcS25GDOc=;
+ b=Lir0WGI9Zd0nZexQ1T3EiPMlhckFZPfSakxAvOOwuN/Zw65uigPK+1iHs1pqhbaGI2
+ ewDzGKJtbvJhf8nuUXaQceOM6E71u47hieDEhwH6pEK5oDSKP4S7/PxMpSe7UJp9GziS
+ Vqtzn61HmOTYTSpasXJDTLN/zdsm5Y64uU/ZbYPXs1eSCsykjFzlIN14IMl21T/D+0O3
+ aouUp+SyJ2RuFfuJUDQFzwB/Tl7I5gIPUj30kgKb3a9QAc+lb7okPjC7IOiscPj9wu9o
+ IOBPR9kf6oXTuLxiFnJoGh4kzOQ6YwUwDBJtvonm9eg0RANhjkcvB3C5mgrVnQYRadm3
+ zg7Q==
+X-Gm-Message-State: APjAAAUBla8uhxooewruTmwLcpeCOPFnQBcnh7LUN7I7BSwhONdAoXaW
+ YW6SEgAi4jxzOn6V2oizXQ==
+X-Google-Smtp-Source: APXvYqwmEe/FyoKdinwwGB2N4dWJ7LVtCusVQVC4ngZudckeh8J0RW2j1KLcpC1O8ucq5RcQHumzMw==
+X-Received: by 2002:a02:4881:: with SMTP id p123mr13646129jaa.69.1565650794550; 
+ Mon, 12 Aug 2019 15:59:54 -0700 (PDT)
 Received: from localhost ([64.188.179.254])
- by smtp.gmail.com with ESMTPSA id w23sm90581004ioa.51.2019.08.12.15.15.12
+ by smtp.gmail.com with ESMTPSA id p13sm19586044ioo.72.2019.08.12.15.59.53
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 12 Aug 2019 15:15:13 -0700 (PDT)
-Date: Mon, 12 Aug 2019 16:15:12 -0600
+ Mon, 12 Aug 2019 15:59:53 -0700 (PDT)
+Date: Mon, 12 Aug 2019 16:59:52 -0600
 From: Rob Herring <robh@kernel.org>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [PATCH wn 3/4] dt-bindings: display: panel: add auo
- kd101n80-45na panel bindings
-Message-ID: <20190812221512.GA24378@bogus>
-References: <20190811091001.49555-1-jitao.shi@mediatek.com>
- <20190811091001.49555-4-jitao.shi@mediatek.com>
+To: Xia Jiang <xia.jiang@mediatek.com>
+Subject: Re: [PATCH 1/5] media: dt-bindings: Add JPEG ENC device tree node
+ document
+Message-ID: <20190812225952.GA31298@bogus>
+References: <20190717093034.22826-1-xia.jiang@mediatek.com>
+ <20190717093034.22826-2-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190811091001.49555-4-jitao.shi@mediatek.com>
+In-Reply-To: <20190717093034.22826-2-xia.jiang@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_151515_508793_58BE7CAF 
-X-CRM114-Status: GOOD (  10.56  )
-X-Spam-Score: 0.8 (/)
+X-CRM114-CacheID: sfid-20190812_155956_050120_BBEF7750 
+X-CRM114-Status: GOOD (  14.60  )
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.8 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -74,11 +74,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,43 +87,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Sam Ravnborg <sam@ravnborg.org>, Ajay Kumar <ajaykumar.rs@samsung.com>,
- Vincent Palatin <vpalatin@chromium.org>, cawa.cheng@mediatek.com,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>,
- Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Jitao Shi <jitao.shi@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
- Pawel Moll <pawel.moll@arm.com>, Ian Campbell <ijc+devicetree@hellion.org.uk>,
- Inki Dae <inki.dae@samsung.com>, linux-mediatek@lists.infradead.org,
- Andy Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Sean Paul <seanpaul@chromium.org>
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ Rick Chang <rick.chang@mediatek.com>, linux-kernel@vger.kernel.org,
+ Tomasz Figa <tfiga@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mediatek@lists.infradead.org, Hans Verkuil <hverkuil-cisco@xs4all.nl>,
+ Marek Szyprowski <m.szyprowski@samsung.com>,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sun, 11 Aug 2019 17:10:00 +0800, Jitao Shi wrote:
-> Add documentation for auo kd101n80-45na panel.
+On Wed, Jul 17, 2019 at 05:30:30PM +0800, Xia Jiang wrote:
+> add JPEG ENC device tree node document
 > 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> Reviewed-by: Sam Ravnborg <sam@ravnborg.org>
+> Change-Id: I9f0a8aec7eced20c88acbc88d6ff179763f91246
+
+Run checkpatch.pl. (Remove this)
+
+> Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 > ---
->  .../display/panel/auo,kd101n80-45na.txt       | 34 +++++++++++++++++++
->  1 file changed, 34 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/display/panel/auo,kd101n80-45na.txt
+>  .../bindings/media/mediatek-jpeg-encoder.txt  | 33 +++++++++++++++++++
+>  1 file changed, 33 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
 > 
+> diff --git a/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt b/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+> new file mode 100644
+> index 000000000000..1231fedb70bc
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+> @@ -0,0 +1,33 @@
+> +* MediaTek JPEG Encoder
+> +
+> +MediaTek JPEG Encoder is the JPEG encode hardware present in MediaTek SoCs
+> +
+> +Required properties:
+> +- compatible : must be "mediatek,mtk-jpgenc"
 
-Please add Acked-by/Reviewed-by tags when posting new versions. However,
-there's no need to repost patches *only* to add the tags. The upstream
-maintainer will do that for acks received on the version they apply.
+Needs an SoC specific compatible.
 
-If a tag was not added on purpose, please state why and what changed.
+> +- reg : physical base address of the JPEG encoder registers and length of
+> +  memory mapped region.
+> +- interrupts : interrupt number to the interrupt controller.
+> +- clocks: device clocks, see
+> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
+> +- clock-names: must contain "jpgenc". It is the clock of JPEG encoder.
+> +- power-domains: a phandle to the power domain, see
+> +  Documentation/devicetree/bindings/power/power_domain.txt for details.
+> +- mediatek,larb: must contain the local arbiters in the current SoCs, see
+> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
+> +  for details.
+> +- iommus: should point to the respective IOMMU block with master port as
+> +  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
+> +  for details.
+> +
+> +Example:
+> +	jpegenc: jpegenc@1500a000 {
+> +		compatible = "mediatek,mtk-jpgenc";
+> +		reg = <0 0x1500a000 0 0x1000>;
+> +		interrupts = <GIC_SPI 141 IRQ_TYPE_LEVEL_LOW>;
+> +		clocks =  <&imgsys CLK_IMG_VENC>;
+> +		clock-names = "jpgenc";
+> +		power-domains = <&scpsys MT2701_POWER_DOMAIN_ISP>;
+> +		mediatek,larb = <&larb2>;
+> +		iommus = <&iommu MT2701_M4U_PORT_JPGENC_RDMA>,
+> +			<&iommu MT2701_M4U_PORT_JPGENC_BSDMA>;
+> +	};
+> -- 
+> 2.18.0
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
