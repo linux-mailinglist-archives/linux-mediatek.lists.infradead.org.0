@@ -2,91 +2,117 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53DF589F96
-	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 15:24:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 95CA189FBF
+	for <lists+linux-mediatek@lfdr.de>; Mon, 12 Aug 2019 15:32:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gUkDgK/mxRZYnTHcGRc0LHi4Vm8//WvM8bgZhUx72m8=; b=M/BZmN3riSdFQr
-	C8a07mc4Hny3BBjalSUll3xZI7X9SixBESRvL6YqPZ5caZODEqJsnbhzpuLu4cOE0aycJ6p04SqNI
-	xm71QqjGEH1bHOBGpz6jSZQOAa0BILJ2wtLkpbqzy+6cBNqefznBNlG7kUHZQSFK+kdtIiPydJZqG
-	Bxr+F/IhKbpsfHP3ehoKhfphCjVsmQPDcmLf1hds6xfhOlKZi27AYF8171SMbcN+ORr6EC4Ovjb8I
-	adNZ14/ne1VemNe+UgIngnJcpIXIdKDNd3XmGaIWXKW+k6KqUWqQtHql3pSu7mAvl5t+yuYqPnC3x
-	RZtQ3DHVax5nmhTIu5xA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=jNae0A5TLmUxR/OM7RRB+fzRbniDcMFfDDe9Ti5X6mg=; b=aq1X0iksBuzKcY
+	MWF0M2G7T9qrvjaahRTwTRJgtOwmh3goBd/HbxPWsVlz6VvJRzKWm9IviNHy1UDiNMREC95aBZ+0q
+	YQcIFeUPuz6/L/jEVNRCQ6nJ9a4e/DH6qZmunMwKe2GKVSm6fkLeGRkmTzS8+QQC+B9ZmcEEaGy9l
+	cORlG7ir0G+RGe+5SdfvdrYVa16TBGUIX5dkgOThHJ+viGngSM9l28x3m3sNjeYk7LkI8rYEUKsUt
+	+LZR+oX6541lv4puLSZbyQ8eHRBDPJOSCp4A3vjKQe6zO6UqwryGyUd2Mw5aJcUNu9kMbHC/yAJOL
+	86V0pJlVfJ73whXJSQlA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxAJ9-000634-NO; Mon, 12 Aug 2019 13:24:19 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1hxAR7-000107-K7; Mon, 12 Aug 2019 13:32:33 +0000
+Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxAIt-0005qS-H0
- for linux-mediatek@lists.infradead.org; Mon, 12 Aug 2019 13:24:04 +0000
-Received: by mail-wr1-x441.google.com with SMTP id z11so2605401wrt.4
- for <linux-mediatek@lists.infradead.org>; Mon, 12 Aug 2019 06:24:01 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:content-transfer-encoding:in-reply-to
- :user-agent; bh=nC0XBOiWbAbQwJIvttLNUSDXZEWVPgrZEH9kYI4ESEg=;
- b=KdowPy/ZBvnwn/HSU7gjkVq9UrYpR3h4Rz7yrxwQA3ohuwT4La1YEbafzwTQiyGbB3
- 6QonaqtKmwTvQvVAkUuXqhFlDfDjkaXKQ7zpwE7eGxhuj1ceYyytsva8K5UQ8S9Sxa1l
- 0Y1oon8rOVVaf+boODQgVUswo8xgye+BoTn+yDsiXWTW/NS6IQsn/plpM4JQaaNP4O6B
- TqZTxR3XHrKVwJXd9XdY0hqFqBNW8M1q45w82I966F/alSFqF39B+Nsz1nWQEnNynAc4
- A2YNPddK8smYE3BcVulLdkdiz+QMZyywgQdjm7O4meR9DNvs9jp6Y3XjTE1cuP7rEBBJ
- 1TgA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=nC0XBOiWbAbQwJIvttLNUSDXZEWVPgrZEH9kYI4ESEg=;
- b=mpPEA/IOv1lf/OIwqd+amy0r1pAXYMnIocCQbJ4EYF7FOKcmBd3BUhF3LG1V5zdQPr
- kqcCo1SX3bx9FN2lcKGnH6aGdFfD71hNcLJd/Vf07EGr1oqXUurhgt0XD2fba0dxXcx2
- uECPVD54hfrWG2g2kT5cqk7L0zweTjnIMX2BC60JFv2zgMy180fd/DOHhyiDYSZ0YmVD
- hEUgI/dXQNbOmXpG/HiVkCjDjnY4HVfB6LqBH7/2P7W+0qxG3mHjcLVU1PwpNp8CRRIr
- 9g+XldhyKWTXvadw9LfeCHb0UpgdNdcsTL/Z29c7vYB6KaTSys64yXlJhH7ZVV4kFGfR
- PZnA==
-X-Gm-Message-State: APjAAAUJ3SDHJO1lNhoFR4hId+eTj/QIkegWmNPrRyKVFHuId78A+XFk
- rI70EWVt52z6peIh41HAb8t0vw==
-X-Google-Smtp-Source: APXvYqzLO2AY4MikUonMGWLbUw1cnzGTo7DsP/PsiUuAIcFjooUQxIKV9Ku81rDgvyEOx2q7Cg6gpA==
-X-Received: by 2002:adf:8364:: with SMTP id 91mr40735060wrd.13.1565616239967; 
- Mon, 12 Aug 2019 06:23:59 -0700 (PDT)
-Received: from dell ([2.27.35.255])
- by smtp.gmail.com with ESMTPSA id g7sm25060681wmg.8.2019.08.12.06.23.58
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 12 Aug 2019 06:23:59 -0700 (PDT)
-Date: Mon, 12 Aug 2019 14:23:57 +0100
-From: Lee Jones <lee.jones@linaro.org>
-To: Frank Wunderlich <frank-w@public-files.de>
-Subject: Re: [PATCH v5 08/10] power: reset: add driver for mt6323 poweroff
-Message-ID: <20190812132357.GU26727@dell>
-References: <20190812121511.4169-1-frank-w@public-files.de>
- <20190812121511.4169-9-frank-w@public-files.de>
+ id 1hxAR4-0000z6-5M
+ for linux-mediatek@lists.infradead.org; Mon, 12 Aug 2019 13:32:32 +0000
+X-Virus-Scanned: by amavisd-new at test-mx.suse.de
+Received: from relay2.suse.de (unknown [195.135.220.254])
+ by mx1.suse.de (Postfix) with ESMTP id 0DF93AF5A;
+ Mon, 12 Aug 2019 13:32:24 +0000 (UTC)
+Subject: Re: [RFC PATCH v2] mm: slub: print kernel addresses in slub debug
+ messages
+To: Matthew Wilcox <willy@infradead.org>, miles.chen@mediatek.com
+References: <20190809010837.24166-1-miles.chen@mediatek.com>
+ <20190809024644.GL5482@bombadil.infradead.org>
+From: Vlastimil Babka <vbabka@suse.cz>
+Openpgp: preference=signencrypt
+Autocrypt: addr=vbabka@suse.cz; prefer-encrypt=mutual; keydata=
+ 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
+Message-ID: <c144b64d-6b13-868a-b797-db61176c66ea@suse.cz>
+Date: Mon, 12 Aug 2019 15:32:20 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190812121511.4169-9-frank-w@public-files.de>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+In-Reply-To: <20190809024644.GL5482@bombadil.infradead.org>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_062403_581036_2CADE9B6 
-X-CRM114-Status: GOOD (  10.79  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190812_063230_500383_B28C8EDE 
+X-CRM114-Status: GOOD (  15.88  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [195.135.220.15 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,44 +124,107 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>,
- Mark Rutland <mark.rutland@arm.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>, linux-rtc@vger.kernel.org,
- Allison Randal <allison@lohutok.net>,
- Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
- linux-pm@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
- "Tianping . Fang" <tianping.fang@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, Alessandro Zummo <a.zummo@towertech.it>,
- Josef Friedl <josef.friedl@speed.at>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sebastian Reichel <sre@kernel.org>, "David S. Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Andrew Morton <akpm@linux-foundation.org>, wsd_upstream@mediatek.com,
+ Kees Cook <keescook@chromium.org>, linux-kernel@vger.kernel.org,
+ Pekka Enberg <penberg@kernel.org>, linux-mm@kvack.org,
+ linux-mediatek@lists.infradead.org, David Rientjes <rientjes@google.com>,
+ Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ "Tobin C . Harding" <me@tobin.cc>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gTW9uLCAxMiBBdWcgMjAxOSwgRnJhbmsgV3VuZGVybGljaCB3cm90ZToKCj4gRnJvbTogSm9z
-ZWYgRnJpZWRsIDxqb3NlZi5mcmllZGxAc3BlZWQuYXQ+Cj4gCj4gYWRkIHBvd2Vyb2ZmIGRyaXZl
-ciBmb3IgbXQ2MzIzIGFuZCBtYWtlIE1ha2VmaWxlIGFuZCBLY29uZmlnLUVudHJpZXMKPiAKPiBT
-dWdnZXN0ZWQtYnk6IEZyYW5rIFd1bmRlcmxpY2ggPGZyYW5rLXdAcHVibGljLWZpbGVzLmRlPgo+
-IFNpZ25lZC1vZmYtYnk6IEpvc2VmIEZyaWVkbCA8am9zZWYuZnJpZWRsQHNwZWVkLmF0Pgo+IFNp
-Z25lZC1vZmYtYnk6IEZyYW5rIFd1bmRlcmxpY2ggPGZyYW5rLXdAcHVibGljLWZpbGVzLmRlPgo+
-IC0tLQo+IGNoYW5nZXMgc2luY2UgdjQ6IG5vbmUKPiBjaGFuZ2VzIHNpbmNlIHYzOiBub25lCj4g
-Y2hhbmdlcyBzaW5jZSB2Mjogbm9uZSAoPXYyIHBhcnQgNSkKPiAtLS0KPiAgZHJpdmVycy9wb3dl
-ci9yZXNldC9LY29uZmlnICAgICAgICAgICB8IDEwICsrKwo+ICBkcml2ZXJzL3Bvd2VyL3Jlc2V0
-L01ha2VmaWxlICAgICAgICAgIHwgIDEgKwo+ICBkcml2ZXJzL3Bvd2VyL3Jlc2V0L210NjMyMy1w
-b3dlcm9mZi5jIHwgOTcgKysrKysrKysrKysrKysrKysrKysrKysrKysrCgo+ICBpbmNsdWRlL2xp
-bnV4L21mZC9tdDYzOTcvY29yZS5oICAgICAgIHwgIDIgKwoKVGhpcyBsb29rcyBsaWtlIGFuIHVu
-cmVsYXRlZCBjaGFuZ2UuCgpQbGVhc2Ugc2VwYXJhdGUgaXQgb3V0LgoKLS0gCkxlZSBKb25lcyBb
-5p2O55C85pavXQpMaW5hcm8gU2VydmljZXMgVGVjaG5pY2FsIExlYWQKTGluYXJvLm9yZyDilIIg
-T3BlbiBzb3VyY2Ugc29mdHdhcmUgZm9yIEFSTSBTb0NzCkZvbGxvdyBMaW5hcm86IEZhY2Vib29r
-IHwgVHdpdHRlciB8IEJsb2cKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0
-cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGlu
-Zm8vbGludXgtbWVkaWF0ZWsK
+On 8/9/19 4:46 AM, Matthew Wilcox wrote:
+> On Fri, Aug 09, 2019 at 09:08:37AM +0800, miles.chen@mediatek.com wrote:
+>> Possible approaches are:
+>> 1. stop printing kernel addresses
+>> 2. print with %pK,
+>> 3. print with %px.
+> 
+> No.  The point of obscuring kernel addresses is that if the attacker manages to find a way to get the kernel to spit out some debug messages that we shouldn't
+> leak all this extra information.
+
+On the other hand, while CONFIG_SLUB_DEBUG=y is common, the actual
+checks and printing happens when the (relatively expensive) checks are
+actually enabled during boot, i.e. during a debugging session, not
+production defaults. I can see how knowing the exact address might be
+useful when e.g. a crash dump is also taken. I would say %pK would be a
+good fit, if kptr_restrict also had a setting that makes %pK behave like
+%px (looks like it doesn't), so that setting would be enabled in such a
+debugging session.
+
+>> 4. do nothing
+> 
+> 5. Find something more useful to print.
+> 
+>> INFO: Slab 0x(____ptrval____) objects=25 used=10 fp=0x(____ptrval____)
+> 
+> ... you don't have any randomness on your platform?
+> 
+>> INFO: Object 0x(____ptrval____) @offset=1408 fp=0x(____ptrval____)
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object (____ptrval____): 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
+>> Redzone (____ptrval____): bb bb bb bb bb bb bb bb
+>> Padding (____ptrval____): 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding (____ptrval____): 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding (____ptrval____): 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding (____ptrval____): 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> ...
+>> FIX kmalloc-128: Object at 0x(____ptrval____) not freed
+> 
+> But if you have randomness, at least some of these "pointers" are valuable
+> because you can compare them against "pointers" printed by other parts
+> of the kernel.
+> 
+>> After this patch:
+>>
+>> INFO: Slab 0xffffffbf00f57000 objects=25 used=23 fp=0xffffffc03d5c3500
+>> INFO: Object 0xffffffc03d5c3500 @offset=13568 fp=0xffffffc03d5c0800
+>> Redzone 00000000: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000010: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000020: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000030: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000040: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000050: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000060: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Redzone 00000070: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+>> Object 00000000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000010: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000020: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000030: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000040: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000050: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000060: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+>> Object 00000070: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
+>> Redzone 00000000: bb bb bb bb bb bb bb bb
+>> Padding 00000000: 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding 00000010: 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding 00000020: 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> Padding 00000030: 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a 5a
+>> ...
+>> FIX kmalloc-128: Object at 0xffffffc03d5c3500 not freed
+> 
+> It looks prettier, but I'm not convinced it's more useful.  Unless your
+> platform lacks randomness ...
+> 
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
