@@ -2,61 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 05AC28B990
-	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 15:09:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A62B8BA47
+	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 15:33:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=fZ0TPMVe86RwviPqD3pw6OQVC7pEGckSFYgKSf2u+H4=; b=HX8DWd6RvqedyaTTJbZJxouKA
-	XiCRmxmmKLvJuTAzibBI/7Y2QAB+XDtB9tKh+IlYXRJ9eQWvaQH3db5I6ZU2tbzZqoGei5gjgIQ01
-	4JnSilmYcTiRwToIeAujNZMaJlWAjMNQwAOLm8wJR1ZHtlgsCAXhW/qtpORAPfioBN9vu9usqsS2h
-	aalmQLgsRr/usldcMtZzuEd2v/NC0hODfjhgLe9ryyQlLNtLEUgL2spogfPgQytzDyPAYI6UUvSgL
-	AYRvTBTj2RpiwGVCv/oUkS7tsFHxsTk29c/DpTrDRFIXQytnMwNkEyso3YrU8Nvbx6BSpkhYXrw7w
-	GtiW4/r3g==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Cb3U0Z9Gh4ngjeY4vcVyaP37VNtk7mZZ1HG94V00X5U=; b=V7EjBeqSoZHw4h
+	y+pxsmB1JMYElGY3vgl3JyYXr45gSZH+LR3uPUYN22UEsseHunfkysK6eO9Ifi/CmFd5DO47QDNvw
+	jL8HpxLVnubsjkRplmEceFtQRwbM6UftJmOJIkqE3V4GnihUWrjjn60RzOZrpQtVqJ3/1EoJ9Yll4
+	XtTVP7m+d3oimWS0asVBpumVRJjzbkdQGRoBYpNf3bxp3bjbjmWgXZNd0JnS7We1d2RCTWXSZsRuA
+	eKi4dzmq/XCFw81mEeFFnQFFV7XS7hu6lFcajR/zpo83QTcWRX+Kl1mpjsdcV7YqLFFupgSl8H5Uy
+	QYXR01F7PltdAhmltN8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxWYR-00075e-GC; Tue, 13 Aug 2019 13:09:35 +0000
-Received: from mx2a.mailbox.org ([2001:67c:2050:104:0:2:25:2]
- helo=mx2.mailbox.org)
+	id 1hxWv6-00056B-WD; Tue, 13 Aug 2019 13:33:01 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxWYN-0006tO-Uq
- for linux-mediatek@lists.infradead.org; Tue, 13 Aug 2019 13:09:33 +0000
-Received: from smtp1.mailbox.org (smtp1.mailbox.org [80.241.60.240])
- (using TLSv1.2 with cipher ECDHE-RSA-CHACHA20-POLY1305 (256/256 bits))
- (No client certificate requested)
- by mx2.mailbox.org (Postfix) with ESMTPS id 3EBCDA335B;
- Tue, 13 Aug 2019 15:09:26 +0200 (CEST)
-X-Virus-Scanned: amavisd-new at heinlein-support.de
-Received: from smtp1.mailbox.org ([80.241.60.240])
- by hefe.heinlein-support.de (hefe.heinlein-support.de [91.198.250.172])
- (amavisd-new, port 10030)
- with ESMTP id 5zLXc_MXTiBD; Tue, 13 Aug 2019 15:09:24 +0200 (CEST)
-Subject: Re: [PATCH] net: ethernet: mediatek: Add MT7628/88 SoC support
-To: Daniel Golle <daniel@makrotopia.org>
-References: <20190717110243.14240-1-sr@denx.de>
- <20190717121506.GD18996@makrotopia.org>
-From: Stefan Roese <sr@denx.de>
-Message-ID: <b2258258-af40-3e0d-f771-a70428ec798f@denx.de>
-Date: Tue, 13 Aug 2019 15:09:23 +0200
+ id 1hxWv2-000539-0C; Tue, 13 Aug 2019 13:32:57 +0000
+X-UUID: df54a8094b6b449d8d0a0de2265850e6-20190813
+X-UUID: df54a8094b6b449d8d0a0de2265850e6-20190813
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <andrew-sh.cheng@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2006960718; Tue, 13 Aug 2019 05:32:12 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 13 Aug 2019 06:32:10 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 13 Aug 2019 21:31:58 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 13 Aug 2019 21:31:57 +0800
+From: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
+To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
+ <kyungmin.park@samsung.com>, Chanwoo Choi <cw00.choi@samsung.com>, "Rob
+ Herring" <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>, "Matthias
+ Brugger" <matthias.bgg@gmail.com>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
+ Viresh Kumar <viresh.kumar@linaro.org>, Nishanth Menon <nm@ti.com>, "Stephen
+ Boyd" <sboyd@kernel.org>
+Subject: [v4, 0/8] Add cpufreq and cci devfreq for mt8183, and SVS support
+Date: Tue, 13 Aug 2019 21:31:45 +0800
+Message-ID: <1565703113-31479-1-git-send-email-andrew-sh.cheng@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-In-Reply-To: <20190717121506.GD18996@makrotopia.org>
-Content-Language: en-US
+X-TM-SNTS-SMTP: D7839D27C4C616350DB74E772C1782DC07B875324FF63921E5DE37E0960449452000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190813_060932_147798_698E8891 
-X-CRM114-Status: GOOD (  13.86  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190813_063256_052953_C3501FAD 
+X-CRM114-Status: GOOD (  10.56  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [2001:67c:2050:104:0:2:25:2 listed in]
- [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,30 +74,55 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Felix Fietkau <nbd@openwrt.org>, netdev@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>,
- =?UTF-8?Q?Ren=c3=a9_van_Dorst?= <opensource@vdorst.com>,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
+Cc: devicetree@vger.kernel.org,
+ "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>, srv_heupstream@mediatek.com,
+ linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org, fan.chen@mediatek.com,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 17.07.19 14:15, Daniel Golle wrote:
-> On Wed, Jul 17, 2019 at 01:02:43PM +0200, Stefan Roese wrote:
->> This patch adds support for the MediaTek MT7628/88 SoCs to the common
->> MediaTek ethernet driver. Some minor changes are needed for this and
->> a bigger change, as the MT7628 does not support QDMA (only PDMA).
-> 
-> The Ethernet core found in MT7628/88 is identical to that found in
-> Ralink Rt5350F SoC. Wouldn't it hence make sense to indicate that
-> in the compatible string of this driver as well? In OpenWrt we are
-> using "ralink,rt5350-eth".
+From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
 
-Okay. I'll use this ralink compatible instead in the next version.
+MT8183 supports CPU DVFS and CCI DVFS, and LITTLE cpus and CCI are in the same voltage domain.
+So, this series is to add drivers to handle the voltage coupling between CPU and CCI DVFS.
 
-Thanks,
-Stefan
+For SVS support, add OPP_EVENT_ADJUST_VOLTAGE and corresponding reaction.
+
+Change since v3:
+ - modify example of dt-binding
+ - change rcu implementation in Support adjusting OPP patch
+ - Add mutex init in cpufreq driver
+
+Andrew-sh.Cheng (7):
+  cpufreq: mediatek: change to regulator_get_optional
+  cpufreq: mediatek: add clock enable for intermediate clock
+  cpufreq: mediatek: Add support for mt8183
+  dt-bindings: devfreq: add compatible for mt8183 cci devfreq
+  devfreq: add mediatek cci devfreq
+  cpufreq: mediatek: add opp notification for SVS support
+  devfreq: mediatek: cci devfreq register opp notification for SVS
+    support
+
+Stephen Boyd (1):
+  PM / OPP: Support adjusting OPP voltages at runtime
+
+ .../bindings/devfreq/mt8183-cci-devfreq.txt        |  20 ++
+ drivers/cpufreq/cpufreq-dt-platdev.c               |   1 +
+ drivers/cpufreq/mediatek-cpufreq.c                 |  94 ++++++-
+ drivers/devfreq/Kconfig                            |  10 +
+ drivers/devfreq/Makefile                           |   1 +
+ drivers/devfreq/mt8183-cci-devfreq.c               | 309 +++++++++++++++++++++
+ drivers/opp/core.c                                 |  63 +++++
+ include/linux/pm_opp.h                             |  11 +
+ 8 files changed, 507 insertions(+), 2 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
+ create mode 100644 drivers/devfreq/mt8183-cci-devfreq.c
+
+-- 
+2.12.5
+
 
 _______________________________________________
 Linux-mediatek mailing list
