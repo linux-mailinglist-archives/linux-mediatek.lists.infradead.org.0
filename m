@@ -2,56 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 13F8D8B6C6
-	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 13:29:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 662768B6C9
+	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 13:29:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Guko4LQaZ9LENVIyQcf8TlUsRChUZdnCaowYIbM6gm8=; b=X2b74fE7RIJZUf
-	8+pYucLg/svnR/IQ4kcgBgQThNtNg8gEkuhLQXSqJYgsdq04a2Ha+8UDSuZqWNb99RFtaL38IukU5
-	ZYpJZj28epDtDnEQ+35DS5g8WLXJLXYnPCX88mHxITPcd56n7GAHffs5jE7dp6uk7eBQIcpo+NCQs
-	/i9rAMqcJfgYh0ly+yaGZAAp729ksLvVUcJy1QM+pYAGfQsewYtSdbTxFJS2a6ZfD8brtq5gjSvqk
-	PoeZdI02U3r/EVm49Phzt718PCxTexkcjUZVtTm+1GEXFubW8gSH/TB++IjQeGeYetSZxspdBmbeD
-	9uXOHUnnWQve7nqtz39g==;
+	List-Owner; bh=XYvsQNOPUP6BbN41SFeovI9Nl60dWWHO2alhtGW/e9Q=; b=AVWJ71w46QwJFz
+	POVQuTfmGPMb0RkszsU7Ql3d7wuFOX+E6sY34yAbGVpreaFLJQ5o8hPn7Myldz1miTMSbP9OF+EJ1
+	04IxL0B584TpcJ8zYwiD9HjU7YSLliLnf63e467ww/9yjjwYgTUN9w9osNLmNQ7fnuBKuTWmV1UAo
+	5XzwImzMVPQPqswGPTUG3kjEEguRq+c95cyFFeQAqxzvNphkfrGGD5KGD/gBkJZK9IUEA3rQlKmCA
+	DJSqA8TT1SlQtFXj8MmTewe8nHRttyjgFqq2hLK3LQ6fDg1fyxUstau3tmB3sBmNJgEK9wlRvpiYF
+	xKnIm08zXdc0f8gmDraQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxUz2-0001bF-Dn; Tue, 13 Aug 2019 11:28:56 +0000
+	id 1hxUzP-0001wx-KO; Tue, 13 Aug 2019 11:29:19 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxUxl-0000N2-B4; Tue, 13 Aug 2019 11:27:39 +0000
-X-UUID: 31539ed75f544e3fae1639273eabbc1f-20190813
-X-UUID: 31539ed75f544e3fae1639273eabbc1f-20190813
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1hxUxo-0000N2-0d; Tue, 13 Aug 2019 11:27:41 +0000
+X-UUID: c9bbdd55ab3947718d7e05b0112274b5-20190813
+X-UUID: c9bbdd55ab3947718d7e05b0112274b5-20190813
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 663409650; Tue, 13 Aug 2019 03:27:23 -0800
+ with ESMTP id 1358355740; Tue, 13 Aug 2019 03:27:26 -0800
 Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 13 Aug 2019 04:27:18 -0700
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 13 Aug 2019 04:27:25 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 13 Aug 2019 19:27:15 +0800
+ 15.0.1395.4; Tue, 13 Aug 2019 19:27:17 +0800
 Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 13 Aug 2019 19:27:18 +0800
+ Transport; Tue, 13 Aug 2019 19:27:20 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
  <gregkh@linuxfoundation.org>, Biju Das <biju.das@bp.renesas.com>
-Subject: [PATCH next v9 01/11] dt-binding: usb: add usb-role-switch property
-Date: Tue, 13 Aug 2019 19:27:04 +0800
-Message-ID: <1565695634-9711-2-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [PATCH next v9 02/11] dt-bindings: connector: add optional properties
+ for Type-B
+Date: Tue, 13 Aug 2019 19:27:05 +0800
+Message-ID: <1565695634-9711-3-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1565695634-9711-1-git-send-email-chunfeng.yun@mediatek.com>
 References: <1565695634-9711-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 4D4870D9DDE1AA1DBBFF399EF85E13D5FA9F4047E26415FA4F7AADC57F32E04E2000:8
+X-TM-SNTS-SMTP: 74B3E05A1D087EC7962C899293E050E2312DEB91A7DAB81C884150FE646D4F992000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190813_042737_513045_F9095B66 
-X-CRM114-Status: GOOD (  10.03  )
+X-CRM114-CacheID: sfid-20190813_042740_102359_22534CB2 
+X-CRM114-Status: UNSURE (   9.55  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -79,8 +81,7 @@ Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  Heikki Krogerus <heikki.krogerus@linux.intel.com>,
  Badhri Jagan Sridharan <badhri@google.com>,
  Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
- Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Andy
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>, Andy
  Shevchenko <andy.shevchenko@gmail.com>, linux-mediatek@lists.infradead.org,
  Min Guo <min.guo@mediatek.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
  Nagarjuna Kristam <nkristam@nvidia.com>, Adam
@@ -91,63 +92,54 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add a property usb-role-switch to tell the driver that use
-USB Role Switch framework to handle the role switch,
-it's useful when the driver has already supported other ways,
-such as extcon framework etc.
+Add id-gpios, vbus-gpios, vbus-supply and pinctrl properties for
+usb-b-connector
 
-Cc: Biju Das <biju.das@bp.renesas.com>
-Cc: Yu Chen <chenyu56@huawei.com>
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 Reviewed-by: Rob Herring <robh@kernel.org>
-Reviewed-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 ---
-v7~v9: no changes
+v6~v9 no changes
 
-v6:
-    1. merge into this series patch
-    2. add Reviewed-by
+v5 changes:
+ 1. add reviewed by Rob
 
-(no v4, v5)
+v4 no changes
 
-v3:
-    add property type, modify description suggested by Heikki
+v3 changes:
+ 1. add GPIO direction, and use fixed-regulator for GPIO controlled
+    VBUS regulator suggested by Rob;
 
-v2:
-    describe it in terms of h/w functionality suggested by Rob
-
-v1:
-    the property is discussed in:
-    [v2,2/7] dt-bindings: usb: renesas_usb3: add usb-role-switch property
-    https://patchwork.kernel.org/patch/10852497/
-
-    Mediatek and Hisilicon also try to use it:
-    [v4,3/6] dt-bindings: usb: mtu3: add properties about USB Role Switch
-    https://patchwork.kernel.org/patch/10918385/
-    [v4,6/6] usb: mtu3: register a USB Role Switch for dual role mode
-    https://patchwork.kernel.org/patch/10918367/
-
-    [v6,10/13] usb: dwc3: Registering a role switch in the DRD code
-    https://patchwork.kernel.org/patch/10909981/
+v2 changes:
+ 1. describe more clear for vbus-gpios and vbus-supply suggested by Hans
 ---
- Documentation/devicetree/bindings/usb/generic.txt | 4 ++++
- 1 file changed, 4 insertions(+)
+ .../bindings/connector/usb-connector.txt           | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/usb/generic.txt b/Documentation/devicetree/bindings/usb/generic.txt
-index 0a74ab8dfdc2..cf5a1ad456e6 100644
---- a/Documentation/devicetree/bindings/usb/generic.txt
-+++ b/Documentation/devicetree/bindings/usb/generic.txt
-@@ -30,6 +30,10 @@ Optional properties:
- 			optional for OTG device.
-  - adp-disable: tells OTG controllers we want to disable OTG ADP, ADP is
- 			optional for OTG device.
-+ - usb-role-switch: boolean, indicates that the device is capable of assigning
-+			the USB data role (USB host or USB device) for a given
-+			USB connector, such as Type-C, Type-B(micro).
-+			see connector/usb-connector.txt.
+diff --git a/Documentation/devicetree/bindings/connector/usb-connector.txt b/Documentation/devicetree/bindings/connector/usb-connector.txt
+index cef556d4e5ee..d357987181ee 100644
+--- a/Documentation/devicetree/bindings/connector/usb-connector.txt
++++ b/Documentation/devicetree/bindings/connector/usb-connector.txt
+@@ -17,6 +17,20 @@ Optional properties:
+ - self-powered: Set this property if the usb device that has its own power
+   source.
  
- This is an attribute to a USB controller such as:
- 
++Optional properties for usb-b-connector:
++- id-gpios: an input gpio for USB ID pin.
++- vbus-gpios: an input gpio for USB VBUS pin, used to detect presence of
++  VBUS 5V.
++  see gpio/gpio.txt.
++- vbus-supply: a phandle to the regulator for USB VBUS if needed when host
++  mode or dual role mode is supported.
++  Particularly, if use an output GPIO to control a VBUS regulator, should
++  model it as a regulator.
++  see regulator/fixed-regulator.yaml
++- pinctrl-names : a pinctrl state named "default" is optional
++- pinctrl-0 : pin control group
++  see pinctrl/pinctrl-bindings.txt
++
+ Optional properties for usb-c-connector:
+ - power-role: should be one of "source", "sink" or "dual"(DRP) if typec
+   connector has power support.
 -- 
 2.22.0
 
