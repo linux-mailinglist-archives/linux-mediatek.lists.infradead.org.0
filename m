@@ -2,62 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 26FDE8B30D
-	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 10:54:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A808C8B305
+	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 10:53:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NBfljOUeIfFS+X0iCkwnGfUC/KbiEY5MWw/oa4CTtjw=; b=XtnVMVD3lQyx0d
-	GdWHWG7kylUUgR/JsnlFs3ldaVxuCYaPrXA51raWPcG9MuqfCLFMLBzczjjzkL1+7YZT2pktlGVOb
-	YzGUSM5oHKaRkJTHF+z5/MrEWQKEcLa1tgNkErhwhbnr+BwMAqCMg6qD5lcZzkz7fhy131rh5Fjzk
-	pyBwQgr/MBEIaArj5HgT3CSysatzYqMJQGO8TZmqrrhgt9GxlBjJhAAQWmSnxTxh/cmIRWOIvhF4v
-	gVtROq8Qi1tA/82OZlOEVHPScPiV4QRft6GjzBRMTWIPjCpJxXhnLFjmM2qarmKA6HT83VqbhhOJs
-	Rq2qAe9G9MwVosfthnBQ==;
+	List-Owner; bh=sZBNUljPFzCLHUyQM+Ib4NVcLRbtG4gjB/RLD5AfeZ0=; b=JEaEX7CarOZpIR
+	WFmGpo+G4vHPP9uHNDV0AjQIqEhakj9O3nOsZYWjCefTfxidLS6ifUdkfy1Rf6RXpXcuSh/Iix4MH
+	6uiQZnvpmSwfIyTXOCrZNTMnC5Yhb+LcVXQviSoLToTJ6/K7pQKqmrA924vBtaIv/iLwi3R3Icwef
+	X/3PL/I5aMwfp2gk4athTc5ZDHdLRqqp/iUqsnl8sANWstifJtgE2RmTGBYRVkeLwSEnWEV3Gx5hH
+	9iiyxJHZgwa0w/dJMaL6LhVhESm71aEyg23wX2IKQsp0FEW2r65mst3ofFT3qJVYxxqSjPO1p/Ea0
+	lJH1GFa5te72WetojNKQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxSZ5-0003Mm-1K; Tue, 13 Aug 2019 08:53:59 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hxSYx-0003H7-IQ; Tue, 13 Aug 2019 08:53:51 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxSYw-0003EW-QP
- for linux-mediatek@lists.infradead.org; Tue, 13 Aug 2019 08:53:52 +0000
-X-UUID: f2b6960de8d44131b1268a8078d7d3aa-20190813
-X-UUID: f2b6960de8d44131b1268a8078d7d3aa-20190813
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1hxSYs-0003D1-M7
+ for linux-mediatek@lists.infradead.org; Tue, 13 Aug 2019 08:53:48 +0000
+X-UUID: 100ce95428d94cab93bc8d9b618ddde4-20190813
+X-UUID: 100ce95428d94cab93bc8d9b618ddde4-20190813
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <light.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 978313243; Tue, 13 Aug 2019 00:53:30 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 13 Aug 2019 01:53:33 -0700
+ with ESMTP id 329892492; Tue, 13 Aug 2019 00:53:34 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 13 Aug 2019 01:53:38 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 13 Aug 2019 16:53:22 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 13 Aug 2019 16:53:20 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Tue, 13 Aug 2019 16:53:20 +0800
 From: Light Hsieh <light.hsieh@mediatek.com>
 To: <linus.walleij@linaro.org>
-Subject: [PATCH v1 3/5] pinctrl: mediatek: Refine mtk_pinconf_get() and
- mtk_pinconf_set()
-Date: Tue, 13 Aug 2019 16:53:18 +0800
-Message-ID: <1565686400-5711-4-git-send-email-light.hsieh@mediatek.com>
+Subject: [PATCH v1 4/5] pinctrl: mediatek: Backward compatible to previous
+ Mediatek's bias-pull usage
+Date: Tue, 13 Aug 2019 16:53:19 +0800
+Message-ID: <1565686400-5711-5-git-send-email-light.hsieh@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1565686400-5711-1-git-send-email-light.hsieh@mediatek.com>
 References: <1565686400-5711-1-git-send-email-light.hsieh@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2E8E8A95B23BBD4B6A99147C6B0C8821B145D1FDDC6B97B41446ACED094BC5252000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190813_015350_900849_B00514DE 
-X-CRM114-Status: GOOD (  17.36  )
+X-CRM114-CacheID: sfid-20190813_015346_731029_C319D1A7 
+X-CRM114-Status: GOOD (  15.77  )
 X-Spam-Score: 2.5 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -84,383 +85,494 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Light Hsieh <light.hsieh@mediatek.com>
 
-1.Refine mtk_pinconf_get():
-1.1 Use only one occurrence of return at end of this function.
-1.2 Correct cases for PIN_CONFIG_SLEW_RATE, PIN_CONFIG_INPUT_SCHMITT_ENABLE,
-    and PIN_CONFIG_OUTPUT_ENABLE -
-    Use variable ret to receive value in mtk_hw_get_value() (instead of
-    variable val) since pinconf_to_config_packed() at end of this function
-    use variable ret to pack config value.
+Refine mtk_pinconf_set()/mtk_pinconf_get() for backward compatibility to
+previous Mediatek's bias-pull usage.
+In PINCTRL_MTK that use pinctrl-mtk-common.c, bias-pull setting for pins
+with 2 pull resistors can be specified as value for bias-pull-up and
+bias-pull-down. For example:
+    bias-pull-up = <MTK_PUPD_SET_R1R0_00>;
+    bias-pull-up = <MTK_PUPD_SET_R1R0_01>;
+    bias-pull-up = <MTK_PUPD_SET_R1R0_10>;
+    bias-pull-up = <MTK_PUPD_SET_R1R0_11>;
+    bias-pull-down = <MTK_PUPD_SET_R1R0_00>;
+    bias-pull-down = <MTK_PUPD_SET_R1R0_01>;
+    bias-pull-down = <MTK_PUPD_SET_R1R0_10>;
+    bias-pull-down = <MTK_PUPD_SET_R1R0_11>;
 
-2.Refine mtk_pinconf_set():
-2.1 Use only one occurrence of return at end of this function.
-2.2 Modify case of PIN_CONFIG_INPUT_ENABLE -
-    Remove check of ies_present flag and always invoke mtk_hw_set_value()
-    since mtk_hw_pin_field_lookup() invoked inside mtk_hw_set_value() has
-    the same effect of checking if ies control is supported.
-    [The rationale is that: available of a control is always checked
-     in mtk_hw_pin_field_lookup() and no need to add ies_present flag
-     specially for ies control.]
-2.3 Simply code logic for case of PIN_CONFIG_INPUT_SCHMITT.
-2.4 Add case for PIN_CONFIG_INPUT_SCHMITT_ENABLE and process it with the
-    same code for case of PIN_CONFIG_INPUT_SCHMITT.
+On the other hand, PINCTRL_MTK_PARIS use customized properties
+"mediatek,pull-up-adv" and "mediatek,pull-down-adv" to specify bias-pull
+setting for pins with 2 pull resistors.
+This introduce in-compatibility in device tree and increatse porting
+effort to Mediatek's customer that had already used PINCTRL_MTK version.
+Besides, if customers are not awared of this change and still write devicetree
+for PINCTRL_MTK version, they may encounter runtime failure with pinctrl and
+spent time to debug.
 
-Change-Id: Ia82ca7e2516839554feaad6f1aabd9f1bd3b5222
+This patch add backward compatible to previous Mediatek's bias-pull usage
+so that Mediatek's customer need not use a new devicetree property name.
+The rationale is that: changing driver implemenation had better leave
+interface unchanged.
+
+Change-Id: I8ea8f09278acc492ba04771826eaadb70224cd51
 ---
- drivers/pinctrl/mediatek/pinctrl-mt6765.c |   1 -
- drivers/pinctrl/mediatek/pinctrl-paris.c  | 204 +++++++++++-------------------
- 2 files changed, 75 insertions(+), 130 deletions(-)
+ drivers/pinctrl/mediatek/pinctrl-mt6765.c        |   4 +-
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c | 285 +++++++++++++++++++++++
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h |  11 +
+ drivers/pinctrl/mediatek/pinctrl-paris.c         |  49 ++--
+ 4 files changed, 327 insertions(+), 22 deletions(-)
 
 diff --git a/drivers/pinctrl/mediatek/pinctrl-mt6765.c b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
-index e024ebc..bada37f 100644
+index bada37f..315aebd 100644
 --- a/drivers/pinctrl/mediatek/pinctrl-mt6765.c
 +++ b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
-@@ -1070,7 +1070,6 @@
- 	.ngrps = ARRAY_SIZE(mtk_pins_mt6765),
- 	.eint_hw = &mt6765_eint_hw,
- 	.gpio_m = 0,
--	.ies_present = true,
- 	.base_names = mt6765_pinctrl_register_base_names,
+@@ -1074,8 +1074,8 @@
  	.nbase_names = ARRAY_SIZE(mt6765_pinctrl_register_base_names),
  	.bias_disable_set = mtk_pinconf_bias_disable_set,
+ 	.bias_disable_get = mtk_pinconf_bias_disable_get,
+-	.bias_set = mtk_pinconf_bias_set,
+-	.bias_get = mtk_pinconf_bias_get,
++	.bias_set = mtk_pinconf_bias_set_combo,
++	.bias_get = mtk_pinconf_bias_get_combo,
+ 	.drive_set = mtk_pinconf_drive_set_direct_val,
+ 	.drive_get = mtk_pinconf_drive_get_direct_val,
+ 	.adv_pull_get = mtk_pinconf_adv_pull_get,
+diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+index 23a9529..dab8418 100644
+--- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
++++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+@@ -13,6 +13,8 @@
+ #include <linux/io.h>
+ #include <linux/of_irq.h>
+ 
++#include <dt-bindings/pinctrl/mt65xx.h>
++
+ #include "mtk-eint.h"
+ #include "pinctrl-mtk-common-v2.h"
+ 
+@@ -205,6 +207,20 @@ int mtk_hw_set_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
+ 	return 0;
+ }
+ 
++void mtk_hw_set_value_no_lookup(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				int value, struct mtk_pin_field *pf)
++{
++	if (value < 0 || value > pf->mask)
++		return;
++
++	if (!pf->next)
++		mtk_rmw(hw, pf->index, pf->offset, pf->mask << pf->bitpos,
++			(value & pf->mask) << pf->bitpos);
++	else
++		mtk_hw_write_cross_field(hw, pf, value);
++}
++
+ int mtk_hw_get_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
+ 		     int field, int *value)
+ {
+@@ -224,6 +240,17 @@ int mtk_hw_get_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
+ 	return 0;
+ }
+ 
++void mtk_hw_get_value_no_lookup(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				int *value, struct mtk_pin_field *pf)
++{
++	if (!pf->next)
++		*value = (mtk_r32(hw, pf->index, pf->offset)
++			  >> pf->bitpos) & pf->mask;
++	else
++		mtk_hw_read_cross_field(hw, pf, value);
++}
++
+ static int mtk_xt_find_eint_num(struct mtk_pinctrl *hw, unsigned long eint_n)
+ {
+ 	const struct mtk_pin_desc *desc;
+@@ -516,6 +543,264 @@ int mtk_pinconf_bias_get_rev1(struct mtk_pinctrl *hw,
+ 	return 0;
+ }
+ 
++/* Combo for the following pull register type:
++ * 1. PU + PD
++ * 2. PULLSEL + PULLEN
++ * 3. PUPD + R0 + R1
++ */
++int mtk_pinconf_bias_set_pu_pd(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 pullup, u32 arg)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL;
++	int pu, pd;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PU, &pf);
++	if (err)
++		goto out;
++
++	if (arg == MTK_DISABLE) {
++		pu = 0;
++		pd = 0;
++	} else if ((arg == MTK_ENABLE) && pullup) {
++		pu = 1;
++		pd = 0;
++	} else if ((arg == MTK_ENABLE) && !pullup) {
++		pu = 0;
++		pd = 1;
++	} else {
++		goto out;
++	}
++
++	mtk_hw_set_value_no_lookup(hw, desc, pu, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PD, &pf);
++	if (err)
++		goto out;
++
++	mtk_hw_set_value_no_lookup(hw, desc, pd, &pf);
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_set_pullsel_pullen(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 pullup, u32 arg)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL, enable;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PULLEN, &pf);
++	if (err)
++		goto out;
++
++	if (arg == MTK_DISABLE)
++		enable = 0;
++	else if (arg == MTK_ENABLE)
++		enable = 1;
++	else
++		goto out;
++
++	mtk_hw_set_value_no_lookup(hw, desc, enable, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PULLSEL, &pf);
++	if (err)
++		goto out;
++	mtk_hw_set_value_no_lookup(hw, desc, pullup, &pf);
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_set_pupd_r1_r0(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 pullup, u32 arg)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL;
++	int r0, r1;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PUPD, &pf);
++	if (err)
++		goto out;
++
++	if ((arg == MTK_DISABLE) || (arg == MTK_PUPD_SET_R1R0_00)) {
++		pullup = 0;
++		r0 = 0;
++		r1 = 0;
++	} else if (arg == MTK_PUPD_SET_R1R0_01) {
++		r0 = 1;
++		r1 = 0;
++	} else if (arg == MTK_PUPD_SET_R1R0_10) {
++		r0 = 0;
++		r1 = 1;
++	} else if (arg == MTK_PUPD_SET_R1R0_11) {
++		r0 = 1;
++		r1 = 1;
++	} else
++		goto out;
++
++	/* MTK HW PUPD bit: 1 for pull-down, 0 for pull-up */
++	mtk_hw_set_value_no_lookup(hw, desc, !pullup, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_R0, &pf);
++	if (err)
++		goto out;
++	mtk_hw_set_value_no_lookup(hw, desc, r0, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_R1, &pf);
++	if (err)
++		goto out;
++	mtk_hw_set_value_no_lookup(hw, desc, r1, &pf);
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_get_pu_pd(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 *pullup, u32 *enable)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL;
++	int pu, pd;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PU, &pf);
++	if (err)
++		goto out;
++
++	mtk_hw_get_value_no_lookup(hw, desc, &pu, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PD, &pf);
++	if (err)
++		goto out;
++
++	mtk_hw_get_value_no_lookup(hw, desc, &pd, &pf);
++
++	if (pu == 0 && pd == 0) {
++		*pullup = 0;
++		*enable = MTK_DISABLE;
++	} else if (pu == 1 && pd == 0) {
++		*pullup = 1;
++		*enable = MTK_ENABLE;
++	} else if (pu == 0 && pd == 1) {
++		*pullup = 0;
++		*enable = MTK_ENABLE;
++	} else {
++		err = -EINVAL;
++		goto out;
++	}
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_get_pullsel_pullen(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 *pullup, u32 *enable)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PULLSEL, &pf);
++	if (err)
++		goto out;
++
++	mtk_hw_get_value_no_lookup(hw, desc, pullup, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PULLEN, &pf);
++	if (err)
++		goto out;
++
++	mtk_hw_get_value_no_lookup(hw, desc, enable, &pf);
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_get_pupd_r1_r0(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 *pullup, u32 *enable)
++{
++	struct mtk_pin_field pf;
++	int err = -EINVAL;
++	int r0, r1;
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_PUPD, &pf);
++	if (err)
++		goto out;
++
++	/* MTK HW PUPD bit: 1 for pull-down, 0 for pull-up */
++	mtk_hw_get_value_no_lookup(hw, desc, pullup, &pf);
++	*pullup = !(*pullup);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_R0, &pf);
++	if (err)
++		goto out;
++	mtk_hw_get_value_no_lookup(hw, desc, &r0, &pf);
++
++	err = mtk_hw_pin_field_lookup(hw, desc, PINCTRL_PIN_REG_R1, &pf);
++	if (err)
++		goto out;
++	mtk_hw_get_value_no_lookup(hw, desc, &r1, &pf);
++
++	if ((r1 == 0) && (r0 == 0))
++		*enable = MTK_PUPD_SET_R1R0_00;
++	else if ((r1 == 0) && (r0 == 1))
++		*enable = MTK_PUPD_SET_R1R0_01;
++	else if ((r1 == 1) && (r0 == 0))
++		*enable = MTK_PUPD_SET_R1R0_10;
++	else if ((r1 == 1) && (r0 == 1))
++		*enable = MTK_PUPD_SET_R1R0_11;
++	else
++		goto out;
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_set_combo(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 pullup, u32 arg)
++{
++	int err;
++
++	err = mtk_pinconf_bias_set_pu_pd(hw, desc, pullup, arg);
++	if (!err)
++		goto out;
++
++	err = mtk_pinconf_bias_set_pullsel_pullen(hw, desc, pullup, arg);
++	if (!err)
++		goto out;
++
++	err = mtk_pinconf_bias_set_pupd_r1_r0(hw, desc, pullup, arg);
++
++out:
++	return err;
++}
++
++int mtk_pinconf_bias_get_combo(struct mtk_pinctrl *hw,
++			      const struct mtk_pin_desc *desc,
++			      u32 *pullup, u32 *enable)
++{
++	int err;
++
++	err = mtk_pinconf_bias_get_pu_pd(hw, desc, pullup, enable);
++	if (!err)
++		goto out;
++
++	err = mtk_pinconf_bias_get_pullsel_pullen(hw, desc, pullup, enable);
++	if (!err)
++		goto out;
++
++	err = mtk_pinconf_bias_get_pupd_r1_r0(hw, desc, pullup, enable);
++
++out:
++	return err;
++}
++
+ /* Revision 0 */
+ int mtk_pinconf_drive_set(struct mtk_pinctrl *hw,
+ 			  const struct mtk_pin_desc *desc, u32 arg)
+diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
+index b3bada0..a13dcae 100644
+--- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
++++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
+@@ -216,6 +216,11 @@ struct mtk_pin_soc {
+ 	int (*bias_get)(struct mtk_pinctrl *hw,
+ 			const struct mtk_pin_desc *desc, bool pullup, int *res);
+ 
++	int (*bias_set_combo)(struct mtk_pinctrl *hw,
++			const struct mtk_pin_desc *desc, u32 pullup, u32 arg);
++	int (*bias_get_combo)(struct mtk_pinctrl *hw,
++			const struct mtk_pin_desc *desc, u32 *pullup, u32 *arg);
++
+ 	int (*drive_set)(struct mtk_pinctrl *hw,
+ 			 const struct mtk_pin_desc *desc, u32 arg);
+ 	int (*drive_get)(struct mtk_pinctrl *hw,
+@@ -277,6 +282,12 @@ int mtk_pinconf_bias_set_rev1(struct mtk_pinctrl *hw,
+ int mtk_pinconf_bias_get_rev1(struct mtk_pinctrl *hw,
+ 			      const struct mtk_pin_desc *desc, bool pullup,
+ 			      int *res);
++int mtk_pinconf_bias_set_combo(struct mtk_pinctrl *hw,
++				const struct mtk_pin_desc *desc,
++				u32 pullup, u32 enable);
++int mtk_pinconf_bias_get_combo(struct mtk_pinctrl *hw,
++			      const struct mtk_pin_desc *desc,
++			      u32 *pullup, u32 *enable);
+ 
+ int mtk_pinconf_drive_set(struct mtk_pinctrl *hw,
+ 			  const struct mtk_pin_desc *desc, u32 arg);
 diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.c b/drivers/pinctrl/mediatek/pinctrl-paris.c
-index 71c94b2..bbe3f8a 100644
+index bbe3f8a..0a9440a 100644
 --- a/drivers/pinctrl/mediatek/pinctrl-paris.c
 +++ b/drivers/pinctrl/mediatek/pinctrl-paris.c
-@@ -78,93 +78,75 @@ static int mtk_pinconf_get(struct pinctrl_dev *pctldev,
- {
+@@ -79,28 +79,38 @@ static int mtk_pinconf_get(struct pinctrl_dev *pctldev,
  	struct mtk_pinctrl *hw = pinctrl_dev_get_drvdata(pctldev);
  	u32 param = pinconf_to_config_param(*config);
--	int val, val2, err, reg, ret = 1;
-+	int err, reg, ret = 1;
+ 	int err, reg, ret = 1;
++	int pullup;
  	const struct mtk_pin_desc *desc;
  
  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[pin];
  
  	switch (param) {
  	case PIN_CONFIG_BIAS_DISABLE:
--		if (hw->soc->bias_disable_get) {
-+		if (hw->soc->bias_disable_get)
- 			err = hw->soc->bias_disable_get(hw, desc, &ret);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
- 		break;
+-		if (hw->soc->bias_disable_get)
+-			err = hw->soc->bias_disable_get(hw, desc, &ret);
+-		else
+-			err = -ENOTSUPP;
+-		break;
  	case PIN_CONFIG_BIAS_PULL_UP:
--		if (hw->soc->bias_get) {
-+		if (hw->soc->bias_get)
- 			err = hw->soc->bias_get(hw, desc, 1, &ret);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
- 		break;
+-		if (hw->soc->bias_get)
+-			err = hw->soc->bias_get(hw, desc, 1, &ret);
+-		else
+-			err = -ENOTSUPP;
+-		break;
  	case PIN_CONFIG_BIAS_PULL_DOWN:
--		if (hw->soc->bias_get) {
-+		if (hw->soc->bias_get)
- 			err = hw->soc->bias_get(hw, desc, 0, &ret);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
+-		if (hw->soc->bias_get)
+-			err = hw->soc->bias_get(hw, desc, 0, &ret);
+-		else
++		if (hw->soc->bias_get_combo) {
++			err = hw->soc->bias_get_combo(hw, desc, &pullup, &ret);
++			if (err)
++				goto out;
++			if (param == PIN_CONFIG_BIAS_DISABLE) {
++				if (ret == MTK_PUPD_SET_R1R0_00)
++					ret = MTK_DISABLE;
++			} else if (param == PIN_CONFIG_BIAS_PULL_UP) {
++				/* When desire to get pull-up value,
++				 * return error if current setting is pull-down
++				 */
++				if (!pullup)
++					err = -EINVAL;
++			} else if (param == PIN_CONFIG_BIAS_PULL_DOWN) {
++				/* When desire to get pull-down value,
++				 * return error if current setting is pull-up
++				 */
++				if (pullup)
++					err = -EINVAL;
++			}
++		} else {
+ 			err = -ENOTSUPP;
++		}
  		break;
  	case PIN_CONFIG_SLEW_RATE:
--		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SR, &val);
--		if (err)
--			return err;
--
--		if (!val)
--			return -EINVAL;
--
-+		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SR, &ret);
- 		break;
- 	case PIN_CONFIG_INPUT_ENABLE:
- 	case PIN_CONFIG_OUTPUT_ENABLE:
--		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &val);
-+		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &ret);
- 		if (err)
--			return err;
--
--		/* HW takes input mode as zero; output mode as non-zero */
--		if ((val && param == PIN_CONFIG_INPUT_ENABLE) ||
--		    (!val && param == PIN_CONFIG_OUTPUT_ENABLE))
--			return -EINVAL;
-+			goto out;
-+		/*     CONFIG     Current direction return value
-+		 * -------------  ----------------- ----------------------
-+		 * OUTPUT_ENABLE       output       1 (= HW value)
-+		 *                     input        0 (= HW value)
-+		 * INPUT_ENABLE        output       0 (= reverse HW value)
-+		 *                     input        1 (= reverse HW value)
-+		 */
-+		if (param == PIN_CONFIG_INPUT_ENABLE)
-+			ret = !ret;
- 
- 		break;
- 	case PIN_CONFIG_INPUT_SCHMITT_ENABLE:
--		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &val);
--		if (err)
--			return err;
--
--		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SMT, &val2);
-+		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &ret);
- 		if (err)
--			return err;
-+			goto out;
-+		/* return error when in output mode
-+		 * because schmitt trigger only work in input mode
-+		 */
-+		if (ret) {
-+			err = -EINVAL;
-+			goto out;
-+		}
- 
--		if (val || !val2)
--			return -EINVAL;
-+		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SMT, &ret);
- 
- 		break;
- 	case PIN_CONFIG_DRIVE_STRENGTH:
--		if (hw->soc->drive_get) {
-+		if (hw->soc->drive_get)
- 			err = hw->soc->drive_get(hw, desc, &ret);
--			if (err)
--				return err;
--		} else {
-+		else
- 			err = -ENOTSUPP;
--		}
- 		break;
- 	case MTK_PIN_CONFIG_TDSEL:
- 	case MTK_PIN_CONFIG_RDSEL:
- 		reg = (param == MTK_PIN_CONFIG_TDSEL) ?
- 		       PINCTRL_PIN_REG_TDSEL : PINCTRL_PIN_REG_RDSEL;
--
- 		err = mtk_hw_get_value(hw, desc, reg, &val);
--		if (err)
--			return err;
--
--		ret = val;
--
- 		break;
- 	case MTK_PIN_CONFIG_PU_ADV:
- 	case MTK_PIN_CONFIG_PD_ADV:
-@@ -173,28 +155,24 @@ static int mtk_pinconf_get(struct pinctrl_dev *pctldev,
- 
- 			pullup = param == MTK_PIN_CONFIG_PU_ADV;
- 			err = hw->soc->adv_pull_get(hw, desc, pullup, &ret);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		} else
-+			err = -ENOTSUPP;
- 		break;
- 	case MTK_PIN_CONFIG_DRV_ADV:
--		if (hw->soc->adv_drive_get) {
-+		if (hw->soc->adv_drive_get)
- 			err = hw->soc->adv_drive_get(hw, desc, &ret);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
- 		break;
- 	default:
--		return -ENOTSUPP;
-+		err = -ENOTSUPP;
- 	}
- 
--	*config = pinconf_to_config_packed(param, ret);
-+out:
-+	if (!err)
-+		*config = pinconf_to_config_packed(param, ret);
- 
--	return 0;
-+	return err;
- }
- 
- static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
-@@ -210,60 +188,46 @@ static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
+ 		err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SR, &ret);
+@@ -188,20 +198,20 @@ static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
  
  	switch ((u32)param) {
  	case PIN_CONFIG_BIAS_DISABLE:
--		if (hw->soc->bias_disable_set) {
-+		if (hw->soc->bias_disable_set)
- 			err = hw->soc->bias_disable_set(hw, desc);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
+-		if (hw->soc->bias_disable_set)
+-			err = hw->soc->bias_disable_set(hw, desc);
++		if (hw->soc->bias_set_combo)
++			err = hw->soc->bias_set_combo(hw, desc, 0, MTK_DISABLE);
+ 		else
+ 			err = -ENOTSUPP;
  		break;
  	case PIN_CONFIG_BIAS_PULL_UP:
--		if (hw->soc->bias_set) {
-+		if (hw->soc->bias_set)
- 			err = hw->soc->bias_set(hw, desc, 1);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
+-		if (hw->soc->bias_set)
+-			err = hw->soc->bias_set(hw, desc, 1);
++		if (hw->soc->bias_set_combo)
++			err = hw->soc->bias_set_combo(hw, desc, 1, arg);
+ 		else
+ 			err = -ENOTSUPP;
  		break;
  	case PIN_CONFIG_BIAS_PULL_DOWN:
--		if (hw->soc->bias_set) {
-+		if (hw->soc->bias_set)
- 			err = hw->soc->bias_set(hw, desc, 0);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
+-		if (hw->soc->bias_set)
+-			err = hw->soc->bias_set(hw, desc, 0);
++		if (hw->soc->bias_set_combo)
++			err = hw->soc->bias_set_combo(hw, desc, 0, arg);
+ 		else
+ 			err = -ENOTSUPP;
  		break;
- 	case PIN_CONFIG_OUTPUT_ENABLE:
- 		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_SMT,
- 				       MTK_DISABLE);
--		if (err)
-+		/* keep set direction to if SMT is not supported on this pin */
-+		if (err != -ENOTSUPP)
- 			goto err;
- 
- 		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR,
- 				       MTK_OUTPUT);
--		if (err)
--			goto err;
- 		break;
- 	case PIN_CONFIG_INPUT_ENABLE:
--		if (hw->soc->ies_present) {
--			mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_IES,
--					 MTK_ENABLE);
--		}
-+		/* regard all non-zero value as enable */
-+		mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_IES, !!arg);
- 
--		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR,
--				       MTK_INPUT);
- 		if (err)
- 			goto err;
-+
-+		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR,
-+				       MTK_INPUT);
- 		break;
- 	case PIN_CONFIG_SLEW_RATE:
--		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_SR,
--				       arg);
--		if (err)
--			goto err;
--
-+		/* regard all non-zero value as enable */
-+		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_SR, !!arg);
- 		break;
- 	case PIN_CONFIG_OUTPUT:
- 		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR,
-@@ -273,41 +237,29 @@ static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
- 
- 		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DO,
- 				       arg);
--		if (err)
--			goto err;
- 		break;
-+	case PIN_CONFIG_INPUT_SCHMITT:
- 	case PIN_CONFIG_INPUT_SCHMITT_ENABLE:
--		/* arg = 1: Input mode & SMT enable ;
-+		/* arg = 1: Input mode & SMT enable
- 		 * arg = 0: Output mode & SMT disable
- 		 */
--		arg = arg ? 2 : 1;
--		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR,
--				       arg & 1);
-+		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DIR, !arg);
- 		if (err)
- 			goto err;
- 
--		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_SMT,
--				       !!(arg & 2));
--		if (err)
--			goto err;
-+		err = mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_SMT, !!arg);
- 		break;
- 	case PIN_CONFIG_DRIVE_STRENGTH:
--		if (hw->soc->drive_set) {
-+		if (hw->soc->drive_set)
- 			err = hw->soc->drive_set(hw, desc, arg);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
- 		break;
- 	case MTK_PIN_CONFIG_TDSEL:
- 	case MTK_PIN_CONFIG_RDSEL:
- 		reg = (param == MTK_PIN_CONFIG_TDSEL) ?
- 		       PINCTRL_PIN_REG_TDSEL : PINCTRL_PIN_REG_RDSEL;
--
- 		err = mtk_hw_set_value(hw, desc, reg, arg);
--		if (err)
--			goto err;
- 		break;
- 	case MTK_PIN_CONFIG_PU_ADV:
- 	case MTK_PIN_CONFIG_PD_ADV:
-@@ -317,20 +269,14 @@ static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
- 			pullup = param == MTK_PIN_CONFIG_PU_ADV;
- 			err = hw->soc->adv_pull_set(hw, desc, pullup,
- 						    arg);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		} else
-+			err = -ENOTSUPP;
- 		break;
- 	case MTK_PIN_CONFIG_DRV_ADV:
--		if (hw->soc->adv_drive_set) {
-+		if (hw->soc->adv_drive_set)
- 			err = hw->soc->adv_drive_set(hw, desc, arg);
--			if (err)
--				return err;
--		} else {
--			return -ENOTSUPP;
--		}
-+		else
-+			err = -ENOTSUPP;
- 		break;
- 	default:
- 		err = -ENOTSUPP;
-@@ -946,6 +892,7 @@ int mtk_paris_pinctrl_probe(struct platform_device *pdev,
+@@ -892,7 +902,6 @@ int mtk_paris_pinctrl_probe(struct platform_device *pdev,
  	return 0;
  }
  
-+
+-
  static int mtk_paris_pinctrl_suspend(struct device *device)
  {
  	struct mtk_pinctrl *pctl = dev_get_drvdata(device);
-@@ -964,4 +911,3 @@ static int mtk_paris_pinctrl_resume(struct device *device)
- 	.suspend_noirq = mtk_paris_pinctrl_suspend,
- 	.resume_noirq = mtk_paris_pinctrl_resume,
- };
--
 -- 
 1.8.1.1.dirty
 
