@@ -2,56 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3DB6A8BBC7
-	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 16:42:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4D59F8BCFC
+	for <lists+linux-mediatek@lfdr.de>; Tue, 13 Aug 2019 17:26:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Sm+HowFsmTQN7/ytwFOqznfokcUOU4lP1/GZ3ujfkBQ=; b=DRB90J7pwHdpRb
-	ajtAsKbVpuphMFEdMP7ODiA51s303KU4rkFbiCqCUGAelIE5/5JWT6iEivrFRncbL+qPAaF/w7wH6
-	Mg0AbTfDNFv63781J2av7WEIDtRZ8fO0hm8EUiAWXUZMXHqeVyilWCO1lsW5Kk5VvAuRFPZKYMWyJ
-	uD2IvRaYWwbOLtNyMbhemYI7vEd5kdkLgNn+qNtbJgIj1qI+j45TDh7U2iJSn1cf7IHmTt0LUoIIT
-	nRmVS2z6et9YBmhFeBY+hxOORG+SBv9FLVpX+Skew4V6dMeouT5y+864jT1KhwMLRsyxCaLJ4FcWs
-	kQ37psHjH5qiPwJ0shjA==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=uXGJNsQawpKNgs03eVvxvitP+ayEthNhU6GBL7UMVr8=; b=YQ3qYvrB0RdYzP
+	p1UkmLRGuPU7UFniOYt8C1otK7kaHz2dYS4vPUrWDY8xGLGTaXR1pGelyfvyRhp8Cpk7Y2hK0hUgQ
+	WQj0/QeOyAWKD4OFgCewBP6D4yu/i7rgjJl9XnUI8x8dkNjUTasBYSetWaCYU1BH7re6uiNBzwElA
+	pM2b/adzPRq0nque89wJiIfXSJYCgJs1ospoXPUoVoKK3XFEwmYW3Mf3TPVcgCsx9xvx8EZH3R85t
+	TjRNCc7P7RCkswj2na5dudulvpYJovF2oQsTgm/UqhXOQIf9VvfEZ+z7kp445UJOLCmHbPWpMhx8W
+	YiXBX4Cg1gC05zdrJurg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxXzx-0007Ty-AF; Tue, 13 Aug 2019 14:42:05 +0000
-Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
+	id 1hxYgm-0004h1-LO; Tue, 13 Aug 2019 15:26:20 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxXzZ-0007GV-Kq; Tue, 13 Aug 2019 14:41:42 +0000
-Received: from DGGEMS413-HUB.china.huawei.com (unknown [172.30.72.58])
- by Forcepoint Email with ESMTP id A454B43459FFE8AA5303;
- Tue, 13 Aug 2019 22:41:39 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS413-HUB.china.huawei.com
- (10.3.19.213) with Microsoft SMTP Server id 14.3.439.0; Tue, 13 Aug 2019
- 22:41:30 +0800
-From: YueHaibing <yuehaibing@huawei.com>
-To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.c>,
- <tiwai@suse.com>, <matthias.bgg@gmail.com>
-Subject: [PATCH -next] ASoC: mediatek: mt8183-mt6358-ts3a227-max98357: remove
- unused variables
-Date: Tue, 13 Aug 2019 22:41:22 +0800
-Message-ID: <20190813144122.67676-1-yuehaibing@huawei.com>
-X-Mailer: git-send-email 2.10.2.windows.1
+ id 1hxYgT-0004VG-6n; Tue, 13 Aug 2019 15:26:02 +0000
+Received: from mail-qk1-f177.google.com (mail-qk1-f177.google.com
+ [209.85.222.177])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 9E6B9208C2;
+ Tue, 13 Aug 2019 15:26:00 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1565709960;
+ bh=HmV3d0tX/vIGU4K6vVAo5cUg5Z8uSssDtsYqHJAG5bg=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=oXTK/Z2XPavPmmocWCTzqLAhdopHEqr0+WhpFAK86e901QMUz2hwOJ782cXRzWt6O
+ dd73osGsviYHzdVpTeZ7PctENRLocN/S6i3IIyyXpit2zvkMSpRGWyOpqenE2s4clG
+ NWV+sTZ4ZhnFbgA7AijE2ghB1sb8nDYpGJvZVppw=
+Received: by mail-qk1-f177.google.com with SMTP id m2so15670035qkd.10;
+ Tue, 13 Aug 2019 08:26:00 -0700 (PDT)
+X-Gm-Message-State: APjAAAW49zaLvZK1xQSR75oU03PPg0X/1n4V3ioLW682p/QzzVTeKBv+
+ krMAbVJ2+3XUYNWAVgtXVXH24S0uj5Xmehf0ww==
+X-Google-Smtp-Source: APXvYqwu0CBqLROjtaQy/EXgqwp575KsDNniswfKsW6qsOEg0w760DgeRdr91KRxD6alIStviaHUoqrBGdSw3n2c0Xw=
+X-Received: by 2002:a37:6944:: with SMTP id e65mr31723600qkc.119.1565709959793; 
+ Tue, 13 Aug 2019 08:25:59 -0700 (PDT)
 MIME-Version: 1.0
-X-Originating-IP: [10.133.213.239]
-X-CFilter-Loop: Reflected
+References: <20190812121511.4169-1-frank-w@public-files.de>
+ <20190812121511.4169-2-frank-w@public-files.de>
+In-Reply-To: <20190812121511.4169-2-frank-w@public-files.de>
+From: Rob Herring <robh+dt@kernel.org>
+Date: Tue, 13 Aug 2019 09:25:47 -0600
+X-Gmail-Original-Message-ID: <CAL_Jsq+fW=x8MoL3GMj6+ZKC3fd6F6+8Rtx=j5R9vEuL9UHCuQ@mail.gmail.com>
+Message-ID: <CAL_Jsq+fW=x8MoL3GMj6+ZKC3fd6F6+8Rtx=j5R9vEuL9UHCuQ@mail.gmail.com>
+Subject: Re: [PATCH v5 01/10] dt-bindings: add powercontroller
+To: Frank Wunderlich <frank-w@public-files.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190813_074141_874987_9114DC1B 
-X-CRM114-Status: UNSURE (   7.98  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190813_082601_304630_C1A0E604 
+X-CRM114-Status: GOOD (  24.59  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.191 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,52 +83,156 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: YueHaibing <yuehaibing@huawei.com>, alsa-devel@alsa-project.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Kate Stewart <kstewart@linuxfoundation.org>,
+ Mark Rutland <mark.rutland@arm.com>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Richard Fontana <rfontana@redhat.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Lee Jones <lee.jones@linaro.org>,
+ "open list:REAL TIME CLOCK \(RTC\) SUBSYSTEM" <linux-rtc@vger.kernel.org>,
+ Allison Randal <allison@lohutok.net>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, devicetree@vger.kernel.org,
+ "open list:THERMAL" <linux-pm@vger.kernel.org>,
+ Sean Wang <sean.wang@mediatek.com>,
+ "Tianping . Fang" <tianping.fang@mediatek.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ Alessandro Zummo <a.zummo@towertech.it>, Josef Friedl <josef.friedl@speed.at>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Sebastian Reichel <sre@kernel.org>, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c:50:1: warning:
- mt8183_mt6358_ts3a227_max98357_dapm_widgets defined but not used [-Wunused-const-variable=]
-sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c:55:1: warning:
- mt8183_mt6358_ts3a227_max98357_dapm_routes defined but not used [-Wunused-const-variable=]
+On Mon, Aug 12, 2019 at 6:24 AM Frank Wunderlich
+<frank-w@public-files.de> wrote:
+>
+> From: Josef Friedl <josef.friedl@speed.at>
+>
+> add mt6323-rtc and mt6323-pwrc to mt6397 mfd DT bindings
+> an example is shown in mt6323-poweroff.txt
 
-They are never used, so can be removed.
+How does this get to v5 with such a terrible subject? At least give
+some indication this is for some Mediatek chip.
 
-Reported-by: Hulk Robot <hulkci@huawei.com>
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
----
- sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c | 10 ----------
- 1 file changed, 10 deletions(-)
+The recipient list needs some work too. Don't Cc git committers that
+get_maintainers.pl lists.
 
-diff --git a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-index 4c816c8..dcd47b9 100644
---- a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-@@ -46,16 +46,6 @@ static int mt8183_i2s_hw_params_fixup(struct snd_soc_pcm_runtime *rtd,
- 	return 0;
- }
- 
--static const struct snd_soc_dapm_widget
--mt8183_mt6358_ts3a227_max98357_dapm_widgets[] = {
--	SND_SOC_DAPM_OUTPUT("IT6505_8CH"),
--};
--
--static const struct snd_soc_dapm_route
--mt8183_mt6358_ts3a227_max98357_dapm_routes[] = {
--	{"IT6505_8CH", NULL, "TDM"},
--};
--
- static int
- mt8183_mt6358_ts3a227_max98357_bt_sco_startup(
- 	struct snd_pcm_substream *substream)
--- 
-2.7.4
+>
+> Suggested-by: Frank Wunderlich <frank-w@public-files.de>
+> Signed-off-by: Josef Friedl <josef.friedl@speed.at>
+> Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
+> Acked-for-MFD-by: Lee Jones <lee.jones@linaro.org>
+> ---
+> changes since v4: use relative path
+> changes since v3: none
+> changes since v2: separated rtc-mt6397.txt to part 2
+> ---
+>  .../devicetree/bindings/mfd/mt6397.txt        | 20 +++++++++++++------
+>  .../bindings/power/reset/mt6323-poweroff.txt  | 20 +++++++++++++++++++
+>  2 files changed, 34 insertions(+), 6 deletions(-)
+>  create mode 100644 Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
+>
+> diff --git a/Documentation/devicetree/bindings/mfd/mt6397.txt b/Documentation/devicetree/bindings/mfd/mt6397.txt
+> index 0ebd08af777d..063f5fe1cace 100644
+> --- a/Documentation/devicetree/bindings/mfd/mt6397.txt
+> +++ b/Documentation/devicetree/bindings/mfd/mt6397.txt
+> @@ -8,11 +8,12 @@ MT6397/MT6323 is a multifunction device with the following sub modules:
+>  - Clock
+>  - LED
+>  - Keys
+> +- Power controller
+>
+>  It is interfaced to host controller using SPI interface by a proprietary hardware
+>  called PMIC wrapper or pwrap. MT6397/MT6323 MFD is a child device of pwrap.
+>  See the following for pwarp node definitions:
+> -Documentation/devicetree/bindings/soc/mediatek/pwrap.txt
+> +../../bindings/soc/mediatek/pwrap.txt
 
+Unrelated change to what the subject says. Clean-ups and new things in
+separate patches please.
 
+>
+>  This document describes the binding for MFD device and its sub module.
+>
+> @@ -22,14 +23,16 @@ compatible: "mediatek,mt6397" or "mediatek,mt6323"
+>  Optional subnodes:
+>
+>  - rtc
+> -       Required properties:
+> +       Required properties: Should be one of follows
+> +               - compatible: "mediatek,mt6323-rtc"
+
+How is this related to 'powercontroller'?
+
+>                 - compatible: "mediatek,mt6397-rtc"
+> +       For details, see ../../bindings/rtc/rtc-mt6397.txt
+>  - regulators
+>         Required properties:
+>                 - compatible: "mediatek,mt6397-regulator"
+> -       see Documentation/devicetree/bindings/regulator/mt6397-regulator.txt
+> +       see ../../bindings/regulator/mt6397-regulator.txt
+>                 - compatible: "mediatek,mt6323-regulator"
+> -       see Documentation/devicetree/bindings/regulator/mt6323-regulator.txt
+> +       see ../../bindings/regulator/mt6323-regulator.txt
+>  - codec
+>         Required properties:
+>                 - compatible: "mediatek,mt6397-codec"
+> @@ -39,12 +42,17 @@ Optional subnodes:
+>  - led
+>         Required properties:
+>                 - compatible: "mediatek,mt6323-led"
+> -       see Documentation/devicetree/bindings/leds/leds-mt6323.txt
+> +       see ../../bindings/leds/leds-mt6323.txt
+>
+>  - keys
+>         Required properties:
+>                 - compatible: "mediatek,mt6397-keys" or "mediatek,mt6323-keys"
+> -       see Documentation/devicetree/bindings/input/mtk-pmic-keys.txt
+> +       see ../../bindings/input/mtk-pmic-keys.txt
+> +
+> +- power-controller
+> +       Required properties:
+> +               - compatible: "mediatek,mt6323-pwrc"
+> +       For details, see ../../bindings/power/reset/mt6323-poweroff.txt
+>
+>  Example:
+>         pwrap: pwrap@1000f000 {
+> diff --git a/Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt b/Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
+> new file mode 100644
+> index 000000000000..933f0c48e887
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/power/reset/mt6323-poweroff.txt
+> @@ -0,0 +1,20 @@
+> +Device Tree Bindings for Power Controller on MediaTek PMIC
+> +
+> +The power controller which could be found on PMIC is responsible for externally
+> +powering off or on the remote MediaTek SoC through the circuit BBPU.
+> +
+> +Required properties:
+> +- compatible: Should be one of follows
+> +       "mediatek,mt6323-pwrc": for MT6323 PMIC
+> +
+> +Example:
+> +
+> +       pmic {
+> +               compatible = "mediatek,mt6323";
+> +
+> +               ...
+> +
+> +               power-controller {
+> +                       compatible = "mediatek,mt6323-pwrc";
+> +               };
+> +       }
+> --
+> 2.17.1
+>
 
 _______________________________________________
 Linux-mediatek mailing list
