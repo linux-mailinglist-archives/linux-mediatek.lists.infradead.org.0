@@ -2,59 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C8918D0FF
-	for <lists+linux-mediatek@lfdr.de>; Wed, 14 Aug 2019 12:45:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3919E8D0FE
+	for <lists+linux-mediatek@lfdr.de>; Wed, 14 Aug 2019 12:45:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/fO4wFdQc2xcMc4hPiraRLfrOG2OxHjoavw5MMoqPCA=; b=rzakO5AApvUlvi
-	a/iM4vz0EGpcezG6RSt0qpn1fIZ/JCDB67ivEbjAkcg0mTXlHdR8QKK83b+JPH/bF7ySLorIwLYBk
-	wHchLcl8+SER+FHiT4rHp2YT2G/70WX5tMeIX1sMJPhJv8dgu/rYBt/d04vBGJhEkZNg/EnB+2S1+
-	Io9ya0nOWZJlGaAMtRNWIOWh4J8qk+bBA8qNOXdWVlQd/WybjGGEpFb/bDycpUMsqB5kTeCqlHZNG
-	v9gnltlbXzxZyMYddM7GGeOzJVKbiSGZrqp0kcEfHA5QzrcdVoP4QNXcpijzApk9UoIt/EtMfk+ee
-	b1CZAKagvG84CD/eeVNA==;
+	List-Owner; bh=bofXodQcgcbAqe4oO+nKZrweQNkXM1zz8jD5R5v0pdM=; b=m65izWMJJtP0a8
+	XeDn8RU0bbV0ZfhpTAgK8iZtz1IOvW6gq83EwrH+MmMpJWkDRT9A8kIQhM1hK2DOlUoj8U7D0wWzp
+	Yloo4xvbzLC6pxLufmMIKv3VD9yNMZcndUjrCraIlebHAmOpErJfKFoYrhVLYBMMdSR74EBwoWHYZ
+	BZiN+F/au1rSX9a/RUb5RR/hF9gZb5inRmjB6JoHFzBhd7T8CBGBJJZeJRIi4hZhX0PmmIHH59bXy
+	Iptdk3YZiaLV4mQN4lVheNBw8iLW1qgfmWhaiy6iQif+QVxww6NI0qHZjQE8h8skQ1RQClV12/blw
+	xk4sj6c5jS4AAaQGS31g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxqmB-0001qj-SL; Wed, 14 Aug 2019 10:45:07 +0000
+	id 1hxqmA-0001gt-P4; Wed, 14 Aug 2019 10:45:06 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxqm7-0001Oi-5B
- for linux-mediatek@lists.infradead.org; Wed, 14 Aug 2019 10:45:04 +0000
-X-UUID: 844bf54889b441ed8cfe926f1278b3f2-20190814
-X-UUID: 844bf54889b441ed8cfe926f1278b3f2-20190814
+ id 1hxqm6-0001I2-Ag
+ for linux-mediatek@lists.infradead.org; Wed, 14 Aug 2019 10:45:03 +0000
+X-UUID: bf1fc09aef3045a4a06c315aecf77582-20190814
+X-UUID: bf1fc09aef3045a4a06c315aecf77582-20190814
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1640119536; Wed, 14 Aug 2019 02:44:59 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 934538979; Wed, 14 Aug 2019 02:44:59 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 14 Aug 2019 03:44:58 -0700
+ 15.0.1395.4; Wed, 14 Aug 2019 03:44:59 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 14 Aug 2019 18:44:56 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 14 Aug 2019 18:44:57 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 14 Aug 2019 18:44:56 +0800
+ Frontend Transport; Wed, 14 Aug 2019 18:44:57 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [PATCH v2 6/10] arm: dts: mt7623: add a property "num-pwms" for PWM
- node
-Date: Wed, 14 Aug 2019 18:43:36 +0800
-Message-ID: <448f0a5ba4d98651195b6dc5850ac6426e5b511c.1548313019.git.ryder.lee@mediatek.com>
+Subject: [PATCH v2 7/10] dt-bindings: pwm: update bindings for MT7629 SoC
+Date: Wed, 14 Aug 2019 18:43:37 +0800
+Message-ID: <0ae03abe4ff77c67c137d71185c89b1a88293365.1548313019.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <621e49c01b943edb6ddac9182f34719eb0727f01.1548313019.git.ryder.lee@mediatek.com>
 References: <621e49c01b943edb6ddac9182f34719eb0727f01.1548313019.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 257A5C90E661A8DA70835DF834DD090FF07CDD296098D7CBF5A40931C089EE4D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190814_034503_343237_9AB4750D 
-X-CRM114-Status: UNSURE (   8.97  )
+X-CRM114-CacheID: sfid-20190814_034502_429353_83958574 
+X-CRM114-Status: UNSURE (   9.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -87,28 +85,27 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Ryder Lee <ryder.lee@mediatek.com>
 
-This adds a property "num-pwms" for PWM controller.
+This updates bindings for MT7629 pwm controller.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 ---
-Changes since v2: use num-pwms instead of mediatek,num-pwms.
----
- arch/arm/boot/dts/mt7623.dtsi | 1 +
+ Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/arch/arm/boot/dts/mt7623.dtsi b/arch/arm/boot/dts/mt7623.dtsi
-index 98f1159..68cbd36 100644
---- a/arch/arm/boot/dts/mt7623.dtsi
-+++ b/arch/arm/boot/dts/mt7623.dtsi
-@@ -443,6 +443,7 @@
- 			 <&pericfg CLK_PERI_PWM5>;
- 		clock-names = "top", "main", "pwm1", "pwm2",
- 			      "pwm3", "pwm4", "pwm5";
-+		num-pwms = <5>;
- 		status = "disabled";
- 	};
- 
+diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+index ea95b49..c7bd563 100644
+--- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
++++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+@@ -6,6 +6,7 @@ Required properties:
+    - "mediatek,mt7622-pwm": found on mt7622 SoC.
+    - "mediatek,mt7623-pwm": found on mt7623 SoC.
+    - "mediatek,mt7628-pwm": found on mt7628 SoC.
++   - "mediatek,mt7629-pwm", "mediatek,mt7622-pwm": found on mt7629 SoC.
+  - reg: physical base address and length of the controller's registers.
+  - #pwm-cells: must be 2. See pwm.txt in this directory for a description of
+    the cell format.
 -- 
 1.9.1
 
