@@ -2,63 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3919E8D0FE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 14 Aug 2019 12:45:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AEFD98D128
+	for <lists+linux-mediatek@lfdr.de>; Wed, 14 Aug 2019 12:46:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bofXodQcgcbAqe4oO+nKZrweQNkXM1zz8jD5R5v0pdM=; b=m65izWMJJtP0a8
-	XeDn8RU0bbV0ZfhpTAgK8iZtz1IOvW6gq83EwrH+MmMpJWkDRT9A8kIQhM1hK2DOlUoj8U7D0wWzp
-	Yloo4xvbzLC6pxLufmMIKv3VD9yNMZcndUjrCraIlebHAmOpErJfKFoYrhVLYBMMdSR74EBwoWHYZ
-	BZiN+F/au1rSX9a/RUb5RR/hF9gZb5inRmjB6JoHFzBhd7T8CBGBJJZeJRIi4hZhX0PmmIHH59bXy
-	Iptdk3YZiaLV4mQN4lVheNBw8iLW1qgfmWhaiy6iQif+QVxww6NI0qHZjQE8h8skQ1RQClV12/blw
-	xk4sj6c5jS4AAaQGS31g==;
+	List-Owner; bh=gMGy1Gz0cGIIpy8J4yWLCbxZmdIukdQ5JiX4isybaxA=; b=Is2U7rsv/vxjQj
+	omV6+irOgpZ1/VtXB1OhJtzxy3nNHykQont17o5fQanCmp3vA2Cb5gLY/xHEyJt9FbJSxfyeWl+Gu
+	vs7EQaK/7SpnP6wjvk5CjyjoPqIWmTGP+6QsYlxsyCsMiHLn9CW+HS7XREz33CC+V1vhBChySBuxp
+	MrHjUva4sqQp6FQQ9g31QmiRU6hm1MaoXhlDf8rIb04BxsgliIgM8qa4ikn3C4McS1q9YZ+hgmemD
+	TwLKVr+PpIhD92xBcZ1LN2Asvoxv2giHn0QEz+b5Sip7QyP+xH6VDo6rYtR5SswiL6amlamlHaXSj
+	7N2X3Ly27ER4vuQXNw0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hxqmA-0001gt-P4; Wed, 14 Aug 2019 10:45:06 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1hxqnH-0002vI-HW; Wed, 14 Aug 2019 10:46:15 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hxqm6-0001I2-Ag
- for linux-mediatek@lists.infradead.org; Wed, 14 Aug 2019 10:45:03 +0000
-X-UUID: bf1fc09aef3045a4a06c315aecf77582-20190814
-X-UUID: bf1fc09aef3045a4a06c315aecf77582-20190814
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1hxqnE-0002sN-A0
+ for linux-mediatek@lists.infradead.org; Wed, 14 Aug 2019 10:46:13 +0000
+X-UUID: b047cc3c9f6c46d9892f889753627c07-20190814
+X-UUID: b047cc3c9f6c46d9892f889753627c07-20190814
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 934538979; Wed, 14 Aug 2019 02:44:59 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 14 Aug 2019 03:44:59 -0700
+ with ESMTP id 638765385; Wed, 14 Aug 2019 02:45:08 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 14 Aug 2019 03:45:06 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 14 Aug 2019 18:44:57 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 14 Aug 2019 18:45:05 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 14 Aug 2019 18:44:57 +0800
+ Frontend Transport; Wed, 14 Aug 2019 18:45:05 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [PATCH v2 7/10] dt-bindings: pwm: update bindings for MT7629 SoC
-Date: Wed, 14 Aug 2019 18:43:37 +0800
-Message-ID: <0ae03abe4ff77c67c137d71185c89b1a88293365.1548313019.git.ryder.lee@mediatek.com>
+Subject: [PATCH v2 8/10] pwm: mediatek: add new property and fix mt7628 pwm
+Date: Wed, 14 Aug 2019 18:43:38 +0800
+Message-ID: <1565779497-23621-1-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <621e49c01b943edb6ddac9182f34719eb0727f01.1548313019.git.ryder.lee@mediatek.com>
 References: <621e49c01b943edb6ddac9182f34719eb0727f01.1548313019.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190814_034502_429353_83958574 
-X-CRM114-Status: UNSURE (   9.47  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190814_034612_351853_EED31CDF 
+X-CRM114-Status: GOOD (  13.16  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -75,39 +76,75 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- devicetree@vger.kernel.org, Sam
- Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
+ devicetree@vger.kernel.org, sam
+ shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
  linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ryder Lee <ryder.lee@mediatek.com>
+From: sam shih <sam.shih@mediatek.com>
 
-This updates bindings for MT7629 pwm controller.
+This fix mt7628 pwm during configure from userspace. The SoC
+is legacy MIPS and has no complex clock tree. This patch add property
+clock-frequency to the SoC specific data and legacy MIPS SoC need to
+configure it in DT. This property is use for period calculation.
 
-Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 ---
- Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/pwm/pwm-mediatek.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
 
-diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-index ea95b49..c7bd563 100644
---- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-+++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-@@ -6,6 +6,7 @@ Required properties:
-    - "mediatek,mt7622-pwm": found on mt7622 SoC.
-    - "mediatek,mt7623-pwm": found on mt7623 SoC.
-    - "mediatek,mt7628-pwm": found on mt7628 SoC.
-+   - "mediatek,mt7629-pwm", "mediatek,mt7622-pwm": found on mt7629 SoC.
-  - reg: physical base address and length of the controller's registers.
-  - #pwm-cells: must be 2. See pwm.txt in this directory for a description of
-    the cell format.
+diff --git a/drivers/pwm/pwm-mediatek.c b/drivers/pwm/pwm-mediatek.c
+index d696df7a58fa..922a7543a2b1 100644
+--- a/drivers/pwm/pwm-mediatek.c
++++ b/drivers/pwm/pwm-mediatek.c
+@@ -53,6 +53,7 @@ struct pwm_mediatek_chip {
+ 	struct clk *clk_top;
+ 	struct clk *clk_main;
+ 	struct clk **clk_pwms;
++	unsigned int clock_frequency;
+ 	const struct pwm_mediatek_of_data *soc;
+ };
+ 
+@@ -139,7 +140,10 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 
+ 	/* Using resolution in picosecond gets accuracy higher */
+ 	resolution = (u64)NSEC_PER_SEC * 1000;
+-	do_div(resolution, clk_get_rate(clk));
++	if (pc->soc->has_clks)
++		do_div(resolution, clk_get_rate(clk));
++	else
++		do_div(resolution, pc->clock_frequency);
+ 
+ 	cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000, resolution);
+ 	while (cnt_period > 8191) {
+@@ -216,6 +220,7 @@ static int pwm_mediatek_probe(struct platform_device *pdev)
+ 	struct pwm_mediatek_chip *pc;
+ 	struct resource *res;
+ 	unsigned int npwms;
++	unsigned int clock_frequency;
+ 	int ret;
+ 
+ 	pc = devm_kzalloc(&pdev->dev, sizeof(*pc), GFP_KERNEL);
+@@ -265,6 +270,14 @@ static int pwm_mediatek_probe(struct platform_device *pdev)
+ 			if (IS_ERR(pc->clk_pwms[i]))
+ 				return PTR_ERR(pc->clk_pwms[i]);
+ 		}
++	} else {
++		ret = of_property_read_u32(np, "clock-frequency",
++						&clock_frequency);
++		if (ret < 0) {
++			dev_err(&pdev->dev, "failed to get clock_frequency\n");
++			return ret;
++		}
++		pc->clock_frequency = clock_frequency;
+ 	}
+ 
+ 	platform_set_drvdata(pdev, pc);
 -- 
-1.9.1
+2.17.1
 
 
 _______________________________________________
