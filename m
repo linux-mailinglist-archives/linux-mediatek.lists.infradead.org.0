@@ -2,69 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2B0618E769
-	for <lists+linux-mediatek@lfdr.de>; Thu, 15 Aug 2019 10:50:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C9F448E7C7
+	for <lists+linux-mediatek@lfdr.de>; Thu, 15 Aug 2019 11:08:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=I/NJ9JZvTYm1kE6ICdu2G9vpCm8fC/LNzEX8Q5E5iJo=; b=TOgebvn1GfyYyM
-	boHBVzWsED0uNDy+Fdwv7iOZx/1+yDBN6nvYemdUxdhROOT4RtVVNRtDbaPDHQSoL1FHApPbhTDFo
-	DCwlHuPiZDHVblr+Svu1BhNGM1FTf7HY6HN8z1FBQhA8uZMjiXnOQ7BnqJZPpW9To9Z4PyWPfo7Qj
-	73fjRmk/EnfT+eavnHR3xqazaEwi/NtT2cqSlQh1tuidbbJbfhqKy4p3THZXdSGLcUD9qtOPZz4jv
-	UDipL+RHJD7v6rfLjftv5is2yKHfLpMsKhAo1j0r26tHCk3ZDrvhpT4cxlRz72bWHhaQM4jRIJdqr
-	VXLbDcHtRQf+DOPewJUg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=psu23WQBO4x7GrVBd7x03EXMCnNVuEvXgvD0QKdVrkc=; b=iHS+hYrtw7mKOP34/DQmouwmm
+	LlsJRhxeiv0q2zWS0spP0fFWbl0T9+ABCgUXy3ChK15pff+WIMepGx32FJLfqQC59GDALun3ZpWkX
+	AE0cVEXQtCaLRzs5uia9JJc04NVdReBH3a1m7ahXVGVMoJU+Fo/XeRMYkRwAsDi6RcHB5gbLeKI9+
+	KmONZVh0+DoQaaHDcdshaIiYtIwLjYudWnL38Qzbi34fbbcJCtGA8anQOwR6NqsQ4krEQvMG2Dygw
+	93kVCYnKd0MmsS7e5gQ/s+OC7FZk7XWyiWhfUoJNm9xK+ibo90s/vpE6S6Q0+TgDO7LZrHJsmPghQ
+	3CHcDghNw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hyBT2-0001tc-Ql; Thu, 15 Aug 2019 08:50:45 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hyBk8-00079n-Gz; Thu, 15 Aug 2019 09:08:24 +0000
+Received: from mx2.mailbox.org ([80.241.60.215])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hyBQm-00075E-IP; Thu, 15 Aug 2019 08:48:26 +0000
-X-UUID: 8f03fac413c842349b801813fe5e565d-20190815
-X-UUID: 8f03fac413c842349b801813fe5e565d-20190815
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <yong.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1661633930; Thu, 15 Aug 2019 00:47:59 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 15 Aug 2019 01:47:58 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 15 Aug 2019 16:47:53 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 15 Aug 2019 16:47:50 +0800
-Message-ID: <1565858869.12818.51.camel@mhfsdcap03>
-Subject: Re: [PATCH v9 08/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
- Mode
-From: Yong Wu <yong.wu@mediatek.com>
-To: Will Deacon <will@kernel.org>
-Date: Thu, 15 Aug 2019 16:47:49 +0800
-In-Reply-To: <20190814144059.ruyc45yoqkwpbuga@willie-the-truck>
-References: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
- <1565423901-17008-9-git-send-email-yong.wu@mediatek.com>
- <20190814144059.ruyc45yoqkwpbuga@willie-the-truck>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1hyBk2-00079L-WB
+ for linux-mediatek@lists.infradead.org; Thu, 15 Aug 2019 09:08:21 +0000
+Received: from smtp2.mailbox.org (smtp2.mailbox.org
+ [IPv6:2001:67c:2050:105:465:1:2:0])
+ (using TLSv1.2 with cipher ECDHE-RSA-CHACHA20-POLY1305 (256/256 bits))
+ (No client certificate requested)
+ by mx2.mailbox.org (Postfix) with ESMTPS id 7D43EA153C;
+ Thu, 15 Aug 2019 11:08:12 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at heinlein-support.de
+Received: from smtp2.mailbox.org ([80.241.60.241])
+ by spamfilter06.heinlein-hosting.de (spamfilter06.heinlein-hosting.de
+ [80.241.56.125]) (amavisd-new, port 10030)
+ with ESMTP id 2PtRDRrQpjUK; Thu, 15 Aug 2019 11:08:07 +0200 (CEST)
+Subject: Re: [PATCH] net: ethernet: mediatek: Add MT7628/88 SoC support
+To: =?UTF-8?Q?Ren=c3=a9_van_Dorst?= <opensource@vdorst.com>
+References: <20190717125345.Horde.JcDE_nBChPFDDjEgIRfPSl3@www.vdorst.com>
+ <a92d7207-80b2-e88d-d869-64c9758ef1da@denx.de>
+ <20190814092621.Horde.epvj8zK96-aCiV70YB5Q7II@www.vdorst.com>
+ <3ff9a0fc-f5ff-3798-4409-ed5b900e0b05@denx.de>
+ <20190814130856.Horde.wzHL8_VRawJ8NIIk--BD18e@www.vdorst.com>
+From: Stefan Roese <sr@denx.de>
+Message-ID: <9bbc449b-bff2-448a-6b95-cc712c9353b8@denx.de>
+Date: Thu, 15 Aug 2019 11:08:05 +0200
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5D5FC90C041DBBD20C3DCD33A1B62E596CBBC6711A0F58C204785566B9B413132000:8
-X-MTK: N
+In-Reply-To: <20190814130856.Horde.wzHL8_VRawJ8NIIk--BD18e@www.vdorst.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190815_014824_657797_31914765 
-X-CRM114-Status: GOOD (  36.14  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190815_020819_389824_91572CD0 
+X-CRM114-Status: GOOD (  16.40  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [80.241.60.215 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,253 +70,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, chao.hao@mediatek.com,
- Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org, Evan
- Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: netdev@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Daniel Golle <daniel@makrotopia.org>,
+ John Crispin <john@phrozen.org>
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-08-14 at 15:41 +0100, Will Deacon wrote:
-> Hi Yong Wu,
-> 
-> Sorry, but I'm still deeply confused by this patch.
-
-Sorry for this. the "4GB mode" really is a bit odd...
-
-> 
-> On Sat, Aug 10, 2019 at 03:58:08PM +0800, Yong Wu wrote:
-> > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
-> > 
-> > In the mt2712 and mt8173, it's called "4GB mode", the physical address
-> > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
-> > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
-> > bit32 is always enabled. thus, in the M4U, we always enable the bit9
-> > for all PTEs which means to enable bit32 of physical address. Here is
-> > the detailed remap relationship in the "4GB mode":
-> > CPU PA         ->    HW PA
-> > 0x4000_0000          0x1_4000_0000 (Add bit32)
-> > 0x8000_0000          0x1_8000_0000 ...
-> > 0xc000_0000          0x1_c000_0000 ...
-> > 0x1_0000_0000        0x1_0000_0000 (No change)
-> 
-> So in this example, there are no PAs below 0x4000_0000 yet you later
-> add code to deal with that:
-> 
-> > +	/* Workaround for MTK 4GB Mode: Add BIT32 only when PA < 0x4000_0000.*/
-> > +	if (cfg->oas == ARM_V7S_MTK_4GB_OAS && paddr < 0x40000000UL)
-> > +		paddr |= BIT_ULL(32);
-> 
-> Why? Mainline currently doesn't do anything like this for the "4gb mode"
-> support as far as I can tell. In fact, we currently unconditionally set
-> bit 32 in the physical address returned by iova_to_phys() which wouldn't
-> match your CPU PAs listed above, so I'm confused about how this is supposed
-> to work.
-
-Actually current mainline have a bug for this. So I tried to use another
-special patch[1] for it in v8.
-
-But the issue is not critical since MediaTek multimedia consumer(v4l2
-and drm) don't call iommu_iova_to_phys currently.
-
-> 
-> The way I would like this quirk to work is that the io-pgtable code
-> basically sets bit 9 in the pte when bit 32 is set in the physical address,
-> and sets bit 4 in the pte when bit 33 is set in the physical address. It
-> would then do the opposite when converting a pte to a physical address.
-> 
-> That way, your driver can call the page table code directly with the high
-> addresses and we don't have to do any manual offsetting or range checking
-> in the page table code.
-
-In this case, the mt8183 can work successfully while the "4gb
-mode"(mt8173/mt2712) can not.
-
-In the "4gb mode", As the remap relationship above, we should always add
-bit32 in pte as we did in [2]. and need add bit32 in the
-"iova_to_phys"(Not always add.). That means the "4gb mode" has a special
-flow:
-a. Always add bit32 in paddr_to_iopte.
-b. Add bit32 only when PA < 0x40000000 in iopte_to_paddr.
-
-> 
-> Please can you explain to me why the diff below doesn't work on top of
-> this series?
-
-The diff below is just I did in v8[3]. The different is that I move the
-"4gb mode" special flow in the mtk_iommu.c in v8, the code is like
-[4]below. When I sent v9, I found that I can distinguish the "4gb mode"
-with "oas == 33" in v7s. then I can "simply" add the 4gb special flow[5]
-based on your diff.
-
-
->  I'm happy to chat on IRC if you think it would be easier,
-> because I have a horrible feeling that we've been talking past each other
-> and I'd like to see this support merged for 5.4.
-
-Thanks very much for your view, I'm sorry that I don't have IRC. I will
-send the next version quickly if we have a conclusion here. Then Which
-way is better? If you'd like keep the pagetable code clean, I will add
-the "4gb mode" special flow into mtk_iommu.c.
-
-Thanks.
-
-
-[1]http://lists.infradead.org/pipermail/linux-mediatek/2019-June/020988.html
-[2]
-https://elixir.bootlin.com/linux/v5.3-rc4/source/drivers/iommu/io-pgtable-arm-v7s.c#L299
-[3]http://lists.infradead.org/pipermail/linux-mediatek/2019-June/020991.html
-
-[4]======4gb mode special flow in mtk_iommu.c======================
-
-+#define MTK_IOMMU_4GB_MODE_REMAP_BASE	 0x140000000UL
-
-@@ -380,12 +379,16 @@ static int mtk_iommu_map(struct iommu_domain
-*domain, unsigned long iova,
- 			 phys_addr_t paddr, size_t size, int prot)
- {
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
-+	struct mtk_iommu_data *data = mtk_iommu_get_m4u_data();
- 	unsigned long flags;
- 	int ret;
- 
-+	/* The "4GB mode" M4U physically can not use the lower remap of Dram.
-*/
-+	if (data->enable_4GB)
-+		paddr |= BIT_ULL(32);
-+
- 	spin_lock_irqsave(&dom->pgtlock, flags);
--	ret = dom->iop->map(dom->iop, iova, paddr & DMA_BIT_MASK(32),
--			    size, prot);
-+	ret = dom->iop->map(dom->iop, iova, paddr, size, prot);
- 	spin_unlock_irqrestore(&dom->pgtlock, flags);
- 
- 	return ret;
-@@ -422,8 +425,8 @@ static phys_addr_t mtk_iommu_iova_to_phys(struct
-iommu_domain *domain,
- 	pa = dom->iop->iova_to_phys(dom->iop, iova);
- 	spin_unlock_irqrestore(&dom->pgtlock, flags);
- 
--	if (data->enable_4GB && pa < MTK_IOMMU_4GB_MODE_REMAP_BASE)
--		pa |= BIT_ULL(32);
-+	if (data->enable_4GB && pa >= MTK_IOMMU_4GB_MODE_REMAP_BASE)
-+		pa &= ~BIT_ULL(32);
- 
- 	return pa;
- }
-=============================================================
-
-[5]:
-=========================================================
-diff --git a/drivers/iommu/io-pgtable-arm-v7s.c
-b/drivers/iommu/io-pgtable-arm-v7s.c
-index 78fd11e..8e974a5 100644
---- a/drivers/iommu/io-pgtable-arm-v7s.c
-+++ b/drivers/iommu/io-pgtable-arm-v7s.c
-@@ -184,7 +184,7 @@ static arm_v7s_iopte paddr_to_iopte(phys_addr_t
-paddr, int lvl,
- 	arm_v7s_iopte pte = paddr & ARM_V7S_LVL_MASK(lvl);
- 
- 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB) {
--		if (paddr & BIT_ULL(32))
-+		if (paddr & BIT_ULL(32) || cfg->oas == 33)
- 			pte |= ARM_V7S_ATTR_MTK_PA_BIT32;
- 		if (paddr & BIT_ULL(33))
- 			pte |= ARM_V7S_ATTR_MTK_PA_BIT33;
-@@ -207,7 +207,9 @@ static phys_addr_t iopte_to_paddr(arm_v7s_iopte pte,
-int lvl,
- 
- 	paddr = pte & mask;
- 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_4GB) {
--		if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
-+		if (cfg->oas == 33 && paddr < 0x40000000UL)
-+			paddr |= BIT_ULL(32);
-+		else if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
- 			paddr |= BIT_ULL(32);
- 		if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
- 			paddr |= BIT_ULL(33);
-============================================================
-
-> 
-> Will
-> 
-> --->8
-> 
-> diff --git a/drivers/iommu/io-pgtable-arm-v7s.c b/drivers/iommu/io-pgtable-arm-v7s.c
-> index ab12ef5f8b03..d8d84617c822 100644
-> --- a/drivers/iommu/io-pgtable-arm-v7s.c
-> +++ b/drivers/iommu/io-pgtable-arm-v7s.c
-> @@ -184,7 +184,7 @@ static arm_v7s_iopte paddr_to_iopte(phys_addr_t paddr, int lvl,
->  	arm_v7s_iopte pte = paddr & ARM_V7S_LVL_MASK(lvl);
->  
->  	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
-> -		if ((paddr & BIT_ULL(32)) || cfg->oas == ARM_V7S_MTK_4GB_OAS)
-> +		if (paddr & BIT_ULL(32))
->  			pte |= ARM_V7S_ATTR_MTK_PA_BIT32;
->  		if (paddr & BIT_ULL(33))
->  			pte |= ARM_V7S_ATTR_MTK_PA_BIT33;
-> @@ -206,17 +206,14 @@ static phys_addr_t iopte_to_paddr(arm_v7s_iopte pte, int lvl,
->  		mask = ARM_V7S_LVL_MASK(lvl);
->  
->  	paddr = pte & mask;
-> -	if (cfg->oas == 32 || !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT))
-> -		return paddr;
->  
-> -	if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
-> -		paddr |= BIT_ULL(33);
-> +	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
-> +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
-> +			paddr |= BIT_ULL(32);
-> +		if (pte & ARM_V7S_ATTR_MTK_PA_BIT33)
-> +			paddr |= BIT_ULL(33);
-> +	}
->  
-> -	/* Workaround for MTK 4GB Mode: Add BIT32 only when PA < 0x4000_0000.*/
-> -	if (cfg->oas == ARM_V7S_MTK_4GB_OAS && paddr < 0x40000000UL)
-> -		paddr |= BIT_ULL(32);
-> -	else if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
-> -		paddr |= BIT_ULL(32);
->  	return paddr;
->  }
->  
-> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-> index d5b9454352fd..3ae54dedede0 100644
-> --- a/drivers/iommu/mtk_iommu.c
-> +++ b/drivers/iommu/mtk_iommu.c
-> @@ -286,7 +286,7 @@ static int mtk_iommu_domain_finalise(struct mtk_iommu_domain *dom)
->  	if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
->  		dom->cfg.oas = 32;
->  	else if (data->enable_4GB)
-> -		dom->cfg.oas = ARM_V7S_MTK_4GB_OAS;
-> +		dom->cfg.oas = 33;
->  	else
->  		dom->cfg.oas = 34;
->  
-> diff --git a/include/linux/io-pgtable.h b/include/linux/io-pgtable.h
-> index 27337395bd42..a2a52c349fe4 100644
-> --- a/include/linux/io-pgtable.h
-> +++ b/include/linux/io-pgtable.h
-> @@ -113,8 +113,6 @@ struct io_pgtable_cfg {
->  	};
->  };
->  
-> -#define ARM_V7S_MTK_4GB_OAS			33
-> -
->  /**
->   * struct io_pgtable_ops - Page table manipulation API for IOMMU drivers.
->   *
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgUmVuZSwKCk9uIDE0LjA4LjE5IDE1OjA4LCBSZW7DqSB2YW4gRG9yc3Qgd3JvdGU6Cj4gUXVv
+dGluZyBTdGVmYW4gUm9lc2UgPHNyQGRlbnguZGU+Ogo+IAo+PiBIaSBSZW5lLAo+Pgo+PiBPbiAx
+NC4wOC4xOSAxMToyNiwgUmVuw6kgdmFuIERvcnN0IHdyb3RlOgo+IAo+IDxzbmlwPgo+IAo+Pj4g
+R3JlYXQsIFRoYW5rcyBmb3IgYWRkcmVzc2luZyB0aGlzIGlzc3VlLgo+Pj4KPj4+IEkgaG9wZSB3
+ZSBjYW4gY29sbGFib3JhdGUgdG8gYWxzbyBzdXBwb3J0IG10NzZ4OCBpbiBteSBQSFlMSU5LCj4+
+PiBwYXRjaGVzIFswXVsxXS4KPj4+IEkgYW0gY2xvc2UgdG8gcG9zdGluZyBWMiBvZiB0aGUgcGF0
+Y2hlcyBidXQgSSBhbSBjdXJyZW50bHkgd2FpdGluZyBvbiBzb21lCj4+PiBmaWJlciBtb2R1bGVz
+IHRvIHRlc3QgdGhlIGNoYW5nZXMgYmV0dGVyLgo+Pgo+PiBJIGRvIGhhdmUgYSAiaGFja2lzaCIg
+RFNBIGRyaXZlciBmb3IgdGhlIGludGVncmF0ZWQgc3dpdGNoIChFU1cpIGluIG15Cj4+IHRyZWUu
+IElmIHRpbWUgcGVybWl0cywgSSdsbCB3b3JrIG9uIHVwc3RyZWFtaW5nIHRoaXMgb25lIGFzIHdl
+bGwuIEFuZAo+PiB5ZXMsIGhvcGVmdWxseSB3ZSBjYW4gY29sbGFib3JhdGUgb24geW91ciBQSFlM
+SU5LIHdvcmsgdG9vLgo+IAo+IEl0IGlzIG5vdCBvbmx5IHRoZSBzd2l0Y2ggZHJpdmVyIGJ1dCBh
+bHNvIHRoZSBNZWRpYXRlayBldGhlcm5ldCBkcml2ZXIgdGhhdCBpcwo+IGNvbnZlcnRlZCB0byBQ
+SFlMSU5LLiBTbyB3ZSBoYXZlIGEgY29uZmxpY3QgaW4gZWFjaCBvdGhlcnMgd29yay4KClllcywg
+SSBhbSBhd2FyZSBvZiB0aGlzLgogIAo+IEkgZG9uJ3Qgbm8gd2hhdCB0aGUgcmlnaHQgd2F5IGlz
+IHRvIGdvIGJ1dCBJIHdhcyB0aGlua2luZyBhYm91dCAyIG9wdGlvbnMKPiAKPiAxLiBMZXRzIHNh
+eSB5b3VyIHdvcmsgZ29lcyBpbiBmaXJzdC4gSSByZWJhc2UgbXkgcGF0Y2hlcyBvbiB5b3VyIGNo
+YW5nZXMuCj4gICAgICBXZSBjb2xsYWJvcmF0ZSB0byBjcmVhdGUgYW4gZXh0cmEgUEhZTElOSyBw
+YXRjaCBvbnRvcCBvZiBteSB3b3JrCj4gZm9yIHlvdXIgU09DLgo+IDIuIE15IHBhdGNoZXMgZ29l
+cyBpbiBmaXJzdCBhbmQgeW91IGFkYXB0IHlvdXIgcGF0Y2hlcyB0byB0aGF0Lgo+IAo+IFdoYXQg
+ZG8geW91IHRoaW5rPwoKSXQgcmVhbGx5IGRlcGVuZHMgb24gdGhlIHRpbWluZywgd2hlbiB0aGUg
+cGF0Y2hlcyBhcnJpdmUgaW4gdGhlIGtlcm5lbAoobmV0LW5leHQpLiBJZiB5b3VycyBtYWtlcyBp
+dCBmaXJzdCwgSSdsbCByZWJhc2UgbXkgcGF0Y2ggb24gdG9wIG9mCnlvdXIgd29yay4gT3RoZXJ3
+aXNlIHlvdSB3aWxsIG5lZWQgdG8gcmViYXNlIHlvdXJzLgogIAo+IEkgaGF2ZSBsYXRlc3QgY2hh
+bmdlcyBoZXJlIFswXS4KPiAKPiBBbHNvIG15IG1vZHVsZXMgZGlkIGFycml2ZSBzbyBJIGNhbiB0
+ZXN0IG15IGNoYW5nZXMuCgpUaGFua3MsClN0ZWZhbgoKX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4
+LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcv
+bWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
