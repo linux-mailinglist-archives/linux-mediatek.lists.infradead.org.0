@@ -2,58 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D732E8FC1D
-	for <lists+linux-mediatek@lfdr.de>; Fri, 16 Aug 2019 09:23:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8ED6C8FC16
+	for <lists+linux-mediatek@lfdr.de>; Fri, 16 Aug 2019 09:22:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2IgsLXvTc3rySwwygQ9L/FF1FfXgxu07r7gR+nvHM44=; b=vBTamWNMe/KSm0
-	HsF5q6+avtYbq9yKDWQRHCf/MeQHsWLFFTJrNEOZ1Mdh/b5olfCv3dozpVzQF2Hj8AsKCpCBL76k/
-	RaWbw/qohvPEZI6Kv0zFM/7Py+Deowcru09U2ngM74Pyp+ksdPnxvnmfkplScLLyQNUNXeb7VRWPx
-	3zSHF0qZi1MGrdNNG8jkz0blJncAcyobiI2cSsWe9gX9RLzWaDQkdLO/E7PZhUHXdEcU0QafHXVYi
-	j1ahfm14Bh4bJCy44Ym6GHX0sA5G0S4R8UBZlpemgukj9OapLeC5xNi5ZTSVBt7UB+jfeMtvGGB8H
-	RA4eMkju+eaezlujAkJQ==;
+	List-Owner; bh=B3aFcbWnhaK2s6H9IDB1XEasUG60XrkaxRRtALyqcJw=; b=GvlZMdY8r6LIrO
+	gfs8BG046dTvVQQ1Tf4GAXTPvulkIkkEEXyIDR3Q9mk+qpzGkTNSwyL0T3+THzUjCLLhNPCTM/a5B
+	E1TkWv9nMuf8mMBgRkLSuW4PWOAiqzgobiKGx4cDtQgvREjts9/Mcxb6FdAKimKoTV4xtktUUhb6c
+	IA6dvDCeKfJ8UqsIqW4CLO9vZag6xTuIHxfwrCaMzcS+qqJuAK+H5J3FM1mFXANh/KbFPkgvVKNj3
+	Sn0lJzHDwic0G10mT2KEgpo56CjXl1xKx6qDrWSIoMVlPktsApmpx74uzKpasDa78DBSOtuVqvW+N
+	9XPLYq3R0puu2rU4L9yw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hyWZz-0003gO-IF; Fri, 16 Aug 2019 07:23:19 +0000
+	id 1hyWZN-0003AO-L5; Fri, 16 Aug 2019 07:22:41 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hyWZe-0003PN-OP
- for linux-mediatek@lists.infradead.org; Fri, 16 Aug 2019 07:23:00 +0000
-X-UUID: 9cf4311d158b413b802f90c37e5743bc-20190815
-X-UUID: 9cf4311d158b413b802f90c37e5743bc-20190815
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <sam.shih@mediatek.com>)
+ id 1hyWZI-00039W-P6; Fri, 16 Aug 2019 07:22:38 +0000
+X-UUID: ec22b7defd614d8ebe4fd3da0a0590ce-20190815
+X-UUID: ec22b7defd614d8ebe4fd3da0a0590ce-20190815
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 846738952; Thu, 15 Aug 2019 23:22:50 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 16 Aug 2019 00:22:48 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 16 Aug 2019 15:22:47 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 16 Aug 2019 15:22:47 +0800
-From: Sam Shih <sam.shih@mediatek.com>
-To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
- <thierry.reding@gmail.com>
-Subject: [PATCH 10/10] arm: dts: mediatek: add mt7629 pwm support
-Date: Fri, 16 Aug 2019 15:21:28 +0800
-Message-ID: <1565940088-845-11-git-send-email-sam.shih@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1565940088-845-1-git-send-email-sam.shih@mediatek.com>
-References: <1565940088-845-1-git-send-email-sam.shih@mediatek.com>
+ with ESMTP id 2146176014; Thu, 15 Aug 2019 23:22:32 -0800
+Received: from MTKMBS32DR.mediatek.inc (172.27.6.104) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 16 Aug 2019 00:22:31 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS32DR.mediatek.inc
+ (172.27.6.104) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 16 Aug 2019 15:22:24 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 16 Aug 2019 15:22:23 +0800
+Message-ID: <1565940140.20346.21.camel@mhfsdcap03>
+Subject: Re: [PATCH v9 08/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
+ Mode
+From: Yong Wu <yong.wu@mediatek.com>
+To: Will Deacon <will@kernel.org>
+Date: Fri, 16 Aug 2019 15:22:20 +0800
+In-Reply-To: <20190815115021.7pbv5s2qbgsuitvh@willie-the-truck>
+References: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
+ <1565423901-17008-9-git-send-email-yong.wu@mediatek.com>
+ <20190814144059.ruyc45yoqkwpbuga@willie-the-truck>
+ <1565858869.12818.51.camel@mhfsdcap03>
+ <20190815095123.rzgtpklvhtjlqir4@willie-the-truck>
+ <1565864318.14278.4.camel@mhfsdcap03>
+ <20190815115021.7pbv5s2qbgsuitvh@willie-the-truck>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: BA349197A457FBABF294C6AEA76C731A816F8C5D8247B147DB51393DA440EAB42000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190816_002258_967232_D260A757 
-X-CRM114-Status: UNSURE (   8.34  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190816_002236_818585_FD12E9CD 
+X-CRM114-Status: GOOD (  26.67  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,53 +78,134 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- devicetree@vger.kernel.org, sam
- shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, chao.hao@mediatek.com,
+ Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org, Evan
+ Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
+ iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: sam shih <sam.shih@mediatek.com>
+On Thu, 2019-08-15 at 12:50 +0100, Will Deacon wrote:
+> Ok, I think speaking to Robin helped me a bit with this...
+> 
+> On Thu, Aug 15, 2019 at 06:18:38PM +0800, Yong Wu wrote:
+> > On Thu, 2019-08-15 at 10:51 +0100, Will Deacon wrote:
+> > > On Thu, Aug 15, 2019 at 04:47:49PM +0800, Yong Wu wrote:
+> > > > On Wed, 2019-08-14 at 15:41 +0100, Will Deacon wrote:
+> > > > > On Sat, Aug 10, 2019 at 03:58:08PM +0800, Yong Wu wrote:
+> > > > > > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
+> > > > > > 
+> > > > > > In the mt2712 and mt8173, it's called "4GB mode", the physical address
+> > > > > > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
+> > > > > > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
+> > > > > > bit32 is always enabled. thus, in the M4U, we always enable the bit9
+> > > > > > for all PTEs which means to enable bit32 of physical address. Here is
+> > > > > > the detailed remap relationship in the "4GB mode":
+> > > > > > CPU PA         ->    HW PA
+> > > > > > 0x4000_0000          0x1_4000_0000 (Add bit32)
+> > > > > > 0x8000_0000          0x1_8000_0000 ...
+> > > > > > 0xc000_0000          0x1_c000_0000 ...
+> > > > > > 0x1_0000_0000        0x1_0000_0000 (No change)
+> 
+> [...]
+> 
+> > > > > The way I would like this quirk to work is that the io-pgtable code
+> > > > > basically sets bit 9 in the pte when bit 32 is set in the physical address,
+> > > > > and sets bit 4 in the pte when bit 33 is set in the physical address. It
+> > > > > would then do the opposite when converting a pte to a physical address.
+> > > > > 
+> > > > > That way, your driver can call the page table code directly with the high
+> > > > > addresses and we don't have to do any manual offsetting or range checking
+> > > > > in the page table code.
+> > > > 
+> > > > In this case, the mt8183 can work successfully while the "4gb
+> > > > mode"(mt8173/mt2712) can not.
+> > > > 
+> > > > In the "4gb mode", As the remap relationship above, we should always add
+> > > > bit32 in pte as we did in [2]. and need add bit32 in the
+> > > > "iova_to_phys"(Not always add.). That means the "4gb mode" has a special
+> > > > flow:
+> > > > a. Always add bit32 in paddr_to_iopte.
+> > > > b. Add bit32 only when PA < 0x40000000 in iopte_to_paddr.
+> > > 
+> > > I think this is probably at the heart of my misunderstanding. What is so
+> > > special about PAs (is this HW PA or CPU PA?) below 0x40000000? Is this RAM
+> > > or something else?
+> > 
+> > SRAM and HW register that IOMMU can not access.
+> 
+> Ok, so redrawing your table from above, I think we can say something like:
+> 
+> 
+> CPU Physical address
+> ====================
+> 
+> 0G	1G	2G	3G	4G	5G
+> |---A---|---B---|---C---|---D---|---E---|
+> +--I/O--+------------Memory-------------+
+> 
+> 
+> IOMMU output physical address
+> =============================
+> 
+> 				4G	5G	6G	7G	8G
+> 				|---E---|---B---|---C---|---D---|
+> 				+------------Memory-------------+
+> 
+> 
+> Do you agree? 
 
-This adds pwm support for MT7629.
+Quite right.
 
-Signed-off-by: Sam Shih <sam.shih@mediatek.com>
----
- arch/arm/boot/dts/mt7629.dtsi | 14 ++++++++++++++
- 1 file changed, 14 insertions(+)
 
-diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
-index 9608bc2ccb3f..10f788a93346 100644
---- a/arch/arm/boot/dts/mt7629.dtsi
-+++ b/arch/arm/boot/dts/mt7629.dtsi
-@@ -241,6 +241,22 @@
- 			status = "disabled";
- 		};
- 
-+		pwm: pwm@11006000 {
-+			compatible = "mediatek,mt7629-pwm",
-+				     "mediatek,mt7622-pwm";
-+			reg = <0 0x11006000 0 0x1000>;
-+			interrupts = <GIC_SPI 77 IRQ_TYPE_LEVEL_LOW>;
-+			clocks = <&topckgen CLK_TOP_PWM_SEL>,
-+				 <&pericfg CLK_PERI_PWM_PD>,
-+				 <&pericfg CLK_PERI_PWM1_PD>;
-+			clock-names = "top", "main", "pwm1";
-+			assigned-clocks = <&topckgen CLK_TOP_PWM_SEL>;
-+			assigned-clock-parents =
-+					<&topckgen CLK_TOP_UNIVPLL2_D4>;
-+			num-pwms = <1>;
-+			status = "disabled";
-+		};
-+
- 		i2c: i2c@11007000 {
- 			compatible = "mediatek,mt7629-i2c",
- 				     "mediatek,mt2712-i2c";
--- 
-2.17.1
+> If so, what happens to region 'A' (the I/O region) in the
+> IOMMU output physical address space. Is it accessible?
+
+No. IOMMU can not access region 'A' above.
+
+> 
+> Anyway, I think it's the job of the driver to convert between the two
+> address spaces, so that:
+> 
+>   - On ->map(), bit 32 of the CPU physical address is set before calling
+>     into the iopgtable code
+> 
+>   - The result from ->iova_to_phys() should be the result from the
+>     iopgtable code, but with the top bit cleared for addresses over
+>     5G.
+> 
+> This assumes that:
+> 
+>   1. We're ok setting bit 9 in the ptes mapping region 'E'.
+>   2. The IOMMU page-table walker uses CPU physical addresses
+> 
+> Are those true?
+
+Yes. Then this patch would be close to the one[1] I sent in v8.
+
+Do I need to split this patch into 2 ones?:
+a).the pagetable code that support 34bit PA when MTK quirk is enabled.
+It only has the symmetric code handle BIT32/BIT33. Besides, I will add
+CONFIG_PHYS_ADDR_T_64BIT in the iopte_to_addr as commented before.
+
+b) MTK code that apply the special "4gb mode" flow. And the "oas" will
+always is 34 bit since v7s has already supported our case.
+
+[1]http://lists.infradead.org/pipermail/linux-mediatek/2019-June/020991.html
+
+> 
+> Thanks,
+> 
+> Will
+
 
 
 _______________________________________________
