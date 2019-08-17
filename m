@@ -2,81 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1FFF790AB8
-	for <lists+linux-mediatek@lfdr.de>; Sat, 17 Aug 2019 00:06:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AC9CF90C77
+	for <lists+linux-mediatek@lfdr.de>; Sat, 17 Aug 2019 05:39:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RvdpUfJhugffToZTf0JWW0xGvFLkSZ1IWgoWweg6VHM=; b=fsg27j3AKSttQr
-	hDW93TyVY+rQg6shFAwqWQXIzxG1pYPgFzC4vkQu9tFEDybwDfyqahCgfeSFyYKRsigKnYo4ENi1F
-	dWyAXZEpbFd5PIfPOU7KOq+hFF0xTLS9ZpYAASFopucNMpFYQ80DOtQY7uiui6aW9SHIOJ1oVJVXd
-	3v0DYJzk+yzFoU3wuxN4mGyRNcC3V8fPIGITCw2B0V7PssOxCv7idAqv1Jn74FZDJ5C0RToPqhEqK
-	bS7b9ifGE3SEZO4t3IdaHNl6aiC5IGwcVqfAOjmN4PUDYA4hstJpbGrmO3Z+8iOZnnMwY0dKxGHTt
-	jGnnbjgZ7XDIhXBzQt+w==;
+	List-Owner; bh=qZv1lzm/WFBc2weyw6W+6P1DHr/+0ulRj1PwWeSMWM8=; b=fhDkVeST2kP7wv
+	wWIXo8Z+ju1fImgWrvFqKRaBhDy1OCTH5OB9YxvDLveMTQ2MaN0UWAvmODNtDQiGhnpNIMfLnXxvg
+	Wg8JBbqKppQ7a39fwi5oWw7ggj28pg6zwfQuLdFEvQsmaD/wW8nJAjgzPLAujdf5Ka92zajxQgVgF
+	exMG8Tkn7PzdNHOAeMfY+FszPj7J/vGzui00CaoV/J/+Hc+cRqcQPgecCiKaG3pBmsU0oGxN2VMeY
+	9TF0Nqyt5G+FWFYnb6ovHzjKehRUEvB0G/qPUfS464CQqbY7V1u6hQ3QoUAgprF8QEhtKJReuGNyv
+	NFxJw4NqsgZ9qPmMOomQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hykMh-0006pQ-1S; Fri, 16 Aug 2019 22:06:31 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hykMV-0006hL-4h; Fri, 16 Aug 2019 22:06:21 +0000
-Received: by mail-ot1-f65.google.com with SMTP id c34so10962097otb.7;
- Fri, 16 Aug 2019 15:06:17 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=c1XuEJXK9FfUQuWikaiU8aAHVF82tM2Ux510YBrnxGM=;
- b=Kk2oy/Y8jmVVw42gkG38jUyNnOMcNFFEVDLCyZMquYMpoST4ehgXgn3Qe5XYGidDrS
- 7+rQR64xCx/864Vjzepr3s3AFpYsl9WY0iLCdtmSmG52eRJpinfI5ybhsmZE+XsNLqWV
- 1/+2pu7mnvPUuSnuQghYuNW/28E2iCDdjxuljRL9CUpgu9ro99Ni8l/L1hf6ZTnWhEep
- feaaXucQecB673VPMWbT3+6Tifmet8978ry3Q74VOVKoY9XlerXiWPQJ5zvdZnHZLpsv
- 5kMPlIxzG+V91pc2YrRXQ60W+O5qGrXL9GxLHRzCqwb3Nl3aEmARaExNkEu79SujBsm4
- X9Yw==
-X-Gm-Message-State: APjAAAXNViikqhi4j0h2mVbS85ScNJQomZ/iUfiJYeBmbjM6Cr/DjDlV
- dzfIUQlou4na3JwKU1VFtQ==
-X-Google-Smtp-Source: APXvYqzw+Cf+orS/G1HpiqFSkUwStTCMNUUOQ8ef5IhY/yKp8zTACJfDvod1DpPnqwCAmF6Bewtc/w==
-X-Received: by 2002:a9d:5a82:: with SMTP id w2mr9825613oth.104.1565993177035; 
- Fri, 16 Aug 2019 15:06:17 -0700 (PDT)
-Received: from localhost ([2607:fb90:1cdf:eef6:c125:340:5598:396e])
- by smtp.gmail.com with ESMTPSA id i63sm1909093oih.18.2019.08.16.15.06.16
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 16 Aug 2019 15:06:16 -0700 (PDT)
-Date: Fri, 16 Aug 2019 17:06:15 -0500
-From: Rob Herring <robh@kernel.org>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Subject: Re: [PATCH v11 03/12] dt-binding: gce: add binding for gce client
- reg property
-Message-ID: <20190816220615.GA25142@bogus>
-References: <20190729070106.9332-1-bibby.hsieh@mediatek.com>
- <20190729070106.9332-4-bibby.hsieh@mediatek.com>
+	id 1hypZ9-0004QR-SQ; Sat, 17 Aug 2019 03:39:43 +0000
+Received: from mail3-165.sinamail.sina.com.cn ([202.108.3.165])
+ by bombadil.infradead.org with smtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hypZ6-0004F4-Ce
+ for linux-mediatek@lists.infradead.org; Sat, 17 Aug 2019 03:39:42 +0000
+Received: from unknown (HELO localhost.localdomain)([222.131.78.247])
+ by sina.com with ESMTP
+ id 5D5776EB00008B47; Sat, 17 Aug 2019 11:39:27 +0800 (CST)
+X-Sender: hdanton@sina.com
+X-Auth-ID: hdanton@sina.com
+X-SMAIL-MID: 426700329115
+From: Hillf Danton <hdanton@sina.com>
+To: Tom Murphy <murphyt7@tcd.ie>
+Subject: Re: [PATCH V5 3/5] iommu/dma-iommu: Handle deferred devices
+Date: Sat, 17 Aug 2019 11:39:14 +0800
+Message-Id: <20190817033914.4812-1-hdanton@sina.com>
+In-Reply-To: <20190815110944.3579-1-murphyt7@tcd.ie>
+References: <20190815110944.3579-1-murphyt7@tcd.ie>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190729070106.9332-4-bibby.hsieh@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190816_150619_186958_6CED3B89 
-X-CRM114-Status: UNSURE (   8.17  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190816_203940_605971_A9A7B3F7 
+X-CRM114-Status: GOOD (  12.00  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ no trust [202.108.3.165 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [202.108.3.165 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (hdanton[at]sina.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,35 +65,83 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel@vger.kernel.org, CK HU <ck.hu@mediatek.com>,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Sascha Hauer <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- ginny.chen@mediatek.com
+Cc: Heiko Stuebner <heiko@sntech.de>, virtualization@lists.linux-foundation.org,
+ linux-tegra@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
+ Will Deacon <will@kernel.org>, Marek Szyprowski <m.szyprowski@samsung.com>,
+ Jean-Philippe Brucker <jean-philippe@linaro.org>,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ iommu@lists.linux-foundation.org, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
+ Andy Gross <agross@kernel.org>, Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ linux-s390@vger.kernel.org, linux-arm-msm@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, David Woodhouse <dwmw2@infradead.org>,
+ linux-kernel@vger.kernel.org, Rob Clark <robdclark@gmail.com>,
+ Kukjin Kim <kgene@kernel.org>, Robin Murphy <robin.murphy@arm.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 29 Jul 2019 15:00:57 +0800, Bibby Hsieh wrote:
-> cmdq driver provide a function that get the relationship
-> of sub system number from device node for client.
-> add specification for #subsys-cells, mediatek,gce-client-reg.
-> 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> ---
->  .../devicetree/bindings/mailbox/mtk-gce.txt      | 16 ++++++++++++----
->  1 file changed, 12 insertions(+), 4 deletions(-)
-> 
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+On Thu, 15 Aug 2019 12:09:41 +0100 Tom Murphy wrote:
+> 
+> Handle devices which defer their attach to the iommu in the dma-iommu api
+> 
+> Signed-off-by: Tom Murphy <murphyt7@tcd.ie>
+> ---
+>  drivers/iommu/dma-iommu.c | 27 ++++++++++++++++++++++++++-
+>  1 file changed, 26 insertions(+), 1 deletion(-)
+> 
+> diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
+> index 2712fbc68b28..906b7fa14d3c 100644
+> --- a/drivers/iommu/dma-iommu.c
+> +++ b/drivers/iommu/dma-iommu.c
+> @@ -22,6 +22,7 @@
+>  #include <linux/pci.h>
+>  #include <linux/scatterlist.h>
+>  #include <linux/vmalloc.h>
+> +#include <linux/crash_dump.h>
+>  
+>  struct iommu_dma_msi_page {
+>  	struct list_head	list;
+> @@ -351,6 +352,21 @@ static int iommu_dma_init_domain(struct iommu_domain *domain, dma_addr_t base,
+>  	return iova_reserve_iommu_regions(dev, domain);
+>  }
+>  
+> +static int handle_deferred_device(struct device *dev,
+> +	struct iommu_domain *domain)
+> +{
+> +	const struct iommu_ops *ops = domain->ops;
+> +
+> +	if (!is_kdump_kernel())
+> +		return 0;
+> +
+> +	if (unlikely(ops->is_attach_deferred &&
+> +		ops->is_attach_deferred(domain, dev)))
+> +		return iommu_attach_device(domain, dev);
+> +
+> +	return 0;
+> +}
+> +
+>  /**
+>   * dma_info_to_prot - Translate DMA API directions and attributes to IOMMU API
+>   *                    page flags.
+> @@ -463,6 +479,9 @@ static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
+>  	size_t iova_off = iova_offset(iovad, phys);
+>  	dma_addr_t iova;
+>  
+> +	if (unlikely(handle_deferred_device(dev, domain)))
+> +		return DMA_MAPPING_ERROR;
+> +
+>  	size = iova_align(iovad, size + iova_off);
+>  
+>  	iova = iommu_dma_alloc_iova(domain, size, dma_get_mask(dev), dev);
+
+iommu_map_atomic() is applied to __iommu_dma_map() in 2/5.
+Is it an atomic context currently given the mutex_lock() in
+iommu_attach_device()?
+
 
 _______________________________________________
 Linux-mediatek mailing list
