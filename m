@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C3AA4916E9
-	for <lists+linux-mediatek@lfdr.de>; Sun, 18 Aug 2019 15:58:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37637916EA
+	for <lists+linux-mediatek@lfdr.de>; Sun, 18 Aug 2019 15:58:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,47 +11,47 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=0g1vJJUyrs64GffrqEOiBk2K/KLJlN4j9tNFOdK5IHs=; b=pZApMtB6vFt3hynsNi2IKhNnP3
-	Dw43wEFQKY3lRC+hkUnWMTLN2hTzVzMCXYF8m0Cymt1HQtFuGMiJU+ToUpHK6wVx0Cvv/otFluQpS
-	+YYXpKapcxF+9rwTl/YPVAUsqOZLJgVFEyc2WYpXDL4kTjyS4xtsp2nLU4lqOwr/q8XRP/n7IxzzZ
-	2aeozK0zfCQi1Foc4SZ+yB+B9vCTpoHXR01PFbVW1VlxPQKSstU9fPlx/8sMAeCHJssIYEnlEq3Qd
-	i8647BdaSZ+g/Sti+cqymTvvYMjqW1EuuzmvU1j3NM6RTnX6cToUxfrKkO++v1Mt4JKyo7vMgLuGm
-	MZUw4BGw==;
+	bh=G5oXGEKL9rxaakXEDkuN3vc+VwMN6plXP2v/2TP+WNM=; b=OccBEDjS2O2cGm1W6GX6OKIvos
+	H32COFF2wZCPqm3e0xWrk5oidYuOlOhWopcbEH8wbuulGX4vw4hhCCJEAgXf5YPh5w42c3RQagCaX
+	juiJJXJc4dxxmvttLZSoMGyIynx+irEW6yEI5ENaTsQd0ogzgznwUbDOqxtCh0nM1r10DANbc7qWH
+	7KqKNJ+AU3i2nGW8WSwHwmdHZD87IeTbF3wNYTDef71h4IcNCX9p/NzpjVz055a6PzoDo181oASi0
+	P7WzBsZZzUq/d/J1VFer79gIO/SXLuFrZSagQqXe1DSaPORxm37aAVyvbZvLG3LZTxDdljv4nH6vR
+	5LJq22UQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzLhZ-0007fD-58; Sun, 18 Aug 2019 13:58:33 +0000
-Received: from mxwww.masterlogin.de ([95.129.51.220])
+	id 1hzLhb-0007hD-2C; Sun, 18 Aug 2019 13:58:35 +0000
+Received: from mxwww.masterlogin.de ([2a03:2900:1:1::b])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzLfd-0005xf-Ll; Sun, 18 Aug 2019 13:56:35 +0000
-Received: from mxout2.routing.net (unknown [192.168.10.82])
- by new.mxwww.masterlogin.de (Postfix) with ESMTPS id 5A0DC96DF9;
- Sun, 18 Aug 2019 13:56:27 +0000 (UTC)
+ id 1hzLfd-0005xd-La; Sun, 18 Aug 2019 13:56:35 +0000
+Received: from mxout1.routing.net (unknown [192.168.10.81])
+ by new.mxwww.masterlogin.de (Postfix) with ESMTPS id EB2EC96DFC;
+ Sun, 18 Aug 2019 13:56:28 +0000 (UTC)
 Received: from mxbox3.masterlogin.de (unknown [192.168.10.253])
- by mxout2.routing.net (Postfix) with ESMTP id AB4D46207B;
- Sun, 18 Aug 2019 13:56:27 +0000 (UTC)
+ by mxout1.routing.net (Postfix) with ESMTP id 46D0F43CE1;
+ Sun, 18 Aug 2019 13:56:29 +0000 (UTC)
 Received: from localhost.localdomain (fttx-pool-185.53.43.183.bambit.de
  [185.53.43.183])
- by mxbox3.masterlogin.de (Postfix) with ESMTPSA id ED0C536043A;
- Sun, 18 Aug 2019 15:56:26 +0200 (CEST)
+ by mxbox3.masterlogin.de (Postfix) with ESMTPSA id 7662136043A;
+ Sun, 18 Aug 2019 15:56:28 +0200 (CEST)
 From: Frank Wunderlich <frank-w@public-files.de>
 To: linux-mediatek@lists.infradead.org
-Subject: [PATCH v6 06/13] mfd: mt6397: add mutex include
-Date: Sun, 18 Aug 2019 15:56:04 +0200
-Message-Id: <20190818135611.7776-7-frank-w@public-files.de>
+Subject: [PATCH v6 08/13] mfd: mt6323: some improvements of mt6397-core
+Date: Sun, 18 Aug 2019 15:56:06 +0200
+Message-Id: <20190818135611.7776-9-frank-w@public-files.de>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20190818135611.7776-1-frank-w@public-files.de>
 References: <20190818135611.7776-1-frank-w@public-files.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190818_065633_869204_95077CFF 
-X-CRM114-Status: UNSURE (   7.82  )
+X-CRM114-CacheID: sfid-20190818_065633_859396_373C2DC8 
+X-CRM114-Status: UNSURE (   9.49  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.4 (/)
+X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.4 points)
+ Content analysis details:   (-2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [95.129.51.220 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [2a03:2900:1:1:0:0:0:b listed in] [list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -86,29 +86,51 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Josef Friedl <josef.friedl@speed.at>
 
-add missing mutex.h
+simplyfications (resource definitions my DEFINE_RES_* macros)
 
 Signed-off-by: Josef Friedl <josef.friedl@speed.at>
 Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
+Acked-for-MFD-by: Lee Jones <lee.jones@linaro.org>
 ---
-changes since v5: separated from "power: reset: add driver for mt6323 poweroff"
+changes since v5: none
+changes since v4: do not touch year of copyright
+changes since v3: moved part 6 forward to let compatible and driver be together
+changes since v2: splitted v2 part 4 into 6+7
 ---
- include/linux/mfd/mt6397/core.h | 2 ++
- 1 file changed, 2 insertions(+)
+ drivers/mfd/mt6397-core.c | 13 +++----------
+ 1 file changed, 3 insertions(+), 10 deletions(-)
 
-diff --git a/include/linux/mfd/mt6397/core.h b/include/linux/mfd/mt6397/core.h
-index 25a95e72179b..652da61e3711 100644
---- a/include/linux/mfd/mt6397/core.h
-+++ b/include/linux/mfd/mt6397/core.h
-@@ -7,6 +7,8 @@
- #ifndef __MFD_MT6397_CORE_H__
- #define __MFD_MT6397_CORE_H__
+diff --git a/drivers/mfd/mt6397-core.c b/drivers/mfd/mt6397-core.c
+index 337bcccdb914..c9a81087fa55 100644
+--- a/drivers/mfd/mt6397-core.c
++++ b/drivers/mfd/mt6397-core.c
+@@ -5,6 +5,7 @@
+  */
  
-+#include <linux/mutex.h>
-+
- enum mt6397_irq_numbers {
- 	MT6397_IRQ_SPKL_AB = 0,
- 	MT6397_IRQ_SPKR_AB,
+ #include <linux/interrupt.h>
++#include <linux/ioport.h>
+ #include <linux/module.h>
+ #include <linux/of_device.h>
+ #include <linux/of_irq.h>
+@@ -23,16 +24,8 @@
+ #define MT6397_CID_CODE		0x97
+ 
+ static const struct resource mt6397_rtc_resources[] = {
+-	{
+-		.start = MT6397_RTC_BASE,
+-		.end   = MT6397_RTC_BASE + MT6397_RTC_SIZE,
+-		.flags = IORESOURCE_MEM,
+-	},
+-	{
+-		.start = MT6397_IRQ_RTC,
+-		.end   = MT6397_IRQ_RTC,
+-		.flags = IORESOURCE_IRQ,
+-	},
++	DEFINE_RES_MEM(MT6397_RTC_BASE, MT6397_RTC_SIZE),
++	DEFINE_RES_IRQ(MT6397_IRQ_RTC),
+ };
+ 
+ static const struct resource mt6323_keys_resources[] = {
 -- 
 2.17.1
 
