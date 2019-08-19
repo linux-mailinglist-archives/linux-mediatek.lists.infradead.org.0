@@ -2,53 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2AC992747
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 16:44:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AA8E8927DD
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 17:04:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kO+y+wjRI4PCn5s/ZM1RO1fc4Uy7MXNUzQ/sFh8mlIs=; b=Vz4dpCxm1vCwM+
-	SGDFXg2JoomD2wmyWBIxc0kVuMS1LKTfr+Pmwcn/FO6+WAsK6BNToIRgPHwsrgR79OBEmrbzdz9dv
-	Lc/tEK1RhIKSsVayL4IyJu9UhYY/+LVieqfYCA8hwfyJNFG4W9b4G3FMGwtfUMyyTi/MApF0MVNXo
-	QLRZISZa1dNVYw5/fCGPgoZE+9y+FqF2bM+AO7J/hWUTfykYM491gR0ezheIXe52NXONMQjLVLNbn
-	nQK4TQd/IJ8lomS2r/bx94QlTExtZ2ZZfKwVVYpnVKDLa9++Om5TgcjiL5Om/HJyAHo0HRj3UQfxH
-	XZrdtgXuix4h2CZVK+EA==;
+	List-Owner; bh=mc3SMaDhgB7X4dkT/DeHaqQRgMq9M5w+p0YSKhwbfAo=; b=mhCmCBrqtfT51k
+	ldfqMmYKZ1C4ra4wIJ0aPkJocW35dWiBeNJbX0ewMbHLAlAqZKts34adLk843FHKwhEOsRVfUmqOI
+	ciCKiLgMHcUbqYHOYbLX3vQrlvt4g25h3StjiVbgzSlv8hEecEA8WjsoF6lrZjXNf6t+fvu5naPYo
+	/Zf7theZjoLQIlsh8PnSagPRhMS0VMP+1Muij6RDlbzOVqPcgK+ibG3emIP612tQEqH+zoEnkY9yi
+	V6PtVIGNE14zu3xzAFvrTfY8gXi/my8BqXDbMmGyDu+y/glavrfeHnud2gdpxCZiHYFzrGXhHuKed
+	uxs+me26ShzS1cmiqosg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzitH-0007P6-3j; Mon, 19 Aug 2019 14:44:11 +0000
+	id 1hzjCP-0007HU-2g; Mon, 19 Aug 2019 15:03:57 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hzit8-0007HH-5N; Mon, 19 Aug 2019 14:44:03 +0000
+ id 1hzjCF-00074C-Tb; Mon, 19 Aug 2019 15:03:49 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 2BF7928;
- Mon, 19 Aug 2019 07:43:59 -0700 (PDT)
-Received: from fuggles.cambridge.arm.com (usa-sjc-imap-foss1.foss.arm.com
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id DD2E428;
+ Mon, 19 Aug 2019 08:03:45 -0700 (PDT)
+Received: from lakrids.cambridge.arm.com (usa-sjc-imap-foss1.foss.arm.com
  [10.121.207.14])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 293DC3F718;
- Mon, 19 Aug 2019 07:43:57 -0700 (PDT)
-Date: Mon, 19 Aug 2019 15:43:55 +0100
-From: Will Deacon <will.deacon@arm.com>
-To: Robin Murphy <robin.murphy@arm.com>
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 009D53F718;
+ Mon, 19 Aug 2019 08:03:43 -0700 (PDT)
+Date: Mon, 19 Aug 2019 16:03:41 +0100
+From: Mark Rutland <mark.rutland@arm.com>
+To: Andrey Konovalov <andreyknvl@google.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>, Will Deacon <will@kernel.org>
 Subject: Re: [PATCH] arm64: kasan: fix phys_to_virt() false positive on
  tag-based kasan
-Message-ID: <20190819144355.GD14981@fuggles.cambridge.arm.com>
+Message-ID: <20190819150341.GC9927@lakrids.cambridge.arm.com>
 References: <20190819114420.2535-1-walter-zh.wu@mediatek.com>
  <20190819125625.bu3nbrldg7te5kwc@willie-the-truck>
  <20190819132347.GB9927@lakrids.cambridge.arm.com>
  <20190819133441.ejomv6cprdcz7hh6@willie-the-truck>
  <CAAeHK+w7cTGN8SgWQs0bPjPOrizqfUoMnJWTvUkCqv17Qt=3oQ@mail.gmail.com>
- <20190819142238.2jobs6vabkp2isg2@willie-the-truck>
- <1ac7eb3e-156f-218c-8c5a-39a05dd46d55@arm.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1ac7eb3e-156f-218c-8c5a-39a05dd46d55@arm.com>
-User-Agent: Mutt/1.11.1+86 (6f28e57d73f2) ()
+In-Reply-To: <CAAeHK+w7cTGN8SgWQs0bPjPOrizqfUoMnJWTvUkCqv17Qt=3oQ@mail.gmail.com>
+User-Agent: Mutt/1.11.1+11 (2f07cb52) (2018-12-01)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_074402_295606_C7E9B6F4 
-X-CRM114-Status: GOOD (  27.10  )
+X-CRM114-CacheID: sfid-20190819_080348_046214_F7E8AF3B 
+X-CRM114-Status: GOOD (  29.90  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -67,80 +66,164 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Walter Wu <walter-zh.wu@mediatek.com>,
- wsd_upstream@mediatek.com, Andrey Konovalov <andreyknvl@google.com>,
+Cc: Walter Wu <walter-zh.wu@mediatek.com>, wsd_upstream@mediatek.com,
+ Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>,
  LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>, linux-mediatek@lists.infradead.org,
- Dmitry Vyukov <dvyukov@google.com>, Catalin Marinas <catalin.marinas@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
  Alexander Potapenko <glider@google.com>,
- Andrew Morton <akpm@linux-foundation.org>, Will Deacon <will@kernel.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Aug 19, 2019 at 03:35:16PM +0100, Robin Murphy wrote:
-> On 19/08/2019 15:22, Will Deacon wrote:
-> > On Mon, Aug 19, 2019 at 04:05:22PM +0200, Andrey Konovalov wrote:
-> > > On Mon, Aug 19, 2019 at 3:34 PM Will Deacon <will@kernel.org> wrote:
-> > > > 
-> > > > On Mon, Aug 19, 2019 at 02:23:48PM +0100, Mark Rutland wrote:
-> > > > > On Mon, Aug 19, 2019 at 01:56:26PM +0100, Will Deacon wrote:
-> > > > > > On Mon, Aug 19, 2019 at 07:44:20PM +0800, Walter Wu wrote:
-> > > > > > > __arm_v7s_unmap() call iopte_deref() to translate pyh_to_virt address,
-> > > > > > > but it will modify pointer tag into 0xff, so there is a false positive.
-> > > > > > > 
-> > > > > > > When enable tag-based kasan, phys_to_virt() function need to rewrite
-> > > > > > > its original pointer tag in order to avoid kasan report an incorrect
-> > > > > > > memory corruption.
-> > > > > > 
-> > > > > > Hmm. Which tree did you see this on? We've recently queued a load of fixes
-> > > > > > in this area, but I /thought/ they were only needed after the support for
-> > > > > > 52-bit virtual addressing in the kernel.
-> > > > > 
-> > > > > I'm seeing similar issues in the virtio blk code (splat below), atop of
-> > > > > the arm64 for-next/core branch. I think this is a latent issue, and
-> > > > > people are only just starting to test with KASAN_SW_TAGS.
-> > > > > 
-> > > > > It looks like the virtio blk code will round-trip a SLUB-allocated pointer from
-> > > > > virt->page->virt, losing the per-object tag in the process.
-> > > > > 
-> > > > > Our page_to_virt() seems to get a per-page tag, but this only makes
-> > > > > sense if you're dealing with the page allocator, rather than something
-> > > > > like SLUB which carves a page into smaller objects giving each object a
-> > > > > distinct tag.
-> > > > > 
-> > > > > Any round-trip of a pointer from SLUB is going to lose the per-object
-> > > > > tag.
-> > > > 
-> > > > Urgh, I wonder how this is supposed to work?
-> > > > 
-> > > > If we end up having to check the KASAN shadow for *_to_virt(), then why
-> > > > do we need to store anything in the page flags at all? Andrey?
-> > > 
-> > > As per 2813b9c0 ("kasan, mm, arm64: tag non slab memory allocated via
-> > > pagealloc") we should only save a non-0xff tag in page flags for non
-> > > slab pages.
-> > 
-> > Thanks, that makes sense. Hopefully the patch from Andrey R will solve
-> > both of the reported splats, since I'd not realised they were both on the
-> > kfree() path.
-> > 
-> > > Could you share your .config so I can reproduce this?
-> > 
-> > This is in the iopgtable code, so it's probably pretty tricky to trigger
-> > at runtime unless you have the write IOMMU hardware, unfortunately.
+On Mon, Aug 19, 2019 at 04:05:22PM +0200, Andrey Konovalov wrote:
+> On Mon, Aug 19, 2019 at 3:34 PM Will Deacon <will@kernel.org> wrote:
+> >
+> > On Mon, Aug 19, 2019 at 02:23:48PM +0100, Mark Rutland wrote:
+> > > On Mon, Aug 19, 2019 at 01:56:26PM +0100, Will Deacon wrote:
+> > > > On Mon, Aug 19, 2019 at 07:44:20PM +0800, Walter Wu wrote:
+> > > > > __arm_v7s_unmap() call iopte_deref() to translate pyh_to_virt address,
+> > > > > but it will modify pointer tag into 0xff, so there is a false positive.
+> > > > >
+> > > > > When enable tag-based kasan, phys_to_virt() function need to rewrite
+> > > > > its original pointer tag in order to avoid kasan report an incorrect
+> > > > > memory corruption.
+> > > >
+> > > > Hmm. Which tree did you see this on? We've recently queued a load of fixes
+> > > > in this area, but I /thought/ they were only needed after the support for
+> > > > 52-bit virtual addressing in the kernel.
+> > >
+> > > I'm seeing similar issues in the virtio blk code (splat below), atop of
+> > > the arm64 for-next/core branch. I think this is a latent issue, and
+> > > people are only just starting to test with KASAN_SW_TAGS.
+> > >
+> > > It looks like the virtio blk code will round-trip a SLUB-allocated pointer from
+> > > virt->page->virt, losing the per-object tag in the process.
+> > >
+> > > Our page_to_virt() seems to get a per-page tag, but this only makes
+> > > sense if you're dealing with the page allocator, rather than something
+> > > like SLUB which carves a page into smaller objects giving each object a
+> > > distinct tag.
+> > >
+> > > Any round-trip of a pointer from SLUB is going to lose the per-object
+> > > tag.
+> >
+> > Urgh, I wonder how this is supposed to work?
+> >
+> > If we end up having to check the KASAN shadow for *_to_virt(), then why
+> > do we need to store anything in the page flags at all? Andrey?
 > 
-> If simply freeing any entry from the l2_tables cache is sufficient, then the
-> short-descriptor selftest should do the job, and that ought to run on
-> anything (modulo insane RAM layouts).
+> As per 2813b9c0 ("kasan, mm, arm64: tag non slab memory allocated via
+> pagealloc") we should only save a non-0xff tag in page flags for non
+> slab pages.
+> 
+> Could you share your .config so I can reproduce this?
 
-Ok, so that would be defconfig + CONFIG_IOMMU_IO_PGTABLE_ARMV7S +
-CONFIG_IOMMU_IO_PGTABLE_ARMV7S_SELFTEST + KASAN...
+I wrote a test (below) to do so. :)
 
-Will
+It fires with arm64 defconfig, + CONFIG_TEST_KASAN=m.
+
+With Andrey Ryabinin's patch it works as expected with no KASAN splats
+for the two new test cases.
+
+Thanks,
+Mark.
+
+---->8----
+From 7e8569b558fca21ad4e80fddae659591bc84ce1f Mon Sep 17 00:00:00 2001
+From: Mark Rutland <mark.rutland@arm.com>
+Date: Mon, 19 Aug 2019 15:39:32 +0100
+Subject: [PATCH] lib/test_kasan: add roundtrip tests
+
+In several places we needs to be able to operate on pointers which have
+gone via a roundtrip:
+
+	virt -> {phys,page} -> virt
+
+With KASAN_SW_TAGS, we can't preserve the tag for SLUB objects, and the
+{phys,page} -> virt conversion will use KASAN_TAG_KERNEL.
+
+This patch adds tests to ensure that this works as expected, without
+false positives.
+
+Signed-off-by: Mark Rutland <mark.rutland@arm.com>
+Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Cc: Andrey Konovalov <andreyknvl@google.com>
+Cc: Will Deacon <will.deacon@arm.com>
+---
+ lib/test_kasan.c | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+diff --git a/lib/test_kasan.c b/lib/test_kasan.c
+index b63b367a94e8..cf7b93f0d90c 100644
+--- a/lib/test_kasan.c
++++ b/lib/test_kasan.c
+@@ -19,6 +19,8 @@
+ #include <linux/string.h>
+ #include <linux/uaccess.h>
+ 
++#include <asm/page.h>
++
+ /*
+  * Note: test functions are marked noinline so that their names appear in
+  * reports.
+@@ -337,6 +339,42 @@ static noinline void __init kmalloc_uaf2(void)
+ 	kfree(ptr2);
+ }
+ 
++static noinline void __init kfree_via_page(void)
++{
++	char *ptr;
++	size_t size = 8;
++	struct page *page;
++	unsigned long offset;
++
++	pr_info("invalid-free false positive (via page)\n");
++	ptr = kmalloc(size, GFP_KERNEL);
++	if (!ptr) {
++		pr_err("Allocation failed\n");
++		return;
++	}
++
++	page = virt_to_page(ptr);
++	offset = offset_in_page(ptr);
++	kfree(page_address(page) + offset);
++}
++
++static noinline void __init kfree_via_phys(void)
++{
++	char *ptr;
++	size_t size = 8;
++	phys_addr_t phys;
++
++	pr_info("invalid-free false positive (via phys)\n");
++	ptr = kmalloc(size, GFP_KERNEL);
++	if (!ptr) {
++		pr_err("Allocation failed\n");
++		return;
++	}
++
++	phys = virt_to_phys(ptr);
++	kfree(phys_to_virt(phys));
++}
++
+ static noinline void __init kmem_cache_oob(void)
+ {
+ 	char *p;
+@@ -737,6 +775,8 @@ static int __init kmalloc_tests_init(void)
+ 	kmalloc_uaf();
+ 	kmalloc_uaf_memset();
+ 	kmalloc_uaf2();
++	kfree_via_page();
++	kfree_via_phys();
+ 	kmem_cache_oob();
+ 	memcg_accounted_kmem_cache();
+ 	kasan_stack_oob();
+-- 
+2.11.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
