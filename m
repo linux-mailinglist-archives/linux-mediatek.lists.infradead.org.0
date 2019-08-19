@@ -2,76 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF96492235
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 13:25:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 71FCA922A4
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 13:43:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BWphsMbqNxjbKR00ecOGuxOHl5FdW3D/ypW1Wq4HZSM=; b=dpdawPCm3c78yu
-	6uueIxNYz2niaCJSYYOvhEPb3B4rVnWmOVQOYh0Fnh4ttTQpfTLUAxQVS3mJ/bA+UfyrGnI4EOP3D
-	SWihDHN6zuKRO+wtZaUYlOUT5R6xV/aWv1M57uqy4pJ5qJe7zDlGVCQ3mwuOJ2MdUEPWDs57Z1l6x
-	SFSK5wYwv1Fg/3GtcnEYK5QIVdBvbJ4HaVYEexOeVVScOwo9Wxvaxity4+Z3+SGSfZngAd+yuw9H0
-	mXO4dJuK6lv0EzV9zRcdQrcvDFmua1+X8bHEkUrlUhfoPw5cZWXK5gWi0nTgDQBmVgv5mnQdXu2xc
-	uPggj4GSAQ7B3onHLA0w==;
+	List-Owner; bh=axN/EvS41LM18ICqZ1R07jPCJFTjTzDk49zhwvLBuBs=; b=oYKRQOMujPsZvg
+	2wDv6Q4sdtIgdfu/MRYb6kkR5KBQzZyXIXoiRKr3P5zdnsq2CiRhNM0Z8T0FRnyhg5AgiwjnVM8+T
+	r/hCuncMWZ7UI+HodW3+sKW2PvA1B+2Gt+H201uiT4fqDbmi6/kl1AM+LlNqZvbAmhyxxl4OnY0RP
+	P0EV9ffORBVGksH4SQ2IqCrkdwHqEg5Ib4bk8w5+BpZrV8HfwsJECv/nEjVpjcpBdAKJbWHZ/g6m3
+	EQLumU90mp8MGD08bGLqJRK4zYzrURojGzk79kDg7HD2+o80u8kaOmxJXGU1yxuEJQ5Nd8MDdqw+4
+	Xpm51+O/1cMGdlRPimKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzfmT-0005SA-Cw; Mon, 19 Aug 2019 11:24:57 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hzg4I-0007iv-P1; Mon, 19 Aug 2019 11:43:22 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzfmH-0005Jt-Aq; Mon, 19 Aug 2019 11:24:46 +0000
-Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id AE2B320851;
- Mon, 19 Aug 2019 11:24:41 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566213884;
- bh=KxFLgNmJMln3v1xilT2WLaj/V5rdHTGk5mDJHEGlyZM=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=nOUquHtzf14nNUsDP3ummqHXlIVpJLB8nupErbnKr/AJXJj+wkKyvXBKS5xb482qj
- HkuzQ6aZ60aRgigZLr5sugceTgcU7Lw3HzG0aNDdc1CzFTioSgslLVpa+0yiT4Uit4
- z0fGfbKcIhH8HWgp3mzLViuMBMua082sRHmdt1dU=
-Date: Mon, 19 Aug 2019 12:24:38 +0100
-From: Will Deacon <will@kernel.org>
-To: Yong Wu <yong.wu@mediatek.com>
-Subject: Re: [PATCH v9 08/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
- Mode
-Message-ID: <20190819112438.fr233h5dgjkqb36r@willie-the-truck>
-References: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
- <1565423901-17008-9-git-send-email-yong.wu@mediatek.com>
- <20190814144059.ruyc45yoqkwpbuga@willie-the-truck>
- <1565858869.12818.51.camel@mhfsdcap03>
- <20190815095123.rzgtpklvhtjlqir4@willie-the-truck>
- <1565864318.14278.4.camel@mhfsdcap03>
- <20190815115021.7pbv5s2qbgsuitvh@willie-the-truck>
- <1565940140.20346.21.camel@mhfsdcap03>
+ id 1hzg4D-0007iX-OH
+ for linux-mediatek@lists.infradead.org; Mon, 19 Aug 2019 11:43:20 +0000
+X-UUID: f3fef176e7994aa79eacc246a575701c-20190819
+X-UUID: f3fef176e7994aa79eacc246a575701c-20190819
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <mars.cheng@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1237853815; Mon, 19 Aug 2019 03:42:39 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 04:42:37 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 19:42:36 +0800
+Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 19 Aug 2019 19:42:30 +0800
+Message-ID: <1566214950.17081.3.camel@mtkswgap22>
+Subject: Re: [PATCH v2 11/11] arm64: dts: add dts nodes for MT6779
+From: Mars Cheng <mars.cheng@mediatek.com>
+To: Marc Zyngier <maz@kernel.org>
+Date: Mon, 19 Aug 2019 19:42:30 +0800
+In-Reply-To: <adec38bf-735b-9131-2b9d-1e427d47f88d@kernel.org>
+References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
+ <1566206502-4347-12-git-send-email-mars.cheng@mediatek.com>
+ <adec38bf-735b-9131-2b9d-1e427d47f88d@kernel.org>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1565940140.20346.21.camel@mhfsdcap03>
-User-Agent: NeoMutt/20170113 (1.7.2)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_042445_414661_34A614DA 
-X-CRM114-Status: GOOD (  32.50  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190819_044317_798419_CC1F4B76 
+X-CRM114-Status: GOOD (  21.17  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,145 +75,271 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, chao.hao@mediatek.com,
- Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+Cc: Rob Herring <robh@kernel.org>, CC Hwang <cc.hwang@mediatek.com>,
+ wsd_upstream@mediatek.com, devicetree@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Linus
+ Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
+ Loda Chou <loda.chou@mediatek.com>, linux-kernel@vger.kernel.org,
  linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
+ mtk01761 <wendell.lin@mediatek.com>, linux-clk@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Aug 16, 2019 at 03:22:20PM +0800, Yong Wu wrote:
-> On Thu, 2019-08-15 at 12:50 +0100, Will Deacon wrote:
-> > Ok, I think speaking to Robin helped me a bit with this...
+Hi Marc
+
+On Mon, 2019-08-19 at 10:40 +0100, Marc Zyngier wrote:
+> On 19/08/2019 10:21, Mars Cheng wrote:
+> > this adds initial MT6779 dts settings fo board support,
+> > including cpu, gic, timer, ccf, pinctrl, uart...etc.
 > > 
-> > On Thu, Aug 15, 2019 at 06:18:38PM +0800, Yong Wu wrote:
-> > > On Thu, 2019-08-15 at 10:51 +0100, Will Deacon wrote:
-> > > > On Thu, Aug 15, 2019 at 04:47:49PM +0800, Yong Wu wrote:
-> > > > > On Wed, 2019-08-14 at 15:41 +0100, Will Deacon wrote:
-> > > > > > On Sat, Aug 10, 2019 at 03:58:08PM +0800, Yong Wu wrote:
-> > > > > > > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
-> > > > > > > 
-> > > > > > > In the mt2712 and mt8173, it's called "4GB mode", the physical address
-> > > > > > > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
-> > > > > > > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
-> > > > > > > bit32 is always enabled. thus, in the M4U, we always enable the bit9
-> > > > > > > for all PTEs which means to enable bit32 of physical address. Here is
-> > > > > > > the detailed remap relationship in the "4GB mode":
-> > > > > > > CPU PA         ->    HW PA
-> > > > > > > 0x4000_0000          0x1_4000_0000 (Add bit32)
-> > > > > > > 0x8000_0000          0x1_8000_0000 ...
-> > > > > > > 0xc000_0000          0x1_c000_0000 ...
-> > > > > > > 0x1_0000_0000        0x1_0000_0000 (No change)
+> > Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
+> > ---
+> >  arch/arm64/boot/dts/mediatek/Makefile        |    1 +
+> >  arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi |   31 ++++
+> >  arch/arm64/boot/dts/mediatek/mt6779.dts      |  229 ++++++++++++++++++++++++++
+> >  3 files changed, 261 insertions(+)
+> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779.dts
 > > 
-> > [...]
-> > 
-> > > > > > The way I would like this quirk to work is that the io-pgtable code
-> > > > > > basically sets bit 9 in the pte when bit 32 is set in the physical address,
-> > > > > > and sets bit 4 in the pte when bit 33 is set in the physical address. It
-> > > > > > would then do the opposite when converting a pte to a physical address.
-> > > > > > 
-> > > > > > That way, your driver can call the page table code directly with the high
-> > > > > > addresses and we don't have to do any manual offsetting or range checking
-> > > > > > in the page table code.
-> > > > > 
-> > > > > In this case, the mt8183 can work successfully while the "4gb
-> > > > > mode"(mt8173/mt2712) can not.
-> > > > > 
-> > > > > In the "4gb mode", As the remap relationship above, we should always add
-> > > > > bit32 in pte as we did in [2]. and need add bit32 in the
-> > > > > "iova_to_phys"(Not always add.). That means the "4gb mode" has a special
-> > > > > flow:
-> > > > > a. Always add bit32 in paddr_to_iopte.
-> > > > > b. Add bit32 only when PA < 0x40000000 in iopte_to_paddr.
-> > > > 
-> > > > I think this is probably at the heart of my misunderstanding. What is so
-> > > > special about PAs (is this HW PA or CPU PA?) below 0x40000000? Is this RAM
-> > > > or something else?
-> > > 
-> > > SRAM and HW register that IOMMU can not access.
-> > 
-> > Ok, so redrawing your table from above, I think we can say something like:
-> > 
-> > 
-> > CPU Physical address
-> > ====================
-> > 
-> > 0G	1G	2G	3G	4G	5G
-> > |---A---|---B---|---C---|---D---|---E---|
-> > +--I/O--+------------Memory-------------+
-> > 
-> > 
-> > IOMMU output physical address
-> > =============================
-> > 
-> > 				4G	5G	6G	7G	8G
-> > 				|---E---|---B---|---C---|---D---|
-> > 				+------------Memory-------------+
-> > 
-> > 
-> > Do you agree? 
+> > diff --git a/arch/arm64/boot/dts/mediatek/Makefile b/arch/arm64/boot/dts/mediatek/Makefile
+> > index 458bbc4..53f1c61 100644
+> > --- a/arch/arm64/boot/dts/mediatek/Makefile
+> > +++ b/arch/arm64/boot/dts/mediatek/Makefile
+> > @@ -1,6 +1,7 @@
+> >  # SPDX-License-Identifier: GPL-2.0
+> >  dtb-$(CONFIG_ARCH_MEDIATEK) += mt2712-evb.dtb
+> >  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6755-evb.dtb
+> > +dtb-$(CONFIG_ARCH_MEDIATEK) += mt6779-evb.dtb
+> >  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6795-evb.dtb
+> >  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-evb.dtb
+> >  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-x20-dev.dtb
+> > diff --git a/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+> > new file mode 100644
+> > index 0000000..164f5cb
+> > --- /dev/null
+> > +++ b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+> > @@ -0,0 +1,31 @@
+> > +// SPDX-License-Identifier: GPL-2.0+
+> > +/*
+> > + * Copyright (c) 2019 MediaTek Inc.
+> > + * Author: Mars.C <mars.cheng@mediatek.com>
+> > + *
+> > + */
+> > +
+> > +/dts-v1/;
+> > +#include "mt6779.dtsi"
+> > +
+> > +/ {
+> > +	model = "MediaTek MT6779 EVB";
+> > +	compatible = "mediatek,mt6779-evb", "mediatek,mt6779";
+> > +
+> > +	aliases {
+> > +		serial0 = &uart0;
+> > +	};
+> > +
+> > +	memory@40000000 {
+> > +		device_type = "memory";
+> > +		reg = <0 0x40000000 0 0x1e800000>;
+> > +	};
+> > +
+> > +	chosen {
+> > +		stdout-path = "serial0:921600n8";
+> > +	};
+> > +};
+> > +
+> > +&uart0 {
+> > +	status = "okay";
+> > +};
+> > diff --git a/arch/arm64/boot/dts/mediatek/mt6779.dts b/arch/arm64/boot/dts/mediatek/mt6779.dts
+> > new file mode 100644
+> > index 0000000..daa25b7
+> > --- /dev/null
+> > +++ b/arch/arm64/boot/dts/mediatek/mt6779.dts
+> > @@ -0,0 +1,229 @@
+> > +// SPDX-License-Identifier: GPL-2.0+
+> > +/*
+> > + * Copyright (c) 2019 MediaTek Inc.
+> > + * Author: Mars.C <mars.cheng@mediatek.com>
+> > + *
+> > + */
+> > +
+> > +#include <dt-bindings/clock/mt6779-clk.h>
+> > +#include <dt-bindings/interrupt-controller/irq.h>
+> > +#include <dt-bindings/interrupt-controller/arm-gic.h>
+> > +
+> > +/ {
+> > +	compatible = "mediatek,mt6779";
+> > +	interrupt-parent = <&sysirq>;
+> > +	#address-cells = <2>;
+> > +	#size-cells = <2>;
+> > +
+> > +	psci {
+> > +		compatible = "arm,psci-0.2";
+> > +		method = "smc";
+> > +	};
+> > +
+> > +	cpus {
+> > +		#address-cells = <1>;
+> > +		#size-cells = <0>;
+> > +
+> > +		cpu0: cpu@0 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x000>;
+> > +		};
+> > +
+> > +		cpu1: cpu@1 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x100>;
+> > +		};
+> > +
+> > +		cpu2: cpu@2 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x200>;
+> > +		};
+> > +
+> > +		cpu3: cpu@3 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x300>;
+> > +		};
+> > +
+> > +		cpu4: cpu@4 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x400>;
+> > +		};
+> > +
+> > +		cpu5: cpu@5 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a55";
+> > +			enable-method = "psci";
+> > +			reg = <0x500>;
+> > +		};
+> > +
+> > +		cpu6: cpu@6 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a75";
+> > +			enable-method = "psci";
+> > +			reg = <0x600>;
+> > +		};
+> > +
+> > +		cpu7: cpu@7 {
+> > +			device_type = "cpu";
+> > +			compatible = "arm,cortex-a75";
+> > +			enable-method = "psci";
+> > +			reg = <0x700>;
+> > +		};
+> > +	};
+> > +
+> > +	clk26m: oscillator@0 {
+> > +		compatible = "fixed-clock";
+> > +		#clock-cells = <0>;
+> > +		clock-frequency = <26000000>;
+> > +		clock-output-names = "clk26m";
+> > +	};
+> > +
+> > +	clk32k: oscillator@1 {
+> > +		compatible = "fixed-clock";
+> > +		#clock-cells = <0>;
+> > +		clock-frequency = <32768>;
+> > +		clock-output-names = "clk32k";
+> > +	};
+> > +
+> > +	uart_clk: dummy26m {
+> > +		compatible = "fixed-clock";
+> > +		clock-frequency = <26000000>;
+> > +		#clock-cells = <0>;
+> > +	};
+> > +
+> > +	timer {
+> > +		compatible = "arm,armv8-timer";
+> > +		interrupt-parent = <&gic>;
+> > +		interrupts = <GIC_PPI 13 IRQ_TYPE_LEVEL_LOW>,
+> > +			     <GIC_PPI 14 IRQ_TYPE_LEVEL_LOW>,
+> > +			     <GIC_PPI 11 IRQ_TYPE_LEVEL_LOW>,
+> > +			     <GIC_PPI 10 IRQ_TYPE_LEVEL_LOW>;
+> > +	};
+> > +
+> > +	soc {
+> > +		#address-cells = <2>;
+> > +		#size-cells = <2>;
+> > +		compatible = "simple-bus";
+> > +		ranges;
+> > +
+> > +		gic: interrupt-controller@0c000000 {
+> > +			compatible = "arm,gic-v3";
+> > +			#interrupt-cells = <3>;
 > 
-> Quite right.
-
-Woohoo! So I finally got something right about this :) I'd be up for
-including the diagrams above either in the commit message or in the IOMMU
-driver code, along with a comment saying that region 'A' cannot be mapped
-by the IOMMU and that the page-table walker uses CPU physical addresses.
-
-> > If so, what happens to region 'A' (the I/O region) in the
-> > IOMMU output physical address space. Is it accessible?
+> You also haven't described the CPU PMUs. Depending on how they are wired
+> (SPIs or PPIs), you may have to change the interrupt-cells property to
+> include a cell for the PPI partitioning.
 > 
-> No. IOMMU can not access region 'A' above.
 
-Got it. Thanks.
+pmu nodes would be:
 
-> > Anyway, I think it's the job of the driver to convert between the two
-> > address spaces, so that:
-> > 
-> >   - On ->map(), bit 32 of the CPU physical address is set before calling
-> >     into the iopgtable code
-> > 
-> >   - The result from ->iova_to_phys() should be the result from the
-> >     iopgtable code, but with the top bit cleared for addresses over
-> >     5G.
-> > 
-> > This assumes that:
-> > 
-> >   1. We're ok setting bit 9 in the ptes mapping region 'E'.
-> >   2. The IOMMU page-table walker uses CPU physical addresses
-> > 
-> > Are those true?
+        pmu {
+                compatible = "arm,armv8-pmuv3";
+                interrupt-parent = <&gic>;
+                interrupts = <GIC_PPI 7 IRQ_TYPE_LEVEL_LOW>;
+        };
+
+        dsu-pmu-0 {
+                compatible = "arm,dsu-pmu";
+                interrupts = <GIC_SPI 18 IRQ_TYPE_LEVEL_HIGH>;
+                cpus = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>,
+                        <&cpu4>, <&cpu5>, <&cpu6>, <&cpu7>;
+        };
+
+so I think interrupt-cells could be <3>, will add pmu nodes in v3.
+
 > 
-> Yes. Then this patch would be close to the one[1] I sent in v8.
+> > +			#address-cells = <2>;
+> > +			#size-cells = <2>;
+> > +			#redistributor-regions = <1>;
 > 
-> Do I need to split this patch into 2 ones?:
+> This is the default, so this can be omitted.
+> 
 
-Up to you. If you want to fix the current mainline behaviour of always
-setting bit 4, then that should be a separate patch at the start of the
-series which can be backported to stable. Is there a reason this doesn't go
-wrong in practice?
+Got it, will remove it in v3.
 
-> a).the pagetable code that support 34bit PA when MTK quirk is enabled.
-> It only has the symmetric code handle BIT32/BIT33. Besides, I will add
-> CONFIG_PHYS_ADDR_T_64BIT in the iopte_to_addr as commented before.
+> > +			interrupt-parent = <&gic>;
+> > +			interrupt-controller;
+> > +			reg = <0 0x0c000000 0 0x40000>,  /* GICD */
+> > +			      <0 0x0c040000 0 0x200000>, /* GICR */
+> > +			      <0 0x0c400000 0 0x2000>,   /* GICC */
+> > +			      <0 0x0c410000 0 0x1000>,   /* GICH */
+> > +			      <0 0x0c420000 0 0x2000>;   /* GICV */
+> 
+> Where do the last 3 ranges come from? Neither Cortex-A55 nor A75 have
+> the memory-mapped CPU interface. It looks like a copy/paste from another
+> SoC...
+> 
 
-Hmm. I would prefer that the iopgtable code:
+My bad, should remove the last 3 interfaces. will do in v3.
 
-	* Range checks the paddr against the oas in ->map()
-	* Refuses to accept an oas > 32 in ->alloc()
+> > +			interrupts = <GIC_PPI 9 IRQ_TYPE_LEVEL_HIGH>;
+> > +		};
+> 
+> And no ITS?
+> 
 
-Then it's up to you whether you just want to pass an oas of 34 from the
-IOMMU driver.
+No, we don't have ITS support in HW.
 
-Will
+Thanks.
+
+> 	M.
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
