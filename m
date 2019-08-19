@@ -2,68 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 973F5922AB
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 13:45:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 099869230A
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 14:07:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=sQko6fkBIGwh4eVs8nhvho+KESQnievHb6jRrZNTYeM=; b=QNYD/p1DI4e1xS
-	7xc7/5x/QK/HeWMyZY7XiLCNnR+NUgAwUMBpudV6unAc2kAJasUQd9AeMPv4t80fON7Y8j3kDnkZw
-	tMQpQqwb7DqYpZIXXTaTR0T3NdsBESVbHkasRo1VGbxMk5sdYOKHbJ+8H7Qh/F7x+KVUDMY53ZOCC
-	wt2/E0fZpXizAwgup5pzMAwVBeAthfq9dn9RaiPAKv9Fdz6dsmRfTGa+pX7AWz2iS9KRR6KCUuUOQ
-	rgUMl+rjfzGPnLTyJs82QOcx55fQ5pf8AaiK4gpN4kHVbWkrC77lKq7ufBKzeObn9XykX56qRGZIx
-	7MDpda1dSssTbtlZEEIA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=eoYfDt+9gCJqLpUCyarPq/uz75+PIWqoZ+Cc7F6Ozj8=; b=VKi9UHUFDi0rPq
+	K4jej3+5l0ajah6f3JRt9vbV5q1PUOD/Psdgo6gkWqeCfwSOOKAQ7H2LPWzOvaZSHz12aXzZDy2F9
+	zK9xgLrBbkWqQwzxxeDUnkiEVyVAvldHvHTJgSndxL/60pmsNTrKsqA7glfzeGvTOpIvhwLvOEOkb
+	50ECFuWfqb8uMKMXPomZO+tkPyfvB1R+vSUwgnyZfDVMKewxIhqeJvTK70DV0RMg87r/Pe0qKshZk
+	YNYZa+63YsW1JaFVVQ7fHSd2UC4AtN7iRNqvQ4kr0sFmX3jb7RwhM0tx8bLPvOGRoN0Htw+HuUM/X
+	NQDgjTMmr0q+0WHFvrtg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzg62-0000eH-7e; Mon, 19 Aug 2019 11:45:10 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzg5l-00087G-Ik; Mon, 19 Aug 2019 11:44:54 +0000
-X-UUID: 5d1f264749b64147b1a58a88c1db915a-20190819
-X-UUID: 5d1f264749b64147b1a58a88c1db915a-20190819
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1685596577; Mon, 19 Aug 2019 03:44:49 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 19 Aug 2019 04:44:48 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 19 Aug 2019 19:44:46 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 19 Aug 2019 19:44:47 +0800
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
- <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Catalin Marinas
- <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>, "Matthias
- Brugger" <matthias.bgg@gmail.com>, Andrew Morton <akpm@linux-foundation.org>, 
- Andrey Konovalov <andreyknvl@google.com>
-Subject: [PATCH] arm64: kasan: fix phys_to_virt() false positive on tag-based
- kasan
-Date: Mon, 19 Aug 2019 19:44:20 +0800
-Message-ID: <20190819114420.2535-1-walter-zh.wu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+	id 1hzgRH-0000qL-Q2; Mon, 19 Aug 2019 12:07:07 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hzgRE-0000pv-FD
+ for linux-mediatek@lists.infradead.org; Mon, 19 Aug 2019 12:07:06 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id DCEC028;
+ Mon, 19 Aug 2019 05:07:03 -0700 (PDT)
+Received: from [10.1.197.61] (usa-sjc-imap-foss1.foss.arm.com [10.121.207.14])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id
+ 08B773F246; Mon, 19 Aug 2019 05:07:01 -0700 (PDT)
+Subject: Re: [PATCH v2 11/11] arm64: dts: add dts nodes for MT6779
+To: Mars Cheng <mars.cheng@mediatek.com>
+References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
+ <1566206502-4347-12-git-send-email-mars.cheng@mediatek.com>
+ <adec38bf-735b-9131-2b9d-1e427d47f88d@kernel.org>
+ <1566214950.17081.3.camel@mtkswgap22>
+From: Marc Zyngier <maz@kernel.org>
+Organization: Approximate
+Message-ID: <c533371d-efcd-59dc-0172-3f5775221302@kernel.org>
+Date: Mon, 19 Aug 2019 13:07:00 +0100
+User-Agent: Mozilla/5.0 (X11; Linux aarch64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <1566214950.17081.3.camel@mtkswgap22>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_044453_619520_C5DCA87A 
-X-CRM114-Status: GOOD (  11.46  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190819_050704_593974_3BA59C06 
+X-CRM114-Status: GOOD (  23.47  )
+X-Spam-Score: 1.0 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (1.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,102 +65,309 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Rob Herring <robh@kernel.org>, CC Hwang <cc.hwang@mediatek.com>,
+ wsd_upstream@mediatek.com, devicetree@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Linus Walleij <linus.walleij@linaro.org>,
+ Sean Wang <sean.wang@kernel.org>, Loda Chou <loda.chou@mediatek.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, mtk01761 <wendell.lin@mediatek.com>,
+ linux-clk@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-__arm_v7s_unmap() call iopte_deref() to translate pyh_to_virt address,
-but it will modify pointer tag into 0xff, so there is a false positive.
+Hi Mars,
 
-When enable tag-based kasan, phys_to_virt() function need to rewrite
-its original pointer tag in order to avoid kasan report an incorrect
-memory corruption.
+On 19/08/2019 12:42, Mars Cheng wrote:
+> Hi Marc
+> 
+> On Mon, 2019-08-19 at 10:40 +0100, Marc Zyngier wrote:
+>> On 19/08/2019 10:21, Mars Cheng wrote:
+>>> this adds initial MT6779 dts settings fo board support,
+>>> including cpu, gic, timer, ccf, pinctrl, uart...etc.
+>>>
+>>> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
+>>> ---
+>>>  arch/arm64/boot/dts/mediatek/Makefile        |    1 +
+>>>  arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi |   31 ++++
+>>>  arch/arm64/boot/dts/mediatek/mt6779.dts      |  229 ++++++++++++++++++++++++++
+>>>  3 files changed, 261 insertions(+)
+>>>  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+>>>  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779.dts
+>>>
+>>> diff --git a/arch/arm64/boot/dts/mediatek/Makefile b/arch/arm64/boot/dts/mediatek/Makefile
+>>> index 458bbc4..53f1c61 100644
+>>> --- a/arch/arm64/boot/dts/mediatek/Makefile
+>>> +++ b/arch/arm64/boot/dts/mediatek/Makefile
+>>> @@ -1,6 +1,7 @@
+>>>  # SPDX-License-Identifier: GPL-2.0
+>>>  dtb-$(CONFIG_ARCH_MEDIATEK) += mt2712-evb.dtb
+>>>  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6755-evb.dtb
+>>> +dtb-$(CONFIG_ARCH_MEDIATEK) += mt6779-evb.dtb
+>>>  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6795-evb.dtb
+>>>  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-evb.dtb
+>>>  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-x20-dev.dtb
+>>> diff --git a/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+>>> new file mode 100644
+>>> index 0000000..164f5cb
+>>> --- /dev/null
+>>> +++ b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
+>>> @@ -0,0 +1,31 @@
+>>> +// SPDX-License-Identifier: GPL-2.0+
+>>> +/*
+>>> + * Copyright (c) 2019 MediaTek Inc.
+>>> + * Author: Mars.C <mars.cheng@mediatek.com>
+>>> + *
+>>> + */
+>>> +
+>>> +/dts-v1/;
+>>> +#include "mt6779.dtsi"
+>>> +
+>>> +/ {
+>>> +	model = "MediaTek MT6779 EVB";
+>>> +	compatible = "mediatek,mt6779-evb", "mediatek,mt6779";
+>>> +
+>>> +	aliases {
+>>> +		serial0 = &uart0;
+>>> +	};
+>>> +
+>>> +	memory@40000000 {
+>>> +		device_type = "memory";
+>>> +		reg = <0 0x40000000 0 0x1e800000>;
+>>> +	};
+>>> +
+>>> +	chosen {
+>>> +		stdout-path = "serial0:921600n8";
+>>> +	};
+>>> +};
+>>> +
+>>> +&uart0 {
+>>> +	status = "okay";
+>>> +};
+>>> diff --git a/arch/arm64/boot/dts/mediatek/mt6779.dts b/arch/arm64/boot/dts/mediatek/mt6779.dts
+>>> new file mode 100644
+>>> index 0000000..daa25b7
+>>> --- /dev/null
+>>> +++ b/arch/arm64/boot/dts/mediatek/mt6779.dts
+>>> @@ -0,0 +1,229 @@
+>>> +// SPDX-License-Identifier: GPL-2.0+
+>>> +/*
+>>> + * Copyright (c) 2019 MediaTek Inc.
+>>> + * Author: Mars.C <mars.cheng@mediatek.com>
+>>> + *
+>>> + */
+>>> +
+>>> +#include <dt-bindings/clock/mt6779-clk.h>
+>>> +#include <dt-bindings/interrupt-controller/irq.h>
+>>> +#include <dt-bindings/interrupt-controller/arm-gic.h>
+>>> +
+>>> +/ {
+>>> +	compatible = "mediatek,mt6779";
+>>> +	interrupt-parent = <&sysirq>;
+>>> +	#address-cells = <2>;
+>>> +	#size-cells = <2>;
+>>> +
+>>> +	psci {
+>>> +		compatible = "arm,psci-0.2";
+>>> +		method = "smc";
+>>> +	};
+>>> +
+>>> +	cpus {
+>>> +		#address-cells = <1>;
+>>> +		#size-cells = <0>;
+>>> +
+>>> +		cpu0: cpu@0 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x000>;
+>>> +		};
+>>> +
+>>> +		cpu1: cpu@1 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x100>;
+>>> +		};
+>>> +
+>>> +		cpu2: cpu@2 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x200>;
+>>> +		};
+>>> +
+>>> +		cpu3: cpu@3 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x300>;
+>>> +		};
+>>> +
+>>> +		cpu4: cpu@4 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x400>;
+>>> +		};
+>>> +
+>>> +		cpu5: cpu@5 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a55";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x500>;
+>>> +		};
+>>> +
+>>> +		cpu6: cpu@6 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a75";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x600>;
+>>> +		};
+>>> +
+>>> +		cpu7: cpu@7 {
+>>> +			device_type = "cpu";
+>>> +			compatible = "arm,cortex-a75";
+>>> +			enable-method = "psci";
+>>> +			reg = <0x700>;
+>>> +		};
+>>> +	};
+>>> +
+>>> +	clk26m: oscillator@0 {
+>>> +		compatible = "fixed-clock";
+>>> +		#clock-cells = <0>;
+>>> +		clock-frequency = <26000000>;
+>>> +		clock-output-names = "clk26m";
+>>> +	};
+>>> +
+>>> +	clk32k: oscillator@1 {
+>>> +		compatible = "fixed-clock";
+>>> +		#clock-cells = <0>;
+>>> +		clock-frequency = <32768>;
+>>> +		clock-output-names = "clk32k";
+>>> +	};
+>>> +
+>>> +	uart_clk: dummy26m {
+>>> +		compatible = "fixed-clock";
+>>> +		clock-frequency = <26000000>;
+>>> +		#clock-cells = <0>;
+>>> +	};
+>>> +
+>>> +	timer {
+>>> +		compatible = "arm,armv8-timer";
+>>> +		interrupt-parent = <&gic>;
+>>> +		interrupts = <GIC_PPI 13 IRQ_TYPE_LEVEL_LOW>,
+>>> +			     <GIC_PPI 14 IRQ_TYPE_LEVEL_LOW>,
+>>> +			     <GIC_PPI 11 IRQ_TYPE_LEVEL_LOW>,
+>>> +			     <GIC_PPI 10 IRQ_TYPE_LEVEL_LOW>;
+>>> +	};
+>>> +
+>>> +	soc {
+>>> +		#address-cells = <2>;
+>>> +		#size-cells = <2>;
+>>> +		compatible = "simple-bus";
+>>> +		ranges;
+>>> +
+>>> +		gic: interrupt-controller@0c000000 {
+>>> +			compatible = "arm,gic-v3";
+>>> +			#interrupt-cells = <3>;
+>>
+>> You also haven't described the CPU PMUs. Depending on how they are wired
+>> (SPIs or PPIs), you may have to change the interrupt-cells property to
+>> include a cell for the PPI partitioning.
+>>
+> 
+> pmu nodes would be:
+> 
+>         pmu {
+>                 compatible = "arm,armv8-pmuv3";
+>                 interrupt-parent = <&gic>;
+>                 interrupts = <GIC_PPI 7 IRQ_TYPE_LEVEL_LOW>;
+>         };
+> 
+>         dsu-pmu-0 {
+>                 compatible = "arm,dsu-pmu";
+>                 interrupts = <GIC_SPI 18 IRQ_TYPE_LEVEL_HIGH>;
+>                 cpus = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>,
+>                         <&cpu4>, <&cpu5>, <&cpu6>, <&cpu7>;
+>         };
+> 
+> so I think interrupt-cells could be <3>, will add pmu nodes in v3.
 
-BUG: KASAN: double-free or invalid-free in __arm_v7s_unmap+0x720/0xda4
-Pointer tag: [ff], memory tag: [c1]
+No, that's wrong, at least for the CPU pmu node.
 
-Call trace:
- dump_backtrace+0x0/0x1d4
- show_stack+0x14/0x1c
- dump_stack+0xe8/0x140
- print_address_description+0x80/0x2f0
- kasan_report_invalid_free+0x58/0x74
- __kasan_slab_free+0x1e4/0x220
- kasan_slab_free+0xc/0x18
- kmem_cache_free+0xfc/0x884
- __arm_v7s_unmap+0x720/0xda4
- __arm_v7s_map+0xc8/0x774
- arm_v7s_map+0x80/0x158
- mtk_iommu_map+0xb4/0xe0
- iommu_map+0x154/0x450
- iommu_map_sg+0xe4/0x150
- iommu_dma_map_sg+0x214/0x4ec
- __iommu_map_sg_attrs+0xf0/0x110
- ion_map_dma_buf+0xe8/0x114
- dma_buf_map_attachment+0x4c/0x80
- disp_sync_prepare_buf+0x378/0x820
- _ioctl_prepare_buffer+0x130/0x870
- mtk_disp_mgr_ioctl+0x5c4/0xab0
- do_vfs_ioctl+0x8e0/0x15a4
- __arm64_sys_ioctl+0x8c/0xb4
- el0_svc_common+0xe4/0x1e0
- el0_svc_handler+0x30/0x3c
- el0_svc+0x8/0xc
+First, you need two of them (one for the A55s, one for the A75s).
+Then you need to partition the corresponding PPI so that they can be
+described as separate affinity sets.
+Finally, this implies that #interrupt-cells goes up to 4, and all the
+interrupts directly routed to the GIC must be updated.
 
-Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
----
- arch/arm64/include/asm/kasan.h  |  1 -
- arch/arm64/include/asm/memory.h | 10 ++++++++++
- 2 files changed, 10 insertions(+), 1 deletion(-)
+You should have something like this:
 
-diff --git a/arch/arm64/include/asm/kasan.h b/arch/arm64/include/asm/kasan.h
-index b52aacd2c526..59894cafad60 100644
---- a/arch/arm64/include/asm/kasan.h
-+++ b/arch/arm64/include/asm/kasan.h
-@@ -5,7 +5,6 @@
- #ifndef __ASSEMBLY__
- 
- #include <linux/linkage.h>
--#include <asm/memory.h>
- #include <asm/pgtable-types.h>
- 
- #define arch_kasan_set_tag(addr, tag)	__tag_set(addr, tag)
-diff --git a/arch/arm64/include/asm/memory.h b/arch/arm64/include/asm/memory.h
-index 8ffcf5a512bb..75af5ba9ff22 100644
---- a/arch/arm64/include/asm/memory.h
-+++ b/arch/arm64/include/asm/memory.h
-@@ -171,6 +171,7 @@
- 
- #include <linux/bitops.h>
- #include <linux/mmdebug.h>
-+#include <asm/kasan.h>
- 
- extern s64			memstart_addr;
- /* PHYS_OFFSET - the physical address of the start of memory. */
-@@ -282,7 +283,16 @@ static inline phys_addr_t virt_to_phys(const volatile void *x)
- #define phys_to_virt phys_to_virt
- static inline void *phys_to_virt(phys_addr_t x)
- {
-+#ifdef CONFIG_KASAN_SW_TAGS
-+	unsigned long addr = __phys_to_virt(x);
-+	u8 *tag = (void *)(addr >> KASAN_SHADOW_SCALE_SHIFT)
-+				+ KASAN_SHADOW_OFFSET;
-+
-+	addr = __tag_set(addr, *tag);
-+	return (void *)addr;
-+#else
- 	return (void *)(__phys_to_virt(x));
-+#endif
- }
- 
- /*
+	&gic {
+		ppi-partitions {
+			cluster0: interrupt-partition-0 {
+				affinity = <&cpu0 &cpu1 &cpu2
+                                            &cpu3 &cpu4 &cpu5>;
+			};
+
+			cluster1: interrupt-partition-1 {
+				affinity = <&cpu6 &cpu7>;
+			};
+	};
+
+	pmu_a55 {
+		compatible = "arm,cortex-a55-pmu", "arm,armv8-pmuv3";
+		interrupts = <GIC_PPI 7 IRQ_TYPE_LEVEL_LOW &cluster0>;
+	};
+
+	pmu_a75 {
+		compatible = "arm,cortex-a75-pmu", "arm,armv8-pmuv3";
+		interrupts = <GIC_PPI 7 IRQ_TYPE_LEVEL_LOW &cluster1>;
+	};
+
+Please see the rk3399 usage of the binding, as it is the canonical example.
+
+> 
+>>
+>>> +			#address-cells = <2>;
+>>> +			#size-cells = <2>;
+>>> +			#redistributor-regions = <1>;
+>>
+>> This is the default, so this can be omitted.
+>>
+> 
+> Got it, will remove it in v3.
+> 
+>>> +			interrupt-parent = <&gic>;
+>>> +			interrupt-controller;
+>>> +			reg = <0 0x0c000000 0 0x40000>,  /* GICD */
+>>> +			      <0 0x0c040000 0 0x200000>, /* GICR */
+>>> +			      <0 0x0c400000 0 0x2000>,   /* GICC */
+>>> +			      <0 0x0c410000 0 0x1000>,   /* GICH */
+>>> +			      <0 0x0c420000 0 0x2000>;   /* GICV */
+>>
+>> Where do the last 3 ranges come from? Neither Cortex-A55 nor A75 have
+>> the memory-mapped CPU interface. It looks like a copy/paste from another
+>> SoC...
+>>
+> 
+> My bad, should remove the last 3 interfaces. will do in v3.
+> 
+>>> +			interrupts = <GIC_PPI 9 IRQ_TYPE_LEVEL_HIGH>;
+>>> +		};
+>>
+>> And no ITS?
+>>
+> 
+> No, we don't have ITS support in HW.
+
+That's pretty sad.
+
+	M.
 -- 
-2.18.0
-
+Jazz is not dead, it just smells funny...
 
 _______________________________________________
 Linux-mediatek mailing list
