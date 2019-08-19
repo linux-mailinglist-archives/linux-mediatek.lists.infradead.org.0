@@ -2,82 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 763EE92208
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 13:18:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CF96492235
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 13:25:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H15xreYgw+wwmRUaa2JJdFx3BAjxHMbtdNHBan2joL8=; b=IOhT3A1EdN38H7
-	l0SWfgadUI7zeTGAEgvMKDZD5D/0pvu0+VZ3k+WDjENQnYsRAjNhY2f0Vx5UHYc2a/pTgBaGFeIo9
-	idXXVZuGbVxWhhAUdkIE4mVedk2WS51rrJ0lK5993/ce3tKMaJVXWdHmszZlOlNnPkVbSPgQpnsgo
-	GC/PD4iNDFvVQmpc0oJNuI7L2ZZy7t7FzUrJWonqKj7x9ObePx7CEYEY4QXoYhQaqAvjSz39Uvpa3
-	uEiYiilbhEcoLz8pH/eO/f8YWgVByu6B2znKyYkqUI166uoR7wb9ZGQZBYLVPrjX1Kcbqhr6qTPCV
-	B+JzVsmBMohTitdK3yWg==;
+	List-Owner; bh=BWphsMbqNxjbKR00ecOGuxOHl5FdW3D/ypW1Wq4HZSM=; b=dpdawPCm3c78yu
+	6uueIxNYz2niaCJSYYOvhEPb3B4rVnWmOVQOYh0Fnh4ttTQpfTLUAxQVS3mJ/bA+UfyrGnI4EOP3D
+	SWihDHN6zuKRO+wtZaUYlOUT5R6xV/aWv1M57uqy4pJ5qJe7zDlGVCQ3mwuOJ2MdUEPWDs57Z1l6x
+	SFSK5wYwv1Fg/3GtcnEYK5QIVdBvbJ4HaVYEexOeVVScOwo9Wxvaxity4+Z3+SGSfZngAd+yuw9H0
+	mXO4dJuK6lv0EzV9zRcdQrcvDFmua1+X8bHEkUrlUhfoPw5cZWXK5gWi0nTgDQBmVgv5mnQdXu2xc
+	uPggj4GSAQ7B3onHLA0w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzfga-00032e-6g; Mon, 19 Aug 2019 11:18:52 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hzfmT-0005SA-Cw; Mon, 19 Aug 2019 11:24:57 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzfgO-0002uQ-Ht
- for linux-mediatek@lists.infradead.org; Mon, 19 Aug 2019 11:18:42 +0000
-Received: by mail-pl1-x644.google.com with SMTP id 4so819257pld.10
- for <linux-mediatek@lists.infradead.org>; Mon, 19 Aug 2019 04:18:40 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=+0JHVJ6vLP57lu0mVcK3az5uoceXnYkV/uG2YnQJlFc=;
- b=yHvLt0Lqcb9O8pCS28X3oB0TkDb1X6NWvoLOSLok1pdmLUebRybtLcc/QVJYMDiGdI
- X1a9kvGLCqr3QU6LlKSeWFJPDuJM9aqVFndIz+MGlkMvOi0+AEc8DdZ8AE/RfZkEWKqL
- RF8Z2wgL2Y7XyOXj4P1FSMOcjOv2ELEW/kleU2VQGLqXj4dsVDB/M2TzyEcPsASqvjcW
- Sl/VjLG36MbKp+HKiLkfFnsXeK7GOUDvrbr4qSkOk6MaXf1XyG0CKC018GUyItmlUPlB
- BmHDfdzGU2Hx1N9xGdUzeCVP7hBkUfM2FZdoS7VY+JS/an1HGuQMPVAMfwC3vQ6jInDz
- SvrA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=+0JHVJ6vLP57lu0mVcK3az5uoceXnYkV/uG2YnQJlFc=;
- b=B2+tCM+ZGt2Vxnp4uMTbQEOrzdHJSIAGJLz/lRPMp6nUy0RHPyVt8yabXcz13Q1Xo0
- 4PlXOGD2927SSEpe0SYRX2NFbA4XwX4getZbwICUGdj0NljTD9VnOQsFyv883YL+bog+
- DKfyZyRL6Nk4aiT8IYTBW0ioHVfWtRwV3p4AaZCTUDiE7pXJ8SWEbNtWXr9pSj57gwjw
- 8eKQNkMLEMCBtd1KLPkVPTZb8C4KtFeFEguoueUzDbt4NbKQ74SocZlptKvRlKy/Y51V
- 5p6uTdEPmCR0StPpaCuxdt5IJdQYac027AJqrWYjoF8T3vfasuLzPBG3ZjQSbwbho2vO
- wbVw==
-X-Gm-Message-State: APjAAAXrxL8KI2TzTTmCb1y3P0J7DpfYF2RjQ16OW2DKJejlzfu3IGfm
- 4pGBi4h9Z+D8f9IHDV53tUoP+Q==
-X-Google-Smtp-Source: APXvYqyeim3wFsyNXQj/i/RDQRhJjEOMjrjuOoydnB1fIrDDwTjwzY2Z5AOdrzw4HJlIotmEz1cy5g==
-X-Received: by 2002:a17:902:f204:: with SMTP id
- gn4mr22280443plb.3.1566213519598; 
- Mon, 19 Aug 2019 04:18:39 -0700 (PDT)
-Received: from localhost ([122.172.76.219])
- by smtp.gmail.com with ESMTPSA id k3sm26078163pfg.23.2019.08.19.04.18.38
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 19 Aug 2019 04:18:38 -0700 (PDT)
-Date: Mon, 19 Aug 2019 16:48:36 +0530
-From: Viresh Kumar <viresh.kumar@linaro.org>
-To: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
-Subject: Re: [v4, 6/8] PM / OPP: Support adjusting OPP voltages at runtime
-Message-ID: <20190819111836.5cu245xre6ky6xav@vireshk-i7>
-References: <1565703113-31479-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <1565703113-31479-7-git-send-email-andrew-sh.cheng@mediatek.com>
+ id 1hzfmH-0005Jt-Aq; Mon, 19 Aug 2019 11:24:46 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id AE2B320851;
+ Mon, 19 Aug 2019 11:24:41 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1566213884;
+ bh=KxFLgNmJMln3v1xilT2WLaj/V5rdHTGk5mDJHEGlyZM=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=nOUquHtzf14nNUsDP3ummqHXlIVpJLB8nupErbnKr/AJXJj+wkKyvXBKS5xb482qj
+ HkuzQ6aZ60aRgigZLr5sugceTgcU7Lw3HzG0aNDdc1CzFTioSgslLVpa+0yiT4Uit4
+ z0fGfbKcIhH8HWgp3mzLViuMBMua082sRHmdt1dU=
+Date: Mon, 19 Aug 2019 12:24:38 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH v9 08/21] iommu/io-pgtable-arm-v7s: Extend MediaTek 4GB
+ Mode
+Message-ID: <20190819112438.fr233h5dgjkqb36r@willie-the-truck>
+References: <1565423901-17008-1-git-send-email-yong.wu@mediatek.com>
+ <1565423901-17008-9-git-send-email-yong.wu@mediatek.com>
+ <20190814144059.ruyc45yoqkwpbuga@willie-the-truck>
+ <1565858869.12818.51.camel@mhfsdcap03>
+ <20190815095123.rzgtpklvhtjlqir4@willie-the-truck>
+ <1565864318.14278.4.camel@mhfsdcap03>
+ <20190815115021.7pbv5s2qbgsuitvh@willie-the-truck>
+ <1565940140.20346.21.camel@mhfsdcap03>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1565703113-31479-7-git-send-email-andrew-sh.cheng@mediatek.com>
-User-Agent: NeoMutt/20180716-391-311a52
+In-Reply-To: <1565940140.20346.21.camel@mhfsdcap03>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_041840_624607_0E1FD998 
-X-CRM114-Status: GOOD (  21.73  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190819_042445_414661_34A614DA 
+X-CRM114-Status: GOOD (  32.50  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -87,6 +71,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,71 +83,145 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- srv_heupstream@mediatek.com, linux-pm@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, Stephen Boyd <sboyd@codeaurora.org>,
- "Rafael J. Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>,
- MyungJoo Ham <myungjoo.ham@samsung.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, fan.chen@mediatek.com,
- devicetree@vger.kernel.org, Roger Lu <roger.lu@mediatek.com>
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, chao.hao@mediatek.com,
+ Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
+ iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 13-08-19, 21:31, Andrew-sh.Cheng wrote:
-> From: Stephen Boyd <sboyd@codeaurora.org>
+On Fri, Aug 16, 2019 at 03:22:20PM +0800, Yong Wu wrote:
+> On Thu, 2019-08-15 at 12:50 +0100, Will Deacon wrote:
+> > Ok, I think speaking to Robin helped me a bit with this...
+> > 
+> > On Thu, Aug 15, 2019 at 06:18:38PM +0800, Yong Wu wrote:
+> > > On Thu, 2019-08-15 at 10:51 +0100, Will Deacon wrote:
+> > > > On Thu, Aug 15, 2019 at 04:47:49PM +0800, Yong Wu wrote:
+> > > > > On Wed, 2019-08-14 at 15:41 +0100, Will Deacon wrote:
+> > > > > > On Sat, Aug 10, 2019 at 03:58:08PM +0800, Yong Wu wrote:
+> > > > > > > MediaTek extend the arm v7s descriptor to support the dram over 4GB.
+> > > > > > > 
+> > > > > > > In the mt2712 and mt8173, it's called "4GB mode", the physical address
+> > > > > > > is from 0x4000_0000 to 0x1_3fff_ffff, but from EMI point of view, it
+> > > > > > > is remapped to high address from 0x1_0000_0000 to 0x1_ffff_ffff, the
+> > > > > > > bit32 is always enabled. thus, in the M4U, we always enable the bit9
+> > > > > > > for all PTEs which means to enable bit32 of physical address. Here is
+> > > > > > > the detailed remap relationship in the "4GB mode":
+> > > > > > > CPU PA         ->    HW PA
+> > > > > > > 0x4000_0000          0x1_4000_0000 (Add bit32)
+> > > > > > > 0x8000_0000          0x1_8000_0000 ...
+> > > > > > > 0xc000_0000          0x1_c000_0000 ...
+> > > > > > > 0x1_0000_0000        0x1_0000_0000 (No change)
+> > 
+> > [...]
+> > 
+> > > > > > The way I would like this quirk to work is that the io-pgtable code
+> > > > > > basically sets bit 9 in the pte when bit 32 is set in the physical address,
+> > > > > > and sets bit 4 in the pte when bit 33 is set in the physical address. It
+> > > > > > would then do the opposite when converting a pte to a physical address.
+> > > > > > 
+> > > > > > That way, your driver can call the page table code directly with the high
+> > > > > > addresses and we don't have to do any manual offsetting or range checking
+> > > > > > in the page table code.
+> > > > > 
+> > > > > In this case, the mt8183 can work successfully while the "4gb
+> > > > > mode"(mt8173/mt2712) can not.
+> > > > > 
+> > > > > In the "4gb mode", As the remap relationship above, we should always add
+> > > > > bit32 in pte as we did in [2]. and need add bit32 in the
+> > > > > "iova_to_phys"(Not always add.). That means the "4gb mode" has a special
+> > > > > flow:
+> > > > > a. Always add bit32 in paddr_to_iopte.
+> > > > > b. Add bit32 only when PA < 0x40000000 in iopte_to_paddr.
+> > > > 
+> > > > I think this is probably at the heart of my misunderstanding. What is so
+> > > > special about PAs (is this HW PA or CPU PA?) below 0x40000000? Is this RAM
+> > > > or something else?
+> > > 
+> > > SRAM and HW register that IOMMU can not access.
+> > 
+> > Ok, so redrawing your table from above, I think we can say something like:
+> > 
+> > 
+> > CPU Physical address
+> > ====================
+> > 
+> > 0G	1G	2G	3G	4G	5G
+> > |---A---|---B---|---C---|---D---|---E---|
+> > +--I/O--+------------Memory-------------+
+> > 
+> > 
+> > IOMMU output physical address
+> > =============================
+> > 
+> > 				4G	5G	6G	7G	8G
+> > 				|---E---|---B---|---C---|---D---|
+> > 				+------------Memory-------------+
+> > 
+> > 
+> > Do you agree? 
 > 
-> On some SoCs the Adaptive Voltage Scaling (AVS) technique is
-> employed to optimize the operating voltage of a device. At a
-> given frequency, the hardware monitors dynamic factors and either
-> makes a suggestion for how much to adjust a voltage for the
-> current frequency, or it automatically adjusts the voltage
-> without software intervention. Add an API to the OPP library for
-> the former case, so that AVS type devices can update the voltages
-> for an OPP when the hardware determines the voltage should
-> change. The assumption is that drivers like CPUfreq or devfreq
-> will register for the OPP notifiers and adjust the voltage
-> according to suggestions that AVS makes.
-> 
-> This patch is devired from [1] submitted by Stephen.
-> [1] https://lore.kernel.org/patchwork/patch/599279/
-> 
-> Signed-off-by: Stephen Boyd <sboyd@codeaurora.org>
-> Signed-off-by: Roger Lu <roger.lu@mediatek.com>
-> ---
->  drivers/opp/core.c     | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++
->  include/linux/pm_opp.h | 11 +++++++++
->  2 files changed, 74 insertions(+)
-> 
-> diff --git a/drivers/opp/core.c b/drivers/opp/core.c
-> index c094d5d20fd7..407a07f29b12 100644
-> --- a/drivers/opp/core.c
-> +++ b/drivers/opp/core.c
-> @@ -2054,6 +2054,69 @@ static int _opp_set_availability(struct device *dev, unsigned long freq,
->  }
->  
->  /**
-> + * dev_pm_opp_adjust_voltage() - helper to change the voltage of an OPP
-> + * @dev:		device for which we do this operation
-> + * @freq:		OPP frequency to adjust voltage of
-> + * @u_volt:		new OPP voltage
-> + *
-> + * Return: -EINVAL for bad pointers, -ENOMEM if no memory available for the
-> + * copy operation, returns 0 if no modifcation was done OR modification was
-> + * successful.
-> + */
-> +int dev_pm_opp_adjust_voltage(struct device *dev, unsigned long freq,
-> +			      unsigned long u_volt)
+> Quite right.
 
-Can you please update this to take a triplet instead ? That is what we are
-storing in OPP core now a days.
+Woohoo! So I finally got something right about this :) I'd be up for
+including the diagrams above either in the commit message or in the IOMMU
+driver code, along with a comment saying that region 'A' cannot be mapped
+by the IOMMU and that the page-table walker uses CPU physical addresses.
 
--- 
-viresh
+> > If so, what happens to region 'A' (the I/O region) in the
+> > IOMMU output physical address space. Is it accessible?
+> 
+> No. IOMMU can not access region 'A' above.
+
+Got it. Thanks.
+
+> > Anyway, I think it's the job of the driver to convert between the two
+> > address spaces, so that:
+> > 
+> >   - On ->map(), bit 32 of the CPU physical address is set before calling
+> >     into the iopgtable code
+> > 
+> >   - The result from ->iova_to_phys() should be the result from the
+> >     iopgtable code, but with the top bit cleared for addresses over
+> >     5G.
+> > 
+> > This assumes that:
+> > 
+> >   1. We're ok setting bit 9 in the ptes mapping region 'E'.
+> >   2. The IOMMU page-table walker uses CPU physical addresses
+> > 
+> > Are those true?
+> 
+> Yes. Then this patch would be close to the one[1] I sent in v8.
+> 
+> Do I need to split this patch into 2 ones?:
+
+Up to you. If you want to fix the current mainline behaviour of always
+setting bit 4, then that should be a separate patch at the start of the
+series which can be backported to stable. Is there a reason this doesn't go
+wrong in practice?
+
+> a).the pagetable code that support 34bit PA when MTK quirk is enabled.
+> It only has the symmetric code handle BIT32/BIT33. Besides, I will add
+> CONFIG_PHYS_ADDR_T_64BIT in the iopte_to_addr as commented before.
+
+Hmm. I would prefer that the iopgtable code:
+
+	* Range checks the paddr against the oas in ->map()
+	* Refuses to accept an oas > 32 in ->alloc()
+
+Then it's up to you whether you just want to pass an oas of 34 from the
+IOMMU driver.
+
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
