@@ -2,53 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CB129495A
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 18:03:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7DCB794B23
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 19:00:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SHIRwe0mnSKc2//qp/LS6uFcIn4vZv6SKYW7DNzKloE=; b=d3YKLK4y7WoeSC
-	Xro4D2YMdPy/jf6ZCjPkkpWiZMImkywvZXB6YryfzY8msZNq3XDrd0Miba9Pk1tl/y96tK8V5SD3p
-	UhzNLNO0LCjOFbXpjpue4zeabgtrME9G3cZXzmEtZsLMbzvypJOp2bHRBP/rkabxuLeod5YbyIFJ3
-	KbR6FcSTM47T6myJwe2yn45WETc9r5Y4GM6AiKiEz6ASrkdy3pBT85AWu0mL6co1guDTzKqtogUBr
-	B2lKJKMFtPNoWCQoghfTBq9VYEflOvwuVQlgg04B018r38XShPMmdBV/Ks5949aawWt9DJj+80nuW
-	GoIi7fYEFT8fglac35mg==;
+	List-Owner; bh=hzr6rHDjhUwIdULnAB/KGcb+/HfYD2qnJIBhl45Rvvw=; b=Difg87XvGsJdh7
+	06mvchuW7MQJN1KLeVR0yDPJ5l55FxJCdCUcTMlzvc1eT2apPr6xu15TKD+P3xRCExwMbcr/1fvAV
+	oL+FoaeAQGSksWfqfkw1EvgZebZXXKEqXgE0JGaeiuGe20CV1eBdFkd4lU8bMSwNkyoSpV5n9unF/
+	eqQ5DdjhA7PTiZ7rSH6IPd1XHQhYhTEDfR8Dr0hPd7Soq4bnTZmWqkxGTv5DJsnKBQngAg+3kK/lC
+	3ygrTqt92n2u012k+ku/ubkPEF0S875EjaxUnp5LVGXkuenIwXEnPqUnFxHyI+HV+naAQ1hPr4GFK
+	js69wOkrQpVuLEQrwvjg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzk89-0001na-Ad; Mon, 19 Aug 2019 16:03:37 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hzk7x-0001fZ-T4; Mon, 19 Aug 2019 16:03:28 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id C82F4344;
- Mon, 19 Aug 2019 09:03:24 -0700 (PDT)
-Received: from lakrids.cambridge.arm.com (usa-sjc-imap-foss1.foss.arm.com
- [10.121.207.14])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id D1F6B3F718;
- Mon, 19 Aug 2019 09:03:22 -0700 (PDT)
-Date: Mon, 19 Aug 2019 17:03:20 +0100
-From: Mark Rutland <mark.rutland@arm.com>
-To: Andrey Konovalov <andreyknvl@google.com>
-Subject: Re: [PATCH] arm64: kasan: fix phys_to_virt() false positive on
- tag-based kasan
-Message-ID: <20190819160320.GF9927@lakrids.cambridge.arm.com>
-References: <20190819114420.2535-1-walter-zh.wu@mediatek.com>
- <20190819125625.bu3nbrldg7te5kwc@willie-the-truck>
- <20190819132347.GB9927@lakrids.cambridge.arm.com>
- <20190819133441.ejomv6cprdcz7hh6@willie-the-truck>
- <CAAeHK+w7cTGN8SgWQs0bPjPOrizqfUoMnJWTvUkCqv17Qt=3oQ@mail.gmail.com>
- <20190819150341.GC9927@lakrids.cambridge.arm.com>
- <CAAeHK+wBNnnKY4wg=34aD8Of6Vea4nzWF-FEnnSpHN0pFyTR3Q@mail.gmail.com>
+	id 1hzl1U-0000y8-LB; Mon, 19 Aug 2019 17:00:48 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hzl1L-0000pg-8m; Mon, 19 Aug 2019 17:00:41 +0000
+X-UUID: c2efde12faa5468aa1da452dad8c08e6-20190819
+X-UUID: c2efde12faa5468aa1da452dad8c08e6-20190819
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <houlong.wei@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2013183766; Mon, 19 Aug 2019 09:00:31 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 10:00:30 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 20 Aug 2019 01:00:25 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 20 Aug 2019 01:00:24 +0800
+Message-ID: <1566234025.24117.8.camel@mhfsdcap03>
+Subject: Re: [PATCH v12 09/12] soc: mediatek: cmdq: define the instruction
+ struct
+From: houlong wei <houlong.wei@mediatek.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Date: Tue, 20 Aug 2019 01:00:25 +0800
+In-Reply-To: <20190819025359.11381-10-bibby.hsieh@mediatek.com>
+References: <20190819025359.11381-1-bibby.hsieh@mediatek.com>
+ <20190819025359.11381-10-bibby.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAAeHK+wBNnnKY4wg=34aD8Of6Vea4nzWF-FEnnSpHN0pFyTR3Q@mail.gmail.com>
-User-Agent: Mutt/1.11.1+11 (2f07cb52) (2018-12-01)
+X-TM-SNTS-SMTP: 258710A0EB612FDE3EDB318BEE14C518E07821506A9585C60AFDAABBCA46D99F2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_090327_212636_1F453002 
-X-CRM114-Status: GOOD (  37.00  )
+X-CRM114-CacheID: sfid-20190819_100039_316029_4F292BD6 
+X-CRM114-Status: GOOD (  18.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -56,6 +60,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -67,189 +73,245 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>, wsd_upstream@mediatek.com,
- Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>,
- LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
- linux-mediatek@lists.infradead.org, Alexander Potapenko <glider@google.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Nicolas Boichat <drinkcat@chromium.org>, Philipp
+ Zabel <p.zabel@pengutronix.de>, srv_heupstream <srv_heupstream@mediatek.com>,
+ Daoyuan Huang =?UTF-8?Q?=28=E9=BB=83=E9=81=93=E5=8E=9F=29?=
+ <Daoyuan.Huang@mediatek.com>, Sascha Hauer <s.hauer@pengutronix.de>,
+ Jassi Brar <jassisinghbrar@gmail.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ houlong.wei@mediatek.com,
+ CK Hu =?UTF-8?Q?=28=E8=83=A1=E4=BF=8A=E5=85=89=29?= <ck.hu@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Ginny Chen =?UTF-8?Q?=28=E9=99=B3=E6=B2=BB=E5=82=91=29?=
+ <ginny.chen@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Andrew Morton <akpm@linux-foundation.org>, Will Deacon <will@kernel.org>,
- Dmitry Vyukov <dvyukov@google.com>
+ Jiaguang Zhang =?UTF-8?Q?=28=E5=BC=A0=E5=8A=A0=E5=B9=BF=29?=
+ <Jiaguang.Zhang@mediatek.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Dennis-YC Hsieh =?UTF-8?Q?=28=E8=AC=9D=E5=AE=87=E5=93=B2=29?=
+ <Dennis-YC.Hsieh@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Aug 19, 2019 at 05:37:36PM +0200, Andrey Konovalov wrote:
-> On Mon, Aug 19, 2019 at 5:03 PM Mark Rutland <mark.rutland@arm.com> wrote:
-> >
-> > On Mon, Aug 19, 2019 at 04:05:22PM +0200, Andrey Konovalov wrote:
-> > > On Mon, Aug 19, 2019 at 3:34 PM Will Deacon <will@kernel.org> wrote:
-> > > >
-> > > > On Mon, Aug 19, 2019 at 02:23:48PM +0100, Mark Rutland wrote:
-> > > > > On Mon, Aug 19, 2019 at 01:56:26PM +0100, Will Deacon wrote:
-> > > > > > On Mon, Aug 19, 2019 at 07:44:20PM +0800, Walter Wu wrote:
-> > > > > > > __arm_v7s_unmap() call iopte_deref() to translate pyh_to_virt address,
-> > > > > > > but it will modify pointer tag into 0xff, so there is a false positive.
-> > > > > > >
-> > > > > > > When enable tag-based kasan, phys_to_virt() function need to rewrite
-> > > > > > > its original pointer tag in order to avoid kasan report an incorrect
-> > > > > > > memory corruption.
-> > > > > >
-> > > > > > Hmm. Which tree did you see this on? We've recently queued a load of fixes
-> > > > > > in this area, but I /thought/ they were only needed after the support for
-> > > > > > 52-bit virtual addressing in the kernel.
-> > > > >
-> > > > > I'm seeing similar issues in the virtio blk code (splat below), atop of
-> > > > > the arm64 for-next/core branch. I think this is a latent issue, and
-> > > > > people are only just starting to test with KASAN_SW_TAGS.
-> > > > >
-> > > > > It looks like the virtio blk code will round-trip a SLUB-allocated pointer from
-> > > > > virt->page->virt, losing the per-object tag in the process.
-> > > > >
-> > > > > Our page_to_virt() seems to get a per-page tag, but this only makes
-> > > > > sense if you're dealing with the page allocator, rather than something
-> > > > > like SLUB which carves a page into smaller objects giving each object a
-> > > > > distinct tag.
-> > > > >
-> > > > > Any round-trip of a pointer from SLUB is going to lose the per-object
-> > > > > tag.
-> > > >
-> > > > Urgh, I wonder how this is supposed to work?
-> > > >
-> > > > If we end up having to check the KASAN shadow for *_to_virt(), then why
-> > > > do we need to store anything in the page flags at all? Andrey?
-> > >
-> > > As per 2813b9c0 ("kasan, mm, arm64: tag non slab memory allocated via
-> > > pagealloc") we should only save a non-0xff tag in page flags for non
-> > > slab pages.
-> > >
-> > > Could you share your .config so I can reproduce this?
-> >
-> > I wrote a test (below) to do so. :)
-> >
-> > It fires with arm64 defconfig, + CONFIG_TEST_KASAN=m.
-> >
-> > With Andrey Ryabinin's patch it works as expected with no KASAN splats
-> > for the two new test cases.
+On Mon, 2019-08-19 at 10:53 +0800, Bibby Hsieh wrote:
+> Define an instruction structure for gce driver to append command.
+> This structure can make the client's code more readability.
 > 
-> OK, Andrey's patch makes sense and fixes both Mark's test patch and
-> reports from CONFIG_IOMMU_IO_PGTABLE_ARMV7S_SELFTEST.
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> Reviewed-by: CK Hu <ck.hu@mediatek.com>
+> ---
+>  drivers/soc/mediatek/mtk-cmdq-helper.c   | 105 +++++++++++++++--------
+>  include/linux/mailbox/mtk-cmdq-mailbox.h |   2 +
+>  2 files changed, 73 insertions(+), 34 deletions(-)
 > 
-> Tested-by: Andrey Konovalov <andreyknvl@google.com>
-> Reviewed-by: Andrey Konovalov <andreyknvl@google.com>
-> 
-> on both patches.
-> 
-> >
-> > Thanks,
-> > Mark.
-> >
-> > ---->8----
-> > From 7e8569b558fca21ad4e80fddae659591bc84ce1f Mon Sep 17 00:00:00 2001
-> > From: Mark Rutland <mark.rutland@arm.com>
-> > Date: Mon, 19 Aug 2019 15:39:32 +0100
-> > Subject: [PATCH] lib/test_kasan: add roundtrip tests
-> >
-> > In several places we needs to be able to operate on pointers which have
-> 
-> "needs" => "need"
+> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> index 7aa0517ff2f3..e1e41914ed7a 100644
+> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
+> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> @@ -9,12 +9,24 @@
+>  #include <linux/mailbox_controller.h>
+>  #include <linux/soc/mediatek/mtk-cmdq.h>
+>  
+> -#define CMDQ_ARG_A_WRITE_MASK	0xffff
+>  #define CMDQ_WRITE_ENABLE_MASK	BIT(0)
+>  #define CMDQ_EOC_IRQ_EN		BIT(0)
+>  #define CMDQ_EOC_CMD		((u64)((CMDQ_CODE_EOC << CMDQ_OP_CODE_SHIFT)) \
+>  				<< 32 | CMDQ_EOC_IRQ_EN)
+>  
+> +struct cmdq_instruction {
+> +	union {
+> +		u32 value;
+> +		u32 mask;
+> +	};
+> +	union {
+> +		u16 offset;
+> +		u16 event;
+> +	};
+> +	u8 subsys;
+> +	u8 op;
+> +};
+> +
+>  static void cmdq_client_timeout(struct timer_list *t)
+>  {
+>  	struct cmdq_client *client = from_timer(client, t, timer);
+> @@ -110,10 +122,8 @@ void cmdq_pkt_destroy(struct cmdq_pkt *pkt)
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_destroy);
+>  
+> -static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
+> -				   u32 arg_a, u32 arg_b)
+> +static struct cmdq_instruction *cmdq_pkt_append_command(struct cmdq_pkt *pkt)
+>  {
+> -	u64 *cmd_ptr;
+>  
+>  	if (unlikely(pkt->cmd_buf_size + CMDQ_INST_SIZE > pkt->buf_size)) {
+>  		/*
+> @@ -127,81 +137,108 @@ static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
+>  		pkt->cmd_buf_size += CMDQ_INST_SIZE;
+>  		WARN_ONCE(1, "%s: buffer size %u is too small !\n",
+>  			__func__, (u32)pkt->buf_size);
+> -		return -ENOMEM;
+> +		return NULL;
+>  	}
+> -	cmd_ptr = pkt->va_base + pkt->cmd_buf_size;
+> -	(*cmd_ptr) = (u64)((code << CMDQ_OP_CODE_SHIFT) | arg_a) << 32 | arg_b;
+> +
+>  	pkt->cmd_buf_size += CMDQ_INST_SIZE;
+>  
+> -	return 0;
+> +	return pkt->va_base + pkt->cmd_buf_size - CMDQ_INST_SIZE;
+>  }
+>  
+>  int cmdq_pkt_write(struct cmdq_pkt *pkt, u8 subsys, u16 offset, u32 value)
+>  {
+> -	u32 arg_a = (offset & CMDQ_ARG_A_WRITE_MASK) |
+> -		    (subsys << CMDQ_SUBSYS_SHIFT);
+> +	struct cmdq_instruction *inst;
+> +
+> +	inst = cmdq_pkt_append_command(pkt);
+> +	if (!inst)
+> +		return -ENOMEM;
+> +
+> +	inst->op = CMDQ_CODE_WRITE;
+> +	inst->value = value;
+> +	inst->offset = offset;
+> +	inst->subsys = subsys;
+>  
+> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WRITE, arg_a, value);
+> +	return 0;
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_write);
+>  
+>  int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
+>  			u16 offset, u32 value, u32 mask)
+>  {
+> -	u32 offset_mask = offset;
+> -	int err = 0;
+> +	struct cmdq_instruction *inst;
+> +	u16 offset_mask = offset;
+>  
+>  	if (mask != 0xffffffff) {
+> -		err = cmdq_pkt_append_command(pkt, CMDQ_CODE_MASK, 0, ~mask);
+> +		inst = cmdq_pkt_append_command(pkt);
+> +		if (!inst)
+> +			return -ENOMEM;
+> +
+> +		inst->op = CMDQ_CODE_MASK;
+> +		inst->mask = ~mask;
+>  		offset_mask |= CMDQ_WRITE_ENABLE_MASK;
 
-Thanks! 
+I think we should consider the reusing command packet case, I commented
+via link below and there were discussion before.
+http://lists.infradead.org/pipermail/linux-mediatek/2019-August/022052.html
+Before this patch, each 64-bit of an instruction is set. But now some
+bits may be ignored and keep the original values. That may make us
+confused when we analyze the instruction for debugging.
 
-I'll spin a standalone v2 of this with that fixed and your tags folded
-in.
+>  	}
+> -	err |= cmdq_pkt_write(pkt, value, subsys, offset_mask);
+>  
+> -	return err;
+> +	return cmdq_pkt_write(pkt, subsys, offset_mask, value);
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_write_mask);
+>  
+>  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
+>  {
+> -	u32 arg_b;
+> +	struct cmdq_instruction *inst;
+>  
+>  	if (event >= CMDQ_MAX_EVENT)
+>  		return -EINVAL;
+>  
+> -	/*
+> -	 * WFE arg_b
+> -	 * bit 0-11: wait value
+> -	 * bit 15: 1 - wait, 0 - no wait
+> -	 * bit 16-27: update value
+> -	 * bit 31: 1 - update, 0 - no update
+> -	 */
+> -	arg_b = CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | CMDQ_WFE_WAIT_VALUE;
+> +	inst = cmdq_pkt_append_command(pkt);
+> +	if (!inst)
+> +		return -ENOMEM;
+> +
+> +	inst->op = CMDQ_CODE_WFE;
+> +	inst->value = CMDQ_WFE_OPTION;
+> +	inst->event = event;
+>  
+> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event, arg_b);
+> +	return 0;
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_wfe);
+>  
+>  int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
+>  {
+> +	struct cmdq_instruction *inst;
+> +
+>  	if (event >= CMDQ_MAX_EVENT)
+>  		return -EINVAL;
+>  
+> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event,
+> -				       CMDQ_WFE_UPDATE);
+> +	inst = cmdq_pkt_append_command(pkt);
+> +	if (!inst)
+> +		return -ENOMEM;
+> +
+> +	inst->op = CMDQ_CODE_WFE;
+> +	inst->value = CMDQ_WFE_UPDATE;
+> +	inst->event = event;
+> +
+> +	return 0;
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_clear_event);
+>  
+>  static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
+>  {
+> -	int err;
+> +	struct cmdq_instruction *inst;
+> +
+> +	inst = cmdq_pkt_append_command(pkt);
+> +	if (!inst)
+> +		return -ENOMEM;
+>  
+> -	/* insert EOC and generate IRQ for each command iteration */
+> -	err = cmdq_pkt_append_command(pkt, CMDQ_CODE_EOC, 0, CMDQ_EOC_IRQ_EN);
+> +	inst->op = CMDQ_CODE_EOC;
+> +	inst->value = CMDQ_EOC_IRQ_EN;
+>  
+> -	/* JUMP to end */
+> -	err |= cmdq_pkt_append_command(pkt, CMDQ_CODE_JUMP, 0, CMDQ_JUMP_PASS);
+> +	inst = cmdq_pkt_append_command(pkt);
+> +	if (!inst)
+> +		return -ENOMEM;
+> +
+> +	inst->op = CMDQ_CODE_JUMP;
+> +	inst->value = CMDQ_JUMP_PASS;
+>  
+> -	return err;
+> +	return 0;
+>  }
+>  
+>  static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
+> diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
+> index 911475da7a53..c8adedefaf42 100644
+> --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
+> +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
+> @@ -19,6 +19,8 @@
+>  #define CMDQ_WFE_UPDATE			BIT(31)
+>  #define CMDQ_WFE_WAIT			BIT(15)
+>  #define CMDQ_WFE_WAIT_VALUE		0x1
+> +#define CMDQ_WFE_OPTION			(CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | \
+> +					CMDQ_WFE_WAIT_VALUE)
+>  /** cmdq event maximum */
+>  #define CMDQ_MAX_EVENT			0x3ff
+>  
 
-Mark.
 
-> 
-> > gone via a roundtrip:
-> >
-> >         virt -> {phys,page} -> virt
-> >
-> > With KASAN_SW_TAGS, we can't preserve the tag for SLUB objects, and the
-> > {phys,page} -> virt conversion will use KASAN_TAG_KERNEL.
-> >
-> > This patch adds tests to ensure that this works as expected, without
-> > false positives.
-> >
-> > Signed-off-by: Mark Rutland <mark.rutland@arm.com>
-> > Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
-> > Cc: Andrey Konovalov <andreyknvl@google.com>
-> > Cc: Will Deacon <will.deacon@arm.com>
-> > ---
-> >  lib/test_kasan.c | 40 ++++++++++++++++++++++++++++++++++++++++
-> >  1 file changed, 40 insertions(+)
-> >
-> > diff --git a/lib/test_kasan.c b/lib/test_kasan.c
-> > index b63b367a94e8..cf7b93f0d90c 100644
-> > --- a/lib/test_kasan.c
-> > +++ b/lib/test_kasan.c
-> > @@ -19,6 +19,8 @@
-> >  #include <linux/string.h>
-> >  #include <linux/uaccess.h>
-> >
-> > +#include <asm/page.h>
-> > +
-> >  /*
-> >   * Note: test functions are marked noinline so that their names appear in
-> >   * reports.
-> > @@ -337,6 +339,42 @@ static noinline void __init kmalloc_uaf2(void)
-> >         kfree(ptr2);
-> >  }
-> >
-> > +static noinline void __init kfree_via_page(void)
-> > +{
-> > +       char *ptr;
-> > +       size_t size = 8;
-> > +       struct page *page;
-> > +       unsigned long offset;
-> > +
-> > +       pr_info("invalid-free false positive (via page)\n");
-> > +       ptr = kmalloc(size, GFP_KERNEL);
-> > +       if (!ptr) {
-> > +               pr_err("Allocation failed\n");
-> > +               return;
-> > +       }
-> > +
-> > +       page = virt_to_page(ptr);
-> > +       offset = offset_in_page(ptr);
-> > +       kfree(page_address(page) + offset);
-> > +}
-> > +
-> > +static noinline void __init kfree_via_phys(void)
-> > +{
-> > +       char *ptr;
-> > +       size_t size = 8;
-> > +       phys_addr_t phys;
-> > +
-> > +       pr_info("invalid-free false positive (via phys)\n");
-> > +       ptr = kmalloc(size, GFP_KERNEL);
-> > +       if (!ptr) {
-> > +               pr_err("Allocation failed\n");
-> > +               return;
-> > +       }
-> > +
-> > +       phys = virt_to_phys(ptr);
-> > +       kfree(phys_to_virt(phys));
-> > +}
-> > +
-> >  static noinline void __init kmem_cache_oob(void)
-> >  {
-> >         char *p;
-> > @@ -737,6 +775,8 @@ static int __init kmalloc_tests_init(void)
-> >         kmalloc_uaf();
-> >         kmalloc_uaf_memset();
-> >         kmalloc_uaf2();
-> > +       kfree_via_page();
-> > +       kfree_via_phys();
-> >         kmem_cache_oob();
-> >         memcg_accounted_kmem_cache();
-> >         kasan_stack_oob();
-> > --
-> > 2.11.0
-> >
 
 _______________________________________________
 Linux-mediatek mailing list
