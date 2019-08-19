@@ -2,68 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9674594B91
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 19:25:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7873594CB1
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 20:24:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Riy+hocAEACsLwkH4TtzVCkn6pNiSHqw/tLgxFZXPPY=; b=AFV72BhP1eQaCI
-	sqqt7WlqCAuutwm4a6CIGnxLHJTW0VTXubtMvOjCbpyIMXdMzBEF5jGgjLQh5CD7fmlwfoyUeUUiE
-	ubkxDGvzjDvCqdJTMbmC+yrrwxyfnzEBJJ/7hHHM7uYEowQeQghRfGI8qucxV/d41vBTeDXod7fV7
-	kvOEHSoRBVENUqghFz35JmSreIZrGd4mH3uh7rt0d8WQCJE8I+ZB62vGtqMCYvpCXj+TyMYH6qMfp
-	Uux4lFgSbxW3b89vXCc2Ovf13tGUBZLEpMueooZfjkml9gs7T+G/gJNZwrz5br3HDlKsmgxCsAyI+
-	Y47Eao/awyZtEJVyWWZg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=IRpT5QvZJsVqeSu3RzVls63QoELuRsUSMzyQWVc6fSU=; b=PbxSeShiiryNDDP4JZ2pTQoJ/
+	OtK6lgqyMsnD5x7rAZM7Qs9/8niWR+hRwSK2KY9Ky39L4NCRwcj5XpPdbFjHUEAPAv7Ig/pmvdMTz
+	1+rwJsoaw3/3LtxR7rW4g+y1ObCgEwm0r0FMIVg9s8mYw2xkQ1irEAhRgH0QoOdevQN6JxdAzj9LV
+	evw9K4I8rFRwbaQ+Dh8Sr/2zWkCIBg3kAaBjhVhyX3jQEeX722zTL3HViyW4Z2Sr9irCkjRW27smx
+	lhkGDesbJEjuOqtMJzuje8nSf18bHyOFry119yh9QMkzMc3oPD7HdBZavxPHeh8UP5Vm8zfmqESvW
+	mVlZlOkow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzlP9-0000qj-PQ; Mon, 19 Aug 2019 17:25:15 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzlOx-00085n-8E; Mon, 19 Aug 2019 17:25:04 +0000
-X-UUID: 679417d341bc4f2fbe29ff06723b734e-20190819
-X-UUID: 679417d341bc4f2fbe29ff06723b734e-20190819
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <houlong.wei@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1139912948; Mon, 19 Aug 2019 09:24:53 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 19 Aug 2019 10:24:51 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 20 Aug 2019 01:24:39 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 20 Aug 2019 01:24:38 +0800
-Message-ID: <1566235480.24117.13.camel@mhfsdcap03>
-Subject: Re: [PATCH v12 11/12] soc: mediatek: cmdq: add
- cmdq_dev_get_client_reg function
-From: houlong wei <houlong.wei@mediatek.com>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Date: Tue, 20 Aug 2019 01:24:40 +0800
-In-Reply-To: <20190819025359.11381-12-bibby.hsieh@mediatek.com>
-References: <20190819025359.11381-1-bibby.hsieh@mediatek.com>
- <20190819025359.11381-12-bibby.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+	id 1hzmKH-00083K-4z; Mon, 19 Aug 2019 18:24:17 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1hzmJm-0007oP-0t; Mon, 19 Aug 2019 18:23:48 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 8F2BE1576;
+ Mon, 19 Aug 2019 11:23:45 -0700 (PDT)
+Received: from [10.1.197.57] (e110467-lin.cambridge.arm.com [10.1.197.57])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 3B55D3F246;
+ Mon, 19 Aug 2019 11:23:42 -0700 (PDT)
+Subject: Re: [PATCH V5 2/5] iommu: Add gfp parameter to iommu_ops::map
+To: Tom Murphy <murphyt7@tcd.ie>, iommu@lists.linux-foundation.org
+References: <20190815110944.3579-1-murphyt7@tcd.ie>
+ <20190815110944.3579-3-murphyt7@tcd.ie>
+From: Robin Murphy <robin.murphy@arm.com>
+Message-ID: <1eb19886-ad52-95c5-6213-fcdd1bb2bafe@arm.com>
+Date: Mon, 19 Aug 2019 19:23:41 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5172E3F03F0FDA5D1EE4963F131F68BC41EF5B5A656F52E8E658C6FC655C1B422000:8
-X-MTK: N
+In-Reply-To: <20190815110944.3579-3-murphyt7@tcd.ie>
+Content-Language: en-GB
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_102503_306818_9AD95765 
-X-CRM114-Status: GOOD (  11.28  )
+X-CRM114-CacheID: sfid-20190819_112346_166270_5E474212 
+X-CRM114-Status: GOOD (  28.17  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,67 +61,461 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Nicolas Boichat <drinkcat@chromium.org>, Philipp
- Zabel <p.zabel@pengutronix.de>, srv_heupstream <srv_heupstream@mediatek.com>,
- Daoyuan Huang =?UTF-8?Q?=28=E9=BB=83=E9=81=93=E5=8E=9F=29?=
- <Daoyuan.Huang@mediatek.com>, Sascha Hauer <s.hauer@pengutronix.de>,
- Jassi Brar <jassisinghbrar@gmail.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- CK Hu =?UTF-8?Q?=28=E8=83=A1=E4=BF=8A=E5=85=89=29?= <ck.hu@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Ginny Chen =?UTF-8?Q?=28=E9=99=B3=E6=B2=BB=E5=82=91=29?=
- <ginny.chen@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
- houlon.wei@mediatek.com, Matthias Brugger <matthias.bgg@gmail.com>,
- Jiaguang Zhang =?UTF-8?Q?=28=E5=BC=A0=E5=8A=A0=E5=B9=BF=29?=
- <Jiaguang.Zhang@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Dennis-YC Hsieh =?UTF-8?Q?=28=E8=AC=9D=E5=AE=87=E5=93=B2=29?=
- <Dennis-YC.Hsieh@mediatek.com>
-Content-Type: text/plain; charset="us-ascii"
+Cc: Heiko Stuebner <heiko@sntech.de>, virtualization@lists.linux-foundation.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>, Will Deacon <will@kernel.org>,
+ Marek Szyprowski <m.szyprowski@samsung.com>,
+ Jean-Philippe Brucker <jean-philippe@linaro.org>,
+ linux-samsung-soc@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Jonathan Hunter <jonathanh@nvidia.com>,
+ linux-rockchip@lists.infradead.org, Andy Gross <agross@kernel.org>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>, linux-s390@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-kernel@vger.kernel.org, Rob Clark <robdclark@gmail.com>,
+ Kukjin Kim <kgene@kernel.org>, David Woodhouse <dwmw2@infradead.org>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-08-19 at 10:53 +0800, Bibby Hsieh wrote:
-> GCE cannot know the register base address, this function
-> can help cmdq client to get the cmdq_client_reg structure.
+On 15/08/2019 12:09, Tom Murphy wrote:
+> Add a gfp_t parameter to the iommu_ops::map function.
+> Remove the needless locking in the AMD iommu driver.
 > 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> The iommu_ops::map function (or the iommu_map function which calls it)
+> was always supposed to be sleepable (according to Joerg's comment in
+> this thread: https://lore.kernel.org/patchwork/patch/977520/ ) and so
+> should probably have had a "might_sleep()" since it was written. However
+> currently the dma-iommu api can call iommu_map in an atomic context,
+> which it shouldn't do. This doesn't cause any problems because any iommu
+> driver which uses the dma-iommu api uses gfp_atomic in it's
+> iommu_ops::map function. But doing this wastes the memory allocators
+> atomic pools.
+
+Looks reasonable to me - once we get the merges sorted out I'll take a 
+look at propagating the flags through to io-pgtable for the SMMU drivers 
+and friends.
+
+Reviewed-by: Robin Murphy <robin.murphy@arm.com>
+
+> Signed-off-by: Tom Murphy <murphyt7@tcd.ie>
 > ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c | 29 ++++++++++++++++++++++++++
->  include/linux/soc/mediatek/mtk-cmdq.h  | 21 +++++++++++++++++++
->  2 files changed, 50 insertions(+)
+>   drivers/iommu/amd_iommu.c      |  3 ++-
+>   drivers/iommu/arm-smmu-v3.c    |  2 +-
+>   drivers/iommu/arm-smmu.c       |  2 +-
+>   drivers/iommu/dma-iommu.c      |  6 ++---
+>   drivers/iommu/exynos-iommu.c   |  2 +-
+>   drivers/iommu/intel-iommu.c    |  2 +-
+>   drivers/iommu/iommu.c          | 43 +++++++++++++++++++++++++++++-----
+>   drivers/iommu/ipmmu-vmsa.c     |  2 +-
+>   drivers/iommu/msm_iommu.c      |  2 +-
+>   drivers/iommu/mtk_iommu.c      |  2 +-
+>   drivers/iommu/mtk_iommu_v1.c   |  2 +-
+>   drivers/iommu/omap-iommu.c     |  2 +-
+>   drivers/iommu/qcom_iommu.c     |  2 +-
+>   drivers/iommu/rockchip-iommu.c |  2 +-
+>   drivers/iommu/s390-iommu.c     |  2 +-
+>   drivers/iommu/tegra-gart.c     |  2 +-
+>   drivers/iommu/tegra-smmu.c     |  2 +-
+>   drivers/iommu/virtio-iommu.c   |  2 +-
+>   include/linux/iommu.h          | 21 ++++++++++++++++-
+>   19 files changed, 77 insertions(+), 26 deletions(-)
 > 
-[...]
->  
-> +/**
-> + * cmdq_dev_get_client_reg() - parse cmdq client reg from the device
-> + *			       node of CMDQ client
-> + * @dev:	device of CMDQ mailbox clienti
-
-'clienti' looks like a typo, 'client'?
-
-> + * @client_reg: CMDQ client reg pointer
-> + * @idx:	the index of desired reg
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + *
-> + * Help CMDQ client pasing the cmdq client reg
-
-'pasing' looks like a typo, 'parsing'?
-
-> + * from the device node of CMDQ client.
-> + */
-> +int cmdq_dev_get_client_reg(struct device *dev,
-> +			    struct cmdq_client_reg *client_reg, int idx);
+> diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
+> index 1948be7ac8f8..0e53f9bd2be7 100644
+> --- a/drivers/iommu/amd_iommu.c
+> +++ b/drivers/iommu/amd_iommu.c
+> @@ -3030,7 +3030,8 @@ static int amd_iommu_attach_device(struct iommu_domain *dom,
+>   }
+>   
+>   static int amd_iommu_map(struct iommu_domain *dom, unsigned long iova,
+> -			 phys_addr_t paddr, size_t page_size, int iommu_prot)
+> +			 phys_addr_t paddr, size_t page_size, int iommu_prot,
+> +			 gfp_t gfp)
+>   {
+>   	struct protection_domain *domain = to_pdomain(dom);
+>   	int prot = 0;
+> diff --git a/drivers/iommu/arm-smmu-v3.c b/drivers/iommu/arm-smmu-v3.c
+> index e7f49fd1a7ba..acc0eae7963f 100644
+> --- a/drivers/iommu/arm-smmu-v3.c
+> +++ b/drivers/iommu/arm-smmu-v3.c
+> @@ -1975,7 +1975,7 @@ static int arm_smmu_attach_dev(struct iommu_domain *domain, struct device *dev)
+>   }
+>   
+>   static int arm_smmu_map(struct iommu_domain *domain, unsigned long iova,
+> -			phys_addr_t paddr, size_t size, int prot)
+> +			phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct io_pgtable_ops *ops = to_smmu_domain(domain)->pgtbl_ops;
+>   
+> diff --git a/drivers/iommu/arm-smmu.c b/drivers/iommu/arm-smmu.c
+> index aa06498f291d..05f42bdee494 100644
+> --- a/drivers/iommu/arm-smmu.c
+> +++ b/drivers/iommu/arm-smmu.c
+> @@ -1284,7 +1284,7 @@ static int arm_smmu_attach_dev(struct iommu_domain *domain, struct device *dev)
+>   }
+>   
+>   static int arm_smmu_map(struct iommu_domain *domain, unsigned long iova,
+> -			phys_addr_t paddr, size_t size, int prot)
+> +			phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct io_pgtable_ops *ops = to_smmu_domain(domain)->pgtbl_ops;
+>   	struct arm_smmu_device *smmu = to_smmu_domain(domain)->smmu;
+> diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
+> index d991d40f797f..2712fbc68b28 100644
+> --- a/drivers/iommu/dma-iommu.c
+> +++ b/drivers/iommu/dma-iommu.c
+> @@ -469,7 +469,7 @@ static dma_addr_t __iommu_dma_map(struct device *dev, phys_addr_t phys,
+>   	if (!iova)
+>   		return DMA_MAPPING_ERROR;
+>   
+> -	if (iommu_map(domain, iova, phys - iova_off, size, prot)) {
+> +	if (iommu_map_atomic(domain, iova, phys - iova_off, size, prot)) {
+>   		iommu_dma_free_iova(cookie, iova, size);
+>   		return DMA_MAPPING_ERROR;
+>   	}
+> @@ -613,7 +613,7 @@ static void *iommu_dma_alloc_remap(struct device *dev, size_t size,
+>   			arch_dma_prep_coherent(sg_page(sg), sg->length);
+>   	}
+>   
+> -	if (iommu_map_sg(domain, iova, sgt.sgl, sgt.orig_nents, ioprot)
+> +	if (iommu_map_sg_atomic(domain, iova, sgt.sgl, sgt.orig_nents, ioprot)
+>   			< size)
+>   		goto out_free_sg;
+>   
+> @@ -873,7 +873,7 @@ static int iommu_dma_map_sg(struct device *dev, struct scatterlist *sg,
+>   	 * We'll leave any physical concatenation to the IOMMU driver's
+>   	 * implementation - it knows better than we do.
+>   	 */
+> -	if (iommu_map_sg(domain, iova, sg, nents, prot) < iova_len)
+> +	if (iommu_map_sg_atomic(domain, iova, sg, nents, prot) < iova_len)
+>   		goto out_free_iova;
+>   
+>   	return __finalise_sg(dev, sg, nents, iova);
+> diff --git a/drivers/iommu/exynos-iommu.c b/drivers/iommu/exynos-iommu.c
+> index 1934c16a5abc..b7dd46884692 100644
+> --- a/drivers/iommu/exynos-iommu.c
+> +++ b/drivers/iommu/exynos-iommu.c
+> @@ -1073,7 +1073,7 @@ static int lv2set_page(sysmmu_pte_t *pent, phys_addr_t paddr, size_t size,
+>    */
+>   static int exynos_iommu_map(struct iommu_domain *iommu_domain,
+>   			    unsigned long l_iova, phys_addr_t paddr, size_t size,
+> -			    int prot)
+> +			    int prot, gfp_t gfp)
+>   {
+>   	struct exynos_iommu_domain *domain = to_exynos_domain(iommu_domain);
+>   	sysmmu_pte_t *entry;
+> diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
+> index 12d094d08c0a..0e7cb0cbbd46 100644
+> --- a/drivers/iommu/intel-iommu.c
+> +++ b/drivers/iommu/intel-iommu.c
+> @@ -5113,7 +5113,7 @@ static void intel_iommu_aux_detach_device(struct iommu_domain *domain,
+>   
+>   static int intel_iommu_map(struct iommu_domain *domain,
+>   			   unsigned long iova, phys_addr_t hpa,
+> -			   size_t size, int iommu_prot)
+> +			   size_t size, int iommu_prot, gfp_t gfp)
+>   {
+>   	struct dmar_domain *dmar_domain = to_dmar_domain(domain);
+>   	u64 max_addr;
+> diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
+> index 0c674d80c37f..133ec8e00a3a 100644
+> --- a/drivers/iommu/iommu.c
+> +++ b/drivers/iommu/iommu.c
+> @@ -1799,8 +1799,8 @@ static size_t iommu_pgsize(struct iommu_domain *domain,
+>   	return pgsize;
+>   }
+>   
+> -int iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -	      phys_addr_t paddr, size_t size, int prot)
+> +int __iommu_map(struct iommu_domain *domain, unsigned long iova,
+> +	      phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	const struct iommu_ops *ops = domain->ops;
+>   	unsigned long orig_iova = iova;
+> @@ -1837,8 +1837,8 @@ int iommu_map(struct iommu_domain *domain, unsigned long iova,
+>   
+>   		pr_debug("mapping: iova 0x%lx pa %pa pgsize 0x%zx\n",
+>   			 iova, &paddr, pgsize);
+> +		ret = ops->map(domain, iova, paddr, pgsize, prot, gfp);
+>   
+> -		ret = ops->map(domain, iova, paddr, pgsize, prot);
+>   		if (ret)
+>   			break;
+>   
+> @@ -1858,8 +1858,22 @@ int iommu_map(struct iommu_domain *domain, unsigned long iova,
+>   
+>   	return ret;
+>   }
 > +
->  /**
->   * cmdq_mbox_create() - create CMDQ mailbox client and channel
->   * @dev:	device of CMDQ mailbox client
-
-
+> +int iommu_map(struct iommu_domain *domain, unsigned long iova,
+> +	      phys_addr_t paddr, size_t size, int prot)
+> +{
+> +	might_sleep();
+> +	return __iommu_map(domain, iova, paddr, size, prot, GFP_KERNEL);
+> +}
+>   EXPORT_SYMBOL_GPL(iommu_map);
+>   
+> +int iommu_map_atomic(struct iommu_domain *domain, unsigned long iova,
+> +	      phys_addr_t paddr, size_t size, int prot)
+> +{
+> +	return __iommu_map(domain, iova, paddr, size, prot, GFP_ATOMIC);
+> +}
+> +EXPORT_SYMBOL_GPL(iommu_map_atomic);
+> +
+>   static size_t __iommu_unmap(struct iommu_domain *domain,
+>   			    unsigned long iova, size_t size,
+>   			    bool sync)
+> @@ -1934,8 +1948,9 @@ size_t iommu_unmap_fast(struct iommu_domain *domain,
+>   }
+>   EXPORT_SYMBOL_GPL(iommu_unmap_fast);
+>   
+> -size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+> -		    struct scatterlist *sg, unsigned int nents, int prot)
+> +size_t __iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+> +		    struct scatterlist *sg, unsigned int nents, int prot,
+> +		    gfp_t gfp)
+>   {
+>   	size_t len = 0, mapped = 0;
+>   	phys_addr_t start;
+> @@ -1946,7 +1961,9 @@ size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+>   		phys_addr_t s_phys = sg_phys(sg);
+>   
+>   		if (len && s_phys != start + len) {
+> -			ret = iommu_map(domain, iova + mapped, start, len, prot);
+> +			ret = __iommu_map(domain, iova + mapped, start,
+> +					len, prot, gfp);
+> +
+>   			if (ret)
+>   				goto out_err;
+>   
+> @@ -1974,8 +1991,22 @@ size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+>   	return 0;
+>   
+>   }
+> +
+> +size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+> +		    struct scatterlist *sg, unsigned int nents, int prot)
+> +{
+> +	might_sleep();
+> +	return __iommu_map_sg(domain, iova, sg, nents, prot, GFP_KERNEL);
+> +}
+>   EXPORT_SYMBOL_GPL(iommu_map_sg);
+>   
+> +size_t iommu_map_sg_atomic(struct iommu_domain *domain, unsigned long iova,
+> +		    struct scatterlist *sg, unsigned int nents, int prot)
+> +{
+> +	return __iommu_map_sg(domain, iova, sg, nents, prot, GFP_ATOMIC);
+> +}
+> +EXPORT_SYMBOL_GPL(iommu_map_sg_atomic);
+> +
+>   int iommu_domain_window_enable(struct iommu_domain *domain, u32 wnd_nr,
+>   			       phys_addr_t paddr, u64 size, int prot)
+>   {
+> diff --git a/drivers/iommu/ipmmu-vmsa.c b/drivers/iommu/ipmmu-vmsa.c
+> index ad0098c0c87c..41572b40b844 100644
+> --- a/drivers/iommu/ipmmu-vmsa.c
+> +++ b/drivers/iommu/ipmmu-vmsa.c
+> @@ -722,7 +722,7 @@ static void ipmmu_detach_device(struct iommu_domain *io_domain,
+>   }
+>   
+>   static int ipmmu_map(struct iommu_domain *io_domain, unsigned long iova,
+> -		     phys_addr_t paddr, size_t size, int prot)
+> +		     phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct ipmmu_vmsa_domain *domain = to_vmsa_domain(io_domain);
+>   
+> diff --git a/drivers/iommu/msm_iommu.c b/drivers/iommu/msm_iommu.c
+> index 3df9266abe65..5fa915c5d541 100644
+> --- a/drivers/iommu/msm_iommu.c
+> +++ b/drivers/iommu/msm_iommu.c
+> @@ -495,7 +495,7 @@ static void msm_iommu_detach_dev(struct iommu_domain *domain,
+>   }
+>   
+>   static int msm_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			 phys_addr_t pa, size_t len, int prot)
+> +			 phys_addr_t pa, size_t len, int prot, gfp_t gfp)
+>   {
+>   	struct msm_priv *priv = to_msm_priv(domain);
+>   	unsigned long flags;
+> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> index 82e4be4dfdaf..53371b9e9af5 100644
+> --- a/drivers/iommu/mtk_iommu.c
+> +++ b/drivers/iommu/mtk_iommu.c
+> @@ -356,7 +356,7 @@ static void mtk_iommu_detach_device(struct iommu_domain *domain,
+>   }
+>   
+>   static int mtk_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			 phys_addr_t paddr, size_t size, int prot)
+> +			 phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
+>   	unsigned long flags;
+> diff --git a/drivers/iommu/mtk_iommu_v1.c b/drivers/iommu/mtk_iommu_v1.c
+> index abeeac488372..453e704bee3d 100644
+> --- a/drivers/iommu/mtk_iommu_v1.c
+> +++ b/drivers/iommu/mtk_iommu_v1.c
+> @@ -295,7 +295,7 @@ static void mtk_iommu_detach_device(struct iommu_domain *domain,
+>   }
+>   
+>   static int mtk_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			 phys_addr_t paddr, size_t size, int prot)
+> +			 phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
+>   	unsigned int page_num = size >> MT2701_IOMMU_PAGE_SHIFT;
+> diff --git a/drivers/iommu/omap-iommu.c b/drivers/iommu/omap-iommu.c
+> index 99a9ff3e7f71..3c530768200e 100644
+> --- a/drivers/iommu/omap-iommu.c
+> +++ b/drivers/iommu/omap-iommu.c
+> @@ -1339,7 +1339,7 @@ static u32 iotlb_init_entry(struct iotlb_entry *e, u32 da, u32 pa, int pgsz)
+>   }
+>   
+>   static int omap_iommu_map(struct iommu_domain *domain, unsigned long da,
+> -			  phys_addr_t pa, size_t bytes, int prot)
+> +			  phys_addr_t pa, size_t bytes, int prot, gfp_t gfp)
+>   {
+>   	struct omap_iommu_domain *omap_domain = to_omap_domain(domain);
+>   	struct device *dev = omap_domain->dev;
+> diff --git a/drivers/iommu/qcom_iommu.c b/drivers/iommu/qcom_iommu.c
+> index fb45486c6d14..b373c0f18ad5 100644
+> --- a/drivers/iommu/qcom_iommu.c
+> +++ b/drivers/iommu/qcom_iommu.c
+> @@ -400,7 +400,7 @@ static void qcom_iommu_detach_dev(struct iommu_domain *domain, struct device *de
+>   }
+>   
+>   static int qcom_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			  phys_addr_t paddr, size_t size, int prot)
+> +			  phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	int ret;
+>   	unsigned long flags;
+> diff --git a/drivers/iommu/rockchip-iommu.c b/drivers/iommu/rockchip-iommu.c
+> index dc26d74d79c2..b06d2986b52e 100644
+> --- a/drivers/iommu/rockchip-iommu.c
+> +++ b/drivers/iommu/rockchip-iommu.c
+> @@ -757,7 +757,7 @@ static int rk_iommu_map_iova(struct rk_iommu_domain *rk_domain, u32 *pte_addr,
+>   }
+>   
+>   static int rk_iommu_map(struct iommu_domain *domain, unsigned long _iova,
+> -			phys_addr_t paddr, size_t size, int prot)
+> +			phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct rk_iommu_domain *rk_domain = to_rk_domain(domain);
+>   	unsigned long flags;
+> diff --git a/drivers/iommu/s390-iommu.c b/drivers/iommu/s390-iommu.c
+> index 22d4db302c1c..efa6aa68521d 100644
+> --- a/drivers/iommu/s390-iommu.c
+> +++ b/drivers/iommu/s390-iommu.c
+> @@ -265,7 +265,7 @@ static int s390_iommu_update_trans(struct s390_domain *s390_domain,
+>   }
+>   
+>   static int s390_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			  phys_addr_t paddr, size_t size, int prot)
+> +			  phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct s390_domain *s390_domain = to_s390_domain(domain);
+>   	int flags = ZPCI_PTE_VALID, rc = 0;
+> diff --git a/drivers/iommu/tegra-gart.c b/drivers/iommu/tegra-gart.c
+> index 6d40bc1b38bf..43c725243e8a 100644
+> --- a/drivers/iommu/tegra-gart.c
+> +++ b/drivers/iommu/tegra-gart.c
+> @@ -178,7 +178,7 @@ static inline int __gart_iommu_map(struct gart_device *gart, unsigned long iova,
+>   }
+>   
+>   static int gart_iommu_map(struct iommu_domain *domain, unsigned long iova,
+> -			  phys_addr_t pa, size_t bytes, int prot)
+> +			  phys_addr_t pa, size_t bytes, int prot, gfp_t gfp)
+>   {
+>   	struct gart_device *gart = gart_handle;
+>   	int ret;
+> diff --git a/drivers/iommu/tegra-smmu.c b/drivers/iommu/tegra-smmu.c
+> index c4a652b227f8..6ec58a2bcc13 100644
+> --- a/drivers/iommu/tegra-smmu.c
+> +++ b/drivers/iommu/tegra-smmu.c
+> @@ -650,7 +650,7 @@ static void tegra_smmu_set_pte(struct tegra_smmu_as *as, unsigned long iova,
+>   }
+>   
+>   static int tegra_smmu_map(struct iommu_domain *domain, unsigned long iova,
+> -			  phys_addr_t paddr, size_t size, int prot)
+> +			  phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	struct tegra_smmu_as *as = to_smmu_as(domain);
+>   	dma_addr_t pte_dma;
+> diff --git a/drivers/iommu/virtio-iommu.c b/drivers/iommu/virtio-iommu.c
+> index 80a740df0737..15443457f3fc 100644
+> --- a/drivers/iommu/virtio-iommu.c
+> +++ b/drivers/iommu/virtio-iommu.c
+> @@ -713,7 +713,7 @@ static int viommu_attach_dev(struct iommu_domain *domain, struct device *dev)
+>   }
+>   
+>   static int viommu_map(struct iommu_domain *domain, unsigned long iova,
+> -		      phys_addr_t paddr, size_t size, int prot)
+> +		      phys_addr_t paddr, size_t size, int prot, gfp_t gfp)
+>   {
+>   	int ret;
+>   	u32 flags;
+> diff --git a/include/linux/iommu.h b/include/linux/iommu.h
+> index fdc355ccc570..89af6271c506 100644
+> --- a/include/linux/iommu.h
+> +++ b/include/linux/iommu.h
+> @@ -240,7 +240,7 @@ struct iommu_ops {
+>   	int (*attach_dev)(struct iommu_domain *domain, struct device *dev);
+>   	void (*detach_dev)(struct iommu_domain *domain, struct device *dev);
+>   	int (*map)(struct iommu_domain *domain, unsigned long iova,
+> -		   phys_addr_t paddr, size_t size, int prot);
+> +		   phys_addr_t paddr, size_t size, int prot, gfp_t gfp);
+>   	size_t (*unmap)(struct iommu_domain *domain, unsigned long iova,
+>   		     size_t size);
+>   	void (*flush_iotlb_all)(struct iommu_domain *domain);
+> @@ -399,12 +399,17 @@ extern struct iommu_domain *iommu_get_domain_for_dev(struct device *dev);
+>   extern struct iommu_domain *iommu_get_dma_domain(struct device *dev);
+>   extern int iommu_map(struct iommu_domain *domain, unsigned long iova,
+>   		     phys_addr_t paddr, size_t size, int prot);
+> +extern int iommu_map_atomic(struct iommu_domain *domain, unsigned long iova,
+> +		     phys_addr_t paddr, size_t size, int prot);
+>   extern size_t iommu_unmap(struct iommu_domain *domain, unsigned long iova,
+>   			  size_t size);
+>   extern size_t iommu_unmap_fast(struct iommu_domain *domain,
+>   			       unsigned long iova, size_t size);
+>   extern size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
+>   			   struct scatterlist *sg,unsigned int nents, int prot);
+> +extern size_t iommu_map_sg_atomic(struct iommu_domain *domain,
+> +				  unsigned long iova, struct scatterlist *sg,
+> +				  unsigned int nents, int prot);
+>   extern phys_addr_t iommu_iova_to_phys(struct iommu_domain *domain, dma_addr_t iova);
+>   extern void iommu_set_fault_handler(struct iommu_domain *domain,
+>   			iommu_fault_handler_t handler, void *token);
+> @@ -614,6 +619,13 @@ static inline int iommu_map(struct iommu_domain *domain, unsigned long iova,
+>   	return -ENODEV;
+>   }
+>   
+> +static inline int iommu_map_atomic(struct iommu_domain *domain,
+> +				   unsigned long iova, phys_addr_t paddr,
+> +				   size_t size, int prot)
+> +{
+> +	return -ENODEV;
+> +}
+> +
+>   static inline size_t iommu_unmap(struct iommu_domain *domain,
+>   				 unsigned long iova, size_t size)
+>   {
+> @@ -633,6 +645,13 @@ static inline size_t iommu_map_sg(struct iommu_domain *domain,
+>   	return 0;
+>   }
+>   
+> +static inline size_t iommu_map_sg_atomic(struct iommu_domain *domain,
+> +				  unsigned long iova, struct scatterlist *sg,
+> +				  unsigned int nents, int prot)
+> +{
+> +	return 0;
+> +}
+> +
+>   static inline void iommu_flush_tlb_all(struct iommu_domain *domain)
+>   {
+>   }
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
