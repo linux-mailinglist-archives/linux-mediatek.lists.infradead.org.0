@@ -2,71 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8F46992516
-	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 15:35:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 58DB392541
+	for <lists+linux-mediatek@lfdr.de>; Mon, 19 Aug 2019 15:38:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JztJo/3XV5g39kkQTVkHXz0Jxwmmb/T09SIvZC5RPz0=; b=J/CjQPhhTzo2u5
-	q2B3C2pfLi7GmNYxfymnA4O6l0xOHCTk9gPQrW9V2K4d+mK89RYuTXUoS4fQ/Vvk2I0rJbNK44UPZ
-	0KxNmgXndFxLAXK6jLtl7OQp8+VuRxoSbuAoi/N89meaqKxcOlaw1Mua3EPR+XIt5XRYojlrQ3X86
-	7N776502YDcNiharOdt6a/qA8C/eRC5FbHhVwDrqbWLs5WzuQrQpha+A64mn6gzAOTb1novyHH0xU
-	VK+Q24JdM78OndWvgiPcj7pAUGM7Br5hoht/h1okC30ltBziTStNgY/hMqhkavBcwYloos9aIapaa
-	i+E8+q2clyTS1tnHpDVw==;
+	List-Owner; bh=R1XoXmNyXfsoaTpWy0TSulitRx3tyDoHbcb/PaLTnOw=; b=OVFGaMLWG3IH2l
+	YIusWeBujrYNWztoD44+v/Qg1MN6F9ut+YLlWYZ+FD2V19v3NJq3Ghv/70KTm5S0I1szbQtpNkd+z
+	kyESuQwVfFP3iCDoW9qsCZ8P2qFnkK1KLgmxdIVHo32QVfc+VcjwLxciFESfNxz7pkfTBTe2fvrMD
+	YwQyFylvvsW+Xwl/3IdQtDtIRyfQE4LB6nl5iIUiYzzZS11SGCwb1nRrAWWkCNoeOVGs9KzlNlnKW
+	S80DzMR5RmnCXpHqKIAC4g9VkehIVqmFdrb6zDYjoU0nXX7IUZTZ1NPnkcQwSRelhTrhK2SFfA8z1
+	FK3wC6ycaqbvNkzwE19Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzhoH-00087b-72; Mon, 19 Aug 2019 13:34:57 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hzhs4-0002FL-NZ; Mon, 19 Aug 2019 13:38:52 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzho8-0007zN-1h; Mon, 19 Aug 2019 13:34:49 +0000
-Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 3BF452085A;
- Mon, 19 Aug 2019 13:34:45 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566221687;
- bh=hKfeHuAsZv5gzXScdBCBmBovA3PHWMaHm8gHzstZO+Y=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=mAkOdid7IAxnHFy+Few0/wS0kb50BeKhhXaCcF0XKsC019eIDOW2udcMISL+o/l3R
- ytR1sMp8Nsjgu4b0yXw8FGZLKBi1JGA9RLTfRtzvlGHN6i8A6mmT35uy8k1NFnMitj
- B/nGRJ+H6Z7TWGEGUN0zll1eIQ/FKo+Nlu22qki8=
-Date: Mon, 19 Aug 2019 14:34:42 +0100
-From: Will Deacon <will@kernel.org>
-To: Mark Rutland <mark.rutland@arm.com>
-Subject: Re: [PATCH] arm64: kasan: fix phys_to_virt() false positive on
- tag-based kasan
-Message-ID: <20190819133441.ejomv6cprdcz7hh6@willie-the-truck>
-References: <20190819114420.2535-1-walter-zh.wu@mediatek.com>
- <20190819125625.bu3nbrldg7te5kwc@willie-the-truck>
- <20190819132347.GB9927@lakrids.cambridge.arm.com>
+ id 1hzhrx-00025x-0V; Mon, 19 Aug 2019 13:38:46 +0000
+X-UUID: 675b9fef3474465b9414ec1efdeb1b98-20190819
+X-UUID: 675b9fef3474465b9414ec1efdeb1b98-20190819
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 635948002; Mon, 19 Aug 2019 05:38:28 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 06:38:27 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 21:38:26 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 19 Aug 2019 21:38:25 +0800
+Message-ID: <1566221906.15377.3.camel@mtkswgap22>
+Subject: RE: [PATCH v2 0/3] scsi: ufs: fix broken hba->outstanding_tasks
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: Avri Altman <Avri.Altman@wdc.com>
+Date: Mon, 19 Aug 2019 21:38:26 +0800
+In-Reply-To: <1564044737.7235.9.camel@mtkswgap22>
+References: <1563947418-16394-1-git-send-email-stanley.chu@mediatek.com>
+ <MN2PR04MB69914824302B84E144137869FCC10@MN2PR04MB6991.namprd04.prod.outlook.com>
+ <1564044737.7235.9.camel@mtkswgap22>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190819132347.GB9927@lakrids.cambridge.arm.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_063448_113830_3B7AA73E 
-X-CRM114-Status: GOOD (  19.22  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190819_063845_069574_3C06EFF1 
+X-CRM114-Status: GOOD (  10.80  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,54 +72,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>, wsd_upstream@mediatek.com,
- Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>,
- linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com,
- linux-mediatek@lists.infradead.org, Alexander Potapenko <glider@google.com>,
- linux-arm-kernel@lists.infradead.org, Andrey Konovalov <andreyknvl@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
+Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
+ "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
+ "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "beanhuo@micron.com" <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Aug 19, 2019 at 02:23:48PM +0100, Mark Rutland wrote:
-> On Mon, Aug 19, 2019 at 01:56:26PM +0100, Will Deacon wrote:
-> > On Mon, Aug 19, 2019 at 07:44:20PM +0800, Walter Wu wrote:
-> > > __arm_v7s_unmap() call iopte_deref() to translate pyh_to_virt address,
-> > > but it will modify pointer tag into 0xff, so there is a false positive.
-> > > 
-> > > When enable tag-based kasan, phys_to_virt() function need to rewrite
-> > > its original pointer tag in order to avoid kasan report an incorrect
-> > > memory corruption.
+Hi Avri,
+
+On Thu, 2019-07-25 at 16:52 +0800, Stanley Chu wrote:
+> Hi Avri,
+> 
+> On Thu, 2019-07-25 at 07:54 +0000, Avri Altman wrote:
+> > Stanly,
 > > 
-> > Hmm. Which tree did you see this on? We've recently queued a load of fixes
-> > in this area, but I /thought/ they were only needed after the support for
-> > 52-bit virtual addressing in the kernel.
-> 
-> I'm seeing similar issues in the virtio blk code (splat below), atop of
-> the arm64 for-next/core branch. I think this is a latent issue, and
-> people are only just starting to test with KASAN_SW_TAGS.
-> 
-> It looks like the virtio blk code will round-trip a SLUB-allocated pointer from
-> virt->page->virt, losing the per-object tag in the process.
-> 
-> Our page_to_virt() seems to get a per-page tag, but this only makes
-> sense if you're dealing with the page allocator, rather than something
-> like SLUB which carves a page into smaller objects giving each object a
-> distinct tag.
-> 
-> Any round-trip of a pointer from SLUB is going to lose the per-object
-> tag.
+> > > 
+> > > Currently bits in hba->outstanding_tasks are cleared only after their
+> > > corresponding task management commands are successfully done by
+> > > __ufshcd_issue_tm_cmd().
+> > > 
+> > > If timeout happens in a task management command, its corresponding
+> > > bit in hba->outstanding_tasks will not be cleared until next task
+> > > management command with the same tag used successfully finishes.
+> > I'm sorry - I still don't understand why you just can't release the tag either way,
+> > Just like we do in device management queries tags,
+> > Instead of adding all this unnecessary code.
+> > 
+> > I will not object to your series -
+> > just step down and let other people review you patches.
 
-Urgh, I wonder how this is supposed to work?
+Sorry for late response due to these busy days.
 
-If we end up having to check the KASAN shadow for *_to_virt(), then why
-do we need to store anything in the page flags at all? Andrey?
+I just got your point and agreed with you: previous proposal may be too
+tricky. Simple always wins. So I will provide a short solution in next
+version.
 
-Will
+Many thanks!
+Stanley
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
