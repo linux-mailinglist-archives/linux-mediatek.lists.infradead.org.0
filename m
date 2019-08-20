@@ -2,58 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0468795397
-	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 03:42:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 740EF95398
+	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 03:42:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=e/3mzGmeHTCakFcmDZ+n1ZRk+Q5HjWudFwTAaH/JVqo=; b=kpdbkR9JVivZ5P
-	tdvcQUf2V/xl2rhhboHpE4kB5jzmvkTL955PaoLlWMeu1cJbmj9FFN7KAAzImfl1qjeqAXF3TRbJk
-	oSgzMSce2fQwwsS9o0w68nbzeoRje7duqWMdTBsYXncWQLfpMwpOwE85zitJ3hiuijnK+HXpcvV/C
-	wUFg/B4wuEgOGatVPDcntM4Ac1TB1jN3r0eidyHiOB91nm6B4Z3ax3g8b/kB+5RtwLl/fCTlL7stY
-	ysMqK+B4q06bzF6uU5okoHKuVDV0SowiToQw4Qo3nCJttCOPW0UL1YeBojJS7piGV1+NR3ZfVK40y
-	HZclZpoVCuKmDHK4ADbQ==;
+	List-Owner; bh=IPqg7Dpo98mqWduCoXCiKm67VFnkKeL3aU3X/8SqLEY=; b=kFXEKcny3wp5EK
+	/t45ahS+fmcZ24oL1AlmKH11VMQTj1TLcCchRtRWglKSXbQaJf/botwyuGiaWSzqxvKKDqXypxW2C
+	hQWjQXbtPiOdm7PrRbDPouJHD607SLxAg4kcMdQsogyiWeX2hCt1ik7d8PUWTgf69Rl929/4ZlwYC
+	fcE9LibP5ys1Eq7TtWzgTOT8gFLZV2dB9Guesq89k2HrO7jzSmvhvVhK2ffnsPUJMOdbzqXLSoAKt
+	0sKDw6LptNK9TnCvuUNRtaN2EiloD02aIbDmgev2QD9D/Rhz4Vvjnli4O6RAIpAtpEKQBcF3omyKY
+	9tX7LEZqlcagQjZ0JCZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hztAh-0007eZ-6i; Tue, 20 Aug 2019 01:42:51 +0000
+	id 1hztAj-0007fi-4u; Tue, 20 Aug 2019 01:42:53 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hztAd-0007cd-Hl
- for linux-mediatek@lists.infradead.org; Tue, 20 Aug 2019 01:42:49 +0000
-X-UUID: f5f311028d9640438a2494240c1ae58a-20190819
-X-UUID: f5f311028d9640438a2494240c1ae58a-20190819
+ id 1hztAe-0007cs-HW
+ for linux-mediatek@lists.infradead.org; Tue, 20 Aug 2019 01:42:50 +0000
+X-UUID: d892575ad7b5472d8ab494e0ff996f59-20190819
+X-UUID: d892575ad7b5472d8ab494e0ff996f59-20190819
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 185644490; Mon, 19 Aug 2019 17:42:01 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 19 Aug 2019 18:42:00 -0700
+ with ESMTP id 1946343717; Mon, 19 Aug 2019 17:42:23 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 19 Aug 2019 18:42:22 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 20 Aug 2019 09:41:58 +0800
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 20 Aug 2019 09:42:20 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 20 Aug 2019 09:41:58 +0800
+ Frontend Transport; Tue, 20 Aug 2019 09:42:13 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [PATCH v4 3/10] pwm: mediatek: allocate the clks array dynamically
- and fix mt7628 pwm
-Date: Tue, 20 Aug 2019 09:40:18 +0800
-Message-ID: <1566265225-27452-4-git-send-email-sam.shih@mediatek.com>
+Subject: [PATCH v4 4/10] pwm: mediatek: use pwm_mediatek as common prefix
+Date: Tue, 20 Aug 2019 09:40:19 +0800
+Message-ID: <1566265225-27452-5-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566265225-27452-1-git-send-email-sam.shih@mediatek.com>
 References: <1566265225-27452-1-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 99FC02FFEE33FC2A70D6B4D3F801DF3F9B8283B3608FB235FD2ABE4750AA17D42000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_184247_593224_028E3515 
-X-CRM114-Status: GOOD (  18.59  )
+X-CRM114-CacheID: sfid-20190819_184248_583818_14F2B7B2 
+X-CRM114-Status: GOOD (  14.05  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -75,215 +75,312 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- devicetree@vger.kernel.org, Sam
- Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
+ devicetree@vger.kernel.org, sam
+ shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
  linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ryder Lee <ryder.lee@mediatek.com>
+From: sam shih <sam.shih@mediatek.com>
 
-Instead of using fixed size of arrays, allocate the memory for them
-based on the information we get from the chips.
-
-Also fix mt7628 pwm during configure from userspace. The SoC
-is legacy MIPS and has no complex clock tree. This patch add property
-clock-frequency to the SoC specific data and legacy MIPS SoC need to
-configure it in DT. This property is use for period calculation.
+Use pwm_mediatek as common prefix to match the filename.
+No functional change intended.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Signed-off-by: Sam Shih <sam.shih@mediatek.com>
 ---
-Changes since v4:
-- Follow reviewers's comments
-1. use pc->soc->has_clks to check clocks exist or not.
-2. Add error message when probe() unable to get clks
-- Fixes bug when SoC is old mips which has no complex clock tree.
-if clocks not exist, use the new property from DT to apply period caculation;
-otherwise, use clk_get_rate to get clock frequency and apply period caculation.
----
- drivers/pwm/pwm-mediatek.c | 94 +++++++++++++++++++++++---------------
- 1 file changed, 56 insertions(+), 38 deletions(-)
+ drivers/pwm/pwm-mediatek.c | 117 ++++++++++++++++++-------------------
+ 1 file changed, 58 insertions(+), 59 deletions(-)
 
 diff --git a/drivers/pwm/pwm-mediatek.c b/drivers/pwm/pwm-mediatek.c
-index f9d67fb66adb..a70b69a975c1 100644
+index a70b69a975c1..d85761ad5283 100644
 --- a/drivers/pwm/pwm-mediatek.c
 +++ b/drivers/pwm/pwm-mediatek.c
-@@ -35,25 +35,6 @@
+@@ -1,12 +1,10 @@
++// SPDX-License-Identifier: GPL-2.0
+ /*
+- * Mediatek Pulse Width Modulator driver
++ * MediaTek Pulse Width Modulator driver
+  *
+  * Copyright (C) 2015 John Crispin <blogic@openwrt.org>
+  * Copyright (C) 2017 Zhi Mao <zhi.mao@mediatek.com>
+  *
+- * This file is licensed under the terms of the GNU General Public
+- * License version 2. This program is licensed "as is" without any
+- * warranty of any kind, whether express or implied.
+  */
+ 
+ #include <linux/err.h>
+@@ -34,43 +32,44 @@
+ #define PWM45THRES_FIXUP	0x34
  
  #define PWM_CLK_DIV_MAX		7
- 
--enum {
--	MTK_CLK_MAIN = 0,
--	MTK_CLK_TOP,
--	MTK_CLK_PWM1,
--	MTK_CLK_PWM2,
--	MTK_CLK_PWM3,
--	MTK_CLK_PWM4,
--	MTK_CLK_PWM5,
--	MTK_CLK_PWM6,
--	MTK_CLK_PWM7,
--	MTK_CLK_PWM8,
--	MTK_CLK_MAX,
--};
 -
--static const char * const mtk_pwm_clk_name[MTK_CLK_MAX] = {
--	"main", "top", "pwm1", "pwm2", "pwm3", "pwm4", "pwm5", "pwm6", "pwm7",
--	"pwm8"
--};
--
- struct mtk_pwm_platform_data {
+-struct mtk_pwm_platform_data {
++struct pwm_mediatek_of_data {
  	unsigned int fallback_npwms;
  	bool pwm45_fixup;
-@@ -64,12 +45,17 @@ struct mtk_pwm_platform_data {
-  * struct mtk_pwm_chip - struct representing PWM chip
-  * @chip: linux PWM chip representation
-  * @regs: base address of PWM chip
-- * @clks: list of clocks
-+ * @clk_top: the top clock generator
-+ * @clk_main: the clock used by PWM core
-+ * @clk_pwms: the clock used by each PWM channel
-  */
- struct mtk_pwm_chip {
- 	struct pwm_chip chip;
- 	void __iomem *regs;
--	struct clk *clks[MTK_CLK_MAX];
-+	struct clk *clk_top;
-+	struct clk *clk_main;
-+	struct clk **clk_pwms;
-+	unsigned int clk_freq;
- 	const struct mtk_pwm_platform_data *soc;
+ 	bool has_clks;
  };
  
-@@ -90,24 +76,24 @@ static int mtk_pwm_clk_enable(struct pwm_chip *chip, struct pwm_device *pwm)
+ /**
+- * struct mtk_pwm_chip - struct representing PWM chip
++ * struct pwm_mediatek_chip - struct representing PWM chip
+  * @chip: linux PWM chip representation
+  * @regs: base address of PWM chip
+  * @clk_top: the top clock generator
+  * @clk_main: the clock used by PWM core
+  * @clk_pwms: the clock used by each PWM channel
+  */
+-struct mtk_pwm_chip {
++struct pwm_mediatek_chip {
+ 	struct pwm_chip chip;
+ 	void __iomem *regs;
+ 	struct clk *clk_top;
+ 	struct clk *clk_main;
+ 	struct clk **clk_pwms;
+ 	unsigned int clk_freq;
+-	const struct mtk_pwm_platform_data *soc;
++	const struct pwm_mediatek_of_data *soc;
+ };
+ 
+-static const unsigned int mtk_pwm_reg_offset[] = {
++static const unsigned int pwm_mediatek_reg_offset[] = {
+ 	0x0010, 0x0050, 0x0090, 0x00d0, 0x0110, 0x0150, 0x0190, 0x0220
+ };
+ 
+-static inline struct mtk_pwm_chip *to_mtk_pwm_chip(struct pwm_chip *chip)
++static inline struct pwm_mediatek_chip *
++to_pwm_mediatek_chip(struct pwm_chip *chip)
+ {
+-	return container_of(chip, struct mtk_pwm_chip, chip);
++	return container_of(chip, struct pwm_mediatek_chip, chip);
+ }
+ 
+-static int mtk_pwm_clk_enable(struct pwm_chip *chip, struct pwm_device *pwm)
++static int pwm_mediatek_clk_enable(struct pwm_chip *chip,
++				   struct pwm_device *pwm)
+ {
+-	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
++	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+ 	int ret;
+ 
  	if (!pc->soc->has_clks)
- 		return 0;
- 
--	ret = clk_prepare_enable(pc->clks[MTK_CLK_TOP]);
-+	ret = clk_prepare_enable(pc->clk_top);
- 	if (ret < 0)
- 		return ret;
- 
--	ret = clk_prepare_enable(pc->clks[MTK_CLK_MAIN]);
-+	ret = clk_prepare_enable(pc->clk_main);
- 	if (ret < 0)
- 		goto disable_clk_top;
- 
--	ret = clk_prepare_enable(pc->clks[MTK_CLK_PWM1 + pwm->hwpwm]);
-+	ret = clk_prepare_enable(pc->clk_pwms[pwm->hwpwm]);
- 	if (ret < 0)
- 		goto disable_clk_main;
- 
- 	return 0;
- 
- disable_clk_main:
--	clk_disable_unprepare(pc->clks[MTK_CLK_MAIN]);
-+	clk_disable_unprepare(pc->clk_main);
- disable_clk_top:
--	clk_disable_unprepare(pc->clks[MTK_CLK_TOP]);
-+	clk_disable_unprepare(pc->clk_top);
- 
+@@ -98,9 +97,10 @@ static int mtk_pwm_clk_enable(struct pwm_chip *chip, struct pwm_device *pwm)
  	return ret;
  }
-@@ -119,9 +105,9 @@ static void mtk_pwm_clk_disable(struct pwm_chip *chip, struct pwm_device *pwm)
+ 
+-static void mtk_pwm_clk_disable(struct pwm_chip *chip, struct pwm_device *pwm)
++static void pwm_mediatek_clk_disable(struct pwm_chip *chip,
++				     struct pwm_device *pwm)
+ {
+-	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
++	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+ 
  	if (!pc->soc->has_clks)
  		return;
- 
--	clk_disable_unprepare(pc->clks[MTK_CLK_PWM1 + pwm->hwpwm]);
--	clk_disable_unprepare(pc->clks[MTK_CLK_MAIN]);
--	clk_disable_unprepare(pc->clks[MTK_CLK_TOP]);
-+	clk_disable_unprepare(pc->clk_pwms[pwm->hwpwm]);
-+	clk_disable_unprepare(pc->clk_main);
-+	clk_disable_unprepare(pc->clk_top);
+@@ -110,23 +110,23 @@ static void mtk_pwm_clk_disable(struct pwm_chip *chip, struct pwm_device *pwm)
+ 	clk_disable_unprepare(pc->clk_top);
  }
  
- static inline u32 mtk_pwm_readl(struct mtk_pwm_chip *chip, unsigned int num,
-@@ -141,19 +127,24 @@ static int mtk_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
+-static inline u32 mtk_pwm_readl(struct mtk_pwm_chip *chip, unsigned int num,
+-				unsigned int offset)
++static inline u32 pwm_mediatek_readl(struct pwm_mediatek_chip *chip,
++				    unsigned int num, unsigned int offset)
+ {
+-	return readl(chip->regs + mtk_pwm_reg_offset[num] + offset);
++	return readl(chip->regs + pwm_mediatek_reg_offset[num] + offset);
+ }
+ 
+-static inline void mtk_pwm_writel(struct mtk_pwm_chip *chip,
+-				  unsigned int num, unsigned int offset,
+-				  u32 value)
++static inline void pwm_mediatek_writel(struct pwm_mediatek_chip *chip,
++				      unsigned int num, unsigned int offset,
++				      u32 value)
+ {
+-	writel(value, chip->regs + mtk_pwm_reg_offset[num] + offset);
++	writel(value, chip->regs + pwm_mediatek_reg_offset[num] + offset);
+ }
+ 
+-static int mtk_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
++static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
  			  int duty_ns, int period_ns)
  {
- 	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
--	struct clk *clk = pc->clks[MTK_CLK_PWM1 + pwm->hwpwm];
-+	unsigned int clk_freq;
+-	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
++	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+ 	unsigned int clk_freq;
  	u32 clkdiv = 0, cnt_period, cnt_duty, reg_width = PWMDWIDTH,
  	    reg_thres = PWMTHRES;
- 	u64 resolution;
- 	int ret;
+@@ -138,7 +138,7 @@ static int mtk_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 	else
+ 		clk_freq = pc->clk_freq;
  
-+	if (pc->soc->has_clks)
-+		clk_freq = clk_get_rate(pc->clk_pwms[pwm->hwpwm]);
-+	else
-+		clk_freq = pc->clk_freq;
-+
- 	ret = mtk_pwm_clk_enable(chip, pwm);
+-	ret = mtk_pwm_clk_enable(chip, pwm);
++	ret = pwm_mediatek_clk_enable(chip, pwm);
  	if (ret < 0)
  		return ret;
  
- 	/* Using resolution in picosecond gets accuracy higher */
- 	resolution = (u64)NSEC_PER_SEC * 1000;
--	do_div(resolution, clk_get_rate(clk));
-+	do_div(resolution, clk_freq);
+@@ -155,7 +155,7 @@ static int mtk_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 	}
  
- 	cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000, resolution);
- 	while (cnt_period > 8191) {
-@@ -229,7 +220,8 @@ static int mtk_pwm_probe(struct platform_device *pdev)
- 	struct device_node *np = pdev->dev.of_node;
- 	struct mtk_pwm_chip *pc;
- 	struct resource *res;
--	unsigned int i, npwms;
-+	unsigned int npwms;
-+	unsigned int clk_freq;
+ 	if (clkdiv > PWM_CLK_DIV_MAX) {
+-		mtk_pwm_clk_disable(chip, pwm);
++		pwm_mediatek_clk_disable(chip, pwm);
+ 		dev_err(chip->dev, "period %d not supported\n", period_ns);
+ 		return -EINVAL;
+ 	}
+@@ -170,22 +170,22 @@ static int mtk_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 	}
+ 
+ 	cnt_duty = DIV_ROUND_CLOSEST_ULL((u64)duty_ns * 1000, resolution);
+-	mtk_pwm_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
+-	mtk_pwm_writel(pc, pwm->hwpwm, reg_width, cnt_period);
+-	mtk_pwm_writel(pc, pwm->hwpwm, reg_thres, cnt_duty);
++	pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
++	pwm_mediatek_writel(pc, pwm->hwpwm, reg_width, cnt_period);
++	pwm_mediatek_writel(pc, pwm->hwpwm, reg_thres, cnt_duty);
+ 
+-	mtk_pwm_clk_disable(chip, pwm);
++	pwm_mediatek_clk_disable(chip, pwm);
+ 
+ 	return 0;
+ }
+ 
+-static int mtk_pwm_enable(struct pwm_chip *chip, struct pwm_device *pwm)
++static int pwm_mediatek_enable(struct pwm_chip *chip, struct pwm_device *pwm)
+ {
+-	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
++	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+ 	u32 value;
  	int ret;
  
- 	pc = devm_kzalloc(&pdev->dev, sizeof(*pc), GFP_KERNEL);
-@@ -255,13 +247,40 @@ static int mtk_pwm_probe(struct platform_device *pdev)
- 		}
- 	}
+-	ret = mtk_pwm_clk_enable(chip, pwm);
++	ret = pwm_mediatek_clk_enable(chip, pwm);
+ 	if (ret < 0)
+ 		return ret;
  
--	for (i = 0; i < npwms + 2 && pc->soc->has_clks; i++) {
--		pc->clks[i] = devm_clk_get(&pdev->dev, mtk_pwm_clk_name[i]);
--		if (IS_ERR(pc->clks[i])) {
--			dev_err(&pdev->dev, "clock: %s fail: %ld\n",
--				mtk_pwm_clk_name[i], PTR_ERR(pc->clks[i]));
--			return PTR_ERR(pc->clks[i]);
-+	if (pc->soc->has_clks) {
-+		int i;
-+
-+		pc->clk_pwms = devm_kcalloc(&pdev->dev, npwms,
-+					    sizeof(*pc->clk_pwms), GFP_KERNEL);
-+		if (!pc->clk_pwms)
-+			return -ENOMEM;
-+
-+		pc->clk_top = devm_clk_get(&pdev->dev, "top");
-+		if (IS_ERR(pc->clk_top))
-+			return PTR_ERR(pc->clk_top);
-+
-+		pc->clk_main = devm_clk_get(&pdev->dev, "main");
-+		if (IS_ERR(pc->clk_main))
-+			return PTR_ERR(pc->clk_main);
-+
-+		for (i = 0; i < npwms; i++) {
-+			char name[8];
-+
-+			snprintf(name, sizeof(name), "pwm%d", i + 1);
-+			pc->clk_pwms[i] = devm_clk_get(&pdev->dev, name);
-+			if (IS_ERR(pc->clk_pwms[i])) {
-+				dev_err(&pdev->dev, "failed to get %s\n", name);
-+				return PTR_ERR(pc->clk_pwms[i]);
-+			}
-+		}
-+	} else {
-+		ret = of_property_read_u32(np, "clock-frequency",
-+						&clk_freq);
-+		if (ret < 0) {
-+			dev_err(&pdev->dev, "failed to get clk_freq\n");
-+			return ret;
- 		}
-+		pc->clk_freq = clk_freq;
- 	}
+@@ -196,29 +196,29 @@ static int mtk_pwm_enable(struct pwm_chip *chip, struct pwm_device *pwm)
+ 	return 0;
+ }
  
+-static void mtk_pwm_disable(struct pwm_chip *chip, struct pwm_device *pwm)
++static void pwm_mediatek_disable(struct pwm_chip *chip, struct pwm_device *pwm)
+ {
+-	struct mtk_pwm_chip *pc = to_mtk_pwm_chip(chip);
++	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+ 	u32 value;
+ 
+ 	value = readl(pc->regs);
+ 	value &= ~BIT(pwm->hwpwm);
+ 	writel(value, pc->regs);
+ 
+-	mtk_pwm_clk_disable(chip, pwm);
++	pwm_mediatek_clk_disable(chip, pwm);
+ }
+ 
+-static const struct pwm_ops mtk_pwm_ops = {
+-	.config = mtk_pwm_config,
+-	.enable = mtk_pwm_enable,
+-	.disable = mtk_pwm_disable,
++static const struct pwm_ops pwm_mediatek_ops = {
++	.config = pwm_mediatek_config,
++	.enable = pwm_mediatek_enable,
++	.disable = pwm_mediatek_disable,
+ 	.owner = THIS_MODULE,
+ };
+ 
+-static int mtk_pwm_probe(struct platform_device *pdev)
++static int pwm_mediatek_probe(struct platform_device *pdev)
+ {
+ 	struct device_node *np = pdev->dev.of_node;
+-	struct mtk_pwm_chip *pc;
++	struct pwm_mediatek_chip *pc;
+ 	struct resource *res;
+ 	unsigned int npwms;
+ 	unsigned int clk_freq;
+@@ -285,7 +285,7 @@ static int mtk_pwm_probe(struct platform_device *pdev)
  	platform_set_drvdata(pdev, pc);
+ 
+ 	pc->chip.dev = &pdev->dev;
+-	pc->chip.ops = &mtk_pwm_ops;
++	pc->chip.ops = &pwm_mediatek_ops;
+ 	pc->chip.base = -1;
+ 	pc->chip.npwm = npwms;
+ 
+@@ -298,55 +298,55 @@ static int mtk_pwm_probe(struct platform_device *pdev)
+ 	return 0;
+ }
+ 
+-static int mtk_pwm_remove(struct platform_device *pdev)
++static int pwm_mediatek_remove(struct platform_device *pdev)
+ {
+-	struct mtk_pwm_chip *pc = platform_get_drvdata(pdev);
++	struct pwm_mediatek_chip *pc = platform_get_drvdata(pdev);
+ 
+ 	return pwmchip_remove(&pc->chip);
+ }
+ 
+-static const struct mtk_pwm_platform_data mt2712_pwm_data = {
++static const struct pwm_mediatek_of_data mt2712_pwm_data = {
+ 	.fallback_npwms = 8,
+ 	.pwm45_fixup = false,
+ 	.has_clks = true,
+ };
+ 
+-static const struct mtk_pwm_platform_data mt7622_pwm_data = {
++static const struct pwm_mediatek_of_data mt7622_pwm_data = {
+ 	.fallback_npwms = 6,
+ 	.pwm45_fixup = false,
+ 	.has_clks = true,
+ };
+ 
+-static const struct mtk_pwm_platform_data mt7623_pwm_data = {
++static const struct pwm_mediatek_of_data mt7623_pwm_data = {
+ 	.fallback_npwms = 5,
+ 	.pwm45_fixup = true,
+ 	.has_clks = true,
+ };
+ 
+-static const struct mtk_pwm_platform_data mt7628_pwm_data = {
++static const struct pwm_mediatek_of_data mt7628_pwm_data = {
+ 	.fallback_npwms = 4,
+ 	.pwm45_fixup = true,
+ 	.has_clks = false,
+ };
+ 
+-static const struct of_device_id mtk_pwm_of_match[] = {
++static const struct of_device_id pwm_mediatek_of_match[] = {
+ 	{ .compatible = "mediatek,mt2712-pwm", .data = &mt2712_pwm_data },
+ 	{ .compatible = "mediatek,mt7622-pwm", .data = &mt7622_pwm_data },
+ 	{ .compatible = "mediatek,mt7623-pwm", .data = &mt7623_pwm_data },
+ 	{ .compatible = "mediatek,mt7628-pwm", .data = &mt7628_pwm_data },
+ 	{ },
+ };
+-MODULE_DEVICE_TABLE(of, mtk_pwm_of_match);
++MODULE_DEVICE_TABLE(of, pwm_mediatek_of_match);
+ 
+-static struct platform_driver mtk_pwm_driver = {
++static struct platform_driver pwm_mediatek_driver = {
+ 	.driver = {
+-		.name = "mtk-pwm",
+-		.of_match_table = mtk_pwm_of_match,
++		.name = "pwm-mediatek",
++		.of_match_table = pwm_mediatek_of_match,
+ 	},
+-	.probe = mtk_pwm_probe,
+-	.remove = mtk_pwm_remove,
++	.probe = pwm_mediatek_probe,
++	.remove = pwm_mediatek_remove,
+ };
+-module_platform_driver(mtk_pwm_driver);
++module_platform_driver(pwm_mediatek_driver);
+ 
+ MODULE_AUTHOR("John Crispin <blogic@openwrt.org>");
+-MODULE_LICENSE("GPL");
++MODULE_LICENSE("GPL v2");
 -- 
 2.17.1
 
