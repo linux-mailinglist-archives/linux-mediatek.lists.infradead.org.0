@@ -2,35 +2,35 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A013695B49
-	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 11:42:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF5E995B4F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 11:43:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MKtyughmaJOFW7cz6p7s79l0QplefPyQpAa1+PLsWFU=; b=c26ZYPFRMDUZiS
-	EFNEua37SgmZpF5eYQHa6UjUx+ZV9dBl6rvPNPrgy80Yc32S0CWYT9KcF7B/vmkT5X/mdEqOq4m4v
-	9MxXp2wSBMzUESXE9sSxVqCmQL+/BAmmdyeOPnKkU2yXZil/F7OQ1xSNa+k+RYnMQYWJx96B7eCRI
-	rXNZeD2bfwCaOedd59BnHtFQpLhDMCj7ELo0QkXHrltLjTK6+ufvRBeVW37fJjO8+HKmIQcHLlhzQ
-	vkUVRlKfZd9pxqGMhUo7M+lMtA/t3Aj/jGY7lS9ObYDfFSLRJFmE3xglqZGO8ZA6Cbw3npao+idy8
-	znfnoIFsQI1eOfC2iiSg==;
+	List-Owner; bh=pkojDN0CQJV+u67RH/49qpOTCWF3Hzmmwu24pGlBYo4=; b=dd72nGgj2Rgedj
+	IqrgE4h5MSg7MNR+HGHMGXhszxJUrpaTheRCy1I1Z/eLNGAAHjjtnAAvYJgEScktyfMCA2w0Au9tr
+	J1cxNFc+s5BO+rj2yemejT8gHPVZcsLPpVe3bMB1XKQUijpi3oqK2mLiegSkhtxMzkzhHf1kQieJL
+	4nNbJlSQgDr7ibfQz+ZE0mWXeVyWd91POrDnUr2CQoNHmWRRfnsIARLHVVwdngkj55FHdFSvhG/Mh
+	QgJ16fJNk+RbN8GeswwBsd6OD/DjjSl0CCRtVtm+0nDka8f6hy365N388JOfuTR/DVrwhtIb9QUsO
+	Knm/zcJM3FTN6bcH2aLg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i00ei-0000Iw-6Y; Tue, 20 Aug 2019 09:42:20 +0000
+	id 1i00fX-0000ve-1j; Tue, 20 Aug 2019 09:43:11 +0000
 Received: from hch by bombadil.infradead.org with local (Exim 4.92 #3 (Red Hat
- Linux)) id 1i00eL-0008VQ-I1; Tue, 20 Aug 2019 09:41:57 +0000
-Date: Tue, 20 Aug 2019 02:41:57 -0700
+ Linux)) id 1i00fS-0000ug-OG; Tue, 20 Aug 2019 09:43:06 +0000
+Date: Tue, 20 Aug 2019 02:43:06 -0700
 From: Christoph Hellwig <hch@infradead.org>
 To: Tom Murphy <murphyt7@tcd.ie>
-Subject: Re: [PATCH V5 2/5] iommu: Add gfp parameter to iommu_ops::map
-Message-ID: <20190820094157.GB24154@infradead.org>
+Subject: Re: [PATCH V5 3/5] iommu/dma-iommu: Handle deferred devices
+Message-ID: <20190820094306.GC24154@infradead.org>
 References: <20190815110944.3579-1-murphyt7@tcd.ie>
- <20190815110944.3579-3-murphyt7@tcd.ie>
+ <20190815110944.3579-4-murphyt7@tcd.ie>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190815110944.3579-3-murphyt7@tcd.ie>
+In-Reply-To: <20190815110944.3579-4-murphyt7@tcd.ie>
 User-Agent: Mutt/1.11.4 (2019-03-13)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -60,9 +60,20 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Looks good,
+> +static int handle_deferred_device(struct device *dev,
+> +	struct iommu_domain *domain)
 
-Reviewed-by: Christoph Hellwig <hch@lst.de>
+Nitick: we usually use double tab indents (or indents to after
+the opening brace) for multi-line prototyped.
+
+> +	if (!is_kdump_kernel())
+> +		return 0;
+> +
+> +	if (unlikely(ops->is_attach_deferred &&
+> +		ops->is_attach_deferred(domain, dev)))
+> +		return iommu_attach_device(domain, dev);
+
+And for multi-line conditionals we also use two-tab indents.
 
 _______________________________________________
 Linux-mediatek mailing list
