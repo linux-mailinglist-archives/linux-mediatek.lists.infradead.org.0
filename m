@@ -2,83 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6DDF896837
-	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 20:00:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 07219969B6
+	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 21:48:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Kq8kahH1Tx+n807toJX6lJ720KoBtq77D8RN6iuSS70=; b=hEiXeCfb0yd70+
-	idzArPrsIWUtvmg1Y97GlLLku+W5LVYs7AD14WGEzzry2NeCRh87v0Sk+JD4JMgIIOR8zVUrvAB+/
-	YZBRHYIMkvAEruc16Xto2O5L8Qz5nB6YVtzc8tz0uMWb7SF9DRr/aQU/XjrflQsymiHA2CjnlfgaJ
-	xTLvLExhlky9wnKl0Fe9SCDvn5870GHEOcjk63n69IX/nr14xrbbYMn8o4/MX9bhL5Kkcj+1OoPv5
-	iMqavT8c/hsEn4+kZR/B+qWxd67QaJVUrRsnliaBM+Gi/KJvXlaXAbyUkAC6B6Cfhsu2wFMFPvkAm
-	uYFjUyKSiAuTjoK9Wifw==;
+	List-Owner; bh=8T/A4VEfSglv8hnpjs5Gv7nhjaH19SA4cDkbVc6G3ZY=; b=FCpkb4mY/4KpXE
+	/evbEHT/0wC8TcjSJL1CSRb2u7SkprC5qCW5/FzfK2wtPIresRa+PPq0rkCp/ueckslunf4tTLekM
+	MX1OVZJgoPF38Uij00F6kBJ5v9pHY5L+61qTECb8zhQDniWokiD2HmfPxSHGjpj/KIU3pWOEmd3A4
+	h05DtMMSw80/rLwZlqkY3ZdglzcGYbgQloZ+gcs8Gn3asUyitqCtMxTB6gQ0790BCT/lSJvVdw/Ac
+	Xrs2zq7Q8Dq6eHT93BAOk+B4LnRASLGAloBngmk3aKYND6Mgof5PuehKwNBIsE3N3+1BVWE3v/EI5
+	LBswaXCTiMJbr16hvbcQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i08Qm-0006Q6-Lo; Tue, 20 Aug 2019 18:00:28 +0000
-Received: from mail-oi1-f193.google.com ([209.85.167.193])
+	id 1i0A7J-0004T8-5g; Tue, 20 Aug 2019 19:48:29 +0000
+Received: from relay3-d.mail.gandi.net ([217.70.183.195])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i08Qh-0006Om-SF
- for linux-mediatek@lists.infradead.org; Tue, 20 Aug 2019 18:00:25 +0000
-Received: by mail-oi1-f193.google.com with SMTP id v12so4781873oic.12
- for <linux-mediatek@lists.infradead.org>; Tue, 20 Aug 2019 11:00:17 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=Q1gvNC9FakNN70iNTlLfpOxXe43hETiV8DaUowjuk4k=;
- b=Y0jSLZObOv3K/ttj2994a0ShvIySF/gWY1SiG4e9RjGVNdw6BLA770f43AbtHJkPU7
- dhTFaxQ9WgQJsjnwZqzcXDo+oZF/qEMzaPuE46pH+z97y53QTP5vJI1T5yCoY0PUvuLS
- Edizsew0v1LfQPQ2EoYdmpTm/gZ+Pz6u7LEsoG6aaJ97zmnyAb2Rk3Vv+F3UmqOUe3Gj
- BGf002GfxOm2AKpnDUrPsRgWdXQt1qj7ogYHg5CeJ20hgcdZg61xuw9gBSNvgAiPgbwh
- ion/9HhhF+CFiUju4kpbcrgPfzR0FdCvSml1kLMOtDtJ4gY98abf7AgHcViyAsh5XIiN
- topw==
-X-Gm-Message-State: APjAAAVHFwtpz3woPukpXWsw/Ft9vw//p44I6+Dl3X72+YbU3GGzATeU
- rYi6CDtGQBhAo2H0atJjfQ==
-X-Google-Smtp-Source: APXvYqwS6vfSL5GG6Hy6vUEP0afiI29iW09/eMOV/jj9QtbvAKZYhgHCM2xtDsPdntbHcHfBhRBbOg==
-X-Received: by 2002:aca:3509:: with SMTP id c9mr900141oia.179.1566324016813;
- Tue, 20 Aug 2019 11:00:16 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id o26sm6431165otl.34.2019.08.20.11.00.16
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 20 Aug 2019 11:00:16 -0700 (PDT)
-Date: Tue, 20 Aug 2019 13:00:15 -0500
-From: Rob Herring <robh@kernel.org>
-To: Sam Shih <sam.shih@mediatek.com>
-Subject: Re: [PATCH v4 9/10] dt-bindings: pwm: update bindings for MT7629 SoC
-Message-ID: <20190820180015.GA12975@bogus>
-References: <1566265225-27452-1-git-send-email-sam.shih@mediatek.com>
- <1566265225-27452-10-git-send-email-sam.shih@mediatek.com>
+ id 1i0A77-0004Kx-GJ; Tue, 20 Aug 2019 19:48:19 +0000
+X-Originating-IP: 90.65.161.137
+Received: from localhost (lfbn-1-1545-137.w90-65.abo.wanadoo.fr
+ [90.65.161.137])
+ (Authenticated sender: alexandre.belloni@bootlin.com)
+ by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id DE91D60004;
+ Tue, 20 Aug 2019 19:48:03 +0000 (UTC)
+Date: Tue, 20 Aug 2019 21:48:03 +0200
+From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+To: Frank Wunderlich <frank-w@public-files.de>
+Subject: Re: [PATCH v6 05/13] rtc: mt6397: move some common definitions into
+ rtc.h
+Message-ID: <20190820194803.GW3545@piout.net>
+References: <20190818135611.7776-1-frank-w@public-files.de>
+ <20190818135611.7776-6-frank-w@public-files.de>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1566265225-27452-10-git-send-email-sam.shih@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <20190818135611.7776-6-frank-w@public-files.de>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190820_110023_916997_849C9A9F 
-X-CRM114-Status: GOOD (  10.34  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190820_124817_845329_220FFD51 
+X-CRM114-Status: GOOD (  16.10  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.193 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.195 listed in list.dnswl.org]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.193 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ [217.70.183.195 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,34 +65,193 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
- Sam Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
- Thierry Reding <thierry.reding@gmail.com>, linux-mediatek@lists.infradead.org,
- John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Cc: linux-rtc@vger.kernel.org, devicetree@vger.kernel.org,
+ Josef Friedl <josef.friedl@speed.at>, Sean Wang <sean.wang@mediatek.com>,
+ "linux-arm-kernel @ lists . infradead . org Alessandro Zummo"
+ <a.zummo@towertech.it>, linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Sebastian Reichel <sre@kernel.org>, Tianping Fang <tianping.fang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Mark Rutland <mark.rutland@arm.com>,
+ Eddie Huang <eddie.huang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 20 Aug 2019 09:40:24 +0800, Sam Shih wrote:
-> From: Ryder Lee <ryder.lee@mediatek.com>
+On 18/08/2019 15:56:03+0200, Frank Wunderlich wrote:
+> From: Josef Friedl <josef.friedl@speed.at>
 > 
-> This updates bindings for MT7629 pwm controller.
+> move code to separate header-file to reuse definitions later
+> in poweroff-driver (drivers/power/reset/mt6323-poweroff.c)
 > 
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+> Suggested-by: Frank Wunderlich <frank-w@public-files.de>
+> Signed-off-by: Josef Friedl <josef.friedl@speed.at>
+> Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
+Acked-by: Alexandre Belloni <alexandre.belloni@bootlin.com>
+
 > ---
->  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
->  1 file changed, 1 insertion(+)
+> changes since v5: none
+> changes since v4: none
+> changes since v3: none
+> changes since v2: add missing commit-message
+> ---
+>  drivers/rtc/rtc-mt6397.c       | 55 +-------------------------
+>  include/linux/mfd/mt6397/rtc.h | 71 ++++++++++++++++++++++++++++++++++
+>  2 files changed, 72 insertions(+), 54 deletions(-)
+>  create mode 100644 include/linux/mfd/mt6397/rtc.h
+> 
+> diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
+> index b46ed4dc7015..c08ee5edf865 100644
+> --- a/drivers/rtc/rtc-mt6397.c
+> +++ b/drivers/rtc/rtc-mt6397.c
+> @@ -9,60 +9,7 @@
+>  #include <linux/module.h>
+>  #include <linux/regmap.h>
+>  #include <linux/rtc.h>
+> -#include <linux/irqdomain.h>
+> -#include <linux/platform_device.h>
+> -#include <linux/of_address.h>
+> -#include <linux/of_irq.h>
+> -#include <linux/io.h>
+> -#include <linux/mfd/mt6397/core.h>
+> -
+> -#define RTC_BBPU		0x0000
+> -#define RTC_BBPU_CBUSY		BIT(6)
+> -
+> -#define RTC_WRTGR		0x003c
+> -
+> -#define RTC_IRQ_STA		0x0002
+> -#define RTC_IRQ_STA_AL		BIT(0)
+> -#define RTC_IRQ_STA_LP		BIT(3)
+> -
+> -#define RTC_IRQ_EN		0x0004
+> -#define RTC_IRQ_EN_AL		BIT(0)
+> -#define RTC_IRQ_EN_ONESHOT	BIT(2)
+> -#define RTC_IRQ_EN_LP		BIT(3)
+> -#define RTC_IRQ_EN_ONESHOT_AL	(RTC_IRQ_EN_ONESHOT | RTC_IRQ_EN_AL)
+> -
+> -#define RTC_AL_MASK		0x0008
+> -#define RTC_AL_MASK_DOW		BIT(4)
+> -
+> -#define RTC_TC_SEC		0x000a
+> -/* Min, Hour, Dom... register offset to RTC_TC_SEC */
+> -#define RTC_OFFSET_SEC		0
+> -#define RTC_OFFSET_MIN		1
+> -#define RTC_OFFSET_HOUR		2
+> -#define RTC_OFFSET_DOM		3
+> -#define RTC_OFFSET_DOW		4
+> -#define RTC_OFFSET_MTH		5
+> -#define RTC_OFFSET_YEAR		6
+> -#define RTC_OFFSET_COUNT	7
+> -
+> -#define RTC_AL_SEC		0x0018
+> -
+> -#define RTC_PDN2		0x002e
+> -#define RTC_PDN2_PWRON_ALARM	BIT(4)
+> -
+> -#define RTC_MIN_YEAR		1968
+> -#define RTC_BASE_YEAR		1900
+> -#define RTC_NUM_YEARS		128
+> -#define RTC_MIN_YEAR_OFFSET	(RTC_MIN_YEAR - RTC_BASE_YEAR)
+> -
+> -struct mt6397_rtc {
+> -	struct device		*dev;
+> -	struct rtc_device	*rtc_dev;
+> -	struct mutex		lock;
+> -	struct regmap		*regmap;
+> -	int			irq;
+> -	u32			addr_base;
+> -};
+> +#include <linux/mfd/mt6397/rtc.h>
+>  
+>  static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
+>  {
+> diff --git a/include/linux/mfd/mt6397/rtc.h b/include/linux/mfd/mt6397/rtc.h
+> new file mode 100644
+> index 000000000000..b702c29e8c74
+> --- /dev/null
+> +++ b/include/linux/mfd/mt6397/rtc.h
+> @@ -0,0 +1,71 @@
+> +/* SPDX-License-Identifier: GPL-2.0 */
+> +/*
+> + * Copyright (C) 2014-2018 MediaTek Inc.
+> + *
+> + * Author: Tianping.Fang <tianping.fang@mediatek.com>
+> + *        Sean Wang <sean.wang@mediatek.com>
+> + */
+> +
+> +#ifndef _LINUX_MFD_MT6397_RTC_H_
+> +#define _LINUX_MFD_MT6397_RTC_H_
+> +
+> +#include <linux/jiffies.h>
+> +#include <linux/mutex.h>
+> +#include <linux/regmap.h>
+> +#include <linux/rtc.h>
+> +
+> +#define RTC_BBPU               0x0000
+> +#define RTC_BBPU_CBUSY         BIT(6)
+> +#define RTC_BBPU_KEY            (0x43 << 8)
+> +
+> +#define RTC_WRTGR              0x003c
+> +
+> +#define RTC_IRQ_STA            0x0002
+> +#define RTC_IRQ_STA_AL         BIT(0)
+> +#define RTC_IRQ_STA_LP         BIT(3)
+> +
+> +#define RTC_IRQ_EN             0x0004
+> +#define RTC_IRQ_EN_AL          BIT(0)
+> +#define RTC_IRQ_EN_ONESHOT     BIT(2)
+> +#define RTC_IRQ_EN_LP          BIT(3)
+> +#define RTC_IRQ_EN_ONESHOT_AL  (RTC_IRQ_EN_ONESHOT | RTC_IRQ_EN_AL)
+> +
+> +#define RTC_AL_MASK            0x0008
+> +#define RTC_AL_MASK_DOW                BIT(4)
+> +
+> +#define RTC_TC_SEC             0x000a
+> +/* Min, Hour, Dom... register offset to RTC_TC_SEC */
+> +#define RTC_OFFSET_SEC         0
+> +#define RTC_OFFSET_MIN         1
+> +#define RTC_OFFSET_HOUR                2
+> +#define RTC_OFFSET_DOM         3
+> +#define RTC_OFFSET_DOW         4
+> +#define RTC_OFFSET_MTH         5
+> +#define RTC_OFFSET_YEAR                6
+> +#define RTC_OFFSET_COUNT       7
+> +
+> +#define RTC_AL_SEC             0x0018
+> +
+> +#define RTC_PDN2               0x002e
+> +#define RTC_PDN2_PWRON_ALARM   BIT(4)
+> +
+> +#define RTC_MIN_YEAR           1968
+> +#define RTC_BASE_YEAR          1900
+> +#define RTC_NUM_YEARS          128
+> +#define RTC_MIN_YEAR_OFFSET    (RTC_MIN_YEAR - RTC_BASE_YEAR)
+> +
+> +#define MTK_RTC_POLL_DELAY_US  10
+> +#define MTK_RTC_POLL_TIMEOUT   (jiffies_to_usecs(HZ))
+> +
+> +struct mt6397_rtc {
+> +	struct device           *dev;
+> +	struct rtc_device       *rtc_dev;
+> +
+> +	/* Protect register access from multiple tasks */
+> +	struct mutex            lock;
+> +	struct regmap           *regmap;
+> +	int                     irq;
+> +	u32                     addr_base;
+> +};
+> +
+> +#endif /* _LINUX_MFD_MT6397_RTC_H_ */
+> -- 
+> 2.17.1
 > 
 
-Please add Acked-by/Reviewed-by tags when posting new versions. However,
-there's no need to repost patches *only* to add the tags. The upstream
-maintainer will do that for acks received on the version they apply.
-
-If a tag was not added on purpose, please state why and what changed.
+-- 
+Alexandre Belloni, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
 
 _______________________________________________
 Linux-mediatek mailing list
