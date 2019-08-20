@@ -2,66 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA2A3956BA
-	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 07:38:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6A44B956C2
+	for <lists+linux-mediatek@lfdr.de>; Tue, 20 Aug 2019 07:41:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Hs7GXGI1rgPbeF1HYCUWb4+kmL5LryJ4RcwL5bRC3bc=; b=JYYWsPCND2U+S1
-	8U2fKgqMSdDxxK+vOJxLLlDcaQ9TVY7DB19mn72GvUK7mDeDH+fh4fowovn2lC7M2AuZo9755fWJm
-	dUB8nIdv0osOzhToDN4YIBI7szNCZV62+ErmjqSufu1/8YCyV5I4Fhk4gonvphY94yjmkgQ2TjzKE
-	q3wYWi6yLgP+9ooisj51wJ+MhN6af0ulSLsRIkqE6w1T5/gQQ/MRxV9CN3UJAMUxl8bAtXkEK4lVD
-	r7yFDtqFJOOnY/Ty2yIxocKc+i5+atKPLJkxYZDVoq3JBegHn2ZiJyXSZJQlH3BlXtbAv6EGpkoAd
-	VswGKBquZMKSAyVBc8MQ==;
+	List-Owner; bh=vPC1lWlYdoXVFO43NdxvF/YwasG2TjKhEwvGAQP3ewo=; b=ZQ0uug8V0jemAg
+	+V53NRp2gDn5rDhuFEH1ezdG0jlZSUBq+buK8FYTwaWlG+odXyNnip8bRBEPnUma6iE4WyKZJA0Np
+	4Q3NQJOGDePcK8G1/zrvcbM1ybzgHu7V8iSpJaahLeHzzLergTEEKxSeQy7wp475fjB/o+LM85l++
+	/VTKNv6R+yPeIFgU8r1LHId6sMev0AsWtcCQHJIE+7CTyMb0LUx6d+QxTnaiVOF5We9MCuA559XRh
+	21akLhAgnVAe+EZujoKYaTLHFyyap0qiH5mEijaqVONNinJcA8d+px8XV3828hhZAMisP5qzknoi8
+	yemYhlcm9s3UuHReST5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzwqW-0000SJ-Ur; Tue, 20 Aug 2019 05:38:16 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1hzwtP-0001xH-Qc; Tue, 20 Aug 2019 05:41:15 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzwqT-0000RB-D1; Tue, 20 Aug 2019 05:38:14 +0000
-X-UUID: 80cd020a75fb40dc8ba0560ec796e1aa-20190819
-X-UUID: 80cd020a75fb40dc8ba0560ec796e1aa-20190819
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1686240551; Mon, 19 Aug 2019 21:37:59 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 19 Aug 2019 22:37:58 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 20 Aug 2019 13:37:57 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 20 Aug 2019 13:37:57 +0800
-Message-ID: <1566279478.9993.21.camel@mtksdccf07>
-Subject: Re: [PATCH v4] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Date: Tue, 20 Aug 2019 13:37:58 +0800
-In-Reply-To: <20190806054340.16305-1-walter-zh.wu@mediatek.com>
-References: <20190806054340.16305-1-walter-zh.wu@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1hzwtK-0001wa-LS
+ for linux-mediatek@lists.infradead.org; Tue, 20 Aug 2019 05:41:12 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1hzwt8-0002bd-Tl; Tue, 20 Aug 2019 07:40:58 +0200
+Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1hzwt7-0001bl-Td; Tue, 20 Aug 2019 07:40:57 +0200
+Date: Tue, 20 Aug 2019 07:40:57 +0200
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
+To: Sam Shih <sam.shih@mediatek.com>
+Subject: Re: [PATCH v4 2/10] pwm: mediatek: droping the check for
+ of_device_get_match_data
+Message-ID: <20190820054057.xtbhtjm65f6rphcg@pengutronix.de>
+References: <1566265225-27452-1-git-send-email-sam.shih@mediatek.com>
+ <1566265225-27452-3-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1566265225-27452-3-git-send-email-sam.shih@mediatek.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190819_223813_459196_9963CF6D 
-X-CRM114-Status: GOOD (  14.98  )
+X-CRM114-CacheID: sfid-20190819_224110_703372_8AAF7BCF 
+X-CRM114-Status: UNSURE (   8.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,64 +70,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Vasily Gorbik <gor@linux.ibm.com>,
- Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org,
- Andrey Konovalov <andreyknvl@google.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Andrew
- Morton <akpm@linux-foundation.org>, Thomas Gleixner <tglx@linutronix.de>,
- Dmitry Vyukov <dvyukov@google.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ Thierry Reding <thierry.reding@gmail.com>, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-08-06 at 13:43 +0800, Walter Wu wrote:
-> This patch adds memory corruption identification at bug report for
-> software tag-based mode, the report show whether it is "use-after-free"
-> or "out-of-bound" error instead of "invalid-access" error. This will make
-> it easier for programmers to see the memory corruption problem.
-> 
-> We extend the slab to store five old free pointer tag and free backtrace,
-> we can check if the tagged address is in the slab record and make a
-> good guess if the object is more like "use-after-free" or "out-of-bound".
-> therefore every slab memory corruption can be identified whether it's
-> "use-after-free" or "out-of-bound".
-> 
-> ====== Changes
-> Change since v1:
-> - add feature option CONFIG_KASAN_SW_TAGS_IDENTIFY.
-> - change QUARANTINE_FRACTION to reduce quarantine size.
-> - change the qlist order in order to find the newest object in quarantine
-> - reduce the number of calling kmalloc() from 2 to 1 time.
-> - remove global variable to use argument to pass it.
-> - correct the amount of qobject cache->size into the byes of qlist_head.
-> - only use kasan_cache_shrink() to shink memory.
-> 
-> Change since v2:
-> - remove the shinking memory function kasan_cache_shrink()
-> - modify the description of the CONFIG_KASAN_SW_TAGS_IDENTIFY
-> - optimize the quarantine_find_object() and qobject_free()
-> - fix the duplicating function name 3 times in the header.
-> - modify the function name set_track() to kasan_set_track()
-> 
-> Change since v3:
-> - change tag-based quarantine to extend slab to identify memory corruption
+Hello,
 
-Hi,Andrey,
+On Tue, Aug 20, 2019 at 09:40:17AM +0800, Sam Shih wrote:
+> From: sam shih <sam.shih@mediatek.com>
 
-Would you review the patch,please?
-This patch is to pre-allocate slub record(tag and free backtrace) during
-create slub object. When kernel has memory corruption, it will print
-correct corruption type and free backtrace.
+Your Signed-off-by and the mail's From uses capital letters. Can you
+please make them all match?
 
-Thanks.
+> This patch drop the check for of_device_get_match_data.
+> Due to the only way call driver probe is compatible match,
+> In this case, the platform data should never be NULL.
 
-Walter
+Yeah, all entries in the of_match_table have a .data pointer.
+Theoretically the driver could be bound by driver.name and then
+of_device_get_match_data returns NULL.
 
+It's still ok to drop this check if you want to, I just want to make
+sure this possibility is known.
+
+Best regards
+Uwe
+
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | http://www.pengutronix.de/  |
 
 _______________________________________________
 Linux-mediatek mailing list
