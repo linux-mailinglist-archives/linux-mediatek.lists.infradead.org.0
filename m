@@ -2,81 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6F77998568
-	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 22:18:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F6C9985E3
+	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 22:48:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
+	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0dsfcE5s9QEyapHrfnqYRO10MW413yB/WBI5LvFQZZI=; b=qDUM+W/A+bb4GB
-	poPj5R00lwAQp5qKCk2BFTGyIpAOA8DrhEn1iOJRgiTqt+SBPOJ9Cg33K2A9wKf5NP191ucp6YHLL
-	DmvQGdlujCwd5o7PL7ive+PytFjLASUZAgj7HXI06/EGVeurWzmv/Xwtgc1UzUgkewGvu6FDN7DTP
-	dPqZIdz07VXVDgukSGAtUNRYHJTqrpIB9aNusAQkEyp/i8VjGitFAhau62fiYnHmlssM1s6r9TzOk
-	BPRWj3urawHFgA5cKC0+/pCmJaMRCJsk9/Mql9A7Idllo5Kj30rCSeolhRjyK6dQCmut2FsFgSVUm
-	QAhWKP74mH35ZlAQXs/A==;
+	List-Owner; bh=s+uw4L/4ZqfjZgyOgpK+EqXdGoCmrP8X+UjVoPVkjh0=; b=OcV1+BDKg62yh4
+	/H2u7kDu+fH2sGBb65tcNxyBSgDRcGvOz9MNpW8jdvKRCvSkNbqJBeln5pYsZBmmA0B1veLVnWXmA
+	EPf/8cNvFvXulB8d0D9Ny7YNwz7zKsWIr751wTOaQC1W4jQ58JKTrZ0O2b6fk/GHlp31e9CHLDODS
+	lXTspDUM4jcAqqGF35L5YKDqBauwkuIOrpgTSnLx1bkPTRZKubWQZs3CU4jPtT6B0U/vwJeqNlY7I
+	woCmzNQG2lwpz7+OJ6lMroU/uApx22CuMSY7BOpxV4nUM78f8etfyeHzQwQe6U+0nN7em820Xu26E
+	qZwSgBF2eqyoN9t4qjkA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0X3U-0008Fa-AN; Wed, 21 Aug 2019 20:18:04 +0000
-Received: from mail-ot1-f67.google.com ([209.85.210.67])
+	id 1i0XWn-0001dv-5S; Wed, 21 Aug 2019 20:48:21 +0000
+Received: from pb-sasl-trial2.pobox.com ([64.147.108.86])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0X3Q-0008FA-IV; Wed, 21 Aug 2019 20:18:02 +0000
-Received: by mail-ot1-f67.google.com with SMTP id c7so3324138otp.1;
- Wed, 21 Aug 2019 13:18:00 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=kOj/75oPZVAZoa0T6jbFRSVm/CkUv/wNYDVG2AOMBQE=;
- b=sKViMQwRnXH8WLHyiPrCtxSfAu1yz19+uMRubxQowdmqdQR2qmuUDsb9NuEIruMZit
- 0Q8R/yFC2igOLKwjhfBzsjgk19CbMDhmj/JVBst/QTE9sP++mGYRGRrvB5lnFndRhXqO
- lRO9p/YP40R4aqWNr90VJJZzvDYVFJJGwZw3j+22zG+bOv2u9v3zJ6oRdHdwasjF8nMT
- IkdGG31m3y1Mi7YNSuBXU9hwbNnNaiyUJtbAfwysS4emjGNbC1a+wo05TJ5lHmDJHpIn
- WOFsP2sa/1xHcq9P6UrqOYus0w/XrzZUuspW/7RJlb/a4ZtTYEtPcYfiwDE3VvT9CUzz
- ZXSg==
-X-Gm-Message-State: APjAAAV83bDitjGzfBd1b54GGqCBoOZqFmL6qN1p7zJJFdFiLMPjOPIs
- sAsO/kwHNaNEdO979RKsRQ==
-X-Google-Smtp-Source: APXvYqyhT+fZw8+BA2kLFIhmDj2KcF/sfupiFmLzB/S7nIb5Y2pzAjhkdaqKQNKE2PeIRMOJepKYUg==
-X-Received: by 2002:a9d:1ca3:: with SMTP id l35mr27086557ota.106.1566418679785; 
- Wed, 21 Aug 2019 13:17:59 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id z16sm3179143oic.10.2019.08.21.13.17.58
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 21 Aug 2019 13:17:59 -0700 (PDT)
-Date: Wed, 21 Aug 2019 15:17:58 -0500
-From: Rob Herring <robh@kernel.org>
-To: Jungo Lin <jungo.lin@mediatek.com>
-Subject: Re: [RFC,v4,1/4] media: dt-bindings: mt8183: Added camera ISP Pass 1
-Message-ID: <20190821201758.GB15270@bogus>
-References: <jungo.lin@mediatek.com>
- <20190807124803.29884-1-jungo.lin@mediatek.com>
- <20190807124803.29884-2-jungo.lin@mediatek.com>
+ id 1i0XWi-0001ck-PC; Wed, 21 Aug 2019 20:48:18 +0000
+Received: from pb-sasl-trial2.pobox.com (localhost.local [127.0.0.1])
+ by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 9CC8E19709;
+ Wed, 21 Aug 2019 16:48:12 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=date:from:to
+ :cc:subject:in-reply-to:message-id:references:mime-version
+ :content-type; s=sasl; bh=gHPWV6ywNNDw4FaVfFzykWXQZaE=; b=coNCGr
+ qwt7i3R4tUyQi0ZhT3/3VIDhWBBLTzAw70AivukbL9ghU9nPl7F0FIRPBuvKPbKw
+ c7CalAaCzCWnkkCCcwbqy1o3zKk9TWKjPdhJsnfKwF9VQuO/B09UmksTxgYUz9wu
+ bRu8C5k5LKc4Gf9x7hn/+DaQYD2aeK8p0IeXw=
+Received: from pb-smtp1.nyi.icgroup.com (pb-smtp1.pobox.com [10.90.30.53])
+ by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 79D5119708;
+ Wed, 21 Aug 2019 16:48:12 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fluxnic.net;
+ h=date:from:to:cc:subject:in-reply-to:message-id:references:mime-version:content-type;
+ s=2016-12.pbsmtp; bh=tGJUtEAORBsdDqaz81artd/xlpJm4+O0vI06mhjfh+c=;
+ b=Bm6jH5TeJ8u7zHDr3U+j7uM4LAxY52cFgZwdS2EFFWXNFK9GQtn5eZUA1GzXW9KWEcBn6hCr6F+jjjS1njBtHu40IijCBy9feUsunydCJOnkBH26hfO8gr4uvy5QgPrfiAWE7p+UCt2+09N9I0cpH0M/jOvLnV1kk5DmQyr29ak=
+Received: from yoda.home (unknown [24.203.50.76])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by pb-smtp1.pobox.com (Postfix) with ESMTPSA id DB83015BE3C;
+ Wed, 21 Aug 2019 16:48:11 -0400 (EDT)
+Received: from xanadu.home (xanadu.home [192.168.2.2])
+ by yoda.home (Postfix) with ESMTPSA id E8EF12DA023B;
+ Wed, 21 Aug 2019 16:48:10 -0400 (EDT)
+Date: Wed, 21 Aug 2019 16:48:10 -0400 (EDT)
+From: Nicolas Pitre <nico@fluxnic.net>
+To: Greg KH <gregkh@linuxfoundation.org>
+Subject: Re: [PATCH v3 00/11] Symbol Namespaces
+In-Reply-To: <20190821133737.GB4890@kroah.com>
+Message-ID: <nycvar.YSQ.7.76.1908211642050.19480@knanqh.ubzr>
+References: <20190813121733.52480-1-maennich@google.com>
+ <20190821114955.12788-1-maennich@google.com>
+ <nycvar.YSQ.7.76.1908210840490.19480@knanqh.ubzr>
+ <20190821133737.GB4890@kroah.com>
+User-Agent: Alpine 2.21 (LFD 202 2017-01-01)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190807124803.29884-2-jungo.lin@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-Pobox-Relay-ID: FD6832B8-C454-11E9-A575-46F8B7964D18-78420484!pb-smtp1.pobox.com
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_131800_608723_4CCCB5E5 
-X-CRM114-Status: GOOD (  17.85  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190821_134816_994507_AC9F5744 
+X-CRM114-Status: GOOD (  11.31  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.67 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [64.147.108.86 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,117 +85,63 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: ryan.yu@mediatek.com, frankie.chiu@mediatek.com,
- laurent.pinchart@ideasonboard.com, Rynn.Wu@mediatek.com, suleiman@chromium.org,
- Jerry-ch.Chen@mediatek.com, frederic.chen@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- hverkuil-cisco@xs4all.nl, shik@chromium.org, yuzhao@chromium.org,
- linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
- zwisler@chromium.org, ddavenport@chromium.org
+Cc: kstewart@linuxfoundation.org, oneukum@suse.com,
+ linux-aspeed@lists.ozlabs.org, usb-storage@lists.one-eyed-alien.net,
+ Toru Komatsu <k0ma@utam0k.jp>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>,
+ David Howells <dhowells@redhat.com>, yamada.masahiro@socionext.com,
+ Will Deacon <will@kernel.org>, patches@opensource.cirrus.com,
+ Michael Ellerman <mpe@ellerman.id.au>, hpa@zytor.com, joel@joelfernandes.org,
+ bcm-kernel-feedback-list@broadcom.com, sam@ravnborg.org, cocci@systeme.lip6.fr,
+ linux-arch@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
+ Benjamin Fair <benjaminfair@google.com>, linux-scsi@vger.kernel.org,
+ Fabio Estevam <festevam@gmail.com>, openbmc@lists.ozlabs.org, x86@kernel.org,
+ lucas.de.marchi@gmail.com, Nancy Yuen <yuenn@google.com>, mingo@redhat.com,
+ geert@linux-m68k.org, NXP Linux Team <linux-imx@nxp.com>,
+ Johannes Weiner <hannes@cmpxchg.org>, Patrick Venture <venture@google.com>,
+ stern@rowland.harvard.edu, kernel-team@android.com,
+ Dan Williams <dan.j.williams@intel.com>, Ingo Molnar <mingo@kernel.org>,
+ linux-rtc@vger.kernel.org, Gleb Fotengauer-Malinovskiy <glebfm@altlinux.org>,
+ sspatil@google.com, linux-watchdog@vger.kernel.org,
+ Arnd Bergmann <arnd@arndb.de>, linux-kbuild@vger.kernel.org,
+ Jani Nikula <jani.nikula@intel.com>, linux-arm-msm@vger.kernel.org,
+ jeyu@kernel.org, Matthias Maennich <maennich@google.com>,
+ Julia Lawall <julia.lawall@lip6.fr>, linux-m68k@lists.linux-m68k.org,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ tglx@linutronix.de, maco@android.com, linux-arm-kernel@lists.infradead.org,
+ Adrian Reber <adrian@lisas.de>, linux-hwmon@vger.kernel.org,
+ michal.lkml@markovi.net, Ard Biesheuvel <ard.biesheuvel@linaro.org>,
+ Andrew Jeffery <andrew@aj.id.au>, Alexey Gladkov <gladkov.alexey@gmail.com>,
+ linux-usb@vger.kernel.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-kernel@vger.kernel.org, Patrick Bellasi <patrick.bellasi@arm.com>,
+ Richard Guy Briggs <rgb@redhat.com>, maco@google.com,
+ Pengutronix Kernel Team <kernel@pengutronix.de>, pombredanne@nexb.com,
+ Tejun Heo <tj@kernel.org>, Andrew Morton <akpm@linux-foundation.org>,
+ "David S. Miller" <davem@davemloft.net>, linux-modules@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Aug 07, 2019 at 08:48:00PM +0800, Jungo Lin wrote:
-> This patch adds DT binding document for the Pass 1 (P1) unit
-> in Mediatek's camera ISP system. The Pass 1 unit grabs the sensor
-> data out from the sensor interface, applies ISP image effects
-> from tuning data and outputs the image data or statistics data to DRAM.
-> 
-> Signed-off-by: Jungo Lin <jungo.lin@mediatek.com>
-> ---
->  .../bindings/media/mediatek,camisp.txt        | 73 +++++++++++++++++++
->  1 file changed, 73 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek,camisp.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek,camisp.txt b/Documentation/devicetree/bindings/media/mediatek,camisp.txt
-> new file mode 100644
-> index 000000000000..fa2713acceca
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek,camisp.txt
-> @@ -0,0 +1,73 @@
-> +* Mediatek Image Signal Processor Pass 1 (ISP P1)
-> +
-> +The Pass 1 unit of Mediatek's camera ISP system grabs the sensor data out
-> +from the sensor interface, applies ISP effects from tuning data and outputs
-> +the image data and statistics data to DRAM. Furthermore, Pass 1 unit has
-> +the ability to output two different resolutions frames at the same time to
-> +increase the performance of the camera application.
-> +
-> +Required properties:
-> +- compatible: Must be "mediatek,mt8183-camisp" for MT8183.
-> +- reg: Physical base address of the camera function block register and
-> +  length of memory mapped region. Must contain an entry for each entry
-> +  in reg-names.
-> +- reg-names: Must include the following entries:
-> +  "cam_sys": Camera base function block
-> +  "cam_uni": Camera UNI function block
-> +  "cam_a": Camera ISP P1 hardware unit A
-> +  "cam_b": Camera ISP P1 hardware unit B
-> +  "cam_c": Camera ISP P1 hardware unit C
-> +- interrupts: Must contain an entry for each entry in interrupt-names.
-> +- interrupt-names : Must include the following entries:
-> +  "cam_uni": Camera UNI interrupt
-> +  "cam_a": Camera unit A interrupt
-> +  "cam_b": Camera unit B interrupt
-> +  "cam_c": Camera unit C interrupt
-> +- iommus: Shall point to the respective IOMMU block with master port
-> +  as argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
-> +  for details.
-> +- clocks: A list of phandle and clock specifier pairs as listed
-> +  in clock-names property, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
-> +- clock-names: Must be "camsys_cam_cgpdn" and "camsys_camtg_cgpdn".
-> +- mediatek,larb: Must contain the local arbiters in the current SoCs, see
-> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
-> +  for details.
-> +- power-domains: a phandle to the power domain, see
-> +  Documentation/devicetree/bindings/power/power_domain.txt for details.
-> +- mediatek,scp : The node of system control processor (SCP), see
-> +  Documentation/devicetree/bindings/remoteproc/mtk,scp.txt for details.
-> +
-> +Example:
-> +SoC specific DT entry:
-> +
-> +		camisp: camisp@1a000000 {
+On Wed, 21 Aug 2019, Greg KH wrote:
 
-Also, you can remove 2 levels of indentation here.
-
-> +			compatible = "mediatek,mt8183-camisp", "syscon";
-> +			reg = <0 0x1a000000 0 0x1000>,
-> +					<0 0x1a003000 0 0x1000>,
-> +					<0 0x1a004000 0 0x2000>,
-> +					<0 0x1a006000 0 0x2000>,
-> +					<0 0x1a008000 0 0x2000>;
-> +			reg-names = "cam_sys",
-> +					"cam_uni",
-> +					"cam_a",
-> +					"cam_b",
-> +					"cam_c";
-> +			interrupts = <GIC_SPI 253 IRQ_TYPE_LEVEL_LOW>,
-> +					<GIC_SPI 254 IRQ_TYPE_LEVEL_LOW>,
-> +					<GIC_SPI 255 IRQ_TYPE_LEVEL_LOW>,
-> +					<GIC_SPI 256 IRQ_TYPE_LEVEL_LOW>;
-> +			interrupt-names = "cam_uni",
-> +					"cam_a",
-> +					"cam_b",
-> +					"cam_c";
-> +			iommus = <&iommu M4U_PORT_CAM_IMGO>;
-> +			clocks = <&camsys CLK_CAM_CAM>,
-> +					<&camsys CLK_CAM_CAMTG>;
-> +			clock-names = "camsys_cam_cgpdn",
-> +					"camsys_camtg_cgpdn";
-> +			mediatek,larb = <&larb3>,
-> +					<&larb6>;
-> +			power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-> +			mediatek,scp = <&scp>;
-> +		};
-> -- 
-> 2.18.0
+> On Wed, Aug 21, 2019 at 08:46:47AM -0400, Nicolas Pitre wrote:
 > 
+> > One solution for drastically reducing the effective export surface is to 
+> > have CONFIG_TRIM_UNUSED_KSYMS=y. This is more extreme than symbol 
+> > namespace, but might be worth mentioning nevertheless.
+> 
+> Oh that's amazing, I never noticed that feature.  That is a nice thing,
+> thanks for pointing it out.
+
+For those interested, this feature was demonstrated with numbers here:
+
+https://lwn.net/Articles/746780/
+
+
+Nicolas
 
 _______________________________________________
 Linux-mediatek mailing list
