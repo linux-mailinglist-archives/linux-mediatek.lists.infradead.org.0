@@ -2,76 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 62C4F97A49
-	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 15:05:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53F3C97A6E
+	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 15:12:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=L0dLPYHCnD1RIS1tAGgFe2HufsQ1eEeQHNWILUlznk0=; b=HL76W7hQp3JJ7V
-	zSf3I1R9KOJ7ZPO3z2bUmP6wzWynjagyD/vUisBh4X39MZKSo9NFw1GrdVoSdxRzP87rO/0QjAGCz
-	YXV0juJVlmJpGcjp2/00UvxLpfSx5bX932I2qDcFaovDh55kCZzSPn3zFJYZ0tpui4RHUlGGtEFgv
-	Y0R7yg4MEG6k1Uxh7biMk7v7KFCfx3EIzUMNYeF1GOlh78/tcdTpTjk/G6LlfLj0Rcod1h0bJL7b5
-	hzYZHfdCoWjuSOECetet7cN1uo/zjTuYgRKrA8yIXH9YRkJ4ABlzwJ+Pw8a+XEPfRNevRK9Y+Bbi/
-	FLB7ffDd+IdyKiMpdclg==;
+	List-Owner; bh=Ilmemdl+LZktz2sv4Pdrkm/TfGt5XRSPjO00oYuHqiA=; b=QIDIs4ke0KUioQ
+	saoRyTt6jzwLUSF4YzF5ca9Mc5iF5z7GkOK0+QIAmzopkMlXUb1YEWV6cD9bTy/iifWwmx4norS9P
+	Awx0AkPUn8rXxb8f3RyoReKEMN+rlj7C1EwJOujjWfbeKqmQY4gQ8cRzOKocTB8VAE2TdoxTensGe
+	sqaBlqtl0hp8lIYOZ3Ih4g3PBi9iSjzaKoKljMXHTEJbZ3XpK3vKoedQiiTMhOGoBrm8EYedBxfE5
+	+gJZNljdjfuzg2W6we23FwDHPzG++j9W52NTrmk0aTv5NA58L8SyOBMl3DaDkOWnjY94KteXt42fl
+	UMasXPmiD9jXHpCXeYSQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0QIv-0000Jy-Pm; Wed, 21 Aug 2019 13:05:33 +0000
-Received: from pb-sasl-trial2.pobox.com ([64.147.108.86])
+	id 1i0QPR-0003Bh-It; Wed, 21 Aug 2019 13:12:17 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0QIp-0000Ih-A0; Wed, 21 Aug 2019 13:05:29 +0000
-Received: from pb-sasl-trial2.pobox.com (localhost.local [127.0.0.1])
- by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 61EBA1840C;
- Wed, 21 Aug 2019 09:05:22 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=date:from:to
- :cc:subject:in-reply-to:message-id:references:mime-version
- :content-type; s=sasl; bh=8OJtyeNZ9sCoH4BVmhH8yW8Bvtc=; b=c1PME/
- SJzr4aFk09ikfKp1bezTdBSw1zwNS3hrdNtoOqlYZR7yA8XltYBalyFTKDMKbjP0
- N65/OlgmcPY1jK1+z15I44JCS9KM0+7x8/h7bHxlIX4/NT+azCbj5YqM8+gMtbTp
- uXIkLMunbK+ZmjnijFcehZ1TUdsCiepGgzujk=
-Received: from pb-smtp1.nyi.icgroup.com (pb-smtp1.pobox.com [10.90.30.53])
- by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 3E97C1840B;
- Wed, 21 Aug 2019 09:05:22 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fluxnic.net;
- h=date:from:to:cc:subject:in-reply-to:message-id:references:mime-version:content-type;
- s=2016-12.pbsmtp; bh=V25/yKN9jlMjRVCEXCSuKB+Re2Fd96dfPM01Z+/Jqwg=;
- b=u8QzXJ4jPt13KgiTpgzojpKoWuF5UnQufQIrmIF1V1GDjy6AYPilfpABHbSnzJ1cD46DKsQ+JPEMRPYBtPL2vVu09z8iN4C6o7z6Kg63KVX0atNi1l+zBI4OCk5fsPv9COf6vzghotcslIvOnBR1dt1b3O/PjBpbMEOUK+25Eh8=
-Received: from yoda.home (unknown [24.203.50.76])
+ id 1i0QPL-0003AM-1i; Wed, 21 Aug 2019 13:12:12 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=3W7OIKWVX6WxkwIdgHyI0+xyh1dbNAC13qBYkWnh7Cg=; b=tD8p42oCitFiAd2hUZ+Uji3Q1
+ UTEhTTlglHM2ajMFxM1/ed7h1OwiAn6VBoxeCJpSpFu6TxU9vl6pO5FOLDo/8pBOscWUF4+erLsKE
+ DVD9OKxaoc74XOPq06NOx3kB+TM8L6TWfESV6B5H1lteMlHNTmc3MCUI+2FfmvgNUaDzqWbmfsyPU
+ NHXcDSCT88u0KJbPatcwVHSfJyJm2OV7aeB5Z68YOUtMczSrgcW8TMpwCa1uRyvnXMKRjiHnnIdMW
+ ERlrM+sksfjGoxMgu5/kM55o7iHgBv4Zy6FJTkno4qJN8Y21+XQlvmG0At3fEOWf++QvOvmrkFKBo
+ hbmWgU+DA==;
+Received: from j217100.upc-j.chello.nl ([24.132.217.100]
+ helo=noisy.programming.kicks-ass.net)
+ by merlin.infradead.org with esmtpsa (Exim 4.92 #3 (Red Hat Linux))
+ id 1i0QOy-00077n-17; Wed, 21 Aug 2019 13:11:49 +0000
+Received: from hirez.programming.kicks-ass.net
+ (hirez.programming.kicks-ass.net [192.168.1.225])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by pb-smtp1.pobox.com (Postfix) with ESMTPSA id 0BFFA157B47;
- Wed, 21 Aug 2019 08:46:49 -0400 (EDT)
-Received: from xanadu.home (xanadu.home [192.168.2.2])
- by yoda.home (Postfix) with ESMTPSA id 0CE5A2DA023B;
- Wed, 21 Aug 2019 08:46:48 -0400 (EDT)
-Date: Wed, 21 Aug 2019 08:46:47 -0400 (EDT)
-From: Nicolas Pitre <nico@fluxnic.net>
+ (Client did not present a certificate)
+ by noisy.programming.kicks-ass.net (Postfix) with ESMTPS id 49C5330759B;
+ Wed, 21 Aug 2019 15:11:09 +0200 (CEST)
+Received: by hirez.programming.kicks-ass.net (Postfix, from userid 1000)
+ id BF01120F0D378; Wed, 21 Aug 2019 15:11:40 +0200 (CEST)
+Date: Wed, 21 Aug 2019 15:11:40 +0200
+From: Peter Zijlstra <peterz@infradead.org>
 To: Matthias Maennich <maennich@google.com>
 Subject: Re: [PATCH v3 00/11] Symbol Namespaces
-In-Reply-To: <20190821114955.12788-1-maennich@google.com>
-Message-ID: <nycvar.YSQ.7.76.1908210840490.19480@knanqh.ubzr>
+Message-ID: <20190821131140.GC2349@hirez.programming.kicks-ass.net>
 References: <20190813121733.52480-1-maennich@google.com>
  <20190821114955.12788-1-maennich@google.com>
-User-Agent: Alpine 2.21 (LFD 202 2017-01-01)
 MIME-Version: 1.0
-X-Pobox-Relay-ID: BDE512AC-C411-11E9-A63C-46F8B7964D18-78420484!pb-smtp1.pobox.com
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_060527_584235_B033F56C 
-X-CRM114-Status: GOOD (  10.03  )
-X-Spam-Score: -0.7 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [64.147.108.86 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+Content-Disposition: inline
+In-Reply-To: <20190821114955.12788-1-maennich@google.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,18 +86,18 @@ Cc: kstewart@linuxfoundation.org, oneukum@suse.com,
  stern@rowland.harvard.edu, kernel-team@android.com,
  Ingo Molnar <mingo@kernel.org>, linux-rtc@vger.kernel.org,
  Gleb Fotengauer-Malinovskiy <glebfm@altlinux.org>, sspatil@google.com,
- linux-watchdog@vger.kernel.org, Arnd Bergmann <arnd@arndb.de>,
- linux-kbuild@vger.kernel.org, Jani Nikula <jani.nikula@intel.com>,
- linux-arm-msm@vger.kernel.org, jeyu@kernel.org,
- Dan Williams <dan.j.williams@intel.com>, Julia Lawall <julia.lawall@lip6.fr>,
- linux-m68k@lists.linux-m68k.org, linux-mediatek@lists.infradead.org,
- linux-rpi-kernel@lists.infradead.org, linux-tegra@vger.kernel.org,
- linux-amlogic@lists.infradead.org, tglx@linutronix.de, maco@android.com,
- linux-arm-kernel@lists.infradead.org, Adrian Reber <adrian@lisas.de>,
- linux-hwmon@vger.kernel.org, michal.lkml@markovi.net,
- Ard Biesheuvel <ard.biesheuvel@linaro.org>, Andrew Jeffery <andrew@aj.id.au>,
- gregkh@linuxfoundation.org, linux-usb@vger.kernel.org,
- Alexey Gladkov <gladkov.alexey@gmail.com>, linux-kernel@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, arnd@arndb.de, linux-kbuild@vger.kernel.org,
+ Jani Nikula <jani.nikula@intel.com>, linux-arm-msm@vger.kernel.org,
+ jeyu@kernel.org, Dan Williams <dan.j.williams@intel.com>,
+ Julia Lawall <julia.lawall@lip6.fr>, linux-m68k@lists.linux-m68k.org,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ tglx@linutronix.de, maco@android.com, linux-arm-kernel@lists.infradead.org,
+ Adrian Reber <adrian@lisas.de>, linux-hwmon@vger.kernel.org,
+ michal.lkml@markovi.net, Ard Biesheuvel <ard.biesheuvel@linaro.org>,
+ Andrew Jeffery <andrew@aj.id.au>, gregkh@linuxfoundation.org,
+ linux-usb@vger.kernel.org, Alexey Gladkov <gladkov.alexey@gmail.com>,
+ linux-kernel@vger.kernel.org, Nicolas Pitre <nico@fluxnic.net>,
  Patrick Bellasi <patrick.bellasi@arm.com>, Richard Guy Briggs <rgb@redhat.com>,
  maco@google.com, Pengutronix Kernel Team <kernel@pengutronix.de>,
  pombredanne@nexb.com, Tejun Heo <tj@kernel.org>,
@@ -123,21 +108,44 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 21 Aug 2019, Matthias Maennich wrote:
-
+On Wed, Aug 21, 2019 at 12:49:15PM +0100, Matthias Maennich wrote:
 > As of Linux 5.3-rc5, there are 31205 [1] exported symbols in the kernel.
 > That is a growth of roughly 1000 symbols since 4.17 (30206 [2]).  There
 > seems to be some consensus amongst kernel devs that the export surface
 > is too large, and hard to reason about.
+> 
+> Generally, these symbols fall in one of these categories:
+> 1) Symbols actually meant for drivers
+> 2) Symbols that are only exported because functionality is split over
+>    multiple modules, yet they really shouldn't be used by modules outside
+>    of their own subsystem
+> 3) Symbols really only meant for in-tree use
+> 
+> When module developers try to upstream their code, it regularly turns
+> out that they are using exported symbols that they really shouldn't be
+> using. This problem is even bigger for drivers that are currently
+> out-of-tree, which may be using many symbols that they shouldn't be
+> using, and that break when those symbols are removed or modified.
+> 
+> This patch allows subsystem maintainers to partition their exported
+> symbols into separate namespaces, and module authors to import such
+> namespaces only when needed.
+> 
+> This allows subsystem maintainers to more easily limit availability of
+> these namespaced symbols to other parts of the kernel. It can also be
+> used to partition the set of exported symbols for documentation
+> purposes; for example, a set of symbols that is really only used for
+> debugging could be in a "SUBSYSTEM_DEBUG" namespace.
 
-This is good work.
+I'm missing how one can prohibit these random out of tree modules from
+doing MODULE_IMPORT_NS().
 
-One solution for drastically reducing the effective export surface is to 
-have CONFIG_TRIM_UNUSED_KSYMS=y. This is more extreme than symbol 
-namespace, but might be worth mentioning nevertheless.
+That is; suppose I stick all the preempt_notifier symbols in a KVM
+namespace, how do I enforce no out-of-tree modules ever do
+MODULE_IMPORT_NS(KVM) and gain access?
 
-
-Nicolas
+(the above would basically break virtualbox, which I knows uses preempt
+notifiers too, but I don't give a rats arse about that)
 
 _______________________________________________
 Linux-mediatek mailing list
