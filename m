@@ -2,77 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9F6C9985E3
-	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 22:48:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 65EA89863D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 23:06:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=s+uw4L/4ZqfjZgyOgpK+EqXdGoCmrP8X+UjVoPVkjh0=; b=OcV1+BDKg62yh4
-	/H2u7kDu+fH2sGBb65tcNxyBSgDRcGvOz9MNpW8jdvKRCvSkNbqJBeln5pYsZBmmA0B1veLVnWXmA
-	EPf/8cNvFvXulB8d0D9Ny7YNwz7zKsWIr751wTOaQC1W4jQ58JKTrZ0O2b6fk/GHlp31e9CHLDODS
-	lXTspDUM4jcAqqGF35L5YKDqBauwkuIOrpgTSnLx1bkPTRZKubWQZs3CU4jPtT6B0U/vwJeqNlY7I
-	woCmzNQG2lwpz7+OJ6lMroU/uApx22CuMSY7BOpxV4nUM78f8etfyeHzQwQe6U+0nN7em820Xu26E
-	qZwSgBF2eqyoN9t4qjkA==;
+	List-Owner; bh=yg1uoVeUt6cdJao4gO9sL8XTiZGP0AWztDiOkiUxamc=; b=FAqi8Isz9mBV7b
+	qU/RQSyTmPLfDERhtJdBRfhrO5RDUQy/dO4zc+hgYZrSn2FmC/ePcDtRGnDltWr4hGeuEd7rnAHqW
+	cWM8DXnmPu0MB2nXfKzO/qV9NdFDVqQ7Ez3Kut64hRzfwfoWdDC/lPzYZMeKdwGyFZfB59wwslnL8
+	BebaVuk8XnHo320ae5i380YDv/wqqd7bVIii52uT7TY0l/9yYPRSWYx9rsuw2fQa/OuLV9Du4AIUa
+	UufhUJ2a1Shy/6HKcH+/8EtlLC5DZtWZ8V09KtoybQ/+i4Nuywu2XzMLvdeYydfBg2hGuq2y/QEtq
+	oYA2wXvYW+p1ztU+haUQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0XWn-0001dv-5S; Wed, 21 Aug 2019 20:48:21 +0000
-Received: from pb-sasl-trial2.pobox.com ([64.147.108.86])
+	id 1i0Xnt-0003hm-O7; Wed, 21 Aug 2019 21:06:01 +0000
+Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0XWi-0001ck-PC; Wed, 21 Aug 2019 20:48:18 +0000
-Received: from pb-sasl-trial2.pobox.com (localhost.local [127.0.0.1])
- by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 9CC8E19709;
- Wed, 21 Aug 2019 16:48:12 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=date:from:to
- :cc:subject:in-reply-to:message-id:references:mime-version
- :content-type; s=sasl; bh=gHPWV6ywNNDw4FaVfFzykWXQZaE=; b=coNCGr
- qwt7i3R4tUyQi0ZhT3/3VIDhWBBLTzAw70AivukbL9ghU9nPl7F0FIRPBuvKPbKw
- c7CalAaCzCWnkkCCcwbqy1o3zKk9TWKjPdhJsnfKwF9VQuO/B09UmksTxgYUz9wu
- bRu8C5k5LKc4Gf9x7hn/+DaQYD2aeK8p0IeXw=
-Received: from pb-smtp1.nyi.icgroup.com (pb-smtp1.pobox.com [10.90.30.53])
- by pb-sasl-trial2.pobox.com (Postfix) with ESMTP id 79D5119708;
- Wed, 21 Aug 2019 16:48:12 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fluxnic.net;
- h=date:from:to:cc:subject:in-reply-to:message-id:references:mime-version:content-type;
- s=2016-12.pbsmtp; bh=tGJUtEAORBsdDqaz81artd/xlpJm4+O0vI06mhjfh+c=;
- b=Bm6jH5TeJ8u7zHDr3U+j7uM4LAxY52cFgZwdS2EFFWXNFK9GQtn5eZUA1GzXW9KWEcBn6hCr6F+jjjS1njBtHu40IijCBy9feUsunydCJOnkBH26hfO8gr4uvy5QgPrfiAWE7p+UCt2+09N9I0cpH0M/jOvLnV1kk5DmQyr29ak=
-Received: from yoda.home (unknown [24.203.50.76])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by pb-smtp1.pobox.com (Postfix) with ESMTPSA id DB83015BE3C;
- Wed, 21 Aug 2019 16:48:11 -0400 (EDT)
-Received: from xanadu.home (xanadu.home [192.168.2.2])
- by yoda.home (Postfix) with ESMTPSA id E8EF12DA023B;
- Wed, 21 Aug 2019 16:48:10 -0400 (EDT)
-Date: Wed, 21 Aug 2019 16:48:10 -0400 (EDT)
-From: Nicolas Pitre <nico@fluxnic.net>
-To: Greg KH <gregkh@linuxfoundation.org>
-Subject: Re: [PATCH v3 00/11] Symbol Namespaces
-In-Reply-To: <20190821133737.GB4890@kroah.com>
-Message-ID: <nycvar.YSQ.7.76.1908211642050.19480@knanqh.ubzr>
-References: <20190813121733.52480-1-maennich@google.com>
- <20190821114955.12788-1-maennich@google.com>
- <nycvar.YSQ.7.76.1908210840490.19480@knanqh.ubzr>
- <20190821133737.GB4890@kroah.com>
-User-Agent: Alpine 2.21 (LFD 202 2017-01-01)
+ id 1i0Xnk-0003Zd-Gt; Wed, 21 Aug 2019 21:05:53 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+ s=20171124; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version
+ :References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=Rvl93iZiPwt6hyRyRBwILS2dFDVCroIMTnNqvpC9gZw=; b=W9vKw3GJXbKV+1lnFbQkx1pY2h
+ osciFrPjrzqF0VqJwWR/ARcXaSDlGH2jBuMD24p2yBtIsc7rIeDjk7Wv6Y9Sk4REyO8Xa/IAQu6bQ
+ unGXHCzWNkd2256rkPXDdW7jyiDco8+aTOYrT1fcpfPq6FaolgPrtC44teDt/qPz+s1Y=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
+ (envelope-from <andrew@lunn.ch>)
+ id 1i0XnM-00081a-I4; Wed, 21 Aug 2019 23:05:28 +0200
+Date: Wed, 21 Aug 2019 23:05:28 +0200
+From: Andrew Lunn <andrew@lunn.ch>
+To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
+Subject: Re: [PATCH net-next v2 0/3] net: dsa: mt7530: Convert to PHYLINK and
+ add support for port 5
+Message-ID: <20190821210528.GA29618@lunn.ch>
+References: <20190821144547.15113-1-opensource@vdorst.com>
 MIME-Version: 1.0
-X-Pobox-Relay-ID: FD6832B8-C454-11E9-A575-46F8B7964D18-78420484!pb-smtp1.pobox.com
+Content-Disposition: inline
+In-Reply-To: <20190821144547.15113-1-opensource@vdorst.com>
+User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_134816_994507_AC9F5744 
-X-CRM114-Status: GOOD (  11.31  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190821_140552_715898_EC2CE72F 
+X-CRM114-Status: UNSURE (   8.26  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [64.147.108.86 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [185.16.172.187 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -85,63 +76,35 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kstewart@linuxfoundation.org, oneukum@suse.com,
- linux-aspeed@lists.ozlabs.org, usb-storage@lists.one-eyed-alien.net,
- Toru Komatsu <k0ma@utam0k.jp>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- David Howells <dhowells@redhat.com>, yamada.masahiro@socionext.com,
- Will Deacon <will@kernel.org>, patches@opensource.cirrus.com,
- Michael Ellerman <mpe@ellerman.id.au>, hpa@zytor.com, joel@joelfernandes.org,
- bcm-kernel-feedback-list@broadcom.com, sam@ravnborg.org, cocci@systeme.lip6.fr,
- linux-arch@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- Benjamin Fair <benjaminfair@google.com>, linux-scsi@vger.kernel.org,
- Fabio Estevam <festevam@gmail.com>, openbmc@lists.ozlabs.org, x86@kernel.org,
- lucas.de.marchi@gmail.com, Nancy Yuen <yuenn@google.com>, mingo@redhat.com,
- geert@linux-m68k.org, NXP Linux Team <linux-imx@nxp.com>,
- Johannes Weiner <hannes@cmpxchg.org>, Patrick Venture <venture@google.com>,
- stern@rowland.harvard.edu, kernel-team@android.com,
- Dan Williams <dan.j.williams@intel.com>, Ingo Molnar <mingo@kernel.org>,
- linux-rtc@vger.kernel.org, Gleb Fotengauer-Malinovskiy <glebfm@altlinux.org>,
- sspatil@google.com, linux-watchdog@vger.kernel.org,
- Arnd Bergmann <arnd@arndb.de>, linux-kbuild@vger.kernel.org,
- Jani Nikula <jani.nikula@intel.com>, linux-arm-msm@vger.kernel.org,
- jeyu@kernel.org, Matthias Maennich <maennich@google.com>,
- Julia Lawall <julia.lawall@lip6.fr>, linux-m68k@lists.linux-m68k.org,
- linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
- linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- tglx@linutronix.de, maco@android.com, linux-arm-kernel@lists.infradead.org,
- Adrian Reber <adrian@lisas.de>, linux-hwmon@vger.kernel.org,
- michal.lkml@markovi.net, Ard Biesheuvel <ard.biesheuvel@linaro.org>,
- Andrew Jeffery <andrew@aj.id.au>, Alexey Gladkov <gladkov.alexey@gmail.com>,
- linux-usb@vger.kernel.org, linux-stm32@st-md-mailman.stormreply.com,
- linux-kernel@vger.kernel.org, Patrick Bellasi <patrick.bellasi@arm.com>,
- Richard Guy Briggs <rgb@redhat.com>, maco@google.com,
- Pengutronix Kernel Team <kernel@pengutronix.de>, pombredanne@nexb.com,
- Tejun Heo <tj@kernel.org>, Andrew Morton <akpm@linux-foundation.org>,
- "David S. Miller" <davem@davemloft.net>, linux-modules@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Florian Fainelli <f.fainelli@gmail.com>,
+ Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
+ Sean Wang <sean.wang@mediatek.com>, linux-mips@vger.kernel.org,
+ "David S . Miller" <davem@davemloft.net>, linux-mediatek@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Vivien Didelot <vivien.didelot@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 21 Aug 2019, Greg KH wrote:
+On Wed, Aug 21, 2019 at 04:45:44PM +0200, Ren=E9 van Dorst wrote:
+> 1. net: dsa: mt7530: Convert to PHYLINK API
+>    This patch converts mt7530 to PHYLINK API.
+> 2. dt-bindings: net: dsa: mt7530: Add support for port 5
+> 3. net: dsa: mt7530: Add support for port 5
+>    These 2 patches adding support for port 5 of the switch.
+> =
 
-> On Wed, Aug 21, 2019 at 08:46:47AM -0400, Nicolas Pitre wrote:
-> 
-> > One solution for drastically reducing the effective export surface is to 
-> > have CONFIG_TRIM_UNUSED_KSYMS=y. This is more extreme than symbol 
-> > namespace, but might be worth mentioning nevertheless.
-> 
-> Oh that's amazing, I never noticed that feature.  That is a nice thing,
-> thanks for pointing it out.
+> v1->v2:
+>  * Mostly phylink improvements after review.
 
-For those interested, this feature was demonstrated with numbers here:
+Hi Ren=E9
 
-https://lwn.net/Articles/746780/
+You are addressing comments mostly from Russell King. It would of been
+good to Cc: him on the patchset.
 
-
-Nicolas
+Andrew
 
 _______________________________________________
 Linux-mediatek mailing list
