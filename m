@@ -2,55 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 96484984BC
-	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 21:48:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6F77998568
+	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 22:18:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=R7HgTkae4ymaxtWG/G0M9SeK5WbUFz2/LeguEGw5MCU=; b=n2u4bHy79VuYHe
-	BFZN0lgpqS061cqthkhTRxW7d5XUp6ITBb9OBVw1X9k1gprEkNcsOE7JeocEifbSVpM10Dyy/5wXT
-	ymEQ05vOohUAO8ALDW8rWcz9fTZxxEy7CAhxJgaT2oTGXuBmGiV+YtDh24Xd1a7hl6LyjMfu6E9ff
-	IfS5xPk2HoGzL6X8+JO0Jd/CErJjU25lG7heItzBHtng4zffTfRWkG0CK+WI0WdLlirYI1Ypl44KS
-	zl3BVARaJXn2eZvn4eMB4kikYVMfvutLaiHyTvnZRN2IH8ej1uS1m4IjdneE/xRIjLPZTvGPzjGaA
-	TqyWX/ax8k8E+5BsHDbg==;
+	List-Owner; bh=0dsfcE5s9QEyapHrfnqYRO10MW413yB/WBI5LvFQZZI=; b=qDUM+W/A+bb4GB
+	poPj5R00lwAQp5qKCk2BFTGyIpAOA8DrhEn1iOJRgiTqt+SBPOJ9Cg33K2A9wKf5NP191ucp6YHLL
+	DmvQGdlujCwd5o7PL7ive+PytFjLASUZAgj7HXI06/EGVeurWzmv/Xwtgc1UzUgkewGvu6FDN7DTP
+	dPqZIdz07VXVDgukSGAtUNRYHJTqrpIB9aNusAQkEyp/i8VjGitFAhau62fiYnHmlssM1s6r9TzOk
+	BPRWj3urawHFgA5cKC0+/pCmJaMRCJsk9/Mql9A7Idllo5Kj30rCSeolhRjyK6dQCmut2FsFgSVUm
+	QAhWKP74mH35ZlAQXs/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0WaM-0004wQ-Qv; Wed, 21 Aug 2019 19:47:58 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1i0X3U-0008Fa-AN; Wed, 21 Aug 2019 20:18:04 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0WaJ-0004vv-KY; Wed, 21 Aug 2019 19:47:57 +0000
-Received: by mail-ot1-f66.google.com with SMTP id f17so3226515otq.4;
- Wed, 21 Aug 2019 12:47:55 -0700 (PDT)
+ id 1i0X3Q-0008FA-IV; Wed, 21 Aug 2019 20:18:02 +0000
+Received: by mail-ot1-f67.google.com with SMTP id c7so3324138otp.1;
+ Wed, 21 Aug 2019 13:18:00 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=C8n3EGE8fCUkffxtiHztmM03n9mGmmnqa5eK5gkfx1M=;
- b=HzxStk3K+UTuXw7dXsQLxmem/V7kY5gJvGYvCv+H9aC0QWIVTrqTxPvE6wcz3t7GLS
- JoHSHQ4VXzEvLh8AnlNwS/vmf8dDehCNyGQ+3WD9mxvDfSUeR5XVLXA7r2XNnrOHB34J
- LUWLKcgSTaZNWm+J+FRRmdcN94r3NXpnOhxI3OCIGjVomHkCdV4Y6yx7Jl0BKefFqwxH
- xpLFjbDjR3YwNwenTwFkh2u52QGZ/7R9lryBSXZD8TRrY7fAynitaQ5hnyYbFXmWGpfS
- J6ZdN4zF047iI1DJn4silAJoNanN1TdNLOdxBoSmXvGhwMF/Bgmoi7K5CkkXqYsM5eJ9
- 0rbw==
-X-Gm-Message-State: APjAAAVOxdoLK9cLnsZF74wJP7JhgvqJY9OXpwztDRQUoT4oS1ZpVFas
- 97aslX29TKHXrIm2FZuKVQ==
-X-Google-Smtp-Source: APXvYqyPBOjbUzYxabF2PFOi+Zm6Ej8OuiIFwmlwoCpn1ofT9KyPT9tlEKykj0/WSoltvPEeikfYyg==
-X-Received: by 2002:a05:6830:4da:: with SMTP id
- s26mr26224158otd.223.1566416874320; 
- Wed, 21 Aug 2019 12:47:54 -0700 (PDT)
+ bh=kOj/75oPZVAZoa0T6jbFRSVm/CkUv/wNYDVG2AOMBQE=;
+ b=sKViMQwRnXH8WLHyiPrCtxSfAu1yz19+uMRubxQowdmqdQR2qmuUDsb9NuEIruMZit
+ 0Q8R/yFC2igOLKwjhfBzsjgk19CbMDhmj/JVBst/QTE9sP++mGYRGRrvB5lnFndRhXqO
+ lRO9p/YP40R4aqWNr90VJJZzvDYVFJJGwZw3j+22zG+bOv2u9v3zJ6oRdHdwasjF8nMT
+ IkdGG31m3y1Mi7YNSuBXU9hwbNnNaiyUJtbAfwysS4emjGNbC1a+wo05TJ5lHmDJHpIn
+ WOFsP2sa/1xHcq9P6UrqOYus0w/XrzZUuspW/7RJlb/a4ZtTYEtPcYfiwDE3VvT9CUzz
+ ZXSg==
+X-Gm-Message-State: APjAAAV83bDitjGzfBd1b54GGqCBoOZqFmL6qN1p7zJJFdFiLMPjOPIs
+ sAsO/kwHNaNEdO979RKsRQ==
+X-Google-Smtp-Source: APXvYqyhT+fZw8+BA2kLFIhmDj2KcF/sfupiFmLzB/S7nIb5Y2pzAjhkdaqKQNKE2PeIRMOJepKYUg==
+X-Received: by 2002:a9d:1ca3:: with SMTP id l35mr27086557ota.106.1566418679785; 
+ Wed, 21 Aug 2019 13:17:59 -0700 (PDT)
 Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id z16sm3154984oic.10.2019.08.21.12.47.53
+ by smtp.gmail.com with ESMTPSA id z16sm3179143oic.10.2019.08.21.13.17.58
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 21 Aug 2019 12:47:53 -0700 (PDT)
-Date: Wed, 21 Aug 2019 14:47:52 -0500
+ Wed, 21 Aug 2019 13:17:59 -0700 (PDT)
+Date: Wed, 21 Aug 2019 15:17:58 -0500
 From: Rob Herring <robh@kernel.org>
 To: Jungo Lin <jungo.lin@mediatek.com>
 Subject: Re: [RFC,v4,1/4] media: dt-bindings: mt8183: Added camera ISP Pass 1
-Message-ID: <20190821194752.GA15270@bogus>
+Message-ID: <20190821201758.GB15270@bogus>
 References: <jungo.lin@mediatek.com>
  <20190807124803.29884-1-jungo.lin@mediatek.com>
  <20190807124803.29884-2-jungo.lin@mediatek.com>
@@ -59,15 +58,15 @@ Content-Disposition: inline
 In-Reply-To: <20190807124803.29884-2-jungo.lin@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_124755_678342_2177EAFA 
-X-CRM114-Status: GOOD (  18.18  )
-X-Spam-Score: 0.8 (/)
+X-CRM114-CacheID: sfid-20190821_131800_608723_4CCCB5E5 
+X-CRM114-Status: GOOD (  17.85  )
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.8 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -76,9 +75,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -168,10 +164,10 @@ On Wed, Aug 07, 2019 at 08:48:00PM +0800, Jungo Lin wrote:
 > +SoC specific DT entry:
 > +
 > +		camisp: camisp@1a000000 {
+
+Also, you can remove 2 levels of indentation here.
+
 > +			compatible = "mediatek,mt8183-camisp", "syscon";
-
-syscon doesn't seem appropriate nor is it documented.
-
 > +			reg = <0 0x1a000000 0 0x1000>,
 > +					<0 0x1a003000 0 0x1000>,
 > +					<0 0x1a004000 0 0x2000>,
