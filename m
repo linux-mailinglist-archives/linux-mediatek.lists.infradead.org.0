@@ -2,70 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4E8E697EA7
-	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 17:26:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 38EBD97EC2
+	for <lists+linux-mediatek@lfdr.de>; Wed, 21 Aug 2019 17:34:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TwVY+axDoWmfqAUTZFaXzLVBfFGP0n2F7ekNNhNFtps=; b=p53uP7NAAGWgfa
-	1X9xa//lbStKtzWZiuR03+a/RUK4XtjufrYFSqirXsTj0kLnCJ36Jg/atvFZPnfMdgyuaKbFlim7k
-	hwx67TysC0NRw64O6Fm3+z7S9djVdv4FHKlw0z0ij1KUma+plPVo+SWb9lSqlYmB19Sjy9PXBsSnX
-	JNzAmoAHVKPnN1Vom2b2BC0kT7L7Wybq7wic0FliW9WgaRR1v00jZj3g/MSis7xwRYE8PRrpDFOFd
-	RYoB44A72njy984RbAjSJBQOh61vISAyT3RWMie7WMazm//pufGZ2VK2KpaySqnoAA8lXY8Jq6uwK
-	WCRRTHZ8lOna5b0MsGIg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=tnEhbj5nGA2+m+IZz1LeuiRRLuV7LFpvto3lXzRN9hs=; b=vBFKE/p9eJzhRq4RGQKgfYsds
+	ToFS1z+YEWJ2YljZVEe4YbdE8pZ5AI6LR9bsxS4KXzWHZ7Gdz+kPGHKajSmgPPtddX2k6oGk53zHM
+	DJb8hVa+5uqmRk/hu5TI+YwdU0HgH9uJ6hVTN2K8CLvZmnHl+fy0pxV0c/Nhz/8W0yOoPiZCl5tjg
+	A3DX7etkvikBxYjWfybYKzPRYD0YTGXACNQASx1qWmdgORLdr1dwzvPA4CimwjfP5LDUif25UwLVa
+	4iNphcJQuejbYNuKsTTQFAfigrEE3OV2Wx7zfsWQhM/3ltd1W4kWT+xPZiuJtgBoveofZrCMQLmK/
+	vkTwYgelg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0SV3-0002OY-VH; Wed, 21 Aug 2019 15:26:14 +0000
-Received: from mail.kernel.org ([198.145.29.99])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0SUq-0002EG-CJ; Wed, 21 Aug 2019 15:26:01 +0000
-Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id CED6D206BA;
- Wed, 21 Aug 2019 15:25:56 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566401160;
- bh=NFr0/nY3IfPKUVlKWEhZAqr+dzWcs/Y2p7eY45qm4Bs=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=Vx3lNhdbRokT/r8unMb1miHNxu9JN9NYu+yPM5e+d2LRwW3AGqFtGETXG7VnK1Rno
- rwhPd99dPfgCZlkLeur4F2jSZAS09a9CQm0zjp5fGWWUdpUfDIblVXpp6dtG0i2LnH
- PFbPOvk9DZnA0p7rlzFDMc2c1v17Q08ToAhdHSEk=
-Date: Wed, 21 Aug 2019 16:25:54 +0100
-From: Will Deacon <will@kernel.org>
-To: Yong Wu <yong.wu@mediatek.com>
-Subject: Re: [PATCH v10 08/23] iommu/io-pgtable-arm-v7s: Rename the quirk
- from MTK_4GB to MTK_EXT
-Message-ID: <20190821152553.r6mdhucvuovq4xdk@willie-the-truck>
+	id 1i0SdK-0005tQ-LA; Wed, 21 Aug 2019 15:34:46 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1i0Sd9-0005jj-Mb; Wed, 21 Aug 2019 15:34:37 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id BB655337;
+ Wed, 21 Aug 2019 08:34:31 -0700 (PDT)
+Received: from [10.1.197.57] (e110467-lin.cambridge.arm.com [10.1.197.57])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id E11F53F718;
+ Wed, 21 Aug 2019 08:34:28 -0700 (PDT)
+Subject: Re: [PATCH v10 09/23] iommu/io-pgtable-arm-v7s: Extend to support
+ PA[33:32] for MediaTek
+To: Will Deacon <will@kernel.org>, Yong Wu <yong.wu@mediatek.com>
 References: <1566395606-7975-1-git-send-email-yong.wu@mediatek.com>
- <1566395606-7975-9-git-send-email-yong.wu@mediatek.com>
+ <1566395606-7975-10-git-send-email-yong.wu@mediatek.com>
+ <20190821152448.qmoqjh5zznfpdi6n@willie-the-truck>
+From: Robin Murphy <robin.murphy@arm.com>
+Message-ID: <22a79977-5074-7af1-97b8-8a3e549b23c1@arm.com>
+Date: Wed, 21 Aug 2019 16:34:27 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1566395606-7975-9-git-send-email-yong.wu@mediatek.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
+In-Reply-To: <20190821152448.qmoqjh5zznfpdi6n@willie-the-truck>
+Content-Language: en-GB
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_082600_431805_8CFE7874 
-X-CRM114-Status: GOOD (  12.20  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190821_083435_783429_3385A0E0 
+X-CRM114-Status: GOOD (  20.85  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,29 +71,55 @@ Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
  iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
  linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
  ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Aug 21, 2019 at 09:53:11PM +0800, Yong Wu wrote:
-> In previous mt2712/mt8173, MediaTek extend the v7s to support 4GB dram.
-> But in the latest mt8183, We extend it to support the PA up to 34bit.
-> Then the "MTK_4GB" name is not so fit, This patch only change the quirk
-> name to "MTK_EXT".
+On 21/08/2019 16:24, Will Deacon wrote:
+> On Wed, Aug 21, 2019 at 09:53:12PM +0800, Yong Wu wrote:
+>> MediaTek extend the arm v7s descriptor to support up to 34 bits PA where
+>> the bit32 and bit33 are encoded in the bit9 and bit4 of the PTE
+>> respectively. Meanwhile the iova still is 32bits.
+>>
+>> Regarding whether the pagetable address could be over 4GB, the mt8183
+>> support it while the previous mt8173 don't, thus keep it as is.
+>>
+>> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+>> ---
+>>   drivers/iommu/io-pgtable-arm-v7s.c | 32 +++++++++++++++++++++++++-------
+>>   include/linux/io-pgtable.h         |  7 +++----
+>>   2 files changed, 28 insertions(+), 11 deletions(-)
 > 
-> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> ---
->  drivers/iommu/io-pgtable-arm-v7s.c | 6 +++---
->  drivers/iommu/mtk_iommu.c          | 2 +-
->  include/linux/io-pgtable.h         | 4 ++--
->  3 files changed, 6 insertions(+), 6 deletions(-)
+> [...]
+> 
+>> @@ -731,7 +747,9 @@ static struct io_pgtable *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+>>   {
+>>   	struct arm_v7s_io_pgtable *data;
+>>   
+>> -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+>> +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+>> +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+>> +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+> 
+> Please can you instead change arm_v7s_alloc_pgtable() so that it allows an
+> ias of up to 34 when the IO_PGTABLE_QUIRK_ARM_MTK_EXT is set?
 
-Acked-by: Will Deacon <will@kernel.org>
+You mean oas, right? I believe the hardware *does* actually support a 
+32-bit ias as well, but we shouldn't pretend to support that while 
+__arm_v7s_alloc_table() still only knows how to allocate normal-sized 
+tables.
 
-Will
+Robin.
+
+> 
+> With that change:
+> 
+> Acked-by: Will Deacon <will@kernel.org>
+> 
+> Will
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
