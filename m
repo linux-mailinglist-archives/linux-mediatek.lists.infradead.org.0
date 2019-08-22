@@ -2,72 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 41C099905E
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 12:08:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5A5C49906A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 12:09:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zknLrORh2NiOH7zNDvEzb+1CBNNn3pecFNP6SIr2oDs=; b=LIk/Jrejj6qrL2
-	VQincRNoXaqZM1DjCcTzJDH0Zz6Rm7KFn2L5Xo9Y1HDsg5Pm4rntaASWOSl5gM9421yu6xrxurbY8
-	JiVzL/o7FKjXNlRRwdvZx9n2DbkcE2Yql9Dyp1X70a0rTvHevU58XujTo0P2vjz5Hu0Yy7R+xlblU
-	d8p8Ibr9T4JE6Wh+DfnsYsH6DWtjOX4wXkchAhsJ7f2HZcp4helUHEFnNN+5n3TUlKhxcil0hU0D1
-	Bb551sHp1KCk2MKhFPuBBGMkTohbM/PRtYUwmG00jFA8p4RockqMGrN8ZrDEscA8PivyEsext9SDy
-	mPTVk1mxQrpWF53rbzdQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=c4wG+6uX7G2sk6ed6i3gXzwUaPv1yBxo61uitcsBUUI=; b=cTd15OstbwQbmnjHnRpISWLbP
+	yy+qLC0gG6ge5E+srhhrWjMgUTxFKHVInEK0S0oMZjhMaFk4bR1nW6t4RKtty1PwZXuoIMOiJHS0f
+	hFe0xl0Ff1Nl9/mPhkiIm8IJcyanX7hA0dO6eQvxIIO+/7o+bYmn2IWRQd+yRRGihSe3X3q50SBao
+	MXR9Bz5eTfVrD5MKs54+zasHBXRPfy4drCtgiBqkaXHiXIQVg9bmV2hFNBHcFk8Ia4F7vssAqYXR4
+	zQGt5B+4Da/L+LX2AEHdCpi5Jh5McUMAXZgVzXzQjkYDwpqIxRLAEQvrty0yzH9/eXJQk/5+Rktu9
+	3Hm6SupRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0k1D-0000Px-PH; Thu, 22 Aug 2019 10:08:35 +0000
-Received: from mail.kernel.org ([198.145.29.99])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0k0x-0000Dr-OH; Thu, 22 Aug 2019 10:08:21 +0000
-Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 211D4233FC;
- Thu, 22 Aug 2019 10:08:15 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566468499;
- bh=IzjFEWdPrIj2HDymvSmNUsqNwBoJqAI3BTqeibzDG/E=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=rYThi+h21fwi/S9wIORrQaUPUGMjIox00ZAy/cLNVxUJaz/6kvzvI6xPMv6isLnqL
- YbO4bbC9r60HoObsGkHAzUEccRwIz4Nx9WfgF3REGv09J7Q84lLWfcvFFw1Z4IIaE9
- poMHdFUTV0gAyjaHSpmHhHZrxiM+pV+B8wam3iuk=
-Date: Thu, 22 Aug 2019 11:08:13 +0100
-From: Will Deacon <will@kernel.org>
-To: Yong Wu <yong.wu@mediatek.com>
+	id 1i0k21-0000jp-Jz; Thu, 22 Aug 2019 10:09:25 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1i0k1k-0000Y8-37; Thu, 22 Aug 2019 10:09:09 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 3587F15A2;
+ Thu, 22 Aug 2019 03:09:07 -0700 (PDT)
+Received: from [192.168.1.123] (unknown [172.31.20.19])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id E13E43F246;
+ Thu, 22 Aug 2019 03:09:02 -0700 (PDT)
 Subject: Re: [PATCH v10 09/23] iommu/io-pgtable-arm-v7s: Extend to support
  PA[33:32] for MediaTek
-Message-ID: <20190822100812.ketlgxxu64cy2bsk@willie-the-truck>
+To: Yong Wu <yong.wu@mediatek.com>, Will Deacon <will@kernel.org>
 References: <1566395606-7975-1-git-send-email-yong.wu@mediatek.com>
  <1566395606-7975-10-git-send-email-yong.wu@mediatek.com>
  <20190821152448.qmoqjh5zznfpdi6n@willie-the-truck>
  <1566464186.11621.7.camel@mhfsdcap03>
+From: Robin Murphy <robin.murphy@arm.com>
+Message-ID: <10d5122d-3375-161b-9356-2ddfc1c835bd@arm.com>
+Date: Thu, 22 Aug 2019 11:08:58 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-Content-Disposition: inline
 In-Reply-To: <1566464186.11621.7.camel@mhfsdcap03>
-User-Agent: NeoMutt/20170113 (1.7.2)
+Content-Language: en-GB
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_030819_830689_A2C5853D 
-X-CRM114-Status: GOOD (  19.70  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190822_030908_223261_56CB337E 
+X-CRM114-Status: GOOD (  20.29  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,42 +72,41 @@ Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
  iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
  linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
  ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Aug 22, 2019 at 04:56:26PM +0800, Yong Wu wrote:
+On 2019-08-22 9:56 am, Yong Wu wrote:
 > On Wed, 2019-08-21 at 16:24 +0100, Will Deacon wrote:
-> > On Wed, Aug 21, 2019 at 09:53:12PM +0800, Yong Wu wrote:
-> > > MediaTek extend the arm v7s descriptor to support up to 34 bits PA where
-> > > the bit32 and bit33 are encoded in the bit9 and bit4 of the PTE
-> > > respectively. Meanwhile the iova still is 32bits.
-> > > 
-> > > Regarding whether the pagetable address could be over 4GB, the mt8183
-> > > support it while the previous mt8173 don't, thus keep it as is.
-> > > 
-> > > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> > > ---
-> > >  drivers/iommu/io-pgtable-arm-v7s.c | 32 +++++++++++++++++++++++++-------
-> > >  include/linux/io-pgtable.h         |  7 +++----
-> > >  2 files changed, 28 insertions(+), 11 deletions(-)
-> > 
-> > [...]
-> > 
-> > > @@ -731,7 +747,9 @@ static struct io_pgtable *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
-> > >  {
-> > >  	struct arm_v7s_io_pgtable *data;
-> > >  
-> > > -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
-> > > +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
-> > > +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
-> > > +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
-> > 
-> > Please can you instead change arm_v7s_alloc_pgtable() so that it allows an
-> > ias of up to 34 when the IO_PGTABLE_QUIRK_ARM_MTK_EXT is set?
+>> On Wed, Aug 21, 2019 at 09:53:12PM +0800, Yong Wu wrote:
+>>> MediaTek extend the arm v7s descriptor to support up to 34 bits PA where
+>>> the bit32 and bit33 are encoded in the bit9 and bit4 of the PTE
+>>> respectively. Meanwhile the iova still is 32bits.
+>>>
+>>> Regarding whether the pagetable address could be over 4GB, the mt8183
+>>> support it while the previous mt8173 don't, thus keep it as is.
+>>>
+>>> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+>>> ---
+>>>   drivers/iommu/io-pgtable-arm-v7s.c | 32 +++++++++++++++++++++++++-------
+>>>   include/linux/io-pgtable.h         |  7 +++----
+>>>   2 files changed, 28 insertions(+), 11 deletions(-)
+>>
+>> [...]
+>>
+>>> @@ -731,7 +747,9 @@ static struct io_pgtable *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+>>>   {
+>>>   	struct arm_v7s_io_pgtable *data;
+>>>   
+>>> -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+>>> +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+>>> +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+>>> +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+>>
+>> Please can you instead change arm_v7s_alloc_pgtable() so that it allows an
+>> ias of up to 34 when the IO_PGTABLE_QUIRK_ARM_MTK_EXT is set?
 > 
 > Here I only simply skip the oas checking for our case. then which way do
 > your prefer?  something like you commented before:?
@@ -134,30 +118,35 @@ On Thu, Aug 22, 2019 at 04:56:26PM +0800, Yong Wu wrote:
 > 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
 > 		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
 > 			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
-
-Isn't this always 32 for your IOMMUs?
-
 > 		else if (cfg->oas > 34)
 > 			return NULL;
 > 	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
 > 		return NULL;
 > 	}
 
-How about:
+All it should take is something like:
 
-	unsigned int oas_max = ARM_V7S_ADDR_BITS;
-
-	if (cfg->ias > ARM_V7S_ADDR_BITS)
+	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)
+		max_oas = 34;
+	else
+		max_oas = 32;
+	if (cfg->oas > max_oas)
 		return NULL;
 
-	if (IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT) &&
-	    cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)
-		oas_max = 34;
+or even just:
 
-	if (cfg->oas > oas_max)
+	if (cfg->oas > 32 ||
+	    (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT && cfg->oas > 34))
 		return NULL;
 
-Will
+(and if we prefer the latter style, perhaps we could introduce some kind 
+of "is_mtk_4gb()" helper to save on verbosity)
+
+We shouldn't need to care about the size of phys_addr_t either way - the 
+fact is that the MTK format can still encode up to 34 bits of PA 
+regardless of whether callers can actually pass addresses that large.
+
+Robin.
 
 _______________________________________________
 Linux-mediatek mailing list
