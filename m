@@ -2,57 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5E289996F5
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 16:40:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 667889973A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 16:45:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=p8QARQsRa7+fZQZA0Ic+kC3gI9+rdJ3kmJGfnXIj6Z8=; b=uoxusVFATRZ9pJ
-	LEs4zV5XILoNPvQUF0IbthpH8KGA2geVukJrh5QBRauSib83raEAtxNjf9x802oWNZrcjPFHEYYuk
-	vIWCmdRU90v1V0jlRFHN+wVdmK2nLQPhhROggubEO8JGKSxBixDmWNRbiTaAa822vMEgi8a+BN1nS
-	IpsfXP6M+4cG7VLvP0bHIQgnG0iHsES8/jy0qYI//YnWxabU96YvJaydIkE3eKPSBfufzwLnvPbm2
-	HgknU8j2Z/XEL5Ohj6RWY4Bt03YVdG3sc+7zVNr25/K1H5hUmO7mDcKgM/PgUU4d15+NZuRhYCMDu
-	JSVrA0gvx6IWYIAtPWuw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ywI6+DWADME2M7w6F+fL+BlECqq57V2zwJX6O3O+9Hw=; b=X4KZfkDH400hux
+	vsXKeg/te2igoXSs7OK7dw/Tprbapr7Kjfa5fthwN/O9TywKR3g6JLgdUGnmd0KRr7i85WXpC67VG
+	yCDKH5DeV4FcwUaPXdy66fmRhaIe+DF/UWlbxRHhocCj7nPE9V6mzOmPvncujW9ZuGQ6DVU92AzZr
+	Yrkh9g/2kRi3CN/inqK4axibqFYF0aDoAgCQCldL2dTYbkBubZcK8rw6z7Ne5pmJ6gvx77kFXCieF
+	lbeoVSGgvU5e5VF9v2WyhsXbja1nkggHHMv4puR9kDQkSLtxDxAvgur+3Us8pu3TBp6YMjz5CWeMx
+	cVpMSCNk5x5sam4UKpxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0oFp-000245-Oq; Thu, 22 Aug 2019 14:39:57 +0000
-Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
+	id 1i0oKp-0006cz-3v; Thu, 22 Aug 2019 14:45:07 +0000
+Received: from pandora.armlinux.org.uk
+ ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0oFb-0001tO-6A; Thu, 22 Aug 2019 14:39:44 +0000
-Received: from DGGEMS407-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id AD8466A9E1BC676579BA;
- Thu, 22 Aug 2019 22:39:37 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS407-HUB.china.huawei.com
- (10.3.19.207) with Microsoft SMTP Server id 14.3.439.0; Thu, 22 Aug 2019
- 22:39:28 +0800
-From: YueHaibing <yuehaibing@huawei.com>
-To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <perex@perex.cz>,
- <tiwai@suse.com>, <matthias.bgg@gmail.com>, <yuehaibing@huawei.com>,
- <pihsun@chromium.org>, <swboyd@chromium.org>
-Subject: [PATCH -next] ASoC: mediatek: mt2701: Fix -Wunused-const-variable
- warnings
-Date: Thu, 22 Aug 2019 22:37:47 +0800
-Message-ID: <20190822143747.20944-1-yuehaibing@huawei.com>
-X-Mailer: git-send-email 2.10.2.windows.1
+ id 1i0oKb-0006I2-1F; Thu, 22 Aug 2019 14:44:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:
+ Content-Transfer-Encoding:Content-Type:MIME-Version:References:Message-ID:
+ Subject:Cc:To:From:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=Ups/VrVzSUhhwl/GEM5YSxWOiDm7bA4AN942AhbRqwo=; b=sQhrwnvpafZLPmo5FsdfINJTy
+ gqrWQhb1Z+5QCrEIDeMoEi3SdBeRlQ0v769zMUgIPnlfHp+R1toUOanWZs4j4fAgaJJx1+1pNN3Pk
+ sNHT4ZUjpanIjfQnjDQrwSSarOzK6SevySl9bvgFrqzO6breQcO9593EEUjk1JNQrOqUxmxuFJU0c
+ TpuUduJ3+r+cF0iBFl5sEupcoYvbP5YoYJ3FOfWGLzUpxFTU5tFekqHvRaVXIpVmTTl0GqkOdI5eb
+ pqV3DqYa6AYnAb68AilWTr+NCyLz1cmjlmYN/zsAZnyRurU3lp3eQ/w5Z3yHwvYigqb2Bblzib3XI
+ tYyrEZhDg==;
+Received: from shell.armlinux.org.uk
+ ([2001:4d48:ad52:3201:5054:ff:fe00:4ec]:48060)
+ by pandora.armlinux.org.uk with esmtpsa
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <linux@armlinux.org.uk>)
+ id 1i0oKL-0007ES-Kj; Thu, 22 Aug 2019 15:44:37 +0100
+Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
+ (envelope-from <linux@shell.armlinux.org.uk>)
+ id 1i0oKH-0007m8-RC; Thu, 22 Aug 2019 15:44:33 +0100
+Date: Thu, 22 Aug 2019 15:44:33 +0100
+From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
+To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
+Subject: Re: [PATCH net-next v2 2/3] net: ethernet: mediatek: Re-add support
+ SGMII
+Message-ID: <20190822144433.GT13294@shell.armlinux.org.uk>
+References: <20190821144336.9259-1-opensource@vdorst.com>
+ <20190821144336.9259-3-opensource@vdorst.com>
 MIME-Version: 1.0
-X-Originating-IP: [10.133.213.239]
-X-CFilter-Loop: Reflected
+Content-Disposition: inline
+In-Reply-To: <20190821144336.9259-3-opensource@vdorst.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_073943_401055_8834ED7D 
-X-CRM114-Status: UNSURE (   9.08  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190822_074453_096007_4222C68E 
+X-CRM114-Status: GOOD (  11.02  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.32 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ medium trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
+ [list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,94 +87,84 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Nelson Chang <nelson.chang@mediatek.com>,
+ Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
+ Sean Wang <sean.wang@mediatek.com>, linux-mips@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Stefan Roese <sr@denx.de>,
+ "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-sound/soc/mediatek/mt2701/mt2701-afe-common.h:66:27: warning:
- mt2701_afe_backup_list defined but not used [-Wunused-const-variable=]
+On Wed, Aug 21, 2019 at 04:43:35PM +0200, Ren=E9 van Dorst wrote:
+> +	if (MTK_HAS_CAPS(mac->hw->soc->caps, MTK_SGMII)) {
+> +		if (state->interface !=3D PHY_INTERFACE_MODE_2500BASEX) {
+>  			phylink_set(mask, 1000baseT_Full);
+>  			phylink_set(mask, 1000baseX_Full);
+> +		} else {
+> +			phylink_set(mask, 2500baseT_Full);
+> +			phylink_set(mask, 2500baseX_Full);
+> +		}
 
-mt2701_afe_backup_list is only used in mt2701-afe-pcm.c,
-so just move the definition over there.
+If you can dynamically switch between 1000BASE-X and 2500BASE-X, then
+you need to have both set.  See mvneta.c:
 
-Reported-by: Hulk Robot <hulkci@huawei.com>
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
----
- sound/soc/mediatek/mt2701/mt2701-afe-common.h | 21 ---------------------
- sound/soc/mediatek/mt2701/mt2701-afe-pcm.c    | 21 +++++++++++++++++++++
- 2 files changed, 21 insertions(+), 21 deletions(-)
+        if (pp->comphy || state->interface !=3D PHY_INTERFACE_MODE_2500BASE=
+X) {
+                phylink_set(mask, 1000baseT_Full);
+                phylink_set(mask, 1000baseX_Full);
+        }
+        if (pp->comphy || state->interface =3D=3D PHY_INTERFACE_MODE_2500BA=
+SEX) {
+                phylink_set(mask, 2500baseT_Full);
+                phylink_set(mask, 2500baseX_Full);
+        }
 
-diff --git a/sound/soc/mediatek/mt2701/mt2701-afe-common.h b/sound/soc/mediatek/mt2701/mt2701-afe-common.h
-index d44faba..32bef5e 100644
---- a/sound/soc/mediatek/mt2701/mt2701-afe-common.h
-+++ b/sound/soc/mediatek/mt2701/mt2701-afe-common.h
-@@ -63,27 +63,6 @@ enum audio_base_clock {
- 	MT2701_BASE_CLK_NUM,
- };
- 
--static const unsigned int mt2701_afe_backup_list[] = {
--	AUDIO_TOP_CON0,
--	AUDIO_TOP_CON4,
--	AUDIO_TOP_CON5,
--	ASYS_TOP_CON,
--	AFE_CONN0,
--	AFE_CONN1,
--	AFE_CONN2,
--	AFE_CONN3,
--	AFE_CONN15,
--	AFE_CONN16,
--	AFE_CONN17,
--	AFE_CONN18,
--	AFE_CONN19,
--	AFE_CONN20,
--	AFE_CONN21,
--	AFE_CONN22,
--	AFE_DAC_CON0,
--	AFE_MEMIF_PBUF_SIZE,
--};
--
- struct mt2701_i2s_data {
- 	int i2s_ctrl_reg;
- 	int i2s_asrc_fs_shift;
-diff --git a/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c b/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
-index d7f5def..76502ba 100644
---- a/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
-+++ b/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
-@@ -60,6 +60,27 @@ static const struct mt2701_afe_rate mt2701_afe_i2s_rates[] = {
- 	{ .rate = 352800, .regvalue = 24 },
- };
- 
-+static const unsigned int mt2701_afe_backup_list[] = {
-+	AUDIO_TOP_CON0,
-+	AUDIO_TOP_CON4,
-+	AUDIO_TOP_CON5,
-+	ASYS_TOP_CON,
-+	AFE_CONN0,
-+	AFE_CONN1,
-+	AFE_CONN2,
-+	AFE_CONN3,
-+	AFE_CONN15,
-+	AFE_CONN16,
-+	AFE_CONN17,
-+	AFE_CONN18,
-+	AFE_CONN19,
-+	AFE_CONN20,
-+	AFE_CONN21,
-+	AFE_CONN22,
-+	AFE_DAC_CON0,
-+	AFE_MEMIF_PBUF_SIZE,
-+};
-+
- static int mt2701_dai_num_to_i2s(struct mtk_base_afe *afe, int num)
- {
- 	struct mt2701_afe_private *afe_priv = afe->platform_priv;
--- 
-2.7.4
+What this is saying is, if we have a comphy (which is the serdes lane
+facing component, where the data rate is setup) then we can support
+both speeds (and so mask ends up with all four bits set.)  Otherwise,
+we only support a single-speed (1000Gbps for non-2500BASE-X etc.)
 
+> +	} else {
+> +		if (state->interface =3D=3D PHY_INTERFACE_MODE_TRGMII) {
+> +			phylink_set(mask, 1000baseT_Full);
+> +		} else {
+> +			phylink_set(mask, 10baseT_Half);
+> +			phylink_set(mask, 10baseT_Full);
+> +			phylink_set(mask, 100baseT_Half);
+> +			phylink_set(mask, 100baseT_Full);
+> +
+> +			if (state->interface !=3D PHY_INTERFACE_MODE_MII) {
+> +				phylink_set(mask, 1000baseT_Half);
+> +				phylink_set(mask, 1000baseT_Full);
+> +				phylink_set(mask, 1000baseX_Full);
+> +			}
 
+I'm also wondering about the "MTK_HAS_CAPS(mac->hw->soc->caps,
+MTK_SGMII)" above.
+
+(Here comes a reason why using SGMII to cover all single-lane serdes
+modes causes confusion - unfortunately, some folk use SGMII to describe
+all these modes.  So, I'm going to use the terminology "Cisco SGMII"
+to mean exactly the SGMII format published by Cisco, "802.3 1000BASE-X"
+to mean the original IEEE 802.3 format running at 1.25Gbps, and
+"up-clocked 2500BASE-X" to mean the 3.125Gbps version of the 802.3
+1000BASE-X protocol.)
+
+Isn't this set for Cisco SGMII as well as for 802.3 1000BASE-X and
+the up-clocked 2500BASE-X modes?
+
+If so, is there a reason why 10Mbps and 100Mbps speeds aren't
+supported on Cisco SGMII links?
+
+-- =
+
+RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
+FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps =
+up
+According to speedtest.net: 11.9Mbps down 500kbps up
 
 _______________________________________________
 Linux-mediatek mailing list
