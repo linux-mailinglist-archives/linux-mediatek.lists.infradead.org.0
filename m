@@ -2,83 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C08D5997CD
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 17:11:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 25E8699863
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 17:45:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
-	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=1ZR2HwUN9o+h96jZ7h33OQ4gJN2lpeqmNLfs3+7dDnU=; b=VVkzUU2W3MoDirCeHwWVz8wO5
-	OjUMXWGlDGjB4NLVd3M6HbFUcZP8SCq7dSh1Dea1/9B+rVj35ZlKb+dDxL2hU6W+DzQ5X9LWyTWQb
-	Kxq/kYJpZ7ewg39YEF5JArQPKNaG2vTPp/yqiwNXiO/Rtx/x9ik7OmvCGxmkhQ049kZayCwWOSc4H
-	RFk2mLUI1dSVNt73V2I4Ikjv1FAo07oxVQ2DJZD7BQzutlhXfd30uhQYObvzRHYoCgU2F4FhD4tnp
-	ig66sfEOmsvTpbsYiTCtoRyb5vcLBtO0ziMO+8f21fck7sJDD6vQT335t1hzzNyQhdWDWikVFBz90
-	4bbAVk19g==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:To:
+	From:Message-ID:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=z/UwzccJjwY//kqytqFbG2NDkjzuoJuivx11qcOnwNs=; b=S3LQyFQK6oTrTF
+	tc/kgWksbHbS54zMidWiMiWrNSqtuErnfP+7cg46r6aLuhZGL4sWFaI4ihwh+X1am5vTVMP3dXcn5
+	K0iTurXg8DVi/++xbtriVNcnjLXIoQriITTCsZji137QDzA+1SNbv87GIXY4KFTgI0wI8mflaRsXx
+	CzkHA1lLPsuA4piJkIBnqSCzhTFEbvCk7EwecHMyL3sORQYxCO+sPwBHk0YVBY7xiczW5i3pA5lan
+	rqPeNu/Hz58JLq4LDDZOusOx3ZjonqhUHDbyzXvmdiOIZWno0dmDNWjUjueb9/YGGXLZUU5v5Z6Md
+	UJHme5/OmJT5BMIJ0A/w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0okX-0003gs-T1; Thu, 22 Aug 2019 15:11:41 +0000
-Received: from mx.0dd.nl ([2a04:52c0:101:921::25])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1i0okD-0003TN-Rm; Thu, 22 Aug 2019 15:11:24 +0000
-Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mx.0dd.nl (Postfix) with ESMTPS id CC0475FC44;
- Thu, 22 Aug 2019 17:11:16 +0200 (CEST)
-Authentication-Results: mx.0dd.nl;
- dkim=pass (2048-bit key) header.d=vdorst.com header.i=@vdorst.com
- header.b="dYtNjIu0"; dkim-atps=neutral
-Received: from www (www.vdorst.com [192.168.2.222])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.vdorst.com (Postfix) with ESMTPSA id 793D71D85FE6;
- Thu, 22 Aug 2019 17:11:16 +0200 (CEST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com 793D71D85FE6
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
- s=default; t=1566486676;
- bh=pWtXsRVEPvLed/m0NhhlKu1CLza7De9LHyjrNdYZbdw=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=dYtNjIu04is6DPPpcRUqOnSHBRAWJuENhjamzlkFcc69mGO3UfQ3rsngHuva405Ha
- Sf5D+/HMAqHmafBNG8I9vTUaW1SbS+dtuyQPKaqOEwzoP+22izycD/C2tswjAIR9A8
- z4YKAjK0nuAEI1H0+0Mk7BEakNXjYBNeM5QDi79kZSKYlaquhliHINULslkHDOW2aI
- c4/YqK5inUtYUUTbx5tmLY0lheFwhmR28bcfPzcQMTIqHRgOayJpgCQbp62D9Q9sHW
- +pgb9NVMHtGsvrCejRaJDOJF/5b0maqGgeBus9yWOdWZRepvuqnmewN04zsKY/7BzC
- wH5MogCvoHYew==
-Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
- www.vdorst.com (Horde Framework) with HTTPS; Thu, 22 Aug 2019 15:11:16 +0000
-Date: Thu, 22 Aug 2019 15:11:16 +0000
-Message-ID: <20190822151116.Horde.3pVh2Kr0MEO82EWm7859Zd2@www.vdorst.com>
-From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
-To: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-Subject: Re: [PATCH net-next v2 1/3] net: ethernet: mediatek: Add basic
- PHYLINK support
-References: <20190821144336.9259-1-opensource@vdorst.com>
- <20190821144336.9259-2-opensource@vdorst.com>
- <20190822142739.GS13294@shell.armlinux.org.uk>
-In-Reply-To: <20190822142739.GS13294@shell.armlinux.org.uk>
-User-Agent: Horde Application Framework 5
+	id 1i0pGy-0006gf-V7; Thu, 22 Aug 2019 15:45:13 +0000
+Received: from mout.gmx.net ([212.227.17.21])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1i0pGe-0005e8-1j; Thu, 22 Aug 2019 15:44:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1566488653;
+ bh=Vy2sL6yIc2Cm33yYziTqAMn0mT4b4EWOI52QiBXdRmc=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+ b=QrOHC6/2NAmFobf5S2YYzs5TWISc4dkEgsm5srJ57fksDPmZB21ItRv9XjzV9cu45
+ 9nYnDIY/F6xa164T9B2M2OOw5hOcwSpgxZJAnlhW002+Z4B1iLgtsZfGSgDtAqqWR8
+ c0/aCfFCDn9ugbR4ouH7YUnV+aie8Hwekw14+hfg=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [217.61.154.89] ([217.61.154.89]) by web-mail.gmx.net
+ (3c-app-gmx-bap07.server.lan [172.19.172.77]) (via HTTP); Thu, 22 Aug 2019
+ 17:44:13 +0200
 MIME-Version: 1.0
-Content-Disposition: inline
+Message-ID: <trinity-b1f48e51-af73-466d-9ecf-d560a7d7c1ee-1566488653737@3c-app-gmx-bap07>
+From: "Frank Wunderlich" <frank-w@public-files.de>
+To: =?UTF-8?Q?=22Ren=C3=A9_van_Dorst=22?= <opensource@vdorst.com>
+Subject: Aw: [PATCH net-next v2 0/3] net: dsa: mt7530: Convert to PHYLINK
+ and add support for port 5
+Date: Thu, 22 Aug 2019 17:44:13 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <20190821144547.15113-1-opensource@vdorst.com>
+References: <20190821144547.15113-1-opensource@vdorst.com>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K1:OnOmnNjRELKVDhw1WQ00dkVJuIqcBT9mIxsIJFG3y8nB9jk9SoGT1zYS+j7Hrug05uaRc
+ wyfpj5sv6EnDKgPWJT1nDz20RXXwzuhx/jflRFQlLJECmmRxBLZT0IDWBzDceWlqwm05vt1Q30ZB
+ qxHcSPFXQfWgRe6xK7ko3+YGTQsteRpHY6fIjn1gREIrNVmzXUH898hwnFvyxpkJw7gBmpF5JbYX
+ OotJuHOPdSolA/xZdJ4ol64gN4UuJddW0ahxqEcnYXSi4BvaojZNNekB7/0c1Z/6rTCdONIWuqqA
+ FU=
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:A9vU9Oh1LEE=:DFgHGOwKN1RHx6kZQ498pi
+ zX+xC8Drxjpw+G+vUDjrzkxjmEdsaQWF99BUxfFFCB1Lbuxweib2bcOxiDc45mjrxOKULzmBh
+ Tc2QG63jIq3UVmi7GJusiZoTjWppmjHJnLO7rDs3sgR8JItcfzD7Jrpm8MCL0ZgeQek/IL3S5
+ MIlrU9tpcspXV28cUK4mCDjbykLugedrl7F6hjyTULWoG6kiPjLERQ+tK8mD9CKwmRIDNHM5U
+ pj3Iy3MikCcaCxfSaOzM/mFoqXkbr5HjHN1odpnXWmt6OFas74gyG/3zS0YtfbfWmEaUZETvG
+ mtVkJqwC5SmAZO7A/U6QPdQbtz7by7K2q4BuMpLEOG00hcZd728gvTyFy4ijTfLJqvNbf9pLb
+ QvpKS3YZjTkgd6EEk3AnQvLG5DdDJDqP5B8+dKZ5uvrgbDt309vqoAKI1acHb9grNIqcyzsc4
+ 9FsqenYJm99b8XMLxZNWdelX12TmV2HUBZqqzOFxZ8W3vIf9dGoD+qMk8kPnQzLd9Tz7BSLuS
+ d8292YpgCPIH1Plr1UZUan+Csz6krXBBiDhfgA70meddJds6kDD0b5bh7MuDwMC2Dh90kb38D
+ z/9p4y6SR4kUOz/OHWXwi81phfKlOK/oZHIGZVPpSXN3d+rXsqoINiaFv7EBjC7s40cZQQ+yM
+ 0UfGTxouFcI+56UwaoItJWKiDXNeSPvXruKyh7SCBStUFbg==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_081122_314831_C49521A0 
-X-CRM114-Status: GOOD (  18.59  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190822_084452_425861_BB2F8382 
+X-CRM114-Status: UNSURE (   5.54  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [212.227.17.21 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,86 +90,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nelson Chang <nelson.chang@mediatek.com>,
- Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>, linux-mips@vger.kernel.org,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Stefan Roese <sr@denx.de>,
- "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
+Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
+ netdev@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ linux-mips@vger.kernel.org, "David S . Miller" <davem@davemloft.net>,
+ =?UTF-8?Q?=22Ren=C3=A9_van_Dorst=22?= <opensource@vdorst.com>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>, Matthias
+ Brugger <matthias.bgg@gmail.com>, Vivien Didelot <vivien.didelot@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgUnVzc2VsbCwKClF1b3RpbmcgUnVzc2VsbCBLaW5nIC0gQVJNIExpbnV4IGFkbWluIDxsaW51
-eEBhcm1saW51eC5vcmcudWs+OgoKPiBPbiBXZWQsIEF1ZyAyMSwgMjAxOSBhdCAwNDo0MzozNFBN
-ICswMjAwLCBSZW7DqSB2YW4gRG9yc3Qgd3JvdGU6Cj4+ICtzdGF0aWMgdm9pZCBtdGtfbWFjX2xp
-bmtfZG93bihzdHJ1Y3QgcGh5bGlua19jb25maWcgKmNvbmZpZywgIAo+PiB1bnNpZ25lZCBpbnQg
-bW9kZSwKPj4gKwkJCSAgICAgIHBoeV9pbnRlcmZhY2VfdCBpbnRlcmZhY2UpCj4+ICt7Cj4+ICsJ
-c3RydWN0IG10a19tYWMgKm1hYyA9IGNvbnRhaW5lcl9vZihjb25maWcsIHN0cnVjdCBtdGtfbWFj
-LAo+PiArCQkJCQkgICBwaHlsaW5rX2NvbmZpZyk7Cj4+Cj4+IC0JcmV0dXJuIDA7Cj4+ICsJbXRr
-X3czMihtYWMtPmh3LCBNQUNfTUNSX0ZPUkNFX0xJTktfRE9XTiwgTVRLX01BQ19NQ1IobWFjLT5p
-ZCkpOwo+PiAgfQo+Cj4gWW91IHNldCB0aGUgTUFDX01DUl9GT1JDRV9NT0RFIGJpdCBoZXJlLi4u
-Cj4KPj4gK3N0YXRpYyB2b2lkIG10a19tYWNfbGlua191cChzdHJ1Y3QgcGh5bGlua19jb25maWcg
-KmNvbmZpZywgIAo+PiB1bnNpZ25lZCBpbnQgbW9kZSwKPj4gKwkJCSAgICBwaHlfaW50ZXJmYWNl
-X3QgaW50ZXJmYWNlLAo+PiArCQkJICAgIHN0cnVjdCBwaHlfZGV2aWNlICpwaHkpCj4+ICB7Cj4+
-ICsJc3RydWN0IG10a19tYWMgKm1hYyA9IGNvbnRhaW5lcl9vZihjb25maWcsIHN0cnVjdCBtdGtf
-bWFjLAo+PiArCQkJCQkgICBwaHlsaW5rX2NvbmZpZyk7Cj4+ICsJdTMyIG1jciA9IG10a19yMzIo
-bWFjLT5odywgTVRLX01BQ19NQ1IobWFjLT5pZCkpOwo+Pgo+PiArCW1jciB8PSBNQUNfTUNSX1RY
-X0VOIHwgTUFDX01DUl9SWF9FTjsKPj4gKwltdGtfdzMyKG1hYy0+aHcsIG1jciwgTVRLX01BQ19N
-Q1IobWFjLT5pZCkpOwo+PiArfQo+Cj4gTG9va2luZyBhdCB0aGlzLCBhIGxpbmtfZG93bigpIGZv
-bGxvd2VkIGJ5IGEgbGlua191cCgpIHdvdWxkIHJlc3VsdCBpbgo+IHRoaXMgcmVnaXN0ZXIgY29u
-dGFpbmluZyBNQUNfTUNSX0ZPUkNFX01PREUgfCBNQUNfTUNSX1RYX0VOIHwKPiBNQUNfTUNSX1JY
-X0VOID8gIElzIHRoYXQgYWN0dWFsbHkgY29ycmVjdD8gIChNQUNfTUNSX0ZPUkNFX0xJTksgaXNu
-J3QKPiBzZXQsIHNvIGl0IGxvb2tzIHRvIG1lIGxpa2UgaXQgc3RpbGwgZm9yY2VzIHRoZSBsaW5r
-IGRvd24uKQoKVGhhbmtzIGZvciByZXZpZXdpbmcuCgpQcm9iYWJseSBub3QuCkkgYXNzdW1lZCB0
-aGF0IG1hY19jb25maWcoKSBpcyBhbHdheXMgY2FsbGVkIGJlZm9yZSBsaW5rX3VwKCkKCkkgc2lt
-cGx5IGNhbiBtYWtlIGl0IHRoZSBvcHBvc2l0ZSBvZiBsaW5rX3VwKCkKCmxpa2UgdGhpczoKc3Rh
-dGljIHZvaWQgbXRrX21hY19saW5rX2Rvd24oc3RydWN0IHBoeWxpbmtfY29uZmlnICpjb25maWcs
-IHVuc2lnbmVkICAKaW50IG1vZGUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwaHlf
-aW50ZXJmYWNlX3QgaW50ZXJmYWNlKQp7CiAgICAgICBzdHJ1Y3QgbXRrX21hYyAqbWFjID0gY29u
-dGFpbmVyX29mKGNvbmZpZywgc3RydWN0IG10a19tYWMsCiAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICBwaHlsaW5rX2NvbmZpZyk7CiAgICAgICB1MzIgbWNyID0gbXRrX3IzMihtYWMt
-Pmh3LCBNVEtfTUFDX01DUihtYWMtPmlkKSk7CgogICAgICAgbWNyICY9IChNQUNfTUNSX1RYX0VO
-IHwgTUFDX01DUl9SWF9FTik7CiAgICAgICBtdGtfdzMyKG1hYy0+aHcsIG1jciwgTVRLX01BQ19N
-Q1IobWFjLT5pZCkpOwp9Cgo+Cj4gTm90ZSB0aGF0IGxpbmsgdXAvZG93biBmb3JjaW5nIHNob3Vs
-ZCBub3QgYmUgZG9uZSBmb3IgaW4tYmFuZCBBTi4KPgoKVGhpcyBtZWFucyB0aGF0IG1hY19jb25m
-aWcoKSBvZiB0aGUgU0dNSUkgcGF0Y2ggaXMgYWxzbyBpbmNvcnJlY3Q/CgptYWNfY29uZmlnKCkg
-YWx3YXlzIHNldHMgdGhlIE1BQyBpbiBhIGZvcmNlIG1vZGUuCkJ1dCB0aGUgU0dNSUkgYmxvY2sg
-aXMgc2V0IGluIEFOLgoKTWFpbmxpbmUgY29kZSBzZWVtcyB0byBkbyB0aGUgc2FtZS4KUHV0cyB0
-aGUgU0dNSUkgYmxvY2sgaW4gQU4gb3IgZm9yY2VkIG1vZGUgYW5kIGFsd2F5cyBzZXQgdGhlIE1B
-QyBpbiAgCmZvcmNlZCBtb2RlLgoKPj4gK3N0YXRpYyB2b2lkIG10a192YWxpZGF0ZShzdHJ1Y3Qg
-cGh5bGlua19jb25maWcgKmNvbmZpZywKPj4gKwkJCSB1bnNpZ25lZCBsb25nICpzdXBwb3J0ZWQs
-Cj4+ICsJCQkgc3RydWN0IHBoeWxpbmtfbGlua19zdGF0ZSAqc3RhdGUpCj4+ICt7Cj4+ICsJc3Ry
-dWN0IG10a19tYWMgKm1hYyA9IGNvbnRhaW5lcl9vZihjb25maWcsIHN0cnVjdCBtdGtfbWFjLAo+
-PiArCQkJCQkgICBwaHlsaW5rX2NvbmZpZyk7Cj4+ICsJX19FVEhUT09MX0RFQ0xBUkVfTElOS19N
-T0RFX01BU0sobWFzaykgPSB7IDAsIH07Cj4+Cj4+ICsJaWYgKHN0YXRlLT5pbnRlcmZhY2UgIT0g
-UEhZX0lOVEVSRkFDRV9NT0RFX05BICYmCj4+ICsJICAgIHN0YXRlLT5pbnRlcmZhY2UgIT0gUEhZ
-X0lOVEVSRkFDRV9NT0RFX01JSSAmJgo+PiArCSAgICBzdGF0ZS0+aW50ZXJmYWNlICE9IFBIWV9J
-TlRFUkZBQ0VfTU9ERV9HTUlJICYmCj4+ICsJICAgICEoTVRLX0hBU19DQVBTKG1hYy0+aHctPnNv
-Yy0+Y2FwcywgTVRLX1JHTUlJKSAmJgo+PiArCSAgICAgIHBoeV9pbnRlcmZhY2VfbW9kZV9pc19y
-Z21paShzdGF0ZS0+aW50ZXJmYWNlKSkgJiYKPj4gKwkgICAgIShNVEtfSEFTX0NBUFMobWFjLT5o
-dy0+c29jLT5jYXBzLCBNVEtfVFJHTUlJKSAmJgo+PiArCSAgICAgICFtYWMtPmlkICYmIHN0YXRl
-LT5pbnRlcmZhY2UgPT0gUEhZX0lOVEVSRkFDRV9NT0RFX1RSR01JSSkpIHsKPj4gKwkJbGlua21v
-ZGVfemVybyhzdXBwb3J0ZWQpOwo+PiArCQlyZXR1cm47Cj4+ICAJfQo+Pgo+PiArCXBoeWxpbmtf
-c2V0X3BvcnRfbW9kZXMobWFzayk7Cj4+ICsJcGh5bGlua19zZXQobWFzaywgQXV0b25lZyk7Cj4+
-Cj4+ICsJaWYgKHN0YXRlLT5pbnRlcmZhY2UgPT0gUEhZX0lOVEVSRkFDRV9NT0RFX1RSR01JSSkg
-ewo+PiArCQlwaHlsaW5rX3NldChtYXNrLCAxMDAwYmFzZVRfRnVsbCk7Cj4+ICsJfSBlbHNlIHsK
-Pj4gKwkJcGh5bGlua19zZXQobWFzaywgMTBiYXNlVF9IYWxmKTsKPj4gKwkJcGh5bGlua19zZXQo
-bWFzaywgMTBiYXNlVF9GdWxsKTsKPj4gKwkJcGh5bGlua19zZXQobWFzaywgMTAwYmFzZVRfSGFs
-Zik7Cj4+ICsJCXBoeWxpbmtfc2V0KG1hc2ssIDEwMGJhc2VUX0Z1bGwpOwo+PiArCj4+ICsJCWlm
-IChzdGF0ZS0+aW50ZXJmYWNlICE9IFBIWV9JTlRFUkZBQ0VfTU9ERV9NSUkpIHsKPj4gKwkJCXBo
-eWxpbmtfc2V0KG1hc2ssIDEwMDBiYXNlVF9IYWxmKTsKPj4gKwkJCXBoeWxpbmtfc2V0KG1hc2ss
-IDEwMDBiYXNlVF9GdWxsKTsKPj4gKwkJCXBoeWxpbmtfc2V0KG1hc2ssIDEwMDBiYXNlWF9GdWxs
-KTsKPj4gKwkJfQo+PiArCX0KPj4KPj4gKwlwaHlsaW5rX3NldChtYXNrLCBQYXVzZSk7Cj4+ICsJ
-cGh5bGlua19zZXQobWFzaywgQXN5bV9QYXVzZSk7Cj4+Cj4+ICsJbGlua21vZGVfYW5kKHN1cHBv
-cnRlZCwgc3VwcG9ydGVkLCBtYXNrKTsKPj4gKwlsaW5rbW9kZV9hbmQoc3RhdGUtPmFkdmVydGlz
-aW5nLCBzdGF0ZS0+YWR2ZXJ0aXNpbmcsIG1hc2spOwo+PiAgfQo+Cj4gVGhpcyBsb29rcyBmaW5l
-LgoKT0suCgo+IFRoYW5rcy4KPgo+IC0tCj4gUk1LJ3MgUGF0Y2ggc3lzdGVtOiBodHRwczovL3d3
-dy5hcm1saW51eC5vcmcudWsvZGV2ZWxvcGVyL3BhdGNoZXMvCj4gRlRUQyBicm9hZGJhbmQgZm9y
-IDAuOG1pbGUgbGluZSBpbiBzdWJ1cmJpYTogc3luYyBhdCAxMi4xTWJwcyBkb3duIDYyMmticHMg
-dXAKPiBBY2NvcmRpbmcgdG8gc3BlZWR0ZXN0Lm5ldDogMTEuOU1icHMgZG93biA1MDBrYnBzIHVw
-CgpHcmVhdHMsCgpSZW7DqQoKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlz
-dHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3Rp
-bmZvL2xpbnV4LW1lZGlhdGVrCg==
+Hi,
+
+tested on BPI-R2 (mt7623) with 2 Problems (already reported to Rene, just to inform everyone)...maybe anybody has an idea
+
+- linux-next (i know it's not part of the series, but a pitfall on testing other devices) seems to break power-regulator somewhere here:
+
+priv->core_pwr = devm_regulator_get(&mdiodev->dev, "core"); returns 517
+
+#define EPROBE_DEFER517/* Driver requests probe retry */
+
+https://elixir.bootlin.com/linux/latest/source/drivers/regulator/core.c#L1726
+
+without linux-next switch came up including dsa-ports
+
+- RX-traffic (run iperf3 -c x.x.x.x -R) is only 780 Mbits/sec (TX=940 Mbits/sec), same measure with 5.3-rc4 gives 940 MBit/s with same devices,
+maybe caused by changes for mt76x8?
+
+regards Frank
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
