@@ -2,70 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D9AD799EDA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 20:33:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D64E299FDA
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 21:24:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=SYRmc9HUDJ2m0rHJrda5gBjhK8FspZY3/PVxLOSe8GE=; b=u7E
-	7lrwv+1lWN0Crd68IKK4sV78vXjgP/5qMNHJAyKrB1gLltOka7g/71TQfdmbUJ/qeFyl7Ccnc9aG+
-	jn2U9lsjxBKHbPKOQjwbE+1YD14wQP1vTbKKRAXZwzv8r2jRFz8UfLyZP71Ax2/xzGm390Dazrn6f
-	SC3uY/+HlGWrsHDWX6COkRbGTqJNIP3SneDrUVXILPqNZ7tRk/Pp5dR6gFuSUMSV8ywK1BnqmxsKG
-	AG6fJOkIY6wnxzGUz7AiMCYQONTtuZi+nNZ3gGMMQ/ctmtH1TFVpaCDcQyRuqvKwhqAxYNBIdWBFh
-	SUSRjdH4R9CZaLzmKDbvfX+N+uK0jpQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Subject:To:From:Message-ID:
+	MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=YIrmdXTM45l0ZGrs68wbtZQtk9AbiuJJy0ASWW5xZow=; b=Wec/oZ13+Tdyq0
+	jm6amlf9/8LseneLOSfcYPTO4zdRVhdQlVGhrnGNpibnUQlohphxTUmUq9Hxn10jbP59fNKZ9+4OV
+	7vOcYWJHjQrxBgfUhTGqogFhhugASx4hDIeKoxj7+tLkaaDX/nFj3DZ+nkUn0xyvFe05jrEeNKTun
+	2o7R3Zect3Vf5MCxGxrP4jHxGF2akIT4+FOwyEugfNth8pKaNNrcp23kRGdFy2vBDweXu3Xt7iRKJ
+	xuKB9huzSJhqUT9NDx5TMQQQAgWwVuhFuxM3yrZkTdeL10Uyh6U6oGHzOrGK0BErnkM64Bvwr65tt
+	mJYxccGi+szT4GLbkdVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0rtY-0003to-EQ; Thu, 22 Aug 2019 18:33:12 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1i0sgx-0004sN-9a; Thu, 22 Aug 2019 19:24:15 +0000
+Received: from mout.gmx.net ([212.227.15.15])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0rtU-0003sD-Pj
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 18:33:10 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=7MxAoo5uVCF90mJdPQzbMPG3xnC/BHtKQfZBCOezE8A=; b=I+1tn0uWgzur
- Wdj2g5W78BdzDs0VIPhYrOY9m14wDcku8ymiPfnRzDIodpiFJFJJXr8BJkOepO9BQGjIOfTLldL/+
- SbkELdwlmgOEHEtT8appH5Aqs1GEv8KPnhp2uTUitmbjaYpIDwPiJK78/3AqxVVn7N3nKtkqrw68u
- 5WJno=;
-Received: from 92.40.26.78.threembb.co.uk ([92.40.26.78]
- helo=fitzroy.sirena.org.uk) by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <broonie@sirena.org.uk>)
- id 1i0rtR-0007ff-BB; Thu, 22 Aug 2019 18:33:05 +0000
-Received: by fitzroy.sirena.org.uk (Postfix, from userid 1000)
- id 27D03D02CD8; Thu, 22 Aug 2019 19:32:57 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Subject: Applied "ASoC: mediatek: mt8183: switch tdm pins gpio function when
- playback on or off" to the asoc tree
-In-Reply-To: <1566478261-13464-2-git-send-email-jiaxin.yu@mediatek.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190822183257.27D03D02CD8@fitzroy.sirena.org.uk>
-Date: Thu, 22 Aug 2019 19:32:57 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+ id 1i0sgs-0004s4-PL
+ for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 19:24:12 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1566501837;
+ bh=NpNeLeI+gS2GGYSJDr8S/ivIOUCFCz5f1UMmFg9+C0w=;
+ h=X-UI-Sender-Class:From:To:Cc:Subject:Date;
+ b=VTfI3oF2k9qohyTn446GbuYKUa0xRulhMim8YJaa+TFPFeM1Uv0kf3psMV8WjzoJr
+ ZFiuHpZ14E90qjW0tTT53N67gEjzvAZW1J292hcL96Irw7jj+ydR2bYy+FR5PtllGA
+ JnauoqrvnrDzeXwfVdafq2uIsyBb6K2UEv7s1FXM=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [217.61.154.89] ([217.61.154.89]) by web-mail.gmx.net
+ (3c-app-gmx-bs43.server.lan [172.19.170.95]) (via HTTP); Thu, 22 Aug 2019
+ 21:23:57 +0200
+MIME-Version: 1.0
+Message-ID: <trinity-584a4b1c-18c9-43ae-8c1a-5057933ad905-1566501837738@3c-app-gmx-bs43>
+From: "Frank Wunderlich" <frank-w@public-files.de>
+To: "Liam Girdwood" <lgirdwood@gmail.com>
+Subject: BUG: devm_regulator_get returns EPROBE_DEFER
+ (5.3-rc5..next-20190822) for bpi-r2/mt7623/mt7530
+Date: Thu, 22 Aug 2019 21:23:57 +0200
+Importance: normal
+Sensitivity: Normal
+X-Priority: 3
+X-Provags-ID: V03:K1:f9r3uHKHHbamY6L7y+siJCFDx7adfRfrg4NPWU0VlSWzwn3UIbhajPDTvypqLWh2e2Z87
+ nup9CtPrIaq4Yu4tnfsTLcWCkoc+aGqkD0AFXDpmKUQLpRtHncZFtvFtSU01XE+hEZwcrq6NgZqN
+ Yhw5n6SBqN5tOsdEPMr1Sxa/naxgvgXcYvpNViu0DpD480qhgxI0vaS8GLWlHzBS1IHw/j/N7ual
+ WUhJDReF0HvuP+jg6512sX1g+7o4/gJVDU2IzGLYoCH/Tt7Q2aYVP7vrapy4tMDClOOxSdf/5VNG
+ xY=
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:7fkmO6iHJ9Y=:Vgye3BcdvOM05q6643M7Iu
+ zQumxsyp/3XZXOW+H4zutForeCza+q+QcLxgKobSr5NxpAUAt+pv52Zzwwd3WieRAfVRxTZnn
+ p/WBhM+t9AC+xlZzDV4HyrKCSyGSonN/GlKntjtWfDd3cX2h8RsonhcFzqz1MHx8qw2dD5t7z
+ ocUnRIrL6Ld/zaLGOtaIrjy0zleCipPpjOsob4I36xbEw/tC0DsrU5HnOMtejxpJ2DsWc6TaM
+ rxasSXhpdgvmcdiaSpnnDBThPh5Cw/JkLmUWP6dh3O+mz696EUf/civ3veu9HLJ+53J8IQNGn
+ joDmO9WNZZLokNElFCjCbckC5axZDSeaqXCoRPhgxqU18f96/dI9/NhPxF6/q3F6sVtPBd6Qm
+ mX7ghj12vJZwHJcD9dGNjdLf+VEY28SGKWMQTNSRUqTGZvLz0WPLh09oU6SZNw1FryAQ6TPiF
+ 3zHPbQNdqKRCvu81Y7w66oqkXTLyWRACP5iGpJlGtl49yInSBYhdMxH4uCI2GW2zOSirKb+/Q
+ X89caGMHa16t+uU45PRGoFlIQ7VWSfPrlXHAkcqkFI24tqQ2xLp+dmooSuDXGeizEAvMgizu1
+ kYPhw8nevSgP6aR02eFbvJNIbt0Z89/WlIEM8Fqqjc6YQh2fm+zgYyBfcbGsyjeIKpUX7s/tL
+ OSywzmj8yEpDW9kId+UK5pqeDI+7zaABjL6HxdkuvuAWu+A==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_113308_986296_F851EF95 
-X-CRM114-Status: GOOD (  15.35  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20190822_122411_144264_0FE000DC 
+X-CRM114-Status: UNSURE (   4.41  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [212.227.15.15 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,216 +88,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, ck.hu@medaitek.com, lgirdwood@gmail.com,
- jiaxin.yu@mediatek.com, perex@perex.cz, tzungbi@google.com,
+Cc: =?UTF-8?Q?=22Ren=C3=A9_van_Dorst=22?= <opensource@vdorst.com>,
  Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- eason.yen@mediatek.com
-MIME-Version: 1.0
+ linux-kernel@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+Hi,
 
-   ASoC: mediatek: mt8183: switch tdm pins gpio function when playback on or off
+i've encountered a bug in regulator between 5.3-rc5 and next-20190822
 
-has been applied to the asoc tree at
+i build for bananapi-r2/mt7623 using this branch (includes next-patches):
 
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.4
+https://github.com/vDorst/linux-1/blob/c34582d96520566c45068b92e080620458ffc1ff/arch/arm/boot/dts/mt7623n-bananapi-bpi-r2.dts#L166
 
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
+and noticed that switch does not came up
 
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
+priv->core_pwr = devm_regulator_get(&mdiodev->dev, "core"); returns 517
 
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
+located here:
+https://github.com/vDorst/linux-1/blob/c34582d96520566c45068b92e080620458ffc1ff/drivers/net/dsa/mt7530.c#L1590
 
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
+#define EPROBE_DEFER 517/* Driver requests probe retry */
 
-Thanks,
-Mark
+https://elixir.bootlin.com/linux/latest/source/drivers/regulator/core.c#L1726
 
-From 6191cbde5ff02ef5307e7b2e4f5b8f7607c2b1df Mon Sep 17 00:00:00 2001
-From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Date: Thu, 22 Aug 2019 20:51:00 +0800
-Subject: [PATCH] ASoC: mediatek: mt8183: switch tdm pins gpio function when
- playback on or off
+seems of_find_regulator_by_node(node); is failing here, but i see the dts-node (mt6323_vpa_reg: buck_vpa) in /sys/firmware/devicetree/...
 
-Pull TDM pins down when TDM BE shutdown to avoid current leakage.
+tried without next-patches and switch came up including dsa-ports.
 
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Link: https://lore.kernel.org/r/1566478261-13464-2-git-send-email-jiaxin.yu@mediatek.com
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- .../mt8183/mt8183-mt6358-ts3a227-max98357.c   | 115 +++++++++++++++++-
- 1 file changed, 109 insertions(+), 6 deletions(-)
+i found no commit yet which breaks the regulator-setup
 
-diff --git a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-index 272766c1b859..fe8a7461ace5 100644
---- a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-@@ -46,6 +46,32 @@ static int mt8183_i2s_hw_params_fixup(struct snd_soc_pcm_runtime *rtd,
- 	return 0;
- }
- 
-+static const struct snd_soc_dapm_widget
-+mt8183_mt6358_ts3a227_max98357_dapm_widgets[] = {
-+	SND_SOC_DAPM_OUTPUT("IT6505_8CH"),
-+};
-+
-+static const struct snd_soc_dapm_route
-+mt8183_mt6358_ts3a227_max98357_dapm_routes[] = {
-+	{"IT6505_8CH", NULL, "TDM"},
-+};
-+
-+enum PINCTRL_PIN_STATE {
-+	PIN_STATE_DEFAULT = 0,
-+	PIN_TDM_OUT_ON,
-+	PIN_TDM_OUT_OFF,
-+	PIN_STATE_MAX
-+};
-+
-+static const char * const mt8183_pin_str[PIN_STATE_MAX] = {
-+	"default", "aud_tdm_out_on", "aud_tdm_out_off",
-+};
-+
-+struct mt8183_mt6358_ts3a227_max98357_priv {
-+	struct pinctrl *pinctrl;
-+	struct pinctrl_state *pin_states[PIN_STATE_MAX];
-+};
-+
- static int
- mt8183_mt6358_ts3a227_max98357_bt_sco_startup(
- 	struct snd_pcm_substream *substream)
-@@ -173,6 +199,47 @@ SND_SOC_DAILINK_DEFS(tdm,
- 	DAILINK_COMP_ARRAY(COMP_DUMMY()),
- 	DAILINK_COMP_ARRAY(COMP_EMPTY()));
- 
-+static int mt8183_mt6358_tdm_startup(struct snd_pcm_substream *substream)
-+{
-+	struct snd_soc_pcm_runtime *rtd = substream->private_data;
-+	struct mt8183_mt6358_ts3a227_max98357_priv *priv =
-+		snd_soc_card_get_drvdata(rtd->card);
-+	int ret;
-+
-+	if (IS_ERR(priv->pin_states[PIN_TDM_OUT_ON]))
-+		return PTR_ERR(priv->pin_states[PIN_TDM_OUT_ON]);
-+
-+	ret = pinctrl_select_state(priv->pinctrl,
-+				   priv->pin_states[PIN_TDM_OUT_ON]);
-+	if (ret)
-+		dev_err(rtd->card->dev, "%s failed to select state %d\n",
-+			__func__, ret);
-+
-+	return ret;
-+}
-+
-+static void mt8183_mt6358_tdm_shutdown(struct snd_pcm_substream *substream)
-+{
-+	struct snd_soc_pcm_runtime *rtd = substream->private_data;
-+	struct mt8183_mt6358_ts3a227_max98357_priv *priv =
-+		snd_soc_card_get_drvdata(rtd->card);
-+	int ret;
-+
-+	if (IS_ERR(priv->pin_states[PIN_TDM_OUT_OFF]))
-+		return;
-+
-+	ret = pinctrl_select_state(priv->pinctrl,
-+				   priv->pin_states[PIN_TDM_OUT_OFF]);
-+	if (ret)
-+		dev_err(rtd->card->dev, "%s failed to select state %d\n",
-+			__func__, ret);
-+}
-+
-+static struct snd_soc_ops mt8183_mt6358_tdm_ops = {
-+	.startup = mt8183_mt6358_tdm_startup,
-+	.shutdown = mt8183_mt6358_tdm_shutdown,
-+};
-+
- static struct snd_soc_dai_link
- mt8183_mt6358_ts3a227_max98357_dai_links[] = {
- 	/* FE */
-@@ -325,6 +392,8 @@ mt8183_mt6358_ts3a227_max98357_dai_links[] = {
- 		.no_pcm = 1,
- 		.dpcm_playback = 1,
- 		.ignore_suspend = 1,
-+		.be_hw_params_fixup = mt8183_i2s_hw_params_fixup,
-+		.ops = &mt8183_mt6358_tdm_ops,
- 		SND_SOC_DAILINK_REG(tdm),
- 	},
- };
-@@ -371,7 +440,8 @@ mt8183_mt6358_ts3a227_max98357_dev_probe(struct platform_device *pdev)
- 	struct snd_soc_card *card = &mt8183_mt6358_ts3a227_max98357_card;
- 	struct device_node *platform_node;
- 	struct snd_soc_dai_link *dai_link;
--	struct pinctrl *default_pins;
-+	struct mt8183_mt6358_ts3a227_max98357_priv *priv;
-+	int ret;
- 	int i;
- 
- 	card->dev = &pdev->dev;
-@@ -397,12 +467,45 @@ mt8183_mt6358_ts3a227_max98357_dev_probe(struct platform_device *pdev)
- 		card->num_aux_devs = 1;
- 	}
- 
--	default_pins =
--		devm_pinctrl_get_select(&pdev->dev, PINCTRL_STATE_DEFAULT);
--	if (IS_ERR(default_pins)) {
--		dev_err(&pdev->dev, "%s set pins failed\n",
-+	priv = devm_kzalloc(&pdev->dev, sizeof(*priv), GFP_KERNEL);
-+	if (!priv)
-+		return -ENOMEM;
-+
-+	snd_soc_card_set_drvdata(card, priv);
-+
-+	priv->pinctrl = devm_pinctrl_get(&pdev->dev);
-+	if (IS_ERR(priv->pinctrl)) {
-+		dev_err(&pdev->dev, "%s devm_pinctrl_get failed\n",
- 			__func__);
--		return PTR_ERR(default_pins);
-+		return PTR_ERR(priv->pinctrl);
-+	}
-+
-+	for (i = 0 ; i < PIN_STATE_MAX ; i++) {
-+		priv->pin_states[i] = pinctrl_lookup_state(priv->pinctrl,
-+							   mt8183_pin_str[i]);
-+		if (IS_ERR(priv->pin_states[i])) {
-+			ret = PTR_ERR(priv->pin_states[i]);
-+			dev_info(&pdev->dev, "%s Can't find pin state %s %d\n",
-+				 __func__, mt8183_pin_str[i], ret);
-+		}
-+	}
-+
-+	if (!IS_ERR(priv->pin_states[PIN_TDM_OUT_OFF])) {
-+		ret = pinctrl_select_state(priv->pinctrl,
-+					   priv->pin_states[PIN_TDM_OUT_OFF]);
-+		if (ret)
-+			dev_info(&pdev->dev,
-+				 "%s failed to select state %d\n",
-+				 __func__, ret);
-+	}
-+
-+	if (!IS_ERR(priv->pin_states[PIN_STATE_DEFAULT])) {
-+		ret = pinctrl_select_state(priv->pinctrl,
-+					   priv->pin_states[PIN_STATE_DEFAULT]);
-+		if (ret)
-+			dev_info(&pdev->dev,
-+				 "%s failed to select state %d\n",
-+				 __func__, ret);
- 	}
- 
- 	return devm_snd_soc_register_card(&pdev->dev, card);
--- 
-2.20.1
+any idea about this?
 
+regards Frank
 
 _______________________________________________
 Linux-mediatek mailing list
