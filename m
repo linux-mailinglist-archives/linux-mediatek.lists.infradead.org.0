@@ -2,70 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 98AF49957A
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 15:51:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5BE6B995E4
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 16:07:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rQMnc9ZxXrzCfvTkJaV2elldj3uWdnm6nehYdoIYh7g=; b=tERiRWQafy+Ku+
-	r2dm5VLL5tbcA7E/0VjS49VFXzJ3aotnBPtxJmUPShTCRuCwQ7C7Fbu4fH9VOttv2p3flq1VINlhj
-	J8oXJ0GASEbc8ugpTfDnocOmlyFmI/speLPeG5c0v1kTNfZGnAvvO9mOeSwRd44JcQOG53xXyg/bi
-	fIIGqNaQZ2UWEpy4Ve2U/vxbGszFeqdZFCGb1nKQEJ/mOmj2u+l+DZsJgQ057NSvkAzUDR6DmGiBA
-	A0EvtbRoOTmSZwfkB2mZlh1Y8hZemF6KK3CPzCP6tEoIMX3B2wDeI1b47ptPLg/YmoLqiC+NE+Gdo
-	QHXQVk+Da6aFNt52+bAw==;
+	List-Owner; bh=KgnXM+m4LKuMUdA4SREwBF41eHisIwAno/VatwYPzns=; b=cuy8p06H5PrXaN
+	G/Pslf8yd0hWR8ZVk/mYluesSecEAG0zq0WsCkqBUdXQTHvIHx/5O34DFILinE1G+zfhy6QGuW5sD
+	qLnsbO0CBVKqtONmOGujW+Atz6NTN4ixTJvbEpuLUuk5nrLaYhZzLxTtGsL2U2Cry7EJdC33ToOAX
+	rEPFTQazKdeSmhQHmGtMY3+RJqdaV+qx7vFR5OPGTryMpFYnvfAHtppFPktdBoJqeiUrYD9gNHR7n
+	NXjYNBVX+llL8z8k514ZrwYjkQSmUDaT9MGCQpkOlOEhrVNe5PrztFjaUGmevGdfzIt4vXqHkU0n6
+	anASl/kogMdqN2q6ir1w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0nVH-0004bv-G4; Thu, 22 Aug 2019 13:51:51 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1i0nkQ-0002h8-HG; Thu, 22 Aug 2019 14:07:30 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0nVE-0004bX-92; Thu, 22 Aug 2019 13:51:49 +0000
-Received: by mail-wr1-x443.google.com with SMTP id t16so5517248wra.6;
- Thu, 22 Aug 2019 06:51:47 -0700 (PDT)
+ id 1i0nkB-0002Wl-JB; Thu, 22 Aug 2019 14:07:17 +0000
+Received: by mail-ed1-x541.google.com with SMTP id m44so8083653edd.9;
+ Thu, 22 Aug 2019 07:07:15 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=UVVC1/NXLHzy8hsOt8DImUFmNZD0bydRK4zHHa4ZroM=;
- b=SOpRkAlreRDu9o9AxZ0uAYeVMVuEXLMVfBaug+tROj20y0ujA1Uuhn1uNRc9WDcXcT
- 1UFdyJyEzWe3IV1QsSP+TGBNL7YB5IK/e2RTFQ1nV/th9/T6n+5O9I5GHSvhSRD5KuHw
- yM0gtEa9Kp/iQJtERktCDvlrfsgMXcaJx5p0Wu7yOYOXv8ovJFMxVYHkdm/iZZDTSRiB
- MeLKg8s0Oz65a8T3SztsG6LH9h4zdtbHkq1CQ4cOvngkI3hLzt6SxpxQYWI4QU4EkOoi
- EAPmbjyqe+iNKui5V+S7HwfJPPtVRaYuzt7SCjy+J0iThMylhbCnfukGdufwPatfKhTE
- 8VIA==
+ bh=bQ1gsxW4L1jMxjmgA/njfRE/3fIFbj0zgin1ZoNsXMY=;
+ b=AgL6D9cO3kr972Cr57t+n9KbAT2yl/6GrhLKBZJz6nRhlmS9kpK1AYmvknnxpazUCa
+ UU66EwEdMXTYuhAGkhsmk3g5QXggdVt9z0rXWk1H3j3I5Dqu0HBzGqzytpG2nV74OD3s
+ tbUCxXrq1eNHp16fUxUMxEykcP3Th9bl4Ya62iEis62Bh6WeitA+cBidamwBVfoo2jqR
+ 42KNZHzRgzyD6j3bvhErqrjqwYHeWP5ibCoxSsliIFY5E1u5Ianfbb845JLXDpGmrhYM
+ i0NkgDnor7RZxnutUwOb4PgtZ6kdjyjrQWWO4XDMccusj5CPAt6uJTtwrI28011kyGg8
+ RLMw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=UVVC1/NXLHzy8hsOt8DImUFmNZD0bydRK4zHHa4ZroM=;
- b=ViZc4gJt7Mo7OzkTKp/ABEqh+fNF5QU3oLkgYTkUi4+WG23u0hDXjdDJo5B5iuZlKG
- d7F6pKuokKZNxIb2f/b0Rzd3Pmn401rvCZvctCf1UxKlB/SHdEM7K1o2WKirk53ekvFx
- aeH1sp+4FICgxIkx7Y6+mFc8x7oaQn+6O5WBMVF3j8ln4iQKm+DRa/EnxcQbNqTu2TCU
- E+5w6/d5h46YE85h3htXtuF3yfRMdn2UI/+8aFnude33myiwq9XLpOlyzk55dWphfyn0
- W5C6KfmvNRpUY5ciu0dDSj0Q4I5wrXszr1EPm1SlU73vndozVzcp7aAxvYsMwEFa5+Iy
- dP2A==
-X-Gm-Message-State: APjAAAUa6qP4cWvGZ/ZFIb1VLs7I+TW7V8h/3MYJkvC6glNnklVsEqeL
- daweeRkoVaL3dYg1X1xjbBQ=
-X-Google-Smtp-Source: APXvYqwqM6QGXYE11meUb7G6JVxL6hyMECAvJJHGNXV/dw7AEzfpnqhK523bfKRhdnnWWm10XPVj8A==
-X-Received: by 2002:adf:e710:: with SMTP id c16mr3846658wrm.292.1566481906464; 
- Thu, 22 Aug 2019 06:51:46 -0700 (PDT)
+ bh=bQ1gsxW4L1jMxjmgA/njfRE/3fIFbj0zgin1ZoNsXMY=;
+ b=j/kngjEkSuh9eOAir8OUVcOFW3B6pCWgHpkKwikBEs0NPHfoZaI0i9NStRYPY9jQbj
+ rlyAd8IuTdZaNnA6X/KHDDKWBqaHWuPY+CujTQLPxKMKF4G/QTvA+Y8fYW5AruAabBq0
+ bJSLGQHLubWwYG5PaI8pl8uuzaHMyLlaDypWYmCKtko6tWZ3IU4Q3VdBZPAYP4owc33V
+ hYtzPwyoZiS/VR48QiFrDyTv8Z5omSKoa6POqCIDud0vypiqwIS068khhjDna7d6xTJP
+ nkiELbuXafOR6vAzQoIanz2a9LlM6anDo3jS4NgaUEG74UcM/WKY6X91dOypVGpy6UBb
+ 0auQ==
+X-Gm-Message-State: APjAAAUABdjbDIEpheFWi/ynCBFi7/QjUVYGGgjjkM3qd3fnaU+fExt3
+ 76NNwAqDWBmQIUB+cmQjKp0=
+X-Google-Smtp-Source: APXvYqxCxQlMW/xHRjynWI7jvcGcFGqnyODDq6wmrCM6ZLwHgChhYuI1v5gDE7QdJKfQudf/F4giKQ==
+X-Received: by 2002:aa7:da4a:: with SMTP id w10mr42001298eds.74.1566482833796; 
+ Thu, 22 Aug 2019 07:07:13 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id 2sm5981787wmz.16.2019.08.22.06.51.44
+ by smtp.gmail.com with ESMTPSA id o88sm4029286edb.28.2019.08.22.07.07.12
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 22 Aug 2019 06:51:45 -0700 (PDT)
-Subject: Re: [v4, 6/8] PM / OPP: Support adjusting OPP voltages at runtime
-To: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>,
- MyungJoo Ham <myungjoo.ham@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>,
- Chanwoo Choi <cw00.choi@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- Mark Rutland <mark.rutland@arm.com>, "Rafael J. Wysocki"
- <rjw@rjwysocki.net>, Viresh Kumar <viresh.kumar@linaro.org>,
- Nishanth Menon <nm@ti.com>, Stephen Boyd <sboyd@kernel.org>
-References: <1565703113-31479-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <1565703113-31479-7-git-send-email-andrew-sh.cheng@mediatek.com>
+ Thu, 22 Aug 2019 07:07:13 -0700 (PDT)
+Subject: Re: [PATCH v10 23/23] iommu/mediatek: Clean up struct mtk_smi_iommu
+To: Yong Wu <yong.wu@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
+ Robin Murphy <robin.murphy@arm.com>, Will Deacon <will@kernel.org>
+References: <1566395606-7975-1-git-send-email-yong.wu@mediatek.com>
+ <1566395606-7975-24-git-send-email-yong.wu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -161,25 +156,25 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <be3242e4-cde2-d9bd-5eff-aa5c62c58dea@gmail.com>
-Date: Thu, 22 Aug 2019 15:51:44 +0200
+Message-ID: <81864691-62f3-4e9a-eca0-c68000328f33@gmail.com>
+Date: Thu, 22 Aug 2019 16:07:11 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1565703113-31479-7-git-send-email-andrew-sh.cheng@mediatek.com>
+In-Reply-To: <1566395606-7975-24-git-send-email-yong.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_065148_323137_047044C9 
-X-CRM114-Status: GOOD (  28.50  )
+X-CRM114-CacheID: sfid-20190822_070715_661771_1372B30A 
+X-CRM114-Status: GOOD (  21.25  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -201,11 +196,14 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- linux-pm@vger.kernel.org, Roger Lu <roger.lu@mediatek.com>,
- Stephen Boyd <sboyd@codeaurora.org>, linux-kernel@vger.kernel.org,
- fan.chen@mediatek.com, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, chao.hao@mediatek.com,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
+ Matthias Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -213,147 +211,139 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 13/08/2019 15:31, Andrew-sh.Cheng wrote:
-> From: Stephen Boyd <sboyd@codeaurora.org>
+On 21/08/2019 15:53, Yong Wu wrote:
+> Remove the "struct mtk_smi_iommu" to simplify the code since it has only
+> one item in it right now.
 > 
-> On some SoCs the Adaptive Voltage Scaling (AVS) technique is
-> employed to optimize the operating voltage of a device. At a
-> given frequency, the hardware monitors dynamic factors and either
-> makes a suggestion for how much to adjust a voltage for the
-> current frequency, or it automatically adjusts the voltage
-> without software intervention. Add an API to the OPP library for
-> the former case, so that AVS type devices can update the voltages
-> for an OPP when the hardware determines the voltage should
-> change. The assumption is that drivers like CPUfreq or devfreq
-> will register for the OPP notifiers and adjust the voltage
-> according to suggestions that AVS makes.
-> 
-> This patch is devired from [1] submitted by Stephen.
-> [1] https://lore.kernel.org/patchwork/patch/599279/
-> 
-> Signed-off-by: Stephen Boyd <sboyd@codeaurora.org>
-> Signed-off-by: Roger Lu <roger.lu@mediatek.com>
+> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
 
-Nit: your signed-off-by tag is missing.
-
-Regards,
-Matthias
+Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
 > ---
->  drivers/opp/core.c     | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++
->  include/linux/pm_opp.h | 11 +++++++++
->  2 files changed, 74 insertions(+)
+>  drivers/iommu/mtk_iommu.c    | 4 ++--
+>  drivers/iommu/mtk_iommu.h    | 6 +++---
+>  drivers/iommu/mtk_iommu_v1.c | 4 ++--
+>  drivers/memory/mtk-smi.c     | 6 +++---
+>  include/soc/mediatek/smi.h   | 4 ----
+>  5 files changed, 10 insertions(+), 14 deletions(-)
 > 
-> diff --git a/drivers/opp/core.c b/drivers/opp/core.c
-> index c094d5d20fd7..407a07f29b12 100644
-> --- a/drivers/opp/core.c
-> +++ b/drivers/opp/core.c
-> @@ -2054,6 +2054,69 @@ static int _opp_set_availability(struct device *dev, unsigned long freq,
->  }
+> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> index cc81de2..400066d 100644
+> --- a/drivers/iommu/mtk_iommu.c
+> +++ b/drivers/iommu/mtk_iommu.c
+> @@ -278,7 +278,7 @@ static void mtk_iommu_config(struct mtk_iommu_data *data,
+>  	for (i = 0; i < fwspec->num_ids; ++i) {
+>  		larbid = MTK_M4U_TO_LARB(fwspec->ids[i]);
+>  		portid = MTK_M4U_TO_PORT(fwspec->ids[i]);
+> -		larb_mmu = &data->smi_imu.larb_imu[larbid];
+> +		larb_mmu = &data->larb_imu[larbid];
 >  
->  /**
-> + * dev_pm_opp_adjust_voltage() - helper to change the voltage of an OPP
-> + * @dev:		device for which we do this operation
-> + * @freq:		OPP frequency to adjust voltage of
-> + * @u_volt:		new OPP voltage
-> + *
-> + * Return: -EINVAL for bad pointers, -ENOMEM if no memory available for the
-> + * copy operation, returns 0 if no modifcation was done OR modification was
-> + * successful.
-> + */
-> +int dev_pm_opp_adjust_voltage(struct device *dev, unsigned long freq,
-> +			      unsigned long u_volt)
-> +{
-> +	struct opp_table *opp_table;
-> +	struct dev_pm_opp *tmp_opp, *opp = ERR_PTR(-ENODEV);
-> +	int r = 0;
-> +
-> +	/* Find the opp_table */
-> +	opp_table = _find_opp_table(dev);
-> +	if (IS_ERR(opp_table)) {
-> +		r = PTR_ERR(opp_table);
-> +		dev_warn(dev, "%s: Device OPP not found (%d)\n", __func__, r);
-> +		return r;
-> +	}
-> +
-> +	mutex_lock(&opp_table->lock);
-> +
-> +	/* Do we have the frequency? */
-> +	list_for_each_entry(tmp_opp, &opp_table->opp_list, node) {
-> +		if (tmp_opp->rate == freq) {
-> +			opp = tmp_opp;
-> +			break;
-> +		}
-> +	}
-> +
-> +	if (IS_ERR(opp)) {
-> +		r = PTR_ERR(opp);
-> +		goto adjust_unlock;
-> +	}
-> +
-> +	/* Is update really needed? */
-> +	if (opp->supplies->u_volt == u_volt)
-> +		goto adjust_unlock;
-> +
-> +	opp->supplies->u_volt = u_volt;
-> +
-> +	dev_pm_opp_get(opp);
-> +	mutex_unlock(&opp_table->lock);
-> +
-> +	/* Notify the voltage change of the OPP */
-> +	blocking_notifier_call_chain(&opp_table->head, OPP_EVENT_ADJUST_VOLTAGE,
-> +				     opp);
-> +
-> +	dev_pm_opp_put(opp);
-> +	goto adjust_put_table;
-> +
-> +adjust_unlock:
-> +	mutex_unlock(&opp_table->lock);
-> +adjust_put_table:
-> +	dev_pm_opp_put_opp_table(opp_table);
-> +	return r;
-> +}
-> +
-> +/**
->   * dev_pm_opp_enable() - Enable a specific OPP
->   * @dev:	device for which we do this operation
->   * @freq:	OPP frequency to enable
-> diff --git a/include/linux/pm_opp.h b/include/linux/pm_opp.h
-> index af5021f27cb7..86947d53e8c4 100644
-> --- a/include/linux/pm_opp.h
-> +++ b/include/linux/pm_opp.h
-> @@ -22,6 +22,7 @@ struct opp_table;
+>  		dev_dbg(dev, "%s iommu port: %d\n",
+>  			enable ? "enable" : "disable", portid);
+> @@ -680,7 +680,7 @@ static int mtk_iommu_probe(struct platform_device *pdev)
+>  			of_node_put(larbnode);
+>  			return -EPROBE_DEFER;
+>  		}
+> -		data->smi_imu.larb_imu[id].dev = &plarbdev->dev;
+> +		data->larb_imu[id].dev = &plarbdev->dev;
 >  
->  enum dev_pm_opp_event {
->  	OPP_EVENT_ADD, OPP_EVENT_REMOVE, OPP_EVENT_ENABLE, OPP_EVENT_DISABLE,
-> +	OPP_EVENT_ADJUST_VOLTAGE,
+>  		component_match_add_release(dev, &match, release_of,
+>  					    compare_of, larbnode);
+> diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+> index 56b579c..fc0f16e 100644
+> --- a/drivers/iommu/mtk_iommu.h
+> +++ b/drivers/iommu/mtk_iommu.h
+> @@ -56,7 +56,6 @@ struct mtk_iommu_data {
+>  	struct mtk_iommu_suspend_reg	reg;
+>  	struct mtk_iommu_domain		*m4u_dom;
+>  	struct iommu_group		*m4u_group;
+> -	struct mtk_smi_iommu		smi_imu;      /* SMI larb iommu info */
+>  	bool                            enable_4GB;
+>  	bool				tlb_flush_active;
+>  
+> @@ -64,6 +63,7 @@ struct mtk_iommu_data {
+>  	const struct mtk_iommu_plat_data *plat_data;
+>  
+>  	struct list_head		list;
+> +	struct mtk_smi_larb_iommu	larb_imu[MTK_LARB_NR_MAX];
 >  };
 >  
->  /**
-> @@ -111,6 +112,9 @@ int dev_pm_opp_add(struct device *dev, unsigned long freq,
->  void dev_pm_opp_remove(struct device *dev, unsigned long freq);
->  void dev_pm_opp_remove_all_dynamic(struct device *dev);
->  
-> +int dev_pm_opp_adjust_voltage(struct device *dev, unsigned long freq,
-> +			      unsigned long u_volt);
-> +
->  int dev_pm_opp_enable(struct device *dev, unsigned long freq);
->  
->  int dev_pm_opp_disable(struct device *dev, unsigned long freq);
-> @@ -234,6 +238,13 @@ static inline void dev_pm_opp_remove_all_dynamic(struct device *dev)
+>  static inline int compare_of(struct device *dev, void *data)
+> @@ -80,14 +80,14 @@ static inline int mtk_iommu_bind(struct device *dev)
 >  {
+>  	struct mtk_iommu_data *data = dev_get_drvdata(dev);
+>  
+> -	return component_bind_all(dev, &data->smi_imu);
+> +	return component_bind_all(dev, &data->larb_imu);
 >  }
 >  
-> +static inline int
-> +dev_pm_opp_adjust_voltage(struct device *dev, unsigned long freq,
-> +			  unsigned long u_volt)
-> +{
-> +	return 0;
-> +}
-> +
->  static inline int dev_pm_opp_enable(struct device *dev, unsigned long freq)
+>  static inline void mtk_iommu_unbind(struct device *dev)
 >  {
->  	return 0;
+>  	struct mtk_iommu_data *data = dev_get_drvdata(dev);
+>  
+> -	component_unbind_all(dev, &data->smi_imu);
+> +	component_unbind_all(dev, &data->larb_imu);
+>  }
+>  
+>  #endif
+> diff --git a/drivers/iommu/mtk_iommu_v1.c b/drivers/iommu/mtk_iommu_v1.c
+> index 3922358..860926c 100644
+> --- a/drivers/iommu/mtk_iommu_v1.c
+> +++ b/drivers/iommu/mtk_iommu_v1.c
+> @@ -206,7 +206,7 @@ static void mtk_iommu_config(struct mtk_iommu_data *data,
+>  	for (i = 0; i < fwspec->num_ids; ++i) {
+>  		larbid = mt2701_m4u_to_larb(fwspec->ids[i]);
+>  		portid = mt2701_m4u_to_port(fwspec->ids[i]);
+> -		larb_mmu = &data->smi_imu.larb_imu[larbid];
+> +		larb_mmu = &data->larb_imu[larbid];
+>  
+>  		dev_dbg(dev, "%s iommu port: %d\n",
+>  			enable ? "enable" : "disable", portid);
+> @@ -610,7 +610,7 @@ static int mtk_iommu_probe(struct platform_device *pdev)
+>  			}
+>  		}
+>  
+> -		data->smi_imu.larb_imu[larb_nr].dev = &plarbdev->dev;
+> +		data->larb_imu[larb_nr].dev = &plarbdev->dev;
+>  		component_match_add_release(dev, &match, release_of,
+>  					    compare_of, larb_spec.np);
+>  		larb_nr++;
+> diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
+> index d6dc62f..439d7d8 100644
+> --- a/drivers/memory/mtk-smi.c
+> +++ b/drivers/memory/mtk-smi.c
+> @@ -143,13 +143,13 @@ void mtk_smi_larb_put(struct device *larbdev)
+>  mtk_smi_larb_bind(struct device *dev, struct device *master, void *data)
+>  {
+>  	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
+> -	struct mtk_smi_iommu *smi_iommu = data;
+> +	struct mtk_smi_larb_iommu *larb_mmu = data;
+>  	unsigned int         i;
+>  
+>  	for (i = 0; i < MTK_LARB_NR_MAX; i++) {
+> -		if (dev == smi_iommu->larb_imu[i].dev) {
+> +		if (dev == larb_mmu[i].dev) {
+>  			larb->larbid = i;
+> -			larb->mmu = &smi_iommu->larb_imu[i].mmu;
+> +			larb->mmu = &larb_mmu[i].mmu;
+>  			return 0;
+>  		}
+>  	}
+> diff --git a/include/soc/mediatek/smi.h b/include/soc/mediatek/smi.h
+> index 6f0b00c..5a34b87 100644
+> --- a/include/soc/mediatek/smi.h
+> +++ b/include/soc/mediatek/smi.h
+> @@ -20,10 +20,6 @@ struct mtk_smi_larb_iommu {
+>  	unsigned int   mmu;
+>  };
+>  
+> -struct mtk_smi_iommu {
+> -	struct mtk_smi_larb_iommu larb_imu[MTK_LARB_NR_MAX];
+> -};
+> -
+>  /*
+>   * mtk_smi_larb_get: Enable the power domain and clocks for this local arbiter.
+>   *                   It also initialize some basic setting(like iommu).
 > 
 
 _______________________________________________
