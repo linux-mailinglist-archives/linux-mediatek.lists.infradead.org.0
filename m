@@ -2,75 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6619D9920A
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 13:29:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E5D499281
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 13:48:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nAvfjH/nC1bVsvPB6aA/ZmG+J2ZUR3CSP4iX6XDsVWU=; b=LcZKpNsKxEFmgp
-	M2UjiI7G6kcgsvDzUXHgHFIhdEg52RSNDeTkNhrqL/etKPXOA3Raar34OQa2vQQ5yasJeK2sC/YSo
-	93ru91GI0KwR5ewmGzlHIOcjw4AppkZ0mHYd9NnhC0ZIIHQSlAK39a8AhUp94H1iiAgqSrvwRwP5l
-	ziWHxhxqVE7S6npAr9t0JQCe2JmeUm2R3x+8smxNnNTfy/Fyt8eCPtVygCyyjQeMnxfpLngu+GBYF
-	qkw2f7fCjA3uZHLGRYFx/DSGvYhMk96so4PjSoYN7J3kcQ8fRNQFankB2dbtPy9yqZKksNRnA8U1M
-	tYneT97wAs2zt6x3ZvQQ==;
+	List-Owner; bh=mv+YY9g/aXjDD1bs+MGRRuLjZBqseSlOua51OkOv4Cg=; b=n+d+xls7jFRAyx
+	nyDlwhjuqg38uCpQtY97CJW7ZlpvLc6Z9CO2Xijprt4wI2DKfJ4d6qvSK1demVUZCWtPo+k/x55JE
+	7+X1amZOik7Qlr22mpT91wXEUeKXIfy8JcwnMBMdHGAvYEdjnwPqt9ujcUtA0Q/XQ3BveksaHKk7p
+	za16q3qNKQajiS2VO3XI+3zkDzl/Rqf7eFBFB87GOdDqLPLhmBc+Nd+topj2e6tz9PZFie4OgOrGh
+	awlzGjET6nGWjwNrHeVASBSkXwJZ5oua3lZNcDAfKjkwh65ri+qJVRAokxigmQxyaee85K4veYnMy
+	zQFY4vLi1iDIsGVUzqlw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0lH6-00047p-3A; Thu, 22 Aug 2019 11:29:04 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1i0lZs-0007rP-5c; Thu, 22 Aug 2019 11:48:28 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0lGm-0003vT-4c; Thu, 22 Aug 2019 11:28:45 +0000
-Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
- bits)) (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id EC96F206DD;
- Thu, 22 Aug 2019 11:28:39 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566473323;
- bh=aBkIxbh8H3Md/T5wqzLj1FFJMdZskQl8pfMvLAQCue8=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=cRqKwnFB3bV6vcqeK1ELh9lo1EZIXzFUSvjWaooDsaBrAF6sZVylgUg+B+9AUI0HK
- LZs/kPtu6YgpNmp0nV0mH/J+jRGEqw1Y0uypY9rP1OvK/xTDzVppBV4oBQ7FT0uZ+x
- hJWF8o5esN6BksMzW4J0W0RDz5436nqzasB9fZAA=
-Date: Thu, 22 Aug 2019 12:28:36 +0100
-From: Will Deacon <will@kernel.org>
-To: Robin Murphy <robin.murphy@arm.com>
-Subject: Re: [PATCH v10 09/23] iommu/io-pgtable-arm-v7s: Extend to support
- PA[33:32] for MediaTek
-Message-ID: <20190822112836.efodtwu3souq3uwa@willie-the-truck>
-References: <1566395606-7975-1-git-send-email-yong.wu@mediatek.com>
- <1566395606-7975-10-git-send-email-yong.wu@mediatek.com>
- <20190821152448.qmoqjh5zznfpdi6n@willie-the-truck>
- <1566464186.11621.7.camel@mhfsdcap03>
- <10d5122d-3375-161b-9356-2ddfc1c835bd@arm.com>
- <20190822101749.3kwzd5lb7zinsord@willie-the-truck>
- <e6652176-763d-5298-9e10-8c1fbe1b3c0d@arm.com>
+ id 1i0lZS-0007f1-Se; Thu, 22 Aug 2019 11:48:04 +0000
+X-UUID: e3791cdcf61148e5a61f3aef234d242d-20190822
+X-UUID: e3791cdcf61148e5a61f3aef234d242d-20190822
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ran.bi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1644723840; Thu, 22 Aug 2019 03:47:49 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 22 Aug 2019 04:47:47 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs01n2.mediatek.inc
+ (172.21.101.79) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 22 Aug 2019 19:47:46 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 22 Aug 2019 19:47:44 +0800
+Message-ID: <1566474469.12318.7.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 2/4] rtc: Add support for the MediaTek MT2712 RTC
+From: Ran Bi <ran.bi@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Thu, 22 Aug 2019 19:47:49 +0800
+In-Reply-To: <c4e8b041-4a35-578e-07a3-2ebc99848ee2@gmail.com>
+References: <20190801110122.26834-1-ran.bi@mediatek.com>
+ <20190801110122.26834-3-ran.bi@mediatek.com>
+ <c4e8b041-4a35-578e-07a3-2ebc99848ee2@gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <e6652176-763d-5298-9e10-8c1fbe1b3c0d@arm.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
+X-TM-SNTS-SMTP: 07BEDA87CE6DE420B3D64B7B18F56819C1B1580EC0478AB37A2E93247614A2FB2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_042844_226865_9F8C42C6 
-X-CRM114-Status: GOOD (  28.51  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190822_044802_930848_CD288158 
+X-CRM114-Status: GOOD (  11.85  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -82,139 +75,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
- Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, ming-fan.chen@mediatek.com,
- anan.sun@mediatek.com, Matthias Kaehlcke <mka@chromium.org>,
- Yong Wu <yong.wu@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>, Flora
+ Fu <flora.fu@mediatek.com>, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@mediatek.com>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ Eddie Huang <eddie.huang@mediatek.com>,
+ "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org,
+ linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Aug 22, 2019 at 11:57:11AM +0100, Robin Murphy wrote:
-> On 2019-08-22 11:17 am, Will Deacon wrote:
-> > On Thu, Aug 22, 2019 at 11:08:58AM +0100, Robin Murphy wrote:
-> > > On 2019-08-22 9:56 am, Yong Wu wrote:
-> > > > On Wed, 2019-08-21 at 16:24 +0100, Will Deacon wrote:
-> > > > > On Wed, Aug 21, 2019 at 09:53:12PM +0800, Yong Wu wrote:
-> > > > > > MediaTek extend the arm v7s descriptor to support up to 34 bits PA where
-> > > > > > the bit32 and bit33 are encoded in the bit9 and bit4 of the PTE
-> > > > > > respectively. Meanwhile the iova still is 32bits.
-> > > > > > 
-> > > > > > Regarding whether the pagetable address could be over 4GB, the mt8183
-> > > > > > support it while the previous mt8173 don't, thus keep it as is.
-> > > > > > 
-> > > > > > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> > > > > > ---
-> > > > > >    drivers/iommu/io-pgtable-arm-v7s.c | 32 +++++++++++++++++++++++++-------
-> > > > > >    include/linux/io-pgtable.h         |  7 +++----
-> > > > > >    2 files changed, 28 insertions(+), 11 deletions(-)
-> > > > > 
-> > > > > [...]
-> > > > > 
-> > > > > > @@ -731,7 +747,9 @@ static struct io_pgtable *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
-> > > > > >    {
-> > > > > >    	struct arm_v7s_io_pgtable *data;
-> > > > > > -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
-> > > > > > +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
-> > > > > > +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
-> > > > > > +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
-> > > > > 
-> > > > > Please can you instead change arm_v7s_alloc_pgtable() so that it allows an
-> > > > > ias of up to 34 when the IO_PGTABLE_QUIRK_ARM_MTK_EXT is set?
-> > > > 
-> > > > Here I only simply skip the oas checking for our case. then which way do
-> > > > your prefer?  something like you commented before:?
-> > > > 
-> > > > 
-> > > > 	if (cfg->ias > ARM_V7S_ADDR_BITS)
-> > > > 		return NULL;
-> > > > 
-> > > > 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
-> > > > 		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
-> > > > 			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
-> > > > 		else if (cfg->oas > 34)
-> > > > 			return NULL;
-> > > > 	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
-> > > > 		return NULL;
-> > > > 	}
-> > > 
-> > > All it should take is something like:
-> > > 
-> > > 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)
-> > > 		max_oas = 34;
-> > > 	else
-> > > 		max_oas = 32;
-> > > 	if (cfg->oas > max_oas)
-> > > 		return NULL;
-> > > 
-> > > or even just:
-> > > 
-> > > 	if (cfg->oas > 32 ||
-> > > 	    (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT && cfg->oas > 34))
-> > > 		return NULL;
-> > > 
-> > > (and if we prefer the latter style, perhaps we could introduce some kind of
-> > > "is_mtk_4gb()" helper to save on verbosity)
-> > 
-> > I wondered the same thing, but another place we'd want the check is in
-> > iopte_to_paddr() which probably needs the PHYS_ADDR_T check to avoid GCC
-> > warnings, although I didn't try it.
+On Thu, 2019-08-22 at 11:12 +0200, Matthias Brugger wrote:
 > 
-> I'm pretty sure I confirmed that "paddr |= BIT_ULL(32)" doesn't warn when
-> phys_addt_t is 32-bit - it's well-defined unsigned integer truncation after
-> all, and if GCC starts warning about all the valid no-op code it optimises
-> away then it's going to run up against IS_ENABLED() first and foremost ;)
-
-You're quite right, although we live in a world where GCC shouts at us about
-missing comments in switch statements so I think my worry was justified!
-
-> > So if we did:
+> On 01/08/2019 13:01, Ran Bi wrote:
+> > This add support for the MediaTek MT2712 RTC. It was SoC based RTC, but
+> > had different architecture compared with MT7622 RTC.
 > > 
-> > static bool cfg_mtk_ext_enabled(struct io_pgtable_cfg *cfg)
-> > {
-> > 	return IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT) &&
-> > 	       cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT;
-> > }
-> > 
-> > Then I suppose we could do this in _alloc():
-> > 
-> > 	if (cfg->oas > cfg_mtk_ext_enabled(cfg) ? 34 : ARM_V7S_ADDR_BITS)
-> > 		return NULL;
-
-^^ Apparantly, I left the bracketting here as an exercise to the reader.
-
-> > 
-> > and then this in iopte_to_paddr():
-> > 
-> > 	[...]
-> > 
-> > 	paddr = pte & mask;
-> > 	if (!cfg_mtk_ext_enabled(cfg))
-> > 		return paddr;
-> > 
-> > 	if (pte & ARM_V7S_ATTR_MTK_PA_BIT32)
-> > 		paddr |= ...
-> > 
-> > 	[...]
-> > 
-> > What do you reckon?
+> > Signed-off-by: Ran Bi <ran.bi@mediatek.com>
+> > ---
+> >  drivers/rtc/Kconfig      |  10 +
+> >  drivers/rtc/Makefile     |   1 +
+> >  drivers/rtc/rtc-mt2712.c | 444 +++++++++++++++++++++++++++++++++++++++
 > 
-> Yeah, that's the general shape of things I was picturing - I'm not that
-> fussed about the PHYS_ADDR_T_64BIT thing, especially if it's wrapped up in
-> just one place, so if you do want to keep it as belt-and-braces I'll just
-> consider it a slight code size optimisation for 32-bit builds.
+> Can't we just adjust rtc-mt7622.c (and rename it) to unify the source for both
+> devices. What is the difference that we need to write a driver of our own?
+> 
+> Regards,
+> Matthias
 
-Ok, great. Yong Wu -- are you ok respinning with the above + missing
-brackets?
+We cannot merge rtc-mt7622.c and rtc-mt2712.c together. These two rtc
+hardwares have totally different design. Registers naming, registers
+offset and operating method are different.
 
-Will
+
 
 _______________________________________________
 Linux-mediatek mailing list
