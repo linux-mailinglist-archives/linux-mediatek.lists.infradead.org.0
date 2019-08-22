@@ -2,64 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CD23099428
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 14:48:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9606399432
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 14:49:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bGLDUb9Hc+Gwz5pevxYdl0TAUirmAfjQYgqC5KVGEJ8=; b=SmglGyO7VfWQzD
-	RCrPsK1PuWnZMnjsCwRBrQh5trsIArIEqAQdUtiZU7NmYjehta4QEt9Zq2GeX1CDkvRle7671AZRz
-	yPpDKwQ/QOYWYLAYSCBsUB55q0vkzC3e0ggXIkmgmg0XeL6XdF/QLobX+x6zQSEiSn+mr3rgUEb5k
-	mIpqQA4BKVHZv6mofDI15NoRGFcC34lGiKzylBdveSNue/mPjthWIyHgGWNPyjB4hAQORv3//BetQ
-	ClEaxWJSlvFEyJx+t1CohOjfE9F9FNjsuXEFNhxh6fq7GZmefnK3a8UaK86nJbB365QXYbtlQK3R5
-	xry7lANGWyKit4QBBNpA==;
+	List-Owner; bh=Eyucx609kDSk+BY2mk00Ree66u8DaUeNCFaQJ1FgQa0=; b=aseCAaDTtrWY/U
+	cljo3Ck4XOAKqe+5LG9OWCfeAr5N8LRHHyHKcslGF+j0asd8Pn2sU06voxa/gyRkMVZvY9Y0TqEH0
+	dSC2HgpmhA7TMlxeN1F2du2U21A6fD++/hPpXMdO/v5LaIydeTy1sL7mNreX0Tkjv7X0NWDh7t6z0
+	99HBlvVDezhTIlr6fcOAbEL1d9Zax6UGjcjXKpAkWj2tG16EzZyTHp8zXy4Q84/0A7QdyZ0t1QX4f
+	imV4qkAMu4Rt+4PIN3fS4IIswmtiChOMmrSZGgCuNphiT08grSs/vfcL6tIx2koR2U4iKgNhdqrqJ
+	LHXzwy9SUCpz/CwhzVdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0mVn-000199-7y; Thu, 22 Aug 2019 12:48:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i0mWu-0001UN-Ag; Thu, 22 Aug 2019 12:49:29 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0mVU-0000zS-2X; Thu, 22 Aug 2019 12:48:01 +0000
-X-UUID: 3a7dd60af8cb48ba980ccac490edc107-20190822
-X-UUID: 3a7dd60af8cb48ba980ccac490edc107-20190822
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1i0mWb-0001II-Jr; Thu, 22 Aug 2019 12:49:11 +0000
+X-UUID: d6871bead70d41ba8f948188b9f1101b-20190822
+X-UUID: d6871bead70d41ba8f948188b9f1101b-20190822
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <jungo.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 591519225; Thu, 22 Aug 2019 04:47:50 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ with ESMTP id 1448763505; Thu, 22 Aug 2019 04:48:54 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 05:47:48 -0700
+ 15.0.1395.4; Thu, 22 Aug 2019 05:48:52 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 20:47:35 +0800
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 22 Aug 2019 20:48:38 +0800
 Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 22 Aug 2019 20:47:35 +0800
-Message-ID: <1566478060.5044.0.camel@mtksdccf07>
+ Transport; Thu, 22 Aug 2019 20:48:39 +0800
+Message-ID: <1566478123.5044.1.camel@mtksdccf07>
 Subject: Re: [RFC,v4,1/4] media: dt-bindings: mt8183: Added camera ISP Pass 1
 From: Jungo Lin <jungo.lin@mediatek.com>
 To: Rob Herring <robh@kernel.org>
-Date: Thu, 22 Aug 2019 20:47:40 +0800
-In-Reply-To: <20190821194752.GA15270@bogus>
+Date: Thu, 22 Aug 2019 20:48:43 +0800
+In-Reply-To: <20190821201758.GB15270@bogus>
 References: <jungo.lin@mediatek.com>
  <20190807124803.29884-1-jungo.lin@mediatek.com>
  <20190807124803.29884-2-jungo.lin@mediatek.com>
- <20190821194752.GA15270@bogus>
+ <20190821201758.GB15270@bogus>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: BC9277861983516FA546784BB39EAEF20E91B63993C9A2B73B9F4B1A8C76BAAA2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_054800_125122_AF0F55F8 
-X-CRM114-Status: GOOD (  19.14  )
+X-CRM114-CacheID: sfid-20190822_054909_660658_490D116E 
+X-CRM114-Status: GOOD (  19.54  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -90,8 +89,7 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 Hi, Rob:
-
-On Wed, 2019-08-21 at 14:47 -0500, Rob Herring wrote:
+On Wed, 2019-08-21 at 15:17 -0500, Rob Herring wrote:
 > On Wed, Aug 07, 2019 at 08:48:00PM +0800, Jungo Lin wrote:
 > > This patch adds DT binding document for the Pass 1 (P1) unit
 > > in Mediatek's camera ISP system. The Pass 1 unit grabs the sensor
@@ -154,18 +152,18 @@ On Wed, 2019-08-21 at 14:47 -0500, Rob Herring wrote:
 > > +SoC specific DT entry:
 > > +
 > > +		camisp: camisp@1a000000 {
-> > +			compatible = "mediatek,mt8183-camisp", "syscon";
 > 
-> syscon doesn't seem appropriate nor is it documented.
+> Also, you can remove 2 levels of indentation here.
 > 
 
-Thanks for your comment.
-I will remove "syscon" in next patch.
+Ok, got it.
+We will change to use one level of indentation.
 
-Best regards,
+Thanks,
 
 Jungo
 
+> > +			compatible = "mediatek,mt8183-camisp", "syscon";
 > > +			reg = <0 0x1a000000 0 0x1000>,
 > > +					<0 0x1a003000 0 0x1000>,
 > > +					<0 0x1a004000 0 0x2000>,
