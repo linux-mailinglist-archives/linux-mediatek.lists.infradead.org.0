@@ -2,75 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 233FD98FEA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 11:46:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41C099905E
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 12:08:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=PrKRB+tczkDXAciu0+dB88hJ2K2xMyB4jlycxz/uogw=; b=pg0QKGd5s+2G+U
-	ZybZGgDcVATabyuvYHEZ2QjOcz1vPrFGnFUAKV796bbIsPeOpjdpTCY1ZPJk6jXS4ml/YKofQQJlE
-	SpXYS8dgbDOCbhym+5jHc++aqnh7yrXpfBUyqkIUxQfm7tHi0uAMxX89e1cemjYztKXRm1tnYjcY4
-	11XoRtLYSneElNs0UAfMAE06U3HTNc48Uii7LbPomn6m1fS3ayNR1hvVq6Da8jD2THlBN4rCXbRf3
-	0pq3gh2ZUUZ0yThsB1Vqak2PxV5JdAAM56cwDQux8dbqSuq4zPaI+Kax0Iv8jKSS9IZ0KWe6TpAWz
-	VuevZ8ukw3stew6ukuDg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=zknLrORh2NiOH7zNDvEzb+1CBNNn3pecFNP6SIr2oDs=; b=LIk/Jrejj6qrL2
+	VQincRNoXaqZM1DjCcTzJDH0Zz6Rm7KFn2L5Xo9Y1HDsg5Pm4rntaASWOSl5gM9421yu6xrxurbY8
+	JiVzL/o7FKjXNlRRwdvZx9n2DbkcE2Yql9Dyp1X70a0rTvHevU58XujTo0P2vjz5Hu0Yy7R+xlblU
+	d8p8Ibr9T4JE6Wh+DfnsYsH6DWtjOX4wXkchAhsJ7f2HZcp4helUHEFnNN+5n3TUlKhxcil0hU0D1
+	Bb551sHp1KCk2MKhFPuBBGMkTohbM/PRtYUwmG00jFA8p4RockqMGrN8ZrDEscA8PivyEsext9SDy
+	mPTVk1mxQrpWF53rbzdQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0jfJ-0000K6-AU; Thu, 22 Aug 2019 09:45:57 +0000
-Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
+	id 1i0k1D-0000Px-PH; Thu, 22 Aug 2019 10:08:35 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0jf1-000079-S6
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 09:45:41 +0000
-Received: by mail-pf1-x442.google.com with SMTP id o70so3585644pfg.5
- for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 02:45:39 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=sgHEzZrPt9EteY2/QiFiyeYlRXQlrmCLZpXRsbYVLMM=;
- b=a9yy/07U4q9DkIrWE+1S1A5qGfmGOHr2Iah/Cwu7XTniDeBQidLmwEdnkTDXQM31RX
- HhXAwzTUtfbL7o0VP7LGkI+cz+lIG1ARIpBt7uaEM+lvwDLuY2LuYf4zfjpbXOzaKx1h
- ZskFoEcfaOXTiPrX0jOZiLZ1+rX1vte6oawec=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=sgHEzZrPt9EteY2/QiFiyeYlRXQlrmCLZpXRsbYVLMM=;
- b=WmKUgJF+k470JVps+PSFYO44ZmxbCohdAHy6/8u/DJi2vdsRJFMqnKOknjM/d5JSUq
- nh6xDJTQ53trI6cddxXNMs3RAMoRQGAo1MqkypRvums9n3ee/hQ5mKsnDjudqbY0IlyQ
- FkFjB+tv5ns1cpNo0BcKZox3A2XPFbzqqZd+07yr9FzSbPZdSCulKrIxaQYrV5Y01Y//
- ApZhTBRBA/GCKUt3+14b8Ppzf4OpPBvfl9eKiUMUfttT1c6CyMV9bvdf//JyC286WcgW
- KEz3VA/GET6RftjkZfNdFkX9miv8O4jO8Yk2wh/rpz6xj10gLXtzwFu98Rei0TsSubvN
- enZQ==
-X-Gm-Message-State: APjAAAUNzPuvidKPuPDv4YFuknM2KhV/7lzTTqKrrPQn+npmKAWKeZhT
- 5mrrTRLNNMHc0XSwm0IAAxgnpA==
-X-Google-Smtp-Source: APXvYqwkD6Agsn8K0zNRrV8QL+ZYvIkEdfXfGFsEU0viYlCos3ngXCAmY0WDc8ulQwd3AcyBj/e79Q==
-X-Received: by 2002:a65:6281:: with SMTP id f1mr31045994pgv.400.1566467138859; 
- Thu, 22 Aug 2019 02:45:38 -0700 (PDT)
-Received: from hsinyi-z840.tpe.corp.google.com
- ([2401:fa00:1:10:b852:bd51:9305:4261])
- by smtp.gmail.com with ESMTPSA id 4sm26154645pfn.118.2019.08.22.02.45.35
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Thu, 22 Aug 2019 02:45:37 -0700 (PDT)
-From: Hsin-Yi Wang <hsinyi@chromium.org>
-To: Wolfram Sang <wsa@the-dreams.de>, Yingjoe Chen <yingjoe.chen@mediatek.com>
-Subject: [PATCH v2] i2c: mediatek: disable zero-length transfers for mt8183
-Date: Thu, 22 Aug 2019 17:45:17 +0800
-Message-Id: <20190822094516.55130-1-hsinyi@chromium.org>
-X-Mailer: git-send-email 2.20.1
+ id 1i0k0x-0000Dr-OH; Thu, 22 Aug 2019 10:08:21 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 211D4233FC;
+ Thu, 22 Aug 2019 10:08:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1566468499;
+ bh=IzjFEWdPrIj2HDymvSmNUsqNwBoJqAI3BTqeibzDG/E=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=rYThi+h21fwi/S9wIORrQaUPUGMjIox00ZAy/cLNVxUJaz/6kvzvI6xPMv6isLnqL
+ YbO4bbC9r60HoObsGkHAzUEccRwIz4Nx9WfgF3REGv09J7Q84lLWfcvFFw1Z4IIaE9
+ poMHdFUTV0gAyjaHSpmHhHZrxiM+pV+B8wam3iuk=
+Date: Thu, 22 Aug 2019 11:08:13 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH v10 09/23] iommu/io-pgtable-arm-v7s: Extend to support
+ PA[33:32] for MediaTek
+Message-ID: <20190822100812.ketlgxxu64cy2bsk@willie-the-truck>
+References: <1566395606-7975-1-git-send-email-yong.wu@mediatek.com>
+ <1566395606-7975-10-git-send-email-yong.wu@mediatek.com>
+ <20190821152448.qmoqjh5zznfpdi6n@willie-the-truck>
+ <1566464186.11621.7.camel@mhfsdcap03>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <1566464186.11621.7.camel@mhfsdcap03>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_024539_958969_908726D0 
-X-CRM114-Status: GOOD (  11.71  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190822_030819_830689_A2C5853D 
+X-CRM114-Status: GOOD (  19.70  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -92,99 +79,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org,
- Nicolas Boichat <drinkcat@chromium.org>,
- Alexandru M Stan <amstan@chromium.org>, Jun Gao <jun.gao@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-i2c@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Qii Wang <qii.wang@mediatek.com>
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
+ Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
+ iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When doing i2cdetect quick write mode, we would get transfer
-error ENOMEM, and i2cdetect shows there's no device at the address.
-Quoting from mt8183 datasheet, the number of transfers to be
-transferred in one transaction should be set to bigger than 1,
-so we should forbid zero-length transfer and update functionality.
+On Thu, Aug 22, 2019 at 04:56:26PM +0800, Yong Wu wrote:
+> On Wed, 2019-08-21 at 16:24 +0100, Will Deacon wrote:
+> > On Wed, Aug 21, 2019 at 09:53:12PM +0800, Yong Wu wrote:
+> > > MediaTek extend the arm v7s descriptor to support up to 34 bits PA where
+> > > the bit32 and bit33 are encoded in the bit9 and bit4 of the PTE
+> > > respectively. Meanwhile the iova still is 32bits.
+> > > 
+> > > Regarding whether the pagetable address could be over 4GB, the mt8183
+> > > support it while the previous mt8173 don't, thus keep it as is.
+> > > 
+> > > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+> > > ---
+> > >  drivers/iommu/io-pgtable-arm-v7s.c | 32 +++++++++++++++++++++++++-------
+> > >  include/linux/io-pgtable.h         |  7 +++----
+> > >  2 files changed, 28 insertions(+), 11 deletions(-)
+> > 
+> > [...]
+> > 
+> > > @@ -731,7 +747,9 @@ static struct io_pgtable *arm_v7s_alloc_pgtable(struct io_pgtable_cfg *cfg,
+> > >  {
+> > >  	struct arm_v7s_io_pgtable *data;
+> > >  
+> > > -	if (cfg->ias > ARM_V7S_ADDR_BITS || cfg->oas > ARM_V7S_ADDR_BITS)
+> > > +	if (cfg->ias > ARM_V7S_ADDR_BITS ||
+> > > +	    (cfg->oas > ARM_V7S_ADDR_BITS &&
+> > > +	     !(cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)))
+> > 
+> > Please can you instead change arm_v7s_alloc_pgtable() so that it allows an
+> > ias of up to 34 when the IO_PGTABLE_QUIRK_ARM_MTK_EXT is set?
+> 
+> Here I only simply skip the oas checking for our case. then which way do
+> your prefer?  something like you commented before:?
+> 
+> 
+> 	if (cfg->ias > ARM_V7S_ADDR_BITS)
+> 		return NULL;
+> 
+> 	if (cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT) {
+> 		if (!IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT))
+> 			cfg->oas = min(cfg->oas, ARM_V7S_ADDR_BITS);
 
-Incorrect return:
-localhost ~ # i2cdetect -q -y 0
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:          -- -- -- -- -- -- -- -- -- -- -- -- --
-10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-70: -- -- -- -- -- -- -- --
+Isn't this always 32 for your IOMMUs?
 
-After this patch:
-localhost ~ #  i2cdetect -q -y 0
-Error: Can't use SMBus Quick Write command on this bus
+> 		else if (cfg->oas > 34)
+> 			return NULL;
+> 	} else if (cfg->oas > ARM_V7S_ADDR_BITS) {
+> 		return NULL;
+> 	}
 
-localhost ~ #  i2cdetect -y 0
-Warning: Can't use SMBus Quick Write command, will skip some addresses
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:
-10:
-20:
-30: -- -- -- -- -- -- -- --
-40:
-50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-60:
-70:
+How about:
 
-Reported-by: Alexandru M Stan <amstan@chromium.org>
-Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
----
-Change from v1:
-* restore the order of algo and quirks
----
- drivers/i2c/busses/i2c-mt65xx.c | 11 ++++++++++-
- 1 file changed, 10 insertions(+), 1 deletion(-)
+	unsigned int oas_max = ARM_V7S_ADDR_BITS;
 
-diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
-index 252edb433fdf..29eae1bf4f86 100644
---- a/drivers/i2c/busses/i2c-mt65xx.c
-+++ b/drivers/i2c/busses/i2c-mt65xx.c
-@@ -234,6 +234,10 @@ static const struct i2c_adapter_quirks mt7622_i2c_quirks = {
- 	.max_num_msgs = 255,
- };
- 
-+static const struct i2c_adapter_quirks mt8183_i2c_quirks = {
-+	.flags = I2C_AQ_NO_ZERO_LEN,
-+};
-+
- static const struct mtk_i2c_compatible mt2712_compat = {
- 	.regs = mt_i2c_regs_v1,
- 	.pmic_i2c = 0,
-@@ -298,6 +302,7 @@ static const struct mtk_i2c_compatible mt8173_compat = {
- };
- 
- static const struct mtk_i2c_compatible mt8183_compat = {
-+	.quirks = &mt8183_i2c_quirks,
- 	.regs = mt_i2c_regs_v2,
- 	.pmic_i2c = 0,
- 	.dcm = 0,
-@@ -870,7 +875,11 @@ static irqreturn_t mtk_i2c_irq(int irqno, void *dev_id)
- 
- static u32 mtk_i2c_functionality(struct i2c_adapter *adap)
- {
--	return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
-+	if (adap->quirks->flags & I2C_AQ_NO_ZERO_LEN)
-+		return I2C_FUNC_I2C |
-+			(I2C_FUNC_SMBUS_EMUL & ~I2C_FUNC_SMBUS_QUICK);
-+	else
-+		return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
- }
- 
- static const struct i2c_algorithm mtk_i2c_algorithm = {
--- 
-2.20.1
+	if (cfg->ias > ARM_V7S_ADDR_BITS)
+		return NULL;
 
+	if (IS_ENABLED(CONFIG_PHYS_ADDR_T_64BIT) &&
+	    cfg->quirks & IO_PGTABLE_QUIRK_ARM_MTK_EXT)
+		oas_max = 34;
+
+	if (cfg->oas > oas_max)
+		return NULL;
+
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
