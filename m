@@ -2,77 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CBB8C99E7F
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 20:14:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D86E699EDB
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 20:33:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
+	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=B+emkkpahsfUrFIXdIPlPOMsz+ulddJAdVJ23bEYGaI=; b=XX0a65gXCmbOMM
-	uhLtE9hJU8UyEFigAmJCb3DZhI0vPUyxNFuBhuMxmry40fxc5uThSlt57I8vBfKfnYki7phqDGJ8Z
-	9/zlXn+z/YQNtmSBvbNhqVl6euh7C7Xt6kyXno2wQGnfsvHn4RxIH1DAsUEndSIKaIcNqFD0Br7cF
-	xACpihgzgln25z82mPe6FK6N2GzHsNXIChOZV7GK06QcnwUyK8uq1egTCdvNQ5nDvvTb838+GJrGr
-	ZdwIyEBI9g5RtWtonf44t9xLnzP0zKEjPg8BlydxTwoubJ9w7riEHdNLz8LsvPzv37bRao2tw70Ai
-	tjwW+iqrwjUn6bZ1oj+Q==;
+	References:List-Owner; bh=OlyhF7S5AT80fMzbKS1awJ0O7yqtjmMPoSxID1FMcpo=; b=MAH
+	I52ECEIasA6twMhTV/oo6myzxne2K9K5fhNnwTnyPlWyGRdSdSEy1iyQSm0Fq/jRgwr4uvQ+bvfit
+	zhBTVPlBh94ZKDHvP0uzsx5dbiqGqHRW0KZ8TyLTEVmrSHSASVX30v8EiOkNtYGjPNn41dY3QnK7i
+	EhJCkpHCxwZ3jJncGb4KohbfB6/ZZBuH7Fcq3BAyF529dD/4/vSPgyfdj/vd72O/wK6THtuliZA6F
+	8xxHFJ0BQHVSHtJY44Yb67BTImU0YY5tyyhOWW3EMe8D5/fINIjYKSCt1MQXH5I7Jau/5nwQhZUpH
+	ANYUaHYKnegRktTPgmQigRlDXrwCCTw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0rb2-0002qF-Ui; Thu, 22 Aug 2019 18:14:04 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1i0rto-00047z-Gu; Thu, 22 Aug 2019 18:33:28 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0raz-0002pq-PS
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 18:14:02 +0000
-Received: from mail-wm1-f53.google.com (mail-wm1-f53.google.com
- [209.85.128.53])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 3AED223400
- for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 18:14:01 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566497641;
- bh=E0tPMOEUv3jrqDmtrvwzedPZXnnURm97wF7wyeFfPrI=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=rEPVrIANqHOqSJfeCRLws+WJyuKUk9JaQQsjGBRJIAiIp+qTcPJ0Ku4Zk5YQoAi1q
- h7+N4yk/T1mHKy8RmeDqvaL6cpy41HvdOEsvnEdLQC1wegcqCSnXpOkIY8/PBcRKps
- 7DwpiqK+JvLZer+86GGJmODZiAY7inkt8TlzuFFQ=
-Received: by mail-wm1-f53.google.com with SMTP id 10so6535612wmp.3
- for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 11:14:01 -0700 (PDT)
-X-Gm-Message-State: APjAAAU5AjCpRFl/ktcVtmu9ieMbjYhVKceZVgLyowTUOwjI2+ADibCy
- HhDGoLcjgXmVzVAh6nqIrovgPhFlv8IwD5ruimw=
-X-Google-Smtp-Source: APXvYqz9VKO+A36Lao8izp41Osz7VfriIA6pPPz+vN/d2kRbuSlNxEbSGedMUhbQXO1m65E/CzbYTQQNziZlZ0ZLYKk=
-X-Received: by 2002:a1c:2314:: with SMTP id j20mr394213wmj.152.1566497639822; 
- Thu, 22 Aug 2019 11:13:59 -0700 (PDT)
-MIME-Version: 1.0
-References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
- <1566206502-4347-8-git-send-email-mars.cheng@mediatek.com>
-In-Reply-To: <1566206502-4347-8-git-send-email-mars.cheng@mediatek.com>
-From: Sean Wang <sean.wang@kernel.org>
-Date: Thu, 22 Aug 2019 11:13:48 -0700
-X-Gmail-Original-Message-ID: <CAGp9Lzpsg2ZjP3Ydj+Fo88FXT_jrV=GnJ+vf4AsSNacwEEx=BA@mail.gmail.com>
-Message-ID: <CAGp9Lzpsg2ZjP3Ydj+Fo88FXT_jrV=GnJ+vf4AsSNacwEEx=BA@mail.gmail.com>
-Subject: Re: [PATCH v2 07/11] pinctrl: mediatek: add mt6779 eint support
-To: Mars Cheng <mars.cheng@mediatek.com>
+ id 1i0rtY-0003tn-GY; Thu, 22 Aug 2019 18:33:14 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
+ Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
+ List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=KE93PKy0vRrd3WeN6rOwohc7yTA6nQ5nPKHYKjUcZDM=; b=cxrDZK6RlbAL
+ 1SlQ5Dsseb2papFWd2oTamK04jDXZo9RlgWC6+JSeAO82m5QFN9FgfWlpJ58RUzKrsvFbQc4pBLLY
+ OC9UUNekP+6l7LvjkXc8c//esq+vrNkwBxXNt3gf3bwf5IQiJDlxQaww+XfK4H34iPHf6AJDgCVTe
+ N0HtM=;
+Received: from 92.40.26.78.threembb.co.uk ([92.40.26.78]
+ helo=fitzroy.sirena.org.uk) by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <broonie@sirena.org.uk>)
+ id 1i0rtR-0007fg-BC; Thu, 22 Aug 2019 18:33:05 +0000
+Received: by fitzroy.sirena.org.uk (Postfix, from userid 1000)
+ id 3AE96D02CE6; Thu, 22 Aug 2019 19:32:57 +0100 (BST)
+From: Mark Brown <broonie@kernel.org>
+To: YueHaibing <yuehaibing@huawei.com>
+Subject: Applied "ASoC: mediatek: mt2701: Fix -Wunused-const-variable
+ warnings" to the asoc tree
+In-Reply-To: <20190822143747.20944-1-yuehaibing@huawei.com>
+X-Patchwork-Hint: ignore
+Message-Id: <20190822183257.3AE96D02CE6@fitzroy.sirena.org.uk>
+Date: Thu, 22 Aug 2019 19:32:57 +0100 (BST)
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_111401_847940_3A4D1FAE 
-X-CRM114-Status: GOOD (  12.65  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190822_113312_606377_CD80382A 
+X-CRM114-Status: GOOD (  13.56  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,58 +76,131 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, CC Hwang <cc.hwang@mediatek.com>,
- wsd_upstream@mediatek.com, devicetree@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, Linus Walleij <linus.walleij@linaro.org>,
- Loda Chou <loda.chou@mediatek.com>, lkml <linux-kernel@vger.kernel.org>,
- Marc Zyngier <marc.zyngier@arm.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, mtk01761 <wendell.lin@mediatek.com>,
- linux-clk@vger.kernel.org
+Cc: alsa-devel@alsa-project.org, swboyd@chromium.org, tiwai@suse.com,
+ yuehaibing@huawei.com, lgirdwood@gmail.com, linux-kernel@vger.kernel.org,
+ Hulk Robot <hulkci@huawei.com>, Mark Brown <broonie@kernel.org>,
+ linux-mediatek@lists.infradead.org, pihsun@chromium.org,
+ matthias.bgg@gmail.com, perex@perex.cz, linux-arm-kernel@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Aug 19, 2019 at 2:22 AM Mars Cheng <mars.cheng@mediatek.com> wrote:
->
-> add driver setting to support mt6779 eint
->
-> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
+The patch
 
-Acked-by: Sean Wang <sean.wang@kernel.org>
+   ASoC: mediatek: mt2701: Fix -Wunused-const-variable warnings
 
-> ---
->  drivers/pinctrl/mediatek/pinctrl-mt6779.c |    8 ++++++++
->  1 file changed, 8 insertions(+)
->
-> diff --git a/drivers/pinctrl/mediatek/pinctrl-mt6779.c b/drivers/pinctrl/mediatek/pinctrl-mt6779.c
-> index 145bf22..49ff3cc 100644
-> --- a/drivers/pinctrl/mediatek/pinctrl-mt6779.c
-> +++ b/drivers/pinctrl/mediatek/pinctrl-mt6779.c
-> @@ -731,11 +731,19 @@
->         "iocfg_rt", "iocfg_lt", "iocfg_tl",
->  };
->
-> +static const struct mtk_eint_hw mt6779_eint_hw = {
-> +       .port_mask = 7,
-> +       .ports     = 6,
-> +       .ap_num    = 209,
-> +       .db_cnt    = 16,
-> +};
-> +
->  static const struct mtk_pin_soc mt6779_data = {
->         .reg_cal = mt6779_reg_cals,
->         .pins = mtk_pins_mt6779,
->         .npins = ARRAY_SIZE(mtk_pins_mt6779),
->         .ngrps = ARRAY_SIZE(mtk_pins_mt6779),
-> +       .eint_hw = &mt6779_eint_hw,
->         .gpio_m = 0,
->         .ies_present = true,
->         .base_names = mt6779_pinctrl_register_base_names,
-> --
-> 1.7.9.5
->
+has been applied to the asoc tree at
+
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.4
+
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
+
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
+
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
+
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
+
+Thanks,
+Mark
+
+From 97aad5ce88164bc5f884b5234f015ac553ea2fe5 Mon Sep 17 00:00:00 2001
+From: YueHaibing <yuehaibing@huawei.com>
+Date: Thu, 22 Aug 2019 22:37:47 +0800
+Subject: [PATCH] ASoC: mediatek: mt2701: Fix -Wunused-const-variable warnings
+
+sound/soc/mediatek/mt2701/mt2701-afe-common.h:66:27: warning:
+ mt2701_afe_backup_list defined but not used [-Wunused-const-variable=]
+
+mt2701_afe_backup_list is only used in mt2701-afe-pcm.c,
+so just move the definition over there.
+
+Reported-by: Hulk Robot <hulkci@huawei.com>
+Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Link: https://lore.kernel.org/r/20190822143747.20944-1-yuehaibing@huawei.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+---
+ sound/soc/mediatek/mt2701/mt2701-afe-common.h | 21 -------------------
+ sound/soc/mediatek/mt2701/mt2701-afe-pcm.c    | 21 +++++++++++++++++++
+ 2 files changed, 21 insertions(+), 21 deletions(-)
+
+diff --git a/sound/soc/mediatek/mt2701/mt2701-afe-common.h b/sound/soc/mediatek/mt2701/mt2701-afe-common.h
+index d44faba27d3c..32bef5e2a56d 100644
+--- a/sound/soc/mediatek/mt2701/mt2701-afe-common.h
++++ b/sound/soc/mediatek/mt2701/mt2701-afe-common.h
+@@ -63,27 +63,6 @@ enum audio_base_clock {
+ 	MT2701_BASE_CLK_NUM,
+ };
+ 
+-static const unsigned int mt2701_afe_backup_list[] = {
+-	AUDIO_TOP_CON0,
+-	AUDIO_TOP_CON4,
+-	AUDIO_TOP_CON5,
+-	ASYS_TOP_CON,
+-	AFE_CONN0,
+-	AFE_CONN1,
+-	AFE_CONN2,
+-	AFE_CONN3,
+-	AFE_CONN15,
+-	AFE_CONN16,
+-	AFE_CONN17,
+-	AFE_CONN18,
+-	AFE_CONN19,
+-	AFE_CONN20,
+-	AFE_CONN21,
+-	AFE_CONN22,
+-	AFE_DAC_CON0,
+-	AFE_MEMIF_PBUF_SIZE,
+-};
+-
+ struct mt2701_i2s_data {
+ 	int i2s_ctrl_reg;
+ 	int i2s_asrc_fs_shift;
+diff --git a/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c b/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
+index d7f5defa50c2..76502ba261c8 100644
+--- a/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
++++ b/sound/soc/mediatek/mt2701/mt2701-afe-pcm.c
+@@ -60,6 +60,27 @@ static const struct mt2701_afe_rate mt2701_afe_i2s_rates[] = {
+ 	{ .rate = 352800, .regvalue = 24 },
+ };
+ 
++static const unsigned int mt2701_afe_backup_list[] = {
++	AUDIO_TOP_CON0,
++	AUDIO_TOP_CON4,
++	AUDIO_TOP_CON5,
++	ASYS_TOP_CON,
++	AFE_CONN0,
++	AFE_CONN1,
++	AFE_CONN2,
++	AFE_CONN3,
++	AFE_CONN15,
++	AFE_CONN16,
++	AFE_CONN17,
++	AFE_CONN18,
++	AFE_CONN19,
++	AFE_CONN20,
++	AFE_CONN21,
++	AFE_CONN22,
++	AFE_DAC_CON0,
++	AFE_MEMIF_PBUF_SIZE,
++};
++
+ static int mt2701_dai_num_to_i2s(struct mtk_base_afe *afe, int num)
+ {
+ 	struct mt2701_afe_private *afe_priv = afe->platform_priv;
+-- 
+2.20.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
