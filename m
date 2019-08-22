@@ -2,135 +2,181 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9973198DB9
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 10:32:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1FAA998E66
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 10:52:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
-	From:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=bQObp/bRZdnYs93fEOPHNP8vesQLeC2Mi1fE9vPZiQw=; b=HTIczOEwSnklxP
-	35NHj24YVKXvQxMwlxFpu97sS5ImaV39amrakLgtaUdUKw3fa47MB3gRkowf+Pv8zlxnBieUD3u/C
-	Id2EPNzaERjwSJlZRyxoDD+zbNJvugZJWIZL6EOT+qQHqFyHon/HTslcIJ27REB5/9+KtOFKr04Qt
-	PGgVgr5b11PWHO9B3fVbTDq7qVcdAmBflQ7wpz6Kflozihwm9ogIu+4onLfCCuSqiEuy2PPvvZ4n1
-	Jr2APZchabOwU6oQtm+tJDr6hz02OKqaVaT7cq5xDA5B4YqCvBn+73YAedsqyoLEEJIN4gdvi0dfT
-	K1qmA15J2WqgwpootrtQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=UHSQyzrTn8vef8cglbiCx8h7lI+Z6nU5nU7eL0h5tfE=; b=ii7LC2XOWFEKpY
+	PBlKkPg4hA15naGan7m1R4NUex+ld2KztTkZ2i9hyhXxagBkFSpih0A2r3fB/BNmrrNdVIzDG488T
+	hI2athE60O6M0MMxA/Q6ZThBI9pqUR70WPWWTZBpU7Y0xGQLLvw2KpocPqzpbbMi2P6YwgCGO/hTx
+	2nldnZlb3/Vy/kAA/Dpw6wxjr8k7pjR1H80tgeyz22yTl+kQ+JdQsPJiXQND6dSwLr+rZjhANZIRl
+	kW5SNhSAwDGHwaxzCTl1XXsoZsmICypz5Az9a9m51RgOKmL801EY9CF/zx9wdx9wJc0nDJMqe1JaO
+	wNozFb2D0pYuBrgvUYaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0iVg-0001cn-Vl; Thu, 22 Aug 2019 08:31:57 +0000
-Received: from mout.web.de ([212.227.15.4])
+	id 1i0ipV-0002ii-Od; Thu, 22 Aug 2019 08:52:26 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0iV9-0001C0-P4; Thu, 22 Aug 2019 08:31:25 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
- s=dbaedf251592; t=1566462653;
- bh=V2oxVsfA63HZbkOHiKbPZqYr5GwzDNExLaZhzvgEfgw=;
- h=X-UI-Sender-Class:To:Cc:From:Subject:Date;
- b=qxSuMxZM2ohqeHBVoVrmnQxgjtl6M0pzi6mdnKdrRzbPUdFIHDQ9XtmI2jRDYSt6+
- 7kcxZ9Gbvod8uzqK3rZqm8Ug7tAwbEZSnI7CFiIhAao3WJ4Tskn54/h8UrgGAz8UvR
- mJm6bNtwIfMGvQkz1/4tfvZL+UbnNC+iGMx7wNVQ=
-X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
-Received: from [192.168.1.2] ([78.49.181.43]) by smtp.web.de (mrweb001
- [213.165.67.108]) with ESMTPSA (Nemesis) id 0MMW5u-1hsScV098A-008HZR; Thu, 22
- Aug 2019 10:30:53 +0200
-To: linux-wireless@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org, ath10k@lists.infradead.org,
- "David S. Miller" <davem@davemloft.net>, Felix Fietkau <nbd@nbd.name>,
- Kalle Valo <kvalo@codeaurora.org>,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Roy Luo <royluo@google.com>,
- Ryder Lee <ryder.lee@mediatek.com>, Solomon Peachy <pizza@shaftnet.org>,
- Stanislaw Gruszka <sgruszka@redhat.com>
-From: Markus Elfring <Markus.Elfring@web.de>
-Subject: =?UTF-8?Q?=5bPATCH=5d_net/wireless=3a_Delete_unnecessary_checks_bef?=
- =?UTF-8?B?b3JlIHRoZSBtYWNybyBjYWxsIOKAnGRldl9rZnJlZV9za2LigJ0=?=
+ id 1i0ipL-0002h8-Iv; Thu, 22 Aug 2019 08:52:19 +0000
+Received: by mail-ed1-x542.google.com with SMTP id z51so6776636edz.13;
+ Thu, 22 Aug 2019 01:52:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=qx9NznMkUIg0nmTk1HZniMyla7Gavafi3qDiSFJZG50=;
+ b=jj9+HE/DmIVSewPGDnxnbYyhGyUF5XZfsQV9MdmIuJm52aDMHX74fbafZINd5c+JhC
+ Hy3g5PUSb96dAIsOPlwQZwPquJJHwVWObjl+qUzKgEcOB0NyEqx1hoMQNu1zAG8gBYyr
+ aY+eXOdWNbc9Ze6k75Le1Foxhd6mRMF/Fn9PHNTk0N9uJ885FQEhBRJFzta51e4qiwKM
+ AQShOVgL/ivRpwlyCbE4ZC3aYzDImzthxMFCfontNdltteKyl8KJ7VWbnyFdHDNiDkO4
+ 6q4GbsIHHilM5xOFa9KYbE4bK0DI7QnIDZAFzTE2Rmwj6dTaZvUnYTCz3P1ZHJhRNCH+
+ 4ajQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
+ :message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=qx9NznMkUIg0nmTk1HZniMyla7Gavafi3qDiSFJZG50=;
+ b=DBKPRLk4FTuj2RkTNoBmFkAGLEzufwjn1hv5SqBcUF4mkDTStFWoW+aGb8P0J4emrw
+ GpvYoowoWYrdSbRwk/s9bD9oRZvT/ewqnheL1WV6QekTgs+bKQpuq9FH6Mmi/dydDMBY
+ gc2h7Z2IsX2JFmDLdIcG3ZSKvaCtZw9q5V25D1G9OnvXLoxm/SqSZtn0GU18PBW6p4L8
+ IWbMfzKzrkyaryvRk2VkYLhcveYiOQ3zJutZQzx3VKhU358bBP+iGyPDgjEYSkgVkEVw
+ mA0UJrf/AzhTQ07kY4XpkeDrmTURN1AVBBhcHisf09u+a5ohh6kPUm/hqI0YLNV61stx
+ oLQQ==
+X-Gm-Message-State: APjAAAXsi05CPb0+4VD0nD+yd3ltxS/lVslRvS+TDymkKfaB0XFPK07D
+ 5aTaG/jiD2GfJOWwl8+nXs6iLDFm7xE=
+X-Google-Smtp-Source: APXvYqzUtHNfkeT0QrX18PsHelc50P805854I1TgKbGTyGwFuaXYkhA4TQwuhYpBZ+2dNbMImds01w==
+X-Received: by 2002:a50:f419:: with SMTP id r25mr28741812edm.57.1566463933237; 
+ Thu, 22 Aug 2019 01:52:13 -0700 (PDT)
+Received: from ziggy.stardust ([37.223.137.147])
+ by smtp.gmail.com with ESMTPSA id h9sm4642590edv.75.2019.08.22.01.52.12
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 22 Aug 2019 01:52:12 -0700 (PDT)
+Subject: Re: [PATCH 2/2] pwm: pwm-mediatek: Add MT8516 SoC support
+To: Fabien Parent <fparent@baylibre.com>, thierry.reding@gmail.com,
+ robh+dt@kernel.org
+References: <20190805125848.15751-1-fparent@baylibre.com>
+ <20190805125848.15751-2-fparent@baylibre.com>
+From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
-Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
- 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 FEE=
-Message-ID: <ea6c6fef-9868-196b-d914-23faf12d7f5c@web.de>
-Date: Thu, 22 Aug 2019 10:30:47 +0200
+Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ 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
+ jrHWeQEI2ucSKsNa8FllDmG/fQ==
+Message-ID: <d9b1f0a3-bd10-9fe8-af9f-17dafd7a509c@gmail.com>
+Date: Thu, 22 Aug 2019 10:52:11 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
+In-Reply-To: <20190805125848.15751-2-fparent@baylibre.com>
 Content-Language: en-US
-X-Provags-ID: V03:K1:f05h5vMx92DtiQMHqZOmFyHPvr0ONXfaFvs2KSZ9VuA5vAz/43u
- PUJVcdKdGTVKDILkMT8TU/jAFxwXWbgVlkbCa+Dq3kEweMGmFIwaSPkoUHbM+uqchnd71fg
- WThV9VymEUwWOGN1gFZo/qDcGU0nYtYbzHC6T+vtx+EjTjDehhOHXHSBvCF8XWHLS3D+LwD
- +vxaer3Gdmk/eQsEGGQCQ==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:YUyk3sN4sdg=:AQXcTUqZJlU6CBXbSp0Tpu
- CcdZWx7vNs+Y+mWA/xOmTOD1/0pUqIWhUowp6mINhZM6fI1wBYP2TVv9wnHERdzJHG1vPRzec
- nooGcUix8j6IzUU1h29tFEGc0tMgfnF5foZYYmttXtZuzIfawG/rzHcoNF4v1kgDUWavfVxvw
- Cb++sghR9wDEwEbCP5Bcihqylt/P+LAO6RbBHX6w/2HF9FKLqlf6MJiVH94SEP+r8+sPqlXbz
- Bb6i73kqyf7O/rBVtDcjIh9s/kDq9t6gSOQ3sp7IjkQrIHLuJybGBtlfl6qxS5ZXZoSdNBlGi
- qUSW9R59pKXPzeYzAAxgxaVciAdD+q14g1ljKFW5Gxhp+JMhAZhp1tDYd751FHVJ1qD13nXRk
- mk7Cs+VqoqIsFz6o32SG5o3oES7fXZFvRtSFzoO82Bt82xJtwpqWVMPLU39ZAPWNdgWr8SXuU
- y1tNaduIVLlQA6dtjmEr6CIvVSkqzfUp6Y5eiSTgBXmv/RqeUltKoDqUpIEQmVObiij7J6yoE
- BtwpFISiyg0HDeqOXAS3TBsNflgk91vAUebiam6gHM7TB7SXtX8Zkx7CGfZZ5wjcCxhEJMhkt
- 3GtUiF6hvTwcRI2kRFn9UlYvwEtfgNAokc9Egh2naw6rJnYgchpGWnlS1C1pXvrtcIT1Qyzvl
- l+6265MLbBXZOz8tP1AJiKw273gv0xHEZQVyde/EW9Vho7NlulDR5gGldN9DV6g2pvKUTEdtI
- VoC/VlvzH6XMikjSpwLMGiYGQN0tyPQtSEqtVCiIQWHtNWK/vVVT1Fy8UAGSW7dM4NyVMrFnv
- dgNgrz/HsDozYUIqyJfau1JMlrz/6q23Ro2Hfa9bdTS4SOlOAc75wuvvEwAqknyks84gHdSsn
- iPmiM7tjJnIWIun+ijDBEm9uxUcZbQRrI3U5y8+wJ6hxX1UgV/a435NTLmDmRJzhkpmb9fjeB
- jlaAJ7TKOC3Mz+SCrMGM0q1dWw3Rc7iRP3AqdcREkZ2oBv9adv5kVn8mRQm6HsjDSjkwqKrCh
- FXBq/+Mq0VaSk72hsBhmYfrvIitr9sRTeBPxuz8mxxj7luoEbhgmNUSfrtVRrxa3H4d94SDKw
- 8re4Wg/7d2BnLOhPhdCuroYcu6NEPXZUB8LfC+9jQAlv8Noj7qaAfl0qWyghnBkM5iIDiPPgv
- DH8g4=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_013124_331591_43190CAB 
-X-CRM114-Status: UNSURE (   8.83  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190822_015215_654054_27C3B7E5 
+X-CRM114-Status: GOOD (  16.77  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.15.4 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (markus.elfring[at]web.de)
+ provider (matthias.bgg[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -150,127 +196,52 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kernel-janitors@vger.kernel.org, LKML <linux-kernel@vger.kernel.org>
+Cc: mark.rutland@arm.com, linux-pwm@vger.kernel.org, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Markus Elfring <elfring@users.sourceforge.net>
-Date: Thu, 22 Aug 2019 10:20:10 +0200
 
-The dev_kfree_skb() function performs also input parameter validation.
-Thus the test around the shown calls is not needed.
 
-This issue was detected by using the Coccinelle software.
+On 05/08/2019 14:58, Fabien Parent wrote:
+> Add the compatible and the platform data to support PWM on the MT8516
+> SoC.
+> 
+> Signed-off-by: Fabien Parent <fparent@baylibre.com>
 
-Signed-off-by: Markus Elfring <elfring@users.sourceforge.net>
----
- drivers/net/wireless/ath/ath10k/wmi.c               | 4 +---
- drivers/net/wireless/intel/iwlegacy/3945-mac.c      | 8 ++------
- drivers/net/wireless/intel/iwlegacy/common.c        | 8 ++------
- drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c | 5 +----
- drivers/net/wireless/st/cw1200/scan.c               | 3 +--
- 5 files changed, 7 insertions(+), 21 deletions(-)
+Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 
-diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
-index 4f707c6394bb..d384293429b4 100644
---- a/drivers/net/wireless/ath/ath10k/wmi.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi.c
-@@ -9440,7 +9440,5 @@ void ath10k_wmi_detach(struct ath10k *ar)
- 	}
-
- 	cancel_work_sync(&ar->svc_rdy_work);
--
--	if (ar->svc_rdy_skb)
--		dev_kfree_skb(ar->svc_rdy_skb);
-+	dev_kfree_skb(ar->svc_rdy_skb);
- }
-diff --git a/drivers/net/wireless/intel/iwlegacy/3945-mac.c b/drivers/net/wireless/intel/iwlegacy/3945-mac.c
-index b82da75a9ae3..4b3b166f6f2a 100644
---- a/drivers/net/wireless/intel/iwlegacy/3945-mac.c
-+++ b/drivers/net/wireless/intel/iwlegacy/3945-mac.c
-@@ -2302,9 +2302,7 @@ __il3945_down(struct il_priv *il)
- 	il3945_hw_txq_ctx_free(il);
- exit:
- 	memset(&il->card_alive, 0, sizeof(struct il_alive_resp));
--
--	if (il->beacon_skb)
--		dev_kfree_skb(il->beacon_skb);
-+	dev_kfree_skb(il->beacon_skb);
- 	il->beacon_skb = NULL;
-
- 	/* clear out any free frames */
-@@ -3847,9 +3845,7 @@ il3945_pci_remove(struct pci_dev *pdev)
- 	il_free_channel_map(il);
- 	il_free_geos(il);
- 	kfree(il->scan_cmd);
--	if (il->beacon_skb)
--		dev_kfree_skb(il->beacon_skb);
--
-+	dev_kfree_skb(il->beacon_skb);
- 	ieee80211_free_hw(il->hw);
- }
-
-diff --git a/drivers/net/wireless/intel/iwlegacy/common.c b/drivers/net/wireless/intel/iwlegacy/common.c
-index 73f7bbf742bc..4e7e64f46ea8 100644
---- a/drivers/net/wireless/intel/iwlegacy/common.c
-+++ b/drivers/net/wireless/intel/iwlegacy/common.c
-@@ -5182,8 +5182,7 @@ il_mac_reset_tsf(struct ieee80211_hw *hw, struct ieee80211_vif *vif)
- 	memset(&il->current_ht_config, 0, sizeof(struct il_ht_config));
-
- 	/* new association get rid of ibss beacon skb */
--	if (il->beacon_skb)
--		dev_kfree_skb(il->beacon_skb);
-+	dev_kfree_skb(il->beacon_skb);
- 	il->beacon_skb = NULL;
- 	il->timestamp = 0;
-
-@@ -5302,10 +5301,7 @@ il_beacon_update(struct ieee80211_hw *hw, struct ieee80211_vif *vif)
- 	}
-
- 	spin_lock_irqsave(&il->lock, flags);
--
--	if (il->beacon_skb)
--		dev_kfree_skb(il->beacon_skb);
--
-+	dev_kfree_skb(il->beacon_skb);
- 	il->beacon_skb = skb;
-
- 	timestamp = ((struct ieee80211_mgmt *)skb->data)->u.beacon.timestamp;
-diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c b/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-index d61c686e08de..d6487cd67cca 100644
---- a/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt76x02_beacon.c
-@@ -88,10 +88,7 @@ int mt76x02_mac_set_beacon(struct mt76x02_dev *dev, u8 vif_idx,
- 	for (i = 0; i < ARRAY_SIZE(dev->beacons); i++) {
- 		if (vif_idx == i) {
- 			force_update = !!dev->beacons[i] ^ !!skb;
--
--			if (dev->beacons[i])
--				dev_kfree_skb(dev->beacons[i]);
--
-+			dev_kfree_skb(dev->beacons[i]);
- 			dev->beacons[i] = skb;
- 			__mt76x02_mac_set_beacon(dev, bcn_idx, skb);
- 		} else if (force_update && dev->beacons[i]) {
-diff --git a/drivers/net/wireless/st/cw1200/scan.c b/drivers/net/wireless/st/cw1200/scan.c
-index c46b044b7f7b..988581cc134b 100644
---- a/drivers/net/wireless/st/cw1200/scan.c
-+++ b/drivers/net/wireless/st/cw1200/scan.c
-@@ -120,8 +120,7 @@ int cw1200_hw_scan(struct ieee80211_hw *hw,
- 		++priv->scan.n_ssids;
- 	}
-
--	if (frame.skb)
--		dev_kfree_skb(frame.skb);
-+	dev_kfree_skb(frame.skb);
- 	mutex_unlock(&priv->conf_mutex);
- 	queue_work(priv->workqueue, &priv->scan.work);
- 	return 0;
---
-2.23.0
-
+> ---
+>  drivers/pwm/pwm-mediatek.c | 7 +++++++
+>  1 file changed, 7 insertions(+)
+> 
+> diff --git a/drivers/pwm/pwm-mediatek.c b/drivers/pwm/pwm-mediatek.c
+> index eb6674ce995f..6697e30811e7 100644
+> --- a/drivers/pwm/pwm-mediatek.c
+> +++ b/drivers/pwm/pwm-mediatek.c
+> @@ -302,11 +302,18 @@ static const struct mtk_pwm_platform_data mt7628_pwm_data = {
+>  	.has_clks = false,
+>  };
+>  
+> +static const struct mtk_pwm_platform_data mt8516_pwm_data = {
+> +	.num_pwms = 5,
+> +	.pwm45_fixup = false,
+> +	.has_clks = true,
+> +};
+> +
+>  static const struct of_device_id mtk_pwm_of_match[] = {
+>  	{ .compatible = "mediatek,mt2712-pwm", .data = &mt2712_pwm_data },
+>  	{ .compatible = "mediatek,mt7622-pwm", .data = &mt7622_pwm_data },
+>  	{ .compatible = "mediatek,mt7623-pwm", .data = &mt7623_pwm_data },
+>  	{ .compatible = "mediatek,mt7628-pwm", .data = &mt7628_pwm_data },
+> +	{ .compatible = "mediatek,mt8516-pwm", .data = &mt8516_pwm_data },
+>  	{ },
+>  };
+>  MODULE_DEVICE_TABLE(of, mtk_pwm_of_match);
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
