@@ -2,83 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A80CD992F5
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 14:14:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D4FD0993E5
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 14:35:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZzjuvOikkmbpTHDaCXAHwe3X5QWxb2fKBE/bfxSiGfg=; b=QM2UL57mP8IgKC
-	qF2SePPnxDH4cAW37O2NdjaaofuQYsIP0nQzVGfGrEUW7L/0ODDswBF97VTtUBO4seC4H8pbMKf73
-	394P/3GmY4yVw+jwAbPA5EMHx8EuVcMnwOvE64xx+3GlUuKFUq9oZSxKosG+vS7ygMoTeAHu+MfW8
-	86QRg10OjDHtk0xkVNVhGagyM9CJT4dKufe7PP+b7AM7ittRL9xqJRE/AT3QGW9fF0LdDn8wlP7iT
-	xERipLBjXoOM3z/yt89BaKXvBI09j1QRjhLffBm3zt4p+LsyfEIcu2GWELdDTsWdorzDhuTPS2D+1
-	cMUammLZjAS7S54wM1Rw==;
+	List-Owner; bh=YJE+D1DXrct0Ot6706L3rmIcSOLKNnaZITq3Cx0UnJQ=; b=XkH7TuQAYyzCY8
+	Hz8dsmXV8Ve9Exiv+9aFDOrvek4hSBLHaUUXKhEgIK5sWOE+eAjQvASYGeKNuUELI6+4xeLhU8xZY
+	uI6X/1niGpLedkPzyw5NvM8R2g3GPJjw/hpK4GrLWWjKL9LRCPSK90vWEUhuH8kO9gb2eBsRNrzH6
+	uktzg1DOGIcLroywU13RHQ2knWfvoGUZwft1W4mEI27DzqMZeCrG84W+F7/kenHEvC0DrZds15SDc
+	uqCXOjvRCJX+IjJK04FclqNR3F36jFS4DwznMSx6UW4b0FExDQPx5ibozVyB8RZt9rxC+LIn472Zq
+	z7Yjf6jSD5M7oa3pngyg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0lz8-0002HC-Ss; Thu, 22 Aug 2019 12:14:34 +0000
-Received: from mail-ua1-x92b.google.com ([2607:f8b0:4864:20::92b])
+	id 1i0mJ2-0003qo-EX; Thu, 22 Aug 2019 12:35:08 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0lya-0001pu-7b
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 12:14:04 +0000
-Received: by mail-ua1-x92b.google.com with SMTP id f9so1910052uaj.4
- for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 05:13:58 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=DoBmeUN23M8f6sfbc9hjllfgwqRgBk2+sJFpDr9LHV0=;
- b=fBVXvdd5bwH+sPQ0EwczYi7R6UmwhFeLh0tBrRFjzXX7IFfV2KnWfv8vwWiNuIBB8H
- NGGZv62Zk/qT4ZXkyI0BBvAYEl+xvjQK7SG7Tsj0MijJuSmyal+GioBCqP3LfHzD4+oY
- H4u7Wfgxm/ojS3Txbnuys36cWl+exdG4o4s0mesYIrVTF2ehlmDXzZqXpQFcEd+LatFA
- 1zFeZZ+yHi8H7Dy4+/zq0XzTxf0XkUSK77ho1+CZNnHkMvgw6bTJmR1mvUE0A01KmHn2
- MdqHGzSDf7tD3eCbDAEt80tOupjxhBET+sk/uQ0Xjzk1P95B6OphlIfJrhjJs6r2lq83
- HQIA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=DoBmeUN23M8f6sfbc9hjllfgwqRgBk2+sJFpDr9LHV0=;
- b=LfwvSed2xJGlNiBPlunNAouke9X/egh3Ch7iYvHAnMeqdCKZB3y1Lhpdy9El7DP7OA
- RpTP01Nz4QsBap/hIyOODyVxNlXOU/5LAWklxYhz/YK8MxLNhSREpbMeg4lX1xeGPIg5
- mHL/QjjeAYuFTKg7mbbL3PR2mhYL+3ReE4zpXitvRaYyquNA06DwGdM7tBV/3PE3QuNp
- 9pxxvNs+6lOweFC75UBNPG8ihdQhEa4VMV4qm6qf/6d/2rEzZjbpR7cnofotJBAqxCZt
- n5g+LzqUI4CsRLHo5EyXOu0UUl6/6RVudi02qts4RDGhpVwU9IX/qzGmkc3nvZrb8kfJ
- TbvQ==
-X-Gm-Message-State: APjAAAU4FHkRzF/LKH0U9fxzEWUrAu/6FbAIWDHF4iEOd5VRUmDqPnYM
- 7zXxfzhwks7YjRLjhLOqugBI362MEzVamYLZnwo0tw==
-X-Google-Smtp-Source: APXvYqzXVsDy0ze4FRIDwywvutY/B4QAw3R64INVMx+0auCjLO0cktw5lNHc/YQDg6mDs7Vet6xKvfAPTB3hUQaHhXY=
-X-Received: by 2002:ab0:210f:: with SMTP id d15mr5424470ual.129.1566476038016; 
- Thu, 22 Aug 2019 05:13:58 -0700 (PDT)
+ id 1i0mII-0002od-Uu; Thu, 22 Aug 2019 12:34:24 +0000
+X-UUID: d35aa58e28d24a4296f345c73a3e3137-20190822
+X-UUID: d35aa58e28d24a4296f345c73a3e3137-20190822
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ran.bi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1064778111; Thu, 22 Aug 2019 04:34:14 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 22 Aug 2019 05:34:13 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs07n2.mediatek.inc
+ (172.21.101.141) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Thu, 22 Aug 2019 20:34:11 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 22 Aug 2019 20:34:10 +0800
+Message-ID: <1566477254.12318.41.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 2/4] rtc: Add support for the MediaTek MT2712 RTC
+From: Ran Bi <ran.bi@mediatek.com>
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>
+Date: Thu, 22 Aug 2019 20:34:14 +0800
+In-Reply-To: <20190820201744.GZ3545@piout.net>
+References: <20190801110122.26834-1-ran.bi@mediatek.com>
+ <20190801110122.26834-3-ran.bi@mediatek.com>
+ <20190820201744.GZ3545@piout.net>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <20190822064741.11196-1-chaotian.jing@mediatek.com>
-In-Reply-To: <20190822064741.11196-1-chaotian.jing@mediatek.com>
-From: Ulf Hansson <ulf.hansson@linaro.org>
-Date: Thu, 22 Aug 2019 14:13:21 +0200
-Message-ID: <CAPDyKFqEqF_ZHerbkTqqcVBceQvMr_A+-MkbzQJBByhCv9B0fg@mail.gmail.com>
-Subject: Re: fix controller busy issue and add 24bits segment support
-To: Chaotian Jing <chaotian.jing@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_051400_385312_412C4D6F 
-X-CRM114-Status: UNSURE (   6.96  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190822_053423_003455_FA1837BF 
+X-CRM114-Status: GOOD (  22.54  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:92b listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,32 +74,197 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: srv_heupstream <srv_heupstream@mediatek.com>,
- "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: Mark
+ Rutland <mark.rutland@arm.com>, Alessandro Zummo <a.zummo@towertech.it>, Flora
+ Fu <flora.fu@mediatek.com>, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, Greg
+ Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@mediatek.com>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, linux-kernel@vger.kernel.org,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ Eddie Huang <eddie.huang@mediatek.com>,
+ "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org,
+ linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 22 Aug 2019 at 08:47, Chaotian Jing <chaotian.jing@mediatek.com> wrote:
->
-> the below 2 patches fix controller busy issue when plug out SD card
-> and add 24bits segment size support.
->
-> Chaotian Jing (2):
->   mmc: mediatek: fix controller busy when plug out SD
->   mmc: mediatek: support 24bits segment size
->
->  drivers/mmc/host/mtk-sd.c | 24 ++++++++++++++++++------
->  1 file changed, 18 insertions(+), 6 deletions(-)
+Hi,
 
-Applied for next, thanks!
+> > +
+> > +#define MTK_RTC_DEV		KBUILD_MODNAME
+> 
+> You probably shouldn't do that and have a static string for the driver
+> name. I probably doesn't matter much though because DT is used to probe
+> the driver.
+> 
 
-Kind regards
-Uffe
+Will change it at next patch.
+
+> > +/* we map HW YEAR 0 to 2000 because 2000 is the leap year */
+> > +#define MT2712_MIN_YEAR		2000
+> > +#define MT2712_BASE_YEAR	1900
+> > +#define MT2712_MIN_YEAR_OFFSET	(MT2712_MIN_YEAR - MT2712_BASE_YEAR)
+> > +#define MT2712_MAX_YEAR_OFFSET	(MT2712_MIN_YEAR_OFFSET + 127)
+> > +
+> 
+> All those defines are unecessary, see below.
+> 
+
+Will change it at next patch.
+
+> > +struct mt2712_rtc {
+> > +	struct device		*dev;
+> 
+> Looking at the code closely, it seems this is only used for debug and
+> error messages. Maybe you could use rtc_dev->dev instead.
+> 
+
+Will change it at next patch.
+
+> > +	mutex_lock(&rtc->rtc_dev->ops_lock);
+> > +
+> > +	irqsta = mt2712_readl(rtc, MT2712_IRQ_STA);
+> 
+> Do you have to lock that read? Is the register cleared on read?
+> 
+
+Yes, this register is read clear register.
+
+> > +	do {
+> > +		__mt2712_rtc_read_time(rtc, tm, &sec);
+> > +	} while (sec < tm->tm_sec);	/* SEC has carried */
+> 
+> Shouldn't that be while (tm->tm_sec < sec)?
+> 
+
+In __mt2712_rtc_read_time function, we read tm->tm_sec before read sec.
+Sometimes we can meet situation like "tm->tm_sec == 59" and "sec == 0".
+It means that TC_SEC has carried and we need to reload the tm struct. I
+suppose it was correct that using "while (sec < tm->tm_sec)"
+
+> > +
+> > +	/* HW register use 7 bits to store year data, minus
+> > +	 * MT2712_MIN_YEAR_OFFSET brfore write year data to register, and plus
+> > +	 * MT2712_MIN_YEAR_OFFSET back after read year from register
+> > +	 */
+> > +	tm->tm_year += MT2712_MIN_YEAR_OFFSET;
+> 
+> Simply add 100 in __mt2712_rtc_read_time
+> 
+
+Will change it at next patch.
+
+> > +
+> > +	/* HW register start mon from one, but tm_mon start from zero. */
+> > +	tm->tm_mon--;
+> > +
+> 
+> You can also do that in __mt2712_rtc_read_time.
+> 
+
+Will change it at next patch.
+
+> > +	if (rtc_valid_tm(tm)) {
+> 
+> This check is unnecessary, the validity is always checked by the core.
+> 
+
+Will remove this at next patch.
+
+> > +	if (tm->tm_year > MT2712_MAX_YEAR_OFFSET) {
+> > +		dev_dbg(rtc->dev, "Set year %d out of range. (%d - %d)\n",
+> > +			1900 + tm->tm_year, 1900 + MT2712_MIN_YEAR_OFFSET,
+> > +			1900 + MT2712_MAX_YEAR_OFFSET);
+> > +		return -EINVAL;
+> > +	}
+> 
+> This check is unnecessary, see below.
+> 
+
+Will change it at next patch.
+
+> > +
+> > +	tm->tm_year -= MT2712_MIN_YEAR_OFFSET;
+> > +	tm->tm_mon++;
+> 
+> You should probably avoid modifying tm, move the substraction and
+> addition in the mt2712_writel calls.
+> 
+
+Will change it at next patch.
+
+
+> > +	if (tm->tm_year > MT2712_MAX_YEAR_OFFSET) {
+> > +		dev_dbg(rtc->dev, "Set year %d out of range. (%d - %d)\n",
+> > +			1900 + tm->tm_year, 1900 + MT2712_MIN_YEAR_OFFSET,
+> > +			1900 + MT2712_MAX_YEAR_OFFSET);
+> > +		return -EINVAL;
+> > +	}
+> > +
+> 
+> Unnecessary check.
+> 
+
+Will change it at next patch.
+
+> > +	p1 = mt2712_readl(rtc, MT2712_POWERKEY1);
+> > +	p2 = mt2712_readl(rtc, MT2712_POWERKEY2);
+> > +	if (p1 != MT2712_POWERKEY1_KEY || p2 != MT2712_POWERKEY2_KEY)
+> > +		dev_dbg(rtc->dev, "powerkey not set (lost power)\n");
+> > +
+> 
+> This info is valuable, you should check that when reading the time and
+> return -EINVAL if power was lost.
+> 
+
+Will change it at next patch.
+
+> 
+> > +	/* RTC need POWERKEY1/2 match, then goto normal work mode */
+> > +	mt2712_writel(rtc, MT2712_POWERKEY1, MT2712_POWERKEY1_KEY);
+> > +	mt2712_writel(rtc, MT2712_POWERKEY2, MT2712_POWERKEY2_KEY);
+> 
+> This should be written when setting the time after power was lost.
+> 
+
+I suppose we can move this into mt2712_rtc_read_time function's "if
+(p1 != MT2712_POWERKEY1_KEY || p2 != MT2712_POWERKEY2_KEY)" condition
+which will be added at next patch. We need additional flag to mark this
+condition or another if condition in mt2712_rtc_set_time fucntion if we
+put these code in mt2712_rtc_set_time function.
+
+> > +static const struct rtc_class_ops mt2712_rtc_ops = {
+> > +	.read_time	= mt2712_rtc_read_time,
+> > +	.set_time	= mt2712_rtc_set_time,
+> > +	.read_alarm	= mt2712_rtc_read_alarm,
+> > +	.set_alarm	= mt2712_rtc_set_alarm,
+> 
+> For proper operations, you should also provide the .alarm_irq_enable
+> callback.
+> 
+
+Will change it at next patch.
+
+> > +	rtc->rtc_dev->ops = &mt2712_rtc_ops;
+> 
+> If you set the range properly here using rtc_dev->range_min and
+> rtc_dev->range_max, then the core will be able to do range checking and
+> will also take care of the year offset/windowing calculations instead of
+> having to hardcode that in the driver.
+> 
+
+Will change it at next patch.
+
+Best Regards,
+Ran
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
