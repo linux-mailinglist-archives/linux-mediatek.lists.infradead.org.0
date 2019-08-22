@@ -2,65 +2,187 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A37B09943C
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 14:51:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A431994D2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 15:21:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VnCOFJfhTgy/4KOBDf7jevdzG88a9bV03FmX+X5jVz0=; b=QVvCfehOMoAv3N
-	U6NchG+bKqf3CX6CmzHNkIwzuPkL1kvl9AJ+F+uxzqZqwdJNN8vOu3vWyZTHYZKxy8kSKMGqN9AOM
-	v3fL708B1ZS9KI2uCYDEIZTeK04rRJKly4ell9VaCAZtNW+7pjIv9cAxxOTN+Is6D909kaYxx+4C8
-	phAb0Lr3HfFq9sOEGLyG3BY9xaB4y9MICkApqRJEklEAQbfOFeIW6EXEKD+HsxHTSz5GqJVL/OTbF
-	R4cVrXYpjIiPydbT2f0JYyaqBDWMKew7eZRDb8DES+9hxeFdm5zTzUlPMPUr+Q7FGGEyjDPbH/GW5
-	vhZyonoTWHsuUL21Q5xA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=0exVHIcgzpp0o2y7UqXfsjZ8uNsWBGTaDp6rtHsAWEo=; b=u6qz+RlGsRO++Q
+	ynLPIqBAfrDvobiyUJQYMCVblCFYULMkuYLK21ePDHZwrQPSo2S38K/wFA8LQrW3L4VP7GKS0LSJO
+	D1zFpGcnYAqikRXBWfzphdrqW1V8Eyec2NIweBQFYfu3Quhojmt4tao6Gpu8iNXwQikiOjRt/eg1I
+	AAdpBtkd6rV8dCoMRbcP6BPh/sa0ozRWcZXnuuO4eq7I97gXt1ffCw+5iPonll10qea26C1rnQ/uv
+	SUKnvhwxE3orLAzMq+0KqepCVEO81xcmddDXTPUMnCV24dOhFvBWqeGoeWAhkrMk2r+ycgH+6z6iU
+	kyhcwgBybZaJxT/GvWrA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0mZ6-000313-2p; Thu, 22 Aug 2019 12:51:44 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i0n1j-00071d-A2; Thu, 22 Aug 2019 13:21:19 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0mZ2-00030f-C3
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 12:51:42 +0000
-X-UUID: f36d4514c9a945d487ae6c79ea422f6f-20190822
-X-UUID: f36d4514c9a945d487ae6c79ea422f6f-20190822
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <jiaxin.yu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 833589597; Thu, 22 Aug 2019 04:51:34 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 05:51:32 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 20:51:19 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 22 Aug 2019 20:51:18 +0800
-From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-To: <broonie@kernel.org>
-Subject: [PATCH 2/2] ASoC: mediatek: mt8183: fix tdm out issue
-Date: Thu, 22 Aug 2019 20:51:01 +0800
-Message-ID: <1566478261-13464-3-git-send-email-jiaxin.yu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1566478261-13464-1-git-send-email-jiaxin.yu@mediatek.com>
-References: <1566478261-13464-1-git-send-email-jiaxin.yu@mediatek.com>
+ id 1i0n1e-000715-P1; Thu, 22 Aug 2019 13:21:16 +0000
+Received: by mail-ed1-x542.google.com with SMTP id s15so7960214edx.0;
+ Thu, 22 Aug 2019 06:21:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=2t07AYKCmAH863Jv5A1OkCvCbOw+xTvaokdniiLW7Bg=;
+ b=WauHb4Rku12UahNUZSaErL3Jy8hXiMrpT3TPEh4+RLAV0z5TiJBoYgQ7x5+isYQlwh
+ AfGl0cnULZt7ZdBfyYwZwkUTbpJnjM4VDoah6EOSa/kiXQOJ0XLsqe5wtLEaR2FSLffL
+ gcjxygFoMeapdu1jnSweY93mUyNjC/n+5f1CFJzs4SuycziwOt7+h5u4DAgxZZlrBe1A
+ VlL4isJihjFJhmkQ7A9DOdZRpV8LVR51eR+qwaiFIa5/vequr9KBIihB9pkCQJ/MagFm
+ vjwmoQiC7N7+GVImEv48A+oF9zjpxMN1vbaJH3m/8Lkj16sOBQXbjzXIcxKH5mAeXGhT
+ U9cw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
+ :message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=2t07AYKCmAH863Jv5A1OkCvCbOw+xTvaokdniiLW7Bg=;
+ b=Y+mjmYaHRntIbD6MqOXcxU+39a8gnaII2iN442XpE2W1qjH13UMICOujkkEVk7op1Q
+ +lZLd5GjV21j/vx0MhmUCbmWz2qxnQAleNhosonedjcE46XaWJ++VeeKOq3kBOGEQTjr
+ iE+3Ai5j4uKUjh0u4Hn5ayMm+8fYhGTEzIGruHusZPAQQUCgBqX29DL9HSGXtENIiLLj
+ bRV//3CnvdlYg8xRznVZMPrIzW3/cniek0DZPUdP9nbXxironJFHRBC/9BByO1Z1MeuF
+ bzQhGIPv+dTbnBXNCD/OO9430TiU6wDbvDeKua94o7VGCov6i6pdN3+MtkEYK5QgPm8/
+ 3L5Q==
+X-Gm-Message-State: APjAAAUBWB+tBu8kNC+OT1tPgWT6EgmHp165aCvZp+ID8cnxT1W9ryNT
+ 9Z3UWvxW8jh+4lOqc7uUq4k=
+X-Google-Smtp-Source: APXvYqwqjx52XVdFCXtVfMJ06LuiKb4OegvlkNlIfxvwnx8xCE4v44/Vmrc16dEeO1G5fHOiJCV5xw==
+X-Received: by 2002:a50:94ca:: with SMTP id t10mr9316256eda.42.1566480073067; 
+ Thu, 22 Aug 2019 06:21:13 -0700 (PDT)
+Received: from ziggy.stardust ([37.223.137.147])
+ by smtp.gmail.com with ESMTPSA id f6sm4773819edv.30.2019.08.22.06.21.11
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 22 Aug 2019 06:21:12 -0700 (PDT)
+Subject: Re: [PATCH] arm64: dts: mt8183: add I2C nodes
+To: qii.wang@mediatek.com, robh+dt@kernel.org
+References: <1566477316-13245-1-git-send-email-qii.wang@mediatek.com>
+From: Matthias Brugger <matthias.bgg@gmail.com>
+Openpgp: preference=signencrypt
+Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ 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
+ jrHWeQEI2ucSKsNa8FllDmG/fQ==
+Message-ID: <055f05c3-e7c3-4f4d-ad5c-bfaea4f2a376@gmail.com>
+Date: Thu, 22 Aug 2019 15:21:10 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5CEFACE6A3E59BF6E542ED3AB6ADEF526DEE64C000A3DBD869E7F30910B68BAC2000:8
-X-MTK: N
+In-Reply-To: <1566477316-13245-1-git-send-email-qii.wang@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_055140_420988_D502014C 
-X-CRM114-Status: GOOD (  15.01  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190822_062114_846196_DFBC6AC4 
+X-CRM114-Status: GOOD (  17.38  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (matthias.bgg[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,340 +194,375 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, ck.hu@medaitek.com, lgirdwood@gmail.com,
- jiaxin.yu@mediatek.com, perex@perex.cz, tzungbi@google.com,
- linux-mediatek@lists.infradead.org, eason.yen@mediatek.com
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, leilk.liu@mediatek.com,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch fix two tdm out issues.
-1. TDM out support S16_LE/S24_LE/S32_LE formats .When output S32_LE, we
-   need set hd_align so that memif can output MSB 24bits correctly.
-2. Fix TDM out hw_params as SNDRV_PCM_FORMAT_S32_LE.
-3. Fix TDM out data is valid on rising edge.
 
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
----
- sound/soc/mediatek/common/mtk-afe-fe-dai.c         |   3 +-
- sound/soc/mediatek/mt8183/mt8183-dai-tdm.c         | 177 +++++++++++++++++----
- .../mt8183/mt8183-mt6358-ts3a227-max98357.c        |   3 +
- sound/soc/mediatek/mt8183/mt8183-reg.h             |   8 +-
- 4 files changed, 152 insertions(+), 39 deletions(-)
 
-diff --git a/sound/soc/mediatek/common/mtk-afe-fe-dai.c b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-index d165634..10ea4fd 100644
---- a/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-+++ b/sound/soc/mediatek/common/mtk-afe-fe-dai.c
-@@ -241,7 +241,7 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 	struct mtk_base_afe *afe = snd_soc_dai_get_drvdata(dai);
- 	struct mtk_base_afe_memif *memif = &afe->memif[rtd->cpu_dai->id];
- 	int hd_audio = 0;
--	int hd_align = 1;
-+	int hd_align = 0;
- 
- 	/* set hd mode */
- 	switch (substream->runtime->format) {
-@@ -254,7 +254,6 @@ int mtk_afe_fe_prepare(struct snd_pcm_substream *substream,
- 		break;
- 	case SNDRV_PCM_FORMAT_S24_LE:
- 		hd_audio = 1;
--		hd_align = 0;
- 		break;
- 	default:
- 		dev_err(afe->dev, "%s() error: unsupported format %d\n",
-diff --git a/sound/soc/mediatek/mt8183/mt8183-dai-tdm.c b/sound/soc/mediatek/mt8183/mt8183-dai-tdm.c
-index 8983d54a..0d69cf4 100644
---- a/sound/soc/mediatek/mt8183/mt8183-dai-tdm.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-dai-tdm.c
-@@ -15,7 +15,9 @@
- struct mtk_afe_tdm_priv {
- 	int bck_id;
- 	int bck_rate;
--
-+	int tdm_out_mode;
-+	int bck_invert;
-+	int lck_invert;
- 	int mclk_id;
- 	int mclk_multiple; /* according to sample rate */
- 	int mclk_rate;
-@@ -23,6 +25,21 @@ struct mtk_afe_tdm_priv {
- };
- 
- enum {
-+	TDM_OUT_I2S = 0,
-+	TDM_OUT_TDM = 1,
-+};
-+
-+enum {
-+	TDM_BCK_NON_INV = 0,
-+	TDM_BCK_INV = 1,
-+};
-+
-+enum {
-+	TDM_LCK_NON_INV = 0,
-+	TDM_LCK_INV = 1,
-+};
-+
-+enum {
- 	TDM_WLEN_16_BIT = 1,
- 	TDM_WLEN_32_BIT = 2,
- };
-@@ -93,6 +110,25 @@ static unsigned int get_tdm_ch(unsigned int ch)
- 	}
- }
- 
-+static unsigned int get_tdm_ch_fixup(unsigned int channels)
-+{
-+	if (channels > 4)
-+		return 8;
-+	else if (channels > 2)
-+		return 4;
-+	else
-+		return 2;
-+}
-+
-+static unsigned int get_tdm_ch_per_sdata(unsigned int mode,
-+					 unsigned int channels)
-+{
-+	if (mode == TDM_OUT_TDM)
-+		return get_tdm_ch_fixup(channels);
-+	else
-+		return 2;
-+}
-+
- /* interconnection */
- enum {
- 	HDMI_CONN_CH0 = 0,
-@@ -433,8 +469,11 @@ static int mtk_dai_tdm_hw_params(struct snd_pcm_substream *substream,
- 	struct mt8183_afe_private *afe_priv = afe->platform_priv;
- 	int tdm_id = dai->id;
- 	struct mtk_afe_tdm_priv *tdm_priv = afe_priv->dai_priv[tdm_id];
-+	unsigned int tdm_out_mode = tdm_priv->tdm_out_mode;
- 	unsigned int rate = params_rate(params);
- 	unsigned int channels = params_channels(params);
-+	unsigned int out_channels_per_sdata =
-+		get_tdm_ch_per_sdata(tdm_out_mode, channels);
- 	snd_pcm_format_t format = params_format(params);
- 	unsigned int tdm_con = 0;
- 
-@@ -448,7 +487,7 @@ static int mtk_dai_tdm_hw_params(struct snd_pcm_substream *substream,
- 
- 	/* calculate bck */
- 	tdm_priv->bck_rate = rate *
--			     channels *
-+			     out_channels_per_sdata *
- 			     snd_pcm_format_physical_width(format);
- 
- 	if (tdm_priv->bck_rate > tdm_priv->mclk_rate)
-@@ -461,50 +500,72 @@ static int mtk_dai_tdm_hw_params(struct snd_pcm_substream *substream,
- 		 __func__,
- 		 tdm_id, rate, channels, format,
- 		 tdm_priv->mclk_rate, tdm_priv->bck_rate);
-+	dev_info(afe->dev, "%s(), out_channels_per_sdata = %d\n",
-+		 __func__, out_channels_per_sdata);
- 
- 	/* set tdm */
--	tdm_con = 1 << BCK_INVERSE_SFT;
--	tdm_con |= 1 << LRCK_INVERSE_SFT;
--	tdm_con |= 1 << DELAY_DATA_SFT;
-+	if (tdm_priv->bck_invert)
-+		regmap_update_bits(afe->regmap, AUDIO_TOP_CON3,
-+				   BCK_INVERSE_MASK_SFT,
-+				   0x1 << BCK_INVERSE_SFT);
-+
-+	if (tdm_priv->lck_invert)
-+		tdm_con |= 1 << LRCK_INVERSE_SFT;
-+
-+	if (tdm_priv->tdm_out_mode == TDM_OUT_I2S) {
-+		tdm_con |= 1 << DELAY_DATA_SFT;
-+		tdm_con |= get_tdm_lrck_width(format) << LRCK_TDM_WIDTH_SFT;
-+	} else if (tdm_priv->tdm_out_mode == TDM_OUT_TDM) {
-+		tdm_con |= 0 << DELAY_DATA_SFT;
-+		tdm_con |= 0 << LRCK_TDM_WIDTH_SFT;
-+	}
-+
- 	tdm_con |= 1 << LEFT_ALIGN_SFT;
- 	tdm_con |= get_tdm_wlen(format) << WLEN_SFT;
--	tdm_con |= get_tdm_ch(channels) << CHANNEL_NUM_SFT;
-+	tdm_con |= get_tdm_ch(out_channels_per_sdata) << CHANNEL_NUM_SFT;
- 	tdm_con |= get_tdm_channel_bck(format) << CHANNEL_BCK_CYCLES_SFT;
--	tdm_con |= get_tdm_lrck_width(format) << LRCK_TDM_WIDTH_SFT;
- 	regmap_write(afe->regmap, AFE_TDM_CON1, tdm_con);
- 
--	switch (channels) {
--	case 1:
--	case 2:
-+	if (out_channels_per_sdata == 2) {
-+		switch (channels) {
-+		case 1:
-+		case 2:
-+			tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT1_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT2_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
-+			break;
-+		case 3:
-+		case 4:
-+			tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
-+			tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT2_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
-+			break;
-+		case 5:
-+		case 6:
-+			tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
-+			tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
-+			tdm_con |= TDM_CH_START_O34_O35 << ST_CH_PAIR_SOUT2_SFT;
-+			tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
-+			break;
-+		case 7:
-+		case 8:
-+			tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
-+			tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
-+			tdm_con |= TDM_CH_START_O34_O35 << ST_CH_PAIR_SOUT2_SFT;
-+			tdm_con |= TDM_CH_START_O36_O37 << ST_CH_PAIR_SOUT3_SFT;
-+			break;
-+		default:
-+			tdm_con = 0;
-+		}
-+	} else {
- 		tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
- 		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT1_SFT;
- 		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT2_SFT;
- 		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
--		break;
--	case 3:
--	case 4:
--		tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
--		tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
--		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT2_SFT;
--		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
--		break;
--	case 5:
--	case 6:
--		tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
--		tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
--		tdm_con |= TDM_CH_START_O34_O35 << ST_CH_PAIR_SOUT2_SFT;
--		tdm_con |= TDM_CH_ZERO << ST_CH_PAIR_SOUT3_SFT;
--		break;
--	case 7:
--	case 8:
--		tdm_con = TDM_CH_START_O30_O31 << ST_CH_PAIR_SOUT0_SFT;
--		tdm_con |= TDM_CH_START_O32_O33 << ST_CH_PAIR_SOUT1_SFT;
--		tdm_con |= TDM_CH_START_O34_O35 << ST_CH_PAIR_SOUT2_SFT;
--		tdm_con |= TDM_CH_START_O36_O37 << ST_CH_PAIR_SOUT3_SFT;
--		break;
--	default:
--		tdm_con = 0;
- 	}
-+
- 	regmap_write(afe->regmap, AFE_TDM_CON2, tdm_con);
- 
- 	regmap_update_bits(afe->regmap, AFE_HDMI_OUT_CON0,
-@@ -573,10 +634,58 @@ static int mtk_dai_tdm_set_sysclk(struct snd_soc_dai *dai,
- 	return mtk_dai_tdm_cal_mclk(afe, tdm_priv, freq);
- }
- 
-+static int mtk_dai_tdm_set_fmt(struct snd_soc_dai *dai, unsigned int fmt)
-+{
-+	struct mtk_base_afe *afe = dev_get_drvdata(dai->dev);
-+	struct mt8183_afe_private *afe_priv = afe->platform_priv;
-+	struct mtk_afe_tdm_priv *tdm_priv = afe_priv->dai_priv[dai->id];
-+
-+	if (!tdm_priv) {
-+		dev_warn(afe->dev, "%s(), tdm_priv == NULL", __func__);
-+		return -EINVAL;
-+	}
-+
-+	/* DAI mode*/
-+	switch (fmt & SND_SOC_DAIFMT_FORMAT_MASK) {
-+	case SND_SOC_DAIFMT_I2S:
-+		tdm_priv->tdm_out_mode = TDM_OUT_I2S;
-+		break;
-+	case SND_SOC_DAIFMT_DSP_A:
-+		tdm_priv->tdm_out_mode = TDM_OUT_TDM;
-+		break;
-+	default:
-+		tdm_priv->tdm_out_mode = TDM_OUT_I2S;
-+	}
-+
-+	/* DAI clock inversion*/
-+	switch (fmt & SND_SOC_DAIFMT_INV_MASK) {
-+	case SND_SOC_DAIFMT_NB_NF:
-+		tdm_priv->bck_invert = TDM_BCK_NON_INV;
-+		tdm_priv->lck_invert = TDM_LCK_NON_INV;
-+		break;
-+	case SND_SOC_DAIFMT_NB_IF:
-+		tdm_priv->bck_invert = TDM_BCK_NON_INV;
-+		tdm_priv->lck_invert = TDM_LCK_INV;
-+		break;
-+	case SND_SOC_DAIFMT_IB_NF:
-+		tdm_priv->bck_invert = TDM_BCK_INV;
-+		tdm_priv->lck_invert = TDM_LCK_NON_INV;
-+		break;
-+	case SND_SOC_DAIFMT_IB_IF:
-+	default:
-+		tdm_priv->bck_invert = TDM_BCK_INV;
-+		tdm_priv->lck_invert = TDM_LCK_INV;
-+		break;
-+	}
-+
-+	return 0;
-+}
-+
- static const struct snd_soc_dai_ops mtk_dai_tdm_ops = {
- 	.hw_params = mtk_dai_tdm_hw_params,
- 	.trigger = mtk_dai_tdm_trigger,
- 	.set_sysclk = mtk_dai_tdm_set_sysclk,
-+	.set_fmt = mtk_dai_tdm_set_fmt,
- };
- 
- /* dai driver */
-diff --git a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-index fe8a746..0fed0fa 100644
---- a/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-mt6358-ts3a227-max98357.c
-@@ -390,6 +390,9 @@ static void mt8183_mt6358_tdm_shutdown(struct snd_pcm_substream *substream)
- 	{
- 		.name = "TDM",
- 		.no_pcm = 1,
-+		.dai_fmt = SND_SOC_DAIFMT_I2S |
-+			   SND_SOC_DAIFMT_IB_IF |
-+			   SND_SOC_DAIFMT_CBM_CFM,
- 		.dpcm_playback = 1,
- 		.ignore_suspend = 1,
- 		.be_hw_params_fixup = mt8183_i2s_hw_params_fixup,
-diff --git a/sound/soc/mediatek/mt8183/mt8183-reg.h b/sound/soc/mediatek/mt8183/mt8183-reg.h
-index e0482f2..e544a09 100644
---- a/sound/soc/mediatek/mt8183/mt8183-reg.h
-+++ b/sound/soc/mediatek/mt8183/mt8183-reg.h
-@@ -413,6 +413,11 @@
- #define AFE_MAX_REGISTER AFE_GENERAL2_ASRC_2CH_CON13
- #define AFE_IRQ_STATUS_BITS 0x1fff
- 
-+/* AUDIO_TOP_CON3 */
-+#define BCK_INVERSE_SFT                              3
-+#define BCK_INVERSE_MASK                             0x1
-+#define BCK_INVERSE_MASK_SFT                         (0x1 << 3)
-+
- /* AFE_DAC_CON0 */
- #define AWB2_ON_SFT                                   29
- #define AWB2_ON_MASK                                  0x1
-@@ -1596,9 +1601,6 @@
- #define TDM_EN_SFT                                    0
- #define TDM_EN_MASK                                   0x1
- #define TDM_EN_MASK_SFT                               (0x1 << 0)
--#define BCK_INVERSE_SFT                               1
--#define BCK_INVERSE_MASK                              0x1
--#define BCK_INVERSE_MASK_SFT                          (0x1 << 1)
- #define LRCK_INVERSE_SFT                              2
- #define LRCK_INVERSE_MASK                             0x1
- #define LRCK_INVERSE_MASK_SFT                         (0x1 << 2)
--- 
-1.8.1.1.dirty
+On 22/08/2019 14:35, qii.wang@mediatek.com wrote:
+> From: Qii Wang <qii.wang@mediatek.com>
+> 
+> Add i2c nodes to mt8183 and mt8183-evb.
+> 
+> Signed-off-by: Qii Wang <qii.wang@mediatek.com>
 
+Applied, thanks
+
+> ---
+>  arch/arm64/boot/dts/mediatek/mt8183-evb.dts |  96 ++++++++++++++
+>  arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 189 ++++++++++++++++++++++++++++
+>  2 files changed, 285 insertions(+)
+> 
+> diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+> index d8e555c..1fb195c 100644
+> --- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+> +++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
+> @@ -30,7 +30,103 @@
+>  	status = "okay";
+>  };
+>  
+> +&i2c0 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_0>;
+> +	status = "okay";
+> +	clock-frequency = <100000>;
+> +};
+> +
+> +&i2c1 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_1>;
+> +	status = "okay";
+> +	clock-frequency = <100000>;
+> +};
+> +
+> +&i2c2 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_2>;
+> +	status = "okay";
+> +	clock-frequency = <100000>;
+> +};
+> +
+> +&i2c3 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_3>;
+> +	status = "okay";
+> +	clock-frequency = <100000>;
+> +};
+> +
+> +&i2c4 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_4>;
+> +	status = "okay";
+> +	clock-frequency = <1000000>;
+> +};
+> +
+> +&i2c5 {
+> +	pinctrl-names = "default";
+> +	pinctrl-0 = <&i2c_pins_5>;
+> +	status = "okay";
+> +	clock-frequency = <1000000>;
+> +};
+> +
+>  &pio {
+> +	i2c_pins_0: i2c0{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO82__FUNC_SDA0>,
+> +				 <PINMUX_GPIO83__FUNC_SCL0>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+> +	i2c_pins_1: i2c1{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO81__FUNC_SDA1>,
+> +				 <PINMUX_GPIO84__FUNC_SCL1>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+> +	i2c_pins_2: i2c2{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO103__FUNC_SCL2>,
+> +				 <PINMUX_GPIO104__FUNC_SDA2>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+> +	i2c_pins_3: i2c3{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO50__FUNC_SCL3>,
+> +				 <PINMUX_GPIO51__FUNC_SDA3>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+> +	i2c_pins_4: i2c4{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO105__FUNC_SCL4>,
+> +				 <PINMUX_GPIO106__FUNC_SDA4>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+> +	i2c_pins_5: i2c5{
+> +		pins_i2c{
+> +			pinmux = <PINMUX_GPIO48__FUNC_SCL5>,
+> +				 <PINMUX_GPIO49__FUNC_SDA5>;
+> +			mediatek,pull-up-adv = <3>;
+> +			mediatek,drive-strength-adv = <00>;
+> +		};
+> +	};
+> +
+>  	spi_pins_0: spi0{
+>  		pins_spi{
+>  			pinmux = <PINMUX_GPIO85__FUNC_SPI0_MI>,
+> diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> index c2749c4..ab71291 100644
+> --- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> +++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+> @@ -16,6 +16,21 @@
+>  	#address-cells = <2>;
+>  	#size-cells = <2>;
+>  
+> +	aliases {
+> +		i2c0 = &i2c0;
+> +		i2c1 = &i2c1;
+> +		i2c2 = &i2c2;
+> +		i2c3 = &i2c3;
+> +		i2c4 = &i2c4;
+> +		i2c5 = &i2c5;
+> +		i2c6 = &i2c6;
+> +		i2c7 = &i2c7;
+> +		i2c8 = &i2c8;
+> +		i2c9 = &i2c9;
+> +		i2c10 = &i2c10;
+> +		i2c11 = &i2c11;
+> +	};
+> +
+>  	cpus {
+>  		#address-cells = <1>;
+>  		#size-cells = <0>;
+> @@ -294,6 +309,64 @@
+>  			status = "disabled";
+>  		};
+>  
+> +		i2c6: i2c@11005000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11005000 0 0x1000>,
+> +			      <0 0x11000600 0 0x80>;
+> +			interrupts = <GIC_SPI 87 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C6>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c0: i2c@11007000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11007000 0 0x1000>,
+> +			      <0 0x11000080 0 0x80>;
+> +			interrupts = <GIC_SPI 81 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C0>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c4: i2c@11008000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11008000 0 0x1000>,
+> +			      <0 0x11000100 0 0x80>;
+> +			interrupts = <GIC_SPI 82 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C1>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C1_ARBITER>;
+> +			clock-names = "main", "dma","arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c2: i2c@11009000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11009000 0 0x1000>,
+> +			      <0 0x11000280 0 0x80>;
+> +			interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C2>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C2_ARBITER>;
+> +			clock-names = "main", "dma", "arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+>  		spi0: spi@1100a000 {
+>  			compatible = "mediatek,mt8183-spi";
+>  			#address-cells = <1>;
+> @@ -307,6 +380,20 @@
+>  			status = "disabled";
+>  		};
+>  
+> +		i2c3: i2c@1100f000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x1100f000 0 0x1000>,
+> +			      <0 0x11000400 0 0x80>;
+> +			interrupts = <GIC_SPI 84 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C3>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+>  		spi1: spi@11010000 {
+>  			compatible = "mediatek,mt8183-spi";
+>  			#address-cells = <1>;
+> @@ -320,6 +407,20 @@
+>  			status = "disabled";
+>  		};
+>  
+> +		i2c1: i2c@11011000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11011000 0 0x1000>,
+> +			      <0 0x11000480 0 0x80>;
+> +			interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C4>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+>  		spi2: spi@11012000 {
+>  			compatible = "mediatek,mt8183-spi";
+>  			#address-cells = <1>;
+> @@ -346,6 +447,66 @@
+>  			status = "disabled";
+>  		};
+>  
+> +		i2c9: i2c@11014000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11014000 0 0x1000>,
+> +			      <0 0x11000180 0 0x80>;
+> +			interrupts = <GIC_SPI 131 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C1_IMM>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C1_ARBITER>;
+> +			clock-names = "main", "dma", "arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c10: i2c@11015000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11015000 0 0x1000>,
+> +			      <0 0x11000300 0 0x80>;
+> +			interrupts = <GIC_SPI 132 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C2_IMM>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C2_ARBITER>;
+> +			clock-names = "main", "dma", "arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c5: i2c@11016000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11016000 0 0x1000>,
+> +			      <0 0x11000500 0 0x80>;
+> +			interrupts = <GIC_SPI 86 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C5>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C5_ARBITER>;
+> +			clock-names = "main", "dma", "arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c11: i2c@11017000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x11017000 0 0x1000>,
+> +			      <0 0x11000580 0 0x80>;
+> +			interrupts = <GIC_SPI 133 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C5_IMM>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>,
+> +				 <&infracfg CLK_INFRA_I2C5_ARBITER>;
+> +			clock-names = "main", "dma", "arb";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+>  		spi4: spi@11018000 {
+>  			compatible = "mediatek,mt8183-spi";
+>  			#address-cells = <1>;
+> @@ -372,6 +533,34 @@
+>  			status = "disabled";
+>  		};
+>  
+> +		i2c7: i2c@1101a000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x1101a000 0 0x1000>,
+> +			      <0 0x11000680 0 0x80>;
+> +			interrupts = <GIC_SPI 88 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C7>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+> +		i2c8: i2c@1101b000 {
+> +			compatible = "mediatek,mt8183-i2c";
+> +			reg = <0 0x1101b000 0 0x1000>,
+> +			      <0 0x11000700 0 0x80>;
+> +			interrupts = <GIC_SPI 89 IRQ_TYPE_LEVEL_LOW>;
+> +			clocks = <&infracfg CLK_INFRA_I2C8>,
+> +				 <&infracfg CLK_INFRA_AP_DMA>;
+> +			clock-names = "main", "dma";
+> +			clock-div = <1>;
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			status = "disabled";
+> +		};
+> +
+>  		audiosys: syscon@11220000 {
+>  			compatible = "mediatek,mt8183-audiosys", "syscon";
+>  			reg = <0 0x11220000 0 0x1000>;
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
