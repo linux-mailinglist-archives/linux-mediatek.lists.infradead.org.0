@@ -2,66 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08544988E9
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 03:22:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00EAC98AF9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 07:58:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yySCDNeLAT16z0vkf1qTuTRVfhuGTxgjKPFR8k2lavo=; b=QelLu5QDc9V1ti
-	ycjeNss8Mk0obagxGMUZDvneDCvmdSotouhf3H6SZYZrOulqVIe3YcZ+sNzGtr92wcccMU9YbT596
-	S5qQv+fZJ/50ZuUIC6lFG7tg7EYRkR62JDz9QlAOZX3ukHCBw0KCila8F51dgxzSaCbvudb+V4z/k
-	rD926IbyygLyDdrnXoQZaKnR3YIxm3WLrKqhj/pUcb13RQ9H7qNqojftWVQcq0Ajj+Jc+70WFNpPA
-	TrR6YselGlYmCokQQLtXbA770vfbJ0uuNhYhagI2V0ynBo/GXNEyxLPkRcTwdyxRRp5WvinTBHAEp
-	FXJrFD/i8WsZHdyJ5mLg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=EwWJLq8N5sMi8X4ihB9uCkfkDb17l6yhbECIFmUsgvE=; b=NrYZRXSCfCTb2T
+	YlbIEt2s9IHtpSZ54b4MNHLukoTJcrJEKc/ulv/bncYT4yMOxdcNupDLdocQBe4b/Vp6N48GduBiK
+	34gp537qZk/KnBceFucChJyiVjTe67WG57SjD0+cNdX9bsqeyNR3LZL3H6W+f7fDmuYa+c1fJ0U/j
+	Q2m2WrmoYkogBs5wrBgDgtTmIb3r+tHDozG9k8ARb49I6inNmWLNzFocsA9I3f0bO6yarmabpqsS3
+	mJkkoIlgQa+uzmot9C42GMZP6TsFb5Hh9P1tJ7X40cJxJTJxeks6EEF7uL7Fp1sIridVMiaBkksFa
+	n+nDOICZyMbSsMpDgglQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0bnn-00006d-WA; Thu, 22 Aug 2019 01:22:12 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i0g6o-00069G-Jm; Thu, 22 Aug 2019 05:58:06 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0bnk-00005v-JB; Thu, 22 Aug 2019 01:22:10 +0000
-X-UUID: 648c6a03e0f140aeb2d83a04ceaf26f6-20190821
-X-UUID: 648c6a03e0f140aeb2d83a04ceaf26f6-20190821
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 316571614; Wed, 21 Aug 2019 17:22:01 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 21 Aug 2019 18:21:58 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 09:22:02 +0800
-Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 22 Aug 2019 09:21:58 +0800
-Message-ID: <1566436922.27117.0.camel@mtksdccf07>
-Subject: Re: [PATCH v4] kasan: add memory corruption identification for
- software tag-based mode
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Date: Thu, 22 Aug 2019 09:22:02 +0800
-In-Reply-To: <3318f9d7-a760-3cc8-b700-f06108ae745f@virtuozzo.com>
-References: <20190806054340.16305-1-walter-zh.wu@mediatek.com>
- <1566279478.9993.21.camel@mtksdccf07>
- <3318f9d7-a760-3cc8-b700-f06108ae745f@virtuozzo.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i0g6j-00065M-TJ
+ for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 05:58:03 +0000
+Received: by mail-pf1-x442.google.com with SMTP id v12so3155186pfn.10
+ for <linux-mediatek@lists.infradead.org>; Wed, 21 Aug 2019 22:58:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Kn51c4iVY6vEKLBAUEgNeUWaRLfBi8NFzSwtDO3qJPo=;
+ b=d+XGRDvs6km5uuLibtMj+3KC3ZkxqZYWOsU2LWeCn9xko3LMBY/ZiIalGDExdpPNkv
+ 2hL3j0jv/IRmHQ2CmCsOqXHykpFCzIX2ZmXO2/s20zJg9nYkd2fXr37b9m5qc4mNgd4k
+ KQ6QB3GyCnueCJccC3fjLqL+gRTgY6o1l4ZZY=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Kn51c4iVY6vEKLBAUEgNeUWaRLfBi8NFzSwtDO3qJPo=;
+ b=crOZpDW5HvtfdCDujZ0n+JKEkQCM45Ux56if9FgonJSOTBb/eu4ppGgy9IrVUkFyiO
+ Xou7r3NrBu5DbZT7XLlSiJ4ax4SxIrhsB6GB5tCr05OJAawYilA68o51iVJ7sMFSO8wW
+ D0/NEXhT24OJJWdQha6OLrVIexPFhkuc53OqUhJh1gc5DT3KTS3bAk8wjt7Ct+ZYQBSl
+ SflBihLTwP7fWagpIxUkEKLGGoWDeYfXsQ/XiWtHITIu0/zTZOZ+Iqwmz1/Y2FAwjJ1m
+ x8XC0mf5ayzYPdkxJsUS2/rA/n0774fkTkxngR3gLJCYMOCNpA/woXS9pRmLncQCzSx5
+ vToQ==
+X-Gm-Message-State: APjAAAVKh4A0EmOipYvfaQt8wOrNPVxsWJXJs7z6CwDJX3a5YMDT7Xmo
+ D9PRjk5/yWeze5XC0LWPkEGIMbnBGQk=
+X-Google-Smtp-Source: APXvYqzL8tM2JbDNSwlC6qNUOLwrEHhxUu03EMAJx/fBuHRv6q5B+0v8WjvhppnsEoQ2SVVVq/TgTQ==
+X-Received: by 2002:a62:cec4:: with SMTP id y187mr39225066pfg.84.1566453480758; 
+ Wed, 21 Aug 2019 22:58:00 -0700 (PDT)
+Received: from hsinyi-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:b852:bd51:9305:4261])
+ by smtp.gmail.com with ESMTPSA id e6sm24867338pfn.71.2019.08.21.22.57.58
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Wed, 21 Aug 2019 22:58:00 -0700 (PDT)
+From: Hsin-Yi Wang <hsinyi@chromium.org>
+To: Wolfram Sang <wsa@the-dreams.de>
+Subject: [PATCH RESEND] i2c: mediatek: disable zero-length transfers for mt8183
+Date: Thu, 22 Aug 2019 13:57:37 +0800
+Message-Id: <20190822055737.142384-1-hsinyi@chromium.org>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_182208_639390_FE44CE4A 
-X-CRM114-Status: GOOD (  19.22  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190821_225801_991029_486A36BF 
+X-CRM114-Status: GOOD (  11.06  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,70 +92,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Vasily Gorbik <gor@linux.ibm.com>,
- Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org,
- Andrey Konovalov <andreyknvl@google.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Miles Chen <miles.chen@mediatek.com>, Alexander Potapenko <glider@google.com>,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Andrew
- Morton <akpm@linux-foundation.org>, Thomas Gleixner <tglx@linutronix.de>,
- Dmitry Vyukov <dvyukov@google.com>
+Cc: linux-arm-kernel@lists.infradead.org,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ Alexandru M Stan <amstan@chromium.org>, Jun Gao <jun.gao@mediatek.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-i2c@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Qii Wang <qii.wang@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-08-21 at 20:52 +0300, Andrey Ryabinin wrote:
-> 
-> On 8/20/19 8:37 AM, Walter Wu wrote:
-> > On Tue, 2019-08-06 at 13:43 +0800, Walter Wu wrote:
-> >> This patch adds memory corruption identification at bug report for
-> >> software tag-based mode, the report show whether it is "use-after-free"
-> >> or "out-of-bound" error instead of "invalid-access" error. This will make
-> >> it easier for programmers to see the memory corruption problem.
-> >>
-> >> We extend the slab to store five old free pointer tag and free backtrace,
-> >> we can check if the tagged address is in the slab record and make a
-> >> good guess if the object is more like "use-after-free" or "out-of-bound".
-> >> therefore every slab memory corruption can be identified whether it's
-> >> "use-after-free" or "out-of-bound".
-> >>
-> >> ====== Changes
-> >> Change since v1:
-> >> - add feature option CONFIG_KASAN_SW_TAGS_IDENTIFY.
-> >> - change QUARANTINE_FRACTION to reduce quarantine size.
-> >> - change the qlist order in order to find the newest object in quarantine
-> >> - reduce the number of calling kmalloc() from 2 to 1 time.
-> >> - remove global variable to use argument to pass it.
-> >> - correct the amount of qobject cache->size into the byes of qlist_head.
-> >> - only use kasan_cache_shrink() to shink memory.
-> >>
-> >> Change since v2:
-> >> - remove the shinking memory function kasan_cache_shrink()
-> >> - modify the description of the CONFIG_KASAN_SW_TAGS_IDENTIFY
-> >> - optimize the quarantine_find_object() and qobject_free()
-> >> - fix the duplicating function name 3 times in the header.
-> >> - modify the function name set_track() to kasan_set_track()
-> >>
-> >> Change since v3:
-> >> - change tag-based quarantine to extend slab to identify memory corruption
-> > 
-> > Hi,Andrey,
-> > 
-> > Would you review the patch,please?
-> 
-> 
-> I didn't notice anything fundamentally wrong, but I find there are some
-> questionable implementation choices that makes code look weirder than necessary
-> and harder to understand. So I ended up with cleaning it up, see the diff bellow.
-> I'll send v5 with that diff folded.
-> 
+When doing i2cdetect quick write mode, we would get transfer
+error ENOMEM, and i2cdetect shows there's no device at the address.
+Quoting from mt8183 datasheet, the number of transfers to be
+transferred in one transaction should be set to bigger than 1,
+so we should forbid zero-length transfer and update functionality.
 
-Thanks your review and suggestion.
+Incorrect return:
+localhost ~ # i2cdetect -q -y 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
 
-Walter
+After this patch:
+localhost ~ #  i2cdetect -q -y 0
+Error: Can't use SMBus Quick Write command on this bus
+
+localhost ~ #  i2cdetect -y 0
+Warning: Can't use SMBus Quick Write command, will skip some addresses
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:
+10:
+20:
+30: -- -- -- -- -- -- -- --
+40:
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60:
+70:
+
+Reported-by: Alexandru M Stan <amstan@chromium.org>
+Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+---
+Previous patch and discussion:
+http://patchwork.ozlabs.org/patch/1042684/
+---
+ drivers/i2c/busses/i2c-mt65xx.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
+index 252edb433fdf..2842ca4b8c3b 100644
+--- a/drivers/i2c/busses/i2c-mt65xx.c
++++ b/drivers/i2c/busses/i2c-mt65xx.c
+@@ -234,6 +234,10 @@ static const struct i2c_adapter_quirks mt7622_i2c_quirks = {
+ 	.max_num_msgs = 255,
+ };
+ 
++static const struct i2c_adapter_quirks mt8183_i2c_quirks = {
++	.flags = I2C_AQ_NO_ZERO_LEN,
++};
++
+ static const struct mtk_i2c_compatible mt2712_compat = {
+ 	.regs = mt_i2c_regs_v1,
+ 	.pmic_i2c = 0,
+@@ -298,6 +302,7 @@ static const struct mtk_i2c_compatible mt8173_compat = {
+ };
+ 
+ static const struct mtk_i2c_compatible mt8183_compat = {
++	.quirks = &mt8183_i2c_quirks,
+ 	.regs = mt_i2c_regs_v2,
+ 	.pmic_i2c = 0,
+ 	.dcm = 0,
+@@ -870,7 +875,11 @@ static irqreturn_t mtk_i2c_irq(int irqno, void *dev_id)
+ 
+ static u32 mtk_i2c_functionality(struct i2c_adapter *adap)
+ {
+-	return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
++	if (adap->quirks->flags & I2C_AQ_NO_ZERO_LEN)
++		return I2C_FUNC_I2C |
++			(I2C_FUNC_SMBUS_EMUL & ~I2C_FUNC_SMBUS_QUICK);
++	else
++		return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
+ }
+ 
+ static const struct i2c_algorithm mtk_i2c_algorithm = {
+@@ -933,8 +942,8 @@ static int mtk_i2c_probe(struct platform_device *pdev)
+ 	i2c->dev = &pdev->dev;
+ 	i2c->adap.dev.parent = &pdev->dev;
+ 	i2c->adap.owner = THIS_MODULE;
+-	i2c->adap.algo = &mtk_i2c_algorithm;
+ 	i2c->adap.quirks = i2c->dev_comp->quirks;
++	i2c->adap.algo = &mtk_i2c_algorithm;
+ 	i2c->adap.timeout = 2 * HZ;
+ 	i2c->adap.retries = 1;
+ 
+-- 
+2.20.1
 
 
 _______________________________________________
