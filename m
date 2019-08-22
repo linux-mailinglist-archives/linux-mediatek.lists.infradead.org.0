@@ -2,73 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 016F798FDC
-	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 11:39:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 233FD98FEA
+	for <lists+linux-mediatek@lfdr.de>; Thu, 22 Aug 2019 11:46:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LYyHBxxnqqRniJcl32l3tlPUkeybadwM6XBno3lOk/Q=; b=BTmuLZOsq5pive
-	urYS+zKYTtIO1LDAKCtfVWsu3y9jiawjDcdU/VycklyitddfOhUUFOPHIf/EX4kGWSJF48IfvuwbO
-	3cB6g3utL6QIuSyDDKY5fJSjisAghhMuUYaKNdi6Q2bcb3XI2nyA3i+wydRzRiz4ZL4Oj+BrCxs0K
-	SC3zcNmfH2vLxZQKYZeniZCuubZCBD/uOsJgJF6LVuUV2Ga7RW/4hEvYlYAQi/9G/9lirsYlMifKl
-	0IsfjtT+lLtnxu7waP98BjiO59ecmjI9YaWt7RBGeMB18iHhI+R1KYkJ3mMn/KRxpzrNt2sKHWLse
-	ofideqLWmt0oQbtmsNlw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=PrKRB+tczkDXAciu0+dB88hJ2K2xMyB4jlycxz/uogw=; b=pg0QKGd5s+2G+U
+	ZybZGgDcVATabyuvYHEZ2QjOcz1vPrFGnFUAKV796bbIsPeOpjdpTCY1ZPJk6jXS4ml/YKofQQJlE
+	SpXYS8dgbDOCbhym+5jHc++aqnh7yrXpfBUyqkIUxQfm7tHi0uAMxX89e1cemjYztKXRm1tnYjcY4
+	11XoRtLYSneElNs0UAfMAE06U3HTNc48Uii7LbPomn6m1fS3ayNR1hvVq6Da8jD2THlBN4rCXbRf3
+	0pq3gh2ZUUZ0yThsB1Vqak2PxV5JdAAM56cwDQux8dbqSuq4zPaI+Kax0Iv8jKSS9IZ0KWe6TpAWz
+	VuevZ8ukw3stew6ukuDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0jZ5-0004ft-6Y; Thu, 22 Aug 2019 09:39:31 +0000
-Received: from mail-qk1-x734.google.com ([2607:f8b0:4864:20::734])
+	id 1i0jfJ-0000K6-AU; Thu, 22 Aug 2019 09:45:57 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0jVB-0000sD-Cu
- for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 09:35:32 +0000
-Received: by mail-qk1-x734.google.com with SMTP id d23so4525179qko.3
- for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 02:35:28 -0700 (PDT)
+ id 1i0jf1-000079-S6
+ for linux-mediatek@lists.infradead.org; Thu, 22 Aug 2019 09:45:41 +0000
+Received: by mail-pf1-x442.google.com with SMTP id o70so3585644pfg.5
+ for <linux-mediatek@lists.infradead.org>; Thu, 22 Aug 2019 02:45:39 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=NO22HbaMZJynJgD6+PgDdcz0IJRAkX2Q/TUAe3LAdCw=;
- b=COEUpB7lH+sa1Wm04QhSBmeEb8LEjrit6+KDHW0QV3SkhpdO+Ce09Rz+f5uPxJLN+u
- PvMmv4NQgj4yXMULkRZbPjXReODK5MwhM0rU94n4s3sxouvbYUUhCxBwPE8eRv4ZupU3
- KQx7RAWff5qZ1RW5IQeQjBsJA5gjRhDWjOiSM=
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=sgHEzZrPt9EteY2/QiFiyeYlRXQlrmCLZpXRsbYVLMM=;
+ b=a9yy/07U4q9DkIrWE+1S1A5qGfmGOHr2Iah/Cwu7XTniDeBQidLmwEdnkTDXQM31RX
+ HhXAwzTUtfbL7o0VP7LGkI+cz+lIG1ARIpBt7uaEM+lvwDLuY2LuYf4zfjpbXOzaKx1h
+ ZskFoEcfaOXTiPrX0jOZiLZ1+rX1vte6oawec=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=NO22HbaMZJynJgD6+PgDdcz0IJRAkX2Q/TUAe3LAdCw=;
- b=fGV+QtuSXyI2hYBMbvVk06hFB4DjDbG3J28TOBdh5kZRTMuvLXoD2ofxQ+5htQqHyl
- QB79mluTgQG97Ak75jBAoyogGDRMFmg6kJ5ZokBFay0xkD0V0yNAhOg92JPGkCYLU4Cz
- k5gZk84GZO2FS8I0KLAN9mQ2mR+jm9HcjXeuHWhAGMZLQijgdUVCGpZzXWgNGYB/BF08
- mX+Er/zRRroPUinWvz2jQimT416d0bQL2qde3GUluEhrZz1eXgiwfJYqYs19K/ikD5XI
- XqXrYtpdA3xNs+RknAmVAHV2lPuzSSXfZLNo0jKuM3VL+cBuxu9+t39Zz79YNxDciFMe
- OtYQ==
-X-Gm-Message-State: APjAAAXvmZmv0iuaeQRbsg/0Ebtf0XWXvh5U63K2r1h9hLWbQ/ApXTj3
- HjoXW/p3c8beaoqeFI/vwNl2ORDVxrljtjv8+O7TIg==
-X-Google-Smtp-Source: APXvYqyJ0CJid6ew+jYjIZdViygDbZ1nSFTHSvRIEbJVqYXbQji9bHodn6KVX4KP8QmHSXLnWIh+hxt/IGhXvLaxdp0=
-X-Received: by 2002:a37:47cb:: with SMTP id
- u194mr33199821qka.342.1566466528133; 
- Thu, 22 Aug 2019 02:35:28 -0700 (PDT)
-MIME-Version: 1.0
-References: <20190822055737.142384-1-hsinyi@chromium.org>
- <1566462278.26641.1.camel@mtksdaap41>
-In-Reply-To: <1566462278.26641.1.camel@mtksdaap41>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=sgHEzZrPt9EteY2/QiFiyeYlRXQlrmCLZpXRsbYVLMM=;
+ b=WmKUgJF+k470JVps+PSFYO44ZmxbCohdAHy6/8u/DJi2vdsRJFMqnKOknjM/d5JSUq
+ nh6xDJTQ53trI6cddxXNMs3RAMoRQGAo1MqkypRvums9n3ee/hQ5mKsnDjudqbY0IlyQ
+ FkFjB+tv5ns1cpNo0BcKZox3A2XPFbzqqZd+07yr9FzSbPZdSCulKrIxaQYrV5Y01Y//
+ ApZhTBRBA/GCKUt3+14b8Ppzf4OpPBvfl9eKiUMUfttT1c6CyMV9bvdf//JyC286WcgW
+ KEz3VA/GET6RftjkZfNdFkX9miv8O4jO8Yk2wh/rpz6xj10gLXtzwFu98Rei0TsSubvN
+ enZQ==
+X-Gm-Message-State: APjAAAUNzPuvidKPuPDv4YFuknM2KhV/7lzTTqKrrPQn+npmKAWKeZhT
+ 5mrrTRLNNMHc0XSwm0IAAxgnpA==
+X-Google-Smtp-Source: APXvYqwkD6Agsn8K0zNRrV8QL+ZYvIkEdfXfGFsEU0viYlCos3ngXCAmY0WDc8ulQwd3AcyBj/e79Q==
+X-Received: by 2002:a65:6281:: with SMTP id f1mr31045994pgv.400.1566467138859; 
+ Thu, 22 Aug 2019 02:45:38 -0700 (PDT)
+Received: from hsinyi-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:b852:bd51:9305:4261])
+ by smtp.gmail.com with ESMTPSA id 4sm26154645pfn.118.2019.08.22.02.45.35
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Thu, 22 Aug 2019 02:45:37 -0700 (PDT)
 From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Thu, 22 Aug 2019 17:35:02 +0800
-Message-ID: <CAJMQK-hr5m_YETnObsgw8M5etm+9xL_KY=54V6==fSbY191F_g@mail.gmail.com>
-Subject: Re: [PATCH RESEND] i2c: mediatek: disable zero-length transfers for
- mt8183
-To: Yingjoe Chen <yingjoe.chen@mediatek.com>
+To: Wolfram Sang <wsa@the-dreams.de>, Yingjoe Chen <yingjoe.chen@mediatek.com>
+Subject: [PATCH v2] i2c: mediatek: disable zero-length transfers for mt8183
+Date: Thu, 22 Aug 2019 17:45:17 +0800
+Message-Id: <20190822094516.55130-1-hsinyi@chromium.org>
+X-Mailer: git-send-email 2.20.1
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_023529_594303_8227089A 
-X-CRM114-Status: UNSURE (   6.43  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190822_024539_958969_908726D0 
+X-CRM114-Status: GOOD (  11.71  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:734 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -91,26 +92,99 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@chromium.org>, Qii Wang <qii.wang@mediatek.com>,
- Alexandru M Stan <amstan@chromium.org>, Wolfram Sang <wsa@the-dreams.de>,
- Jun Gao <jun.gao@mediatek.com>, lkml <linux-kernel@vger.kernel.org>,
- linux-mediatek@lists.infradead.org, linux-i2c@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: linux-arm-kernel@lists.infradead.org,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ Alexandru M Stan <amstan@chromium.org>, Jun Gao <jun.gao@mediatek.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-i2c@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Qii Wang <qii.wang@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Aug 22, 2019 at 5:24 PM Yingjoe Chen <yingjoe.chen@mediatek.com> wrote:
->
-> Why do you need to change this part?
->
-> Joe.C
->
-You're right. We don't need to change this. I'll revert this back.
+When doing i2cdetect quick write mode, we would get transfer
+error ENOMEM, and i2cdetect shows there's no device at the address.
+Quoting from mt8183 datasheet, the number of transfers to be
+transferred in one transaction should be set to bigger than 1,
+so we should forbid zero-length transfer and update functionality.
+
+Incorrect return:
+localhost ~ # i2cdetect -q -y 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+
+After this patch:
+localhost ~ #  i2cdetect -q -y 0
+Error: Can't use SMBus Quick Write command on this bus
+
+localhost ~ #  i2cdetect -y 0
+Warning: Can't use SMBus Quick Write command, will skip some addresses
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:
+10:
+20:
+30: -- -- -- -- -- -- -- --
+40:
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60:
+70:
+
+Reported-by: Alexandru M Stan <amstan@chromium.org>
+Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+---
+Change from v1:
+* restore the order of algo and quirks
+---
+ drivers/i2c/busses/i2c-mt65xx.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
+index 252edb433fdf..29eae1bf4f86 100644
+--- a/drivers/i2c/busses/i2c-mt65xx.c
++++ b/drivers/i2c/busses/i2c-mt65xx.c
+@@ -234,6 +234,10 @@ static const struct i2c_adapter_quirks mt7622_i2c_quirks = {
+ 	.max_num_msgs = 255,
+ };
+ 
++static const struct i2c_adapter_quirks mt8183_i2c_quirks = {
++	.flags = I2C_AQ_NO_ZERO_LEN,
++};
++
+ static const struct mtk_i2c_compatible mt2712_compat = {
+ 	.regs = mt_i2c_regs_v1,
+ 	.pmic_i2c = 0,
+@@ -298,6 +302,7 @@ static const struct mtk_i2c_compatible mt8173_compat = {
+ };
+ 
+ static const struct mtk_i2c_compatible mt8183_compat = {
++	.quirks = &mt8183_i2c_quirks,
+ 	.regs = mt_i2c_regs_v2,
+ 	.pmic_i2c = 0,
+ 	.dcm = 0,
+@@ -870,7 +875,11 @@ static irqreturn_t mtk_i2c_irq(int irqno, void *dev_id)
+ 
+ static u32 mtk_i2c_functionality(struct i2c_adapter *adap)
+ {
+-	return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
++	if (adap->quirks->flags & I2C_AQ_NO_ZERO_LEN)
++		return I2C_FUNC_I2C |
++			(I2C_FUNC_SMBUS_EMUL & ~I2C_FUNC_SMBUS_QUICK);
++	else
++		return I2C_FUNC_I2C | I2C_FUNC_SMBUS_EMUL;
+ }
+ 
+ static const struct i2c_algorithm mtk_i2c_algorithm = {
+-- 
+2.20.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
