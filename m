@@ -2,64 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB76C9A62F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 05:46:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6B78E9A7AD
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 08:36:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KmWvBbDdcKTUCeUS+tt7ds0UANyyKVqA0cBY0L2+Jvc=; b=HNJl59t6ucG7Ea
-	NSHlbqskq15bwGamw2Hsnz4WTl1rjEO9BOwpdz27CSPnN8FmXZM6xsv1kIGkTlHduf94WwylPpiHg
-	/jaC4reBSMqIA7YN59MfY9gDt9yJdd57dfLxqXIeQwO81Nuwwve/O2wB8UdbBKZKbDWATog6rDvbF
-	FswKw5eozo3++SGosEDgw2P1pux2Y4s1hYwgEc3V1sa+05+HUGXWub62wm4nWz/EmXR8Gddt5bXtf
-	yGZ+gVG3JbzGE5H9E1OsOk0MlFcUnB0a8gxzlQdL8VVXrKJmDGF7WJ8PzlYDb3rQnDUM2zgnysF7N
-	A85FmnzekP30EnpV1rTg==;
+	List-Owner; bh=HLJdx/6Rdiu94hf5ICeL6qhbvqRAui6Fr6Nu9y/6QEY=; b=grW3N7o4PPbv9e
+	lW5vj9Uln8plD5YikWEGzdc8Zv2UffCya+J3BSivngpxtEYkpI88P+BGt29/KBmhXTRYfI4kZkkWw
+	RWqMmNRDXsRcAzMmi/Z4zXe411t51+5ZuXZStauUW20qZk9x47ZJFi7+4D3bN/9oxZksWLcgtnor1
+	3faOwRPLq8YBTaHISZz4gXDtx/uk5HRp04VYzLy4gRlNdupE5n2VlUyoUnZSC2yXCZIV1EGlIs/Vo
+	LH1WfIT+M5z9aNEMDFDWhlQsk86rScTnOckiEs6Wk8ipoDrow3k+TrEhLAZbWT3A9ctv05IkeNfom
+	7F4AL4p8crfvtXtLPCuw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i10WO-0007W1-1u; Fri, 23 Aug 2019 03:45:52 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i13BG-0006r4-6Z; Fri, 23 Aug 2019 06:36:14 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i10WJ-0007Ti-UQ; Fri, 23 Aug 2019 03:45:49 +0000
-X-UUID: 881aeb6922f8480c99eee47908f86171-20190822
-X-UUID: 881aeb6922f8480c99eee47908f86171-20190822
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <hsin-hsiung.wang@mediatek.com>)
+ id 1i13Aq-0006fj-Ou; Fri, 23 Aug 2019 06:35:49 +0000
+X-UUID: 92d506b48bce4b579b2252098c8976b9-20190822
+X-UUID: 92d506b48bce4b579b2252098c8976b9-20190822
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ran.bi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1411864215; Thu, 22 Aug 2019 19:45:39 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 547139161; Thu, 22 Aug 2019 22:35:30 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 22 Aug 2019 20:45:38 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 23 Aug 2019 11:45:36 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 23 Aug 2019 11:45:36 +0800
-From: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>, "Mark
- Brown" <broonie@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>
-Subject: [PATCH v5 10/10] rtc: mt6397: Add support for the MediaTek MT6358 RTC
-Date: Fri, 23 Aug 2019 11:45:31 +0800
-Message-ID: <1566531931-9772-11-git-send-email-hsin-hsiung.wang@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1566531931-9772-1-git-send-email-hsin-hsiung.wang@mediatek.com>
-References: <1566531931-9772-1-git-send-email-hsin-hsiung.wang@mediatek.com>
+ 15.0.1395.4; Thu, 22 Aug 2019 23:35:29 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs08n1.mediatek.inc
+ (172.21.101.55) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 23 Aug 2019 14:35:32 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 23 Aug 2019 14:35:26 +0800
+Message-ID: <1566542131.12318.52.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 1/4] bindings: rtc: add bindings for MT2712 RTC
+From: Ran Bi <ran.bi@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Fri, 23 Aug 2019 14:35:31 +0800
+In-Reply-To: <84bd8752-f437-781f-9f08-cedfca6cc06a@gmail.com>
+References: <20190801110122.26834-1-ran.bi@mediatek.com>
+ <20190801110122.26834-2-ran.bi@mediatek.com>
+ <84bd8752-f437-781f-9f08-cedfca6cc06a@gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F0764FDB06D62BEE862D7EA509F66EB2C2B5058E838AAF7CCDC98D4C539255B72000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190822_204547_989420_76548601 
-X-CRM114-Status: GOOD (  14.53  )
+X-CRM114-CacheID: sfid-20190822_233548_816664_1AAA1410 
+X-CRM114-Status: GOOD (  10.74  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -76,124 +73,56 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>, srv_heupstream@mediatek.com,
+ Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>, Flora
+ Fu <flora.fu@mediatek.com>, srv_heupstream@mediatek.com,
  devicetree@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Kate Stewart <kstewart@linuxfoundation.org>,
- Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Ran Bi <ran.bi@mediatek.com>, Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@mediatek.com>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
+ Yingjoe Chen <yingjoe.chen@mediatek.com>,
+ Eddie Huang <eddie.huang@mediatek.com>,
+ "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org,
  linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ran Bi <ran.bi@mediatek.com>
 
-This add support for the MediaTek MT6358 RTC. Driver using
-compatible data to store different RTC_WRTGR address offset.
+Hi,
 
-Signed-off-by: Ran Bi <ran.bi@mediatek.com>
----
- drivers/rtc/rtc-mt6397.c | 38 ++++++++++++++++++++++++++++++--------
- 1 file changed, 30 insertions(+), 8 deletions(-)
+> > +Required properties:
+> > +- compatible	    : Should be "mediatek,mt2712-rtc" : for MT2712 SoC
+> > +- reg 		    : Specifies base physical address and size of the registers;
+> > +- interrupts	    : Should contain the interrupt for RTC alarm;
+> 
+> No clocks for the RTC? What about CLK_TOP_RTC_SEL from the clk driver?
+> 
+> Regards,
+> Matthias
+> 
 
-diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
-index 828def7..d1c2886 100644
---- a/drivers/rtc/rtc-mt6397.c
-+++ b/drivers/rtc/rtc-mt6397.c
-@@ -12,6 +12,7 @@
- #include <linux/irqdomain.h>
- #include <linux/platform_device.h>
- #include <linux/of_address.h>
-+#include <linux/of_device.h>
- #include <linux/of_irq.h>
- #include <linux/io.h>
- #include <linux/mfd/mt6397/core.h>
-@@ -19,7 +20,8 @@
- #define RTC_BBPU		0x0000
- #define RTC_BBPU_CBUSY		BIT(6)
- 
--#define RTC_WRTGR		0x003c
-+#define RTC_WRTGR_MT6358	0x3a
-+#define RTC_WRTGR_MT6397	0x3c
- 
- #define RTC_IRQ_STA		0x0002
- #define RTC_IRQ_STA_AL		BIT(0)
-@@ -63,6 +65,10 @@
- #define RTC_NUM_YEARS		128
- #define RTC_MIN_YEAR_OFFSET	(RTC_MIN_YEAR - RTC_BASE_YEAR)
- 
-+struct mtk_rtc_data {
-+	u32			wrtgr;
-+};
-+
- struct mt6397_rtc {
- 	struct device		*dev;
- 	struct rtc_device	*rtc_dev;
-@@ -70,15 +76,34 @@ struct mt6397_rtc {
- 	struct regmap		*regmap;
- 	int			irq;
- 	u32			addr_base;
-+	const struct mtk_rtc_data *data;
-+};
-+
-+static const struct mtk_rtc_data mt6358_rtc_data = {
-+	.wrtgr = RTC_WRTGR_MT6358,
- };
- 
-+static const struct mtk_rtc_data mt6397_rtc_data = {
-+	.wrtgr = RTC_WRTGR_MT6397,
-+};
-+
-+static const struct of_device_id mt6397_rtc_of_match[] = {
-+	{ .compatible = "mediatek,mt6358-rtc",
-+		.data = (void *)&mt6358_rtc_data, },
-+	{ .compatible = "mediatek,mt6397-rtc",
-+		.data = (void *)&mt6397_rtc_data, },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(of, mt6397_rtc_of_match);
-+
- static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
- {
- 	unsigned long timeout = jiffies + HZ;
- 	int ret;
- 	u32 data;
- 
--	ret = regmap_write(rtc->regmap, rtc->addr_base + RTC_WRTGR, 1);
-+	ret = regmap_write(rtc->regmap,
-+			   rtc->addr_base + rtc->data->wrtgr, 1);
- 	if (ret < 0)
- 		return ret;
- 
-@@ -333,6 +358,9 @@ static int mtk_rtc_probe(struct platform_device *pdev)
- 	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
- 	rtc->addr_base = res->start;
- 
-+	rtc->data = (struct mtk_rtc_data *)
-+			of_device_get_match_data(&pdev->dev);
-+
- 	rtc->irq = platform_get_irq(pdev, 0);
- 	if (rtc->irq < 0)
- 		return rtc->irq;
-@@ -408,12 +436,6 @@ static int mt6397_rtc_resume(struct device *dev)
- static SIMPLE_DEV_PM_OPS(mt6397_pm_ops, mt6397_rtc_suspend,
- 			mt6397_rtc_resume);
- 
--static const struct of_device_id mt6397_rtc_of_match[] = {
--	{ .compatible = "mediatek,mt6397-rtc", },
--	{ }
--};
--MODULE_DEVICE_TABLE(of, mt6397_rtc_of_match);
--
- static struct platform_driver mtk_rtc_driver = {
- 	.driver = {
- 		.name = "mt6397-rtc",
--- 
-1.9.1
+I suppose that we don't need clock control for mt2712 RTC. RTC clock is directly
+come from 32K crystal and there is no control register to switch the clock. In mt2712,
+CLK_TOP_RTC_SEL is prepared for other module even it called CLK_TOP_RTC_SEL.
+
+Regards,
+Ran
+
+> > +
+> > +Example:
+> > +
+> > +rtc: rtc@10011000 {
+> > +	compatible = "mediatek,mt2712-rtc";
+> > +	reg = <0 0x10011000 0 0x1000>;
+> > +	interrupts = <GIC_SPI 239 IRQ_TYPE_LEVEL_LOW>;
+> > +};
+> > 
+
+
 
 
 _______________________________________________
