@@ -2,86 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8C7D09A929
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 09:53:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5AC919A944
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 09:58:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m8Ij8bZU7fVBqrg7+4HIC3nnn5gr+xopoMnhfnkQE94=; b=UfnmEl6HvVlS5V
-	MfvIZ3MIcLLli/2vasigUnTzjYpLomPKf1gFs6q7Jp3ja7pcZe+3o99ysHjwnaHka4+mHRG5w9YOI
-	4zSpERyKqVNP+carMk1EDIyqnTP3UsTBlR2yhcfXE0qnUMir5O6iYcxzMyLBI5Blz/58KmQvsNvmN
-	Lxj7jAOZPsGM+nZu+W+IxXPGpTyMlIgZvIfBGh+xgxthhi811v0PiI5+VuhgMcOzR5rUJ+3k5aXsm
-	LxwnYgN+r18BNwSX/HIzPNp/a0eXRtVc5jd4ARFQouSrlHCdAIusVPkkc+ar1f2+Ln/x7r/BLI62+
-	3CTrir9iW5/Q2nA/WTZQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=eIyMS2pPyPWhUen3ErszDsVJq0TDubMIr0Nr9C5mHtU=; b=eQgBTMrBIk2cP7
+	cGyU4uAdcmfB5HEjc2I8iPUAd6Wz3rvLXQZITWiDx5tkrPOfWJvf9RbLYfu80j5/K/ASandRESisw
+	WfdrVWjY32u6zoFefqjcey1B/djEh4ougVGhNWkCx1nFa5kY95zjEPqaTMdZ9of7tyytJaXo0YI7F
+	CeJaUDEtak2XITrwaAofwMOH9x0p9WehiD2S19JkPMDctuv+AJxnOGtMVApOhx4QuWexupwGfk0d5
+	oBF2Ayk8SwYbGYEYMXtLYy93Q3EOTIjEN2N1sTl3JRJbiJqP5vimfkixiAqVIodDPcDGK2KVRTGvE
+	EGPA4H/5eHL5NTat+qWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i14NR-0004Wu-TE; Fri, 23 Aug 2019 07:52:53 +0000
-Received: from mail-lj1-x241.google.com ([2a00:1450:4864:20::241])
+	id 1i14SI-0006cX-HI; Fri, 23 Aug 2019 07:57:54 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i14NO-0004WY-JE
- for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 07:52:51 +0000
-Received: by mail-lj1-x241.google.com with SMTP id l14so7980151ljj.9
- for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 00:52:50 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=mqpwIMCq4y9TWYu08ngpLNeK2cRwz3qeYJT+U8RgRXY=;
- b=DubrrLXkoiYf/fFwa21azYYe43fLHngxuHKyq7387+Xa0R0Ff7zONRqKscfvffrNGV
- xvigud8tSrm9hg2nb8/TtO16kqEvOUt0akzEULGED8Y0T1bkMcGum+zqpT9cDEubuxwH
- zDtMB+FG+h9mOlH0GO/5JUOIYRtup9FsgSXyMbXSH0v0zu95BVHpnO1Kv0uauQPnbaQN
- 5iv7ncrpq6JE1kyhB4tmhP8salJo4dzrG3ceLVnfRJhb8EOfy2yI5PyZG7o7nknFYOb4
- PaMq+OOt5MpDwHdQivCI3RF23PTm/tHeg0D3RtIQVtlTBdG62FIvyqLB0f0/PLrSLxtW
- 1rXA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=mqpwIMCq4y9TWYu08ngpLNeK2cRwz3qeYJT+U8RgRXY=;
- b=cXGzhTP3CHUjX+KroUeB9CAQZ7GhgDPbBRQYhkcU2OzIs9nVLGXIMo5M2unh/M2xeo
- ulklI1mJxA4QI+28KRyRRshcJ8Y7DiGh5mFDeJHlDYjMeGoeJ9wdxiUTxP8Tx6OSY9+6
- 1KnZQAg+9HN+w+ITbAW2ur4kmg64Towp3oMdq5YiotIdhV3MfNT3AMKiwfXk5uvqhhaO
- OJQRHPFbQ2i/JN8ygtXAwv6rRtmK2E7NGyxUbqAD2p+A/e2SGdtHYdPMDk3B0ZZtc8dq
- k5shZv0QTrDNoDTpTNvaNbiKglcHh9RyTamnHKrVHW3daywjDl/v+RCII5DG5XezanTs
- /USg==
-X-Gm-Message-State: APjAAAULcf+ZDWUKmy/XafQRYN/c98vhPrRmIkRkHHmP7tai+RCbwvvM
- P6vLWvbqH4XgVl7czSQ19jFwnRuM2UDXxyPou0Pek6Q6gag=
-X-Google-Smtp-Source: APXvYqxKaJvKhF13Q1aLZVUTLP1o3k+sNGLKbFE8QiSoT0WUr4YT9FXA/najFQ6V2Iew5rRXx0yaKkpm1sgPJmmTTwY=
-X-Received: by 2002:a05:651c:28c:: with SMTP id
- b12mr2103001ljo.69.1566546768877; 
- Fri, 23 Aug 2019 00:52:48 -0700 (PDT)
+ id 1i14S0-0006Og-6l; Fri, 23 Aug 2019 07:57:38 +0000
+X-UUID: 7c1190bfb4e647ab84f7fdad020baf79-20190822
+X-UUID: 7c1190bfb4e647ab84f7fdad020baf79-20190822
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1136141585; Thu, 22 Aug 2019 23:57:24 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 23 Aug 2019 00:57:22 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 23 Aug 2019 15:57:20 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 23 Aug 2019 15:57:18 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Biju Das <biju.das@bp.renesas.com>
+Subject: [PATCH next v10 00/11] add USB GPIO based connection detection driver
+Date: Fri, 23 Aug 2019 15:57:10 +0800
+Message-ID: <1566547041-20804-1-git-send-email-chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-References: <1565686400-5711-1-git-send-email-light.hsieh@mediatek.com>
- <1565686400-5711-6-git-send-email-light.hsieh@mediatek.com>
-In-Reply-To: <1565686400-5711-6-git-send-email-light.hsieh@mediatek.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Fri, 23 Aug 2019 09:52:37 +0200
-Message-ID: <CACRpkdbpsK08mYX_M5vvaExR2HCa8ct16zC92euLJzewYEDG-Q@mail.gmail.com>
-Subject: Re: [PATCH v1 5/5] pinctrl: mediatek: Add support for pin
- configuration dump via sysfs.
-To: Light Hsieh <light.hsieh@mediatek.com>
+X-TM-SNTS-SMTP: 6F8C1AD31E915CAE7EA5B8674E9CC58B9FDD742755ABCFF30FD3A977DD81C8AF2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_005250_637131_CDC25CCA 
-X-CRM114-Status: UNSURE (   7.95  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190823_005736_255378_E6244BCB 
+X-CRM114-Status: GOOD (  13.31  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:241 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,41 +72,157 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- Sean Wang <sean.wang@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Hans de Goede <hdegoede@redhat.com>,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Badhri Jagan Sridharan <badhri@google.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>, Andy
+ Shevchenko <andy.shevchenko@gmail.com>, linux-mediatek@lists.infradead.org,
+ Min Guo <min.guo@mediatek.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ Nagarjuna Kristam <nkristam@nvidia.com>, Adam
+ Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Light,
+Because the USB Connector is introduced and the requirement of
+usb-connector.txt binding, the old way using extcon to support
+USB Dual-Role switch is now deprecated, meanwhile there is no
+available common driver when use Type-B connector, typically
+using an input GPIO to detect USB ID pin.
+This patch series introduce a USB GPIO based connection detection
+driver and try to replace the function provided by extcon-usb-gpio
+driver.
 
-thanks for your patch!
+v10 changes:
+  1. revert commit log changes of [06/11] and [07/11]
 
-On Tue, Aug 13, 2019 at 10:53 AM Light Hsieh <light.hsieh@mediatek.com> wrote:
+v9 changes:
+  1. replace signed-off-by by suggested-by Heikki
+  2. add reviewed-by Linus
+  3. use class_find_device_by_fwnode() introduced by series [1]
 
-> From: Light Hsieh <light.hsieh@mediatek.com>
->
-> Add support for pin configuration dump via catting
-> /sys/kernel/debug/pinctrl/$platform_dependent_path/pinconf-pins.
+[1]:
+ https://lore.kernel.org/patchwork/patch/1103630/
+ [v3,1/7] drivers: Introduce device lookup variants by name
 
-This is debugfs so rename the subject "*debugfs"
+ they are already in:
+ https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/driver-core.git/log/drivers/base/core.c?h=driver-core-next
 
-> pinctrl framework had already support such dump. This patch implement the
-> operation function pointer to fullfill this dump.
+v8 changes:
+  1. rename the driver's name suggested by Heikki
+  2. move the driver from usb/roles/ into usb/common/ suggested by Heikki
+  3. introduce Kconfig for usb common core to add the new driver
+  4. modify binding of the driver 
+  5. rename the subject title
 
-Fair enough, that's fine.
+v7 changes:
+  1. [5/10]: add signed-off-by Chunfeng
+  2. [6/10]: add signed-off-by Chunfeng
+  3. [6/10]: depends on linux-next of Rafael's tree [1]
+  4. [7/10]: add signed-off-by Chunfeng and tested-by Biju
+  5. [9/10]: add tested-by Nagarjuna, and remove DEV_PMS_OPS suggested by Andy
 
-> Change-Id: Ib59212eb47febcd84140cbf84e1bd7286769beb0
+[1] https://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git/log/?h=linux-next
 
-This has been remarked on before.
+v6 changes:
+  1. merge [1] and [2] into this series
+  2. don't use graph anymore to find usb-role-switch
+  3. abandon [3] and introduce three patches (6, 7, 8 in this series)
+     to rebuild APIs getting usb-role-switch
 
-This patch is missing your Signed-off-by, please fix that.
+  [1]: [v3] dt-binding: usb: add usb-role-switch property
+       https://patchwork.kernel.org/patch/10934835/
+  [2]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+       https://patchwork.kernel.org/patch/10909971/
 
-Yours,
-Linus Walleij
+  [3]: [PATCH v5 4/6] usb: roles: add API to get usb_role_switch by node
+
+v5 changes:
+  1. remove linux/of.h and put usb_role_switch when error happens,
+     suggested by Biju
+  2. treat Type-B connector as USB controller's child, but not as
+     a virtual device, suggested by Rob
+  3. provide and use generic property "usb-role-switch", see [1],
+     suggested by Rob
+
+  Note: this series still depends on [2]
+
+  [1]: [v3] dt-binding: usb: add usb-role-switch property
+       https://patchwork.kernel.org/patch/10934835/
+  [2]: [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+       https://patchwork.kernel.org/patch/10909971/
+
+v4 changes:
+  1. use switch_fwnode_match() to find fwnode suggested by Heikki
+  2. assign fwnode member of usb_role_switch struct suggested by Heikki
+  3. make [4/6] depend on [2]
+  3. remove linux/gpio.h suggested by Linus
+  4. put node when error happens
+
+  [4/6] usb: roles: add API to get usb_role_switch by node
+  [2] [v6,08/13] usb: roles: Introduce stubs for the exiting functions in role.h
+    https://patchwork.kernel.org/patch/10909971/
+
+v3 changes:
+  1. add GPIO direction, and use fixed-regulator for GPIO controlled
+    VBUS regulator suggested by Rob;
+  2. rebuild fwnode_usb_role_switch_get() suggested by Andy and Heikki
+  3. treat the type-B connector as a virtual device;
+  4. change file name of driver again
+  5. select USB_ROLE_SWITCH in mtu3/Kconfig suggested by Heikki
+  6. rename ssusb_mode_manual_switch() to ssusb_mode_switch()
+
+v2 changes:
+ 1. make binding clear, and add a extra compatible suggested by Hans
+
+Chunfeng Yun (8):
+  dt-binding: usb: add usb-role-switch property
+  dt-bindings: connector: add optional properties for Type-B
+  dt-bindings: usb: add binding for USB GPIO based connection detection
+    driver
+  dt-bindings: usb: mtu3: add properties about USB Role Switch
+  usb: roles: get usb-role-switch from parent
+  usb: common: create Kconfig file
+  usb: common: add USB GPIO based connection detection driver
+  usb: mtu3: register a USB Role Switch for dual role mode
+
+Heikki Krogerus (2):
+  device connection: Add fwnode_connection_find_match()
+  usb: roles: Add fwnode_usb_role_switch_get() function
+
+Yu Chen (1):
+  usb: roles: Introduce stubs for the exiting functions in role.h
+
+ .../bindings/connector/usb-connector.txt      |  14 +
+ .../devicetree/bindings/usb/generic.txt       |   4 +
+ .../devicetree/bindings/usb/mediatek,mtu3.txt |  10 +
+ .../devicetree/bindings/usb/usb-conn-gpio.txt |  31 ++
+ drivers/base/devcon.c                         |  43 ++-
+ drivers/usb/Kconfig                           |  35 +--
+ drivers/usb/common/Kconfig                    |  51 ++++
+ drivers/usb/common/Makefile                   |   1 +
+ drivers/usb/common/usb-conn-gpio.c            | 284 ++++++++++++++++++
+ drivers/usb/mtu3/Kconfig                      |   1 +
+ drivers/usb/mtu3/mtu3.h                       |   5 +
+ drivers/usb/mtu3/mtu3_debugfs.c               |   4 +-
+ drivers/usb/mtu3/mtu3_dr.c                    |  48 ++-
+ drivers/usb/mtu3/mtu3_dr.h                    |   6 +-
+ drivers/usb/mtu3/mtu3_plat.c                  |   3 +-
+ drivers/usb/roles/class.c                     |  41 ++-
+ include/linux/device.h                        |  10 +-
+ include/linux/usb/role.h                      |  37 +++
+ 18 files changed, 570 insertions(+), 58 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
+ create mode 100644 drivers/usb/common/Kconfig
+ create mode 100644 drivers/usb/common/usb-conn-gpio.c
+
+-- 
+2.23.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
