@@ -2,67 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF2EC9B3C8
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 17:47:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D0AB39B3E0
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 17:50:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hLk5LHA0fnEjuoCpygtqyh0ceJ6Fy1YqQ8/Rbj1IlM8=; b=Nj8vlAuaz8IDu3
-	dVvIimY8fxS8mC0PHqxOKtH0NoVWQdpr6kCtlvd/0+UuymwOdpCtM36JUhl7Xn3xJgTehqx53LzkP
-	HytHoA/p+sWd2uCcQ2qA18Klo9aActnyafdbtJGUMt8nNjFfJ126FGSxrkM7wYowg/2ugItfoFaRZ
-	eNZnUssGs6Ko8vBwfRZeaxUs97yfY3BbjDYCMzY5RWFEtEBHEThhJS+DC79Va1U3VJYXJmnAwDYFh
-	Cjpi1cP62mYwFdyv7xBOxqNxbRg2vZSjyONdkDJjCdc0uyguEGONBQzgKisytQva1u3oyR39VEuSt
-	P0adDzg+DEzkRJHLVLCg==;
+	List-Owner; bh=V67WF3DhvX5S/7gIqxTItSBnqvGdW8BhgYydVT/aTCA=; b=bFLLrHA5tKIkOs
+	w5VIpl7O+6gAfDs9yWYgu4pLU5f8WXIyz1CMK/3ydGpiI9EMWzlNowC0XuFlwi0Ev/eNNogoUaT5s
+	OXGwoX7vamiSIJqnl7Uefj0jT4kIb0+HP4JRT7B9ynybaCqzcYLoo7OolxyD91+c+VQgmj/uYUYvr
+	whHc6CvNpfIKFyuM6WQN4GzmnDlKnD7pzpUnPpvrDNo/W8LYFAOtktdlXkTXIyIEoszbzmcpmhs+q
+	9bVNv7Fx/CHsKBOuEsbNNM9dScyUktOUg+ZoYYSjlAGALVu6O24kY7RIEPR06zlxJNyJex5YEzl5N
+	3ai02KoLzwmHbg9s7U5w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1Bmo-0008Tz-GB; Fri, 23 Aug 2019 15:47:34 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1i1Bph-0001KD-85; Fri, 23 Aug 2019 15:50:33 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1Bml-0008TZ-IR
- for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 15:47:32 +0000
-Received: by mail-ed1-x542.google.com with SMTP id z51so14055203edz.13
- for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 08:47:31 -0700 (PDT)
+ id 1i1Bpe-0001Ju-Q7
+ for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 15:50:32 +0000
+Received: by mail-ed1-x543.google.com with SMTP id h8so14149743edv.7
+ for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 08:50:30 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=bGz8XaXIFErtIu9XG/kvEKw7lG/6DBuwbU2VpHjVKas=;
- b=nSaCUTL+KyzUw7yLOTNNwfVJXci5P78eYs7inDH8u1oAITqcf8+1Px9aCyldn+T8LB
- H+gUrmfHcLZ6r7cPUEAA/vabDH/mr5bAWcUFCrN7E8Fhq3N+j9S0hdfTGYbqqEwZfk7N
- wcwL+RHNeSYbqXlt2Z3DR3/lJJm4LSOPceUFAurFmP3K5eFdRZxoQVqZ92WuOHAsEPV7
- iENafMu+k93s4p2FvKYQ1YisM0BKgxh25RZeOR3Z0+F6SSxcHeAygVeaSC9s21AxTtgn
- OzKxa05j1VTU9F63u33/GTk060VkyS9A7y3FxAggcasnl6i55uY/6pkdOy+BErppzkh/
- bM1g==
+ bh=eHboKXefOkoZFmnF3HVNlpLNUtuSikyS51qtsqcaUNo=;
+ b=GxW2rwOO7d8kg4vtCGGiuz3nmJ2Ekh3ZHhAG9bOvWMapjX3RPc/cpDhW6LMJedTv6g
+ U0LC6qOT6AiRnWYoD2cvokdqYT2GcvAqp8KUZLEmMXZMIw3Zvv1XGKNATf2samrn+NM+
+ UES3GzS9CnQgu0pT+g1C2nshV+aEhH/Z+vOs9UK3uzwskhJm6+2ul0SXk5CiX/PZlZES
+ CDXb3CYmmihukzY2XS1mqyMLRDmaEvuQGlflWeZO3VJ7jIpCsyTGu8jMW8Y32XtFT8XX
+ XZLraQAyq0JDoXPf9Dwyhd3XRfal8iqeTmpnDt0dIjZk+SFiJeZkQM79iDww4fzwnYuw
+ vnhA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=bGz8XaXIFErtIu9XG/kvEKw7lG/6DBuwbU2VpHjVKas=;
- b=Aq7QOeU/iYbF9GwKpS1FUUoaHRa9kAVHiXJ9VpDriQDFx+HnGDi4NCU1D8Mv11Q+h8
- N223Tz+ZbCwLRXM2KWwmLORtLvHAwR1VbtIgJHkSZ9suXtcZ0c0K4QQqB/CKiQTndWHN
- qX/ywo9DGpiwMwhEoaB1ijvEChjyDC3dL6+TNNzcddK3ZzH4MaXD2mUEdvqVAgmeF+Sf
- gnIaH+VOPtRjJgX4VdMbqnmhwMVKreJVvcCb3xboJLGcNUV4aGTa58Va7xKXUgkV8ZAJ
- pOnRl5t13gj27oOhvu/4E6odEJcJGYyFZHdXjxczO1Q3d130d7gMeoR4SUTOFLoM94G8
- t8kw==
-X-Gm-Message-State: APjAAAXOhc7TgrRqVG2w7wW5fAcNyT/2HKxxbYat9R62qObzFYRuds6H
- TGtep/M+a88eEdtfm0/iDKg=
-X-Google-Smtp-Source: APXvYqzeo3CGXvOh+TYJGQmDB9073v/pWNUBUDNdJUsgnd0OyCRCkR5Ey7bq8sav3wApodQT3R+1fg==
-X-Received: by 2002:aa7:c4ce:: with SMTP id p14mr5434563edr.238.1566575250243; 
- Fri, 23 Aug 2019 08:47:30 -0700 (PDT)
+ bh=eHboKXefOkoZFmnF3HVNlpLNUtuSikyS51qtsqcaUNo=;
+ b=MxQbpRQvQOHsBLMOT7oiPRxw/Xqx7MVUOQxKyqAjn2XLbf54nGgcxHcHC8j2BLrW+8
+ YOJG8FGNpYm6ao1JAOUHEd574eoFHb5gA/hx5kH1YIG+P3Ra8KyoSnNBFLPA8+yVsQY2
+ u9R3y1VkcAt4cz3aKtC6PJw+SdB9A/I+STL241dy0mDPqnTDiRAVjLw3wpgHdI21DcsP
+ SXuXxg3qw2zBU5ZB6WYN8RXEXLEMxxrjRQbES5PkjW1uAi6PHit2w2H+43Cl4FSRocrv
+ ONNXOpMXOHfJzErPkJg5KWgoBiawgjx3twPolISuylfkSH6tFjQvdbBDu9oJWtwiSOU1
+ dpgw==
+X-Gm-Message-State: APjAAAXylBDnhiASCWlgBqww24W1KxeQPwFXREqaUFNZBCFiSJfR8Xq1
+ MNJm0WZyjeUr8R+uNaRkNFQRigoE9k4=
+X-Google-Smtp-Source: APXvYqxpNIuY03AF3h8WerlDr0+pTMI81yj7RHxSM8dTyt4gRlHl0wdVNr+b+L24Gp0ga5HUsOyfdQ==
+X-Received: by 2002:a50:bb23:: with SMTP id y32mr5288045ede.145.1566575429297; 
+ Fri, 23 Aug 2019 08:50:29 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id f2sm587201eds.87.2019.08.23.08.47.28
+ by smtp.gmail.com with ESMTPSA id f6sm595737edn.63.2019.08.23.08.50.28
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 08:47:29 -0700 (PDT)
-Subject: Re: [PATCH v2 02/11] dt-bindings: mtk-uart: add mt6779 uart bindings
+ Fri, 23 Aug 2019 08:50:28 -0700 (PDT)
+Subject: Re: [PATCH v2 01/11] dt-bindings: mediatek: add support for mt6779
+ reference board
 To: Mars Cheng <mars.cheng@mediatek.com>, Rob Herring <robh@kernel.org>,
  Marc Zyngier <marc.zyngier@arm.com>, Stephen Boyd <sboyd@kernel.org>,
  Sean Wang <sean.wang@kernel.org>, Linus Walleij <linus.walleij@linaro.org>
 References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
- <1566206502-4347-3-git-send-email-mars.cheng@mediatek.com>
+ <1566206502-4347-2-git-send-email-mars.cheng@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -158,23 +159,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <30d7e9ba-2cc2-7e7b-37b1-2f9821a0fc53@gmail.com>
-Date: Fri, 23 Aug 2019 17:47:28 +0200
+Message-ID: <9f3daf61-eb8b-28c9-e3ce-08b9ca61166b@gmail.com>
+Date: Fri, 23 Aug 2019 17:50:27 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566206502-4347-3-git-send-email-mars.cheng@mediatek.com>
+In-Reply-To: <1566206502-4347-2-git-send-email-mars.cheng@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_084731_662127_6E2E26CC 
-X-CRM114-Status: GOOD (  14.02  )
+X-CRM114-CacheID: sfid-20190823_085030_869291_67B1770E 
+X-CRM114-Status: GOOD (  14.11  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -210,30 +211,32 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 19/08/2019 11:21, Mars Cheng wrote:
-> Add documentation for mt6779 uart dt-bindings
+> Update binding document for mt6779 reference board
 > 
 > Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
+> Reviewed-by: Rob Herring <robh@kernel.org>
 
-Pushed to v5.3-next/dts64
-
-Thanks!
+Applied thanks!
 
 > ---
->  .../devicetree/bindings/serial/mtk-uart.txt        |    1 +
->  1 file changed, 1 insertion(+)
+>  .../devicetree/bindings/arm/mediatek.yaml          |    4 ++++
+>  1 file changed, 4 insertions(+)
 > 
-> diff --git a/Documentation/devicetree/bindings/serial/mtk-uart.txt b/Documentation/devicetree/bindings/serial/mtk-uart.txt
-> index 6fdffb7..3a3b570 100644
-> --- a/Documentation/devicetree/bindings/serial/mtk-uart.txt
-> +++ b/Documentation/devicetree/bindings/serial/mtk-uart.txt
-> @@ -9,6 +9,7 @@ Required properties:
->    * "mediatek,mt6589-uart" for MT6589 compatible UARTS
->    * "mediatek,mt6755-uart" for MT6755 compatible UARTS
->    * "mediatek,mt6765-uart" for MT6765 compatible UARTS
-> +  * "mediatek,mt6779-uart" for MT6779 compatible UARTS
->    * "mediatek,mt6795-uart" for MT6795 compatible UARTS
->    * "mediatek,mt6797-uart" for MT6797 compatible UARTS
->    * "mediatek,mt7622-uart" for MT7622 compatible UARTS
+> diff --git a/Documentation/devicetree/bindings/arm/mediatek.yaml b/Documentation/devicetree/bindings/arm/mediatek.yaml
+> index a4ad2eb..4043c50 100644
+> --- a/Documentation/devicetree/bindings/arm/mediatek.yaml
+> +++ b/Documentation/devicetree/bindings/arm/mediatek.yaml
+> @@ -48,6 +48,10 @@ properties:
+>            - const: mediatek,mt6765
+>        - items:
+>            - enum:
+> +              - mediatek,mt6779-evb
+> +          - const: mediatek,mt6779
+> +      - items:
+> +          - enum:
+>                - mediatek,mt6795-evb
+>            - const: mediatek,mt6795
+>        - items:
 > 
 
 _______________________________________________
