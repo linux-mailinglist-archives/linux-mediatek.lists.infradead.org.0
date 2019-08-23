@@ -2,67 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 620B19B151
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 15:51:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 177A79B193
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 16:05:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=juVA2oI8yqW6TATDVtnaUjZWWNpDJ08Kq+ROeIh9SDs=; b=Bf/bHHbDtwc5v8
-	h6bvr+ZyxEXcVWWV9Y/R3JMEa8YbDuMyPNdvIWdX5hkDh9HQc8y2CBpmfhVHyoX8wnSaZ6behS3h5
-	BEvhmJ25WC3cT6vxp2AfdQP49jQjrEsP1IWwVyuI0xbKiKRVBDqLChEgDFypTxiVk82WbEsQYjW8t
-	Nt/ipLIaXsuM4r/EDiPwD7iZ3upVdzL6GPAN9fJDZeD8PgngFJuUD9Ms9w0MXRxIfzSUr5yd5wQdT
-	FOQ4Z17xY1J5gq/8B55Wb71SE/ovPsMqc6ltKKHVhQEHDICiWtt8e8oZnbbCVz3zkm1vWZLnlGCqX
-	s8NzeBlEdlMOJM1+FJIQ==;
+	List-Owner; bh=g/YLCpTCN//kExY3FgjVCxPi99fXbRCYuqGUNd8Zth0=; b=aNSBN0ZtyjvSru
+	f4gLDzP+qRaOpCsWG1ijWoCT35K4PLcu+NrWx+1BRfTFHoSqYoX8y1+VJcu/x15mMDoDuCO+FpbL5
+	1AB1V2BK5kns0tEo41X9dWApLxzmrosIll2FEjsJADfbrCOjZYPrBW42a9esC3bBYSVK9i9JyKvzn
+	j9S61xg2lTC6wghgYQte1eOwmJ9u/6AsxEbrKlaPhDD5vOajGU04kBNgc/+n7yIk3Ud+5olh2cJOv
+	ijmy65/kNLJy4xEb9/aoRw/71KCRLeDVvYPg2blDJdalotNcaEI4Ef7JBAWGFx1b2ol7T+djspBrQ
+	hfdJRosebP714fVlj2Jw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i19y4-0006bm-DB; Fri, 23 Aug 2019 13:51:04 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1i1AC7-0000VE-AY; Fri, 23 Aug 2019 14:05:35 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i19y0-0006av-37; Fri, 23 Aug 2019 13:51:01 +0000
-Received: by mail-wr1-x441.google.com with SMTP id u16so8739655wrr.0;
- Fri, 23 Aug 2019 06:50:59 -0700 (PDT)
+ id 1i1AC4-0000Uc-8c; Fri, 23 Aug 2019 14:05:33 +0000
+Received: by mail-ed1-x543.google.com with SMTP id m44so13641311edd.9;
+ Fri, 23 Aug 2019 07:05:31 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=PiX8UbdfT9jPMArpKZBNMxEaKGec1JjI1PNelnxPqhw=;
- b=cNEbUWPJyOyBy8Yzjhr4AMtgu8ngBr2Fg82COD9tfdIUvzFqJGsxB7Ckizwcd1B7ZZ
- gyCfh/3He8/K07kRRQjISkjDceK4OObwQcEg1jcFTAtAs/sv5uiUsog0ygmgkwpcn0sP
- wXCUoe8fGNfireFxojIo1FFixvl13fvVBOEgyCTJ2QQmgr9kkXiPGxa/WTScgFF6MNUB
- ANQn3k9voqmTxawFFzbRAxxd2UtTJaJ9sdzhfBsRBF8/G1hwJK4gw46pX7NyEQVWIzYQ
- Xe9OiMC1ZvbZ0FRgwsVcsZ63xIAZowb9Pmgg3+151G2aVwBVxfPkQKE91SF1TVN21DR8
- XleQ==
+ bh=HckfSOQwbXy7efsy9K0fZ9GAvJmWOKx0hMop2zLa6dc=;
+ b=ZWoOmvYtAaF1QFgcaahpFOlkVsz9OPHBcm+XH9d7PRhOZwihzHB2bMJd9B0Y3A7/yI
+ /CvCjJHVmQF2c/7DYuCHb3La3pW9Mi12Z2caq3M9MFAhkIx1wqV+BgFgGRostNVEYpCr
+ UEeNmCtANeFGGSFU1Nd0F3UJsckRQS6BUC1unMLwb6kGlpqHMkUpsDADgq/hqoW1QrWz
+ vjCQKbfH/5A38B89NtMq75HZDPNQqb1WUcqhOB8J44Y0vqPYRsUgdgL2J3v4fw3tA7a2
+ zfyy2mMvd7WLhu7YxmpIenkJKTcPEppZpIYAnMdKaob5RZ9bKMU5OPwTtkcckeIESlVN
+ H34A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=PiX8UbdfT9jPMArpKZBNMxEaKGec1JjI1PNelnxPqhw=;
- b=WcFRyyMKmiGL3MitcTyD/JBvQijVEjH+GkZIqByaaLtZw13/67anZHHenU9MoFz6Mq
- scG+9rJZVZbL5ImRgfQ+ASTeKoWCL3FCJ0NtE1ZpptERfhNuGdrfDIOYNBrLGQo0CdNC
- I/cCOXhBqHlMHDeUmzhLcVeDOZjWvWHBHrrX0wgn8LthB9ZQkpg9SfxAEdGm5NnsxxYv
- Z1FZKClAKAa5AtQE5W018yqbhjZhtKC1BszLwgP6kkFQdILnBbHDl2fAr1TD070zoa9x
- 5jplJ7qgpDg8Wy71DmfaxDjl2hcCbPtHSkuViECnn22Kjfk9gunXZp1ctsSsimV+SGj8
- 5DZA==
-X-Gm-Message-State: APjAAAUzlsWSmlcrsYuCZvYMjomt0BnBLLOO2dmfm4e0PEp3i9ktZXWh
- uVVAiejlbZy6JgNoLo8RVHQ=
-X-Google-Smtp-Source: APXvYqzUwQg8qhOrvsDW68/faRsi6KqiKfqy7WAJadja1eBJm+cM+sEV1G2SeP/+zhltB6coa0tAxQ==
-X-Received: by 2002:a5d:4b05:: with SMTP id v5mr5389502wrq.208.1566568258608; 
- Fri, 23 Aug 2019 06:50:58 -0700 (PDT)
+ bh=HckfSOQwbXy7efsy9K0fZ9GAvJmWOKx0hMop2zLa6dc=;
+ b=ZQO7OupGjRE68ciwaWond5x7tGRZAPQj9fKQ/2nyjP1ZlUPGVhEMqNkBj3iYGPKt1I
+ WLiLZ2mNbX/GBuF62hU91lUSLGBAeqKG5MrfOTsgIfObyV2LdlsCwNi9eVker7kEk++h
+ ows1NsoXIVH03UJVRgBQ8MIJWgqRsw6lN5KffidRWLu97pP5CYkEjIb+JdcgW+uuMs78
+ a20i5/JFbLS3XmuSuZ0sj1sxYtCyC7XN5FHZ008ZhyugV1y481UnTzAC2ckdVD6hgo8e
+ nM5cDHUh//9IoI5Jn2ZaFfKrUWhLqWCOiCugxrH6eSUpBR/XDHhFh+zyNKE8gIABMAVl
+ 5TyQ==
+X-Gm-Message-State: APjAAAU+mj/KctpcYBvgdGaGX0GuKeOXTbxgRuALuq4UW8XngRLOpGlJ
+ 5arv/BeD2WAf0abxKF5aJ7q/S55TdRfofw==
+X-Google-Smtp-Source: APXvYqwQNgQMkPQDVAeuvRXy/IUnTsMrjJFdp2pbT7cdmrudqNWCgHOSLjZR2/HImsfDacp0Swt+yA==
+X-Received: by 2002:a50:ee08:: with SMTP id g8mr4644212eds.291.1566569130676; 
+ Fri, 23 Aug 2019 07:05:30 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id e3sm5558717wrs.37.2019.08.23.06.50.56
+ by smtp.gmail.com with ESMTPSA id rl6sm428391ejb.64.2019.08.23.07.05.29
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 06:50:57 -0700 (PDT)
-Subject: Re: [RESEND, PATCH v13 09/12] soc: mediatek: cmdq: define the
- instruction struct
+ Fri, 23 Aug 2019 07:05:30 -0700 (PDT)
+Subject: Re: [RESEND, PATCH v13 10/12] soc: mediatek: cmdq: add polling
+ function
 To: Bibby Hsieh <bibby.hsieh@mediatek.com>,
  Jassi Brar <jassisinghbrar@gmail.com>, Rob Herring <robh+dt@kernel.org>,
  CK HU <ck.hu@mediatek.com>
 References: <20190820084932.22282-1-bibby.hsieh@mediatek.com>
- <20190820084932.22282-10-bibby.hsieh@mediatek.com>
+ <20190820084932.22282-11-bibby.hsieh@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -158,23 +158,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <486deaa3-d139-d4af-e0cf-e324b3270f3b@gmail.com>
-Date: Fri, 23 Aug 2019 15:50:54 +0200
+Message-ID: <2dfb6a69-c325-9caf-e11b-bf0f0fbf4bb6@gmail.com>
+Date: Fri, 23 Aug 2019 16:05:27 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190820084932.22282-10-bibby.hsieh@mediatek.com>
+In-Reply-To: <20190820084932.22282-11-bibby.hsieh@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_065100_171205_C669F9B0 
-X-CRM114-Status: GOOD (  23.80  )
+X-CRM114-CacheID: sfid-20190823_070532_304687_189EF0BE 
+X-CRM114-Status: GOOD (  23.79  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -215,238 +215,105 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 20/08/2019 10:49, Bibby Hsieh wrote:
-> Define an instruction structure for gce driver to append command.
-> This structure can make the client's code more readability.
+> add polling function in cmdq helper functions
 > 
 > Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
 > Reviewed-by: CK Hu <ck.hu@mediatek.com>
 > ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c   | 106 +++++++++++++++--------
->  include/linux/mailbox/mtk-cmdq-mailbox.h |   2 +
->  2 files changed, 74 insertions(+), 34 deletions(-)
+>  drivers/soc/mediatek/mtk-cmdq-helper.c   | 28 ++++++++++++++++++++++++
+>  include/linux/mailbox/mtk-cmdq-mailbox.h |  1 +
+>  include/linux/soc/mediatek/mtk-cmdq.h    | 15 +++++++++++++
+>  3 files changed, 44 insertions(+)
 > 
 > diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index 7aa0517ff2f3..e3d5b0be8e79 100644
+> index e3d5b0be8e79..c53f8476c68d 100644
 > --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
 > +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -9,12 +9,24 @@
->  #include <linux/mailbox_controller.h>
->  #include <linux/soc/mediatek/mtk-cmdq.h>
->  
-> -#define CMDQ_ARG_A_WRITE_MASK	0xffff
->  #define CMDQ_WRITE_ENABLE_MASK	BIT(0)
->  #define CMDQ_EOC_IRQ_EN		BIT(0)
->  #define CMDQ_EOC_CMD		((u64)((CMDQ_CODE_EOC << CMDQ_OP_CODE_SHIFT)) \
->  				<< 32 | CMDQ_EOC_IRQ_EN)
->  
-> +struct cmdq_instruction {
-> +	union {
-> +		u32 value;
-> +		u32 mask;
-> +	};
-> +	union {
-> +		u16 offset;
-> +		u16 event;
-> +	};
-> +	u8 subsys;
-> +	u8 op;
-> +};
-> +
->  static void cmdq_client_timeout(struct timer_list *t)
->  {
->  	struct cmdq_client *client = from_timer(client, t, timer);
-> @@ -110,10 +122,8 @@ void cmdq_pkt_destroy(struct cmdq_pkt *pkt)
+> @@ -221,6 +221,34 @@ int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
 >  }
->  EXPORT_SYMBOL(cmdq_pkt_destroy);
+>  EXPORT_SYMBOL(cmdq_pkt_clear_event);
 >  
-> -static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
-> -				   u32 arg_a, u32 arg_b)
-> +static struct cmdq_instruction *cmdq_pkt_append_command(struct cmdq_pkt *pkt)
->  {
-> -	u64 *cmd_ptr;
->  
->  	if (unlikely(pkt->cmd_buf_size + CMDQ_INST_SIZE > pkt->buf_size)) {
->  		/*
-> @@ -127,81 +137,109 @@ static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
->  		pkt->cmd_buf_size += CMDQ_INST_SIZE;
->  		WARN_ONCE(1, "%s: buffer size %u is too small !\n",
->  			__func__, (u32)pkt->buf_size);
-> -		return -ENOMEM;
-> +		return NULL;
->  	}
-> -	cmd_ptr = pkt->va_base + pkt->cmd_buf_size;
-> -	(*cmd_ptr) = (u64)((code << CMDQ_OP_CODE_SHIFT) | arg_a) << 32 | arg_b;
-> +
-> +	*(u64 *)(pkt->va_base + pkt->cmd_buf_size) = 0;>  	pkt->cmd_buf_size += CMDQ_INST_SIZE;
->  
-> -	return 0;
-> +	return pkt->va_base + pkt->cmd_buf_size - CMDQ_INST_SIZE;
->  }
->  
->  int cmdq_pkt_write(struct cmdq_pkt *pkt, u8 subsys, u16 offset, u32 value)
->  {
-> -	u32 arg_a = (offset & CMDQ_ARG_A_WRITE_MASK) |
-> -		    (subsys << CMDQ_SUBSYS_SHIFT);
+> +int cmdq_pkt_poll(struct cmdq_pkt *pkt, u8 subsys,
+> +		  u16 offset, u32 value, u32 mask)
+> +{
 > +	struct cmdq_instruction *inst;
 > +
-> +	inst = cmdq_pkt_append_command(pkt);
-> +	if (!inst)
-> +		return -ENOMEM;
-> +
-> +	inst->op = CMDQ_CODE_WRITE;
-> +	inst->value = value;
-> +	inst->offset = offset;
-> +	inst->subsys = subsys;
->  
+> +	if (mask != 0xffffffff) {
 
-I can see that using cmdq_instruction will make the code more readable, but I
-dislike the approach that cmdq_pkt_append_command returns a pointer where we
-write the instruction to. Better we pass inst to cmdq_pkt_append_command() and
-write it there to cmd_ptr.
+Is this necessary? Can't we just always set the mask, even if it's 0xffffffff?
 
-I think this way we can get rid of explicitly setting the memory to zero:
-*(u64 *)(pkt->va_base + pkt->cmd_buf_size) = 0;
+Regarding interfaces, depending on how often you expect the mask being ~0 we
+might think of adding a cmdq_pkt_poll_mask call.
+What I want to say, if in the end most of the callers will use the mask with
+0xffffffff, then we should add a call cmdq_pkt_poll_mask which actually allows
+to set the mask and let cmdq_pkt_poll set the mask in it's function body.
+As I already said, this depends on how often you think a caller will use/not-use
+the mask.
+Does this make sense?
 
-And if we pass the inst to the append_command we don't have to change the return
-value handling of cmdq_pkt_append_command(), which makes the patch easier to
-understand.
-
-> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WRITE, arg_a, value);
-> +	return 0;
->  }
->  EXPORT_SYMBOL(cmdq_pkt_write);
->  
->  int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
->  			u16 offset, u32 value, u32 mask)
->  {
-> -	u32 offset_mask = offset;
-> -	int err = 0;
-> +	struct cmdq_instruction *inst;
-> +	u16 offset_mask = offset;
->  
->  	if (mask != 0xffffffff) {
-> -		err = cmdq_pkt_append_command(pkt, CMDQ_CODE_MASK, 0, ~mask);
 > +		inst = cmdq_pkt_append_command(pkt);
 > +		if (!inst)
 > +			return -ENOMEM;
 > +
 > +		inst->op = CMDQ_CODE_MASK;
-> +		inst->mask = ~mask;
->  		offset_mask |= CMDQ_WRITE_ENABLE_MASK;
->  	}
-> -	err |= cmdq_pkt_write(pkt, value, subsys, offset_mask);
->  
-> -	return err;
-> +	return cmdq_pkt_write(pkt, subsys, offset_mask, value);
->  }
->  EXPORT_SYMBOL(cmdq_pkt_write_mask);
->  
->  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
->  {
-> -	u32 arg_b;
-> +	struct cmdq_instruction *inst;
->  
->  	if (event >= CMDQ_MAX_EVENT)
->  		return -EINVAL;
->  
-> -	/*
-> -	 * WFE arg_b
-> -	 * bit 0-11: wait value
-> -	 * bit 15: 1 - wait, 0 - no wait
-> -	 * bit 16-27: update value
-> -	 * bit 31: 1 - update, 0 - no update
-> -	 */
-
-I have no strong opinion of CMDQ_WFE_OPTION but if you want to introduce it,
-then please copy the comment over to include/linux/mailbox/mtk-cmdq-mailbox.h
-
-Just one question, why did you call it _OPTION? It's not really expressive for me.
-
-> -	arg_b = CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | CMDQ_WFE_WAIT_VALUE;
+> +		inst->value = ~mask;
+> +		offset = offset | 0x1;
+> +	}
+> +
 > +	inst = cmdq_pkt_append_command(pkt);
 > +	if (!inst)
 > +		return -ENOMEM;
 > +
-> +	inst->op = CMDQ_CODE_WFE;
-> +	inst->value = CMDQ_WFE_OPTION;
-> +	inst->event = event;
->  
-> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event, arg_b);
-> +	return 0;
->  }
->  EXPORT_SYMBOL(cmdq_pkt_wfe);
->  
->  int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
->  {
-> +	struct cmdq_instruction *inst;
-> +
->  	if (event >= CMDQ_MAX_EVENT)
->  		return -EINVAL;
->  
-> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event,
-> -				       CMDQ_WFE_UPDATE);
-> +	inst = cmdq_pkt_append_command(pkt);
-> +	if (!inst)
-> +		return -ENOMEM;
-> +
-> +	inst->op = CMDQ_CODE_WFE;
-> +	inst->value = CMDQ_WFE_UPDATE;
-> +	inst->event = event;
+> +	inst->op = CMDQ_CODE_POLL;
+> +	inst->value = value;
+> +	inst->offset = offset;
+> +	inst->subsys = subsys;
 > +
 > +	return 0;
->  }
->  EXPORT_SYMBOL(cmdq_pkt_clear_event);
->  
+> +}
+> +EXPORT_SYMBOL(cmdq_pkt_poll);
+> +
 >  static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
 >  {
-> -	int err;
-> +	struct cmdq_instruction *inst;
-> +
-> +	inst = cmdq_pkt_append_command(pkt);
-> +	if (!inst)
-> +		return -ENOMEM;
->  
-> -	/* insert EOC and generate IRQ for each command iteration */
-
-Please don't delete the comment.
-
-> -	err = cmdq_pkt_append_command(pkt, CMDQ_CODE_EOC, 0, CMDQ_EOC_IRQ_EN);
-> +	inst->op = CMDQ_CODE_EOC;
-> +	inst->value = CMDQ_EOC_IRQ_EN;
->  
-> -	/* JUMP to end */
-
-Same here.
-
-Regards,
-Matthias
-
-> -	err |= cmdq_pkt_append_command(pkt, CMDQ_CODE_JUMP, 0, CMDQ_JUMP_PASS);
-> +	inst = cmdq_pkt_append_command(pkt);
-> +	if (!inst)
-> +		return -ENOMEM;
-> +
-> +	inst->op = CMDQ_CODE_JUMP;
-> +	inst->value = CMDQ_JUMP_PASS;
->  
-> -	return err;
-> +	return 0;
->  }
->  
->  static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
+>  	struct cmdq_instruction *inst;
 > diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> index 911475da7a53..c8adedefaf42 100644
+> index c8adedefaf42..9e3502945bc1 100644
 > --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
 > +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> @@ -19,6 +19,8 @@
->  #define CMDQ_WFE_UPDATE			BIT(31)
->  #define CMDQ_WFE_WAIT			BIT(15)
->  #define CMDQ_WFE_WAIT_VALUE		0x1
-> +#define CMDQ_WFE_OPTION			(CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | \
-> +					CMDQ_WFE_WAIT_VALUE)
->  /** cmdq event maximum */
->  #define CMDQ_MAX_EVENT			0x3ff
+> @@ -46,6 +46,7 @@
+>  enum cmdq_code {
+>  	CMDQ_CODE_MASK = 0x02,
+>  	CMDQ_CODE_WRITE = 0x04,
+> +	CMDQ_CODE_POLL = 0x08,
+>  	CMDQ_CODE_JUMP = 0x10,
+>  	CMDQ_CODE_WFE = 0x20,
+>  	CMDQ_CODE_EOC = 0x40,
+> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
+> index 9618debb9ceb..a345870a6d10 100644
+> --- a/include/linux/soc/mediatek/mtk-cmdq.h
+> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
+> @@ -99,6 +99,21 @@ int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event);
+>   */
+>  int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event);
 >  
+> +/**
+> + * cmdq_pkt_poll() - Append polling command to the CMDQ packet, ask GCE to
+> + *		     execute an instruction that wait for a specified hardware
+> + *		     register to check for the value. All GCE hardware
+> + *		     threads will be blocked by this instruction.
+> + * @pkt:	the CMDQ packet
+> + * @subsys:	the CMDQ sub system code
+> + * @offset:	register offset from CMDQ sub system
+> + * @value:	the specified target register value
+> + * @mask:	the specified target register mask
+> + *
+> + * Return: 0 for success; else the error code is returned
+> + */
+> +int cmdq_pkt_poll(struct cmdq_pkt *pkt, u8 subsys,
+> +		  u16 offset, u32 value, u32 mask);
+>  /**
+>   * cmdq_pkt_flush_async() - trigger CMDQ to asynchronously execute the CMDQ
+>   *                          packet and call back at the end of done packet
 > 
 
 _______________________________________________
