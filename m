@@ -2,67 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F249F9B1C6
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 16:21:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 097319B25B
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 16:44:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZFaDXDa2uSrUCG1ZsZKgjREc1IwGLUYJ4POpH9HhcKI=; b=QcWNI1nQlFpY/E
-	ZbZsbEwFT91muMfgy+JNtkcHQfm48h1xwdbMdpqZdYnx0dY4E629YU40QIJwQCxQhFbOxNCIerAfV
-	Yos60tzPLeGvZ8/OBRdZfGngp8WD+yfrLv7uvjgE3Vpw8KOEg/QpZ5kZy1oz7rVyAozfIvr8jAV9V
-	NdZ4mDjxQ3c6ufUvei0JQ1SJMCU2/539BGL4sE6Z3aN4+kzy6MzijhFkQ5RHmsDmM1VUn29mc5J2U
-	Pk1WQZInCmxu6baVnxd7KohsDrFYpuQA0naIKYIjrJfe1uEsKCfIrwmiU9l0WSTgNcADgzDK8YZkV
-	Sg7tJYuz9W0zTHMCQYTg==;
+	List-Owner; bh=mIERdtf8mePtUHgsNmZxeXyUKXW9/NtnSwfU02/gSHw=; b=nV2kqghLJo17v1
+	zKhGuutjq4ZjCqXWNKkuGXW4GnKQ2HciZKpVvBlQy97JuUXzN4w5PaWbJFUEHcVopQp3Sijttlgrq
+	T9Yje9fqk6ivqKy5xxzYHqEjI/KdAUx68K3yZEdjoAKCd4/lAU51rwHBmjhDgP4isFECmuNadNu1E
+	H5VXVBGIFevc5B9FUkXo6jPLlC3ng+zZIaFXlgB7Pt71AmwQBoiQMMuULcvh/23aLPr6ncqGsiWdz
+	iGa8cIbmLx9HDE8R4eJX/0Nki9NtnSdwR1FEkPm+nl/6bpu+jnv0k+pSCOdlKF9dI1PErEl5gV9RN
+	eEM1WfQrQwHwDo2fzr1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1ARs-0000rU-BK; Fri, 23 Aug 2019 14:21:52 +0000
+	id 1i1AnD-00064f-1k; Fri, 23 Aug 2019 14:43:55 +0000
 Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1ARp-0000r6-1a; Fri, 23 Aug 2019 14:21:50 +0000
-Received: by mail-ed1-x544.google.com with SMTP id h13so13699177edq.10;
- Fri, 23 Aug 2019 07:21:48 -0700 (PDT)
+ id 1i1An9-00064H-FV
+ for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 14:43:53 +0000
+Received: by mail-ed1-x544.google.com with SMTP id p28so13845188edi.3
+ for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 07:43:51 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=VG9rOxWjxku+z26WDdlbzrsrLXcwtH5TXXRtbbObEaU=;
- b=YoftZYPvLKvjWPY8CZUH+3nSINtRnok996aZ19E60yGqznZa2Xf+QV37A2BOprLwoW
- NLtV1GgWsJXJI5LJlIsxyZRpDKp747PEfmglGTchMZTBILhpvMhrSlV4zySlmefTZkzc
- ufgUZGWxQjiSgyzA7ya7mAGy2O1/bU2XlZjMylGu2DZ+ffiDxZWtp8h/f/iOSb6oSGKK
- 0ptieEGWpzMe0RVsflikpkD2jAHlp+dc2ENcfmcLV8LTT2dDwR0sSWEnDjPKiOq+eqhV
- KTh+bSlMfw+SZZ38MEeyPCtwBHVGCvD9Nn1zRKnpNkVe+Hm04Vw5p/TcgHyx/ozQOnQi
- WQ9w==
+ bh=jofN8rDX8pvJKQjXsx+58iVL2oluIgh+0vzMrRX1CvI=;
+ b=QbnuB9p5xB3Dze7C8XzM0cViWYxdUsoALK7QdpYDp8MNFbZan5o3ucNcrt1D1z/fWr
+ Ml55y+BIKqnZD/sZWk4xSzVwBJ2Fh9AhUNvB6Po1O5dR//upxZJPPAVOkYwl8z7+dxhY
+ c4mz/BSEj9sXU1N4rBcD+9YQFYxgMZ5DIOY5GXT+gaSHM7sgKfjtcOTiLbuHzNoguwAN
+ Zo4bykrx93IkB1wZL8bnZVWnua9L3gg+WHPABRju5EozD4hTTYtjMbu73p6Qofq9ETT4
+ hLpv8FaN+2EDl6Y8uUKv91l7cznOGt/XyMppdloC/Y0XdccTsHCGELgrXubHjgY1OSG/
+ s/kA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=VG9rOxWjxku+z26WDdlbzrsrLXcwtH5TXXRtbbObEaU=;
- b=bXpGqzv4WS/jKfJBZ0cQ8nu1OsuFH0pWCE6t62qtUn/OmdaoTxWxrNfwDfi9XcWBhv
- 9VIsKc86HguTGnwUgDVi/3YAhNOyjtmE1Eo++xuPCqCbdal+6h0NHwn6MrQAzCxuRbL+
- chuMQjuy4rg2pV9a1CIDEGMlBAgo5qFbhO/IoAzglWUo0Mop0G6/4rIuPdw5soUOPju6
- 8xvRpK6KuYL1GL/YDez8WWUXeHqwbvMWAQAoj+UxhsjhZ0BlwHMbu25d5B3+Ij4xrdjf
- O3ks40+W4VzPvdieI4d7WdnrbbBSnA4X213VrDy+Bkndmk5GjPSBh3XS6kiEhmRgS1HU
- BkyQ==
-X-Gm-Message-State: APjAAAXtqHPTUsCvdrFJkEvVVIe7qt7iNSipXM+TqbkkgUL9s3voqzsl
- Y/vxdCLVnCTVCXZVUmXLxSk=
-X-Google-Smtp-Source: APXvYqyinR3OXYstq5J0bky2J5mmk+3bSkAvUdl2VnVeXLnI6vK2Y85exowyd67mWasEqVXytQv0Bw==
-X-Received: by 2002:aa7:c508:: with SMTP id o8mr4750850edq.123.1566570107025; 
- Fri, 23 Aug 2019 07:21:47 -0700 (PDT)
+ bh=jofN8rDX8pvJKQjXsx+58iVL2oluIgh+0vzMrRX1CvI=;
+ b=BBhsrQsVkhD82WUzRQgM0mvwofLuZiZak+Nww4mmkHRUTRDdYv53li8zmiJaXbtB2D
+ u8yHDiL8J9f0juW3AuXMqo8Gio9t2SU1YeMXo3xObJKDkEKlVX0qIrHMX+Gro46wKf2+
+ UnUNbGuZKb/9VhnK9xbq6E8NVvbeP98NI2krdIVKTPGcPChfavlKOotn5W/3ZFkActyF
+ r68tGe0m7PLPEhX2VfYwbG9E5lCHDZ305GrtHntgaSqoaxPNXAYd9Ew66XQNiecleWl0
+ eMJL+MIBMo9Qs4hW6BLnczEqrFAMovBYLKClX57CZocMvz3pUe5pVAWKMIPfLduguVvb
+ rJxA==
+X-Gm-Message-State: APjAAAVzeOSQvr1zTcBIMFFYTdqTGX8PXhptpkCoMHtnVIdwFs0LyIhk
+ bF/xDcf7VtmZW43E2vM+LHQ=
+X-Google-Smtp-Source: APXvYqxe+AQZe0eStlzKEu/FtBZE53W4qS06MnY2brXCM+iIKr0oxG73vJWsBOvAeO+dUo7l7841SA==
+X-Received: by 2002:a50:8c44:: with SMTP id p62mr4917792edp.178.1566571430076; 
+ Fri, 23 Aug 2019 07:43:50 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id oo19sm432155ejb.38.2019.08.23.07.21.44
+ by smtp.gmail.com with ESMTPSA id j12sm567659edt.66.2019.08.23.07.43.48
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 07:21:46 -0700 (PDT)
-Subject: Re: [RESEND, PATCH v13 11/12] soc: mediatek: cmdq: add
- cmdq_dev_get_client_reg function
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>,
- Jassi Brar <jassisinghbrar@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- CK HU <ck.hu@mediatek.com>
-References: <20190820084932.22282-1-bibby.hsieh@mediatek.com>
- <20190820084932.22282-12-bibby.hsieh@mediatek.com>
+ Fri, 23 Aug 2019 07:43:49 -0700 (PDT)
+Subject: Re: Aw: Re: Re: BUG: devm_regulator_get returns EPROBE_DEFER
+ (5.3-rc5..next-20190822) for bpi-r2/mt7623/mt7530
+To: Frank Wunderlich <frank-w@public-files.de>, Mark Brown <broonie@kernel.org>
+References: <trinity-584a4b1c-18c9-43ae-8c1a-5057933ad905-1566501837738@3c-app-gmx-bs43>
+ <20190822193015.GK23391@sirena.co.uk>
+ <trinity-5d117f0d-9f34-4a2b-8a12-1cd34152c108-1566505724458@3c-app-gmx-bs43>
+ <20190823100424.GL23391@sirena.co.uk>
+ <trinity-2f905f45-85d8-4343-8613-31dda5f7556f-1566561616610@3c-app-gmx-bs11>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -158,16 +160,16 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <ccd3782e-b1bb-7887-f4a5-d7774183c7b7@gmail.com>
-Date: Fri, 23 Aug 2019 16:21:44 +0200
+Message-ID: <0fcdea56-c6fc-993d-1520-be40ff03df2d@gmail.com>
+Date: Fri, 23 Aug 2019 16:43:47 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190820084932.22282-12-bibby.hsieh@mediatek.com>
+In-Reply-To: <trinity-2f905f45-85d8-4343-8613-31dda5f7556f-1566561616610@3c-app-gmx-bs11>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_072149_093352_7CADBD4D 
-X-CRM114-Status: GOOD (  19.58  )
+X-CRM114-CacheID: sfid-20190823_074351_578864_06B9FB51 
+X-CRM114-Status: GOOD (  24.49  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -198,15 +200,10 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, linux-kernel@vger.kernel.org,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Sascha Hauer <kernel@pengutronix.de>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
+Cc: Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
+ =?UTF-8?Q?Ren=c3=a9_van_Dorst?= <opensource@vdorst.com>,
+ linux-mediatek@lists.infradead.org, Lee Jones <lee.jones@linaro.org>,
+ Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -214,105 +211,131 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 20/08/2019 10:49, Bibby Hsieh wrote:
-> GCE cannot know the register base address, this function
-> can help cmdq client to get the cmdq_client_reg structure.
+On 23/08/2019 14:00, Frank Wunderlich wrote:
+>> Gesendet: Freitag, 23. August 2019 um 12:04 Uhr
+>> Von: "Mark Brown" <broonie@kernel.org>
 > 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c | 29 ++++++++++++++++++++++++++
->  include/linux/soc/mediatek/mtk-cmdq.h  | 21 +++++++++++++++++++
->  2 files changed, 50 insertions(+)
+>> Can you run a git bisect to try to identify the commit that
+>> caused things to fail?
 > 
-> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index c53f8476c68d..80f75a1075b4 100644
-> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -27,6 +27,35 @@ struct cmdq_instruction {
->  	u8 op;
->  };
->  
-> +int cmdq_dev_get_client_reg(struct device *dev,
-> +			    struct cmdq_client_reg *client_reg, int idx)
-> +{
+> i have not figured out, how to rebase linux-next on my current (working) codebase :) (failes on file untouched by me at Patch 3/7000+)
+> 
+>> Look to see if there is a device driver bound to that device, or
+>> check if the parent regulator is visible in /sys/class/regulators.
+>> You'll also see a mesage printed out for each regulator as it
+>> instantiates in the boot logs, you can check there too.
+> 
+> in working version i only get this message in dmesg which
+> looks like a device-binding:
+> 
+> mt6323-regulator mt6323-regulator: Chip ID = 0x2023
+> 
+> this is my regulator: mt6323_vpa_reg
+> 
+> defined in arch/arm/boot/dts/mt6323.dtsi
+> 
+> &pwrap {
+> 	pmic: mt6323 {
+> 	  mt6323regulator: mt6323regulator{
+> 		compatible = "mediatek,mt6323-regulator";
+> 		mt6323_vpa_reg: buck_vpa{
+> 			regulator-name = "vpa";
+> 			regulator-min-microvolt = < 500000>;
+> 			regulator-max-microvolt = <3650000>;
+> 		};
+> 	  };
+> 	};
+> };
+> 
+> parent regulator is then
+> mt6323regulator: mt6323regulator
+> 
+> which is the one i see i dmesg.
+> 
+> in working version i see the regulator in sys-fs
+> 
+> cat /sys/class/regulator/regulator.*/name | grep vpa
+> vpa
+> 
+> -------------------------------------------------------------------
+> 
+> so, now to the non-working regulator:
+> 
+> dmesg do not have such entry ;(
+> 
+> regulators-list in /sys/class only containing the dummy and some fixed regulators
+> 
+> cat /sys/class/regulator/regulator.*/name
+> regulator-dummy
+> fixed-1.8V
+> fixed-3.3V
+> fixed-5V
+> 
+> in arch/arm/boot/dts/mt*.dts and Makefile there is no change between
+> working and non-working version.
+> in drivers/regulators only the 2 files where i had reverted the
+> changes manually without success.
+> 
+> where can be the cause for no more binding main-regulator?
+> 
+> are these strange messages related to this problem?
+> 
+> mtk-cpufreq mtk-cpufreq: failed to initialize dvfs info for cpu0
+> 
+> another strange line is this:
+> 
+> mt6397 1000d000.pwrap:mt6323: unsupported chip: 0x0
+> 
+> so the pwrap above regulator is affected too
+> 
+> and here are many changes in 2 files...
+> 
+> git diff --name-only non-working..working -- drivers/mfd/mt6397-*
+> drivers/mfd/mt6397-core.c
+> drivers/mfd/mt6397-irq.c
+> 
+> which brings me to this 2 commits:
+> 
+> a4872e80ce7d mfd: mt6397: Extract IRQ related code from core driver
+> 708cb5cc3fde mfd: mt6397: Rename macros to something more readable
 
-Can't we do/call this in cmdq_mbox_create parsing the number of gce-client-reg
-properties we have and allocating these using a pointer to cmdq_client_reg in
-cmdq_client?
-We will have to free the pointer then in cmdq_mbox_destroy.
+These are commit IDs from linux-next. At least file from 20190822 should
+pinpoint you to the correct commits.
 
-Regards,
+@frank: please don't use commit IDs from linux-next as the history get's
+rewritten every day and the IDs can change. Better search the tree to which they
+got applied and use the commit IDs from there (stating, of course, which tree
+you are looking at).
+
+Looking at commit
+a4872e80ce7d ("mfd: mt6397: Extract IRQ related code from core driver")
+
+you can see that it doesn't just move the code but also adds new logic in
+mt6397_irq_init(). :(
+
+It seems your chip_id is not supported yet. So you will have to find out which
+one it is and add it to the switch.
+
+Hope that helped.
 Matthias
 
-> +	struct of_phandle_args spec;
-> +	int err;
-> +
-> +	if (!client_reg)
-> +		return -ENOENT;
-> +
-> +	err = of_parse_phandle_with_fixed_args(dev->of_node,
-> +					       "mediatek,gce-client-reg",
-> +					       3, idx, &spec);
-> +	if (err < 0) {
-> +		dev_err(dev,
-> +			"error %d can't parse gce-client-reg property (%d)",
-> +			err, idx);
-> +
-> +		return err;
-> +	}
-> +
-> +	client_reg->subsys = (u8)spec.args[0];
-> +	client_reg->offset = (u16)spec.args[1];
-> +	client_reg->size = (u16)spec.args[2];
-> +	of_node_put(spec.np);
-> +
-> +	return 0;
-> +}
-> +EXPORT_SYMBOL(cmdq_dev_get_client_reg);
-> +
->  static void cmdq_client_timeout(struct timer_list *t)
->  {
->  	struct cmdq_client *client = from_timer(client, t, timer);
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index a345870a6d10..02ddd60b212f 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -15,6 +15,12 @@
->  
->  struct cmdq_pkt;
->  
-> +struct cmdq_client_reg {
-> +	u8 subsys;
-> +	u16 offset;
-> +	u16 size;
-> +};
-> +
->  struct cmdq_client {
->  	spinlock_t lock;
->  	u32 pkt_cnt;
-> @@ -24,6 +30,21 @@ struct cmdq_client {
->  	u32 timeout_ms; /* in unit of microsecond */
->  };
->  
-> +/**
-> + * cmdq_dev_get_client_reg() - parse cmdq client reg from the device
-> + *			       node of CMDQ client
-> + * @dev:	device of CMDQ mailbox client
-> + * @client_reg: CMDQ client reg pointer
-> + * @idx:	the index of desired reg
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + *
-> + * Help CMDQ client parsing the cmdq client reg
-> + * from the device node of CMDQ client.
-> + */
-> +int cmdq_dev_get_client_reg(struct device *dev,
-> +			    struct cmdq_client_reg *client_reg, int idx);
-> +
->  /**
->   * cmdq_mbox_create() - create CMDQ mailbox client and channel
->   * @dev:	device of CMDQ mailbox client
+> 
+> after reverting those 2 regulators are working again.
+> Adding both Signed-off-People to CC to keep them informed that a fix is needed
+> 
+>> Please fix your mail client to word wrap within paragraphs at something
+>> substantially less than 80 columns.  Doing this makes your messages much
+>> easier to read and reply to.
+> 
+> i currently write in webmailer, where i cannot set this setting,
+> i try to add manual linebreak in long lines, ok?
+> 
+> regards Frank
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
 > 
 
 _______________________________________________
