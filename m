@@ -2,68 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 925FF9B452
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 18:14:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E0989B4AC
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 18:41:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uBkZCBPqLhnvXKyJ8QA4CmqCRVUBDMUzKvgezD3T56k=; b=dFxqD5YeZmOAcx
-	0c777o0TAEEY+txAG77EH4sxiyp/4lUO3K95fGWqU6Fbi60dFYplVo1ilid4Hk8qKMPyzp3ZHuXCn
-	1hIEj1Cd2soJoWz3W/HmS7RK6nLN1dcGkf8H3O6goHJ5epZtYy8s/rKpxAbscKC5xpcRZtIw65Nqu
-	2Q5wsR5EEfW+zN4y2wk+WugOHfijTdFm7Y4swedbpu2XtvStCXnrKVpa1Am8jEvZrBi7XVHeMgL8a
-	m+EmirXJGfAZBCKpfPA6caIjy7Ms+uzJd2kNQ2ypVjf+wpPOdhI43kXZq8sGGNYGNbuh3uKOvz+3S
-	zPpDWoCtpCr5SYTPBo8w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
+	From:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=CNFQfquiHswP5h+cohwNpJu4j+ZTmDT3a6qwG6Bq7p0=; b=j9Mt3uKUX+hy66
+	rAunIyFYXtEib6Ee1BUp/rvYBgNm0yLSjdkGdI19KJz4yv8vdhSXuml4J9JN+5ryr0ghcmBjTCZnz
+	jJixM0FwZ8PL7zdrTN1+GtE3a1l244GmNb0KavF/zQGaVibhUk6Lwf2Ga3SK4VFNGb6e5HtVSe1me
+	OkXikDU8Isxq+DdURZC36h6CKgKd+QlKHtCQJo3igCic29mjz8VeUu4VeWUulqofZGPsxmLrVjaUS
+	afXvyffQRkGkbdXNMYkYS7be3AnDoNY1irFgtBamxey8YQv6huqTajaXFdx6jvXyo/Z5Ip7EzQktH
+	QEr5AyQqIhdTWbI1d77Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1CCW-0002dd-N0; Fri, 23 Aug 2019 16:14:08 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1i1CcK-0005fn-7H; Fri, 23 Aug 2019 16:40:48 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1CCS-0002dD-St
- for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 16:14:06 +0000
-Received: by mail-pl1-x641.google.com with SMTP id z3so5848591pln.6
- for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 09:14:04 -0700 (PDT)
+ id 1i1CcH-0005fR-9m; Fri, 23 Aug 2019 16:40:46 +0000
+Received: by mail-ed1-x543.google.com with SMTP id w5so14340485edl.8;
+ Fri, 23 Aug 2019 09:40:44 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=kLQ+dLnNPmXuwONr7VOijbZJ4oMUwFX/ndme4ubVobQ=;
- b=FxZWNRfIVzqbpgI+eMDep2dXa28ZgmpJ36Gdi7jnkJdZS3Pj9uxnuCAgjQZQE1Te0Y
- CzYc6fTLD0ga0Eq+IbkN6bA1Uq7VeTbuhb7dRjhO1jPcnRZcW61EjaYDdAWWzhX02gQi
- n48nF3IH6NP7zHQurBa/e+6v8BRK8v++QUjD56FWMs81FC//LJO0LAFrP3Gv3D7xjGjC
- n8BqKys4CuNUQFLzOJZzjm2lUYTiiJZM4iePJ6+Yd6llP4cpxtHFzweX+KekFENIoNsL
- Y/ubkuIbrbrI0P4cT+yWTF5t+GWsrPsFZ0PoLmyYR3V311+vWqdfeF7ZhkuyGa5uaLC8
- N6JQ==
+ h=to:cc:from:subject:openpgp:autocrypt:message-id:date:user-agent
+ :mime-version:content-language:content-transfer-encoding;
+ bh=aFMRnVNqmcvLjwbBS18W3qG+Uo3qp8Bvau1ief3uAxI=;
+ b=YRxEiuiKrYM96JxS7uVb/5Rz1xlpPGenoC9wR0WgxpJb2AXRU7nIUYBME+CYwk9IUz
+ MbpoKhvjo2RJJRMYxDj3sSp5vSqHvf6px2oMSy9zj34DRKGX1OJd0J8IxSBcVn+Oqb07
+ hzwOGjOsAme1Cp4kHpb9mUetg3XRjtlFNwn7VKIEuhe0s6qx+l0SN7aKpMbp1vr/gErt
+ iDMLyGtqR3xCyMopbdwHyVTuY6HeE/ljASMUwKXSPq4/Wo7yGttpeCkCrKVkX6O+YB8x
+ 81yu2ZJva/M1hMWs7uBS6ri5+2OKuCrY5+BTzaL7Wqlouj/K8BDsnw2OpNBEYdT3YKs1
+ AaCg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
- :message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=kLQ+dLnNPmXuwONr7VOijbZJ4oMUwFX/ndme4ubVobQ=;
- b=tXlla1H6bsf4fwNP+RUg/EoITsZd1DceTz4MWgI8TEHYJZXp2OQSPWs4IRLZ0cfDcq
- IwOKwJKqbyaK58CIWwcGrUa4oPj2M/77HDORII9UnQHiRkR6nUo6+1MrlUFfsyJ4Xhqq
- Pf5XAgfKRUWFYRD4uh1ZabUMQtHZHVn0390Wj8MnPKHLLxnMGKbPVvFW5VaynestYO3B
- mr3aswla5R/PSotQoCjS+qUWv1P0+/oq5kcJyFNMLd8lCnplc7EnwI2XFUBoRXngfWBm
- 726jZeLVV5l420fSo2RxhpN3rWzr8X140QzI2wdSzdpikRJf/3jExEkunwFeX4VgdBuH
- Un5Q==
-X-Gm-Message-State: APjAAAWZA7OxVl6u3hT197/BSq7+3y3N/evd0827JMlh0oDncjaZ96XB
- gyT8JGI49oNZ09g4NlhFl80=
-X-Google-Smtp-Source: APXvYqwklLcapKw9/iekR5NA5JZ3UddrJ1ab7SMWUwtBowgItYTgKDDQWcp+40hO0PJUH83CUN+EwQ==
-X-Received: by 2002:a17:902:145:: with SMTP id 63mr5907484plb.55.1566576844168; 
- Fri, 23 Aug 2019 09:14:04 -0700 (PDT)
+ h=x-gm-message-state:to:cc:from:subject:openpgp:autocrypt:message-id
+ :date:user-agent:mime-version:content-language
+ :content-transfer-encoding;
+ bh=aFMRnVNqmcvLjwbBS18W3qG+Uo3qp8Bvau1ief3uAxI=;
+ b=LoZ5CXIwEJP36j9fcJ5MSr7y+K3bpQcX8h4hhB84K+FmpFEKm0EeV7xjU1kRkAahZO
+ ovt2i9Sg0k61dzT2GEl/jZWU3LNx9WERxCK4cqRZsncAG6/h4qn85KxWyABsggad/ycO
+ 3W1cXyGFMVExpFOVXDMHfYILdd+v2UHgxlBrErUoeikWoAa4GV4pMujd3Zb/hcx+qfnE
+ utluNa6jzCdb7cf9f1YN5tk7IsOY6HmEcB9RIBMdsi2Ma5l65Thws9tg0DjODlP1rkLz
+ IPI9WUzuGtFx7PGxeJRMNs+drb4gzF7yTfztnB1PaqotDaVVBEGutyOxtB4ej4VfAVia
+ HGKg==
+X-Gm-Message-State: APjAAAVvrz0+DaOFLYYVfCo0PgBTfD/OwEMgYf1mbYhjr93xnXlSkE5/
+ ZC36fR0okMejxKoFdEmQOcLOjAVKSAU=
+X-Google-Smtp-Source: APXvYqwYEtxX47/VxyKnLYuJkaxLAWykEpwo6AGbXnU/p73cmLXFgtSerSlJD4n5tkwJ6nCprNSghA==
+X-Received: by 2002:aa7:da4a:: with SMTP id w10mr5452413eds.74.1566578443483; 
+ Fri, 23 Aug 2019 09:40:43 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id 185sm3111932pfd.125.2019.08.23.09.14.00
+ by smtp.gmail.com with ESMTPSA id c15sm627464edf.37.2019.08.23.09.40.42
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 09:14:03 -0700 (PDT)
-Subject: Re: [PATCH v2 11/11] arm64: dts: add dts nodes for MT6779
-To: Mars Cheng <mars.cheng@mediatek.com>, Rob Herring <robh@kernel.org>,
- Marc Zyngier <marc.zyngier@arm.com>, Stephen Boyd <sboyd@kernel.org>,
- Sean Wang <sean.wang@kernel.org>, Linus Walleij <linus.walleij@linaro.org>
-References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
- <1566206502-4347-12-git-send-email-mars.cheng@mediatek.com>
+ Fri, 23 Aug 2019 09:40:42 -0700 (PDT)
+To: arm-soc <arm@kernel.org>, soc@kernel.org
 From: Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [GIT PULL] arm: mediatek: dts32 updates for v5.4
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
@@ -158,23 +152,22 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <e0dff68a-0db4-197a-152e-4fe359e4519d@gmail.com>
-Date: Fri, 23 Aug 2019 18:13:58 +0200
+Message-ID: <e236f659-2851-21b8-1873-314cd72ed6be@gmail.com>
+Date: Fri, 23 Aug 2019 18:40:40 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566206502-4347-12-git-send-email-mars.cheng@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_091404_967514_3D0D3BB0 
-X-CRM114-Status: GOOD (  20.41  )
+X-CRM114-CacheID: sfid-20190823_094045_345546_C210423A 
+X-CRM114-Status: GOOD (  15.05  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -198,336 +191,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, CC Hwang <cc.hwang@mediatek.com>,
- wsd_upstream@mediatek.com, Loda Chou <loda.chou@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- mtk01761 <wendell.lin@mediatek.com>, linux-clk@vger.kernel.org
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+Hi Arnd and Olof,
 
-
-On 19/08/2019 11:21, Mars Cheng wrote:
-> this adds initial MT6779 dts settings fo board support,
-
-...for basic board support, including clocks pinctrl and uart.
-
-By the way, while talking about basic support. Do you have any detailed plans to
-upstream this SoC? We already have mt6755 and mt6795 which didn't get much
-further then the most basic support. More or less the same holds for mt6797.
-
-While I'm thrilled to see efforts done by MediaTek to get the chips upstream,
-I'm not really happy to add a new SoC every now and then without seeing much
-progress on the overall enablement of new peripherals. I know on mt6797 we would
-need pmic-regulator to be able to upstream the MMC driver. Without that the
-available board [1] is of little use. I wonder if all this other SoCs have a
-really different PMIC and MMC. I'm not saying that I want you to upstream these
-for mt6797. What I wanted to express is my hope that by upstreaming more and
-more peripherals of the mt67xx line, we will little by little get to a nice
-support in mainline kernel.
-That's what motivated my question about your plans for upstreaming the SoC.
+please have a look on the following patch.
 
 Regards,
 Matthias
 
-> including cpu, gic, timer, ccf, pinctrl, uart...etc.
-> 
-> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
-> ---
->  arch/arm64/boot/dts/mediatek/Makefile        |    1 +
->  arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi |   31 ++++
->  arch/arm64/boot/dts/mediatek/mt6779.dts      |  229 ++++++++++++++++++++++++++
->  3 files changed, 261 insertions(+)
->  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
->  create mode 100644 arch/arm64/boot/dts/mediatek/mt6779.dts
-> 
-> diff --git a/arch/arm64/boot/dts/mediatek/Makefile b/arch/arm64/boot/dts/mediatek/Makefile
-> index 458bbc4..53f1c61 100644
-> --- a/arch/arm64/boot/dts/mediatek/Makefile
-> +++ b/arch/arm64/boot/dts/mediatek/Makefile
-> @@ -1,6 +1,7 @@
->  # SPDX-License-Identifier: GPL-2.0
->  dtb-$(CONFIG_ARCH_MEDIATEK) += mt2712-evb.dtb
->  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6755-evb.dtb
-> +dtb-$(CONFIG_ARCH_MEDIATEK) += mt6779-evb.dtb
->  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6795-evb.dtb
->  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-evb.dtb
->  dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-x20-dev.dtb
-> diff --git a/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
-> new file mode 100644
-> index 0000000..164f5cb
-> --- /dev/null
-> +++ b/arch/arm64/boot/dts/mediatek/mt6779-evb.dtsi
-> @@ -0,0 +1,31 @@
-> +// SPDX-License-Identifier: GPL-2.0+
-> +/*
-> + * Copyright (c) 2019 MediaTek Inc.
-> + * Author: Mars.C <mars.cheng@mediatek.com>
-> + *
-> + */
-> +
-> +/dts-v1/;
-> +#include "mt6779.dtsi"
-> +
-> +/ {
-> +	model = "MediaTek MT6779 EVB";
-> +	compatible = "mediatek,mt6779-evb", "mediatek,mt6779";
-> +
-> +	aliases {
-> +		serial0 = &uart0;
-> +	};
-> +
-> +	memory@40000000 {
-> +		device_type = "memory";
-> +		reg = <0 0x40000000 0 0x1e800000>;
-> +	};
-> +
-> +	chosen {
-> +		stdout-path = "serial0:921600n8";
-> +	};
-> +};
-> +
-> +&uart0 {
-> +	status = "okay";
-> +};
-> diff --git a/arch/arm64/boot/dts/mediatek/mt6779.dts b/arch/arm64/boot/dts/mediatek/mt6779.dts
-> new file mode 100644
-> index 0000000..daa25b7
-> --- /dev/null
-> +++ b/arch/arm64/boot/dts/mediatek/mt6779.dts
-> @@ -0,0 +1,229 @@
-> +// SPDX-License-Identifier: GPL-2.0+
-> +/*
-> + * Copyright (c) 2019 MediaTek Inc.
-> + * Author: Mars.C <mars.cheng@mediatek.com>
-> + *
-> + */
-> +
-> +#include <dt-bindings/clock/mt6779-clk.h>
-> +#include <dt-bindings/interrupt-controller/irq.h>
-> +#include <dt-bindings/interrupt-controller/arm-gic.h>
-> +
-> +/ {
-> +	compatible = "mediatek,mt6779";
-> +	interrupt-parent = <&sysirq>;
-> +	#address-cells = <2>;
-> +	#size-cells = <2>;
-> +
-> +	psci {
-> +		compatible = "arm,psci-0.2";
-> +		method = "smc";
-> +	};
-> +
-> +	cpus {
-> +		#address-cells = <1>;
-> +		#size-cells = <0>;
-> +
-> +		cpu0: cpu@0 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x000>;
-> +		};
-> +
-> +		cpu1: cpu@1 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x100>;
-> +		};
-> +
-> +		cpu2: cpu@2 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x200>;
-> +		};
-> +
-> +		cpu3: cpu@3 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x300>;
-> +		};
-> +
-> +		cpu4: cpu@4 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x400>;
-> +		};
-> +
-> +		cpu5: cpu@5 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a55";
-> +			enable-method = "psci";
-> +			reg = <0x500>;
-> +		};
-> +
-> +		cpu6: cpu@6 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a75";
-> +			enable-method = "psci";
-> +			reg = <0x600>;
-> +		};
-> +
-> +		cpu7: cpu@7 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a75";
-> +			enable-method = "psci";
-> +			reg = <0x700>;
-> +		};
-> +	};
-> +
-> +	clk26m: oscillator@0 {
-> +		compatible = "fixed-clock";
-> +		#clock-cells = <0>;
-> +		clock-frequency = <26000000>;
-> +		clock-output-names = "clk26m";
-> +	};
-> +
-> +	clk32k: oscillator@1 {
-> +		compatible = "fixed-clock";
-> +		#clock-cells = <0>;
-> +		clock-frequency = <32768>;
-> +		clock-output-names = "clk32k";
-> +	};
-> +
-> +	uart_clk: dummy26m {
-> +		compatible = "fixed-clock";
-> +		clock-frequency = <26000000>;
-> +		#clock-cells = <0>;
-> +	};
-> +
-> +	timer {
-> +		compatible = "arm,armv8-timer";
-> +		interrupt-parent = <&gic>;
-> +		interrupts = <GIC_PPI 13 IRQ_TYPE_LEVEL_LOW>,
-> +			     <GIC_PPI 14 IRQ_TYPE_LEVEL_LOW>,
-> +			     <GIC_PPI 11 IRQ_TYPE_LEVEL_LOW>,
-> +			     <GIC_PPI 10 IRQ_TYPE_LEVEL_LOW>;
-> +	};
-> +
-> +	soc {
-> +		#address-cells = <2>;
-> +		#size-cells = <2>;
-> +		compatible = "simple-bus";
-> +		ranges;
-> +
-> +		gic: interrupt-controller@0c000000 {
-> +			compatible = "arm,gic-v3";
-> +			#interrupt-cells = <3>;
-> +			#address-cells = <2>;
-> +			#size-cells = <2>;
-> +			#redistributor-regions = <1>;
-> +			interrupt-parent = <&gic>;
-> +			interrupt-controller;
-> +			reg = <0 0x0c000000 0 0x40000>,  /* GICD */
-> +			      <0 0x0c040000 0 0x200000>, /* GICR */
-> +			      <0 0x0c400000 0 0x2000>,   /* GICC */
-> +			      <0 0x0c410000 0 0x1000>,   /* GICH */
-> +			      <0 0x0c420000 0 0x2000>;   /* GICV */
-> +			interrupts = <GIC_PPI 9 IRQ_TYPE_LEVEL_HIGH>;
-> +		};
-> +
-> +		sysirq: intpol-controller@0c53a650 {
-> +			compatible = "mediatek,mt6779-sysirq",
-> +				     "mediatek,mt6577-sysirq";
-> +			interrupt-controller;
-> +			#interrupt-cells = <3>;
-> +			interrupt-parent = <&gic>;
-> +			reg = <0 0x0c53a650 0 0x50>;
-> +		};
-> +
-> +		topckgen: clock-controller@10000000 {
-> +			compatible = "mediatek,mt6779-topckgen", "syscon";
-> +			reg = <0 0x10000000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		infracfg_ao: clock-controller@10001000 {
-> +			compatible = "mediatek,mt6779-infracfg_ao", "syscon";
-> +			reg = <0 0x10001000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		apmixed: clock-controller@1000c000 {
-> +			compatible = "mediatek,mt6779-apmixed", "syscon";
-> +			reg = <0 0x1000c000 0 0xe00>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		uart0: serial@11002000 {
-> +			compatible = "mediatek,mt6779-uart",
-> +				     "mediatek,mt6577-uart";
-> +			reg = <0 0x11002000 0 0x400>;
-> +			interrupts = <GIC_SPI 115 IRQ_TYPE_LEVEL_LOW>;
-> +			clocks = <&uart_clk>;
-> +			status = "disabled";
-> +		};
-> +
-> +		uart1: serial@11003000 {
-> +			compatible = "mediatek,mt6779-uart",
-> +				     "mediatek,mt6577-uart";
-> +			reg = <0 0x11003000 0 0x400>;
-> +			interrupts = <GIC_SPI 116 IRQ_TYPE_LEVEL_LOW>;
-> +			clocks = <&uart_clk>;
-> +			status = "disabled";
-> +		};
-> +
-> +		audio: clock-controller@11210000 {
-> +			compatible = "mediatek,mt6779-audio", "syscon";
-> +			reg = <0 0x11210000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		mfgcfg: clock-controller@13fbf000 {
-> +			compatible = "mediatek,mt6779-mfgcfg", "syscon";
-> +			reg = <0 0x13fbf000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		mmsys: clock-controller@14000000 {
-> +			compatible = "mediatek,mt6779-mmsys", "syscon";
-> +			reg = <0 0x14000000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		imgsys: clock-controller@15020000 {
-> +			compatible = "mediatek,mt6779-imgsys", "syscon";
-> +			reg = <0 0x15020000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		vdecsys: clock-controller@16000000 {
-> +			compatible = "mediatek,mt6779-vdecsys", "syscon";
-> +			reg = <0 0x16000000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		vencsys: clock-controller@17000000 {
-> +			compatible = "mediatek,mt6779-vencsys", "syscon";
-> +			reg = <0 0x17000000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		camsys: clock-controller@1a000000 {
-> +			compatible = "mediatek,mt6779-camsys", "syscon";
-> +			reg = <0 0x1a000000 0 0x10000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +		ipesys: clock-controller@1b000000 {
-> +			compatible = "mediatek,mt6779-ipesys", "syscon";
-> +			reg = <0 0x1b000000 0 0x1000>;
-> +			#clock-cells = <1>;
-> +		};
-> +
-> +	};
-> +};
-> 
+---
+The following changes since commit 5f9e832c137075045d15cd6899ab0505cfb2ca4b:
+
+  Linus 5.3-rc1 (2019-07-21 14:05:38 -0700)
+
+are available in the Git repository at:
+
+  https://git.kernel.org/pub/scm/linux/kernel/git/matthias.bgg/linux.git/
+tags/v5.3-next-dts32
+
+for you to fetch changes up to cc212241df0b8975bb0e6d7f9028405a9c664e49:
+
+  arm: dts: mediatek: add basic support for MT7629 SoC (2019-08-22 11:22:17 +0200)
+
+----------------------------------------------------------------
+add support for the mt7629 reference board
+
+----------------------------------------------------------------
+Ryder Lee (1):
+      arm: dts: mediatek: add basic support for MT7629 SoC
+
+ arch/arm/boot/dts/Makefile                |   1 +
+ arch/arm/boot/dts/mt7629-rfb.dts          | 263 ++++++++++++++++
+ arch/arm/boot/dts/mt7629.dtsi             | 481 ++++++++++++++++++++++++++++++
+ include/dt-bindings/reset/mt7629-resets.h |  71 +++++
+ 4 files changed, 816 insertions(+)
+ create mode 100644 arch/arm/boot/dts/mt7629-rfb.dts
+ create mode 100644 arch/arm/boot/dts/mt7629.dtsi
+ create mode 100644 include/dt-bindings/reset/mt7629-resets.h
 
 _______________________________________________
 Linux-mediatek mailing list
