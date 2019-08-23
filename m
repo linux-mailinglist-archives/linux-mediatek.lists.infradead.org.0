@@ -2,62 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 671439B4B1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 18:42:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 86A7A9B4B8
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 18:44:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
 	From:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=I2ZzXq1mX7zZSNXhKGkjeDQzFoCqqSeIJE9EulfjCNc=; b=kSqpMTFZTyN9QR
-	icEmDuWZ/o9qf2rmasTN19EA/QB7NUpTzny6hVn5QTi1NIy5QMJQxrapObtK76g8s0hYzwrkZrd8Q
-	KenXJuJiEtLWtx0iJGvY+APgdxR61l8y+46T+ePl4Pv8OOUeahshOmAFKL3SU/vEuWpfM3t6Bggoi
-	xRHU6+T0w+E1LBi27pD5rM8EMrIiv+GwYzqAIXjO3tin4b61JQrWJaR2XVz6l3BOetuTFVN44+F6+
-	aZ6HLEdsXDRM67F31O1H+MIerxucxjmhriXNL3l+nz6u/5n9FekShJtR396aUbsWsL6VUufkh/V6A
-	MNybdgWBjEkdL91/z9Bw==;
+	List-Owner; bh=Hd8ygx/9IDmpfU0i2/h8WgIUDmmI0LDRVkm+ucHjrZ0=; b=jZPwOurKiE8G5j
+	sNjsE23iOO7fCfYz8q1UUl2JBDnaUh8ZtyRIaCOLLUrUKGR+7W14oqQHI/2FMU8OanzZUTCgchFZg
+	F6oWqmcPRL+px/xbEcUrjuEAn71W5/71Y7Nw/CN7NM8OhcIMkJuOTPpR30vq5JhYMazq9ybK+Unq8
+	veHhjBRAG7wwztSWtlFtkw90vW2cVh2CEEdE9VEGyD1oBXLcFt5KasiDzMz2YgIiFFsioLAJ7qdoa
+	PCCxfKAYvTW8ZvQj5A8ufXXUYbsAnUuz+QpTGXsZ+Fk606SPqouW+EKhEPFzKDvjEl085OdyDmpRC
+	hJrUX0PuPSnWzy8VtthQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1Cdu-0005zU-T5; Fri, 23 Aug 2019 16:42:26 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1i1CfQ-0006eC-30; Fri, 23 Aug 2019 16:44:00 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1Cdq-0005yc-VT; Fri, 23 Aug 2019 16:42:24 +0000
-Received: by mail-ed1-x542.google.com with SMTP id a21so14346188edt.11;
- Fri, 23 Aug 2019 09:42:22 -0700 (PDT)
+ id 1i1CfM-0006bc-DX; Fri, 23 Aug 2019 16:43:58 +0000
+Received: by mail-ed1-x543.google.com with SMTP id g8so14358144edm.6;
+ Fri, 23 Aug 2019 09:43:56 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=to:cc:from:subject:openpgp:autocrypt:message-id:date:user-agent
  :mime-version:content-language:content-transfer-encoding;
- bh=hgYy7I7ChVaeadCUQGVLISUWLCXb/3d0H/RkHQQVRi4=;
- b=HaRVed3gQivfI09m8sngNK6cdMjYe8prbF+92JO+/00soZJWoFdKEM6hy3GuCGTQ5K
- UVWO2Zmw/LR/1aUgza0xEUvbOW476S9FETz7TiHtp4071VelpTuFMQz/OvHpG/U2TQ+5
- F1wBLklqAWdxVJUPpMmmxCpkvylUoXa99dspHVZNMGsUxg5OvFfwCh8KvC2KOb55QZ0i
- bbt4AvH/j4SFUrejxbAIUsUA8IkDhs+PQwAj44lFv6L9Vk2ggCkHR1DYKPNEv8kvcEE/
- Ke088+350x3fQQZwXH1GAGQAzmjHxcdz57qKIfp3zs9+BlyTojkMUxEUgkG8RQGmzZfk
- wAWQ==
+ bh=FUg8ZmRXFzW1EjgZSSU/PBu8vWFImJMaMbKH4v9fwsU=;
+ b=l6y5NAiiCWrkuWokjdw4+mQq6Ab5+ShSREkIONiwIJGy0TPrM1oeD9S2Pd8R6kcdF9
+ aBK6eKEAWrCFtCz6rjP2qwgz4Qz+k+Wxxc+JlwjrmFStH5/301ChT8Uen5PLIe17/bYE
+ jDeRFuUT4RUk/1NOK/jpqq09IcZmhkSxZL3BFLN3TnH8lNYdWKZI+4cJTuNbGMR9Vb4l
+ N+zB+hjBYwDB3bmn0XXLt5iLiGDxDUIyHpiyqEYzoqmjj4AKbG5ZkFj0wXDS/qQ4ehw1
+ Ev/H/rkHu/5Uvos0mGZ1qi+usYwRP3p+v0rlTZhEu+djixVzhS0pYN/KtUq5mzNBQhM7
+ DsTQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:to:cc:from:subject:openpgp:autocrypt:message-id
  :date:user-agent:mime-version:content-language
  :content-transfer-encoding;
- bh=hgYy7I7ChVaeadCUQGVLISUWLCXb/3d0H/RkHQQVRi4=;
- b=phGVUDlsR0Zn9TVVyEmhWKIIk58VPkbqkBhtxd+3oFA+ZV3qsJSgbgXYbovZGDcMV+
- ixpsBSjSKylyO0/S0jjWnS56DPGVarpBPEvtEGvd62lURR6ysFmXE/ra9LDlgmYg/d+4
- TC9YizM2QzZPK2M5JnQjICZuNRqvc59i5P5N0hy+OVCykwiogEKbJCQAQWwFERLaJkRn
- cglsJh8z379QvAl+AoHpp3NFelzFMdOxqAgg/8+kUZAFmWkdaFxCDV8TixGm6wr5vE+z
- TEUuda0fImCIhVdJcJuPXZASVpCYf2NOtGoTm+3cOTAA3y7kFnizz1e6YOH4BRjuOWmd
- yAAA==
-X-Gm-Message-State: APjAAAUqskwykty5sFaPHLnF9qBy7YODCvTsCBqM6KESItvqIgNdMJxl
- 1fEhU+Pp0ayQOVFyTfhMhfqIEwFshoU=
-X-Google-Smtp-Source: APXvYqwA9nS151JEC9qHTqQdlmrWFejHUjYdglESRqLvufREX/gfwf+sn7z2OXnqWcOMpiMZnb3H0g==
-X-Received: by 2002:a50:d882:: with SMTP id p2mr5516719edj.276.1566578541134; 
- Fri, 23 Aug 2019 09:42:21 -0700 (PDT)
+ bh=FUg8ZmRXFzW1EjgZSSU/PBu8vWFImJMaMbKH4v9fwsU=;
+ b=YDNV1wgqUxKJbPaVy4SXWEmgqUEzh6iWTh+gE2t+m/YBa1NKSMheOni+5jKdUTkX40
+ GlimU+HFQbwRWR5LwX6fyrB/hNQBJ+62JAj9+P7TyZDOJqqJr/adUrcKGEPh5xuWL+WA
+ zte/2+ClB51xn2hIkYXSaPulII9qGs+xil9ynnwhiadgG+txIk0J/FfwLr/5HvbQ7WSI
+ EJrjYP9WuuqyPuLeX3cd0/OEznYtZksREQvQA0nei3Swaw9782DIUfgeGV4xxibIVY6g
+ fqVNEHbKBc7JP7811W0AEhpgWrWN3NuMxyeggedxxspJkggLyWbLZpgotvx+ERdi+85w
+ 4xJw==
+X-Gm-Message-State: APjAAAX8RxX27IceTPElon4TAOF3WgweYdR2LcAilv/8eoGIn72XSiZn
+ kCBny+rn8MwuWMhYVMql+xDlDpIU9+g=
+X-Google-Smtp-Source: APXvYqw3L9rNUhzYrc+TEP2nrMzauUVbjTNN5NKU7Pf76JRgncdiOEYAevF5Oll36Qy4Wkv5xx0y3w==
+X-Received: by 2002:a17:906:4d87:: with SMTP id
+ s7mr5190346eju.155.1566578634916; 
+ Fri, 23 Aug 2019 09:43:54 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id r3sm616267edm.6.2019.08.23.09.42.20
+ by smtp.gmail.com with ESMTPSA id t16sm482210ejj.48.2019.08.23.09.43.53
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 09:42:20 -0700 (PDT)
+ Fri, 23 Aug 2019 09:43:54 -0700 (PDT)
 To: arm-soc <arm@kernel.org>, soc@kernel.org
 From: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [GIT PULL] arm64: mediatek: dts64 updates for v5.4
+Subject: [GIT PULL] arm: mediatek: soc driver updates for v5.4
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
@@ -152,22 +153,22 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <def8fb77-fce4-097d-7ae2-8c4670bc09c1@gmail.com>
-Date: Fri, 23 Aug 2019 18:42:19 +0200
+Message-ID: <8c860e37-3816-d75f-fc37-ce496905ba73@gmail.com>
+Date: Fri, 23 Aug 2019 18:43:53 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_094223_042620_26067152 
-X-CRM114-Status: GOOD (  14.13  )
+X-CRM114-CacheID: sfid-20190823_094356_545968_93FF3278 
+X-CRM114-Status: GOOD (  12.35  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -192,9 +193,9 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: "moderated list:ARM/Mediatek SoC support"
- <linux-mediatek@lists.infradead.org>, Mars Cheng <mars.cheng@mediatek.com>,
+ <linux-mediatek@lists.infradead.org>,
  "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
+ Bibby Hsieh <bibby.hsieh@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -202,9 +203,9 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi Olof and Arnd,
 
-Please take the following patches into account.
+Please find below two patches for soc drivers.
 
-Thanks!
+See you,
 Matthias
 
 ---
@@ -215,39 +216,25 @@ The following changes since commit 5f9e832c137075045d15cd6899ab0505cfb2ca4b:
 are available in the Git repository at:
 
   https://git.kernel.org/pub/scm/linux/kernel/git/matthias.bgg/linux.git/
-tags/v5.3-next-dts64
+tags/v5.3-next-soc
 
-for you to fetch changes up to 7b07a7a4e169180c7da5078bdf5254515e69c152:
+for you to fetch changes up to 556030f0604f3cf5f1ea91307c0695541e5c74ca:
 
-  dt-bindings: irq: mtk, sysirq: add support for mt6779 (2019-08-23 17:50:07 +0200)
-
-----------------------------------------------------------------
-mt8183:
-- fix pwrap interrupt number
-- add i2c notes
-
-dt-bindings:
-- add compatible for mt6779
-- add mt6779 uart and sysirq compatible
+  soc: mediatek: cmdq: change the type of input parameter (2019-08-23 14:06:48
++0200)
 
 ----------------------------------------------------------------
-Hsin-Hsiung Wang (1):
-      arm64: dts: mt8183: fix pwrap gic number
+cmdq helper:
+reoder function parameter and change size of the parameters
 
-Mars Cheng (3):
-      dt-bindings: mediatek: add support for mt6779 reference board
-      dt-bindings: mtk-uart: add mt6779 uart bindings
-      dt-bindings: irq: mtk, sysirq: add support for mt6779
+----------------------------------------------------------------
+Bibby Hsieh (2):
+      soc: mediatek: cmdq: reorder the parameter
+      soc: mediatek: cmdq: change the type of input parameter
 
-Qii Wang (1):
-      arm64: dts: mt8183: add I2C nodes
-
- .../devicetree/bindings/arm/mediatek.yaml          |   4 +
- .../interrupt-controller/mediatek,sysirq.txt       |   1 +
- .../devicetree/bindings/serial/mtk-uart.txt        |   1 +
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts        |  96 +++++++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi           | 191 ++++++++++++++++++++-
- 5 files changed, 292 insertions(+), 1 deletion(-)
+ drivers/soc/mediatek/mtk-cmdq-helper.c | 10 +++++-----
+ include/linux/soc/mediatek/mtk-cmdq.h  | 14 +++++++-------
+ 2 files changed, 12 insertions(+), 12 deletions(-)
 
 _______________________________________________
 Linux-mediatek mailing list
