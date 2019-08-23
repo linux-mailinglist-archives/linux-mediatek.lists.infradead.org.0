@@ -2,68 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ECB859AE36
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 13:36:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D15B39AE4E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 13:44:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tTbC2t4zTbi3nrPVhJZJ+0u/NI2EoyAD8CYBgSbrZoI=; b=E2mTO6zBypvWzX
-	kkm62b7t7Vyhq0VQy067w3KUVVp6JkEZI74qv5ravRaugkRTI7hNX3Wqz2x0+HRf41SdSeFH4+g4j
-	ablXfFE57g8MiPeouXM7rDa+tMK7fl3Hb6gtM3DTFPfROArsozRnBE5Ykqt8yaXAVpi1uAIqn+xQc
-	Xp7gSUl4GGDVqWIHexszc+roI+YEFulXP5wk0e/ly/Rn/XNj7OQjzSkmhEocYFfa3k5WmF+vzejHF
-	D/llgzq2yw/Fm/2XCQIftVvIX0Gh2eMBFKfPeJ3N08T9qFNhlgncx4h2pc/f9TEXjcAuJzCWzVEK0
-	JIMbEh7yaaYI9vzFTxOw==;
+	List-Owner; bh=R5+0MKs8S6KPXYUoEg0EuXJhaBF1tfLkRfBQveAMx7U=; b=oqm/ammagxMQUW
+	eUcTo1y9rskRxoUvyt6kFMSXy8aLT5RYw+MsjKDIobMn0/qTnWqKCERAjYBiZrwauUviFeO08SYSc
+	/WY841+Pb58WlYAShDVjt9h4yzPogEd3Q5iw9fUgB1KGMhHlB+yjlp7ozrtuYIRtsIL6qofZXfrmA
+	G2QjSiB+npA102AsazCbV8p3DCnJUqjL4N1fv9aM/3+LPuZVTJ3+azNGPvoqvJNxYwSUaqwpktdSQ
+	dzvzFyZ42/CLWln6ZcB2G4GwyhFyaXblbS9sTrcURxS7C8EkA1D2O+VlvQGe38euS13I+Os//gb1K
+	DwKohSRZIqxu1uSk+T1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i17s3-0000pp-04; Fri, 23 Aug 2019 11:36:43 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1i17z7-0003KG-Vf; Fri, 23 Aug 2019 11:44:01 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i17s0-0000pN-Lr; Fri, 23 Aug 2019 11:36:42 +0000
-Received: by mail-wr1-x441.google.com with SMTP id p17so8309614wrf.11;
- Fri, 23 Aug 2019 04:36:40 -0700 (PDT)
+ id 1i17z5-0003Js-0v; Fri, 23 Aug 2019 11:44:00 +0000
+Received: by mail-wr1-x444.google.com with SMTP id j16so8336985wrr.8;
+ Fri, 23 Aug 2019 04:43:58 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
+ h=subject:from:to:cc:references:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=FpyNvfR0T+auJ5JhPMi+QUVo+qNqCeyak0YvaeD30VI=;
- b=KigGIshsuNdK4HYtsUqD2lylPuxHulZ+YwO9ACNbcz08UGC3BF6xq+QxCS7c6pQcn4
- LuZPrqIQsUxIyaWi+QRCayHFyFSKSzU8UdPDZd8v+efhjWcWMepEpPWNWRuU38udhvdc
- gb/fxcqMW1ZYU+kmFrNgbpEU+rwimudnLGgpy+5kWArHDIh9yCzTZdnnGj1zTw0CbJzT
- iEjV68vG3v99/kv9H0Yd+5s+6NYFMU2wBWIh3vQW6FU9VijpY0NT4GEv/Ramm1LqOt9f
- DdGB/E2sfZrrw3tx2SpQEjC0NGHcMD0zEYBEUDn7bJScCsdjtJFEAYos5p1RSZRNe4Tn
- Pu/Q==
+ bh=GZO05hDY3b9kGP5gl67AdrNZibN3/E1Cbgv1I3TVXoI=;
+ b=lsmMHu13jLGLcivc8jV7XYki/Ql1CDbEw/bzqTnanDfDCbiCE/jarr7B6ICi50fCIe
+ 7gMXfBwEt8FgFObMZVtrT/h5jbLN9qhg2u0klnxLSZY4CLy0S7omEREzqc4ZLUTzHDmw
+ Ns2SsliQY7VdzBcgMLhB5Ps70b4E7wohBWMEHm+P9dP1nGoqfC8198nAWoE5Oyftp6eP
+ wlbjwySI+WXPXY++XkBn+fOzUOfixt6JnAgCuxqNDuS8x3G7LEmDjzSVXRsJGZ5y5/th
+ ultb/C8RSDPYCRFzN1xDCzDxfWOqcMoeCIByip2E5Bh252sE2QYjTOP/uK1L3eDCoE9c
+ 60nw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
+ h=x-gm-message-state:subject:from:to:cc:references:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=FpyNvfR0T+auJ5JhPMi+QUVo+qNqCeyak0YvaeD30VI=;
- b=qKWQ9/cU890qrcQmXCOLYqXIs1P7QbOwp6IeipO9WIfm4i+dxsH0/eSwF/+cWXTFAq
- BU6D5YYm8i8/PTCQkDVMzKos3JBWVK7o9Gsg/chRtRLUcVPnoLQfhU/Y2xnIR8AHfugZ
- MVgqceCWke9O4NayyZ6ggPLkzUSd5ZhggfERcukU9Vln35gBhkgZShewt7vcMA/z+4fY
- 0F3fkkTjyMQV5aPvXTGkqauRO3ZyCSNoqwxUEfEGwKjOxO0en8E97WZZAgjFpI4TstW/
- SeJrotzkUPs+dQ3LwlwjI5tjEveN9h0UotfmzwJ4CpUnFM4qSxdBs4iJzSM7bQENzQ0K
- vG7A==
-X-Gm-Message-State: APjAAAVvytfeJy9R9W8ME0hj0nqEjM9divlywDyEZux75WYe5WDVknrg
- H2SZjRNPRVeJC1fuy1VbEbI=
-X-Google-Smtp-Source: APXvYqx5ZX1m5Gua2RUdrZ3oVgvdWUwuT9KsA9ep0MuP1Fg+j3O1uQ466d6wtlvgZlH9hqHXIEjhaQ==
-X-Received: by 2002:adf:eec5:: with SMTP id a5mr4620713wrp.352.1566560198936; 
- Fri, 23 Aug 2019 04:36:38 -0700 (PDT)
+ bh=GZO05hDY3b9kGP5gl67AdrNZibN3/E1Cbgv1I3TVXoI=;
+ b=Q7Zl/kPjCfcpkpFVhFS/aDx4JQk8tXONUYKX39pUqemMe0deXJ3ft6X8a1ZPV3+f/D
+ maoobGwts1LKyGu2zdejLcXNwGotfuhAeZNzVYzn8iNTbPihoMo1lGHYanPpXQ2xyVu5
+ x6YG6WeQKylOTJlac5qARJDk9PKLSKZ3CHX36bApiuFBlI8K2Adqa2Uav3OnyRxa7z2I
+ n51iuY2XkpdSMjmJtSM7rqkYRDQGw8CcCKFcc1+Bwstfd+vKqXxXYA5yE7ZNkqimFpRj
+ gpkvxkiHZfAVrByhcmtLPnPnDf56r37zJUq8/69/D0AQvDYfo+EQodfnrBLBzCSTNY/j
+ 5G6g==
+X-Gm-Message-State: APjAAAUJ1eiFu3jMhyyEk/+iWYRG3IXbey7siz3S8YfsShmv6EP/UEG+
+ rrGtYY+THT2vt20mLiOLZjU=
+X-Google-Smtp-Source: APXvYqxKuYGZ+WTpyZxjWdQb69G7PcwfmMKtLsOt1EJswPyb/fHQD8T0zw/Sk9Y5BXMHzKSPe+SwMw==
+X-Received: by 2002:adf:ff84:: with SMTP id j4mr4427536wrr.71.1566560637635;
+ Fri, 23 Aug 2019 04:43:57 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id w8sm12814271wmc.1.2019.08.23.04.36.37
+ by smtp.gmail.com with ESMTPSA id t14sm3042528wrv.12.2019.08.23.04.43.55
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 04:36:38 -0700 (PDT)
+ Fri, 23 Aug 2019 04:43:56 -0700 (PDT)
 Subject: Re: [RESEND, PATCH v13 06/12] soc: mediatek: cmdq: clear the event in
  cmdq initial flow
+From: Matthias Brugger <matthias.bgg@gmail.com>
 To: Bibby Hsieh <bibby.hsieh@mediatek.com>,
  Jassi Brar <jassisinghbrar@gmail.com>, Rob Herring <robh+dt@kernel.org>,
  CK HU <ck.hu@mediatek.com>
 References: <20190820084932.22282-1-bibby.hsieh@mediatek.com>
  <20190820084932.22282-7-bibby.hsieh@mediatek.com>
-From: Matthias Brugger <matthias.bgg@gmail.com>
+ <29eb73c1-04f4-deec-3136-f22434e0e541@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
@@ -158,23 +159,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <29eb73c1-04f4-deec-3136-f22434e0e541@gmail.com>
-Date: Fri, 23 Aug 2019 13:36:37 +0200
+Message-ID: <a7c2acbc-cfcd-9109-7ee8-4735cd344da6@gmail.com>
+Date: Fri, 23 Aug 2019 13:43:54 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190820084932.22282-7-bibby.hsieh@mediatek.com>
+In-Reply-To: <29eb73c1-04f4-deec-3136-f22434e0e541@gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_043640_721963_ADE3A0A8 
-X-CRM114-Status: GOOD (  18.32  )
+X-CRM114-CacheID: sfid-20190823_044359_109326_D7F7A2A5 
+X-CRM114-Status: GOOD (  15.74  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -214,83 +215,100 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 20/08/2019 10:49, Bibby Hsieh wrote:
-> GCE hardware stored event information in own internal sysram,
-> if the initial value in those sysram is not zero value
-> it will cause a situation that gce can wait the event immediately
-> after client ask gce to wait event but not really trigger the
-> corresponding hardware.
+On 23/08/2019 13:36, Matthias Brugger wrote:
 > 
-> In order to make sure that the wait event function is
-> exactly correct, we need to clear the sysram value in
-> cmdq initial flow.
 > 
-> Fixes: 623a6143a845 ("mailbox: mediatek: Add Mediatek CMDQ driver")
-> 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
+> On 20/08/2019 10:49, Bibby Hsieh wrote:
+>> GCE hardware stored event information in own internal sysram,
+>> if the initial value in those sysram is not zero value
+>> it will cause a situation that gce can wait the event immediately
+>> after client ask gce to wait event but not really trigger the
+>> corresponding hardware.
+>>
+>> In order to make sure that the wait event function is
+>> exactly correct, we need to clear the sysram value in
+>> cmdq initial flow.
+>>
+>> Fixes: 623a6143a845 ("mailbox: mediatek: Add Mediatek CMDQ driver")
+>>
+>> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+>> Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+I oversaw some things/nits.
 
-> ---
->  drivers/mailbox/mtk-cmdq-mailbox.c       | 5 +++++
->  include/linux/mailbox/mtk-cmdq-mailbox.h | 2 ++
->  include/linux/soc/mediatek/mtk-cmdq.h    | 3 ---
->  3 files changed, 7 insertions(+), 3 deletions(-)
-> 
-> diff --git a/drivers/mailbox/mtk-cmdq-mailbox.c b/drivers/mailbox/mtk-cmdq-mailbox.c
-> index 69daaadc3a5f..9a6ce9f5a7db 100644
-> --- a/drivers/mailbox/mtk-cmdq-mailbox.c
-> +++ b/drivers/mailbox/mtk-cmdq-mailbox.c
-> @@ -21,6 +21,7 @@
->  #define CMDQ_NUM_CMD(t)			(t->cmd_buf_size / CMDQ_INST_SIZE)
->  
->  #define CMDQ_CURR_IRQ_STATUS		0x10
-> +#define CMDQ_SYNC_TOKEN_UPDATE		0x68
->  #define CMDQ_THR_SLOT_CYCLES		0x30
->  #define CMDQ_THR_BASE			0x100
->  #define CMDQ_THR_SIZE			0x80
-> @@ -104,8 +105,12 @@ static void cmdq_thread_resume(struct cmdq_thread *thread)
->  
->  static void cmdq_init(struct cmdq *cmdq)
->  {
-> +	int i;
-> +
->  	WARN_ON(clk_enable(cmdq->clock) < 0);
->  	writel(CMDQ_THR_ACTIVE_SLOT_CYCLES, cmdq->base + CMDQ_THR_SLOT_CYCLES);
-> +	for (i = 0; i <= CMDQ_MAX_EVENT; i++)
-> +		writel(i, cmdq->base + CMDQ_SYNC_TOKEN_UPDATE);
->  	clk_disable(cmdq->clock);
->  }
->  
-> diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> index ccb73422c2fa..911475da7a53 100644
-> --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
-> +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> @@ -19,6 +19,8 @@
->  #define CMDQ_WFE_UPDATE			BIT(31)
->  #define CMDQ_WFE_WAIT			BIT(15)
->  #define CMDQ_WFE_WAIT_VALUE		0x1
-> +/** cmdq event maximum */
-> +#define CMDQ_MAX_EVENT			0x3ff
->  
->  /*
->   * CMDQ_CODE_MASK:
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index 54ade13a9b15..4e8899972db4 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -13,9 +13,6 @@
->  
->  #define CMDQ_NO_TIMEOUT		0xffffffffu
->  
-> -/** cmdq event maximum */
-> -#define CMDQ_MAX_EVENT				0x3ff
-> -
->  struct cmdq_pkt;
->  
->  struct cmdq_client {
-> 
+Patch subject should be:
+mailbox: mediatek: cmdq: clear the event in cmdq initial flow
+
+>> ---
+>>  drivers/mailbox/mtk-cmdq-mailbox.c       | 5 +++++
+>>  include/linux/mailbox/mtk-cmdq-mailbox.h | 2 ++
+>>  include/linux/soc/mediatek/mtk-cmdq.h    | 3 ---
+>>  3 files changed, 7 insertions(+), 3 deletions(-)
+>>
+>> diff --git a/drivers/mailbox/mtk-cmdq-mailbox.c b/drivers/mailbox/mtk-cmdq-mailbox.c
+>> index 69daaadc3a5f..9a6ce9f5a7db 100644
+>> --- a/drivers/mailbox/mtk-cmdq-mailbox.c
+>> +++ b/drivers/mailbox/mtk-cmdq-mailbox.c
+>> @@ -21,6 +21,7 @@
+>>  #define CMDQ_NUM_CMD(t)			(t->cmd_buf_size / CMDQ_INST_SIZE)
+>>  
+>>  #define CMDQ_CURR_IRQ_STATUS		0x10
+>> +#define CMDQ_SYNC_TOKEN_UPDATE		0x68
+>>  #define CMDQ_THR_SLOT_CYCLES		0x30
+>>  #define CMDQ_THR_BASE			0x100
+>>  #define CMDQ_THR_SIZE			0x80
+>> @@ -104,8 +105,12 @@ static void cmdq_thread_resume(struct cmdq_thread *thread)
+>>  
+>>  static void cmdq_init(struct cmdq *cmdq)
+>>  {
+>> +	int i;
+>> +
+>>  	WARN_ON(clk_enable(cmdq->clock) < 0);
+>>  	writel(CMDQ_THR_ACTIVE_SLOT_CYCLES, cmdq->base + CMDQ_THR_SLOT_CYCLES);
+>> +	for (i = 0; i <= CMDQ_MAX_EVENT; i++)
+>> +		writel(i, cmdq->base + CMDQ_SYNC_TOKEN_UPDATE);
+
+I think CMDQ_SYNC_TOKEN_UPDATE is not a good name for the define.
+Any reason why we couldn't name it something like CMDQ_SYNC_TOKEN_RESET?
+
+
+>>  	clk_disable(cmdq->clock);
+>>  }
+>>  
+>> diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
+>> index ccb73422c2fa..911475da7a53 100644
+>> --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
+>> +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
+>> @@ -19,6 +19,8 @@
+>>  #define CMDQ_WFE_UPDATE			BIT(31)
+>>  #define CMDQ_WFE_WAIT			BIT(15)
+>>  #define CMDQ_WFE_WAIT_VALUE		0x1
+>> +/** cmdq event maximum */
+
+While at it, add a new line before the comment.
+
+Regards,
+Matthias
+
+>> +#define CMDQ_MAX_EVENT			0x3ff
+>>  
+>>  /*
+>>   * CMDQ_CODE_MASK:
+>> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
+>> index 54ade13a9b15..4e8899972db4 100644
+>> --- a/include/linux/soc/mediatek/mtk-cmdq.h
+>> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
+>> @@ -13,9 +13,6 @@
+>>  
+>>  #define CMDQ_NO_TIMEOUT		0xffffffffu
+>>  
+>> -/** cmdq event maximum */
+>> -#define CMDQ_MAX_EVENT				0x3ff
+>> -
+>>  struct cmdq_pkt;
+>>  
+>>  struct cmdq_client {
+>>
 
 _______________________________________________
 Linux-mediatek mailing list
