@@ -2,68 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D0AB39B3E0
-	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 17:50:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4F4489B3EA
+	for <lists+linux-mediatek@lfdr.de>; Fri, 23 Aug 2019 17:52:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=V67WF3DhvX5S/7gIqxTItSBnqvGdW8BhgYydVT/aTCA=; b=bFLLrHA5tKIkOs
-	w5VIpl7O+6gAfDs9yWYgu4pLU5f8WXIyz1CMK/3ydGpiI9EMWzlNowC0XuFlwi0Ev/eNNogoUaT5s
-	OXGwoX7vamiSIJqnl7Uefj0jT4kIb0+HP4JRT7B9ynybaCqzcYLoo7OolxyD91+c+VQgmj/uYUYvr
-	whHc6CvNpfIKFyuM6WQN4GzmnDlKnD7pzpUnPpvrDNo/W8LYFAOtktdlXkTXIyIEoszbzmcpmhs+q
-	9bVNv7Fx/CHsKBOuEsbNNM9dScyUktOUg+ZoYYSjlAGALVu6O24kY7RIEPR06zlxJNyJex5YEzl5N
-	3ai02KoLzwmHbg9s7U5w==;
+	List-Owner; bh=q4JX6O5cVzrT35CrlP2kFs1+KIiRTzE/UvyEj354JVg=; b=pfl6X6XZnqlfo1
+	9G/eBRI3l90pW1aRYzxE8Zi+j60ECFpg71c5AzMEsGNruqvul/Rts04whoPxwZf5Usz/xPovT4Tt9
+	fq6Ckt5l4x4y2MLiRyQ+0Ylls2IAPzGYvCB3UsIrq2Q+186BY+Fr9qBjFabm+kgB6F3fZTIQctqZk
+	627/yAulk0x8hbFQGTYEHa+7+M3i8+clGaUjwraugx3A325lvfajX/mAAA08L85J54JF19lF0irGm
+	9ak2DR3YfWT82cfN3lzHN3BaNx/u33e3h3SrkXJBXNeK7b5xQn+bLtfVqyXwwTBK44FJvHJL800Jm
+	FLoxe4XrOc4zv+JVATqw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1Bph-0001KD-85; Fri, 23 Aug 2019 15:50:33 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1i1Br8-0001Pe-5n; Fri, 23 Aug 2019 15:52:02 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1Bpe-0001Ju-Q7
- for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 15:50:32 +0000
-Received: by mail-ed1-x543.google.com with SMTP id h8so14149743edv.7
- for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 08:50:30 -0700 (PDT)
+ id 1i1Br4-0001PB-Uh
+ for linux-mediatek@lists.infradead.org; Fri, 23 Aug 2019 15:52:00 +0000
+Received: by mail-ed1-x542.google.com with SMTP id r12so14157633edo.5
+ for <linux-mediatek@lists.infradead.org>; Fri, 23 Aug 2019 08:51:58 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=eHboKXefOkoZFmnF3HVNlpLNUtuSikyS51qtsqcaUNo=;
- b=GxW2rwOO7d8kg4vtCGGiuz3nmJ2Ekh3ZHhAG9bOvWMapjX3RPc/cpDhW6LMJedTv6g
- U0LC6qOT6AiRnWYoD2cvokdqYT2GcvAqp8KUZLEmMXZMIw3Zvv1XGKNATf2samrn+NM+
- UES3GzS9CnQgu0pT+g1C2nshV+aEhH/Z+vOs9UK3uzwskhJm6+2ul0SXk5CiX/PZlZES
- CDXb3CYmmihukzY2XS1mqyMLRDmaEvuQGlflWeZO3VJ7jIpCsyTGu8jMW8Y32XtFT8XX
- XZLraQAyq0JDoXPf9Dwyhd3XRfal8iqeTmpnDt0dIjZk+SFiJeZkQM79iDww4fzwnYuw
- vnhA==
+ bh=iyqrdjipyXAujuXf+ThiuGW6nNdgnVLRywofD+cV01o=;
+ b=rvlqHn0L1193g1bK59aDzW5QFZ7INT6gNf3Fv0WGM522kqXV05cx99QeADHrYojnOT
+ bBasDwlDXOn41HN2QOKRtrcmmRM/G/wE+Uf+ceza0tFj3kPXujfHkI9QSDImmXugxTec
+ H3ligJeorzjo88okJUYQ4pB8lIuFR0SMKGoanMIsO8C+dtiAz1c8MZ8YuILQnH+aZJt/
+ cOXURAuFat+IaVpuPsi9LaIbMhbPf7HoLIHmQ1jayg4BTXyEMV8DF8j6t7RC4mKrXHxm
+ EuY6VOaCVkBiEbxCEAd65AWT3RWP2OmhZCENtrfZkCgrsV1F3lsIQNjsexKJP8/NIOMK
+ IPBA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=eHboKXefOkoZFmnF3HVNlpLNUtuSikyS51qtsqcaUNo=;
- b=MxQbpRQvQOHsBLMOT7oiPRxw/Xqx7MVUOQxKyqAjn2XLbf54nGgcxHcHC8j2BLrW+8
- YOJG8FGNpYm6ao1JAOUHEd574eoFHb5gA/hx5kH1YIG+P3Ra8KyoSnNBFLPA8+yVsQY2
- u9R3y1VkcAt4cz3aKtC6PJw+SdB9A/I+STL241dy0mDPqnTDiRAVjLw3wpgHdI21DcsP
- SXuXxg3qw2zBU5ZB6WYN8RXEXLEMxxrjRQbES5PkjW1uAi6PHit2w2H+43Cl4FSRocrv
- ONNXOpMXOHfJzErPkJg5KWgoBiawgjx3twPolISuylfkSH6tFjQvdbBDu9oJWtwiSOU1
- dpgw==
-X-Gm-Message-State: APjAAAXylBDnhiASCWlgBqww24W1KxeQPwFXREqaUFNZBCFiSJfR8Xq1
- MNJm0WZyjeUr8R+uNaRkNFQRigoE9k4=
-X-Google-Smtp-Source: APXvYqxpNIuY03AF3h8WerlDr0+pTMI81yj7RHxSM8dTyt4gRlHl0wdVNr+b+L24Gp0ga5HUsOyfdQ==
-X-Received: by 2002:a50:bb23:: with SMTP id y32mr5288045ede.145.1566575429297; 
- Fri, 23 Aug 2019 08:50:29 -0700 (PDT)
+ bh=iyqrdjipyXAujuXf+ThiuGW6nNdgnVLRywofD+cV01o=;
+ b=Xfw/EbBWhU3B/lkwjuA4FbgD+Ru5crtCHXTW4jKty1y7IWEMaKGBHoiTNdGMEorTw/
+ GGo9zWRar27EsyxX3gSJQx+5hnXf63KdXUlsayc+ttqrl9c9SPaMBsn/yGiyP23m5WwV
+ gpTaQrwUycpcXF6/N+yHBCJG07lCc5koc78enrJZi4ZqWmODFMISqhlrftQVc+QwSM2k
+ 5pGvyt6cKm5fESIKpBhjSHf4wSRkGsEbytiUiC1o774u70G/lXbqQ4Jr/v7Fu4d7TPAA
+ aIscacyf23EzPfz30MLvsOvZmLZtWEk+4+41QyZ4fUlL15DAFPzTOrIUTI2qnA1xsl2a
+ jcag==
+X-Gm-Message-State: APjAAAX8c+ewJDkJ7y2Nd2aXFNQl48TYupt0TZl3GmuWKjTWPsJech8o
+ A4vbbv8d96dfjvrY8ZJmHoU=
+X-Google-Smtp-Source: APXvYqznB5coGlLh9coLbb8PuXMvVnSjrTSolQ3eNOBqxBxf0JB7bBx1R5LOZE7siYfusUythAV2EA==
+X-Received: by 2002:aa7:d5d3:: with SMTP id d19mr5432403eds.103.1566575517699; 
+ Fri, 23 Aug 2019 08:51:57 -0700 (PDT)
 Received: from ziggy.stardust ([37.223.137.147])
- by smtp.gmail.com with ESMTPSA id f6sm595737edn.63.2019.08.23.08.50.28
+ by smtp.gmail.com with ESMTPSA id k12sm469254ejz.79.2019.08.23.08.51.56
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Fri, 23 Aug 2019 08:50:28 -0700 (PDT)
-Subject: Re: [PATCH v2 01/11] dt-bindings: mediatek: add support for mt6779
- reference board
-To: Mars Cheng <mars.cheng@mediatek.com>, Rob Herring <robh@kernel.org>,
- Marc Zyngier <marc.zyngier@arm.com>, Stephen Boyd <sboyd@kernel.org>,
- Sean Wang <sean.wang@kernel.org>, Linus Walleij <linus.walleij@linaro.org>
+ Fri, 23 Aug 2019 08:51:57 -0700 (PDT)
+Subject: Re: [PATCH v2 03/11] dt-bindings: irq: mtk,sysirq: add support for
+ mt6779
+To: Linus Walleij <linus.walleij@linaro.org>,
+ Mars Cheng <mars.cheng@mediatek.com>
 References: <1566206502-4347-1-git-send-email-mars.cheng@mediatek.com>
- <1566206502-4347-2-git-send-email-mars.cheng@mediatek.com>
+ <1566206502-4347-4-git-send-email-mars.cheng@mediatek.com>
+ <CACRpkdY4sVV5oyFa+a30dY2A9tsKpzTeuQ8ChmnXcm-5_eZkVA@mail.gmail.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -159,23 +159,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <9f3daf61-eb8b-28c9-e3ce-08b9ca61166b@gmail.com>
-Date: Fri, 23 Aug 2019 17:50:27 +0200
+Message-ID: <827cd581-8fa0-d59b-f21c-de16f8c2ee50@gmail.com>
+Date: Fri, 23 Aug 2019 17:51:56 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566206502-4347-2-git-send-email-mars.cheng@mediatek.com>
+In-Reply-To: <CACRpkdY4sVV5oyFa+a30dY2A9tsKpzTeuQ8ChmnXcm-5_eZkVA@mail.gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_085030_869291_67B1770E 
-X-CRM114-Status: GOOD (  14.11  )
+X-CRM114-CacheID: sfid-20190823_085159_115852_8B79C3AB 
+X-CRM114-Status: GOOD (  11.32  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -199,45 +199,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, CC Hwang <cc.hwang@mediatek.com>,
- wsd_upstream@mediatek.com, Loda Chou <loda.chou@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- mtk01761 <wendell.lin@mediatek.com>, linux-clk@vger.kernel.org
+Cc: Rob Herring <robh@kernel.org>, CC Hwang <cc.hwang@mediatek.com>,
+ wsd_upstream@mediatek.com,
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, Marc Zyngier <marc.zyngier@arm.com>,
+ Sean Wang <sean.wang@kernel.org>, Loda Chou <loda.chou@mediatek.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Stephen Boyd <sboyd@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ mtk01761 <wendell.lin@mediatek.com>, linux-clk <linux-clk@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+Hi Linus,
 
-
-On 19/08/2019 11:21, Mars Cheng wrote:
-> Update binding document for mt6779 reference board
+On 23/08/2019 10:51, Linus Walleij wrote:
+> On Mon, Aug 19, 2019 at 11:22 AM Mars Cheng <mars.cheng@mediatek.com> wrote:
 > 
-> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
-> Reviewed-by: Rob Herring <robh@kernel.org>
-
-Applied thanks!
-
-> ---
->  .../devicetree/bindings/arm/mediatek.yaml          |    4 ++++
->  1 file changed, 4 insertions(+)
+>> Add binding documentation of mediatek,sysirq for mt6779 SoC.
+>>
+>> Signed-off-by: Mars Cheng <mars.cheng@mediatek.com>
 > 
-> diff --git a/Documentation/devicetree/bindings/arm/mediatek.yaml b/Documentation/devicetree/bindings/arm/mediatek.yaml
-> index a4ad2eb..4043c50 100644
-> --- a/Documentation/devicetree/bindings/arm/mediatek.yaml
-> +++ b/Documentation/devicetree/bindings/arm/mediatek.yaml
-> @@ -48,6 +48,10 @@ properties:
->            - const: mediatek,mt6765
->        - items:
->            - enum:
-> +              - mediatek,mt6779-evb
-> +          - const: mediatek,mt6779
-> +      - items:
-> +          - enum:
->                - mediatek,mt6795-evb
->            - const: mediatek,mt6795
->        - items:
+> I'm relying on Sean to review this and ACK when he's pleased
+> with the result.
 > 
+
+I suppose you meant 4/11, right :)
+
+Regards,
+Matthias
 
 _______________________________________________
 Linux-mediatek mailing list
