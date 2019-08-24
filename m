@@ -2,73 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E5729BCB8
-	for <lists+linux-mediatek@lfdr.de>; Sat, 24 Aug 2019 11:22:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3541F9BD65
+	for <lists+linux-mediatek@lfdr.de>; Sat, 24 Aug 2019 13:57:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4wXO7lqhHv+eLrLdUI5qsCvv7JHXw8plFoKMWu1iA9M=; b=aNtEZDBUwXZtkL
-	PPi8xIl1GqaSieeGD4OsWkZX0H8iLq25ETYiYOohjwWlmY5VP2rRUmfkOPsT2U/eBQnctxk3YJ3Wx
-	HJFN8GusWKs8zua/mQbF8/kVE0vVJRiTQnAgx5/wdud8meNK2DtCvJggi8xasq0qEAEC1kHjEXd1Y
-	8RxT1RflLg16gPCR7MLDo/e5ng/ytB7AXj7g0OzBeHXQheog9VxSCEXlnbkloqNDFnz8vJwnG+gok
-	KwbbbtpSrYKRFxoWl+caAgMKw5rabj4gd3rsH8afqIpYvru55qNMmR+7+bUlTw/eH+1YM/TM8wLjS
-	mCTlUqM12VPTJ3QrQWsA==;
+	List-Owner; bh=7ZLNgbc1Q3uTEwqm3t84WwDuTeNbbdZTLJNEEfthmjE=; b=asU61zlnBnttW7
+	3vNHIl+3BaSmMyXG0WaZMfHRov6pWgMMilvYK9n/S42i1nsyAfKdc5l610DVpXCFkEdFFpVzazQ+u
+	1erPW3Ca15mmvqF8vNN/GVubJ50UBonrwvqmzoqdQBvErQFkZXFto65JgXjuGMyGSBFZm7AtGiB0f
+	kA+Q9vA9yxD8QxYi7uXb4gyQeJy0kAsWVH5KvY6chKkSQ7EIfntNDWeugX7BsqzBTw2UQmxkpGy+t
+	yQkisXMOend1aTcqN7fJU9BclHCzbiDLp6fXEnYn2Fy1+wG/3AXC/LsclzQ1oYFONGZOOQoNf6iyv
+	HGpZ5gScuIIrE3RpTCog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1SFh-0000Ny-KK; Sat, 24 Aug 2019 09:22:29 +0000
-Received: from pandora.armlinux.org.uk
- ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
+	id 1i1Ufx-0007rk-1S; Sat, 24 Aug 2019 11:57:45 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1SFR-0000EF-1d; Sat, 24 Aug 2019 09:22:14 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:
- Content-Transfer-Encoding:Content-Type:MIME-Version:References:Message-ID:
- Subject:Cc:To:From:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=u9kDsmGvpvy+ySdibnxbYTURZ6SqJ3ZYL88TNhJH+08=; b=BxkVzn8VPjh7EVNaF8lJqzsdg
- zlQtBsYy6mqdeQKvuta6hdh11UqgUHuutlKtwXtqBsr1KyMfrHDUC3/8BZQMYxZ5HMkT0T1uJlTZa
- 3Fq89O+sCd5fzU8N+4LkDqqbqOOpKetTEm/MZHhOmONXL4e7Z09L4tuRastd6vbyQAVH01q9o2J3/
- PiY4zUjHfiI2uxA8iAmhd4MIbK3tnt/hL+Mpe0J4+NBgKAW0Vbb6Bb5BZ6f+H38zUWkYOSUK6UT+g
- BnqNw49mKpWR+BCC25NDpcxBwm9J+bN8FVA1Ocbv9Cc+tpGIwBkpCh8UlLZups1EYvuCSp/N/8dS8
- KfiH+nsyw==;
-Received: from shell.armlinux.org.uk
- ([2001:4d48:ad52:3201:5054:ff:fe00:4ec]:53938)
- by pandora.armlinux.org.uk with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <linux@armlinux.org.uk>)
- id 1i1SFD-0002C7-Ik; Sat, 24 Aug 2019 10:21:59 +0100
-Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
- (envelope-from <linux@shell.armlinux.org.uk>)
- id 1i1SFA-0002Qx-72; Sat, 24 Aug 2019 10:21:56 +0100
-Date: Sat, 24 Aug 2019 10:21:56 +0100
-From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
-Subject: Re: [PATCH net-next v3 2/3] net: ethernet: mediatek: Re-add support
- SGMII
-Message-ID: <20190824092156.GD13294@shell.armlinux.org.uk>
-References: <20190823134516.27559-1-opensource@vdorst.com>
- <20190823134516.27559-3-opensource@vdorst.com>
+ id 1i1Ufn-0007jn-EQ; Sat, 24 Aug 2019 11:57:36 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id C4A5721670;
+ Sat, 24 Aug 2019 11:57:31 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1566647854;
+ bh=2gPSnsiLTiZzM3VtEOlTe2NDmgUZRMbJJi3dmdROM2E=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=oYouPo1TechO7rUXVnYc/d5QQKmx8wd/2lrTjEC73P3PGYatRMoM38205X6ie4daK
+ p2SzQtUHn+KtAP9Odb4S7o/WiTSMgXZi3g//oXrgiOt57B1wdHhQilDoxRSI6EBSQd
+ kjllxlKtG+xB1eupYlk2xisYyma3Rbw/ijawoDp8=
+Date: Sat, 24 Aug 2019 12:57:28 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH v11 00/23] MT8183 IOMMU SUPPORT
+Message-ID: <20190824115728.hsdsp3ut5mywplaw@willie-the-truck>
+References: <1566615728-26388-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190823134516.27559-3-opensource@vdorst.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <1566615728-26388-1-git-send-email-yong.wu@mediatek.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190824_022213_091634_B6487F0D 
-X-CRM114-Status: GOOD (  11.82  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190824_045735_507305_E23041B4 
+X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -76,6 +64,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,71 +76,36 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nelson Chang <nelson.chang@mediatek.com>,
- Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>, linux-mips@vger.kernel.org,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Stefan Roese <sr@denx.de>,
- "David S . Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
+ Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
+ Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
+ iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ ming-fan.chen@mediatek.com, anan.sun@mediatek.com,
+ Robin Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Aug 23, 2019 at 03:45:15PM +0200, Ren=E9 van Dorst wrote:
-> +	switch (state->interface) {
-> +	case PHY_INTERFACE_MODE_SGMII:
-> +		phylink_set(mask, 10baseT_Half);
-> +		phylink_set(mask, 10baseT_Full);
-> +		phylink_set(mask, 100baseT_Half);
-> +		phylink_set(mask, 100baseT_Full);
+On Sat, Aug 24, 2019 at 11:01:45AM +0800, Yong Wu wrote:
+> This patchset mainly adds support for mt8183 IOMMU and SMI.
 
-You also want 1000baseX_Full here - the connected PHY could have a fiber
-interface on it.
+Thanks for persevering with this, and sorry it took me so long to get
+to grips with the io-pgtable changes.
 
-> +		/* fall through */
-> +	case PHY_INTERFACE_MODE_TRGMII:
->  		phylink_set(mask, 1000baseT_Full);
+Joerg -- this is good for you to pick up from my side now, but if you run
+into any fiddly conflicts with any of my other changes then I'm happy to
+resolve them on a separate branch for you to pull.
 
-I don't know enough about this interface type to comment whether it
-should support 1000baseX_Full - if this is connected to a PHY that may
-support fiber, then it ought to set it.
+Just let me know.
 
-> +		break;
-> +	case PHY_INTERFACE_MODE_2500BASEX:
-> +		phylink_set(mask, 2500baseX_Full);
-> +		/* fall through */
-> +	case PHY_INTERFACE_MODE_1000BASEX:
-> +		phylink_set(mask, 1000baseX_Full);
+Cheers,
 
-Both should be set.  The reasoning here is that if you have a
-Fiberchannel 4Gbaud SFP plugged in and connected directly to the
-MAC, it can operate at either 2500Base-X or 1000Base-X.  If we
-decide to operate at 2500Base-X, then PHY_INTERFACE_MODE_2500BASEX
-will be chosen.  Otherwise, PHY_INTERFACE_MODE_1000BASEX will be
-used.
-
-The user can use ethtool to control which interface mode is used
-by adjusting the advertise mask and/or placing the interface in
-manual mode and setting the speed directly.  This will change
-the PHY_INTERFACE_MODE_xxxxBASEX (via phylink_helper_basex_speed())
-between the two settings.
-
-If we lose 2500baseX_Full when 1000Base-X is selected, the user
-will not be able to go back to 2500Base-X mode.
-
-Yes, it's a little confusing and has slightly different rules
-from the other modes - partly due to phylink_helper_basex_speed().
-These are the only interface modes that we dynamically switch
-between depending on the settings that the user configures via
-ethtool.
-
--- =
-
-RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
-FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps =
-up
-According to speedtest.net: 11.9Mbps down 500kbps up
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
