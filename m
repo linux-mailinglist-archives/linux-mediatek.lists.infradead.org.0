@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5BEBF9BB4E
-	for <lists+linux-mediatek@lfdr.de>; Sat, 24 Aug 2019 05:11:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22EE29BB46
+	for <lists+linux-mediatek@lfdr.de>; Sat, 24 Aug 2019 05:10:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=s3Ovj/Sb7xRP6u9TedyGO6FgF4923TFz17OntvK280I=; b=nSp0feX6jYWENw
-	XB7Dh5RKvdYfDgWpKovHffQFHE3IJtq0Xb2JTly5i16NisoUUBqrj5n+fEL8ueqjixoCXZAN170yD
-	R8MJVyajEus7u7wB9DC3uOEZomFNOnZHP9lucB+Dwa+D463GftW762WJaeGYpObD0Wop+Xay9bMho
-	iYBq40UKMfz1+yg+zyQlUWZ5bZ0ewT9MhY3alforu/dDVhuQqq5RxiFvexM3pCe5MP+sH3j1SkjRh
-	gNUzutJeJX+1Rtirv2P5EojkZsvICHxcOy+swuMJ+kU1OM9Sl5qloMybScy2+mm2JuDOBmvhAMicF
-	jUqxBKb4aXx1ox3WMVTQ==;
+	List-Owner; bh=I45LAlxTO9Pyg2tXMVLeCtRsjl3Lg7reV4pTmbOt3vU=; b=CytMYDnPpAjcYc
+	sxSAeJVrtdOP94yzk46zHR1RWKTBHUCfx/bMk5q4KSvGGxUf3J2OX4NBmtP1hRwEcrV9p8A4YuZ5H
+	JXnKQPr2rMRlFRN9OJNNEvZvqz4mvEbD4s3oy5tWZ1d5VqWhOQCI1ssxAfJraEDQSWLrN9W62Q0c8
+	FYZzvtgo/qrPgXhHX3cYrG+dOo8C8KCgdnoh3VNzEE5g3/y+sf2gEoh1u1U6oGtdsNMHhKKkpPFMu
+	4UpJGYR80hiseA3+xpq0LcFdnwkkkZmbbnV7OZAIRUQuxH1wHqBEho5eJ/i50yt57zxII9p04EVVM
+	BLjFMNpbjVbl9D8CjGDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1MSP-000398-Ed; Sat, 24 Aug 2019 03:11:13 +0000
+	id 1i1MRT-00020d-Ug; Sat, 24 Aug 2019 03:10:16 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1MPN-0005Pf-N7; Sat, 24 Aug 2019 03:08:08 +0000
-X-UUID: 8b1530791a344bacaff3573c2e53392a-20190823
-X-UUID: 8b1530791a344bacaff3573c2e53392a-20190823
+ id 1i1MPK-0005OW-Pc; Sat, 24 Aug 2019 03:08:04 +0000
+X-UUID: c5df07d8f93f443f8e02c71f552f6243-20190823
+X-UUID: c5df07d8f93f443f8e02c71f552f6243-20190823
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 730066719; Fri, 23 Aug 2019 19:06:28 -0800
+ with ESMTP id 40902785; Fri, 23 Aug 2019 19:06:46 -0800
 Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 23 Aug 2019 20:06:26 -0700
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 23 Aug 2019 20:06:45 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 24 Aug 2019 11:06:25 +0800
+ 15.0.1395.4; Sat, 24 Aug 2019 11:06:43 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sat, 24 Aug 2019 11:06:24 +0800
+ Transport; Sat, 24 Aug 2019 11:06:42 +0800
 From: Yong Wu <yong.wu@mediatek.com>
 To: Joerg Roedel <joro@8bytes.org>, Matthias Brugger <matthias.bgg@gmail.com>, 
  Robin Murphy <robin.murphy@arm.com>, Will Deacon <will@kernel.org>
-Subject: [PATCH v11 19/23] memory: mtk-smi: Invoke pm runtime_callback to
- enable clocks
-Date: Sat, 24 Aug 2019 11:02:04 +0800
-Message-ID: <1566615728-26388-20-git-send-email-yong.wu@mediatek.com>
+Subject: [PATCH v11 21/23] iommu/mediatek: Fix VLD_PA_RNG register backup when
+ suspend
+Date: Sat, 24 Aug 2019 11:02:06 +0800
+Message-ID: <1566615728-26388-22-git-send-email-yong.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566615728-26388-1-git-send-email-yong.wu@mediatek.com>
 References: <1566615728-26388-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_200805_851380_1BC76F11 
-X-CRM114-Status: GOOD (  18.47  )
+X-CRM114-CacheID: sfid-20190823_200803_046024_0AAE4843 
+X-CRM114-Status: GOOD (  10.20  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -87,203 +87,51 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch only move the clk_prepare_enable and config_port into the
-runtime suspend/resume callback. It doesn't change the code content
-and sequence.
+The register VLD_PA_RNG(0x118) was forgot to backup while adding 4GB
+mode support for mt2712. this patch add it.
 
-This is a preparing patch for adjusting SMI_BUS_SEL for mt8183.
-(SMI_BUS_SEL need to be restored after smi-common resume every time.)
-Also it gives a chance to get rid of mtk_smi_larb_get/put which could
-be a next topic.
-
-CC: Matthias Brugger <matthias.bgg@gmail.com>
+Fixes: 30e2fccf9512 ("iommu/mediatek: Enlarge the validate PA range
+for 4GB mode")
 Signed-off-by: Yong Wu <yong.wu@mediatek.com>
 Reviewed-by: Evan Green <evgreen@chromium.org>
 Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 ---
- drivers/memory/mtk-smi.c | 113 ++++++++++++++++++++++++++++++-----------------
- 1 file changed, 72 insertions(+), 41 deletions(-)
+ drivers/iommu/mtk_iommu.c | 2 ++
+ drivers/iommu/mtk_iommu.h | 1 +
+ 2 files changed, 3 insertions(+)
 
-diff --git a/drivers/memory/mtk-smi.c b/drivers/memory/mtk-smi.c
-index 3dd05de..2bb55b86 100644
---- a/drivers/memory/mtk-smi.c
-+++ b/drivers/memory/mtk-smi.c
-@@ -78,17 +78,13 @@ struct mtk_smi_larb { /* larb: local arbiter */
- 	u32				*mmu;
- };
- 
--static int mtk_smi_enable(const struct mtk_smi *smi)
-+static int mtk_smi_clk_enable(const struct mtk_smi *smi)
- {
- 	int ret;
- 
--	ret = pm_runtime_get_sync(smi->dev);
--	if (ret < 0)
--		return ret;
--
- 	ret = clk_prepare_enable(smi->clk_apb);
- 	if (ret)
--		goto err_put_pm;
-+		return ret;
- 
- 	ret = clk_prepare_enable(smi->clk_smi);
- 	if (ret)
-@@ -110,59 +106,28 @@ static int mtk_smi_enable(const struct mtk_smi *smi)
- 	clk_disable_unprepare(smi->clk_smi);
- err_disable_apb:
- 	clk_disable_unprepare(smi->clk_apb);
--err_put_pm:
--	pm_runtime_put_sync(smi->dev);
- 	return ret;
- }
- 
--static void mtk_smi_disable(const struct mtk_smi *smi)
-+static void mtk_smi_clk_disable(const struct mtk_smi *smi)
- {
- 	clk_disable_unprepare(smi->clk_gals1);
- 	clk_disable_unprepare(smi->clk_gals0);
- 	clk_disable_unprepare(smi->clk_smi);
- 	clk_disable_unprepare(smi->clk_apb);
--	pm_runtime_put_sync(smi->dev);
- }
- 
- int mtk_smi_larb_get(struct device *larbdev)
- {
--	struct mtk_smi_larb *larb = dev_get_drvdata(larbdev);
--	const struct mtk_smi_larb_gen *larb_gen = larb->larb_gen;
--	struct mtk_smi *common = dev_get_drvdata(larb->smi_common_dev);
--	int ret;
-+	int ret = pm_runtime_get_sync(larbdev);
- 
--	/* Enable the smi-common's power and clocks */
--	ret = mtk_smi_enable(common);
--	if (ret)
--		return ret;
--
--	/* Enable the larb's power and clocks */
--	ret = mtk_smi_enable(&larb->smi);
--	if (ret) {
--		mtk_smi_disable(common);
--		return ret;
--	}
--
--	/* Configure the iommu info for this larb */
--	larb_gen->config_port(larbdev);
--
--	return 0;
-+	return (ret < 0) ? ret : 0;
- }
- EXPORT_SYMBOL_GPL(mtk_smi_larb_get);
- 
- void mtk_smi_larb_put(struct device *larbdev)
- {
--	struct mtk_smi_larb *larb = dev_get_drvdata(larbdev);
--	struct mtk_smi *common = dev_get_drvdata(larb->smi_common_dev);
--
--	/*
--	 * Don't de-configure the iommu info for this larb since there may be
--	 * several modules in this larb.
--	 * The iommu info will be reset after power off.
--	 */
--
--	mtk_smi_disable(&larb->smi);
--	mtk_smi_disable(common);
-+	pm_runtime_put_sync(larbdev);
- }
- EXPORT_SYMBOL_GPL(mtk_smi_larb_put);
- 
-@@ -377,12 +342,52 @@ static int mtk_smi_larb_remove(struct platform_device *pdev)
+diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+index 470de8b..5d5341c 100644
+--- a/drivers/iommu/mtk_iommu.c
++++ b/drivers/iommu/mtk_iommu.c
+@@ -742,6 +742,7 @@ static int __maybe_unused mtk_iommu_suspend(struct device *dev)
+ 	reg->int_control0 = readl_relaxed(base + REG_MMU_INT_CONTROL0);
+ 	reg->int_main_control = readl_relaxed(base + REG_MMU_INT_MAIN_CONTROL);
+ 	reg->ivrp_paddr = readl_relaxed(base + REG_MMU_IVRP_PADDR);
++	reg->vld_pa_rng = readl_relaxed(base + REG_MMU_VLD_PA_RNG);
+ 	clk_disable_unprepare(data->bclk);
  	return 0;
  }
- 
-+static int __maybe_unused mtk_smi_larb_resume(struct device *dev)
-+{
-+	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
-+	const struct mtk_smi_larb_gen *larb_gen = larb->larb_gen;
-+	int ret;
-+
-+	/* Power on smi-common. */
-+	ret = pm_runtime_get_sync(larb->smi_common_dev);
-+	if (ret < 0) {
-+		dev_err(dev, "Failed to pm get for smi-common(%d).\n", ret);
-+		return ret;
-+	}
-+
-+	ret = mtk_smi_clk_enable(&larb->smi);
-+	if (ret < 0) {
-+		dev_err(dev, "Failed to enable clock(%d).\n", ret);
-+		pm_runtime_put_sync(larb->smi_common_dev);
-+		return ret;
-+	}
-+
-+	/* Configure the basic setting for this larb */
-+	larb_gen->config_port(dev);
-+
-+	return 0;
-+}
-+
-+static int __maybe_unused mtk_smi_larb_suspend(struct device *dev)
-+{
-+	struct mtk_smi_larb *larb = dev_get_drvdata(dev);
-+
-+	mtk_smi_clk_disable(&larb->smi);
-+	pm_runtime_put_sync(larb->smi_common_dev);
-+	return 0;
-+}
-+
-+static const struct dev_pm_ops smi_larb_pm_ops = {
-+	SET_RUNTIME_PM_OPS(mtk_smi_larb_suspend, mtk_smi_larb_resume, NULL)
-+};
-+
- static struct platform_driver mtk_smi_larb_driver = {
- 	.probe	= mtk_smi_larb_probe,
- 	.remove	= mtk_smi_larb_remove,
- 	.driver	= {
- 		.name = "mtk-smi-larb",
- 		.of_match_table = mtk_smi_larb_of_ids,
-+		.pm             = &smi_larb_pm_ops,
- 	}
+@@ -766,6 +767,7 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
+ 	writel_relaxed(reg->int_control0, base + REG_MMU_INT_CONTROL0);
+ 	writel_relaxed(reg->int_main_control, base + REG_MMU_INT_MAIN_CONTROL);
+ 	writel_relaxed(reg->ivrp_paddr, base + REG_MMU_IVRP_PADDR);
++	writel_relaxed(reg->vld_pa_rng, base + REG_MMU_VLD_PA_RNG);
+ 	if (m4u_dom)
+ 		writel(m4u_dom->cfg.arm_v7s_cfg.ttbr[0] & MMU_PT_ADDR_MASK,
+ 		       base + REG_MMU_PT_BASE_ADDR);
+diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+index 6b1f833..56b579c 100644
+--- a/drivers/iommu/mtk_iommu.h
++++ b/drivers/iommu/mtk_iommu.h
+@@ -24,6 +24,7 @@ struct mtk_iommu_suspend_reg {
+ 	u32				int_control0;
+ 	u32				int_main_control;
+ 	u32				ivrp_paddr;
++	u32				vld_pa_rng;
  };
  
-@@ -481,12 +486,38 @@ static int mtk_smi_common_remove(struct platform_device *pdev)
- 	return 0;
- }
- 
-+static int __maybe_unused mtk_smi_common_resume(struct device *dev)
-+{
-+	struct mtk_smi *common = dev_get_drvdata(dev);
-+	int ret;
-+
-+	ret = mtk_smi_clk_enable(common);
-+	if (ret) {
-+		dev_err(common->dev, "Failed to enable clock(%d).\n", ret);
-+		return ret;
-+	}
-+	return 0;
-+}
-+
-+static int __maybe_unused mtk_smi_common_suspend(struct device *dev)
-+{
-+	struct mtk_smi *common = dev_get_drvdata(dev);
-+
-+	mtk_smi_clk_disable(common);
-+	return 0;
-+}
-+
-+static const struct dev_pm_ops smi_common_pm_ops = {
-+	SET_RUNTIME_PM_OPS(mtk_smi_common_suspend, mtk_smi_common_resume, NULL)
-+};
-+
- static struct platform_driver mtk_smi_common_driver = {
- 	.probe	= mtk_smi_common_probe,
- 	.remove = mtk_smi_common_remove,
- 	.driver	= {
- 		.name = "mtk-smi-common",
- 		.of_match_table = mtk_smi_common_of_ids,
-+		.pm             = &smi_common_pm_ops,
- 	}
- };
- 
+ enum mtk_iommu_plat {
 -- 
 1.9.1
 
