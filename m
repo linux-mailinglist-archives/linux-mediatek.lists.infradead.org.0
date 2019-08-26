@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 23D749D686
-	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 21:27:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7F8509D68C
+	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 21:27:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,35 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=oxudgr6DZJhFng98v9d/wkp2xJX+y01jgT/JKTO6Pfo=; b=EZCSYgWb6dMZ0bGRkmW24T9zZa
-	59Z2q54dtlRb6vZzYJEWbiCnGAFiFd+azNdHIjpR2/fFa53v49BHYwjGN/PkxBGkXKebNnMKIA13B
-	9MThR3Mp8+i7V/EZ8wEWdgGe5AqPrTEspdxbYM3pJU4KmMAiNipUBIN8zqOgh2XBtun29cqpWJfOh
-	LJsZGCJ8wZg7vY6VdC1u8kboJEEiuLghlAigd9jmBl51L3aTtVrKbBK9DZVqVhIguw8fIg04MjHxR
-	hZKh0sTzc8K00Yr6RUx2I+LNwAIfOQCH/gXxNLtDYhqdbOcyuYa74OpUBtkn6wxal/0nhfDGUiKAi
-	TEHEfVtg==;
+	bh=hOhz5wVY08e5YJUD2hDqIUy0NDnKzyPtD75jN0A7jqA=; b=W1PLBLcttssLzrto24IDNjAn7F
+	Zsy+mF9JMSxZXdWX67COV6ba+vfHfisT55YKLbBfSam1euHlGpY3qXVURS9bA8i1hRIz6ybdZ4RlY
+	dQRHWHCIxOGIEn/9psWOa0JXcO4CT9UOTfVqRMUHTk79iQWa/eHeirgFtTQ0PIAfBqCfUPmxjpiXN
+	QHx2RC1I4DcJH4P10z9fyf9QFsj11Af0sXfTmeqODL+2UmggR6Iu3Fg6Ue44sHoWkUzBBK5IdRiug
+	LjZgpElU3FtTZcTc3y0HnVdR2NfZEU8OCLXW/pJ1NaOXbLycZJhWU/ZmD5DGF6DtmAaLYbe399KUT
+	FeAOLR+A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2Kdp-00010S-Rk; Mon, 26 Aug 2019 19:27:01 +0000
+	id 1i2Kdx-000157-5Z; Mon, 26 Aug 2019 19:27:09 +0000
 Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2Kdk-0000yZ-Vq; Mon, 26 Aug 2019 19:26:58 +0000
+ id 1i2Kdt-00013M-Fc; Mon, 26 Aug 2019 19:27:07 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: andrzej.p) with ESMTPSA id 20F07283D3B
+ (Authenticated sender: andrzej.p) with ESMTPSA id 93856283D3B
 From: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH RESEND 05/14] drm: rockchip: Provide ddc symlink in
- rk3066_hdmi sysfs directory
-Date: Mon, 26 Aug 2019 21:25:47 +0200
-Message-Id: <4cad24dde4508cec17483f983da08226ba7e48b0.1566845537.git.andrzej.p@collabora.com>
+Subject: [PATCH RESEND 06/14] drm: rockchip: Provide ddc symlink in inno_hdmi
+ sysfs directory
+Date: Mon, 26 Aug 2019 21:25:48 +0200
+Message-Id: <a1f778d328328f15300338600bb2400850717300.1566845537.git.andrzej.p@collabora.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <cover.1566845537.git.andrzej.p@collabora.com>
 References: <cover.1566845537.git.andrzej.p@collabora.com>
 In-Reply-To: <cover.1566845537.git.andrzej.p@collabora.com>
 References: <cover.1566845537.git.andrzej.p@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190826_122657_294754_CBB85D3D 
-X-CRM114-Status: UNSURE (   9.75  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190826_122705_859029_5CF92411 
+X-CRM114-Status: GOOD (  10.45  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -61,8 +60,8 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
- Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
- Ramalingam C <ramalingam.c@intel.com>,
+ Sam Ravnborg <sam@ravnborg.org>, Neil Armstrong <narmstrong@baylibre.com>,
+ David Airlie <airlied@linux.ie>, Ramalingam C <ramalingam.c@intel.com>,
  Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
  Chris Wilson <chris@chris-wilson.co.uk>,
  Bhawanpreet Lakha <Bhawanpreet.Lakha@amd.com>,
@@ -90,8 +89,8 @@ Cc: =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
  Thomas Gleixner <tglx@linutronix.de>, Sean Paul <sean@poorly.run>,
  linux-arm-kernel@lists.infradead.org, Jernej Skrabec <jernej.skrabec@siol.net>,
  amd-gfx@lists.freedesktop.org, Eric Anholt <eric@anholt.net>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Seung-Woo Kim <sw0312.kim@samsung.com>, Sandy Huang <hjc@rock-chips.com>,
+ Enrico Weigelt <info@metux.net>, Seung-Woo Kim <sw0312.kim@samsung.com>,
+ Sandy Huang <hjc@rock-chips.com>,
  Nicholas Kazlauskas <nicholas.kazlauskas@amd.com>,
  Todor Tomov <todor.tomov@linaro.org>,
  Kyungmin Park <kyungmin.park@samsung.com>, Daniel Vetter <daniel@ffwll.ch>,
@@ -109,22 +108,21 @@ Signed-off-by: Andrzej Pietrasiewicz <andrzej.p@collabora.com>
 Acked-by: Sam Ravnborg <sam@ravnborg.org>
 Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
 ---
- drivers/gpu/drm/rockchip/rk3066_hdmi.c | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
+ drivers/gpu/drm/rockchip/inno_hdmi.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/gpu/drm/rockchip/rk3066_hdmi.c b/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-index 85fc5f01f761..e874f5fdeec4 100644
---- a/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-+++ b/drivers/gpu/drm/rockchip/rk3066_hdmi.c
-@@ -564,9 +564,10 @@ rk3066_hdmi_register(struct drm_device *drm, struct rk3066_hdmi *hdmi)
+diff --git a/drivers/gpu/drm/rockchip/inno_hdmi.c b/drivers/gpu/drm/rockchip/inno_hdmi.c
+index ed344a795b4d..e5864e823020 100644
+--- a/drivers/gpu/drm/rockchip/inno_hdmi.c
++++ b/drivers/gpu/drm/rockchip/inno_hdmi.c
+@@ -624,8 +624,10 @@ static int inno_hdmi_register(struct drm_device *drm, struct inno_hdmi *hdmi)
  
  	drm_connector_helper_add(&hdmi->connector,
- 				 &rk3066_hdmi_connector_helper_funcs);
--	drm_connector_init(drm, &hdmi->connector,
--			   &rk3066_hdmi_connector_funcs,
+ 				 &inno_hdmi_connector_helper_funcs);
+-	drm_connector_init(drm, &hdmi->connector, &inno_hdmi_connector_funcs,
 -			   DRM_MODE_CONNECTOR_HDMIA);
 +	drm_connector_init_with_ddc(drm, &hdmi->connector,
-+				    &rk3066_hdmi_connector_funcs,
++				    &inno_hdmi_connector_funcs,
 +				    DRM_MODE_CONNECTOR_HDMIA,
 +				    hdmi->ddc);
  
