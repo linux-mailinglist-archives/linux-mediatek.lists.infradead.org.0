@@ -2,85 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 675629C9AF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 08:54:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D182D9C9EF
+	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 09:11:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=B3XBBMdcIihuJYLNfY42PZ+DRL4b78ziLi1YhgBdvXo=; b=mH/u5pZEbAhbAk
-	3rlM5Dtvu4SGMZVbM5cRMmt8n3oXrHtUP4Ilhm46tA1jwUE8RMI1zhYTnVEp3JwWUuHKPQG4U1dDR
-	7eEO2D2Knch0Bg/VvORG5t4nXXGC19izRRTDDKp7S/kO3BAe+faiHIThuepENs0NqHgIK7aJVXBFk
-	P3rHsY6861Zu/kHW1bPbrdLbTscEn44+w3JFCQLxdVI1YjNP7HbWzeRHeUz2qsfE/AVjCENA8TlQQ
-	Ju28duXzAPyxpuJ9MxfkPKAmHTMphBycVRiDVm2fg530vcroQtd0zvQ2++2uGYU41EIUj+Q8fFN3y
-	guJKVLH8HZqVBDwcim3Q==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
+	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=UYViC0Erbl2MpMG9Ekv/gRynDXAoDyFDn0bQa6zU67U=; b=c31OP+9x1HOKdahfbPaSFhVjI
+	2MmSfkAsTg+PgTGA7+oteWv4COxy44T57MehPb/Vj/HSonO2YtHtblUtjM5WIunKB0y69zpBq7J47
+	c84H7KkxDPHPP+YJVOGFbW3qQGh9haKwKYT3eKETA+7Yb62UTCvFtcUJatFzRw8+j2OC1etB2OWpN
+	qCEIfS19gQ/9Oe3bFzX3FE9N0vL2DmBd0imq6M3tMxn1xL+ahvzLn+QU9JldFnBrGDR5KhXnDQLg6
+	eM5h19Gi+lQjnj83mwaTJurAQxurSutTBlp6m5Zu/F0zRCBREhD8aPSh2+4to9NsIiNjYpuwHlftR
+	jO2W380cA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i28tp-0004Tx-RL; Mon, 26 Aug 2019 06:54:45 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i28tl-0004Rb-MJ
- for linux-mediatek@lists.infradead.org; Mon, 26 Aug 2019 06:54:43 +0000
-Received: by mail-ed1-x542.google.com with SMTP id h13so24943072edq.10
- for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:54:41 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=nTkNb4qhu4LWrFg09llWi3oBh88pK95w54xsWrsdjT0=;
- b=WRcwatvAI0WEvdFUv/sT0oyCxKW9JAWDmzw43+hawcVPvkP4MC+sOxq613oe7+u4MD
- bjj8wG02Jk6cwVwZCt36tlQmALBdiNQObpjmpl0NVmcWhLPGKFfJioYsChUsQ2SvXU+Z
- +1RwYI0ZvOyR/CpVy0n1vVMkrI8RqOW2IPN3E=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=nTkNb4qhu4LWrFg09llWi3oBh88pK95w54xsWrsdjT0=;
- b=TFXfK4K9fzg4lcUvyfb7NrnM7wLDbhDT2hn6BtXklGZ4TftFHVtYH6JbrBdgCmSV2f
- Cb+5orrCcj8ZIUALjLm9eS8HGq+XGPvRAM3mtJYhVdCPI3HGqVIJ4KXeiROfAJmDDU3T
- oIiqVbO819rtbWifN4v9hCjtfiVt9j802dsetCCKH8Qn07xaajKXqvmIKQyesfQ1d7Qw
- nB7bPSiJvXL9MDE8FVDt60tcY62Y7gvl++/fe8zLkj7dfDhCaFTe9wqtU1Ezv0NAMYVf
- hsI84EUyUkmrOzl3c8O+caKA1Y0rccYtHxR9OuYLIIByUJPkd2FpQMexovWtHpPwlbT9
- ExWw==
-X-Gm-Message-State: APjAAAUrG2fLYB0Srjb+C5b47FIFukG9qwW2B4VyodgF7u8KJjaeP8di
- NTpuezpYUZuU/8qHqejhdN/nO2StM0YjrQ==
-X-Google-Smtp-Source: APXvYqzOLrd25/HugpwfW/cLl+FYJev9SMI+tnFijGqBniiwCymwhCu6/2zwIL0O0SBiHrpG9/cU5g==
-X-Received: by 2002:a17:906:404a:: with SMTP id
- y10mr15258520ejj.101.1566802479953; 
- Sun, 25 Aug 2019 23:54:39 -0700 (PDT)
-Received: from mail-wr1-f47.google.com (mail-wr1-f47.google.com.
- [209.85.221.47])
- by smtp.gmail.com with ESMTPSA id oe21sm2944957ejb.44.2019.08.25.23.54.37
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Sun, 25 Aug 2019 23:54:38 -0700 (PDT)
-Received: by mail-wr1-f47.google.com with SMTP id p17so14147622wrf.11
- for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:54:37 -0700 (PDT)
-X-Received: by 2002:adf:fc03:: with SMTP id i3mr19059644wrr.48.1566802476916; 
- Sun, 25 Aug 2019 23:54:36 -0700 (PDT)
+	id 1i299i-0004TZ-5a; Mon, 26 Aug 2019 07:11:10 +0000
+Received: from mx.0dd.nl ([5.2.79.48])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1i299R-0004GV-7M; Mon, 26 Aug 2019 07:10:55 +0000
+Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mx.0dd.nl (Postfix) with ESMTPS id E15F95FB9C;
+ Mon, 26 Aug 2019 09:10:48 +0200 (CEST)
+Authentication-Results: mx.0dd.nl; dkim=pass (2048-bit key;
+ secure) header.d=vdorst.com header.i=@vdorst.com header.b="pmf2jINY"; 
+ dkim-atps=neutral
+Received: from www (www.vdorst.com [192.168.2.222])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.vdorst.com (Postfix) with ESMTPSA id 932C11D9D97F;
+ Mon, 26 Aug 2019 09:10:48 +0200 (CEST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com 932C11D9D97F
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
+ s=default; t=1566803448;
+ bh=nldrHn+KAKeYnid1IIOCpT7MYz4xEwc91l3x6SgF+6E=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=pmf2jINYRJh9VPHOycLU+JkTVk84l9+SH0R5yT6L0GCIN5y13UkDQg8XU5gh7Z1rs
+ a2fkMFSj33k6ov18h8wdC5FrcfKK2j+ZWMjHHlZTozWHTIVR+BQ638D3ZvN+DDzMo7
+ hNba0C6plwDPWYmE473SdQ+YZZZdvpgixDMwIu8+sTrpadfo9e0gT0FSQhmMBvp+Ve
+ Jv31tM4W27rQCcb6WjWVaTqDQUXI9Nea5lUy5q1X/J+QZL7pAfzQssZB0BvdlGukbI
+ cdeNqWwE85V+YQAye2auaD937iGkIVCk0ssYmgk/6P3QTSczN7Q8v8VXgg/l4yTgno
+ Zg2O3LDULsLIg==
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
+ www.vdorst.com (Horde Framework) with HTTPS; Mon, 26 Aug 2019 07:10:48 +0000
+Date: Mon, 26 Aug 2019 07:10:48 +0000
+Message-ID: <20190826071048.Horde.gwS9nzceYYiYGJLnJ6-x2hz@www.vdorst.com>
+From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
+To: Mao Wenan <maowenan@huawei.com>, sr@denx.de
+Subject: Re: [PATCH v2 -next] net: mediatek: remove set but not used
+ variable 'status'
+References: <20190824.142158.1506174328495468705.davem@davemloft.net>
+ <20190826013118.22720-1-maowenan@huawei.com>
+In-Reply-To: <20190826013118.22720-1-maowenan@huawei.com>
+User-Agent: Horde Application Framework 5
 MIME-Version: 1.0
-References: <20190819034331.13098-1-dongchun.zhu@mediatek.com>
- <20190819034331.13098-3-dongchun.zhu@mediatek.com>
- <20190821103038.GA148543@chromium.org>
- <20190821110542.GD31967@paasikivi.fi.intel.com>
-In-Reply-To: <20190821110542.GD31967@paasikivi.fi.intel.com>
-From: Tomasz Figa <tfiga@chromium.org>
-Date: Mon, 26 Aug 2019 15:54:25 +0900
-X-Gmail-Original-Message-ID: <CAAFQd5A-ze9FgDqNpPgyu7gA3nQPUW_G0zEG8ThNGjVEb=_jjA@mail.gmail.com>
-Message-ID: <CAAFQd5A-ze9FgDqNpPgyu7gA3nQPUW_G0zEG8ThNGjVEb=_jjA@mail.gmail.com>
-Subject: Re: [V3, 2/2] media: i2c: Add Omnivision OV02A10 camera sensor driver
-To: Sakari Ailus <sakari.ailus@linux.intel.com>
+Content-Disposition: inline
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190825_235441_776374_653B7234 
-X-CRM114-Status: GOOD (  23.41  )
+X-CRM114-CacheID: sfid-20190826_001053_832638_B03FA01B 
+X-CRM114-Status: GOOD (  14.31  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -90,7 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -102,90 +89,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream <srv_heupstream@mediatek.com>, shengnan.wang@mediatek.com,
- Louis Kuo <louis.kuo@mediatek.com>, Sj Huang <sj.huang@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- dongchun.zhu@mediatek.com, Matthias Brugger <matthias.bgg@gmail.com>,
- Cao Bing Bu <bingbu.cao@intel.com>, Mauro Carvalho Chehab <mchehab@kernel.org>,
- "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
- Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: nbd@openwrt.org, nelson.chang@mediatek.com, netdev@vger.kernel.org,
+ sean.wang@mediatek.com, kernel-janitors@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ john@phrozen.org, matthias.bgg@gmail.com, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Aug 21, 2019 at 8:05 PM Sakari Ailus
-<sakari.ailus@linux.intel.com> wrote:
->
-> Hi Tomasz,
->
-> On Wed, Aug 21, 2019 at 07:30:38PM +0900, Tomasz Figa wrote:
-[snip]
-> > Is it really correct to enable the clock before the regulators?
-> >
-> > According to the datasheet, it should be:
-> >  - PD pin HIGH,
-> >  - nRST pin LOW,
-> >  - DVDDIO and AVDD28 power up and stabilize,
-> >  - clock enabled,
-> >  - min 5 ms delay,
-> >  - PD pin LOW,
-> >  - min 4 ms delay,
-> >  - nRST pin HIGH,
-> >  - min 5 ms delay,
-> >  - I2C interface ready.
-> >
-> > > +
-> > > +   /* Note: set 0 is high, set 1 is low */
-> >
-> > Why is that? If there is some inverter on the way that should be handled
-> > outside of this driver. (GPIO DT bindings have flags for this purpose.
-> >
-> > If the pins are nRESET and nPOWERDOWN in the hardware datasheet, we should
-> > call them like this in the driver too (+/- the lowercase and underscore
-> > convention).
-> >
-> > According to the datasheet, the reset pin is called RST and inverted, so we should
-> > call it n_rst, but the powerdown signal, called PD, is not inverted, so pd
-> > would be the right name.
->
-> For what it's worth sensors generally have xshutdown (or reset) pin that is
-> active high. Looking at the code, it is not the case here. It's a bit odd
-> since the usual arrangement saves power when the camera is not in use; it's
-> not a lot but still. Oh well.
->
-
-I guess we could drive powerdown low after disabling the regulators
-and clocks, but that wouldn't work for the cases where the regulators
-are actually shared with something else, especially if that is not
-related to the same camera module.
-
-> ...
->
-> > > +static struct i2c_driver ov02a10_i2c_driver = {
-> > > +   .driver = {
-> > > +           .name = "ov02a10",
-> > > +           .pm = &ov02a10_pm_ops,
-> > > +           .of_match_table = ov02a10_of_match,
-> >
-> > Please use of_match_ptr() wrapper.
->
-> Not really needed; the driver does expect regulators, GPIOs etc., but by
-> leaving out of_match_ptr(), the driver will also probe on ACPI based
-> systems.
-
-Good point, I always keep forgetting about the ability to probe OF
-drivers from ACPI. Then we also need to remove the #if
-IS_ENABLED(CONFIG_OF) from ov02a10_of_match.
-
-Best regards,
-Tomasz
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+TGV0J3MgYWRkIFN0ZWZhbiB0byB0aGUgY29udmVyc2F0aW9uLgpIZSBpcyB0aGUgYXV0aG9yIG9m
+IHRoaXMgY29tbWl0LgoKUXVvdGluZyBNYW8gV2VuYW4gPG1hb3dlbmFuQGh1YXdlaS5jb20+OgoK
+PiBGaXhlcyBnY2MgJy1XdW51c2VkLWJ1dC1zZXQtdmFyaWFibGUnIHdhcm5pbmc6Cj4gZHJpdmVy
+cy9uZXQvZXRoZXJuZXQvbWVkaWF0ZWsvbXRrX2V0aF9zb2MuYzogSW4gZnVuY3Rpb24gbXRrX2hh
+bmRsZV9pcnE6Cj4gZHJpdmVycy9uZXQvZXRoZXJuZXQvbWVkaWF0ZWsvbXRrX2V0aF9zb2MuYzox
+OTUxOjY6IHdhcm5pbmc6ICAKPiB2YXJpYWJsZSBzdGF0dXMgc2V0IGJ1dCBub3QgdXNlZCBbLVd1
+bnVzZWQtYnV0LXNldC12YXJpYWJsZV0KPgo+IEZpeGVzOiAyOTZjOTEyMDc1MmIgKCJuZXQ6IGV0
+aGVybmV0OiBtZWRpYXRlazogQWRkIE1UNzYyOC84OCBTb0Mgc3VwcG9ydCIpCj4gU2lnbmVkLW9m
+Zi1ieTogTWFvIFdlbmFuIDxtYW93ZW5hbkBodWF3ZWkuY29tPgo+IC0tLQo+ICB2MjogY2hhbmdl
+IGZvcm1hdCBvZiAnRml4ZXMnIHRhZy4KPiAgZHJpdmVycy9uZXQvZXRoZXJuZXQvbWVkaWF0ZWsv
+bXRrX2V0aF9zb2MuYyB8IDIgLS0KPiAgMSBmaWxlIGNoYW5nZWQsIDIgZGVsZXRpb25zKC0pCj4K
+PiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQvZXRoZXJuZXQvbWVkaWF0ZWsvbXRrX2V0aF9zb2Mu
+YyAgCj4gYi9kcml2ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9tdGtfZXRoX3NvYy5jCj4gaW5k
+ZXggOGRkYmI4ZC4uYmI3ZDYyMyAxMDA2NDQKPiAtLS0gYS9kcml2ZXJzL25ldC9ldGhlcm5ldC9t
+ZWRpYXRlay9tdGtfZXRoX3NvYy5jCj4gKysrIGIvZHJpdmVycy9uZXQvZXRoZXJuZXQvbWVkaWF0
+ZWsvbXRrX2V0aF9zb2MuYwo+IEBAIC0xOTQ4LDkgKzE5NDgsNyBAQCBzdGF0aWMgaXJxcmV0dXJu
+X3QgbXRrX2hhbmRsZV9pcnFfdHgoaW50IGlycSwgIAo+IHZvaWQgKl9ldGgpCj4gIHN0YXRpYyBp
+cnFyZXR1cm5fdCBtdGtfaGFuZGxlX2lycShpbnQgaXJxLCB2b2lkICpfZXRoKQo+ICB7Cj4gIAlz
+dHJ1Y3QgbXRrX2V0aCAqZXRoID0gX2V0aDsKPiAtCXUzMiBzdGF0dXM7Cj4KPiAtCXN0YXR1cyA9
+IG10a19yMzIoZXRoLCBNVEtfUERNQV9JTlRfU1RBVFVTKTsKCkhpIFN0ZWZhbiwKCllvdSBhZGRl
+ZCBhbiBleHRyYSBNVEtfUERNQV9JTlRfU1RBVFVTIHJlYWQgaW4gbXRrX2hhbmRsZV9pcnEoKQpJ
+cyB0aGF0IHJlYWQgbmVjZXNzYXJ5IHRvIHdvcmsgcHJvcGVybHk/CgpHcmVhdHMsCgpSZW7DqQoK
+Cj4gIAlpZiAobXRrX3IzMihldGgsIE1US19QRE1BX0lOVF9NQVNLKSAmIE1US19SWF9ET05FX0lO
+VCkgewo+ICAJCWlmIChtdGtfcjMyKGV0aCwgTVRLX1BETUFfSU5UX1NUQVRVUykgJiBNVEtfUlhf
+RE9ORV9JTlQpCj4gIAkJCW10a19oYW5kbGVfaXJxX3J4KGlycSwgX2V0aCk7Cj4gLS0KPiAyLjcu
+NAoKCgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxp
+bnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQu
+b3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVk
+aWF0ZWsK
