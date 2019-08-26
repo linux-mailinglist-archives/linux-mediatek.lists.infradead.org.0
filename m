@@ -2,86 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DE69F9C985
-	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 08:37:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 675629C9AF
+	for <lists+linux-mediatek@lfdr.de>; Mon, 26 Aug 2019 08:54:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tJ8sJGokKpuIExynchSBzhmo2mi1UAOd3JoHjopdGYs=; b=Bgh8Me576yA8OG
-	RsKf/qj8RTIzbVD/3ju8UrD2LhOTm3yZZmlbA3Z2WE3Os9hVNYNIjX6Jzas4Kq4O+AoYefPRaGX3u
-	Ei38FGdmXdsRRIWlgyiPN+BBcsdZf4ATtwwNZmkCGcpXKvfJgmj/dBSC6N0Wpl4XjjmypqlLDmBwl
-	jivO5lrr7PyrWCsgD9jLtaYS8KGrVXeLpzajOhFAkHJUJtCykcdEc/E9p9z4hXbemfZUyCInACcwg
-	sQ/vVMZNTGbEmL4+V7Ld5Wn6gTNtYE2s3iWBrw1xvRz6Px7LlZe2hJyiyrPnehN8siXcm52eK+njx
-	ZpShgxqDf6vtyFv57StQ==;
+	List-Owner; bh=B3XBBMdcIihuJYLNfY42PZ+DRL4b78ziLi1YhgBdvXo=; b=mH/u5pZEbAhbAk
+	3rlM5Dtvu4SGMZVbM5cRMmt8n3oXrHtUP4Ilhm46tA1jwUE8RMI1zhYTnVEp3JwWUuHKPQG4U1dDR
+	7eEO2D2Knch0Bg/VvORG5t4nXXGC19izRRTDDKp7S/kO3BAe+faiHIThuepENs0NqHgIK7aJVXBFk
+	P3rHsY6861Zu/kHW1bPbrdLbTscEn44+w3JFCQLxdVI1YjNP7HbWzeRHeUz2qsfE/AVjCENA8TlQQ
+	Ju28duXzAPyxpuJ9MxfkPKAmHTMphBycVRiDVm2fg530vcroQtd0zvQ2++2uGYU41EIUj+Q8fFN3y
+	guJKVLH8HZqVBDwcim3Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i28d3-0007oX-2V; Mon, 26 Aug 2019 06:37:25 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1i28tp-0004Tx-RL; Mon, 26 Aug 2019 06:54:45 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i28cA-0007bq-WB
- for linux-mediatek@lists.infradead.org; Mon, 26 Aug 2019 06:36:32 +0000
-Received: by mail-ed1-x544.google.com with SMTP id g8so24908136edm.6
- for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:36:30 -0700 (PDT)
+ id 1i28tl-0004Rb-MJ
+ for linux-mediatek@lists.infradead.org; Mon, 26 Aug 2019 06:54:43 +0000
+Received: by mail-ed1-x542.google.com with SMTP id h13so24943072edq.10
+ for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:54:41 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=dA2WZyMm67w3lO2i0AwQCrVkkd/5XMnhJesFUl2G2rU=;
- b=C4YDeZtuVwQGdLrgUjSHPgr3obyG56oJ9qOyoHqZVYDtnV3aKIZuzTZ3pvAqLgP+9D
- 3o0OcS6arw/aiYkexbBui+5rQIgxrzMnO4OeaU7CYczkUWBuaVHH1y8sp8jO/FeEBaOZ
- eBZJ8YiLcvvqjYk38LgndlGhf2Im4QlTXQfxk=
+ :cc; bh=nTkNb4qhu4LWrFg09llWi3oBh88pK95w54xsWrsdjT0=;
+ b=WRcwatvAI0WEvdFUv/sT0oyCxKW9JAWDmzw43+hawcVPvkP4MC+sOxq613oe7+u4MD
+ bjj8wG02Jk6cwVwZCt36tlQmALBdiNQObpjmpl0NVmcWhLPGKFfJioYsChUsQ2SvXU+Z
+ +1RwYI0ZvOyR/CpVy0n1vVMkrI8RqOW2IPN3E=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=dA2WZyMm67w3lO2i0AwQCrVkkd/5XMnhJesFUl2G2rU=;
- b=BUuXGFMFy6HIAECo19iFaauAPFAZp4UGjGcthJK1GjOCvxGVzwNWeQROl7DgYdglmo
- RKwfWMP3JvMtqOFlENEoFRz/pTx7VUkhKb9wqyvZyVDia9lPn+9ClXMevzuhEhsVfXi6
- IYcpFTRVSIfwSNVSleIA8XS/bejo30ixiWp8lpwe32Ppc4neCdlN9AHajOGHiRFc31r9
- 724wMhcYUttS1+3boVoLPmRo+110ilh4UwqXVJp7xvzKJOh+786L+ZAXTXZWPebeo1C/
- B20qfPxs9n8dWM64VOVxJ2EnRg06CGUEbaQtP2N4UZORnzjjtNt/WoiKy0eHEJb3QZuI
- Vjmw==
-X-Gm-Message-State: APjAAAXgcw/2DRIA6tJxaFF23ZgAmoIBoK/E35hVQq+96IyyJd8wfaxI
- ahl07U9up35sr3GNUNTKzy/mfJKvbz5DZQ==
-X-Google-Smtp-Source: APXvYqwnx631sOFYcmJyO8oeWe6HAgm/FjKEXTojxML/raOvo5k+suILed1l50eDvLkFP+7cT1lB9A==
-X-Received: by 2002:aa7:c353:: with SMTP id j19mr17146016edr.292.1566801389177; 
- Sun, 25 Aug 2019 23:36:29 -0700 (PDT)
-Received: from mail-wm1-f46.google.com (mail-wm1-f46.google.com.
- [209.85.128.46])
- by smtp.gmail.com with ESMTPSA id x42sm1075517ede.24.2019.08.25.23.36.25
+ bh=nTkNb4qhu4LWrFg09llWi3oBh88pK95w54xsWrsdjT0=;
+ b=TFXfK4K9fzg4lcUvyfb7NrnM7wLDbhDT2hn6BtXklGZ4TftFHVtYH6JbrBdgCmSV2f
+ Cb+5orrCcj8ZIUALjLm9eS8HGq+XGPvRAM3mtJYhVdCPI3HGqVIJ4KXeiROfAJmDDU3T
+ oIiqVbO819rtbWifN4v9hCjtfiVt9j802dsetCCKH8Qn07xaajKXqvmIKQyesfQ1d7Qw
+ nB7bPSiJvXL9MDE8FVDt60tcY62Y7gvl++/fe8zLkj7dfDhCaFTe9wqtU1Ezv0NAMYVf
+ hsI84EUyUkmrOzl3c8O+caKA1Y0rccYtHxR9OuYLIIByUJPkd2FpQMexovWtHpPwlbT9
+ ExWw==
+X-Gm-Message-State: APjAAAUrG2fLYB0Srjb+C5b47FIFukG9qwW2B4VyodgF7u8KJjaeP8di
+ NTpuezpYUZuU/8qHqejhdN/nO2StM0YjrQ==
+X-Google-Smtp-Source: APXvYqzOLrd25/HugpwfW/cLl+FYJev9SMI+tnFijGqBniiwCymwhCu6/2zwIL0O0SBiHrpG9/cU5g==
+X-Received: by 2002:a17:906:404a:: with SMTP id
+ y10mr15258520ejj.101.1566802479953; 
+ Sun, 25 Aug 2019 23:54:39 -0700 (PDT)
+Received: from mail-wr1-f47.google.com (mail-wr1-f47.google.com.
+ [209.85.221.47])
+ by smtp.gmail.com with ESMTPSA id oe21sm2944957ejb.44.2019.08.25.23.54.37
  for <linux-mediatek@lists.infradead.org>
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Sun, 25 Aug 2019 23:36:26 -0700 (PDT)
-Received: by mail-wm1-f46.google.com with SMTP id 10so14273658wmp.3
- for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:36:25 -0700 (PDT)
-X-Received: by 2002:a05:600c:254a:: with SMTP id
- e10mr20720968wma.113.1566801385282; 
- Sun, 25 Aug 2019 23:36:25 -0700 (PDT)
+ Sun, 25 Aug 2019 23:54:38 -0700 (PDT)
+Received: by mail-wr1-f47.google.com with SMTP id p17so14147622wrf.11
+ for <linux-mediatek@lists.infradead.org>; Sun, 25 Aug 2019 23:54:37 -0700 (PDT)
+X-Received: by 2002:adf:fc03:: with SMTP id i3mr19059644wrr.48.1566802476916; 
+ Sun, 25 Aug 2019 23:54:36 -0700 (PDT)
 MIME-Version: 1.0
-References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
- <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
- <20190802082815.GA203993@chromium.org> <1566724680.20680.8.camel@mtksdccf07>
-In-Reply-To: <1566724680.20680.8.camel@mtksdccf07>
+References: <20190819034331.13098-1-dongchun.zhu@mediatek.com>
+ <20190819034331.13098-3-dongchun.zhu@mediatek.com>
+ <20190821103038.GA148543@chromium.org>
+ <20190821110542.GD31967@paasikivi.fi.intel.com>
+In-Reply-To: <20190821110542.GD31967@paasikivi.fi.intel.com>
 From: Tomasz Figa <tfiga@chromium.org>
-Date: Mon, 26 Aug 2019 15:36:13 +0900
-X-Gmail-Original-Message-ID: <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
-Message-ID: <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
-Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
-To: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
+Date: Mon, 26 Aug 2019 15:54:25 +0900
+X-Gmail-Original-Message-ID: <CAAFQd5A-ze9FgDqNpPgyu7gA3nQPUW_G0zEG8ThNGjVEb=_jjA@mail.gmail.com>
+Message-ID: <CAAFQd5A-ze9FgDqNpPgyu7gA3nQPUW_G0zEG8ThNGjVEb=_jjA@mail.gmail.com>
+Subject: Re: [V3, 2/2] media: i2c: Add Omnivision OV02A10 camera sensor driver
+To: Sakari Ailus <sakari.ailus@linux.intel.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190825_233631_035205_D1BC061B 
-X-CRM114-Status: GOOD (  42.32  )
+X-CRM114-CacheID: sfid-20190825_235441_776374_653B7234 
+X-CRM114-Status: GOOD (  23.41  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
- [list.dnswl.org]
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -101,393 +102,85 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
- =?UTF-8?B?RnJlZGVyaWMgQ2hlbiAo6Zmz5L+K5YWDKQ==?= <Frederic.Chen@mediatek.com>,
- =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- =?UTF-8?B?UG8tWWFuZyBIdWFuZyAo6buD5p+P6Zm9KQ==?= <po-yang.huang@mediatek.com>,
- "suleiman@chromium.org" <suleiman@chromium.org>,
- "shik@chromium.org" <shik@chromium.org>,
- =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
- =?UTF-8?B?U2ogSHVhbmcgKOm7g+S/oeeSiyk=?= <sj.huang@mediatek.com>,
- "yuzhao@chromium.org" <yuzhao@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "zwisler@chromium.org" <zwisler@chromium.org>,
- "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
- "mchehab@kernel.org" <mchehab@kernel.org>,
- "laurent.pinchart+renesas@ideasonboard.com"
- <laurent.pinchart+renesas@ideasonboard.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream <srv_heupstream@mediatek.com>, shengnan.wang@mediatek.com,
+ Louis Kuo <louis.kuo@mediatek.com>, Sj Huang <sj.huang@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ dongchun.zhu@mediatek.com, Matthias Brugger <matthias.bgg@gmail.com>,
+ Cao Bing Bu <bingbu.cao@intel.com>, Mauro Carvalho Chehab <mchehab@kernel.org>,
+ "list@263.net:IOMMU DRIVERS <iommu@lists.linux-foundation.org>,
+ Joerg Roedel <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Jerry,
-
-On Sun, Aug 25, 2019 at 6:18 PM Jerry-ch Chen
-<Jerry-ch.Chen@mediatek.com> wrote:
+On Wed, Aug 21, 2019 at 8:05 PM Sakari Ailus
+<sakari.ailus@linux.intel.com> wrote:
 >
 > Hi Tomasz,
 >
-> On Fri, 2019-08-02 at 16:28 +0800, Tomasz Figa wrote:
-> > Hi Jerry,
-> >
-> > On Tue, Jul 09, 2019 at 04:41:12PM +0800, Jerry-ch Chen wrote:
-> > > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> > >
-> > > This patch adds the driver of Face Detection (FD) unit in
-> > > Mediatek camera system, providing face detection function.
-> > >
-> > > The mtk-isp directory will contain drivers for multiple IP
-> > > blocks found in Mediatek ISP system. It will include ISP Pass 1
-> > > driver (CAM), sensor interface driver, DIP driver and face
-> > > detection driver.
-> > >
-> > > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> > > ---
-> > >  drivers/media/platform/Makefile               |    2 +
-> > >  drivers/media/platform/mtk-isp/fd/Makefile    |    5 +
-> > >  drivers/media/platform/mtk-isp/fd/mtk_fd.h    |  157 +++
-> > >  drivers/media/platform/mtk-isp/fd/mtk_fd_40.c | 1259 +++++++++++++++++++++++++
-> > >  include/uapi/linux/v4l2-controls.h            |    4 +
-> > >  5 files changed, 1427 insertions(+)
-> > >  create mode 100644 drivers/media/platform/mtk-isp/fd/Makefile
-> > >  create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd.h
-> > >  create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd_40.c
-> > >
-> >
-> > Thanks for the patch! I finally got a chance to fully review the code. Sorry
-> > for the delay. Please check my comments inline.
-> >
-> I appreciate your comments.
-> I've fixed most of the comments and verifying them,
-> Sorry for the delay, here is the reply.
->
-
-Thanks for replying to all the comments, it's very helpful. I'll snip
-the parts that I don't have any further comments.
-
+> On Wed, Aug 21, 2019 at 07:30:38PM +0900, Tomasz Figa wrote:
 [snip]
-
-> > > +   if (usercount == 1) {
-> > > +           pm_runtime_get_sync(&fd_dev->pdev->dev);
-> > > +           if (mtk_fd_hw_enable(fd_hw)) {
-> > > +                   pm_runtime_put_sync(&fd_dev->pdev->dev);
-> > > +                   atomic_dec_return(&fd_hw->fd_user_cnt);
-> > > +                   mutex_unlock(&fd_hw->fd_hw_lock);
-> > > +                   return -EINVAL;
-> > > +           }
-> > > +   }
+> > Is it really correct to enable the clock before the regulators?
 > >
-> > This is a simple mem-to-mem device, so there is no reason to keep it active
-> > all the time it's streaming. Please just get the runtime PM counter when
-> > queuing a job to the hardware and release it when the job finishes.
+> > According to the datasheet, it should be:
+> >  - PD pin HIGH,
+> >  - nRST pin LOW,
+> >  - DVDDIO and AVDD28 power up and stabilize,
+> >  - clock enabled,
+> >  - min 5 ms delay,
+> >  - PD pin LOW,
+> >  - min 4 ms delay,
+> >  - nRST pin HIGH,
+> >  - min 5 ms delay,
+> >  - I2C interface ready.
 > >
-> > I guess we might still want to do the costly operations like rproc_boot()
-> > when we start streaming, though.
-> >
-> Do you mean by moving the pm_runtime_get/put stuff to the job execution
-> and job finish place?
-
-Yes.
-
-> the rproc_boot() operation will be done here.
->
-
-How much time does the rproc_boot() operation take?
-
-[snip]
-
 > > > +
-> > > +           pm_runtime_put_sync(&fd_dev->pdev->dev);
+> > > +   /* Note: set 0 is high, set 1 is low */
 > >
-> > Any reason to use pm_runtime_put_sync() over pm_runtime_put()?
+> > Why is that? If there is some inverter on the way that should be handled
+> > outside of this driver. (GPIO DT bindings have flags for this purpose.
 > >
-> No special reason to do so, the pm_runtime_put_sync here will be moved
-> to the place each job finished.
+> > If the pins are nRESET and nPOWERDOWN in the hardware datasheet, we should
+> > call them like this in the driver too (+/- the lowercase and underscore
+> > convention).
+> >
+> > According to the datasheet, the reset pin is called RST and inverted, so we should
+> > call it n_rst, but the powerdown signal, called PD, is not inverted, so pd
+> > would be the right name.
+>
+> For what it's worth sensors generally have xshutdown (or reset) pin that is
+> active high. Looking at the code, it is not the case here. It's a bit odd
+> since the usual arrangement saves power when the camera is not in use; it's
+> not a lot but still. Oh well.
 >
 
-If there is no reason, then the _sync() variant shouldn't be used, as
-it could affect the performance negatively.
+I guess we could drive powerdown low after disabling the regulators
+and clocks, but that wouldn't work for the cases where the regulators
+are actually shared with something else, especially if that is not
+related to the same camera module.
 
-[snip]
-
-> > > +static int mtk_fd_hw_job_exec(struct mtk_fd_hw *fd_hw,
-> > > +                         struct fd_hw_param *fd_param,
-> > > +                         void *output_vaddr)
-> > > +{
-> > > +   struct fd_user_output *fd_output;
-> > > +   struct ipi_message fd_ipi_msg;
-> > > +   int ret;
-> > > +   u32 num;
-> > > +
-> > > +   if (fd_param->user_param.src_img_fmt == FMT_UNKNOWN)
-> > > +           goto param_err;
-> >
-> > Is this possible?
-> >
-> Only if user set wrong format, I will remove this.
+> ...
 >
-
-It shouldn't be possible to set a wrong format, because TRY_/S_FMT
-should adjust what the user set to something that is valid.
-
-> > > +
-> > > +   mutex_lock(&fd_hw->fd_hw_lock);
-> > > +   fd_hw->state = FD_ENQ;
+> > > +static struct i2c_driver ov02a10_i2c_driver = {
+> > > +   .driver = {
+> > > +           .name = "ov02a10",
+> > > +           .pm = &ov02a10_pm_ops,
+> > > +           .of_match_table = ov02a10_of_match,
 > >
-> > What is this state for?
-> >
-> It was for checking status, if a job is processing, the state is
-> FD_ENQ,
-> then we should wait for the last job to be done when pm_suspend().
+> > Please use of_match_ptr() wrapper.
 >
+> Not really needed; the driver does expect regulators, GPIOs etc., but by
+> leaving out of_match_ptr(), the driver will also probe on ACPI based
+> systems.
 
-If so, would it be possible to make it a bool and call is_processing?
-
-[snip]
-
-> > > +static int mtk_fd_vb2_queue_setup(struct vb2_queue *vq,
-> > > +                             unsigned int *num_buffers,
-> > > +                             unsigned int *num_planes,
-> > > +                             unsigned int sizes[],
-> > > +                             struct device *alloc_devs[])
-> > > +{
-> > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
-> > > +   struct device *dev = ctx->dev;
-> > > +   unsigned int size;
-> > > +
-> > > +   switch (vq->type) {
-> > > +   case V4L2_BUF_TYPE_META_CAPTURE:
-> > > +           size = ctx->dst_fmt.buffersize;
-> > > +           break;
-> > > +   case V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE:
-> > > +           size = ctx->src_fmt.plane_fmt[0].sizeimage;
-> > > +           break;
-> > > +   default:
-> > > +           dev_err(dev, "invalid queue type: %d\n", vq->type);
-> >
-> > We should need to handle this.
-> >
-> Do you mean by giving a size instead of return -EINVAL?
->
-
-Sorry, typo. I meant we shouldn't need to handle it, because we can't
-get any other queue type here.
-
-[snip]
-
-> > > +static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
-> > > +{
-> > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
-> > > +   struct vb2_buffer *vb;
-> >
-> > How do we guarantee here that the hardware isn't still accessing the buffers
-> > removed below?
-> >
-> Maybe we can check the driver state flag and aborting the unfinished
-> jobs?
-> (fd_hw->state == FD_ENQ)
->
-
-Yes, we need to either cancel or wait for the currently processing
-job. It depends on hardware capabilities, but cancelling is generally
-preferred for the lower latency.
-
-> > > +
-> > > +   if (V4L2_TYPE_IS_OUTPUT(vq->type))
-> > > +           vb = v4l2_m2m_src_buf_remove(ctx->fh.m2m_ctx);
-> > > +   else
-> > > +           vb = v4l2_m2m_dst_buf_remove(ctx->fh.m2m_ctx);
-> > > +
-> > > +   while (vb) {
-> > > +           v4l2_m2m_buf_done(to_vb2_v4l2_buffer(vb), VB2_BUF_STATE_ERROR);
-> > > +           if (V4L2_TYPE_IS_OUTPUT(vq->type))
-> > > +                   vb = v4l2_m2m_src_buf_remove(ctx->fh.m2m_ctx);
-> > > +           else
-> > > +                   vb = v4l2_m2m_dst_buf_remove(ctx->fh.m2m_ctx);
-> > > +   }
-> >
-> > We can use v4l2_m2m_buf_remove(). Also we can move the call into the loop
-> > condition:
-> >
-> > while ((vb == v4l2_m2m_buf_remove(...)))
-> >       v4l2_m2m_buf_done(...);
-> >
-> Ok, I will refine as following:
->
-> while ((vb = v4l2_m2m_buf_remove(V4L2_TYPE_IS_OUTPUT(vq->type)?
->   &m2m_ctx->out_q_ctx :
->   &m2m_ctx->cap_q_ctx)))
-> v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
-
-Please move the queue type check before the loop and save the queue
-context in a local variable.
-
-[snip]
-
-> > > +}
-> > > +
-> > > +static void mtk_fd_vb2_request_complete(struct vb2_buffer *vb)
-> > > +{
-> > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vb->vb2_queue);
-> > > +
-> > > +   v4l2_ctrl_request_complete(vb->req_obj.req, &ctx->hdl);
-> > > +}
-> > > +
-> > > +static void mtk_fd_fill_pixfmt_mp(struct v4l2_pix_format_mplane *dfmt,
-> > > +                             const struct v4l2_pix_format_mplane *sfmt)
-> > > +{
-> > > +   dfmt->width = sfmt->width;
-> > > +   dfmt->height = sfmt->height;
-> > > +   dfmt->pixelformat = sfmt->pixelformat;
-> > > +   dfmt->field = sfmt->field;
-> > > +   dfmt->colorspace = sfmt->colorspace;
-> > > +   dfmt->num_planes = sfmt->num_planes;
-> > > +
-> > > +   /* Use default */
-> > > +   dfmt->ycbcr_enc = V4L2_YCBCR_ENC_DEFAULT;
-> > > +   dfmt->quantization = V4L2_QUANTIZATION_DEFAULT;
-> > > +   dfmt->xfer_func =
-> > > +           V4L2_MAP_XFER_FUNC_DEFAULT(dfmt->colorspace);
-> > > +   dfmt->plane_fmt[0].bytesperline = dfmt->width * 2;
-> > > +   dfmt->plane_fmt[0].sizeimage =
-> > > +           dfmt->height * dfmt->plane_fmt[0].bytesperline;
-> > > +   memset(dfmt->reserved, 0, sizeof(dfmt->reserved));
-> > > +}
-> >
-> > Could we unify this function with mtk_fd_m2m_try_fmt_out_mp()? That function
-> > should be almost directly reusable for the default format initialization +/-
-> > the arguments passed to it.
-> >
-> Ok, I will try to reuse it as following:
->
-> static void mtk_fd_fill_pixfmt_mp(struct v4l2_pix_format_mplane *dfmt,
->   const struct v4l2_pix_format_mplane *sfmt)
-> {
-> dfmt->field = V4L2_FIELD_NONE;
-> dfmt->colorspace = V4L2_COLORSPACE_BT2020;
-> dfmt->num_planes = sfmt->num_planes;
-> dfmt->ycbcr_enc = V4L2_YCBCR_ENC_DEFAULT;
-> dfmt->quantization = V4L2_QUANTIZATION_DEFAULT;
-> dfmt->xfer_func =
-> V4L2_MAP_XFER_FUNC_DEFAULT(dfmt->colorspace);
->
-> /* Keep user setting as possible */
-> dfmt->width = clamp(dfmt->width,
->     MTK_FD_OUTPUT_MIN_WIDTH,
->     MTK_FD_OUTPUT_MAX_WIDTH);
-> dfmt->height = clamp(dfmt->height,
->      MTK_FD_OUTPUT_MIN_HEIGHT,
->      MTK_FD_OUTPUT_MAX_HEIGHT);
->
-> if (sfmt->num_planes == 2) {
-> /* NV16M and NV61M has 1 byte per pixel */
-> dfmt->plane_fmt[0].bytesperline = dfmt->width;
-> dfmt->plane_fmt[1].bytesperline = dfmt->width;
-> } else {
-> /* 2 bytes per pixel */
-> dfmt->plane_fmt[0].bytesperline = dfmt->width * 2;
-> }
->
-> dfmt->plane_fmt[0].sizeimage =
-> dfmt->height * dfmt->plane_fmt[0].bytesperline;
-> }
-
-How would the implementation of TRY_FMT look in this case?
-
-[snip]
-
-> > > +static int mtk_fd_m2m_enum_fmt_out_mp(struct file *file, void *fh,
-> > > +                                 struct v4l2_fmtdesc *f)
-> > > +{
-> > > +   int i;
-> > > +
-> > > +   for (i = 0; i < NUM_FORMATS; ++i) {
-> > > +           if (i == f->index) {
-> > > +                   f->pixelformat = in_img_fmts[i].pixelformat;
-> > > +                   return 0;
-> > > +           }
-> > > +   }
-> >
-> > Why don't we just check if f->index is within the [0, ARRAY_SIZE()-1] bounds
-> > and then just use it to index the array directly?
-> >
-> I will refine as :
->
-> static int mtk_fd_m2m_enum_fmt_out_mp(struct file *file, void *fh,
->       struct v4l2_fmtdesc *f)
-> {
-> if ((f->index >= 0) && (f->index < NUM_FORMATS)) {
-
-f->index is unsigned
-
-> f->pixelformat = in_img_fmts[f->index].pixelformat;
-> return 0;
-> }
->
-> return -EINVAL;
-> }
-
-nit: The usual convention is to check for invalid values and return early, i.e.
-
-if (f->index >= NUM_FORMATS)
-    return -EINVAL;
-
-f->pixelformat = in_img_fmts[f->index].pixelformat;
-return 0;
-
-> > > +
-> > > +   return -EINVAL;
-> > > +}
-> > > +
-> > > +static int mtk_fd_m2m_try_fmt_out_mp(struct file *file,
-> > > +                                void *fh,
-> > > +                                struct v4l2_format *f)
-> >
-> > I think we could just shorten the function prefixes to "mtk_fd_".
-> >
-> Do you mean by replace mtk_fd_m2m_* with mtk_fd_ ?
->
-
-Yes.
-
-[snip]
-
-> > > +static int mtk_fd_request_validate(struct media_request *req)
-> > > +{
-> > > +   unsigned int count;
-> > > +
-> > > +   count = vb2_request_buffer_cnt(req);
-> > > +   if (!count)
-> > > +           return -ENOENT;
-> >
-> > Why -ENOENT?
-> >
-> Reference the return code in vb2_request_validate()
-
-You're right, -ENOENT seems to be the right error code here.
-
-> I consider refining as following:
-> static int mtk_fd_request_validate(struct media_request *req)
-> {
-> if (vb2_request_buffer_cnt(req) > 1)
-> return -EINVAL;
->
-> return vb2_request_validate(req);
-> }
-> or maybe I don't need to worry the request count greater than 1,
-> just remove this function and set vb2_request_validate as .req_validate
-> directly?
->
-
-Given that we only have 1 queue handling requests, we should be able
-to just use vb2_request_validate() indeed.
+Good point, I always keep forgetting about the ability to probe OF
+drivers from ACPI. Then we also need to remove the #if
+IS_ENABLED(CONFIG_OF) from ov02a10_of_match.
 
 Best regards,
 Tomasz
