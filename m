@@ -2,81 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6FCF79F25C
-	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 20:32:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B8D5B9F279
+	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 20:39:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JS8jrg103ENJPQWIg82nuR3dlmeLQLhjEqRiyV9omjo=; b=GZBMC+kUwDOFVz
-	b6xK9nClxXD+o9T2hKWLsND/HW7JphaAxxZx5Z9+fikpIn5+bCea/2HIAumhcIQ9b/h2QDxn/tRPB
-	HSU8wmV4OZBlO3YBeUwlovX4gfhHaoudowrD/jAbi9ZbAFEqCsQEj6+sjGjFFn6dIBtaUNqYRPDmR
-	EGfUm4k/AfMGwyI0Ev0b786kL28y/IpxsTpZ6qxxtLtyy4Itq2ExEfvHMmtcd6bgOvJBpJQxW45Na
-	QgXUkhUhZDH1x62vHmPBs8sU9gWu6McdQ5utWqla84k2+r238sRYNVnCXrJKWme+roZb3piN9PoMZ
-	t1ekNDDqqbIZoNRztsKw==;
+	List-Owner; bh=qebS2up3HRNnlZA3fDE+RfwZJdLX46PC8R3ZA+6pMrM=; b=caVWtqXWk0erwL
+	w7i28VevxvUAzV+kh3TccZeYS8IgqBpqp9vmL9ZZ+9SSWUhGhTWXklPOvPV+jpe/pO2d8guccTQcS
+	wQ0WHFrWMounlgCtMOLVSRgYis7kdgiFuDKo/RUex3qlHiafTGC99x6Ozfk2tLcG5vz8ChRM1UDv9
+	NuUSqw4JxwyLuwrjqMcvqWJh+9e7LEymh3kkP339NFPv4P1Th4yDcr541WPO/eL+IOktk2VCKxNiF
+	ho6/H/lcbCIuAM5R94eDTJgBigCYLk6yg+bZH8mx0/AUdKPt9wlYnLecA4UMuiVpQoVPpdJLI+r/O
+	hjXOwmJOvRJnvc7q/VaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2gGG-0002aM-Sq; Tue, 27 Aug 2019 18:32:09 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1i2gNS-0004UI-Ot; Tue, 27 Aug 2019 18:39:34 +0000
+Received: from mail-ot1-f68.google.com ([209.85.210.68])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2gG5-0002S3-Ja; Tue, 27 Aug 2019 18:31:59 +0000
-Received: by mail-ot1-f66.google.com with SMTP id e12so98180otp.10;
- Tue, 27 Aug 2019 11:31:57 -0700 (PDT)
+ id 1i2gNP-0004Ta-QD
+ for linux-mediatek@lists.infradead.org; Tue, 27 Aug 2019 18:39:33 +0000
+Received: by mail-ot1-f68.google.com with SMTP id w4so116418ote.11
+ for <linux-mediatek@lists.infradead.org>; Tue, 27 Aug 2019 11:39:30 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=nh5JlXKDScp/6jdVD0lYiet/VZlxy5TKafXl/GE7L28=;
- b=GP1sLGqwJChFc8EfDmvAgQKEuPf/iAzEmlE3UEGn21LbM83Epx+j94aHYeDiZj5I34
- 7Zxt34vMDW6ms0TF/JpaV2GYggrVz7HHxWbioBNrfP4I6pY2SPx2id2pIScnOMBJY/my
- ZKQPA9YuIwM8kvW3EgdA637lyb4NUqiSyAXXaKNTIudmkKuQw8Lv9ofCFlvb+0m2nzhc
- rQfHWMrUcRGJdnHWkU5+7tWpLekr5N2R4twKlC+vZyUO3rKHeJ3qeElgkvknEDTb/xKN
- yxAnap9K7SNFs4bYIFrZvg0RzULjgTxK1ertzKZcRbnzaCb7Zkq0aAOJJZM9Nf2tUJ08
- R3Ow==
-X-Gm-Message-State: APjAAAX0OmcOIP7oodcEvgSnz+afXaN2x9RveyG/uT4j3dIwC/IFMMXV
- vlkEm88z9diK9kYa0rtJ8A==
-X-Google-Smtp-Source: APXvYqwyILKBeRNQk+rBVcbEFALTsvo/l+G1oYafWQ6QxRePRSd/ebw3//wOjN0+4335ghUuXLcLYA==
-X-Received: by 2002:a9d:6b1a:: with SMTP id g26mr17166549otp.195.1566930716465; 
- Tue, 27 Aug 2019 11:31:56 -0700 (PDT)
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to:user-agent;
+ bh=XMfpx8zaYFv8FB4sdyqjlN5h9P+ymLOJHIBXDCz83lw=;
+ b=dFMgy+5HOF19UVdVskqtmur0TKKbm32seaQSjk+j5u2IfYRp9dNeAvV/fv4/BhqZNV
+ /CDy8QfytI6KH3ilM3R7hrRC61iCdHOVu3yjOtVPXuiTrf/I+ujWQl9xBb6RnU6lsjyu
+ y0xGRyeZxky7rt8Wt+283HnJSAlryiX+Q8+I/tsMOxHUcRw7LWSuzH6b7vmBc3IKfFjv
+ DMjrLiJ/8sXqsLU79jqEYKtY5mQ8Vw/0X8BIL0nO+MBPElItt+3sVzXcl6YnQ1tAcaEf
+ zKsrsPXC9IgJhVqhok9ocXQyXl7H/M2CMBrOOyht6TuCRHHVO1DXZXfFLBg+Y6Pqmn4g
+ RI4g==
+X-Gm-Message-State: APjAAAURyHnqYDUbxWKkV5sIhAICZY4p/cba3Q6fRwhym3k7jtQ/n3V6
+ zBmCoJ3SLz/Ko3lr0tut1pgrUq0yTA==
+X-Google-Smtp-Source: APXvYqzoemcNCPbstiXM/G8dfEnWRe5MtRuqF2QfOKr+DAg0PvZiCXcrcG6fxo8TiaEvdRGl8Ab2hg==
+X-Received: by 2002:a9d:170b:: with SMTP id i11mr40703ota.60.1566931169589;
+ Tue, 27 Aug 2019 11:39:29 -0700 (PDT)
 Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id v24sm32104otj.78.2019.08.27.11.31.55
+ by smtp.gmail.com with ESMTPSA id z16sm3966oic.10.2019.08.27.11.39.25
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 27 Aug 2019 11:31:55 -0700 (PDT)
-Date: Tue, 27 Aug 2019 13:31:54 -0500
+ Tue, 27 Aug 2019 11:39:25 -0700 (PDT)
+Date: Tue, 27 Aug 2019 13:39:24 -0500
 From: Rob Herring <robh@kernel.org>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH next v10 03/11] dt-bindings: usb: add binding for USB
- GPIO based connection detection driver
-Message-ID: <20190827183154.GA10374@bogus>
-References: <1566547041-20804-1-git-send-email-chunfeng.yun@mediatek.com>
- <1566547041-20804-4-git-send-email-chunfeng.yun@mediatek.com>
+To: Sam Shih <sam.shih@mediatek.com>
+Subject: Re: [PATCH v5 07/13] dt-bindings: pwm: add a property "num-pwms"
+Message-ID: <20190827183924.GA24178@bogus>
+References: <1566457123-20791-1-git-send-email-sam.shih@mediatek.com>
+ <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1566547041-20804-4-git-send-email-chunfeng.yun@mediatek.com>
+In-Reply-To: <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_113157_646367_EC4860DF 
-X-CRM114-Status: GOOD (  21.03  )
+X-CRM114-CacheID: sfid-20190827_113931_854601_B62FC817 
+X-CRM114-Status: GOOD (  15.47  )
 X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
+ no trust [209.85.210.68 listed in list.dnswl.org]
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.68 listed in wl.mailspike.net]
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
@@ -91,112 +92,76 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- Hans de Goede <hdegoede@redhat.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>,
- Badhri Jagan Sridharan <badhri@google.com>,
- Andy Shevchenko <andy.shevchenko@gmail.com>,
- linux-mediatek@lists.infradead.org, Min Guo <min.guo@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Nagarjuna Kristam <nkristam@nvidia.com>,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
- linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Aug 23, 2019 at 03:57:13PM +0800, Chunfeng Yun wrote:
-> It's used to support dual role switch via GPIO when use Type-B
-> receptacle, typically the USB ID pin is connected to an input
-> GPIO, and also used to enable/disable device when the USB Vbus
-> pin is connected to an input GPIO.
-> 
-> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+On Thu, Aug 22, 2019 at 02:58:37PM +0800, Sam Shih wrote:
+> From: Ryder Lee <ryder.lee@mediatek.com>
+
+The subject should indicate this is for Mediatek.
+
+> =
+
+> This adds a property "num-pwms" in example so that we could
+> specify the number of PWM channels via device tree.
+> =
+
+> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+> Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
 > ---
-> v9~v10 no changes
-> 
-> v8 changes:
->  1. rename the title
->  2. change the compatible as "linux,usb-conn-gpio" instead of
->     "linux,typeb-conn-gpio"
+> Changes since v5:
+> - Add an Acked-by tag
+> - This file is original v4 patch 5/10
+> (https://patchwork.kernel.org/patch/11102577/)
+> =
 
-I don't think that is an improvement. How about 'gpio-usb-b-connector' 
-to be consistent.
-
-> 
-> v7 changes:
->  1. add description for device only mode
-> 
-> v6 changes:
->  1. remove status and port nodes in example
->  2. make vbus-supply as optional property
-> 
-> v5 changes:
->  1. treat type-B connector as child device of USB controller's, but not
->     as a separate virtual device, suggested by Rob
->  2. put connector's port node under connector node, suggested by Rob
-> 
-> v4 no changes
-> 
-> v3 changes:
->  1. treat type-B connector as a virtual device, but not child device of
->     USB controller's
-> 
-> v2 changes:
->   1. new patch to make binding clear suggested by Hans
+> Change-Id: I429048afeffa96f3f14533910efe242f88776043
 > ---
->  .../devicetree/bindings/usb/usb-conn-gpio.txt | 31 +++++++++++++++++++
->  1 file changed, 31 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt b/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
-> new file mode 100644
-> index 000000000000..d4d107fedc22
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
-> @@ -0,0 +1,31 @@
-> +USB GPIO Based Connection Detection
-> +
-> +This is typically used to switch dual role mode from the USB ID pin connected
-> +to an input GPIO, and also used to enable/disable device mode from the USB
-> +Vbus pin connected to an input GPIO.
-> +
-> +Required properties:
-> +- compatible : should include "linux,usb-conn-gpio" and "usb-b-connector".
-> +- id-gpios, vbus-gpios : input gpios, either one of them must be present,
-> +	and both can be present as well.
-> +	see connector/usb-connector.txt
-> +
-> +Optional properties:
-> +- vbus-supply : can be present if needed when supports dual role mode.
-> +	see connector/usb-connector.txt
-> +
-> +- Sub-nodes:
-> +	- port : can be present.
-> +		see graph.txt
-> +
-> +Example:
-> +
-> +&mtu3 {
-> +	connector {
-> +		compatible = "linux,usb-conn-gpio", "usb-b-connector";
-> +		label = "micro-USB";
+>  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
+>  1 file changed, 4 insertions(+), 3 deletions(-)
+> =
 
-'label' is for a human identifying a particular connector when there are 
-multiple (of the same type). So not a great example here.
+> diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Doc=
+umentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> index 991728cb46cb..ea95b490a913 100644
+> --- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> +++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> @@ -14,12 +14,12 @@ Required properties:
+>                  has no clocks
+>     - "top": the top clock generator
+>     - "main": clock used by the PWM core
+> -   - "pwm1-8": the eight per PWM clocks for mt2712
+> -   - "pwm1-6": the six per PWM clocks for mt7622
+> -   - "pwm1-5": the five per PWM clocks for mt7623
+> +   - "pwm1-N": the PWM clocks for each channel
+> +   where N starting from 1 to the maximum number of PWM channels
 
-> +		type = "micro";
-> +		id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
-> +		vbus-supply = <&usb_p0_vbus>;
-> +	};
-> +};
-> -- 
-> 2.23.0
-> 
+Once converted to schema, you are going to be back to listing them out.
+
+>   - pinctrl-names: Must contain a "default" entry.
+>   - pinctrl-0: One property must exist for each entry in pinctrl-names.
+>     See pinctrl/pinctrl-bindings.txt for details of the property values.
+> + - num-pwms: the number of PWM channels.
+
+You can't add new required properties without breaking compatibility. =
+
+
+You already have to imply the number of channels from the compatible (or =
+
+number of clocks) and you have to keep doing so to maintain =
+
+compatibility, so why not just keep doing that for new chips?
+
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
