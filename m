@@ -2,66 +2,192 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 21BAA9DC54
-	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 06:12:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 022DD9E553
+	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 12:05:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SlReZ0UxDRi4zeiZM2f7M5rEheCbtFLmW8AT/ALFdmI=; b=tKCeXE8YOhmPj1
-	TOYHDNJuWRKYZ0YiXm/tm5UDlQh7ZddbQmrE40fZxg6X9jhkaAok/maP+gxZND7A3fULA3+gEWuid
-	9BHwDMdG46vTNgT9xiZcyo1vyZ8m4EuTZ8sT/bO3BUN+pwc4u138ji6oAlNP1b71hGrNANz85qpig
-	nSAcJF/bLT/NA2dIh8+ProkvDa1mEyJoDFNQZEiBwTnI6CQsV1rz+gyb1mb8tYky0WAmV3mvIL/AE
-	3212ze6VtukFiL5WbW1AYhh6is+s9ch2OxsBqGXK2C3DjiOnTqOKfnnZ2CFCqsz0GIVvaQfDJPbCZ
-	ej05NzsCGiWfMV44XD8A==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=zJumuZ605dnQloHlVPyP4dJPqMG9A4M3hR63/hLsUIc=; b=H/uWWPe1wEf5nb
+	StYnH1/ZY9mMKrA3BdgX0tS88nykmHbM3psCyTsDVgAd7VqAfguhuql2qjo4Jx5lzc3mZv7w4KwGK
+	zLPb7JRFyanJtKUYshIlKTQiZhq1qZLz22ogegHr3Ud7JCK6HzYK2rUd81PRi8Nf9AFtgtA5khzhe
+	mG1yvbJN4Dly/hWqgzLjvqoEDq7h4XnoctjrjyGUOM7Vf85ItnsQ01LlvQpioXm07HnTny1oF1kIh
+	bxKcJDLsdwFc12amT91f3Z6BJfPf/aTzGQC/K51VPMe1ydsXDswoMH5efyInCS9QLKYxtR+k7ilvB
+	QzDw/PlYMmSMvyErWSAQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2SqA-0005eC-EM; Tue, 27 Aug 2019 04:12:18 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i2YLz-0007OB-Ih; Tue, 27 Aug 2019 10:05:32 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2Sq7-0005dW-14; Tue, 27 Aug 2019 04:12:16 +0000
-X-UUID: 1a53754495b241e0819e5eb5f1694f05-20190826
-X-UUID: 1a53754495b241e0819e5eb5f1694f05-20190826
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <bibby.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1483707969; Mon, 26 Aug 2019 20:12:18 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 26 Aug 2019 21:12:17 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 27 Aug 2019 12:12:10 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 27 Aug 2019 12:12:10 +0800
-Message-ID: <1566879121.29523.8.camel@mtksdaap41>
+ id 1i2YKe-0005H0-Em; Tue, 27 Aug 2019 10:04:10 +0000
+Received: by mail-ed1-x543.google.com with SMTP id a21so30591519edt.11;
+ Tue, 27 Aug 2019 03:04:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=iTXOkUP9jFR1L/j0BaMvMg8k7tC/KBsxjnU9Rp7bYFQ=;
+ b=VKZRmI97Zcs+TjvYNxzP6GNOckDrQRTipIXYskujm/mO0vKy8F34k+75zjv9lkLvmA
+ 0U8JefFJl2MMFqDkMotFyo3dZcgeo9yIUtmhR7XMeHEG/OXbuhczw2OKY1k9/UdAWh4X
+ uNm3HvQuuWLcG+L4lTaLuIdJNs/g1vqi4mHA2yl1LsTL9PABV8LaphwJSdwq7RpkIyNW
+ CRdyby6VFi4EUk29T1nJYJRZcEoJFeqBCrRF0+ZA/VuE4JuFB8ANoh/LcTEXMCoQ8oFf
+ 5q8JbbtVrBXZ/XNor2CEcmrwAbNq6pb/lo3qKNdaK2eFr/IIBjqhI1I7dQ/PPrZShlIg
+ 7sEQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
+ :message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=iTXOkUP9jFR1L/j0BaMvMg8k7tC/KBsxjnU9Rp7bYFQ=;
+ b=G09YjXPPMvxsKCPN551JCSUSlnq+DrPqsWNRTK53SCqDtfBJ/EegWB8gKtrXpM9leQ
+ cSxmzSFtft2dQ7MG1qLxCLo8p1+7BpzKQ1pMUE93WeSsPSxk0wJegOj6UVkCGTRuNC8J
+ AA7AtxIYa5VyI1MVBIbt2XzpqTu+h5dPdVT+FLkb714v2IfH1H51HAr1MDikUu/ltuPl
+ KLt8/S0Q7VLqoD2JOr01RnZNFXPKMKxU0vwLtqOy5VYTcADMHZTCQ7FNlXeu7tb6PHHj
+ nATZrrGcVHvru0gV2FREFUPLcVcoAWoA2X2Sqjd/VQyI9HcAQLLpRMGaCbeb9HSPl/8y
+ xFsg==
+X-Gm-Message-State: APjAAAXRY6uc3gkNmoNrh1iUmnAN/n8uJARshPQZ7k5Ul4qn3MbsMFz+
+ X8KTaEuaEIMiUjCOWRQzcNk=
+X-Google-Smtp-Source: APXvYqx8F8bpBc3jLgZ7hdfJ7OUjePdC+8wx3n2EDJaq6btqN8qzQYVUB2XEx0gwLzAObvfffA81qg==
+X-Received: by 2002:a17:906:70c8:: with SMTP id
+ g8mr20100745ejk.241.1566900245911; 
+ Tue, 27 Aug 2019 03:04:05 -0700 (PDT)
+Received: from ziggy.stardust ([95.169.228.146])
+ by smtp.gmail.com with ESMTPSA id c1sm1859692edn.62.2019.08.27.03.04.03
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Tue, 27 Aug 2019 03:04:04 -0700 (PDT)
 Subject: Re: [RESEND, PATCH v13 09/12] soc: mediatek: cmdq: define the
  instruction struct
-From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Tue, 27 Aug 2019 12:12:01 +0800
-In-Reply-To: <486deaa3-d139-d4af-e0cf-e324b3270f3b@gmail.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
 References: <20190820084932.22282-1-bibby.hsieh@mediatek.com>
  <20190820084932.22282-10-bibby.hsieh@mediatek.com>
  <486deaa3-d139-d4af-e0cf-e324b3270f3b@gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ <1566879121.29523.8.camel@mtksdaap41>
+From: Matthias Brugger <matthias.bgg@gmail.com>
+Openpgp: preference=signencrypt
+Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ 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
+ jrHWeQEI2ucSKsNa8FllDmG/fQ==
+Message-ID: <c33f6829-b1f4-376f-5e12-38c811c370dd@gmail.com>
+Date: Tue, 27 Aug 2019 12:04:03 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <1566879121.29523.8.camel@mtksdaap41>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190826_211215_080610_082F148E 
-X-CRM114-Status: GOOD (  26.13  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190827_030408_785403_8372C104 
+X-CRM114-Status: GOOD (  11.29  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (matthias.bgg[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,267 +201,53 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
  Philipp Zabel <p.zabel@pengutronix.de>, srv_heupstream@mediatek.com,
- Daoyuan Huang <daoyuan.huang@mediatek.com>, Sascha
- Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
+ Daoyuan Huang <daoyuan.huang@mediatek.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, Jassi Brar <jassisinghbrar@gmail.com>,
  linux-kernel@vger.kernel.org, Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
  Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Houlong Wei <houlong.wei@mediatek.com>, Sascha
- Hauer <kernel@pengutronix.de>, CK HU <ck.hu@mediatek.com>,
- Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
+ Houlong Wei <houlong.wei@mediatek.com>, Sascha Hauer <kernel@pengutronix.de>,
+ CK HU <ck.hu@mediatek.com>, Jiaguang Zhang <jiaguang.zhang@mediatek.com>,
  linux-arm-kernel@lists.infradead.org, ginny.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-08-23 at 15:50 +0200, Matthias Brugger wrote:
-> 
-> On 20/08/2019 10:49, Bibby Hsieh wrote:
-> > Define an instruction structure for gce driver to append command.
-> > This structure can make the client's code more readability.
-> > 
-> > Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> > Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> > ---
-> >  drivers/soc/mediatek/mtk-cmdq-helper.c   | 106 +++++++++++++++--------
-> >  include/linux/mailbox/mtk-cmdq-mailbox.h |   2 +
-> >  2 files changed, 74 insertions(+), 34 deletions(-)
-> > 
-> > diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > index 7aa0517ff2f3..e3d5b0be8e79 100644
-> > --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > @@ -9,12 +9,24 @@
-> >  #include <linux/mailbox_controller.h>
-> >  #include <linux/soc/mediatek/mtk-cmdq.h>
-> >  
-> > -#define CMDQ_ARG_A_WRITE_MASK	0xffff
-> >  #define CMDQ_WRITE_ENABLE_MASK	BIT(0)
-> >  #define CMDQ_EOC_IRQ_EN		BIT(0)
-> >  #define CMDQ_EOC_CMD		((u64)((CMDQ_CODE_EOC << CMDQ_OP_CODE_SHIFT)) \
-> >  				<< 32 | CMDQ_EOC_IRQ_EN)
-> >  
-> > +struct cmdq_instruction {
-> > +	union {
-> > +		u32 value;
-> > +		u32 mask;
-> > +	};
-> > +	union {
-> > +		u16 offset;
-> > +		u16 event;
-> > +	};
-> > +	u8 subsys;
-> > +	u8 op;
-> > +};
-> > +
-> >  static void cmdq_client_timeout(struct timer_list *t)
-> >  {
-> >  	struct cmdq_client *client = from_timer(client, t, timer);
-> > @@ -110,10 +122,8 @@ void cmdq_pkt_destroy(struct cmdq_pkt *pkt)
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_destroy);
-> >  
-> > -static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
-> > -				   u32 arg_a, u32 arg_b)
-> > +static struct cmdq_instruction *cmdq_pkt_append_command(struct cmdq_pkt *pkt)
-> >  {
-> > -	u64 *cmd_ptr;
-> >  
-> >  	if (unlikely(pkt->cmd_buf_size + CMDQ_INST_SIZE > pkt->buf_size)) {
-> >  		/*
-> > @@ -127,81 +137,109 @@ static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
-> >  		pkt->cmd_buf_size += CMDQ_INST_SIZE;
-> >  		WARN_ONCE(1, "%s: buffer size %u is too small !\n",
-> >  			__func__, (u32)pkt->buf_size);
-> > -		return -ENOMEM;
-> > +		return NULL;
-> >  	}
-> > -	cmd_ptr = pkt->va_base + pkt->cmd_buf_size;
-> > -	(*cmd_ptr) = (u64)((code << CMDQ_OP_CODE_SHIFT) | arg_a) << 32 | arg_b;
-> > +
-> > +	*(u64 *)(pkt->va_base + pkt->cmd_buf_size) = 0;>  	pkt->cmd_buf_size += CMDQ_INST_SIZE;
-> >  
-> > -	return 0;
-> > +	return pkt->va_base + pkt->cmd_buf_size - CMDQ_INST_SIZE;
-> >  }
-> >  
-> >  int cmdq_pkt_write(struct cmdq_pkt *pkt, u8 subsys, u16 offset, u32 value)
-> >  {
-> > -	u32 arg_a = (offset & CMDQ_ARG_A_WRITE_MASK) |
-> > -		    (subsys << CMDQ_SUBSYS_SHIFT);
-> > +	struct cmdq_instruction *inst;
-> > +
-> > +	inst = cmdq_pkt_append_command(pkt);
-> > +	if (!inst)
-> > +		return -ENOMEM;
-> > +
-> > +	inst->op = CMDQ_CODE_WRITE;
-> > +	inst->value = value;
-> > +	inst->offset = offset;
-> > +	inst->subsys = subsys;
-> >  
-> 
-> I can see that using cmdq_instruction will make the code more readable, but I
-> dislike the approach that cmdq_pkt_append_command returns a pointer where we
-> write the instruction to. Better we pass inst to cmdq_pkt_append_command() and
-> write it there to cmd_ptr.
-> 
-> I think this way we can get rid of explicitly setting the memory to zero:
-> *(u64 *)(pkt->va_base + pkt->cmd_buf_size) = 0;
-> 
-> And if we pass the inst to the append_command we don't have to change the return
-> value handling of cmdq_pkt_append_command(), which makes the patch easier to
-> understand.
 
-Ok, I will change and resend it.
 
-> 
-> > -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WRITE, arg_a, value);
-> > +	return 0;
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_write);
-> >  
-> >  int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
-> >  			u16 offset, u32 value, u32 mask)
-> >  {
-> > -	u32 offset_mask = offset;
-> > -	int err = 0;
-> > +	struct cmdq_instruction *inst;
-> > +	u16 offset_mask = offset;
-> >  
-> >  	if (mask != 0xffffffff) {
-> > -		err = cmdq_pkt_append_command(pkt, CMDQ_CODE_MASK, 0, ~mask);
-> > +		inst = cmdq_pkt_append_command(pkt);
-> > +		if (!inst)
-> > +			return -ENOMEM;
-> > +
-> > +		inst->op = CMDQ_CODE_MASK;
-> > +		inst->mask = ~mask;
-> >  		offset_mask |= CMDQ_WRITE_ENABLE_MASK;
-> >  	}
-> > -	err |= cmdq_pkt_write(pkt, value, subsys, offset_mask);
-> >  
-> > -	return err;
-> > +	return cmdq_pkt_write(pkt, subsys, offset_mask, value);
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_write_mask);
-> >  
-> >  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
-> >  {
-> > -	u32 arg_b;
-> > +	struct cmdq_instruction *inst;
-> >  
-> >  	if (event >= CMDQ_MAX_EVENT)
-> >  		return -EINVAL;
-> >  
-> > -	/*
-> > -	 * WFE arg_b
-> > -	 * bit 0-11: wait value
-> > -	 * bit 15: 1 - wait, 0 - no wait
-> > -	 * bit 16-27: update value
-> > -	 * bit 31: 1 - update, 0 - no update
-> > -	 */
-> 
-> I have no strong opinion of CMDQ_WFE_OPTION but if you want to introduce it,
-> then please copy the comment over to include/linux/mailbox/mtk-cmdq-mailbox.h
+On 27/08/2019 06:12, Bibby Hsieh wrote:
 
-Ok. let's move the descriptions to header.
+>>>  
+>>>  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
+>>>  {
+>>> -	u32 arg_b;
+>>> +	struct cmdq_instruction *inst;
+>>>  
+>>>  	if (event >= CMDQ_MAX_EVENT)
+>>>  		return -EINVAL;
+>>>  
+>>> -	/*
+>>> -	 * WFE arg_b
+>>> -	 * bit 0-11: wait value
+>>> -	 * bit 15: 1 - wait, 0 - no wait
+>>> -	 * bit 16-27: update value
+>>> -	 * bit 31: 1 - update, 0 - no update
+>>> -	 */
+>>
+>> I have no strong opinion of CMDQ_WFE_OPTION but if you want to introduce it,
+>> then please copy the comment over to include/linux/mailbox/mtk-cmdq-mailbox.h
 > 
-> Just one question, why did you call it _OPTION? It's not really expressive for me.
+> Ok. let's move the descriptions to header.
+>>
+>> Just one question, why did you call it _OPTION? It's not really expressive for me.
+> 
+> Actually, _OPTION is come from our hardware design name...
+> 
 
-Actually, _OPTION is come from our hardware design name...
+Ok, then I'll stop bike-shedding. I leave it up to you to rename it or not.
 
-> 
-> > -	arg_b = CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | CMDQ_WFE_WAIT_VALUE;
-> > +	inst = cmdq_pkt_append_command(pkt);
-> > +	if (!inst)
-> > +		return -ENOMEM;
-> > +
-> > +	inst->op = CMDQ_CODE_WFE;
-> > +	inst->value = CMDQ_WFE_OPTION;
-> > +	inst->event = event;
-> >  
-> > -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event, arg_b);
-> > +	return 0;
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_wfe);
-> >  
-> >  int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
-> >  {
-> > +	struct cmdq_instruction *inst;
-> > +
-> >  	if (event >= CMDQ_MAX_EVENT)
-> >  		return -EINVAL;
-> >  
-> > -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WFE, event,
-> > -				       CMDQ_WFE_UPDATE);
-> > +	inst = cmdq_pkt_append_command(pkt);
-> > +	if (!inst)
-> > +		return -ENOMEM;
-> > +
-> > +	inst->op = CMDQ_CODE_WFE;
-> > +	inst->value = CMDQ_WFE_UPDATE;
-> > +	inst->event = event;
-> > +
-> > +	return 0;
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_clear_event);
-> >  
-> >  static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
-> >  {
-> > -	int err;
-> > +	struct cmdq_instruction *inst;
-> > +
-> > +	inst = cmdq_pkt_append_command(pkt);
-> > +	if (!inst)
-> > +		return -ENOMEM;
-> >  
-> > -	/* insert EOC and generate IRQ for each command iteration */
-> 
-> Please don't delete the comment.
-> 
-> > -	err = cmdq_pkt_append_command(pkt, CMDQ_CODE_EOC, 0, CMDQ_EOC_IRQ_EN);
-> > +	inst->op = CMDQ_CODE_EOC;
-> > +	inst->value = CMDQ_EOC_IRQ_EN;
-> >  
-> > -	/* JUMP to end */
-> 
-> Same here.
-> 
-> Regards,
-> Matthias
-> 
-> > -	err |= cmdq_pkt_append_command(pkt, CMDQ_CODE_JUMP, 0, CMDQ_JUMP_PASS);
-> > +	inst = cmdq_pkt_append_command(pkt);
-> > +	if (!inst)
-> > +		return -ENOMEM;
-> > +
-> > +	inst->op = CMDQ_CODE_JUMP;
-> > +	inst->value = CMDQ_JUMP_PASS;
-> >  
-> > -	return err;
-> > +	return 0;
-> >  }
-> >  
-> >  static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
-> > diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > index 911475da7a53..c8adedefaf42 100644
-> > --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > @@ -19,6 +19,8 @@
-> >  #define CMDQ_WFE_UPDATE			BIT(31)
-> >  #define CMDQ_WFE_WAIT			BIT(15)
-> >  #define CMDQ_WFE_WAIT_VALUE		0x1
-> > +#define CMDQ_WFE_OPTION			(CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | \
-> > +					CMDQ_WFE_WAIT_VALUE)
-> >  /** cmdq event maximum */
-> >  #define CMDQ_MAX_EVENT			0x3ff
-> >  
-> > 
-
--- 
-Bibby
-
+Regards,
+Matthias
 
 _______________________________________________
 Linux-mediatek mailing list
