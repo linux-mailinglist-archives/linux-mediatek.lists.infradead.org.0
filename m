@@ -2,85 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B8D5B9F279
-	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 20:39:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 514239F358
+	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 21:35:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qebS2up3HRNnlZA3fDE+RfwZJdLX46PC8R3ZA+6pMrM=; b=caVWtqXWk0erwL
-	w7i28VevxvUAzV+kh3TccZeYS8IgqBpqp9vmL9ZZ+9SSWUhGhTWXklPOvPV+jpe/pO2d8guccTQcS
-	wQ0WHFrWMounlgCtMOLVSRgYis7kdgiFuDKo/RUex3qlHiafTGC99x6Ozfk2tLcG5vz8ChRM1UDv9
-	NuUSqw4JxwyLuwrjqMcvqWJh+9e7LEymh3kkP339NFPv4P1Th4yDcr541WPO/eL+IOktk2VCKxNiF
-	ho6/H/lcbCIuAM5R94eDTJgBigCYLk6yg+bZH8mx0/AUdKPt9wlYnLecA4UMuiVpQoVPpdJLI+r/O
-	hjXOwmJOvRJnvc7q/VaQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=fiQGd4Ur5rso5yC7Q/tOdI/EtqtCazdyu8H4sJdmFI0=; b=bki/tC3ToNvmNqYuiRz7R5Fs7
+	CEDxaf8grS45/XrwXDVon2fc+jsGKCVHIG+gUq2NDNCuvOsjmMxS2eybLxwmufxdpuHFR/sp5TS2K
+	ZM3FOyFzAYkW/Nw2S5EROg2CNZ58aDNs9nphF9giRVhTuefKAf7LKbu+3D5o/nH4XsOa0Ate6xWfl
+	v/riFGD/qGw0iOb6vTZ7pZz3E4brWE2SnUmIWVIskia7fckjbgmmd4ZP3fhuEwm9D/hgeMVzzflpS
+	+RhfJUgc85Ney70D+kJ1BBXCBu3a40TSiUkoTpXgUznyPfFHnr+ebv3I1F0wAF9a30henmXp732l1
+	/n7n/PqOQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2gNS-0004UI-Ot; Tue, 27 Aug 2019 18:39:34 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1i2hF6-0000Ab-Jj; Tue, 27 Aug 2019 19:35:00 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2gNP-0004Ta-QD
- for linux-mediatek@lists.infradead.org; Tue, 27 Aug 2019 18:39:33 +0000
-Received: by mail-ot1-f68.google.com with SMTP id w4so116418ote.11
- for <linux-mediatek@lists.infradead.org>; Tue, 27 Aug 2019 11:39:30 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=XMfpx8zaYFv8FB4sdyqjlN5h9P+ymLOJHIBXDCz83lw=;
- b=dFMgy+5HOF19UVdVskqtmur0TKKbm32seaQSjk+j5u2IfYRp9dNeAvV/fv4/BhqZNV
- /CDy8QfytI6KH3ilM3R7hrRC61iCdHOVu3yjOtVPXuiTrf/I+ujWQl9xBb6RnU6lsjyu
- y0xGRyeZxky7rt8Wt+283HnJSAlryiX+Q8+I/tsMOxHUcRw7LWSuzH6b7vmBc3IKfFjv
- DMjrLiJ/8sXqsLU79jqEYKtY5mQ8Vw/0X8BIL0nO+MBPElItt+3sVzXcl6YnQ1tAcaEf
- zKsrsPXC9IgJhVqhok9ocXQyXl7H/M2CMBrOOyht6TuCRHHVO1DXZXfFLBg+Y6Pqmn4g
- RI4g==
-X-Gm-Message-State: APjAAAURyHnqYDUbxWKkV5sIhAICZY4p/cba3Q6fRwhym3k7jtQ/n3V6
- zBmCoJ3SLz/Ko3lr0tut1pgrUq0yTA==
-X-Google-Smtp-Source: APXvYqzoemcNCPbstiXM/G8dfEnWRe5MtRuqF2QfOKr+DAg0PvZiCXcrcG6fxo8TiaEvdRGl8Ab2hg==
-X-Received: by 2002:a9d:170b:: with SMTP id i11mr40703ota.60.1566931169589;
- Tue, 27 Aug 2019 11:39:29 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id z16sm3966oic.10.2019.08.27.11.39.25
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 27 Aug 2019 11:39:25 -0700 (PDT)
-Date: Tue, 27 Aug 2019 13:39:24 -0500
-From: Rob Herring <robh@kernel.org>
-To: Sam Shih <sam.shih@mediatek.com>
-Subject: Re: [PATCH v5 07/13] dt-bindings: pwm: add a property "num-pwms"
-Message-ID: <20190827183924.GA24178@bogus>
-References: <1566457123-20791-1-git-send-email-sam.shih@mediatek.com>
- <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
+ id 1i2hF2-00007u-Tt
+ for linux-mediatek@lists.infradead.org; Tue, 27 Aug 2019 19:34:58 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=BSEGfqhHxosfCTMFvfb3OH6NA/dqX4PwBSHkt8Fu78M=; b=Xzgl2tF92u90dovfixrre3NOw
+ /UJclMg0mJA39k867X3iKgwNaqWc9yAWB0CUG6+lOzn7kPyFvSpNOjV6r1ESZh+kNBtpmBxjmPoxN
+ oE3MeSCXWob2f61MIkETk6RH5ClKztvhHtzJt2SICjnLtJCLtDCJnKpF2yzYXPlr4+Yx4=;
+Received: from 188.28.18.107.threembb.co.uk ([188.28.18.107]
+ helo=fitzroy.sirena.org.uk) by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <broonie@sirena.org.uk>)
+ id 1i2hEy-00016d-7C; Tue, 27 Aug 2019 19:34:52 +0000
+Received: by fitzroy.sirena.org.uk (Postfix, from userid 1000)
+ id 52866D02CE6; Tue, 27 Aug 2019 20:34:51 +0100 (BST)
+Date: Tue, 27 Aug 2019 20:34:51 +0100
+From: Mark Brown <broonie@kernel.org>
+To: Frank Wunderlich <frank-w@public-files.de>
+Subject: Re: Aw: Re:  Re: BUG: devm_regulator_get returns EPROBE_DEFER
+ (5.3-rc5..next-20190822) for bpi-r2/mt7623/mt7530
+Message-ID: <20190827193451.GN23391@sirena.co.uk>
+References: <trinity-584a4b1c-18c9-43ae-8c1a-5057933ad905-1566501837738@3c-app-gmx-bs43>
+ <20190822193015.GK23391@sirena.co.uk>
+ <trinity-5d117f0d-9f34-4a2b-8a12-1cd34152c108-1566505724458@3c-app-gmx-bs43>
+ <20190823100424.GL23391@sirena.co.uk>
+ <trinity-2f905f45-85d8-4343-8613-31dda5f7556f-1566561616610@3c-app-gmx-bs11>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
+In-Reply-To: <trinity-2f905f45-85d8-4343-8613-31dda5f7556f-1566561616610@3c-app-gmx-bs11>
+X-Cookie: Don't SANFORIZE me!!
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_113931_854601_B62FC817 
-X-CRM114-Status: GOOD (  15.47  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190827_123456_972023_C64EB8A1 
+X-CRM114-Status: GOOD (  20.50  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,78 +82,135 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
+ =?iso-8859-1?Q?=22Ren=E9_van_Dorst=22?= <opensource@vdorst.com>,
+ linux-mediatek@lists.infradead.org, Lee Jones <lee.jones@linaro.org>,
+ Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
+Content-Type: multipart/mixed; boundary="===============5151532579352554138=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Aug 22, 2019 at 02:58:37PM +0800, Sam Shih wrote:
-> From: Ryder Lee <ryder.lee@mediatek.com>
 
-The subject should indicate this is for Mediatek.
-
-> =
-
-> This adds a property "num-pwms" in example so that we could
-> specify the number of PWM channels via device tree.
-> =
-
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-> Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
-> ---
-> Changes since v5:
-> - Add an Acked-by tag
-> - This file is original v4 patch 5/10
-> (https://patchwork.kernel.org/patch/11102577/)
-> =
-
-> Change-Id: I429048afeffa96f3f14533910efe242f88776043
-> ---
->  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
->  1 file changed, 4 insertions(+), 3 deletions(-)
-> =
-
-> diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Doc=
-umentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> index 991728cb46cb..ea95b490a913 100644
-> --- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> +++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> @@ -14,12 +14,12 @@ Required properties:
->                  has no clocks
->     - "top": the top clock generator
->     - "main": clock used by the PWM core
-> -   - "pwm1-8": the eight per PWM clocks for mt2712
-> -   - "pwm1-6": the six per PWM clocks for mt7622
-> -   - "pwm1-5": the five per PWM clocks for mt7623
-> +   - "pwm1-N": the PWM clocks for each channel
-> +   where N starting from 1 to the maximum number of PWM channels
-
-Once converted to schema, you are going to be back to listing them out.
-
->   - pinctrl-names: Must contain a "default" entry.
->   - pinctrl-0: One property must exist for each entry in pinctrl-names.
->     See pinctrl/pinctrl-bindings.txt for details of the property values.
-> + - num-pwms: the number of PWM channels.
-
-You can't add new required properties without breaking compatibility. =
+--===============5151532579352554138==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="rG+KBTClKkGekJUE"
+Content-Disposition: inline
 
 
-You already have to imply the number of channels from the compatible (or =
+--rG+KBTClKkGekJUE
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
 
-number of clocks) and you have to keep doing so to maintain =
+On Fri, Aug 23, 2019 at 02:00:16PM +0200, Frank Wunderlich wrote:
+> > Gesendet: Freitag, 23. August 2019 um 12:04 Uhr
+> > Von: "Mark Brown" <broonie@kernel.org>
 
-compatibility, so why not just keep doing that for new chips?
+> > Can you run a git bisect to try to identify the commit that
+> > caused things to fail?
+>=20
+> i have not figured out, how to rebase linux-next on my current (working) =
+codebase :) (failes on file untouched by me at Patch 3/7000+)
 
-Rob
+git rebase --onto next/master <your base> is your best bet,
+though it depends how long you've left it how easy that's going
+to be.
+
+> > Look to see if there is a device driver bound to that device, or
+> > check if the parent regulator is visible in /sys/class/regulators.
+> > You'll also see a mesage printed out for each regulator as it
+> > instantiates in the boot logs, you can check there too.
+
+> in working version i only get this message in dmesg which
+> looks like a device-binding:
+
+> mt6323-regulator mt6323-regulator: Chip ID =3D 0x2023
+
+You shuould see announcements of the individual regulators on the
+device from the regulator subsystem.
+
+> 		mt6323_vpa_reg: buck_vpa{
+> 			regulator-name =3D "vpa";
+> 			regulator-min-microvolt =3D < 500000>;
+
+In this case it'll say something about "vpa" if it registers this
+one (but if there's a parent that's having trouble then this
+won't register).
+
+> parent regulator is then
+> mt6323regulator: mt6323regulator
+
+No, a parent regulator - something providing a power supply to
+vpa.  Though I can't see anything in the kernel code that'd set
+one up and there's nothing in the DT...
+
+> where can be the cause for no more binding main-regulator?
+
+You should generally get an error message if it's the regulator
+subsystem.
+
+> are these strange messages related to this problem?
+
+> mtk-cpufreq mtk-cpufreq: failed to initialize dvfs info for cpu0
+
+That's a user of the regulator so it's probably just a symptom of
+the regulator not loading.
+
+> another strange line is this:
+
+> mt6397 1000d000.pwrap:mt6323: unsupported chip: 0x0
+
+This could well be it, if the MFD the device is on fails to load
+the regulator won't either since it will only load after the MFD
+does.  The MFD driver ensures that the drivers for all the
+functions on the chip share the chip effectively.
+
+> a4872e80ce7d mfd: mt6397: Extract IRQ related code from core driver
+> 708cb5cc3fde mfd: mt6397: Rename macros to something more readable
+
+> after reverting those 2 regulators are working again.
+> Adding both Signed-off-People to CC to keep them informed that a fix is n=
+eeded
+
+That sounds like the issue then.
+
+> > Please fix your mail client to word wrap within paragraphs at something
+> > substantially less than 80 columns.  Doing this makes your messages much
+> > easier to read and reply to.
+
+> i currently write in webmailer, where i cannot set this setting,
+> i try to add manual linebreak in long lines, ok?
+
+Sure, thanks for trying.
+
+--rG+KBTClKkGekJUE
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl1lhdoACgkQJNaLcl1U
+h9ChiQf/WidpZEEUZ3U+/NSD1T1c8ZlhHguqdDz5T5GvUHrnDHMsDhsZeZokMsiM
+BAG5JTig9S07exFlkrEQ1Qx6UQkKt9K3EUjtqrIP4xLyzIEHrNfeD1tCYDRBIo5T
+ec04VNu3CcISh4KkTvYj53Y9RTIFenkxqhn0kkvmZcyVVW8Z2+e5laMnOLaA7nxP
+feTmsEft7dnNub73WS++ZNQ6JDQuV00Xy/go5UI7Pn9WuMxBPEHU27vkjLDYiAJ1
+X2MVfbai9CUPdXR5pazYXhKSr6+Q9PuN0EjJgvQ/Ep2Hm+uarHDAg5UuAYYNdS8P
+3oZCwI+UeHR0bUDPzPa8Bp+BpK7gCA==
+=VMor
+-----END PGP SIGNATURE-----
+
+--rG+KBTClKkGekJUE--
+
+
+--===============5151532579352554138==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============5151532579352554138==--
+
