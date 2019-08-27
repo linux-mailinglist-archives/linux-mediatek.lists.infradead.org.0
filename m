@@ -2,68 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 022DD9E553
-	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 12:05:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 607469E57F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 27 Aug 2019 12:14:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zJumuZ605dnQloHlVPyP4dJPqMG9A4M3hR63/hLsUIc=; b=H/uWWPe1wEf5nb
-	StYnH1/ZY9mMKrA3BdgX0tS88nykmHbM3psCyTsDVgAd7VqAfguhuql2qjo4Jx5lzc3mZv7w4KwGK
-	zLPb7JRFyanJtKUYshIlKTQiZhq1qZLz22ogegHr3Ud7JCK6HzYK2rUd81PRi8Nf9AFtgtA5khzhe
-	mG1yvbJN4Dly/hWqgzLjvqoEDq7h4XnoctjrjyGUOM7Vf85ItnsQ01LlvQpioXm07HnTny1oF1kIh
-	bxKcJDLsdwFc12amT91f3Z6BJfPf/aTzGQC/K51VPMe1ydsXDswoMH5efyInCS9QLKYxtR+k7ilvB
-	QzDw/PlYMmSMvyErWSAQ==;
+	List-Owner; bh=MSRyWtgCBuEDyjM51wfK5Ae7Rqtd0RxgcoM+KEZqopU=; b=GxnnHEopFTLm6L
+	gPfkJz2ZeBICYW3Y2/lv29zRocH+aWufpoKnmQosa3zaBpVNTPpGa409pgpuGFcn6qzysWM1EuZbH
+	bXrb8fHYvNkkqPUjwV93VjT2hLPEYcQ8AZAsQ5i+ia6M6vA1Lt5b2qUrDKVKdNlxbIIRhBq340HFC
+	uCfbwcCEgVguxL/0deuvsEraSIwMFom9EiELxnWk2NqYZjbTMBdB8fK6XrqOZoVWFxKhms0PdpmVc
+	QfrqH3vwkJojqD4VIsrg2KAicga0wXcYlO1piiGSPzo7X7v2iUqnVfPmpOUhn6HVwJ2FGkypBBNKv
+	wzzYcXt+Wfe8vsrmn0CA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2YLz-0007OB-Ih; Tue, 27 Aug 2019 10:05:32 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1i2YUF-0001cl-Eg; Tue, 27 Aug 2019 10:14:03 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2YKe-0005H0-Em; Tue, 27 Aug 2019 10:04:10 +0000
-Received: by mail-ed1-x543.google.com with SMTP id a21so30591519edt.11;
- Tue, 27 Aug 2019 03:04:07 -0700 (PDT)
+ id 1i2YUC-0001bt-1T; Tue, 27 Aug 2019 10:14:01 +0000
+Received: by mail-ed1-x544.google.com with SMTP id a21so30629068edt.11;
+ Tue, 27 Aug 2019 03:13:59 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=iTXOkUP9jFR1L/j0BaMvMg8k7tC/KBsxjnU9Rp7bYFQ=;
- b=VKZRmI97Zcs+TjvYNxzP6GNOckDrQRTipIXYskujm/mO0vKy8F34k+75zjv9lkLvmA
- 0U8JefFJl2MMFqDkMotFyo3dZcgeo9yIUtmhR7XMeHEG/OXbuhczw2OKY1k9/UdAWh4X
- uNm3HvQuuWLcG+L4lTaLuIdJNs/g1vqi4mHA2yl1LsTL9PABV8LaphwJSdwq7RpkIyNW
- CRdyby6VFi4EUk29T1nJYJRZcEoJFeqBCrRF0+ZA/VuE4JuFB8ANoh/LcTEXMCoQ8oFf
- 5q8JbbtVrBXZ/XNor2CEcmrwAbNq6pb/lo3qKNdaK2eFr/IIBjqhI1I7dQ/PPrZShlIg
- 7sEQ==
+ bh=ruMwevvsfVvPx6ba2KzE/w+jdv1swA7JM0oQ+V9YH3w=;
+ b=dsFJYc09RMcxhSbP/nMvFyt4T8HwWTN8w/fHC7FdLkwltyxl4wOAbkcj2M6M2neHjc
+ z72m2/Ytb+H9y1JIOUojSTo5hLYAPNyLs81pLYSDlQiK55Whs7KkjO2i7G6VDsyM+nC2
+ W/Rxpaez8k6vtWMToLZctxLHH1yHyS4eXegyiaATJVj2rFNSwXyMEaTj1cloijvKRjZf
+ NQ4Y3MiBU9hGaCSetVIjng0e6kfVVMgK90alLRJ6nEEA2uhfT+0LlRHlsfQC0eIi+OOV
+ l+MTHyWb7WLEE6Soc+DgRzfBn8a+w5kjr5jZ7qZsPAkPWimujZQq/6WIOYT7+xQJsFVw
+ NbjQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=iTXOkUP9jFR1L/j0BaMvMg8k7tC/KBsxjnU9Rp7bYFQ=;
- b=G09YjXPPMvxsKCPN551JCSUSlnq+DrPqsWNRTK53SCqDtfBJ/EegWB8gKtrXpM9leQ
- cSxmzSFtft2dQ7MG1qLxCLo8p1+7BpzKQ1pMUE93WeSsPSxk0wJegOj6UVkCGTRuNC8J
- AA7AtxIYa5VyI1MVBIbt2XzpqTu+h5dPdVT+FLkb714v2IfH1H51HAr1MDikUu/ltuPl
- KLt8/S0Q7VLqoD2JOr01RnZNFXPKMKxU0vwLtqOy5VYTcADMHZTCQ7FNlXeu7tb6PHHj
- nATZrrGcVHvru0gV2FREFUPLcVcoAWoA2X2Sqjd/VQyI9HcAQLLpRMGaCbeb9HSPl/8y
- xFsg==
-X-Gm-Message-State: APjAAAXRY6uc3gkNmoNrh1iUmnAN/n8uJARshPQZ7k5Ul4qn3MbsMFz+
- X8KTaEuaEIMiUjCOWRQzcNk=
-X-Google-Smtp-Source: APXvYqx8F8bpBc3jLgZ7hdfJ7OUjePdC+8wx3n2EDJaq6btqN8qzQYVUB2XEx0gwLzAObvfffA81qg==
-X-Received: by 2002:a17:906:70c8:: with SMTP id
- g8mr20100745ejk.241.1566900245911; 
- Tue, 27 Aug 2019 03:04:05 -0700 (PDT)
+ bh=ruMwevvsfVvPx6ba2KzE/w+jdv1swA7JM0oQ+V9YH3w=;
+ b=YQH+vMS6kTB2AHGTPNp/QUW0twpi0KXO3+kyatq7YSkrBB/6Q0qM+hwGIbp7je3g4z
+ pHCktjVa5V4G+VMJ4Zjb9qW/a7LFvH2uwP2XkmAH2BWE4fViff+rFyLCnSp/UkfxWj8+
+ GLjnvQnW+GcD2MuJddT1DRGfaNiP+pMIaweUDhnIda0CUoO35jO31G22lIRxxIVUmdJZ
+ tUouetpsU2ZvZ5qzx6lEfCtolqc382a+xNdKvvbXh/1HWN6M9Gy1TFn+UuS8nTCBJpGh
+ 1JypRvlnBoKARK4Vi/4ZznNp7OHRwFZ8dEIfP3Z3TC334Yx66RvRP/TKhIYfVmDStUl3
+ fKCg==
+X-Gm-Message-State: APjAAAVeWxOSPPUbvHN3kOPs4p/QfVb8DAFfZLpYO5gAml+ap+o/lFqz
+ QTH6fAjCQEDqWiQQkrZJSQQ=
+X-Google-Smtp-Source: APXvYqyR0K/ZzphfC+LGXRKAgeZM7oU1b+qMExkzFXO5ONR/tHuonuGHwzNQ3BfWPBr7451O1M0m2A==
+X-Received: by 2002:a17:906:228e:: with SMTP id
+ p14mr21083029eja.258.1566900838714; 
+ Tue, 27 Aug 2019 03:13:58 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.228.146])
- by smtp.gmail.com with ESMTPSA id c1sm1859692edn.62.2019.08.27.03.04.03
+ by smtp.gmail.com with ESMTPSA id w19sm1855566edt.41.2019.08.27.03.13.56
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Tue, 27 Aug 2019 03:04:04 -0700 (PDT)
-Subject: Re: [RESEND, PATCH v13 09/12] soc: mediatek: cmdq: define the
- instruction struct
+ Tue, 27 Aug 2019 03:13:58 -0700 (PDT)
+Subject: Re: [RESEND, PATCH v13 11/12] soc: mediatek: cmdq: add
+ cmdq_dev_get_client_reg function
 To: Bibby Hsieh <bibby.hsieh@mediatek.com>
 References: <20190820084932.22282-1-bibby.hsieh@mediatek.com>
- <20190820084932.22282-10-bibby.hsieh@mediatek.com>
- <486deaa3-d139-d4af-e0cf-e324b3270f3b@gmail.com>
- <1566879121.29523.8.camel@mtksdaap41>
+ <20190820084932.22282-12-bibby.hsieh@mediatek.com>
+ <ccd3782e-b1bb-7887-f4a5-d7774183c7b7@gmail.com>
+ <1566878368.29523.1.camel@mtksdaap41>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -159,23 +159,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <c33f6829-b1f4-376f-5e12-38c811c370dd@gmail.com>
-Date: Tue, 27 Aug 2019 12:04:03 +0200
+Message-ID: <f8945f1b-aaa7-4f4a-59e5-8e817aeb46ae@gmail.com>
+Date: Tue, 27 Aug 2019 12:13:56 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566879121.29523.8.camel@mtksdaap41>
+In-Reply-To: <1566878368.29523.1.camel@mtksdaap41>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_030408_785403_8372C104 
-X-CRM114-Status: GOOD (  11.29  )
+X-CRM114-CacheID: sfid-20190827_031400_224701_D3EE2A4F 
+X-CRM114-Status: GOOD (  22.10  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
@@ -215,39 +215,136 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 27/08/2019 06:12, Bibby Hsieh wrote:
-
->>>  
->>>  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
->>>  {
->>> -	u32 arg_b;
->>> +	struct cmdq_instruction *inst;
->>>  
->>>  	if (event >= CMDQ_MAX_EVENT)
->>>  		return -EINVAL;
->>>  
->>> -	/*
->>> -	 * WFE arg_b
->>> -	 * bit 0-11: wait value
->>> -	 * bit 15: 1 - wait, 0 - no wait
->>> -	 * bit 16-27: update value
->>> -	 * bit 31: 1 - update, 0 - no update
->>> -	 */
+On 27/08/2019 05:59, Bibby Hsieh wrote:
+> On Fri, 2019-08-23 at 16:21 +0200, Matthias Brugger wrote:
 >>
->> I have no strong opinion of CMDQ_WFE_OPTION but if you want to introduce it,
->> then please copy the comment over to include/linux/mailbox/mtk-cmdq-mailbox.h
-> 
-> Ok. let's move the descriptions to header.
+>> On 20/08/2019 10:49, Bibby Hsieh wrote:
+>>> GCE cannot know the register base address, this function
+>>> can help cmdq client to get the cmdq_client_reg structure.
+>>>
+>>> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+>>> Reviewed-by: CK Hu <ck.hu@mediatek.com>
+>>> ---
+>>>  drivers/soc/mediatek/mtk-cmdq-helper.c | 29 ++++++++++++++++++++++++++
+>>>  include/linux/soc/mediatek/mtk-cmdq.h  | 21 +++++++++++++++++++
+>>>  2 files changed, 50 insertions(+)
+>>>
+>>> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
+>>> index c53f8476c68d..80f75a1075b4 100644
+>>> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
+>>> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
+>>> @@ -27,6 +27,35 @@ struct cmdq_instruction {
+>>>  	u8 op;
+>>>  };
+>>>  
+>>> +int cmdq_dev_get_client_reg(struct device *dev,
+>>> +			    struct cmdq_client_reg *client_reg, int idx)
+>>> +{
 >>
->> Just one question, why did you call it _OPTION? It's not really expressive for me.
+>> Can't we do/call this in cmdq_mbox_create parsing the number of gce-client-reg
+>> properties we have and allocating these using a pointer to cmdq_client_reg in
+>> cmdq_client?
+>> We will have to free the pointer then in cmdq_mbox_destroy.
+>>
+>> Regards,
+>> Matthias
 > 
-> Actually, _OPTION is come from our hardware design name...
+> I don't think we need to keep the cmdq_client_reg in cmdq_client
+> structure.
+> Because our client will have own data structure, they will copy the
+> client_reg information into their own structure.
+> 
+> In the design now, we do not allocate the cmdq_client_reg, client pass
+> the cmdq_client_reg pointer into this API.
+> Client will destroy the pointer after they get the information they
+> want.
 > 
 
-Ok, then I'll stop bike-shedding. I leave it up to you to rename it or not.
+My point wasn't so much about the lifecycle of the object, but the fact that we
+add another call, which can be already full-filled by a necessary previous call
+to cmdq_mbox_create. So I would prefer to add the information gathering for
+cmdq_client_reg in this call, and let it live there for the time cmdq_client
+lives. In the end we are talking about 40 bits of memory.
 
 Regards,
 Matthias
+
+> Thanks for the comments so much.
+> 
+> Bibby
+> 
+>>
+>>> +	struct of_phandle_args spec;
+>>> +	int err;
+>>> +
+>>> +	if (!client_reg)
+>>> +		return -ENOENT;
+>>> +
+>>> +	err = of_parse_phandle_with_fixed_args(dev->of_node,
+>>> +					       "mediatek,gce-client-reg",
+>>> +					       3, idx, &spec);
+>>> +	if (err < 0) {
+>>> +		dev_err(dev,
+>>> +			"error %d can't parse gce-client-reg property (%d)",
+>>> +			err, idx);
+>>> +
+>>> +		return err;
+>>> +	}
+>>> +
+>>> +	client_reg->subsys = (u8)spec.args[0];
+>>> +	client_reg->offset = (u16)spec.args[1];
+>>> +	client_reg->size = (u16)spec.args[2];
+>>> +	of_node_put(spec.np);
+>>> +
+>>> +	return 0;
+>>> +}
+>>> +EXPORT_SYMBOL(cmdq_dev_get_client_reg);
+>>> +
+>>>  static void cmdq_client_timeout(struct timer_list *t)
+>>>  {
+>>>  	struct cmdq_client *client = from_timer(client, t, timer);
+>>> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
+>>> index a345870a6d10..02ddd60b212f 100644
+>>> --- a/include/linux/soc/mediatek/mtk-cmdq.h
+>>> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
+>>> @@ -15,6 +15,12 @@
+>>>  
+>>>  struct cmdq_pkt;
+>>>  
+>>> +struct cmdq_client_reg {
+>>> +	u8 subsys;
+>>> +	u16 offset;
+>>> +	u16 size;
+>>> +};
+>>> +
+>>>  struct cmdq_client {
+>>>  	spinlock_t lock;
+>>>  	u32 pkt_cnt;
+>>> @@ -24,6 +30,21 @@ struct cmdq_client {
+>>>  	u32 timeout_ms; /* in unit of microsecond */
+>>>  };
+>>>  
+>>> +/**
+>>> + * cmdq_dev_get_client_reg() - parse cmdq client reg from the device
+>>> + *			       node of CMDQ client
+>>> + * @dev:	device of CMDQ mailbox client
+>>> + * @client_reg: CMDQ client reg pointer
+>>> + * @idx:	the index of desired reg
+>>> + *
+>>> + * Return: 0 for success; else the error code is returned
+>>> + *
+>>> + * Help CMDQ client parsing the cmdq client reg
+>>> + * from the device node of CMDQ client.
+>>> + */
+>>> +int cmdq_dev_get_client_reg(struct device *dev,
+>>> +			    struct cmdq_client_reg *client_reg, int idx);
+>>> +
+>>>  /**
+>>>   * cmdq_mbox_create() - create CMDQ mailbox client and channel
+>>>   * @dev:	device of CMDQ mailbox client
+>>>
+> 
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
