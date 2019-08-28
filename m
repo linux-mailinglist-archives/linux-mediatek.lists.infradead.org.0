@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 67BC09FE31
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:15:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 322439FDFE
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:12:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TOMy8iYUkTgF/RpafBrK7HVPiAZj0hk9G7NhbUBlD0k=; b=CUzGHGGQNYEEGG
-	7QMBj/7Gxo/eylu2+blNYhpnLa492MfCKTxM05Cvwu3htZVq3D+o6FkF0ISM9VXM3jkp/PXX4jH7/
-	csheEqe51BsSHBnSJE+7vugpAr4jyviN1BYRwvjaAbAKnZXIP1eM0JaoEs4LIcSW9YHgnZzXIY+Ch
-	1I6fWoFE6UhHmzNH7Z0PU8UF9Q1KHceKoixJ+w5rypCBl1aSRGHaZ9f4YCBW5l3yZFOMttwlSRf7G
-	7DHn8xS+UvjU3c4/VTC/cM2GDUDF7j+E9GocEH+MYQ7L7nLeY/kvxJQSqfNlpH0bVT5m2pnNN86Js
-	zoiudjRLCY7VhHsiBKMg==;
+	List-Owner; bh=3E7xAnIKueiAexLO8pbsLRQMHxpArhsUBDGqkqhha7I=; b=HHh2jTiffS4AJN
+	O7JoJOchgP0LaPM2CcnMMlKGCqyIBLGEaRPFXE6YcWqIY7MKTXgKr6RmpRlz04A0Z1SZZK5gHfAQN
+	hvI7LEO8LUdvYqALIN3eHSoAp2bErgY4V342gUJGw7L7KHXHELHdJ9pb1Dldlfs+yCvNPtKGSstj7
+	SnUrYaOINWd0vyATZ0NEAFrdOowZ8b1NnydLEvZ55mkUzHYc5BP9GSYJF/wlYbzqK2bWldKz2GJ/I
+	5TWT1SO6VGa/XMyEU8nwu0AzvNiHvEDkCcTRXGjtKV+rvtkcYufVKTTw8zRf4UFiP2ZjssQsdDVl9
+	e6Q40L7MiwwsX20Y8PUQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2u3B-00067r-Kr; Wed, 28 Aug 2019 09:15:33 +0000
+	id 1i2u0A-0002kk-Gv; Wed, 28 Aug 2019 09:12:26 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2u00-0002eG-1e; Wed, 28 Aug 2019 09:12:17 +0000
-X-UUID: e23eb3201e334551826d460350b3f469-20190828
-X-UUID: e23eb3201e334551826d460350b3f469-20190828
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1i2tzm-0002UC-Vj; Wed, 28 Aug 2019 09:12:04 +0000
+X-UUID: 4cf768ce15824dac90769f1627cf2f23-20190828
+X-UUID: 4cf768ce15824dac90769f1627cf2f23-20190828
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <weiyi.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 403121369; Wed, 28 Aug 2019 01:12:20 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 28 Aug 2019 02:12:18 -0700
+ with ESMTP id 2026199402; Wed, 28 Aug 2019 01:12:07 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 28 Aug 2019 02:12:05 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 28 Aug 2019 17:12:04 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -40,19 +40,17 @@ Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
 From: Weiyi Lu <weiyi.lu@mediatek.com>
 To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
  <matthias.bgg@gmail.com>, Rob Herring <robh@kernel.org>
-Subject: [PATCH v7 03/13] soc: mediatek: Refactor polling timeout and
- documentation
-Date: Wed, 28 Aug 2019 17:11:36 +0800
-Message-ID: <1566983506-26598-4-git-send-email-weiyi.lu@mediatek.com>
+Subject: [PATCH v7 04/13] soc: mediatek: Refactor regulator control
+Date: Wed, 28 Aug 2019 17:11:37 +0800
+Message-ID: <1566983506-26598-5-git-send-email-weiyi.lu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1566983506-26598-1-git-send-email-weiyi.lu@mediatek.com>
 References: <1566983506-26598-1-git-send-email-weiyi.lu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_021216_109451_521DA590 
-X-CRM114-Status: UNSURE (   8.41  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190828_021203_028223_C0BF573F 
+X-CRM114-Status: GOOD (  11.24  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -84,45 +82,77 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use USEC_PER_SEC to indicate the polling timeout directly.
-And add documentation of scp_domain_data.
+Put regulator enable and disable control in separate functions.
 
 Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
 ---
- drivers/soc/mediatek/mtk-scpsys.c | 13 ++++++++++++-
- 1 file changed, 12 insertions(+), 1 deletion(-)
+ drivers/soc/mediatek/mtk-scpsys.c | 32 +++++++++++++++++++++++---------
+ 1 file changed, 23 insertions(+), 9 deletions(-)
 
 diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
-index 503222d..e97fc0e 100644
+index e97fc0e..aed540d 100644
 --- a/drivers/soc/mediatek/mtk-scpsys.c
 +++ b/drivers/soc/mediatek/mtk-scpsys.c
-@@ -21,7 +21,7 @@
- #include <dt-bindings/power/mt8173-power.h>
+@@ -191,6 +191,22 @@ static int scpsys_domain_is_on(struct scp_domain *scpd)
+ 	return -EINVAL;
+ }
  
- #define MTK_POLL_DELAY_US   10
--#define MTK_POLL_TIMEOUT    (jiffies_to_usecs(HZ))
-+#define MTK_POLL_TIMEOUT    USEC_PER_SEC
++static int scpsys_regulator_enable(struct scp_domain *scpd)
++{
++	if (!scpd->supply)
++		return 0;
++
++	return regulator_enable(scpd->supply);
++}
++
++static int scpsys_regulator_disable(struct scp_domain *scpd)
++{
++	if (!scpd->supply)
++		return 0;
++
++	return regulator_disable(scpd->supply);
++}
++
+ static int scpsys_power_on(struct generic_pm_domain *genpd)
+ {
+ 	struct scp_domain *scpd = container_of(genpd, struct scp_domain, genpd);
+@@ -201,11 +217,9 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+ 	int ret, tmp;
+ 	int i;
  
- #define MTK_SCPD_ACTIVE_WAKEUP		BIT(0)
- #define MTK_SCPD_FWAIT_SRAM		BIT(1)
-@@ -108,6 +108,17 @@ enum clk_id {
+-	if (scpd->supply) {
+-		ret = regulator_enable(scpd->supply);
+-		if (ret)
+-			return ret;
+-	}
++	ret = scpsys_regulator_enable(scpd);
++	if (ret < 0)
++		return ret;
  
- #define MAX_CLKS	3
+ 	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++) {
+ 		ret = clk_prepare_enable(scpd->clk[i]);
+@@ -273,8 +287,7 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+ 			clk_disable_unprepare(scpd->clk[i]);
+ 	}
+ err_clk:
+-	if (scpd->supply)
+-		regulator_disable(scpd->supply);
++	scpsys_regulator_disable(scpd);
  
-+/**
-+ * struct scp_domain_data - scp domain data for power on/off flow
-+ * @name: The domain name.
-+ * @sta_mask: The mask for power on/off status bit.
-+ * @ctl_offs: The offset for main power control register.
-+ * @sram_pdn_bits: The mask for sram power control bits.
-+ * @sram_pdn_ack_bits: The mask for sram power control acked bits.
-+ * @bus_prot_mask: The mask for single step bus protection.
-+ * @clk_id: The basic clocks required by this power domain.
-+ * @caps: The flag for active wake-up action.
-+ */
- struct scp_domain_data {
- 	const char *name;
- 	u32 sta_mask;
+ 	dev_err(scp->dev, "Failed to power on domain %s\n", genpd->name);
+ 
+@@ -333,8 +346,9 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+ 	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++)
+ 		clk_disable_unprepare(scpd->clk[i]);
+ 
+-	if (scpd->supply)
+-		regulator_disable(scpd->supply);
++	ret = scpsys_regulator_disable(scpd);
++	if (ret < 0)
++		goto out;
+ 
+ 	return 0;
+ 
 -- 
 1.8.1.1.dirty
 
