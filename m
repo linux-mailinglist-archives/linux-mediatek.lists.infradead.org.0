@@ -2,54 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C1CB9FBF5
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 09:36:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9EB639FBF6
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 09:36:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=0f18WqW0/Ue0YIr31xF4QTEj4UfgWYGX5fP1UPrl4xE=; b=klnYiCjTwJZIlm
-	3lK763J919Bc7aI9mVEsXBtETeCj6cy2UA1VehOWT0KwuR+HUOPeP2JxbeYCfUzTXg50oCuYba474
-	+cSnYzsa/FWu3B3FtT72O3ETRjW+j3RNfQNy1GMYfF5bi4h1rT/DcRep1ad2s550m6w7c0/swMHj/
-	Ev3pvQPSTzDb54lTMMLQKIZgnLZ0e8JiQfBQEeh5MACCOIqzXL02awANKCXNvhiLPqfSdMVe30BDC
-	WK4z4shA0qssP8ZwsqWVIFNcpMQ3IKJFPv/0J+t4TGM2fEI/7Te/tL0V9EYTOrbeOoqAu65z1U1Kz
-	YMx/N2OAPCZLuBsoeMGA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=VkoU9BZL8GMexgq24uZckszroEPj8eJc2jDshWE3jUE=; b=WdNlIA0OEqMpe/
+	qBEB7wUtUzvucKJ1Hifs1Sc7ElAOWqItMj3tkDenZ6paWijjD3aIOA/o5n9W3LnvHTnhOYjjIIUyF
+	r2wS/7c+0I2oMhl10RnLf1b9pt8ryFw4Y7JL02R+1eOxxBQWaMvzLUdjS75ww1fQhp008d5GH5/+D
+	T6gK2BV6ptXbJstkPwMlot1tnCo86DrCnxERZfe4uSuQyvCAkjL7XMljVnc33u0eSmJMoFYchAj7O
+	MV3pPRHxp78xcHcZsxFYq7+YSDBlaDz7WTCNyABU1S9BRXGWIKv5QxB1dBjsJMNBVaYgYx/O1LEo1
+	YzxnbhNi/CsoPhIRhKnA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2sUv-0001wm-NY; Wed, 28 Aug 2019 07:36:06 +0000
+	id 1i2sUy-00020K-AO; Wed, 28 Aug 2019 07:36:08 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2sTe-00007R-Q4; Wed, 28 Aug 2019 07:34:48 +0000
-X-UUID: a20b7893e595422eb87974f6d1129f83-20190827
-X-UUID: a20b7893e595422eb87974f6d1129f83-20190827
+ id 1i2sTe-00007a-Q0; Wed, 28 Aug 2019 07:34:48 +0000
+X-UUID: 5323f5d66e5d417b8949c72ea87fba36-20190827
+X-UUID: 5323f5d66e5d417b8949c72ea87fba36-20190827
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 568888852; Tue, 27 Aug 2019 23:34:49 -0800
+ with ESMTP id 1224182252; Tue, 27 Aug 2019 23:34:49 -0800
 Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 28 Aug 2019 00:34:47 -0700
+ 15.0.1395.4; Wed, 28 Aug 2019 00:34:48 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 28 Aug 2019 15:34:40 +0800
+ 15.0.1395.4; Wed, 28 Aug 2019 15:34:42 +0800
 Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 28 Aug 2019 15:34:40 +0800
+ Transport; Wed, 28 Aug 2019 15:34:41 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Rob Herring
  <robh+dt@kernel.org>
-Subject: [PATCH v2 0/7]  add support USB for MT8183
-Date: Wed, 28 Aug 2019 15:34:24 +0800
-Message-ID: <1566977671-22191-1-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [PATCH v2 1/7] dt-bindings: usb: mtu3: support USB wakeup for MT8183
+Date: Wed, 28 Aug 2019 15:34:25 +0800
+Message-ID: <1566977671-22191-2-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1566977671-22191-1-git-send-email-chunfeng.yun@mediatek.com>
+References: <1566977671-22191-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 45C8A0C3D21D41A54704C36113615E527385CF6190ED1896979E2DBFA0EBD17D2000:8
+X-TM-SNTS-SMTP: 208BA8BCFEDE1CBD161026543F25E0DA2D57AAD24C203025BB8A003AE7FB85082000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_003446_858002_D58F0EC9 
-X-CRM114-Status: GOOD (  10.03  )
+X-CRM114-CacheID: sfid-20190828_003446_860102_6E3A10B9 
+X-CRM114-Status: GOOD (  11.44  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -81,42 +83,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This series support USB DRD controller and enable it's remote
-wakeup functoin for MT8183, they depend on the following
-series patches:
+Support USB wakeup by ip-sleep mode for MT8183
 
-1. this series add support MT6358 PMIC
-  [v5,01/10] mfd: mt6397: clean up code
-  https://patchwork.kernel.org/patch/11110487/
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+---
+v2: no changes
+---
+ Documentation/devicetree/bindings/usb/mediatek,mtu3.txt | 1 +
+ 1 file changed, 1 insertion(+)
 
-2. this series add support pericfg syscon
-  [1/2] dt-bindings: clock: mediatek: add pericfg for MT8183
-  https://patchwork.kernel.org/patch/11117799/
-
-3. add property mediatek,discth for tphy
-  [06/11] phy: phy-mtk-tphy: add a property for disconnect threshold
-  https://patchwork.kernel.org/patch/11110695/
-
-v2 changes:
-  add patch [7/7]
-
-Chunfeng Yun (7):
-  dt-bindings: usb: mtu3: support USB wakeup for MT8183
-  dt-bindings: usb: mtk-xhci: support USB wakeup for MT8183
-  usb: mtu3: support ip-sleep wakeup for MT8183
-  usb: mtk-xhci: support ip-sleep wakeup for MT8183
-  arm64: dts: mt8183: add usb and phy nodes
-  arm64: dts: mt8183: enable USB remote wakeup
-  arm64: dts: mt8183: tune disconnect threshold of u2phy
-
- .../bindings/usb/mediatek,mtk-xhci.txt        |  1 +
- .../devicetree/bindings/usb/mediatek,mtu3.txt |  1 +
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts   | 23 +++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi      | 64 +++++++++++++++++++
- drivers/usb/host/xhci-mtk.c                   | 14 +++-
- drivers/usb/mtu3/mtu3_host.c                  | 14 +++-
- 6 files changed, 115 insertions(+), 2 deletions(-)
-
+diff --git a/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt b/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
+index 3382b5cb471d..ed954bedcd2f 100644
+--- a/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
++++ b/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
+@@ -48,6 +48,7 @@ Optional properties:
+ 	"wakeup-source", and has two arguments:
+ 	- the first one : register base address of the glue layer in syscon;
+ 	- the second one : hardware version of the glue layer
++		- 0 : used by mt8183 etc
+ 		- 1 : used by mt8173 etc
+ 		- 2 : used by mt2712 etc
+  - mediatek,u3p-dis-msk : mask to disable u3ports, bit0 for u3port0,
 -- 
 2.23.0
 
