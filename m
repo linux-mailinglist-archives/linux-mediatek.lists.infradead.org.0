@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 86DB3A01A0
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 14:29:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CC4A1A01A5
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 14:29:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+OfCdNE/VfsJlShV9yVqaadJUrd4Nd+iQf+5FPVAAHc=; b=uQMFoVWX3XlzRW
-	KX7cdMrchoOp8Gi5zRrHLptA7xqwggKpj3Bg72Z+jxkssN4bi12o60p3QlPRcU/kREGYAJxdGLRFg
-	FiAvFTU4g+LOiA0j7KCHgkrXVtdGGMftjsTJViCIaYyFshGPf4Rh/e4/z4T8p9uovN5Yf/qHrhQEU
-	ZqmTYari/NoGkUsH+0ZzlBfXv0SFrx2pJiNV70XBn66+Vx5/AL0XUlNX4pLFr9kqFuumZtglscowp
-	7xS6tEtzdn0H2sx60fTIPIvwj2C/PStgQgFQ7eU7UMeSSt7YHLW6UdEYDyIq9JmbIPjVlK33sNKNx
-	3T3mW4VbN4faqWaULXgQ==;
+	List-Owner; bh=rc0G3XGEwcETyeNKFJHMGwzBr66qBvHFFy2WgSfSM7Y=; b=NzkVKIyVzVhckd
+	vYthZbXdXaSeOp/c++QQovS4EAQ9sUXg82LRPa/hBS6cEZmAv/nA2XOUhSl2rwohCeBa/svfkhi6w
+	5w+K2i87IZgwJNELLtbpMp+LwkKO2Pn0Suj2KOv90aWg6lFaYYfoZ8aV7Oa6J93Lyk0Yq2kCAhyD0
+	+Il/IWDC++DvZqUfP3zRw+st5rzvyjFjmz2qNJnjg1PoXjI/uQmYyNkXKv4yi4lUuhTu2qgrqeoYw
+	qmlXhTY7An02ZxtCVeG35oMuH9Vn14TB8kAN9ms3Q3tuuZ2cueUULrOsofXptdbwPjcFE7zspd+jP
+	bBtr2zqudarf6sSoEERw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2x4Q-0002NW-1s; Wed, 28 Aug 2019 12:29:02 +0000
+	id 1i2x4g-0002e7-T3; Wed, 28 Aug 2019 12:29:18 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2x4L-0002Lt-J6; Wed, 28 Aug 2019 12:28:58 +0000
-X-UUID: f0613408ef454143ab72da0cf85f90f6-20190828
-X-UUID: f0613408ef454143ab72da0cf85f90f6-20190828
+ id 1i2x4L-0002Lw-U3; Wed, 28 Aug 2019 12:28:59 +0000
+X-UUID: 58cdcc8dc1404cebad2fc9e34ed918d6-20190828
+X-UUID: 58cdcc8dc1404cebad2fc9e34ed918d6-20190828
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <henryc.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 148528268; Wed, 28 Aug 2019 04:29:01 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 1452895656; Wed, 28 Aug 2019 04:29:01 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 28 Aug 2019 05:29:00 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 28 Aug 2019 20:28:59 +0800
 Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -42,18 +42,18 @@ To: Georgi Djakov <georgi.djakov@linaro.org>, Rob Herring
  <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, Viresh Kumar
  <vireshk@kernel.org>, Stephen Boyd <swboyd@chromium.org>, Ryan Case
  <ryandcase@chromium.org>
-Subject: [PATCH V3 07/10] arm64: dts: mt8183: add dvfsrc related nodes
-Date: Wed, 28 Aug 2019 20:28:45 +0800
-Message-ID: <1566995328-15158-8-git-send-email-henryc.chen@mediatek.com>
+Subject: [PATCH V3 08/10] dt-bindings: interconnect: add MT8183 interconnect
+ dt-bindings
+Date: Wed, 28 Aug 2019 20:28:46 +0800
+Message-ID: <1566995328-15158-9-git-send-email-henryc.chen@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
 References: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_052857_637215_DD8447EB 
-X-CRM114-Status: UNSURE (   8.69  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190828_052857_969975_3B7F40B2 
+X-CRM114-Status: GOOD (  10.89  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -86,31 +86,64 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Enable dvfsrc on mt8183 platform.
+Add interconnect provider dt-bindings for MT8183.
 
 Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
 ---
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 7 +++++++
- 1 file changed, 7 insertions(+)
+ .../devicetree/bindings/soc/mediatek/dvfsrc.txt        |  9 +++++++++
+ include/dt-bindings/interconnect/mtk,mt8183-emi.h      | 18 ++++++++++++++++++
+ 2 files changed, 27 insertions(+)
+ create mode 100644 include/dt-bindings/interconnect/mtk,mt8183-emi.h
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index a58999f..7512f84 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -143,6 +143,13 @@
- 		clock-output-names = "clk26m";
- 	};
+diff --git a/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt b/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
+index 7f43499..da98ec9 100644
+--- a/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
++++ b/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
+@@ -12,6 +12,11 @@ Required Properties:
+ - clock-names: Must include the following entries:
+ 	"dvfsrc": DVFSRC module clock
+ - clocks: Must contain an entry for each entry in clock-names.
++- #interconnect-cells : should contain 1
++- interconnect : interconnect providers support dram bandwidth requirements.
++	The provider is able to communicate with the DVFSRC and send the dram
++	bandwidth to it. shall contain only one of the following:
++	"mediatek,mt8183-emi"
  
-+	dvfsrc@10012000 {
-+		compatible = "mediatek,mt8183-dvfsrc";
-+		reg = <0 0x10012000 0 0x1000>;
-+		clocks = <&infracfg CLK_INFRA_DVFSRC>;
-+		clock-names = "dvfsrc";
-+	};
+ Example:
+ 
+@@ -20,4 +25,8 @@ Example:
+ 		reg = <0 0x10012000 0 0x1000>;
+ 		clocks = <&infracfg CLK_INFRA_DVFSRC>;
+ 		clock-names = "dvfsrc";
++		ddr_emi: interconnect {
++			compatible = "mediatek,mt8183-emi";
++			#interconnect-cells = <1>;
++		};
+ 	};
+diff --git a/include/dt-bindings/interconnect/mtk,mt8183-emi.h b/include/dt-bindings/interconnect/mtk,mt8183-emi.h
+new file mode 100644
+index 0000000..2a54856
+--- /dev/null
++++ b/include/dt-bindings/interconnect/mtk,mt8183-emi.h
+@@ -0,0 +1,18 @@
++/* SPDX-License-Identifier: GPL-2.0 */
 +
- 	timer {
- 		compatible = "arm,armv8-timer";
- 		interrupt-parent = <&gic>;
++#ifndef __DT_BINDINGS_INTERCONNECT_MTK_MT8183_EMI_H
++#define __DT_BINDINGS_INTERCONNECT_MTK_MT8183_EMI_H
++
++#define MT8183_SLAVE_DDR_EMI			0
++#define MT8183_MASTER_MCUSYS			1
++#define MT8183_MASTER_GPU			2
++#define MT8183_MASTER_MMSYS			3
++#define MT8183_MASTER_MM_VPU			4
++#define MT8183_MASTER_MM_DISP			5
++#define MT8183_MASTER_MM_VDEC			6
++#define MT8183_MASTER_MM_VENC			7
++#define MT8183_MASTER_MM_CAM			8
++#define MT8183_MASTER_MM_IMG			9
++#define MT8183_MASTER_MM_MDP			10
++
++#endif
 -- 
 1.9.1
 
