@@ -2,68 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5CF79F6AD
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 01:12:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 088F59F7D1
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 03:29:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=b11I6dE6GTIVItupO4Gp1nX9X/r3oC/Jm4ufAUF4cVA=; b=WXeH/58ueJndPs
-	qMSuko4W7HzEgpW+DSg7stfRBl7voYwdy+dFtqcNKvhF2JkVIFYHfvIBtpoqfd9PMXThv8G/ac2+N
-	UDuwB1SRlP6EjEAKypH8eJFwoAuENEipYV0lLg10mHjVoAkAYJ8uKQLlaXgPKENM1/EFIOIrgbSqH
-	P9sMjbg/xE3YLz3TkM1UhTgFbA6giK1RgTRnE1ONnYsMJx82l58cXHIuaDOfK9nilicFkujzk/dyo
-	7icURLcDhU993ar8sLpPRWuAr4PT1N9hhj+x1ViCIjXhYd9gymMpXC00slXYjYVRByjBW4Jv4FwXy
-	/IAEpvqSw9GJ1VzMFxIw==;
+	List-Owner; bh=JsyqcGafi8G+WQ56kcbdyVGuQ2NH5IyUrKCfej1M1c0=; b=iXrhgTgep63xx4
+	hsr0Cz/al4WeDpsWDELprPelE2y3/jO6vBmAGGusHgkW3WhTFclmLjhsOp8Xha6tsnjy+dHZM679R
+	ZTR+jNgWagnpvWlevwcfYv16V9+bHrw2/y+Ou0km8Ha+s1gg3h6SCmAHxaadVRVXbhUoCKV18mFUA
+	c83dLDwFhNjfbdARkEZWAOBMuFxX0c2nBXepBKWT5pMx5tEFp17tC/XKt++Cd38zCrhX40Q3gk6LS
+	CeIoSpf16hvhXj6BtC8s51PG1sCzZGzcAs+JDMFFTTIZ53NEoPfcoIDIBEvsYZ/HKQWAdnEy09ZCn
+	Csj3E6V2+LZXudxPKNUQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2kd2-0001tK-SG; Tue, 27 Aug 2019 23:11:56 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1i2mm0-0006P6-W4; Wed, 28 Aug 2019 01:29:21 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2kch-0001az-14; Tue, 27 Aug 2019 23:11:42 +0000
-Received: from localhost (unknown [69.71.4.100])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6EECF20856;
- Tue, 27 Aug 2019 23:11:34 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566947494;
- bh=aNlA/MApouOcwf72/8GMSwuzsBqyO6Sp9x6HCpSXgGk=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=ZRFwTS1rqTxwj2gvps8jYXhfiuL5Eq3hUd/q4PyouqcIke/YpvR0yEqCnHJpG0oBG
- q+uh2ZEibfyAH/G5ndZQGkinr8VnwC95MliB678A5+UIXUovp7a4j0ytcyqog3dgIl
- 8jeD5gpDNVsUfsxolJbYrmZuu7z9XbuEg9x+Ts0Y=
-Date: Tue, 27 Aug 2019 18:11:33 -0500
-From: Bjorn Helgaas <helgaas@kernel.org>
-To: Krzysztof Wilczynski <kw@linux.com>
-Subject: Re: [PATCH] PCI: mediatek: Remove surplus return from a void function
-Message-ID: <20190827231133.GG9987@google.com>
-References: <20190825221039.6977-1-kw@linux.com>
+ id 1i2mlE-0006Au-OF; Wed, 28 Aug 2019 01:28:34 +0000
+X-UUID: e4c7103cfdce4f87bcd3c47496ae02d3-20190827
+X-UUID: e4c7103cfdce4f87bcd3c47496ae02d3-20190827
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1211277978; Tue, 27 Aug 2019 17:28:28 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 27 Aug 2019 18:28:26 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N1.mediatek.inc
+ (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 28 Aug 2019 09:28:24 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 28 Aug 2019 09:28:23 +0800
+Message-ID: <1566955695.7317.17.camel@mhfsdcap03>
+Subject: Re: [PATCH next v10 03/11] dt-bindings: usb: add binding for USB
+ GPIO based connection detection driver
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Rob Herring <robh@kernel.org>
+Date: Wed, 28 Aug 2019 09:28:15 +0800
+In-Reply-To: <20190827183154.GA10374@bogus>
+References: <1566547041-20804-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1566547041-20804-4-git-send-email-chunfeng.yun@mediatek.com>
+ <20190827183154.GA10374@bogus>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190825221039.6977-1-kw@linux.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 259D35EFF30C0616C1A211BC45937CDECB94215148384FD745984477FEA65A402000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_161140_874590_8DE5D0C2 
-X-CRM114-Status: GOOD (  13.81  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190827_182832_796198_D36696C3 
+X-CRM114-Status: GOOD (  23.67  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,50 +76,119 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>, linux-pci@vger.kernel.org,
- linux-kernel@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ Hans de Goede <hdegoede@redhat.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Biju Das <biju.das@bp.renesas.com>, Badhri Jagan
+ Sridharan <badhri@google.com>, Andy
+ Shevchenko <andy.shevchenko@gmail.com>, linux-mediatek@lists.infradead.org,
+ Min Guo <min.guo@mediatek.com>, Matthias
+ Brugger <matthias.bgg@gmail.com>, Nagarjuna Kristam <nkristam@nvidia.com>,
+ Adam Thomson <Adam.Thomson.Opensource@diasemi.com>,
+ linux-arm-kernel@lists.infradead.org, Li Jun <jun.li@nxp.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Aug 26, 2019 at 12:10:39AM +0200, Krzysztof Wilczynski wrote:
-> Remove unnecessary empty return statement at the
-> end of a void function mtk_pcie_intr_handler() in
-> the drivers/pci/controller/pcie-mediatek.c.
+On Tue, 2019-08-27 at 13:31 -0500, Rob Herring wrote:
+> On Fri, Aug 23, 2019 at 03:57:13PM +0800, Chunfeng Yun wrote:
+> > It's used to support dual role switch via GPIO when use Type-B
+> > receptacle, typically the USB ID pin is connected to an input
+> > GPIO, and also used to enable/disable device when the USB Vbus
+> > pin is connected to an input GPIO.
+> > 
+> > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> > ---
+> > v9~v10 no changes
+> > 
+> > v8 changes:
+> >  1. rename the title
+> >  2. change the compatible as "linux,usb-conn-gpio" instead of
+> >     "linux,typeb-conn-gpio"
 > 
-> The surplus return statement was added as part of
-> the work in commit 42fe2f91b4eb ("PCI: mediatek:
-> Implement chained IRQ handling setup").
-> 
-> Signed-off-by: Krzysztof Wilczynski <kw@linux.com>
+> I don't think that is an improvement. How about 'gpio-usb-b-connector' 
+> to be consistent.
+Ok
 
-I squashed this together with the other patch doing the same thing.
-If it causes any conflict with Lorenzo's branches, I'll resolve it
-when merging.
+> 
+> > 
+> > v7 changes:
+> >  1. add description for device only mode
+> > 
+> > v6 changes:
+> >  1. remove status and port nodes in example
+> >  2. make vbus-supply as optional property
+> > 
+> > v5 changes:
+> >  1. treat type-B connector as child device of USB controller's, but not
+> >     as a separate virtual device, suggested by Rob
+> >  2. put connector's port node under connector node, suggested by Rob
+> > 
+> > v4 no changes
+> > 
+> > v3 changes:
+> >  1. treat type-B connector as a virtual device, but not child device of
+> >     USB controller's
+> > 
+> > v2 changes:
+> >   1. new patch to make binding clear suggested by Hans
+> > ---
+> >  .../devicetree/bindings/usb/usb-conn-gpio.txt | 31 +++++++++++++++++++
+> >  1 file changed, 31 insertions(+)
+> >  create mode 100644 Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
+> > 
+> > diff --git a/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt b/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
+> > new file mode 100644
+> > index 000000000000..d4d107fedc22
+> > --- /dev/null
+> > +++ b/Documentation/devicetree/bindings/usb/usb-conn-gpio.txt
+> > @@ -0,0 +1,31 @@
+> > +USB GPIO Based Connection Detection
+> > +
+> > +This is typically used to switch dual role mode from the USB ID pin connected
+> > +to an input GPIO, and also used to enable/disable device mode from the USB
+> > +Vbus pin connected to an input GPIO.
+> > +
+> > +Required properties:
+> > +- compatible : should include "linux,usb-conn-gpio" and "usb-b-connector".
+> > +- id-gpios, vbus-gpios : input gpios, either one of them must be present,
+> > +	and both can be present as well.
+> > +	see connector/usb-connector.txt
+> > +
+> > +Optional properties:
+> > +- vbus-supply : can be present if needed when supports dual role mode.
+> > +	see connector/usb-connector.txt
+> > +
+> > +- Sub-nodes:
+> > +	- port : can be present.
+> > +		see graph.txt
+> > +
+> > +Example:
+> > +
+> > +&mtu3 {
+> > +	connector {
+> > +		compatible = "linux,usb-conn-gpio", "usb-b-connector";
+> > +		label = "micro-USB";
+> 
+> 'label' is for a human identifying a particular connector when there are 
+> multiple (of the same type). So not a great example here.
+Got it, will remove it
 
-> ---
->  drivers/pci/controller/pcie-mediatek.c | 2 --
->  1 file changed, 2 deletions(-)
+Thanks a lot
 > 
-> diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
-> index 3eaa7081ab2a..626a7c352dfd 100644
-> --- a/drivers/pci/controller/pcie-mediatek.c
-> +++ b/drivers/pci/controller/pcie-mediatek.c
-> @@ -635,8 +635,6 @@ static void mtk_pcie_intr_handler(struct irq_desc *desc)
->  	}
->  
->  	chained_irq_exit(irqchip, desc);
-> -
-> -	return;
->  }
->  
->  static int mtk_pcie_setup_irq(struct mtk_pcie_port *port,
-> -- 
-> 2.22.1
-> 
+> > +		type = "micro";
+> > +		id-gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+> > +		vbus-supply = <&usb_p0_vbus>;
+> > +	};
+> > +};
+> > -- 
+> > 2.23.0
+> > 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
