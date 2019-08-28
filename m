@@ -2,37 +2,37 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA5B1A01A8
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 14:29:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 13DC7A01A6
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 14:29:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YuqEePQo3KodebTC5Mfmp17CIzt/Wym3nLgbL56Q72M=; b=PQs8ytVjx48d4Z
-	08S1NF63Vo0gZ2Ox52ego7gL8hQAA3OfRX/AXqGiCm3jppk8ZtgY7D9DVqePMXBJ8n6sDEgsxUfV4
-	TkyJIV2mL68sUNo6lP44DXwSZ5RJKkZHtKNwJc0cTrEH5UVxfHn9HqG18hKNn0VFsMetTOuzV1joO
-	wWxI1TLHpH9VWFYZNTs9anWAGJmvZSH6A6fs6hu3B4qASt+pLJJNX/RuOSqclMorbGlHDh9xGXfQP
-	RBjY8R1qlnscKP28c0lTNNRA7Sz2CYPb2ROjRaATCeXIQam05u1j4g9QCQb84IE2KktTzC3lDmX0q
-	F0VWIQy+Ik48Rp8JwwZw==;
+	List-Owner; bh=xXpU1KmG6BW+7PatLrgj2jfPOBg2t7rSMMFgzuZ2B7E=; b=BqY1mmRQq5DEoB
+	lhZAGfaxWM7T8fe3zVbVeOvw8P3F5cgg+dC8wjPbUOWK3YlXS+WRyInklucl7wzpOvM/KAa76UABY
+	KnbSKKoUv3DNdxMk2zHwhDZd0pKza6gFwZziKM9UWPBfUQsMw/PEa3bdAQN0ZcvQK1hhlOweB6FNP
+	/EMIKQ0COdzfsa22UJ9Ei8V8fLTSslbXb+v0+mEwKLcHx+zF3yvUOeF4JU6UDwvaGp04a5c2ds/Om
+	RXv2ZUjhHztF1X9JT+Sx+2JltbLxsR/fV1uijPG/OGHa6KCVlbD2q1xZVDrIs9kaS/pkaJ7+QLris
+	qARV7uwYwlOF60qQz7Dw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2x54-0002zC-3o; Wed, 28 Aug 2019 12:29:42 +0000
+	id 1i2x51-0002wl-Ny; Wed, 28 Aug 2019 12:29:39 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2x4M-0002MM-Oo; Wed, 28 Aug 2019 12:29:00 +0000
-X-UUID: de93992e778244a7ba9099de65d92958-20190828
-X-UUID: de93992e778244a7ba9099de65d92958-20190828
+ id 1i2x4M-0002Lx-Op; Wed, 28 Aug 2019 12:29:00 +0000
+X-UUID: 829c9f604ab64baaacfad5980bd965b0-20190828
+X-UUID: 829c9f604ab64baaacfad5980bd965b0-20190828
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <henryc.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1803454445; Wed, 28 Aug 2019 04:29:01 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 1350764421; Wed, 28 Aug 2019 04:29:01 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 28 Aug 2019 05:29:00 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Wed, 28 Aug 2019 20:28:58 +0800
 Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
@@ -42,17 +42,20 @@ To: Georgi Djakov <georgi.djakov@linaro.org>, Rob Herring
  <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, Viresh Kumar
  <vireshk@kernel.org>, Stephen Boyd <swboyd@chromium.org>, Ryan Case
  <ryandcase@chromium.org>
-Subject: [PATCH V3 03/10] soc: mediatek: add support for the performance state
-Date: Wed, 28 Aug 2019 20:28:41 +0800
-Message-ID: <1566995328-15158-4-git-send-email-henryc.chen@mediatek.com>
+Subject: [PATCH V3 04/10] arm64: dts: mt8183: add performance state support of
+ scpsys
+Date: Wed, 28 Aug 2019 20:28:42 +0800
+Message-ID: <1566995328-15158-5-git-send-email-henryc.chen@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
 References: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 10D13BFB56F081C114B106C0DBB1CD118FC6552153BCB6FE09CCA6277A5ACEB12000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_052858_812873_F9901E83 
-X-CRM114-Status: GOOD (  16.92  )
+X-CRM114-CacheID: sfid-20190828_052858_810381_D7E45C2F 
+X-CRM114-Status: UNSURE (   9.17  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -83,141 +86,52 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Support power domain performance state, add header file for scp event.
+Add support for performance state of scpsys on mt8183 platform.
 
 Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
 ---
- drivers/soc/mediatek/mtk-scpsys.c | 58 +++++++++++++++++++++++++++++++++++++++
- drivers/soc/mediatek/mtk-scpsys.h | 22 +++++++++++++++
- 2 files changed, 80 insertions(+)
- create mode 100644 drivers/soc/mediatek/mtk-scpsys.h
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
 
-diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
-index e072810..50bc254 100644
---- a/drivers/soc/mediatek/mtk-scpsys.c
-+++ b/drivers/soc/mediatek/mtk-scpsys.c
-@@ -10,7 +10,9 @@
- #include <linux/of_device.h>
- #include <linux/platform_device.h>
- #include <linux/pm_domain.h>
-+#include <linux/pm_opp.h>
- #include <linux/regulator/consumer.h>
-+#include <linux/slab.h>
- #include <linux/soc/mediatek/infracfg.h>
- #include <linux/soc/mediatek/scpsys-ext.h>
- 
-@@ -21,6 +23,7 @@
- #include <dt-bindings/power/mt7623a-power.h>
- #include <dt-bindings/power/mt8173-power.h>
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index 66aaa07..a58999f 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -10,6 +10,7 @@
+ #include <dt-bindings/interrupt-controller/irq.h>
  #include <dt-bindings/power/mt8183-power.h>
-+#include "mtk-scpsys.h"
+ #include "mt8183-pinfunc.h"
++#include <dt-bindings/soc/mtk,dvfsrc.h>
  
- #define MTK_POLL_DELAY_US   10
- #define MTK_POLL_TIMEOUT    USEC_PER_SEC
-@@ -187,6 +190,18 @@ struct scp_soc_data {
- 	bool bus_prot_reg_update;
- };
+ / {
+ 	compatible = "mediatek,mt8183";
+@@ -293,6 +294,26 @@
+ 				      "vpu-3", "vpu-4", "vpu-5";
+ 			infracfg = <&infracfg>;
+ 			smi_comm = <&smi_common>;
++			operating-points-v2 = <&dvfsrc_opp_table>;
++			dvfsrc_opp_table: opp-table {
++				compatible = "operating-points-v2-level";
++
++				dvfsrc_vol_min: opp1 {
++					opp,level = <MT8183_DVFSRC_LEVEL_1>;
++				};
++
++				dvfsrc_freq_medium: opp2 {
++					opp,level = <MT8183_DVFSRC_LEVEL_2>;
++				};
++
++				dvfsrc_freq_max: opp3 {
++					opp,level = <MT8183_DVFSRC_LEVEL_3>;
++				};
++
++				dvfsrc_vol_max: opp4 {
++					opp,level = <MT8183_DVFSRC_LEVEL_4>;
++				};
++			};
+ 		};
  
-+static BLOCKING_NOTIFIER_HEAD(scpsys_notifier_list);
-+
-+int register_scpsys_notifier(struct notifier_block *nb)
-+{
-+	return blocking_notifier_chain_register(&scpsys_notifier_list, nb);
-+}
-+
-+int unregister_scpsys_notifier(struct notifier_block *nb)
-+{
-+	return blocking_notifier_chain_unregister(&scpsys_notifier_list, nb);
-+}
-+
- static int scpsys_domain_is_on(struct scp_domain *scpd)
- {
- 	struct scp *scp = scpd->scp;
-@@ -505,6 +520,41 @@ static void init_clks(struct platform_device *pdev, struct clk **clk)
- 		clk[i] = devm_clk_get(&pdev->dev, clk_names[i]);
- }
- 
-+static int mtk_pd_set_performance(struct generic_pm_domain *genpd,
-+				  unsigned int state)
-+{
-+	int i;
-+	struct scp_domain *scpd =
-+		container_of(genpd, struct scp_domain, genpd);
-+	struct scp_event_data scpe;
-+	struct scp *scp = scpd->scp;
-+	struct genpd_onecell_data *pd_data = &scp->pd_data;
-+
-+	for (i = 0; i < pd_data->num_domains; i++) {
-+		if (genpd == pd_data->domains[i]) {
-+			dev_dbg(scp->dev, "%d. %s = %d\n",
-+				i, genpd->name, state);
-+			break;
-+		}
-+	}
-+
-+	if (i == pd_data->num_domains)
-+		return 0;
-+
-+	scpe.event_type = MTK_SCPSYS_PSTATE;
-+	scpe.genpd = genpd;
-+	scpe.domain_id = i;
-+	blocking_notifier_call_chain(&scpsys_notifier_list, state, &scpe);
-+
-+	return 0;
-+}
-+
-+static unsigned int mtk_pd_get_performance(struct generic_pm_domain *genpd,
-+					   struct dev_pm_opp *opp)
-+{
-+	return dev_pm_opp_get_level(opp);
-+}
-+
- static struct scp *init_scp(struct platform_device *pdev,
- 			const struct scp_domain_data *scp_domain_data, int num,
- 			const struct scp_ctrl_reg *scp_ctrl_reg,
-@@ -630,6 +680,14 @@ static struct scp *init_scp(struct platform_device *pdev,
- 		genpd->power_on = scpsys_power_on;
- 		if (MTK_SCPD_CAPS(scpd, MTK_SCPD_ACTIVE_WAKEUP))
- 			genpd->flags |= GENPD_FLAG_ACTIVE_WAKEUP;
-+
-+		/* Add opp table check first to avoid OF runtime parse failed */
-+		if (of_count_phandle_with_args(pdev->dev.of_node,
-+		   "operating-points-v2", NULL) > 0) {
-+			genpd->set_performance_state = mtk_pd_set_performance;
-+			genpd->opp_to_performance_state =
-+				mtk_pd_get_performance;
-+		}
- 	}
- 
- 	return scp;
-diff --git a/drivers/soc/mediatek/mtk-scpsys.h b/drivers/soc/mediatek/mtk-scpsys.h
-new file mode 100644
-index 0000000..c1e8325
---- /dev/null
-+++ b/drivers/soc/mediatek/mtk-scpsys.h
-@@ -0,0 +1,22 @@
-+/* SPDX-License-Identifier: GPL-2.0
-+ *
-+ * Copyright (c) 2018 MediaTek Inc.
-+ */
-+
-+#ifndef __MTK_SCPSYS_H__
-+#define __MTK_SCPSYS_H__
-+
-+struct scp_event_data {
-+	int event_type;
-+	int domain_id;
-+	struct generic_pm_domain *genpd;
-+};
-+
-+enum scp_event_type {
-+	MTK_SCPSYS_PSTATE,
-+};
-+
-+int register_scpsys_notifier(struct notifier_block *nb);
-+int unregister_scpsys_notifier(struct notifier_block *nb);
-+
-+#endif /* __MTK_SCPSYS_H__ */
+ 		apmixedsys: syscon@1000c000 {
 -- 
 1.9.1
 
