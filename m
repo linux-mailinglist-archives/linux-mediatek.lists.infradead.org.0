@@ -2,59 +2,189 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2B6DB9FE9A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:36:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F25BD9FEB5
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:40:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nHBLlJI9gZb08lL71YrWTiTg5GcGfYHAfNdVfo1rm3w=; b=Uuil3nLbyUfgwt
-	LlLJ7wueVbgpRDvR15lqDyBRO79coI9knWsMKtMflOcsuKo4UQIYl0shctiEAw0/uay5a3HWzD3fG
-	lAaEdid5eS6iErDp39ArGd837peOW+6PfS2vOhsmD2bv4HVKKsYDznFAaXTLecVdpEfeEKxGbhmzR
-	0F8vCCVXG8hPt4aQr2mhNTBbD3FfQnWJ28vJzP1YUQtXbJVnoclTBEpGrVV9VubO4Ognx3WvFfsm1
-	xj7563uoKjSAvOfS4/6PgAKJabNuu9/YX2wUnZGQ+O0HLbXEMG/7oMqRUaW1wt05rvtoKe+ywe0d8
-	ilP/46SELEVQlzAPZvOw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6jA+HBAmfLGI+dIedZzcTjLT+GfqeFkaLUulAEQwfmE=; b=SDYdskVIYxEalm
+	vbCLj27k/E5LY7w30phr2pds/JcPA51aSiicsR4ZCnIaNpUCuWjB5jIBP3FbF9UYDjqomVU87lSpN
+	Hthol0aZVaf7gbZliO7iQMeQIVHCEImWwEWW3dqVdD4NyDQOJR8+Uxmu+5DlTL9E3HlCltY5vcpg8
+	LJ8PVM3Kmev5DcxspJnrO5dOJG+Thbx747JzdGNV4phR1wJhS5/GbNFyxRY5b1xedmXWjkzHfu9Dq
+	NsHVLhijQBNb+k5Kb91UnUTUqQPcMQTIuYupYL3IOsJGABVYm+kpZu3d3Yvq7ynSf+aUHqbt/LGui
+	KUuDwAy+NUj8Y+fb8o7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2uNn-0007qL-DN; Wed, 28 Aug 2019 09:36:51 +0000
-Received: from mga14.intel.com ([192.55.52.115])
+	id 1i2uQw-0000Tv-2E; Wed, 28 Aug 2019 09:40:06 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2uNW-0007ff-GT; Wed, 28 Aug 2019 09:36:36 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga006.fm.intel.com ([10.253.24.20])
- by fmsmga103.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 28 Aug 2019 02:36:33 -0700
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.64,440,1559545200"; d="scan'208";a="381226739"
-Received: from deyangko-mobl.ccr.corp.intel.com ([10.249.168.35])
- by fmsmga006.fm.intel.com with ESMTP; 28 Aug 2019 02:36:29 -0700
-Message-ID: <36f8f79c1353622bf0bb109296cd6229ac23e648.camel@intel.com>
-Subject: Re: [PATCH] thermal: mediatek: add suspend/resume callback
-From: Zhang Rui <rui.zhang@intel.com>
-To: michael.kao@mediatek.com, Eduardo Valentin <edubezval@gmail.com>, Daniel
- Lezcano <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark
- Rutland <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>, 
- hsinyi@chromium.org
-Date: Wed, 28 Aug 2019 17:36:38 +0800
-In-Reply-To: <1562058985-27538-1-git-send-email-michael.kao@mediatek.com>
-References: <1562058985-27538-1-git-send-email-michael.kao@mediatek.com>
-X-Mailer: Evolution 3.28.5-0ubuntu0.18.04.1 
-Mime-Version: 1.0
+ id 1i2uQs-0008LT-0f; Wed, 28 Aug 2019 09:40:03 +0000
+Received: by mail-ed1-x541.google.com with SMTP id g24so2284931edu.3;
+ Wed, 28 Aug 2019 02:39:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=qpWJuimo1UkdpeTs/cFgoexJzT3ErJ/D/0Izb7sGGbE=;
+ b=TzsDqW68ycsXwxSHhm3gZ8DWu2+c1RfQjxC1R+5xmHwMGx+yVE+j59tHHW1KPNgHJw
+ Oc5UJFbWtMXrpPE41DqYDItg+V66nAlJx3N2T9IAGkrFaUrHJ49SX6HHMNmEb3QneKDN
+ Wqj6wXZ+Txbb2Ygo5cG7qftzLXkVxhVwYgx8H5uGvk2N+TV4DXxranl8Tp3Z/2yN87zl
+ K6wrZWkLuQI7/6TC8hjlrmWfwrh3woSDFdqk21Vuqh6ldVfLXStd+clNLfVE0HFElpi0
+ DcZIhELHVJW3wOI73IvWt2oO76b0uv6tuEvcKhusQ/n/I6iNuZN2AtXLvq5Tqa1+bPAz
+ kUhA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
+ :message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=qpWJuimo1UkdpeTs/cFgoexJzT3ErJ/D/0Izb7sGGbE=;
+ b=TjQHds1PYg4CdGmSfp8gOtJb+u+FlGYLjNN8Udq+Tx49Y6SFJT3rxTTKtc66CpD2k3
+ 1kFiQ5UpSgaljnOj2WwidNIDCmV6rvqn/8m/if9/tJa1iNUOiqgLa4r5RvQN7Q09J+rC
+ BLd7x4rINYkBQaFGzfb1kmRGoxJx3nLUgVTXV4HkDNR+/uRBivpsZKGonBcWcO3Wce8+
+ DIU9MiZjbIj6IDrbf/z+YUEg9nWAU7IO0/RF6gzr0q34R5d34UPi1eRNnz/Xp+Oj8ge1
+ uhLRJKHauvwU8J6nC03k/zGrlQGXD3UCWgn6XnV/Kd2sOJBWTdmrm29aZkQj1NmQNU5h
+ 5A2g==
+X-Gm-Message-State: APjAAAXp5RPfev4mPLRSKOILktQ/Tfe5svJ/G7vt+MrsnHsUUijNbMbo
+ mruCI5hAbt+R1sIIyZcDNz8=
+X-Google-Smtp-Source: APXvYqyEP6AADeWqJE+Z9XdysXYYdZcUwI5pb5uMEaNRCKJP2pZ62zUPRbYF3b+HVHk4/gW9AekJFQ==
+X-Received: by 2002:aa7:c1da:: with SMTP id d26mr2881472edp.208.1566985197620; 
+ Wed, 28 Aug 2019 02:39:57 -0700 (PDT)
+Received: from ziggy.stardust ([95.169.228.146])
+ by smtp.gmail.com with ESMTPSA id e6sm343019eds.91.2019.08.28.02.39.56
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Wed, 28 Aug 2019 02:39:56 -0700 (PDT)
+Subject: Re: [PATCH v7 02/13] dt-bindings: soc: Add MT8183 power dt-bindings
+To: Weiyi Lu <weiyi.lu@mediatek.com>, Nicolas Boichat
+ <drinkcat@chromium.org>, Rob Herring <robh@kernel.org>
+References: <1566983506-26598-1-git-send-email-weiyi.lu@mediatek.com>
+ <1566983506-26598-3-git-send-email-weiyi.lu@mediatek.com>
+From: Matthias Brugger <matthias.bgg@gmail.com>
+Openpgp: preference=signencrypt
+Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ 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
+ jrHWeQEI2ucSKsNa8FllDmG/fQ==
+Message-ID: <48655b84-fd20-f417-529c-b81a7d64d63d@gmail.com>
+Date: Wed, 28 Aug 2019 11:39:55 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
+MIME-Version: 1.0
+In-Reply-To: <1566983506-26598-3-git-send-email-weiyi.lu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_023634_561553_BC7EFF32 
-X-CRM114-Status: GOOD (  24.60  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190828_024002_074285_97D2B1A0 
+X-CRM114-Status: GOOD (  20.27  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.115 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (matthias.bgg[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -66,305 +196,115 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
- Louis Yu <louis.yu@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: James Liao <jamesjj.liao@mediatek.com>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Fan Chen <fan.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Yong Wu <yong.wu@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 2019-07-02 at 17:16 +0800, michael.kao@mediatek.com wrote:
-> From: Louis Yu <louis.yu@mediatek.com>
+
+
+On 28/08/2019 11:11, Weiyi Lu wrote:
+> Add power dt-bindings of MT8183 and introduces "BASIC" and
+> "SUBSYS" clock types in binding document.
+> The "BASIC" type is compatible to the original power control with
+> clock name [a-z]+[0-9]*, e.g. mm, vpu1.
+> The "SUBSYS" type is used for bus protection control with clock
+> name [a-z]+-[0-9]+, e.g. isp-0, cam-1.
 > 
-> Add suspend/resume callback to disable/enable Mediatek thermal sensor
-> respectively. Since thermal power domain is off in suspend, thermal
-> driver
-> needs re-initialization during resume.
-> 
-> Signed-off-by: Louis Yu <louis.yu@mediatek.com>
-> Signed-off-by: Michael Kao <michael.kao@mediatek.com>
+> Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
 > ---
-> This patch series base on these patches [1][2][3].
+>  .../devicetree/bindings/soc/mediatek/scpsys.txt    | 14 ++++++++++++
+>  include/dt-bindings/power/mt8183-power.h           | 26 ++++++++++++++++++++++
+>  2 files changed, 40 insertions(+)
+>  create mode 100644 include/dt-bindings/power/mt8183-power.h
 > 
-> [1]thermal: mediatek: mt8183: fix bank number settings (
-> https://patchwork.kernel.org/patch/10938817/)
-> [2]thermal: mediatek: add another get_temp ops for thermal sensors (
-> https://patchwork.kernel.org/patch/10938829/)
-> [3]thermal: mediatek: use spinlock to protect PTPCORESEL (
-> https://patchwork.kernel.org/patch/10938841/)
+> diff --git a/Documentation/devicetree/bindings/soc/mediatek/scpsys.txt b/Documentation/devicetree/bindings/soc/mediatek/scpsys.txt
+> index 876693a..00eab7e 100644
+> --- a/Documentation/devicetree/bindings/soc/mediatek/scpsys.txt
+> +++ b/Documentation/devicetree/bindings/soc/mediatek/scpsys.txt
+> @@ -14,6 +14,7 @@ power/power_domain.txt. It provides the power domains defined in
+>  - include/dt-bindings/power/mt2701-power.h
+>  - include/dt-bindings/power/mt2712-power.h
+>  - include/dt-bindings/power/mt7622-power.h
+> +- include/dt-bindings/power/mt8183-power.h
+>  
+>  Required properties:
+>  - compatible: Should be one of:
+> @@ -25,18 +26,31 @@ Required properties:
+>  	- "mediatek,mt7623a-scpsys": For MT7623A SoC
+>  	- "mediatek,mt7629-scpsys", "mediatek,mt7622-scpsys": For MT7629 SoC
+>  	- "mediatek,mt8173-scpsys"
+> +	- "mediatek,mt8183-scpsys"
+>  - #power-domain-cells: Must be 1
+>  - reg: Address range of the SCPSYS unit
+>  - infracfg: must contain a phandle to the infracfg controller
+>  - clock, clock-names: clocks according to the common clock binding.
+>                        These are clocks which hardware needs to be
+>                        enabled before enabling certain power domains.
+> +                      The new clock type "BASIC" belongs to the type above.
+> +                      As to the new clock type "SUBSYS" needs to be
+> +                      enabled before releasing bus protection.
+
+The new clock type won't be new in a couple of month, better reword this. E.g.:
+Some SoCs have to groups of clocks. BASIC clocks need to be enabled before
+enabling the corresponding power domain. SUBSYS clocks need to be enabled before
+releasing the bus protection.
+
+>  	Required clocks for MT2701 or MT7623: "mm", "mfg", "ethif"
+>  	Required clocks for MT2712: "mm", "mfg", "venc", "jpgdec", "audio", "vdec"
+>  	Required clocks for MT6797: "mm", "mfg", "vdec"
+>  	Required clocks for MT7622 or MT7629: "hif_sel"
+>  	Required clocks for MT7623A: "ethif"
+>  	Required clocks for MT8173: "mm", "mfg", "venc", "venc_lt"
+> +	Required clocks for MT8183: BASIC: "audio", "mfg", "mm", "cam", "isp",
+> +					   "vpu", "vpu1", "vpu2", "vpu3"
+> +				    SUBSYS: "mm-0", "mm-1", "mm-2", "mm-3",
+> +					    "mm-4", "mm-5", "mm-6", "mm-7",
+> +					    "mm-8", "mm-9", "isp-0", "isp-1",
+> +					    "cam-0", "cam-1", "cam-2", "cam-3",
+> +					    "cam-4", "cam-5", "cam-6", "vpu-0",
+> +					    "vpu-1", "vpu-2", "vpu-3", "vpu-4",
+> +					    "vpu-5"
+>  
+>  Optional properties:
+>  - vdec-supply: Power supply for the vdec power domain
+> diff --git a/include/dt-bindings/power/mt8183-power.h b/include/dt-bindings/power/mt8183-power.h
+> new file mode 100644
+> index 0000000..5c0c8c7
+> --- /dev/null
+> +++ b/include/dt-bindings/power/mt8183-power.h
+> @@ -0,0 +1,26 @@
+> +/* SPDX-License-Identifier: GPL-2.0
+> + *
+> + * Copyright (c) 2018 MediaTek Inc.
+> + * Author: Weiyi Lu <weiyi.lu@mediatek.com>
+> + */
+> +
+> +#ifndef _DT_BINDINGS_POWER_MT8183_POWER_H
+> +#define _DT_BINDINGS_POWER_MT8183_POWER_H
+> +
+> +#define MT8183_POWER_DOMAIN_AUDIO	0
+> +#define MT8183_POWER_DOMAIN_CONN	1
+> +#define MT8183_POWER_DOMAIN_MFG_ASYNC	2
+> +#define MT8183_POWER_DOMAIN_MFG		3
+> +#define MT8183_POWER_DOMAIN_MFG_CORE0	4
+> +#define MT8183_POWER_DOMAIN_MFG_CORE1	5
+> +#define MT8183_POWER_DOMAIN_MFG_2D	6
+> +#define MT8183_POWER_DOMAIN_DISP	7
+> +#define MT8183_POWER_DOMAIN_CAM		8
+> +#define MT8183_POWER_DOMAIN_ISP		9
+> +#define MT8183_POWER_DOMAIN_VDEC	10
+> +#define MT8183_POWER_DOMAIN_VENC	11
+> +#define MT8183_POWER_DOMAIN_VPU_TOP	12
+> +#define MT8183_POWER_DOMAIN_VPU_CORE0	13
+> +#define MT8183_POWER_DOMAIN_VPU_CORE1	14
+> +
+> +#endif /* _DT_BINDINGS_POWER_MT8183_POWER_H */
 > 
-all these patches are not sent to linux-pm mailing list, thus they
-never got chance to get merged. please resend them to linux-pm.
-
-I don't know what the first part of the patch set do, so I'm wondering
-if there is any dependency?
-
-thanks,
-rui
-
->  drivers/thermal/mtk_thermal.c | 134
-> +++++++++++++++++++++++++++++++++++++++---
->  1 file changed, 125 insertions(+), 9 deletions(-)
-> 
-> diff --git a/drivers/thermal/mtk_thermal.c
-> b/drivers/thermal/mtk_thermal.c
-> index 3d01153..61d4114 100644
-> --- a/drivers/thermal/mtk_thermal.c
-> +++ b/drivers/thermal/mtk_thermal.c
-> @@ -30,6 +30,7 @@
->  #include <linux/thermal.h>
->  #include <linux/reset.h>
->  #include <linux/types.h>
-> +#include <linux/iopoll.h>
->  
->  /* AUXADC Registers */
->  #define AUXADC_CON1_SET_V	0x008
-> @@ -39,6 +40,8 @@
->  
->  #define APMIXED_SYS_TS_CON1	0x604
->  
-> +#define APMIXED_SYS_TS_CON1_BUFFER_OFF	0x30
-> +
->  /* Thermal Controller Registers */
->  #define TEMP_MONCTL0		0x000
->  #define TEMP_MONCTL1		0x004
-> @@ -46,6 +49,7 @@
->  #define TEMP_MONIDET0		0x014
->  #define TEMP_MONIDET1		0x018
->  #define TEMP_MSRCTL0		0x038
-> +#define TEMP_MSRCTL1		0x03c
->  #define TEMP_AHBPOLL		0x040
->  #define TEMP_AHBTO		0x044
->  #define TEMP_ADCPNP0		0x048
-> @@ -95,6 +99,9 @@
->  #define TEMP_ADCVALIDMASK_VALID_HIGH		BIT(5)
->  #define TEMP_ADCVALIDMASK_VALID_POS(bit)	(bit)
->  
-> +#define TEMP_MSRCTL1_BUS_STA	(BIT(0) | BIT(7))
-> +#define TEMP_MSRCTL1_SENSING_POINTS_PAUSE	0x10E
-> +
->  /* MT8173 thermal sensors */
->  #define MT8173_TS1	0
->  #define MT8173_TS2	1
-> @@ -266,6 +273,10 @@ struct mtk_thermal_data {
->  struct mtk_thermal {
->  	struct device *dev;
->  	void __iomem *thermal_base;
-> +	void __iomem *apmixed_base;
-> +	void __iomem *auxadc_base;
-> +	u64 apmixed_phys_base;
-> +	u64 auxadc_phys_base;
->  
->  	struct clk *clk_peri_therm;
->  	struct clk *clk_auxadc;
-> @@ -795,6 +806,42 @@ static void mtk_thermal_init_bank(struct
-> mtk_thermal *mt, int num,
->  	mtk_thermal_put_bank(bank);
->  }
->  
-> +static int mtk_thermal_disable_sensing(struct mtk_thermal *mt, int
-> num)
-> +{
-> +	struct mtk_thermal_bank *bank = &mt->banks[num];
-> +	u32 val;
-> +	unsigned long timeout;
-> +	void __iomem *addr;
-> +	int ret = 0;
-> +
-> +	bank->id = num;
-> +	bank->mt = mt;
-> +
-> +	mtk_thermal_get_bank(bank);
-> +
-> +	val = readl(mt->thermal_base + TEMP_MSRCTL1);
-> +	/* pause periodic temperature measurement for sensing points */
-> +	writel(val | TEMP_MSRCTL1_SENSING_POINTS_PAUSE,
-> +	       mt->thermal_base + TEMP_MSRCTL1);
-> +
-> +	/* wait until temperature measurement bus idle */
-> +	timeout = jiffies + HZ;
-> +	addr = mt->thermal_base + TEMP_MSRCTL1;
-> +
-> +	ret = readl_poll_timeout(addr, val, (val &
-> TEMP_MSRCTL1_BUS_STA) == 0x0,
-> +				 0, timeout);
-> +	if (ret < 0)
-> +		goto out;
-> +
-> +	/* disable periodic temperature meausrement on sensing points
-> */
-> +	writel(0x0, mt->thermal_base + TEMP_MONCTL0);
-> +
-> +out:
-> +	mtk_thermal_put_bank(bank);
-> +
-> +	return ret;
-> +}
-> +
->  static u64 of_get_phys_base(struct device_node *np)
->  {
->  	u64 size64;
-> @@ -917,7 +964,6 @@ static int mtk_thermal_probe(struct
-> platform_device *pdev)
->  	struct device_node *auxadc, *apmixedsys, *np = pdev-
-> >dev.of_node;
->  	struct mtk_thermal *mt;
->  	struct resource *res;
-> -	u64 auxadc_phys_base, apmixed_phys_base;
->  	struct thermal_zone_device *tzdev;
->  	struct mtk_thermal_zone *tz;
->  
-> @@ -954,11 +1000,11 @@ static int mtk_thermal_probe(struct
-> platform_device *pdev)
->  		return -ENODEV;
->  	}
->  
-> -	auxadc_phys_base = of_get_phys_base(auxadc);
-> +	mt->auxadc_phys_base = of_get_phys_base(auxadc);
->  
->  	of_node_put(auxadc);
->  
-> -	if (auxadc_phys_base == OF_BAD_ADDR) {
-> +	if (mt->auxadc_phys_base == OF_BAD_ADDR) {
->  		dev_err(&pdev->dev, "Can't get auxadc phys address\n");
->  		return -EINVAL;
->  	}
-> @@ -969,11 +1015,12 @@ static int mtk_thermal_probe(struct
-> platform_device *pdev)
->  		return -ENODEV;
->  	}
->  
-> -	apmixed_phys_base = of_get_phys_base(apmixedsys);
-> +	mt->apmixed_phys_base = of_get_phys_base(apmixedsys);
-> +	mt->apmixed_base = of_iomap(apmixedsys, 0);
->  
->  	of_node_put(apmixedsys);
->  
-> -	if (apmixed_phys_base == OF_BAD_ADDR) {
-> +	if (mt->apmixed_phys_base == OF_BAD_ADDR) {
->  		dev_err(&pdev->dev, "Can't get auxadc phys address\n");
->  		return -EINVAL;
->  	}
-> @@ -985,19 +1032,19 @@ static int mtk_thermal_probe(struct
-> platform_device *pdev)
->  	ret = clk_prepare_enable(mt->clk_auxadc);
->  	if (ret) {
->  		dev_err(&pdev->dev, "Can't enable auxadc clk: %d\n",
-> ret);
-> -		return ret;
-> +		goto err_disable_clk_auxadc;
->  	}
->  
->  	ret = clk_prepare_enable(mt->clk_peri_therm);
->  	if (ret) {
->  		dev_err(&pdev->dev, "Can't enable peri clk: %d\n",
-> ret);
-> -		goto err_disable_clk_auxadc;
-> +		goto err_disable_clk_peri_therm;
->  	}
->  
->  	for (ctrl_id = 0; ctrl_id < mt->conf->num_controller ;
-> ctrl_id++)
->  		for (i = 0; i < mt->conf->num_banks; i++)
-> -			mtk_thermal_init_bank(mt, i, apmixed_phys_base,
-> -					      auxadc_phys_base,
-> ctrl_id);
-> +			mtk_thermal_init_bank(mt, i, mt-
-> >apmixed_phys_base,
-> +					      mt->auxadc_phys_base,
-> ctrl_id);
->  
->  	platform_set_drvdata(pdev, mt);
->  
-> @@ -1041,11 +1088,80 @@ static int mtk_thermal_remove(struct
-> platform_device *pdev)
->  	return 0;
->  }
->  
-> +static int __maybe_unused mtk_thermal_suspend(struct device *dev)
-> +{
-> +	struct platform_device *pdev = to_platform_device(dev);
-> +	struct mtk_thermal *mt = platform_get_drvdata(pdev);
-> +	int i, ret;
-> +
-> +	for (i = 0; i < mt->conf->num_banks; i++) {
-> +		ret = mtk_thermal_disable_sensing(mt, i);
-> +		if (ret)
-> +			goto out;
-> +	}
-> +
-> +	/* disable buffer */
-> +	writel(readl(mt->apmixed_base + APMIXED_SYS_TS_CON1) |
-> +	       APMIXED_SYS_TS_CON1_BUFFER_OFF,
-> +	       mt->apmixed_base + APMIXED_SYS_TS_CON1);
-> +
-> +	clk_disable_unprepare(mt->clk_peri_therm);
-> +	clk_disable_unprepare(mt->clk_auxadc);
-> +
-> +	return 0;
-> +
-> +out:
-> +	dev_err(&pdev->dev, "Failed to wait until bus idle\n");
-> +
-> +	return ret;
-> +}
-> +
-> +static int __maybe_unused mtk_thermal_resume(struct device *dev)
-> +{
-> +	struct platform_device *pdev = to_platform_device(dev);
-> +	struct mtk_thermal *mt = platform_get_drvdata(pdev);
-> +	int i, ret, ctrl_id;
-> +
-> +	ret = device_reset(&pdev->dev);
-> +	if (ret)
-> +		return ret;
-> +
-> +	ret = clk_prepare_enable(mt->clk_auxadc);
-> +	if (ret) {
-> +		dev_err(&pdev->dev, "Can't enable auxadc clk: %d\n",
-> ret);
-> +		goto err_disable_clk_auxadc;
-> +	}
-> +
-> +	ret = clk_prepare_enable(mt->clk_peri_therm);
-> +	if (ret) {
-> +		dev_err(&pdev->dev, "Can't enable peri clk: %d\n",
-> ret);
-> +		goto err_disable_clk_peri_therm;
-> +	}
-> +
-> +	for (ctrl_id = 0; ctrl_id < mt->conf->num_controller ;
-> ctrl_id++)
-> +		for (i = 0; i < mt->conf->num_banks; i++)
-> +			mtk_thermal_init_bank(mt, i, mt-
-> >apmixed_phys_base,
-> +					      mt->auxadc_phys_base,
-> ctrl_id);
-> +
-> +	return 0;
-> +
-> +err_disable_clk_peri_therm:
-> +	clk_disable_unprepare(mt->clk_peri_therm);
-> +err_disable_clk_auxadc:
-> +	clk_disable_unprepare(mt->clk_auxadc);
-> +
-> +	return ret;
-> +}
-> +
-> +static SIMPLE_DEV_PM_OPS(mtk_thermal_pm_ops,
-> +			 mtk_thermal_suspend, mtk_thermal_resume);
-> +
->  static struct platform_driver mtk_thermal_driver = {
->  	.probe = mtk_thermal_probe,
->  	.remove = mtk_thermal_remove,
->  	.driver = {
->  		.name = "mtk-thermal",
-> +		.pm = &mtk_thermal_pm_ops,
->  		.of_match_table = mtk_thermal_of_match,
->  	},
->  };
-
 
 _______________________________________________
 Linux-mediatek mailing list
