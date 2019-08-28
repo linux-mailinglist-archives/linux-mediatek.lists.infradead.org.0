@@ -2,65 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E6E59FEDC
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:46:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F17189FFA8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 12:23:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cdrSEFcO0JW0yOhsRl+5sIdUK0gY5KghE4hCYUW7yCs=; b=NuDSBB+6Cek+sj
-	V9sejjJR9SKyu3BujFL2Usw3NrHoR4osh7k+wg7TzfdphhOges7deL54PNcMx243uYd2+rhL/tbwu
-	MtzgHMyr/iqoHVlPbA3o9aG7aqYq5hybF1nC5qU15/iISZHQlCylbtJ+nOK2coA9WXU5PkP1RaYTB
-	EunX5vIM/i/mb3LdDWRvHcOwiG8sCJKFsztkiUScVNAg6TnJR8oFePYjb4bdkjIqWKhu94uQ9SJiF
-	lyQJ4/XS/UraQXsn7zmdbRBgkoypYaNO+SDDKHh+rGC/mrklQoHbwWfDjhRNxjkh0hznsN8zurYe0
-	8b7r/eiFHYk27COAnH9A==;
+	List-Owner; bh=0tn79fPVFovZkZOjCsJ4e3aW/rTgX845Jt/RiLH+yA8=; b=WGZk5OTlqM1jkS
+	gqatagBdQtfT7voBYCCc5sY16O2XEDs9ykfkmMNJXvVhdhUdaIWnPLxprTrTi1sl6ZwO0ecCDm2W/
+	ftYgvkNH0JQ7p5NDBcvL/bxLA3mKPBxA/530Q1TJCDBwPYB3IvfvoTViBf8AcdRhQlvMdVl8q6O9Q
+	H6I5Rjgp0EbxbUAgeP4CdkVA2IyfChhbUK3UGP6Tc8HjookC5ssFRZfXK1MBjvARYu2jMiqb8pJL8
+	tDu1x1ZSsM7PYn7V1ezfghx45M1EWGkx+9ZXvWP3a1iHmIne990uF5tYNu4NkyVTRgzwpkYqWi6kF
+	PAiv58uaq3a3bFIGWPjg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2uXO-0004SS-Sc; Wed, 28 Aug 2019 09:46:46 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1i2v6N-0002BG-FG; Wed, 28 Aug 2019 10:22:55 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2uXL-0004Ru-44; Wed, 28 Aug 2019 09:46:44 +0000
-Received: by mail-ed1-x544.google.com with SMTP id s15so2331876edx.0;
- Wed, 28 Aug 2019 02:46:42 -0700 (PDT)
+ id 1i2v6J-0002AX-DE; Wed, 28 Aug 2019 10:22:53 +0000
+Received: by mail-ed1-x543.google.com with SMTP id w5so2391233edl.8;
+ Wed, 28 Aug 2019 03:22:50 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=aAEQ6lElK1TEn+1KMKJQPUxB4b+oIGGJDFSTDba6qtI=;
- b=GwRkhanvT3b2YXwmJu/SOWiUiY3Mb7vndCKWBqp417YrBYcD4XFNW2nwT35XqutRlj
- qcmXgDMHR3yYFTJwQdtqqF2ZYzDnOlSJ8/85m3VfMlEKIOO7kjysB1Y3FvyTXAO74+Vw
- TFCpEXNU0cWZ48gHnDLYVHjC6vwMsLOG3Q0jFPShV0gO/hPYVonjup82Ul65eLICWQ0D
- KbyZGwoTECPSHWIZEkWP2xcyEI7TIDmJKHWeE/OKyKG5DUObtn3CeRXIuSL9FGqUtlVV
- FANOQ1LrK3JWNY6RviM+L0npFScHR7UGMWbFIoND2FkWZbP+LLGUJjgSvrKfzGRTaESw
- fu7A==
+ bh=TluT6OUbvy60InunIVgzisQRXNrTEJL9yWsQxD4N54U=;
+ b=OWF0vXILtjT95V0W0gOzyzPx9aEaTvacNFfJQXYJFvK5JNuFmXUf04ShFGoVUoONw3
+ ZJmekyN8tlpXUw6Ovu59NWjfetsoYB0shuBtaNbbs8BVndz6je3zan3J0lNW1CcEa7Y7
+ 50v19HMC/lECgzsP0Mvp0Y4xP5kvDvcsYMaB3XhGMa8m85cqzWMlTARTieXM7+6MlHq5
+ 7jpAr88pZfiKasZFSqbCWRiIZc4ewSJUrhJ1LCw3a7VsU+Qm6qf5BWrXmxQiFCYknIPu
+ KYhUcRp3X1gKrk3EAShKMVp5SCpWuu64hD3Yb8D/AmGxgKJVyQxRc9CVMcApamGuiVDb
+ bQ6Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=aAEQ6lElK1TEn+1KMKJQPUxB4b+oIGGJDFSTDba6qtI=;
- b=X8eCe0bfFfu4X7cfY+18ZulEYW/OpdZNv7kMG70U338HJtO5gne5bSkDk4pEMu9FU+
- QSO3yEpv5ijZv+UqjeL45hMifHR+PJ1yfUYUMX2Ngs6m5/n2XaPahcjIX1kfDA6d9t0l
- is1eyQzn99k0MHRdlJArbxtL+DFyndk2w1OF9LbZ0vmqqzZj1XGflFFHW9DEwqmBwr0G
- 3rI9+hZKgZuoSiI3pGIkfE28BtM7yprozAPAHpw9xyujlBNJJHstJaA3Opd0JxRlX7AO
- oiUJC+vJsNJKnT60SSpeNUBNQkOlwf8PVqreBFIUQ7kmo8hQYIC0EORjW86TErhP8pLB
- R1oA==
-X-Gm-Message-State: APjAAAWOoQvXZakFUEYLE8UtDsAxeNhOKHWL8+CoDCtrBptP4dQ+x1wN
- 8fo2CIR3sUCL9RR7A2MjU+A=
-X-Google-Smtp-Source: APXvYqwZzS3Yu8mjiw5XALXC1Y/UJYpDlhxmyb+0KwmSUP/i9bhVVXIKHrBGmAZdomtTyswIYIzjoQ==
-X-Received: by 2002:a50:baa6:: with SMTP id x35mr2929708ede.230.1566985600749; 
- Wed, 28 Aug 2019 02:46:40 -0700 (PDT)
+ bh=TluT6OUbvy60InunIVgzisQRXNrTEJL9yWsQxD4N54U=;
+ b=o5oEXRRm3DrwUYBbhvoLEqdyqB6nLkjb5sDe7JboFD8NzdDMiDq5fLIN6V/S10An1E
+ b55Q9qyDoRv17bxu3x5z8iNNtkdOBYihyOPyPVWgNt5d2ap4bSx7FJsmPfUZmRpJ759E
+ TqCUWYc6SPJpzjsNJ1IRaOX35IVuwabCb4UrnhXFrAZdvUexj1Znkge9mlrBwnPVm28d
+ h/7HB+L/Adugy/Ud3b0UR3uAd1zgKuR2FORDEHKD9RuzawC5j/Bvs1bJTjP5waO/V15T
+ hC/sP1gmIMT+b7jKeB+WCAnl2lQ77ZtsDAg2bz2qBAjKVk4JgxV7uKKnNXlI9YsWe1/c
+ K8qA==
+X-Gm-Message-State: APjAAAU3fJiz5ZCG7ezWk4QleJwcDOK2kUkzd01JUH4z3AwiWG7jowD1
+ J8/1fyYUJ3QvwgwPlztojbw=
+X-Google-Smtp-Source: APXvYqyB8ERiCjUFYwL7hnnsb5Vrkw8Yy9jPGq6PFMYL0fkg/G/ggk6TrDUV52+6JPl7GjAC952RhQ==
+X-Received: by 2002:a50:fa8a:: with SMTP id w10mr3100164edr.247.1566987769605; 
+ Wed, 28 Aug 2019 03:22:49 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.228.146])
- by smtp.gmail.com with ESMTPSA id c15sm312039ejs.17.2019.08.28.02.46.39
+ by smtp.gmail.com with ESMTPSA id o26sm319235ejb.58.2019.08.28.03.22.47
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 28 Aug 2019 02:46:40 -0700 (PDT)
-Subject: Re: [PATCH v7 05/13] soc: mediatek: Refactor clock control
+ Wed, 28 Aug 2019 03:22:48 -0700 (PDT)
+Subject: Re: [PATCH v7 06/13] soc: mediatek: Refactor sram control
 To: Weiyi Lu <weiyi.lu@mediatek.com>, Nicolas Boichat
  <drinkcat@chromium.org>, Rob Herring <robh@kernel.org>
 References: <1566983506-26598-1-git-send-email-weiyi.lu@mediatek.com>
- <1566983506-26598-6-git-send-email-weiyi.lu@mediatek.com>
+ <1566983506-26598-7-git-send-email-weiyi.lu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -156,23 +156,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <71bc2521-5005-0711-57ff-b32f3a150ee6@gmail.com>
-Date: Wed, 28 Aug 2019 11:46:39 +0200
+Message-ID: <d9462fa7-3395-347d-da44-8ff86713fd6d@gmail.com>
+Date: Wed, 28 Aug 2019 12:22:47 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566983506-26598-6-git-send-email-weiyi.lu@mediatek.com>
+In-Reply-To: <1566983506-26598-7-git-send-email-weiyi.lu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_024643_186208_7F987E77 
-X-CRM114-Status: GOOD (  18.54  )
+X-CRM114-CacheID: sfid-20190828_032251_473026_16CF6756 
+X-CRM114-Status: GOOD (  23.97  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -208,105 +208,186 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 28/08/2019 11:11, Weiyi Lu wrote:
-> Put clock enable and disable control in separate function.
+> Put sram enable and disable control in separate functions.
 > 
 > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
+> Reviewed-by: Nicolas Boichat <drinkcat@chromium.org>
 
-Applied, thanks!
+Applied with the following changes made to your patch:
+
+diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
+index ad0f6199cd0c..603262d547c3 100644
+--- a/drivers/soc/mediatek/mtk-scpsys.c
++++ b/drivers/soc/mediatek/mtk-scpsys.c
+@@ -236,7 +236,8 @@ static int scpsys_sram_enable(struct scp_domain *scpd, void
+__iomem *ctl_addr)
+        u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+        int tmp;
+
+-       val = readl(ctl_addr) & ~scpd->data->sram_pdn_bits;
++       val = readl(ctl_addr);
++       val &= ~scpd->data->sram_pdn_bits;
+        writel(val, ctl_addr);
+
+        /* Either wait until SRAM_PDN_ACK all 0 or have a force wait */
+@@ -265,7 +266,8 @@ static int scpsys_sram_disable(struct scp_domain *scpd, void
+__iomem *ctl_addr)
+        u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+        int tmp;
+
+-       val = readl(ctl_addr) | scpd->data->sram_pdn_bits;
++       val = readl(ctl_addr);
++       vale |= scpd->data->sram_pdn_bits;
+        writel(val, ctl_addr);
+
+        /* Either wait until SRAM_PDN_ACK all 1 or 0 */
+@@ -357,7 +359,8 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+                goto out;
+
+        /* subsys power off */
+-       val = readl(ctl_addr) | PWR_ISO_BIT;
++       val = readl(ctl_addr);
++       val |= PWR_ISO_BIT;
+        writel(val, ctl_addr);
+
+        val &= ~PWR_RST_B_BIT;
+
+Hope that is OK for you (and I didn't made any mistake). If you see any problem,
+please let me know.
+
+Thanks,
+Matthias
 
 > ---
->  drivers/soc/mediatek/mtk-scpsys.c | 45 ++++++++++++++++++++++++---------------
->  1 file changed, 28 insertions(+), 17 deletions(-)
+>  drivers/soc/mediatek/mtk-scpsys.c | 79 +++++++++++++++++++++++++--------------
+>  1 file changed, 51 insertions(+), 28 deletions(-)
 > 
 > diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
-> index aed540d..73e4a1a 100644
+> index 73e4a1a..ad0f619 100644
 > --- a/drivers/soc/mediatek/mtk-scpsys.c
 > +++ b/drivers/soc/mediatek/mtk-scpsys.c
-> @@ -207,6 +207,29 @@ static int scpsys_regulator_disable(struct scp_domain *scpd)
->  	return regulator_disable(scpd->supply);
+> @@ -230,12 +230,55 @@ static int scpsys_clk_enable(struct clk *clk[], int max_num)
+>  	return ret;
 >  }
 >  
-> +static void scpsys_clk_disable(struct clk *clk[], int max_num)
+> +static int scpsys_sram_enable(struct scp_domain *scpd, void __iomem *ctl_addr)
 > +{
-> +	int i;
+> +	u32 val;
+> +	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+> +	int tmp;
 > +
-> +	for (i = max_num - 1; i >= 0; i--)
-> +		clk_disable_unprepare(clk[i]);
-> +}
+> +	val = readl(ctl_addr) & ~scpd->data->sram_pdn_bits;
+> +	writel(val, ctl_addr);
 > +
-> +static int scpsys_clk_enable(struct clk *clk[], int max_num)
-> +{
-> +	int i, ret = 0;
-> +
-> +	for (i = 0; i < max_num && clk[i]; i++) {
-> +		ret = clk_prepare_enable(clk[i]);
-> +		if (ret) {
-> +			scpsys_clk_disable(clk, i);
-> +			break;
-> +		}
+> +	/* Either wait until SRAM_PDN_ACK all 0 or have a force wait */
+> +	if (MTK_SCPD_CAPS(scpd, MTK_SCPD_FWAIT_SRAM)) {
+> +		/*
+> +		 * Currently, MTK_SCPD_FWAIT_SRAM is necessary only for
+> +		 * MT7622_POWER_DOMAIN_WB and thus just a trivial setup
+> +		 * is applied here.
+> +		 */
+> +		usleep_range(12000, 12100);
+> +	} else {
+> +		/* Either wait until SRAM_PDN_ACK all 1 or 0 */
+> +		int ret = readl_poll_timeout(ctl_addr, tmp,
+> +				(tmp & pdn_ack) == 0,
+> +				MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
+> +		if (ret < 0)
+> +			return ret;
 > +	}
 > +
-> +	return ret;
+> +	return 0;
+> +}
+> +
+> +static int scpsys_sram_disable(struct scp_domain *scpd, void __iomem *ctl_addr)
+> +{
+> +	u32 val;
+> +	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+> +	int tmp;
+> +
+> +	val = readl(ctl_addr) | scpd->data->sram_pdn_bits;
+> +	writel(val, ctl_addr);
+> +
+> +	/* Either wait until SRAM_PDN_ACK all 1 or 0 */
+> +	return readl_poll_timeout(ctl_addr, tmp,
+> +			(tmp & pdn_ack) == pdn_ack,
+> +			MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
 > +}
 > +
 >  static int scpsys_power_on(struct generic_pm_domain *genpd)
 >  {
 >  	struct scp_domain *scpd = container_of(genpd, struct scp_domain, genpd);
-> @@ -215,21 +238,14 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
->  	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+>  	struct scp *scp = scpd->scp;
+>  	void __iomem *ctl_addr = scp->base + scpd->data->ctl_offs;
+> -	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
 >  	u32 val;
 >  	int ret, tmp;
-> -	int i;
 >  
->  	ret = scpsys_regulator_enable(scpd);
->  	if (ret < 0)
->  		return ret;
+> @@ -247,6 +290,7 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+>  	if (ret)
+>  		goto err_clk;
 >  
-> -	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++) {
-> -		ret = clk_prepare_enable(scpd->clk[i]);
-> -		if (ret) {
-> -			for (--i; i >= 0; i--)
-> -				clk_disable_unprepare(scpd->clk[i]);
-> -
-> -			goto err_clk;
-> -		}
-> -	}
-> +	ret = scpsys_clk_enable(scpd->clk, MAX_CLKS);
-> +	if (ret)
-> +		goto err_clk;
->  
+> +	/* subsys power on */
 >  	val = readl(ctl_addr);
 >  	val |= PWR_ON_BIT;
-> @@ -282,10 +298,7 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
->  	return 0;
+>  	writel(val, ctl_addr);
+> @@ -268,24 +312,9 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+>  	val |= PWR_RST_B_BIT;
+>  	writel(val, ctl_addr);
 >  
->  err_pwr_ack:
-> -	for (i = MAX_CLKS - 1; i >= 0; i--) {
-> -		if (scpd->clk[i])
-> -			clk_disable_unprepare(scpd->clk[i]);
+> -	val &= ~scpd->data->sram_pdn_bits;
+> -	writel(val, ctl_addr);
+> -
+> -	/* Either wait until SRAM_PDN_ACK all 0 or have a force wait */
+> -	if (MTK_SCPD_CAPS(scpd, MTK_SCPD_FWAIT_SRAM)) {
+> -		/*
+> -		 * Currently, MTK_SCPD_FWAIT_SRAM is necessary only for
+> -		 * MT7622_POWER_DOMAIN_WB and thus just a trivial setup is
+> -		 * applied here.
+> -		 */
+> -		usleep_range(12000, 12100);
+> -
+> -	} else {
+> -		ret = readl_poll_timeout(ctl_addr, tmp, (tmp & pdn_ack) == 0,
+> -					 MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
+> -		if (ret < 0)
+> -			goto err_pwr_ack;
 > -	}
-> +	scpsys_clk_disable(scpd->clk, MAX_CLKS);
->  err_clk:
->  	scpsys_regulator_disable(scpd);
->  
-> @@ -302,7 +315,6 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
->  	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
->  	u32 val;
->  	int ret, tmp;
-> -	int i;
+> +	ret = scpsys_sram_enable(scpd, ctl_addr);
+> +	if (ret < 0)
+> +		goto err_pwr_ack;
 >  
 >  	if (scpd->data->bus_prot_mask) {
->  		ret = mtk_infracfg_set_bus_protection(scp->infracfg,
-> @@ -343,8 +355,7 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+>  		ret = mtk_infracfg_clear_bus_protection(scp->infracfg,
+> @@ -312,7 +341,6 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+>  	struct scp_domain *scpd = container_of(genpd, struct scp_domain, genpd);
+>  	struct scp *scp = scpd->scp;
+>  	void __iomem *ctl_addr = scp->base + scpd->data->ctl_offs;
+> -	u32 pdn_ack = scpd->data->sram_pdn_ack_bits;
+>  	u32 val;
+>  	int ret, tmp;
+>  
+> @@ -324,17 +352,12 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+>  			goto out;
+>  	}
+>  
+> -	val = readl(ctl_addr);
+> -	val |= scpd->data->sram_pdn_bits;
+> -	writel(val, ctl_addr);
+> -
+> -	/* wait until SRAM_PDN_ACK all 1 */
+> -	ret = readl_poll_timeout(ctl_addr, tmp, (tmp & pdn_ack) == pdn_ack,
+> -				 MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
+> +	ret = scpsys_sram_disable(scpd, ctl_addr);
 >  	if (ret < 0)
 >  		goto out;
 >  
-> -	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++)
-> -		clk_disable_unprepare(scpd->clk[i]);
-> +	scpsys_clk_disable(scpd->clk, MAX_CLKS);
+> -	val |= PWR_ISO_BIT;
+> +	/* subsys power off */
+> +	val = readl(ctl_addr) | PWR_ISO_BIT;
+>  	writel(val, ctl_addr);
 >  
->  	ret = scpsys_regulator_disable(scpd);
->  	if (ret < 0)
+>  	val &= ~PWR_RST_B_BIT;
 > 
 
 _______________________________________________
