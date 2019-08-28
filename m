@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A5EDF9FEBC
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:43:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 419A79FED0
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 11:45:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=E9Ut1IsIntFVx6niD5goFzCIg4UMgsCzoOsqGBjJ45I=; b=s5qInqrWvnFEw9
-	ybPe6X5L7Spxm7uvpN8n+u+Qw6BeTXRisHRvehwJB65Ii2XI6P1zwjk2mGL2KuQjEGCTRB8jALIwE
-	QzRAg5jJuLUE5qlrwiLwm1EwmRUeSM2arRGmsF4tDaHYVq/6a79zeWHBkoGW2kA4pHSIkz2OT86ma
-	+L+ApTvOy4W/A3+grdxKsRCzILGz0f85eEgc5G9h2HWiYjtMZSlPRw9Y48RznlUmYHtTsPFYKl7wj
-	6RxEaQTuxuJsSYP+ntwWBiAylvCOHllfSOSdeVZ2loh4/BGf6y2/jLZxOfiaa7E4ioP0cv6wjlZEf
-	M8n1JdpT81/bI0LItgEQ==;
+	List-Owner; bh=czd/hxQr0aitYlNSRkpuwJjUhrsEvcklZrbH8Q4cHZI=; b=dCWZbGtaTedrBI
+	MkvJ9RDbKPgwOW1FIvMsK+3gHpRTxZO7Pped88j5RI8VxbkCM6ejKD/eKNJCYOHsCt/d44CsAVkxG
+	raOyJxGimZ0HrQWzcdjXlseJbPq/JjVGk1MdPZPDnGFoO7t7GTac8D+pSDBDhTK/AExXnWfxemt0o
+	mtaW9erBDbkHlHjZybYcypthQ+GciGbsmMwJw6K/Hv0Ei4sPnKEAovheFuQoowKsOcaEN1FkUHLet
+	wb03X0Lfg9CtzaaN5uVuEn39kxCpkEZmNVxnaUdKo4tVJWksXBYCJAjMMWKlwVcsHhYa8bpdDPS82
+	cVc4JAMuqzZx0NQ9dHbg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2uU7-0001UM-89; Wed, 28 Aug 2019 09:43:23 +0000
-Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
+	id 1i2uVZ-0002Jk-Jh; Wed, 28 Aug 2019 09:44:53 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2uU3-0001Tt-Rl; Wed, 28 Aug 2019 09:43:21 +0000
-Received: by mail-ed1-x541.google.com with SMTP id z51so2227761edz.13;
- Wed, 28 Aug 2019 02:43:19 -0700 (PDT)
+ id 1i2uVR-0002Dv-Gg; Wed, 28 Aug 2019 09:44:48 +0000
+Received: by mail-ed1-x543.google.com with SMTP id z51so2232544edz.13;
+ Wed, 28 Aug 2019 02:44:45 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=KX41i1WhIYhU45WlM2JOv87y3yDnNDkdr2vkLR1ngbA=;
- b=SB3JDahoi8GaaB4kIiKflxk1L51N5jZfRIeMe01Pjq+Qs2y7JQ2pBZ9/nccRo0RG8F
- SDk30PIbA0a5XxTct2e9gvzWEKYcNVyfnpZn4YeC2q+G1SgO5oRbYNn+b2kRWbjyQUZo
- ZppdV3tXyqnBQ0/pI8x/i7vnEX07IUGkDwVtJwllhOsbLRpUJ2W5pp01OC4/18+VQtg+
- R72PuTITZ1aJza22jD5Aj1WL9jum0LD0kyynA3U2xUrF6cpOogL4Y0ZHV9hzABNi8eCh
- 3seYMvqlZdfehKTyxuylfrG0PR/z01bG+FCtKpOiU8pKWUAZ+SFOGwHZi4rCaNbrmBui
- 94eg==
+ bh=+vkiw1WHLWFTkDsWW/owxnSnaimzdRwgrRmOE5aYH3A=;
+ b=WtUOMmzLKLXCkcyem/4OG0tevln/Q+wIsDcPLNOQlVIBnlu+gJrb+/Ybl+//G7X+/4
+ Kty15jW24xDVsh3theeM4Kg4xqqxCeZuA8XYeBa7FTlhUY7tCsbO4opv8SOfsR2HMFWM
+ /z8fq8XKC26/VKrHS1eKHIRehajzR0VGrwD+r4HViGUlfpCeA+XE+iP5d4mnHisDePKU
+ 7tE6QdAEgZicEqbV0dVY7N4vC+1sd0yeYf++KXjlMAGfb+B3S8dcsKwIlN27drj3pUbg
+ 3/a2UzWeFqYqBcj2IGVkJKJe72iY+YrA6OcqPwPRnCIDeZN2v+v1dyp9AoCxrTreMlPP
+ TX8g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=KX41i1WhIYhU45WlM2JOv87y3yDnNDkdr2vkLR1ngbA=;
- b=qcZhZqOv8y9LAJpuH6VESmKr72dye7Fg+vlVxb2d0LZCP1thz3YxN2zX8U8RTVN+iq
- hMzV+dNV9H2UJh68Cn4FOxoGNqK5u/OLhBbPQmPPpopmGtzuBwN2J56Ku7BxUGf6fLwS
- t96QwIF1KxrbLpHfm0CgvqPT5Lfcm+iaBaEcBhtBHYu+cdIyb6wvWgrWUP3ejTHiStmz
- FHs1bViEExPbDIdeW7a379hDWR+tGpK8I0zr6U2zim7SuYL4hSC8zOb39FCqKuOqYpl4
- WM6Ll4Gpo/yRE0zjgXe3AQHMRkGn/juuo6SOYZjuGk+URCfbigRhAahbfPklfw5OjqWw
- pWUA==
-X-Gm-Message-State: APjAAAWQTKavnkphhSo8mTkSqgUSFjb0mr/q0KPpuNAuU8N90AZkFX9Z
- +tKQAOFnU9qPGO3ZvKNRnQA=
-X-Google-Smtp-Source: APXvYqzwZCKKNWRU1mM2pi8xbeB4p8qn84OZzLqOAVp+hd/sZUqHKipqA29FwjPpJ8CzIoWQ9hNuUQ==
-X-Received: by 2002:a17:906:4b44:: with SMTP id
- j4mr2274810ejv.139.1566985398311; 
- Wed, 28 Aug 2019 02:43:18 -0700 (PDT)
+ bh=+vkiw1WHLWFTkDsWW/owxnSnaimzdRwgrRmOE5aYH3A=;
+ b=UVYAt91wxSFsniRy3F4bqMVINGtkSiT0VH50e78xkyXThIKU8P4RTIfjQN2wf7vt80
+ 7Qz4BEjyLZkedczNcU9h6aCYLBFCoqK+s87TnrlU2rT6XIDVYzjhn7jlGMfxooT5+NvL
+ QDTswNXILRfk0vfL2r8cLTCKvI39bp83E+QBEa5bc+naJP7E88fwE/38qcwiO0ebKrk+
+ WsLIQLvj9M5UodNCuZywOwQ+aYS2mLHIiU/KSg/a3E2c2y3yUgETlAq+6finZgECHWMU
+ 9rj/Gax9eJDCilXHhtHi8mYjnJNQyBTtEmt6qWK13aNxGSWVp4WyScPcla1M1HEgmhJJ
+ YBkQ==
+X-Gm-Message-State: APjAAAXDNkvXwl4WpPCWGWe/y8TmxVAz7nSXm+3ryBNgJXIthTFadTNc
+ X/9I7XmINMCOJRMqngGgzz0=
+X-Google-Smtp-Source: APXvYqz2htrbmzIKXUQNpuhszt5d4+QujW3BNoBleeOxUGxzZFuMOdNUKKsMJvn9Ix59xoNt5nL9kQ==
+X-Received: by 2002:a17:906:cd03:: with SMTP id
+ oz3mr2331415ejb.210.1566985483783; 
+ Wed, 28 Aug 2019 02:44:43 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.228.146])
- by smtp.gmail.com with ESMTPSA id a3sm300500eje.90.2019.08.28.02.43.16
+ by smtp.gmail.com with ESMTPSA id f12sm349027edw.2.2019.08.28.02.44.42
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 28 Aug 2019 02:43:17 -0700 (PDT)
-Subject: Re: [PATCH v7 03/13] soc: mediatek: Refactor polling timeout and
- documentation
+ Wed, 28 Aug 2019 02:44:43 -0700 (PDT)
+Subject: Re: [PATCH v7 04/13] soc: mediatek: Refactor regulator control
 To: Weiyi Lu <weiyi.lu@mediatek.com>, Nicolas Boichat
  <drinkcat@chromium.org>, Rob Herring <robh@kernel.org>
 References: <1566983506-26598-1-git-send-email-weiyi.lu@mediatek.com>
- <1566983506-26598-4-git-send-email-weiyi.lu@mediatek.com>
+ <1566983506-26598-5-git-send-email-weiyi.lu@mediatek.com>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -158,23 +157,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <3a61ccce-1c88-5e7f-77ad-afce071a656b@gmail.com>
-Date: Wed, 28 Aug 2019 11:43:16 +0200
+Message-ID: <1481942b-623f-69dc-6e21-da877968793e@gmail.com>
+Date: Wed, 28 Aug 2019 11:44:42 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1566983506-26598-4-git-send-email-weiyi.lu@mediatek.com>
+In-Reply-To: <1566983506-26598-5-git-send-email-weiyi.lu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_024319_895561_6A3E6DE6 
-X-CRM114-Status: GOOD (  15.89  )
+X-CRM114-CacheID: sfid-20190828_024445_928226_976A20C9 
+X-CRM114-Status: GOOD (  18.58  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -210,49 +209,81 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 28/08/2019 11:11, Weiyi Lu wrote:
-> Use USEC_PER_SEC to indicate the polling timeout directly.
-> And add documentation of scp_domain_data.
+> Put regulator enable and disable control in separate functions.
 > 
 > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
-> ---
 
-Queued for v5.4-next/soc
+Applied to v5.4-next/soc
 Thanks!
 
->  drivers/soc/mediatek/mtk-scpsys.c | 13 ++++++++++++-
->  1 file changed, 12 insertions(+), 1 deletion(-)
+> ---
+>  drivers/soc/mediatek/mtk-scpsys.c | 32 +++++++++++++++++++++++---------
+>  1 file changed, 23 insertions(+), 9 deletions(-)
 > 
 > diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
-> index 503222d..e97fc0e 100644
+> index e97fc0e..aed540d 100644
 > --- a/drivers/soc/mediatek/mtk-scpsys.c
 > +++ b/drivers/soc/mediatek/mtk-scpsys.c
-> @@ -21,7 +21,7 @@
->  #include <dt-bindings/power/mt8173-power.h>
+> @@ -191,6 +191,22 @@ static int scpsys_domain_is_on(struct scp_domain *scpd)
+>  	return -EINVAL;
+>  }
 >  
->  #define MTK_POLL_DELAY_US   10
-> -#define MTK_POLL_TIMEOUT    (jiffies_to_usecs(HZ))
-> +#define MTK_POLL_TIMEOUT    USEC_PER_SEC
+> +static int scpsys_regulator_enable(struct scp_domain *scpd)
+> +{
+> +	if (!scpd->supply)
+> +		return 0;
+> +
+> +	return regulator_enable(scpd->supply);
+> +}
+> +
+> +static int scpsys_regulator_disable(struct scp_domain *scpd)
+> +{
+> +	if (!scpd->supply)
+> +		return 0;
+> +
+> +	return regulator_disable(scpd->supply);
+> +}
+> +
+>  static int scpsys_power_on(struct generic_pm_domain *genpd)
+>  {
+>  	struct scp_domain *scpd = container_of(genpd, struct scp_domain, genpd);
+> @@ -201,11 +217,9 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+>  	int ret, tmp;
+>  	int i;
 >  
->  #define MTK_SCPD_ACTIVE_WAKEUP		BIT(0)
->  #define MTK_SCPD_FWAIT_SRAM		BIT(1)
-> @@ -108,6 +108,17 @@ enum clk_id {
+> -	if (scpd->supply) {
+> -		ret = regulator_enable(scpd->supply);
+> -		if (ret)
+> -			return ret;
+> -	}
+> +	ret = scpsys_regulator_enable(scpd);
+> +	if (ret < 0)
+> +		return ret;
 >  
->  #define MAX_CLKS	3
+>  	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++) {
+>  		ret = clk_prepare_enable(scpd->clk[i]);
+> @@ -273,8 +287,7 @@ static int scpsys_power_on(struct generic_pm_domain *genpd)
+>  			clk_disable_unprepare(scpd->clk[i]);
+>  	}
+>  err_clk:
+> -	if (scpd->supply)
+> -		regulator_disable(scpd->supply);
+> +	scpsys_regulator_disable(scpd);
 >  
-> +/**
-> + * struct scp_domain_data - scp domain data for power on/off flow
-> + * @name: The domain name.
-> + * @sta_mask: The mask for power on/off status bit.
-> + * @ctl_offs: The offset for main power control register.
-> + * @sram_pdn_bits: The mask for sram power control bits.
-> + * @sram_pdn_ack_bits: The mask for sram power control acked bits.
-> + * @bus_prot_mask: The mask for single step bus protection.
-> + * @clk_id: The basic clocks required by this power domain.
-> + * @caps: The flag for active wake-up action.
-> + */
->  struct scp_domain_data {
->  	const char *name;
->  	u32 sta_mask;
+>  	dev_err(scp->dev, "Failed to power on domain %s\n", genpd->name);
+>  
+> @@ -333,8 +346,9 @@ static int scpsys_power_off(struct generic_pm_domain *genpd)
+>  	for (i = 0; i < MAX_CLKS && scpd->clk[i]; i++)
+>  		clk_disable_unprepare(scpd->clk[i]);
+>  
+> -	if (scpd->supply)
+> -		regulator_disable(scpd->supply);
+> +	ret = scpsys_regulator_disable(scpd);
+> +	if (ret < 0)
+> +		goto out;
+>  
+>  	return 0;
+>  
 > 
 
 _______________________________________________
