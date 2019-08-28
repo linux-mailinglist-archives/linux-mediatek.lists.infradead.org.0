@@ -2,70 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0FC8CA0025
-	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 12:46:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA5B1A01A8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 28 Aug 2019 14:29:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=M7//DX6XvZMPdLpzSic4TcqiJZhFwz8/CQuNk9DnF2s=; b=VUda3czygfANpbhv7qPiOX+Ro
-	o+WNoAkdZVya+Sb5PHcBECzLorX+NYBfVxRxYRk8WfeYBIvkpGXwboi3XriRLBFSFtQo5z5XtY3/P
-	Z/oB2xp/5ZH+URF3g8ruUdzRAKV+A8hkQcojrA2xvdXJakvfHjLJlGC95wgXUqwQsm1kZQaZyWlC7
-	PU/WU0GrZfvW9JsAz7ZYZB01fu0XnmpjRB/dxXVAVivfLAOV6fQXhsjeTK54bvZ2a8jvfJl9Bx4oy
-	6GY0n0rhnw95xrLkg82C1uIFFaCOO656vck7JY9P7EUtVEhsRXPsNKcRNm/f7HbDP6QVXOv89K82g
-	JbQITYICg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=YuqEePQo3KodebTC5Mfmp17CIzt/Wym3nLgbL56Q72M=; b=PQs8ytVjx48d4Z
+	08S1NF63Vo0gZ2Ox52ego7gL8hQAA3OfRX/AXqGiCm3jppk8ZtgY7D9DVqePMXBJ8n6sDEgsxUfV4
+	TkyJIV2mL68sUNo6lP44DXwSZ5RJKkZHtKNwJc0cTrEH5UVxfHn9HqG18hKNn0VFsMetTOuzV1joO
+	wWxI1TLHpH9VWFYZNTs9anWAGJmvZSH6A6fs6hu3B4qASt+pLJJNX/RuOSqclMorbGlHDh9xGXfQP
+	RBjY8R1qlnscKP28c0lTNNRA7Sz2CYPb2ROjRaATCeXIQam05u1j4g9QCQb84IE2KktTzC3lDmX0q
+	F0VWIQy+Ik48Rp8JwwZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2vT2-0004fL-9Y; Wed, 28 Aug 2019 10:46:20 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1i2x54-0002zC-3o; Wed, 28 Aug 2019 12:29:42 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2vSk-0004Tc-8u; Wed, 28 Aug 2019 10:46:03 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=In-Reply-To:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=xEk+7C1PeYR/dQCDWZ88puZD6TYZGeKl16GGfqOsMlE=; b=YaK6OBCmH+nTMmCNTe5KwcsNc
- K1AaF0EoXYG4wJvyp20sq3QK0qUrshXEZza54GLmgqgJzISgbukntzkkGcFkiZd1PZidUbIiFPT6Z
- +xK8S/7o5ZRs/0bzt49bTUqU4kDOVR9qc5/obE+R4dAJbpPy54r+L7eF8agGPv2N9eT+0=;
-Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
- ([82.37.168.47] helo=ypsilon.sirena.org.uk)
- by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <broonie@sirena.co.uk>)
- id 1i2vSe-0003cz-AO; Wed, 28 Aug 2019 10:45:56 +0000
-Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 894632742A55; Wed, 28 Aug 2019 11:45:55 +0100 (BST)
-Date: Wed, 28 Aug 2019 11:45:55 +0100
-From: Mark Brown <broonie@kernel.org>
-To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-Subject: Re: [PATCH v5 07/10] regulator: mt6358: Add support for MT6358
- regulator
-Message-ID: <20190828104555.GE4298@sirena.co.uk>
-References: <1566531931-9772-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1566531931-9772-8-git-send-email-hsin-hsiung.wang@mediatek.com>
+ id 1i2x4M-0002MM-Oo; Wed, 28 Aug 2019 12:29:00 +0000
+X-UUID: de93992e778244a7ba9099de65d92958-20190828
+X-UUID: de93992e778244a7ba9099de65d92958-20190828
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <henryc.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1803454445; Wed, 28 Aug 2019 04:29:01 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 28 Aug 2019 05:29:00 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 28 Aug 2019 20:28:58 +0800
+Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 28 Aug 2019 20:28:58 +0800
+From: Henry Chen <henryc.chen@mediatek.com>
+To: Georgi Djakov <georgi.djakov@linaro.org>, Rob Herring
+ <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, Viresh Kumar
+ <vireshk@kernel.org>, Stephen Boyd <swboyd@chromium.org>, Ryan Case
+ <ryandcase@chromium.org>
+Subject: [PATCH V3 03/10] soc: mediatek: add support for the performance state
+Date: Wed, 28 Aug 2019 20:28:41 +0800
+Message-ID: <1566995328-15158-4-git-send-email-henryc.chen@mediatek.com>
+X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
+References: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <1566531931-9772-8-git-send-email-hsin-hsiung.wang@mediatek.com>
-X-Cookie: Oatmeal raisin.
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_034602_310295_BEEA377A 
-X-CRM114-Status: GOOD (  10.50  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20190828_052858_812873_F9901E83 
+X-CRM114-Status: GOOD (  16.92  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,70 +73,156 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Lee Jones <lee.jones@linaro.org>, Kate Stewart <kstewart@linuxfoundation.org>,
- linux-rtc@vger.kernel.org
-Content-Type: multipart/mixed; boundary="===============6082748847008547611=="
+Cc: James Liao <jamesjj.liao@mediatek.com>, Weiyi Lu <weiyi.lu@mediatek.com>,
+ Nicolas Boichat <drinkcat@google.com>, linux-kernel@vger.kernel.org, Henry
+ Chen <henryc.chen@mediatek.com>, Fan Chen <fan.chen@mediatek.com>,
+ devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+Support power domain performance state, add header file for scp event.
 
---===============6082748847008547611==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="PPYy/fEw/8QCHSq3"
-Content-Disposition: inline
+Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
+---
+ drivers/soc/mediatek/mtk-scpsys.c | 58 +++++++++++++++++++++++++++++++++++++++
+ drivers/soc/mediatek/mtk-scpsys.h | 22 +++++++++++++++
+ 2 files changed, 80 insertions(+)
+ create mode 100644 drivers/soc/mediatek/mtk-scpsys.h
 
+diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
+index e072810..50bc254 100644
+--- a/drivers/soc/mediatek/mtk-scpsys.c
++++ b/drivers/soc/mediatek/mtk-scpsys.c
+@@ -10,7 +10,9 @@
+ #include <linux/of_device.h>
+ #include <linux/platform_device.h>
+ #include <linux/pm_domain.h>
++#include <linux/pm_opp.h>
+ #include <linux/regulator/consumer.h>
++#include <linux/slab.h>
+ #include <linux/soc/mediatek/infracfg.h>
+ #include <linux/soc/mediatek/scpsys-ext.h>
+ 
+@@ -21,6 +23,7 @@
+ #include <dt-bindings/power/mt7623a-power.h>
+ #include <dt-bindings/power/mt8173-power.h>
+ #include <dt-bindings/power/mt8183-power.h>
++#include "mtk-scpsys.h"
+ 
+ #define MTK_POLL_DELAY_US   10
+ #define MTK_POLL_TIMEOUT    USEC_PER_SEC
+@@ -187,6 +190,18 @@ struct scp_soc_data {
+ 	bool bus_prot_reg_update;
+ };
+ 
++static BLOCKING_NOTIFIER_HEAD(scpsys_notifier_list);
++
++int register_scpsys_notifier(struct notifier_block *nb)
++{
++	return blocking_notifier_chain_register(&scpsys_notifier_list, nb);
++}
++
++int unregister_scpsys_notifier(struct notifier_block *nb)
++{
++	return blocking_notifier_chain_unregister(&scpsys_notifier_list, nb);
++}
++
+ static int scpsys_domain_is_on(struct scp_domain *scpd)
+ {
+ 	struct scp *scp = scpd->scp;
+@@ -505,6 +520,41 @@ static void init_clks(struct platform_device *pdev, struct clk **clk)
+ 		clk[i] = devm_clk_get(&pdev->dev, clk_names[i]);
+ }
+ 
++static int mtk_pd_set_performance(struct generic_pm_domain *genpd,
++				  unsigned int state)
++{
++	int i;
++	struct scp_domain *scpd =
++		container_of(genpd, struct scp_domain, genpd);
++	struct scp_event_data scpe;
++	struct scp *scp = scpd->scp;
++	struct genpd_onecell_data *pd_data = &scp->pd_data;
++
++	for (i = 0; i < pd_data->num_domains; i++) {
++		if (genpd == pd_data->domains[i]) {
++			dev_dbg(scp->dev, "%d. %s = %d\n",
++				i, genpd->name, state);
++			break;
++		}
++	}
++
++	if (i == pd_data->num_domains)
++		return 0;
++
++	scpe.event_type = MTK_SCPSYS_PSTATE;
++	scpe.genpd = genpd;
++	scpe.domain_id = i;
++	blocking_notifier_call_chain(&scpsys_notifier_list, state, &scpe);
++
++	return 0;
++}
++
++static unsigned int mtk_pd_get_performance(struct generic_pm_domain *genpd,
++					   struct dev_pm_opp *opp)
++{
++	return dev_pm_opp_get_level(opp);
++}
++
+ static struct scp *init_scp(struct platform_device *pdev,
+ 			const struct scp_domain_data *scp_domain_data, int num,
+ 			const struct scp_ctrl_reg *scp_ctrl_reg,
+@@ -630,6 +680,14 @@ static struct scp *init_scp(struct platform_device *pdev,
+ 		genpd->power_on = scpsys_power_on;
+ 		if (MTK_SCPD_CAPS(scpd, MTK_SCPD_ACTIVE_WAKEUP))
+ 			genpd->flags |= GENPD_FLAG_ACTIVE_WAKEUP;
++
++		/* Add opp table check first to avoid OF runtime parse failed */
++		if (of_count_phandle_with_args(pdev->dev.of_node,
++		   "operating-points-v2", NULL) > 0) {
++			genpd->set_performance_state = mtk_pd_set_performance;
++			genpd->opp_to_performance_state =
++				mtk_pd_get_performance;
++		}
+ 	}
+ 
+ 	return scp;
+diff --git a/drivers/soc/mediatek/mtk-scpsys.h b/drivers/soc/mediatek/mtk-scpsys.h
+new file mode 100644
+index 0000000..c1e8325
+--- /dev/null
++++ b/drivers/soc/mediatek/mtk-scpsys.h
+@@ -0,0 +1,22 @@
++/* SPDX-License-Identifier: GPL-2.0
++ *
++ * Copyright (c) 2018 MediaTek Inc.
++ */
++
++#ifndef __MTK_SCPSYS_H__
++#define __MTK_SCPSYS_H__
++
++struct scp_event_data {
++	int event_type;
++	int domain_id;
++	struct generic_pm_domain *genpd;
++};
++
++enum scp_event_type {
++	MTK_SCPSYS_PSTATE,
++};
++
++int register_scpsys_notifier(struct notifier_block *nb);
++int unregister_scpsys_notifier(struct notifier_block *nb);
++
++#endif /* __MTK_SCPSYS_H__ */
+-- 
+1.9.1
 
---PPYy/fEw/8QCHSq3
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-
-On Fri, Aug 23, 2019 at 11:45:28AM +0800, Hsin-Hsiung Wang wrote:
-> The MT6358 is a regulator found on boards based on MediaTek MT8183 and
-> probably other SoCs. It is a so called pmic and connects as a slave to
-> SoC using SPI, wrapped inside the pmic-wrapper.
-
-This looks good - since there was only one small issue with the example
-in the binding document I'll apply both patches, please send a followup
-fixing the binding document.
-
---PPYy/fEw/8QCHSq3
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl1mW2IACgkQJNaLcl1U
-h9BSkwf/dn5XU4gEVNtDS9XFnqmJE1/jcGPItKtO0MNfD3jrB/hUyBWMYoBhI+sU
-Vm45cGP+4DM/3BcJrj6qrmvgSmYZtpf6vn0RljmVuFlo5SOk4y4/HI8i+gdjcrER
-26tolRdFTgR3sbVDa2Wyzz6eCdz0UhoC69q4qQccEjgetw8GuXQHwGARR3NeXxVp
-4PCsUEKX5IxcOIKr2/1Y50W4HThACHgvoNAp/GK6zjSuyH17HKgZfSwh+p1sNZ4N
-a83mggDEu1rOgsiptGPtO/U+y2pNNnXNqX/+Xsnna6jkCkbM4hnGMLqvvMJlsGaC
-iVNyYaPdnO7o3Tqq6wzJbpXH6eKI+g==
-=VmT8
------END PGP SIGNATURE-----
-
---PPYy/fEw/8QCHSq3--
-
-
---===============6082748847008547611==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============6082748847008547611==--
-
