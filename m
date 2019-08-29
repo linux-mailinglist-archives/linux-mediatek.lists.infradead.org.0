@@ -2,63 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [198.137.202.133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64314A1E23
-	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 16:59:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 01430A1E26
+	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 16:59:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=U3i9mDg9+aOE9rOrNYyRSqBh4xOAKu1yd7j2P0EBQOQ=; b=d+J4Y+Ms7MdGIA
-	9rYscVluIT2cu3stNyACTva+RvQtXVms9DMP8vb74aBYkcklvsn/dpRTtX2Gz5JJ/kylElZ/jcbKG
-	IU1wUdrd14pZ17hrvUbX5ZfQ+XRYhFIOaUC4/dJQtBjzzPcUvMQCsYqeKm7m9nJyHPhHaHiRe/rg2
-	WbCF1Xkdp8t3aEyTAKxpfZItRuRut6Ws5VVXpogoiLa1um12iAWi1dVaadysXDaauoHyqk/skbDgM
-	Vm2VKPT027uQv3owjkyd+oPl4+ZjqFazuN4orcgX070jCNaE1K4CKLFkDiEUv32z+t3IZXxwsmboC
-	8Ciwv3ygrWsc/2fOiUWA==;
+	List-Owner; bh=Tlnq9+CCsRgSt1pSm0kHxCKrOmS4E60V6lawdgc55EA=; b=Kvw0cV95DEmi/t
+	WiGv+Q3fwyTp1W1Sbf8h9+OC4Ll2BPH2FH+bbQrt2LEFqsNakRbQO4tFqjnPrVN5ey28eeZ/bAhvl
+	0bee26CYCWT0aaAxwNYOXU6GD2PBT6EQZWpZgbyfGDQhZW7cymzlz64cq9fzg65IrPNHD1Wl1i415
+	ksv9MTwfZkELTvUISlwoMeeXPvtodJNGtRpWj/hjDioXcco5kZ5VwFkY8DGgjpYEoJLFjyppxrJvv
+	EaUohGcRl1PaJEBpDbn2/2ibYUUrPvvEcywlwFZL94UyS0WOU5QjqJpg9qh6bUMpGDcW2iFy5drho
+	IldQ+5MynHKs2ZSy8bAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Lt7-0001HJ-Bg; Thu, 29 Aug 2019 14:59:01 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i3Lts-0001YG-Az; Thu, 29 Aug 2019 14:59:48 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3Llf-0005jT-Kf; Thu, 29 Aug 2019 14:51:21 +0000
-X-UUID: 139b930a766f43bba8e4c3387d14dff5-20190829
-X-UUID: 139b930a766f43bba8e4c3387d14dff5-20190829
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1i3Llg-0005io-4c; Thu, 29 Aug 2019 14:51:21 +0000
+X-UUID: 2be6d923641d422d847bcf37b6d0b48f-20190829
+X-UUID: 2be6d923641d422d847bcf37b6d0b48f-20190829
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <yongqiang.niu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 591490924; Thu, 29 Aug 2019 06:51:18 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ with ESMTP id 304195566; Thu, 29 Aug 2019 06:51:23 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 07:51:18 -0700
+ 15.0.1395.4; Thu, 29 Aug 2019 07:51:22 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 22:51:16 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 22:51:20 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 29 Aug 2019 22:51:15 +0800
+ Transport; Thu, 29 Aug 2019 22:51:19 +0800
 From: <yongqiang.niu@mediatek.com>
 To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>, "Rob
  Herring" <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v5,
- 10/32] drm/mediatek: add mutex sof register offset into ddp private
- data
-Date: Thu, 29 Aug 2019 22:50:32 +0800
-Message-ID: <1567090254-15566-11-git-send-email-yongqiang.niu@mediatek.com>
+Subject: [PATCH v5, 14/32] drm/mediatek: add ddp component CCORR
+Date: Thu, 29 Aug 2019 22:50:36 +0800
+Message-ID: <1567090254-15566-15-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
 References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: D33B4E8515851DCFAA612D8C61321D8956F5891A8DF27C9B420DBD700CFDBA552000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_075120_049924_A8399E30 
-X-CRM114-Status: GOOD (  10.91  )
+X-CRM114-CacheID: sfid-20190829_075120_627443_AAB09385 
+X-CRM114-Status: UNSURE (   9.99  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -86,83 +86,106 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
-mutex sof register offset will be private data of ddp
+This patch add ddp component CCORR
 
 Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 Reviewed-by: CK Hu <ck.hu@mediatek.com>
 ---
- drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 13 ++++++++++---
- 1 file changed, 10 insertions(+), 3 deletions(-)
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 32 +++++++++++++++++++++++++++++
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  2 ++
+ 2 files changed, 34 insertions(+)
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-index 9bdbd8d..4866a9b 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-@@ -34,12 +34,13 @@
- #define DISP_REG_CONFIG_DPI_SEL			0x064
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
+index d1afa06..b18bd66 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
++++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
+@@ -33,6 +33,12 @@
+ #define DISP_AAL_EN				0x0000
+ #define DISP_AAL_SIZE				0x0030
  
- #define MT2701_DISP_MUTEX0_MOD0			0x2c
-+#define MT2701_DISP_MUTEX0_SOF0			0x30
- 
- #define DISP_REG_MUTEX_EN(n)			(0x20 + 0x20 * (n))
- #define DISP_REG_MUTEX(n)			(0x24 + 0x20 * (n))
- #define DISP_REG_MUTEX_RST(n)			(0x28 + 0x20 * (n))
- #define DISP_REG_MUTEX_MOD(mutex_mod_reg, n)	(mutex_mod_reg + 0x20 * (n))
--#define DISP_REG_MUTEX_SOF(n)			(0x30 + 0x20 * (n))
-+#define DISP_REG_MUTEX_SOF(mutex_sof_reg, n)	(mutex_sof_reg + 0x20 * (n))
- #define DISP_REG_MUTEX_MOD2(n)			(0x34 + 0x20 * (n))
- 
- #define INT_MUTEX				BIT(1)
-@@ -155,6 +156,7 @@ struct mtk_ddp_data {
- 	const unsigned int *mutex_mod;
- 	const unsigned int *mutex_sof;
- 	const unsigned int mutex_mod_reg;
-+	const unsigned int mutex_sof_reg;
- };
- 
- struct mtk_ddp {
-@@ -226,18 +228,21 @@ struct mtk_ddp {
- 	.mutex_mod = mt2701_mutex_mod,
- 	.mutex_sof = mt2712_mutex_sof,
- 	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-+	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
- };
- 
- static const struct mtk_ddp_data mt2712_ddp_driver_data = {
- 	.mutex_mod = mt2712_mutex_mod,
- 	.mutex_sof = mt2712_mutex_sof,
- 	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-+	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
- };
- 
- static const struct mtk_ddp_data mt8173_ddp_driver_data = {
- 	.mutex_mod = mt8173_mutex_mod,
- 	.mutex_sof = mt2712_mutex_sof,
- 	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-+	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
- };
- 
- static unsigned int mtk_ddp_mout_en(enum mtk_ddp_comp_id cur,
-@@ -519,7 +524,8 @@ void mtk_disp_mutex_add_comp(struct mtk_disp_mutex *mutex,
- 	}
- 
- 	writel_relaxed(ddp->data->mutex_sof[sof_id],
--		       ddp->regs + DISP_REG_MUTEX_SOF(mutex->id));
-+		       ddp->regs +
-+		       DISP_REG_MUTEX_SOF(ddp->data->mutex_sof_reg, mutex->id));
++#define DISP_CCORR_EN				0x0000
++#define CCORR_EN				BIT(0)
++#define DISP_CCORR_CFG				0x0020
++#define CCORR_RELAY_MODE			BIT(0)
++#define DISP_CCORR_SIZE				0x0030
++
+ #define DISP_GAMMA_EN				0x0000
+ #define DISP_GAMMA_CFG				0x0020
+ #define DISP_GAMMA_SIZE				0x0030
+@@ -123,6 +129,24 @@ static void mtk_aal_stop(struct mtk_ddp_comp *comp)
+ 	writel_relaxed(0x0, comp->regs + DISP_AAL_EN);
  }
  
- void mtk_disp_mutex_remove_comp(struct mtk_disp_mutex *mutex,
-@@ -541,7 +547,8 @@ void mtk_disp_mutex_remove_comp(struct mtk_disp_mutex *mutex,
- 	case DDP_COMPONENT_DPI1:
- 		writel_relaxed(MUTEX_SOF_SINGLE_MODE,
- 			       ddp->regs +
--			       DISP_REG_MUTEX_SOF(mutex->id));
-+			       DISP_REG_MUTEX_SOF(ddp->data->mutex_sof_reg,
-+						  mutex->id));
- 		break;
- 	default:
- 		if (ddp->data->mutex_mod[id] < 32) {
++static void mtk_ccorr_config(struct mtk_ddp_comp *comp, unsigned int w,
++			     unsigned int h, unsigned int vrefresh,
++			     unsigned int bpc)
++{
++	writel(h << 16 | w, comp->regs + DISP_CCORR_SIZE);
++	writel(CCORR_RELAY_MODE, comp->regs + DISP_CCORR_CFG);
++}
++
++static void mtk_ccorr_start(struct mtk_ddp_comp *comp)
++{
++	writel(CCORR_EN, comp->regs + DISP_CCORR_EN);
++}
++
++static void mtk_ccorr_stop(struct mtk_ddp_comp *comp)
++{
++	writel_relaxed(0x0, comp->regs + DISP_CCORR_EN);
++}
++
+ static void mtk_gamma_config(struct mtk_ddp_comp *comp, unsigned int w,
+ 			     unsigned int h, unsigned int vrefresh,
+ 			     unsigned int bpc)
+@@ -171,6 +195,12 @@ static void mtk_gamma_set(struct mtk_ddp_comp *comp,
+ 	.stop = mtk_aal_stop,
+ };
+ 
++static const struct mtk_ddp_comp_funcs ddp_ccorr = {
++	.config = mtk_ccorr_config,
++	.start = mtk_ccorr_start,
++	.stop = mtk_ccorr_stop,
++};
++
+ static const struct mtk_ddp_comp_funcs ddp_gamma = {
+ 	.gamma_set = mtk_gamma_set,
+ 	.config = mtk_gamma_config,
+@@ -192,6 +222,7 @@ static void mtk_gamma_set(struct mtk_ddp_comp *comp,
+ 	[MTK_DISP_RDMA] = "rdma",
+ 	[MTK_DISP_WDMA] = "wdma",
+ 	[MTK_DISP_COLOR] = "color",
++	[MTK_DISP_CCORR] = "ccorr",
+ 	[MTK_DISP_AAL] = "aal",
+ 	[MTK_DISP_GAMMA] = "gamma",
+ 	[MTK_DISP_UFOE] = "ufoe",
+@@ -213,6 +244,7 @@ struct mtk_ddp_comp_match {
+ 	[DDP_COMPONENT_AAL0]	= { MTK_DISP_AAL,	0, &ddp_aal },
+ 	[DDP_COMPONENT_AAL1]	= { MTK_DISP_AAL,	1, &ddp_aal },
+ 	[DDP_COMPONENT_BLS]	= { MTK_DISP_BLS,	0, NULL },
++	[DDP_COMPONENT_CCORR]	= { MTK_DISP_CCORR,	0, &ddp_ccorr },
+ 	[DDP_COMPONENT_COLOR0]	= { MTK_DISP_COLOR,	0, NULL },
+ 	[DDP_COMPONENT_COLOR1]	= { MTK_DISP_COLOR,	1, NULL },
+ 	[DDP_COMPONENT_DPI0]	= { MTK_DPI,		0, NULL },
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
+index 108de60..8d220224 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
++++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
+@@ -20,6 +20,7 @@ enum mtk_ddp_comp_type {
+ 	MTK_DISP_RDMA,
+ 	MTK_DISP_WDMA,
+ 	MTK_DISP_COLOR,
++	MTK_DISP_CCORR,
+ 	MTK_DISP_AAL,
+ 	MTK_DISP_GAMMA,
+ 	MTK_DISP_UFOE,
+@@ -36,6 +37,7 @@ enum mtk_ddp_comp_id {
+ 	DDP_COMPONENT_AAL0,
+ 	DDP_COMPONENT_AAL1,
+ 	DDP_COMPONENT_BLS,
++	DDP_COMPONENT_CCORR,
+ 	DDP_COMPONENT_COLOR0,
+ 	DDP_COMPONENT_COLOR1,
+ 	DDP_COMPONENT_DPI0,
 -- 
 1.8.1.1.dirty
 
