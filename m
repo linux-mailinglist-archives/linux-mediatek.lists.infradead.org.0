@@ -2,73 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 17570A2725
-	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 21:17:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B20FFA272A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 21:17:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kCJMXLfbIaj+6zrwhrdFeeK6YzCqieSTKqNj5Zs2K3Q=; b=SkuNvKMwT9bQfR
-	RGSKSGUkOHkNJBJWCqnqLcDEWNGa2Exhfy+ze8E21IT54BUGPCqWUnbBXe4DQeCg7lT7/fFO2ZomM
-	BeegZV2pJ0Lt5e+zVL4E7RTBxEzxhIUtc15COZAeg+MoFlnapsfbNm7FWjgLywKU1MqLl2c0fSR7v
-	KQIfbOOtBEGdRTuF72QLYnGUmaYlPFQj+pPHqrvvhdaCPEitzu14JnTqsFtR2Pv/knU1Ugnk+adD2
-	Fq0nT91YR8t+QJJz6hAfmYroIoTszACU1EIghuqd8qU1g2E8MOOCyTExkk/PR6uF+k9w5yx/BnWwk
-	OQ5vfBiBFf0j6zfOlFsw==;
+	List-Owner; bh=TSHomMnD0q+cGZ0U/rvimT2X3WHhSCibGRb4J1VkgHk=; b=uod5uGNXhNvFRu
+	BbM9sXY0ONpouE/kLXkaFoVU8kWLys8VPNXI69cRl3++0SFgFf5XhtToO3JG99psS/csYrIX5Yb0d
+	OFENsKiSzpMmjNnOsBz42+cLXU70JrZH9xAnV8miZPV4GgJXXYO//X4CZbWZ5Nd5PJShnT4g6jhz6
+	YgLs5WBSDeHEcr4oDnwI1wGwBZq7MCsZsRMp2F3SgPcrVSTXt2KtpeM1QgvvRTnzecZamYklcclQp
+	seMmftDCGwExg0vWaRCW/pXLIjPHNyGZLSBkeSmjOIGbPL2bEKU/FQmxd3P9PwKkG40czfaAgTWyH
+	RM+amdAFb+Wsk9OzNjBg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Puv-0006IZ-2j; Thu, 29 Aug 2019 19:17:09 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
+	id 1i3PvT-0006O7-Sc; Thu, 29 Aug 2019 19:17:43 +0000
+Received: from mail-ot1-f68.google.com ([209.85.210.68])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3PuU-0005vw-Gh; Thu, 29 Aug 2019 19:16:43 +0000
-Received: by mail-ot1-f65.google.com with SMTP id 100so4574917otn.2;
- Thu, 29 Aug 2019 12:16:42 -0700 (PDT)
+ id 1i3PvQ-0006Nb-P3
+ for linux-mediatek@lists.infradead.org; Thu, 29 Aug 2019 19:17:42 +0000
+Received: by mail-ot1-f68.google.com with SMTP id g111so1492999otg.9
+ for <linux-mediatek@lists.infradead.org>; Thu, 29 Aug 2019 12:17:40 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=F5mi1nP24C4HDFRh6fdf/ps2HQjngM3tY75i7SznJm0=;
- b=j4/duY/bP/8wXO2wHVbSXjKC28cPLv5Wf7guIESD8n2PKVj+o46l5vkVrCyPLY9vO7
- yvlPvjXpSIRKwb1Nn68U8qqAtJ7iOuQ6ya6W46hdwBz42jq+jMFZTYsM9fjO26AktZZc
- LjRXi+/NGssGjy4XOsC7/M24AFHYC1K9co7qVsh3m8x3pFpJIFA1OS0L2iMByk5tQt/4
- hPVPBkdTOW6/PAm1DNfYAk9qFiNNsLrPpy0hOrYObddrVoX8N2umVEStYQD/yhlgb4oy
- gPbXnV9y4TQgk8fiFtOzjwyNDh3XNcQTUEi/TPWEy+wUe8GaIghJkSCcvegIEW1rJS2y
- eZJQ==
-X-Gm-Message-State: APjAAAWbd8iLzVpkMqSUX4MR6JtYaprlPtzLWidS8S1T99zLEo2S/qXK
- pcaLLRa6QepuITJq4nt3tw==
-X-Google-Smtp-Source: APXvYqzlwbv36ZyaxAhri1jX+/W0xd5toeYw80HuVeTBAP03TtFgxz2umcWIojobopVFLMFOTYT4nw==
-X-Received: by 2002:a05:6830:1209:: with SMTP id
- r9mr558071otp.128.1567106201477; 
- Thu, 29 Aug 2019 12:16:41 -0700 (PDT)
+ bh=lUNDK8okeaG+StRZk49PqR3pb3KxBcvMlQlvR84IJuE=;
+ b=eYVivedbFQ8djopmiqtHk7HyslAb39Z1hX4/Gg46o+9cnrwVlj2/s4zmqvjyAVrgBY
+ bZK43Y8MZ2iLcjRjipDodt0BqWMQKPW9Gj2Zxfv35vU90jlnv4NGLmmHJS3CpmOj2/3f
+ lyACbDXXGVMvWEoyl1CjG6yMCR0ccOO3R8fxfACnbuu0Nm3pNTEKjU9ndgyT6pesr0Kx
+ Rr1WGBuN7nLyxuZYJUolf+e1OMDOAliRG2kFLPPA+sg4pjXYun60O36L8bCoEnoR4Vxz
+ z7DK9UTRf6Yprmp5G25JYVS9dJjM6Nxhxz/nGGEPfalUkZeif6vp81JIojSOtlaxEe+h
+ 0/Sg==
+X-Gm-Message-State: APjAAAWmI9zevcztlYYvEsZa+vyJKxqfWQ7gK2bpvWXDLsjHvk7sVmC/
+ gaBYy+rOizm12zm5KPeCkg==
+X-Google-Smtp-Source: APXvYqwjleFRjcjRc0Auu8E/bMXkfJn6aIIX5yibCMAZNhu85rTpuRR7DK/sUMIDH60M3OWn/+ol1Q==
+X-Received: by 2002:a9d:4717:: with SMTP id a23mr8773212otf.212.1567106259689; 
+ Thu, 29 Aug 2019 12:17:39 -0700 (PDT)
 Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id e52sm328209ote.39.2019.08.29.12.16.40
+ by smtp.gmail.com with ESMTPSA id c15sm1106792otf.35.2019.08.29.12.17.39
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 29 Aug 2019 12:16:41 -0700 (PDT)
-Date: Thu, 29 Aug 2019 14:16:40 -0500
+ Thu, 29 Aug 2019 12:17:39 -0700 (PDT)
+Date: Thu, 29 Aug 2019 14:17:38 -0500
 From: Rob Herring <robh@kernel.org>
-To: Henry Chen <henryc.chen@mediatek.com>
-Subject: Re: [PATCH V3 02/10] dt-bindings: soc: Add opp table on scpsys
- bindings
-Message-ID: <20190829191640.GB15714@bogus>
-References: <1566995328-15158-1-git-send-email-henryc.chen@mediatek.com>
- <1566995328-15158-3-git-send-email-henryc.chen@mediatek.com>
+To: Sam Shih <sam.shih@mediatek.com>
+Subject: Re: [PATCH v6 10/11] dt-bindings: pwm: update bindings for MT7629 SoC
+Message-ID: <20190829191738.GA17395@bogus>
+References: <1567057160-552-1-git-send-email-sam.shih@mediatek.com>
+ <1567057160-552-11-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1566995328-15158-3-git-send-email-henryc.chen@mediatek.com>
+In-Reply-To: <1567057160-552-11-git-send-email-sam.shih@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_121642_712548_112A7016 
-X-CRM114-Status: UNSURE (   9.68  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190829_121740_808183_97B3152C 
+X-CRM114-Status: GOOD (  14.77  )
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
+ no trust [209.85.210.68 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -77,8 +75,11 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.68 listed in wl.mailspike.net]
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,33 +91,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@google.com>, Weiyi Lu <weiyi.lu@mediatek.com>,
- James Liao <jamesjj.liao@mediatek.com>, Viresh Kumar <vireshk@kernel.org>,
- linux-kernel@vger.kernel.org, Henry Chen <henryc.chen@mediatek.com>,
- Stephen Boyd <swboyd@chromium.org>, Fan Chen <fan.chen@mediatek.com>,
- devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- Ryan Case <ryandcase@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-mediatek@lists.infradead.org, Georgi Djakov <georgi.djakov@linaro.org>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 28 Aug 2019 20:28:40 +0800, Henry Chen wrote:
-> Add opp table on scpsys dt-bindings for Mediatek SoC.
+On Thu, Aug 29, 2019 at 01:39:19PM +0800, Sam Shih wrote:
+> From: Ryder Lee <ryder.lee@mediatek.com>
 > 
-> Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
+> This updates bindings for MT7629 pwm controller.
+> 
+> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 > ---
->  .../devicetree/bindings/soc/mediatek/scpsys.txt    | 42 ++++++++++++++++++++++
->  1 file changed, 42 insertions(+)
+> Changes since v1:
+> - add a Reviewed-by tag
+
+I believe you missed mine.
+
 > 
-
-Please add Acked-by/Reviewed-by tags when posting new versions. However,
-there's no need to repost patches *only* to add the tags. The upstream
-maintainer will do that for acks received on the version they apply.
-
-If a tag was not added on purpose, please state why and what changed.
+> ---
+>  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
+>  1 file changed, 1 insertion(+)
+> 
+> diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> index ea95b490a913..c7bd5633d1eb 100644
+> --- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> +++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> @@ -6,6 +6,7 @@ Required properties:
+>     - "mediatek,mt7622-pwm": found on mt7622 SoC.
+>     - "mediatek,mt7623-pwm": found on mt7623 SoC.
+>     - "mediatek,mt7628-pwm": found on mt7628 SoC.
+> +   - "mediatek,mt7629-pwm", "mediatek,mt7622-pwm": found on mt7629 SoC.
+>   - reg: physical base address and length of the controller's registers.
+>   - #pwm-cells: must be 2. See pwm.txt in this directory for a description of
+>     the cell format.
+> -- 
+> 2.17.1
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
