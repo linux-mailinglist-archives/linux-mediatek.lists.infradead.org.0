@@ -1,85 +1,65 @@
 Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org>
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
-Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0E68AA1B95
-	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 15:37:22 +0200 (CEST)
+Received: from bombadil.infradead.org (bombadil.infradead.org [198.137.202.133])
+	by mail.lfdr.de (Postfix) with ESMTPS id D2147A1DF2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 16:54:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lCOD5WigPKTbb1GCj5zhqqPmoh0FrRoVsH8IqC8BNuA=; b=KiYlcaZrBk4Nxz
-	pimN3qmhnlOO0qvpaxMmIZs2UJEaFlpQNENjFJUffUKSXBt3WXg4fIXDS57qyDguWnGnQ9O9gYAvt
-	aFefsImfigxluR3P0KWUQ9+lTMddT4xz3/Hc0j7w3StmpeerzqrAfywtk81zMMnqczj+QWDd0OWdb
-	g48ybXXfjiLhJvvP1JsOwI5WbdueakSE/OnBTPXXU3N25kajQuE44GrJ3E+KR9ess5gr4frLAh181
-	koNcLLteZsYROSju5LnCgZ0iCArWDnNBbTn0l5uKZO44e31936jvXGIkwfe+ZpGv8OQod5ebHrqEY
-	cUIKOLrwXCxEfzzmYX8A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=qgxdBbXwbW1xmXTnPNrAVYuqw6ylvPGEuMqKt8OV6Qo=; b=s3KB86aljT58oK
+	E3JBE/+E5qYcgHfSH5r9s4OR9QpSxxfjitrf8Bi+Szi1ncQHrvc9T2QNMFO7JqZBfWSyxk5gB3CdI
+	3QLNLFRyrlh1oGV3rwvjZytx7jXC5JIO/AWvMXVUsYOxo/Bl7x5XDWpoI7VzlPyFrwcN/YJY3+W4j
+	eYZTut11YZzo1fKeX94ZDDXLqu/vQsKFWuaYEAfC5OUuB+f8Onb2lTffaXBS8XBtSvehFrPgDUGWa
+	x7rGPRr3/Ks/AUnWZ/gQM04XhH96mIgcKA1EbzUFwIDrBOyT8RoiRM/rhrhqD1aLhxp9e5y4CteLh
+	TVC3S+W9eeTinBlBavvw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Kbv-0003bc-6L; Thu, 29 Aug 2019 13:37:11 +0000
-Received: from mail-ua1-x942.google.com ([2607:f8b0:4864:20::942])
+	id 1i3Lo1-0006yf-G9; Thu, 29 Aug 2019 14:53:46 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3Kbp-0003af-WA
- for linux-mediatek@lists.infradead.org; Thu, 29 Aug 2019 13:37:07 +0000
-Received: by mail-ua1-x942.google.com with SMTP id g11so1177336uak.0
- for <linux-mediatek@lists.infradead.org>; Thu, 29 Aug 2019 06:37:04 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=VoycuwM03PAMoYB7LC8b4YSa3oTRgt158KShkM1cXKQ=;
- b=zKgu0Jl4DlvWeQzglf9VPPVkVjkJuw4LSkmT+pELc19VL8JHSvF1cXxTazR+CrZKKr
- kCKva4b0mB1m11diTo57wSNo45Olb6PZAJ9MJQFkQ9yVFAuSd2k0u3LBqbauDprRPNQ/
- aJIlTmkMU61yn3ZDe4r1wBrDPkK9guE6hwr+NIl8Z8P1Ql0aZaijF0sATF21E99eR39v
- WrYTJUr3d3ot/wHi7f49JTlZhShwYMK1yvSVT9G3kmmwWgzaIUFbdbuq98bWRlS4/55u
- 6C4AqN2+/uw0MAuG40eXp0w6XNwSJ1YHaW+xBYhE0f0VcARxF6IRgR4b2ubMxBBfGaOc
- sRUg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=VoycuwM03PAMoYB7LC8b4YSa3oTRgt158KShkM1cXKQ=;
- b=hKB54hqW0qBgNFoX4NaHhaYYlBBzdS/4Hez1cLP/ZHitQhOLu1HTfoLXmftpUfLvt5
- KuzMJpUOhU6FJsZs82u5IVgUDinjnEaZHVTJy5jkprRrvWMYGYKiIYCGJx6M3MI2QM9J
- OrnUqNRPgD/ylHmkxH+h3gVYCX2YT1k4qStImd27gxD3DaWmWtjWpLMwP/AYMkVbgaCE
- 1dDI5CMjsBEtwuEDDLqXD9C1UkYZWTc/8jXW0x8NjgKvP8NkLgXMUs+O8pW5G+Rhmif7
- jFcTYg+OXHNqfuJCt4tW1RlT51z2Gw7hux57/h9Sruem/JMYWD3XpFHB0iysMzDJ4a4i
- JFvw==
-X-Gm-Message-State: APjAAAU13feqdeCeO19exMykGNJ8PFNVFOQ+hLfyL03VgcIJ+CsEqyvz
- dUBezt1XMoEJInXtKbehcnZVotTsUZ2qzge3vfgzI+iK
-X-Google-Smtp-Source: APXvYqw5PMEM/AaXKseVFjiJDB4qE632N2Eh8ohpX17hqRNF3TeDatpY+W6xb/csgdhA+MJBYjRRNsuLKGcO5K48bSs=
-X-Received: by 2002:ab0:6883:: with SMTP id t3mr4939055uar.104.1567085824135; 
- Thu, 29 Aug 2019 06:37:04 -0700 (PDT)
+ id 1i3Llb-0005jI-VO; Thu, 29 Aug 2019 14:51:17 +0000
+X-UUID: 76e72be460354b17a6812f31372a443a-20190829
+X-UUID: 76e72be460354b17a6812f31372a443a-20190829
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <yongqiang.niu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 677610706; Thu, 29 Aug 2019 06:51:17 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 07:51:15 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 22:51:07 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 29 Aug 2019 22:51:06 +0800
+From: <yongqiang.niu@mediatek.com>
+To: CK Hu <ck.hu@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>, "Rob
+ Herring" <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v5, 00/32] add drm support for MT8183
+Date: Thu, 29 Aug 2019 22:50:22 +0800
+Message-ID: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-References: <1566985524-22749-1-git-send-email-yong.mao@mediatek.com>
- <1566985524-22749-2-git-send-email-yong.mao@mediatek.com>
-In-Reply-To: <1566985524-22749-2-git-send-email-yong.mao@mediatek.com>
-From: Ulf Hansson <ulf.hansson@linaro.org>
-Date: Thu, 29 Aug 2019 15:36:28 +0200
-Message-ID: <CAPDyKFqgO7fwybn1nYcf14jiHswM+T7fqY1BuSvx5AubYA6F=A@mail.gmail.com>
-Subject: Re: [PATCH v2] mmc: mediatek: enable SDIO IRQ low level trigger
- function
-To: Yong Mao <yong.mao@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_063706_063000_812E7C3D 
-X-CRM114-Status: GOOD (  13.02  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190829_075116_111480_EF62D6D4 
+X-CRM114-Status: GOOD (  11.64  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:942 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,61 +71,97 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: srv_heupstream <srv_heupstream@mediatek.com>,
- "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- linux-mediatek@lists.infradead.org, Chaotian Jing <chaotian.jing@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Yongqiang Niu <yongqiang.niu@mediatek.com>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 28 Aug 2019 at 11:45, Yong Mao <yong.mao@mediatek.com> wrote:
->
-> From: yong mao <yong.mao@mediatek.com>
->
-> SDIO IRQ is not defaultly triggered by low level,
-> but by falling edge. It needs to set related register
-> to enable SDIO IRQ low level trigger function.
-> Otherwise the SDIO IRQ may be lost in some specail condition.
->
-> Signed-off-by: Yong Mao <yong.mao@mediatek.com>
-> Signed-off-by: Chaotian Jing <chaotian.jing@mediatek.com>
+From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
-Applied for next, thanks!
+This series are based on 5.3-rc1 and provid 32 patch
+to support mediatek SOC MT8183
 
-Kind regards
-Uffe
+Change since v4
+- fix reviewed issue in v4
 
-> ---
->  drivers/mmc/host/mtk-sd.c | 2 ++
->  1 file changed, 2 insertions(+)
->
-> diff --git a/drivers/mmc/host/mtk-sd.c b/drivers/mmc/host/mtk-sd.c
-> index 33f4b63..585f0c7 100644
-> --- a/drivers/mmc/host/mtk-sd.c
-> +++ b/drivers/mmc/host/mtk-sd.c
-> @@ -192,6 +192,7 @@
->  #define SDC_STS_CMDBUSY         (0x1 << 1)     /* RW */
->  #define SDC_STS_SWR_COMPL       (0x1 << 31)    /* RW */
->
-> +#define SDC_DAT1_IRQ_TRIGGER   (0x1 << 19)     /* RW */
->  /* SDC_ADV_CFG0 mask */
->  #define SDC_RX_ENHANCE_EN      (0x1 << 20)     /* RW */
->
-> @@ -1568,6 +1569,7 @@ static void msdc_init_hw(struct msdc_host *host)
->
->         /* Config SDIO device detect interrupt function */
->         sdr_clr_bits(host->base + SDC_CFG, SDC_CFG_SDIOIDE);
-> +       sdr_set_bits(host->base + SDC_ADV_CFG0, SDC_DAT1_IRQ_TRIGGER);
->
->         /* Configure to default data timeout */
->         sdr_set_field(host->base + SDC_CFG, SDC_CFG_DTOC, 3);
-> --
-> 1.9.1
->
+Change since v3
+- fix reviewed issue in v3
+- fix type error in v3
+- fix conflict with iommu patch
+
+Change since v2
+- fix reviewed issue in v2
+- add mutex node into dts file
+
+Changes since v1:
+- fix reviewed issue in v1
+- add dts for mt8183 display nodes
+- adjust display clock control flow in patch 22
+- add vmap support for mediatek drm in patch 23
+- fix page offset issue for mmap function in patch 24
+- enable allow_fb_modifiers for mediatek drm in patch 25
+
+Yongqiang Niu (32):
+  dt-bindings: mediatek: add binding for mt8183 display
+  dt-bindings: mediatek: add ovl_2l description for mt8183 display
+  dt-bindings: mediatek: add ccorr description for mt8183 display
+  dt-bindings: mediatek: add dither description for mt8183 display
+  dt-bindings: mediatek: add mutex description for mt8183 display
+  arm64: dts: add display nodes for mt8183
+  drm/mediatek: add mutex mod into ddp private data
+  drm/mediatek: add mutex mod register offset into ddp private data
+  drm/mediatek: add mutex sof into ddp private data
+  drm/mediatek: add mutex sof register offset into ddp private data
+  drm/mediatek: split DISP_REG_CONFIG_DSI_SEL setting into another use
+    case
+  drm/mediatek: add mmsys private data for ddp path config
+  drm/mediatek: move rdma sout from mtk_ddp_mout_en into
+    mtk_ddp_sout_sel
+  drm/mediatek: add ddp component CCORR
+  drm/mediatek: add commponent OVL_2L0
+  drm/mediatek: add component OVL_2L1
+  drm/mediatek: add component DITHER
+  drm/mediatek: add gmc_bits for ovl private data
+  drm/medaitek: add layer_nr for ovl private data
+  drm/mediatek: add function to background color input select for
+    ovl/ovl_2l direct link
+  drm/mediatek: add background color input select function for
+    ovl/ovl_2l
+  drm/mediatek: add ovl0/ovl_2l0 usecase
+  drm/mediatek: distinguish ovl and ovl_2l by layer_nr
+  drm/mediatek: add clock property check before get it
+  drm/mediatek: add connection from OVL0 to OVL_2L0
+  drm/mediatek: add connection from RDMA0 to COLOR0
+  drm/mediatek: add connection from RDMA1 to DSI0
+  drm/mediatek: add connection from OVL_2L0 to RDMA0
+  drm/mediatek: add connection from OVL_2L1 to RDMA1
+  drm/mediatek: add connection from DITHER0 to DSI0
+  drm/mediatek: add connection from RDMA0 to DSI0
+  drm/mediatek: add support for mediatek SOC MT8183
+
+ .../bindings/display/mediatek/mediatek,disp.txt    |  30 +-
+ .../bindings/display/mediatek/mediatek,display.txt |  21 ++
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi           | 111 ++++++
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c            |  79 +++-
+ drivers/gpu/drm/mediatek/mtk_disp_rdma.c           |  27 +-
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c            |  42 ++-
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.c             | 410 ++++++++++++++++-----
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.h             |   6 +
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c        |  67 ++++
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h        |  21 ++
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c             |  50 +++
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h             |   3 +
+ 12 files changed, 745 insertions(+), 122 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,display.txt
+
+-- 
+1.8.1.1.dirty
+
 
 _______________________________________________
 Linux-mediatek mailing list
