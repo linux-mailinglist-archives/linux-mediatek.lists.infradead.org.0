@@ -2,57 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64937A14D0
-	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 11:25:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F160A14D2
+	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 11:25:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ax5PvBxi6oF0vXk6i9TvTksVqVj44I41dtZ8WFkZDGg=; b=o0B6r7EMGiS+JI
-	XbwkLUiVL24xqA0Jxf7h/CI7r8xgRfl2MG5le6YpkpIzSk5NXla8T0C7SVIfON4Dn70M68sQyIU5W
-	piXsj8qHDpep5jDce7ouJwiC0ihfeI4Jt0UsYqA4+GPxqau/5zFfY6PF7sTre+SGpifqKu8sF4jTH
-	mpeaz+ROrsxTheBUWmHE0yzPWQpyPoTg1CcqpIK63cddVqAZ73yxtg/ven2+S0dKS4IF/ymlyW+lX
-	+8DOQA48LCeXuDCNfohZPBnTWeb7IGyd2dzQBr9aacRmgA6W62erhuazSphHTitNkFNBidi96hg12
-	sdB1qUNxjUjxtdTB11KQ==;
+	List-Owner; bh=hYqw40/jVJFmKE2OE1YIjinWr/n52SyEUj9Zp3SXQX8=; b=KFMyz+PO2m/fBx
+	3jOFzt8GiBk4BVL0V7n5Wy04ecat/DGL4XpUSUZdgGusuKv7cw92/ANfTLBC5dmHmLG6vgJFzdjPa
+	Qsi1NdNQ14LJDs43EHccYiXJnriFPskWpr4190TODnDgxganh+1r2J82We+9iL/inlylNF17dkcxF
+	HAk0oU1CHVvtnFdCINoQqpw+M8MXKxHxTroo0k7R0nuyPiJiTQXrhuQ985EHyLTFZdsKzvytmEHuN
+	6UPPl7pl/d9vU6zMawHqr+yyRmW/zs/MdrM3EftG3aWL5zs7uNwNmYjHY+6UFat61ZGvc0WgjjSdq
+	je8+2sCkQ6rQHo6UuyJg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Gfm-000227-SZ; Thu, 29 Aug 2019 09:24:55 +0000
+	id 1i3GgA-0003VB-NB; Thu, 29 Aug 2019 09:25:18 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3Ge7-0000eX-Mz; Thu, 29 Aug 2019 09:23:13 +0000
-X-UUID: b5cf684f16174592a7a916e89e922243-20190829
-X-UUID: b5cf684f16174592a7a916e89e922243-20190829
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ id 1i3Ge8-0000fl-Mk; Thu, 29 Aug 2019 09:23:14 +0000
+X-UUID: e52dec8e902f4132afcbf9c07b870f9f-20190829
+X-UUID: e52dec8e902f4132afcbf9c07b870f9f-20190829
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 64907415; Thu, 29 Aug 2019 01:23:14 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 02:23:13 -0700
+ with ESMTP id 58660857; Thu, 29 Aug 2019 01:23:16 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 02:23:15 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 17:23:10 +0800
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 17:23:12 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 29 Aug 2019 17:23:09 +0800
+ Transport; Thu, 29 Aug 2019 17:23:11 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Greg Kroah-Hartman
  <gregkh@linuxfoundation.org>, Biju Das <biju.das@bp.renesas.com>
-Subject: [PATCH next v11 04/11] dt-bindings: usb: mtu3: add properties about
- USB Role Switch
-Date: Thu, 29 Aug 2019 17:22:31 +0800
-Message-ID: <1567070558-29417-5-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [PATCH next v11 05/11] usb: roles: Introduce stubs for the exiting
+ functions in role.h
+Date: Thu, 29 Aug 2019 17:22:32 +0800
+Message-ID: <1567070558-29417-6-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1567070558-29417-1-git-send-email-chunfeng.yun@mediatek.com>
 References: <1567070558-29417-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: FE159E78FF34A3174D0F86F9B6F1DA395EBB173AEF3A60E4C3C67225EABD0B9E2000:8
+X-TM-SNTS-SMTP: 7E0B09A0CA831783648206B3D677FFFAA3CF32E3A704F0800469A3D146859A9B2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_022311_798723_00990E2D 
-X-CRM114-Status: GOOD (  12.44  )
+X-CRM114-CacheID: sfid-20190829_022312_788172_C26CD91E 
+X-CRM114-Status: GOOD (  10.35  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -76,9 +76,11 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  Hans de Goede <hdegoede@redhat.com>,
  Heikki Krogerus <heikki.krogerus@linux.intel.com>,
+ John Stultz <john.stultz@linaro.org>,
  Badhri Jagan Sridharan <badhri@google.com>,
  Linus Walleij <linus.walleij@linaro.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>, Andy
+ Yu Chen <chenyu56@huawei.com>, linux-kernel@vger.kernel.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Andy
  Shevchenko <andy.shevchenko@gmail.com>, linux-mediatek@lists.infradead.org,
  Min Guo <min.guo@mediatek.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
  Nagarjuna Kristam <nkristam@nvidia.com>, Adam
@@ -89,68 +91,80 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Now the USB Role Switch is supported, so add properties about it,
-and modify some description related.
+From: Yu Chen <chenyu56@huawei.com>
 
+This patch adds stubs for the exiting functions while
+CONFIG_USB_ROLE_SWITCH does not enabled.
+
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Cc: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Cc: Hans de Goede <hdegoede@redhat.com>
+Cc: Andy Shevchenko <andy.shevchenko@gmail.com>
+Cc: John Stultz <john.stultz@linaro.org>
+Reviewed-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Signed-off-by: Yu Chen <chenyu56@huawei.com>
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
 ---
-v6~v11 no changes
+v8~v11 no changes
 
-v5 changes:
- 1. modify decription about extcon and vbus-supply properties
- 2. make this patch depend on [1]
+v7:
+  add Signed-off-by Chunfeng
 
- [1]: [v3] dt-binding: usb: add usb-role-switch property
-      https://patchwork.kernel.org/patch/10934835/
+v6:
+  merge this patch [1] into this series to add new API
 
-v4 no changes
-v3 no changes
-
-v2 changes:
-  1. fix typo
-  2. refer new binding about connector property
+	[1] https://patchwork.kernel.org/patch/10909971/
 ---
- .../devicetree/bindings/usb/mediatek,mtu3.txt          | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+ include/linux/usb/role.h | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt b/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
-index 3382b5cb471d..3a8300205cdb 100644
---- a/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
-+++ b/Documentation/devicetree/bindings/usb/mediatek,mtu3.txt
-@@ -28,8 +28,13 @@ Optional properties:
- 	parent's address space
-  - extcon : external connector for vbus and idpin changes detection, needed
- 	when supports dual-role mode.
-+	it's considered valid for compatibility reasons, not allowed for
-+	new bindings, and use "usb-role-switch" property instead.
-  - vbus-supply : reference to the VBUS regulator, needed when supports
- 	dual-role mode.
-+	it's considered valid for compatibility reasons, not allowed for
-+	new bindings, and put into a usb-connector node.
-+	see connector/usb-connector.txt.
-  - pinctrl-names : a pinctrl state named "default" is optional, and need be
- 	defined if auto drd switch is enabled, that means the property dr_mode
- 	is set as "otg", and meanwhile the property "mediatek,enable-manual-drd"
-@@ -39,6 +44,8 @@ Optional properties:
+diff --git a/include/linux/usb/role.h b/include/linux/usb/role.h
+index c05ffa6abda9..da2b9641b877 100644
+--- a/include/linux/usb/role.h
++++ b/include/linux/usb/role.h
+@@ -42,6 +42,8 @@ struct usb_role_switch_desc {
+ 	bool allow_userspace_control;
+ };
  
-  - maximum-speed : valid arguments are "super-speed", "high-speed" and
- 	"full-speed"; refer to usb/generic.txt
-+ - usb-role-switch : use USB Role Switch to support dual-role switch, but
-+	not extcon; see usb/generic.txt.
-  - enable-manual-drd : supports manual dual-role switch via debugfs; usually
- 	used when receptacle is TYPE-A and also wants to support dual-role
- 	mode.
-@@ -61,6 +68,9 @@ The xhci should be added as subnode to mtu3 as shown in the following example
- if host mode is enabled. The DT binding details of xhci can be found in:
- Documentation/devicetree/bindings/usb/mediatek,mtk-xhci.txt
- 
-+The port would be added as subnode if use "usb-role-switch" property.
-+	see graph.txt
 +
- Example:
- ssusb: usb@11271000 {
- 	compatible = "mediatek,mt8173-mtu3";
++#if IS_ENABLED(CONFIG_USB_ROLE_SWITCH)
+ int usb_role_switch_set_role(struct usb_role_switch *sw, enum usb_role role);
+ enum usb_role usb_role_switch_get_role(struct usb_role_switch *sw);
+ struct usb_role_switch *usb_role_switch_get(struct device *dev);
+@@ -51,5 +53,33 @@ struct usb_role_switch *
+ usb_role_switch_register(struct device *parent,
+ 			 const struct usb_role_switch_desc *desc);
+ void usb_role_switch_unregister(struct usb_role_switch *sw);
++#else
++static inline int usb_role_switch_set_role(struct usb_role_switch *sw,
++		enum usb_role role)
++{
++	return 0;
++}
++
++static inline enum usb_role usb_role_switch_get_role(struct usb_role_switch *sw)
++{
++	return USB_ROLE_NONE;
++}
++
++static inline struct usb_role_switch *usb_role_switch_get(struct device *dev)
++{
++	return ERR_PTR(-ENODEV);
++}
++
++static inline void usb_role_switch_put(struct usb_role_switch *sw) { }
++
++static inline struct usb_role_switch *
++usb_role_switch_register(struct device *parent,
++			 const struct usb_role_switch_desc *desc)
++{
++	return ERR_PTR(-ENODEV);
++}
++
++static inline void usb_role_switch_unregister(struct usb_role_switch *sw) { }
++#endif
+ 
+ #endif /* __LINUX_USB_ROLE_H */
 -- 
 2.23.0
 
