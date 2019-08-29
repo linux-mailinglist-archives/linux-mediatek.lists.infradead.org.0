@@ -2,65 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C8B4A1B27
-	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 15:15:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0E68AA1B95
+	for <lists+linux-mediatek@lfdr.de>; Thu, 29 Aug 2019 15:37:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:
-	In-Reply-To:Date:To:From:Subject:Message-ID:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n8xP/R/LUkJobNFnJI9CPVxKnP0qnNqUfHDLqzTnhFg=; b=LnySp9lB18BbGN
-	BoU6PjFJ9cRiSkpv3zMToAJM2BoRo82laTavsNKGaSQ1IEDXoAd22jj4cnO8rSrn3FP4nFbWhi/fQ
-	y/Vd+8tkpWocRqIqu+TWXjxHOY9WeutdTwk4MdyHcQhmE9EcOkKl1hBwqMSCn5hAdknG3heeBXsjs
-	mYWfC932j7U6Iyd4u4345ug5UqD5Y+sdRobiKrrIGCbnzxFZVwA4ZvpUiNtKNrM0p8IhcV/UVNp8S
-	WCqUIMSBeiIlY6ql7ilHZTItNvFG7ayHdI1vEAZV3oMroS/7/Su5Wzhn2kArazCsgu4CrHsCwEdrx
-	UEZpL9TFSwTr9sKLcizQ==;
+	List-Owner; bh=lCOD5WigPKTbb1GCj5zhqqPmoh0FrRoVsH8IqC8BNuA=; b=KiYlcaZrBk4Nxz
+	pimN3qmhnlOO0qvpaxMmIZs2UJEaFlpQNENjFJUffUKSXBt3WXg4fIXDS57qyDguWnGnQ9O9gYAvt
+	aFefsImfigxluR3P0KWUQ9+lTMddT4xz3/Hc0j7w3StmpeerzqrAfywtk81zMMnqczj+QWDd0OWdb
+	g48ybXXfjiLhJvvP1JsOwI5WbdueakSE/OnBTPXXU3N25kajQuE44GrJ3E+KR9ess5gr4frLAh181
+	koNcLLteZsYROSju5LnCgZ0iCArWDnNBbTn0l5uKZO44e31936jvXGIkwfe+ZpGv8OQod5ebHrqEY
+	cUIKOLrwXCxEfzzmYX8A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3KH3-0004vQ-Py; Thu, 29 Aug 2019 13:15:37 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i3Kbv-0003bc-6L; Thu, 29 Aug 2019 13:37:11 +0000
+Received: from mail-ua1-x942.google.com ([2607:f8b0:4864:20::942])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3KGm-0004kF-Vm; Thu, 29 Aug 2019 13:15:22 +0000
-X-UUID: 32f0c27d7edd419780c1a36707c9f4b7-20190829
-X-UUID: 32f0c27d7edd419780c1a36707c9f4b7-20190829
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <yongqiang.niu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1006156088; Thu, 29 Aug 2019 05:15:24 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 06:15:22 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs01n1.mediatek.inc
- (172.21.101.68) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 29 Aug 2019 21:15:14 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 29 Aug 2019 21:15:14 +0800
-Message-ID: <1567084508.30648.4.camel@mhfsdcap03>
-Subject: Re: [PATCH v4, 23/33] drm/mediatek: add ovl0/ovl_2l0 usecase
-From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-To: CK Hu <ck.hu@mediatek.com>
-Date: Thu, 29 Aug 2019 21:15:08 +0800
-In-Reply-To: <1563346064.29169.24.camel@mtksdaap41>
-References: <1562625253-29254-1-git-send-email-yongqiang.niu@mediatek.com>
- <1562625253-29254-24-git-send-email-yongqiang.niu@mediatek.com>
- <1563346064.29169.24.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1i3Kbp-0003af-WA
+ for linux-mediatek@lists.infradead.org; Thu, 29 Aug 2019 13:37:07 +0000
+Received: by mail-ua1-x942.google.com with SMTP id g11so1177336uak.0
+ for <linux-mediatek@lists.infradead.org>; Thu, 29 Aug 2019 06:37:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=VoycuwM03PAMoYB7LC8b4YSa3oTRgt158KShkM1cXKQ=;
+ b=zKgu0Jl4DlvWeQzglf9VPPVkVjkJuw4LSkmT+pELc19VL8JHSvF1cXxTazR+CrZKKr
+ kCKva4b0mB1m11diTo57wSNo45Olb6PZAJ9MJQFkQ9yVFAuSd2k0u3LBqbauDprRPNQ/
+ aJIlTmkMU61yn3ZDe4r1wBrDPkK9guE6hwr+NIl8Z8P1Ql0aZaijF0sATF21E99eR39v
+ WrYTJUr3d3ot/wHi7f49JTlZhShwYMK1yvSVT9G3kmmwWgzaIUFbdbuq98bWRlS4/55u
+ 6C4AqN2+/uw0MAuG40eXp0w6XNwSJ1YHaW+xBYhE0f0VcARxF6IRgR4b2ubMxBBfGaOc
+ sRUg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=VoycuwM03PAMoYB7LC8b4YSa3oTRgt158KShkM1cXKQ=;
+ b=hKB54hqW0qBgNFoX4NaHhaYYlBBzdS/4Hez1cLP/ZHitQhOLu1HTfoLXmftpUfLvt5
+ KuzMJpUOhU6FJsZs82u5IVgUDinjnEaZHVTJy5jkprRrvWMYGYKiIYCGJx6M3MI2QM9J
+ OrnUqNRPgD/ylHmkxH+h3gVYCX2YT1k4qStImd27gxD3DaWmWtjWpLMwP/AYMkVbgaCE
+ 1dDI5CMjsBEtwuEDDLqXD9C1UkYZWTc/8jXW0x8NjgKvP8NkLgXMUs+O8pW5G+Rhmif7
+ jFcTYg+OXHNqfuJCt4tW1RlT51z2Gw7hux57/h9Sruem/JMYWD3XpFHB0iysMzDJ4a4i
+ JFvw==
+X-Gm-Message-State: APjAAAU13feqdeCeO19exMykGNJ8PFNVFOQ+hLfyL03VgcIJ+CsEqyvz
+ dUBezt1XMoEJInXtKbehcnZVotTsUZ2qzge3vfgzI+iK
+X-Google-Smtp-Source: APXvYqw5PMEM/AaXKseVFjiJDB4qE632N2Eh8ohpX17hqRNF3TeDatpY+W6xb/csgdhA+MJBYjRRNsuLKGcO5K48bSs=
+X-Received: by 2002:ab0:6883:: with SMTP id t3mr4939055uar.104.1567085824135; 
+ Thu, 29 Aug 2019 06:37:04 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <1566985524-22749-1-git-send-email-yong.mao@mediatek.com>
+ <1566985524-22749-2-git-send-email-yong.mao@mediatek.com>
+In-Reply-To: <1566985524-22749-2-git-send-email-yong.mao@mediatek.com>
+From: Ulf Hansson <ulf.hansson@linaro.org>
+Date: Thu, 29 Aug 2019 15:36:28 +0200
+Message-ID: <CAPDyKFqgO7fwybn1nYcf14jiHswM+T7fqY1BuSvx5AubYA6F=A@mail.gmail.com>
+Subject: Re: [PATCH v2] mmc: mediatek: enable SDIO IRQ low level trigger
+ function
+To: Yong Mao <yong.mao@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_061521_035146_52BBA741 
-X-CRM114-Status: GOOD (  21.11  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190829_063706_063000_812E7C3D 
+X-CRM114-Status: GOOD (  13.02  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:942 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,138 +91,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Reply-To: yongqiang.niu@mediatek.com
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: srv_heupstream <srv_heupstream@mediatek.com>,
+ "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ linux-mediatek@lists.infradead.org, Chaotian Jing <chaotian.jing@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-07-17 at 14:47 +0800, CK Hu wrote:
-> Hi, Yongqiang:
-> 
-> On Tue, 2019-07-09 at 06:34 +0800, yongqiang.niu@mediatek.com wrote:
-> > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > 
-> > This patch add ovl0/ovl_2l0 usecase
-> > in ovl->ovl_2l0 direct link usecase:
-> > 1. the crtc support layer number will 4+2
-> > 2. ovl_2l0 background color input select ovl0 when crtc init
-> > and disable it when crtc finish
-> > 3. config ovl_2l0 layer, if crtc config layer number is
-> > bigger than ovl0 support layers(max is 4)
-> > 
-> > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > ---
-> >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 38 +++++++++++++++++++++++++++++++--
-> >  1 file changed, 36 insertions(+), 2 deletions(-)
-> > 
-> > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> > index 5eac376..9ee9ce2 100644
-> > --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> > +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> > @@ -282,6 +282,15 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
-> >  
-> >  	for (i = 0; i < mtk_crtc->ddp_comp_nr; i++) {
-> >  		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[i];
-> > +		enum mtk_ddp_comp_id prev;
-> > +
-> > +		if (i > 0)
-> > +			prev = mtk_crtc->ddp_comp[i - 1]->id;
-> > +		else
-> > +			prev = DDP_COMPONENT_ID_MAX;
-> > +
-> > +		if (prev == DDP_COMPONENT_OVL0)
-> > +			mtk_ddp_comp_bgclr_in_on(comp);
-> 
-> I does not like to use a specific component id to check, that is not
-> general. For now, you could simply call mtk_ddp_comp_bgclr_in_on(comp);
-> for all component because only ovl_2l has implemented it.
-> 
-> Regards,
-> CK
-> 
+On Wed, 28 Aug 2019 at 11:45, Yong Mao <yong.mao@mediatek.com> wrote:
+>
+> From: yong mao <yong.mao@mediatek.com>
+>
+> SDIO IRQ is not defaultly triggered by low level,
+> but by falling edge. It needs to set related register
+> to enable SDIO IRQ low level trigger function.
+> Otherwise the SDIO IRQ may be lost in some specail condition.
+>
+> Signed-off-by: Yong Mao <yong.mao@mediatek.com>
+> Signed-off-by: Chaotian Jing <chaotian.jing@mediatek.com>
 
-both OVL0 and OVL_2L0 has the function mtk_ddp_comp_bgclr_in_on
+Applied for next, thanks!
 
-> >  
-> >  		mtk_ddp_comp_config(comp, width, height, vrefresh, bpc);
-> >  		mtk_ddp_comp_start(comp);
-> > @@ -291,9 +300,18 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
-> >  	for (i = 0; i < mtk_crtc->layer_nr; i++) {
-> >  		struct drm_plane *plane = &mtk_crtc->planes[i];
-> >  		struct mtk_plane_state *plane_state;
-> > +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
-> > +		unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
-> > +		unsigned int local_layer;
-> >  
-> >  		plane_state = to_mtk_plane_state(plane->state);
-> > -		mtk_ddp_comp_layer_config(mtk_crtc->ddp_comp[0], i,
-> > +
-> > +		if (i >= comp_layer_nr) {
-> > +			comp = mtk_crtc->ddp_comp[1];
-> > +			local_layer = i - comp_layer_nr;
-> > +		} else
-> > +			local_layer = i;
-> > +		mtk_ddp_comp_layer_config(comp , local_layer,
-> >  					  plane_state);
-> >  	}
-> >  
-> > @@ -319,6 +337,7 @@ static void mtk_crtc_ddp_hw_fini(struct mtk_drm_crtc *mtk_crtc)
-> >  					   mtk_crtc->ddp_comp[i]->id);
-> >  	mtk_disp_mutex_disable(mtk_crtc->mutex);
-> >  	for (i = 0; i < mtk_crtc->ddp_comp_nr - 1; i++) {
-> > +		mtk_ddp_comp_bgclr_in_off(mtk_crtc->ddp_comp[i]);
-> >  		mtk_ddp_remove_comp_from_path(mtk_crtc->config_regs,
-> >  					      mtk_crtc->mmsys_reg_data,
-> >  					      mtk_crtc->ddp_comp[i]->id,
-> > @@ -339,6 +358,8 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
-> >  	struct mtk_crtc_state *state = to_mtk_crtc_state(mtk_crtc->base.state);
-> >  	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
-> >  	unsigned int i;
-> > +	unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
-> > +	unsigned int local_layer;
-> >  
-> >  	/*
-> >  	 * TODO: instead of updating the registers here, we should prepare
-> > @@ -361,7 +382,14 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
-> >  			plane_state = to_mtk_plane_state(plane->state);
-> >  
-> >  			if (plane_state->pending.config) {
-> > -				mtk_ddp_comp_layer_config(comp, i, plane_state);
-> > +				if (i >= comp_layer_nr) {
-> > +					comp = mtk_crtc->ddp_comp[1];
-> > +					local_layer = i - comp_layer_nr;
-> > +				} else
-> > +					local_layer = i;
-> > +
-> > +				mtk_ddp_comp_layer_config(comp, local_layer,
-> > +							  plane_state);
-> >  				plane_state->pending.config = false;
-> >  			}
-> >  		}
-> > @@ -592,6 +620,12 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
-> >  	}
-> >  
-> >  	mtk_crtc->layer_nr = mtk_ddp_comp_layer_nr(mtk_crtc->ddp_comp[0]);
-> > +	if (mtk_crtc->ddp_comp_nr > 1) {
-> > +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[1];
-> > +
-> > +		if (comp->funcs->bgclr_in_on)
-> > +			mtk_crtc->layer_nr += mtk_ddp_comp_layer_nr(comp);
-> > +	}
-> >  	mtk_crtc->planes = devm_kcalloc(dev, mtk_crtc->layer_nr,
-> >  					sizeof(struct drm_plane),
-> >  					GFP_KERNEL);
-> 
-> 
+Kind regards
+Uffe
 
-
+> ---
+>  drivers/mmc/host/mtk-sd.c | 2 ++
+>  1 file changed, 2 insertions(+)
+>
+> diff --git a/drivers/mmc/host/mtk-sd.c b/drivers/mmc/host/mtk-sd.c
+> index 33f4b63..585f0c7 100644
+> --- a/drivers/mmc/host/mtk-sd.c
+> +++ b/drivers/mmc/host/mtk-sd.c
+> @@ -192,6 +192,7 @@
+>  #define SDC_STS_CMDBUSY         (0x1 << 1)     /* RW */
+>  #define SDC_STS_SWR_COMPL       (0x1 << 31)    /* RW */
+>
+> +#define SDC_DAT1_IRQ_TRIGGER   (0x1 << 19)     /* RW */
+>  /* SDC_ADV_CFG0 mask */
+>  #define SDC_RX_ENHANCE_EN      (0x1 << 20)     /* RW */
+>
+> @@ -1568,6 +1569,7 @@ static void msdc_init_hw(struct msdc_host *host)
+>
+>         /* Config SDIO device detect interrupt function */
+>         sdr_clr_bits(host->base + SDC_CFG, SDC_CFG_SDIOIDE);
+> +       sdr_set_bits(host->base + SDC_ADV_CFG0, SDC_DAT1_IRQ_TRIGGER);
+>
+>         /* Configure to default data timeout */
+>         sdr_set_field(host->base + SDC_CFG, SDC_CFG_DTOC, 3);
+> --
+> 1.9.1
+>
 
 _______________________________________________
 Linux-mediatek mailing list
