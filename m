@@ -2,69 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 647C1A2F1B
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 07:40:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22FF5A2F22
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 07:42:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hQ/dDEPq6s/SH+/MEXRXOV0lXCSnXFl/A3rPxdejqpc=; b=NDy/27W0PBeCIY
-	5/RsJpghr9fWcHwpUUa9yaR/TI/mmjSHegzgWi+kJ0aPIXdqUIzpD+XzFCCxMhjHz10VSYFn3zUtD
-	9Awvu29MBA2/iej9cVfkrPJGM5VNQjkfq63LMpNRwlCf8vR48W4rGl79ztWfGvWT4S2L4rKQt2f6V
-	6gfQGGX2yGTqobA6zgVgMPlA2w8k4qIGT8BZEhU9oW2tYbBN0sIElLh30i8s14M50p3AGfVgfV3fJ
-	k1TDf90d+RtWloUEhzIWlmR2Pz9sSUGGlVPh/Cw4fvgdAW/eqTUX+BfR9wQ1jGgtuZNFyRo8oAApH
-	az3publTYW0dzLtR3LHg==;
+	List-Owner; bh=W5X/9XIdEqpTGlwSfXEpxZBvoW6xwwzS64fHYknIQYM=; b=WtDwrvaLFvEB2c
+	riGdusmTpDhLL3/jl97btXm2ENe7G32lfqBBBGsyP23pnw4X641S4FbqgBs17nMkeNTfFmBR+aY+K
+	MlH8LVTQYHpauwWSom8miQfZspFqlna512JBDP5rKdOG62b+kav6lLbmHy+cDeJEj0S/79VsDJsnn
+	h7g/yqmTt9I6YALuvvHjBVq++2QJ1viFAmR7jvaw460EILFRALknF7fr5Euhx9A7V4iw6GHDe0kYg
+	nicrxLLL6XZmpvW/rJ4hQoHESiTxSZ+3mjhaL+0KNldV1NeoPXgbp3xu5RluZZJkim9+dNw49Del+
+	rPR4Vh8P3H2r8oh06n+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3ZeW-0000qq-MQ; Fri, 30 Aug 2019 05:40:52 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i3Zfe-00018I-AS; Fri, 30 Aug 2019 05:42:02 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3ZeE-0000eG-NF; Fri, 30 Aug 2019 05:40:36 +0000
-X-UUID: 9468da78b613427f8ba9aa748471e67e-20190829
-X-UUID: 9468da78b613427f8ba9aa748471e67e-20190829
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1i3ZfB-0000yU-V2; Fri, 30 Aug 2019 05:41:35 +0000
+X-UUID: dafd4a5da94f4c24b83e725ee41c47b7-20190829
+X-UUID: dafd4a5da94f4c24b83e725ee41c47b7-20190829
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 497296445; Thu, 29 Aug 2019 21:40:37 -0800
+ with ESMTP id 743294690; Thu, 29 Aug 2019 21:41:35 -0800
 Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 22:40:35 -0700
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 22:41:33 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 13:40:32 +0800
+ 15.0.1395.4; Fri, 30 Aug 2019 13:41:31 +0800
 Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 30 Aug 2019 13:40:32 +0800
-Message-ID: <1567143627.5942.10.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 12/32] drm/mediatek: add mmsys private data for ddp
- path config
+ Transport; Fri, 30 Aug 2019 13:41:30 +0800
+Message-ID: <1567143685.5942.11.camel@mtksdaap41>
+Subject: Re: [PATCH v5, 13/32] drm/mediatek: move rdma sout from
+ mtk_ddp_mout_en into mtk_ddp_sout_sel
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Fri, 30 Aug 2019 13:40:27 +0800
-In-Reply-To: <1567142858.5942.6.camel@mtksdaap41>
+Date: Fri, 30 Aug 2019 13:41:25 +0800
+In-Reply-To: <1567090254-15566-14-git-send-email-yongqiang.niu@mediatek.com>
 References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-13-git-send-email-yongqiang.niu@mediatek.com>
- <1567142858.5942.6.camel@mtksdaap41>
+ <1567090254-15566-14-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 63705600795A02F27505757BDD9CBCADFD9382BB26651453F850F28E9B4B8EDE2000:8
+X-TM-SNTS-SMTP: 91FBBB659019F98841FF1162CEE48D62A4310431E53ADFD011B0F26E739CCC8C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_224034_770095_6EB0C9B3 
-X-CRM114-Status: GOOD (  15.82  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190829_224134_010001_A312B53D 
+X-CRM114-Status: GOOD (  13.16  )
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
+ 0.8 UPPERCASE_50_75        message body is 50-75% uppercase
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,83 +87,129 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi, Yongqiang:
 
-On Fri, 2019-08-30 at 13:27 +0800, CK Hu wrote:
-> Hi, Yongqiang:
+On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
+> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
-> > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > 
-> > This patch add mmsys private data for ddp path config
-> > all these register offset and value will be different in future SOC
-> > add these define into mmsys private data
-> > 	u32 ovl0_mout_en;
-> > 	u32 rdma1_sout_sel_in;
-> > 	u32 rdma1_sout_dsi0;
-> > 	u32 dpi0_sel_in;
-> > 	u32 dpi0_sel_in_rdma1;
-> > 	u32 dsi0_sel_in;
-> > 	u32 dsi0_sel_in_rdma1;
-> > 
-> > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> > ---
-> >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c |  4 ++
-> >  drivers/gpu/drm/mediatek/mtk_drm_ddp.c  | 86 +++++++++++++++++++++++----------
-> >  drivers/gpu/drm/mediatek/mtk_drm_ddp.h  |  5 ++
-> >  drivers/gpu/drm/mediatek/mtk_drm_drv.c  |  3 ++
-> >  drivers/gpu/drm/mediatek/mtk_drm_drv.h  |  3 ++
-> >  5 files changed, 76 insertions(+), 25 deletions(-)
-> > 
-> 
-> [snip]
-> 
-> >  
-> >  void mtk_ddp_add_comp_to_path(void __iomem *config_regs,
-> > +			      const struct mtk_mmsys_reg_data *reg_data,
-> >  			      enum mtk_ddp_comp_id cur,
-> >  			      enum mtk_ddp_comp_id next)
-> >  {
-> >  	unsigned int addr, value, reg;
-> >  
-> > -	value = mtk_ddp_mout_en(cur, next, &addr);
-> > +	value = mtk_ddp_mout_en(reg_data, cur, next, &addr);
-> >  	if (value) {
-> >  		reg = readl_relaxed(config_regs + addr) | value;
-> >  		writel_relaxed(reg, config_regs + addr);
-> >  	}
-> >  
-> > -	mtk_ddp_sout_sel(config_regs, cur, next);
-> > +	value = mtk_ddp_sout_sel(reg_data, cur, next, &addr);
-> > +	if (value)
-> > +		writel_relaxed(value, config_regs + addr);
-> 
-> I think the register could be written inside mtk_ddp_sout_sel(), why do
-> you move out of that function?
+> This patch move rdma sout from mtk_ddp_mout_en into mtk_ddp_sout_sel
+> rdma only has single output, but no multi output,
+> all these rdma->dsi/dpi usecase should move to mtk_ddp_sout_sel
 
-OK, after review other patch, I understand what you do here.
-You want to align the method of mtk_ddp_mout_en(), mtk_ddp_sout_sel(),
-and mtk_ddp_sel_in(). so modification in these three function would be
-the same style. So I think this alignment should be an independent patch
-before this patch.
-
-Regards,
-CK
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
 > 
-> Regards,
-> CK
+> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 90 +++++++++++++++++-----------------
+>  1 file changed, 45 insertions(+), 45 deletions(-)
 > 
-> >  
-> > -	value = mtk_ddp_sel_in(cur, next, &addr);
-> > +	value = mtk_ddp_sel_in(reg_data, cur, next, &addr);
-> >  	if (value) {
-> >  		reg = readl_relaxed(config_regs + addr) | value;
-> >  		writel_relaxed(reg, config_regs + addr);
-> > @@ -420,18 +455,19 @@ void mtk_ddp_add_comp_to_path(void __iomem *config_regs,
-> >  }
-> >  
-> >  
-> >  
-> 
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> index 338cc2f..a5a6689 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
+> @@ -299,51 +299,6 @@ static unsigned int mtk_ddp_mout_en(const struct mtk_mmsys_reg_data *data,
+>  	} else if (cur == DDP_COMPONENT_OD1 && next == DDP_COMPONENT_RDMA1) {
+>  		*addr = DISP_REG_CONFIG_DISP_OD_MOUT_EN;
+>  		value = OD1_MOUT_EN_RDMA1;
+> -	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DPI0) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> -		value = RDMA0_SOUT_DPI0;
+> -	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DPI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> -		value = RDMA0_SOUT_DPI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> -		value = RDMA0_SOUT_DSI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI2) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> -		value = RDMA0_SOUT_DSI2;
+> -	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI3) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> -		value = RDMA0_SOUT_DSI3;
+> -	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> -		value = RDMA1_SOUT_DSI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI2) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> -		value = RDMA1_SOUT_DSI2;
+> -	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI3) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> -		value = RDMA1_SOUT_DSI3;
+> -	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DPI0) {
+> -		*addr = data->rdma1_sout_sel_in;
+> -		value = data->rdma1_sout_dpi0;
+> -	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DPI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> -		value = RDMA1_SOUT_DPI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DPI0) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> -		value = RDMA2_SOUT_DPI0;
+> -	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DPI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> -		value = RDMA2_SOUT_DPI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI1) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> -		value = RDMA2_SOUT_DSI1;
+> -	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI2) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> -		value = RDMA2_SOUT_DSI2;
+> -	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI3) {
+> -		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> -		value = RDMA2_SOUT_DSI3;
+>  	} else {
+>  		value = 0;
+>  	}
+> @@ -423,6 +378,51 @@ static unsigned int mtk_ddp_sout_sel(const struct mtk_mmsys_reg_data *data,
+>  	} else if (cur == DDP_COMPONENT_BLS && next == DDP_COMPONENT_DPI0) {
+>  		*addr = DISP_REG_CONFIG_OUT_SEL;
+>  		value = BLS_TO_DPI_RDMA1_TO_DSI;
+> +	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DPI0) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> +		value = RDMA0_SOUT_DPI0;
+> +	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DPI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> +		value = RDMA0_SOUT_DPI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> +		value = RDMA0_SOUT_DSI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI2) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> +		value = RDMA0_SOUT_DSI2;
+> +	} else if (cur == DDP_COMPONENT_RDMA0 && next == DDP_COMPONENT_DSI3) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA0_SOUT_EN;
+> +		value = RDMA0_SOUT_DSI3;
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> +		value = RDMA1_SOUT_DSI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI2) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> +		value = RDMA1_SOUT_DSI2;
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DSI3) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> +		value = RDMA1_SOUT_DSI3;
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DPI0) {
+> +		*addr = data->rdma1_sout_sel_in;
+> +		value = data->rdma1_sout_dpi0;
+> +	} else if (cur == DDP_COMPONENT_RDMA1 && next == DDP_COMPONENT_DPI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA1_SOUT_EN;
+> +		value = RDMA1_SOUT_DPI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DPI0) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> +		value = RDMA2_SOUT_DPI0;
+> +	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DPI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> +		value = RDMA2_SOUT_DPI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI1) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> +		value = RDMA2_SOUT_DSI1;
+> +	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI2) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> +		value = RDMA2_SOUT_DSI2;
+> +	} else if (cur == DDP_COMPONENT_RDMA2 && next == DDP_COMPONENT_DSI3) {
+> +		*addr = DISP_REG_CONFIG_DISP_RDMA2_SOUT;
+> +		value = RDMA2_SOUT_DSI3;
+>  	} else {
+>  		value = 0;
+>  	}
 
 
 
