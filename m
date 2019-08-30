@@ -2,66 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 446F7A2DDD
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 05:58:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8AC32A2DDE
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 05:58:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=odhu0nvxhRx3UD10lqGaB9wwX4q0s+E6wcWab/xFI+M=; b=RcF6pMjIEKu+6B
-	FvtwTh0JEIKMpivu16T2o1TLvmVS2kOm+n3zwdbFRCOjldtEiWGXkDAU4IWILhwGXurDpLicf98ZG
-	q9H51m3XgCCd+hZUgJYSk8xbUCQzUcGXxev5b817JNCpHT4tPfe5WHHuzFugCdG1Mt5LtDfxCwTn2
-	iCuASoPsXsLzAj1LIooYd08BE7DfmnZgY8WLH1p2CzOxnLs8ITv0F80gX7YDLyUSDR95ky96CwiFQ
-	tgrHM8V8aWIupt5oZd7RYBfk6Dy5I+eOykk5TtgSCevGBNKG55D7FDb3dn0sOWNzSo2n68HAPMDwP
-	5KZIN2+owHyy38OQ9QOw==;
+	List-Owner; bh=KpLY1Ghb7Cw42DcHWgU5kqBRY2BDxBAM2sLvdwuKsdo=; b=mSNDpaum4B+KWv
+	As4nK/OD7yeQMBCSiNiwB1OAm1cIWfuKxuyvwjowOSCDfN0be4sr5g+fvHe8k6sZORepLIE3gx20I
+	ouasHJ1nPgvpua1qwqBytJ73ZBs0RRe14JHkqNgI1p0eyZmBr00x6yG954gDu2yY6cq75jBXt0TLL
+	sZcPFbuJ+Ct39XXAnO6YrGIO5aKq0EYtmX9c4d+HJf15C/JYJAuzEcIgPAlNYlBf+NgYw9PRZbNVS
+	Wkj8zsVf7MiQbPWh88CDjARRRTDmdNWmOPQ2bntluYrXalbm7iH9QK5vioC9dzn3gAGAydPSpmnLN
+	fbWM7Hx/lMTeueAbA1tA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Y3n-000396-2D; Fri, 30 Aug 2019 03:58:51 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i3Y3p-0003BT-9r; Fri, 30 Aug 2019 03:58:53 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3Y3j-00038a-EY
- for linux-mediatek@lists.infradead.org; Fri, 30 Aug 2019 03:58:48 +0000
-X-UUID: 9b0f5493d857471fb60b2b34e92c9164-20190829
-X-UUID: 9b0f5493d857471fb60b2b34e92c9164-20190829
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1i3Y3l-000392-WA
+ for linux-mediatek@lists.infradead.org; Fri, 30 Aug 2019 03:58:51 +0000
+X-UUID: 7d8ce24bc63c4396935b4965650c48d3-20190829
+X-UUID: 7d8ce24bc63c4396935b4965650c48d3-20190829
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 585416929; Thu, 29 Aug 2019 19:58:49 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 20:58:48 -0700
+ with ESMTP id 1375716113; Thu, 29 Aug 2019 19:58:50 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 20:58:49 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 11:58:46 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 30 Aug 2019 11:58:48 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 30 Aug 2019 11:58:46 +0800
+ Frontend Transport; Fri, 30 Aug 2019 11:58:48 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [PATCH v7 10/11] dt-bindings: pwm: update bindings for MT7629 SoC
-Date: Fri, 30 Aug 2019 11:57:16 +0800
-Message-ID: <1567137437-10041-11-git-send-email-sam.shih@mediatek.com>
+Subject: [PATCH v7 11/11] arm: dts: mediatek: add mt7629 pwm support
+Date: Fri, 30 Aug 2019 11:57:17 +0800
+Message-ID: <1567137437-10041-12-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1567137437-10041-1-git-send-email-sam.shih@mediatek.com>
 References: <1567137437-10041-1-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 84B8AB9ACCE752F4C84D0758217D09B3294BF14AF89FEEF49750320A3844CF0F2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_205847_487559_CE8006E5 
-X-CRM114-Status: UNSURE (   9.15  )
+X-CRM114-CacheID: sfid-20190829_205850_040060_C7C9D026 
+X-CRM114-Status: UNSURE (   8.64  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -86,37 +83,40 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ryder Lee <ryder.lee@mediatek.com>
+This adds pwm support for MT7629.
 
-This updates bindings for MT7629 pwm controller.
-
-Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 ---
-Changes since v7:
-- add a missed Reviewed-by tag back from v1:
-https://patchwork.kernel.org/patch/10769381/
-Changes since v1:
-- add a Reviewed-by tag
+ arch/arm/boot/dts/mt7629.dtsi | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
 
----
- Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
- 1 file changed, 1 insertion(+)
-
-diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-index ea95b490a913..c7bd5633d1eb 100644
---- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-+++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-@@ -6,6 +6,7 @@ Required properties:
-    - "mediatek,mt7622-pwm": found on mt7622 SoC.
-    - "mediatek,mt7623-pwm": found on mt7623 SoC.
-    - "mediatek,mt7628-pwm": found on mt7628 SoC.
-+   - "mediatek,mt7629-pwm", "mediatek,mt7622-pwm": found on mt7629 SoC.
-  - reg: physical base address and length of the controller's registers.
-  - #pwm-cells: must be 2. See pwm.txt in this directory for a description of
-    the cell format.
+diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
+index 9608bc2ccb3f..493be9a9453b 100644
+--- a/arch/arm/boot/dts/mt7629.dtsi
++++ b/arch/arm/boot/dts/mt7629.dtsi
+@@ -241,6 +241,22 @@
+ 			status = "disabled";
+ 		};
+ 
++		pwm: pwm@11006000 {
++			compatible = "mediatek,mt7629-pwm",
++				     "mediatek,mt7622-pwm";
++			reg = <0 0x11006000 0 0x1000>;
++			interrupts = <GIC_SPI 77 IRQ_TYPE_LEVEL_LOW>;
++			clocks = <&topckgen CLK_TOP_PWM_SEL>,
++				 <&pericfg CLK_PERI_PWM_PD>,
++				 <&pericfg CLK_PERI_PWM1_PD>;
++			clock-names = "top", "main", "pwm1";
++			assigned-clocks = <&topckgen CLK_TOP_PWM_SEL>;
++			assigned-clock-parents =
++					<&topckgen CLK_TOP_UNIVPLL2_D4>;
++			num-pwms = <1>;
++			status = "disabled";
++		};
++
+ 		i2c: i2c@11007000 {
+ 			compatible = "mediatek,mt7629-i2c",
+ 				     "mediatek,mt2712-i2c";
 -- 
 2.17.1
 
