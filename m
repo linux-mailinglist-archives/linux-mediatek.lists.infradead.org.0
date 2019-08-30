@@ -2,66 +2,95 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 62EDCA3237
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 10:25:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5804EA32C4
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 10:39:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=danmIdSZtSEfgZoegneVmsoU/Nwgsxvx81aJrHcOYg0=; b=QpxRGBOk8gkRlG
-	Y/bsx1yISCwXci7h14uc+Ly9o2H7gyZ+1/Eg2rOIDtUKIrpeVv7SHY9O+hm1+KoTkJMJ3dp4hk2Do
-	l2cfpgZYBLHcUt9xs2WauIAcZSWgzNm+JoGHEVCbWW4zxbdUgaL0njLLqWX0wDBDGs6HBXnWVKH30
-	uaa4xaMSKsHgvSuCrp/9UD6Goi0DzW95KJnsaBPWltJ9HpmOwjro1HZogQmANeScZ1OPMKcZJd1yt
-	WjmVjGodtQ/0lPY+Y+imoUJkU8CwZMwJBauLtFRLC0qWdbzluAW2iNXhOEPHBvwW+zfScW2qOHUHJ
-	NQMtBi/TyVQJ1T/L1E7A==;
+	List-Owner; bh=lCanyWI8SVOiX0iqHCt1EYQsREO0SWgegNg1Fhp5yXk=; b=HCFuIpmiPRhxSN
+	mex87chspbBM6aeDA84idF3P4wLOfCpESkS1vJ7QyYEwDo1iEsBLsf4N46Ov99URIghuMY/K83ZOY
+	lyXh/o4OzvHiaZMBCwsG6hPVS7t1yLjbjNma0fNTS9HDxUPHuI9A8pTA9+K3DjbYJs+SqmPlFwGr0
+	dv0OjCY9ZM7EHsx1KvMGcHYICMoo/4fGxC9qHqrjoL/3UUHd66KvQ40hlKEFjwCFA9jPaYeQmPLZ/
+	aeezY2BWZ+r737voh3uepfTL+A3Ek6BTZS4YwaFvcgJVIo6AVMSNE3pcEbtKIHVXvnbbher7l7vMr
+	XLkAF5o2z9rWL9/cTeVQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3cDN-00082O-Fm; Fri, 30 Aug 2019 08:25:01 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i3cRf-0006P6-Nt; Fri, 30 Aug 2019 08:39:47 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3cBX-0006Fb-7k; Fri, 30 Aug 2019 08:23:09 +0000
-X-UUID: 49d430ebccf44eff88b5f3a8bbee0a16-20190830
-X-UUID: 49d430ebccf44eff88b5f3a8bbee0a16-20190830
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <min.guo@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2107714976; Fri, 30 Aug 2019 00:23:08 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 01:23:06 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 16:23:04 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 30 Aug 2019 16:23:03 +0800
-From: <min.guo@mediatek.com>
-To: Bin Liu <b-liu@ti.com>, Rob Herring <robh+dt@kernel.org>
-Subject: [PATCH v7 6/6] usb: musb: Add support for MediaTek musb controller
-Date: Fri, 30 Aug 2019 16:20:26 +0800
-Message-ID: <20190830082026.30401-7-min.guo@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190830082026.30401-1-min.guo@mediatek.com>
-References: <20190830082026.30401-1-min.guo@mediatek.com>
+ id 1i3cRX-0006If-AB
+ for linux-mediatek@lists.infradead.org; Fri, 30 Aug 2019 08:39:41 +0000
+Received: by mail-ed1-x542.google.com with SMTP id l26so6504782edr.0
+ for <linux-mediatek@lists.infradead.org>; Fri, 30 Aug 2019 01:39:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=MGj+QywDGNf8RU3nCUVn2rf2R0NrS9Bl2cO6UU8tnf4=;
+ b=PcpUATAZqIbcoiaTwXtDmO79nO8QPwiLKkXhTdCUd+g/ecm3aSuMclMb5g6Lvo05Wd
+ ljsTYFTC1jeYre6R42iRA/ldxSqG6Rdy1Ql1kdT8ZE/p5Lgth47Oo8BlJbiDzUdMMarf
+ JiNVgF3T/M0BgRvufmGswlA8JGLWAkaPgtB0Q=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=MGj+QywDGNf8RU3nCUVn2rf2R0NrS9Bl2cO6UU8tnf4=;
+ b=LaOUfSaNC22fjNbaqPLqOx9aHmj1mt79GUKB4tmMSXRlgBkxIrrrxksHLMw7SXjzr0
+ f8KK03/rfgrbZOKloKXCWJmhJH7fayAqvJaDvL0h3oawF4KeKdA7h9b7iHk//dKuJZVY
+ Io9YGyAbkulK/0FP4MFlk55GzIEeuDWDVKL5n6U2rdbYpeC6HnBsdlx+CiRo8Q6gB9SR
+ An63Zkh7Rzt5il/6NWNxEF0YIjx6vyMgnqgIizo8pA5kgvC2Ik4nbTFGYJ8c3kVUow/L
+ 6uqV6w/awIXYol58mau5Ck+fMrlBuw/IhgwY2pwv3X5xvwCnDKse55eHKHgTwTwR6x6J
+ 5iAw==
+X-Gm-Message-State: APjAAAV6j8KgMWbE37ocdTgthaaR8dVSBlQRAHrrLdNp/bTB3zDBsKan
+ OhUBetdu6kb4IWyuurCCJxaV3EmHjMU=
+X-Google-Smtp-Source: APXvYqynAR2ZjQlKYVLVhI7mwQzcbZD1KeCganY0JcFwj0snV7FijYOa9A+qAwrYP/LgtGBWVT46hA==
+X-Received: by 2002:aa7:d799:: with SMTP id s25mr14425590edq.172.1567154377562; 
+ Fri, 30 Aug 2019 01:39:37 -0700 (PDT)
+Received: from mail-wm1-f46.google.com (mail-wm1-f46.google.com.
+ [209.85.128.46])
+ by smtp.gmail.com with ESMTPSA id a14sm674636eju.32.2019.08.30.01.39.37
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Fri, 30 Aug 2019 01:39:37 -0700 (PDT)
+Received: by mail-wm1-f46.google.com with SMTP id 10so6378573wmp.3
+ for <linux-mediatek@lists.infradead.org>; Fri, 30 Aug 2019 01:39:37 -0700 (PDT)
+X-Received: by 2002:a1c:cf88:: with SMTP id f130mr16973336wmg.10.1567154046354; 
+ Fri, 30 Aug 2019 01:34:06 -0700 (PDT)
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 66C209B0915C98E62763EDA14B9D3D0A4DBFDAED575A8527D743BEE034EAEE372000:8
-X-MTK: N
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <20190802082815.GA203993@chromium.org> <1566724680.20680.8.camel@mtksdccf07>
+ <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
+ <1566957625.20680.33.camel@mtksdccf07>
+In-Reply-To: <1566957625.20680.33.camel@mtksdccf07>
+From: Tomasz Figa <tfiga@chromium.org>
+Date: Fri, 30 Aug 2019 17:33:53 +0900
+X-Gmail-Original-Message-ID: <CAAFQd5D-Yg1FjUE_rwmqfS1gvfE0=MZ=r-ziueU_37-uo9QTbw@mail.gmail.com>
+Message-ID: <CAAFQd5D-Yg1FjUE_rwmqfS1gvfE0=MZ=r-ziueU_37-uo9QTbw@mail.gmail.com>
+Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
+To: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190830_012307_576177_19E063C6 
-X-CRM114-Status: GOOD (  20.43  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190830_013939_591816_65BC21EC 
+X-CRM114-Status: GOOD (  36.81  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,695 +102,321 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Yonglong Wu <yonglong.wu@mediatek.com>, hdegoede@redhat.com, tony@atomide.com,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Alan Stern <stern@rowland.harvard.edu>, Min Guo <min.guo@mediatek.com>,
- chunfeng.yun@mediatek.com, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ =?UTF-8?B?U2VhbiBDaGVuZyAo6YSt5piH5byYKQ==?= <Sean.Cheng@mediatek.com>,
+ "laurent.pinchart+renesas@ideasonboard.com"
+ <laurent.pinchart+renesas@ideasonboard.com>,
+ =?UTF-8?B?UnlubiBXdSAo5ZCz6IKy5oGpKQ==?= <Rynn.Wu@mediatek.com>,
+ srv_heupstream <srv_heupstream@mediatek.com>,
+ =?UTF-8?B?UG8tWWFuZyBIdWFuZyAo6buD5p+P6Zm9KQ==?= <po-yang.huang@mediatek.com>,
+ "mchehab@kernel.org" <mchehab@kernel.org>,
+ "suleiman@chromium.org" <suleiman@chromium.org>,
+ "shik@chromium.org" <shik@chromium.org>,
+ =?UTF-8?B?SnVuZ28gTGluICjmnpfmmI7kv4op?= <jungo.lin@mediatek.com>,
+ =?UTF-8?B?U2ogSHVhbmcgKOm7g+S/oeeSiyk=?= <sj.huang@mediatek.com>,
+ "yuzhao@chromium.org" <yuzhao@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "zwisler@chromium.org" <zwisler@chromium.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ =?UTF-8?B?Q2hyaXN0aWUgWXUgKOa4uOmbheaDoCk=?= <christie.yu@mediatek.com>,
+ =?UTF-8?B?RnJlZGVyaWMgQ2hlbiAo6Zmz5L+K5YWDKQ==?= <Frederic.Chen@mediatek.com>,
+ "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Min Guo <min.guo@mediatek.com>
+On Wed, Aug 28, 2019 at 11:00 AM Jerry-ch Chen
+<Jerry-ch.Chen@mediatek.com> wrote:
+>
+> Hi Tomasz,
+>
+> On Mon, 2019-08-26 at 14:36 +0800, Tomasz Figa wrote:
+> > Hi Jerry,
+> >
+> > On Sun, Aug 25, 2019 at 6:18 PM Jerry-ch Chen
+> > <Jerry-ch.Chen@mediatek.com> wrote:
+> > >
+> > > Hi Tomasz,
+> > >
+> > > On Fri, 2019-08-02 at 16:28 +0800, Tomasz Figa wrote:
+> > > > Hi Jerry,
+> > > >
+> > > > On Tue, Jul 09, 2019 at 04:41:12PM +0800, Jerry-ch Chen wrote:
+> > > > > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+> > > > >
+> > > > > This patch adds the driver of Face Detection (FD) unit in
+> > > > > Mediatek camera system, providing face detection function.
+> > > > >
+> > > > > The mtk-isp directory will contain drivers for multiple IP
+> > > > > blocks found in Mediatek ISP system. It will include ISP Pass 1
+> > > > > driver (CAM), sensor interface driver, DIP driver and face
+> > > > > detection driver.
+> > > > >
+> > > > > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+> > > > > ---
+> > > > >  drivers/media/platform/Makefile               |    2 +
+> > > > >  drivers/media/platform/mtk-isp/fd/Makefile    |    5 +
+> > > > >  drivers/media/platform/mtk-isp/fd/mtk_fd.h    |  157 +++
+> > > > >  drivers/media/platform/mtk-isp/fd/mtk_fd_40.c | 1259 +++++++++++++++++++++++++
+> > > > >  include/uapi/linux/v4l2-controls.h            |    4 +
+> > > > >  5 files changed, 1427 insertions(+)
+> > > > >  create mode 100644 drivers/media/platform/mtk-isp/fd/Makefile
+> > > > >  create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd.h
+> > > > >  create mode 100644 drivers/media/platform/mtk-isp/fd/mtk_fd_40.c
+> > > > >
+> > > >
+> > > > Thanks for the patch! I finally got a chance to fully review the code. Sorry
+> > > > for the delay. Please check my comments inline.
+> > > >
+> > > I appreciate your comments.
+> > > I've fixed most of the comments and verifying them,
+> > > Sorry for the delay, here is the reply.
+> > >
+> >
+> > Thanks for replying to all the comments, it's very helpful. I'll snip
+> > the parts that I don't have any further comments.
+> >
+> > [snip]
+> >
+> > > > > +   if (usercount == 1) {
+> > > > > +           pm_runtime_get_sync(&fd_dev->pdev->dev);
+> > > > > +           if (mtk_fd_hw_enable(fd_hw)) {
+> > > > > +                   pm_runtime_put_sync(&fd_dev->pdev->dev);
+> > > > > +                   atomic_dec_return(&fd_hw->fd_user_cnt);
+> > > > > +                   mutex_unlock(&fd_hw->fd_hw_lock);
+> > > > > +                   return -EINVAL;
+> > > > > +           }
+> > > > > +   }
+> > > >
+> > > > This is a simple mem-to-mem device, so there is no reason to keep it active
+> > > > all the time it's streaming. Please just get the runtime PM counter when
+> > > > queuing a job to the hardware and release it when the job finishes.
+> > > >
+> > > > I guess we might still want to do the costly operations like rproc_boot()
+> > > > when we start streaming, though.
+> > > >
+> > > Do you mean by moving the pm_runtime_get/put stuff to the job execution
+> > > and job finish place?
+> >
+> > Yes.
+> >
+> > > the rproc_boot() operation will be done here.
+> > >
+> >
+> > How much time does the rproc_boot() operation take?
+> >
+>
+> About 0.7~1.3ms, average 0.8ms (14 measurements)
+>
 
-This adds support for MediaTek musb controller in
-host, peripheral and otg mode.
-There are some quirk of MediaTek musb controller, such as:
- -W1C interrupt status registers
- -Private data toggle registers
- -No dedicated DMA interrupt line
+Okay, I think we may want to call it when we start streaming then.
 
-Signed-off-by: Min Guo <min.guo@mediatek.com>
-Signed-off-by: Yonglong Wu <yonglong.wu@mediatek.com>
----
-changes in v7:
-1. no changes
+[snip]
 
-changes in v6:
-1. Add of_platform_populate in probe to populate connector platform_devices
-   from device tree data
-2. Replace extcon with usb role switch mechanism to support dual-role mode
-3. Remove set vbus function
+> > > > > +static int mtk_fd_vb2_queue_setup(struct vb2_queue *vq,
+> > > > > +                             unsigned int *num_buffers,
+> > > > > +                             unsigned int *num_planes,
+> > > > > +                             unsigned int sizes[],
+> > > > > +                             struct device *alloc_devs[])
+> > > > > +{
+> > > > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > > +   struct device *dev = ctx->dev;
+> > > > > +   unsigned int size;
+> > > > > +
+> > > > > +   switch (vq->type) {
+> > > > > +   case V4L2_BUF_TYPE_META_CAPTURE:
+> > > > > +           size = ctx->dst_fmt.buffersize;
+> > > > > +           break;
+> > > > > +   case V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE:
+> > > > > +           size = ctx->src_fmt.plane_fmt[0].sizeimage;
+> > > > > +           break;
+> > > > > +   default:
+> > > > > +           dev_err(dev, "invalid queue type: %d\n", vq->type);
+> > > >
+> > > > We should need to handle this.
+> > > >
+> > > Do you mean by giving a size instead of return -EINVAL?
+> > >
+> >
+> > Sorry, typo. I meant we shouldn't need to handle it, because we can't
+> > get any other queue type here.
+> >
+>
+> Ok, I see, I will remove it.
+> also, this function will be updated as following due to the 2 plane
+> case.
+>
+> static int mtk_fd_vb2_queue_setup(struct vb2_queue *vq,
+>                                   unsigned int *num_buffers,
+>                                   unsigned int *num_planes,
+>                                   unsigned int sizes[],
+>                                   struct device *alloc_devs[])
+> {
+>         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+>         struct device *dev = ctx->dev;
+>         unsigned int size[2];
+>
+>         switch (vq->type) {
+>         case V4L2_BUF_TYPE_META_CAPTURE:
+>                 size[0] = ctx->dst_fmt.buffersize;
+>                 break;
+>         case V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE:
+>                 size[0] = ctx->src_fmt.plane_fmt[0].sizeimage;
+>                 if (*num_planes == 2)
+>                         size[1] = ctx->src_fmt.plane_fmt[1].sizeimage;
+>                 break;
+>         }
+>
+>         if (*num_planes == 1) {
+>                 if (sizes[0] < size[0])
+>                         return -EINVAL;
+>         } else if (*num_planes == 2) {
+>                 if ((sizes[0] < size[0]) && (sizes[1] < size[1]))
+>                         return -EINVAL;
 
-changes in v5:
-1. Replace musb_readb() with musb_clearb() to clear common/tx/rx pending interrupts
-2. Make musb_clearb/w() return the value of musb_readb/w()
-3. Add driver to get child nodes of usb connector and extcon device
+Can we just use a loop here and combine the 2 cases above?
 
-changes in v4:
-1. no changes
+Also, we need to fail with -EINVAL if *num_planes is > 2.
 
-changes in v3:
-suggested by Bin:
-1. Remove 'u8/u16 data' parameter in clearb/w() hooks
-2. Replace musb_readb/w() with musb_clearb/w() to clear interrupts status
+>         } else {
+>                 *num_planes = 1;
+>                 sizes[0] = size[0];
 
-changes in v2:
-suggested by Bin:
-1. Add summarize of MediaTek musb controller differences in the commit log
-2. Add "|| COMPILE_TEST" in Kconfig
-3. Move MediaTek's private toggle registers from musb_regs.h to mediatek.c
-4. Replace musb_readl() with musb_readw() to read 16bit toggle register
----
- drivers/usb/musb/Kconfig    |   9 +-
- drivers/usb/musb/Makefile   |   1 +
- drivers/usb/musb/mediatek.c | 582 ++++++++++++++++++++++++++++++++++++++++++++
- 3 files changed, 591 insertions(+), 1 deletion(-)
- create mode 100644 drivers/usb/musb/mediatek.c
+This should be the case if *num_planes == 0 and the number of planes
+and sizes should match the currently active format.
 
-diff --git a/drivers/usb/musb/Kconfig b/drivers/usb/musb/Kconfig
-index 52f8e2b..767c5da 100644
---- a/drivers/usb/musb/Kconfig
-+++ b/drivers/usb/musb/Kconfig
-@@ -116,6 +116,13 @@ config USB_MUSB_JZ4740
- 	depends on USB_MUSB_GADGET
- 	depends on USB=n || USB_OTG_BLACKLIST_HUB
- 
-+config USB_MUSB_MEDIATEK
-+	tristate "MediaTek platforms"
-+	depends on ARCH_MEDIATEK || COMPILE_TEST
-+	depends on NOP_USB_XCEIV
-+	depends on GENERIC_PHY
-+	select USB_ROLE_SWITCH
-+
- config USB_MUSB_AM335X_CHILD
- 	tristate
- 
-@@ -142,7 +149,7 @@ config USB_UX500_DMA
- 
- config USB_INVENTRA_DMA
- 	bool 'Inventra'
--	depends on USB_MUSB_OMAP2PLUS
-+	depends on USB_MUSB_OMAP2PLUS || USB_MUSB_MEDIATEK
- 	help
- 	  Enable DMA transfers using Mentor's engine.
- 
-diff --git a/drivers/usb/musb/Makefile b/drivers/usb/musb/Makefile
-index 3a88c79..63d82d0 100644
---- a/drivers/usb/musb/Makefile
-+++ b/drivers/usb/musb/Makefile
-@@ -24,6 +24,7 @@ obj-$(CONFIG_USB_MUSB_DA8XX)			+= da8xx.o
- obj-$(CONFIG_USB_MUSB_UX500)			+= ux500.o
- obj-$(CONFIG_USB_MUSB_JZ4740)			+= jz4740.o
- obj-$(CONFIG_USB_MUSB_SUNXI)			+= sunxi.o
-+obj-$(CONFIG_USB_MUSB_MEDIATEK)      		+= mediatek.o
- 
- 
- obj-$(CONFIG_USB_MUSB_AM335X_CHILD)		+= musb_am335x.o
-diff --git a/drivers/usb/musb/mediatek.c b/drivers/usb/musb/mediatek.c
-new file mode 100644
-index 0000000..3df8d7e
---- /dev/null
-+++ b/drivers/usb/musb/mediatek.c
-@@ -0,0 +1,582 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (C) 2019 MediaTek Inc.
-+ *
-+ * Author:
-+ *  Min Guo <min.guo@mediatek.com>
-+ *  Yonglong Wu <yonglong.wu@mediatek.com>
-+ */
-+
-+#include <linux/clk.h>
-+#include <linux/dma-mapping.h>
-+#include <linux/module.h>
-+#include <linux/of_platform.h>
-+#include <linux/platform_device.h>
-+#include <linux/usb/role.h>
-+#include <linux/usb/usb_phy_generic.h>
-+#include "musb_core.h"
-+#include "musb_dma.h"
-+
-+#define USB_L1INTS	0x00a0
-+#define USB_L1INTM	0x00a4
-+#define MTK_MUSB_TXFUNCADDR	0x0480
-+
-+/* MediaTek controller toggle enable and status reg */
-+#define MUSB_RXTOG		0x80
-+#define MUSB_RXTOGEN		0x82
-+#define MUSB_TXTOG		0x84
-+#define MUSB_TXTOGEN		0x86
-+#define MTK_TOGGLE_EN		GENMASK(15, 0)
-+
-+#define TX_INT_STATUS		BIT(0)
-+#define RX_INT_STATUS		BIT(1)
-+#define USBCOM_INT_STATUS		BIT(2)
-+#define DMA_INT_STATUS		BIT(3)
-+
-+#define DMA_INTR_STATUS_MSK		GENMASK(7, 0)
-+#define DMA_INTR_UNMASK_SET_MSK	GENMASK(31, 24)
-+
-+struct mtk_glue {
-+	struct device *dev;
-+	struct musb *musb;
-+	struct platform_device *musb_pdev;
-+	struct platform_device *usb_phy;
-+	struct phy *phy;
-+	struct usb_phy *xceiv;
-+	enum phy_mode phy_mode;
-+	struct clk *main;
-+	struct clk *mcu;
-+	struct clk *univpll;
-+	enum usb_role role;
-+	struct usb_role_switch *role_sw;
-+};
-+
-+static int mtk_musb_clks_get(struct mtk_glue *glue)
-+{
-+	struct device *dev = glue->dev;
-+
-+	glue->main = devm_clk_get(dev, "main");
-+	if (IS_ERR(glue->main)) {
-+		dev_err(dev, "fail to get main clock\n");
-+		return PTR_ERR(glue->main);
-+	}
-+
-+	glue->mcu = devm_clk_get(dev, "mcu");
-+	if (IS_ERR(glue->mcu)) {
-+		dev_err(dev, "fail to get mcu clock\n");
-+		return PTR_ERR(glue->mcu);
-+	}
-+
-+	glue->univpll = devm_clk_get(dev, "univpll");
-+	if (IS_ERR(glue->univpll)) {
-+		dev_err(dev, "fail to get univpll clock\n");
-+		return PTR_ERR(glue->univpll);
-+	}
-+
-+	return 0;
-+}
-+
-+static int mtk_musb_clks_enable(struct mtk_glue *glue)
-+{
-+	int ret;
-+
-+	ret = clk_prepare_enable(glue->main);
-+	if (ret) {
-+		dev_err(glue->dev, "failed to enable main clock\n");
-+		goto err_main_clk;
-+	}
-+
-+	ret = clk_prepare_enable(glue->mcu);
-+	if (ret) {
-+		dev_err(glue->dev, "failed to enable mcu clock\n");
-+		goto err_mcu_clk;
-+	}
-+
-+	ret = clk_prepare_enable(glue->univpll);
-+	if (ret) {
-+		dev_err(glue->dev, "failed to enable univpll clock\n");
-+		goto err_univpll_clk;
-+	}
-+
-+	return 0;
-+
-+err_univpll_clk:
-+	clk_disable_unprepare(glue->mcu);
-+err_mcu_clk:
-+	clk_disable_unprepare(glue->main);
-+err_main_clk:
-+	return ret;
-+}
-+
-+static void mtk_musb_clks_disable(struct mtk_glue *glue)
-+{
-+	clk_disable_unprepare(glue->univpll);
-+	clk_disable_unprepare(glue->mcu);
-+	clk_disable_unprepare(glue->main);
-+}
-+
-+static int musb_usb_role_sx_set(struct device *dev, enum usb_role role)
-+{
-+	struct mtk_glue *glue = dev_get_drvdata(dev);
-+	struct musb *musb = glue->musb;
-+	u8 devctl = readb(musb->mregs + MUSB_DEVCTL);
-+	enum usb_role new_role;
-+
-+	if (role == glue->role)
-+		return 0;
-+
-+	switch (role) {
-+	case USB_ROLE_HOST:
-+		musb->xceiv->otg->state = OTG_STATE_A_WAIT_VRISE;
-+		glue->phy_mode = PHY_MODE_USB_HOST;
-+		new_role = USB_ROLE_HOST;
-+		if (glue->role == USB_ROLE_NONE)
-+			phy_power_on(glue->phy);
-+
-+		devctl |= MUSB_DEVCTL_SESSION;
-+		musb_writeb(musb->mregs, MUSB_DEVCTL, devctl);
-+		MUSB_HST_MODE(musb);
-+		break;
-+	case USB_ROLE_DEVICE:
-+		musb->xceiv->otg->state = OTG_STATE_B_IDLE;
-+		glue->phy_mode = PHY_MODE_USB_DEVICE;
-+		new_role = USB_ROLE_DEVICE;
-+		devctl &= ~MUSB_DEVCTL_SESSION;
-+		musb_writeb(musb->mregs, MUSB_DEVCTL, devctl);
-+		if (glue->role == USB_ROLE_NONE)
-+			phy_power_on(glue->phy);
-+
-+		MUSB_DEV_MODE(musb);
-+		break;
-+	case USB_ROLE_NONE:
-+		glue->phy_mode = PHY_MODE_USB_OTG;
-+		new_role = USB_ROLE_NONE;
-+		devctl &= ~MUSB_DEVCTL_SESSION;
-+		musb_writeb(musb->mregs, MUSB_DEVCTL, devctl);
-+		if (glue->role != USB_ROLE_NONE)
-+			phy_power_off(glue->phy);
-+
-+		break;
-+	default:
-+		dev_err(glue->dev, "Invalid State\n");
-+		return -EINVAL;
-+	}
-+
-+	glue->role = new_role;
-+	phy_set_mode(glue->phy, glue->phy_mode);
-+
-+	return 0;
-+}
-+
-+static enum usb_role musb_usb_role_sx_get(struct device *dev)
-+{
-+	struct mtk_glue *glue = dev_get_drvdata(dev);
-+
-+	return glue->role;
-+}
-+
-+static int mtk_otg_switch_init(struct mtk_glue *glue)
-+{
-+	struct usb_role_switch_desc role_sx_desc = { 0 };
-+
-+	role_sx_desc.set = musb_usb_role_sx_set;
-+	role_sx_desc.get = musb_usb_role_sx_get;
-+	role_sx_desc.fwnode = dev_fwnode(glue->dev);
-+	glue->role_sw = usb_role_switch_register(glue->dev, &role_sx_desc);
-+
-+	return PTR_ERR_OR_ZERO(glue->role_sw);
-+}
-+
-+static void mtk_otg_switch_exit(struct mtk_glue *glue)
-+{
-+	return usb_role_switch_unregister(glue->role_sw);
-+}
-+
-+static irqreturn_t generic_interrupt(int irq, void *__hci)
-+{
-+	unsigned long flags;
-+	irqreturn_t retval = IRQ_NONE;
-+	struct musb *musb = __hci;
-+
-+	spin_lock_irqsave(&musb->lock, flags);
-+	musb->int_usb = musb_clearb(musb->mregs, MUSB_INTRUSB);
-+	musb->int_rx = musb_clearw(musb->mregs, MUSB_INTRRX);
-+	musb->int_tx = musb_clearw(musb->mregs, MUSB_INTRTX);
-+
-+	if (musb->int_usb || musb->int_tx || musb->int_rx)
-+		retval = musb_interrupt(musb);
-+
-+	spin_unlock_irqrestore(&musb->lock, flags);
-+
-+	return retval;
-+}
-+
-+static irqreturn_t mtk_musb_interrupt(int irq, void *dev_id)
-+{
-+	irqreturn_t retval = IRQ_NONE;
-+	struct musb *musb = (struct musb *)dev_id;
-+	u32 l1_ints;
-+
-+	l1_ints = musb_readl(musb->mregs, USB_L1INTS) &
-+			musb_readl(musb->mregs, USB_L1INTM);
-+
-+	if (l1_ints & (TX_INT_STATUS | RX_INT_STATUS | USBCOM_INT_STATUS))
-+		retval = generic_interrupt(irq, musb);
-+
-+#if defined(CONFIG_USB_INVENTRA_DMA)
-+	if (l1_ints & DMA_INT_STATUS)
-+		retval = dma_controller_irq(irq, musb->dma_controller);
-+#endif
-+	return retval;
-+}
-+
-+static u32 mtk_musb_busctl_offset(u8 epnum, u16 offset)
-+{
-+	return MTK_MUSB_TXFUNCADDR + offset + 8 * epnum;
-+}
-+
-+static u8 mtk_musb_clearb(void __iomem *addr, unsigned int offset)
-+{
-+	u8 data;
-+
-+	/* W1C */
-+	data = musb_readb(addr, offset);
-+	musb_writeb(addr, offset, data);
-+	return data;
-+}
-+
-+static u16 mtk_musb_clearw(void __iomem *addr, unsigned int offset)
-+{
-+	u16 data;
-+
-+	/* W1C */
-+	data = musb_readw(addr, offset);
-+	musb_writew(addr, offset, data);
-+	return data;
-+}
-+
-+static int mtk_musb_set_mode(struct musb *musb, u8 mode)
-+{
-+	struct device *dev = musb->controller;
-+	struct mtk_glue *glue = dev_get_drvdata(dev->parent);
-+	enum phy_mode new_mode;
-+	enum usb_role new_role;
-+
-+	switch (mode) {
-+	case MUSB_HOST:
-+		new_mode = PHY_MODE_USB_HOST;
-+		new_role = USB_ROLE_HOST;
-+		break;
-+	case MUSB_PERIPHERAL:
-+		new_mode = PHY_MODE_USB_DEVICE;
-+		new_role = USB_ROLE_DEVICE;
-+		break;
-+	case MUSB_OTG:
-+		new_mode = PHY_MODE_USB_OTG;
-+		new_role = USB_ROLE_NONE;
-+		break;
-+	default:
-+		dev_err(glue->dev, "Invalid mode request\n");
-+		return -EINVAL;
-+	}
-+
-+	if (glue->phy_mode == new_mode)
-+		return 0;
-+
-+	if (musb->port_mode != MUSB_OTG) {
-+		dev_err(glue->dev, "Does not support changing modes\n");
-+		return -EINVAL;
-+	}
-+
-+	glue->role = new_role;
-+	musb_usb_role_sx_set(dev, glue->role);
-+	return 0;
-+}
-+
-+static int mtk_musb_init(struct musb *musb)
-+{
-+	struct device *dev = musb->controller;
-+	struct mtk_glue *glue = dev_get_drvdata(dev->parent);
-+	int ret;
-+
-+	glue->musb = musb;
-+	musb->phy = glue->phy;
-+	musb->xceiv = glue->xceiv;
-+	musb->is_host = false;
-+	musb->isr = mtk_musb_interrupt;
-+
-+	/* Set TX/RX toggle enable */
-+	musb_writew(musb->mregs, MUSB_TXTOGEN, MTK_TOGGLE_EN);
-+	musb_writew(musb->mregs, MUSB_RXTOGEN, MTK_TOGGLE_EN);
-+
-+	if (musb->port_mode == MUSB_OTG) {
-+		ret = mtk_otg_switch_init(glue);
-+		if (ret)
-+			return ret;
-+	}
-+
-+	ret = phy_init(glue->phy);
-+	if (ret)
-+		goto err_phy_init;
-+
-+	ret = phy_power_on(glue->phy);
-+	if (ret)
-+		goto err_phy_power_on;
-+
-+	phy_set_mode(glue->phy, glue->phy_mode);
-+
-+#if defined(CONFIG_USB_INVENTRA_DMA)
-+	musb_writel(musb->mregs, MUSB_HSDMA_INTR,
-+		    DMA_INTR_STATUS_MSK | DMA_INTR_UNMASK_SET_MSK);
-+#endif
-+	musb_writel(musb->mregs, USB_L1INTM, TX_INT_STATUS | RX_INT_STATUS |
-+		    USBCOM_INT_STATUS | DMA_INT_STATUS);
-+	return 0;
-+
-+err_phy_power_on:
-+	phy_exit(glue->phy);
-+err_phy_init:
-+	mtk_otg_switch_exit(glue);
-+	return ret;
-+}
-+
-+static u16 mtk_musb_get_toggle(struct musb_qh *qh, int is_out)
-+{
-+	struct musb *musb = qh->hw_ep->musb;
-+	u8 epnum = qh->hw_ep->epnum;
-+	u16 toggle;
-+
-+	toggle = musb_readw(musb->mregs, is_out ? MUSB_TXTOG : MUSB_RXTOG);
-+	return toggle & (1 << epnum);
-+}
-+
-+static u16 mtk_musb_set_toggle(struct musb_qh *qh, int is_out, struct urb *urb)
-+{
-+	struct musb *musb = qh->hw_ep->musb;
-+	u8 epnum = qh->hw_ep->epnum;
-+	u16 value, toggle;
-+
-+	toggle = usb_gettoggle(urb->dev, qh->epnum, is_out);
-+
-+	if (is_out) {
-+		value = musb_readw(musb->mregs, MUSB_TXTOG);
-+		value |= toggle << epnum;
-+		musb_writew(musb->mregs, MUSB_TXTOG, value);
-+	} else {
-+		value = musb_readw(musb->mregs, MUSB_RXTOG);
-+		value |= toggle << epnum;
-+		musb_writew(musb->mregs, MUSB_RXTOG, value);
-+	}
-+
-+	return 0;
-+}
-+
-+static int mtk_musb_exit(struct musb *musb)
-+{
-+	struct device *dev = musb->controller;
-+	struct mtk_glue *glue = dev_get_drvdata(dev->parent);
-+
-+	mtk_otg_switch_exit(glue);
-+	phy_power_off(glue->phy);
-+	phy_exit(glue->phy);
-+	mtk_musb_clks_disable(glue);
-+
-+	pm_runtime_put_sync(dev);
-+	pm_runtime_disable(dev);
-+	return 0;
-+}
-+
-+static const struct musb_platform_ops mtk_musb_ops = {
-+	.quirks = MUSB_DMA_INVENTRA,
-+	.init = mtk_musb_init,
-+	.get_toggle = mtk_musb_get_toggle,
-+	.set_toggle = mtk_musb_set_toggle,
-+	.exit = mtk_musb_exit,
-+#ifdef CONFIG_USB_INVENTRA_DMA
-+	.dma_init = musbhs_dma_controller_create_noirq,
-+	.dma_exit = musbhs_dma_controller_destroy,
-+#endif
-+	.clearb = mtk_musb_clearb,
-+	.clearw = mtk_musb_clearw,
-+	.busctl_offset = mtk_musb_busctl_offset,
-+	.set_mode = mtk_musb_set_mode,
-+};
-+
-+#define MTK_MUSB_MAX_EP_NUM	8
-+#define MTK_MUSB_RAM_BITS	11
-+
-+static struct musb_fifo_cfg mtk_musb_mode_cfg[] = {
-+	{ .hw_ep_num = 1, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 1, .style = FIFO_RX, .maxpacket = 512, },
-+	{ .hw_ep_num = 2, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 2, .style = FIFO_RX, .maxpacket = 512, },
-+	{ .hw_ep_num = 3, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 3, .style = FIFO_RX, .maxpacket = 512, },
-+	{ .hw_ep_num = 4, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 4, .style = FIFO_RX, .maxpacket = 512, },
-+	{ .hw_ep_num = 5, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 5, .style = FIFO_RX, .maxpacket = 512, },
-+	{ .hw_ep_num = 6, .style = FIFO_TX, .maxpacket = 1024, },
-+	{ .hw_ep_num = 6, .style = FIFO_RX, .maxpacket = 1024, },
-+	{ .hw_ep_num = 7, .style = FIFO_TX, .maxpacket = 512, },
-+	{ .hw_ep_num = 7, .style = FIFO_RX, .maxpacket = 64, },
-+};
-+
-+static const struct musb_hdrc_config mtk_musb_hdrc_config = {
-+	.fifo_cfg = mtk_musb_mode_cfg,
-+	.fifo_cfg_size = ARRAY_SIZE(mtk_musb_mode_cfg),
-+	.multipoint = true,
-+	.dyn_fifo = true,
-+	.num_eps = MTK_MUSB_MAX_EP_NUM,
-+	.ram_bits = MTK_MUSB_RAM_BITS,
-+};
-+
-+static const struct platform_device_info mtk_dev_info = {
-+	.name = "musb-hdrc",
-+	.id = PLATFORM_DEVID_AUTO,
-+	.dma_mask = DMA_BIT_MASK(32),
-+};
-+
-+static int mtk_musb_probe(struct platform_device *pdev)
-+{
-+	struct musb_hdrc_platform_data *pdata;
-+	struct mtk_glue *glue;
-+	struct platform_device_info pinfo;
-+	struct device *dev = &pdev->dev;
-+	struct device_node *np = dev->of_node;
-+	int ret = -ENOMEM;
-+
-+	glue = devm_kzalloc(dev, sizeof(*glue), GFP_KERNEL);
-+	if (!glue)
-+		return -ENOMEM;
-+
-+	glue->dev = dev;
-+	pdata = devm_kzalloc(dev, sizeof(*pdata), GFP_KERNEL);
-+	if (!pdata)
-+		return -ENOMEM;
-+
-+	ret = of_platform_populate(np, NULL, NULL, dev);
-+	if (ret) {
-+		dev_err(dev, "failed to create child devices at %p\n", np);
-+		return ret;
-+	}
-+
-+	ret = mtk_musb_clks_get(glue);
-+	if (ret)
-+		return ret;
-+
-+	pdata->config = &mtk_musb_hdrc_config;
-+	pdata->platform_ops = &mtk_musb_ops;
-+	pdata->mode = usb_get_dr_mode(dev);
-+
-+	if (IS_ENABLED(CONFIG_USB_MUSB_HOST))
-+		pdata->mode = USB_DR_MODE_HOST;
-+	else if (IS_ENABLED(CONFIG_USB_MUSB_GADGET))
-+		pdata->mode = USB_DR_MODE_PERIPHERAL;
-+
-+	switch (pdata->mode) {
-+	case USB_DR_MODE_HOST:
-+		glue->phy_mode = PHY_MODE_USB_HOST;
-+		glue->role = USB_ROLE_HOST;
-+		break;
-+	case USB_DR_MODE_PERIPHERAL:
-+		glue->phy_mode = PHY_MODE_USB_DEVICE;
-+		glue->role = USB_ROLE_DEVICE;
-+		break;
-+	case USB_DR_MODE_OTG:
-+		glue->phy_mode = PHY_MODE_USB_OTG;
-+		glue->role = USB_ROLE_NONE;
-+		break;
-+	default:
-+		dev_err(&pdev->dev, "Error 'dr_mode' property\n");
-+		return -EINVAL;
-+	}
-+
-+	glue->phy = devm_of_phy_get_by_index(dev, np, 0);
-+	if (IS_ERR(glue->phy)) {
-+		dev_err(dev, "fail to getting phy %ld\n",
-+			PTR_ERR(glue->phy));
-+		return PTR_ERR(glue->phy);
-+	}
-+
-+	glue->usb_phy = usb_phy_generic_register();
-+	if (IS_ERR(glue->usb_phy)) {
-+		dev_err(dev, "fail to registering usb-phy %ld\n",
-+			PTR_ERR(glue->usb_phy));
-+		return PTR_ERR(glue->usb_phy);
-+	}
-+
-+	glue->xceiv = devm_usb_get_phy(dev, USB_PHY_TYPE_USB2);
-+	if (IS_ERR(glue->xceiv)) {
-+		dev_err(dev, "fail to getting usb-phy %d\n", ret);
-+		ret = PTR_ERR(glue->xceiv);
-+		goto err_unregister_usb_phy;
-+	}
-+
-+	platform_set_drvdata(pdev, glue);
-+	pm_runtime_enable(dev);
-+	pm_runtime_get_sync(dev);
-+
-+	ret = mtk_musb_clks_enable(glue);
-+	if (ret)
-+		goto err_enable_clk;
-+
-+	pinfo = mtk_dev_info;
-+	pinfo.parent = dev;
-+	pinfo.res = pdev->resource;
-+	pinfo.num_res = pdev->num_resources;
-+	pinfo.data = pdata;
-+	pinfo.size_data = sizeof(*pdata);
-+
-+	glue->musb_pdev = platform_device_register_full(&pinfo);
-+	if (IS_ERR(glue->musb_pdev)) {
-+		ret = PTR_ERR(glue->musb_pdev);
-+		dev_err(dev, "failed to register musb device: %d\n", ret);
-+		goto err_device_register;
-+	}
-+
-+	return 0;
-+
-+err_device_register:
-+	mtk_musb_clks_disable(glue);
-+err_enable_clk:
-+	pm_runtime_put_sync(dev);
-+	pm_runtime_disable(dev);
-+err_unregister_usb_phy:
-+	usb_phy_generic_unregister(glue->usb_phy);
-+	return ret;
-+}
-+
-+static int mtk_musb_remove(struct platform_device *pdev)
-+{
-+	struct mtk_glue *glue = platform_get_drvdata(pdev);
-+	struct platform_device *usb_phy = glue->usb_phy;
-+
-+	platform_device_unregister(glue->musb_pdev);
-+	usb_phy_generic_unregister(usb_phy);
-+
-+	return 0;
-+}
-+
-+#ifdef CONFIG_OF
-+static const struct of_device_id mtk_musb_match[] = {
-+	{.compatible = "mediatek,mtk-musb",},
-+	{},
-+};
-+MODULE_DEVICE_TABLE(of, mtk_musb_match);
-+#endif
-+
-+static struct platform_driver mtk_musb_driver = {
-+	.probe = mtk_musb_probe,
-+	.remove = mtk_musb_remove,
-+	.driver = {
-+		   .name = "musb-mtk",
-+		   .of_match_table = of_match_ptr(mtk_musb_match),
-+	},
-+};
-+
-+module_platform_driver(mtk_musb_driver);
-+
-+MODULE_DESCRIPTION("MediaTek MUSB Glue Layer");
-+MODULE_AUTHOR("Min Guo <min.guo@mediatek.com>");
-+MODULE_LICENSE("GPL v2");
--- 
-1.9.1
+>         }
+>
+>         return 0;
+> }
+>
+> > [snip]
+> >
+> > > > > +static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > > > > +{
+> > > > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > > +   struct vb2_buffer *vb;
+> > > >
+> > > > How do we guarantee here that the hardware isn't still accessing the buffers
+> > > > removed below?
+> > > >
+> > > Maybe we can check the driver state flag and aborting the unfinished
+> > > jobs?
+> > > (fd_hw->state == FD_ENQ)
+> > >
+> >
+> > Yes, we need to either cancel or wait for the currently processing
+> > job. It depends on hardware capabilities, but cancelling is generally
+> > preferred for the lower latency.
+> >
+> Ok, it the state is ENQ, then we can disable the FD hw by controlling
+> the registers.
+>
+> for example:
+>         writel(0x0, fd->fd_base + FD_HW_ENABLE);
+>         writel(0x0, fd->fd_base + FD_INT_EN);
+>
 
+What's exactly the effect of writing 0 to FD_HW_ENABLE?
+
+[snip]
+
+> > > > > +}
+> > > > > +
+> > > > > +static void mtk_fd_vb2_request_complete(struct vb2_buffer *vb)
+> > > > > +{
+> > > > > +   struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vb->vb2_queue);
+> > > > > +
+> > > > > +   v4l2_ctrl_request_complete(vb->req_obj.req, &ctx->hdl);
+> > > > > +}
+> > > > > +
+> > > > > +static void mtk_fd_fill_pixfmt_mp(struct v4l2_pix_format_mplane *dfmt,
+> > > > > +                             const struct v4l2_pix_format_mplane *sfmt)
+> > > > > +{
+> > > > > +   dfmt->width = sfmt->width;
+> > > > > +   dfmt->height = sfmt->height;
+> > > > > +   dfmt->pixelformat = sfmt->pixelformat;
+> > > > > +   dfmt->field = sfmt->field;
+> > > > > +   dfmt->colorspace = sfmt->colorspace;
+> > > > > +   dfmt->num_planes = sfmt->num_planes;
+> > > > > +
+> > > > > +   /* Use default */
+> > > > > +   dfmt->ycbcr_enc = V4L2_YCBCR_ENC_DEFAULT;
+> > > > > +   dfmt->quantization = V4L2_QUANTIZATION_DEFAULT;
+> > > > > +   dfmt->xfer_func =
+> > > > > +           V4L2_MAP_XFER_FUNC_DEFAULT(dfmt->colorspace);
+> > > > > +   dfmt->plane_fmt[0].bytesperline = dfmt->width * 2;
+> > > > > +   dfmt->plane_fmt[0].sizeimage =
+> > > > > +           dfmt->height * dfmt->plane_fmt[0].bytesperline;
+> > > > > +   memset(dfmt->reserved, 0, sizeof(dfmt->reserved));
+> > > > > +}
+> > > >
+> > > > Could we unify this function with mtk_fd_m2m_try_fmt_out_mp()? That function
+> > > > should be almost directly reusable for the default format initialization +/-
+> > > > the arguments passed to it.
+> > > >
+> > > Ok, I will try to reuse it as following:
+> > >
+> > > static void mtk_fd_fill_pixfmt_mp(struct v4l2_pix_format_mplane *dfmt,
+> > >   const struct v4l2_pix_format_mplane *sfmt)
+> > > {
+> > > dfmt->field = V4L2_FIELD_NONE;
+> > > dfmt->colorspace = V4L2_COLORSPACE_BT2020;
+> > > dfmt->num_planes = sfmt->num_planes;
+> > > dfmt->ycbcr_enc = V4L2_YCBCR_ENC_DEFAULT;
+> > > dfmt->quantization = V4L2_QUANTIZATION_DEFAULT;
+> > > dfmt->xfer_func =
+> > > V4L2_MAP_XFER_FUNC_DEFAULT(dfmt->colorspace);
+> > >
+> > > /* Keep user setting as possible */
+> > > dfmt->width = clamp(dfmt->width,
+> > >     MTK_FD_OUTPUT_MIN_WIDTH,
+> > >     MTK_FD_OUTPUT_MAX_WIDTH);
+> > > dfmt->height = clamp(dfmt->height,
+> > >      MTK_FD_OUTPUT_MIN_HEIGHT,
+> > >      MTK_FD_OUTPUT_MAX_HEIGHT);
+> > >
+> > > if (sfmt->num_planes == 2) {
+> > > /* NV16M and NV61M has 1 byte per pixel */
+> > > dfmt->plane_fmt[0].bytesperline = dfmt->width;
+> > > dfmt->plane_fmt[1].bytesperline = dfmt->width;
+> > > } else {
+> > > /* 2 bytes per pixel */
+> > > dfmt->plane_fmt[0].bytesperline = dfmt->width * 2;
+> > > }
+> > >
+> > > dfmt->plane_fmt[0].sizeimage =
+> > > dfmt->height * dfmt->plane_fmt[0].bytesperline;
+> > > }
+> >
+> > How would the implementation of TRY_FMT look in this case?
+> >
+>
+> It will be looked like:
+>
+> static int mtk_fd_try_fmt_out_mp(struct file *file,
+>                                      void *fh,
+>                                      struct v4l2_format *f)
+> {
+>         struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
+>         const struct v4l2_pix_format_mplane *fmt;
+>
+>         fmt = mtk_fd_find_fmt(pix_mp->pixelformat);
+>         if (!fmt)
+>                 fmt = &mtk_fd_img_fmts[0];      /* Get default img fmt */
+>
+>         mtk_fd_fill_pixfmt_mp(pix_mp, fmt);
+>         return 0;
+> }
+>
+
+Okay, thanks!
+
+Best regards,
+Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
