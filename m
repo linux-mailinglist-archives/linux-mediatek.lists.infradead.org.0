@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 345A3A30CA
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 09:19:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8BC4EA3129
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 09:39:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=l1hhpPToSFf78XiWyrHIPSiDUEYqX6tD72rVhTDh50g=; b=ZNGKJWwktIlkbW
-	mNj+BJP6vq1YZ+UqYt2pX3VdH9VTNyhm4Og5ZFnuz7Ey44GV5ZISjwkui/F6EqZbSDw3bPOx8C3EE
-	1u6jEgxti5XKP/XaIyT9TZm52AMw3arTp0QuT1Mc2Kqui7DGlPe67KfY4xZluhyRrAY8PYiTrzbbK
-	TfMSXcTgR8YzH8upCKrpgXkiDKp6JM82TNfvCkjLHMA+vFg0SmaJzdQjzy0evMbR6jGmTEVNtqx5b
-	1g8uycSno7ZtmJfFaWxgXc1d97oof7y36V7VCWBD21kmKdqk9iY03ui397Ca/AKYt1phIopnSRLYB
-	Sgu8yXSbybdLWsbu51RA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=DQwfr/ChjCBWD/eRHUDHDpjXAJ9AqgRerhgsoArOx8g=; b=DfSRAtRyaHBCXp
+	U+k0BQTzObezF/vzsGNVcLGfQrOAJLElh6UbQjgozPv7ceyak8esGh8hx+k08wl6j6cWEDo/0gWW4
+	0hewkSaYofCggK6GX8PGdjX9j/HiP3yqo5fD+JEvENz82RxOWcdMIe6yHnO59ug2SgUFvtx1mqhIx
+	a1w7pFvFRlMGNhGSXPd3Mn06zXc3e2JaRuVpqGwJIKmSJYDqV6R4HcOH7iLWU+WEw5rQczOj5yCB/
+	wipWpHZvpx3GrXvwr/GIKrVepiQ71fAOUV7kvivausvHY5zVrbzOx/iVjtSAwXfz5UPfMWZvMKiLo
+	oZISfoLePI8DRVQzngiQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3bBz-0000ht-Av; Fri, 30 Aug 2019 07:19:31 +0000
+	id 1i3bVL-0001Xn-3g; Fri, 30 Aug 2019 07:39:31 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3b7u-00063u-Hv; Fri, 30 Aug 2019 07:15:20 +0000
-X-UUID: 932ec648218046528c3737e0c26de855-20190829
-X-UUID: 932ec648218046528c3737e0c26de855-20190829
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1i3bUR-0000lO-6A; Fri, 30 Aug 2019 07:38:36 +0000
+X-UUID: 76050121174442e2a1a37e226dfa47b8-20190829
+X-UUID: 76050121174442e2a1a37e226dfa47b8-20190829
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1695339172; Thu, 29 Aug 2019 23:15:22 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ with ESMTP id 1135534006; Thu, 29 Aug 2019 23:38:37 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 00:15:21 -0700
+ 15.0.1395.4; Fri, 30 Aug 2019 00:38:35 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 15:15:16 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 30 Aug 2019 15:15:16 +0800
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Kishon Vijay Abraham I <kishon@ti.com>, Rob Herring <robh+dt@kernel.org>
-Subject: [PATCH v2 11/11] arm64: dts: mt2712: use non-empty ranges for usb-phy
-Date: Fri, 30 Aug 2019 15:14:58 +0800
-Message-ID: <1567149298-29366-11-git-send-email-chunfeng.yun@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1567149298-29366-1-git-send-email-chunfeng.yun@mediatek.com>
-References: <1567149298-29366-1-git-send-email-chunfeng.yun@mediatek.com>
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 30 Aug 2019 15:38:27 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 30 Aug 2019 15:38:27 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: David Airlie <airlied@linux.ie>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Daniel Vetter <daniel.vetter@ffwll.ch>,
+ <dri-devel@lists.freedesktop.org>, <linux-mediatek@lists.infradead.org>
+Subject: [PATCH 0/2] drm/mediatek: fixup cursor moving unsmooth issue
+Date: Fri, 30 Aug 2019 15:38:17 +0800
+Message-ID: <20190830073819.16566-1-bibby.hsieh@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: BD036BF71A2114EE1D0769FF267A80CF60102E115BE80E3E7B8EE655C728DD512000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190830_001519_000170_EA0A6064 
-X-CRM114-Status: GOOD (  10.70  )
+X-CRM114-CacheID: sfid-20190830_003835_265243_62CB36EC 
+X-CRM114-Status: UNSURE (   5.47  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -71,116 +71,31 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: drinkcat@chromium.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ linux-kernel@vger.kernel.org, tfiga@chromium.org, CK Hu <ck.hu@mediatek.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Philipp Zabel <p.zabel@pengutronix.de>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use non-empty ranges for usb-phy to make the layout of
-its registers clearer;
-Replace deprecated compatible by generic
+These patches can fixup cursor moving is not smooth when heavy load in
+webgl.
 
-Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
----
-v2: use generic compatible
----
- arch/arm64/boot/dts/mediatek/mt2712e.dtsi | 42 ++++++++++++-----------
- 1 file changed, 22 insertions(+), 20 deletions(-)
+Bibby Hsieh (2):
+  drm/mediatek: Only block updates to CRTCs that have a pending update
+  drm/mediatek: Bypass atomic helpers for cursor updates
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-index 43307bad3f0d..e24f2f2f6004 100644
---- a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-@@ -697,30 +697,31 @@
- 	};
- 
- 	u3phy0: usb-phy@11290000 {
--		compatible = "mediatek,mt2712-u3phy";
--		#address-cells = <2>;
--		#size-cells = <2>;
--		ranges;
-+		compatible = "mediatek,mt2712-tphy",
-+			     "mediatek,generic-tphy-v2";
-+		#address-cells = <1>;
-+		#size-cells = <1>;
-+		ranges = <0 0 0x11290000 0x9000>;
- 		status = "okay";
- 
--		u2port0: usb-phy@11290000 {
--			reg = <0 0x11290000 0 0x700>;
-+		u2port0: usb-phy@0 {
-+			reg = <0x0 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u2port1: usb-phy@11298000 {
--			reg = <0 0x11298000 0 0x700>;
-+		u2port1: usb-phy@8000 {
-+			reg = <0x8000 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u3port0: usb-phy@11298700 {
--			reg = <0 0x11298700 0 0x900>;
-+		u3port0: usb-phy@8700 {
-+			reg = <0x8700 0x900>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
-@@ -760,30 +761,31 @@
- 	};
- 
- 	u3phy1: usb-phy@112e0000 {
--		compatible = "mediatek,mt2712-u3phy";
--		#address-cells = <2>;
--		#size-cells = <2>;
--		ranges;
-+		compatible = "mediatek,mt2712-tphy",
-+			     "mediatek,generic-tphy-v2";
-+		#address-cells = <1>;
-+		#size-cells = <1>;
-+		ranges = <0 0 0x112e0000 0x9000>;
- 		status = "okay";
- 
--		u2port2: usb-phy@112e0000 {
--			reg = <0 0x112e0000 0 0x700>;
-+		u2port2: usb-phy@0 {
-+			reg = <0x0 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u2port3: usb-phy@112e8000 {
--			reg = <0 0x112e8000 0 0x700>;
-+		u2port3: usb-phy@8000 {
-+			reg = <0x8000 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u3port1: usb-phy@112e8700 {
--			reg = <0 0x112e8700 0 0x900>;
-+		u3port1: usb-phy@8700 {
-+			reg = <0x8700 0x900>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c  |  53 +++++-
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.h  |   2 +
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c   | 214 ++++++++++++++++++++---
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h   |  15 +-
+ drivers/gpu/drm/mediatek/mtk_drm_plane.c |  73 +++++++-
+ 5 files changed, 330 insertions(+), 27 deletions(-)
+
 -- 
-2.23.0
+2.18.0
 
 
 _______________________________________________
