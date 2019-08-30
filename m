@@ -2,62 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 31D31A2DA4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 05:53:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7A9FCA2DC5
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 05:57:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=SwhXfiNZN6H3+N3zvTSLyKVfaOt5nXDKbNC8FOPoW4c=; b=VmEBhloCt6Fgtk
-	s4zNLgcwRS6W3BFkjtqdGVfJccma8uqC1KJ3aqBfKnZRaJNZwi7xxI19IjMCl4av7lWLMzB/wy0ZW
-	80Gwa39V1quBgQcH/jxyprvmmfuF+ylXK9ck0J4mLeSdSNA+xNQHcoqDdTnrHJe2Zx8UdtRYW0QmB
-	UNlkQ4JEqcS4aazblDTaV+EXmsBNrml5dTh+qeaKfieDZQLrVi4yde3Kwo+2uiW8ZsPvrYU4upvz8
-	IaR5q8s3iyjwICI4h64zzVJWHlHcTWlh2ee0IxMEx+X6dZKUvwutG24tmeGOho/S06bdBV0LWJcAq
-	85ei56sU+egnLPns5kpw==;
+	List-Owner; bh=WohMrWmkUWzzv238EeAQynOl3/AhwQPzlg6Cnazs1H8=; b=Z3WQhDoWysCW+M
+	4Vm/zn/VBqlpiLa6An9+2Zo0OgzF5RgISt5Nai1/HeQ1xEbUIsjL7yvsNSNQ9trBAv+GyIOPhDO6z
+	j4sxdEbrlwC2fj63uHvPrMPxDqS/wZ5rnrBDAM/purO0LHSX6NY2G1TPkD5nRvky7hJKmNLUqvpl6
+	J0yH9Gj392fIKZL/9fxe+hjppRM4l4jLPMIzI7Mu08uym7XWKtT31rJCf1r5CBxlq1NePtNmPQULs
+	zUGTbQOMRCncsUMmRMhqf1Kt54BqNUkdJMauDdi6lh4sOsjYXFb3VSTyCnTv4N7GAmkYPdWnRTTo+
+	QEujGlIz4p1jhXaakSZQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3Xyj-0001DL-Hp; Fri, 30 Aug 2019 03:53:37 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i3Y2T-0002bg-T9; Fri, 30 Aug 2019 03:57:29 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3Xyg-0001Cz-DS
- for linux-mediatek@lists.infradead.org; Fri, 30 Aug 2019 03:53:35 +0000
-X-UUID: a6cd72b9723b430ab943cbca09f3a6d6-20190829
-X-UUID: a6cd72b9723b430ab943cbca09f3a6d6-20190829
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1i3Y2P-0002az-6N
+ for linux-mediatek@lists.infradead.org; Fri, 30 Aug 2019 03:57:26 +0000
+X-UUID: fbc59ba033d84afe9d2e18068c0a90e6-20190829
+X-UUID: fbc59ba033d84afe9d2e18068c0a90e6-20190829
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 866277732; Thu, 29 Aug 2019 19:53:38 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 29 Aug 2019 20:53:36 -0700
+ with ESMTP id 212163302; Thu, 29 Aug 2019 19:57:28 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 29 Aug 2019 20:57:26 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 11:53:35 +0800
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 30 Aug 2019 11:57:25 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 30 Aug 2019 11:53:35 +0800
+ Frontend Transport; Fri, 30 Aug 2019 11:57:25 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [RESEND PATCH v7 0/11] Add mt7629 and fix mt7628 pwm
-Date: Fri, 30 Aug 2019 11:53:16 +0800
-Message-ID: <1567137207-9827-1-git-send-email-sam.shih@mediatek.com>
+Subject: [RESEND, PATCH v7 0/11] Add mt7629 and fix mt7628 pwm
+Date: Fri, 30 Aug 2019 11:57:06 +0800
+Message-ID: <1567137437-10041-1-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: F7BDBA47FF00EC61B619D606C371BCB2892B5403477FFFBA9C3B3A2986E6A3682000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_205334_463799_699B9497 
-X-CRM114-Status: GOOD (  11.38  )
+X-CRM114-CacheID: sfid-20190829_205725_244896_566268EE 
+X-CRM114-Status: GOOD (  11.30  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -83,7 +82,7 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 Changes since v7:
-  1. PATCH v7 10/100: Add a missed Reviewed-by tag back
+  1. PATCH v7 10/11: Add a missed Reviewed-by tag
 
 Changes since v6:
   1. Due to we can use fixed-clock in DT
