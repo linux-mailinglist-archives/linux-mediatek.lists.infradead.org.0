@@ -2,60 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 05E56A3212
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 10:23:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 06543A3233
+	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 10:24:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KEahIlux/rfrrdaa3tAyua70PBPre6SXE+DcOqEvLAw=; b=RRWiZfE72+KY5q
-	FCC8b2/x5d/Gmp0I6rnBrpaTdfTDwzWUnBh7sWJOUJEQxKO4NPwRT77fVw+7ixkkD62aUc5eo3Q64
-	5j7eADzCVJHjWEjkgSXjw68haXADPGy+MyCt+xI+Ke6KuvI9CUOkTlDi4Z0C0OQ3lUOyw17x0sdHW
-	p0rFVgjy0XpNOTeofvhD21Gdtxl0gIsRSU/FKQlWlxTar7RYHkz3Yc/tv3nQ/3T+DJsHTEyPHuBMU
-	BoolW/D+I1CDnmhUnodPLh9041+Td45xyFOJQJBgAzjJ/eTtN+rvH7OmQcksZy+/F1opEjALnEQqj
-	IHofQ268+o2vGe+33bMg==;
+	List-Owner; bh=I3VuQvxCMhhrcWMCr1sHefXx0TCACUMS/vPXfq5X0wI=; b=s83HzFHrg3sciN
+	hUDx+A9OH7RuyVDaqkk54eaz3GpJHI4t7ortKtzfJ9HQ0ZaX2OWS7XndZobW8UewHMMwK/b+U/LAD
+	gOCqyOSRMIEmgEzBLycRqiX0g4qxn9hehXgpdPOKlYArKemMqaVE0t+YVpAYUpq3nlDZC5plKwp3C
+	EltmrK6JKdYT1snpp97Z15WWslzKgLOGyToGCoRG9JHhyPDJ1LTmZNacCYQDHM/tYWkw/EdtV032K
+	aPCt2MLB8eHIqUVj3rho8SCv1I+uOShqwBFy/RQorYnTb8NE6xjRavbiJWzZgHkjK7xULY1lh4nHM
+	9eQ80o9nnuxfelKRvWHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3cBw-0006dp-T5; Fri, 30 Aug 2019 08:23:32 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i3cD8-0007mq-Lj; Fri, 30 Aug 2019 08:24:46 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3cBP-00067w-5r; Fri, 30 Aug 2019 08:23:00 +0000
-X-UUID: c24d4d20ded148e9a8f067ce483031f3-20190830
-X-UUID: c24d4d20ded148e9a8f067ce483031f3-20190830
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1i3cBU-000692-3d; Fri, 30 Aug 2019 08:23:06 +0000
+X-UUID: 0073b6ede62045a2aa9da14768fbd0fe-20190830
+X-UUID: 0073b6ede62045a2aa9da14768fbd0fe-20190830
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <min.guo@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1072388921; Fri, 30 Aug 2019 00:23:03 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ with ESMTP id 446983470; Fri, 30 Aug 2019 00:23:05 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 01:23:01 -0700
+ 15.0.1395.4; Fri, 30 Aug 2019 01:23:04 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 30 Aug 2019 16:22:58 +0800
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 30 Aug 2019 16:23:01 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 30 Aug 2019 16:22:57 +0800
+ Transport; Fri, 30 Aug 2019 16:23:00 +0800
 From: <min.guo@mediatek.com>
 To: Bin Liu <b-liu@ti.com>, Rob Herring <robh+dt@kernel.org>
-Subject: [PATCH v7 4/6] usb: musb: Add noirq type of dma create interface
-Date: Fri, 30 Aug 2019 16:20:24 +0800
-Message-ID: <20190830082026.30401-5-min.guo@mediatek.com>
+Subject: [PATCH v7 5/6] usb: musb: Add musb_clearb/w() interface
+Date: Fri, 30 Aug 2019 16:20:25 +0800
+Message-ID: <20190830082026.30401-6-min.guo@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20190830082026.30401-1-min.guo@mediatek.com>
 References: <20190830082026.30401-1-min.guo@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: C532C9635AC80C52974C181A136781EABC7AA483B61E6BDAC553564E7C6E68DE2000:8
+X-TM-SNTS-SMTP: ED8AA4EB96E3E9F87EAB3A41ECC9BE44E6C67B308D27480D33342F2328856A762000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190830_012259_222616_3F530EE4 
-X-CRM114-Status: GOOD (  12.91  )
+X-CRM114-CacheID: sfid-20190830_012304_283578_EAE92CF4 
+X-CRM114-Status: GOOD (  12.45  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -85,9 +87,9 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Min Guo <min.guo@mediatek.com>
 
-Add noirq type of dma create interface for platform which do not
-have dedicated DMA interrupt line, move musbhsdma macro definition
-to musb_dma.h
+Delete the const attribute of addr parameter in readb/w/l hooks, these
+changes are for implementing clearing W1C registers.
+Replace musb_readb/w with musb_clearb/w to clear the interrupt status.
 
 Signed-off-by: Min Guo <min.guo@mediatek.com>
 ---
@@ -98,140 +100,209 @@ changes in v6:
 1. no changes
 
 changes in v5:
-1. no changes
+1. Replace musb_readb() with musb_clearb() to clear dma pending interrupts
 
 new patch based on v4:
 ---
- drivers/usb/musb/musb_dma.h  |  9 ++++++++
- drivers/usb/musb/musbhsdma.c | 54 ++++++++++++++++++++++++++++++--------------
- 2 files changed, 46 insertions(+), 17 deletions(-)
+ drivers/usb/musb/musb_core.c | 32 +++++++++++++++++++++++---------
+ drivers/usb/musb/musb_core.h |  8 ++++++--
+ drivers/usb/musb/musb_io.h   |  8 +++++---
+ drivers/usb/musb/musbhsdma.c |  2 +-
+ drivers/usb/musb/sunxi.c     |  4 ++--
+ drivers/usb/musb/tusb6010.c  |  2 +-
+ 6 files changed, 38 insertions(+), 18 deletions(-)
 
-diff --git a/drivers/usb/musb/musb_dma.h b/drivers/usb/musb/musb_dma.h
-index 8f60271..05103ea 100644
---- a/drivers/usb/musb/musb_dma.h
-+++ b/drivers/usb/musb/musb_dma.h
-@@ -35,6 +35,12 @@
-  *    whether shared with the Inventra core or separate.
+diff --git a/drivers/usb/musb/musb_core.c b/drivers/usb/musb/musb_core.c
+index 491d361..8528726 100644
+--- a/drivers/usb/musb/musb_core.c
++++ b/drivers/usb/musb/musb_core.c
+@@ -246,7 +246,7 @@ static u32 musb_default_busctl_offset(u8 epnum, u16 offset)
+ 	return 0x80 + (0x08 * epnum) + offset;
+ }
+ 
+-static u8 musb_default_readb(const void __iomem *addr, unsigned offset)
++static u8 musb_default_readb(void __iomem *addr, unsigned offset)
+ {
+ 	u8 data =  __raw_readb(addr + offset);
+ 
+@@ -260,7 +260,7 @@ static void musb_default_writeb(void __iomem *addr, unsigned offset, u8 data)
+ 	__raw_writeb(data, addr + offset);
+ }
+ 
+-static u16 musb_default_readw(const void __iomem *addr, unsigned offset)
++static u16 musb_default_readw(void __iomem *addr, unsigned offset)
+ {
+ 	u16 data = __raw_readw(addr + offset);
+ 
+@@ -396,19 +396,25 @@ static void musb_default_read_fifo(struct musb_hw_ep *hw_ep, u16 len, u8 *dst)
+ /*
+  * Old style IO functions
   */
+-u8 (*musb_readb)(const void __iomem *addr, unsigned offset);
++u8 (*musb_readb)(void __iomem *addr, unsigned offset);
+ EXPORT_SYMBOL_GPL(musb_readb);
  
-+#define MUSB_HSDMA_BASE		0x200
-+#define MUSB_HSDMA_INTR		(MUSB_HSDMA_BASE + 0)
-+#define MUSB_HSDMA_CONTROL		0x4
-+#define MUSB_HSDMA_ADDRESS		0x8
-+#define MUSB_HSDMA_COUNT		0xc
+ void (*musb_writeb)(void __iomem *addr, unsigned offset, u8 data);
+ EXPORT_SYMBOL_GPL(musb_writeb);
+ 
+-u16 (*musb_readw)(const void __iomem *addr, unsigned offset);
++u8 (*musb_clearb)(void __iomem *addr, unsigned int offset);
++EXPORT_SYMBOL_GPL(musb_clearb);
 +
- #define	DMA_ADDR_INVALID	(~(dma_addr_t)0)
++u16 (*musb_readw)(void __iomem *addr, unsigned offset);
+ EXPORT_SYMBOL_GPL(musb_readw);
  
- #ifdef CONFIG_MUSB_PIO_ONLY
-@@ -191,6 +197,9 @@ static inline void musb_dma_controller_destroy(struct dma_controller *d) { }
- extern struct dma_controller *
- musbhs_dma_controller_create(struct musb *musb, void __iomem *base);
- extern void musbhs_dma_controller_destroy(struct dma_controller *c);
-+extern struct dma_controller *
-+musbhs_dma_controller_create_noirq(struct musb *musb, void __iomem *base);
-+extern irqreturn_t dma_controller_irq(int irq, void *private_data);
+ void (*musb_writew)(void __iomem *addr, unsigned offset, u16 data);
+ EXPORT_SYMBOL_GPL(musb_writew);
  
- extern struct dma_controller *
- tusb_dma_controller_create(struct musb *musb, void __iomem *base);
+-u32 musb_readl(const void __iomem *addr, unsigned offset)
++u16 (*musb_clearw)(void __iomem *addr, unsigned int offset);
++EXPORT_SYMBOL_GPL(musb_clearw);
++
++u32 musb_readl(void __iomem *addr, unsigned offset)
+ {
+ 	u32 data = __raw_readl(addr + offset);
+ 
+@@ -1047,7 +1053,6 @@ static irqreturn_t musb_stage0_irq(struct musb *musb, u8 int_usb,
+ static void musb_disable_interrupts(struct musb *musb)
+ {
+ 	void __iomem	*mbase = musb->mregs;
+-	u16	temp;
+ 
+ 	/* disable interrupts */
+ 	musb_writeb(mbase, MUSB_INTRUSBE, 0);
+@@ -1057,9 +1062,9 @@ static void musb_disable_interrupts(struct musb *musb)
+ 	musb_writew(mbase, MUSB_INTRRXE, 0);
+ 
+ 	/*  flush pending interrupts */
+-	temp = musb_readb(mbase, MUSB_INTRUSB);
+-	temp = musb_readw(mbase, MUSB_INTRTX);
+-	temp = musb_readw(mbase, MUSB_INTRRX);
++	musb_clearb(mbase, MUSB_INTRUSB);
++	musb_clearw(mbase, MUSB_INTRTX);
++	musb_clearw(mbase, MUSB_INTRRX);
+ }
+ 
+ static void musb_enable_interrupts(struct musb *musb)
+@@ -2285,10 +2290,19 @@ static void musb_deassert_reset(struct work_struct *work)
+ 		musb_readb = musb->ops->readb;
+ 	if (musb->ops->writeb)
+ 		musb_writeb = musb->ops->writeb;
++	if (musb->ops->clearb)
++		musb_clearb = musb->ops->clearb;
++	else
++		musb_clearb = musb_readb;
++
+ 	if (musb->ops->readw)
+ 		musb_readw = musb->ops->readw;
+ 	if (musb->ops->writew)
+ 		musb_writew = musb->ops->writew;
++	if (musb->ops->clearw)
++		musb_clearw = musb->ops->clearw;
++	else
++		musb_clearw = musb_readw;
+ 
+ #ifndef CONFIG_MUSB_PIO_ONLY
+ 	if (!musb->ops->dma_init || !musb->ops->dma_exit) {
+diff --git a/drivers/usb/musb/musb_core.h b/drivers/usb/musb/musb_core.h
+index 9f5a69c..0d9a35f 100644
+--- a/drivers/usb/musb/musb_core.h
++++ b/drivers/usb/musb/musb_core.h
+@@ -120,8 +120,10 @@ enum musb_g_ep0_state {
+  * @fifo_offset: returns the fifo offset
+  * @readb:	read 8 bits
+  * @writeb:	write 8 bits
++ * @clearb:	could be clear-on-readb or W1C
+  * @readw:	read 16 bits
+  * @writew:	write 16 bits
++ * @clearw:	could be clear-on-readw or W1C
+  * @read_fifo:	reads the fifo
+  * @write_fifo:	writes to fifo
+  * @get_toggle:	platform specific get toggle function
+@@ -164,10 +166,12 @@ struct musb_platform_ops {
+ 	u16	fifo_mode;
+ 	u32	(*fifo_offset)(u8 epnum);
+ 	u32	(*busctl_offset)(u8 epnum, u16 offset);
+-	u8	(*readb)(const void __iomem *addr, unsigned offset);
++	u8	(*readb)(void __iomem *addr, unsigned offset);
+ 	void	(*writeb)(void __iomem *addr, unsigned offset, u8 data);
+-	u16	(*readw)(const void __iomem *addr, unsigned offset);
++	u8	(*clearb)(void __iomem *addr, unsigned int offset);
++	u16	(*readw)(void __iomem *addr, unsigned offset);
+ 	void	(*writew)(void __iomem *addr, unsigned offset, u16 data);
++	u16	(*clearw)(void __iomem *addr, unsigned int offset);
+ 	void	(*read_fifo)(struct musb_hw_ep *hw_ep, u16 len, u8 *buf);
+ 	void	(*write_fifo)(struct musb_hw_ep *hw_ep, u16 len, const u8 *buf);
+ 	u16	(*get_toggle)(struct musb_qh *qh, int is_out);
+diff --git a/drivers/usb/musb/musb_io.h b/drivers/usb/musb/musb_io.h
+index 8179334..7200596 100644
+--- a/drivers/usb/musb/musb_io.h
++++ b/drivers/usb/musb/musb_io.h
+@@ -37,11 +37,13 @@ struct musb_io {
+ };
+ 
+ /* Do not add new entries here, add them the struct musb_io instead */
+-extern u8 (*musb_readb)(const void __iomem *addr, unsigned offset);
++extern u8 (*musb_readb)(void __iomem *addr, unsigned offset);
+ extern void (*musb_writeb)(void __iomem *addr, unsigned offset, u8 data);
+-extern u16 (*musb_readw)(const void __iomem *addr, unsigned offset);
++extern u8 (*musb_clearb)(void __iomem *addr, unsigned int offset);
++extern u16 (*musb_readw)(void __iomem *addr, unsigned offset);
+ extern void (*musb_writew)(void __iomem *addr, unsigned offset, u16 data);
+-extern u32 musb_readl(const void __iomem *addr, unsigned offset);
++extern u16 (*musb_clearw)(void __iomem *addr, unsigned int offset);
++extern u32 musb_readl(void __iomem *addr, unsigned offset);
+ extern void musb_writel(void __iomem *addr, unsigned offset, u32 data);
+ 
+ #endif
 diff --git a/drivers/usb/musb/musbhsdma.c b/drivers/usb/musb/musbhsdma.c
-index 5fc6825..d549c0b 100644
+index d549c0b..975c61e 100644
 --- a/drivers/usb/musb/musbhsdma.c
 +++ b/drivers/usb/musb/musbhsdma.c
-@@ -10,12 +10,7 @@
- #include <linux/platform_device.h>
- #include <linux/slab.h>
- #include "musb_core.h"
--
--#define MUSB_HSDMA_BASE		0x200
--#define MUSB_HSDMA_INTR		(MUSB_HSDMA_BASE + 0)
--#define MUSB_HSDMA_CONTROL		0x4
--#define MUSB_HSDMA_ADDRESS		0x8
--#define MUSB_HSDMA_COUNT		0xc
-+#include "musb_dma.h"
+@@ -284,7 +284,7 @@ irqreturn_t dma_controller_irq(int irq, void *private_data)
  
- #define MUSB_HSDMA_CHANNEL_OFFSET(_bchannel, _offset)		\
- 		(MUSB_HSDMA_BASE + (_bchannel << 4) + _offset)
-@@ -268,7 +263,7 @@ static int dma_channel_abort(struct dma_channel *channel)
- 	return 0;
+ 	spin_lock_irqsave(&musb->lock, flags);
+ 
+-	int_hsdma = musb_readb(mbase, MUSB_HSDMA_INTR);
++	int_hsdma = musb_clearb(mbase, MUSB_HSDMA_INTR);
+ 
+ 	if (!int_hsdma) {
+ 		musb_dbg(musb, "spurious DMA irq");
+diff --git a/drivers/usb/musb/sunxi.c b/drivers/usb/musb/sunxi.c
+index 832a41f..2c1bbaa 100644
+--- a/drivers/usb/musb/sunxi.c
++++ b/drivers/usb/musb/sunxi.c
+@@ -407,7 +407,7 @@ static u32 sunxi_musb_busctl_offset(u8 epnum, u16 offset)
+ 	return SUNXI_MUSB_TXFUNCADDR + offset;
  }
  
--static irqreturn_t dma_controller_irq(int irq, void *private_data)
-+irqreturn_t dma_controller_irq(int irq, void *private_data)
+-static u8 sunxi_musb_readb(const void __iomem *addr, unsigned offset)
++static u8 sunxi_musb_readb(void __iomem *addr, unsigned offset)
  {
- 	struct musb_dma_controller *controller = private_data;
- 	struct musb *musb = controller->private_data;
-@@ -383,6 +378,7 @@ static irqreturn_t dma_controller_irq(int irq, void *private_data)
- 	spin_unlock_irqrestore(&musb->lock, flags);
- 	return retval;
- }
-+EXPORT_SYMBOL_GPL(dma_controller_irq);
+ 	struct sunxi_glue *glue;
  
- void musbhs_dma_controller_destroy(struct dma_controller *c)
+@@ -520,7 +520,7 @@ static void sunxi_musb_writeb(void __iomem *addr, unsigned offset, u8 data)
+ 		(int)(addr - sunxi_musb->mregs));
+ }
+ 
+-static u16 sunxi_musb_readw(const void __iomem *addr, unsigned offset)
++static u16 sunxi_musb_readw(void __iomem *addr, unsigned offset)
  {
-@@ -398,18 +394,10 @@ void musbhs_dma_controller_destroy(struct dma_controller *c)
- }
- EXPORT_SYMBOL_GPL(musbhs_dma_controller_destroy);
- 
--struct dma_controller *musbhs_dma_controller_create(struct musb *musb,
--						    void __iomem *base)
-+static struct musb_dma_controller *
-+dma_controller_alloc(struct musb *musb, void __iomem *base)
+ 	if (addr == sunxi_musb->mregs) {
+ 		/* generic control or fifo control reg access */
+diff --git a/drivers/usb/musb/tusb6010.c b/drivers/usb/musb/tusb6010.c
+index 3945328..cfb94f9 100644
+--- a/drivers/usb/musb/tusb6010.c
++++ b/drivers/usb/musb/tusb6010.c
+@@ -142,7 +142,7 @@ static void tusb_ep_select(void __iomem *mbase, u8 epnum)
+ /*
+  * TUSB6010 doesn't allow 8-bit access; 16-bit access is the minimum.
+  */
+-static u8 tusb_readb(const void __iomem *addr, unsigned offset)
++static u8 tusb_readb(void __iomem *addr, unsigned offset)
  {
- 	struct musb_dma_controller *controller;
--	struct device *dev = musb->controller;
--	struct platform_device *pdev = to_platform_device(dev);
--	int irq = platform_get_irq_byname(pdev, "dma");
--
--	if (irq <= 0) {
--		dev_err(dev, "No DMA interrupt line!\n");
--		return NULL;
--	}
- 
- 	controller = kzalloc(sizeof(*controller), GFP_KERNEL);
- 	if (!controller)
-@@ -423,6 +411,25 @@ struct dma_controller *musbhs_dma_controller_create(struct musb *musb,
- 	controller->controller.channel_release = dma_channel_release;
- 	controller->controller.channel_program = dma_channel_program;
- 	controller->controller.channel_abort = dma_channel_abort;
-+	return controller;
-+}
-+
-+struct dma_controller *
-+musbhs_dma_controller_create(struct musb *musb, void __iomem *base)
-+{
-+	struct musb_dma_controller *controller;
-+	struct device *dev = musb->controller;
-+	struct platform_device *pdev = to_platform_device(dev);
-+	int irq = platform_get_irq_byname(pdev, "dma");
-+
-+	if (irq <= 0) {
-+		dev_err(dev, "No DMA interrupt line!\n");
-+		return NULL;
-+	}
-+
-+	controller = dma_controller_alloc(musb, base);
-+	if (!controller)
-+		return NULL;
- 
- 	if (request_irq(irq, dma_controller_irq, 0,
- 			dev_name(musb->controller), &controller->controller)) {
-@@ -437,3 +444,16 @@ struct dma_controller *musbhs_dma_controller_create(struct musb *musb,
- 	return &controller->controller;
- }
- EXPORT_SYMBOL_GPL(musbhs_dma_controller_create);
-+
-+struct dma_controller *
-+musbhs_dma_controller_create_noirq(struct musb *musb, void __iomem *base)
-+{
-+	struct musb_dma_controller *controller;
-+
-+	controller = dma_controller_alloc(musb, base);
-+	if (!controller)
-+		return NULL;
-+
-+	return &controller->controller;
-+}
-+EXPORT_SYMBOL_GPL(musbhs_dma_controller_create_noirq);
+ 	u16 tmp;
+ 	u8 val;
 -- 
 1.9.1
 
