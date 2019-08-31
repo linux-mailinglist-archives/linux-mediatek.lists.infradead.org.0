@@ -2,84 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8BB15A3CD8
-	for <lists+linux-mediatek@lfdr.de>; Fri, 30 Aug 2019 19:16:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 08CBFA4136
+	for <lists+linux-mediatek@lfdr.de>; Sat, 31 Aug 2019 02:05:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:Subject:To:From:
-	Message-ID:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=bRl5fmweDus5MO3sXWZOxc5dm8Y8NOx4j+eEtn3MkQc=; b=e8OoxkQjNkZCuesjreUNsfNRk
-	fLXFG3NFCoKQpXXTJjRIGTrKjJk8u917dOa9dbVIg/4VmkVgjVXCOtxlKB+Ti4xo5JWyxwAeOnlEM
-	6UgeXiu2iPgNEBC4928IuoqnM4meU/G4aded/9oPIowSgMtlkQ+CFc3DwTAbkSivOiAQAv2rX/6AW
-	TWclTh9Jknfb8+LBw5Z0mNGXsDwyhfOnW6DvhzdILXOnkfc/2CSfxJYTj871yrvNoEfkOBrPisNUf
-	gNk5s+Y6pU4/2ehyfgX3kIM/U9fm2v8qHRV9OmXYA7r3/gKCf/FSfmBP8PMeRn/GulikTxnv1mvtR
-	t8V7L9Cjg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=QvBpN3urTEf2EuPK/TZ5hlO21fbu1vaoJ2QHO+Ra+EU=; b=cKnW3TD7MquTxr
+	cXHy/uLVxoRIpS72w2rhLtVunnvG9ii+0z9qxSgAuMpZMm1K7mfYUBasahfcazCoBOXoX0J5/dKeV
+	AVoQ96k3cmvGguu5y6NkCVkyw7eA4nCLUxbPloehe4WsKAQGO8gL7v6g3o8PxtN7C3xVHa5g6WIDj
+	wLBlRKygCrwDz8gwfZOKLlG482SZxbn5AbpFVVo14jZ7kNate4rpmapR61pyVTGMF3DlfRYHmkFvD
+	S76C8nCO2MNw/UnHEQwkkCUlxUsg/yjXHy3IdtDEPoc9iL5dpfLKWglVqDr1icwmGJvB3h4zpyy8m
+	3UmTYfmDWrhn9D8GqLDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3kVd-0001De-Av; Fri, 30 Aug 2019 17:16:25 +0000
-Received: from mx.0dd.nl ([5.2.79.48])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1i3kVQ-00014h-Mt; Fri, 30 Aug 2019 17:16:15 +0000
-Received: from mail.vdorst.com (mail.vdorst.com [IPv6:fd01::250])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mx.0dd.nl (Postfix) with ESMTPS id E7DA95FC82;
- Fri, 30 Aug 2019 19:16:03 +0200 (CEST)
-Authentication-Results: mx.0dd.nl; dkim=pass (2048-bit key;
- secure) header.d=vdorst.com header.i=@vdorst.com header.b="cFkj3+8T"; 
- dkim-atps=neutral
-Received: from www (www.vdorst.com [192.168.2.222])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.vdorst.com (Postfix) with ESMTPSA id A430A1DAE219;
- Fri, 30 Aug 2019 19:16:03 +0200 (CEST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.vdorst.com A430A1DAE219
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=vdorst.com;
- s=default; t=1567185363;
- bh=YVARbI/Cl7CtDXBi2526daUB1XB9B3qC3CMJs1E2HFI=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=cFkj3+8TkpuqANEkNHa+uM0tE7IqSIIh6pTsz9WJfUHR9IHR0Q3MaX5EHTFEcxnUx
- +NqjMjiHyulWG+mllj2rvznkNpMhJmqQA/Qn/ZmZJTxejrz0D+1+YtrN/HWSpMRBMo
- 4UVUk+pQ53S6Hp1mrCEGMalp4UtuqJzdz8xFIZWd7AmehujnofaddiE6bkkawI3WBr
- dhz2/perY2Qk9y6hjGmVhJbcgTnt8VyT89VH5KvjtCWKLY1/9FKQH4oJrUxVvW6LER
- vCxgKonf/CcEe8xV0K28cQ1jEAPNoBXBtd5g2M5VJ2Ye+r0mTDa9d3mygtjwrVb+cv
- qB8RjBjqheYCg==
-Received: from localhost.localdomain (localhost.localdomain [127.0.0.1]) by
- www.vdorst.com (Horde Framework) with HTTPS; Fri, 30 Aug 2019 17:16:03 +0000
-Date: Fri, 30 Aug 2019 17:16:03 +0000
-Message-ID: <20190830171603.Horde.UeVVg_YU-C4f8bcYmFJ_1Gv@www.vdorst.com>
-From: =?utf-8?b?UmVuw6k=?= van Dorst <opensource@vdorst.com>
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH net-next v2 2/3] dt-bindings: net: dsa: mt7530: Add
- support for port 5
-References: <20190821144547.15113-1-opensource@vdorst.com>
- <20190821144547.15113-3-opensource@vdorst.com>
- <20190827222251.GA30507@bogus>
- <20190828063520.Horde.4_ak7mcmFhVJlxZWWy2wo3V@www.vdorst.com>
-In-Reply-To: <20190828063520.Horde.4_ak7mcmFhVJlxZWWy2wo3V@www.vdorst.com>
-User-Agent: Horde Application Framework 5
+	id 1i3qtX-0004SZ-CK; Sat, 31 Aug 2019 00:05:31 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1i3qt4-00035D-He; Sat, 31 Aug 2019 00:05:04 +0000
+X-UUID: 1e92c4e0e8cd43d4b920ac5c5c800094-20190830
+X-UUID: 1e92c4e0e8cd43d4b920ac5c5c800094-20190830
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1449132957; Fri, 30 Aug 2019 16:04:59 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 30 Aug 2019 17:04:57 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 31 Aug 2019 08:04:56 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sat, 31 Aug 2019 08:04:50 +0800
+Message-ID: <1567209886.18937.5.camel@mtksdaap41>
+Subject: Re: [PATCH 2/2] drm/mediatek: Bypass atomic helpers for cursor updates
+From: CK Hu <ck.hu@mediatek.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Date: Sat, 31 Aug 2019 08:04:46 +0800
+In-Reply-To: <20190830073819.16566-3-bibby.hsieh@mediatek.com>
+References: <20190830073819.16566-1-bibby.hsieh@mediatek.com>
+ <20190830073819.16566-3-bibby.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190830_101613_030417_EFC2C83C 
-X-CRM114-Status: GOOD (  11.25  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190830_170502_599427_F35E57C6 
+X-CRM114-Status: GOOD (  15.62  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,99 +71,110 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
- Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>, linux-mips@vger.kernel.org,
- "David S . Miller" <davem@davemloft.net>, devicetree@vger.kernel.org,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+Cc: drinkcat@chromium.org, David Airlie <airlied@linux.ie>,
+ Daniel Vetter <daniel.vetter@ffwll.ch>, linux-kernel@vger.kernel.org,
+ dri-devel@lists.freedesktop.org, tfiga@chromium.org,
+ Thierry Reding <thierry.reding@gmail.com>, linux-mediatek@lists.infradead.org,
+ Philipp Zabel <p.zabel@pengutronix.de>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Vivien Didelot <vivien.didelot@gmail.com>,
  linux-arm-kernel@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"; DelSp="Yes"
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgUm9iLAoKPHNuaXA+Cgo+Pj4gU2VlIERvY3VtZW50YXRpb24vZGV2aWNldHJlZS9iaW5kaW5n
-cy9uZXQvZHNhL2RzYS50eHQgZm9yIGEgbGlzdCAgCj4+PiBvZiBhZGRpdGlvbmFsCj4+PiByZXF1
-aXJlZCwgb3B0aW9uYWwgcHJvcGVydGllcyBhbmQgaG93IHRoZSBpbnRlZ3JhdGVkIHN3aXRjaCBz
-dWJub2RlcyBtdXN0Cj4+PiBiZSBzcGVjaWZpZWQuCj4+PiBAQCAtOTQsMyArMTMwLDE4NSBAQCBF
-eGFtcGxlOgo+Pj4gCQkJfTsKPj4+IAkJfTsKPj4+IAl9Owo+Pj4gKwo+Pj4gK0V4YW1wbGUgMjog
-TVQ3NjIxOiBQb3J0IDQgaXMgV0FOIHBvcnQ6IDJuZCBHTUFDIC0+IFBvcnQgNSAtPiBQSFkgcG9y
-dCA0Lgo+Pj4gKwo+Pj4gKyZldGggewo+Pj4gKwlzdGF0dXMgPSAib2theSI7Cj4+Cj4+IERvbid0
-IHNob3cgc3RhdHVzIGluIGV4YW1wbGVzLgo+Cj4gT0suCj4KPj4gVGhpcyBzaG91bGQgc2hvdyB0
-aGUgY29tcGxldGUgbm9kZS4KPj4KPgoKSSBhc2tlZCB0aGlzIHF1ZXN0aW9uIGJlbG93IGluIG15
-IHByZXZpb3VzIGVtYWlsLgpNYXkgYmUgeW91IG1pc3NlZCBpdCwgSSBob3BlIHRoYXQgeW91IGhh
-dmUgdGltZSBzb29uIHRvIGFuc3dlciB0aGlzIHNvIHRoYXQgSQpjYW4gc2VuZCBhIG5ldyB2ZXJz
-aW9uLgoKPiBUbyBiZSBjbGVhciwgSSBzaG91bGQgdGFrZSBldGhlcm5ldCBub2RlIGZyb20gdGhl
-IG10NzYyMS5kdHNpIFswXSBvciAgCj4gbXQ3NjIzLmR0c2kgWzFdIGFuZCBpbnNlcnQgdGhlIGV4
-YW1wbGUgYmVsb3c/LCByaWdodD8KCkdyZWF0cywKClJlbsOpCgo+Cj4gR3JlYXRzLAo+Cj4gUmVu
-w6kKPgo+IFswXTogIAo+IGh0dHBzOi8vZ2l0Lmtlcm5lbC5vcmcvcHViL3NjbS9saW51eC9rZXJu
-ZWwvZ2l0L2RhdmVtL25ldC1uZXh0LmdpdC90cmVlL2RyaXZlcnMvc3RhZ2luZy9tdDc2MjEtZHRz
-L210NzYyMS5kdHNpI24zOTcKPiBbMV06ICAKPiBodHRwczovL2dpdC5rZXJuZWwub3JnL3B1Yi9z
-Y20vbGludXgva2VybmVsL2dpdC9kYXZlbS9uZXQtbmV4dC5naXQvdHJlZS9hcmNoL2FybS9ib290
-L2R0cy9tdDc2MjMuZHRzaSNuMTAyMwo+Cj4+PiArCj4+PiArCWdtYWMwOiBtYWNAMCB7Cj4+PiAr
-CQljb21wYXRpYmxlID0gIm1lZGlhdGVrLGV0aC1tYWMiOwo+Pj4gKwkJcmVnID0gPDA+Owo+Pj4g
-KwkJcGh5LW1vZGUgPSAicmdtaWkiOwo+Pj4gKwo+Pj4gKwkJZml4ZWQtbGluayB7Cj4+PiArCQkJ
-c3BlZWQgPSA8MTAwMD47Cj4+PiArCQkJZnVsbC1kdXBsZXg7Cj4+PiArCQkJcGF1c2U7Cj4+PiAr
-CQl9Owo+Pj4gKwl9Owo+Pj4gKwo+Pj4gKwlnbWFjMTogbWFjQDEgewo+Pj4gKwkJY29tcGF0aWJs
-ZSA9ICJtZWRpYXRlayxldGgtbWFjIjsKPj4+ICsJCXJlZyA9IDwxPjsKPj4+ICsJCXBoeS1tb2Rl
-ID0gInJnbWlpLXR4aWQiOwo+Pj4gKwkJcGh5LWhhbmRsZSA9IDwmcGh5ND47Cj4+PiArCX07Cj4+
-PiArCj4+PiArCW1kaW86IG1kaW8tYnVzIHsKPj4+ICsJCSNhZGRyZXNzLWNlbGxzID0gPDE+Owo+
-Pj4gKwkJI3NpemUtY2VsbHMgPSA8MD47Cj4+PiArCj4+PiArCQkvKiBJbnRlcm5hbCBwaHkgKi8K
-Pj4+ICsJCXBoeTQ6IGV0aGVybmV0LXBoeUA0IHsKPj4+ICsJCQlyZWcgPSA8ND47Cj4+PiArCQl9
-Owo+Pj4gKwo+Pj4gKwkJbXQ3NTMwOiBzd2l0Y2hAMWYgewo+Pj4gKwkJCWNvbXBhdGlibGUgPSAi
-bWVkaWF0ZWssbXQ3NjIxIjsKPj4+ICsJCQkjYWRkcmVzcy1jZWxscyA9IDwxPjsKPj4+ICsJCQkj
-c2l6ZS1jZWxscyA9IDwwPjsKPj4+ICsJCQlyZWcgPSA8MHgxZj47Cj4+PiArCQkJcGluY3RybC1u
-YW1lcyA9ICJkZWZhdWx0IjsKPj4+ICsJCQltZWRpYXRlayxtY207Cj4+PiArCj4+PiArCQkJcmVz
-ZXRzID0gPCZyc3RjdHJsIDI+Owo+Pj4gKwkJCXJlc2V0LW5hbWVzID0gIm1jbSI7Cj4+PiArCj4+
-PiArCQkJcG9ydHMgewo+Pj4gKwkJCQkjYWRkcmVzcy1jZWxscyA9IDwxPjsKPj4+ICsJCQkJI3Np
-emUtY2VsbHMgPSA8MD47Cj4+PiArCj4+PiArCQkJCXBvcnRAMCB7Cj4+PiArCQkJCQlyZWcgPSA8
-MD47Cj4+PiArCQkJCQlsYWJlbCA9ICJsYW4wIjsKPj4+ICsJCQkJfTsKPj4+ICsKPj4+ICsJCQkJ
-cG9ydEAxIHsKPj4+ICsJCQkJCXJlZyA9IDwxPjsKPj4+ICsJCQkJCWxhYmVsID0gImxhbjEiOwo+
-Pj4gKwkJCQl9Owo+Pj4gKwo+Pj4gKwkJCQlwb3J0QDIgewo+Pj4gKwkJCQkJcmVnID0gPDI+Owo+
-Pj4gKwkJCQkJbGFiZWwgPSAibGFuMiI7Cj4+PiArCQkJCX07Cj4+PiArCj4+PiArCQkJCXBvcnRA
-MyB7Cj4+PiArCQkJCQlyZWcgPSA8Mz47Cj4+PiArCQkJCQlsYWJlbCA9ICJsYW4zIjsKPj4+ICsJ
-CQkJfTsKPj4+ICsKPj4+ICsvKiBDb21tZW50ZWQgb3V0LiBQb3J0IDQgaXMgaGFuZGxlZCBieSAy
-bmQgR01BQy4KPj4+ICsJCQkJcG9ydEA0IHsKPj4+ICsJCQkJCXJlZyA9IDw0PjsKPj4+ICsJCQkJ
-CWxhYmVsID0gImxhbjQiOwo+Pj4gKwkJCQl9Owo+Pj4gKyovCj4+PiArCj4+PiArCQkJCWNwdV9w
-b3J0MDogcG9ydEA2IHsKPj4+ICsJCQkJCXJlZyA9IDw2PjsKPj4+ICsJCQkJCWxhYmVsID0gImNw
-dSI7Cj4+PiArCQkJCQlldGhlcm5ldCA9IDwmZ21hYzA+Owo+Pj4gKwkJCQkJcGh5LW1vZGUgPSAi
-cmdtaWkiOwo+Pj4gKwo+Pj4gKwkJCQkJZml4ZWQtbGluayB7Cj4+PiArCQkJCQkJc3BlZWQgPSA8
-MTAwMD47Cj4+PiArCQkJCQkJZnVsbC1kdXBsZXg7Cj4+PiArCQkJCQkJcGF1c2U7Cj4+PiArCQkJ
-CQl9Owo+Pj4gKwkJCQl9Owo+Pj4gKwkJCX07Cj4+PiArCQl9Owo+Pj4gKwl9Owo+Pj4gK307Cj4+
-PiArCj4+PiArRXhhbXBsZSAzOiBNVDc2MjE6IFBvcnQgNSBpcyBjb25uZWN0ZWQgdG8gZXh0ZXJu
-YWwgUEhZOiBQb3J0IDUgLT4gIAo+Pj4gZXh0ZXJuYWwgUEhZLgo+Pj4gKwo+Pj4gKyZldGggewo+
-Pj4gKwlzdGF0dXMgPSAib2theSI7Cj4+PiArCj4+PiArCWdtYWMwOiBtYWNAMCB7Cj4+PiArCQlj
-b21wYXRpYmxlID0gIm1lZGlhdGVrLGV0aC1tYWMiOwo+Pj4gKwkJcmVnID0gPDA+Owo+Pj4gKwkJ
-cGh5LW1vZGUgPSAicmdtaWkiOwo+Pj4gKwo+Pj4gKwkJZml4ZWQtbGluayB7Cj4+PiArCQkJc3Bl
-ZWQgPSA8MTAwMD47Cj4+PiArCQkJZnVsbC1kdXBsZXg7Cj4+PiArCQkJcGF1c2U7Cj4+PiArCQl9
-Owo+Pj4gKwl9Owo+Pj4gKwo+Pj4gKwltZGlvOiBtZGlvLWJ1cyB7Cj4+PiArCQkjYWRkcmVzcy1j
-ZWxscyA9IDwxPjsKPj4+ICsJCSNzaXplLWNlbGxzID0gPDA+Owo+Pj4gKwo+Pj4gKwkJLyogRXh0
-ZXJuYWwgcGh5ICovCj4+PiArCQllcGh5NTogZXRoZXJuZXQtcGh5QDcgewo+Pj4gKwkJCXJlZyA9
-IDw3PjsKPj4+ICsJCX07Cj4+PiArCj4+PiArCQltdDc1MzA6IHN3aXRjaEAxZiB7Cj4+PiArCQkJ
-Y29tcGF0aWJsZSA9ICJtZWRpYXRlayxtdDc2MjEiOwo+Pj4gKwkJCSNhZGRyZXNzLWNlbGxzID0g
-PDE+Owo+Pj4gKwkJCSNzaXplLWNlbGxzID0gPDA+Owo+Pj4gKwkJCXJlZyA9IDwweDFmPjsKPj4+
-ICsJCQlwaW5jdHJsLW5hbWVzID0gImRlZmF1bHQiOwo+Pj4gKwkJCW1lZGlhdGVrLG1jbTsKPj4+
-ICsKPj4+ICsJCQlyZXNldHMgPSA8JnJzdGN0cmwgMj47Cj4+PiArCQkJcmVzZXQtbmFtZXMgPSAi
-bWNtIjsKPj4+ICsKPj4+ICsJCQlwb3J0cyB7Cj4+PiArCQkJCSNhZGRyZXNzLWNlbGxzID0gPDE+
-Owo+Pj4gKwkJCQkjc2l6ZS1jZWxscyA9IDwwPjsKPj4+ICsKPj4+ICsJCQkJcG9ydEAwIHsKPj4+
-ICsJCQkJCXJlZyA9IDwwPjsKPj4+ICsJCQkJCWxhYmVsID0gImxhbjAiOwo+Pj4gKwkJCQl9Owo+
-Pj4gKwo+Pj4gKwkJCQlwb3J0QDEgewo+Pj4gKwkJCQkJcmVnID0gPDE+Owo+Pj4gKwkJCQkJbGFi
-ZWwgPSAibGFuMSI7Cj4+PiArCQkJCX07Cj4+PiArCj4+PiArCQkJCXBvcnRAMiB7Cj4+PiArCQkJ
-CQlyZWcgPSA8Mj47Cj4+PiArCQkJCQlsYWJlbCA9ICJsYW4yIjsKPj4+ICsJCQkJfTsKPj4+ICsK
-Pj4+ICsJCQkJcG9ydEAzIHsKPj4+ICsJCQkJCXJlZyA9IDwzPjsKPj4+ICsJCQkJCWxhYmVsID0g
-ImxhbjMiOwo+Pj4gKwkJCQl9Owo+Pj4gKwo+Pj4gKwkJCQlwb3J0QDQgewo+Pj4gKwkJCQkJcmVn
-ID0gPDQ+Owo+Pj4gKwkJCQkJbGFiZWwgPSAibGFuNCI7Cj4+PiArCQkJCX07Cj4+PiArCj4+PiAr
-CQkJCXBvcnRANSB7Cj4+PiArCQkJCQlyZWcgPSA8NT47Cj4+PiArCQkJCQlsYWJlbCA9ICJsYW41
-IjsKPj4+ICsJCQkJCXBoeS1tb2RlID0gInJnbWlpIjsKPj4+ICsJCQkJCXBoeS1oYW5kbGUgPSA8
-JmVwaHk1PjsKPj4+ICsJCQkJfTsKPj4+ICsKPj4+ICsJCQkJY3B1X3BvcnQwOiBwb3J0QDYgewo+
-Pj4gKwkJCQkJcmVnID0gPDY+Owo+Pj4gKwkJCQkJbGFiZWwgPSAiY3B1IjsKPj4+ICsJCQkJCWV0
-aGVybmV0ID0gPCZnbWFjMD47Cj4+PiArCQkJCQlwaHktbW9kZSA9ICJyZ21paSI7Cj4+PiArCj4+
-PiArCQkJCQlmaXhlZC1saW5rIHsKPj4+ICsJCQkJCQlzcGVlZCA9IDwxMDAwPjsKPj4+ICsJCQkJ
-CQlmdWxsLWR1cGxleDsKPj4+ICsJCQkJCQlwYXVzZTsKPj4+ICsJCQkJCX07Cj4+PiArCQkJCX07
-Cj4+PiArCQkJfTsKPj4+ICsJCX07Cj4+PiArCX07Cj4+PiArfTsKPj4+IC0tCj4+PiAyLjIwLjEK
-Pj4+CgoKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpM
-aW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFk
-Lm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1l
-ZGlhdGVrCg==
+Hi, Bibby:
+
+On Fri, 2019-08-30 at 15:38 +0800, Bibby Hsieh wrote:
+> Moving the driver to atomic helpers regressed cursor responsiveness,
+> because cursor updates need their own atomic commits, which have to be
+> serialized with other commits, that might include fence waits. To avoid
+> this, in certain conditions, we can bypass the atomic helpers for legacy
+> cursor update IOCTLs. Currently the conditions are:
+>  - no asynchronous mode setting commit pending,
+>  - no asynchronous commit that updates the cursor plane is pending.
+> With the above two conditions met, we know that the manual cursor state
+> update will not conflict with any scheduled update.
+> 
+> Fixes: 119f5173628a ("drm/mediatek: Add DRM Driver for Mediatek SoC MT8173.")
+> 
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> Signed-off-by: Daniel Kurtz <djkurtz@chromium.org>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_drm_crtc.c  | 41 ++++++++++++-
+>  drivers/gpu/drm/mediatek/mtk_drm_crtc.h  |  2 +
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.c   | 34 ++++++++++-
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.h   |  3 +
+>  drivers/gpu/drm/mediatek/mtk_drm_plane.c | 73 +++++++++++++++++++++++-
+>  5 files changed, 148 insertions(+), 5 deletions(-)
+> 
+
+[snip]
+
+> +
+> +static int mtk_plane_update(struct drm_plane *plane,
+> +			    struct drm_crtc *crtc,
+> +			    struct drm_framebuffer *fb,
+> +			    int crtc_x, int crtc_y,
+> +			    unsigned int crtc_w, unsigned int crtc_h,
+> +			    uint32_t src_x, uint32_t src_y,
+> +			    uint32_t src_w, uint32_t src_h,
+> +			    struct drm_modeset_acquire_ctx *ctx)
+> +{
+> +	struct mtk_drm_private *private = plane->dev->dev_private;
+> +	uint32_t crtc_mask = (1 << drm_crtc_index(crtc));
+> +
+> +	if (crtc && plane == crtc->cursor &&
+> +	    plane->state->crtc == crtc &&
+> +	    !(private->commit.flush_for_cursor & crtc_mask))
+> +		return mtk_plane_cursor_update(plane, crtc, fb,
+> +				crtc_x, crtc_y, crtc_w, crtc_h,
+> +				src_x, src_y, src_w, src_h);
+> +
+> +	return drm_atomic_helper_update_plane(plane, crtc, fb,
+> +					      crtc_x, crtc_y, crtc_w, crtc_h,
+> +					      src_x, src_y, src_w, src_h, ctx);
+> +}
+> +
+>  static const struct drm_plane_funcs mtk_plane_funcs = {
+> -	.update_plane = drm_atomic_helper_update_plane,
+> +	.update_plane = mtk_plane_update,
+
+I think drm core has already process cursor async problem. In [1], you
+could search 'legacy_cursor_update' and it need driver to implement
+atomic_async_check() and atomic_async_update() callback function. You
+could refer to [2] for the implementation. 
+
+
+[1]
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/drm_atomic_helper.c?h=v5.3-rc6
+[2]
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/rockchip/rockchip_drm_vop.c?h=v5.3-rc6#n955
+
+Regards,
+CK
+
+>  	.disable_plane = drm_atomic_helper_disable_plane,
+>  	.destroy = drm_plane_cleanup,
+>  	.reset = mtk_plane_reset,
+> @@ -90,7 +154,12 @@ static int mtk_plane_atomic_check(struct drm_plane *plane,
+>  	if (!state->crtc)
+>  		return 0;
+>  
+> -	crtc_state = drm_atomic_get_crtc_state(state->state, state->crtc);
+> +	if (state->state)
+> +		crtc_state = drm_atomic_get_existing_crtc_state(state->state,
+> +								state->crtc);
+> +	else /* Special case for asynchronous cursor updates. */
+> +		crtc_state = state->crtc->state;
+> +
+>  	if (IS_ERR(crtc_state))
+>  		return PTR_ERR(crtc_state);
+>  
+
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
