@@ -2,84 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2CA4AA59A2
-	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Sep 2019 16:43:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B795AA5A04
+	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Sep 2019 17:02:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qizqZf/4ZQTbemV9w5BaV3rgahDLpnIHPObXOFFYZQ8=; b=ikQndX1qCCw1uo
-	hO4EFQy9CDxY+3bpu7e+ie7r9XGN1KkVJIxECNmxTleV9VwPMCRjeCR5KJ0vB32fpP5EFIwwzmc3Y
-	CChGiYxAfphLyi5F0Rat/CjO23hXmM9Xt4RYw7Q5qMFfhkrSxswMwxjtIx7dlSv/wX1S+YWVD9C6Y
-	tlPFm+am9yKqSMaAcVPYLgcrcuyZGW+WlIhXDSOhELFDdNhsUzhH0VM44fUnP63Bzm44YXDdxxHqN
-	BoYX0sNM/Kgybgw6zEeUJdFdaHrQQe7v9ea9yxph5lHykcmqPhs42xJbvkKiwb3NKSxGVqh5HyMKd
-	paX33HD9DoeVU2kGLA6g==;
+	List-Owner; bh=8b8OgRVNVqSaZ99Y1MH4xEufk5MUuH5bHy+taBNIYUo=; b=JrNixc0G8R8fif
+	mxcyw7Zd3+0XrRZdDIorRk8vgS+BknNm4lLNt1dCKsR7gLVnD3+hhjBxkPxyFg/2pLgV4t5uUqAWA
+	YTGVo6V8dnczsDYn6xS09WDRuvd2AI886CtFu+xLMUYCfQ/4oFDrq4h7oV+umLE6GauJYIIJFf2CP
+	TaNdDlVE8VrrNcctW04aaPmyTCl4FoHT+6kOTlwf9L0CsYNkVPXVdh76FbIP7WVARAYS+1l3T8MdF
+	6p8lvhXgYpnEgg5tvHsHPI560HjctetrGb3wqHm8JuqpeRMeAVKyTdf8AaMkrdjUsT5PslWX5D0IY
+	qAjyTl9aH7zbpS34t0WQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i4nYW-00078b-I9; Mon, 02 Sep 2019 14:43:44 +0000
-Received: from mail-wm1-f65.google.com ([209.85.128.65])
+	id 1i4nqI-0005Yc-0t; Mon, 02 Sep 2019 15:02:06 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i4nYS-000787-Nl
- for linux-mediatek@lists.infradead.org; Mon, 02 Sep 2019 14:43:41 +0000
-Received: by mail-wm1-f65.google.com with SMTP id k2so13437847wmj.4
- for <linux-mediatek@lists.infradead.org>; Mon, 02 Sep 2019 07:43:39 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=iZLcdNS033cxSK0Fvg6MV+q8rh6JD3AHU1mNNgBVJpQ=;
- b=p40JigD5QdIASJyqZ00YnRGBkvSCe9rvHceQNQi7UsYW9+6Fg5megmuYnND+hjqpin
- PMAMKrsn+vNJ2X7SVrodpCOfDKZroH9sBaBPe0Wer4pg+pTB8JL1KiPbiRPFY6FTM77e
- 26bvqWM8+oNG4agVfAtZPXL/Eu5u/n9xdgUvZcEI2Pm83Gzi/1yjYqMQFn9cH4fqXk1W
- X/c4CKG0+0w1mLhPX4+79bYF60wN1A6u3ITebduhZ8QblpjwfgMThdGlpFuyTeGXHmXO
- i8b5KTGTP4mnCrHCyBfqYgsMl2FMcO4K+Dd6rrsCONBSRtO+aVel/b23zVcfTkwxriu+
- OiFg==
-X-Gm-Message-State: APjAAAXIQ1VwrSUtDfjuX0W7wFG3oRttHFCnUl7XzTTEEUuPOtw80FR/
- 1exa71qGpg20U0mtjve6bQ==
-X-Google-Smtp-Source: APXvYqwxtxRib647UlHObm5LyGs/Ur8DIObbfrBfd03KY7R2uk+nMKra+8g2kZJ8KgljWasyIMoWRA==
-X-Received: by 2002:a05:600c:23cd:: with SMTP id
- p13mr33723857wmb.86.1567435418805; 
- Mon, 02 Sep 2019 07:43:38 -0700 (PDT)
-Received: from localhost ([212.187.182.166])
- by smtp.gmail.com with ESMTPSA id q192sm3004661wme.23.2019.09.02.07.43.38
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 02 Sep 2019 07:43:38 -0700 (PDT)
-Date: Mon, 2 Sep 2019 15:43:37 +0100
-From: Rob Herring <robh@kernel.org>
-To: Sam Shih <sam.shih@mediatek.com>
-Subject: Re: [PATCH v7 07/11] dt-bindings: pwm: pwm-mediatek: add a property
- "num-pwms"
-Message-ID: <20190902144337.GA25200@bogus>
-References: <1567137437-10041-1-git-send-email-sam.shih@mediatek.com>
- <1567137437-10041-8-git-send-email-sam.shih@mediatek.com>
+ id 1i4nqD-0005Xi-61; Mon, 02 Sep 2019 15:02:03 +0000
+X-UUID: 61746ce38a4a4991aa732c671fe51e78-20190902
+X-UUID: 61746ce38a4a4991aa732c671fe51e78-20190902
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <dongchun.zhu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1749076237; Mon, 02 Sep 2019 07:01:56 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 2 Sep 2019 08:01:54 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 2 Sep 2019 23:01:49 +0800
+Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 2 Sep 2019 23:01:49 +0800
+Message-ID: <1567436507.21623.83.camel@mhfsdcap03>
+Subject: Re: [PATCH 2/2] media: i2c: dw9768: Add DW9768 VCM driver
+From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Mon, 2 Sep 2019 23:01:47 +0800
+In-Reply-To: <20190823081723.GA33937@chromium.org>
+References: <20190708100641.2702-1-dongchun.zhu@mediatek.com>
+ <20190708100641.2702-3-dongchun.zhu@mediatek.com>
+ <20190823081723.GA33937@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1567137437-10041-8-git-send-email-sam.shih@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: BB5BF212558B8B9D93E50875A18EDED5A8881771F741B4094B2A1DBDAD1F43252000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190902_074340_777996_FE57F0B2 
-X-CRM114-Status: UNSURE (   8.62  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190902_080201_234817_5D04B87C 
+X-CRM114-Status: GOOD (  41.78  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.128.65 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,31 +73,748 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ srv_heupstream@mediatek.com, shengnan.wang@mediatek.com,
+ louis.kuo@mediatek.com, sj.huang@mediatek.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, sakari.ailus@linux.intel.com,
+ matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Aug 30, 2019 at 11:57:13AM +0800, Sam Shih wrote:
-> From: Ryder Lee <ryder.lee@mediatek.com>
-> =
+Hi Tomasz,
 
-> This adds a property "num-pwms" in example so that we could
-> specify the number of PWM channels via device tree.
+On Fri, 2019-08-23 at 17:17 +0900, Tomasz Figa wrote:
+> Hi Dongchun,
+> 
+> On Mon, Jul 08, 2019 at 06:06:41PM +0800, dongchun.zhu@mediatek.com wrote:
+> > From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> > 
+> > This patch adds a V4L2 sub-device driver for DW9768 lens voice coil,
+> > and provides control to set the desired focus.
+> > 
+> > The DW9807 is a 10 bit DAC from Dongwoon, designed for linear
+> > control of voice coil motor.
+> > 
+> > Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> > ---
+> >  MAINTAINERS                |   1 +
+> >  drivers/media/i2c/Kconfig  |  10 +
+> >  drivers/media/i2c/Makefile |   1 +
+> >  drivers/media/i2c/dw9768.c | 458 +++++++++++++++++++++++++++++++++++++++++++++
+> >  4 files changed, 470 insertions(+)
+> >  create mode 100644 drivers/media/i2c/dw9768.c
+> > 
+> 
+> Thanks for the patch! Please see my comments inline.
+> 
+> > diff --git a/MAINTAINERS b/MAINTAINERS
+> > index 8f6ac93..17152d7 100644
+> > --- a/MAINTAINERS
+> > +++ b/MAINTAINERS
+> > @@ -4877,6 +4877,7 @@ M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
+> >  L:	linux-media@vger.kernel.org
+> >  T:	git git://linuxtv.org/media_tree.git
+> >  S:	Maintained
+> > +F:	drivers/media/i2c/dw9768.c
+> >  F:	Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.txt
+> >  
+> >  DONGWOON DW9807 LENS VOICE COIL DRIVER
+> > diff --git a/drivers/media/i2c/Kconfig b/drivers/media/i2c/Kconfig
+> > index 7793358..8ff6c95 100644
+> > --- a/drivers/media/i2c/Kconfig
+> > +++ b/drivers/media/i2c/Kconfig
+> > @@ -1014,6 +1014,16 @@ config VIDEO_DW9714
+> >  	  capability. This is designed for linear control of
+> >  	  voice coil motors, controlled via I2C serial interface.
+> >  
+> > +config VIDEO_DW9768
+> > +	tristate "DW9768 lens voice coil support"
+> > +	depends on I2C && VIDEO_V4L2 && MEDIA_CONTROLLER
+> > +	depends on VIDEO_V4L2_SUBDEV_API
+> > +	help
+> > +	  This is a driver for the DW9768 camera lens voice coil.
+> > +	  DW9768 is a 10 bit DAC with 100mA output current sink
+> > +	  capability. This is designed for linear control of
+> > +	  voice coil motors, controlled via I2C serial interface.
+> > +
+> >  config VIDEO_DW9807_VCM
+> >  	tristate "DW9807 lens voice coil support"
+> >  	depends on I2C && VIDEO_V4L2 && MEDIA_CONTROLLER
+> > diff --git a/drivers/media/i2c/Makefile b/drivers/media/i2c/Makefile
+> > index d8ad9da..944fbf6 100644
+> > --- a/drivers/media/i2c/Makefile
+> > +++ b/drivers/media/i2c/Makefile
+> > @@ -24,6 +24,7 @@ obj-$(CONFIG_VIDEO_SAA6752HS) += saa6752hs.o
+> >  obj-$(CONFIG_VIDEO_AD5820)  += ad5820.o
+> >  obj-$(CONFIG_VIDEO_AK7375)  += ak7375.o
+> >  obj-$(CONFIG_VIDEO_DW9714)  += dw9714.o
+> > +obj-$(CONFIG_VIDEO_DW9768)  += dw9768.o
+> >  obj-$(CONFIG_VIDEO_DW9807_VCM)  += dw9807-vcm.o
+> >  obj-$(CONFIG_VIDEO_ADV7170) += adv7170.o
+> >  obj-$(CONFIG_VIDEO_ADV7175) += adv7175.o
+> > diff --git a/drivers/media/i2c/dw9768.c b/drivers/media/i2c/dw9768.c
+> > new file mode 100644
+> > index 0000000..f5b5591
+> > --- /dev/null
+> > +++ b/drivers/media/i2c/dw9768.c
+> > @@ -0,0 +1,458 @@
+> > +// SPDX-License-Identifier: GPL-2.0
+> > +/*
+> > + * Copyright (c) 2018 MediaTek Inc.
+> > + */
+> > +
+> > +#include <linux/delay.h>
+> > +#include <linux/i2c.h>
+> > +#include <linux/module.h>
+> > +#include <linux/regulator/consumer.h>
+> > +#include <linux/pm_runtime.h>
+> > +#include <media/v4l2-ctrls.h>
+> > +#include <media/v4l2-device.h>
+> > +#include <media/v4l2-subdev.h>
+> > +
+> > +#define DW9768_VOLTAGE_ANALOG			2800000
+> 
+> This is a platform detail and should be defined in the platform data, for
+> example DTS on platforms using DT.
+> 
 
-Please respond to my questions on v5.
+Thanks for your reminder.
+This would be fixed in next release.
 
-> =
+> > +#define DW9768_NAME				"dw9768"
+> 
+> The chip we seem to be using this driver for is called gt9769. Shouldn't we
+> call the driver the same?
+> 
 
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-> Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+It is also called DW9768 from camera module specification, which was
+initially confirmed with vendor.
+
+> > +#define DW9768_MAX_FOCUS_POS			1023
+> > +/*
+> > + * This sets the minimum granularity for the focus positions.
+> > + * A value of 1 gives maximum accuracy for a desired focus position
+> > + */
+> > +#define DW9768_FOCUS_STEPS			1
+> > +
+> > +#define DW9768_CTRL_DELAY_US			5000
+> > +
+> > +#define DW9768_REG_DAC_MSB			0x03
+> > +#define DW9768_REG_DAC_LSB			0x04
+> > +#define DW9768_REG_NULL				0xff
+> > +
+> > +#define DW9768_DAC_SHIFT			8
+> > +
+> > +#define DW9768_REG_VALUE_16BIT			2
+> 
+> This driver seems to always write 16-bit values. Can we simplify it to just
+> always assume so?
+> 
+
+Fixed in next release.
+
+> > +
+> > +/* dw9768 device structure */
+> > +struct dw9768_device {
+> > +	struct v4l2_ctrl_handler ctrls;
+> > +	struct v4l2_subdev sd;
+> > +	struct regulator *analog_regulator;
+> > +	/*
+> > +	 * Serialize control access, get/set format, get selection
+> > +	 * and start streaming.
+> > +	 */
+> > +	struct mutex power_lock;
+> > +
+> > +	int power_count;
+> > +	bool standby;
+> > +};
+> > +
+> > +static inline struct dw9768_device *to_dw9768_vcm(struct v4l2_ctrl *ctrl)
+> > +{
+> > +	return container_of(ctrl->handler, struct dw9768_device, ctrls);
+> > +}
+> > +
+> > +static inline struct dw9768_device *sd_to_dw9768_vcm(struct v4l2_subdev *subdev)
+> > +{
+> > +	return container_of(subdev, struct dw9768_device, sd);
+> > +}
+> > +
+> > +static int dw9768_i2c_write(struct dw9768_device *dw9768_dev, u8 *data,
+> > +			    int size)
+> > +{
+> > +	struct i2c_client *client = v4l2_get_subdevdata(&dw9768_dev->sd);
+> > +	struct i2c_msg msg;
+> > +	u8 *w_buf = NULL;
+> > +	u8 retry_cnt = 3;
+> > +	int ret;
+> > +
+> > +	if (!client->adapter)
+> > +		return -ENODEV;
+> 
+> This isn't possible.
+> 
+
+Removed in next release.
+
+> > +
+> > +	if (size != 1 && size != 2)
+> > +		return -EINVAL;
+> 
+> All the calls always pass 2.
+> 
+
+Fixed in next release.
+
+> > +
+> > +	memset(&msg, 0, sizeof(struct i2c_msg));
+> > +
+> > +	w_buf = kzalloc(size, GFP_KERNEL);
+> > +	if (!w_buf)
+> > +		return -1;
+> 
+> The size is fixed to 2. Is it necessary to allocate the buffer dynamically?
+> 
+
+Fixed in next release.
+
+> > +
+> > +	memcpy(w_buf, data, size);
+> > +
+> > +	msg.addr  = client->addr;
+> > +	msg.flags = 0;
+> > +	msg.len   = size;
+> > +	msg.buf   = w_buf;
+> 
+> Actually, why don't we just use data directly?
+> 
+
+Fixed in next release.
+
+> > +
+> > +	do {
+> > +		ret = i2c_transfer(client->adapter, &msg, 1);
+> > +		if (ret != 1)
+> > +			dev_err(&client->dev, "write fail, ret:%d, retry:%d\n",
+> > +				ret, retry_cnt);
+> > +		else
+> > +			break;
+> > +		retry_cnt--;
+> > +	} while (retry_cnt != 0);
+> > +
+> > +	if (retry_cnt == 0)	{
+> > +		dev_err(&client->dev, "i2c write fail(%d)\n", ret);
+> > +		return -EIO;
+> > +	}
+> 
+> Why do we need to handle retries here? I don't see the hardware datasheet
+> refer to any need to do those. Are you seeing some issues with transfers?
+> 
+
+This is used to processing i2c transfer showing abnormality in some
+cases.
+Retries handler would be removed in next release.
+
+> > +
+> > +	kfree(w_buf);
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int dw9768_release(struct dw9768_device *dw9768_dev)
+> > +{
+> > +	unsigned char i;
+> > +	int ret;
+> > +
+> > +	char puSendCmdArray[4][2] = {
+> 
+> Please use the correct kernel coding style.
+> 
+
+Fixed in next release.
+
+> > +		{0x02, 0x00}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> > +		{0x01, 0x00}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> 
+> We only check the first element for this specific value, so we don't need
+> to initialize the second one.
+> 
+> Also, could we call it DW9768_CMD_DELAY instead?
+> 
+> Also, please define macros for the magic values used in the array.
+> 
+
+This would be fixed in next release.
+
+> > +	};
+> > +
+> > +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> > +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {
+> 
+> Wouldn't ARRAY_SIZE() work here?
+> 
+
+Fixed in next release.
+
+> > +		if (puSendCmdArray[i][0] != DW9768_REG_NULL) {
+> > +			ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> > +					       DW9768_REG_VALUE_16BIT);
+> > +			if (ret < 0)
+> > +				return ret;
+> 
+> Hmm, isn't this command array actually a pair of addreses and values?
+> Please define a struct for the entries.
+> 
+> Could we just use i2c_smbus_write_byte_data() instead of the custom
+> dw9768_i2c_write()?
+> 
+
+Thanks for great suggestion.
+We would try i2c_smbus_write_byte_data API for write i2c register.
+
+> > +		} else {
+> > +			usleep_range(DW9768_CTRL_DELAY_US,
+> > +				     DW9768_CTRL_DELAY_US + 100);
+> > +		}
+> > +	}
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int dw9768_init(struct dw9768_device *dw9768_dev)
+> > +{
+> > +	unsigned char i;
+> > +	int ret;
+> > +
+> > +	char puSendCmdArray[5][2] = {
+> > +		{0x02, 0x02}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> > +		{0x06, 0x41}, {0x07, 0x39}, {DW9768_REG_NULL, DW9768_REG_NULL},
+> > +	};
+> > +
+> > +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> > +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {
+> > +		if (puSendCmdArray[i][0] != DW9768_REG_NULL) {
+> > +			ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> > +					       DW9768_REG_VALUE_16BIT);
+> > +			if (ret < 0)
+> > +				return ret;
+> > +		} else {
+> > +			usleep_range(DW9768_CTRL_DELAY_US,
+> > +				     DW9768_CTRL_DELAY_US + 100);
+> > +		}
+> > +	}
+> 
+> The code here is duplicated, just different command array is used. Could we
+> move the command array handling to a helper function? (+ all the comments
+> I mentioned above)
+> 
+
+Fixed in next release.
+
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +/*
+> > + * Power handling
+> > + */
+> > +static int dw9768_power_off(struct dw9768_device *dw9768_dev, bool standby)
+> > +{
+> > +	struct i2c_client *client = v4l2_get_subdevdata(&dw9768_dev->sd);
+> > +	int ret;
+> > +
+> > +	/*
+> > +	 * Go to standby first as real power off my be denied by the hardware
+> > +	 * (single power line control for both dw9768_dev and sensor).
+> 
+> What do you mean here? The regulator subsystem already properly handles
+> reference counting.
+> 
+
+Understood.
+
+> > +	 */
+> > +	if (standby) {
+> > +		dw9768_dev->standby = true;
+> > +		ret = dw9768_release(dw9768_dev);
+> > +		if (ret)
+> > +			dev_err(&client->dev, "dw9768_release failed!\n");
+> 
+> Shouldn't we always call this when we power off?
+> 
+> > +	}
+> > +	ret = regulator_disable(dw9768_dev->analog_regulator);
+> > +	if (ret)
+> > +		return ret;
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int dw9768_power_on(struct dw9768_device *dw9768_dev, bool restore)
+> > +{
+> > +	int ret;
+> > +
+> > +	ret = regulator_enable(dw9768_dev->analog_regulator);
+> > +	if (ret < 0)
+> > +		return ret;
+> > +
+> > +	if (restore) {
+> > +		/* Restore the hardware settings. */
+> > +		dw9768_dev->standby = false;
+> > +		ret = dw9768_init(dw9768_dev);
+> > +		if (ret < 0)
+> > +			goto fail;
+> 
+> Shouldn't we always call this when we power on, without any condition?
+> 
+> > +	}
+> > +
+> > +	return 0;
+> > +
+> > +fail:
+> > +	dw9768_dev->standby = true;
+> > +	regulator_disable(dw9768_dev->analog_regulator);
+> > +
+> > +	return ret;
+> > +}
+> 
+> The two functions above should be called from the runtime PM suspend/resume
+> callbacks.
+> 
+
+Fixed in next release.
+
+> > +
+> > +/*
+> > + * Calculate status word and write it to the device based on current
+> > + * values of V4L2 controls. It is assumed that the stored V4L2 control
+> > + * values are properly limited and rounded.
+> > + */
+> > +static int dw9768_update_hw(struct dw9768_device *dw9768_dev, u16 val)
+> > +{
+> > +	unsigned char i;
+> > +	int ret;
+> > +
+> > +	char puSendCmdArray[2][2] = {
+> > +		{DW9768_REG_DAC_MSB, (char)(val >> DW9768_DAC_SHIFT)},
+> > +		{DW9768_REG_DAC_LSB, (char)(val & 0xFF)},
+> > +	};
+> > +
+> > +	for (i = 0; i < (sizeof(puSendCmdArray) / sizeof(char)) /
+> > +	     (sizeof(puSendCmdArray[0]) / sizeof(char)); i++) {
+> > +		ret = dw9768_i2c_write(dw9768_dev, puSendCmdArray[i],
+> > +				       DW9768_REG_VALUE_16BIT);
+> > +		if (ret)
+> > +			return ret;
+> > +	}
+> 
+> Since the two registers are actually one after another, perhaps you could
+> use i2c_smbus_write_block_data() to batch them into one transfer?
+> 
+
+We would have a try.
+
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int dw9768_set_ctrl(struct v4l2_ctrl *ctrl)
+> > +{
+> > +	struct dw9768_device *dw9768_dev = to_dw9768_vcm(ctrl);
+> > +
+> > +	if (ctrl->id == V4L2_CID_FOCUS_ABSOLUTE)
+> > +		return dw9768_update_hw(dw9768_dev, ctrl->val);
+> 
+> I think we could just inline the contents of that function here, because
+> this function doesn't do anything else.
+> 
+
+Fixed in next release.
+
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static const struct v4l2_ctrl_ops dw9768_vcm_ctrl_ops = {
+> > +	.s_ctrl = dw9768_set_ctrl,
+> > +};
+> > +
+> > +static int
+> > +dw9768_set_power(struct v4l2_subdev *subdev, int on)
+> > +{
+> > +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(subdev);
+> > +	int ret = 0;
+> > +
+> > +	mutex_lock(&dw9768_dev->power_lock);
+> > +
+> > +	/*
+> > +	 * If the power count is modified from 0 to != 0 or from != 0 to 0,
+> > +	 * update the power state.
+> > +	 */
+> > +	if (dw9768_dev->power_count == !on) {
+> > +		ret = on ? dw9768_power_on(dw9768_dev, true) :
+> > +			dw9768_power_off(dw9768_dev, true);
+> > +		if (ret < 0)
+> > +			goto done;
+> > +	}
+> 
+> If we use runtime PM, we get the reference count handling done for us by
+> the subsystem.
+> 
+
+Understood.
+
+> > +
+> > +	/* Update the power count. */
+> > +	dw9768_dev->power_count += on ? 1 : -1;
+> > +	WARN_ON(dw9768_dev->power_count < 0);
+> > +
+> > +done:
+> > +	mutex_unlock(&dw9768_dev->power_lock);
+> > +	return ret;
+> > +}
+> > +
+> > +static int dw9768_open(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+> > +{
+> > +	return dw9768_set_power(sd, 1);
+> 
+> We could just call pm_runtime_get_sync() here.
+> 
+
+Fixed in next release.
+
+> > +}
+> > +
+> > +static int dw9768_close(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+> > +{
+> > +	return dw9768_set_power(sd, 0);
+> 
+> And pm_runtime_put() here.
+> 
+
+Fixed in next release.
+
+> > +}
+> > +
+> > +static const struct v4l2_subdev_internal_ops dw9768_int_ops = {
+> > +	.open = dw9768_open,
+> > +	.close = dw9768_close,
+> > +};
+> > +
+> > +static const struct v4l2_subdev_ops dw9768_ops = { };
+> > +
+> > +static void dw9768_subdev_cleanup(struct dw9768_device *dw9768_dev)
+> > +{
+> > +	v4l2_async_unregister_subdev(&dw9768_dev->sd);
+> > +	v4l2_ctrl_handler_free(&dw9768_dev->ctrls);
+> > +	media_entity_cleanup(&dw9768_dev->sd.entity);
+> > +}
+> > +
+> > +static int dw9768_init_controls(struct dw9768_device *dw9768_dev)
+> > +{
+> > +	struct v4l2_ctrl_handler *hdl = &dw9768_dev->ctrls;
+> > +	const struct v4l2_ctrl_ops *ops = &dw9768_vcm_ctrl_ops;
+> > +
+> > +	v4l2_ctrl_handler_init(hdl, 1);
+> > +
+> > +	v4l2_ctrl_new_std(hdl, ops, V4L2_CID_FOCUS_ABSOLUTE,
+> > +			  0, DW9768_MAX_FOCUS_POS, DW9768_FOCUS_STEPS, 0);
+> > +
+> > +	if (hdl->error) {
+> > +		dev_err(dw9768_dev->sd.dev, "%s fail error: 0x%x\n",
+> > +			__func__, hdl->error);
+> > +		return hdl->error;
+> > +	}
+> > +
+> > +	dw9768_dev->sd.ctrl_handler = hdl;
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int dw9768_probe(struct i2c_client *client)
+> > +{
+> > +	struct device *dev = &client->dev;
+> > +	struct dw9768_device *dw9768_dev;
+> 
+> nit: Could we drop the _device and _dev suffixes to shorten the names?
+> 
+
+Fixed in next release.
+
+> > +	int rval;
+> > +
+> > +	dw9768_dev = devm_kzalloc(&client->dev, sizeof(*dw9768_dev),
+> > +				  GFP_KERNEL);
+> > +	if (!dw9768_dev)
+> > +		return -ENOMEM;
+> > +
+> > +	dw9768_dev->analog_regulator = devm_regulator_get(dev, "afvdd");
+> 
+> "avfdd" is the name on our camera module, not the chip. It should be "vdd".
+> 
+
+Fixed in next release.
+
+> > +	if (IS_ERR(dw9768_dev->analog_regulator)) {
+> > +		dev_err(dev, "cannot get analog regulator\n");
+> > +		return PTR_ERR(dw9768_dev->analog_regulator);
+> > +	}
+> 
+> We also need 1 more regulator here for the I2C interface. The datasheet
+> calls it "vin".
+> 
+
+Fixed in next release.
+
+> > +
+> > +	rval = regulator_set_voltage(dw9768_dev->analog_regulator,
+> > +				     DW9768_VOLTAGE_ANALOG,
+> > +				     DW9768_VOLTAGE_ANALOG);
+> > +	if (rval < 0) {
+> > +		dev_err(dev, "cannot set analog voltage\n");
+> > +		return rval;
+> > +	}
+> 
+> This should be set in the platform code. For example, on systems using DT
+> it can be done by setting the regulator min and max constraints in the DTS.
+> 
+
+Fixed in next release.
+
+> > +
+> > +	mutex_init(&dw9768_dev->power_lock);
+> > +
+> > +	v4l2_i2c_subdev_init(&dw9768_dev->sd, client, &dw9768_ops);
+> > +	dw9768_dev->sd.flags |= V4L2_SUBDEV_FL_HAS_DEVNODE;
+> > +	dw9768_dev->sd.internal_ops = &dw9768_int_ops;
+> > +
+> > +	rval = dw9768_init_controls(dw9768_dev);
+> > +	if (rval)
+> > +		goto err_cleanup;
+> > +
+> > +	rval = media_entity_pads_init(&dw9768_dev->sd.entity, 0, NULL);
+> > +	if (rval < 0)
+> > +		goto err_cleanup;
+> > +
+> > +	dw9768_dev->sd.entity.function = MEDIA_ENT_F_LENS;
+> > +
+> > +	rval = v4l2_async_register_subdev(&dw9768_dev->sd);
+> > +	if (rval < 0)
+> > +		goto err_cleanup;
+> > +
+> > +	pm_runtime_set_active(dev);
+> 
+> We shouldn't call this if we didn't fully power up the device ourselves and
+> I don't see the code above enabling the regulator. Given the privacy LED
+> concerns, we actually shouldn't attempt to power on in probe.
+> 
+
+Understood.
+
+> > +	pm_runtime_enable(dev);
+> > +	pm_runtime_idle(dev);
+> 
+> Ditto for idle, which is not needed if the device was not set active.
+> 
+
+Fixed in next release.
+
+> > +
+> > +	return 0;
+> > +
+> > +err_cleanup:
+> > +	mutex_destroy(&dw9768_dev->power_lock);
+> > +	dw9768_subdev_cleanup(dw9768_dev);
+> > +	dev_err(dev, "Probe failed: %d\n", rval);
+> > +	return rval;
+> > +}
+> > +
+> > +static int dw9768_remove(struct i2c_client *client)
+> > +{
+> > +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> > +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> > +
+> > +	pm_runtime_disable(&client->dev);
+> 
+> Technically we need to check if (!pm_runtime_state_suspended()) and power
+> down manually and set_suspended if that was the case.
+> 
+
+Fixed in next release.
+
+> > +	dw9768_subdev_cleanup(dw9768_dev);
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +/*
+> > + * This function sets the vcm position, so it consumes least current
+> > + * The lens position is gradually moved in units of DW9768_CTRL_STEPS,
+> > + * to make the movements smoothly.
+> > + */
+> > +static int __maybe_unused dw9768_vcm_suspend(struct device *dev)
+> > +{
+> > +	struct i2c_client *client = to_i2c_client(dev);
+> > +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> > +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> > +
+> > +	if (!dw9768_dev->power_count)
+> > +		return 0;
+> > +
+> > +	return dw9768_power_off(dw9768_dev, false);
+> > +}
+> > +
+> > +/*
+> > + * This function sets the vcm position to the value set by the user
+> > + * through v4l2_ctrl_ops s_ctrl handler
+> > + * The lens position is gradually moved in units of DW9768_CTRL_STEPS,
+> > + * to make the movements smoothly.
+> > + */
+> > +static int __maybe_unused dw9768_vcm_resume(struct device *dev)
+> > +{
+> > +	struct i2c_client *client = to_i2c_client(dev);
+> > +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> > +	struct dw9768_device *dw9768_dev = sd_to_dw9768_vcm(sd);
+> > +
+> > +	if (!dw9768_dev->power_count)
+> > +		return 0;
+> > +
+> > +	return dw9768_power_on(dw9768_dev, true);
+> > +}
+> > +
+> > +static const struct i2c_device_id dw9768_id_table[] = {
+> > +	{ DW9768_NAME, 0 },
+> > +	{ { 0 } }
+> > +};
+> > +MODULE_DEVICE_TABLE(i2c, dw9768_id_table);
+> > +
+> > +static const struct of_device_id dw9768_of_table[] = {
+> > +	{ .compatible = "dongwoon,dw9768" },
+> > +	{ { 0 } }
+> > +};
+> > +MODULE_DEVICE_TABLE(of, dw9768_of_table);
+> > +
+> > +static const struct dev_pm_ops dw9768_pm_ops = {
+> > +	SET_SYSTEM_SLEEP_PM_OPS(dw9768_vcm_suspend, dw9768_vcm_resume)
+> > +	SET_RUNTIME_PM_OPS(dw9768_vcm_suspend, dw9768_vcm_resume, NULL)
+> 
+> Okay, so we already provided the callbacks, but we never called
+> pm_runtime_get/put().
+> 
+> Also, I'm not sure if we can provide the same callbacks for runtime and
+> system PM ops, but I think we could use pm_runtime_force_suspend() and
+> pm_runtime_force_resume() as system ones to achieve the same.
+> 
+
+SET_SYSTEM_SLEEP_PM_OPS would use pm_runtime_force_suspend/resume in
+next release.
+
+> Best regards,
+> Tomasz
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
