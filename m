@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BA69EA57D0
-	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Sep 2019 15:39:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C4DE3A57D5
+	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Sep 2019 15:39:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,51 +11,52 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	References:Subject:From:Date:Message-ID:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=zA5G2HKDCMlH5/AigmXfosnxr9ik5A4yZPd3gGJ7PKc=; b=QnJ9KSARNeWu1mjATeb7rYAr9u
-	DUJA0hie4eSO7Yg/fnjjULnMk+kgqo5vmJmPgmKuNkWeNO1zSXRkouVBwLIcI/yTE2j5pziYFqt8k
-	iGvhD5Z5B+gtBBqa4Qrh26uRTdfY3nnz5oPtL7xPSPaFmlcOe89Y4B9ZdH+r3uqmFppULgghFy4Hg
-	oVo9hpa+NyqEkTCHVtAENNlCC/EYbrTGw/D0eXWwXcKsCQIuRnLz692EAJiL/E7knYFb1eYusPH4U
-	/MS1MGyXG3s+ZSXeLJirnv4E+u6q1TQtZ/RbCXUpMbzI+tKxGCL4QflDZJcRXKDLUEO/zWbp+ge8A
-	9W46j9Sg==;
+	bh=9NU56e8f7+Fs5vb6tdgal8HPm3r5spV00iks0nHssDM=; b=ode38IvEgmcfAfQUp4KhmL2RZs
+	gC80oc7O66Kdue140TsnoCYTIUqfiD+I6UaQ8Qu3Ot6p4AmHXEufm0qV7OPccTaeSs47QMUKEn+QH
+	JYEWYObyRXzu8m7GBrTlk3bryODDgrJ34fbbmsolt7a5yY3TXSmMiLwOBW1YrRDwMWEPNwYGXiO1Z
+	2GphHI+8MPXCKfkdrsjkg3C68BkJ1qVlOMx8uJYIB5uRhdh8l4FP8ac5+SvrNwZ1vY8S6qQ84ryzh
+	xoYU6zcEzEHD/JaRRZ55yBYt/UtgnmsjA841NkFm3dSYaaoKPeX9CrlL8gskeZgRggvuiq/s4G9PS
+	FBW/JSOg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i4mXu-0001MG-8u; Mon, 02 Sep 2019 13:39:02 +0000
-Received: from mail-wm1-f67.google.com ([209.85.128.67])
+	id 1i4mYC-0001h9-2G; Mon, 02 Sep 2019 13:39:20 +0000
+Received: from mail-wr1-f68.google.com ([209.85.221.68])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i4mXc-00016w-Il; Mon, 02 Sep 2019 13:38:45 +0000
-Received: by mail-wm1-f67.google.com with SMTP id g207so10659356wmg.5;
- Mon, 02 Sep 2019 06:38:43 -0700 (PDT)
+ id 1i4mXd-00016x-Dp; Mon, 02 Sep 2019 13:38:46 +0000
+Received: by mail-wr1-f68.google.com with SMTP id j16so14060224wrr.8;
+ Mon, 02 Sep 2019 06:38:45 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:message-id:date:from:subject:references
  :in-reply-to:cc:cc:to;
- bh=0A2NGMWOy3zEuz3VxC/asQLJTnz9aoB2esNpQEgqd1g=;
- b=IN/nAH5bz4grYLi0q91AK6ihXxXAZUY+ToXrGgc5R7AJKAHYeQdClvgemXebnwNa42
- lL3mejWS58+hGvKiuU9vg31OPfjvEprd15MhHfro/Vj036qDm6db8GXMocuevnxFhOSX
- UqcEUaIHzk/zESIRpOPGQVCbj8n5l3mhszRHIhl8OnINUPfHn4Pp6MRARXa9VRcu4qMk
- IDr8FdvewZrvsmGtWX/fgLYJG3IrOCKoVI9jlW0dXcdeJ9G6h4Ye518g1IFbnZzODjtL
- dTpvnieibJAaW/NXY5+ncLzu/WK3aC+wlwNK4iR1lQVfEZnoLZuMIYsC8TiT9zxtXYzv
- dZJw==
-X-Gm-Message-State: APjAAAU6EQF8/cah9bXJNsG1Flmf8ZMD0pfD+f3YVJ79AvZ/EE4/yLST
- Q5wzM58fosGqsdgvUUIWTA==
-X-Google-Smtp-Source: APXvYqyryTjFEoAjRiTRD/cveMVvJ62e6tv3eGdxZSToRxqfmTU0cEJbrtDlZV7N6If8HbCiP6JxUw==
-X-Received: by 2002:a7b:cc02:: with SMTP id f2mr34634993wmh.92.1567431522631; 
- Mon, 02 Sep 2019 06:38:42 -0700 (PDT)
+ bh=09FoypwgmyRAmmFg+Htl5lGcxB/1mAqQuM9bRNLvNts=;
+ b=o9lfqqduDjnd7Bzakn3bIXG3EFmmQ7b0u/asKPT90MCWpYlYHHWrpAQx2FDNY9MYBQ
+ JiczrMXeGm2n3PGiFrhi0aBUXqyauHcyknKf6l9Hre6ATszRY3QwJkjB24/zIsQEB3eo
+ TzjspYcgEB8HA+mo7rw0gF84Flhugr089KEbShyHzyxP0B3N5oFMZUSdIwn2vm+qvxC9
+ GGdv960KrutRP1hEFXx+IaoY9i02RmQDrJv0lHBBsxeW3VL4vgVT1jRKq8M/vcBInANx
+ aMChZKD0K4ZDTmZ5wOjpcfg3NYHR6ngJWhCUaKXez7EIwuVZFTwiNp4HszoU6bGB11VV
+ HgGA==
+X-Gm-Message-State: APjAAAX4s81ow5Rjb0RU129t8+525w2NFAYucyF3OYJv02Vme/feqLMO
+ 0sCAFf2TPMfLhKbgR47pXg==
+X-Google-Smtp-Source: APXvYqzUIDBa+LF4N8gaqJYa3KSq6v85Fgr8KXNSFW+T9D5h8aoLxSoonU1EHXuOx23Z15V/h+Jqug==
+X-Received: by 2002:a05:6000:128d:: with SMTP id
+ f13mr37181235wrx.241.1567431523763; 
+ Mon, 02 Sep 2019 06:38:43 -0700 (PDT)
 Received: from localhost ([212.187.182.166])
- by smtp.gmail.com with ESMTPSA id n2sm9271557wro.52.2019.09.02.06.38.41
+ by smtp.gmail.com with ESMTPSA id a13sm1559920wrf.73.2019.09.02.06.38.42
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 02 Sep 2019 06:38:41 -0700 (PDT)
-Message-ID: <5d6d1b61.1c69fb81.735c8.535d@mx.google.com>
-Date: Mon, 02 Sep 2019 14:38:41 +0100
+ Mon, 02 Sep 2019 06:38:43 -0700 (PDT)
+Message-ID: <5d6d1b63.1c69fb81.1cab3.5ef8@mx.google.com>
+Date: Mon, 02 Sep 2019 14:38:42 +0100
 From: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH v2 1/2] dt-bindings: clock: mediatek: add pericfg for
- MT8183
+Subject: Re: [PATCH v2 2/2] clk: mediatek: add pericfg clocks for MT8183
 References: <1566980533-28282-1-git-send-email-chunfeng.yun@mediatek.com>
-In-Reply-To: <1566980533-28282-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1566980533-28282-2-git-send-email-chunfeng.yun@mediatek.com>
+In-Reply-To: <1566980533-28282-2-git-send-email-chunfeng.yun@mediatek.com>
 To: Chunfeng Yun <chunfeng.yun@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190902_063844_614899_9536D554 
-X-CRM114-Status: UNSURE (   8.47  )
+X-CRM114-CacheID: sfid-20190902_063845_462414_C7FC3030 
+X-CRM114-Status: UNSURE (   7.06  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -63,17 +64,17 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.128.67 listed in list.dnswl.org]
+ no trust [209.85.221.68 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.128.67 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.221.68 listed in wl.mailspike.net]
  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -100,15 +101,19 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 28 Aug 2019 16:22:12 +0800, Chunfeng Yun wrote:
-> This patch adds binding of pericfg for MT8183.
+On Wed, 28 Aug 2019 16:22:13 +0800, Chunfeng Yun wrote:
+> Add pericfg clocks for MT8183, it's used when support USB
+> remote wakeup
 > 
+> Cc: Weiyi Lu <weiyi.lu@mediatek.com>
 > Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 > ---
-> v2: no changes
+> v2:
+>    use GATE_MTK to define GATE_PERI suggested by Weiyi
 > ---
->  .../devicetree/bindings/arm/mediatek/mediatek,pericfg.txt        | 1 +
->  1 file changed, 1 insertion(+)
+>  drivers/clk/mediatek/clk-mt8183.c      | 30 ++++++++++++++++++++++++++
+>  include/dt-bindings/clock/mt8183-clk.h |  4 ++++
+>  2 files changed, 34 insertions(+)
 > 
 
 Acked-by: Rob Herring <robh@kernel.org>
