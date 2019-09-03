@@ -2,67 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 06A20A7034
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 18:39:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B613A71AB
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 19:29:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=OD3kOyv3FN6RvamBP9FVPe1K/HXiGXrOO5Ib4GbYzzU=; b=nwrFrJWwdUban9W6P8ATQsRIe
-	mblkTrcquIueSt29HwhuJKkS2ugkolKW105J4tLSmQI2vHA7TGD+3DcHj/uJaidoxvsjLDCSx3k96
-	4oNsGHDFnKixF5Qi59gnBXL4RK+rsnyKCGqr0FjN8UFh9LFE0Ab8v04+hMddM1UT+ZQQqEmjG/okv
-	bwl9s0o16iGBaHrGMFZyvtn7nKwREdwxpN6Ymt3fZJ13l2N3vSQ+m3HnlBlPGZujuoqZKuvGC3Xid
-	yVXxbjI06WistNs7zITBeYF9C3eVbahCt/Q1R6kZCk8PheHfZLiOMPxvP0TQh06gW6o25D5EAaBe6
-	djhI+w2Sw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Gg23Po5yrr5Md2sVBRRXEZLvk77kIeYzO4IV1lq8gN0=; b=jJHgihzeDsKTal
+	yX9rlF7LImF97wHFQQYhqmLXQqzE/j6xkPbcOt0AhFcXMYfOFGxSBM5HZp7MI89Xa2Ts/2dF/19/h
+	UYUmNmAWY95vm7Rg3b60/PXXew8+yasN88pdvclY2IrRFv4dm+I+KIrqWjz+YzZw8KT+3U3V8BHrW
+	Vf4NJbeobeISK89F4xkIKD9TNLsV16LzwbBQIJheBpTOIG9h6ckgF3nPSQINKeZWqXo7z4MoqHKTr
+	q8erNjJjWgzixQd6jb+82gt33w/YELSW7L/eUnSreF6GnzA17x44qpVLfspAaaSbqmF/JcjczGb7P
+	BVpmy9Uhx+4dSpcmOctQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5BpY-0005ii-Sx; Tue, 03 Sep 2019 16:38:56 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1i5CcF-0008Py-UP; Tue, 03 Sep 2019 17:29:16 +0000
+Received: from mail-wm1-f67.google.com ([209.85.128.67])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5BpE-0005W9-AP; Tue, 03 Sep 2019 16:38:37 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=In-Reply-To:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=SJ8sp8FvDRuyze29OLcsHkJ1fO3LZuMK56azmXlvfRM=; b=APOdbs66SGlqWMxcn+FKIVqGD
- tpbvxPtv+sFs7ndBggj7ezK7Mrix3mSgR/vgyiXmz5V5wCSEnj9fAuriGJY0xtnxbG/nbbMAPIoBZ
- OS5/sm/FO0LZp0EflXUnHsjTqHjyK3+V6ExMsM0RClrjcL3uRHOucUulOjdhVNPklxobo=;
-Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
- by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <broonie@sirena.co.uk>)
- id 1i5Bp8-0000lg-QW; Tue, 03 Sep 2019 16:38:30 +0000
-Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 5A9D62740A95; Tue,  3 Sep 2019 17:38:29 +0100 (BST)
-Date: Tue, 3 Sep 2019 17:38:29 +0100
-From: Mark Brown <broonie@kernel.org>
-To: richtek.jeff.chang@gmail.com
-Subject: Re: [PATCH] [MT6660] Mediatek Smart Amplifier Driver
-Message-ID: <20190903163829.GB7916@sirena.co.uk>
-References: <1567494501-3427-1-git-send-email-richtek.jeff.chang@gmail.com>
+ id 1i5Cbx-0008Fw-3X; Tue, 03 Sep 2019 17:28:58 +0000
+Received: by mail-wm1-f67.google.com with SMTP id q19so362890wmc.3;
+ Tue, 03 Sep 2019 10:28:56 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to:user-agent;
+ bh=w+K4u8odsUFPax+hx2zddlYzhjzmD0FICwYsOGh0olA=;
+ b=p9TZdL22FLjCjiL2HPaa1Nc9sWBmrqp3XqNWR5Bn7YX50y6g945uouTfk72qSpZWcK
+ FtnAhhgCTySrzuJc7m4E2ag/Ia915sKUQQXMq40TNjnkBJyEX4U5OPHNoHqjhyJndKso
+ q+7vdCQoFIxJi8jsGhPujekHq0JE1T/5PXnOM/HKjlfjSciZjA2O8+V97MhYPqAQgB/c
+ 8HQUmFMpimj9yk0Aig3epGQP5MeIkkIw/Yb+d+GVHKKoZCRAyyagwGUPcOCzZjUFpEvG
+ 3uq5higjiwi1MhL6J4SPbO0TXQs164toS7JCsxxmR2Kouj9CSKs0iO0x6VJDIiCRohlQ
+ +iAA==
+X-Gm-Message-State: APjAAAX2E43s5PgB22L8pEkRE5GKo9AIEDSIz7FX7kFSwAAWI8sanuxp
+ qYIDv+jBneD5zu8d8ByDcA==
+X-Google-Smtp-Source: APXvYqwPuaDBS6n+RBokvyyYviJLgi2039CDrIzaeWlaVrymSkQw9o6arf548BTNUXBQu9FsTGLNgQ==
+X-Received: by 2002:a1c:4b14:: with SMTP id y20mr548705wma.10.1567531735329;
+ Tue, 03 Sep 2019 10:28:55 -0700 (PDT)
+Received: from localhost ([176.12.107.132])
+ by smtp.gmail.com with ESMTPSA id u17sm19865544wru.25.2019.09.03.10.28.54
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 03 Sep 2019 10:28:54 -0700 (PDT)
+Date: Tue, 3 Sep 2019 18:28:53 +0100
+From: Rob Herring <robh@kernel.org>
+To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
+Subject: Re: [PATCH net-next v3 2/3] dt-bindings: net: dsa: mt7530: Add
+ support for port 5
+Message-ID: <20190903172853.GA14176@bogus>
+References: <20190902130226.26845-1-opensource@vdorst.com>
+ <20190902130226.26845-3-opensource@vdorst.com>
 MIME-Version: 1.0
-In-Reply-To: <1567494501-3427-1-git-send-email-richtek.jeff.chang@gmail.com>
-X-Cookie: You will pass away very quickly.
+Content-Disposition: inline
+In-Reply-To: <20190902130226.26845-3-opensource@vdorst.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_093836_386987_BD5970D6 
-X-CRM114-Status: GOOD (  17.92  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20190903_102857_149190_7484A14D 
+X-CRM114-Status: UNSURE (   9.34  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.128.67 listed in list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.128.67 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,172 +91,46 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, linux-kernel@vger.kernel.org, tiwai@suse.com,
- lgirdwood@gmail.com, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, perex@perex.cz, linux-arm-kernel@lists.infradead.org
-Content-Type: multipart/mixed; boundary="===============4408966299675440704=="
+Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
+ Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
+ Sean Wang <sean.wang@mediatek.com>, Russell King <linux@armlinux.org.uk>,
+ "David S . Miller" <davem@davemloft.net>,
+ =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>,
+ devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mips@vger.kernel.org, Vivien Didelot <vivien.didelot@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+On Mon,  2 Sep 2019 15:02:25 +0200, =3D?UTF-8?q?Ren=3DC3=3DA9=3D20van=3D20D=
+orst?=3D wrote:
+> MT7530 port 5 has many modes/configurations.
+> Update the documentation how to use port 5.
+> =
 
---===============4408966299675440704==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="UHN/qo2QbUvPLonB"
-Content-Disposition: inline
+> Signed-off-by: Ren=E9 van Dorst <opensource@vdorst.com>
+> Cc: devicetree@vger.kernel.org
+> Cc: Rob Herring <robh@kernel.org>
+> ---
+> v2->v3:
+> * Remove 'status =3D "okay";' lines, suggested by Rob Herring
+> v1->v2:
+> * Adding extra note about RGMII2 and gpio use.
+> rfc->v1:
+> * No change
+> =
 
-
---UHN/qo2QbUvPLonB
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-
-On Tue, Sep 03, 2019 at 03:08:21PM +0800, richtek.jeff.chang@gmail.com wrote:
-
-> --- /dev/null
-> +++ b/sound/soc/codecs/mt6660.c
-> @@ -0,0 +1,802 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Copyright (c) 2019 MediaTek Inc.
-> + */
-
-Please make the entire comment block a C++ comment so things look more
-consistent.
-
-> +struct reg_size_table {
-> +	u32 addr;
-> +	u8 size;
-> +};
-
-> +static const struct reg_size_table mt6660_reg_size_table[] = {
-> +	{ MT6660_REG_HPF1_COEF, 4 },
-> +	{ MT6660_REG_HPF2_COEF, 4 },
-> +	{ MT6660_REG_TDM_CFG3, 2 },
-> +	{ MT6660_REG_RESV17, 2 },
-> +	{ MT6660_REG_RESV23, 2 },
-> +	{ MT6660_REG_SIGMAX, 2 },
-> +	{ MT6660_REG_DEVID, 2},
-> +	{ MT6660_REG_TDM_CFG3, 2},
-> +	{ MT6660_REG_HCLIP_CTRL, 2},
-> +	{ MT6660_REG_DA_GAIN, 2},
-> +};
-
-Please talk to your hardware designers about the benefits of consistent
-register sizes :/
-
-> +static int32_t mt6660_i2c_update_bits(struct mt6660_chip *chip,
-> +	uint32_t addr, uint32_t mask, uint32_t data)
-> +{
-
-It would be good to implement a regmap rather than open coding
-*everything* - it'd give you things like this without needing to open
-code them.  Providing you don't use the cache code it should cope fine
-with variable register sizes.
-
-> +
-> +static int mt6660_i2c_init_setting(struct mt6660_chip *chip)
-> +{
-> +	int i, len, ret;
-> +	const struct codec_reg_val *init_table;
-> +
-> +	init_table = e4_reg_inits;
-> +	len = ARRAY_SIZE(e4_reg_inits);
-> +
-> +	for (i = 0; i < len; i++) {
-> +		ret = mt6660_i2c_update_bits(chip, init_table[i].addr,
-> +				init_table[i].mask, init_table[i].data);
-> +		if (ret < 0)
-> +			return ret;
-
-Why are we not using the chip defaults here?
-
-> +static int mt6660_chip_power_on(
-> +	struct snd_soc_component *component, int on_off)
-> +{
-> +	struct mt6660_chip *chip = (struct mt6660_chip *)
-> +		snd_soc_component_get_drvdata(component);
-> +	int ret = 0;
-> +	unsigned int val;
-> +
-> +	dev_dbg(component->dev, "%s: on_off = %d\n", __func__, on_off);
-> +	mutex_lock(&chip->var_lock);
-> +	if (on_off) {
-> +		if (chip->pwr_cnt == 0) {
-> +			ret = mt6660_i2c_update_bits(chip,
-> +				MT6660_REG_SYSTEM_CTRL, 0x01, 0x00);
-> +			val = mt6660_i2c_read(chip, MT6660_REG_IRQ_STATUS1);
-> +			dev_info(chip->dev,
-> +				"%s reg0x05 = 0x%x\n", __func__, val);
-> +		}
-> +		chip->pwr_cnt++;
-
-This looks like you're open coding runtime PM stuff?  AFAICT the issue
-is that you need to write to this register to do any I/O.  Just
-implement this via the standard runtime PM framework, you'll need to do
-something about the register I/O in the controls (ideally in the
-framework, it'd be a lot easier if you did have a cache) but you could
-cut out this bit.
-
-> +static int mt6660_component_set_bias_level(struct snd_soc_component *component,
-> +	enum snd_soc_bias_level level)
-> +{
-> +	struct snd_soc_dapm_context *dapm =
-> +		snd_soc_component_get_dapm(component);
-> +	int ret;
-> +	unsigned int val;
-> +	struct mt6660_chip *chip = snd_soc_component_get_drvdata(component);
-> +
-> +	if (dapm->bias_level == level) {
-> +		dev_warn(component->dev, "%s: repeat level change\n", __func__);
-
-This shouldn't be a warning.
-
-> +static const struct snd_kcontrol_new mt6660_component_snd_controls[] = {
-> +	SOC_SINGLE_EXT_TLV("Volume_Ctrl", MT6660_REG_VOL_CTRL, 0, 255,
-> +			   1, snd_soc_get_volsw, mt6660_component_put_volsw,
-> +			   vol_ctl_tlv),
-> +	SOC_SINGLE_EXT("WDT_Enable", MT6660_REG_WDT_CTRL, 7, 1, 0,
-> +		       snd_soc_get_volsw, mt6660_component_put_volsw),
-
-These control names should all use standard ALSA control names - on/off
-switches should end in Switch, volume controls in Volume.
-
-> +	SOC_SINGLE_EXT("I2SLRS", MT6660_REG_DATAO_SEL, 6, 3, 0,
-> +		       snd_soc_get_volsw, mt6660_component_put_volsw),
-> +	SOC_SINGLE_EXT("I2SDOLS", MT6660_REG_DATAO_SEL, 3, 7, 0,
-> +		       snd_soc_get_volsw, mt6660_component_put_volsw),
-> +	SOC_SINGLE_EXT("I2SDORS", MT6660_REG_DATAO_SEL, 0, 7, 0,
-> +		       snd_soc_get_volsw, mt6660_component_put_volsw),
-
-What do these controls do?
-
---UHN/qo2QbUvPLonB
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl1ulwQACgkQJNaLcl1U
-h9DsxAf8DiH9juppC2atx8j+pwupdXbxOIeEil91IOqQMEBBSSJ1oa1nPDIz1HkH
-yJY7jq4QIijIkqA0b5Op3zEXSHIve3j3ZoUnN/Wrj6ODeyzrDXSvsDm/gB2/G3xJ
-AQYMGCGEaL3i0OmnFBf3LKCqG/FceKjOmg7QqcuNMGqLkdHdwiNMguc+5QkuSamM
-dvb3ZKnicrimjhMSocpe38qRFfcld4gJp6psfeDIQ8z2A1V8dtiNNrAbza/ArDUB
-kfUE1VkdWMTs1kOrjrTZl067ZzOTLBbSiulfxzDtM1UjB3LSteshyCkoVI5K+QBW
-qJJLfLqnH76e09UCIYvXbbV1J/oeRw==
-=1Pf1
------END PGP SIGNATURE-----
-
---UHN/qo2QbUvPLonB--
+>  .../devicetree/bindings/net/dsa/mt7530.txt    | 214 ++++++++++++++++++
+>  1 file changed, 214 insertions(+)
+> =
 
 
---===============4408966299675440704==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============4408966299675440704==--
-
