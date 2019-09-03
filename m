@@ -2,55 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B853DA5EEB
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 03:39:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 64889A5F88
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 05:08:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=M9IRYjIVtFFBiSG4aFhVmpGeywbV2bkInA1gk4hb2Jo=; b=sKayRQYg07ANWh
-	eSq5JwZyLAS8mZwMGI3Ixs+jjuetySOlj0USe0auiboH6dWCmR1zzSosnPjvu/jA7VH3lPERXER7m
-	EQ1XfrIoneB8OMTMkFOUBJs6Q007fGx9JCsaGrP53SkX2Zkk0YexUzZKkh32YqM5iyM4q3lE6U4QN
-	83RszShH0sdBw7KS8HTCXu3OCcFG/XzPW9HIFb9lPISAxNN7Vzd1Ks5e6x2MtohPQ67JT6iO05lOb
-	1JaRX0Hr4TcGvHJ+RYMM3Ei4D1mQYix6RonyZbfpzw8vwm5duZXhnq/OWjEenUSYIwloAoucYxgrt
-	h+ObkxG9ifmFJFzWQekA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=pkasboLVUF+MaQcJxNQhfvvXAdAgQ1iByX6//cMf3n0=; b=mnVhfhN3ggRP3W
+	5IrZ3c9uTWKYSMmkqvFuqaEQRmoHmlUB1Y+vSZwIkrsvPbdOZYZ1Y/KQ8eEfEf5WAhB97lkeICGpq
+	abRcZVqCX4DpVZJzkirw7gr1vtSDfUlqq4tpnSmsP95tKLt+1pFyZz8w3bsbnrJVq12e3skPQgAHa
+	DsmXv7MinCKUIoN0FWtv/hjDN0u5IMHBvkk5hQhjIEPoXUjGYn2Mrf14FVXeaW0L5vlvgvZ53Nutq
+	joihLZ7Qw88l2CowYCD4CSe1WnVNW7MfFJXSja8n8AkqWisnoGRKkRNGObzqoQZkCXnOwfx6rKj+o
+	A7xflhofSigHQPHowaWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i4xnN-0001dj-BV; Tue, 03 Sep 2019 01:39:45 +0000
+	id 1i4zBS-0002ez-Mh; Tue, 03 Sep 2019 03:08:42 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i4xn6-0001Sm-KB; Tue, 03 Sep 2019 01:39:30 +0000
-X-UUID: 0c7d7be1483b445bb07de8f9508c472c-20190902
-X-UUID: 0c7d7be1483b445bb07de8f9508c472c-20190902
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <bibby.hsieh@mediatek.com>)
+ id 1i4zB1-0002X3-9W; Tue, 03 Sep 2019 03:08:17 +0000
+X-UUID: c40574eb1e9b4d009ae59823a3478818-20190902
+X-UUID: c40574eb1e9b4d009ae59823a3478818-20190902
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <weiyi.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1097659097; Mon, 02 Sep 2019 17:39:21 -0800
+ with ESMTP id 1249448002; Mon, 02 Sep 2019 19:08:10 -0800
 Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 2 Sep 2019 18:39:19 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 2 Sep 2019 20:08:09 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Sep 2019 09:39:12 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 3 Sep 2019 09:39:12 +0800
-From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: David Airlie <airlied@linux.ie>, Matthias Brugger
- <matthias.bgg@gmail.com>, Daniel Vetter <daniel.vetter@ffwll.ch>,
- <dri-devel@lists.freedesktop.org>, <linux-mediatek@lists.infradead.org>
-Subject: [PATCH] arm64: dts: mt8183: Add gce setting in display node
-Date: Tue, 3 Sep 2019 09:39:10 +0800
-Message-ID: <20190903013910.30225-1-bibby.hsieh@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ 15.0.1395.4; Tue, 3 Sep 2019 11:08:07 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 3 Sep 2019 11:08:07 +0800
+Message-ID: <1567480086.22890.21.camel@mtksdaap41>
+Subject: Re: [RFC v1] clk: core: support clocks that need to be enabled
+ during re-parent
+From: Weiyi Lu <weiyi.lu@mediatek.com>
+To: Stephen Boyd <sboyd@kernel.org>
+Date: Tue, 3 Sep 2019 11:08:06 +0800
+In-Reply-To: <20190626035246.4591A20659@mail.kernel.org>
+References: <1560138293-4163-1-git-send-email-weiyi.lu@mediatek.com>
+ <20190625221415.B0DC22086D@mail.kernel.org>
+ <1561511122.24282.10.camel@mtksdaap41>
+ <20190626035246.4591A20659@mail.kernel.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190902_183928_662899_64D85178 
-X-CRM114-Status: UNSURE (   8.39  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190902_200815_339600_EC998753 
+X-CRM114-Status: GOOD (  24.97  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,123 +76,70 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: drinkcat@chromium.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- Yongqiang Niu <yongqiang.niu@mediatek.com>, linux-kernel@vger.kernel.org,
- tfiga@chromium.org, CK Hu <ck.hu@mediatek.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Philipp Zabel <p.zabel@pengutronix.de>, linux-arm-kernel@lists.infradead.org
+Cc: James Liao <jamesjj.liao@mediatek.com>, srv_heupstream@mediatek.com,
+ Biao Huang <biao.huang@mediatek.com>, linux-kernel@vger.kernel.org,
+ Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-clk@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In order to use GCE function, we need add some informations
-into display node (mboxes, mediatek,gce-client-reg, mediatek,gce-events).
+On Tue, 2019-06-25 at 20:52 -0700, Stephen Boyd wrote:
+> Quoting Weiyi Lu (2019-06-25 18:05:22)
+> > On Tue, 2019-06-25 at 15:14 -0700, Stephen Boyd wrote:
+> > > Quoting Weiyi Lu (2019-06-09 20:44:53)
+> > > > When using property assigned-clock-parents to assign parent clocks,
+> > > > core clocks might still be disabled during re-parent.
+> > > > Add flag 'CLK_OPS_CORE_ENABLE' for those clocks must be enabled
+> > > > during re-parent.
+> > > > 
+> > > > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
+> > > 
+> > > Can you further describe the scenario where this is a problem? Is it
+> > > some sort of clk that is enabled by default out of the bootloader and is
+> > > then configured to have an 'assigned-clock-parents' property to change
+> > > the parent, but that clk needs to be "enabled" so that the framework
+> > > turns on the parents for the parent switch?
+> > 
+> > When driver is built as module(.ko) and install at runtime after the
+> > whole initialization stage. Clk might already be turned off before
+> > configuring by assigned-clock-parents. For such clock design that need
+> > to have clock enabled during re-parent, the configuration of
+> > assigned-clock-parents might be failed. That's the problem we have now.
+> 
+> Great. Please put this sort of information in the commit text.
+> 
 
-Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+OK, I'll do when sending next version.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 5616d158a4fa..b7d294c1c5b4 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -485,6 +485,11 @@
- 			compatible = "mediatek,mt8183-display";
- 			reg = <0 0x14000000 0 0x1000>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-+			mboxes = <&gce 0 CMDQ_THR_PRIO_HIGHEST 1>,
-+				 <&gce 1 CMDQ_THR_PRIO_HIGHEST 1>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0 0x1000>;
-+			mediatek,gce-events = <CMDQ_EVENT_MUTEX_STREAM_DONE0>,
-+					      <CMDQ_EVENT_MUTEX_STREAM_DONE1>;
- 		};
- 
- 		ovl0: ovl@14008000 {
-@@ -494,6 +499,7 @@
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_OVL0>;
- 			mediatek,larb = <&larb0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x8000 0x1000>;
- 		};
- 
- 		ovl_2l0: ovl@14009000 {
-@@ -503,6 +509,7 @@
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_OVL0_2L>;
- 			mediatek,larb = <&larb0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x9000 0x1000>;
- 		};
- 
- 		ovl_2l1: ovl@1400a000 {
-@@ -512,6 +519,7 @@
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_OVL1_2L>;
- 			mediatek,larb = <&larb0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xa000 0x1000>;
- 		};
- 
- 		rdma0: rdma@1400b000 {
-@@ -522,6 +530,7 @@
- 			clocks = <&mmsys CLK_MM_DISP_RDMA0>;
- 			mediatek,larb = <&larb0>;
- 			mediatek,rdma_fifo_size = <5>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xb000 0x1000>;
- 		};
- 
- 		rdma1: rdma@1400c000 {
-@@ -532,6 +541,7 @@
- 			clocks = <&mmsys CLK_MM_DISP_RDMA1>;
- 			mediatek,larb = <&larb0>;
- 			mediatek,rdma_fifo_size = <2>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xc000 0x1000>;
- 		};
- 
- 		color0: color@1400e000 {
-@@ -541,6 +551,7 @@
- 			interrupts = <GIC_SPI 231 IRQ_TYPE_LEVEL_LOW>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_COLOR0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xe000 0x1000>;
- 		};
- 
- 		ccorr0: ccorr@1400f000 {
-@@ -549,6 +560,7 @@
- 			interrupts = <GIC_SPI 232 IRQ_TYPE_LEVEL_LOW>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_CCORR0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xf000 0x1000>;
- 		};
- 
- 		aal0: aal@14010000 {
-@@ -558,6 +570,7 @@
- 			interrupts = <GIC_SPI 233 IRQ_TYPE_LEVEL_LOW>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_AAL0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0 0x1000>;
- 		};
- 
- 		gamma0: gamma@14011000 {
-@@ -567,6 +580,7 @@
- 			interrupts = <GIC_SPI 234 IRQ_TYPE_LEVEL_LOW>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_GAMMA0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0x1000 0x1000>;
- 		};
- 
- 		dither0: dither@14012000 {
-@@ -575,6 +589,7 @@
- 			interrupts = <GIC_SPI 235 IRQ_TYPE_LEVEL_LOW>;
- 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 			clocks = <&mmsys CLK_MM_DISP_DITHER0>;
-+			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0x2000 0x1000>;
- 		};
- 
- 		mutex: mutex@14016000 {
--- 
-2.18.0
+> > Do you have any suggestion for such usage of clocks? Many thanks.
+> > 
+> 
+> Ok, and in this case somehow CLK_OPS_PARENT_ENABLE flag doesn't work? Is
+> that because the clk itself doesn't do anything unless it's enabled?  I
+> seem to recall that we usually work around this by caching the state of
+> the clk parents or frequencies and then when the clk prepare or enable
+> op is called we actually write the hardware to change the state. There
+> are some qcom clks like this and we basically just use the hardware
+> itself to cache the state of the clk while it hasn't actually changed to
+> be at that rate, because the clk is not enabled yet.
+> 
+
+Hi Stephen,
+
+Will you recommend if we cache the state in the platform driver instead
+of the hardware itself and then change the state when clk enable op is
+called if we don't have such hardware design on MTK clocks?
+
+> The main concern is that we're having to turn on clks to make things
+> work, when it would be best to not turn on clks just so that register
+> writes actually make a difference to what the hardware does.
+> 
+
+In my view, it's a safe operation to enable clock shortly to make things
+work when its child clock is still disabled. What do you think?
 
 
 _______________________________________________
