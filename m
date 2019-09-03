@@ -2,82 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4B613A71AB
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 19:29:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AAFC6A748C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 22:21:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Gg23Po5yrr5Md2sVBRRXEZLvk77kIeYzO4IV1lq8gN0=; b=jJHgihzeDsKTal
-	yX9rlF7LImF97wHFQQYhqmLXQqzE/j6xkPbcOt0AhFcXMYfOFGxSBM5HZp7MI89Xa2Ts/2dF/19/h
-	UYUmNmAWY95vm7Rg3b60/PXXew8+yasN88pdvclY2IrRFv4dm+I+KIrqWjz+YzZw8KT+3U3V8BHrW
-	Vf4NJbeobeISK89F4xkIKD9TNLsV16LzwbBQIJheBpTOIG9h6ckgF3nPSQINKeZWqXo7z4MoqHKTr
-	q8erNjJjWgzixQd6jb+82gt33w/YELSW7L/eUnSreF6GnzA17x44qpVLfspAaaSbqmF/JcjczGb7P
-	BVpmy9Uhx+4dSpcmOctQ==;
+	List-Owner; bh=GSYaztQojePvwjpPX92HWYxM927muWZz3H4+wU/qvuQ=; b=UUwQrPrdeQ1qsN
+	lhSJjJi0yzcM4JEKBb7WlYV6K0Xk2dpQzd0B4xN204doeDTx/CoLtxFPJpYZepJSt9Ld8NEPUV76K
+	HNL+0wG2HBfARoT6S9o8DjA+lt7WU3Hz9Ek4I+aVguhT1l27U7DBWkWsGXA9Zlj2g8J5ndUgNmZ95
+	0Qfrudg82tFgT0skmqXxSyzEdrlqmREN6qoQ0dc4AYIHLQz0JZ599gqmK06UGOO+hYfHnYa9JNvYq
+	61DMrbg3mkElAdjlZHXdguKHoFemAe1I2dJuI93EKkjYKvKcZSIVTz1S6Ju6TgwHsYdvgJ59Wd3Wi
+	gdBVqdN91ldtJ1UOEWSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5CcF-0008Py-UP; Tue, 03 Sep 2019 17:29:16 +0000
-Received: from mail-wm1-f67.google.com ([209.85.128.67])
+	id 1i5FIR-0004Ed-1C; Tue, 03 Sep 2019 20:20:59 +0000
+Received: from mail-qt1-f181.google.com ([209.85.160.181])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5Cbx-0008Fw-3X; Tue, 03 Sep 2019 17:28:58 +0000
-Received: by mail-wm1-f67.google.com with SMTP id q19so362890wmc.3;
- Tue, 03 Sep 2019 10:28:56 -0700 (PDT)
+ id 1i5FIC-00044S-7Y; Tue, 03 Sep 2019 20:20:45 +0000
+Received: by mail-qt1-f181.google.com with SMTP id k10so11389564qth.2;
+ Tue, 03 Sep 2019 13:20:43 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=w+K4u8odsUFPax+hx2zddlYzhjzmD0FICwYsOGh0olA=;
- b=p9TZdL22FLjCjiL2HPaa1Nc9sWBmrqp3XqNWR5Bn7YX50y6g945uouTfk72qSpZWcK
- FtnAhhgCTySrzuJc7m4E2ag/Ia915sKUQQXMq40TNjnkBJyEX4U5OPHNoHqjhyJndKso
- q+7vdCQoFIxJi8jsGhPujekHq0JE1T/5PXnOM/HKjlfjSciZjA2O8+V97MhYPqAQgB/c
- 8HQUmFMpimj9yk0Aig3epGQP5MeIkkIw/Yb+d+GVHKKoZCRAyyagwGUPcOCzZjUFpEvG
- 3uq5higjiwi1MhL6J4SPbO0TXQs164toS7JCsxxmR2Kouj9CSKs0iO0x6VJDIiCRohlQ
- +iAA==
-X-Gm-Message-State: APjAAAX2E43s5PgB22L8pEkRE5GKo9AIEDSIz7FX7kFSwAAWI8sanuxp
- qYIDv+jBneD5zu8d8ByDcA==
-X-Google-Smtp-Source: APXvYqwPuaDBS6n+RBokvyyYviJLgi2039CDrIzaeWlaVrymSkQw9o6arf548BTNUXBQu9FsTGLNgQ==
-X-Received: by 2002:a1c:4b14:: with SMTP id y20mr548705wma.10.1567531735329;
- Tue, 03 Sep 2019 10:28:55 -0700 (PDT)
-Received: from localhost ([176.12.107.132])
- by smtp.gmail.com with ESMTPSA id u17sm19865544wru.25.2019.09.03.10.28.54
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 03 Sep 2019 10:28:54 -0700 (PDT)
-Date: Tue, 3 Sep 2019 18:28:53 +0100
-From: Rob Herring <robh@kernel.org>
-To: =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
-Subject: Re: [PATCH net-next v3 2/3] dt-bindings: net: dsa: mt7530: Add
- support for port 5
-Message-ID: <20190903172853.GA14176@bogus>
-References: <20190902130226.26845-1-opensource@vdorst.com>
- <20190902130226.26845-3-opensource@vdorst.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=2NkeV/rCnXNPX/ZvyFHib3P3zhKIr/gYaYphEsUSBgg=;
+ b=E3IYU2L1JYtHmaNB+jY2cxa+yMSsgeTG2ezpjuF1zPt6dersfolwFIpWNBmgVjX9NU
+ XAS4dL9p+Fbsxqg0Njndf5vsT8sIa1fpQcUvBkr9PjFky6dsFmV+UDDr+Pupb62wiLaw
+ ePbzMjEyysjzldaWq6XGnodCk+bJKL80NMSpyZ1ApBjo1/ke8Ae9LkUbzbzRK2LQQFoI
+ +4oB27vjQBaC26OtQO7RM9v6SZgxkJOcqfCNwClIJ4xVUMLmylzgwUl/tOm+T3oXJjIg
+ 9cKlc/KVH1utZaaFXA4gCu8iN+RRiZihKpOXsFndhCDq3rTMwIEcPQwQoBf4m5KdHK9R
+ ho1Q==
+X-Gm-Message-State: APjAAAUQLhe1b9Eaen+Sx+abm+D650OUTwFivOSlv1oG+7/Brb5V5muB
+ /3dWQrRZis7PsIexeUJct19Kpwx1wc1YmSAdVbU=
+X-Google-Smtp-Source: APXvYqyM3hm5p30EB8rONaF15ts4cwBEEo9GhPJgbXULi0iP+cVXRJd0YtwPvH7HwbmGnyDl/n9Q1YD1bIuefo6iAvo=
+X-Received: by 2002:ac8:6b1a:: with SMTP id w26mr11946036qts.304.1567542043025; 
+ Tue, 03 Sep 2019 13:20:43 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190902130226.26845-3-opensource@vdorst.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <8c860e37-3816-d75f-fc37-ce496905ba73@gmail.com>
+In-Reply-To: <8c860e37-3816-d75f-fc37-ce496905ba73@gmail.com>
+From: Arnd Bergmann <arnd@arndb.de>
+Date: Tue, 3 Sep 2019 22:20:27 +0200
+Message-ID: <CAK8P3a05foJYvyMDYMh=0j1C3FPsMX=_JNYDB85ww37VwCfRTw@mail.gmail.com>
+Subject: Re: [GIT PULL] arm: mediatek: soc driver updates for v5.4
+To: Matthias Brugger <matthias.bgg@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_102857_149190_7484A14D 
-X-CRM114-Status: UNSURE (   9.34  )
+X-CRM114-CacheID: sfid-20190903_132044_267700_0A48FC18 
+X-CRM114-Status: UNSURE (   6.53  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.128.67 listed in list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
+ no trust [209.85.160.181 listed in list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.128.67 listed in wl.mailspike.net]
+ provider (arndbergmann[at]gmail.com)
  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -91,44 +78,23 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
- Frank Wunderlich <frank-w@public-files.de>, netdev@vger.kernel.org,
- Sean Wang <sean.wang@mediatek.com>, Russell King <linux@armlinux.org.uk>,
- "David S . Miller" <davem@davemloft.net>,
- =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>,
- devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-mips@vger.kernel.org, Vivien Didelot <vivien.didelot@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: SoC Team <soc@kernel.org>, arm-soc <arm@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Bibby Hsieh <bibby.hsieh@mediatek.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon,  2 Sep 2019 15:02:25 +0200, =3D?UTF-8?q?Ren=3DC3=3DA9=3D20van=3D20D=
-orst?=3D wrote:
-> MT7530 port 5 has many modes/configurations.
-> Update the documentation how to use port 5.
-> =
+On Fri, Aug 23, 2019 at 6:43 PM Matthias Brugger <matthias.bgg@gmail.com> wrote:
+> cmdq helper:
+> reoder function parameter and change size of the parameters
 
-> Signed-off-by: Ren=E9 van Dorst <opensource@vdorst.com>
-> Cc: devicetree@vger.kernel.org
-> Cc: Rob Herring <robh@kernel.org>
-> ---
-> v2->v3:
-> * Remove 'status =3D "okay";' lines, suggested by Rob Herring
-> v1->v2:
-> * Adding extra note about RGMII2 and gpio use.
-> rfc->v1:
-> * No change
-> =
+Pulled into arm/drivers, thanks!
 
->  .../devicetree/bindings/net/dsa/mt7530.txt    | 214 ++++++++++++++++++
->  1 file changed, 214 insertions(+)
-> =
-
-
-Reviewed-by: Rob Herring <robh@kernel.org>
+      Arnd
 
 _______________________________________________
 Linux-mediatek mailing list
