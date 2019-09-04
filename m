@@ -2,61 +2,102 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33025A82BA
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 14:49:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F3A8A8373
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 15:16:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jSiZQrXztaziSn6Hqw1T+qpOMfCZQ1xp3QRMuOS2NE8=; b=mycf37b8+clUlU
-	PPwEd6jcwYLeZwxFZZXeNjnHjrhPucpZ1wogV6fhDVZFYhLzjicgAn5F+Tj18zqZIBW76mMfLfsZL
-	3qPnntrHrlAD07dugWN6PhebZQoouZfh+9u1Cqu0jhOH5SLQ2GtxMSloGn7LH91X90SUt797ohlbR
-	adsypTpSn8AMJRKSNqdiQIHkqU72hu936M/sy+Qd/Ad1SJ47t4uzZUaAFkTJCpUdn2B2zuzjzusAD
-	uWOEube8SVInMuS3qCgh3SOcPd3IDVQhlo7r7GsXT3/2WNAEnaB0nJ2jZFguE8ui5HNFSHHo40fc3
-	mPlfc1n8johlSdWG5v0A==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=qwyA12Ycky8fF7aJunV5uhUcf2A7EbwB00xxZXXzrjA=; b=nqe5hGFGeK7b4snRFimz3oIFZ
+	TbocBH0LwxyhTu/e0ZdI7lZ7/ivIaR0Bx71FIgLi1DrfiykGambZWyshTcwv/DOxH0ipBTzjrDLDo
+	AONsafsT/YKl/CWZ7n9LZWrcfyzWD+dibcEM91va4NW0k89nERCGAMlL1SeY98YhOIlAqWA5mMTkc
+	fTu62o+LglnmRZeIVM9n+4xxMOmdS7hNZ1KpgT1f35XE04VZ3A4HmFbSXM4ziM1QYQFJrL+urLvnf
+	FjVwy7zQz4O7um2megv9JNCFfN8ImUqlQexOcMJJZNXl8Ah6QZD82Ld3LYrJo4fXarBIhfU7tIe1C
+	myQDOeXDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5Uj2-0004dM-7h; Wed, 04 Sep 2019 12:49:28 +0000
-Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
+	id 1i5V9H-0000ho-3g; Wed, 04 Sep 2019 13:16:35 +0000
+Received: from smtp-fw-9102.amazon.com ([207.171.184.29])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5Uil-0004Jk-G4; Wed, 04 Sep 2019 12:49:14 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx1.suse.de (Postfix) with ESMTP id F03BCAF47;
- Wed,  4 Sep 2019 12:49:07 +0000 (UTC)
-Subject: Re: [PATCH 1/2] mm/kasan: dump alloc/free stack for page allocator
-To: Walter Wu <walter-zh.wu@mediatek.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Alexander Potapenko <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrew Morton <akpm@linux-foundation.org>,
- Martin Schwidefsky <schwidefsky@de.ibm.com>, Arnd Bergmann <arnd@arndb.de>
-References: <20190904065133.20268-1-walter-zh.wu@mediatek.com>
-From: Vlastimil Babka <vbabka@suse.cz>
-Message-ID: <401064ae-279d-bef3-a8d5-0fe155d0886d@suse.cz>
-Date: Wed, 4 Sep 2019 14:49:06 +0200
+ id 1i5V90-0000YK-LI; Wed, 04 Sep 2019 13:16:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=amazon.com; i=@amazon.com; q=dns/txt; s=amazon201209;
+ t=1567602978; x=1599138978;
+ h=subject:to:cc:references:from:message-id:date:
+ mime-version:in-reply-to:content-transfer-encoding;
+ bh=dVPgUqN88hiyFCDUl2n0H4GWl7kQ/LvDY+M8i0q+25Y=;
+ b=VZ3WoOwZpRNbBzyask86p+s4bzhM8s3rmsabMlkwyJH3M21cXVQCp8uw
+ wTHlnw8VLhZerNNEdVY59ltyzNsefsAk0t6RL2XdWQBV4jcjYOxAWB1x5
+ rLSrxKCRKFhsCPtzFe4rAzF2EfZr+EJ8mF79yr+8z7QKIPk+FoNiHNa48 Y=;
+X-IronPort-AV: E=Sophos;i="5.64,467,1559520000"; d="scan'208";a="700658012"
+Received: from sea3-co-svc-lb6-vlan3.sea.amazon.com (HELO
+ email-inbound-relay-2c-397e131e.us-west-2.amazon.com) ([10.47.22.38])
+ by smtp-border-fw-out-9102.sea19.amazon.com with ESMTP;
+ 04 Sep 2019 13:16:13 +0000
+Received: from EX13MTAUEA001.ant.amazon.com
+ (pdx4-ws-svc-p6-lb7-vlan3.pdx.amazon.com [10.170.41.166])
+ by email-inbound-relay-2c-397e131e.us-west-2.amazon.com (Postfix) with ESMTPS
+ id 3E81BA215A; Wed,  4 Sep 2019 13:16:11 +0000 (UTC)
+Received: from EX13D01EUB001.ant.amazon.com (10.43.166.194) by
+ EX13MTAUEA001.ant.amazon.com (10.43.61.243) with Microsoft SMTP Server (TLS)
+ id 15.0.1367.3; Wed, 4 Sep 2019 13:16:10 +0000
+Received: from [10.88.66.45] (10.43.160.149) by EX13D01EUB001.ant.amazon.com
+ (10.43.166.194) with Microsoft SMTP Server (TLS) id 15.0.1367.3; Wed, 4 Sep
+ 2019 13:15:54 +0000
+Subject: Re: [PATCH -next 13/15] thermal: thermal_mmio: use
+ devm_platform_ioremap_resource() to simplify code
+To: YueHaibing <yuehaibing@huawei.com>, <miquel.raynal@bootlin.com>,
+ <rui.zhang@intel.com>, <edubezval@gmail.com>, <daniel.lezcano@linaro.org>,
+ <amit.kucheria@verdurent.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
+ <f.fainelli@gmail.com>, <rjui@broadcom.com>, <sbranden@broadcom.com>,
+ <mmayer@broadcom.com>, <computersforpeace@gmail.com>,
+ <gregory.0xf0@gmail.com>, <matthias.bgg@gmail.com>, <agross@kernel.org>,
+ <heiko@sntech.de>, <mcoquelin.stm32@gmail.com>, <alexandre.torgue@st.com>,
+ <marc.w.gonzalez@free.fr>, <mans@mansr.com>, <jun.nie@linaro.org>,
+ <shawnguo@kernel.org>, <phil@raspberrypi.org>, <gregkh@linuxfoundation.org>,
+ <david.hernandezsanchez@st.com>, <horms+renesas@verge.net.au>,
+ <wsa+renesas@sang-engineering.com>, <linux-pm@vger.kernel.org>
+References: <20190904122939.23780-1-yuehaibing@huawei.com>
+ <20190904122939.23780-14-yuehaibing@huawei.com>
+From: Talel Shenhar <talel@amazon.com>
+Message-ID: <228fdf20-9f3a-4809-6fed-448e2bb349d3@amazon.com>
+Date: Wed, 4 Sep 2019 16:15:48 +0300
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190904065133.20268-1-walter-zh.wu@mediatek.com>
+In-Reply-To: <20190904122939.23780-14-yuehaibing@huawei.com>
 Content-Language: en-US
+X-Originating-IP: [10.43.160.149]
+X-ClientProxiedBy: EX13D08UWC003.ant.amazon.com (10.43.162.21) To
+ EX13D01EUB001.ant.amazon.com (10.43.166.194)
+Precedence: Bulk
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_054911_828778_8545C920 
-X-CRM114-Status: GOOD (  21.54  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190904_061618_743313_F5D415C0 
+X-CRM114-Status: UNSURE (   8.59  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -12.7 (------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-12.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [207.171.184.29 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
-Precedence: list
 List-Id: <linux-mediatek.lists.infradead.org>
 List-Unsubscribe: <http://lists.infradead.org/mailman/options/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=unsubscribe>
@@ -65,120 +106,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
+ talel@amazon.com, linux-rockchip@lists.infradead.org,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ ronenk@amazon.com, bcm-kernel-feedback-list@broadcom.com,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 9/4/19 8:51 AM, Walter Wu wrote:
-> This patch is KASAN report adds the alloc/free stacks for page allocator
-> in order to help programmer to see memory corruption caused by page.
-> 
-> By default, KASAN doesn't record alloc/free stack for page allocator.
-> It is difficult to fix up page use-after-free issue.
-> 
-> This feature depends on page owner to record the last stack of pages.
-> It is very helpful for solving the page use-after-free or out-of-bound.
-> 
-> KASAN report will show the last stack of page, it may be:
-> a) If page is in-use state, then it prints alloc stack.
->    It is useful to fix up page out-of-bound issue.
+Thanks.
 
-I expect this will conflict both in syntax and semantics with my series [1] that
-adds the freeing stack to page_owner when used together with debug_pagealloc,
-and it's now in mmotm. Glad others see the need as well :) Perhaps you could
-review the series, see if it fulfils your usecase (AFAICS the series should be a
-superset, by storing both stacks at once), and perhaps either make KASAN enable
-debug_pagealloc, or turn KASAN into an alternative enabler of the functionality
-there?
+Talel.
 
-Thanks, Vlastimil
-
-[1] https://lore.kernel.org/linux-mm/20190820131828.22684-1-vbabka@suse.cz/t/#u
-
-> BUG: KASAN: slab-out-of-bounds in kmalloc_pagealloc_oob_right+0x88/0x90
-> Write of size 1 at addr ffffffc0d64ea00a by task cat/115
-> ...
-> Allocation stack of page:
->  prep_new_page+0x1a0/0x1d8
->  get_page_from_freelist+0xd78/0x2748
->  __alloc_pages_nodemask+0x1d4/0x1978
->  kmalloc_order+0x28/0x58
->  kmalloc_order_trace+0x28/0xe0
->  kmalloc_pagealloc_oob_right+0x2c/0x90
-> 
-> b) If page is freed state, then it prints free stack.
->    It is useful to fix up page use-after-free issue.
-> 
-> BUG: KASAN: use-after-free in kmalloc_pagealloc_uaf+0x70/0x80
-> Write of size 1 at addr ffffffc0d651c000 by task cat/115
-> ...
-> Free stack of page:
->  kasan_free_pages+0x68/0x70
->  __free_pages_ok+0x3c0/0x1328
->  __free_pages+0x50/0x78
->  kfree+0x1c4/0x250
->  kmalloc_pagealloc_uaf+0x38/0x80
-> 
-> 
-> This has been discussed, please refer below link.
-> https://bugzilla.kernel.org/show_bug.cgi?id=203967
-> 
-> Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
+On 9/4/19 2:29 PM, YueHaibing wrote:
+> Use devm_platform_ioremap_resource() to simplify the code a bit.
+> This is detected by coccinelle.
+>
+> Reported-by: Hulk Robot <hulkci@huawei.com>
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Reviewed-By: Talel Shenhar <talel@amazon.com>
 > ---
->  lib/Kconfig.kasan | 9 +++++++++
->  mm/kasan/common.c | 6 ++++++
->  2 files changed, 15 insertions(+)
-> 
-> diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
-> index 4fafba1a923b..ba17f706b5f8 100644
-> --- a/lib/Kconfig.kasan
-> +++ b/lib/Kconfig.kasan
-> @@ -135,6 +135,15 @@ config KASAN_S390_4_LEVEL_PAGING
->  	  to 3TB of RAM with KASan enabled). This options allows to force
->  	  4-level paging instead.
->  
-> +config KASAN_DUMP_PAGE
-> +	bool "Dump the page last stack information"
-> +	depends on KASAN && PAGE_OWNER
-> +	help
-> +	  By default, KASAN doesn't record alloc/free stack for page allocator.
-> +	  It is difficult to fix up page use-after-free issue.
-> +	  This feature depends on page owner to record the last stack of page.
-> +	  It is very helpful for solving the page use-after-free or out-of-bound.
-> +
->  config TEST_KASAN
->  	tristate "Module for testing KASAN for bug detection"
->  	depends on m && KASAN
-> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
-> index 2277b82902d8..2a32474efa74 100644
-> --- a/mm/kasan/common.c
-> +++ b/mm/kasan/common.c
-> @@ -35,6 +35,7 @@
->  #include <linux/vmalloc.h>
->  #include <linux/bug.h>
->  #include <linux/uaccess.h>
-> +#include <linux/page_owner.h>
->  
->  #include "kasan.h"
->  #include "../slab.h"
-> @@ -227,6 +228,11 @@ void kasan_alloc_pages(struct page *page, unsigned int order)
->  
->  void kasan_free_pages(struct page *page, unsigned int order)
->  {
-> +#ifdef CONFIG_KASAN_DUMP_PAGE
-> +	gfp_t gfp_flags = GFP_KERNEL;
-> +
-> +	set_page_owner(page, order, gfp_flags);
-> +#endif
->  	if (likely(!PageHighMem(page)))
->  		kasan_poison_shadow(page_address(page),
->  				PAGE_SIZE << order,
-> 
-
+>   drivers/thermal/thermal_mmio.c | 4 +---
+>   1 file changed, 1 insertion(+), 3 deletions(-)
 
 _______________________________________________
 Linux-mediatek mailing list
