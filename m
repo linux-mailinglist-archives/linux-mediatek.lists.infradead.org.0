@@ -2,71 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AAFC6A748C
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Sep 2019 22:21:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA669A7827
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 03:45:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GSYaztQojePvwjpPX92HWYxM927muWZz3H4+wU/qvuQ=; b=UUwQrPrdeQ1qsN
-	lhSJjJi0yzcM4JEKBb7WlYV6K0Xk2dpQzd0B4xN204doeDTx/CoLtxFPJpYZepJSt9Ld8NEPUV76K
-	HNL+0wG2HBfARoT6S9o8DjA+lt7WU3Hz9Ek4I+aVguhT1l27U7DBWkWsGXA9Zlj2g8J5ndUgNmZ95
-	0Qfrudg82tFgT0skmqXxSyzEdrlqmREN6qoQ0dc4AYIHLQz0JZ599gqmK06UGOO+hYfHnYa9JNvYq
-	61DMrbg3mkElAdjlZHXdguKHoFemAe1I2dJuI93EKkjYKvKcZSIVTz1S6Ju6TgwHsYdvgJ59Wd3Wi
-	gdBVqdN91ldtJ1UOEWSw==;
+	List-Owner; bh=g5ZukKpS8FNkfqlTFE3zSdV654DkcIhFVk/ueLnl0sU=; b=KXn1uiYV1t0wD4
+	/77BcIQQyN+X9pwVu6vALlfPbVJET/CzYDvc7Pb74gDDOnxvowfEYFx25iDVIidkXOA6AGHv6ZfA2
+	gJDxECVtHkcjDVfY+X68LROVFR6v4/dy9WZoaeKMjI4b72Ikn0zt/EFMYJa5Q9RDV4c9COWWLkgAC
+	OIRwRZkM8UduFFBc12lHXW/YD/YtW8qiYPPE8iT2nBCRSvfhimQYFu1eOtBEuvdJ5I2j5COlVAclJ
+	SlCqGgX1me/uy7igehMR+5+Fz9ZiBfUUpaXLD/bvGPbtU+Z04afIToRbC3BADUEyM6RTa3ZKGJIvZ
+	V/CyiqEF+WcqYhr04XbQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5FIR-0004Ed-1C; Tue, 03 Sep 2019 20:20:59 +0000
-Received: from mail-qt1-f181.google.com ([209.85.160.181])
+	id 1i5KLn-0005xO-Iq; Wed, 04 Sep 2019 01:44:47 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5FIC-00044S-7Y; Tue, 03 Sep 2019 20:20:45 +0000
-Received: by mail-qt1-f181.google.com with SMTP id k10so11389564qth.2;
- Tue, 03 Sep 2019 13:20:43 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=2NkeV/rCnXNPX/ZvyFHib3P3zhKIr/gYaYphEsUSBgg=;
- b=E3IYU2L1JYtHmaNB+jY2cxa+yMSsgeTG2ezpjuF1zPt6dersfolwFIpWNBmgVjX9NU
- XAS4dL9p+Fbsxqg0Njndf5vsT8sIa1fpQcUvBkr9PjFky6dsFmV+UDDr+Pupb62wiLaw
- ePbzMjEyysjzldaWq6XGnodCk+bJKL80NMSpyZ1ApBjo1/ke8Ae9LkUbzbzRK2LQQFoI
- +4oB27vjQBaC26OtQO7RM9v6SZgxkJOcqfCNwClIJ4xVUMLmylzgwUl/tOm+T3oXJjIg
- 9cKlc/KVH1utZaaFXA4gCu8iN+RRiZihKpOXsFndhCDq3rTMwIEcPQwQoBf4m5KdHK9R
- ho1Q==
-X-Gm-Message-State: APjAAAUQLhe1b9Eaen+Sx+abm+D650OUTwFivOSlv1oG+7/Brb5V5muB
- /3dWQrRZis7PsIexeUJct19Kpwx1wc1YmSAdVbU=
-X-Google-Smtp-Source: APXvYqyM3hm5p30EB8rONaF15ts4cwBEEo9GhPJgbXULi0iP+cVXRJd0YtwPvH7HwbmGnyDl/n9Q1YD1bIuefo6iAvo=
-X-Received: by 2002:ac8:6b1a:: with SMTP id w26mr11946036qts.304.1567542043025; 
- Tue, 03 Sep 2019 13:20:43 -0700 (PDT)
+ id 1i5KLK-0005pH-6u; Wed, 04 Sep 2019 01:44:20 +0000
+X-UUID: f0378e116f4041afae1e8ba1609152f4-20190903
+X-UUID: f0378e116f4041afae1e8ba1609152f4-20190903
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1268437623; Tue, 03 Sep 2019 17:44:13 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Sep 2019 18:44:12 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 4 Sep 2019 09:44:08 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 4 Sep 2019 09:44:08 +0800
+Message-ID: <1567561448.6949.0.camel@mtksdaap41>
+Subject: Re: [PATCH v5, 02/32] dt-bindings: mediatek: add ovl_2l description
+ for mt8183 display
+From: CK Hu <ck.hu@mediatek.com>
+To: <yongqiang.niu@mediatek.com>
+Date: Wed, 4 Sep 2019 09:44:08 +0800
+In-Reply-To: <1567090254-15566-3-git-send-email-yongqiang.niu@mediatek.com>
+References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
+ <1567090254-15566-3-git-send-email-yongqiang.niu@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <8c860e37-3816-d75f-fc37-ce496905ba73@gmail.com>
-In-Reply-To: <8c860e37-3816-d75f-fc37-ce496905ba73@gmail.com>
-From: Arnd Bergmann <arnd@arndb.de>
-Date: Tue, 3 Sep 2019 22:20:27 +0200
-Message-ID: <CAK8P3a05foJYvyMDYMh=0j1C3FPsMX=_JNYDB85ww37VwCfRTw@mail.gmail.com>
-Subject: Re: [GIT PULL] arm: mediatek: soc driver updates for v5.4
-To: Matthias Brugger <matthias.bgg@gmail.com>
+X-TM-SNTS-SMTP: 8264C2D1E11AEA1A4F44BD0DDA0F68C7BD70E9D873AA0FEFE7B33B2BA55FEC962000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_132044_267700_0A48FC18 
-X-CRM114-Status: UNSURE (   6.53  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190903_184418_508862_FFEB21FF 
+X-CRM114-Status: GOOD (  12.79  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.160.181 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (arndbergmann[at]gmail.com)
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,23 +73,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: SoC Team <soc@kernel.org>, arm-soc <arm@kernel.org>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-mediatek@lists.infradead.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Bibby Hsieh <bibby.hsieh@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Aug 23, 2019 at 6:43 PM Matthias Brugger <matthias.bgg@gmail.com> wrote:
-> cmdq helper:
-> reoder function parameter and change size of the parameters
+Hi, Yongqiang:
 
-Pulled into arm/drivers, thanks!
+On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
+> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> 
+> Update device tree binding documention for the display subsystem for
+> Mediatek MT8183 SOCs
 
-      Arnd
+Applied to mediatek-drm-next-5.5 [1], thanks.
+
+[1]
+https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.5
+
+Regards,
+CK
+
+> 
+> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
+> Reviewed-by: Rob Herring <robh@kernel.org>
+> ---
+>  .../bindings/display/mediatek/mediatek,disp.txt    | 27 +++++++++++-----------
+>  1 file changed, 14 insertions(+), 13 deletions(-)
+> 
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> index 464b92f..8c4700f 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
+> @@ -27,19 +27,20 @@ Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt.
+>  
+>  Required properties (all function blocks):
+>  - compatible: "mediatek,<chip>-disp-<function>", one of
+> -	"mediatek,<chip>-disp-ovl"   - overlay (4 layers, blending, csc)
+> -	"mediatek,<chip>-disp-rdma"  - read DMA / line buffer
+> -	"mediatek,<chip>-disp-wdma"  - write DMA
+> -	"mediatek,<chip>-disp-color" - color processor
+> -	"mediatek,<chip>-disp-aal"   - adaptive ambient light controller
+> -	"mediatek,<chip>-disp-gamma" - gamma correction
+> -	"mediatek,<chip>-disp-merge" - merge streams from two RDMA sources
+> -	"mediatek,<chip>-disp-split" - split stream to two encoders
+> -	"mediatek,<chip>-disp-ufoe"  - data compression engine
+> -	"mediatek,<chip>-dsi"        - DSI controller, see mediatek,dsi.txt
+> -	"mediatek,<chip>-dpi"        - DPI controller, see mediatek,dpi.txt
+> -	"mediatek,<chip>-disp-mutex" - display mutex
+> -	"mediatek,<chip>-disp-od"    - overdrive
+> +	"mediatek,<chip>-disp-ovl"   		- overlay (4 layers, blending, csc)
+> +	"mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
+> +	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
+> +	"mediatek,<chip>-disp-wdma"  		- write DMA
+> +	"mediatek,<chip>-disp-color" 		- color processor
+> +	"mediatek,<chip>-disp-aal"   		- adaptive ambient light controller
+> +	"mediatek,<chip>-disp-gamma" 		- gamma correction
+> +	"mediatek,<chip>-disp-merge" 		- merge streams from two RDMA sources
+> +	"mediatek,<chip>-disp-split" 		- split stream to two encoders
+> +	"mediatek,<chip>-disp-ufoe"  		- data compression engine
+> +	"mediatek,<chip>-dsi"        		- DSI controller, see mediatek,dsi.txt
+> +	"mediatek,<chip>-dpi"        		- DPI controller, see mediatek,dpi.txt
+> +	"mediatek,<chip>-disp-mutex" 		- display mutex
+> +	"mediatek,<chip>-disp-od"    		- overdrive
+>    the supported chips are mt2701, mt2712 and mt8173.
+>  - reg: Physical base address and length of the function block register space
+>  - interrupts: The interrupt signal from the function block (required, except for
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
