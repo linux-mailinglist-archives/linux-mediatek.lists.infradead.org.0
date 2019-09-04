@@ -2,57 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA669A7827
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 03:45:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81424A782D
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 03:45:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=g5ZukKpS8FNkfqlTFE3zSdV654DkcIhFVk/ueLnl0sU=; b=KXn1uiYV1t0wD4
-	/77BcIQQyN+X9pwVu6vALlfPbVJET/CzYDvc7Pb74gDDOnxvowfEYFx25iDVIidkXOA6AGHv6ZfA2
-	gJDxECVtHkcjDVfY+X68LROVFR6v4/dy9WZoaeKMjI4b72Ikn0zt/EFMYJa5Q9RDV4c9COWWLkgAC
-	OIRwRZkM8UduFFBc12lHXW/YD/YtW8qiYPPE8iT2nBCRSvfhimQYFu1eOtBEuvdJ5I2j5COlVAclJ
-	SlCqGgX1me/uy7igehMR+5+Fz9ZiBfUUpaXLD/bvGPbtU+Z04afIToRbC3BADUEyM6RTa3ZKGJIvZ
-	V/CyiqEF+WcqYhr04XbQ==;
+	List-Owner; bh=YTJVbWzXE1pGLJF2hDnIJ48qHnQXuEIofzHtG/ww+QY=; b=e7qX+EBdybFPD1
+	RD7QFSsvNDOLhhHeYmQO8QWCQ7j0Bp/V366GAw2G7BuVEq2lKx8PrrR3JJF4elcMLwY/G2fFEdpQB
+	BwqdFNO18XogaxvXZEGhXzCyhKc/oYXlzPLO6S3SP550iFQn+FoLCKPKNFhrOmJ3qFtThlifAfMZ4
+	nJu3r37OXJW9wJ35RhIIhxIZlpZ3svpNw4G9wSmggI0BNAnJtYbn00a6BaWfO5lz2FHmgm33QBwsZ
+	VvK8HRyn7U5yyFeacerQRphCf0Oh5vYeVcJBcNnY6MEG/mijEHc2v3u/JZPxHm9Icatuu7vX8OhLp
+	CtSrFYspK/eVvS9vGSJA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5KLn-0005xO-Iq; Wed, 04 Sep 2019 01:44:47 +0000
+	id 1i5KMS-0007XW-Sf; Wed, 04 Sep 2019 01:45:29 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5KLK-0005pH-6u; Wed, 04 Sep 2019 01:44:20 +0000
-X-UUID: f0378e116f4041afae1e8ba1609152f4-20190903
-X-UUID: f0378e116f4041afae1e8ba1609152f4-20190903
+ id 1i5KLj-0005xm-5F; Wed, 04 Sep 2019 01:44:45 +0000
+X-UUID: b319a5b190674ee5953dd9f9a9a0cbd8-20190903
+X-UUID: b319a5b190674ee5953dd9f9a9a0cbd8-20190903
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1268437623; Tue, 03 Sep 2019 17:44:13 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Sep 2019 18:44:12 -0700
+ with ESMTP id 200884026; Tue, 03 Sep 2019 17:44:41 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Sep 2019 18:44:39 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 09:44:08 +0800
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 4 Sep 2019 09:44:34 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 4 Sep 2019 09:44:08 +0800
-Message-ID: <1567561448.6949.0.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 02/32] dt-bindings: mediatek: add ovl_2l description
+ Transport; Wed, 4 Sep 2019 09:44:34 +0800
+Message-ID: <1567561475.6949.1.camel@mtksdaap41>
+Subject: Re: [PATCH v5, 03/32] dt-bindings: mediatek: add ccorr description
  for mt8183 display
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Wed, 4 Sep 2019 09:44:08 +0800
-In-Reply-To: <1567090254-15566-3-git-send-email-yongqiang.niu@mediatek.com>
+Date: Wed, 4 Sep 2019 09:44:35 +0800
+In-Reply-To: <1567090254-15566-4-git-send-email-yongqiang.niu@mediatek.com>
 References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-3-git-send-email-yongqiang.niu@mediatek.com>
+ <1567090254-15566-4-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 8264C2D1E11AEA1A4F44BD0DDA0F68C7BD70E9D873AA0FEFE7B33B2BA55FEC962000:8
+X-TM-SNTS-SMTP: 1E6931ECFD1B2E8E6D7DD6F395901224FABA8A85FBB7C0518DFB1CC95358D1B02000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_184418_508862_FFEB21FF 
-X-CRM114-Status: GOOD (  12.79  )
+X-CRM114-CacheID: sfid-20190903_184444_092480_C342B0FD 
+X-CRM114-Status: GOOD (  12.80  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -102,49 +102,23 @@ CK
 
 > 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> Reviewed-by: Rob Herring <robh@kernel.org>
+> Reviewed-by: Rob Herring <robh at kernel.org>
 > ---
->  .../bindings/display/mediatek/mediatek,disp.txt    | 27 +++++++++++-----------
->  1 file changed, 14 insertions(+), 13 deletions(-)
+>  Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt | 1 +
+>  1 file changed, 1 insertion(+)
 > 
 > diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> index 464b92f..8c4700f 100644
+> index 8c4700f..cf5fb08 100644
 > --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
 > +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,disp.txt
-> @@ -27,19 +27,20 @@ Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt.
->  
->  Required properties (all function blocks):
->  - compatible: "mediatek,<chip>-disp-<function>", one of
-> -	"mediatek,<chip>-disp-ovl"   - overlay (4 layers, blending, csc)
-> -	"mediatek,<chip>-disp-rdma"  - read DMA / line buffer
-> -	"mediatek,<chip>-disp-wdma"  - write DMA
-> -	"mediatek,<chip>-disp-color" - color processor
-> -	"mediatek,<chip>-disp-aal"   - adaptive ambient light controller
-> -	"mediatek,<chip>-disp-gamma" - gamma correction
-> -	"mediatek,<chip>-disp-merge" - merge streams from two RDMA sources
-> -	"mediatek,<chip>-disp-split" - split stream to two encoders
-> -	"mediatek,<chip>-disp-ufoe"  - data compression engine
-> -	"mediatek,<chip>-dsi"        - DSI controller, see mediatek,dsi.txt
-> -	"mediatek,<chip>-dpi"        - DPI controller, see mediatek,dpi.txt
-> -	"mediatek,<chip>-disp-mutex" - display mutex
-> -	"mediatek,<chip>-disp-od"    - overdrive
-> +	"mediatek,<chip>-disp-ovl"   		- overlay (4 layers, blending, csc)
-> +	"mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
-> +	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
-> +	"mediatek,<chip>-disp-wdma"  		- write DMA
-> +	"mediatek,<chip>-disp-color" 		- color processor
-> +	"mediatek,<chip>-disp-aal"   		- adaptive ambient light controller
-> +	"mediatek,<chip>-disp-gamma" 		- gamma correction
-> +	"mediatek,<chip>-disp-merge" 		- merge streams from two RDMA sources
-> +	"mediatek,<chip>-disp-split" 		- split stream to two encoders
-> +	"mediatek,<chip>-disp-ufoe"  		- data compression engine
-> +	"mediatek,<chip>-dsi"        		- DSI controller, see mediatek,dsi.txt
-> +	"mediatek,<chip>-dpi"        		- DPI controller, see mediatek,dpi.txt
-> +	"mediatek,<chip>-disp-mutex" 		- display mutex
-> +	"mediatek,<chip>-disp-od"    		- overdrive
->    the supported chips are mt2701, mt2712 and mt8173.
->  - reg: Physical base address and length of the function block register space
->  - interrupts: The interrupt signal from the function block (required, except for
+> @@ -31,6 +31,7 @@ Required properties (all function blocks):
+>  	"mediatek,<chip>-disp-ovl-2l"           - overlay (2 layers, blending, csc)
+>  	"mediatek,<chip>-disp-rdma"  		- read DMA / line buffer
+>  	"mediatek,<chip>-disp-wdma"  		- write DMA
+> +	"mediatek,<chip>-disp-ccorr"            - color correction
+>  	"mediatek,<chip>-disp-color" 		- color processor
+>  	"mediatek,<chip>-disp-aal"   		- adaptive ambient light controller
+>  	"mediatek,<chip>-disp-gamma" 		- gamma correction
 
 
 
