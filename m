@@ -2,68 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D235CA8595
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 16:24:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F635A85A2
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 16:29:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ilS4CSNkl+nqL8U3fziaDofUKugnHG/jLHCr7YF15vk=; b=LZem5fTs9Ytu+r
-	OccWn2rT3ObwoaxI9Fczr1CU2vTgwpVynNu+FsaNGo1uWZ7lvEexpSXPv7OCgnRXkqT0egQK7PydC
-	puFC23I8WCrDRUo1dKGehDKeE1S2p6O/gAmJxPsD0pw9OygrM8LEsHfSkOj9xRjfJ18ASFy5ZxenS
-	71qfoWyOLhZ7BUVYL2qxilGrgYy4vca8t5N2APEozEZSIR7ryqsq+hEuFaF4+6zfuY2yCZQvDmpJ5
-	mJ5t5XO6xP38vRBSwbZ8sopXMO/h0dL+/L66tFcHj6zqCVeqLSp9qTkfMwjU2Q4WjXjJjChonj1EC
-	ckqd6FpJ4oLxICaeu2TQ==;
+	List-Owner; bh=CRlhH41L/HR5ufUQ3UeWpiNDxep3DHIs4726Uom7pxM=; b=C4bbLlOPAAIe9C
+	DXSxUWtYNUS0LOUoMX3xUhrxDr9nY67uSjSYhb7RFc/3OkIQY7apYvwdU/oE+zvhYnUi4pew3JCIW
+	Z0fPpCmOAuVORZClf42tXp8TI1OmeG1jfj4jBYLvahIAZFsKMlmD2SlwYSTQuq2Wcl9EK1CPhAPl9
+	aDHoH1wWYgEgmP6uricPb3LXmzs3jumjG7QCY/nfxre4yBc0sFneSn2EKqVdQvVRegVPL0QEuZRlf
+	Y6hX2dAiGLt1c/KW+ZRnVu47L3m2i3UYJZxk+HzR5U8mHvFVUkuIMcrcdutcOwPYN8TCWdXn9CING
+	+r5csF10+3V2xEPE5PaA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5WD5-0003dL-CB; Wed, 04 Sep 2019 14:24:35 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i5WHJ-0005vt-Hs; Wed, 04 Sep 2019 14:28:57 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5WD0-0003cn-Uh; Wed, 04 Sep 2019 14:24:32 +0000
-X-UUID: 07d89c2481bf4c63b03f0dfd00cbe4a4-20190904
-X-UUID: 07d89c2481bf4c63b03f0dfd00cbe4a4-20190904
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 444790332; Wed, 04 Sep 2019 06:24:26 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 07:24:25 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 22:24:23 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 4 Sep 2019 22:24:22 +0800
-Message-ID: <1567607063.32522.24.camel@mtksdccf07>
-Subject: Re: [PATCH 1/2] mm/kasan: dump alloc/free stack for page allocator
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Vlastimil Babka <vbabka@suse.cz>
-Date: Wed, 4 Sep 2019 22:24:23 +0800
-In-Reply-To: <7998e8f1-e5e2-da84-ea1f-33e696015dce@suse.cz>
-References: <20190904065133.20268-1-walter-zh.wu@mediatek.com>
- <401064ae-279d-bef3-a8d5-0fe155d0886d@suse.cz>
- <1567605965.32522.14.camel@mtksdccf07>
- <7998e8f1-e5e2-da84-ea1f-33e696015dce@suse.cz>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i5WH5-0005k1-4U; Wed, 04 Sep 2019 14:28:44 +0000
+Received: from mail-lf1-f43.google.com (mail-lf1-f43.google.com
+ [209.85.167.43])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 592B72342D;
+ Wed,  4 Sep 2019 14:28:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1567607322;
+ bh=L76A2ZvdZ49vwh9gPyzYANOjIS9WVsZyi57kx5mf8cQ=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=szOhtdy3pm0hmLpuZGMow2vaeDvOjEj/9NcUKl3Ye865Ae8MB/Tl+Sip/dXvPxb9B
+ 72hiCdJ/0l/oVbxrbyiOYabDzUdSAJFpf80udg8QExAsVR84ISBvUwLj6bCfquTzob
+ rRp/OA3BeXbrfH/12rQnn4/Hm5WjoM800DRgrq64=
+Received: by mail-lf1-f43.google.com with SMTP id w67so16109868lff.4;
+ Wed, 04 Sep 2019 07:28:42 -0700 (PDT)
+X-Gm-Message-State: APjAAAW7ouz7PA1YJi5avY84iHGwgCCcPMEZzsbJEAq+GVAmyhnSPJbc
+ dbl6BhpZXiZ6brt97m3k6faIKDq4Mo7gUbS70AA=
+X-Google-Smtp-Source: APXvYqycXOQpNE+apc0JPS11KQSp+RmtxHn6Ng9LQDVcy4lQi5wxS8ZrsQ1N6swmH4iFFIYS5iVQwDmEz/WmDjOTj6U=
+X-Received: by 2002:a19:c649:: with SMTP id w70mr24808672lff.33.1567607320399; 
+ Wed, 04 Sep 2019 07:28:40 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <20190904135918.25352-1-yuehaibing@huawei.com>
+ <20190904135918.25352-26-yuehaibing@huawei.com>
+In-Reply-To: <20190904135918.25352-26-yuehaibing@huawei.com>
+From: Krzysztof Kozlowski <krzk@kernel.org>
+Date: Wed, 4 Sep 2019 16:28:29 +0200
+X-Gmail-Original-Message-ID: <CAJKOXPdq4as1Oe3U+9znkvP0RA=sxUoiWVBCSbzf_wq_um2t=w@mail.gmail.com>
+Message-ID: <CAJKOXPdq4as1Oe3U+9znkvP0RA=sxUoiWVBCSbzf_wq_um2t=w@mail.gmail.com>
+Subject: Re: [PATCH -next 25/36] spi: s3c24xx: use
+ devm_platform_ioremap_resource() to simplify code
+To: YueHaibing <yuehaibing@huawei.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_072430_994110_93A4BFF7 
-X-CRM114-Status: GOOD (  19.81  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190904_072843_212653_9376E30C 
+X-CRM114-Status: GOOD (  16.32  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,67 +84,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Arnd Bergmann <arnd@arndb.de>,
- linux-mm@kvack.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com, Martin
- Schwidefsky <schwidefsky@de.ibm.com>, Alexander Potapenko <glider@google.com>,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
+Cc: tmaimon77@gmail.com, palmer@sifive.com, tali.perry1@gmail.com,
+ eric@anholt.net, ldewangan@nvidia.com, linux-riscv@lists.infradead.org,
+ festevam@gmail.com,
+ "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
+ f.fainelli@gmail.com, benjaminfair@google.com, shc_work@mail.ru,
+ khilman@baylibre.com, openbmc@lists.ozlabs.org, michal.simek@xilinx.com,
+ jonathanh@nvidia.com, yuenn@google.com, wens@csie.org, agross@kernel.org,
+ bcm-kernel-feedback-list@broadcom.com, linux-imx@nxp.com,
+ linux-arm-msm@vger.kernel.org, linux-tegra@vger.kernel.org,
+ Andi Shyti <andi@etezian.org>, rjui@broadcom.com, s.hauer@pengutronix.de,
+ mripard@kernel.org, broonie@kernel.org, linux-mediatek@lists.infradead.org,
+ linux-rpi-kernel@lists.infradead.org, paul.walmsley@sifive.com,
+ matthias.bgg@gmail.com, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, baohua@kernel.org, sbranden@broadcom.com,
+ yamada.masahiro@socionext.com, avifishman70@gmail.com, venture@google.com,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ linux-spi@vger.kernel.org, thierry.reding@gmail.com, wahrenst@gmx.net,
+ kernel@pengutronix.de, kgene@kernel.org, shawnguo@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-09-04 at 16:13 +0200, Vlastimil Babka wrote:
-> On 9/4/19 4:06 PM, Walter Wu wrote:
-> > On Wed, 2019-09-04 at 14:49 +0200, Vlastimil Babka wrote:
-> >> On 9/4/19 8:51 AM, Walter Wu wrote:
-> >> > This patch is KASAN report adds the alloc/free stacks for page allocator
-> >> > in order to help programmer to see memory corruption caused by page.
-> >> > 
-> >> > By default, KASAN doesn't record alloc/free stack for page allocator.
-> >> > It is difficult to fix up page use-after-free issue.
-> >> > 
-> >> > This feature depends on page owner to record the last stack of pages.
-> >> > It is very helpful for solving the page use-after-free or out-of-bound.
-> >> > 
-> >> > KASAN report will show the last stack of page, it may be:
-> >> > a) If page is in-use state, then it prints alloc stack.
-> >> >    It is useful to fix up page out-of-bound issue.
-> >> 
-> >> I expect this will conflict both in syntax and semantics with my series [1] that
-> >> adds the freeing stack to page_owner when used together with debug_pagealloc,
-> >> and it's now in mmotm. Glad others see the need as well :) Perhaps you could
-> >> review the series, see if it fulfils your usecase (AFAICS the series should be a
-> >> superset, by storing both stacks at once), and perhaps either make KASAN enable
-> >> debug_pagealloc, or turn KASAN into an alternative enabler of the functionality
-> >> there?
-> >> 
-> >> Thanks, Vlastimil
-> >> 
-> >> [1] https://lore.kernel.org/linux-mm/20190820131828.22684-1-vbabka@suse.cz/t/#u
-> >> 
-> > Thanks your information.
-> > We focus on the smartphone, so it doesn't enable
-> > CONFIG_TRANSPARENT_HUGEPAGE, Is it invalid for our usecase?
-> 
-> The THP fix is not required for the rest of the series, it was even merged to
-> mainline separately.
-> 
-> > And It looks like something is different, because we only need last
-> > stack of page, so it can decrease memory overhead.
-> 
-> That would save you depot_stack_handle_t (which is u32) per page. I guess that's
-> nothing compared to KASAN overhead?
-> 
-If we can use less memory, we can achieve what we want. Why not?
+On Wed, 4 Sep 2019 at 16:00, YueHaibing <yuehaibing@huawei.com> wrote:
+>
+> Use devm_platform_ioremap_resource() to simplify the code a bit.
+> This is detected by coccinelle.
+>
+> Reported-by: Hulk Robot <hulkci@huawei.com>
 
-Thanks.
-Walter
+This tag does not look real... First of all where is the report?
+Second, it was reported by coccinelle.
+Reported-by should be use to give real credits.
 
+Best regards,
+Krzysztof
 
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+> ---
+>  drivers/spi/spi-s3c24xx.c | 4 +---
+>  1 file changed, 1 insertion(+), 3 deletions(-)
+>
+> diff --git a/drivers/spi/spi-s3c24xx.c b/drivers/spi/spi-s3c24xx.c
+> index aea8fd9..2d6e37f 100644
+> --- a/drivers/spi/spi-s3c24xx.c
+> +++ b/drivers/spi/spi-s3c24xx.c
+> @@ -487,7 +487,6 @@ static int s3c24xx_spi_probe(struct platform_device *pdev)
+>         struct s3c2410_spi_info *pdata;
+>         struct s3c24xx_spi *hw;
+>         struct spi_master *master;
+> -       struct resource *res;
+>         int err = 0;
+>
+>         master = spi_alloc_master(&pdev->dev, sizeof(struct s3c24xx_spi));
+> @@ -536,8 +535,7 @@ static int s3c24xx_spi_probe(struct platform_device *pdev)
+>         dev_dbg(hw->dev, "bitbang at %p\n", &hw->bitbang);
+>
+>         /* find and map our resources */
+> -       res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> -       hw->regs = devm_ioremap_resource(&pdev->dev, res);
+> +       hw->regs = devm_platform_ioremap_resource(pdev, 0);
+>         if (IS_ERR(hw->regs)) {
+>                 err = PTR_ERR(hw->regs);
+>                 goto err_no_pdata;
+> --
+> 2.7.4
+>
+>
 
 _______________________________________________
 Linux-mediatek mailing list
