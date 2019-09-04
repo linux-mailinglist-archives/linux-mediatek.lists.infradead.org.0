@@ -2,83 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F0E20A9404
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 22:45:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D9E3A940E
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 22:47:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=39injSE/xJz08Pm8axWI2w0Pw+J9G0WQQ+YMHYdFcrQ=; b=O4Xb1H83PBM5qg
-	Pr8q9/TCdd68qkirvsJkanOhq6/XiQeXJbAAXGiuRwKDyO7aRlw2TwTkicNJTCn2dDz4xTINs1gHs
-	JUm7HclFJrB+zgEGYYsWWLgejYbUNsaJFgyXqN6EQg3mP8YekMNc+4Xj7lnImeKfi3ctSDKVdCMwx
-	k2atrqdwnydSw358xoCPmeX9HupNRy1rC3+0dxSQFQA+6RBMCkG1jWnZs3DAgRjkfWdqRa0ndq7VN
-	l2AVe1zCNhQK6MjX/7Qm12IOz+RWos8I80ezkHVmN1L3pjd605J5Pm0EbX47kfUKbBiKwGvjp03pc
-	Pe63ShrfcTD9S1HXf4mw==;
+	List-Owner; bh=GqfB3OPnAAML8BuQwm4qmeT8Nd7SZ2AV+MSNSCi2F2I=; b=sX9iwg/dJyuesB
+	FJDgmyOA3N0e5ScglGIe7Jgy6Zq1aMVIPz9pjvgjDfuiVeSuMQ9rCF3iZYKBbTryHiqNmGnwUbzYW
+	ssfiV4NJAt+71sodTOVO4WoEA75Vu2TB6n2u0Vp6bI4bOSeIkF7Hp5R1btKkbfMWr4gHy8BKtFdKX
+	jF6cy2MSDmE3qZohGSPMCj8aNvWxnEdwBhWDpgj2UVIh9zb1P1kJoXs3JpUCEqPpUQq4zw+71xuTM
+	UcYipcWhLLA9GlkakyKVvBQz4/w04fqI3pdRVPLq/moCfv2bRlMqDEDNLLPT6kayUUu/KEyJEbyTs
+	0yWa6H5ZuCUIffmCDvEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5c9B-0004gI-JV; Wed, 04 Sep 2019 20:44:57 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1i5cBL-0006IT-Vm; Wed, 04 Sep 2019 20:47:11 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5c8s-0004N0-UL
- for linux-mediatek@lists.infradead.org; Wed, 04 Sep 2019 20:44:41 +0000
-Received: by mail-pl1-x644.google.com with SMTP id d3so118146plr.1
- for <linux-mediatek@lists.infradead.org>; Wed, 04 Sep 2019 13:44:38 -0700 (PDT)
+ id 1i5cB5-00061d-AX
+ for linux-mediatek@lists.infradead.org; Wed, 04 Sep 2019 20:46:57 +0000
+Received: by mail-pg1-x543.google.com with SMTP id d1so77391pgp.4
+ for <linux-mediatek@lists.infradead.org>; Wed, 04 Sep 2019 13:46:55 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to:user-agent;
- bh=vZGgKk8jeW8NM2wT+HTq6+KHx26Kcf2Hd/HdxeR6J0c=;
- b=TzzsMJ3gWG917Iis4NdDhBIHth4GqtK3/sv+X2gQXSJdeB0qEqMFs9o843HMPvOYUn
- vxtcCBUDaWeRrnOi1h22RIfgxWB3iIQod31jZJoOVeGfutT9zeffgawMOBlMyWm9nSwy
- YYRmz4yz3DSBRuxsOrQNDlVkq2BDtx9qG5bw/7teX4Y2Jiv+jUIX5DTvPqMzRVOzI9X5
- 4aJ+GjJekgkZ7uptwZX/lTBColHi+7J8HLkvOOdJeAxLEmtHbAncsA81jTFaDEk/tFKN
- czMqG3CwBQQXU35NXerVTyXs4EAwGQjCKS5/StfvvxlCQdQ0G6qjrLlu6glTZVxMY3++
- m0oA==
+ bh=7FpVgaIhgimDRqpweFDbMiGBjSsk/JazcD80okKL/K8=;
+ b=B3ZwBoxDNj5wp/W0+6EgPLtyn42FRM4lKEPuGul/INFNVDV0d6vrjAfI74kiYbBjwb
+ RtwOAFpFkp8ULzlYQBnaGau4RSDKiK2Sdq8Hjs6JHKbU5On8H56ARMSYggt77ImaOAXR
+ Phja5i1TBR6bjGzSRWjJc8EZqzoOHCuT1G+iocES8UWBNVeoOYiRY6HkgRLZvKh5M6Sb
+ WHzguaFI/2ByIIVLDKt6nFLW+FJbEXZiBcnjB+VvF1jsWXutZ6GLiXNq+3ly3QHxD/gn
+ UhmFNW0RtNQQoSqk6dbh3isqFmSp5AkCvUY6fi5kmUt8vL3neywbb2V1USK8/dnNvSiJ
+ Cxug==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=vZGgKk8jeW8NM2wT+HTq6+KHx26Kcf2Hd/HdxeR6J0c=;
- b=pAFZJsgNPNor3HD0sJ5T0Dn0h9Ae4i2C1vuyrbP3WzHUr1AL/DdJ+tUwEp7CFbf+0S
- PDUOzlU5f5MuEvAQt8MD33oAlTWkorh3+DRntV3Xaxh1GbuVzybTnZzlbw2cek+p1oSF
- 7oW62NGDVHdqKtHDzmOnMMK9YPRuh36b0d2GkjGrT4gBGHTBzK0MKFbKlBzx0uKJM8q/
- 9w/zNBo6X84WcvcwPCTWGAoU3Snyi0KQ4qF9gxaEUKn3mPgCX90UBmS0UxRc/o2YVzqH
- 0S40F6JvovyCoOOIe9sTbcQzJrs9sRjmDThPp29yJlwATMAQYqjph7BpydYvza8pAHU3
- bVjg==
-X-Gm-Message-State: APjAAAVcl5H+xhAC1aFLUNyeWU/GNfwJ8JCkvvVUOIfoZbhPKOQH/ZK1
- ktJg5qNtQRH7Z61A5wQTyDEYfg==
-X-Google-Smtp-Source: APXvYqx4qZrRLrrr0VmXx5Jsx7rH4OjMuKZvmx+AszzG5hedxbJVd30/b6Bg8l9gTJn3rOqOMRdQqA==
-X-Received: by 2002:a17:902:7b82:: with SMTP id
- w2mr41037414pll.250.1567629878103; 
- Wed, 04 Sep 2019 13:44:38 -0700 (PDT)
+ bh=7FpVgaIhgimDRqpweFDbMiGBjSsk/JazcD80okKL/K8=;
+ b=n1JfpTiHf3u9pS/XK5SnsgcYoyc6TwIIDP/Pm7hn9FlFgiXPr3yICjBGi9HLbmMLAm
+ 0d4jsU0PifAg2ODYPekMVOx+7fnAVN9C1X4T5rEoY/pbOCO0PBnBLEBCHB1nlnth/Lmt
+ Y9ACWD+B/hjeFkC5kSvASVFe2Zy3IyZmriV2pvN206yUwQG591wQa0z7B6KD2C7KdtNU
+ INmtq7k/9njGL7HKlShHtba+LvrbmILUu/MFj2TYd/kWprfGAYb3OyILTvAPWY9ylP6H
+ c5G+abdc3+D5wFuvgdL8KivMBTaW4SaKfEeEsEU6rl8BnnRij4v8AFFJaOF9psiDgdrt
+ iemw==
+X-Gm-Message-State: APjAAAWV0v4KvPXm94N2r6PYiKirW0NLO20pC2aeVErPbOne/Zbltrbo
+ MqQTVtFkOopFkTbImDddyAC/xA==
+X-Google-Smtp-Source: APXvYqx6p9POXMCXKO+7CZNt3OeG669blGTjX7rgKqWleU9xBmKU6iit1LtXZOmDeIMaYc7+Sw+ZcA==
+X-Received: by 2002:a63:66c5:: with SMTP id a188mr49168pgc.127.1567630014448; 
+ Wed, 04 Sep 2019 13:46:54 -0700 (PDT)
 Received: from tuxbook-pro (104-188-17-28.lightspeed.sndgca.sbcglobal.net.
  [104.188.17.28])
- by smtp.gmail.com with ESMTPSA id r187sm19257078pfc.105.2019.09.04.13.44.35
+ by smtp.gmail.com with ESMTPSA id br18sm3019455pjb.20.2019.09.04.13.46.51
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 04 Sep 2019 13:44:37 -0700 (PDT)
-Date: Wed, 4 Sep 2019 13:44:33 -0700
+ Wed, 04 Sep 2019 13:46:53 -0700 (PDT)
+Date: Wed, 4 Sep 2019 13:46:49 -0700
 From: Bjorn Andersson <bjorn.andersson@linaro.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Re: [PATCH -next 13/36] spi: spi-geni-qcom: use
+Subject: Re: [PATCH -next 23/36] spi: spi-qcom-qspi: use
  devm_platform_ioremap_resource() to simplify code
-Message-ID: <20190904204433.GE580@tuxbook-pro>
+Message-ID: <20190904204649.GF580@tuxbook-pro>
 References: <20190904135918.25352-1-yuehaibing@huawei.com>
- <20190904135918.25352-14-yuehaibing@huawei.com>
+ <20190904135918.25352-24-yuehaibing@huawei.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190904135918.25352-14-yuehaibing@huawei.com>
+In-Reply-To: <20190904135918.25352-24-yuehaibing@huawei.com>
 User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_134438_982225_9899EE0B 
-X-CRM114-Status: GOOD (  13.24  )
+X-CRM114-CacheID: sfid-20190904_134655_368207_91783A78 
+X-CRM114-Status: GOOD (  13.47  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -122,7 +121,7 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed 04 Sep 06:58 PDT 2019, YueHaibing wrote:
+On Wed 04 Sep 06:59 PDT 2019, YueHaibing wrote:
 
 > Use devm_platform_ioremap_resource() to simplify the code a bit.
 > This is detected by coccinelle.
@@ -133,31 +132,31 @@ Reviewed-by: Bjorn Andersson <bjorn.andersson@linaro.org>
 > Reported-by: Hulk Robot <hulkci@huawei.com>
 > Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 > ---
->  drivers/spi/spi-geni-qcom.c | 4 +---
+>  drivers/spi/spi-qcom-qspi.c | 4 +---
 >  1 file changed, 1 insertion(+), 3 deletions(-)
 > 
-> diff --git a/drivers/spi/spi-geni-qcom.c b/drivers/spi/spi-geni-qcom.c
-> index 242b6c8..6f3d64a 100644
-> --- a/drivers/spi/spi-geni-qcom.c
-> +++ b/drivers/spi/spi-geni-qcom.c
-> @@ -534,7 +534,6 @@ static int spi_geni_probe(struct platform_device *pdev)
->  	int ret, irq;
->  	struct spi_master *spi;
->  	struct spi_geni_master *mas;
+> diff --git a/drivers/spi/spi-qcom-qspi.c b/drivers/spi/spi-qcom-qspi.c
+> index a0ad73f..250fd60 100644
+> --- a/drivers/spi/spi-qcom-qspi.c
+> +++ b/drivers/spi/spi-qcom-qspi.c
+> @@ -424,7 +424,6 @@ static int qcom_qspi_probe(struct platform_device *pdev)
+>  {
+>  	int ret;
+>  	struct device *dev;
 > -	struct resource *res;
->  	void __iomem *base;
->  	struct clk *clk;
+>  	struct spi_master *master;
+>  	struct qcom_qspi *ctrl;
 >  
-> @@ -542,8 +541,7 @@ static int spi_geni_probe(struct platform_device *pdev)
->  	if (irq < 0)
->  		return irq;
+> @@ -440,8 +439,7 @@ static int qcom_qspi_probe(struct platform_device *pdev)
 >  
+>  	spin_lock_init(&ctrl->lock);
+>  	ctrl->dev = dev;
 > -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> -	base = devm_ioremap_resource(&pdev->dev, res);
-> +	base = devm_platform_ioremap_resource(pdev, 0);
->  	if (IS_ERR(base))
->  		return PTR_ERR(base);
->  
+> -	ctrl->base = devm_ioremap_resource(dev, res);
+> +	ctrl->base = devm_platform_ioremap_resource(pdev, 0);
+>  	if (IS_ERR(ctrl->base)) {
+>  		ret = PTR_ERR(ctrl->base);
+>  		goto exit_probe_master_put;
 > -- 
 > 2.7.4
 > 
