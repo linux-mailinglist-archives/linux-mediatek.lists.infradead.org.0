@@ -2,83 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6C1C2A7F4D
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 11:26:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 56B9EA8190
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Sep 2019 13:57:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Oq96SDNI4pH7wrvmqMP/jOglMVNbW8uJISTzz6gmzDw=; b=e+1VOEiRLxA092
-	gD/8AcmIsZ6mALOLKbggsOvhqlgjinMfZ4TXkygaygdkM3/sBzVDglpKmxJH62RoYpRV8z3ctJ7sW
-	B3UZNPAlP3cWNJn0fytAwFLH7b2afwpcwPErLndXI50FpkpCFgXZI+nQL59Zmfb6ZHpmOC1XwCO6B
-	EnIVT8BsS3wHQNBc/+y0vSOPqh2iBR/jRSv205DF5K9LAS2avW6XfSv2L1jKd/hVlQ6gZ4c9MOz2m
-	/XzW9jfaVG+anbkQMTB7ficAnr7Ik5r3rd4HivkxTZBP6lMoIIMLmRiN5K3AuzOEXgpdMDR4tBcaJ
-	rzwc6TegGGsuTrBhtQ0Q==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=KSJxGqe0ln6QXrQSRUPtiUALD59bCvc9FymMybLX/AA=; b=A+z4iwHQzefHzxRIvlWNnnlRf
+	VbFvXiT8a2eaDe4DoOUw01d5I3iL0KRt6hhjuCGUpQ0C/Sv5q+tx0oxVThcFZ1rqvRlvoaPnyP9qq
+	sWYwM7tPcMM6X6kzJujbXoD/BJ7EJX/eOukbDrXPFoFxYt0pCPOjQ7j+laOaAvYH07Ic6QJYNO3xn
+	fLCFuUDGeiY8cxjmDhd/hq7cCVDsuroH7/eFDa31/MupHf1y8DqfSQxPpyPzQbfr0HxkEfoLksxzB
+	JnfvgAufR3JBrIJrf70CxxC0eCxoRRnyzbvLBTT7DNACNmf7v0orO2vxGrfIWyHT0KeAzq9AfqWuz
+	UjA6WMDNw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5RYm-0003vo-LB; Wed, 04 Sep 2019 09:26:40 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i5TuA-000278-HF; Wed, 04 Sep 2019 11:56:54 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5RYj-0003vI-9N; Wed, 04 Sep 2019 09:26:38 +0000
-X-UUID: c151945e2c45482ebc99748edcf82e4c-20190904
-X-UUID: c151945e2c45482ebc99748edcf82e4c-20190904
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <jerry-ch.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 45059580; Wed, 04 Sep 2019 01:26:31 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 02:26:29 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 17:26:28 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 4 Sep 2019 17:26:27 +0800
-Message-ID: <1567589188.22453.24.camel@mtksdccf07>
-Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
-From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Wed, 4 Sep 2019 17:26:28 +0800
-In-Reply-To: <CAAFQd5DWfEEiGthPi=qoxD-mpAWa68GOCi55mqpmagS-tsGYkA@mail.gmail.com>
-References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
- <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
- <20190802082815.GA203993@chromium.org>
- <1566724680.20680.8.camel@mtksdccf07>
- <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
- <1566957625.20680.33.camel@mtksdccf07>
- <CAAFQd5D-Yg1FjUE_rwmqfS1gvfE0=MZ=r-ziueU_37-uo9QTbw@mail.gmail.com>
- <1567424859.18318.32.camel@mtksdccf07>
- <CAAFQd5AGgeFbto6V1KkL0dp1QPziOKV3pWQDU2OJ+S1QKvnBdg@mail.gmail.com>
- <1567493081.18318.49.camel@mtksdccf07>
- <CAAFQd5DWM=R7sFHYGhhR_rXrzgRnc4xtH_t8Pig-4tcP9KTSYg@mail.gmail.com>
- <1567511169.18318.65.camel@mtksdccf07>
- <CAAFQd5DiPcUxd+R-v_-BdRx+QqZ35Riii_jpgbqr5mc3BnQvDw@mail.gmail.com>
- <1567568281.18318.80.camel@mtksdccf07>
- <CAAFQd5CRC2cyV30B4Qv59HdrJ7Cpe_yK5aY-BecQQ3J3i0PtCQ@mail.gmail.com>
- <1567577389.18318.100.camel@mtksdccf07>
- <CAAFQd5AxTQPD+nP9CJs45QTzGHKssjv3vRtMqHONABfp12afYw@mail.gmail.com>
- <1567584577.22453.11.camel@mtksdccf07>
- <CAAFQd5Dzxy10g-MKHMnNbVO6kp9_L_jm1m+gtN+p=YF2LyBiag@mail.gmail.com>
- <1567587708.22453.15.camel@mtksdccf07>
- <CAAFQd5DWfEEiGthPi=qoxD-mpAWa68GOCi55mqpmagS-tsGYkA@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i5Ttr-0001m8-Pr; Wed, 04 Sep 2019 11:56:37 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=DBbsf8r5uOYzN+tf0BF20JNGTJbY9WmlICsBkr1a8NU=; b=xlWeFFxHrCDMBztiXN9rlo8jH
+ 8JrGmZ3VaD7B2cqQBHxSC2Q4Cny4Pt5Lw7NvWRLwE1/6EkM5oPKFAihJ9ss0ZnQFOn6LCsAaKa+oC
+ wc/QPCRUrPrgEADCudEqA6s0uJe4jDxcUw4thuNr6vZNPZ9Edzuyw2jpVDjzB6T5jGQLE=;
+Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
+ by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <broonie@sirena.co.uk>)
+ id 1i5Ttn-0005I8-RR; Wed, 04 Sep 2019 11:56:31 +0000
+Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
+ id A64EE2742B45; Wed,  4 Sep 2019 12:56:30 +0100 (BST)
+Date: Wed, 4 Sep 2019 12:56:30 +0100
+From: Mark Brown <broonie@kernel.org>
+To: Richtek Jeff Chang <richtek.jeff.chang@gmail.com>
+Subject: Re: [PATCH] [MT6660] Mediatek Smart Amplifier Driver
+Message-ID: <20190904115630.GA4348@sirena.co.uk>
+References: <1567494501-3427-1-git-send-email-richtek.jeff.chang@gmail.com>
+ <20190903163829.GB7916@sirena.co.uk>
+ <1a776762-ee65-7344-4bca-c82e16badffa@gmail.com>
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <1a776762-ee65-7344-4bca-c82e16badffa@gmail.com>
+X-Cookie: Help fight continental drift.
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_022637_332512_13E7E98E 
-X-CRM114-Status: GOOD (  19.12  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190904_045635_852315_644E52F6 
+X-CRM114-Status: GOOD (  20.45  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,170 +76,114 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
- <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
- <laurent.pinchart+renesas@ideasonboard.com>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- Po-Yang Huang =?UTF-8?Q?=28=E9=BB=83=E6=9F=8F=E9=99=BD=29?=
- <po-yang.huang@mediatek.com>, "mchehab@kernel.org" <mchehab@kernel.org>,
- "suleiman@chromium.org" <suleiman@chromium.org>,
- "shik@chromium.org" <shik@chromium.org>,
- Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
- <jungo.lin@mediatek.com>, Sj
- Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
- "yuzhao@chromium.org" <yuzhao@chromium.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "zwisler@chromium.org" <zwisler@chromium.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
- <christie.yu@mediatek.com>,
- Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
- <Frederic.Chen@mediatek.com>,
- "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: alsa-devel@alsa-project.org, linux-kernel@vger.kernel.org, tiwai@suse.com,
+ lgirdwood@gmail.com, linux-mediatek@lists.infradead.org,
+ matthias.bgg@gmail.com, perex@perex.cz, linux-arm-kernel@lists.infradead.org
+Content-Type: multipart/mixed; boundary="===============4184843097465706772=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Tomasz,
 
-On Wed, 2019-09-04 at 17:03 +0800, Tomasz Figa wrote:
-> On Wed, Sep 4, 2019 at 6:02 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> >
-> > Hi Tomasz,
-> >
-> > On Wed, 2019-09-04 at 16:25 +0800, Tomasz Figa wrote:
-> > > On Wed, Sep 4, 2019 at 5:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> > > >
-> > > > Hi Tomasz,
-> > > >
-> > > > On Wed, 2019-09-04 at 14:34 +0800, Tomasz Figa wrote:
-> > > > > On Wed, Sep 4, 2019 at 3:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > >
-> > > > > > Hi Tomasz,
-> > > > > >
-> > > > > > On Wed, 2019-09-04 at 12:15 +0800, Tomasz Figa wrote:
-> > > > > > > On Wed, Sep 4, 2019 at 12:38 PM Jerry-ch Chen
-> > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > >
-> > > > > > > > Hi Tomasz,
-> > > > > > > >
-> > > > > > > > On Tue, 2019-09-03 at 20:05 +0800, Tomasz Figa wrote:
-> > > > > > > > > On Tue, Sep 3, 2019 at 8:46 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > > > >
-> > > > > > > > > > Hi Tomasz,
-> > > > > > > > > >
-> > > > > > > > > > On Tue, 2019-09-03 at 15:04 +0800, Tomasz Figa wrote:
-> > > > > > > > > > > On Tue, Sep 3, 2019 at 3:44 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > > > > > >
-> > > > > > > > > > > > On Tue, 2019-09-03 at 13:19 +0800, Tomasz Figa wrote:
-> > > > > > > > > > > > > On Mon, Sep 2, 2019 at 8:47 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > > > > > > > >
-> > > > > > > > > > > > > > Hi Tomasz,
-> > > > > > > > > > > > > >
-> > > > > > > > > > > > > > On Fri, 2019-08-30 at 16:33 +0800, Tomasz Figa wrote:
-> > > > > > > > > > > > > > > On Wed, Aug 28, 2019 at 11:00 AM Jerry-ch Chen
-> > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > Hi Tomasz,
-> > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > On Mon, 2019-08-26 at 14:36 +0800, Tomasz Figa wrote:
-> > > > > > > > > > > > > > > > > Hi Jerry,
-> > > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > > On Sun, Aug 25, 2019 at 6:18 PM Jerry-ch Chen
-> > > > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
-> > > > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > > > Hi Tomasz,
-> > > > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > > > On Fri, 2019-08-02 at 16:28 +0800, Tomasz Figa wrote:
-> > > > > > > > > > > > > > > > > > > Hi Jerry,
-> > > > > > > > > > > > > > > > > > >
-> > > > > > > > > > > > > > > > > > > On Tue, Jul 09, 2019 at 04:41:12PM +0800, Jerry-ch Chen wrote:
-[snip]
-> > > > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
-> > > > {
-> > > >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
-> > > >         struct mtk_fd_dev *fd = ctx->fd_dev;
-> > > >         struct vb2_v4l2_buffer *vb;
-> > > >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
-> > > >         struct v4l2_m2m_queue_ctx *queue_ctx;
-> > > >         u32 ret;
-> > > >
-> > > >         if (!fd->fd_irq_done.done)
-> > >
-> > > We shouldn't access internal fields of completion.
-> > >
-> > > >                 ret = wait_for_completion_timeout(&fd->fd_irq_done,
-> > > >                                                   msecs_to_jiffies(
-> > > >                                                         MTK_FD_HW_TIMEOUT));
-> > > >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
-> > > >                                         &m2m_ctx->out_q_ctx :
-> > > >                                         &m2m_ctx->cap_q_ctx;
-> > > >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
-> > > >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
-> > > >
-> > > >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
-> > > >                 mtk_fd_hw_disconnect(fd);
-> > > > }
-> > > >
-> > > > I've also tried to wait completion unconditionally for both queues and
-> > > > the second time will wait until timeout, as a result, it takes longer to
-> > > > swap the camera every time and close the camera app.
-> > >
-> > > I think it should work better if we call complete_all() instead of complete().
-> > >
-> > Thanks,
-> >
-> > I use complete_all(), and it works fine now.
-> >
-> > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
-> > {
-> >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
-> >         struct mtk_fd_dev *fd = ctx->fd_dev;
-> >         struct vb2_v4l2_buffer *vb;
-> >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
-> >         struct v4l2_m2m_queue_ctx *queue_ctx;
-> >
-> >         wait_for_completion_timeout(&fd->fd_irq_done,
-> >                                           msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
-> 
-> Shouldn't we still send some command to the hardware to stop? Like a
-> reset. Otherwise we don't know if it isn't still accessing the memory.
-> 
-I thought no more jobs will be enqueued here when stop_streaming so we
-don't need it.
-We still could send an ipi command to reset the HW, and wait for it's
-callback or we could set the register MTK_FD_REG_OFFSET_HW_ENABLE to
-zero to disable the HW.
-
-Best regards,
-Jerry
-
-> >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
-> >                                         &m2m_ctx->out_q_ctx :
-> >                                         &m2m_ctx->cap_q_ctx;
-> >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
-> >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
-> >
-> >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
-> >                 mtk_fd_hw_disconnect(fd);
-> > }
-> >
-> > Best regards,
-> > Jerry
-> >
-> > > Best regards,
-> > > Tomasz
-> >
-> >
+--===============4184843097465706772==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="xHFwDpU9dbj6ez1V"
+Content-Disposition: inline
 
 
+--xHFwDpU9dbj6ez1V
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+On Wed, Sep 04, 2019 at 03:07:06PM +0800, Richtek Jeff Chang wrote:
+
+> > > +static int32_t mt6660_i2c_update_bits(struct mt6660_chip *chip,
+> > > +	uint32_t addr, uint32_t mask, uint32_t data)
+> > > +{
+
+> > It would be good to implement a regmap rather than open coding
+> > *everything* - it'd give you things like this without needing to open
+> > code them.  Providing you don't use the cache code it should cope fine
+> > with variable register sizes.
+
+> Due to our hardware design, it is hard to implement regmap for MT6660.
+
+You definitely can't use all the functionality due to the variable
+register sizes but using reg_write() and reg_read() should get you most
+of it.
+
+> > > +static int mt6660_i2c_init_setting(struct mt6660_chip *chip)
+> > > +{
+> > > +	int i, len, ret;
+> > > +	const struct codec_reg_val *init_table;
+> > > +
+> > > +	init_table = e4_reg_inits;
+> > > +	len = ARRAY_SIZE(e4_reg_inits);
+> > > +
+> > > +	for (i = 0; i < len; i++) {
+> > > +		ret = mt6660_i2c_update_bits(chip, init_table[i].addr,
+> > > +				init_table[i].mask, init_table[i].data);
+> > > +		if (ret < 0)
+> > > +			return ret;
+
+> > Why are we not using the chip defaults here?
+
+> Because MT6660 needs this initial setting for working well.
+
+What are these settings?  Are you sure they are generic settings and
+not board specific?
+
+> > > +	if (on_off) {
+> > > +		if (chip->pwr_cnt == 0) {
+> > > +			ret = mt6660_i2c_update_bits(chip,
+> > > +				MT6660_REG_SYSTEM_CTRL, 0x01, 0x00);
+> > > +			val = mt6660_i2c_read(chip, MT6660_REG_IRQ_STATUS1);
+> > > +			dev_info(chip->dev,
+> > > +				"%s reg0x05 = 0x%x\n", __func__, val);
+> > > +		}
+> > > +		chip->pwr_cnt++;
+
+> > This looks like you're open coding runtime PM stuff?  AFAICT the issue
+> > is that you need to write to this register to do any I/O.  Just
+> > implement this via the standard runtime PM framework, you'll need to do
+> > something about the register I/O in the controls (ideally in the
+> > framework, it'd be a lot easier if you did have a cache) but you could
+> > cut out this bit.
+
+> In our experience, some Customer platform doesn't support runtime PM.
+
+Tell your customers to turn it on, it's a standard kernel framework and
+there's really no excuse for open coding it.  If there's some reason why
+runtime PM can't work for them then we should get that fixed but it
+really is *very* widely deployed.
+
+--xHFwDpU9dbj6ez1V
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl1vpm0ACgkQJNaLcl1U
+h9D/Wgf/fF6J63LckawJfQOykVgSmyHQqs469Lx+ZiWwED24peJ4nfDP41ehqc2N
+jIXIbNv3uhy0SKfDxmczPs6zHyy+XgWw3pHOHVQR7SX2ZBIU/JwBYSYtmJiZW9yo
+GWU/tn7Yql2ApiXs1VRjJfCeiHWCpPg4WTAGOjP2LUeALkQasMQI9nwtqEoJWSyz
+tZ15Q9sb3HyKa1Pl0qmh4IPIIQvCtpvD3DdTyHs8OZGFlWzUg5WC17sjRLpbqgxd
+d75ADeY84KntmV55haCavSYQGD5cjIMD1pWRc5Ln0yOUKO3H3gwUHqgOgafmUbmc
+cTfAzmpdBvy1P5aHKQZ0z6uU7LT39g==
+=jNHe
+-----END PGP SIGNATURE-----
+
+--xHFwDpU9dbj6ez1V--
+
+
+--===============4184843097465706772==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============4184843097465706772==--
+
