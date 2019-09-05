@@ -2,61 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 32340A9AED
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 08:50:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 209A8A9B06
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 09:02:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=M7WB8bC4v6VL1ZkHvYk7s02CBr+kSh7XnEUzvK3E7LQ=; b=Bov9c4ZdC0dro6
-	YCP9D8Ixp2vI/cgp9PNmuHHKv/TQFiE/2atkKGi+/mdvoUHCzGrj00iwszbn0fg5NAHxpgf7mhd36
-	39FaJ6lx8mBPalKaJvca2KSJsOPiVlFBsQ6qFqKqx2865TM0vD4CTXpv10+HbjFr940JLjxfMRUn8
-	ivEp+JNXU1p1+o9X0Z1VIGzsnIS8IvbFzzLTMPi4MUIT6WXo6X+hbRxzZCdU9C076f4C4Fi03GH5X
-	+DdL59c0fn11pOu3H3++FdqBeJzzBsyi1sdVbPYP/GcbPTJrOql+ufW7mKduQdkMttlN6knTFdNZc
-	rle0QFZDtPjS7oVMKZ2g==;
+	List-Owner; bh=7x8lV/zm/Iw/pyfa878+iKEURQjr3lW2jX2j9UaO1iM=; b=ZLOudzppnV1LuB
+	AjGCAcOYydcOc7AhAIV2OBds0GsO2IQyZud9ztX/AJSeVFJd7UXm4L5F6CZq9OlaQhqQ0uLNXvVU8
+	lziFXnUzNGGasTPfHzD2U+t4vDJQDLFzDFR87ROKmw9AtNUHYAMrMGlDAxuIFwf0n12gvFygm3h5V
+	btgbvx2qtGVOwKXWmnPFy1O+wdS4AuOaRa9MzVfJgP7JryHpSLGUNu5O15MlvCdyQNNlOGaueV++8
+	bc8GoV55ldrx1VB3DbzrLT/1v+IyFAYAqugNJN6ZX2YR+gZYLwXQHiTJBE7y9pjVD2axm6QBMp0bV
+	91CmXSEGhrwz4+K7o1mw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5lbU-0005py-Cg; Thu, 05 Sep 2019 06:50:48 +0000
-Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
+	id 1i5ln0-0000jh-8v; Thu, 05 Sep 2019 07:02:42 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5lbH-0005hh-6P
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 06:50:36 +0000
-Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
- by metis.ext.pengutronix.de with esmtps
- (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <ukl@pengutronix.de>)
- id 1i5lan-0002ZF-Lq; Thu, 05 Sep 2019 08:50:05 +0200
-Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
- (envelope-from <ukl@pengutronix.de>)
- id 1i5laZ-0001pD-N3; Thu, 05 Sep 2019 08:49:51 +0200
-Date: Thu, 5 Sep 2019 08:49:51 +0200
-From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [PATCH v6 0/7] Support dsi for mt8183
-Message-ID: <20190905064951.mttzwrg7muhfimdw@pengutronix.de>
-References: <20190811104008.53372-1-jitao.shi@mediatek.com>
+ id 1i5lml-0000iz-Vp; Thu, 05 Sep 2019 07:02:31 +0000
+X-UUID: ab39594a5471445689a6ff4852d5d301-20190904
+X-UUID: ab39594a5471445689a6ff4852d5d301-20190904
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jerry-ch.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1694711938; Wed, 04 Sep 2019 23:02:21 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 00:02:20 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 15:02:18 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 5 Sep 2019 15:02:18 +0800
+Message-ID: <1567666940.22453.31.camel@mtksdccf07>
+Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
+From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Thu, 5 Sep 2019 15:02:20 +0800
+In-Reply-To: <1567603143.22453.27.camel@mtksdccf07>
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <20190802082815.GA203993@chromium.org>
+ <1566724680.20680.8.camel@mtksdccf07>
+ <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
+ <1566957625.20680.33.camel@mtksdccf07>
+ <CAAFQd5D-Yg1FjUE_rwmqfS1gvfE0=MZ=r-ziueU_37-uo9QTbw@mail.gmail.com>
+ <1567424859.18318.32.camel@mtksdccf07>
+ <CAAFQd5AGgeFbto6V1KkL0dp1QPziOKV3pWQDU2OJ+S1QKvnBdg@mail.gmail.com>
+ <1567493081.18318.49.camel@mtksdccf07>
+ <CAAFQd5DWM=R7sFHYGhhR_rXrzgRnc4xtH_t8Pig-4tcP9KTSYg@mail.gmail.com>
+ <1567511169.18318.65.camel@mtksdccf07>
+ <CAAFQd5DiPcUxd+R-v_-BdRx+QqZ35Riii_jpgbqr5mc3BnQvDw@mail.gmail.com>
+ <1567568281.18318.80.camel@mtksdccf07>
+ <CAAFQd5CRC2cyV30B4Qv59HdrJ7Cpe_yK5aY-BecQQ3J3i0PtCQ@mail.gmail.com>
+ <1567577389.18318.100.camel@mtksdccf07>
+ <CAAFQd5AxTQPD+nP9CJs45QTzGHKssjv3vRtMqHONABfp12afYw@mail.gmail.com>
+ <1567584577.22453.11.camel@mtksdccf07>
+ <CAAFQd5Dzxy10g-MKHMnNbVO6kp9_L_jm1m+gtN+p=YF2LyBiag@mail.gmail.com>
+ <1567587708.22453.15.camel@mtksdccf07>
+ <CAAFQd5DWfEEiGthPi=qoxD-mpAWa68GOCi55mqpmagS-tsGYkA@mail.gmail.com>
+ <1567589188.22453.24.camel@mtksdccf07>
+ <CAAFQd5Ckz9qH7AnLNM4HRTM2gJQP1HXRS09+o6Prf++D1PQhng@mail.gmail.com>
+ <1567603143.22453.27.camel@mtksdccf07>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190811104008.53372-1-jitao.shi@mediatek.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
-X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
-X-SA-Exim-Mail-From: ukl@pengutronix.de
-X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
- SAEximRunCond expanded to false
-X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_235035_232830_37E59A1A 
-X-CRM114-Status: UNSURE (   7.69  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190905_000228_689101_3C37F2B1 
+X-CRM114-Status: GOOD (  22.40  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,39 +95,227 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- David Airlie <airlied@linux.ie>, stonea168@163.com,
- dri-devel@lists.freedesktop.org, yingjoe.chen@mediatek.com,
- Ajay Kumar <ajaykumar.rs@samsung.com>, Vincent Palatin <vpalatin@chromium.org>,
- cawa.cheng@mediatek.com, bibby.hsieh@mediatek.com, ck.hu@mediatek.com,
- Russell King <rmk+kernel@arm.linux.org.uk>,
- Thierry Reding <treding@nvidia.com>, linux-pwm@vger.kernel.org,
- Sascha Hauer <kernel@pengutronix.de>, Pawel Moll <pawel.moll@arm.com>,
- Ian Campbell <ijc+devicetree@hellion.org.uk>, Inki Dae <inki.dae@samsung.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Andy Yan <andy.yan@rock-chips.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org,
- Rahul Sharma <rahul.sharma@samsung.com>, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
- Sean Paul <seanpaul@chromium.org>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
+ <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
+ <laurent.pinchart+renesas@ideasonboard.com>,
+ Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
+ srv_heupstream <srv_heupstream@mediatek.com>,
+ Po-Yang Huang =?UTF-8?Q?=28=E9=BB=83=E6=9F=8F=E9=99=BD=29?=
+ <po-yang.huang@mediatek.com>, "mchehab@kernel.org" <mchehab@kernel.org>,
+ "suleiman@chromium.org" <suleiman@chromium.org>,
+ "shik@chromium.org" <shik@chromium.org>,
+ Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
+ <jungo.lin@mediatek.com>, Sj
+ Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
+ "yuzhao@chromium.org" <yuzhao@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "zwisler@chromium.org" <zwisler@chromium.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
+ <christie.yu@mediatek.com>,
+ Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
+ <Frederic.Chen@mediatek.com>,
+ "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hello,
+Hi Tomasz,
 
-I somehow fail to see how this is relevant for the linux-pwm list. Did
-you add this list to the recipents by accident, or is there something I
-missed?
+On Wed, 2019-09-04 at 21:19 +0800, Jerry-ch Chen wrote:
+> On Wed, 2019-09-04 at 21:12 +0800, Tomasz Figa wrote:
+> > On Wed, Sep 4, 2019 at 6:26 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > >
+> > > Hi Tomasz,
+> > >
+> > > On Wed, 2019-09-04 at 17:03 +0800, Tomasz Figa wrote:
+> > > > On Wed, Sep 4, 2019 at 6:02 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > >
+> > > > > Hi Tomasz,
+> > > > >
+> > > > > On Wed, 2019-09-04 at 16:25 +0800, Tomasz Figa wrote:
+> > > > > > On Wed, Sep 4, 2019 at 5:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > >
+> > > > > > > Hi Tomasz,
+> > > > > > >
+> > > > > > > On Wed, 2019-09-04 at 14:34 +0800, Tomasz Figa wrote:
+> > > > > > > > On Wed, Sep 4, 2019 at 3:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > >
+> > > > > > > > > Hi Tomasz,
+> > > > > > > > >
+> > > > > > > > > On Wed, 2019-09-04 at 12:15 +0800, Tomasz Figa wrote:
+> > > > > > > > > > On Wed, Sep 4, 2019 at 12:38 PM Jerry-ch Chen
+> > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > >
+> > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > >
+> > > > > > > > > > > On Tue, 2019-09-03 at 20:05 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > On Tue, Sep 3, 2019 at 8:46 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > >
+> > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > >
+> > > > > > > > > > > > > On Tue, 2019-09-03 at 15:04 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > On Tue, Sep 3, 2019 at 3:44 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > On Tue, 2019-09-03 at 13:19 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > On Mon, Sep 2, 2019 at 8:47 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > On Fri, 2019-08-30 at 16:33 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > On Wed, Aug 28, 2019 at 11:00 AM Jerry-ch Chen
+> > > > > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > On Mon, 2019-08-26 at 14:36 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > > > Hi Jerry,
+> > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > On Sun, Aug 25, 2019 at 6:18 PM Jerry-ch Chen
+> > > > > > > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > On Fri, 2019-08-02 at 16:28 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > > > > > Hi Jerry,
+> > > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > > On Tue, Jul 09, 2019 at 04:41:12PM +0800, Jerry-ch Chen wrote:
+> > > [snip]
+> > > > > > > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > > > > > > {
+> > > > > > >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > > > >         struct mtk_fd_dev *fd = ctx->fd_dev;
+> > > > > > >         struct vb2_v4l2_buffer *vb;
+> > > > > > >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+> > > > > > >         struct v4l2_m2m_queue_ctx *queue_ctx;
+> > > > > > >         u32 ret;
+> > > > > > >
+> > > > > > >         if (!fd->fd_irq_done.done)
+> > > > > >
+> > > > > > We shouldn't access internal fields of completion.
+> > > > > >
+> > > > > > >                 ret = wait_for_completion_timeout(&fd->fd_irq_done,
+> > > > > > >                                                   msecs_to_jiffies(
+> > > > > > >                                                         MTK_FD_HW_TIMEOUT));
+> > > > > > >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+> > > > > > >                                         &m2m_ctx->out_q_ctx :
+> > > > > > >                                         &m2m_ctx->cap_q_ctx;
+> > > > > > >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+> > > > > > >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+> > > > > > >
+> > > > > > >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+> > > > > > >                 mtk_fd_hw_disconnect(fd);
+> > > > > > > }
+> > > > > > >
+> > > > > > > I've also tried to wait completion unconditionally for both queues and
+> > > > > > > the second time will wait until timeout, as a result, it takes longer to
+> > > > > > > swap the camera every time and close the camera app.
+> > > > > >
+> > > > > > I think it should work better if we call complete_all() instead of complete().
+> > > > > >
+> > > > > Thanks,
+> > > > >
+> > > > > I use complete_all(), and it works fine now.
+> > > > >
+> > > > > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > > > > {
+> > > > >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > >         struct mtk_fd_dev *fd = ctx->fd_dev;
+> > > > >         struct vb2_v4l2_buffer *vb;
+> > > > >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+> > > > >         struct v4l2_m2m_queue_ctx *queue_ctx;
+> > > > >
+> > > > >         wait_for_completion_timeout(&fd->fd_irq_done,
+> > > > >                                           msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
+> > > >
+> > > > Shouldn't we still send some command to the hardware to stop? Like a
+> > > > reset. Otherwise we don't know if it isn't still accessing the memory.
+> > > >
+> > > I thought no more jobs will be enqueued here when stop_streaming so we
+> > > don't need it.
+> > 
+> > That's true for the case when the wait completed successfully, but we
+> > also need to ensure the hardware is stopped even if a timeout happens.
+> > 
+> > > We still could send an ipi command to reset the HW, and wait for it's
+> > > callback or we could set the register MTK_FD_REG_OFFSET_HW_ENABLE to
+> > > zero to disable the HW.
+> > 
+> > Since it's for handling a timeout, a reset should be more likely to
+> > bring the hardware back to a reasonable state.
+> > 
+> 
+> Ok, I will send the ipi command to reset the HW.
+> 
+> Thanks and best regards,
+> Jerry
+I've tested and will refine as following:
 
-Best regards
-Uwe
+static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+{
+	struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+	struct mtk_fd_dev *fd = ctx->fd_dev;
+	struct vb2_v4l2_buffer *vb;
+	struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+	struct v4l2_m2m_queue_ctx *queue_ctx;
+	u32 ret;
 
--- =
+	ret = wait_for_completion_timeout(&fd->fd_irq_done,
+					  msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
+	/* Disable FD HW */
+	if(!ret) {
+		struct ipi_message fd_ipi_msg;
 
-Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
-Industrial Linux Solutions                 | http://www.pengutronix.de/  |
+		fd_ipi_msg.cmd_id = MTK_FD_IPI_CMD_RESET;
+		ret = scp_ipi_send(fd->scp_pdev, SCP_IPI_FD_CMD, &fd_ipi_msg,
+				   sizeof(fd_ipi_msg), MTK_FD_IPI_SEND_TIMEOUT);
+		if (ret)
+			dev_err(fd->dev, "FD Reset HW error\n");
+	}
+	queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+					&m2m_ctx->out_q_ctx :
+					&m2m_ctx->cap_q_ctx;
+	while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+		v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+
+	if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+		mtk_fd_hw_disconnect(fd);
+}
+
+If there is no other concern, may I send the RFC v3 patch for review?
+
+Thanks and best regards,
+Jerry
+> > >
+> > > Best regards,
+> > > Jerry
+> > >
+> > > > >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+> > > > >                                         &m2m_ctx->out_q_ctx :
+> > > > >                                         &m2m_ctx->cap_q_ctx;
+> > > > >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+> > > > >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+> > > > >
+> > > > >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+> > > > >                 mtk_fd_hw_disconnect(fd);
+> > > > > }
+> > > > >
+> > > > > Best regards,
+> > > > > Jerry
+> > > > >
+> > > > > > Best regards,
+> > > > > > Tomasz
+> > > > >
+> > > > >
+> > >
+> > >
+> 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
