@@ -2,55 +2,104 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2F36AA99F
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 19:03:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 77029AAB42
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 20:40:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ALa++WusjskpoQ/M0I9O0nK7uN8ph1EXa5DAkM+JzUU=; b=k8J7Mk+CkDRFl9
-	4/uVYgALFtoVsl61yWt2hkjyOevRslaF7PakGousMvNIBRrpv474DJtLPu/hfh9FilRncdtyA48Zj
-	5xzhYBve2R/LPPWlTabWBIkckEWOHaOmQShSfNdbLAEAtLkuUQK1wwrqoPdrXuDymGVMZyghYIQEz
-	hKDDLknfbZP9mvTEJoEqaH6xYsHorvPD2/ktLJrlHCBmJmZNJXloFN+KLwy9hXlaZUP2CPV9GQKva
-	yRvlQ1vORG1OaffMEmv2UyHM5Y7EcLk1jgUZgj1ZraHUvaXbRUo6Q7LQWGjDqYHwWqyyq9EnINfKp
-	Qbl7wJcAPoPWuSn5V33Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=v8apNc0YFR8wWH0dQI3mLTl8Qk/wCL2+NbCW15jEzNY=; b=bG+hvqkRvO41p6
+	D8SS3niLA9nksCue1t1E101Hxl2o/f/MOZdmOHeNqWYGNI7iYHJ3wYkEIdj409ZpuhcgOc450VCm1
+	l6w/fMQ5UwpGX23cFdG1vMA8X84TV+twpSjOFVzoRjFttNkkKaCNXn4sqTnzh4ArgbqS2D1/6Ly9l
+	LNjjESLVdBmiklXojNA2U56LfNZvlVvTgGDxc1mghXDUHAuUo7QQox19D60/q78dX7xbcWwyG6Ln3
+	zQVIDxm6mIvxGUVXc74utAnr34hcThY2xu6ZfWO6e0v/2ODtPHlrSHdxHgN09JNA+gBzyXPeoHOet
+	J4PFclrlX4mUzDaEXewQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5vAD-0004aY-KB; Thu, 05 Sep 2019 17:03:17 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1i5vA1-0004S5-HM; Thu, 05 Sep 2019 17:03:06 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 2603D28;
- Thu,  5 Sep 2019 10:03:02 -0700 (PDT)
-Received: from arrakis.emea.arm.com (arrakis.cambridge.arm.com [10.1.196.78])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id
- E172A3F718; Thu,  5 Sep 2019 10:03:00 -0700 (PDT)
-Date: Thu, 5 Sep 2019 18:02:58 +0100
-From: Catalin Marinas <catalin.marinas@arm.com>
-To: Mark Brown <broonie@kernel.org>
-Subject: Re: next/master boot: 310 boots: 11 failed, 292 passed with 6
- offline, 1 untried/unknown (next-20190904)
-Message-ID: <20190905170257.GC31268@arrakis.emea.arm.com>
-References: <5d700b15.1c69fb81.2abcd.479b@mx.google.com>
- <20190904192725.GI4348@sirena.co.uk> <7hzhjjsime.fsf@baylibre.com>
- <20190905153938.GB4053@sirena.co.uk>
+	id 1i5wfq-0007XK-OE; Thu, 05 Sep 2019 18:40:02 +0000
+Received: from mout.gmx.net ([212.227.15.19])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1i5wfk-0007U9-9R; Thu, 05 Sep 2019 18:39:57 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1567708735;
+ bh=bhJITHNaDSNk82tHbXwjAU2m4OSwrTVq9Dh6XgoEVgM=;
+ h=X-UI-Sender-Class:Subject:To:Cc:References:From:Date:In-Reply-To;
+ b=Lz3Av3TLOi0x6l/ZeUn+JxA7lQAvjyfrdG6ivPQ0tce6WJsbQnRbTWZ4LLQEViLGA
+ XYtu5l9Sctw/yz6mYOl7fHcGBSORZGwnAXbJe3W2yzfsgKoKGLZ0flZoolm7UAaCzK
+ 4/1Dy3RmaMBNVt3vWnheS+pgVtxqCQ6sZIorEq/M=
+X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
+Received: from [192.168.1.162] ([37.4.249.90]) by mail.gmx.com (mrgmx003
+ [212.227.17.190]) with ESMTPSA (Nemesis) id 0M86jp-1iIvGQ1k4f-00vgyM; Thu, 05
+ Sep 2019 20:38:55 +0200
+Subject: Re: [PATCH -next 05/36] spi: bcm2835aux: use
+ devm_platform_ioremap_resource() to simplify code
+To: YueHaibing <yuehaibing@huawei.com>, broonie@kernel.org,
+ f.fainelli@gmail.com, rjui@broadcom.com, sbranden@broadcom.com,
+ eric@anholt.net, shc_work@mail.ru, agross@kernel.org, khilman@baylibre.com,
+ matthias.bgg@gmail.com, shawnguo@kernel.org, s.hauer@pengutronix.de,
+ kernel@pengutronix.de, festevam@gmail.com, linux-imx@nxp.com,
+ avifishman70@gmail.com, tmaimon77@gmail.com, tali.perry1@gmail.com,
+ venture@google.com, yuenn@google.com, benjaminfair@google.com,
+ kgene@kernel.org, krzk@kernel.org, andi@etezian.org, palmer@sifive.com,
+ paul.walmsley@sifive.com, baohua@kernel.org, mripard@kernel.org,
+ wens@csie.org, ldewangan@nvidia.com, thierry.reding@gmail.com,
+ jonathanh@nvidia.com, yamada.masahiro@socionext.com, michal.simek@xilinx.com
+References: <20190904135918.25352-1-yuehaibing@huawei.com>
+ <20190904135918.25352-6-yuehaibing@huawei.com>
+From: Stefan Wahren <wahrenst@gmx.net>
+Message-ID: <491084d3-c2d6-3a24-687b-2668c7f0c09a@gmx.net>
+Date: Thu, 5 Sep 2019 20:38:50 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190905153938.GB4053@sirena.co.uk>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <20190904135918.25352-6-yuehaibing@huawei.com>
+Content-Language: en-US
+X-Provags-ID: V03:K1:AhcbQzoTSubicST5gNCmmM86WbvgdCiog0LAte4hswQdx10x9U3
+ BT165vadZAyHuDZCp8X1/ZeC5JqpOYObS1+m486oNy3rM9gdrgI14dPE3E74e3EEZB2IUMv
+ MVb3xpFYe5Ue4GjAp6XFrQN4OdX747yTNloHKxIU674bbUjkCOPjkelEUkEYdQlffEFwOWE
+ srn/8FFG4jK+iaZNJwzcQ==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:adRENuIYEO4=:fdhVudO9gEG5Ljf2I1JjWN
+ zlT9EzVbICLQwAwbKCfsOQRNuiWdjGbg1HTZ2n4vqfeMrXKuzzWTLhtEeKL1GurMQubfSs/Nk
+ 504yTYHxt4sRVjaoRan5iROj5BY9QkmDRr8AR2aD+SLeCvN9O51OW2iKDxAcHaRR1nRjkKZ1Y
+ cAqTQJNfItknmAGHIip3RZ6sHJ5VlXl24G3y9etJ1beufi4/srwC351zuj83ePNdlyoiDVxf3
+ P9XLCesHv0eNFNXwgmqL80K3zUg5d58q0+xUo7NX1Hh9xuJvcMgYXwJ/+aDTcSJYVy/AOHrHQ
+ Afc8wED5sIUL4pAW4+tAZ/SDzFy/vjq5Owrmo9URhzEi/3pjAKI1tOrNstohH4K6Bv+BP5Dln
+ FE3zFYzkL/wXe7iONVwAJCncwvNcKN5/SDAnltTPN+euDlMjG6u/t/QPU8kxRmNFBfSrFHUGn
+ 2ndDpb4GRcpEDzL5kN/45FZavu4H+5ZcdR7lIMK1aChVCcWOhwQ7B6YrGvUg2H50N/jvHCfyn
+ 526BdViUsblAPBwL78V1gj7j3b9AAzDQHY2ympbwgl7wwOFtQlyAE6T7lgSgeA/PYdB62bzF0
+ 04yzE+TeCWjBBaZgBYNMRSHy8Pwcu9Zat6gk4NEH4h8SgFnU9gRUXmGo0ep4Bkacd8jXRscQT
+ iBr0yIlAkLdV54u3L5bK4j6h95WuCXfYrSPR6qFwVBks3dNc9Xy297aBj90c3iNAnr+gUAz9e
+ lW35VtwaT5cBBOwI4hYvgqF2US/amjBWJPmXRj0I90xdZguKHhfjno/vwpjLWDvkelwLDm5+J
+ 6tNo++B91nktW884NEgj9AGSRua5xKVDINuKE9Y/DhqGiNSSglBs50DCigRddr/LeX3kZ4nxb
+ Z0FN1ASdo0wA/mnyPx8EQ+lGCmHhnCdsBCL79Dls3gKaDuiioQVb6Vw4vNrkaC9E0zGMUF8Hp
+ rxDOttRPcszyKuJbeG0T3D9t4RcGnsYDo651EDHRCwJYx0umLWiClmoacgCwRL/CpknpINu1w
+ b92BDA9sc3Lu6cjTvQCNmZ5o3r+o72tNaMaJtJ5zobxWoYrjUalmzxQ10KG4OjoO5GkOloodr
+ Fhc3rFJkKoMqjXC0xxg1nmlPg3vN4+5ICP3xT1bv60sGeu0+mUNwM3Lg290Q1ASsbXndICX2M
+ WNqNpRy/dU6NrJ1Ll6zy4xH2n3a7gVFBzIVh0d0giFSOdX1vhKy2ZLyxgO8MgBCbu9DNhDmr/
+ 8vEOmM+86m1g+1+ib
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_100305_622392_ABBBE1E1 
-X-CRM114-Status: GOOD (  10.53  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190905_113956_641503_AC005F2A 
+X-CRM114-Status: UNSURE (   6.18  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (wahrenst[at]gmx.net)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,39 +111,24 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Steven Liu <steven.liu@mediatek.com>, kernel-build-reports@lists.linaro.org,
- Kevin Hilman <khilman@baylibre.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Will Deacon <will@kernel.org>,
- Christoph Hellwig <hch@lst.de>, linux-arm-kernel@lists.infradead.org
+Cc: linux-samsung-soc@vger.kernel.org, linux-arm-msm@vger.kernel.org,
+ openbmc@lists.ozlabs.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-spi@vger.kernel.org,
+ bcm-kernel-feedback-list@broadcom.com, linux-rpi-kernel@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-riscv@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Sep 05, 2019 at 04:39:38PM +0100, Mark Brown wrote:
-> On Wed, Sep 04, 2019 at 05:15:53PM -0700, Kevin Hilman wrote:
-> > [ + Steven Liu who donated this board to my kernelCI lab ]
-> 
-> Also adding Christoph since this was bisected to his commit and Catalin
-> and Will since this was an architecture change.
-
-Thanks.
-
-> > Bisected down to this commit[1], full bisect log here[2].  It didn't
-> > revert cleanly on top of next-20190904, so I didn't get any further.
-> 
-> > [1]
-> > 419e2f1838819e954071dfa1d1f820ab3386ada1 is the first bad commit
-> > commit 419e2f1838819e954071dfa1d1f820ab3386ada1
-> > Author: Christoph Hellwig <hch@lst.de>
-> > Date:   Mon Aug 26 09:03:44 2019 +0200
-
-I stared at this commit and the ones around it for a while but couldn't
-see anything obvious. AFAICT this commit only replaces some macros, no
-functional change.
-
--- 
-Catalin
+Am 04.09.19 um 15:58 schrieb YueHaibing:
+> Use devm_platform_ioremap_resource() to simplify the code a bit.
+> This is detected by coccinelle.
+>
+> Reported-by: Hulk Robot <hulkci@huawei.com>
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Acked-by: Stefan Wahren <wahrenst@gmx.net>
 
 _______________________________________________
 Linux-mediatek mailing list
