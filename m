@@ -2,63 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 015CDA9A4B
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 07:57:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CDAFDA9A54
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 08:00:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=T09BtbMMtiiMQxEZwxkQIAesUYpWuA3nBmuzoum1Hws=; b=KIBgdRWVkLOZzb
-	FnIHMkCG4evPK9fSPWiYo1N3PpdPDz6y+sqk5jjtAf/u26Fr58dbzb/cMngbVKtcCJrIJwe+wORzi
-	Nv8YRogGxb4AmHpNZnF2eVbquDL6Ex8NQ4tedNJx0BgaLCQZhXLm0nnGOmQ16FPP0ujJZTFHiciw4
-	SXs2WIhXlUfqlZ713YQqD4MgMB/NqRP/QlWTrnNgzB/jpmsddzXwiCOlgN/gmX9BE7ioXPFznGicQ
-	y4A2GRUE3SKtKTyyvGkEqthnB+ma/4fE8OHDELL0Md8Z3rijlfcgbn0ZgzNknJ4Dxz9Mlr4M1hyS+
-	PMN6StkbDrQOWjcB0nsA==;
+	List-Owner; bh=AEE9YvnWechsl9n3HcBwTvLpGOsZqGxIQQtJ06bBkA8=; b=kP8W+yIpzAwgO5
+	CE8x54FcoTktRMbiFz/Zd+rFpZa389puwF6gGp7lD9PLvWwQ/9ocWZmf8JcR/3TNPbl0bukGJ5/xd
+	3FqVwN6tgWoBJ9UUkag3UWsxRNDZ7NtGv+TQydD8NlhffHCYssLhkU2uUxTWCw9tnzIehdcUpwIQx
+	1Q3mdJ6XTunNu3tQGSUz+jEpk8drxnilWEMQdbos46jKYwE9FmMqsNRu76QZJYNE8w3DB1YnJZpte
+	Bb4sGp6w//642I/CKHtVXBbVGILk6wqikHNBd7e9ZSont688NJs0FAcxs3pet7YbPV7PlxVEd3KKv
+	uJz3wrO8fhb0bWTdgkdA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5klQ-00020F-CZ; Thu, 05 Sep 2019 05:57:00 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i5kod-0003ZV-SR; Thu, 05 Sep 2019 06:00:19 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5klM-0001zR-97; Thu, 05 Sep 2019 05:56:57 +0000
-X-UUID: 021cec5728554d41a55a2e95c52b5397-20190904
-X-UUID: 021cec5728554d41a55a2e95c52b5397-20190904
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <yong.wu@mediatek.com>)
+ id 1i5koa-0003ZB-B0
+ for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 06:00:17 +0000
+X-UUID: dc310d4ae5f740bdbd3138f690f12d90-20190904
+X-UUID: dc310d4ae5f740bdbd3138f690f12d90-20190904
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <light.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 634166656; Wed, 04 Sep 2019 21:56:47 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ with ESMTP id 1764093917; Wed, 04 Sep 2019 22:00:12 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 22:56:45 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 5 Sep 2019 13:56:38 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 5 Sep 2019 13:56:37 +0800
-Message-ID: <1567662999.18702.28.camel@mhfsdcap03>
-Subject: Re: [PATCH v3 06/14] media: mtk-mdp: Get rid of mtk_smi_larb_get/put
-From: Yong Wu <yong.wu@mediatek.com>
-To: houlong wei <houlong.wei@mediatek.com>
-Date: Thu, 5 Sep 2019 13:56:39 +0800
-In-Reply-To: <1567570074.31301.19.camel@mhfsdcap03>
-References: <mailman.21807.1567503573.19300.linux-mediatek@lists.infradead.org>
- <1567570074.31301.19.camel@mhfsdcap03>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Wed, 4 Sep 2019 23:00:10 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 14:00:08 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 5 Sep 2019 14:00:08 +0800
+Message-ID: <1567663210.1324.3.camel@mtkswgap22>
+Subject: Re: [PATCH v2 1/5] pinctrl: mediatek: Check gpio pin number and use
+ binary  search in mtk_hw_pin_field_lookup()
+From: Light Hsieh <light.hsieh@mediatek.com>
+To: <linus.walleij@linaro.org>
+Date: Thu, 5 Sep 2019 14:00:10 +0800
+In-Reply-To: <1567662796-25508-1-git-send-email-light.hsieh@mediatek.com>
+References: <1567662796-25508-1-git-send-email-light.hsieh@mediatek.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: B5594BCA8B000D0387E321BE740558961162944E3E3D0781D08371B12D3EAA0E2000:8
+X-TM-SNTS-SMTP: 01C553FE9CD159425C4B9E487375BD2AB2816699737AD9C83EEC7E12ED10C3E22000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_225656_328944_A5F9645D 
-X-CRM114-Status: GOOD (  16.45  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190904_230016_388663_C8A59FD9 
+X-CRM114-Status: GOOD (  15.59  )
+X-Spam-Score: 2.5 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ 2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -74,90 +74,154 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org, Nicolas
- Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, chao.hao@mediatek.com,
- Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
- linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
- Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>, minghsiu.tsai@mediatek.com,
- ming-fan.chen@mediatek.com, anan.sun@mediatek.com, Robin
- Murphy <robin.murphy@arm.com>, Matthias Kaehlcke <mka@chromium.org>,
- linux-arm-kernel@lists.infradead.org
+Cc: linux-gpio@vger.kernel.org, sean.wang@kernel.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2019-09-04 at 12:07 +0800, houlong wei wrote:
-> Hi, Yong,
+Dear reviewers, 
+
+v2 is the same as v1 except that commit message is corrected according
+to Linus' comment for v1:
+
+1. remove Change-Id lines
+2. correct sysfs as debugfs
+
+On Thu, 2019-09-05 at 13:53 +0800, Light Hsieh wrote:
+> From: Light Hsieh <light.hsieh@mediatek.com>
 > 
-> I have inline comment below.
-
-Thanks for your review.
-
+> 1. Check if gpio pin number is in valid range to prevent from get invalid
+>    pointer 'desc' in the following code:
+> 	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
 > 
-> > MediaTek IOMMU has already added the device_link between the consumer
-> > and smi-larb device. If the mdp device call the pm_runtime_get_sync,
-> > the smi-larb's pm_runtime_get_sync also be called automatically.
-> > 
-> > CC: Minghsiu Tsai <minghsiu.tsai@mediatek.com>
-> > Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> > Reviewed-by: Evan Green <evgreen@chromium.org>
-> > ---
-> >  drivers/media/platform/mtk-mdp/mtk_mdp_comp.c | 38 ---------------------------
-> >  drivers/media/platform/mtk-mdp/mtk_mdp_comp.h |  2 --
-> >  drivers/media/platform/mtk-mdp/mtk_mdp_core.c |  1 -
-> >  3 files changed, 41 deletions(-)
-> > 
-> > diff --git a/drivers/media/platform/mtk-mdp/mtk_mdp_comp.c b/drivers/media/platform/mtk-mdp/mtk_mdp_comp.c
-> > index 9afe816..5985a9b 100644
-> > --- a/drivers/media/platform/mtk-mdp/mtk_mdp_comp.c
-> > +++ b/drivers/media/platform/mtk-mdp/mtk_mdp_comp.c
-> > @@ -9,7 +9,6 @@
-> >  #include <linux/of.h>
-> >  #include <linux/of_address.h>
-> >  #include <linux/of_platform.h>
-> > -#include <soc/mediatek/smi.h>
-> >  
-> >  #include "mtk_mdp_comp.h"
-> >  
-> > @@ -58,14 +57,6 @@ void mtk_mdp_comp_clock_on(struct device *dev, struct mtk_mdp_comp *comp)
-> >  {
-> >  	int i, err;
-> >  
-> > -	if (comp->larb_dev) {
-> > -		err = mtk_smi_larb_get(comp->larb_dev);
-> > -		if (err)
-> > -			dev_err(dev,
-> > -				"failed to get larb, err %d. type:%d id:%d\n",
-> > -				err, comp->type, comp->id);
-> > -	}
+> 2. Use binary search in mtk_hw_pin_field_lookup()
+>    Modify mtk_hw_pin_field_lookup() to use binary search for accelerating
+>    search.
 > 
-> In previous design,mtk_mdp_comp_clock_on() is called by each MDP
-> hardware component, and mtk_smi_larb_get() is also called for each MDP
-> hardware component which accesses DRAM via SMI larb.
+> ---
+>  drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c | 24 +++++++++++++++++++-----
+>  drivers/pinctrl/mediatek/pinctrl-paris.c         | 19 +++++++++++++++++++
+>  2 files changed, 38 insertions(+), 5 deletions(-)
 > 
-> Since mdp device only contains mdp_rdma component, so
-> pm_runtime_get_sync() will ignore other smi-larb clock. We need consider
-> how to enable clocks of other smi-larb associated with other mdp
-> component, e.g. mdp_wdma, mdp_wrot.
-> 
-
-Sorry, I'm not so familiar with mdp, thus, for MDP part, the test and
-reviewing from Minghsiu or you is expected.
-
-This patch only delete the smi interface literally. In my understanding,
-mdp should call pm_runtime_get with the corresponding device, no matter
-mdp_wdma or mdp_wrot device.
-
-Of course I am not sure the mdp flow, If this patch affect its function,
-please tell me. Also, If mdp driver need change correspondingly, I will
-put it into this series like [12/14] of this patchset which is from
-display.
-
-[snip]
+> diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> index 20e1c89..4687f63 100644
+> --- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> +++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> @@ -68,7 +68,7 @@ static int mtk_hw_pin_field_lookup(struct mtk_pinctrl *hw,
+>  {
+>  	const struct mtk_pin_field_calc *c, *e;
+>  	const struct mtk_pin_reg_calc *rc;
+> -	u32 bits;
+> +	u32 bits, start = 0, end, found = 0, check;
+>  
+>  	if (hw->soc->reg_cal && hw->soc->reg_cal[field].range) {
+>  		rc = &hw->soc->reg_cal[field];
+> @@ -79,21 +79,32 @@ static int mtk_hw_pin_field_lookup(struct mtk_pinctrl *hw,
+>  		return -ENOTSUPP;
+>  	}
+>  
+> +	end = rc->nranges - 1;
+>  	c = rc->range;
+>  	e = c + rc->nranges;
+>  
+> -	while (c < e) {
+> -		if (desc->number >= c->s_pin && desc->number <= c->e_pin)
+> +	while (start <= end) {
+> +		check = (start + end) >> 1;
+> +		if (desc->number >= rc->range[check].s_pin
+> +		 && desc->number <= rc->range[check].e_pin) {
+> +			found = 1;
+>  			break;
+> -		c++;
+> +		} else if (start == end)
+> +			break;
+> +		else if (desc->number < rc->range[check].s_pin)
+> +			end = check - 1;
+> +		else
+> +			start = check + 1;
+>  	}
+>  
+> -	if (c >= e) {
+> +	if (!found) {
+>  		dev_dbg(hw->dev, "Not support field %d for pin = %d (%s)\n",
+>  			field, desc->number, desc->name);
+>  		return -ENOTSUPP;
+>  	}
+>  
+> +	c = rc->range + check;
+> +
+>  	if (c->i_base > hw->nbase - 1) {
+>  		dev_err(hw->dev,
+>  			"Invalid base for field %d for pin = %d (%s)\n",
+> @@ -182,6 +193,9 @@ int mtk_hw_set_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
+>  	if (err)
+>  		return err;
+>  
+> +	if (value < 0 || value > pf.mask)
+> +		return -EINVAL;
+> +
+>  	if (!pf.next)
+>  		mtk_rmw(hw, pf.index, pf.offset, pf.mask << pf.bitpos,
+>  			(value & pf.mask) << pf.bitpos);
+> diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.c b/drivers/pinctrl/mediatek/pinctrl-paris.c
+> index 923264d..28b4951 100644
+> --- a/drivers/pinctrl/mediatek/pinctrl-paris.c
+> +++ b/drivers/pinctrl/mediatek/pinctrl-paris.c
+> @@ -693,6 +693,9 @@ static int mtk_gpio_get_direction(struct gpio_chip *chip, unsigned int gpio)
+>  	const struct mtk_pin_desc *desc;
+>  	int value, err;
+>  
+> +	if (gpio > hw->soc->npins)
+> +		return -EINVAL;
+> +
+>  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>  
+>  	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &value);
+> @@ -708,6 +711,9 @@ static int mtk_gpio_get(struct gpio_chip *chip, unsigned int gpio)
+>  	const struct mtk_pin_desc *desc;
+>  	int value, err;
+>  
+> +	if (gpio > hw->soc->npins)
+> +		return -EINVAL;
+> +
+>  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>  
+>  	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DI, &value);
+> @@ -722,6 +728,9 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
+>  	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+>  	const struct mtk_pin_desc *desc;
+>  
+> +	if (gpio > hw->soc->npins)
+> +		return;
+> +
+>  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>  
+>  	mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DO, !!value);
+> @@ -729,12 +738,22 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
+>  
+>  static int mtk_gpio_direction_input(struct gpio_chip *chip, unsigned int gpio)
+>  {
+> +	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+> +
+> +	if (gpio > hw->soc->npins)
+> +		return -EINVAL;
+> +
+>  	return pinctrl_gpio_direction_input(chip->base + gpio);
+>  }
+>  
+>  static int mtk_gpio_direction_output(struct gpio_chip *chip, unsigned int gpio,
+>  				     int value)
+>  {
+> +	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+> +
+> +	if (gpio > hw->soc->npins)
+> +		return -EINVAL;
+> +
+>  	mtk_gpio_set(chip, gpio, value);
+>  
+>  	return pinctrl_gpio_direction_output(chip->base + gpio);
 
 
 
