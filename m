@@ -2,85 +2,48 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B185FAA0A6
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 12:57:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CFC74AA0EA
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 13:07:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=aIIrBTsBDclP+kD+Cqdb3Byjj1eUAcJpgJpBFeDr64g=; b=AUBpI1WnKYfdy2
-	XHE6pro2gdDNgZYvAD8d+sNatuGe/HEHfA9BXHjJe11sZIOKzgiHVXiJnSfeFAtpay3As/4Gn8X8O
-	t3ccN40+ePHHsT12+e5SyLXuuK4ZfGd/myipGJjAh7WStCobuVMCPcBaymfZzQdIICXpVib01VQwe
-	CKEYY2gj9+PIetRJHG6b3GLDyc23Z/IyqXe5eIqsFC0veUNBEVjbd/pVMG20XDec5zeu10mkLNzyT
-	ex6kkcog8QII/4ccnuZma/tAEWqV/o40pryxXLOleRHEldrA8qr2b5L5l5gVIq4RgqSMxp7YoKBYb
-	qZDmTXute6vi2S67DtBQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=iGebnnK70CxPTSGmKbA6Z60PFqn+IQbSb/UgIKM2RFU=; b=VO3KbJ7OXH63aN
+	IXbCNW8fpDc0W+HhwzV5BmT7bkOSQjozPeq3oPANVnQGFItCMiDmAZKhjvXrj+mrGFgQJgUz7PhTM
+	+TPWC1+1AxtXfvXD9W4t4wEJZsFOYSokFqGRi6C05qFQo2qwbLPYg6ZxxhO0ERagw8fB5/EpsOd31
+	PMH9GgiuzkABGRRQCefl7Nnp1DGIodNu/s2UqW15V7Q6eOSXgJvS/OeCX752ZVTznDgbDmZlS0ElN
+	Y7CVtEIkUm7tqzcDzHH3WBtHRgMShTyDg9pkYQf/wXTPj2BNErpiUtMNp+AgHxQbxZtnZ+4UJNr8T
+	AfLW+UmQA4RxvCt58OOw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5pSW-0001Ii-4w; Thu, 05 Sep 2019 10:57:48 +0000
-Received: from mx1.redhat.com ([209.132.183.28])
+	id 1i5pc8-00066F-7Q; Thu, 05 Sep 2019 11:07:44 +0000
+Received: from unicorn.mansr.com ([2001:8b0:ca0d:8d8e::2])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5pSN-0001BV-Lu
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 10:57:41 +0000
-Received: from mail-wm1-f69.google.com (mail-wm1-f69.google.com
- [209.85.128.69])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mx1.redhat.com (Postfix) with ESMTPS id 99F9160ACD
- for <linux-mediatek@lists.infradead.org>; Thu,  5 Sep 2019 10:57:38 +0000 (UTC)
-Received: by mail-wm1-f69.google.com with SMTP id f63so791768wma.7
- for <linux-mediatek@lists.infradead.org>; Thu, 05 Sep 2019 03:57:38 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=u65TSO+Rvf1axEqmi3wSZZGF+sDF08PzfGTCX34no0w=;
- b=uGKpDiKewOblI6OnxqzruKteEoQCnMsmd2gveZwwsbPPS2YucLenluk4+wlJidRKSZ
- kHzfuDuSxICbjaDuG5JxGOtb6sZ5DvpL+lpzMFdmENN9HykqGM6mDrgwMMuG6pfAPAep
- 7qlPi5BzuCx3wKtywOKbGQgE9D9jk5QS7uDfgmk2xIwna4tdWh+3CEh+frPSudVbLXpa
- cPFcDrKW09CsvAs6qGoqt+Z9crFyPShXYH6KcJjol8POoyrExe7cHZP7xXAyYiClFF2X
- mwSMPjE+UdWTw2czoDLvrmgWP9mHFwVoU3LB7UTJCYSw9tN9Q4/pHrXP3gvmFefAM1Ff
- xCfg==
-X-Gm-Message-State: APjAAAWV9ILWxRDaHO6B8vXF0M/B+efNMHLm191Az3V9JEJZG6K2Jkn0
- WlWS8N/p3u5s14sQa6n8tx9boSouAfwyqsGFX36dozDzVdjT+O2OZzQSAn+nQY6Ljnn+72Ngwr2
- JyGU38vtk5Hzrn7eBm3UkSNe6638W0S2F
-X-Received: by 2002:a1c:ef09:: with SMTP id n9mr2295970wmh.23.1567681057403;
- Thu, 05 Sep 2019 03:57:37 -0700 (PDT)
-X-Google-Smtp-Source: APXvYqytSMTFwKy6lxd+Xl2q9JD1L6j9P/OzvtGIshQY0oEp+mKnHzNdpLaXEnuh8y3DBKzT/FTaXA==
-X-Received: by 2002:a1c:ef09:: with SMTP id n9mr2295960wmh.23.1567681057221;
- Thu, 05 Sep 2019 03:57:37 -0700 (PDT)
-Received: from [192.168.1.13] ([90.168.169.92])
- by smtp.gmail.com with ESMTPSA id p19sm1745164wmg.31.2019.09.05.03.57.35
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 05 Sep 2019 03:57:36 -0700 (PDT)
-Subject: Re: [V2, 2/2] media: i2c: Add DW9768 VCM driver
-To: Sakari Ailus <sakari.ailus@linux.intel.com>,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-References: <20190905072142.14606-1-dongchun.zhu@mediatek.com>
- <20190905072142.14606-3-dongchun.zhu@mediatek.com>
- <20190905082134.GY5475@paasikivi.fi.intel.com>
- <20190905101908.GB2680@smile.fi.intel.com>
- <20190905104001.GZ5475@paasikivi.fi.intel.com>
-From: Javier Martinez Canillas <javierm@redhat.com>
-Message-ID: <ad357e27-3e51-6922-1924-5d2c2daf1934@redhat.com>
-Date: Thu, 5 Sep 2019 12:57:34 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ id 1i5pbb-0005rJ-Ae; Thu, 05 Sep 2019 11:07:12 +0000
+Received: by unicorn.mansr.com (Postfix, from userid 51770)
+ id B3B4B17FE3; Thu,  5 Sep 2019 12:06:54 +0100 (BST)
+From: =?iso-8859-1?Q?M=E5ns_Rullg=E5rd?= <mans@mansr.com>
+To: YueHaibing <yuehaibing@huawei.com>
+Subject: Re: [PATCH -next 12/15] thermal: tango: use
+ devm_platform_ioremap_resource() to simplify code
+References: <20190904122939.23780-1-yuehaibing@huawei.com>
+ <20190904122939.23780-13-yuehaibing@huawei.com>
+Date: Thu, 05 Sep 2019 12:06:54 +0100
+In-Reply-To: <20190904122939.23780-13-yuehaibing@huawei.com>
+ (yuehaibing@huawei.com's message of "Wed, 4 Sep 2019 20:29:36 +0800")
+Message-ID: <yw1xmufj6lyp.fsf@mansr.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/25.3 (gnu/linux)
 MIME-Version: 1.0
-In-Reply-To: <20190905104001.GZ5475@paasikivi.fi.intel.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_035739_753748_1AC0E5E1 
-X-CRM114-Status: GOOD (  17.48  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190905_040711_573069_B150DCCF 
+X-CRM114-Status: GOOD (  12.07  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [209.132.183.28 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -94,45 +57,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, drinkcat@chromium.org,
- srv_heupstream@mediatek.com, sam.hung@mediatek.com, shengnan.wang@mediatek.com,
- tfiga@chromium.org, sj.huang@mediatek.com, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, dongchun.zhu@mediatek.com,
- matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: mmayer@broadcom.com, eric@anholt.net, miquel.raynal@bootlin.com,
+ linux-stm32@st-md-mailman.stormreply.com, heiko@sntech.de,
+ amit.kucheria@verdurent.com, f.fainelli@gmail.com, daniel.lezcano@linaro.org,
+ phil@raspberrypi.org, linux-rockchip@lists.infradead.org, agross@kernel.org,
+ bcm-kernel-feedback-list@broadcom.com, linux-arm-msm@vger.kernel.org,
+ rui.zhang@intel.com, david.hernandezsanchez@st.com, alexandre.torgue@st.com,
+ marc.w.gonzalez@free.fr, rjui@broadcom.com, edubezval@gmail.com,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ gregory.0xf0@gmail.com, matthias.bgg@gmail.com, horms+renesas@verge.net.au,
+ talel@amazon.com, linux-arm-kernel@lists.infradead.org, sbranden@broadcom.com,
+ wsa+renesas@sang-engineering.com, gregkh@linuxfoundation.org,
+ linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org, wahrenst@gmx.net,
+ mcoquelin.stm32@gmail.com, jun.nie@linaro.org, computersforpeace@gmail.com,
+ shawnguo@kernel.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gOS81LzE5IDEyOjQwIFBNLCBTYWthcmkgQWlsdXMgd3JvdGU6Cj4gT24gVGh1LCBTZXAgMDUs
-IDIwMTkgYXQgMDE6MTk6MDhQTSArMDMwMCwgQW5keSBTaGV2Y2hlbmtvIHdyb3RlOgo+PiBPbiBU
-aHUsIFNlcCAwNSwgMjAxOSBhdCAxMToyMTozNEFNICswMzAwLCBTYWthcmkgQWlsdXMgd3JvdGU6
-Cj4+PiBPbiBUaHUsIFNlcCAwNSwgMjAxOSBhdCAwMzoyMTo0MlBNICswODAwLCBkb25nY2h1bi56
-aHVAbWVkaWF0ZWsuY29tIHdyb3RlOgo+Pj4+IEZyb206IERvbmdjaHVuIFpodSA8ZG9uZ2NodW4u
-emh1QG1lZGlhdGVrLmNvbT4KPj4KPj4+PiArc3RhdGljIGNvbnN0IHN0cnVjdCBpMmNfZGV2aWNl
-X2lkIGR3OTc2OF9pZF90YWJsZVtdID0gewo+Pj4+ICsJeyBEVzk3NjhfTkFNRSwgMCB9LAo+Pj4+
-ICsJeyB9LAo+Pj4KPj4+IENvdWxkIHlvdSBkcm9wIHRoZSBJwrJDIElEIHRhYmxlPwo+Pgo+PiBC
-dXQgd2h5Pwo+PiBJdCB3aWxsIGFsbG93IHlvdSB0byBpbnN0YW5jaWF0ZSB0aGUgZGV2aWNlIGZy
-b20gdXNlciBzcGFjZS4KClllcywgdGhlIEkyQyBkZXZpY2UgdGFibGUgaXMgc3RpbGwgbmVlZGVk
-IGlmIHRoZSBkZXZpY2UgY2FuIGJlIGluc3RhbnRpYXRlZApmcm9tIHVzZXItc3BhY2UgdXNpbmcg
-dGhlIHN5c2ZzIGludGVyZmFjZSwgb3Igb3RoZXJ3aXNlIHRoZSBtb2R1bGUgd29uJ3QgYmUKYXV0
-b21hdGljYWxseSBsb2FkZWQuCgpLaWVyYW4gcG9zdGVkIGEgIltQQVRDSCBSRkNdIG1vZHBvc3Q6
-IFN1cHBvcnQgSTJDIEFsaWFzZXMgZnJvbSBPRiB0YWJsZXMiCnBhdGNoIHRoYXQgYWRkcyBhIE1P
-RFVMRV9ERVZJQ0VfVEFCTEUoaTJjX29mLCAuLikgbWFjcm8gc28gbW9kcG9zdCBjb3VsZAphZGQg
-bGVnYWN5IEkyQyBtb2RhbGlhcyB1c2luZyB0aGUgaW5mb3JtYXRpb24gaW4gdGhlIE9GIGRldmlj
-ZSBJRCB0YWJsZXM6CgpodHRwczovL3BhdGNod29yay5rZXJuZWwub3JnL3BhdGNoLzExMDM4ODYx
-LwoKSWYgdGhhdCBsYW5kcywgdGhlbiB3ZSBjb3VsZCBnZXQgcmlkIG9mIHRoZSBJMkMgZGV2aWNl
-IHRhYmxlcyBhbHRvZ2V0aGVyCmZvciBub24tbGVnYWN5IEkyQyBkcml2ZXJzLgoKPiAKPiBUaGUg
-ZGV2aWNlIGlzIHN1cHBvc2VkIHRvIGJlIHByZXNlbnQgaW4gRFQgKG9yIEFDUEkgdGFibGVzKSBh
-bHJlYWR5Lgo+CgpBZ3JlZWQuIEFsc28gYnkgbG9va2luZyBhdCB0aGUgZHJpdmVyJ3MgcHJvYmUg
-ZnVuY3Rpb24gSSBzZWUgdGhhdCB0aGUKZGV2aWNlIGxvb2t1cHMgYSAndmluJyBhbmQgJ3ZkZCcg
-cmVndWxhdG9ycyBzdXBwbGllcyBhbmQgaXQgZmFpbHMgaWYKYXJlbid0IGRlZmluZWQsIHNvIGl0
-IGNhbid0IGJlIGluc3RhbnRpYXRlZCBmcm9tIHVzZXItc3BhY2UgYW55d2F5cy4KCkJUVywgdGhl
-c2UgdHdvIHJlZ3VsYXRvcnMgc3VwcGxpZXMgc2hvdWxkIGJlIGxpc3RlZCBhcyAndmluLXN1cHBs
-eScKYW5kICd2ZGQtc3VwcGx5JyBhcyByZXF1aXJlZCBwcm9wZXJ0aWVzIGluIHRoZSBEVCBiaW5k
-aW5nIGRvY3VtZW50LgoKQmVzdCByZWdhcmRzLAotLSAKSmF2aWVyIE1hcnRpbmV6IENhbmlsbGFz
-ClNvZnR3YXJlIEVuZ2luZWVyIC0gRGVza3RvcCBIYXJkd2FyZSBFbmFibGVtZW50ClJlZCBIYXQK
-Cl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1l
-ZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0
-dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+YueHaibing <yuehaibing@huawei.com> writes:
+
+> Use devm_platform_ioremap_resource() to simplify the code a bit.
+> This is detected by coccinelle.
+>
+> Reported-by: Hulk Robot <hulkci@huawei.com>
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+
+Acked-by: Mans Rullgard <mans@mansr.com>
+
+> ---
+>  drivers/thermal/tango_thermal.c | 4 +---
+>  1 file changed, 1 insertion(+), 3 deletions(-)
+>
+> diff --git a/drivers/thermal/tango_thermal.c b/drivers/thermal/tango_ther=
+mal.c
+> index 304b461..f44441b 100644
+> --- a/drivers/thermal/tango_thermal.c
+> +++ b/drivers/thermal/tango_thermal.c
+> @@ -73,7 +73,6 @@ static void tango_thermal_init(struct tango_thermal_pri=
+v *priv)
+>
+>  static int tango_thermal_probe(struct platform_device *pdev)
+>  {
+> -	struct resource *res;
+>  	struct tango_thermal_priv *priv;
+>  	struct thermal_zone_device *tzdev;
+>
+> @@ -81,8 +80,7 @@ static int tango_thermal_probe(struct platform_device *=
+pdev)
+>  	if (!priv)
+>  		return -ENOMEM;
+>
+> -	res =3D platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> -	priv->base =3D devm_ioremap_resource(&pdev->dev, res);
+> +	priv->base =3D devm_platform_ioremap_resource(pdev, 0);
+>  	if (IS_ERR(priv->base))
+>  		return PTR_ERR(priv->base);
+>
+> -- =
+
+> 2.7.4
+>
+
+-- =
+
+M=E5ns Rullg=E5rd
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
