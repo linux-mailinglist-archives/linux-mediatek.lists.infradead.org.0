@@ -2,86 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C8E2DAA554
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 16:02:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 95392AA58C
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 16:14:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fZFL1xYpNSr9/bmbDzkTnqVl1P/yAEWHMV/MwYy4gHE=; b=f3IlCmbeBp1D5o
-	bSvBNSIWrpC7owJ90r0GPU/Cgrj/7imqdaEqu4jqeIUQo9KwsofB/rmedvk5LXhlbOX7XduQCTPrV
-	qHO5R8pOBSsqLJEGVdZhTxo1SFX+RX27+XHO4JWnUARroaMkdrZ88/ZE3fqpJvYhNva9INayak+c3
-	Ce7K4sNd3JkpOFy9tcZV/hphFcpAqzvBx3KZgxwoMQUB9Aaoq4an6rrsiijKyElL5q0tCOqKm/cl7
-	e54MitM7YUTcyk1ArZCI7/rXqNwLrK1leLmL3McF5i17K2XtqUN58vXYF+NXHIakLYHMthGhCgsIn
-	XgBqDlm9KVRz9snWqFlA==;
+	List-Owner; bh=ClblMHOh72BTjQ5b2SB8MR5JKOL5bfLah9ZYmpDwYOM=; b=DfleQ7CN8D9du+
+	G4MNs/Bz8YPRWZWShNEmPJyJ709TfM122qTPzZVS35IHsvaEtS0j6e2A2blGvZRGvYNeOu2JmWBO3
+	1zgpgX6o5qO7L+NOO9C2FAhB8IxFQTbJqTzReNMEVysYhZ9blwritmdFH6mdhj+bX9fHta1sP6qI8
+	CemQxepPPekU6aygZBI9Ew5k6CtKGVi/iJnx8h9gX/JuH2qyZKVptUzI3TguYjgW4yz1Fk3jzhoIl
+	PrbYYHta0WWKLyrEZNmhndBsZLO9AbFeMiIORTcmnVKMT16BaLGMrehfMommFMFHu4NLAs04rPYQG
+	oTofIq96oT70e8TXkDDQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5sKw-0006IS-1N; Thu, 05 Sep 2019 14:02:10 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1i5sX0-0001uV-3D; Thu, 05 Sep 2019 14:14:38 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5sKs-0006HB-5j
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 14:02:08 +0000
-Received: by mail-lf1-x144.google.com with SMTP id x80so2140299lff.3
- for <linux-mediatek@lists.infradead.org>; Thu, 05 Sep 2019 07:02:04 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Y6GdqPH0KVO/+ZJvIYhCRArnuMGnAumqu+juuMVJhOc=;
- b=R64ee0WfRJ2+6EYXTlrJf8c+TzHsEXj8JNgQSfgg30DK/M/mocVRoL4Q8ct3r/rODE
- CTRGZoGFXbA6P0iP1NsvBQTO4qh8oDNUb/TkGdBQLeWy95eNCiUM9T65Kuv19NuE9Vwy
- c4/der6ho0mulKsweuGoF/FcAW9FE6KwEK4Xse3CNeuKX8jlVFpjHuUft+QvfjrFipC0
- HPgScpSAwIJ/x0pAoljakY1Oe5IHQyZojwuQdcrd9xVwtNBm+HcUVD8p0J6GQ+xwG322
- prgREciNMHLpiydbIVKnabDHqAT77GMryWpDkhbrGv12K0UPFh044XtZ0N7Hd+lnjtxu
- DJrA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Y6GdqPH0KVO/+ZJvIYhCRArnuMGnAumqu+juuMVJhOc=;
- b=oZJdjoL/XhkPuaxRlgBzlfp8nfK9o1+4cKDR0qSz39i17lfmkLgRobxMB3fC+XL7H0
- 5xhmj/IECOUGJfZ3P6RBCn14roj2/h2mlymqPieeE6d1xBmlD6xMCaOv8sXsZPYBWMvt
- 6WeqiriDNmRa7D8cfIllYJmRVwOAqKwK6+uwjRGh5pZAL5kMtJF0M+2oFZIR9i82E3jl
- WgEDIO18T3SgIP5PAeZnUfqvPIBubigAQ9lt5M5SxaW27l2PTJv3fEkDbm8nSiKbWAAf
- XMdYXONyS40mmXl3FMMtp0TJvY1OcZOywXT+5y7twBBNQN/sTdAy2HG2mkBIxynvh8+s
- 4f7g==
-X-Gm-Message-State: APjAAAX7zUoWUbU2GfTaxq6Ge70gv3cjVElrjcCC3S9PGmuzzwNkxCXJ
- c/bmoJnFaXZ3TmAHGAxBqYbOIpmBXY/K0Jnozgv2sQ==
-X-Google-Smtp-Source: APXvYqyl4zI+t8OtieR9s2IQqoz5ExKv3CVcq9ddTFSGd/uFyuy0jWlSRm7mgp7YK7eaM/5kiWkFzcXJ/qrhw9/p4qE=
-X-Received: by 2002:a05:6512:304:: with SMTP id
- t4mr2590877lfp.15.1567692122600; 
- Thu, 05 Sep 2019 07:02:02 -0700 (PDT)
+ id 1i5sWm-0001jV-8a; Thu, 05 Sep 2019 14:14:25 +0000
+X-UUID: 20f0eab654914ced890d55d069271c50-20190905
+X-UUID: 20f0eab654914ced890d55d069271c50-20190905
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jerry-ch.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 495146118; Thu, 05 Sep 2019 06:14:20 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 07:14:18 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 22:14:10 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 5 Sep 2019 22:14:10 +0800
+Message-ID: <1567692852.22453.55.camel@mtksdccf07>
+Subject: Re: [RFC PATCH V2 3/4] media: platform: Add Mediatek FD driver KConfig
+From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
+To: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Date: Thu, 5 Sep 2019 22:14:12 +0800
+In-Reply-To: <20190905123054.GL5035@pendragon.ideasonboard.com>
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-4-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <20190905123054.GL5035@pendragon.ideasonboard.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-References: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
- <d5100b2d-46c4-5811-8274-8b06710d2594@arm.com>
- <20190830145501.zadfv2ffuu7j46ft@e107158-lin.cambridge.arm.com>
- <1567689999.2389.5.camel@mtkswgap22>
-In-Reply-To: <1567689999.2389.5.camel@mtkswgap22>
-From: Vincent Guittot <vincent.guittot@linaro.org>
-Date: Thu, 5 Sep 2019 16:01:51 +0200
-Message-ID: <CAKfTPtC3txstND=6YkWBJ16i06cQ7xueUpD5j-j-UfuSf0-z-g@mail.gmail.com>
-Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
-To: Jing-Ting Wu <jing-ting.wu@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_070206_249466_23932E5F 
-X-CRM114-Status: GOOD (  30.83  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190905_071424_304272_BBF22E57 
+X-CRM114-Status: GOOD (  18.94  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,126 +74,132 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Peter Zijlstra <peterz@infradead.org>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- Valentin Schneider <valentin.schneider@arm.com>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Qais Yousef <qais.yousef@arm.com>, LAK <linux-arm-kernel@lists.infradead.org>
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
+ <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
+ <laurent.pinchart+renesas@ideasonboard.com>,
+ Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
+ Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
+ <christie.yu@mediatek.com>, srv_heupstream <srv_heupstream@mediatek.com>,
+ Po-Yang Huang =?UTF-8?Q?=28=E9=BB=83=E6=9F=8F=E9=99=BD=29?=
+ <po-yang.huang@mediatek.com>, "suleiman@chromium.org" <suleiman@chromium.org>,
+ "shik@chromium.org" <shik@chromium.org>,
+ "tfiga@chromium.org" <tfiga@chromium.org>,
+ Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
+ <jungo.lin@mediatek.com>, Sj
+ Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
+ "yuzhao@chromium.org" <yuzhao@chromium.org>,
+ "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
+ "zwisler@chromium.org" <zwisler@chromium.org>,
+ Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
+ <Frederic.Chen@mediatek.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "mchehab@kernel.org" <mchehab@kernel.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Jing-Ting,
+Hi Laurent,
 
-On Thu, 5 Sep 2019 at 15:26, Jing-Ting Wu <jing-ting.wu@mediatek.com> wrote:
->
-> On Fri, 2019-08-30 at 15:55 +0100, Qais Yousef wrote:
-> > On 08/29/19 11:38, Valentin Schneider wrote:
-> > > On 29/08/2019 04:15, Jing-Ting Wu wrote:
-> > > > At original linux design, RT & CFS scheduler are independent.
-> > > > Current RT task placement policy will select the first cpu in
-> > > > lowest_mask, even if the first CPU is running a CFS task.
-> > > > This may put RT task to a running cpu and let CFS task runnable.
-> > > >
-> > > > So we select idle cpu in lowest_mask first to avoid preempting
-> > > > CFS task.
-> > > >
-> > >
-> > > Regarding the RT & CFS thing, that's working as intended. RT is a whole
-> > > class above CFS, it shouldn't have to worry about CFS.
-> > >
-> > > On the other side of things, CFS does worry about RT. We have the concept
-> > > of RT-pressure in the CFS scheduler, where RT tasks will reduce a CPU's
-> > > capacity (see fair.c::scale_rt_capacity()).
-> > >
-> > > CPU capacity is looked at on CFS wakeup (see wake_cap() and
-> > > find_idlest_cpu()), and the periodic load balancer tries to spread load
-> > > over capacity, so it'll tend to put less things on CPUs that are also
-> > > running RT tasks.
-> > >
-> > > If RT were to start avoiding rqs with CFS tasks, we'd end up with a nasty
-> > > situation were both are avoiding each other. It's even more striking when
-> > > you see that RT pressure is done with a rq-wide RT util_avg, which
-> > > *doesn't* get migrated when a RT task migrates. So if you decide to move
-> > > a RT task to an idle CPU "B" because CPU "A" had runnable CFS tasks, the
-> > > CFS scheduler will keep seeing CPU "B" as not significantly RT-pressured
-> > > while that util_avg signal ramps up, whereas it would correctly see CPU
-> > > "A" as RT-pressured if the RT task previously ran there.
-> > >
-> > > So overall I think this is the wrong approach.
-> >
-> > I like the idea, but yeah tend to agree the current approach might not be
-> > enough.
-> >
-> > I think the major problem here is that on generic systems where CFS is a first
-> > class citizen, RT tasks can be hostile to them - not always necessarily for a
-> > good reason.
-> >
-> > To further complicate the matter, even among CFS tasks we can't tell which are
-> > more important than the others - though hopefully latency-nice proposal will
-> > make the situation better.
-> >
-> > So I agree we have a problem here, but I think this patch is just a temporary
-> > band aid and we need to do better. Though I have no concrete suggestion yet on
-> > how to do that.
-> >
-> > Another thing I couldn't quantify yet how common and how severe this problem is
-> > yet. Jing-Ting, if you can share the details of your use case that'd be great.
-> >
-> > Cheers
-> >
-> > --
-> > Qais Yousef
->
->
-> I agree that the nasty situation will happen.The current approach and this patch might not be enough.
+On Thu, 2019-09-05 at 20:30 +0800, Laurent Pinchart wrote:
+> Hi Jerry,
+> 
+> Thank you for the patch.
+> 
+> On Tue, Jul 09, 2019 at 04:41:11PM +0800, Jerry-ch Chen wrote:
+> > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+> > 
+> > This patch adds KConfig for Mediatek Face Detection driver (FD).
+> > FD is embedded in Mediatek SoCs. It can provide hardware
+> > accelerated face detection function.
+> > 
+> > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+> 
+> You can squash this patch with 4/4, there's no need to keep it separate.
+> 
 
-RT task should not harm its cache hotness and responsiveness for the
-benefit of a CFS task
+I appreciate your comments,
 
-> But for requirement of performance, I think it is better to differentiate between idle CPU and CPU has CFS task.
->
-> For example, we use rt-app to evaluate runnable time on non-patched environment.
-> There are (NR_CPUS-1) heavy CFS tasks and 1 RT Task. When a CFS task is running, the RT task wakes up and choose the same CPU.
-> The CFS task will be preempted and keep runnable until it is migrated to another cpu by load balance.
-> But load balance is not triggered immediately, it will be triggered until timer tick hits with some condition satisfied(ex. rq->next_balance).
+Ok, I will squash it.
 
-Yes you will have to wait for the next tick that will trigger an idle
-load balance because you have an idle cpu and 2 runnable tack (1 RT +
-1CFS) on the same CPU. But you should not wait for more than  1 tick
+> > ---
+> >  drivers/media/platform/Kconfig            |  2 ++
+> >  drivers/media/platform/mtk-isp/fd/Kconfig | 17 +++++++++++++++++
+> >  2 files changed, 19 insertions(+)
+> >  create mode 100644 drivers/media/platform/mtk-isp/fd/Kconfig
+> > 
+> > diff --git a/drivers/media/platform/Kconfig b/drivers/media/platform/Kconfig
+> > index a505e9f..ae99258e 100644
+> > --- a/drivers/media/platform/Kconfig
+> > +++ b/drivers/media/platform/Kconfig
+> > @@ -32,6 +32,8 @@ source "drivers/media/platform/davinci/Kconfig"
+> >  
+> >  source "drivers/media/platform/omap/Kconfig"
+> >  
+> > +source "drivers/media/platform/mtk-isp/fd/Kconfig"
+> > +
+> >  config VIDEO_ASPEED
+> >  	tristate "Aspeed AST2400 and AST2500 Video Engine driver"
+> >  	depends on VIDEO_V4L2
+> > diff --git a/drivers/media/platform/mtk-isp/fd/Kconfig b/drivers/media/platform/mtk-isp/fd/Kconfig
+> > new file mode 100644
+> > index 0000000..0c5eaf0
+> > --- /dev/null
+> > +++ b/drivers/media/platform/mtk-isp/fd/Kconfig
+> > @@ -0,0 +1,17 @@
+> > +config VIDEO_MEDIATEK_FD
+> > +	bool "Mediatek face detection processing function"
+> > +	select DMA_SHARED_BUFFER
+> > +	select VIDEOBUF2_DMA_CONTIG
+> > +	select VIDEOBUF2_CORE
+> > +	select VIDEOBUF2_V4L2
+> > +	select VIDEOBUF2_MEMOPS
+> > +	select VIDEOBUF2_VMALLOC
+> 
+> Do you need both VIDEOBUF2_DMA_CONTIG and VIDEOBUF2_VMALLOC ? The driver
+> doesn't seem to make use of VIDEOBUF2_VMALLOC.
+> 
 
-The current load_balance doesn't handle correctly the situation of 1
-CFS and 1 RT task on same CPU while 1 CPU is idle. There is a rework
-of the load_balance that is under review on the mailing list that
-fixes this problem and your CFS task should migrate to the idle CPU
-faster than now
+No, I should remove it. and also would like to update as following:
 
-> CFS tasks may be runnable for a long time. In this test case, it increase 332.091 ms runnable time for CFS task.
->
-> The detailed log is shown as following, CFS task(thread1-6580) is preempted by RT task(thread0-6674) about 332ms:
+        depends on VIDEO_V4L2
+        depends on ARCH_MEDIATEK || COMPILE_TEST
+        select VIDEOBUF2_DMA_CONTIG
+        select VIDEOBUF2_CORE
+        select VIDEOBUF2_V4L2
+        select VIDEOBUF2_MEMOPS
+        select MEDIA_CONTROLLER
+        select MTK_SCP
 
-332ms is quite long and is probably not an idle load blanace but a
-busy load balance
+> > +	select MEDIA_CONTROLLER
+> > +
+> > +	default n
+> > +	help
+> > +		Support the Face Detectioin (FD) feature.
+> 
+> s/Detectioin/Detection/
+> 
+Typo fixed.
 
-> thread1-6580  [003] dnh2    94.452898: sched_wakeup: comm=thread0 pid=6674 prio=89 target_cpu=003
-> thread1-6580  [003] d..2    94.452916: sched_switch: prev_comm=thread1 prev_pid=6580 prev_prio=120 prev_state=R ==> next_comm=thread0 next_pid=6674 next_prio=89
-> .... 332.091ms
-> krtatm-1930  [001] d..2    94.785007: sched_migrate_task: comm=thread1 pid=6580 prio=120 orig_cpu=3 dest_cpu=1
-> krtatm-1930  [001] d..2    94.785020: sched_switch: prev_comm=krtatm prev_pid=1930 prev_prio=100 prev_state=S ==> next_comm=thread1 next_pid=6580 next_prio=120
+> Maybe "... feature found in the Mediatek <list of SoCs> SoCs." ?
 
-your CFS task has not moved on the idle CPU but has replaced another task
+I will refine as:
+Support the Face Detection (FD) feature in the Mediatek mt8183 Soc.
 
-Regards,
-Vincent
->
-> So I think choose idle CPU at RT wake up flow could reduce the CFS runnable time.
->
->
-> Best regards,
-> Jing-Ting Wu
->
->
+Thanks and best regards,
+Jerry
+> 
+> > +
+> > +		FD driver is a V4L2 memory-to-memory device driver which
+> > +		provides hardware accelerated face detection function,
+> > +		it can detect different sizes of faces in a raw image.
+> 
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
