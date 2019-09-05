@@ -2,67 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 95392AA58C
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 16:14:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 44893AA771
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 17:40:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ClblMHOh72BTjQ5b2SB8MR5JKOL5bfLah9ZYmpDwYOM=; b=DfleQ7CN8D9du+
-	G4MNs/Bz8YPRWZWShNEmPJyJ709TfM122qTPzZVS35IHsvaEtS0j6e2A2blGvZRGvYNeOu2JmWBO3
-	1zgpgX6o5qO7L+NOO9C2FAhB8IxFQTbJqTzReNMEVysYhZ9blwritmdFH6mdhj+bX9fHta1sP6qI8
-	CemQxepPPekU6aygZBI9Ew5k6CtKGVi/iJnx8h9gX/JuH2qyZKVptUzI3TguYjgW4yz1Fk3jzhoIl
-	PrbYYHta0WWKLyrEZNmhndBsZLO9AbFeMiIORTcmnVKMT16BaLGMrehfMommFMFHu4NLAs04rPYQG
-	oTofIq96oT70e8TXkDDQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=Uy+VR6Bprm3AElW4FaPhmWj81EzdhQtpwTgsu+rUNHY=; b=Jy9k+yOnxpg8NytLGkB4Gr2fi
+	bgRgCdvL/5nM2SUd6vrea/eh0c8KDAgTCQYifhLkSwK4/+ePvtFDYE81TLPgFCrE3fRMB/lb58JJ1
+	v2ohFA1q5BetPx03fl6VJQk4pn0vjx7Vn9IDrZ+WF2w3OOJ05RlCNcYCNriclIdiRKbFDlv5ptdPq
+	02hA3xMX0ig/vpURpX9nNowV3egiM66CCuB/3fHdHRFk1xPSZNR4xw4CENeH0FeSswU6xZzZXiTWF
+	fH6Yda/GAFJxpwpvsLE9bgDalPyDvIp4Lnk5eBvd8TzjD+ewsNdZmx+4lvGVTEluTgKqTUcr0RF2/
+	UjgmeMfjg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5sX0-0001uV-3D; Thu, 05 Sep 2019 14:14:38 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i5trc-0001rU-1m; Thu, 05 Sep 2019 15:40:00 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5sWm-0001jV-8a; Thu, 05 Sep 2019 14:14:25 +0000
-X-UUID: 20f0eab654914ced890d55d069271c50-20190905
-X-UUID: 20f0eab654914ced890d55d069271c50-20190905
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jerry-ch.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 495146118; Thu, 05 Sep 2019 06:14:20 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 07:14:18 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 22:14:10 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 5 Sep 2019 22:14:10 +0800
-Message-ID: <1567692852.22453.55.camel@mtksdccf07>
-Subject: Re: [RFC PATCH V2 3/4] media: platform: Add Mediatek FD driver KConfig
-From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
-To: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-Date: Thu, 5 Sep 2019 22:14:12 +0800
-In-Reply-To: <20190905123054.GL5035@pendragon.ideasonboard.com>
-References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
- <1562661672-22439-4-git-send-email-Jerry-Ch.chen@mediatek.com>
- <20190905123054.GL5035@pendragon.ideasonboard.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i5trQ-0001i5-O0; Thu, 05 Sep 2019 15:39:50 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=OR4KsdTR6qlnJfcuPq23qYuhdT83olFWcd2Vl++hgOA=; b=qlAgvzxFV+m6F+mEGGiNwjz1r
+ o7UgLbNCia/eoJH2H9t2g3iB4sUzhZUWlmHlr0sL1WQ1dYfNeXfgl/odfD66MZ7k5HuFrQ5vPYS0M
+ DjyhLBHSr/rslTMNg2g2zFz82y3LkRi3v51QCmTs+s23bt5Jq8I4pX0QGMIfl+1lxxpJU=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=ypsilon.sirena.org.uk)
+ by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <broonie@sirena.co.uk>)
+ id 1i5trI-0004xL-7h; Thu, 05 Sep 2019 15:39:40 +0000
+Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
+ id C6A052742D07; Thu,  5 Sep 2019 16:39:38 +0100 (BST)
+Date: Thu, 5 Sep 2019 16:39:38 +0100
+From: Mark Brown <broonie@kernel.org>
+To: Kevin Hilman <khilman@baylibre.com>, Christoph Hellwig <hch@lst.de>
+Subject: Re: next/master boot: 310 boots: 11 failed, 292 passed with 6
+ offline, 1 untried/unknown (next-20190904)
+Message-ID: <20190905153938.GB4053@sirena.co.uk>
+References: <5d700b15.1c69fb81.2abcd.479b@mx.google.com>
+ <20190904192725.GI4348@sirena.co.uk> <7hzhjjsime.fsf@baylibre.com>
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <7hzhjjsime.fsf@baylibre.com>
+X-Cookie: You humans are all alike.
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_071424_304272_BBF22E57 
-X-CRM114-Status: GOOD (  18.94  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190905_083948_938001_0733D6D8 
+X-CRM114-Status: GOOD (  16.50  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,134 +77,178 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
- <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
- <laurent.pinchart+renesas@ideasonboard.com>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
- Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
- <christie.yu@mediatek.com>, srv_heupstream <srv_heupstream@mediatek.com>,
- Po-Yang Huang =?UTF-8?Q?=28=E9=BB=83=E6=9F=8F=E9=99=BD=29?=
- <po-yang.huang@mediatek.com>, "suleiman@chromium.org" <suleiman@chromium.org>,
- "shik@chromium.org" <shik@chromium.org>,
- "tfiga@chromium.org" <tfiga@chromium.org>,
- Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
- <jungo.lin@mediatek.com>, Sj
- Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
- "yuzhao@chromium.org" <yuzhao@chromium.org>,
- "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
- "zwisler@chromium.org" <zwisler@chromium.org>,
- Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
- <Frederic.Chen@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "mchehab@kernel.org" <mchehab@kernel.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Steven Liu <steven.liu@mediatek.com>, kernel-build-reports@lists.linaro.org,
+ Catalin Marinas <catalin.marinas@arm.com>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Will Deacon <will@kernel.org>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: multipart/mixed; boundary="===============5357756695125798375=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Laurent,
 
-On Thu, 2019-09-05 at 20:30 +0800, Laurent Pinchart wrote:
-> Hi Jerry,
-> 
-> Thank you for the patch.
-> 
-> On Tue, Jul 09, 2019 at 04:41:11PM +0800, Jerry-ch Chen wrote:
-> > From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> > 
-> > This patch adds KConfig for Mediatek Face Detection driver (FD).
-> > FD is embedded in Mediatek SoCs. It can provide hardware
-> > accelerated face detection function.
-> > 
-> > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
-> 
-> You can squash this patch with 4/4, there's no need to keep it separate.
-> 
-
-I appreciate your comments,
-
-Ok, I will squash it.
-
-> > ---
-> >  drivers/media/platform/Kconfig            |  2 ++
-> >  drivers/media/platform/mtk-isp/fd/Kconfig | 17 +++++++++++++++++
-> >  2 files changed, 19 insertions(+)
-> >  create mode 100644 drivers/media/platform/mtk-isp/fd/Kconfig
-> > 
-> > diff --git a/drivers/media/platform/Kconfig b/drivers/media/platform/Kconfig
-> > index a505e9f..ae99258e 100644
-> > --- a/drivers/media/platform/Kconfig
-> > +++ b/drivers/media/platform/Kconfig
-> > @@ -32,6 +32,8 @@ source "drivers/media/platform/davinci/Kconfig"
-> >  
-> >  source "drivers/media/platform/omap/Kconfig"
-> >  
-> > +source "drivers/media/platform/mtk-isp/fd/Kconfig"
-> > +
-> >  config VIDEO_ASPEED
-> >  	tristate "Aspeed AST2400 and AST2500 Video Engine driver"
-> >  	depends on VIDEO_V4L2
-> > diff --git a/drivers/media/platform/mtk-isp/fd/Kconfig b/drivers/media/platform/mtk-isp/fd/Kconfig
-> > new file mode 100644
-> > index 0000000..0c5eaf0
-> > --- /dev/null
-> > +++ b/drivers/media/platform/mtk-isp/fd/Kconfig
-> > @@ -0,0 +1,17 @@
-> > +config VIDEO_MEDIATEK_FD
-> > +	bool "Mediatek face detection processing function"
-> > +	select DMA_SHARED_BUFFER
-> > +	select VIDEOBUF2_DMA_CONTIG
-> > +	select VIDEOBUF2_CORE
-> > +	select VIDEOBUF2_V4L2
-> > +	select VIDEOBUF2_MEMOPS
-> > +	select VIDEOBUF2_VMALLOC
-> 
-> Do you need both VIDEOBUF2_DMA_CONTIG and VIDEOBUF2_VMALLOC ? The driver
-> doesn't seem to make use of VIDEOBUF2_VMALLOC.
-> 
-
-No, I should remove it. and also would like to update as following:
-
-        depends on VIDEO_V4L2
-        depends on ARCH_MEDIATEK || COMPILE_TEST
-        select VIDEOBUF2_DMA_CONTIG
-        select VIDEOBUF2_CORE
-        select VIDEOBUF2_V4L2
-        select VIDEOBUF2_MEMOPS
-        select MEDIA_CONTROLLER
-        select MTK_SCP
-
-> > +	select MEDIA_CONTROLLER
-> > +
-> > +	default n
-> > +	help
-> > +		Support the Face Detectioin (FD) feature.
-> 
-> s/Detectioin/Detection/
-> 
-Typo fixed.
-
-> Maybe "... feature found in the Mediatek <list of SoCs> SoCs." ?
-
-I will refine as:
-Support the Face Detection (FD) feature in the Mediatek mt8183 Soc.
-
-Thanks and best regards,
-Jerry
-> 
-> > +
-> > +		FD driver is a V4L2 memory-to-memory device driver which
-> > +		provides hardware accelerated face detection function,
-> > +		it can detect different sizes of faces in a raw image.
-> 
+--===============5357756695125798375==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="CUfgB8w4ZwR/yMy5"
+Content-Disposition: inline
 
 
+--CUfgB8w4ZwR/yMy5
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, Sep 04, 2019 at 05:15:53PM -0700, Kevin Hilman wrote:
+> [ + Steven Liu who donated this board to my kernelCI lab ]
+
+Also adding Christoph since this was bisected to his commit and Catalin
+and Will since this was an architecture change.
+
+> Mark Brown <broonie@kernel.org> writes:
+> > On Wed, Sep 04, 2019 at 12:05:57PM -0700, kernelci.org bot wrote:
+
+> > Since 30th August -next fails to boot with no kernel output on
+> > mt7622-rfb1:
+
+=2E..
+
+> > There's logging from ATF so it looks like we try to boot the kernel:
+> >
+> > Starting kernel ...
+> >
+> > [ATF][    36.199793]save kernel info
+> > [ATF][    36.202824]Kernel_EL2
+> > [ATF][    36.205580]Kernel is 64Bit
+> > [ATF][    36.208768]pc=3D0x40080000, r0=3D0x5cf48000, r1=3D0x0
+> > INFO:    BL3-1: Preparing for EL3 exit to normal world, Kernel
+> > INFO:    BL3-1: Next image address =3D 0x40080000
+> > INFO:    BL3-1: Next image spsr =3D 0x3c9
+> > [ATF][    36.227037]el3_exit
+
+> > but no output.  More details including full logs at:
+> >
+> > 	https://kernelci.org/boot/id/5d6fe70059b514164ef1224d/
+> > 	https://kernelci.org/boot/id/5d6fe6e259b514164ef12243/
+>=20
+> Bisected down to this commit[1], full bisect log here[2].  It didn't
+> revert cleanly on top of next-20190904, so I didn't get any further.
+
+> [1]
+> 419e2f1838819e954071dfa1d1f820ab3386ada1 is the first bad commit
+> commit 419e2f1838819e954071dfa1d1f820ab3386ada1
+> Author: Christoph Hellwig <hch@lst.de>
+> Date:   Mon Aug 26 09:03:44 2019 +0200
+>=20
+>     dma-mapping: remove arch_dma_mmap_pgprot
+>    =20
+>     arch_dma_mmap_pgprot is used for two things:
+>    =20
+>      1) to override the "normal" uncached page attributes for mapping
+>         memory coherent to devices that can't snoop the CPU caches
+>      2) to provide the special DMA_ATTR_WRITE_COMBINE semantics on older
+>         arm systems and some mips platforms
+>    =20
+>     Replace one with the pgprot_dmacoherent macro that is already provided
+>     by arm and much simpler to use, and lift the DMA_ATTR_WRITE_COMBINE
+>     handling to common code with an explicit arch opt-in.
+>    =20
+>     Signed-off-by: Christoph Hellwig <hch@lst.de>
+>     Acked-by: Geert Uytterhoeven <geert@linux-m68k.org>     # m68k
+>     Acked-by: Paul Burton <paul.burton@mips.com>            # mips
+>=20
+>  arch/arm/Kconfig                   |  2 +-
+>  arch/arm/mm/dma-mapping.c          |  6 ------
+>  arch/arm64/Kconfig                 |  1 -
+>  arch/arm64/include/asm/pgtable.h   |  4 ++++
+>  arch/arm64/mm/dma-mapping.c        |  6 ------
+>  arch/m68k/Kconfig                  |  1 -
+>  arch/m68k/include/asm/pgtable_mm.h |  3 +++
+>  arch/m68k/kernel/dma.c             |  3 +--
+>  arch/mips/Kconfig                  |  2 +-
+>  arch/mips/mm/dma-noncoherent.c     |  8 --------
+>  include/linux/dma-noncoherent.h    | 13 +++++++++++--
+>  kernel/dma/Kconfig                 | 12 +++++++++---
+>  kernel/dma/mapping.c               |  8 +++++---
+>  13 files changed, 35 insertions(+), 34 deletions(-)
+> bisect run success
+>=20
+> [2]
+> $ git bisect log
+> git bisect start
+> # bad: [35394d031b710e832849fca60d0f53b513f0c390] Add linux-next specific=
+ files for 20190904
+> git bisect bad 35394d031b710e832849fca60d0f53b513f0c390
+> # good: [089cf7f6ecb266b6a4164919a2e69bd2f938374a] Linux 5.3-rc7
+> git bisect good 089cf7f6ecb266b6a4164919a2e69bd2f938374a
+> # bad: [493424779be81b03fb4aca89cc05ba95e9fc0c31] Merge remote-tracking b=
+ranch 'crypto/master'
+> git bisect bad 493424779be81b03fb4aca89cc05ba95e9fc0c31
+> # bad: [58a02f90fddfdc9e4dfbd6579ff788ffdc22afe4] Merge remote-tracking b=
+ranch 'hid/for-next'
+> git bisect bad 58a02f90fddfdc9e4dfbd6579ff788ffdc22afe4
+> # bad: [27c3f6e1d84b47def9060fd481be92838d819a9b] Merge remote-tracking b=
+ranch 'csky/linux-next'
+> git bisect bad 27c3f6e1d84b47def9060fd481be92838d819a9b
+> # good: [f119c164735d85f2a41d14503cb9933d219c539e] arm-soc: document merg=
+es
+> git bisect good f119c164735d85f2a41d14503cb9933d219c539e
+> # bad: [e87b432d6c45697defc03eb69261661060c85245] Merge remote-tracking b=
+ranch 'actions/for-next'
+> git bisect bad e87b432d6c45697defc03eb69261661060c85245
+> # good: [1ab97157f64dadb44d029096c6a92305d6631ab2] Merge remote-tracking =
+branch 'kbuild/for-next'
+> git bisect good 1ab97157f64dadb44d029096c6a92305d6631ab2
+> # good: [ac12cf85d682a2c1948210c65f7fb21ef01dd9f6] Merge branches 'for-ne=
+xt/52-bit-kva', 'for-next/cpu-topology', 'for-next/error-injection', 'for-n=
+ext/perf', 'for-next/psci-cpuidle', 'for-next/rng', 'for-next/smpboot', 'fo=
+r-next/tbi' and 'for-next/tlbi' into for-next/core
+> git bisect good ac12cf85d682a2c1948210c65f7fb21ef01dd9f6
+> # bad: [4934d349f6e5afc9345a44acb0daa3066594088a] Merge remote-tracking b=
+ranch 'asm-generic/master'
+> git bisect bad 4934d349f6e5afc9345a44acb0daa3066594088a
+> # good: [5251a1c90f7f4e458dc3154920e09624311f54b6] Merge remote-tracking =
+branch 'compiler-attributes/compiler-attributes'
+> git bisect good 5251a1c90f7f4e458dc3154920e09624311f54b6
+> # skip: [38c38cb73223218f6eedf485280917af1f8a0af2] mmc: queue: use bigger=
+ segments if DMA MAP layer can merge the segments
+> git bisect skip 38c38cb73223218f6eedf485280917af1f8a0af2
+> # bad: [419e2f1838819e954071dfa1d1f820ab3386ada1] dma-mapping: remove arc=
+h_dma_mmap_pgprot
+> git bisect bad 419e2f1838819e954071dfa1d1f820ab3386ada1
+> # good: [5518ea1ad2c0c7f38d067f621d9349e6a11c8879] unicore32: remove the =
+unused pgprot_dmacoherent define
+> git bisect good 5518ea1ad2c0c7f38d067f621d9349e6a11c8879
+> # good: [b898e50f9f49f7d90f3bca94ac046145072034a2] arm-nommu: remove the =
+unused pgprot_dmacoherent define
+> git bisect good b898e50f9f49f7d90f3bca94ac046145072034a2
+
+--CUfgB8w4ZwR/yMy5
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl1xLDkACgkQJNaLcl1U
+h9DgTggAgNKu6Bl5URIx11dhIav8pf8bkvwDNJHzBRYkoox0rH8xPgf5ZgjVsrdr
+T5rUJfsL52dxPHge5eIUQcBAYqeUp1cdJ7uH+jPyK/vgikgnvFERc186FTS0aUtq
++7xCcG2VAMZuLzSkwh1ekNQaE8DyxDjkKsuvhrwMgcue8tuSmel61ebqmtzjWXrS
+uG+m167qg8sr3/HOCadiVFfigZq2BZbMUYPsXC+SP/CCj9ioTfrAd/pUWkNBoQ0Y
+b9Uvf/GFi9lWtqXMx67a/SibpsqU6ZVcHwa65EWgcuVqCsWe7E8feHXRHtgpp4cJ
+3NJl7wjTyKLG02X2ZhObsD+LimmG4A==
+=gqYU
+-----END PGP SIGNATURE-----
+
+--CUfgB8w4ZwR/yMy5--
+
+
+--===============5357756695125798375==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============5357756695125798375==--
+
