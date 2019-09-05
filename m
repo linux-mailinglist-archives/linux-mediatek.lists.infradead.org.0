@@ -2,87 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 40E86A978D
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 02:16:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E28AA982C
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 03:54:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eV4wvpOSn5ic28yfgE8XnGVezZDX8DF7RUsanrwO3Nk=; b=eAppFQqP4lbvma
-	j6J1xFareZGxlZEZp47APUKe3vQNIWf4IajYbUdrSB8BoqDBz6gSG+Qq2DqmE9V3rE/mO90xFj7nJ
-	XUksDPx8+i+qJ+v+d29lTYFj2uUEe2vlVsw8zfTX6gWbJCDulJW3Qj0QMpvDlTZbC/YuVbHmxNXtJ
-	pvqTLBJ6m12/KFCigApES7S5gMwd7mEMCMGTGwtSjMIb8UTr2c7PJ+7tnmGeL5oExK1s2mZj6oJqI
-	lqrZtAlb3n73/LP8mNSJkU1JrG6Q2Mg57JCzBU0q26Cn5qq+86Q0KPpUlWUOuexTpLaCmRyUzrBEO
-	Vl/6gJrmI7sgSgOxexQQ==;
+	List-Owner; bh=ygCEU48ThIjmRqCdHKtf7zVHf4xgTU8fReLWfU3swPM=; b=McvCRE2MjzUDUB
+	p/7t7gHBPmUZnl4L3SXVsCbEmlXcPIL1pJy4EAkLcKJDSMonM8sdGrYwWSBrcZLXjjL0YZQu4qXvK
+	9uygyk8NFC1EJ2FOBOJ3i1UXf6FEr2nF98fGl6MYNs8hFP2SIJjp9MfLfOxKNISsxE3e/sTSKxgNJ
+	dUckzBQqgVw3UmK3IkgmGi1tgbN0uT80P6TD+6xJ38poMhMdYC+cBf58wVka+CnK/orzspbCYf7qs
+	Qd9xUl9D8GTKkeF0JiqyWmAcuNr/EjJlW10kEaFU73SHEvqbpOihOgwzGP/08uX3Lh7jmk+NupFma
+	bsB/cOqxQmhOFwjC+7Ng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5fRW-00021W-2I; Thu, 05 Sep 2019 00:16:06 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1i5gz5-0006D2-FK; Thu, 05 Sep 2019 01:54:51 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5fRM-0001ur-3O
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 00:15:58 +0000
-Received: by mail-pf1-x444.google.com with SMTP id b13so484006pfo.8
- for <linux-mediatek@lists.infradead.org>; Wed, 04 Sep 2019 17:15:55 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=0sdERW+9btcTv17qIe1HdaGWWdbQFJiSQuJmOBszJNA=;
- b=OkMkAAduhzh9MJC9e/VHgsZ657t9iOZypCWBXN9bZPDO6RDrsQ6IrhwHq8q3bDtun1
- Gi3B/wMmrAxWAeuVAXheei70yQqgmuilXjKz3Ndobk/uuXzWGFwzQlDMPnM/FPLIJCf2
- zonLEgeHKalH3qWuEYkT3FTvrH92Kytr2NYvhSxNNVB2b4IdQT0VMbdigHKbHwGskdBY
- 0kNPDIRnKC4kdasaz/jZUp7KkMH9CpWGZt8KCUKsplDTyejm9A9TlsbFlJk2DAR5xwjO
- LVM3S0PVr7Dcwo+EksQ7KD51QsawqQfmWjN+eQS7kT4055ZddNoCxi8taRTVQrP+o6XG
- 2nMQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=0sdERW+9btcTv17qIe1HdaGWWdbQFJiSQuJmOBszJNA=;
- b=d3PbjM3PHsZOFwo2ul1P4AcvZ5oCv+jzAMDRXOXdjCKGTijH2wiWae4ZLaoafoJUdv
- c9SdzZWtN55UH+z3Ujl5EYVHqcdpceWKRtjoNJoHkkImHhVaZYmOg7cg1nYgX0yU6lZH
- WaSzo+tkvaXMsOqa0d8ZvgrE1rwTl7Lv2O8FU0lfpsPhVZ3dHAhlN7JpaS0kGsVwgaWf
- VpjIY2wciYvoUs3MVc2iWYG9g9MBEa72DAAqma7mizxPqGBa23eeFC1N6nI1lEtvv2Kh
- 35hil6BJepQVKH5yKGqxMeDXIXuQz48ULCE1clM+F+Q91AlYNYLL6JdHLHG6vB2E6xRa
- pixA==
-X-Gm-Message-State: APjAAAUMbmxjh6elYk1p6KRd+HzwvJYFbL8E41NjpIjCKx5FEvPfOGw5
- h8oztVM6BGr0i5lbnTbc/gn6uw==
-X-Google-Smtp-Source: APXvYqznmhpTJ9YSNASir7owQkE0B359jh2yWtccIzJUUwlTmxB5mxz1AaAtQk1adusfOaYFSZM2rw==
-X-Received: by 2002:a63:9249:: with SMTP id s9mr652776pgn.356.1567642555065;
- Wed, 04 Sep 2019 17:15:55 -0700 (PDT)
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id g20sm214657pfh.184.2019.09.04.17.15.53
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 04 Sep 2019 17:15:53 -0700 (PDT)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>,
- Steven Liu <steven.liu@mediatek.com>
-Subject: Re: next/master boot: 310 boots: 11 failed, 292 passed with 6 offline,
- 1 untried/unknown (next-20190904)
-In-Reply-To: <20190904192725.GI4348@sirena.co.uk>
-References: <5d700b15.1c69fb81.2abcd.479b@mx.google.com>
- <20190904192725.GI4348@sirena.co.uk>
-Date: Wed, 04 Sep 2019 17:15:53 -0700
-Message-ID: <7hzhjjsime.fsf@baylibre.com>
+ id 1i5gyv-00064w-A6; Thu, 05 Sep 2019 01:54:42 +0000
+X-UUID: 5f531d2486e34728b40c1bb6e2b124ec-20190904
+X-UUID: 5f531d2486e34728b40c1bb6e2b124ec-20190904
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1461892087; Wed, 04 Sep 2019 17:54:37 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 4 Sep 2019 18:54:36 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 09:54:34 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 5 Sep 2019 09:54:34 +0800
+Message-ID: <1567648476.32522.36.camel@mtksdccf07>
+Subject: Re: [PATCH 1/2] mm/kasan: dump alloc/free stack for page allocator
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Qian Cai <cai@lca.pw>
+Date: Thu, 5 Sep 2019 09:54:36 +0800
+In-Reply-To: <1567607824.5576.77.camel@lca.pw>
+References: <20190904065133.20268-1-walter-zh.wu@mediatek.com>
+ <CAAeHK+wyvLF8=DdEczHLzNXuP+oC0CEhoPmp_LHSKVNyAiRGLQ@mail.gmail.com>
+ <1567606591.32522.21.camel@mtksdccf07> <1567607824.5576.77.camel@lca.pw>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_171556_149077_BC774594 
-X-CRM114-Status: GOOD (  12.90  )
+X-CRM114-CacheID: sfid-20190904_185441_359768_15DF59A7 
+X-CRM114-Status: GOOD (  15.97  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,126 +72,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: , Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, kernel-build-reports@lists.linaro.org
+Cc: wsd_upstream@mediatek.com, Arnd Bergmann <arnd@arndb.de>,
+ Linux Memory Management List <linux-mm@kvack.org>,
+ LKML <linux-kernel@vger.kernel.org>, kasan-dev <kasan-dev@googlegroups.com>,
+ Martin
+ Schwidefsky <schwidefsky@de.ibm.com>, linux-mediatek@lists.infradead.org,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>, Andrey
+ Ryabinin <aryabinin@virtuozzo.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Alexander Potapenko <glider@google.com>,
+ Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-[ + Steven Liu who donated this board to my kernelCI lab ]
+On Wed, 2019-09-04 at 10:37 -0400, Qian Cai wrote:
+> On Wed, 2019-09-04 at 22:16 +0800, Walter Wu wrote:
+> > On Wed, 2019-09-04 at 15:44 +0200, Andrey Konovalov wrote:
+> > > On Wed, Sep 4, 2019 at 8:51 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> > > > +config KASAN_DUMP_PAGE
+> > > > +       bool "Dump the page last stack information"
+> > > > +       depends on KASAN && PAGE_OWNER
+> > > > +       help
+> > > > +         By default, KASAN doesn't record alloc/free stack for page
+> > > > allocator.
+> > > > +         It is difficult to fix up page use-after-free issue.
+> > > > +         This feature depends on page owner to record the last stack of
+> > > > page.
+> > > > +         It is very helpful for solving the page use-after-free or out-
+> > > > of-bound.
+> > > 
+> > > I'm not sure if we need a separate config for this. Is there any
+> > > reason to not have this enabled by default?
+> > 
+> > PAGE_OWNER need some memory usage, it is not allowed to enable by
+> > default in low RAM device. so I create new feature option and the person
+> > who wants to use it to enable it.
+> 
+> Or you can try to look into reducing the memory footprint of PAGE_OWNER to fit
+> your needs. It does not always need to be that way.
 
-Mark Brown <broonie@kernel.org> writes:
+Thanks your suggestion. We can try to think what can be slimmed.
 
-> On Wed, Sep 04, 2019 at 12:05:57PM -0700, kernelci.org bot wrote:
->
-> Since 30th August -next fails to boot with no kernel output on
-> mt7622-rfb1:
->
->> arm64:
->>     defconfig:
->>         gcc-8:
->>             mt7622-rfb1: 1 failed lab
->> 
->>     defconfig+CONFIG_RANDOMIZE_BASE=y:
->>         gcc-8:
->>             mt7622-rfb1: 1 failed lab
->
-> There's logging from ATF so it looks like we try to boot the kernel:
->
-> Starting kernel ...
->
-> [ATF][    36.199793]save kernel info
-> [ATF][    36.202824]Kernel_EL2
-> [ATF][    36.205580]Kernel is 64Bit
-> [ATF][    36.208768]pc=0x40080000, r0=0x5cf48000, r1=0x0
-> INFO:    BL3-1: Preparing for EL3 exit to normal world, Kernel
-> INFO:    BL3-1: Next image address = 0x40080000
-> INFO:    BL3-1: Next image spsr = 0x3c9
-> [ATF][    36.227037]el3_exit
->
-> but no output.  More details including full logs at:
->
-> 	https://kernelci.org/boot/id/5d6fe70059b514164ef1224d/
-> 	https://kernelci.org/boot/id/5d6fe6e259b514164ef12243/
+Thanks.
+Walter
 
-Bisected down to this commit[1], full bisect log here[2].  It didn't
-revert cleanly on top of next-20190904, so I didn't get any further.
-
-Kevin
-
-[1]
-419e2f1838819e954071dfa1d1f820ab3386ada1 is the first bad commit
-commit 419e2f1838819e954071dfa1d1f820ab3386ada1
-Author: Christoph Hellwig <hch@lst.de>
-Date:   Mon Aug 26 09:03:44 2019 +0200
-
-    dma-mapping: remove arch_dma_mmap_pgprot
-    
-    arch_dma_mmap_pgprot is used for two things:
-    
-     1) to override the "normal" uncached page attributes for mapping
-        memory coherent to devices that can't snoop the CPU caches
-     2) to provide the special DMA_ATTR_WRITE_COMBINE semantics on older
-        arm systems and some mips platforms
-    
-    Replace one with the pgprot_dmacoherent macro that is already provided
-    by arm and much simpler to use, and lift the DMA_ATTR_WRITE_COMBINE
-    handling to common code with an explicit arch opt-in.
-    
-    Signed-off-by: Christoph Hellwig <hch@lst.de>
-    Acked-by: Geert Uytterhoeven <geert@linux-m68k.org>     # m68k
-    Acked-by: Paul Burton <paul.burton@mips.com>            # mips
-
- arch/arm/Kconfig                   |  2 +-
- arch/arm/mm/dma-mapping.c          |  6 ------
- arch/arm64/Kconfig                 |  1 -
- arch/arm64/include/asm/pgtable.h   |  4 ++++
- arch/arm64/mm/dma-mapping.c        |  6 ------
- arch/m68k/Kconfig                  |  1 -
- arch/m68k/include/asm/pgtable_mm.h |  3 +++
- arch/m68k/kernel/dma.c             |  3 +--
- arch/mips/Kconfig                  |  2 +-
- arch/mips/mm/dma-noncoherent.c     |  8 --------
- include/linux/dma-noncoherent.h    | 13 +++++++++++--
- kernel/dma/Kconfig                 | 12 +++++++++---
- kernel/dma/mapping.c               |  8 +++++---
- 13 files changed, 35 insertions(+), 34 deletions(-)
-bisect run success
-
-[2]
-$ git bisect log
-git bisect start
-# bad: [35394d031b710e832849fca60d0f53b513f0c390] Add linux-next specific files for 20190904
-git bisect bad 35394d031b710e832849fca60d0f53b513f0c390
-# good: [089cf7f6ecb266b6a4164919a2e69bd2f938374a] Linux 5.3-rc7
-git bisect good 089cf7f6ecb266b6a4164919a2e69bd2f938374a
-# bad: [493424779be81b03fb4aca89cc05ba95e9fc0c31] Merge remote-tracking branch 'crypto/master'
-git bisect bad 493424779be81b03fb4aca89cc05ba95e9fc0c31
-# bad: [58a02f90fddfdc9e4dfbd6579ff788ffdc22afe4] Merge remote-tracking branch 'hid/for-next'
-git bisect bad 58a02f90fddfdc9e4dfbd6579ff788ffdc22afe4
-# bad: [27c3f6e1d84b47def9060fd481be92838d819a9b] Merge remote-tracking branch 'csky/linux-next'
-git bisect bad 27c3f6e1d84b47def9060fd481be92838d819a9b
-# good: [f119c164735d85f2a41d14503cb9933d219c539e] arm-soc: document merges
-git bisect good f119c164735d85f2a41d14503cb9933d219c539e
-# bad: [e87b432d6c45697defc03eb69261661060c85245] Merge remote-tracking branch 'actions/for-next'
-git bisect bad e87b432d6c45697defc03eb69261661060c85245
-# good: [1ab97157f64dadb44d029096c6a92305d6631ab2] Merge remote-tracking branch 'kbuild/for-next'
-git bisect good 1ab97157f64dadb44d029096c6a92305d6631ab2
-# good: [ac12cf85d682a2c1948210c65f7fb21ef01dd9f6] Merge branches 'for-next/52-bit-kva', 'for-next/cpu-topology', 'for-next/error-injection', 'for-next/perf', 'for-next/psci-cpuidle', 'for-next/rng', 'for-next/smpboot', 'for-next/tbi' and 'for-next/tlbi' into for-next/core
-git bisect good ac12cf85d682a2c1948210c65f7fb21ef01dd9f6
-# bad: [4934d349f6e5afc9345a44acb0daa3066594088a] Merge remote-tracking branch 'asm-generic/master'
-git bisect bad 4934d349f6e5afc9345a44acb0daa3066594088a
-# good: [5251a1c90f7f4e458dc3154920e09624311f54b6] Merge remote-tracking branch 'compiler-attributes/compiler-attributes'
-git bisect good 5251a1c90f7f4e458dc3154920e09624311f54b6
-# skip: [38c38cb73223218f6eedf485280917af1f8a0af2] mmc: queue: use bigger segments if DMA MAP layer can merge the segments
-git bisect skip 38c38cb73223218f6eedf485280917af1f8a0af2
-# bad: [419e2f1838819e954071dfa1d1f820ab3386ada1] dma-mapping: remove arch_dma_mmap_pgprot
-git bisect bad 419e2f1838819e954071dfa1d1f820ab3386ada1
-# good: [5518ea1ad2c0c7f38d067f621d9349e6a11c8879] unicore32: remove the unused pgprot_dmacoherent define
-git bisect good 5518ea1ad2c0c7f38d067f621d9349e6a11c8879
-# good: [b898e50f9f49f7d90f3bca94ac046145072034a2] arm-nommu: remove the unused pgprot_dmacoherent define
-git bisect good b898e50f9f49f7d90f3bca94ac046145072034a2
 
 _______________________________________________
 Linux-mediatek mailing list
