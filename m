@@ -2,85 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5186EA9CB6
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 10:16:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9A60FA9CBF
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 10:17:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=HCTIbLIj5Af/6jF1m96zXeHpQYIPJg7N/jvqPIIwl2M=; b=f4CppLYnXuHU+g
-	x4KoUD+OGyVd5/a03oeEHiDjpk/gNB8bKlNuqdPotNcCjRxL99q9MLm6jruyUIa5g8UlNAep91I8i
-	EE9Fuw75FbxbIOlUDWiBfzAREfYx0d+NGuaceJf1s6yOSI3xk6uLZml1K1kRoANwhqO9kAg0lV7dh
-	GPeQ9X1Ofv0uP/ezB8R8oxbtc5QvmN0nDPHMywZZjGgGDCuF8gu5qgE4CJo74a62TIxLNheaYmw7k
-	WcjPTq9x6akTr/Taq9Fma3jaWL/G82ZDU+MARWMqtuDMBOktJBgkA2Mv9xGomKL3nwf9nZ57J42le
-	uZf3uc4iQzA01GLMbTmA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=og16lS6HiCSJK8HxVI+3ytIJ08SjhF0QizrEN9AayvU=; b=huXDgvd+qz/XUS
+	/6Y38vX0TZe0EUcoBJsA5UJdLaXYuzfti/sTJJMSu5SQjX+KvrQ93obKXelDBLih8n+2uJHd8HSaH
+	L22uglY5Ze/sFXUXZVrqZny+l80wpn5Pe9Pc5szV1fiWI8Q8X/NBH0P+MpIARLdiBaT7U+Kq3crR7
+	Y/usjQe1QPqL7nQCbDndbiZ6A4uBEVVEpMxOp2OqNPV9yfpAkDW2Olq6UekAE7chCBoNQ9DHMAqXZ
+	uNaKdGaqQmkKkH7/QK1bRw69cuf1sMsm2lNXrNuOJjV/pUwp71zvG9CBTFSMh/2n7GonGQNNX1WT4
+	bvG8GR5FjZ8rJQ0aLUgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5mwF-0000mO-Mj; Thu, 05 Sep 2019 08:16:19 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1i5mx2-00015F-Ef; Thu, 05 Sep 2019 08:17:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5mwB-0000lI-PH
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 08:16:17 +0000
-Received: by mail-pf1-x443.google.com with SMTP id h195so1236050pfe.5
- for <linux-mediatek@lists.infradead.org>; Thu, 05 Sep 2019 01:16:15 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=9n12LoDC4iyQEQhSfvrYLmsN/jTJxbwGE2x1rInuHng=;
- b=mfvDNzvUA14ba5ndLu6rEnyLMfdTvutWp7jgl4Uz8Tj0KkXdvQ9mepDv3Q0JZLqj5g
- tdaPQnTm+CiDSzL/6duSkVkKy5bimCc2bgP+lFjNet2erbTdwN6NwrxDezk/NAZeDRft
- htSU/TxkBZT5c7zo/xpFicxxPFnpxtb3O1VGE=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=9n12LoDC4iyQEQhSfvrYLmsN/jTJxbwGE2x1rInuHng=;
- b=i0VURkzMOd+WlukLK6EoIa/4MPr7yN+mpzAwn8iRfqOOf1ZHD91gAKa5W2hUGXwQPo
- VFUkOhgwHbN8dNKFsn/mRTNxIklq783vd9+pAP/Q6s6UzRbtHeoILYuIcX17KHF8DbDG
- OX7CNzjZ9dvePImp3/am5x5Y0mmDs0QZcawDzQbNVADYTgBQi7Wk4ic7XLYLOM3uzs7c
- u1tvEr6EWs3vqS5tw0nSNLrpjEIycSMoQMthgSY0Oeekm4PF3NjhkyLzUrajXTOKrdWJ
- 4sSai4e76LCKNycyEFBU6pfqNayvez9mOnpP4PzoJIQ1kkEPKZ62JDVn4VQmKmhvobmv
- Qtnw==
-X-Gm-Message-State: APjAAAWtr9rTRPDMiBZjgMXCldW5lGyXDP2nKlLcY+mGBouoWP6mWST+
- nHrOm7UGzNMmIjvRbR7kv2U8Sg==
-X-Google-Smtp-Source: APXvYqxegqPyfGwrsPeKCe2Fc5b+coPbLD+CyOyetuPlandyNKc5R4rscY0tB/vIdMYg0qC49XRILQ==
-X-Received: by 2002:a63:6d8d:: with SMTP id i135mr2003284pgc.303.1567671374527; 
- Thu, 05 Sep 2019 01:16:14 -0700 (PDT)
-Received: from drinkcat2.tpe.corp.google.com
- ([2401:fa00:1:b:d8b7:33af:adcb:b648])
- by smtp.gmail.com with ESMTPSA id h186sm3490145pfb.63.2019.09.05.01.16.12
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 05 Sep 2019 01:16:13 -0700 (PDT)
-From: Nicolas Boichat <drinkcat@chromium.org>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH] arm64: dts: mt8183: Add node for the Mali GPU
-Date: Thu,  5 Sep 2019 16:15:46 +0800
-Message-Id: <20190905081546.42716-1-drinkcat@chromium.org>
-X-Mailer: git-send-email 2.23.0.187.g17f5b7556c-goog
+ id 1i5mwx-00014Z-Um; Thu, 05 Sep 2019 08:17:05 +0000
+X-UUID: 74f96004a09c473e9cf0163b7d408863-20190905
+X-UUID: 74f96004a09c473e9cf0163b7d408863-20190905
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <jerry-ch.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1751726865; Thu, 05 Sep 2019 00:17:00 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 01:16:58 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 16:16:56 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 5 Sep 2019 16:16:56 +0800
+Message-ID: <1567671418.22453.41.camel@mtksdccf07>
+Subject: Re: [RFC PATCH V2 4/4] platform: mtk-isp: Add Mediatek FD driver
+From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Thu, 5 Sep 2019 16:16:58 +0800
+In-Reply-To: <CAAFQd5A=D33nUWTyYjt3acV43r3fqjSEkLbt3_Sr1YG1PzQgqQ@mail.gmail.com>
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-5-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <20190802082815.GA203993@chromium.org>
+ <1566724680.20680.8.camel@mtksdccf07>
+ <CAAFQd5Dw+jaT-+LAUEVeB8W1zdnOgPw7u+aCfDWhYW1SfbzO8g@mail.gmail.com>
+ <1566957625.20680.33.camel@mtksdccf07>
+ <CAAFQd5D-Yg1FjUE_rwmqfS1gvfE0=MZ=r-ziueU_37-uo9QTbw@mail.gmail.com>
+ <1567424859.18318.32.camel@mtksdccf07>
+ <CAAFQd5AGgeFbto6V1KkL0dp1QPziOKV3pWQDU2OJ+S1QKvnBdg@mail.gmail.com>
+ <1567493081.18318.49.camel@mtksdccf07>
+ <CAAFQd5DWM=R7sFHYGhhR_rXrzgRnc4xtH_t8Pig-4tcP9KTSYg@mail.gmail.com>
+ <1567511169.18318.65.camel@mtksdccf07>
+ <CAAFQd5DiPcUxd+R-v_-BdRx+QqZ35Riii_jpgbqr5mc3BnQvDw@mail.gmail.com>
+ <1567568281.18318.80.camel@mtksdccf07>
+ <CAAFQd5CRC2cyV30B4Qv59HdrJ7Cpe_yK5aY-BecQQ3J3i0PtCQ@mail.gmail.com>
+ <1567577389.18318.100.camel@mtksdccf07>
+ <CAAFQd5AxTQPD+nP9CJs45QTzGHKssjv3vRtMqHONABfp12afYw@mail.gmail.com>
+ <1567584577.22453.11.camel@mtksdccf07>
+ <CAAFQd5Dzxy10g-MKHMnNbVO6kp9_L_jm1m+gtN+p=YF2LyBiag@mail.gmail.com>
+ <1567587708.22453.15.camel@mtksdccf07>
+ <CAAFQd5DWfEEiGthPi=qoxD-mpAWa68GOCi55mqpmagS-tsGYkA@mail.gmail.com>
+ <1567589188.22453.24.camel@mtksdccf07>
+ <CAAFQd5Ckz9qH7AnLNM4HRTM2gJQP1HXRS09+o6Prf++D1PQhng@mail.gmail.com>
+ <1567603143.22453.27.camel@mtksdccf07>
+ <1567666940.22453.31.camel@mtksdccf07>
+ <CAAFQd5A=D33nUWTyYjt3acV43r3fqjSEkLbt3_Sr1YG1PzQgqQ@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: B4F7B40E2029BA7CE2A4584363431432513F6F4AE98333EE70BFEFA13EF7A8482000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_011615_848015_B00AF9B3 
-X-CRM114-Status: GOOD (  11.54  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190905_011703_997906_C95514E8 
+X-CRM114-Status: GOOD (  27.30  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,187 +96,285 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org,
- Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>,
- Boris Brezillon <boris.brezillon@collabora.com>,
- Nick Fan <nick.fan@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
+ <Sean.Cheng@mediatek.com>, "laurent.pinchart+renesas@ideasonboard.com"
+ <laurent.pinchart+renesas@ideasonboard.com>,
+ Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
+ srv_heupstream <srv_heupstream@mediatek.com>,
+ Po-Yang Huang =?UTF-8?Q?=28=E9=BB=83=E6=9F=8F=E9=99=BD=29?=
+ <po-yang.huang@mediatek.com>, "mchehab@kernel.org" <mchehab@kernel.org>,
+ "suleiman@chromium.org" <suleiman@chromium.org>,
+ "shik@chromium.org" <shik@chromium.org>,
+ Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
+ <jungo.lin@mediatek.com>, Sj
+ Huang =?UTF-8?Q?=28=E9=BB=83=E4=BF=A1=E7=92=8B=29?= <sj.huang@mediatek.com>,
+ "yuzhao@chromium.org" <yuzhao@chromium.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "zwisler@chromium.org" <zwisler@chromium.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
+ <christie.yu@mediatek.com>,
+ Frederic Chen =?UTF-8?Q?=28=E9=99=B3=E4=BF=8A=E5=85=83=29?=
+ <Frederic.Chen@mediatek.com>,
+ "hans.verkuil@cisco.com" <hans.verkuil@cisco.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "linux-media@vger.kernel.org" <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add a basic GPU node and opp table for mt8183.
+Hi Tomasz,
 
-The binding we use with out-of-tree Mali drivers includes more
-clocks, I assume this would be required eventually if we have an
-in-tree driver:
-clocks =
-        <&topckgen CLK_TOP_MFGPLL_CK>,
-        <&topckgen CLK_TOP_MUX_MFG>,
-        <&clk26m>,
-        <&mfgcfg CLK_MFG_BG3D>;
-clock-names =
-        "clk_main_parent",
-        "clk_mux",
-        "clk_sub_parent",
-        "subsys_mfg_cg";
+On Thu, 2019-09-05 at 15:13 +0800, Tomasz Figa wrote:
+> On Thu, Sep 5, 2019 at 4:02 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> >
+> > Hi Tomasz,
+> >
+> > On Wed, 2019-09-04 at 21:19 +0800, Jerry-ch Chen wrote:
+> > > On Wed, 2019-09-04 at 21:12 +0800, Tomasz Figa wrote:
+> > > > On Wed, Sep 4, 2019 at 6:26 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > >
+> > > > > Hi Tomasz,
+> > > > >
+> > > > > On Wed, 2019-09-04 at 17:03 +0800, Tomasz Figa wrote:
+> > > > > > On Wed, Sep 4, 2019 at 6:02 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > >
+> > > > > > > Hi Tomasz,
+> > > > > > >
+> > > > > > > On Wed, 2019-09-04 at 16:25 +0800, Tomasz Figa wrote:
+> > > > > > > > On Wed, Sep 4, 2019 at 5:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > >
+> > > > > > > > > Hi Tomasz,
+> > > > > > > > >
+> > > > > > > > > On Wed, 2019-09-04 at 14:34 +0800, Tomasz Figa wrote:
+> > > > > > > > > > On Wed, Sep 4, 2019 at 3:09 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > >
+> > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > >
+> > > > > > > > > > > On Wed, 2019-09-04 at 12:15 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > On Wed, Sep 4, 2019 at 12:38 PM Jerry-ch Chen
+> > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > >
+> > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > >
+> > > > > > > > > > > > > On Tue, 2019-09-03 at 20:05 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > On Tue, Sep 3, 2019 at 8:46 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > On Tue, 2019-09-03 at 15:04 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > On Tue, Sep 3, 2019 at 3:44 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > On Tue, 2019-09-03 at 13:19 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > On Mon, Sep 2, 2019 at 8:47 PM Jerry-ch Chen <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > On Fri, 2019-08-30 at 16:33 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > > > On Wed, Aug 28, 2019 at 11:00 AM Jerry-ch Chen
+> > > > > > > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > On Mon, 2019-08-26 at 14:36 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > > > > > Hi Jerry,
+> > > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > > On Sun, Aug 25, 2019 at 6:18 PM Jerry-ch Chen
+> > > > > > > > > > > > > > > > > > > > > > <Jerry-ch.Chen@mediatek.com> wrote:
+> > > > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > > > Hi Tomasz,
+> > > > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > > > On Fri, 2019-08-02 at 16:28 +0800, Tomasz Figa wrote:
+> > > > > > > > > > > > > > > > > > > > > > > > Hi Jerry,
+> > > > > > > > > > > > > > > > > > > > > > > >
+> > > > > > > > > > > > > > > > > > > > > > > > On Tue, Jul 09, 2019 at 04:41:12PM +0800, Jerry-ch Chen wrote:
+> > > > > [snip]
+> > > > > > > > > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > > > > > > > > {
+> > > > > > > > >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > > > > > >         struct mtk_fd_dev *fd = ctx->fd_dev;
+> > > > > > > > >         struct vb2_v4l2_buffer *vb;
+> > > > > > > > >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+> > > > > > > > >         struct v4l2_m2m_queue_ctx *queue_ctx;
+> > > > > > > > >         u32 ret;
+> > > > > > > > >
+> > > > > > > > >         if (!fd->fd_irq_done.done)
+> > > > > > > >
+> > > > > > > > We shouldn't access internal fields of completion.
+> > > > > > > >
+> > > > > > > > >                 ret = wait_for_completion_timeout(&fd->fd_irq_done,
+> > > > > > > > >                                                   msecs_to_jiffies(
+> > > > > > > > >                                                         MTK_FD_HW_TIMEOUT));
+> > > > > > > > >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+> > > > > > > > >                                         &m2m_ctx->out_q_ctx :
+> > > > > > > > >                                         &m2m_ctx->cap_q_ctx;
+> > > > > > > > >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+> > > > > > > > >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+> > > > > > > > >
+> > > > > > > > >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+> > > > > > > > >                 mtk_fd_hw_disconnect(fd);
+> > > > > > > > > }
+> > > > > > > > >
+> > > > > > > > > I've also tried to wait completion unconditionally for both queues and
+> > > > > > > > > the second time will wait until timeout, as a result, it takes longer to
+> > > > > > > > > swap the camera every time and close the camera app.
+> > > > > > > >
+> > > > > > > > I think it should work better if we call complete_all() instead of complete().
+> > > > > > > >
+> > > > > > > Thanks,
+> > > > > > >
+> > > > > > > I use complete_all(), and it works fine now.
+> > > > > > >
+> > > > > > > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > > > > > > {
+> > > > > > >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> > > > > > >         struct mtk_fd_dev *fd = ctx->fd_dev;
+> > > > > > >         struct vb2_v4l2_buffer *vb;
+> > > > > > >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+> > > > > > >         struct v4l2_m2m_queue_ctx *queue_ctx;
+> > > > > > >
+> > > > > > >         wait_for_completion_timeout(&fd->fd_irq_done,
+> > > > > > >                                           msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
+> > > > > >
+> > > > > > Shouldn't we still send some command to the hardware to stop? Like a
+> > > > > > reset. Otherwise we don't know if it isn't still accessing the memory.
+> > > > > >
+> > > > > I thought no more jobs will be enqueued here when stop_streaming so we
+> > > > > don't need it.
+> > > >
+> > > > That's true for the case when the wait completed successfully, but we
+> > > > also need to ensure the hardware is stopped even if a timeout happens.
+> > > >
+> > > > > We still could send an ipi command to reset the HW, and wait for it's
+> > > > > callback or we could set the register MTK_FD_REG_OFFSET_HW_ENABLE to
+> > > > > zero to disable the HW.
+> > > >
+> > > > Since it's for handling a timeout, a reset should be more likely to
+> > > > bring the hardware back to a reasonable state.
+> > > >
+> > >
+> > > Ok, I will send the ipi command to reset the HW.
+> > >
+> > > Thanks and best regards,
+> > > Jerry
+> > I've tested and will refine as following:
+> >
+> > static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+> > {
+> >         struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+> >         struct mtk_fd_dev *fd = ctx->fd_dev;
+> >         struct vb2_v4l2_buffer *vb;
+> >         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+> >         struct v4l2_m2m_queue_ctx *queue_ctx;
+> >         u32 ret;
+> >
+> >         ret = wait_for_completion_timeout(&fd->fd_irq_done,
+> >                                           msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
+> >         /* Disable FD HW */
+> >         if(!ret) {
+> >                 struct ipi_message fd_ipi_msg;
+> >
+> >                 fd_ipi_msg.cmd_id = MTK_FD_IPI_CMD_RESET;
+> >                 ret = scp_ipi_send(fd->scp_pdev, SCP_IPI_FD_CMD, &fd_ipi_msg,
+> >                                    sizeof(fd_ipi_msg), MTK_FD_IPI_SEND_TIMEOUT);
+> >                 if (ret)
+> >                         dev_err(fd->dev, "FD Reset HW error\n");
+> >         }
+> 
+> Would you also put the same code in suspend handler? If so, perhaps
+> it's better to keep this in a helper function (mtk_fd_job_abort()) as
+> we had before?
+> 
 
-Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+Ok, done, It will reset the HW and return ETIMEOUT if the last job is
+timeout, the return value will be used in suspend for further action.
 
----
-Upstreaming what matches existing bindings from our Chromium OS tree:
-https://chromium.googlesource.com/chromiumos/third_party/kernel/+/chromeos-4.19/arch/arm64/boot/dts/mediatek/mt8183.dtsi#1348
+static int mtk_fd_job_abort(struct mtk_fd_dev *fd)
+{
+	u32 ret;
 
-The evb part of this change depends on this patch to add PMIC dtsi:
-https://patchwork.kernel.org/patch/10928161/
+	ret = wait_for_completion_timeout(&fd->fd_irq_done,
+					  msecs_to_jiffies(MTK_FD_HW_TIMEOUT));
+	/* Reset FD HW */
+	if (!ret) {
+		struct ipi_message fd_ipi_msg;
 
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts |   7 ++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 103 ++++++++++++++++++++
- 2 files changed, 110 insertions(+)
+		fd_ipi_msg.cmd_id = MTK_FD_IPI_CMD_RESET;
+		if (scp_ipi_send(fd->scp_pdev, SCP_IPI_FD_CMD, &fd_ipi_msg,
+				 sizeof(fd_ipi_msg), MTK_FD_IPI_SEND_TIMEOUT))
+			dev_err(fd->dev, "FD Reset HW error\n");
+		return -ETIMEDOUT;
+	}
+	return 0;
+}
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-index 1fb195c683c3d01..200d8e65a6368a1 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-@@ -7,6 +7,7 @@
- 
- /dts-v1/;
- #include "mt8183.dtsi"
-+#include "mt6358.dtsi"
- 
- / {
- 	model = "MediaTek MT8183 evaluation board";
-@@ -30,6 +31,12 @@
- 	status = "okay";
- };
- 
-+&gpu {
-+	supply-names = "mali", "mali_sram";
-+	mali-supply = <&mt6358_vgpu_reg>;
-+	mali_sram-supply = <&mt6358_vsram_gpu_reg>;
-+};
-+
- &i2c0 {
- 	pinctrl-names = "default";
- 	pinctrl-0 = <&i2c_pins_0>;
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 97f84aa9fc6e1c1..8ea548a762ea252 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -579,6 +579,109 @@
- 			#clock-cells = <1>;
- 		};
- 
-+		gpu: mali@13040000 {
-+			compatible = "mediatek,mt8183-mali", "arm,mali-bifrost";
-+			reg = <0 0x13040000 0 0x4000>;
-+			interrupts =
-+				<GIC_SPI 280 IRQ_TYPE_LEVEL_LOW>,
-+				<GIC_SPI 279 IRQ_TYPE_LEVEL_LOW>,
-+				<GIC_SPI 278 IRQ_TYPE_LEVEL_LOW>;
-+			interrupt-names = "job", "mmu", "gpu";
-+
-+			clocks = <&topckgen CLK_TOP_MFGPLL_CK>;
-+			power-domains =
-+				<&scpsys MT8183_POWER_DOMAIN_MFG_CORE0>,
-+				<&scpsys MT8183_POWER_DOMAIN_MFG_CORE1>,
-+				<&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-+
-+			operating-points-v2 = <&gpu_opp_table>;
-+		};
-+
-+		gpu_opp_table: opp_table0 {
-+			compatible = "operating-points-v2";
-+			opp-shared;
-+
-+			opp-300000000 {
-+				opp-hz = /bits/ 64 <300000000>;
-+				opp-microvolt = <625000>, <850000>;
-+			};
-+
-+			opp-320000000 {
-+				opp-hz = /bits/ 64 <320000000>;
-+				opp-microvolt = <631250>, <850000>;
-+			};
-+
-+			opp-340000000 {
-+				opp-hz = /bits/ 64 <340000000>;
-+				opp-microvolt = <637500>, <850000>;
-+			};
-+
-+			opp-360000000 {
-+				opp-hz = /bits/ 64 <360000000>;
-+				opp-microvolt = <643750>, <850000>;
-+			};
-+
-+			opp-380000000 {
-+				opp-hz = /bits/ 64 <380000000>;
-+				opp-microvolt = <650000>, <850000>;
-+			};
-+
-+			opp-400000000 {
-+				opp-hz = /bits/ 64 <400000000>;
-+				opp-microvolt = <656250>, <850000>;
-+			};
-+
-+			opp-420000000 {
-+				opp-hz = /bits/ 64 <420000000>;
-+				opp-microvolt = <662500>, <850000>;
-+			};
-+
-+			opp-460000000 {
-+				opp-hz = /bits/ 64 <460000000>;
-+				opp-microvolt = <675000>, <850000>;
-+			};
-+
-+			opp-500000000 {
-+				opp-hz = /bits/ 64 <500000000>;
-+				opp-microvolt = <687500>, <850000>;
-+			};
-+
-+			opp-540000000 {
-+				opp-hz = /bits/ 64 <540000000>;
-+				opp-microvolt = <700000>, <850000>;
-+			};
-+
-+			opp-580000000 {
-+				opp-hz = /bits/ 64 <580000000>;
-+				opp-microvolt = <712500>, <850000>;
-+			};
-+
-+			opp-620000000 {
-+				opp-hz = /bits/ 64 <620000000>;
-+				opp-microvolt = <725000>, <850000>;
-+			};
-+
-+			opp-653000000 {
-+				opp-hz = /bits/ 64 <653000000>;
-+				opp-microvolt = <743750>, <850000>;
-+			};
-+
-+			opp-698000000 {
-+				opp-hz = /bits/ 64 <698000000>;
-+				opp-microvolt = <768750>, <868750>;
-+			};
-+
-+			opp-743000000 {
-+				opp-hz = /bits/ 64 <743000000>;
-+				opp-microvolt = <793750>, <893750>;
-+			};
-+
-+			opp-800000000 {
-+				opp-hz = /bits/ 64 <800000000>;
-+				opp-microvolt = <825000>, <925000>;
-+			};
-+		};
-+
- 		mmsys: syscon@14000000 {
- 			compatible = "mediatek,mt8183-mmsys", "syscon";
- 			reg = <0 0x14000000 0 0x1000>;
--- 
-2.23.0.187.g17f5b7556c-goog
+static void mtk_fd_vb2_stop_streaming(struct vb2_queue *vq)
+{
+	struct mtk_fd_ctx *ctx = vb2_get_drv_priv(vq);
+	struct mtk_fd_dev *fd = ctx->fd_dev;
+	struct vb2_v4l2_buffer *vb;
+	struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+	struct v4l2_m2m_queue_ctx *queue_ctx;
+
+	mtk_fd_job_abort(fd);
+	queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+					&m2m_ctx->out_q_ctx :
+					&m2m_ctx->cap_q_ctx;
+	while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+		v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+
+	if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+		mtk_fd_hw_disconnect(fd);
+}
+
+static int mtk_fd_suspend(struct device *dev)
+{
+	struct mtk_fd_dev *fd = dev_get_drvdata(dev);
+
+	if (pm_runtime_suspended(dev))
+		return 0;
+
+	if (fd->fd_stream_count)
+		if (mtk_fd_job_abort(fd))
+			mtk_fd_hw_job_finish(fd, VB2_BUF_STATE_ERROR);
+
+	/* suspend FD HW */
+	writel(0x0, fd->fd_base + MTK_FD_REG_OFFSET_INT_EN);
+	writel(0x0, fd->fd_base + MTK_FD_REG_OFFSET_HW_ENABLE);
+	clk_disable_unprepare(fd->fd_clk);
+	dev_dbg(dev, "%s:disable clock\n", __func__);
+
+	return 0;
+}
+
+> >         queue_ctx = V4L2_TYPE_IS_OUTPUT(vq->type) ?
+> >                                         &m2m_ctx->out_q_ctx :
+> >                                         &m2m_ctx->cap_q_ctx;
+> >         while ((vb = v4l2_m2m_buf_remove(queue_ctx)))
+> >                 v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
+> >
+> >         if (vq->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+> >                 mtk_fd_hw_disconnect(fd);
+> > }
+> >
+> > If there is no other concern, may I send the RFC v3 patch for review?
+> 
+> Thanks, technically it looks good now. Just one comment about avoiding
+> code duplication above.
+> 
+
+Thanks, 
+
+I will send the v3 if the above fix-up is accepted,
+
+Best regards,
+Jerry
+
+> Best regards,
+> Tomasz
+
 
 
 _______________________________________________
