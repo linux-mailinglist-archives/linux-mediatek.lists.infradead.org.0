@@ -2,71 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 56FE8A98E1
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 05:27:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2EE33A99BD
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 06:45:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PfKE85ZJsKRS8QZ5fdHrSQeRJbXdCnYaaWd0D2xBcFo=; b=hxgExFC9qAavHn
-	4Q5WmxQtxd0yQrt+h4KJTt2Bk9R5iOB2/ceZBoqMKYyIT27iONAL+FocmUBetiMW6kGp3SmJITe10
-	N5poh7lVdz+8MparwGRrzYexyMCWiqqnx2df+62DJ0D1FLVJk8jP+ewfQtAnEe/zMTJXP03TxgCm/
-	TwSvHwd8hN/Wb5mRLt/wUxxyv2XkzjUJvWXkxEVdl64wDjvELALBRevaDi2oL+bnbDYASIPlssLVO
-	zXsQVjiH++/DT4GCBAVaOuPuqLIChtkV5eYzHLKbX03gkBLr3lBpetE0eNr7hIJt0dpG44rc62ZnS
-	+McxiYBtKd+5+N3dBHOQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=RwvrK+Ff8zMp61bGS5ugQ5tKlWYBEP/x1NzrCJdDHiA=; b=C2nOhJZ0fRXsqK
+	WWsOPS2Hxbp2UTZzt0f0WqRCt7ntKNOrg0jdVhUUkTo4Zdcxp8KS00jbGHpBa/+P8zk8wDdy0be3w
+	Zu3ZjX98aoQ3dGT79SKrXPqU5npMvbEgx/lcTDZPz6EdrJGQrtCoYjY6eFRLXd5+sE7WF4dvjawm4
+	C3HaYAU6yA5ppFxFeo7HzjqAcm2Wvx27deVXlg7WMUSTaXusoMJc3S0uIJb2lPHMUYiyGfpy75+53
+	rSxLnT0ybwtI8FZlkMsk8pyLWhG0Xz2oJO5HTHOdeFdczBj39McrOukaR8vgZ5ZB284GM4zeehDP9
+	I6AOqC3dlKDS8JKuiI+A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5iQy-0000xp-QE; Thu, 05 Sep 2019 03:27:44 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i5jeV-0004WX-4u; Thu, 05 Sep 2019 04:45:47 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5iQu-0000wd-Vc
- for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 03:27:42 +0000
-X-UUID: cf5434c5a9824a5d9ad489e67c975221-20190904
-X-UUID: cf5434c5a9824a5d9ad489e67c975221-20190904
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <sam.shih@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1706084242; Wed, 04 Sep 2019 19:27:32 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 4 Sep 2019 20:27:30 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 11:27:30 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 5 Sep 2019 11:27:28 +0800
-Message-ID: <1567654050.23074.38.camel@mtksdccf07>
-Subject: Re: [PATCH v5 07/13] dt-bindings: pwm: add a property "num-pwms"
-From: Sam Shih <sam.shih@mediatek.com>
-To: Uwe =?ISO-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>, "Rob
- Herring" <robh@kernel.org>
-Date: Thu, 5 Sep 2019 11:27:30 +0800
-In-Reply-To: <20190902160445.fitoa65t4ndzjq6v@pengutronix.de>
-References: <1566457123-20791-1-git-send-email-sam.shih@mediatek.com>
- <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
- <20190827183924.GA24178@bogus>
- <20190902160445.fitoa65t4ndzjq6v@pengutronix.de>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i5jdf-0002cn-MP
+ for linux-mediatek@lists.infradead.org; Thu, 05 Sep 2019 04:44:59 +0000
+Received: by mail-pf1-x442.google.com with SMTP id h195so888697pfe.5
+ for <linux-mediatek@lists.infradead.org>; Wed, 04 Sep 2019 21:44:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=MHHG3Lo/4p8NRRLjH90P9Fc/9E/hHluDRrybX3s47T8=;
+ b=mBtvSrV/hvW+kAUjaWUtE0Hq8wSKfX79B+JpT6jue83kEsxbrD7Yjd4QDKh6t2ueja
+ 5a3jljwNITKJOnA/B2gIRA2bGirzXcTM/3NvoRHfu4SgMfiHe1ozuAcFbuZYL8mh2h2X
+ PL40YyWROj65aoVb7H1o7h7FD83+c/28xySHA=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=MHHG3Lo/4p8NRRLjH90P9Fc/9E/hHluDRrybX3s47T8=;
+ b=cA9cbC5QkD1XRzovrSWHIi30ApuG8+/87yt1Wrsix+Dp3TtK3stQH4pWNPKSGJFsDb
+ idm/OWv6+9cz1tFGIKhtrK/vlWJaLxDY1lW5emzbTNWAhjm9lUFGAKIFIw7u9xaI7ZQN
+ brWBw/RVr9UhwOZP88meLe4tJQb4dEFGzPLxRLqFptDkzfiFcAOi8wuQiZ+qcizUJoVr
+ YvxWoxh7v/kXz7OSBkAjMhbV1mKwlDuFg9J9RrAicAYqCtX+Ct7k8R0srS5mxg1Aaw59
+ C6rw6ykKpo8mWgVhZCHPZ/4kv1LEwQGGud9Mi8/9qktBnBNTmjwCr3k/siuRQjfyYKi+
+ jQxw==
+X-Gm-Message-State: APjAAAXmBtLttJMc5kTOOhpOVDe67aNIxhGs0rdNGV6iqU5tZ/srH8GW
+ sCJ0GnFW9jXeXRNPydDXqPAfww==
+X-Google-Smtp-Source: APXvYqyG9UWVGP/6qz+rDVRu905vwAja1s3XlnXfB9mNuMyUxWdvKYp0pSfUjRJR10n8+vixlqGzUw==
+X-Received: by 2002:a17:90a:37c9:: with SMTP id
+ v67mr1774670pjb.29.1567658689411; 
+ Wed, 04 Sep 2019 21:44:49 -0700 (PDT)
+Received: from pihsun-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:7889:7a43:f899:134c])
+ by smtp.googlemail.com with ESMTPSA id v22sm602272pgk.69.2019.09.04.21.44.47
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 04 Sep 2019 21:44:48 -0700 (PDT)
+From: Pi-Hsun Shih <pihsun@chromium.org>
+To: 
+Subject: [PATCH v18 0/5] Add support for mt8183 SCP.
+Date: Thu,  5 Sep 2019 12:44:21 +0800
+Message-Id: <20190905044432.150131-1-pihsun@chromium.org>
+X-Mailer: git-send-email 2.23.0.187.g17f5b7556c-goog
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F4EEF144BCC51E8C6B7272CD2260074CD95FDFA362855DF08FFFF6DA4DBF7AF12000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_202741_025703_80CC8528 
-X-CRM114-Status: GOOD (  22.96  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190904_214455_743608_115EC456 
+X-CRM114-Status: GOOD (  16.69  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,114 +93,161 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org, Ryder
- Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Content-Type: text/plain; charset="iso-8859-15"
-Content-Transfer-Encoding: quoted-printable
+Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>,
+ "open list:REMOTE PROCESSOR REMOTEPROC SUBSYSTEM"
+ <linux-remoteproc@vger.kernel.org>, open list <linux-kernel@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Pi-Hsun Shih <pihsun@chromium.org>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-09-02 at 18:04 +0200, Uwe Kleine-K=F6nig wrote:
-> On Tue, Aug 27, 2019 at 01:39:24PM -0500, Rob Herring wrote:
-> > On Thu, Aug 22, 2019 at 02:58:37PM +0800, Sam Shih wrote:
-> > > From: Ryder Lee <ryder.lee@mediatek.com>
-> > =
+Add support for controlling and communicating with mt8183's system
+control processor (SCP), using the remoteproc & rpmsg framework.
+And also add a cros_ec driver for CrOS EC host command over rpmsg.
 
-> > The subject should indicate this is for Mediatek.
-> > =
+The overall structure of the series is:
+* remoteproc/mtk_scp.c: Control the start / stop of SCP (Patch 2, 3).
+* remoteproc/mtk_scp_ipi.c: Communicates to SCP using inter-processor
+  interrupt (IPI) and shared memory (Patch 2, 3).
+* rpmsg/mtk_rpmsg.c: Wrapper to wrap the IPI communication into a rpmsg
+  device. Supports name service for SCP firmware to
+  announce channels (Patch 4).
+* add scp dts node to mt8183 platform (Patch 5).
 
-> > > =
+Changes from v17:
+ - Fix mixture use of __iomem found by sparse.
+ - Change the ipi handler to take a u32 instead of enum scp_ipi_id.
+ - Mark mtk_rpmsg_{prepare,unprepare,stop} as static.
 
-> > > This adds a property "num-pwms" in example so that we could
-> > > specify the number of PWM channels via device tree.
-> > > =
+Changes from v16:
+ - Change the desc_lock mutex to be a per-id lock.
+ - Put the execution of handler inside the per-id lock, to prevent race
+   between scp_ipi_unregister and handler being run.
+ - Move the initialization of mutex to before scp_ipi_register.
 
-> > > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> > > Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-> > > Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-> > > Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
-> > > ---
-> > > Changes since v5:
-> > > - Add an Acked-by tag
-> > > - This file is original v4 patch 5/10
-> > > (https://patchwork.kernel.org/patch/11102577/)
-> > > =
+Changes from v15:
+ - Fix a bug on incorrect usage of wait_event_timeout return value.
 
-> > > Change-Id: I429048afeffa96f3f14533910efe242f88776043
-> > > ---
-> > >  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
-> > >  1 file changed, 4 insertions(+), 3 deletions(-)
-> > > =
+Changes from v14:
+ - Fix a typo on variable in DEBUG section.
 
-> > > diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b=
-/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> > > index 991728cb46cb..ea95b490a913 100644
-> > > --- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> > > +++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-> > > @@ -14,12 +14,12 @@ Required properties:
-> > >                  has no clocks
-> > >     - "top": the top clock generator
-> > >     - "main": clock used by the PWM core
-> > > -   - "pwm1-8": the eight per PWM clocks for mt2712
-> > > -   - "pwm1-6": the six per PWM clocks for mt7622
-> > > -   - "pwm1-5": the five per PWM clocks for mt7623
-> > > +   - "pwm1-N": the PWM clocks for each channel
-> > > +   where N starting from 1 to the maximum number of PWM channels
-> > =
+Changes from v13:
+ - Move include/linux/platform_data/mtk_scp.h to
+   include/linux/remoteproc/mtk_scp.h.
+ - Rename scp_get_reserve_* to scp_get_reserved_*.
+ - Add lock for access of scp->ipi_desc.
+ - Lock the whole ipi_send function.
+ - Move more setting of cache size from SCP firmware to kernel driver,
+   to prevent problem while loading firmware onto DRAM.
+ - Minor fixes addressing comment.
 
-> > Once converted to schema, you are going to be back to listing them out.
-> > =
+Changes from v12:
+ - Initialize cache before firmware load, to avoid problem while loading
+   large firmware.
+ - Disable watchdog before stopping SCP, to avoid extra warning message.
+ - Fix new warnings by checkpatch.
 
-> > >   - pinctrl-names: Must contain a "default" entry.
-> > >   - pinctrl-0: One property must exist for each entry in pinctrl-name=
-s.
-> > >     See pinctrl/pinctrl-bindings.txt for details of the property valu=
-es.
-> > > + - num-pwms: the number of PWM channels.
-> > =
+Changes from v11:
+ - Fixed a bug that mtk_rpmsg_endpoint is not properly cleaned up if
+   rproc_boot fails.
+ - Add missing documentation in comment.
 
-> > You can't add new required properties without breaking compatibility. =
+Changes from v10:
+ - Drop applied cros_ec_rpmsg patches.
+ - Add clock reset before loading SCP firmware.
+ - Fix some type mismatch warnings when printing debug messages.
 
-> > =
+Changes from v9:
+ - Remove reserve-memory-vpu_share node.
+ - Remove change to cros_ec_commands.h (That is already in
+   https://lore.kernel.org/lkml/20190518063949.GY4319@dell/T/)
 
-> > You already have to imply the number of channels from the compatible (o=
-r =
+Changes from v8:
+ - Rebased onto https://patchwork.kernel.org/cover/10962385/.
+ - Drop merged cros_ec_rpmsg patch, and add scp dts node patch.
+ - Add more reserved memory region.
 
-> > number of clocks) and you have to keep doing so to maintain =
+Changes from v7:
+ - Rebase onto https://lore.kernel.org/patchwork/patch/1059196/.
+ - Fix clock enable/disable timing for SCP driver.
+ - Add more SCP IPI ID.
 
-> > compatibility, so why not just keep doing that for new chips?
-> =
+Changes from v6:
+ - Decouple mtk_rpmsg from mtk_scp.
+ - Change data of EC response to be aligned to 4 bytes.
 
-> This was a suggestion by me. The driver still handles compatibility
-> (i.e. falls back to the number of PWMs that was implied by the
-> compatible before). Given that there are various drivers that all solve
-> the same problem (i.e. different variants with different number of PWMs)
-> I thought it would be a good idea to introduce a property in the device
-> tree that specifies this number.
-> Only for newly introduced compatibles the num-pwms property is really
-> required. Differentiating the ones that need it and the ones that don't
-> seems over-engineered to me.
+Changes from v5:
+ - Add device tree binding document for cros_ec_rpmsg.
+ - Better document in comments for cros_ec_rpmsg.
+ - Remove dependency on CONFIG_ in binding tree document.
 
-I'm fine with both.
+Changes from v4:
+ - Merge patch 6 (Load ELF firmware) into patch 2, so the driver loads
+   ELF firmware by default, and no longer accept plain binary.
+ - rpmsg_device listed in device tree (as a child of the SCP node) would
+   have it's device tree node mapped to the rpmsg_device, so the rpmsg
+   driver can use the properties on device tree.
 
-num-pwms and pwm1-N is required properties for new chip, but it still
-have backward compatibility for old dt without num-pwms properties.
+Changes from v3:
+ - Make writing to SCP SRAM aligned.
+ - Add a new patch (Patch 6) to load ELF instead of bin firmware.
+ - Add host event support for EC driver.
+ - Fix some bugs found in testing (missing spin_lock_init,
+   rproc_subdev_unprepare to rproc_subdev_stop).
+ - Fix some coding style issue found by checkpatch.pl.
 
+Changes from v2:
+ - Fold patch 3 into patch 2 in v2.
+ - Move IPI id around to support cross-testing for old and new firmware.
+ - Finish more TODO items.
 
-> (BTW, using the number of clks doesn't really work because there are
-> also some variants without clocks. It is still under discussion if in
-> this case dummy-clocks should be provided IIRC.)
+Changes from v1:
+ - Extract functions and rename variables in mtk_scp.c.
+ - Do cleanup properly in mtk_rpmsg.c, which also removes the problem of
+   short-lived work items.
+ - Code format fix based on feedback for cros_ec_rpmsg.c.
+ - Extract feature detection for SCP into separate patch (Patch 6).
 
-Yes, the dummy-clocks of "top", "main" is needed in old MIPS dt.
-We also need fixed-clock for period calculation.
+Eddie Huang (1):
+  arm64: dts: mt8183: add scp node
 
+Erin Lo (3):
+  dt-bindings: Add a binding for Mediatek SCP
+  remoteproc/mediatek: add SCP support for mt8183
+  remoteproc: mt8183: add reserved memory manager API
 
+Pi-Hsun Shih (1):
+  rpmsg: add rpmsg support for mt8183 SCP.
 
-Best Regards,
-Sam
+ .../bindings/remoteproc/mtk,scp.txt           |  36 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |  11 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  12 +
+ drivers/remoteproc/Kconfig                    |  10 +
+ drivers/remoteproc/Makefile                   |   1 +
+ drivers/remoteproc/mtk_common.h               |  94 +++
+ drivers/remoteproc/mtk_scp.c                  | 723 ++++++++++++++++++
+ drivers/remoteproc/mtk_scp_ipi.c              | 176 +++++
+ drivers/rpmsg/Kconfig                         |   9 +
+ drivers/rpmsg/Makefile                        |   1 +
+ drivers/rpmsg/mtk_rpmsg.c                     | 414 ++++++++++
+ include/linux/remoteproc/mtk_scp.h            | 168 ++++
+ include/linux/rpmsg/mtk_rpmsg.h               |  38 +
+ 13 files changed, 1693 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/remoteproc/mtk,scp.txt
+ create mode 100644 drivers/remoteproc/mtk_common.h
+ create mode 100644 drivers/remoteproc/mtk_scp.c
+ create mode 100644 drivers/remoteproc/mtk_scp_ipi.c
+ create mode 100644 drivers/rpmsg/mtk_rpmsg.c
+ create mode 100644 include/linux/remoteproc/mtk_scp.h
+ create mode 100644 include/linux/rpmsg/mtk_rpmsg.h
+
+-- 
+2.23.0.187.g17f5b7556c-goog
 
 
 _______________________________________________
