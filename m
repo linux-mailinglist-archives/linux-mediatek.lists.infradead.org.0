@@ -2,62 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A341A9B8A
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 09:17:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE241A9BA8
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 09:22:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=y8JBE3MQg+arzGY2FSsp3LKERXd6bxDaS5JT1nbY/Rk=; b=UNuKNPyO0chfYN
-	wxUDDFshu/ytmREHR1otnpO1DXl7LtMAwiOr3nBRY8kdFZt0PTxa8aBlr9Sl+tuGhz7fMo1IDV096
-	4tY7Sy/V7eyYuMAAyjGBbIiBYlW4VSKOrrX2snYYXRgZNs6WysQ7QFZQUX8D1ejJA0A+HSCeRDAtf
-	evmqBbwNgoog8zL0hK8eyQQVM5g9Lvpp5DA5cv/h4FShJl2WwLIf7EwDm9YHN3j4PnWIHgmqA98HA
-	YMfbn0N2Y2xntMO/slb3gT7h5tq29kbheymeVfWjuwkfDyTBU5oBCDmxyV/OxkyD9f+7c2bFx8CVY
-	SSJ41P6JbVtMB5UVXXPw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=lYbcDREHsoL3u1eWMCWcYVBRIQY3k1W3PV6LxHyfxlE=; b=MrUSoVt3vHMnrS
+	WEECcYi6gVReBDNbENR2M+SbVFyGIRL8VXIff8GTPk/fb87KtKjhkJGAjcWb/OJe+W9Ovww8elrlk
+	NFI45SMlhjICO3EvPsJZoa2a5shIWNq3+E1/m8aORjbIDLLmeVWbeX1iSMLeuz+b9D2I+D1FvGUg0
+	QUO509vtE3wfklbIAtC68RDaC6JK91YpER7cDVAOPUdTZ5BaihMThIzE1aX5+nwsVfNVl283Vust6
+	p6GpLl7K/Cc67KzSW8paYapEKs0Rp8VIpaaDxGBJ6DVZmhloSeqzziiCvEr+5cNMhMBRw0gNj73Xo
+	9J7HTxvPstM2YxN+1iXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5m1N-0008C6-UU; Thu, 05 Sep 2019 07:17:34 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i5m5n-0001ra-Cg; Thu, 05 Sep 2019 07:22:07 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5m16-00080I-KE; Thu, 05 Sep 2019 07:17:18 +0000
-X-UUID: 24f04dc02d1b4ebb92b98bfba1d12643-20190904
-X-UUID: 24f04dc02d1b4ebb92b98bfba1d12643-20190904
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1i5m5i-0001pG-63; Thu, 05 Sep 2019 07:22:03 +0000
+X-UUID: fb99889b985e4c598737398ac79eb3d4-20190904
+X-UUID: fb99889b985e4c598737398ac79eb3d4-20190904
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1293075661; Wed, 04 Sep 2019 23:17:04 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 00:17:03 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 15:17:00 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ with ESMTP id 1271784923; Wed, 04 Sep 2019 23:21:50 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 00:21:48 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 15:21:47 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 5 Sep 2019 15:17:00 +0800
-Message-ID: <1567667821.13819.4.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 32/32] drm/mediatek: add support for mediatek SOC
- MT8183
-From: CK Hu <ck.hu@mediatek.com>
-To: <yongqiang.niu@mediatek.com>
-Date: Thu, 5 Sep 2019 15:17:01 +0800
-In-Reply-To: <1567090254-15566-33-git-send-email-yongqiang.niu@mediatek.com>
-References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-33-git-send-email-yongqiang.niu@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Thu, 5 Sep 2019 15:21:46 +0800
+From: <dongchun.zhu@mediatek.com>
+To: <mchehab@kernel.org>, <andriy.shevchenko@linux.intel.com>,
+ <robh+dt@kernel.org>, <mark.rutland@arm.com>, <sakari.ailus@linux.intel.com>, 
+ <drinkcat@chromium.org>, <tfiga@chromium.org>, <matthias.bgg@gmail.com>,
+ <bingbu.cao@intel.com>
+Subject: [V2, 0/2] media: i2c: add support for DW9768 VCM driver
+Date: Thu, 5 Sep 2019 15:21:40 +0800
+Message-ID: <20190905072142.14606-1-dongchun.zhu@mediatek.com>
+X-Mailer: git-send-email 2.9.2
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: A078703D18D9193C9F0C35DE28409BAA8C2142B2EC58B78B2141B9C80BE227792000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_001716_673078_B9CF0AE3 
-X-CRM114-Status: GOOD (  18.98  )
+X-CRM114-CacheID: sfid-20190905_002202_230768_6704779E 
+X-CRM114-Status: UNSURE (   8.02  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -73,125 +74,62 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ shengnan.wang@mediatek.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, dongchun.zhu@mediatek.com,
+ sam.hung@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Yongqiang:
+From: Dongchun Zhu <dongchun.zhu@mediatek.com>
 
-On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
-> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> 
-> This patch add support for mediatek SOC MT8183
-> 1.ovl_2l share driver with ovl
-> 2.rdma1 share drive with rdma0, but fifo size is different
-> 3.add mt8183 mutex private data, and mmsys private data
-> 4.add mt8183 main and external path module for crtc create
-> 
-> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_disp_ovl.c  | 18 +++++++++
->  drivers/gpu/drm/mediatek/mtk_disp_rdma.c | 27 ++++++++++++-
->  drivers/gpu/drm/mediatek/mtk_drm_ddp.c   | 69 ++++++++++++++++++++++++++++++++
->  drivers/gpu/drm/mediatek/mtk_drm_ddp.h   |  1 +
->  drivers/gpu/drm/mediatek/mtk_drm_drv.c   | 47 ++++++++++++++++++++++
->  5 files changed, 161 insertions(+), 1 deletion(-)
-> 
+Hello,
 
-[snip]
+Add a v4l2 sub-device driver for Dongwoon's DW9768 lens voice coil.
+This is a voice coil module using the i2c bus to control the focus position.
 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_disp_rdma.c b/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> index 9a6f0a2..24945fe 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> @@ -62,6 +62,7 @@ struct mtk_disp_rdma {
->  	struct mtk_ddp_comp		ddp_comp;
->  	struct drm_crtc			*crtc;
->  	const struct mtk_disp_rdma_data	*data;
-> +	u32				fifo_size;
->  };
->  
->  static inline struct mtk_disp_rdma *comp_to_rdma(struct mtk_ddp_comp *comp)
-> @@ -130,10 +131,16 @@ static void mtk_rdma_config(struct mtk_ddp_comp *comp, unsigned int width,
->  	unsigned int threshold;
->  	unsigned int reg;
->  	struct mtk_disp_rdma *rdma = comp_to_rdma(comp);
-> +	u32 rdma_fifo_size;
->  
->  	rdma_update_bits(comp, DISP_REG_RDMA_SIZE_CON_0, 0xfff, width);
->  	rdma_update_bits(comp, DISP_REG_RDMA_SIZE_CON_1, 0xfffff, height);
->  
-> +	if (rdma->fifo_size)
-> +		rdma_fifo_size = rdma->fifo_size;
-> +	else
-> +		rdma_fifo_size = RDMA_FIFO_SIZE(rdma);
+The DW9768 can control the position with 10 bits value and
+consists of two 8 bit registers show as below.
+register 0x04(DW9768_REG_POSITION):
+     +---+---+---+---+---+---+---+---+
+     |D07|D06|D05|D04|D03|D02|D01|D00|
+     +---+---+---+---+---+---+---+---+
+register 0x03:
+     +---+---+---+---+---+---+---+---+
+     |---|---|---|---|---|---|D09|D08|
+     +---+---+---+---+---+---+---+---+
 
-I think the fifo size part should be an independent patch because it has
-no strong relation with MT8183.
+This driver supports:
+ - set DW9768 to standby mode once suspend and turn it back to active if resume
+ - set the position via V4L2_CID_FOCUS_ABSOLUTE ctrl
 
-> +
->  	/*
->  	 * Enable FIFO underflow since DSI and DPI can't be blocked.
->  	 * Keep the FIFO pseudo size reset default of 8 KiB. Set the
-> @@ -142,7 +149,7 @@ static void mtk_rdma_config(struct mtk_ddp_comp *comp, unsigned int width,
->  	 */
->  	threshold = width * height * vrefresh * 4 * 7 / 1000000;
->  	reg = RDMA_FIFO_UNDERFLOW_EN |
-> -	      RDMA_FIFO_PSEUDO_SIZE(RDMA_FIFO_SIZE(rdma)) |
-> +	      RDMA_FIFO_PSEUDO_SIZE(rdma_fifo_size) |
->  	      RDMA_OUTPUT_VALID_FIFO_THRESHOLD(threshold);
->  	writel(reg, comp->regs + DISP_REG_RDMA_FIFO_CON);
->  }
-> @@ -284,6 +291,18 @@ static int mtk_disp_rdma_probe(struct platform_device *pdev)
->  		return comp_id;
->  	}
->  
-> +	if (of_find_property(dev->of_node, "mediatek,rdma_fifo_size", &ret)) {
-> +		ret = of_property_read_u32(dev->of_node,
-> +					   "mediatek,rdma_fifo_size",
-> +					   &priv->fifo_size);
-> +		if (ret) {
-> +			dev_err(dev, "Failed to get rdma fifo size\n");
-> +			return ret;
-> +		}
-> +
-> +		priv->fifo_size *= SZ_1K;
-> +	}
-> +
->  	ret = mtk_ddp_comp_init(dev, dev->of_node, &priv->ddp_comp, comp_id,
->  				&mtk_disp_rdma_funcs);
->  	if (ret) {
-> @@ -328,11 +347,17 @@ static int mtk_disp_rdma_remove(struct platform_device *pdev)
->  	.fifo_size = SZ_8K,
->  };
->  
+Mainly changes of v2 are addressing the comments from Tomasz, Bingbu, Andy,
+including,
+ - Use i2c_smbus_write_byte_data/i2c_smbus_write_block_data to write I2C register
+ - Adopt the runtime PM suspend/resume callbacks to powering off/on
+ - Check the PM runtime status before powering off in dw9768_remove function
+ - Add one more regulator vin for the I2C interface
+ - Remove or refine redundant log print
+ - Fix other reviewed issues in v1
 
-[snip]
+Dongchun Zhu (2):
+  media: i2c: dw9768: Add DT support and MAINTAINERS entry
+  media: i2c: Add DW9768 VCM driver
 
-> @@ -514,6 +558,7 @@ static int mtk_drm_probe(struct platform_device *pdev)
->  		 */
->  		if (comp_type == MTK_DISP_COLOR ||
->  		    comp_type == MTK_DISP_OVL ||
-> +		    comp_type == MTK_DISP_OVL_2L ||
+ .../bindings/media/i2c/dongwoon,dw9768.txt         |   9 +
+ MAINTAINERS                                        |   8 +
+ drivers/media/i2c/Kconfig                          |  10 +
+ drivers/media/i2c/Makefile                         |   1 +
+ drivers/media/i2c/dw9768.c                         | 349 +++++++++++++++++++++
+ 5 files changed, 377 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.txt
+ create mode 100644 drivers/media/i2c/dw9768.c
 
-I think this should be squashed into "[v5,15/32] drm/mediatek: add
-commponent OVL_2L0'.
-
-Regards,
-CK
-
->  		    comp_type == MTK_DISP_RDMA ||
->  		    comp_type == MTK_DSI ||
->  		    comp_type == MTK_DPI) {
- 
-
+-- 
+2.9.2
 
 
 _______________________________________________
