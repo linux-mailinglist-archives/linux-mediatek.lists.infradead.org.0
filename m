@@ -2,69 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 89F69AA30F
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 14:25:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2C844AA33A
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Sep 2019 14:31:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HzM5o/i45nzWfhdxhHeHUt9wPcGWWbg5XZ5H1wumygw=; b=PyBbef9Ob6KjHm
-	pi6Xfk5akvdhgci0/tPr5Z5KRSkEvyngMMveAaaT1IfC4Zf+1i9PzOdTOAHbrPTKkXx/E/KeJDCVd
-	h0ZgJDfFyy1BENa0nBIDvkSxBeloB4Si7DeaAydAlkqEpRopnylMXTq1qeJzY7JV8BSDRUKONmn6t
-	7q3C2ybxrCcCYKruK6bJUEJAIwHJ2wwD8Ch2StOcg3fhm5Zivs8rdeploLMo0UKGV8ypCY290tDc8
-	74/V3NFExICFZdZTJlk4Uhhs4Di0oTv0iFfF16urbKXe6ReuC1ZmMahGjDMB2hyKNG0arnNoZKXsA
-	hvmcNS5ZgxfbcTPCQoBQ==;
+	List-Owner; bh=/L9EG1zA9xBs8yiiy+/lkm3CakOiHI92gnQWGNwhEhc=; b=qMftBHKl0J6iAt
+	VWPAQT0xQeylHztN7xoIFLiOPFso3on8eo8Z8vS3ysR+B2pKR5nU39Fu6VAbv9rb6NKEE/lNIarMK
+	PlDM3bzFiUpl7P4nCkmsOJb7D2iL4JQKbjPHkz95Iiif7SYYu1Ic5AlDLEOAoYoLsghzBF57QsFSH
+	waoNVcgx/RVMQ4FMBX9c4WSSHELxQ6F6DCVEwPocJJU5LG3G0jfmRu7F5Il4DAJK9JFDDDiQYqvNI
+	Mqw0Ka4moivIsd6y76AyQ0NAC/l+lkDJf4CRWrKiEf0xh5Lc940/fqUyYQFZjWFjXfhSBvh2JT9IE
+	tsab1BcQPI8vtUCuQgPg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5qpD-000263-HE; Thu, 05 Sep 2019 12:25:19 +0000
-Received: from mga12.intel.com ([192.55.52.136])
+	id 1i5qv8-0004TF-B2; Thu, 05 Sep 2019 12:31:26 +0000
+Received: from perceval.ideasonboard.com
+ ([2001:4b98:dc2:55:216:3eff:fef7:d647])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5qot-0000j2-DU; Thu, 05 Sep 2019 12:25:00 +0000
-X-Amp-Result: UNKNOWN
-X-Amp-Original-Verdict: FILE UNKNOWN
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by fmsmga106.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 05 Sep 2019 05:24:54 -0700
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.64,470,1559545200"; d="scan'208";a="199270720"
-Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
- by fmsmga001.fm.intel.com with ESMTP; 05 Sep 2019 05:24:49 -0700
-Received: from andy by smile with local (Exim 4.92.1)
- (envelope-from <andriy.shevchenko@linux.intel.com>)
- id 1i5qoj-00083O-A7; Thu, 05 Sep 2019 15:24:49 +0300
-Date: Thu, 5 Sep 2019 15:24:49 +0300
-From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-To: Sakari Ailus <sakari.ailus@linux.intel.com>
-Subject: Re: [V2, 1/2] media: i2c: dw9768: Add DT support and MAINTAINERS entry
-Message-ID: <20190905122449.GG2680@smile.fi.intel.com>
-References: <20190905072142.14606-1-dongchun.zhu@mediatek.com>
- <20190905072142.14606-2-dongchun.zhu@mediatek.com>
- <20190905101406.GA2680@smile.fi.intel.com>
- <20190905104829.GB5475@paasikivi.fi.intel.com>
- <20190905113509.GD2680@smile.fi.intel.com>
- <CABxcv=knP+-x0O-Ga-Dy8WTNovHk6GfX4ZEv0vVjnQvwchuVzg@mail.gmail.com>
- <20190905120012.GD5475@paasikivi.fi.intel.com>
+ id 1i5qur-0004JB-U9; Thu, 05 Sep 2019 12:31:12 +0000
+Received: from pendragon.ideasonboard.com (81-175-216-236.bb.dnainternet.fi
+ [81.175.216.236])
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id C344ECC;
+ Thu,  5 Sep 2019 14:31:00 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
+ s=mail; t=1567686661;
+ bh=xcSubn/iQCGjwJ8OJH7HDlSa5Fjf8PeWVmKESKQ8p40=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=lzOsnyIrOPL6NFMqF9UISBuYcxDt79qCl/uAKMc6YZIGIIRtLO4Uhm1U2r/qc4x3n
+ WyIvsjFuGJyhKkMwwQv5vKC4/2Hw8GWFs3k7FAiC4eSD3+RDmgIdGnSmYOprlu+fmT
+ IClX+wGvXOHjv4bm62vgi5T45SoZHznzXCpO7JeE=
+Date: Thu, 5 Sep 2019 15:30:54 +0300
+From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+To: Jerry-ch Chen <Jerry-Ch.chen@mediatek.com>
+Subject: Re: [RFC PATCH V2 3/4] media: platform: Add Mediatek FD driver KConfig
+Message-ID: <20190905123054.GL5035@pendragon.ideasonboard.com>
+References: <1562661672-22439-1-git-send-email-Jerry-Ch.chen@mediatek.com>
+ <1562661672-22439-4-git-send-email-Jerry-Ch.chen@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190905120012.GD5475@paasikivi.fi.intel.com>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
+In-Reply-To: <1562661672-22439-4-git-send-email-Jerry-Ch.chen@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_052459_474853_20458043 
-X-CRM114-Status: UNSURE (   8.25  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190905_053110_131857_53093782 
+X-CRM114-Status: GOOD (  14.18  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.136 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,33 +73,91 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- drinkcat@chromium.org, srv_heupstream@mediatek.com, sam.hung@mediatek.com,
- shengnan.wang@mediatek.com, Tomasz Figa <tfiga@chromium.org>,
- sj.huang@mediatek.com, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, dongchun.zhu@mediatek.com,
- Matthias Brugger <matthias.bgg@gmail.com>, bingbu.cao@intel.com,
- Javier Martinez Canillas <javier@dowhile0.org>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
+ laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ christie.yu@mediatek.com, srv_heupstream@mediatek.com,
+ po-yang.huang@mediatek.com, suleiman@chromium.org, shik@chromium.org,
+ tfiga@chromium.org, jungo.lin@mediatek.com, sj.huang@mediatek.com,
+ yuzhao@chromium.org, hans.verkuil@cisco.com, zwisler@chromium.org,
+ frederic.chen@mediatek.com, matthias.bgg@gmail.com,
+ linux-mediatek@lists.infradead.org, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Sep 05, 2019 at 03:00:12PM +0300, Sakari Ailus wrote:
+Hi Jerry,
 
-> And I see no reason to add a separate patch just for
-> MAINTAINERS change.
+Thank you for the patch.
 
-It's up to maintainers of the subsystem.
+On Tue, Jul 09, 2019 at 04:41:11PM +0800, Jerry-ch Chen wrote:
+> From: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+> 
+> This patch adds KConfig for Mediatek Face Detection driver (FD).
+> FD is embedded in Mediatek SoCs. It can provide hardware
+> accelerated face detection function.
+> 
+> Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.com>
+
+You can squash this patch with 4/4, there's no need to keep it separate.
+
+> ---
+>  drivers/media/platform/Kconfig            |  2 ++
+>  drivers/media/platform/mtk-isp/fd/Kconfig | 17 +++++++++++++++++
+>  2 files changed, 19 insertions(+)
+>  create mode 100644 drivers/media/platform/mtk-isp/fd/Kconfig
+> 
+> diff --git a/drivers/media/platform/Kconfig b/drivers/media/platform/Kconfig
+> index a505e9f..ae99258e 100644
+> --- a/drivers/media/platform/Kconfig
+> +++ b/drivers/media/platform/Kconfig
+> @@ -32,6 +32,8 @@ source "drivers/media/platform/davinci/Kconfig"
+>  
+>  source "drivers/media/platform/omap/Kconfig"
+>  
+> +source "drivers/media/platform/mtk-isp/fd/Kconfig"
+> +
+>  config VIDEO_ASPEED
+>  	tristate "Aspeed AST2400 and AST2500 Video Engine driver"
+>  	depends on VIDEO_V4L2
+> diff --git a/drivers/media/platform/mtk-isp/fd/Kconfig b/drivers/media/platform/mtk-isp/fd/Kconfig
+> new file mode 100644
+> index 0000000..0c5eaf0
+> --- /dev/null
+> +++ b/drivers/media/platform/mtk-isp/fd/Kconfig
+> @@ -0,0 +1,17 @@
+> +config VIDEO_MEDIATEK_FD
+> +	bool "Mediatek face detection processing function"
+> +	select DMA_SHARED_BUFFER
+> +	select VIDEOBUF2_DMA_CONTIG
+> +	select VIDEOBUF2_CORE
+> +	select VIDEOBUF2_V4L2
+> +	select VIDEOBUF2_MEMOPS
+> +	select VIDEOBUF2_VMALLOC
+
+Do you need both VIDEOBUF2_DMA_CONTIG and VIDEOBUF2_VMALLOC ? The driver
+doesn't seem to make use of VIDEOBUF2_VMALLOC.
+
+> +	select MEDIA_CONTROLLER
+> +
+> +	default n
+> +	help
+> +		Support the Face Detectioin (FD) feature.
+
+s/Detectioin/Detection/
+
+Maybe "... feature found in the Mediatek <list of SoCs> SoCs." ?
+
+> +
+> +		FD driver is a V4L2 memory-to-memory device driver which
+> +		provides hardware accelerated face detection function,
+> +		it can detect different sizes of faces in a raw image.
 
 -- 
-With Best Regards,
-Andy Shevchenko
+Regards,
 
-
+Laurent Pinchart
 
 _______________________________________________
 Linux-mediatek mailing list
