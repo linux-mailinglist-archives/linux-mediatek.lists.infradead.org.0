@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A438AAB02D
-	for <lists+linux-mediatek@lfdr.de>; Fri,  6 Sep 2019 03:33:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DCF7EAB0E1
+	for <lists+linux-mediatek@lfdr.de>; Fri,  6 Sep 2019 05:16:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yb2+q4tNXXfcykjPoOVjx+o4IR45rQ5FmTI8kOG4IPs=; b=gJ+DSzjvYP5G8m
-	NvKLijCGWZxBYxwDJrEkYV1QDHBwTD9ALpmRvht9UIJofTiAjOda8MAcVDT9CNzicTYuuvbdnhcGd
-	Jqv6W+1lU4qHBPspkRfxYlPTo7eGHoA9QYGFnPGEWEB06lq6B4Eqg6lNv6frdmE7Z/EeYzI3wXDqP
-	jgo8kxUeLEZhOhYjn7NkOwloHoKSnkNxRmDp/yuhbK+VLFB9NqDBA9EdudYvhJEV3+SD3dsP1KNwh
-	6Yh65ovhRfy4puVDiAvgXO4oobLwWg720ZhFgfmZF4ZaMn/EKIgy1gsjgFPp5VbQtceMdKRLSH5Nw
-	NQFr0WhoHkj4BhYPgeLQ==;
+	List-Owner; bh=SWLjFZwbPxQJUJCVSk7ApVk50eJNHCZx6E2hCTEf8BY=; b=oC8Y27wPWoCGiP
+	hIxtdWd03xuRBQxA5AI0zt5nnhC/AYQiLblhaYU88RoJfqdmPHzC+dYgZunw93Kpv/H14SfhhK/06
+	3oC5jZo7EidBSmq6mw44wuEAN/2pA3lG4vquGCT4BsBOiADo7MF3eZQnaQGMKL7/X4V6Qr0DHqOHs
+	VvaFYdjNLbv0J1S6GhPqo+RY3w73amB1HnXn06JPhz2oMecKdS3SlXMWFDLZzJ2o+SSLpTijLuzHq
+	1EGoP0aZPbEWjeILfa0JNLYfQpE5Gpf+9efVkkK0N1koBYkVOxj5LEoeBy2BwpqVLPBNHBsWPv6vn
+	u27aDiod0+HtpY1M3lNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i637v-0006sY-0Y; Fri, 06 Sep 2019 01:33:27 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i64j4-0006Kz-2L; Fri, 06 Sep 2019 03:15:54 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i637q-0006pr-Qs; Fri, 06 Sep 2019 01:33:24 +0000
-X-UUID: 00c7e03b78b846faa5f322daa04fcdf5-20190905
-X-UUID: 00c7e03b78b846faa5f322daa04fcdf5-20190905
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <dongchun.zhu@mediatek.com>)
+ id 1i64iz-0006K2-44; Fri, 06 Sep 2019 03:15:51 +0000
+X-UUID: a5dd2dac813441cbae60d8f4dbe77513-20190905
+X-UUID: a5dd2dac813441cbae60d8f4dbe77513-20190905
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 213228797; Thu, 05 Sep 2019 17:33:13 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 5 Sep 2019 18:33:12 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 6 Sep 2019 09:33:03 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 6 Sep 2019 09:33:02 +0800
-Message-ID: <1567733585.21623.163.camel@mhfsdcap03>
-Subject: Re: [V3, 2/2] media: i2c: Add Omnivision OV02A10 camera sensor driver
-From: Dongchun Zhu <dongchun.zhu@mediatek.com>
-To: Nicolas Boichat <drinkcat@chromium.org>
-Date: Fri, 6 Sep 2019 09:33:05 +0800
-In-Reply-To: <CANMq1KDVMGkeBvu1nO5WHopWwec9mxHfhmLmX2BzvaYVLzxoXw@mail.gmail.com>
-References: <20190819034331.13098-1-dongchun.zhu@mediatek.com>
- <20190819034331.13098-3-dongchun.zhu@mediatek.com>
- <20190819083009.GC6133@paasikivi.fi.intel.com>
- <1567676465.21623.100.camel@mhfsdcap03>
- <20190905104546.GA5475@paasikivi.fi.intel.com>
- <CAAFQd5Bh-11D9RR9WVH5A3DbXZoxWhbMhXSNKUV25mempMi+ag@mail.gmail.com>
- <20190905160512.GG5475@paasikivi.fi.intel.com>
- <CANMq1KDVMGkeBvu1nO5WHopWwec9mxHfhmLmX2BzvaYVLzxoXw@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ with ESMTP id 1409498161; Thu, 05 Sep 2019 19:15:34 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 5 Sep 2019 20:15:32 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 6 Sep 2019 11:15:31 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 6 Sep 2019 11:15:31 +0800
+Message-ID: <1567739734.32522.67.camel@mtksdccf07>
+Subject: Re: [PATCH 1/2] mm/kasan: dump alloc/free stack for page allocator
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Vlastimil Babka <vbabka@suse.cz>
+Date: Fri, 6 Sep 2019 11:15:34 +0800
+In-Reply-To: <99913463-0e2c-7dab-c1eb-8b9e149b3ee3@suse.cz>
+References: <20190904065133.20268-1-walter-zh.wu@mediatek.com>
+ <401064ae-279d-bef3-a8d5-0fe155d0886d@suse.cz>
+ <1567605965.32522.14.camel@mtksdccf07>
+ <7998e8f1-e5e2-da84-ea1f-33e696015dce@suse.cz>
+ <1567607063.32522.24.camel@mtksdccf07>
+ <99913463-0e2c-7dab-c1eb-8b9e149b3ee3@suse.cz>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F407418E7C5334074F2F61C9B1662FF6503DAC5082ABBBF7307673C1AD9D1A8A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_183322_881190_94F91151 
-X-CRM114-Status: GOOD (  15.42  )
+X-CRM114-CacheID: sfid-20190905_201549_168014_D8F2F66C 
+X-CRM114-Status: GOOD (  16.57  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -78,78 +77,62 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- srv_heupstream <srv_heupstream@mediatek.com>, shengnan.wang@mediatek.com,
- Tomasz Figa <tfiga@chromium.org>, Louis Kuo <louis.kuo@mediatek.com>,
- Sj Huang <sj.huang@mediatek.com>, Rob
- Herring <robh+dt@kernel.org>, "moderated list:ARM/Mediatek
- SoC support" <linux-mediatek@lists.infradead.org>,
- Sakari Ailus <sakari.ailus@linux.intel.com>, Matthias
- Brugger <matthias.bgg@gmail.com>, Cao Bing Bu <bingbu.cao@intel.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>, "list@263.net:IOMMU
- DRIVERS <iommu@lists.linux-foundation.org>,  Joerg  Roedel
- <joro@8bytes.org>, " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: wsd_upstream@mediatek.com, Arnd Bergmann <arnd@arndb.de>,
+ linux-mm@kvack.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>, Alexander Potapenko <glider@google.com>,
+ linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>,
+ Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-09-06 at 06:58 +0800, Nicolas Boichat wrote:
-> On Fri, Sep 6, 2019 at 12:05 AM Sakari Ailus
-> <sakari.ailus@linux.intel.com> wrote:
-> >
-> > On Thu, Sep 05, 2019 at 07:53:37PM +0900, Tomasz Figa wrote:
-> > > On Thu, Sep 5, 2019 at 7:45 PM Sakari Ailus
-> > > <sakari.ailus@linux.intel.com> wrote:
-> > > >
-> > > > Hi Dongchun,
-> > > >
-> > > > On Thu, Sep 05, 2019 at 05:41:05PM +0800, Dongchun Zhu wrote:
-> > > >
-> > > > ...
-> > > >
-> > > > > > > + ret = regulator_bulk_enable(OV02A10_NUM_SUPPLIES, ov02a10->supplies);
-> > > > > > > + if (ret < 0) {
-> > > > > > > +         dev_err(dev, "Failed to enable regulators\n");
-> > > > > > > +         goto disable_clk;
-> > > > > > > + }
-> > > > > > > + msleep_range(7);
-> > > > > >
-> > > > > > This has some potential of clashing with more generic functions in the
-> > > > > > future. Please use usleep_range directly, or msleep.
-> > > > > >
-> > > > >
-> > > > > Did you mean using usleep_range(7*1000, 8*1000), as used in patch v1?
-> > > > > https://patchwork.kernel.org/patch/10957225/
-> > > >
-> > > > Yes, please.
-> > >
-> > > Why not just msleep()?
-> >
-> > msleep() is usually less accurate. I'm not sure it makes a big different in
-> > this case. Perhaps, if someone wants that the sensor is powered on and
-> > streaming as soon as possible.
+On Thu, 2019-09-05 at 10:03 +0200, Vlastimil Babka wrote:
+> On 9/4/19 4:24 PM, Walter Wu wrote:
+> > On Wed, 2019-09-04 at 16:13 +0200, Vlastimil Babka wrote:
+> >> On 9/4/19 4:06 PM, Walter Wu wrote:
+> >>
+> >> The THP fix is not required for the rest of the series, it was even merged to
+> >> mainline separately.
+> >>
+> >>> And It looks like something is different, because we only need last
+> >>> stack of page, so it can decrease memory overhead.
+> >>
+> >> That would save you depot_stack_handle_t (which is u32) per page. I guess that's
+> >> nothing compared to KASAN overhead?
+> >>
+> > If we can use less memory, we can achieve what we want. Why not?
 > 
-> https://elixir.bootlin.com/linux/latest/source/Documentation/timers/timers-howto.txt#L70
+> In my experience to solve some UAFs, it's important to know not only the
+> freeing stack, but also the allocating stack. Do they make sense together,
+> or not? In some cases, even longer history of alloc/free would be nice :)
 > 
-> Use usleep_range for delays up to 20ms (at least that's what the
-> documentation (still) says?)
+We think it only has free stack to find out the root cause. Maybe we can
+refer to other people's experience and ideas.
+
+
+> Also by simply recording the free stack in the existing depot handle,
+> you might confuse existing page_owner file consumers, who won't know
+> that this is a freeing stack.
 > 
+Don't worry it.
+1. Our feature option has this description about last stack of page.
+when consumer enable our feature, they should know the changing.
+2. We add to print text message for alloc or free stack before dump the
+stack of page. so consumers should know what is it.
 
-Thank you for your clarifications.
-From the doc,
-"msleep(1~20) may not do what the caller intends, and
-will often sleep longer (~20 ms actual sleep for any
-value given in the 1~20ms range). In many cases this
-is not the desired behavior."
+> All that just doesn't seem to justify saving an u32 per page.
 
-So, it is supposed to use usleep_range in shorter sleep case,
-such as 5ms.
+Actually, We want to slim memory usage instead of increasing the memory
+usage at another mail discussion. Maybe, maintainer or reviewer can
+provide some ideas. That will be great.
 
-> > --
-> > Sakari Ailus
-> > sakari.ailus@linux.intel.com
+> > 
+> > 
+> 
 
 
 
