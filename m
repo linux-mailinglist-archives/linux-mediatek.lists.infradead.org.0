@@ -2,79 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 562B0ACFE6
-	for <lists+linux-mediatek@lfdr.de>; Sun,  8 Sep 2019 18:57:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DCA4DAD009
+	for <lists+linux-mediatek@lfdr.de>; Sun,  8 Sep 2019 18:57:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=z6JU/4H4NxTqPFkclj3nKImNAO0q2IkWXfcDrOn26eQ=; b=XLaW5RJm7I3JyB
-	7LATy1UnMEsH1sX7ZszLyS75wqLQnra9uE05theMRvkLuiriSmTBCRFbyluNS8SjJ9/3XFxwBmIa+
-	QqUVEDECQfdf2Cq/R5L7GqCB2z9VFv+BWIDSI58tPE7NY5bTMwB1UV88pp4BYN9jQexJVLvG3z8ab
-	5zsBKhpAoDD3QTr8vyuCstehKAnXwOD7UDIs+JjBE0AEMUnTOTrLnAxRnKA9kY96eLPZ1vOXkWMEp
-	Q4mxeaZX8jpXUuKKVn9nYOrtDmpNryIApYgF4rSqvJWMflbU1d+wEY9qw205eH6tskxSutsBSn6cC
-	Hnq+pP+wqoJdczXHmD0w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=EHqa7DZ4sylPMFemmC/wH81V/i4xbjObKVPdJ0tIqPE=; b=WW0EXUagwNYIaQ
+	6vKkoq2CH0o5eAIBGXc0GyGdcZN7CYJSE8UpjwRdsmSdWNsJUEveqZVHmyijfMUMTBLOuWxYVsPR0
+	7X28jaq2PeNKvFa/6s37PVHSEzyhFq0jbfANTBHuEdcPrqdLK94grdFm7FCPHitNZ+i65En3FE+k8
+	ZGsorSPbTEbclr5wyp/xbNK4eM0Ljv9m7ekmQgSLpJio8YQPGcB1uekp/WWXeTX8Mzw7MrC8d+tyK
+	aAWnnq58uRSJw4nVWAdD9Lb0sz6beQwmBtRw5GtzHSRubqAxI2h9XYoNrS0sVfGqy2IpWeqcHvNZI
+	iqkJaNAU5BjmWvehER5w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i70Uu-0006H6-1p; Sun, 08 Sep 2019 16:57:08 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1i70Vd-00008W-NW; Sun, 08 Sep 2019 16:57:53 +0000
+Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i70Up-0006Bw-4o
- for linux-mediatek@lists.infradead.org; Sun, 08 Sep 2019 16:57:05 +0000
-Received: by mail-pg1-x544.google.com with SMTP id d10so6374011pgo.5
- for <linux-mediatek@lists.infradead.org>; Sun, 08 Sep 2019 09:56:56 -0700 (PDT)
+ id 1i70Ur-0006Ca-JR
+ for linux-mediatek@lists.infradead.org; Sun, 08 Sep 2019 16:57:09 +0000
+Received: by mail-pf1-x442.google.com with SMTP id q10so7665185pfl.0
+ for <linux-mediatek@lists.infradead.org>; Sun, 08 Sep 2019 09:57:01 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=tcd-ie.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=E2f3KSrZxRio8/FeHv28ONTThNhL2TjtH0LaTd/eJz4=;
- b=YkxKYH/ERWEtBHeMoD9KlshTjhFsDszVa0tiICeohlWVLEzIcG2mdKPWfiiXIAB9Ep
- h6QalfbgiFdxT1gwzIyDJP5nWISKWpTHIpT1fN2L7ULPQG419Bbi7XY3FDT2eqv7Pdio
- H1K5BfueRIQBGq3EqACgol7GvzJZ1eAgnKKZmazjR0LQiP65cCb17u0sJuotvVHS33a6
- qj4J0lq3fFjn9VBtqa6a2jkRAsYTa2rETqDhPFBFFdRonhlNDlwxzNcmQUhBH77kLi7U
- AS1qIGirCQTlRgJu1+io8rSZUnDci9vM9xSPVt3khu+byAO8nhRLsYoEOS2YUMuEme9n
- 8jPA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=RfHmYWiMThI6XBXa2YE269JhY5zyIOLGivfX/oOORWs=;
+ b=DmYpORWJqyzijh72UcrIWdFFAa+ww/GFK6qzQZmnCCIq+YOTGiYhGxXGAJUM66+ViZ
+ biwANpSj16S/IWvPLXicptTlojpKqRsl76xoCqv73zpCCmI3Ry414D3qf2XQVJbLRkYz
+ MKnJeO0BCQbCSPBcJvHk9ZwcjQJmI1fqHAOJBw/kpdeXEc9zDiUH7BWR7nt5hq2VV4VR
+ TAj4QqkEciqMizmYpSv4Bxfifj1yjQ+HWcpbGVpdYl9a40kDFvNZUQAn1t+nqa9RKoq8
+ fG0I7ETsqgdcF+2BV6wQGXzS4yhP6Cp/jMrleb7Yt2880pcKUcT3rXZGljbub+Wz2vpU
+ Y6Ag==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=E2f3KSrZxRio8/FeHv28ONTThNhL2TjtH0LaTd/eJz4=;
- b=hmb5aq0wfGJEZmefoxnjDvsPNA0aVRsjdkipi1yZMbv4PR0XMbk6ad2Aro50YgwJmv
- 2KeoUNIkjE594prKuuy5jnxFFYnmNNnM0J+J2CSb66e1DprBpY6NwK5cJEfHpCfhmnC7
- yxU1/NMXjSw0RS4ZB1xXd2V0gcsUcs8liJ+cq2s62ljhSVJTwhZNwShtU0J5se1tOLIE
- 5eWfQBLzrMRXQQzrCciPbuCfBBIfGX8eL9hg1lBJeZTqlkcWz0v9qYL3tufM3HNluUbh
- f3CVRzB7kfuw4KoRIs2sgKJP16B9lJgegzrrnFOJnGjVMMLR/gh2FapKvgHhZY1GPP5d
- ATMg==
-X-Gm-Message-State: APjAAAU/ysnmkHfd6bun39/vUM0pAl64X3ztys1FtD6au7VFKnQPNbvm
- v/GSUh2fE7rX1hDgHOdcDrmuOQ==
-X-Google-Smtp-Source: APXvYqycW5UHspFXzTlIh/iOGVx+SWpR9vq4XdyDpuh90LK48tRDCdIIhjamCNmUiV+Y56F7gJ75Lw==
-X-Received: by 2002:a63:7d05:: with SMTP id y5mr17861065pgc.425.1567961816386; 
- Sun, 08 Sep 2019 09:56:56 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=RfHmYWiMThI6XBXa2YE269JhY5zyIOLGivfX/oOORWs=;
+ b=h+zh5CfPDkaejW7m5gwokao4/UURLQ4dbecT0GB9OyeNA1yHhr8tRqRRs+q2Fyt7iU
+ BXmpzzDi9STWUtZ7ARPSEd/dHU/4YGWB7qQxTW1uzum+oLKRp6VLYsDDItc2+wAj8rQs
+ Eu4OsKh9pdHJFLmQxwyXKCHztPzOSdmX36K5XEd+H+2eDFhhhI1vxBSSmxuap7gDrHuC
+ M9zHuYYXMW2HAhrLu9iNNZnE7+H/VIU0ab8QiPE2uUmyNY9xAzvmV6Z+xNQiVrPCY67y
+ zaLh+fKA8WMZtw8VEBZw/SKOvW5A7KmZ8o6/Dt2QV3JEXy8wFopv8Y4RgxU/Nw7w9+/N
+ ZQ8A==
+X-Gm-Message-State: APjAAAXsym0ljghhbHfWmBBsD+2lsxCi+VErwZ5C/NX0qI5btesQt/iB
+ E8jhpifnb/0hzmDDCtFrNNU2Dw==
+X-Google-Smtp-Source: APXvYqwb14B4be5Dly+SGA8/U+UtNd3CILzif54GYTzQtR0eqj4U9DtUfUiUL561KlrtajOkqtGwTA==
+X-Received: by 2002:a17:90a:28c5:: with SMTP id
+ f63mr11263462pjd.67.1567961821142; 
+ Sun, 08 Sep 2019 09:57:01 -0700 (PDT)
 Received: from localhost.localdomain ([24.244.23.109])
  by smtp.googlemail.com with ESMTPSA id
- f188sm13834631pfa.170.2019.09.08.09.56.55
+ f188sm13834631pfa.170.2019.09.08.09.56.59
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sun, 08 Sep 2019 09:56:55 -0700 (PDT)
+ Sun, 08 Sep 2019 09:57:00 -0700 (PDT)
 From: Tom Murphy <murphyt7@tcd.ie>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH v6 0/5] iommu/amd: Convert the AMD iommu driver to the
- dma-iommu api
-Date: Sun,  8 Sep 2019 09:56:36 -0700
-Message-Id: <20190908165642.22253-1-murphyt7@tcd.ie>
+Subject: [PATCH V6 1/5] iommu/amd: Remove unnecessary locking from AMD iommu
+ driver
+Date: Sun,  8 Sep 2019 09:56:37 -0700
+Message-Id: <20190908165642.22253-2-murphyt7@tcd.ie>
 X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20190908165642.22253-1-murphyt7@tcd.ie>
+References: <20190908165642.22253-1-murphyt7@tcd.ie>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190908_095703_186054_3B9D5C96 
-X-CRM114-Status: GOOD (  11.66  )
+X-CRM114-CacheID: sfid-20190908_095705_665518_E43911F0 
+X-CRM114-Status: GOOD (  17.44  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -111,60 +114,81 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Convert the AMD iommu driver to the dma-iommu api. Remove the iova
-handling and reserve region code from the AMD iommu driver.
+With or without locking it doesn't make sense for two writers to be
+writing to the same IOVA range at the same time. Even with locking we
+still have a race condition, whoever gets the lock first, so we still
+can't be sure what the result will be. With locking the result will be
+more sane, it will be correct for the last writer, but still useless
+because we can't be sure which writer will get the lock last. It's a
+fundamentally broken design to have two writers writing to the same
+IOVA range at the same time.
 
-Change-log:
-V6:
--add more details to the description of patch 001-iommu-amd-Remove-unnecessary-locking-from-AMD-iommu-.patch
--rename handle_deferred_device to iommu_dma_deferred_attach
--fix double tabs in 0003-iommu-dma-iommu-Handle-deferred-devices.patch
-V5:
--Rebase on top of linux-next
-V4:
--Rebase on top of linux-next
--Split the removing of the unnecessary locking in the amd iommu driver into a seperate patch
--refactor the "iommu/dma-iommu: Handle deferred devices" patch and address comments
-v3:
--rename dma_limit to dma_mask
--exit handle_deferred_device early if (!is_kdump_kernel())
--remove pointless calls to handle_deferred_device
-v2:
--Rebase on top of this series:
- http://git.infradead.org/users/hch/misc.git/shortlog/refs/heads/dma-iommu-ops.3
--Add a gfp_t parameter to the iommu_ops::map function.
--Made use of the reserve region code inside the dma-iommu api
+So we can remove the locking and work on the assumption that no two
+writers will be writing to the same IOVA range at the same time.
 
-Tom Murphy (5):
-  iommu/amd: Remove unnecessary locking from AMD iommu driver
-  iommu: Add gfp parameter to iommu_ops::map
-  iommu/dma-iommu: Handle deferred devices
-  iommu/dma-iommu: Use the dev->coherent_dma_mask
-  iommu/amd: Convert AMD iommu driver to the dma-iommu api
+The only exception is when we have to allocate a middle page in the page
+tables, the middle page can cover more than just the IOVA range a writer
+has been allocated. However this isn't an issue in the AMD driver
+because it can atomically allocate middle pages using "cmpxchg64()".
 
- drivers/iommu/Kconfig           |   1 +
- drivers/iommu/amd_iommu.c       | 690 ++++----------------------------
- drivers/iommu/amd_iommu_types.h |   1 -
- drivers/iommu/arm-smmu-v3.c     |   2 +-
- drivers/iommu/arm-smmu.c        |   2 +-
- drivers/iommu/dma-iommu.c       |  43 +-
- drivers/iommu/exynos-iommu.c    |   2 +-
- drivers/iommu/intel-iommu.c     |   2 +-
- drivers/iommu/iommu.c           |  43 +-
- drivers/iommu/ipmmu-vmsa.c      |   2 +-
- drivers/iommu/msm_iommu.c       |   2 +-
- drivers/iommu/mtk_iommu.c       |   2 +-
- drivers/iommu/mtk_iommu_v1.c    |   2 +-
- drivers/iommu/omap-iommu.c      |   2 +-
- drivers/iommu/qcom_iommu.c      |   2 +-
- drivers/iommu/rockchip-iommu.c  |   2 +-
- drivers/iommu/s390-iommu.c      |   2 +-
- drivers/iommu/tegra-gart.c      |   2 +-
- drivers/iommu/tegra-smmu.c      |   2 +-
- drivers/iommu/virtio-iommu.c    |   2 +-
- include/linux/iommu.h           |  21 +-
- 21 files changed, 178 insertions(+), 651 deletions(-)
+Signed-off-by: Tom Murphy <murphyt7@tcd.ie>
+---
+ drivers/iommu/amd_iommu.c       | 10 +---------
+ drivers/iommu/amd_iommu_types.h |  1 -
+ 2 files changed, 1 insertion(+), 10 deletions(-)
 
+diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
+index 008da21a2592..1948be7ac8f8 100644
+--- a/drivers/iommu/amd_iommu.c
++++ b/drivers/iommu/amd_iommu.c
+@@ -2858,7 +2858,6 @@ static void protection_domain_free(struct protection_domain *domain)
+ static int protection_domain_init(struct protection_domain *domain)
+ {
+ 	spin_lock_init(&domain->lock);
+-	mutex_init(&domain->api_lock);
+ 	domain->id = domain_id_alloc();
+ 	if (!domain->id)
+ 		return -ENOMEM;
+@@ -3045,9 +3044,7 @@ static int amd_iommu_map(struct iommu_domain *dom, unsigned long iova,
+ 	if (iommu_prot & IOMMU_WRITE)
+ 		prot |= IOMMU_PROT_IW;
+ 
+-	mutex_lock(&domain->api_lock);
+ 	ret = iommu_map_page(domain, iova, paddr, page_size, prot, GFP_KERNEL);
+-	mutex_unlock(&domain->api_lock);
+ 
+ 	domain_flush_np_cache(domain, iova, page_size);
+ 
+@@ -3058,16 +3055,11 @@ static size_t amd_iommu_unmap(struct iommu_domain *dom, unsigned long iova,
+ 			   size_t page_size)
+ {
+ 	struct protection_domain *domain = to_pdomain(dom);
+-	size_t unmap_size;
+ 
+ 	if (domain->mode == PAGE_MODE_NONE)
+ 		return 0;
+ 
+-	mutex_lock(&domain->api_lock);
+-	unmap_size = iommu_unmap_page(domain, iova, page_size);
+-	mutex_unlock(&domain->api_lock);
+-
+-	return unmap_size;
++	return iommu_unmap_page(domain, iova, page_size);
+ }
+ 
+ static phys_addr_t amd_iommu_iova_to_phys(struct iommu_domain *dom,
+diff --git a/drivers/iommu/amd_iommu_types.h b/drivers/iommu/amd_iommu_types.h
+index 9ac229e92b07..b764e1a73dcf 100644
+--- a/drivers/iommu/amd_iommu_types.h
++++ b/drivers/iommu/amd_iommu_types.h
+@@ -468,7 +468,6 @@ struct protection_domain {
+ 	struct iommu_domain domain; /* generic domain handle used by
+ 				       iommu core code */
+ 	spinlock_t lock;	/* mostly used to lock the page table*/
+-	struct mutex api_lock;	/* protect page tables in the iommu-api path */
+ 	u16 id;			/* the domain id written to the device table */
+ 	int mode;		/* paging mode (0-6 levels) */
+ 	u64 *pt_root;		/* page table root pointer */
 -- 
 2.20.1
 
