@@ -2,58 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DDD34ADF60
-	for <lists+linux-mediatek@lfdr.de>; Mon,  9 Sep 2019 21:24:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 62ED5AE1D1
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 03:08:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Gtq/S6+0B4nenwjCJXovmAC5IYTod6PBbRwBp+fnb9c=; b=tlPLL616ZxKZ+0
-	ibhhiWm1raA93MX7sWu38JgVN4CQ11HDoXDFjmeOmDtlX6SH4px+F0OsasTUIlAQ8XQnG6h1iJ5Cg
-	niDEiXDCZOf7TCRlcdhF9cWabmUlyDk/Km0oZx4qVBgLwSb+9S+tcAJ+dBs1xhiQjJdv1/WAMNEFz
-	j6zx0TEEEiqNGXxkalJ+hZx9BN3Vi7pDoVNMGQVjx4kNvIO3OK6xEnw3u81uLyUvqNYegFF3tBM2Z
-	gK8SyUNShySxNzyp/5U9Fkd7mHDZoSsNl39D/V2qK9i2OaBwmwshfMtJ+X/Hcz+gBSsQ/tiXq/hBI
-	PlMvw43xBvEM9WkI986A==;
+	List-Owner; bh=T1vR/AXUYaxus3rYtY0fnDDxJj3Li6byyDfOxv535Iw=; b=TIQRBY6Cz9O5/L
+	E6HwnpmW/UqkfaIxoy1SKus5p/kE1WtkrtnhxCfuie3uiLToDM2FcebUAmHOtIHXI1gkIhJYswA6Z
+	nvrZIj7fefaeZzXLAAkaXCb5CLp+F81UTMHFuKe9mHnY3EvrVT6xBCZwP9TftEUdPMRpxZDmUKAX7
+	qPng3vAVsFOv9iFhzJ8sMN+UADTsWWpW3n1mkILMb8gV/Jn2XnDejNPrsIPnY9b1189yq44kr5gWW
+	OUC/yEBTXqm7HpGqQhK5C7oDgnh5P0K7X05LJF77wtLUlZf+IB1Fmw+W66fMzel9btZCjCaPU/shO
+	RaTtTRacgrHrGHl1PJLg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7PGl-0004ip-On; Mon, 09 Sep 2019 19:24:11 +0000
+	id 1i7UdX-0000EM-Ms; Tue, 10 Sep 2019 01:08:03 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7PG0-0003rc-PA; Mon, 09 Sep 2019 19:23:26 +0000
-X-UUID: af31d726f06e4679a75e09d58ad4764e-20190909
-X-UUID: af31d726f06e4679a75e09d58ad4764e-20190909
+ id 1i7UdS-0000Ds-V5; Tue, 10 Sep 2019 01:08:01 +0000
+X-UUID: 029bb8e465e548d1a44397873e2e5f8a-20190909
+X-UUID: 029bb8e465e548d1a44397873e2e5f8a-20190909
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <frederic.chen@mediatek.com>)
+ (envelope-from <walter-zh.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1298058684; Mon, 09 Sep 2019 11:23:21 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 9 Sep 2019 12:23:20 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Sep 2019 03:23:05 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 10 Sep 2019 03:23:05 +0800
-From: <frederic.chen@mediatek.com>
-To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
- <tfiga@chromium.org>, <matthias.bgg@gmail.com>, <mchehab@kernel.org>
-Subject: [RFC PATCH V3 5/5] media: platform: mtk-mdp3: Add struct tuning_addr
- and img_sw_buffer
-Date: Tue, 10 Sep 2019 03:22:44 +0800
-Message-ID: <20190909192244.9367-6-frederic.chen@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20190909192244.9367-1-frederic.chen@mediatek.com>
-References: <20190909192244.9367-1-frederic.chen@mediatek.com>
+ with ESMTP id 1906183390; Mon, 09 Sep 2019 17:07:52 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 9 Sep 2019 18:07:51 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 09:07:49 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 10 Sep 2019 09:07:49 +0800
+Message-ID: <1568077669.24886.3.camel@mtksdccf07>
+Subject: Re: [PATCH v2 1/2] mm/page_ext: support to record the last stack of
+ page
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: David Hildenbrand <david@redhat.com>
+Date: Tue, 10 Sep 2019 09:07:49 +0800
+In-Reply-To: <36b5a8e0-2783-4c0e-4fc7-78ea652ba475@redhat.com>
+References: <20190909085339.25350-1-walter-zh.wu@mediatek.com>
+ <36b5a8e0-2783-4c0e-4fc7-78ea652ba475@redhat.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 074492E904B74088ADA67159AC5190E930A3C333F23B371DA799ACABE71B13B22000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190909_122324_880936_AA76DDA4 
-X-CRM114-Status: UNSURE (   9.64  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190909_180759_012249_7EE3EC16 
+X-CRM114-Status: GOOD (  16.36  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -74,76 +72,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: shik@chromium.org, devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- Rynn.Wu@mediatek.com, Allan.Yang@mediatek.com, srv_heupstream@mediatek.com,
- holmes.chiou@mediatek.com, suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
- jungo.lin@mediatek.com, sj.huang@mediatek.com, yuzhao@chromium.org,
- linux-mediatek@lists.infradead.org, zwisler@chromium.org,
- christie.yu@mediatek.com, frederic.chen@mediatek.com,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: Qian Cai <cai@lca.pw>, wsd_upstream@mediatek.com,
+ Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org, Andrey
+ Konovalov <andreyknvl@google.com>, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com,
+ Michal Hocko <mhocko@kernel.org>, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>, Alexander Potapenko <glider@google.com>,
+ linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>,
+ Andrew Morton <akpm@linux-foundation.org>, Will Deacon <will@kernel.org>,
+ Thomas Gleixner <tglx@linutronix.de>, Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Frederic Chen <frederic.chen@mediatek.com>
+On Mon, 2019-09-09 at 12:57 +0200, David Hildenbrand wrote:
+> On 09.09.19 10:53, Walter Wu wrote:
+> > KASAN will record last stack of page in order to help programmer
+> > to see memory corruption caused by page.
+> > 
+> > What is difference between page_owner and our patch?
+> > page_owner records alloc stack of page, but our patch is to record
+> > last stack(it may be alloc or free stack of page).
+> > 
+> > Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
+> > ---
+> >  mm/page_ext.c | 3 +++
+> >  1 file changed, 3 insertions(+)
+> > 
+> > diff --git a/mm/page_ext.c b/mm/page_ext.c
+> > index 5f5769c7db3b..7ca33dcd9ffa 100644
+> > --- a/mm/page_ext.c
+> > +++ b/mm/page_ext.c
+> > @@ -65,6 +65,9 @@ static struct page_ext_operations *page_ext_ops[] = {
+> >  #if defined(CONFIG_IDLE_PAGE_TRACKING) && !defined(CONFIG_64BIT)
+> >  	&page_idle_ops,
+> >  #endif
+> > +#ifdef CONFIG_KASAN
+> > +	&page_stack_ops,
+> > +#endif
+> >  };
+> >  
+> >  static unsigned long total_usage;
+> > 
+> 
+> Are you sure this patch compiles?
+> 
+This is patchsets, it need another patch2.
+We have verified it by running KASAN UT on Qemu.
 
-We added a struct tuning_addr which contains a field "present"
-so that the driver can tell the firmware if we have user tuning
-dataor not.
 
-The strcut img_sw_buffer is also added. This struct has no cpu address
-field and uses a handle instead so that we don't pass a cpu address
-to co-processor.
-
-Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
----
- drivers/media/platform/mtk-mdp3/mtk-img-ipi.h | 15 +++++++++++++--
- 1 file changed, 13 insertions(+), 2 deletions(-)
-
-diff --git a/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h b/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-index 9fabe7e8b71d..f61e61faf636 100644
---- a/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-+++ b/drivers/media/platform/mtk-mdp3/mtk-img-ipi.h
-@@ -38,6 +38,12 @@ struct img_addr {
- 	u32	iova;	/* Used by IOMMU HW access */
- } __attribute__ ((__packed__));
- 
-+struct tuning_addr {
-+	u32	present;
-+	u32	pa;	/* Used by CM4 access */
-+	u32	iova;	/* Used by IOMMU HW access */
-+} __attribute__ ((__packed__));
-+
- struct img_sw_addr {
- 	u64	va;	/* Used by APMCU access */
- 	u32	pa;	/* Used by CM4 access */
-@@ -105,16 +111,21 @@ struct img_ipi_frameparam {
- 	u64		drv_data;
- 	struct img_input	inputs[IMG_MAX_HW_INPUTS];
- 	struct img_output	outputs[IMG_MAX_HW_OUTPUTS];
--	struct img_addr		tuning_data;
-+	struct tuning_addr	tuning_data;
- 	struct img_addr		subfrm_data;
- 	struct img_sw_addr	config_data;
- 	struct img_sw_addr  self_data;
- 	/* u8		pq_data[]; */
- } __attribute__ ((__packed__));
- 
-+struct img_sw_buffer {
-+	u64	handle;		/* Used by APMCU access */
-+	u32	scp_addr;	/* Used by CM4 access */
-+} __attribute__ ((__packed__));
-+
- struct img_ipi_param {
- 	u8	usage;
--	struct	img_sw_addr frm_param;
-+	struct img_sw_buffer frm_param;
- } __attribute__ ((__packed__));
- 
- struct img_frameparam {
--- 
-2.18.0
 
 
 _______________________________________________
