@@ -2,62 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 93ED7AE98C
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 13:54:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ADCA3AEAD1
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 14:46:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=yAAC4wrUoT4aaLyI6Yoc+6oj66PX/0Vjw+81MhiTnfk=; b=a6h/PyF/Xo7b3Oqj0KKlZCKK7
-	qc30eSgt8x4o3HSN9VC6hCo3UH7Go4/ypeoeJ0qxQwLI8y21Vhei/ao5FeXhQBX0ZAfarFUMpkbBJ
-	wtWIhJXnHyTZELTl4C5NPw1z+nbTfiHL5216Sh+epez+031+HIlc+nTrkyHtGcWjktMNUn8m+eBAn
-	dhafHRI5tF7AGH7ZoZX10QjSJfZuCrSMr1D9Qy87QhMj2/N463Il2I12YG0VUmv3dD7B5ipcobLSC
-	hmKBVXwwYZkPBSU1IIOO+zRDErWUvkbxKzQGHaUPk1/ZV0xTwrEnyfcS56ua+Q1ZdnnNi319Y/JXA
-	ntguUMSFw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Cax05j8/wQBwo4c8bg/N/5tpRoEjX1fOVVkS5Ooxg+Q=; b=SGEWq2HsVJoR4p
+	hJg4zaWw4gmHveAti8OLEjQQNk42HIHAs3C+qnhBzcehrYun6FecBUa1XbQtfCwJFwIAKBn3eFPiZ
+	pN3gJhe3cP6ZIXAKoFQFDD0GU9Es+iVeJ1Fm89XJRFNtd5vUlxyTXQpWcxAATpmhj0g1hUdO/YZos
+	DQdLgLEO7baHSF5qynQ367ToVEY+U5XV4hgT4x1ZGB3Wec+zJ7FynH6CwtDQVOjeby7GNJYsb3WwV
+	BO1aY+TUEdwhfcl7EPlKaYcRnQ762oj4cyYVcqirftiePJkC8aSPwqC/MMU2o2eGaBjMf3ueDAVlV
+	2zy+AcVCLm6ZvM2KXa0w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7eii-0007Bv-7u; Tue, 10 Sep 2019 11:54:04 +0000
-Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
+	id 1i7fWx-00013n-Ge; Tue, 10 Sep 2019 12:45:59 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7ei8-000701-WD; Tue, 10 Sep 2019 11:53:30 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx1.suse.de (Postfix) with ESMTP id 82DF2B061;
- Tue, 10 Sep 2019 11:53:26 +0000 (UTC)
+ id 1i7fWv-00013L-3l; Tue, 10 Sep 2019 12:45:58 +0000
+X-UUID: adbed42bd278419f9e538b2e790d0740-20190910
+X-UUID: adbed42bd278419f9e538b2e790d0740-20190910
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1986774780; Tue, 10 Sep 2019 04:45:51 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 05:45:49 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 20:45:48 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 10 Sep 2019 20:45:48 +0800
+Message-ID: <1568119549.24886.18.camel@mtksdccf07>
 Subject: Re: [PATCH v2 0/2] mm/kasan: dump alloc/free stack for page allocator
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, walter-zh.wu@mediatek.com,
- Alexander Potapenko <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrew Morton <akpm@linux-foundation.org>,
- Martin Schwidefsky <schwidefsky@de.ibm.com>, Will Deacon <will@kernel.org>,
- Andrey Konovalov <andreyknvl@google.com>, Arnd Bergmann <arnd@arndb.de>,
- Thomas Gleixner <tglx@linutronix.de>, Michal Hocko <mhocko@kernel.org>,
- Qian Cai <cai@lca.pw>
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Vlastimil Babka <vbabka@suse.cz>
+Date: Tue, 10 Sep 2019 20:45:49 +0800
+In-Reply-To: <4faedb4d-f16c-1917-9eaa-b0f9c169fa50@suse.cz>
 References: <20190909082412.24356-1-walter-zh.wu@mediatek.com>
  <d53d88df-d9a4-c126-32a8-4baeb0645a2c@suse.cz>
  <a7863965-90ab-5dae-65e7-8f68f4b4beb5@virtuozzo.com>
-From: Vlastimil Babka <vbabka@suse.cz>
-Message-ID: <4faedb4d-f16c-1917-9eaa-b0f9c169fa50@suse.cz>
-Date: Tue, 10 Sep 2019 13:53:23 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ <4faedb4d-f16c-1917-9eaa-b0f9c169fa50@suse.cz>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-In-Reply-To: <a7863965-90ab-5dae-65e7-8f68f4b4beb5@virtuozzo.com>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_045329_183581_81B502F0 
-X-CRM114-Status: GOOD (  13.12  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190910_054557_163800_BC967FD1 
+X-CRM114-Status: GOOD (  11.57  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,30 +73,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Qian Cai <cai@lca.pw>, wsd_upstream@mediatek.com,
+ Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org, Andrey
+ Konovalov <andreyknvl@google.com>, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com,
+ Michal Hocko <mhocko@kernel.org>, Martin
+ Schwidefsky <schwidefsky@de.ibm.com>, Alexander Potapenko <glider@google.com>,
+ linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>,
+ Andrew Morton <akpm@linux-foundation.org>, Will Deacon <will@kernel.org>,
+ Thomas Gleixner <tglx@linutronix.de>, Dmitry Vyukov <dvyukov@google.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 9/10/19 12:50 PM, Andrey Ryabinin wrote:
+On Tue, 2019-09-10 at 13:53 +0200, Vlastimil Babka wrote:
+> On 9/10/19 12:50 PM, Andrey Ryabinin wrote:
+> > 
+> > 
+> > For slab objects we memorize both alloc and free stacks. You'll never know in advance what information will be usefull
+> > to fix an issue, so it usually better to provide more information. I don't think we should do anything different for pages.
 > 
+> Exactly, thanks.
 > 
-> For slab objects we memorize both alloc and free stacks. You'll never know in advance what information will be usefull
-> to fix an issue, so it usually better to provide more information. I don't think we should do anything different for pages.
+> > Given that we already have the page_owner responsible for providing alloc/free stacks for pages, all that we should in KASAN do is to
+> > enable the feature by default. Free stack saving should be decoupled from debug_pagealloc into separate option so that it can be enabled
+> > by KASAN and/or debug_pagealloc.
+> 
+> Right. Walter, can you do it that way, or should I?
+> 
+> Thanks,
+> Vlastimil
 
-Exactly, thanks.
+I will send new patch v3.
 
-> Given that we already have the page_owner responsible for providing alloc/free stacks for pages, all that we should in KASAN do is to
-> enable the feature by default. Free stack saving should be decoupled from debug_pagealloc into separate option so that it can be enabled
-> by KASAN and/or debug_pagealloc.
-
-Right. Walter, can you do it that way, or should I?
-
-Thanks,
-Vlastimil
 
 _______________________________________________
 Linux-mediatek mailing list
