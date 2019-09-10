@@ -2,54 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AB5BAAEE23
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 17:09:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA258AEE35
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 17:11:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=W3dQHP2kgEqtAcvnzw9iM/l9L5naurexzrxnNm/zHAA=; b=cKO4ZSr+wU3quR
-	p2zuWkeWSPoUuzkUBSfP8H+hgFcZCF4rqaZPhJwdAOa1mnGu3Y45IObJoYMujEIxS1QyXeeqYM/8Y
-	aTbObMMxD9GyH9J2DmLZ4oJ3srT3t2vhX6yUMb0TWp5wHw4VHYM1Hz7kUFrC9BNLaKTd2wtWhv42M
-	D9DM/cmskPEBvOonA9gXevsbxjupjY3Bb4gLSTgAEgAfem13yi8ITbuuPOIY+4enWTv3gxDTio54k
-	wnrGgsuOPKl9elh8wGweC5EAvgK+v1eKHhCMUxKG8B9a26YiK1s+5Y26L2YKkXFJZTT30p5Q52nPL
-	bXCGTQTWA2WjZU4BxD8g==;
+	List-Owner; bh=dlZxIAN1/wjbdGFru7J8l27mzECLR+/BDzwesRGj0t4=; b=hwsN2g0v8oGIhD
+	zysTliFCHVC3iIuSQfTDzeHtW1pjwDSEO2XKepL176w4CoXLIwzDfAwpWJHEIfeb26V51HXt+YxK+
+	MxLg3abZWcJUsYE3cp8PCHaaxGJgwmG746VQIdZehpfevSf41XVGpGrgqnXlZFvYxiPPxuNt+XG2X
+	UXzMNTn5ef0rpLCKtprZSq3yr1O7l3xOnrtqlInIfWE/Pq3qDwhS9mQgOJVJLEeFOwgos7lmmnX4B
+	EorqPzuJGmZUk8mYtvVY2R1l/oZd7KEGvbNtOtvQgbzMCf8svlQL3vkhjui4s3dcXyRefj4z7BN+O
+	tNzX0CWLPSGmqtEoMrhg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7hlI-0006g5-9K; Tue, 10 Sep 2019 15:08:56 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1i7hlD-0006eR-8f; Tue, 10 Sep 2019 15:08:52 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 91E1F1000;
- Tue, 10 Sep 2019 08:08:50 -0700 (PDT)
-Received: from e107533-lin.cambridge.arm.com (unknown [172.31.20.19])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id CC2483F71F;
- Tue, 10 Sep 2019 08:08:35 -0700 (PDT)
-Date: Tue, 10 Sep 2019 16:08:26 +0100
-From: Sudeep Holla <sudeep.holla@arm.com>
-To: Claudiu.Beznea@microchip.com
+	id 1i7hnn-0008LR-W6; Tue, 10 Sep 2019 15:11:32 +0000
+Received: from relay5-d.mail.gandi.net ([217.70.183.197])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1i7hnh-0008Iz-SV; Tue, 10 Sep 2019 15:11:27 +0000
+X-Originating-IP: 148.69.85.38
+Received: from localhost (unknown [148.69.85.38])
+ (Authenticated sender: alexandre.belloni@bootlin.com)
+ by relay5-d.mail.gandi.net (Postfix) with ESMTPSA id D0F4F1C0019;
+ Tue, 10 Sep 2019 15:10:57 +0000 (UTC)
+Date: Tue, 10 Sep 2019 17:10:55 +0200
+From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+To: Sudeep Holla <sudeep.holla@arm.com>
 Subject: Re: [PATCH 4/7] dt-bindings: chosen: Add clocksource and clockevent
  selection
-Message-ID: <20190910150826.GA18308@e107533-lin.cambridge.arm.com>
+Message-ID: <20190910151055.GX21254@piout.net>
 References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
  <1568123236-767-5-git-send-email-claudiu.beznea@microchip.com>
  <20190910143231.GB14966@e107533-lin.cambridge.arm.com>
  <ab43b209-78fa-0cab-b8ea-acd4c550e689@microchip.com>
+ <20190910150826.GA18308@e107533-lin.cambridge.arm.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <ab43b209-78fa-0cab-b8ea-acd4c550e689@microchip.com>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+In-Reply-To: <20190910150826.GA18308@e107533-lin.cambridge.arm.com>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_080851_399801_4DFA5DB3 
-X-CRM114-Status: GOOD (  14.47  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190910_081126_216139_9A1A9513 
+X-CRM114-Status: GOOD (  16.53  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.197 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -71,13 +73,12 @@ Cc: tmaimon77@gmail.com, linus.walleij@linaro.org, nsekhar@ti.com,
  marc.zyngier@arm.com, s.hauer@pengutronix.de, linux-unisoc@lists.infradead.org,
  khalasa@piap.pl, tglx@linutronix.de, sbranden@broadcom.com,
  linux-kernel@vger.kernel.org, ralf@linux-mips.org, paul.burton@mips.com,
- kernel@pengutronix.de, mark.rutland@arm.com, alexandre.belloni@bootlin.com,
+ kernel@pengutronix.de, Claudiu.Beznea@microchip.com, mark.rutland@arm.com,
  jhogan@kernel.org, palmer@sifive.com, eric@anholt.net,
  thierry.reding@gmail.com, manivannan.sadhasivam@linaro.org,
  ysato@users.sourceforge.jp, zhang.lyra@gmail.com, daniel.lezcano@linaro.org,
  jonathanh@nvidia.com, bgolaszewski@baylibre.com, kgene@kernel.org,
- alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org,
- Sudeep Holla <sudeep.holla@arm.com>, f.fainelli@gmail.com,
+ alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org, f.fainelli@gmail.com,
  john.stultz@linaro.org, linux-rpi-kernel@lists.infradead.org,
  linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
  baohua@kernel.org, kaloz@openwrt.org, sboyd@kernel.org, patrice.chotard@st.com,
@@ -102,47 +103,55 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Sep 10, 2019 at 02:51:50PM +0000, Claudiu.Beznea@microchip.com wrote:
-> 
-> 
-> On 10.09.2019 17:32, Sudeep Holla wrote:
-> > External E-Mail
+On 10/09/2019 16:08:26+0100, Sudeep Holla wrote:
+> On Tue, Sep 10, 2019 at 02:51:50PM +0000, Claudiu.Beznea@microchip.com wrote:
 > > 
 > > 
-> > On Tue, Sep 10, 2019 at 04:47:13PM +0300, Claudiu Beznea wrote:
-> >> From: Alexandre Belloni <alexandre.belloni@bootlin.com>
-> >>
-> >> Some timer drivers may behave either as clocksource or clockevent
-> >> or both. Until now, in case of platforms with multiple hardware
-> >> resources of the same type, the drivers were chosing the first
-> >> registered hardware resource as clocksource/clockevent and the
-> >> next one as clockevent/clocksource. Other were using different
-> >> compatibles (one for each functionality, although its about the
-> >> same hardware). Add DT bindings to be able to choose the
-> >> functionality of a timer.
-> >>
+> > On 10.09.2019 17:32, Sudeep Holla wrote:
+> > > External E-Mail
+> > > 
+> > > 
+> > > On Tue, Sep 10, 2019 at 04:47:13PM +0300, Claudiu Beznea wrote:
+> > >> From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+> > >>
+> > >> Some timer drivers may behave either as clocksource or clockevent
+> > >> or both. Until now, in case of platforms with multiple hardware
+> > >> resources of the same type, the drivers were chosing the first
+> > >> registered hardware resource as clocksource/clockevent and the
+> > >> next one as clockevent/clocksource. Other were using different
+> > >> compatibles (one for each functionality, although its about the
+> > >> same hardware). Add DT bindings to be able to choose the
+> > >> functionality of a timer.
+> > >>
+> > > 
+> > > Is the piece of hardware not capable of serving as both clocksource
+> > > and clockevent or is it just the platform choice ?
 > > 
-> > Is the piece of hardware not capable of serving as both clocksource
-> > and clockevent or is it just the platform choice ?
+> > In my case, the hardware is not capable of serving at the same time
+> > a clocksource device and a clockevent device.
+> > 
+> > First, I published v1 for a hardware device having this behavior at
+> > [1] requesting 1st probed hardware device to work as clocksource and
+> > the 2nd one to work as clockevent. The discussion at [1] ended up with
+> > the idea of having a mechanism to specify which hardware device behaves
+> > as clocksource and which one behaves as clockevent.
+> >
 > 
-> In my case, the hardware is not capable of serving at the same time
-> a clocksource device and a clockevent device.
+> In that case, why can't we identify capability that with the compatibles
+> for this timer IP ?
 > 
-> First, I published v1 for a hardware device having this behavior at
-> [1] requesting 1st probed hardware device to work as clocksource and
-> the 2nd one to work as clockevent. The discussion at [1] ended up with
-> the idea of having a mechanism to specify which hardware device behaves
-> as clocksource and which one behaves as clockevent.
->
+> IOW, I don't like the proposal as it's hardware limitation.
+> 
 
-In that case, why can't we identify capability that with the compatibles
-for this timer IP ?
+To be clear, bot timers are exactly the same but can't be clocksource
+and clockevent at the same time. Why would we have different compatibles
+for the exact same IP?
 
-IOW, I don't like the proposal as it's hardware limitation.
 
---
-Regards,
-Sudeep
+-- 
+Alexandre Belloni, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
 
 _______________________________________________
 Linux-mediatek mailing list
