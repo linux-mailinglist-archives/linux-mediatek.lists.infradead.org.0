@@ -2,58 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B1669AEB18
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 15:05:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 24323AEB15
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 15:05:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZYCTzliUQ93XftSV2FaU7qXAU5Ux2gN1SV5LqLsq50U=; b=GXjZMO08DXL/6q
-	pBDSPm1emu105n/q2ZRx0HQsRmqBsrirSOqj4jeNPeMigDxh8gxLvObzdmj88+Xi/SDJLwZf86KQ/
-	zA0/YA7Y1/HXU8Aoxl3DoC5rcEvQvBVpaGGOY6Plhb+Tte2h5zHgTdwXWpkQ9F5c23vzfUEpaSYP2
-	WrFrlq9vPA6PUcrEHDNm/X3yrTqK55P6GOkA8+2Qt8G7rWA4tTgW/uAY018GeAXRt1qeIYT9x6dVX
-	Nd6mjIEWFobi+xyqqI/Hq5L1zDUQtq2acwEk8XijjoMF6Qcnv9plM9YJHIbJ84a5FbVpKkzHVmmtd
-	wb5h9AsLtUlaW5Oh6B8A==;
+	List-Owner; bh=wuEL2X+uVdOGHE/mAvWAE2xYz3M+1Kj4A1MDEQR38EE=; b=lCwv4OXm+WukCa
+	T7W6IDEPzfYHu4SpHleoSwCgBpxd1hhN8PonoDfOeGFGCRqcmQXZkxZpyWCMuPo53KX/96mUmhak5
+	0NP4Od1eYCQyOFKROkZ3hqysOmCZNykxhfrrvUTwteHbkpLdIXPBEbZAOQwYLvHdy6QkZQ5zGgTC0
+	YjgXn5hYZG8xqbCfAggdIN7Xas0JyHUgJdWlv6d5H+ZlkIjWoaX0c8qHiWdKLFDss9fgTJFO0GJLr
+	gl/SNXkvCVsG8QCVCuOkV0gDrvPcACGVkpfC69kX+F3hvBphnbbEIDeKUsYOmx/gVfmKKF1Cmupp4
+	wOnOzVw24ghtfVeNg6jg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7fq6-0000FA-8s; Tue, 10 Sep 2019 13:05:46 +0000
+	id 1i7fpp-0008Oz-9S; Tue, 10 Sep 2019 13:05:29 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7fpS-0007bP-ER; Tue, 10 Sep 2019 13:05:07 +0000
-X-UUID: 75e0eecd810644e38172d2ed3a16806e-20190910
-X-UUID: 75e0eecd810644e38172d2ed3a16806e-20190910
+ id 1i7fpR-00079J-Aj; Tue, 10 Sep 2019 13:05:06 +0000
+X-UUID: 6ec13b4283674d38a3b4c792f40378e7-20190910
+X-UUID: 6ec13b4283674d38a3b4c792f40378e7-20190910
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1411458494; Tue, 10 Sep 2019 05:05:03 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Sep 2019 06:05:02 -0700
+ with ESMTP id 206600382; Tue, 10 Sep 2019 05:04:54 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 06:04:52 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Sep 2019 21:04:48 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 21:04:50 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 10 Sep 2019 21:04:47 +0800
+ Transport; Tue, 10 Sep 2019 21:04:50 +0800
 From: <dongchun.zhu@mediatek.com>
 To: <mchehab@kernel.org>, <andriy.shevchenko@linux.intel.com>,
  <robh+dt@kernel.org>, <mark.rutland@arm.com>, <sakari.ailus@linux.intel.com>, 
  <drinkcat@chromium.org>, <tfiga@chromium.org>, <matthias.bgg@gmail.com>,
  <bingbu.cao@intel.com>
-Subject: [V2, 0/2] media: ov8856: DT bindings and sensor mode improvements
-Date: Tue, 10 Sep 2019 21:04:44 +0800
-Message-ID: <20190910130446.26413-1-dongchun.zhu@mediatek.com>
+Subject: [V2, 1/2] media: dt-bindings: media: i2c: Add bindings for ov8856
+Date: Tue, 10 Sep 2019 21:04:45 +0800
+Message-ID: <20190910130446.26413-2-dongchun.zhu@mediatek.com>
 X-Mailer: git-send-email 2.9.2
-In-Reply-To: <media: ov8856: DT bindings and sensor mode improvements>
+In-Reply-To: <20190910130446.26413-1-dongchun.zhu@mediatek.com>
 References: <media: ov8856: DT bindings and sensor mode improvements>
+ <20190910130446.26413-1-dongchun.zhu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_060506_493698_9FF7D1C1 
-X-CRM114-Status: UNSURE (   8.09  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190910_060505_448361_AA8F79DE 
+X-CRM114-Status: GOOD (  11.41  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -86,38 +86,85 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Dongchun Zhu <dongchun.zhu@mediatek.com>
 
-Hello,
+This patch adds device tree bindings documentation for the ov8856 CMOS
+image sensor.
 
-This series adds DT bindings and some more sensor modes for users to use.
-
-From the latest ov8856 datasheet, it is proposed to adopt the resolution
-of 1632*1224 and 3264*2448, together with Bayer Order of BGGR.
-Thus here we try to provide two more scenarios.
-
-In addition, the hardware revision of ov8856 is checked from one OTP SRAM register R700F.
-PLL register R3614 requires to be correspondingly updated.
-For instance, 0x20 is preferred for 1B module revision.
-
-Mainly changes of v2 are addressing the comments from Sakari, Tomasz,
-including,
- - Add clock-frequency and link-frequencies in DT
- - Re-define some macros like R3614, R3d84, n_shutdn
- - Rename OV8856_MCLK to OV8856_XVCLK per datasheet
- - Refine ov8856_update_otp_reg, ov8856_configure_regulators and ov8856_cal_delay
- - Set the bayer order in the mode struct, and directly links to register R3808, R3809
- - Remove or refine redundant log print
- - Fix other reviewed issues in v1
-
-Dongchun Zhu (2):
-  media: dt-bindings: media: i2c: Add bindings for ov8856
-  media: i2c: Add more sensor modes for ov8856 camera sensor
-
- .../devicetree/bindings/media/i2c/ov8856.txt       |  51 ++
- MAINTAINERS                                        |   1 +
- drivers/media/i2c/ov8856.c                         | 654 ++++++++++++++++++++-
- 3 files changed, 691 insertions(+), 15 deletions(-)
+Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
+---
+ .../devicetree/bindings/media/i2c/ov8856.txt       | 51 ++++++++++++++++++++++
+ MAINTAINERS                                        |  1 +
+ 2 files changed, 52 insertions(+)
  create mode 100644 Documentation/devicetree/bindings/media/i2c/ov8856.txt
 
+diff --git a/Documentation/devicetree/bindings/media/i2c/ov8856.txt b/Documentation/devicetree/bindings/media/i2c/ov8856.txt
+new file mode 100644
+index 0000000..99c654a
+--- /dev/null
++++ b/Documentation/devicetree/bindings/media/i2c/ov8856.txt
+@@ -0,0 +1,51 @@
++* Omnivision OV8856 MIPI CSI-2 sensor
++
++Required Properties:
++- compatible: Shall be "ovti,ov8856"
++- reg: I2C bus address of the device. Depending on how the sensor is wired,
++       it shall be <0x10>.
++- clocks: Reference to the xvclk input clock.
++- clock-names: Shall be "xvclk".
++- clock-frequency: Frequency of the xclk clock.
++- dovdd-supply: Digital I/O voltage supply, 1.8 volts
++- avdd-supply: Analog voltage supply, 2.8 volts
++- dvdd-supply: Digital core voltage supply, 1.5 volts
++- reset-gpios: High active reset gpio
++
++The device node shall contain one 'port' child node with
++an 'endpoint' subnode. For further reading on port node refer to
++Documentation/devicetree/bindings/media/video-interfaces.txt.
++
++Required Properties on endpoint:
++- data-lanes: check ../video-interfaces.txt
++- link-frequencies: check ../video-interfaces.txt
++- remote-endpoint: check ../video-interfaces.txt
++
++Example:
++
++&i2c1 {
++	ov8856: camera-sensor@10 {
++		compatible = "ovti,ov8856";
++		reg = <0x10>;
++		pinctrl-names = "default";
++		pinctrl-0 = <&clk_24m_cam>;
++
++		clocks = <&cru SCLK_TESTCLKOUT1>;
++		clock-names = "xvclk";
++		clock-frequency = <19200000>;
++
++		avdd-supply = <&mt6358_vcama2_reg>;
++		dvdd-supply = <&mt6358_vcamd_reg>;
++		dovdd-supply = <&mt6358_vcamio_reg>;
++		reset-gpios = <&pio 111 GPIO_ACTIVE_HIGH>;
++
++		port {
++			/* MIPI CSI-2 bus endpoint */
++			wcam_out: endpoint {
++				remote-endpoint = <&mipi_in_wcam>;
++				data-lanes = <1 2 3 4>;
++				link-frequencies = /bits/ 64 <360000000 180000000>;
++			};
++		};
++	};
++};
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 783569e..7746c6b 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -11889,6 +11889,7 @@ L:	linux-media@vger.kernel.org
+ T:	git git://linuxtv.org/media_tree.git
+ S:	Maintained
+ F:	drivers/media/i2c/ov8856.c
++F:	Documentation/devicetree/bindings/media/i2c/ov8856.txt
+ 
+ OMNIVISION OV9650 SENSOR DRIVER
+ M:	Sakari Ailus <sakari.ailus@linux.intel.com>
 -- 
 2.9.2
 
