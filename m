@@ -2,56 +2,51 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 67DCAAE75A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 11:53:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 79BEAAE8A5
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 12:50:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2CDGwkJvpbL98ngdqVGMEwmgcLqNbZpEWcuEOUwcHV0=; b=p3nvUX6Acalspk
-	6HxF695XECzhN+Xzogli5qpRVQ4cr48cEE7cJC8SkWLGnvfhSWl4hiQ3KxCT+c0vlBJy//SA+H+Wj
-	AEcLNE3fLH2+yWc9qakRmrn6ae0fA5BYS+eKRZftPsKmLAsmYhAFQiKwShBLFZIJrScpEiyGNek83
-	93gGVRJn39rl3NOprjNmpf8S8cBYBaev9JPCJ7ERzp/53VcZ6ndI1nibar+rDwAAD+OGS2Ps3vnUJ
-	OkR7P2BfVhc4g8P0ehbtAVQE3uc1MAkPdy7K15GQlfBhQcM0QsiugQ7nzKfjVFynLiYilym+yh+jK
-	XbYb8rpP+/1Q8GDiihwQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=POcUYU7PoDOok+pTGpWX1Jjgq2c6d6r2i8cs/s8xORw=; b=QvZeaCSWGcyK31
+	0pGXSHd0m2Lacmf92RnuO2AGq8/qvCCjXALvrhBQivMpG37VJbbHgngyjF34S6/bGHmsYq08ZyFKC
+	F7SM/TuaitxDbFVviv7BoRDc2Ocvcc7GbL+sGPUyTYCoLgL9hGOTR2zplJNiqZi0usHHisgsJQHGv
+	mA9Ib84jGP1H+lOyxpcnqOhfMKSqtmX6ULWlro4UG7oIcnme4G2DwwP1H9mDAl0qe3HEXq7HHY1td
+	Sk0KSUI8U3HyEG4nT7uGacov2wGh6Hf24LYz6gAJXUyzAWEA5Gk2HQlxXG4FUznabPu11kngX3520
+	9Ccjz8L2j+LMWUx1l0FQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7cqC-0004RM-9V; Tue, 10 Sep 2019 09:53:40 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i7djT-0002Ab-PK; Tue, 10 Sep 2019 10:50:47 +0000
+Received: from relay.sw.ru ([185.231.240.75])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7cq8-0004QK-8J; Tue, 10 Sep 2019 09:53:38 +0000
-X-UUID: 36c78417abc344289e7f5daf413eb3d7-20190910
-X-UUID: 36c78417abc344289e7f5daf413eb3d7-20190910
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1880487358; Tue, 10 Sep 2019 01:53:26 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Sep 2019 02:53:24 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Sep 2019 17:53:23 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 10 Sep 2019 17:53:23 +0800
-Message-ID: <1568109204.24886.14.camel@mtksdccf07>
+ id 1i7djO-0002A6-QM; Tue, 10 Sep 2019 10:50:45 +0000
+Received: from [172.16.25.5] by relay.sw.ru with esmtp (Exim 4.92)
+ (envelope-from <aryabinin@virtuozzo.com>)
+ id 1i7djC-0007sY-TJ; Tue, 10 Sep 2019 13:50:31 +0300
 Subject: Re: [PATCH v2 0/2] mm/kasan: dump alloc/free stack for page allocator
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Dmitry Vyukov
- <dvyukov@google.com>, Andrey Konovalov <andreyknvl@google.com>, "Arnd
- Bergmann" <arnd@arndb.de>, Qian Cai <cai@lca.pw>
-Date: Tue, 10 Sep 2019 17:53:24 +0800
-In-Reply-To: <20190909082412.24356-1-walter-zh.wu@mediatek.com>
+To: Vlastimil Babka <vbabka@suse.cz>, walter-zh.wu@mediatek.com,
+ Alexander Potapenko <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrew Morton <akpm@linux-foundation.org>,
+ Martin Schwidefsky <schwidefsky@de.ibm.com>, Will Deacon <will@kernel.org>,
+ Andrey Konovalov <andreyknvl@google.com>, Arnd Bergmann <arnd@arndb.de>,
+ Thomas Gleixner <tglx@linutronix.de>, Michal Hocko <mhocko@kernel.org>,
+ Qian Cai <cai@lca.pw>
 References: <20190909082412.24356-1-walter-zh.wu@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ <d53d88df-d9a4-c126-32a8-4baeb0645a2c@suse.cz>
+From: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Message-ID: <a7863965-90ab-5dae-65e7-8f68f4b4beb5@virtuozzo.com>
+Date: Tue, 10 Sep 2019 13:50:29 +0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <d53d88df-d9a4-c126-32a8-4baeb0645a2c@suse.cz>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_025336_304819_FA29AB9E 
-X-CRM114-Status: GOOD (  22.91  )
+X-CRM114-CacheID: sfid-20190910_035042_853795_7614C81B 
+X-CRM114-Status: GOOD (  13.65  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -59,8 +54,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,235 +65,66 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-mm@kvack.org, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, Michal Hocko <mhocko@kernel.org>, Martin
- Schwidefsky <schwidefsky@de.ibm.com>, Alexander Potapenko <glider@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Andrew Morton <akpm@linux-foundation.org>, Will Deacon <will@kernel.org>,
- Thomas Gleixner <tglx@linutronix.de>, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ kasan-dev@googlegroups.com, linux-mm@kvack.org,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2019-09-09 at 16:24 +0800, walter-zh.wu@mediatek.com wrote:
-> From: Walter Wu <walter-zh.wu@mediatek.com>
-> 
-> This patch is KASAN report adds the alloc/free stacks for page allocator
-> in order to help programmer to see memory corruption caused by page.
-> 
-> By default, KASAN doesn't record alloc and free stack for page allocator.
-> It is difficult to fix up page use-after-free or dobule-free issue.
-> 
-> Our patchsets will record the last stack of pages.
-> It is very helpful for solving the page use-after-free or double-free.
-> 
-> KASAN report will show the last stack of page, it may be:
-> a) If page is in-use state, then it prints alloc stack.
->    It is useful to fix up page out-of-bound issue.
-> 
-> BUG: KASAN: slab-out-of-bounds in kmalloc_pagealloc_oob_right+0x88/0x90
-> Write of size 1 at addr ffffffc0d64ea00a by task cat/115
-> ...
-> Allocation stack of page:
->  set_page_stack.constprop.1+0x30/0xc8
->  kasan_alloc_pages+0x18/0x38
->  prep_new_page+0x5c/0x150
->  get_page_from_freelist+0xb8c/0x17c8
->  __alloc_pages_nodemask+0x1a0/0x11b0
->  kmalloc_order+0x28/0x58
->  kmalloc_order_trace+0x28/0xe0
->  kmalloc_pagealloc_oob_right+0x2c/0x68
-> 
-> b) If page is freed state, then it prints free stack.
->    It is useful to fix up page use-after-free or double-free issue.
-> 
-> BUG: KASAN: use-after-free in kmalloc_pagealloc_uaf+0x70/0x80
-> Write of size 1 at addr ffffffc0d651c000 by task cat/115
-> ...
-> Free stack of page:
->  kasan_free_pages+0x68/0x70
->  __free_pages_ok+0x3c0/0x1328
->  __free_pages+0x50/0x78
->  kfree+0x1c4/0x250
->  kmalloc_pagealloc_uaf+0x38/0x80
-> 
-> This has been discussed, please refer below link.
-> https://bugzilla.kernel.org/show_bug.cgi?id=203967
-> 
-> Changes since v1:
-> - slim page_owner and move it into kasan
-> - enable the feature by default
-> 
-> Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-> ---
->  include/linux/kasan.h |  1 +
->  lib/Kconfig.kasan     |  2 ++
->  mm/kasan/common.c     | 32 ++++++++++++++++++++++++++++++++
->  mm/kasan/kasan.h      |  5 +++++
->  mm/kasan/report.c     | 27 +++++++++++++++++++++++++++
->  5 files changed, 67 insertions(+)
-> 
-> diff --git a/include/linux/kasan.h b/include/linux/kasan.h
-> index cc8a03cc9674..97e1bcb20489 100644
-> --- a/include/linux/kasan.h
-> +++ b/include/linux/kasan.h
-> @@ -19,6 +19,7 @@ extern pte_t kasan_early_shadow_pte[PTRS_PER_PTE];
->  extern pmd_t kasan_early_shadow_pmd[PTRS_PER_PMD];
->  extern pud_t kasan_early_shadow_pud[PTRS_PER_PUD];
->  extern p4d_t kasan_early_shadow_p4d[MAX_PTRS_PER_P4D];
-> +extern struct page_ext_operations page_stack_ops;
->  
->  int kasan_populate_early_shadow(const void *shadow_start,
->  				const void *shadow_end);
-> diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
-> index 4fafba1a923b..b5a9410ba4e8 100644
-> --- a/lib/Kconfig.kasan
-> +++ b/lib/Kconfig.kasan
-> @@ -41,6 +41,7 @@ config KASAN_GENERIC
->  	select SLUB_DEBUG if SLUB
->  	select CONSTRUCTORS
->  	select STACKDEPOT
-> +	select PAGE_EXTENSION
->  	help
->  	  Enables generic KASAN mode.
->  	  Supported in both GCC and Clang. With GCC it requires version 4.9.2
-> @@ -63,6 +64,7 @@ config KASAN_SW_TAGS
->  	select SLUB_DEBUG if SLUB
->  	select CONSTRUCTORS
->  	select STACKDEPOT
-> +	select PAGE_EXTENSION
->  	help
->  	  Enables software tag-based KASAN mode.
->  	  This mode requires Top Byte Ignore support by the CPU and therefore
-> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
-> index 2277b82902d8..c349143d2587 100644
-> --- a/mm/kasan/common.c
-> +++ b/mm/kasan/common.c
-> @@ -211,10 +211,38 @@ void kasan_unpoison_stack_above_sp_to(const void *watermark)
->  	kasan_unpoison_shadow(sp, size);
->  }
->  
-> +static bool need_page_stack(void)
-> +{
-> +	return true;
-> +}
-> +
-> +struct page_ext_operations page_stack_ops = {
-> +	.size = sizeof(depot_stack_handle_t),
-> +	.need = need_page_stack,
-> +};
-> +
-> +static void set_page_stack(struct page *page, gfp_t gfp_mask)
-> +{
-> +	struct page_ext *page_ext = lookup_page_ext(page);
-> +	depot_stack_handle_t handle;
-> +	depot_stack_handle_t *page_stack;
-> +
-> +	if (unlikely(!page_ext))
-> +		return;
-> +
-> +	handle = save_stack(gfp_mask);
-> +
-> +	page_stack = get_page_stack(page_ext);
-> +	*page_stack = handle;
-> +}
-> +
->  void kasan_alloc_pages(struct page *page, unsigned int order)
->  {
->  	u8 tag;
->  	unsigned long i;
-> +	gfp_t gfp_flags = GFP_KERNEL;
-> +
-> +	set_page_stack(page, gfp_flags);
->  
->  	if (unlikely(PageHighMem(page)))
->  		return;
-> @@ -227,6 +255,10 @@ void kasan_alloc_pages(struct page *page, unsigned int order)
->  
->  void kasan_free_pages(struct page *page, unsigned int order)
->  {
-> +	gfp_t gfp_flags = GFP_KERNEL;
-> +
-> +	set_page_stack(page, gfp_flags);
-> +
->  	if (likely(!PageHighMem(page)))
->  		kasan_poison_shadow(page_address(page),
->  				PAGE_SIZE << order,
-> diff --git a/mm/kasan/kasan.h b/mm/kasan/kasan.h
-> index 014f19e76247..95b3b510d04f 100644
-> --- a/mm/kasan/kasan.h
-> +++ b/mm/kasan/kasan.h
-> @@ -126,6 +126,11 @@ static inline bool addr_has_shadow(const void *addr)
->  	return (addr >= kasan_shadow_to_mem((void *)KASAN_SHADOW_START));
->  }
->  
-> +static inline depot_stack_handle_t *get_page_stack(struct page_ext *page_ext)
-> +{
-> +	return (void *)page_ext + page_stack_ops.offset;
-> +}
-> +
->  void kasan_poison_shadow(const void *address, size_t size, u8 value);
->  
->  /**
-> diff --git a/mm/kasan/report.c b/mm/kasan/report.c
-> index 0e5f965f1882..2e26bc192114 100644
-> --- a/mm/kasan/report.c
-> +++ b/mm/kasan/report.c
-> @@ -344,6 +344,32 @@ static void print_address_stack_frame(const void *addr)
->  	print_decoded_frame_descr(frame_descr);
->  }
->  
-> +static void dump_page_stack(struct page *page)
-> +{
-> +	struct page_ext *page_ext = lookup_page_ext(page);
-> +	depot_stack_handle_t handle;
-> +	unsigned long *entries;
-> +	unsigned int nr_entries;
-> +	depot_stack_handle_t *page_stack;
-> +
-> +	if (unlikely(!page_ext))
-> +		return;
-> +
-> +	page_stack = get_page_stack(page_ext);
-> +
-> +	handle = READ_ONCE(*page_stack);
-> +	if (!handle)
-> +		return;
-> +
-> +	if ((unsigned long)page->flags & PAGE_FLAGS_CHECK_AT_PREP)
-> +		pr_info("Allocation stack of page:\n");
-> +	else
-> +		pr_info("Free stack of page:\n");
-> +
-> +	nr_entries = stack_depot_fetch(handle, &entries);
-> +	stack_trace_print(entries, nr_entries, 0);
-> +}
-> +
->  static void print_address_description(void *addr)
->  {
->  	struct page *page = addr_to_page(addr);
-> @@ -366,6 +392,7 @@ static void print_address_description(void *addr)
->  	if (page) {
->  		pr_err("The buggy address belongs to the page:\n");
->  		dump_page(page, "kasan: bad access detected");
-> +		dump_page_stack(page);
->  	}
->  
->  	print_address_stack_frame(addr);
-
-Hi All,
-
-We implement another version, it is different with v1. We hope that you
-can give an ideas and make the KASAN report better. If it is possible,
-we can use the less memory to show the corruption information that is
-enough to help programmer to fix up memory corruption.
-
-Thanks.
-Walter
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+CgpPbiA5LzkvMTkgNDowNyBQTSwgVmxhc3RpbWlsIEJhYmthIHdyb3RlOgo+IE9uIDkvOS8xOSAx
+MDoyNCBBTSwgd2FsdGVyLXpoLnd1QG1lZGlhdGVrLmNvbSB3cm90ZToKPj4gRnJvbTogV2FsdGVy
+IFd1IDx3YWx0ZXItemgud3VAbWVkaWF0ZWsuY29tPgo+Pgo+PiBUaGlzIHBhdGNoIGlzIEtBU0FO
+IHJlcG9ydCBhZGRzIHRoZSBhbGxvYy9mcmVlIHN0YWNrcyBmb3IgcGFnZSBhbGxvY2F0b3IKPj4g
+aW4gb3JkZXIgdG8gaGVscCBwcm9ncmFtbWVyIHRvIHNlZSBtZW1vcnkgY29ycnVwdGlvbiBjYXVz
+ZWQgYnkgcGFnZS4KPj4KPj4gQnkgZGVmYXVsdCwgS0FTQU4gZG9lc24ndCByZWNvcmQgYWxsb2Mg
+YW5kIGZyZWUgc3RhY2sgZm9yIHBhZ2UgYWxsb2NhdG9yLgo+PiBJdCBpcyBkaWZmaWN1bHQgdG8g
+Zml4IHVwIHBhZ2UgdXNlLWFmdGVyLWZyZWUgb3IgZG9idWxlLWZyZWUgaXNzdWUuCj4+Cj4+IE91
+ciBwYXRjaHNldHMgd2lsbCByZWNvcmQgdGhlIGxhc3Qgc3RhY2sgb2YgcGFnZXMuCj4+IEl0IGlz
+IHZlcnkgaGVscGZ1bCBmb3Igc29sdmluZyB0aGUgcGFnZSB1c2UtYWZ0ZXItZnJlZSBvciBkb3Vi
+bGUtZnJlZS4KPj4KPj4gS0FTQU4gcmVwb3J0IHdpbGwgc2hvdyB0aGUgbGFzdCBzdGFjayBvZiBw
+YWdlLCBpdCBtYXkgYmU6Cj4+IGEpIElmIHBhZ2UgaXMgaW4tdXNlIHN0YXRlLCB0aGVuIGl0IHBy
+aW50cyBhbGxvYyBzdGFjay4KPj4gwqDCoMKgIEl0IGlzIHVzZWZ1bCB0byBmaXggdXAgcGFnZSBv
+dXQtb2YtYm91bmQgaXNzdWUuCj4gCj4gSSBzdGlsbCBkaXNhZ3JlZSB3aXRoIGR1cGxpY2F0aW5n
+IG1vc3Qgb2YgcGFnZV9vd25lciBmdW5jdGlvbmFsaXR5IGZvciB0aGUgc2FrZSBvZiB1c2luZyBh
+IHNpbmdsZSBzdGFjayBoYW5kbGUgZm9yIGJvdGggYWxsb2MgYW5kIGZyZWUgKHdoaWxlIHBhZ2Vf
+b3duZXIgKyBkZWJ1Z19wYWdlYWxsb2Mgd2l0aCBwYXRjaGVzIGluIG1tb3RtIHVzZXMgdHdvIGhh
+bmRsZXMpLiBJdCByZWR1Y2VzIHRoZSBhbW91bnQgb2YgcG90ZW50aWFsbHkgaW1wb3J0YW50IGRl
+YnVnZ2luZyBpbmZvcm1hdGlvbiwgYW5kIEkgcmVhbGx5IGRvdWJ0IHRoZSB1MzItcGVyLXBhZ2Ug
+c2F2aW5ncyBhcmUgc2lnbmlmaWNhbnQsIGdpdmVuIHRoZSByZXN0IG9mIEtBU0FOIG92ZXJoZWFk
+Lgo+IAo+PiBCVUc6IEtBU0FOOiBzbGFiLW91dC1vZi1ib3VuZHMgaW4ga21hbGxvY19wYWdlYWxs
+b2Nfb29iX3JpZ2h0KzB4ODgvMHg5MAo+PiBXcml0ZSBvZiBzaXplIDEgYXQgYWRkciBmZmZmZmZj
+MGQ2NGVhMDBhIGJ5IHRhc2sgY2F0LzExNQo+PiAuLi4KPj4gQWxsb2NhdGlvbiBzdGFjayBvZiBw
+YWdlOgo+PiDCoCBzZXRfcGFnZV9zdGFjay5jb25zdHByb3AuMSsweDMwLzB4YzgKPj4gwqAga2Fz
+YW5fYWxsb2NfcGFnZXMrMHgxOC8weDM4Cj4+IMKgIHByZXBfbmV3X3BhZ2UrMHg1Yy8weDE1MAo+
+PiDCoCBnZXRfcGFnZV9mcm9tX2ZyZWVsaXN0KzB4YjhjLzB4MTdjOAo+PiDCoCBfX2FsbG9jX3Bh
+Z2VzX25vZGVtYXNrKzB4MWEwLzB4MTFiMAo+PiDCoCBrbWFsbG9jX29yZGVyKzB4MjgvMHg1OAo+
+PiDCoCBrbWFsbG9jX29yZGVyX3RyYWNlKzB4MjgvMHhlMAo+PiDCoCBrbWFsbG9jX3BhZ2VhbGxv
+Y19vb2JfcmlnaHQrMHgyYy8weDY4Cj4+Cj4+IGIpIElmIHBhZ2UgaXMgZnJlZWQgc3RhdGUsIHRo
+ZW4gaXQgcHJpbnRzIGZyZWUgc3RhY2suCj4+IMKgwqDCoCBJdCBpcyB1c2VmdWwgdG8gZml4IHVw
+IHBhZ2UgdXNlLWFmdGVyLWZyZWUgb3IgZG91YmxlLWZyZWUgaXNzdWUuCj4+Cj4+IEJVRzogS0FT
+QU46IHVzZS1hZnRlci1mcmVlIGluIGttYWxsb2NfcGFnZWFsbG9jX3VhZisweDcwLzB4ODAKPj4g
+V3JpdGUgb2Ygc2l6ZSAxIGF0IGFkZHIgZmZmZmZmYzBkNjUxYzAwMCBieSB0YXNrIGNhdC8xMTUK
+Pj4gLi4uCj4+IEZyZWUgc3RhY2sgb2YgcGFnZToKPj4gwqAga2FzYW5fZnJlZV9wYWdlcysweDY4
+LzB4NzAKPj4gwqAgX19mcmVlX3BhZ2VzX29rKzB4M2MwLzB4MTMyOAo+PiDCoCBfX2ZyZWVfcGFn
+ZXMrMHg1MC8weDc4Cj4+IMKgIGtmcmVlKzB4MWM0LzB4MjUwCj4+IMKgIGttYWxsb2NfcGFnZWFs
+bG9jX3VhZisweDM4LzB4ODAKPj4KPj4gVGhpcyBoYXMgYmVlbiBkaXNjdXNzZWQsIHBsZWFzZSBy
+ZWZlciBiZWxvdyBsaW5rLgo+PiBodHRwczovL2J1Z3ppbGxhLmtlcm5lbC5vcmcvc2hvd19idWcu
+Y2dpP2lkPTIwMzk2Nwo+IAo+IFRoYXQncyBub3QgYSBkaXNjdXNzaW9uLCBidXQgYSBzaW5nbGUg
+Y29tbWVudCBmcm9tIERtaXRyeSwgd2hpY2ggYnR3IGNvbnRhaW5zICJwcm92aWRlIGFsbG9jICph
+bmQqIGZyZWUgc3RhY2tzIGZvciBpdCIgKCJpdCIgcmVmZXJzIHRvIHBhZ2UsIGVtcGhhc2lzIG1p
+bmUpLiBJdCB3b3VsZCBiZSBuaWNlIGlmIGhlIG9yIG90aGVyIEtBU0FOIGd1eXMgY291bGQgY2xh
+cmlmeS4KPiAKCkZvciBzbGFiIG9iamVjdHMgd2UgbWVtb3JpemUgYm90aCBhbGxvYyBhbmQgZnJl
+ZSBzdGFja3MuIFlvdSdsbCBuZXZlciBrbm93IGluIGFkdmFuY2Ugd2hhdCBpbmZvcm1hdGlvbiB3
+aWxsIGJlIHVzZWZ1bGwKdG8gZml4IGFuIGlzc3VlLCBzbyBpdCB1c3VhbGx5IGJldHRlciB0byBw
+cm92aWRlIG1vcmUgaW5mb3JtYXRpb24uIEkgZG9uJ3QgdGhpbmsgd2Ugc2hvdWxkIGRvIGFueXRo
+aW5nIGRpZmZlcmVudCBmb3IgcGFnZXMuCgpHaXZlbiB0aGF0IHdlIGFscmVhZHkgaGF2ZSB0aGUg
+cGFnZV9vd25lciByZXNwb25zaWJsZSBmb3IgcHJvdmlkaW5nIGFsbG9jL2ZyZWUgc3RhY2tzIGZv
+ciBwYWdlcywgYWxsIHRoYXQgd2Ugc2hvdWxkIGluIEtBU0FOIGRvIGlzIHRvCmVuYWJsZSB0aGUg
+ZmVhdHVyZSBieSBkZWZhdWx0LiBGcmVlIHN0YWNrIHNhdmluZyBzaG91bGQgYmUgZGVjb3VwbGVk
+IGZyb20gZGVidWdfcGFnZWFsbG9jIGludG8gc2VwYXJhdGUgb3B0aW9uIHNvIHRoYXQgaXQgY2Fu
+IGJlIGVuYWJsZWQgCmJ5IEtBU0FOIGFuZC9vciBkZWJ1Z19wYWdlYWxsb2MuCgogCgoKCl9fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVr
+IG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9s
+aXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
