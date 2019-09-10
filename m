@@ -2,92 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1F370AE703
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 11:31:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A0ED7AE740
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Sep 2019 11:44:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Lvsn79zxYnGG4iSDKa5584uvxZ9X8hu04NDHf6ddMk8=; b=RStftiZkZx7/gV
-	1YyeKsHo3kS3Rk6lFC2fSzo8Th+brIWmhIhORN2HLyNjmdSoflUzlOLRiu/K/qjZXflu4tuzLAFNk
-	A7sOlq7qCc2rkcybyqN2VVOdFzSIjXd4kDv76ACxSWu3p4CFDQ6apLzKlogsc1uOZmzRtPIpfPLKX
-	jm9Sd1DYgKKtI83VGwtW7u3XykQgYP8B5X731WQP7BB7SA27M+CpgbxqwK9yQUh/M8lLpYgaab/nZ
-	KdTWFmzfNvK2jeLvt1QUGzgZII6TyWCSizW1+oTZURSLQLHlforqLeGJ+fDIT3s7KC/Wv9Fp3J+bj
-	MFk3TR6DRKxhV3oQ5Sqw==;
+	List-Owner; bh=ie1bfYidOMOgWm2K2NDbDEdeNkXrsnsldcHfcB4dS+M=; b=K2tgdnbjSbCkO9
+	T6+rP5wPotWXh9JJALeUATbCjmig2G4yulovH+IFHxhsfcfl/Tkn6fPFFiRAmgve4b/U6TCQWVWvJ
+	l4x20uknBJORnYq4EFJSdFUQreatWbm8/rbSfv80soaz+L54rJQyHp1DjSrNNSmQ1uU624vOxB0Zs
+	pzGEJkLZ/EB3uxL/Vl35cWys13CN0OgZ71Em+IKRDvR2MzWIEshUQP2B/TqDVd1rgMu8ouT6itP5A
+	V/1fb3z0AULRqZMMkKOaekIeUAChQgpWk3wr6e03H+Wsk+1x3PKdILTG16XDy+zFH+7rfZGuQRXhb
+	w8p/AiFjzcHhqSjlG+8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7cUe-00061y-6y; Tue, 10 Sep 2019 09:31:24 +0000
-Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
+	id 1i7ch3-00017P-Dc; Tue, 10 Sep 2019 09:44:13 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7cUL-0005su-SH
- for linux-mediatek@lists.infradead.org; Tue, 10 Sep 2019 09:31:07 +0000
-Received: by mail-ed1-x542.google.com with SMTP id c19so16354020edy.10
- for <linux-mediatek@lists.infradead.org>; Tue, 10 Sep 2019 02:31:04 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=shutemov-name.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=nPUEYX1NKslohD2E+roi3GND2/I3OUXfvQ3XAcK+/GA=;
- b=SSNNjgPQ1LSHIFhAfZd4y0wYr0+CC4ozBTywesC/p7SttOr6N2R7mXpSTeUG7e5Asp
- r8Y/5rQ+0c4hRlG2zqaksGhlUOxOHvFvcWaPcfWbBQRLfk9F4xEpKsfnIlW6rWvwKohN
- RNGw0IM/rKcv+cvba+nXEbQz0fbZXP6AHWb68cHXdh8ePHUYqx+2OqRBCekHgvlyW+Sw
- P8Vkg+ZokeeLku2jJcT4X/bYAzCp+7R5R7yHqtsOA3sn6/NIShlu4GVTrZyZ9adTF5QC
- J0N4aHa7o44cenXBoTu5Me3EkOwY3YbZwKPp5kN8YgRpX8rQ34t4N+SuVkQb/4NR5Mgv
- w3HA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=nPUEYX1NKslohD2E+roi3GND2/I3OUXfvQ3XAcK+/GA=;
- b=h0rBCqMEWlbtoyCQdSJqRmJRaPq7gs89BUy8j66Fxuop92PP7f5K712wqzSs0y0SYb
- R0kjB8SFH/eed8CMgyM4vjb0bFrGlPqvn81ZtMPOKb23P6eNOE4uFAD/4kEfyPlqb4rg
- /R4x3Yu4YJyeiPoYyZTK1kKGyQKLTdzAo+3jFLJIRo5G3iifu6D+UpXmj44TGVyVsLuM
- +8Qs+r6Ju7IihBzXj/6meKyN8GkkEvSDKWqlo8nJJSIjfZ7Tlfejds5hqFEa+Acvind6
- iDTdh4IPG+U3eVvE5xf/gO6JfDJvOuAJnv+P8ciwVLV93EQWfZSabR/Ezad4XKzPLF4S
- bsJQ==
-X-Gm-Message-State: APjAAAW6nog0tXw53y+P9MHnP1HyhU60ivaRR7qczgVJZIoZSU/DfXCo
- /OyxC85zLAgcDj8T7asPSKQCrikiFBN6iA==
-X-Google-Smtp-Source: APXvYqxCHutpkbRJfLAOgIJs9EabO82Ve9zSCkPCIkSC3X5ZdrOL0QaU2or0dKk75rTzC1h9BCUrgw==
-X-Received: by 2002:a17:906:4f04:: with SMTP id
- t4mr23891798eju.190.1568107863856; 
- Tue, 10 Sep 2019 02:31:03 -0700 (PDT)
-Received: from box.localdomain ([86.57.175.117])
- by smtp.gmail.com with ESMTPSA id u27sm3463898edb.48.2019.09.10.02.31.03
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 10 Sep 2019 02:31:03 -0700 (PDT)
-Received: by box.localdomain (Postfix, from userid 1000)
- id 9F3511009F6; Tue, 10 Sep 2019 12:31:03 +0300 (+03)
-Date: Tue, 10 Sep 2019 12:31:03 +0300
-From: "Kirill A. Shutemov" <kirill@shutemov.name>
-To: Walter Wu <walter-zh.wu@mediatek.com>
+ id 1i7ch0-00016g-5f; Tue, 10 Sep 2019 09:44:11 +0000
+X-UUID: 5cdb99cdf2104538aaf216cc49e2ba73-20190910
+X-UUID: 5cdb99cdf2104538aaf216cc49e2ba73-20190910
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2069902611; Tue, 10 Sep 2019 01:44:00 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 02:43:59 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Sep 2019 17:43:58 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 10 Sep 2019 17:43:58 +0800
+Message-ID: <1568108638.24886.7.camel@mtksdccf07>
 Subject: Re: [PATCH v2 1/2] mm/page_ext: support to record the last stack of
  page
-Message-ID: <20190910093103.4cmqk4semlhgpmle@box.shutemov.name>
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: "Kirill A. Shutemov" <kirill@shutemov.name>
+Date: Tue, 10 Sep 2019 17:43:58 +0800
+In-Reply-To: <20190910093103.4cmqk4semlhgpmle@box.shutemov.name>
 References: <20190909085339.25350-1-walter-zh.wu@mediatek.com>
  <36b5a8e0-2783-4c0e-4fc7-78ea652ba475@redhat.com>
  <1568077669.24886.3.camel@mtksdccf07>
+ <20190910093103.4cmqk4semlhgpmle@box.shutemov.name>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1568077669.24886.3.camel@mtksdccf07>
-User-Agent: NeoMutt/20180716
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_023105_920466_63166897 
-X-CRM114-Status: GOOD (  19.07  )
+X-CRM114-CacheID: sfid-20190910_024410_221143_E089DE6C 
+X-CRM114-Status: GOOD (  19.52  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:542 listed in]
- [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -115,47 +92,54 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Sep 10, 2019 at 09:07:49AM +0800, Walter Wu wrote:
-> On Mon, 2019-09-09 at 12:57 +0200, David Hildenbrand wrote:
-> > On 09.09.19 10:53, Walter Wu wrote:
-> > > KASAN will record last stack of page in order to help programmer
-> > > to see memory corruption caused by page.
+On Tue, 2019-09-10 at 12:31 +0300, Kirill A. Shutemov wrote:
+> On Tue, Sep 10, 2019 at 09:07:49AM +0800, Walter Wu wrote:
+> > On Mon, 2019-09-09 at 12:57 +0200, David Hildenbrand wrote:
+> > > On 09.09.19 10:53, Walter Wu wrote:
+> > > > KASAN will record last stack of page in order to help programmer
+> > > > to see memory corruption caused by page.
+> > > > 
+> > > > What is difference between page_owner and our patch?
+> > > > page_owner records alloc stack of page, but our patch is to record
+> > > > last stack(it may be alloc or free stack of page).
+> > > > 
+> > > > Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
+> > > > ---
+> > > >  mm/page_ext.c | 3 +++
+> > > >  1 file changed, 3 insertions(+)
+> > > > 
+> > > > diff --git a/mm/page_ext.c b/mm/page_ext.c
+> > > > index 5f5769c7db3b..7ca33dcd9ffa 100644
+> > > > --- a/mm/page_ext.c
+> > > > +++ b/mm/page_ext.c
+> > > > @@ -65,6 +65,9 @@ static struct page_ext_operations *page_ext_ops[] = {
+> > > >  #if defined(CONFIG_IDLE_PAGE_TRACKING) && !defined(CONFIG_64BIT)
+> > > >  	&page_idle_ops,
+> > > >  #endif
+> > > > +#ifdef CONFIG_KASAN
+> > > > +	&page_stack_ops,
+> > > > +#endif
+> > > >  };
+> > > >  
+> > > >  static unsigned long total_usage;
+> > > > 
 > > > 
-> > > What is difference between page_owner and our patch?
-> > > page_owner records alloc stack of page, but our patch is to record
-> > > last stack(it may be alloc or free stack of page).
+> > > Are you sure this patch compiles?
 > > > 
-> > > Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-> > > ---
-> > >  mm/page_ext.c | 3 +++
-> > >  1 file changed, 3 insertions(+)
-> > > 
-> > > diff --git a/mm/page_ext.c b/mm/page_ext.c
-> > > index 5f5769c7db3b..7ca33dcd9ffa 100644
-> > > --- a/mm/page_ext.c
-> > > +++ b/mm/page_ext.c
-> > > @@ -65,6 +65,9 @@ static struct page_ext_operations *page_ext_ops[] = {
-> > >  #if defined(CONFIG_IDLE_PAGE_TRACKING) && !defined(CONFIG_64BIT)
-> > >  	&page_idle_ops,
-> > >  #endif
-> > > +#ifdef CONFIG_KASAN
-> > > +	&page_stack_ops,
-> > > +#endif
-> > >  };
-> > >  
-> > >  static unsigned long total_usage;
-> > > 
-> > 
-> > Are you sure this patch compiles?
-> > 
-> This is patchsets, it need another patch2.
-> We have verified it by running KASAN UT on Qemu.
+> > This is patchsets, it need another patch2.
+> > We have verified it by running KASAN UT on Qemu.
+> 
+> Any patchset must be bisectable: do not break anything in the middle of
+> patchset.
+> 
 
-Any patchset must be bisectable: do not break anything in the middle of
-patchset.
+Thanks your reminder.
+I should explain complete message at commit log.
+Our patchsets is below:
+https://lkml.org/lkml/2019/9/9/104
+https://lkml.org/lkml/2019/9/9/123
 
--- 
- Kirill A. Shutemov
+
 
 _______________________________________________
 Linux-mediatek mailing list
