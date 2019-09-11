@@ -2,77 +2,73 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CA6FCB00DF
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 18:06:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 38799B02B1
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 19:28:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=diaZInmwibf20gCre9otohRhxj7Dqtx9DETm9oqOfBE=; b=D+txsOstI1TuwU
-	UV+rrpszk9q2vk2VftSVBKuy9SHmMZWFsoZCby9tsNxPB5FU5n2VqYUMyyUaLsjIrIMSrCI5k+VRv
-	EqixiERJOhUdgxJoTv4PSQAgq1zO8bVeHNA6zOVrsORhCrg/lmoEM1hDytk0CazaHDk772zyf36Qx
-	ELSbaVXSlLNWmOzzUva2d2QrwWYLoKXRhkex64ThOG96lczYuE0JRvugqgKPN7mICBMZTs9cW2y2N
-	1wzB2DSD/tUjIk2mDIKJTQucY0BGzmK4sl+ZgHd5ReeJrOto2osRmWbQr2IZ22Oiw9QkQocTVmdY3
-	ztqxmxX0MecSNgNWqWDw==;
+	List-Owner; bh=tRvEHo9s16I4qdII4S7uVLXPPRnT+trA1GYT0fYZ5Sc=; b=C4+Mfwaf+G/Nrk
+	Px9XabycdB+a5Z6HCEM+itu7kgkjuMzqWf3B/1ilki9lOd2GUj6su+JRyThaFpfHnIrbSKwJlwzLE
+	IPfU+JV58AbFbH7+8LkqujvXSgGKwdLoE6/65GsCykiNipLXbozI97Ar2l0lm/NvriAHHlAULS3W/
+	uPJ3LBvKH2sjgyQLboeksARxAk6WMMD43K/MqyF3MTN6eb60e2L+74UQaq0VZiGk2pbYoAo1JvYA9
+	D6Nb36+T4QHXsAi0MyelUpK83yK3CN0CdOi3K7VVnqqGFPCE/eppES9u+eDIQK5joIptboksjZWp8
+	a7itf4cISzc8spiymS7w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i858N-0002eC-Fl; Wed, 11 Sep 2019 16:06:19 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1i86PO-0000Xk-LY; Wed, 11 Sep 2019 17:27:59 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i858J-0002c7-Da
- for linux-mediatek@lists.infradead.org; Wed, 11 Sep 2019 16:06:16 +0000
-Received: by mail-wm1-x343.google.com with SMTP id t3so144947wmj.1
- for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 09:06:14 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=FJJVoiOf8d1fBVlmA2WPx0ovMbhLVMUnVRYpkmmId2Y=;
- b=QWNGM8sNd2DIqJUVU1OLR1sxZVnOhxhVhHWu6sn3G/HkbQD0a3Uet0ziDi173OygoS
- WcCdb71vVpMMGSMyODgDg7v3IKgDf+jcLohmqJhvxgRITZz4nTjg9kVPY79Dko6yGRwI
- 7UB4qyMqR7ARnOknOJewxCb4y85Ikwb+PhhkX+/oC/E4rQZpxLeGuMO8CJ0bYDynNZAm
- te2Ui37mkNIuuDsWoWjiAyozjSyhLVPQDxNAu4pBSuumnFcQXJUuqopd6dCi8EcH5BuY
- CIK5/sU5mY617ien2evGACtTIB+KI8R4dlzQ405tx5mrGMqpJZIlUTXC+9Q+34LJuYnC
- KOCA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=FJJVoiOf8d1fBVlmA2WPx0ovMbhLVMUnVRYpkmmId2Y=;
- b=pOG/ks1yq+unHMSXJhV4TFHHBqFO9YDTit3ehm8zTfgsHo46+ZqGF0Ptw0WAhhTr07
- MSnAYj94lTdQcmcq69cwk2pVMQJVh7iZR/QxqxdmvCboNEAYqAnmmMGM+frdOwHO9hns
- sh30KMYMWkCJ05mQfp7MHAhEcsD+5yYc1ttUelqGdkVqQlKz2fqoFB6oGXMToXybb/nd
- dyG3nkH0gIReV8mxu9Xvvz7bRFFjbUOTmNro3LfaunitrNYQswggL04R8T09UrW2iIYt
- 5CdWyBH7+dB8EjIZwOLqk5fQMuWVtnMya9xp/iW1cy9qZrm+vAM+DouX3z5bQqJdvFXE
- 8NEw==
-X-Gm-Message-State: APjAAAW279gbh/YbaUzA16TLuJ/N3FSCaabSeyG+Y/Eq5bp9Brc8KJWw
- bkcaI84aQwWc0SMlWEGAe0xOqixbAoMhQNQMfLK5yw==
-X-Google-Smtp-Source: APXvYqxfo4OMflbhF8NmSJjJ2Gu/Ff2Dfhm+/6sbn8+WMGkQs5//gS6kM0XKRfWRoFsRG4rHItMc0Gt2atTI93osxFs=
-X-Received: by 2002:a1c:7a05:: with SMTP id v5mr4328922wmc.173.1568217973514; 
- Wed, 11 Sep 2019 09:06:13 -0700 (PDT)
+ id 1i86PG-0000Ta-2r
+ for linux-mediatek@lists.infradead.org; Wed, 11 Sep 2019 17:27:54 +0000
+Received: from mail-wr1-f51.google.com (mail-wr1-f51.google.com
+ [209.85.221.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id C895E20872
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 17:27:47 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1568222868;
+ bh=avmaTCGrf/lbFN8qYmfH/0IuryDuXNTXcd+Ii7NLHqM=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=UqKNTtbh3Cb1I2mku0SqTtgVtOpxoe4iz15c1OPEZUt79sIqqCQ7YylE1IEfb4K1O
+ 0T3IL+gm8mHrascQNABkSeLI5Vx0o9HOa9tsmMZGctnutgxvcejngJiu0INlkLMl54
+ CvhIMgdSF5w5WSDweUcoSZZ/AJy2lUjJiTgpSzCc=
+Received: by mail-wr1-f51.google.com with SMTP id a11so15740544wrx.1
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 10:27:47 -0700 (PDT)
+X-Gm-Message-State: APjAAAUtA8p7ceparRFCw/eAW4RFtIRQQT2SsLVERdUZOwcZUmzePseT
+ RC6IGpABXfjQDTzW7LlT3YEW63TswDZiaWsKt0I=
+X-Google-Smtp-Source: APXvYqyxQlQ0rE1nDNnXUWYV1saPJ4Y2RZ08uvicqCGXL1zEBlOw0R8w4NxllP0UAo/DIWobNk4NNw8nuCp+ukVevHM=
+X-Received: by 2002:a5d:500b:: with SMTP id e11mr27169535wrt.285.1568222866298; 
+ Wed, 11 Sep 2019 10:27:46 -0700 (PDT)
 MIME-Version: 1.0
-References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
- <CALAqxLWLStTqGx5DAvUKOYupdgK-doOxRF5Z_Us=L5vnFaa=7w@mail.gmail.com>
- <cb451591-88ad-f1b3-b654-cea86ae11cac@microchip.com>
-In-Reply-To: <cb451591-88ad-f1b3-b654-cea86ae11cac@microchip.com>
-From: John Stultz <john.stultz@linaro.org>
-Date: Wed, 11 Sep 2019 09:06:01 -0700
-Message-ID: <CALAqxLXRVc-K5q=me1=5tA0XYT7ncrArSoD+hq=JOGWVF9-7SQ@mail.gmail.com>
-Subject: Re: [PATCH 0/7] add support for clocksource/clockevent DT selection
-To: Claudiu Beznea <Claudiu.Beznea@microchip.com>
+References: <1567662796-25508-1-git-send-email-light.hsieh@mediatek.com>
+ <1567663210.1324.3.camel@mtkswgap22>
+ <CACRpkdY7Vpy-fBHSXnjby0kK_tDWBtZaCwjCGxFy4HWeJ1FgEg@mail.gmail.com>
+In-Reply-To: <CACRpkdY7Vpy-fBHSXnjby0kK_tDWBtZaCwjCGxFy4HWeJ1FgEg@mail.gmail.com>
+From: Sean Wang <sean.wang@kernel.org>
+Date: Wed, 11 Sep 2019 10:27:34 -0700
+X-Gmail-Original-Message-ID: <CAGp9Lzqj_AwXL7r0nxh=9G5o7P4YNJaugCAm_ZpJyBoPZu9BtQ@mail.gmail.com>
+Message-ID: <CAGp9Lzqj_AwXL7r0nxh=9G5o7P4YNJaugCAm_ZpJyBoPZu9BtQ@mail.gmail.com>
+Subject: Re: [PATCH v2 1/5] pinctrl: mediatek: Check gpio pin number and use
+ binary search in mtk_hw_pin_field_lookup()
+To: Linus Walleij <linus.walleij@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_090615_493361_0923725A 
-X-CRM114-Status: GOOD (  21.15  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190911_102750_156855_2C3F3785 
+X-CRM114-Status: UNSURE (   8.30  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.7 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -80,6 +76,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,108 +88,36 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: tmaimon77@gmail.com, Linus Walleij <linus.walleij@linaro.org>,
- nsekhar@ti.com, guoren@kernel.org, linux-stm32@st-md-mailman.stormreply.com,
- =?UTF-8?Q?Heiko_St=C3=BCbner?= <heiko@sntech.de>,
- linux-samsung-soc@vger.kernel.org,
- "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
- Kevin Hilman <khilman@baylibre.com>, Ludovic.Desroches@microchip.com,
- linux-imx@nxp.com,
- =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
- uclinux-h8-devel@lists.sourceforge.jp, Marc Zyngier <marc.zyngier@arm.com>,
- Sascha Hauer <s.hauer@pengutronix.de>, linux-unisoc@lists.infradead.org,
- =?UTF-8?Q?Krzysztof_Ha=C5=82asa?= <khalasa@piap.pl>,
- Thomas Gleixner <tglx@linutronix.de>, sbranden@broadcom.com,
- lkml <linux-kernel@vger.kernel.org>, Ralf Baechle <ralf@linux-mips.org>,
- Paul Burton <paul.burton@mips.com>, kernel@pengutronix.de,
- Mark Rutland <mark.rutland@arm.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, jhogan@kernel.org,
- palmer@sifive.com, eric@anholt.net, Thierry Reding <thierry.reding@gmail.com>,
- Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
- Yoshinori Sato <ysato@users.sourceforge.jp>, zhang.lyra@gmail.com,
- Daniel Lezcano <daniel.lezcano@linaro.org>, Jon Hunter <jonathanh@nvidia.com>,
- bgolaszewski@baylibre.com, Kukjin Kim <kgene@kernel.org>,
- alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org,
- Sudeep Holla <sudeep.holla@arm.com>, Florian Fainelli <f.fainelli@gmail.com>,
- linux-rpi-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>, baohua@kernel.org,
- kaloz@openwrt.org, Stephen Boyd <sboyd@kernel.org>, patrice.chotard@st.com,
- wahrenst@gmx.net, mcoquelin.stm32@gmail.com,
- Neil Armstrong <narmstrong@baylibre.com>, linux-tegra@vger.kernel.org,
- Fabio Estevam <festevam@gmail.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Benjamin Fair <benjaminfair@google.com>, shc_work@mail.ru,
- Krzysztof Kozlowski <krzk@kernel.org>, Nancy Yuen <yuenn@google.com>,
- Chen-Yu Tsai <wens@csie.org>, bcm-kernel-feedback-list@broadcom.com,
- orsonzhai@gmail.com, linux-snps-arc@lists.infradead.org, rjui@broadcom.com,
- vz@mleia.com, john@phrozen.org, tali.perry1@gmail.com, avifishman70@gmail.com,
- Patrick Venture <venture@google.com>, lftan@altera.com, linux-oxnas@groups.io,
- Shawn Guo <shawnguo@kernel.org>, afaerber@suse.de,
- Baruch Siach <baruch@tkos.co.il>, maxime.ripard@bootlin.com,
- Liviu Dudau <liviu.dudau@arm.com>, linux-mips@vger.kernel.org,
- linux-riscv@lists.infradead.org, openbmc@lists.ozlabs.org,
- Russell King - ARM Linux <linux@armlinux.org.uk>,
- Andy Gross <agross@kernel.org>, slemieux.tyco@gmail.com,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, aou@eecs.berkeley.edu,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Santosh Shilimkar <ssantosh@kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Michal Simek <monstr@monstr.eu>,
- Baolin Wang <baolin.wang@linaro.org>, vgupta@synopsys.com,
- Nicolas.Ferre@microchip.com, linux@prisktech.co.nz,
- nios2-dev@lists.rocketboards.org
+Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-mediatek@lists.infradead.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Light Hsieh <light.hsieh@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Sep 10, 2019 at 11:52 PM <Claudiu.Beznea@microchip.com> wrote:
-> On 10.09.2019 19:05, John Stultz wrote:
-> > External E-Mail
-> > On Tue, Sep 10, 2019 at 6:47 AM Claudiu Beznea
-> > <claudiu.beznea@microchip.com> wrote:
-> >>
-> >> This series adds support to permit the selection of clocksource/clockevent
-> >> via DT.
-> >
-> > Sorry about this, but could you try to include more of a rational for
-> > *why* this would be useful in your cover-letter/commit messages?
-> >
+Hi Linus,
+
+That looks OK to me too
+
+Acked-by: Sean Wang <sean.wang@kernel.org>
+
+On Wed, Sep 11, 2019 at 2:29 AM Linus Walleij <linus.walleij@linaro.org> wrote:
 >
-> Sorry for not being to clear in the cover letter.
+> On Thu, Sep 5, 2019 at 7:00 AM Light Hsieh <light.hsieh@mediatek.com> wrote:
 >
-> The case I am trying to solve here is as follows:
-> The timer hardware for which I publish a driver at [1] cannot work at the
-> same time as a clocksource and clockevent. On some of our platforms we have
-> more than one such a timer. So we could use one hardware resource as
-> clocksource and one as clockevent but not one for both.
-> Due to this, I proposed in the driver at [1] to have 1st probed hardware to
-> work as clocksource and the 2nd one to work as clockevent.
-[snip]
-> Due to this Daniel proposed to have an unified mechanism for this scenario,
-> see [2], (something like what I proposed in this series), such that to have
-> a determinism b/w the function that the hardware resources would behave
-> (either clocksource or clockevent or both).
-
-Thanks for the additional explanation! I'd suggest adding something
-like it to the commit logs for next time.
-
-Personally, I tend to think of DT bindings as a big harry ABI, and as
-such avoid it as much as possible. :)
-
-I'd probably favor driver tweaks to ensure the hardware only gets
-registered once for each, using a minimal DT compatible or flag on the
-hardware to better describe the underlying hardware quirk that keeps
-it from being usable for both clocksource and clockevent usage.
-
-That way the DT sticks to accurately describing hardware, instead of
-system/software-abstraction configuration details that just apply for
-Linux.
-
-But, again, I'm not really a DT person, so I'll defer to Rob and Daniel.
-
-thanks
--john
+> > v2 is the same as v1 except that commit message is corrected according
+> > to Linus' comment for v1:
+> >
+> > 1. remove Change-Id lines
+> > 2. correct sysfs as debugfs
+>
+> Looks OK to me, but i need Sean's review on this, Sean?
+>
+> Yours,
+> Linus Walleij
 
 _______________________________________________
 Linux-mediatek mailing list
