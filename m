@@ -2,68 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7FA30AF820
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 10:39:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DB610AF8A8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 11:15:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=OIkkhuRjJE/0f8shAeTmVEA6RWnQrqwdQFHqOqT2bUk=; b=UqXq24vyLGebeg
-	gFA6ReJl2LeHK160JX/VWJ9qrEpVc1UDjoz+HXk4MU/rIbQx057bLkBqB4RKPDjH1P96xWtTptD7+
-	UzjHzKsRsCWXyYmzigErYeCYjIGH4lRyrGKva1aeBPfLikp0E4C+6wIU8z5tO+nRq0w6cTgFyJUe3
-	+rTdrIu3PidTWq1JRwjU5cpJkjq97Nh2ckHTC/2ShKHBWuzwl/vyl21NsOzqeLG3YJ+Wg5gweWbkn
-	lJUzeWhTj3ofV24SYNfei4yfcIJVpOUbgLAPZn4cRkiopI6ylQEOKMuxvpEtnNCtld+SkImOfeYD3
-	u803XkpbyVDjx9VQrdCQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=FazzYJFYIMMmP3+fn5ZcLMzBFq9HJCuXpAG/Z1PNPSM=; b=QHFHnc1DjjqYRB
+	ItUjtnJPQYUQZuAbN3C5w1gjXv16Pe1hBmxqMSWpHX8SZcpQNRatMvbwcD90jDaKF062zplTasW7N
+	j7VyKFnC78yKrxuMkDP9cEQY1ZcltVI/hW6nXANlmLYbvOX4rTUFLV8g0lpu4nVClSrjBS4arVw70
+	YgYvG+UgcuTNQ8e3hP3wlngKSZLAp966VVFnVF+oYNt5/ENPfJuLDSiIPZdZdh42MZ43mJoV10EsS
+	zuQ8MvDtI2pR1RakA+IK21oaRvUdUJ/qhvSZDkrqoXqzE4aiflg+UUk27eQ0GJEYQ+B83CFAyY3bx
+	GqOzYJpVVUtSHHhgOreQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7yA6-0003Sy-A4; Wed, 11 Sep 2019 08:39:38 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i7yj1-0008Fl-Bd; Wed, 11 Sep 2019 09:15:43 +0000
+Received: from relay11.mail.gandi.net ([217.70.178.231])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7yA2-0003SF-Ab; Wed, 11 Sep 2019 08:39:35 +0000
-X-UUID: 58ddb690ac584148baa79e4ab800ce74-20190911
-X-UUID: 58ddb690ac584148baa79e4ab800ce74-20190911
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1633767191; Wed, 11 Sep 2019 00:39:25 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Sep 2019 01:39:25 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Sep 2019 16:39:23 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 11 Sep 2019 16:39:23 +0800
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
- <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, Andrew Morton <akpm@linux-foundation.org>, "Martin
- Schwidefsky" <schwidefsky@de.ibm.com>, Andrey Konovalov
- <andreyknvl@google.com>, Qian Cai <cai@lca.pw>, Vlastimil Babka
- <vbabka@suse.cz>, Arnd Bergmann <arnd@arndb.de>
-Subject: [PATCH v3] mm/kasan: dump alloc and free stack for page allocator
-Date: Wed, 11 Sep 2019 16:39:21 +0800
-Message-ID: <20190911083921.4158-1-walter-zh.wu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ id 1i7yir-0008E7-2D; Wed, 11 Sep 2019 09:15:35 +0000
+Received: from localhost (unknown [148.69.85.38])
+ (Authenticated sender: alexandre.belloni@bootlin.com)
+ by relay11.mail.gandi.net (Postfix) with ESMTPSA id 1EE6D10000D;
+ Wed, 11 Sep 2019 09:15:02 +0000 (UTC)
+Date: Wed, 11 Sep 2019 11:14:58 +0200
+From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH 4/7] dt-bindings: chosen: Add clocksource and clockevent
+ selection
+Message-ID: <20190911091458.GD21254@piout.net>
+References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
+ <1568123236-767-5-git-send-email-claudiu.beznea@microchip.com>
+ <81da473f-54d7-2a00-61ec-9351cdfcaaf3@baylibre.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <81da473f-54d7-2a00-61ec-9351cdfcaaf3@baylibre.com>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_013934_373980_AADAD64A 
-X-CRM114-Status: GOOD (  11.86  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190911_021533_410920_C53D0BC3 
+X-CRM114-Status: GOOD (  17.12  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.178.231 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,105 +62,119 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: tmaimon77@gmail.com, linus.walleij@linaro.org, nsekhar@ti.com,
+ guoren@kernel.org, linux-stm32@st-md-mailman.stormreply.com, heiko@sntech.de,
+ linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
+ khilman@baylibre.com, ludovic.desroches@microchip.com, linux-imx@nxp.com,
+ u.kleine-koenig@pengutronix.de, uclinux-h8-devel@lists.sourceforge.jp,
+ marc.zyngier@arm.com, s.hauer@pengutronix.de, linux-unisoc@lists.infradead.org,
+ khalasa@piap.pl, tglx@linutronix.de, sbranden@broadcom.com,
+ linux-kernel@vger.kernel.org, ralf@linux-mips.org, paul.burton@mips.com,
+ kernel@pengutronix.de, Claudiu Beznea <claudiu.beznea@microchip.com>,
+ mark.rutland@arm.com, jhogan@kernel.org, palmer@sifive.com, eric@anholt.net,
+ thierry.reding@gmail.com, manivannan.sadhasivam@linaro.org,
+ ysato@users.sourceforge.jp, zhang.lyra@gmail.com, daniel.lezcano@linaro.org,
+ jonathanh@nvidia.com, bgolaszewski@baylibre.com, kgene@kernel.org,
+ alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org, sudeep.holla@arm.com,
+ f.fainelli@gmail.com, john.stultz@linaro.org,
+ linux-rpi-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, baohua@kernel.org, kaloz@openwrt.org,
+ sboyd@kernel.org, patrice.chotard@st.com, wahrenst@gmx.net,
+ mcoquelin.stm32@gmail.com, linux-tegra@vger.kernel.org, festevam@gmail.com,
+ lorenzo.pieralisi@arm.com, benjaminfair@google.com, shc_work@mail.ru,
+ krzk@kernel.org, yuenn@google.com, wens@csie.org,
+ bcm-kernel-feedback-list@broadcom.com, orsonzhai@gmail.com,
+ linux-snps-arc@lists.infradead.org, rjui@broadcom.com, vz@mleia.com,
+ john@phrozen.org, tali.perry1@gmail.com, avifishman70@gmail.com,
+ venture@google.com, lftan@altera.com, linux-oxnas@groups.io,
+ shawnguo@kernel.org, afaerber@suse.de, baruch@tkos.co.il,
+ maxime.ripard@bootlin.com, liviu.dudau@arm.com, linux-mips@vger.kernel.org,
+ linux-riscv@lists.infradead.org, openbmc@lists.ozlabs.org,
+ linux@armlinux.org.uk, agross@kernel.org, slemieux.tyco@gmail.com,
+ devicetree@vger.kernel.org, aou@eecs.berkeley.edu, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, ssantosh@kernel.org,
+ matthias.bgg@gmail.com, monstr@monstr.eu, baolin.wang@linaro.org,
+ vgupta@synopsys.com, nicolas.ferre@microchip.com, linux@prisktech.co.nz,
+ nios2-dev@lists.rocketboards.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch is KASAN's report adds the alloc/free stack for page allocator
-in order to help programmer to see memory corruption caused by the page.
+On 11/09/2019 09:34:27+0200, Neil Armstrong wrote:
+> Hi,
+> 
+> On 10/09/2019 15:47, Claudiu Beznea wrote:
+> > From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+> > 
+> > Some timer drivers may behave either as clocksource or clockevent
+> > or both. Until now, in case of platforms with multiple hardware
+> > resources of the same type, the drivers were chosing the first
+> > registered hardware resource as clocksource/clockevent and the
+> > next one as clockevent/clocksource. Other were using different
+> > compatibles (one for each functionality, although its about the
+> > same hardware). Add DT bindings to be able to choose the
+> > functionality of a timer.
+> > 
+> > Signed-off-by: Alexandre Belloni <alexandre.belloni@bootlin.com>
+> > Signed-off-by: Claudiu Beznea <claudiu.beznea@microchip.com>
+> > ---
+> >  Documentation/devicetree/bindings/chosen.txt | 20 ++++++++++++++++++++
+> >  1 file changed, 20 insertions(+)
+> > 
+> > diff --git a/Documentation/devicetree/bindings/chosen.txt b/Documentation/devicetree/bindings/chosen.txt
+> > index 45e79172a646..aad3034cdbdf 100644
+> > --- a/Documentation/devicetree/bindings/chosen.txt
+> > +++ b/Documentation/devicetree/bindings/chosen.txt
+> > @@ -135,3 +135,23 @@ e.g.
+> >  		linux,initrd-end = <0x82800000>;
+> >  	};
+> >  };
+> > +
+> > +linux,clocksource and linux,clockevent
+> > +--------------------------------------
+> > +
+> > +Those nodes have a timer property. This property is a phandle to the timer to be
+> > +chosen as the clocksource or clockevent. This is only useful when the platform
+> > +has multiple identical timers and it is not possible to let linux make the
+> > +correct choice.
+> > +
+> > +/ {
+> > +	chosen {
+> > +		linux,clocksource {
+> > +			timer = <&timer0>;
+> > +		};
+> > +
+> > +		linux,clockevent {
+> > +			timer = <&timer1>;
+> > +		};
+> > +	};
+> > +};
+> > 
+> 
+> Why not in aliases ?
+> 
+> aliases {
+>     clocksource0 = &timer0;
+>     clockevent0 = &timer1;
+> };
+> 
+> since we can have multiple of each, we should not limit ourselves to 1 clkevent
+> and 1 clksource.
+> 
+> In the aliases case, each driver would expose both capabilities, and the core would select
+> what to enable.
+> 
 
-By default, KASAN doesn't record alloc or free stack for page allocator.
-It is difficult to fix up the page use-after-free or double-free issue.
+For extendability, you need nodes for that because at some point, you
+may need to also be able to select the timer frequency. You can't do
+that with an alias.
 
-We add the following changing:
-1) KASAN enable PAGE_OWNER by default to get the alloc stack of the page.
-2) Add new feature option to get the free stack of the page.
 
-The new feature KASAN_DUMP_PAGE depends on DEBUG_PAGEALLOC, it will help
-to record free stack of the page, it is very helpful for solving the page
-use-after-free or double-free issue.
-
-When KASAN_DUMP_PAGE is enabled then KASAN's report will show the last
-alloc and free stack of the page, it should be:
-
-BUG: KASAN: use-after-free in kmalloc_pagealloc_uaf+0x70/0x80
-Write of size 1 at addr ffffffc0d60e4000 by task cat/115
-...
- prep_new_page+0x1c8/0x218
- get_page_from_freelist+0x1ba0/0x28d0
- __alloc_pages_nodemask+0x1d4/0x1978
- kmalloc_order+0x28/0x58
- kmalloc_order_trace+0x28/0xe0
- kmalloc_pagealloc_uaf+0x2c/0x80
-page last free stack trace:
- __free_pages_ok+0x116c/0x1630
- __free_pages+0x50/0x78
- kfree+0x1c4/0x250
- kmalloc_pagealloc_uaf+0x38/0x80
-
-Changes since v1:
-- slim page_owner and move it into kasan
-- enable the feature by default
-
-Changes since v2:
-- enable PAGE_OWNER by default
-- use DEBUG_PAGEALLOC to get page information
-
-cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
-cc: Vlastimil Babka <vbabka@suse.cz>
-cc: Andrey Konovalov <andreyknvl@google.com>
-Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
----
- lib/Kconfig.kasan | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
-
-diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
-index 4fafba1a923b..4d59458c0c5a 100644
---- a/lib/Kconfig.kasan
-+++ b/lib/Kconfig.kasan
-@@ -41,6 +41,7 @@ config KASAN_GENERIC
- 	select SLUB_DEBUG if SLUB
- 	select CONSTRUCTORS
- 	select STACKDEPOT
-+	select PAGER_OWNER
- 	help
- 	  Enables generic KASAN mode.
- 	  Supported in both GCC and Clang. With GCC it requires version 4.9.2
-@@ -63,6 +64,7 @@ config KASAN_SW_TAGS
- 	select SLUB_DEBUG if SLUB
- 	select CONSTRUCTORS
- 	select STACKDEPOT
-+	select PAGER_OWNER
- 	help
- 	  Enables software tag-based KASAN mode.
- 	  This mode requires Top Byte Ignore support by the CPU and therefore
-@@ -135,6 +137,19 @@ config KASAN_S390_4_LEVEL_PAGING
- 	  to 3TB of RAM with KASan enabled). This options allows to force
- 	  4-level paging instead.
- 
-+config KASAN_DUMP_PAGE
-+	bool "Dump the last allocation and freeing stack of the page"
-+	depends on KASAN
-+	select DEBUG_PAGEALLOC
-+	help
-+	  By default, KASAN enable PAGE_OWNER only to record alloc stack
-+	  for page allocator. It is difficult to fix up page use-after-free
-+	  or double-free issue.
-+	  This feature depends on DEBUG_PAGEALLOC, it will extra record
-+	  free stack of page. It is very helpful for solving the page
-+	  use-after-free or double-free issue.
-+	  This option will have a small memory overhead.
-+
- config TEST_KASAN
- 	tristate "Module for testing KASAN for bug detection"
- 	depends on m && KASAN
 -- 
-2.18.0
-
+Alexandre Belloni, Bootlin
+Embedded Linux and Kernel engineering
+https://bootlin.com
 
 _______________________________________________
 Linux-mediatek mailing list
