@@ -2,66 +2,96 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 055E7B02D4
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 19:42:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C933BB03D4
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 20:45:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SzCF1X2eP6ZyHQed7fuOm7VhqW2ZZUclGnkA+mD9zxs=; b=NBQI8JzFBZ/sMB
-	D2mSo7xrqu+S6PIQz7sops0okwIdhTHqC/8QeFmSLBQQ/fu8rwUf6sbnlHT3GqWgBk/2i9Aji5/UC
-	QMtl6rIVvd6X4Dn4gCMR4cBNIjMV6XjnYKzvxwQ/XP/7BDN2tVakulzfjf2JOELMuRMVQCe5J3I0U
-	Bdb4qXQT1Gnu/1afJmvzSCpSfDdp6FGB8rXmsqBVOpeTI9ntP48FWPvfHjaRhKcwGKCkxZTD2d13R
-	LTR7o9aNOrt0WB4sxjBcyct3kBTXi4mfgu+T6eeXZ9qomrbgbRiMPs/ynnAY43lduYmn7hkWZ+qjX
-	BggnxXv1A09pI1a5pRLQ==;
+	List-Owner; bh=r1HqIBTPKmTxxx1qOyrNvQ+FwEDADMVENG0dlTh2lHw=; b=YrGu/Jpx8Yxv8S
+	tKKMCWt9/eU2kSPjFz5XnhnRe+NlF8LfoF0Oz02529GsDXVjVcKN8VGszIqiLxGplGSIJOpuURWU4
+	N3YOpVERoopgYHO2Oqc4KCw+c3LNtBKwQItGVnTABOTVMy9fug6zZtlzuM1YtH98Bo8nAFO2FNJcO
+	3hkoc78R3h8REhn+cfy2UVRUlijvUOovrHnTE/3PtuYO9GdiqABKQeN29gCtQgWQF4OFS3M6tXUtq
+	6Lo/UVhU8jDvB6EOfCMwRToHtl1V92rup+OHWkB7c/xthmimC/0mvXKQj0F9nWFNAwmekF4BMP1rD
+	8G4Ywos2C12CmLlRAe0A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i86cu-00059r-Ix; Wed, 11 Sep 2019 17:41:56 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i87c1-0003dS-Ui; Wed, 11 Sep 2019 18:45:06 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i86ce-0004zb-O2; Wed, 11 Sep 2019 17:41:42 +0000
-X-UUID: 9a65ee385c7f42cc9b54d3a0176fef8a-20190911
-X-UUID: 9a65ee385c7f42cc9b54d3a0176fef8a-20190911
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <frederic.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 258830448; Wed, 11 Sep 2019 09:41:27 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Sep 2019 10:41:26 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 01:41:11 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 12 Sep 2019 01:41:11 +0800
-Message-ID: <1568223671.19171.12.camel@mtksdccf07>
-Subject: Re: [RFC PATCH V3 4/5] platform: mtk-isp: Add Mediatek DIP driver
-From: Frederic Chen <frederic.chen@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Thu, 12 Sep 2019 01:41:11 +0800
-In-Reply-To: <CAAFQd5DEn_N26M7B4X7fKHVA=XBtWJN=Y4VF7D9B=TkgXf_i+Q@mail.gmail.com>
-References: <20190909192244.9367-1-frederic.chen@mediatek.com>
- <20190909192244.9367-5-frederic.chen@mediatek.com>
- <CAAFQd5DEn_N26M7B4X7fKHVA=XBtWJN=Y4VF7D9B=TkgXf_i+Q@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i87bt-0003cL-Cu; Wed, 11 Sep 2019 18:45:00 +0000
+Received: by mail-pg1-x543.google.com with SMTP id u17so11960793pgi.6;
+ Wed, 11 Sep 2019 11:44:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=sender:date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to
+ :user-agent; bh=TqRe5lHOX4M4V547/WzO3Xh0zpwoYhwfsfhLh4/QmNw=;
+ b=cnMbF78zIN2X9zEOosJXsLy6lBLW8nW1rFohkwPEIwEa6uF/WOsmr2xAEaCVe9SAaN
+ i7+2cu7+E+HD86A9dgw7KnHv3DgSkf6MbdVO6kYHFHGtBoMfaXxiHoGeuuUYZoXnYMZY
+ Ekg3XH3c4rxVxhQhmfQv/GmEOMWlbMfF3zq/YKsRPvNNmuh+7DmnXbZDJakCr3JItly7
+ E/L6ZmHXOf49bDukg+osrL8HBIaUPKtSIS4xFCHloTkspkUpLF4eXYWTwugwaG0JCCW0
+ hiovc2vqED7iGDoHu2Ad6HClqB4Wpnka75/Wpcf8D3WPpKG4j8ii4SVkKr6u3WFJeoyc
+ 0Vmg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
+ :references:mime-version:content-disposition
+ :content-transfer-encoding:in-reply-to:user-agent;
+ bh=TqRe5lHOX4M4V547/WzO3Xh0zpwoYhwfsfhLh4/QmNw=;
+ b=e+7EQfVMv56JRZkEbv6WmgCyQZ7CypKqfs2n29PNnwoUxAzsFwOPGK7UF1hfSxNQVj
+ gCd8aDnl4WFgy/CUcXp4ho2fPx1BGPlkQ7M8mYOS2tCaxgJ7NqbhEUUCnpfB5XJf4rO7
+ +AchCBaV0BVjGuA3bD1yyewE+yLqZ+J67sAN7/GjUODzvpjdyh/etUO7kw3HKKlGDWhA
+ gy+8XHsHxf72A+3bnUcmO8aOSJJg3NvqNXwUx/rXVFjoBMj8QkVSd0T9/AGGtu1IpPiB
+ cs0bgeJ9qzoPIeUUNBIF1/lqD7A3UPABaQP2+PWKGCfJRbMyVwo7RU6ywmA4HAPGPV9g
+ F60Q==
+X-Gm-Message-State: APjAAAU/ACjjYj6xz7CEgxLj8R1GdfIyx28Zll/tSR0UGdYHOTsHjesA
+ TRvyKZ84J7poB1YugQc6UZc=
+X-Google-Smtp-Source: APXvYqywaaDO+l8UX/soexCNWT1d0rN20NelYgx+BVxfqR8t062U5VDK59Nz1VPcLeOY/YWISW81Sg==
+X-Received: by 2002:a62:cb:: with SMTP id 194mr46108963pfa.130.1568227496001; 
+ Wed, 11 Sep 2019 11:44:56 -0700 (PDT)
+Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
+ by smtp.gmail.com with ESMTPSA id g26sm23692017pfi.103.2019.09.11.11.44.54
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Wed, 11 Sep 2019 11:44:54 -0700 (PDT)
+Date: Wed, 11 Sep 2019 11:44:53 -0700
+From: Guenter Roeck <linux@roeck-us.net>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v3 3/7] usb: mtu3: support ip-sleep wakeup for MT8183
+Message-ID: <20190911184453.GA2628@roeck-us.net>
+References: <1567150854-30033-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1567150854-30033-4-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: A2C721204C7EA2526CEB263D8C24F5D25EA7E624C5D86C9285E1282A19E0CC4C2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1567150854-30033-4-git-send-email-chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.5.24 (2015-08-30)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_104140_787179_0CF750E5 
-X-CRM114-Status: GOOD (  25.87  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190911_114457_460972_5EED2373 
+X-CRM114-Status: GOOD (  14.89  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (groeck7[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (groeck7[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,185 +103,52 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Shik Chen <shik@chromium.org>, devicetree@vger.kernel.org,
- Sean Cheng =?UTF-8?Q?=28=E9=84=AD=E6=98=87=E5=BC=98=29?=
- <Sean.Cheng@mediatek.com>,
- Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
- Rynn Wu =?UTF-8?Q?=28=E5=90=B3=E8=82=B2=E6=81=A9=29?= <Rynn.Wu@mediatek.com>,
- Christie Yu =?UTF-8?Q?=28=E6=B8=B8=E9=9B=85=E6=83=A0=29?=
- <christie.yu@mediatek.com>, srv_heupstream <srv_heupstream@mediatek.com>,
- Allan Yang =?UTF-8?Q?=28=E6=A5=8A=E6=99=BA=E9=88=9E=29?=
- <Allan.Yang@mediatek.com>,
- Holmes Chiou =?UTF-8?Q?=28=E9=82=B1=E6=8C=BA=29?= <holmes.chiou@mediatek.com>,
- suleiman@chromium.org, Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>,
- Jungo Lin =?UTF-8?Q?=28=E6=9E=97=E6=98=8E=E4=BF=8A=29?=
- <jungo.lin@mediatek.com>, Sj
- Huang <sj.huang@mediatek.com>, yuzhao@chromium.org,
- Hans Verkuil <hans.verkuil@cisco.com>, zwisler@chromium.org,
- Matthias Brugger <matthias.bgg@gmail.com>, "moderated list:ARM/Mediatek
- SoC support" <linux-mediatek@lists.infradead.org>,
- Mauro Carvalho Chehab <mchehab@kernel.org>, "list@263.net:IOMMU
- DRIVERS <iommu@lists.linux-foundation.org>,  Joerg  Roedel
- <joro@8bytes.org>," <linux-arm-kernel@lists.infradead.org>, Linux
- Media Mailing List <linux-media@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Mathias Nyman <mathias.nyman@intel.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Tomasz,
-
-I appreciate your helpful comments.
-
-
-On Tue, 2019-09-10 at 13:04 +0900, Tomasz Figa wrote:
-> Hi Frederic,
-> 
-> On Tue, Sep 10, 2019 at 4:23 AM <frederic.chen@mediatek.com> wrote:
-> >
-> > From: Frederic Chen <frederic.chen@mediatek.com>
-> >
-> > This patch adds the driver of Digital Image Processing (DIP)
-> > unit in Mediatek ISP system, providing image format
-> > conversion, resizing, and rotation features.
-> >
-> > The mtk-isp directory will contain drivers for multiple IP
-> > blocks found in Mediatek ISP system. It will include ISP
-> > Pass 1 driver(CAM), sensor interface driver, DIP driver and
-> > face detection driver.
-> >
-> > Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
-> > ---
-> >  drivers/media/platform/mtk-isp/Makefile       |    7 +
-> >  .../media/platform/mtk-isp/isp_50/Makefile    |    7 +
-> >  .../platform/mtk-isp/isp_50/dip/Makefile      |   18 +
-> >  .../platform/mtk-isp/isp_50/dip/mtk_dip-dev.c |  650 +++++
-> >  .../platform/mtk-isp/isp_50/dip/mtk_dip-dev.h |  566 +++++
-> >  .../platform/mtk-isp/isp_50/dip/mtk_dip-hw.h  |  156 ++
-> >  .../platform/mtk-isp/isp_50/dip/mtk_dip-sys.c |  521 ++++
-> >  .../mtk-isp/isp_50/dip/mtk_dip-v4l2.c         | 2255 +++++++++++++++++
-> >  8 files changed, 4180 insertions(+)
-> >  create mode 100644 drivers/media/platform/mtk-isp/Makefile
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/Makefile
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/Makefile
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-dev.c
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-dev.h
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-hw.h
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-sys.c
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/dip/mtk_dip-v4l2.c
-> >
-> 
-> Thanks for sending v3!
-> 
-> I'm going to do a full review a bit later, but please check one
-> comment about power handling below.
-> 
-> Other than that one comment, from a quick look, I think we only have a
-> number of style issues left. Thanks for the hard work!
-> 
-> [snip]
-> > +static void dip_runner_func(struct work_struct *work)
-> > +{
-> > +       struct mtk_dip_request *req = mtk_dip_hw_mdp_work_to_req(work);
-> > +       struct mtk_dip_dev *dip_dev = req->dip_pipe->dip_dev;
-> > +       struct img_config *config_data =
-> > +               (struct img_config *)req->working_buf->config_data.vaddr;
-> > +
-> > +       /*
-> > +        * Call MDP/GCE API to do HW excecution
-> > +        * Pass the framejob to MDP driver
-> > +        */
-> > +       pm_runtime_get_sync(dip_dev->dev);
-> > +       mdp_cmdq_sendtask(dip_dev->mdp_pdev, config_data,
-> > +                         &req->img_fparam.frameparam, NULL, false,
-> > +                         dip_mdp_cb_func, req);
-> > +}
-> [snip]
-> > +static void dip_composer_workfunc(struct work_struct *work)
-> > +{
-> > +       struct mtk_dip_request *req = mtk_dip_hw_fw_work_to_req(work);
-> > +       struct mtk_dip_dev *dip_dev = req->dip_pipe->dip_dev;
-> > +       struct img_ipi_param ipi_param;
-> > +       struct mtk_dip_hw_subframe *buf;
-> > +       int ret;
-> > +
-> > +       down(&dip_dev->sem);
-> > +
-> > +       buf = mtk_dip_hw_working_buf_alloc(req->dip_pipe->dip_dev);
-> > +       if (!buf) {
-> > +               dev_err(req->dip_pipe->dip_dev->dev,
-> > +                       "%s:%s:req(%p): no free working buffer available\n",
-> > +                       __func__, req->dip_pipe->desc->name, req);
-> > +       }
-> > +
-> > +       req->working_buf = buf;
-> > +       mtk_dip_wbuf_to_ipi_img_addr(&req->img_fparam.frameparam.subfrm_data,
-> > +                                    &buf->buffer);
-> > +       memset(buf->buffer.vaddr, 0, DIP_SUB_FRM_SZ);
-> > +       mtk_dip_wbuf_to_ipi_img_sw_addr(&req->img_fparam.frameparam.config_data,
-> > +                                       &buf->config_data);
-> > +       memset(buf->config_data.vaddr, 0, DIP_COMP_SZ);
-> > +
-> > +       if (!req->img_fparam.frameparam.tuning_data.present) {
-> > +               /*
-> > +                * When user enqueued without tuning buffer,
-> > +                * it would use driver internal buffer.
-> > +                */
-> > +               dev_dbg(dip_dev->dev,
-> > +                       "%s: frame_no(%d) has no tuning_data\n",
-> > +                       __func__, req->img_fparam.frameparam.frame_no);
-> > +
-> > +               mtk_dip_wbuf_to_ipi_tuning_addr
-> > +                               (&req->img_fparam.frameparam.tuning_data,
-> > +                                &buf->tuning_buf);
-> > +               memset(buf->tuning_buf.vaddr, 0, DIP_TUNING_SZ);
-> > +       }
-> > +
-> > +       mtk_dip_wbuf_to_ipi_img_sw_addr(&req->img_fparam.frameparam.self_data,
-> > +                                       &buf->frameparam);
-> > +       memcpy(buf->frameparam.vaddr, &req->img_fparam.frameparam,
-> > +              sizeof(req->img_fparam.frameparam));
-> > +       ipi_param.usage = IMG_IPI_FRAME;
-> > +       ipi_param.frm_param.handle = req->id;
-> > +       ipi_param.frm_param.scp_addr = (u32)buf->frameparam.scp_daddr;
-> > +
-> > +       mutex_lock(&dip_dev->hw_op_lock);
-> > +       atomic_inc(&dip_dev->num_composing);
-> > +       ret = scp_ipi_send(dip_dev->scp_pdev, SCP_IPI_DIP, &ipi_param,
-> > +                          sizeof(ipi_param), 0);
-> 
-> We're not holding the pm_runtime enable count here
-> (pm_runtime_get_sync() wasn't called), so rproc_shutdown() might have
-> been called. Wouldn't that affect the ability for this IPI to run?
-> 
-> We had a related discussion with Jerry on the FD series and I think
-> the conclusion is:
-> a) if there is any state that needs to be preserved between jobs, that
-> would be cleared by rproc_shutdown() then we need to call
-> rproc_boot/shutdown() when we start/stop streaming.
-> b) it there is no such state, we can keep them inside runtime PM
-> callbacks, but we need to call pm_runtime_get_sync() before sending an
-> IPI and pm_runtime_mark_last_busy() + pm_runtime_put_autosuspend()
-> after the SCP signals completion. In this case the runtime PM
-> autosuspend delay should be set to around 2-3 times the delay needed
-> for rproc_shutdown() + rproc_boot() to complete.
-
-Since each IMG_IPI_FRAME command is stateless, I would like to
-use pm_runtime_get_sync()/ pm_runtime_mark_last_busy()/
-pm_runtime_put_autosuspend() to fix this issue (solution b).
-
-> 
-> Best regards,
-> Tomasz
-
-
-Sincerely,
-
-Frederic Chen
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gRnJpLCBBdWcgMzAsIDIwMTkgYXQgMDM6NDA6NTBQTSArMDgwMCwgQ2h1bmZlbmcgWXVuIHdy
+b3RlOgo+IFN1cHBvcnQgVVNCIHdha2V1cCBieSBpcC1zbGVlcCBtb2RlIGZvciBNVDgxODMsIGl0
+J3Mgc2ltaWxhciB0bwo+IE1UODE3Mwo+IAo+IFNpZ25lZC1vZmYtYnk6IENodW5mZW5nIFl1biA8
+Y2h1bmZlbmcueXVuQG1lZGlhdGVrLmNvbT4KPiAtLS0KPiB2MzogY2hhbmdlcyBtaWNyb3MgZGVm
+aW5lCj4gCj4gdjI6IG5vIGNoYW5nZXMKPiAtLS0KPiAgZHJpdmVycy91c2IvbXR1My9tdHUzX2hv
+c3QuYyB8IDE0ICsrKysrKysrKysrKystCj4gIDEgZmlsZSBjaGFuZ2VkLCAxMyBpbnNlcnRpb25z
+KCspLCAxIGRlbGV0aW9uKC0pCj4gCj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvdXNiL210dTMvbXR1
+M19ob3N0LmMgYi9kcml2ZXJzL3VzYi9tdHUzL210dTNfaG9zdC5jCj4gaW5kZXggYzg3MWI5NGYz
+ZTZmLi40ZjgyMDg4ODVlYmQgMTAwNjQ0Cj4gLS0tIGEvZHJpdmVycy91c2IvbXR1My9tdHUzX2hv
+c3QuYwo+ICsrKyBiL2RyaXZlcnMvdXNiL210dTMvbXR1M19ob3N0LmMKPiBAQCAtMTgsNiArMTgs
+MTIgQEAKPiAgI2luY2x1ZGUgIm10dTMuaCIKPiAgI2luY2x1ZGUgIm10dTNfZHIuaCIKPiAgCj4g
+Ky8qIG10ODE4MyBldGMgKi8KPiArI2RlZmluZSBQRVJJX1dLX0NUUkwwCTB4MjAKPiArI2RlZmlu
+ZSBXQzBfSVNfQyh4KQkoKCh4KSAmIDB4ZikgPDwgMjgpICAvKiBjeWNsZSBkZWJvdW5jZSAqLwo+
+ICsjZGVmaW5lIFdDMF9JU19QCUJJVCgxMikJLyogcG9sYXJpdHkgKi8KPiArI2RlZmluZSBXQzBf
+SVNfRU4JQklUKDYpCj4gKwoKRm9yIDY0LWJpdCBidWlsZHMsIHRoaXMgcmVzdWx0cyBpbjoKCmRy
+aXZlcnMvdXNiL210dTMvbXR1M19ob3N0LmM6IEluIGZ1bmN0aW9uIOKAmHNzdXNiX3dha2V1cF9p
+cF9zbGVlcF9zZXTigJk6Ci4vaW5jbHVkZS9saW51eC9iaXRzLmg6NjoxOTogd2FybmluZzoKCWNv
+bnZlcnNpb24gZnJvbSDigJhsb25nIHVuc2lnbmVkIGludOKAmSB0byDigJh1MzLigJkge2FrYSDi
+gJh1bnNpZ25lZCBpbnTigJl9CgljaGFuZ2VzIHZhbHVlIGZyb20g4oCYMTg0NDY3NDQwNzM0NDEx
+MjAzMjDigJkgdG8g4oCYNDAyNjUzNjAwMOKAmSBbLVdvdmVyZmxvd10KCnNpbmNlIFdDMF9JU19D
+KCkgaXMgc2lnbiBleHRlbmRlZCB0byA2NCBiaXQgYW5kIHRoZW4gdHJ1bmNhdGVkLgoKT2JzZXJ2
+ZWQgd2l0aCBnY2MgNy40LjAgYW5kIDguMy4wLgoKR3VlbnRlcgoKPiAgLyogbXQ4MTczIGV0YyAq
+Lwo+ICAjZGVmaW5lIFBFUklfV0tfQ1RSTDEJMHg0Cj4gICNkZWZpbmUgV0MxX0lTX0MoeCkJKCgo
+eCkgJiAweGYpIDw8IDI2KSAgLyogY3ljbGUgZGVib3VuY2UgKi8KPiBAQCAtMzAsNyArMzYsOCBA
+QAo+ICAjZGVmaW5lIFNTQ19TUE1fSU5UX0VOCQlCSVQoMSkKPiAgCj4gIGVudW0gc3N1c2JfdXdr
+X3ZlcnMgewo+IC0JU1NVU0JfVVdLX1YxID0gMSwKPiArCVNTVVNCX1VXS19WMCA9IDAsCj4gKwlT
+U1VTQl9VV0tfVjEsCj4gIAlTU1VTQl9VV0tfVjIsCj4gIH07Cj4gIAo+IEBAIC00Myw2ICs1MCwx
+MSBAQCBzdGF0aWMgdm9pZCBzc3VzYl93YWtldXBfaXBfc2xlZXBfc2V0KHN0cnVjdCBzc3VzYl9t
+dGsgKnNzdXNiLCBib29sIGVuYWJsZSkKPiAgCXUzMiByZWcsIG1zaywgdmFsOwo+ICAKPiAgCXN3
+aXRjaCAoc3N1c2ItPnV3a192ZXJzKSB7Cj4gKwljYXNlIFNTVVNCX1VXS19WMDoKPiArCQlyZWcg
+PSBzc3VzYi0+dXdrX3JlZ19iYXNlICsgUEVSSV9XS19DVFJMMDsKPiArCQltc2sgPSBXQzBfSVNf
+RU4gfCBXQzBfSVNfQygweGYpIHwgV0MwX0lTX1A7Cj4gKwkJdmFsID0gZW5hYmxlID8gKFdDMF9J
+U19FTiB8IFdDMF9JU19DKDB4OCkpIDogMDsKPiArCQlicmVhazsKPiAgCWNhc2UgU1NVU0JfVVdL
+X1YxOgo+ICAJCXJlZyA9IHNzdXNiLT51d2tfcmVnX2Jhc2UgKyBQRVJJX1dLX0NUUkwxOwo+ICAJ
+CW1zayA9IFdDMV9JU19FTiB8IFdDMV9JU19DKDB4ZikgfCBXQzFfSVNfUDsKCl9fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxp
+bmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5p
+bmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
