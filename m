@@ -2,80 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 66857AFFCC
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 17:19:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CA6FCB00DF
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 18:06:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:References:Message-Id:Date:
-	In-Reply-To:From:Subject:Mime-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Xj7xCIqPNJrBZfGEi3vRkVCn9eCK2f+Lb5U3whtQpJE=; b=R4beNzVuWDnZBx
-	JPSMej830meSACTQ5H8LNJgGuz3W/ZwYKYCmY6Pxq6/dyiTvUGgVReJ04rUxUqduHfy5HgpeCp5wS
-	1K0SXkG+O/g2dSMhJSHyYj6KeHPzr+i6gHlnvvnRzhAs1gruatHRAUnDTtz+WCduQFLhJZOj76Iqu
-	xL/0HRk+hU4N+ATOkDjiX9rCnKrUg40MbHXB6HU155GC1JCGiP3iqGWhtmyHc8Ib/V02MPd7ommRe
-	0Lftf8dcGlYRmXYnB+dPO66eW5Qf+8TQCPqmxO3DxYO7Iwi2tVRe5niVFF6ouVbybzmg9i3gAsGmF
-	3RF9sdIK6l8+Lx0ESJqg==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=diaZInmwibf20gCre9otohRhxj7Dqtx9DETm9oqOfBE=; b=D+txsOstI1TuwU
+	UV+rrpszk9q2vk2VftSVBKuy9SHmMZWFsoZCby9tsNxPB5FU5n2VqYUMyyUaLsjIrIMSrCI5k+VRv
+	EqixiERJOhUdgxJoTv4PSQAgq1zO8bVeHNA6zOVrsORhCrg/lmoEM1hDytk0CazaHDk772zyf36Qx
+	ELSbaVXSlLNWmOzzUva2d2QrwWYLoKXRhkex64ThOG96lczYuE0JRvugqgKPN7mICBMZTs9cW2y2N
+	1wzB2DSD/tUjIk2mDIKJTQucY0BGzmK4sl+ZgHd5ReeJrOto2osRmWbQr2IZ22Oiw9QkQocTVmdY3
+	ztqxmxX0MecSNgNWqWDw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i84PG-0001ll-2L; Wed, 11 Sep 2019 15:19:42 +0000
-Received: from mail-qk1-x744.google.com ([2607:f8b0:4864:20::744])
+	id 1i858N-0002eC-Fl; Wed, 11 Sep 2019 16:06:19 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i84Oz-0001bR-6d
- for linux-mediatek@lists.infradead.org; Wed, 11 Sep 2019 15:19:27 +0000
-Received: by mail-qk1-x744.google.com with SMTP id x134so21194738qkb.0
- for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 08:19:22 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lca.pw; s=google;
- h=mime-version:subject:from:in-reply-to:date:cc
- :content-transfer-encoding:message-id:references:to;
- bh=ZU9ZAjmx+sYl629AtpqCVueI4p9/wYdOG6Cg3kJEbbA=;
- b=P+MDd2FC4Tc061IIYYh+fnI7tLbvNzMEPGfTHDCLdu2V2A1iaUfoGPOyKo1ZcCp2tM
- vDlQak9qwdFXMTF01sdF9NaWHYqP1Z/eiHE2pYAG4FrrFsTi2bCatToJIx7hX7STqCMC
- e85SYvrxtgXBNTGH/ehZFacewWsbP3akXbDmXt6EUDu/lp7mYlWlv1TyYoYV+BNcPW4F
- TyQwa7/S4+maJvqyBvr3GUHM1ID8EHp3pq+TdjfeKrIVUgE8Tw3I5En61hXz9Gu0JACc
- WwgWy0IYjBit1gDB8Hqa1cVn0uxte+0fby7CvbIJdCpE5oqr9900yYQW4eRFZ2W0lIU6
- oFtg==
+ id 1i858J-0002c7-Da
+ for linux-mediatek@lists.infradead.org; Wed, 11 Sep 2019 16:06:16 +0000
+Received: by mail-wm1-x343.google.com with SMTP id t3so144947wmj.1
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 09:06:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=FJJVoiOf8d1fBVlmA2WPx0ovMbhLVMUnVRYpkmmId2Y=;
+ b=QWNGM8sNd2DIqJUVU1OLR1sxZVnOhxhVhHWu6sn3G/HkbQD0a3Uet0ziDi173OygoS
+ WcCdb71vVpMMGSMyODgDg7v3IKgDf+jcLohmqJhvxgRITZz4nTjg9kVPY79Dko6yGRwI
+ 7UB4qyMqR7ARnOknOJewxCb4y85Ikwb+PhhkX+/oC/E4rQZpxLeGuMO8CJ0bYDynNZAm
+ te2Ui37mkNIuuDsWoWjiAyozjSyhLVPQDxNAu4pBSuumnFcQXJUuqopd6dCi8EcH5BuY
+ CIK5/sU5mY617ien2evGACtTIB+KI8R4dlzQ405tx5mrGMqpJZIlUTXC+9Q+34LJuYnC
+ KOCA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:subject:from:in-reply-to:date:cc
- :content-transfer-encoding:message-id:references:to;
- bh=ZU9ZAjmx+sYl629AtpqCVueI4p9/wYdOG6Cg3kJEbbA=;
- b=czp6jxjMXRzpwAgantxF/9iYdu5/0XaJg9KtM9Ka+L2Q5/8ALuaSEExoPIFoQ336GG
- tO9bucqv69T3/5+B5wX1dkGFpIYNP/hmR3sA5nsi0V5ft2/RUDETI89bonrx3R4BUcOi
- aahUje4t+pY1KTcJASPwY18tmAQUOCQ2JJ3QyMaHy6Yb3igRuOV1wM5wc45260z3Lvoc
- WIxu3OmtlFR8AuYys1MYSjX+k1eKlcCc68F9jtMgVkTyEXVkcsao3+EBL5/wMZOTMzKT
- fKJGDvvNcMElUNftYpCB+Q/KwdVVun/M92/ByXbV6g6ovpaggPDs4oIpzb03x4spaxF1
- hCNA==
-X-Gm-Message-State: APjAAAVTczMdacstzQJz1zjEJ4CEYSDrJBd+B7DnysVDQ5uguNffw1+k
- HfqAJM6oI8j7xB+CRATuqxDAvA==
-X-Google-Smtp-Source: APXvYqwsPae0vNSwigouHMUxOlp4cnOUahDfeE+W9gnOtVKDwdJdfx2UhKXwYdremGpJnC+o/jmyHQ==
-X-Received: by 2002:a37:49d6:: with SMTP id
- w205mr35829035qka.191.1568215161746; 
- Wed, 11 Sep 2019 08:19:21 -0700 (PDT)
-Received: from qians-mbp.fios-router.home
- (pool-71-184-117-43.bstnma.fios.verizon.net. [71.184.117.43])
- by smtp.gmail.com with ESMTPSA id g194sm11256279qke.46.2019.09.11.08.19.20
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 11 Sep 2019 08:19:20 -0700 (PDT)
-Mime-Version: 1.0 (Mac OS X Mail 12.4 \(3445.104.11\))
-Subject: Re: [PATCH v3] mm/kasan: dump alloc and free stack for page allocator
-From: Qian Cai <cai@lca.pw>
-In-Reply-To: <20190911083921.4158-1-walter-zh.wu@mediatek.com>
-Date: Wed, 11 Sep 2019 11:19:19 -0400
-Message-Id: <5E358F4B-552C-4542-9655-E01C7B754F14@lca.pw>
-References: <20190911083921.4158-1-walter-zh.wu@mediatek.com>
-To: Walter Wu <walter-zh.wu@mediatek.com>
-X-Mailer: Apple Mail (2.3445.104.11)
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=FJJVoiOf8d1fBVlmA2WPx0ovMbhLVMUnVRYpkmmId2Y=;
+ b=pOG/ks1yq+unHMSXJhV4TFHHBqFO9YDTit3ehm8zTfgsHo46+ZqGF0Ptw0WAhhTr07
+ MSnAYj94lTdQcmcq69cwk2pVMQJVh7iZR/QxqxdmvCboNEAYqAnmmMGM+frdOwHO9hns
+ sh30KMYMWkCJ05mQfp7MHAhEcsD+5yYc1ttUelqGdkVqQlKz2fqoFB6oGXMToXybb/nd
+ dyG3nkH0gIReV8mxu9Xvvz7bRFFjbUOTmNro3LfaunitrNYQswggL04R8T09UrW2iIYt
+ 5CdWyBH7+dB8EjIZwOLqk5fQMuWVtnMya9xp/iW1cy9qZrm+vAM+DouX3z5bQqJdvFXE
+ 8NEw==
+X-Gm-Message-State: APjAAAW279gbh/YbaUzA16TLuJ/N3FSCaabSeyG+Y/Eq5bp9Brc8KJWw
+ bkcaI84aQwWc0SMlWEGAe0xOqixbAoMhQNQMfLK5yw==
+X-Google-Smtp-Source: APXvYqxfo4OMflbhF8NmSJjJ2Gu/Ff2Dfhm+/6sbn8+WMGkQs5//gS6kM0XKRfWRoFsRG4rHItMc0Gt2atTI93osxFs=
+X-Received: by 2002:a1c:7a05:: with SMTP id v5mr4328922wmc.173.1568217973514; 
+ Wed, 11 Sep 2019 09:06:13 -0700 (PDT)
+MIME-Version: 1.0
+References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
+ <CALAqxLWLStTqGx5DAvUKOYupdgK-doOxRF5Z_Us=L5vnFaa=7w@mail.gmail.com>
+ <cb451591-88ad-f1b3-b654-cea86ae11cac@microchip.com>
+In-Reply-To: <cb451591-88ad-f1b3-b654-cea86ae11cac@microchip.com>
+From: John Stultz <john.stultz@linaro.org>
+Date: Wed, 11 Sep 2019 09:06:01 -0700
+Message-ID: <CALAqxLXRVc-K5q=me1=5tA0XYT7ncrArSoD+hq=JOGWVF9-7SQ@mail.gmail.com>
+Subject: Re: [PATCH 0/7] add support for clocksource/clockevent DT selection
+To: Claudiu Beznea <Claudiu.Beznea@microchip.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_081926_029152_9D65F914 
-X-CRM114-Status: GOOD (  20.86  )
+X-CRM114-CacheID: sfid-20190911_090615_493361_0923725A 
+X-CRM114-Status: GOOD (  21.15  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:744 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -97,82 +91,110 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org, wsd_upstream@mediatek.com,
- Arnd Bergmann <arnd@arndb.de>, linux-mm@kvack.org,
- Andrey Konovalov <andreyknvl@google.com>, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, kasan-dev@googlegroups.com,
- Martin Schwidefsky <schwidefsky@de.ibm.com>,
- Alexander Potapenko <glider@google.com>, Vlastimil Babka <vbabka@suse.cz>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: tmaimon77@gmail.com, Linus Walleij <linus.walleij@linaro.org>,
+ nsekhar@ti.com, guoren@kernel.org, linux-stm32@st-md-mailman.stormreply.com,
+ =?UTF-8?Q?Heiko_St=C3=BCbner?= <heiko@sntech.de>,
+ linux-samsung-soc@vger.kernel.org,
+ "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
+ Kevin Hilman <khilman@baylibre.com>, Ludovic.Desroches@microchip.com,
+ linux-imx@nxp.com,
+ =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
+ uclinux-h8-devel@lists.sourceforge.jp, Marc Zyngier <marc.zyngier@arm.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>, linux-unisoc@lists.infradead.org,
+ =?UTF-8?Q?Krzysztof_Ha=C5=82asa?= <khalasa@piap.pl>,
+ Thomas Gleixner <tglx@linutronix.de>, sbranden@broadcom.com,
+ lkml <linux-kernel@vger.kernel.org>, Ralf Baechle <ralf@linux-mips.org>,
+ Paul Burton <paul.burton@mips.com>, kernel@pengutronix.de,
+ Mark Rutland <mark.rutland@arm.com>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>, jhogan@kernel.org,
+ palmer@sifive.com, eric@anholt.net, Thierry Reding <thierry.reding@gmail.com>,
+ Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
+ Yoshinori Sato <ysato@users.sourceforge.jp>, zhang.lyra@gmail.com,
+ Daniel Lezcano <daniel.lezcano@linaro.org>, Jon Hunter <jonathanh@nvidia.com>,
+ bgolaszewski@baylibre.com, Kukjin Kim <kgene@kernel.org>,
+ alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org,
+ Sudeep Holla <sudeep.holla@arm.com>, Florian Fainelli <f.fainelli@gmail.com>,
+ linux-rpi-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>, baohua@kernel.org,
+ kaloz@openwrt.org, Stephen Boyd <sboyd@kernel.org>, patrice.chotard@st.com,
+ wahrenst@gmx.net, mcoquelin.stm32@gmail.com,
+ Neil Armstrong <narmstrong@baylibre.com>, linux-tegra@vger.kernel.org,
+ Fabio Estevam <festevam@gmail.com>,
+ Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
+ Benjamin Fair <benjaminfair@google.com>, shc_work@mail.ru,
+ Krzysztof Kozlowski <krzk@kernel.org>, Nancy Yuen <yuenn@google.com>,
+ Chen-Yu Tsai <wens@csie.org>, bcm-kernel-feedback-list@broadcom.com,
+ orsonzhai@gmail.com, linux-snps-arc@lists.infradead.org, rjui@broadcom.com,
+ vz@mleia.com, john@phrozen.org, tali.perry1@gmail.com, avifishman70@gmail.com,
+ Patrick Venture <venture@google.com>, lftan@altera.com, linux-oxnas@groups.io,
+ Shawn Guo <shawnguo@kernel.org>, afaerber@suse.de,
+ Baruch Siach <baruch@tkos.co.il>, maxime.ripard@bootlin.com,
+ Liviu Dudau <liviu.dudau@arm.com>, linux-mips@vger.kernel.org,
+ linux-riscv@lists.infradead.org, openbmc@lists.ozlabs.org,
+ Russell King - ARM Linux <linux@armlinux.org.uk>,
+ Andy Gross <agross@kernel.org>, slemieux.tyco@gmail.com,
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, aou@eecs.berkeley.edu,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Santosh Shilimkar <ssantosh@kernel.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Michal Simek <monstr@monstr.eu>,
+ Baolin Wang <baolin.wang@linaro.org>, vgupta@synopsys.com,
+ Nicolas.Ferre@microchip.com, linux@prisktech.co.nz,
+ nios2-dev@lists.rocketboards.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Cgo+IE9uIFNlcCAxMSwgMjAxOSwgYXQgNDozOSBBTSwgV2FsdGVyIFd1IDx3YWx0ZXItemgud3VA
-bWVkaWF0ZWsuY29tPiB3cm90ZToKPiAKPiBUaGlzIHBhdGNoIGlzIEtBU0FOJ3MgcmVwb3J0IGFk
-ZHMgdGhlIGFsbG9jL2ZyZWUgc3RhY2sgZm9yIHBhZ2UgYWxsb2NhdG9yCj4gaW4gb3JkZXIgdG8g
-aGVscCBwcm9ncmFtbWVyIHRvIHNlZSBtZW1vcnkgY29ycnVwdGlvbiBjYXVzZWQgYnkgdGhlIHBh
-Z2UuCj4gCj4gQnkgZGVmYXVsdCwgS0FTQU4gZG9lc24ndCByZWNvcmQgYWxsb2Mgb3IgZnJlZSBz
-dGFjayBmb3IgcGFnZSBhbGxvY2F0b3IuCj4gSXQgaXMgZGlmZmljdWx0IHRvIGZpeCB1cCB0aGUg
-cGFnZSB1c2UtYWZ0ZXItZnJlZSBvciBkb3VibGUtZnJlZSBpc3N1ZS4KPiAKPiBXZSBhZGQgdGhl
-IGZvbGxvd2luZyBjaGFuZ2luZzoKPiAxKSBLQVNBTiBlbmFibGUgUEFHRV9PV05FUiBieSBkZWZh
-dWx0IHRvIGdldCB0aGUgYWxsb2Mgc3RhY2sgb2YgdGhlIHBhZ2UuCj4gMikgQWRkIG5ldyBmZWF0
-dXJlIG9wdGlvbiB0byBnZXQgdGhlIGZyZWUgc3RhY2sgb2YgdGhlIHBhZ2UuCj4gCj4gVGhlIG5l
-dyBmZWF0dXJlIEtBU0FOX0RVTVBfUEFHRSBkZXBlbmRzIG9uIERFQlVHX1BBR0VBTExPQywgaXQg
-d2lsbCBoZWxwCj4gdG8gcmVjb3JkIGZyZWUgc3RhY2sgb2YgdGhlIHBhZ2UsIGl0IGlzIHZlcnkg
-aGVscGZ1bCBmb3Igc29sdmluZyB0aGUgcGFnZQo+IHVzZS1hZnRlci1mcmVlIG9yIGRvdWJsZS1m
-cmVlIGlzc3VlLgo+IAo+IFdoZW4gS0FTQU5fRFVNUF9QQUdFIGlzIGVuYWJsZWQgdGhlbiBLQVNB
-TidzIHJlcG9ydCB3aWxsIHNob3cgdGhlIGxhc3QKPiBhbGxvYyBhbmQgZnJlZSBzdGFjayBvZiB0
-aGUgcGFnZSwgaXQgc2hvdWxkIGJlOgo+IAo+IEJVRzogS0FTQU46IHVzZS1hZnRlci1mcmVlIGlu
-IGttYWxsb2NfcGFnZWFsbG9jX3VhZisweDcwLzB4ODAKPiBXcml0ZSBvZiBzaXplIDEgYXQgYWRk
-ciBmZmZmZmZjMGQ2MGU0MDAwIGJ5IHRhc2sgY2F0LzExNQo+IC4uLgo+IHByZXBfbmV3X3BhZ2Ur
-MHgxYzgvMHgyMTgKPiBnZXRfcGFnZV9mcm9tX2ZyZWVsaXN0KzB4MWJhMC8weDI4ZDAKPiBfX2Fs
-bG9jX3BhZ2VzX25vZGVtYXNrKzB4MWQ0LzB4MTk3OAo+IGttYWxsb2Nfb3JkZXIrMHgyOC8weDU4
-Cj4ga21hbGxvY19vcmRlcl90cmFjZSsweDI4LzB4ZTAKPiBrbWFsbG9jX3BhZ2VhbGxvY191YWYr
-MHgyYy8weDgwCj4gcGFnZSBsYXN0IGZyZWUgc3RhY2sgdHJhY2U6Cj4gX19mcmVlX3BhZ2VzX29r
-KzB4MTE2Yy8weDE2MzAKPiBfX2ZyZWVfcGFnZXMrMHg1MC8weDc4Cj4ga2ZyZWUrMHgxYzQvMHgy
-NTAKPiBrbWFsbG9jX3BhZ2VhbGxvY191YWYrMHgzOC8weDgwCj4gCj4gQ2hhbmdlcyBzaW5jZSB2
-MToKPiAtIHNsaW0gcGFnZV9vd25lciBhbmQgbW92ZSBpdCBpbnRvIGthc2FuCj4gLSBlbmFibGUg
-dGhlIGZlYXR1cmUgYnkgZGVmYXVsdAo+IAo+IENoYW5nZXMgc2luY2UgdjI6Cj4gLSBlbmFibGUg
-UEFHRV9PV05FUiBieSBkZWZhdWx0Cj4gLSB1c2UgREVCVUdfUEFHRUFMTE9DIHRvIGdldCBwYWdl
-IGluZm9ybWF0aW9uCj4gCj4gY2M6IEFuZHJleSBSeWFiaW5pbiA8YXJ5YWJpbmluQHZpcnR1b3p6
-by5jb20+Cj4gY2M6IFZsYXN0aW1pbCBCYWJrYSA8dmJhYmthQHN1c2UuY3o+Cj4gY2M6IEFuZHJl
-eSBLb25vdmFsb3YgPGFuZHJleWtudmxAZ29vZ2xlLmNvbT4KPiBTaWduZWQtb2ZmLWJ5OiBXYWx0
-ZXIgV3UgPHdhbHRlci16aC53dUBtZWRpYXRlay5jb20+Cj4gLS0tCj4gbGliL0tjb25maWcua2Fz
-YW4gfCAxNSArKysrKysrKysrKysrKysKPiAxIGZpbGUgY2hhbmdlZCwgMTUgaW5zZXJ0aW9ucygr
-KQo+IAo+IGRpZmYgLS1naXQgYS9saWIvS2NvbmZpZy5rYXNhbiBiL2xpYi9LY29uZmlnLmthc2Fu
-Cj4gaW5kZXggNGZhZmJhMWE5MjNiLi40ZDU5NDU4YzBjNWEgMTAwNjQ0Cj4gLS0tIGEvbGliL0tj
-b25maWcua2FzYW4KPiArKysgYi9saWIvS2NvbmZpZy5rYXNhbgo+IEBAIC00MSw2ICs0MSw3IEBA
-IGNvbmZpZyBLQVNBTl9HRU5FUklDCj4gCXNlbGVjdCBTTFVCX0RFQlVHIGlmIFNMVUIKPiAJc2Vs
-ZWN0IENPTlNUUlVDVE9SUwo+IAlzZWxlY3QgU1RBQ0tERVBPVAo+ICsJc2VsZWN0IFBBR0VSX09X
-TkVSCj4gCWhlbHAKPiAJICBFbmFibGVzIGdlbmVyaWMgS0FTQU4gbW9kZS4KPiAJICBTdXBwb3J0
-ZWQgaW4gYm90aCBHQ0MgYW5kIENsYW5nLiBXaXRoIEdDQyBpdCByZXF1aXJlcyB2ZXJzaW9uIDQu
-OS4yCj4gQEAgLTYzLDYgKzY0LDcgQEAgY29uZmlnIEtBU0FOX1NXX1RBR1MKPiAJc2VsZWN0IFNM
-VUJfREVCVUcgaWYgU0xVQgo+IAlzZWxlY3QgQ09OU1RSVUNUT1JTCj4gCXNlbGVjdCBTVEFDS0RF
-UE9UCj4gKwlzZWxlY3QgUEFHRVJfT1dORVIKPiAJaGVscAo+IAkgIEVuYWJsZXMgc29mdHdhcmUg
-dGFnLWJhc2VkIEtBU0FOIG1vZGUuCj4gCSAgVGhpcyBtb2RlIHJlcXVpcmVzIFRvcCBCeXRlIEln
-bm9yZSBzdXBwb3J0IGJ5IHRoZSBDUFUgYW5kIHRoZXJlZm9yZQo+IEBAIC0xMzUsNiArMTM3LDE5
-IEBAIGNvbmZpZyBLQVNBTl9TMzkwXzRfTEVWRUxfUEFHSU5HCj4gCSAgdG8gM1RCIG9mIFJBTSB3
-aXRoIEtBU2FuIGVuYWJsZWQpLiBUaGlzIG9wdGlvbnMgYWxsb3dzIHRvIGZvcmNlCj4gCSAgNC1s
-ZXZlbCBwYWdpbmcgaW5zdGVhZC4KPiAKPiArY29uZmlnIEtBU0FOX0RVTVBfUEFHRQo+ICsJYm9v
-bCAiRHVtcCB0aGUgbGFzdCBhbGxvY2F0aW9uIGFuZCBmcmVlaW5nIHN0YWNrIG9mIHRoZSBwYWdl
-Igo+ICsJZGVwZW5kcyBvbiBLQVNBTgo+ICsJc2VsZWN0IERFQlVHX1BBR0VBTExPQwo+ICsJaGVs
-cAo+ICsJICBCeSBkZWZhdWx0LCBLQVNBTiBlbmFibGUgUEFHRV9PV05FUiBvbmx5IHRvIHJlY29y
-ZCBhbGxvYyBzdGFjawo+ICsJICBmb3IgcGFnZSBhbGxvY2F0b3IuIEl0IGlzIGRpZmZpY3VsdCB0
-byBmaXggdXAgcGFnZSB1c2UtYWZ0ZXItZnJlZQo+ICsJICBvciBkb3VibGUtZnJlZSBpc3N1ZS4K
-PiArCSAgVGhpcyBmZWF0dXJlIGRlcGVuZHMgb24gREVCVUdfUEFHRUFMTE9DLCBpdCB3aWxsIGV4
-dHJhIHJlY29yZAo+ICsJICBmcmVlIHN0YWNrIG9mIHBhZ2UuIEl0IGlzIHZlcnkgaGVscGZ1bCBm
-b3Igc29sdmluZyB0aGUgcGFnZQo+ICsJICB1c2UtYWZ0ZXItZnJlZSBvciBkb3VibGUtZnJlZSBp
-c3N1ZS4KPiArCSAgVGhpcyBvcHRpb24gd2lsbCBoYXZlIGEgc21hbGwgbWVtb3J5IG92ZXJoZWFk
-Lgo+ICsKPiBjb25maWcgVEVTVF9LQVNBTgo+IAl0cmlzdGF0ZSAiTW9kdWxlIGZvciB0ZXN0aW5n
-IEtBU0FOIGZvciBidWcgZGV0ZWN0aW9uIgo+IAlkZXBlbmRzIG9uIG0gJiYgS0FTQU4KPiDigJQg
-CgpUaGUgbmV3IGNvbmZpZyBsb29rcyByZWR1bmRhbnQgYW5kIGNvbmZ1c2luZy4gSXQgbG9va3Mg
-dG8gbWUgbW9yZSBvZiBhIGRvY3VtZW50IHVwZGF0ZQppbiBEb2N1bWVudGF0aW9uL2Rldi10b29s
-cy9rYXNhbi50eHQgdG8gZWR1Y2F0ZSBkZXZlbG9wZXJzIHRvIHNlbGVjdCBQQUdFX09XTkVSIGFu
-ZApERUJVR19QQUdFQUxMT0MgaWYgbmVlZGVkLgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1t
-ZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21h
-aWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Tue, Sep 10, 2019 at 11:52 PM <Claudiu.Beznea@microchip.com> wrote:
+> On 10.09.2019 19:05, John Stultz wrote:
+> > External E-Mail
+> > On Tue, Sep 10, 2019 at 6:47 AM Claudiu Beznea
+> > <claudiu.beznea@microchip.com> wrote:
+> >>
+> >> This series adds support to permit the selection of clocksource/clockevent
+> >> via DT.
+> >
+> > Sorry about this, but could you try to include more of a rational for
+> > *why* this would be useful in your cover-letter/commit messages?
+> >
+>
+> Sorry for not being to clear in the cover letter.
+>
+> The case I am trying to solve here is as follows:
+> The timer hardware for which I publish a driver at [1] cannot work at the
+> same time as a clocksource and clockevent. On some of our platforms we have
+> more than one such a timer. So we could use one hardware resource as
+> clocksource and one as clockevent but not one for both.
+> Due to this, I proposed in the driver at [1] to have 1st probed hardware to
+> work as clocksource and the 2nd one to work as clockevent.
+[snip]
+> Due to this Daniel proposed to have an unified mechanism for this scenario,
+> see [2], (something like what I proposed in this series), such that to have
+> a determinism b/w the function that the hardware resources would behave
+> (either clocksource or clockevent or both).
+
+Thanks for the additional explanation! I'd suggest adding something
+like it to the commit logs for next time.
+
+Personally, I tend to think of DT bindings as a big harry ABI, and as
+such avoid it as much as possible. :)
+
+I'd probably favor driver tweaks to ensure the hardware only gets
+registered once for each, using a minimal DT compatible or flag on the
+hardware to better describe the underlying hardware quirk that keeps
+it from being usable for both clocksource and clockevent usage.
+
+That way the DT sticks to accurately describing hardware, instead of
+system/software-abstraction configuration details that just apply for
+Linux.
+
+But, again, I'm not really a DT person, so I'll defer to Rob and Daniel.
+
+thanks
+-john
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
