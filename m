@@ -2,65 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 20B54B03EF
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Sep 2019 20:50:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F1F80B056A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 00:13:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iyWAFClQc8XDBy4Wnsf8UGHRe2f5/pDkcWFQdJRtXqo=; b=nnnZimndfUXhgy
-	1ZgKl1Z/fH/+ERw228RIAEOyMLC96mZdkGMesh4f5PwfTW9iGzsXK7u70xjmIMQ+O+kiAhmLusJyn
-	bFg8tH7JwwpLKAhUwuXHfdOqYOQqCr7m9g1FwmU+FihrFVDbgecDdAbHfspFxconzGjUgrY3MX7tM
-	RZ22zGylTPSkjgE9BFG6oMMBvnH2gHq8xeLuHoH/qW3+nKkc5HxOcGtwnZlyBX9weR+Uy48KfPB43
-	lrAaUDFRYy/BttGntC4DdTaIwen0BQlgWv8qV9iaycebYraGky6Ztg01KXprl8rd333kNNupx82e4
-	BlQoQPEc8mj1KFAMZN2g==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=fafjJ0S1uTuLsJVMWhY3N/2Lg4dRm3BiYW39hAuB24k=; b=EE3CypCpJa4dZx
+	IO+p5UAPhUuot9w8pdgJ0939Iid4EnvralE1QVVSccGXd4HENsjdlOtenkJQ2LIZ7Vnq5Axv5guZv
+	I4NSVfiB3WmcE/9xcczbcqDkBqr1HhlLvuCV1zotkOvFAJmr1NSJDYD+uqSlvYOawQmXUyyiZ9aQd
+	X8bwUKdcVjZjbrAqekR0Q7kV29iMY32gkqQ6xDe2XJ96wPQerbFZWBSyuT6HvTCkFGtn+gGYunJ6a
+	hDsUjXkkYQu4+aYHPSgpQar7TJ3Ia0gLaFaeqTJjqczKdk4K2v8ZArPaveChWeA/0vlq6aqHdDdUa
+	lSED846JlSbY0tt62UKw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i87gx-00061y-Fx; Wed, 11 Sep 2019 18:50:11 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1i8Arr-0006PF-Jy; Wed, 11 Sep 2019 22:13:39 +0000
+Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i87gQ-0005bH-HX; Wed, 11 Sep 2019 18:49:40 +0000
-X-UUID: 3fe9a2b3e50c42418e7dc75cc460c1dd-20190911
-X-UUID: 3fe9a2b3e50c42418e7dc75cc460c1dd-20190911
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <sean.wang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 27193781; Wed, 11 Sep 2019 10:49:30 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Sep 2019 11:49:28 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 02:49:26 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 12 Sep 2019 02:49:26 +0800
-Message-ID: <1568227767.8481.4.camel@mtkswgap22>
-Subject: Re: [PATCH v7 5/7] power: reset: add driver for mt6323 poweroff
-From: Sean Wang <sean.wang@mediatek.com>
-To: Frank Wunderlich <frank-w@public-files.de>
-Date: Thu, 12 Sep 2019 02:49:27 +0800
-In-Reply-To: <20190910070446.639-6-frank-w@public-files.de>
-References: <20190910070446.639-1-frank-w@public-files.de>
- <20190910070446.639-6-frank-w@public-files.de>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1i8Arb-0006Er-5E
+ for linux-mediatek@lists.infradead.org; Wed, 11 Sep 2019 22:13:24 +0000
+Received: by mail-pg1-x542.google.com with SMTP id x15so12238936pgg.8
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Sep 2019 15:13:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=kernel-dk.20150623.gappssmtp.com; s=20150623;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=nf55d0M2fgrTAZT8patiiuxPZwICTFJSYQN2V2QrDmQ=;
+ b=anYEbfk0b5+4asQZViJ4GPOYj9WhTStLmh+ecrhz8v0xdn4zwEPtVsZfof1Lme4QKG
+ b32MZ4jlp1aoNGec5iHuPGezZ3FzV6+R16gp2x0cz7OsJCmV/AthIUpblCcZuw36Gto7
+ mJkKm7YXtOUw2VruFSiLqhQj0OJu9fPbzDsFVuzSNY/cxfPyn9H0FwUDZLL1LMqq00G1
+ oI1QPoTi1nvd0pX87LlIIbwYg89eK2LT1S43DfayBVQKgXroKePJDLEGsZqSvKP18I9I
+ cHuVxbQjxuvEUCu+JKod7gM2xasHWrJxerWu65fq7bPTxfGnDob4I8Jir7+fVc6Xf8Kk
+ JWnQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=nf55d0M2fgrTAZT8patiiuxPZwICTFJSYQN2V2QrDmQ=;
+ b=KmrxswlSr9HXO8Qb/wj1vNy1i73s0moYW2lz4nw4sw2gc7DyAV96LUaG5Ccns+fHmV
+ gr3TGH4ZK1KL7C6dlgaTh/XU6bA3Y8QzxC/65/GKy0E+2u6LNyZSh3n9yBG8CniF7XF5
+ blqPbctEVq/GB7OWHOqzCSiYTJkk4xCq4W6AWazVOcHmqzR2GfpXAjaBisdeWZAQ63w8
+ eSL3Q7hInVtc9TbSYYk47jnVESOMNNk4nNPVPkYsnF5b+EsyWyJ1YqZrn35wHIyCbac7
+ 3L08ZVCMj5F5uQofwLFJr9oSPGgBHUaG1gTbCwRndjGGn4Em2jCEFdWtQvs+9F/a40zX
+ 5LOA==
+X-Gm-Message-State: APjAAAUsIA+50xV0bUYNUEJ3cwbkteWtX4RaPPj2dm5Ri829YXNpMwMj
+ aXkJU0vWspLgyLb/OeGMB1XVZw==
+X-Google-Smtp-Source: APXvYqzPGDfNqvq/dqDwP6b3TOEtC3Bb+5uRpJ4DO9WApq2laqUm31jZznk69DG8lZqgNynRXwxbkg==
+X-Received: by 2002:a65:6284:: with SMTP id f4mr13973604pgv.416.1568239999858; 
+ Wed, 11 Sep 2019 15:13:19 -0700 (PDT)
+Received: from [192.168.1.188] ([23.158.160.160])
+ by smtp.gmail.com with ESMTPSA id r1sm18455579pgv.70.2019.09.11.15.13.17
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Wed, 11 Sep 2019 15:13:18 -0700 (PDT)
+Subject: Re: [PATCH v1 1/2] block: bypass blk_set_runtime_active for
+ uninitialized q->dev
+To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
+ linux-block@vger.kernel.org, martin.petersen@oracle.com, jejb@linux.ibm.com,
+ matthias.bgg@gmail.com
+References: <1568183562-18241-1-git-send-email-stanley.chu@mediatek.com>
+ <1568183562-18241-2-git-send-email-stanley.chu@mediatek.com>
+From: Jens Axboe <axboe@kernel.dk>
+Message-ID: <66fddf12-0dc4-1c73-affd-f8404e87342f@kernel.dk>
+Date: Wed, 11 Sep 2019 16:13:16 -0600
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 40F2DA63D46F5CD798C0546348146FBED6745C18E6A0AE0525103705EBD596C12000:8
-X-MTK: N
+In-Reply-To: <1568183562-18241-2-git-send-email-stanley.chu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_114938_644098_CB05BA8E 
-X-CRM114-Status: GOOD (  23.49  )
+X-CRM114-CacheID: sfid-20190911_151323_205163_E5ACADC7 
+X-CRM114-Status: GOOD (  15.90  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,187 +99,53 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-rtc@vger.kernel.org, devicetree@vger.kernel.org,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Alessandro Zummo <a.zummo@towertech.it>, linux-pm@vger.kernel.org,
- Josef Friedl <josef.friedl@speed.at>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Eddie Huang <eddie.huang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Mark Rutland <mark.rutland@arm.com>,
- Tianping Fang <tianping.fang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
- linux-arm-kernel@lists.infradead.org
+Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-mediatek@lists.infradead.org,
+ peter.wang@mediatek.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Frank
-
-On Tue, 2019-09-10 at 09:04 +0200, Frank Wunderlich wrote:
-> From: Josef Friedl <josef.friedl@speed.at>
+On 9/11/19 12:32 AM, Stanley Chu wrote:
+> Some devices may skip blk_pm_runtime_init() and have null pointer
+> in its request_queue->dev. For example, SCSI devices of UFS Well-Known
+> LUNs.
 > 
-> add poweroff driver for mt6323 and make Makefile and Kconfig-Entries
+> Currently the null pointer is checked by the user of
+> blk_set_runtime_active(), i.e., scsi_dev_type_resume(). It is better to
+> check it by blk_set_runtime_active() itself instead of by its users.
 > 
-> Suggested-by: Frank Wunderlich <frank-w@public-files.de>
-> Signed-off-by: Josef Friedl <josef.friedl@speed.at>
-> Signed-off-by: Frank Wunderlich <frank-w@public-files.de>
-> Acked-by: Sebastian Reichel <sebastian.reichel@collabora.com>
-
-
-Thanks for your help keep the unfinished driver to upstream
-
-Acked-by: Sean Wang <sean.wang@mediatek.com>
-
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
 > ---
-> changes since v6: none
-> changes since v5: split out mfd/mt6397/core.h
-> changes since v4: none
-> changes since v3: none
-> changes since v2: none (=v2 part 5)
-> ---
->  drivers/power/reset/Kconfig           | 10 +++
->  drivers/power/reset/Makefile          |  1 +
->  drivers/power/reset/mt6323-poweroff.c | 97 +++++++++++++++++++++++++++
->  3 files changed, 108 insertions(+)
->  create mode 100644 drivers/power/reset/mt6323-poweroff.c
+>   block/blk-pm.c | 3 +++
+>   1 file changed, 3 insertions(+)
 > 
-> diff --git a/drivers/power/reset/Kconfig b/drivers/power/reset/Kconfig
-> index a564237278ff..c721939767eb 100644
-> --- a/drivers/power/reset/Kconfig
-> +++ b/drivers/power/reset/Kconfig
-> @@ -140,6 +140,16 @@ config POWER_RESET_LTC2952
->  	  This driver supports an external powerdown trigger and board power
->  	  down via the LTC2952. Bindings are made in the device tree.
->  
-> +config POWER_RESET_MT6323
-> +       bool "MediaTek MT6323 power-off driver"
-> +       depends on MFD_MT6397
-> +       help
-> +         The power-off driver is responsible for externally shutdown down
-> +         the power of a remote MediaTek SoC MT6323 is connected to through
-> +         controlling a tiny circuit BBPU inside MT6323 RTC.
+> diff --git a/block/blk-pm.c b/block/blk-pm.c
+> index 0a028c189897..56ed94f7a2a3 100644
+> --- a/block/blk-pm.c
+> +++ b/block/blk-pm.c
+> @@ -207,6 +207,9 @@ EXPORT_SYMBOL(blk_post_runtime_resume);
+>    */
+>   void blk_set_runtime_active(struct request_queue *q)
+>   {
+> +	if (!q->dev)
+> +		return;
 > +
-> +         Say Y if you have a board where MT6323 could be found.
-> +
->  config POWER_RESET_QNAP
->  	bool "QNAP power-off driver"
->  	depends on OF_GPIO && PLAT_ORION
-> diff --git a/drivers/power/reset/Makefile b/drivers/power/reset/Makefile
-> index 85da3198e4e0..da37f8b851dc 100644
-> --- a/drivers/power/reset/Makefile
-> +++ b/drivers/power/reset/Makefile
-> @@ -11,6 +11,7 @@ obj-$(CONFIG_POWER_RESET_GPIO) += gpio-poweroff.o
->  obj-$(CONFIG_POWER_RESET_GPIO_RESTART) += gpio-restart.o
->  obj-$(CONFIG_POWER_RESET_HISI) += hisi-reboot.o
->  obj-$(CONFIG_POWER_RESET_MSM) += msm-poweroff.o
-> +obj-$(CONFIG_POWER_RESET_MT6323) += mt6323-poweroff.o
->  obj-$(CONFIG_POWER_RESET_QCOM_PON) += qcom-pon.o
->  obj-$(CONFIG_POWER_RESET_OCELOT_RESET) += ocelot-reset.o
->  obj-$(CONFIG_POWER_RESET_PIIX4_POWEROFF) += piix4-poweroff.o
-> diff --git a/drivers/power/reset/mt6323-poweroff.c b/drivers/power/reset/mt6323-poweroff.c
-> new file mode 100644
-> index 000000000000..1caf43d9e46d
-> --- /dev/null
-> +++ b/drivers/power/reset/mt6323-poweroff.c
-> @@ -0,0 +1,97 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Power off through MediaTek PMIC
-> + *
-> + * Copyright (C) 2018 MediaTek Inc.
-> + *
-> + * Author: Sean Wang <sean.wang@mediatek.com>
-> + *
-> + */
-> +
-> +#include <linux/err.h>
-> +#include <linux/module.h>
-> +#include <linux/of.h>
-> +#include <linux/platform_device.h>
-> +#include <linux/mfd/mt6397/core.h>
-> +#include <linux/mfd/mt6397/rtc.h>
-> +
-> +struct mt6323_pwrc {
-> +	struct device *dev;
-> +	struct regmap *regmap;
-> +	u32 base;
-> +};
-> +
-> +static struct mt6323_pwrc *mt_pwrc;
-> +
-> +static void mt6323_do_pwroff(void)
-> +{
-> +	struct mt6323_pwrc *pwrc = mt_pwrc;
-> +	unsigned int val;
-> +	int ret;
-> +
-> +	regmap_write(pwrc->regmap, pwrc->base + RTC_BBPU, RTC_BBPU_KEY);
-> +	regmap_write(pwrc->regmap, pwrc->base + RTC_WRTGR, 1);
-> +
-> +	ret = regmap_read_poll_timeout(pwrc->regmap,
-> +					pwrc->base + RTC_BBPU, val,
-> +					!(val & RTC_BBPU_CBUSY),
-> +					MTK_RTC_POLL_DELAY_US,
-> +					MTK_RTC_POLL_TIMEOUT);
-> +	if (ret)
-> +		dev_err(pwrc->dev, "failed to write BBPU: %d\n", ret);
-> +
-> +	/* Wait some time until system down, otherwise, notice with a warn */
-> +	mdelay(1000);
-> +
-> +	WARN_ONCE(1, "Unable to power off system\n");
-> +}
-> +
-> +static int mt6323_pwrc_probe(struct platform_device *pdev)
-> +{
-> +	struct mt6397_chip *mt6397_chip = dev_get_drvdata(pdev->dev.parent);
-> +	struct mt6323_pwrc *pwrc;
-> +	struct resource *res;
-> +
-> +	pwrc = devm_kzalloc(&pdev->dev, sizeof(*pwrc), GFP_KERNEL);
-> +	if (!pwrc)
-> +		return -ENOMEM;
-> +
-> +	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> +	pwrc->base = res->start;
-> +	pwrc->regmap = mt6397_chip->regmap;
-> +	pwrc->dev = &pdev->dev;
-> +	mt_pwrc = pwrc;
-> +
-> +	pm_power_off = &mt6323_do_pwroff;
-> +
-> +	return 0;
-> +}
-> +
-> +static int mt6323_pwrc_remove(struct platform_device *pdev)
-> +{
-> +	if (pm_power_off == &mt6323_do_pwroff)
-> +		pm_power_off = NULL;
-> +
-> +	return 0;
-> +}
-> +
-> +static const struct of_device_id mt6323_pwrc_dt_match[] = {
-> +	{ .compatible = "mediatek,mt6323-pwrc" },
-> +	{},
-> +};
-> +MODULE_DEVICE_TABLE(of, mt6323_pwrc_dt_match);
-> +
-> +static struct platform_driver mt6323_pwrc_driver = {
-> +	.probe          = mt6323_pwrc_probe,
-> +	.remove         = mt6323_pwrc_remove,
-> +	.driver         = {
-> +		.name   = "mt6323-pwrc",
-> +		.of_match_table = mt6323_pwrc_dt_match,
-> +	},
-> +};
-> +
-> +module_platform_driver(mt6323_pwrc_driver);
-> +
-> +MODULE_DESCRIPTION("Poweroff driver for MT6323 PMIC");
-> +MODULE_AUTHOR("Sean Wang <sean.wang@mediatek.com>");
-> +MODULE_LICENSE("GPL v2");
+>   	spin_lock_irq(&q->queue_lock);
+>   	q->rpm_status = RPM_ACTIVE;
+>   	pm_runtime_mark_last_busy(q->dev);
 
+I'd prefer just doing:
+
+	if (q->dev) {
+		...
+	}
+
+instead. Other than that little complaint, looks good to me.
+
+-- 
+Jens Axboe
 
 
 _______________________________________________
