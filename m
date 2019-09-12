@@ -2,54 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4A7E4B0C00
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 11:55:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04AF0B0C01
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 11:55:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=RycR+HMycLbfYPfKT1HA3Paw9aMRAH+mZArlqrIt0dA=; b=GWPLF3IpCJQI1L
-	yBTKRkkKs+LNcp9cN3q20eMEYqIqiNc39VrwLrxdJS9+BPTnuvO2uhDsFdoOw9kM27QiYZfnyLhdL
-	POSd7+1Vz5avdSZhDPW4uanFE/S1TovH3CVhTHa/AG94PHGNQeR9N3CpRZJQlbBJWGmlcH87r+dgG
-	sZGLKST1m7RtUuCk7fab6tx867daxDPoWyIWQhj7L4zgYZ5b8k+lL+mRitOY6Vui3xSxyWcQzn+HD
-	y9V8Ci1PGQACi1p6FoYUqLWG7+WQtMmOEdFx7L+Fv6SzOmejrfSnIhewniHL4d2AQ7T2yg4fs1tIO
-	0scBP9Q3oo13syu6Ijrg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=tVvXLbYdOgNg1MFrA0IJJYaHcIA5OJUg8ANXP5F93ns=; b=fWXIhQX2vKqKmk
+	K56CDOXziNYy2a6pMekalB66hYred6XZHQagtwmKviZ0qmakiuQS5TsXZ2z4QqKmbgv9d/FGuOexn
+	8YHQi7pYNX4KHtw6tZLHqovpO7cKtE0q4XywRJsibTRTbDhFLHxe6Z6PyP3fCqg8dtdwMC9gaL8tu
+	+wiX6SXRRNxGuez0cHeHZjm75teJEP457RJWRxHPMCyFztAICVpYbj0zZnhiJ0VoUcsq6piZVsYyt
+	0+PB8tbi0K8sdWjbXTA7VjkAOztMOPHxMYwC8oFiCySIafe68HPLZqy0zXRpfJ5WPU3azB/pofGyA
+	1fXTWev0QsVtGTI859QQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8Lor-0007hQ-51; Thu, 12 Sep 2019 09:55:17 +0000
+	id 1i8Lou-0007jL-Fp; Thu, 12 Sep 2019 09:55:20 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8Lon-0007gM-Kz
- for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 09:55:14 +0000
-X-UUID: 2b5818e1002942eba9434c201bd71ef0-20190912
-X-UUID: 2b5818e1002942eba9434c201bd71ef0-20190912
+ id 1i8Lon-0007gO-MR
+ for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 09:55:16 +0000
+X-UUID: ffdd2a07bcd84b77a8d7dfc59a95c626-20190912
+X-UUID: ffdd2a07bcd84b77a8d7dfc59a95c626-20190912
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <jiaxin.yu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 780704557; Thu, 12 Sep 2019 01:55:05 -0800
+ with ESMTP id 2066981091; Thu, 12 Sep 2019 01:55:05 -0800
 Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 02:55:03 -0700
+ 15.0.1395.4; Thu, 12 Sep 2019 02:55:04 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Thu, 12 Sep 2019 17:55:02 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 12 Sep 2019 17:55:01 +0800
+ Transport; Thu, 12 Sep 2019 17:55:02 +0800
 From: Jiaxin Yu <jiaxin.yu@mediatek.com>
 To: <broonie@kernel.org>, <robh+dt@kernel.org>
-Subject: [PATCH 0/2] ASoC: mt8183: fix audio playback slowly after playback
- during bootup
-Date: Thu, 12 Sep 2019 17:54:54 +0800
-Message-ID: <1568282096-13821-1-git-send-email-jiaxin.yu@mediatek.com>
+Subject: [PATCH 1/2] ASoC: dt-bingdings: mediatek: mt8183: add a property
+ "medaitek, toprgu"
+Date: Thu, 12 Sep 2019 17:54:55 +0800
+Message-ID: <1568282096-13821-2-git-send-email-jiaxin.yu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1568282096-13821-1-git-send-email-jiaxin.yu@mediatek.com>
+References: <1568282096-13821-1-git-send-email-jiaxin.yu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190912_025513_689522_A74E4DE7 
-X-CRM114-Status: UNSURE (   4.67  )
+X-CRM114-CacheID: sfid-20190912_025513_740421_6A63FA8E 
+X-CRM114-Status: UNSURE (   8.00  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,19 +81,35 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-These two patches fix audio playack slowly after playbakc during bootup.
-The patches are based on broonie tree "for-next" branch.
+This patch adds a property "mediatek,toprgu" in example so that we could
+use reset controller(usually we call it toprgu or watchdog) to reset audio
+domain regs.
 
-Jiaxin Yu (2):
-  ASoC: dt-bingdings: mediatek: mt8183: add a property "medaitek,toprgu"
-  ASoC: mt8183: fix audio playback slowly after playback during bootup
+Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
+---
+ Documentation/devicetree/bindings/sound/mt8183-afe-pcm.txt | 2 ++
+ 1 file changed, 2 insertions(+)
 
- .../bindings/sound/mt8183-afe-pcm.txt         |  2 ++
- sound/soc/mediatek/common/mtk-base-afe.h      |  1 +
- sound/soc/mediatek/mt8183/mt8183-afe-pcm.c    | 21 +++++++++++++++++++
- sound/soc/mediatek/mt8183/mt8183-reg.h        |  6 ++++++
- 4 files changed, 30 insertions(+)
-
+diff --git a/Documentation/devicetree/bindings/sound/mt8183-afe-pcm.txt b/Documentation/devicetree/bindings/sound/mt8183-afe-pcm.txt
+index 396ba38619f6..45ca182a4ecc 100644
+--- a/Documentation/devicetree/bindings/sound/mt8183-afe-pcm.txt
++++ b/Documentation/devicetree/bindings/sound/mt8183-afe-pcm.txt
+@@ -4,6 +4,7 @@ Required properties:
+ - compatible = "mediatek,mt68183-audio";
+ - reg: register location and size
+ - interrupts: should contain AFE interrupt
++- mediatek,toprgu: A phandle to the TOPRGU which for reset controller unit
+ - power-domains: should define the power domain
+ - clocks: Must contain an entry for each entry in clock-names
+ - clock-names: should have these clock names:
+@@ -20,6 +21,7 @@ Example:
+ 		compatible = "mediatek,mt8183-audio";
+ 		reg = <0 0x11220000 0 0x1000>;
+ 		interrupts = <GIC_SPI 161 IRQ_TYPE_LEVEL_LOW>;
++		mediatek,toprgu = <&watchdog>;
+ 		power-domains = <&scpsys MT8183_POWER_DOMAIN_AUDIO>;
+ 		clocks = <&infrasys CLK_INFRA_AUDIO>,
+ 			 <&infrasys CLK_INFRA_AUDIO_26M_BCLK>,
 -- 
 2.18.0
 
