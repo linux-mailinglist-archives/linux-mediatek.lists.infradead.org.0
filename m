@@ -2,86 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8651EB1030
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 15:43:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2BD2EB1039
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 15:44:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=a5lwjxH5hhLUHqlic4SEAfOP8gaFJiIgUuD5zZ2lZec=; b=kdMIdzMYSrRBXp
-	FcGCTdGCycCiI+SwIyavMZ+3Owmg7OTz5IOtUtP+7TZ8YOKg6KlzW1kxXwy7XHZs6unFiCOO5zfUP
-	pOmVmdkM56DodHBCnXX/d+teEfQ0eiIx7T/9L0dbkJ2yb7LkgJglb/vYnQom6JQPaYN6Wo/fNmYO6
-	EtDl6dC+7zSB/IBh2cw5AOX3AySU2amvmhDp5wZws0x/hpa8ZG0O4UX39Jw2WTEvy1ksDTr4skRsC
-	Rq2fagz8qmpvNwiJo7eK0vn8piv7HuLoNOyu452rVSqu/DzLgqVGxglA5vi23+zujE7xvFefowQgo
-	NtJYbNFBxbK8/IWsV5Fw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=i+W4Yqax/BgEShIbHLb7AhX7qbeMOgbr6SB/9n2rp8s=; b=OwriEVdXuoKomB
+	AWKcFtdI4AbHVyMAt5u0DK5HY3auPTsjX6DYYE28sEVHMM/Mbjp14YO5Yb75iXMEvVnQEU9gV6Piv
+	Pjx7p/jD0IFJsrt/ASxw/8fyTEltXjfOpMX/kPSzUakv5WsCOQkGP6OdPdWbW677WVSAJPPUm8wR9
+	F52icKgCcsX0B5YqYWsXbx8rsMGx6xl8tm+UUhgXSooqyzQ+fcUfqwzywkW3xUAmH8591sSaH6fDY
+	WKPBUbSCYrumlm81mTPF9Wmbs4ocYue0H+3annoD098mg+PMf0kyfYfiDQiTnHhEF3XNdM02/eT5A
+	TfBetinRQ1NYG3RShwmQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8PNd-0000Xs-0f; Thu, 12 Sep 2019 13:43:25 +0000
-Received: from mail-lf1-x142.google.com ([2a00:1450:4864:20::142])
+	id 1i8PP4-00011n-5Q; Thu, 12 Sep 2019 13:44:54 +0000
+Received: from mail-pf1-f193.google.com ([209.85.210.193])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8PNX-0000XD-CV
- for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 13:43:20 +0000
-Received: by mail-lf1-x142.google.com with SMTP id q11so4457729lfc.11
- for <linux-mediatek@lists.infradead.org>; Thu, 12 Sep 2019 06:43:17 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=nZt0B3xrqHLHU4EvkiZMlrE7A5+KS8ARbT0ipn5PjfE=;
- b=jm6q7ISk/RfhVugAWF5YSK2afzSWJDBFxAi7oi9VZErcMD7Z1AukPdyibpKG5vTRe2
- jFmOIewoNoWhvEzTu8X+x7EZuqE5RgFfWm3QrjW9c7PRikJmv8w8KZZyC7lhn5ToHLsi
- 8XpXAxjCiIU7RE4ufk8iJES4+77c9H0I6HlpdQdUX0nzjFrPt5P/AEtOMdDE48SUtVDA
- IMuBfP9lUYg0hfWM2zCvqW7YnBHHe1rBnGBF0zfYgc5u5c2j5sy9alNvTo/hs6te+GAa
- okus/w6Gb3Wa+mgHCt1IeKaxQmCg+St1kGqBkfGbyPfJQujHkOtvzQZ7U64Y+Q4RpTW6
- DYaA==
+ id 1i8POW-0000mu-HP; Thu, 12 Sep 2019 13:44:21 +0000
+Received: by mail-pf1-f193.google.com with SMTP id r12so16085580pfh.1;
+ Thu, 12 Sep 2019 06:44:19 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=nZt0B3xrqHLHU4EvkiZMlrE7A5+KS8ARbT0ipn5PjfE=;
- b=gFspQYiRUXR+3ha056fwm2xR0K0Pe0lEzJOeXqjpolilaCoGF7OGktPTB+0WtrJuyg
- UTDN9oU9y5Ay4jzycOEHMTIQjHRIH+gJBP1JokhsWBE8A7D5dYgvJkqbI54CzUG7sr4/
- 9kZ66AX9jxjsMfgCpDz29q4ezf+Q2SADkQm1wFhEt+B6tE6V/RULIb7JxJe1Fwf48LIT
- 9PGAkcn7rm0Qgdo4kKuKEMmA8+DU9RbRkolWz+011xL545refO0INy344jiyvSosuIMk
- XokifpVriNagxLaOS6xm3Bo9qeAIbVwcEMMWraieCptdFjBAGYjOKvv5OXnFEZFizOrG
- +THA==
-X-Gm-Message-State: APjAAAUEysvMo3UM7bRIdOz/cbvqN9T1rk5lWYFmKdvxFUtr6YMNNxMX
- wsOy31CyJ8+GBxqJSA6tlVmuju0sVB9aZxj9GtO2GQ==
-X-Google-Smtp-Source: APXvYqwunbF7TyfIhMcANFX4yAMKAnnsZW2NFILSXWz0Zd7gn78zVLaU+lihiMnQ0FO7JFF52e8A7qNnUVzqrPH/nXc=
-X-Received: by 2002:a19:48c3:: with SMTP id
- v186mr27989255lfa.141.1568295796494; 
- Thu, 12 Sep 2019 06:43:16 -0700 (PDT)
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=ceNPWcWTipfAfeKAaiTT4udHgEwkImit4TBFNaxXyew=;
+ b=d6J7vxSTOtLbsG65V2hfSGmJZI0ic7XSas3B3PArwQy6LgzzIGD4i6E4B1V1nTLRJP
+ P5gU9l8lJkQ00A9pW87Gblu/lBcu14BwgT+JCcI/WW1C3kKBPTxtyezHk+DnpI8wc29v
+ ocpfhw8NBaAYECrQ7Qz2yTUp0OeL9g48Y62BdJJ30pDdpCZCfBZg9u0I1a1kCFA9LzkM
+ /69jCvJHOqOk3xTi6Z7826SI33pWHc5j9sJDiZ260lx/XwNcQBa+87mqDcC38cZG3iDE
+ mMcaDpeU6wyw12HFyUUZSoKO8TmWv9qTo7ICsgjnnJM4VFxLHAOxxd/+ec9ISUW3SLIf
+ 2ZBA==
+X-Gm-Message-State: APjAAAXYTl8IkMQbif4hykceRGEvCZH8HZx3ynUg75HFja5X8fEj9Ta7
+ X7alZ/4RwcUMv4qPPDtqZ+o=
+X-Google-Smtp-Source: APXvYqzB9SsBEHXbRoDazbOUKTlPNiidOJt/lTTfbHQKmD4OVAcRrfttF0ZrGy/78yadGVxkdsVRGA==
+X-Received: by 2002:a65:430a:: with SMTP id j10mr39157233pgq.374.1568295858937; 
+ Thu, 12 Sep 2019 06:44:18 -0700 (PDT)
+Received: from [172.19.249.100] ([38.98.37.138])
+ by smtp.gmail.com with ESMTPSA id s18sm32320324pfh.0.2019.09.12.06.43.52
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 12 Sep 2019 06:44:18 -0700 (PDT)
+Subject: Re: [PATCH v2 1/3] scsi: core: allow auto suspend override by
+ low-level driver
+To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
+ martin.petersen@oracle.com, avri.altman@wdc.com, alim.akhtar@samsung.com,
+ pedrom.sousa@synopsys.com, sthumma@codeaurora.org, jejb@linux.ibm.com
+References: <1568270135-32442-1-git-send-email-stanley.chu@mediatek.com>
+ <1568270135-32442-2-git-send-email-stanley.chu@mediatek.com>
+From: Bart Van Assche <bvanassche@acm.org>
+Message-ID: <485731ed-d455-dbb2-0cd5-3110ff14f6b7@acm.org>
+Date: Thu, 12 Sep 2019 14:43:44 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-References: <1567662796-25508-1-git-send-email-light.hsieh@mediatek.com>
- <1567663210.1324.3.camel@mtkswgap22>
-In-Reply-To: <1567663210.1324.3.camel@mtkswgap22>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Thu, 12 Sep 2019 14:43:04 +0100
-Message-ID: <CACRpkdbBMiHk4DV3r=aLU+T+9bPQBLUiTaW6L+L=J=ec0guBmA@mail.gmail.com>
-Subject: Re: [PATCH v2 1/5] pinctrl: mediatek: Check gpio pin number and use
- binary search in mtk_hw_pin_field_lookup()
-To: Light Hsieh <light.hsieh@mediatek.com>
+In-Reply-To: <1568270135-32442-2-git-send-email-stanley.chu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190912_064319_435628_97102C92 
-X-CRM114-Status: UNSURE (   6.10  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190912_064420_576494_5E795983 
+X-CRM114-Status: GOOD (  16.57  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:142 listed in]
- [list.dnswl.org]
+ no trust [209.85.210.193 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (bart.vanassche[at]gmail.com)
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.193 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,27 +92,63 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- Sean Wang <sean.wang@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>
+Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, evgreen@chromium.org, subhashj@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ vivek.gautam@codeaurora.org, matthias.bgg@gmail.com,
+ linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Sep 5, 2019 at 7:00 AM Light Hsieh <light.hsieh@mediatek.com> wrote:
+On 9/12/19 7:35 AM, Stanley Chu wrote:
+> diff --git a/drivers/scsi/scsi_sysfs.c b/drivers/scsi/scsi_sysfs.c
+> index 64c96c7828ee..461aafadd208 100644
+> --- a/drivers/scsi/scsi_sysfs.c
+> +++ b/drivers/scsi/scsi_sysfs.c
+> @@ -1300,7 +1300,8 @@ int scsi_sysfs_add_sdev(struct scsi_device *sdev)
+>  	device_enable_async_suspend(&sdev->sdev_gendev);
+>  	scsi_autopm_get_target(starget);
+>  	pm_runtime_set_active(&sdev->sdev_gendev);
+> -	pm_runtime_forbid(&sdev->sdev_gendev);
+> +	if (sdev->rpm_autosuspend_delay < 0)
+> +		pm_runtime_forbid(&sdev->sdev_gendev);
+>  	pm_runtime_enable(&sdev->sdev_gendev);
+>  	scsi_autopm_put_target(starget);
 
-> v2 is the same as v1 except that commit message is corrected according
-> to Linus' comment for v1:
->
-> 1. remove Change-Id lines
-> 2. correct sysfs as debugfs
+So we have a single new struct member, rpm_autosuspend_delay, that
+controls two different behaviors: (a) whether or not runtime suspend is
+enabled at device creation time and (b) the power management autosuspend
+delay. I don't like this. Should two separate variables be introduced
+instead of using a single variable to control both behaviors?
 
-Patches applied with Sean's ACK.
+> diff --git a/include/scsi/scsi_device.h b/include/scsi/scsi_device.h
+> index 202f4d6a4342..133b282fae5a 100644
+> --- a/include/scsi/scsi_device.h
+> +++ b/include/scsi/scsi_device.h
+> @@ -199,7 +199,7 @@ struct scsi_device {
+>  	unsigned broken_fua:1;		/* Don't set FUA bit */
+>  	unsigned lun_in_cdb:1;		/* Store LUN bits in CDB[1] */
+>  	unsigned unmap_limit_for_ws:1;	/* Use the UNMAP limit for WRITE SAME */
+> -
+> +	int rpm_autosuspend_delay;
+>  	atomic_t disk_events_disable_depth; /* disable depth for disk events */
+>  
+>  	DECLARE_BITMAP(supported_events, SDEV_EVT_MAXBITS); /* supported events */
+> 
 
-Yours,
-Linus Walleij
+Since the default value for the autosuspend delay is the same for all
+SCSI devices attached to a SCSI host is the same, please add a variable
+with the same name in the SCSI host template and use that value as the
+default value for SCSI devices. If the rpm_autosuspend_delay variable
+only occurs in struct scsi_device then LLD authors are forced to
+introduce a slave_configure function. Introducing such a function can be
+avoided if the default autosuspend delay can be specified in the host
+template.
+
+Bart.
+
 
 _______________________________________________
 Linux-mediatek mailing list
