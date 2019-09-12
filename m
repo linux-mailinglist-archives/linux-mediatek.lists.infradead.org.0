@@ -2,62 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33A75B067F
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 03:30:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 46715B0689
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 03:33:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=opq0G1o065leDzKiALm52GccVy8upLVZzEc0Rdoxg3A=; b=KwRGgkOwKai8a7
-	HvBUn7eqe0xAQBK/TVp5miFKCp+Eo4IQEA/68KrgaMRr79XUvM7bV1y0593BV9qmGkSNfl8Rk004b
-	/Ilx62RMK9d4033o2G9ACuANOpTnLBLFK+bwoAf5Y3UX2fQqD1Jg5sNzkog3/Go72C480vjWzGgAY
-	h/Rn1q8eLSA0TNoRCH8QDMKqZJ8+tUs5nsmy6awKF7QGKELpqV8QLIVlJ9geAkOwxQaaEs8Ne4sxX
-	y8WMqkLajgbDoNSSDapkyGkiXyjU5vs+Z307aFcgVVueCzoDh0TVPM3tdsbIwiSmHv93MJtEdmmQH
-	Aupi9lNDuNBDKf5yACag==;
+	List-Owner; bh=5Egqo0B5oLrmUKxnVK5YADuR/nYCSWi2UR9blWPpFhc=; b=KML8FbZ3O36bio
+	7jxCSawYTqqdaIMOEq69CIbj27nXsTkkspcpa68lf7TBYfUwh1rgDf3ildbI+7s5a1ZIq5EgeMRye
+	CD7MBp11j6i8MIIPS4GuMJjJ6ySq8NUP7AstwB8DEQ17In24b5NUAwk0NJIJBVgBMZRmSpQtj9hHg
+	Vr5gxbGh/VZTBtr9OSu6IfCEMvl68qEXQ+Ac1/TV+1ayynvEOprHQcHjgcUrsrKun1YWFxPMtxBKH
+	niY5SnmgIF6VmjYyz67TKQJ4HzHHPZ3HzbHYzov+Aj8qoRo7OvXOfrSDan84DW6gH4DkELfmWcV9Q
+	HhFvi0linAXmaf6FZtCg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8Dw7-0001fd-QQ; Thu, 12 Sep 2019 01:30:15 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i8DzV-0002As-Dv; Thu, 12 Sep 2019 01:33:45 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8Dvo-0000Cc-OF; Thu, 12 Sep 2019 01:29:59 +0000
-X-UUID: 9aa8295b5b9049a9832e649dddf30118-20190911
-X-UUID: 9aa8295b5b9049a9832e649dddf30118-20190911
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1i8DzS-00029w-MI
+ for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 01:33:44 +0000
+X-UUID: 012097840d20436f9f00f9477dadd5f9-20190911
+X-UUID: 012097840d20436f9f00f9477dadd5f9-20190911
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1867697175; Wed, 11 Sep 2019 17:29:50 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 843305954; Wed, 11 Sep 2019 17:33:35 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Sep 2019 18:29:48 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 09:29:47 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ 15.0.1395.4; Wed, 11 Sep 2019 18:33:33 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Sep 2019 09:33:32 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 12 Sep 2019 09:29:47 +0800
-Message-ID: <1568251787.13007.0.camel@mtksdaap41>
-Subject: Re: [RFC, v3, 1/4] dt-binding: mt8183: Add Mediatek MDP3 dt-bindings
-From: CK Hu <ck.hu@mediatek.com>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Date: Thu, 12 Sep 2019 09:29:47 +0800
-In-Reply-To: <20190911093406.5688-2-bibby.hsieh@mediatek.com>
-References: <20190911093406.5688-1-bibby.hsieh@mediatek.com>
- <20190911093406.5688-2-bibby.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Thu, 12 Sep 2019 09:33:32 +0800
+Message-ID: <1568252013.4102.1.camel@mtksdccf07>
+Subject: Re: [PATCH v5 07/13] dt-bindings: pwm: add a property "num-pwms"
+From: Sam Shih <sam.shih@mediatek.com>
+To: Rob Herring <robh@kernel.org>, Uwe =?ISO-8859-1?Q?Kleine-K=F6nig?=
+ <u.kleine-koenig@pengutronix.de>
+Date: Thu, 12 Sep 2019 09:33:33 +0800
+In-Reply-To: <20190902160445.fitoa65t4ndzjq6v@pengutronix.de>
+References: <1566457123-20791-1-git-send-email-sam.shih@mediatek.com>
+ <1566457123-20791-8-git-send-email-sam.shih@mediatek.com>
+ <20190827183924.GA24178@bogus>
+ <20190902160445.fitoa65t4ndzjq6v@pengutronix.de>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_182956_800948_8A9EB1F7 
-X-CRM114-Status: GOOD (  16.80  )
+X-CRM114-CacheID: sfid-20190911_183342_736953_778FD36D 
+X-CRM114-Status: GOOD (  24.16  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -73,260 +75,118 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- Jerry-ch.Chen@mediatek.com, jungo.lin@mediatek.com, hans.verkuil@cisco.com,
- Ping-Hsun Wu <ping-hsun.wu@mediatek.com>, frederic.chen@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- daoyuan huang <daoyuan.huang@mediatek.com>, holmes.chiou@mediatek.com,
- sj.huang@mediatek.com, yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, tfiga@chromium.org, christie.yu@mediatek.com,
- zwisler@chromium.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org, Ryder
+ Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+Content-Type: text/plain; charset="iso-8859-15"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+On Mon, 2019-09-02 at 18:04 +0200, Uwe Kleine-K=F6nig wrote:
+> On Tue, Aug 27, 2019 at 01:39:24PM -0500, Rob Herring wrote:
+> > On Thu, Aug 22, 2019 at 02:58:37PM +0800, Sam Shih wrote:
+> > > From: Ryder Lee <ryder.lee@mediatek.com>
+> > =
 
-Hi, Bibby:
+> > The subject should indicate this is for Mediatek.
+> > =
 
-On Wed, 2019-09-11 at 17:34 +0800, Bibby Hsieh wrote:
-> From: daoyuan huang <daoyuan.huang@mediatek.com>
-> 
-> This patch adds DT binding document for Media Data Path 3 (MDP3)
-> a unit in multimedia system used for scaling and color format convert.
-> 
-> Signed-off-by: Ping-Hsun Wu <ping-hsun.wu@mediatek.com>
-> Signed-off-by: daoyuan huang <daoyuan.huang@mediatek.com>
-> ---
->  .../bindings/media/mediatek,mt8183-mdp3.txt   | 201 ++++++++++++++++++
->  1 file changed, 201 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-mdp3.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek,mt8183-mdp3.txt b/Documentation/devicetree/bindings/media/mediatek,mt8183-mdp3.txt
-> new file mode 100644
-> index 000000000000..0d15326d12c1
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek,mt8183-mdp3.txt
-> @@ -0,0 +1,201 @@
-> +* Mediatek Media Data Path 3
-> +
-> +Media Data Path 3 (MDP3) is used for scaling and color space conversion.
-> +
-> +Required properties (controller node):
-> +- compatible: "mediatek,mt8183-mdp"
-> +- mediatek,scp: the node of system control processor (SCP), using the
-> +  remoteproc & rpmsg framework, see
-> +  Documentation/devicetree/bindings/remoteproc/mtk,scp.txt for details.
-> +- mediatek,mmsys: the node of mux(multiplexer) controller for HW connections.
-> +- mediatek,mm-mutex: the node of sof(start of frame) signal controller.
-> +- mediatek,mailbox-gce: the node of global command engine (GCE), used to
-> +  read/write registers with critical time limitation, see
-> +  Documentation/devicetree/bindings/mailbox/mtk-gce.txt for details.
-> +- mboxes: mailbox number used to communicate with GCE.
-> +- gce-subsys: sub-system id corresponding to the register address.
-> +- gce-event-names: in use event name list, used to correspond to event IDs.
-> +- gce-events: in use event IDs list, all IDs are defined in
-> +  'dt-bindings/gce/mt8183-gce.h'.
-> +
-> +Required properties (all function blocks, child node):
-> +- compatible: Should be one of
-> +        "mediatek,mt8183-mdp-rdma"  - read DMA
-> +        "mediatek,mt8183-mdp-rsz"   - resizer
-> +        "mediatek,mt8183-mdp-wdma"  - write DMA
-> +        "mediatek,mt8183-mdp-wrot"  - write DMA with rotation
-> +        "mediatek,mt8183-mdp-ccorr" - color correction with 3X3 matrix
-> +- reg: Physical base address and length of the function block register space
-> +- clocks: device clocks, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
-> +- power-domains: a phandle to the power domain, see
-> +  Documentation/devicetree/bindings/power/power_domain.txt for details.
-> +- mediatek,mdp-id: HW index to distinguish same functionality modules.
-> +
-> +Required properties (DMA function blocks, child node):
-> +- compatible: Should be one of
-> +        "mediatek,mt8183-mdp-rdma"
-> +        "mediatek,mt8183-mdp-wdma"
-> +        "mediatek,mt8183-mdp-wrot"
-> +- iommus: should point to the respective IOMMU block with master port as
-> +  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
-> +  for details.
-> +- mediatek,larb: must contain the local arbiters in the current Socs, see
-> +  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
-> +  for details.
-> +
-> +Required properties (input path selection node):
-> +- compatible:
-> +        "mediatek,mt8183-mdp-dl"    - MDP direct link input source selection
-> +- reg: Physical base address and length of the function block register space
-> +- clocks: device clocks, see
-> +  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
-> +- mediatek,mdp-id: HW index to distinguish same functionality modules.
-> +
-> +Required properties (ISP PASS2 (DIP) module path selection node):
-> +- compatible:
-> +        "mediatek,mt8183-mdp-imgi"  - input DMA of ISP PASS2 (DIP) module for raw image input
-> +- reg: Physical base address and length of the function block register space
-> +- mediatek,mdp-id: HW index to distinguish same functionality modules.
-> +
-> +Required properties (SW node):
-> +- compatible: Should be one of
-> +        "mediatek,mt8183-mdp-exto"  - output DMA of ISP PASS2 (DIP) module for yuv image output
-> +        "mediatek,mt8183-mdp-path"  - MDP output path selection
-> +- mediatek,mdp-id: HW index to distinguish same functionality modules.
-> +
-> +Example:
-> +		mdp_camin@14000000 {
-> +			compatible = "mediatek,mt8183-mdp-dl";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x14000000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_DL_TXCK>,
-> +				<&mmsys CLK_MM_MDP_DL_RX>;
-> +		};
-> +
-> +		mdp_camin2@14000000 {
-> +			compatible = "mediatek,mt8183-mdp-dl";
-> +			mediatek,mdp-id = <1>;
-> +			reg = <0 0x14000000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0 0x1000>;
-> +			clocks = <&mmsys CLK_MM_IPU_DL_TXCK>,
-> +				<&mmsys CLK_MM_IPU_DL_RX>;
-> +		};
+> > > =
 
-In [1], mmsys, mdp_camin, mdp_camin2 are at the same address
-(0x14000000), so these three should be only one device (mmsys device
-[2]). As I know, mmsys provide display clock control, display routing,
-mdp clock control and mdp routing, but the binding just show the clock
-part. I guess mdp_camin and mdp_camin2 here are the mdp routing part of
-mmsys, so this should be moved to mmsys binding.
+> > > This adds a property "num-pwms" in example so that we could
+> > > specify the number of PWM channels via device tree.
+> > > =
+
+> > > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> > > Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+> > > Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+> > > Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+> > > ---
+> > > Changes since v5:
+> > > - Add an Acked-by tag
+> > > - This file is original v4 patch 5/10
+> > > (https://patchwork.kernel.org/patch/11102577/)
+> > > =
+
+> > > Change-Id: I429048afeffa96f3f14533910efe242f88776043
+> > > ---
+> > >  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
+> > >  1 file changed, 4 insertions(+), 3 deletions(-)
+> > > =
+
+> > > diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b=
+/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> > > index 991728cb46cb..ea95b490a913 100644
+> > > --- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> > > +++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
+> > > @@ -14,12 +14,12 @@ Required properties:
+> > >                  has no clocks
+> > >     - "top": the top clock generator
+> > >     - "main": clock used by the PWM core
+> > > -   - "pwm1-8": the eight per PWM clocks for mt2712
+> > > -   - "pwm1-6": the six per PWM clocks for mt7622
+> > > -   - "pwm1-5": the five per PWM clocks for mt7623
+> > > +   - "pwm1-N": the PWM clocks for each channel
+> > > +   where N starting from 1 to the maximum number of PWM channels
+> > =
+
+> > Once converted to schema, you are going to be back to listing them out.
+> > =
+
+> > >   - pinctrl-names: Must contain a "default" entry.
+> > >   - pinctrl-0: One property must exist for each entry in pinctrl-name=
+s.
+> > >     See pinctrl/pinctrl-bindings.txt for details of the property valu=
+es.
+> > > + - num-pwms: the number of PWM channels.
+> > =
+
+> > You can't add new required properties without breaking compatibility. =
+
+> > =
+
+> > You already have to imply the number of channels from the compatible (o=
+r =
+
+> > number of clocks) and you have to keep doing so to maintain =
+
+> > compatibility, so why not just keep doing that for new chips?
+> =
+
+> This was a suggestion by me. The driver still handles compatibility
+> (i.e. falls back to the number of PWMs that was implied by the
+> compatible before). Given that there are various drivers that all solve
+> the same problem (i.e. different variants with different number of PWMs)
+> I thought it would be a good idea to introduce a property in the device
+> tree that specifies this number.
+> =
+
+> Only for newly introduced compatibles the num-pwms property is really
+> required. Differentiating the ones that need it and the ones that don't
+> seems over-engineered to me.
+> =
+
+> (BTW, using the number of clks doesn't really work because there are
+> also some variants without clocks. It is still under discussion if in
+> this case dummy-clocks should be provided IIRC.)
+> =
+
+> Best regards
+> Uwe
+> =
 
 
-[1] https://patchwork.kernel.org/patch/11140747/
-[2]
-https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt?h=v5.3-rc8
 
-Regards,
-CK
-> +
-> +		mdp_rdma0: mdp_rdma0@14001000 {
-> +			compatible = "mediatek,mt8183-mdp-rdma",
-> +				     "mediatek,mt8183-mdp3";
-> +			mediatek,scp = <&scp>;
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x14001000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x1000 0x1000>;
-> +			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-> +			clocks = <&mmsys CLK_MM_MDP_RDMA0>,
-> +				<&mmsys CLK_MM_MDP_RSZ1>;
-> +			iommus = <&iommu M4U_PORT_MDP_RDMA0>;
-> +			mediatek,larb = <&larb0>;
-> +			mediatek,mmsys = <&mmsys>;
-> +			mediatek,mm-mutex = <&mutex>;
-> +			mediatek,mailbox-gce = <&gce>;
-> +			mboxes = <&gce 20 CMDQ_THR_PRIO_LOWEST 0>,
-> +				<&gce 21 CMDQ_THR_PRIO_LOWEST 0>,
-> +				<&gce 22 CMDQ_THR_PRIO_LOWEST 0>,
-> +				<&gce 23 CMDQ_THR_PRIO_LOWEST 0>;
-> +			gce-subsys = <&gce 0x14000000 SUBSYS_1400XXXX>,
-> +				<&gce 0x14010000 SUBSYS_1401XXXX>,
-> +				<&gce 0x14020000 SUBSYS_1402XXXX>,
-> +				<&gce 0x15020000 SUBSYS_1502XXXX>;
-> +			mediatek,gce-events = <CMDQ_EVENT_MDP_RDMA0_SOF>,
-> +				<CMDQ_EVENT_MDP_RDMA0_EOF>,
-> +				<CMDQ_EVENT_MDP_RSZ0_SOF>,
-> +				<CMDQ_EVENT_MDP_RSZ1_SOF>,
-> +				<CMDQ_EVENT_MDP_TDSHP_SOF>,
-> +				<CMDQ_EVENT_MDP_WROT0_SOF>,
-> +				<CMDQ_EVENT_MDP_WROT0_EOF>,
-> +				<CMDQ_EVENT_MDP_WDMA0_SOF>,
-> +				<CMDQ_EVENT_MDP_WDMA0_EOF>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_0>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_1>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_2>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_3>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_4>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_5>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_6>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_7>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_8>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_9>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_10>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_11>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_12>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_13>,
-> +				<CMDQ_EVENT_ISP_FRAME_DONE_P2_14>,
-> +				<CMDQ_EVENT_WPE_A_DONE>,
-> +				<CMDQ_EVENT_SPE_B_DONE>;
-> +		};
-> +
-> +		mdp_imgi@15020000 {
-> +			compatible = "mediatek,mt8183-mdp-imgi";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x15020000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1502XXXX 0 0x1000>;
-> +		};
-> +
-> +		mdp_img2o@15020000 {
-> +			compatible = "mediatek,mt8183-mdp-exto";
-> +			mediatek,mdp-id = <1>;
-> +		};
-> +
-> +		mdp_rsz0: mdp_rsz0@14003000 {
-> +			compatible = "mediatek,mt8183-mdp-rsz";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x14003000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x3000 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_RSZ0>;
-> +		};
-> +
-> +		mdp_rsz1: mdp_rsz1@14004000 {
-> +			compatible = "mediatek,mt8183-mdp-rsz";
-> +			mediatek,mdp-id = <1>;
-> +			reg = <0 0x14004000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x4000 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_RSZ1>;
-> +		};
-> +
-> +		mdp_wrot0: mdp_wrot0@14005000 {
-> +			compatible = "mediatek,mt8183-mdp-wrot";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x14005000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x5000 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_WROT0>;
-> +			iommus = <&iommu M4U_PORT_MDP_WROT0>;
-> +			mediatek,larb = <&larb0>;
-> +		};
-> +
-> +		mdp_path0_sout@14005000 {
-> +			compatible = "mediatek,mt8183-mdp-path";
-> +			mediatek,mdp-id = <0>;
-> +		};
-> +
-> +		mdp_wdma: mdp_wdma@14006000 {
-> +			compatible = "mediatek,mt8183-mdp-wdma";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x14006000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x6000 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_WDMA0>;
-> +			iommus = <&iommu M4U_PORT_MDP_WDMA0>;
-> +			mediatek,larb = <&larb0>;
-> +		};
-> +
-> +		mdp_path1_sout@14006000 {
-> +			compatible = "mediatek,mt8183-mdp-path";
-> +			mediatek,mdp-id = <1>;
-> +		};
-> +
-> +		mdp_ccorr: mdp_ccorr@1401c000 {
-> +			compatible = "mediatek,mt8183-mdp-ccorr";
-> +			mediatek,mdp-id = <0>;
-> +			reg = <0 0x1401c000 0 0x1000>;
-> +			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0xc000 0x1000>;
-> +			clocks = <&mmsys CLK_MM_MDP_CCORR>;
-> +		};
+Any conclusions ? =
 
+
+just a friendly reminder :)
+
+
+regards Sam
 
 
 
