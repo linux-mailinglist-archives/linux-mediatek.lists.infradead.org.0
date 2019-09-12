@@ -2,63 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D1E7B0C02
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 11:55:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC4D5B0CFD
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 12:35:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H61TmLfwiWV4cnZrRdQe2m2Y8OcMeis8autYRtzs8jo=; b=XdTC+wesq42qj9
-	2brut22wP7on1dFE36pJyPPth33gqjwdg2f7JWnUBUer1godQGlH01He6UG1qibMzrymQo8TNEr+E
-	Ux7cUTI0Y/GI3Fvy0XG3aM8qGkQfOs37SHkHGAJ8egNLkdsbFyYcvcN08TzuzTqJZEQgdyQizex2t
-	rSHtKJ8kA+FGCPEwgpVz93jEk4wroGEvpSYIzDz2lcMci2Tv0flmIuuvfxBcl2HAhZmLlwFvaRg2y
-	bcrtnDnGdO86qQNEstw4JXWTogZ1sG9sD0reGwNUzhjjRwd9EwaX9EjXzCaMLmuxCWwDaRvODT5xu
-	C1bT4a7++p2FfhwUqFnQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=BMRQ+auTqOC3DwBDCyAlp7EEN7mqYzie8rGA/Hy7Og8=; b=g62fbqyIbjZ/mt
+	Hhnu4tDTIontYAaK5B5ooHY0SeonrJx0kxJcCR8NVoOjJGucKBT/gzR/o+KwwvzMpT5gIMeiVGsyn
+	xdTQvzBfjz9oP6gdPXnsq0yeePKPN4BTppV4YBuvb93xKMWP9aBZ9WqpFnioFbRZ6LS7txV4XdXsf
+	kv0gxIHWtNFYW5TwWfRLeyvTf+vAOkVJ86dQ0vU/74QyD58oIOVYGzSGBh+m/7cPRjjHegIiAftN/
+	UToVJEK99YSZDZHIL/UJkteF84mMW00HaIftrWa51w1zMf9pQ4wKJxOnxClWm++6s77Sm0XI5bzKx
+	pHja+oelaYVqmUZEHl9w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8Lot-0007i0-EB; Thu, 12 Sep 2019 09:55:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i8MRP-0005aC-Br; Thu, 12 Sep 2019 10:35:07 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8Lon-0007gU-IX
- for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 09:55:15 +0000
-X-UUID: eca21a6d0cf74a25bccf6540988aae1a-20190912
-X-UUID: eca21a6d0cf74a25bccf6540988aae1a-20190912
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <jiaxin.yu@mediatek.com>)
+ id 1i8MRK-00050e-2b
+ for linux-mediatek@lists.infradead.org; Thu, 12 Sep 2019 10:35:03 +0000
+X-UUID: 80cf54b9ca1e45ac8eff35104e021598-20190912
+X-UUID: 80cf54b9ca1e45ac8eff35104e021598-20190912
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <miles.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1219372416; Thu, 12 Sep 2019 01:55:06 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 02:55:04 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Sep 2019 17:55:03 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 12 Sep 2019 17:55:03 +0800
-From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-To: <broonie@kernel.org>, <robh+dt@kernel.org>
-Subject: [PATCH 2/2] ASoC: mt8183: fix audio playback slowly after playback
- during bootup
-Date: Thu, 12 Sep 2019 17:54:56 +0800
-Message-ID: <1568282096-13821-3-git-send-email-jiaxin.yu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1568282096-13821-1-git-send-email-jiaxin.yu@mediatek.com>
-References: <1568282096-13821-1-git-send-email-jiaxin.yu@mediatek.com>
+ with ESMTP id 1371519688; Thu, 12 Sep 2019 02:34:55 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Sep 2019 03:34:53 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Sep 2019 18:34:51 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Thu, 12 Sep 2019 18:34:52 +0800
+From: Miles Chen <miles.chen@mediatek.com>
+To: Ingo Molnar <mingo@redhat.com>, Peter Zijlstra <peterz@infradead.org>
+Subject: [PATCH] psi: put NULL char correctly in psi_write()
+Date: Thu, 12 Sep 2019 18:34:52 +0800
+Message-ID: <20190912103452.13281-1-miles.chen@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190912_025513_619050_F01CAABF 
-X-CRM114-Status: GOOD (  10.30  )
+X-CRM114-CacheID: sfid-20190912_033502_129246_2ACA68AE 
+X-CRM114-Status: UNSURE (   8.41  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -74,92 +70,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, lgirdwood@gmail.com, jiaxin.yu@mediatek.com,
- perex@perex.cz, tzungbi@google.com, linux-mediatek@lists.infradead.org,
- eason.yen@mediatek.com
+Cc: Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Before regmap_reinit_cache we must reset audio reg as default value.
-So we use reset controller unit(toprgu) to reset audio hw.
+When passing a equal or more then 32 bytes long string to psi_write(),
+psi_write() copies 31 bytes to its buf and overwrites buf[30]
+with '\0'. Which makes the input string 1 byte shorter than
+it should be.
 
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
+Fix it by copying sizeof(buf) bytes when nbytes >= sizeof(buf).
+
+This does not cause problems in normal use case like:
+"some 500000 10000000" or "full 500000 10000000" because they
+are less than 32 bytes in length.
+
+	/* assuming nbytes == 35 */
+	char buf[32];
+
+	buf_size = min(nbytes, (sizeof(buf) - 1)); /* buf_size = 31 */
+	if (copy_from_user(buf, user_buf, buf_size))
+		return -EFAULT;
+
+	buf[buf_size - 1] = '\0'; /* buf[30] = '\0' */
+
+Before:
+%cd /proc/pressure/
+%echo "123456789|123456789|123456789|1234" > memory
+[   22.473497] nbytes=35,buf_size=31
+[   22.473775] 123456789|123456789|123456789| (print 30 chars)
+%sh: write error: Invalid argument
+
+%echo "123456789|123456789|123456789|1" > memory
+[   64.916162] nbytes=32,buf_size=31
+[   64.916331] 123456789|123456789|123456789| (print 30 chars)
+%sh: write error: Invalid argument
+
+After:
+%cd /proc/pressure/
+%echo "123456789|123456789|123456789|1234" > memory
+[  254.837863] nbytes=35,buf_size=32
+[  254.838541] 123456789|123456789|123456789|1 (print 31 chars)
+%sh: write error: Invalid argument
+
+%echo "123456789|123456789|123456789|1" > memory
+[ 9965.714935] nbytes=32,buf_size=32
+[ 9965.715096] 123456789|123456789|123456789|1 (print 31 chars)
+%sh: write error: Invalid argument
+
+Signed-off-by: Miles Chen <miles.chen@mediatek.com>
 ---
- sound/soc/mediatek/common/mtk-base-afe.h   |  1 +
- sound/soc/mediatek/mt8183/mt8183-afe-pcm.c | 21 +++++++++++++++++++++
- sound/soc/mediatek/mt8183/mt8183-reg.h     |  6 ++++++
- 3 files changed, 28 insertions(+)
+ kernel/sched/psi.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/sound/soc/mediatek/common/mtk-base-afe.h b/sound/soc/mediatek/common/mtk-base-afe.h
-index 60cb609a9790..bccc079ee660 100644
---- a/sound/soc/mediatek/common/mtk-base-afe.h
-+++ b/sound/soc/mediatek/common/mtk-base-afe.h
-@@ -60,6 +60,7 @@ struct mtk_base_afe {
- 	void __iomem *base_addr;
- 	struct device *dev;
- 	struct regmap *regmap;
-+	struct regmap *toprgu_regmap;
- 	struct mutex irq_alloc_lock; /* dynamic alloc irq lock */
+diff --git a/kernel/sched/psi.c b/kernel/sched/psi.c
+index 6e52b67b420e..517e3719027e 100644
+--- a/kernel/sched/psi.c
++++ b/kernel/sched/psi.c
+@@ -1198,7 +1198,7 @@ static ssize_t psi_write(struct file *file, const char __user *user_buf,
+ 	if (static_branch_likely(&psi_disabled))
+ 		return -EOPNOTSUPP;
  
- 	unsigned int const *reg_back_up_list;
-diff --git a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
-index 4a31106d3471..0e5634b3a8e3 100644
---- a/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
-+++ b/sound/soc/mediatek/mt8183/mt8183-afe-pcm.c
-@@ -1089,6 +1089,7 @@ static int mt8183_afe_pcm_dev_probe(struct platform_device *pdev)
- 	struct mtk_base_afe *afe;
- 	struct mt8183_afe_private *afe_priv;
- 	struct device *dev;
-+	unsigned int reg_value;
- 	int i, irq_id, ret;
+-	buf_size = min(nbytes, (sizeof(buf) - 1));
++	buf_size = min(nbytes, sizeof(buf));
+ 	if (copy_from_user(buf, user_buf, buf_size))
+ 		return -EFAULT;
  
- 	afe = devm_kzalloc(&pdev->dev, sizeof(*afe), GFP_KERNEL);
-@@ -1126,6 +1127,26 @@ static int mt8183_afe_pcm_dev_probe(struct platform_device *pdev)
- 		return ret;
- 	}
- 
-+	/* toprgu_regmap init */
-+	afe->toprgu_regmap = syscon_regmap_lookup_by_phandle(dev->of_node,
-+							     "mediatek,toprgu");
-+	if (IS_ERR(afe->toprgu_regmap)) {
-+		dev_err(dev, "could not get toprgu_regmap from dev\n");
-+		return PTR_ERR(afe->toprgu_regmap);
-+	}
-+
-+	/* read TOPRGUWDT_SWSYSRST, the high 8bits must be zero */
-+	regmap_read(afe->toprgu_regmap, TOPRGUWDT_SWSYSRST, &reg_value);
-+
-+	/* write TOPRGUWDT_SWSYSRST, we need set high 8bits as 0x88 first */
-+	reg_value |= 0x88000000;
-+
-+	/* reset audio domain registers */
-+	reg_value |= 1 << AUDIO_RST_SFT;
-+	regmap_write(afe->toprgu_regmap, TOPRGUWDT_SWSYSRST, reg_value);
-+	reg_value &= ~(1 << AUDIO_RST_SFT);
-+	regmap_write(afe->toprgu_regmap, TOPRGUWDT_SWSYSRST, reg_value);
-+
- 	/* enable clock for regcache get default value from hw */
- 	afe_priv->pm_runtime_bypass_reg_ctl = true;
- 	pm_runtime_get_sync(&pdev->dev);
-diff --git a/sound/soc/mediatek/mt8183/mt8183-reg.h b/sound/soc/mediatek/mt8183/mt8183-reg.h
-index e544a09e1913..8579ac4052ff 100644
---- a/sound/soc/mediatek/mt8183/mt8183-reg.h
-+++ b/sound/soc/mediatek/mt8183/mt8183-reg.h
-@@ -413,6 +413,12 @@
- #define AFE_MAX_REGISTER AFE_GENERAL2_ASRC_2CH_CON13
- #define AFE_IRQ_STATUS_BITS 0x1fff
- 
-+/* TOPRGUWDT_SWSYSRST */
-+#define TOPRGUWDT_SWSYSRST 0x18
-+#define AUDIO_RST_SFT                                17
-+#define AUDIO_RST_MASK                               0x1
-+#define AUDIO_RST_MASK_SFT                           (0x1 << 17)
-+
- /* AUDIO_TOP_CON3 */
- #define BCK_INVERSE_SFT                              3
- #define BCK_INVERSE_MASK                             0x1
 -- 
 2.18.0
 
