@@ -2,75 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E9C5CB09EA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 10:10:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81F53B09F0
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Sep 2019 10:11:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
 	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=uvE6CM/dT0Mvl2ZLln0dtcQ/6R1FehisxNH1Dwvvc38=; b=L7v
-	YBd0uq7nOEub570OMmUVPBDtq8qikzo/qrfj/TTrDae2xwdf731L8Ay0IPqeQAmGj7ej22wK9YmrG
-	82oU04jkOoVX1+6ztEKEJy4dgsE1wu5hwE1GZgIyisn0fbK9ETVkLf/VkaHVwG/AgacVbOjK5WfWJ
-	bzfJypqApsXClBGMRu9czkGvHRyK/3Rfd3J6TcgJsIYjEdef0sxC+zQkm73p+rSyu7vBBt+3/TneC
-	+uqYCDeUvFVcoVdfkDmKavnyqZLDRT1cS86Ekr16h/jkhXyZpld6oAxS2QW6UbyxBR5sETUnJjwhk
-	y+/LEOJV4kPVHOqn0cCwOtuwHi/Xn2A==;
+	References:List-Owner; bh=+ZifbmIetI0xq+qqVw3jFH6jJ2b9nY4HvwR90dtDMS8=; b=S45
+	qbpvCXJmoXrisi0k5oQQVH15YC95pDwCed8Z5UfqKIBjQkGnfEfjk6BWJoMP4j9yX99JhymDsnG24
+	m4PwGIh9XHGhxeixS+df+TGozynJfgKXHUqyGm3EtCvdwliOK2WhvFG/yJb+lUIQjywB14nM3zxnS
+	X1tDWfMEduHgyh2ttcecU/sagU3Gg6S6sg3CzBLwLaT3ZFn7F0JrO0c+MtozLQCoADyaszk/GyWUt
+	GMD4DaetG4gnlCsHJ83vqMAYNAHj3HyUGTWoYdUIWpDEc+cHVrdJ3uwtrm6edUFWt5VMZi0Fq82wh
+	i25ZjtBb83cJqwtnbmEK/fszVHOSI4A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8KBL-0006sF-Jl; Thu, 12 Sep 2019 08:10:23 +0000
-Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
+	id 1i8KBy-0007E9-Ps; Thu, 12 Sep 2019 08:11:02 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8KAu-0005QD-HV; Thu, 12 Sep 2019 08:09:58 +0000
-Received: by mail-pf1-x441.google.com with SMTP id h195so15480798pfe.5;
- Thu, 12 Sep 2019 01:09:52 -0700 (PDT)
+ id 1i8KBf-00071T-BU; Thu, 12 Sep 2019 08:10:45 +0000
+Received: by mail-pg1-x543.google.com with SMTP id d10so13044626pgo.5;
+ Thu, 12 Sep 2019 01:10:42 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:to:cc:subject:date:message-id;
- bh=BDwgpvRCPoRlKxQwn9tLrNpFXIVaah1/kS+A+STqxEo=;
- b=VEFQnUNDFS56V3FI4DXLXa7SG+KUA5TmhVUfiLOp8AAicoKfpxrOZgpQJf6V0Bett2
- /t+puLV4pHqNpgT5hfyT818UW3VeJwOUrcpowvPGE6c2IqedjLViqzjQDK81f/jqunrs
- RmPsTzm433p+ozVUHl4DFhMJO+alznBxX0aUXtSnIllLEH8A15sgNdLcbSuHGYycpDi5
- 6nGyvydUQ8K9OGoD0nTnsiUtL030y3SzBwY0Ts4MVjtSBmkBDnHh0QB5+d7tQhokek5D
- GZFwkS8EHIL/rtQxcH1QrSRbEisYE+Dij4iGSUqK2Xb3FsVufpGwsBvkatHHXSUH+9bf
- wbNw==
+ bh=oc+J6eNhxjsa/6VaspRsJsWRmZSO6iBNPRM0P3vRWgU=;
+ b=lcXyu8QcdtYlXAvo16EjoEE2lVkRF/ucXm7hOcjL9ydu2A+9cwGGqxeHsPMtbBIqmc
+ SE9ZFVGJHqULSPKFeDdFR8JyrRNB8XMAtSbhp34CJK9i694H4sn/ZHBj/sdFSa8uuSUh
+ tl5E5nMrZR1HW20D2zPqdkuuYPY8hw8YZ+QL8v4JdauMqGv6/wz3kYTLGGEEFA24Qo4K
+ IpdUt3Z+0Wn7D+eOhpe8ytOf3xghJUa5zK0W8GIteA5rnZKMpAIvhVG3UrgWORQ7S0pf
+ jQVt+0Z3pY7g6fBKRRffRLCKh0U3xo/u3UaS1xyAfeT7ZZVvu4B3XNEn0r65fYWIScCV
+ 4m8w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=BDwgpvRCPoRlKxQwn9tLrNpFXIVaah1/kS+A+STqxEo=;
- b=JcTkNA/YyUS8w2jllvU3gW2VDqbMgSYu79FrT1JhMdztVa2Ic13cTemv96Lc+8sbcA
- ywrdhHE7S1I2rJpsBf9CAoWBizysqSU4xskq5Fz9rkmrSTZAjyua/D8ILTSO6UByS+AD
- vKAA6n5uLvVPy3rEG1KaNX9MKxDqTtOrxEcoSro6WWJnOHlrbdcxb9FQHIeVYyCaZFRd
- Pr/1+QdJ58rEnZ5upiEw90oP6LYR6b/wMq25Bf4AjfyrIJCgUX/EMWSCh2iFpKzpXh2Y
- y076TRx7Xlq+6OCVaUgd5QTycG6SE+CZO9+AAxzPrN/yuzr8FeolK0lGS4IW5c8DTy6f
- pGaw==
-X-Gm-Message-State: APjAAAXP4E87tfxEVKeipPy5GDdxvQ5ZtXmwWiEbdllWT2KKu6XB4QrV
- 3HfHJElvhjWMCoHyOL2+/X4=
-X-Google-Smtp-Source: APXvYqyhcfflD19zJAsipz637jg2qW2udOQ9WffQDshp68Dpcrq8y0DuUmgGftFIVl3tiKBZb0rhFg==
-X-Received: by 2002:a17:90a:fb92:: with SMTP id
- cp18mr10348752pjb.60.1568275792035; 
- Thu, 12 Sep 2019 01:09:52 -0700 (PDT)
+ bh=oc+J6eNhxjsa/6VaspRsJsWRmZSO6iBNPRM0P3vRWgU=;
+ b=gnSMkGMReNjcEXtNTXFhxlkhGludCEJfoQerqCQ1mm2qA/FEmH+DEjjoOc4eAOZr+o
+ 8YNXHmJk6E+F0J79LpWdonKl9FVSTSY4YViP8G//uuOAwW+RZLJUxw3Uj9f2X+7O5Bw1
+ Y80l1PL/x2tIA7wpUw7JUfFnwxvqMgRB30WDq4R8RfCs+buTGPBRuiEzgfI9Xg6kSvUC
+ JS/1MBUPtGOFevCMzNl7CERGOclTcf6KugQNVyjW8/2nOK5+h4FDHAuBk5db8dzAFh++
+ Yby6aVnSzqLLRnUKbkkWleu8XUcgYhHKzcTnpNzHrMfDLJBO278GnpOjqBMs1nG4oXi6
+ 3HrQ==
+X-Gm-Message-State: APjAAAUEyzdG+xpe54ojytLgJweWVkH0p2gEHudfsABwmLUkGcuG3zPN
+ mwSCxeqI/CYMcbPnbIb0o1o=
+X-Google-Smtp-Source: APXvYqxj2Z0ybFCxoDzWvLTu0G4ZmzxE7v6gpTeXj427bB2Z/QsWjHENSJdi25PbQtWkSx44cbblhQ==
+X-Received: by 2002:a62:fc46:: with SMTP id e67mr47712131pfh.153.1568275842219; 
+ Thu, 12 Sep 2019 01:10:42 -0700 (PDT)
 Received: from localhost.localdomain ([49.216.13.52])
- by smtp.gmail.com with ESMTPSA id x13sm25549391pfm.157.2019.09.12.01.09.49
+ by smtp.gmail.com with ESMTPSA id j26sm23435730pfe.181.2019.09.12.01.10.40
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Thu, 12 Sep 2019 01:09:51 -0700 (PDT)
+ Thu, 12 Sep 2019 01:10:41 -0700 (PDT)
 From: Gene Chen <gene.chen.richtek@gmail.com>
 To: matthias.bgg@gmail.com,
 	gene_chen@richtek.com,
 	Wilma.Wu@mediatek.com
-Subject: 
-Date: Thu, 12 Sep 2019 16:09:46 +0800
-Message-Id: <1568275786-3505-1-git-send-email-gene.chen.richtek@gmail.com>
+Subject: [PATCH] mfd: mt6360: add pmic mt6360 driver
+Date: Thu, 12 Sep 2019 16:10:37 +0800
+Message-Id: <1568275837-3560-1-git-send-email-gene.chen.richtek@gmail.com>
 X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190912_010956_583593_6C9E3304 
-X-CRM114-Status: GOOD (  14.54  )
+X-CRM114-CacheID: sfid-20190912_011043_547498_E49CDDEB 
+X-CRM114-Status: GOOD (  14.43  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -94,7 +93,8 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+Cc: Gene Chen <gene_chen@mediatek.corp-partner.google.com>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
  linux-arm-kernel@lists.infradead.org
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
@@ -102,10 +102,7 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From 66208ef7fcdb4176bf63cd130b3e3197086ac4b3 Mon Sep 17 00:00:00 2001
 From: Gene Chen <gene_chen@mediatek.corp-partner.google.com>
-Date: Thu, 22 Aug 2019 14:21:03 +0800
-Subject: [PATCH] mfd: mt6360: add pmic mt6360 driver
 
 ---
  drivers/mfd/Kconfig       |  12 ++
