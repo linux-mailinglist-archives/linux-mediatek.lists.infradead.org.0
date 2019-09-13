@@ -2,55 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F3BEBB1B00
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 11:43:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 139D9B1B05
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 11:43:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=ITmFbBXkibcyk6baisjx5LI9esl7P2yea1UFCHESY4Q=; b=jZR
-	lzBKea7VMwsQeWEmGMPg1ve2BPLnWP6J+27euXIEEFJZFrwJ9jeLLpYXlZ0orX0EJAgxwhmNv4OBT
-	le55ZUjX8rNPhZgC/+luioQsGgcVOh1Tl/qoW6d8NyH8Tai0vd2pUCixFr+DHCy6nP/RWVGVwDwyo
-	Gt5ovdjR8JOYcBbu8HouY+oENQCQz8KkIPY6bxqXR5T2MZ6Ys7r2/AWbi8FCspj/crZmlE2JbsEwx
-	i1q/m0qCHfWofh74EIm33IRzDhw0Qy8kL+a8KYMJohQvRTdu+ZLzowHLOZRHTvAJI9uKyFvXeiXJ8
-	iOHXVFisoNlE7Tdj9lzZ6dzXEBijTAg==;
+	References:List-Owner; bh=wl6gweJtVCLhPPd4xJyETJOvOHfL+2CSyRNgN18i30k=; b=BYS
+	LMWFMU+Kgl0akGVmwAvJe5xCf06PkQaObgQdHHASf08mFg3bnaV8pWD1/kxkGa5evi162S/VHWI1i
+	Pe33VSI5UZTHUCxKdIB270nYEL+aKixNM6VQIr/z69E1dz9AOiwtwNr4RVz2N4zSEVW6YP+riVzwR
+	CoH5NQpjgglQEKdTy7MazukM9HeR3zhsSoJaPE/bkifQauGR5yBuOuBydjoyBtTIelX90riY0CXTx
+	6cWeNElkhVzXCVA/W1EPX8eW1my9PmXSUn1rlSbpDpjRAQF76p+Y7t7t7uYzZ3TJ/Nzo2Y1/bO7w1
+	ISjyDQcgq384cBvoNL1Ywcwln87spbw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8i6g-0006xk-49; Fri, 13 Sep 2019 09:43:10 +0000
+	id 1i8i6z-0007FB-5I; Fri, 13 Sep 2019 09:43:29 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8i5y-0006So-Do; Fri, 13 Sep 2019 09:42:28 +0000
+ id 1i8i5y-0006T0-Fy; Fri, 13 Sep 2019 09:42:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=ttrYaGS9n7C4xeGWRUPimbew5scuwgQuTmXv7RAtL8o=; b=III1RmYYMc/w
- Lb//bsfOQicbYRax89MFkyecI+sqxYAKuo6JJNPMO4PySIqXY313I3ajQaXaVpNmxZ+h/E/4wYgqI
- 3r5KLQ6B2xatE5/ALT+/EMvPV/OO2ft+vYEPqdMp3IOkvSIK/44JG3FXaWxz0LEPfTGv6iXmoo6yK
- fYJNg=;
+ List-Archive; bh=Y2nyFh14YMEnyzHluqS8zwEeujEegYic1dEcJ8C8QJQ=; b=trBf6msPhgvj
+ Kuqi7p+Xf40XOmO/UXikYsiPYmBJBCQCb0jYRQ812BMhUBjeAABEMVAfvS9Pse9KRBXVe5XLS5FQH
+ oUHWmABkQ86oX5t21SngvaTzbRKGxNPH4wuyozrM7bnFLUhV01aaWZn06/eKD7RX3HSwQXFCda9Bu
+ ll698=;
 Received: from 195-23-252-136.net.novis.pt ([195.23.252.136]
  helo=fitzroy.sirena.org.uk) by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1i8i5u-0003TJ-A7; Fri, 13 Sep 2019 09:42:22 +0000
+ id 1i8i5u-0003TG-AS; Fri, 13 Sep 2019 09:42:22 +0000
 Received: by fitzroy.sirena.org.uk (Postfix, from userid 1000)
- id B131BD0116A; Fri, 13 Sep 2019 10:42:21 +0100 (BST)
+ id 888D0D00DD9; Fri, 13 Sep 2019 10:42:21 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: luhua.xu <luhua.xu@mediatek.com>
-Subject: Applied "dt-bindings: spi: update bindings for MT6765 SoC" to the spi
- tree
-In-Reply-To: <1568195731-3239-2-git-send-email-luhua.xu@mediatek.com>
+Subject: Applied "spi: mediatek: support large PA" to the spi tree
+In-Reply-To: <1568195731-3239-4-git-send-email-luhua.xu@mediatek.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190913094221.B131BD0116A@fitzroy.sirena.org.uk>
+Message-Id: <20190913094221.888D0D00DD9@fitzroy.sirena.org.uk>
 Date: Fri, 13 Sep 2019 10:42:21 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190913_024226_747199_5E33BB1F 
-X-CRM114-Status: GOOD (  12.88  )
+X-CRM114-CacheID: sfid-20190913_024226_747534_FDEF2A22 
+X-CRM114-Status: GOOD (  17.68  )
 X-Spam-Score: -0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.1 points)
@@ -90,7 +89,7 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 The patch
 
-   dt-bindings: spi: update bindings for MT6765 SoC
+   spi: mediatek: support large PA
 
 has been applied to the spi tree at
 
@@ -115,32 +114,124 @@ to this mail.
 Thanks,
 Mark
 
-From 7359d108d44b823d5da049ee12302125a08f2216 Mon Sep 17 00:00:00 2001
+From fdeae8f5a2e5eb3fcc9c295bfb28503c3abd4d6e Mon Sep 17 00:00:00 2001
 From: "luhua.xu" <luhua.xu@mediatek.com>
-Date: Wed, 11 Sep 2019 05:55:29 -0400
-Subject: [PATCH] dt-bindings: spi: update bindings for MT6765 SoC
+Date: Wed, 11 Sep 2019 05:55:31 -0400
+Subject: [PATCH] spi: mediatek: support large PA
 
-Add a DT binding documentation for the MT6765 soc.
+Add spi large PA(max=64G) support for DMA transfer.
 
 Signed-off-by: luhua.xu <luhua.xu@mediatek.com>
-Link: https://lore.kernel.org/r/1568195731-3239-2-git-send-email-luhua.xu@mediatek.com
+Link: https://lore.kernel.org/r/1568195731-3239-4-git-send-email-luhua.xu@mediatek.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- Documentation/devicetree/bindings/spi/spi-mt65xx.txt | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/spi/spi-mt65xx.c | 44 +++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 39 insertions(+), 5 deletions(-)
 
-diff --git a/Documentation/devicetree/bindings/spi/spi-mt65xx.txt b/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-index c0f6c8ecfa2e..3a8079eb18c8 100644
---- a/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-+++ b/Documentation/devicetree/bindings/spi/spi-mt65xx.txt
-@@ -5,6 +5,7 @@ Required properties:
-     - mediatek,mt2701-spi: for mt2701 platforms
-     - mediatek,mt2712-spi: for mt2712 platforms
-     - mediatek,mt6589-spi: for mt6589 platforms
-+    - mediatek,mt6765-spi: for mt6765 platforms
-     - mediatek,mt7622-spi: for mt7622 platforms
-     - "mediatek,mt7629-spi", "mediatek,mt7622-spi": for mt7629 platforms
-     - mediatek,mt8135-spi: for mt8135 platforms
+diff --git a/drivers/spi/spi-mt65xx.c b/drivers/spi/spi-mt65xx.c
+index c70911e2a6e1..6888a4dcff6d 100644
+--- a/drivers/spi/spi-mt65xx.c
++++ b/drivers/spi/spi-mt65xx.c
+@@ -17,6 +17,7 @@
+ #include <linux/platform_data/spi-mt65xx.h>
+ #include <linux/pm_runtime.h>
+ #include <linux/spi/spi.h>
++#include <linux/dma-mapping.h>
+ 
+ #define SPI_CFG0_REG                      0x0000
+ #define SPI_CFG1_REG                      0x0004
+@@ -28,6 +29,8 @@
+ #define SPI_STATUS0_REG                   0x001c
+ #define SPI_PAD_SEL_REG                   0x0024
+ #define SPI_CFG2_REG                      0x0028
++#define SPI_TX_SRC_REG_64                 0x002c
++#define SPI_RX_DST_REG_64                 0x0030
+ 
+ #define SPI_CFG0_SCK_HIGH_OFFSET          0
+ #define SPI_CFG0_SCK_LOW_OFFSET           8
+@@ -73,6 +76,10 @@
+ 
+ #define MTK_SPI_MAX_FIFO_SIZE 32U
+ #define MTK_SPI_PACKET_SIZE 1024
++#define MTK_SPI_32BITS_MASK  (0xffffffff)
++
++#define DMA_ADDR_EXT_BITS (36)
++#define DMA_ADDR_DEF_BITS (32)
+ 
+ struct mtk_spi_compatible {
+ 	bool need_pad_sel;
+@@ -80,6 +87,8 @@ struct mtk_spi_compatible {
+ 	bool must_tx;
+ 	/* some IC design adjust cfg register to enhance time accuracy */
+ 	bool enhance_timing;
++	/* some IC support DMA addr extension */
++	bool dma_ext;
+ };
+ 
+ struct mtk_spi {
+@@ -106,6 +115,7 @@ static const struct mtk_spi_compatible mt6765_compat = {
+ 	.need_pad_sel = true,
+ 	.must_tx = true,
+ 	.enhance_timing = true,
++	.dma_ext = true,
+ };
+ 
+ static const struct mtk_spi_compatible mt7622_compat = {
+@@ -380,10 +390,25 @@ static void mtk_spi_setup_dma_addr(struct spi_master *master,
+ {
+ 	struct mtk_spi *mdata = spi_master_get_devdata(master);
+ 
+-	if (mdata->tx_sgl)
+-		writel(xfer->tx_dma, mdata->base + SPI_TX_SRC_REG);
+-	if (mdata->rx_sgl)
+-		writel(xfer->rx_dma, mdata->base + SPI_RX_DST_REG);
++	if (mdata->tx_sgl) {
++		writel((u32)(xfer->tx_dma & MTK_SPI_32BITS_MASK),
++		       mdata->base + SPI_TX_SRC_REG);
++#ifdef CONFIG_ARCH_DMA_ADDR_T_64BIT
++		if (mdata->dev_comp->dma_ext)
++			writel((u32)(xfer->tx_dma >> 32),
++			       mdata->base + SPI_TX_SRC_REG_64);
++#endif
++	}
++
++	if (mdata->rx_sgl) {
++		writel((u32)(xfer->rx_dma & MTK_SPI_32BITS_MASK),
++		       mdata->base + SPI_RX_DST_REG);
++#ifdef CONFIG_ARCH_DMA_ADDR_T_64BIT
++		if (mdata->dev_comp->dma_ext)
++			writel((u32)(xfer->rx_dma >> 32),
++			       mdata->base + SPI_RX_DST_REG_64);
++#endif
++	}
+ }
+ 
+ static int mtk_spi_fifo_transfer(struct spi_master *master,
+@@ -595,7 +620,7 @@ static int mtk_spi_probe(struct platform_device *pdev)
+ 	struct mtk_spi *mdata;
+ 	const struct of_device_id *of_id;
+ 	struct resource *res;
+-	int i, irq, ret;
++	int i, irq, ret, addr_bits;
+ 
+ 	master = spi_alloc_master(&pdev->dev, sizeof(*mdata));
+ 	if (!master) {
+@@ -761,6 +786,15 @@ static int mtk_spi_probe(struct platform_device *pdev)
+ 		}
+ 	}
+ 
++	if (mdata->dev_comp->dma_ext)
++		addr_bits = DMA_ADDR_EXT_BITS;
++	else
++		addr_bits = DMA_ADDR_DEF_BITS;
++	ret = dma_set_mask(&pdev->dev, DMA_BIT_MASK(addr_bits));
++	if (ret)
++		dev_notice(&pdev->dev, "SPI dma_set_mask(%d) failed, ret:%d\n",
++			   addr_bits, ret);
++
+ 	return 0;
+ 
+ err_disable_runtime_pm:
 -- 
 2.20.1
 
