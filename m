@@ -2,53 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 20291B24F4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 20:18:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A411FB277E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 23:49:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=D2Nt4MI5lBpGtktWZyVIpPh/aiDi9BE+5NuLpETEeIA=; b=CG+Hb1xwHEA02fC2DV6Cf40k/
-	cd1VRGBR8ulaLtP9dU0yHzD5Cxlu5aFLEteUjjCQa9OZkgBf0hUy0rSWH5GC4ViC+GNx3P7P9B8jX
-	M/BNm8/F4QgKTRsGUeE0IqMyzGy67CfkFVpNkhFTv4zE8+7eO3qauAW/WSc89PGm280ojPVprhIvS
-	3+N41/sPIQnIekDSegGU436R5OFE6tmGiyLs5OSMB2wmIVbt3joVAGcrt9CuaElWz64OPz4leOxmk
-	4CkLZWUvyS5DJo0gQOMb7eEZz2W4bcj93N8rsHG/UJg9FFlZ694IUzQEjlobzX8cpnUUcOxNR14vG
-	ekd6HXvaQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Subject:To:From:Date:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=dwD4Dys5tDSSp0VKKw485CKf3zyA0J2epTlKLl6PZW0=; b=B2gamOjxX6MLj7
+	GR7uspf3GjbbAdC19Nuh/pix0q3C2zkcQEq6FqEoTdidJHmsP4h44/jf22/oaFFAfBS9XW338a4+a
+	T3CuH8hd4aYBCkXO4epzeEPJ1sqdEfPuN8R2bVOdziv5P/enF/k3dOpvAhWnOubvUrawuIsTmaNxQ
+	yQFXu4G9EflOUsA1HxpTwW+lzzOllfQL8rjFp7P8ffVILyWKr5m4d0sJKwit7KvzvgPbwERJu9FIT
+	0Cm819T8qeJ5c5RIs2f49kF8CnkgjYmtO3CC+rx03RjqXd0tjHrvFrdN+hWyfMjqfssFuG3rpSiwZ
+	O4i40nisuTiFIuOQLeZQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8q8z-0003SV-EN; Fri, 13 Sep 2019 18:18:06 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1i8tRD-0003vA-Td; Fri, 13 Sep 2019 21:49:07 +0000
+Received: from mail-oi1-f193.google.com ([209.85.167.193])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8q8b-0003GY-8K; Fri, 13 Sep 2019 18:17:43 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: alyssa) with ESMTPSA id ED22D289F25
-Date: Fri, 13 Sep 2019 14:17:29 -0400
-From: Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
-To: Nicolas Boichat <drinkcat@chromium.org>
-Subject: Re: [PATCH] arm64: dts: mt8183: Add node for the Mali GPU
-Message-ID: <20190913181729.GB3115@kevin>
-References: <20190905081546.42716-1-drinkcat@chromium.org>
- <CAL_JsqJCO2G90TTT9Mpy4kjVKQyXWw4aXEEnbRp_SE8X=EGc5g@mail.gmail.com>
- <CANMq1KCTPdFhJG1SLf-i+-557Yx-1WLzWCHu3tT_5Q2BF+JgdQ@mail.gmail.com>
+ id 1i8tR8-0003ta-W1; Fri, 13 Sep 2019 21:49:05 +0000
+Received: by mail-oi1-f193.google.com with SMTP id v16so3854655oiv.13;
+ Fri, 13 Sep 2019 14:49:01 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:message-id:date:from:to:cc:subject:references
+ :mime-version:content-disposition:in-reply-to;
+ bh=3ui0eUxYUk9AGgzSlQ7m/osQuaMVwY1YZdYH8n3luq8=;
+ b=uHO7GQ1MG/zPDY7icUNPEvfYMzn0ELZTLwVkJRQhLgTZns9U8gX1a/EHVeb4Cw7OWQ
+ LxxNF3gg107XFV3e0wZYh63dJiVT/VfyvayqYT1SvYG/aELKcK73SL0WECRYqBXX29u3
+ U3tJGzpVIjfZF5bTZjxM8SRWqa6k4ox9GEpaKjklSG6Z3iJUK7qbvPtxF5ypmR1iQGAC
+ 1h4htdB2MCpQmJkV0WM0jptHm30MtZf5OoOSlpjjpAG516/a7aU9IsJXyj0IuzM/aujG
+ QSAyB1aofHZ8PT4BxJ0Dw5zXUMFVX9rbSR2dpnguVDegWiEoziI50hivqFrw9jadO0x8
+ YRxQ==
+X-Gm-Message-State: APjAAAVCuu8athWBVbLQaBqXoPrD/j52LEFHsqlzsgtHHtnAIX1xWnLy
+ xApdedrYLxuo0AaIubASQg==
+X-Google-Smtp-Source: APXvYqwrX78qL+fphXmP83YaXehBjj7lGvQnlNkImVCOv6wfycHSII+8QXVN1ACQV9qwo7LJNutSCA==
+X-Received: by 2002:aca:f3d4:: with SMTP id r203mr5157914oih.164.1568411340561; 
+ Fri, 13 Sep 2019 14:49:00 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id d17sm10106995otl.25.2019.09.13.14.48.59
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 13 Sep 2019 14:49:00 -0700 (PDT)
+Message-ID: <5d7c0ecc.1c69fb81.2f580.64bb@mx.google.com>
+Date: Fri, 13 Sep 2019 16:48:59 -0500
+From: Rob Herring <robh@kernel.org>
+To: frederic.chen@mediatek.com
+Subject: Re: [RFC PATCH V3 1/5] dt-bindings: mt8183: Added DIP dt-bindings
+References: <20190909192244.9367-1-frederic.chen@mediatek.com>
+ <20190909192244.9367-2-frederic.chen@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <CANMq1KCTPdFhJG1SLf-i+-557Yx-1WLzWCHu3tT_5Q2BF+JgdQ@mail.gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Content-Disposition: inline
+In-Reply-To: <20190909192244.9367-2-frederic.chen@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190913_111741_431379_789032CB 
-X-CRM114-Status: GOOD (  13.13  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190913_144903_034396_EC6F9B45 
+X-CRM114-Status: GOOD (  11.48  )
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ no trust [209.85.167.193 listed in list.dnswl.org]
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.193 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -60,92 +88,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Boris Brezillon <boris.brezillon@collabora.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Nick Fan <nick.fan@mediatek.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
-Content-Type: multipart/mixed; boundary="===============4521588497116750845=="
+Cc: laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ Allan.Yang@mediatek.com, suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
+ jungo.lin@mediatek.com, hans.verkuil@cisco.com, frederic.chen@mediatek.com,
+ linux-media@vger.kernel.org, devicetree@vger.kernel.org,
+ holmes.chiou@mediatek.com, shik@chromium.org, yuzhao@chromium.org,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
+ srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
+ christie.yu@mediatek.com, zwisler@chromium.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+On Tue, 10 Sep 2019 03:22:40 +0800, <frederic.chen@mediatek.com> wrote:
+> From: Frederic Chen <frederic.chen@mediatek.com>
+> 
+> This patch adds DT binding documentation for the Digital Image
+> Processing (DIP) unit of camera ISP system on Mediatek's SoCs.
+> 
+> It depends on the SCP and MDP 3 patch as following:
+> 
+> 1. dt-bindings: Add a binding for Mediatek SCP
+>    https://patchwork.kernel.org/patch/11027247/
+> 2. dt-binding: mt8183: Add Mediatek MDP3 dt-bindings
+>    https://patchwork.kernel.org/patch/10945603/
+> 
+> Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
+> ---
+>  .../bindings/media/mediatek,mt8183-dip.txt    | 40 +++++++++++++++++++
+>  1 file changed, 40 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek,mt8183-dip.txt
+> 
 
---===============4521588497116750845==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="2B/JsCI69OhZNC5r"
-Content-Disposition: inline
+Please add Acked-by/Reviewed-by tags when posting new versions. However,
+there's no need to repost patches *only* to add the tags. The upstream
+maintainer will do that for acks received on the version they apply.
 
+If a tag was not added on purpose, please state why and what changed.
 
---2B/JsCI69OhZNC5r
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
-
-> > > The binding we use with out-of-tree Mali drivers includes more
-> > > clocks, I assume this would be required eventually if we have an
-> > > in-tree driver:
-> >
-> > We have an in-tree driver...
->=20
-> Right but AFAICT it does not support Bifrost GPU (yet?).
-
-By the time MT8183 shows up in more concrete devices, it will, certainly
-in kernel-space and likely in userspace as well. At present, the DDK can
-be modified to run on top of the in-tree Mali drivers, i.e. "Bifrost on
-mainline linux-next (+ page table/compatible patches), with blob
-userspace".
-
-While the open userspace isn't ready here quite yet, I would definitely
-encourage upstream kernel for ChromeOS, since then there's no need to
-maintain the out-of-tree GPU driver.
-
----
-
-More immediately, per Rob's review, it's important that the bindings
-accepted upstream work with the in-tree Bifrost driver. Conceptually,
-once Mesa supports Bifrost, if I install Debian on a MT8183 board,
-everything should just work. I shouldn't need MT-specific changes / need
-to change names for the DT. Regardless of which kernel driver you end up
-using, minimally sharing the DT is good for everyone :-)
-
--Alyssa
-
---2B/JsCI69OhZNC5r
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEEQ17gm7CvANAdqvY4/v5QWgr1WA0FAl173TQACgkQ/v5QWgr1
-WA2KFBAAnQIHm2aIeWt2mYq9onM7XNfSCCxZzYCsLXaE1LiylCZdcDanV4VaF+B3
-f+jIbfoeoHcnqlhNYRNiI93L0dl3YdmKHBJsPkxNg+ziQu/alZQbsYFNB07LBsuk
-2dxKissYufkSfdcc4UFEBDYq6LQlLF0XmXr5G7oNazC29e73h6Jpn8lrIlKrKo+v
-5SE/KJs7ua1sfKkj6As8LOh2VFqCv+NZ7XPjI+qUQDoSfXgoO2DTsLu79lhInxRr
-pdC8YKeypMlEGRuDgXt9Ee1zi0lk0OroJ+9uELf1G67V/JlpSOOI1go00HhC4Tll
-I8LeczfwD2ujVnJ1kpENyQAmqEY/b6lNPIQJm0MvLFh59Hk9hjl8j1WlH9+yKMNH
-rcZK1/SYeo97URXmKbfYFiwnRLXsX3p7wXjC6vtiw0xa7AcgdsfU+su4uUp8uq3V
-6xCVdnowzNVjYBt8OZbOV5QWXTp0peb9VRIdCjHnrtgb55eYoQDV7Mh69Q5oG8MB
-GZoD72p8ks3LI9BrTJ2QFjEsbWYj9XpvXI7AGL7YcR99QyF9hmgQF0h8Xnwz4nwD
-8oYGMbECAYUT7gVNHCU9lbFkmvsgMCSTvLfMNO5nwarwgF5y8LsQITo9Bf2tLyQ/
-nu3S6fy0qmIcLnwbiMG7urG8a81EtGUNJb8JBd4SLmKQAkA4NWo=
-=H0a9
------END PGP SIGNATURE-----
-
---2B/JsCI69OhZNC5r--
-
-
---===============4521588497116750845==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============4521588497116750845==--
-
