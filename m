@@ -2,86 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E42CFB1DD1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 14:40:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 20291B24F4
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 20:18:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4TRXkUf3Cc4j/bNfQpamG2Kj2lzrfS8KDeQQEKLZw5w=; b=R9y749WKUGIeLg
-	DnRt+zVgvJ0HNzMZ5KPQwPpIkz6WQ15p67j1YmKIk3+qKXPgcLR7vMs4T3oU+OkbB5Ma9iApra+2d
-	78maTFo6CIRWWaN3quTOHWxgUGfdiSrUm65iHGFQMMU8wD4udfmITdqeWPIXfE7u05QJ8c0LxFhFX
-	korcum1N9sRn2IMN3o9fFZM09d3lAc15F6oZxbOSQYawJtZdngJyM5hwiCIWw9yqr8AZekzkqs1W2
-	veBlCxoZQETHysJlQyRHKORW9otasrUxnY07cIZ+MNxuofvk7rJoAD+hkCRSj7+d4E8JovOWIzs0V
-	vyFD1GRpeUY/gGzaDDbA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=D2Nt4MI5lBpGtktWZyVIpPh/aiDi9BE+5NuLpETEeIA=; b=CG+Hb1xwHEA02fC2DV6Cf40k/
+	cd1VRGBR8ulaLtP9dU0yHzD5Cxlu5aFLEteUjjCQa9OZkgBf0hUy0rSWH5GC4ViC+GNx3P7P9B8jX
+	M/BNm8/F4QgKTRsGUeE0IqMyzGy67CfkFVpNkhFTv4zE8+7eO3qauAW/WSc89PGm280ojPVprhIvS
+	3+N41/sPIQnIekDSegGU436R5OFE6tmGiyLs5OSMB2wmIVbt3joVAGcrt9CuaElWz64OPz4leOxmk
+	4CkLZWUvyS5DJo0gQOMb7eEZz2W4bcj93N8rsHG/UJg9FFlZ694IUzQEjlobzX8cpnUUcOxNR14vG
+	ekd6HXvaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8ksR-0001h1-Lm; Fri, 13 Sep 2019 12:40:39 +0000
-Received: from mail-lf1-x143.google.com ([2a00:1450:4864:20::143])
+	id 1i8q8z-0003SV-EN; Fri, 13 Sep 2019 18:18:06 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8ksL-0001gi-13
- for linux-mediatek@lists.infradead.org; Fri, 13 Sep 2019 12:40:34 +0000
-Received: by mail-lf1-x143.google.com with SMTP id r2so3981845lfn.8
- for <linux-mediatek@lists.infradead.org>; Fri, 13 Sep 2019 05:40:32 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Ft1I1EhDI1L0SLNIAxqP/sRjQ+TDSkpzKaCR7f/5tTQ=;
- b=DhJ0J0+esdIXuLHa2dKyB3ccBOpjg13waz6LGkvKMrCNjiOg9XY2WXNAKAOHtFzbPM
- gMDd9ktyt4l4LSdETLZnNtnLXzt5iIrFgpi+g0lELJRFi06i1Hxofhu3N/QsSZ/+3p7R
- 8Uppb1VhjVGnr9ycEQo+FdWI4CaAaeHorHF8U6Ei8GA9sKbyd5ikMo6eixRv7ORk/8j0
- rlO/VSaeocmEmT2TAIn1g8JUkzILeCap1hJZT8vRcgwYkRKQTU+crYH4He9STSmauPo0
- kXpR96kXUEg9ew0hPHjoD3wMCKI+og9JdzoxVYXW8ktU4rxcx62/x8ZhlU0cxL35z3Me
- Qt3w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Ft1I1EhDI1L0SLNIAxqP/sRjQ+TDSkpzKaCR7f/5tTQ=;
- b=CsSSf9DjqDQvaMy99Ar7PBAtoZjHXwFBD3mzkMnWOHDl1l9vut/GNH1rMf77PlUD0P
- Lb7oZEx+bhNEdyWYxKQo9Suj6l+ECPg2uhO6otBhiopz4xmEqc3lHb7TvTQzg6w47Yvv
- FD7WU94sbx1CGVbujsGGQCKU40dM/EktjKOM8tvHShNto6xpcycKgd6ARFnkt6YpbyDe
- hIiwIIvDiJetomV0ZWHOZKSuK+GLZxLI4lLvE2LWglbReZZzO7UlS2x3U2AoiqBQJVH1
- VmQdMVFv6SqnlSr2tnlh2eXp3FkGNVX1yB9lziwsV8iWZ8fflPd5rJN5ELVMPI8hdmPr
- Bbdg==
-X-Gm-Message-State: APjAAAXyoDgHiGu86z3YoUE2o5DI6hJlmg4uypP2qLc6WcKqQ9Y3tcO7
- FrATae+nF5vKlyBnk4D0ECU023DIdkgghi7zoXbEyw==
-X-Google-Smtp-Source: APXvYqxZTmRAR02Om/GqFM9es0KUGaifiZo59JD20QRZ1o6rbYRiJs1AArPBBL1PDYlmiWlPOBvJn8GEoQUhxS+kdlM=
-X-Received: by 2002:a19:117:: with SMTP id 23mr31578340lfb.115.1568378430947; 
- Fri, 13 Sep 2019 05:40:30 -0700 (PDT)
+ id 1i8q8b-0003GY-8K; Fri, 13 Sep 2019 18:17:43 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: alyssa) with ESMTPSA id ED22D289F25
+Date: Fri, 13 Sep 2019 14:17:29 -0400
+From: Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
+To: Nicolas Boichat <drinkcat@chromium.org>
+Subject: Re: [PATCH] arm64: dts: mt8183: Add node for the Mali GPU
+Message-ID: <20190913181729.GB3115@kevin>
+References: <20190905081546.42716-1-drinkcat@chromium.org>
+ <CAL_JsqJCO2G90TTT9Mpy4kjVKQyXWw4aXEEnbRp_SE8X=EGc5g@mail.gmail.com>
+ <CANMq1KCTPdFhJG1SLf-i+-557Yx-1WLzWCHu3tT_5Q2BF+JgdQ@mail.gmail.com>
 MIME-Version: 1.0
-References: <1567662796-25508-1-git-send-email-light.hsieh@mediatek.com>
- <1567663210.1324.3.camel@mtkswgap22>
- <CACRpkdbBMiHk4DV3r=aLU+T+9bPQBLUiTaW6L+L=J=ec0guBmA@mail.gmail.com>
-In-Reply-To: <CACRpkdbBMiHk4DV3r=aLU+T+9bPQBLUiTaW6L+L=J=ec0guBmA@mail.gmail.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Fri, 13 Sep 2019 14:40:19 +0200
-Message-ID: <CACRpkdZSAMmiZ6thznAR3GFSw170fV5d2=VLrs63O41ZE+x+oA@mail.gmail.com>
-Subject: Re: [PATCH v2 1/5] pinctrl: mediatek: Check gpio pin number and use
- binary search in mtk_hw_pin_field_lookup()
-To: Light Hsieh <light.hsieh@mediatek.com>
+In-Reply-To: <CANMq1KCTPdFhJG1SLf-i+-557Yx-1WLzWCHu3tT_5Q2BF+JgdQ@mail.gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190913_054033_082656_B92A7745 
-X-CRM114-Status: UNSURE (   7.38  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190913_111741_431379_789032CB 
+X-CRM114-Status: GOOD (  13.13  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:143 listed in]
- [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [46.235.227.227 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,33 +60,92 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- Sean Wang <sean.wang@kernel.org>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ Boris Brezillon <boris.brezillon@collabora.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Nick Fan <nick.fan@mediatek.com>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>
+Content-Type: multipart/mixed; boundary="===============4521588497116750845=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Sep 12, 2019 at 3:43 PM Linus Walleij <linus.walleij@linaro.org> wrote:
-> On Thu, Sep 5, 2019 at 7:00 AM Light Hsieh <light.hsieh@mediatek.com> wrote:
->
-> > v2 is the same as v1 except that commit message is corrected according
-> > to Linus' comment for v1:
+
+--===============4521588497116750845==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="2B/JsCI69OhZNC5r"
+Content-Disposition: inline
+
+
+--2B/JsCI69OhZNC5r
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+> > > The binding we use with out-of-tree Mali drivers includes more
+> > > clocks, I assume this would be required eventually if we have an
+> > > in-tree driver:
 > >
-> > 1. remove Change-Id lines
-> > 2. correct sysfs as debugfs
->
-> Patches applied with Sean's ACK.
+> > We have an in-tree driver...
+>=20
+> Right but AFAICT it does not support Bifrost GPU (yet?).
 
-Pulled all patches out again because they don't compile. No big deal,
-let's just rebase and fix it up,
+By the time MT8183 shows up in more concrete devices, it will, certainly
+in kernel-space and likely in userspace as well. At present, the DDK can
+be modified to run on top of the in-tree Mali drivers, i.e. "Bifrost on
+mainline linux-next (+ page table/compatible patches), with blob
+userspace".
 
-Yours,
-Linus Walleij
+While the open userspace isn't ready here quite yet, I would definitely
+encourage upstream kernel for ChromeOS, since then there's no need to
+maintain the out-of-tree GPU driver.
+
+---
+
+More immediately, per Rob's review, it's important that the bindings
+accepted upstream work with the in-tree Bifrost driver. Conceptually,
+once Mesa supports Bifrost, if I install Debian on a MT8183 board,
+everything should just work. I shouldn't need MT-specific changes / need
+to change names for the DT. Regardless of which kernel driver you end up
+using, minimally sharing the DT is good for everyone :-)
+
+-Alyssa
+
+--2B/JsCI69OhZNC5r
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEQ17gm7CvANAdqvY4/v5QWgr1WA0FAl173TQACgkQ/v5QWgr1
+WA2KFBAAnQIHm2aIeWt2mYq9onM7XNfSCCxZzYCsLXaE1LiylCZdcDanV4VaF+B3
+f+jIbfoeoHcnqlhNYRNiI93L0dl3YdmKHBJsPkxNg+ziQu/alZQbsYFNB07LBsuk
+2dxKissYufkSfdcc4UFEBDYq6LQlLF0XmXr5G7oNazC29e73h6Jpn8lrIlKrKo+v
+5SE/KJs7ua1sfKkj6As8LOh2VFqCv+NZ7XPjI+qUQDoSfXgoO2DTsLu79lhInxRr
+pdC8YKeypMlEGRuDgXt9Ee1zi0lk0OroJ+9uELf1G67V/JlpSOOI1go00HhC4Tll
+I8LeczfwD2ujVnJ1kpENyQAmqEY/b6lNPIQJm0MvLFh59Hk9hjl8j1WlH9+yKMNH
+rcZK1/SYeo97URXmKbfYFiwnRLXsX3p7wXjC6vtiw0xa7AcgdsfU+su4uUp8uq3V
+6xCVdnowzNVjYBt8OZbOV5QWXTp0peb9VRIdCjHnrtgb55eYoQDV7Mh69Q5oG8MB
+GZoD72p8ks3LI9BrTJ2QFjEsbWYj9XpvXI7AGL7YcR99QyF9hmgQF0h8Xnwz4nwD
+8oYGMbECAYUT7gVNHCU9lbFkmvsgMCSTvLfMNO5nwarwgF5y8LsQITo9Bf2tLyQ/
+nu3S6fy0qmIcLnwbiMG7urG8a81EtGUNJb8JBd4SLmKQAkA4NWo=
+=H0a9
+-----END PGP SIGNATURE-----
+
+--2B/JsCI69OhZNC5r--
+
+
+--===============4521588497116750845==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============4521588497116750845==--
+
