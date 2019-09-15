@@ -2,85 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A566B279C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Sep 2019 23:58:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E113B2ECA
+	for <lists+linux-mediatek@lfdr.de>; Sun, 15 Sep 2019 08:50:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WNMvS9bvfGeR1Fi6cfFVt09nrFI5X+BxSYLuxoM6zSY=; b=JoRBAeSnit3B+N
-	AgaPxwMYzaKyZthFtTQQZTocXJpsnCfOU6Garr5AwWo6za/KyLFTcEzxLu98/b306ih4DhXzgYl6t
-	+CKrK5cFF9nMHKCPbuHZM2Al4X0UFQ++lbWiuDbFgyk9HPGxr/fNfARtWHNN2rg3ZyyJ5oJ/R2Irk
-	LR4lhz6KgscYXn/AiVR4mx5X6CzwwMq0ZNfNPUpFzrksed/Y28e9B9ReZpmOptTc8KFp6AXa7oZuh
-	pNd3+pEt3bv65WQF9qZyvprm11FPRvU5pBCPSlnKyGh8InAHWz/ElVoX6HsSVRcX/UshRK4BLPHEs
-	n0HUhUbQcpp/XlReECnw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=cUosgqqSl1AdBd7vZtfNXb6GMkrciQ9mTMDUUg+8a8A=; b=nw7uzydWSkAX1S
+	Tb07/NB6KJS6JnW+PIRpbiCOSt0JNZ2kxtPz7GA/Pubh+elWeWZNQfjjv3ght8gnvh56E6YTyb+Gt
+	MDVKsQ7tojQ1CnRtFoca0bBdH4RVTEjfYQ3PC9ssTNSEl0rTZoKavMDZkLDHN4Hl8nGphJadn+To9
+	d+mOp4of+NHuujXZexb+l8Nq61mksz29p1vVLrnzaWIjt+VcJZZLGgHWU+1cu3KoXNPOs284pYiJL
+	TbnS1xTrFLLEEfluuBNRWg7SAYbqznegjlEBxgTh2YgkDXzdDQN/DrqiuPOGxMNok96BtrRYIPCMN
+	elx9DwCsL+/qmFtEk3/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8ta3-00076Z-5J; Fri, 13 Sep 2019 21:58:15 +0000
-Received: from mail-oi1-f195.google.com ([209.85.167.195])
+	id 1i9OMq-0003Wc-SI; Sun, 15 Sep 2019 06:50:41 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8ta0-00075h-BT; Fri, 13 Sep 2019 21:58:13 +0000
-Received: by mail-oi1-f195.google.com with SMTP id w144so3910509oia.6;
- Fri, 13 Sep 2019 14:58:11 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=AQ3PXKKEYAPpTNJc/PTOp8Ob+kx8WcDFX3XJj1y+xiY=;
- b=PtDFfACV1nfQYbgKbGBPqASqnkORZyMpCtCBHYpqwUQpbzg1qmQqRo6GzHvU8uz5XQ
- K+LJY/rlfYYTbxXHFMtWrqqwrN1Ab08RX+MP32TEOYvV9CAxfCpiHscHy57BckgxmInO
- cGzFIma5f9hwRWC+fpmvxgB7cNHAf5vRzcdaEa7V+/W3ypEEgvmGOxqaaU6x1ZPifsKZ
- cS2I9dCppO/4ZK1qMmxOqeRQZEIPp/t/SpwySa9WSgHmSa2u37btIauzq3ZPxm1yWihJ
- AfKiizJn3E9oz0gpVWEuIz6j0Gni0DyN0umaO1EeFlN7a7Fh/q8iBT0q87UOSggIP59P
- n/7g==
-X-Gm-Message-State: APjAAAWPFpy8lCRfEyqoBWq4j7Kq3dEXAUNV0y3b2eyjZfDnz0xFGX/1
- w4jrtqT82KcbEhK/DFReSw==
-X-Google-Smtp-Source: APXvYqwcvObB3Yb/Y4El/uikyKAQB52Tnw3hLnBRUoI7ZLHlgxb3ip7OrKPwaxSV60bB8sfAR8RFlA==
-X-Received: by 2002:a05:6808:b19:: with SMTP id
- s25mr5498975oij.126.1568411890436; 
- Fri, 13 Sep 2019 14:58:10 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id 34sm11938701ots.47.2019.09.13.14.58.09
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 13 Sep 2019 14:58:09 -0700 (PDT)
-Date: Fri, 13 Sep 2019 16:58:09 -0500
-From: Rob Herring <robh@kernel.org>
-To: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
-Subject: Re: [PATCH v1 2/2] of: Let of_for_each_phandle fallback to
- non-negative cell_count
-Message-ID: <20190913215809.GA11833@bogus>
-References: <20190824132846.8589-1-u.kleine-koenig@pengutronix.de>
- <20190824132846.8589-2-u.kleine-koenig@pengutronix.de>
+ id 1i9OMY-0003GF-52; Sun, 15 Sep 2019 06:50:24 +0000
+X-UUID: 7d89b2d05d43494ab4e86e39bdd58700-20190914
+X-UUID: 7d89b2d05d43494ab4e86e39bdd58700-20190914
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <louis.kuo@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 73780580; Sat, 14 Sep 2019 22:50:15 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 14 Sep 2019 23:50:13 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 15 Sep 2019 14:50:06 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Sun, 15 Sep 2019 14:50:06 +0800
+From: Louis Kuo <louis.kuo@mediatek.com>
+To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
+ <tfiga@chromium.org>, <keiichiw@chromium.org>, <matthias.bgg@gmail.com>,
+ <mchehab@kernel.org>
+Subject: [RFC PATCH V4 0/4] media: support Mediatek sensor interface driver
+Date: Sun, 15 Sep 2019 14:50:00 +0800
+Message-ID: <20190915065004.20257-1-louis.kuo@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190824132846.8589-2-u.kleine-koenig@pengutronix.de>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 1585134051E855BDBEBE7F5BF01A47B56D3C3368540B3F6FF779A1A833F610DB2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190913_145812_395572_C5FD9DEF 
-X-CRM114-Status: GOOD (  13.99  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190914_235022_233756_D02000B7 
+X-CRM114-Status: UNSURE (   5.70  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.195 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.195 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,60 +74,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Will Deacon <will@kernel.org>,
- Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
- iommu@lists.linux-foundation.org, linux-mediatek@lists.infradead.org,
- kernel@pengutronix.de, Matthias Brugger <matthias.bgg@gmail.com>,
- Frank Rowand <frowand.list@gmail.com>, linux-arm-kernel@lists.infradead.org,
- Robin Murphy <robin.murphy@arm.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com, Rynn.Wu@mediatek.com,
+ srv_heupstream@mediatek.com, Jerry-ch.Chen@mediatek.com,
+ jungo.lin@mediatek.com, sj.huang@mediatek.com, yuzhao@chromium.org,
+ linux-mediatek@lists.infradead.org, zwisler@chromium.org,
+ louis.kuo@mediatek.com, christie.yu@mediatek.com, frederic.chen@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sat, 24 Aug 2019 15:28:46 +0200, =3D?UTF-8?q?Uwe=3D20Kleine-K=3DC3=3DB6n=
-ig?=3D          wrote:
-> Referencing device tree nodes from a property allows to pass arguments.
-> This is for example used for referencing gpios. This looks as follows:
-> =
+Hello,
 
-> 	gpio_ctrl: gpio-controller {
-> 		#gpio-cells =3D <2>
-> 		...
-> 	}
-> =
+This is the RFC patch adding Sensor Inferface(seninf) driver on
+Mediatek mt8183 SoC, which will be used in camera features on CrOS application.
+It belongs to the first Mediatek's camera driver series based on V4L2 and media controller framework.
+I posted the main part of the seninf driver as RFC to discuss first and would like some review comments
+on the overall structure of the driver.
 
-> 	someothernode {
-> 		gpios =3D <&gpio_ctrl 5 0 &gpio_ctrl 3 0>;
-> 		...
-> 	}
-> =
+The driver is implemented with V4L2 framework.
+1. Register as a V4L2 sub-device.
+2. Only one entity with sink pads linked to camera sensors for choosing desired camera sensor by setup link
+   and with source pads linked to cam-io for routing different types of decoded packet datas to PASS1 driver
+   to generate sensor image frame and meta-data.
 
-> To know the number of arguments this must be either fixed, or the
-> referenced node is checked for a $cells_name (here: "#gpio-cells")
-> property and with this information the start of the second reference can
-> be determined.
-> =
+The overall file structure of the seninf driver is as following:
 
-> Currently regulators are referenced with no additional arguments. To
-> allow some optional arguments without having to change all referenced
-> nodes this change introduces a way to specify a default cell_count. So
-> when a phandle is parsed we check for the $cells_name property and use
-> it as before if present. If it is not present we fall back to
-> cells_count if non-negative and only fail if cells_count is smaller than
-> zero.
-> =
+* mtk_seninf.c: Implement software and HW control flow of seninf driver.
+* mtk_seninf_def.h: Define data structure and enumeration.
+* mtk_seninf_reg.h: Define HW register R/W macros and HW register names.
 
-> Signed-off-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
-> ---
->  drivers/of/base.c | 25 +++++++++++++++++--------
->  1 file changed, 17 insertions(+), 8 deletions(-)
-> =
+[ V4: use recommended coding style, re-arrange and remove redundant code, change endpoint parsing method ]
+
+  media: platform: mtk-isp: Add Mediatek sensor interface driver
+  media: platform: Add Mediatek sensor interface driver KConfig
+  dt-bindings: mt8183: Add sensor interface dt-bindings
+  dts: arm64: mt8183: Add sensor interface nodes
+
+ .../bindings/media/mediatek-seninf.txt        |   30 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |   14 +
+ drivers/media/platform/Makefile               |    2 +
+ drivers/media/platform/mtk-isp/Kconfig        |   17 +
+ drivers/media/platform/mtk-isp/Makefile       |    3 +
+ .../media/platform/mtk-isp/isp_50/Makefile    |    5 +
+ .../platform/mtk-isp/isp_50/seninf/Makefile   |    6 +
+ .../mtk-isp/isp_50/seninf/mtk_seninf.c        | 1011 +++++++++++++++++
+ .../mtk-isp/isp_50/seninf/mtk_seninf_def.h    |   59 +
+ .../mtk-isp/isp_50/seninf/mtk_seninf_reg.h    |  853 ++++++++++++++
+ 10 files changed, 2000 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/mediatek-seninf.txt
+ create mode 100644 drivers/media/platform/mtk-isp/Kconfig
+ create mode 100644 drivers/media/platform/mtk-isp/Makefile
+ create mode 100644 drivers/media/platform/mtk-isp/isp_50/Makefile
+ create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/Makefile
+ create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c
+ create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_def.h
+ create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_reg.h
 
 
-Applied both patches, thanks.
-
-Rob
 
 _______________________________________________
 Linux-mediatek mailing list
