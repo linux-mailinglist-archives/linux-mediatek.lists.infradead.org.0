@@ -2,71 +2,123 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 63F21B39BC
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 13:49:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 87391B3A5B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 14:33:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5vjBIYIyn1VBpexV17RNJzWF1lwOobkKevMA3SLYFGc=; b=uUfO0WRP+Fw6K3
-	E+dF8gv6DY9+iZwDAx2/w2rcnSIND+Aq0ANZee80eFYAZrxvGaItuF2sLcq/J1K3pacOcHoMyxylo
-	IabGVHKsWbTM++GA32TresgVFJzR9YSzpht4HBD34h6F6Ff1dHWEqFNvnVa5x4lfwXHzlmtft4ZlR
-	G9FBTL78vkr2CyMYVJt6N5jqgTV6Z2kp5uPyPlLahGsmEV0EAK2uA5ASkto4gNgFyGb4pZZ9O9spx
-	/kx3zbPJ2NY8zZGj/84F0ZRGIDUuZFRM7zylTptLh9fc+b/MSlDo/XMzLjg2vNZcTvggUm9K4G4PK
-	UxC8Xk5e6Ohpt8PGD9UQ==;
+	List-Owner; bh=zta5U759KN7AYC4nKms/vfeRpTgFVAM9KjqcAignw10=; b=WBwL/ykQHdBV4w
+	Iktem/iRdbnSQfNE6MwYVzAons20ynzCOIOOd6ZlkX5WvmJ+at46rgSNWAlDtWs5uJ4YbhCpK3zAR
+	d0BqKs4h6sc6s0674MUGXEXsdviCn7CNoM/nTH9ArYSxda4+KzCTXxIteZvFnqs8Wzj0NE4zX5WOV
+	fbXrusWxWzYWhgtANJ5XubX+WUCwz4lDkNXfKnJ2/cAsdLo3couENhmA0bmeEDGOK6j6IqdtRfF/T
+	4n7BdTeRK+oUPdk0Cn/vZABAk1cNmLvLaIttwbo/ROm6UJS/biqHyJReIDpurG9GiPaOZRu5MtF91
+	BxBCEd5C5ZViaMYsP1gw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9pVk-0006QL-2x; Mon, 16 Sep 2019 11:49:40 +0000
-Received: from eu-smtp-delivery-151.mimecast.com ([207.82.80.151])
+	id 1i9qBr-0002Dr-Gn; Mon, 16 Sep 2019 12:33:11 +0000
+Received: from mail-eopbgr740088.outbound.protection.outlook.com
+ ([40.107.74.88] helo=NAM01-BN3-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9pVd-0006Nh-6v
- for linux-mediatek@lists.infradead.org; Mon, 16 Sep 2019 11:49:35 +0000
-Received: from AcuMS.aculab.com (156.67.243.126 [156.67.243.126]) (Using
- TLS) by relay.mimecast.com with ESMTP id
- uk-mta-166-eM_ZKBYxM-CKIRdpMPgtuQ-1; Mon, 16 Sep 2019 12:49:23 +0100
-Received: from AcuMS.Aculab.com (fd9f:af1c:a25b:0:43c:695e:880f:8750) by
- AcuMS.aculab.com (fd9f:af1c:a25b:0:43c:695e:880f:8750) with Microsoft SMTP
- Server (TLS) id 15.0.1347.2; Mon, 16 Sep 2019 12:49:22 +0100
-Received: from AcuMS.Aculab.com ([fe80::43c:695e:880f:8750]) by
- AcuMS.aculab.com ([fe80::43c:695e:880f:8750%12]) with mapi id 15.00.1347.000; 
- Mon, 16 Sep 2019 12:49:22 +0100
-From: David Laight <David.Laight@ACULAB.COM>
-To: "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "linux-tip-commits@vger.kernel.org" <linux-tip-commits@vger.kernel.org>
-Subject: RE: [tip: sched/core] sched/psi: Correct overly pessimistic size
- calculation
-Thread-Topic: [tip: sched/core] sched/psi: Correct overly pessimistic size
- calculation
-Thread-Index: AQHVaoS2xzP/Zpoyw0CDGPLgyB3STacuM1dg
-Date: Mon, 16 Sep 2019 11:49:22 +0000
-Message-ID: <ead094dabae64e6c978e94b617c8d08c@AcuMS.aculab.com>
-References: <20190912103452.13281-1-miles.chen@mediatek.com>
- <156841460535.24167.6273030361884540421.tip-bot2@tip-bot2>
-In-Reply-To: <156841460535.24167.6273030361884540421.tip-bot2@tip-bot2>
-Accept-Language: en-GB, en-US
+ id 1i9qBo-0002DB-BM; Mon, 16 Sep 2019 12:33:09 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=ZtnY2kiQ0cxqKkVBSVaCE8OKB+G3x6M1mKRqXkid+YgJ3SYRZmdLCdHs7wDhF+nD5wYB3r7g6HqsLtpFzUJ1Y4qS4ZyT4xPdYvllLthosTdjdm0bdbgpMOBZWyob/8hHgjls0tn2NZOBG/2E495yproRuTNSEUWNERyGS12eRFMNz3an7Cj9UbfROt10FTpRCOGSc5CkfuCTw61eWPSaG0jiaig5GXtViDLDbt2Ck5h/bJbRmwKcgrWkIgZ8u3MqEJMn1ilqu06ASmK4GLpnCArTlPwFDJen5LuHUvKgVy/6E91MIlau00fZNH5S1hGjMviGCE3taCqQ4N6gieHdBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=RJIQD4Fu92aqPD9b2OwvruL9ykrqcq+nJAPtGlDGvUs=;
+ b=DopK3xL8ZIOfbEyhpcFa+Cn5ZXfSGxgmsJT03so3iDkNAbmEJ6A6PSSII08GaXoFOFIee2aWofROokaiVHJ7pX7HMH0GtbTQCvuM9ZpZis+4hHcMfWcnhjgVx9FVgqlqFOWsiSM4STWETwYebIb82kA50VoaMe3KTlk0p5ZsI7tq9d4SYzHadNw3RDVX1rD4MOC3QLMsfRoRQjfi0K9J3g6TtBD/w0zUZY1zmazUk433im4EXR8Hc3ZVHhgvFNhqy0+xOpObZcLGxHX8hYnCaxOw2SLgSi+XrophikgSqZ0p7QAQN41JFSO6cQSlotFG7LWcCD0ohi88mwWyWhrz9g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=micron.com; dmarc=pass action=none header.from=micron.com;
+ dkim=pass header.d=micron.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=RJIQD4Fu92aqPD9b2OwvruL9ykrqcq+nJAPtGlDGvUs=;
+ b=hB4C0X6gn8TKBDCTj3MYkShQwkxtOG3ci6Wz/jqnnsUXIvGi/OjCN2QaW/ba0oC8z0uCOAHRsl0ukLPxy/vAT5QRu0NaLQiSxYNXKhRGQMcRslzAQGo18rUJH6+HgnF0qiPs5e63Zc4247LIMg+ERJznaJ/1Bv6tJOxRXmRcn0w=
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.179.87) by
+ BN7PR08MB4482.namprd08.prod.outlook.com (52.135.248.141) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2263.23; Mon, 16 Sep 2019 12:33:05 +0000
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::1c5f:b47c:d1c3:c30c]) by BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::1c5f:b47c:d1c3:c30c%7]) with mapi id 15.20.2263.023; Mon, 16 Sep 2019
+ 12:33:05 +0000
+From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
+ "sthumma@codeaurora.org" <sthumma@codeaurora.org>, "jejb@linux.ibm.com"
+ <jejb@linux.ibm.com>, "bvanassche@acm.org" <bvanassche@acm.org>
+Subject: RE: [EXT] [PATCH v3 2/3] scsi: ufs: override auto suspend tunables
+ for ufs
+Thread-Topic: [EXT] [PATCH v3 2/3] scsi: ufs: override auto suspend tunables
+ for ufs
+Thread-Index: AQHVbFqa8oaq4Yk69ky4RtSVevqDnacuPMkg
+Date: Mon, 16 Sep 2019 12:33:04 +0000
+Message-ID: <BN7PR08MB56847455A8B0C7D89FF8C6A1DB8C0@BN7PR08MB5684.namprd08.prod.outlook.com>
+References: <1568616437-16271-1-git-send-email-stanley.chu@mediatek.com>
+ <1568616437-16271-3-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1568616437-16271-3-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-150, en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
 X-MS-TNEF-Correlator: 
-x-ms-exchange-transport-fromentityheader: Hosted
-x-originating-ip: [10.202.205.107]
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=beanhuo@micron.com; 
+x-originating-ip: [165.225.81.111]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 85d4f1a9-90c5-4fbc-6f4e-08d73aa205a9
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(5600167)(711020)(4605104)(1401327)(4534185)(7168020)(4627221)(201703031133081)(201702281549075)(8990200)(2017052603328)(7193020);
+ SRVR:BN7PR08MB4482; 
+x-ms-traffictypediagnostic: BN7PR08MB4482:|BN7PR08MB4482:|BN7PR08MB4482:
+x-microsoft-antispam-prvs: <BN7PR08MB4482369422C121B851BE1710DB8C0@BN7PR08MB4482.namprd08.prod.outlook.com>
+x-ms-exchange-transport-forked: True
+x-ms-oob-tlc-oobclassifiers: OLM:400;
+x-forefront-prvs: 0162ACCC24
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10009020)(4636009)(136003)(376002)(366004)(396003)(346002)(39860400002)(199004)(189003)(9686003)(66066001)(55016002)(446003)(99286004)(558084003)(110136005)(86362001)(316002)(7416002)(2906002)(6506007)(6246003)(476003)(102836004)(55236004)(186003)(11346002)(26005)(76176011)(7736002)(305945005)(74316002)(52536014)(76116006)(54906003)(66446008)(64756008)(66556008)(66476007)(66946007)(53936002)(7696005)(5660300002)(3846002)(6116002)(8676002)(486006)(81166006)(71190400001)(2501003)(81156014)(229853002)(256004)(6436002)(71200400001)(8936002)(2201001)(14454004)(33656002)(478600001)(25786009)(4326008);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB4482;
+ H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+received-spf: None (protection.outlook.com: micron.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: Hj1J/rjTnkIy0MkU5zEAZUgTPhcCdA53nu0OzgFGIA3dNrBcvSf6H+qprJ8gB5jPq1UkM//bF8bSkH30fFta4i7NbksqcHEyDQs+W0SZtYVSkHOzXvMzUnZuM3hVKmZGlYKSmLqJZptQlhcDu4VovjKOrpmUyeQBtI1hGrcCB6yvulrqkQ7y9GAxnmDWB/zsNZvJCpwCdnogS9BHrQ1Fi/WAsB+uDkvW8Eiu98WGr7SmWPp9Bei+xgaJ7GddbBS186hyLRPzSq5Bc0ZrQfKapI3vUBLCUd1AOKUBAm1U9GKGLsVlML7l4CIegK7xMg0nKTUnsEJaSRJI54aCkZoiBYqge5E6gsZsSqIvbMKWh1AD4vpz9ZmAjAWkeHloeC7Aosu4GVUNR9dtKJmSY+o3xeaT+mo8f4A3AZIrITxXnsA=
 MIME-Version: 1.0
-X-MC-Unique: eM_ZKBYxM-CKIRdpMPgtuQ-1
-X-Mimecast-Spam-Score: 0
+X-OriginatorOrg: micron.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 85d4f1a9-90c5-4fbc-6f4e-08d73aa205a9
+X-MS-Exchange-CrossTenant-originalarrivaltime: 16 Sep 2019 12:33:04.9048 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: 1LL98TBqr1xooJLv8PIjqlouIOEHaYN8Xta2UM46oNiyYc5LDVyLlwCy/zIcyfNmfPlJBeSizqhAK5/NgHpOlw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4482
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190916_044933_525893_4C805EFC 
-X-CRM114-Status: UNSURE (   9.17  )
+X-CRM114-CacheID: sfid-20190916_053308_449994_5BA0BAA3 
+X-CRM114-Status: UNSURE (   3.03  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.7 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [207.82.80.151 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [40.107.74.88 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,59 +130,29 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "wsd_upstream@mediatek.com" <wsd_upstream@mediatek.com>,
- Peter Zijlstra <peterz@infradead.org>, Miles Chen <miles.chen@mediatek.com>,
+Cc: "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "evgreen@chromium.org" <evgreen@chromium.org>,
+ "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
  "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Borislav Petkov <bp@alien8.de>, Thomas Gleixner <tglx@linutronix.de>,
- Linus Torvalds <torvalds@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "vivek.gautam@codeaurora.org" <vivek.gautam@codeaurora.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "kernel-team@android.com" <kernel-team@android.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Miles Chen
-> Sent: 13 September 2019 23:43
-> The following commit has been merged into the sched/core branch of tip:
-> 
-> Commit-ID:     4adcdcea717cb2d8436bef00dd689aa5bc76f11b
-> Gitweb:        https://git.kernel.org/tip/4adcdcea717cb2d8436bef00dd689aa5bc76f11b
-> Author:        Miles Chen <miles.chen@mediatek.com>
-> AuthorDate:    Thu, 12 Sep 2019 18:34:52 +08:00
-> Committer:     Ingo Molnar <mingo@kernel.org>
-> CommitterDate: Fri, 13 Sep 2019 07:49:28 +02:00
-> 
-> sched/psi: Correct overly pessimistic size calculation
-> 
-> When passing a equal or more then 32 bytes long string to psi_write(),
-> psi_write() copies 31 bytes to its buf and overwrites buf[30]
-> with '\0'. Which makes the input string 1 byte shorter than
-> it should be.
-> 
-> Fix it by copying sizeof(buf) bytes when nbytes >= sizeof(buf).
-> 
-> This does not cause problems in normal use case like:
-> "some 500000 10000000" or "full 500000 10000000" because they
-> are less than 32 bytes in length.
-> 
-> 	/* assuming nbytes == 35 */
-> 	char buf[32];
-> 
-> 	buf_size = min(nbytes, (sizeof(buf) - 1)); /* buf_size = 31 */
-> 	if (copy_from_user(buf, user_buf, buf_size))
-> 		return -EFAULT;
-> 
-> 	buf[buf_size - 1] = '\0'; /* buf[30] = '\0' */
+>
+>Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+>Reviewed-by: Avri Altman <avri.altman@wdc.com>
+Reviewed-by: Bean Huo <beanhuo@micron.com>
 
-Wouldn't it be better to also allow the user to pass
-an unterminated string?
-So leave the '-1' on the assignment to buf_size, but remove
-it from the last line.
 
-	David
-
--
-Registered Address Lakeside, Bramley Road, Mount Farm, Milton Keynes, MK1 1PT, UK
-Registration No: 1397386 (Wales)
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
