@@ -2,63 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8D75AB32F4
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 03:29:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C7426B346F
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 07:33:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UlaPhaiBD3MB+SkibN98DO+XtbqRg8JFq6Gqchrlz5Q=; b=L62D0Gz2EWTrWg
-	dhE4k1eUlWjCjAoSZYNDp02Nq/joG7o/PKOS/VSz4DSBgQNDfziYPUsOdEsvPxNyM+qxwMGMwzNpe
-	whKf1s182ak+1haRh2fG4hR24VatTUcpfNI+mI/+tDLOfzW74j+Ht/NL/sA5nuSo4j+LF6Ec9gPp8
-	MwCm708KyBisn+/6OOYg7Jj/FgzhQPrn6toMFc35cgE0oMEegZBF71rSkJfjf8JhCfq2Hi2ucwGgY
-	L3cKXOpO+93rZxmnTmfmh0fpsENiAg0QTaPQPvhFCrktz/3B8aKvPaBdyw6z7PQhFfGDiTwv0RqjB
-	AtkPLRGz5KpQz/shmidw==;
+	List-Owner; bh=YGI+ELT5jqSWyuKNSky2Zmd3dG9dazpMS/67pyNGvA0=; b=bX9syi2NOPl7ML
+	9z2g+og7XyuTK/4bC+URMYV25jInt3x8DIxLO4oOT8ttyeG+4y5OFikC3g82Ral3aoM89EKie3eIy
+	c0YmkneP3ib9Hr/HLkhDU20dSnAJ2wsmcUZ5OQzyVSTrwG8RmuEygC4SLtzTrM6uVRzYWBxogxrGj
+	wo0dOKDb5900s53/5dQpOqWHo6ukGvgF/nl/BX/dyb+fGh91XB1p691mg+iWoZfm4T8HE2KTRpKjf
+	YzdyRqkoyehOxcy7veD9/jePFomYmYtmkuBtrGwqz+MjXhTaAzlaViK577qw1ByArrJ/pY7079e32
+	eDIAkl5OYezC56tlZbQg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9fp8-0002Ws-A5; Mon, 16 Sep 2019 01:29:02 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i9je0-0004Sq-FW; Mon, 16 Sep 2019 05:33:48 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9fos-0002ME-Nz; Mon, 16 Sep 2019 01:28:48 +0000
-X-UUID: 22e6e8bdcb04476491860682a7fcdf37-20190915
-X-UUID: 22e6e8bdcb04476491860682a7fcdf37-20190915
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1i9jdj-0004HQ-2B; Mon, 16 Sep 2019 05:33:33 +0000
+X-UUID: 38392945df964b54b8b91260cbeb214c-20190915
+X-UUID: 38392945df964b54b8b91260cbeb214c-20190915
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <yingjoe.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1934944397; Sun, 15 Sep 2019 17:28:43 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 15 Sep 2019 18:28:42 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Sep 2019 09:28:40 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ with ESMTP id 493585654; Sun, 15 Sep 2019 21:33:25 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 15 Sep 2019 22:33:23 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Sep 2019 13:33:22 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 16 Sep 2019 09:28:41 +0800
-Message-ID: <1568597321.26177.9.camel@mtksdaap41>
-Subject: Re: [RFC PATCH V4 1/4] media: platform: mtk-isp: Add Mediatek
- sensor interface driver
+ Transport; Mon, 16 Sep 2019 13:33:22 +0800
+Message-ID: <1568612002.14078.1.camel@mtksdaap41>
+Subject: Re: [RFC PATCH V4 3/4] dt-bindings: mt8183: Add sensor interface
+ dt-bindings
 From: Yingjoe Chen <yingjoe.chen@mediatek.com>
 To: Louis Kuo <louis.kuo@mediatek.com>
-Date: Mon, 16 Sep 2019 09:28:41 +0800
-In-Reply-To: <20190915065004.20257-2-louis.kuo@mediatek.com>
+Date: Mon, 16 Sep 2019 13:33:22 +0800
+In-Reply-To: <20190915065004.20257-4-louis.kuo@mediatek.com>
 References: <20190915065004.20257-1-louis.kuo@mediatek.com>
- <20190915065004.20257-2-louis.kuo@mediatek.com>
+ <20190915065004.20257-4-louis.kuo@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190915_182846_787069_3B27861E 
-X-CRM114-Status: GOOD (  16.83  )
+X-CRM114-CacheID: sfid-20190915_223331_112426_13A284A8 
+X-CRM114-Status: GOOD (  13.96  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -88,129 +86,46 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 On Sun, 2019-09-15 at 14:50 +0800, Louis Kuo wrote:
-> This patch adds Mediat:ek's sensor interface driver. Sensor interface
-> driver
-> is a MIPI-CSI2 host driver, namely, a HW camera interface controller.
-> It support a widely adopted, simple, high-speed protocol primarily
-> intended
-> for point-to-point image and video transmission between cameras and host
-> devices.
-
-Please properly wrap the commit text and fix typo.
-
-
-> 
-> The mtk-isp directory will contain drivers for multiple IP blocks found in
-> Mediatek ISP system. It will include ISP Pass 1 driver, sensor interface
-> driver, DIP driver and face detection driver.
+> This patch adds the DT binding documentation for the sensor interface
+> module in Mediatek SoCs.
 > 
 > Signed-off-by: Louis Kuo <louis.kuo@mediatek.com>
 > ---
->  drivers/media/platform/Makefile               |    2 +
->  drivers/media/platform/mtk-isp/Makefile       |    3 +
->  .../media/platform/mtk-isp/isp_50/Makefile    |    5 +
->  .../platform/mtk-isp/isp_50/seninf/Makefile   |    6 +
->  .../mtk-isp/isp_50/seninf/mtk_seninf.c        | 1011 +++++++++++++++++
->  .../mtk-isp/isp_50/seninf/mtk_seninf_def.h    |   59 +
->  .../mtk-isp/isp_50/seninf/mtk_seninf_reg.h    |  853 ++++++++++++++
->  7 files changed, 1939 insertions(+)
->  create mode 100644 drivers/media/platform/mtk-isp/Makefile
->  create mode 100644 drivers/media/platform/mtk-isp/isp_50/Makefile
->  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/Makefile
->  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c
->  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_def.h
->  create mode 100644 drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf_reg.h
+>  .../bindings/media/mediatek-seninf.txt        | 30 +++++++++++++++++++
+>  1 file changed, 30 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/media/mediatek-seninf.txt
 > 
-> diff --git a/drivers/media/platform/Makefile b/drivers/media/platform/Makefile
-> index 7cbbd925124c..b0f4543f2f86 100644
-> --- a/drivers/media/platform/Makefile
-> +++ b/drivers/media/platform/Makefile
-> @@ -73,6 +73,8 @@ obj-$(CONFIG_VIDEO_ROCKCHIP_RGA)	+= rockchip/rga/
->  
->  obj-y	+= omap/
->  
-> +obj-y	+= mtk-isp/
-> +
->  obj-$(CONFIG_VIDEO_AM437X_VPFE)		+= am437x/
->  
->  obj-$(CONFIG_VIDEO_XILINX)		+= xilinx/
-> diff --git a/drivers/media/platform/mtk-isp/Makefile b/drivers/media/platform/mtk-isp/Makefile
+> diff --git a/Documentation/devicetree/bindings/media/mediatek-seninf.txt b/Documentation/devicetree/bindings/media/mediatek-seninf.txt
 > new file mode 100644
-> index 000000000000..c17fb3fc3340
+> index 000000000000..bf2eb801cb47
 > --- /dev/null
-> +++ b/drivers/media/platform/mtk-isp/Makefile
-> @@ -0,0 +1,3 @@
-> +# SPDX-License-Identifier: GPL-2.0
+> +++ b/Documentation/devicetree/bindings/media/mediatek-seninf.txt
+> @@ -0,0 +1,30 @@
+> +* Mediatek seninf MIPI-CSI2 host driver
 > +
-> +obj-y += isp_50/
-> diff --git a/drivers/media/platform/mtk-isp/isp_50/Makefile b/drivers/media/platform/mtk-isp/isp_50/Makefile
-> new file mode 100644
-> index 000000000000..8b4a792328e5
-> --- /dev/null
-> +++ b/drivers/media/platform/mtk-isp/isp_50/Makefile
-> @@ -0,0 +1,5 @@
-> +# SPDX-License-Identifier: GPL-2.0
+> +Seninf MIPI-CSI2 host driver is a HW camera interface controller. It support a widely adopted,
+> +simple, high-speed protocol primarily intended for point-to-point image and video
+> +transmission between cameras and host devices.
 > +
-> +ifeq ($(CONFIG_MTK_SENINF),y)
-> +obj-y += seninf/
-> +endif
+> +Required properties:
+> +  - compatible: "mediatek,mt8183-seninf"
+> +  - reg: Must contain an entry for each entry in reg-names.
+> +  - reg-names: Must include the following entries:
+> +    "base_reg": seninf registers base
+> +    "rx_reg": Rx analog registers base
+
+Everyone here is a reg. Adding _reg prefix for everyone looks redundant.
+Same for clock-names.
 
 
-Please use 'obj-$(CONFIG_MTK_SENINF) += seninf/' instead.
-In fact, as Sakari mention in previous review, you should just remove
-the check.
-
-You should address all comments in previous run, otherwise what's the
-point for resend and the review?
-
-
-> diff --git a/drivers/media/platform/mtk-isp/isp_50/seninf/Makefile b/drivers/media/platform/mtk-isp/isp_50/seninf/Makefile
-> new file mode 100644
-> index 000000000000..bf193feb0ce9
-> --- /dev/null
-> +++ b/drivers/media/platform/mtk-isp/isp_50/seninf/Makefile
-> @@ -0,0 +1,6 @@
-> +# SPDX-License-Identifier: GPL-2.0
+> +  - interrupts: interrupt number to the cpu.
+> +  - clocks : clock name from clock manager
+> +  - clock-names: must be CLK_CAM_SENINF and CLK_TOP_MUX_SENINF.
+> +    It is the clocks of seninf
 > +
-> +MODULE		= mtk_seninf
-> +LIB_FILES	= mtk_seninf
-> +
-> +obj-$(CONFIG_MTK_SENINF) += mtk_seninf.o
-> diff --git a/drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c b/drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c
-> new file mode 100644
-> index 000000000000..3253510cf7fd
-> --- /dev/null
-> +++ b/drivers/media/platform/mtk-isp/isp_50/seninf/mtk_seninf.c
-> @@ -0,0 +1,1011 @@
-> +// SPDX-License-Identifier: GPL-2.0
 
-
-<...>
-
-> +
-> +static struct platform_driver seninf_pdrv = {
-> +	.driver	= {
-> +		.name	= "seninf",
-> +		.pm  = &runtime_pm_ops,
-> +		.of_match_table = of_match_ptr(mtk_seninf_of_match),
-> +	},
-> +	.probe	= seninf_probe,
-> +	.remove	= seninf_remove,
-> +};
-> +
-> +module_platform_driver(seninf_pdrv);
-> +
-> +MODULE_DESCRIPTION("MTK seninf driver");
-> +MODULE_AUTHOR("Louis Kuo <louis.kuo@mediatek.com>");
-> +MODULE_LICENSE("GPL v2");
-> +MODULE_ALIAS("MTK:mtk_seninf");
-
-You don't need MODULE_* since this can't be built as module now.
-
-However, I think this should be able to build as module.
 
 Joe.C
-
 
 
 _______________________________________________
