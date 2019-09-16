@@ -2,57 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 45AC6B34C0
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 08:38:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22300B34DE
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 08:48:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bBhT/UtmJVrMZd7MAP4zc3noyWfUbPVK57LpTFpjN/Y=; b=GwpW5OYo5CHFsL
-	ZKaY3i6k6Ctkz6Zx9u4pj6/rBZdJmTxVeDrHWGv8eSd8xElkki6msOfGrZQlQrznVukH8tgs5BOCa
-	07QH9tga7z6H8hhU0mtmp3Z65e13PzdFggOBTzDv/mnP9ENOvABxwTDXy9htSnzbmnSyz1i35vRRM
-	SvpcunxmAx7NgaVYifvyLw2uR6Chbu6/qm94AcHtKuhPZYIm+y40g+CciDJy1DNxCBpCAW9h5BYRz
-	MxyF8wFWGsyzaboryyz8M3iM2XC3ZgpvWW27HWC77dSHJbjdRxbxgW6l7qqeXzPv1+HTwEshlqYp4
-	ylTZtfEGKnlBxOc6Iekg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=B6MEPkdH8RwrWdZWfrrl+kTqnKklOml8bnYp49ygagM=; b=CSm3xLKJEKnW0G
+	SdKti0SXVafk3X7RJP86HOct7cYtzF4xMuLx+q05RFVTRBY4jBsDzvFtxlWt8taJLA5c/UY09HNYw
+	aVPes+5H6aZ0CMLvDnmiSCdoZLUKYY6RYJhRCjv8YS2dhG3TZvc2wRkyHZiukvhHF9XKaj8PlPew2
+	mbUd3wk+s1SCzSO0veGIO8/ESBVZnJvyeFgtbG5A5FaAmgHM4NEEMXEfBvlgOOadO5+snMoGIPggy
+	tOG7BFxb5vBmZ2QLPVpEkeZ0orYYuZ+eweU4xTSqoe/dlr0oKpfMoDbPeKyQ4oxzdOWb6HtJyfLlr
+	WAKKYDpxuW5r+oaIv69w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9kei-0003VJ-C4; Mon, 16 Sep 2019 06:38:36 +0000
+	id 1i9ko5-0007uF-9C; Mon, 16 Sep 2019 06:48:17 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9kee-0003UL-JX; Mon, 16 Sep 2019 06:38:33 +0000
-X-UUID: 042ec402079e4fcf8b6be5e8d0afc51b-20190915
-X-UUID: 042ec402079e4fcf8b6be5e8d0afc51b-20190915
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ id 1i9knQ-0007Jh-EG; Mon, 16 Sep 2019 06:47:37 +0000
+X-UUID: 6f39e1dbb890442e9eccfcfb54d5a987-20190915
+X-UUID: 6f39e1dbb890442e9eccfcfb54d5a987-20190915
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1542854966; Sun, 15 Sep 2019 22:38:27 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 15 Sep 2019 23:38:26 -0700
+ with ESMTP id 1004268676; Sun, 15 Sep 2019 22:47:33 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 15 Sep 2019 23:47:32 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Sep 2019 14:38:25 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 16 Sep 2019 14:38:25 +0800
-Message-ID: <1568615905.16730.21.camel@mtkswgap22>
-Subject: Re: [PATCH v2 1/3] scsi: core: allow auto suspend override by
- low-level driver
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Sep 2019 14:47:18 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 16 Sep 2019 14:47:18 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
-To: Bart Van Assche <bvanassche@acm.org>
-Date: Mon, 16 Sep 2019 14:38:25 +0800
-In-Reply-To: <485731ed-d455-dbb2-0cd5-3110ff14f6b7@acm.org>
-References: <1568270135-32442-1-git-send-email-stanley.chu@mediatek.com>
- <1568270135-32442-2-git-send-email-stanley.chu@mediatek.com>
- <485731ed-d455-dbb2-0cd5-3110ff14f6b7@acm.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
+ <pedrom.sousa@synopsys.com>, <sthumma@codeaurora.org>, <jejb@linux.ibm.com>,
+ <bvanassche@acm.org>
+Subject: [PATCH v3 0/3] scsi: core: allow auto suspend override by low-level
+ driver
+Date: Mon, 16 Sep 2019 14:47:14 +0800
+Message-ID: <1568616437-16271-1-git-send-email-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190915_233832_650306_73D9648A 
-X-CRM114-Status: GOOD (  16.73  )
+X-CRM114-CacheID: sfid-20190915_234736_570118_1FED94D5 
+X-CRM114-Status: UNSURE (   8.84  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -73,83 +73,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "sthumma@codeaurora.org" <sthumma@codeaurora.org>,
- "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "marc.w.gonzalez@free.fr" <marc.w.gonzalez@free.fr>,
- "vivek.gautam@codeaurora.org" <vivek.gautam@codeaurora.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
- Chun-Hung Wu =?UTF-8?Q?=28=E5=B7=AB=E9=A7=BF=E5=AE=8F=29?=
- <Chun-hung.Wu@mediatek.com>,
- Kuohong Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=8B=E9=B4=BB=29?=
- <kuohong.wang@mediatek.com>, "evgreen@chromium.org" <evgreen@chromium.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Peter Wang =?UTF-8?Q?=28=E7=8E=8B=E4=BF=A1=E5=8F=8B=29?=
- <peter.wang@mediatek.com>, "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- Andy Teng =?UTF-8?Q?=28=E9=84=A7=E5=A6=82=E5=AE=8F=29?=
- <Andy.Teng@mediatek.com>, "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: marc.w.gonzalez@free.fr, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, evgreen@chromium.org, subhashj@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ vivek.gautam@codeaurora.org, matthias.bgg@gmail.com,
+ Stanley Chu <stanley.chu@mediatek.com>, kernel-team@android.com,
+ linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Bart,
+Until now the scsi mid-layer forbids runtime suspend till userspace enables it. This is mainly to quarantine some disks with broken runtime power management or have high latencies executing suspend resume callbacks. If the userspace doesn't enable the runtime suspend the underlying hardware will be always on even when it is not doing any useful work and thus wasting power.
 
-> > -	pm_runtime_forbid(&sdev->sdev_gendev);
-> > +	if (sdev->rpm_autosuspend_delay < 0)
-> > +		pm_runtime_forbid(&sdev->sdev_gendev);
-> >  	pm_runtime_enable(&sdev->sdev_gendev);
-> >  	scsi_autopm_put_target(starget);
-> 
-> So we have a single new struct member, rpm_autosuspend_delay, that
-> controls two different behaviors: (a) whether or not runtime suspend is
-> enabled at device creation time and (b) the power management autosuspend
-> delay. I don't like this. Should two separate variables be introduced
-> instead of using a single variable to control both behaviors?
-> 
+Some low-level drivers for the controllers can efficiently use runtime power management to reduce power consumption and improve battery life.
 
-OK! Will try to separate different variables to control different things
-in next version.
+This patchset allows runtime suspend parameters override within the LLD itself instead of waiting for userspace to control the power management, and make UFS as the first user of this capability.
 
-> > diff --git a/include/scsi/scsi_device.h b/include/scsi/scsi_device.h
-> > index 202f4d6a4342..133b282fae5a 100644
-> > --- a/include/scsi/scsi_device.h
-> > +++ b/include/scsi/scsi_device.h
-> > @@ -199,7 +199,7 @@ struct scsi_device {
-> >  	unsigned broken_fua:1;		/* Don't set FUA bit */
-> >  	unsigned lun_in_cdb:1;		/* Store LUN bits in CDB[1] */
-> >  	unsigned unmap_limit_for_ws:1;	/* Use the UNMAP limit for WRITE SAME */
-> > -
-> > +	int rpm_autosuspend_delay;
-> >  	atomic_t disk_events_disable_depth; /* disable depth for disk events */
-> >  
-> >  	DECLARE_BITMAP(supported_events, SDEV_EVT_MAXBITS); /* supported events */
-> > 
-> 
-> Since the default value for the autosuspend delay is the same for all
-> SCSI devices attached to a SCSI host is the same, please add a variable
-> with the same name in the SCSI host template and use that value as the
-> default value for SCSI devices. If the rpm_autosuspend_delay variable
-> only occurs in struct scsi_device then LLD authors are forced to
-> introduce a slave_configure function. Introducing such a function can be
-> avoided if the default autosuspend delay can be specified in the host
-> template.
-> 
+v2 => v3:
+- Create a member indicating autosuspend delay for the same SCSI host in SCSI host template (Bart)
+- Use separate variables to control different things, (Bart)
+    (a) Whether or not runtime suspend is enabled at device creation time
+    (b) The power management autosuspend delay
 
-Sounds reasonable. Will create a member indicating autosuspend delay for
-the same SCSI host in SCSI host template in next version.
+v1 => v2:
+- Allow "zero" sdev->rpm_autosuspend_delay (Avri)
+- Fix format of some lines (Avri)
 
-> Bart.
-> 
 
-Thanks,
-Stanley
+Stanley Chu (3):
+  scsi: core: allow auto suspend override by low-level driver
+  scsi: ufs: override auto suspend tunables for ufs
+  scsi: ufs-mediatek: enable auto suspend capability
 
+ drivers/scsi/scsi_sysfs.c       |  3 ++-
+ drivers/scsi/sd.c               |  4 ++++
+ drivers/scsi/ufs/ufs-mediatek.c |  3 +++
+ drivers/scsi/ufs/ufshcd.c       |  9 +++++++++
+ drivers/scsi/ufs/ufshcd.h       | 10 ++++++++++
+ include/scsi/scsi_device.h      |  2 +-
+ include/scsi/scsi_host.h        |  3 +++
+ 7 files changed, 32 insertions(+), 2 deletions(-)
+
+-- 
+2.18.0
 
 
 _______________________________________________
