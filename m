@@ -2,67 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D54AEB3606
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 09:56:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E3CDDB3626
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 10:06:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yW5vYozPxBzZuOAEJbWrOMSILr60lqtXQYuOwB/x5Lk=; b=hTMWq9EOOhFAl+
-	0uq9gurr/6q7p86NpjJRNXnoCcqFELJ4pkd0T88QM5kwdSV6Kjx9z5SSxTE7SPCObgP2NJqCAzqoM
-	ovhWVm2WNYV25ARs+kVrBUSBaEHtNuiWXKdLmFH6ZkBn2pAZh2i5IzqZ30vkngGnSirjgWEwbHlR2
-	Gg+ynqM75fO0DQ67hLuqCQmKD5bh1/daOE8908T7VI7XSucKCvx2owNYyM8DZSz2oL6Wwjb5tqbOv
-	Bmj59uwLpQeJ/jyrgsva/E7Z/bd4zvbrpX2nHZna3ChgnyLTE00w8YCtWeMihpD568VCjAAPUw5FA
-	H02M/6H9qnDJ1MTC/wBg==;
+	List-Owner; bh=6r/ITeTK0EFvcJdSwEFz8wCvpH3sQRO2YYD5SSJfCwQ=; b=dKUKJ/tutCtQmN
+	XszQhUX5zrAM2InsDC0vxGlsrHtO7bWeUSyYnjVjxoSWndx4RLsepwFMsM0fib7b/Sx1ECISv89km
+	hzRNpJlIADNqk4jIzTbXi5hKr0Cilmmd5Gk6kqotf1oGK6hhKyofdZuHAnW4y50XQw055dJxlqDFv
+	C4bQsVPVpbncjwREZwQOOwS1qcuZE0EnlyVhVuf23BUm9XFBd+GfoexaB4YwszdQtv5Cj2Ik3F/eT
+	jjsjRTp/tdgJL6N9YMuwfPTg6V+popN2CKpr9ymeO2/wt3GvTlV9cLxfYViJkLOD0X7m4CpGE2bdx
+	SODTg3jsbFKt4F4lbdKA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9lrv-0002oI-Lf; Mon, 16 Sep 2019 07:56:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1i9m1Y-00073X-Fg; Mon, 16 Sep 2019 08:06:16 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9lrS-0002bE-6S; Mon, 16 Sep 2019 07:55:51 +0000
-X-UUID: 522624b7f65241438522ec780c06801d-20190915
-X-UUID: 522624b7f65241438522ec780c06801d-20190915
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 254404354; Sun, 15 Sep 2019 23:55:43 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Sep 2019 00:55:42 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Sep 2019 15:55:40 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 16 Sep 2019 15:55:40 +0800
-Message-ID: <1568620540.7280.1.camel@mtksdaap41>
-Subject: Re: [PATCH v3 12/14] drm/mediatek: Add pm runtime support for ovl
- and rdma
-From: CK Hu <ck.hu@mediatek.com>
-To: Yong Wu <yong.wu@mediatek.com>
-Date: Mon, 16 Sep 2019 15:55:40 +0800
-In-Reply-To: <1567503456-24725-13-git-send-email-yong.wu@mediatek.com>
-References: <1567503456-24725-1-git-send-email-yong.wu@mediatek.com>
- <1567503456-24725-13-git-send-email-yong.wu@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1i9m1U-00072l-NU
+ for linux-mediatek@lists.infradead.org; Mon, 16 Sep 2019 08:06:14 +0000
+Received: by mail-wr1-x442.google.com with SMTP id a11so28025849wrx.1
+ for <linux-mediatek@lists.infradead.org>; Mon, 16 Sep 2019 01:06:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to
+ :user-agent; bh=W+6eVtm06G2DnerzsFFEVB5vtcZxnWEKRgFaaXCgWGo=;
+ b=GQOCBpsSirGcGzdEHlMBfNDzJxPmMj0OYLiV9Nis/yw5ZZOxEauCXKX8VBw8RsVWuL
+ 5LIF2kZ60pyykpYmXokmE8Ilnhfw2o5V13r9g2PgBApARfipqyJK51ipdgKvzhNGCXzW
+ kPWg4wZkXjT/Eq4D8amfyAwabb+GpLpEPNL8/oZbsTnUpAUD+hPiS4yYPCDg8Er7QzBc
+ ZPkTbUBSxFg2r1nsJ06/U6hnXMZNJtL8hnn6EIWZdCIv44z2Uk24gaZtGD+UVV4Oblr6
+ bq49385yj89jPCjNCz+E1LgaanKJPjcYwqIuhZgRDvsLC1NtRol/Nd99FUPtdwCJR6Ea
+ FITw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to:user-agent;
+ bh=W+6eVtm06G2DnerzsFFEVB5vtcZxnWEKRgFaaXCgWGo=;
+ b=e1o4gAkUYZY/BAtqkd44iDc+BXuI9iKlPlRcVpjL0AkVwUVATglZcqJ8wFV+HKew7l
+ lam8fwhkOOwwjvXncsN5P03GM8NL7sBO3ZYSyTbasc1l8Ai1UKkReRo/8aSbJocY/+Hw
+ W3+3QXlaVGzpGZU1V65+eR5HS90RB9CEpnBUWnac6gkg9zpjFQFjcJyI1PmZ9NdwVI+H
+ +kq1jIPMceB+6AJN7kbDzJkMOusiuJzfJKK1jGlVeHW/zUZ7C1Bc5E8xkNP1RerB1LXv
+ wOVNs48ryp0Epy6xb0E3S+aH3JFEOlkyDsWbHJsKigiyBGTfD9Q0W4EeMVIIutun11vI
+ cRMg==
+X-Gm-Message-State: APjAAAVXRLv7sprPwDYm/mJxHLsFYHkPSIUPAY/DjtUswq/JYyhFvhTV
+ BdChsds4iqW5G4s2y0IDxrR4LQ==
+X-Google-Smtp-Source: APXvYqwwzj+YBGHiDs5snINLMmedhcTe4YAqB3nspNDmWc0373N7F0SNqZ0iNwFda6g+BLVUWjyeoQ==
+X-Received: by 2002:adf:d848:: with SMTP id k8mr5370448wrl.254.1568621170584; 
+ Mon, 16 Sep 2019 01:06:10 -0700 (PDT)
+Received: from dell ([2.27.167.122])
+ by smtp.gmail.com with ESMTPSA id a13sm72513725wrf.73.2019.09.16.01.06.09
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Mon, 16 Sep 2019 01:06:09 -0700 (PDT)
+Date: Mon, 16 Sep 2019 09:06:08 +0100
+From: Lee Jones <lee.jones@linaro.org>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Subject: Re: [PATCH] mfd: mt6360: add pmic mt6360 driver
+Message-ID: <20190916080608.GV26880@dell>
+References: <1568275837-3560-1-git-send-email-gene.chen.richtek@gmail.com>
+ <be0bbf3b-76f8-9e2a-7c51-d5987263a859@gmail.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <be0bbf3b-76f8-9e2a-7c51-d5987263a859@gmail.com>
+User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190916_005550_247190_20E53016 
-X-CRM114-Status: GOOD (  20.33  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190916_010612_797370_27B7ADF9 
+X-CRM114-Status: GOOD (  12.90  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,216 +98,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, Tomasz
- Figa <tfiga@google.com>, Joerg Roedel <joro@8bytes.org>,
- Will Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
- iommu@lists.linux-foundation.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Yongqiang Niu <yongqiang.niu@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, ming-fan.chen@mediatek.com,
- anan.sun@mediatek.com, Robin Murphy <robin.murphy@arm.com>, Matthias
- Kaehlcke <mka@chromium.org>, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: gene_chen@richtek.com,
+ Gene Chen <gene_chen@mediatek.corp-partner.google.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Gene Chen <gene.chen.richtek@gmail.com>, Wilma.Wu@mediatek.com,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-
-Hi, Yong:
-
-On Tue, 2019-09-03 at 17:37 +0800, Yong Wu wrote:
-> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> 
-> Display use the dispsys device to call pm_rumtime_get_sync before.
-> This patch add pm_runtime_xx with ovl and rdma device which has linked
-> with larb0, then it will enable the correpsonding larb0 clock
-> automatically by the device link.
-
-This patch should be applied before "drm/mediatek: Get rid of
-mtk_smi_larb_get/put". If before that patch, this patch is a preparation
-of that patch. If after that patch, this patch is a bug fix of that
-patch. Why let bug happen?
-
-> 
-> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_disp_ovl.c     |  5 +++++
->  drivers/gpu/drm/mediatek/mtk_disp_rdma.c    |  5 +++++
->  drivers/gpu/drm/mediatek/mtk_drm_crtc.c     | 18 ++++++++++++++++--
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c |  9 +++++++++
->  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  1 +
->  5 files changed, 36 insertions(+), 2 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-> index c4f07c2..51958cf 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-> @@ -9,6 +9,7 @@
->  #include <linux/of_device.h>
->  #include <linux/of_irq.h>
->  #include <linux/platform_device.h>
-> +#include <linux/pm_runtime.h>
->  
->  #include "mtk_drm_crtc.h"
->  #include "mtk_drm_ddp_comp.h"
-> @@ -300,6 +301,8 @@ static int mtk_disp_ovl_probe(struct platform_device *pdev)
->  		return ret;
->  	}
->  
-> +	pm_runtime_enable(dev);
-> +
->  	ret = component_add(dev, &mtk_disp_ovl_component_ops);
->  	if (ret)
->  		dev_err(dev, "Failed to add component: %d\n", ret);
-
-This error should do some error handling to undo pm_runtime_enable().
-
-> @@ -311,6 +314,8 @@ static int mtk_disp_ovl_remove(struct platform_device *pdev)
->  {
->  	component_del(&pdev->dev, &mtk_disp_ovl_component_ops);
->  
-> +	pm_runtime_disable(&pdev->dev);
-> +
->  	return 0;
->  }
->  
-> diff --git a/drivers/gpu/drm/mediatek/mtk_disp_rdma.c b/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> index 9a6f0a2..15e5c3a 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_disp_rdma.c
-> @@ -9,6 +9,7 @@
->  #include <linux/of_device.h>
->  #include <linux/of_irq.h>
->  #include <linux/platform_device.h>
-> +#include <linux/pm_runtime.h>
->  
->  #include "mtk_drm_crtc.h"
->  #include "mtk_drm_ddp_comp.h"
-> @@ -306,6 +307,8 @@ static int mtk_disp_rdma_probe(struct platform_device *pdev)
->  
->  	platform_set_drvdata(pdev, priv);
->  
-> +	pm_runtime_enable(dev);
-> +
->  	ret = component_add(dev, &mtk_disp_rdma_component_ops);
->  	if (ret)
->  		dev_err(dev, "Failed to add component: %d\n", ret);
-
-Ditto.
-
-> @@ -317,6 +320,8 @@ static int mtk_disp_rdma_remove(struct platform_device *pdev)
->  {
->  	component_del(&pdev->dev, &mtk_disp_rdma_component_ops);
->  
-> +	pm_runtime_disable(&pdev->dev);
-> +
->  	return 0;
->  }
->  
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> index c1e891e..daf002e 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-> @@ -358,13 +358,21 @@ static void mtk_drm_crtc_atomic_enable(struct drm_crtc *crtc,
->  				       struct drm_crtc_state *old_state)
->  {
->  	struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
-> +	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
->  	int ret;
->  
->  	DRM_DEBUG_DRIVER("%s %d\n", __func__, crtc->base.id);
->  
-> +	ret = pm_runtime_get_sync(comp->dev);
-> +	if (ret < 0)
-> +		DRM_DEV_ERROR(comp->dev, "Failed to enable power domain: %d\n",
-> +			      ret);
-> +
->  	ret = mtk_crtc_ddp_hw_init(mtk_crtc);
-> -	if (ret)
-> +	if (ret) {
-> +		pm_runtime_put(comp->dev);
->  		return;
-> +	}
->  
->  	drm_crtc_vblank_on(crtc);
->  	mtk_crtc->enabled = true;
-> @@ -374,7 +382,8 @@ static void mtk_drm_crtc_atomic_disable(struct drm_crtc *crtc,
->  					struct drm_crtc_state *old_state)
->  {
->  	struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
-> -	int i;
-> +	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
-> +	int i, ret;
->  
->  	DRM_DEBUG_DRIVER("%s %d\n", __func__, crtc->base.id);
->  	if (!mtk_crtc->enabled)
-> @@ -398,6 +407,11 @@ static void mtk_drm_crtc_atomic_disable(struct drm_crtc *crtc,
->  	mtk_crtc_ddp_hw_fini(mtk_crtc);
->  
->  	mtk_crtc->enabled = false;
-> +
-> +	ret = pm_runtime_put(comp->dev);
-> +	if (ret < 0)
-> +		DRM_DEV_ERROR(comp->dev, "Failed to disable power domain: %d\n",
-> +			      ret);
->  }
->  
->  static void mtk_drm_crtc_atomic_begin(struct drm_crtc *crtc,
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> index 7dc8496..c45e1f0 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> @@ -256,6 +256,8 @@ int mtk_ddp_comp_init(struct device *dev, struct device_node *node,
->  		      struct mtk_ddp_comp *comp, enum mtk_ddp_comp_id comp_id,
->  		      const struct mtk_ddp_comp_funcs *funcs)
->  {
-> +	struct platform_device *comp_pdev;
-> +
->  	if (comp_id < 0 || comp_id >= DDP_COMPONENT_ID_MAX)
->  		return -EINVAL;
->  
-> @@ -282,6 +284,13 @@ int mtk_ddp_comp_init(struct device *dev, struct device_node *node,
->  	if (IS_ERR(comp->clk))
->  		return PTR_ERR(comp->clk);
->  
-> +	comp_pdev = of_find_device_by_node(node);
-> +	if (!comp_pdev) {
-> +		dev_err(dev, "Waiting for device %s\n", node->full_name);
-> +		return -EPROBE_DEFER;
-> +	}
-> +	comp->dev = &comp_pdev->dev;
-
-This should be
-
-	comp->dev = dev;
-
-Regards,
-CK
-
-> +
->  	return 0;
->  }
->  
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> index 108de60..d1838a8 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h
-> @@ -83,6 +83,7 @@ struct mtk_ddp_comp {
->  	struct clk *clk;
->  	void __iomem *regs;
->  	int irq;
-> +	struct device *dev;
->  	enum mtk_ddp_comp_id id;
->  	const struct mtk_ddp_comp_funcs *funcs;
->  };
-
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gVGh1LCAxMiBTZXAgMjAxOSwgTWF0dGhpYXMgQnJ1Z2dlciB3cm90ZToKCj4gSGkgR2VuZSBD
+aGVuLAo+IAo+IFBsZWFzZSB1c2UgLi9zY3JpcHRzL2dldF9tYWludGFpbmVyLnBsIHRvIGZpbmQg
+b3V0IHdoaWNoIGFyZSB0aGUgbWFpbnRhaW5lcihzKQo+IGZvciBhIHNwZWNpZmljIHNlcmllcy9w
+YXRjaC4KPiAKPiBJIGFkZGVkIExlZSBKb25lcywgd2hvIGlzIHRoZSBtYWludGFpbmVyIG9mIHRo
+ZSBNVEQgc3Vic3lzdGVtLgo+IAo+IFJpZ2h0IG5vdyBJIGhhdmUgbm8gdGltZSB0byByZXZpZXcg
+dGhlIHBhdGNoZXMsIHNvcnJ5Lgo+IAo+IFJlZ2FyZHMsCj4gTWF0dGhpYXMKPiAKPiBPbiAxMi8w
+OS8yMDE5IDEwOjEwLCBHZW5lIENoZW4gd3JvdGU6Cj4gPiBGcm9tOiBHZW5lIENoZW4gPGdlbmVf
+Y2hlbkBtZWRpYXRlay5jb3JwLXBhcnRuZXIuZ29vZ2xlLmNvbT4KClBsZWFzZSByZXN1Ym1pdCB0
+aGlzIGNvbnRhaW5pbmcgYSBzdWl0YWJsZSBjb21taXQgbWVzc2FnZSB3aXRoIG1lIG9uCkNjLgoK
+PiA+IC0tLQo+ID4gIGRyaXZlcnMvbWZkL0tjb25maWcgICAgICAgfCAgMTIgKysKPiA+ICBkcml2
+ZXJzL21mZC9NYWtlZmlsZSAgICAgIHwgICAxICsKPiA+ICBkcml2ZXJzL21mZC9tdDYzNjAtY29y
+ZS5jIHwgNDYzICsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysK
+PiA+ICAzIGZpbGVzIGNoYW5nZWQsIDQ3NiBpbnNlcnRpb25zKCspCj4gPiAgY3JlYXRlIG1vZGUg
+MTAwNjQ0IGRyaXZlcnMvbWZkL210NjM2MC1jb3JlLmMKCi0tIApMZWUgSm9uZXMgW+adjueQvOaW
+r10KTGluYXJvIFNlcnZpY2VzIFRlY2huaWNhbCBMZWFkCkxpbmFyby5vcmcg4pSCIE9wZW4gc291
+cmNlIHNvZnR3YXJlIGZvciBBUk0gU29DcwpGb2xsb3cgTGluYXJvOiBGYWNlYm9vayB8IFR3aXR0
+ZXIgfCBCbG9nCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+XwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFk
+ZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4
+LW1lZGlhdGVrCg==
