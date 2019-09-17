@@ -2,80 +2,189 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BF2C7B4E85
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 14:52:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C7C0EB4FFA
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 16:09:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/QLVMl/Gws/23QqVPKFymcg6dOXAyiOmovDxBh/MqwI=; b=MvaGnmUwmH8ydi
-	rGj0WqeNV24GVDCoV9gVYLUQtTKBgh+vA+eapAGSzmtfT0Q3L4RfpOBlgUhRf8Fz7pcKXI4IctSDq
-	0+NFF8f6FblQebmlGYa0cY3Myu6zMZBHpAqPDCssYgppb1xkx/ui/JYVJxDWh9zpi92bbGW3LZVbI
-	rQV/GQ9/yDa3hQrWTh0XMT9iosPsVWN05U0t/0JZJ7rqqjFyEYaedFhim8LhgLeE5+zxHGBECbFTD
-	cjAp7LsdCM/FewsdVoyDgJHan2CUtxDbDCK0cK5W+clsz8dUidemBzhXZK40w2704OJ0ywXWvC6YY
-	8dK8H1rx90djCVesLI4g==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=GwfPpzAdnrBd7YYHsLeO9zxani2ZI1anWXClIK8mCEU=; b=NMCv9QCJu06lE/
+	xVSUzzi6WemPz6X5vf3jsbFIXVTOvzpNDvJia/FjmOxSsGf7wb3+4sz62RaFQRnrDwEhzBcawzwXE
+	6de9ZuwDGWyVNIZvyf8sXUiwPkPliTUtl3m8WhPkb2aKOkXeq6jrE3v/C3majVasVu6dRtLm19QxC
+	pVuJJNRkbewzT24MnYp5RrB+rZNqmfoEG5y/QMenOZaFjtmzBTkglSffRTsbe0PCZWqAz6uX4fw2l
+	T8POfRnmhzbnF+PIsf7v5HLtabeq5rJLBYmdmC8rw7Qf1+8gJ8qfkMaFqfGT/8yHwT0Ob44zlTZjb
+	Y9X9j0lu9UYT+/hQKvcA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iACyO-0001sU-OO; Tue, 17 Sep 2019 12:52:48 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1iAEA8-0002kl-3s; Tue, 17 Sep 2019 14:09:00 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iACyK-0001rc-D4; Tue, 17 Sep 2019 12:52:46 +0000
-Received: by mail-ot1-f66.google.com with SMTP id g13so2902546otp.8;
- Tue, 17 Sep 2019 05:52:43 -0700 (PDT)
+ id 1iAEA3-0002k7-3x
+ for linux-mediatek@lists.infradead.org; Tue, 17 Sep 2019 14:08:57 +0000
+Received: by mail-wm1-x341.google.com with SMTP id v17so3352316wml.4
+ for <linux-mediatek@lists.infradead.org>; Tue, 17 Sep 2019 07:08:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:references:cc:from:openpgp:autocrypt:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=HwtG0raXddGUNw2oQJ0/0Si9qUHNyvGAyNwoLkTEAxw=;
+ b=Unc5hXgs5HqKyo1EP3efZeHZNh+0z0CPxD6Wnn753gJPaltx+4K1kJM/XFR+VpyHiM
+ ap5o2T2guz05e/OnvMLf6skASZgcCmYGrJt1EJeU9KiqVaXRAngcVbo/mYAtIugbAcFC
+ 6ETwbsxXM0sbi2j/bFXSB+oP92o5LaUpFsdde2DDardxY9Y51GxgB/aoLrG2l9p1kPoR
+ wyLO2MossyW4tif6phxYvABTcypA4malMO2sPfshoz549hNCX6wfnaxau0fLlNDmkgfg
+ Mx4mgIBxYYHwDpyoqq9sUtHFDAZYnlUcrsCR3/pRxjgrt+J3fDarKUJy5CyuiU4GGZOG
+ ZW2w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=cGu+OKqa8P9FhmcrfusKIEOBVN7wjkZzGzIlcpxnAM4=;
- b=H9lbIWJJcTj5tKgvVvqgMhqQNTjCh/2lFbxwHAv2he4KZmeyBZaOiSHu3lXx/pueh7
- XuNw2F8fENCoScXJHqyLcDffvRqJxa0c8JRcRNonI6HAFp60PrLmEwJsEU8460sXSXTu
- cbQ0K0KWeaXMLu/Gg7dEBjfJ/OtQ/f7aT00CsJrn4dwOO9IpAbSCW7URpZpEehTzAGsN
- ZGqtRi2itYuoR8ZN1GZKG0NIGANltKGmwDP4AnrFUe1qBOumQZTVbaDZfiQAbOberkE7
- WYugmpnfDMicIVynCGYwJhJU5yr+mHXBYYzH9RQgEqt7EsefvSn1J0cg4dOTzXom+cYL
- L9hA==
-X-Gm-Message-State: APjAAAXSftKS8DB7NG/c7Nq1SyvegmBAGULc8rMg+FWwebUnrcSVFkwt
- z6LvKSQPOe5VBt34325n3CVGDxql2MJJTGfLz/E=
-X-Google-Smtp-Source: APXvYqwF7djb29BU4JOekDq/w2ATaouFkjTZStu1zawPVEUhoivXp7Jzh/X/ybbkO0GGmU/IOqDimmtEJFBAiFablnE=
-X-Received: by 2002:a9d:5a06:: with SMTP id v6mr2514884oth.250.1568724762614; 
- Tue, 17 Sep 2019 05:52:42 -0700 (PDT)
+ h=x-gm-message-state:subject:to:references:cc:from:openpgp:autocrypt
+ :message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=HwtG0raXddGUNw2oQJ0/0Si9qUHNyvGAyNwoLkTEAxw=;
+ b=ntZiFT4LAyJleGoKy94TfFKor4C0IDSsV3bkT0SHrEBUidpmXE0ZsWSmOTfsYhm/ou
+ xwSTUGj+yBbuIxPUa3WhJkDcvGHZCyOPKixrVH+QiZPltRTvPrG76kjp7XSz3BUWc8OC
+ zeC2wntOV3L/wUsIwS49bRvvRMziT3nj98Ktq+ylycRNPdvXoADXOp3AzVnCNebxdSpn
+ bZ5hMlcy2UsX4QVmtSYk+Z07cfdLYNatjSNJPL/kN7D56Zv4FiGAcjNEA3dOuyI1ori9
+ ACiNS1MgrMp697O1eoF1AH42mOevYeQ0wStLt4pHzAWdx/ZtleLqnFARt214V8+MfW1j
+ WEpA==
+X-Gm-Message-State: APjAAAWC0HrO9XyZiTp/WvAdLZtUd8YSZarSa4SqTaVfTXFMtEw9g3C1
+ 8Dzw0V4ih22VwLdIdHAw5tjedu9iHr12Vw==
+X-Google-Smtp-Source: APXvYqxY6anPLNGPUlSgAc0Vsqrp9J/C+syA0PueN4Oz1WeGjLNLNZGes0OF1JBfJoOTpf3Vp8RS5w==
+X-Received: by 2002:a7b:c10c:: with SMTP id w12mr3961258wmi.26.1568729333648; 
+ Tue, 17 Sep 2019 07:08:53 -0700 (PDT)
+Received: from ziggy.stardust ([193.86.95.52])
+ by smtp.gmail.com with ESMTPSA id s13sm1105540wmc.28.2019.09.17.07.08.52
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Tue, 17 Sep 2019 07:08:52 -0700 (PDT)
+Subject: Re: Mainline kernel for Gemini PDA (MT6797*)
+To: Adam Boardman <adamboardman@gmail.com>,
+ linux-mediatek@lists.infradead.org, Sean Wang <sean.wang@mediatek.com>
+References: <CABvHX8jSL=UrZ8iVXPOmHEMOm7fkNCim3P0hepOcQB=hP2pGyA@mail.gmail.com>
+From: Matthias Brugger <matthias.bgg@gmail.com>
+Openpgp: preference=signencrypt
+Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ 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
+ jrHWeQEI2ucSKsNa8FllDmG/fQ==
+Message-ID: <d127a5d6-6525-d638-7090-765bcd4dd592@gmail.com>
+Date: Tue, 17 Sep 2019 16:08:51 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-References: <20190824132846.8589-1-u.kleine-koenig@pengutronix.de>
- <20190824132846.8589-2-u.kleine-koenig@pengutronix.de>
- <20190913215809.GA11833@bogus>
- <CAMuHMdV+pwoAA0zH_vQf2nKqzrgHP8rcMStyJbnuu2qviFC_qg@mail.gmail.com>
- <20190917101303.t5otztdus7y3ayau@pengutronix.de>
- <489c90fb-a135-4fd8-ecb9-46404bd3c234@axentia.se>
- <20190917122530.3xy7sut3xdvzlomj@pengutronix.de>
-In-Reply-To: <20190917122530.3xy7sut3xdvzlomj@pengutronix.de>
-From: Geert Uytterhoeven <geert@linux-m68k.org>
-Date: Tue, 17 Sep 2019 14:52:31 +0200
-Message-ID: <CAMuHMdXk5uSk-v4vYVR1YO46gQd0mRYy5eEM6wOHqgkRTfyn-g@mail.gmail.com>
-Subject: Re: [PATCH v1 2/2] of: Let of_for_each_phandle fallback to
- non-negative cell_count
-To: =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>
+In-Reply-To: <CABvHX8jSL=UrZ8iVXPOmHEMOm7fkNCim3P0hepOcQB=hP2pGyA@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_055244_445243_CA51146A 
-X-CRM114-Status: GOOD (  24.35  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20190917_070855_187806_E451121E 
+X-CRM114-Status: GOOD (  36.53  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (geert.uytterhoeven[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ provider (matthias.bgg[at]gmail.com)
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,94 +196,167 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Frank Rowand <frowand.list@gmail.com>,
- Joerg Roedel <joro@8bytes.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Linux-Renesas <linux-renesas-soc@vger.kernel.org>,
- Wolfram Sang <wsa+renesas@sang-engineering.com>,
- Linux IOMMU <iommu@lists.linux-foundation.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- Linux I2C <linux-i2c@vger.kernel.org>, Sascha Hauer <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>, Will Deacon <will@kernel.org>,
- Peter Rosin <peda@axentia.se>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- Robin Murphy <robin.murphy@arm.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Fran Quinto <fran.quinto@gmail.com>, Mars Cheng <mars.cheng@mediatek.com>,
+ Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgVXdlLAoKT24gVHVlLCBTZXAgMTcsIDIwMTkgYXQgMjoyNSBQTSBVd2UgS2xlaW5lLUvDtm5p
-Zwo8dS5rbGVpbmUta29lbmlnQHBlbmd1dHJvbml4LmRlPiB3cm90ZToKPiBPbiBUdWUsIFNlcCAx
-NywgMjAxOSBhdCAxMToyNTo0NkFNICswMDAwLCBQZXRlciBSb3NpbiB3cm90ZToKPiA+IE9uIDIw
-MTktMDktMTcgMTI6MTMsIFV3ZSBLbGVpbmUtS8O2bmlnIHdyb3RlOgo+ID4gPiBPbiBUdWUsIFNl
-cCAxNywgMjAxOSBhdCAxMTo0MDoyNUFNICswMjAwLCBHZWVydCBVeXR0ZXJob2V2ZW4gd3JvdGU6
-Cj4gPiA+PiBPbiBGcmksIFNlcCAxMywgMjAxOSBhdCAxMTo1OCBQTSBSb2IgSGVycmluZyA8cm9i
-aEBrZXJuZWwub3JnPiB3cm90ZToKPiA+ID4+PiBPbiBTYXQsIDI0IEF1ZyAyMDE5IDE1OjI4OjQ2
-ICswMjAwLCA9P1VURi04P3E/VXdlPTIwS2xlaW5lLUs9QzM9QjZuaWc/PSAgICAgICAgICB3cm90
-ZToKPiA+ID4+Pj4gUmVmZXJlbmNpbmcgZGV2aWNlIHRyZWUgbm9kZXMgZnJvbSBhIHByb3BlcnR5
-IGFsbG93cyB0byBwYXNzIGFyZ3VtZW50cy4KPiA+ID4+Pj4gVGhpcyBpcyBmb3IgZXhhbXBsZSB1
-c2VkIGZvciByZWZlcmVuY2luZyBncGlvcy4gVGhpcyBsb29rcyBhcyBmb2xsb3dzOgo+ID4gPj4+
-Pgo+ID4gPj4+PiAgICAgICBncGlvX2N0cmw6IGdwaW8tY29udHJvbGxlciB7Cj4gPiA+Pj4+ICAg
-ICAgICAgICAgICAgI2dwaW8tY2VsbHMgPSA8Mj4KPiA+ID4+Pj4gICAgICAgICAgICAgICAuLi4K
-PiA+ID4+Pj4gICAgICAgfQo+ID4gPj4+Pgo+ID4gPj4+PiAgICAgICBzb21lb3RoZXJub2RlIHsK
-PiA+ID4+Pj4gICAgICAgICAgICAgICBncGlvcyA9IDwmZ3Bpb19jdHJsIDUgMCAmZ3Bpb19jdHJs
-IDMgMD47Cj4gPiA+Pj4+ICAgICAgICAgICAgICAgLi4uCj4gPiA+Pj4+ICAgICAgIH0KPiA+ID4+
-Pj4KPiA+ID4+Pj4gVG8ga25vdyB0aGUgbnVtYmVyIG9mIGFyZ3VtZW50cyB0aGlzIG11c3QgYmUg
-ZWl0aGVyIGZpeGVkLCBvciB0aGUKPiA+ID4+Pj4gcmVmZXJlbmNlZCBub2RlIGlzIGNoZWNrZWQg
-Zm9yIGEgJGNlbGxzX25hbWUgKGhlcmU6ICIjZ3Bpby1jZWxscyIpCj4gPiA+Pj4+IHByb3BlcnR5
-IGFuZCB3aXRoIHRoaXMgaW5mb3JtYXRpb24gdGhlIHN0YXJ0IG9mIHRoZSBzZWNvbmQgcmVmZXJl
-bmNlIGNhbgo+ID4gPj4+PiBiZSBkZXRlcm1pbmVkLgo+ID4gPj4+Pgo+ID4gPj4+PiBDdXJyZW50
-bHkgcmVndWxhdG9ycyBhcmUgcmVmZXJlbmNlZCB3aXRoIG5vIGFkZGl0aW9uYWwgYXJndW1lbnRz
-LiBUbwo+ID4gPj4+PiBhbGxvdyBzb21lIG9wdGlvbmFsIGFyZ3VtZW50cyB3aXRob3V0IGhhdmlu
-ZyB0byBjaGFuZ2UgYWxsIHJlZmVyZW5jZWQKPiA+ID4+Pj4gbm9kZXMgdGhpcyBjaGFuZ2UgaW50
-cm9kdWNlcyBhIHdheSB0byBzcGVjaWZ5IGEgZGVmYXVsdCBjZWxsX2NvdW50LiBTbwo+ID4gPj4+
-PiB3aGVuIGEgcGhhbmRsZSBpcyBwYXJzZWQgd2UgY2hlY2sgZm9yIHRoZSAkY2VsbHNfbmFtZSBw
-cm9wZXJ0eSBhbmQgdXNlCj4gPiA+Pj4+IGl0IGFzIGJlZm9yZSBpZiBwcmVzZW50LiBJZiBpdCBp
-cyBub3QgcHJlc2VudCB3ZSBmYWxsIGJhY2sgdG8KPiA+ID4+Pj4gY2VsbHNfY291bnQgaWYgbm9u
-LW5lZ2F0aXZlIGFuZCBvbmx5IGZhaWwgaWYgY2VsbHNfY291bnQgaXMgc21hbGxlciB0aGFuCj4g
-PiA+Pj4+IHplcm8uCj4gPiA+Pj4+Cj4gPiA+Pj4+IFNpZ25lZC1vZmYtYnk6IFV3ZSBLbGVpbmUt
-S8O2bmlnIDx1LmtsZWluZS1rb2VuaWdAcGVuZ3V0cm9uaXguZGU+Cj4gPiA+Pgo+ID4gPj4gVGhp
-cyBpcyBub3cgY29tbWl0IGU0MmVlNjEwMTdmNThjZDkgKCJvZjogTGV0IG9mX2Zvcl9lYWNoX3Bo
-YW5kbGUgZmFsbGJhY2sKPiA+ID4+IHRvIG5vbi1uZWdhdGl2ZSBjZWxsX2NvdW50IikgaW4gcm9i
-aC9mb3ItbmV4dCwgd2hpY2ggY2F1c2VzIGEgbG9jay11cCB3aGVuCj4gPiA+PiBib290aW5nIGEg
-c2htb2JpbGVfZGVmY29uZmlnIGtlcm5lbCBvbiByOGE3NzkxL2tvZWxzY2g6Cj4gPiA+Pgo+ID4g
-Pj4gcmN1OiBJTkZPOiByY3Vfc2NoZWQgc2VsZi1kZXRlY3RlZCBzdGFsbCBvbiBDUFUKCj4gT2gg
-eWVhaCwgeW91J3JlIHJpZ2h0LiBJJ20gYSBiaXQgZGlzYXBwb2ludGVkIHRoYXQgSSBkaWRuJ3Qg
-c3BvdCB0aGlzCj4gbXlzZWxmIDotfAo+Cj4gVW50ZXN0ZWQgcGF0Y2ggdG8gZml4IHRoaXMgcHJv
-YmxlbToKPgo+IGRpZmYgLS1naXQgYS9kcml2ZXJzL29mL2Jhc2UuYyBiL2RyaXZlcnMvb2YvYmFz
-ZS5jCj4gaW5kZXggMmYyNWQyZGZlY2ZhLi4yNmY3YTIxZDcxODcgMTAwNjQ0Cj4gLS0tIGEvZHJp
-dmVycy9vZi9iYXNlLmMKPiArKysgYi9kcml2ZXJzL29mL2Jhc2UuYwo+IEBAIC0xMjg0LDYgKzEy
-ODQsMTMgQEAgaW50IG9mX3BoYW5kbGVfaXRlcmF0b3JfaW5pdChzdHJ1Y3Qgb2ZfcGhhbmRsZV9p
-dGVyYXRvciAqaXQsCj4gICAgICAgICBjb25zdCBfX2JlMzIgKmxpc3Q7Cj4gICAgICAgICBpbnQg
-c2l6ZTsKPgo+ICsgICAgICAgLyoKPiArICAgICAgICAqIG9uZSBvZiBjZWxsX2NvdW50IG9yIGNl
-bGxzX25hbWUgbXVzdCBiZSBwcm92aWRlZCB0byBkZXRlcm1pbmUgdGhlCj4gKyAgICAgICAgKiBh
-cmd1bWVudCBsZW5ndGguCj4gKyAgICAgICAgKi8KPiArICAgICAgIGlmIChjZWxsX2NvdW50IDwg
-MCAmJiAhY2VsbHNfbmFtZSkKPiArICAgICAgICAgICAgICAgcmV0dXJuIC1FSU5WQUw7Cj4gKwo+
-ICAgICAgICAgbWVtc2V0KGl0LCAwLCBzaXplb2YoKml0KSk7Cj4KPiAgICAgICAgIGxpc3QgPSBv
-Zl9nZXRfcHJvcGVydHkobnAsIGxpc3RfbmFtZSwgJnNpemUpOwo+IEBAIC0xNzY1LDYgKzE3NzIs
-MTggQEAgaW50IG9mX2NvdW50X3BoYW5kbGVfd2l0aF9hcmdzKGNvbnN0IHN0cnVjdCBkZXZpY2Vf
-bm9kZSAqbnAsIGNvbnN0IGNoYXIgKmxpc3RfbmEKPiAgICAgICAgIHN0cnVjdCBvZl9waGFuZGxl
-X2l0ZXJhdG9yIGl0Owo+ICAgICAgICAgaW50IHJjLCBjdXJfaW5kZXggPSAwOwo+Cj4gKyAgICAg
-ICAvKiBJZiBjZWxsc19uYW1lIGlzIE5VTEwgd2UgYXNzdW1lIGFuIGNlbGxfY291bnQgb2YgMCAq
-LwoKYSBjZWxsIGNvdW50Cgo+ICsgICAgICAgaWYgKGNlbGxzX25hbWUgPT0gTlVMTCkgewo+ICsg
-ICAgICAgICAgICAgICBjb25zdCBfX2JlMzIgKmxpc3Q7Cj4gKyAgICAgICAgICAgICAgIGludCBz
-aXplOwo+ICsKPiArICAgICAgICAgICAgICAgbGlzdCA9IG9mX2dldF9wcm9wZXJ0eShucCwgbGlz
-dF9uYW1lLCAmc2l6ZSk7Cj4gKyAgICAgICAgICAgICAgIGlmICghbGlzdCkKPiArICAgICAgICAg
-ICAgICAgICAgICAgICByZXR1cm4gLUVOT0VOVDsKPiArCj4gKyAgICAgICAgICAgICAgIHJldHVy
-biBzaXplIC8gc2l6ZW9mKCpsaXN0KTsKPiArICAgICAgIH0KPiArCj4gICAgICAgICByYyA9IG9m
-X3BoYW5kbGVfaXRlcmF0b3JfaW5pdCgmaXQsIG5wLCBsaXN0X25hbWUsIGNlbGxzX25hbWUsIC0x
-KTsKPiAgICAgICAgIGlmIChyYykKPiAgICAgICAgICAgICAgICAgcmV0dXJuIHJjOwoKVGhhbmtz
-LCB0aGF0IGZpeGVzIHRoZSBib290IGZvciBtZSEKClRlc3RlZC1ieTogR2VlcnQgVXl0dGVyaG9l
-dmVuIDxnZWVydCtyZW5lc2FzQGdsaWRlci5iZT4KCkdye29ldGplLGVldGluZ31zLAoKICAgICAg
-ICAgICAgICAgICAgICAgICAgR2VlcnQKCi0tIApHZWVydCBVeXR0ZXJob2V2ZW4gLS0gVGhlcmUn
-cyBsb3RzIG9mIExpbnV4IGJleW9uZCBpYTMyIC0tIGdlZXJ0QGxpbnV4LW02OGsub3JnCgpJbiBw
-ZXJzb25hbCBjb252ZXJzYXRpb25zIHdpdGggdGVjaG5pY2FsIHBlb3BsZSwgSSBjYWxsIG15c2Vs
-ZiBhIGhhY2tlci4gQnV0CndoZW4gSSdtIHRhbGtpbmcgdG8gam91cm5hbGlzdHMgSSBqdXN0IHNh
-eSAicHJvZ3JhbW1lciIgb3Igc29tZXRoaW5nIGxpa2UgdGhhdC4KICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAtLSBMaW51cyBUb3J2YWxkcwoKX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4
-LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcv
-bWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+
+
+On 16/09/2019 21:35, Adam Boardman wrote:
+> I'm new to kernel work and I've started working on trying to get a
+> mainline kernel build working for the Gemini PDA (X25/X27 - MT6797*).
+> 
+> I've pulled in a recent mainline[1] and then added Jasper's fixes[2]
+> and Jimmy-Yj's[3], then tried turning on Manivannan's[4] pinctrl
+
+Jaspers clock fixes are upstream, same for the pinctrl. We are missing the
+SCPSYS part. Seems it fall through my cracks. If you want then just rebase and
+resend it with your Signed-off-by and I can review them.
+
+> driver and adding a couple of simple device drivers (vibrator & led
+> controller). Neither work as not enough other things are ported or
+> things on the mainline have changed in incompatible ways.
+> 
+> The mt6397_probe (for MT6351) fails at the dev_get_regmap stage. Which
+> looks to be related to the mt6797 picking Paris (pinctrl v2) for this
+> device which has none of the regmap code that only features in Moore?
+> 
+
+Adding Sean as he is pretty much into the pinctrl implementation of MediaTek.
+
+> The current state is that I can boot to a BusyBox shell over a
+> USB-UART cable[5], mount the debugfs etc. Best not to stay there too
+
+Nice, didn't know the USB-UART cable works.
+
+> long as the chip soon overheats, 20-30 mins is enough such that after
+> a reboot to a working 3.18 kernel it will only mount the file system
+> read-only due to thermal overload, give it a few mins to cool, another
+> reboot and its all good again.
+> 
+> For the over heating I suspect the fact that Jasper commented out the
+> cpu-idle-states could be related, though there are so many parts to
+> these cpus I wouldn't be certain. Putting the idle states back results
+> in a booting kernel to the point that the initramfs calls 'udevadm
+> settle' and freezes there or in the subsequent call to the busybox
+> shell.
+> 
+
+Did you try the plain upstream versions? Any of the two [1] [2] should bring you
+to pretty much the same point, serial console with a busybox initramfs.
+I personally don't have the Gemini PDA but the 96 board [3], but I didn't
+experienced any over-heating.
+
+> I might need to investigate extra devices which I see no mention of so
+> far in the gemini pda dts[6]. So any advice on the right order or any
+> examples for other similar devices would be great. Also how to
+> test/verify each one is working correctly? I'm not requesting the full
+> list ordered, just the top 5-10 items that'll get me to a stable state
+> where the device can live without likelihood of damage. I can than
+> pick off the others as I choose, quite a lot are obvious from the
+> names. The power management+thermal side strikes me as a good first
+> focus?
+
+As a good first focus I'd try to get the MMC driver working. I started on this
+some time ago but got side tracked. From what I saw, you need to implement
+pmic_wrapper and pmic as you will need some regulator for the MMC.
+I had a quick look on the pmic/pmic_wrapper in the repo you mentioned. Maybe
+Mars (in CC) can help with his knowledge to understand if we can re-use an
+already implemented pmic/pmic_wrapper or if we have to enhance them/write new
+drivers.
+
+> 
+> Whats the mainline status for battery and charge support, the 3.18 kernel has:
+> MTK_SMART_BATTERY, MTK_HAFG_20 and MTK_PUMP_EXPRESS_PLUS_SUPPORT
+> Anyone working on their equivalent?
+
+Not that I'm aware of.
+
+> 
+> For the i2c busses to have a chance to work I would also need to
+> define: mtk_i2c_compatible mt6797_compat in
+> drivers/i2c/busses/i2c-mt65xx.c but I've no idea how to extract the
+> needed values from the 3.18 source as the code is too different to
+> easily know what to look for. Indications from pinctrl-mt8183.txt
+
+Yes, the downstream mt6797 kernel code is heavily modified and it's difficult to
+understand what's the exact difference.
+
+> suggest that I might also need to add i2c0_pins_a style references to
+> pio: pinctrl but the 8183 device appears to have no i2c just spi, and
+> then pinctrl-mt6797.txt has no mention of i2c, is that the case? again
+> I'll need a pointer in the direction of figuring out the values.
+
+I think the datasheets [4] should tell you which PINs have i2c functionality.
+You could try to use the schematics of the reference board [5] maybe you are
+luky and they haven't swapped the pins.
+
+> 
+> I have only publicly available data sheets so far[7], and the original
+> kernel[8].
+> 
+> I've left in Jaspers cmdline force to limit it to one cpu, I don't
+> know if this is necessary, usually this is overridden by lk to limit
+> it to 5. Also of possible interest I've put in Jaspers mt6797 debugfs
+> and whilst some bits of it now work I've no great notion of how to
+> make use of it.
+
+I don't think this is necessary. AFAIR I can boot without limiting the CPUs.
+
+> 
+> Any help greatly appreciated,
+> 
+
+I'm happy to see you are interested in mt6797 upstreaming.
+Hope my respond helps.
+
+See you,
+Matthias
+
+[1]
+https://elixir.bootlin.com/linux/latest/source/arch/arm64/boot/dts/mediatek/mt6797-evb.dts
+[2]
+https://elixir.bootlin.com/linux/latest/source/arch/arm64/boot/dts/mediatek/mt6797-x20-dev.dts
+[3] https://www.96boards.org/product/mediatek-x20/
+[4] https://www.96boards.org/documentation/consumer/mediatekx20/additional-docs/
+[5] https://www.96boards.org/documentation/consumer/mediatekx20/hardware-docs/
+
+> Adam.
+> 
+> PS: The Cosmo Communicator has the P70 so this will all need doing
+> again for the MT6771, anyone started on that?
+> 
+> --
+> 
+> [1] - https://github.com/gemian/linux (working branch)
+> [2] - https://github.com/Jasu/gemini-pda-buildroot (2/3 patches mainlined)
+> [3] - https://patchwork.kernel.org/patch/9889457/ (and related)
+> [4] - https://patchwork.kernel.org/patch/10672803/ (already in mainline)
+> [5] - https://www.omegamoon.com/blog/index.php?entry=entry180626-210224
+> [6] - Long list of items from 3.18 dts as yet unknown to mainline -
+> power_gs, toprgu, sleep, mcucfg, rt5735, pericfg, dramc, gpio, apxgpt,
+> rsvd, hacc, fhctl, devapc, ddrphy, bat_meter, topmisc, mdcldma,
+> aes_top, mcumixed, mcufhctl, c2kmisc, modem_temp, scpdvfs, emi,
+> sys_cirq, m4u, efusec, gce, cqdma, mipi, gic/gic1, pwm, spi,
+> therm_ctrl, eem_fsm, btif, dvfsp, itrx, audiosys, usb, xhci, mjcsys,
+> mfgsys, mali, dispsys, mdp, disp, smi, dip, dpe, consys, wifi, camsys,
+> vcorefs, pmic_clock_buffer_ctrl, ext_buck, chr, fusb301a, sii9022,
+> sm100, accdet, swtp, battery, gps, gsensor, humidity, gyro, hall,
+> switch, fpc1145, als, gpio_usage_mapping, cap_touch, solomon_touch,
+> aeon_gpio
+> [7] - https://github.com/gemian/gemian/wiki/HardwareHacking
+> [8] - https://github.com/gemian/gemini-linux-kernel-3.18
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> 
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
