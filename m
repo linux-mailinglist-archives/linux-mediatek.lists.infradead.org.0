@@ -2,68 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E9C7B49AA
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 10:38:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7CD80B4AEB
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 11:40:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eVHUtbf5BpfyHSDGdvb794IkhWZMx19AHnGR/z4p/dE=; b=jdW9CzrEwjCSAR
-	iC+CXjURRj9xY29K3kkYxf7JqPf+9d0EnYcho8PezaWThBBhIih+ynKAi4vuHJTNcGLdXa72ZFR/Q
-	JggFynaV3i0XrY5pL19ILuPn3oKrtKahdwE36nOST7fIeS7AduSm8YFfxdYYUB17sqb+BhBV2PA6C
-	OpEQf6HgkyTkTtpKsiZO/z2ZcjOWLL1A66BS529NVg6V6SmMeMZqEsDADKMeoHldle0Z1lZ4saxLs
-	8jA96MWEFYRZtkwvK2rivZmhtyOS7VW4Kzjmho506SKpUKwSKl6koY1elIIs0sK0PR6x0vHEowQAs
-	MCE6AeLOC/VG5A7oQtqw==;
+	List-Owner; bh=vol1M/g6ZfVxsx3HX/xsGwCdew56YuaM3JgSdtPSdP0=; b=Q6UGbRsjaVu3ts
+	PUwwgNHWtyjRi/tgkpl640QDAlTBXs4eRJJGxMGsKZYyGTqRg4hck2y7uozH0j8lyAm4NvfJWuZql
+	WceU5A/L2Z3RQ3Wl3xQUscEmdvIJ5gwOyvviAquLqIzQBJiopEh7Nk7z/MSEJFU5T8WIUZbKvIkTV
+	o4G2IRRBdS4JAYw154TVYBgn2Ie+PrLRHbAgi8C6ti89Wt8aJZUiuQCAj9UQSLL/Po6DJvEklXEkH
+	0NLeieNQROAWD6IrkFhL9VkBjOxyGRpmrq/NWIxDZ3TaBOLcHLzcG4yG5TeZYQwXRZdKuZbEz8Hdg
+	QEJNdRPvDFEDt6kCGS0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iA90M-0000ef-Mu; Tue, 17 Sep 2019 08:38:34 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iA9yV-0006q8-8X; Tue, 17 Sep 2019 09:40:43 +0000
+Received: from mail-oi1-f194.google.com ([209.85.167.194])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iA90I-0000eL-RG
- for linux-mediatek@lists.infradead.org; Tue, 17 Sep 2019 08:38:32 +0000
-X-UUID: 23e33e44bab048b79f403016eac525ab-20190917
-X-UUID: 23e33e44bab048b79f403016eac525ab-20190917
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <light.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 632877343; Tue, 17 Sep 2019 00:38:26 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Sep 2019 01:38:24 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Sep 2019 16:38:23 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 17 Sep 2019 16:38:23 +0800
-Message-ID: <1568709504.12617.4.camel@mtkswgap22>
-Subject: Re: [PATCH v3 1/5] pinctrl: mediatek: Check gpio pin number and use
- binary  search in mtk_hw_pin_field_lookup()
-From: Light Hsieh <light.hsieh@mediatek.com>
-To: <linus.walleij@linaro.org>
-Date: Tue, 17 Sep 2019 16:38:24 +0800
-In-Reply-To: <1568708771-12409-1-git-send-email-light.hsieh@mediatek.com>
-References: <1568708771-12409-1-git-send-email-light.hsieh@mediatek.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1iA9yR-0006pG-0H; Tue, 17 Sep 2019 09:40:40 +0000
+Received: by mail-oi1-f194.google.com with SMTP id 83so777333oii.1;
+ Tue, 17 Sep 2019 02:40:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc:content-transfer-encoding;
+ bh=uCmhvMwVcStuHY/v3SQn/MtQSiOlz7f/42X793jLSYQ=;
+ b=iG7EglW46DfPUdOdl+YdOWNZCGF28fEaUv4HawSH7LJF5UPWOnRkQkppxbECziggge
+ lkhTEJYf/u9A4g0B85zemCgVP2miu4w5zcC6US3Z8QbNoLvLViUCDgUybkYFq6tA62lG
+ 59+ryOh2op1DI9IKIzXzig21DFADodMPSSz+30fk5W3FJAfHa6bHlaIXEazXP7+6gD5t
+ ouiDoDLZ5QyEOrbPRxoQSWZ3zvUrG4Mj5fzWGO2y2XTLNN3Hut6ARBM+3ky7A28xyCy6
+ l+Xq56hTVfPfZ9Ws2QJvYGjVlWsPLp/xDln8l18dEnonGkkufQkh6qIpLPk8mT+ABrwz
+ RzYg==
+X-Gm-Message-State: APjAAAUY3PZUO5WpEwd7wSSKoKurFbkrEmOSK5sYoyvfIswqqwX/vgJL
+ svZsUTO7UkksltM04K5Z6MJkd9IJQpDZ7U3J7fE=
+X-Google-Smtp-Source: APXvYqy9QAOEl+I70QDj9XZms1oF+JXpX7r5yoYeHsSGg7Usn7nSuv+ezrLNvK9aaeHKMGjyGfXMvQQYURv3Ven7TAk=
+X-Received: by 2002:aca:cdc7:: with SMTP id d190mr2793514oig.148.1568713237546; 
+ Tue, 17 Sep 2019 02:40:37 -0700 (PDT)
 MIME-Version: 1.0
-X-MTK: N
+References: <20190824132846.8589-1-u.kleine-koenig@pengutronix.de>
+ <20190824132846.8589-2-u.kleine-koenig@pengutronix.de>
+ <20190913215809.GA11833@bogus>
+In-Reply-To: <20190913215809.GA11833@bogus>
+From: Geert Uytterhoeven <geert@linux-m68k.org>
+Date: Tue, 17 Sep 2019 11:40:25 +0200
+Message-ID: <CAMuHMdV+pwoAA0zH_vQf2nKqzrgHP8rcMStyJbnuu2qviFC_qg@mail.gmail.com>
+Subject: Re: [PATCH v1 2/2] of: Let of_for_each_phandle fallback to
+ non-negative cell_count
+To: Rob Herring <robh@kernel.org>,
+ =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_013830_892250_443C5AF0 
-X-CRM114-Status: GOOD (  16.32  )
-X-Spam-Score: 2.5 (++)
+X-CRM114-CacheID: sfid-20190917_024039_049433_9A51B89B 
+X-CRM114-Status: GOOD (  15.60  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.5 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [209.85.167.194 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.194 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (geert.uytterhoeven[at]gmail.com)
+ 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,172 +83,118 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-gpio@vger.kernel.org, sean.wang@kernel.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, Frank Rowand <frowand.list@gmail.com>,
+ Joerg Roedel <joro@8bytes.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Linux-Renesas <linux-renesas-soc@vger.kernel.org>,
+ Wolfram Sang <wsa+renesas@sang-engineering.com>,
+ Linux IOMMU <iommu@lists.linux-foundation.org>,
+ linux-mediatek@lists.infradead.org, Linux I2C <linux-i2c@vger.kernel.org>,
+ Sascha Hauer <kernel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Will Deacon <will@kernel.org>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ Robin Murphy <robin.murphy@arm.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dear reviewers,
-
-v3 fix build error in v2 as follows:
-
-1.   In drivers/pinctrl/mediatek/pinctrl-paris.c of patch series 3/5:
--	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SR, &val);
--	if (err)
--		return err;
--
--	if (!val)
--		return -EINVAL;
--
-+	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_SR, &ret);
-
-2.   In drivers/pinctrl/mediatek/pinctrl-mt6765.c of patch series 4/5:
--	.bias_disable_set = mtk_pinconf_bias_disable_set,
--	.bias_disable_get = mtk_pinconf_bias_disable_get,
--	.bias_set = mtk_pinconf_bias_set,
--	.bias_get = mtk_pinconf_bias_get,
-+	.bias_set_combo = mtk_pinconf_bias_set_combo,
-+	.bias_get_combo = mtk_pinconf_bias_get_combo,
-
-
-
-On Tue, 2019-09-17 at 16:26 +0800, Light Hsieh wrote:
-> 1. Check if gpio pin number is in valid range to prevent from get invalid
->    pointer 'desc' in the following code:
-> 	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
-> 
-> 2. Use binary search in mtk_hw_pin_field_lookup()
->    Modify mtk_hw_pin_field_lookup() to use binary search for accelerating
->    search.
-> 
-> ---
->  drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c | 24 +++++++++++++++++++-----
->  drivers/pinctrl/mediatek/pinctrl-paris.c         | 19 +++++++++++++++++++
->  2 files changed, 38 insertions(+), 5 deletions(-)
-> 
-> diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> index 20e1c89..4687f63 100644
-> --- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> +++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
-> @@ -68,7 +68,7 @@ static int mtk_hw_pin_field_lookup(struct mtk_pinctrl *hw,
->  {
->  	const struct mtk_pin_field_calc *c, *e;
->  	const struct mtk_pin_reg_calc *rc;
-> -	u32 bits;
-> +	u32 bits, start = 0, end, found = 0, check;
->  
->  	if (hw->soc->reg_cal && hw->soc->reg_cal[field].range) {
->  		rc = &hw->soc->reg_cal[field];
-> @@ -79,21 +79,32 @@ static int mtk_hw_pin_field_lookup(struct mtk_pinctrl *hw,
->  		return -ENOTSUPP;
->  	}
->  
-> +	end = rc->nranges - 1;
->  	c = rc->range;
->  	e = c + rc->nranges;
->  
-> -	while (c < e) {
-> -		if (desc->number >= c->s_pin && desc->number <= c->e_pin)
-> +	while (start <= end) {
-> +		check = (start + end) >> 1;
-> +		if (desc->number >= rc->range[check].s_pin
-> +		 && desc->number <= rc->range[check].e_pin) {
-> +			found = 1;
->  			break;
-> -		c++;
-> +		} else if (start == end)
-> +			break;
-> +		else if (desc->number < rc->range[check].s_pin)
-> +			end = check - 1;
-> +		else
-> +			start = check + 1;
->  	}
->  
-> -	if (c >= e) {
-> +	if (!found) {
->  		dev_dbg(hw->dev, "Not support field %d for pin = %d (%s)\n",
->  			field, desc->number, desc->name);
->  		return -ENOTSUPP;
->  	}
->  
-> +	c = rc->range + check;
-> +
->  	if (c->i_base > hw->nbase - 1) {
->  		dev_err(hw->dev,
->  			"Invalid base for field %d for pin = %d (%s)\n",
-> @@ -182,6 +193,9 @@ int mtk_hw_set_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
->  	if (err)
->  		return err;
->  
-> +	if (value < 0 || value > pf.mask)
-> +		return -EINVAL;
-> +
->  	if (!pf.next)
->  		mtk_rmw(hw, pf.index, pf.offset, pf.mask << pf.bitpos,
->  			(value & pf.mask) << pf.bitpos);
-> diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.c b/drivers/pinctrl/mediatek/pinctrl-paris.c
-> index 923264d..28b4951 100644
-> --- a/drivers/pinctrl/mediatek/pinctrl-paris.c
-> +++ b/drivers/pinctrl/mediatek/pinctrl-paris.c
-> @@ -693,6 +693,9 @@ static int mtk_gpio_get_direction(struct gpio_chip *chip, unsigned int gpio)
->  	const struct mtk_pin_desc *desc;
->  	int value, err;
->  
-> +	if (gpio > hw->soc->npins)
-> +		return -EINVAL;
-> +
->  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
->  
->  	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &value);
-> @@ -708,6 +711,9 @@ static int mtk_gpio_get(struct gpio_chip *chip, unsigned int gpio)
->  	const struct mtk_pin_desc *desc;
->  	int value, err;
->  
-> +	if (gpio > hw->soc->npins)
-> +		return -EINVAL;
-> +
->  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
->  
->  	err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DI, &value);
-> @@ -722,6 +728,9 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
->  	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
->  	const struct mtk_pin_desc *desc;
->  
-> +	if (gpio > hw->soc->npins)
-> +		return;
-> +
->  	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
->  
->  	mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DO, !!value);
-> @@ -729,12 +738,22 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
->  
->  static int mtk_gpio_direction_input(struct gpio_chip *chip, unsigned int gpio)
->  {
-> +	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
-> +
-> +	if (gpio > hw->soc->npins)
-> +		return -EINVAL;
-> +
->  	return pinctrl_gpio_direction_input(chip->base + gpio);
->  }
->  
->  static int mtk_gpio_direction_output(struct gpio_chip *chip, unsigned int gpio,
->  				     int value)
->  {
-> +	struct mtk_pinctrl *hw = gpiochip_get_data(chip);
-> +
-> +	if (gpio > hw->soc->npins)
-> +		return -EINVAL;
-> +
->  	mtk_gpio_set(chip, gpio, value);
->  
->  	return pinctrl_gpio_direction_output(chip->base + gpio);
-
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgUm9iLCBVd2UsCgpPbiBGcmksIFNlcCAxMywgMjAxOSBhdCAxMTo1OCBQTSBSb2IgSGVycmlu
+ZyA8cm9iaEBrZXJuZWwub3JnPiB3cm90ZToKPiBPbiBTYXQsIDI0IEF1ZyAyMDE5IDE1OjI4OjQ2
+ICswMjAwLCA9P1VURi04P3E/VXdlPTIwS2xlaW5lLUs9QzM9QjZuaWc/PSAgICAgICAgICB3cm90
+ZToKPiA+IFJlZmVyZW5jaW5nIGRldmljZSB0cmVlIG5vZGVzIGZyb20gYSBwcm9wZXJ0eSBhbGxv
+d3MgdG8gcGFzcyBhcmd1bWVudHMuCj4gPiBUaGlzIGlzIGZvciBleGFtcGxlIHVzZWQgZm9yIHJl
+ZmVyZW5jaW5nIGdwaW9zLiBUaGlzIGxvb2tzIGFzIGZvbGxvd3M6Cj4gPgo+ID4gICAgICAgZ3Bp
+b19jdHJsOiBncGlvLWNvbnRyb2xsZXIgewo+ID4gICAgICAgICAgICAgICAjZ3Bpby1jZWxscyA9
+IDwyPgo+ID4gICAgICAgICAgICAgICAuLi4KPiA+ICAgICAgIH0KPiA+Cj4gPiAgICAgICBzb21l
+b3RoZXJub2RlIHsKPiA+ICAgICAgICAgICAgICAgZ3Bpb3MgPSA8JmdwaW9fY3RybCA1IDAgJmdw
+aW9fY3RybCAzIDA+Owo+ID4gICAgICAgICAgICAgICAuLi4KPiA+ICAgICAgIH0KPiA+Cj4gPiBU
+byBrbm93IHRoZSBudW1iZXIgb2YgYXJndW1lbnRzIHRoaXMgbXVzdCBiZSBlaXRoZXIgZml4ZWQs
+IG9yIHRoZQo+ID4gcmVmZXJlbmNlZCBub2RlIGlzIGNoZWNrZWQgZm9yIGEgJGNlbGxzX25hbWUg
+KGhlcmU6ICIjZ3Bpby1jZWxscyIpCj4gPiBwcm9wZXJ0eSBhbmQgd2l0aCB0aGlzIGluZm9ybWF0
+aW9uIHRoZSBzdGFydCBvZiB0aGUgc2Vjb25kIHJlZmVyZW5jZSBjYW4KPiA+IGJlIGRldGVybWlu
+ZWQuCj4gPgo+ID4gQ3VycmVudGx5IHJlZ3VsYXRvcnMgYXJlIHJlZmVyZW5jZWQgd2l0aCBubyBh
+ZGRpdGlvbmFsIGFyZ3VtZW50cy4gVG8KPiA+IGFsbG93IHNvbWUgb3B0aW9uYWwgYXJndW1lbnRz
+IHdpdGhvdXQgaGF2aW5nIHRvIGNoYW5nZSBhbGwgcmVmZXJlbmNlZAo+ID4gbm9kZXMgdGhpcyBj
+aGFuZ2UgaW50cm9kdWNlcyBhIHdheSB0byBzcGVjaWZ5IGEgZGVmYXVsdCBjZWxsX2NvdW50LiBT
+bwo+ID4gd2hlbiBhIHBoYW5kbGUgaXMgcGFyc2VkIHdlIGNoZWNrIGZvciB0aGUgJGNlbGxzX25h
+bWUgcHJvcGVydHkgYW5kIHVzZQo+ID4gaXQgYXMgYmVmb3JlIGlmIHByZXNlbnQuIElmIGl0IGlz
+IG5vdCBwcmVzZW50IHdlIGZhbGwgYmFjayB0bwo+ID4gY2VsbHNfY291bnQgaWYgbm9uLW5lZ2F0
+aXZlIGFuZCBvbmx5IGZhaWwgaWYgY2VsbHNfY291bnQgaXMgc21hbGxlciB0aGFuCj4gPiB6ZXJv
+Lgo+ID4KPiA+IFNpZ25lZC1vZmYtYnk6IFV3ZSBLbGVpbmUtS8O2bmlnIDx1LmtsZWluZS1rb2Vu
+aWdAcGVuZ3V0cm9uaXguZGU+CgpUaGlzIGlzIG5vdyBjb21taXQgZTQyZWU2MTAxN2Y1OGNkOSAo
+Im9mOiBMZXQgb2ZfZm9yX2VhY2hfcGhhbmRsZSBmYWxsYmFjawp0byBub24tbmVnYXRpdmUgY2Vs
+bF9jb3VudCIpIGluIHJvYmgvZm9yLW5leHQsIHdoaWNoIGNhdXNlcyBhIGxvY2stdXAgd2hlbgpi
+b290aW5nIGEgc2htb2JpbGVfZGVmY29uZmlnIGtlcm5lbCBvbiByOGE3NzkxL2tvZWxzY2g6Cgpy
+Y3U6IElORk86IHJjdV9zY2hlZCBzZWxmLWRldGVjdGVkIHN0YWxsIG9uIENQVQpyY3U6ICAgICAw
+LS4uLi46ICgyMDk5IHRpY2tzIHRoaXMgR1ApIGlkbGU9NmZlLzEvMHg0MDAwMDAwMgpzb2Z0aXJx
+PTI5LzI5IGZxcz0xMDUwCiAodD0yMTAwIGppZmZpZXMgZz0tMTEzMSBxPTApCk5NSSBiYWNrdHJh
+Y2UgZm9yIGNwdSAwCkNQVTogMCBQSUQ6IDEgQ29tbTogc3dhcHBlci8wIE5vdCB0YWludGVkCjUu
+My4wLXJjMi1zaG1vYmlsZS0wMDA1MC1nZTQyZWU2MTAxN2Y1OGNkOSAjMzc2CkhhcmR3YXJlIG5h
+bWU6IEdlbmVyaWMgUi1DYXIgR2VuMiAoRmxhdHRlbmVkIERldmljZSBUcmVlKQpbPGMwMTBmOGFj
+Pl0gKHVud2luZF9iYWNrdHJhY2UpIGZyb20gWzxjMDEwYjYyMD5dIChzaG93X3N0YWNrKzB4MTAv
+MHgxNCkKWzxjMDEwYjYyMD5dIChzaG93X3N0YWNrKSBmcm9tIFs8YzA3M2QwMzg+XSAoZHVtcF9z
+dGFjaysweDdjLzB4OWMpCls8YzA3M2QwMzg+XSAoZHVtcF9zdGFjaykgZnJvbSBbPGMwNzQyZTgw
+Pl0gKG5taV9jcHVfYmFja3RyYWNlKzB4YTAvMHhiOCkKWzxjMDc0MmU4MD5dIChubWlfY3B1X2Jh
+Y2t0cmFjZSkgZnJvbSBbPGMwNzQyZjFjPl0KKG5taV90cmlnZ2VyX2NwdW1hc2tfYmFja3RyYWNl
+KzB4ODQvMHgxMTQpCls8YzA3NDJmMWM+XSAobm1pX3RyaWdnZXJfY3B1bWFza19iYWNrdHJhY2Up
+IGZyb20gWzxjMDE3ZDY4ND5dCihyY3VfZHVtcF9jcHVfc3RhY2tzKzB4YWMvMHhjOCkKWzxjMDE3
+ZDY4ND5dIChyY3VfZHVtcF9jcHVfc3RhY2tzKSBmcm9tIFs8YzAxN2E1OTg+XQoocmN1X3NjaGVk
+X2Nsb2NrX2lycSsweDJhYy8weDZiNCkKWzxjMDE3YTU5OD5dIChyY3Vfc2NoZWRfY2xvY2tfaXJx
+KSBmcm9tIFs8YzAxODM5ODA+XQoodXBkYXRlX3Byb2Nlc3NfdGltZXMrMHgzMC8weDVjKQpbPGMw
+MTgzOTgwPl0gKHVwZGF0ZV9wcm9jZXNzX3RpbWVzKSBmcm9tIFs8YzAxOTQxYTg+XQoodGlja19u
+b2h6X2hhbmRsZXIrMHhjYy8weDEyMCkKWzxjMDE5NDFhOD5dICh0aWNrX25vaHpfaGFuZGxlcikg
+ZnJvbSBbPGMwNWIxZDQwPl0KKGFyY2hfdGltZXJfaGFuZGxlcl92aXJ0KzB4MjgvMHgzMCkKWzxj
+MDViMWQ0MD5dIChhcmNoX3RpbWVyX2hhbmRsZXJfdmlydCkgZnJvbSBbPGMwMTZjOWUwPl0KKGhh
+bmRsZV9wZXJjcHVfZGV2aWRfaXJxKzB4ZTgvMHgyMWMpCls8YzAxNmM5ZTA+XSAoaGFuZGxlX3Bl
+cmNwdV9kZXZpZF9pcnEpIGZyb20gWzxjMDE2N2E4Yz5dCihnZW5lcmljX2hhbmRsZV9pcnErMHgx
+OC8weDI4KQpbPGMwMTY3YThjPl0gKGdlbmVyaWNfaGFuZGxlX2lycSkgZnJvbSBbPGMwMTY3YjNj
+Pl0KKF9faGFuZGxlX2RvbWFpbl9pcnErMHhhMC8weGI0KQpbPGMwMTY3YjNjPl0gKF9faGFuZGxl
+X2RvbWFpbl9pcnEpIGZyb20gWzxjMDM2NzNlYz5dIChnaWNfaGFuZGxlX2lycSsweDU4LzB4OTAp
+Cls8YzAzNjczZWM+XSAoZ2ljX2hhbmRsZV9pcnEpIGZyb20gWzxjMDEwMWE4Yz5dIChfX2lycV9z
+dmMrMHg2Yy8weDkwKQpFeGNlcHRpb24gc3RhY2soMHhlYjA4ZGQzMCB0byAweGViMDhkZDc4KQpk
+ZDIwOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjMGNjNzUxNCAyMDAwMDAx
+MyAwMDAwMDAwNSAwMDAwM2IyNwpkZDQwOiBlYjdjNDAyMCBjMGNjNzUwYyAwMDAwMDA1MSAwMDAw
+MDA1MSAyMDAwMDAxMyBjMGM2NmIwOCBlYjFjZGMwMCAwMDAwMDAxOApkZDYwOiAwMDAwMDAwMCBl
+YjA4ZGQ4MCBjMDVjMWEzOCBjMDc1NmMwMCAyMDAwMDAxMyBmZmZmZmZmZgpbPGMwMTAxYThjPl0g
+KF9faXJxX3N2YykgZnJvbSBbPGMwNzU2YzAwPl0KKF9yYXdfc3Bpbl91bmxvY2tfaXJxcmVzdG9y
+ZSsweDFjLzB4MjApCls8YzA3NTZjMDA+XSAoX3Jhd19zcGluX3VubG9ja19pcnFyZXN0b3JlKSBm
+cm9tIFs8YzA1YzFhMzg+XQoob2ZfZmluZF9ub2RlX2J5X3BoYW5kbGUrMHhjYy8weGYwKQpbPGMw
+NWMxYTM4Pl0gKG9mX2ZpbmRfbm9kZV9ieV9waGFuZGxlKSBmcm9tIFs8YzA1YzFiYjg+XQoob2Zf
+cGhhbmRsZV9pdGVyYXRvcl9uZXh0KzB4NjgvMHgxNzgpCls8YzA1YzFiYjg+XSAob2ZfcGhhbmRs
+ZV9pdGVyYXRvcl9uZXh0KSBmcm9tIFs8YzA1YzIyYmM+XQoob2ZfY291bnRfcGhhbmRsZV93aXRo
+X2FyZ3MrMHg1Yy8weDdjKQpbPGMwNWMyMmJjPl0gKG9mX2NvdW50X3BoYW5kbGVfd2l0aF9hcmdz
+KSBmcm9tIFs8YzA1M2ZjMzg+XQooaTJjX2RlbXV4X3BpbmN0cmxfcHJvYmUrMHgyNC8weDFmYykK
+WzxjMDUzZmMzOD5dIChpMmNfZGVtdXhfcGluY3RybF9wcm9iZSkgZnJvbSBbPGMwNDQ2M2M0Pl0K
+KHBsYXRmb3JtX2Rydl9wcm9iZSsweDQ4LzB4OTQpCls8YzA0NDYzYzQ+XSAocGxhdGZvcm1fZHJ2
+X3Byb2JlKSBmcm9tIFs8YzA0NDRhMjA+XSAocmVhbGx5X3Byb2JlKzB4MWYwLzB4MmI4KQpbPGMw
+NDQ0YTIwPl0gKHJlYWxseV9wcm9iZSkgZnJvbSBbPGMwNDQ0ZTY4Pl0gKGRyaXZlcl9wcm9iZV9k
+ZXZpY2UrMHgxNDAvMHgxNTgpCls8YzA0NDRlNjg+XSAoZHJpdmVyX3Byb2JlX2RldmljZSkgZnJv
+bSBbPGMwNDQ0ZmYwPl0KKGRldmljZV9kcml2ZXJfYXR0YWNoKzB4NDQvMHg1YykKWzxjMDQ0NGZm
+MD5dIChkZXZpY2VfZHJpdmVyX2F0dGFjaCkgZnJvbSBbPGMwNDQ1MGI0Pl0KKF9fZHJpdmVyX2F0
+dGFjaCsweGFjLzB4YjQpCls8YzA0NDUwYjQ+XSAoX19kcml2ZXJfYXR0YWNoKSBmcm9tIFs8YzA0
+NDMxNzg+XSAoYnVzX2Zvcl9lYWNoX2RldisweDY0LzB4YTApCls8YzA0NDMxNzg+XSAoYnVzX2Zv
+cl9lYWNoX2RldikgZnJvbSBbPGMwNDQzOGE4Pl0gKGJ1c19hZGRfZHJpdmVyKzB4MTQ4LzB4MWE4
+KQpbPGMwNDQzOGE4Pl0gKGJ1c19hZGRfZHJpdmVyKSBmcm9tIFs8YzA0NDVhZDA+XSAoZHJpdmVy
+X3JlZ2lzdGVyKzB4YWMvMHhmMCkKWzxjMDQ0NWFkMD5dIChkcml2ZXJfcmVnaXN0ZXIpIGZyb20g
+WzxjMGIwMTBiMD5dIChkb19vbmVfaW5pdGNhbGwrMHhhOC8weDFkNCkKWzxjMGIwMTBiMD5dIChk
+b19vbmVfaW5pdGNhbGwpIGZyb20gWzxjMGIwMTQ0OD5dCihrZXJuZWxfaW5pdF9mcmVlYWJsZSsw
+eDI2Yy8weDJjOCkKWzxjMGIwMTQ0OD5dIChrZXJuZWxfaW5pdF9mcmVlYWJsZSkgZnJvbSBbPGMw
+NzUxYzcwPl0gKGtlcm5lbF9pbml0KzB4OC8weDEwYykKWzxjMDc1MWM3MD5dIChrZXJuZWxfaW5p
+dCkgZnJvbSBbPGMwMTAxMGU4Pl0gKHJldF9mcm9tX2ZvcmsrMHgxNC8weDJjKQpFeGNlcHRpb24g
+c3RhY2soMHhlYjA4ZGZiMCB0byAweGViMDhkZmY4KQpkZmEwOiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMApkZmMw
+OiAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAw
+MDAwMDAwMCAwMDAwMDAwMApkZmUwOiAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAw
+MCAwMDAwMDAxMyAwMDAwMDAwMAoKUHJlc3VtYWJseSBpdCBsb29wcyBmb3JldmVyLCBkdWUgdG8g
+YSBjb252ZXJzaW9uIG9mIC0xIHRvIHVuc2lnbmVkCnNvbWV3aGVyZT8KCkdye29ldGplLGVldGlu
+Z31zLAoKICAgICAgICAgICAgICAgICAgICAgICAgR2VlcnQKCi0tIApHZWVydCBVeXR0ZXJob2V2
+ZW4gLS0gVGhlcmUncyBsb3RzIG9mIExpbnV4IGJleW9uZCBpYTMyIC0tIGdlZXJ0QGxpbnV4LW02
+OGsub3JnCgpJbiBwZXJzb25hbCBjb252ZXJzYXRpb25zIHdpdGggdGVjaG5pY2FsIHBlb3BsZSwg
+SSBjYWxsIG15c2VsZiBhIGhhY2tlci4gQnV0CndoZW4gSSdtIHRhbGtpbmcgdG8gam91cm5hbGlz
+dHMgSSBqdXN0IHNheSAicHJvZ3JhbW1lciIgb3Igc29tZXRoaW5nIGxpa2UgdGhhdC4KICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAtLSBMaW51cyBUb3J2YWxkcwoKX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGlu
+ZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmlu
+ZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
