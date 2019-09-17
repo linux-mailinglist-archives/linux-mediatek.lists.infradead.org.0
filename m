@@ -2,81 +2,122 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 316ACB412E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Sep 2019 21:36:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53ABAB493E
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 10:23:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	MIME-Version:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=2ucpxDDAsDE7eNKYgRqGREAg5uD5DwZEa5dzJCy8zSo=; b=Pan
-	6xY0GTCprPvIH21wLkWnojZDX6ErOQdGObt957Biw18aem+lVZzs/MPcVstTikiHYMzu+N34spMYO
-	vY7Yy77CYBV0mX8UaUJRyN5MMwzLnlzzQhy0unk7F6FhSnf29ImHZNBDbH4SCzzpX5g9PYfhZXMzt
-	bbFk1hoJjpX9QIlWrks86pnaqCIR1p/Il4y4SiUzq98ClV40FLpm8Np1vKa+NyDW2Fjfzg4Ndz6fy
-	ZpJATrHMBcbipWqBgjxcAuzqGLsTpH1m00BgiID2RU/yQ2IN8dG1y9lpMxOa9cwckkHgtqgDhTRV6
-	oIm1PFWSsUEG86LVwgvcC99RpvnVgZg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=h8JYv3VvoRjQyOxqjwVwWS+JSubl6UJZGYjPTZtTLGw=; b=H4PK5G1NCHz86k
+	WWfthDBhMJ2tY7oTaKee/VJoyld7DaJ33jbIhfVhTLD2MFGnnf3t5phNDvq/W517jPBN/gk011zKx
+	zMMyS6Utcsrhe25y1kLK05adUrmQKCjq7OqAGUciZVnbmsvqdF0DBbUS6gDWxrqRM4E+YyFlYJt5P
+	VPqgV6EUhlZkY4ti9FE8+/G3pamS47XGMVFgSUFC82Hu8ntREgWDfikw014mPgfJHKrzsitBgEzCR
+	qLmgHuU9JVmdJzJnmAjdZZM7Q7IBcCTadU1GzeDzE/Vi2iJ+2qJ5A0O5lE1+fBeQ7unZ1uuVTSZYh
+	RqBybo7NuTPhrdIhKKlQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9wnI-0008B5-PS; Mon, 16 Sep 2019 19:36:16 +0000
-Received: from mail-oi1-x236.google.com ([2607:f8b0:4864:20::236])
+	id 1iA8lt-0000Rq-64; Tue, 17 Sep 2019 08:23:37 +0000
+Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9wnA-0008AS-Cq
- for linux-mediatek@lists.infradead.org; Mon, 16 Sep 2019 19:36:14 +0000
-Received: by mail-oi1-x236.google.com with SMTP id w17so774316oiw.8
- for <linux-mediatek@lists.infradead.org>; Mon, 16 Sep 2019 12:36:05 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=k9Yn/KbsDbKmxuENfJgB2/OqFBhegDNzN/DYraKnGzs=;
- b=EYq9/QKdcab//VCegqruDlWQDbDHn08Y4sljnSs0yLZxf4AbhDcZy61WN2pYkjx7KB
- ufQ3XiTO5ET/j4VQOFb4wJc2p0SRd/iqt/zQwfOuJGdFXddTrokM3HtFd/ED8aUsqvMV
- 6bEz9QDjihtOLkDYm5wvhucWTt3dwmVIuM7maPRZ2ngFVcKCMwwm1aBR0eOmdAglCDkO
- i3HLxh7ZX7pX6TjGB3w8vVWNxfRff2z6NQ5X0RzuKRkHgya6BVT57Nj5XbJm/NyOioxy
- DZ7D7AHB5X4lze8SKf5yxzioMrI88R/4Fq/y75gOWYxB2xrx4m45n3IZhAwH6MX/Jj80
- +MgA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
- bh=k9Yn/KbsDbKmxuENfJgB2/OqFBhegDNzN/DYraKnGzs=;
- b=ftW9WmJGAYGS4ZjMxcfdoukf88WmJNLYo77x1to+5HM0gtooFEXd5bKIDXUJx6jgK6
- QhFm97w2/yxOn6cSlUy+hYbjTuarkZ8GTg8mmisVmVCeRuiK+5E+J4PR4gV7hO/C8Wcw
- h19enmjJY8X5/fr5PhEE61JtFKm5yfS5H7f1BaZVUJkzA0USjUWiemXo+6q5+6c2tE0S
- tWVn258bM7gj1O6zXYj42OPuX26dEmmB0dbjxaGeHvH8ZwcTzmmVipT/Qi9AQzj6CfJ5
- sIidYXLjZSpuf/l4+1V2LQX6NBmk6OF4SOT6yM6XjfifUhOSUriT7hYfBAn0XDCswoxL
- QWnA==
-X-Gm-Message-State: APjAAAU/125KBWx/kFI1S/iCag+DnepYsZZC2Z9Tk2vMpqhfsFOzLZ5m
- J0kz9xjxU5jehvmE8FSc5Phl7H9DIgCCAVvd9Y0Wph4G
-X-Google-Smtp-Source: APXvYqzPloXklLHBNuFqsCo9LtVSXWpACvlNCMq9gswLx7KfswDN3yVoocs+kO2cPVqvq44hiN3D9RMAF4+IFC+tVJ8=
-X-Received: by 2002:a05:6808:a87:: with SMTP id q7mr791685oij.40.1568662564532; 
- Mon, 16 Sep 2019 12:36:04 -0700 (PDT)
+ id 1iA8lW-0000Ek-25; Tue, 17 Sep 2019 08:23:15 +0000
+X-Virus-Scanned: by amavisd-new at test-mx.suse.de
+Received: from relay2.suse.de (unknown [195.135.220.254])
+ by mx1.suse.de (Postfix) with ESMTP id 2049BAE84;
+ Tue, 17 Sep 2019 08:23:12 +0000 (UTC)
+Subject: Re: [PATCH v3] mm/kasan: dump alloc and free stack for page allocator
+To: Andrey Ryabinin <aryabinin@virtuozzo.com>,
+ Walter Wu <walter-zh.wu@mediatek.com>
+References: <20190911083921.4158-1-walter-zh.wu@mediatek.com>
+ <5E358F4B-552C-4542-9655-E01C7B754F14@lca.pw>
+ <c4d2518f-4813-c941-6f47-73897f420517@suse.cz>
+ <1568297308.19040.5.camel@mtksdccf07>
+ <613f9f23-c7f0-871f-fe13-930c35ef3105@suse.cz>
+ <79fede05-735b-8477-c273-f34db93fd72b@virtuozzo.com>
+ <6d58ce86-b2a4-40af-bf40-c604b457d086@suse.cz>
+ <4e76e7ce-1d61-524a-622b-663c01d19707@virtuozzo.com>
+From: Vlastimil Babka <vbabka@suse.cz>
+Openpgp: preference=signencrypt
+Autocrypt: addr=vbabka@suse.cz; prefer-encrypt=mutual; keydata=
+ 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
+Message-ID: <a5103bf0-245e-5894-0486-3e92fa830e41@suse.cz>
+Date: Tue, 17 Sep 2019 10:19:15 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-From: Adam Boardman <adamboardman@gmail.com>
-Date: Mon, 16 Sep 2019 20:35:53 +0100
-Message-ID: <CABvHX8jSL=UrZ8iVXPOmHEMOm7fkNCim3P0hepOcQB=hP2pGyA@mail.gmail.com>
-Subject: Mainline kernel for Gemini PDA (MT6797*)
-To: linux-mediatek@lists.infradead.org
+In-Reply-To: <4e76e7ce-1d61-524a-622b-663c01d19707@virtuozzo.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190916_123608_462954_03521F15 
-X-CRM114-Status: GOOD (  17.67  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190917_012314_396400_BCDC3851 
+X-CRM114-Status: GOOD (  13.99  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:236 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [195.135.220.15 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (adamboardman[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,98 +129,83 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: wsd_upstream@mediatek.com, Arnd Bergmann <arnd@arndb.de>,
+ linux-mm@kvack.org, Andrey Konovalov <andreyknvl@google.com>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ kasan-dev@googlegroups.com, Martin Schwidefsky <schwidefsky@de.ibm.com>,
+ Alexander Potapenko <glider@google.com>, linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Qian Cai <cai@lca.pw>,
+ Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-I'm new to kernel work and I've started working on trying to get a
-mainline kernel build working for the Gemini PDA (X25/X27 - MT6797*).
+On 9/16/19 5:57 PM, Andrey Ryabinin wrote:
+>> --- a/mm/page_alloc.c
+>> +++ b/mm/page_alloc.c
+>> @@ -710,8 +710,12 @@ static int __init early_debug_pagealloc(char *buf)
+>>  	if (kstrtobool(buf, &enable))
+>>  		return -EINVAL;
+>>  
+>> -	if (enable)
+>> +	if (enable) {
+>>  		static_branch_enable(&_debug_pagealloc_enabled);
+>> +#ifdef CONFIG_PAGE_OWNER
+>> +		page_owner_free_stack_disabled = false;
+> 
+> I think this won't work with CONFIG_DEBUG_PAGEALLOC_ENABLE_DEFAULT=y
 
-I've pulled in a recent mainline[1] and then added Jasper's fixes[2]
-and Jimmy-Yj's[3], then tried turning on Manivannan's[4] pinctrl
-driver and adding a couple of simple device drivers (vibrator & led
-controller). Neither work as not enough other things are ported or
-things on the mainline have changed in incompatible ways.
+Good point, thanks.
 
-The mt6397_probe (for MT6351) fails at the dev_get_regmap stage. Which
-looks to be related to the mt6797 picking Paris (pinctrl v2) for this
-device which has none of the regmap code that only features in Moore?
+>> +#endif
+>> +	}
+>>  
+>>  	return 0;
+>>  }
+>> diff --git a/mm/page_owner.c b/mm/page_owner.c
+>> index dee931184788..b589bfbc4795 100644
+>> --- a/mm/page_owner.c
+>> +++ b/mm/page_owner.c
+>> @@ -24,13 +24,15 @@ struct page_owner {
+>>  	short last_migrate_reason;
+>>  	gfp_t gfp_mask;
+>>  	depot_stack_handle_t handle;
+>> -#ifdef CONFIG_DEBUG_PAGEALLOC
+>> +#ifdef CONFIG_PAGE_OWNER_FREE_STACK
+>>  	depot_stack_handle_t free_handle;
+>>  #endif
+>>  };
+>>  
+>>  static bool page_owner_disabled = true;
+>> +bool page_owner_free_stack_disabled = true;
+>>  DEFINE_STATIC_KEY_FALSE(page_owner_inited);
+>> +static DEFINE_STATIC_KEY_FALSE(page_owner_free_stack);
+>>  
+>>  static depot_stack_handle_t dummy_handle;
+>>  static depot_stack_handle_t failure_handle;
+>> @@ -46,6 +48,9 @@ static int __init early_page_owner_param(char *buf)
+>>  	if (strcmp(buf, "on") == 0)
+>>  		page_owner_disabled = false;
+>>  
+>> +	if (!page_owner_disabled && IS_ENABLED(CONFIG_KASAN))
+> 
+> I'd rather keep all logic in one place, i.e. "if (!page_owner_disabled && (IS_ENABLED(CONFIG_KASAN) || debug_pagealloc_enabled())"
+> With this no changes in early_debug_pagealloc() required and CONFIG_DEBUG_PAGEALLOC_ENABLE_DEFAULT=y should also work correctly.
 
-The current state is that I can boot to a BusyBox shell over a
-USB-UART cable[5], mount the debugfs etc. Best not to stay there too
-long as the chip soon overheats, 20-30 mins is enough such that after
-a reboot to a working 3.18 kernel it will only mount the file system
-read-only due to thermal overload, give it a few mins to cool, another
-reboot and its all good again.
+In this function it would not work if the debug_pagealloc param gets
+processed later than page_owner, but should be doable in
+init_page_owner(), I'll try, thanks.
 
-For the over heating I suspect the fact that Jasper commented out the
-cpu-idle-states could be related, though there are so many parts to
-these cpus I wouldn't be certain. Putting the idle states back results
-in a booting kernel to the point that the initramfs calls 'udevadm
-settle' and freezes there or in the subsequent call to the busybox
-shell.
+> 
+>> +		page_owner_free_stack_disabled = false;
+>> +
+>>  	return 0;
+>>  }
+>>  early_param("page_owner", early_page_owner_param);
+>  
+> 
 
-I might need to investigate extra devices which I see no mention of so
-far in the gemini pda dts[6]. So any advice on the right order or any
-examples for other similar devices would be great. Also how to
-test/verify each one is working correctly? I'm not requesting the full
-list ordered, just the top 5-10 items that'll get me to a stable state
-where the device can live without likelihood of damage. I can than
-pick off the others as I choose, quite a lot are obvious from the
-names. The power management+thermal side strikes me as a good first
-focus?
-
-Whats the mainline status for battery and charge support, the 3.18 kernel has:
-MTK_SMART_BATTERY, MTK_HAFG_20 and MTK_PUMP_EXPRESS_PLUS_SUPPORT
-Anyone working on their equivalent?
-
-For the i2c busses to have a chance to work I would also need to
-define: mtk_i2c_compatible mt6797_compat in
-drivers/i2c/busses/i2c-mt65xx.c but I've no idea how to extract the
-needed values from the 3.18 source as the code is too different to
-easily know what to look for. Indications from pinctrl-mt8183.txt
-suggest that I might also need to add i2c0_pins_a style references to
-pio: pinctrl but the 8183 device appears to have no i2c just spi, and
-then pinctrl-mt6797.txt has no mention of i2c, is that the case? again
-I'll need a pointer in the direction of figuring out the values.
-
-I have only publicly available data sheets so far[7], and the original
-kernel[8].
-
-I've left in Jaspers cmdline force to limit it to one cpu, I don't
-know if this is necessary, usually this is overridden by lk to limit
-it to 5. Also of possible interest I've put in Jaspers mt6797 debugfs
-and whilst some bits of it now work I've no great notion of how to
-make use of it.
-
-Any help greatly appreciated,
-
-Adam.
-
-PS: The Cosmo Communicator has the P70 so this will all need doing
-again for the MT6771, anyone started on that?
-
---
-
-[1] - https://github.com/gemian/linux (working branch)
-[2] - https://github.com/Jasu/gemini-pda-buildroot (2/3 patches mainlined)
-[3] - https://patchwork.kernel.org/patch/9889457/ (and related)
-[4] - https://patchwork.kernel.org/patch/10672803/ (already in mainline)
-[5] - https://www.omegamoon.com/blog/index.php?entry=entry180626-210224
-[6] - Long list of items from 3.18 dts as yet unknown to mainline -
-power_gs, toprgu, sleep, mcucfg, rt5735, pericfg, dramc, gpio, apxgpt,
-rsvd, hacc, fhctl, devapc, ddrphy, bat_meter, topmisc, mdcldma,
-aes_top, mcumixed, mcufhctl, c2kmisc, modem_temp, scpdvfs, emi,
-sys_cirq, m4u, efusec, gce, cqdma, mipi, gic/gic1, pwm, spi,
-therm_ctrl, eem_fsm, btif, dvfsp, itrx, audiosys, usb, xhci, mjcsys,
-mfgsys, mali, dispsys, mdp, disp, smi, dip, dpe, consys, wifi, camsys,
-vcorefs, pmic_clock_buffer_ctrl, ext_buck, chr, fusb301a, sii9022,
-sm100, accdet, swtp, battery, gps, gsensor, humidity, gyro, hall,
-switch, fpc1145, als, gpio_usage_mapping, cap_touch, solomon_touch,
-aeon_gpio
-[7] - https://github.com/gemian/gemian/wiki/HardwareHacking
-[8] - https://github.com/gemian/gemini-linux-kernel-3.18
 
 _______________________________________________
 Linux-mediatek mailing list
