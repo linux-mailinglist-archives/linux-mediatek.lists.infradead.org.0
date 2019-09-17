@@ -2,76 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7CD80B4AEB
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 11:40:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CEEC7B4BB2
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 12:14:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vol1M/g6ZfVxsx3HX/xsGwCdew56YuaM3JgSdtPSdP0=; b=Q6UGbRsjaVu3ts
-	PUwwgNHWtyjRi/tgkpl640QDAlTBXs4eRJJGxMGsKZYyGTqRg4hck2y7uozH0j8lyAm4NvfJWuZql
-	WceU5A/L2Z3RQ3Wl3xQUscEmdvIJ5gwOyvviAquLqIzQBJiopEh7Nk7z/MSEJFU5T8WIUZbKvIkTV
-	o4G2IRRBdS4JAYw154TVYBgn2Ie+PrLRHbAgi8C6ti89Wt8aJZUiuQCAj9UQSLL/Po6DJvEklXEkH
-	0NLeieNQROAWD6IrkFhL9VkBjOxyGRpmrq/NWIxDZ3TaBOLcHLzcG4yG5TeZYQwXRZdKuZbEz8Hdg
-	QEJNdRPvDFEDt6kCGS0Q==;
+	List-Owner; bh=DmV9RnYuJvOUCKO5El5WCJcBuYv6eJRW9GFOSpyUaQU=; b=c2m3Tuj4YPa+oK
+	A9RXjiTc6Ke0jgjEn0xK1YDljzTZsH5sGal+Tn6ghVjj0dUPROQzVVEl0g2YgOyo4asd5R4gfO5R9
+	4RD2Xms8TjRmQ9rkdNlUdx26YLNsURJ8QdrN2oLyKTb2Yv4+GiE8XJtCLlJxDYgln/OnKtwBIHAb+
+	8oJ5SLwvyh7NwGG0ORFZDPn2HxAAy0azPXNjczCU73YzemIM03bCnEDEyESEdcab0iQurvmDOvBof
+	kiw+tapSPs0XcKpERQn8wL2Yb44DGkIyu7CGkTZX/S4T+IZB2+P9JKd7Ft6JtsVFJ5cjcJZp6uO9m
+	fgRiEk/UlJaplto0r39g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iA9yV-0006q8-8X; Tue, 17 Sep 2019 09:40:43 +0000
-Received: from mail-oi1-f194.google.com ([209.85.167.194])
+	id 1iAAUd-0004nZ-3Y; Tue, 17 Sep 2019 10:13:55 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iA9yR-0006pG-0H; Tue, 17 Sep 2019 09:40:40 +0000
-Received: by mail-oi1-f194.google.com with SMTP id 83so777333oii.1;
- Tue, 17 Sep 2019 02:40:38 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=uCmhvMwVcStuHY/v3SQn/MtQSiOlz7f/42X793jLSYQ=;
- b=iG7EglW46DfPUdOdl+YdOWNZCGF28fEaUv4HawSH7LJF5UPWOnRkQkppxbECziggge
- lkhTEJYf/u9A4g0B85zemCgVP2miu4w5zcC6US3Z8QbNoLvLViUCDgUybkYFq6tA62lG
- 59+ryOh2op1DI9IKIzXzig21DFADodMPSSz+30fk5W3FJAfHa6bHlaIXEazXP7+6gD5t
- ouiDoDLZ5QyEOrbPRxoQSWZ3zvUrG4Mj5fzWGO2y2XTLNN3Hut6ARBM+3ky7A28xyCy6
- l+Xq56hTVfPfZ9Ws2QJvYGjVlWsPLp/xDln8l18dEnonGkkufQkh6qIpLPk8mT+ABrwz
- RzYg==
-X-Gm-Message-State: APjAAAUY3PZUO5WpEwd7wSSKoKurFbkrEmOSK5sYoyvfIswqqwX/vgJL
- svZsUTO7UkksltM04K5Z6MJkd9IJQpDZ7U3J7fE=
-X-Google-Smtp-Source: APXvYqy9QAOEl+I70QDj9XZms1oF+JXpX7r5yoYeHsSGg7Usn7nSuv+ezrLNvK9aaeHKMGjyGfXMvQQYURv3Ven7TAk=
-X-Received: by 2002:aca:cdc7:: with SMTP id d190mr2793514oig.148.1568713237546; 
- Tue, 17 Sep 2019 02:40:37 -0700 (PDT)
-MIME-Version: 1.0
+ id 1iAATw-0004Zu-Pr
+ for linux-mediatek@lists.infradead.org; Tue, 17 Sep 2019 10:13:14 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAATo-0001d0-WF; Tue, 17 Sep 2019 12:13:05 +0200
+Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAATn-00039w-53; Tue, 17 Sep 2019 12:13:03 +0200
+Date: Tue, 17 Sep 2019 12:13:03 +0200
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
+To: Geert Uytterhoeven <geert@linux-m68k.org>
+Subject: Re: [PATCH v1 2/2] of: Let of_for_each_phandle fallback to
+ non-negative cell_count
+Message-ID: <20190917101303.t5otztdus7y3ayau@pengutronix.de>
 References: <20190824132846.8589-1-u.kleine-koenig@pengutronix.de>
  <20190824132846.8589-2-u.kleine-koenig@pengutronix.de>
  <20190913215809.GA11833@bogus>
-In-Reply-To: <20190913215809.GA11833@bogus>
-From: Geert Uytterhoeven <geert@linux-m68k.org>
-Date: Tue, 17 Sep 2019 11:40:25 +0200
-Message-ID: <CAMuHMdV+pwoAA0zH_vQf2nKqzrgHP8rcMStyJbnuu2qviFC_qg@mail.gmail.com>
-Subject: Re: [PATCH v1 2/2] of: Let of_for_each_phandle fallback to
- non-negative cell_count
-To: Rob Herring <robh@kernel.org>,
- =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>
+ <CAMuHMdV+pwoAA0zH_vQf2nKqzrgHP8rcMStyJbnuu2qviFC_qg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <CAMuHMdV+pwoAA0zH_vQf2nKqzrgHP8rcMStyJbnuu2qviFC_qg@mail.gmail.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_024039_049433_9A51B89B 
-X-CRM114-Status: GOOD (  15.60  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20190917_031313_280699_66F2CFB4 
+X-CRM114-Status: GOOD (  22.74  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.194 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.194 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (geert.uytterhoeven[at]gmail.com)
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,7 +71,8 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+Cc: Rob Herring <robh@kernel.org>,
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
  <devicetree@vger.kernel.org>, Frank Rowand <frowand.list@gmail.com>,
  Joerg Roedel <joro@8bytes.org>,
  Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
@@ -95,106 +84,179 @@ Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
  Matthias Brugger <matthias.bgg@gmail.com>, Will Deacon <will@kernel.org>,
  Linux ARM <linux-arm-kernel@lists.infradead.org>,
  Robin Murphy <robin.murphy@arm.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgUm9iLCBVd2UsCgpPbiBGcmksIFNlcCAxMywgMjAxOSBhdCAxMTo1OCBQTSBSb2IgSGVycmlu
-ZyA8cm9iaEBrZXJuZWwub3JnPiB3cm90ZToKPiBPbiBTYXQsIDI0IEF1ZyAyMDE5IDE1OjI4OjQ2
-ICswMjAwLCA9P1VURi04P3E/VXdlPTIwS2xlaW5lLUs9QzM9QjZuaWc/PSAgICAgICAgICB3cm90
-ZToKPiA+IFJlZmVyZW5jaW5nIGRldmljZSB0cmVlIG5vZGVzIGZyb20gYSBwcm9wZXJ0eSBhbGxv
-d3MgdG8gcGFzcyBhcmd1bWVudHMuCj4gPiBUaGlzIGlzIGZvciBleGFtcGxlIHVzZWQgZm9yIHJl
-ZmVyZW5jaW5nIGdwaW9zLiBUaGlzIGxvb2tzIGFzIGZvbGxvd3M6Cj4gPgo+ID4gICAgICAgZ3Bp
-b19jdHJsOiBncGlvLWNvbnRyb2xsZXIgewo+ID4gICAgICAgICAgICAgICAjZ3Bpby1jZWxscyA9
-IDwyPgo+ID4gICAgICAgICAgICAgICAuLi4KPiA+ICAgICAgIH0KPiA+Cj4gPiAgICAgICBzb21l
-b3RoZXJub2RlIHsKPiA+ICAgICAgICAgICAgICAgZ3Bpb3MgPSA8JmdwaW9fY3RybCA1IDAgJmdw
-aW9fY3RybCAzIDA+Owo+ID4gICAgICAgICAgICAgICAuLi4KPiA+ICAgICAgIH0KPiA+Cj4gPiBU
-byBrbm93IHRoZSBudW1iZXIgb2YgYXJndW1lbnRzIHRoaXMgbXVzdCBiZSBlaXRoZXIgZml4ZWQs
-IG9yIHRoZQo+ID4gcmVmZXJlbmNlZCBub2RlIGlzIGNoZWNrZWQgZm9yIGEgJGNlbGxzX25hbWUg
-KGhlcmU6ICIjZ3Bpby1jZWxscyIpCj4gPiBwcm9wZXJ0eSBhbmQgd2l0aCB0aGlzIGluZm9ybWF0
-aW9uIHRoZSBzdGFydCBvZiB0aGUgc2Vjb25kIHJlZmVyZW5jZSBjYW4KPiA+IGJlIGRldGVybWlu
-ZWQuCj4gPgo+ID4gQ3VycmVudGx5IHJlZ3VsYXRvcnMgYXJlIHJlZmVyZW5jZWQgd2l0aCBubyBh
-ZGRpdGlvbmFsIGFyZ3VtZW50cy4gVG8KPiA+IGFsbG93IHNvbWUgb3B0aW9uYWwgYXJndW1lbnRz
-IHdpdGhvdXQgaGF2aW5nIHRvIGNoYW5nZSBhbGwgcmVmZXJlbmNlZAo+ID4gbm9kZXMgdGhpcyBj
-aGFuZ2UgaW50cm9kdWNlcyBhIHdheSB0byBzcGVjaWZ5IGEgZGVmYXVsdCBjZWxsX2NvdW50LiBT
-bwo+ID4gd2hlbiBhIHBoYW5kbGUgaXMgcGFyc2VkIHdlIGNoZWNrIGZvciB0aGUgJGNlbGxzX25h
-bWUgcHJvcGVydHkgYW5kIHVzZQo+ID4gaXQgYXMgYmVmb3JlIGlmIHByZXNlbnQuIElmIGl0IGlz
-IG5vdCBwcmVzZW50IHdlIGZhbGwgYmFjayB0bwo+ID4gY2VsbHNfY291bnQgaWYgbm9uLW5lZ2F0
-aXZlIGFuZCBvbmx5IGZhaWwgaWYgY2VsbHNfY291bnQgaXMgc21hbGxlciB0aGFuCj4gPiB6ZXJv
-Lgo+ID4KPiA+IFNpZ25lZC1vZmYtYnk6IFV3ZSBLbGVpbmUtS8O2bmlnIDx1LmtsZWluZS1rb2Vu
-aWdAcGVuZ3V0cm9uaXguZGU+CgpUaGlzIGlzIG5vdyBjb21taXQgZTQyZWU2MTAxN2Y1OGNkOSAo
-Im9mOiBMZXQgb2ZfZm9yX2VhY2hfcGhhbmRsZSBmYWxsYmFjawp0byBub24tbmVnYXRpdmUgY2Vs
-bF9jb3VudCIpIGluIHJvYmgvZm9yLW5leHQsIHdoaWNoIGNhdXNlcyBhIGxvY2stdXAgd2hlbgpi
-b290aW5nIGEgc2htb2JpbGVfZGVmY29uZmlnIGtlcm5lbCBvbiByOGE3NzkxL2tvZWxzY2g6Cgpy
-Y3U6IElORk86IHJjdV9zY2hlZCBzZWxmLWRldGVjdGVkIHN0YWxsIG9uIENQVQpyY3U6ICAgICAw
-LS4uLi46ICgyMDk5IHRpY2tzIHRoaXMgR1ApIGlkbGU9NmZlLzEvMHg0MDAwMDAwMgpzb2Z0aXJx
-PTI5LzI5IGZxcz0xMDUwCiAodD0yMTAwIGppZmZpZXMgZz0tMTEzMSBxPTApCk5NSSBiYWNrdHJh
-Y2UgZm9yIGNwdSAwCkNQVTogMCBQSUQ6IDEgQ29tbTogc3dhcHBlci8wIE5vdCB0YWludGVkCjUu
-My4wLXJjMi1zaG1vYmlsZS0wMDA1MC1nZTQyZWU2MTAxN2Y1OGNkOSAjMzc2CkhhcmR3YXJlIG5h
-bWU6IEdlbmVyaWMgUi1DYXIgR2VuMiAoRmxhdHRlbmVkIERldmljZSBUcmVlKQpbPGMwMTBmOGFj
-Pl0gKHVud2luZF9iYWNrdHJhY2UpIGZyb20gWzxjMDEwYjYyMD5dIChzaG93X3N0YWNrKzB4MTAv
-MHgxNCkKWzxjMDEwYjYyMD5dIChzaG93X3N0YWNrKSBmcm9tIFs8YzA3M2QwMzg+XSAoZHVtcF9z
-dGFjaysweDdjLzB4OWMpCls8YzA3M2QwMzg+XSAoZHVtcF9zdGFjaykgZnJvbSBbPGMwNzQyZTgw
-Pl0gKG5taV9jcHVfYmFja3RyYWNlKzB4YTAvMHhiOCkKWzxjMDc0MmU4MD5dIChubWlfY3B1X2Jh
-Y2t0cmFjZSkgZnJvbSBbPGMwNzQyZjFjPl0KKG5taV90cmlnZ2VyX2NwdW1hc2tfYmFja3RyYWNl
-KzB4ODQvMHgxMTQpCls8YzA3NDJmMWM+XSAobm1pX3RyaWdnZXJfY3B1bWFza19iYWNrdHJhY2Up
-IGZyb20gWzxjMDE3ZDY4ND5dCihyY3VfZHVtcF9jcHVfc3RhY2tzKzB4YWMvMHhjOCkKWzxjMDE3
-ZDY4ND5dIChyY3VfZHVtcF9jcHVfc3RhY2tzKSBmcm9tIFs8YzAxN2E1OTg+XQoocmN1X3NjaGVk
-X2Nsb2NrX2lycSsweDJhYy8weDZiNCkKWzxjMDE3YTU5OD5dIChyY3Vfc2NoZWRfY2xvY2tfaXJx
-KSBmcm9tIFs8YzAxODM5ODA+XQoodXBkYXRlX3Byb2Nlc3NfdGltZXMrMHgzMC8weDVjKQpbPGMw
-MTgzOTgwPl0gKHVwZGF0ZV9wcm9jZXNzX3RpbWVzKSBmcm9tIFs8YzAxOTQxYTg+XQoodGlja19u
-b2h6X2hhbmRsZXIrMHhjYy8weDEyMCkKWzxjMDE5NDFhOD5dICh0aWNrX25vaHpfaGFuZGxlcikg
-ZnJvbSBbPGMwNWIxZDQwPl0KKGFyY2hfdGltZXJfaGFuZGxlcl92aXJ0KzB4MjgvMHgzMCkKWzxj
-MDViMWQ0MD5dIChhcmNoX3RpbWVyX2hhbmRsZXJfdmlydCkgZnJvbSBbPGMwMTZjOWUwPl0KKGhh
-bmRsZV9wZXJjcHVfZGV2aWRfaXJxKzB4ZTgvMHgyMWMpCls8YzAxNmM5ZTA+XSAoaGFuZGxlX3Bl
-cmNwdV9kZXZpZF9pcnEpIGZyb20gWzxjMDE2N2E4Yz5dCihnZW5lcmljX2hhbmRsZV9pcnErMHgx
-OC8weDI4KQpbPGMwMTY3YThjPl0gKGdlbmVyaWNfaGFuZGxlX2lycSkgZnJvbSBbPGMwMTY3YjNj
-Pl0KKF9faGFuZGxlX2RvbWFpbl9pcnErMHhhMC8weGI0KQpbPGMwMTY3YjNjPl0gKF9faGFuZGxl
-X2RvbWFpbl9pcnEpIGZyb20gWzxjMDM2NzNlYz5dIChnaWNfaGFuZGxlX2lycSsweDU4LzB4OTAp
-Cls8YzAzNjczZWM+XSAoZ2ljX2hhbmRsZV9pcnEpIGZyb20gWzxjMDEwMWE4Yz5dIChfX2lycV9z
-dmMrMHg2Yy8weDkwKQpFeGNlcHRpb24gc3RhY2soMHhlYjA4ZGQzMCB0byAweGViMDhkZDc4KQpk
-ZDIwOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjMGNjNzUxNCAyMDAwMDAx
-MyAwMDAwMDAwNSAwMDAwM2IyNwpkZDQwOiBlYjdjNDAyMCBjMGNjNzUwYyAwMDAwMDA1MSAwMDAw
-MDA1MSAyMDAwMDAxMyBjMGM2NmIwOCBlYjFjZGMwMCAwMDAwMDAxOApkZDYwOiAwMDAwMDAwMCBl
-YjA4ZGQ4MCBjMDVjMWEzOCBjMDc1NmMwMCAyMDAwMDAxMyBmZmZmZmZmZgpbPGMwMTAxYThjPl0g
-KF9faXJxX3N2YykgZnJvbSBbPGMwNzU2YzAwPl0KKF9yYXdfc3Bpbl91bmxvY2tfaXJxcmVzdG9y
-ZSsweDFjLzB4MjApCls8YzA3NTZjMDA+XSAoX3Jhd19zcGluX3VubG9ja19pcnFyZXN0b3JlKSBm
-cm9tIFs8YzA1YzFhMzg+XQoob2ZfZmluZF9ub2RlX2J5X3BoYW5kbGUrMHhjYy8weGYwKQpbPGMw
-NWMxYTM4Pl0gKG9mX2ZpbmRfbm9kZV9ieV9waGFuZGxlKSBmcm9tIFs8YzA1YzFiYjg+XQoob2Zf
-cGhhbmRsZV9pdGVyYXRvcl9uZXh0KzB4NjgvMHgxNzgpCls8YzA1YzFiYjg+XSAob2ZfcGhhbmRs
-ZV9pdGVyYXRvcl9uZXh0KSBmcm9tIFs8YzA1YzIyYmM+XQoob2ZfY291bnRfcGhhbmRsZV93aXRo
-X2FyZ3MrMHg1Yy8weDdjKQpbPGMwNWMyMmJjPl0gKG9mX2NvdW50X3BoYW5kbGVfd2l0aF9hcmdz
-KSBmcm9tIFs8YzA1M2ZjMzg+XQooaTJjX2RlbXV4X3BpbmN0cmxfcHJvYmUrMHgyNC8weDFmYykK
-WzxjMDUzZmMzOD5dIChpMmNfZGVtdXhfcGluY3RybF9wcm9iZSkgZnJvbSBbPGMwNDQ2M2M0Pl0K
-KHBsYXRmb3JtX2Rydl9wcm9iZSsweDQ4LzB4OTQpCls8YzA0NDYzYzQ+XSAocGxhdGZvcm1fZHJ2
-X3Byb2JlKSBmcm9tIFs8YzA0NDRhMjA+XSAocmVhbGx5X3Byb2JlKzB4MWYwLzB4MmI4KQpbPGMw
-NDQ0YTIwPl0gKHJlYWxseV9wcm9iZSkgZnJvbSBbPGMwNDQ0ZTY4Pl0gKGRyaXZlcl9wcm9iZV9k
-ZXZpY2UrMHgxNDAvMHgxNTgpCls8YzA0NDRlNjg+XSAoZHJpdmVyX3Byb2JlX2RldmljZSkgZnJv
-bSBbPGMwNDQ0ZmYwPl0KKGRldmljZV9kcml2ZXJfYXR0YWNoKzB4NDQvMHg1YykKWzxjMDQ0NGZm
-MD5dIChkZXZpY2VfZHJpdmVyX2F0dGFjaCkgZnJvbSBbPGMwNDQ1MGI0Pl0KKF9fZHJpdmVyX2F0
-dGFjaCsweGFjLzB4YjQpCls8YzA0NDUwYjQ+XSAoX19kcml2ZXJfYXR0YWNoKSBmcm9tIFs8YzA0
-NDMxNzg+XSAoYnVzX2Zvcl9lYWNoX2RldisweDY0LzB4YTApCls8YzA0NDMxNzg+XSAoYnVzX2Zv
-cl9lYWNoX2RldikgZnJvbSBbPGMwNDQzOGE4Pl0gKGJ1c19hZGRfZHJpdmVyKzB4MTQ4LzB4MWE4
-KQpbPGMwNDQzOGE4Pl0gKGJ1c19hZGRfZHJpdmVyKSBmcm9tIFs8YzA0NDVhZDA+XSAoZHJpdmVy
-X3JlZ2lzdGVyKzB4YWMvMHhmMCkKWzxjMDQ0NWFkMD5dIChkcml2ZXJfcmVnaXN0ZXIpIGZyb20g
-WzxjMGIwMTBiMD5dIChkb19vbmVfaW5pdGNhbGwrMHhhOC8weDFkNCkKWzxjMGIwMTBiMD5dIChk
-b19vbmVfaW5pdGNhbGwpIGZyb20gWzxjMGIwMTQ0OD5dCihrZXJuZWxfaW5pdF9mcmVlYWJsZSsw
-eDI2Yy8weDJjOCkKWzxjMGIwMTQ0OD5dIChrZXJuZWxfaW5pdF9mcmVlYWJsZSkgZnJvbSBbPGMw
-NzUxYzcwPl0gKGtlcm5lbF9pbml0KzB4OC8weDEwYykKWzxjMDc1MWM3MD5dIChrZXJuZWxfaW5p
-dCkgZnJvbSBbPGMwMTAxMGU4Pl0gKHJldF9mcm9tX2ZvcmsrMHgxNC8weDJjKQpFeGNlcHRpb24g
-c3RhY2soMHhlYjA4ZGZiMCB0byAweGViMDhkZmY4KQpkZmEwOiAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMApkZmMw
-OiAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAw
-MDAwMDAwMCAwMDAwMDAwMApkZmUwOiAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAw
-MCAwMDAwMDAxMyAwMDAwMDAwMAoKUHJlc3VtYWJseSBpdCBsb29wcyBmb3JldmVyLCBkdWUgdG8g
-YSBjb252ZXJzaW9uIG9mIC0xIHRvIHVuc2lnbmVkCnNvbWV3aGVyZT8KCkdye29ldGplLGVldGlu
-Z31zLAoKICAgICAgICAgICAgICAgICAgICAgICAgR2VlcnQKCi0tIApHZWVydCBVeXR0ZXJob2V2
-ZW4gLS0gVGhlcmUncyBsb3RzIG9mIExpbnV4IGJleW9uZCBpYTMyIC0tIGdlZXJ0QGxpbnV4LW02
-OGsub3JnCgpJbiBwZXJzb25hbCBjb252ZXJzYXRpb25zIHdpdGggdGVjaG5pY2FsIHBlb3BsZSwg
-SSBjYWxsIG15c2VsZiBhIGhhY2tlci4gQnV0CndoZW4gSSdtIHRhbGtpbmcgdG8gam91cm5hbGlz
-dHMgSSBqdXN0IHNheSAicHJvZ3JhbW1lciIgb3Igc29tZXRoaW5nIGxpa2UgdGhhdC4KICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAtLSBMaW51cyBUb3J2YWxkcwoKX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGlu
-ZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmlu
-ZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+Hello Geert,
+
+On Tue, Sep 17, 2019 at 11:40:25AM +0200, Geert Uytterhoeven wrote:
+> Hi Rob, Uwe,
+> =
+
+> On Fri, Sep 13, 2019 at 11:58 PM Rob Herring <robh@kernel.org> wrote:
+> > On Sat, 24 Aug 2019 15:28:46 +0200, =3D?UTF-8?q?Uwe=3D20Kleine-K=3DC3=
+=3DB6nig?=3D          wrote:
+> > > Referencing device tree nodes from a property allows to pass argument=
+s.
+> > > This is for example used for referencing gpios. This looks as follows:
+> > >
+> > >       gpio_ctrl: gpio-controller {
+> > >               #gpio-cells =3D <2>
+> > >               ...
+> > >       }
+> > >
+> > >       someothernode {
+> > >               gpios =3D <&gpio_ctrl 5 0 &gpio_ctrl 3 0>;
+> > >               ...
+> > >       }
+> > >
+> > > To know the number of arguments this must be either fixed, or the
+> > > referenced node is checked for a $cells_name (here: "#gpio-cells")
+> > > property and with this information the start of the second reference =
+can
+> > > be determined.
+> > >
+> > > Currently regulators are referenced with no additional arguments. To
+> > > allow some optional arguments without having to change all referenced
+> > > nodes this change introduces a way to specify a default cell_count. So
+> > > when a phandle is parsed we check for the $cells_name property and use
+> > > it as before if present. If it is not present we fall back to
+> > > cells_count if non-negative and only fail if cells_count is smaller t=
+han
+> > > zero.
+> > >
+> > > Signed-off-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+> =
+
+> This is now commit e42ee61017f58cd9 ("of: Let of_for_each_phandle fallback
+> to non-negative cell_count") in robh/for-next, which causes a lock-up when
+> booting a shmobile_defconfig kernel on r8a7791/koelsch:
+> =
+
+> rcu: INFO: rcu_sched self-detected stall on CPU
+> rcu:     0-....: (2099 ticks this GP) idle=3D6fe/1/0x40000002
+> softirq=3D29/29 fqs=3D1050
+>  (t=3D2100 jiffies g=3D-1131 q=3D0)
+> NMI backtrace for cpu 0
+> CPU: 0 PID: 1 Comm: swapper/0 Not tainted
+> 5.3.0-rc2-shmobile-00050-ge42ee61017f58cd9 #376
+> Hardware name: Generic R-Car Gen2 (Flattened Device Tree)
+> [<c010f8ac>] (unwind_backtrace) from [<c010b620>] (show_stack+0x10/0x14)
+> [<c010b620>] (show_stack) from [<c073d038>] (dump_stack+0x7c/0x9c)
+> [<c073d038>] (dump_stack) from [<c0742e80>] (nmi_cpu_backtrace+0xa0/0xb8)
+> [<c0742e80>] (nmi_cpu_backtrace) from [<c0742f1c>] (nmi_trigger_cpumask_b=
+acktrace+0x84/0x114)
+> [<c0742f1c>] (nmi_trigger_cpumask_backtrace) from [<c017d684>] (rcu_dump_=
+cpu_stacks+0xac/0xc8)
+> [<c017d684>] (rcu_dump_cpu_stacks) from [<c017a598>] (rcu_sched_clock_irq=
++0x2ac/0x6b4)
+> [<c017a598>] (rcu_sched_clock_irq) from [<c0183980>] (update_process_time=
+s+0x30/0x5c)
+> [<c0183980>] (update_process_times) from [<c01941a8>] (tick_nohz_handler+=
+0xcc/0x120)
+> [<c01941a8>] (tick_nohz_handler) from [<c05b1d40>] (arch_timer_handler_vi=
+rt+0x28/0x30)
+> [<c05b1d40>] (arch_timer_handler_virt) from [<c016c9e0>] (handle_percpu_d=
+evid_irq+0xe8/0x21c)
+> [<c016c9e0>] (handle_percpu_devid_irq) from [<c0167a8c>] (generic_handle_=
+irq+0x18/0x28)
+> [<c0167a8c>] (generic_handle_irq) from [<c0167b3c>] (__handle_domain_irq+=
+0xa0/0xb4)
+> [<c0167b3c>] (__handle_domain_irq) from [<c03673ec>] (gic_handle_irq+0x58=
+/0x90)
+> [<c03673ec>] (gic_handle_irq) from [<c0101a8c>] (__irq_svc+0x6c/0x90)
+> Exception stack(0xeb08dd30 to 0xeb08dd78)
+> dd20:                                     c0cc7514 20000013 00000005 0000=
+3b27
+> dd40: eb7c4020 c0cc750c 00000051 00000051 20000013 c0c66b08 eb1cdc00 0000=
+0018
+> dd60: 00000000 eb08dd80 c05c1a38 c0756c00 20000013 ffffffff
+> [<c0101a8c>] (__irq_svc) from [<c0756c00>] (_raw_spin_unlock_irqrestore+0=
+x1c/0x20)
+> [<c0756c00>] (_raw_spin_unlock_irqrestore) from [<c05c1a38>] (of_find_nod=
+e_by_phandle+0xcc/0xf0)
+> [<c05c1a38>] (of_find_node_by_phandle) from [<c05c1bb8>] (of_phandle_iter=
+ator_next+0x68/0x178)
+> [<c05c1bb8>] (of_phandle_iterator_next) from [<c05c22bc>] (of_count_phand=
+le_with_args+0x5c/0x7c)
+> [<c05c22bc>] (of_count_phandle_with_args) from [<c053fc38>] (i2c_demux_pi=
+nctrl_probe+0x24/0x1fc)
+> [<c053fc38>] (i2c_demux_pinctrl_probe) from [<c04463c4>] (platform_drv_pr=
+obe+0x48/0x94)
+> [<c04463c4>] (platform_drv_probe) from [<c0444a20>] (really_probe+0x1f0/0=
+x2b8)
+> [<c0444a20>] (really_probe) from [<c0444e68>] (driver_probe_device+0x140/=
+0x158)
+> [<c0444e68>] (driver_probe_device) from [<c0444ff0>] (device_driver_attac=
+h+0x44/0x5c)
+> [<c0444ff0>] (device_driver_attach) from [<c04450b4>] (__driver_attach+0x=
+ac/0xb4)
+> [<c04450b4>] (__driver_attach) from [<c0443178>] (bus_for_each_dev+0x64/0=
+xa0)
+> [<c0443178>] (bus_for_each_dev) from [<c04438a8>] (bus_add_driver+0x148/0=
+x1a8)
+> [<c04438a8>] (bus_add_driver) from [<c0445ad0>] (driver_register+0xac/0xf=
+0)
+> [<c0445ad0>] (driver_register) from [<c0b010b0>] (do_one_initcall+0xa8/0x=
+1d4)
+> [<c0b010b0>] (do_one_initcall) from [<c0b01448>] (kernel_init_freeable+0x=
+26c/0x2c8)
+> [<c0b01448>] (kernel_init_freeable) from [<c0751c70>] (kernel_init+0x8/0x=
+10c)
+> [<c0751c70>] (kernel_init) from [<c01010e8>] (ret_from_fork+0x14/0x2c)
+> Exception stack(0xeb08dfb0 to 0xeb08dff8)
+> dfa0:                                     00000000 00000000 00000000 0000=
+0000
+> dfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 0000=
+0000
+> dfe0: 00000000 00000000 00000000 00000000 00000013 00000000
+> =
+
+> Presumably it loops forever, due to a conversion of -1 to unsigned
+> somewhere?
+
+Hmm, I fail to see the culprit. i2c_demux_pinctrl_probe calls
+of_count_phandle_with_args with cells_name=3DNULL. With that I don't see
+how my patch changes anything as the only change is in an if
+(it->cells_name) block that shouldn't be relevant in your case.
+
+Can you please verify that the loop in of_count_phandle_with_args is
+indeed not terminating, e.g. with
+
+diff --git a/drivers/of/base.c b/drivers/of/base.c
+index 2f25d2dfecfa..2425a6d26038 100644
+--- a/drivers/of/base.c
++++ b/drivers/of/base.c
+@@ -1769,8 +1769,13 @@ int of_count_phandle_with_args(const struct device_n=
+ode *np, const char *list_na
+ 	if (rc)
+ 		return rc;
+ =
+
+-	while ((rc =3D of_phandle_iterator_next(&it)) =3D=3D 0)
++	pr_err("%s: enter loop (np=3D%pOF, list_name=3D%s, cells_name=3D%s)\n",
++	       __func__, np, list_name, cells_name);
++	while ((rc =3D of_phandle_iterator_next(&it)) =3D=3D 0) {
++		pr_err("%s: it.node =3D %pOF cur_index=3D%d\n", __func__, it.node, cur_i=
+ndex);
+ 		cur_index +=3D 1;
++	}
++	pr_err("%s: exit loop\n", __func__);
+ =
+
+ 	if (rc !=3D -ENOENT)
+ 		return rc;
+
+Thanks
+Uwe
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | http://www.pengutronix.de/  |
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
