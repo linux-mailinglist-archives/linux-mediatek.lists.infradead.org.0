@@ -2,71 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D37B3B56F6
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 22:28:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A085AB5722
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 22:47:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3tz6tZt5VrNCx7/oC16GWRIYjPkVYmlUqsYqU6/PiDQ=; b=PQmLv+MzUAIVul
-	Hx7idwJQn61Xweac3O+N7pyDqySYWFiSKuu7hCQy3FDUvz0n6HK89b/QP7nqawjnQ1qb+0b81+kqE
-	rK62mBkIgVaCy6l6vfkQk1SdfsRyZfyKLh7J1tEAMxuUSg4PVPn36QZ4EXfHoSHxsjLM4XVcX5rc6
-	JZjIedr+GsxkZ3LK/qQvvSMgrBaB45Uyfs9N0PQ+pJ2bl4Tv1s3SmIq66F91kX/G5OyUy+VZjebE1
-	Pdjau81gfJH00bvGah0DrCFycuvuhXcuFcvQ7rCf5zO3CfC2atN9/4rLGXyoWdDdCerovXMvmbbxD
-	IdhFOwMjSW3km7QhJz7Q==;
+	List-Owner; bh=sbyG6yDKXSbFS0sH75yVoQmz2xjNq2+dmilNB67UrT4=; b=pThun7ItcBhBiN
+	EQq1fwFiVASPql3Mi4yilxTjw2RdJMvBfheWUEXnoPmjAy+17lVJXTEZQWr7Sz5r8rtWXig4FC4/T
+	Wlwa7gBFuCYWG/wYZ3eoM8m+yX0lZRjllmte1ZN6j/wdCOko30AAXO6mH781NFcwjqg2du9CRpern
+	GHs7zsDIS69g8Bq9OKUTveM5NmDQO0j6W2WbmdOIgURD4htNcW6EVdgaX7Wwj8/gz0i1MvFB2eqmi
+	TV08uQ+BgEPiFdJoNFg1pc8qxft4wu4IbiBmfgJweYHLzWziXXUCSiIau2jYNpFbci3ptoKjOm1XC
+	J4sgxilbCXXu5rKLtAUg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAK5K-0001mX-BA; Tue, 17 Sep 2019 20:28:26 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
+	id 1iAKNo-0000MQ-Tq; Tue, 17 Sep 2019 20:47:32 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAK51-0001aY-E7; Tue, 17 Sep 2019 20:28:08 +0000
-Received: by mail-ot1-f65.google.com with SMTP id c10so4270626otd.9;
- Tue, 17 Sep 2019 13:28:07 -0700 (PDT)
+ id 1iAKNk-0000LY-Sa; Tue, 17 Sep 2019 20:47:30 +0000
+Received: by mail-ot1-f66.google.com with SMTP id z26so4369221oto.1;
+ Tue, 17 Sep 2019 13:47:28 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=OmuRgprkyi1Y3BeLYMvuW7iFWGhTnGC5Ky9VxrWaoyo=;
- b=W2kgTpmx7EcJAdJAiNgEJLyYJuXKKvLGZ4SKLG64WjDLJ0scoWF+p7XJwWlzyJv6lc
- ZBjiNQFDR6pmt/exV6RMCT0/S6Ji/Sh/JbLglizpA8BLQYvkxl5FKDhVGFZYZNfVKTYG
- onnbsFGjHgcLMBWng8yhw9SGYp+S7gToQx5yWbR1QWlksvWCPTIDsGMu0Z71jlA1QoVk
- 5MqnaebdReTd4F3nG3TL1rhFUb4h7nHfAHMfVE4Qvbrwo6xP9Q9iDTTxeyedvkP+93AP
- /UUxAZwNINUAGS53Ol9nBsffPM14UiKlWhAZeSUZneLoRfctb7D6a4BWndc+oPvV+emc
- oM4Q==
-X-Gm-Message-State: APjAAAXner3MGHkjzG1kkohqSSOEnUn4t6RXvLaABBiRWtIQeqlSRz/E
- 3rZMpy6UWYSn2HHCp4fORg==
-X-Google-Smtp-Source: APXvYqyDocPQdmogtqeo027e5xyEsYwS3WJPg0YHLQKJqNfJBn/Ya6ZQgcgCgmx8DGlTDSU3zwJlJw==
-X-Received: by 2002:a9d:3647:: with SMTP id w65mr588936otb.70.1568752086445;
- Tue, 17 Sep 2019 13:28:06 -0700 (PDT)
+ bh=FoSYGBaKDzCX0ap+/LUel/1p6EkFjnJkCMtNziAAsIA=;
+ b=sX+V9CJJLr66mQGITFGPB96W4q0EyNTDVoax9SD3R7t+HtKt8Ir9Rkvy64iwLNGz1F
+ eywlLpiSwvmtDd8er6KKbzSwrY88/ERDczqjpX3MCVLFH2sldl+4pXW0yebhnrBjXUVj
+ Cjy3Dlzal9+7VstJVkcrangnYPVkcDfKoMLmULB+CnrM0DeMmkSaVCtLKhRUzTj4lO3x
+ XxykWcnbAB50oZtkoz2YHlQXhcwewUcuXcSRFhMYZs0H+89dO5vFL2oRj+GgH0uOWEW2
+ HEPOxHvfqDRyYNNzQqzSTaVfLUQjIVP5/j9Br/L3tniG2P1NmYaZOstnn6VWJhkcF7Qg
+ qbYA==
+X-Gm-Message-State: APjAAAVHHKo7q3X+Voxdacl/GEOuLrHPtteVdGrRhGa90I4GKE9vWGfM
+ Yx8hnzqGO+YCIr4WdmtwNfPB6nKiYA==
+X-Google-Smtp-Source: APXvYqz+B89UMDC9IY7k7wKv0ix99w6NLjJtzUmU9gXsyI/P+JljCrWHrrmyk4+rrKlIMXNQIZBZSg==
+X-Received: by 2002:a9d:829:: with SMTP id 38mr609273oty.372.1568753247649;
+ Tue, 17 Sep 2019 13:47:27 -0700 (PDT)
 Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id n13sm1000400otl.8.2019.09.17.13.28.05
+ by smtp.gmail.com with ESMTPSA id e7sm994561otp.64.2019.09.17.13.47.26
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 17 Sep 2019 13:28:05 -0700 (PDT)
-Date: Tue, 17 Sep 2019 15:28:05 -0500
+ Tue, 17 Sep 2019 13:47:26 -0700 (PDT)
+Date: Tue, 17 Sep 2019 15:47:25 -0500
 From: Rob Herring <robh@kernel.org>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH v2 04/11] dt-bindings: phy-mtk-tphy: add a new reference
- clock
-Message-ID: <20190917202805.GA13405@bogus>
-References: <1567149298-29366-1-git-send-email-chunfeng.yun@mediatek.com>
- <1567149298-29366-4-git-send-email-chunfeng.yun@mediatek.com>
+To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Subject: Re: [V2, 1/2] media: i2c: dw9768: Add DT support and MAINTAINERS entry
+Message-ID: <20190917204725.GA14339@bogus>
+References: <20190905072142.14606-1-dongchun.zhu@mediatek.com>
+ <20190905072142.14606-2-dongchun.zhu@mediatek.com>
+ <20190905101406.GA2680@smile.fi.intel.com>
+ <20190905104829.GB5475@paasikivi.fi.intel.com>
+ <20190905113509.GD2680@smile.fi.intel.com>
+ <CABxcv=knP+-x0O-Ga-Dy8WTNovHk6GfX4ZEv0vVjnQvwchuVzg@mail.gmail.com>
+ <20190905120012.GD5475@paasikivi.fi.intel.com>
+ <20190905122449.GG2680@smile.fi.intel.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1567149298-29366-4-git-send-email-chunfeng.yun@mediatek.com>
+In-Reply-To: <20190905122449.GG2680@smile.fi.intel.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_132807_470048_CF5B60E0 
-X-CRM114-Status: GOOD (  11.64  )
+X-CRM114-CacheID: sfid-20190917_134728_927213_92AC8533 
+X-CRM114-Status: UNSURE (   9.50  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.6 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
+ no trust [209.85.210.66 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -76,7 +82,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (robherring2[at]gmail.com)
  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.65 listed in wl.mailspike.net]
+ [209.85.210.66 listed in wl.mailspike.net]
  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
@@ -92,31 +98,33 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Kishon Vijay Abraham I <kishon@ti.com>,
- Chunfeng Yun <chunfeng.yun@mediatek.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+ drinkcat@chromium.org, srv_heupstream@mediatek.com, sam.hung@mediatek.com,
+ shengnan.wang@mediatek.com, Tomasz Figa <tfiga@chromium.org>,
+ sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
+ dongchun.zhu@mediatek.com, Sakari Ailus <sakari.ailus@linux.intel.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, bingbu.cao@intel.com,
+ Javier Martinez Canillas <javier@dowhile0.org>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 30 Aug 2019 15:14:51 +0800, Chunfeng Yun wrote:
-> Usually the digital and analog phys use the same reference clock,
-> but on some platforms, they are separated, so add another optional
-> clock to support it.
-> In order to keep the clock names consistent with PHY IP's, use
-> the da_ref for analog phy and ref clock for digital phy.
+On Thu, Sep 05, 2019 at 03:24:49PM +0300, Andy Shevchenko wrote:
+> On Thu, Sep 05, 2019 at 03:00:12PM +0300, Sakari Ailus wrote:
 > 
-> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-> ---
-> v2: fix typo of analog and needed
-> ---
->  Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt | 7 +++++--
->  1 file changed, 5 insertions(+), 2 deletions(-)
+> > And I see no reason to add a separate patch just for
+> > MAINTAINERS change.
 > 
+> It's up to maintainers of the subsystem.
 
-Acked-by: Rob Herring <robh@kernel.org>
+Just update MAINTAINERS with the driver. It doesn't need to be so 
+complicated or per subsystem. There's enough of what each maintainer 
+wants already.
+
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
