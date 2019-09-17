@@ -2,30 +2,30 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9EFECB528E
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 18:10:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 06B2EB5290
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 18:10:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FMzKMUCH0E+2vBqq1q0q59nEwm4VLyX9DiC8IpRI7ko=; b=RIczp0gZfa5DfW
-	EPyiP8EHrhpyuOjVEm7Eu/2d+/L+9w09nWKTZ3dW9nmhs2XLN1g5FxaTiiXu32h+bcIaHoPIRp+HD
-	QQ5OEaNW/MGCfhuxnIYuCyV23Wyg5s4ROFBFP8mYQOfF4o/TtdJWfNop85vXmkErTfFNIDaAhpPai
-	2N9HUOE67a64XUTokK0vrrqJ2u85go6GHLpLVQhDUjk+n4valOmtIRxKNBzYnn5ePXmJFXpWBzjRh
-	kVWEyFljyPmP80aWfJDEh/M1h3EGVyIip9rCo4hWmlR8NTQfmQDyI5XfVnZfTL+ZLQHquVcKqeuSB
-	qtjti3KfKEkatTMZH3qg==;
+	List-Owner; bh=BkbonFjA84cYd30BoxrJZ0/Y022jWIHaSMsEvfJ0Drg=; b=VjrU4uxJXoCZdO
+	l/zqn+Efh2l25d+db8Aww2qmbk55OZvBn7GIsBCWhf99zl1VQGbK1Jb0cpkNwbOMi2UZHGp7DjLdp
+	AYmi4lqDHRt1rLWbwHf7/r5kjq8CGMLerBZHoLMoijozaYiJvfw9iZs4NmDcuZpcR0XTeNrAHbyoV
+	TWevpuVcPzV1KTeasevzZTyqFPwRqCRH3eT9NGl57MaB47BoT0GFP+AZHKglwKyaIz+Ohvd3Pfqh3
+	1iG9WMpb6GjrjAQm6kyDKJXtzho7cXhYF+orwAaKkN+SmfOvCG5nUzmMmx/3xOH2zk/hAOd/N6jkR
+	MFU0RpPXq10+UFJtL80A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAG3b-0007QB-QP; Tue, 17 Sep 2019 16:10:23 +0000
-Received: from esa1.microchip.iphmx.com ([68.232.147.91])
+	id 1iAG3e-0007Tx-TR; Tue, 17 Sep 2019 16:10:27 +0000
+Received: from esa4.microchip.iphmx.com ([68.232.154.123])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAFpP-00084M-4H; Tue, 17 Sep 2019 15:55:55 +0000
-Received-SPF: Pass (esa1.microchip.iphmx.com: domain of
+ id 1iAFpb-00086p-L5; Tue, 17 Sep 2019 15:55:58 +0000
+Received-SPF: Pass (esa4.microchip.iphmx.com: domain of
  Tudor.Ambarus@microchip.com designates 198.175.253.82 as
  permitted sender) identity=mailfrom;
- client-ip=198.175.253.82; receiver=esa1.microchip.iphmx.com;
+ client-ip=198.175.253.82; receiver=esa4.microchip.iphmx.com;
  envelope-from="Tudor.Ambarus@microchip.com";
  x-sender="Tudor.Ambarus@microchip.com";
  x-conformance=spf_only; x-record-type="v=spf1";
@@ -33,43 +33,42 @@ Received-SPF: Pass (esa1.microchip.iphmx.com: domain of
  a:smtpout.microchip.com a:mx1.microchip.iphmx.com
  a:mx2.microchip.iphmx.com include:servers.mcsv.net
  include:mktomail.com include:spf.protection.outlook.com ~all"
-Received-SPF: None (esa1.microchip.iphmx.com: no sender
+Received-SPF: None (esa4.microchip.iphmx.com: no sender
  authenticity information available from domain of
  postmaster@email.microchip.com) identity=helo;
- client-ip=198.175.253.82; receiver=esa1.microchip.iphmx.com;
+ client-ip=198.175.253.82; receiver=esa4.microchip.iphmx.com;
  envelope-from="Tudor.Ambarus@microchip.com";
  x-sender="postmaster@email.microchip.com"; x-conformance=spf_only
-Authentication-Results: esa1.microchip.iphmx.com;
+Authentication-Results: esa4.microchip.iphmx.com;
  spf=Pass smtp.mailfrom=Tudor.Ambarus@microchip.com;
  spf=None smtp.helo=postmaster@email.microchip.com;
  dkim=pass (signature verified) header.i=@microchiptechnology.onmicrosoft.com;
  dmarc=pass (p=none dis=none) d=microchip.com
-IronPort-SDR: H9I7MhTz/36Pub9gDzNS/F02QL9HsbEvIxXMixxogAePdmi9WcVEfelusgAS536qf48ei+8p3F
- CPFryjGjWqhwsD1QDnELxGvdzBWzMxYMgd5bjNomfHCWfNmTebqhgToB69dsAQ07oZlk/zwANv
- qhDUodZ+VVIrUl3kXuwRYDrPxG5B+N077Mvo82nsUZKHIoNt9cfYmQ7g2FZpmjaHibsFg3iXPA
- VQ5dHcZfme5OraCNd2z8GI6dnNWeKRKvkknpPrx9HdxuyZi2fxWNnvALb7C9fHoHnyG1N1pdJn
- MKY=
-X-IronPort-AV: E=Sophos;i="5.64,517,1559545200"; d="scan'208";a="50797952"
+IronPort-SDR: Apf1B9GJCiZDw+jQA31CcWj4oz26+t/0yIeReSUuM2R2wMhjHYi1J9pdTuTWAmAsjzM00P1lqG
+ ZiQc5vnDQtG5QazFYZz/Jjb5IO6LuV4ck42EUq4LwGRK4wBf1z3/pfa9C0JYY6TTafppIl+LiV
+ hrioTakKWdcSZr2idnYhGGpj7fnmrEftluHlGSZTTrCeMhh0W8ReohdxCjsaXOxdd1JTtD8cal
+ StB0n47SUtlefexD5YOjEW3yh52fZ9NKNaazSY0m7y57QOW4leO7Mq4PxHCxG6Jg2ysYYDB/ju
+ 8C8=
+X-IronPort-AV: E=Sophos;i="5.64,517,1559545200"; d="scan'208";a="48252547"
 Received: from smtpout.microchip.com (HELO email.microchip.com)
  ([198.175.253.82])
- by esa1.microchip.iphmx.com with ESMTP/TLS/AES256-SHA256;
- 17 Sep 2019 08:55:42 -0700
-Received: from chn-vm-ex02.mchp-main.com (10.10.85.144) by
+ by esa4.microchip.iphmx.com with ESMTP/TLS/AES256-SHA256;
+ 17 Sep 2019 08:55:51 -0700
+Received: from chn-vm-ex03.mchp-main.com (10.10.85.151) by
  chn-vm-ex03.mchp-main.com (10.10.85.151) with Microsoft SMTP Server
  (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
- 15.1.1713.5; Tue, 17 Sep 2019 08:55:38 -0700
+ 15.1.1713.5; Tue, 17 Sep 2019 08:55:50 -0700
 Received: from NAM02-CY1-obe.outbound.protection.outlook.com (10.10.215.89) by
- email.microchip.com (10.10.87.72) with Microsoft SMTP Server
- (version=TLS1_2, 
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256) id 15.1.1713.5 via Frontend
- Transport; Tue, 17 Sep 2019 08:55:38 -0700
+ email.microchip.com (10.10.87.152) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256) id 15.1.1713.5
+ via Frontend Transport; Tue, 17 Sep 2019 08:55:49 -0700
 ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=IXo6z8N9/V598ilppFo/22pkYkDZOGBozOT1kQd2X0r1bM+jIHP8O8Jh05Fkkjfk1jamdJ7ILaE795o8cFWrnQkBPLDDzvIAeDpwz1lLFDexdoBYYWN1snceFo/cSV9dj1hd0iMhi0umfFKZSGPOJZsf9OjYLlwuOyUWP/+HDzkpiqCZbHiULDoi9udT+hkkBYIvmZQmr9s6yAO5LOirfCh7PGTGbbcfEgX8n9cASIIJn78kiYveKFg4Gb1McAil4dR+5Q4ZcEBFwne6lW34czDVLWUMZerYm1JpJHbEiu0XpRId7LhYfEwdOAWTFPOqfngENe0GQLeOwVuH0/PjbA==
+ b=E8JbjJl5zACw/hJt+IO7AQJF7DwgD0/MmCruhfNDM08k+w2dBJI5GDwmEavMyHdorQwTdXEe7A/C5u4jkHMY4KBKL5W2bl/1irgJQpWHyKvIdLygGa2Qj+EVx48yO+nO4CxFly7LbyjlCVtAzD22QJLmzPA3kH0u/DPMXcUbLOPQwY6gUneoXg1837YMhmJLexF15Axw6V0PJp8ZGQ4mRhzzL+jecWRdvrEa0S4yoJf3UrP+OZK+zzj9FjIBotTr4VRjLPGgMOb6IlwwTykwLTLbO9gG8qxH2ztHxpSr1cGpeDKLlmdgx7OMNvqDPGznmq3h+81Nok8Q8s4vcmzXUA==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=/ml0az2zd1ImeeMhwaZAOFfuoD0AXepiN6KCiBZXges=;
- b=mhDdi/zbGtWapxpfIsIEU01pz8lLL84Au33YVhhCz94lN9rGcdRgVJ6eZrNB0N30MRK+bB0PEnRONRUTK3inBZSHjDekGQbeFikByDYGj3eHPWQLIJaQv4APBfdJBnHq9Ly7UWqM/ZQHeA++lGcfeKZuJpTwp8ls7Ss4cm5KZAxKRSM1E91GxGDr4Vbtww5FrPzeoZt7yzy2OzaHE80LXYV+sIhPZBmFhSKfgvLlhbphkpv3xIjF6KL5+F989dP8o/JJqbcC6pwn3KZblgljTXmxCAohvSxf8tdrAHZaJ9fj2efISecp/gEYa6QPljIHMn6MhfC3dj0BqcOk3yINTA==
+ bh=oYQcNrzAE6sZu8knUk88f5RkdGT4W8F0yTAM/RLgr64=;
+ b=PB4AFlzdxcS4etnf3E85UHoHOpN4n1atr0VBR0hswZaPX56auBin8Cg47GONykv1Ehgy9XnSZi6nH/CCjDzwY6DqgGRooNO9qod6ik+YOaVabMQn0A+6hPiMNwMIowSJ9byP5D8kPFSXIz+Gu3IlEx0QEO35G6giQcy7JeoOa04PDfvWIlodHgd+o6B5j6QFu3VzTnDk1r9KUyn2/2AzpeZYqQzOW143q+S1Yqf6M5noj0pSoAdXpqFjzXO06gfUCdGPphRJ8gInBoRNCt0Pl2SEvM9UlscxOzMOQSJEKkDQbE0ar+X6zkHLzq8xGWaskho1on8Lkz7cs0pFsv+w9A==
 ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
  smtp.mailfrom=microchip.com; dmarc=pass action=none
  header.from=microchip.com; dkim=pass header.d=microchip.com; arc=none
@@ -77,26 +76,27 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=microchiptechnology.onmicrosoft.com;
  s=selector2-microchiptechnology-onmicrosoft-com;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=/ml0az2zd1ImeeMhwaZAOFfuoD0AXepiN6KCiBZXges=;
- b=HmgDdlbcJNbEKs2tz78sMphH/xS87g9i/tjEqgI9A0nxM2EHhBrC7+k4wjGQ0ifoURY3Qa3hXdqqAQeJOc+VELcbHP97IWD8DBdlW2NPxSY3rWiJvAfTSNw5ixauCncU66gBfFV0Kx/ArD/qn28cTSwtP4z8mKVvJ4LDMk73GO4=
+ bh=oYQcNrzAE6sZu8knUk88f5RkdGT4W8F0yTAM/RLgr64=;
+ b=aAYI6xPPsisV/+a1CXvzQPineF0ISd4FzPct8TrCMQxhfkC3NOXRbxBGUhdId8eRarQyNNU1zDDiPN0ljyQ/+R/mQGbLPl7TCTDpeLZQTRm81kWDLlTvoX0eut/egQ9Y5O9enBPfctonmyCxapXFY/nFarbUNfSPbvWFM1tindQ=
 Received: from MN2PR11MB4448.namprd11.prod.outlook.com (52.135.39.157) by
  MN2PR11MB3725.namprd11.prod.outlook.com (20.178.253.18) with Microsoft SMTP
  Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2263.21; Tue, 17 Sep 2019 15:55:35 +0000
+ 15.20.2263.21; Tue, 17 Sep 2019 15:55:48 +0000
 Received: from MN2PR11MB4448.namprd11.prod.outlook.com
  ([fe80::c951:b15a:e4b3:30f7]) by MN2PR11MB4448.namprd11.prod.outlook.com
  ([fe80::c951:b15a:e4b3:30f7%7]) with mapi id 15.20.2263.023; Tue, 17 Sep 2019
- 15:55:35 +0000
+ 15:55:48 +0000
 From: <Tudor.Ambarus@microchip.com>
 To: <vigneshr@ti.com>, <boris.brezillon@collabora.com>,
  <marek.vasut@gmail.com>, <miquel.raynal@bootlin.com>, <richard@nod.at>,
  <linux-mtd@lists.infradead.org>
-Subject: [PATCH 17/23] mtd: spi-nor: Fix clearing of QE bit on lock()/unlock()
-Thread-Topic: [PATCH 17/23] mtd: spi-nor: Fix clearing of QE bit on
- lock()/unlock()
-Thread-Index: AQHVbXBXffWwZrBoIkKrGGyrhA4/GQ==
-Date: Tue, 17 Sep 2019 15:55:35 +0000
-Message-ID: <20190917155426.7432-18-tudor.ambarus@microchip.com>
+Subject: [PATCH 21/23] mtd: spi-nor: Rework the disabling of block write
+ protection
+Thread-Topic: [PATCH 21/23] mtd: spi-nor: Rework the disabling of block write
+ protection
+Thread-Index: AQHVbXBftJMrp6jhCUKqN9qjMF7NVA==
+Date: Tue, 17 Sep 2019 15:55:48 +0000
+Message-ID: <20190917155426.7432-22-tudor.ambarus@microchip.com>
 References: <20190917155426.7432-1-tudor.ambarus@microchip.com>
 In-Reply-To: <20190917155426.7432-1-tudor.ambarus@microchip.com>
 Accept-Language: en-US
@@ -110,14 +110,14 @@ x-ms-exchange-messagesentrepresentingtype: 1
 x-mailer: git-send-email 2.9.5
 x-originating-ip: [94.177.32.156]
 x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: b9009282-d9c6-4076-51a2-08d73b877a42
+x-ms-office365-filtering-correlation-id: fab42252-9c6d-45d0-8853-08d73b8781c8
 x-microsoft-antispam: BCL:0; PCL:0;
  RULEID:(2390118)(7020095)(4652040)(8989299)(5600167)(711020)(4605104)(1401327)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(2017052603328)(7193020);
  SRVR:MN2PR11MB3725; 
 x-ms-traffictypediagnostic: MN2PR11MB3725:
 x-ms-exchange-transport-forked: True
-x-microsoft-antispam-prvs: <MN2PR11MB372544B31DDA38F5812EA562F08F0@MN2PR11MB3725.namprd11.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:9508;
+x-microsoft-antispam-prvs: <MN2PR11MB372577DF75E32EAF9E616C99F08F0@MN2PR11MB3725.namprd11.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:10000;
 x-forefront-prvs: 01630974C0
 x-forefront-antispam-report: SFV:NSPM;
  SFS:(10009020)(396003)(376002)(346002)(39860400002)(136003)(366004)(199004)(189003)(76176011)(52116002)(5660300002)(71190400001)(2616005)(6486002)(6512007)(476003)(11346002)(81166006)(6436002)(66556008)(386003)(6506007)(26005)(66446008)(66946007)(64756008)(186003)(66476007)(102836004)(316002)(446003)(2201001)(110136005)(54906003)(8936002)(107886003)(478600001)(50226002)(25786009)(2906002)(86362001)(81156014)(2501003)(6116002)(3846002)(256004)(305945005)(7736002)(7416002)(99286004)(36756003)(66066001)(14454004)(8676002)(71200400001)(4326008)(14444005)(1076003)(486006);
@@ -127,25 +127,25 @@ x-forefront-antispam-report: SFV:NSPM;
 received-spf: None (protection.outlook.com: microchip.com does not designate
  permitted sender hosts)
 x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: ZbUdwpGGRw1omk4ci2mM/aq1ZRBjZJoddPVd3v5awYgr6XEgCzlG95xnpKviln6Kyev1bcbxRQUP5u9XFTV2HNaCgEbjdBAoIrf8TzVAv4VhuHcbyF0+I+JQF9DOrw2cZJjuVNO2W/BnA9LxSKOF06SAXY87aV7eOZbpibmoxddqxjgp8FM/Qww4Ii08rOMaScookBsJxZP4qHOoVjJhvfJhzwAgNDeddLDchq8iMFXe2o2iCEpMFOKETxZyUk+yDiaqYa1iOVhY0+fLQPWFBAdeUfJsaOFd/jNd6JMkV5DDYFu7lpnjnTFWeSmSgqDwmmur55pVjxTNR2ydkP/PQ9+VDswB+hs5UC5/jwR/dtEvODKH+kf/C6Fly2OUmmIR6GNMulbALrKT46MZKMvun/dDm/d2AexZNsIX3p1RW8k=
+x-microsoft-antispam-message-info: BGjqiiaH8L5zq8jYmTJ58eIaSv4m4g1wNav9T3B4eN97IdkoHAy8DQfOjBH5OywIZii+8dtsbMlDO084xF66piy/Hj5S+HgVIJzOf5E1GdYXCx5fVr/JrUTxBq9+fDqpn/cycSKufJ3IMdfuQM/Rfl2Nyl+HDyuSx2lJnm4oCxfueTTOf9pEX0h/qluoeXa26JCpjdBPOkaZ00PsapbtsQBihWslrrzN41vFZnn2egAZm2xasGsNm1DumwwOAHmQ1pj3imKH63V4/5/pE5JZDHaD4PyPygNyzMIEYHO/nyaTWL6GlvLLLGby0nD9XrcvJXTsVKeaf4dXpI5MRQdoXeqs7usc0YJe5Dksp1kweTyio3yrzJ/Y9PLdTwrNIj/Wi+JRgtN43o05oxD/83zW2UVycLCW6H0ze4MRz8hgP4M=
 MIME-Version: 1.0
-X-MS-Exchange-CrossTenant-Network-Message-Id: b9009282-d9c6-4076-51a2-08d73b877a42
-X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Sep 2019 15:55:35.7123 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fab42252-9c6d-45d0-8853-08d73b8781c8
+X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Sep 2019 15:55:48.3239 (UTC)
 X-MS-Exchange-CrossTenant-fromentityheader: Hosted
 X-MS-Exchange-CrossTenant-id: 3f4057f3-b418-4d4e-ba84-d55b4e897d88
 X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: 9zO3MdIaM+VomXy2nG9jXMUBsmfwAEO5c+ZHHG7WwcJ8Fi1YtGBnei0el+o3C7Y75v04VhuykVCCMpjw0AZd3RWB0U98fGeNgPSRpLupMcY=
+X-MS-Exchange-CrossTenant-userprincipalname: JJDxHIyNi2cQHtrfufxc5nOzD2TKf+K4CSgQYQxZoNUHQ2wEUEmhoA8fWKHZRnHhLKGP9orkJoEZNKwKgZxhQn4x+V+xjifdO6KK52rEX4k=
 X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR11MB3725
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_085544_276963_3BDCD457 
-X-CRM114-Status: GOOD (  18.16  )
+X-CRM114-CacheID: sfid-20190917_085556_104407_38CC3499 
+X-CRM114-Status: GOOD (  19.69  )
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [68.232.147.91 listed in list.dnswl.org]
+ medium trust [68.232.154.123 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -173,272 +173,258 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Tudor Ambarus <tudor.ambarus@microchip.com>
 
-Make sure that when doing a lock() or an unlock() operation we don't clear
-the QE bit from Status Register 2.
+spi_nor_unlock() unlocks blocks of memory or the entire flash memory
+array, if requested. clear_sr_bp() unlocks the entire flash memory
+array at boot time. This calls for some unification, clear_sr_bp() is
+just an optimization for the case when the unlock request covers the
+entire flash size.
 
-JESD216 revB or later offers information about the *default* Status
-Register commands to use (see BFPT DWORDS[15], bits 22:20). In this
-standard, Status Register 1 refers to the first data byte transferred on a
-Read Status (05h) or Write Status (01h) command. Status register 2 refers
-to the byte read using instruction 35h. Status register 2 is the second
-byte transferred in a Write Status (01h) command.
+Get rid of clear_sr_bp() and introduce spi_nor_unlock_all(), which is
+just a call to spi_nor_unlock() for the entire flash memory array.
+This fixes a bug that was present in spi_nor_spansion_clear_sr_bp().
+When the QE bit was zero, we used the Write Status (01h) command with
+one data byte, which might cleared the Status Register 2. We now always
+use the Write Status (01h) command with two data bytes when
+SNOR_F_HAS_16BIT_SR is set, to avoid clearing the Status Register 2.
 
-Industry naming and definitions of these Status Registers may differ.
-The definitions are described in JESD216B, BFPT DWORDS[15], bits 22:20.
-There are cases in which writing only one byte to the Status Register 1
-has the side-effect of clearing Status Register 2 and implicitly the Quad
-Enable bit. This side-effect is hit just by the
-BFPT_DWORD15_QER_SR2_BIT1_BUGGY and BFPT_DWORD15_QER_SR2_BIT1 cases.
+Get rid of the MFR handling and implement specific manufacturer
+default_init() fixup hooks.
+
+Note that this changes a bit the logic for the SNOR_MFR_ATMEL,
+SNOR_MFR_INTEL and SNOR_MFR_SST cases. Before this patch, the Atmel,
+Intel and SST chips did not set the locking ops, but unlocked the entire
+flash at boot time, while now they are setting the locking ops to
+stm_locking_ops. This should work, since the the disable of the block
+protection at the boot time used the same Status Register bits to unlock
+the flash, as in the stm_locking_ops case.
 
 Suggested-by: Boris Brezillon <boris.brezillon@collabora.com>
 Signed-off-by: Tudor Ambarus <tudor.ambarus@microchip.com>
 ---
- drivers/mtd/spi-nor/spi-nor.c | 170 +++++++++++++++++++++++++++++++++++++-----
- include/linux/mtd/spi-nor.h   |   2 +
- 2 files changed, 152 insertions(+), 20 deletions(-)
+ drivers/mtd/spi-nor/spi-nor.c | 142 +++++++++++++++---------------------------
+ include/linux/mtd/spi-nor.h   |   3 -
+ 2 files changed, 49 insertions(+), 96 deletions(-)
 
 diff --git a/drivers/mtd/spi-nor/spi-nor.c b/drivers/mtd/spi-nor/spi-nor.c
-index 303a7bcf3423..4a513ed13807 100644
+index a9cdb6dbc25c..700b1700a7a1 100644
 --- a/drivers/mtd/spi-nor/spi-nor.c
 +++ b/drivers/mtd/spi-nor/spi-nor.c
-@@ -836,6 +836,132 @@ static int spi_nor_read_sr2(struct spi_nor *nor, u8 *sr2)
- 	return ret;
+@@ -2041,79 +2041,6 @@ static int spi_nor_sr2_bit7_quad_enable(struct spi_nor *nor)
+ 	return 0;
  }
  
-+/**
-+ * spi_nor_write_sr1_and_check() - Write one byte to the Status Register and
-+ * ensure the bits in the mask match the written value.
-+ * @nor:	pointer to a 'struct spi_nor'.
-+ * status_new:	byte value to be written to the Status Register.
-+ * mask:	mask with which to check the written value.
-+ *
-+ * Return: 0 on success, -errno otherwise.
-+ */
-+static int spi_nor_write_sr1_and_check(struct spi_nor *nor, u8 status_new,
-+				       u8 mask)
-+{
-+	int ret;
-+
-+	nor->bouncebuf[0] = status_new;
-+
-+	ret = spi_nor_write_sr(nor, &nor->bouncebuf[0], 1);
-+	if (ret)
-+		return ret;
-+
-+	ret = spi_nor_read_sr(nor, &nor->bouncebuf[0]);
-+	if (ret)
-+		return ret;
-+
-+	if ((nor->bouncebuf[0] & mask) != (status_new & mask)) {
-+		dev_err(nor->dev, "Read back test failed\n");
-+		return -EIO;
-+	}
-+
-+	return 0;
-+}
-+
-+/**
-+ * spi_nor_write_16bit_sr_and_check() - Write the Status Register 1 and the
-+ * Status Register 2 in one shot. Ensure that the bits in the mask match the
-+ * written value in the Status Register 1, and that the 16-bit Write did not
-+ * affect what was already in the Status Register 2.
-+ * @nor:	pointer to a 'struct spi_nor'.
-+ * status_new:	byte value to be written to the Status Register 1.
-+ * mask:	mask with which to check the written value on Status Register 1.
-+ *
-+ * Return: 0 on success, -errno otherwise.
-+ */
-+static int spi_nor_write_16bit_sr_and_check(struct spi_nor *nor, u8 status_new,
-+					    u8 mask)
-+{
-+	int ret;
-+	u8 *sr_cr = nor->bouncebuf;
-+	u8 cr_written;
-+
-+	/* Make sure we don't overwrite the contents of Status Register 2. */
-+	if (!(nor->flags & SNOR_F_NO_READ_CR)) {
-+		ret = spi_nor_read_cr(nor, &sr_cr[1]);
-+		if (ret)
-+			return ret;
-+	} else if (nor->flash.quad_enable) {
-+		/*
-+		 * If the Status Register 2 Read command (35h) is not
-+		 * supported, we should at least be sure we don't
-+		 * change the value of the SR2 Quad Enable bit.
-+		 *
-+		 * We can safely assume that when the Quad Enable method is
-+		 * set, the value of the QE bit is one, as a consequence of the
-+		 * nor->flash.quad_enable() call.
-+		 *
-+		 * We can safely assume that the Quad Enable bit is present in
-+		 * the Status Register 2 at BIT(1). According to the JESD216
-+		 * revB standard, BFPT DWORDS[15], bits 22:20, the 16-bit
-+		 * Write Status (01h) command is available just for the cases
-+		 * in which the QE bit is described in SR2 at BIT(1).
-+		 */
-+		sr_cr[1] = CR_QUAD_EN_SPAN;
-+	} else {
-+		sr_cr[1] = 0;
-+	}
-+
-+	sr_cr[0] = status_new;
-+
-+	ret = spi_nor_write_sr(nor, sr_cr, 2);
-+	if (ret)
-+		return ret;
-+
-+	cr_written = sr_cr[1];
-+
-+	ret = spi_nor_read_sr(nor, &sr_cr[0]);
-+	if (ret)
-+		return ret;
-+
-+	if ((sr_cr[0] & mask) != (status_new & mask)) {
-+		dev_err(nor->dev, "Read back test failed\n");
-+		return -EIO;
-+	}
-+
-+	if (nor->flags & SNOR_F_NO_READ_CR)
-+		return 0;
-+
-+	ret = spi_nor_read_cr(nor, &sr_cr[1]);
-+	if (ret)
-+		return ret;
-+
-+	if (cr_written != sr_cr[1]) {
-+		dev_err(nor->dev, "Read back test failed\n");
-+		return -EIO;
-+	}
-+
-+	return 0;
-+}
-+
-+/**
-+ * spi_nor_write_sr_and_check() - Write the Status Register and ensure the bits
-+ * in the mask match the written values.
-+ * @nor:	pointer to a 'struct spi_nor'.
-+ * status_new:	byte value to be written to the Status Register.
-+ * mask:	mask with which to check the written values.
-+ *
-+ * Return: 0 on success, -errno otherwise.
-+ */
-+static int spi_nor_write_sr_and_check(struct spi_nor *nor, u8 status_new,
-+				      u8 mask)
-+{
-+	if (nor->flags == SNOR_F_HAS_16BIT_SR)
-+		return spi_nor_write_16bit_sr_and_check(nor, status_new, mask);
-+
-+	return spi_nor_write_sr1_and_check(nor, status_new, mask);
-+}
-+
- static struct spi_nor *mtd_to_spi_nor(struct mtd_info *mtd)
- {
- 	return mtd->priv;
-@@ -1492,24 +1618,6 @@ static int spi_nor_erase(struct mtd_info *mtd, struct erase_info *instr)
- 	return ret;
- }
- 
--/* Write status register and ensure bits in mask match written values */
--static int write_sr_and_check(struct spi_nor *nor, u8 status_new, u8 mask)
+-/**
+- * spi_nor_clear_sr_bp() - clear the Status Register Block Protection bits.
+- * @nor:        pointer to a 'struct spi_nor'
+- *
+- * Read-modify-write function that clears the Block Protection bits from the
+- * Status Register without affecting other bits.
+- *
+- * Return: 0 on success, -errno otherwise.
+- */
+-static int spi_nor_clear_sr_bp(struct spi_nor *nor)
 -{
 -	int ret;
--
--	nor->bouncebuf[0] = status_new;
--
--	ret = spi_nor_write_sr(nor, &nor->bouncebuf[0], 1);
--	if (ret)
--		return ret;
+-	u8 mask = SR_BP2 | SR_BP1 | SR_BP0;
 -
 -	ret = spi_nor_read_sr(nor, &nor->bouncebuf[0]);
 -	if (ret)
 -		return ret;
 -
--	return ((nor->bouncebuf[0] & mask) != (status_new & mask)) ? -EIO : 0;
+-	nor->bouncebuf[0] &= mask;
+-
+-	ret = spi_nor_write_sr(nor, &nor->bouncebuf[0], 1);
+-
+-	return ret;
 -}
 -
- static void stm_get_locked_range(struct spi_nor *nor, u8 sr, loff_t *ofs,
- 				 uint64_t *len)
+-/**
+- * spi_nor_spansion_clear_sr_bp() - clear the Status Register Block Protection
+- * bits on spansion flashes.
+- * @nor:        pointer to a 'struct spi_nor'
+- *
+- * Read-modify-write function that clears the Block Protection bits from the
+- * Status Register without affecting other bits. The function is tightly
+- * coupled with the spi_nor_sr2_bit1_quad_enable() function. Both assume that
+- * the Write Register with 16 bits, together with the Read Configuration
+- * Register (35h) instructions are supported.
+- *
+- * Return: 0 on success, -errno otherwise.
+- */
+-static int spi_nor_spansion_clear_sr_bp(struct spi_nor *nor)
+-{
+-	int ret;
+-	u8 mask = SR_BP2 | SR_BP1 | SR_BP0;
+-	u8 *sr_cr =  nor->bouncebuf;
+-
+-	/* Check current Quad Enable bit value. */
+-	ret = spi_nor_read_cr(nor, &sr_cr[1]);
+-	if (ret)
+-		return ret;
+-
+-	/*
+-	 * When the configuration register Quad Enable bit is one, only the
+-	 * Write Status (01h) command with two data bytes may be used.
+-	 */
+-	if (sr_cr[1] & SR2_QUAD_EN_BIT1) {
+-		ret = spi_nor_read_sr(nor, &sr_cr[0]);
+-		if (ret)
+-			return ret;
+-
+-		sr_cr[0] &= ~mask;
+-
+-		ret = spi_nor_write_sr(nor, sr_cr, 2);
+-		if (ret)
+-			dev_err(nor->dev, "16-bit write register failed\n");
+-		return ret;
+-	}
+-
+-	/*
+-	 * If the Quad Enable bit is zero, use the Write Status (01h) command
+-	 * with one data byte.
+-	 */
+-	return spi_nor_clear_sr_bp(nor);
+-}
+-
+ /* Used when the "_ext_id" is two bytes at most */
+ #define INFO(_jedec_id, _ext_id, _sector_size, _n_sectors, _flags)	\
+ 		.id = {							\
+@@ -4498,6 +4425,16 @@ static int spi_nor_setup(struct spi_nor *nor,
+ 	return nor->flash.setup(nor, hwcaps);
+ }
+ 
++static void atmel_set_default_init(struct spi_nor *nor)
++{
++	nor->flags |= SNOR_F_HAS_LOCK;
++}
++
++static void intel_set_default_init(struct spi_nor *nor)
++{
++	nor->flags |= SNOR_F_HAS_LOCK;
++}
++
+ static void macronix_set_default_init(struct spi_nor *nor)
  {
-@@ -1673,7 +1781,7 @@ static int stm_lock(struct spi_nor *nor, loff_t ofs, uint64_t len)
- 	if ((status_new & mask) < (status_old & mask))
- 		return -EINVAL;
- 
--	return write_sr_and_check(nor, status_new, mask);
-+	return spi_nor_write_sr_and_check(nor, status_new, mask);
+ 	nor->flash.quad_enable = spi_nor_sr1_bit6_quad_enable;
+@@ -4511,6 +4448,11 @@ static void st_micron_set_default_init(struct spi_nor *nor)
+ 	nor->flash.set_4byte = st_micron_set_4byte;
  }
  
- /*
-@@ -1758,7 +1866,7 @@ static int stm_unlock(struct spi_nor *nor, loff_t ofs, uint64_t len)
- 	if ((status_new & mask) > (status_old & mask))
- 		return -EINVAL;
++static void sst_set_default_init(struct spi_nor *nor)
++{
++	nor->flags |= SNOR_F_HAS_LOCK;
++}
++
+ static void winbond_set_default_init(struct spi_nor *nor)
+ {
+ 	nor->flash.set_4byte = winbond_set_4byte;
+@@ -4525,6 +4467,14 @@ static void spi_nor_manufacturer_init_flash_params(struct spi_nor *nor)
+ {
+ 	/* Init flash parameters based on MFR */
+ 	switch (JEDEC_MFR(nor->info)) {
++	case SNOR_MFR_ATMEL:
++		atmel_set_default_init(nor);
++		break;
++
++	case SNOR_MFR_INTEL:
++		intel_set_default_init(nor);
++		break;
++
+ 	case SNOR_MFR_MACRONIX:
+ 		macronix_set_default_init(nor);
+ 		break;
+@@ -4534,6 +4484,10 @@ static void spi_nor_manufacturer_init_flash_params(struct spi_nor *nor)
+ 		st_micron_set_default_init(nor);
+ 		break;
  
--	return write_sr_and_check(nor, status_new, mask);
-+	return spi_nor_write_sr_and_check(nor, status_new, mask);
++	case SNOR_MFR_SST:
++		sst_set_default_init(nor);
++		break;
++
+ 	case SNOR_MFR_WINBOND:
+ 		winbond_set_default_init(nor);
+ 		break;
+@@ -4795,20 +4749,32 @@ static int spi_nor_quad_enable(struct spi_nor *nor)
+ 	return nor->flash.quad_enable(nor);
  }
  
- /*
-@@ -3536,19 +3644,39 @@ static int spi_nor_parse_bfpt(struct spi_nor *nor,
- 		break;
++/**
++ * spi_nor_unlock_all() - Unlocks the entire flash memory array.
++ * @nor:		pointer to a 'struct spi_nor'
++ *
++ * Some SPI NOR flashes are write protected by default after a power-on reset
++ * cycle, in order to avoid inadvertent writes during power-up. Backward
++ * compatibility imposes to unlock the entire flash memory array at power-up
++ * by default.
++ */
++static int spi_nor_unlock_all(struct spi_nor *nor)
++{
++	if (nor->flags & SNOR_F_HAS_LOCK)
++		return spi_nor_unlock(&nor->mtd, 0, nor->flash.size);
++
++	return 0;
++}
++
+ static int spi_nor_init(struct spi_nor *nor)
+ {
+ 	int err;
  
- 	case BFPT_DWORD15_QER_SR2_BIT1_BUGGY:
-+		/*
-+		 * Writing only one byte to the Status Register has the
-+		 * side-effect of clearing Status Register 2.
-+		 */
-+		/* fall through */
- 	case BFPT_DWORD15_QER_SR2_BIT1_NO_RD:
-+		nor->flags |= SNOR_F_HAS_16BIT_SR;
-+		/*
-+		 * Read Configuration Register (35h) instruction is not
-+		 * supported.
-+		 */
-+		nor->flags |= SNOR_F_NO_READ_CR;
- 		flash->quad_enable = spansion_no_read_cr_quad_enable;
- 		break;
+-	if (nor->clear_sr_bp) {
+-		if (nor->flash.quad_enable == spi_nor_sr2_bit1_quad_enable)
+-			nor->clear_sr_bp = spi_nor_spansion_clear_sr_bp;
+-
+-		err = nor->clear_sr_bp(nor);
+-		if (err) {
+-			dev_err(nor->dev,
+-				"fail to clear block protection bits\n");
+-			return err;
+-		}
++	err = spi_nor_unlock_all(nor);
++	if (err) {
++		dev_err(nor->dev,
++			"Failed to unlock the entire flash memory array\n");
++		return err;
+ 	}
  
- 	case BFPT_DWORD15_QER_SR1_BIT6:
-+		nor->flags &= ~SNOR_F_HAS_16BIT_SR;
- 		flash->quad_enable = macronix_quad_enable;
- 		break;
+ 	err = spi_nor_quad_enable(nor);
+@@ -4999,16 +4965,6 @@ int spi_nor_scan(struct spi_nor *nor, const char *name,
+ 	if (info->flags & SPI_NOR_HAS_LOCK)
+ 		nor->flags |= SNOR_F_HAS_LOCK;
  
- 	case BFPT_DWORD15_QER_SR2_BIT7:
-+		nor->flags &= ~SNOR_F_HAS_16BIT_SR;
- 		flash->quad_enable = sr2_bit7_quad_enable;
- 		break;
+-	/*
+-	 * Atmel, SST, Intel/Numonyx, and others serial NOR tend to power up
+-	 * with the software protection bits set.
+-	 */
+-	if (JEDEC_MFR(nor->info) == SNOR_MFR_ATMEL ||
+-	    JEDEC_MFR(nor->info) == SNOR_MFR_INTEL ||
+-	    JEDEC_MFR(nor->info) == SNOR_MFR_SST ||
+-	    nor->info->flags & SPI_NOR_HAS_LOCK)
+-		nor->clear_sr_bp = spi_nor_clear_sr_bp;
+-
+ 	/* Init flash parameters based on flash_info struct and SFDP */
+ 	spi_nor_init_flash_params(nor);
  
- 	case BFPT_DWORD15_QER_SR2_BIT1:
-+		/*
-+		 * JESD216 rev B or later does not specify if writing only one
-+		 * byte to the Status Register clears or not the Status
-+		 * Register 2, so let's be cautious and keep the default
-+		 * assumption of a 16-bit Write Status (01h) command.
-+		 */
-+		nor->flags |= SNOR_F_HAS_16BIT_SR;
- 		flash->quad_enable = spansion_read_cr_quad_enable;
- 		break;
- 
-@@ -4515,6 +4643,8 @@ static void spi_nor_info_init_flash_params(struct spi_nor *nor)
- 	flash->quad_enable = spansion_read_cr_quad_enable;
- 	flash->set_4byte = spansion_set_4byte;
- 	flash->setup = spi_nor_default_setup;
-+	/* Default to 16-bit Write Status (01h) Command */
-+	nor->flags |= SNOR_F_HAS_16BIT_SR;
- 
- 	/* Set SPI NOR sizes. */
- 	flash->size = (u64)info->sector_size * info->n_sectors;
 diff --git a/include/linux/mtd/spi-nor.h b/include/linux/mtd/spi-nor.h
-index 12961b157743..fc3a8f5209f0 100644
+index 5590a36eb43e..ca650f895903 100644
 --- a/include/linux/mtd/spi-nor.h
 +++ b/include/linux/mtd/spi-nor.h
-@@ -243,6 +243,8 @@ enum spi_nor_option_flags {
- 	SNOR_F_4B_OPCODES	= BIT(6),
- 	SNOR_F_HAS_4BAIT	= BIT(7),
- 	SNOR_F_HAS_LOCK		= BIT(8),
-+	SNOR_F_HAS_16BIT_SR	= BIT(9),
-+	SNOR_F_NO_READ_CR	= BIT(10),
- };
+@@ -578,8 +578,6 @@ struct flash_info;
+  * @write_proto:	the SPI protocol for write operations
+  * @reg_proto		the SPI protocol for read_reg/write_reg/erase operations
+  * @controller_ops:	SPI NOR controller driver specific operations.
+- * @clear_sr_bp:	[FLASH-SPECIFIC] clears the Block Protection Bits from
+- *			the SPI NOR Status Register.
+  * @flash:		SPI-NOR flash parameters and settings. The structure
+  *			includes default flash parameters and settings that can
+  *			be overwritten by the spi_nor_fixups hooks, or
+@@ -608,7 +606,6 @@ struct spi_nor {
  
- /**
+ 	const struct spi_nor_controller_ops *controller_ops;
+ 
+-	int (*clear_sr_bp)(struct spi_nor *nor);
+ 	struct spi_nor_flash_parameter flash;
+ 
+ 	void *priv;
 -- 
 2.9.5
 
