@@ -2,90 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A085AB5722
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Sep 2019 22:47:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E9DBB5968
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 03:44:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sbyG6yDKXSbFS0sH75yVoQmz2xjNq2+dmilNB67UrT4=; b=pThun7ItcBhBiN
-	EQq1fwFiVASPql3Mi4yilxTjw2RdJMvBfheWUEXnoPmjAy+17lVJXTEZQWr7Sz5r8rtWXig4FC4/T
-	Wlwa7gBFuCYWG/wYZ3eoM8m+yX0lZRjllmte1ZN6j/wdCOko30AAXO6mH781NFcwjqg2du9CRpern
-	GHs7zsDIS69g8Bq9OKUTveM5NmDQO0j6W2WbmdOIgURD4htNcW6EVdgaX7Wwj8/gz0i1MvFB2eqmi
-	TV08uQ+BgEPiFdJoNFg1pc8qxft4wu4IbiBmfgJweYHLzWziXXUCSiIau2jYNpFbci3ptoKjOm1XC
-	J4sgxilbCXXu5rKLtAUg==;
+	List-Owner; bh=1fLd2cIVHVINYIEZ42ba/TI1ifhhc1E3Gxfrvaswjkk=; b=Ex0Q55gzZzNrBo
+	SgEzqjVZ92xJT+LXBPxXHosOaUK5zlHFiCbrb5mtXK1c6FzAm/I5qGXW6RA59m+DFcOWLUj0nQe/0
+	GNVDOvlOrmDBfJEGa1wUtIRZrv0sMogZh9Eze7WKAAJVTJZrjpckiHYkiqzekURcdzTDzzQ0LMX4T
+	/xNPOC4CeTHhr01jZH7E2cIhWx6/FtOyh6EiUjS/tfPag7fkNb1ODoNF3CcPr8aepUrlzwrWJUWgS
+	boQqWblQIAhJtHFpjrbJqaB/ZVe5jeuOob1IcItXroZm2vZpwq6OJsnBIfPDiJjfk0Lttm9VqEmv2
+	KGLQggbzOiLjwKBzGk7A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAKNo-0000MQ-Tq; Tue, 17 Sep 2019 20:47:32 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1iAP1T-0004Ax-0A; Wed, 18 Sep 2019 01:44:47 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAKNk-0000LY-Sa; Tue, 17 Sep 2019 20:47:30 +0000
-Received: by mail-ot1-f66.google.com with SMTP id z26so4369221oto.1;
- Tue, 17 Sep 2019 13:47:28 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=FoSYGBaKDzCX0ap+/LUel/1p6EkFjnJkCMtNziAAsIA=;
- b=sX+V9CJJLr66mQGITFGPB96W4q0EyNTDVoax9SD3R7t+HtKt8Ir9Rkvy64iwLNGz1F
- eywlLpiSwvmtDd8er6KKbzSwrY88/ERDczqjpX3MCVLFH2sldl+4pXW0yebhnrBjXUVj
- Cjy3Dlzal9+7VstJVkcrangnYPVkcDfKoMLmULB+CnrM0DeMmkSaVCtLKhRUzTj4lO3x
- XxykWcnbAB50oZtkoz2YHlQXhcwewUcuXcSRFhMYZs0H+89dO5vFL2oRj+GgH0uOWEW2
- HEPOxHvfqDRyYNNzQqzSTaVfLUQjIVP5/j9Br/L3tniG2P1NmYaZOstnn6VWJhkcF7Qg
- qbYA==
-X-Gm-Message-State: APjAAAVHHKo7q3X+Voxdacl/GEOuLrHPtteVdGrRhGa90I4GKE9vWGfM
- Yx8hnzqGO+YCIr4WdmtwNfPB6nKiYA==
-X-Google-Smtp-Source: APXvYqz+B89UMDC9IY7k7wKv0ix99w6NLjJtzUmU9gXsyI/P+JljCrWHrrmyk4+rrKlIMXNQIZBZSg==
-X-Received: by 2002:a9d:829:: with SMTP id 38mr609273oty.372.1568753247649;
- Tue, 17 Sep 2019 13:47:27 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id e7sm994561otp.64.2019.09.17.13.47.26
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 17 Sep 2019 13:47:26 -0700 (PDT)
-Date: Tue, 17 Sep 2019 15:47:25 -0500
-From: Rob Herring <robh@kernel.org>
-To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-Subject: Re: [V2, 1/2] media: i2c: dw9768: Add DT support and MAINTAINERS entry
-Message-ID: <20190917204725.GA14339@bogus>
-References: <20190905072142.14606-1-dongchun.zhu@mediatek.com>
- <20190905072142.14606-2-dongchun.zhu@mediatek.com>
- <20190905101406.GA2680@smile.fi.intel.com>
- <20190905104829.GB5475@paasikivi.fi.intel.com>
- <20190905113509.GD2680@smile.fi.intel.com>
- <CABxcv=knP+-x0O-Ga-Dy8WTNovHk6GfX4ZEv0vVjnQvwchuVzg@mail.gmail.com>
- <20190905120012.GD5475@paasikivi.fi.intel.com>
- <20190905122449.GG2680@smile.fi.intel.com>
+ id 1iAP1B-00041S-Ke; Wed, 18 Sep 2019 01:44:31 +0000
+X-UUID: 4df497f9f0d740178258c068040f2b45-20190917
+X-UUID: 4df497f9f0d740178258c068040f2b45-20190917
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <neal.liu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 218659206; Tue, 17 Sep 2019 17:44:17 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 17 Sep 2019 18:44:17 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 18 Sep 2019 09:44:16 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 18 Sep 2019 09:44:16 +0800
+Message-ID: <1568771054.21700.7.camel@mtkswgap22>
+Subject: Re: [PATCH v4 2/3] dt-bindings: rng: add bindings for MediaTek
+ ARMv8 SoCs
+From: Neal Liu <neal.liu@mediatek.com>
+To: Rob Herring <robh@kernel.org>
+Date: Wed, 18 Sep 2019 09:44:14 +0800
+In-Reply-To: <CAL_Jsq+SRhd=-5O2G_CMfJX9Z188kvA05MQOXaU1J8iExwUixQ@mail.gmail.com>
+References: <1561361052-13072-1-git-send-email-neal.liu@mediatek.com>
+ <1561361052-13072-3-git-send-email-neal.liu@mediatek.com>
+ <20190722171320.GA9806@bogus> <1563848465.31451.4.camel@mtkswgap22>
+ <CAL_Jsq+SRhd=-5O2G_CMfJX9Z188kvA05MQOXaU1J8iExwUixQ@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190905122449.GG2680@smile.fi.intel.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_134728_927213_92AC8533 
-X-CRM114-Status: UNSURE (   9.50  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.6 (/)
+X-CRM114-CacheID: sfid-20190917_184429_687219_109EBE4C 
+X-CRM114-Status: GOOD (  28.64  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.6 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,34 +76,115 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- drinkcat@chromium.org, srv_heupstream@mediatek.com, sam.hung@mediatek.com,
- shengnan.wang@mediatek.com, Tomasz Figa <tfiga@chromium.org>,
- sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
- dongchun.zhu@mediatek.com, Sakari Ailus <sakari.ailus@linux.intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, bingbu.cao@intel.com,
- Javier Martinez Canillas <javier@dowhile0.org>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Herbert Xu <herbert@gondor.apana.org.au>,
+ wsd_upstream <wsd_upstream@mediatek.com>, Sean Wang <sean.wang@kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Neal Liu <neal.liu@mediatek.com>,
+ Crystal Guo =?UTF-8?Q?=28=E9=83=AD=E6=99=B6=29?= <Crystal.Guo@mediatek.com>,
+ "linux-crypto@vger.kernel.org" <linux-crypto@vger.kernel.org>,
+ Matt Mackall <mpm@selenic.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Sep 05, 2019 at 03:24:49PM +0300, Andy Shevchenko wrote:
-> On Thu, Sep 05, 2019 at 03:00:12PM +0300, Sakari Ailus wrote:
+On Tue, 2019-07-23 at 22:35 +0800, Rob Herring wrote:
+> On Mon, Jul 22, 2019 at 8:21 PM Neal Liu <neal.liu@mediatek.com> wrote:
+> >
 > 
-> > And I see no reason to add a separate patch just for
-> > MAINTAINERS change.
+> Please don't top post to lists.
 > 
-> It's up to maintainers of the subsystem.
+> > Dear Rob,
+> >         You can check my driver for detail:
+> >         http://patchwork.kernel.org/patch/11012475/ or patchset 3/3
+> 
+> I could, or you could just answer my question.
+> 
+> >
+> >         This driver is registered as hardware random number generator, and
+> > combines with rng-core.
+> >         We want to add one rng hw based on the dts. Is this proper or do you
+> > have other suggestion to meet this requirement?
+> 
+> It depends. There doesn't appear to be any resource configuration, so
+> why does it need to be in DT. DT is not the only way instantiate
+> drivers.
+> 
+> Rob
+> 
 
-Just update MAINTAINERS with the driver. It doesn't need to be so 
-complicated or per subsystem. There's enough of what each maintainer 
-wants already.
+We would like to consult more about this patch.
+We cannot figure out what method should be used instead of DT.
+The interface to access firmware is "smc" and firmware function only
+exists on certain platforms.
+Some DT has similar way, like:
+http://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/hisilicon/hi6220-hikey.dts#L470
 
-Rob
+	firmware {
+		optee {
+			compatible = "linaro,optee-tz";
+			method = "smc";
+		};
+	};
+
+Is there any way to instantiate driver on certain platforms without DT?
+Could you give us some examples?
+Thanks
+
+> >
+> >         Thanks
+> >
+> >
+> > On Tue, 2019-07-23 at 01:13 +0800, Rob Herring wrote:
+> > > On Mon, Jun 24, 2019 at 03:24:11PM +0800, Neal Liu wrote:
+> > > > Document the binding used by the MediaTek ARMv8 SoCs random
+> > > > number generator with TrustZone enabled.
+> > > >
+> > > > Signed-off-by: Neal Liu <neal.liu@mediatek.com>
+> > > > ---
+> > > >  .../devicetree/bindings/rng/mtk-sec-rng.txt        |   10 ++++++++++
+> > > >  1 file changed, 10 insertions(+)
+> > > >  create mode 100644 Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > > >
+> > > > diff --git a/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > > > new file mode 100644
+> > > > index 0000000..c04ce15
+> > > > --- /dev/null
+> > > > +++ b/Documentation/devicetree/bindings/rng/mtk-sec-rng.txt
+> > > > @@ -0,0 +1,10 @@
+> > > > +MediaTek random number generator with TrustZone enabled
+> > > > +
+> > > > +Required properties:
+> > > > +- compatible : Should be "mediatek,mtk-sec-rng"
+> > >
+> > > What's the interface to access this?
+> > >
+> > > A node with a 'compatible' and nothing else is a sign of something that
+> > > a parent device should instantiate and doesn't need to be in DT. IOW,
+> > > what do complete bindings for firmware functions look like?
+> > >
+> > > > +
+> > > > +Example:
+> > > > +
+> > > > +hwrng: hwrng {
+> > > > +   compatible = "mediatek,mtk-sec-rng";
+> > > > +}
+> > > > --
+> > > > 1.7.9.5
+> > > >
+> > >
+> > > _______________________________________________
+> > > Linux-mediatek mailing list
+> > > Linux-mediatek@lists.infradead.org
+> > > http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> >
+> >
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
