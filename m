@@ -2,56 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1343EB5F6F
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 10:48:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 67660B6022
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 11:29:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ks8PsbxBXUwqp6aOqKOKlCMBcQlekZvK2WN44jumwXU=; b=pjroe6xr++cV1m
-	qTtV5PxU6pxjNcDOSSUWomC7tpxqSr9ARQgwsb/Oy+O51eaQVvF8CF40yXBToWIGulNm8z3Y6J/4s
-	aHMXDCfthjZKgLsIChfTyxs0GbOCmqg8I0Ufmh4dAd4zDiUFroHNjL9upXMQSXK1hCtNC5Zd9Lzu/
-	7wtpwdINV1qW4A+s63/GGkx4UdZSIBGiQVkszRxJ6ksUx9YY3P0g69lzS4txWgYGthVDAQKPUStF1
-	RyqCkOjRrcxJ1I5Bqf5gFy70Vz2yaUso9ty1E9oi6X/2RJYDGNfeMoQW4VeEGYO9FmkzlMXZugGCb
-	YoE/BZSeEGpvGHGiO3pw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=1cxAv0Dtz7R9lw9WF7R0zmQysKExZOCgc+vn6M38oFc=; b=X9voMXXTUeVjL9
+	SGUw0N+fctbqSDAbHNgAV0uBZVxWo2LRf8co5w5IQbz4EImMG2SRJCKeh33o+RJB958NXaMjMzIEh
+	CzdlS6TgGYtfUg5n0XxHzJRMr5tHOths+6E4JFrnES73O+Z22fwNUcFFyg5Kf1vv7aJk2XghMPTww
+	sP+QmIswCEG01KRKEOKsbW/ossGzns7sbfSfsMDqt0LTZolBdzTKlhw+bQTpln3EmhLLdWcm9Udva
+	pc+PAgXUIjOX47A2wpXFqDn2JeH4lDcMvOXVAd6W71TmntdPL1oA7IK9AHAo+Ypw1fYM+qN2q3uho
+	LUq2OIeUkF/0b41ZQEVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAVd0-0005oT-Ua; Wed, 18 Sep 2019 08:47:58 +0000
-Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
+	id 1iAWGy-0003wo-2I; Wed, 18 Sep 2019 09:29:16 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAVcx-0005nN-Hl
- for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 08:47:57 +0000
-Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
- by metis.ext.pengutronix.de with esmtps
- (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <ukl@pengutronix.de>)
- id 1iAVcr-0001B8-T8; Wed, 18 Sep 2019 10:47:49 +0200
-Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
- (envelope-from <ukl@pengutronix.de>)
- id 1iAVcq-0007mf-Bu; Wed, 18 Sep 2019 10:47:48 +0200
-Date: Wed, 18 Sep 2019 10:47:48 +0200
-From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
-To: Peter Rosin <peda@axentia.se>, Rob Herring <robh+dt@kernel.org>,
- Frank Rowand <frowand.list@gmail.com>
-Subject: [PATCH v2] of: restore old handling of cells_name=NULL in
- of_*_phandle_with_args()
-Message-ID: <20190918084748.hnjkiq7wc5b35wjh@pengutronix.de>
-References: <20190918063837.8196-1-u.kleine-koenig@pengutronix.de>
- <b00ca30f-2c06-7722-96b2-123d15751cb6@axentia.se>
+ id 1iAWGu-0003wQ-ET
+ for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 09:29:13 +0000
+X-UUID: bbe5f88e06174e508c6ab89d4c216e82-20190918
+X-UUID: bbe5f88e06174e508c6ab89d4c216e82-20190918
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <sam.shih@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2028565341; Wed, 18 Sep 2019 01:29:06 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 18 Sep 2019 02:29:06 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 18 Sep 2019 17:29:07 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 18 Sep 2019 17:29:05 +0800
+From: Sam Shih <sam.shih@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
+ <thierry.reding@gmail.com>
+Subject: [PATCH v8 0/11] Add mt7629 and fix mt7628 pwm
+Date: Wed, 18 Sep 2019 17:28:48 +0800
+Message-ID: <1568798939-16038-1-git-send-email-sam.shih@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <b00ca30f-2c06-7722-96b2-123d15751cb6@axentia.se>
-User-Agent: NeoMutt/20170113 (1.7.2)
-X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
-X-SA-Exim-Mail-From: ukl@pengutronix.de
-X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
- SAEximRunCond expanded to false
-X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_014755_589160_B9CDFDB7 
-X-CRM114-Status: GOOD (  24.03  )
+X-CRM114-CacheID: sfid-20190918_022912_495496_840931B7 
+X-CRM114-Status: GOOD (  12.11  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -59,6 +58,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,190 +71,88 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Geert Uytterhoeven <geert+renesas@glider.be>,
- Robin Murphy <robin.murphy@arm.com>, Joerg Roedel <joro@8bytes.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "kernel@pengutronix.de" <kernel@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Geert Uytterhoeven <geert@linux-m68k.org>, Will Deacon <will@kernel.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Marek Szyprowski <m.szyprowski@samsung.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
+ devicetree@vger.kernel.org, Sam
+ Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Before commit e42ee61017f5 ("of: Let of_for_each_phandle fallback to
-non-negative cell_count") the iterator functions calling
-of_for_each_phandle assumed a cell count of 0 if cells_name was NULL.
-This corner case was missed when implementing the fallback logic in
-e42ee61017f5 and resulted in an endless loop.
+Changes since v8:
+  1. Fix warning and build-error for patch 04/11
 
-Restore the old behaviour of of_count_phandle_with_args() and
-of_parse_phandle_with_args() and add a check to
-of_phandle_iterator_init() to prevent a similar failure as a safety
-precaution. of_parse_phandle_with_args_map() doesn't need a similar fix
-as cells_name isn't NULL there.
+Changes since v7:
+  1. PATCH v7 10/11: Add a missed Reviewed-by tag
 
-Affected drivers are:
- - drivers/base/power/domain.c
- - drivers/base/power/domain.c
- - drivers/clk/ti/clk-dra7-atl.c
- - drivers/hwmon/ibmpowernv.c
- - drivers/i2c/muxes/i2c-demux-pinctrl.c
- - drivers/iommu/mtk_iommu.c
- - drivers/net/ethernet/freescale/fman/mac.c
- - drivers/opp/of.c
- - drivers/perf/arm_dsu_pmu.c
- - drivers/regulator/of_regulator.c
- - drivers/remoteproc/imx_rproc.c
- - drivers/soc/rockchip/pm_domains.c
- - sound/soc/fsl/imx-audmix.c
- - sound/soc/fsl/imx-audmix.c
- - sound/soc/meson/axg-card.c
- - sound/soc/samsung/tm2_wm5110.c
- - sound/soc/samsung/tm2_wm5110.c
+Changes since v6:
+  1. Due to we can use fixed-clock in DT
+     We removed has_clks and fixed-clock properties 
 
-Thanks to Geert Uytterhoeven for reporting the issue, Peter Rosin for
-helping pinpoint the actual problem and the testers for confirming this
-fix.
+Changes since v5:
+- Follow reviewer's comments:
+  1. the license stuff is a separate change
+  2. split fix mt7628 pwm into a single patch
+  3. to ensure to not use mtk_pwm_clk_name[10] 
+     (After dynamic allocate clock array patch, 
+      this is no need to check)
+  4. Use clock-frequency property to replace 
+     the use of has_clks
 
-Fixes: e42ee61017f5 ("of: Let of_for_each_phandle fallback to non-negative =
-cell_count")
-Tested-by: Marek Szyprowski <m.szyprowski@samsung.com>
-Tested-by: Geert Uytterhoeven <geert+renesas@glider.be>
-Signed-off-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
----
+Changes since v4:
+- Follow reviewer's comments (v3: pwm: mediatek: add a property "num-pwms")
+  Move the changes of droping the check for of_device_get_match_data
+  returning non-NULL to next patch
+- Follow reviewers's comments 
+  (v3: pwm: mediatek: allocate the clks array dynamically)
+  1. use pc->soc->has_clks to check clocks exist or not.
+  2. Add error message when probe() unable to get clks
+- Fixes bug when SoC is old mips which has no complex clock tree.
+if clocks not exist, use the new property from DT to apply period 
+calculation; otherwise, use clk_get_rate to get clock frequency and 
+apply period calculation.
 
-On Wed, Sep 18, 2019 at 08:01:05AM +0000, Peter Rosin wrote:
-> On 2019-09-18 08:38, Uwe Kleine-K=F6nig wrote:
-> >  EXPORT_SYMBOL(of_parse_phandle_with_args);
-> >  =
+Changes since v3:
+- add a new property "clock-frequency" and fix mt7628 pwm
+- add mt7629 pwm support
 
-> > @@ -1765,6 +1779,18 @@ int of_count_phandle_with_args(const struct devi=
-ce_node *np, const char *list_na
-> >  	struct of_phandle_iterator it;
-> >  	int rc, cur_index =3D 0;
-> >  =
+Changes since v2:
+- use num-pwms instead of mediatek,num-pwms.
+- rename the member from num_pwms to fallback_num_pwms to make it 
+  more obvious that it doesn't represent the actually used value.
+- add a dev_warn and a expressive comment to help other developers 
+  to not start adding num_pwms in the compatible_data.
 
-> > +	/* If cells_name is NULL we assume a cell count of 0 */
-> > +	if (cells_name =3D=3D NULL) {
-> =
-
-> A couple of nits.
-> =
-
-> I don't know if there are other considerations, but in the previous two
-> hunks you use !cells_name instead of comparing explicitly with NULL.
-> Personally, I find the shorter form more readable, and in the name of
-> consistency bla bla...
-
-Ack, changed to !cells_name here, too.
-
-> =
-
-> Also, the comment explaining this NULL-check didn't really make sense
-> to me until I realized that knowing the cell count to be zero makes
-> counting trivial. Something along those lines should perhaps be in the
-> comment?
-
-You're right, I extended the comment a bit.
- =
-
-> But as I said, these are nits. Feel free to ignore.
-
-I considered resending already anyhow as I fatfingerd my email address.
-this is fixed now, too. Additionally I fixed a typo in one of the
-comments.
-
-Thanks for your feedback.
-
-Best regards
-Uwe
-
- drivers/of/base.c | 35 +++++++++++++++++++++++++++++++++--
- 1 file changed, 33 insertions(+), 2 deletions(-)
-
-diff --git a/drivers/of/base.c b/drivers/of/base.c
-index 2f25d2dfecfa..1d667eb730e1 100644
---- a/drivers/of/base.c
-+++ b/drivers/of/base.c
-@@ -1286,6 +1286,13 @@ int of_phandle_iterator_init(struct of_phandle_itera=
-tor *it,
- =
-
- 	memset(it, 0, sizeof(*it));
- =
-
-+	/*
-+	 * one of cell_count or cells_name must be provided to determine the
-+	 * argument length.
-+	 */
-+	if (cell_count < 0 && !cells_name)
-+		return -EINVAL;
-+
- 	list =3D of_get_property(np, list_name, &size);
- 	if (!list)
- 		return -ENOENT;
-@@ -1512,10 +1519,17 @@ int of_parse_phandle_with_args(const struct device_=
-node *np, const char *list_na
- 				const char *cells_name, int index,
- 				struct of_phandle_args *out_args)
- {
-+	int cell_count =3D -1;
-+
- 	if (index < 0)
- 		return -EINVAL;
--	return __of_parse_phandle_with_args(np, list_name, cells_name, -1,
--					    index, out_args);
-+
-+	/* If cells_name is NULL we assume a cell count of 0 */
-+	if (!cells_name)
-+		cell_count =3D 0;
-+
-+	return __of_parse_phandle_with_args(np, list_name, cells_name,
-+					    cell_count, index, out_args);
- }
- EXPORT_SYMBOL(of_parse_phandle_with_args);
- =
-
-@@ -1765,6 +1779,23 @@ int of_count_phandle_with_args(const struct device_n=
-ode *np, const char *list_na
- 	struct of_phandle_iterator it;
- 	int rc, cur_index =3D 0;
- =
-
-+	/*
-+	 * If cells_name is NULL we assume a cell count of 0. This makes
-+	 * counting the phandles trivial as each 32bit word in the list is a
-+	 * phandle and no arguments are to consider. So we don't iterate through
-+	 * the list but just use the length to determine the phandle count.
-+	 */
-+	if (!cells_name) {
-+		const __be32 *list;
-+		int size;
-+
-+		list =3D of_get_property(np, list_name, &size);
-+		if (!list)
-+			return -ENOENT;
-+
-+		return size / sizeof(*list);
-+	}
-+
- 	rc =3D of_phandle_iterator_init(&it, np, list_name, cells_name, -1);
- 	if (rc)
- 		return rc;
--- =
-
-2.23.0
+Changes since v1:
+- add some checks for backwards compatibility.
 
 
--- =
+Ryder Lee (5):
+  pwm: mediatek: add a property "num-pwms"
+  dt-bindings: pwm: add a property "num-pwms"
+  arm64: dts: mt7622: add a property "num-pwms" for PWM
+  arm: dts: mt7623: add a property "num-pwms" for PWM
+  dt-bindings: pwm: update bindings for MT7629 SoC
 
-Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
-Industrial Linux Solutions                 | http://www.pengutronix.de/  |
+Sam Shih (6):
+  pwm: mediatek: droping the check for of_device_get_match_data
+  pwm: mediatek: remove a property "has-clks"
+  pwm: mediatek: allocate the clks array dynamically
+  pwm: mediatek: use pwm_mediatek as common prefix
+  pwm: mediatek: update license and switch to SPDX tag
+  arm: dts: mediatek: add mt7629 pwm support
+
+ .../devicetree/bindings/pwm/pwm-mediatek.txt  |   8 +-
+ arch/arm/boot/dts/mt7623.dtsi                 |   1 +
+ arch/arm64/boot/dts/mediatek/mt7622.dtsi      |   1 +
+ drivers/pwm/pwm-mediatek.c                    | 245 +++++++++---------
+ arch/arm/boot/dts/mt7629.dtsi                 | 16 ++++++++++++++++
+ 5 files changed, 149 insertions(+), 122 deletions(-)
+
+-- 
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
