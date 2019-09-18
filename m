@@ -2,56 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5D40B5B19
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 07:50:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 49BDCB5B1D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 07:51:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ghn3t9rOti/HrnktOWRpn7vMpYjaHtd2rl9VVtHPqUk=; b=rNBHRxNLh6EZq0
-	REtWGomBxYoFvaArSTeCBu+EZ3ftytGEgYtleGvEqecbuaDgOjSPHGaVIWU/UVsYpZCVwa3lpiqSW
-	3fYc4aMS7FjBWuSaHH5IzSIfx90yGiDdfwK44y1ETvObXOeCeXYL06aCKm00oOcFNA4NaAFPlzj/b
-	Kpu4W4iYZoCcwdP2/302cTZmmD1tK4WWXQtU/FotegxIZLQtOFfivImSH9C25Zo6U1jOIhSDQJKzj
-	AoG0sqgo3VExOxCsZWUgA4qarO2BMAzeJmpPmbODRCHYRDM7dhdFtzLlJP+n80pwpiXtewQM8/hCT
-	zdQsv8rX2Yf4Sq/6jUsw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=gpE72fxjAW1LrqrPwIwVDQQX9zZoS9JxrpM6rEGEwyo=; b=cWCZrfIj1NzmD8
+	1eSstVzePDJnaEWGjJlAuDYhG2B8ffB/N0ObUCMs/a1EMpfUUKFC1RBRnK1y+YND/tcy37IvxM30L
+	R6ExV2o0ylu6V/syn2mYuZAQOAirGpZyGMOvB4xLZ5lP3pHNu1FJyQ0qPpmqWthbkXMv/WHF22WHo
+	LP3c1Pce4Whn4d9mxjzNZvxMHfdR3e/rcpqqWhuXlG33tTfv8VSf2TdAqw/vO6I00xdWD/DazLfTm
+	CxlLz7qLQb9kREMVlq6oa2sHGrN1Z2vUi0e3LfwAdOMF/zo3GROg1POIffK+tkL5SEKDzTNwbpztb
+	0wSrfYjIy2CBTTj0QCRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iASrW-0001fG-Th; Wed, 18 Sep 2019 05:50:46 +0000
+	id 1iASrd-0001hI-Ni; Wed, 18 Sep 2019 05:50:53 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iASrS-0001ew-SI
- for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 05:50:44 +0000
-X-UUID: 4ea6d13b29db4c95aaf594dcbb79f552-20190917
-X-UUID: 4ea6d13b29db4c95aaf594dcbb79f552-20190917
+ id 1iASra-0001gX-KG
+ for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 05:50:52 +0000
+X-UUID: 3f3e50d0ef2745199581885a42bb8e27-20190917
+X-UUID: 3f3e50d0ef2745199581885a42bb8e27-20190917
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1750901166; Tue, 17 Sep 2019 21:50:32 -0800
+ with ESMTP id 558207973; Tue, 17 Sep 2019 21:50:45 -0800
 Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Sep 2019 22:50:31 -0700
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 17 Sep 2019 22:50:43 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Sep 2019 13:50:18 +0800
+ 15.0.1395.4; Wed, 18 Sep 2019 13:50:42 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 18 Sep 2019 13:50:17 +0800
+ Frontend Transport; Wed, 18 Sep 2019 13:50:42 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [RESEND, PATCH v7 0/11] Add mt7629 and fix mt7628 pwm
-Date: Wed, 18 Sep 2019 13:50:00 +0800
-Message-ID: <1568785811-9577-1-git-send-email-sam.shih@mediatek.com>
+Subject: [RESEND, PATCH v7 01/11] pwm: mediatek: add a property "num-pwms"
+Date: Wed, 18 Sep 2019 13:50:01 +0800
+Message-ID: <1568785811-9577-2-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1568785811-9577-1-git-send-email-sam.shih@mediatek.com>
+References: <1568785811-9577-1-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 1C15DC248C2AA0060FA28BF0FF0EA24D4EB79AE3C1434E825C8362ED6FEB84CC2000:8
+X-TM-SNTS-SMTP: 1347664C6F7E73BDB408E2202F3D1D6432203DC7537E3F021BB2C4F98D025ED82000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190917_225042_923236_7DCF13A8 
-X-CRM114-Status: GOOD (  12.01  )
+X-CRM114-CacheID: sfid-20190917_225050_668723_0C7741CD 
+X-CRM114-Status: GOOD (  13.43  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -76,85 +78,72 @@ Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
  devicetree@vger.kernel.org, Sam
  Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
  linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-A gentle ping on this whole patch series
-
-Changes since v7:
-  1. PATCH v7 10/11: Add a missed Reviewed-by tag
-
-Changes since v6:
-  1. Due to we can use fixed-clock in DT
-     We removed has_clks and fixed-clock properties 
-
-Changes since v5:
-- Follow reviewer's comments:
-  1. the license stuff is a separate change
-  2. split fix mt7628 pwm into a single patch
-  3. to ensure to not use mtk_pwm_clk_name[10] 
-     (After dynamic allocate clock array patch, 
-      this is no need to check)
-  4. Use clock-frequency property to replace 
-     the use of has_clks
-
-Changes since v4:
-- Follow reviewer's comments (v3: pwm: mediatek: add a property "num-pwms")
-  Move the changes of droping the check for of_device_get_match_data
-  returning non-NULL to next patch
-- Follow reviewers's comments 
-  (v3: pwm: mediatek: allocate the clks array dynamically)
-  1. use pc->soc->has_clks to check clocks exist or not.
-  2. Add error message when probe() unable to get clks
-- Fixes bug when SoC is old mips which has no complex clock tree.
-if clocks not exist, use the new property from DT to apply period 
-calculation; otherwise, use clk_get_rate to get clock frequency and 
-apply period calculation.
-
-Changes since v3:
-- add a new property "clock-frequency" and fix mt7628 pwm
-- add mt7629 pwm support
-
-Changes since v2:
-- use num-pwms instead of mediatek,num-pwms.
-- rename the member from num_pwms to fallback_num_pwms to make it 
-  more obvious that it doesn't represent the actually used value.
-- add a dev_warn and a expressive comment to help other developers 
-  to not start adding num_pwms in the compatible_data.
-
-Changes since v1:
-- add some checks for backwards compatibility.
-
-
-Ryder Lee (5):
-  pwm: mediatek: add a property "num-pwms"
-  dt-bindings: pwm: add a property "num-pwms"
-  arm64: dts: mt7622: add a property "num-pwms" for PWM
-  arm: dts: mt7623: add a property "num-pwms" for PWM
-  dt-bindings: pwm: update bindings for MT7629 SoC
-
-Sam Shih (6):
-  pwm: mediatek: droping the check for of_device_get_match_data
-  pwm: mediatek: remove a property "has-clks"
-  pwm: mediatek: allocate the clks array dynamically
-  pwm: mediatek: use pwm_mediatek as common prefix
-  pwm: mediatek: update license and switch to SPDX tag
-  arm: dts: mediatek: add mt7629 pwm support
-
- .../devicetree/bindings/pwm/pwm-mediatek.txt  |   8 +-
- arch/arm/boot/dts/mt7623.dtsi                 |   1 +
- arch/arm64/boot/dts/mediatek/mt7622.dtsi      |   1 +
- drivers/pwm/pwm-mediatek.c                    | 245 +++++++++---------
- arch/arm/boot/dts/mt7629.dtsi                 | 16 ++++++++++++++++
- 5 files changed, 149 insertions(+), 122 deletions(-)
-
--- 
-2.17.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+RnJvbTogUnlkZXIgTGVlIDxyeWRlci5sZWVAbWVkaWF0ZWsuY29tPgoKVGhpcyBhZGRzIGEgcHJv
+cGVydHkgIm51bS1wd21zIiB0byBhdm9pZCBoYXZpbmcgYW4gZW5kbGVzcwpsaXN0IG9mIGNvbXBh
+dGlibGVzIHdpdGggbm8gZGlmZmVyZW5jZXMgZm9yIHRoZSBzYW1lIGRyaXZlci4KClNpZ25lZC1v
+ZmYtYnk6IFJ5ZGVyIExlZSA8cnlkZXIubGVlQG1lZGlhdGVrLmNvbT4KU2lnbmVkLW9mZi1ieTog
+U2FtIFNoaWggPHNhbS5zaGloQG1lZGlhdGVrLmNvbT4KUmV2aWV3ZWQtYnk6IFV3ZSBLbGVpbmUt
+S8O2bmlnIDx1LmtsZWluZS1rb2VuaWdAcGVuZ3V0cm9uaXguZGU+Ci0tLQpDaGFuZ2VzIHNpbmNl
+IHY2OgpBZGQgYSBSZXZpZXdlZC1ieSB0YWcKCkNoYW5nZXMgc2luY2UgdjU6CkNoZWNrIG51bS1w
+d21zIHZhbHVlIGlzIG5vIG1vcmUgdGhhbiBNVEtfQ0xLX01BWCAtIDIgKE1BSU4gKyBUT1ApCgpD
+aGFuZ2VzIHNpbmNlIHY0OgpGb2xsb3cgcmV2aWV3ZXIncyBjb21tZW50czoKTW92ZSB0aGUgY2hh
+bmdlcyBvZiBkcm9waW5nIHRoZSBjaGVjayBmb3Igb2ZfZGV2aWNlX2dldF9tYXRjaF9kYXRhIHJl
+dHVybmluZyBub24tTlVMTCB0byBuZXh0IHBhdGNoCgoKLS0tCiBkcml2ZXJzL3B3bS9wd20tbWVk
+aWF0ZWsuYyB8IDM2ICsrKysrKysrKysrKysrKysrKysrKysrKysrKystLS0tLS0tLQogMSBmaWxl
+IGNoYW5nZWQsIDI4IGluc2VydGlvbnMoKyksIDggZGVsZXRpb25zKC0pCgpkaWZmIC0tZ2l0IGEv
+ZHJpdmVycy9wd20vcHdtLW1lZGlhdGVrLmMgYi9kcml2ZXJzL3B3bS9wd20tbWVkaWF0ZWsuYwpp
+bmRleCBlYjY2NzRjZTk5NWYuLmUyMTRmNGY1NzEwNyAxMDA2NDQKLS0tIGEvZHJpdmVycy9wd20v
+cHdtLW1lZGlhdGVrLmMKKysrIGIvZHJpdmVycy9wd20vcHdtLW1lZGlhdGVrLmMKQEAgLTU1LDcg
+KzU1LDcgQEAgc3RhdGljIGNvbnN0IGNoYXIgKiBjb25zdCBtdGtfcHdtX2Nsa19uYW1lW01US19D
+TEtfTUFYXSA9IHsKIH07CiAKIHN0cnVjdCBtdGtfcHdtX3BsYXRmb3JtX2RhdGEgewotCXVuc2ln
+bmVkIGludCBudW1fcHdtczsKKwl1bnNpZ25lZCBpbnQgZmFsbGJhY2tfbnB3bXM7CiAJYm9vbCBw
+d200NV9maXh1cDsKIAlib29sIGhhc19jbGtzOwogfTsKQEAgLTIyNyw5ICsyMjcsMTAgQEAgc3Rh
+dGljIGNvbnN0IHN0cnVjdCBwd21fb3BzIG10a19wd21fb3BzID0gewogc3RhdGljIGludCBtdGtf
+cHdtX3Byb2JlKHN0cnVjdCBwbGF0Zm9ybV9kZXZpY2UgKnBkZXYpCiB7CiAJY29uc3Qgc3RydWN0
+IG10a19wd21fcGxhdGZvcm1fZGF0YSAqZGF0YTsKKwlzdHJ1Y3QgZGV2aWNlX25vZGUgKm5wID0g
+cGRldi0+ZGV2Lm9mX25vZGU7CiAJc3RydWN0IG10a19wd21fY2hpcCAqcGM7CiAJc3RydWN0IHJl
+c291cmNlICpyZXM7Ci0JdW5zaWduZWQgaW50IGk7CisJdW5zaWduZWQgaW50IGksIG5wd21zOwog
+CWludCByZXQ7CiAKIAlwYyA9IGRldm1fa3phbGxvYygmcGRldi0+ZGV2LCBzaXplb2YoKnBjKSwg
+R0ZQX0tFUk5FTCk7CkBAIC0yNDYsNyArMjQ3LDI2IEBAIHN0YXRpYyBpbnQgbXRrX3B3bV9wcm9i
+ZShzdHJ1Y3QgcGxhdGZvcm1fZGV2aWNlICpwZGV2KQogCWlmIChJU19FUlIocGMtPnJlZ3MpKQog
+CQlyZXR1cm4gUFRSX0VSUihwYy0+cmVncyk7CiAKLQlmb3IgKGkgPSAwOyBpIDwgZGF0YS0+bnVt
+X3B3bXMgKyAyICYmIHBjLT5zb2MtPmhhc19jbGtzOyBpKyspIHsKKwlyZXQgPSBvZl9wcm9wZXJ0
+eV9yZWFkX3UzMihucCwgIm51bS1wd21zIiwgJm5wd21zKTsKKwlpZiAocmV0IDwgMCkgeworCQkv
+KiBJdCdzIGRlcHJlY2F0ZWQsIHdlIHNob3VsZCBzcGVjaWZ5IG51bV9wd21zIHZpYSBEVCBub3cu
+ICovCisJCWlmIChwYy0+c29jLT5mYWxsYmFja19ucHdtcykgeworCQkJbnB3bXMgPSBwYy0+c29j
+LT5mYWxsYmFja19ucHdtczsKKwkJCWRldl93YXJuKCZwZGV2LT5kZXYsICJEVCBpcyBvdXRkYXRl
+ZCwgcGxlYXNlIHVwZGF0ZSBpdFxuIik7CisJCX0gZWxzZSB7CisJCQlkZXZfZXJyKCZwZGV2LT5k
+ZXYsICJmYWlsZWQgdG8gZ2V0IG51bWJlciBvZiBQV01zXG4iKTsKKwkJCXJldHVybiByZXQ7CisJ
+CX0KKwl9CisKKwkvKiBNQUlOICsgVE9QICsgTlBXTSA8IE1US19DTEtfTUFYICovCisJaWYgKChu
+cHdtcyArIDIpID4gTVRLX0NMS19NQVgpIHsKKwkJZGV2X3dhcm4oJnBkZXYtPmRldiwgIm51bWJl
+ciBvZiBQV01zIGlzIGxhcmdlciB0aGFuICVkXG4iLAorCQkJIE1US19DTEtfTUFYIC0gMik7CisJ
+CW5wd21zID0gTVRLX0NMS19NQVggLSAyOworCX0KKworCWZvciAoaSA9IDA7IGkgPCBucHdtcyAr
+IDIgJiYgcGMtPnNvYy0+aGFzX2Nsa3M7IGkrKykgewogCQlwYy0+Y2xrc1tpXSA9IGRldm1fY2xr
+X2dldCgmcGRldi0+ZGV2LCBtdGtfcHdtX2Nsa19uYW1lW2ldKTsKIAkJaWYgKElTX0VSUihwYy0+
+Y2xrc1tpXSkpIHsKIAkJCWRldl9lcnIoJnBkZXYtPmRldiwgImNsb2NrOiAlcyBmYWlsOiAlbGRc
+biIsCkBAIC0yNjAsNyArMjgwLDcgQEAgc3RhdGljIGludCBtdGtfcHdtX3Byb2JlKHN0cnVjdCBw
+bGF0Zm9ybV9kZXZpY2UgKnBkZXYpCiAJcGMtPmNoaXAuZGV2ID0gJnBkZXYtPmRldjsKIAlwYy0+
+Y2hpcC5vcHMgPSAmbXRrX3B3bV9vcHM7CiAJcGMtPmNoaXAuYmFzZSA9IC0xOwotCXBjLT5jaGlw
+Lm5wd20gPSBkYXRhLT5udW1fcHdtczsKKwlwYy0+Y2hpcC5ucHdtID0gbnB3bXM7CiAKIAlyZXQg
+PSBwd21jaGlwX2FkZCgmcGMtPmNoaXApOwogCWlmIChyZXQgPCAwKSB7CkBAIC0yNzksMjUgKzI5
+OSwyNSBAQCBzdGF0aWMgaW50IG10a19wd21fcmVtb3ZlKHN0cnVjdCBwbGF0Zm9ybV9kZXZpY2Ug
+KnBkZXYpCiB9CiAKIHN0YXRpYyBjb25zdCBzdHJ1Y3QgbXRrX3B3bV9wbGF0Zm9ybV9kYXRhIG10
+MjcxMl9wd21fZGF0YSA9IHsKLQkubnVtX3B3bXMgPSA4LAorCS5mYWxsYmFja19ucHdtcyA9IDgs
+CiAJLnB3bTQ1X2ZpeHVwID0gZmFsc2UsCiAJLmhhc19jbGtzID0gdHJ1ZSwKIH07CiAKIHN0YXRp
+YyBjb25zdCBzdHJ1Y3QgbXRrX3B3bV9wbGF0Zm9ybV9kYXRhIG10NzYyMl9wd21fZGF0YSA9IHsK
+LQkubnVtX3B3bXMgPSA2LAorCS5mYWxsYmFja19ucHdtcyA9IDYsCiAJLnB3bTQ1X2ZpeHVwID0g
+ZmFsc2UsCiAJLmhhc19jbGtzID0gdHJ1ZSwKIH07CiAKIHN0YXRpYyBjb25zdCBzdHJ1Y3QgbXRr
+X3B3bV9wbGF0Zm9ybV9kYXRhIG10NzYyM19wd21fZGF0YSA9IHsKLQkubnVtX3B3bXMgPSA1LAor
+CS5mYWxsYmFja19ucHdtcyA9IDUsCiAJLnB3bTQ1X2ZpeHVwID0gdHJ1ZSwKIAkuaGFzX2Nsa3Mg
+PSB0cnVlLAogfTsKIAogc3RhdGljIGNvbnN0IHN0cnVjdCBtdGtfcHdtX3BsYXRmb3JtX2RhdGEg
+bXQ3NjI4X3B3bV9kYXRhID0gewotCS5udW1fcHdtcyA9IDQsCisJLmZhbGxiYWNrX25wd21zID0g
+NCwKIAkucHdtNDVfZml4dXAgPSB0cnVlLAogCS5oYXNfY2xrcyA9IGZhbHNlLAogfTsKLS0gCjIu
+MTcuMQoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxp
+bnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQu
+b3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVk
+aWF0ZWsK
