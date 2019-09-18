@@ -2,78 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AD798B6D44
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 22:09:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5C67FB6D6D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 22:20:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8aQ0t5dwVi6afHl3cuyLe9QjhjxuNA3cFcTjS5m6ets=; b=tnbi+cDHC/zt1y
-	4XckBiG3l7ioIrJlguMu0Hljw9Zyg8TNnYEX5gc7TsOT3JgNxTEGIyBENhrx01IpIOc5UKOVERc7w
-	YArcVU81N85mwqPZCljmJdWOrULZCyOmPKWIFEtyZOAWSgFVG1I6d+eugmFH3R6sSPT2rtFaA34V2
-	RqfLKf7/zA+SXQkIxUibEKPZ3RHzYYczmwW94sGtcb96Xhqn/x/r984NQrGIiWUVUC1/3I5touzVp
-	axh1fNhSbrr896o0HJ7t0e2JS4O0BRo6InV48fZNuhQFkBweI2zkhQiucWqpvS35aPNTR3Di9S7f1
-	v88AMQbdRDN03dGeESyQ==;
+	List-Owner; bh=BYEIa5fLAgfgh27NeIpYkSSWsCvWqXu5F0zALcOFEuE=; b=XKi3vf7/6IwYWX
+	91pDl4HqxLD5fMAFYE5zafKyWx/cn2aCIrNIPnDdTlhOtlWx3yHZwFfF/4RHEvBRys+BS9bzuURRM
+	0AFMhlgcBAMBdBEvNPLZ8NpvRD1y6gE8mQ/9SHx7HeYH5mOyYaCKHbTYWZDRLVJ83A7Qc7lJQDUFE
+	eEaeIKF5wApkCxLhNkU0dJnQ4Wvy/2NNP6iYvNVItLAr8hJRzeLzx/F8Xee+FUxEv/8aBDGnHRTEz
+	qEiLFud71MYkGLt2Zdo/SPp+mZIAoFgMF5x4Zz/opni7fEMirj3yz86R7oX3F1Mk7scEzGS8FdrJK
+	gGs8N4bPUJVeU/s5ANMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAgGi-0000FK-Az; Wed, 18 Sep 2019 20:09:40 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1iAgR6-0005vt-KG; Wed, 18 Sep 2019 20:20:24 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAgGO-0008QJ-KY; Wed, 18 Sep 2019 20:09:22 +0000
-Received: from mail-qt1-f172.google.com (mail-qt1-f172.google.com
- [209.85.160.172])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id D54B9222C8;
- Wed, 18 Sep 2019 20:09:19 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1568837360;
- bh=fOhSKAKBlBR8tnbKfh/2cRHcfVt6SAbNweeiVuSPlLE=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=naILs6J/PIXD2yfKotMj4cQgdvScWP22FZHa/FCfsKKEx0jTiXH6dnZtD3iOtHKKN
- xiu1RVe3DD6KAOHsgxXGPb/8QXchKi9dv2MPlWKuCD+Onyshvlu5pcGfPMaVJof+Tc
- Fmj4zPDgHwkjops+KBwQzEf+veOakQGlnw+PX/kE=
-Received: by mail-qt1-f172.google.com with SMTP id m15so1346229qtq.2;
- Wed, 18 Sep 2019 13:09:19 -0700 (PDT)
-X-Gm-Message-State: APjAAAV7Mo4rw8R2YRPWiGuLLnho9/bypgjvp5tkMqrKGWUdrTr9vtum
- d8CqZwZtx8YF8/qKzyJwMTv/H4kHYsomVU1J0g==
-X-Google-Smtp-Source: APXvYqyI0YWOlINOzwZl5AYOwbRdU1uVlZeni02GnsS/T/U6yuTYOht5gSEnZU8Z0DdyycUyh6iztt8ZwwabQaKl+2Y=
-X-Received: by 2002:ac8:75c7:: with SMTP id z7mr6127853qtq.136.1568837358985; 
- Wed, 18 Sep 2019 13:09:18 -0700 (PDT)
-MIME-Version: 1.0
+ id 1iAgQp-0005Pp-Ta
+ for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 20:20:09 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAgQe-0000Mf-W0; Wed, 18 Sep 2019 22:19:56 +0200
+Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAgQc-0005uR-DN; Wed, 18 Sep 2019 22:19:54 +0200
+Date: Wed, 18 Sep 2019 22:19:54 +0200
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
+To: Rob Herring <robh+dt@kernel.org>
+Subject: Re: [PATCH v2] of: restore old handling of cells_name=NULL in
+ of_*_phandle_with_args()
+Message-ID: <20190918201954.2phyqxqhoj5jwklt@pengutronix.de>
 References: <20190918063837.8196-1-u.kleine-koenig@pengutronix.de>
  <b00ca30f-2c06-7722-96b2-123d15751cb6@axentia.se>
  <20190918084748.hnjkiq7wc5b35wjh@pengutronix.de>
-In-Reply-To: <20190918084748.hnjkiq7wc5b35wjh@pengutronix.de>
-From: Rob Herring <robh+dt@kernel.org>
-Date: Wed, 18 Sep 2019 15:09:06 -0500
-X-Gmail-Original-Message-ID: <CAL_JsqJuJrOj+D4xkGACC1=zaB5OUkt=SNzCOiOiTVtM9E9z+A@mail.gmail.com>
-Message-ID: <CAL_JsqJuJrOj+D4xkGACC1=zaB5OUkt=SNzCOiOiTVtM9E9z+A@mail.gmail.com>
-Subject: Re: [PATCH v2] of: restore old handling of cells_name=NULL in
- of_*_phandle_with_args()
-To: =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>
+ <CAL_JsqJuJrOj+D4xkGACC1=zaB5OUkt=SNzCOiOiTVtM9E9z+A@mail.gmail.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <CAL_JsqJuJrOj+D4xkGACC1=zaB5OUkt=SNzCOiOiTVtM9E9z+A@mail.gmail.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_130920_714712_4A3C8072 
-X-CRM114-Status: GOOD (  23.44  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20190918_132007_967655_8784FDE0 
+X-CRM114-Status: GOOD (  26.11  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,80 +72,127 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Geert Uytterhoeven <geert+renesas@glider.be>, Will Deacon <will@kernel.org>,
- Joerg Roedel <joro@8bytes.org>,
+ Geert Uytterhoeven <geert+renesas@glider.be>,
+ Frank Rowand <frowand.list@gmail.com>, Joerg Roedel <joro@8bytes.org>,
  "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
  "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
  "kernel@pengutronix.de" <kernel@pengutronix.de>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Geert Uytterhoeven <geert@linux-m68k.org>,
- Marek Szyprowski <m.szyprowski@samsung.com>,
- Frank Rowand <frowand.list@gmail.com>, Peter Rosin <peda@axentia.se>,
+ Geert Uytterhoeven <geert@linux-m68k.org>, Robin Murphy <robin.murphy@arm.com>,
+ Will Deacon <will@kernel.org>, Peter Rosin <peda@axentia.se>,
  "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- Robin Murphy <robin.murphy@arm.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+ Marek Szyprowski <m.szyprowski@samsung.com>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gV2VkLCBTZXAgMTgsIDIwMTkgYXQgMzo0NyBBTSBVd2UgS2xlaW5lLUvDtm5pZwo8dS5rbGVp
-bmUta29lbmlnQHBlbmd1dHJvbml4LmRlPiB3cm90ZToKPgo+IEJlZm9yZSBjb21taXQgZTQyZWU2
-MTAxN2Y1ICgib2Y6IExldCBvZl9mb3JfZWFjaF9waGFuZGxlIGZhbGxiYWNrIHRvCj4gbm9uLW5l
-Z2F0aXZlIGNlbGxfY291bnQiKSB0aGUgaXRlcmF0b3IgZnVuY3Rpb25zIGNhbGxpbmcKPiBvZl9m
-b3JfZWFjaF9waGFuZGxlIGFzc3VtZWQgYSBjZWxsIGNvdW50IG9mIDAgaWYgY2VsbHNfbmFtZSB3
-YXMgTlVMTC4KPiBUaGlzIGNvcm5lciBjYXNlIHdhcyBtaXNzZWQgd2hlbiBpbXBsZW1lbnRpbmcg
-dGhlIGZhbGxiYWNrIGxvZ2ljIGluCj4gZTQyZWU2MTAxN2Y1IGFuZCByZXN1bHRlZCBpbiBhbiBl
-bmRsZXNzIGxvb3AuCj4KPiBSZXN0b3JlIHRoZSBvbGQgYmVoYXZpb3VyIG9mIG9mX2NvdW50X3Bo
-YW5kbGVfd2l0aF9hcmdzKCkgYW5kCj4gb2ZfcGFyc2VfcGhhbmRsZV93aXRoX2FyZ3MoKSBhbmQg
-YWRkIGEgY2hlY2sgdG8KPiBvZl9waGFuZGxlX2l0ZXJhdG9yX2luaXQoKSB0byBwcmV2ZW50IGEg
-c2ltaWxhciBmYWlsdXJlIGFzIGEgc2FmZXR5Cj4gcHJlY2F1dGlvbi4gb2ZfcGFyc2VfcGhhbmRs
-ZV93aXRoX2FyZ3NfbWFwKCkgZG9lc24ndCBuZWVkIGEgc2ltaWxhciBmaXgKPiBhcyBjZWxsc19u
-YW1lIGlzbid0IE5VTEwgdGhlcmUuCj4KPiBBZmZlY3RlZCBkcml2ZXJzIGFyZToKPiAgLSBkcml2
-ZXJzL2Jhc2UvcG93ZXIvZG9tYWluLmMKPiAgLSBkcml2ZXJzL2Jhc2UvcG93ZXIvZG9tYWluLmMK
-PiAgLSBkcml2ZXJzL2Nsay90aS9jbGstZHJhNy1hdGwuYwo+ICAtIGRyaXZlcnMvaHdtb24vaWJt
-cG93ZXJudi5jCj4gIC0gZHJpdmVycy9pMmMvbXV4ZXMvaTJjLWRlbXV4LXBpbmN0cmwuYwo+ICAt
-IGRyaXZlcnMvaW9tbXUvbXRrX2lvbW11LmMKPiAgLSBkcml2ZXJzL25ldC9ldGhlcm5ldC9mcmVl
-c2NhbGUvZm1hbi9tYWMuYwo+ICAtIGRyaXZlcnMvb3BwL29mLmMKPiAgLSBkcml2ZXJzL3BlcmYv
-YXJtX2RzdV9wbXUuYwo+ICAtIGRyaXZlcnMvcmVndWxhdG9yL29mX3JlZ3VsYXRvci5jCj4gIC0g
-ZHJpdmVycy9yZW1vdGVwcm9jL2lteF9ycHJvYy5jCj4gIC0gZHJpdmVycy9zb2Mvcm9ja2NoaXAv
-cG1fZG9tYWlucy5jCj4gIC0gc291bmQvc29jL2ZzbC9pbXgtYXVkbWl4LmMKPiAgLSBzb3VuZC9z
-b2MvZnNsL2lteC1hdWRtaXguYwo+ICAtIHNvdW5kL3NvYy9tZXNvbi9heGctY2FyZC5jCj4gIC0g
-c291bmQvc29jL3NhbXN1bmcvdG0yX3dtNTExMC5jCj4gIC0gc291bmQvc29jL3NhbXN1bmcvdG0y
-X3dtNTExMC5jCj4KPiBUaGFua3MgdG8gR2VlcnQgVXl0dGVyaG9ldmVuIGZvciByZXBvcnRpbmcg
-dGhlIGlzc3VlLCBQZXRlciBSb3NpbiBmb3IKPiBoZWxwaW5nIHBpbnBvaW50IHRoZSBhY3R1YWwg
-cHJvYmxlbSBhbmQgdGhlIHRlc3RlcnMgZm9yIGNvbmZpcm1pbmcgdGhpcwo+IGZpeC4KPgo+IEZp
-eGVzOiBlNDJlZTYxMDE3ZjUgKCJvZjogTGV0IG9mX2Zvcl9lYWNoX3BoYW5kbGUgZmFsbGJhY2sg
-dG8gbm9uLW5lZ2F0aXZlIGNlbGxfY291bnQiKQo+IFRlc3RlZC1ieTogTWFyZWsgU3p5cHJvd3Nr
-aSA8bS5zenlwcm93c2tpQHNhbXN1bmcuY29tPgo+IFRlc3RlZC1ieTogR2VlcnQgVXl0dGVyaG9l
-dmVuIDxnZWVydCtyZW5lc2FzQGdsaWRlci5iZT4KPiBTaWduZWQtb2ZmLWJ5OiBVd2UgS2xlaW5l
-LUvDtm5pZyA8dS5rbGVpbmUta29lbmlnQHBlbmd1dHJvbml4LmRlPgo+IC0tLQo+Cj4gT24gV2Vk
-LCBTZXAgMTgsIDIwMTkgYXQgMDg6MDE6MDVBTSArMDAwMCwgUGV0ZXIgUm9zaW4gd3JvdGU6Cj4g
-PiBPbiAyMDE5LTA5LTE4IDA4OjM4LCBVd2UgS2xlaW5lLUvDtm5pZyB3cm90ZToKPiA+ID4gIEVY
-UE9SVF9TWU1CT0wob2ZfcGFyc2VfcGhhbmRsZV93aXRoX2FyZ3MpOwo+ID4gPgo+ID4gPiBAQCAt
-MTc2NSw2ICsxNzc5LDE4IEBAIGludCBvZl9jb3VudF9waGFuZGxlX3dpdGhfYXJncyhjb25zdCBz
-dHJ1Y3QgZGV2aWNlX25vZGUgKm5wLCBjb25zdCBjaGFyICpsaXN0X25hCj4gPiA+ICAgICBzdHJ1
-Y3Qgb2ZfcGhhbmRsZV9pdGVyYXRvciBpdDsKPiA+ID4gICAgIGludCByYywgY3VyX2luZGV4ID0g
-MDsKPiA+ID4KPiA+ID4gKyAgIC8qIElmIGNlbGxzX25hbWUgaXMgTlVMTCB3ZSBhc3N1bWUgYSBj
-ZWxsIGNvdW50IG9mIDAgKi8KPiA+ID4gKyAgIGlmIChjZWxsc19uYW1lID09IE5VTEwpIHsKPiA+
-Cj4gPiBBIGNvdXBsZSBvZiBuaXRzLgo+ID4KPiA+IEkgZG9uJ3Qga25vdyBpZiB0aGVyZSBhcmUg
-b3RoZXIgY29uc2lkZXJhdGlvbnMsIGJ1dCBpbiB0aGUgcHJldmlvdXMgdHdvCj4gPiBodW5rcyB5
-b3UgdXNlICFjZWxsc19uYW1lIGluc3RlYWQgb2YgY29tcGFyaW5nIGV4cGxpY2l0bHkgd2l0aCBO
-VUxMLgo+ID4gUGVyc29uYWxseSwgSSBmaW5kIHRoZSBzaG9ydGVyIGZvcm0gbW9yZSByZWFkYWJs
-ZSwgYW5kIGluIHRoZSBuYW1lIG9mCj4gPiBjb25zaXN0ZW5jeSBibGEgYmxhLi4uCj4KPiBBY2ss
-IGNoYW5nZWQgdG8gIWNlbGxzX25hbWUgaGVyZSwgdG9vLgo+Cj4gPgo+ID4gQWxzbywgdGhlIGNv
-bW1lbnQgZXhwbGFpbmluZyB0aGlzIE5VTEwtY2hlY2sgZGlkbid0IHJlYWxseSBtYWtlIHNlbnNl
-Cj4gPiB0byBtZSB1bnRpbCBJIHJlYWxpemVkIHRoYXQga25vd2luZyB0aGUgY2VsbCBjb3VudCB0
-byBiZSB6ZXJvIG1ha2VzCj4gPiBjb3VudGluZyB0cml2aWFsLiBTb21ldGhpbmcgYWxvbmcgdGhv
-c2UgbGluZXMgc2hvdWxkIHBlcmhhcHMgYmUgaW4gdGhlCj4gPiBjb21tZW50Pwo+Cj4gWW91J3Jl
-IHJpZ2h0LCBJIGV4dGVuZGVkIHRoZSBjb21tZW50IGEgYml0Lgo+Cj4gPiBCdXQgYXMgSSBzYWlk
-LCB0aGVzZSBhcmUgbml0cy4gRmVlbCBmcmVlIHRvIGlnbm9yZS4KPgo+IEkgY29uc2lkZXJlZCBy
-ZXNlbmRpbmcgYWxyZWFkeSBhbnlob3cgYXMgSSBmYXRmaW5nZXJkIG15IGVtYWlsIGFkZHJlc3Mu
-Cj4gdGhpcyBpcyBmaXhlZCBub3csIHRvby4gQWRkaXRpb25hbGx5IEkgZml4ZWQgYSB0eXBvIGlu
-IG9uZSBvZiB0aGUKPiBjb21tZW50cy4KPgo+IFRoYW5rcyBmb3IgeW91ciBmZWVkYmFjay4KPgo+
-IEJlc3QgcmVnYXJkcwo+IFV3ZQo+Cj4gIGRyaXZlcnMvb2YvYmFzZS5jIHwgMzUgKysrKysrKysr
-KysrKysrKysrKysrKysrKysrKysrKysrLS0KPiAgMSBmaWxlIGNoYW5nZWQsIDMzIGluc2VydGlv
-bnMoKyksIDIgZGVsZXRpb25zKC0pCgpDYW4gSSBnZXQgYSBwcm9wZXIgcGF0Y2ggcGxlYXNlLgoK
-Um9iCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51
-eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9y
-ZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlh
-dGVrCg==
+On Wed, Sep 18, 2019 at 03:09:06PM -0500, Rob Herring wrote:
+> On Wed, Sep 18, 2019 at 3:47 AM Uwe Kleine-K=F6nig
+> <u.kleine-koenig@pengutronix.de> wrote:
+> >
+> > Before commit e42ee61017f5 ("of: Let of_for_each_phandle fallback to
+> > non-negative cell_count") the iterator functions calling
+> > of_for_each_phandle assumed a cell count of 0 if cells_name was NULL.
+> > This corner case was missed when implementing the fallback logic in
+> > e42ee61017f5 and resulted in an endless loop.
+> >
+> > Restore the old behaviour of of_count_phandle_with_args() and
+> > of_parse_phandle_with_args() and add a check to
+> > of_phandle_iterator_init() to prevent a similar failure as a safety
+> > precaution. of_parse_phandle_with_args_map() doesn't need a similar fix
+> > as cells_name isn't NULL there.
+> >
+> > Affected drivers are:
+> >  - drivers/base/power/domain.c
+> >  - drivers/base/power/domain.c
+> >  - drivers/clk/ti/clk-dra7-atl.c
+> >  - drivers/hwmon/ibmpowernv.c
+> >  - drivers/i2c/muxes/i2c-demux-pinctrl.c
+> >  - drivers/iommu/mtk_iommu.c
+> >  - drivers/net/ethernet/freescale/fman/mac.c
+> >  - drivers/opp/of.c
+> >  - drivers/perf/arm_dsu_pmu.c
+> >  - drivers/regulator/of_regulator.c
+> >  - drivers/remoteproc/imx_rproc.c
+> >  - drivers/soc/rockchip/pm_domains.c
+> >  - sound/soc/fsl/imx-audmix.c
+> >  - sound/soc/fsl/imx-audmix.c
+> >  - sound/soc/meson/axg-card.c
+> >  - sound/soc/samsung/tm2_wm5110.c
+> >  - sound/soc/samsung/tm2_wm5110.c
+> >
+> > Thanks to Geert Uytterhoeven for reporting the issue, Peter Rosin for
+> > helping pinpoint the actual problem and the testers for confirming this
+> > fix.
+> >
+> > Fixes: e42ee61017f5 ("of: Let of_for_each_phandle fallback to non-negat=
+ive cell_count")
+> > Tested-by: Marek Szyprowski <m.szyprowski@samsung.com>
+> > Tested-by: Geert Uytterhoeven <geert+renesas@glider.be>
+> > Signed-off-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+> > ---
+> >
+> > On Wed, Sep 18, 2019 at 08:01:05AM +0000, Peter Rosin wrote:
+> > > On 2019-09-18 08:38, Uwe Kleine-K=F6nig wrote:
+> > > >  EXPORT_SYMBOL(of_parse_phandle_with_args);
+> > > >
+> > > > @@ -1765,6 +1779,18 @@ int of_count_phandle_with_args(const struct =
+device_node *np, const char *list_na
+> > > >     struct of_phandle_iterator it;
+> > > >     int rc, cur_index =3D 0;
+> > > >
+> > > > +   /* If cells_name is NULL we assume a cell count of 0 */
+> > > > +   if (cells_name =3D=3D NULL) {
+> > >
+> > > A couple of nits.
+> > >
+> > > I don't know if there are other considerations, but in the previous t=
+wo
+> > > hunks you use !cells_name instead of comparing explicitly with NULL.
+> > > Personally, I find the shorter form more readable, and in the name of
+> > > consistency bla bla...
+> >
+> > Ack, changed to !cells_name here, too.
+> >
+> > >
+> > > Also, the comment explaining this NULL-check didn't really make sense
+> > > to me until I realized that knowing the cell count to be zero makes
+> > > counting trivial. Something along those lines should perhaps be in the
+> > > comment?
+> >
+> > You're right, I extended the comment a bit.
+> >
+> > > But as I said, these are nits. Feel free to ignore.
+> >
+> > I considered resending already anyhow as I fatfingerd my email address.
+> > this is fixed now, too. Additionally I fixed a typo in one of the
+> > comments.
+> >
+> > Thanks for your feedback.
+> >
+> > Best regards
+> > Uwe
+> >
+> >  drivers/of/base.c | 35 +++++++++++++++++++++++++++++++++--
+> >  1 file changed, 33 insertions(+), 2 deletions(-)
+> =
+
+> Can I get a proper patch please.
+
+I don't understand what is wrong with my patch. Can you please expand
+what you are missing? I just tried to git-am it and the result looks
+fine.
+
+Best regards
+Uwe
+
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | http://www.pengutronix.de/  |
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
