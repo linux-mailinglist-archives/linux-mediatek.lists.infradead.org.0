@@ -2,58 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7902AB5F3E
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 10:30:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1343EB5F6F
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Sep 2019 10:48:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1xEgKrpnj5rse2E862BOD7XWk+1wkKPur1yTkA89b/o=; b=Ah0yQBZiYnXhtT
-	Oyyly1g/iUoJB9tjqz6Q9tOGPv4YHrv9GL3rS0oJbagpLqJwFUR17pbZtdGUACZNeGuIfwvQ9uBMu
-	0COgZvQFhpUg9kQpMgwNDEwnNAhmVrdObNXzSC/EVosk6btB/pjLQxH8Ixn8A/D6ZpTqVeTEYfSFo
-	l2oUNf0v4IuQRmVOtulV6L26mpH7hwFUhVs6nWnCjBcPuO8IoulPhXCE+V81WdYIIw272/SGEsMGu
-	ezGNEVUB7N2Jhk1k+XXK7PiXh1js0DDf84h3B6RgqehkYjSaf/Gxf6RVBdHYJKjP9OMj8GnKlokXY
-	mMOv8j70inmAAdqrW0qA==;
+	List-Owner; bh=ks8PsbxBXUwqp6aOqKOKlCMBcQlekZvK2WN44jumwXU=; b=pjroe6xr++cV1m
+	qTtV5PxU6pxjNcDOSSUWomC7tpxqSr9ARQgwsb/Oy+O51eaQVvF8CF40yXBToWIGulNm8z3Y6J/4s
+	aHMXDCfthjZKgLsIChfTyxs0GbOCmqg8I0Ufmh4dAd4zDiUFroHNjL9upXMQSXK1hCtNC5Zd9Lzu/
+	7wtpwdINV1qW4A+s63/GGkx4UdZSIBGiQVkszRxJ6ksUx9YY3P0g69lzS4txWgYGthVDAQKPUStF1
+	RyqCkOjRrcxJ1I5Bqf5gFy70Vz2yaUso9ty1E9oi6X/2RJYDGNfeMoQW4VeEGYO9FmkzlMXZugGCb
+	YoE/BZSeEGpvGHGiO3pw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAVLz-0000GQ-Oy; Wed, 18 Sep 2019 08:30:24 +0000
-Received: from hillosipuli.retiisi.org.uk ([2a01:4f9:c010:4572::81:2])
+	id 1iAVd0-0005oT-Ua; Wed, 18 Sep 2019 08:47:58 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAVLh-0007rd-6j; Wed, 18 Sep 2019 08:30:06 +0000
-Received: from valkosipuli.localdomain (valkosipuli.retiisi.org.uk
- [IPv6:2a01:4f9:c010:4572::80:2])
- (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
- key-exchange ECDHE (P-256) server-signature RSA-PSS (4096 bits) server-digest
- SHA256) (No client certificate requested)
- by hillosipuli.retiisi.org.uk (Postfix) with ESMTPS id 93398634C87;
- Wed, 18 Sep 2019 11:29:23 +0300 (EEST)
-Received: from sailus by valkosipuli.localdomain with local (Exim 4.92)
- (envelope-from <sakari.ailus@retiisi.org.uk>)
- id 1iAVL2-0001XN-GO; Wed, 18 Sep 2019 11:29:24 +0300
-Date: Wed, 18 Sep 2019 11:29:24 +0300
-From: Sakari Ailus <sakari.ailus@iki.fi>
-To: Louis Kuo <louis.kuo@mediatek.com>
-Subject: Re: [RFC PATCH V4 3/4] dt-bindings: mt8183: Add sensor interface
- dt-bindings
-Message-ID: <20190918082924.GE5525@valkosipuli.retiisi.org.uk>
-References: <20190915065004.20257-1-louis.kuo@mediatek.com>
- <20190915065004.20257-4-louis.kuo@mediatek.com>
+ id 1iAVcx-0005nN-Hl
+ for linux-mediatek@lists.infradead.org; Wed, 18 Sep 2019 08:47:57 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAVcr-0001B8-T8; Wed, 18 Sep 2019 10:47:49 +0200
+Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1iAVcq-0007mf-Bu; Wed, 18 Sep 2019 10:47:48 +0200
+Date: Wed, 18 Sep 2019 10:47:48 +0200
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
+To: Peter Rosin <peda@axentia.se>, Rob Herring <robh+dt@kernel.org>,
+ Frank Rowand <frowand.list@gmail.com>
+Subject: [PATCH v2] of: restore old handling of cells_name=NULL in
+ of_*_phandle_with_args()
+Message-ID: <20190918084748.hnjkiq7wc5b35wjh@pengutronix.de>
+References: <20190918063837.8196-1-u.kleine-koenig@pengutronix.de>
+ <b00ca30f-2c06-7722-96b2-123d15751cb6@axentia.se>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190915065004.20257-4-louis.kuo@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <b00ca30f-2c06-7722-96b2-123d15751cb6@axentia.se>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_013005_433017_855C0497 
-X-CRM114-Status: GOOD (  16.02  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20190918_014755_589160_B9CDFDB7 
+X-CRM114-Status: GOOD (  24.03  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -67,81 +70,190 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- christie.yu@mediatek.com, srv_heupstream@mediatek.com,
- Jerry-ch.Chen@mediatek.com, tfiga@chromium.org, keiichiw@chromium.org,
- jungo.lin@mediatek.com, sj.huang@mediatek.com, yuzhao@chromium.org,
- hans.verkuil@cisco.com, zwisler@chromium.org, frederic.chen@mediatek.com,
- matthias.bgg@gmail.com, linux-mediatek@lists.infradead.org, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ Geert Uytterhoeven <geert+renesas@glider.be>,
+ Robin Murphy <robin.murphy@arm.com>, Joerg Roedel <joro@8bytes.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "kernel@pengutronix.de" <kernel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Geert Uytterhoeven <geert@linux-m68k.org>, Will Deacon <will@kernel.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Marek Szyprowski <m.szyprowski@samsung.com>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Louis,
+Before commit e42ee61017f5 ("of: Let of_for_each_phandle fallback to
+non-negative cell_count") the iterator functions calling
+of_for_each_phandle assumed a cell count of 0 if cells_name was NULL.
+This corner case was missed when implementing the fallback logic in
+e42ee61017f5 and resulted in an endless loop.
 
-On Sun, Sep 15, 2019 at 02:50:03PM +0800, Louis Kuo wrote:
-> This patch adds the DT binding documentation for the sensor interface
-> module in Mediatek SoCs.
-> 
-> Signed-off-by: Louis Kuo <louis.kuo@mediatek.com>
-> ---
->  .../bindings/media/mediatek-seninf.txt        | 30 +++++++++++++++++++
->  1 file changed, 30 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/media/mediatek-seninf.txt
-> 
-> diff --git a/Documentation/devicetree/bindings/media/mediatek-seninf.txt b/Documentation/devicetree/bindings/media/mediatek-seninf.txt
-> new file mode 100644
-> index 000000000000..bf2eb801cb47
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/media/mediatek-seninf.txt
-> @@ -0,0 +1,30 @@
-> +* Mediatek seninf MIPI-CSI2 host driver
-> +
-> +Seninf MIPI-CSI2 host driver is a HW camera interface controller. It support a widely adopted,
-> +simple, high-speed protocol primarily intended for point-to-point image and video
-> +transmission between cameras and host devices.
+Restore the old behaviour of of_count_phandle_with_args() and
+of_parse_phandle_with_args() and add a check to
+of_phandle_iterator_init() to prevent a similar failure as a safety
+precaution. of_parse_phandle_with_args_map() doesn't need a similar fix
+as cells_name isn't NULL there.
 
-Please wrap so it fits to 80 chars per line.
+Affected drivers are:
+ - drivers/base/power/domain.c
+ - drivers/base/power/domain.c
+ - drivers/clk/ti/clk-dra7-atl.c
+ - drivers/hwmon/ibmpowernv.c
+ - drivers/i2c/muxes/i2c-demux-pinctrl.c
+ - drivers/iommu/mtk_iommu.c
+ - drivers/net/ethernet/freescale/fman/mac.c
+ - drivers/opp/of.c
+ - drivers/perf/arm_dsu_pmu.c
+ - drivers/regulator/of_regulator.c
+ - drivers/remoteproc/imx_rproc.c
+ - drivers/soc/rockchip/pm_domains.c
+ - sound/soc/fsl/imx-audmix.c
+ - sound/soc/fsl/imx-audmix.c
+ - sound/soc/meson/axg-card.c
+ - sound/soc/samsung/tm2_wm5110.c
+ - sound/soc/samsung/tm2_wm5110.c
 
-You'll also need to document the graph nodes needed. Which ports correspond
-to which interfaces on the device, for instance?
+Thanks to Geert Uytterhoeven for reporting the issue, Peter Rosin for
+helping pinpoint the actual problem and the testers for confirming this
+fix.
 
-Please document which endpoint properties are required and whether there
-are any optional ones.
+Fixes: e42ee61017f5 ("of: Let of_for_each_phandle fallback to non-negative =
+cell_count")
+Tested-by: Marek Szyprowski <m.szyprowski@samsung.com>
+Tested-by: Geert Uytterhoeven <geert+renesas@glider.be>
+Signed-off-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+---
 
-> +
-> +Required properties:
-> +  - compatible: "mediatek,mt8183-seninf"
-> +  - reg: Must contain an entry for each entry in reg-names.
-> +  - reg-names: Must include the following entries:
-> +    "base_reg": seninf registers base
-> +    "rx_reg": Rx analog registers base
-> +  - interrupts: interrupt number to the cpu.
-> +  - clocks : clock name from clock manager
-> +  - clock-names: must be CLK_CAM_SENINF and CLK_TOP_MUX_SENINF.
-> +    It is the clocks of seninf
-> +
-> +Example:
-> +	seninf: seninf@1a040000 {
-> +		compatible = "mediatek,mt8183-seninf";
-> +		reg = <0 0x1a040000 0 0x8000>,
-> +		      <0 0x11C80000 0 0x6000>;
-> +		reg-names = "base_reg", "rx_reg";
-> +		interrupts = <GIC_SPI 251 IRQ_TYPE_LEVEL_LOW>;
-> +		power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-> +		clocks = <&camsys CLK_CAM_SENINF>,
-> +			 <&topckgen CLK_TOP_MUX_SENINF>;
-> +		clock-names = "CLK_CAM_SENINF", "CLK_TOP_MUX_SENINF";
-> +	}
-> +
+On Wed, Sep 18, 2019 at 08:01:05AM +0000, Peter Rosin wrote:
+> On 2019-09-18 08:38, Uwe Kleine-K=F6nig wrote:
+> >  EXPORT_SYMBOL(of_parse_phandle_with_args);
+> >  =
 
--- 
-Regards,
+> > @@ -1765,6 +1779,18 @@ int of_count_phandle_with_args(const struct devi=
+ce_node *np, const char *list_na
+> >  	struct of_phandle_iterator it;
+> >  	int rc, cur_index =3D 0;
+> >  =
 
-Sakari Ailus
+> > +	/* If cells_name is NULL we assume a cell count of 0 */
+> > +	if (cells_name =3D=3D NULL) {
+> =
+
+> A couple of nits.
+> =
+
+> I don't know if there are other considerations, but in the previous two
+> hunks you use !cells_name instead of comparing explicitly with NULL.
+> Personally, I find the shorter form more readable, and in the name of
+> consistency bla bla...
+
+Ack, changed to !cells_name here, too.
+
+> =
+
+> Also, the comment explaining this NULL-check didn't really make sense
+> to me until I realized that knowing the cell count to be zero makes
+> counting trivial. Something along those lines should perhaps be in the
+> comment?
+
+You're right, I extended the comment a bit.
+ =
+
+> But as I said, these are nits. Feel free to ignore.
+
+I considered resending already anyhow as I fatfingerd my email address.
+this is fixed now, too. Additionally I fixed a typo in one of the
+comments.
+
+Thanks for your feedback.
+
+Best regards
+Uwe
+
+ drivers/of/base.c | 35 +++++++++++++++++++++++++++++++++--
+ 1 file changed, 33 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/of/base.c b/drivers/of/base.c
+index 2f25d2dfecfa..1d667eb730e1 100644
+--- a/drivers/of/base.c
++++ b/drivers/of/base.c
+@@ -1286,6 +1286,13 @@ int of_phandle_iterator_init(struct of_phandle_itera=
+tor *it,
+ =
+
+ 	memset(it, 0, sizeof(*it));
+ =
+
++	/*
++	 * one of cell_count or cells_name must be provided to determine the
++	 * argument length.
++	 */
++	if (cell_count < 0 && !cells_name)
++		return -EINVAL;
++
+ 	list =3D of_get_property(np, list_name, &size);
+ 	if (!list)
+ 		return -ENOENT;
+@@ -1512,10 +1519,17 @@ int of_parse_phandle_with_args(const struct device_=
+node *np, const char *list_na
+ 				const char *cells_name, int index,
+ 				struct of_phandle_args *out_args)
+ {
++	int cell_count =3D -1;
++
+ 	if (index < 0)
+ 		return -EINVAL;
+-	return __of_parse_phandle_with_args(np, list_name, cells_name, -1,
+-					    index, out_args);
++
++	/* If cells_name is NULL we assume a cell count of 0 */
++	if (!cells_name)
++		cell_count =3D 0;
++
++	return __of_parse_phandle_with_args(np, list_name, cells_name,
++					    cell_count, index, out_args);
+ }
+ EXPORT_SYMBOL(of_parse_phandle_with_args);
+ =
+
+@@ -1765,6 +1779,23 @@ int of_count_phandle_with_args(const struct device_n=
+ode *np, const char *list_na
+ 	struct of_phandle_iterator it;
+ 	int rc, cur_index =3D 0;
+ =
+
++	/*
++	 * If cells_name is NULL we assume a cell count of 0. This makes
++	 * counting the phandles trivial as each 32bit word in the list is a
++	 * phandle and no arguments are to consider. So we don't iterate through
++	 * the list but just use the length to determine the phandle count.
++	 */
++	if (!cells_name) {
++		const __be32 *list;
++		int size;
++
++		list =3D of_get_property(np, list_name, &size);
++		if (!list)
++			return -ENOENT;
++
++		return size / sizeof(*list);
++	}
++
+ 	rc =3D of_phandle_iterator_init(&it, np, list_name, cells_name, -1);
+ 	if (rc)
+ 		return rc;
+-- =
+
+2.23.0
+
+
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | http://www.pengutronix.de/  |
 
 _______________________________________________
 Linux-mediatek mailing list
