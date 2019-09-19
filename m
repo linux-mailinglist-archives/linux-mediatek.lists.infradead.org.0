@@ -2,62 +2,119 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A37BB7DDD
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 17:12:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0BCC7B7E82
+	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 17:49:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=psKI0fgLUr52m3R/Ql8/xuz7+R4g9M0IDVOphkoe6nI=; b=hlMAC80vcUpVyl
-	UUZdBDhgmXuqYOt8MtE97YM6iN4QpWglbVbJatoQTDBSh34Jr1mcCA9QEohLhPH4uzKIZ4L7wCITn
-	ItbthDtgdihIaVF0CE84/zhXYyjvj5w0vFZZDl0mHylb4+MBfwMY0UOKo45jR9P3LK65p970lhZh2
-	ZaMt1TWEzwWo8sTxqNsXDJ/aAOF2He5zpbyIK7SU5kPjs7UxwfZQStFDpUqUrrWZt31g789jHn++M
-	HNyZFTRURxxOA3Q4vE7Joh0+z3nwjRLx01ReLctw5BlGwWPk7g90vICVNB88lGS3uC3ZmdI2lkV7Q
-	DCAI2MU+g0Qi0LJ+97nw==;
+	List-Owner; bh=udnTZAmJCNFJ80xVPaqvyttDxYmHhd3cOpp91QgbQ4w=; b=kdCjmYEpnv0kQI
+	pmdo4lTh95WHqQeYkhcRGjPOxAhB2TU1LYyCdmV+yYC0VdJtvG6b9h/m28fukZ3O6q3MkPToa6gpK
+	pDvnTNwDYWEna49FccVPsNaSnfdPAASbMD90+n0DtXS58vhLG29+tjw1g9Wg12GMY+mJFbwiDxH1N
+	UuG3UP4bBcVOB89XhxW1CpgmdyJCxR1w/28K+/vQcCeVGHOQWtff2wZBeCiyWe1ECLSymej36jB09
+	l2x9WjSnYjrG14IhHxYOfGRpMNKoDpeBHobi5P6ZmRuk3IAfUWzdU+gGO9Q42Mn+Zaa3I8wLPjrVl
+	GUC+TR/IyMTpCvM3/CHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAy6d-00080q-Ew; Thu, 19 Sep 2019 15:12:27 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAy6B-0007oV-8v; Thu, 19 Sep 2019 15:12:00 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 01E87337;
- Thu, 19 Sep 2019 08:11:56 -0700 (PDT)
-Received: from e107158-lin.cambridge.arm.com (e107158-lin.cambridge.arm.com
- [10.1.194.52])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id BAAF03F575;
- Thu, 19 Sep 2019 08:11:54 -0700 (PDT)
-Date: Thu, 19 Sep 2019 16:11:52 +0100
-From: Qais Yousef <qais.yousef@arm.com>
-To: Vincent Guittot <vincent.guittot@linaro.org>
-Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
-Message-ID: <20190919151152.m2zmiaspr6s5mcfh@e107158-lin.cambridge.arm.com>
-References: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
- <d5100b2d-46c4-5811-8274-8b06710d2594@arm.com>
- <20190830145501.zadfv2ffuu7j46ft@e107158-lin.cambridge.arm.com>
- <1567689999.2389.5.camel@mtkswgap22>
- <CAKfTPtC3txstND=6YkWBJ16i06cQ7xueUpD5j-j-UfuSf0-z-g@mail.gmail.com>
- <1568892135.4892.10.camel@mtkswgap22>
- <CAKfTPtCuWrpW_o6r5cmGhLf_84PFHJhBk0pJ3fcbU_YgcBnTkQ@mail.gmail.com>
- <20190919142315.vmrrpvljpspqpurp@e107158-lin.cambridge.arm.com>
- <CAKfTPtA9-JLxs+DdLYjBQ6VfVGNxm++QYYi1wy-xS6o==EAPNw@mail.gmail.com>
- <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
+	id 1iAygM-0004kx-97; Thu, 19 Sep 2019 15:49:22 +0000
+Received: from mail-eopbgr750041.outbound.protection.outlook.com
+ ([40.107.75.41] helo=NAM02-BL2-obe.outbound.protection.outlook.com)
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iAygB-0004k3-5r; Thu, 19 Sep 2019 15:49:13 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=VtF/22bxoETlyl43njw3PS0CSu4Qf37FlBA1435ppVZy45BjU42755f8amtlpfmmlsUl+kXJz+55pF8Zh851QCB3kefOZchNkFPCxn9gcBcm/ULRU9Y+OzDMv5cxHzAsopbKBOLptUDh0sE5IaeEbFnWCl9V/AYgztQjTZY+5f+8j67fY/C0T3EVj3ffDZhmxgcKkFgMbQF0Ydb1mETE9TnoqlIlmTBfzyYK5JzAWnnOCj47m+dt/RgYyKpjfX6HCVgQP8ILC8fEhf98Mmu9wS4+LOwLOxyWnynewpPxB9hUX3PJ1Z94tWz0hFnk1FBqfITdJVEDUbu0gx4ZUG3qJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=qux+O7/PIqdrn4LUY39DdBOlZFLBu1Y5kGMlGfsBkKw=;
+ b=BscqZ2ZZfrvwnq8yxNyjqd3uHdZg+BB0lAR7LgIoTk1doVLRB2LXzpQ58odKh+p17ay6uGU4YcIGMhEzE1OPqHHPKNh4P3/upsnuWwBM3wda0YUVvFMXIP2UBeAuWRbOzNPDw03V4tlcDaqS1tcuVsl+4DyBvWQenTpVmUlTzzrSNmSmh5bpjemc+jmw49Cw6Kni96uZKclBv+FbmZ/u5SD6rqCS27igSOsS3Dh8vnzwicgs+r4LQg8MnLCMLRs0KHzwYSx3AT40l5CNNE/aLo4s+huRvq4bI6SCngmbk06xhaoMLX0xjaRNjkY8nX08svcm3Nh1S96YgjjkPnBJyg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=micron.com; dmarc=pass action=none header.from=micron.com;
+ dkim=pass header.d=micron.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=qux+O7/PIqdrn4LUY39DdBOlZFLBu1Y5kGMlGfsBkKw=;
+ b=PMw3sAb7HnDm81IHLKxKPkNfv9XsdPmLuZjdF6+oODXs4BuIxX/n4CORn1XczZROHAyJL4+EST0B2kCSk4RMohPDsuZTThsFR+l1P4ysX1G5rVb8GqV2eUPJRBHfIYWoO3ST9NABpdc9cdUeRew7MH9c8HmRLQbo+AXfoMiRC/Y=
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.179.87) by
+ BN7PR08MB5540.namprd08.prod.outlook.com (20.176.28.204) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2263.21; Thu, 19 Sep 2019 15:49:06 +0000
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::1c5f:b47c:d1c3:c30c]) by BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::1c5f:b47c:d1c3:c30c%7]) with mapi id 15.20.2263.023; Thu, 19 Sep 2019
+ 15:49:06 +0000
+From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>, "jejb@linux.ibm.com"
+ <jejb@linux.ibm.com>
+Subject: RE: [EXT] [PATCH v1] scsi: ufs: skip shutdown if hba is not powered
+Thread-Topic: [EXT] [PATCH v1] scsi: ufs: skip shutdown if hba is not powered
+Thread-Index: AQHVbdhzTeX/aZpSQEmPmvu/XpmQPacyzhAg
+Date: Thu, 19 Sep 2019 15:49:06 +0000
+Message-ID: <BN7PR08MB5684156E52798096FBC61BDEDB890@BN7PR08MB5684.namprd08.prod.outlook.com>
+References: <1568780438-28753-1-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1568780438-28753-1-git-send-email-stanley.chu@mediatek.com>
+Accept-Language: en-150, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=beanhuo@micron.com; 
+x-originating-ip: [165.225.81.111]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 4d9084bf-ab6e-4abe-4c23-08d73d18e776
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(7168020)(4627221)(201703031133081)(201702281549075)(8990200)(5600167)(711020)(4605104)(1401327)(2017052603328)(7193020);
+ SRVR:BN7PR08MB5540; 
+x-ms-traffictypediagnostic: BN7PR08MB5540:|BN7PR08MB5540:|BN7PR08MB5540:
+x-microsoft-antispam-prvs: <BN7PR08MB5540AC187991CFD8F9800CE6DB890@BN7PR08MB5540.namprd08.prod.outlook.com>
+x-ms-exchange-transport-forked: True
+x-ms-oob-tlc-oobclassifiers: OLM:2887;
+x-forefront-prvs: 016572D96D
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10009020)(4636009)(396003)(366004)(346002)(39860400002)(136003)(376002)(199004)(189003)(7696005)(71200400001)(81156014)(81166006)(74316002)(6436002)(7416002)(71190400001)(8676002)(6506007)(6116002)(102836004)(2906002)(3846002)(26005)(55236004)(186003)(558084003)(486006)(76176011)(2501003)(305945005)(229853002)(14454004)(11346002)(54906003)(6246003)(4326008)(476003)(256004)(66946007)(66556008)(66446008)(76116006)(33656002)(316002)(64756008)(9686003)(2201001)(52536014)(110136005)(7736002)(86362001)(66476007)(446003)(55016002)(8936002)(5660300002)(66066001)(478600001)(25786009)(99286004);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB5540;
+ H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+received-spf: None (protection.outlook.com: micron.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: 8k2U69pMVV75B70gvmmlVo09GzqGOVhjMdWBs37k5ushXN3SXVxEC1EaCr7WMx6rFHXCvmRV7zKKLBPeCfCLgzMASu4jwETyLV0z7zi3QgZpSMMqUXQAjI6/1jNlVQkLGvU4iOxv8ewGDCaf+M3fSekn0ZnqLCiXekC/vfp1/BlnlqGzTnfzcei3yfn8f7cTmxrdgpLsSgF2TGP3KFRNz5+4vXdJTWz+h89urN/KrCDRy4zpm01Pkx0xx1lL5nN6KxwB48aYJ2NHV6fqRhH65gCP+8IIh517igY9GUaCiktRLJ45yyAWXlWrknu6O+G3EdpGB7fVfgFulURCYTkRMtAoSHukYvB2OSsrwNiCn1A4xTDjV7df9Q+22bsK942dbrRZi4tGLP0NNSJUQbmp46+2wGqWDvqLsBXoenasGgU=
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
-User-Agent: NeoMutt/20171215
+X-OriginatorOrg: micron.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d9084bf-ab6e-4abe-4c23-08d73d18e776
+X-MS-Exchange-CrossTenant-originalarrivaltime: 19 Sep 2019 15:49:06.6424 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: epgbumimcOIeL1tT6Vw1uPvQK6Z2iRncx23AznirCe1cl8adOB2XBTn/p+aR3qxnDcaG1YV8zVkcRAX1ubxBxA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB5540
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_081159_406232_B3DCE250 
-X-CRM114-Status: GOOD (  31.64  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190919_084911_571179_C7FFBC3C 
+X-CRM114-Status: UNSURE (   3.64  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [40.107.75.41 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,89 +126,23 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Peter Zijlstra <peterz@infradead.org>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- Jing-Ting Wu <jing-ting.wu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Valentin Schneider <valentin.schneider@arm.com>,
- LAK <linux-arm-kernel@lists.infradead.org>
+Cc: "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 09/19/19 16:37, Vincent Guittot wrote:
-> On Thu, 19 Sep 2019 at 16:32, Vincent Guittot
-> <vincent.guittot@linaro.org> wrote:
-> >
-> > On Thu, 19 Sep 2019 at 16:23, Qais Yousef <qais.yousef@arm.com> wrote:
-> > >
-> > > On 09/19/19 14:27, Vincent Guittot wrote:
-> > > > > > > But for requirement of performance, I think it is better to differentiate between idle CPU and CPU has CFS task.
-> > > > > > >
-> > > > > > > For example, we use rt-app to evaluate runnable time on non-patched environment.
-> > > > > > > There are (NR_CPUS-1) heavy CFS tasks and 1 RT Task. When a CFS task is running, the RT task wakes up and choose the same CPU.
-> > > > > > > The CFS task will be preempted and keep runnable until it is migrated to another cpu by load balance.
-> > > > > > > But load balance is not triggered immediately, it will be triggered until timer tick hits with some condition satisfied(ex. rq->next_balance).
-> > > > > >
-> > > > > > Yes you will have to wait for the next tick that will trigger an idle
-> > > > > > load balance because you have an idle cpu and 2 runnable tack (1 RT +
-> > > > > > 1CFS) on the same CPU. But you should not wait for more than  1 tick
-> > > > > >
-> > > > > > The current load_balance doesn't handle correctly the situation of 1
-> > > > > > CFS and 1 RT task on same CPU while 1 CPU is idle. There is a rework
-> > > > > > of the load_balance that is under review on the mailing list that
-> > > > > > fixes this problem and your CFS task should migrate to the idle CPU
-> > > > > > faster than now
-> > > > > >
-> > > > >
-> > > > > Period load balance should be triggered when current jiffies is behind
-> > > > > rq->next_balance, but rq->next_balance is not often exactly the same
-> > > > > with next tick.
-> > > > > If cpu_busy, interval = sd->balance_interval * sd->busy_factor, and
-> > > >
-> > > > But if there is an idle CPU on the system, the next idle load balance
-> > > > should apply shortly because the busy_factor is not used for this CPU
-> > > > which is  not busy.
-> > > > In this case, the next_balance interval is sd_weight which is probably
-> > > > 4ms at cluster level and 8ms at system level in your case. This means
-> > > > between 1 and 2 ticks
-> > >
-> > > But if the CFS task we're preempting was latency sensitive - this 1 or 2 tick
-> > > is too late of a recovery.
-> > >
-> > > So while it's good we recover, but a preventative approach would be useful too.
-> > > Just saying :-) I'm still not sure if this is the best longer term approach.
-> >
-> > like using a rt task ?
-> 
-> I mean, RT task should select a sub optimal CPU because of CFS
-> If you want to favor CFS compared to RT it's probably because your
-> task should be RT too
-
-Yes possibly. But I don't think this is always doable. Especially when you're
-running on generic system not a special purposed one.
-
-And we don't need to favor CFS over RT. But I think they can play nicely
-together.
-
-For example on Android there are few RT tasks and rarely more than 1 runnable
-RT task at a time. But if it happened to wakeup on the same CPU that is
-running the UI thread you could lose a frame. And from what I've seen as well
-we have 1-3 CFS tasks runnable, weighted more towards 1 task. So we do have
-plenty of idle CPUs on average.
-
-But as I mentioned earlier I couldn't prove yet this being a serious problem.
-I was hoping the use case presented here is based on a real workload, but it's
-synthetic. So I agree we need stronger reasons, but I think conceptually we do
-have a conflict of interest where RT task could unnecessarily hurt the
-performance of CFS task.
-
-Another way to look at the problem is that the system is not partitioned
-correctly and the admin could do a better job to prevent this.
-
---
-Qais Yousef
+>To solve this issue, simply add checking to skip shutdown for above kind of
+>situation.
+>
+>Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Acked-by: Bean Huo <beanhuo@micron.com>
 
 _______________________________________________
 Linux-mediatek mailing list
