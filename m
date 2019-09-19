@@ -2,92 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D100B811F
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 21:00:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AA0EBB813F
+	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 21:14:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:Message-ID:From:To:Subject:
-	MIME-Version:References:In-Reply-To:Date:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5P8dEhPFTUiTZPqeqF+PXirpPAWDRPKK4sXlysdwmmI=; b=tk8ICLiKE8Gf16
-	EncdWEGp3+ebZF//cYUhkpSMjlOgL6pzkI1/p0aOrmT69SdPqG9xI9suXqv7iCKcP7YoWTpsoc9Er
-	grB7y1UdRtd50LrwF14QqSYpoDw7xcE+Hba5OQW/7nR40sJXsQgFOqa3AmoJ1PbqxgEPyyd7/DJNF
-	glXHxxWK59ZLqnsOLJJMDfZ0o+6mroF1BJT4jcZUee39iUwQ8WW3Sm01Ycw3ol16id9hQIFWC3fiQ
-	/rG77e/275R+gTtYN6L9MpOJmklbzzMR1l6on2hST88BVlQ/Rt3Xc1nERAQHZjoYBS4Dnmmq7XLBR
-	lgYs3HsiIrAwNr6X5K7Q==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ALVv1ajLJwTFDiUBCmUFbbKE22E+eDK1j2hHpsTdQA0=; b=pBI3EnssfMcaKQ
+	XQ9PGvuDpE84/osT9jCOleyUWzWfk45xeKA0LOJtb5w+FAcf2+Sb7RCagr6uPlYUyNqH9maYeCUF3
+	cMQAEMplJpigCjEJ2gFg2Zqk95Ywscz/Lq80nXpyTpTTqoPWq3gx4JhJMGEAR2ZP9gFLVMlm13TDk
+	1o1QYO+ZoG11n0vBFCHUuh3B3cRWWXC8NPWUhFHT8zEnOY3zkA/Rp+pcx6cTYvxNLdquFMMjqKcoX
+	z9jbLeOCXKeYVM9u4OwF3RsU4++k9ffRv8q46UnxSKCv4ghDDGVlZwEl89z3u7c1ISleh3LbiZ1VY
+	iahwyhXaqWw0DMeE93qA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iB1fZ-0007VG-9B; Thu, 19 Sep 2019 19:00:45 +0000
-Received: from mout.gmx.net ([212.227.17.21])
+	id 1iB1sh-0003yE-HF; Thu, 19 Sep 2019 19:14:19 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iB1fH-0007Hp-Ao; Thu, 19 Sep 2019 19:00:30 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
- s=badeba3b8450; t=1568919580;
- bh=hj0v1Dk284VBCCqtbevoonaHYwBxNHrfdQxj3+1olfo=;
- h=X-UI-Sender-Class:Date:In-Reply-To:References:Subject:Reply-to:To:
- CC:From;
- b=Q3ls9dDaa3lO23ToTcVtAxpChrkrT67aZVQKDBGAWOCCrvsABcWRYXnWiuyIoimY0
- 5z/z7hnxea5Qoy+C30DO7BORwklbHAWP4H/Kw0K8Vwx0cuD+UMdUDUHnkQfNdMSaMW
- QU0gINfMFb8OWKPNbB7O7wUPJUuoG2sB9og87XgA=
-X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
-Received: from [192.168.10.26] ([80.208.215.153]) by mail.gmx.com (mrgmx105
- [212.227.17.168]) with ESMTPSA (Nemesis) id 1MbAgq-1hdtp60qym-00ba2G; Thu, 19
- Sep 2019 20:59:40 +0200
-Date: Thu, 19 Sep 2019 20:59:35 +0200
-User-Agent: K-9 Mail for Android
-In-Reply-To: <1567059876.15320.3.camel@mtksdaap41>
-References: <1566531931-9772-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1566531931-9772-3-git-send-email-hsin-hsiung.wang@mediatek.com>
- <trinity-1f82bff1-535e-47cd-9a2f-8faccb56e356-1566562433314@3c-app-gmx-bs11>
- <e8a918ab-3e7a-b487-db77-df28d56518ce@gmail.com>
- <0A87F427-2D81-412A-9549-09A51A021799@public-files.de>
- <b5a21908-faee-17d1-ce26-99b941c0fa70@gmail.com>
- <trinity-a57f08bb-e30e-4e74-911c-c40e335d00da-1566580580817@3c-app-gmx-bs75>
- <1567059876.15320.3.camel@mtksdaap41>
+ id 1iB1rp-0003Nz-1x
+ for linux-mediatek@lists.infradead.org; Thu, 19 Sep 2019 19:13:28 +0000
+Received: by mail-wm1-x341.google.com with SMTP id y21so5277005wmi.0
+ for <linux-mediatek@lists.infradead.org>; Thu, 19 Sep 2019 12:13:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=4bRE1SwpWzkrRf9rMiyxpvEkd4F8FV3SaPHqPTXxucs=;
+ b=OzGv2uGkAkQ3OObYFBTtQTJ3Jq02i5gPJXSGUn25fOd4YOyHtgZig5Aye7nJIuluVX
+ xWXapjDynfY0EdOATl1Y6vPkShPB0tRYsaXZq4oDKbc5FoDXEygDK1f45Jz4VsjwRj++
+ hh9+V0XSFh3IY/o9JDvE18L2IX66qpkhUlcE8R2uVb/0mpLeeMuZ5T0iYY2PXuw2Tt/n
+ C7BP9tVOB0S+PHy01qP09DfVfqKLoloyM2V4RxrDAX1clupP/3XkJR/Aj8Ok5jx6Oj2m
+ pQoYzl0VuqgOuy3I0x4iELLGaWk2AM9bJCKAkfvNznFBYSk1S4xlh/H8bd+29shkQsRV
+ tJKA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=4bRE1SwpWzkrRf9rMiyxpvEkd4F8FV3SaPHqPTXxucs=;
+ b=A4aw3U163us8sLZQO27Weq9e65RHQy2HapR7I1+VMYH3vGMtEdobUwQP0qT/ai+Ogg
+ 0FmhMiws1wIYhi6T/SAMgb5KsONqi0SwxfrGzozNIHvFrcgiO13NmIRU25N1ghA1aA1d
+ Ho+5yn9fCaHnXKCxBADtDyp4zRE8+x221tKxZwqgj0WXb2JmB0KA0ixn3q9qmzb9+9r4
+ ZQD7hRF8YVliDrv6Rt2+MmHsxd1AMcWyT1glFJMGp99u+XzQ+Uo3HKv5xWrjC5d9ikfH
+ 9SEdw3kAcxdyal5UHc0imt+p4Ek6eEEs1m9+tLgcFbeYafdbJK8GLSvnaIwkbq8RjMqz
+ VYLQ==
+X-Gm-Message-State: APjAAAWVKYd/Rdr1Fb90gG/lfftr/J0GkZqw7BzZc+Pm8e6u2dH4nClY
+ vmloD1wM/LDiN9Tn5QqVOBCdqw==
+X-Google-Smtp-Source: APXvYqyi7gVXVXkDcrGdHkNH4pi8r87F6soB0gNTjPFPNN8m6+OdndqJ96TXmSuGOCfxCFT4VF2Ocw==
+X-Received: by 2002:a1c:c589:: with SMTP id v131mr3977886wmf.163.1568920401576; 
+ Thu, 19 Sep 2019 12:13:21 -0700 (PDT)
+Received: from localhost.localdomain ([2a01:e34:ecba:5540:2c05:40e4:899d:aef0])
+ by smtp.gmail.com with ESMTPSA id y12sm11037513wrn.74.2019.09.19.12.13.20
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 19 Sep 2019 12:13:20 -0700 (PDT)
+From: Fabien Parent <fparent@baylibre.com>
+To: linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org
+Subject: [PATCH] clocksource: mediatek: fix error handling
+Date: Thu, 19 Sep 2019 21:13:15 +0200
+Message-Id: <20190919191315.25190-1-fparent@baylibre.com>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-Subject: Re: Aw: Re: [BUG] [PATCH v5 02/10] mfd: mt6397: extract irq related
- code from core driver
-To: linux-mediatek@lists.infradead.org,
- Hsin-hsiung Wang <hsin-hsiung.wang@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>
-From: Frank Wunderlich <frank-w@public-files.de>
-Message-ID: <904EC97A-486D-4C22-9D36-838D25EB7A6F@public-files.de>
-X-Provags-ID: V03:K1:row03C78r7NZowZd8aVAl1Eeyaqqfenw5BZOEshUX8lFBJvuhz4
- T+PL7oTN1F06ozQi0+zBKKCvCjoji4fkxqRZYCs4Niyy/E2/wOLW0QO2w/ZBpvxECmQWl/i
- A6QlqHL6V32iBPMdpj4GYf0evMqUF1ziUcKsrai89pMK9PRtGVWj6HXo3RI2nn0FwZR5Jz+
- lrl7R4R95drFfoDuQz9Wg==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:e7BeDAeyJjA=:q/h5IzV1+NgCc3T9CmosSg
- 5EqJDfGKXmoIHjQZkXq8oJq+sjZkfSZvZPdGHFckLlVfGVh5bL98PsKt6DGldZNBHN1p8Yh22
- gSANqdGmtfpzBVbqmWzawdC++Qo/URhEqfAYw5t/5jtZQaPbcETwtqJhaTocnUeRNq7O2m10k
- +giTC5JeqqoydXT5s7p06GpravF0F08jWcA1B5/BtR05ITCeHOhJlIF+gHZD50PqFOALYnfUn
- oOaARwN2zGdGdZRmVB579kngNnoqBcIyI7A0dnwrs1o4TvpFvkvUVHvJ6xIxglodmj0yYnHDz
- JJIWTw93tIZ/s66GZQ2dKEkq2Ds7+KW6e3GysK20VR1rX3r/Ll0iL4tJDV19WRY+oPTqiuipD
- c0Qh1fvK+ew0WTzxbaASsidqATQNvDEOrhKcGvhawSEAYIXo3jI769l7TEelE0RtDp5pon/xq
- wWSbWtnDb4smBSrqADxXE1aXBh0gLJTgwO0s6Qy/sJSvmXyaCP8yfExTQypOoDE51gkDR/l7V
- UoINLG06vd6EaqaYgJgy+92YLhugFzupIcVSP2ZDdHOo/c3bbPSvPWFwyyrPTXR3aDDR4bzWF
- N9xPJZWCLNeqql2BqXyX/BNWPLRwJM49HBfIUJs7OHpYn0pMV5XYI5KM/Zf78qiVNQZ5YHYvV
- 3uiAjYU849vUmDCkwmCFJjZoLqKbEwgaTmKmS9A9i1gE89hEsHOiIa2Qf5Bng9H1Utnysq3lC
- KdssfnlXSmZa4CPktrrC9DqVjtUr+2hVZjujLB5vpumb884hT0Ruz886H/4GQg4ZsL5/K51Kj
- ugJHHH0LTsFdQVGGoFFr1jMdoy/cMDU/jBAnoa9lunXk+b5hPlMLrmEHOjGu0CJU0WRq/yggs
- QpXzZpFp6ulWwdKNnN2ZZL0OnX3r45zjcx4Vf3qOT6nGLoDlXaBfaHwwPyp0+1Krq7N8uJMl5
- sO+lQ9qXsLMNxRaU0Trv/0E0bjZPFylaGGXPnau15KgXPiuInFIgwlcU3Q8XsNvo7xXtO4873
- 6sw++dLvqQu+fBI0pzrJnYwVph+StTcKRW0+qHJ0LrQQZPM/pgplDHHPdV5vBUrMBG1hH3IeL
- wXBRjnkwpGFFAeyz10TtMtqXJHcIpt9wvcc4camaPl5slaFI3rCrt8Xq3qhpBimk5htF+VdVU
- MYhdw0Cjsxc6opGMtremMxOcVHEMcGiCD7lqvu66REZg68HyRdcLnZzDXqYv9H75zooPiMPzE
- bdHoJ3bB+sx8eukAEEgyWXBXIGQge/cIOeL7NxJyMbLQgww1Yphgbj/o7mgk=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_120027_880062_D32A7D34 
-X-CRM114-Status: UNSURE (   4.80  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190919_121325_368429_871F2F53 
+X-CRM114-Status: GOOD (  12.83  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.21 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -104,36 +91,139 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Reply-To: frank-w@public-files.de
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Sean Wang <sean.wang@mediatek.com>, Liam Girdwood <lgirdwood@gmail.com>,
- Rob Herring <robh+dt@kernel.org>, linux-kernel@vger.kernel.org,
- Richard Fontana <rfontana@redhat.com>, Mark Brown <broonie@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- =?ISO-8859-1?Q?=22Ren=E9_van_Dorst=22?= <opensource@vdorst.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Lee Jones <lee.jones@linaro.org>, Kate Stewart <kstewart@linuxfoundation.org>,
- linux-rtc@vger.kernel.org
+Cc: matthias.bgg@gmail.com, Fabien Parent <fparent@baylibre.com>,
+ tglx@linutronix.de, daniel.lezcano@linaro.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi
+When timer_of_init fails, it cleans up after itself by undoing
+everything it did during the initialization function.
 
-When is new version ready? First 2 patches are still in next for 5.4 and i see no fix so i guess it is still broken.
+mtk_syst_init and mtk_gpt_init both call timer_of_cleanup if
+timer_of_init fails. timer_of_cleanup try to release the resource taken.
+Since these resources have already been cleaned up by timer_of_init,
+we end up getting a few warnings printed:
 
-Regards Frank
+[    0.001935] WARNING: CPU: 0 PID: 0 at __clk_put+0xe8/0x128
+[    0.002650] Modules linked in:
+[    0.003058] CPU: 0 PID: 0 Comm: swapper/0 Not tainted 4.19.67+ #1
+[    0.003852] Hardware name: MediaTek MT8183 (DT)
+[    0.004446] pstate: 20400085 (nzCv daIf +PAN -UAO)
+[    0.005073] pc : __clk_put+0xe8/0x128
+[    0.005555] lr : clk_put+0xc/0x14
+[    0.005988] sp : ffffff80090b3ea0
+[    0.006422] x29: ffffff80090b3ea0 x28: 0000000040e20018
+[    0.007121] x27: ffffffc07bfff780 x26: 0000000000000001
+[    0.007819] x25: ffffff80090bda80 x24: ffffff8008ec5828
+[    0.008517] x23: ffffff80090bd000 x22: ffffff8008d8b2e8
+[    0.009216] x21: 0000000000000001 x20: fffffffffffffdfb
+[    0.009914] x19: ffffff8009166180 x18: 00000000002bffa8
+[    0.010612] x17: ffffffc012996980 x16: 0000000000000000
+[    0.011311] x15: ffffffbf004a6800 x14: 3536343038393334
+[    0.012009] x13: 2079726576652073 x12: 7eb9c62c5c38f100
+[    0.012707] x11: ffffff80090b3ba0 x10: ffffff80090b3ba0
+[    0.013405] x9 : 0000000000000004 x8 : 0000000000000040
+[    0.014103] x7 : ffffffc079400270 x6 : 0000000000000000
+[    0.014801] x5 : ffffffc079400248 x4 : 0000000000000000
+[    0.015499] x3 : 0000000000000000 x2 : 0000000000000000
+[    0.016197] x1 : ffffff80091661c0 x0 : fffffffffffffdfb
+[    0.016896] Call trace:
+[    0.017218]  __clk_put+0xe8/0x128
+[    0.017654]  clk_put+0xc/0x14
+[    0.018048]  timer_of_cleanup+0x60/0x7c
+[    0.018551]  mtk_syst_init+0x8c/0x9c
+[    0.019020]  timer_probe+0x6c/0xe0
+[    0.019469]  time_init+0x14/0x44
+[    0.019893]  start_kernel+0x2d0/0x46c
+[    0.020378] ---[ end trace 8c1efabea1267649 ]---
+[    0.020982] ------------[ cut here ]------------
+[    0.021586] Trying to vfree() nonexistent vm area ((____ptrval____))
+[    0.022427] WARNING: CPU: 0 PID: 0 at __vunmap+0xd0/0xd8
+[    0.023119] Modules linked in:
+[    0.023524] CPU: 0 PID: 0 Comm: swapper/0 Tainted: G        W         4.19.67+ #1
+[    0.024498] Hardware name: MediaTek MT8183 (DT)
+[    0.025091] pstate: 60400085 (nZCv daIf +PAN -UAO)
+[    0.025718] pc : __vunmap+0xd0/0xd8
+[    0.026176] lr : __vunmap+0xd0/0xd8
+[    0.026632] sp : ffffff80090b3e90
+[    0.027066] x29: ffffff80090b3e90 x28: 0000000040e20018
+[    0.027764] x27: ffffffc07bfff780 x26: 0000000000000001
+[    0.028462] x25: ffffff80090bda80 x24: ffffff8008ec5828
+[    0.029160] x23: ffffff80090bd000 x22: ffffff8008d8b2e8
+[    0.029858] x21: 0000000000000000 x20: 0000000000000000
+[    0.030556] x19: ffffff800800d000 x18: 00000000002bffa8
+[    0.031254] x17: 0000000000000000 x16: 0000000000000000
+[    0.031952] x15: ffffffbf004a6800 x14: 3536343038393334
+[    0.032651] x13: 2079726576652073 x12: 7eb9c62c5c38f100
+[    0.033349] x11: ffffff80090b3b40 x10: ffffff80090b3b40
+[    0.034047] x9 : 0000000000000005 x8 : 5f5f6c6176727470
+[    0.034745] x7 : 5f5f5f5f28282061 x6 : ffffff80091c86ef
+[    0.035443] x5 : ffffff800852b690 x4 : 0000000000000000
+[    0.036141] x3 : 0000000000000002 x2 : 0000000000000002
+[    0.036839] x1 : 7eb9c62c5c38f100 x0 : 7eb9c62c5c38f100
+[    0.037536] Call trace:
+[    0.037859]  __vunmap+0xd0/0xd8
+[    0.038271]  vunmap+0x24/0x30
+[    0.038664]  __iounmap+0x2c/0x34
+[    0.039088]  timer_of_cleanup+0x70/0x7c
+[    0.039591]  mtk_syst_init+0x8c/0x9c
+[    0.040060]  timer_probe+0x6c/0xe0
+[    0.040507]  time_init+0x14/0x44
+[    0.040932]  start_kernel+0x2d0/0x46c
 
-Am 29. August 2019 08:24:36 MESZ schrieb Hsin-hsiung Wang <hsin-hsiung.wang@mediatek.com>:
->Hi Frank/Matthias,
->
->Thanks for your comments.
->The root cause seems I didn't split the code well.
->I will fix it in the next version.
+This commit remove the calls to timer_of_cleanup when timer_of_init
+fails since it is unnecessary and actually cause warnings to be printed.
+
+Signed-off-by: Fabien Parent <fparent@baylibre.com>
+---
+ drivers/clocksource/timer-mediatek.c | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/drivers/clocksource/timer-mediatek.c b/drivers/clocksource/timer-mediatek.c
+index a562f491b0f8..9318edcd8963 100644
+--- a/drivers/clocksource/timer-mediatek.c
++++ b/drivers/clocksource/timer-mediatek.c
+@@ -268,15 +268,12 @@ static int __init mtk_syst_init(struct device_node *node)
+ 
+ 	ret = timer_of_init(node, &to);
+ 	if (ret)
+-		goto err;
++		return ret;
+ 
+ 	clockevents_config_and_register(&to.clkevt, timer_of_rate(&to),
+ 					TIMER_SYNC_TICKS, 0xffffffff);
+ 
+ 	return 0;
+-err:
+-	timer_of_cleanup(&to);
+-	return ret;
+ }
+ 
+ static int __init mtk_gpt_init(struct device_node *node)
+@@ -293,7 +290,7 @@ static int __init mtk_gpt_init(struct device_node *node)
+ 
+ 	ret = timer_of_init(node, &to);
+ 	if (ret)
+-		goto err;
++		return ret;
+ 
+ 	/* Configure clock source */
+ 	mtk_gpt_setup(&to, TIMER_CLK_SRC, GPT_CTRL_OP_FREERUN);
+@@ -311,9 +308,6 @@ static int __init mtk_gpt_init(struct device_node *node)
+ 	mtk_gpt_enable_irq(&to, TIMER_CLK_EVT);
+ 
+ 	return 0;
+-err:
+-	timer_of_cleanup(&to);
+-	return ret;
+ }
+ TIMER_OF_DECLARE(mtk_mt6577, "mediatek,mt6577-timer", mtk_gpt_init);
+ TIMER_OF_DECLARE(mtk_mt6765, "mediatek,mt6765-timer", mtk_syst_init);
+-- 
+2.23.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
