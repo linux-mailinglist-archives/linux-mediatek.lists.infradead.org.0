@@ -2,82 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AA0EBB813F
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 21:14:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C1A7FB833D
+	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 23:22:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ALVv1ajLJwTFDiUBCmUFbbKE22E+eDK1j2hHpsTdQA0=; b=pBI3EnssfMcaKQ
-	XQ9PGvuDpE84/osT9jCOleyUWzWfk45xeKA0LOJtb5w+FAcf2+Sb7RCagr6uPlYUyNqH9maYeCUF3
-	cMQAEMplJpigCjEJ2gFg2Zqk95Ywscz/Lq80nXpyTpTTqoPWq3gx4JhJMGEAR2ZP9gFLVMlm13TDk
-	1o1QYO+ZoG11n0vBFCHUuh3B3cRWWXC8NPWUhFHT8zEnOY3zkA/Rp+pcx6cTYvxNLdquFMMjqKcoX
-	z9jbLeOCXKeYVM9u4OwF3RsU4++k9ffRv8q46UnxSKCv4ghDDGVlZwEl89z3u7c1ISleh3LbiZ1VY
-	iahwyhXaqWw0DMeE93qA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=yyg9aDjFGDoP7OEaBkyeLhk4gBMBV4v114IIrXUqFnE=; b=nfeIfXxWIamujkz8mt//UEh2p
+	ClYiboqpmUMli8G58V7gQ5s18E3rTFBJhOGUljfn9MWbfdbFN7kOe8hLJ77lv7XxnYNotHM+IOqvD
+	Oq1xFBnd40OONw/0yzkQaM9mIlAx1DCMy3XXhUitN7jI3Z/RycXLZft0ZFmTPz8jNYxsBhs6FqFqz
+	yebuY0uZvOhK6Bt/oGLlSIeUnNCwz03wDFSBSkWM+q2QzKILY/1gCR5I+vc7xNP+yely/Py8NuHYB
+	jXwqxTy6bH9LZGohcmXaRoYPgoonSBAfgxctKdTVRUTuaj9eVAtq22qW/GU0KOfg6+KNXTkHkmevO
+	7DWq1U9vw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iB1sh-0003yE-HF; Thu, 19 Sep 2019 19:14:19 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iB1rp-0003Nz-1x
- for linux-mediatek@lists.infradead.org; Thu, 19 Sep 2019 19:13:28 +0000
-Received: by mail-wm1-x341.google.com with SMTP id y21so5277005wmi.0
- for <linux-mediatek@lists.infradead.org>; Thu, 19 Sep 2019 12:13:22 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=4bRE1SwpWzkrRf9rMiyxpvEkd4F8FV3SaPHqPTXxucs=;
- b=OzGv2uGkAkQ3OObYFBTtQTJ3Jq02i5gPJXSGUn25fOd4YOyHtgZig5Aye7nJIuluVX
- xWXapjDynfY0EdOATl1Y6vPkShPB0tRYsaXZq4oDKbc5FoDXEygDK1f45Jz4VsjwRj++
- hh9+V0XSFh3IY/o9JDvE18L2IX66qpkhUlcE8R2uVb/0mpLeeMuZ5T0iYY2PXuw2Tt/n
- C7BP9tVOB0S+PHy01qP09DfVfqKLoloyM2V4RxrDAX1clupP/3XkJR/Aj8Ok5jx6Oj2m
- pQoYzl0VuqgOuy3I0x4iELLGaWk2AM9bJCKAkfvNznFBYSk1S4xlh/H8bd+29shkQsRV
- tJKA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=4bRE1SwpWzkrRf9rMiyxpvEkd4F8FV3SaPHqPTXxucs=;
- b=A4aw3U163us8sLZQO27Weq9e65RHQy2HapR7I1+VMYH3vGMtEdobUwQP0qT/ai+Ogg
- 0FmhMiws1wIYhi6T/SAMgb5KsONqi0SwxfrGzozNIHvFrcgiO13NmIRU25N1ghA1aA1d
- Ho+5yn9fCaHnXKCxBADtDyp4zRE8+x221tKxZwqgj0WXb2JmB0KA0ixn3q9qmzb9+9r4
- ZQD7hRF8YVliDrv6Rt2+MmHsxd1AMcWyT1glFJMGp99u+XzQ+Uo3HKv5xWrjC5d9ikfH
- 9SEdw3kAcxdyal5UHc0imt+p4Ek6eEEs1m9+tLgcFbeYafdbJK8GLSvnaIwkbq8RjMqz
- VYLQ==
-X-Gm-Message-State: APjAAAWVKYd/Rdr1Fb90gG/lfftr/J0GkZqw7BzZc+Pm8e6u2dH4nClY
- vmloD1wM/LDiN9Tn5QqVOBCdqw==
-X-Google-Smtp-Source: APXvYqyi7gVXVXkDcrGdHkNH4pi8r87F6soB0gNTjPFPNN8m6+OdndqJ96TXmSuGOCfxCFT4VF2Ocw==
-X-Received: by 2002:a1c:c589:: with SMTP id v131mr3977886wmf.163.1568920401576; 
- Thu, 19 Sep 2019 12:13:21 -0700 (PDT)
-Received: from localhost.localdomain ([2a01:e34:ecba:5540:2c05:40e4:899d:aef0])
- by smtp.gmail.com with ESMTPSA id y12sm11037513wrn.74.2019.09.19.12.13.20
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 19 Sep 2019 12:13:20 -0700 (PDT)
-From: Fabien Parent <fparent@baylibre.com>
-To: linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-Subject: [PATCH] clocksource: mediatek: fix error handling
-Date: Thu, 19 Sep 2019 21:13:15 +0200
-Message-Id: <20190919191315.25190-1-fparent@baylibre.com>
-X-Mailer: git-send-email 2.23.0
+	id 1iB3si-00061R-BD; Thu, 19 Sep 2019 21:22:28 +0000
+Received: from vulcan.natalenko.name ([2001:19f0:6c00:8846:5400:ff:fe0c:dfa0])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat
+ Linux)) id 1iB3sQ-0005pB-64; Thu, 19 Sep 2019 21:22:12 +0000
+Received: from mail.natalenko.name (vulcan.natalenko.name
+ [IPv6:fe80::5400:ff:fe0c:dfa0])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by vulcan.natalenko.name (Postfix) with ESMTPSA id 7C7A75E280C;
+ Thu, 19 Sep 2019 23:22:03 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name;
+ s=dkim-20170712; t=1568928123;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=nvfXNPCQg7B581+MslvcoEWLTwJp2jXTw915+YqYF0w=;
+ b=i+KmjjbSSriAGy62TJ1qhcGVNLO3g7OTsgglPkt+ylvBzx6jO8DN1KJC1G2E6e9r6WBPpC
+ 7jhQtsboDmL2YJti9HlWuBCv+SX3r9pn1DrTs5XWew3eOCy59rO0cShMGjnGs1VIXrHqRR
+ 5WsU9Sl7rOlJFZMVm7RfAOz1hR8C9w0=
 MIME-Version: 1.0
+Date: Thu, 19 Sep 2019 23:22:03 +0200
+From: Oleksandr Natalenko <oleksandr@natalenko.name>
+To: linux-mediatek@lists.infradead.org
+Subject: Re: mt76x2e hardware restart
+In-Reply-To: <deaafa7a3e9ea2111ebb5106430849c6@natalenko.name>
+References: <deaafa7a3e9ea2111ebb5106430849c6@natalenko.name>
+Message-ID: <c6d621759c190f7810d898765115f3b4@natalenko.name>
+X-Sender: oleksandr@natalenko.name
+User-Agent: Roundcube Webmail/1.3.10
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name; 
+ s=arc-20170712; t=1568928123;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=nvfXNPCQg7B581+MslvcoEWLTwJp2jXTw915+YqYF0w=;
+ b=ETc2q7YURCqlrETsKKeQkoPlDZrCqCFYY89AXGwPNhu+uYOEQZFte02NHPleOvqNzi05+G
+ 48LhJrMbwsTLyDxU3rcisz7iw7H9EfnL0KLSfhvwRodWvQW3eHZFlcgZe9OdbYoM9Qg9Pg
+ TSghhu0PLaDijtfAcg83a9yrI4P0ook=
+ARC-Seal: i=1; s=arc-20170712; d=natalenko.name; t=1568928123; a=rsa-sha256;
+ cv=none;
+ b=FDKorXnDcAKDb8+CrT3w5/PyCrZwO9676UXdBc0WwqcyPOB/xTGw21uNIzbPGPSOJYQNCm
+ z5viRpMuMdaOVmBOTY+aor9YJhQf0kk6lmyVVvh1uRubEjaYOfnyqCYmJGq9C6JaDhCIiY
+ uJj764/pFLr/8vhgqNFjwIDtuc4v+/8=
+ARC-Authentication-Results: i=1; vulcan.natalenko.name;
+ auth=pass smtp.auth=oleksandr@natalenko.name
+ smtp.mailfrom=oleksandr@natalenko.name
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_121325_368429_871F2F53 
-X-CRM114-Status: GOOD (  12.83  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190919_142210_403255_21344F12 
+X-CRM114-Status: UNSURE (   9.13  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2001:19f0:6c00:8846:5400:ff:fe0c:dfa0 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -91,139 +98,162 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: matthias.bgg@gmail.com, Fabien Parent <fparent@baylibre.com>,
- tglx@linutronix.de, daniel.lezcano@linaro.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: Ryder Lee <ryder.lee@mediatek.com>, Stanislaw Gruszka <sgruszka@redhat.com>,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Roy Luo <royluo@google.com>,
+ Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, "David S.
+ Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>,
+ Felix Fietkau <nbd@nbd.name>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When timer_of_init fails, it cleans up after itself by undoing
-everything it did during the initialization function.
+On 19.09.2019 18:24, Oleksandr Natalenko wrote:
+> [  +9,979664] mt76x2e 0000:01:00.0: Firmware Version: 0.0.00
+> [  +0,000014] mt76x2e 0000:01:00.0: Build: 1
+> [  +0,000010] mt76x2e 0000:01:00.0: Build Time: 201507311614____
+> [  +0,018017] mt76x2e 0000:01:00.0: Firmware running!
+> [  +0,001101] ieee80211 phy4: Hardware restart was requested
 
-mtk_syst_init and mtk_gpt_init both call timer_of_cleanup if
-timer_of_init fails. timer_of_cleanup try to release the resource taken.
-Since these resources have already been cleaned up by timer_of_init,
-we end up getting a few warnings printed:
+IIUC, this happens due to watchdog. I think the following applies.
 
-[    0.001935] WARNING: CPU: 0 PID: 0 at __clk_put+0xe8/0x128
-[    0.002650] Modules linked in:
-[    0.003058] CPU: 0 PID: 0 Comm: swapper/0 Not tainted 4.19.67+ #1
-[    0.003852] Hardware name: MediaTek MT8183 (DT)
-[    0.004446] pstate: 20400085 (nzCv daIf +PAN -UAO)
-[    0.005073] pc : __clk_put+0xe8/0x128
-[    0.005555] lr : clk_put+0xc/0x14
-[    0.005988] sp : ffffff80090b3ea0
-[    0.006422] x29: ffffff80090b3ea0 x28: 0000000040e20018
-[    0.007121] x27: ffffffc07bfff780 x26: 0000000000000001
-[    0.007819] x25: ffffff80090bda80 x24: ffffff8008ec5828
-[    0.008517] x23: ffffff80090bd000 x22: ffffff8008d8b2e8
-[    0.009216] x21: 0000000000000001 x20: fffffffffffffdfb
-[    0.009914] x19: ffffff8009166180 x18: 00000000002bffa8
-[    0.010612] x17: ffffffc012996980 x16: 0000000000000000
-[    0.011311] x15: ffffffbf004a6800 x14: 3536343038393334
-[    0.012009] x13: 2079726576652073 x12: 7eb9c62c5c38f100
-[    0.012707] x11: ffffff80090b3ba0 x10: ffffff80090b3ba0
-[    0.013405] x9 : 0000000000000004 x8 : 0000000000000040
-[    0.014103] x7 : ffffffc079400270 x6 : 0000000000000000
-[    0.014801] x5 : ffffffc079400248 x4 : 0000000000000000
-[    0.015499] x3 : 0000000000000000 x2 : 0000000000000000
-[    0.016197] x1 : ffffff80091661c0 x0 : fffffffffffffdfb
-[    0.016896] Call trace:
-[    0.017218]  __clk_put+0xe8/0x128
-[    0.017654]  clk_put+0xc/0x14
-[    0.018048]  timer_of_cleanup+0x60/0x7c
-[    0.018551]  mtk_syst_init+0x8c/0x9c
-[    0.019020]  timer_probe+0x6c/0xe0
-[    0.019469]  time_init+0x14/0x44
-[    0.019893]  start_kernel+0x2d0/0x46c
-[    0.020378] ---[ end trace 8c1efabea1267649 ]---
-[    0.020982] ------------[ cut here ]------------
-[    0.021586] Trying to vfree() nonexistent vm area ((____ptrval____))
-[    0.022427] WARNING: CPU: 0 PID: 0 at __vunmap+0xd0/0xd8
-[    0.023119] Modules linked in:
-[    0.023524] CPU: 0 PID: 0 Comm: swapper/0 Tainted: G        W         4.19.67+ #1
-[    0.024498] Hardware name: MediaTek MT8183 (DT)
-[    0.025091] pstate: 60400085 (nZCv daIf +PAN -UAO)
-[    0.025718] pc : __vunmap+0xd0/0xd8
-[    0.026176] lr : __vunmap+0xd0/0xd8
-[    0.026632] sp : ffffff80090b3e90
-[    0.027066] x29: ffffff80090b3e90 x28: 0000000040e20018
-[    0.027764] x27: ffffffc07bfff780 x26: 0000000000000001
-[    0.028462] x25: ffffff80090bda80 x24: ffffff8008ec5828
-[    0.029160] x23: ffffff80090bd000 x22: ffffff8008d8b2e8
-[    0.029858] x21: 0000000000000000 x20: 0000000000000000
-[    0.030556] x19: ffffff800800d000 x18: 00000000002bffa8
-[    0.031254] x17: 0000000000000000 x16: 0000000000000000
-[    0.031952] x15: ffffffbf004a6800 x14: 3536343038393334
-[    0.032651] x13: 2079726576652073 x12: 7eb9c62c5c38f100
-[    0.033349] x11: ffffff80090b3b40 x10: ffffff80090b3b40
-[    0.034047] x9 : 0000000000000005 x8 : 5f5f6c6176727470
-[    0.034745] x7 : 5f5f5f5f28282061 x6 : ffffff80091c86ef
-[    0.035443] x5 : ffffff800852b690 x4 : 0000000000000000
-[    0.036141] x3 : 0000000000000002 x2 : 0000000000000002
-[    0.036839] x1 : 7eb9c62c5c38f100 x0 : 7eb9c62c5c38f100
-[    0.037536] Call trace:
-[    0.037859]  __vunmap+0xd0/0xd8
-[    0.038271]  vunmap+0x24/0x30
-[    0.038664]  __iounmap+0x2c/0x34
-[    0.039088]  timer_of_cleanup+0x70/0x7c
-[    0.039591]  mtk_syst_init+0x8c/0x9c
-[    0.040060]  timer_probe+0x6c/0xe0
-[    0.040507]  time_init+0x14/0x44
-[    0.040932]  start_kernel+0x2d0/0x46c
+Watchdog is started here:
 
-This commit remove the calls to timer_of_cleanup when timer_of_init
-fails since it is unnecessary and actually cause warnings to be printed.
+=== mt76x02_util.c
+130 void mt76x02_init_device(struct mt76x02_dev *dev)
+131 {
+...
+155         INIT_DELAYED_WORK(&dev->wdt_work, mt76x02_wdt_work);
+===
 
-Signed-off-by: Fabien Parent <fparent@baylibre.com>
----
- drivers/clocksource/timer-mediatek.c | 10 ++--------
- 1 file changed, 2 insertions(+), 8 deletions(-)
+It checks for TX hang here:
 
-diff --git a/drivers/clocksource/timer-mediatek.c b/drivers/clocksource/timer-mediatek.c
-index a562f491b0f8..9318edcd8963 100644
---- a/drivers/clocksource/timer-mediatek.c
-+++ b/drivers/clocksource/timer-mediatek.c
-@@ -268,15 +268,12 @@ static int __init mtk_syst_init(struct device_node *node)
- 
- 	ret = timer_of_init(node, &to);
- 	if (ret)
--		goto err;
-+		return ret;
- 
- 	clockevents_config_and_register(&to.clkevt, timer_of_rate(&to),
- 					TIMER_SYNC_TICKS, 0xffffffff);
- 
- 	return 0;
--err:
--	timer_of_cleanup(&to);
--	return ret;
- }
- 
- static int __init mtk_gpt_init(struct device_node *node)
-@@ -293,7 +290,7 @@ static int __init mtk_gpt_init(struct device_node *node)
- 
- 	ret = timer_of_init(node, &to);
- 	if (ret)
--		goto err;
-+		return ret;
- 
- 	/* Configure clock source */
- 	mtk_gpt_setup(&to, TIMER_CLK_SRC, GPT_CTRL_OP_FREERUN);
-@@ -311,9 +308,6 @@ static int __init mtk_gpt_init(struct device_node *node)
- 	mtk_gpt_enable_irq(&to, TIMER_CLK_EVT);
- 
- 	return 0;
--err:
--	timer_of_cleanup(&to);
--	return ret;
- }
- TIMER_OF_DECLARE(mtk_mt6577, "mediatek,mt6577-timer", mtk_gpt_init);
- TIMER_OF_DECLARE(mtk_mt6765, "mediatek,mt6765-timer", mtk_syst_init);
+=== mt76x02_mmio.c
+557 void mt76x02_wdt_work(struct work_struct *work)
+558 {
+...
+562     mt76x02_check_tx_hang(dev);
+===
+
+Conditions:
+
+=== mt76x02_mmio.c
+530 static void mt76x02_check_tx_hang(struct mt76x02_dev *dev)
+531 {
+532     if (mt76x02_tx_hang(dev)) {
+533         if (++dev->tx_hang_check >= MT_TX_HANG_TH)
+534             goto restart;
+535     } else {
+536         dev->tx_hang_check = 0;
+537     }
+538
+539     if (dev->mcu_timeout)
+540         goto restart;
+541
+542     return;
+543
+544 restart:
+545     mt76x02_watchdog_reset(dev);
+===
+
+Actual check:
+
+=== mt76x02_mmio.c
+367 static bool mt76x02_tx_hang(struct mt76x02_dev *dev)
+368 {
+369     u32 dma_idx, prev_dma_idx;
+370     struct mt76_queue *q;
+371     int i;
+372
+373     for (i = 0; i < 4; i++) {
+374         q = dev->mt76.q_tx[i].q;
+375
+376         if (!q->queued)
+377             continue;
+378
+379         prev_dma_idx = dev->mt76.tx_dma_idx[i];
+380         dma_idx = readl(&q->regs->dma_idx);
+381         dev->mt76.tx_dma_idx[i] = dma_idx;
+382
+383         if (prev_dma_idx == dma_idx)
+384             break;
+385     }
+386
+387     return i < 4;
+388 }
+===
+
+(I don't quite understand what it does here; why 4? does each device 
+have 4 queues? maybe, my does not? I guess this is where watchdog is 
+triggered, though, because otherwise I'd see mcu_timeout message like 
+"MCU message %d (seq %d) timed out\n")
+
+Once it detects TX hang, the reset is triggered:
+
+=== mt76x02_mmio.c
+446 static void mt76x02_watchdog_reset(struct mt76x02_dev *dev)
+447 {
+...
+485     if (restart)
+486         mt76_mcu_restart(dev);
+===
+
+mt76_mcu_restart() is just a define for this series here:
+
+=== mt76.h
+555 #define mt76_mcu_restart(dev, ...)  
+(dev)->mt76.mcu_ops->mcu_restart(&((dev)->mt76))
+===
+
+Actual OP:
+
+=== mt76x2/pci_mcu.c
+188 int mt76x2_mcu_init(struct mt76x02_dev *dev)
+189 {
+190     static const struct mt76_mcu_ops mt76x2_mcu_ops = {
+191         .mcu_restart = mt76pci_mcu_restart,
+192         .mcu_send_msg = mt76x02_mcu_msg_send,
+193     };
+===
+
+This triggers loading the firmware:
+
+=== mt76x2/pci_mcu.c
+168 static int
+169 mt76pci_mcu_restart(struct mt76_dev *mdev)
+170 {
+...
+179     ret = mt76pci_load_firmware(dev);
+===
+
+which does the printout I observe:
+
+=== mt76x2/pci_mcu.c
+  91 static int
+  92 mt76pci_load_firmware(struct mt76x02_dev *dev)
+  93 {
+...
+156     dev_info(dev->mt76.dev, "Firmware running!\n");
+===
+
+Too bad it doesn't show the actual watchdog message, IOW, why the reset 
+happens. I guess I will have to insert some pr_infos here and there.
+
+Does it make sense? Any ideas why this can happen?
+
+More info on the device during boot:
+
+===
+[  +0,333233] mt76x2e 0000:01:00.0: enabling device (0000 -> 0002)
+[  +0,000571] mt76x2e 0000:01:00.0: ASIC revision: 76120044
+[  +0,017806] mt76x2e 0000:01:00.0: ROM patch build: 20141115060606a
+===
+
 -- 
-2.23.0
-
+   Oleksandr Natalenko (post-factum)
 
 _______________________________________________
 Linux-mediatek mailing list
