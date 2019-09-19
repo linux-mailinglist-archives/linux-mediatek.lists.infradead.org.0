@@ -2,86 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 81591B7D06
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 16:38:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2A37BB7DDD
+	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 17:12:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cvWYNdfeHgShaz9MwWotStdecvs7uy/7bN2Xq5h4u7M=; b=ZTIqnmT02Wzx7X
-	IsCtYv4f8ZmZF78dRyRVquWptkCSHXeTaPzx/pjjGzZP7vWl7WjiR+z6OHgvC56g5jGmnT4Moh+sk
-	7xv9LOOT/CJ2vzVbj3rmLOOpxBpoyU+KXBfqRKT2DLNxX4xqcw8CpQaSFzyQtZRuxT0hhcRUdu4hT
-	TvE5HTpx2wEMqWcTDHaydBbt0Ah016U6ZsMVb/uRj1sACkTTVDLzIvvtvhfaZRXwwY1VG2tbfttZD
-	fRYuAL93LDH6xQSZKLhKYjQTn6MeVGXZvzhtU3KVpn34RWdEl/PlPNbIfQ/MS8tziiYtvR6zUQhRt
-	FjSMSq4Lj2IaJfrge//w==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=psKI0fgLUr52m3R/Ql8/xuz7+R4g9M0IDVOphkoe6nI=; b=hlMAC80vcUpVyl
+	UUZdBDhgmXuqYOt8MtE97YM6iN4QpWglbVbJatoQTDBSh34Jr1mcCA9QEohLhPH4uzKIZ4L7wCITn
+	ItbthDtgdihIaVF0CE84/zhXYyjvj5w0vFZZDl0mHylb4+MBfwMY0UOKo45jR9P3LK65p970lhZh2
+	ZaMt1TWEzwWo8sTxqNsXDJ/aAOF2He5zpbyIK7SU5kPjs7UxwfZQStFDpUqUrrWZt31g789jHn++M
+	HNyZFTRURxxOA3Q4vE7Joh0+z3nwjRLx01ReLctw5BlGwWPk7g90vICVNB88lGS3uC3ZmdI2lkV7Q
+	DCAI2MU+g0Qi0LJ+97nw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAxZo-0000A9-Tj; Thu, 19 Sep 2019 14:38:32 +0000
-Received: from lelv0142.ext.ti.com ([198.47.23.249])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAxZJ-00087d-Cw; Thu, 19 Sep 2019 14:38:02 +0000
-Received: from lelv0265.itg.ti.com ([10.180.67.224])
- by lelv0142.ext.ti.com (8.15.2/8.15.2) with ESMTP id x8JEbetv115088;
- Thu, 19 Sep 2019 09:37:40 -0500
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
- s=ti-com-17Q1; t=1568903860;
- bh=MF3qsuF4n+o3m2uSbnHwtbN88u+xehQfFPTradyvPmM=;
- h=Subject:To:CC:References:From:Date:In-Reply-To;
- b=oop+2cl0Z5hydQEOc7aJzKOUC8+y7z7JdhpUZQ48FCxXjOkcMZ1L5BFe22g4abjTm
- aGkkCdJjvzrRTBkmVIECVwkY1WTc1zljyPyknqsjQzIVpNZ3t864me2KvRHSmox9Uz
- lMXRFJyZDKSGM4Eh+6J7GPgsT5E2l92r0G3JPUxA=
-Received: from DFLE113.ent.ti.com (dfle113.ent.ti.com [10.64.6.34])
- by lelv0265.itg.ti.com (8.15.2/8.15.2) with ESMTPS id x8JEbd4H073219
- (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=FAIL);
- Thu, 19 Sep 2019 09:37:40 -0500
-Received: from DFLE104.ent.ti.com (10.64.6.25) by DFLE113.ent.ti.com
- (10.64.6.34) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1713.5; Thu, 19
- Sep 2019 09:37:36 -0500
-Received: from fllv0040.itg.ti.com (10.64.41.20) by DFLE104.ent.ti.com
- (10.64.6.25) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1713.5 via
- Frontend Transport; Thu, 19 Sep 2019 09:37:39 -0500
-Received: from [10.250.132.15] (ileax41-snat.itg.ti.com [10.172.224.153])
- by fllv0040.itg.ti.com (8.15.2/8.15.2) with ESMTP id x8JEbYUO049208;
- Thu, 19 Sep 2019 09:37:35 -0500
-Subject: Re: [PATCH 00/23] mtd: spi-nor: Quad Enable and (un)lock methods
-To: <Tudor.Ambarus@microchip.com>, <boris.brezillon@collabora.com>,
- <marek.vasut@gmail.com>, <miquel.raynal@bootlin.com>, <richard@nod.at>,
- <linux-mtd@lists.infradead.org>
-References: <20190917155426.7432-1-tudor.ambarus@microchip.com>
-From: Vignesh Raghavendra <vigneshr@ti.com>
-Message-ID: <920a9946-af0d-1190-d59c-0b4acee71931@ti.com>
-Date: Thu, 19 Sep 2019 20:07:34 +0530
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.0
+	id 1iAy6d-00080q-Ew; Thu, 19 Sep 2019 15:12:27 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iAy6B-0007oV-8v; Thu, 19 Sep 2019 15:12:00 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 01E87337;
+ Thu, 19 Sep 2019 08:11:56 -0700 (PDT)
+Received: from e107158-lin.cambridge.arm.com (e107158-lin.cambridge.arm.com
+ [10.1.194.52])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id BAAF03F575;
+ Thu, 19 Sep 2019 08:11:54 -0700 (PDT)
+Date: Thu, 19 Sep 2019 16:11:52 +0100
+From: Qais Yousef <qais.yousef@arm.com>
+To: Vincent Guittot <vincent.guittot@linaro.org>
+Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
+Message-ID: <20190919151152.m2zmiaspr6s5mcfh@e107158-lin.cambridge.arm.com>
+References: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
+ <d5100b2d-46c4-5811-8274-8b06710d2594@arm.com>
+ <20190830145501.zadfv2ffuu7j46ft@e107158-lin.cambridge.arm.com>
+ <1567689999.2389.5.camel@mtkswgap22>
+ <CAKfTPtC3txstND=6YkWBJ16i06cQ7xueUpD5j-j-UfuSf0-z-g@mail.gmail.com>
+ <1568892135.4892.10.camel@mtkswgap22>
+ <CAKfTPtCuWrpW_o6r5cmGhLf_84PFHJhBk0pJ3fcbU_YgcBnTkQ@mail.gmail.com>
+ <20190919142315.vmrrpvljpspqpurp@e107158-lin.cambridge.arm.com>
+ <CAKfTPtA9-JLxs+DdLYjBQ6VfVGNxm++QYYi1wy-xS6o==EAPNw@mail.gmail.com>
+ <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <20190917155426.7432-1-tudor.ambarus@microchip.com>
-Content-Language: en-US
-X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
+Content-Disposition: inline
+In-Reply-To: <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
+User-Agent: NeoMutt/20171215
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_073801_514940_FBA29499 
-X-CRM114-Status: UNSURE (   9.09  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190919_081159_406232_B3DCE250 
+X-CRM114-Status: GOOD (  31.64  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.47.23.249 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,73 +69,89 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-aspeed@lists.ozlabs.org, andrew@aj.id.au,
- linux-kernel@vger.kernel.org, vz@mleia.com, linux-mediatek@lists.infradead.org,
- joel@jms.id.au, matthias.bgg@gmail.com, computersforpeace@gmail.com,
- dwmw2@infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: wsd_upstream@mediatek.com, Peter Zijlstra <peterz@infradead.org>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ Jing-Ting Wu <jing-ting.wu@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Valentin Schneider <valentin.schneider@arm.com>,
+ LAK <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
-
-On 17-Sep-19 9:24 PM, Tudor.Ambarus@microchip.com wrote:
-> From: Tudor Ambarus <tudor.ambarus@microchip.com>
+On 09/19/19 16:37, Vincent Guittot wrote:
+> On Thu, 19 Sep 2019 at 16:32, Vincent Guittot
+> <vincent.guittot@linaro.org> wrote:
+> >
+> > On Thu, 19 Sep 2019 at 16:23, Qais Yousef <qais.yousef@arm.com> wrote:
+> > >
+> > > On 09/19/19 14:27, Vincent Guittot wrote:
+> > > > > > > But for requirement of performance, I think it is better to differentiate between idle CPU and CPU has CFS task.
+> > > > > > >
+> > > > > > > For example, we use rt-app to evaluate runnable time on non-patched environment.
+> > > > > > > There are (NR_CPUS-1) heavy CFS tasks and 1 RT Task. When a CFS task is running, the RT task wakes up and choose the same CPU.
+> > > > > > > The CFS task will be preempted and keep runnable until it is migrated to another cpu by load balance.
+> > > > > > > But load balance is not triggered immediately, it will be triggered until timer tick hits with some condition satisfied(ex. rq->next_balance).
+> > > > > >
+> > > > > > Yes you will have to wait for the next tick that will trigger an idle
+> > > > > > load balance because you have an idle cpu and 2 runnable tack (1 RT +
+> > > > > > 1CFS) on the same CPU. But you should not wait for more than  1 tick
+> > > > > >
+> > > > > > The current load_balance doesn't handle correctly the situation of 1
+> > > > > > CFS and 1 RT task on same CPU while 1 CPU is idle. There is a rework
+> > > > > > of the load_balance that is under review on the mailing list that
+> > > > > > fixes this problem and your CFS task should migrate to the idle CPU
+> > > > > > faster than now
+> > > > > >
+> > > > >
+> > > > > Period load balance should be triggered when current jiffies is behind
+> > > > > rq->next_balance, but rq->next_balance is not often exactly the same
+> > > > > with next tick.
+> > > > > If cpu_busy, interval = sd->balance_interval * sd->busy_factor, and
+> > > >
+> > > > But if there is an idle CPU on the system, the next idle load balance
+> > > > should apply shortly because the busy_factor is not used for this CPU
+> > > > which is  not busy.
+> > > > In this case, the next_balance interval is sd_weight which is probably
+> > > > 4ms at cluster level and 8ms at system level in your case. This means
+> > > > between 1 and 2 ticks
+> > >
+> > > But if the CFS task we're preempting was latency sensitive - this 1 or 2 tick
+> > > is too late of a recovery.
+> > >
+> > > So while it's good we recover, but a preventative approach would be useful too.
+> > > Just saying :-) I'm still not sure if this is the best longer term approach.
+> >
+> > like using a rt task ?
 > 
-[...]
-> Tudor Ambarus (23):
->   mtd: spi-nor: hisi-sfc: Drop nor->erase NULL assignment
->   mtd: spi-nor: Introduce 'struct spi_nor_controller_ops'
->   mtd: spi-nor: cadence-quadspi: Fix cqspi_command_read() definition
->   mtd: spi-nor: Rename nor->params to nor->flash
->   mtd: spi-nor: Rework read_sr()
->   mtd: spi-nor: Rework read_fsr()
->   mtd: spi-nor: Rework read_cr()
->   mtd: spi-nor: Rework write_enable/disable()
->   mtd: spi-nor: Fix retlen handling in sst_write()
->   mtd: spi-nor: Rework write_sr()
->   mtd: spi-nor: Rework spi_nor_read/write_sr2()
->   mtd: spi-nor: Report error in spi_nor_xread_sr()
->   mtd: spi-nor: Void return type for spi_nor_clear_sr/fsr()
->   mtd: spi-nor: Drop duplicated new line
->   mtd: spi-nor: Drop spansion_quad_enable()
->   mtd: spi-nor: Fix errno on quad_enable methods
->   mtd: spi-nor: Fix clearing of QE bit on lock()/unlock()
->   mtd: spi-nor: Rework macronix_quad_enable()
->   mtd: spi-nor: Rework spansion(_no)_read_cr_quad_enable()
->   mtd: spi-nor: Update sr2_bit7_quad_enable()
->   mtd: spi-nor: Rework the disabling of block write protection
->   mtd: spi-nor: Add Global Block Unlock support
->   mtd: spi-nor: Unlock global block protection on sst26vf064b
+> I mean, RT task should select a sub optimal CPU because of CFS
+> If you want to favor CFS compared to RT it's probably because your
+> task should be RT too
 
-With whole series applied, I see:
+Yes possibly. But I don't think this is always doable. Especially when you're
+running on generic system not a special purposed one.
 
-drivers/mtd/spi-nor/spi-nor.c:520: warning: Function parameter or member 'cr' not described in 'spi_nor_read_cr'
-drivers/mtd/spi-nor/spi-nor.c:520: warning: Excess function parameter 'fsr' description in 'spi_nor_read_cr'
-drivers/mtd/spi-nor/spi-nor.c:742: warning: Function parameter or member 'len' not described in 'spi_nor_write_sr'
-drivers/mtd/spi-nor/spi-nor.c:889: warning: Function parameter or member 'status_new' not described in 'spi_nor_write_sr1_and_check'
-drivers/mtd/spi-nor/spi-nor.c:889: warning: Function parameter or member 'mask' not described in 'spi_nor_write_sr1_and_check'
-drivers/mtd/spi-nor/spi-nor.c:923: warning: Function parameter or member 'status_new' not described in 'spi_nor_write_16bit_sr_and_check'
-drivers/mtd/spi-nor/spi-nor.c:923: warning: Function parameter or member 'mask' not described in 'spi_nor_write_16bit_sr_and_check'
-drivers/mtd/spi-nor/spi-nor.c:997: warning: Function parameter or member 'status_new' not described in 'spi_nor_write_sr_and_check'
-drivers/mtd/spi-nor/spi-nor.c:997: warning: Function parameter or member 'mask' not described in 'spi_nor_write_sr_and_check'
+And we don't need to favor CFS over RT. But I think they can play nicely
+together.
 
-Could you please fix up docs next time around?
+For example on Android there are few RT tasks and rarely more than 1 runnable
+RT task at a time. But if it happened to wakeup on the same CPU that is
+running the UI thread you could lose a frame. And from what I've seen as well
+we have 1-3 CFS tasks runnable, weighted more towards 1 task. So we do have
+plenty of idle CPUs on average.
 
-Regards
-Vignesh
-> 
->  drivers/mtd/spi-nor/aspeed-smc.c      |   23 +-
->  drivers/mtd/spi-nor/cadence-quadspi.c |   54 +-
->  drivers/mtd/spi-nor/hisi-sfc.c        |   23 +-
->  drivers/mtd/spi-nor/intel-spi.c       |   24 +-
->  drivers/mtd/spi-nor/mtk-quadspi.c     |   25 +-
->  drivers/mtd/spi-nor/nxp-spifi.c       |   23 +-
->  drivers/mtd/spi-nor/spi-nor.c         | 1697 ++++++++++++++++++---------------
->  include/linux/mtd/spi-nor.h           |   75 +-
->  8 files changed, 1050 insertions(+), 894 deletions(-)
-> 
+But as I mentioned earlier I couldn't prove yet this being a serious problem.
+I was hoping the use case presented here is based on a real workload, but it's
+synthetic. So I agree we need stronger reasons, but I think conceptually we do
+have a conflict of interest where RT task could unnecessarily hurt the
+performance of CFS task.
+
+Another way to look at the problem is that the system is not partitioned
+correctly and the admin could do a better job to prevent this.
+
+--
+Qais Yousef
 
 _______________________________________________
 Linux-mediatek mailing list
