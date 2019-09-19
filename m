@@ -2,91 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C1A7FB833D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 23:22:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B00B7B879F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Sep 2019 00:50:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=yyg9aDjFGDoP7OEaBkyeLhk4gBMBV4v114IIrXUqFnE=; b=nfeIfXxWIamujkz8mt//UEh2p
-	ClYiboqpmUMli8G58V7gQ5s18E3rTFBJhOGUljfn9MWbfdbFN7kOe8hLJ77lv7XxnYNotHM+IOqvD
-	Oq1xFBnd40OONw/0yzkQaM9mIlAx1DCMy3XXhUitN7jI3Z/RycXLZft0ZFmTPz8jNYxsBhs6FqFqz
-	yebuY0uZvOhK6Bt/oGLlSIeUnNCwz03wDFSBSkWM+q2QzKILY/1gCR5I+vc7xNP+yely/Py8NuHYB
-	jXwqxTy6bH9LZGohcmXaRoYPgoonSBAfgxctKdTVRUTuaj9eVAtq22qW/GU0KOfg6+KNXTkHkmevO
-	7DWq1U9vw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=UsG2IkvNfVjK42VKLLSAHbOXU0yQ+J5JwXkjnJyVGqo=; b=qmdKL2P3ktOlbU
+	hOqE9m0azmfpn0pg4g3xonGgun4o1yq2DaIuBh8Emza6+ok0l8Mue04haDoXMN2GYKUhAKK5grG4G
+	FdlEOQlF0KDPcQ4qgJM+oA9nFpAtY58Owkyx5Zh5Ty2EeH3XVmJXOXHhNUrKius4jYiN0iw5aPlgI
+	bOjK/dtCYdp4EK2bYbMsERn+wNBvQNvviC6mVIQh/BPGMFcvJGPmy3B8VktCLqPDMCfnbeNOciQRn
+	AOUvKBItbrhdEexAtdnjRez3lvxeCv2dtle2iH+ddWXUv0oC/BdTHMc/HLmA51q2YJ86WUKV29Jhq
+	s9SFF6xorSFfUoCSeOqg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iB3si-00061R-BD; Thu, 19 Sep 2019 21:22:28 +0000
-Received: from vulcan.natalenko.name ([2001:19f0:6c00:8846:5400:ff:fe0c:dfa0])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat
- Linux)) id 1iB3sQ-0005pB-64; Thu, 19 Sep 2019 21:22:12 +0000
-Received: from mail.natalenko.name (vulcan.natalenko.name
- [IPv6:fe80::5400:ff:fe0c:dfa0])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by vulcan.natalenko.name (Postfix) with ESMTPSA id 7C7A75E280C;
- Thu, 19 Sep 2019 23:22:03 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name;
- s=dkim-20170712; t=1568928123;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=nvfXNPCQg7B581+MslvcoEWLTwJp2jXTw915+YqYF0w=;
- b=i+KmjjbSSriAGy62TJ1qhcGVNLO3g7OTsgglPkt+ylvBzx6jO8DN1KJC1G2E6e9r6WBPpC
- 7jhQtsboDmL2YJti9HlWuBCv+SX3r9pn1DrTs5XWew3eOCy59rO0cShMGjnGs1VIXrHqRR
- 5WsU9Sl7rOlJFZMVm7RfAOz1hR8C9w0=
+	id 1iB5Fm-0004Ma-R0; Thu, 19 Sep 2019 22:50:22 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iB5Fi-0004LU-Ke
+ for linux-mediatek@lists.infradead.org; Thu, 19 Sep 2019 22:50:20 +0000
+X-UUID: 2f2c4b13f65642bd8942d194b5f528c7-20190919
+X-UUID: 2f2c4b13f65642bd8942d194b5f528c7-20190919
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <sam.shih@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 438545680; Thu, 19 Sep 2019 14:50:07 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 19 Sep 2019 15:50:06 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 20 Sep 2019 06:49:48 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 20 Sep 2019 06:49:48 +0800
+From: Sam Shih <sam.shih@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
+ <thierry.reding@gmail.com>
+Subject: [PATCH v9 0/11] Add mt7629 and fix mt7628 pwm
+Date: Fri, 20 Sep 2019 06:49:00 +0800
+Message-ID: <1568933351-8584-1-git-send-email-sam.shih@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-Date: Thu, 19 Sep 2019 23:22:03 +0200
-From: Oleksandr Natalenko <oleksandr@natalenko.name>
-To: linux-mediatek@lists.infradead.org
-Subject: Re: mt76x2e hardware restart
-In-Reply-To: <deaafa7a3e9ea2111ebb5106430849c6@natalenko.name>
-References: <deaafa7a3e9ea2111ebb5106430849c6@natalenko.name>
-Message-ID: <c6d621759c190f7810d898765115f3b4@natalenko.name>
-X-Sender: oleksandr@natalenko.name
-User-Agent: Roundcube Webmail/1.3.10
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name; 
- s=arc-20170712; t=1568928123;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=nvfXNPCQg7B581+MslvcoEWLTwJp2jXTw915+YqYF0w=;
- b=ETc2q7YURCqlrETsKKeQkoPlDZrCqCFYY89AXGwPNhu+uYOEQZFte02NHPleOvqNzi05+G
- 48LhJrMbwsTLyDxU3rcisz7iw7H9EfnL0KLSfhvwRodWvQW3eHZFlcgZe9OdbYoM9Qg9Pg
- TSghhu0PLaDijtfAcg83a9yrI4P0ook=
-ARC-Seal: i=1; s=arc-20170712; d=natalenko.name; t=1568928123; a=rsa-sha256;
- cv=none;
- b=FDKorXnDcAKDb8+CrT3w5/PyCrZwO9676UXdBc0WwqcyPOB/xTGw21uNIzbPGPSOJYQNCm
- z5viRpMuMdaOVmBOTY+aor9YJhQf0kk6lmyVVvh1uRubEjaYOfnyqCYmJGq9C6JaDhCIiY
- uJj764/pFLr/8vhgqNFjwIDtuc4v+/8=
-ARC-Authentication-Results: i=1; vulcan.natalenko.name;
- auth=pass smtp.auth=oleksandr@natalenko.name
- smtp.mailfrom=oleksandr@natalenko.name
+X-TM-SNTS-SMTP: E18B8C972B43F1D1F32E001CB69C38189E2D0D039B9154FF9508845B5D1A95982000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_142210_403255_21344F12 
-X-CRM114-Status: UNSURE (   9.13  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190919_155018_684898_A30A2954 
+X-CRM114-Status: GOOD (  11.84  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2001:19f0:6c00:8846:5400:ff:fe0c:dfa0 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,162 +72,91 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, Stanislaw Gruszka <sgruszka@redhat.com>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org, Roy Luo <royluo@google.com>,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- Lorenzo Bianconi <lorenzo@kernel.org>, "David S.
- Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>,
- Felix Fietkau <nbd@nbd.name>
+Cc: linux-pwm@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
+ devicetree@vger.kernel.org, Sam
+ Shih <sam.shih@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 19.09.2019 18:24, Oleksandr Natalenko wrote:
-> [  +9,979664] mt76x2e 0000:01:00.0: Firmware Version: 0.0.00
-> [  +0,000014] mt76x2e 0000:01:00.0: Build: 1
-> [  +0,000010] mt76x2e 0000:01:00.0: Build Time: 201507311614____
-> [  +0,018017] mt76x2e 0000:01:00.0: Firmware running!
-> [  +0,001101] ieee80211 phy4: Hardware restart was requested
+Changes since v9:
+  1. PATCH 03/11: Add an Acked-by tag
 
-IIUC, this happens due to watchdog. I think the following applies.
+Changes since v8:
+  1. Fix warning and build-error for patch 04/11
 
-Watchdog is started here:
+Changes since v7:
+  1. PATCH v7 10/11: Add a missed Reviewed-by tag
 
-=== mt76x02_util.c
-130 void mt76x02_init_device(struct mt76x02_dev *dev)
-131 {
-...
-155         INIT_DELAYED_WORK(&dev->wdt_work, mt76x02_wdt_work);
-===
+Changes since v6:
+  1. Due to we can use fixed-clock in DT
+     We removed has_clks and fixed-clock properties 
 
-It checks for TX hang here:
+Changes since v5:
+- Follow reviewer's comments:
+  1. the license stuff is a separate change
+  2. split fix mt7628 pwm into a single patch
+  3. to ensure to not use mtk_pwm_clk_name[10] 
+     (After dynamic allocate clock array patch, 
+      this is no need to check)
+  4. Use clock-frequency property to replace 
+     the use of has_clks
 
-=== mt76x02_mmio.c
-557 void mt76x02_wdt_work(struct work_struct *work)
-558 {
-...
-562     mt76x02_check_tx_hang(dev);
-===
+Changes since v4:
+- Follow reviewer's comments (v3: pwm: mediatek: add a property "num-pwms")
+  Move the changes of droping the check for of_device_get_match_data
+  returning non-NULL to next patch
+- Follow reviewers's comments 
+  (v3: pwm: mediatek: allocate the clks array dynamically)
+  1. use pc->soc->has_clks to check clocks exist or not.
+  2. Add error message when probe() unable to get clks
+- Fixes bug when SoC is old mips which has no complex clock tree.
+if clocks not exist, use the new property from DT to apply period 
+calculation; otherwise, use clk_get_rate to get clock frequency and 
+apply period calculation.
 
-Conditions:
+Changes since v3:
+- add a new property "clock-frequency" and fix mt7628 pwm
+- add mt7629 pwm support
 
-=== mt76x02_mmio.c
-530 static void mt76x02_check_tx_hang(struct mt76x02_dev *dev)
-531 {
-532     if (mt76x02_tx_hang(dev)) {
-533         if (++dev->tx_hang_check >= MT_TX_HANG_TH)
-534             goto restart;
-535     } else {
-536         dev->tx_hang_check = 0;
-537     }
-538
-539     if (dev->mcu_timeout)
-540         goto restart;
-541
-542     return;
-543
-544 restart:
-545     mt76x02_watchdog_reset(dev);
-===
+Changes since v2:
+- use num-pwms instead of mediatek,num-pwms.
+- rename the member from num_pwms to fallback_num_pwms to make it 
+  more obvious that it doesn't represent the actually used value.
+- add a dev_warn and a expressive comment to help other developers 
+  to not start adding num_pwms in the compatible_data.
 
-Actual check:
+Changes since v1:
+- add some checks for backwards compatibility.
 
-=== mt76x02_mmio.c
-367 static bool mt76x02_tx_hang(struct mt76x02_dev *dev)
-368 {
-369     u32 dma_idx, prev_dma_idx;
-370     struct mt76_queue *q;
-371     int i;
-372
-373     for (i = 0; i < 4; i++) {
-374         q = dev->mt76.q_tx[i].q;
-375
-376         if (!q->queued)
-377             continue;
-378
-379         prev_dma_idx = dev->mt76.tx_dma_idx[i];
-380         dma_idx = readl(&q->regs->dma_idx);
-381         dev->mt76.tx_dma_idx[i] = dma_idx;
-382
-383         if (prev_dma_idx == dma_idx)
-384             break;
-385     }
-386
-387     return i < 4;
-388 }
-===
 
-(I don't quite understand what it does here; why 4? does each device 
-have 4 queues? maybe, my does not? I guess this is where watchdog is 
-triggered, though, because otherwise I'd see mcu_timeout message like 
-"MCU message %d (seq %d) timed out\n")
+Ryder Lee (5):
+  pwm: mediatek: add a property "num-pwms"
+  dt-bindings: pwm: add a property "num-pwms"
+  arm64: dts: mt7622: add a property "num-pwms" for PWM
+  arm: dts: mt7623: add a property "num-pwms" for PWM
+  dt-bindings: pwm: update bindings for MT7629 SoC
 
-Once it detects TX hang, the reset is triggered:
+Sam Shih (6):
+  pwm: mediatek: droping the check for of_device_get_match_data
+  pwm: mediatek: remove a property "has-clks"
+  pwm: mediatek: allocate the clks array dynamically
+  pwm: mediatek: use pwm_mediatek as common prefix
+  pwm: mediatek: update license and switch to SPDX tag
+  arm: dts: mediatek: add mt7629 pwm support
 
-=== mt76x02_mmio.c
-446 static void mt76x02_watchdog_reset(struct mt76x02_dev *dev)
-447 {
-...
-485     if (restart)
-486         mt76_mcu_restart(dev);
-===
-
-mt76_mcu_restart() is just a define for this series here:
-
-=== mt76.h
-555 #define mt76_mcu_restart(dev, ...)  
-(dev)->mt76.mcu_ops->mcu_restart(&((dev)->mt76))
-===
-
-Actual OP:
-
-=== mt76x2/pci_mcu.c
-188 int mt76x2_mcu_init(struct mt76x02_dev *dev)
-189 {
-190     static const struct mt76_mcu_ops mt76x2_mcu_ops = {
-191         .mcu_restart = mt76pci_mcu_restart,
-192         .mcu_send_msg = mt76x02_mcu_msg_send,
-193     };
-===
-
-This triggers loading the firmware:
-
-=== mt76x2/pci_mcu.c
-168 static int
-169 mt76pci_mcu_restart(struct mt76_dev *mdev)
-170 {
-...
-179     ret = mt76pci_load_firmware(dev);
-===
-
-which does the printout I observe:
-
-=== mt76x2/pci_mcu.c
-  91 static int
-  92 mt76pci_load_firmware(struct mt76x02_dev *dev)
-  93 {
-...
-156     dev_info(dev->mt76.dev, "Firmware running!\n");
-===
-
-Too bad it doesn't show the actual watchdog message, IOW, why the reset 
-happens. I guess I will have to insert some pr_infos here and there.
-
-Does it make sense? Any ideas why this can happen?
-
-More info on the device during boot:
-
-===
-[  +0,333233] mt76x2e 0000:01:00.0: enabling device (0000 -> 0002)
-[  +0,000571] mt76x2e 0000:01:00.0: ASIC revision: 76120044
-[  +0,017806] mt76x2e 0000:01:00.0: ROM patch build: 20141115060606a
-===
+ .../devicetree/bindings/pwm/pwm-mediatek.txt  |   8 +-
+ arch/arm/boot/dts/mt7623.dtsi                 |   1 +
+ arch/arm64/boot/dts/mediatek/mt7622.dtsi      |   1 +
+ drivers/pwm/pwm-mediatek.c                    | 245 +++++++++---------
+ arch/arm/boot/dts/mt7629.dtsi                 | 16 ++++++++++++++++
+ 5 files changed, 149 insertions(+), 122 deletions(-)
 
 -- 
-   Oleksandr Natalenko (post-factum)
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
