@@ -2,63 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F2FCBB74CC
-	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 10:13:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35EA0B75F4
+	for <lists+linux-mediatek@lfdr.de>; Thu, 19 Sep 2019 11:15:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZCB68QWwCeQuLlOOLEAQL0zAWp065DvlXNja5x+E0X4=; b=RtzRnVYDILDh7l
-	rPPSpkJgG4o2fWDkG1fasXIhGuCpiAqvQF7CDzM5be40Mef/ZjT0bq2fMValrYtFwbE/ALqVEefeu
-	X1GSEidWuMscOvNoAhYQdzlnL35FLPCJeuEpNc05Psut1LOEpXh+s5wuahkOSXNIa7M79LPwaEvy/
-	dM0e0I/fKotoKSPSaMJjSqFG2T4pKM2mnbc4ybNn1EmF0uUSmd51SLUoQIndKhvVVfmIKGdHJ7jJk
-	nU5V1QhRWSf59nkEgS6Qlb+T9/eUe8zbogVuSV/Jd464cj49gXkSi8Zphwmcz7GDvMYkIlVCS/xF0
-	UOt2As+fnelMBLbIjHqw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=SPrsA7j+i+XaQw1fAmACHUeaB+IDV1OvxIgm4fuWZXA=; b=pE2ap2GMwrK/tY
+	rw/5kiWl3RVhNVog2rnBPmK0/Gnk3OwhwcnIH4QZiJCf2TgdITWQHfgoxKmZNzzuKwekcNbawYsdL
+	9k2WHIIVoqs76CIABaXL9Z7DeDbQ63gb6EyBMCspa5bqv95gPx2nKsS4bjpJRCMPjAo64xoNJx3l1
+	XpNhzPpdrdapm0+KcZ4NLzAbe9brhgHV0xE1f/dB2zStry7N12ManTUQDc9ee4PQ6GysqqZ2nLZTd
+	jdus1UgAvGHO70xUg3tVVhIIU/GLqczNzS9zzdpzn7Jn4m2hBAKLvh7LM27H62QoQTRY92BizspK2
+	g1DzoT2xeBRn7asC0O1w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iArYo-0001CD-Pz; Thu, 19 Sep 2019 08:13:07 +0000
-Received: from 9.mo178.mail-out.ovh.net ([46.105.75.45])
+	id 1iAsWf-0002Ff-2J; Thu, 19 Sep 2019 09:14:57 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iArWz-0000qK-IL
- for linux-mediatek@lists.infradead.org; Thu, 19 Sep 2019 08:11:19 +0000
-Received: from player168.ha.ovh.net (unknown [10.109.159.224])
- by mo178.mail-out.ovh.net (Postfix) with ESMTP id EC40A7986B
- for <linux-mediatek@lists.infradead.org>;
- Thu, 19 Sep 2019 10:11:05 +0200 (CEST)
-Received: from qperret.net (115.ip-51-255-42.eu [51.255.42.115])
- (Authenticated sender: qperret@qperret.net)
- by player168.ha.ovh.net (Postfix) with ESMTPSA id E53A09E20A08;
- Thu, 19 Sep 2019 08:10:57 +0000 (UTC)
-Date: Thu, 19 Sep 2019 10:10:53 +0200
-From: Quentin Perret <qperret@qperret.net>
-To: YT Chang <yt.chang@mediatek.com>
-Subject: Re: [PATCH 1/1] sched/eas: introduce system-wide overutil indicator
-Message-ID: <20190919081053.GA10561@qperret.net>
-References: <1568877622-28073-1-git-send-email-yt.chang@mediatek.com>
+ id 1iAsSs-0006rG-Up; Thu, 19 Sep 2019 09:11:06 +0000
+X-UUID: e1dff5c2ceba4ae5a10916db25e23e3d-20190919
+X-UUID: e1dff5c2ceba4ae5a10916db25e23e3d-20190919
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 302881051; Thu, 19 Sep 2019 01:10:50 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 19 Sep 2019 02:10:48 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 19 Sep 2019 17:10:42 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 19 Sep 2019 17:10:42 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Kishon Vijay Abraham I <kishon@ti.com>, Rob Herring <robh+dt@kernel.org>
+Subject: [PATCH v3 01/11] dt-bindings: phy-mtk-tphy: add two optional
+ properties for u2phy
+Date: Thu, 19 Sep 2019 17:10:32 +0800
+Message-ID: <1568884242-22775-1-git-send-email-chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1568877622-28073-1-git-send-email-yt.chang@mediatek.com>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-Ovh-Tracer-Id: 4041980666167909293
-X-VR-SPAMSTATE: OK
-X-VR-SPAMSCORE: -100
-X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedufedrvddtgddtvdcutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmd
+X-TM-SNTS-SMTP: BE4D4063DDEC7536BAE0BAA55DF0EE46D1F974EE2D0A5767EE74E38203827FAD2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_011114_113312_3C607B01 
-X-CRM114-Status: GOOD (  24.87  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190919_021103_451990_ED5C2BD2 
+X-CRM114-Status: UNSURE (   8.78  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.105.75.45 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.7 FROM_FMBLA_NEWDOM28    From domain was registered in last 14-28
- days
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,176 +71,44 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, Peter Zijlstra <peterz@infradead.org>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Add two optional properties, one for tuning J-K voltage by INTR,
+another for disconnect threshold, both of them are related with
+connect detection
 
-Could you please CC me on later versions of this ? I'm interested.
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+---
+v3: change commit log
 
-On Thursday 19 Sep 2019 at 15:20:22 (+0800), YT Chang wrote:
-> When the system is overutilization, the load-balance crossing
-> clusters will be triggered and scheduler will not use energy
-> aware scheduling to choose CPUs.
-> 
-> The overutilization means the loading of  ANY CPUs
-> exceeds threshold (80%).
-> 
-> However, only 1 heavy task or while-1 program will run on highest
-> capacity CPUs and it still result to trigger overutilization. So
-> the system will not use Energy Aware scheduling.
-> 
-> To avoid it, a system-wide over-utilization indicator to trigger
-> load-balance cross clusters.
-> 
-> The policy is:
-> 	The loading of "ALL CPUs in the highest capacity"
-> 						exceeds threshold(80%) or
-> 	The loading of "Any CPUs not in the highest capacity"
-> 						exceed threshold(80%)
-> 
-> Signed-off-by: YT Chang <yt.chang@mediatek.com>
+v2: change description
+---
+ Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt | 2 ++
+ 1 file changed, 2 insertions(+)
 
-Right, so we originally went for the simpler implementation because in
-general when you have the biggest CPUs of the system running flat out at
-max freq, the micro-optimizations for energy on littles don't matter all
-that much. Is there a use-case where you see a big difference ?
+diff --git a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+index a5f7a4f0dbc1..ce6abfbdfbe1 100644
+--- a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
++++ b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+@@ -52,6 +52,8 @@ Optional properties (PHY_TYPE_USB2 port (child) node):
+ - mediatek,eye-vrt	: u32, the selection of VRT reference voltage
+ - mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage
+ - mediatek,bc12	: bool, enable BC12 of u2phy if support it
++- mediatek,discth	: u32, the selection of disconnect threshold
++- mediatek,intr	: u32, the selection of internal R (resistance)
+ 
+ Example:
+ 
+-- 
+2.23.0
 
-A second thing is RT pressure. If a big CPU is used at 50% by a CFS task
-and 50% by RT, we should mark it overutilized. Otherwise EAS will think
-the CFS task is 50% and try to down-migrate it. But the truth is, we
-dont know the size of the task ... So, I believe your patch breaks that
-ATM.
-
-And there is a similar problem with misfit. That is, a task running flat
-out on a big CPU will be flagged as misfit, even if there is nothing we
-can do about (we can't up-migrate it for obvious reasons). So perhaps we
-should look at a common solution for both issues, if deemed useful.
-
-> ---
->  kernel/sched/fair.c | 76 +++++++++++++++++++++++++++++++++++++++++++++--------
->  1 file changed, 65 insertions(+), 11 deletions(-)
-> 
-> diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-> index 036be95..f4c3d70 100644
-> --- a/kernel/sched/fair.c
-> +++ b/kernel/sched/fair.c
-> @@ -5182,10 +5182,71 @@ static inline bool cpu_overutilized(int cpu)
->  static inline void update_overutilized_status(struct rq *rq)
->  {
->  	if (!READ_ONCE(rq->rd->overutilized) && cpu_overutilized(rq->cpu)) {
-> -		WRITE_ONCE(rq->rd->overutilized, SG_OVERUTILIZED);
-> -		trace_sched_overutilized_tp(rq->rd, SG_OVERUTILIZED);
-> +		if (capacity_orig_of(cpu_of(rq)) < rq->rd->max_cpu_capacity) {
-> +			WRITE_ONCE(rq->rd->overutilized, SG_OVERUTILIZED);
-> +			trace_sched_overutilized_tp(rq->rd, SG_OVERUTILIZED);
-> +		}
->  	}
->  }
-> +
-> +static
-> +void update_system_overutilized(struct sched_domain *sd, struct cpumask *cpus)
-> +{
-> +	unsigned long group_util;
-> +	bool intra_overutil = false;
-> +	unsigned long max_capacity;
-> +	struct sched_group *group = sd->groups;
-> +	struct root_domain *rd;
-> +	int this_cpu;
-> +	bool overutilized;
-> +	int i;
-> +
-> +	this_cpu = smp_processor_id();
-> +	rd = cpu_rq(this_cpu)->rd;
-> +	overutilized = READ_ONCE(rd->overutilized);
-> +	max_capacity = rd->max_cpu_capacity;
-> +
-> +	do {
-> +		group_util = 0;
-> +		for_each_cpu_and(i, sched_group_span(group), cpus) {
-> +			group_util += cpu_util(i);
-> +			if (cpu_overutilized(i)) {
-> +				if (capacity_orig_of(i) < max_capacity) {
-
-This is what breaks things with RT pressure I think.
-
-> +					intra_overutil = true;
-> +					break;
-> +				}
-> +			}
-> +		}
-> +
-> +		/*
-> +		 * A capacity base hint for over-utilization.
-> +		 * Not to trigger system overutiled if heavy tasks
-> +		 * in Big.cluster, so
-> +		 * add the free room(20%) of Big.cluster is impacted which means
-> +		 * system-wide over-utilization,
-> +		 * that considers whole cluster not single cpu
-> +		 */
-> +		if (group->group_weight > 1 && (group->sgc->capacity * 1024 <
-> +						group_util * capacity_margin)) {
-> +			intra_overutil = true;
-> +			break;
-> +		}
-
-What if we have only one big MC domain with both big and little CPUs and
-no DIE ? Say you have 4 big tasks, 4 big CPUs, 4 little CPUs (idle).
-You'll fail to mark the system overutilized no ?
-
-> +
-> +		group = group->next;
-> +
-> +	} while (group != sd->groups && !intra_overutil);
-> +
-> +	if (overutilized != intra_overutil) {
-> +		if (intra_overutil == true) {
-> +			WRITE_ONCE(rd->overutilized, SG_OVERUTILIZED);
-> +			trace_sched_overutilized_tp(rd, SG_OVERUTILIZED);
-> +		} else {
-> +			WRITE_ONCE(rd->overutilized, 0);
-> +			trace_sched_overutilized_tp(rd, 0);
-> +		}
-> +	}
-> +}
-> +
->  #else
->  static inline void update_overutilized_status(struct rq *rq) { }
->  #endif
-> @@ -8242,15 +8303,6 @@ static inline void update_sd_lb_stats(struct lb_env *env, struct sd_lb_stats *sd
->  
->  		/* update overload indicator if we are at root domain */
->  		WRITE_ONCE(rd->overload, sg_status & SG_OVERLOAD);
-> -
-> -		/* Update over-utilization (tipping point, U >= 0) indicator */
-> -		WRITE_ONCE(rd->overutilized, sg_status & SG_OVERUTILIZED);
-> -		trace_sched_overutilized_tp(rd, sg_status & SG_OVERUTILIZED);
-> -	} else if (sg_status & SG_OVERUTILIZED) {
-> -		struct root_domain *rd = env->dst_rq->rd;
-> -
-> -		WRITE_ONCE(rd->overutilized, SG_OVERUTILIZED);
-> -		trace_sched_overutilized_tp(rd, SG_OVERUTILIZED);
->  	}
->  }
->  
-> @@ -8476,6 +8528,8 @@ static struct sched_group *find_busiest_group(struct lb_env *env)
->  	 */
->  	update_sd_lb_stats(env, &sds);
->  
-> +	update_system_overutilized(env->sd, env->cpus);
-> +
->  	if (sched_energy_enabled()) {
->  		struct root_domain *rd = env->dst_rq->rd;
->  
-> -- 
-> 1.9.1
-> 
 
 _______________________________________________
 Linux-mediatek mailing list
