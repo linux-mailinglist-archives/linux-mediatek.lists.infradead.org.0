@@ -2,82 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0C17BB9146
-	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Sep 2019 15:58:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7448FB9474
+	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Sep 2019 17:51:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=tPSKHXVUrUITvDpkkUYn8by6ksoPZVMW1/LDU3x2R+o=; b=B8/bHCnYBDg+yYnSWLu4EdfRe
-	YVoPcFdBqYfF4bBXuflghRXldP7T+KAsHGGJ9+2yljKwR7aHaJr9Ybx5D3IgwGKpsiO6jV9AzXKFa
-	L24EgGuesHW35SJ2YPSinPhXtEYrjAluilXKuFQzXyEnf/irSt31L5xEBoQjzIaHaYNSloYypWPZo
-	V8sKVXZ2ajGa3+NxM5XcibzPQBR1wzNS9/wpRBSs3KEI5uHuy+NN5XQYncMA3jesN2wofL4xo+IRc
-	q5XKE1glnM5uMzpev8GgwMEcPaYWmDBPoqYFLKJ/h3WwIBivybEdvTME3mdRIjNs9EG89YY/i+Drp
-	v7OR8Hdew==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6PP5qXrZmpeS71O/Uu/XUje4QkA+A65aDAuYhzltqBQ=; b=lny18SG9Dg127s
+	yfpA+0GUA+XGR6L5+iObqYlDtEKgSOtyJmh/OZF9Nu1R6Qq6iavrY4yLrSGYX2YCRL410YZBMP408
+	N3vJtd5Oc/MULfWlq+z52HrMwhnVqb6O3OsSwPpC0+7MMsS0o4rKZwyOPcT1PIuSVHWdeFIkUlGYa
+	VGhcIzWurhIdcf+FJmSA3kHikNXJMRAZgbIz1gBURv5O0DmmINd9RHnyNHvIg1y1rE7n57J2oHtsu
+	HP0XGLED8GBbsRigbf0gW5Fcrc56MwmTCx8g8JIwfaLNWGm4qzqsZJwswTnrdZVuj52ecBxerZjYw
+	qfAIbiVCD5bhyXFHMhCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBJQe-0002Hn-N7; Fri, 20 Sep 2019 13:58:32 +0000
-Received: from mx1.redhat.com ([209.132.183.28])
+	id 1iBLBh-0003Ww-N6; Fri, 20 Sep 2019 15:51:13 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBJQV-00028Z-TD
- for linux-mediatek@lists.infradead.org; Fri, 20 Sep 2019 13:58:25 +0000
-Received: from mail-wm1-f69.google.com (mail-wm1-f69.google.com
- [209.85.128.69])
+ id 1iBLBX-0003MJ-9u; Fri, 20 Sep 2019 15:51:05 +0000
+Received: from mail-qt1-f179.google.com (mail-qt1-f179.google.com
+ [209.85.160.179])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mx1.redhat.com (Postfix) with ESMTPS id CA9C0C0546FC
- for <linux-mediatek@lists.infradead.org>; Fri, 20 Sep 2019 13:58:22 +0000 (UTC)
-Received: by mail-wm1-f69.google.com with SMTP id z205so1258032wmb.7
- for <linux-mediatek@lists.infradead.org>; Fri, 20 Sep 2019 06:58:22 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=spCZuDFD0EPU5ozujvfnvvEa34kbUMxIApAez+Dggu8=;
- b=Gs3ch7JkpJ3sXIf+fODybjMO9X+xu9fqknc+kUhXPIDVnrdM1trbZBzz2gZ00144RK
- LqldZKfUzGfasxr2TvYut3ulyjYFRuMT5Gu9svl3fvcYXV4EyTJlX+3DlCDPUr6kNo9c
- YOCaMTvmqgNHtVSAkBUQaWRrlj0Gxb2vDAhWiwHidn0QQuPnbi9Nf+CoGhSOqWcgcyPG
- ZDh3H8+4pgtXZXUXmNQXrIpii6d2sfF+D5XQIXuJuU9EpvQlycQJ0LfoUAqVkOpzOgdx
- 6zVqK2dvaIn8QpNxPfuWwVXhOn8zF5iK/0gyk58mBKXjmmpk6juPiqaZUlGnd7zYRf9X
- fARg==
-X-Gm-Message-State: APjAAAWF6gW+kfsA6kIWpZIHMklv2R1aRZ9lFT+AJUuKnJT+cdaF/Z8e
- AwOCDoKWSsTbC5lyHMd1YXeaNo62arbQGDp4WuF1bU3hhv064U7L8HHMWRI8R4dyZNdizrUo4lV
- geLMV+fP9LGGmuOESBRtHjydMRJ68Ssgk
-X-Received: by 2002:a05:600c:241:: with SMTP id
- 1mr3641698wmj.162.1568987901451; 
- Fri, 20 Sep 2019 06:58:21 -0700 (PDT)
-X-Google-Smtp-Source: APXvYqxaL42VK6Hbg90QmZTlVy0wuDzSPLddZwEiO+ZOepAYrKU0ro0hZ5/EONlchkImHxvmp3T81A==
-X-Received: by 2002:a05:600c:241:: with SMTP id
- 1mr3641679wmj.162.1568987901220; 
- Fri, 20 Sep 2019 06:58:21 -0700 (PDT)
-Received: from localhost.localdomain (nat-pool-mxp-t.redhat.com.
- [149.6.153.186])
- by smtp.gmail.com with ESMTPSA id r6sm1834884wmh.38.2019.09.20.06.58.19
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 20 Sep 2019 06:58:20 -0700 (PDT)
-Date: Fri, 20 Sep 2019 15:58:17 +0200
-From: Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
-To: Colin King <colin.king@canonical.com>
-Subject: Re: [PATCH] mt7601u: phy: simplify zero check on val
-Message-ID: <20190920135817.GC6456@localhost.localdomain>
-References: <20190920125414.15507-1-colin.king@canonical.com>
+ by mail.kernel.org (Postfix) with ESMTPSA id A5A352184C;
+ Fri, 20 Sep 2019 15:51:02 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1568994662;
+ bh=Gk8b96/zmrgvgnCdppmwZEWWClB9i1dZv17q7MLhgfc=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=OZM0VO15KguCMz8L73yAu9wwfmIvWTtRKsRWtXbjJFKVXMMLe2p8bfBQAQkCKcL2U
+ ZC9RtUZrL5eJL0Hk2B8lfXus6Mb7THpBP0h7NAF9u+kkBEJeVMK5UCXfPgFFwcMQVI
+ OoR623SUjj3mRa2R4ehGSSj+mTawpcia4HoOgbSk=
+Received: by mail-qt1-f179.google.com with SMTP id r5so9245213qtd.0;
+ Fri, 20 Sep 2019 08:51:02 -0700 (PDT)
+X-Gm-Message-State: APjAAAUvkwO1I8vCAVFpEX9p0ppmt7LhI5/1mA6ceg9NijZiguUCtgL9
+ L0A2p1JaDQ1Co0dM5TjPpS0ghxCUQCtJCYsv/A==
+X-Google-Smtp-Source: APXvYqwMIrqIhbU+PH2zwmKFyZZ7p9gmNZDVfDvJtsMY/FngbKyrGtmiBbkzWBc5h/SVux0vE5Rh9MaGgWH9K6YJIV0=
+X-Received: by 2002:ac8:444f:: with SMTP id m15mr4046894qtn.110.1568994661811; 
+ Fri, 20 Sep 2019 08:51:01 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <20190920125414.15507-1-colin.king@canonical.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+References: <20190918173141.4314-1-krzk@kernel.org>
+ <20190918173141.4314-8-krzk@kernel.org>
+In-Reply-To: <20190918173141.4314-8-krzk@kernel.org>
+From: Rob Herring <robh+dt@kernel.org>
+Date: Fri, 20 Sep 2019 10:50:50 -0500
+X-Gmail-Original-Message-ID: <CAL_Jsq+0ikCageBv3TSwx0tp=ZDkrFwpFVt2gJHWsFe2f-K2pA@mail.gmail.com>
+Message-ID: <CAL_Jsq+0ikCageBv3TSwx0tp=ZDkrFwpFVt2gJHWsFe2f-K2pA@mail.gmail.com>
+Subject: Re: [PATCH v2 8/8] dt-bindings: pwm: Convert Samsung PWM bindings to
+ json-schema
+To: Krzysztof Kozlowski <krzk@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190920_065823_982952_F5D2432F 
-X-CRM114-Status: GOOD (  18.80  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190920_085103_387705_B9B73A56 
+X-CRM114-Status: GOOD (  22.68  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [209.132.183.28 listed in list.dnswl.org]
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,102 +84,219 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kernel-janitors@vger.kernel.org, Jakub Kicinski <kubakici@wp.pl>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "David S . Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
-Content-Type: multipart/mixed; boundary="===============5755596594350601126=="
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Linux PWM List <linux-pwm@vger.kernel.org>,
+ dri-devel <dri-devel@lists.freedesktop.org>,
+ Thierry Reding <thierry.reding@gmail.com>, linux-riscv@lists.infradead.org,
+ linux-stm32@st-md-mailman.stormreply.com,
+ Linux LED Subsystem <linux-leds@vger.kernel.org>,
+ linux-samsung-soc <linux-samsung-soc@vger.kernel.org>,
+ Herbert Xu <herbert@gondor.apana.org.au>,
+ linux-clk <linux-clk@vger.kernel.org>,
+ "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
+ "maintainer:BROADCOM BCM7XXX ARM ARCHITECTURE"
+ <bcm-kernel-feedback-list@broadcom.com>, Guenter Roeck <linux@roeck-us.net>,
+ devicetree@vger.kernel.org, LINUX-WATCHDOG <linux-watchdog@vger.kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ "moderated list:BROADCOM BCM2835 ARM ARCHITECTURE"
+ <linux-rpi-kernel@lists.infradead.org>, Matt Mackall <mpm@selenic.com>,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "open list:HARDWARE RANDOM NUMBER GENERATOR CORE"
+ <linux-crypto@vger.kernel.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-
---===============5755596594350601126==
-Content-Type: multipart/signed; micalg=pgp-sha256;
-	protocol="application/pgp-signature"; boundary="i7F3eY7HS/tUJxUd"
-Content-Disposition: inline
-
-
---i7F3eY7HS/tUJxUd
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
-
-> From: Colin Ian King <colin.king@canonical.com>
->=20
-> Currently the zero check on val to break out of a loop
-> is a little obscure.  Replace the val is zero and break check
-> with a loop while value is non-zero.
->=20
-> Signed-off-by: Colin Ian King <colin.king@canonical.com>
+On Wed, Sep 18, 2019 at 12:32 PM Krzysztof Kozlowski <krzk@kernel.org> wrote:
+>
+> Convert Samsung PWM (S3C, S5P and Exynos SoCs) bindings to DT schema
+> format using json-schema.
+>
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
+>
 > ---
->  drivers/net/wireless/mediatek/mt7601u/phy.c | 4 +---
->  1 file changed, 1 insertion(+), 3 deletions(-)
->=20
-> diff --git a/drivers/net/wireless/mediatek/mt7601u/phy.c b/drivers/net/wi=
-reless/mediatek/mt7601u/phy.c
-> index 06f5702ab4bd..4e0e473caae1 100644
-> --- a/drivers/net/wireless/mediatek/mt7601u/phy.c
-> +++ b/drivers/net/wireless/mediatek/mt7601u/phy.c
-> @@ -213,9 +213,7 @@ int mt7601u_wait_bbp_ready(struct mt7601u_dev *dev)
-> =20
->  	do {
->  		val =3D mt7601u_bbp_rr(dev, MT_BBP_REG_VERSION);
-> -		if (val && ~val)
-> -			break;
+>
+> Changes since v1:
+> 1. Indent example with four spaces (more readable),
+> 2. Fix samsung,pwm-outputs after review,
+> 3. Remove double-quotes from clock names.
+> ---
+>  .../devicetree/bindings/pwm/pwm-samsung.txt   |  51 ---------
+>  .../devicetree/bindings/pwm/pwm-samsung.yaml  | 107 ++++++++++++++++++
+>  2 files changed, 107 insertions(+), 51 deletions(-)
+>  delete mode 100644 Documentation/devicetree/bindings/pwm/pwm-samsung.txt
+>  create mode 100644 Documentation/devicetree/bindings/pwm/pwm-samsung.yaml
+>
+> diff --git a/Documentation/devicetree/bindings/pwm/pwm-samsung.txt b/Documentation/devicetree/bindings/pwm/pwm-samsung.txt
+> deleted file mode 100644
+> index 5538de9c2007..000000000000
+> --- a/Documentation/devicetree/bindings/pwm/pwm-samsung.txt
+> +++ /dev/null
+> @@ -1,51 +0,0 @@
+> -* Samsung PWM timers
+> -
+> -Samsung SoCs contain PWM timer blocks which can be used for system clock source
+> -and clock event timers, as well as to drive SoC outputs with PWM signal. Each
+> -PWM timer block provides 5 PWM channels (not all of them can drive physical
+> -outputs - see SoC and board manual).
+> -
+> -Be aware that the clocksource driver supports only uniprocessor systems.
+> -
+> -Required properties:
+> -- compatible : should be one of following:
+> -    samsung,s3c2410-pwm - for 16-bit timers present on S3C24xx SoCs
+> -    samsung,s3c6400-pwm - for 32-bit timers present on S3C64xx SoCs
+> -    samsung,s5p6440-pwm - for 32-bit timers present on S5P64x0 SoCs
+> -    samsung,s5pc100-pwm - for 32-bit timers present on S5PC100, S5PV210,
+> -                         Exynos4210 rev0 SoCs
+> -    samsung,exynos4210-pwm - for 32-bit timers present on Exynos4210,
+> -                          Exynos4x12, Exynos5250 and Exynos5420 SoCs
+> -- reg: base address and size of register area
+> -- interrupts: list of timer interrupts (one interrupt per timer, starting at
+> -  timer 0)
+> -- clock-names: should contain all following required clock names:
+> -    - "timers" - PWM base clock used to generate PWM signals,
+> -  and any subset of following optional clock names:
+> -    - "pwm-tclk0" - first external PWM clock source,
+> -    - "pwm-tclk1" - second external PWM clock source.
+> -  Note that not all IP variants allow using all external clock sources.
+> -  Refer to SoC documentation to learn which clock source configurations
+> -  are available.
+> -- clocks: should contain clock specifiers of all clocks, which input names
+> -  have been specified in clock-names property, in same order.
+> -- #pwm-cells: should be 3. See pwm.txt in this directory for a description of
+> -  the cells format. The only third cell flag supported by this binding is
+> -  PWM_POLARITY_INVERTED.
+> -
+> -Optional properties:
+> -- samsung,pwm-outputs: list of PWM channels used as PWM outputs on particular
+> -    platform - an array of up to 5 elements being indices of PWM channels
+> -    (from 0 to 4), the order does not matter.
+> -
+> -Example:
+> -       pwm@7f006000 {
+> -               compatible = "samsung,s3c6400-pwm";
+> -               reg = <0x7f006000 0x1000>;
+> -               interrupt-parent = <&vic0>;
+> -               interrupts = <23>, <24>, <25>, <27>, <28>;
+> -               clocks = <&clock 67>;
+> -               clock-names = "timers";
+> -               samsung,pwm-outputs = <0>, <1>;
+> -               #pwm-cells = <3>;
+> -       }
+> diff --git a/Documentation/devicetree/bindings/pwm/pwm-samsung.yaml b/Documentation/devicetree/bindings/pwm/pwm-samsung.yaml
+> new file mode 100644
+> index 000000000000..06d11faabff6
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/pwm/pwm-samsung.yaml
+> @@ -0,0 +1,107 @@
+> +# SPDX-License-Identifier: GPL-2.0
+> +%YAML 1.2
+> +---
+> +$id: http://devicetree.org/schemas/pwm/pwm-samsung.yaml#
+> +$schema: http://devicetree.org/meta-schemas/core.yaml#
+> +
+> +title: Samsung SoC PWM timers
+> +
+> +maintainers:
+> +  - Thierry Reding <thierry.reding@gmail.com>
+> +  - Krzysztof Kozlowski <krzk@kernel.org>
+> +
+> +description: |+
+> +  Samsung SoCs contain PWM timer blocks which can be used for system clock source
+> +  and clock event timers, as well as to drive SoC outputs with PWM signal. Each
+> +  PWM timer block provides 5 PWM channels (not all of them can drive physical
+> +  outputs - see SoC and board manual).
+> +
+> +  Be aware that the clocksource driver supports only uniprocessor systems.
+> +
+> +allOf:
+> +  - $ref: pwm.yaml#
+> +
+> +properties:
+> +  compatible:
+> +    enum:
+> +      - samsung,s3c2410-pwm             # 16-bit, S3C24xx
+> +      - samsung,s3c6400-pwm             # 32-bit, S3C64xx
+> +      - samsung,s5p6440-pwm             # 32-bit, S5P64x0
+> +      - samsung,s5pc100-pwm             # 32-bit, S5PC100, S5PV210, Exynos4210 rev0 SoCs
+> +      - samsung,exynos4210-pwm          # 32-bit, Exynos
+> +
+> +  reg:
+> +    maxItems: 1
+> +
+> +  clocks:
+> +    minItems: 1
+> +    maxItems: 3
+> +
+> +  clock-names:
+> +    description: |
+> +      Should contain all following required clock names:
+> +      - "timers" - PWM base clock used to generate PWM signals,
+> +      and any subset of following optional clock names:
+> +      - "pwm-tclk0" - first external PWM clock source,
+> +      - "pwm-tclk1" - second external PWM clock source.
+> +      Note that not all IP variants allow using all external clock sources.
+> +      Refer to SoC documentation to learn which clock source configurations
+> +      are available.
+> +    oneOf:
+> +      - items:
+> +        - const: timers
+> +      - items:
+> +        - const: timers
+> +        - const: pwm-tclk0
+> +      - items:
+> +        - const: timers
+> +        - const: pwm-tclk1
+> +      - items:
+> +        - const: timers
+> +        - const: pwm-tclk0
+> +        - const: pwm-tclk1
+> +
+> +  interrupts:
+> +    description:
+> +      One interrupt per timer, starting at timer 0.
+> +    minItems: 1
+> +    maxItems: 5
+> +
+> +  "#pwm-cells":
+> +    description:
+> +      The only third cell flag supported by this binding
+> +      is PWM_POLARITY_INVERTED.
+> +    const: 3
+> +
+> +  samsung,pwm-outputs:
+> +    description:
+> +      A list of PWM channels used as PWM outputs on particular platform.
+> +      It is an array of up to 5 elements being indices of PWM channels
+> +      (from 0 to 4), the order does not matter.
+> +    allOf:
+> +      - $ref: /schemas/types.yaml#/definitions/uint32-array
+> +      - uniqueItems: true
+> +      - items:
+> +          minimum: 0
+> +          maximum: 4
+> +
+> +required:
+> +  - clocks
+> +  - clock-names
+> +  - compatible
+> +  - interrupts
+> +  - "#pwm-cells"
+> +  - reg
 
-I think this is not correct since (not considering the cast) we should break
-=66rom the loop if val !=3D 0 and val !=3D 0xff, so the right approach I gu=
-ess is:
+additionalProperties: false
 
-diff --git a/drivers/net/wireless/mediatek/mt7601u/phy.c b/drivers/net/wire=
-less/mediatek/mt7601u/phy.c
-index 06f5702ab4bd..d863ab4a66c9 100644
---- a/drivers/net/wireless/mediatek/mt7601u/phy.c
-+++ b/drivers/net/wireless/mediatek/mt7601u/phy.c
-@@ -213,7 +213,7 @@ int mt7601u_wait_bbp_ready(struct mt7601u_dev *dev)
-=20
- 	do {
- 		val =3D mt7601u_bbp_rr(dev, MT_BBP_REG_VERSION);
--		if (val && ~val)
-+		if (val && val !=3D 0xff)
- 			break;
- 	} while (--i);
+should work here. And in the rng binding too.
 
-> -	} while (--i);
-> +	} while (val && --i);
-> =20
->  	if (!i) {
->  		dev_err(dev->dev, "Error: BBP is not ready\n");
-> --=20
-> 2.20.1
->=20
-
---i7F3eY7HS/tUJxUd
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iHUEABYIAB0WIQTquNwa3Txd3rGGn7Y6cBh0uS2trAUCXYTa9wAKCRA6cBh0uS2t
-rETyAP42WJmgG0YWFN4dtvNtHUZL2FS46W+Tt/OXQTdrQfEfYQEA6DLVOjMTQzuG
-hmE5irsv5UEh9sDb73OcIUNJYu7aPAg=
-=LFi7
------END PGP SIGNATURE-----
-
---i7F3eY7HS/tUJxUd--
-
-
---===============5755596594350601126==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============5755596594350601126==--
-
