@@ -2,146 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1BEEBB9653
-	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Sep 2019 19:08:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D8A74B9756
+	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Sep 2019 20:45:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:Subject:From:References:To:Reply-To:Cc:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=NVovY+wjqG1u4fZ2q9dVVcK2wIikShQDqwphM0tEEug=; b=XjRvLX2FfXHYEXi/baEv4Cv3xY
-	VwdaBV62cv6fABRqZbSVm1J+cgMCmGrSwthBvIav4OecyOK3iCRbvty7MAHUwcrHhUjWxRt++AY4y
-	J+3bRwPZboqVl66khWucT8ggyedqmb3dH+UJd2u8+OlspuMEmCpo/K+BbfFiMHIVl3SGfZz/kTf5r
-	LoHJfhHiuKmSGD7pBqVfaiM3nMho2bZ8l2e3BVzRQBXMu2RggSYz2VW9ZfFX7QXmczZwMkB77rIwb
-	VpmyaGEr0X3eBGfwzLePdzyWdDCNs8CTynGzVNvA1rSbgkj4dCRMDRTr7t+LS5X/EVQxuvmQtyupb
-	mnm/hL0g==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=X1nRilAyFuMSUrb+gwYKs/hNI4H7Rh1lLhQRrK2/EQ4=; b=d51sOiy4pdSj7o
+	KJ50AzWVytHgHL9o6zt5VdW88/jjNSB617ot0Gvnq0Z+CmKWs7cYHgnajgadaWkM+qXrIvrykOUdP
+	rokVBOLVNFxKy8gWM8KzzUP+AKZsX5QRlnq5jc5am+lECfDp8AtyC/yU91EWTg6gudBCWeSL/LXy7
+	yfF4x3pvu6GcOQ/HTiQzLi+dUp3iL4bpsz9l9Ef25rrFVl9ygRq7C+x1kyUtahbfgY5caPWjzr81M
+	7gsL/I8hQbKFkjJh2UZVWMmi4JX8jWm0nxArJCp9CsADqgIM0KNvHB7MLEyLosmAY5Z2lcLc+KOTq
+	GwAmXacX4mbvdVE14rBg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBMO9-00074T-9I; Fri, 20 Sep 2019 17:08:09 +0000
-Received: from gateway30.websitewelcome.com ([50.116.126.1])
+	id 1iBNue-0007Ua-53; Fri, 20 Sep 2019 18:45:48 +0000
+Received: from mx3.wp.pl ([212.77.101.10])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBMO5-00074A-Tk
- for linux-mediatek@lists.infradead.org; Fri, 20 Sep 2019 17:08:07 +0000
-Received: from cm12.websitewelcome.com (cm12.websitewelcome.com [100.42.49.8])
- by gateway30.websitewelcome.com (Postfix) with ESMTP id 5CE989221
- for <linux-mediatek@lists.infradead.org>; Fri, 20 Sep 2019 11:45:22 -0500 (CDT)
-Received: from gator4166.hostgator.com ([108.167.133.22]) by cmsmtp with SMTP
- id BM26iTMJuiQerBM26iiOca; Fri, 20 Sep 2019 11:45:22 -0500
-X-Authority-Reason: nr=8
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=embeddedor.com; s=default; h=Content-Transfer-Encoding:Content-Type:
- In-Reply-To:MIME-Version:Date:Message-ID:Subject:From:References:To:Sender:
- Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
- Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=5iTGY/iZKBM5pTYJE4uJXR7l9zLmKTHVaxZNgy/AAJ0=; b=oQg+QDU/KnmpswhtXGTEs6gy4L
- lDCFWbcZsUApx5t/2BUBcxJaAKauYHjsUYAIJ5il3L57iXLo8PSW8FRlROy9cQlQqfBwPP0IKqoTZ
- xl6qkWiEapThHHk/7hP6mrr7vYkq63fkPXPobZNiUQLZqgbcijfz/qf1I4qTNJZgyaiTJ9TAwmt/k
- m/m04M+eAdDzc9084QU5eaigb4iddCx03nPQgGAWuBLAbVTjqgC4xaig2K2d8MiatFL9JnAgi17lK
- qsKi+62l+HWBYEMo4vP3IZZHNntUqXGTUWK2gOPL7pzBoPB/6aveKxf+Cw3D2kbuZEirwATpBJLvj
- 40QfZWyQ==;
-Received: from lfbn-1-12653-249.w90-90.abo.wanadoo.fr ([90.90.196.249]:34510
- helo=[192.168.1.21]) by gator4166.hostgator.com with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92)
- (envelope-from <gustavo@embeddedor.com>)
- id 1iBM25-002h2k-LH; Fri, 20 Sep 2019 11:45:21 -0500
-To: Felix Fietkau <nbd@nbd.name>, linux-wireless@vger.kernel.org,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>, Roy Luo
- <royluo@google.com>, Kalle Valo <kvalo@codeaurora.org>,
- "David S. Miller" <davem@davemloft.net>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Networking <netdev@vger.kernel.org>, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Ryder Lee <ryder.lee@mediatek.com>
-References: <20190704155324.56693-1-nbd@nbd.name>
- <20190704155324.56693-4-nbd@nbd.name>
-From: "Gustavo A. R. Silva" <gustavo@embeddedor.com>
-Openpgp: preference=signencrypt
-Autocrypt: addr=gustavo@embeddedor.com; keydata=
- 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
- VtSixD1uOgytAP7RWS474w==
-Subject: Re: [PATCH 4/4] mt76: mt7615: sync with mt7603 rate control changes
-Message-ID: <ee49c064-1ea6-8262-7672-b91d1a9a037e@embeddedor.com>
-Date: Fri, 20 Sep 2019 18:44:31 -0500
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ id 1iBNub-0007TE-0G
+ for linux-mediatek@lists.infradead.org; Fri, 20 Sep 2019 18:45:46 +0000
+Received: (wp-smtpd smtp.wp.pl 15208 invoked from network);
+ 20 Sep 2019 20:45:33 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wp.pl; s=1024a;
+ t=1569005134; bh=cizgm+wM/wjxUasVlGK7XAg12mZAPfOsYXg1d/8EQ90=;
+ h=From:To:Cc:Subject;
+ b=s5ny6L1GowL9XNrTar3fPEsX/ROiUgvN4PSEig0HQBPfKd+NPMYlml8HBaYwosXsM
+ pIw+74PyBFdJfjgsNhteK+dKxq+FIgc9WlEwAa20eriPCWeZTbvRLK3SVfH3j1JGYO
+ CeW+uDB4WLNOAsMJK7SYNkPTmOsnU36ogpr/QAxY=
+Received: from 014.152-60-66-biz-static.surewest.net (HELO
+ cakuba.netronome.com) (kubakici@wp.pl@[66.60.152.14])
+ (envelope-sender <kubakici@wp.pl>)
+ by smtp.wp.pl (WP-SMTPD) with ECDHE-RSA-AES256-GCM-SHA384 encrypted SMTP
+ for <lorenzo.bianconi@redhat.com>; 20 Sep 2019 20:45:33 +0200
+Date: Fri, 20 Sep 2019 11:45:15 -0700
+From: Jakub Kicinski <kubakici@wp.pl>
+To: Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
+Subject: Re: [PATCH] mt7601u: phy: simplify zero check on val
+Message-ID: <20190920114515.36e1ed90@cakuba.netronome.com>
+In-Reply-To: <20190920135817.GC6456@localhost.localdomain>
+References: <20190920125414.15507-1-colin.king@canonical.com>
+ <20190920135817.GC6456@localhost.localdomain>
 MIME-Version: 1.0
-In-Reply-To: <20190704155324.56693-4-nbd@nbd.name>
-Content-Language: en-US
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - gator4166.hostgator.com
-X-AntiAbuse: Original Domain - lists.infradead.org
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - embeddedor.com
-X-BWhitelist: no
-X-Source-IP: 90.90.196.249
-X-Source-L: No
-X-Exim-ID: 1iBM25-002h2k-LH
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Source-Sender: lfbn-1-12653-249.w90-90.abo.wanadoo.fr ([192.168.1.21])
- [90.90.196.249]:34510
-X-Source-Auth: gustavo@embeddedor.com
-X-Email-Count: 10
-X-Source-Cap: Z3V6aWRpbmU7Z3V6aWRpbmU7Z2F0b3I0MTY2Lmhvc3RnYXRvci5jb20=
-X-Local-Domain: yes
+X-WP-MailID: 624ef302b2416e660574dde2845ab35d
+X-WP-AV: skaner antywirusowy Poczty Wirtualnej Polski
+X-WP-SPAM: NO 000000A [AVOU]                               
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190920_100806_045980_79F17D35 
-X-CRM114-Status: UNSURE (   9.18  )
+X-CRM114-CacheID: sfid-20190920_114545_229968_C31CF730 
+X-CRM114-Status: UNSURE (   8.39  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [212.77.101.10 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [212.77.101.10 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (kubakici[at]wp.pl)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -160,67 +83,35 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: kernel-janitors@vger.kernel.org, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Colin King <colin.king@canonical.com>,
+ "David S . Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi all,
-
-On 7/4/19 10:53, Felix Fietkau wrote:
-[..]
-> +	for (i = 0, idx = first_idx; count && idx <= last_idx; idx++) {
-> +		struct ieee80211_tx_rate *cur_rate;
-> +		int cur_count;
+On Fri, 20 Sep 2019 15:58:17 +0200, Lorenzo Bianconi wrote:
+> I think this is not correct since (not considering the cast) we should break
+> from the loop if val != 0 and val != 0xff, so the right approach I guess is:
+> 
+> diff --git a/drivers/net/wireless/mediatek/mt7601u/phy.c b/drivers/net/wireless/mediatek/mt7601u/phy.c
+> index 06f5702ab4bd..d863ab4a66c9 100644
+> --- a/drivers/net/wireless/mediatek/mt7601u/phy.c
+> +++ b/drivers/net/wireless/mediatek/mt7601u/phy.c
+> @@ -213,7 +213,7 @@ int mt7601u_wait_bbp_ready(struct mt7601u_dev *dev)
 >  
-> -		info->status.rates[i].count = cur_count;
-> -		final_idx = i;
-> +		cur_rate = &rs->rates[idx / 2];
-> +		cur_count = min_t(int, MT7615_RATE_RETRY, count);
->  		count -= cur_count;
-> +
-> +		if (idx && (cur_rate->idx != info->status.rates[i].idx ||
-> +			    cur_rate->flags != info->status.rates[i].flags)) {
-> +			i++;
-> +			if (i == ARRAY_SIZE(info->status.rates))
+>  	do {
+>  		val = mt7601u_bbp_rr(dev, MT_BBP_REG_VERSION);
+> -		if (val && ~val)
+> +		if (val && val != 0xff)
+>  			break;
+>  	} while (--i);
 
-Is this actually possible  ^^^^^^^ ?? in case it is, see my comments below...
-
-> +				break;
-> +
-> +			info->status.rates[i] = *cur_rate;
-> +			info->status.rates[i].count = 0;
-> +		}
-> +
-> +		info->status.rates[i].count += cur_count;
->  	}
->  
->  out:
-> -	final_rate_flags = info->status.rates[final_idx].flags;
-> +	final_rate_flags = info->status.rates[i].flags;
-
-There is an out-of-bounds access here........^^^ and see below...
-
->  
->  	switch (FIELD_GET(MT_TX_RATE_MODE, final_rate)) {
->  	case MT_PHY_TYPE_CCK:
-> @@ -713,8 +778,8 @@ static bool mt7615_fill_txs(struct mt7615_dev *dev, struct mt7615_sta *sta,
->  		return false;
->  	}
->  
-> -	info->status.rates[final_idx].idx = final_rate;
-> -	info->status.rates[final_idx].flags = final_rate_flags;
-> +	info->status.rates[i].idx = final_rate;
-> +	info->status.rates[i].flags = final_rate_flags;
-
-here too ............... ^^^^
-
->  
->  	return true;
->  }
-
---
-Gustavo
+Yup, feel free to add my ack if you post this, Lorenzo.
 
 _______________________________________________
 Linux-mediatek mailing list
