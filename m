@@ -2,87 +2,131 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 591E6B9D1E
-	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 11:09:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B986FB9DE5
+	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 14:53:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HLHbJvaeIQ/XOXOnOtLh1NeXI6ZcQte50DB8FZEk4jc=; b=Mo7h93lnhNjsdx
-	qw5zYTu/6KDbbAQWDtuUe+QdtBUR/QE1S/axFjXi4f50jNDmQmJb0MCgIYR6m3NbSSIAtyiP3iMrQ
-	D3BPC/zzM84XMyaJE5rbN/GXd3IsiaIGgayg6teBxq4YT1x+qAy3OlQ+jSPoINF3/xuR7/ApS6u73
-	XK4T5kVlVjd/aKcycj4SkMdT13xfDmds1nP6kAKapHkn391Eb9FfmbVjSVu8nbYM1xSDGegnqkre2
-	V0pjT+zk2cXYRFWaJicHu4os/WEVqLOY/JqBdKHn+1kNKG8Jjl0a4UOjxRaC3d3d78Cwc8TnEGN4r
-	Cb59jdY5ENpp9DgJYa6g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
+	From:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=J1LrE30rtRHb522R+HSFH9I/OmDO44luUWRAGUSlf80=; b=igzKfkoPsx3vBB
+	ILFx9TqNW7esXdOXoaqnsFJpf9/4f8tbmEQ6JTmvvE18rtcO5jebSoOUzQr+wZ4JD6o4pKSoXOA31
+	lZmWjq0lvD6qD9vrQQKj1Wbwq3m+yjsfB73WzKONjptoIzv4ILbJ861tERJkOtKVvoiuIb59RyrLB
+	tNgMhJcBZWbm8jQcUwjyoHq/hIQPk1Zw+Z4LwW+ltgN4gpsLDkbwFvBsW5O75L7LOPgzTb1dD2e6s
+	Ubk/6JUFcIWVLBSr/pt6kJdysah+u7OCWd0Axe6LU/6UGKXEajeKXFk13+SataQBP+5kIcwf5+PoZ
+	n43qMbcNRdwX9g/JpOOw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBbOA-0007tT-Ka; Sat, 21 Sep 2019 09:09:10 +0000
-Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
+	id 1iBesy-0002pk-Ph; Sat, 21 Sep 2019 12:53:12 +0000
+Received: from mout.web.de ([217.72.192.78])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBbO5-0007sz-FB
- for linux-mediatek@lists.infradead.org; Sat, 21 Sep 2019 09:09:07 +0000
-Received: by mail-pf1-x442.google.com with SMTP id y22so6153310pfr.3
- for <linux-mediatek@lists.infradead.org>; Sat, 21 Sep 2019 02:09:02 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=date:from:to:cc:subject:in-reply-to:message-id:references
- :user-agent:mime-version;
- bh=LKS6iRhORtVWtWzPRk2V93JoQAB4JDX0z138KY8j8Ak=;
- b=SkyMdLbVZeuAeURGdY/fK7VUmGBH5duim15ZdpccY6a9VaRa7ysYDVaA7VUcqecynC
- NSpY6XX7eKwmBaeUoQsRnsl8Ko0gjuRoRIAfs8u3KYHs5i2OYzOw/fFTozNtkUaCu2uQ
- yNNr+zvypRK5jh7JvO6BN0ixVJ+hDH1K+zQEW1ntYn0IoTebzEtKHcjp1P948b9Mwn5K
- FZwnxU3syHnu79tDtL0nisC7ArTpimgR+i6/Y1d2xBOG+X3gSt6oxZptCPjK9AUW2rlQ
- f2zDP2C8ZNKIQHotlvns49lEBLnfHOyh03czL/hGG2EChz39ihxw7K/DIedL8LuJxDrb
- zehQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:in-reply-to:message-id
- :references:user-agent:mime-version;
- bh=LKS6iRhORtVWtWzPRk2V93JoQAB4JDX0z138KY8j8Ak=;
- b=UdwZEQ/7O5U0aYl290PQ/j11INEmYyVNPHsMu531go3fm8IceMrNsp00LKv45YhULV
- 5m84ZXytP9Nx7du9kamAwEMUTNXKiCs8X9wxV8Fytn8CQoB5s/IP+/DxrxhfuhZYHl1q
- 7751f3ztjKpHFVg2364ypoagKKGz8bZ8x7wkIxJ1K82/C9og1b99Xwkl4KaUULjvJiD6
- XVR3x2TWK75aC5UHVCPn3JO4lUo/V/Rlg1Y+4xqCZvN8XS456DoVMo6s2o5T8aiRTV9e
- eADZDF9Cq7kYci2h0wMXJoThh8X39EnhydIN1UqGoKx91WU1FD5xn818HNHpXQdvZrfV
- SxoA==
-X-Gm-Message-State: APjAAAXpEgwIfCd5hWoPSnI6WvjGk0Hzwi5wOn2Kj5CoQbvJiY8LxA/W
- kEI9aQEqvO6G3brbDHlleqr8wA==
-X-Google-Smtp-Source: APXvYqyDG2iSDN+jBYdCL3+alE/9Xq3bNU+YDf3e+OZLkMg4U9lsu0+pJcxGpuPE3fYiB4Uxvo8gvQ==
-X-Received: by 2002:a63:6a81:: with SMTP id
- f123mr19648574pgc.348.1569056941451; 
- Sat, 21 Sep 2019 02:09:01 -0700 (PDT)
-Received: from [2620:15c:17:3:3a5:23a7:5e32:4598]
- ([2620:15c:17:3:3a5:23a7:5e32:4598])
- by smtp.gmail.com with ESMTPSA id w69sm6951409pgd.91.2019.09.21.02.08.59
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 21 Sep 2019 02:09:00 -0700 (PDT)
-Date: Sat, 21 Sep 2019 02:08:59 -0700 (PDT)
-From: David Rientjes <rientjes@google.com>
-X-X-Sender: rientjes@chino.kir.corp.google.com
-To: Miles Chen <miles.chen@mediatek.com>
-Subject: Re: [PATCH] mm: slub: print_hex_dump() with DUMP_PREFIX_OFFSET
-In-Reply-To: <20190920104849.32504-1-miles.chen@mediatek.com>
-Message-ID: <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
-References: <20190920104849.32504-1-miles.chen@mediatek.com>
-User-Agent: Alpine 2.21 (DEB 202 2017-01-01)
+ id 1iBesu-0002oO-BA
+ for linux-mediatek@lists.infradead.org; Sat, 21 Sep 2019 12:53:09 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+ s=dbaedf251592; t=1569070372;
+ bh=SCl+tmJdStyw0CQO6h+KnwtHmTZWrvSg11wccT6qzvA=;
+ h=X-UI-Sender-Class:To:Cc:From:Subject:Date;
+ b=SMkRdRql9mpRjvontaJ7T//NZvV2XujWQ5rGPM4hjcwKvKu//XH1ytIrp9H9X0ITy
+ B+p5gZfkO/f42zN5JEvyMbHXuNfd74Hp344MB/B0kfYKL79P2tWSazYlgZ97cV90lr
+ 78ahxggoNLXscqDO/GfIVcZNR8eCyu1qqXmGk8o0=
+X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
+Received: from [192.168.1.2] ([2.244.64.44]) by smtp.web.de (mrweb101
+ [213.165.67.124]) with ESMTPSA (Nemesis) id 0MLPaA-1iB6un3bdK-000g3v; Sat, 21
+ Sep 2019 14:52:51 +0200
+To: linux-spi@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Leilk Liu <leilk.liu@mediatek.com>,
+ Mark Brown <broonie@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+From: Markus Elfring <Markus.Elfring@web.de>
+Subject: [PATCH] spi: mediatek: Use devm_platform_ioremap_resource() in
+ mtk_spi_probe()
+Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
+ 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 FEE=
+Message-ID: <478e0df1-e800-8cf1-f9b3-d72f8e26aa0b@web.de>
+Date: Sat, 21 Sep 2019 14:52:50 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.1.0
 MIME-Version: 1.0
+Content-Language: en-US
+X-Provags-ID: V03:K1:2RAnMwsq6u90y8BSolpVHIxB4gUiIhUjbOBK55jXz4stVkILt2a
+ yGGEi2R00Bq3dxmuNkPXstj2HSdiOCHrpdNoT/ZGn74n3BCVVOS+gfnEAUw0DP7tknUIqAo
+ TXd/4i8i/hNUzTZhvJYvy873vGLUAZRh3pcvGIGlWznESPzchGN//b54okAoGBOwnCRV7L8
+ 8neBn4GVoIsUNOJYFNhqA==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:H5uIZOtSvkE=:PM1Chy/hXGWgXhW8TIHvFO
+ auEeQsBYt861j7vJYVEjZ98t/b6H+E5x/yDo/JNu1K/TvHMFhI6n2jz1C5W/zWo5uyGn+dFKO
+ ccsEiC7Oz5+L6VMl2oejfz1YhEUu39+AtKp9dI7K2DAI/H0kVPzXI/RNXUeN4OJIAjjUt9/hW
+ EWSU3xtjxhA7/BGLfGhMpzjOYyy9fRZnaRpmLHLkPf3+HmN8TNFjJoDbadHmbBN1Z54sTHhHp
+ ScT8/97SKofTt33RBtFPFIAv5A4x86p+jDR9vIx1QQemh6I5afiunCd5WNnsACgNIt3UfOXkp
+ ZJw/bkWA8s8fPFn6yNV0BaSBFaH/3uuYxZ+y0tn6+5FrENNX4ufEzO3zX0ndukseXcERg5L91
+ HnPcfI7dhUyU9NCxwITOcHcdPKyW3IHgJaXtNgUQ7Xi9bwzz7dYAo6u0erZOA4c0Sdbfp8eNw
+ vm4kUlIFuwBsdnTHRR/6pDgqKr3+8ROGx9v+H19ZA8CMmEnO+jAKe6vJonfzfEXwf/KGMqIwn
+ lNPAxfnRab2IhfhErmLSrA3gSVCPNhmPmEJgPySRlo/8mkYM7M7qkU1m3/yKGjLN97DPcA8+h
+ utJvqY3ZYnkmZY69WNuNERsmh1eS+YcQaeWQkaHj/VBPOP28waSziI6qqj62cjHShClQmL6Aw
+ aHJm1pvEHsEsitL3Qv/Nw/4AUPuMTXr2vK4hyjHudDdlqy/g2qsalg7jsi422bD8ZrDncK8/v
+ 8t9waijpT+NNzOPJN4/GXaJO1SnzsvYdpkgfx94BqDs9OiM+5DLDJpe7CaZNsL9leGLhQO51w
+ p9wVB02ALGA42+rPjLW++TqUskkINd84ape9paAKNMgyebj2Nk+57jpzUEZ1aapeYOX7JBO+r
+ QtRY81nOtWxA+PMJ0ya/ecWA02toqd9imjdniONBXyPYEC8Prr31ETr7lUmhgXpNwgHcpc4B7
+ pC3aan87vDhNQlwszvabLXDuxp7Ry2ODPRW+gnB+lAIfj2IygUzNUCrRJhduVj/vkpwwqBwzF
+ moJDdYNKP1gH2Afmqrq6X6svNuIE1EIp8XdMh/+YM790WICN/U3KGvO/HQ/mM9GyLQZwNC51P
+ xgHtCvKDk6UqDYQy546bx69gfMhHsZC+SluvJi+C77HhLFO3xLGNjA3XDG8qkHQ5NhZ4y/aY+
+ h3PXgUOS4ts80Jn/Y7ToU/N6OAlDbOcikN6ycqW4NCfg+jmbMRhEPmOaqPM2P8mVVvxSsbYvQ
+ 8iyF6iMH+ET2kaMZDiwUTVkr0yEmeW/ZHnmxsPCF3R22+RSNrdG2OHyR/dCA=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190921_020905_782438_A90B8D8F 
-X-CRM114-Status: GOOD (  10.57  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20190921_055308_729423_BDDC2AD0 
+X-CRM114-Status: UNSURE (   9.43  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.72.192.78 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (markus.elfring[at]web.de)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -91,8 +135,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -104,48 +146,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Morton <akpm@linux-foundation.org>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, Pekka Enberg <penberg@kernel.org>,
- linux-mm@kvack.org, linux-mediatek@lists.infradead.org,
- Christoph Lameter <cl@linux.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>
+Cc: kernel-janitors@vger.kernel.org, LKML <linux-kernel@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 20 Sep 2019, Miles Chen wrote:
+From: Markus Elfring <elfring@users.sourceforge.net>
+Date: Sat, 21 Sep 2019 14:45:40 +0200
 
-> Since commit ad67b74d2469d9b8 ("printk: hash addresses printed with %p"),
-> The use DUMP_PREFIX_OFFSET instead of DUMP_PREFIX_ADDRESS with
-> print_hex_dump() can generate more useful messages.
-> 
-> In the following example, it's easier get the offset of incorrect poison
-> value with DUMP_PREFIX_OFFSET.
-> 
-> Before:
-> Object 00000000e817b73b: 00 00 00 00 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000000816f4601: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000000169d2bb8: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000000f4c38716: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000000917e3491: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000000c0e33738: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 000000001755ddd1: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> 
-> After:
-> Object 00000000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000010: 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000020: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> Object 00000030: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
-> 
-> I think it might be worth to convert all DUMP_PREFIX_ADDRESS to
-> DUMP_PREFIX_OFFSET for the whole Linux kernel.
-> 
+Simplify this function implementation by using a known wrapper function.
 
-I agree it looks nicer for poisoning, I'm not sure that every caller of 
-print_section() is the same, however.  For example trace() seems better 
-off as DUMP_PREFIX_ADDRESS since it already specifies the address of the 
-object being allocated or freed and offset here wouldn't really be useful, 
-no?
+This issue was detected by using the Coccinelle software.
+
+Signed-off-by: Markus Elfring <elfring@users.sourceforge.net>
+---
+ drivers/spi/spi-mt65xx.c | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+diff --git a/drivers/spi/spi-mt65xx.c b/drivers/spi/spi-mt65xx.c
+index 6888a4dcff6d..25fe149a8d9a 100644
+--- a/drivers/spi/spi-mt65xx.c
++++ b/drivers/spi/spi-mt65xx.c
+@@ -619,7 +619,6 @@ static int mtk_spi_probe(struct platform_device *pdev)
+ 	struct spi_master *master;
+ 	struct mtk_spi *mdata;
+ 	const struct of_device_id *of_id;
+-	struct resource *res;
+ 	int i, irq, ret, addr_bits;
+
+ 	master = spi_alloc_master(&pdev->dev, sizeof(*mdata));
+@@ -682,15 +681,7 @@ static int mtk_spi_probe(struct platform_device *pdev)
+ 	}
+
+ 	platform_set_drvdata(pdev, master);
+-
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	if (!res) {
+-		ret = -ENODEV;
+-		dev_err(&pdev->dev, "failed to determine base address\n");
+-		goto err_put_master;
+-	}
+-
+-	mdata->base = devm_ioremap_resource(&pdev->dev, res);
++	mdata->base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(mdata->base)) {
+ 		ret = PTR_ERR(mdata->base);
+ 		goto err_put_master;
+--
+2.23.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
