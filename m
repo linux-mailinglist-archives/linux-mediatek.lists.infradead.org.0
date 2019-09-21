@@ -2,91 +2,36 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7604BB9E46
-	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 16:58:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3641FB9ECC
+	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 18:00:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=4zaVjl8qLfV/o6FwKGldTp79ugtQsSWgpD8zgtLLQ40=; b=iES
-	V6TPllDYZ0RlY3qB4imEHwLBrI9YjLzMxGi7WHMVYn0yRgzkCvWO9+Hf/ZNO1RcT5EM/TUYWmV6vV
-	Uow1ybf9ySYH9mRdJv0V/6T863TZjg+mm6Tm1u3ESAOeUaYSEP2b1IYPGbC27i2EYq2KhUGlMAuRD
-	JbpkvfW1aWLdIpL7r+i4S64suTcWvboAGI6GZdEf2caQ1sdGbZQrAjO3somHwVWoF80WmUh9dXg3z
-	+9xSsGhKafn/H50eSz9l4p0ZcU9o3Gyejp1VAHZ2PI37X/255hdbyQU0ogmE6YNLt+z4Xlv1+1NYt
-	xvHcPMKfVvXtsgHPzmRh7BT7O09zB1Q==;
+	List-Owner; bh=5RPNNPnAL+Ld99YpUXjKKmRyyfBvnzDBX8fqv8boIBA=; b=nVDabMD6+Lfs7E
+	cFJeAihzLRxJaFcvEco2hav8KBW3OZpK6SvEO0qbLNAJZmri+c2fXCXV9C9TqNJ9c84OPfcX7TdCL
+	BTqEJtONuilaNLqqGmKUTVlEb+VQNyOo5RurxrNke4gdqFRCCvqlz1nXY12P22XCV/HyCnwTzVsj0
+	iaUGVjGVxD0QJkrs1owIg1tDHHbQxGPMICFwrwTNfwz9BCsT2BHfynsxcWskGFDQ1/U8RpG9FcUBv
+	ko2NuB8kNc0JEwYIiH2amtLwgs1lWvsq9C1kBKukl/YNMQhC/XnPh4BtjW5RHQGrAa8bY2xsaVJMb
+	8BnVvdt8W11/+fcyfQqA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBgqZ-0002Ng-9A; Sat, 21 Sep 2019 14:58:51 +0000
-Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBgpy-0002BM-Hz; Sat, 21 Sep 2019 14:58:16 +0000
-Received: by mail-pf1-x441.google.com with SMTP id y22so6450933pfr.3;
- Sat, 21 Sep 2019 07:58:12 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to;
- bh=rMu789LD1T8uU9KacNFi9FCRB7xCR3S38zLi0aGwMPk=;
- b=n35lnfvxCsApW2kK/lMjVc0YEBMnaP2lRsh3iZP3PqPJ2tV3sg11DolTl/kk9xyJde
- /ha5P/doLG5uKhkPQNY5bQt/JkPdzdAEqzqk3AkVfHXePMgjGLWFzx80KbrzYnZ78z7s
- oKFHDgAnjMCs0loyHFt1jjasbEjPENOE1nLRi9OkT3p6vUCxrLXzpNR/BOoFSGI+z9Y7
- 4OaVoqk3tj5sFv/99bVXIE/7qHl3U+ulaMA5oy3DSGu7oxcstDO/eXPyv6MwtrqODYPG
- U1QjzItNO/Fqx18aXt3H2HDvTec+8NdgrenBqnlI0CejEldxq1YFrwkqsWEk6G5YoH8C
- mdXA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to;
- bh=rMu789LD1T8uU9KacNFi9FCRB7xCR3S38zLi0aGwMPk=;
- b=FayOMk9VmAvqouc0oHJGtun0UjDF1V9jXbwgftjRA4jRrPwVw5xF2OrxaWEvTTJjID
- SpAHYqvUDt+fWWSp+ji//ku41xvjFsaF///HVmqExxK1EaFUVOwd74HdKUYPfWpTplRK
- GJpEhTG2VSf0rWvN3IJG+ka6y3TvWpsvxsaX6vud6lvs7jSsGeCZyhbN+U1ZMt9aPtse
- PdzPeFKkrAj2DRJpf7C+6/TxCTyXNydIQd9PQvOTwUE7yKlzw7Bv9W14/VC6Bo1FpR93
- Crc1k6xZgld3m/qzKJLovo4BHFrJmWzF82gj1kRGo8OTN8Vl1EWonyb3xv4HSporQhe4
- Qg6w==
-X-Gm-Message-State: APjAAAWhCoIm00X2TZksMPHIeuKkkccTaBHr74Vxg3s24PoaDIzDJu70
- a1uX2ji+ZP8yPXqti6W9npg=
-X-Google-Smtp-Source: APXvYqzq1rGaqCGeV44c1S06GyiRUKXeYke/1wz8RtK+UwfNjVz8EIJCJF0JnYuM5kiFHQQ1VUVAJA==
-X-Received: by 2002:a63:2224:: with SMTP id i36mr12763638pgi.135.1569077891943; 
- Sat, 21 Sep 2019 07:58:11 -0700 (PDT)
-Received: from satendra-MM061.ib-wrb304n.setup.in ([103.82.150.67])
- by smtp.gmail.com with ESMTPSA id r185sm5933695pfr.68.2019.09.21.07.58.03
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 21 Sep 2019 07:58:10 -0700 (PDT)
-From: Satendra Singh Thakur <sst2005@gmail.com>
-To: dan.j.williams@intel.com, vkoul@kernel.org, jun.nie@linaro.org,
- shawnguo@kernel.org, agross@kernel.org, sean.wang@mediatek.com,
- matthias.bgg@gmail.com, maxime.ripard@bootlin.com, wens@csie.org,
- lars@metafoo.de, afaerber@suse.de, manivannan.sadhasivam@linaro.org
-Subject: Re: Re: [PATCH 0/9] added helper macros to remove duplicate code from
- probe functions of the platform drivers
-Date: Sat, 21 Sep 2019 20:27:26 +0530
-Message-Id: <2356e29bca5bdfa901534bb32a2782185eb0415f.1568909689.git.sst2005@gmail.com>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <20190918102715.GO4392@vkoul-mobl>
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190921_075814_621926_B795D16F 
-X-CRM114-Status: GOOD (  14.98  )
-X-Spam-Score: 0.1 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.1 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (sst2005[at]gmail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (sst2005[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+	id 1iBho6-0000xS-LG; Sat, 21 Sep 2019 16:00:22 +0000
+Received: from willy by bombadil.infradead.org with local (Exim 4.92.2 #3 (Red
+ Hat Linux)) id 1iBho2-0000xH-73; Sat, 21 Sep 2019 16:00:18 +0000
+Date: Sat, 21 Sep 2019 09:00:18 -0700
+From: Matthew Wilcox <willy@infradead.org>
+To: David Rientjes <rientjes@google.com>
+Subject: Re: [PATCH] mm: slub: print_hex_dump() with DUMP_PREFIX_OFFSET
+Message-ID: <20190921160018.GF15392@bombadil.infradead.org>
+References: <20190920104849.32504-1-miles.chen@mediatek.com>
+ <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,97 +43,53 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- satendrasingh.thakur@hcl.com, dmaengine@vger.kernel.org,
- Satendra Singh Thakur <sst2005@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
+Cc: Andrew Morton <akpm@linux-foundation.org>, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Pekka Enberg <penberg@kernel.org>,
+ linux-mm@kvack.org, Miles Chen <miles.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Christoph Lameter <cl@linux.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Sep 18, 2019 at 3:57 PM, Vinod Koul wrote:
-> On 15-09-19, 12:30, Satendra Singh Thakur wrote:
-> > 1. For most of the platform drivers's probe include following steps
+On Sat, Sep 21, 2019 at 02:08:59AM -0700, David Rientjes wrote:
+> On Fri, 20 Sep 2019, Miles Chen wrote:
+> 
+> > Since commit ad67b74d2469d9b8 ("printk: hash addresses printed with %p"),
+> > The use DUMP_PREFIX_OFFSET instead of DUMP_PREFIX_ADDRESS with
+> > print_hex_dump() can generate more useful messages.
 > > 
-> > -memory allocation for driver's private structure
-> > -getting io resources
-> > -io remapping resources
-> > -getting irq number
-> > -registering irq
-> > -setting driver's private data
-> > -getting clock
-> > -preparing and enabling clock
->
-> And we have perfect set of APIs for these tasks!
-Hi Vinod,
-Thanks for the comments.
-You are right, we already have set of APIs for these tasks.
-The proposed macros combine the very same APIs to remove 
-duplicate/redundant code.
-A new driver author can use these macros to easily write probe 
-function without having to worry about signatures of internal APIs.
-In the past, people have combined some of them e.g.
-a) clk_prepare_enable combines clk_prepare and clk_enable
-b) devm_platform_ioremap_resource combines
-platform_get_resource (for type IORESOURCE_MEM)
-and devm_ioremap_resource
-c) module_platform_driver macro encompasses module_init/exit 
-and driver_register/unregister functions.
-The basic idea is to simplyfy coding.
-> > 2. We have defined a set of macros to combine some or all of
-> > the above mentioned steps. This will remove redundant/duplicate
-> > code in drivers' probe functions of platform drivers.
-> 
-> Why, how does it help and you do realize it also introduces bugs
-This will make probe function shorter by removing repeated code.
-This will also reduce bugs caused due to improper handling
-of failure cases because of these reasons:
-a) If the developer calls each API individualy one might miss
-proper handling of the failure for some API; Whereas the macro
-properly handles failure of each API.
-b) Macros are devres compatible which leaves less room for
-memory leaks.
-
-Yes, the macros which enable clock and request irqs
-might cause bugs if they are not used carefully.
-For instance, enabling the clock or requesting the irq
-earlier than actually required. So, the macros with _clk
-and _irq, _all suffix should be used carefully.
-
-Please let me know if I miss any specific type of bug
-here.
-> 
-> > devm_platform_probe_helper(pdev, priv, clk_name);
-> > devm_platform_probe_helper_clk(pdev, priv, clk_name);
-> > devm_platform_probe_helper_irq(pdev, priv, clk_name,
-> > irq_hndlr, irq_flags, irq_name, irq_devid);
-> > devm_platform_probe_helper_all(pdev, priv, clk_name,
-> > irq_hndlr, irq_flags, irq_name, irq_devid);
-> > devm_platform_probe_helper_all_data(pdev, priv, clk_name,
-> > irq_hndlr, irq_flags, irq_name, irq_devid);
+> > In the following example, it's easier get the offset of incorrect poison
+> > value with DUMP_PREFIX_OFFSET.
 > > 
-> > 3. Code is made devres compatible (wherever required)
-> > The functions: clk_get, request_irq, kzalloc, platform_get_resource
-> > are replaced with their devm_* counterparts.
-> 
-> We already have devres APIs for people to use!
-Yes, we have devres APIs and many drivers do use them.
-But still there are many which don't use them.
-The proposed macros provides just another way to use devres APIs.
+> > Before:
+> > Object 00000000e817b73b: 00 00 00 00 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000000816f4601: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000000169d2bb8: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000000f4c38716: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000000917e3491: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000000c0e33738: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 000000001755ddd1: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
 > > 
-> > 4. Few bugs are also fixed.
+> > After:
+> > Object 00000000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000010: 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000020: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+> > Object 00000030: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
 > 
-> Which ones..?
-The bug is that the failure of request_irq 
-is not handled properly in mtk-hsdma.c. This is fixed in patch [5/9].
-https://lkml.org/lkml/2019/9/15/35
+> I agree it looks nicer for poisoning, I'm not sure that every caller of 
+> print_section() is the same, however.  For example trace() seems better 
+> off as DUMP_PREFIX_ADDRESS since it already specifies the address of the 
+> object being allocated or freed and offset here wouldn't really be useful, 
+> no?
 
-Please let me know if I am missing something here.
-Thanks
--Satendra 
-
+While it looks nicer, it might be less useful for debugging.  The point of
+obfuscated %p is that you can compare two "pointer" values for equality.
+So if you know that you freed object 00000000e817b73b from an earlier
+printk, then you can match it up to this dump.  It's obviously not
+perfect since we're only getting the pointers at addresses that are
+multiples of 16, but it's a help.
 
 _______________________________________________
 Linux-mediatek mailing list
