@@ -2,36 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3641FB9ECC
-	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 18:00:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F27FCB9F17
+	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 19:07:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
+	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5RPNNPnAL+Ld99YpUXjKKmRyyfBvnzDBX8fqv8boIBA=; b=nVDabMD6+Lfs7E
-	cFJeAihzLRxJaFcvEco2hav8KBW3OZpK6SvEO0qbLNAJZmri+c2fXCXV9C9TqNJ9c84OPfcX7TdCL
-	BTqEJtONuilaNLqqGmKUTVlEb+VQNyOo5RurxrNke4gdqFRCCvqlz1nXY12P22XCV/HyCnwTzVsj0
-	iaUGVjGVxD0QJkrs1owIg1tDHHbQxGPMICFwrwTNfwz9BCsT2BHfynsxcWskGFDQ1/U8RpG9FcUBv
-	ko2NuB8kNc0JEwYIiH2amtLwgs1lWvsq9C1kBKukl/YNMQhC/XnPh4BtjW5RHQGrAa8bY2xsaVJMb
-	8BnVvdt8W11/+fcyfQqA==;
+	List-Owner; bh=kBZTjaaMqY90F3JwPTvWqet/SjGMPIBHPWyr8iVIUcc=; b=XQ0u9sBvbo9xu1
+	jiLCmhZrimYEJ82XF7boUg/doLez83M2a6aEBo3Oz8KHYTjlBZXnnL4GuyQ24aqQ6kuwImLJe3+ko
+	RwPm4KSN3S0Je0xBXOCsr7Zaunas/kFDF6b0glHkET5y/wDk5Wg36JREAM5YkMIDapObVuwsRzTEH
+	gpEdEiu2RAI6VgmoPyx/ENIFGEhXD5LzCYdK5rtx3BfwJXA/4KrMoYxkTiRhYRYQX0VuY6BfGwADO
+	2S6PMIlr22++fsnGUfNpYCn3g2hvmtH6iYk0K5JxsVEWXfCKL4CcfuGawVKsm5oEMRFZIJoBpvEcK
+	vG8r9ToWTUae/YyFE2sA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBho6-0000xS-LG; Sat, 21 Sep 2019 16:00:22 +0000
-Received: from willy by bombadil.infradead.org with local (Exim 4.92.2 #3 (Red
- Hat Linux)) id 1iBho2-0000xH-73; Sat, 21 Sep 2019 16:00:18 +0000
-Date: Sat, 21 Sep 2019 09:00:18 -0700
-From: Matthew Wilcox <willy@infradead.org>
+	id 1iBiqh-0005Le-P7; Sat, 21 Sep 2019 17:07:07 +0000
+Received: from gentwo.org ([3.19.106.255])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iBiqd-0005Ky-ER
+ for linux-mediatek@lists.infradead.org; Sat, 21 Sep 2019 17:07:04 +0000
+Received: by gentwo.org (Postfix, from userid 1002)
+ id 546873EEB4; Sat, 21 Sep 2019 17:00:51 +0000 (UTC)
+Received: from localhost (localhost [127.0.0.1])
+ by gentwo.org (Postfix) with ESMTP id 5325B3E86F;
+ Sat, 21 Sep 2019 17:00:51 +0000 (UTC)
+Date: Sat, 21 Sep 2019 17:00:51 +0000 (UTC)
+From: cl@linux.com
+X-X-Sender: cl@ip-172-31-20-140.us-east-2.compute.internal
 To: David Rientjes <rientjes@google.com>
 Subject: Re: [PATCH] mm: slub: print_hex_dump() with DUMP_PREFIX_OFFSET
-Message-ID: <20190921160018.GF15392@bombadil.infradead.org>
+In-Reply-To: <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
+Message-ID: <alpine.DEB.2.21.1909211659470.27404@ip-172-31-20-140.us-east-2.compute.internal>
 References: <20190920104849.32504-1-miles.chen@mediatek.com>
  <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
+User-Agent: Alpine 2.21 (DEB 202 2017-01-01)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190921_100703_555193_5850B55E 
+X-CRM114-Status: UNSURE (   8.06  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 1.0 (+)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (1.0 points)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -43,53 +61,28 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Morton <akpm@linux-foundation.org>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, Pekka Enberg <penberg@kernel.org>,
- linux-mm@kvack.org, Miles Chen <miles.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, Joonsoo Kim <iamjoonsoo.kim@lge.com>,
- Christoph Lameter <cl@linux.com>
+Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Pekka Enberg <penberg@kernel.org>, linux-mm@kvack.org,
+ Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Joonsoo Kim <iamjoonsoo.kim@lge.com>,
+ Andrew Morton <akpm@linux-foundation.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sat, Sep 21, 2019 at 02:08:59AM -0700, David Rientjes wrote:
-> On Fri, 20 Sep 2019, Miles Chen wrote:
-> 
-> > Since commit ad67b74d2469d9b8 ("printk: hash addresses printed with %p"),
-> > The use DUMP_PREFIX_OFFSET instead of DUMP_PREFIX_ADDRESS with
-> > print_hex_dump() can generate more useful messages.
-> > 
-> > In the following example, it's easier get the offset of incorrect poison
-> > value with DUMP_PREFIX_OFFSET.
-> > 
-> > Before:
-> > Object 00000000e817b73b: 00 00 00 00 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000000816f4601: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000000169d2bb8: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000000f4c38716: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000000917e3491: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000000c0e33738: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 000000001755ddd1: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > 
-> > After:
-> > Object 00000000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000010: 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000020: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > Object 00000030: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
-> 
-> I agree it looks nicer for poisoning, I'm not sure that every caller of 
-> print_section() is the same, however.  For example trace() seems better 
-> off as DUMP_PREFIX_ADDRESS since it already specifies the address of the 
-> object being allocated or freed and offset here wouldn't really be useful, 
+On Sat, 21 Sep 2019, David Rientjes wrote:
+
+> I agree it looks nicer for poisoning, I'm not sure that every caller of
+> print_section() is the same, however.  For example trace() seems better
+> off as DUMP_PREFIX_ADDRESS since it already specifies the address of the
+> object being allocated or freed and offset here wouldn't really be useful,
 > no?
 
-While it looks nicer, it might be less useful for debugging.  The point of
-obfuscated %p is that you can compare two "pointer" values for equality.
-So if you know that you freed object 00000000e817b73b from an earlier
-printk, then you can match it up to this dump.  It's obviously not
-perfect since we're only getting the pointers at addresses that are
-multiples of 16, but it's a help.
+The address is printed earlier before the object dump. Maybe that is
+sufficient and we could even reduce the number of digits further to have
+the display more compact? In this case two hex digits would do the trick.
+
 
 _______________________________________________
 Linux-mediatek mailing list
