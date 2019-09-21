@@ -2,44 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B986FB9DE5
-	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 14:53:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41F7CB9E06
+	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Sep 2019 15:19:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:Subject:
 	From:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=J1LrE30rtRHb522R+HSFH9I/OmDO44luUWRAGUSlf80=; b=igzKfkoPsx3vBB
-	ILFx9TqNW7esXdOXoaqnsFJpf9/4f8tbmEQ6JTmvvE18rtcO5jebSoOUzQr+wZ4JD6o4pKSoXOA31
-	lZmWjq0lvD6qD9vrQQKj1Wbwq3m+yjsfB73WzKONjptoIzv4ILbJ861tERJkOtKVvoiuIb59RyrLB
-	tNgMhJcBZWbm8jQcUwjyoHq/hIQPk1Zw+Z4LwW+ltgN4gpsLDkbwFvBsW5O75L7LOPgzTb1dD2e6s
-	Ubk/6JUFcIWVLBSr/pt6kJdysah+u7OCWd0Axe6LU/6UGKXEajeKXFk13+SataQBP+5kIcwf5+PoZ
-	n43qMbcNRdwX9g/JpOOw==;
+	List-Owner; bh=DCD4t+ERx1YC/Z2zBm4hnacFpQbac1OB81+6e/JiD+w=; b=T7Swv6YEAQVOPd
+	NZNeEg4Zs6YeJE1TtsuqEJPJbkh0mI3kdFvh6lv/ZL7R1RrYfzq19CuvEWFWmD+0NdSKUjnny7s5N
+	ZUVe6sjiwLXZNdR8/OdrbRqSatVEPzvyL35eRL7LE91JPN3nykxsuHMKZRda1y5hnMMEH/618tgJ0
+	C5Xt93EMhJkAbcE8i8jBP7A1nqHfHhdz9i1Jwdui6g08ExHNsXey1b5wpTlnvlM44ataonbHm4Ftg
+	OScZl9V0E/4WYtKIeUaGuF7yU9qZnanWWSZmpBQtmGRMdxZ5eCQyR+R2ntwHEmjqk9e+wbeV2zrwb
+	pje9yPsxnu/YtbKSljqQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBesy-0002pk-Ph; Sat, 21 Sep 2019 12:53:12 +0000
-Received: from mout.web.de ([217.72.192.78])
+	id 1iBfIi-00031w-Qx; Sat, 21 Sep 2019 13:19:48 +0000
+Received: from mout.web.de ([212.227.17.12])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBesu-0002oO-BA
- for linux-mediatek@lists.infradead.org; Sat, 21 Sep 2019 12:53:09 +0000
+ id 1iBfIf-00031M-Av; Sat, 21 Sep 2019 13:19:47 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
- s=dbaedf251592; t=1569070372;
- bh=SCl+tmJdStyw0CQO6h+KnwtHmTZWrvSg11wccT6qzvA=;
+ s=dbaedf251592; t=1569071969;
+ bh=9+xypCKN1krYc4zKOAM4qOYGemsp2J5T/csTgm4F+nU=;
  h=X-UI-Sender-Class:To:Cc:From:Subject:Date;
- b=SMkRdRql9mpRjvontaJ7T//NZvV2XujWQ5rGPM4hjcwKvKu//XH1ytIrp9H9X0ITy
- B+p5gZfkO/f42zN5JEvyMbHXuNfd74Hp344MB/B0kfYKL79P2tWSazYlgZ97cV90lr
- 78ahxggoNLXscqDO/GfIVcZNR8eCyu1qqXmGk8o0=
+ b=M/l0d6XNFA2n1ffP/eTG/nEFMak1qvkmHaL6HvfTr0xqg3xk8iJgiBD4CJrPl0p/u
+ Bue1T+qo6Q5oj2G3F2pTc4rzNsOwrJM0G/f/5laAzoBziwr69yVPulQUAKTLwoluPQ
+ I9UH20vaW82uazoNc25R1sbwIqXnCgDk/m4vXHg0=
 X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
 Received: from [192.168.1.2] ([2.244.64.44]) by smtp.web.de (mrweb101
- [213.165.67.124]) with ESMTPSA (Nemesis) id 0MLPaA-1iB6un3bdK-000g3v; Sat, 21
- Sep 2019 14:52:51 +0200
+ [213.165.67.124]) with ESMTPSA (Nemesis) id 0MK1s1-1iAqLk2YAX-001V9W; Sat, 21
+ Sep 2019 15:19:29 +0200
 To: linux-spi@vger.kernel.org, linux-mediatek@lists.infradead.org,
  linux-arm-kernel@lists.infradead.org, Leilk Liu <leilk.liu@mediatek.com>,
  Mark Brown <broonie@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
 From: Markus Elfring <Markus.Elfring@web.de>
 Subject: [PATCH] spi: mediatek: Use devm_platform_ioremap_resource() in
- mtk_spi_probe()
+ mtk_spi_slave_probe()
 Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
  mQINBFg2+xABEADBJW2hoUoFXVFWTeKbqqif8VjszdMkriilx90WB5c0ddWQX14h6w5bT/A8
  +v43YoGpDNyhgA0w9CEhuwfZrE91GocMtjLO67TAc2i2nxMc/FJRDI0OemO4VJ9RwID6ltwt
@@ -83,51 +82,51 @@ Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
  Z/wsLiWTgKlih2QYULvW61XU+mWsK8+ZlYUrRMpkauN4CJ5yTpvp+Orcz5KixHQmc5tbkLWf
  x0n1QFc1xxJhbzN+r9djSGGN/5IBDfUqSANC8cWzHpWaHmSuU3JSAMB/N+yQjIad2ztTckZY
  pwT6oxng29LzZspTYUEzMz3wK2jQHw+U66qBFk8whA7B2uAU1QdGyPgahLYSOa4XAEGb6wbI FEE=
-Message-ID: <478e0df1-e800-8cf1-f9b3-d72f8e26aa0b@web.de>
-Date: Sat, 21 Sep 2019 14:52:50 +0200
+Message-ID: <225b76ca-a367-4bef-d8ce-42c7af9242a5@web.de>
+Date: Sat, 21 Sep 2019 15:19:27 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.1.0
 MIME-Version: 1.0
 Content-Language: en-US
-X-Provags-ID: V03:K1:2RAnMwsq6u90y8BSolpVHIxB4gUiIhUjbOBK55jXz4stVkILt2a
- yGGEi2R00Bq3dxmuNkPXstj2HSdiOCHrpdNoT/ZGn74n3BCVVOS+gfnEAUw0DP7tknUIqAo
- TXd/4i8i/hNUzTZhvJYvy873vGLUAZRh3pcvGIGlWznESPzchGN//b54okAoGBOwnCRV7L8
- 8neBn4GVoIsUNOJYFNhqA==
+X-Provags-ID: V03:K1:xO8Z1pvpI8iq6eY4ur2wGPtzGdYEW++YUJqtJjR+6Kw0WD8rx0O
+ pWBRCZFfeyG5rlD7dWW4cy2qv3Kewcv/OYeKzPI9IHrLYNuM6MRqb00V80W0LIm5LXjZ/Vu
+ zTnB8DGGA0n58FxVPBZQPlbKhLWm96My7g76aWvPqnoWaUF7FZKsl3V4Guz/JnKcSH45vFu
+ dBKMRsXwkUPeR4ZjZHHMw==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:H5uIZOtSvkE=:PM1Chy/hXGWgXhW8TIHvFO
- auEeQsBYt861j7vJYVEjZ98t/b6H+E5x/yDo/JNu1K/TvHMFhI6n2jz1C5W/zWo5uyGn+dFKO
- ccsEiC7Oz5+L6VMl2oejfz1YhEUu39+AtKp9dI7K2DAI/H0kVPzXI/RNXUeN4OJIAjjUt9/hW
- EWSU3xtjxhA7/BGLfGhMpzjOYyy9fRZnaRpmLHLkPf3+HmN8TNFjJoDbadHmbBN1Z54sTHhHp
- ScT8/97SKofTt33RBtFPFIAv5A4x86p+jDR9vIx1QQemh6I5afiunCd5WNnsACgNIt3UfOXkp
- ZJw/bkWA8s8fPFn6yNV0BaSBFaH/3uuYxZ+y0tn6+5FrENNX4ufEzO3zX0ndukseXcERg5L91
- HnPcfI7dhUyU9NCxwITOcHcdPKyW3IHgJaXtNgUQ7Xi9bwzz7dYAo6u0erZOA4c0Sdbfp8eNw
- vm4kUlIFuwBsdnTHRR/6pDgqKr3+8ROGx9v+H19ZA8CMmEnO+jAKe6vJonfzfEXwf/KGMqIwn
- lNPAxfnRab2IhfhErmLSrA3gSVCPNhmPmEJgPySRlo/8mkYM7M7qkU1m3/yKGjLN97DPcA8+h
- utJvqY3ZYnkmZY69WNuNERsmh1eS+YcQaeWQkaHj/VBPOP28waSziI6qqj62cjHShClQmL6Aw
- aHJm1pvEHsEsitL3Qv/Nw/4AUPuMTXr2vK4hyjHudDdlqy/g2qsalg7jsi422bD8ZrDncK8/v
- 8t9waijpT+NNzOPJN4/GXaJO1SnzsvYdpkgfx94BqDs9OiM+5DLDJpe7CaZNsL9leGLhQO51w
- p9wVB02ALGA42+rPjLW++TqUskkINd84ape9paAKNMgyebj2Nk+57jpzUEZ1aapeYOX7JBO+r
- QtRY81nOtWxA+PMJ0ya/ecWA02toqd9imjdniONBXyPYEC8Prr31ETr7lUmhgXpNwgHcpc4B7
- pC3aan87vDhNQlwszvabLXDuxp7Ry2ODPRW+gnB+lAIfj2IygUzNUCrRJhduVj/vkpwwqBwzF
- moJDdYNKP1gH2Afmqrq6X6svNuIE1EIp8XdMh/+YM790WICN/U3KGvO/HQ/mM9GyLQZwNC51P
- xgHtCvKDk6UqDYQy546bx69gfMhHsZC+SluvJi+C77HhLFO3xLGNjA3XDG8qkHQ5NhZ4y/aY+
- h3PXgUOS4ts80Jn/Y7ToU/N6OAlDbOcikN6ycqW4NCfg+jmbMRhEPmOaqPM2P8mVVvxSsbYvQ
- 8iyF6iMH+ET2kaMZDiwUTVkr0yEmeW/ZHnmxsPCF3R22+RSNrdG2OHyR/dCA=
+X-UI-Out-Filterresults: notjunk:1;V03:K0:LxqNktLQJF8=:oZDmTDmllwpA/Y/Crx0yds
+ ZYddq+LrxZzlUls5ftPyKA5Vg9nUXHS2wphRXeRDhQp/9qRisUNcGeROlHMMgRMOq5D6x8v4y
+ uxiXjdEPKoDV+CWIW7VgiEfU+coXSMk2C59PcQ44gpbuiNXLooAt8usgtPbRCUG2zSzOkb9tO
+ m3i1BszfxXPkKL3W82NEdIyZUKHy2isX3dV/UUqxjkXK7uE9jwqVGyqbeRZaDZW7s/7LmY9mR
+ ub+TL7xcMzXRcOYfvALLai4nObRdkqbUPNLBtiNuEqRox0MqGgYDal7sRmFbhAiVfKKLgKD4m
+ n155qUIW8On8xH7ZD6U0IMa/oGkJFPgc1DzFJq7jYLXOw8I62QwQsJ6NqsXB6If9dPUQ6fwUv
+ /ITcvCIrmt+CxQ4uExb6a2PPjqPHtd81+oiMSztHgQDxm3RTyMVgBiPmc9Gal+3//wP1MEBRj
+ h8lxd39ezu2Kz9s/d2UTLsP9PpYcdhjFEDNKPN9U32oP+JeqVmdZX58F6d5btUGycEnJiJKET
+ pCCYMG+NcVv5UxIlUHMXth5VmlOUtzvggGK8wr8UqXcBLyOGB13tUqK1b3u3DQrnsw92X/cZ7
+ 4UeaQRHD9tCEkIzBSh/mAtZifzqcs7rYcl+BfYvwFcG5Fwnn0zSYCT0wNKV8pngStzC73mEGg
+ y5Vi6kSo+dyOz623uOqep2hD/JMGr/M/RJTb/AzNyDGQtS/DmFQfcKyjLteJd6HD8jrRsy900
+ I4dWF0+wLSqT1uUccAJ9H6CG7XemrrMjs1iZ3YXE+wgypFg2pQXlxmpOyFRs61vU0JGHxt9qx
+ Zh++6bTTXYjLulxIh7O5blr/CZqwpo0rjJAvUg+jTVpSAbWTQHuZa7n4TyGE+6DMXiaZMig88
+ TAXDw9MxqmOLgAvPSA8piM7HroHmnGkrbIP7ce9IBRm7njR9CwgI3J831rf0YPWAu3Br+20jx
+ la2UN8eCmhZrakRr/+8Y3ZIVqbF6Zx5BNgeUws3T/TmRfzUd3DPeYRfYvRvfDYKxHwtkPWj7O
+ 0MLC07o09LSOwq5EJKs5JOrNDPXLP8HA7sALIXy53NAWCCi5+cmOS3gYVBLvQLdZbF9txroao
+ NwYLnb7tBe+d7nWYCQrlT4J/yyrzoQU6VIYBwFF9nX3am+PtfAr/J+wBYqzRo9y5FPW6K+0tX
+ JxFM8IGXTMR17LbiOcVsnw528kmS0myrZ5Pus/8zS27ikyPGVkMVGOIKK9igSyXmHbQykn1VY
+ vO5rBcglVrVm7Wy/8rtPTu9LR9Krldu0unXInGwxb4sS9e/Sv0LljQsVfBp4=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190921_055308_729423_BDDC2AD0 
-X-CRM114-Status: UNSURE (   9.43  )
+X-CRM114-CacheID: sfid-20190921_061945_672169_4208AD20 
+X-CRM114-Status: UNSURE (   9.92  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.72.192.78 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (markus.elfring[at]web.de)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [212.227.17.12 listed in list.dnswl.org]
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -153,7 +152,7 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 From: Markus Elfring <elfring@users.sourceforge.net>
-Date: Sat, 21 Sep 2019 14:45:40 +0200
+Date: Sat, 21 Sep 2019 15:12:33 +0200
 
 Simplify this function implementation by using a known wrapper function.
 
@@ -161,38 +160,40 @@ This issue was detected by using the Coccinelle software.
 
 Signed-off-by: Markus Elfring <elfring@users.sourceforge.net>
 ---
- drivers/spi/spi-mt65xx.c | 11 +----------
- 1 file changed, 1 insertion(+), 10 deletions(-)
+ drivers/spi/spi-slave-mt27xx.c | 12 +-----------
+ 1 file changed, 1 insertion(+), 11 deletions(-)
 
-diff --git a/drivers/spi/spi-mt65xx.c b/drivers/spi/spi-mt65xx.c
-index 6888a4dcff6d..25fe149a8d9a 100644
---- a/drivers/spi/spi-mt65xx.c
-+++ b/drivers/spi/spi-mt65xx.c
-@@ -619,7 +619,6 @@ static int mtk_spi_probe(struct platform_device *pdev)
- 	struct spi_master *master;
- 	struct mtk_spi *mdata;
- 	const struct of_device_id *of_id;
+diff --git a/drivers/spi/spi-slave-mt27xx.c b/drivers/spi/spi-slave-mt27xx.c
+index 61bc43b0fe57..44edaa360405 100644
+--- a/drivers/spi/spi-slave-mt27xx.c
++++ b/drivers/spi/spi-slave-mt27xx.c
+@@ -368,7 +368,6 @@ static int mtk_spi_slave_probe(struct platform_device *pdev)
+ {
+ 	struct spi_controller *ctlr;
+ 	struct mtk_spi_slave *mdata;
 -	struct resource *res;
- 	int i, irq, ret, addr_bits;
+ 	int irq, ret;
 
- 	master = spi_alloc_master(&pdev->dev, sizeof(*mdata));
-@@ -682,15 +681,7 @@ static int mtk_spi_probe(struct platform_device *pdev)
- 	}
+ 	ctlr = spi_alloc_slave(&pdev->dev, sizeof(*mdata));
+@@ -392,17 +391,8 @@ static int mtk_spi_slave_probe(struct platform_device *pdev)
+ 	platform_set_drvdata(pdev, ctlr);
 
- 	platform_set_drvdata(pdev, master);
+ 	init_completion(&mdata->xfer_done);
 -
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 -	if (!res) {
 -		ret = -ENODEV;
 -		dev_err(&pdev->dev, "failed to determine base address\n");
--		goto err_put_master;
+-		goto err_put_ctlr;
 -	}
+-
+ 	mdata->dev = &pdev->dev;
 -
 -	mdata->base = devm_ioremap_resource(&pdev->dev, res);
 +	mdata->base = devm_platform_ioremap_resource(pdev, 0);
  	if (IS_ERR(mdata->base)) {
  		ret = PTR_ERR(mdata->base);
- 		goto err_put_master;
+ 		goto err_put_ctlr;
 --
 2.23.0
 
