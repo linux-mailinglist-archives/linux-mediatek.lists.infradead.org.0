@@ -2,66 +2,73 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B658DBA346
-	for <lists+linux-mediatek@lfdr.de>; Sun, 22 Sep 2019 19:05:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B3132BA3FC
+	for <lists+linux-mediatek@lfdr.de>; Sun, 22 Sep 2019 20:49:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SN1N4HrBsmrA2jTmZ1wnlPcLZjiZJw2AVP9+RI7XJpA=; b=NiF0zBg5HnOfQs
-	vgjoF083xUhyC6eAV7YG5TckVhg5RXhqVcGjhDeYmOU2hXxwo4/dbEl4102hjruQQ1yDJoVY7KOaJ
-	VgSqfbSHEKtojEm6DnYzYWFO8dCceSClI94vxhSsLBR5G9gpX3O6FPSML4BkZaOlPR5Jg0e2/hPq/
-	Bs+6XCTYtldHLoW9dgAo8oLsI+upRVjmUCBvJHmtbZMiFCZB6eBzq0nBo1GTa8c99lTmm9eY4Ixm9
-	FrAP7alB44Aj4K8hR2D0Q8Ueath2VtX9kHjQOScPJcgCmwl0rFFo8aOAJlbZ7vOhfH9SdSiNikOBa
-	uoeqKhc+B6BgyM+8KB3Q==;
+	List-Owner; bh=7FN9A6at0mI2p+P9X5Ls2SDWrL0FeQN9zSXCOnBi1+Q=; b=MAVuEuiI/Zsd3a
+	myo93c6EhWKpt4FmPU0o37f7wbTBFhKFoYw+y8rvN8z2TXxqdm6Oozmecm/s+qTJ5U4xP0PrGZaFW
+	XfI3rwXOd29mOGYKjaFhRYlgKQrXFVO1LFIAlsya1bBgc0s1TCF9DYMuPAvs6pmfqxG5GPb5wx+PS
+	9BziSeWK2mUSqtSp2Bdry1PcYaZKOMwDtakoiuYaf6RJtpp7jI69SQVG5xKOAKCT63qjnyy42uPq7
+	8y4w6CKpKTsb6p1LQy1Z8zt8qv0XfUsSMzSzoSYz+FJwL6AUSv1/q7sIzrlqTb/v5yzn3Lyd8U+U+
+	840TEs3JA326IIHl8vCQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iC5IV-00022r-Cp; Sun, 22 Sep 2019 17:05:19 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iC6um-0008E4-Go; Sun, 22 Sep 2019 18:48:56 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iC5IR-00022U-4P
- for linux-mediatek@lists.infradead.org; Sun, 22 Sep 2019 17:05:16 +0000
-X-UUID: fd261e2706bc440cadd6aa3bbae720a8-20190922
-X-UUID: fd261e2706bc440cadd6aa3bbae720a8-20190922
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <miles.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1702690914; Sun, 22 Sep 2019 09:05:11 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 22 Sep 2019 10:05:05 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 23 Sep 2019 01:05:04 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 23 Sep 2019 01:05:04 +0800
-Message-ID: <1569171908.9436.55.camel@mtkswgap22>
-Subject: Re: [PATCH] mm: slub: print_hex_dump() with DUMP_PREFIX_OFFSET
-From: Miles Chen <miles.chen@mediatek.com>
-To: Matthew Wilcox <willy@infradead.org>
-Date: Mon, 23 Sep 2019 01:05:08 +0800
-In-Reply-To: <20190921160018.GF15392@bombadil.infradead.org>
-References: <20190920104849.32504-1-miles.chen@mediatek.com>
- <alpine.DEB.2.21.1909210207240.259613@chino.kir.corp.google.com>
- <20190921160018.GF15392@bombadil.infradead.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1iC6ug-0008DW-7P
+ for linux-mediatek@lists.infradead.org; Sun, 22 Sep 2019 18:48:51 +0000
+Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
+ [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id AD41321D71;
+ Sun, 22 Sep 2019 18:48:48 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1569178129;
+ bh=/F0eqdyJKABuAv6cUV90z+rRaHqrSXh+R+pUYfvNIeM=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=P06yKy7AMcLsqCYwNzDXEDODLsuVeSam+In8JhOhMNdug2ZhJcu7f2vd7fpIqSU8c
+ 4Wm8ICy2PZ48/vgevmDxSyhAaoTCd5q19F5x80mYsG8VOBndh66u2Y7aWp0hh4zKvK
+ PUx1Ev6aw5yMS4Nb9V4dbWwHYKF4B7f86sHG53QE=
+From: Sasha Levin <sashal@kernel.org>
+To: linux-kernel@vger.kernel.org,
+	stable@vger.kernel.org
+Subject: [PATCH AUTOSEL 5.3 182/203] sched/psi: Correct overly pessimistic
+ size calculation
+Date: Sun, 22 Sep 2019 14:43:28 -0400
+Message-Id: <20190922184350.30563-182-sashal@kernel.org>
+X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20190922184350.30563-1-sashal@kernel.org>
+References: <20190922184350.30563-1-sashal@kernel.org>
 MIME-Version: 1.0
-X-MTK: N
+X-stable: review
+X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190922_100515_183878_F3471FA2 
-X-CRM114-Status: GOOD (  16.54  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190922_114850_308159_62324248 
+X-CRM114-Status: GOOD (  11.02  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,108 +80,95 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Morton <akpm@linux-foundation.org>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, Pekka Enberg <penberg@kernel.org>,
- linux-mm@kvack.org, linux-mediatek@lists.infradead.org,
- David Rientjes <rientjes@google.com>, Christoph Lameter <cl@linux.com>,
- Joonsoo Kim <iamjoonsoo.kim@lge.com>
+Cc: Sasha Levin <sashal@kernel.org>, wsd_upstream@mediatek.com,
+ Peter Zijlstra <peterz@infradead.org>, Miles Chen <miles.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Thomas Gleixner <tglx@linutronix.de>,
+ Linus Torvalds <torvalds@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sat, 2019-09-21 at 09:00 -0700, Matthew Wilcox wrote:
-> On Sat, Sep 21, 2019 at 02:08:59AM -0700, David Rientjes wrote:
-> > On Fri, 20 Sep 2019, Miles Chen wrote:
-> > 
-> > > Since commit ad67b74d2469d9b8 ("printk: hash addresses printed with %p"),
-> > > The use DUMP_PREFIX_OFFSET instead of DUMP_PREFIX_ADDRESS with
-> > > print_hex_dump() can generate more useful messages.
-> > > 
-> > > In the following example, it's easier get the offset of incorrect poison
-> > > value with DUMP_PREFIX_OFFSET.
-> > > 
-> > > Before:
-> > > Object 00000000e817b73b: 00 00 00 00 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000000816f4601: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000000169d2bb8: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000000f4c38716: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000000917e3491: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000000c0e33738: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 000000001755ddd1: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > 
-> > > After:
-> > > Object 00000000: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000010: 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000020: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
-> > > Object 00000030: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
-> > 
-> > I agree it looks nicer for poisoning, I'm not sure that every caller of 
-> > print_section() is the same, however.  For example trace() seems better 
-> > off as DUMP_PREFIX_ADDRESS since it already specifies the address of the 
-> > object being allocated or freed and offset here wouldn't really be useful, 
-> > no?
-> 
-> While it looks nicer, it might be less useful for debugging.  The point of
-> obfuscated %p is that you can compare two "pointer" values for equality.
-> So if you know that you freed object 00000000e817b73b from an earlier
-> printk, then you can match it up to this dump.  It's obviously not
-> perfect since we're only getting the pointers at addresses that are
-> multiples of 16, but it's a help.
+From: Miles Chen <miles.chen@mediatek.com>
 
-Thanks for the reply.
+[ Upstream commit 4adcdcea717cb2d8436bef00dd689aa5bc76f11b ]
 
-The value of 00000000e817b73b dump and the value earlier printk should
-be the same, Otherwise we have a serious problem because:
+When passing a equal or more then 32 bytes long string to psi_write(),
+psi_write() copies 31 bytes to its buf and overwrites buf[30]
+with '\0'. Which makes the input string 1 byte shorter than
+it should be.
 
-printf("%p", bad_ptr);
-print_hex_dump(bad_ptr);
+Fix it by copying sizeof(buf) bytes when nbytes >= sizeof(buf).
 
-and we see a different hashed address of bad_ptr in print_hex_dump().
-I think it's a rare case but we still have a chance to see that case.
-DUMP_PREFIX_ADDRESS is useful for that case.
+This does not cause problems in normal use case like:
+"some 500000 10000000" or "full 500000 10000000" because they
+are less than 32 bytes in length.
 
+	/* assuming nbytes == 35 */
+	char buf[32];
 
-On the other hand, DUMP_PREFIX_OFFSET is useful for finding the offset
-of incorrect poison value easier. 
-Maybe I can print the offset of the bad poison value in 
-check_bytes_and_report(). e.g., 
+	buf_size = min(nbytes, (sizeof(buf) - 1)); /* buf_size = 31 */
+	if (copy_from_user(buf, user_buf, buf_size))
+		return -EFAULT;
 
-@@ -736,6 +736,7 @@ static int check_bytes_and_report(struct kmem_cache
-*s, struct page *page,
- {
-        u8 *fault;
-        u8 *end;
-+       u8 *addr = page_address(page);
+	buf[buf_size - 1] = '\0'; /* buf[30] = '\0' */
 
-        metadata_access_enable();
-        fault = memchr_inv(start, value, bytes);
-@@ -748,8 +749,9 @@ static int check_bytes_and_report(struct kmem_cache
-*s, struct page *page,
-                end--;
+Before:
 
-        slab_bug(s, "%s overwritten", what);
--       pr_err("INFO: 0x%p-0x%p. First byte 0x%x instead of 0x%x\n",
--                                       fault, end - 1, fault[0],
-value);
-+       pr_err("INFO: 0x%p-0x%p. First byte 0x%x instead of 0x%x,
-offset=%tu\n",
-+                                       fault, end - 1, fault[0], value,
-fault -
-+                                       addr);
+ %cd /proc/pressure/
+ %echo "123456789|123456789|123456789|1234" > memory
+ [   22.473497] nbytes=35,buf_size=31
+ [   22.473775] 123456789|123456789|123456789| (print 30 chars)
+ %sh: write error: Invalid argument
 
+ %echo "123456789|123456789|123456789|1" > memory
+ [   64.916162] nbytes=32,buf_size=31
+ [   64.916331] 123456789|123456789|123456789| (print 30 chars)
+ %sh: write error: Invalid argument
 
-and we can see the offset printed out:
+After:
 
-=============================================================================
-BUG kmalloc-1k (Tainted: G    B            ): Poison overwritten
------------------------------------------------------------------------------
+ %cd /proc/pressure/
+ %echo "123456789|123456789|123456789|1234" > memory
+ [  254.837863] nbytes=35,buf_size=32
+ [  254.838541] 123456789|123456789|123456789|1 (print 31 chars)
+ %sh: write error: Invalid argument
 
-INFO: 0x(____ptrval____)-0x(____ptrval____). First byte 0x63 instead of
-0x6b, offset=7052
-INFO: Object 0x(____ptrval____) @offset=6272 fp=0x(____ptrval____)
+ %echo "123456789|123456789|123456789|1" > memory
+ [ 9965.714935] nbytes=32,buf_size=32
+ [ 9965.715096] 123456789|123456789|123456789|1 (print 31 chars)
+ %sh: write error: Invalid argument
 
-and we can get the offset by: 7052 - 6272 = 780.
+Also remove the superfluous parentheses.
+
+Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+Cc: <linux-mediatek@lists.infradead.org>
+Cc: <wsd_upstream@mediatek.com>
+Cc: Linus Torvalds <torvalds@linux-foundation.org>
+Cc: Peter Zijlstra <peterz@infradead.org>
+Cc: Thomas Gleixner <tglx@linutronix.de>
+Link: https://lkml.kernel.org/r/20190912103452.13281-1-miles.chen@mediatek.com
+Signed-off-by: Ingo Molnar <mingo@kernel.org>
+Signed-off-by: Sasha Levin <sashal@kernel.org>
+---
+ kernel/sched/psi.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/kernel/sched/psi.c b/kernel/sched/psi.c
+index 6e52b67b420e7..517e3719027e6 100644
+--- a/kernel/sched/psi.c
++++ b/kernel/sched/psi.c
+@@ -1198,7 +1198,7 @@ static ssize_t psi_write(struct file *file, const char __user *user_buf,
+ 	if (static_branch_likely(&psi_disabled))
+ 		return -EOPNOTSUPP;
+ 
+-	buf_size = min(nbytes, (sizeof(buf) - 1));
++	buf_size = min(nbytes, sizeof(buf));
+ 	if (copy_from_user(buf, user_buf, buf_size))
+ 		return -EFAULT;
+ 
+-- 
+2.20.1
 
 
 _______________________________________________
