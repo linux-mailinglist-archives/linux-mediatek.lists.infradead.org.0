@@ -2,61 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8402BAC79
-	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 03:59:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 949FEBACD7
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 05:21:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=o6IDR1G9bjlRJS0+ROK7Mha9YU4fEwmA0fgMikT8lBg=; b=eECOqY76lhz/sc
-	D+VYxYvpEmpKm33KN9/joVVWcnpCSakFNEK7Qes7LR4Opu3i27Y/qxzpv4eTT5tpRgoRDB5yyPM7W
-	lCq7nQrrsabg6wy2fH6GylKNcIGmvSdF9aP5UzqkFgeG5NgOGJY2rOGW2hfKM3js08V74X26s2O0A
-	BxniGB+4mvpfFAg+KhL7gHXZDmIiJfmv7MtYQxHX+Bd8mGG9aZ7y0Ykc1VesFC5QM4wsWnuTgm+zF
-	c1PWj5GdNtm5pq642rNCFOpLRqp8jSFLY48b/VTM7ikuV/R1fqZ3f1aM2VK8G9+Z8mFW+8ksT3Jcy
-	/tToKQumKNdtJjihMbVQ==;
+	List-Owner; bh=If/rcdblliqvoeBvodoxWKB69UQz4HB7V5AprhJ4+FA=; b=r6bQ1GI/H5F9AD
+	EQzeZMpRneULyMGXE95YqS649OzbKIOZX6FPF7rKVGjAFbnFO672ZUpsT6fQJ94n+5Hv6bPSpEXOA
+	0Tp81OpJJPpiYAXJFsN4ZLZGvyyCmmLuouIOjcGY+IcX6Fhnq+jYMKXJRwqti2cjsIdj21p58Z/jT
+	9KKFw6cFFW3XbmBNwo5kalqq7gUxybbn9MxvpKiyYwAMtavS53zzXuP55VNx7HgfwjfopA25A81iJ
+	1Pjp/rxEbZ+TqA8IVfxj96fxbtZH5aoUhfK+mVgEuaFB0GmDrFNUF87ap3qRPRvK2MdKIu4hk4IH+
+	yazYpS395yDr2qx0wAmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCDdA-00077X-6E; Mon, 23 Sep 2019 01:59:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iCEv1-0008JS-IW; Mon, 23 Sep 2019 03:21:43 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCDcn-0006w0-Aq; Mon, 23 Sep 2019 01:58:52 +0000
-X-UUID: 13258898e95742e68de2a53f9a3597d3-20190922
-X-UUID: 13258898e95742e68de2a53f9a3597d3-20190922
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ id 1iCEuy-0008Ix-MJ
+ for linux-mediatek@lists.infradead.org; Mon, 23 Sep 2019 03:21:42 +0000
+X-UUID: f79018d00d944426bee05a0ca3b98cb5-20190922
+X-UUID: f79018d00d944426bee05a0ca3b98cb5-20190922
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2123156907; Sun, 22 Sep 2019 17:58:41 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ with ESMTP id 302094447; Sun, 22 Sep 2019 19:21:11 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 22 Sep 2019 18:58:40 -0700
+ 15.0.1395.4; Sun, 22 Sep 2019 20:21:09 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 23 Sep 2019 09:58:40 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 23 Sep 2019 11:20:56 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 23 Sep 2019 09:58:39 +0800
-Message-ID: <1569203920.25491.9.camel@mtksdaap41>
-Subject: Re: [RFC, v3, 4/4] media: platform: mtk-mdp3: Add Mediatek MDP3 driver
-From: CK Hu <ck.hu@mediatek.com>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Date: Mon, 23 Sep 2019 09:58:40 +0800
-In-Reply-To: <20190911094013.5892-1-bibby.hsieh@mediatek.com>
-References: <20190911094013.5892-1-bibby.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Mon, 23 Sep 2019 11:20:56 +0800
+Message-ID: <1569208857.4102.9.camel@mtksdccf07>
+Subject: Re: [PATCH v9 07/11] dt-bindings: pwm: pwm-mediatek: add a property
+ "num-pwms"
+From: Sam Shih <sam.shih@mediatek.com>
+To: Thierry Reding <thierry.reding@gmail.com>, Rob Herring <robh+dt@kernel.org>
+Date: Mon, 23 Sep 2019 11:20:57 +0800
+In-Reply-To: <20190921002149.GB86019@mithrandir>
+References: <1568933351-8584-1-git-send-email-sam.shih@mediatek.com>
+ <1568933351-8584-8-git-send-email-sam.shih@mediatek.com>
+ <20190921002149.GB86019@mithrandir>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 5DE12F5DF2358BA2912DCBFA7D76065A5D51D8AAC23E3281B45386E5691BB84D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190922_185849_380142_73393253 
-X-CRM114-Status: GOOD (  16.46  )
+X-CRM114-CacheID: sfid-20190922_202140_735096_EFBA2DAF 
+X-CRM114-Status: GOOD (  17.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -72,228 +75,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- Jerry-ch.Chen@mediatek.com, jungo.lin@mediatek.com, hans.verkuil@cisco.com,
- Ping-Hsun Wu <ping-hsun.wu@mediatek.com>, frederic.chen@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- daoyuan huang <daoyuan.huang@mediatek.com>, holmes.chiou@mediatek.com,
- sj.huang@mediatek.com, yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, tfiga@chromium.org, christie.yu@mediatek.com,
- zwisler@chromium.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org, Ryder
+ Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org, John
+ Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Content-Type: text/plain; charset="iso-8859-15"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Bibby:
+On Sat, 2019-09-21 at 02:21 +0200, Thierry Reding wrote:
+> On Fri, Sep 20, 2019 at 06:49:07AM +0800, Sam Shih wrote:
+> > From: Ryder Lee <ryder.lee@mediatek.com>
+> > =
 
-On Wed, 2019-09-11 at 17:40 +0800, Bibby Hsieh wrote:
-> From: daoyuan huang <daoyuan.huang@mediatek.com>
-> 
-> This patch adds driver for Media Data Path 3 (MDP3).
-> Each modules' related operation control is sited in mtk-mdp3-comp.c
-> Each modules' register table is defined in file with "mdp_reg_"
-> and "mmsys_" prefix
-> GCE related API, operation control  sited in mtk-mdp3-cmdq.c
-> V4L2 m2m device functions are implemented in mtk-mdp3-m2m.c
-> Probe, power, suspend/resume, system level functions are defined in
-> mtk-mdp3-core.c
-> 
-> Signed-off-by: Ping-Hsun Wu <ping-hsun.wu@mediatek.com>
-> Signed-off-by: daoyuan huang <daoyuan.huang@mediatek.com>
-> ---
+> > This adds a property "num-pwms" in example so that we could
+> > specify the number of PWM channels via device tree.
+> > =
 
-[snip]
+> > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> > Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+> > Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+> > Acked-by: Uwe Kleine-K=F6nig <u.kleine-koenig@pengutronix.de>
+> > ---
+> > Changes since v6:
+> > Follow reviewers's comments:
+> > - The subject should indicate this is for Mediatek
+> > =
 
-> +
-> diff --git a/drivers/media/platform/mtk-mdp3/mtk-mdp3-cmdq.c b/drivers/media/platform/mtk-mdp3/mtk-mdp3-cmdq.c
-> new file mode 100644
-> index 000000000000..bd8f274fcaa9
-> --- /dev/null
-> +++ b/drivers/media/platform/mtk-mdp3/mtk-mdp3-cmdq.c
-> @@ -0,0 +1,504 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Copyright (c) 2018 MediaTek Inc.
-> + * Author: Ping-Hsun Wu <ping-hsun.wu@mediatek.com>
-> + */
-> +
-> +#include <linux/platform_device.h>
-> +#include "mtk-mdp3-cmdq.h"
-> +#include "mtk-mdp3-comp.h"
-> +#include "mtk-mdp3-core.h"
-> +#include "mtk-mdp3-m2m.h"
-> +
-> +#include "mdp-platform.h"
-> +#include "mmsys_mutex.h"
-> +
-> +#define DISP_MUTEX_MDP_FIRST	(5)
-> +#define DISP_MUTEX_MDP_COUNT	(5)
-> +
-> +#define MDP_PATH_MAX_COMPS	IMG_MAX_COMPONENTS
-> +
-> +struct mdp_path {
-> +	struct mdp_dev		*mdp_dev;
-> +	struct mdp_comp_ctx	comps[MDP_PATH_MAX_COMPS];
-> +	u32			num_comps;
-> +	const struct img_config	*config;
-> +	const struct img_ipi_frameparam *param;
-> +	const struct v4l2_rect	*composes[IMG_MAX_HW_OUTPUTS];
-> +	struct v4l2_rect	bounds[IMG_MAX_HW_OUTPUTS];
-> +};
-> +
-> +#define has_op(ctx, op) \
-> +	(ctx->comp->ops && ctx->comp->ops->op)
-> +#define call_op(ctx, op, ...) \
-> +	(has_op(ctx, op) ? ctx->comp->ops->op(ctx, ##__VA_ARGS__) : 0)
-> +
-> +struct mdp_path_subfrm {
-> +	s32	mutex_id;
-> +	u32	mutex_mod;
-> +	s32	sofs[MDP_PATH_MAX_COMPS];
-> +	u32	num_sofs;
-> +};
-> +
-> +static bool is_output_disable(const struct img_compparam *param, u32 count)
-> +{
-> +	return (count < param->num_subfrms) ?
-> +		(param->frame.output_disable ||
-> +		param->subfrms[count].tile_disable) :
-> +		true;
-> +}
-> +
-> +static int mdp_path_subfrm_require(struct mdp_path_subfrm *subfrm,
-> +				   const struct mdp_path *path,
-> +				   struct mdp_cmd *cmd, u32 count)
-> +{
-> +	const struct img_config *config = path->config;
-> +	const struct mdp_comp_ctx *ctx;
-> +	phys_addr_t mm_mutex = path->mdp_dev->mm_mutex.reg_base;
-> +	s32 mutex_id = -1;
-> +	u32 mutex_sof = 0;
-> +	int mdp_color = 0;
-> +	int index;
-> +	u8 subsys_id = path->mdp_dev->mm_mutex.subsys_id;
-> +
-> +	/* Default value */
-> +	memset(subfrm, 0, sizeof(*subfrm));
-> +
-> +	for (index = 0; index < config->num_components; index++) {
-> +		ctx = &path->comps[index];
-> +		if (is_output_disable(ctx->param, count))
-> +			continue;
-> +		switch (ctx->comp->id) {
-> +		/**********************************************
-> +		 * Name            MSB LSB
-> +		 * DISP_MUTEX_MOD   23   0
-> +		 *
-> +		 * Specifies which modules are in this mutex.
-> +		 * Every bit denotes a module. Bit definition:
-> +		 *  2 mdp_rdma0
-> +		 *  4 mdp_rsz0
-> +		 *  5 mdp_rsz1
-> +		 *  6 mdp_tdshp
-> +		 *  7 mdp_wrot0
-> +		 *  8 mdp_wdma
-> +		 *  13 mdp_color
-> +		 *  23 mdp_aal
-> +		 *  24 mdp_ccorr
-> +		 **********************************************/
-> +		case MDP_AAL0:
-> +			subfrm->mutex_mod |= 1 << 23;
-> +			break;
-> +		case MDP_CCORR0:
-> +			subfrm->mutex_mod |= 1 << 24;
-> +			break;
-> +		case MDP_COLOR0:
-> +			if (mdp_color)
-> +				subfrm->mutex_mod |= 1 << 13;
-> +			break;
-> +		case MDP_WDMA:
-> +			subfrm->mutex_mod |= 1 << 8;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_WDMA;
-> +			break;
-> +		case MDP_WROT0:
-> +			subfrm->mutex_mod |= 1 << 7;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_WROT0;
-> +			break;
-> +		case MDP_TDSHP0:
-> +			subfrm->mutex_mod |= 1 << 6;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_TDSHP0;
-> +			break;
-> +		case MDP_SCL1:
-> +			subfrm->mutex_mod |= 1 << 5;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_SCL1;
-> +			break;
-> +		case MDP_SCL0:
-> +			subfrm->mutex_mod |= 1 << 4;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_SCL0;
-> +			break;
-> +		case MDP_RDMA0:
-> +			mutex_id = DISP_MUTEX_MDP_FIRST + 1;
-> +			subfrm->mutex_mod |= 1 << 2;
-> +			subfrm->sofs[subfrm->num_sofs++] = MDP_RDMA0;
-> +			break;
-> +		case MDP_IMGI:
-> +			mutex_id = DISP_MUTEX_MDP_FIRST;
-> +			break;
-> +		case MDP_WPEI:
-> +			mutex_id = DISP_MUTEX_MDP_FIRST + 3;
-> +			break;
-> +		case MDP_WPEI2:
-> +			mutex_id = DISP_MUTEX_MDP_FIRST + 4;
-> +			break;
-> +		default:
-> +			break;
-> +		}
-> +	}
-> +
-> +	subfrm->mutex_id = mutex_id;
-> +	if (-1 == mutex_id) {
-> +		mdp_err("No mutex assigned");
-> +		return -EINVAL;
-> +	}
-> +
-> +	if (subfrm->mutex_mod) {
-> +		/* Set mutex modules */
-> +		MM_REG_WRITE(cmd, subsys_id, mm_mutex, MM_MUTEX_MOD,
-> +			     subfrm->mutex_mod, 0x07FFFFFF);
-> +		MM_REG_WRITE(cmd, subsys_id, mm_mutex, MM_MUTEX_SOF,
-> +			     mutex_sof, 0x00000007);
-> +	}
+> > Changes since v5:
+> > - Add an Acked-by tag
+> > - This file is original v4 patch 5/10
+> > (https://patchwork.kernel.org/patch/11102577/)
+> > =
 
-In [1], mdp3 device has a pointer to mutex device, and you directly
-write mutex register in mdp3 driver.
+> > ---
+> >  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
+> >  1 file changed, 4 insertions(+), 3 deletions(-)
+> =
 
-		mdp_rdma0: mdp_rdma0@14001000 {
-			compatible = "mediatek,mt8183-mdp-rdma",
-				     "mediatek,mt8183-mdp3";
-
-			mediatek,mm-mutex = <&mutex>;
-		};
+> You failed to address Rob's questions repeatedly and I agree with him
+> that you can just as easily derive the number of PWMs from the specific
+> compatible string. I won't be applying this and none of the patches that
+> depend on it.
+> =
 
 
- 		mutex: mutex@14016000 {
- 			compatible = "mediatek,mt8183-disp-mutex";
- 			reg = <0 0x14016000 0 0x1000>;
- 		};
+Hi, =
 
-But mutex already has its own driver in mediatek drm driver [2]. This is
-not a good design. I would like all mutex device register is controlled
-in single driver. 
 
-[1] https://patchwork.kernel.org/patch/11140747/
-[2]
-https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/gpu/drm/mediatek/mtk_drm_ddp.c?h=v5.3#n429
+Thanks for getting back to me.
 
-Regards,
-CK
+New pwm driver (patch 04/11 : "pwm: mediatek: allocate the clks array
+dynamically") can support different variants with different number of
+PWMs by the new property <num-pwms>
 
-> +	return 0;
-> +}
+For example:
+1. Use "num-pwms" =3D <2> and assign clocks pwm1, pwm2 for mt7622
+2. Use "num-pwms" =3D <6> and assign clocks pwm1, pwm2, pwm3, pwm4, pwm5,
+pwm6 for mt7622.
 
+If we just as easily derive the number of PWMs from the specific
+compatible string in this document:
+
+   - "pwm1-6": the six per PWM clocks for mt7622
+   =
+
+This looks like all "pwm1", "pwm2", "pwm3", "pwm4", "pwm5", "pwm6" is
+required property in DT, It doesn't make sense.
+   =
+
+So we removed those descriptions and added  =
+
+
+   - "pwm1-N": the PWM clocks for each channel =
+
+   =
+
+   =
+
+But the max number of clocks from the compatible string are still
+important information that should be provide in this document.
+
+
+What do you think of this?
+
+   - "pwm1-N": per PWM clocks for mt2712, the max number of PWM channels
+is 8
+
+   - "pwm1-N": per PWM clocks for mt7622, the max number of PWM channels
+is 6
+
+   - "pwm1-N": per PWM clocks for mt7623, the max number of PWM channels
+is 5
+
+   where N starting from 1 to the maximum number of PWM channels
+   - num-pwms: the number of PWM channels.
+
+   =
+
+Thanks
+Best Regards
+Sam =
 
 
 
