@@ -2,54 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1B9A8BAEDF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 10:06:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E5B9DBAF22
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 10:16:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UtmLRFVU9Lw7FE3P2N5t0pakjUN+gW+ANxAGVqwW8l0=; b=tpZol3Arrv3OQ1
-	a1mUTUBFJYz+LWkJi+B5Y4hNp6UFXx+BsxmoVK0ZmBGnrxR3C7NAOL7SWFO8GAO/+t5JLDi8OkQ5g
-	/coGfIBW7i3GDr+SE2M2st3IKvRG4uRsIy9z8eFzYBjyJY6xKWRXf57KfxO/+mj1Rj+GfSG9hogfZ
-	HeO6+0PfZl4ArKYrJ612ucXM0jnBJNvEoFWFtWNGjQQVFO9KUDWFtoLlYinerC9+3cwxw+sg5Ncqx
-	yoL4kCug/qoX+NZ1ORLsBw6dH8Wgj9JHaJhFOlIasDekjgGS7xXQnJjBAGLDPhKovN8JX0BPgtp8m
-	LoMMENtEdxJSBnMYhfKQ==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=aAulbHiCBlyaeUk+keHTGWcyh0RggC0o3fhSFxFwVDs=; b=QHCPS8Vji4wACf
+	u6DwVwk6TXyzRPs0ePJwWmBZNj1BEecCGgm/ISmUWjrUIpm9KhvS0/tAYpuYqyTN9MByk6q8JTSo8
+	Zn0gyGnxYByH1ujw3pwztJIwGNFa/eLwb+UvElZqwV8MAI9yrNdrvGitG8VjYk6K8oINYc4tIQ4vE
+	VEsXLqm1FRyY1nbvztxwuoWtha/7DxuwIlOtM1EpHQM2yVtTML5yTP4VrLm79BWTIi4dKsgDxyN0U
+	QczLA5WhBpOBT5h4wwtNRN7J7oqcAOA3oAsjXuT1HuQ7KK8RAgxX04uLXXbMjKCYdzyktRhUg1tOm
+	sECn9eUfcohDFPodXEQg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCJLz-0003Bs-4d; Mon, 23 Sep 2019 08:05:51 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCJLg-00031T-CX; Mon, 23 Sep 2019 08:05:34 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id B41541000;
- Mon, 23 Sep 2019 01:05:28 -0700 (PDT)
-Received: from [192.168.1.113] (unknown [172.31.20.19])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 1FE1A3F59C;
- Mon, 23 Sep 2019 01:08:00 -0700 (PDT)
-Subject: Re: [PATCH 1/1] sched/eas: introduce system-wide overutil indicator
-To: YT Chang <yt.chang@mediatek.com>, Peter Zijlstra <peterz@infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>
-References: <1568877622-28073-1-git-send-email-yt.chang@mediatek.com>
-From: Dietmar Eggemann <dietmar.eggemann@arm.com>
-Message-ID: <17c5f3bf-b739-b041-c71a-3d568be6f46d@arm.com>
-Date: Mon, 23 Sep 2019 10:05:25 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+	id 1iCJW6-00082h-Kb; Mon, 23 Sep 2019 08:16:18 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iCJVN-0007SZ-4s
+ for linux-mediatek@lists.infradead.org; Mon, 23 Sep 2019 08:15:35 +0000
+Received: by mail-ed1-x544.google.com with SMTP id t3so11933867edw.13
+ for <linux-mediatek@lists.infradead.org>; Mon, 23 Sep 2019 01:15:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=YrphDalHhzS/eEcKq6pAk4HWzVaxWmV1yXuQ1gyWfUo=;
+ b=PJL7bIGC0ZYBHvwVyYt2LJ5y887xECL9EXUH3kVh2gitdKh2PIj+LjzBO3LVxGro1P
+ L45a/oCt5B7UKTTPbz8ClvwE8+bChE4KQP9p5SPpAnRpS9BKt7SQQpJAcS9rEmvpsy8w
+ 7Xt0OLUHniWm243JJOhB8bgzU99a89+rosGY0=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=YrphDalHhzS/eEcKq6pAk4HWzVaxWmV1yXuQ1gyWfUo=;
+ b=V4TA3f2YLfWAld6KADmcPIFHEQSHDmsBHDRwIg/Bdy3DqDlrAi0tEQv+XrMmsdkCQy
+ tF90Zt36w788MG+wY5N05/RpsCSMaDSkZr2uPjU3gvmijfkl2QLx2VzRT7X44Dic8+xT
+ yFqCBFNNOTE2mKOxD0aUftHgC2o4+gScq2f1qcIs0ey/po4hwcHWZiKUHJhmV4/Zi0Wl
+ m2HBdaIeZLBEeWsqI/aRd4OeBRYeNvxekDS2eGmaHob2JwveEnMEjDUuKMtmus1wNDiY
+ wfNk8Ax/x2L0FyVY3Lkq7510h7oxftBxfkDRnuLsnRatPZDbG/UX+h48w4JLQ3PVu18p
+ ikeA==
+X-Gm-Message-State: APjAAAUnlCflXtXQMLT9eEJoXkFn1LYJuuUKjeKYD3kItUGXdV2+zF20
+ x9kMcOyCSCxJsMuymB764im9744Z/It+X/1mqxr5IQ==
+X-Google-Smtp-Source: APXvYqzVI45ag269E7dBFRpSiMPbDjXntVzL2o19/1Lnor6BCjBJy2beWlf+y8GGpI0LGcSqflkxyaky8ooirXFogWY=
+X-Received: by 2002:a50:f391:: with SMTP id g17mr32700852edm.163.1569226531020; 
+ Mon, 23 Sep 2019 01:15:31 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <1568877622-28073-1-git-send-email-yt.chang@mediatek.com>
-Content-Language: en-GB
+References: <20190830074103.16671-1-bibby.hsieh@mediatek.com>
+ <20190830074103.16671-3-bibby.hsieh@mediatek.com>
+In-Reply-To: <20190830074103.16671-3-bibby.hsieh@mediatek.com>
+From: Pi-Hsun Shih <pihsun@chromium.org>
+Date: Mon, 23 Sep 2019 16:14:55 +0800
+Message-ID: <CANdKZ0du8unMedhmdjCyXR7xKYBoWEZ7YLmrvd6Y_W-Y=u3TfQ@mail.gmail.com>
+Subject: Re: [PATCH 2/2] drm/mediatek: Apply CMDQ control flow
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_010532_516365_91FDFAFC 
-X-CRM114-Status: GOOD (  25.15  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190923_011533_258534_50BE63D7 
+X-CRM114-Status: GOOD (  11.39  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,132 +88,93 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com
+Cc: Nicolas Boichat <drinkcat@chromium.org>,
+ Yongqiang Niu <yongqiang.niu@mediatek.com>, David Airlie <airlied@linux.ie>,
+ Daniel Vetter <daniel.vetter@ffwll.ch>,
+ open list <linux-kernel@vger.kernel.org>, dri-devel@lists.freedesktop.org,
+ Tomasz Figa <tfiga@chromium.org>, CK Hu <ck.hu@mediatek.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 9/19/19 9:20 AM, YT Chang wrote:
-> When the system is overutilization, the load-balance crossing
-> clusters will be triggered and scheduler will not use energy
-> aware scheduling to choose CPUs.
+Hi Bibby,
 
-We're currently transitioning from traditional big.LITTLE (the CPUs of 1
-cluster (all having the same CPU (original) capacity) represent a DIE
-Sched Domain (SD) level Sched Group (SG)) to DynamIQ systems. Later can
-share CPUs with different CPU (original) capacity in one cluster.
-In Linux mainline with today's DynamIQ systems (1 cluster) you will
-only have 1 cluster, i.e. 1 MC SD level SG.
-
-For those systems the current approach is much more applicable.
-
-Or do you apply the out-of-tree Phantom Domain concept, which creates n
-(n=2 or 3 ((huge,) big, little)) DIE SGs on your 1 cluster DynamIQ system?
-
-> The overutilization means the loading of  ANY CPUs
-> exceeds threshold (80%).
-> 
-> However, only 1 heavy task or while-1 program will run on highest
-> capacity CPUs and it still result to trigger overutilization. So
-> the system will not use Energy Aware scheduling.
-
-The patch-header of commit 2802bf3cd936 ("sched/fair: Add
-over-utilization/tipping point indicator") mentioned why the current
-approach is so conservatively defined.
-
-> To avoid it, a system-wide over-utilization indicator to trigger
-> load-balance cross clusters.
-> 
-> The policy is:
-> 	The loading of "ALL CPUs in the highest capacity"
-> 						exceeds threshold(80%) or
-> 	The loading of "Any CPUs not in the highest capacity"
-> 						exceed threshold(80%)
-
-We experimented with an overutilized (tipping point) indicator per SD
-from Thara Gopinath (Linaro), mentioned by Vincent already, till v2 of
-the Energy Aware Scheduling patch-set in 2018 but we couldn't find any
-advantage using it over the one you now find in mainline.
-
-https://lore.kernel.org/r/20180406153607.17815-4-dietmar.eggemann@arm.com
-
-Maybe you can have a look at this patch and see if it gives you an
-advantage with your use cases and system topology layout?
-
-The 'system-wide' in the name of the patch is misleading. The current
-approach is also system-wide, we have the overutilized information on
-the root domain (system here stands for root domain). You change the
-detection mechanism from per-CPU to a mixed-mode detection (per-CPU and
-per-SG).
-
-> Signed-off-by: YT Chang <yt.chang@mediatek.com>
-> ---
->  kernel/sched/fair.c | 76 +++++++++++++++++++++++++++++++++++++++++++++--------
->  1 file changed, 65 insertions(+), 11 deletions(-)
-> 
-> diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-> index 036be95..f4c3d70 100644
-> --- a/kernel/sched/fair.c
-> +++ b/kernel/sched/fair.c
-> @@ -5182,10 +5182,71 @@ static inline bool cpu_overutilized(int cpu)
->  static inline void update_overutilized_status(struct rq *rq)
->  {
->  	if (!READ_ONCE(rq->rd->overutilized) && cpu_overutilized(rq->cpu)) {
-> -		WRITE_ONCE(rq->rd->overutilized, SG_OVERUTILIZED);
-> -		trace_sched_overutilized_tp(rq->rd, SG_OVERUTILIZED);
-> +		if (capacity_orig_of(cpu_of(rq)) < rq->rd->max_cpu_capacity) {
-> +			WRITE_ONCE(rq->rd->overutilized, SG_OVERUTILIZED);
-> +			trace_sched_overutilized_tp(rq->rd, SG_OVERUTILIZED);
-> +		}
->  	}
->  }
-> +
-> +static
-> +void update_system_overutilized(struct sched_domain *sd, struct cpumask *cpus)
+On Fri, Aug 30, 2019 at 3:41 PM Bibby Hsieh <bibby.hsieh@mediatek.com> wrote:
+> ...
+> +static void ddp_cmdq_cb(struct cmdq_cb_data data)
 > +{
-> +	unsigned long group_util;
-> +	bool intra_overutil = false;
-> +	unsigned long max_capacity;
-> +	struct sched_group *group = sd->groups;
-> +	struct root_domain *rd;
-> +	int this_cpu;
-> +	bool overutilized;
-> +	int i;
 > +
-> +	this_cpu = smp_processor_id();
-> +	rd = cpu_rq(this_cpu)->rd;
-> +	overutilized = READ_ONCE(rd->overutilized);
-> +	max_capacity = rd->max_cpu_capacity;
+> +#if IS_ENABLED(CONFIG_MTK_CMDQ)
+> +       struct mtk_cmdq_cb_data *cb_data = data.data;
+> +       struct drm_crtc_state *crtc_state = cb_data->state;
+> +       struct drm_atomic_state *atomic_state = crtc_state->state;
+> +       struct drm_crtc *crtc = crtc_state->crtc;
+> +       struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
 > +
-> +	do {
-> +		group_util = 0;
-> +		for_each_cpu_and(i, sched_group_span(group), cpus) {
-> +			group_util += cpu_util(i);
-> +			if (cpu_overutilized(i)) {
-> +				if (capacity_orig_of(i) < max_capacity) {
-> +					intra_overutil = true;
-> +					break;
-> +				}
-> +			}
-> +		}
-> +
-> +		/*
-> +		 * A capacity base hint for over-utilization.
-> +		 * Not to trigger system overutiled if heavy tasks
-> +		 * in Big.cluster, so
-> +		 * add the free room(20%) of Big.cluster is impacted which means
-> +		 * system-wide over-utilization,
-> +		 * that considers whole cluster not single cpu
-> +		 */
-> +		if (group->group_weight > 1 && (group->sgc->capacity * 1024 <
-> +						group_util * capacity_margin)) {
+> +       DRM_DEBUG_DRIVER("%s\n", __func__);
+This debug message is printed about twice per second when enabled,
+which makes debugging other things that also use DRM_DEBUG_DRIVER
+harder. Can this be rate-limited or removed?
 
-Why 'group->group_weight > 1' ? Do you have some out-of-tree code which
-lets SGs with 1 CPU survive?
+> +
+> +       if (mtk_crtc->pending_needs_vblank) {
+> +               /* cmdq_vblank_event must be read after cmdq_needs_event */
+> +               smp_rmb();
+> +
+> ...
+> +void mtk_drm_crtc_plane_update(struct drm_crtc *crtc, struct drm_plane *plane,
+> +                              struct mtk_plane_state *state)
+> +{
+> +       struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
+> +       struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
+> +       struct drm_crtc_state *crtc_state = crtc->state;
+> +       struct mtk_crtc_state *mtk_crtc_state = to_mtk_crtc_state(crtc_state);
+> +       struct cmdq_pkt *cmdq_handle = mtk_crtc_state->cmdq_handle;
+> +       unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
+> +       unsigned int local_layer;
+> +       unsigned int plane_index = plane - mtk_crtc->planes;
+> +
+> +       DRM_DEBUG_DRIVER("%s\n", __func__);
+Same with this one.
 
-[...]
+> +       if (mtk_crtc->cmdq_client) {
+> +               if (plane_index >= comp_layer_nr) {
+> +                       comp = mtk_crtc->ddp_comp[1];
+> +                       local_layer = plane_index - comp_layer_nr;
+> ...
+> @@ -494,13 +599,29 @@ static void mtk_drm_crtc_atomic_flush(struct drm_crtc *crtc,
+>                                       struct drm_crtc_state *old_crtc_state)
+>  {
+>         struct drm_atomic_state *old_atomic_state = old_crtc_state->state;
+> +       struct drm_crtc_state *crtc_state = crtc->state;
+> +       struct mtk_crtc_state *state = to_mtk_crtc_state(crtc_state);
+> +       struct cmdq_pkt *cmdq_handle = state->cmdq_handle;
+>         struct mtk_drm_crtc *mtk_crtc = to_mtk_crtc(crtc);
+>         struct mtk_drm_private *priv = crtc->dev->dev_private;
+> +       struct mtk_cmdq_cb_data *cb_data;
+>         unsigned int pending_planes = 0;
+>         int i;
+>
+> -       if (mtk_crtc->event)
+> -               mtk_crtc->pending_needs_vblank = true;
+> +       DRM_DEBUG_DRIVER("[CRTC:%u] [STATE:%p(%p)->%p(%p)]\n", crtc->base.id,
+> +                        old_crtc_state, old_crtc_state->state,
+> +                        crtc_state, crtc_state->state);
+Same with this one.
+
+> +
+> +       if (IS_ENABLED(CONFIG_MTK_CMDQ) && mtk_crtc->cmdq_client) {
+> +               drm_atomic_state_get(old_atomic_state);
+> +               cb_data = kmalloc(sizeof(*cb_data), GFP_KERNEL);
+> +               cb_data->state = old_crtc_state;
+> ...
 
 _______________________________________________
 Linux-mediatek mailing list
