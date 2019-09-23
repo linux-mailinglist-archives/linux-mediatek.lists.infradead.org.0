@@ -2,73 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 49EA5BB4BB
-	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 15:04:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A22B9BB589
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Sep 2019 15:37:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FUVEvecsyCRyAy09/q98lOuLtltfbt3r9bVDvnpCBSc=; b=rHNTSp4YERuuC1
-	uCB7zCeiX7RsrOmc73lDG/e0X808mBVqsklYeuaP0NMZxPgpK4hehy0KGrFlavhGXq74rp2Axqm6T
-	Ln4fgR954/besPy9qBjRQVF5SQ6k0D6WR59mwzNaf4+p+LiF9NUHKZiBjpcW0+rrWmw1u8pvMAJmi
-	GGGqGtP6yBNjMMR8HjvEVP5aOjRkzp3aqnHlrgCXUHunW7k2/I9Lvso9OT1jct8OxdwcT6Wja4IcF
-	riSWNcFiLud2+tP2tUFUYkml5/coO+fxLtjM7nxScwvq9/LQFPfQFgHS9+FLaqzI5CODnfTvTOY7L
-	/ChnIzZZF8MOowbWZF2w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=bNwe319l8M0d+Y3VGNLBdhLhFIFInl75eUoNWvV7UL4=; b=pHOc9Pk/q+7LkveAutKm3mdN1
+	IrElz3bvIC2L1Mi8YlSxGIyblpX2YaRhnnHIkhVykYOzxM6vF9n3lhuLN1TVDRdNL9mr04ft75n8O
+	FD6tzXUbGSURHkn7TNelDCs9OVU5Fc70RseeQKteE49dWNY4VfRmIidFgbjD4/Bf1IFhA8pd0vq1b
+	M5S0uWkYifD07gCzpFrOGcxE88FNU4EhEI3XVmShWecoBZjT16m6temshDYOOh5uzRv0/EO8ZWvJt
+	c5z8WcJexDHFdF+kQCbOzWSmFQnf6Y4dRhKN+I2iH/ZaRPLZAZ2vOQVena4l5QE+wUV44cF1jOy6F
+	oRLkr0yyA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCO0l-00043x-L4; Mon, 23 Sep 2019 13:04:15 +0000
-Received: from mail-oi1-x242.google.com ([2607:f8b0:4864:20::242])
+	id 1iCOWQ-0007Zb-NM; Mon, 23 Sep 2019 13:36:58 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCO0h-000437-3f
- for linux-mediatek@lists.infradead.org; Mon, 23 Sep 2019 13:04:12 +0000
-Received: by mail-oi1-x242.google.com with SMTP id t84so7449825oih.10
- for <linux-mediatek@lists.infradead.org>; Mon, 23 Sep 2019 06:04:09 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ffwll.ch; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=piRs2IS5MOyFgqBghenqHp8ZimiG6fJnHJ/5Ma2bSsw=;
- b=k0+3XoDaSkpOoJigqWk57pFuEQHzOAHUh0BQi9tvzWlQJKuip366XA/RcMCAgmOJqg
- UdgKosQnH1HhES6H2OSmInQZFpf8XT9ESoOR4xoxk6r9mc012eB3etX5RhS5AsF0pgyZ
- wXrH32HFqWokGC1FONyBYc8WZdYqzMzoq30EQ=
+ id 1iCOWN-0007Yo-66
+ for linux-mediatek@lists.infradead.org; Mon, 23 Sep 2019 13:36:56 +0000
+Received: by mail-wm1-x341.google.com with SMTP id y21so9367777wmi.0
+ for <linux-mediatek@lists.infradead.org>; Mon, 23 Sep 2019 06:36:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=yH2Z3eB11JStYll32sor1zY2h8/0gzevYqkhkFZ31BY=;
+ b=YMaiVB/O5nOQIawf2+AD07JImIMw9lFdKXicFGJvicXXLOGZEVzXAJ9PSYsvu/6F9h
+ vfHwQuMzxtvizf+AjralsFCB4FS8RzqrZqoFduivuO+MSrC6VTPXYozIKl3Zcdvbu6E3
+ PRL9NV3aYRtXAikXdssBNwNc6yEiuYCcnVwspYu0wOLe6imQ8dX/UkDE2rQU8CaVHchX
+ V8pO2lpVH8FV4EEaqWps4aYuqCM0JMmKw9w1/W2Q4PkmmdjETVwniVQViADb9ZMhJvvN
+ BaBloaGPPT9T+NSsgv521PJR+pt9o9PA0zPN66au7+SlizhDQyIzmpTFJBfbMVdjSq0y
+ 7DLw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=piRs2IS5MOyFgqBghenqHp8ZimiG6fJnHJ/5Ma2bSsw=;
- b=Lp9CQe2r59CJhB9/ZzQfnNiP4quflFL4e/87H3NYnzf5FnYazk64e626T4X/ILzEWg
- 4IWWAxUZU59RABuLfKEiCGCa8PQ432sIf/JkzSrirxNtf/xlVEnn9IS7BGC1MZEQZZ3F
- ni4QCaduL1SADIqyk142FZS/J7ym6Tlcr30G/SjfjQXwe/sZbGUMDnWx9zmPx7hdHPv8
- IXVeaGdpl+VL2PaA2HV/WBW5bTf2mTBsCQdGq47wS1x4Imt+8thLbV/cWrJ4xQpzdnxf
- pyGyvqd6X5G9391brdrOknnsYzSR5Cdh0yLm9GUYulKrQsHYqr5j4I8APG1iYQJbTsAd
- DrOQ==
-X-Gm-Message-State: APjAAAXD8/aMHxheiLlLjCUKElkRhQbJ5KLKW06Ttg5PZqSxUQUL0qZn
- E074vFgfqvFuCSgjo1RFLERPOitA0zvS+rYgR+iyhA==
-X-Google-Smtp-Source: APXvYqz8rt1MdgTGBevIyRjqcmbavxEpW6EIa6vRQuuPJmmE7PEXmuGO9L6rXl5BG0tR+lTbhyax6yChhGQlUlXJhSc=
-X-Received: by 2002:aca:eac5:: with SMTP id
- i188mr14118846oih.110.1569243848670; 
- Mon, 23 Sep 2019 06:04:08 -0700 (PDT)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=yH2Z3eB11JStYll32sor1zY2h8/0gzevYqkhkFZ31BY=;
+ b=fvGZc+JtusbDTQ+roDCRqihdKLj1Bc4dKNoxPrNwqGJTsgeelDa+E+GIPhQVXcWKuU
+ UmYOsmSSbsFcBTDWsRUP/K0dFs9t9RgOgWBoDFVXYRFd9/e9dMSYzhL7ryGzqEivOV6P
+ yfg/xFSJqUCzVyQnUKpgIt+fJrJuxarwGKQVkwlXRg96aKhnVuyX4wjsfh6RKQTd33XC
+ H8dZ5N/z0VFeW3jN3NBYI8M8Ldej7Fj31c6CLzzQrlEx8NcvP/i1RQlmzw+hW90qXXiV
+ gZY9R6GlSX01+ccSF3OjclqGnxY94iNkg7hjIMD79qr2XYCN02xIPiX+I9c0bubD2etF
+ 0+qw==
+X-Gm-Message-State: APjAAAXF7/QCN77TYwMNFZhYbKWdzDXdsJv2Xkh0zYJsYNqvT+AjS0NC
+ 3iiveln3BDFVEAsixvn0mRY=
+X-Google-Smtp-Source: APXvYqxy5t8sZwmSDR/SPwoi0/r03PWhLWTaJCtRRizFjCbQ7/MwEf6Q2E/Wvdj5pSaDoRvFvlSNFg==
+X-Received: by 2002:a1c:cc0e:: with SMTP id h14mr14026505wmb.117.1569245812548; 
+ Mon, 23 Sep 2019 06:36:52 -0700 (PDT)
+Received: from localhost (p2E5BE2CE.dip0.t-ipconnect.de. [46.91.226.206])
+ by smtp.gmail.com with ESMTPSA id 26sm9807939wmf.20.2019.09.23.06.36.28
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 23 Sep 2019 06:36:31 -0700 (PDT)
+Date: Mon, 23 Sep 2019 15:36:26 +0200
+From: Thierry Reding <thierry.reding@gmail.com>
+To: Sam Shih <sam.shih@mediatek.com>
+Subject: Re: [PATCH v9 07/11] dt-bindings: pwm: pwm-mediatek: add a property
+ "num-pwms"
+Message-ID: <20190923133626.GA4671@ulmo>
+References: <1568933351-8584-1-git-send-email-sam.shih@mediatek.com>
+ <1568933351-8584-8-git-send-email-sam.shih@mediatek.com>
+ <20190921002149.GB86019@mithrandir>
+ <1569208857.4102.9.camel@mtksdccf07>
 MIME-Version: 1.0
-References: <1569242365-182133-1-git-send-email-hjc@rock-chips.com>
-In-Reply-To: <1569242365-182133-1-git-send-email-hjc@rock-chips.com>
-From: Daniel Vetter <daniel@ffwll.ch>
-Date: Mon, 23 Sep 2019 15:03:56 +0200
-Message-ID: <CAKMK7uFYmqEK5CGxiJhgPpYwt3StLDP0YgE5oVY2FiHEmbWQpA@mail.gmail.com>
-Subject: Re: [PATCH 00/36] Add support 10bit yuv format
-To: Sandy Huang <hjc@rock-chips.com>
+In-Reply-To: <1569208857.4102.9.camel@mtksdccf07>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_060411_202509_1804CD08 
-X-CRM114-Status: GOOD (  12.65  )
+X-CRM114-CacheID: sfid-20190923_063655_248330_12C5BB5E 
+X-CRM114-Status: GOOD (  24.22  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:242 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (thierry.reding[at]gmail.com)
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -87,176 +101,169 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-mediatek@lists.infradead.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- dri-devel <dri-devel@lists.freedesktop.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
+ Ryder Lee <ryder.lee@mediatek.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+Content-Type: multipart/mixed; boundary="===============2508432350113178530=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Sep 23, 2019 at 2:51 PM Sandy Huang <hjc@rock-chips.com> wrote:
->
-> This series of patches is to add 2 plane YCbCr 10bit format
-> support, but now the drm_format_info.cpp[3] unit is BytePerPlane,
-> when we add define 10bit YUV format, here have some problems.
-> So we change cpp to bpp, use unit BitPerPlane to describe the data
-> format.
 
-Wrong direction, we don't want more users of the old legacy cpp values
-in the format structure. Instead if we want new stuff, add/extend
-functions which can extract all kinds of interesting computed value
-from the drm_format_info structure. See all the functions in
-drm_fourcc.h.
--Daniel
-
->
-> Sandy Huang (36):
->   drm/fourcc: Add 2 plane YCbCr 10bit format support
->   drm/rockchip: use bpp instead of cpp for drm_format_info
->   drm/i915: use bpp instead of cpp for drm_format_info
->   drm: exynos: use bpp instead of cpp for drm_format_info
->   drm/sun4i: use bpp instead of cpp for drm_format_info
->   drm/amd: use bpp instead of cpp for drm_format_info
->   drm/gma500: use bpp instead of cpp for drm_format_info
->   drm/msm: use bpp instead of cpp for drm_format_info
->   dm/vmwgfx: use bpp instead of cpp for drm_format_info
->   drm/arm: use bpp instead of cpp for drm_format_info
->   drm/armada: use bpp instead of cpp for drm_format_info
->   drm/radeon: use bpp instead of cpp for drm_format_info
->   drm/nouveau: use bpp instead of cpp for drm_format_info
->   drm/tegra: use bpp instead of cpp for drm_format_info
->   drm/mediatek: use bpp instead of cpp for drm_format_info
->   drm/tilcdc: use bpp instead of cpp for drm_format_info
->   drm/zte: use bpp instead of cpp for drm_format_info
->   drm/xen: use bpp instead of cpp for drm_format_info
->   drm/vkms: use bpp instead of cpp for drm_format_info
->   drm/ast: use bpp instead of cpp for drm_format_info
->   drm/vc4: use bpp instead of cpp for drm_format_info
->   drm/atmel-hlcdc: use bpp instead of cpp for drm_format_info
->   drm/cirrus: use bpp instead of cpp for drm_format_info
->   drm/hisilicon: use bpp instead of cpp for drm_format_info
->   drm/imx: use bpp instead of cpp for drm_format_info
->   drm/vboxvideo: use bpp instead of cpp for drm_format_info
->   drm/pl111: use bpp instead of cpp for drm_format_info
->   drm/qxl: use bpp instead of cpp for drm_format_info
->   drm/ingenic: use bpp instead of cpp for drm_format_info
->   drm/sti: use bpp instead of cpp for drm_format_info
->   drm/stm: use bpp instead of cpp for drm_format_info
->   drm/mcde: use bpp instead of cpp for drm_format_info
->   drm/mgag200: use bpp instead of cpp for drm_format_info
->   drm/tve200: use bpp instead of cpp for drm_format_info
->   drm/udl: use bpp instead of cpp for drm_format_info
->   drm/omapdrm: use bpp instead of cpp for drm_format_info
->
->  drivers/gpu/drm/amd/amdgpu/amdgpu_fb.c             |   2 +-
->  drivers/gpu/drm/amd/amdgpu/dce_v10_0.c             |   2 +-
->  drivers/gpu/drm/amd/amdgpu/dce_v11_0.c             |   2 +-
->  drivers/gpu/drm/amd/amdgpu/dce_v6_0.c              |   2 +-
->  drivers/gpu/drm/amd/amdgpu/dce_v8_0.c              |   2 +-
->  drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c  |   6 +-
->  .../drm/arm/display/komeda/komeda_framebuffer.c    |   2 +-
->  drivers/gpu/drm/arm/malidp_hw.c                    |   2 +-
->  drivers/gpu/drm/arm/malidp_planes.c                |   2 +-
->  drivers/gpu/drm/armada/armada_fbdev.c              |   2 +-
->  drivers/gpu/drm/armada/armada_plane.c              |   6 +-
->  drivers/gpu/drm/ast/ast_mode.c                     |   8 +-
->  drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_plane.c    |   2 +-
->  drivers/gpu/drm/cirrus/cirrus.c                    |  10 +-
->  drivers/gpu/drm/drm_client.c                       |   4 +-
->  drivers/gpu/drm/drm_fb_helper.c                    |   8 +-
->  drivers/gpu/drm/drm_format_helper.c                |   4 +-
->  drivers/gpu/drm/drm_fourcc.c                       | 172 +++++++++++----------
->  drivers/gpu/drm/drm_framebuffer.c                  |   2 +-
->  drivers/gpu/drm/exynos/exynos5433_drm_decon.c      |   4 +-
->  drivers/gpu/drm/exynos/exynos7_drm_decon.c         |   6 +-
->  drivers/gpu/drm/exynos/exynos_drm_fbdev.c          |   4 +-
->  drivers/gpu/drm/exynos/exynos_drm_fimc.c           |   6 +-
->  drivers/gpu/drm/exynos/exynos_drm_fimd.c           |   2 +-
->  drivers/gpu/drm/exynos/exynos_drm_gsc.c            |   4 +-
->  drivers/gpu/drm/exynos/exynos_drm_ipp.c            |   6 +-
->  drivers/gpu/drm/exynos/exynos_drm_rotator.c        |   4 +-
->  drivers/gpu/drm/exynos/exynos_drm_scaler.c         |   4 +-
->  drivers/gpu/drm/exynos/exynos_mixer.c              |   4 +-
->  drivers/gpu/drm/gma500/framebuffer.c               |   4 +-
->  drivers/gpu/drm/gma500/gma_display.c               |   4 +-
->  drivers/gpu/drm/gma500/mdfld_intel_display.c       |   6 +-
->  drivers/gpu/drm/gma500/oaktrail_crtc.c             |   4 +-
->  drivers/gpu/drm/hisilicon/hibmc/hibmc_drm_de.c     |   6 +-
->  drivers/gpu/drm/i915/display/intel_atomic_plane.c  |   2 +-
->  drivers/gpu/drm/i915/display/intel_display.c       |  28 ++--
->  drivers/gpu/drm/i915/display/intel_fbc.c           |   8 +-
->  drivers/gpu/drm/i915/display/intel_fbdev.c         |   6 +-
->  drivers/gpu/drm/i915/display/intel_sprite.c        |   4 +-
->  drivers/gpu/drm/i915/i915_debugfs.c                |   4 +-
->  drivers/gpu/drm/i915/intel_pm.c                    |  28 ++--
->  drivers/gpu/drm/imx/ipuv3-plane.c                  |   8 +-
->  drivers/gpu/drm/ingenic/ingenic-drm.c              |   2 +-
->  drivers/gpu/drm/mcde/mcde_display.c                |   4 +-
->  drivers/gpu/drm/mediatek/mtk_drm_fb.c              |   2 +-
->  drivers/gpu/drm/mediatek/mtk_drm_plane.c           |   2 +-
->  drivers/gpu/drm/mgag200/mgag200_mode.c             |  16 +-
->  drivers/gpu/drm/msm/disp/dpu1/dpu_crtc.c           |   4 +-
->  drivers/gpu/drm/msm/disp/mdp5/mdp5_crtc.c          |   2 +-
->  drivers/gpu/drm/msm/disp/mdp5/mdp5_smp.c           |   2 +-
->  drivers/gpu/drm/msm/msm_fb.c                       |   2 +-
->  drivers/gpu/drm/nouveau/dispnv04/crtc.c            |   7 +-
->  drivers/gpu/drm/nouveau/dispnv50/base507c.c        |   4 +-
->  drivers/gpu/drm/nouveau/dispnv50/ovly507e.c        |   2 +-
->  drivers/gpu/drm/omapdrm/omap_fb.c                  |   8 +-
->  drivers/gpu/drm/pl111/pl111_display.c              |   2 +-
->  drivers/gpu/drm/qxl/qxl_draw.c                     |   2 +-
->  drivers/gpu/drm/radeon/atombios_crtc.c             |  10 +-
->  drivers/gpu/drm/radeon/r100.c                      |   4 +-
->  drivers/gpu/drm/radeon/radeon_display.c            |   6 +-
->  drivers/gpu/drm/radeon/radeon_fb.c                 |   2 +-
->  drivers/gpu/drm/radeon/radeon_legacy_crtc.c        |  14 +-
->  drivers/gpu/drm/rockchip/rockchip_drm_fb.c         |   2 +-
->  drivers/gpu/drm/rockchip/rockchip_drm_vop.c        |   4 +-
->  drivers/gpu/drm/sti/sti_gdp.c                      |   2 +-
->  drivers/gpu/drm/stm/ltdc.c                         |   2 +-
->  drivers/gpu/drm/sun4i/sun8i_ui_layer.c             |   2 +-
->  drivers/gpu/drm/sun4i/sun8i_vi_layer.c             |   2 +-
->  drivers/gpu/drm/tegra/dc.c                         |   2 +-
->  drivers/gpu/drm/tegra/drm.c                        |   2 +-
->  drivers/gpu/drm/tegra/fb.c                         |   2 +-
->  drivers/gpu/drm/tilcdc/tilcdc_crtc.c               |   2 +-
->  drivers/gpu/drm/tilcdc/tilcdc_plane.c              |   2 +-
->  drivers/gpu/drm/tve200/tve200_display.c            |   2 +-
->  drivers/gpu/drm/udl/udl_fb.c                       |   4 +-
->  drivers/gpu/drm/vboxvideo/vbox_mode.c              |   2 +-
->  drivers/gpu/drm/vc4/vc4_plane.c                    |  10 +-
->  drivers/gpu/drm/vkms/vkms_plane.c                  |   2 +-
->  drivers/gpu/drm/vmwgfx/vmwgfx_fb.c                 |   4 +-
->  drivers/gpu/drm/vmwgfx/vmwgfx_ldu.c                |   4 +-
->  drivers/gpu/drm/vmwgfx/vmwgfx_scrn.c               |   4 +-
->  drivers/gpu/drm/vmwgfx/vmwgfx_stdu.c               |   2 +-
->  drivers/gpu/drm/xen/xen_drm_front_kms.c            |   2 +-
->  drivers/gpu/drm/zte/zx_plane.c                     |   4 +-
->  include/drm/drm_fourcc.h                           |   4 +-
->  include/uapi/drm/drm_fourcc.h                      |  15 ++
->  86 files changed, 299 insertions(+), 277 deletions(-)
->
-> --
-> 2.7.4
->
->
->
-> _______________________________________________
-> dri-devel mailing list
-> dri-devel@lists.freedesktop.org
-> https://lists.freedesktop.org/mailman/listinfo/dri-devel
+--===============2508432350113178530==
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="YZ5djTAD1cGYuMQK"
+Content-Disposition: inline
 
 
+--YZ5djTAD1cGYuMQK
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
 
--- 
-Daniel Vetter
-Software Engineer, Intel Corporation
-+41 (0) 79 365 57 48 - http://blog.ffwll.ch
+On Mon, Sep 23, 2019 at 11:20:57AM +0800, Sam Shih wrote:
+> On Sat, 2019-09-21 at 02:21 +0200, Thierry Reding wrote:
+> > On Fri, Sep 20, 2019 at 06:49:07AM +0800, Sam Shih wrote:
+> > > From: Ryder Lee <ryder.lee@mediatek.com>
+> > >=20
+> > > This adds a property "num-pwms" in example so that we could
+> > > specify the number of PWM channels via device tree.
+> > >=20
+> > > Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> > > Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+> > > Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+> > > Acked-by: Uwe Kleine-K=C3=B6nig <u.kleine-koenig@pengutronix.de>
+> > > ---
+> > > Changes since v6:
+> > > Follow reviewers's comments:
+> > > - The subject should indicate this is for Mediatek
+> > >=20
+> > > Changes since v5:
+> > > - Add an Acked-by tag
+> > > - This file is original v4 patch 5/10
+> > > (https://patchwork.kernel.org/patch/11102577/)
+> > >=20
+> > > ---
+> > >  Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 7 ++++---
+> > >  1 file changed, 4 insertions(+), 3 deletions(-)
+> >=20
+> > You failed to address Rob's questions repeatedly and I agree with him
+> > that you can just as easily derive the number of PWMs from the specific
+> > compatible string. I won't be applying this and none of the patches that
+> > depend on it.
+> >=20
+>=20
+> Hi,=20
+>=20
+> Thanks for getting back to me.
+>=20
+> New pwm driver (patch 04/11 : "pwm: mediatek: allocate the clks array
+> dynamically") can support different variants with different number of
+> PWMs by the new property <num-pwms>
+>=20
+> For example:
+> 1. Use "num-pwms" =3D <2> and assign clocks pwm1, pwm2 for mt7622
+> 2. Use "num-pwms" =3D <6> and assign clocks pwm1, pwm2, pwm3, pwm4, pwm5,
+> pwm6 for mt7622.
+>=20
+> If we just as easily derive the number of PWMs from the specific
+> compatible string in this document:
+>=20
+>    - "pwm1-6": the six per PWM clocks for mt7622
+>   =20
+> This looks like all "pwm1", "pwm2", "pwm3", "pwm4", "pwm5", "pwm6" is
+> required property in DT, It doesn't make sense.
+
+I don't understand. Why doesn't that make sense? If your hardware block
+has 6 PWMs and each can be driven by its own clock, then you need to
+provide references for each of those clocks, otherwise you won't be able
+to use them.
+
+>   =20
+> So we removed those descriptions and added =20
+>=20
+>    - "pwm1-N": the PWM clocks for each channel=20
+>   =20
+>   =20
+> But the max number of clocks from the compatible string are still
+> important information that should be provide in this document.
+>=20
+>=20
+> What do you think of this?
+>=20
+>    - "pwm1-N": per PWM clocks for mt2712, the max number of PWM channels
+> is 8
+>=20
+>    - "pwm1-N": per PWM clocks for mt7622, the max number of PWM channels
+> is 6
+>=20
+>    - "pwm1-N": per PWM clocks for mt7623, the max number of PWM channels
+> is 5
+
+That's what's in the bindings already, isn't it?
+
+	 - clocks: phandle and clock specifier of the PWM reference clock.
+	 - clock-names: must contain the following, except for MT7628 which
+			has no clocks
+	   - "top": the top clock generator
+	   - "main": clock used by the PWM core
+	   - "pwm1-8": the eight per PWM clocks for mt2712
+	   - "pwm1-6": the six per PWM clocks for mt7622
+	   - "pwm1-5": the five per PWM clocks for mt7623
+
+Note that the description of the "clocks" property isn't quite accurate.
+It should be something like:
+
+	- clocks: One phandle and clock specifier for each entry in the
+	          "clock-names" property.
+
+In the above you clearly describe which PWMs you have to specify for
+each generation of the hardware block.
+
+>=20
+>    where N starting from 1 to the maximum number of PWM channels
+>    - num-pwms: the number of PWM channels.
+
+That's redundant information. The specific number of PWMs in already
+implied by the compatible string, so you don't need to duplicate that
+information here.
+
+Thierry
+
+--YZ5djTAD1cGYuMQK
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCAAdFiEEiOrDCAFJzPfAjcif3SOs138+s6EFAl2IylEACgkQ3SOs138+
+s6EpJg//QC3ldqkwsoa+KY+dhrpZlAxv2zdjRAxF8rCag6XtDLtIlvV66zVQeowZ
+5+NMRQqJHAdqFzNPZO8wxH7Dkiexw50Wpa64Xb1JEyVAmotqvfiyJr59MG9CGZ+T
+EW7o+U8WHGdVT6xtkUZ17QQHK6OqvitX8GmXU746FXuza5zYkp3quVFtjQ1V2GNR
+N2s3dvvfhIcqjm0GhN310Pp2vHCyczDmpCbppC+QNfkArUCW25oDFck69ceBdXXG
+1UjtIasUcEoTC8qrK31Yk2GctIxkF0KiPKX24Kuk3oDTqCb3Acp/eNQmE3j0zs+1
++3a2Xgs5jADOprnJLpszBvlO+PKCybVAAhW65QgcH67spbgNVxuhXCjmSpplelfI
+F7FJEbz+nI2Az36ogFtewhvVPFa5SqPKUEygCjE5eRd62HooiUiEK/zXbBfE5eNm
+72viYDW0wwkmqjLIuahyji2HMlu3ImG3moqiQH1OaZkaivONUzWqn2fsEVdQaI4I
+o41UMHnZNWs7znhcs2SeGZNrLSvC4mdetpXDOuVr9WWqunzIckHDabA/hm5yMvFD
+l/Oiyyv9AcIICgAFBXq1+4bfbztgS7wAek6JDYRUHBj4jBI+3J0zEvK7ah246wlg
+pp+mPQhPxMx+VbEpB5BVx0/KB1eQ6+8E9+zyB227JdD4oLR3G9Y=
+=Za9m
+-----END PGP SIGNATURE-----
+
+--YZ5djTAD1cGYuMQK--
+
+
+--===============2508432350113178530==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============2508432350113178530==--
+
