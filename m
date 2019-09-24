@@ -2,68 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8CA69BD489
-	for <lists+linux-mediatek@lfdr.de>; Tue, 24 Sep 2019 23:47:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 788D2BD48E
+	for <lists+linux-mediatek@lfdr.de>; Tue, 24 Sep 2019 23:48:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=UefopjVJbZ0kw/gcWe1U2cXyta7MLJdk/zmGPW77TkM=; b=X8+A/I0VbOpeh/
-	JlWqwlhazKTdl8i0W1RbHwJssJ6y9KGurGaYe1ODC8260ow4TfkljqtKFej6jv4DFMg1ALgV7Kel4
-	3zhXpqK0a5auA9fWVdokCfs7xqJ2zjkRqdMojBGDvjA7UNqURzNAEShcSHH8QhIaHmTT3/tln+TYz
-	tXYxZJZEwbmppupZ/18Wmt31beC+xm8+dOc+RiES/lhS7fahAkwLoUwwou6ISTHkebbMuzjObR/F/
-	3WL7bnmlCPjQRqSBtGOmNXXkUWZN4c12U/o07mj6Yb9euwk+MZDwCMpBJ9v7t21S3TkJ6ifaLSpOS
-	AhvcVx0uqrL9ntlbxpjw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4NlgrLTxZuWE/FnbzACPZd793ajpR2YwxPECrT65bXg=; b=X1TtqGShjak0Db
+	r1s4jBjifnriLF4QHIaPgiBMdVSkb+uediGEkXDxiBPNe09+P1KkNE2+UkZihy3Adi4K0USjQyvgL
+	zn/OWLGAkzMSAX1ekbtw8Y6gdW3On8UsZMHQANOatGDY4PsGQZJ6QU9KKP/6RocnEKXv50KvBRtGe
+	TxEcdhVmiadxKw5YfEDAr9j4iInYW2Gyr6uTJQaeDOzyo/DsYjAEyHGjAMMzWR8qvGWln4Akx9bO6
+	Gdnjd0xWQjJlCh5Yg7ziUv8cwS2E7bcvwkdKd7fqcWc2Wj/3DQ/jiE7PrmSyyjUtRVr0UJKyZK3Rp
+	M7cpwjZYv60WYBOEmyOg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCseF-0005ed-Jm; Tue, 24 Sep 2019 21:47:03 +0000
-Received: from mail-ot1-f67.google.com ([209.85.210.67])
+	id 1iCsfh-0006lN-Tj; Tue, 24 Sep 2019 21:48:34 +0000
+Received: from mail-oi1-f195.google.com ([209.85.167.195])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCsdl-0005PC-R5; Tue, 24 Sep 2019 21:46:35 +0000
-Received: by mail-ot1-f67.google.com with SMTP id y39so2899847ota.7;
- Tue, 24 Sep 2019 14:46:33 -0700 (PDT)
+ id 1iCsdo-0005QL-Ng; Tue, 24 Sep 2019 21:46:39 +0000
+Received: by mail-oi1-f195.google.com with SMTP id i16so3068156oie.4;
+ Tue, 24 Sep 2019 14:46:36 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=1EA8rb2xQcb5dg7rm6kSLl37zgnf6FJeYhc+aCc8i8Q=;
- b=NBGeVv4WpxmfgBaZR4tlQU898UNg3nu6qU7gpKR/78cBRTKw6HZuCpPNU1jc1dQbeJ
- WsgRarQ4XK/M7VZyFN5z7tn5fGUo80oR8snKXMQd2gSgqxDPRZAqUl2tvNY2yCUfCI28
- yWWi30xOfSOFOAftsWIa+sTa7sWKNdsrnaAjkNGBw8S1rk9GbQuXUrRW8Q/1X5+y9+zw
- FicEMamN8BsI6IZklAk1MQrYBwiYDFLcSBU/ocJpaP0RHIFO9f9Z9H0St6A8iAt/nRP8
- CcKT6ANSkD30GUoDpzlZIsvhPRXxgWMBlo/SdS+X+hES4fd9zmMiVKFpEPFNdjblmg7S
- aZOQ==
-X-Gm-Message-State: APjAAAXmmcSsk3LtU0lvBi3rUf8kpH4ldCVJ79eTpHLJQUsi8o6NO2vd
- F/d0nkvxoGIBc13S115T3w==
-X-Google-Smtp-Source: APXvYqyfVq4l/5/hBZkfgpAi1Pc1khFxc5Y5xwdvEOTzeXf8zarYTh54eCs4NscjomBDZ62d4/y0HA==
-X-Received: by 2002:a05:6830:16da:: with SMTP id
- l26mr3762822otr.339.1569361592670; 
- Tue, 24 Sep 2019 14:46:32 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=/wVIw1f2smG+KiMsq60d1sORCIiJA/kLz197I7JlBzY=;
+ b=grTEUcl0qmjr6bJZ45UxUEPgyhv2d4eqnJ6OMj7I4aJyQrqsP2WBxrwSCXr28iZPH0
+ /ztoIw62gyzgm22f7b15tJvDgJFwbIecMvOg/OWdYtheib3UgaSv/tUJA2DQ57AVKSl6
+ bsvuSW3s8XmjXajWFsFyGP002/qsfEQ5HaxMxFCLWhwMBSWBibhGto4toYCSz+kH9OGT
+ sg7MwHQXvgkz9bUVeRK0x1pNGTmS4McbhVF+s7i+r8fIue7S2G1EMpMEEiq9NYJDTuaB
+ 4hFdEMSWp/8NC7Q8m9UnFNUj+7bI+gwvXj+xI9SB6Sk38IA+3oWQ2ACqgJFUaIbcZjp4
+ jYCA==
+X-Gm-Message-State: APjAAAVmZG8u6aZ38ZDyazgTosX3Rnfm014HrVGj+fQTsWun7xe87ATO
+ h2Yc7TLWFEaUKfz7PmBhdw==
+X-Google-Smtp-Source: APXvYqzgYNEE3gUf+o08Ng0AlLUa3mPB8wGVERLGSanOdvwRKgqozOW0fsc0NAwikm4smG7KH7Xr/Q==
+X-Received: by 2002:aca:5ac4:: with SMTP id o187mr1987548oib.116.1569361595731; 
+ Tue, 24 Sep 2019 14:46:35 -0700 (PDT)
 Received: from xps15.herring.priv (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.googlemail.com with ESMTPSA id s66sm976787otb.65.2019.09.24.14.46.30
+ by smtp.googlemail.com with ESMTPSA id s66sm976787otb.65.2019.09.24.14.46.34
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 24 Sep 2019 14:46:31 -0700 (PDT)
+ Tue, 24 Sep 2019 14:46:35 -0700 (PDT)
 From: Rob Herring <robh@kernel.org>
 To: linux-pci@vger.kernel.org, Bjorn Helgaas <bhelgaas@google.com>,
  Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Subject: [PATCH 00/11] PCI dma-ranges parsing consolidation
-Date: Tue, 24 Sep 2019 16:46:19 -0500
-Message-Id: <20190924214630.12817-1-robh@kernel.org>
+Subject: [PATCH 03/11] PCI: mediatek: Use pci_parse_request_of_pci_ranges()
+Date: Tue, 24 Sep 2019 16:46:22 -0500
+Message-Id: <20190924214630.12817-4-robh@kernel.org>
 X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20190924214630.12817-1-robh@kernel.org>
+References: <20190924214630.12817-1-robh@kernel.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190924_144633_901500_2301D59C 
-X-CRM114-Status: GOOD (  11.66  )
+X-CRM114-CacheID: sfid-20190924_144636_896440_7CDA2768 
+X-CRM114-Status: GOOD (  12.63  )
 X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.67 listed in list.dnswl.org]
+ no trust [209.85.167.195 listed in list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -72,9 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.67 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.195 listed in wl.mailspike.net]
  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -88,80 +88,111 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>,
- Shawn Lin <shawn.lin@rock-chips.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Toan Le <toan@os.amperecomputing.com>, Will Deacon <will@kernel.org>,
- Ryder Lee <ryder.lee@mediatek.com>, Michal Simek <michal.simek@xilinx.com>,
- linux-rockchip@lists.infradead.org, bcm-kernel-feedback-list@broadcom.com,
- Linus Walleij <linus.walleij@linaro.org>, Ray Jui <rjui@broadcom.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, Simon Horman <horms@verge.net.au>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org, Scott Branden <sbranden@broadcom.com>,
- Gustavo Pimentel <gustavo.pimentel@synopsys.com>, rfi@lists.rocketboards.org,
- linux-renesas-soc@vger.kernel.org, Tom Joseph <tjoseph@cadence.com>,
- Jingoo Han <jingoohan1@gmail.com>, Ley Foon Tan <lftan@altera.com>
+Cc: Matthias Brugger <matthias.bgg@gmail.com>,
+ Ryder Lee <ryder.lee@mediatek.com>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This series moves the DT 'dma-ranges' parsing into common helpers
-utilizing a resource list. In the process of doing this, I noticed
-several cases where pci_parse_request_of_pci_ranges() could be used so
-I converted those drivers first. The last 5 patches make the actual
-change to use the common 'dma_ranges' resource list. There's no
-(intended) functional change in this series though I'm also working on
-a separate series to improve the handling of 'dma-ranges' and dma
-masks.
+Convert Mediatek host bridge to use the common
+pci_parse_request_of_pci_ranges().
 
-pci-rcar-gen2 is the only remaining driver doing its own dma-ranges
-handling as it is still using the old ARM PCI functions. Looks like it
-is the last one (in drivers/pci/).
+Cc: Ryder Lee <ryder.lee@mediatek.com>
+Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
+Cc: Bjorn Helgaas <bhelgaas@google.com>
+Cc: Matthias Brugger <matthias.bgg@gmail.com>
+Cc: linux-mediatek@lists.infradead.org
+Signed-off-by: Rob Herring <robh@kernel.org>
+---
+ drivers/pci/controller/pcie-mediatek.c | 47 ++++++++++----------------
+ 1 file changed, 17 insertions(+), 30 deletions(-)
 
-Compile tested only.
-
-Rob
-
-Rob Herring (11):
-  PCI: aardvark: Use pci_parse_request_of_pci_ranges()
-  PCI: altera: Use pci_parse_request_of_pci_ranges()
-  PCI: mediatek: Use pci_parse_request_of_pci_ranges()
-  PCI: versatile: Enable COMPILE_TEST
-  PCI: versatile: Use pci_parse_request_of_pci_ranges()
-  PCI: of: Add inbound resource parsing to helpers
-  PCI: ftpci100: Use inbound resources for setup
-  PCI: v3-semi: Use inbound resources for setup
-  PCI: xgene: Use inbound resources for setup
-  PCI: iproc: Use inbound resources for setup
-  PCI: rcar: Use inbound resources for setup
-
- drivers/pci/controller/Kconfig                |  2 +-
- .../pci/controller/dwc/pcie-designware-host.c |  3 +-
- drivers/pci/controller/pci-aardvark.c         | 58 ++---------------
- drivers/pci/controller/pci-ftpci100.c         | 29 ++++-----
- drivers/pci/controller/pci-host-common.c      |  2 +-
- drivers/pci/controller/pci-v3-semi.c          | 40 +++++-------
- drivers/pci/controller/pci-versatile.c        | 62 ++++--------------
- drivers/pci/controller/pci-xgene.c            | 33 ++++------
- drivers/pci/controller/pcie-altera.c          | 38 +----------
- drivers/pci/controller/pcie-cadence-host.c    |  2 +-
- drivers/pci/controller/pcie-iproc-platform.c  |  1 +
- drivers/pci/controller/pcie-iproc.c           | 63 +++----------------
- drivers/pci/controller/pcie-mediatek.c        | 47 +++++---------
- drivers/pci/controller/pcie-mobiveil.c        |  4 +-
- drivers/pci/controller/pcie-rcar.c            | 48 ++++++--------
- drivers/pci/controller/pcie-rockchip-host.c   |  3 +-
- drivers/pci/controller/pcie-xilinx-nwl.c      |  2 +-
- drivers/pci/controller/pcie-xilinx.c          |  2 +-
- drivers/pci/of.c                              | 44 ++++++++++++-
- drivers/pci/pci.h                             |  8 ++-
- include/linux/pci.h                           |  2 +
- 21 files changed, 162 insertions(+), 331 deletions(-)
-
---
+diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
+index 80601e1b939e..cea4112b5309 100644
+--- a/drivers/pci/controller/pcie-mediatek.c
++++ b/drivers/pci/controller/pcie-mediatek.c
+@@ -211,7 +211,6 @@ struct mtk_pcie {
+ 	void __iomem *base;
+ 	struct clk *free_ck;
+ 
+-	struct resource mem;
+ 	struct list_head ports;
+ 	const struct mtk_pcie_soc *soc;
+ 	unsigned int busnr;
+@@ -658,11 +657,23 @@ static int mtk_pcie_setup_irq(struct mtk_pcie_port *port,
+ static int mtk_pcie_startup_port_v2(struct mtk_pcie_port *port)
+ {
+ 	struct mtk_pcie *pcie = port->pcie;
+-	struct resource *mem = &pcie->mem;
++	struct pci_host_bridge *host = pci_host_bridge_from_priv(pcie);
++	struct resource *mem = NULL;
++	struct resource_entry *entry;
+ 	const struct mtk_pcie_soc *soc = port->pcie->soc;
+ 	u32 val;
+ 	int err;
+ 
++	resource_list_for_each_entry(entry, &host->windows) {
++		if (resource_type(entry->res) != IORESOURCE_MEM)
++			continue;
++
++		mem = entry->res;
++		break;
++	}
++	if (!mem)
++		return -EINVAL;
++
+ 	/* MT7622 platforms need to enable LTSSM and ASPM from PCIe subsys */
+ 	if (pcie->base) {
+ 		val = readl(pcie->base + PCIE_SYS_CFG_V2);
+@@ -1017,39 +1028,15 @@ static int mtk_pcie_setup(struct mtk_pcie *pcie)
+ 	struct mtk_pcie_port *port, *tmp;
+ 	struct pci_host_bridge *host = pci_host_bridge_from_priv(pcie);
+ 	struct list_head *windows = &host->windows;
+-	struct resource_entry *win, *tmp_win;
+-	resource_size_t io_base;
++	struct resource *bus;
+ 	int err;
+ 
+-	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+-						    windows, &io_base);
++	err = pci_parse_request_of_pci_ranges(dev, windows,
++					      &bus);
+ 	if (err)
+ 		return err;
+ 
+-	err = devm_request_pci_bus_resources(dev, windows);
+-	if (err < 0)
+-		return err;
+-
+-	/* Get the I/O and memory ranges from DT */
+-	resource_list_for_each_entry_safe(win, tmp_win, windows) {
+-		switch (resource_type(win->res)) {
+-		case IORESOURCE_IO:
+-			err = devm_pci_remap_iospace(dev, win->res, io_base);
+-			if (err) {
+-				dev_warn(dev, "error %d: failed to map resource %pR\n",
+-					 err, win->res);
+-				resource_list_destroy_entry(win);
+-			}
+-			break;
+-		case IORESOURCE_MEM:
+-			memcpy(&pcie->mem, win->res, sizeof(*win->res));
+-			pcie->mem.name = "non-prefetchable";
+-			break;
+-		case IORESOURCE_BUS:
+-			pcie->busnr = win->res->start;
+-			break;
+-		}
+-	}
++	pcie->busnr = bus->start;
+ 
+ 	for_each_available_child_of_node(node, child) {
+ 		int slot;
+-- 
 2.20.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
