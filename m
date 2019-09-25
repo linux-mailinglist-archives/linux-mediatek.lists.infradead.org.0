@@ -2,46 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01FF2BDD3A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Sep 2019 13:35:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ABAB1BDFA9
+	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Sep 2019 16:08:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dRjnpth9XCRLYZupng25Gzy1u+RxemTyY7DlIMZz/cY=; b=alKbgN2LxoJhHp
-	3r12oPRYQB3R4MpUCP+nUVZqo97j2NPx9EvA9g2Ps2BN6wy8MH8OpSBV6hdggg++SGjFcYQGMosTB
-	aAV594R5s+9rRVG5dB+gKZAO5017NxE0F2eAP012TWagA1julu7dxlB99fRv35t/mXnty/81eD6Au
-	e/+WfmW0dYwiqhq3Tq4vCAVsBNg2lmcjJscHCMFORiIlAMxYNBMVzZ70PQCZFIdctrFn8GEOcasZ7
-	fh2ZTjVj1qIedC/+C75Zj+VSmbWP2Xl558oczT5Zq3j3IL0cokzH4b9dBbQD0lnACMXclAKFEYl3D
-	SVmzpFLhkUyrs02s5/vA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Hkw1HXqvMDLkn+7q69Y8GUmhHnuJy65G7o/ZWBeRtOQ=; b=cKx/xD6jQ3wxxn
+	S6hHMfltt16UbzrWTft1vTdzCQCPuPm+l9qCUWzXj7uGbTjYNm1eTc7IgWJvQOa7xaARWwY79fEKR
+	ifD1TXLWNcqTqh+VUTb8orMqpwlx6GfEWaz/k7k3Mtt5K2Ux1cBcOGYdI9sC2YAgtCLunIYkH4Uza
+	xYOrY/wwZgFIuab6ry2qvp314oKPlxqdpUcecAH+aQoyw0Kunpt7svd8HO0BlttXdxatTkLMX3PCm
+	OzhgEs1lbQgRzCZLhR7ZddKpC1ferYiCBMkTncLhyEhlS9KI85ZCglEuAsxbQHORjO4lZscxr9U+m
+	lxj7drljEOZ5L6nyUbcg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iD5Zu-0005W3-IB; Wed, 25 Sep 2019 11:35:26 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iD5Z6-00046h-1z; Wed, 25 Sep 2019 11:34:38 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 08C871597;
- Wed, 25 Sep 2019 04:34:30 -0700 (PDT)
-Received: from localhost (unknown [10.37.6.20])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 752F83F694;
- Wed, 25 Sep 2019 04:34:29 -0700 (PDT)
-Date: Wed, 25 Sep 2019 12:34:27 +0100
-From: Andrew Murray <andrew.murray@arm.com>
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH 03/11] PCI: mediatek: Use pci_parse_request_of_pci_ranges()
-Message-ID: <20190925113427.GT9720@e119886-lin.cambridge.arm.com>
-References: <20190924214630.12817-1-robh@kernel.org>
- <20190924214630.12817-4-robh@kernel.org>
+	id 1iD7xv-0006Rq-8i; Wed, 25 Sep 2019 14:08:23 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iD7xp-0006N6-GG
+ for linux-mediatek@lists.infradead.org; Wed, 25 Sep 2019 14:08:19 +0000
+X-UUID: 02ff240604e24be0b8ff84492d2f2845-20190925
+X-UUID: 02ff240604e24be0b8ff84492d2f2845-20190925
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <miles.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 864056621; Wed, 25 Sep 2019 06:08:10 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 25 Sep 2019 07:08:09 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 25 Sep 2019 22:08:08 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 25 Sep 2019 22:08:08 +0800
+From: Miles Chen <miles.chen@mediatek.com>
+To: Christoph Lameter <cl@linux.com>, Pekka Enberg <penberg@kernel.org>,
+ "David Rientjes" <rientjes@google.com>, Joonsoo Kim <iamjoonsoo.kim@lge.com>, 
+ "Andrew Morton" <akpm@linux-foundation.org>
+Subject: [PATCH v2] mm: slub: print the offset of fault addresses
+Date: Wed, 25 Sep 2019 22:08:07 +0800
+Message-ID: <20190925140807.20490-1-miles.chen@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190924214630.12817-4-robh@kernel.org>
-User-Agent: Mutt/1.10.1+81 (426a6c1) (2018-08-26)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190925_043436_188309_1348080C 
-X-CRM114-Status: GOOD (  19.58  )
+X-CRM114-CacheID: sfid-20190925_070817_549743_01C04132 
+X-CRM114-Status: GOOD (  10.47  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -49,6 +58,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -60,126 +71,133 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>, linux-pci@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, Ryder Lee <ryder.lee@mediatek.com>,
- linux-mediatek@lists.infradead.org, Bjorn Helgaas <bhelgaas@google.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Matthew Wilcox <willy@infradead.org>, linux-mm@kvack.org,
+ Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Sep 24, 2019 at 04:46:22PM -0500, Rob Herring wrote:
-> Convert Mediatek host bridge to use the common
-> pci_parse_request_of_pci_ranges().
-> 
-> Cc: Ryder Lee <ryder.lee@mediatek.com>
-> Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-> Cc: Bjorn Helgaas <bhelgaas@google.com>
-> Cc: Matthias Brugger <matthias.bgg@gmail.com>
-> Cc: linux-mediatek@lists.infradead.org
-> Signed-off-by: Rob Herring <robh@kernel.org>
-> ---
->  drivers/pci/controller/pcie-mediatek.c | 47 ++++++++++----------------
->  1 file changed, 17 insertions(+), 30 deletions(-)
-> 
-> diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
-> index 80601e1b939e..cea4112b5309 100644
-> --- a/drivers/pci/controller/pcie-mediatek.c
-> +++ b/drivers/pci/controller/pcie-mediatek.c
-> @@ -211,7 +211,6 @@ struct mtk_pcie {
->  	void __iomem *base;
->  	struct clk *free_ck;
->  
-> -	struct resource mem;
->  	struct list_head ports;
->  	const struct mtk_pcie_soc *soc;
->  	unsigned int busnr;
-> @@ -658,11 +657,23 @@ static int mtk_pcie_setup_irq(struct mtk_pcie_port *port,
->  static int mtk_pcie_startup_port_v2(struct mtk_pcie_port *port)
->  {
->  	struct mtk_pcie *pcie = port->pcie;
-> -	struct resource *mem = &pcie->mem;
-> +	struct pci_host_bridge *host = pci_host_bridge_from_priv(pcie);
-> +	struct resource *mem = NULL;
-> +	struct resource_entry *entry;
->  	const struct mtk_pcie_soc *soc = port->pcie->soc;
->  	u32 val;
->  	int err;
->  
-> +	resource_list_for_each_entry(entry, &host->windows) {
-> +		if (resource_type(entry->res) != IORESOURCE_MEM)
-> +			continue;
-> +
-> +		mem = entry->res;
-> +		break;
-> +	}
-> +	if (!mem)
-> +		return -EINVAL;
-> +
->  	/* MT7622 platforms need to enable LTSSM and ASPM from PCIe subsys */
->  	if (pcie->base) {
->  		val = readl(pcie->base + PCIE_SYS_CFG_V2);
-> @@ -1017,39 +1028,15 @@ static int mtk_pcie_setup(struct mtk_pcie *pcie)
->  	struct mtk_pcie_port *port, *tmp;
->  	struct pci_host_bridge *host = pci_host_bridge_from_priv(pcie);
->  	struct list_head *windows = &host->windows;
-> -	struct resource_entry *win, *tmp_win;
-> -	resource_size_t io_base;
-> +	struct resource *bus;
->  	int err;
->  
-> -	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
-> -						    windows, &io_base);
-> +	err = pci_parse_request_of_pci_ranges(dev, windows,
-> +					      &bus);
->  	if (err)
->  		return err;
->  
-> -	err = devm_request_pci_bus_resources(dev, windows);
-> -	if (err < 0)
-> -		return err;
-> -
-> -	/* Get the I/O and memory ranges from DT */
-> -	resource_list_for_each_entry_safe(win, tmp_win, windows) {
-> -		switch (resource_type(win->res)) {
-> -		case IORESOURCE_IO:
-> -			err = devm_pci_remap_iospace(dev, win->res, io_base);
-> -			if (err) {
-> -				dev_warn(dev, "error %d: failed to map resource %pR\n",
-> -					 err, win->res);
-> -				resource_list_destroy_entry(win);
-> -			}
-> -			break;
-> -		case IORESOURCE_MEM:
-> -			memcpy(&pcie->mem, win->res, sizeof(*win->res));
-> -			pcie->mem.name = "non-prefetchable";
+With the commit ad67b74d2469d9b8 ("printk: hash addresses printed with
+%p"), it is a little bit harder to match the fault addresses printed by
+check_bytes_and_report() or slab_pad_check() in the dump because the
+fault addresses may not show up in the dump.
 
-Using pci_parse_request_of_pci_ranges will now guard against using only
-prefetchable memory ranges, whereas the existing code didn't do that. Given
-that the current DT users all provide a non-prefetchable range I think this is
-OK.
+Print the offset of the fault addresses to make it easier to match the
+incorrect poison or padding values in the dump.
 
-Reviewed-by: Andrew murray <andrew.murray@arm.com>
+Before:
+We have to search the "63" in the dump. If we want to get the offset of
+63, we have to count it from the start of Object dump.
 
-> -			break;
-> -		case IORESOURCE_BUS:
-> -			pcie->busnr = win->res->start;
-> -			break;
-> -		}
-> -	}
-> +	pcie->busnr = bus->start;
->  
->  	for_each_available_child_of_node(node, child) {
->  		int slot;
-> -- 
-> 2.20.1
-> 
-> 
-> _______________________________________________
-> linux-arm-kernel mailing list
-> linux-arm-kernel@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-arm-kernel
+=============================================================
+BUG kmalloc-128 (Not tainted): Poison overwritten
+-------------------------------------------------------------
+
+Disabling lock debugging due to kernel taint
+INFO: 0x00000000570da294-0x00000000570da294.
+First byte 0x63 instead of 0x6b
+...
+INFO: Object 0x000000006ebb3b9e @offset=14208 fp=0x0000000065862488
+Redzone 00000000a6abccff: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 00000000741c16f0: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 0000000061ad278f: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 000000000467c1bd: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 000000008812766b: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 000000003d9b8f25: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 0000000000d80c33: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 00000000867b0d90: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Object 000000006ebb3b9e: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000005ea59a9f: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000003ef8bddc: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000008190375d: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000006df7fb32: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 0000000069474eae: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 0000000008073b7d: 6b 6b 6b 6b 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 00000000b45ae74d: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
+
+After:
+We know the fault address is at @offset=1508, and the Object is at
+@offset=1408, so we know the fault address is at offset=100 within the
+object.
+
+=========================================================
+BUG kmalloc-128 (Not tainted): Poison overwritten
+---------------------------------------------------------
+
+Disabling lock debugging due to kernel taint
+INFO: 0x00000000638ec1d1-0x00000000638ec1d1 @offset=1508.
+First byte 0x63 instead of 0x6b
+...
+INFO: Object 0x000000008171818d @offset=1408 fp=0x0000000066dae230
+Redzone 00000000e2697ab6: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 0000000064b6a381: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 00000000e413a234: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 0000000004c1dfeb: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 000000009ad24d42: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 000000002a196a23: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 00000000a7b8468a: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Redzone 0000000088db6da3: bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb
+Object 000000008171818d: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000007c4035d4: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000004dd281a4: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 0000000079121dff: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 00000000756682a9: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 0000000053b7e541: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 0000000091f8d530: 6b 6b 6b 6b 63 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b
+Object 000000009c76035c: 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b 6b a5
+
+Change since v1:
+1. do not replace DUMP_PREFIX_ADDRESS with DUMP_PREFIX_OFFSET because
+the hash addresses are useful
+2. print the offset of the fault address
+
+Cc: Christoph Lameter <cl@linux.com>
+Cc: Matthew Wilcox <willy@infradead.org>
+Cc: David Rientjes <rientjes@google.com>
+Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+---
+ mm/slub.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/mm/slub.c b/mm/slub.c
+index 42c1b3af3c98..21d26cd3e3bc 100644
+--- a/mm/slub.c
++++ b/mm/slub.c
+@@ -736,6 +736,7 @@ static int check_bytes_and_report(struct kmem_cache *s, struct page *page,
+ {
+ 	u8 *fault;
+ 	u8 *end;
++	u8 *addr = page_address(page);
+ 
+ 	metadata_access_enable();
+ 	fault = memchr_inv(start, value, bytes);
+@@ -748,8 +749,9 @@ static int check_bytes_and_report(struct kmem_cache *s, struct page *page,
+ 		end--;
+ 
+ 	slab_bug(s, "%s overwritten", what);
+-	pr_err("INFO: 0x%p-0x%p. First byte 0x%x instead of 0x%x\n",
+-					fault, end - 1, fault[0], value);
++	pr_err("INFO: 0x%p-0x%p @offset=%tu. First byte 0x%x instead of 0x%x\n",
++					fault, end - 1, fault - addr,
++					fault[0], value);
+ 	print_trailer(s, page, object);
+ 
+ 	restore_bytes(s, what, value, fault, end);
+@@ -844,7 +846,8 @@ static int slab_pad_check(struct kmem_cache *s, struct page *page)
+ 	while (end > fault && end[-1] == POISON_INUSE)
+ 		end--;
+ 
+-	slab_err(s, page, "Padding overwritten. 0x%p-0x%p", fault, end - 1);
++	slab_err(s, page, "Padding overwritten. 0x%p-0x%p @offset=%tu",
++			fault, end - 1, fault - start);
+ 	print_section(KERN_ERR, "Padding ", pad, remainder);
+ 
+ 	restore_bytes(s, "slab padding", POISON_INUSE, fault, end);
+-- 
+2.18.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
