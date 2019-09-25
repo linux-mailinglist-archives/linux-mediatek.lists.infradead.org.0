@@ -2,64 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8453BE04E
-	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Sep 2019 16:35:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 026B2BE050
+	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Sep 2019 16:35:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=97PkqCQwYtN/lumNHWNiQ3EDEwnAFMoCrTWrm/HYbFI=; b=gjaMX6YmfPUPW8
-	HO6ZjJXwKtzuMouj/jEGFcl5FEQBYP7RIfXN03fdbkQmOcHGajYN67ffho/ITBOJsy6jZEzeTvgNC
-	LJZwkKKxVNBboqzt64j2nDgu0ocg60kwClnw3rWjQMaeJHdQ7LgxtHes3LUE0TG4wCl/YjFMr408z
-	7ytTgKcXon+HliVjmtbl/J6mkqs8+WSGiEbYHMnnkiZfv/PECduAH1ACpg5vgUUoKLUUp/AZavclT
-	8GnGDZq6Ze/sAUcIjvhSWEuVWcxh5D97M7eInU4UkH21SqDVWL4dsijXZ3QdMxJJC/hKnig8p+3sv
-	gI3pclnPQOq5ASz7XMYA==;
+	List-Owner; bh=mNNuDoEbioBIxuWN6B4fSzUHDwZyDoly9+V9EqJPCqQ=; b=QP0r0xEVtcrgGx
+	wn9Ii27gd3NkkoyGOFwK7rkU4vMxinaMLMzEvZPf94czg/MvsYSli7VigzpAIQ/boLqLMABUm+Kas
+	NDxK+dvaE7bNY6yonFpALiqn8f4vzO1cfleBiI8pSQpQJSqu1/+D8i5pPNgGMHyop/tZAXqTMUafD
+	1hT4W9B4U0dcWgfxGqWogLRR3ogN7UBsyBsi+lwb8WldW6rMrLIn7pcA2QWso+BwzqRNEBuEU6ofM
+	TUAm9/DQuLgblNroDtJ6pijg3IYXaip4XBy2naicnwjOwW1Zv7CRyfrITATaoFta9Ll+rixx355jv
+	8/xwjFQS8ukdgiMd9dGQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iD8O2-000306-DD; Wed, 25 Sep 2019 14:35:22 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iD8O3-000312-L2; Wed, 25 Sep 2019 14:35:23 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iD8Ny-0002xh-KI
+ id 1iD8Nz-0002y2-4n
  for linux-mediatek@lists.infradead.org; Wed, 25 Sep 2019 14:35:20 +0000
-X-UUID: a290647d83eb4e8eb3166d5458e449d6-20190925
-X-UUID: a290647d83eb4e8eb3166d5458e449d6-20190925
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+X-UUID: 886e013d982f4992a152ec1204b50d6a-20190925
+X-UUID: 886e013d982f4992a152ec1204b50d6a-20190925
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1245789855; Wed, 25 Sep 2019 06:35:16 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 25 Sep 2019 07:35:15 -0700
+ with ESMTP id 855683542; Wed, 25 Sep 2019 06:35:17 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 25 Sep 2019 07:35:16 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 25 Sep 2019 22:35:13 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 25 Sep 2019 22:35:15 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 25 Sep 2019 22:35:13 +0800
+ Frontend Transport; Wed, 25 Sep 2019 22:35:15 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Thierry Reding
  <thierry.reding@gmail.com>
-Subject: [PATCH v10 11/12] dt-bindings: pwm: update bindings for MT7629 SoC
-Date: Wed, 25 Sep 2019 22:32:36 +0800
-Message-ID: <1569421957-20765-12-git-send-email-sam.shih@mediatek.com>
+Subject: [PATCH v10 12/12] arm: dts: mediatek: add mt7629 pwm support
+Date: Wed, 25 Sep 2019 22:32:37 +0800
+Message-ID: <1569421957-20765-13-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1569421957-20765-1-git-send-email-sam.shih@mediatek.com>
 References: <1569421957-20765-1-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2702242E30968DEDA104D16EE9EF6E081F12ABD9B9A4BCE1CE0FBC03203EA9792000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190925_073518_670247_02F5AA85 
-X-CRM114-Status: UNSURE (   9.36  )
+X-CRM114-CacheID: sfid-20190925_073519_188640_4F8C226A 
+X-CRM114-Status: UNSURE (   8.56  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -84,37 +85,44 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Ryder Lee <ryder.lee@mediatek.com>
+This adds pwm support for MT7629.
 
-This updates bindings for MT7629 pwm controller.
-
-Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Signed-off-by: Sam Shih <sam.shih@mediatek.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 ---
-Changes since v7:
-- add a missed Reviewed-by tag back from v1:
-https://patchwork.kernel.org/patch/10769381/
-Changes since v1:
-- add a Reviewed-by tag
+Changes since v10:
+- Use "mediatek,mt7629-pwm" as compatible string
+- Fix reg setting
 
 ---
- Documentation/devicetree/bindings/pwm/pwm-mediatek.txt | 1 +
- 1 file changed, 1 insertion(+)
+ arch/arm/boot/dts/mt7629.dtsi | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-index 975d7871830d..744deea8a256 100644
---- a/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-+++ b/Documentation/devicetree/bindings/pwm/pwm-mediatek.txt
-@@ -6,6 +6,7 @@ Required properties:
-    - "mediatek,mt7622-pwm": found on mt7622 SoC.
-    - "mediatek,mt7623-pwm": found on mt7623 SoC.
-    - "mediatek,mt7628-pwm": found on mt7628 SoC.
-+   - "mediatek,mt7629-pwm": found on mt7629 SoC.
-  - reg: physical base address and length of the controller's registers.
-  - #pwm-cells: must be 2. See pwm.txt in this directory for a description of
-    the cell format.
+diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
+index 9608bc2ccb3f..6f3f1430ca84 100644
+--- a/arch/arm/boot/dts/mt7629.dtsi
++++ b/arch/arm/boot/dts/mt7629.dtsi
+@@ -241,6 +241,21 @@
+ 			status = "disabled";
+ 		};
+ 
++		pwm: pwm@11006000 {
++			compatible = "mediatek,mt7629-pwm";
++			reg = <0x11006000 0x1000>;
++			interrupts = <GIC_SPI 77 IRQ_TYPE_LEVEL_LOW>;
++			clocks = <&topckgen CLK_TOP_PWM_SEL>,
++				 <&pericfg CLK_PERI_PWM_PD>,
++				 <&pericfg CLK_PERI_PWM1_PD>;
++			clock-names = "top", "main", "pwm1";
++			assigned-clocks = <&topckgen CLK_TOP_PWM_SEL>;
++			assigned-clock-parents =
++					<&topckgen CLK_TOP_UNIVPLL2_D4>;
++			num-pwms = <1>;
++			status = "disabled";
++		};
++
+ 		i2c: i2c@11007000 {
+ 			compatible = "mediatek,mt7629-i2c",
+ 				     "mediatek,mt2712-i2c";
 -- 
 2.17.1
 
