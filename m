@@ -2,64 +2,219 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF058BEEB2
-	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Sep 2019 11:47:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04217BEFE7
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Sep 2019 12:44:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=abZQwCNT19UMZwedRnPnpFc2/be9GZySNewvaXhA3bw=; b=VLxdbeUVfRm/EW
-	lQLjFlRjZJRJPVgMLyYF0kGH3U7dV9wFJM8KQhFsgu2m1FJFOnJwgab0FvOylQrMoUQULvS7JkLKy
-	HnVlzWKcjFMY2OEcBcv3miHIz33K22+Qc/3lym08rdPqDcnP94RQ7IqTyNwdZ0v6eu/VTQGtWRC0/
-	g6I3QahkKcmlmL3rm3ZrVWOgfMEBYj6OHbwX0aEcFXaGMvwpwCm3xL4o+2OpIwCCY4XPFRnrWrf6C
-	3S+kc9JysQV5KK6pKAb9h3KzR5S/l1y03crtgs5yQIBnGAsGSRQSAQN99vWfPTg8BVs27w8UfZbIm
-	H8n7sEYb/VgnnHlN1OSg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=L0IJSTepxgsTQqKqpJ3urLHBwY5kC50gV0p1AozWZDA=; b=S4eBWQnBeycyld
+	al9iwniyUrN5rBGACt/d1TA+a3Y4szn0NJAsyDTU+P1W2suQw6Nts8O22TqO+wfKFzV+FvqJzBIhT
+	kZSgs0NuP4Wtkvaw9PJo3VeEF2h2bSByS6gh7piIeoC/MU1taFVvIQsrLQQSmmfZLZz7Oy2wofVNx
+	1Brc78mzmc9SdTZyrADJS6qn6iUZ2H3hsJqxr1RvRDqssh4/0IBux9lKabVZy5bqnR8ptarlz31RJ
+	CO023aIXhJmnAWAFnnRD+IaxnDnuoia9y+NIn28CD/HJsAJBRRPpSsLE3kU7Nn4DSGYI8YD5p/PEw
+	TcCLTslSV3ldOeSh6mUw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iDQMp-0008Cj-NH; Thu, 26 Sep 2019 09:47:19 +0000
-Received: from lb2-smtp-cloud7.xs4all.net ([194.109.24.28])
+	id 1iDRFn-0002bh-38; Thu, 26 Sep 2019 10:44:07 +0000
+Received: from smtprelay-out1.synopsys.com ([198.182.47.102])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iDQMX-00082k-Dr; Thu, 26 Sep 2019 09:47:05 +0000
-Received: from [IPv6:2001:420:44c1:2577:ecda:45b4:8d5:2e68]
- ([IPv6:2001:420:44c1:2577:ecda:45b4:8d5:2e68])
- by smtp-cloud7.xs4all.net with ESMTPA
- id DQMPiCwYX9D4hDQMSi4PBY; Thu, 26 Sep 2019 11:46:57 +0200
-Subject: Re: [PATCH v3 5/5] media: platform: Add jpeg dec/enc feature
-To: Xia Jiang <xia.jiang@mediatek.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- Rob Herring <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Rick Chang <rick.chang@mediatek.com>
-References: <20190924074303.22713-1-xia.jiang@mediatek.com>
- <20190924074303.22713-6-xia.jiang@mediatek.com>
-From: Hans Verkuil <hverkuil-cisco@xs4all.nl>
-Message-ID: <1298ebe9-0109-1994-302d-b234e1f839ba@xs4all.nl>
-Date: Thu, 26 Sep 2019 11:46:53 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
-MIME-Version: 1.0
-In-Reply-To: <20190924074303.22713-6-xia.jiang@mediatek.com>
+ id 1iDRFX-0002Sz-Py; Thu, 26 Sep 2019 10:43:54 +0000
+Received: from mailhost.synopsys.com (badc-mailhost2.synopsys.com
+ [10.192.0.18])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+ (No client certificate requested)
+ by smtprelay-out1.synopsys.com (Postfix) with ESMTPS id 66F39C0480;
+ Thu, 26 Sep 2019 10:43:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=synopsys.com; s=mail;
+ t=1569494627; bh=mqga0snLfE12Jrt0b/qfwvU35Ivg+d/d8F62Vx4mmRE=;
+ h=From:To:CC:Subject:Date:References:In-Reply-To:From;
+ b=Kr1mEQPDKInc14PeH7yM0RUDRuV2PnrDqpW5uq/gMZSx9amJGmH9wpe7Hne2HLvlo
+ 3+rP+Y736/HPFAtr1wn6fclTbtsMsmOqjsqVxrfm/jS02NXgQ+BIT+GXNd5xsLvobC
+ 51H7dv51+6wR6hRZcWi3l+WIcf2kISJeOw5oPRM9yXiD/X6qwRAhNE3lci6GFCrgBN
+ ddtFam6dPU1r1MFtbNN9+E0+LELIVyAB1Q4tpWpZUKj5Vs2lATK6XRYUQg7NMnnL/D
+ GYD0NSqY6cE4/pNrH3kYS5iQPv1CoRKCQCohaJ3HS56+6ocdOApHvg20Nn1J+9l7er
+ HNJO6MBJPSA3g==
+Received: from US01WEHTC3.internal.synopsys.com
+ (us01wehtc3.internal.synopsys.com [10.15.84.232])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mailhost.synopsys.com (Postfix) with ESMTPS id A614EA0067;
+ Thu, 26 Sep 2019 10:43:35 +0000 (UTC)
+Received: from US01WEHTC2.internal.synopsys.com (10.12.239.237) by
+ US01WEHTC3.internal.synopsys.com (10.15.84.232) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Thu, 26 Sep 2019 03:43:25 -0700
+Received: from US01HYBRID2.internal.synopsys.com (10.15.246.24) by
+ US01WEHTC2.internal.synopsys.com (10.12.239.237) with Microsoft SMTP Server
+ (TLS) id 14.3.408.0; Thu, 26 Sep 2019 03:43:25 -0700
+Received: from NAM04-BN3-obe.outbound.protection.outlook.com (10.13.134.195)
+ by mrs.synopsys.com (10.15.246.24) with Microsoft SMTP Server (TLS) id
+ 14.3.408.0; Thu, 26 Sep 2019 03:43:25 -0700
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=is/kprMS5faVvCz7edkkuVAp6rOYL6xczLEfwaEsHqYo8zv6tM9b2BuUcGTSssRaIiHzOtYSdzT8mTM0Wdt6sSpyD0ZCsvcQ3qwPCI9CrG/jLsMoQOI/HthgDuezwltbhfLbMV7+2Oivs2y1x9en8PuCYmPJVIJJL6ZA4nkG074ftwnWsId3X2MZ3Nlui9tjS8M5dkfElJpWVOlMb9yKNZoRZ7qYetRhYRr8R3/E06itEw0EvG6TdzK+kQftCSblzLL9v9g/CDQOZjrbgXyd9hUvs36MAVf6REX6ZhZba80XSmWZh3yK/oBmHQGGokyEqVAAGIxHHbqagPnkrVdtyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=3FU44I+fh9UBEcuIGGPeJ7Mqi6Gh3jjuhObAnW5l6Pc=;
+ b=BfcsRD/qi8UXtU6wGmWB+PRNgkRIbbaAQbmMHhBIk1rX6vCAg9WXbjt75DRo1Y5t+b9vOyESZcs9S/pqBGGjIrcQNRNvjYxQrAfQpGVNVQS/jDB3tI1/e0nON1pjSHypISPmun/KXXlRBmf1cP4eExTO4/kvZi1eybQj69jMbf8dFq6pP4a4aiv4jKczC/y3kBUEsLMZSNrRatITmWo2gg6I4azrLyLtrinJ0ey7dvod7aKpvRma239KsKhsFXV+quAEZmDJlaTTEQzbHIEdQsKSY2qPYkyihmoQMtlFPWsEalZzatapBmQoiN8+gAnW58y92yiP5x90noa8eHcfgQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=synopsys.com; dmarc=pass action=none header.from=synopsys.com;
+ dkim=pass header.d=synopsys.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=synopsys.onmicrosoft.com; s=selector2-synopsys-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=3FU44I+fh9UBEcuIGGPeJ7Mqi6Gh3jjuhObAnW5l6Pc=;
+ b=Gy8gmfEDWxz9YwNoqOrLMwVyoSI75QIv/4mQRmztN3EhjFoECAPdJrXM5g7NqFfAu8c9n07s6LAbDQksfZWwWKb239VuNnQlQzWT/+cxkPBeLKbwubT5y94dsc4RoPMe60+ddThhl3ggdjAznfAj0OUX6e9tVKlMUTwbvEynC2A=
+Received: from DM6PR12MB4010.namprd12.prod.outlook.com (10.255.175.83) by
+ DM6PR12MB3561.namprd12.prod.outlook.com (20.178.199.24) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2284.26; Thu, 26 Sep 2019 10:43:22 +0000
+Received: from DM6PR12MB4010.namprd12.prod.outlook.com
+ ([fe80::dd4:2e5:e564:8684]) by DM6PR12MB4010.namprd12.prod.outlook.com
+ ([fe80::dd4:2e5:e564:8684%5]) with mapi id 15.20.2284.028; Thu, 26 Sep 2019
+ 10:43:22 +0000
+From: Gustavo Pimentel <Gustavo.Pimentel@synopsys.com>
+To: Rob Herring <robh@kernel.org>, "linux-pci@vger.kernel.org"
+ <linux-pci@vger.kernel.org>, Bjorn Helgaas <bhelgaas@google.com>, "Lorenzo
+ Pieralisi" <lorenzo.pieralisi@arm.com>
+Subject: RE: [PATCH 06/11] PCI: of: Add inbound resource parsing to helpers
+Thread-Topic: [PATCH 06/11] PCI: of: Add inbound resource parsing to helpers
+Thread-Index: AQHVcyGgfsQUUII3iES1szl1M3Fheqc9yAKA
+Date: Thu, 26 Sep 2019 10:43:22 +0000
+Message-ID: <DM6PR12MB4010C707B378530452747738DA860@DM6PR12MB4010.namprd12.prod.outlook.com>
+References: <20190924214630.12817-1-robh@kernel.org>
+ <20190924214630.12817-7-robh@kernel.org>
+In-Reply-To: <20190924214630.12817-7-robh@kernel.org>
+Accept-Language: en-US
 Content-Language: en-US
-X-CMAE-Envelope: MS4wfKx7IkYJyu+58YFMDqbapBJnWJAihrzPfpf0k2T657NjnBnsC6YoA3Xa/jSq8ENeppM9Amb0cREx0PJKM8btNplPoMd4aIbMWX0E9MCmE8KzXZUIqQb0
- yZxnkKDHZkK4LcdfP9eZu1dZDfqPVcwBNAmoPNI9EdtCW6D4Ll5Pi0TFUOmlwYKUlHYoPqwZLp5U4mVIeNrERQLJ+1wNyIZ/7MGp5j8iyXBTrWinEI/gWcNm
- IGjTXArWksM1vuUvgdRFQtp5ObrRu0r11hPh+Pw4DosYP5YnUMVGsgYcdWF17lT3SABoTk7C1lzO3ec+LZUsPFaup9B5wYe4l2fPbQaOmGfCRcfrJHi7Ys5Q
- yBV2VaCVNf4qkvPNdGQA1WB0ZzLErpXA+uoRvbQ9Af1vm3E+bDzWOFi6nKMCtUSD5OW1VewRdoKF0DqADh4m79GZIgC2Swm5VZRtU4+KcVWdrOefmrDa+MQ1
- EFOLRuGIqBcrYgBHPxpFyowajql0oDcB0RobcfbUPBtG62/v1K4odXhcyJR7CQ+b4aiFVU2105NwtXHNGOWug9fbjF9CHUeYnsNiWWBPk27sJkfzUCR7qv+S
- sQgVUdQhMTfsFNf5C99hOE2qyZfxWGAbkJ/cR5B1xitY3BhAz24n8xmCdJeZYmm2G6xfLmENAHDgJpEAUQ8b9rDe9FiGhgIVhADBfnTPDguZ/w2IjA2YMPcN
- NCoVnV3eEeR4pJmYSBX7+1hKwgcIAZgukP8Ardd/tRX5AImw6W3/gg==
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-dg-ref: =?us-ascii?Q?PG1ldGE+PGF0IG5tPSJib2R5LnR4dCIgcD0iYzpcdXNlcnNcZ3VzdGF2b1xh?=
+ =?us-ascii?Q?cHBkYXRhXHJvYW1pbmdcMDlkODQ5YjYtMzJkMy00YTQwLTg1ZWUtNmI4NGJh?=
+ =?us-ascii?Q?MjllMzViXG1zZ3NcbXNnLTcyZDAzODg5LWUwNGEtMTFlOS05ODhmLWY4OTRj?=
+ =?us-ascii?Q?MjczODA0MlxhbWUtdGVzdFw3MmQwMzg4Yi1lMDRhLTExZTktOTg4Zi1mODk0?=
+ =?us-ascii?Q?YzI3MzgwNDJib2R5LnR4dCIgc3o9IjE2MjA3IiB0PSIxMzIxMzk2ODE5ODAx?=
+ =?us-ascii?Q?NjEyNDMiIGg9IlFQSW9wSlQ2ZUVrbDNzeTY0Q0NIUWRaM3pXWT0iIGlkPSIi?=
+ =?us-ascii?Q?IGJsPSIwIiBibz0iMSIgY2k9ImNBQUFBRVJIVTFSU1JVRk5DZ1VBQUJRSkFB?=
+ =?us-ascii?Q?RGJIQ2sxVjNUVkFSb2s3RW12SEtHTEdpVHNTYThjb1lzT0FBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFIQUFBQUNrQ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFFQUFRQUJBQUFBRUdJWXpRQUFBQUFBQUFBQUFBQUFBSjRBQUFCbUFHa0Fi?=
+ =?us-ascii?Q?Z0JoQUc0QVl3QmxBRjhBY0FCc0FHRUFiZ0J1QUdrQWJnQm5BRjhBZHdCaEFI?=
+ =?us-ascii?Q?UUFaUUJ5QUcwQVlRQnlBR3NBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUVBQUFBQUFBQUFBZ0FBQUFBQW5nQUFBR1lBYndCMUFHNEFaQUJ5QUhrQVh3?=
+ =?us-ascii?Q?QndBR0VBY2dCMEFHNEFaUUJ5QUhNQVh3Qm5BR1lBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFRQUFBQUFBQUFBQ0FB?=
+ =?us-ascii?Q?QUFBQUNlQUFBQVpnQnZBSFVBYmdCa0FISUFlUUJmQUhBQVlRQnlBSFFBYmdC?=
+ =?us-ascii?Q?bEFISUFjd0JmQUhNQVlRQnRBSE1BZFFCdUFHY0FYd0JqQUc4QWJnQm1BQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFCQUFBQUFBQUFBQUlBQUFBQUFKNEFBQUJtQUc4?=
+ =?us-ascii?Q?QWRRQnVBR1FBY2dCNUFGOEFjQUJoQUhJQWRBQnVBR1VBY2dCekFGOEFjd0Jo?=
+ =?us-ascii?Q?QUcwQWN3QjFBRzRBWndCZkFISUFaUUJ6QUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBRUFBQUFBQUFBQUFnQUFBQUFBbmdBQUFHWUFid0IxQUc0QVpBQnlBSGtB?=
+ =?us-ascii?Q?WHdCd0FHRUFjZ0IwQUc0QVpRQnlBSE1BWHdCekFHMEFhUUJqQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVFBQUFBQUFBQUFD?=
+ =?us-ascii?Q?QUFBQUFBQ2VBQUFBWmdCdkFIVUFiZ0JrQUhJQWVRQmZBSEFBWVFCeUFIUUFi?=
+ =?us-ascii?Q?Z0JsQUhJQWN3QmZBSE1BZEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUJBQUFBQUFBQUFBSUFBQUFBQUo0QUFBQm1B?=
+ =?us-ascii?Q?RzhBZFFCdUFHUUFjZ0I1QUY4QWNBQmhBSElBZEFCdUFHVUFjZ0J6QUY4QWRB?=
+ =?us-ascii?Q?QnpBRzBBWXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFFQUFBQUFBQUFBQWdBQUFBQUFuZ0FBQUdZQWJ3QjFBRzRBWkFCeUFI?=
+ =?us-ascii?Q?a0FYd0J3QUdFQWNnQjBBRzRBWlFCeUFITUFYd0IxQUcwQVl3QUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUUFBQUFBQUFB?=
+ =?us-ascii?Q?QUNBQUFBQUFDZUFBQUFad0IwQUhNQVh3QndBSElBYndCa0FIVUFZd0IwQUY4?=
+ =?us-ascii?Q?QWRBQnlBR0VBYVFCdUFHa0FiZ0JuQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQkFBQUFBQUFBQUFJQUFBQUFBSjRBQUFC?=
+ =?us-ascii?Q?ekFHRUFiQUJsQUhNQVh3QmhBR01BWXdCdkFIVUFiZ0IwQUY4QWNBQnNBR0VB?=
+ =?us-ascii?Q?YmdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUVBQUFBQUFBQUFBZ0FBQUFBQW5nQUFBSE1BWVFCc0FHVUFjd0Jm?=
+ =?us-ascii?Q?QUhFQWRRQnZBSFFBWlFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFRQUFBQUFB?=
+ =?us-ascii?Q?QUFBQ0FBQUFBQUNlQUFBQWN3QnVBSEFBY3dCZkFHd0FhUUJqQUdVQWJnQnpB?=
+ =?us-ascii?Q?R1VBWHdCMEFHVUFjZ0J0QUY4QU1RQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCQUFBQUFBQUFBQUlBQUFBQUFKNEFB?=
+ =?us-ascii?Q?QUJ6QUc0QWNBQnpBRjhBYkFCcEFHTUFaUUJ1QUhNQVpRQmZBSFFBWlFCeUFH?=
+ =?us-ascii?Q?MEFYd0J6QUhRQWRRQmtBR1VBYmdCMEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBRUFBQUFBQUFBQUFnQUFBQUFBbmdBQUFIWUFad0JmQUdzQVpR?=
+ =?us-ascii?Q?QjVBSGNBYndCeUFHUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB?=
+ =?us-ascii?Q?QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVFBQUFB?=
+ =?us-ascii?Q?QUFBQUFDQUFBQUFBQT0iLz48L21ldGE+?=
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=gustavo@synopsys.com; 
+x-originating-ip: [83.174.63.141]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 1bb308a6-8252-40c9-977d-08d7426e5a8c
+x-microsoft-antispam: BCL:0; PCL:0;
+ RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600167)(711020)(4605104)(1401327)(2017052603328)(7193020);
+ SRVR:DM6PR12MB3561; 
+x-ms-traffictypediagnostic: DM6PR12MB3561:
+x-ms-exchange-transport-forked: True
+x-microsoft-antispam-prvs: <DM6PR12MB3561AF645B1A6EA4317B88E9DA860@DM6PR12MB3561.namprd12.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:4714;
+x-forefront-prvs: 0172F0EF77
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10019020)(366004)(346002)(136003)(376002)(396003)(39860400002)(199004)(189003)(99286004)(54906003)(110136005)(316002)(66066001)(33656002)(7696005)(86362001)(5660300002)(30864003)(52536014)(7416002)(305945005)(74316002)(7736002)(2906002)(186003)(76176011)(478600001)(26005)(102836004)(25786009)(6506007)(53546011)(66946007)(64756008)(76116006)(66446008)(66476007)(66556008)(6116002)(3846002)(476003)(11346002)(446003)(14454004)(486006)(71190400001)(4326008)(14444005)(256004)(2501003)(71200400001)(8676002)(81156014)(81166006)(8936002)(9686003)(229853002)(6436002)(55016002)(6246003);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:DM6PR12MB3561;
+ H:DM6PR12MB4010.namprd12.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; A:1; MX:1; 
+received-spf: None (protection.outlook.com: synopsys.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam-message-info: I0G6H+KG4ukO+4lQcOsCUosSzsVQsgFfGtJiaVJIp3T0N0FB8omg2TF09xLJ+NU8SQeNPhs0jV5AlP7mqBGnRqmKrm2j/TQS/A0IZ+Uz5aujyd9EC+uoefqy6jM6+DNF6K2gz80npM+Im4f9jJuuKVcga1bFFbXpNF5mCq/pzUgl2g7KSONMIAdGJOhRrGa4fU4gRcQ1v45Bj1s3zLrhLaNZoFeSjY7+RQPvlxfsyPyJYITU9LEoCn7+eRZFAwl0A4e8We27PuUPXwnzHrb0SuARsQnhhR6iZDW2FC6qaRHmdhkQaNfLNwoFnHjzAoX63UAP0cpOu5Wct0cMXCixBMO+8oqJpdJ7lwbn7Ngx6sIBQqUkuVa3wMhr6xEhtRVX+KS/t5tkqrdi0xZeS4nQlvdnejUi3K56/6TZIpb9zm8=
+MIME-Version: 1.0
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1bb308a6-8252-40c9-977d-08d7426e5a8c
+X-MS-Exchange-CrossTenant-originalarrivaltime: 26 Sep 2019 10:43:22.7024 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: c33c9f88-1eb7-4099-9700-16013fd9e8aa
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: LTsFZDlA+Ud+S99T4lWodj8QrwO77oyp1EMC97uzWO0ttylJoG9jrrX7Tk2skdy4uD+dYf1EfiGL8p54ez3O/Q==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR12MB3561
+X-OriginatorOrg: synopsys.com
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190926_024701_800986_D740DE2E 
-X-CRM114-Status: GOOD (  23.93  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190926_034351_900318_6DCEB07B 
+X-CRM114-Status: GOOD (  12.71  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [194.109.24.28 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -71,1148 +226,425 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
- linux-kernel@vger.kernel.org, Tomasz Figa <tfiga@chromium.org>,
- linux-mediatek@lists.infradead.org, linux-media@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org,
- Marek Szyprowski <m.szyprowski@samsung.com>
+Cc: Heiko Stuebner <heiko@sntech.de>,
+ Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
+ Toan Le <toan@os.amperecomputing.com>, Will Deacon <will@kernel.org>,
+ Ryder Lee <ryder.lee@mediatek.com>, Michal Simek <michal.simek@xilinx.com>,
+ "linux-rockchip@lists.infradead.org" <linux-rockchip@lists.infradead.org>,
+ "bcm-kernel-feedback-list@broadcom.com"
+ <bcm-kernel-feedback-list@broadcom.com>, Shawn Lin <shawn.lin@rock-chips.com>,
+ Ray Jui <rjui@broadcom.com>, Hou Zhiqiang <Zhiqiang.Hou@nxp.com>,
+ Simon Horman <horms@verge.net.au>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Scott Branden <sbranden@broadcom.com>, Jingoo Han <jingoohan1@gmail.com>,
+ "rfi@lists.rocketboards.org" <rfi@lists.rocketboards.org>,
+ "linux-renesas-soc@vger.kernel.org" <linux-renesas-soc@vger.kernel.org>,
+ Tom Joseph <tjoseph@cadence.com>,
+ Gustavo Pimentel <Gustavo.Pimentel@synopsys.com>,
+ Ley Foon  Tan <lftan@altera.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 9/24/19 9:43 AM, Xia Jiang wrote:
-> Add mtk jpeg encode v4l2 driver based on jpeg decode, because that jpeg
-> decode and encode have great similarities with function operation.
+On Tue, Sep 24, 2019 at 22:46:25, Rob Herring <robh@kernel.org> wrote:
+
+> Extend devm_of_pci_get_host_bridge_resources() and
+> pci_parse_request_of_pci_ranges() helpers to also parse the inbound
+> addresses from DT 'dma-ranges' and populate a resource list with the
+> translated addresses. This will help ensure 'dma-ranges' is always
+> parsed in a consistent way.
 > 
-> Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
+> Cc: Jingoo Han <jingoohan1@gmail.com>
+> Cc: Gustavo Pimentel <gustavo.pimentel@synopsys.com>
+> Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
+> Cc: Bjorn Helgaas <bhelgaas@google.com>
+> Cc: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+> Cc: Will Deacon <will@kernel.org>
+> Cc: Linus Walleij <linus.walleij@linaro.org>
+> Cc: Toan Le <toan@os.amperecomputing.com>
+> Cc: Ley Foon Tan <lftan@altera.com>
+> Cc: Tom Joseph <tjoseph@cadence.com>
+> Cc: Ray Jui <rjui@broadcom.com>
+> Cc: Scott Branden <sbranden@broadcom.com>
+> Cc: bcm-kernel-feedback-list@broadcom.com
+> Cc: Ryder Lee <ryder.lee@mediatek.com>
+> Cc: Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>
+> Cc: Hou Zhiqiang <Zhiqiang.Hou@nxp.com>
+> Cc: Simon Horman <horms@verge.net.au>
+> Cc: Shawn Lin <shawn.lin@rock-chips.com>
+> Cc: Heiko Stuebner <heiko@sntech.de>
+> Cc: Michal Simek <michal.simek@xilinx.com>
+> Cc: rfi@lists.rocketboards.org
+> Cc: linux-mediatek@lists.infradead.org
+> Cc: linux-renesas-soc@vger.kernel.org
+> Cc: linux-rockchip@lists.infradead.org
+> Signed-off-by: Rob Herring <robh@kernel.org>
 > ---
-> v3: delete Change-Id
->     only test once handler->error after the last v4l2_ctrl_new_std()
->     seperate changes of v4l2-ctrls.c and v4l2-controls.h to new patch
-> v2: fix compliance test fail, check created buffer size in driver
-> ---
->  drivers/media/platform/mtk-jpeg/Makefile      |   5 +-
->  .../media/platform/mtk-jpeg/mtk_jpeg_core.c   | 735 ++++++++++++++----
->  .../media/platform/mtk-jpeg/mtk_jpeg_core.h   | 114 ++-
->  .../media/platform/mtk-jpeg/mtk_jpeg_dec_hw.h |   7 +-
->  .../media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c | 175 +++++
->  .../media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h |  60 ++
->  .../platform/mtk-jpeg/mtk_jpeg_enc_reg.h      |  49 ++
->  7 files changed, 975 insertions(+), 170 deletions(-)
->  create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.c
->  create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_hw.h
->  create mode 100644 drivers/media/platform/mtk-jpeg/mtk_jpeg_enc_reg.h
+>  .../pci/controller/dwc/pcie-designware-host.c |  3 +-
+>  drivers/pci/controller/pci-aardvark.c         |  2 +-
+>  drivers/pci/controller/pci-ftpci100.c         |  3 +-
+>  drivers/pci/controller/pci-host-common.c      |  2 +-
+>  drivers/pci/controller/pci-v3-semi.c          |  2 +-
+>  drivers/pci/controller/pci-versatile.c        |  2 +-
+>  drivers/pci/controller/pci-xgene.c            |  1 +
+>  drivers/pci/controller/pcie-altera.c          |  2 +-
+>  drivers/pci/controller/pcie-cadence-host.c    |  2 +-
+>  drivers/pci/controller/pcie-iproc-platform.c  |  1 +
+>  drivers/pci/controller/pcie-mediatek.c        |  2 +-
+>  drivers/pci/controller/pcie-mobiveil.c        |  4 +-
+>  drivers/pci/controller/pcie-rcar.c            |  3 +-
+>  drivers/pci/controller/pcie-rockchip-host.c   |  3 +-
+>  drivers/pci/controller/pcie-xilinx-nwl.c      |  2 +-
+>  drivers/pci/controller/pcie-xilinx.c          |  2 +-
+>  drivers/pci/of.c                              | 44 ++++++++++++++++++-
+>  drivers/pci/pci.h                             |  8 +++-
+>  include/linux/pci.h                           |  2 +
+>  19 files changed, 72 insertions(+), 18 deletions(-)
 > 
-> diff --git a/drivers/media/platform/mtk-jpeg/Makefile b/drivers/media/platform/mtk-jpeg/Makefile
-> index 48516dcf96e6..76c33aad0f3f 100644
-> --- a/drivers/media/platform/mtk-jpeg/Makefile
-> +++ b/drivers/media/platform/mtk-jpeg/Makefile
-> @@ -1,3 +1,6 @@
->  # SPDX-License-Identifier: GPL-2.0-only
-> -mtk_jpeg-objs := mtk_jpeg_core.o mtk_jpeg_dec_hw.o mtk_jpeg_dec_parse.o
-> +mtk_jpeg-objs := mtk_jpeg_core.o \
-> +		 mtk_jpeg_dec_hw.o \
-> +		 mtk_jpeg_dec_parse.o \
-> +		 mtk_jpeg_enc_hw.o
->  obj-$(CONFIG_VIDEO_MEDIATEK_JPEG) += mtk_jpeg.o
-> diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-> index 5f0990fce8ef..aa18b01802ed 100644
-> --- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-> +++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-> @@ -3,6 +3,7 @@
->   * Copyright (c) 2016 MediaTek Inc.
->   * Author: Ming Hsiu Tsai <minghsiu.tsai@mediatek.com>
->   *         Rick Chang <rick.chang@mediatek.com>
-> + *         Xia Jiang <xia.jiang@mediatek.com>
->   */
+> diff --git a/drivers/pci/controller/dwc/pcie-designware-host.c b/drivers/pci/controller/dwc/pcie-designware-host.c
+> index f93252d0da5b..0743ae64bb0f 100644
+> --- a/drivers/pci/controller/dwc/pcie-designware-host.c
+> +++ b/drivers/pci/controller/dwc/pcie-designware-host.c
+> @@ -342,7 +342,8 @@ int dw_pcie_host_init(struct pcie_port *pp)
+>  		return -ENOMEM;
 >  
->  #include <linux/clk.h>
-> @@ -23,6 +24,7 @@
->  #include <media/videobuf2-dma-contig.h>
->  #include <soc/mediatek/smi.h>
->  
-> +#include "mtk_jpeg_enc_hw.h"
->  #include "mtk_jpeg_dec_hw.h"
->  #include "mtk_jpeg_core.h"
->  #include "mtk_jpeg_dec_parse.h"
-> @@ -31,7 +33,8 @@ static struct mtk_jpeg_fmt mtk_jpeg_formats[] = {
->  	{
->  		.fourcc		= V4L2_PIX_FMT_JPEG,
->  		.colplanes	= 1,
-> -		.flags		= MTK_JPEG_FMT_FLAG_DEC_OUTPUT,
-> +		.flags		= MTK_JPEG_FMT_FLAG_DEC_OUTPUT |
-> +					MTK_JPEG_FMT_FLAG_ENC_CAPTURE,
->  	},
->  	{
->  		.fourcc		= V4L2_PIX_FMT_YUV420M,
-> @@ -51,6 +54,42 @@ static struct mtk_jpeg_fmt mtk_jpeg_formats[] = {
->  		.v_align	= 3,
->  		.flags		= MTK_JPEG_FMT_FLAG_DEC_CAPTURE,
->  	},
-> +	{
-> +		.fourcc		= V4L2_PIX_FMT_NV12M,
-> +		.h_sample	= {4, 2, 2},
-> +		.v_sample	= {4, 2, 2},
-> +		.colplanes	= 2,
-> +		.h_align	= 4,
-> +		.v_align	= 4,
-> +		.flags		= MTK_JPEG_FMT_FLAG_ENC_OUTPUT,
-> +	},
-> +	{
-> +		.fourcc		= V4L2_PIX_FMT_NV21M,
-> +		.h_sample	= {4, 2, 2},
-> +		.v_sample	= {4, 2, 2},
-> +		.colplanes	= 2,
-> +		.h_align	= 4,
-> +		.v_align	= 4,
-> +		.flags		= MTK_JPEG_FMT_FLAG_ENC_OUTPUT,
-> +	},
-> +	{
-> +		.fourcc		= V4L2_PIX_FMT_YUYV,
-> +		.h_sample	= {4, 2, 2},
-> +		.v_sample	= {4, 4, 4},
-> +		.colplanes	= 1,
-> +		.h_align	= 4,
-> +		.v_align	= 3,
-> +		.flags		= MTK_JPEG_FMT_FLAG_ENC_OUTPUT,
-> +	},
-> +	{
-> +		.fourcc		= V4L2_PIX_FMT_YVYU,
-> +		.h_sample	= {4, 2, 2},
-> +		.v_sample	= {4, 4, 4},
-> +		.colplanes	= 1,
-> +		.h_align	= 4,
-> +		.v_align	= 3,
-> +		.flags		= MTK_JPEG_FMT_FLAG_ENC_OUTPUT,
-> +	},
->  };
->  
->  #define MTK_JPEG_NUM_FORMATS ARRAY_SIZE(mtk_jpeg_formats)
-> @@ -65,11 +104,19 @@ struct mtk_jpeg_src_buf {
->  	struct list_head list;
->  	int flags;
->  	struct mtk_jpeg_dec_param dec_param;
-> +	struct mtk_jpeg_enc_param enc_param;
->  };
->  
-> +#define MTK_MAX_CTRLS_HINT	20
-> +
->  static int debug;
->  module_param(debug, int, 0644);
->  
-> +static inline struct mtk_jpeg_ctx *ctrl_to_ctx(struct v4l2_ctrl *ctrl)
-> +{
-> +	return container_of(ctrl->handler, struct mtk_jpeg_ctx, ctrl_hdl);
-> +}
-> +
->  static inline struct mtk_jpeg_ctx *mtk_jpeg_fh_to_ctx(struct v4l2_fh *fh)
->  {
->  	return container_of(fh, struct mtk_jpeg_ctx, fh);
-> @@ -86,10 +133,70 @@ static int mtk_jpeg_querycap(struct file *file, void *priv,
->  {
->  	struct mtk_jpeg_dev *jpeg = video_drvdata(file);
->  
-> -	strscpy(cap->driver, MTK_JPEG_NAME " decoder", sizeof(cap->driver));
-> -	strscpy(cap->card, MTK_JPEG_NAME " decoder", sizeof(cap->card));
-> -	snprintf(cap->bus_info, sizeof(cap->bus_info), "platform:%s",
-> -		 dev_name(jpeg->dev));
-> +	strscpy(cap->driver, MTK_JPEG_NAME, sizeof(cap->driver));
-> +	if (jpeg->mode ==  MTK_JPEG_ENC)
-> +		strscpy(cap->card, MTK_JPEG_NAME " encoder", sizeof(cap->card));
-> +	else
-> +		strscpy(cap->card, MTK_JPEG_NAME " decoder", sizeof(cap->card));
-> +		snprintf(cap->bus_info, sizeof(cap->bus_info), "platform:%s",
-> +			 dev_name(jpeg->dev));
-> +
-> +	return 0;
-> +}
-> +
-> +static int vidioc_jpeg_s_ctrl(struct v4l2_ctrl *ctrl)
-> +{
-> +	struct mtk_jpeg_ctx *ctx = ctrl_to_ctx(ctrl);
-> +	struct jpeg_enc_param *p = &ctx->jpeg_param;
-> +	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
-> +	int ret = 0;
-> +
-> +	switch (ctrl->id) {
-> +	case V4L2_CID_JPEG_RESTART_INTERVAL:
-> +		p->restart_interval = ctrl->val;
-> +		break;
-> +	case V4L2_CID_JPEG_COMPRESSION_QUALITY:
-> +		p->enc_quality = ctrl->val;
-> +		break;
-> +	case V4L2_CID_JPEG_ENABLE_EXIF:
-> +		p->enable_exif = ctrl->val;
-> +		break;
-> +	}
-> +
-> +	v4l2_dbg(2, debug, &jpeg->v4l2_dev, "%s val = %d",
-> +		 v4l2_ctrl_get_name(ctrl->id), ctrl->val);
-> +
-> +	return ret;
-> +}
-> +
-> +static const struct v4l2_ctrl_ops mtk_jpeg_ctrl_ops = {
-> +	.s_ctrl = vidioc_jpeg_s_ctrl,
-> +};
-> +
-> +int mtk_jpeg_ctrls_setup(struct mtk_jpeg_ctx *ctx)
-> +{
-> +	const struct v4l2_ctrl_ops *ops = &mtk_jpeg_ctrl_ops;
-> +	struct v4l2_ctrl_handler *handler = &ctx->ctrl_hdl;
-> +	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
-> +
-> +	v4l2_ctrl_handler_init(handler, MTK_MAX_CTRLS_HINT);
-> +
-> +	if (jpeg->mode == MTK_JPEG_ENC) {
-> +		v4l2_ctrl_new_std(handler, ops, V4L2_CID_JPEG_RESTART_INTERVAL,
-> +				  0, 100, 1, 0);
-> +		v4l2_ctrl_new_std(handler, ops,
-> +				  V4L2_CID_JPEG_COMPRESSION_QUALITY, 48, 100, 1,
-> +				  90);
-> +		v4l2_ctrl_new_std(handler, ops, V4L2_CID_JPEG_ENABLE_EXIF, 0,
-> +				  1, 1, 0);
-> +
-> +		if (handler->error) {
-> +			v4l2_ctrl_handler_free(&ctx->ctrl_hdl);
-> +			return handler->error;
-> +		}
-> +	}
-> +
-> +	v4l2_ctrl_handler_setup(&ctx->ctrl_hdl);
->  
->  	return 0;
->  }
-> @@ -118,23 +225,29 @@ static int mtk_jpeg_enum_fmt(struct mtk_jpeg_fmt *mtk_jpeg_formats, int n,
->  static int mtk_jpeg_enum_fmt_vid_cap(struct file *file, void *priv,
->  				     struct v4l2_fmtdesc *f)
->  {
-> +	struct mtk_jpeg_ctx *ctx = mtk_jpeg_fh_to_ctx(priv);
-> +
->  	return mtk_jpeg_enum_fmt(mtk_jpeg_formats, MTK_JPEG_NUM_FORMATS, f,
-> +				 ctx->jpeg->mode == MTK_JPEG_ENC ?
-> +				 MTK_JPEG_FMT_FLAG_ENC_CAPTURE :
->  				 MTK_JPEG_FMT_FLAG_DEC_CAPTURE);
->  }
->  
->  static int mtk_jpeg_enum_fmt_vid_out(struct file *file, void *priv,
->  				     struct v4l2_fmtdesc *f)
->  {
-> +	struct mtk_jpeg_ctx *ctx = mtk_jpeg_fh_to_ctx(priv);
-> +
->  	return mtk_jpeg_enum_fmt(mtk_jpeg_formats, MTK_JPEG_NUM_FORMATS, f,
-> +				 ctx->jpeg->mode == MTK_JPEG_ENC ?
-> +				 MTK_JPEG_FMT_FLAG_ENC_OUTPUT :
->  				 MTK_JPEG_FMT_FLAG_DEC_OUTPUT);
->  }
->  
-> -static struct mtk_jpeg_q_data *mtk_jpeg_get_q_data(struct mtk_jpeg_ctx *ctx,
-> -						   enum v4l2_buf_type type)
-> +static struct mtk_jpeg_q_data *
-> +mtk_jpeg_get_q_data(struct mtk_jpeg_ctx *ctx, enum v4l2_buf_type type)
->  {
-> -	if (V4L2_TYPE_IS_OUTPUT(type))
-> -		return &ctx->out_q;
-> -	return &ctx->cap_q;
-> +	return V4L2_TYPE_IS_OUTPUT(type) ? &ctx->out_q : &ctx->cap_q;
->  }
->  
->  static struct mtk_jpeg_fmt *mtk_jpeg_find_format(struct mtk_jpeg_ctx *ctx,
-> @@ -143,9 +256,14 @@ static struct mtk_jpeg_fmt *mtk_jpeg_find_format(struct mtk_jpeg_ctx *ctx,
->  {
->  	unsigned int k, fmt_flag;
->  
-> -	fmt_flag = (fmt_type == MTK_JPEG_FMT_TYPE_OUTPUT) ?
-> -		   MTK_JPEG_FMT_FLAG_DEC_OUTPUT :
-> -		   MTK_JPEG_FMT_FLAG_DEC_CAPTURE;
-> +	if (ctx->jpeg->mode ==  MTK_JPEG_ENC)
-> +		fmt_flag = (fmt_type == MTK_JPEG_FMT_TYPE_OUTPUT) ?
-> +			   MTK_JPEG_FMT_FLAG_ENC_OUTPUT :
-> +			   MTK_JPEG_FMT_FLAG_ENC_CAPTURE;
-> +	else
-> +		fmt_flag = (fmt_type == MTK_JPEG_FMT_TYPE_OUTPUT) ?
-> +			   MTK_JPEG_FMT_FLAG_DEC_OUTPUT :
-> +			   MTK_JPEG_FMT_FLAG_DEC_CAPTURE;
->  
->  	for (k = 0; k < MTK_JPEG_NUM_FORMATS; k++) {
->  		struct mtk_jpeg_fmt *fmt = &mtk_jpeg_formats[k];
-> @@ -202,7 +320,7 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
->  {
->  	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
->  	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
-> -	int i;
-> +	int i, align_w, align_h;
->  
->  	memset(pix_mp->reserved, 0, sizeof(pix_mp->reserved));
->  	pix_mp->field = V4L2_FIELD_NONE;
-> @@ -216,36 +334,111 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
->  	pix_mp->pixelformat = fmt->fourcc;
->  
->  	if (q_type == MTK_JPEG_FMT_TYPE_OUTPUT) {
-> -		struct v4l2_plane_pix_format *pfmt = &pix_mp->plane_fmt[0];
-> +		if (jpeg->mode == MTK_JPEG_ENC) {
-> +			pix_mp->height = clamp(pix_mp->height,
-> +					       MTK_JPEG_MIN_HEIGHT,
-> +					       MTK_JPEG_MAX_HEIGHT);
-> +			pix_mp->width = clamp(pix_mp->width,
-> +					      MTK_JPEG_MIN_WIDTH,
-> +					      MTK_JPEG_MAX_WIDTH);
-> +			align_w = pix_mp->width;
-> +			align_h = pix_mp->height;
-> +			align_w = round_up(align_w, 2);
-> +			if (pix_mp->num_planes == 1U) {
-> +				align_w = align_w << 1;
-> +				mtk_jpeg_bound_align_image(&align_w,
-> +							   MTK_JPEG_MIN_WIDTH,
-> +							   MTK_JPEG_MAX_WIDTH,
-> +							   5, &align_h,
-> +							   MTK_JPEG_MIN_HEIGHT,
-> +							   MTK_JPEG_MAX_HEIGHT,
-> +							   3);
-> +				pix_mp->plane_fmt[0].bytesperline = align_w;
-> +				pix_mp->plane_fmt[0].sizeimage =
-> +					align_w * align_h;
-> +			} else if (pix_mp->num_planes == 2U) {
-> +				mtk_jpeg_bound_align_image(&align_w,
-> +							   MTK_JPEG_MIN_WIDTH,
-> +							   MTK_JPEG_MAX_WIDTH,
-> +							   4, &align_h,
-> +							   MTK_JPEG_MIN_HEIGHT,
-> +							   MTK_JPEG_MAX_HEIGHT,
-> +							   4);
-> +				pix_mp->plane_fmt[0].bytesperline = align_w;
-> +				pix_mp->plane_fmt[0].sizeimage =
-> +					align_w * align_h;
-> +				pix_mp->plane_fmt[1].bytesperline = align_w;
-> +				pix_mp->plane_fmt[1].sizeimage =
-> +					(align_w * align_h) / 2;
-> +			} else {
-> +				v4l2_err(&ctx->jpeg->v4l2_dev,
-> +					 "Unsupport num planes = %d\n",
-> +					 pix_mp->num_planes);
-> +			}
-> +			goto end;
-> +		} else {
-> +			struct v4l2_plane_pix_format *pfmt =
-> +						&pix_mp->plane_fmt[0];
-> +
-> +			mtk_jpeg_bound_align_image(&pix_mp->width,
-> +						   MTK_JPEG_MIN_WIDTH,
-> +					   MTK_JPEG_MAX_WIDTH, 0,
-> +						   &pix_mp->height,
-> +						   MTK_JPEG_MIN_HEIGHT,
-> +					   MTK_JPEG_MAX_HEIGHT, 0);
-> +
-> +			pfmt->bytesperline = 0;
-> +			/* Source size must be aligned to 128 */
-> +			pfmt->sizeimage = mtk_jpeg_align(pfmt->sizeimage, 128);
-> +			if (pfmt->sizeimage == 0)
-> +				pfmt->sizeimage = MTK_JPEG_DEFAULT_SIZEIMAGE;
-> +
-> +			goto end;
-> +		}
-> +	}
-
-The differences between capture and output are too large IMHO. I would
-recommend splitting this into different functions, one for the encoder,
-one for the decoder.
-
->  
-> +	/* type is MTK_JPEG_FMT_TYPE_CAPTURE */
-> +	if (jpeg->mode == MTK_JPEG_ENC) {
->  		mtk_jpeg_bound_align_image(&pix_mp->width, MTK_JPEG_MIN_WIDTH,
->  					   MTK_JPEG_MAX_WIDTH, 0,
->  					   &pix_mp->height, MTK_JPEG_MIN_HEIGHT,
->  					   MTK_JPEG_MAX_HEIGHT, 0);
->  
-> -		memset(pfmt->reserved, 0, sizeof(pfmt->reserved));
-> -		pfmt->bytesperline = 0;
-> -		/* Source size must be aligned to 128 */
-> -		pfmt->sizeimage = mtk_jpeg_align(pfmt->sizeimage, 128);
-> -		if (pfmt->sizeimage == 0)
-> -			pfmt->sizeimage = MTK_JPEG_DEFAULT_SIZEIMAGE;
-> -		goto end;
-> +		if (fmt->fourcc == V4L2_PIX_FMT_JPEG) {
-> +			pix_mp->plane_fmt[0].bytesperline = 0;
-> +			pix_mp->plane_fmt[0].sizeimage =
-> +				mtk_jpeg_align(pix_mp->plane_fmt[0].sizeimage,
-> +					       128);
-> +			if (pix_mp->plane_fmt[0].sizeimage == 0)
-> +				pix_mp->plane_fmt[0].sizeimage =
-> +					MTK_JPEG_DEFAULT_SIZEIMAGE;
-> +		}
-> +	} else {
-> +		pix_mp->height = clamp(pix_mp->height, MTK_JPEG_MIN_HEIGHT,
-> +				       MTK_JPEG_MAX_HEIGHT);
-> +		pix_mp->width = clamp(pix_mp->width, MTK_JPEG_MIN_WIDTH,
-> +				      MTK_JPEG_MAX_WIDTH);
-> +		mtk_jpeg_bound_align_image(&pix_mp->width, MTK_JPEG_MIN_WIDTH,
-> +					   MTK_JPEG_MAX_WIDTH, fmt->h_align,
-> +					   &pix_mp->height,
-> +					   MTK_JPEG_MIN_HEIGHT,
-> +					   MTK_JPEG_MAX_HEIGHT, fmt->v_align);
-> +
-> +		for (i = 0; i < fmt->colplanes; i++) {
-> +			struct v4l2_plane_pix_format *pfmt =
-> +					&pix_mp->plane_fmt[i];
-> +			u32 stride = pix_mp->width * fmt->h_sample[i] / 4;
-> +			u32 h = pix_mp->height * fmt->v_sample[i] / 4;
-> +
-> +			pfmt->bytesperline = stride;
-> +			pfmt->sizeimage = stride * h;
-> +		}
->  	}
->  
-> -	/* type is MTK_JPEG_FMT_TYPE_CAPTURE */
-> -	mtk_jpeg_bound_align_image(&pix_mp->width, MTK_JPEG_MIN_WIDTH,
-> -				   MTK_JPEG_MAX_WIDTH, fmt->h_align,
-> -				   &pix_mp->height, MTK_JPEG_MIN_HEIGHT,
-> -				   MTK_JPEG_MAX_HEIGHT, fmt->v_align);
-> -
->  	for (i = 0; i < fmt->colplanes; i++) {
-> -		struct v4l2_plane_pix_format *pfmt = &pix_mp->plane_fmt[i];
-> -		u32 stride = pix_mp->width * fmt->h_sample[i] / 4;
-> -		u32 h = pix_mp->height * fmt->v_sample[i] / 4;
-> -
-> +		struct v4l2_plane_pix_format *pfmt =
-> +				&pix_mp->plane_fmt[i];
->  		memset(pfmt->reserved, 0, sizeof(pfmt->reserved));
-> -		pfmt->bytesperline = stride;
-> -		pfmt->sizeimage = stride * h;
->  	}
->  end:
->  	v4l2_dbg(2, debug, &jpeg->v4l2_dev, "wxh:%ux%u\n",
-> @@ -446,9 +639,9 @@ static int mtk_jpeg_subscribe_event(struct v4l2_fh *fh,
->  	switch (sub->type) {
->  	case V4L2_EVENT_SOURCE_CHANGE:
->  		return v4l2_src_change_event_subscribe(fh, sub);
-> -	default:
-> -		return -EINVAL;
->  	}
-> +
-> +	return v4l2_ctrl_subscribe_event(fh, sub);
->  }
-
-This appears to be a bug fix. Please put this in a separate patch.
-
->  
->  static int mtk_jpeg_g_selection(struct file *file, void *priv,
-> @@ -571,6 +764,13 @@ static int mtk_jpeg_queue_setup(struct vb2_queue *q,
->  	if (!q_data)
->  		return -EINVAL;
->  
-> +	if (*num_planes) {
-> +		for (i = 0; i < *num_planes; i++)
-> +			if (sizes[i] < q_data->sizeimage[i])
-> +				return -EINVAL;
-> +		return 0;
-> +	}
-> +
->  	*num_planes = q_data->fmt->colplanes;
->  	for (i = 0; i < q_data->fmt->colplanes; i++) {
->  		sizes[i] = q_data->sizeimage[i];
-
-Also appears to be a bug fix.
-
-> @@ -651,10 +851,92 @@ static void mtk_jpeg_set_queue_data(struct mtk_jpeg_ctx *ctx,
->  		 param->dec_w, param->dec_h);
->  }
->  
-> +static void mtk_jpeg_set_param(struct mtk_jpeg_ctx *ctx,
-> +			       struct mtk_jpeg_enc_param *param)
-> +{
-> +	struct mtk_jpeg_q_data *q_data_src = &ctx->out_q;
-> +	struct jpeg_enc_param *jpeg_params = &ctx->jpeg_param;
-> +	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
-> +	u32 width_even;
-> +	u32 is_420;
-> +	u32 padding_width;
-> +	u32 padding_height;
-> +
-> +	switch (q_data_src->fmt->fourcc) {
-> +	case V4L2_PIX_FMT_YUYV:
-> +		param->enc_format = JPEG_YUV_FORMAT_YUYV;
-> +		break;
-> +	case V4L2_PIX_FMT_YVYU:
-> +		param->enc_format = JPEG_YUV_FORMAT_YVYU;
-> +		break;
-> +	case V4L2_PIX_FMT_NV12M:
-> +		param->enc_format = JPEG_YUV_FORMAT_NV12;
-> +		break;
-> +	case V4L2_PIX_FMT_NV21M:
-> +		param->enc_format = JPEG_YUV_FORMAT_NV12;
-> +		break;
-> +	default:
-> +		v4l2_err(&jpeg->v4l2_dev, "Unsupport fourcc =%d\n",
-> +			 q_data_src->fmt->fourcc);
-> +		break;
-> +	}
-> +	param->enc_w = q_data_src->w;
-> +	param->enc_h = q_data_src->h;
-> +
-> +	if (jpeg_params->enc_quality >= 97)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q97;
-> +	else if (jpeg_params->enc_quality >= 95)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q95;
-> +	else if (jpeg_params->enc_quality >= 92)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q92;
-> +	else if (jpeg_params->enc_quality >= 90)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q90;
-> +	else if (jpeg_params->enc_quality >= 87)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q87;
-> +	else if (jpeg_params->enc_quality >= 84)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q84;
-> +	else if (jpeg_params->enc_quality >= 80)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q80;
-> +	else if (jpeg_params->enc_quality >= 74)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q74;
-> +	else if (jpeg_params->enc_quality >= 64)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q64;
-> +	else if (jpeg_params->enc_quality >= 60)
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q60;
-> +	else
-> +		param->enc_quality = JPEG_ENCODE_QUALITY_Q48;
-> +
-> +	param->enable_exif = jpeg_params->enable_exif;
-> +	param->restart_interval = jpeg_params->restart_interval;
-> +
-> +	width_even = ((param->enc_w + 1) >> 1) << 1;
-> +	is_420 = (param->enc_format == JPEG_YUV_FORMAT_NV12 ||
-> +		  param->enc_format == JPEG_YUV_FORMAT_NV12) ? 1 : 0;
-> +	padding_width = mtk_jpeg_align(param->enc_w, 16);
-> +	padding_height = mtk_jpeg_align(param->enc_h, is_420 ? 16 : 8);
-> +	if (!is_420)
-> +		width_even = width_even << 1;
-> +
-> +	param->img_stride = mtk_jpeg_align(width_even, (is_420 ? 16 : 32));
-> +	param->mem_stride = mtk_jpeg_align(width_even, (is_420 ? 16 : 32));
-> +	param->total_encdu =
-> +		((padding_width >> 4) * (padding_height >> (is_420 ? 4 : 3)) *
-> +		(is_420 ? 6 : 4)) - 1;
-> +
-> +	v4l2_dbg(0, 2, &jpeg->v4l2_dev, "fmt %d, w,h %d,%d, enable_exif %d,",
-> +		 "enc_quality %d, restart_interval %d,img_stride %d,",
-> +		 "mem_stride %d,totalEncDu %d\n",
-> +		 param->enc_format, param->enc_w, param->enc_h,
-> +		 param->enable_exif, param->enc_quality,
-> +		 param->restart_interval, param->img_stride,
-> +		 param->mem_stride, param->total_encdu);
-> +}
-> +
->  static void mtk_jpeg_buf_queue(struct vb2_buffer *vb)
->  {
->  	struct mtk_jpeg_ctx *ctx = vb2_get_drv_priv(vb->vb2_queue);
->  	struct mtk_jpeg_dec_param *param;
-> +	struct mtk_jpeg_enc_param *enc_param;
->  	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
->  	struct mtk_jpeg_src_buf *jpeg_src_buf;
->  	bool header_valid;
-> @@ -666,29 +948,45 @@ static void mtk_jpeg_buf_queue(struct vb2_buffer *vb)
->  		goto end;
->  
->  	jpeg_src_buf = mtk_jpeg_vb2_to_srcbuf(vb);
-> -	param = &jpeg_src_buf->dec_param;
-> -	memset(param, 0, sizeof(*param));
-> -
-> -	if (jpeg_src_buf->flags & MTK_JPEG_BUF_FLAGS_LAST_FRAME) {
-> -		v4l2_dbg(1, debug, &jpeg->v4l2_dev, "Got eos\n");
-> -		goto end;
-> -	}
-> -	header_valid = mtk_jpeg_parse(param, (u8 *)vb2_plane_vaddr(vb, 0),
-> -				      vb2_get_plane_payload(vb, 0));
-> -	if (!header_valid) {
-> -		v4l2_err(&jpeg->v4l2_dev, "Header invalid.\n");
-> -		vb2_buffer_done(vb, VB2_BUF_STATE_ERROR);
-> -		return;
-> -	}
-> -
-> -	if (ctx->state == MTK_JPEG_INIT) {
-> -		struct vb2_queue *dst_vq = v4l2_m2m_get_vq(
-> -			ctx->fh.m2m_ctx, V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE);
-> +	if (jpeg->mode ==  MTK_JPEG_ENC) {
-> +		enc_param = &jpeg_src_buf->enc_param;
-> +		memset(enc_param, 0, sizeof(*enc_param));
-> +		mtk_jpeg_set_param(ctx, enc_param);
-> +		if (jpeg_src_buf->flags & MTK_JPEG_BUF_FLAGS_LAST_FRAME) {
-> +			v4l2_dbg(1, debug, &jpeg->v4l2_dev, "Got eos");
-> +			goto end;
-> +		}
-> +		if (ctx->state == MTK_JPEG_INIT)
-> +			ctx->state = MTK_JPEG_RUNNING;
-> +	} else {
-> +		param = &jpeg_src_buf->dec_param;
-> +		memset(param, 0, sizeof(*param));
-> +
-> +		if (jpeg_src_buf->flags & MTK_JPEG_BUF_FLAGS_LAST_FRAME) {
-> +			v4l2_dbg(1, debug, &jpeg->v4l2_dev, "Got eos\n");
-> +			goto end;
-> +		}
-> +		header_valid = mtk_jpeg_parse(param,
-> +					      (u8 *)vb2_plane_vaddr(vb, 0),
-> +					      vb2_get_plane_payload(vb, 0));
-> +		if (!header_valid) {
-> +			v4l2_err(&jpeg->v4l2_dev, "Header invalid.\n");
-> +			vb2_buffer_done(vb, VB2_BUF_STATE_ERROR);
-> +			return;
-> +		}
->  
-> -		mtk_jpeg_queue_src_chg_event(ctx);
-> -		mtk_jpeg_set_queue_data(ctx, param);
-> -		ctx->state = vb2_is_streaming(dst_vq) ?
-> -				MTK_JPEG_SOURCE_CHANGE : MTK_JPEG_RUNNING;
-> +		if (ctx->state == MTK_JPEG_INIT) {
-> +			struct vb2_queue *dst_vq;
-> +
-> +			dst_vq = v4l2_m2m_get_vq
-> +					(ctx->fh.m2m_ctx,
-> +					 V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE);
-> +			mtk_jpeg_queue_src_chg_event(ctx);
-> +			mtk_jpeg_set_queue_data(ctx, param);
-> +			ctx->state = vb2_is_streaming(dst_vq) ?
-> +					MTK_JPEG_SOURCE_CHANGE :
-> +					MTK_JPEG_RUNNING;
-> +		}
->  	}
->  end:
->  	v4l2_m2m_buf_queue(ctx->fh.m2m_ctx, to_vb2_v4l2_buffer(vb));
-> @@ -731,16 +1029,16 @@ static void mtk_jpeg_stop_streaming(struct vb2_queue *q)
->  	 * subsampling. Update capture queue when the stream is off.
->  	 */
->  	if (ctx->state == MTK_JPEG_SOURCE_CHANGE &&
-> -	    !V4L2_TYPE_IS_OUTPUT(q->type)) {
-> +	    !V4L2_TYPE_IS_OUTPUT(q->type) &&
-> +	    ctx->jpeg->mode == MTK_JPEG_DEC) {
->  		struct mtk_jpeg_src_buf *src_buf;
->  
->  		vb = v4l2_m2m_next_src_buf(ctx->fh.m2m_ctx);
->  		src_buf = mtk_jpeg_vb2_to_srcbuf(&vb->vb2_buf);
->  		mtk_jpeg_set_queue_data(ctx, &src_buf->dec_param);
->  		ctx->state = MTK_JPEG_RUNNING;
-> -	} else if (V4L2_TYPE_IS_OUTPUT(q->type)) {
-> +	} else if (V4L2_TYPE_IS_OUTPUT(q->type))
->  		ctx->state = MTK_JPEG_INIT;
-> -	}
->  
->  	while ((vb = mtk_jpeg_buf_remove(ctx, q->type)))
->  		v4l2_m2m_buf_done(vb, VB2_BUF_STATE_ERROR);
-> @@ -795,6 +1093,28 @@ static int mtk_jpeg_set_dec_dst(struct mtk_jpeg_ctx *ctx,
->  	return 0;
->  }
->  
-> +static void mtk_jpeg_set_enc_dst(struct mtk_jpeg_ctx *ctx,
-> +				 struct vb2_buffer *dst_buf,
-> +				 struct mtk_jpeg_enc_bs *bs)
-> +{
-> +	bs->dma_addr = vb2_dma_contig_plane_dma_addr(dst_buf, 0) &
-> +		      (~JPEG_ENC_DST_ADDR_OFFSET_MASK);
-> +	bs->dma_addr_offset = 0;
-> +	bs->dma_addr_offsetmask = bs->dma_addr & JPEG_ENC_DST_ADDR_OFFSET_MASK;
-> +	bs->size = mtk_jpeg_align(vb2_plane_size(dst_buf, 0), 128);
-> +}
-> +
-> +static void mtk_jpeg_set_enc_src(struct mtk_jpeg_ctx *ctx,
-> +				 struct vb2_buffer *src_buf,
-> +				 struct mtk_jpeg_enc_fb *fb)
-> +{
-> +	int i;
-> +
-> +	for (i = 0; i < src_buf->num_planes; i++)
-> +		fb->fb_addr[i].dma_addr =
-> +			vb2_dma_contig_plane_dma_addr(src_buf, i);
-> +}
-> +
->  static void mtk_jpeg_device_run(void *priv)
->  {
->  	struct mtk_jpeg_ctx *ctx = priv;
-> @@ -805,6 +1125,8 @@ static void mtk_jpeg_device_run(void *priv)
->  	struct mtk_jpeg_src_buf *jpeg_src_buf;
->  	struct mtk_jpeg_bs bs;
->  	struct mtk_jpeg_fb fb;
-> +	struct mtk_jpeg_enc_bs enc_bs;
-> +	struct mtk_jpeg_enc_fb enc_fb;
->  	int i;
->  
->  	src_buf = v4l2_m2m_next_src_buf(ctx->fh.m2m_ctx);
-> @@ -815,30 +1137,45 @@ static void mtk_jpeg_device_run(void *priv)
->  		for (i = 0; i < dst_buf->vb2_buf.num_planes; i++)
->  			vb2_set_plane_payload(&dst_buf->vb2_buf, i, 0);
->  		buf_state = VB2_BUF_STATE_DONE;
-> -		goto dec_end;
-> +		goto device_run_end;
->  	}
->  
-> -	if (mtk_jpeg_check_resolution_change(ctx, &jpeg_src_buf->dec_param)) {
-> -		mtk_jpeg_queue_src_chg_event(ctx);
-> -		ctx->state = MTK_JPEG_SOURCE_CHANGE;
-> -		v4l2_m2m_job_finish(jpeg->m2m_dev, ctx->fh.m2m_ctx);
-> -		return;
-> -	}
-> +	if (jpeg->mode == MTK_JPEG_ENC) {
-> +		mtk_jpeg_set_enc_dst(ctx, &dst_buf->vb2_buf, &enc_bs);
-> +		mtk_jpeg_set_enc_src(ctx, &src_buf->vb2_buf, &enc_fb);
-> +
-> +		spin_lock_irqsave(&jpeg->hw_lock, flags);
-> +		mtk_jpeg_enc_reset(jpeg->reg_base);
-> +		mtk_jpeg_enc_set_config(jpeg->reg_base,
-> +					&jpeg_src_buf->enc_param, &enc_bs,
-> +					&enc_fb);
-> +
-> +		mtk_jpeg_enc_start(jpeg->reg_base);
-> +	} else {
-> +		if (mtk_jpeg_check_resolution_change
-> +			(ctx, &jpeg_src_buf->dec_param)) {
-> +			mtk_jpeg_queue_src_chg_event(ctx);
-> +			ctx->state = MTK_JPEG_SOURCE_CHANGE;
-> +			v4l2_m2m_job_finish(jpeg->m2m_dev, ctx->fh.m2m_ctx);
-> +			return;
-> +		}
->  
-> -	mtk_jpeg_set_dec_src(ctx, &src_buf->vb2_buf, &bs);
-> -	if (mtk_jpeg_set_dec_dst(ctx, &jpeg_src_buf->dec_param, &dst_buf->vb2_buf, &fb))
-> -		goto dec_end;
-> +		mtk_jpeg_set_dec_src(ctx, &src_buf->vb2_buf, &bs);
-> +		if (mtk_jpeg_set_dec_dst(ctx, &jpeg_src_buf->dec_param,
-> +					 &dst_buf->vb2_buf, &fb))
-> +			goto device_run_end;
->  
-> -	spin_lock_irqsave(&jpeg->hw_lock, flags);
-> -	mtk_jpeg_dec_reset(jpeg->dec_reg_base);
-> -	mtk_jpeg_dec_set_config(jpeg->dec_reg_base,
-> -				&jpeg_src_buf->dec_param, &bs, &fb);
-> +		spin_lock_irqsave(&jpeg->hw_lock, flags);
-> +		mtk_jpeg_dec_reset(jpeg->reg_base);
-> +		mtk_jpeg_dec_set_config(jpeg->reg_base,
-> +					&jpeg_src_buf->dec_param, &bs, &fb);
->  
-> -	mtk_jpeg_dec_start(jpeg->dec_reg_base);
-> +		mtk_jpeg_dec_start(jpeg->reg_base);
-> +	}
->  	spin_unlock_irqrestore(&jpeg->hw_lock, flags);
->  	return;
->  
-> -dec_end:
-> +device_run_end:
->  	v4l2_m2m_src_buf_remove(ctx->fh.m2m_ctx);
->  	v4l2_m2m_dst_buf_remove(ctx->fh.m2m_ctx);
->  	v4l2_m2m_buf_done(src_buf, buf_state);
-> @@ -898,30 +1235,30 @@ static void mtk_jpeg_clk_on(struct mtk_jpeg_dev *jpeg)
->  	ret = mtk_smi_larb_get(jpeg->larb);
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+> -					&bridge->windows, &pp->io_base);
+> +					&bridge->windows, &bridge->dma_ranges,
+> +					&pp->io_base);
 >  	if (ret)
->  		dev_err(jpeg->dev, "mtk_smi_larb_get larbvdec fail %d\n", ret);
-> -	clk_prepare_enable(jpeg->clk_jdec_smi);
-> -	clk_prepare_enable(jpeg->clk_jdec);
-> +	if (jpeg->mode == MTK_JPEG_DEC)
-> +		clk_prepare_enable(jpeg->clk_jpeg_smi);
-> +	clk_prepare_enable(jpeg->clk_jpeg);
->  }
->  
->  static void mtk_jpeg_clk_off(struct mtk_jpeg_dev *jpeg)
->  {
-> -	clk_disable_unprepare(jpeg->clk_jdec);
-> -	clk_disable_unprepare(jpeg->clk_jdec_smi);
-> +	clk_disable_unprepare(jpeg->clk_jpeg);
-> +	if (jpeg->mode == MTK_JPEG_DEC)
-> +		clk_disable_unprepare(jpeg->clk_jpeg_smi);
->  	mtk_smi_larb_put(jpeg->larb);
->  }
->  
-> -static irqreturn_t mtk_jpeg_dec_irq(int irq, void *priv)
-> +static irqreturn_t mtk_jpeg_irq(int irq, void *priv)
->  {
->  	struct mtk_jpeg_dev *jpeg = priv;
->  	struct mtk_jpeg_ctx *ctx;
->  	struct vb2_v4l2_buffer *src_buf, *dst_buf;
->  	struct mtk_jpeg_src_buf *jpeg_src_buf;
->  	enum vb2_buffer_state buf_state = VB2_BUF_STATE_ERROR;
-> -	u32	dec_irq_ret;
-> -	u32 dec_ret;
-> +	u32	irq_ret;
-> +	u32 ret, result_size;
->  	int i;
->  
-> -	dec_ret = mtk_jpeg_dec_get_int_status(jpeg->dec_reg_base);
-> -	dec_irq_ret = mtk_jpeg_dec_enum_result(dec_ret);
->  	ctx = v4l2_m2m_get_curr_priv(jpeg->m2m_dev);
->  	if (!ctx) {
->  		v4l2_err(&jpeg->v4l2_dev, "Context is NULL\n");
-> @@ -932,21 +1269,42 @@ static irqreturn_t mtk_jpeg_dec_irq(int irq, void *priv)
->  	dst_buf = v4l2_m2m_dst_buf_remove(ctx->fh.m2m_ctx);
->  	jpeg_src_buf = mtk_jpeg_vb2_to_srcbuf(&src_buf->vb2_buf);
->  
-> -	if (dec_irq_ret >= MTK_JPEG_DEC_RESULT_UNDERFLOW)
-> -		mtk_jpeg_dec_reset(jpeg->dec_reg_base);
-> +	if (jpeg->mode == MTK_JPEG_ENC) {
-> +		ret = mtk_jpeg_enc_get_int_status(jpeg->reg_base);
-> +		irq_ret = mtk_jpeg_enc_enum_result(jpeg->reg_base, ret,
-> +						   &result_size);
->  
-> -	if (dec_irq_ret != MTK_JPEG_DEC_RESULT_EOF_DONE) {
-> -		dev_err(jpeg->dev, "decode failed\n");
-> -		goto dec_end;
-> -	}
-> +		if (irq_ret >= MTK_JPEG_ENC_RESULT_STALL)
-> +			mtk_jpeg_enc_reset(jpeg->reg_base);
-> +
-> +		if (irq_ret != MTK_JPEG_ENC_RESULT_DONE) {
-> +			dev_err(jpeg->dev, "encode failed\n");
-> +			goto irq_end;
-> +		}
->  
-> -	for (i = 0; i < dst_buf->vb2_buf.num_planes; i++)
-> -		vb2_set_plane_payload(&dst_buf->vb2_buf, i,
-> -				      jpeg_src_buf->dec_param.comp_size[i]);
-> +		vb2_set_plane_payload(&dst_buf->vb2_buf, 0,
-> +				      result_size);
-> +	} else {
-> +		ret = mtk_jpeg_dec_get_int_status(jpeg->reg_base);
-> +		irq_ret = mtk_jpeg_dec_enum_result(ret);
-> +
-> +		if (irq_ret >= MTK_JPEG_DEC_RESULT_UNDERFLOW)
-> +			mtk_jpeg_dec_reset(jpeg->reg_base);
-> +
-> +		if (irq_ret != MTK_JPEG_DEC_RESULT_EOF_DONE) {
-> +			dev_err(jpeg->dev, "decode failed\n");
-> +			goto irq_end;
-> +		}
-> +
-> +		for (i = 0; i < dst_buf->vb2_buf.num_planes; i++)
-> +			vb2_set_plane_payload
-> +				(&dst_buf->vb2_buf, i,
-> +				 jpeg_src_buf->dec_param.comp_size[i]);
-> +	}
->  
->  	buf_state = VB2_BUF_STATE_DONE;
->  
-> -dec_end:
-> +irq_end:
->  	v4l2_m2m_buf_done(src_buf, buf_state);
->  	v4l2_m2m_buf_done(dst_buf, buf_state);
->  	v4l2_m2m_job_finish(jpeg->m2m_dev, ctx->fh.m2m_ctx);
-> @@ -956,32 +1314,72 @@ static irqreturn_t mtk_jpeg_dec_irq(int irq, void *priv)
->  static void mtk_jpeg_set_default_params(struct mtk_jpeg_ctx *ctx)
->  {
->  	struct mtk_jpeg_q_data *q = &ctx->out_q;
-> -	int i;
-> +	int i, align_w, align_h;
-> +
-> +	ctx->fh.ctrl_handler = &ctx->ctrl_hdl;
->  
->  	ctx->colorspace = V4L2_COLORSPACE_JPEG,
->  	ctx->ycbcr_enc = V4L2_YCBCR_ENC_DEFAULT;
->  	ctx->quantization = V4L2_QUANTIZATION_DEFAULT;
->  	ctx->xfer_func = V4L2_XFER_FUNC_DEFAULT;
->  
-> -	q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_JPEG,
-> +	if (ctx->jpeg->mode == MTK_JPEG_ENC) {
-> +		q->w = MTK_JPEG_MIN_WIDTH;
-> +		q->h = MTK_JPEG_MIN_HEIGHT;
-> +
-> +		q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_YUYV,
->  					      MTK_JPEG_FMT_TYPE_OUTPUT);
-> -	q->w = MTK_JPEG_MIN_WIDTH;
-> -	q->h = MTK_JPEG_MIN_HEIGHT;
-> -	q->bytesperline[0] = 0;
-> -	q->sizeimage[0] = MTK_JPEG_DEFAULT_SIZEIMAGE;
-> +
-> +		align_w = q->w;
-> +		align_h = q->h;
-> +		align_w = round_up(align_w, 2);
-> +		align_w = align_w << 1;
-> +		v4l_bound_align_image(&align_w,
-> +				      MTK_JPEG_MIN_WIDTH,
-> +				      MTK_JPEG_MAX_WIDTH, 5,
-> +				      &align_h,
-> +				      MTK_JPEG_MIN_HEIGHT,
-> +				      MTK_JPEG_MAX_HEIGHT, 3, 0);
-> +
-> +		if (align_w < MTK_JPEG_MIN_WIDTH &&
-> +		    (align_w + 32) <= MTK_JPEG_MAX_WIDTH)
-> +			align_w += 32;
-> +		if (align_h < MTK_JPEG_MIN_HEIGHT &&
-> +		    (align_h + 8) <= MTK_JPEG_MAX_HEIGHT)
-> +			align_h += 8;
-> +
-> +		q->sizeimage[0] = align_w * align_h;
-> +		q->bytesperline[0] = align_w;
-> +	} else {
-> +		q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_JPEG,
-> +					      MTK_JPEG_FMT_TYPE_OUTPUT);
-> +		q->w = MTK_JPEG_MIN_WIDTH;
-> +		q->h = MTK_JPEG_MIN_HEIGHT;
-> +		q->bytesperline[0] = 0;
-> +		q->sizeimage[0] = MTK_JPEG_DEFAULT_SIZEIMAGE;
-> +	}
->  
->  	q = &ctx->cap_q;
-> -	q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_YUV420M,
-> +	if (ctx->jpeg->mode == MTK_JPEG_ENC) {
-> +		q->w = MTK_JPEG_MIN_WIDTH;
-> +		q->h = MTK_JPEG_MIN_HEIGHT;
-> +		q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_JPEG,
-> +					      MTK_JPEG_FMT_TYPE_CAPTURE);
-> +		q->bytesperline[0] = 0;
-> +		q->sizeimage[0] = MTK_JPEG_DEFAULT_SIZEIMAGE;
-> +	} else {
-> +		q->fmt = mtk_jpeg_find_format(ctx, V4L2_PIX_FMT_YUV420M,
->  					      MTK_JPEG_FMT_TYPE_CAPTURE);
-> -	q->w = MTK_JPEG_MIN_WIDTH;
-> -	q->h = MTK_JPEG_MIN_HEIGHT;
-> +		q->w = MTK_JPEG_MIN_WIDTH;
-> +		q->h = MTK_JPEG_MIN_HEIGHT;
->  
-> -	for (i = 0; i < q->fmt->colplanes; i++) {
-> -		u32 stride = q->w * q->fmt->h_sample[i] / 4;
-> -		u32 h = q->h * q->fmt->v_sample[i] / 4;
-> +		for (i = 0; i < q->fmt->colplanes; i++) {
-> +			u32 stride = q->w * q->fmt->h_sample[i] / 4;
-> +			u32 h = q->h * q->fmt->v_sample[i] / 4;
->  
-> -		q->bytesperline[i] = stride;
-> -		q->sizeimage[i] = stride * h;
-> +			q->bytesperline[i] = stride;
-> +			q->sizeimage[i] = stride * h;
-> +		}
->  	}
->  }
-
-This is another function were there appears to be little overlap between
-encoder and decoder. A candidate to split up?
-
->  
-> @@ -1013,6 +1411,13 @@ static int mtk_jpeg_open(struct file *file)
->  		goto error;
->  	}
->  
-> +	ret = mtk_jpeg_ctrls_setup(ctx);
-> +	if (ret) {
-> +		v4l2_err(&jpeg->v4l2_dev, "Failed to setup controls() (%d)\n",
-> +			 ret);
-> +		goto error;
-> +	}
-> +
->  	mtk_jpeg_set_default_params(ctx);
->  	mutex_unlock(&jpeg->lock);
->  	return 0;
-> @@ -1033,6 +1438,7 @@ static int mtk_jpeg_release(struct file *file)
->  
->  	mutex_lock(&jpeg->lock);
->  	v4l2_m2m_ctx_release(ctx->fh.m2m_ctx);
-> +	v4l2_ctrl_handler_free(&ctx->ctrl_hdl);
->  	v4l2_fh_del(&ctx->fh);
->  	v4l2_fh_exit(&ctx->fh);
->  	kfree(ctx);
-> @@ -1057,6 +1463,7 @@ static int mtk_jpeg_clk_init(struct mtk_jpeg_dev *jpeg)
->  	node = of_parse_phandle(jpeg->dev->of_node, "mediatek,larb", 0);
->  	if (!node)
->  		return -EINVAL;
-> +
->  	pdev = of_find_device_by_node(node);
->  	if (WARN_ON(!pdev)) {
->  		of_node_put(node);
-> @@ -1066,19 +1473,24 @@ static int mtk_jpeg_clk_init(struct mtk_jpeg_dev *jpeg)
->  
->  	jpeg->larb = &pdev->dev;
->  
-> -	jpeg->clk_jdec = devm_clk_get(jpeg->dev, "jpgdec");
-> -	if (IS_ERR(jpeg->clk_jdec))
-> -		return PTR_ERR(jpeg->clk_jdec);
-> +	if (jpeg->mode == MTK_JPEG_ENC) {
-> +		jpeg->clk_jpeg = devm_clk_get(jpeg->dev, "jpgenc");
-> +		return PTR_ERR_OR_ZERO(jpeg->clk_jpeg);
-> +	}
-> +
-> +	jpeg->clk_jpeg = devm_clk_get(jpeg->dev, "jpgdec");
-> +	if (IS_ERR(jpeg->clk_jpeg))
-> +		return PTR_ERR(jpeg->clk_jpeg);
->  
-> -	jpeg->clk_jdec_smi = devm_clk_get(jpeg->dev, "jpgdec-smi");
-> -	return PTR_ERR_OR_ZERO(jpeg->clk_jdec_smi);
-> +	jpeg->clk_jpeg_smi = devm_clk_get(jpeg->dev, "jpgdec-smi");
-> +	return PTR_ERR_OR_ZERO(jpeg->clk_jpeg_smi);
->  }
->  
->  static int mtk_jpeg_probe(struct platform_device *pdev)
->  {
->  	struct mtk_jpeg_dev *jpeg;
->  	struct resource *res;
-> -	int dec_irq;
-> +	int jpeg_irq;
->  	int ret;
->  
->  	jpeg = devm_kzalloc(&pdev->dev, sizeof(*jpeg), GFP_KERNEL);
-> @@ -1088,28 +1500,26 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
->  	mutex_init(&jpeg->lock);
->  	spin_lock_init(&jpeg->hw_lock);
->  	jpeg->dev = &pdev->dev;
-> +	jpeg->mode = (enum mtk_jpeg_mode)of_device_get_match_data(jpeg->dev);
->  
->  	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> -	jpeg->dec_reg_base = devm_ioremap_resource(&pdev->dev, res);
-> -	if (IS_ERR(jpeg->dec_reg_base)) {
-> -		ret = PTR_ERR(jpeg->dec_reg_base);
-> +	jpeg->reg_base = devm_ioremap_resource(&pdev->dev, res);
-> +	if (IS_ERR(jpeg->reg_base)) {
-> +		ret = PTR_ERR(jpeg->reg_base);
 >  		return ret;
+>  
+> diff --git a/drivers/pci/controller/pci-aardvark.c b/drivers/pci/controller/pci-aardvark.c
+> index ff3af3d34028..c00b391529f3 100644
+> --- a/drivers/pci/controller/pci-aardvark.c
+> +++ b/drivers/pci/controller/pci-aardvark.c
+> @@ -940,7 +940,7 @@ static int advk_pcie_probe(struct platform_device *pdev)
 >  	}
 >  
-> -	res = platform_get_resource(pdev, IORESOURCE_IRQ, 0);
-> -	dec_irq = platform_get_irq(pdev, 0);
-> -	if (!res || dec_irq < 0) {
-> -		dev_err(&pdev->dev, "Failed to get dec_irq %d.\n", dec_irq);
-> -		ret = -EINVAL;
-> -		return ret;
-> +	jpeg_irq = platform_get_irq(pdev, 0);
-> +	if (jpeg_irq < 0) {
-> +		dev_err(&pdev->dev, "Failed to get jpeg_irq %d.\n", jpeg_irq);
-> +		return jpeg_irq;
->  	}
->  
-> -	ret = devm_request_irq(&pdev->dev, dec_irq, mtk_jpeg_dec_irq, 0,
-> +	ret = devm_request_irq(&pdev->dev, jpeg_irq, mtk_jpeg_irq, 0,
->  			       pdev->name, jpeg);
+>  	ret = pci_parse_request_of_pci_ranges(dev, &pcie->resources,
+> -					      &bus);
+> +					      &bridge->dma_ranges, &bus);
 >  	if (ret) {
-> -		dev_err(&pdev->dev, "Failed to request dec_irq %d (%d)\n",
-> -			dec_irq, ret);
-> -		ret = -EINVAL;
-> +		dev_err(&pdev->dev, "Failed to request jpeg_irq %d (%d)\n",
-> +			jpeg_irq, ret);
->  		goto err_req_irq;
+>  		dev_err(dev, "Failed to parse resources\n");
+>  		return ret;
+> diff --git a/drivers/pci/controller/pci-ftpci100.c b/drivers/pci/controller/pci-ftpci100.c
+> index bf5ece5d9291..3e07a8203736 100644
+> --- a/drivers/pci/controller/pci-ftpci100.c
+> +++ b/drivers/pci/controller/pci-ftpci100.c
+> @@ -481,7 +481,8 @@ static int faraday_pci_probe(struct platform_device *pdev)
+>  		return PTR_ERR(p->base);
+>  
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+> -						    &res, &io_base);
+> +						    &res, &host->dma_ranges,
+> +						    &io_base);
+>  	if (ret)
+>  		return ret;
+>  
+> diff --git a/drivers/pci/controller/pci-host-common.c b/drivers/pci/controller/pci-host-common.c
+> index c742881b5061..183381c19ee8 100644
+> --- a/drivers/pci/controller/pci-host-common.c
+> +++ b/drivers/pci/controller/pci-host-common.c
+> @@ -27,7 +27,7 @@ static struct pci_config_window *gen_pci_init(struct device *dev,
+>  	struct pci_config_window *cfg;
+>  
+>  	/* Parse our PCI ranges and request their resources */
+> -	err = pci_parse_request_of_pci_ranges(dev, resources, &bus_range);
+> +	err = pci_parse_request_of_pci_ranges(dev, resources, NULL, &bus_range);
+>  	if (err)
+>  		return ERR_PTR(err);
+>  
+> diff --git a/drivers/pci/controller/pci-v3-semi.c b/drivers/pci/controller/pci-v3-semi.c
+> index d219404bad92..090df766faf9 100644
+> --- a/drivers/pci/controller/pci-v3-semi.c
+> +++ b/drivers/pci/controller/pci-v3-semi.c
+> @@ -794,7 +794,7 @@ static int v3_pci_probe(struct platform_device *pdev)
+>  		return PTR_ERR(v3->config_base);
+>  
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, &res,
+> -						    &io_base);
+> +						    &host->dma_ranges, &io_base);
+>  	if (ret)
+>  		return ret;
+>  
+> diff --git a/drivers/pci/controller/pci-versatile.c b/drivers/pci/controller/pci-versatile.c
+> index 237b1abb26f2..211159f54b4a 100644
+> --- a/drivers/pci/controller/pci-versatile.c
+> +++ b/drivers/pci/controller/pci-versatile.c
+> @@ -93,7 +93,7 @@ static int versatile_pci_probe(struct platform_device *pdev)
+>  	if (IS_ERR(versatile_cfg_base[1]))
+>  		return PTR_ERR(versatile_cfg_base[1]);
+>  
+> -	ret = pci_parse_request_of_pci_ranges(dev, &pci_res, NULL);
+> +	ret = pci_parse_request_of_pci_ranges(dev, &pci_res, NULL, NULL);
+>  	if (ret)
+>  		return ret;
+>  
+> diff --git a/drivers/pci/controller/pci-xgene.c b/drivers/pci/controller/pci-xgene.c
+> index ffda3e8b4742..11f27c42c06a 100644
+> --- a/drivers/pci/controller/pci-xgene.c
+> +++ b/drivers/pci/controller/pci-xgene.c
+> @@ -635,6 +635,7 @@ static int xgene_pcie_probe(struct platform_device *pdev)
+>  		return ret;
+>  
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, &res,
+> +						    &bridge->dma_ranges,
+>  						    &iobase);
+>  	if (ret)
+>  		return ret;
+> diff --git a/drivers/pci/controller/pcie-altera.c b/drivers/pci/controller/pcie-altera.c
+> index 2ed00babff5a..fde6a3b16fb9 100644
+> --- a/drivers/pci/controller/pcie-altera.c
+> +++ b/drivers/pci/controller/pcie-altera.c
+> @@ -801,7 +801,7 @@ static int altera_pcie_probe(struct platform_device *pdev)
 >  	}
 >  
-> @@ -1133,33 +1543,35 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
->  		goto err_m2m_init;
->  	}
->  
-> -	jpeg->dec_vdev = video_device_alloc();
-> -	if (!jpeg->dec_vdev) {
-> +	jpeg->vfd_jpeg = video_device_alloc();
-> +	if (!jpeg->vfd_jpeg) {
->  		ret = -ENOMEM;
-> -		goto err_dec_vdev_alloc;
-> +		goto err_vfd_jpeg_alloc;
->  	}
-> -	snprintf(jpeg->dec_vdev->name, sizeof(jpeg->dec_vdev->name),
-> -		 "%s-dec", MTK_JPEG_NAME);
-> -	jpeg->dec_vdev->fops = &mtk_jpeg_fops;
-> -	jpeg->dec_vdev->ioctl_ops = &mtk_jpeg_ioctl_ops;
-> -	jpeg->dec_vdev->minor = -1;
-> -	jpeg->dec_vdev->release = video_device_release;
-> -	jpeg->dec_vdev->lock = &jpeg->lock;
-> -	jpeg->dec_vdev->v4l2_dev = &jpeg->v4l2_dev;
-> -	jpeg->dec_vdev->vfl_dir = VFL_DIR_M2M;
-> -	jpeg->dec_vdev->device_caps = V4L2_CAP_STREAMING |
-> +	snprintf(jpeg->vfd_jpeg->name, sizeof(jpeg->vfd_jpeg->name),
-> +		 "%s-%s", MTK_JPEG_NAME,
-> +		 jpeg->mode == MTK_JPEG_ENC ? "enc" : "dec");
-> +	jpeg->vfd_jpeg->fops = &mtk_jpeg_fops;
-> +	jpeg->vfd_jpeg->ioctl_ops = &mtk_jpeg_ioctl_ops;
-> +	jpeg->vfd_jpeg->minor = -1;
-> +	jpeg->vfd_jpeg->release = video_device_release;
-> +	jpeg->vfd_jpeg->lock = &jpeg->lock;
-> +	jpeg->vfd_jpeg->v4l2_dev = &jpeg->v4l2_dev;
-> +	jpeg->vfd_jpeg->vfl_dir = VFL_DIR_M2M;
-> +	jpeg->vfd_jpeg->device_caps = V4L2_CAP_STREAMING |
->  				      V4L2_CAP_VIDEO_M2M_MPLANE;
->  
-> -	ret = video_register_device(jpeg->dec_vdev, VFL_TYPE_GRABBER, 3);
-> +	ret = video_register_device(jpeg->vfd_jpeg, VFL_TYPE_GRABBER, -1);
+>  	ret = pci_parse_request_of_pci_ranges(dev, &pcie->resources,
+> -					      NULL);
+> +					      &bridge->dma_ranges, NULL);
 >  	if (ret) {
->  		v4l2_err(&jpeg->v4l2_dev, "Failed to register video device\n");
-> -		goto err_dec_vdev_register;
-> +		goto err_vfd_jpeg_register;
+>  		dev_err(dev, "Failed add resources\n");
+>  		return ret;
+> diff --git a/drivers/pci/controller/pcie-cadence-host.c b/drivers/pci/controller/pcie-cadence-host.c
+> index 97e251090b4f..a8f7a6284c3e 100644
+> --- a/drivers/pci/controller/pcie-cadence-host.c
+> +++ b/drivers/pci/controller/pcie-cadence-host.c
+> @@ -211,7 +211,7 @@ static int cdns_pcie_host_init(struct device *dev,
+>  	int err;
+>  
+>  	/* Parse our PCI ranges and request their resources */
+> -	err = pci_parse_request_of_pci_ranges(dev, resources, &bus_range);
+> +	err = pci_parse_request_of_pci_ranges(dev, resources, NULL, &bus_range);
+>  	if (err)
+>  		return err;
+>  
+> diff --git a/drivers/pci/controller/pcie-iproc-platform.c b/drivers/pci/controller/pcie-iproc-platform.c
+> index 5a3550b6bb29..62eee2d17f43 100644
+> --- a/drivers/pci/controller/pcie-iproc-platform.c
+> +++ b/drivers/pci/controller/pcie-iproc-platform.c
+> @@ -101,6 +101,7 @@ static int iproc_pcie_pltfm_probe(struct platform_device *pdev)
 >  	}
 >  
-> -	video_set_drvdata(jpeg->dec_vdev, jpeg);
-> +	video_set_drvdata(jpeg->vfd_jpeg, jpeg);
->  	v4l2_info(&jpeg->v4l2_dev,
-> -		  "decoder device registered as /dev/video%d (%d,%d)\n",
-> -		  jpeg->dec_vdev->num, VIDEO_MAJOR, jpeg->dec_vdev->minor);
-> +		  "jpeg device %d registered as /dev/video%d (%d,%d)\n",
-> +		  jpeg->mode, jpeg->vfd_jpeg->num, VIDEO_MAJOR,
-> +		  jpeg->vfd_jpeg->minor);
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, &resources,
+> +						    &bridge->dma_ranges,
+>  						    &iobase);
+>  	if (ret) {
+>  		dev_err(dev, "unable to get PCI host bridge resources\n");
+> diff --git a/drivers/pci/controller/pcie-mediatek.c b/drivers/pci/controller/pcie-mediatek.c
+> index cea4112b5309..f3996eed152d 100644
+> --- a/drivers/pci/controller/pcie-mediatek.c
+> +++ b/drivers/pci/controller/pcie-mediatek.c
+> @@ -1032,7 +1032,7 @@ static int mtk_pcie_setup(struct mtk_pcie *pcie)
+>  	int err;
 >  
->  	platform_set_drvdata(pdev, jpeg);
+>  	err = pci_parse_request_of_pci_ranges(dev, windows,
+> -					      &bus);
+> +					      &host->dma_ranges, &bus);
+>  	if (err)
+>  		return err;
 >  
-> @@ -1167,10 +1579,10 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
+> diff --git a/drivers/pci/controller/pcie-mobiveil.c b/drivers/pci/controller/pcie-mobiveil.c
+> index 672e633601c7..93064faaa656 100644
+> --- a/drivers/pci/controller/pcie-mobiveil.c
+> +++ b/drivers/pci/controller/pcie-mobiveil.c
+> @@ -875,7 +875,9 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
 >  
->  	return 0;
+>  	/* parse the host bridge base addresses from the device tree file */
+>  	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+> -						    &pcie->resources, &iobase);
+> +						    &pcie->resources,
+> +						    &bridge->dma_ranges,
+> +						    &iobase);
+>  	if (ret) {
+>  		dev_err(dev, "Getting bridge resources failed\n");
+>  		return ret;
+> diff --git a/drivers/pci/controller/pcie-rcar.c b/drivers/pci/controller/pcie-rcar.c
+> index f6a669a9af41..b8d6e86a5539 100644
+> --- a/drivers/pci/controller/pcie-rcar.c
+> +++ b/drivers/pci/controller/pcie-rcar.c
+> @@ -1138,7 +1138,8 @@ static int rcar_pcie_probe(struct platform_device *pdev)
+>  	pcie->dev = dev;
+>  	platform_set_drvdata(pdev, pcie);
 >  
-> -err_dec_vdev_register:
-> -	video_device_release(jpeg->dec_vdev);
-> +err_vfd_jpeg_register:
-> +	video_device_release(jpeg->vfd_jpeg);
+> -	err = pci_parse_request_of_pci_ranges(dev, &pcie->resources, NULL);
+> +	err = pci_parse_request_of_pci_ranges(dev, &pcie->resources,
+> +					      &bridge->dma_ranges, NULL);
+>  	if (err)
+>  		goto err_free_bridge;
 >  
-> -err_dec_vdev_alloc:
-> +err_vfd_jpeg_alloc:
->  	v4l2_m2m_release(jpeg->m2m_dev);
+> diff --git a/drivers/pci/controller/pcie-rockchip-host.c b/drivers/pci/controller/pcie-rockchip-host.c
+> index 8d20f1793a61..093b816b9dc9 100644
+> --- a/drivers/pci/controller/pcie-rockchip-host.c
+> +++ b/drivers/pci/controller/pcie-rockchip-host.c
+> @@ -996,7 +996,8 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+>  		goto err_deinit_port;
 >  
->  err_m2m_init:
-> @@ -1190,8 +1602,8 @@ static int mtk_jpeg_remove(struct platform_device *pdev)
->  	struct mtk_jpeg_dev *jpeg = platform_get_drvdata(pdev);
+>  	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+> -						    &res, &io_base);
+> +						    &res, &bridge->dma_ranges,
+> +						    &io_base);
+>  	if (err)
+>  		goto err_remove_irq_domain;
 >  
->  	pm_runtime_disable(&pdev->dev);
-> -	video_unregister_device(jpeg->dec_vdev);
-> -	video_device_release(jpeg->dec_vdev);
-> +	video_unregister_device(jpeg->vfd_jpeg);
-> +	video_device_release(jpeg->vfd_jpeg);
->  	v4l2_m2m_release(jpeg->m2m_dev);
->  	v4l2_device_unregister(&jpeg->v4l2_dev);
+> diff --git a/drivers/pci/controller/pcie-xilinx-nwl.c b/drivers/pci/controller/pcie-xilinx-nwl.c
+> index 45c0f344ccd1..5c9132a02d15 100644
+> --- a/drivers/pci/controller/pcie-xilinx-nwl.c
+> +++ b/drivers/pci/controller/pcie-xilinx-nwl.c
+> @@ -846,7 +846,7 @@ static int nwl_pcie_probe(struct platform_device *pdev)
+>  	}
 >  
-> @@ -1202,7 +1614,11 @@ static __maybe_unused int mtk_jpeg_pm_suspend(struct device *dev)
+>  	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, &res,
+> -						    &iobase);
+> +						    &bridge->dma_ranges, &iobase);
+>  	if (err) {
+>  		dev_err(dev, "Getting bridge resources failed\n");
+>  		return err;
+> diff --git a/drivers/pci/controller/pcie-xilinx.c b/drivers/pci/controller/pcie-xilinx.c
+> index 5bf3af3b28e6..a95faca30291 100644
+> --- a/drivers/pci/controller/pcie-xilinx.c
+> +++ b/drivers/pci/controller/pcie-xilinx.c
+> @@ -648,7 +648,7 @@ static int xilinx_pcie_probe(struct platform_device *pdev)
+>  	}
+>  
+>  	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, &res,
+> -						    &iobase);
+> +						    &bridge->dma_ranges, &iobase);
+>  	if (err) {
+>  		dev_err(dev, "Getting bridge resources failed\n");
+>  		return err;
+> diff --git a/drivers/pci/of.c b/drivers/pci/of.c
+> index bc7b27a28795..8d31e078461f 100644
+> --- a/drivers/pci/of.c
+> +++ b/drivers/pci/of.c
+> @@ -257,7 +257,9 @@ EXPORT_SYMBOL_GPL(of_pci_check_probe_only);
+>   */
+>  int devm_of_pci_get_host_bridge_resources(struct device *dev,
+>  			unsigned char busno, unsigned char bus_max,
+> -			struct list_head *resources, resource_size_t *io_base)
+> +			struct list_head *resources,
+> +			struct list_head *ib_resources,
+> +			resource_size_t *io_base)
 >  {
->  	struct mtk_jpeg_dev *jpeg = dev_get_drvdata(dev);
+>  	struct device_node *dev_node = dev->of_node;
+>  	struct resource *res, tmp_res;
+> @@ -340,6 +342,42 @@ int devm_of_pci_get_host_bridge_resources(struct device *dev,
+>  		pci_add_resource_offset(resources, res,	res->start - range.pci_addr);
+>  	}
 >  
-> -	mtk_jpeg_dec_reset(jpeg->dec_reg_base);
-> +	if (jpeg->mode == MTK_JPEG_ENC)
-> +		mtk_jpeg_enc_reset(jpeg->reg_base);
-> +	else
-> +		mtk_jpeg_dec_reset(jpeg->reg_base);
+> +	/* Check for dma-ranges property */
+> +	if (!ib_resources)
+> +		return 0;
+> +	err = of_pci_dma_range_parser_init(&parser, dev_node);
+> +	if (err)
+> +		return 0;
 > +
->  	mtk_jpeg_clk_off(jpeg);
->  
+> +	dev_dbg(dev, "Parsing dma-ranges property...\n");
+> +	for_each_of_pci_range(&parser, &range) {
+> +		/*
+> +		 * If we failed translation or got a zero-sized region
+> +		 * then skip this range
+> +		 */
+> +		if (((range.flags & IORESOURCE_TYPE_BITS) != IORESOURCE_MEM) ||
+> +		    range.cpu_addr == OF_BAD_ADDR || range.size == 0)
+> +			continue;
+> +
+> +		dev_info(dev, "IB MEM %#010llx..%#010llx -> %#010llx\n",
+> +			 range.cpu_addr,
+> +			 range.cpu_addr + range.size - 1, range.pci_addr);
+> +
+> +
+> +		err = of_pci_range_to_resource(&range, dev_node, &tmp_res);
+> +		if (err)
+> +			continue;
+> +
+> +		res = devm_kmemdup(dev, &tmp_res, sizeof(tmp_res), GFP_KERNEL);
+> +		if (!res) {
+> +			err = -ENOMEM;
+> +			goto failed;
+> +		}
+> +
+> +		pci_add_resource_offset(ib_resources, res,
+> +					res->start - range.pci_addr);
+> +	}
+> +
 >  	return 0;
-> @@ -1213,7 +1629,10 @@ static __maybe_unused int mtk_jpeg_pm_resume(struct device *dev)
->  	struct mtk_jpeg_dev *jpeg = dev_get_drvdata(dev);
 >  
->  	mtk_jpeg_clk_on(jpeg);
-> -	mtk_jpeg_dec_reset(jpeg->dec_reg_base);
-> +	if (jpeg->mode == MTK_JPEG_ENC)
-> +		mtk_jpeg_enc_reset(jpeg->reg_base);
-> +	else
-> +		mtk_jpeg_dec_reset(jpeg->reg_base);
+>  failed:
+> @@ -482,6 +520,7 @@ EXPORT_SYMBOL_GPL(of_irq_parse_and_map_pci);
 >  
->  	return 0;
+>  int pci_parse_request_of_pci_ranges(struct device *dev,
+>  				    struct list_head *resources,
+> +				    struct list_head *ib_resources,
+>  				    struct resource **bus_range)
+>  {
+>  	int err, res_valid = 0;
+> @@ -489,8 +528,9 @@ int pci_parse_request_of_pci_ranges(struct device *dev,
+>  	struct resource_entry *win, *tmp;
+>  
+>  	INIT_LIST_HEAD(resources);
+> +	INIT_LIST_HEAD(ib_resources);
+>  	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff, resources,
+> -						    &iobase);
+> +						    ib_resources, &iobase);
+>  	if (err)
+>  		return err;
+>  
+> diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
+> index d22d1b807701..790458953c54 100644
+> --- a/drivers/pci/pci.h
+> +++ b/drivers/pci/pci.h
+> @@ -582,11 +582,15 @@ of_pci_get_max_link_speed(struct device_node *node)
+>  #if defined(CONFIG_OF_ADDRESS)
+>  int devm_of_pci_get_host_bridge_resources(struct device *dev,
+>  			unsigned char busno, unsigned char bus_max,
+> -			struct list_head *resources, resource_size_t *io_base);
+> +			struct list_head *resources,
+> +			struct list_head *ib_resources,
+> +			resource_size_t *io_base);
+>  #else
+>  static inline int devm_of_pci_get_host_bridge_resources(struct device *dev,
+>  			unsigned char busno, unsigned char bus_max,
+> -			struct list_head *resources, resource_size_t *io_base)
+> +			struct list_head *resources,
+> +			struct list_head *ib_resources,
+> +			resource_size_t *io_base);
+>  {
+>  	return -EINVAL;
 >  }
-> @@ -1249,11 +1668,15 @@ static const struct dev_pm_ops mtk_jpeg_pm_ops = {
->  static const struct of_device_id mtk_jpeg_match[] = {
->  	{
->  		.compatible = "mediatek,mt8173-jpgdec",
-> -		.data       = NULL,
-> +		.data       = (void *)MTK_JPEG_DEC,
->  	},
->  	{
->  		.compatible = "mediatek,mt2701-jpgdec",
-> -		.data       = NULL,
-> +		.data       = (void *)MTK_JPEG_DEC,
-> +	},
-> +	{
-> +		.compatible = "mediatek,mtk-jpgenc",
-> +		.data       = (void *)MTK_JPEG_ENC,
->  	},
->  	{},
->  };
+> diff --git a/include/linux/pci.h b/include/linux/pci.h
+> index 82e4cd1b7ac3..d57389b86f92 100644
+> --- a/include/linux/pci.h
+> +++ b/include/linux/pci.h
+> @@ -2312,6 +2312,7 @@ void pci_release_bus_of_node(struct pci_bus *bus);
+>  struct irq_domain *pci_host_bridge_of_msi_domain(struct pci_bus *bus);
+>  int pci_parse_request_of_pci_ranges(struct device *dev,
+>  				    struct list_head *resources,
+> +				    struct list_head *ib_resources,
+>  				    struct resource **bus_range);
+>  
+>  /* Arch may override this (weak) */
+> @@ -2326,6 +2327,7 @@ static inline struct irq_domain *
+>  pci_host_bridge_of_msi_domain(struct pci_bus *bus) { return NULL; }
+>  static inline int pci_parse_request_of_pci_ranges(struct device *dev,
+>  						  struct list_head *resources,
+> +						  struct list_head *ib_resources,
+>  						  struct resource **bus_range)
+>  {
+>  	return -EINVAL;
+> -- 
+> 2.20.1
+
+Seems ok to me.
 
 
-The g/s_selection ioctls are unchanged: that can't be right.
+Acked-by: Gustavo Pimentel <gustavo.pimentel@synopsys.com>
 
-The decoder supports composing, but that's not valid for an encoder:
-I expect cropping support for an encoder.
 
-Regards,
-
-	Hans
 
 _______________________________________________
 Linux-mediatek mailing list
