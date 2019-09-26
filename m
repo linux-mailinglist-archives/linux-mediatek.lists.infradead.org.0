@@ -2,52 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5B8F8BEDDA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Sep 2019 10:52:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5A6DBEDDC
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Sep 2019 10:52:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=aoR8eeY+rS00pMrwB7i3Au+igmCnslUAlC8HMziu96Q=; b=o0jd+QvEdvJR+j
-	v5hNBqelZvnVOr8qPzmRp9pX40p4wkZ894Mja7jhFjvxKW0E0lQkIZbO8POQfd8xNMHifgAp9hUsF
-	UHE4/dj7wjgaAF8S8PpLKF/y1LNsSMnPzAHa2nEKspkIKmfsrrbQrvEWgJZXLer2aw+9acOvXhLub
-	YkeiX+uPvfiIPyNagYiU8CvyJUFNSN7I0WC+lioYQfYY5iqzJedp+WLSmXaS7QgTByvGXlACwwDOQ
-	SMFbQoyoEWxEi7Rv6o79dbHjdX6tPBaeYDvIlGj9fvmF0QKUjkcpuxNokqE+860Kv3V0fEG6z8W2N
-	4a5eMHYd6PVgd4L+TB2w==;
+	List-Owner; bh=ow42DgpWIJP9NxztnxVxk48HbCeDsXiQnCPvDMdqKVk=; b=gN/VXIZUnxEiIe
+	vqREuaRGDS+Nieg3eYHaGJo1oRBtgEgSA2ESbKcaxXQdqZRKF4IcSN1xKqjIqKnC62QuZldGVyv87
+	mqjoCChCYvZWfg0Mo2ydV/9j+EgajFIVNWZwzU39lrlgOv8A6LcsIk4rd6jyUO82m/o6UZpjvD/eA
+	yr5xyiiIM2wKS1SJhEZH2S78GTGab5y2cdSSApR7tPelnXdD9bn98odP2sTObs4gG4RmBDM8KZ3HJ
+	HtkFKIQc+bW9rVaZ+t26i3rbv/W2d99EhJHgLSzbrZJEwfOnxJ6f6X+dMMP4k6G2Cw0LHfHJhY//3
+	BwrV1bF82t7O80g7t62w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iDPVU-0003AM-HR; Thu, 26 Sep 2019 08:52:12 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iDPSQ-0001Mk-OZ; Thu, 26 Sep 2019 08:49:11 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 2D1901000;
- Thu, 26 Sep 2019 01:49:02 -0700 (PDT)
-Received: from localhost (unknown [10.37.6.20])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 785163F67D;
- Thu, 26 Sep 2019 01:49:01 -0700 (PDT)
-Date: Thu, 26 Sep 2019 09:49:00 +0100
-From: Andrew Murray <andrew.murray@arm.com>
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH 00/11] PCI dma-ranges parsing consolidation
-Message-ID: <20190926084859.GB9720@e119886-lin.cambridge.arm.com>
-References: <20190924214630.12817-1-robh@kernel.org>
+	id 1iDPVn-0003Gd-54; Thu, 26 Sep 2019 08:52:31 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iDPTk-0002os-6X
+ for linux-mediatek@lists.infradead.org; Thu, 26 Sep 2019 08:50:28 +0000
+X-UUID: e08120ab5f2544c88bf72bc0447c8042-20190926
+X-UUID: e08120ab5f2544c88bf72bc0447c8042-20190926
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1095208500; Thu, 26 Sep 2019 00:50:14 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 26 Sep 2019 01:50:13 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 26 Sep 2019 16:50:12 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 26 Sep 2019 16:50:06 +0800
+Message-ID: <1569487807.9612.0.camel@mtksdaap41>
+Subject: Re: [PATCH v7 2/9] drm/mediatek: fixes CMDQ reg address of mt8173
+ is different with mt2701
+From: CK Hu <ck.hu@mediatek.com>
+To: Jitao Shi <jitao.shi@mediatek.com>
+Date: Thu, 26 Sep 2019 16:50:07 +0800
+In-Reply-To: <20190919065806.111016-3-jitao.shi@mediatek.com>
+References: <20190919065806.111016-1-jitao.shi@mediatek.com>
+ <20190919065806.111016-3-jitao.shi@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190924214630.12817-1-robh@kernel.org>
-User-Agent: Mutt/1.10.1+81 (426a6c1) (2018-08-26)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190926_014904_685560_D39186C9 
-X-CRM114-Status: GOOD (  17.88  )
+X-CRM114-CacheID: sfid-20190926_015025_057953_E4D15F93 
+X-CRM114-Status: GOOD (  14.49  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,97 +75,114 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>, linux-pci@vger.kernel.org,
- Shawn Lin <shawn.lin@rock-chips.com>, Ryder Lee <ryder.lee@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Toan Le <toan@os.amperecomputing.com>, Will Deacon <will@kernel.org>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Michal Simek <michal.simek@xilinx.com>, linux-rockchip@lists.infradead.org,
- bcm-kernel-feedback-list@broadcom.com,
- Linus Walleij <linus.walleij@linaro.org>, Ray Jui <rjui@broadcom.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, Simon Horman <horms@verge.net.au>,
- linux-mediatek@lists.infradead.org, Bjorn Helgaas <bhelgaas@google.com>,
- linux-arm-kernel@lists.infradead.org, Scott Branden <sbranden@broadcom.com>,
- Gustavo Pimentel <gustavo.pimentel@synopsys.com>, rfi@lists.rocketboards.org,
- linux-renesas-soc@vger.kernel.org, Tom Joseph <tjoseph@cadence.com>,
- Jingoo Han <jingoohan1@gmail.com>, Ley Foon Tan <lftan@altera.com>
+Cc: bibby.hsieh@mediatek.com, srv_heupstream@mediatek.com,
+ David Airlie <airlied@linux.ie>, stonea168@163.com, cawa.cheng@mediatek.com,
+ dri-devel@lists.freedesktop.org, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
+ Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
+ eddie.huang@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Sep 24, 2019 at 04:46:19PM -0500, Rob Herring wrote:
-> This series moves the DT 'dma-ranges' parsing into common helpers
-> utilizing a resource list. In the process of doing this, I noticed
-> several cases where pci_parse_request_of_pci_ranges() could be used so
-> I converted those drivers first. The last 5 patches make the actual
-> change to use the common 'dma_ranges' resource list. There's no
-> (intended) functional change in this series though I'm also working on
-> a separate series to improve the handling of 'dma-ranges' and dma
-> masks.
-> 
-> pci-rcar-gen2 is the only remaining driver doing its own dma-ranges
-> handling as it is still using the old ARM PCI functions. Looks like it
-> is the last one (in drivers/pci/).
+Hi, Jitao:
 
-It also seems that pcie-tango is using of_pci_dma_range_parser_init
-and so parsing dma-ranges. Though it's using the dma_ranges for a
-slightly different purpose.
+On Thu, 2019-09-19 at 14:57 +0800, Jitao Shi wrote:
+> Config the different CMDQ reg address in driver data.
 
-Thanks,
-
-Andrew Murray
+Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
 > 
-> Compile tested only.
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> ---
+>  drivers/gpu/drm/mediatek/mtk_dsi.c | 27 ++++++++++++++++++++++-----
+>  1 file changed, 22 insertions(+), 5 deletions(-)
 > 
-> Rob
-> 
-> Rob Herring (11):
->   PCI: aardvark: Use pci_parse_request_of_pci_ranges()
->   PCI: altera: Use pci_parse_request_of_pci_ranges()
->   PCI: mediatek: Use pci_parse_request_of_pci_ranges()
->   PCI: versatile: Enable COMPILE_TEST
->   PCI: versatile: Use pci_parse_request_of_pci_ranges()
->   PCI: of: Add inbound resource parsing to helpers
->   PCI: ftpci100: Use inbound resources for setup
->   PCI: v3-semi: Use inbound resources for setup
->   PCI: xgene: Use inbound resources for setup
->   PCI: iproc: Use inbound resources for setup
->   PCI: rcar: Use inbound resources for setup
-> 
->  drivers/pci/controller/Kconfig                |  2 +-
->  .../pci/controller/dwc/pcie-designware-host.c |  3 +-
->  drivers/pci/controller/pci-aardvark.c         | 58 ++---------------
->  drivers/pci/controller/pci-ftpci100.c         | 29 ++++-----
->  drivers/pci/controller/pci-host-common.c      |  2 +-
->  drivers/pci/controller/pci-v3-semi.c          | 40 +++++-------
->  drivers/pci/controller/pci-versatile.c        | 62 ++++--------------
->  drivers/pci/controller/pci-xgene.c            | 33 ++++------
->  drivers/pci/controller/pcie-altera.c          | 38 +----------
->  drivers/pci/controller/pcie-cadence-host.c    |  2 +-
->  drivers/pci/controller/pcie-iproc-platform.c  |  1 +
->  drivers/pci/controller/pcie-iproc.c           | 63 +++----------------
->  drivers/pci/controller/pcie-mediatek.c        | 47 +++++---------
->  drivers/pci/controller/pcie-mobiveil.c        |  4 +-
->  drivers/pci/controller/pcie-rcar.c            | 48 ++++++--------
->  drivers/pci/controller/pcie-rockchip-host.c   |  3 +-
->  drivers/pci/controller/pcie-xilinx-nwl.c      |  2 +-
->  drivers/pci/controller/pcie-xilinx.c          |  2 +-
->  drivers/pci/of.c                              | 44 ++++++++++++-
->  drivers/pci/pci.h                             |  8 ++-
->  include/linux/pci.h                           |  2 +
->  21 files changed, 162 insertions(+), 331 deletions(-)
-> 
-> --
-> 2.20.1
-> 
-> _______________________________________________
-> linux-arm-kernel mailing list
-> linux-arm-kernel@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-arm-kernel
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> index 52b49daeed9f..7e24d03cdccc 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_dsi.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+> @@ -123,7 +123,6 @@
+>  #define VM_CMD_EN			BIT(0)
+>  #define TS_VFP_EN			BIT(5)
+>  
+> -#define DSI_CMDQ0		0x180
+>  #define CONFIG				(0xff << 0)
+>  #define SHORT_PACKET			0
+>  #define LONG_PACKET			2
+> @@ -148,6 +147,10 @@
+>  
+>  struct phy;
+>  
+> +struct mtk_dsi_driver_data {
+> +	const u32 reg_cmdq_off;
+> +};
+> +
+>  struct mtk_dsi {
+>  	struct mtk_ddp_comp ddp_comp;
+>  	struct device *dev;
+> @@ -174,6 +177,7 @@ struct mtk_dsi {
+>  	bool enabled;
+>  	u32 irq_data;
+>  	wait_queue_head_t irq_wait_queue;
+> +	const struct mtk_dsi_driver_data *driver_data;
+>  };
+>  
+>  static inline struct mtk_dsi *encoder_to_dsi(struct drm_encoder *e)
+> @@ -936,6 +940,7 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
+>  	const char *tx_buf = msg->tx_buf;
+>  	u8 config, cmdq_size, cmdq_off, type = msg->type;
+>  	u32 reg_val, cmdq_mask, i;
+> +	u32 reg_cmdq_off = dsi->driver_data->reg_cmdq_off;
+>  
+>  	if (MTK_DSI_HOST_IS_READ(type))
+>  		config = BTA;
+> @@ -955,9 +960,9 @@ static void mtk_dsi_cmdq(struct mtk_dsi *dsi, const struct mipi_dsi_msg *msg)
+>  	}
+>  
+>  	for (i = 0; i < msg->tx_len; i++)
+> -		writeb(tx_buf[i], dsi->regs + DSI_CMDQ0 + cmdq_off + i);
+> +		writeb(tx_buf[i], dsi->regs + reg_cmdq_off + cmdq_off + i);
+>  
+> -	mtk_dsi_mask(dsi, DSI_CMDQ0, cmdq_mask, reg_val);
+> +	mtk_dsi_mask(dsi, reg_cmdq_off, cmdq_mask, reg_val);
+>  	mtk_dsi_mask(dsi, DSI_CMDQ_SIZE, CMDQ_SIZE, cmdq_size);
+>  }
+>  
+> @@ -1101,6 +1106,8 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+>  	if (ret)
+>  		goto err_unregister_host;
+>  
+> +	dsi->driver_data = of_device_get_match_data(dev);
+> +
+>  	dsi->engine_clk = devm_clk_get(dev, "engine");
+>  	if (IS_ERR(dsi->engine_clk)) {
+>  		ret = PTR_ERR(dsi->engine_clk);
+> @@ -1194,9 +1201,19 @@ static int mtk_dsi_remove(struct platform_device *pdev)
+>  	return 0;
+>  }
+>  
+> +static const struct mtk_dsi_driver_data mt8173_dsi_driver_data = {
+> +	.reg_cmdq_off = 0x200,
+> +};
+> +
+> +static const struct mtk_dsi_driver_data mt2701_dsi_driver_data = {
+> +	.reg_cmdq_off = 0x180,
+> +};
+> +
+>  static const struct of_device_id mtk_dsi_of_match[] = {
+> -	{ .compatible = "mediatek,mt2701-dsi" },
+> -	{ .compatible = "mediatek,mt8173-dsi" },
+> +	{ .compatible = "mediatek,mt2701-dsi",
+> +	  .data = &mt2701_dsi_driver_data },
+> +	{ .compatible = "mediatek,mt8173-dsi",
+> +	  .data = &mt8173_dsi_driver_data },
+>  	{ },
+>  };
+>  
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
