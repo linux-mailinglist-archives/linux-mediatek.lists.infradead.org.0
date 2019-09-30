@@ -2,62 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 443EEC1B16
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 07:42:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B523AC1C72
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 09:59:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=vR/Ga478H7UQwPtswG7gFTZ5qwIEm9/Nfv8/wK6LN5Y=; b=KpBmkG52leYQbi
-	KRU2k+Wpo/tTZ4wQ0GE+kIJVkAVKu75EzD+psvN0rxj1kvTTFJM9Wr0TX+Yxw+Ev9umRsWZs2uLpv
-	kfiTLnpvyyJNRZPBkc7t/SDKHx55wMe0yYjptZvDkBmWO6psEkX5JL/zJkVwnlJQQ3HoHIOARlV7e
-	7ex/7dFGeKbJ6PLfKFs+Qr04K2Mxyz18+0eUajFtP9JkDEsbRFZcp8TFSEMJYiYz1CIPgz7oHvVHR
-	ITJY33FaS/N40WIGFRBu4pf5T9PJPy5Up4r0r4CnrPFPPcHSLJN/L7BA39oYN/yDN+lY4oz3xk8QK
-	eXebUx1DyJ5gzc0vBV+Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=5AF9SrRqUaFcCazibSv4I1qFwI4oO5l8/EfqlvB2Lqc=; b=tGPE3nb9GNNM7s
+	S1cgwEahgwRPwVSbNgOP0X4kybrPMBH9F18AZcweiyWNnErdBKK9LYDv1fyKhGDXyrYD0EXgZJbMS
+	MmL0KpAGfEyIIkPL5cE54s+3tM/i8GBsM+VHA7MVvAAiBnQjmz5lNq2mUMQhUs+33jTaSTPKZ7Zvk
+	yrPsIc9fNYJUIYhOJLGXtpkeLUFMcdl6V0qWwI+umM1ENrOHISprOXtxD4YE7djI/A1zgqidk1cNA
+	o8Nj56AytVluLQBCYc4r/4IiPmnt0yG6G+mViibUg1kwM6/qetb+xDc5MqoCgQHpwhq2uSDByx8Dr
+	1l9O+kPAP3fgupuTQisg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iEoSP-0004tM-M2; Mon, 30 Sep 2019 05:42:49 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iEqaG-0004PU-Tb; Mon, 30 Sep 2019 07:59:04 +0000
+Received: from mga09.intel.com ([134.134.136.24])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iEoSL-0004sI-Sj; Mon, 30 Sep 2019 05:42:47 +0000
-X-UUID: e870e33451b54dde89b76878e415c596-20190929
-X-UUID: e870e33451b54dde89b76878e415c596-20190929
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <yong.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 931495980; Sun, 29 Sep 2019 21:42:28 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 29 Sep 2019 22:42:27 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Sep 2019 13:42:26 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 30 Sep 2019 13:42:24 +0800
-From: Yong Wu <yong.wu@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>, Joerg Roedel <joro@8bytes.org>, 
- Will Deacon <will.deacon@arm.com>
-Subject: [PATCH] iommu/mediatek: Move the tlb_sync into tlb_flush
-Date: Mon, 30 Sep 2019 13:42:22 +0800
-Message-ID: <1569822142-14303-1-git-send-email-yong.wu@mediatek.com>
-X-Mailer: git-send-email 1.9.1
+ id 1iEqaC-0004NP-KJ
+ for linux-mediatek@lists.infradead.org; Mon, 30 Sep 2019 07:59:03 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from orsmga008.jf.intel.com ([10.7.209.65])
+ by orsmga102.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 30 Sep 2019 00:58:56 -0700
+X-IronPort-AV: E=Sophos;i="5.64,565,1559545200"; d="scan'208";a="184757098"
+Received: from paasikivi.fi.intel.com ([10.237.72.42])
+ by orsmga008-auth.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 30 Sep 2019 00:58:53 -0700
+Received: by paasikivi.fi.intel.com (Postfix, from userid 1000)
+ id 83C6720343; Mon, 30 Sep 2019 10:58:51 +0300 (EEST)
+Date: Mon, 30 Sep 2019 10:58:51 +0300
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Subject: Re: [PATCH] media: i2c: ov5695: Modify the function of async
+ register subdev related devices
+Message-ID: <20190930075851.GB19037@paasikivi.fi.intel.com>
+References: <20190927071824.18675-1-dongchun.zhu@mediatek.com>
+ <20190927071824.18675-2-dongchun.zhu@mediatek.com>
+ <CAAFQd5B1htFA1R92iQQ93dMQujkSWNqHkx94GG+bdUscRA4gDQ@mail.gmail.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <CAAFQd5B1htFA1R92iQQ93dMQujkSWNqHkx94GG+bdUscRA4gDQ@mail.gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190929_224245_936670_242FF7AD 
-X-CRM114-Status: GOOD (  19.41  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190930_005900_739232_62DE836A 
+X-CRM114-Status: GOOD (  16.17  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [134.134.136.24 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,206 +71,69 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, anan.sun@mediatek.com,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream@mediatek.com, chao.hao@mediatek.com,
- linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
- Tomasz Figa <tfiga@google.com>, iommu@lists.linux-foundation.org,
- linux-mediatek@lists.infradead.org, yong.wu@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream <srv_heupstream@mediatek.com>, shengnan.wang@mediatek.com,
+ Louis Kuo <louis.kuo@mediatek.com>, Sj Huang <sj.huang@mediatek.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Dongchun Zhu <dongchun.zhu@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Cao Bing Bu <bingbu.cao@intel.com>,
+ andriy.shevchenko@linux.intel.com,
+ Linux Media Mailing List <linux-media@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The commit 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API
-TLB sync") help move the tlb_sync of unmap from v7s into the iommu
-framework. It helps add a new function "mtk_iommu_iotlb_sync", But it
-lacked the dom->pgtlock, then it will cause the variable
-"tlb_flush_active" may be changed unexpectedly, we could see this warning
-log randomly:
+Hi Tomasz, Dongchun,
 
-mtk-iommu 10205000.iommu: Partial TLB flush timed out, falling back to
-full flush
+(Removed randomly cc'd people from distribution.)
 
-To fix this issue, we can add dom->pgtlock in the "mtk_iommu_iotlb_sync".
-And when checking this issue, we find that __arm_v7s_unmap call
-io_pgtable_tlb_add_flush consecutively when it is supersection/largepage,
-this also is potential unsafe for us. There is no tlb flush queue in the
-MediaTek M4U HW. The HW always expect the tlb_flush/tlb_sync one by one.
-If v7s don't always gurarantee the sequence, Thus, In this patch I move
-the tlb_sync into tlb_flush(also rename the function deleting "_nosync").
-and we don't care if it is leaf, rearrange the callback functions. Also,
-the tlb flush/sync was already finished in v7s, then iotlb_sync and
-iotlb_sync_all is unnecessary.
+On Sat, Sep 28, 2019 at 09:17:11PM +0900, Tomasz Figa wrote:
+> On Fri, Sep 27, 2019 at 4:18 PM Dongchun Zhu <dongchun.zhu@mediatek.com> wrote:
+> >
+> > This patch adds support for registering a sensor sub-device to the async sub-device framework and parse set up common
+> > sensor related devices such as actuator/VCM.
+> 
+> nit: The description should be wrapped around the 80th column.
+> 
+> Sakari, do we need to resent or you could just rewrap when applying?
 
-Besides, there are two minor changes:
-a) Use writel for the register F_MMU_INV_RANGE which is for triggering the
-HW work. We expect all the setting(iova_start/iova_end...) have already
-been finished before F_MMU_INV_RANGE.
-b) Reduce the tlb timeout value from 100000us to 1000us. the original value
-is so long that affect the multimedia performance.
+I'll rewrap.
 
-Fixes: 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API TLB sync")
-Signed-off-by: Chao Hao <chao.hao@mediatek.com>
-Signed-off-by: Yong Wu <yong.wu@mediatek.com>
----
-This patch looks break the logic for tlb_flush and tlb_sync. I'm not
-sure if it
-is reasonable. If someone has concern, I could change:
-a) Add dom->pgtlock in the mtk_iommu_iotlb_sync
-b) Add a io_pgtable_tlb_sync in [1].
+> 
+> >
+> > Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> > ---
+> >  drivers/media/i2c/ov5695.c | 2 +-
+> >  1 file changed, 1 insertion(+), 1 deletion(-)
+> >
+> > diff --git a/drivers/media/i2c/ov5695.c b/drivers/media/i2c/ov5695.c
+> > index e65a943..b6ee62c 100644
+> > --- a/drivers/media/i2c/ov5695.c
+> > +++ b/drivers/media/i2c/ov5695.c
+> > @@ -1328,7 +1328,7 @@ static int ov5695_probe(struct i2c_client *client,
+> >                 goto err_power_off;
+> >  #endif
+> >
+> > -       ret = v4l2_async_register_subdev(sd);
+> > +       ret = v4l2_async_register_subdev_sensor_common(sd);
+> >         if (ret) {
+> >                 dev_err(dev, "v4l2 async register subdev failed\n");
+> >                 goto err_clean_entity;
+> > --
+> > 2.9.2
+> >
+> 
+> Otherwise:
+> 
+> Reviewed-by: Tomasz Figa <tfiga@chromium.org>
 
-[1]
-https://elixir.bootlin.com/linux/v5.3-rc1/source/drivers/iommu/io-pgtable-arm-v7s.c#L655
+Thanks!
 
-This patch rebase on Joerg's mediatek-smmu-merge branch which has mt8183
-and Will's "Rework IOMMU API to allow for batching of invalidation".
----
- drivers/iommu/mtk_iommu.c | 74 ++++++++++++-----------------------------------
- drivers/iommu/mtk_iommu.h |  1 -
- 2 files changed, 19 insertions(+), 56 deletions(-)
-
-diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index 6066272..e13cc56 100644
---- a/drivers/iommu/mtk_iommu.c
-+++ b/drivers/iommu/mtk_iommu.c
-@@ -173,11 +173,12 @@ static void mtk_iommu_tlb_flush_all(void *cookie)
- 	}
- }
- 
--static void mtk_iommu_tlb_add_flush_nosync(unsigned long iova, size_t size,
--					   size_t granule, bool leaf,
--					   void *cookie)
-+static void mtk_iommu_tlb_add_flush(unsigned long iova, size_t size,
-+				    size_t granule, void *cookie)
- {
- 	struct mtk_iommu_data *data = cookie;
-+	int ret;
-+	u32 tmp;
- 
- 	for_each_m4u(data) {
- 		writel_relaxed(F_INVLD_EN1 | F_INVLD_EN0,
-@@ -186,25 +187,15 @@ static void mtk_iommu_tlb_add_flush_nosync(unsigned long iova, size_t size,
- 		writel_relaxed(iova, data->base + REG_MMU_INVLD_START_A);
- 		writel_relaxed(iova + size - 1,
- 			       data->base + REG_MMU_INVLD_END_A);
--		writel_relaxed(F_MMU_INV_RANGE,
--			       data->base + REG_MMU_INVALIDATE);
--		data->tlb_flush_active = true;
--	}
--}
--
--static void mtk_iommu_tlb_sync(void *cookie)
--{
--	struct mtk_iommu_data *data = cookie;
--	int ret;
--	u32 tmp;
--
--	for_each_m4u(data) {
--		/* Avoid timing out if there's nothing to wait for */
--		if (!data->tlb_flush_active)
--			return;
-+		writel(F_MMU_INV_RANGE, data->base + REG_MMU_INVALIDATE);
- 
-+		/*
-+		 * There is no tlb flush queue in the HW, the HW always expect
-+		 * tlb_flush and tlb_sync one by one. Here tlb_sync always
-+		 * follows tlb_flush to avoid break the sequence.
-+		 */
- 		ret = readl_poll_timeout_atomic(data->base + REG_MMU_CPE_DONE,
--						tmp, tmp != 0, 10, 100000);
-+						tmp, tmp != 0, 10, 1000);
- 		if (ret) {
- 			dev_warn(data->dev,
- 				 "Partial TLB flush timed out, falling back to full flush\n");
-@@ -212,36 +203,21 @@ static void mtk_iommu_tlb_sync(void *cookie)
- 		}
- 		/* Clear the CPE status */
- 		writel_relaxed(0, data->base + REG_MMU_CPE_DONE);
--		data->tlb_flush_active = false;
- 	}
- }
- 
--static void mtk_iommu_tlb_flush_walk(unsigned long iova, size_t size,
--				     size_t granule, void *cookie)
-+static void mtk_iommu_tlb_flush_page(struct iommu_iotlb_gather *gather,
-+				     unsigned long iova, size_t granule,
-+				     void *cookie)
- {
--	mtk_iommu_tlb_add_flush_nosync(iova, size, granule, false, cookie);
--	mtk_iommu_tlb_sync(cookie);
--}
--
--static void mtk_iommu_tlb_flush_leaf(unsigned long iova, size_t size,
--				     size_t granule, void *cookie)
--{
--	mtk_iommu_tlb_add_flush_nosync(iova, size, granule, true, cookie);
--	mtk_iommu_tlb_sync(cookie);
--}
--
--static void mtk_iommu_tlb_flush_page_nosync(struct iommu_iotlb_gather *gather,
--					    unsigned long iova, size_t granule,
--					    void *cookie)
--{
--	mtk_iommu_tlb_add_flush_nosync(iova, granule, granule, true, cookie);
-+	mtk_iommu_tlb_add_flush(iova, granule, granule, cookie);
- }
- 
- static const struct iommu_flush_ops mtk_iommu_flush_ops = {
- 	.tlb_flush_all = mtk_iommu_tlb_flush_all,
--	.tlb_flush_walk = mtk_iommu_tlb_flush_walk,
--	.tlb_flush_leaf = mtk_iommu_tlb_flush_leaf,
--	.tlb_add_page = mtk_iommu_tlb_flush_page_nosync,
-+	.tlb_flush_walk = mtk_iommu_tlb_add_flush,
-+	.tlb_flush_leaf = mtk_iommu_tlb_add_flush,
-+	.tlb_add_page = mtk_iommu_tlb_flush_page,
- };
- 
- static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
-@@ -445,17 +421,6 @@ static size_t mtk_iommu_unmap(struct iommu_domain *domain,
- 	return unmapsz;
- }
- 
--static void mtk_iommu_flush_iotlb_all(struct iommu_domain *domain)
--{
--	mtk_iommu_tlb_sync(mtk_iommu_get_m4u_data());
--}
--
--static void mtk_iommu_iotlb_sync(struct iommu_domain *domain,
--				 struct iommu_iotlb_gather *gather)
--{
--	mtk_iommu_tlb_sync(mtk_iommu_get_m4u_data());
--}
--
- static phys_addr_t mtk_iommu_iova_to_phys(struct iommu_domain *domain,
- 					  dma_addr_t iova)
- {
-@@ -574,8 +539,7 @@ static int mtk_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
- 	.detach_dev	= mtk_iommu_detach_device,
- 	.map		= mtk_iommu_map,
- 	.unmap		= mtk_iommu_unmap,
--	.flush_iotlb_all = mtk_iommu_flush_iotlb_all,
--	.iotlb_sync	= mtk_iommu_iotlb_sync,
-+	/* No iotlb_sync here since the tlb_sync always follows the tlb_flush */
- 	.iova_to_phys	= mtk_iommu_iova_to_phys,
- 	.add_device	= mtk_iommu_add_device,
- 	.remove_device	= mtk_iommu_remove_device,
-diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
-index fc0f16e..24712f5 100644
---- a/drivers/iommu/mtk_iommu.h
-+++ b/drivers/iommu/mtk_iommu.h
-@@ -57,7 +57,6 @@ struct mtk_iommu_data {
- 	struct mtk_iommu_domain		*m4u_dom;
- 	struct iommu_group		*m4u_group;
- 	bool                            enable_4GB;
--	bool				tlb_flush_active;
- 
- 	struct iommu_device		iommu;
- 	const struct mtk_iommu_plat_data *plat_data;
 -- 
-1.9.1
-
+Sakari Ailus
+sakari.ailus@linux.intel.com
 
 _______________________________________________
 Linux-mediatek mailing list
