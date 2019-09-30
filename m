@@ -2,90 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4D151C2357
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 16:33:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 370BFC2446
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 17:29:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0c/TSeS15XEtCFz2vL2K/oQsN7U+L/IesVdTT4soXZk=; b=ROwAjjWu7gVH3l
-	AyZp65iRijlQ8JndUi4BFeI2SLEaCPZqMURAy3aQXzPghqzHTmESN/KTFieivsM4wNd8iTdLS2Az+
-	9rMSZSu/6Ryo8TCGGZRDUYlm3hbRy2GFi8xZXaRO6s/LOF10KmJIKoWpMw+y9aN4FEwzkrok+vl6i
-	9OqEhVS9xeXZAwW9rCouUd9bIFarvuJvNkyne8vWEvVchbtbwnO1lqw/xUi7LBO8upzETokXtDU2N
-	uhH0UGLlkq50eYhw+1znGg5oA2kHlBgiAlyjd5L7G4GUyC/bD+ynsYI5U8VNmDudJzg74psaS6Ve3
-	+Rgo/tuusRZ9aHVDLJyg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=DMS8FI6I/Se3b3eiqxmDgbJ1+vc9HXpj41YUaV9Gis4=; b=AN6fdIzmHb9eQo
+	D5iNSqr+GN6yN0hlMwvIH5eerpmv9amzRZwfV3BADV1May9+Mz6MIKd5SnH3xE6R3GvWWxV8ZmS2w
+	2+wowlkgbXlbEH5haZxN2xkwBZ0U9Acf/+AUH8kOQyhfvqpB5gOmJk2w5pWIfkGNAOJJLiXigqfZ0
+	Gf0MEPZmfmk0mg3V0HxKa9dCX7I/QabbwrKG++eBRi3ivtsQhwPc8TjYFE1hgO9q7x0mGxc1G0xAZ
+	dxYStICaWkA80L/DAlkJ6AJoxC4dmyaKn4r8hs86ijX4MvLAMvCgkGl9t57dEjcAZxXGaTaCKPhKi
+	EFUi+98lcxfoe9okACMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iEwjQ-0005qp-0V; Mon, 30 Sep 2019 14:32:56 +0000
-Received: from mail-oi1-f196.google.com ([209.85.167.196])
+	id 1iExbm-0005DK-JL; Mon, 30 Sep 2019 15:29:06 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iEwjI-0005mh-Ts; Mon, 30 Sep 2019 14:32:50 +0000
-Received: by mail-oi1-f196.google.com with SMTP id k9so11282585oib.7;
- Mon, 30 Sep 2019 07:32:48 -0700 (PDT)
+ id 1iExbX-000513-GI
+ for linux-mediatek@lists.infradead.org; Mon, 30 Sep 2019 15:28:53 +0000
+Received: by mail-wr1-x441.google.com with SMTP id n14so11833238wrw.9
+ for <linux-mediatek@lists.infradead.org>; Mon, 30 Sep 2019 08:28:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=nKNYJ+YfKpvtJJY2vQQUQXqOjR+zsvfM3h1aXu/ISL4=;
+ b=H0TYWQ03EdNmCsa24PTRi/DaCpOIJ2BI1utBui9MEd6CPIO/n5FgXT5QaM7G8Byflr
+ IjsUq8JljCgaDgVaAzD8uiJnP7WloIUMKN3Yd5GolIFvfw42I7kWeQ7msUUyIHgOoxmT
+ qeUrgV6e8QoColLYaPZ/uWYidkmbwcECRLvj5XlCZ0prajHp0UTdR+4boOIhRHPLDq9o
+ eI824KIalBfpNDFfEvSm74rwpvE1rV4I603AEVMf/nzPzkTM2snjOj9N/Ljknq6V3HMf
+ EzAsVE3O+DX/VeOsQ2BL9njgaV5cZo/FxQolaudcPZx++VjdnnlQNQcuc+vizfk+Urhx
+ Nb2w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=kUMYVmu3XMOxDG5rrYQfwaFPZ00CpUb0hbyz3+BbaG0=;
- b=Lf9o40fcYlA/8zr/t3sBOA30YEwf8ywN2f2CJsVJ0pAXKFPACLBWP04hbS3LC5ZDeL
- N4aljkk2ejuLuxkT1FXdg5JkY6sSs01ZhHPirWqyCvt9VoCjRA0k9Bwr30PvHdICfjGH
- INsw4/6t+PQgrP74R7tlYa2o7Tvyr8QaNQS4wclBTVs6rlVy6Tz4/jjVby3/tFch7PF2
- lMJ3C26QQ5+IGC/VfCe1K+uKCSF18v6SG2TahQBh8pOwaHaVVhSJrc8Z41xQxSzEXK4h
- vRmcEaprwOZxF/HPTyfrpbZJjlmtet1kCzp2rli3MxeJ93ETH/lWNeJehX8FYjq9Iy8F
- Nq0Q==
-X-Gm-Message-State: APjAAAWLz4JoYdP1Q7nv6jmv95hZXKPEhFGbFqcKS9oihJZqaitdj+IV
- tW0wiLbCQBnHlSOKiX4QAA==
-X-Google-Smtp-Source: APXvYqyWWGHweAxd+epg50sMtp2YxM9KH4bIudckXn/jzkB0T25eaocN5L6p2a1h/laqh+KPJMVjkw==
-X-Received: by 2002:aca:c792:: with SMTP id
- x140mr18609373oif.132.1569853967784; 
- Mon, 30 Sep 2019 07:32:47 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id t82sm4319977oie.12.2019.09.30.07.32.46
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=nKNYJ+YfKpvtJJY2vQQUQXqOjR+zsvfM3h1aXu/ISL4=;
+ b=SrglXBrYwnuZ0EhV48M3DD0wiLiK+m1hYEOVRY5MfoClJLkEYid6f9HFCA4+mn2jw0
+ k5GRgsBnCB0gJN557+HfMLMHiWa1slxUY/HvKDIHkzSYfsH+POX83+0OUXPwukEIg/Bo
+ rMOn2r+iOPGzW9Ipo2xVqd2mlTVKoWbmKlHHmulDxUNC1GsVzZtszX8XGLvjAdSQn6jQ
+ 2USDs8mUD+BX98/vhVrAiTbzDo8lXhg+f1B3/wXs6UGoH3Qlg+lRES5lHCkEa7dj1D2g
+ onfW0rsT7ny8HCOs9nD4hWuUcz0fwM6ouuTqzu6qgXzBiW7mMlyt0R3hOYUPlwPm8Vb3
+ 9Z8w==
+X-Gm-Message-State: APjAAAURAJwLPm9j1mh4jerGoJjoXCk0F9VHR5QjWnfiquiNKsitvDG6
+ +XytS3U2k2yBPb806iB08SbtLw==
+X-Google-Smtp-Source: APXvYqzP1+989rANQG2Lck5S3rwS82kAY9NARdWl/o2qRDBdRfMkejnRZIf/tpixmscYbkuO/ufQZA==
+X-Received: by 2002:a5d:6a06:: with SMTP id m6mr13698975wru.190.1569857329714; 
+ Mon, 30 Sep 2019 08:28:49 -0700 (PDT)
+Received: from radium.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id o19sm12420949wro.50.2019.09.30.08.28.48
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 30 Sep 2019 07:32:47 -0700 (PDT)
-Date: Mon, 30 Sep 2019 09:32:46 -0500
-From: Rob Herring <robh@kernel.org>
-To: Claudiu.Beznea@microchip.com
-Subject: Re: [PATCH 4/7] dt-bindings: chosen: Add clocksource and clockevent
- selection
-Message-ID: <20190930143246.GA19967@bogus>
-References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
- <1568123236-767-5-git-send-email-claudiu.beznea@microchip.com>
- <20190910143231.GB14966@e107533-lin.cambridge.arm.com>
- <ab43b209-78fa-0cab-b8ea-acd4c550e689@microchip.com>
- <20190910150826.GA18308@e107533-lin.cambridge.arm.com>
- <20190910151055.GX21254@piout.net>
- <CACRpkda4mmpbPWa2nD93CvD6HWzcTUDzyyLdQxC2gNB7XiJF3w@mail.gmail.com>
- <a2aca46a-8eb9-d8a8-de42-9850a8a8f44c@microchip.com>
+ Mon, 30 Sep 2019 08:28:48 -0700 (PDT)
+From: Fabien Parent <fparent@baylibre.com>
+To: linux-i2c@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: [PATCH v2] i2c: i2c-mt65xx: fix NULL ptr dereference
+Date: Mon, 30 Sep 2019 17:28:46 +0200
+Message-Id: <20190930152846.5062-1-fparent@baylibre.com>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <a2aca46a-8eb9-d8a8-de42-9850a8a8f44c@microchip.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190930_073248_964476_4CD284B7 
-X-CRM114-Status: GOOD (  15.87  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190930_082851_539282_4E8CE581 
+X-CRM114-Status: GOOD (  11.05  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.196 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.196 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,102 +92,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: tmaimon77@gmail.com, linus.walleij@linaro.org, nsekhar@ti.com,
- guoren@kernel.org, linux-stm32@st-md-mailman.stormreply.com, heiko@sntech.de,
- linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
- khilman@baylibre.com, Ludovic.Desroches@microchip.com, linux-imx@nxp.com,
- u.kleine-koenig@pengutronix.de, uclinux-h8-devel@lists.sourceforge.jp,
- marc.zyngier@arm.com, s.hauer@pengutronix.de, linux-unisoc@lists.infradead.org,
- khalasa@piap.pl, tglx@linutronix.de, sbranden@broadcom.com,
- linux-kernel@vger.kernel.org, ralf@linux-mips.org, paul.burton@mips.com,
- kernel@pengutronix.de, mark.rutland@arm.com, alexandre.belloni@bootlin.com,
- jhogan@kernel.org, palmer@sifive.com, eric@anholt.net,
- thierry.reding@gmail.com, manivannan.sadhasivam@linaro.org,
- ysato@users.sourceforge.jp, zhang.lyra@gmail.com, daniel.lezcano@linaro.org,
- jonathanh@nvidia.com, bgolaszewski@baylibre.com, kgene@kernel.org,
- alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org, sudeep.holla@arm.com,
- lorenzo.pieralisi@arm.com, john.stultz@linaro.org,
- linux-rpi-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, baohua@kernel.org, kaloz@openwrt.org,
- sboyd@kernel.org, patrice.chotard@st.com, wahrenst@gmx.net,
- mcoquelin.stm32@gmail.com, narmstrong@baylibre.com,
- linux-tegra@vger.kernel.org, festevam@gmail.com, f.fainelli@gmail.com,
- benjaminfair@google.com, shc_work@mail.ru, krzk@kernel.org, yuenn@google.com,
- wens@csie.org, bcm-kernel-feedback-list@broadcom.com, orsonzhai@gmail.com,
- linux-snps-arc@lists.infradead.org, rjui@broadcom.com, vz@mleia.com,
- john@phrozen.org, tali.perry1@gmail.com, avifishman70@gmail.com,
- venture@google.com, lftan@altera.com, linux-oxnas@groups.io,
- shawnguo@kernel.org, afaerber@suse.de, baruch@tkos.co.il,
- maxime.ripard@bootlin.com, liviu.dudau@arm.com, linux-mips@vger.kernel.org,
- linux-riscv@lists.infradead.org, openbmc@lists.ozlabs.org,
- linux@armlinux.org.uk, agross@kernel.org, slemieux.tyco@gmail.com,
- devicetree@vger.kernel.org, aou@eecs.berkeley.edu,
- linux-mediatek@lists.infradead.org, ssantosh@kernel.org,
- matthias.bgg@gmail.com, monstr@monstr.eu, baolin.wang@linaro.org,
- vgupta@synopsys.com, Nicolas.Ferre@microchip.com, linux@prisktech.co.nz,
- nios2-dev@lists.rocketboards.org
+Cc: drinkcat@chromium.org, wsa@the-dreams.de,
+ Fabien Parent <fparent@baylibre.com>, hsinyi@chromium.org,
+ matthias.bgg@gmail.com, tglx@linutronix.de, qii.wang@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Sep 11, 2019 at 07:18:07AM +0000, Claudiu.Beznea@microchip.com wrote:
-> 
-> 
-> On 11.09.2019 03:03, Linus Walleij wrote:
-> > External E-Mail
-> > 
-> > 
-> > On Tue, Sep 10, 2019 at 4:11 PM Alexandre Belloni
-> > <alexandre.belloni@bootlin.com> wrote:
-> >> On 10/09/2019 16:08:26+0100, Sudeep Holla wrote:
-> >>> On Tue, Sep 10, 2019 at 02:51:50PM +0000, Claudiu.Beznea@microchip.com wrote:
-> > 
-> >>> In that case, why can't we identify capability that with the compatibles
-> >>> for this timer IP ?
-> >>>
-> >>> IOW, I don't like the proposal as it's hardware limitation.
-> >>
-> >> To be clear, bot timers are exactly the same but can't be clocksource
-> >> and clockevent at the same time. Why would we have different compatibles
-> >> for the exact same IP?
-> > 
-> > In that case why not just pick the first one you find as clocksource
-> > and the second one as clock event? As they all come to the
-> > same timer of init function two simple local state variables can
-> > solve that:
-> > 
-> > static bool registered_clocksource;
-> > static bool registered_clockevent;
-> > 
-> > probe(timer) {
-> >    if (!registered_clocksource) {
-> >        register_clocksource(timer);
-> >        registrered_clocksource = true;
-> >        return;
-> >    }
-> >    if (!registered_clockevent) {
-> >        register_clockevent(timer);
-> >        registered_clockevent = true;
-> >        return;
-> >    }
-> >    pr_info("surplus timer %p\n", timer);
-> > }
-> > 
-> 
-> That was also my proposal for the driver I'm sending this series for (see
-> [1]) but it has been proposed to implement a mechanism similar to this one
-> in this series (see [2] and [3]).
+Since commit abf4923e97c3 ("i2c: mediatek: disable zero-length transfers
+for mt8183"), there is a NULL pointer dereference for all the SoCs
+that don't have any quirk. mtk_i2c_functionality is not checking that
+the quirks pointer is not NULL before starting to use it.
 
-This comes up over and over, and the answer is still no. Either each 
-block is identical and doesn't matter which one is used for what or 
-there is some h/w difference that you should describe. 
+This commit add a call to i2c_check_quirks which will check whether
+the quirks pointer is set, and if so will check if the IP has the
+NO_ZERO_LEN quirk.
 
-If you want something that would even be considered to put into DT, 
-then define something BSD or other OS's could use too. (That's not a 
-suggestion to respin this with generalized names.)
+Fixes: abf4923e97c3 ("i2c: mediatek: disable zero-length transfers for mt8183")
+Signed-off-by: Fabien Parent <fparent@baylibre.com>
+---
 
-Rob
+v2:
+	* use i2c_check_quirks to check the quirks
+
+---
+ drivers/i2c/busses/i2c-mt65xx.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
+index 29eae1bf4f86..2152ec5f535c 100644
+--- a/drivers/i2c/busses/i2c-mt65xx.c
++++ b/drivers/i2c/busses/i2c-mt65xx.c
+@@ -875,7 +875,7 @@ static irqreturn_t mtk_i2c_irq(int irqno, void *dev_id)
+ 
+ static u32 mtk_i2c_functionality(struct i2c_adapter *adap)
+ {
+-	if (adap->quirks->flags & I2C_AQ_NO_ZERO_LEN)
++	if (i2c_check_quirks(adap, I2C_AQ_NO_ZERO_LEN))
+ 		return I2C_FUNC_I2C |
+ 			(I2C_FUNC_SMBUS_EMUL & ~I2C_FUNC_SMBUS_QUICK);
+ 	else
+-- 
+2.23.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
