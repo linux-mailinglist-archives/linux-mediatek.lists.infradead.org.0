@@ -2,92 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 77EA6C264E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 21:45:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 67331C28B1
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 23:21:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:Date:Subject:To:
-	From:Message-ID:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MIDjxPMe9kea86xTZe/ErtMtpNMbj+0JLSrcmo30qOk=; b=tzwaCPEQNR5wX/
-	XHAqfbHj13vpwX6Z8MujFmLgUGtaognz7+CfcRP30fCcnzwfIrxakiqEnvLgr/0uRphg0O9k7MLXC
-	jJKtHBIsnS4l04JrN8CfrLSNBexJerD0yvMlCnLkvagckY0HhsdffdT3NPfQ0/jr7N/z2h2j/o8bo
-	wCxSg1M1oT8iWkCpNgKZ6zDIwx09jQZNAcUGHgjh0dlzvcV6/e6Q16aEPEvkKa5FAIJuYNWrpGXo2
-	Rf8NO2yW4DWF3B0AnzU4KzINAAZv3FErIEdNox6KN7T5TelAWzgUMsdqmmZUnEOZCI0eyBLuTNRlb
-	oG9w88OTkk/RKITuTqhA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=F4mnwo2TweXLqV50KONXfwOJiBCFWEglm8aUKpt5KdY=; b=nqLIgvzbeoKryTu2qYqGcKx5W
+	cw6m1z8nTGsGhFl+SDkg44+pTxq+At9Fs2aRIo4HuNS77u0rlByMRD9ujlBV7u89OheTehoyeoCFc
+	KcL8tEsWwyJZLa7AUdTA2mBbvNmOS3mBDf/7+0hdTQ+Xeu8u3M9t4UYCfYCnE6TdqUGVfKUD2hNWn
+	zHb/Z+1r4EWpdmd/4cWfEmPMd3ipbXUvSW25vY+fGBMHagocsnV3ofjwVqeH3kS7vv2WsXPP1Lbth
+	EztCNsQ/tEuBhfkRJTsZSYh4pnhD07nrWcK7SwGRK7/6tV3VSgNlxmmSeuhLI8J6bOR25Zk+Ms7vx
+	aqiLYvxDw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iF1bV-0003au-Ph; Mon, 30 Sep 2019 19:45:05 +0000
-Received: from mout.gmx.net ([212.227.17.22])
+	id 1iF36a-0001Oa-7S; Mon, 30 Sep 2019 21:21:16 +0000
+Received: from relay12.mail.gandi.net ([217.70.178.232])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iF1bR-0003Ye-TK; Mon, 30 Sep 2019 19:45:04 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
- s=badeba3b8450; t=1569872652;
- bh=YVn0d0IypIL/I8h6vV2cKfUczuH9hqHhzSGumXeWyH0=;
- h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
- b=eTKCa8+71K35r7TYwqI/+Xx9FlyuqUtc6WeALp3Kjs8+nC4zZh/NFQjzDQVdkq5d1
- Acx15kKvwQjDHbo68LylmzJDOlRcwTWQB21DS8LOTl8LJyZsV0Q4qZEM/qicEppr+a
- OLC3yK36j+FTlss1L4HJTGCI4vF1Xu44jmNHgCUo=
-X-UI-Sender-Class: 01bb95c1-4bf8-414a-932a-4f6e2808ef9c
-Received: from [80.208.215.36] ([80.208.215.36]) by web-mail.gmx.net
- (3c-app-gmx-bap76.server.lan [172.19.172.64]) (via HTTP); Mon, 30 Sep 2019
- 21:44:12 +0200
+ id 1iF36O-0001Ej-01; Mon, 30 Sep 2019 21:21:05 +0000
+Received: from webmail.gandi.net (webmail21.sd4.0x35.net [10.200.201.21])
+ (Authenticated sender: cengiz@kernel.wtf)
+ by relay12.mail.gandi.net (Postfix) with ESMTPA id 6FEF2200005;
+ Mon, 30 Sep 2019 21:20:50 +0000 (UTC)
 MIME-Version: 1.0
-Message-ID: <trinity-d5c9e092-508c-4db6-8f36-d5917466a750-1569872652621@3c-app-gmx-bap76>
-From: "Frank Wunderlich" <frank-w@public-files.de>
-To: "Hsin-hsiung Wang" <hsin-hsiung.wang@mediatek.com>, "Lee Jones"
- <lee.jones@linaro.org>
-Subject: Aw: Re:  Re: [BUG] [PATCH v5 02/10] mfd: mt6397: extract irq
- related code from core driver
-Date: Mon, 30 Sep 2019 21:44:12 +0200
-Importance: normal
-Sensitivity: Normal
-In-Reply-To: <1567059876.15320.3.camel@mtksdaap41>
-References: <1566531931-9772-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1566531931-9772-3-git-send-email-hsin-hsiung.wang@mediatek.com>
- <trinity-1f82bff1-535e-47cd-9a2f-8faccb56e356-1566562433314@3c-app-gmx-bs11>
- <e8a918ab-3e7a-b487-db77-df28d56518ce@gmail.com>
- <0A87F427-2D81-412A-9549-09A51A021799@public-files.de>
- <b5a21908-faee-17d1-ce26-99b941c0fa70@gmail.com>
- <trinity-a57f08bb-e30e-4e74-911c-c40e335d00da-1566580580817@3c-app-gmx-bs75>
- <1567059876.15320.3.camel@mtksdaap41>
-X-UI-Message-Type: mail
-X-Priority: 3
-X-Provags-ID: V03:K1:mOl5gwFlxXjAE9+q+U636kiILkcV8ouZYqUdavCDgk4kn81Id6pYOUZvJ59xPd2j9ozHN
- 8waSlJARwZGU/e+50l22obqu3bIr+fL4TvaYl9BbpYpSPN6sD78VLxIX6iCavbN4CWcQixxp0LcY
- 5DMu3BAQcL30VwmxUM6nn/+9zZbxJ+jCY8cBjW5TziN0HhvBmsrBmtkIW/5QN9djuXXP1JwXpdK/
- 5ni345mWrIhAsZlycA0M1+K7mg7469HwJwnFxncOyxiAT1no+CMD4+aeZeHKqIzsg87h4YZ/pSN+
- 5k=
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:Pr4++bsoB2o=:B0kgEi+jbJEOsR947sHQnQ
- pvRYz0HnOqXoL6zWWSdkbiBdCvVFOKWha/JpHP6XbcuoA3xTsF/ntI94VWm0N2DjkuYZrZLbk
- WbUiB6LW4v3FL5s2jfQm1wJD6K16/+JqqWBubnDlxtARL7CIEyeqgXfhFcth70amROfy+Hae6
- BXVscKBKTmVN3w4gnr07Nx38L5R4Wkw8cyAbDPrJ0t+gERia1pF9YspJn40cpm60OzvQ+W5dw
- 6bZPc/QzS/sPjxtiufsfabyngMmE4b4m6AsHuWrBRAH65CtHiMM2pavDxuVMngVnt+ug8i1e6
- vMlBpJAaYOhA5eQapXr4BdavnraX3PZh3E6/hcNmErlIMDoe0oIgQ+knGQLjFhI9s8+emhAJX
- AOnncLb6s+queshGyIE8aCcygXj4MGOmXr/qOCak9ipYpofiVCLnnH5wrRT+Vuv6cUDEA4j4y
- TXwzrxdt21aovj+m7lZviWFY0WJXwC9csNUHPn5FhMV5dwd49MveicyLJG4Kr/qXbVVfhda9l
- fGDyVA4F9K/93VAeukenaRaza7CyV/G/sz5N0q5mNcEdPinZzVW9jxJ7G6BoLYCE24TM9/XGT
- chDquHPVjwQkQ4xprL+2qa0JEqgUpLAb3xrM6v+7JRxU9X7cCLVxzoPGtWVenPVR6RdBIjHSz
- KE9iRKi9SFj3y0JgfX9AfFZWCgkvObsRdbe/HkInahOg5vBHsk5oKTBKspNf+FQfcSYM=
+Date: Tue, 01 Oct 2019 00:20:50 +0300
+From: Cengiz Can <cengiz@kernel.wtf>
+To: Fabien Parent <fparent@baylibre.com>
+Subject: Re: [PATCH v2] i2c: i2c-mt65xx: fix NULL ptr dereference
+In-Reply-To: <20190930152846.5062-1-fparent@baylibre.com>
+References: <20190930152846.5062-1-fparent@baylibre.com>
+Message-ID: <aa0487c21e1f9f04402f209358b18c75@kernel.wtf>
+X-Sender: cengiz@kernel.wtf
+User-Agent: Roundcube Webmail/1.3.8
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190930_124502_288624_2A13063A 
-X-CRM114-Status: GOOD (  13.30  )
+X-CRM114-CacheID: sfid-20190930_142104_187135_1D919459 
+X-CRM114-Status: UNSURE (   2.91  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.22 listed in list.dnswl.org]
+ low trust [217.70.178.232 listed in list.dnswl.org]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.17.22 listed in wl.mailspike.net]
+ [217.70.178.232 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,62 +62,24 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Kate Stewart <kstewart@linuxfoundation.org>, srv_heupstream@mediatek.com,
- devicetree@vger.kernel.org, Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Mark Brown <broonie@kernel.org>, Sean Wang <sean.wang@mediatek.com>, Liam
- Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
- Richard Fontana <rfontana@redhat.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org,
- =?UTF-8?Q?=22Ren=C3=A9_van_Dorst=22?= <opensource@vdorst.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Thomas
- Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Lee Jones <lee.jones@linaro.org>, linux-arm-kernel@lists.infradead.org,
- linux-rtc@vger.kernel.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: drinkcat@chromium.org, qii.wang@mediatek.com, wsa@the-dreams.de,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-i2c@vger.kernel.org, hsinyi@chromium.org, matthias.bgg@gmail.com,
+ linux-i2c-owner@vger.kernel.org, tglx@linutronix.de,
+ linux-arm-kernel@lists.infradead.org
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGksCgpidWcgaXMgc3RpbGwgcHJlc2VudCBpbiA1LjQtcmMxCgpkbWVzZyBwcmludHMgdGhpcyBs
-aW5lIGFuZCBhdCBsZWFzdCBzd2l0Y2ggaXMgbm90IGluaWFsaXplZCBvbiBiYW5hbmFwaS1yMgoK
-bXQ2Mzk3IDEwMDBkMDAwLnB3cmFwOm10NjMyMzogdW5zdXBwb3J0ZWQgY2hpcDogMHgwCgpyZWdh
-cmRzIEZyYW5rCgoKPiBHZXNlbmRldDogRG9ubmVyc3RhZywgMjkuIEF1Z3VzdCAyMDE5IHVtIDA4
-OjI0IFVocgo+IFZvbjogIkhzaW4taHNpdW5nIFdhbmciIDxoc2luLWhzaXVuZy53YW5nQG1lZGlh
-dGVrLmNvbT4KPiBBbjogIkZyYW5rIFd1bmRlcmxpY2giIDxmcmFuay13QHB1YmxpYy1maWxlcy5k
-ZT4sICJNYXR0aGlhcyBCcnVnZ2VyIiA8bWF0dGhpYXMuYmdnQGdtYWlsLmNvbT4KPiBDYzogbGlu
-dXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZywgIk1hcmsgUnV0bGFuZCIgPG1hcmsucnV0
-bGFuZEBhcm0uY29tPiwgIkFsZXNzYW5kcm8gWnVtbW8iIDxhLnp1bW1vQHRvd2VydGVjaC5pdD4s
-ICJBbGV4YW5kcmUgQmVsbG9uaSIgPGFsZXhhbmRyZS5iZWxsb25pQGJvb3RsaW4uY29tPiwgc3J2
-X2hldXBzdHJlYW1AbWVkaWF0ZWsuY29tLCBkZXZpY2V0cmVlQHZnZXIua2VybmVsLm9yZywgIkdy
-ZWcgS3JvYWgtSGFydG1hbiIgPGdyZWdraEBsaW51eGZvdW5kYXRpb24ub3JnPiwgIlNlYW4gV2Fu
-ZyIgPHNlYW4ud2FuZ0BtZWRpYXRlay5jb20+LCAiTGlhbSBHaXJkd29vZCIgPGxnaXJkd29vZEBn
-bWFpbC5jb20+LCAiUm9iIEhlcnJpbmciIDxyb2JoK2R0QGtlcm5lbC5vcmc+LCBsaW51eC1rZXJu
-ZWxAdmdlci5rZXJuZWwub3JnLCAiUmljaGFyZCBGb250YW5hIiA8cmZvbnRhbmFAcmVkaGF0LmNv
-bT4sICJNYXJrIEJyb3duIiA8YnJvb25pZUBrZXJuZWwub3JnPiwgbGludXgtYXJtLWtlcm5lbEBs
-aXN0cy5pbmZyYWRlYWQub3JnLCAiUmVuw6kgdmFuIERvcnN0IiA8b3BlbnNvdXJjZUB2ZG9yc3Qu
-Y29tPiwgIlRob21hcyBHbGVpeG5lciIgPHRnbHhAbGludXRyb25peC5kZT4sICJFZGRpZSBIdWFu
-ZyIgPGVkZGllLmh1YW5nQG1lZGlhdGVrLmNvbT4sICJMZWUgSm9uZXMiIDxsZWUuam9uZXNAbGlu
-YXJvLm9yZz4sICJLYXRlIFN0ZXdhcnQiIDxrc3Rld2FydEBsaW51eGZvdW5kYXRpb24ub3JnPiwg
-bGludXgtcnRjQHZnZXIua2VybmVsLm9yZwo+IEJldHJlZmY6IFJlOiBBdzogUmU6IFtCVUddIFtQ
-QVRDSCB2NSAwMi8xMF0gbWZkOiBtdDYzOTc6IGV4dHJhY3QgaXJxIHJlbGF0ZWQgY29kZSBmcm9t
-IGNvcmUgZHJpdmVyCj4KPiBIaSBGcmFuay9NYXR0aGlhcywKPiAKPiBPbiBGcmksIDIwMTktMDgt
-MjMgYXQgMTk6MTYgKzAyMDAsIEZyYW5rIFd1bmRlcmxpY2ggd3JvdGU6Cj4gPiA+IEdlc2VuZGV0
-OiBGcmVpdGFnLCAyMy4gQXVndXN0IDIwMTkgdW0gMTc6NDIgVWhyCj4gPiA+IFZvbjogIk1hdHRo
-aWFzIEJydWdnZXIiIDxtYXR0aGlhcy5iZ2dAZ21haWwuY29tPgo+ID4gCj4gPiA+IEkgc3VwcG9z
-ZSB0aGF0J3MgYmVjYXVzZSAzLzEwIGhhcyBjb2RlIHRoYXQgc2hvdWxkIGJlIGluIDIvMTAgYW5k
-IGZvciBzb21lCj4gPiA+IHJlYXNvbiAzLzEwIHdhcyBub3QgcHVzaGVkIGZvciBsaW51eC1uZXh0
-IGluY2x1c2lvbi4gQWx0aG91Z2ggaXQgaGFzIHRoZSBzYW1lCj4gPiA+IEFja2VkLWZvci1tZmQt
-YnkgdGFnLgo+ID4gPgo+ID4gPiBARnJhbmssIGNhbiB5b3UgdGVzdCBpZiBhZGRpbmcgMy8xMCB0
-byB5b3VyIGNvZGUgYmFzZSBmaXhlcyB0aGUgaXNzdWU/Cj4gPiAKPiA+IGFkZGluZyBwYXJ0IDMg
-WzFdIHNlZW1zIHRvIGZpeCB0aGUgaXNzdWUgdG9vCj4gPiAKPiA+IFsgICAgNC45NjAwNTFdIG10
-NjMyMy1yZWd1bGF0b3IgbXQ2MzIzLXJlZ3VsYXRvcjogQ2hpcCBJRCA9IDB4MjAyMwo+ID4gCj4g
-PiB0aGFua3MKPiA+IAo+ID4gWzFdIGh0dHBzOi8vcGF0Y2h3b3JrLmtlcm5lbC5vcmcvcGF0Y2gv
-MTExMTA1MDkvCj4gVGhhbmtzIGZvciB5b3VyIGNvbW1lbnRzLgo+IFRoZSByb290IGNhdXNlIHNl
-ZW1zIEkgZGlkbid0IHNwbGl0IHRoZSBjb2RlIHdlbGwuCj4gSSB3aWxsIGZpeCBpdCBpbiB0aGUg
-bmV4dCB2ZXJzaW9uLgo+IAo+CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlz
-dHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3Rp
-bmZvL2xpbnV4LW1lZGlhdGVrCg==
+On 2019-09-30 18:28, Fabien Parent wrote:
+> Fixes: abf4923e97c3 ("i2c: mediatek: disable zero-length transfers for 
+> mt8183")
+> Signed-off-by: Fabien Parent <fparent@baylibre.com>
+
+Reviewed-by: Cengiz Can <cengiz@kernel.wtf>
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
