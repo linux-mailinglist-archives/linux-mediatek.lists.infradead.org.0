@@ -2,65 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BADCAC1EBF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 12:15:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A6B82C205E
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Sep 2019 14:09:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=AWIC0/uCYkeHY9Hg7/e4zLRHIpvPMqs4nr9MXEpnHzE=; b=aDSximTIaGLcZ9
-	VbYKOpI8TrNhvicyc7n8UDKoOK5UIgF4P8zEIrr1U9ArZ/RZcd0Lmuo20sWPyV0nZ3M6nCfdpjU/V
-	e0lcCYKCqieR+EAErVPYml5735+Jhw0MFKeSXDKtb3rtX95s+MnKTAoSXsXdJahnq+RL1pShd6Wdv
-	RWSskutnrWPCj+z9ogkIIyvlutiCbPEHXJxZMgY4Ve2/LodO3acZdU4ouB+InZsRXslPtP8/gx7H9
-	tbYvsXlfu0aKXM512179l0fOy6PsHjiZmP/qnBVYvQdQgFX9+lDuRzEZvCdggEiLF2FTzie/5QXas
-	7qSFAHt56IpUTUrD9grw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6GoDD8GDF7SoXaHHSzgsqXA4vr2Ai0sutmDMKJ9MMOk=; b=lCCEVMCokNgmir
+	yYBSsFAEde/EQasCcv7AaophLzsJ/Sbe2LqPyvXdfpwKaDJvczqelIqZ2cdHSJXKdEIHgKQEYfIYR
+	K557vcWBbIMazavnjWk1DV2R9YeVlhaQJddPU8ZXr/WZUjH9KBN4gdiXL3L4odd56SPcmdAFf6XIt
+	WtjGdV/XFT40e3PVH6WZ7hCWSq07Bb18XiTem3visyxlV8UNA0EP5AxP4ShiprLt03AJ309yXEQBD
+	LYKmcZWYep5YQXTUHo1nMp4SKkVTPRC0B69cqkd/UqE4GIvjrNx942yEzUPCNWxtn+pfZaPwiDelR
+	bJ/NfPPraMOFZvjeI/Ow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iEsht-00011d-84; Mon, 30 Sep 2019 10:15:05 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iEuUq-0004bZ-7K; Mon, 30 Sep 2019 12:09:44 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iEshq-0000hZ-A8; Mon, 30 Sep 2019 10:15:03 +0000
-X-UUID: faab0cd7c12e494dbcc316b414ec345e-20190930
-X-UUID: faab0cd7c12e494dbcc316b414ec345e-20190930
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <sam.shih@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1870315748; Mon, 30 Sep 2019 02:14:58 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Sep 2019 03:14:57 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Sep 2019 17:59:54 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 30 Sep 2019 17:59:54 +0800
-From: Sam Shih <sam.shih@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring
- <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>
-Subject: [PATCH 0/1] Add mt7629 pwm support
-Date: Mon, 30 Sep 2019 17:59:44 +0800
-Message-ID: <1569837585-13247-1-git-send-email-sam.shih@mediatek.com>
-X-Mailer: git-send-email 1.9.1
+ id 1iEuUf-0004TE-C4; Mon, 30 Sep 2019 12:09:34 +0000
+Received: from willie-the-truck (236.31.169.217.in-addr.arpa [217.169.31.236])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 26E43206C0;
+ Mon, 30 Sep 2019 12:09:30 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1569845373;
+ bh=T9SJSGU8WXO5UsIOSvNDLMijEaReW5+dr3E41swIY98=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=yXC7VC+skmjWzmwCouYtMdDU+SNlxZHXtQ/mbwq6tDKFujDyqWYETrOlU3yBpanVd
+ t/BPYmnze36c5QXEAlQQ8qQ05Yeo0SFhBy2mRlWC5kNCz0C6tjFYCaxSo1Daz+n9pv
+ JIwrt+D0Ywqyr9eDIYz8fkeoXiv5ezfl6BcSGWdE=
+Date: Mon, 30 Sep 2019 13:09:27 +0100
+From: Will Deacon <will@kernel.org>
+To: Yong Wu <yong.wu@mediatek.com>
+Subject: Re: [PATCH] iommu/mediatek: Move the tlb_sync into tlb_flush
+Message-ID: <20190930120926.t26ydhgggi2scg3e@willie-the-truck>
+References: <1569822142-14303-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1569822142-14303-1-git-send-email-yong.wu@mediatek.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190930_031502_417323_1C956C86 
-X-CRM114-Status: UNSURE (   4.62  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190930_050933_433265_6F7BE0BA 
+X-CRM114-Status: GOOD (  19.84  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,32 +75,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Sam Shih <sam.shih@mediatek.com>
+Cc: youlin.pei@mediatek.com, anan.sun@mediatek.com,
+ Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
+ srv_heupstream@mediatek.com, Tomasz Figa <tfiga@google.com>,
+ Joerg Roedel <joro@8bytes.org>, Will Deacon <will.deacon@arm.com>,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ chao.hao@mediatek.com, iommu@lists.linux-foundation.org,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Robin Murphy <robin.murphy@arm.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This adds pwm support for MT7629.
-Separate this dtsi update from pwm patches series,
+On Mon, Sep 30, 2019 at 01:42:22PM +0800, Yong Wu wrote:
+> The commit 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API
+> TLB sync") help move the tlb_sync of unmap from v7s into the iommu
+> framework. It helps add a new function "mtk_iommu_iotlb_sync", But it
+> lacked the dom->pgtlock, then it will cause the variable
+> "tlb_flush_active" may be changed unexpectedly, we could see this warning
+> log randomly:
+> 
+> mtk-iommu 10205000.iommu: Partial TLB flush timed out, falling back to
+> full flush
+> 
+> To fix this issue, we can add dom->pgtlock in the "mtk_iommu_iotlb_sync".
+> And when checking this issue, we find that __arm_v7s_unmap call
+> io_pgtable_tlb_add_flush consecutively when it is supersection/largepage,
+> this also is potential unsafe for us. There is no tlb flush queue in the
+> MediaTek M4U HW. The HW always expect the tlb_flush/tlb_sync one by one.
+> If v7s don't always gurarantee the sequence, Thus, In this patch I move
+> the tlb_sync into tlb_flush(also rename the function deleting "_nosync").
+> and we don't care if it is leaf, rearrange the callback functions. Also,
+> the tlb flush/sync was already finished in v7s, then iotlb_sync and
+> iotlb_sync_all is unnecessary.
+> 
+> Besides, there are two minor changes:
+> a) Use writel for the register F_MMU_INV_RANGE which is for triggering the
+> HW work. We expect all the setting(iova_start/iova_end...) have already
+> been finished before F_MMU_INV_RANGE.
+> b) Reduce the tlb timeout value from 100000us to 1000us. the original value
+> is so long that affect the multimedia performance.
+> 
+> Fixes: 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API TLB sync")
+> Signed-off-by: Chao Hao <chao.hao@mediatek.com>
+> Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+> ---
+> This patch looks break the logic for tlb_flush and tlb_sync. I'm not
+> sure if it
+> is reasonable. If someone has concern, I could change:
+> a) Add dom->pgtlock in the mtk_iommu_iotlb_sync
+> b) Add a io_pgtable_tlb_sync in [1].
 
-Used:
-https://patchwork.kernel.org/patch/11160851/
+The patch looks ok to me, but please could you split it up so that the
+timeout and writel are done separately?
 
-Related dependent driver updates have been merged into maintainer's kernel
-source tree.
+Thanks,
 
-Sam Shih (1):
-  arm: dts: mediatek: add mt7629 pwm support
-
- arch/arm/boot/dts/mt7629.dtsi | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
-
--- 
-2.17.1
-
+Will
 
 _______________________________________________
 Linux-mediatek mailing list
