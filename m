@@ -2,83 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E4307C2AD5
-	for <lists+linux-mediatek@lfdr.de>; Tue,  1 Oct 2019 01:27:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2FC0EC2BE3
+	for <lists+linux-mediatek@lfdr.de>; Tue,  1 Oct 2019 04:32:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1jV1Q2w+1n/YtDD3ZWZVSC+mrh5Fy84E+fLMgajMb8c=; b=gMvr6lKTMcafK4
-	11kipVVdSRqS2xm1T1v9cgaRNp1gdoknttNXXQgzVvPJeHYc/FM8gkZKYcx36qEVqKrqKsPF8iJQR
-	v4qVufa2Uci7mFLr0KhbZ2RTiLLPJwvUICkrWXgtULg/1rNR1Homc7XDXIeMknfZU6kyKtMwGRUWS
-	f1e8R1G5FMlVA4SAam6Km3OCuEw8tfS/hw/wJTXJh7rcQHAxEoiF0SJy1g3H+Biz6Sl2SE4WEqJ4T
-	qCpMACzaVTzTLWnDDEECvV78liM9vW6inkufaR+LSVn9fN5a2V8Af8Gsa83ptV09FSPy07222sTrH
-	idsRNuYMwKiRjr+wluSQ==;
+	List-Owner; bh=xGCvazs5bBME5yAkY/BpOAN1XMXuA8Nl+iXHtl6mwVg=; b=CMVRkMnWbi40y7
+	NphXoH7ozy+jHfjJlPdteetEJ1PtndpXZWfejomeF/0wW+yl3kZnEHkOvZvpv1Hk8bWbyV9B6IFTn
+	MZsoXQ67s2Fp0BAbFvJAhCLrfX9ZdtkLfSgss9wag93rdqk+wX9ebzbCafXUc5fHssUw76WvVIxx3
+	PRcGXyimURTijgezD02tTRxdP6ZL+SedkFQiSvQ0is8TxeflMZ6eZuWiaCe0YLiAXP4U/FK3L2wW7
+	wLZSGaVM0w9EP7aHrC6jRFirifoWA0vtVsMaYWZjqsUoMi08wPFUb3+7wDGtsOodN1PfQ4tOJ4E1F
+	9sWVGsIbYBSU/gyE7G0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iF54f-0004vd-6A; Mon, 30 Sep 2019 23:27:25 +0000
-Received: from mail-qt1-x842.google.com ([2607:f8b0:4864:20::842])
+	id 1iF7y0-0003gm-PV; Tue, 01 Oct 2019 02:32:44 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iF54U-0004nG-Ac
- for linux-mediatek@lists.infradead.org; Mon, 30 Sep 2019 23:27:16 +0000
-Received: by mail-qt1-x842.google.com with SMTP id n7so19281967qtb.6
- for <linux-mediatek@lists.infradead.org>; Mon, 30 Sep 2019 16:27:13 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=pl9Uoj87Ji8fhmMmVA6l1LGr0jFQ4KuWKIrFbIh3wWY=;
- b=NAWE7s0qtdMAJiZamX3V6xokEA3BihpvGiwij4I9RhrSrs1/+NcFnC19kIYC2+VXm+
- mw4JB/DlOtISetTBRNDx9DFrMSVyR1OwEHYcnM7fyiodpHUy35LKFF+/IykPa/76nTNi
- oq4scSmcMmXkNJXm9at4/0G+We9rQDvDXAya0=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=pl9Uoj87Ji8fhmMmVA6l1LGr0jFQ4KuWKIrFbIh3wWY=;
- b=Mb3+NoYnHEmpdJQeBCYCcvmefa2f5HnkLQWhxjt3odRGWeLalR/O5tFSOHQ2qa3+9r
- nRz8p0/VPLyAn9BOZkb+HQCVjPnC8wiVoecofGxcDyiImSkwZNDNzY3node9lvIrSwBn
- y68LbcsTOlkVph3mFGJ7fzhW0jBMCaX1kIhdOzqAuVqIsNmHZB9nOikO5ycMl7ZMpExf
- mrVeHBsIu9rVNMmC5F8SotSP6CyW4+va6MMLsBsfef3QEzubWGkEzWkkmk/nLK3kUF/s
- hHUQmJbpJJOtCdI4Ze4ml3EGtXzhyGV0VNWIlLXYp/Tw2yJKgKBn/pnO/Rv2R4GxWtzS
- 6yuQ==
-X-Gm-Message-State: APjAAAWgIeT9D0WUcgZqLwHKQMQ6NGGt2ri7XpiQ8ESNWmo/WDL3xx1D
- J/adWR0YLalgTe8ppfSkUZHFIWNr25I90wKh738sLQ==
-X-Google-Smtp-Source: APXvYqzPlXIhfWnlF8sLl3jj8HRowIb8xLOPox6pz/DpeJE7rRAz9Qj8GEZSq7zX8V31/1SFTHD3X0AT7ZutVfrWEtc=
-X-Received: by 2002:a05:6214:11b4:: with SMTP id
- u20mr20478355qvv.200.1569886032025; 
- Mon, 30 Sep 2019 16:27:12 -0700 (PDT)
+ id 1iF7xw-0003g6-JX; Tue, 01 Oct 2019 02:32:42 +0000
+X-UUID: dfdd7984197b424ca20651afe5af993d-20190930
+X-UUID: dfdd7984197b424ca20651afe5af993d-20190930
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2099448664; Mon, 30 Sep 2019 18:32:27 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 30 Sep 2019 19:32:26 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 1 Oct 2019 10:17:22 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 1 Oct 2019 10:17:22 +0800
+Message-ID: <1569896243.21654.8.camel@mtksdaap41>
+Subject: Re: [PATCH v15 1/4] soc: mediatek: cmdq: define the instruction struct
+From: CK Hu <ck.hu@mediatek.com>
+To: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Date: Tue, 1 Oct 2019 10:17:23 +0800
+In-Reply-To: <20190927114254.6258-2-bibby.hsieh@mediatek.com>
+References: <20190927114254.6258-1-bibby.hsieh@mediatek.com>
+ <20190927114254.6258-2-bibby.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <20190930152846.5062-1-fparent@baylibre.com>
- <aa0487c21e1f9f04402f209358b18c75@kernel.wtf>
-In-Reply-To: <aa0487c21e1f9f04402f209358b18c75@kernel.wtf>
-From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Mon, 30 Sep 2019 16:26:46 -0700
-Message-ID: <CAJMQK-g_PaNsfvX-H4_BA86aUOdyqpDt9oK86O7_mRWTjWSjHQ@mail.gmail.com>
-Subject: Re: [PATCH v2] i2c: i2c-mt65xx: fix NULL ptr dereference
-To: Cengiz Can <cengiz@kernel.wtf>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190930_162714_394016_1B04FE95 
-X-CRM114-Status: UNSURE (   7.38  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190930_193240_649135_CDA09BA4 
+X-CRM114-Status: GOOD (  18.40  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:842 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,29 +73,190 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@chromium.org>, Qii Wang <qii.wang@mediatek.com>,
- Wolfram Sang <wsa@the-dreams.de>, lkml <linux-kernel@vger.kernel.org>,
- Fabien Parent <fparent@baylibre.com>, linux-mediatek@lists.infradead.org,
- linux-i2c@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-i2c-owner@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, Nicolas
+ Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
+ linux-kernel@vger.kernel.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Sep 30, 2019 at 2:20 PM Cengiz Can <cengiz@kernel.wtf> wrote:
->
-> On 2019-09-30 18:28, Fabien Parent wrote:
-> > Fixes: abf4923e97c3 ("i2c: mediatek: disable zero-length transfers for
-> > mt8183")
-> > Signed-off-by: Fabien Parent <fparent@baylibre.com>
->
-> Reviewed-by: Cengiz Can <cengiz@kernel.wtf>
-Reviewed-by: Hsin-Yi Wang <hsinyi@chromium.org>
+Hi, Bibby:
 
-Thanks!
+On Fri, 2019-09-27 at 19:42 +0800, Bibby Hsieh wrote:
+> Define an instruction structure for gce driver to append command.
+> This structure can make the client's code more readability.
+> 
+> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+> Reviewed-by: CK Hu <ck.hu@mediatek.com>
+
+You've modified this patch in this version, so you should drop this
+'Reviewed-by' tag.
+
+> Reviewed-by: Houlong Wei <houlong.wei@mediatek.com>
+> ---
+>  drivers/soc/mediatek/mtk-cmdq-helper.c   | 106 +++++++++++++++++------
+>  include/linux/mailbox/mtk-cmdq-mailbox.h |  10 +++
+>  2 files changed, 90 insertions(+), 26 deletions(-)
+> 
+> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> index 7aa0517ff2f3..7af327b98d25 100644
+> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
+> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> @@ -9,12 +9,24 @@
+>  #include <linux/mailbox_controller.h>
+>  #include <linux/soc/mediatek/mtk-cmdq.h>
+>  
+> -#define CMDQ_ARG_A_WRITE_MASK	0xffff
+>  #define CMDQ_WRITE_ENABLE_MASK	BIT(0)
+>  #define CMDQ_EOC_IRQ_EN		BIT(0)
+>  #define CMDQ_EOC_CMD		((u64)((CMDQ_CODE_EOC << CMDQ_OP_CODE_SHIFT)) \
+>  				<< 32 | CMDQ_EOC_IRQ_EN)
+>  
+> +struct cmdq_instruction {
+> +	union {
+> +		u32 value;
+> +		u32 mask;
+> +	};
+> +	union {
+> +		u16 offset;
+> +		u16 event;
+> +	};
+> +	u8 subsys;
+> +	u8 op;
+> +};
+> +
+>  static void cmdq_client_timeout(struct timer_list *t)
+>  {
+>  	struct cmdq_client *client = from_timer(client, t, timer);
+> @@ -110,10 +122,10 @@ void cmdq_pkt_destroy(struct cmdq_pkt *pkt)
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_destroy);
+>  
+> -static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
+> -				   u32 arg_a, u32 arg_b)
+> +static int cmdq_pkt_append_command(struct cmdq_pkt *pkt,
+> +				   struct cmdq_instruction *inst)
+>  {
+> -	u64 *cmd_ptr;
+> +	struct cmdq_instruction *cmd_ptr;
+>  
+>  	if (unlikely(pkt->cmd_buf_size + CMDQ_INST_SIZE > pkt->buf_size)) {
+>  		/*
+> @@ -129,8 +141,9 @@ static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
+>  			__func__, (u32)pkt->buf_size);
+>  		return -ENOMEM;
+>  	}
+> +
+>  	cmd_ptr = pkt->va_base + pkt->cmd_buf_size;
+> -	(*cmd_ptr) = (u64)((code << CMDQ_OP_CODE_SHIFT) | arg_a) << 32 | arg_b;
+> +	*cmd_ptr = *inst;
+>  	pkt->cmd_buf_size += CMDQ_INST_SIZE;
+>  
+>  	return 0;
+> @@ -138,24 +151,42 @@ static int cmdq_pkt_append_command(struct cmdq_pkt *pkt, enum cmdq_code code,
+>  
+>  int cmdq_pkt_write(struct cmdq_pkt *pkt, u8 subsys, u16 offset, u32 value)
+>  {
+> -	u32 arg_a = (offset & CMDQ_ARG_A_WRITE_MASK) |
+> -		    (subsys << CMDQ_SUBSYS_SHIFT);
+> +	struct cmdq_instruction *inst = kzalloc(sizeof(*inst), GFP_KERNEL);
+
+Frequently allocate/free increase CPU loading. The simpler way is
+
+struct cmdq_instruction inst = { 0 };
+
+cmdq_pkt_append_command(pkt, &inst);
+
+
+> +	int err = 0;
+
+No need to assign initial value.
+
+> +
+> +	if (!inst)
+> +		return -ENOMEM;
+> +
+> +	inst->op = CMDQ_CODE_WRITE;
+> +	inst->value = value;
+> +	inst->offset = offset;
+> +	inst->subsys = subsys;
+>  
+> -	return cmdq_pkt_append_command(pkt, CMDQ_CODE_WRITE, arg_a, value);
+> +	err = cmdq_pkt_append_command(pkt, inst);
+> +	kfree(inst);
+> +
+> +	return err;
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_write);
+>  
+
+[snip]
+
+>  
+>  static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
+>  {
+> -	int err;
+> +	struct cmdq_instruction *inst = kzalloc(sizeof(*inst), GFP_KERNEL);
+> +	int err = 0;
+> +
+> +	if (!inst)
+> +		return -ENOMEM;
+>  
+>  	/* insert EOC and generate IRQ for each command iteration */
+> -	err = cmdq_pkt_append_command(pkt, CMDQ_CODE_EOC, 0, CMDQ_EOC_IRQ_EN);
+> +	inst->op = CMDQ_CODE_EOC;
+> +	inst->value = CMDQ_EOC_IRQ_EN;
+> +	err = cmdq_pkt_append_command(pkt, inst);
+>  
+>  	/* JUMP to end */
+> -	err |= cmdq_pkt_append_command(pkt, CMDQ_CODE_JUMP, 0, CMDQ_JUMP_PASS);
+> +	inst->op = CMDQ_CODE_JUMP;
+> +	inst->value = CMDQ_JUMP_PASS;
+> +	err |= cmdq_pkt_append_command(pkt, inst);
+
+OR the err value looks strange. If you OR err 0x1 and err 0x10, you
+would get the new err 0x11. How do you know that err 0x11 is the
+combination of 0x1 and 0x10?
+
+This bug seems exist in previous patch, so I would like you to fix this
+bug first and then apply this patch.
+
+Regards,
+CK
+
+
+> +	kfree(inst);
+>  
+>  	return err;
+>  }
+> diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
+> index e6f54ef6698b..678760548791 100644
+> --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
+> +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
+> @@ -20,6 +20,16 @@
+>  #define CMDQ_WFE_WAIT			BIT(15)
+>  #define CMDQ_WFE_WAIT_VALUE		0x1
+>  
+> +/*
+> + * WFE arg_b
+> + * bit 0-11: wait value
+> + * bit 15: 1 - wait, 0 - no wait
+> + * bit 16-27: update value
+> + * bit 31: 1 - update, 0 - no update
+> + */
+> +#define CMDQ_WFE_OPTION			(CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | \
+> +					CMDQ_WFE_WAIT_VALUE)
+> +
+>  /** cmdq event maximum */
+>  #define CMDQ_MAX_EVENT			0x3ff
+>  
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
