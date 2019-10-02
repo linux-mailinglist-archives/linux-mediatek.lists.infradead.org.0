@@ -2,60 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 223FCC4A9E
-	for <lists+linux-mediatek@lfdr.de>; Wed,  2 Oct 2019 11:26:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CFDEBC4ABC
+	for <lists+linux-mediatek@lfdr.de>; Wed,  2 Oct 2019 11:41:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=a1NiQvpZW1rRd2RXzZ9ljKYItldbODI1eh57O4sEOZU=; b=fwRobWA626d9FU
-	5C9rgXhpb0lgrU0Y11jEv/GtAMiB8aaiQcBeXwTPvic+PyiegkgY25u5YQphK6OqwOvnNP7t1P2DV
-	SR70hzGU6ndsrtC7vb+6bi25JNfNinmKmNzIESHv7f05xs8U5MuwzC24c7kQ+yZp1xKAKmLo8aarU
-	fOtoAMHEZ6b6Dz7Zmj033taAkrEa3m9p7tYA91y6KuDOACh/NQ5Fd+JC31vejPBXU/gLCtggP3DHy
-	uFSbCw3TlOnllVr02K8AHd8BRIXX+lQDmtAuprShsrAiQeftAUoz4PpTYz+Z3aXFw3afYsFTs9b9s
-	S2ZVWvTwxTaapJTvQHmw==;
+	List-Owner; bh=LzYnCRrchdZ9zBE9T/S+pU9tnEZdTnYv7+eRaxbJFlo=; b=Se3Jg8u/lmAj3G
+	wQ/kjUgvBEUMrX+iD0yEUbV11gqICFWP2DtfbodM6ppYXw28MjanZtANe2AwybvAXe0N0FOhXUgIK
+	ztt19VRDk4hTxxX53PXHgyeSeNM9aJDJ4ndJTyQLDpWO1IgiV3SQWUktXMinlB7cE/WbCZgdsT93h
+	bI2e9rl999n0MzvbcI/EhZi2uoTjn1jR6CBWEUzpgZ4JrwaeFCp12hj6Q1T1z4frteybTv5m7iJcc
+	o6faDDh2Yi/1MLGksm8RZE7m8stqLHBjh5rXYNyGqX9yEpTqNNW7ZyIXLik0PY3ZMyNs5cW0V/bJU
+	kS45KV8SNDlKki8RYjHQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFauA-0005Xc-JL; Wed, 02 Oct 2019 09:26:42 +0000
-Received: from hillosipuli.retiisi.org.uk ([2a01:4f9:c010:4572::81:2])
+	id 1iFb8U-0006JB-DW; Wed, 02 Oct 2019 09:41:30 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFar8-0001nz-Uq; Wed, 02 Oct 2019 09:23:38 +0000
-Received: from valkosipuli.localdomain (valkosipuli.retiisi.org.uk
- [IPv6:2a01:4f9:c010:4572::80:2])
- (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
- key-exchange ECDHE (P-256) server-signature RSA-PSS (4096 bits) server-digest
- SHA256) (No client certificate requested)
- by hillosipuli.retiisi.org.uk (Postfix) with ESMTPS id 1CA45634C87;
- Wed,  2 Oct 2019 12:22:56 +0300 (EEST)
-Received: from sailus by valkosipuli.localdomain with local (Exim 4.92)
- (envelope-from <sakari.ailus@retiisi.org.uk>)
- id 1iFaqU-000293-Iq; Wed, 02 Oct 2019 12:22:54 +0300
-Date: Wed, 2 Oct 2019 12:22:54 +0300
-From: Sakari Ailus <sakari.ailus@iki.fi>
-To: frederic.chen@mediatek.com
-Subject: Re: [RFC PATCH V3 1/5] dt-bindings: mt8183: Added DIP dt-bindings
-Message-ID: <20191002092254.GQ896@valkosipuli.retiisi.org.uk>
-References: <20190909192244.9367-1-frederic.chen@mediatek.com>
- <20190909192244.9367-2-frederic.chen@mediatek.com>
+ id 1iFb6s-0006G3-4q; Wed, 02 Oct 2019 09:39:56 +0000
+X-UUID: f75bf5104f66491797ccc091a0b02072-20191002
+X-UUID: f75bf5104f66491797ccc091a0b02072-20191002
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <mark-mc.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 872922363; Wed, 02 Oct 2019 01:36:34 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 2 Oct 2019 02:36:33 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 2 Oct 2019 17:21:27 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 2 Oct 2019 17:21:27 +0800
+Message-ID: <1570008088.13954.14.camel@mtksdccf07>
+Subject: Re: [PATCH net 2/2] arm: dts: mediatek: Fix mt7629 dts to reflect
+ the latest dt-binding
+From: mtk15127 <Mark-MC.Lee@mediatek.com>
+To: =?ISO-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>
+Date: Wed, 2 Oct 2019 17:21:28 +0800
+In-Reply-To: <20191001135608.Horde.OSYef8s44rR0XHw22Bf55r8@www.vdorst.com>
+References: <20191001123150.23135-1-Mark-MC.Lee@mediatek.com>
+ <20191001123150.23135-3-Mark-MC.Lee@mediatek.com>
+ <20191001135608.Horde.OSYef8s44rR0XHw22Bf55r8@www.vdorst.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190909192244.9367-2-frederic.chen@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191002_022336_422271_F2701133 
-X-CRM114-Status: UNSURE (   9.42  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20191002_023950_864349_2F91328B 
+X-CRM114-Status: GOOD (  18.46  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -67,45 +73,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- Allan.Yang@mediatek.com, suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
- jungo.lin@mediatek.com, hans.verkuil@cisco.com, linux-media@vger.kernel.org,
- devicetree@vger.kernel.org, holmes.chiou@mediatek.com, shik@chromium.org,
- yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
- christie.yu@mediatek.com, zwisler@chromium.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Felix Fietkau <nbd@openwrt.org>, Nelson Chang <nelson.chang@mediatek.com>,
+ netdev@vger.kernel.org, Sean Wang <sean.wang@mediatek.com>,
+ linux-kernel@vger.kernel.org, MarkLee <Mark-MC.Lee@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Matthias
+ Brugger <matthias.bgg@gmail.com>, "David S. Miller" <davem@davemloft.net>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Frederic,
-
-On Tue, Sep 10, 2019 at 03:22:40AM +0800, frederic.chen@mediatek.com wrote:
-> From: Frederic Chen <frederic.chen@mediatek.com>
-> 
-> This patch adds DT binding documentation for the Digital Image
-> Processing (DIP) unit of camera ISP system on Mediatek's SoCs.
-> 
-> It depends on the SCP and MDP 3 patch as following:
-> 
-> 1. dt-bindings: Add a binding for Mediatek SCP
->    https://patchwork.kernel.org/patch/11027247/
-> 2. dt-binding: mt8183: Add Mediatek MDP3 dt-bindings
->    https://patchwork.kernel.org/patch/10945603/
-> 
-> Signed-off-by: Frederic Chen <frederic.chen@mediatek.com>
-> ---
->  .../bindings/media/mediatek,mt8183-dip.txt    | 40 +++++++++++++++++++
-
-Could you add a MAINTAINERS entry for this, please? Same for the driver.
-
--- 
-Sakari Ailus
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gVHVlLCAyMDE5LTEwLTAxIGF0IDEzOjU2ICswMDAwLCBSZW7DqSB2YW4gRG9yc3Qgd3JvdGU6
+Cj4gSGkgTWFya0xlZSwKPiAKPiBRdW90aW5nIE1hcmtMZWUgPE1hcmstTUMuTGVlQG1lZGlhdGVr
+LmNvbT46Cj4gCj4gPiAqIFJlbW92ZXMgbWVkaWF0ZWsscGh5c3BlZWQgcHJvcGVydHkgZnJvbSBk
+dHNpIHRoYXQgaXMgdXNlbGVzcyBpbiBQSFlMSU5LCj4gPiAqIFNldCBnbWFjMCB0byBmaXhlZC1s
+aW5rIHNnbWlpIDIuNUdiaXQgbW9kZQo+ID4gKiBTZXQgZ21hYzEgdG8gZ21paSBtb2RlIHRoYXQg
+Y29ubmVjdCB0byBhIGludGVybmFsIGdwaHkKPiA+Cj4gPiBTaWduZWQtb2ZmLWJ5OiBNYXJrTGVl
+IDxNYXJrLU1DLkxlZUBtZWRpYXRlay5jb20+Cj4gPiAtLS0KPiA+ICBhcmNoL2FybS9ib290L2R0
+cy9tdDc2MjktcmZiLmR0cyB8IDEzICsrKysrKysrKysrKy0KPiA+ICBhcmNoL2FybS9ib290L2R0
+cy9tdDc2MjkuZHRzaSAgICB8ICAyIC0tCj4gPiAgMiBmaWxlcyBjaGFuZ2VkLCAxMiBpbnNlcnRp
+b25zKCspLCAzIGRlbGV0aW9ucygtKQo+ID4KPiA+IGRpZmYgLS1naXQgYS9hcmNoL2FybS9ib290
+L2R0cy9tdDc2MjktcmZiLmR0cyAgCj4gPiBiL2FyY2gvYXJtL2Jvb3QvZHRzL210NzYyOS1yZmIu
+ZHRzCj4gPiBpbmRleCAzNjIxYjdkMmIyMmEuLjZiZjFmN2Q4ZGRiNSAxMDA2NDQKPiA+IC0tLSBh
+L2FyY2gvYXJtL2Jvb3QvZHRzL210NzYyOS1yZmIuZHRzCj4gPiArKysgYi9hcmNoL2FybS9ib290
+L2R0cy9tdDc2MjktcmZiLmR0cwo+ID4gQEAgLTY2LDkgKzY2LDIxIEBACj4gPiAgCXBpbmN0cmwt
+MSA9IDwmZXBoeV9sZWRzX3BpbnM+Owo+ID4gIAlzdGF0dXMgPSAib2theSI7Cj4gPgo+ID4gKwln
+bWFjMDogbWFjQDAgewo+ID4gKwkJY29tcGF0aWJsZSA9ICJtZWRpYXRlayxldGgtbWFjIjsKPiA+
+ICsJCXJlZyA9IDwwPjsKPiA+ICsJCXBoeS1tb2RlID0gInNnbWlpIjsKPiA+ICsJCWZpeGVkLWxp
+bmsgewo+ID4gKwkJCXNwZWVkID0gPDI1MDA+Owo+ID4gKwkJCWZ1bGwtZHVwbGV4Owo+ID4gKwkJ
+CXBhdXNlOwo+ID4gKwkJfTsKPiA+ICsJfTsKPiA+ICsKPiA+ICAJZ21hYzE6IG1hY0AxIHsKPiA+
+ICAJCWNvbXBhdGlibGUgPSAibWVkaWF0ZWssZXRoLW1hYyI7Cj4gPiAgCQlyZWcgPSA8MT47Cj4g
+PiArCQlwaHktbW9kZSA9ICJnbWlpIjsKPiA+ICAJCXBoeS1oYW5kbGUgPSA8JnBoeTA+Owo+ID4g
+IAl9Owo+ID4KPiA+IEBAIC03OCw3ICs5MCw2IEBACj4gPgo+ID4gIAkJcGh5MDogZXRoZXJuZXQt
+cGh5QDAgewo+ID4gIAkJCXJlZyA9IDwwPjsKPiA+IC0JCQlwaHktbW9kZSA9ICJnbWlpIjsKPiA+
+ICAJCX07Cj4gPiAgCX07Cj4gPiAgfTsKPiA+IGRpZmYgLS1naXQgYS9hcmNoL2FybS9ib290L2R0
+cy9tdDc2MjkuZHRzaSBiL2FyY2gvYXJtL2Jvb3QvZHRzL210NzYyOS5kdHNpCj4gPiBpbmRleCA5
+NjA4YmMyY2NiM2YuLjg2N2I4ODEwM2I5ZCAxMDA2NDQKPiA+IC0tLSBhL2FyY2gvYXJtL2Jvb3Qv
+ZHRzL210NzYyOS5kdHNpCj4gPiArKysgYi9hcmNoL2FybS9ib290L2R0cy9tdDc2MjkuZHRzaQo+
+ID4gQEAgLTQ2OCwxNCArNDY4LDEyIEBACj4gPiAgCQkJY29tcGF0aWJsZSA9ICJtZWRpYXRlayxt
+dDc2Mjktc2dtaWlzeXMiLCAic3lzY29uIjsKPiA+ICAJCQlyZWcgPSA8MHgxYjEyODAwMCAweDMw
+MDA+Owo+ID4gIAkJCSNjbG9jay1jZWxscyA9IDwxPjsKPiA+IC0JCQltZWRpYXRlayxwaHlzcGVl
+ZCA9ICIyNTAwIjsKPiA+ICAJCX07Cj4gPgo+ID4gIAkJc2dtaWlzeXMxOiBzeXNjb25AMWIxMzAw
+MDAgewo+ID4gIAkJCWNvbXBhdGlibGUgPSAibWVkaWF0ZWssbXQ3NjI5LXNnbWlpc3lzIiwgInN5
+c2NvbiI7Cj4gPiAgCQkJcmVnID0gPDB4MWIxMzAwMDAgMHgzMDAwPjsKPiA+ICAJCQkjY2xvY2st
+Y2VsbHMgPSA8MT47Cj4gPiAtCQkJbWVkaWF0ZWsscGh5c3BlZWQgPSAiMjUwMCI7Cj4gPiAgCQl9
+Owo+ID4gIAl9Owo+ID4gIH07Cj4gPiAtLQo+ID4gMi4xNy4xCj4gCj4gRG9lcyBNVDc2Mjkgc29j
+IGhhcyB0aGUgc2FtZSBTR01JSSBJUCBibG9jayBhcyBvbiB0aGUgTVQ3NjIyPwo+IElmIHRoYXQg
+aXMgdGhlIGNhc2UgdGhlbiBwaHktbW9kZSBzaG91bGQgc2V0IHRvICIyNTAwYmFzZS14Ii4KICBZ
+ZXMsTVQ3NjI5IGFuZCBNVDc2MjIgdXNlIHRoZSBzYW1lIFNHTUlJIGJsb2NrLiAKICBUaGFua3Mg
+Zm9yIHlvdXIgc3VnZ2VzdGlvbiwgd2lsbCBjaGFuZ2UgZ21hYzAgcGh5LW1vZGUgdG8gIjI1MDBi
+YXNlLXgiCiAgaW4gdGhlIG5leHQgcGF0Y2guCgpNYXJrCj4gU2VlIGRpc2N1c3Npb24gYWJvdXQg
+dGhlIE1UNzYyMiBbMV0gYW5kIGR0cyBvZiAgCj4gbXQ3NjIyLWJhbmFuYXBpLWJwaS1yNjQuZHRz
+WzJdWzNdCj4gCj4gTm90ZSB0aGUgY29kZSBvbmx5IHNldCB0aGUgcGh5IGluIG92ZXJjbG9jayBt
+b2RlIGlmIHBoeW1vZGUgPSAgCj4gMjUwMGJhc2UteCBhbmQgdGhlCj4gbGluayBpcyBhIGZpeGVk
+LWxpbmssIHNlZSBbNF0uCj4gQWxzcCB0aGUgY3VycmVudCBjb2RlIGRvZXNuJ3Qgc3VwcG9ydCBz
+Z21paSBzbyB3ZWxsLiBTZ21paSBhdCAyLjVHYml0IGlzIG5vdAo+IHN1cHBvcnRlZCBhdCBhbGwu
+Cj4gCj4gR3JlYXRzLAo+IAo+IFJlbsOpCj4gCj4gWzFdOiAgCj4gaHR0cHM6Ly9sb3JlLmtlcm5l
+bC5vcmcvbmV0ZGV2LzIwMTkwODIyMTQ0NDMzLkdUMTMyOTRAc2hlbGwuYXJtbGludXgub3JnLnVr
+Lwo+IFsyXTogIAo+IGh0dHBzOi8vbG9yZS5rZXJuZWwub3JnL25ldGRldi8yMDE5MDgyNTE3NDM0
+MS4yMDc1MC00LW9wZW5zb3VyY2VAdmRvcnN0LmNvbS8KPiBbM106ICAKPiBodHRwczovL2dpdC5r
+ZXJuZWwub3JnL3B1Yi9zY20vbGludXgva2VybmVsL2dpdC9kYXZlbS9uZXQuZ2l0L3RyZWUvYXJj
+aC9hcm02NC9ib290L2R0cy9tZWRpYXRlay9tdDc2MjItYmFuYW5hcGktYnBpLXI2NC5kdHMjbjEy
+Mgo+IFs0XTogIAo+IGh0dHBzOi8vZ2l0Lmtlcm5lbC5vcmcvcHViL3NjbS9saW51eC9rZXJuZWwv
+Z2l0L2RhdmVtL25ldC5naXQvdHJlZS9kcml2ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9tdGtf
+c2dtaWkuYyNuNzIKPiAKPiAKPiAKPiAKPiAKCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1l
+ZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFp
+bG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
