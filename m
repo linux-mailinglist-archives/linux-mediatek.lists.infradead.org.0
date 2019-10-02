@@ -2,81 +2,75 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0848CC38E1
-	for <lists+linux-mediatek@lfdr.de>; Tue,  1 Oct 2019 17:24:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0394EC4598
+	for <lists+linux-mediatek@lfdr.de>; Wed,  2 Oct 2019 03:35:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tGa7XUzpOu1EGwiTvQjEgQDuIdtZVW3VVwpbo9uKIjE=; b=sAkDxU/h3DNqyr
-	qb6WOBcvRMYQEdwamLA5EOf6m/n27saMFlwJuVrWKqzdUuXF2ulA8MyTdCs2MCyHOmuw3SXb7eORu
-	VbIf1ZGCgd5IzLH97+wgk/SzPnz2vf67WpYrE0azlzFD06KEt0ShUQBI0qs6IRhIfD9BHfyCWV0cA
-	5AG5zHNjMHTVYCKj1A1eswT3ykzgBCAJMRILI7IcJLZSb6wCmBILf+v1dxGdaq/C194pYY4teiWSS
-	K7zWfJk6iHWJBnxMm2bLJJNAybwZv99fFsNIpL8JzvQzp8cd9FvlT6B8y+EfTNsci3A2i8tAhowdE
-	pU58L2NZvp7xzeiKWPPQ==;
+	List-Owner; bh=TPKOIz0jyex62EHH4+Tyt8QUeyqv94SPFPA0q1qTlRA=; b=BLhx/fDTzWqi82
+	mZ98N2hfnZmAqz3B7NxLcu7CF6tc+TTXcESDIOAXgCLlFkPfSX0x28ld2FdrgORuqvaEphwAjsRpf
+	JAXBS/WVVFz8fAEpIR8Lh76recXsN5henyv2dAajGsfA5DdTH7WUQfgxPLK1eWOR6dQfcTKiJ+KEP
+	8TR3hKF1r1gWP4sNn96H8btMAAIkMusqA85gstFYxuLbvY5gC6amV2VK2BTrWQNNBhYKddvy7ZGkV
+	SHOKNDNV1zSO2MraEqnsO8CTk62O5dk7iwWMNIIx7VsbNybks+rTVb9Tf5mfGLuzNJyVf8gUsWukZ
+	oLYp8sERYF3oIq9TwFwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFK16-0006IL-Fo; Tue, 01 Oct 2019 15:24:44 +0000
-Received: from mail-wm1-f66.google.com ([209.85.128.66])
+	id 1iFTY7-00014V-NB; Wed, 02 Oct 2019 01:35:27 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFK0w-00069J-BY; Tue, 01 Oct 2019 15:24:36 +0000
-Received: by mail-wm1-f66.google.com with SMTP id v17so3707217wml.4;
- Tue, 01 Oct 2019 08:24:31 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=qIz20MyIeJ4YRS3q69VVUyLU1/qqd5R6Zf74yV/b9ww=;
- b=Jo2Strk3UOyLXIsdvUM36G6pAbxSbf6qgbRgkdC/iWHvWI/Q/8nuVrSVVndYYEgEuz
- UYKO1HvkdAit5nxpX+Ytn3BEvXADSYvvbLIJ58td6BOWq4Acck1EPWp6eAE7JOjrTpy8
- q2JtuPEREVOtHsP+yky3lN64xS0v4w7+ITA9z2xn1uLY+HkZgckzaBwj9aN66/41tYxR
- xQ+wCxCRSU0f6zpoPHoQZYU9YwWRFrcSExqyH565OjPB2eH2TY21AwxLobqIsH5m/+iK
- 6helwP5KFxPGdrD+R7p8PoOEt/iLUmzsL+uUIlLKRP8qKXLwZXyR+5d5L7tB98CpjAeM
- evWw==
-X-Gm-Message-State: APjAAAWGD3Q6Gpp9z9o2Kxc2GQ+FQzUidJW0oEslexKGk/Tw9uzsMys6
- LuuVxqDEkUfkjkBhEq/4vmc=
-X-Google-Smtp-Source: APXvYqzgA01GZd24cae9Ug02bMZVgbmEoHDdIAy+uHttgtTk16j30giNWmxHikB8fPnYof+FbNzouQ==
-X-Received: by 2002:a1c:60c1:: with SMTP id u184mr4104201wmb.32.1569943469278; 
- Tue, 01 Oct 2019 08:24:29 -0700 (PDT)
-Received: from pi3 ([194.230.155.145])
- by smtp.googlemail.com with ESMTPSA id i1sm4699293wmb.19.2019.10.01.08.24.26
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 01 Oct 2019 08:24:28 -0700 (PDT)
-Date: Tue, 1 Oct 2019 17:24:22 +0200
-From: Krzysztof Kozlowski <krzk@kernel.org>
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH v2 2/8] dt-bindings: sram: Convert SRAM bindings to
- json-schema
-Message-ID: <20191001152422.GA31358@pi3>
-References: <20190918173141.4314-1-krzk@kernel.org>
- <20190918173141.4314-2-krzk@kernel.org>
- <20191001140003.GA31344@bogus>
+ id 1iFTXy-0000w7-HQ; Wed, 02 Oct 2019 01:35:20 +0000
+X-UUID: b265bc907202429697f7caf1734968bb-20191001
+X-UUID: b265bc907202429697f7caf1734968bb-20191001
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <jing-ting.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1625228342; Tue, 01 Oct 2019 17:35:10 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 1 Oct 2019 18:35:09 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 2 Oct 2019 09:20:06 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 2 Oct 2019 09:20:06 +0800
+Message-ID: <1569979206.4892.23.camel@mtkswgap22>
+Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
+From: Jing-Ting Wu <jing-ting.wu@mediatek.com>
+To: Qais Yousef <qais.yousef@arm.com>
+Date: Wed, 2 Oct 2019 09:20:06 +0800
+In-Reply-To: <20190919151152.m2zmiaspr6s5mcfh@e107158-lin.cambridge.arm.com>
+References: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
+ <d5100b2d-46c4-5811-8274-8b06710d2594@arm.com>
+ <20190830145501.zadfv2ffuu7j46ft@e107158-lin.cambridge.arm.com>
+ <1567689999.2389.5.camel@mtkswgap22>
+ <CAKfTPtC3txstND=6YkWBJ16i06cQ7xueUpD5j-j-UfuSf0-z-g@mail.gmail.com>
+ <1568892135.4892.10.camel@mtkswgap22>
+ <CAKfTPtCuWrpW_o6r5cmGhLf_84PFHJhBk0pJ3fcbU_YgcBnTkQ@mail.gmail.com>
+ <20190919142315.vmrrpvljpspqpurp@e107158-lin.cambridge.arm.com>
+ <CAKfTPtA9-JLxs+DdLYjBQ6VfVGNxm++QYYi1wy-xS6o==EAPNw@mail.gmail.com>
+ <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
+ <20190919151152.m2zmiaspr6s5mcfh@e107158-lin.cambridge.arm.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191001140003.GA31344@bogus>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191001_082434_397814_C59E4372 
-X-CRM114-Status: GOOD (  26.96  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20191001_183518_583595_28239536 
+X-CRM114-Status: GOOD (  35.35  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.128.66 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.128.66 listed in wl.mailspike.net]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (k.kozlowski.k[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,182 +82,113 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
- dri-devel@lists.freedesktop.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
- linux-leds@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- Herbert Xu <herbert@gondor.apana.org.au>, linux-clk@vger.kernel.org,
- linux-rockchip@lists.infradead.org, bcm-kernel-feedback-list@broadcom.com,
- Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
- linux-watchdog@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-rpi-kernel@lists.infradead.org, Matt Mackall <mpm@selenic.com>,
- linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- Wim Van Sebroeck <wim@linux-watchdog.org>,
- linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-crypto@vger.kernel.org
+Cc: Vincent Guittot <vincent.guittot@linaro.org>, wsd_upstream@mediatek.com,
+ Peter Zijlstra <peterz@infradead.org>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Valentin Schneider <valentin.schneider@arm.com>,
+ LAK <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Oct 01, 2019 at 09:00:03AM -0500, Rob Herring wrote:
-> On Wed, Sep 18, 2019 at 07:31:35PM +0200, Krzysztof Kozlowski wrote:
-> > Convert generic mmio-sram bindings to DT schema format using
-> > json-schema.
-> 
-> I've been slow getting to this because I started on the same thing...
-> 
+On Thu, 2019-09-19 at 16:11 +0100, Qais Yousef wrote:
+> On 09/19/19 16:37, Vincent Guittot wrote:
+> > On Thu, 19 Sep 2019 at 16:32, Vincent Guittot
+> > <vincent.guittot@linaro.org> wrote:
+> > >
+> > > On Thu, 19 Sep 2019 at 16:23, Qais Yousef <qais.yousef@arm.com> wrote:
+> > > >
+> > > > On 09/19/19 14:27, Vincent Guittot wrote:
+> > > > > > > > But for requirement of performance, I think it is better to differentiate between idle CPU and CPU has CFS task.
+> > > > > > > >
+> > > > > > > > For example, we use rt-app to evaluate runnable time on non-patched environment.
+> > > > > > > > There are (NR_CPUS-1) heavy CFS tasks and 1 RT Task. When a CFS task is running, the RT task wakes up and choose the same CPU.
+> > > > > > > > The CFS task will be preempted and keep runnable until it is migrated to another cpu by load balance.
+> > > > > > > > But load balance is not triggered immediately, it will be triggered until timer tick hits with some condition satisfied(ex. rq->next_balance).
+> > > > > > >
+> > > > > > > Yes you will have to wait for the next tick that will trigger an idle
+> > > > > > > load balance because you have an idle cpu and 2 runnable tack (1 RT +
+> > > > > > > 1CFS) on the same CPU. But you should not wait for more than  1 tick
+> > > > > > >
+> > > > > > > The current load_balance doesn't handle correctly the situation of 1
+> > > > > > > CFS and 1 RT task on same CPU while 1 CPU is idle. There is a rework
+> > > > > > > of the load_balance that is under review on the mailing list that
+> > > > > > > fixes this problem and your CFS task should migrate to the idle CPU
+> > > > > > > faster than now
+> > > > > > >
+> > > > > >
+> > > > > > Period load balance should be triggered when current jiffies is behind
+> > > > > > rq->next_balance, but rq->next_balance is not often exactly the same
+> > > > > > with next tick.
+> > > > > > If cpu_busy, interval = sd->balance_interval * sd->busy_factor, and
+> > > > >
+> > > > > But if there is an idle CPU on the system, the next idle load balance
+> > > > > should apply shortly because the busy_factor is not used for this CPU
+> > > > > which is  not busy.
+> > > > > In this case, the next_balance interval is sd_weight which is probably
+> > > > > 4ms at cluster level and 8ms at system level in your case. This means
+> > > > > between 1 and 2 ticks
+> > > >
+> > > > But if the CFS task we're preempting was latency sensitive - this 1 or 2 tick
+> > > > is too late of a recovery.
+> > > >
+> > > > So while it's good we recover, but a preventative approach would be useful too.
+> > > > Just saying :-) I'm still not sure if this is the best longer term approach.
+> > >
+> > > like using a rt task ?
 > > 
-> > Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
-> > 
-> > ---
-> > 
-> > Changes since v1:
-> > 1. Indent example with four spaces (more readable).
-> > ---
-> >  .../devicetree/bindings/sram/sram.txt         |  80 ----------
-> >  .../devicetree/bindings/sram/sram.yaml        | 138 ++++++++++++++++++
-> >  2 files changed, 138 insertions(+), 80 deletions(-)
-> >  delete mode 100644 Documentation/devicetree/bindings/sram/sram.txt
-> >  create mode 100644 Documentation/devicetree/bindings/sram/sram.yaml
+> > I mean, RT task should select a sub optimal CPU because of CFS
+> > If you want to favor CFS compared to RT it's probably because your
+> > task should be RT too
 > 
-> > diff --git a/Documentation/devicetree/bindings/sram/sram.yaml b/Documentation/devicetree/bindings/sram/sram.yaml
-> > new file mode 100644
-> > index 000000000000..8d9d6ce494b2
-> > --- /dev/null
-> > +++ b/Documentation/devicetree/bindings/sram/sram.yaml
-> > @@ -0,0 +1,138 @@
-> > +# SPDX-License-Identifier: GPL-2.0
-> > +%YAML 1.2
-> > +---
-> > +$id: http://devicetree.org/schemas/sram/sram.yaml#
-> > +$schema: http://devicetree.org/meta-schemas/core.yaml#
-> > +
-> > +title: Generic on-chip SRAM
-> > +
-> > +maintainers:
-> > +  - FIXME <who@should.it.be>
+> Yes possibly. But I don't think this is always doable. Especially when you're
+> running on generic system not a special purposed one.
 > 
-> You can put me.
+> And we don't need to favor CFS over RT. But I think they can play nicely
+> together.
+> 
+> For example on Android there are few RT tasks and rarely more than 1 runnable
+> RT task at a time. But if it happened to wakeup on the same CPU that is
+> running the UI thread you could lose a frame. And from what I've seen as well
+> we have 1-3 CFS tasks runnable, weighted more towards 1 task. So we do have
+> plenty of idle CPUs on average.
+> 
+> But as I mentioned earlier I couldn't prove yet this being a serious problem.
+> I was hoping the use case presented here is based on a real workload, but it's
+> synthetic. So I agree we need stronger reasons, but I think conceptually we do
+> have a conflict of interest where RT task could unnecessarily hurt the
+> performance of CFS task.
+> 
+> Another way to look at the problem is that the system is not partitioned
+> correctly and the admin could do a better job to prevent this.
+> 
+> --
+> Qais Yousef
 
-Sure.
 
-> 
-> > +
-> > +description: |+
-> > +  Simple IO memory regions to be managed by the genalloc API.
-> > +
-> > +  Each child of the sram node specifies a region of reserved memory. Each
-> > +  child node should use a 'reg' property to specify a specific range of
-> > +  reserved memory.
-> > +
-> > +  Following the generic-names recommended practice, node names should
-> > +  reflect the purpose of the node. Unit address (@<address>) should be
-> > +  appended to the name.
-> > +
-> > +properties:
-> > +  $nodename:
-> > +    pattern: "^sram(@.*)?"
-> > +
-> > +  compatible:
-> > +    items:
-> > +      - enum:
-> > +          - mmio-sram
-> > +          - atmel,sama5d2-securam
-> 
-> I was trying to go down the path of putting all the compatibles for 
-> various SRAM bindings here, but I ran into some issues. I need to 
-> revisit as I've forgotten the exact issue.
-> 
-> This would need to be a 'contains' if this is going to work for others.
+I use some third-party application, such as weibo and others, to test
+the application launch time. I apply this RT patch, and compare it with
+original design. Both RT patch test case and original design test case
+are already apply the
+patch:https://lore.kernel.org/patchwork/patch/1129117/
 
-OK.
+After apply the RT patch, launch time of weibo from 1325.72ms to 1214.88
+ms, its launch time decreases 110.84ms(about 8.36%). Other applications
+also decrease 7~13%.
 
-> 
-> > +
-> > +  reg:
-> > +    maxItems: 1
-> > +
-> > +  "#address-cells":
-> > +    description: Should use the same values as the root node.
-> > +
-> > +  "#size-cells":
-> > +    description: Should use the same values as the root node.
-> 
-> I defined both of these to be 1 as 4GB of SRAM should be enough for a 
-> while. We can debate 1 or 2 cells vs. 1, but there's no reason it has to 
-> be the same as the root (unless we're failing to do address 
-> translation).
+At original design test case, RT tasks(surfaceflinger) could preempt
+some CFS tasks, if we add all these CFS tasks runnable time, it may have
+some impact on app launch time. So even if we already use the load
+balance patch and reduce a lot of CFS runnable time, I think choose idle
+CPU at RT scheduler could also reduce the some CFS runnable time.
 
-That was copied from txt version. I can adjust them to 1 although this
-is will more than simple conversion.
 
-> 
-> > +
-> > +  ranges:
-> > +    description:
-> > +      Should translate from local addresses within the sram to bus addresses.
-> > +
-> > +  no-memory-wc:
-> > +    description:
-> > +      The flag indicating, that SRAM memory region has not to be remapped
-> > +      as write combining. WC is used by default.
-> > +    type: boolean
-> > +
-> > +  # TODO: additionalProperties: false
-> > +
-> > +patternProperties:
-> > +  "^([a-z]*-)?sram@[a-f0-9]$":
-> > +    type: object
-> > +    description:
-> > +      Each child of the sram node specifies a region of reserved memory.
-> > +    properties:
-> > +      reg:
-> > +        description:
-> > +          IO mem address range, relative to the SRAM range.
-> 
-> maxItems: 1
-
-OK
-
-> 
-> > +
-> > +      compatible:
-> > +        $ref: /schemas/types.yaml#/definitions/string
-> > +        description:
-> > +          Should contain a vendor specific string in the form
-> > +          <vendor>,[<device>-]<usage>
-> > +
-> > +      pool:
-> > +        description:
-> > +          Indicates that the particular reserved SRAM area is addressable
-> > +          and in use by another device or devices.
-> > +        type: boolean
-> > +
-> > +      export:
-> > +        description:
-> > +          Indicates that the reserved SRAM area may be accessed outside
-> > +          of the kernel, e.g. by bootloader or userspace.
-> > +        type: boolean
-> > +
-> > +      protect-exec:
-> > +        description: |
-> > +          Same as 'pool' above but with the additional constraint that code
-> > +          will be run from the region and that the memory is maintained as
-> > +          read-only, executable during code execution. NOTE: This region must
-> > +          be page aligned on start and end in order to properly allow
-> > +          manipulation of the page attributes.
-> > +        type: boolean
-> > +
-> > +      label:
-> > +        $ref: /schemas/types.yaml#/definitions/string
-> 
-> Already has a type definition.
-
-OK
 
 Best regards,
-Krzysztof
+Jing-Ting Wu
+
 
 
 _______________________________________________
