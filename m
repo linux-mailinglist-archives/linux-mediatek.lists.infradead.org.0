@@ -2,53 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2AE77C4B8B
-	for <lists+linux-mediatek@lfdr.de>; Wed,  2 Oct 2019 12:35:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85571C86C4
+	for <lists+linux-mediatek@lfdr.de>; Wed,  2 Oct 2019 12:56:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=IRvXi9IuOx24WtEa/wLt374E4NLrGUZaZZIF7oxLcjc=; b=lo9xgVb2ytYGZ/HElalXiNKiy
-	7BPSrbs6hivZQCGqVsFsnFJgEoeCj816bdBiGSASO4ZQ8Jpxw+d6Y6t5JZqgorEWDBwWW+G/r4ZoJ
-	3qM4o/O+0oKyaYDUjmQoX5uhOJe21ggVq3M2QdaEzKv0l+LqVUH8JJHDX7Fks23o5CxRP3qEHOd5L
-	hWzUz353lDH9Qssd+qrYTSfonFtzxfi0dYtt5CkDud4Ebb+iY0khboY+xRci9c/lQqAH5X72h6mFZ
-	Red6HmEe0LwPXMYq2Pqq/KgRofn0GoGeZM0ornTt7i2J2ywACQY9/HtkrAt3KFa8OWNsmoVh/ZJQ2
-	tSAXXIDaw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=AK0kWJnXEhmiWHivVlxRTzKwtYGXciSwj9bJrrDOGzw=; b=E3Y2UkLJTbc+QT
+	IqZq7sqzpt9aBYzxl6dNRvGAox+n4xiBvt9D6sG/eUfAc+IinXntjm7pm6G5nNJcL9eidptlQzQxi
+	xSg/dh6rO46BLkRkD76Tw3160gKpS9hLW8HBFPbPodkXf8T8qZIK//jojlblR/DJ9SFCPyiGRlPOE
+	0B1n6ctdKCJK1dWH5cT0hp8psmEBpnma5UPM0EBQYeo5f+UZjtiH+6zjsD99UeAK5ultZepROvK+U
+	yT4J4lrrQ6C8qA5ZxCwhsZht47NH6Jv7Xt2nzzq5rSbRNR2ztA99GleZ40N5g51qKD7ewC1d01Wjj
+	xOU1aCACOGAEK2Nk3d0g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFbz4-0002PZ-IU; Wed, 02 Oct 2019 10:35:50 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFbya-0001oG-BH; Wed, 02 Oct 2019 10:35:22 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 88AA11000;
- Wed,  2 Oct 2019 03:35:19 -0700 (PDT)
-Received: from [10.1.197.57] (e110467-lin.cambridge.arm.com [10.1.197.57])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 2F1FC3F739;
- Wed,  2 Oct 2019 03:35:17 -0700 (PDT)
-Subject: Re: [PATCH] iommu/mediatek: Move the tlb_sync into tlb_flush
-To: Tomasz Figa <tfiga@chromium.org>, Yong Wu <yong.wu@mediatek.com>
-References: <1569822142-14303-1-git-send-email-yong.wu@mediatek.com>
- <CAAFQd5C+FM3n-Ww4C+qDD1QZOGZrqEYw4EvYECfadGcDH0fmew@mail.gmail.com>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <366b0bda-d874-9109-5c83-ff27301f3486@arm.com>
-Date: Wed, 2 Oct 2019 11:35:16 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+	id 1iFcIs-0001ZR-VB; Wed, 02 Oct 2019 10:56:18 +0000
+Received: from mga07.intel.com ([134.134.136.100])
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iFcIj-0001RN-MN; Wed, 02 Oct 2019 10:56:11 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga004.fm.intel.com ([10.253.24.48])
+ by orsmga105.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 02 Oct 2019 03:56:07 -0700
+X-IronPort-AV: E=Sophos;i="5.64,574,1559545200"; d="scan'208";a="216414918"
+Received: from paasikivi.fi.intel.com ([10.237.72.42])
+ by fmsmga004-auth.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 02 Oct 2019 03:56:02 -0700
+Received: by paasikivi.fi.intel.com (Postfix, from userid 1000)
+ id E87CC20976; Wed,  2 Oct 2019 13:55:59 +0300 (EEST)
+Date: Wed, 2 Oct 2019 13:55:59 +0300
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+To: Hans Verkuil <hverkuil@xs4all.nl>
+Subject: Re: [RFC,V2,07/11] media: platform: Add Mediatek ISP P1 private
+ control
+Message-ID: <20191002105559.GC972@paasikivi.fi.intel.com>
+References: <jungo.lin@mediatek.com>
+ <20190510015755.51495-8-jungo.lin@mediatek.com>
+ <49a8ba54-aba4-1915-6732-987a58e8bd3c@xs4all.nl>
 MIME-Version: 1.0
-In-Reply-To: <CAAFQd5C+FM3n-Ww4C+qDD1QZOGZrqEYw4EvYECfadGcDH0fmew@mail.gmail.com>
-Content-Language: en-GB
+Content-Disposition: inline
+In-Reply-To: <49a8ba54-aba4-1915-6732-987a58e8bd3c@xs4all.nl>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191002_033520_537860_3F4719F2 
-X-CRM114-Status: GOOD (  27.12  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191002_035609_771454_C01DF951 
+X-CRM114-Status: GOOD (  25.97  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.100 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -61,90 +70,155 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, anan.sun@mediatek.com,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- srv_heupstream <srv_heupstream@mediatek.com>, Joerg Roedel <joro@8bytes.org>,
- Will Deacon <will.deacon@arm.com>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Evan Green <evgreen@chromium.org>, chao.hao@mediatek.com,
- "list@263.net:IOMMU DRIVERS" <iommu@lists.linux-foundation.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: ryan.yu@mediatek.com, frankie.chiu@mediatek.com,
+ laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ suleiman@chromium.org, Jerry-ch.Chen@mediatek.com,
+ Jungo Lin <jungo.lin@mediatek.com>, frederic.chen@mediatek.com,
+ seraph.huang@mediatek.com, linux-media@vger.kernel.org,
+ devicetree@vger.kernel.org, shik@chromium.org, yuzhao@chromium.org,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
+ srv_heupstream@mediatek.com, sj.huang@mediatek.com, tfiga@chromium.org,
+ christie.yu@mediatek.com, zwisler@chromium.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 02/10/2019 06:18, Tomasz Figa wrote:
-> Hi Yong,
-> 
-> On Mon, Sep 30, 2019 at 2:42 PM Yong Wu <yong.wu@mediatek.com> wrote:
->>
->> The commit 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API
->> TLB sync") help move the tlb_sync of unmap from v7s into the iommu
->> framework. It helps add a new function "mtk_iommu_iotlb_sync", But it
->> lacked the dom->pgtlock, then it will cause the variable
->> "tlb_flush_active" may be changed unexpectedly, we could see this warning
->> log randomly:
->>
-> 
-> Thanks for the patch! Please see my comments inline.
-> 
->> mtk-iommu 10205000.iommu: Partial TLB flush timed out, falling back to
->> full flush
->>
->> To fix this issue, we can add dom->pgtlock in the "mtk_iommu_iotlb_sync".
->> And when checking this issue, we find that __arm_v7s_unmap call
->> io_pgtable_tlb_add_flush consecutively when it is supersection/largepage,
->> this also is potential unsafe for us. There is no tlb flush queue in the
->> MediaTek M4U HW. The HW always expect the tlb_flush/tlb_sync one by one.
->> If v7s don't always gurarantee the sequence, Thus, In this patch I move
->> the tlb_sync into tlb_flush(also rename the function deleting "_nosync").
->> and we don't care if it is leaf, rearrange the callback functions. Also,
->> the tlb flush/sync was already finished in v7s, then iotlb_sync and
->> iotlb_sync_all is unnecessary.
-> 
-> Performance-wise, we could do much better. Instead of synchronously
-> syncing at the end of mtk_iommu_tlb_add_flush(), we could sync at the
-> beginning, if there was any previous flush still pending. We would
-> also have to keep the .iotlb_sync() callback, to take care of waiting
-> for the last flush. That would allow better pipelining with CPU in
-> cases like this:
-> 
-> for (all pages in range) {
->     change page table();
->     flush();
-> }
-> 
-> "change page table()" could execute while the IOMMU is flushing the
-> previous change.
+Hi Jungo, Hans,
 
-FWIW, given that the underlying invalidation mechanism is range-based, 
-this driver would be an ideal candidate for making use of the new 
-iommu_gather mechanism. As a fix for stable, though, simply ensuring 
-that add_flush syncs any pending invalidation before issuing a new one 
-sounds like a good idea (and probably a simpler patch too).
-
-[...]
->> @@ -574,8 +539,7 @@ static int mtk_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
->>          .detach_dev     = mtk_iommu_detach_device,
->>          .map            = mtk_iommu_map,
->>          .unmap          = mtk_iommu_unmap,
->> -       .flush_iotlb_all = mtk_iommu_flush_iotlb_all,
+On Mon, May 13, 2019 at 10:46:46AM +0200, Hans Verkuil wrote:
+> On 5/10/19 3:58 AM, Jungo Lin wrote:
+...
+> > +struct v4l2_ctrl_config mtk_cam_controls[] = {
+> > +	{
+> > +	.ops = &mtk_cam_dev_ctrl_ops,
+> > +	.id = V4L2_CID_PRIVATE_GET_BIN_INFO,
 > 
-> Don't we still want .flush_iotlb_all()? I think it should be more
-> efficient in some cases than doing a big number of single flushes.
-> (That said, the previous implementation didn't do any flush at all. It
-> just waited for previously queued flushes to happen. Was that
-> expected?)
+> Don't use "PRIVATE" in the name. I'd replace that with MTK to indicate
+> that this is mediatek-specific. Same for the next control below.
+> 
+> > +	.name = "MTK CAM GET BIN INFO",
+> > +	.type = V4L2_CTRL_TYPE_INTEGER,
+> > +	.min = (IMG_MIN_WIDTH << 16) | IMG_MIN_HEIGHT,
+> > +	.max = (IMG_MAX_WIDTH << 16) | IMG_MAX_HEIGHT,
+> > +	.step = 1,
+> > +	.def = (IMG_MAX_WIDTH << 16) | IMG_MAX_HEIGHT,
+> > +	.flags = V4L2_CTRL_FLAG_READ_ONLY | V4L2_CTRL_FLAG_VOLATILE,
+> 
+> Don't mix width and height. I recommend splitting this into two controls.
+> 
+> Sakari might have an opinion on this as well.
+> 
+> > +	},
+> > +	{
+> > +	.ops = &mtk_cam_dev_ctrl_ops,
+> > +	.id = V4L2_CID_PRIVATE_RAW_PATH,
+> > +	.name = "MTK CAM RAW PATH",
+> > +	.type = V4L2_CTRL_TYPE_BOOLEAN,
+> > +	.min = 0,
+> > +	.max = 1,
+> > +	.step = 1,
+> > +	.def = 1,
+> > +	},
+> 
+> RAW_PATH is a very vague name. If it is 0, then it is pure raw, and if it
+> is 1, then it is 'processing raw'? If so, call it "Processing Raw".
 
-Commit 07fdef34d2be ("iommu/arm-smmu-v3: Implement flush_iotlb_all 
-hook") has an explanation of what the deal was there - similarly, it's 
-probably worth this driver implementing it properly as well now (but 
-that's really a separate patch).
+Jungo: what's the purpose of 
 
-Robin.
+> 
+> Although you have to describe in the header or here what that means.
+> 
+> Private controls should be well documented.
+> 
+> > +};
+> > +
+> > +int mtk_cam_ctrl_init(struct mtk_cam_dev *cam_dev,
+> > +		      struct v4l2_ctrl_handler *hdl)
+> > +{
+> > +	unsigned int i;
+> > +
+> > +	/* Initialized HW controls, allow V4L2_CID_MTK_CAM_MAX ctrls */
+> > +	v4l2_ctrl_handler_init(hdl, V4L2_CID_MTK_CAM_MAX);
+> > +	if (hdl->error) {
+> > +		v4l2_ctrl_handler_free(hdl);
+> > +		return hdl->error;
+> > +	}
+> > +
+> > +	for (i = 0; i < ARRAY_SIZE(mtk_cam_controls); i++)
+> > +		v4l2_ctrl_new_custom(hdl, &mtk_cam_controls[i], cam_dev);
+> > +
+> > +	dev_dbg(&cam_dev->pdev->dev, "%s done", __func__);
+> > +	return 0;
+> > +}
+> > diff --git a/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-ctrl.h b/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-ctrl.h
+> > new file mode 100644
+> > index 000000000000..74a6538c81ac
+> > --- /dev/null
+> > +++ b/drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-ctrl.h
+> > @@ -0,0 +1,32 @@
+> > +/* SPDX-License-Identifier: GPL-2.0 */
+> > +/*
+> > + * Copyright (c) 2018 MediaTek Inc.
+> > + * Author: Ryan Yu <ryan.yu@mediatek.com>
+> > + *
+> > + * This program is free software; you can redistribute it and/or modify
+> > + * it under the terms of the GNU General Public License version 2 as
+> > + * published by the Free Software Foundation.
+> > + *
+> > + * This program is distributed in the hope that it will be useful,
+> > + * but WITHOUT ANY WARRANTY; without even the implied warranty of
+> > + * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+> > + * GNU General Public License for more details.
+> > + */
+> > +
+> > +#ifndef __MTK_CAM_CTRL_H__
+> > +#define __MTK_CAM_CTRL_H__
+> > +
+> > +#include <media/v4l2-ctrls.h>
+> > +
+> > +#define V4L2_CID_MTK_CAM_PRIVATE_CAM  V4L2_CID_USER_MTK_CAM_BASE
+> > +#define V4L2_CID_PRIVATE_GET_BIN_INFO \
+> > +	(V4L2_CID_MTK_CAM_PRIVATE_CAM + 1)
+> > +#define V4L2_CID_PRIVATE_RAW_PATH \
+> > +	(V4L2_CID_MTK_CAM_PRIVATE_CAM + 2)
+> 
+> These last two defines can be on a single line.
+> 
+> They need to be documented in the header.
+> 
+> > +
+> > +#define V4L2_CID_MTK_CAM_MAX	16
+> > +
+> > +int mtk_cam_ctrl_init(struct mtk_cam_dev *cam_dev,
+> > +		      struct v4l2_ctrl_handler *hdl);
+> > +
+> > +#endif /* __MTK_CAM_CTRL_H__ */
+> > diff --git a/include/uapi/linux/v4l2-controls.h b/include/uapi/linux/v4l2-controls.h
+> > index 06479f2fb3ae..cbe8f5f7782b 100644
+> > --- a/include/uapi/linux/v4l2-controls.h
+> > +++ b/include/uapi/linux/v4l2-controls.h
+> > @@ -192,6 +192,10 @@ enum v4l2_colorfx {
+> >   * We reserve 16 controls for this driver. */
+> >  #define V4L2_CID_USER_IMX_BASE			(V4L2_CID_USER_BASE + 0x10b0)
+> >  
+> > +/* The base for the mediatek ISP Pass 1 driver controls */
+> > +/* We reserve 16 controls for this driver. */
+> > +#define V4L2_CID_USER_MTK_CAM_BASE		(V4L2_CID_USER_BASE + 0x10c0)
+> > +
+> >  /* MPEG-class control IDs */
+> >  /* The MPEG controls are applicable to all codec controls
+> >   * and the 'MPEG' part of the define is historical */
+> > 
+> 
+> Regards,
+> 
+> 	Hans
+
+-- 
+Sakari Ailus
+sakari.ailus@linux.intel.com
 
 _______________________________________________
 Linux-mediatek mailing list
