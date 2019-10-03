@@ -2,57 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2EB76CA5A6
-	for <lists+linux-mediatek@lfdr.de>; Thu,  3 Oct 2019 18:47:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E7855CADF0
+	for <lists+linux-mediatek@lfdr.de>; Thu,  3 Oct 2019 20:16:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:Subject:To:From:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=g/XCq9NWjq0Gr+UY22VlyYPjoZ5NbZ/MweDOQtIbIAA=; b=Ao2b3qGSpOnFhe
-	Rzxh84XLXVz9MBYnih+DH4PdpXYFd2FNalNaWnV8YoOaTsf/zGHiEgDxa5IXAcJK01PH3bTg+C0lo
-	kwC3hR2yN/lf3+UxXRndniYIRRnL4tLWoIIEK7qFzVC4uiyCM689I6iXgB3AQIrmyBJligVk4qoLC
-	kXOAz8PTvA+ZqoZKXudERiut6O94Me6dfE30Zamyoxm99B82kpxcaINCUrrwz6f6ZFfcz1Elu4m1V
-	PJa/BM+vzFiG1Y8+eoWBt7Q2PTB3DNX+TeOAybzUfMJfHy7cLcCfaS8MLQ4RUVcJyBXiw4sIgPcml
-	FtGCqA3Kflv8tYXaJw2g==;
+	List-Owner; bh=mfVwJfurBzzYz7mPz9lQjospIXZhCSZFZcMiGNEXg5c=; b=jqDewE6MQYSPUT
+	L1uRxdwSdrEgpSuaiMZQO48BR+O2OnO5U+uMHHyT6XjrOGM6mZ0gwY88YcDw8H5+stsudjw6AzYyq
+	XsyF5pl/VH/1DM6c+l6dQMYTjBKYRbh1X/XB7N4H+PDo2zSQhoiRKEngBiJsVyzyDk2eSbK4LTxuL
+	JA6iyN4ylxLs0BgH9Zh9MUcMHFjZdpaiFPNotdDFE2Tso8uJUBmcOEDEJJLxC/DWd3y0j5gc0UGlc
+	RlfJtnTCWrMrjRwssJHKPosvnbrApCoPJu+o4KRB+fexQn61jSJCiHNQb/GBXc8TskNtfKAvwslXC
+	933wRORsiI+ywqwaPhDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iG4GV-0001Yf-Jx; Thu, 03 Oct 2019 16:47:43 +0000
+	id 1iG5eE-00054Q-Em; Thu, 03 Oct 2019 18:16:18 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iG4GR-0001Xy-JW
- for linux-mediatek@lists.infradead.org; Thu, 03 Oct 2019 16:47:41 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
+ id 1iG5dw-0004se-U7; Thu, 03 Oct 2019 18:16:02 +0000
+Received: from kernel.org (unknown [104.132.0.74])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C1E9E2070B;
- Thu,  3 Oct 2019 16:47:38 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 7D6F22070B;
+ Thu,  3 Oct 2019 18:16:00 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1570121259;
- bh=/F0eqdyJKABuAv6cUV90z+rRaHqrSXh+R+pUYfvNIeM=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=iKVKmIsP7LVq7LiOD9IFKfVO4UKCSI0+X7w866iGWgkmrywWutgrhQ1JhBm11ggPA
- 0knkaca88xZgNheSRnClUPLqPjCsm0bar3jKYgQcOZM9A4dMq/Keq2TciSi0/+SHNv
- Ytzk0yCke5B6Y8MueSqGf5/e5GAxGGVp/iuKEjNY=
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: linux-kernel@vger.kernel.org
-Subject: [PATCH 5.3 212/344] sched/psi: Correct overly pessimistic size
- calculation
-Date: Thu,  3 Oct 2019 17:52:57 +0200
-Message-Id: <20191003154601.206292517@linuxfoundation.org>
-X-Mailer: git-send-email 2.23.0
-In-Reply-To: <20191003154540.062170222@linuxfoundation.org>
-References: <20191003154540.062170222@linuxfoundation.org>
-User-Agent: quilt/0.66
+ s=default; t=1570126560;
+ bh=nY0LFXVk/SNSsj/nGuYEk8lLimBHZ/kip/5QktLE30M=;
+ h=In-Reply-To:References:From:To:Cc:Subject:Date:From;
+ b=2gRfkDNay4GQ8GVL40xt/FVRFNW/T6303w/jbXj7QQJVtdz7LzvfbC54mYR4mS8r6
+ KQrbne3Qg2j5ZURd8qpfR/Rh1gEJ2uKXn/h1RYTKEuhbn9SwE6Q8jFz72JIOLIqf2W
+ RxAgIOfeWXuJqXwwCg4HHAy4gJrGQtAqfIWHrd38=
 MIME-Version: 1.0
+In-Reply-To: <20191002164047.14499-1-krzk@kernel.org>
+References: <20191002164047.14499-1-krzk@kernel.org>
+From: Stephen Boyd <sboyd@kernel.org>
+To: Uwe Kleine-König <u.kleine-koenig@pengutronix.de>, Krzysztof Kozlowski <krzk@kernel.org>, Mark Rutland <mark.rutland@arm.com>, Rob Herring <robh+dt@kernel.org>, Thierry Reding <thierry.reding@gmail.com>, bcm-kernel-feedback-list@broadcom.com, devicetree@vger.kernel.org, dri-devel@lists.freedesktop.org, linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org, linux-clk@vger.kernel.org, linux-kernel@vger.kernel.org, linux-leds@vger.kernel.org, linux-mediatek@lists.infradead.org, linux-pwm@vger.kernel.org, linux-riscv@lists.infradead.org, linux-rockchip@lists.infradead.org, linux-rpi-kernel@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com, linux-tegra@vger.kernel.org
+Subject: Re: [PATCH v3 1/2] dt-bindings: pwm: Convert PWM bindings to
+ json-schema
+User-Agent: alot/0.8.1
+Date: Thu, 03 Oct 2019 11:15:59 -0700
+Message-Id: <20191003181600.7D6F22070B@mail.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191003_094739_684411_BAFDA4A8 
-X-CRM114-Status: GOOD (  11.06  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20191003_111600_990143_AEBC3E4C 
+X-CRM114-Status: UNSURE (   7.49  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
@@ -60,6 +58,10 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
@@ -74,99 +76,31 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, wsd_upstream@mediatek.com,
- Peter Zijlstra <peterz@infradead.org>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, stable@vger.kernel.org,
- Miles Chen <miles.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- Thomas Gleixner <tglx@linutronix.de>,
- Linus Torvalds <torvalds@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>
+Cc: Krzysztof Kozlowski <krzk@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Miles Chen <miles.chen@mediatek.com>
+Quoting Krzysztof Kozlowski (2019-10-02 09:40:46)
+> Convert generic PWM bindings to DT schema format using json-schema.  The
+> consumer bindings are split to separate file.
+> 
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
+> 
+> ---
+> 
+> Changes since v2:
+> 1. Change also pwm-sprd.txt
+> 
+> Changes since v1:
+> 1. Indent example with four spaces (more readable),
+> 2. Change pattern for pwm nodes,
+> 3. Remove $ref from #cells.
+> ---
+>  .../devicetree/bindings/clock/pwm-clock.txt   |  2 +-
 
-[ Upstream commit 4adcdcea717cb2d8436bef00dd689aa5bc76f11b ]
-
-When passing a equal or more then 32 bytes long string to psi_write(),
-psi_write() copies 31 bytes to its buf and overwrites buf[30]
-with '\0'. Which makes the input string 1 byte shorter than
-it should be.
-
-Fix it by copying sizeof(buf) bytes when nbytes >= sizeof(buf).
-
-This does not cause problems in normal use case like:
-"some 500000 10000000" or "full 500000 10000000" because they
-are less than 32 bytes in length.
-
-	/* assuming nbytes == 35 */
-	char buf[32];
-
-	buf_size = min(nbytes, (sizeof(buf) - 1)); /* buf_size = 31 */
-	if (copy_from_user(buf, user_buf, buf_size))
-		return -EFAULT;
-
-	buf[buf_size - 1] = '\0'; /* buf[30] = '\0' */
-
-Before:
-
- %cd /proc/pressure/
- %echo "123456789|123456789|123456789|1234" > memory
- [   22.473497] nbytes=35,buf_size=31
- [   22.473775] 123456789|123456789|123456789| (print 30 chars)
- %sh: write error: Invalid argument
-
- %echo "123456789|123456789|123456789|1" > memory
- [   64.916162] nbytes=32,buf_size=31
- [   64.916331] 123456789|123456789|123456789| (print 30 chars)
- %sh: write error: Invalid argument
-
-After:
-
- %cd /proc/pressure/
- %echo "123456789|123456789|123456789|1234" > memory
- [  254.837863] nbytes=35,buf_size=32
- [  254.838541] 123456789|123456789|123456789|1 (print 31 chars)
- %sh: write error: Invalid argument
-
- %echo "123456789|123456789|123456789|1" > memory
- [ 9965.714935] nbytes=32,buf_size=32
- [ 9965.715096] 123456789|123456789|123456789|1 (print 31 chars)
- %sh: write error: Invalid argument
-
-Also remove the superfluous parentheses.
-
-Signed-off-by: Miles Chen <miles.chen@mediatek.com>
-Cc: <linux-mediatek@lists.infradead.org>
-Cc: <wsd_upstream@mediatek.com>
-Cc: Linus Torvalds <torvalds@linux-foundation.org>
-Cc: Peter Zijlstra <peterz@infradead.org>
-Cc: Thomas Gleixner <tglx@linutronix.de>
-Link: https://lkml.kernel.org/r/20190912103452.13281-1-miles.chen@mediatek.com
-Signed-off-by: Ingo Molnar <mingo@kernel.org>
-Signed-off-by: Sasha Levin <sashal@kernel.org>
----
- kernel/sched/psi.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/kernel/sched/psi.c b/kernel/sched/psi.c
-index 6e52b67b420e7..517e3719027e6 100644
---- a/kernel/sched/psi.c
-+++ b/kernel/sched/psi.c
-@@ -1198,7 +1198,7 @@ static ssize_t psi_write(struct file *file, const char __user *user_buf,
- 	if (static_branch_likely(&psi_disabled))
- 		return -EOPNOTSUPP;
- 
--	buf_size = min(nbytes, (sizeof(buf) - 1));
-+	buf_size = min(nbytes, sizeof(buf));
- 	if (copy_from_user(buf, user_buf, buf_size))
- 		return -EFAULT;
- 
--- 
-2.20.1
-
-
+Acked-by: Stephen Boyd <sboyd@kernel.org>
 
 
 _______________________________________________
