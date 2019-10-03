@@ -2,97 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AA0B9CA0A8
-	for <lists+linux-mediatek@lfdr.de>; Thu,  3 Oct 2019 16:54:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 62A1ACA43C
+	for <lists+linux-mediatek@lfdr.de>; Thu,  3 Oct 2019 18:26:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WT2yeEHpMJqapehXWWQx7HZng7/4+E99mS7NvOt7Ozs=; b=Iy7Y5WAaYy6zlw
-	1ubbcUBc4btG+JFaHSiTPmvtpl9USwUejJXDP2JS7x5aRJWet6wjSfY8NVw5rKqj7jY8yyN/5aHKH
-	V5xlEPeBBETNT7K3PoQdauG7ZiY6Mdg5pTIAdI8xf8bq9gSLdnZT+woUvsu0jzVPiAO1SaNRuPPfg
-	4TRpsbYU+G/BhgN+luDnv+jD6EYpBvZWTTwtJs8tT/v9JCIVvz4Uq+IcQwvgsIXiwG+s252qs8vK6
-	FmfKhAHp5va8bWT+MAo3oO4+P8UwJMuiMwwk/7tkxKTd4s4Tl5616lL1/HEpKaBqY6ribQSw3WASP
-	ylgzrjO2QKD9THcYhalQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=AuV//wfRpOHT9Qskfgk/b9I8puXsVSSKEaCvw3rV4M8=; b=T5tfzBXhsHDqND
+	Yl830EzpJsFtSH4sbrMiEfvudRYok1/r+p+Q16XQWJCBYhQCcZew/pbwVReIIiS2FZVqyQQf78Gm7
+	awMT6/e07NspkeghZteWi3PROKzvxRuWaPZgyPOVN/8GsYiS1+M5IYpvgITTNxbR0wU3/WAvZv2Oi
+	OHQwoJa8NjtLqY/AYSPKJtUTGmPLyOwIf18zOQwZntEX+EtMw9OsNeKnQcmz3OYlmEi1o3V3pz5YC
+	b3KWm0fdjK1Z8fnRAk9T60fXVO5egfgN28LVwkx1HBW5oumXyLh0U3ARgbi6gNJXd83Dw3cwKmOjd
+	dGR72rMHYsbYsmEnTWnA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iG2Um-00008Y-R5; Thu, 03 Oct 2019 14:54:20 +0000
-Received: from mail-qk1-x742.google.com ([2607:f8b0:4864:20::742])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iG2Ui-00006p-Fu
- for linux-mediatek@lists.infradead.org; Thu, 03 Oct 2019 14:54:19 +0000
-Received: by mail-qk1-x742.google.com with SMTP id q203so2682450qke.1
- for <linux-mediatek@lists.infradead.org>; Thu, 03 Oct 2019 07:54:13 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=BTr3LSymDwJchkLEsnB04LTDGo5fRwiRd1Hl9vtA70A=;
- b=R/HBctXOh2b5gWcxNHLyJTCkeKva5iwYrCxrcE6R5Y1O9nlRDO4z/lGH13YGw75OfM
- 6YSngGCepkVmyIwZpc9TGweSQSORBzKXu49gCWDbAoBB0japKvEayqDsQOkTZ95lWJQB
- ReKTL14Cbr3rq8L2cJvaCq1fQZ8crfreSySCM2juzebn+6I+HgkdxoU9zYzFaP/Bw0/a
- Flo3SYHBZP/jzyTlEo8mqLaIFYo4RNN5IPpOKIlWzCrYF+P7TqAuiWcxYliuGb4RzwGB
- ctRZKPcuz+xoBv88DpG+lhZRJu8YzA4iHn1w4Gib8tRWzq+tjG68IVw4P4IorU/hWkgw
- uB3g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=BTr3LSymDwJchkLEsnB04LTDGo5fRwiRd1Hl9vtA70A=;
- b=mB70YH/KyNV6C3QsV+q2MMEUdD7cQFxY0w6g/y5u/rGvELja5IajQM8Iv4jw5mgQ0T
- tH+ZPsbzUTRzmNqqNDz6cfkpwazFLNmacNzSVt9S/z9R+mMDMGcYju2EeUZsgcU24tA1
- tpg2ui9m8+stV5l6sqmTsTCiORoAdJd4J8hLhyznMaowwkK6mKQUrDQs4jDvdNb/bvEH
- bQ0/eHhxSmBc014IdH9txtTc/sL8AUiwU1OaCyn1d0J5cVcH7Yl7ESyyl5Tdr5LaV3NN
- rDgsrQ7L7CpqTShmF7AIwTo+hWsq3PHTm1qR3f+9JhJd21s2Nx6tfX4PIP2MocZjhEmz
- pkOQ==
-X-Gm-Message-State: APjAAAVExdlU/euCW+VytlJeKAxkoLBuyOj49ojdzttvgJjgKHZxm3io
- 5f0bHrm31Qp3GZ1gsnsiQXYzMKAw3Kh5ZQIvNFi1XA==
-X-Google-Smtp-Source: APXvYqyL9WizUhZ+DgNHZ+OGEYdpizeohMbvftFIrAKWc94nnZw7UjpfApEzrSxwJaXoT0kur5Yzh12qcoxvOrP4t0k=
-X-Received: by 2002:a37:985:: with SMTP id 127mr4662844qkj.43.1570114451897;
- Thu, 03 Oct 2019 07:54:11 -0700 (PDT)
+	id 1iG3vb-0007IX-Ar; Thu, 03 Oct 2019 16:26:07 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iG3vQ-00079B-VQ; Thu, 03 Oct 2019 16:25:58 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 0722D1000;
+ Thu,  3 Oct 2019 09:25:54 -0700 (PDT)
+Received: from [192.168.0.9] (unknown [172.31.20.19])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id B2C883F739;
+ Thu,  3 Oct 2019 09:25:52 -0700 (PDT)
+Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
+To: Jing-Ting Wu <jing-ting.wu@mediatek.com>,
+ Peter Zijlstra <peterz@infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+References: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
+From: Dietmar Eggemann <dietmar.eggemann@arm.com>
+Message-ID: <7bd9506b-9930-0bf8-a024-8c7d7d8bf86e@arm.com>
+Date: Thu, 3 Oct 2019 18:25:30 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-References: <20190927034338.15813-1-walter-zh.wu@mediatek.com>
- <CACT4Y+Zxz+R=qQxSMoipXoLjRqyApD3O0eYpK0nyrfGHE4NNPw@mail.gmail.com>
- <1569594142.9045.24.camel@mtksdccf07>
- <CACT4Y+YuAxhKtL7ho7jpVAPkjG-JcGyczMXmw8qae2iaZjTh_w@mail.gmail.com>
- <1569818173.17361.19.camel@mtksdccf07> <1570018513.19702.36.camel@mtksdccf07>
- <CACT4Y+bbZhvz9ZpHtgL8rCCsV=ybU5jA6zFnJBL7gY2cNXDLyQ@mail.gmail.com>
- <1570069078.19702.57.camel@mtksdccf07>
- <CACT4Y+ZwNv2-QBrvuR2JvemovmKPQ9Ggrr=ZkdTg6xy_Ki6UAg@mail.gmail.com>
- <1570095525.19702.59.camel@mtksdccf07> <1570110681.19702.64.camel@mtksdccf07>
-In-Reply-To: <1570110681.19702.64.camel@mtksdccf07>
-From: Dmitry Vyukov <dvyukov@google.com>
-Date: Thu, 3 Oct 2019 16:53:59 +0200
-Message-ID: <CACT4Y+aKrC8mtcDTVhM-So-TTLjOyFCD7r6jryWFH6i2he1WJA@mail.gmail.com>
-Subject: Re: [PATCH] kasan: fix the missing underflow in memmove and memcpy
- with CONFIG_KASAN_GENERIC=y
-To: Walter Wu <walter-zh.wu@mediatek.com>
+In-Reply-To: <1567048502-6064-1-git-send-email-jing-ting.wu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191003_075416_531787_589CE5D0 
-X-CRM114-Status: GOOD (  23.80  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20191003_092557_098112_C849AC7F 
+X-CRM114-Status: GOOD (  24.75  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:742 listed in]
- [list.dnswl.org]
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -104,213 +62,93 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Linux-MM <linux-mm@kvack.org>,
- Alexander Potapenko <glider@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: linux-arm-kernel@lists.infradead.org, Steven Rostedt <rostedt@goodmis.org>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Oct 3, 2019 at 3:51 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:>
-> how about this?
->
-> commit fd64691026e7ccb8d2946d0804b0621ac177df38
-> Author: Walter Wu <walter-zh.wu@mediatek.com>
-> Date:   Fri Sep 27 09:54:18 2019 +0800
->
->     kasan: detect invalid size in memory operation function
->
->     It is an undefined behavior to pass a negative value to
-> memset()/memcpy()/memmove()
->     , so need to be detected by KASAN.
->
->     KASAN report:
->
->      BUG: KASAN: invalid size 18446744073709551614 in
-> kmalloc_memmove_invalid_size+0x70/0xa0
->
->      CPU: 1 PID: 91 Comm: cat Not tainted
-> 5.3.0-rc1ajb-00001-g31943bbc21ce-dirty #7
->      Hardware name: linux,dummy-virt (DT)
->      Call trace:
->       dump_backtrace+0x0/0x278
->       show_stack+0x14/0x20
->       dump_stack+0x108/0x15c
->       print_address_description+0x64/0x368
->       __kasan_report+0x108/0x1a4
->       kasan_report+0xc/0x18
->       check_memory_region+0x15c/0x1b8
->       memmove+0x34/0x88
->       kmalloc_memmove_invalid_size+0x70/0xa0
->
->     [1] https://bugzilla.kernel.org/show_bug.cgi?id=199341
->
->     Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
->     Reported-by: Dmitry Vyukov <dvyukov@google.com>
->
-> diff --git a/lib/test_kasan.c b/lib/test_kasan.c
-> index b63b367a94e8..e4e517a51860 100644
-> --- a/lib/test_kasan.c
-> +++ b/lib/test_kasan.c
-> @@ -280,6 +280,23 @@ static noinline void __init
-> kmalloc_oob_in_memset(void)
->         kfree(ptr);
->  }
->
-> +static noinline void __init kmalloc_memmove_invalid_size(void)
-> +{
-> +       char *ptr;
-> +       size_t size = 64;
-> +
-> +       pr_info("invalid size in memmove\n");
-> +       ptr = kmalloc(size, GFP_KERNEL);
-> +       if (!ptr) {
-> +               pr_err("Allocation failed\n");
-> +               return;
-> +       }
-> +
-> +       memset((char *)ptr, 0, 64);
-> +       memmove((char *)ptr, (char *)ptr + 4, -2);
-> +       kfree(ptr);
-> +}
-> +
->  static noinline void __init kmalloc_uaf(void)
+[+ Steven Rostedt <rostedt@goodmis.org>]
+
+On 29/08/2019 05:15, Jing-Ting Wu wrote:
+> At original linux design, RT & CFS scheduler are independent.
+> Current RT task placement policy will select the first cpu in
+> lowest_mask, even if the first CPU is running a CFS task.
+> This may put RT task to a running cpu and let CFS task runnable.
+> 
+> So we select idle cpu in lowest_mask first to avoid preempting
+> CFS task.
+> 
+> Signed-off-by: Jing-Ting Wu <jing-ting.wu@mediatek.com>
+> ---
+>  kernel/sched/rt.c |   42 +++++++++++++++++-------------------------
+>  1 file changed, 17 insertions(+), 25 deletions(-)
+> 
+> diff --git a/kernel/sched/rt.c b/kernel/sched/rt.c
+> index a532558..626ca27 100644
+> --- a/kernel/sched/rt.c
+> +++ b/kernel/sched/rt.c
+> @@ -1388,7 +1388,6 @@ static void yield_task_rt(struct rq *rq)
+>  static int
+>  select_task_rq_rt(struct task_struct *p, int cpu, int sd_flag, int flags)
 >  {
->         char *ptr;
-> @@ -734,6 +751,7 @@ static int __init kmalloc_tests_init(void)
->         kmalloc_oob_memset_4();
->         kmalloc_oob_memset_8();
->         kmalloc_oob_memset_16();
-> +       kmalloc_memmove_invalid_size;
->         kmalloc_uaf();
->         kmalloc_uaf_memset();
->         kmalloc_uaf2();
-> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
-> index 2277b82902d8..5fd377af7457 100644
-> --- a/mm/kasan/common.c
-> +++ b/mm/kasan/common.c
-> @@ -102,7 +102,8 @@ EXPORT_SYMBOL(__kasan_check_write);
->  #undef memset
->  void *memset(void *addr, int c, size_t len)
->  {
-> -       check_memory_region((unsigned long)addr, len, true, _RET_IP_);
-> +       if(!check_memory_region((unsigned long)addr, len, true, _RET_IP_))
-> +               return NULL;
+> -	struct task_struct *curr;
+>  	struct rq *rq;
+>  
+>  	/* For anything but wake ups, just return the task_cpu */
+> @@ -1398,33 +1397,15 @@ static void yield_task_rt(struct rq *rq)
+>  	rq = cpu_rq(cpu);
+>  
+>  	rcu_read_lock();
+> -	curr = READ_ONCE(rq->curr); /* unlocked access */
+>  
+>  	/*
+> -	 * If the current task on @p's runqueue is an RT task, then
+> -	 * try to see if we can wake this RT task up on another
+> -	 * runqueue. Otherwise simply start this RT task
+> -	 * on its current runqueue.
+> -	 *
+> -	 * We want to avoid overloading runqueues. If the woken
+> -	 * task is a higher priority, then it will stay on this CPU
+> -	 * and the lower prio task should be moved to another CPU.
+> -	 * Even though this will probably make the lower prio task
+> -	 * lose its cache, we do not want to bounce a higher task
+> -	 * around just because it gave up its CPU, perhaps for a
+> -	 * lock?
+> -	 *
+> -	 * For equal prio tasks, we just let the scheduler sort it out.
+> -	 *
+> -	 * Otherwise, just let it ride on the affined RQ and the
+> -	 * post-schedule router will push the preempted task away
+> -	 *
+> -	 * This test is optimistic, if we get it wrong the load-balancer
+> -	 * will have to sort it out.
+> +	 * If the task p is allowed to put more than one CPU or
+> +	 * it is not allowed to put on this CPU.
+> +	 * Let p use find_lowest_rq to choose other idle CPU first,
+> +	 * instead of choose this cpu and preempt curr cfs task.
+>  	 */
+> -	if (curr && unlikely(rt_task(curr)) &&
+> -	    (curr->nr_cpus_allowed < 2 ||
+> -	     curr->prio <= p->prio)) {
+> +	if ((p->nr_cpus_allowed > 1) ||
+> +	    (!cpumask_test_cpu(cpu, p->cpus_ptr))) {
+>  		int target = find_lowest_rq(p);
 
-Overall approach looks good to me.
-A good question is what we should return here. All bets are off after
-a report, but we still try to "minimize damage". One may argue for
-returning addr here and in other functions. But the more I think about
-this, the more I think it does not matter.
+I'm sure RT folks don't like the idea to change this condition.
 
+I remember a similar approach and Steven Rostedt NAKed the idea back:
 
->         return __memset(addr, c, len);
->  }
-> @@ -110,7 +111,8 @@ void *memset(void *addr, int c, size_t len)
->  #undef memmove
->  void *memmove(void *dest, const void *src, size_t len)
->  {
-> -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> +       if(!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> +               return NULL;
->         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
->
->         return __memmove(dest, src, len);
-> @@ -119,7 +121,8 @@ void *memmove(void *dest, const void *src, size_t
-> len)
->  #undef memcpy
->  void *memcpy(void *dest, const void *src, size_t len)
->  {
-> -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> +       if(!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> +               return NULL;
->         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
->
->         return __memcpy(dest, src, len);
-> diff --git a/mm/kasan/generic.c b/mm/kasan/generic.c
-> index 616f9dd82d12..02148a317d27 100644
-> --- a/mm/kasan/generic.c
-> +++ b/mm/kasan/generic.c
-> @@ -173,6 +173,11 @@ static __always_inline bool
-> check_memory_region_inline(unsigned long addr,
->         if (unlikely(size == 0))
->                 return true;
->
-> +       if (unlikely((long)size < 0)) {
-> +               kasan_report(addr, size, write, ret_ip);
-> +               return false;
-> +       }
-> +
->         if (unlikely((void *)addr <
->                 kasan_shadow_to_mem((void *)KASAN_SHADOW_START))) {
->                 kasan_report(addr, size, write, ret_ip);
-> diff --git a/mm/kasan/report.c b/mm/kasan/report.c
-> index 0e5f965f1882..0cd317ef30f5 100644
-> --- a/mm/kasan/report.c
-> +++ b/mm/kasan/report.c
-> @@ -68,11 +68,16 @@ __setup("kasan_multi_shot", kasan_set_multi_shot);
->
->  static void print_error_description(struct kasan_access_info *info)
->  {
-> -       pr_err("BUG: KASAN: %s in %pS\n",
-> -               get_bug_type(info), (void *)info->ip);
-> -       pr_err("%s of size %zu at addr %px by task %s/%d\n",
-> -               info->is_write ? "Write" : "Read", info->access_size,
-> -               info->access_addr, current->comm, task_pid_nr(current));
-> +       if ((long)info->access_size < 0) {
-> +               pr_err("BUG: KASAN: invalid size %zu in %pS\n",
-> +                       info->access_size, (void *)info->ip);
+https://lore.kernel.org/r/1415099585-31174-2-git-send-email-pang.xunlei@linaro.org
 
-I would not introduce a new bug type.
-These are parsed and used by some systems, e.g. syzbot. If size is
-user-controllable, then a new bug type for this will mean 2 bug
-reports.
-It also won't harm to print Read/Write, definitely the address, so no
-reason to special case this out of a dozen of report formats.
-This can qualify as out-of-bounds (definitely will cross some
-bounds!), so I would change get_bug_type() to return
-"slab-out-of-bounds" (as the most common OOB) in such case (with a
-comment).
+Back then, Xunlei Pang even tried to create a lower mask of idle CPUs,
+for find_lower_mask() to return:
 
+https://lore.kernel.org/r/1415099585-31174-1-git-send-email-pang.xunlei@linaro.org
 
-> +       } else {
-> +               pr_err("BUG: KASAN: %s in %pS\n",
-> +                       get_bug_type(info), (void *)info->ip);
-> +               pr_err("%s of size %zu at addr %px by task %s/%d\n",
-> +                       info->is_write ? "Write" : "Read", info->access_size,
-> +                       info->access_addr, current->comm, task_pid_nr(current));
-> +       }
->  }
->
->  static DEFINE_SPINLOCK(report_lock);
-> diff --git a/mm/kasan/tags.c b/mm/kasan/tags.c
-> index 0e987c9ca052..b829535a3ad7 100644
-> --- a/mm/kasan/tags.c
-> +++ b/mm/kasan/tags.c
-> @@ -86,6 +86,11 @@ bool check_memory_region(unsigned long addr, size_t
-> size, bool write,
->         if (unlikely(size == 0))
->                 return true;
->
-> +       if (unlikely((long)size < 0)) {
-> +               kasan_report(addr, size, write, ret_ip);
-> +               return false;
-> +       }
-> +
->         tag = get_tag((const void *)addr);
->
->         /*
->
->
-> --
-> You received this message because you are subscribed to the Google Groups "kasan-dev" group.
-> To unsubscribe from this group and stop receiving emails from it, send an email to kasan-dev+unsubscribe@googlegroups.com.
-> To view this discussion on the web visit https://groups.google.com/d/msgid/kasan-dev/1570110681.19702.64.camel%40mtksdccf07.
+[...]
 
 _______________________________________________
 Linux-mediatek mailing list
