@@ -2,77 +2,116 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE692CB3F9
-	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 06:42:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3D7AFCB58B
+	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 09:57:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kL2U3FV0fCV1D+4aslIIg4WU31MLWH955qWiLWtvLkM=; b=TLQqghlyn23Jr6
-	bhX9fr2ZDqT0vb8BmHEFJtXk58AgqniJUJnHbgtSaZGnKgdqIy2UCr+oWanhuRB27OOJXj6VJwXUi
-	gOUg3bCaLYEDgTayUVluEZhUQeKBSdbC/vFhQCH5iu2dOtEo44CczfLC5z8TdsknLwfDTvxBvHPcU
-	cxUJQ2qeKMDbqGptGu9Vp3usrsKLU59bavAn25eaXw9KYI2q/+cwjDtXtL0VRyJGyZ0PLxn4/2cMS
-	xCG6REzASrTenep0C4uGo5j6gHXSFdPYDUO4XQlakYCPNM0GRk0CQ3SKHLE/cddMt5cCcgD/nvRZ0
-	QT28od+iL+03+m9NEXlQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6fR0LC/uvR/Y44w3bQYbFjwTXRXG8OiRZ3jttupW7Sc=; b=jq+MJ3KSJwmO1A
+	B/i8ghjiH3N2758bHxH+FOBw7TRfK10rvWQ7GpjG2bOEjUi6ybYULFxSdNAuhRr9ecR0AlQC1Gqeo
+	775paZN6RyClDVrpvXcYtAJbZFYS/BH4vpnHUhtsE8tyUfZnip99ppDeFeuydbX/RZEGLiic4JFF+
+	riSqJMWU0V67WY8O1NGvtndSmmjqNU5INmzF7elgHnxYtSDnHCzALly8ZdUI6Jpk4ActHqzpCGDuW
+	l2VsW4QrMvkQl1eN/MxJ38v+RUYJTQVGt5YMtzQxAN5CPBNkxXxgZdWaJwSKOLFEyL0+w8Gj0eISO
+	qAGET/RHmZsPgp2+f27g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGFQL-0006Nu-DW; Fri, 04 Oct 2019 04:42:37 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iGISv-0003eC-2r; Fri, 04 Oct 2019 07:57:29 +0000
+Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGFQB-0006HG-Tc; Fri, 04 Oct 2019 04:42:29 +0000
-X-UUID: c4d9d0af129048c7b6bf80063d667321-20191003
-X-UUID: c4d9d0af129048c7b6bf80063d667321-20191003
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 373828557; Thu, 03 Oct 2019 20:42:22 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 3 Oct 2019 21:42:21 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 4 Oct 2019 12:42:20 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 4 Oct 2019 12:42:20 +0800
-Message-ID: <1570164140.19702.97.camel@mtksdccf07>
-Subject: Re: [PATCH] kasan: fix the missing underflow in memmove and memcpy
- with CONFIG_KASAN_GENERIC=y
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Dmitry Vyukov <dvyukov@google.com>
-Date: Fri, 4 Oct 2019 12:42:20 +0800
-In-Reply-To: <CACT4Y+aKrC8mtcDTVhM-So-TTLjOyFCD7r6jryWFH6i2he1WJA@mail.gmail.com>
-References: <20190927034338.15813-1-walter-zh.wu@mediatek.com>
- <CACT4Y+Zxz+R=qQxSMoipXoLjRqyApD3O0eYpK0nyrfGHE4NNPw@mail.gmail.com>
- <1569594142.9045.24.camel@mtksdccf07>
- <CACT4Y+YuAxhKtL7ho7jpVAPkjG-JcGyczMXmw8qae2iaZjTh_w@mail.gmail.com>
- <1569818173.17361.19.camel@mtksdccf07>
- <1570018513.19702.36.camel@mtksdccf07>
- <CACT4Y+bbZhvz9ZpHtgL8rCCsV=ybU5jA6zFnJBL7gY2cNXDLyQ@mail.gmail.com>
- <1570069078.19702.57.camel@mtksdccf07>
- <CACT4Y+ZwNv2-QBrvuR2JvemovmKPQ9Ggrr=ZkdTg6xy_Ki6UAg@mail.gmail.com>
- <1570095525.19702.59.camel@mtksdccf07>
- <1570110681.19702.64.camel@mtksdccf07>
- <CACT4Y+aKrC8mtcDTVhM-So-TTLjOyFCD7r6jryWFH6i2he1WJA@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1iGISq-0003dB-Gq
+ for linux-mediatek@lists.infradead.org; Fri, 04 Oct 2019 07:57:27 +0000
+X-Virus-Scanned: by amavisd-new at test-mx.suse.de
+Received: from relay2.suse.de (unknown [195.135.220.254])
+ by mx1.suse.de (Postfix) with ESMTP id BAC17AC8B;
+ Fri,  4 Oct 2019 07:57:20 +0000 (UTC)
+Subject: Re: [PATCH] mm/page_owner: fix incorrect looping in
+ __set_page_owner_handle()
+To: Miles Chen <miles.chen@mediatek.com>,
+ Andrew Morton <akpm@linux-foundation.org>
+References: <20191004073755.3228-1-miles.chen@mediatek.com>
+From: Vlastimil Babka <vbabka@suse.cz>
+Autocrypt: addr=vbabka@suse.cz; prefer-encrypt=mutual; keydata=
+ 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
+Message-ID: <f5027e93-7cf3-3a90-f1f8-b829ea4b75b9@suse.cz>
+Date: Fri, 4 Oct 2019 09:57:20 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.1.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20191004073755.3228-1-miles.chen@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191003_214227_969996_924B8578 
-X-CRM114-Status: GOOD (  23.61  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191004_005724_850871_A25A1DCB 
+X-CRM114-Status: GOOD (  17.98  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [195.135.220.15 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,195 +123,66 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Linux-MM <linux-mm@kvack.org>,
- Alexander Potapenko <glider@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: linux-mm@kvack.org, Michal Hocko <mhocko@suse.com>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2019-10-03 at 16:53 +0200, Dmitry Vyukov wrote:
-> On Thu, Oct 3, 2019 at 3:51 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:>
-> > how about this?
-> >
-> > commit fd64691026e7ccb8d2946d0804b0621ac177df38
-> > Author: Walter Wu <walter-zh.wu@mediatek.com>
-> > Date:   Fri Sep 27 09:54:18 2019 +0800
-> >
-> >     kasan: detect invalid size in memory operation function
-> >
-> >     It is an undefined behavior to pass a negative value to
-> > memset()/memcpy()/memmove()
-> >     , so need to be detected by KASAN.
-> >
-> >     KASAN report:
-> >
-> >      BUG: KASAN: invalid size 18446744073709551614 in
-> > kmalloc_memmove_invalid_size+0x70/0xa0
-> >
-> >      CPU: 1 PID: 91 Comm: cat Not tainted
-> > 5.3.0-rc1ajb-00001-g31943bbc21ce-dirty #7
-> >      Hardware name: linux,dummy-virt (DT)
-> >      Call trace:
-> >       dump_backtrace+0x0/0x278
-> >       show_stack+0x14/0x20
-> >       dump_stack+0x108/0x15c
-> >       print_address_description+0x64/0x368
-> >       __kasan_report+0x108/0x1a4
-> >       kasan_report+0xc/0x18
-> >       check_memory_region+0x15c/0x1b8
-> >       memmove+0x34/0x88
-> >       kmalloc_memmove_invalid_size+0x70/0xa0
-> >
-> >     [1] https://bugzilla.kernel.org/show_bug.cgi?id=199341
-> >
-> >     Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-> >     Reported-by: Dmitry Vyukov <dvyukov@google.com>
-> >
-> > diff --git a/lib/test_kasan.c b/lib/test_kasan.c
-> > index b63b367a94e8..e4e517a51860 100644
-> > --- a/lib/test_kasan.c
-> > +++ b/lib/test_kasan.c
-> > @@ -280,6 +280,23 @@ static noinline void __init
-> > kmalloc_oob_in_memset(void)
-> >         kfree(ptr);
-> >  }
-> >
-> > +static noinline void __init kmalloc_memmove_invalid_size(void)
-> > +{
-> > +       char *ptr;
-> > +       size_t size = 64;
-> > +
-> > +       pr_info("invalid size in memmove\n");
-> > +       ptr = kmalloc(size, GFP_KERNEL);
-> > +       if (!ptr) {
-> > +               pr_err("Allocation failed\n");
-> > +               return;
-> > +       }
-> > +
-> > +       memset((char *)ptr, 0, 64);
-> > +       memmove((char *)ptr, (char *)ptr + 4, -2);
-> > +       kfree(ptr);
-> > +}
-> > +
-> >  static noinline void __init kmalloc_uaf(void)
-> >  {
-> >         char *ptr;
-> > @@ -734,6 +751,7 @@ static int __init kmalloc_tests_init(void)
-> >         kmalloc_oob_memset_4();
-> >         kmalloc_oob_memset_8();
-> >         kmalloc_oob_memset_16();
-> > +       kmalloc_memmove_invalid_size;
-> >         kmalloc_uaf();
-> >         kmalloc_uaf_memset();
-> >         kmalloc_uaf2();
-> > diff --git a/mm/kasan/common.c b/mm/kasan/common.c
-> > index 2277b82902d8..5fd377af7457 100644
-> > --- a/mm/kasan/common.c
-> > +++ b/mm/kasan/common.c
-> > @@ -102,7 +102,8 @@ EXPORT_SYMBOL(__kasan_check_write);
-> >  #undef memset
-> >  void *memset(void *addr, int c, size_t len)
-> >  {
-> > -       check_memory_region((unsigned long)addr, len, true, _RET_IP_);
-> > +       if(!check_memory_region((unsigned long)addr, len, true, _RET_IP_))
-> > +               return NULL;
+On 10/4/19 9:37 AM, Miles Chen wrote:
+> In __set_page_owner_handle(), we should loop over page
+> [0...(1 << order) - 1] and setup their page_owner structures.
 > 
-> Overall approach looks good to me.
-> A good question is what we should return here. All bets are off after
-> a report, but we still try to "minimize damage". One may argue for
-> returning addr here and in other functions. But the more I think about
-> this, the more I think it does not matter.
+> Currently, __set_page_owner_handle() update page_ext at the end of
+> the loop, sets the page_owner of (page + 0) twice and
+> misses the page_owner of (page + (1 << order) - 1).
 > 
-agreed
+> Fix it by updating the page_ext at the start of the loop.
+> 
+> In i == 0 case:
+> for (i = 0; i < (1 << order); i++) {
+> 	page_owner = get_page_owner(page_ext); <- page_ext belongs to page + 0
+> 	...
+> 	page_ext = lookup_page_ext(page + i); <- lookup_page_ext(page + 0)
+> }
+> 
+> Cc: Andrew Morton <akpm@linux-foundation.org>
+> Cc: Vlastimil Babka <vbabka@suse.cz>
+> Cc: Michal Hocko <mhocko@suse.com>
+> Signed-off-by: Miles Chen <miles.chen@mediatek.com>
+> Fixes: 7e2f2a0cd17c ("mm, page_owner: record page owner for each subpage")
 
-> 
-> >         return __memset(addr, c, len);
-> >  }
-> > @@ -110,7 +111,8 @@ void *memset(void *addr, int c, size_t len)
-> >  #undef memmove
-> >  void *memmove(void *dest, const void *src, size_t len)
-> >  {
-> > -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> > +       if(!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> > +               return NULL;
-> >         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
-> >
-> >         return __memmove(dest, src, len);
-> > @@ -119,7 +121,8 @@ void *memmove(void *dest, const void *src, size_t
-> > len)
-> >  #undef memcpy
-> >  void *memcpy(void *dest, const void *src, size_t len)
-> >  {
-> > -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> > +       if(!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> > +               return NULL;
-> >         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
-> >
-> >         return __memcpy(dest, src, len);
-> > diff --git a/mm/kasan/generic.c b/mm/kasan/generic.c
-> > index 616f9dd82d12..02148a317d27 100644
-> > --- a/mm/kasan/generic.c
-> > +++ b/mm/kasan/generic.c
-> > @@ -173,6 +173,11 @@ static __always_inline bool
-> > check_memory_region_inline(unsigned long addr,
-> >         if (unlikely(size == 0))
-> >                 return true;
-> >
-> > +       if (unlikely((long)size < 0)) {
-> > +               kasan_report(addr, size, write, ret_ip);
-> > +               return false;
-> > +       }
-> > +
-> >         if (unlikely((void *)addr <
-> >                 kasan_shadow_to_mem((void *)KASAN_SHADOW_START))) {
-> >                 kasan_report(addr, size, write, ret_ip);
-> > diff --git a/mm/kasan/report.c b/mm/kasan/report.c
-> > index 0e5f965f1882..0cd317ef30f5 100644
-> > --- a/mm/kasan/report.c
-> > +++ b/mm/kasan/report.c
-> > @@ -68,11 +68,16 @@ __setup("kasan_multi_shot", kasan_set_multi_shot);
-> >
-> >  static void print_error_description(struct kasan_access_info *info)
-> >  {
-> > -       pr_err("BUG: KASAN: %s in %pS\n",
-> > -               get_bug_type(info), (void *)info->ip);
-> > -       pr_err("%s of size %zu at addr %px by task %s/%d\n",
-> > -               info->is_write ? "Write" : "Read", info->access_size,
-> > -               info->access_addr, current->comm, task_pid_nr(current));
-> > +       if ((long)info->access_size < 0) {
-> > +               pr_err("BUG: KASAN: invalid size %zu in %pS\n",
-> > +                       info->access_size, (void *)info->ip);
-> 
-> I would not introduce a new bug type.
-> These are parsed and used by some systems, e.g. syzbot. If size is
-> user-controllable, then a new bug type for this will mean 2 bug
-> reports.
-> It also won't harm to print Read/Write, definitely the address, so no
-> reason to special case this out of a dozen of report formats.
-> This can qualify as out-of-bounds (definitely will cross some
-> bounds!), so I would change get_bug_type() to return
-> "slab-out-of-bounds" (as the most common OOB) in such case (with a
-> comment).
-> 
-Print Read/Write and address information, it is ok.
-But if we can directly point to the root cause of this problem, why we
-not do it?  see 1) and 2) to get a point, if we print OOB, then user
-needs one minute to think what is root case of this problem, but if we
-print invalid size, then user can directly get root case. this is my
-original thinking.
-1)Invalid size is true then OOB is true.
-2)OOB is true then invalid size may be true or false.
+Thanks. Kirill spotted it earlier and there's a fix pending:
+https://lore.kernel.org/linux-mm/20190930122916.14969-2-vbabka@suse.cz/
 
-But I see you say some systems have used bug report so that avoid this
-trouble, i will print the wrong type is "out-of-bound" in a unified way
-when size<0.
-
+> ---
+>  mm/page_owner.c | 3 +--
+>  1 file changed, 1 insertion(+), 2 deletions(-)
+> 
+> diff --git a/mm/page_owner.c b/mm/page_owner.c
+> index dee931184788..110c3e1987f2 100644
+> --- a/mm/page_owner.c
+> +++ b/mm/page_owner.c
+> @@ -178,6 +178,7 @@ static inline void __set_page_owner_handle(struct page *page,
+>  	int i;
+>  
+>  	for (i = 0; i < (1 << order); i++) {
+> +		page_ext = lookup_page_ext(page + i);
+>  		page_owner = get_page_owner(page_ext);
+>  		page_owner->handle = handle;
+>  		page_owner->order = order;
+> @@ -185,8 +186,6 @@ static inline void __set_page_owner_handle(struct page *page,
+>  		page_owner->last_migrate_reason = -1;
+>  		__set_bit(PAGE_EXT_OWNER, &page_ext->flags);
+>  		__set_bit(PAGE_EXT_OWNER_ACTIVE, &page_ext->flags);
+> -
+> -		page_ext = lookup_page_ext(page + i);
+>  	}
+>  }
+>  
+> 
 
 
 _______________________________________________
