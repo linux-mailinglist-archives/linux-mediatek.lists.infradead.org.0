@@ -2,99 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D6473CB733
-	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 11:19:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B74A2CB776
+	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 11:40:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=meI7yaQ5XT7yslbxSGklxrPuqnbGkpPZsS9bEVJXkl0=; b=UCayWZ/QmVw0X6
-	5AgDvqP8310KlJUcP6FGVLRIPTnKzyuxa7JBut7yiL5Lz9+dPxkbrfMjJNAZmrfnIUI9mmOgNFVYJ
-	lYepl+mkCv/nAtm4+DvGrPrO9sJLXLn5Kph1gZfsjkqemrQ7i24qBdKmryXB1DTzeX61+FC6pCRy7
-	qMwHEqWepEG7agGecZpPWl9ome5VfXWtYvOOklPqSQT1Sc7G80Z0lemzZ2Jt0jQnxrXp2EHSTkWKX
-	fej0JMOJUFgmY7uliC/aPyz8wDQD+WolAXTyM+OI/H5ai+aZ+8/mY3ck5tUE/Fc3BU2hGGK1KGFV3
-	TCn5+vXbzJr1ODtb5nRQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=/QOWCgqqFhC14LavOS62i8jl9mMAS+7lPGbRwGzXhgU=; b=FR8+/n0xRSNSgYLnW4GQH621F
+	i69jQH1eZE1kA7VBBCT30QFxHebqeGp4yNZo2H1g/rMiSERBm4CUvlNeKzzqu50w55qJiOkDO71m0
+	/DvCI8Z6ZhOu7v7SQJs/7h0wCFOywsMbDXgUOdqz5ubUXfEzmKnnT2thF1LaTiu0GKFvty8FpVG8E
+	Neoz0JWA0EwRAr0pUF3IPGRF+xnHlTkVnsev2kIuHrgfKS1kCSqhLZc9wf0JiIDXusghAJvVNYXG7
+	htz1jYrywpWqu+Yze9Gj2TUr2ve49gdN/qQ3ooCo1DBDxFRM1v2VaLonO3BMTVsZgZxePqNHsOwSM
+	WEGhU+HTg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGJjf-0000lz-6w; Fri, 04 Oct 2019 09:18:51 +0000
-Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
+	id 1iGK4U-0002NO-AM; Fri, 04 Oct 2019 09:40:22 +0000
+Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGJja-0000kq-0F
- for linux-mediatek@lists.infradead.org; Fri, 04 Oct 2019 09:18:48 +0000
-Received: by mail-qk1-x741.google.com with SMTP id u22so5121619qkk.11
- for <linux-mediatek@lists.infradead.org>; Fri, 04 Oct 2019 02:18:44 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=W6I9+yrZlBnu9vvasQaMrKa3ARAxTk84lZcanDGArco=;
- b=O59mJcJXAE0a9gcD7AD3Yp9bGocXLU+GGCmLSOzXLdgDN27W/eQAy05/1K1m+plcUc
- qnLOYNWUEf+SsN9dhYeXrX9pt6F/3vW1UWKD2d5azvtlxXaUhVr/uXk+j0xZY6MTg8Gh
- a+IsQNhDMJJf5ZASgmH8rr0eLlNtpx8sKdPfSvmWvkqiuQ0A+UDOkpH+82M7i5hmqB4s
- ShgpxMbaNvWDTsLfbHTVp4Uv+ZlaFZ+0feY33fqJOr01UsjoIGDrGeNIVXGXRqwH2kjK
- 4/trCgveBJDzademehYq0oEJgCo07tnbjaipEsGHMinMhPUOTt339wG7aiCIlSdwNsuN
- ym/Q==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=W6I9+yrZlBnu9vvasQaMrKa3ARAxTk84lZcanDGArco=;
- b=X/5pMIN7Fsbzh76gbRDHjEknGPQb5OZNRtgoLgX2X3u62ze7C8JjZi/oa8yfii6Sqq
- Zt7Kc24ipkUQ+mvTAZTr/aAROQ6C30TI0gwTwHwjDFNfyOlvF92XcNQ17kZpFdWP/Q5N
- skcSIKCFVs7ZvrWHLp/CDQ/axLCVEyKhdpXs3r6k1wqHCZwA+AnXJVYa45H7rlinbjjj
- E0hBUsZewjxM8YDfZ4QeZ153W/PIYLAlwtH8ZI7i0otd1BByzLAyBBRtTspWeCq9arJW
- K622ujkrncMeN6slkytPSVNBt/gt/mApDRqEnJYPNwbzPtdZecWVUcUz5gd4FspJJcYD
- tYRw==
-X-Gm-Message-State: APjAAAUN2m5xtZTFSr+anXdCyzXAKBuNAWvkVW9gGLxuFYjrkNfbaXQj
- bRdVbr0rEX48VXmJil6a35RrO3koosIeS8Oua5wO/g==
-X-Google-Smtp-Source: APXvYqyjhhu83fr5eJLtYQWY7lriwK62bdmC7FDlzxTSblvQJIzzEYUbbFV10zD+6wFkh9cLT3vWPb2NXWm55+vafpU=
-X-Received: by 2002:a37:985:: with SMTP id 127mr8947602qkj.43.1570180722548;
- Fri, 04 Oct 2019 02:18:42 -0700 (PDT)
+ id 1iGK4J-0002Di-1a; Fri, 04 Oct 2019 09:40:12 +0000
+Received: from DGGEMS410-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id DEEE194FBEF2EFAB3561;
+ Fri,  4 Oct 2019 17:40:06 +0800 (CST)
+Received: from [127.0.0.1] (10.202.227.179) by DGGEMS410-HUB.china.huawei.com
+ (10.3.19.210) with Microsoft SMTP Server id 14.3.439.0;
+ Fri, 4 Oct 2019 17:40:01 +0800
+Subject: Re: [PATCH v2 10/22] mtd: spi-nor: Rework write_sr()
+To: "Tudor.Ambarus@microchip.com" <Tudor.Ambarus@microchip.com>,
+ "vigneshr@ti.com" <vigneshr@ti.com>, "boris.brezillon@collabora.com"
+ <boris.brezillon@collabora.com>, "marek.vasut@gmail.com"
+ <marek.vasut@gmail.com>, "linux-mtd@lists.infradead.org"
+ <linux-mtd@lists.infradead.org>, "geert+renesas@glider.be"
+ <geert+renesas@glider.be>, "jonas@norrbonn.se" <jonas@norrbonn.se>
+References: <20190924074533.6618-1-tudor.ambarus@microchip.com>
+ <20190924074533.6618-11-tudor.ambarus@microchip.com>
+From: John Garry <john.garry@huawei.com>
+Message-ID: <83d62334-bd1c-20b7-3c58-225392c819f8@huawei.com>
+Date: Fri, 4 Oct 2019 10:39:51 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.3.0
 MIME-Version: 1.0
-References: <20190927034338.15813-1-walter-zh.wu@mediatek.com>
- <CACT4Y+Zxz+R=qQxSMoipXoLjRqyApD3O0eYpK0nyrfGHE4NNPw@mail.gmail.com>
- <1569594142.9045.24.camel@mtksdccf07>
- <CACT4Y+YuAxhKtL7ho7jpVAPkjG-JcGyczMXmw8qae2iaZjTh_w@mail.gmail.com>
- <1569818173.17361.19.camel@mtksdccf07> <1570018513.19702.36.camel@mtksdccf07>
- <CACT4Y+bbZhvz9ZpHtgL8rCCsV=ybU5jA6zFnJBL7gY2cNXDLyQ@mail.gmail.com>
- <1570069078.19702.57.camel@mtksdccf07>
- <CACT4Y+ZwNv2-QBrvuR2JvemovmKPQ9Ggrr=ZkdTg6xy_Ki6UAg@mail.gmail.com>
- <1570095525.19702.59.camel@mtksdccf07> <1570110681.19702.64.camel@mtksdccf07>
- <CACT4Y+aKrC8mtcDTVhM-So-TTLjOyFCD7r6jryWFH6i2he1WJA@mail.gmail.com>
- <1570164140.19702.97.camel@mtksdccf07> <1570176131.19702.105.camel@mtksdccf07>
-In-Reply-To: <1570176131.19702.105.camel@mtksdccf07>
-From: Dmitry Vyukov <dvyukov@google.com>
-Date: Fri, 4 Oct 2019 11:18:31 +0200
-Message-ID: <CACT4Y+ZvhomaeXFKr4za6MJi=fW2SpPaCFP=fk06CMRhNcmFvQ@mail.gmail.com>
-Subject: Re: [PATCH] kasan: fix the missing underflow in memmove and memcpy
- with CONFIG_KASAN_GENERIC=y
-To: Walter Wu <walter-zh.wu@mediatek.com>
+In-Reply-To: <20190924074533.6618-11-tudor.ambarus@microchip.com>
+X-Originating-IP: [10.202.227.179]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191004_021846_068643_65EA7864 
-X-CRM114-Status: GOOD (  35.46  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20191004_024011_257172_E816DBDD 
+X-CRM114-Status: GOOD (  11.78  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
- [list.dnswl.org]
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [45.249.212.191 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -106,268 +69,88 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- linux-mediatek@lists.infradead.org, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Linux-MM <linux-mm@kvack.org>,
- Alexander Potapenko <glider@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="us-ascii"
+Cc: "linux-aspeed@lists.ozlabs.org" <linux-aspeed@lists.ozlabs.org>,
+ "andrew@aj.id.au" <andrew@aj.id.au>, "richard@nod.at" <richard@nod.at>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "vz@mleia.com" <vz@mleia.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "joel@jms.id.au" <joel@jms.id.au>,
+ "miquel.raynal@bootlin.com" <miquel.raynal@bootlin.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "computersforpeace@gmail.com" <computersforpeace@gmail.com>,
+ "dwmw2@infradead.org" <dwmw2@infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Oct 4, 2019 at 10:02 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
->
-> On Fri, 2019-10-04 at 12:42 +0800, Walter Wu wrote:
-> > On Thu, 2019-10-03 at 16:53 +0200, Dmitry Vyukov wrote:
-> > > On Thu, Oct 3, 2019 at 3:51 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:>
-> > > >
-> > > >  static void print_error_description(struct kasan_access_info *info)
-> > > >  {
-> > > > -       pr_err("BUG: KASAN: %s in %pS\n",
-> > > > -               get_bug_type(info), (void *)info->ip);
-> > > > -       pr_err("%s of size %zu at addr %px by task %s/%d\n",
-> > > > -               info->is_write ? "Write" : "Read", info->access_size,
-> > > > -               info->access_addr, current->comm, task_pid_nr(current));
-> > > > +       if ((long)info->access_size < 0) {
-> > > > +               pr_err("BUG: KASAN: invalid size %zu in %pS\n",
-> > > > +                       info->access_size, (void *)info->ip);
-> > >
-> > > I would not introduce a new bug type.
-> > > These are parsed and used by some systems, e.g. syzbot. If size is
-> > > user-controllable, then a new bug type for this will mean 2 bug
-> > > reports.
-> > > It also won't harm to print Read/Write, definitely the address, so no
-> > > reason to special case this out of a dozen of report formats.
-> > > This can qualify as out-of-bounds (definitely will cross some
-> > > bounds!), so I would change get_bug_type() to return
-> > > "slab-out-of-bounds" (as the most common OOB) in such case (with a
-> > > comment).
-> > >
-> > Print Read/Write and address information, it is ok.
-> > But if we can directly point to the root cause of this problem, why we
-> > not do it?  see 1) and 2) to get a point, if we print OOB, then user
-> > needs one minute to think what is root case of this problem, but if we
-> > print invalid size, then user can directly get root case. this is my
-> > original thinking.
-> > 1)Invalid size is true then OOB is true.
-> > 2)OOB is true then invalid size may be true or false.
-> >
-> > But I see you say some systems have used bug report so that avoid this
-> > trouble, i will print the wrong type is "out-of-bound" in a unified way
-> > when size<0.
-> >
->
-> Updated my patch, please help to review it.
-> thanks.
->
-> commit 13e10a7e4264eb25c5a14193068027afc9c261f6
-> Author: Walter-zh Wu <walter-zh.wu@mediatek.com>
-> Date:   Fri Oct 4 15:27:17 2019 +0800
->
->     kasan: detect negative size in memory operation function
->
->     It is an undefined behavior to pass a negative value to
-> memset()/memcpy()/memmove()
->     , so need to be detected by KASAN.
->
->     If size is negative value, then it will be larger than ULONG_MAX/2,
->     so that we will qualify as out-of-bounds issue.
->
->     KASAN report:
->
->      BUG: KASAN: out-of-bounds in kmalloc_memmove_invalid_size+0x70/0xa0
->      Read of size 18446744073709551608 at addr ffffff8069660904 by task
-> cat/72
->
->      CPU: 2 PID: 72 Comm: cat Not tainted
-> 5.4.0-rc1-next-20191004ajb-00001-gdb8af2f372b2-dirty #1
->      Hardware name: linux,dummy-virt (DT)
->      Call trace:
->       dump_backtrace+0x0/0x288
->       show_stack+0x14/0x20
->       dump_stack+0x10c/0x164
->       print_address_description.isra.9+0x68/0x378
->       __kasan_report+0x164/0x1a0
->       kasan_report+0xc/0x18
->       check_memory_region+0x174/0x1d0
->       memmove+0x34/0x88
->       kmalloc_memmove_invalid_size+0x70/0xa0
->
->     [1] https://bugzilla.kernel.org/show_bug.cgi?id=199341
->
->     Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
->     Reported -by: Dmitry Vyukov <dvyukov@google.com>
->     Suggested-by: Dmitry Vyukov <dvyukov@google.com>
->
-> diff --git a/lib/test_kasan.c b/lib/test_kasan.c
-> index 49cc4d570a40..06942cf585cc 100644
-> --- a/lib/test_kasan.c
-> +++ b/lib/test_kasan.c
-> @@ -283,6 +283,23 @@ static noinline void __init
-> kmalloc_oob_in_memset(void)
->         kfree(ptr);
->  }
->
-> +static noinline void __init kmalloc_memmove_invalid_size(void)
-> +{
-> +       char *ptr;
-> +       size_t size = 64;
-> +
-> +       pr_info("invalid size in memmove\n");
-> +       ptr = kmalloc(size, GFP_KERNEL);
-> +       if (!ptr) {
-> +               pr_err("Allocation failed\n");
-> +               return;
-> +       }
-> +
-> +       memset((char *)ptr, 0, 64);
-> +       memmove((char *)ptr, (char *)ptr + 4, -2);
-> +       kfree(ptr);
+On 24/09/2019 08:46, Tudor.Ambarus@microchip.com wrote:
 > +}
 > +
->  static noinline void __init kmalloc_uaf(void)
+> +/**
+> + * spi_nor_write_sr() - Write the Status Register.
+> + * @nor:	pointer to 'struct spi_nor'.
+> + * @sr:		buffer to write to the Status Register.
+> + * @len:	number of bytes to write to the Status Register.
+> + *
+> + * Return: 0 on success, -errno otherwise.
+>   */
+> -static int write_sr(struct spi_nor *nor, u8 val)
+> +static int spi_nor_write_sr(struct spi_nor *nor, const u8 *sr, size_t len)
 >  {
->         char *ptr;
-> @@ -773,6 +790,7 @@ static int __init kmalloc_tests_init(void)
->         kmalloc_oob_memset_4();
->         kmalloc_oob_memset_8();
->         kmalloc_oob_memset_16();
-> +       kmalloc_memmove_invalid_size();
->         kmalloc_uaf();
->         kmalloc_uaf_memset();
->         kmalloc_uaf2();
-> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
-> index 6814d6d6a023..97dd6eecc3e7 100644
-> --- a/mm/kasan/common.c
-> +++ b/mm/kasan/common.c
-> @@ -102,7 +102,8 @@ EXPORT_SYMBOL(__kasan_check_write);
->  #undef memset
->  void *memset(void *addr, int c, size_t len)
->  {
-> -       check_memory_region((unsigned long)addr, len, true, _RET_IP_);
-> +       if (!check_memory_region((unsigned long)addr, len, true, _RET_IP_))
-> +               return NULL;
+> -	nor->bouncebuf[0] = val;
+> +	int ret;
+> +
+> +	ret = spi_nor_write_enable(nor);
+> +	if (ret)
+> +		return ret;
+> +
+
+Hi Tudor,
+
+>  	if (nor->spimem) {
+>  		struct spi_mem_op op =
+>  			SPI_MEM_OP(SPI_MEM_OP_CMD(SPINOR_OP_WRSR, 1),
+>  				   SPI_MEM_OP_NO_ADDR,
+>  				   SPI_MEM_OP_NO_DUMMY,
+> -				   SPI_MEM_OP_DATA_IN(1, nor->bouncebuf, 1));
+
+This be SPI_MEM_OP_DATA_OUT() in the current mainline code also, right?
+
+I'm testing my under development driver on top of v5.4-rc1, and 
+flash_lock -u is broken.
+
+Cheers,
+John
+
+> +				   SPI_MEM_OP_DATA_OUT(len, sr, 1));
 >
->         return __memset(addr, c, len);
+> -		return spi_mem_exec_op(nor->spimem, &op);
+> +		ret = spi_mem_exec_op(nor->spimem, &op);
+> +	} else {
+> +		ret = nor->controller_ops->write_reg(nor, SPINOR_OP_WRSR,
+> +						     sr, len);
+>  	}
+>
+> -	return nor->controller_ops->write_reg(nor, SPINOR_OP_WRSR,
+> -					      nor->bouncebuf, 1);
+> +	if (ret) {
+> +		dev_err(nor->dev, "error while writing Status Register\n");
+> +		return ret;
+> +	}
+> +
+> +	ret = spi_nor_wait_till_ready(nor);
+> +
+> +	return ret;
 >  }
-> @@ -110,7 +111,8 @@ void *memset(void *addr, int c, size_t len)
->  #undef memmove
->  void *memmove(void *dest, const void *src, size_t len)
->  {
-> -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> +       if (!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> +               return NULL;
->         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
-
-I would check both calls.
-The current code seems to be over-specialized for handling of invalid
-size (you assume that if it's invalid size, then the first
-check_memory_region will detect it and checking the second one is
-pointless, right?).
-But check_memory_region can return false in other cases too.
-Also seeing first call checked, but the second not checked just hurts
-my eyes when reading code (whenever I will read such code my first
-reaction will be "why?").
+>
+>  static struct spi_nor *mtd_to_spi_nor(struct mtd_info *mtd)
+> @@ -741,161 +914,6 @@ static int winbond_set_4byte(struct spi_nor *nor, bool enable)
+>  	return ret;
+>  }
 
 
->
->         return __memmove(dest, src, len);
-> @@ -119,7 +121,8 @@ void *memmove(void *dest, const void *src, size_t
-> len)
->  #undef memcpy
->  void *memcpy(void *dest, const void *src, size_t len)
->  {
-> -       check_memory_region((unsigned long)src, len, false, _RET_IP_);
-> +       if (!check_memory_region((unsigned long)src, len, false, _RET_IP_))
-> +               return NULL;
->         check_memory_region((unsigned long)dest, len, true, _RET_IP_);
->
->         return __memcpy(dest, src, len);
-> diff --git a/mm/kasan/generic.c b/mm/kasan/generic.c
-> index 616f9dd82d12..02148a317d27 100644
-> --- a/mm/kasan/generic.c
-> +++ b/mm/kasan/generic.c
-> @@ -173,6 +173,11 @@ static __always_inline bool
-> check_memory_region_inline(unsigned long addr,
->         if (unlikely(size == 0))
->                 return true;
->
-> +       if (unlikely((long)size < 0)) {
-> +               kasan_report(addr, size, write, ret_ip);
-> +               return false;
-> +       }
-> +
->         if (unlikely((void *)addr <
->                 kasan_shadow_to_mem((void *)KASAN_SHADOW_START))) {
->                 kasan_report(addr, size, write, ret_ip);
-> diff --git a/mm/kasan/generic_report.c b/mm/kasan/generic_report.c
-> index 36c645939bc9..ae9596210394 100644
-> --- a/mm/kasan/generic_report.c
-> +++ b/mm/kasan/generic_report.c
-> @@ -107,6 +107,13 @@ static const char *get_wild_bug_type(struct
-> kasan_access_info *info)
->
->  const char *get_bug_type(struct kasan_access_info *info)
->  {
-> +       /*
-> +        * if access_size < 0, then it will be larger than ULONG_MAX/2,
-> +        * so that this can qualify as out-of-bounds.
-> +        */
-> +       if ((long)info->access_size < 0)
-> +               return "out-of-bounds";
-
-"out-of-bounds" is the _least_ frequent KASAN bug type. So saying
-"out-of-bounds" has downsides of both approaches and won't prevent
-duplicate reports by syzbot...
-
-> +
->         if (addr_has_shadow(info->access_addr))
->                 return get_shadow_bug_type(info);
->         return get_wild_bug_type(info);
-> diff --git a/mm/kasan/tags.c b/mm/kasan/tags.c
-> index 0e987c9ca052..b829535a3ad7 100644
-> --- a/mm/kasan/tags.c
-> +++ b/mm/kasan/tags.c
-> @@ -86,6 +86,11 @@ bool check_memory_region(unsigned long addr, size_t
-> size, bool write,
->         if (unlikely(size == 0))
->                 return true;
->
-> +       if (unlikely((long)size < 0)) {
-> +               kasan_report(addr, size, write, ret_ip);
-> +               return false;
-> +       }
-> +
->         tag = get_tag((const void *)addr);
->
->         /*
-> diff --git a/mm/kasan/tags_report.c b/mm/kasan/tags_report.c
-> index 969ae08f59d7..1e1ca81214b5 100644
-> --- a/mm/kasan/tags_report.c
-> +++ b/mm/kasan/tags_report.c
-> @@ -36,6 +36,13 @@
->
->  const char *get_bug_type(struct kasan_access_info *info)
->  {
-> +       /*
-> +        * if access_size < 0, then it will be larger than ULONG_MAX/2,
-> +        * so that this can qualify as out-of-bounds.
-> +        */
-> +       if ((long)info->access_size < 0)
-> +               return "out-of-bounds";
-> +
->  #ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
->         struct kasan_alloc_meta *alloc_meta;
->         struct kmem_cache *cache;
->
->
-> --
-> You received this message because you are subscribed to the Google Groups "kasan-dev" group.
-> To unsubscribe from this group and stop receiving emails from it, send an email to kasan-dev+unsubscribe@googlegroups.com.
-> To view this discussion on the web visit https://groups.google.com/d/msgid/kasan-dev/1570176131.19702.105.camel%40mtksdccf07.
 
 _______________________________________________
 Linux-mediatek mailing list
