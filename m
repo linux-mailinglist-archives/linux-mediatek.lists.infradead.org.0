@@ -2,55 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1512DCC360
-	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 21:10:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 38A04CC362
+	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 21:10:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=EROa2u7HWq9offUBr9qlvgBWlitJqTCvgaOPgo3hDzs=; b=BGq
-	Q0sgRyGPUVdJUoM7z6FCTUmLhDkexgc1UQTMt+vhodCElMoQ7HPpzEBIh7dwfuEct/7elZTKGw5vO
-	wA52Er4RobR1MSmw9aT4LYYLso6WGolrI4Kf4J4tr7As10ZDcKOoC/UQRYlB/pHhB2j1lrpLQUYkQ
-	WrJo1q9IPwHZymRUlq2hkEW+Ud2sYVLIiQYTMX5MAijtDweWvR0m5ItCxCD3DPDTm3aERSvZKOmbi
-	VwXix49GuqGoTTdo+MjWXOqnEiKYn8s7Lua1cjrK48CBNW12sn2FzDsSjuqFPjewPlFRcfC2mazCh
-	9YiL/00vnsySyhnlPHgSbryxifCaL6Q==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=Sc5qYmEOdQzLJGOWYuZRar0Gqy0bLWyiObjNIZCS+4U=; b=V2psoLC5Hsyszj18h9dASsqrZu
+	U1EFIHK5k3jOGfxu6eUTlfFNDUm+ZF8Ri8NbVh3+tWlqAL3JwR4mXU9whac7DMTmXIF40RaSMDVw5
+	XAE9fo/Zds+UZaRE/dx+CevqEt41d5jh94JuyyVtFtfWYFv1KBTdFrejTubJ+H4EWUkL7LtE1RxaR
+	VQzr2mPDjWgDXWDVmLpglP5LEaOneaIYAIt9n3CYLwqqdSfd/VY5u5dZ/3Ud63qncgyF26QmLrY47
+	NoiiA+b8ARAJl0GVWA/V/Jl7d2+cg4HiyMbeR6ESp4CHut8Zc9EQ4cN0JGALDEsglWVS7/qWqz+XQ
+	r4Rbgpmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGSy3-0006Qz-1E; Fri, 04 Oct 2019 19:10:19 +0000
-Received: from mo6-p02-ob.smtp.rzone.de ([2a01:238:20a:202:5302::12])
+	id 1iGSy6-0006T4-8c; Fri, 04 Oct 2019 19:10:22 +0000
+Received: from mo6-p02-ob.smtp.rzone.de ([2a01:238:20a:202:5302::9])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGSxk-0004zn-Ia
- for linux-mediatek@lists.infradead.org; Fri, 04 Oct 2019 19:10:03 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1570216193;
+ id 1iGSxk-0004zo-Ib
+ for linux-mediatek@lists.infradead.org; Fri, 04 Oct 2019 19:10:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1570216194;
  s=strato-dkim-0002; d=fpond.eu;
- h=Message-Id:Date:Subject:Cc:To:From:X-RZG-CLASS-ID:X-RZG-AUTH:From:
- Subject:Sender;
- bh=SjiSGCIWBrQ4el6i3TeHk1y7oyyLScjPosF/2NTani8=;
- b=ivIttvKqfCiDcwA4z15Vmmpcqg5EMNgSvZ5XCSQJkdsOLsmiPD2qqof2YHDQxYbRwV
- djnx0vNhCK4v8NV0Z3HO/D0/klePU2dIAeH1rAPx4q824owD/RBR7qYXhjo+QIpqdP2w
- OmSX0G5EvT3NHXSz8RHA/jGd/1wkZFNb370tv5n4Ex2kLmW2OFwbpJ1dKbsJLEkkAHit
- NdpN1egRlL74hxsaioNKnveym7GOzLgeaqnXk57DgJK7d+btmD830jeZBhOVcOUsHAps
- otjx2+qWJIE0dq7G9IPTxgvHNg79Iv2WFDb/Bui8xdS80B9x6/YkaGySb3XQgNSTsnZo
- Guog==
+ h=References:In-Reply-To:Message-Id:Date:Subject:Cc:To:From:
+ X-RZG-CLASS-ID:X-RZG-AUTH:From:Subject:Sender;
+ bh=e7Uk4dL2nxqLZgp4qDJcGqjX0Y1/EQyvkzzozndC2zk=;
+ b=RuifWsOiAmlegWR5GyRAe9JqoXdhgsZylfY7Kj8n7VreN2DPSR2mG+a17+0MmNPUkl
+ wZyPB4UOx2/tdXWpNqfft1qa2mwJLtlS69UXOtrDRWCMXwfNHvmCLq4V+le5NRHhASmc
+ KBi/iZIVDJxEllTtTw2jx9GvajV+uf3ID8qBaTiLRuf/32HJhSl7BAIXFoQrj0oCFoxg
+ T/sBA3x0GqR0gJ3LPqzvMStXPfBQgilL+B9Rs+dYHAYHQ+KUsq0iktrBmtxPsIfddYLb
+ MOjCjwgbIUFuCRfrZrfwf9VE9IOucJpetOneCOkvwvICwdj3eF9AjXS3LJwrkTPXuySq
+ Vqzg==
 X-RZG-AUTH: ":OWANVUa4dPFUgKR/3dpvnYP0Np73dmm4I5W0/AvA67Ot4fvR82tdd3x2KJk="
 X-RZG-CLASS-ID: mo00
 Received: from groucho.site by smtp.strato.de (RZmta 44.28.0 DYNA|AUTH)
- with ESMTPSA id i07086v94J9CcdX
+ with ESMTPSA id i07086v94J9EcdY
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA (curve secp521r1 with 521 ECDH
  bits, eq. 15360 bits RSA)) (Client did not present a certificate);
- Fri, 4 Oct 2019 21:09:12 +0200 (CEST)
+ Fri, 4 Oct 2019 21:09:14 +0200 (CEST)
 From: Ulrich Hecht <uli@fpond.eu>
 To: linux-mediatek@lists.infradead.org, dri-devel@lists.freedesktop.org,
  jitao.shi@mediatek.com
-Subject: [PATCH v19 0/2] PS8640 MIPI-to-eDP bridge
-Date: Fri,  4 Oct 2019 21:09:06 +0200
-Message-Id: <1570216148-22802-1-git-send-email-uli@fpond.eu>
+Subject: [PATCH v19 1/2] Documentation: bridge: Add documentation for ps8640
+ DT properties
+Date: Fri,  4 Oct 2019 21:09:07 +0200
+Message-Id: <1570216148-22802-2-git-send-email-uli@fpond.eu>
 X-Mailer: git-send-email 2.7.4
+In-Reply-To: <1570216148-22802-1-git-send-email-uli@fpond.eu>
+References: <1570216148-22802-1-git-send-email-uli@fpond.eu>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191004_121001_227105_15BC64AA 
-X-CRM114-Status: UNSURE (   7.86  )
+X-CRM114-CacheID: sfid-20191004_121001_231977_CD961D8E 
+X-CRM114-Status: UNSURE (   8.67  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -58,7 +62,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [2a01:238:20a:202:5302:0:0:12 listed in]
+ low trust [2a01:238:20a:202:5302:0:0:9 listed in]
  [list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
@@ -94,38 +98,86 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi!
+From: Jitao Shi <jitao.shi@mediatek.com>
 
-This driver seems to have fallen by the wayside because, while otherwise
-fine, it has a firmware update feature that requires a blob that is not in
-the linux-firmware repo.[1]
+Add documentation for DT properties supported by
+ps8640 DSI-eDP converter.
 
-Whatever the cause for that may be, the update code is entirely optional
-(my chip works fine with whatever firmware is currently installed), so I
-have removed it in order to get this merged after all. I have also
-followed various trivial API changes that have piled up since 2016; see
-the individual patches for details.
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Acked-by: Rob Herring <robh@kernel.org>
+Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
+Signed-off-by: Ulrich Hecht <uli@fpond.eu>
+---
 
-I'm using this driver on an Acer Chromebook R13 ("Elm"); see
-https://github.com/uli/kernel/tree/elm-working-5.4.
+Changes since v18:
+ - No change.
 
-CU
-Uli
+Changes since v17:
+ - No change.
 
-[1] https://patchwork.kernel.org/patch/9427543/
+Changes since v16:
+ - No change.
 
-Jitao Shi (2):
-  Documentation: bridge: Add documentation for ps8640 DT properties
-  drm/bridge: Add I2C based driver for ps8640 bridge
+Changes since v15:
+ - No change.
 
- .../devicetree/bindings/display/bridge/ps8640.txt  |  44 ++
- drivers/gpu/drm/bridge/Kconfig                     |  12 +
- drivers/gpu/drm/bridge/Makefile                    |   1 +
- drivers/gpu/drm/bridge/parade-ps8640.c             | 672 +++++++++++++++++++++
- 4 files changed, 729 insertions(+)
+Changes since v14:
+ - change mode-sel-gpios as optional.
+
+ .../devicetree/bindings/display/bridge/ps8640.txt  | 44 ++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
  create mode 100644 Documentation/devicetree/bindings/display/bridge/ps8640.txt
- create mode 100644 drivers/gpu/drm/bridge/parade-ps8640.c
 
+diff --git a/Documentation/devicetree/bindings/display/bridge/ps8640.txt b/Documentation/devicetree/bindings/display/bridge/ps8640.txt
+new file mode 100644
+index 0000000..7b13f92
+--- /dev/null
++++ b/Documentation/devicetree/bindings/display/bridge/ps8640.txt
+@@ -0,0 +1,44 @@
++ps8640-bridge bindings
++
++Required properties:
++	- compatible: "parade,ps8640"
++	- reg: first page address of the bridge.
++	- sleep-gpios: OF device-tree gpio specification for PD pin.
++	- reset-gpios: OF device-tree gpio specification for reset pin.
++	- vdd12-supply: OF device-tree regulator specification for 1.2V power.
++	- vdd33-supply: OF device-tree regulator specification for 3.3V power.
++	- ports: The device node can contain video interface port nodes per
++		 the video-interfaces bind[1]. For port@0,set the reg = <0> as
++		 ps8640 dsi in and port@1,set the reg = <1> as ps8640 eDP out.
++
++Optional properties:
++	- mode-sel-gpios: OF device-tree gpio specification for mode-sel pin.
++[1]: Documentation/devicetree/bindings/media/video-interfaces.txt
++
++Example:
++	edp-bridge@18 {
++		compatible = "parade,ps8640";
++		reg = <0x18>;
++		sleep-gpios = <&pio 116 GPIO_ACTIVE_LOW>;
++		reset-gpios = <&pio 115 GPIO_ACTIVE_LOW>;
++		mode-sel-gpios = <&pio 92 GPIO_ACTIVE_HIGH>;
++		vdd12-supply = <&ps8640_fixed_1v2>;
++		vdd33-supply = <&mt6397_vgp2_reg>;
++
++		ports {
++			#address-cells = <1>;
++			#size-cells = <0>;
++			port@0 {
++				reg = <0>;
++				ps8640_in: endpoint {
++					remote-endpoint = <&dsi0_out>;
++				};
++			};
++			port@1 {
++				reg = <1>;
++				ps8640_out: endpoint {
++					remote-endpoint = <&panel_in>;
++				};
++			};
++		};
++	};
 -- 
 2.7.4
 
