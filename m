@@ -2,68 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 749B2CC8B6
-	for <lists+linux-mediatek@lfdr.de>; Sat,  5 Oct 2019 10:16:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C0E0CC993
+	for <lists+linux-mediatek@lfdr.de>; Sat,  5 Oct 2019 13:17:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fEq02US9zBLpFxDjNFJ86W9IFtY1hE6rR1kayK8+LjY=; b=Al2zwVAB93uRDY
-	Hf/44U9KlUOG3zkN+Il0gKpgBa9t90Q5Zj8fBqdF2ynt7wI2r9Wli1uXe2VwPek4v/Ck/80o0xwNN
-	SncmRtWp5PtLenXt8bhNHJV4uGKNzX3g1GdyfOs04DyBIXD09xae0DSO9ohfng3Y0IzcYT3g15cNi
-	muqREqGNE/uumUPEmIVAI0NLpgC965wtCLzcnnqbCwSHH6rPNLMIk5NETMPNwdviziUJFqfWDqiI4
-	H4XUWyBURuIJ3narYQE8GkmjqoJQXKhrl/+y2LOKxiVepFvceXoh6KItAhirRKSMNJaYByqg9ZtZY
-	uAexw774H13aSHCL68rw==;
+	List-Owner; bh=ZR2P3tlqonpr1ofKtjIKRm12dJpYO7xArbKtmZZBPqE=; b=WxVMN8YL6Q3mxx
+	6Db8n07VJXF6oR5IWhSk0oRpUPgKa/Q5nYsusyS7swEMETTyYtfZPizfwfX1uJ+1LCncqqSSQILvL
+	n2G3dtBNhMnh0fefVUuJ0HSu1lw+3WK+EdYQ0c+skNqYxjNLGec+avOmcN9FhJU155ug6SYYEkJIQ
+	SrIulbILELhlcGkyxJTlWw6gX+aIzZZ6sETr0zuPIc2ZMKgWt4g+PNDH3DyY9rnutdYfnf1V+sxpV
+	tjyJDkc/1abXrAs/VOSmJhytVLMg5N0CmY4fCqqUNK+4vDA8aKV0ySahm3AawjO8Z+TXrHZSoUqZX
+	dQ2DsSxxDp39VY3Mpqdw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGfEk-0002FZ-Ri; Sat, 05 Oct 2019 08:16:22 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1iGi3f-0000RJ-Vq; Sat, 05 Oct 2019 11:17:07 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGfEd-0002Er-R6; Sat, 05 Oct 2019 08:16:21 +0000
-Received: by mail-wm1-x343.google.com with SMTP id 3so7890229wmi.3;
- Sat, 05 Oct 2019 01:16:12 -0700 (PDT)
+ id 1iGi3c-0000Qq-3X
+ for linux-mediatek@lists.infradead.org; Sat, 05 Oct 2019 11:17:06 +0000
+Received: by mail-wr1-x442.google.com with SMTP id y19so10034752wrd.3
+ for <linux-mediatek@lists.infradead.org>; Sat, 05 Oct 2019 04:17:02 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=39LDnboIaSJQmqNaHgUdiRmJtTpWu9zAqzCVqv+fnvE=;
- b=c2QbZPzKIAtwFNHqZfISsZPewW4VtyeB/eCwX44geuTZsWGYV5JfNvvsIMl/KshwR5
- +tHQ5GospbuPOjnsCi2rQ3VAYHO0J5ySLVED8u6DMWvDsLHNh2vyzs9tEg2YWQgwYobU
- BJ46Dd8REHOMOxaKPDblNliRI37NlPQ/JCXGqu52v5vQQE7ZsW0cTQsp6x0CywB5m3pK
- cW4weSijJBQXIC/08xWPNykxBYockdPzGywKSGLXTr0yIs9/8Tu6K7ruZPQ+LDF1nwhx
- b+TAANC+0eWbCzZI4iQ4ZDT7pF8JTcNhoKvRib6QiUv4wnJN0Ltl7GX3Geo3/LP/fpRq
- X59w==
+ bh=xqkxhDjllV6JJYsYV/GBUca8pgArG2Ixs62rP81L6y0=;
+ b=sBnn6/gz+c4ehKiVm0AxGhOvSh7fEqsqRONWyfcrsB0ZoXiLVAxs8f045pshEmITbP
+ TAW4aP5wDodsmaiSjYNkc3dqoOe4RHXeipwg88DfPHHsNGILOHZ/3FiXRXHPLcoej0/2
+ 6CgCWp3N/zIkUf9MNl9p+Yfn9M30xP6dPbbOWjFlG9p9CSWuaDsQf8h6T54CkhuNnjX7
+ rd4BgJmpwbAIb1Sg2J5t/OGVOMuA2A4XP+0QbEcMn7CeRDvR/Pr2wP72ZKfnj6+QX5ti
+ V3SeQjFmUZDk0C9PqaepIIkBIqw98jNn04DaG6viFQuHwmh0qHv84gQ0OwP7GnhiHHVW
+ UZKA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=39LDnboIaSJQmqNaHgUdiRmJtTpWu9zAqzCVqv+fnvE=;
- b=m97DmMGIiZSQcOAxMPgZ/tNHvm92Rq7cIWO/uq5k+VPC7a9yBUEIW1V97bLnPov7fE
- WHBb7PQuoFz1wqSLuFjWhqR+QO/qBkVR2+1I3R7k1gEWTKmkKpDodratNJRq3RuAPC/V
- r/wIcKd3naTIOtTrdsOqvffKTF6OInhPGekXkxO0uISz1DDLEHD51zbXMEC/Pj/Q7vxq
- bLFF1p6Vz6qFNzGOS11Kwy8GaRYpc7/eYwFmypTUjRqQK0LBvnJ5u1nB1/M/6I8I0XYL
- oyVV9nsIgU/SAoA2hlOiJdKE441OldtfG5yfHzJbRiSD6yP2sTFrdw3IbGBIsrPRqbDp
- Bakg==
-X-Gm-Message-State: APjAAAWL0gBAIQzdlGQ13X6vxBYddVz1CuJZeRCVceoGpGOrHvi5NSMT
- ah6avUCTEDxI+j2ij4KP17U=
-X-Google-Smtp-Source: APXvYqwga/bYHZS4B+Q/nFwUQDppLSBnbFg/WfJuIJiKnQtjOoJqgOj0iWXUcBlv3ul/Ex9b+aJf+A==
-X-Received: by 2002:a1c:bcd6:: with SMTP id
- m205mr13028055wmf.129.1570263371051; 
- Sat, 05 Oct 2019 01:16:11 -0700 (PDT)
+ bh=xqkxhDjllV6JJYsYV/GBUca8pgArG2Ixs62rP81L6y0=;
+ b=T6ppySn4X7pqJ6Yl7nuFF5I/q+pW0iUkomXplVHlurVdwIC+w1i7Av7r/Aw7brlItJ
+ FKQtMOBb+2iO+FL3oRXZ6kEhFRDdl5n8tcS+q1j/mEGj7hEQtKWidsJ8w+CVTOhktiSF
+ t9Ekk3iF+ERZG1QBshEcPQD/CDSTRLWCyHzxffKahYcI4OWAsENhoHUblXUXZ0tcS/FH
+ L4tXPxJf7cgxHP4SbbD8yWDM2HiLDc1Jr9L/E5rxn8Wr+sl5hr1Pvsoyq6wS+f7dNKec
+ sEFlnUsGYjoXmeST7svLDHT0Gf83ff7bvPCts6R390FLXyvBDgcSO4PHan+F3E3vEjdL
+ ITWw==
+X-Gm-Message-State: APjAAAWZOaHxEfSsXWQc2o8fFlSykGxypxtZebOXCM3vly/oqbmb/A0u
+ DqEsYjKtiVuJA+sbPgji+iM=
+X-Google-Smtp-Source: APXvYqwITvfNBOvh57P5ILuo0as6pDiC3QO1jJsOaeslq7TnNBIqpc0/wi+acNzJAsEdu5PnJLgYxQ==
+X-Received: by 2002:adf:904f:: with SMTP id h73mr15241060wrh.128.1570274220845; 
+ Sat, 05 Oct 2019 04:17:00 -0700 (PDT)
 Received: from ziggy.stardust ([95.169.226.6])
- by smtp.gmail.com with ESMTPSA id a13sm19735179wrf.73.2019.10.05.01.16.09
+ by smtp.gmail.com with ESMTPSA id z13sm6192617wrq.51.2019.10.05.04.16.58
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Sat, 05 Oct 2019 01:16:09 -0700 (PDT)
-Subject: Re: Aw: Re: [PATCH] mfd: mt6397: fix probe after changing mt6397-core
-To: Frank Wunderlich <frank-w@public-files.de>,
- Lee Jones <lee.jones@linaro.org>,
- Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-References: <20191003185323.24646-1-frank-w@public-files.de>
- <20191004152001.GS18429@dell>
- <trinity-c33ab112-57a5-47d6-80e5-13c96442e302-1570204319219@3c-app-gmx-bap10>
+ Sat, 05 Oct 2019 04:16:59 -0700 (PDT)
+Subject: Re: [PATCH v19 0/2] PS8640 MIPI-to-eDP bridge
+To: Ulrich Hecht <uli@fpond.eu>, linux-mediatek@lists.infradead.org,
+ dri-devel@lists.freedesktop.org, jitao.shi@mediatek.com
+References: <1570216148-22802-1-git-send-email-uli@fpond.eu>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
@@ -159,33 +156,33 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  pac005PuhxCWkKTJz3gCmznnoat4GCnL5gy/m0Qk45l4PFqwWXVLo9AQg2Kp3mlIFZ6fsEKI
  AN5hxlbNvNb9V2Zo5bFZjPWPFTxOteM0omUAS+QopwU0yPLLGJVf2iCmItHcUXI+r2JwH1CJ
  jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <3dcb030d-006e-7518-2679-48726d0c4e0e@gmail.com>
-Date: Sat, 5 Oct 2019 10:16:08 +0200
+Message-ID: <4df984a5-a917-753e-5870-7453f3d5438e@gmail.com>
+Date: Sat, 5 Oct 2019 13:16:56 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <trinity-c33ab112-57a5-47d6-80e5-13c96442e302-1570204319219@3c-app-gmx-bap10>
+In-Reply-To: <1570216148-22802-1-git-send-email-uli@fpond.eu>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191005_011615_907790_06C66E1F 
-X-CRM114-Status: GOOD (  11.78  )
+X-CRM114-CacheID: sfid-20191005_041704_174065_F45A860A 
+X-CRM114-Status: GOOD (  19.88  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (matthias.bgg[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -199,34 +196,68 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, stonea168@163.com, ajaykumar.rs@samsung.com,
+ architt@codeaurora.org, vpalatin@chromium.org, cawa.cheng@mediatek.com,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
+ devicetree@vger.kernel.org, p.zabel@pengutronix.de, pawel.moll@arm.com,
+ ijc+devicetree@hellion.org.uk, inki.dae@samsung.com, robh+dt@kernel.org,
+ seanpaul@chromium.org, eddie.huang@mediatek.com, rahul.sharma@samsung.com,
+ kernel@pengutronix.de, galak@codeaurora.org, enric.balletbo@collabora.com,
+ andy.yan@rock-chips.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+Hi Uli,
 
+On 04/10/2019 21:09, Ulrich Hecht wrote:
+> Hi!
+> 
+> This driver seems to have fallen by the wayside because, while otherwise
+> fine, it has a firmware update feature that requires a blob that is not in
+> the linux-firmware repo.[1]
+> 
+> Whatever the cause for that may be, the update code is entirely optional
+> (my chip works fine with whatever firmware is currently installed), so I
+> have removed it in order to get this merged after all. I have also
+> followed various trivial API changes that have piled up since 2016; see
+> the individual patches for details.
+> 
+> I'm using this driver on an Acer Chromebook R13 ("Elm"); see
+> https://github.com/uli/kernel/tree/elm-working-5.4.
+> 
 
-On 04/10/2019 17:51, Frank Wunderlich wrote:
-> This Question goes to Hsin-Hsiung Wang ;)
-> 
-> i only took his code (and splitted the 3rd part) to get mt6323 working again without reverting the other 2 Patches
->> regards Frank
-> 
-> 
->> Gesendet: Freitag, 04. Oktober 2019 um 17:20 Uhr
->> Von: "Lee Jones" <lee.jones@linaro.org>
-> 
->> Will there be other devices which have a !0 CID shift?
-> 
+Thanks for your effort to get things upstream.
+I just tried your branch on my R13. I had to do a trivial config change I had to
+do, as I don't have and care about the bluetooth FW right now.
+But after that my screen keeps black. I was able to build and boot
+elm-working-5.3 and elm-working-5.2.
 
-Frank, a quick look at the series would have given you the answer.
-@Lee: yes, this change is the preparation to support MT6358:
-https://patchwork.kernel.org/patch/11110515/
+Unfortunatley I don't have a serial console on the Chromebook, so it's difficult
+to find out where it hangs. Can you please double check if your new
+elm-working-5.4 actually really works?
 
-Regards,
+Thanks,
 Matthias
+
+> CU
+> Uli
+> 
+> [1] https://patchwork.kernel.org/patch/9427543/
+> 
+> Jitao Shi (2):
+>   Documentation: bridge: Add documentation for ps8640 DT properties
+>   drm/bridge: Add I2C based driver for ps8640 bridge
+> 
+>  .../devicetree/bindings/display/bridge/ps8640.txt  |  44 ++
+>  drivers/gpu/drm/bridge/Kconfig                     |  12 +
+>  drivers/gpu/drm/bridge/Makefile                    |   1 +
+>  drivers/gpu/drm/bridge/parade-ps8640.c             | 672 +++++++++++++++++++++
+>  4 files changed, 729 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/display/bridge/ps8640.txt
+>  create mode 100644 drivers/gpu/drm/bridge/parade-ps8640.c
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
