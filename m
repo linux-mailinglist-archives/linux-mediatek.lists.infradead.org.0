@@ -2,189 +2,101 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3C0E0CC993
-	for <lists+linux-mediatek@lfdr.de>; Sat,  5 Oct 2019 13:17:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81C3BCCA9B
+	for <lists+linux-mediatek@lfdr.de>; Sat,  5 Oct 2019 16:46:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZR2P3tlqonpr1ofKtjIKRm12dJpYO7xArbKtmZZBPqE=; b=WxVMN8YL6Q3mxx
-	6Db8n07VJXF6oR5IWhSk0oRpUPgKa/Q5nYsusyS7swEMETTyYtfZPizfwfX1uJ+1LCncqqSSQILvL
-	n2G3dtBNhMnh0fefVUuJ0HSu1lw+3WK+EdYQ0c+skNqYxjNLGec+avOmcN9FhJU155ug6SYYEkJIQ
-	SrIulbILELhlcGkyxJTlWw6gX+aIzZZ6sETr0zuPIc2ZMKgWt4g+PNDH3DyY9rnutdYfnf1V+sxpV
-	tjyJDkc/1abXrAs/VOSmJhytVLMg5N0CmY4fCqqUNK+4vDA8aKV0ySahm3AawjO8Z+TXrHZSoUqZX
-	dQ2DsSxxDp39VY3Mpqdw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=sXFRbs3DsSgiRAK+fgEsTUFCkLFeaq+FQLdifWe3rdo=; b=Mog8MIsJeAxpFXBHS4fhJDbD1
+	Pj2z0qQCFlK7BHLEAZPp+1HBfju2reZ9otexo0JkGkrSl7+deRCvfYpnlpbm3XB9L0/ay79EzaFOv
+	z6Xp0v7xySnRnO3A+RebzCmhmejzV096whI1VcOCTcPHt9Ekgp5HcRRI9IJPAZByxDW/QFgbkPzP9
+	ede5MhNl2emRxcukVPcITaMOUX2GSCr0Y8wcrxfmPQ3RjfzR4bR3qWOM3lV9X/5VHVyRf3a3F0tZ5
+	ZzNqPFqQ+8/sVCigJnw4xp/wq+Q/bKZwU1vLQ6ZF4HHhkMgZHFa9ApUVv71Coc3PCXP6p5zJzn7wp
+	mHI/V7QIw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGi3f-0000RJ-Vq; Sat, 05 Oct 2019 11:17:07 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1iGlKW-0006cP-VA; Sat, 05 Oct 2019 14:46:44 +0000
+Received: from mail-pl1-x643.google.com ([2607:f8b0:4864:20::643])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGi3c-0000Qq-3X
- for linux-mediatek@lists.infradead.org; Sat, 05 Oct 2019 11:17:06 +0000
-Received: by mail-wr1-x442.google.com with SMTP id y19so10034752wrd.3
- for <linux-mediatek@lists.infradead.org>; Sat, 05 Oct 2019 04:17:02 -0700 (PDT)
+ id 1iGlKN-0006Uj-6K; Sat, 05 Oct 2019 14:46:36 +0000
+Received: by mail-pl1-x643.google.com with SMTP id s17so4550041plp.6;
+ Sat, 05 Oct 2019 07:46:34 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:openpgp:autocrypt:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=xqkxhDjllV6JJYsYV/GBUca8pgArG2Ixs62rP81L6y0=;
- b=sBnn6/gz+c4ehKiVm0AxGhOvSh7fEqsqRONWyfcrsB0ZoXiLVAxs8f045pshEmITbP
- TAW4aP5wDodsmaiSjYNkc3dqoOe4RHXeipwg88DfPHHsNGILOHZ/3FiXRXHPLcoej0/2
- 6CgCWp3N/zIkUf9MNl9p+Yfn9M30xP6dPbbOWjFlG9p9CSWuaDsQf8h6T54CkhuNnjX7
- rd4BgJmpwbAIb1Sg2J5t/OGVOMuA2A4XP+0QbEcMn7CeRDvR/Pr2wP72ZKfnj6+QX5ti
- V3SeQjFmUZDk0C9PqaepIIkBIqw98jNn04DaG6viFQuHwmh0qHv84gQ0OwP7GnhiHHVW
- UZKA==
+ h=sender:subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=2GBi70vECOwhvce3BLHU/TuI7brFfv83/feCAkJLZ/c=;
+ b=UKtEXJel0u05+vlSu3xZpzDAWFVP3LWyjOaJSTpUd/sc07UrcEjRjQz3K1Hrp47pnq
+ IgOc3c7udWwb7ObmkWeyotAPTVVkWJGlG+DHJilRYLdaCXmAzdHVLAU2M2XPuczpt+hB
+ S9x0fC9QxsnYkh0BWetanvmy4YOtfm24DnwS4g72/Qujah1WSvAMvuU/yqk0Y3Pgi0wi
+ YBaKjRTKWwcsVo2m4G9gR6rzYsIO16hP0S+Uv3TBH1UGfDkYx6bSiYrFEN3H5HmSIOkd
+ NlW90npX6MThEl7ilkxkubw+LMkPCJkC2sbC12WB87SUErtbt2C9kY3rgZP0dlihY/pP
+ Bymg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
- :message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=xqkxhDjllV6JJYsYV/GBUca8pgArG2Ixs62rP81L6y0=;
- b=T6ppySn4X7pqJ6Yl7nuFF5I/q+pW0iUkomXplVHlurVdwIC+w1i7Av7r/Aw7brlItJ
- FKQtMOBb+2iO+FL3oRXZ6kEhFRDdl5n8tcS+q1j/mEGj7hEQtKWidsJ8w+CVTOhktiSF
- t9Ekk3iF+ERZG1QBshEcPQD/CDSTRLWCyHzxffKahYcI4OWAsENhoHUblXUXZ0tcS/FH
- L4tXPxJf7cgxHP4SbbD8yWDM2HiLDc1Jr9L/E5rxn8Wr+sl5hr1Pvsoyq6wS+f7dNKec
- sEFlnUsGYjoXmeST7svLDHT0Gf83ff7bvPCts6R390FLXyvBDgcSO4PHan+F3E3vEjdL
- ITWw==
-X-Gm-Message-State: APjAAAWZOaHxEfSsXWQc2o8fFlSykGxypxtZebOXCM3vly/oqbmb/A0u
- DqEsYjKtiVuJA+sbPgji+iM=
-X-Google-Smtp-Source: APXvYqwITvfNBOvh57P5ILuo0as6pDiC3QO1jJsOaeslq7TnNBIqpc0/wi+acNzJAsEdu5PnJLgYxQ==
-X-Received: by 2002:adf:904f:: with SMTP id h73mr15241060wrh.128.1570274220845; 
- Sat, 05 Oct 2019 04:17:00 -0700 (PDT)
-Received: from ziggy.stardust ([95.169.226.6])
- by smtp.gmail.com with ESMTPSA id z13sm6192617wrq.51.2019.10.05.04.16.58
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Sat, 05 Oct 2019 04:16:59 -0700 (PDT)
-Subject: Re: [PATCH v19 0/2] PS8640 MIPI-to-eDP bridge
-To: Ulrich Hecht <uli@fpond.eu>, linux-mediatek@lists.infradead.org,
- dri-devel@lists.freedesktop.org, jitao.shi@mediatek.com
-References: <1570216148-22802-1-git-send-email-uli@fpond.eu>
-From: Matthias Brugger <matthias.bgg@gmail.com>
-Openpgp: preference=signencrypt
-Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
- 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
- jrHWeQEI2ucSKsNa8FllDmG/fQ==
-Message-ID: <4df984a5-a917-753e-5870-7453f3d5438e@gmail.com>
-Date: Sat, 5 Oct 2019 13:16:56 +0200
+ h=x-gm-message-state:sender:subject:to:cc:references:from:message-id
+ :date:user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=2GBi70vECOwhvce3BLHU/TuI7brFfv83/feCAkJLZ/c=;
+ b=rXDwJhcp6RYwQ3ufIG5F1x9CoCTUP6I66fYc1g17DDmIhFstKNGgWH5fEKKsrXH5Yi
+ cQENX1st8QxJC9XGeZJ8SeUcwcK+quDBXw4Ti6VUaKP6xv4lguZ5IBIFniMHckVCmw1m
+ 1Di1Ty+pZ5kwJy6nqqV9ulv9S7EV4qzLGTlb+KpZ0gVmjOQu4FdUJOiwaNLlzAYZOciY
+ yhg8DPoofNsIMEzTCvDhiwTdkdxfaowR/A3Hk+RFox/e8vu36o703getK2RbHvoxkiHk
+ dgyC3m07LNtEBIYxXL5JlwaCe4iEzYzg4jeZeIQWcZMGbCNsd/WC3283lZG+9BURH19q
+ nqQQ==
+X-Gm-Message-State: APjAAAVOTxh+PmH4rSSJIu4rkA0cPpS3XY6GUmFUIgCUxovpKo5CslwZ
+ zkyw+jxgZFdIn7dSYLvnTiw=
+X-Google-Smtp-Source: APXvYqy5nnJWpToIzpmPi2+B9C1Dqm2j3J7M5hxdQH8GNYd8wNm8nJ3WWc4HSSeAVwLdt3kRX8x5zg==
+X-Received: by 2002:a17:902:ff12:: with SMTP id
+ f18mr21218570plj.266.1570286793693; 
+ Sat, 05 Oct 2019 07:46:33 -0700 (PDT)
+Received: from server.roeck-us.net ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
+ by smtp.gmail.com with ESMTPSA id
+ 16sm9934352pfi.55.2019.10.05.07.46.31
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Sat, 05 Oct 2019 07:46:32 -0700 (PDT)
+Subject: Re: [PATCH v2 2/4] watchdog: mtk_wdt: mt8183: Add reset controller
+To: Yingjoe Chen <yingjoe.chen@mediatek.com>
+References: <1569580317-21181-1-git-send-email-jiaxin.yu@mediatek.com>
+ <1569580317-21181-3-git-send-email-jiaxin.yu@mediatek.com>
+ <a0b2e9a3-ca77-814f-b7bd-edc69f00fce2@roeck-us.net>
+ <1570255179.29077.24.camel@mtksdaap41>
+From: Guenter Roeck <linux@roeck-us.net>
+Message-ID: <70b77fb3-7186-734d-3415-64acb30bab8f@roeck-us.net>
+Date: Sat, 5 Oct 2019 07:46:30 -0700
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <1570216148-22802-1-git-send-email-uli@fpond.eu>
+In-Reply-To: <1570255179.29077.24.camel@mtksdaap41>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191005_041704_174065_F45A860A 
-X-CRM114-Status: GOOD (  19.88  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191005_074635_255577_4A47B82D 
+X-CRM114-Status: GOOD (  17.47  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:643 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (groeck7[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (matthias.bgg[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ provider (groeck7[at]gmail.com)
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -196,68 +108,101 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, stonea168@163.com, ajaykumar.rs@samsung.com,
- architt@codeaurora.org, vpalatin@chromium.org, cawa.cheng@mediatek.com,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
- devicetree@vger.kernel.org, p.zabel@pengutronix.de, pawel.moll@arm.com,
- ijc+devicetree@hellion.org.uk, inki.dae@samsung.com, robh+dt@kernel.org,
- seanpaul@chromium.org, eddie.huang@mediatek.com, rahul.sharma@samsung.com,
- kernel@pengutronix.de, galak@codeaurora.org, enric.balletbo@collabora.com,
- andy.yan@rock-chips.com
-Content-Type: text/plain; charset="us-ascii"
+Cc: mark.rutland@arm.com, alsa-devel@alsa-project.org, broonie@kernel.org,
+ yong.liang@mediatek.com, Jiaxin Yu <jiaxin.yu@mediatek.com>,
+ lgirdwood@gmail.com, tzungbi@google.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ eason.yen@mediatek.com, perex@perex.cz, wim@linux-watchdog.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Uli,
-
-On 04/10/2019 21:09, Ulrich Hecht wrote:
-> Hi!
+On 10/4/19 10:59 PM, Yingjoe Chen wrote:
+> On Thu, 2019-10-03 at 06:49 -0700, Guenter Roeck wrote:
+>> On 9/27/19 3:31 AM, Jiaxin Yu wrote:
 > 
-> This driver seems to have fallen by the wayside because, while otherwise
-> fine, it has a firmware update feature that requires a blob that is not in
-> the linux-firmware repo.[1]
+> <snip..>
 > 
-> Whatever the cause for that may be, the update code is entirely optional
-> (my chip works fine with whatever firmware is currently installed), so I
-> have removed it in order to get this merged after all. I have also
-> followed various trivial API changes that have piled up since 2016; see
-> the individual patches for details.
 > 
-> I'm using this driver on an Acer Chromebook R13 ("Elm"); see
-> https://github.com/uli/kernel/tree/elm-working-5.4.
+>>> +static int toprgu_reset_assert(struct reset_controller_dev *rcdev,
+>>> +			       unsigned long id)
+>>> +{
+>>> +	unsigned int tmp;
+>>> +	unsigned long flags;
+>>> +	struct toprgu_reset *data = container_of(rcdev,
+>>> +				struct toprgu_reset, rcdev);
+>>> +
+>>> +	spin_lock_irqsave(&data->lock, flags);
+>>> +
+>>> +	tmp = __raw_readl(data->toprgu_swrst_base + data->regofs);
+>>> +	tmp |= BIT(id);
+>>> +	tmp |= WDT_SWSYS_RST_KEY;
+>>> +	writel(tmp, data->toprgu_swrst_base + data->regofs);
+>>> +
+>>> +	spin_unlock_irqrestore(&data->lock, flags);
+>>> +
+>>> +	return 0;
+>>> +}
+>>> +
+>>> +static int toprgu_reset_deassert(struct reset_controller_dev *rcdev,
+>>> +				 unsigned long id)
+>>> +{
+>>> +	unsigned int tmp;
+>>> +	unsigned long flags;
+>>> +	struct toprgu_reset *data = container_of(rcdev,
+>>> +					struct toprgu_reset, rcdev);
+>>> +
+>>> +	spin_lock_irqsave(&data->lock, flags);
+>>> +
+>>> +	tmp = __raw_readl(data->toprgu_swrst_base + data->regofs);
+>>> +	tmp &= ~BIT(id);
+>>> +	tmp |= WDT_SWSYS_RST_KEY;
+>>> +	writel(tmp, data->toprgu_swrst_base + data->regofs);
+>>> +
+>>> +	spin_unlock_irqrestore(&data->lock, flags);
+>>> +
+>>> +	return 0;
+>>> +}
+>>> +
+>>> +static int toprgu_reset(struct reset_controller_dev *rcdev,
+>>> +			unsigned long id)
+>>> +{
+>>> +	int ret;
+>>> +
+>>> +	ret = toprgu_reset_assert(rcdev, id);
+>>> +	if (ret)
+>>> +		return ret;
+>>> +
+>>> +	return toprgu_reset_deassert(rcdev, id);
+>>
+>> Unless there is additional synchronization elsewhere, parallel calls
+>> to the -> assert, and ->reset callbacks may result in the reset being
+>> deasserted while at least one caller (the one who called the ->assert
+>> function) believes that it is still asserted.
+>>
+>> [ ... and if there _is_ additional synchronization elsewhere, the
+>>     local spinlock would be unnecessary ]
+>>
 > 
-
-Thanks for your effort to get things upstream.
-I just tried your branch on my R13. I had to do a trivial config change I had to
-do, as I don't have and care about the bluetooth FW right now.
-But after that my screen keeps black. I was able to build and boot
-elm-working-5.3 and elm-working-5.2.
-
-Unfortunatley I don't have a serial console on the Chromebook, so it's difficult
-to find out where it hangs. Can you please double check if your new
-elm-working-5.4 actually really works?
+> I'm not sure if this count as additional synchronization, but you could
+> get exclusive control to the reset by calling
+> reset_control_get_exclusive so others won't try to reset the component
+> while you are using it.
+> 
+> In this case, you still need spinlock because other drivers might trying
+> to reset their components and they share same register.
+> 
+That isn't what I meant. I referred to synchronization in the reset
+controller core. AFAICS the reset controller core prevents parallel
+calls into the same reset controller driver using atomics. Unfortunately,
+it is not well defined if additional synchronization on driver level
+is needed - some drivers implement it, some drivers don't, and I don't
+find a documentation. Maybe Philip can provide guidance.
 
 Thanks,
-Matthias
-
-> CU
-> Uli
-> 
-> [1] https://patchwork.kernel.org/patch/9427543/
-> 
-> Jitao Shi (2):
->   Documentation: bridge: Add documentation for ps8640 DT properties
->   drm/bridge: Add I2C based driver for ps8640 bridge
-> 
->  .../devicetree/bindings/display/bridge/ps8640.txt  |  44 ++
->  drivers/gpu/drm/bridge/Kconfig                     |  12 +
->  drivers/gpu/drm/bridge/Makefile                    |   1 +
->  drivers/gpu/drm/bridge/parade-ps8640.c             | 672 +++++++++++++++++++++
->  4 files changed, 729 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/display/bridge/ps8640.txt
->  create mode 100644 drivers/gpu/drm/bridge/parade-ps8640.c
-> 
+Guenter
 
 _______________________________________________
 Linux-mediatek mailing list
