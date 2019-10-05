@@ -2,51 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 52DDCCC53A
-	for <lists+linux-mediatek@lfdr.de>; Fri,  4 Oct 2019 23:50:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 51E0ECC834
+	for <lists+linux-mediatek@lfdr.de>; Sat,  5 Oct 2019 07:51:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ztwTEoMkfaPej3OsZpy4OfHVp8QOrsmxXlV7mE26J/Y=; b=DVqhBKN0zQ+VfO
-	HAkoWQ3WvqS5t4O81iqldG6PWpp5sq6+hOYS+bGqwLc9nPSLBeaWpAeXzhsRhYqPUktzX2FBZni8n
-	DrgZu2oQOIJxZUeqbOrcsaNt3kDsIITfZNg6vOVaoGXlbnJx0P8s63dT6PRtxc2lxKmkl5M+62U4k
-	WCR4CMs7KxJvnnDOwIJPsDPhXu9/D7gvbweKrX7qJajRFFDo8PGRcs/bSB7N6fTp3CUCFGN1PVUad
-	Q1Neu7WiepvzTd99BotXuZkabkGZ6D4KcxR61qgxQy4yxhI0oKhdtdHqyWVZPYtdAzO07H4fZ4GmB
-	RKBfABqhW+rOA5XEIAjg==;
+	List-Owner; bh=pNC8FstF2dpglbBi8b/Pue//TRTdjCkVO3ZyVxCiVHw=; b=BTpzs1f6O3N1aL
+	u5tqwvPK9qEcIrOeGr1Hr1DfmQY/RScN5ZkTeFjWfk01HFsP0zzFdmFHzJmO1LUL+rsiVpyMgSdgf
+	99H23fc1lz8/obbfTvSiHP70VJaxVqXyKpA38avVzakxm+XeuP+kvwQfKqHtp7KwdOXNQjOWgr3Gy
+	Eyol5Y3TI5vT0jMrybg4kGOVLLKK8gpEpAvscdP6YWpQleNaS/c9vOT7Csa7Tz6plE6BFK9rDRLCo
+	zwIVWY8LtKe8pUJK1flsALVIQlj3x4405GXYn1imlJt//cDl29MmYU2V8gUIRINr32p7rhvl6Xs0r
+	97ohRR1xgby5/xZDv56w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGVT3-0004UZ-S3; Fri, 04 Oct 2019 21:50:29 +0000
-Received: from gloria.sntech.de ([185.11.138.130])
+	id 1iGcy6-0007iE-SA; Sat, 05 Oct 2019 05:51:02 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGVSs-0004Mq-Ny; Fri, 04 Oct 2019 21:50:20 +0000
-Received: from 94.112.246.102.static.b2b.upcbusiness.cz ([94.112.246.102]
- helo=phil.localnet)
- by gloria.sntech.de with esmtpsa (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
- (Exim 4.89) (envelope-from <heiko@sntech.de>)
- id 1iGVSP-0006tk-DS; Fri, 04 Oct 2019 23:49:49 +0200
-From: Heiko Stuebner <heiko@sntech.de>
-To: YueHaibing <yuehaibing@huawei.com>
-Subject: Re: [PATCH -next 09/15] thermal: rockchip: use
- devm_platform_ioremap_resource() to simplify code
-Date: Fri, 04 Oct 2019 23:49:47 +0200
-Message-ID: <6308452.QoXZFhLlpT@phil>
-In-Reply-To: <20190904122939.23780-10-yuehaibing@huawei.com>
-References: <20190904122939.23780-1-yuehaibing@huawei.com>
- <20190904122939.23780-10-yuehaibing@huawei.com>
+ id 1iGcxt-0007bt-NE; Sat, 05 Oct 2019 05:50:51 +0000
+X-UUID: 4f5de1dcfcb64893a77c6298e0330656-20191004
+X-UUID: 4f5de1dcfcb64893a77c6298e0330656-20191004
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <yingjoe.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1536278989; Fri, 04 Oct 2019 21:50:42 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 4 Oct 2019 22:50:39 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 5 Oct 2019 13:50:26 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Sat, 5 Oct 2019 13:50:26 +0800
+Message-ID: <1570254627.29077.15.camel@mtksdaap41>
+Subject: Re: [PATCH v2 2/4] watchdog: mtk_wdt: mt8183: Add reset controller
+From: Yingjoe Chen <yingjoe.chen@mediatek.com>
+To: Jiaxin Yu <jiaxin.yu@mediatek.com>
+Date: Sat, 5 Oct 2019 13:50:27 +0800
+In-Reply-To: <1569580317-21181-3-git-send-email-jiaxin.yu@mediatek.com>
+References: <1569580317-21181-1-git-send-email-jiaxin.yu@mediatek.com>
+ <1569580317-21181-3-git-send-email-jiaxin.yu@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191004_145018_931625_DE586394 
-X-CRM114-Status: GOOD (  13.74  )
+X-CRM114-CacheID: sfid-20191004_225049_763901_58088D21 
+X-CRM114-Status: GOOD (  21.04  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -58,63 +73,235 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mans@mansr.com, mmayer@broadcom.com, eric@anholt.net,
- miquel.raynal@bootlin.com, linux-stm32@st-md-mailman.stormreply.com,
- amit.kucheria@verdurent.com, f.fainelli@gmail.com, daniel.lezcano@linaro.org,
- phil@raspberrypi.org, linux-rockchip@lists.infradead.org, agross@kernel.org,
- bcm-kernel-feedback-list@broadcom.com, linux-arm-msm@vger.kernel.org,
- rui.zhang@intel.com, david.hernandezsanchez@st.com, alexandre.torgue@st.com,
- marc.w.gonzalez@free.fr, rjui@broadcom.com, edubezval@gmail.com,
- linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
- gregory.0xf0@gmail.com, matthias.bgg@gmail.com, horms+renesas@verge.net.au,
- talel@amazon.com, linux-arm-kernel@lists.infradead.org, sbranden@broadcom.com,
- wsa+renesas@sang-engineering.com, gregkh@linuxfoundation.org,
- linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org, wahrenst@gmx.net,
- mcoquelin.stm32@gmail.com, jun.nie@linaro.org, computersforpeace@gmail.com,
- shawnguo@kernel.org
+Cc: mark.rutland@arm.com, alsa-devel@alsa-project.org, yong.liang@mediatek.com,
+ robh+dt@kernel.org, lgirdwood@gmail.com, tzungbi@google.com,
+ broonie@kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, eason.yen@mediatek.com, perex@perex.cz,
+ wim@linux-watchdog.org, linux@roeck-us.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Am Mittwoch, 4. September 2019, 14:29:33 CEST schrieb YueHaibing:
-> Use devm_platform_ioremap_resource() to simplify the code a bit.
-> This is detected by coccinelle.
+On Fri, 2019-09-27 at 18:31 +0800, Jiaxin Yu wrote:
+> From: "yong.liang" <yong.liang@mediatek.com>
 > 
-> Reported-by: Hulk Robot <hulkci@huawei.com>
-> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+> Provide assert/deassert/reset API in watchdog driver.
+> Register reset controller for toprgu device in watchdog probe.
 
-Reviewed-by: Heiko Stuebner <heiko@sntech.de>
+I think we could improve this commit message so it is easier to
+understand what is provided by this patch. You could add something like
+this:
 
+Besides watchdog, MTK toprgu module also provide sub-system (eg, audio,
+camera, codec and connectivity) software reset functionality.
+
+> 
+> Signed-off-by: yong.liang <yong.liang@mediatek.com>
 > ---
->  drivers/thermal/rockchip_thermal.c | 4 +---
->  1 file changed, 1 insertion(+), 3 deletions(-)
+>  drivers/watchdog/Kconfig   |   1 +
+>  drivers/watchdog/mtk_wdt.c | 110 ++++++++++++++++++++++++++++++++++++-
+>  2 files changed, 110 insertions(+), 1 deletion(-)
 > 
-> diff --git a/drivers/thermal/rockchip_thermal.c b/drivers/thermal/rockchip_thermal.c
-> index 343c2f5..044e6eb 100644
-> --- a/drivers/thermal/rockchip_thermal.c
-> +++ b/drivers/thermal/rockchip_thermal.c
-> @@ -1219,7 +1219,6 @@ static int rockchip_thermal_probe(struct platform_device *pdev)
->  	struct device_node *np = pdev->dev.of_node;
->  	struct rockchip_thermal_data *thermal;
->  	const struct of_device_id *match;
-> -	struct resource *res;
->  	int irq;
->  	int i;
->  	int error;
-> @@ -1245,8 +1244,7 @@ static int rockchip_thermal_probe(struct platform_device *pdev)
->  	if (!thermal->chip)
->  		return -EINVAL;
+> diff --git a/drivers/watchdog/Kconfig b/drivers/watchdog/Kconfig
+> index 2e07caab9db2..629249fe5305 100644
+> --- a/drivers/watchdog/Kconfig
+> +++ b/drivers/watchdog/Kconfig
+> @@ -717,6 +717,7 @@ config MEDIATEK_WATCHDOG
+>  	tristate "Mediatek SoCs watchdog support"
+>  	depends on ARCH_MEDIATEK || COMPILE_TEST
+>  	select WATCHDOG_CORE
+> +	select RESET_CONTROLLER
+>  	help
+>  	  Say Y here to include support for the watchdog timer
+>  	  in Mediatek SoCs.
+> diff --git a/drivers/watchdog/mtk_wdt.c b/drivers/watchdog/mtk_wdt.c
+> index 9c3d0033260d..660fb0e48d8e 100644
+> --- a/drivers/watchdog/mtk_wdt.c
+> +++ b/drivers/watchdog/mtk_wdt.c
+> @@ -20,6 +20,10 @@
+>  #include <linux/types.h>
+>  #include <linux/watchdog.h>
+>  #include <linux/delay.h>
+> +#include <linux/reset-controller.h>
+> +#include <linux/slab.h>
+> +#include <linux/reset.h>
+> +#include <linux/of_device.h>
+
+sorting please.
+
 >  
-> -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> -	thermal->regs = devm_ioremap_resource(&pdev->dev, res);
-> +	thermal->regs = devm_platform_ioremap_resource(pdev, 0);
->  	if (IS_ERR(thermal->regs))
->  		return PTR_ERR(thermal->regs);
+>  #define WDT_MAX_TIMEOUT		31
+>  #define WDT_MIN_TIMEOUT		1
+> @@ -44,17 +48,113 @@
+>  #define WDT_SWRST		0x14
+>  #define WDT_SWRST_KEY		0x1209
 >  
-> 
+> +#define WDT_SWSYSRST		0x18U
+> +#define WDT_SWSYS_RST_KEY	0x88000000
+> +
+>  #define DRV_NAME		"mtk-wdt"
+>  #define DRV_VERSION		"1.0"
+>  
+>  static bool nowayout = WATCHDOG_NOWAYOUT;
+>  static unsigned int timeout;
+>  
+> +struct toprgu_reset {
+> +	spinlock_t lock; /* Protects reset_controller access */
+> +	void __iomem *toprgu_swrst_base;
+> +	int regofs;
+> +	struct reset_controller_dev rcdev;
+> +};
+
+I'm not sure we need a separate struct, especially when you need to
+duplicate wdt_base into this struct.
+After removing regofs/swrst_base, this struct only contain 2 members.
+Maybe you should just merge this into mtk_wdt_dev.
 
 
+> +
+>  struct mtk_wdt_dev {
+>  	struct watchdog_device wdt_dev;
+>  	void __iomem *wdt_base;
+> +	struct toprgu_reset reset_controller;
+> +	const struct mtk_wdt_compatible *dev_comp;
+> +};
+> +
+> +struct mtk_wdt_compatible {
+> +	int sw_rst_num;
+> +};
+> +
+> +static int toprgu_reset_assert(struct reset_controller_dev *rcdev,
+> +			       unsigned long id)
+> +{
+> +	unsigned int tmp;
+> +	unsigned long flags;
+> +	struct toprgu_reset *data = container_of(rcdev,
+> +				struct toprgu_reset, rcdev);
+> +
+> +	spin_lock_irqsave(&data->lock, flags);
+> +
+> +	tmp = __raw_readl(data->toprgu_swrst_base + data->regofs);
+> +	tmp |= BIT(id);
+> +	tmp |= WDT_SWSYS_RST_KEY;
+> +	writel(tmp, data->toprgu_swrst_base + data->regofs);
+> +
+> +	spin_unlock_irqrestore(&data->lock, flags);
+> +
+> +	return 0;
+> +}
+> +
+> +static int toprgu_reset_deassert(struct reset_controller_dev *rcdev,
+> +				 unsigned long id)
+> +{
+> +	unsigned int tmp;
+> +	unsigned long flags;
+> +	struct toprgu_reset *data = container_of(rcdev,
+> +					struct toprgu_reset, rcdev);
+> +
+> +	spin_lock_irqsave(&data->lock, flags);
+> +
+> +	tmp = __raw_readl(data->toprgu_swrst_base + data->regofs);
+> +	tmp &= ~BIT(id);
+> +	tmp |= WDT_SWSYS_RST_KEY;
+> +	writel(tmp, data->toprgu_swrst_base + data->regofs);
+> +
+> +	spin_unlock_irqrestore(&data->lock, flags);
+> +
+> +	return 0;
+> +}
+> +
+> +static int toprgu_reset(struct reset_controller_dev *rcdev,
+> +			unsigned long id)
+> +{
+> +	int ret;
+> +
+> +	ret = toprgu_reset_assert(rcdev, id);
+> +	if (ret)
+> +		return ret;
+> +
+> +	return toprgu_reset_deassert(rcdev, id);
+> +}
+> +
+> +static struct reset_control_ops toprgu_reset_ops = {
+
+static const
+
+
+> +	.assert = toprgu_reset_assert,
+> +	.deassert = toprgu_reset_deassert,
+> +	.reset = toprgu_reset,
+>  };
+>  
+> +static void toprgu_register_reset_controller(struct platform_device *pdev,
+> +					     int regofs)
+> +{
+> +	int ret;
+> +	struct mtk_wdt_dev *mtk_wdt = platform_get_drvdata(pdev);
+> +
+> +	spin_lock_init(&mtk_wdt->reset_controller.lock);
+> +
+> +	mtk_wdt->dev_comp = of_device_get_match_data(&pdev->dev);
+> +	mtk_wdt->reset_controller.toprgu_swrst_base = mtk_wdt->wdt_base;
+> +	mtk_wdt->reset_controller.regofs = regofs;
+> +	mtk_wdt->reset_controller.rcdev.owner = THIS_MODULE;
+> +	mtk_wdt->reset_controller.rcdev.nr_resets =
+> +				mtk_wdt->dev_comp->sw_rst_num;
+> +	mtk_wdt->reset_controller.rcdev.ops = &toprgu_reset_ops;
+> +	mtk_wdt->reset_controller.rcdev.of_node = pdev->dev.of_node;
+> +	ret = reset_controller_register(&mtk_wdt->reset_controller.rcdev);
+> +	if (ret != 0)
+> +		dev_err(&pdev->dev,
+> +			"couldn't register wdt reset controller: %d\n", ret);
+
+If this fail, you should return it and make mtk_wdt_probe also return
+fail.
+
+> +}
+> +
+>  static int mtk_wdt_restart(struct watchdog_device *wdt_dev,
+>  			   unsigned long action, void *data)
+>  {
+> @@ -187,9 +287,12 @@ static int mtk_wdt_probe(struct platform_device *pdev)
+>  	if (unlikely(err))
+>  		return err;
+>  
+> -	dev_info(dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",
+> +	dev_info(&pdev->dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",
+>  		 mtk_wdt->wdt_dev.timeout, nowayout);
+>  
+> +	mtk_wdt->dev_comp = of_device_get_match_data(&pdev->dev);
+> +	if (mtk_wdt->dev_comp)
+> +		toprgu_register_reset_controller(pdev, WDT_SWSYSRST);
+
+Is this register offset WDT_SWSYSRST identical in all chips?
+If it is, you should hardcode it in assert/deassert, just like how we
+access other watchdog registers.
+If not, you should put it in mtk_wdt_compatible.
+
+>  	return 0;
+>  }
+>  
+> @@ -217,7 +320,12 @@ static int mtk_wdt_resume(struct device *dev)
+>  }
+>  #endif
+>  
+> +static const struct mtk_wdt_compatible mt8183_compat = {
+> +	.sw_rst_num = 18,
+> +};
+> +
+>  static const struct of_device_id mtk_wdt_dt_ids[] = {
+> +	{ .compatible = "mediatek,mt8183-wdt", .data = &mt8183_compat },
+>  	{ .compatible = "mediatek,mt6589-wdt" },
+
+
+sorting please
+
+Joe.C
+
+
+>  	{ /* sentinel */ }
+>  };
 
 
 
