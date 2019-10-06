@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71137CD10E
-	for <lists+linux-mediatek@lfdr.de>; Sun,  6 Oct 2019 12:36:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 023F7CD113
+	for <lists+linux-mediatek@lfdr.de>; Sun,  6 Oct 2019 12:37:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BYJyRNIvdS1ZIaMghDbXD3J1pJcykyvecIcdB//Kow4=; b=ECwfg2tLz3HFgz
-	ohqFK1MMnfsk5MI+bRW1I2yHS6A/O1bu1PpPRBz3peM+KdjwJ5+wbIEoZNE2AsWtZYCpuGLoWOeiW
-	iog9nuLb1zFi0isDcddblP8+RIlRCN9wEDEPJWpDyMmZtBFTDJktaw1Rj/IiydPpHNyMbcAneLl21
-	K1dK99+Vzxoo4crE7qqYpnK0lHWFILGgONLQklzsKQ14nt5am5w3jAgKdgWorfZnaD445EIJhl98o
-	GyWi5MHoWzHbjb/rfcUa1AA/21PLRzq8m0tAeXVYfusgc5yb1BdJyHoQMmBz4fBegqVif6zb1uq4P
-	lY15h2Znx9HgAKjM1DoQ==;
+	List-Owner; bh=9CcDvEJc1uFQjq6VGjLi5KVUlZBAHsM3fmpbE6Rw/n0=; b=jI2S68J0/87rkM
+	wkqAxFnbzZwIou4ShjpACXkOeiljR/cBZ3GSLh5Cjm5Nzw91rIMVXoN4/cRgXEvmcFym6Mu+TTSn/
+	9Ew+Md2J+IxautPclsguVvwCV6dPCVtnP02CaxTrthwl6708LLRfNijcQaWyYY9yitzuv4L6Dkh+1
+	x+DE+yflkmW8lMt6K1TSetDARWslEBojdGwSKSHRc8JLhnVMjA0YH//bhNfRhubIncorPisn5vZ9v
+	o2ObGz/penTGf4Gxo0CGvKJLN014/UETX8LZ0ILIihOE2zZUhfVhRZokmzYlsKg847004Mbv718Yo
+	huEiWuooOZrcPrcV6Ysw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iH3u7-0002W1-JD; Sun, 06 Oct 2019 10:36:43 +0000
-Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
+	id 1iH3un-0003G2-CV; Sun, 06 Oct 2019 10:37:25 +0000
+Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iH3qH-0006JV-It; Sun, 06 Oct 2019 10:32:47 +0000
-Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.60])
- by Forcepoint Email with ESMTP id 1E90A458F908C584EBC8;
- Sun,  6 Oct 2019 18:32:44 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
- (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
- 18:32:34 +0800
+ id 1iH3qM-0006MK-0K; Sun, 06 Oct 2019 10:32:54 +0000
+Received: from DGGEMS402-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 99A32D975090B94E3882;
+ Sun,  6 Oct 2019 18:32:46 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS402-HUB.china.huawei.com
+ (10.3.19.202) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
+ 18:32:37 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>, 
  <andrew@aj.id.au>, <nicolas.ferre@microchip.com>,
@@ -41,10 +41,10 @@ To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>,
  <mcoquelin.stm32@gmail.com>, <alexandre.torgue@st.com>, <mripard@kernel.org>, 
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <linux@prisktech.co.nz>, <michal.simek@xilinx.com>
-Subject: [PATCH -next 10/34] rtc: ds1511: use devm_platform_ioremap_resource()
+Subject: [PATCH -next 11/34] rtc: ds1553: use devm_platform_ioremap_resource()
  to simplify code
-Date: Sun, 6 Oct 2019 18:29:29 +0800
-Message-ID: <20191006102953.57536-11-yuehaibing@huawei.com>
+Date: Sun, 6 Oct 2019 18:29:30 +0800
+Message-ID: <20191006102953.57536-12-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20191006102953.57536-1-yuehaibing@huawei.com>
 References: <20191006102953.57536-1-yuehaibing@huawei.com>
@@ -52,8 +52,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191006_033245_815056_148E2C95 
-X-CRM114-Status: UNSURE (   8.35  )
+X-CRM114-CacheID: sfid-20191006_033250_268939_4C092788 
+X-CRM114-Status: UNSURE (   7.77  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -61,7 +61,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.35 listed in list.dnswl.org]
+ medium trust [45.249.212.190 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -90,31 +90,31 @@ This is detected by coccinelle.
 
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/rtc/rtc-ds1511.c | 4 +---
+ drivers/rtc/rtc-ds1553.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/rtc/rtc-ds1511.c b/drivers/rtc/rtc-ds1511.c
-index b6a4775..a63872c 100644
---- a/drivers/rtc/rtc-ds1511.c
-+++ b/drivers/rtc/rtc-ds1511.c
-@@ -414,7 +414,6 @@ static int ds1511_nvram_write(void *priv, unsigned int pos, void *buf,
+diff --git a/drivers/rtc/rtc-ds1553.c b/drivers/rtc/rtc-ds1553.c
+index 219d6b5..cdf5e05 100644
+--- a/drivers/rtc/rtc-ds1553.c
++++ b/drivers/rtc/rtc-ds1553.c
+@@ -249,7 +249,6 @@ static int ds1553_nvram_write(void *priv, unsigned int pos, void *val,
  
- static int ds1511_rtc_probe(struct platform_device *pdev)
+ static int ds1553_rtc_probe(struct platform_device *pdev)
  {
 -	struct resource *res;
+ 	unsigned int cen, sec;
  	struct rtc_plat_data *pdata;
- 	int ret = 0;
- 	struct nvmem_config ds1511_nvmem_cfg = {
-@@ -431,8 +430,7 @@ static int ds1511_rtc_probe(struct platform_device *pdev)
+ 	void __iomem *ioaddr;
+@@ -268,8 +267,7 @@ static int ds1553_rtc_probe(struct platform_device *pdev)
  	if (!pdata)
  		return -ENOMEM;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	ds1511_base = devm_ioremap_resource(&pdev->dev, res);
-+	ds1511_base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(ds1511_base))
- 		return PTR_ERR(ds1511_base);
- 	pdata->ioaddr = ds1511_base;
+-	ioaddr = devm_ioremap_resource(&pdev->dev, res);
++	ioaddr = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(ioaddr))
+ 		return PTR_ERR(ioaddr);
+ 	pdata->ioaddr = ioaddr;
 -- 
 2.7.4
 
