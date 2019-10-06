@@ -2,32 +2,32 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B98CACD119
-	for <lists+linux-mediatek@lfdr.de>; Sun,  6 Oct 2019 12:37:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 80C75CD11D
+	for <lists+linux-mediatek@lfdr.de>; Sun,  6 Oct 2019 12:38:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dQ53xYNpRhTlp8lnnYXbIzDexjGDkday5QchJ9tP1Bw=; b=Ex64a+OCWTUd+c
-	hFTblMGhZqsWBMtYNXzNCtKdOjEqWpEuu8ExqUj/7v1cB+YsJgtruFHQDVECIVxy9NADBfSbqPlEx
-	M2kWiIhwWyqcTiVLh0l07mh9Z5DONE4UqQxWx+/N/xVbkQ7cx093jFLvwZQI9QRi6LnLZUkqh/ExZ
-	RXQcpDFjIZIBitVwJrz6xJau6w+zdh2vPn/Rjw9a8gZKgmdCaAzTKI3KaWA6/VYfg2evLeDRni8xk
-	OeGL27ver4XcglZ3kwHHVrNKckCFcdQ85ljprSg4FmGFoly2cti1Q3K8fqFYbEU3FoMYbAQ2WUMYW
-	9BHjjy9oFkUjnANJptew==;
+	List-Owner; bh=Misoes7C1L/BhOV3/6t5WddEJnf9YnzouE124Ah6534=; b=W7YkDki2bga/uN
+	5nt73IbNEzmPlWHmdZfm7r4od1Wp16Yid0uCVLnq/XTNUoTtRPoXBpLFOlYTtXp+Y7UF5BG/unQ7W
+	S1wFIakYoMJY6/YZ1rs78N98uufQPDlVqg/fj+gMu+BwG5w0oBttyS76copWe9917aJlMlVGwxRaO
+	n6R/mxe5DO415Fu+UoFDg4YvcWl/sgz20emPdazU3N3nkFbfBlOjRdZ792nlmOsKUb1leNPC243aA
+	jWWk41oRWws4HWMOU1MZdy1l1yGaS/21UqTTSxXVxjkcRdQ/ooiVUmReVATTw07rQRljASxOiKDQi
+	tWxuWXKR5qaI23AZZQ0g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iH3v0-0003QZ-S8; Sun, 06 Oct 2019 10:37:38 +0000
-Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
+	id 1iH3vU-0003y2-3k; Sun, 06 Oct 2019 10:38:08 +0000
+Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iH3qM-0006NE-PD; Sun, 06 Oct 2019 10:32:54 +0000
-Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 2CFA9A0F1715CEC186EC;
- Sun,  6 Oct 2019 18:32:49 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
- (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
- 18:32:41 +0800
+ id 1iH3qT-0006Sh-Fo; Sun, 06 Oct 2019 10:32:59 +0000
+Received: from DGGEMS401-HUB.china.huawei.com (unknown [172.30.72.58])
+ by Forcepoint Email with ESMTP id 65E1162F2BF2303E363C;
+ Sun,  6 Oct 2019 18:32:55 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS401-HUB.china.huawei.com
+ (10.3.19.201) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
+ 18:32:45 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>, 
  <andrew@aj.id.au>, <nicolas.ferre@microchip.com>,
@@ -41,10 +41,10 @@ To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>,
  <mcoquelin.stm32@gmail.com>, <alexandre.torgue@st.com>, <mripard@kernel.org>, 
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <linux@prisktech.co.nz>, <michal.simek@xilinx.com>
-Subject: [PATCH -next 12/34] rtc: ep93xx: use devm_platform_ioremap_resource()
+Subject: [PATCH -next 13/34] rtc: jz4740: use devm_platform_ioremap_resource()
  to simplify code
-Date: Sun, 6 Oct 2019 18:29:31 +0800
-Message-ID: <20191006102953.57536-13-yuehaibing@huawei.com>
+Date: Sun, 6 Oct 2019 18:29:32 +0800
+Message-ID: <20191006102953.57536-14-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20191006102953.57536-1-yuehaibing@huawei.com>
 References: <20191006102953.57536-1-yuehaibing@huawei.com>
@@ -52,8 +52,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191006_033251_046833_605437CA 
-X-CRM114-Status: UNSURE (   8.14  )
+X-CRM114-CacheID: sfid-20191006_033257_789653_EFB0234B 
+X-CRM114-Status: UNSURE (   8.17  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -61,7 +61,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.191 listed in list.dnswl.org]
+ medium trust [45.249.212.190 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -90,29 +90,30 @@ This is detected by coccinelle.
 
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/rtc/rtc-ep93xx.c | 4 +---
+ drivers/rtc/rtc-jz4740.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/rtc/rtc-ep93xx.c b/drivers/rtc/rtc-ep93xx.c
-index 1766496..8ec9ea1 100644
---- a/drivers/rtc/rtc-ep93xx.c
-+++ b/drivers/rtc/rtc-ep93xx.c
-@@ -122,15 +122,13 @@ static const struct attribute_group ep93xx_rtc_sysfs_files = {
- static int ep93xx_rtc_probe(struct platform_device *pdev)
+diff --git a/drivers/rtc/rtc-jz4740.c b/drivers/rtc/rtc-jz4740.c
+index 3089645..18023e4 100644
+--- a/drivers/rtc/rtc-jz4740.c
++++ b/drivers/rtc/rtc-jz4740.c
+@@ -307,7 +307,6 @@ static int jz4740_rtc_probe(struct platform_device *pdev)
  {
- 	struct ep93xx_rtc *ep93xx_rtc;
--	struct resource *res;
- 	int err;
+ 	int ret;
+ 	struct jz4740_rtc *rtc;
+-	struct resource *mem;
+ 	const struct platform_device_id *id = platform_get_device_id(pdev);
+ 	const struct of_device_id *of_id = of_match_device(
+ 			jz4740_rtc_of_match, &pdev->dev);
+@@ -326,8 +325,7 @@ static int jz4740_rtc_probe(struct platform_device *pdev)
+ 	if (rtc->irq < 0)
+ 		return -ENOENT;
  
- 	ep93xx_rtc = devm_kzalloc(&pdev->dev, sizeof(*ep93xx_rtc), GFP_KERNEL);
- 	if (!ep93xx_rtc)
- 		return -ENOMEM;
- 
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	ep93xx_rtc->mmio_base = devm_ioremap_resource(&pdev->dev, res);
-+	ep93xx_rtc->mmio_base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(ep93xx_rtc->mmio_base))
- 		return PTR_ERR(ep93xx_rtc->mmio_base);
+-	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	rtc->base = devm_ioremap_resource(&pdev->dev, mem);
++	rtc->base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(rtc->base))
+ 		return PTR_ERR(rtc->base);
  
 -- 
 2.7.4
