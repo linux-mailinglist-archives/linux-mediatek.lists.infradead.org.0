@@ -2,45 +2,44 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D25A1CF9DB
-	for <lists+linux-mediatek@lfdr.de>; Tue,  8 Oct 2019 14:34:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 69646CFA05
+	for <lists+linux-mediatek@lfdr.de>; Tue,  8 Oct 2019 14:38:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=edr1YzkeC1t3cgrfORoqkrHDw6kbeWIYpuulawZe9IY=; b=CpAWfpwHqev4Iw
-	nPDudySR3FVCpEMYgC0GGGEY0Dve8JZR25cSx8rYnCxb8WiXFYJIqNAZZ3Q8m+WQqMDq1iU6HDiKI
-	cVPMTN8t+CvqPGtknUMPWOL5N5Oawch43bGnLRs2eZSGIS8rnCLisl/8S8kmsx29pEbHc2CcSp8my
-	8jrWBWNXPlwCnRfqK7VVWY1zlhdPUhpU6PSMQgFaNSddqAewfanV+Cc8ErFKfb5OjbXEABd4uBoZL
-	qnBbIjJyp/oH0GEN8b7XtgDcrCiyKi6tbCKkZEd64DL8EA2zfqEDxNr8IGpS6/UAtFrS4N1iMkt4X
-	sWTFqXD3fyv5OwSji8vw==;
+	List-Owner; bh=edr1YzkeC1t3cgrfORoqkrHDw6kbeWIYpuulawZe9IY=; b=RLH6fTbzOumMFB
+	Xgi6wXVSzAlcM+IVVjXWt+Za0cnDfGCnxIz1d/TNPxeN5/EtZk4MUXVJN7OT1hM7ILmwlFMEpszcy
+	aXjQlmvoGXX2hQ72+X+izXTaddvoHLvSqY0OHAqgmLl74uyvG2u7m5/BHv6WlGYvMZx4ZxxkXq39k
+	xMgJZMSl9BJK+S8wVw8733vj1R+Xje2M7KTYlGoO7sVZy45KC/JW22SKKn9e+81WXHUNa7iSncWOi
+	VRw+dF1WbJaK9eLoaNKMb2bUW9KbzozrTQ301CGjIwYEyzPm8XgBn1flR+18hie39R4c8SZpoMpAn
+	Rr3W2CE/OqtzXf59WYog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iHoga-0007bP-Ty; Tue, 08 Oct 2019 12:33:52 +0000
+	id 1iHokq-0003jJ-TL; Tue, 08 Oct 2019 12:38:16 +0000
 Received: from imap1.codethink.co.uk ([176.9.8.82])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iHogX-0007Zw-W4
- for linux-mediatek@lists.infradead.org; Tue, 08 Oct 2019 12:33:51 +0000
+ id 1iHohc-0007rp-K4; Tue, 08 Oct 2019 12:35:00 +0000
 Received: from [167.98.27.226] (helo=rainbowdash.codethink.co.uk)
  by imap1.codethink.co.uk with esmtpsa (Exim 4.84_2 #1 (Debian))
- id 1iHogT-0000vg-An; Tue, 08 Oct 2019 13:33:45 +0100
+ id 1iHoha-00013O-Lv; Tue, 08 Oct 2019 13:34:54 +0100
 Received: from ben by rainbowdash.codethink.co.uk with local (Exim 4.92.2)
  (envelope-from <ben@rainbowdash.codethink.co.uk>)
- id 1iHogS-0000Py-Jd; Tue, 08 Oct 2019 13:33:44 +0100
+ id 1iHohZ-0000RW-UL; Tue, 08 Oct 2019 13:34:53 +0100
 From: Ben Dooks <ben.dooks@codethink.co.uk>
-To: linux-arm-kernel@lists.infraread.org
+To: linux-arm-kernel@lists.infradead.org
 Subject: [PATCH 05/11] arm: mediatek: force type of mtk_smp_base
-Date: Tue,  8 Oct 2019 13:33:35 +0100
-Message-Id: <20191008123341.1551-5-ben.dooks@codethink.co.uk>
+Date: Tue,  8 Oct 2019 13:34:47 +0100
+Message-Id: <20191008123453.1651-5-ben.dooks@codethink.co.uk>
 X-Mailer: git-send-email 2.23.0
-In-Reply-To: <20191008123341.1551-1-ben.dooks@codethink.co.uk>
-References: <20191008123341.1551-1-ben.dooks@codethink.co.uk>
+In-Reply-To: <20191008123453.1651-1-ben.dooks@codethink.co.uk>
+References: <20191008123453.1651-1-ben.dooks@codethink.co.uk>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191008_053350_179845_ECC6F7DD 
-X-CRM114-Status: GOOD (  11.26  )
+X-CRM114-CacheID: sfid-20191008_053456_823500_91CC2FEA 
+X-CRM114-Status: GOOD (  11.91  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
