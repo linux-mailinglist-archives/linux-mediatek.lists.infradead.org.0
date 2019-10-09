@@ -2,57 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 14C8BD0B7B
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 11:40:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D4A1DD0BD2
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 11:52:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hR6PHlG86Hlvrg3+ZNIric2am0kcuqbf0/Nws8SeuXY=; b=Q3NB0CpG1QrCgt
-	EqhRfEx6MAZOAAv3kyhNWMlYAZNbk1+JK6n4altdGKGvvhqNyq+bq+ylTBfZ4yJg1D2W5Jw5ifkZ7
-	Wdvnnbn3X/00hyU2EaDs9zV/uyNH4uDqseE/IsqDXn8K+ticUsBsC6xKxd6UulIB1JKhJr7UXQGRn
-	iZYYXK8CQULTp/SXMlRwz5FRLLkZRQw+/09vlbEZRXGjauVSMv8/2IXqAZLX5OvNljo/PLU4rmwla
-	eAfM2grHcLKuZKUWkHZNEoDVy79D9HwgU68UG9rd38ojHWo1OeTMeBEophBrdphBDUipt4WK3R84H
-	rLBR/YpS2X++2LWptekg==;
+	List-Owner; bh=k49SCPR9N6twnSKBOkprjmxLo/WIXLKQZiEx+8t8EmY=; b=tlBAFVoNvj+RKZ
+	Q9rH0D/kviSc3pSlX/m3LP91p9BdTGU7dip6SS9jWY+jHgKZiOxbCoGQeNNF34fQC1+hxcOED0V98
+	mki333mvwhfj9Q5B3OjjJIgQkJO4SlMv/7i0QQUFCcimnUXEQj2/UoAXEk0iX3yQj0pQ++IkFexC1
+	6GHsvAeqCpNPenTsSE+h7e3npRZQEofHaMZHEAUlLN85vgEBvjnZweO2CRGYj14tI5AJqa6HduJb5
+	d4GucJA4yknDN4t6qapweYNMHjaeCCPEStEu1oPJMoWy44UdJiTlMMQp9FVdpFAXoTDVobdo70yKQ
+	LDmycgzyt/sIS4yNGRMg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iI8S3-00009T-Oa; Wed, 09 Oct 2019 09:40:12 +0000
+	id 1iI8dT-0005jl-Kk; Wed, 09 Oct 2019 09:51:59 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iI8Qp-0006vl-J6; Wed, 09 Oct 2019 09:38:57 +0000
-X-UUID: 352b76dd157b4c1c812e125b0ef20ae1-20191009
-X-UUID: 352b76dd157b4c1c812e125b0ef20ae1-20191009
+ id 1iI8cs-00058L-6Q; Wed, 09 Oct 2019 09:51:24 +0000
+X-UUID: e327c959c127448e875e88d8b54c3a04-20191009
+X-UUID: e327c959c127448e875e88d8b54c3a04-20191009
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1678892894; Wed, 09 Oct 2019 01:38:50 -0800
+ with ESMTP id 1025752248; Wed, 09 Oct 2019 01:51:17 -0800
 Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 02:36:02 -0700
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 02:44:44 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
  MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 17:35:59 +0800
+ 15.0.1395.4; Wed, 9 Oct 2019 17:29:39 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 9 Oct 2019 17:35:59 +0800
-Message-ID: <1570613761.7713.15.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 24/32] drm/mediatek: add clock property check before
- get it
+ Transport; Wed, 9 Oct 2019 17:29:39 +0800
+Message-ID: <1570613382.7713.9.camel@mtksdaap41>
+Subject: Re: [PATCH v5, 22/32] drm/mediatek: add ovl0/ovl_2l0 usecase
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Wed, 9 Oct 2019 17:36:01 +0800
-In-Reply-To: <1567090254-15566-25-git-send-email-yongqiang.niu@mediatek.com>
+Date: Wed, 9 Oct 2019 17:29:42 +0800
+In-Reply-To: <1567090254-15566-23-git-send-email-yongqiang.niu@mediatek.com>
 References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-25-git-send-email-yongqiang.niu@mediatek.com>
+ <1567090254-15566-23-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 245755396B82B8B6F48F7B8E82316EBB41F1B194122EA2DF61C4B744C093FDBA2000:8
+X-TM-SNTS-SMTP: 77BACC5CC9D874289777AB391FF8CC187BFEDC531C1268C70D3E6665E44BA75F2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_023855_642997_205154C2 
-X-CRM114-Status: GOOD (  15.75  )
+X-CRM114-CacheID: sfid-20191009_025122_289241_CD5895E6 
+X-CRM114-Status: GOOD (  18.88  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -89,11 +88,17 @@ Hi, Yongqiang:
 On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> This patch add clock property check before get it
+> This patch add ovl0/ovl_2l0 usecase
+> in ovl->ovl_2l0 direct link usecase:
+> 1. the crtc support layer number will 4+2
+> 2. ovl_2l0 background color input select ovl0 when crtc init
+> and disable it when crtc finish
+> 3. config ovl_2l0 layer, if crtc config layer number is
+> bigger than ovl0 support layers(max is 4)
 > 
 
-I've rewrite this patch and applied to mediatek-drm-next-5.5 [1] with
-the title "drm/mediatek: add no_clk into ddp private data", thanks.
+Applied to mediatek-drm-next-5.5 [1] with some modification by my
+comment, thanks.
 
 [1]
 https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.5
@@ -103,30 +108,95 @@ CK
 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > ---
->  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 10 ++++++----
->  1 file changed, 6 insertions(+), 4 deletions(-)
+>  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 38 +++++++++++++++++++++++++++++++--
+>  1 file changed, 36 insertions(+), 2 deletions(-)
 > 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> index a5a6689..effc24a 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> @@ -657,10 +657,12 @@ static int mtk_ddp_probe(struct platform_device *pdev)
->  	for (i = 0; i < 10; i++)
->  		ddp->mutex[i].id = i;
+> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> index c63ff2b..b55970a 100644
+> --- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> +++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+> @@ -270,6 +270,15 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
 >  
-> -	ddp->clk = devm_clk_get(dev, NULL);
-> -	if (IS_ERR(ddp->clk)) {
-> -		dev_err(dev, "Failed to get clock\n");
-> -		return PTR_ERR(ddp->clk);
-> +	if (of_find_property(dev->of_node, "clocks", &i)) {
-> +		ddp->clk = devm_clk_get(dev, NULL);
-> +		if (IS_ERR(ddp->clk)) {
-> +			dev_err(dev, "Failed to get clock\n");
-> +			return PTR_ERR(ddp->clk);
-> +		}
+>  	for (i = 0; i < mtk_crtc->ddp_comp_nr; i++) {
+>  		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[i];
+> +		enum mtk_ddp_comp_id prev;
+> +
+> +		if (i > 0)
+> +			prev = mtk_crtc->ddp_comp[i - 1]->id;
+> +		else
+> +			prev = DDP_COMPONENT_ID_MAX;
+> +
+> +		if (prev == DDP_COMPONENT_OVL0)
+> +			mtk_ddp_comp_bgclr_in_on(comp);
+>  
+>  		mtk_ddp_comp_config(comp, width, height, vrefresh, bpc);
+>  		mtk_ddp_comp_start(comp);
+> @@ -279,9 +288,18 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
+>  	for (i = 0; i < mtk_crtc->layer_nr; i++) {
+>  		struct drm_plane *plane = &mtk_crtc->planes[i];
+>  		struct mtk_plane_state *plane_state;
+> +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
+> +		unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
+> +		unsigned int local_layer;
+>  
+>  		plane_state = to_mtk_plane_state(plane->state);
+> -		mtk_ddp_comp_layer_config(mtk_crtc->ddp_comp[0], i,
+> +
+> +		if (i >= comp_layer_nr) {
+> +			comp = mtk_crtc->ddp_comp[1];
+> +			local_layer = i - comp_layer_nr;
+> +		} else
+> +			local_layer = i;
+> +		mtk_ddp_comp_layer_config(comp, local_layer,
+>  					  plane_state);
 >  	}
 >  
->  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> @@ -307,6 +325,7 @@ static void mtk_crtc_ddp_hw_fini(struct mtk_drm_crtc *mtk_crtc)
+>  					   mtk_crtc->ddp_comp[i]->id);
+>  	mtk_disp_mutex_disable(mtk_crtc->mutex);
+>  	for (i = 0; i < mtk_crtc->ddp_comp_nr - 1; i++) {
+> +		mtk_ddp_comp_bgclr_in_off(mtk_crtc->ddp_comp[i]);
+>  		mtk_ddp_remove_comp_from_path(mtk_crtc->config_regs,
+>  					      mtk_crtc->mmsys_reg_data,
+>  					      mtk_crtc->ddp_comp[i]->id,
+> @@ -327,6 +346,8 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
+>  	struct mtk_crtc_state *state = to_mtk_crtc_state(mtk_crtc->base.state);
+>  	struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[0];
+>  	unsigned int i;
+> +	unsigned int comp_layer_nr = mtk_ddp_comp_layer_nr(comp);
+> +	unsigned int local_layer;
+>  
+>  	/*
+>  	 * TODO: instead of updating the registers here, we should prepare
+> @@ -349,7 +370,14 @@ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
+>  			plane_state = to_mtk_plane_state(plane->state);
+>  
+>  			if (plane_state->pending.config) {
+> -				mtk_ddp_comp_layer_config(comp, i, plane_state);
+> +				if (i >= comp_layer_nr) {
+> +					comp = mtk_crtc->ddp_comp[1];
+> +					local_layer = i - comp_layer_nr;
+> +				} else
+> +					local_layer = i;
+> +
+> +				mtk_ddp_comp_layer_config(comp, local_layer,
+> +							  plane_state);
+>  				plane_state->pending.config = false;
+>  			}
+>  		}
+> @@ -572,6 +600,12 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
+>  	}
+>  
+>  	mtk_crtc->layer_nr = mtk_ddp_comp_layer_nr(mtk_crtc->ddp_comp[0]);
+> +	if (mtk_crtc->ddp_comp_nr > 1) {
+> +		struct mtk_ddp_comp *comp = mtk_crtc->ddp_comp[1];
+> +
+> +		if (comp->funcs->bgclr_in_on)
+> +			mtk_crtc->layer_nr += mtk_ddp_comp_layer_nr(comp);
+> +	}
+>  	mtk_crtc->planes = devm_kcalloc(dev, mtk_crtc->layer_nr,
+>  					sizeof(struct drm_plane),
+>  					GFP_KERNEL);
 
 
 
