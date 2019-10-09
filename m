@@ -2,60 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C40BD0FD9
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 15:19:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 77B08D0FDE
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 15:20:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lO7T0720aXiCAdBPG4aOW3PIy2Vq91ofJUu0kcU5GCo=; b=dzEhlbM5qqXnEm
-	9ZMNHP1fP/PaHMs5y6YH+NfyJlq+1IV+ygWCRx6FaYvnhArVWzM5naQDYmyof3BzCrYdPBJE8m7ty
-	IRJ5+dH1YBuzRkhHXTfre0j9Y25tqbvlZFchaduIzX+jzowVGqwVnyuYYb+o1lRyHTBtrLWFxwDyL
-	eUcbo8BID2FXunNlDCq+hxmAVLcR/0nvQPwxvF4GMyjtx7StphML9C8ePjWzfZHI5D0IMU3uNtmgN
-	ZRP774hseVndnkspea+r20YKKG9f/kOPViIA4vBPpqNAp4aNvW+duwFK6hIbn2X5PhMqWk5W+W0iO
-	cHRXuMh/0WpcLnbRqxfg==;
+	List-Owner; bh=KiYAYyPqvQkPtnHtekdEwYWR6Cgr7UcEA4gmiU07nK4=; b=fS87C6MTm4m9bV
+	CBV020+3d9C/lTMvszy1b7ep0o2o4nJ35ilFBBsv5XY5NFCxDXH3qPJ2pGhJsy+YFqYo4++a+Ot9e
+	yFshpZQYgza8ttPaMjSP3AWfCU4epUpvYl/rJZzg5p/LJe5UiWmY5n/D5WdG8Kd6jXMExacVDwB7b
+	r1Yg6iq/AC+Lwk5z5wULfPlX1H5GWSQ4/d6DxHyzTuMRxXktYAdSrv30MlwL/jVKZ276EnUKAI0wv
+	3bwIE3ea5N7USNkZEIysvNyLvIfYTBi4jVxyl29KQDMiktUgk+c5y4qCJjdMQwRiRglEwm/BFbEM4
+	/TLBfi+BHPVULub614aQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iIBsF-000448-QL; Wed, 09 Oct 2019 13:19:27 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iIBsh-0004OB-H2; Wed, 09 Oct 2019 13:19:55 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iIBsB-00042h-2u; Wed, 09 Oct 2019 13:19:26 +0000
-X-UUID: 595796d917274957be3fbfd5fbcca7d1-20191009
-X-UUID: 595796d917274957be3fbfd5fbcca7d1-20191009
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1iIBsG-00043O-4z; Wed, 09 Oct 2019 13:19:29 +0000
+X-UUID: 2bf5a8d7079142118d1f0ad8d874e24d-20191009
+X-UUID: 2bf5a8d7079142118d1f0ad8d874e24d-20191009
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 639843204; Wed, 09 Oct 2019 05:19:25 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 1306626780; Wed, 09 Oct 2019 05:19:28 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 06:19:14 -0700
+ 15.0.1395.4; Wed, 9 Oct 2019 06:19:17 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 21:19:13 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 21:19:16 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 9 Oct 2019 21:19:12 +0800
+ Transport; Wed, 9 Oct 2019 21:19:15 +0800
 From: Yong Wu <yong.wu@mediatek.com>
 To: Matthias Brugger <matthias.bgg@gmail.com>, Joerg Roedel <joro@8bytes.org>, 
  Will Deacon <will.deacon@arm.com>
-Subject: [PATCH v2 2/4] iommu/mediatek: Move the tlb_sync into tlb_flush
-Date: Wed, 9 Oct 2019 21:19:01 +0800
-Message-ID: <1570627143-29441-2-git-send-email-yong.wu@mediatek.com>
+Subject: [PATCH v2 3/4] iommu/mediatek: Use writel for TLB range invalidation
+Date: Wed, 9 Oct 2019 21:19:02 +0800
+Message-ID: <1570627143-29441-3-git-send-email-yong.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1570627143-29441-1-git-send-email-yong.wu@mediatek.com>
 References: <1570627143-29441-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_061923_143937_5800D981 
-X-CRM114-Status: GOOD (  18.41  )
+X-CRM114-CacheID: sfid-20191009_061928_213116_07E779AA 
+X-CRM114-Status: GOOD (  12.04  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -83,161 +85,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The commit 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API
-TLB sync") help move the tlb_sync of unmap from v7s into the iommu
-framework. It helps add a new function "mtk_iommu_iotlb_sync", But it
-lacked the dom->pgtlock, then it will cause the variable
-"tlb_flush_active" may be changed unexpectedly, we could see this warning
-log randomly:
+Use writel for the register F_MMU_INV_RANGE which is for triggering the
+HW work. We expect all the setting(iova_start/iova_end...) have already
+been finished before F_MMU_INV_RANGE.
 
-mtk-iommu 10205000.iommu: Partial TLB flush timed out, falling back to
-full flush
-
-To fix this issue, we can add dom->pgtlock in the "mtk_iommu_iotlb_sync".
-
-In addition, when checking this issue, we find that __arm_v7s_unmap call
-io_pgtable_tlb_add_flush consecutively when it is supersection/largepage,
-this also is potential unsafe for us. There is no tlb flush queue in the
-MediaTek M4U HW. The HW always expect the tlb_flush/tlb_sync one by one.
-If v7s don't always gurarantee the sequence, Thus, In this patch I move
-the tlb_sync into tlb_flush(also rename the function deleting "_nosync").
-and we don't care if it is leaf, rearrange the callback functions. Also,
-the tlb flush/sync was already finished in v7s, then iotlb_sync is
-unnecessary.
-
-Fixes: 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API TLB sync")
-Signed-off-by: Chao Hao <chao.hao@mediatek.com>
+Signed-off-by: Anan.Sun <anan.sun@mediatek.com>
 Signed-off-by: Yong Wu <yong.wu@mediatek.com>
 ---
- drivers/iommu/mtk_iommu.c | 63 +++++++++++++----------------------------------
- drivers/iommu/mtk_iommu.h |  1 -
- 2 files changed, 17 insertions(+), 47 deletions(-)
+This is a improvement rather than fixing a issue.
+---
+ drivers/iommu/mtk_iommu.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index 76b9388..24a13a6 100644
+index 24a13a6..607f92c 100644
 --- a/drivers/iommu/mtk_iommu.c
 +++ b/drivers/iommu/mtk_iommu.c
-@@ -173,11 +173,12 @@ static void mtk_iommu_tlb_flush_all(void *cookie)
- 	}
- }
- 
--static void mtk_iommu_tlb_add_flush_nosync(unsigned long iova, size_t size,
--					   size_t granule, bool leaf,
--					   void *cookie)
-+static void mtk_iommu_tlb_add_flush(unsigned long iova, size_t size,
-+				    size_t granule, void *cookie)
- {
- 	struct mtk_iommu_data *data = cookie;
-+	int ret;
-+	u32 tmp;
- 
- 	for_each_m4u(data) {
- 		writel_relaxed(F_INVLD_EN1 | F_INVLD_EN0,
-@@ -188,21 +189,12 @@ static void mtk_iommu_tlb_add_flush_nosync(unsigned long iova, size_t size,
+@@ -187,8 +187,7 @@ static void mtk_iommu_tlb_add_flush(unsigned long iova, size_t size,
+ 		writel_relaxed(iova, data->base + REG_MMU_INVLD_START_A);
+ 		writel_relaxed(iova + size - 1,
  			       data->base + REG_MMU_INVLD_END_A);
- 		writel_relaxed(F_MMU_INV_RANGE,
- 			       data->base + REG_MMU_INVALIDATE);
--		data->tlb_flush_active = true;
--	}
--}
--
--static void mtk_iommu_tlb_sync(void *cookie)
--{
--	struct mtk_iommu_data *data = cookie;
--	int ret;
--	u32 tmp;
--
--	for_each_m4u(data) {
--		/* Avoid timing out if there's nothing to wait for */
--		if (!data->tlb_flush_active)
--			return;
+-		writel_relaxed(F_MMU_INV_RANGE,
+-			       data->base + REG_MMU_INVALIDATE);
++		writel(F_MMU_INV_RANGE, data->base + REG_MMU_INVALIDATE);
  
-+		/*
-+		 * There is no tlb flush queue in the HW, the HW always expect
-+		 * tlb_flush and tlb_sync in pair strictly. Here tlb_sync always
-+		 * follows tlb_flush to avoid break the sequence.
-+		 */
- 		ret = readl_poll_timeout_atomic(data->base + REG_MMU_CPE_DONE,
- 						tmp, tmp != 0, 10, 100000);
- 		if (ret) {
-@@ -212,36 +204,21 @@ static void mtk_iommu_tlb_sync(void *cookie)
- 		}
- 		/* Clear the CPE status */
- 		writel_relaxed(0, data->base + REG_MMU_CPE_DONE);
--		data->tlb_flush_active = false;
- 	}
- }
- 
--static void mtk_iommu_tlb_flush_walk(unsigned long iova, size_t size,
--				     size_t granule, void *cookie)
--{
--	mtk_iommu_tlb_add_flush_nosync(iova, size, granule, false, cookie);
--	mtk_iommu_tlb_sync(cookie);
--}
--
--static void mtk_iommu_tlb_flush_leaf(unsigned long iova, size_t size,
--				     size_t granule, void *cookie)
-+static void mtk_iommu_tlb_flush_page(struct iommu_iotlb_gather *gather,
-+				     unsigned long iova, size_t granule,
-+				     void *cookie)
- {
--	mtk_iommu_tlb_add_flush_nosync(iova, size, granule, true, cookie);
--	mtk_iommu_tlb_sync(cookie);
--}
--
--static void mtk_iommu_tlb_flush_page_nosync(struct iommu_iotlb_gather *gather,
--					    unsigned long iova, size_t granule,
--					    void *cookie)
--{
--	mtk_iommu_tlb_add_flush_nosync(iova, granule, granule, true, cookie);
-+	mtk_iommu_tlb_add_flush(iova, granule, granule, cookie);
- }
- 
- static const struct iommu_flush_ops mtk_iommu_flush_ops = {
- 	.tlb_flush_all = mtk_iommu_tlb_flush_all,
--	.tlb_flush_walk = mtk_iommu_tlb_flush_walk,
--	.tlb_flush_leaf = mtk_iommu_tlb_flush_leaf,
--	.tlb_add_page = mtk_iommu_tlb_flush_page_nosync,
-+	.tlb_flush_walk = mtk_iommu_tlb_add_flush,
-+	.tlb_flush_leaf = mtk_iommu_tlb_add_flush,
-+	.tlb_add_page = mtk_iommu_tlb_flush_page,
- };
- 
- static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
-@@ -450,12 +427,6 @@ static void mtk_iommu_flush_iotlb_all(struct iommu_domain *domain)
- 	mtk_iommu_tlb_flush_all(mtk_iommu_get_m4u_data());
- }
- 
--static void mtk_iommu_iotlb_sync(struct iommu_domain *domain,
--				 struct iommu_iotlb_gather *gather)
--{
--	mtk_iommu_tlb_sync(mtk_iommu_get_m4u_data());
--}
--
- static phys_addr_t mtk_iommu_iova_to_phys(struct iommu_domain *domain,
- 					  dma_addr_t iova)
- {
-@@ -558,7 +529,7 @@ static int mtk_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
- 	.map		= mtk_iommu_map,
- 	.unmap		= mtk_iommu_unmap,
- 	.flush_iotlb_all = mtk_iommu_flush_iotlb_all,
--	.iotlb_sync	= mtk_iommu_iotlb_sync,
-+	/* No iotlb_sync here since the tlb_sync always follows the tlb_flush */
- 	.iova_to_phys	= mtk_iommu_iova_to_phys,
- 	.add_device	= mtk_iommu_add_device,
- 	.remove_device	= mtk_iommu_remove_device,
-diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
-index fc0f16e..24712f5 100644
---- a/drivers/iommu/mtk_iommu.h
-+++ b/drivers/iommu/mtk_iommu.h
-@@ -57,7 +57,6 @@ struct mtk_iommu_data {
- 	struct mtk_iommu_domain		*m4u_dom;
- 	struct iommu_group		*m4u_group;
- 	bool                            enable_4GB;
--	bool				tlb_flush_active;
- 
- 	struct iommu_device		iommu;
- 	const struct mtk_iommu_plat_data *plat_data;
+ 		/*
+ 		 * There is no tlb flush queue in the HW, the HW always expect
 -- 
 1.9.1
 
