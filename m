@@ -2,57 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C4770D0C81
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 12:19:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1C1EED0D45
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 12:56:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=J1YtdCQ/W5id52FyBzoJqeluQC7LWEbESkHVKb+RQT8=; b=eNx+xDUIhRfXEU
-	qx6MSAUTEkRLtKE1/Cza1bmA8IAe6tAzEWawft30GZLRLf9ZesV5nmVWMRI/C4njOe4iNMIkZoZjl
-	bVKgZdFR4OjC/2AKcH3DPPaeUEW8I54eCtCKS7MBKWbLEu0vvWS1ukIjnH9crdfZgLILvCih0xWi5
-	Yg3QZ5kQbYFCWumSvwMgM+Vx+k9ao/NRev84H/87InVdN0MQBahC/qKPO0V6oT30Jc537T9nBeFzI
-	xjJHkEd1xXPlgdqVSoSsDyoh6vcw6p6LCmM6d1rlDh7K/ifKfQlK6R83Z7PzOOQvD6tUbPFFjXVE+
-	/4q6LNizS5QRsd4fKRKA==;
+	List-Owner; bh=pKrXiRYGv8byxGSUpAy3nCVHyqBYPQD6xkeHvbQ4Vl0=; b=BTVIb0YNOQtER+
+	SJHPTlLJ2Bg48FCw2mRMFj63SfFtikPWufwZQOPEKzCsHoeS8H454YiPCg3oU4ro5+APNz6aBqNSA
+	RjedtvKXUYPKf1+5lOUp3evLbtr/qF8EqrCbdpeLZm00opDuQVb01EOugl0uco+PNHFI5QgKZxmoO
+	hjBnEw0uW0nXh5q9erFTbpMPSeFPgSFTNRFaMTqU1c22mUWMCUlDMc6dw28EZs0o3auKTWe9VbaKF
+	hQAaHGaYMeIJVbvzXYCVRVycBt8grljqqAFvvgfnqMDsQ2bfX3lZTIGcMdjMGsm8KLviDxtZf0jlE
+	vH32+EVoEhRFaScRzRpw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iI94E-0000pA-Hd; Wed, 09 Oct 2019 10:19:38 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
- by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iI93h-0000IJ-KR; Wed, 09 Oct 2019 10:19:07 +0000
-X-UUID: 2d6ef7fb739a4a3e8c9d65599f03cc01-20191009
-X-UUID: 2d6ef7fb739a4a3e8c9d65599f03cc01-20191009
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2022212364; Wed, 09 Oct 2019 02:19:08 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 03:18:54 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 17:33:33 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 9 Oct 2019 17:33:33 +0800
-Message-ID: <1570613616.7713.13.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 10/32] drm/mediatek: add mutex sof register offset
- into ddp private data
-From: CK Hu <ck.hu@mediatek.com>
-To: <yongqiang.niu@mediatek.com>
-Date: Wed, 9 Oct 2019 17:33:36 +0800
-In-Reply-To: <1567090254-15566-11-git-send-email-yongqiang.niu@mediatek.com>
-References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-11-git-send-email-yongqiang.niu@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+	id 1iI9e2-0006hR-1X; Wed, 09 Oct 2019 10:56:38 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iI9dn-0006Wk-3I; Wed, 09 Oct 2019 10:56:24 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 854EF28;
+ Wed,  9 Oct 2019 03:56:20 -0700 (PDT)
+Received: from e107158-lin.cambridge.arm.com (e107158-lin.cambridge.arm.com
+ [10.1.195.37])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 4CC323F703;
+ Wed,  9 Oct 2019 03:56:19 -0700 (PDT)
+Date: Wed, 9 Oct 2019 11:56:17 +0100
+From: Qais Yousef <qais.yousef@arm.com>
+To: Jing-Ting Wu <jing-ting.wu@mediatek.com>
+Subject: Re: [PATCH 1/1] sched/rt: avoid contend with CFS task
+Message-ID: <20191009105616.dzhtowlrnqnyqgv4@e107158-lin.cambridge.arm.com>
+References: <20190830145501.zadfv2ffuu7j46ft@e107158-lin.cambridge.arm.com>
+ <1567689999.2389.5.camel@mtkswgap22>
+ <CAKfTPtC3txstND=6YkWBJ16i06cQ7xueUpD5j-j-UfuSf0-z-g@mail.gmail.com>
+ <1568892135.4892.10.camel@mtkswgap22>
+ <CAKfTPtCuWrpW_o6r5cmGhLf_84PFHJhBk0pJ3fcbU_YgcBnTkQ@mail.gmail.com>
+ <20190919142315.vmrrpvljpspqpurp@e107158-lin.cambridge.arm.com>
+ <CAKfTPtA9-JLxs+DdLYjBQ6VfVGNxm++QYYi1wy-xS6o==EAPNw@mail.gmail.com>
+ <CAKfTPtAy1JSh725GAVXmg_x3fby1UfYn504tq4n2rQs1-JMy6Q@mail.gmail.com>
+ <20190919151152.m2zmiaspr6s5mcfh@e107158-lin.cambridge.arm.com>
+ <1569979206.4892.23.camel@mtkswgap22>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 249AE8EC08E0A52E09ECE236DDF6C34DA7BE6F12C7E6CED2986292B9B84AD3502000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1569979206.4892.23.camel@mtkswgap22>
+User-Agent: NeoMutt/20171215
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_031905_683854_6102B46A 
-X-CRM114-Status: GOOD (  14.46  )
+X-CRM114-CacheID: sfid-20191009_035623_227632_6A9471C6 
+X-CRM114-Status: GOOD (  38.09  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -60,8 +58,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,110 +69,119 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Vincent Guittot <vincent.guittot@linaro.org>, wsd_upstream@mediatek.com,
+ Peter Zijlstra <peterz@infradead.org>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Valentin Schneider <valentin.schneider@arm.com>,
+ LAK <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Yongqiang:
-
-On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
-> From: Yongqiang Niu <yongqiang.niu@mediatek.com>
+On 10/02/19 09:20, Jing-Ting Wu wrote:
+> On Thu, 2019-09-19 at 16:11 +0100, Qais Yousef wrote:
+> > On 09/19/19 16:37, Vincent Guittot wrote:
+> > > On Thu, 19 Sep 2019 at 16:32, Vincent Guittot
+> > > <vincent.guittot@linaro.org> wrote:
+> > > >
+> > > > On Thu, 19 Sep 2019 at 16:23, Qais Yousef <qais.yousef@arm.com> wrote:
+> > > > >
+> > > > > On 09/19/19 14:27, Vincent Guittot wrote:
+> > > > > > > > > But for requirement of performance, I think it is better to differentiate between idle CPU and CPU has CFS task.
+> > > > > > > > >
+> > > > > > > > > For example, we use rt-app to evaluate runnable time on non-patched environment.
+> > > > > > > > > There are (NR_CPUS-1) heavy CFS tasks and 1 RT Task. When a CFS task is running, the RT task wakes up and choose the same CPU.
+> > > > > > > > > The CFS task will be preempted and keep runnable until it is migrated to another cpu by load balance.
+> > > > > > > > > But load balance is not triggered immediately, it will be triggered until timer tick hits with some condition satisfied(ex. rq->next_balance).
+> > > > > > > >
+> > > > > > > > Yes you will have to wait for the next tick that will trigger an idle
+> > > > > > > > load balance because you have an idle cpu and 2 runnable tack (1 RT +
+> > > > > > > > 1CFS) on the same CPU. But you should not wait for more than  1 tick
+> > > > > > > >
+> > > > > > > > The current load_balance doesn't handle correctly the situation of 1
+> > > > > > > > CFS and 1 RT task on same CPU while 1 CPU is idle. There is a rework
+> > > > > > > > of the load_balance that is under review on the mailing list that
+> > > > > > > > fixes this problem and your CFS task should migrate to the idle CPU
+> > > > > > > > faster than now
+> > > > > > > >
+> > > > > > >
+> > > > > > > Period load balance should be triggered when current jiffies is behind
+> > > > > > > rq->next_balance, but rq->next_balance is not often exactly the same
+> > > > > > > with next tick.
+> > > > > > > If cpu_busy, interval = sd->balance_interval * sd->busy_factor, and
+> > > > > >
+> > > > > > But if there is an idle CPU on the system, the next idle load balance
+> > > > > > should apply shortly because the busy_factor is not used for this CPU
+> > > > > > which is  not busy.
+> > > > > > In this case, the next_balance interval is sd_weight which is probably
+> > > > > > 4ms at cluster level and 8ms at system level in your case. This means
+> > > > > > between 1 and 2 ticks
+> > > > >
+> > > > > But if the CFS task we're preempting was latency sensitive - this 1 or 2 tick
+> > > > > is too late of a recovery.
+> > > > >
+> > > > > So while it's good we recover, but a preventative approach would be useful too.
+> > > > > Just saying :-) I'm still not sure if this is the best longer term approach.
+> > > >
+> > > > like using a rt task ?
+> > > 
+> > > I mean, RT task should select a sub optimal CPU because of CFS
+> > > If you want to favor CFS compared to RT it's probably because your
+> > > task should be RT too
+> > 
+> > Yes possibly. But I don't think this is always doable. Especially when you're
+> > running on generic system not a special purposed one.
+> > 
+> > And we don't need to favor CFS over RT. But I think they can play nicely
+> > together.
+> > 
+> > For example on Android there are few RT tasks and rarely more than 1 runnable
+> > RT task at a time. But if it happened to wakeup on the same CPU that is
+> > running the UI thread you could lose a frame. And from what I've seen as well
+> > we have 1-3 CFS tasks runnable, weighted more towards 1 task. So we do have
+> > plenty of idle CPUs on average.
+> > 
+> > But as I mentioned earlier I couldn't prove yet this being a serious problem.
+> > I was hoping the use case presented here is based on a real workload, but it's
+> > synthetic. So I agree we need stronger reasons, but I think conceptually we do
+> > have a conflict of interest where RT task could unnecessarily hurt the
+> > performance of CFS task.
+> > 
+> > Another way to look at the problem is that the system is not partitioned
+> > correctly and the admin could do a better job to prevent this.
+> > 
+> > --
+> > Qais Yousef
 > 
-> mutex sof register offset will be private data of ddp
 > 
-
-Applied to mediatek-drm-next-5.5 [1], thanks.
-
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.5
-
-Regards,
-CK
-
-> Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 13 ++++++++++---
->  1 file changed, 10 insertions(+), 3 deletions(-)
+> I use some third-party application, such as weibo and others, to test
+> the application launch time. I apply this RT patch, and compare it with
+> original design. Both RT patch test case and original design test case
+> are already apply the
+> patch:https://lore.kernel.org/patchwork/patch/1129117/
 > 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> index 9bdbd8d..4866a9b 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> @@ -34,12 +34,13 @@
->  #define DISP_REG_CONFIG_DPI_SEL			0x064
->  
->  #define MT2701_DISP_MUTEX0_MOD0			0x2c
-> +#define MT2701_DISP_MUTEX0_SOF0			0x30
->  
->  #define DISP_REG_MUTEX_EN(n)			(0x20 + 0x20 * (n))
->  #define DISP_REG_MUTEX(n)			(0x24 + 0x20 * (n))
->  #define DISP_REG_MUTEX_RST(n)			(0x28 + 0x20 * (n))
->  #define DISP_REG_MUTEX_MOD(mutex_mod_reg, n)	(mutex_mod_reg + 0x20 * (n))
-> -#define DISP_REG_MUTEX_SOF(n)			(0x30 + 0x20 * (n))
-> +#define DISP_REG_MUTEX_SOF(mutex_sof_reg, n)	(mutex_sof_reg + 0x20 * (n))
->  #define DISP_REG_MUTEX_MOD2(n)			(0x34 + 0x20 * (n))
->  
->  #define INT_MUTEX				BIT(1)
-> @@ -155,6 +156,7 @@ struct mtk_ddp_data {
->  	const unsigned int *mutex_mod;
->  	const unsigned int *mutex_sof;
->  	const unsigned int mutex_mod_reg;
-> +	const unsigned int mutex_sof_reg;
->  };
->  
->  struct mtk_ddp {
-> @@ -226,18 +228,21 @@ struct mtk_ddp {
->  	.mutex_mod = mt2701_mutex_mod,
->  	.mutex_sof = mt2712_mutex_sof,
->  	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-> +	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
->  };
->  
->  static const struct mtk_ddp_data mt2712_ddp_driver_data = {
->  	.mutex_mod = mt2712_mutex_mod,
->  	.mutex_sof = mt2712_mutex_sof,
->  	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-> +	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
->  };
->  
->  static const struct mtk_ddp_data mt8173_ddp_driver_data = {
->  	.mutex_mod = mt8173_mutex_mod,
->  	.mutex_sof = mt2712_mutex_sof,
->  	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
-> +	.mutex_sof_reg = MT2701_DISP_MUTEX0_SOF0,
->  };
->  
->  static unsigned int mtk_ddp_mout_en(enum mtk_ddp_comp_id cur,
-> @@ -519,7 +524,8 @@ void mtk_disp_mutex_add_comp(struct mtk_disp_mutex *mutex,
->  	}
->  
->  	writel_relaxed(ddp->data->mutex_sof[sof_id],
-> -		       ddp->regs + DISP_REG_MUTEX_SOF(mutex->id));
-> +		       ddp->regs +
-> +		       DISP_REG_MUTEX_SOF(ddp->data->mutex_sof_reg, mutex->id));
->  }
->  
->  void mtk_disp_mutex_remove_comp(struct mtk_disp_mutex *mutex,
-> @@ -541,7 +547,8 @@ void mtk_disp_mutex_remove_comp(struct mtk_disp_mutex *mutex,
->  	case DDP_COMPONENT_DPI1:
->  		writel_relaxed(MUTEX_SOF_SINGLE_MODE,
->  			       ddp->regs +
-> -			       DISP_REG_MUTEX_SOF(mutex->id));
-> +			       DISP_REG_MUTEX_SOF(ddp->data->mutex_sof_reg,
-> +						  mutex->id));
->  		break;
->  	default:
->  		if (ddp->data->mutex_mod[id] < 32) {
+> After apply the RT patch, launch time of weibo from 1325.72ms to 1214.88
+> ms, its launch time decreases 110.84ms(about 8.36%). Other applications
+> also decrease 7~13%.
+> 
+> At original design test case, RT tasks(surfaceflinger) could preempt
+> some CFS tasks, if we add all these CFS tasks runnable time, it may have
+> some impact on app launch time. So even if we already use the load
+> balance patch and reduce a lot of CFS runnable time, I think choose idle
+> CPU at RT scheduler could also reduce the some CFS runnable time.
 
+It'd be good if you spin v2 of your patch with these values added to the commit
+message. If you include numbers for 2 or 3 apps that'd be even better.
 
+Make sure to add Steven Rostedt on CC and other maintainers/reviewers in
+get_maintainer.pl
+
+Cheers
+
+--
+Qais Yousef
 
 _______________________________________________
 Linux-mediatek mailing list
