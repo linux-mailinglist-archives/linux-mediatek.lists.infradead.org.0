@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D07E1D08CF
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 09:51:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DECBFD08EE
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 09:56:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=SPrsA7j+i+XaQw1fAmACHUeaB+IDV1OvxIgm4fuWZXA=; b=crpQOH5JWGYXcI
-	jJbzSSOOoayxM7zLLoFN5nDwy4PxdKLdI//OXupFnPqA+Kym4FeN/2TFGoe9BVQLj7Un8u6CTIjTW
-	TznVWIGtuhqrJkJHzUYNuBCCcSmZkVkFp0MBm1FpJDuMHBGEa7g+xWg8HmQkgqIw4nsHHFiEiqwml
-	/Hh4EsBaqvEF7ltOawDkPNbh2JryVfXvpZGco03IcnUOFOU2NxsUhUpwqAr0hZb9i+A/I9m6DZDGq
-	oNh7ykDbyxC5FF/3kOt56Qadk3VdQkBgohW53zCMbdwsYTIouiMPdmSBOaYEaS7eLn2JtTVCIgLK9
-	dTX9iyZ/jUJommFPrpKA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=HM9BX7WvrqXe3FRfwEuzFy8vHgFwTDHq6gi0ODljLQI=; b=f9E1Q6DfqQF38y
+	QK06yfU1GG/0fQbkGt5kdaam0AgrFq3lWIFVCgbZVOLB3oocVf99UBi7i1rniK3Q//16NzWKVKYOI
+	BLHXemSKBkeCty8s49XnluScCB6rsmc2fZUQxNPhBDtaYzMFbPLydVvHmhYXCmoYfq8FJ7/tEMwCV
+	MVLOJUPbTa3Sb10ugleqYApjfuqjdomqbKNBG5CPKpn3aYdckkE/lavLfHL6AcGGPiu0rFHVgCUQf
+	XQFqsT1RunKcIFVXnkxBTRQaBNGsSh10Mn2NT8kbzzJbXA2YPy4vl1QUkb/tVaDkUTGUQVF0ia8sF
+	d8PflWfonJKoaiHWswJA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iI6l8-00068w-Nf; Wed, 09 Oct 2019 07:51:46 +0000
+	id 1iI6q2-0001Oo-4P; Wed, 09 Oct 2019 07:56:50 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iI6kb-0005kE-6a; Wed, 09 Oct 2019 07:51:15 +0000
-X-UUID: 99db9fefe33c419da7fe39e239bd3ba8-20191008
-X-UUID: 99db9fefe33c419da7fe39e239bd3ba8-20191008
+ id 1iI6pX-0000yE-8P; Wed, 09 Oct 2019 07:56:20 +0000
+X-UUID: d5dfe6eb258e41218ed08df41fa054e3-20191008
+X-UUID: d5dfe6eb258e41218ed08df41fa054e3-20191008
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 377291727; Tue, 08 Oct 2019 23:51:38 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 00:41:03 -0700
+ with ESMTP id 1663013955; Tue, 08 Oct 2019 23:56:45 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 00:56:11 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 15:41:00 +0800
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 15:41:02 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 9 Oct 2019 15:40:58 +0800
+ Transport; Wed, 9 Oct 2019 15:41:00 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Kishon Vijay Abraham I <kishon@ti.com>, Rob Herring <robh+dt@kernel.org>
-Subject: [RESEND PATCH v3 01/11] dt-bindings: phy-mtk-tphy: add two optional
- properties for u2phy
-Date: Wed, 9 Oct 2019 15:40:24 +0800
-Message-ID: <1570606834-5644-1-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [RESEND PATCH v3 02/11] dt-bindings: phy-mtk-tphy: make the ref clock
+ optional
+Date: Wed, 9 Oct 2019 15:40:25 +0800
+Message-ID: <1570606834-5644-2-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1570606834-5644-1-git-send-email-chunfeng.yun@mediatek.com>
+References: <1570606834-5644-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: D92F16B9EE319C5ADF5B71546DF82E0BFA49E37F44BEABF32811ABA90F90DB2B2000:8
+X-TM-SNTS-SMTP: 529B75F880549219B19A483FC609AD75F20A14647891354584FF2E06AC6263472000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_005113_244474_39DA1110 
-X-CRM114-Status: UNSURE (   9.50  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191009_005619_299120_54D092C5 
+X-CRM114-Status: GOOD (  11.12  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -82,32 +83,51 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add two optional properties, one for tuning J-K voltage by INTR,
-another for disconnect threshold, both of them are related with
-connect detection
+Make the ref clock optional, then we no need refer to a fixed-clock
+in DTS anymore when the clock of USB3 PHY comes from oscillator
+directly
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Acked-by: Rob Herring <robh@kernel.org>
 ---
-v3: change commit log
+v3: add acked-by Rob
 
-v2: change description
+v2: no changes
 ---
- Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt | 2 ++
- 1 file changed, 2 insertions(+)
+ .../devicetree/bindings/phy/phy-mtk-tphy.txt        | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
 
 diff --git a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-index a5f7a4f0dbc1..ce6abfbdfbe1 100644
+index ce6abfbdfbe1..1f4a36dd80e0 100644
 --- a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
 +++ b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-@@ -52,6 +52,8 @@ Optional properties (PHY_TYPE_USB2 port (child) node):
+@@ -34,12 +34,6 @@ Optional properties (controller (parent) node):
+ 
+ Required properties (port (child) node):
+ - reg		: address and length of the register set for the port.
+-- clocks	: a list of phandle + clock-specifier pairs, one for each
+-		  entry in clock-names
+-- clock-names	: must contain
+-		  "ref": 48M reference clock for HighSpeed analog phy; and 26M
+-			reference clock for SuperSpeed analog phy, sometimes is
+-			24M, 25M or 27M, depended on platform.
+ - #phy-cells	: should be 1 (See second example)
+ 		  cell after port phandle is phy type from:
+ 			- PHY_TYPE_USB2
+@@ -48,6 +42,13 @@ Required properties (port (child) node):
+ 			- PHY_TYPE_SATA
+ 
+ Optional properties (PHY_TYPE_USB2 port (child) node):
++- clocks	: a list of phandle + clock-specifier pairs, one for each
++		  entry in clock-names
++- clock-names	: may contain
++		  "ref": 48M reference clock for HighSpeed anolog phy; and 26M
++			reference clock for SuperSpeed anolog phy, sometimes is
++			24M, 25M or 27M, depended on platform.
++
+ - mediatek,eye-src	: u32, the value of slew rate calibrate
  - mediatek,eye-vrt	: u32, the selection of VRT reference voltage
  - mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage
- - mediatek,bc12	: bool, enable BC12 of u2phy if support it
-+- mediatek,discth	: u32, the selection of disconnect threshold
-+- mediatek,intr	: u32, the selection of internal R (resistance)
- 
- Example:
- 
 -- 
 2.23.0
 
