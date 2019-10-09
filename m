@@ -2,85 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9231FD08B9
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 09:47:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B8C7D08DA
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 09:52:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4ww+AybuW2X5sN9J2NVq7gcQywAfandyoJhgNAcGPa0=; b=o5B2DC0f2NQr+B
-	d/I8quDiBfQ6X33nTIYFQOCSPDtLWneFmaqcwHYOhci5TFCk8/aOPP7jnUitY/GxGyTpFZuFtK5SF
-	vdC08RzwQ4CqW8DYc41UI6ALHoCgUYejNFXJRAjVcXmWRaDT2AhcR57M3CcyvJy1Lefp4eKxTPcU3
-	/b5UbTg2iag8bC/Q92v/igWw0OeL/8Kkq0UzbWpv+Il3Umgns0xfHizzJcWJIzJYUFUWtJJ/h5Wx0
-	7RWLEc1NeyUh3zaC4zGGtR956tkHT2vsxECWqRygxrQtioa1mKf2XjGzXkY8wb2LcV2gGORYZLoLI
-	52BgtAISgj8mF5gbQcLQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Ax5Ifcua5CBnTxai5fVFRmDTOyyACYIdZ7Ka4Cgf1hk=; b=cacaFQrX+omK9p
+	rPaTQcj3OlJiN8ov8WPdkX7vVUV07J5LI7fI9FqgQ8/SJf54p0c9TAD+tT4W1HUAx4lXImyOWetPY
+	vYCA/AlMCR8tSgXwgIF5dVXsRYYc0pdUCRwQHLuEVegN47nwoE4MTBOtNran/cCrdDu9AeNpx9JUt
+	9FPA3wUtGiDNMIwDo29m+hrJeMaJ5AlaQnme5L1VCugIFn4tq3RVfIPzAU0T6q8CBw69iknAmf4KT
+	KONO5hg1LQg7AvYPo2IWOgGFhG00PTOTU2UNZ6DbHEriT7tX+D+V+ixnItq/VeE6OMij4WCSiKQNd
+	hEiw5upygLBqU1Q8DNUA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iI6gR-0003O2-FM; Wed, 09 Oct 2019 07:46:55 +0000
-Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
+	id 1iI6mD-0007Fp-6L; Wed, 09 Oct 2019 07:52:53 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iI6gC-0003Ds-M5
- for linux-mediatek@lists.infradead.org; Wed, 09 Oct 2019 07:46:41 +0000
-Received: by mail-lj1-x244.google.com with SMTP id l21so1457341lje.4
- for <linux-mediatek@lists.infradead.org>; Wed, 09 Oct 2019 00:46:40 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=hZEfc+r3FkjJNXGg5OrQndZ7EVhjrXvy0Arp8Ba6y3Y=;
- b=wjvQivs+C+mNfu/kBT+oqZ7KD4q6+IZ5Kth6hhfGFbltlKdqAJ38C7ajvyZ31te4gJ
- C5EqhO//ZRTNxmVHsnWpL4FPvGmq6RGPaLctgOfRFcn64vZmRPcZzkMMWQJ5TtpYGxOS
- ++ZFPLLjrWzBCECqMtnDgmicGmA0oWmKIWQeYM/ZOxDhwuAVKbdEN/zSfWvAA3hLQZZq
- ubaT/P3ZZ59MYBEbi3oE/Ge+OFG+iQYKsWIiR5Ef3yKK7kivB5XTNZls9k74vNap0dO9
- ytr/crl5hSQEYBvLZjmMXVpBhkzUNMwtOdUVNlFdxRC9uu49L9C1IMRlaxaQ+WnE44XU
- dFHg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=hZEfc+r3FkjJNXGg5OrQndZ7EVhjrXvy0Arp8Ba6y3Y=;
- b=LCB9GzI8XaTjuYzTrOJdiv0zViq93kI5phS4xgRiZoa8/iNjFdQr3plN2InL0e461T
- SHADWL/lbpvLE22lPoHkt76FjtHBD1iQDrszlyYY66JAq6QitrntKngB2cvyzNapQZLh
- k0vcT79EMi5zm+mwO6Rmsgar5pgLZm+NYL/lzM1nHyCnQ6GTCoVnSlDm+GYZWY/UlsHu
- bwZUFxu9Ro3MxiqjetHtGh/cek7Uu5LhuPrpXwX75lCtK7Bo3bPJt2keO4PFbGz6Mnmn
- HH+ccoQBqx7XO4A9+JJFPSgxKBfjCFXMWtXm0SYCElASnaYAGHM8/qa5LeKqAMlI6tGO
- 3tpg==
-X-Gm-Message-State: APjAAAWTl0akJ43dstqFSiGCi0YmWIFJlOf93Pl21QGuViP9j/1DbNqR
- X7k+PL+B32m1mVvOiq1MRtPbjMNO8zsaKKWEgVtESg==
-X-Google-Smtp-Source: APXvYqzKb6yyez5/a7eDQjEjte0+mGMXwCtZbVyeffNWrWYP4x2euviqJJy4ezdD4TVfujVbQ0UR4GcHrwjyGqp8gXQ=
-X-Received: by 2002:a2e:80d1:: with SMTP id r17mr1435527ljg.118.1570607198839; 
- Wed, 09 Oct 2019 00:46:38 -0700 (PDT)
+ id 1iI6ke-0005jz-FH; Wed, 09 Oct 2019 07:51:18 +0000
+X-UUID: efa848fcf06443e092ede51077d66177-20191008
+X-UUID: efa848fcf06443e092ede51077d66177-20191008
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 733400653; Tue, 08 Oct 2019 23:51:38 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 00:46:49 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 9 Oct 2019 15:31:38 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 9 Oct 2019 15:31:37 +0800
+From: Biao Huang <biao.huang@mediatek.com>
+To: <davem@davemloft.net>, Jose Abreu <joabreu@synopsys.com>, <andrew@lunn.ch>
+Subject: [PATCH] net: stmmac: dwmac-mediatek: fix wrong delay value issue when
+ resume back
+Date: Wed, 9 Oct 2019 15:31:29 +0800
+Message-ID: <20191009073129.5439-1-biao.huang@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-References: <20191006102953.57536-1-yuehaibing@huawei.com>
- <20191006102953.57536-7-yuehaibing@huawei.com>
-In-Reply-To: <20191006102953.57536-7-yuehaibing@huawei.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Wed, 9 Oct 2019 09:46:27 +0200
-Message-ID: <CACRpkdY5x3wG4h6Wm_L5OXWXB7SPqHimUFOQa2jOeqDETWciYg@mail.gmail.com>
-Subject: Re: [PATCH -next 06/34] rtc: coh901331: use
- devm_platform_ioremap_resource() to simplify code
-To: YueHaibing <yuehaibing@huawei.com>
+X-TM-SNTS-SMTP: B285750855EC341362F90DB9DFAED3B70120BD807D577E25220679B16259FE2E2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_004640_728840_F5D95F00 
-X-CRM114-Status: UNSURE (   9.11  )
+X-CRM114-CacheID: sfid-20191009_005116_528703_8045C410 
+X-CRM114-Status: UNSURE (   9.49  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,48 +73,79 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
- linux-aspeed <linux-aspeed@lists.ozlabs.org>, Baruch Siach <baruch@tkos.co.il>,
- Patrice CHOTARD <patrice.chotard@st.com>, Paul Cercueil <paul@crapouillou.net>,
- linux-tegra@vger.kernel.org,
- "thierry.reding@gmail.com" <thierry.reding@gmail.com>,
- Michal Simek <michal.simek@xilinx.com>, linux-rtc@vger.kernel.org,
- Florian Fainelli <f.fainelli@gmail.com>, Kevin Hilman <khilman@baylibre.com>,
- Chen-Yu Tsai <wens@csie.org>, Jon Hunter <jonathanh@nvidia.com>,
- Ludovic Desroches <ludovic.desroches@microchip.com>,
- bcm-kernel-feedback-list <bcm-kernel-feedback-list@broadcom.com>,
- Joel Stanley <joel@jms.id.au>, Sylvain Lemieux <slemieux.tyco@gmail.com>,
- Alexandre TORGUE <alexandre.torgue@st.com>, Sean Wang <sean.wang@mediatek.com>,
- Maxime Ripard <mripard@kernel.org>, Vladimir Zapolskiy <vz@mleia.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Gregory Fong <gregory.0xf0@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- huang eddie <eddie.huang@mediatek.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- Alessandro Zummo <a.zummo@towertech.it>, Andrew Jeffery <andrew@aj.id.au>,
- linux-stm32@st-md-mailman.stormreply.com,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Tony Prisk <linux@prisktech.co.nz>,
+Cc: jianguo.zhang@mediatek.com, Alexandre Torgue <alexandre.torgue@st.com>,
+ boon.leong.ong@intel.com, biao.huang@mediatek.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
  Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Brian Norris <computersforpeace@gmail.com>
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sun, Oct 6, 2019 at 12:32 PM YueHaibing <yuehaibing@huawei.com> wrote:
+mac_delay value will be divided by 550/170 in mt2712_delay_stage2ps(),
+which is invoked at the beginning of mt2712_set_delay(), and the value
+should be restored at the end of mt2712_set_delay().
+Or, mac_delay will be divided again when invoking mt2712_set_delay()
+when resume back.
+So, add mt2712_delay_ps2stage() to mt2712_set_delay() to recovery the
+original mac_delay value.
 
-> Use devm_platform_ioremap_resource() to simplify the code a bit.
-> This is detected by coccinelle.
->
-> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Signed-off-by: Biao Huang <biao.huang@mediatek.com>
+---
+ .../ethernet/stmicro/stmmac/dwmac-mediatek.c  | 27 +++++++++++++++++++
+ 1 file changed, 27 insertions(+)
 
-Reviewed-by: Linus Walleij <linus.walleij@linaro.org>
+diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c b/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
+index 79f2ee37afed..cea7a0c7ce68 100644
+--- a/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
++++ b/drivers/net/ethernet/stmicro/stmmac/dwmac-mediatek.c
+@@ -130,6 +130,31 @@ static void mt2712_delay_ps2stage(struct mediatek_dwmac_plat_data *plat)
+ 	}
+ }
+ 
++static void mt2712_delay_stage2ps(struct mediatek_dwmac_plat_data *plat)
++{
++	struct mac_delay_struct *mac_delay = &plat->mac_delay;
++
++	switch (plat->phy_mode) {
++	case PHY_INTERFACE_MODE_MII:
++	case PHY_INTERFACE_MODE_RMII:
++		/* 550ps per stage for MII/RMII */
++		mac_delay->tx_delay *= 550;
++		mac_delay->rx_delay *= 550;
++		break;
++	case PHY_INTERFACE_MODE_RGMII:
++	case PHY_INTERFACE_MODE_RGMII_TXID:
++	case PHY_INTERFACE_MODE_RGMII_RXID:
++	case PHY_INTERFACE_MODE_RGMII_ID:
++		/* 170ps per stage for RGMII */
++		mac_delay->tx_delay *= 170;
++		mac_delay->rx_delay *= 170;
++		break;
++	default:
++		dev_err(plat->dev, "phy interface not supported\n");
++		break;
++	}
++}
++
+ static int mt2712_set_delay(struct mediatek_dwmac_plat_data *plat)
+ {
+ 	struct mac_delay_struct *mac_delay = &plat->mac_delay;
+@@ -199,6 +224,8 @@ static int mt2712_set_delay(struct mediatek_dwmac_plat_data *plat)
+ 	regmap_write(plat->peri_regmap, PERI_ETH_DLY, delay_val);
+ 	regmap_write(plat->peri_regmap, PERI_ETH_DLY_FINE, fine_val);
+ 
++	mt2712_delay_stage2ps(plat);
++
+ 	return 0;
+ }
+ 
+-- 
+2.18.0
 
-Yours,
-Linus Walleij
 
 _______________________________________________
 Linux-mediatek mailing list
