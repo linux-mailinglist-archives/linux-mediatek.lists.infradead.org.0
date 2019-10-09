@@ -2,57 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 98DF6D0B7C
-	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 11:40:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 14C8BD0B7B
+	for <lists+linux-mediatek@lfdr.de>; Wed,  9 Oct 2019 11:40:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hkCWbGFbCCsJd6l71ToczobfGA7BZ6YmZiNA3A5Fg7o=; b=URbgCaP4p5g3A8
-	DNup5Mn4qud+Laj8y47261lSWjMnQfb0LZsC2+1nPkTQxBCL4pWJ52Cr7ifMkYXmeZ7OgnRqLpU0A
-	RuWB5agF3nwAT24fDGOzhrrSl409vBUPFAwlGLLzUpARsdj1aFVNoh5n5E+X2IJKVw2iGgsAJsgZg
-	h72hNFeCL/hQ1cLQTk5w1CPgFB2GBNIPCqqOdSkjDU270SCrbr3ZqEbdz8D7UBKZvZuriUQSg8IKA
-	sm8ph0rK8216nZsqEMCKkZ4937h6exNnw3R6QhXeWpe5wuiPkWZYSXsUUjO5mJfegd8y0bAzaXF+j
-	fBm4Fn/a/twvj5XqbJEA==;
+	List-Owner; bh=hR6PHlG86Hlvrg3+ZNIric2am0kcuqbf0/Nws8SeuXY=; b=Q3NB0CpG1QrCgt
+	EqhRfEx6MAZOAAv3kyhNWMlYAZNbk1+JK6n4altdGKGvvhqNyq+bq+ylTBfZ4yJg1D2W5Jw5ifkZ7
+	Wdvnnbn3X/00hyU2EaDs9zV/uyNH4uDqseE/IsqDXn8K+ticUsBsC6xKxd6UulIB1JKhJr7UXQGRn
+	iZYYXK8CQULTp/SXMlRwz5FRLLkZRQw+/09vlbEZRXGjauVSMv8/2IXqAZLX5OvNljo/PLU4rmwla
+	eAfM2grHcLKuZKUWkHZNEoDVy79D9HwgU68UG9rd38ojHWo1OeTMeBEophBrdphBDUipt4WK3R84H
+	rLBR/YpS2X++2LWptekg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iI8S6-0000kV-QL; Wed, 09 Oct 2019 09:40:14 +0000
+	id 1iI8S3-00009T-Oa; Wed, 09 Oct 2019 09:40:12 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iI8Qr-0006xH-GO; Wed, 09 Oct 2019 09:38:59 +0000
-X-UUID: 3ff28c1f18af4302a9d2d6b7959690b4-20191009
-X-UUID: 3ff28c1f18af4302a9d2d6b7959690b4-20191009
+ id 1iI8Qp-0006vl-J6; Wed, 09 Oct 2019 09:38:57 +0000
+X-UUID: 352b76dd157b4c1c812e125b0ef20ae1-20191009
+X-UUID: 352b76dd157b4c1c812e125b0ef20ae1-20191009
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1709145754; Wed, 09 Oct 2019 01:38:50 -0800
+ with ESMTP id 1678892894; Wed, 09 Oct 2019 01:38:50 -0800
 Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 02:32:42 -0700
+ 15.0.1395.4; Wed, 9 Oct 2019 02:36:02 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
  MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 9 Oct 2019 17:32:37 +0800
+ 15.0.1395.4; Wed, 9 Oct 2019 17:35:59 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 9 Oct 2019 17:32:37 +0800
-Message-ID: <1570613559.7713.11.camel@mtksdaap41>
-Subject: Re: [PATCH v5, 08/32] drm/mediatek: add mutex mod register offset
- into ddp private data
+ Transport; Wed, 9 Oct 2019 17:35:59 +0800
+Message-ID: <1570613761.7713.15.camel@mtksdaap41>
+Subject: Re: [PATCH v5, 24/32] drm/mediatek: add clock property check before
+ get it
 From: CK Hu <ck.hu@mediatek.com>
 To: <yongqiang.niu@mediatek.com>
-Date: Wed, 9 Oct 2019 17:32:39 +0800
-In-Reply-To: <1567090254-15566-9-git-send-email-yongqiang.niu@mediatek.com>
+Date: Wed, 9 Oct 2019 17:36:01 +0800
+In-Reply-To: <1567090254-15566-25-git-send-email-yongqiang.niu@mediatek.com>
 References: <1567090254-15566-1-git-send-email-yongqiang.niu@mediatek.com>
- <1567090254-15566-9-git-send-email-yongqiang.niu@mediatek.com>
+ <1567090254-15566-25-git-send-email-yongqiang.niu@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F6B5DD69EC391BE372CBC5B543A24EB03A151202504F6FD4319AFF8479D0F03D2000:8
+X-TM-SNTS-SMTP: 245755396B82B8B6F48F7B8E82316EBB41F1B194122EA2DF61C4B744C093FDBA2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_023857_564643_C89BA376 
-X-CRM114-Status: GOOD (  14.14  )
+X-CRM114-CacheID: sfid-20191009_023855_642997_205154C2 
+X-CRM114-Status: GOOD (  15.75  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -89,10 +89,11 @@ Hi, Yongqiang:
 On Thu, 2019-08-29 at 22:50 +0800, yongqiang.niu@mediatek.com wrote:
 > From: Yongqiang Niu <yongqiang.niu@mediatek.com>
 > 
-> mutex mod register offset will be private data of ddp.
+> This patch add clock property check before get it
 > 
 
-Applied to mediatek-drm-next-5.5 [1], thanks.
+I've rewrite this patch and applied to mediatek-drm-next-5.5 [1] with
+the title "drm/mediatek: add no_clk into ddp private data", thanks.
 
 [1]
 https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.5
@@ -101,82 +102,31 @@ Regards,
 CK
 
 > Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
 > ---
->  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 24 ++++++++++++++++--------
->  1 file changed, 16 insertions(+), 8 deletions(-)
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp.c | 10 ++++++----
+>  1 file changed, 6 insertions(+), 4 deletions(-)
 > 
 > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> index b6cc3d8..ae22e21 100644
+> index a5a6689..effc24a 100644
 > --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
 > +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp.c
-> @@ -33,12 +33,14 @@
->  #define DISP_REG_CONFIG_DSI_SEL			0x050
->  #define DISP_REG_CONFIG_DPI_SEL			0x064
+> @@ -657,10 +657,12 @@ static int mtk_ddp_probe(struct platform_device *pdev)
+>  	for (i = 0; i < 10; i++)
+>  		ddp->mutex[i].id = i;
 >  
-> -#define DISP_REG_MUTEX_EN(n)	(0x20 + 0x20 * (n))
-> -#define DISP_REG_MUTEX(n)	(0x24 + 0x20 * (n))
-> -#define DISP_REG_MUTEX_RST(n)	(0x28 + 0x20 * (n))
-> -#define DISP_REG_MUTEX_MOD(n)	(0x2c + 0x20 * (n))
-> -#define DISP_REG_MUTEX_SOF(n)	(0x30 + 0x20 * (n))
-> -#define DISP_REG_MUTEX_MOD2(n)	(0x34 + 0x20 * (n))
-> +#define MT2701_DISP_MUTEX0_MOD0			0x2c
-> +
-> +#define DISP_REG_MUTEX_EN(n)			(0x20 + 0x20 * (n))
-> +#define DISP_REG_MUTEX(n)			(0x24 + 0x20 * (n))
-> +#define DISP_REG_MUTEX_RST(n)			(0x28 + 0x20 * (n))
-> +#define DISP_REG_MUTEX_MOD(mutex_mod_reg, n)	(mutex_mod_reg + 0x20 * (n))
-> +#define DISP_REG_MUTEX_SOF(n)			(0x30 + 0x20 * (n))
-> +#define DISP_REG_MUTEX_MOD2(n)			(0x34 + 0x20 * (n))
+> -	ddp->clk = devm_clk_get(dev, NULL);
+> -	if (IS_ERR(ddp->clk)) {
+> -		dev_err(dev, "Failed to get clock\n");
+> -		return PTR_ERR(ddp->clk);
+> +	if (of_find_property(dev->of_node, "clocks", &i)) {
+> +		ddp->clk = devm_clk_get(dev, NULL);
+> +		if (IS_ERR(ddp->clk)) {
+> +			dev_err(dev, "Failed to get clock\n");
+> +			return PTR_ERR(ddp->clk);
+> +		}
+>  	}
 >  
->  #define INT_MUTEX				BIT(1)
->  
-> @@ -141,6 +143,7 @@ struct mtk_disp_mutex {
->  
->  struct mtk_ddp_data {
->  	const unsigned int *mutex_mod;
-> +	const unsigned int mutex_mod_reg;
->  };
->  
->  struct mtk_ddp {
-> @@ -200,14 +203,17 @@ struct mtk_ddp {
->  
->  static const struct mtk_ddp_data mt2701_ddp_driver_data = {
->  	.mutex_mod = mt2701_mutex_mod,
-> +	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
->  };
->  
->  static const struct mtk_ddp_data mt2712_ddp_driver_data = {
->  	.mutex_mod = mt2712_mutex_mod,
-> +	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
->  };
->  
->  static const struct mtk_ddp_data mt8173_ddp_driver_data = {
->  	.mutex_mod = mt8173_mutex_mod,
-> +	.mutex_mod_reg = MT2701_DISP_MUTEX0_MOD0,
->  };
->  
->  static unsigned int mtk_ddp_mout_en(enum mtk_ddp_comp_id cur,
-> @@ -473,7 +479,8 @@ void mtk_disp_mutex_add_comp(struct mtk_disp_mutex *mutex,
->  		break;
->  	default:
->  		if (ddp->data->mutex_mod[id] < 32) {
-> -			offset = DISP_REG_MUTEX_MOD(mutex->id);
-> +			offset = DISP_REG_MUTEX_MOD(ddp->data->mutex_mod_reg,
-> +						    mutex->id);
->  			reg = readl_relaxed(ddp->regs + offset);
->  			reg |= 1 << ddp->data->mutex_mod[id];
->  			writel_relaxed(reg, ddp->regs + offset);
-> @@ -511,7 +518,8 @@ void mtk_disp_mutex_remove_comp(struct mtk_disp_mutex *mutex,
->  		break;
->  	default:
->  		if (ddp->data->mutex_mod[id] < 32) {
-> -			offset = DISP_REG_MUTEX_MOD(mutex->id);
-> +			offset = DISP_REG_MUTEX_MOD(ddp->data->mutex_mod_reg,
-> +						    mutex->id);
->  			reg = readl_relaxed(ddp->regs + offset);
->  			reg &= ~(1 << ddp->data->mutex_mod[id]);
->  			writel_relaxed(reg, ddp->regs + offset);
+>  	regs = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 
 
 
