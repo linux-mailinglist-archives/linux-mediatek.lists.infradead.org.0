@@ -2,92 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 079B9D2FB9
-	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 19:44:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5512D30F3
+	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 20:55:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4Cs+y0Omtwdr6ZfE4AnEb/wYSzpcByBpTjlk8NFpza4=; b=OvtCdnITyn27eo
-	MLfMqS8domOJMe+/8kipGdbdYzfJJgxuxMrFY1ZUYOHx7zwAq+/DplbsFLLcLvYbbCQsudlqPuSPB
-	lY4o5A2iC57PIRiiDg8XjmZBp5Pfi8FUZCwWR4orSznnJrrAqlXBTt7HmSdvYmubRsZMkTBfP3oEh
-	YqL8kq4MWJL97Z8yvMyBusFKRObsu643xFimg6t0rt/+6udlysTcKmuzevlfwzVxdDsqIUEuBTvkT
-	X5ZDone+o9B2ZEuORjN6VV1/FopSBmgwvy7EGztBzNrdC6TLMslBAi85ZEpTEp9b9mtxoukIDiUOa
-	k/n0ZUvKZckS3XLTWu8w==;
+	List-Owner; bh=qpasc+jvYUl0THVbZovBj4TRxzQUmOP0ZYupDCzG63s=; b=au1TjnTrtK31cx
+	TdtRqr8yf0N/K3O7YJ9aJGZJCBohlItXZMaNqWpNuHvVBdDUX51OSl4zfGSjUHntTTmWFqnokhGqP
+	ZsQ+anzlNh/kVwjcMBLKKuiM23rosLA0JyCPFlXl5KHkO4vXtOTfAFHxQP4gGe4CMmy/1l5Vid1KS
+	bQhznswDptd1Dhk/JdFF1NNrYjLj77zPqacHfa2t9EpkZfnlh2pq7oJj+0RE3/7YnnsJU2Sm8HSoP
+	M44p7xjIDo5qUc8wv56lXRyk695odMGToZ/L4fr4u3TfB0j4+Zzr3to5VryhRusjyIViL6AZy4gfh
+	hmIFbTOWYJvBgfRPxrQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIcUK-0002j7-7C; Thu, 10 Oct 2019 17:44:32 +0000
-Received: from mail-io1-xd41.google.com ([2607:f8b0:4864:20::d41])
+	id 1iIdaP-0002a8-1a; Thu, 10 Oct 2019 18:54:53 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIcUG-0002i9-PV
- for linux-mediatek@lists.infradead.org; Thu, 10 Oct 2019 17:44:30 +0000
-Received: by mail-io1-xd41.google.com with SMTP id c6so15517223ioo.13
- for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 10:44:28 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=DKe45SUxB6hYFAJK4Hzzx9HwPC758qhlQpHJI3tZEIo=;
- b=VWVqLMShkk5AFXL8NAEgE0bqeZexDXkca5zP9VsCIHpGJGP655Ahj59j6PofdbF8yy
- zkXGLQUiQVY2NUUON+mXcdZoaZ16AEqOJUqMfJGAQSARITAkutR4PupxVfwgjhvHFnbd
- oWv1EFdvgCKVUXqmDGsUwNcxvGMa/a/TZNyHk=
+ id 1iIda7-0002Nr-Ks; Thu, 10 Oct 2019 18:54:37 +0000
+Received: by mail-ot1-f67.google.com with SMTP id z6so5833252otb.2;
+ Thu, 10 Oct 2019 11:54:34 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=DKe45SUxB6hYFAJK4Hzzx9HwPC758qhlQpHJI3tZEIo=;
- b=pnT3TIaj5fu1yh2DOnbwix969txWnm9ZXXmkoUBEhwCZnt/3LFbe5pJAemQNE2jOmf
- fC2byBTHGGlvjw3g2jYufXuV/fo6uVyRVtyJ5E58VqkJWbUpxmLvg2xQEXyVXKyfpR87
- Z4y1wsy1Z21uAN0w2OQPJuLhaHANYz6LELXr3BSf4hwOlj6coqODmJlYf2I/gewE9FMP
- ZTdw26eiZiwEpq0hi7hupWgqUFxfJzkkpo485GZhl3cdt/x1x5W+Y/e34uwkzqR6Dub/
- ifiOvgJDXJiDl/BF3d9o04G4NEHRzlAvylVh7g6QNMfGosc2rik13tWwaDaGs29c4zyd
- GwyA==
-X-Gm-Message-State: APjAAAWa+mt/IylhzK4zAWTE7sYpeG34oRgtKRgC54qyjyB2H6Tu4tb+
- RGXAgWGgqJEU6xAr7AkxOS8iLV93q5Y=
-X-Google-Smtp-Source: APXvYqwiiSFJ+18qDiC+c9ColLxrkLaN0tZjNvv4wyJsNbKzRQUBJbkNAQFEVtNPYCVl6VEQkczpVA==
-X-Received: by 2002:a02:ac8e:: with SMTP id x14mr11511353jan.11.1570729466812; 
- Thu, 10 Oct 2019 10:44:26 -0700 (PDT)
-Received: from mail-io1-f48.google.com (mail-io1-f48.google.com.
- [209.85.166.48])
- by smtp.gmail.com with ESMTPSA id j16sm5146869ioe.14.2019.10.10.10.44.25
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 10 Oct 2019 10:44:25 -0700 (PDT)
-Received: by mail-io1-f48.google.com with SMTP id h144so15582638iof.7
- for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 10:44:25 -0700 (PDT)
-X-Received: by 2002:a5d:8991:: with SMTP id m17mr12301165iol.52.1570729464667; 
- Thu, 10 Oct 2019 10:44:24 -0700 (PDT)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=o+zin2bL1A/EltcDjtt8OSEY4VLYK08n8Dj1hQ6Wf2k=;
+ b=nxafwnwjiwC0h3WJqamIpYCmQ8EnyjkZSrAKZbPMQREviRYqLXLtMR4iS3ycWZU95e
+ zjnTroaAY0R1gjOt61F0zCkJImfGpSzoKPvAJ966+TaRH2KDL8YgL4J9Vc90LZJgUdxO
+ 4QBXwnlzFP5iG5U4J3BjLqDiAOo72a1ZK+mSYkEog13Ak3N1hoiIrO72omGglwJFbCwe
+ 1ex6JbVv6fyeYl+inxkb3idX1MhxNNQuh2mDGS+NNHsVrCmNg6KghY45ViWRtrlcWRUJ
+ I9Tv0hMI4KKjg/Y1d05ricP+r5WKjVO2PIowCsdLTc/C4z6NAjLKeKZDhJ+lBvSPp4z5
+ /w0A==
+X-Gm-Message-State: APjAAAWD5kicquEJPH1hIRaeors0dStN1BcnLe9HRZgd6LNjhK5kwNBv
+ Pu5UIVg5HVSfsF9gj/REVQ==
+X-Google-Smtp-Source: APXvYqxQEXGO9Uc01zKUGpeB8t0R+xv3eN1jyvC9TPfe47vyIsyRP58qHhRhPLQG1SNW3RGl2mO7pw==
+X-Received: by 2002:a9d:73d8:: with SMTP id m24mr8810042otk.227.1570733674052; 
+ Thu, 10 Oct 2019 11:54:34 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id r19sm1846829ota.79.2019.10.10.11.54.33
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 10 Oct 2019 11:54:33 -0700 (PDT)
+Date: Thu, 10 Oct 2019 13:54:32 -0500
+From: Rob Herring <robh@kernel.org>
+To: Krzysztof Kozlowski <krzk@kernel.org>
+Subject: Re: [PATCH v3 1/2] dt-bindings: pwm: Convert PWM bindings to
+ json-schema
+Message-ID: <20191010185432.GA17457@bogus>
+References: <20191002164047.14499-1-krzk@kernel.org>
 MIME-Version: 1.0
-References: <20190906060115.9460-1-mark-pk.tsai@mediatek.com>
-In-Reply-To: <20190906060115.9460-1-mark-pk.tsai@mediatek.com>
-From: Doug Anderson <dianders@chromium.org>
-Date: Thu, 10 Oct 2019 10:44:13 -0700
-X-Gmail-Original-Message-ID: <CAD=FV=Vxdnecw2SnUeFpa8Rqq0DSTTeoD_bE1GXk4q37usZ9-w@mail.gmail.com>
-Message-ID: <CAD=FV=Vxdnecw2SnUeFpa8Rqq0DSTTeoD_bE1GXk4q37usZ9-w@mail.gmail.com>
-Subject: Re: [PATCH] perf/hw_breakpoint: Fix arch_hw_breakpoint
- use-before-initialization
-To: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
+Content-Disposition: inline
+In-Reply-To: <20191002164047.14499-1-krzk@kernel.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_104428_849484_89ACB93E 
-X-CRM114-Status: GOOD (  14.19  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191010_115435_683580_BCE7D178 
+X-CRM114-Status: GOOD (  19.42  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d41 listed in]
- [list.dnswl.org]
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.67 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,59 +90,99 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Alix Wu <alix.wu@mediatek.com>, Peter Zijlstra <peterz@infradead.org>,
- YJ Chiang <yj.chiang@mediatek.com>, LKML <linux-kernel@vger.kernel.org>,
- Arnaldo Carvalho de Melo <acme@kernel.org>,
- Alexander Shishkin <alexander.shishkin@linux.intel.com>,
- Ingo Molnar <mingo@redhat.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "stable@vger.kernel.org" <stable@vger.kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, namhyung@kernel.org,
- jolsa@redhat.com, Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ linux-pwm@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-stm32@st-md-mailman.stormreply.com, linux-rockchip@lists.infradead.org,
+ Thierry Reding <thierry.reding@gmail.com>,
+ bcm-kernel-feedback-list@broadcom.com, linux-arm-kernel@lists.infradead.org,
+ Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-riscv@lists.infradead.org, linux-clk@vger.kernel.org,
+ linux-leds@vger.kernel.org, linux-rpi-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
-
-On Thu, Sep 5, 2019 at 11:01 PM Mark-PK Tsai <mark-pk.tsai@mediatek.com> wrote:
->
-> If we disable the compiler's auto-initialization feature
-> (-fplugin-arg-structleak_plugin-byref or -ftrivial-auto-var-init=pattern)
-> is disabled, arch_hw_breakpoint may be used before initialization after
-> the change 9a4903dde2c86.
-> (perf/hw_breakpoint: Split attribute parse and commit)
->
-> On our arm platform, the struct step_ctrl in arch_hw_breakpoint, which
-> used to be zero-initialized by kzalloc, may be used in
-> arch_install_hw_breakpoint without initialization.
->
-> Signed-off-by: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
-> Cc: YJ Chiang <yj.chiang@mediatek.com>
-> Cc: Alix Wu <alix.wu@mediatek.com>
+On Wed, Oct 02, 2019 at 06:40:46PM +0200, Krzysztof Kozlowski wrote:
+> Convert generic PWM bindings to DT schema format using json-schema.  The
+> consumer bindings are split to separate file.
+> 
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
+> 
 > ---
->  kernel/events/hw_breakpoint.c | 4 ++--
->  1 file changed, 2 insertions(+), 2 deletions(-)
+> 
+> Changes since v2:
+> 1. Change also pwm-sprd.txt
+> 
+> Changes since v1:
+> 1. Indent example with four spaces (more readable),
+> 2. Change pattern for pwm nodes,
+> 3. Remove $ref from #cells.
+> ---
 
-Stable should pick this up, please.  It landed in mainline as commit
-310aa0a25b33 ("perf/hw_breakpoint: Fix arch_hw_breakpoint
-use-before-initialization").
 
-* I have confirmed that it cleanly applies to and fixes a kernel based
-on v4.19.75, so picking it back to kernels 4.19+ is the easiest.
+> diff --git a/Documentation/devicetree/bindings/pwm/pwm-consumers.yaml b/Documentation/devicetree/bindings/pwm/pwm-consumers.yaml
+> new file mode 100644
+> index 000000000000..39c844fe6338
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/pwm/pwm-consumers.yaml
+> @@ -0,0 +1,76 @@
+> +# SPDX-License-Identifier: GPL-2.0
+> +%YAML 1.2
+> +---
+> +$id: http://devicetree.org/schemas/pwm/pwm-consumers.yaml#
+> +$schema: http://devicetree.org/meta-schemas/core.yaml#
+> +
+> +title: Specifying PWM information for devices
+> +
+> +maintainers:
+> +  - Thierry Reding <thierry.reding@gmail.com>
+> +
+> +description: |
+> +  PWM properties should be named "pwms". The exact meaning of each pwms
+> +  property must be documented in the device tree binding for each device.
+> +  An optional property "pwm-names" may contain a list of strings to label
+> +  each of the PWM devices listed in the "pwms" property. If no "pwm-names"
+> +  property is given, the name of the user node will be used as fallback.
+> +
+> +  Drivers for devices that use more than a single PWM device can use the
+> +  "pwm-names" property to map the name of the PWM device requested by the
+> +  pwm_get() call to an index into the list given by the "pwms" property.
+> +
+> +properties:
+> +  pwms:
+> +    $ref: /schemas/types.yaml#/definitions/phandle-array
+> +    description: |
+> +      Phandle to PWM controller node and pwm-specifier (controller specific).
+> +      pwm-specifier typically encodes the chip-relative PWM number and the PWM
+> +      period in nanoseconds.
+> +      Optionally, the pwm-specifier can encode a number of flags (defined in
+> +      <dt-bindings/pwm/pwm.h>) in a third cell:
+> +        - PWM_POLARITY_INVERTED: invert the PWM signal polarity
+> +
+> +  pwm-names:
+> +    $ref: /schemas/types.yaml#/definitions/string-array
+> +    description:
+> +      A list of strings to label each of the PWM devices listed in the "pwms"
+> +      property. If no "pwm-names" property is given, the name of the user node
+> +      will be used as fallback.
+> +
+> +required:
+> +  - pwms
 
-* I have confirmed that my test shows that hardware breakpoints fail
-on my arm32 test machine on v4.18.20 and on v4.17.0.  They last worked
-on 4.16.  Picking this patch alone is not sufficient to make 4.17 and
-4.18 work again.  Bisecting shows that the first breakage was the
-merge resolution that happened in commit 2d074918fb15 ("Merge branch
-'perf/urgent' into perf/core").  Specifically both parents of that
-merge passed my test but the result of the merge didn't pass my test.
-If anyone cares about 4.17 and 4.18 at this point, I will leave it as
-an exercise to them to try to get them working again.
+This schema is never applied because it has no 'select' which is only 
+automatic for $nodename or compatible. You could include this from other 
+schemas, but why? Any consumer still has to list these properties to 
+define their specific constraints.
 
--Doug
+We already have a schema in dtschema for consumer side. It's just 
+missing descriptions which needs relicensing from this.
+
+> +
+> +dependencies:
+> +  pwm-names: [ pwms ]
 
 _______________________________________________
 Linux-mediatek mailing list
