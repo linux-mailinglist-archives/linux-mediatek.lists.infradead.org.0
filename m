@@ -2,86 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D7817D3359
-	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 23:24:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6B405D3421
+	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 01:01:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9BHNXvcq8nuDX6fb4U4QlfNUuJCYED6KrqQoFA5+eVY=; b=hHhsrwuMLT9VG1
-	TwTMG0scbsx1nkzM3yWWtHU85Cd5Dg3mG7tnhL6rb3x5AtKj9Z6utRE+hyxUC4VRXt1i37y8S+BeF
-	PygkjuTM4gjDYKFOGbNrlaknJNIoJicMtgo4IdcGC2X2amOILhiUIfN82i0w7M1yswLsN/Smhacr/
-	xvK0qa4OsYBzK/82b0v+tV0jujSo0b4y/EtNDbI8WO1epgUrg22+B9OccDFDFFyT+hBItJZtTClhk
-	RexASZdhGrM6HsziOYXroPEKH+RkvpGurzBmvLEv0POTc8pzvkBRSkFUbZqKMbdbeYX+7HG11nUXC
-	ubLKP5k6yWHj8JO8FGzg==;
+	List-Owner; bh=5JZA92wATMY/oZWpZXzKgz+q0dJ2D50D4NiOjMA5YDg=; b=BX7ojiWgq8Hl/y
+	oB2ep9HMrytK4RNLJPbOAvTF+DiGMYSTdvAcQvZq5Agxoeptn4aA/9JzISfC+3lyCP5Qp1yVLuwaM
+	3UiGu9Vd5xgOtHCR/jjssDAy4nJRtCTYTWReZ/99xnitT/HzlDntJloWwN1+Q7lSkHpPtnB37WkYp
+	/JalKJJt7r/CwRH8XDuI+XkbCVHa9pWr76PyTuFFbdtnIUFsUD/p4rVbh0ATWNQuGc+F3nACkj0vo
+	UZokxESwY7WTgk9io+me7JgMJ+rUnVP+2KylrqELeB/VFfqG1HQSvMFTbBwpAnnVwNI0Ms+2aPyR5
+	wzE98kJmsT/ELKTIpicw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIfuy-000561-4P; Thu, 10 Oct 2019 21:24:16 +0000
-Received: from mail-ot1-f67.google.com ([209.85.210.67])
+	id 1iIhR5-0001mM-KQ; Thu, 10 Oct 2019 23:01:31 +0000
+Received: from mail-qt1-x843.google.com ([2607:f8b0:4864:20::843])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIfuW-0004os-GX; Thu, 10 Oct 2019 21:23:49 +0000
-Received: by mail-ot1-f67.google.com with SMTP id c10so6182351otd.9;
- Thu, 10 Oct 2019 14:23:47 -0700 (PDT)
+ id 1iIhQv-0001eK-FJ
+ for linux-mediatek@lists.infradead.org; Thu, 10 Oct 2019 23:01:23 +0000
+Received: by mail-qt1-x843.google.com with SMTP id c21so11136014qtj.12
+ for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=netronome-com.20150623.gappssmtp.com; s=20150623;
+ h=date:from:to:cc:subject:message-id:in-reply-to:references
+ :organization:mime-version:content-transfer-encoding;
+ bh=hKb1hJiJoZr7sDzi9awmt+z6YG7rgK/yyFTSM1pIHvc=;
+ b=rBl0cx6+eIElwhvMYT30TfWDTrbVzMZqR9vc1u08+8UkgRFWwsWJItiHPlbIz75bbO
+ yjErSPaO+d+mOXOukCkpOiBJnqGmHKu50/Uyz9FW/epJCtKe8478nPgRPB6CcvAY1a1I
+ Ceuu7vL7cH8gJEFTgdiOM8xNWMPqzJ4hpm14bppd6CQU3FROOOIgnoJhKh5GJ4rvJ7G7
+ trLU5f3s1a3fEC2JtQtzqks393lZwdH9IdblrWwCQZ01vQ7JRdlrHsiigbRxkJSzRSvm
+ +LnPGfJbwjrZh5kS1fHLpLjgKlFwoFNpuGaKfGkNdVIg8LEUr2UFHovhiakkDrFMacbh
+ yd9A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=8fsaLFcYDAROH9HBoKC5Vafqp1MCH4HA/pJSglSZ4co=;
- b=Ikr8y4tahww0r7NdaMKm/bIUoy82koYjlEOmrlzoedKPc6BJKfHyXmhNjoDypSueb+
- MRYwi/haqAjrfx0e5+YXUH+XrfVjFBaYS/Tpm2NnFzw0lsiBmKS+UfHB2CeQ+ZdbEEbx
- VDcYQJ+UX4TqwSn/qH47+iYYTy9UBa2bE5so/umDIjBk99Lv0+VOqdax8PAMu+Tpkw+9
- XoC1wJYcaZFOtbD0f7zKEB+I49AgbEgQNxueI9MHB3rUicQjVwWI4YM7razd83rzCcu6
- M93Q/0BzqFAUcSWoZbLk5MsgluQqnZxKo5VNZQQnz69HRFTT/vFZ15CnJJFsk0oVfYXt
- cqVw==
-X-Gm-Message-State: APjAAAXq3Ux7zOa1CU9BSCp9sfW0ilMU8T3vOGgx/d/XDekWcrLLpnTJ
- hbUmQRSKpBzPcCFQIlF0rg==
-X-Google-Smtp-Source: APXvYqyIyxVe/QML8xBJW19srjEWY1fzMm01BIPfEyxogOHEBtnRrO0q0z3M7piA63qkH2laitZG7g==
-X-Received: by 2002:a05:6830:13d8:: with SMTP id
- e24mr9348918otq.42.1570742627232; 
- Thu, 10 Oct 2019 14:23:47 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id v132sm2027358oif.34.2019.10.10.14.23.46
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:in-reply-to
+ :references:organization:mime-version:content-transfer-encoding;
+ bh=hKb1hJiJoZr7sDzi9awmt+z6YG7rgK/yyFTSM1pIHvc=;
+ b=n8cg0vIR+tvLqqz2K9w0CmhiUq5o8V/IYku5bjVIwzOPs3w0Z7ULffETLGgielq/6a
+ +WoWRRr0GbrxYY/6oYOaVthk3kI1XjX/6Feg+5VE6Qkt4CJZHrQSi9UrLIzIFMENU9q5
+ j0aLutbX4gzld9uRHtZkA3vMxpk0sg05kqbnM0RMUk1XHzBO+nr/mamuPJIea2D+K4VR
+ yGdvSzwORdDw/eRafRMqrjpRCg5g+8R1VqMM1yAQajJEoFN343ssscKDZo5NYU7T/b3W
+ FMmQOXLQkXOeEpSFEktGgA9hdObbzsSnY/FXZO+aNMiljTWBnrNCfSnblXCCkm75IgRN
+ Sl4g==
+X-Gm-Message-State: APjAAAUTzA+e28gHHcRk8J+QKL6OK/8VlhRo7UD6inIxCgWw6xJOE1z1
+ IhkWnCO7b1pR573Q0zVxIjzq3Q==
+X-Google-Smtp-Source: APXvYqzlvVcUTrNNKzaif/kXN8GZwkAMecaGfYJIaGrr9Y2IjFLnQDpHQHTA/hY/Sd8K4BincCEN3w==
+X-Received: by 2002:a0c:f8cd:: with SMTP id h13mr12808457qvo.53.1570748480202; 
+ Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
+Received: from cakuba.netronome.com ([66.60.152.14])
+ by smtp.gmail.com with ESMTPSA id 64sm3058098qkk.63.2019.10.10.16.01.18
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 10 Oct 2019 14:23:46 -0700 (PDT)
-Date: Thu, 10 Oct 2019 16:23:46 -0500
-From: Rob Herring <robh@kernel.org>
-To: Krzysztof Kozlowski <krzk@kernel.org>
-Subject: Re: [PATCH v2 4/8] dt-bindings: memory-controllers: Convert Samsung
- Exynos SROM bindings to json-schema
-Message-ID: <20191010212346.GA7896@bogus>
-References: <20190918173141.4314-1-krzk@kernel.org>
- <20190918173141.4314-4-krzk@kernel.org>
+ Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
+Date: Thu, 10 Oct 2019 16:01:03 -0700
+From: Jakub Kicinski <jakub.kicinski@netronome.com>
+To: Biao Huang <biao.huang@mediatek.com>
+Subject: Re: [PATCH] net: stmmac: disable/enable ptp_ref_clk in
+ suspend/resume flow
+Message-ID: <20191010160103.63c3c0ed@cakuba.netronome.com>
+In-Reply-To: <20191009085649.6736-1-biao.huang@mediatek.com>
+References: <20191009085649.6736-1-biao.huang@mediatek.com>
+Organization: Netronome Systems, Ltd.
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190918173141.4314-4-krzk@kernel.org>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_142348_549724_71DB2627 
-X-CRM114-Status: UNSURE (   9.31  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20191010_160121_572780_7500EC87 
+X-CRM114-Status: GOOD (  13.51  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.67 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:843 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.67 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,51 +93,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
- dri-devel@lists.freedesktop.org, Thierry Reding <thierry.reding@gmail.com>,
- linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
- linux-leds@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- Herbert Xu <herbert@gondor.apana.org.au>,
- Krzysztof Kozlowski <krzk@kernel.org>, linux-clk@vger.kernel.org,
- linux-rockchip@lists.infradead.org, bcm-kernel-feedback-list@broadcom.com,
- Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
- linux-watchdog@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-rpi-kernel@lists.infradead.org, Matt Mackall <mpm@selenic.com>,
- linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- Wim Van Sebroeck <wim@linux-watchdog.org>,
- linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-crypto@vger.kernel.org
+Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
+ Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
+ linux-mediatek@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 18 Sep 2019 19:31:37 +0200, Krzysztof Kozlowski wrote:
-> Convert Samsung Exynos SROM controller bindings to DT schema format
-> using json-schema.
+On Wed, 9 Oct 2019 16:56:49 +0800, Biao Huang wrote:
+> disable ptp_ref_clk in suspend flow, and enable it in resume flow.
 > 
-> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
-> 
+> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
 > ---
+>  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c | 4 ++++
+>  1 file changed, 4 insertions(+)
 > 
-> Changes since v1:
-> 1. Indent example with four spaces (more readable),
-> 2. Split examples into two,
-> 3. Fix pattern for subnode name,
-> 4. Remove checks for #address-cells-ranges-#size-cells,
-> 5. Add "additionalProperties" so the wrongly named subnodes would be
->    matched.
-> ---
->  .../memory-controllers/exynos-srom.txt        |  79 -----------
->  .../memory-controllers/exynos-srom.yaml       | 128 ++++++++++++++++++
->  2 files changed, 128 insertions(+), 79 deletions(-)
->  delete mode 100644 Documentation/devicetree/bindings/memory-controllers/exynos-srom.txt
->  create mode 100644 Documentation/devicetree/bindings/memory-controllers/exynos-srom.yaml
-> 
+> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> index c7c9e5f162e6..b592aeecc3dd 100644
+> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> @@ -4469,6 +4469,8 @@ int stmmac_suspend(struct device *dev)
+>  		stmmac_mac_set(priv, priv->ioaddr, false);
+>  		pinctrl_pm_select_sleep_state(priv->device);
+>  		/* Disable clock in case of PWM is off */
+> +		if (priv->plat->clk_ptp_ref)
+> +			clk_disable_unprepare(priv->plat->clk_ptp_ref);
 
-Applied, thanks.
+I don't know much embedded, but it seems like this should perhaps just
+be clk_disable() without the unprepare? stmmac_hw_teardown() is called
+when driver is removed so it needs to unprepare as well.
 
-Rob
+Please feel free to explain to me why this needs to be
+clk_disable_unprepare(), as I said - not an expert.
+
+Also - if this is a bug fix and you'd like to have it backported to
+older releases you need to add a Fixes tag.
+
+Thanks!
+
+>  		clk_disable(priv->plat->pclk);
+>  		clk_disable(priv->plat->stmmac_clk);
+>  	}
+> @@ -4535,6 +4537,8 @@ int stmmac_resume(struct device *dev)
+>  		/* enable the clk previously disabled */
+>  		clk_enable(priv->plat->stmmac_clk);
+>  		clk_enable(priv->plat->pclk);
+> +		if (priv->plat->clk_ptp_ref)
+> +			clk_prepare_enable(priv->plat->clk_ptp_ref);
+>  		/* reset the phy so that it's ready */
+>  		if (priv->mii)
+>  			stmmac_mdio_reset(priv->mii);
+
 
 _______________________________________________
 Linux-mediatek mailing list
