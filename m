@@ -2,66 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BD7B9D27A0
-	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 12:59:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 079B9D2FB9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 19:44:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WX9ICieEpKDd3GCEDwHji8qdawwnCSXZIuHUGMbiDEM=; b=DBlmU3wDe8vtBl
-	u+njidvH4IDnKL6yaRzQwOY59rT7dGKj0xlKneboHqqzHK8S700swdsWekhRCJjWgo7HuIPH0CJ9e
-	UNVfVOUNBD/1TDDtIsiUjlYMgsaKlN4nqdiVzcPDkg19WLMgbfPqZuUirIC1piW2dwByJy0sxtvpc
-	R+yYPM+Is8WFgoerdTKRbdhFWo1uAmUDRJs4wAinCvtE2B1vEXVTSNxKJQO7Kcix+6xB6tc+gIFl0
-	PrZ9uHUX743Y5JO/fJe4npGFZt3+YBT/A/YoCZWqQFpbrwltC74q9y5HCFNWFX4Htj+CHZ9Y7swIP
-	v4wm1/JZAKB3vyR5WFsA==;
+	List-Owner; bh=4Cs+y0Omtwdr6ZfE4AnEb/wYSzpcByBpTjlk8NFpza4=; b=OvtCdnITyn27eo
+	MLfMqS8domOJMe+/8kipGdbdYzfJJgxuxMrFY1ZUYOHx7zwAq+/DplbsFLLcLvYbbCQsudlqPuSPB
+	lY4o5A2iC57PIRiiDg8XjmZBp5Pfi8FUZCwWR4orSznnJrrAqlXBTt7HmSdvYmubRsZMkTBfP3oEh
+	YqL8kq4MWJL97Z8yvMyBusFKRObsu643xFimg6t0rt/+6udlysTcKmuzevlfwzVxdDsqIUEuBTvkT
+	X5ZDone+o9B2ZEuORjN6VV1/FopSBmgwvy7EGztBzNrdC6TLMslBAi85ZEpTEp9b9mtxoukIDiUOa
+	k/n0ZUvKZckS3XLTWu8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIWAC-0003VR-30; Thu, 10 Oct 2019 10:59:20 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iIcUK-0002j7-7C; Thu, 10 Oct 2019 17:44:32 +0000
+Received: from mail-io1-xd41.google.com ([2607:f8b0:4864:20::d41])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIWA9-0003V1-Gg; Thu, 10 Oct 2019 10:59:18 +0000
-X-UUID: 026d31f7994a420e9feb4baf2b1d3961-20191010
-X-UUID: 026d31f7994a420e9feb4baf2b1d3961-20191010
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 346567160; Thu, 10 Oct 2019 02:59:22 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 10 Oct 2019 03:59:08 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Thu, 10 Oct 2019 18:59:05 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 10 Oct 2019 18:59:05 +0800
-Message-ID: <1570705147.22261.13.camel@mhfsdcap03>
-Subject: Re: [PATCH] usb: mtk-xhci: Set the XHCI_NO_64BIT_SUPPORT quirk
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Thu, 10 Oct 2019 18:59:07 +0800
-In-Reply-To: <CAAFQd5AU53=BRUrK_i-0dRYueVoSd3Bg3AtvZUMHgFv3hLuNug@mail.gmail.com>
-References: <20191010075004.192818-1-tfiga@chromium.org>
- <1570697118.32135.20.camel@mhfsdcap03>
- <CAAFQd5AU53=BRUrK_i-0dRYueVoSd3Bg3AtvZUMHgFv3hLuNug@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1iIcUG-0002i9-PV
+ for linux-mediatek@lists.infradead.org; Thu, 10 Oct 2019 17:44:30 +0000
+Received: by mail-io1-xd41.google.com with SMTP id c6so15517223ioo.13
+ for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 10:44:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=DKe45SUxB6hYFAJK4Hzzx9HwPC758qhlQpHJI3tZEIo=;
+ b=VWVqLMShkk5AFXL8NAEgE0bqeZexDXkca5zP9VsCIHpGJGP655Ahj59j6PofdbF8yy
+ zkXGLQUiQVY2NUUON+mXcdZoaZ16AEqOJUqMfJGAQSARITAkutR4PupxVfwgjhvHFnbd
+ oWv1EFdvgCKVUXqmDGsUwNcxvGMa/a/TZNyHk=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=DKe45SUxB6hYFAJK4Hzzx9HwPC758qhlQpHJI3tZEIo=;
+ b=pnT3TIaj5fu1yh2DOnbwix969txWnm9ZXXmkoUBEhwCZnt/3LFbe5pJAemQNE2jOmf
+ fC2byBTHGGlvjw3g2jYufXuV/fo6uVyRVtyJ5E58VqkJWbUpxmLvg2xQEXyVXKyfpR87
+ Z4y1wsy1Z21uAN0w2OQPJuLhaHANYz6LELXr3BSf4hwOlj6coqODmJlYf2I/gewE9FMP
+ ZTdw26eiZiwEpq0hi7hupWgqUFxfJzkkpo485GZhl3cdt/x1x5W+Y/e34uwkzqR6Dub/
+ ifiOvgJDXJiDl/BF3d9o04G4NEHRzlAvylVh7g6QNMfGosc2rik13tWwaDaGs29c4zyd
+ GwyA==
+X-Gm-Message-State: APjAAAWa+mt/IylhzK4zAWTE7sYpeG34oRgtKRgC54qyjyB2H6Tu4tb+
+ RGXAgWGgqJEU6xAr7AkxOS8iLV93q5Y=
+X-Google-Smtp-Source: APXvYqwiiSFJ+18qDiC+c9ColLxrkLaN0tZjNvv4wyJsNbKzRQUBJbkNAQFEVtNPYCVl6VEQkczpVA==
+X-Received: by 2002:a02:ac8e:: with SMTP id x14mr11511353jan.11.1570729466812; 
+ Thu, 10 Oct 2019 10:44:26 -0700 (PDT)
+Received: from mail-io1-f48.google.com (mail-io1-f48.google.com.
+ [209.85.166.48])
+ by smtp.gmail.com with ESMTPSA id j16sm5146869ioe.14.2019.10.10.10.44.25
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 10 Oct 2019 10:44:25 -0700 (PDT)
+Received: by mail-io1-f48.google.com with SMTP id h144so15582638iof.7
+ for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 10:44:25 -0700 (PDT)
+X-Received: by 2002:a5d:8991:: with SMTP id m17mr12301165iol.52.1570729464667; 
+ Thu, 10 Oct 2019 10:44:24 -0700 (PDT)
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 22103D692A22632CE9D6326047F5847FE331FD0A1A6C3940FCDD3CC5289A2D152000:8
-X-MTK: N
+References: <20190906060115.9460-1-mark-pk.tsai@mediatek.com>
+In-Reply-To: <20190906060115.9460-1-mark-pk.tsai@mediatek.com>
+From: Doug Anderson <dianders@chromium.org>
+Date: Thu, 10 Oct 2019 10:44:13 -0700
+X-Gmail-Original-Message-ID: <CAD=FV=Vxdnecw2SnUeFpa8Rqq0DSTTeoD_bE1GXk4q37usZ9-w@mail.gmail.com>
+Message-ID: <CAD=FV=Vxdnecw2SnUeFpa8Rqq0DSTTeoD_bE1GXk4q37usZ9-w@mail.gmail.com>
+Subject: Re: [PATCH] perf/hw_breakpoint: Fix arch_hw_breakpoint
+ use-before-initialization
+To: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_035917_553870_15AA3A5F 
-X-CRM114-Status: GOOD (  25.03  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191010_104428_849484_89ACB93E 
+X-CRM114-Status: GOOD (  14.19  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:d41 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,113 +99,59 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@chromium.org>,
- Changqi Hu <Changqi.Hu@mediatek.com>, Mathias Nyman <mathias.nyman@intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- open list <linux-kernel@vger.kernel.org>, Shik Chen <shik@chromium.org>,
- "moderated list:ARM/Mediatek SoC
- support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: Alix Wu <alix.wu@mediatek.com>, Peter Zijlstra <peterz@infradead.org>,
+ YJ Chiang <yj.chiang@mediatek.com>, LKML <linux-kernel@vger.kernel.org>,
+ Arnaldo Carvalho de Melo <acme@kernel.org>,
+ Alexander Shishkin <alexander.shishkin@linux.intel.com>,
+ Ingo Molnar <mingo@redhat.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ "stable@vger.kernel.org" <stable@vger.kernel.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, namhyung@kernel.org,
+ jolsa@redhat.com, Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2019-10-10 at 18:00 +0900, Tomasz Figa wrote:
-> Hi Chunfeng,
-> 
-> On Thu, Oct 10, 2019 at 5:45 PM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
-> >
-> > Hi, Tomasz,
-> >
-> > On Thu, 2019-10-10 at 16:50 +0900, Tomasz Figa wrote:
-> > > MediaTek XHCI host controller does not support 64-bit addressing despite
-> > > the AC64 bit of HCCPARAMS1 register being set. The platform-specific
-> > > glue sets the DMA mask to 32 bits on its own, but it has no effect,
-> > > because xhci_gen_setup() overrides it according to hardware
-> > > capabilities.
-Yes, this is what I want to do, maybe need remove DMA mask setting in
-platform-specific.
+Hi,
 
-> > >
-> > > Use the XHCI_NO_64BIT_SUPPORT quirk to tell the XHCI core to force
-> > > 32-bit DMA mask instead.
-> > >
-> > > Signed-off-by: Tomasz Figa <tfiga@chromium.org>
-> > > ---
-> > >  drivers/usb/host/xhci-mtk.c | 10 +++++-----
-> > >  1 file changed, 5 insertions(+), 5 deletions(-)
-> > >
-> > > diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
-> > > index b18a6baef204a..4d101d52cc11b 100644
-> > > --- a/drivers/usb/host/xhci-mtk.c
-> > > +++ b/drivers/usb/host/xhci-mtk.c
-> > > @@ -395,6 +395,11 @@ static void xhci_mtk_quirks(struct device *dev, struct xhci_hcd *xhci)
-> > >       xhci->quirks |= XHCI_SPURIOUS_SUCCESS;
-> > >       if (mtk->lpm_support)
-> > >               xhci->quirks |= XHCI_LPM_SUPPORT;
-> > > +     /*
-> > > +      * MTK host controller does not support 64-bit addressing, despite
-> > > +      * having the AC64 bit of the HCCPARAMS1 register set.
-> > > +      */
-> > > +     xhci->quirks |= XHCI_NO_64BIT_SUPPORT;
-> > Somes SoCs support 64bits in fact, so can't support this quirk, do you
-> > encounter any issues without this quirk?
-> >
-> 
-> Thanks for taking a look at this patch.
-> 
-> Yes, on MT8183 the DMA mask ended up being set to 64 bits, but
-> according to the information I received from MediaTek, the controller
-> on that SoC only supports 32 bits.
-As I know, mt8183 doesn't support memory greater than 4G mode.
+On Thu, Sep 5, 2019 at 11:01 PM Mark-PK Tsai <mark-pk.tsai@mediatek.com> wrote:
+>
+> If we disable the compiler's auto-initialization feature
+> (-fplugin-arg-structleak_plugin-byref or -ftrivial-auto-var-init=pattern)
+> is disabled, arch_hw_breakpoint may be used before initialization after
+> the change 9a4903dde2c86.
+> (perf/hw_breakpoint: Split attribute parse and commit)
+>
+> On our arm platform, the struct step_ctrl in arch_hw_breakpoint, which
+> used to be zero-initialized by kzalloc, may be used in
+> arch_install_hw_breakpoint without initialization.
+>
+> Signed-off-by: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
+> Cc: YJ Chiang <yj.chiang@mediatek.com>
+> Cc: Alix Wu <alix.wu@mediatek.com>
+> ---
+>  kernel/events/hw_breakpoint.c | 4 ++--
+>  1 file changed, 2 insertions(+), 2 deletions(-)
 
-> 
-> If some SoCs support only 32 bits and some support 64 bits, we may
-> either need to use different DT compatible string for them or add a DT
-> property and set the quirk based on that. Right now in upstream we
-> have:
-> 
-> 1) "mediatek,mt8173-xhci", used by:
-> MT8173
-> 
-> 2)"mediatek,mtk-xhci", used by:
-> MT2712
-> MT7622
-> MT8183 (not yet upstream, but I suppose it's on the mailing lists)
-> 
-> Would you be able to check which of the SoCs above report 64 bits but
-> support only 32? (and so would need this quirk)
-I'm afraid I can't, almost all MTK SoCs supporting xHCI are using this
-driver, AC64 should be set rightly according to addressing capability.
+Stable should pick this up, please.  It landed in mainline as commit
+310aa0a25b33 ("perf/hw_breakpoint: Fix arch_hw_breakpoint
+use-before-initialization").
 
- 
-> 
-> Best regards,
-> Tomasz
-> 
-> > >  }
-> >
-> > >
-> > >  /* called during probe() after chip reset completes */
-> > > @@ -488,11 +493,6 @@ static int xhci_mtk_probe(struct platform_device *pdev)
-> > >               goto disable_clk;
-> > >       }
-> > >
-> > > -     /* Initialize dma_mask and coherent_dma_mask to 32-bits */
-> > > -     ret = dma_set_mask_and_coherent(dev, DMA_BIT_MASK(32));
-> > > -     if (ret)
-> > > -             goto disable_clk;
-> > > -
-> > >       hcd = usb_create_hcd(driver, dev, dev_name(dev));
-> > >       if (!hcd) {
-> > >               ret = -ENOMEM;
-> >
-> >
+* I have confirmed that it cleanly applies to and fixes a kernel based
+on v4.19.75, so picking it back to kernels 4.19+ is the easiest.
 
+* I have confirmed that my test shows that hardware breakpoints fail
+on my arm32 test machine on v4.18.20 and on v4.17.0.  They last worked
+on 4.16.  Picking this patch alone is not sufficient to make 4.17 and
+4.18 work again.  Bisecting shows that the first breakage was the
+merge resolution that happened in commit 2d074918fb15 ("Merge branch
+'perf/urgent' into perf/core").  Specifically both parents of that
+merge passed my test but the result of the merge didn't pass my test.
+If anyone cares about 4.17 and 4.18 at this point, I will leave it as
+an exercise to them to try to get them working again.
 
+-Doug
 
 _______________________________________________
 Linux-mediatek mailing list
