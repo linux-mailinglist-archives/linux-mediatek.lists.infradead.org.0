@@ -2,77 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E3C52D310D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 20:59:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D7817D3359
+	for <lists+linux-mediatek@lfdr.de>; Thu, 10 Oct 2019 23:24:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OZ/0e5oJ7zdka726fZ0i4sv+6dnJAQjyqoxPiJyt/P0=; b=sqMXSTnKToyqF9
-	GK6VsYFgeSvpGs9gmgkxUunnGcvKF6qLCC9kCr055wOeHxBidXpEZEXwzDNyeJUnd3B94YAOvoWAS
-	UbN67uf3yVlGbIljq3mhsxxPNZNOTF4qdHCOHdBqc8x7zFM91bgexQk5tsP/XSPeQcN+jzICxcrUl
-	WjVIs5j5Vn9NIxjvy8KSdz1efeW3MkbMXHx/ns7Nag0nF1DaTJ45SmmrhBc+/B7r2WFLKeIn/EVed
-	u1IOtemlPg7Tl8E/FWnYzGTnf1ydJqfRYhzaQuNoz/DBUjzHqM7MURObSzQqA9VgM/fq21PY68SJi
-	Osymwx3FteoTz2nC6FSQ==;
+	List-Owner; bh=9BHNXvcq8nuDX6fb4U4QlfNUuJCYED6KrqQoFA5+eVY=; b=hHhsrwuMLT9VG1
+	TwTMG0scbsx1nkzM3yWWtHU85Cd5Dg3mG7tnhL6rb3x5AtKj9Z6utRE+hyxUC4VRXt1i37y8S+BeF
+	PygkjuTM4gjDYKFOGbNrlaknJNIoJicMtgo4IdcGC2X2amOILhiUIfN82i0w7M1yswLsN/Smhacr/
+	xvK0qa4OsYBzK/82b0v+tV0jujSo0b4y/EtNDbI8WO1epgUrg22+B9OccDFDFFyT+hBItJZtTClhk
+	RexASZdhGrM6HsziOYXroPEKH+RkvpGurzBmvLEv0POTc8pzvkBRSkFUbZqKMbdbeYX+7HG11nUXC
+	ubLKP5k6yWHj8JO8FGzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIdeO-0004lB-6f; Thu, 10 Oct 2019 18:59:00 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1iIfuy-000561-4P; Thu, 10 Oct 2019 21:24:16 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIde7-0004Yh-5i; Thu, 10 Oct 2019 18:58:44 +0000
-Received: from mail-qt1-f172.google.com (mail-qt1-f172.google.com
- [209.85.160.172])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 16C3421A4A;
- Thu, 10 Oct 2019 18:58:42 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1570733922;
- bh=C3qJQMyjD9A/GMvJ52P6U8GDKE7BNVgB4aq0nJUK3Tc=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=x9hnp5Xo4bB1M1JWF8/BAZab4UX1ziPUvnFgk/cPG/ZALiC2ezbfWSIK9WfrWnqxU
- Be8N6AeS7oihMOahkrPHOI0whlDuASFXutW+vuKo6b1R/NAzZ/WsV5JfutdIEk6dPX
- j9KYoQjQg6HQBC03nBIRN41NzOebPx9rSvB/Ja9M=
-Received: by mail-qt1-f172.google.com with SMTP id l51so9980029qtc.4;
- Thu, 10 Oct 2019 11:58:42 -0700 (PDT)
-X-Gm-Message-State: APjAAAVetRWIqqbGQNzHRFkNnBBSHasQoKdoD23L9/7wdTiWpZH5d60u
- PqVYP9TPE64RqnunwTRNlULJV4eXpU2mn/tB/w==
-X-Google-Smtp-Source: APXvYqzB5TzRKwoOcFcNVQukkGMmMU2iFIhyKCekwRBNJHWn3GTHP/CmHznLTqw+AnmCr8x0PiE1VBXV/9mGgldc2YU=
-X-Received: by 2002:ad4:5044:: with SMTP id m4mr12009044qvq.85.1570733921147; 
- Thu, 10 Oct 2019 11:58:41 -0700 (PDT)
-MIME-Version: 1.0
-References: <20191002164047.14499-1-krzk@kernel.org>
- <20191002164047.14499-2-krzk@kernel.org>
-In-Reply-To: <20191002164047.14499-2-krzk@kernel.org>
-From: Rob Herring <robh+dt@kernel.org>
-Date: Thu, 10 Oct 2019 13:58:30 -0500
-X-Gmail-Original-Message-ID: <CAL_Jsq+Fa1+epSvDpSx4NdzOUohoJR+qR3-xyMTTw4LaOK7AbQ@mail.gmail.com>
-Message-ID: <CAL_Jsq+Fa1+epSvDpSx4NdzOUohoJR+qR3-xyMTTw4LaOK7AbQ@mail.gmail.com>
-Subject: Re: [PATCH v3 2/2] dt-bindings: pwm: Convert Samsung PWM bindings to
- json-schema
+ id 1iIfuW-0004os-GX; Thu, 10 Oct 2019 21:23:49 +0000
+Received: by mail-ot1-f67.google.com with SMTP id c10so6182351otd.9;
+ Thu, 10 Oct 2019 14:23:47 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=8fsaLFcYDAROH9HBoKC5Vafqp1MCH4HA/pJSglSZ4co=;
+ b=Ikr8y4tahww0r7NdaMKm/bIUoy82koYjlEOmrlzoedKPc6BJKfHyXmhNjoDypSueb+
+ MRYwi/haqAjrfx0e5+YXUH+XrfVjFBaYS/Tpm2NnFzw0lsiBmKS+UfHB2CeQ+ZdbEEbx
+ VDcYQJ+UX4TqwSn/qH47+iYYTy9UBa2bE5so/umDIjBk99Lv0+VOqdax8PAMu+Tpkw+9
+ XoC1wJYcaZFOtbD0f7zKEB+I49AgbEgQNxueI9MHB3rUicQjVwWI4YM7razd83rzCcu6
+ M93Q/0BzqFAUcSWoZbLk5MsgluQqnZxKo5VNZQQnz69HRFTT/vFZ15CnJJFsk0oVfYXt
+ cqVw==
+X-Gm-Message-State: APjAAAXq3Ux7zOa1CU9BSCp9sfW0ilMU8T3vOGgx/d/XDekWcrLLpnTJ
+ hbUmQRSKpBzPcCFQIlF0rg==
+X-Google-Smtp-Source: APXvYqyIyxVe/QML8xBJW19srjEWY1fzMm01BIPfEyxogOHEBtnRrO0q0z3M7piA63qkH2laitZG7g==
+X-Received: by 2002:a05:6830:13d8:: with SMTP id
+ e24mr9348918otq.42.1570742627232; 
+ Thu, 10 Oct 2019 14:23:47 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id v132sm2027358oif.34.2019.10.10.14.23.46
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 10 Oct 2019 14:23:46 -0700 (PDT)
+Date: Thu, 10 Oct 2019 16:23:46 -0500
+From: Rob Herring <robh@kernel.org>
 To: Krzysztof Kozlowski <krzk@kernel.org>
+Subject: Re: [PATCH v2 4/8] dt-bindings: memory-controllers: Convert Samsung
+ Exynos SROM bindings to json-schema
+Message-ID: <20191010212346.GA7896@bogus>
+References: <20190918173141.4314-1-krzk@kernel.org>
+ <20190918173141.4314-4-krzk@kernel.org>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190918173141.4314-4-krzk@kernel.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_115843_236255_9E885257 
-X-CRM114-Status: GOOD (  10.31  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20191010_142348_549724_71DB2627 
+X-CRM114-Status: UNSURE (   9.31  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.67 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,53 +93,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Linux PWM List <linux-pwm@vger.kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- dri-devel <dri-devel@lists.freedesktop.org>,
- linux-stm32@st-md-mailman.stormreply.com,
- "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
- Thierry Reding <thierry.reding@gmail.com>,
- "maintainer:BROADCOM BCM7XXX ARM ARCHITECTURE"
- <bcm-kernel-feedback-list@broadcom.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>,
- =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
+Cc: Mark Rutland <mark.rutland@arm.com>, linux-pwm@vger.kernel.org,
+ dri-devel@lists.freedesktop.org, Thierry Reding <thierry.reding@gmail.com>,
+ linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-leds@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
+ Herbert Xu <herbert@gondor.apana.org.au>,
+ Krzysztof Kozlowski <krzk@kernel.org>, linux-clk@vger.kernel.org,
+ linux-rockchip@lists.infradead.org, bcm-kernel-feedback-list@broadcom.com,
+ Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-rpi-kernel@lists.infradead.org, Matt Mackall <mpm@selenic.com>,
  linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-riscv@lists.infradead.org, linux-clk <linux-clk@vger.kernel.org>,
- Linux LED Subsystem <linux-leds@vger.kernel.org>,
- "moderated list:BROADCOM BCM2835 ARM ARCHITECTURE"
- <linux-rpi-kernel@lists.infradead.org>
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-crypto@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Oct 2, 2019 at 11:41 AM Krzysztof Kozlowski <krzk@kernel.org> wrote:
->
-> Convert Samsung PWM (S3C, S5P and Exynos SoCs) bindings to DT schema
-> format using json-schema.
->
+On Wed, 18 Sep 2019 19:31:37 +0200, Krzysztof Kozlowski wrote:
+> Convert Samsung Exynos SROM controller bindings to DT schema format
+> using json-schema.
+> 
 > Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
->
+> 
 > ---
->
-> Changes since v2:
-> 1. Add additionalProperties: false.
->
+> 
 > Changes since v1:
 > 1. Indent example with four spaces (more readable),
-> 2. Fix samsung,pwm-outputs after review,
-> 3. Remove double-quotes from clock names.
+> 2. Split examples into two,
+> 3. Fix pattern for subnode name,
+> 4. Remove checks for #address-cells-ranges-#size-cells,
+> 5. Add "additionalProperties" so the wrongly named subnodes would be
+>    matched.
 > ---
->  .../devicetree/bindings/pwm/pwm-samsung.txt   |  51 --------
->  .../devicetree/bindings/pwm/pwm-samsung.yaml  | 109 ++++++++++++++++++
->  2 files changed, 109 insertions(+), 51 deletions(-)
->  delete mode 100644 Documentation/devicetree/bindings/pwm/pwm-samsung.txt
->  create mode 100644 Documentation/devicetree/bindings/pwm/pwm-samsung.yaml
+>  .../memory-controllers/exynos-srom.txt        |  79 -----------
+>  .../memory-controllers/exynos-srom.yaml       | 128 ++++++++++++++++++
+>  2 files changed, 128 insertions(+), 79 deletions(-)
+>  delete mode 100644 Documentation/devicetree/bindings/memory-controllers/exynos-srom.txt
+>  create mode 100644 Documentation/devicetree/bindings/memory-controllers/exynos-srom.yaml
+> 
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Applied, thanks.
+
+Rob
 
 _______________________________________________
 Linux-mediatek mailing list
