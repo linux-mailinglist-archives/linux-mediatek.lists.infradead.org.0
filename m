@@ -2,59 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 995F8D39B1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 08:54:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F10B8D3B4A
+	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 10:36:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=10Pu8rZEVo1VrBwa5JYslGDqsaVvC1CvLxp1Hvajq14=; b=stnx98W5MuaCAg
-	JnuzmZ0rPgSRLnLYlVHqQY6xu8eaj3r4LCatjpKfa4ncec+1LTnBq8yOExXYJtiAAaNhrWdJr8YYn
-	BF3+hce1boGzoEU88Pp3fwKRTXk7xk5/WEcwTKe4i21vVhpbM0rG3iJbbxiEOUJUsbM6+djs0fmOX
-	sW+Pt4okFMZVQMDQ9i6C1L7ZO68pB5g06U6I3u4F2GFA1w73MbLpTd4mbi9B8PMO3fgS8zoXjiNhc
-	6cyirTzvHDp/bghmw99Jts8j5pXQeCMYv5Tud/KsWmv0ONh5/TZkMPh0Sd6bqD5kEEmEMVh+rg13w
-	pz/pwsx/1pMR79hwarlQ==;
+	List-Owner; bh=4DigtwBg7UGyy2FW+sUKC/BtpjSJwfxtotR79NfyxI0=; b=t8JP3WC72Zv1ru
+	QsMeHeDlOdCxoJp1A4BeHLA3ooJq2bklmTFhINyvN9x0dcpY9ztBrToPnFrI0q7r6Gp0ssjgDceLs
+	5zO4cqHGF5Uemd3I+5qPSx5UB+AVWgZExjDk1igkrF8IihdwXq63nLS5M7Y7ssWq1pOsgHq0p0AxO
+	Syy7WM8hncXdY3EQbBWf1dzPfkqur6ZEZ+Ow51HAtHu+t+FkgMCZIwADx14Fka/7aKPCcALfXp9sd
+	JPiM9Q35+0CmMW1nTFFmCBu2FOGq32nbbG3vT3th7i7TW7TyuAFkr8FSh/cLMcXuYu5N/PYBKDHpX
+	B7ZKBt7wLYULWImfuxPw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIooD-0003GS-HW; Fri, 11 Oct 2019 06:53:53 +0000
+	id 1iIqPe-0000t2-Dk; Fri, 11 Oct 2019 08:36:38 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIoo4-00037G-0U; Fri, 11 Oct 2019 06:53:45 +0000
-X-UUID: 482fd237eb0844deb848f0ad5cb3877b-20191010
-X-UUID: 482fd237eb0844deb848f0ad5cb3877b-20191010
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ id 1iIqPT-0000m0-P2; Fri, 11 Oct 2019 08:36:29 +0000
+X-UUID: 451443f206f34e7f94df501256195b8d-20191011
+X-UUID: 451443f206f34e7f94df501256195b8d-20191011
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <biao.huang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 906061277; Thu, 10 Oct 2019 22:53:33 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ with ESMTP id 46076108; Fri, 11 Oct 2019 00:36:14 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 10 Oct 2019 23:53:37 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 11 Oct 2019 14:53:34 +0800
+ 15.0.1395.4; Fri, 11 Oct 2019 01:36:18 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 11 Oct 2019 16:21:07 +0800
 Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 11 Oct 2019 14:53:34 +0800
-Message-ID: <1570776816.31576.5.camel@mhfsdcap03>
-Subject: Re: [PATCH] usb: mtk-xhci: Set the XHCI_NO_64BIT_SUPPORT quirk
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Fri, 11 Oct 2019 14:53:36 +0800
-In-Reply-To: <CAAFQd5AszvSow2vgRq+CbtBzdNO7ysymXp=xerR6dtmi8OxMZw@mail.gmail.com>
-References: <20191010075004.192818-1-tfiga@chromium.org>
- <1570697118.32135.20.camel@mhfsdcap03>
- <CAAFQd5AU53=BRUrK_i-0dRYueVoSd3Bg3AtvZUMHgFv3hLuNug@mail.gmail.com>
- <1570705147.22261.13.camel@mhfsdcap03>
- <CAAFQd5AszvSow2vgRq+CbtBzdNO7ysymXp=xerR6dtmi8OxMZw@mail.gmail.com>
+ Transport; Fri, 11 Oct 2019 16:21:07 +0800
+Message-ID: <1570782069.5044.12.camel@mhfsdcap03>
+Subject: Re: [PATCH] net: stmmac: disable/enable ptp_ref_clk in
+ suspend/resume flow
+From: biao huang <biao.huang@mediatek.com>
+To: Jakub Kicinski <jakub.kicinski@netronome.com>
+Date: Fri, 11 Oct 2019 16:21:09 +0800
+In-Reply-To: <20191010160103.63c3c0ed@cakuba.netronome.com>
+References: <20191009085649.6736-1-biao.huang@mediatek.com>
+ <20191010160103.63c3c0ed@cakuba.netronome.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: D8EE885003961319CABE961ECF4458C14AC152F23B5B99A43253D19FAF83B5E22000:8
+X-TM-SNTS-SMTP: 830FACAF2A292503757689C34417C3AFCD74A88CD9AC4330D44496E1DBE6BC492000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_235344_065167_4116CB9E 
-X-CRM114-Status: GOOD (  30.75  )
+X-CRM114-CacheID: sfid-20191011_013627_820557_038B7E7E 
+X-CRM114-Status: GOOD (  17.91  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -75,113 +73,77 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@chromium.org>,
- Changqi Hu <Changqi.Hu@mediatek.com>, Mathias Nyman <mathias.nyman@intel.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
- open list <linux-kernel@vger.kernel.org>, Shik Chen <shik@chromium.org>,
- "moderated list:ARM/Mediatek SoC
- support" <linux-mediatek@lists.infradead.org>,
+Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com, Alexandre
+ Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
+ linux-mediatek@lists.infradead.org, yong.wu@mediatek.com,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, 2019-10-11 at 13:35 +0900, Tomasz Figa wrote:
-> On Thu, Oct 10, 2019 at 7:59 PM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
-> >
-> > On Thu, 2019-10-10 at 18:00 +0900, Tomasz Figa wrote:
-> > > Hi Chunfeng,
-> > >
-> > > On Thu, Oct 10, 2019 at 5:45 PM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
-> > > >
-> > > > Hi, Tomasz,
-> > > >
-> > > > On Thu, 2019-10-10 at 16:50 +0900, Tomasz Figa wrote:
-> > > > > MediaTek XHCI host controller does not support 64-bit addressing despite
-> > > > > the AC64 bit of HCCPARAMS1 register being set. The platform-specific
-> > > > > glue sets the DMA mask to 32 bits on its own, but it has no effect,
-> > > > > because xhci_gen_setup() overrides it according to hardware
-> > > > > capabilities.
-> > Yes, this is what I want to do, maybe need remove DMA mask setting in
-> > platform-specific.
-> >
-> > > > >
-> > > > > Use the XHCI_NO_64BIT_SUPPORT quirk to tell the XHCI core to force
-> > > > > 32-bit DMA mask instead.
-> > > > >
-> > > > > Signed-off-by: Tomasz Figa <tfiga@chromium.org>
-> > > > > ---
-> > > > >  drivers/usb/host/xhci-mtk.c | 10 +++++-----
-> > > > >  1 file changed, 5 insertions(+), 5 deletions(-)
-> > > > >
-> > > > > diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
-> > > > > index b18a6baef204a..4d101d52cc11b 100644
-> > > > > --- a/drivers/usb/host/xhci-mtk.c
-> > > > > +++ b/drivers/usb/host/xhci-mtk.c
-> > > > > @@ -395,6 +395,11 @@ static void xhci_mtk_quirks(struct device *dev, struct xhci_hcd *xhci)
-> > > > >       xhci->quirks |= XHCI_SPURIOUS_SUCCESS;
-> > > > >       if (mtk->lpm_support)
-> > > > >               xhci->quirks |= XHCI_LPM_SUPPORT;
-> > > > > +     /*
-> > > > > +      * MTK host controller does not support 64-bit addressing, despite
-> > > > > +      * having the AC64 bit of the HCCPARAMS1 register set.
-> > > > > +      */
-> > > > > +     xhci->quirks |= XHCI_NO_64BIT_SUPPORT;
-> > > > Somes SoCs support 64bits in fact, so can't support this quirk, do you
-> > > > encounter any issues without this quirk?
-> > > >
-> > >
-> > > Thanks for taking a look at this patch.
-> > >
-> > > Yes, on MT8183 the DMA mask ended up being set to 64 bits, but
-> > > according to the information I received from MediaTek, the controller
-> > > on that SoC only supports 32 bits.
-> > As I know, mt8183 doesn't support memory greater than 4G mode.
-> >
-> 
-> We have 4GB of DRAM at 0x40000000-0x140000000 on our board with
-> MT8183. What happens if you attempt to use the memory from
-> 0x100000000-0x140000000 with the XHCI controller on this SoC?
-Ok, I'll contact USB SA of MT8183, and discuss this problem.
-I guess MT8183 don't plan to support 4G mode when kick off.
+Appreciate your comments!
 
+On Thu, 2019-10-10 at 16:01 -0700, Jakub Kicinski wrote:
+> On Wed, 9 Oct 2019 16:56:49 +0800, Biao Huang wrote:
+> > disable ptp_ref_clk in suspend flow, and enable it in resume flow.
+> > 
+> > Signed-off-by: Biao Huang <biao.huang@mediatek.com>
+> > ---
+> >  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c | 4 ++++
+> >  1 file changed, 4 insertions(+)
+> > 
+> > diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > index c7c9e5f162e6..b592aeecc3dd 100644
+> > --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+> > @@ -4469,6 +4469,8 @@ int stmmac_suspend(struct device *dev)
+> >  		stmmac_mac_set(priv, priv->ioaddr, false);
+> >  		pinctrl_pm_select_sleep_state(priv->device);
+> >  		/* Disable clock in case of PWM is off */
+> > +		if (priv->plat->clk_ptp_ref)
+> > +			clk_disable_unprepare(priv->plat->clk_ptp_ref);
 > 
-> > >
-> > > If some SoCs support only 32 bits and some support 64 bits, we may
-> > > either need to use different DT compatible string for them or add a DT
-> > > property and set the quirk based on that. Right now in upstream we
-> > > have:
-> > >
-> > > 1) "mediatek,mt8173-xhci", used by:
-> > > MT8173
-> > >
-> > > 2)"mediatek,mtk-xhci", used by:
-> > > MT2712
-> > > MT7622
-> > > MT8183 (not yet upstream, but I suppose it's on the mailing lists)
-> > >
-> > > Would you be able to check which of the SoCs above report 64 bits but
-> > > support only 32? (and so would need this quirk)
-> > I'm afraid I can't, almost all MTK SoCs supporting xHCI are using this
-> > driver, AC64 should be set rightly according to addressing capability.
-> >
+> I don't know much embedded, but it seems like this should perhaps just
+> be clk_disable() without the unprepare? stmmac_hw_teardown() is called
+> when driver is removed so it needs to unprepare as well.
 > 
-> Does it mean that only MT8183 may be the only SoC with a problem with
-> this capability bit?
-Maybe, I'll check it with USB DE.
+> Please feel free to explain to me why this needs to be
+> clk_disable_unprepare(), as I said - not an expert.
+> 
+As our clock owner's advice, there are prepare/unprepare clk_ops for
+pll, but no enable/disable clk_ops for it, and pll will be off only when
+the prepare reference count decrease to 0.
 
-Thanks
+so for the sake of power saving, we'd better call clk_disable_unprepare
+to turn the parent pll off.
 
+> Also - if this is a bug fix and you'd like to have it backported to
+> older releases you need to add a Fixes tag.
 > 
-> Matthias, do you have access to MT2712 and MT7622 devices? I have
-> MT8173 and MT8183, so I can check them, but would be good to check
-> this on the other ones too.
+Thanks for the reminder, I'll add the fixes tag in the next version.
+> Thanks!
 > 
-> Best regards,
-> Tomasz
+> >  		clk_disable(priv->plat->pclk);
+> >  		clk_disable(priv->plat->stmmac_clk);
+maybe it should be clk_disable_unprepare(priv->plat->pclk);
+		   clk_disable_unprepare(priv->plat->stmmac_clk);
+> >  	}
+> > @@ -4535,6 +4537,8 @@ int stmmac_resume(struct device *dev)
+> >  		/* enable the clk previously disabled */
+> >  		clk_enable(priv->plat->stmmac_clk);
+> >  		clk_enable(priv->plat->pclk);
+> > +		if (priv->plat->clk_ptp_ref)
+> > +			clk_prepare_enable(priv->plat->clk_ptp_ref);
+> >  		/* reset the phy so that it's ready */
+> >  		if (priv->mii)
+> >  			stmmac_mdio_reset(priv->mii);
+> 
 
 
 
