@@ -2,86 +2,96 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6B405D3421
-	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 01:01:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AA0E4D3889
+	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 06:36:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5JZA92wATMY/oZWpZXzKgz+q0dJ2D50D4NiOjMA5YDg=; b=BX7ojiWgq8Hl/y
-	oB2ep9HMrytK4RNLJPbOAvTF+DiGMYSTdvAcQvZq5Agxoeptn4aA/9JzISfC+3lyCP5Qp1yVLuwaM
-	3UiGu9Vd5xgOtHCR/jjssDAy4nJRtCTYTWReZ/99xnitT/HzlDntJloWwN1+Q7lSkHpPtnB37WkYp
-	/JalKJJt7r/CwRH8XDuI+XkbCVHa9pWr76PyTuFFbdtnIUFsUD/p4rVbh0ATWNQuGc+F3nACkj0vo
-	UZokxESwY7WTgk9io+me7JgMJ+rUnVP+2KylrqELeB/VFfqG1HQSvMFTbBwpAnnVwNI0Ms+2aPyR5
-	wzE98kJmsT/ELKTIpicw==;
+	List-Owner; bh=pF99bNb+gJEh9yI97ev7Z001aySopE/V8f+/EQWDA7E=; b=dSuLg5P72peegk
+	uIzjQpCTy5zdBE+SbBWNmxa0JqkiQ3GGz5AwrACTfKf8bUJ8M4/8YkHhfzqdw/BnxVaidu2cHkWj5
+	xxlYoU8ND3ygfQA/pmQuOOcdhv5mAJ5U3+8VdG/u0VCKVjuddIxiy+gAOjZfTLiFUXvuB6WwGOzyJ
+	xl98Yfti3Ua3RoSbLqlfh8v/pSNIo0vuSpnmLT2Myzj+mayC6RXJGCIZv2ygAKnI+69T+taAGyWeJ
+	GcAI+Q0X6sgddr4OWFAw67pBFcEPS9RBFM1hSi5U1PI7izprAXrwqHrgJBDl9iaR9r/4MyP69q1Za
+	yp/6UKHCRyEfl1mOJ5gQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIhR5-0001mM-KQ; Thu, 10 Oct 2019 23:01:31 +0000
-Received: from mail-qt1-x843.google.com ([2607:f8b0:4864:20::843])
+	id 1iImf1-0006Cl-LP; Fri, 11 Oct 2019 04:36:15 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIhQv-0001eK-FJ
- for linux-mediatek@lists.infradead.org; Thu, 10 Oct 2019 23:01:23 +0000
-Received: by mail-qt1-x843.google.com with SMTP id c21so11136014qtj.12
- for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=netronome-com.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:in-reply-to:references
- :organization:mime-version:content-transfer-encoding;
- bh=hKb1hJiJoZr7sDzi9awmt+z6YG7rgK/yyFTSM1pIHvc=;
- b=rBl0cx6+eIElwhvMYT30TfWDTrbVzMZqR9vc1u08+8UkgRFWwsWJItiHPlbIz75bbO
- yjErSPaO+d+mOXOukCkpOiBJnqGmHKu50/Uyz9FW/epJCtKe8478nPgRPB6CcvAY1a1I
- Ceuu7vL7cH8gJEFTgdiOM8xNWMPqzJ4hpm14bppd6CQU3FROOOIgnoJhKh5GJ4rvJ7G7
- trLU5f3s1a3fEC2JtQtzqks393lZwdH9IdblrWwCQZ01vQ7JRdlrHsiigbRxkJSzRSvm
- +LnPGfJbwjrZh5kS1fHLpLjgKlFwoFNpuGaKfGkNdVIg8LEUr2UFHovhiakkDrFMacbh
- yd9A==
+ id 1iImer-00065h-Sy
+ for linux-mediatek@lists.infradead.org; Fri, 11 Oct 2019 04:36:07 +0000
+Received: by mail-ed1-x543.google.com with SMTP id c4so7480463edl.0
+ for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 21:36:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=rEUfphYgsPDsPF9Rx6VcR3QfxEgWOStdjPum/wk4KcI=;
+ b=gEQ+fgGOIKBfW9V5FQ9sV5KdOdkGa1dsRLEj6pWenVSSurwPL6PVXti0w79F/LoGXE
+ fRX92sJQbU7d8ptA/uk2X9exHL0yLbDgsQxJCfbdpwVPjiiFkWDjcy9z/5R+TvJxxEUR
+ OJA158rP+mEzzpR+/dTLAb5wFtlh89OvWKG8Y=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:in-reply-to
- :references:organization:mime-version:content-transfer-encoding;
- bh=hKb1hJiJoZr7sDzi9awmt+z6YG7rgK/yyFTSM1pIHvc=;
- b=n8cg0vIR+tvLqqz2K9w0CmhiUq5o8V/IYku5bjVIwzOPs3w0Z7ULffETLGgielq/6a
- +WoWRRr0GbrxYY/6oYOaVthk3kI1XjX/6Feg+5VE6Qkt4CJZHrQSi9UrLIzIFMENU9q5
- j0aLutbX4gzld9uRHtZkA3vMxpk0sg05kqbnM0RMUk1XHzBO+nr/mamuPJIea2D+K4VR
- yGdvSzwORdDw/eRafRMqrjpRCg5g+8R1VqMM1yAQajJEoFN343ssscKDZo5NYU7T/b3W
- FMmQOXLQkXOeEpSFEktGgA9hdObbzsSnY/FXZO+aNMiljTWBnrNCfSnblXCCkm75IgRN
- Sl4g==
-X-Gm-Message-State: APjAAAUTzA+e28gHHcRk8J+QKL6OK/8VlhRo7UD6inIxCgWw6xJOE1z1
- IhkWnCO7b1pR573Q0zVxIjzq3Q==
-X-Google-Smtp-Source: APXvYqzlvVcUTrNNKzaif/kXN8GZwkAMecaGfYJIaGrr9Y2IjFLnQDpHQHTA/hY/Sd8K4BincCEN3w==
-X-Received: by 2002:a0c:f8cd:: with SMTP id h13mr12808457qvo.53.1570748480202; 
- Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
-Received: from cakuba.netronome.com ([66.60.152.14])
- by smtp.gmail.com with ESMTPSA id 64sm3058098qkk.63.2019.10.10.16.01.18
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 10 Oct 2019 16:01:20 -0700 (PDT)
-Date: Thu, 10 Oct 2019 16:01:03 -0700
-From: Jakub Kicinski <jakub.kicinski@netronome.com>
-To: Biao Huang <biao.huang@mediatek.com>
-Subject: Re: [PATCH] net: stmmac: disable/enable ptp_ref_clk in
- suspend/resume flow
-Message-ID: <20191010160103.63c3c0ed@cakuba.netronome.com>
-In-Reply-To: <20191009085649.6736-1-biao.huang@mediatek.com>
-References: <20191009085649.6736-1-biao.huang@mediatek.com>
-Organization: Netronome Systems, Ltd.
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=rEUfphYgsPDsPF9Rx6VcR3QfxEgWOStdjPum/wk4KcI=;
+ b=EJhu9308ak5UyOQSAuqtw6meuwFiyXFgrQmCItVhMrwb/jf51TL86eoMrzPBDBKRSi
+ vbWWNQ961VE47JS3auPrLbznto6BDJ94so4pO/C7Imid1aVRVm19rryptNd12tY57W0p
+ wd1AHv7m43iNT9C1J+uQoPJyAHAFomFxTgjSVUTHPeQoRT5tA0o3smnuW7dye8ICoRwL
+ mrcX0zZIzOSKVj+FNlR4vCP420VnBnKJrkyrrgydPcL+z694Y6cXmf8LdbTnPofclj9g
+ pE3CXtJQiUaWKhEytxT2MuNqIq8jhatTGxQ4E64YvATuPnRxktI1tnq3TLyR64+Ntcn4
+ LPyQ==
+X-Gm-Message-State: APjAAAWA98hqFNPZ813M1AQ6hJdiRmsfIJHnL0HdK6t8fRVWqrUNNfa6
+ 58FMxl+JHu4XdEzXRmtlycqGI2ZAKDRtSA==
+X-Google-Smtp-Source: APXvYqy6hjiWOR9yDQhIDm+CIBeNid1HEC0/4+yeKL1Km6zqJtnMXQpJFjVOdkz3DKH10jhmo2x+2g==
+X-Received: by 2002:a17:906:46c7:: with SMTP id
+ k7mr11895304ejs.112.1570768562979; 
+ Thu, 10 Oct 2019 21:36:02 -0700 (PDT)
+Received: from mail-wr1-f48.google.com (mail-wr1-f48.google.com.
+ [209.85.221.48])
+ by smtp.gmail.com with ESMTPSA id j8sm1243401edy.44.2019.10.10.21.36.01
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 10 Oct 2019 21:36:01 -0700 (PDT)
+Received: by mail-wr1-f48.google.com with SMTP id q9so10243247wrm.8
+ for <linux-mediatek@lists.infradead.org>; Thu, 10 Oct 2019 21:36:01 -0700 (PDT)
+X-Received: by 2002:adf:f3c9:: with SMTP id g9mr1230397wrp.7.1570768560872;
+ Thu, 10 Oct 2019 21:36:00 -0700 (PDT)
 MIME-Version: 1.0
+References: <20191010075004.192818-1-tfiga@chromium.org>
+ <1570697118.32135.20.camel@mhfsdcap03>
+ <CAAFQd5AU53=BRUrK_i-0dRYueVoSd3Bg3AtvZUMHgFv3hLuNug@mail.gmail.com>
+ <1570705147.22261.13.camel@mhfsdcap03>
+In-Reply-To: <1570705147.22261.13.camel@mhfsdcap03>
+From: Tomasz Figa <tfiga@chromium.org>
+Date: Fri, 11 Oct 2019 13:35:48 +0900
+X-Gmail-Original-Message-ID: <CAAFQd5AszvSow2vgRq+CbtBzdNO7ysymXp=xerR6dtmi8OxMZw@mail.gmail.com>
+Message-ID: <CAAFQd5AszvSow2vgRq+CbtBzdNO7ysymXp=xerR6dtmi8OxMZw@mail.gmail.com>
+Subject: Re: [PATCH] usb: mtk-xhci: Set the XHCI_NO_64BIT_SUPPORT quirk
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_160121_572780_7500EC87 
-X-CRM114-Status: GOOD (  13.51  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191010_213605_943334_7B5A09CC 
+X-CRM114-Status: GOOD (  28.91  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:843 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,64 +103,103 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com,
- Alexandre Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
- netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
- linux-mediatek@lists.infradead.org,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
- linux-arm-kernel@lists.infradead.org
+Cc: Nicolas Boichat <drinkcat@chromium.org>,
+ Changqi Hu <Changqi.Hu@mediatek.com>, Mathias Nyman <mathias.nyman@intel.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ open list <linux-kernel@vger.kernel.org>, Shik Chen <shik@chromium.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 9 Oct 2019 16:56:49 +0800, Biao Huang wrote:
-> disable ptp_ref_clk in suspend flow, and enable it in resume flow.
-> 
-> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
-> ---
->  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c | 4 ++++
->  1 file changed, 4 insertions(+)
-> 
-> diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> index c7c9e5f162e6..b592aeecc3dd 100644
-> --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> @@ -4469,6 +4469,8 @@ int stmmac_suspend(struct device *dev)
->  		stmmac_mac_set(priv, priv->ioaddr, false);
->  		pinctrl_pm_select_sleep_state(priv->device);
->  		/* Disable clock in case of PWM is off */
-> +		if (priv->plat->clk_ptp_ref)
-> +			clk_disable_unprepare(priv->plat->clk_ptp_ref);
+On Thu, Oct 10, 2019 at 7:59 PM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
+>
+> On Thu, 2019-10-10 at 18:00 +0900, Tomasz Figa wrote:
+> > Hi Chunfeng,
+> >
+> > On Thu, Oct 10, 2019 at 5:45 PM Chunfeng Yun <chunfeng.yun@mediatek.com> wrote:
+> > >
+> > > Hi, Tomasz,
+> > >
+> > > On Thu, 2019-10-10 at 16:50 +0900, Tomasz Figa wrote:
+> > > > MediaTek XHCI host controller does not support 64-bit addressing despite
+> > > > the AC64 bit of HCCPARAMS1 register being set. The platform-specific
+> > > > glue sets the DMA mask to 32 bits on its own, but it has no effect,
+> > > > because xhci_gen_setup() overrides it according to hardware
+> > > > capabilities.
+> Yes, this is what I want to do, maybe need remove DMA mask setting in
+> platform-specific.
+>
+> > > >
+> > > > Use the XHCI_NO_64BIT_SUPPORT quirk to tell the XHCI core to force
+> > > > 32-bit DMA mask instead.
+> > > >
+> > > > Signed-off-by: Tomasz Figa <tfiga@chromium.org>
+> > > > ---
+> > > >  drivers/usb/host/xhci-mtk.c | 10 +++++-----
+> > > >  1 file changed, 5 insertions(+), 5 deletions(-)
+> > > >
+> > > > diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
+> > > > index b18a6baef204a..4d101d52cc11b 100644
+> > > > --- a/drivers/usb/host/xhci-mtk.c
+> > > > +++ b/drivers/usb/host/xhci-mtk.c
+> > > > @@ -395,6 +395,11 @@ static void xhci_mtk_quirks(struct device *dev, struct xhci_hcd *xhci)
+> > > >       xhci->quirks |= XHCI_SPURIOUS_SUCCESS;
+> > > >       if (mtk->lpm_support)
+> > > >               xhci->quirks |= XHCI_LPM_SUPPORT;
+> > > > +     /*
+> > > > +      * MTK host controller does not support 64-bit addressing, despite
+> > > > +      * having the AC64 bit of the HCCPARAMS1 register set.
+> > > > +      */
+> > > > +     xhci->quirks |= XHCI_NO_64BIT_SUPPORT;
+> > > Somes SoCs support 64bits in fact, so can't support this quirk, do you
+> > > encounter any issues without this quirk?
+> > >
+> >
+> > Thanks for taking a look at this patch.
+> >
+> > Yes, on MT8183 the DMA mask ended up being set to 64 bits, but
+> > according to the information I received from MediaTek, the controller
+> > on that SoC only supports 32 bits.
+> As I know, mt8183 doesn't support memory greater than 4G mode.
+>
 
-I don't know much embedded, but it seems like this should perhaps just
-be clk_disable() without the unprepare? stmmac_hw_teardown() is called
-when driver is removed so it needs to unprepare as well.
+We have 4GB of DRAM at 0x40000000-0x140000000 on our board with
+MT8183. What happens if you attempt to use the memory from
+0x100000000-0x140000000 with the XHCI controller on this SoC?
 
-Please feel free to explain to me why this needs to be
-clk_disable_unprepare(), as I said - not an expert.
+> >
+> > If some SoCs support only 32 bits and some support 64 bits, we may
+> > either need to use different DT compatible string for them or add a DT
+> > property and set the quirk based on that. Right now in upstream we
+> > have:
+> >
+> > 1) "mediatek,mt8173-xhci", used by:
+> > MT8173
+> >
+> > 2)"mediatek,mtk-xhci", used by:
+> > MT2712
+> > MT7622
+> > MT8183 (not yet upstream, but I suppose it's on the mailing lists)
+> >
+> > Would you be able to check which of the SoCs above report 64 bits but
+> > support only 32? (and so would need this quirk)
+> I'm afraid I can't, almost all MTK SoCs supporting xHCI are using this
+> driver, AC64 should be set rightly according to addressing capability.
+>
 
-Also - if this is a bug fix and you'd like to have it backported to
-older releases you need to add a Fixes tag.
+Does it mean that only MT8183 may be the only SoC with a problem with
+this capability bit?
 
-Thanks!
+Matthias, do you have access to MT2712 and MT7622 devices? I have
+MT8173 and MT8183, so I can check them, but would be good to check
+this on the other ones too.
 
->  		clk_disable(priv->plat->pclk);
->  		clk_disable(priv->plat->stmmac_clk);
->  	}
-> @@ -4535,6 +4537,8 @@ int stmmac_resume(struct device *dev)
->  		/* enable the clk previously disabled */
->  		clk_enable(priv->plat->stmmac_clk);
->  		clk_enable(priv->plat->pclk);
-> +		if (priv->plat->clk_ptp_ref)
-> +			clk_prepare_enable(priv->plat->clk_ptp_ref);
->  		/* reset the phy so that it's ready */
->  		if (priv->mii)
->  			stmmac_mdio_reset(priv->mii);
-
+Best regards,
+Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
