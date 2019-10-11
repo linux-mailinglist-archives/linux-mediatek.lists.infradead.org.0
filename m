@@ -2,66 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F10B8D3B4A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 10:36:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 525E8D43B3
+	for <lists+linux-mediatek@lfdr.de>; Fri, 11 Oct 2019 17:04:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4DigtwBg7UGyy2FW+sUKC/BtpjSJwfxtotR79NfyxI0=; b=t8JP3WC72Zv1ru
-	QsMeHeDlOdCxoJp1A4BeHLA3ooJq2bklmTFhINyvN9x0dcpY9ztBrToPnFrI0q7r6Gp0ssjgDceLs
-	5zO4cqHGF5Uemd3I+5qPSx5UB+AVWgZExjDk1igkrF8IihdwXq63nLS5M7Y7ssWq1pOsgHq0p0AxO
-	Syy7WM8hncXdY3EQbBWf1dzPfkqur6ZEZ+Ow51HAtHu+t+FkgMCZIwADx14Fka/7aKPCcALfXp9sd
-	JPiM9Q35+0CmMW1nTFFmCBu2FOGq32nbbG3vT3th7i7TW7TyuAFkr8FSh/cLMcXuYu5N/PYBKDHpX
-	B7ZKBt7wLYULWImfuxPw==;
+	List-Owner; bh=KP+2eqGbyDshJE8O9CUK54eC5FkXPLDcbr6ax5rXX3E=; b=k+U+4b/ADL00KN
+	zjQnt/b6rpIuLn24AfjaU89whGerfzLmonOiuT7dRiIhfILJBQFK05aZQz8KIMR5ulnsk+9X3zglX
+	BKtV5UvcChKsDmpLSlsNJa1O4M6/YfwGLCl0xolk58I/918gkSMiTQo4uRQVad8Z/5p3bIGeJBAUa
+	2Aihm3IP3x/o/qfE1AROQMftPM7Po4EXjyLDsJiv4dvnluWhRx8sRH02qfFdhnR/3MuqI9+WV5097
+	k0+81LOphM4jAYGSGPdp27yoT+ccimXTo+kDS5Fz0sRmEzw9xRg0CZTVzD1mxHMYaugvNmx5oTcAl
+	VTW3reu90/TO9pU0YZCg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIqPe-0000t2-Dk; Fri, 11 Oct 2019 08:36:38 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iIwSa-00077U-FY; Fri, 11 Oct 2019 15:04:04 +0000
+Received: from mail-oi1-f195.google.com ([209.85.167.195])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIqPT-0000m0-P2; Fri, 11 Oct 2019 08:36:29 +0000
-X-UUID: 451443f206f34e7f94df501256195b8d-20191011
-X-UUID: 451443f206f34e7f94df501256195b8d-20191011
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <biao.huang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 46076108; Fri, 11 Oct 2019 00:36:14 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 11 Oct 2019 01:36:18 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
- (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 11 Oct 2019 16:21:07 +0800
-Received: from [10.17.3.153] (172.27.4.253) by MTKCAS32.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 11 Oct 2019 16:21:07 +0800
-Message-ID: <1570782069.5044.12.camel@mhfsdcap03>
-Subject: Re: [PATCH] net: stmmac: disable/enable ptp_ref_clk in
- suspend/resume flow
-From: biao huang <biao.huang@mediatek.com>
-To: Jakub Kicinski <jakub.kicinski@netronome.com>
-Date: Fri, 11 Oct 2019 16:21:09 +0800
-In-Reply-To: <20191010160103.63c3c0ed@cakuba.netronome.com>
-References: <20191009085649.6736-1-biao.huang@mediatek.com>
- <20191010160103.63c3c0ed@cakuba.netronome.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1iIwSF-0006sO-HD; Fri, 11 Oct 2019 15:03:45 +0000
+Received: by mail-oi1-f195.google.com with SMTP id t84so8245827oih.10;
+ Fri, 11 Oct 2019 08:03:43 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=zf/wVL1pxkzfv+aCf542wtXl7xxXSJSAoS259hxFzdU=;
+ b=rmDRYMw+ascsLYJiozvcI28ZFryJbnatbXL/aY229SOm/s/3QhjYwK84v13rR4FOik
+ LRIH84od4mBnpfSMKupemzo5IO66RnEZ/SNcscIu8M5jYw1OPFW0GXRIAnzt/9um+G+P
+ p+yqHzjokhfYviE2+ZyJJxR0Q5PW1aghTLYrXq58FLqO7lC2dsj5j3MCNIu/PoKJ0hVU
+ 4lh2iNDAhCk6PB+dKMdQGNFDL5LwX/x7ddHZqP6SrJuw0q/ld9R865BoUKHk41L9TLZC
+ ttWIds2hFQXua8gtnjYMECj3zZdIFLKiS3ZWR9LshdQqMd/mX6sO39qODuWKMYRctVm6
+ 6rgA==
+X-Gm-Message-State: APjAAAUhdQFf2Youun61nEh8Y7Zpji2cJJMzSYTN/dlqrn30HJqETgQ9
+ 8u5u1DbMeJ8mA59UVFNaAQ==
+X-Google-Smtp-Source: APXvYqyV76Nvy442IRIoZov+TB1OwfgmfaBvOSHiGvU7dcH19CN5WjOOfWxDjsuT1iB1kLR3NqyaCA==
+X-Received: by 2002:aca:5786:: with SMTP id l128mr12933151oib.34.1570806222672; 
+ Fri, 11 Oct 2019 08:03:42 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id l47sm2791691ota.56.2019.10.11.08.03.39
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 11 Oct 2019 08:03:39 -0700 (PDT)
+Date: Fri, 11 Oct 2019 10:03:39 -0500
+From: Rob Herring <robh@kernel.org>
+To: Krzysztof Kozlowski <krzk@kernel.org>
+Subject: Re: [PATCH v2 1/3] dt-bindings: power: Convert Generic Power Domain
+ bindings to json-schema
+Message-ID: <20191011150339.GA16245@bogus>
+References: <20191002160632.11140-1-krzk@kernel.org>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 830FACAF2A292503757689C34417C3AFCD74A88CD9AC4330D44496E1DBE6BC492000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20191002160632.11140-1-krzk@kernel.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191011_013627_820557_038B7E7E 
-X-CRM114-Status: GOOD (  17.91  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191011_080343_572458_A17EE134 
+X-CRM114-Status: GOOD (  18.83  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.167.195 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.195 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,79 +89,201 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com, Alexandre
- Torgue <alexandre.torgue@st.com>, boon.leong.ong@intel.com,
- netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-stm32@st-md-mailman.stormreply.com, Jose Abreu <joabreu@synopsys.com>,
- linux-mediatek@lists.infradead.org, yong.wu@mediatek.com,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Giuseppe Cavallaro <peppe.cavallaro@st.com>, davem@davemloft.net,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, Ulf Hansson <ulf.hansson@linaro.org>,
+ linux-pci@vger.kernel.org, Michael Turquette <mturquette@baylibre.com>,
+ dri-devel@lists.freedesktop.org, linux-clk@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Kevin Hilman <khilman@baylibre.com>,
+ bcm-kernel-feedback-list@broadcom.com, linux-media@vger.kernel.org,
+ devicetree@vger.kernel.org, linux-pm@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, etnaviv@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Stephen Boyd <sboyd@kernel.org>,
+ linux-usb@vger.kernel.org, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
+ linux-kernel@vger.kernel.org, Sudeep Holla <sudeep.holla@arm.com>,
+ freedreno@lists.freedesktop.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Appreciate your comments!
-
-On Thu, 2019-10-10 at 16:01 -0700, Jakub Kicinski wrote:
-> On Wed, 9 Oct 2019 16:56:49 +0800, Biao Huang wrote:
-> > disable ptp_ref_clk in suspend flow, and enable it in resume flow.
-> > 
-> > Signed-off-by: Biao Huang <biao.huang@mediatek.com>
-> > ---
-> >  drivers/net/ethernet/stmicro/stmmac/stmmac_main.c | 4 ++++
-> >  1 file changed, 4 insertions(+)
-> > 
-> > diff --git a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> > index c7c9e5f162e6..b592aeecc3dd 100644
-> > --- a/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> > +++ b/drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
-> > @@ -4469,6 +4469,8 @@ int stmmac_suspend(struct device *dev)
-> >  		stmmac_mac_set(priv, priv->ioaddr, false);
-> >  		pinctrl_pm_select_sleep_state(priv->device);
-> >  		/* Disable clock in case of PWM is off */
-> > +		if (priv->plat->clk_ptp_ref)
-> > +			clk_disable_unprepare(priv->plat->clk_ptp_ref);
+On Wed, Oct 02, 2019 at 06:06:30PM +0200, Krzysztof Kozlowski wrote:
+> Convert Generic Power Domain bindings to DT schema format using
+> json-schema.  The consumer bindings are split to separate file.
 > 
-> I don't know much embedded, but it seems like this should perhaps just
-> be clk_disable() without the unprepare? stmmac_hw_teardown() is called
-> when driver is removed so it needs to unprepare as well.
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
 > 
-> Please feel free to explain to me why this needs to be
-> clk_disable_unprepare(), as I said - not an expert.
+> ---
 > 
-As our clock owner's advice, there are prepare/unprepare clk_ops for
-pll, but no enable/disable clk_ops for it, and pll will be off only when
-the prepare reference count decrease to 0.
-
-so for the sake of power saving, we'd better call clk_disable_unprepare
-to turn the parent pll off.
-
-> Also - if this is a bug fix and you'd like to have it backported to
-> older releases you need to add a Fixes tag.
-> 
-Thanks for the reminder, I'll add the fixes tag in the next version.
-> Thanks!
-> 
-> >  		clk_disable(priv->plat->pclk);
-> >  		clk_disable(priv->plat->stmmac_clk);
-maybe it should be clk_disable_unprepare(priv->plat->pclk);
-		   clk_disable_unprepare(priv->plat->stmmac_clk);
-> >  	}
-> > @@ -4535,6 +4537,8 @@ int stmmac_resume(struct device *dev)
-> >  		/* enable the clk previously disabled */
-> >  		clk_enable(priv->plat->stmmac_clk);
-> >  		clk_enable(priv->plat->pclk);
-> > +		if (priv->plat->clk_ptp_ref)
-> > +			clk_prepare_enable(priv->plat->clk_ptp_ref);
-> >  		/* reset the phy so that it's ready */
-> >  		if (priv->mii)
-> >  			stmmac_mdio_reset(priv->mii);
-> 
+> Changes since v1:
+> 1. Select all nodes for consumers,
+> 2. Remove from consumers duplicated properties with dt-schema,
+> 3. Fix power domain pattern,
+> 4. Remove unneeded types.
+> ---
+>  .../devicetree/bindings/arm/arm,scmi.txt      |   2 +-
+>  .../devicetree/bindings/arm/arm,scpi.txt      |   2 +-
+>  .../bindings/arm/freescale/fsl,scu.txt        |   2 +-
+>  .../bindings/clock/clk-exynos-audss.txt       |   2 +-
+>  .../bindings/clock/exynos5433-clock.txt       |   4 +-
+>  .../bindings/clock/renesas,cpg-mssr.txt       |   2 +-
+>  .../clock/renesas,r8a7778-cpg-clocks.txt      |   2 +-
+>  .../clock/renesas,r8a7779-cpg-clocks.txt      |   2 +-
+>  .../clock/renesas,rcar-gen2-cpg-clocks.txt    |   2 +-
+>  .../bindings/clock/renesas,rz-cpg-clocks.txt  |   2 +-
+>  .../bindings/clock/ti/davinci/psc.txt         |   2 +-
+>  .../bindings/display/etnaviv/etnaviv-drm.txt  |   2 +-
+>  .../devicetree/bindings/display/msm/dpu.txt   |   2 +-
+>  .../devicetree/bindings/display/msm/mdp5.txt  |   2 +-
+>  .../devicetree/bindings/dsp/fsl,dsp.yaml      |   2 +-
+>  .../firmware/nvidia,tegra186-bpmp.txt         |   2 +-
+>  .../bindings/media/imx7-mipi-csi2.txt         |   3 +-
+>  .../bindings/media/mediatek-jpeg-decoder.txt  |   3 +-
+>  .../bindings/media/mediatek-mdp.txt           |   3 +-
+>  .../bindings/opp/qcom-nvmem-cpufreq.txt       |   2 +-
+>  .../devicetree/bindings/pci/pci-keystone.txt  |   2 +-
+>  .../bindings/phy/ti,phy-am654-serdes.txt      |   2 +-
+>  .../bindings/power/amlogic,meson-gx-pwrc.txt  |   2 +-
+>  .../devicetree/bindings/power/fsl,imx-gpc.txt |   2 +-
+>  .../bindings/power/fsl,imx-gpcv2.txt          |   2 +-
+>  .../power/power-domain-consumers.yaml         | 105 +++++++++
+>  .../bindings/power/power-domain.yaml          | 134 ++++++++++++
+>  .../bindings/power/power_domain.txt           | 205 ------------------
+>  .../devicetree/bindings/power/qcom,rpmpd.txt  |   2 +-
+>  .../bindings/power/renesas,rcar-sysc.txt      |   2 +-
+>  .../bindings/power/renesas,sysc-rmobile.txt   |   2 +-
+>  .../bindings/power/xlnx,zynqmp-genpd.txt      |   2 +-
+>  .../bindings/soc/bcm/brcm,bcm2835-pm.txt      |   2 +-
+>  .../bindings/soc/mediatek/scpsys.txt          |   2 +-
+>  .../bindings/soc/ti/sci-pm-domain.txt         |   2 +-
+>  .../bindings/usb/nvidia,tegra124-xusb.txt     |   4 +-
+>  MAINTAINERS                                   |   2 +-
+>  37 files changed, 278 insertions(+), 241 deletions(-)
+>  create mode 100644 Documentation/devicetree/bindings/power/power-domain-consumers.yaml
+>  create mode 100644 Documentation/devicetree/bindings/power/power-domain.yaml
+>  delete mode 100644 Documentation/devicetree/bindings/power/power_domain.txt
 
 
+> diff --git a/Documentation/devicetree/bindings/power/power-domain-consumers.yaml b/Documentation/devicetree/bindings/power/power-domain-consumers.yaml
+> new file mode 100644
+> index 000000000000..f65078e1260e
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/power/power-domain-consumers.yaml
+> @@ -0,0 +1,105 @@
+> +# SPDX-License-Identifier: GPL-2.0
+> +%YAML 1.2
+> +---
+> +$id: http://devicetree.org/schemas/power/power-domain-consumers.yaml#
+> +$schema: http://devicetree.org/meta-schemas/core.yaml#
+> +
+> +title: PM domain consumers
+> +
+> +maintainers:
+> +  - Rafael J. Wysocki <rjw@rjwysocki.net>
+> +  - Kevin Hilman <khilman@kernel.org>
+> +  - Ulf Hansson <ulf.hansson@linaro.org>
+> +
+> +description: |+
+> +  See power-domain.yaml
+> +
+> +select: true
+> +
+> +allOf:
+> +  - $ref: /schemas/power-domain/power-domain-consumer.yaml
+
+I don't like this split. We should move the contents of this file to the 
+above file.
+
+I checked the authorship of the relevant lines and they are all except 
+for a small number of lines from Linaro authors (Viresh and Ulf). I have 
+permission from Linaro to dual license Linaro authored bindings, so it's 
+not a problem to move this. I can do that and you can just drop this file.
+
+> +
+> +properties:
+> +  required-opps:
+> +    $ref: /schemas/types.yaml#/definitions/phandle
+> +    description:
+> +      This contains phandle to an OPP node in another device's OPP table.
+> +      It may contain an array of phandles, where each phandle points to an OPP
+> +      of a different device. It should not contain multiple phandles to the OPP
+> +      nodes in the same OPP table. This specifies the minimum required OPP
+> +      of the device(s), whose OPP's phandle is present in this property,
+> +      for the functioning of the current device at the current OPP (where this
+> +      property is present).
+> +
+> +examples:
+> +  - |
+> +    leaky-device@12350000 {
+> +      compatible = "foo,i-leak-current";
+> +      reg = <0x12350000 0x1000>;
+> +      power-domains = <&power 0>;
+> +      power-domain-names = "io";
+> +    };
+> +
+> +    leaky-device@12351000 {
+> +      compatible = "foo,i-leak-current";
+> +      reg = <0x12351000 0x1000>;
+> +      power-domains = <&power 0>, <&power 1> ;
+> +      power-domain-names = "io", "clk";
+> +    };
+> +
+> +    // The first example above defines a typical PM domain consumer device, which is
+> +    // located inside a PM domain with index 0 of a power controller represented by a
+> +    // node with the label "power".
+> +    // In the second example the consumer device are partitioned across two PM domains,
+> +    // the first with index 0 and the second with index 1, of a power controller that
+> +    // is represented by a node with the label "power".
+> +
+> +  - |
+> +    // Example with  OPP table for domain provider that provides two domains:
+> +
+> +    domain0_opp_table: opp-table0 {
+> +      compatible = "operating-points-v2";
+> +
+> +      domain0_opp_0: opp-1000000000 {
+> +        opp-hz = /bits/ 64 <1000000000>;
+> +        opp-microvolt = <975000 970000 985000>;
+> +      };
+> +      domain0_opp_1: opp-1100000000 {
+> +        opp-hz = /bits/ 64 <1100000000>;
+> +        opp-microvolt = <1000000 980000 1010000>;
+> +      };
+> +    };
+> +
+> +    domain1_opp_table: opp-table1 {
+> +      compatible = "operating-points-v2";
+> +
+> +      domain1_opp_0: opp-1200000000 {
+> +        opp-hz = /bits/ 64 <1200000000>;
+> +        opp-microvolt = <975000 970000 985000>;
+> +      };
+> +      domain1_opp_1: opp-1300000000 {
+> +        opp-hz = /bits/ 64 <1300000000>;
+> +        opp-microvolt = <1000000 980000 1010000>;
+> +      };
+> +    };
+> +
+> +    power: power-controller@12340000 {
+> +      compatible = "foo,power-controller";
+> +      reg = <0x12340000 0x1000>;
+> +      #power-domain-cells = <1>;
+> +      operating-points-v2 = <&domain0_opp_table>, <&domain1_opp_table>;
+> +    };
+> +
+> +    leaky-device0@12350000 {
+> +      compatible = "foo,i-leak-current";
+> +      reg = <0x12350000 0x1000>;
+> +      power-domains = <&power 0>;
+> +      required-opps = <&domain0_opp_0>;
+> +    };
+> +
+> +    leaky-device1@12350000 {
+> +      compatible = "foo,i-leak-current";
+> +      reg = <0x12350000 0x1000>;
+> +      power-domains = <&power 1>;
+> +      required-opps = <&domain1_opp_1>;
+> +    };
 
 _______________________________________________
 Linux-mediatek mailing list
