@@ -2,80 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3A86DD4C4E
-	for <lists+linux-mediatek@lfdr.de>; Sat, 12 Oct 2019 05:08:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 706C9D4C50
+	for <lists+linux-mediatek@lfdr.de>; Sat, 12 Oct 2019 05:08:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VwEoc4FebMXCV1X2RE5TFL/cvDNUcWaIgBFwOwjOsk8=; b=YbmhXtpi/RlF9R
-	xzWqH4LWHKmXkdu4V4jJm7uvc6zhL/H9rMVl8c40KI0CcPExszA4HqrKKt4gwWZ1FRp5+Cr1dEPcQ
-	FTotFAJTx0It45IaVtnE8ebBPghldHE5YLvWTHQuVJQ9iy+xlBCddhHj0x/vL2OMtNLViGtnbD4iN
-	+bJliTpEhcvVxNNc9NaQhg+XU++FhhKoCtQ2DVLpfSDTeJ6C20gTYGL8mqF+xHo5P87AWVGCHxEKe
-	EnZymoMTbkbP14Iq3pQAscTLkRtWMs2tt3Tsbzwa7GEh86/sgeUyER1oNyQj/5uOaL+VGrG4noQjn
-	FkfDx2fE4lSqwyQoUD+A==;
+	List-Owner; bh=gNoLJ3yzZ055WTicBOI5p0cyku6WfFDTmPD+8FoXID8=; b=YlV0igd/oiGAuR
+	UiFYXFS50Zi7yXPtnWETn9KQjZi8SRnI/I8xh3vmREv7EfliPfr1e0F4LKKk/RmC0q9bxTSGA5tCC
+	sOKrXCQ4q9ZFoUkpzcTYsSv4/E9aQrHOwy9SJaZH6Qb4JQNAm8623G9frGHW3XpYvWlNUDMpaBVl8
+	jG0a/xDV3nAPeGUldQTPXtlRa9QmK44c0+1YLuvnDLRzscLP7F/rJo/tKwMPvFO6ZCilMduZzgZ/i
+	dG1oVa5q1NQmuAPS5xjl+T17DIPuoV5NWVHDqMXKC0WwRxfAwoCEGgM7gRojN9wqmbRtw/zTJiY9u
+	YQvTORI3EPB0RXaUhUIw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iJ7lD-0004j2-W1; Sat, 12 Oct 2019 03:08:04 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iJ7lI-0004nR-1G; Sat, 12 Oct 2019 03:08:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iJ7l9-0004gc-VT
- for linux-mediatek@lists.infradead.org; Sat, 12 Oct 2019 03:08:01 +0000
-X-UUID: 9ecea94161b74b6faced64a3077b6856-20191011
-X-UUID: 9ecea94161b74b6faced64a3077b6856-20191011
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1iJ7lD-0004jn-W7
+ for linux-mediatek@lists.infradead.org; Sat, 12 Oct 2019 03:08:05 +0000
+X-UUID: f7794d9268064970b4a208c45505cae1-20191011
+X-UUID: f7794d9268064970b4a208c45505cae1-20191011
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1649290423; Fri, 11 Oct 2019 19:07:36 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
+ with ESMTP id 736997236; Fri, 11 Oct 2019 19:07:41 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 11 Oct 2019 20:07:53 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Sat, 12 Oct 2019 11:07:50 +0800
+ 15.0.1395.4; Fri, 11 Oct 2019 20:07:58 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Sat, 12 Oct 2019 11:07:55 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Sat, 12 Oct 2019 11:07:49 +0800
+ 15.0.1395.4 via Frontend Transport; Sat, 12 Oct 2019 11:07:54 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Sam Ravnborg <sam@ravnborg.org>, David Airlie <airlied@linux.ie>, "Daniel
  Vetter" <daniel@ffwll.ch>, <dri-devel@lists.freedesktop.org>,
  <linux-kernel@vger.kernel.org>
-Subject: [PATCH v7 5/8] dt-bindings: display: panel: add boe tv101wum-n53
- panel documentation
-Date: Sat, 12 Oct 2019 11:07:17 +0800
-Message-ID: <20191012030720.27127-6-jitao.shi@mediatek.com>
+Subject: [PATCH v7 6/8] drm/panel: support for boe,
+ tv101wum-n53 wuxga dsi video mode panel
+Date: Sat, 12 Oct 2019 11:07:18 +0800
+Message-ID: <20191012030720.27127-7-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20191012030720.27127-1-jitao.shi@mediatek.com>
 References: <20191012030720.27127-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-AS-Product-Ver: SMEX-12.5.0.1684-8.5.1010-24970.000
-X-TM-AS-Result: No-3.344400-8.000000-10
-X-TMASE-MatchedRID: LDQTIb3AkScn3vOf0l6OFgPZZctd3P4By733NwuklsIHQvT9S3vHUDgK
- 6rBjXxyiwmiM4j3WsDwWIvAeOZ6lZBhzK7qAlTSLCLQsumV/5S9V3dLaYUoCPSS30GKAkBxWie3
- MY7Xv0phqry+54H7wDufAOkxShVgK5TDi4+38dPYgCPGiZqtI8Gp5nbEBTsLkrNaeJrYvUQiKWS
- pN2IMPKUPNs5J6pUBWmkLIyx+kbq+tsBhZwL3bDR23b+lJHvPAhdipnqZWlN6LT3esmGQfwEtTy
- K8ZTWCGZI1BYYTjZ96AMuqetGVetr9k4V4N5ceA3QfwsVk0UbsIoUKaF27lxa+VNt27m34VrKYl
- gqznSc4xP9Zy6unRStfmgibWsLHGTgsevC4sB+C0btMs1U/nhob6DPwnZOM0denzLfRnwSvqqRM
- MGfOl4nWznloeB3HaPQzwIbfiR5AMD9LTK+5Nny0c7FwZxihenqg/VrSZEiM=
-X-TM-AS-User-Approved-Sender: No
-X-TM-AS-User-Blocked-Sender: No
-X-TMASE-Result: 10--3.344400-8.000000
-X-TMASE-Version: SMEX-12.5.0.1684-8.5.1010-24970.000
-X-TM-SNTS-SMTP: 6D9C4C56DB1E911528170B75A9D921C0E5DB4CF1DAD720447BBF5B3C009627462000:8
+X-TM-SNTS-SMTP: 4D629611DAE2BCB5C0460DDC94222343CB9BBCE98EE75388431498F7F4C6D03C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191011_200800_047483_3CAE5DAF 
-X-CRM114-Status: UNSURE (   7.65  )
+X-CRM114-CacheID: sfid-20191011_200804_068173_4CA0B1C8 
+X-CRM114-Status: UNSURE (   7.64  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -100,88 +85,65 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add dcumentation for boe,tv101wum-n53, which is mipi dsi video panel
-and resolution is 1200x1920.
+Boe,tv101wum-n53's connector is same as boe,tv101wum-nl6.
+The most codes can be reuse.
+So boe,tv101wum-n53 and boe,tv101wum-nl6 use one driver file.
+Add the different parts in driver data.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 ---
- .../display/panel/boe,tv101wum-n53.yaml       | 67 +++++++++++++++++++
- 1 file changed, 67 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/display/panel/boe,tv101wum-n53.yaml
+ .../gpu/drm/panel/panel-boe-tv101wum-nl6.c    | 31 +++++++++++++++++++
+ 1 file changed, 31 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/display/panel/boe,tv101wum-n53.yaml b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-n53.yaml
-new file mode 100644
-index 000000000000..ceeba8d95486
---- /dev/null
-+++ b/Documentation/devicetree/bindings/display/panel/boe,tv101wum-n53.yaml
-@@ -0,0 +1,67 @@
-+# SPDX-License-Identifier: GPL-2.0
-+%YAML 1.2
-+---
-+$id: http://devicetree.org/schemas/display/panel/boe,tv101wum-n53.yaml#
-+$schema: http://devicetree.org/meta-schemas/core.yaml#
+diff --git a/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c b/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
+index e6457f87bc61..7b47619675f5 100644
+--- a/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
++++ b/drivers/gpu/drm/panel/panel-boe-tv101wum-nl6.c
+@@ -624,6 +624,34 @@ static const struct panel_desc auo_kd101n80_45na_desc = {
+ 	.discharge_on_disable = true,
+ };
+ 
++static const struct drm_display_mode boe_tv101wum_n53_default_mode = {
++	.clock = 159833,
++	.hdisplay = 1200,
++	.hsync_start = 1200 + 114,
++	.hsync_end = 1200 + 114 + 10,
++	.htotal = 1200 + 114 + 10 + 40,
++	.vdisplay = 1920,
++	.vsync_start = 1920 + 19,
++	.vsync_end = 1920 + 19 + 4,
++	.vtotal = 1920 + 19 + 4 + 10,
++	.vrefresh = 60,
++	.type = DRM_MODE_TYPE_DRIVER | DRM_MODE_TYPE_PREFERRED,
++};
 +
-+title: BOE TV101WUM-N53 DSI Display Panel
++static const struct panel_desc boe_tv101wum_n53_desc = {
++	.modes = &boe_tv101wum_n53_default_mode,
++	.bpc = 8,
++	.size = {
++		.width_mm = 135,
++		.height_mm = 216,
++	},
++	.lanes = 4,
++	.format = MIPI_DSI_FMT_RGB888,
++	.mode_flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_SYNC_PULSE |
++		      MIPI_DSI_MODE_LPM,
++	.init_cmds = boe_init_cmd,
++};
 +
-+maintainers:
-+  - Thierry Reding <thierry.reding@gmail.com>
-+  - Sam Ravnborg <sam@ravnborg.org>
-+  - Rob Herring <robh+dt@kernel.org>
-+
-+properties:
-+  compatible:
-+        const: boe,tv101wum-n53
-+
-+  reg:
-+    description: the virtual channel number of a DSI peripheral
-+
-+  enable-gpios:
-+    description: a GPIO spec for the enable pin
-+
-+  pp1800-supply:
-+    description: core voltage supply
-+
-+  avdd-supply:
-+    description: phandle of the regulator that provides positive voltage
-+
-+  avee-supply:
-+    description: phandle of the regulator that provides negative voltage
-+
-+  backlight:
-+    description: phandle of the backlight device attached to the panel
-+
-+required:
-+ - compatible
-+ - reg
-+ - enable-gpios
-+ - pp1800-supply
-+ - avdd-supply
-+ - avee-supply
-+ - backlight
-+
-+additionalProperties: false
-+
-+examples:
-+  - |
-+    &dsi {
-+        panel@0 {
-+            compatible = "boe,tv101wum-n53";
-+            reg = <0>;
-+            enable-gpios = <&pio 45 0>;
-+            avdd-supply = <&ppvarn_lcd>;
-+            avee-supply = <&ppvarp_lcd>;
-+            pp1800-supply = <&pp1800_lcd>;
-+            backlight = <&backlight_lcd0>;
-+            status = "okay";
-+            port {
-+                panel_in: endpoint {
-+                    remote-endpoint = <&dsi_out>;
-+                };
-+            };
-+        };
-+    };
-+
-+...
+ static int boe_panel_get_modes(struct drm_panel *panel)
+ {
+ 	struct boe_panel *boe = to_boe_panel(panel);
+@@ -751,6 +779,9 @@ static const struct of_device_id boe_of_match[] = {
+ 	{ .compatible = "auo,kd101n80-45na",
+ 	  .data = &auo_kd101n80_45na_desc
+ 	},
++	{ .compatible = "boe,tv101wum-n53",
++	  .data = &boe_tv101wum_n53_desc
++	},
+ 	{ /* sentinel */ }
+ };
+ MODULE_DEVICE_TABLE(of, boe_of_match);
 -- 
 2.21.0
 
