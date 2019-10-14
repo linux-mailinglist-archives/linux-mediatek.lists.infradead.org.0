@@ -2,69 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B3535D5C06
-	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 09:15:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 96EE7D5CAD
+	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 09:52:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AsU3D4jY4K1HiXubWBLdozghtUkmDG0++M6cEXu3tu8=; b=oE3wy58oKddEro
-	as/cF6W88AMnyLecId0wZES2baTNZzUkF7A4+ccnDwYbrKNUEgz9o3GXTISBwibEIY971SXVWx4dh
-	u7TXEyeDBkcX2gl8shF7Z/b9zdTQMr4X8gi0QZhGiBj6E34A1KQ0oS8ZxlJR77mm5UQWmQWuEz2Fq
-	gSD06McBmzQ+B1pTC9XLXn6T1kafSmZDKPE3M4UjVZtI5w9OB6UDIIg3IFRYTlmloypKh9NLcsKkY
-	IyMlmX9nm5I2QSq1anfA/oheRERrKUaA1YbA4VBPQiiaNpd3XX7r+GzP1uXtVCuUuEPlCY72zgr9F
-	wLVe5nImOCq/c6+wsV0g==;
+	List-Owner; bh=b4S8HVI9Gw8/DJuyp04spVhjtk1/WhyWZ5NGNWIn0nU=; b=AcEO66JSS8xQSo
+	RK/enUa874hUYp21JXRpHUmxan2IVSB7Izc0ZY+9ulRLEMMSSYLExPhqlM6bEg2N08RYry0pPc73P
+	SeIGFAXJkt+izvEl9Xwqkksm60t5F9AICppXxAvU4+v5KZ1HamiQRdRW5eqUZpnGKCHZda9+KMD1L
+	m8znr4H9NieRU5ROQno7CElgzpTmyxLrZyX75g2RiMngqUUw8PB4e5wtL6ns+RxYflOHQhtDCB49j
+	ugJ4DWqeAYOEtX7pCMH0tSq94zKlVHQvjjKXmb8fDYH0V98oCAecZ7I+4vNEjr9DETM6rf00ruay+
+	9BwBm2FGCSP9q8TSHl3g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iJuZw-0000Or-Dr; Mon, 14 Oct 2019 07:15:40 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iJv9T-0006Gi-Oq; Mon, 14 Oct 2019 07:52:23 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iJuZh-0000C3-79; Mon, 14 Oct 2019 07:15:26 +0000
-X-UUID: d4cd981df58c4c6ba2400b96968f89b2-20191013
-X-UUID: d4cd981df58c4c6ba2400b96968f89b2-20191013
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <mark-mc.lee@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1785134833; Sun, 13 Oct 2019 23:14:49 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 14 Oct 2019 00:15:19 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 14 Oct 2019 15:15:17 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 14 Oct 2019 15:15:18 +0800
-From: MarkLee <Mark-MC.Lee@mediatek.com>
-To: "David S. Miller" <davem@davemloft.net>, Sean Wang
- <sean.wang@mediatek.com>, John Crispin <john@phrozen.org>, Nelson Chang
- <nelson.chang@mediatek.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- Andrew Lunn <andrew@lunn.ch>
-Subject: [PATCH net,
- v3 2/2] arm: dts: mediatek: Update mt7629 dts to reflect the latest
- dt-binding
-Date: Mon, 14 Oct 2019 15:15:18 +0800
-Message-ID: <20191014071518.11923-3-Mark-MC.Lee@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20191014071518.11923-1-Mark-MC.Lee@mediatek.com>
-References: <20191014071518.11923-1-Mark-MC.Lee@mediatek.com>
+ id 1iJv9K-00068p-F1; Mon, 14 Oct 2019 07:52:15 +0000
+Received: from localhost (unknown [122.167.124.160])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id CEE0520673;
+ Mon, 14 Oct 2019 07:52:12 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1571039533;
+ bh=ignFur/lxY/kv9qZzaXR8PTSNxFtkv4s29WCnImYBGI=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=SLjLMzVcJISGJHlhTTqgFRvGeIfuhlSlJwCVMIsOTWeEDhKBzlB42dAdIpP+uBEmr
+ NWYorLpF++xyxLDVBLsy9zDBDv3d43M4pLBiuywbVY0HeVQ1aRtrE81RJjgubCQQRu
+ U0x0vUEPD8UndEevSvKjUgEAmEaMVt0Rin8d/gX4=
+Date: Mon, 14 Oct 2019 13:22:09 +0530
+From: Vinod Koul <vkoul@kernel.org>
+To: Markus Elfring <Markus.Elfring@web.de>
+Subject: Re: [PATCH] dmaengine: mediatek: Use
+ devm_platform_ioremap_resource() in mtk_cqdma_probe()
+Message-ID: <20191014075209.GF2654@vkoul-mobl>
+References: <c7e3bbae-44fa-9019-18ee-c6cdfd7c2a14@web.de>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <c7e3bbae-44fa-9019-18ee-c6cdfd7c2a14@web.de>
+User-Agent: Mutt/1.12.1 (2019-06-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191014_001525_260788_702A7B73 
-X-CRM114-Status: UNSURE (   9.51  )
+X-CRM114-CacheID: sfid-20191014_005214_523383_131C3B41 
+X-CRM114-Status: UNSURE (   7.42  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,87 +77,29 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org, Jakub
- Kicinski <jakub.kicinski@netronome.com>, netdev@vger.kernel.org,
- linux-kernel@vger.kernel.org, Rene van Dorst <opensource@vdorst.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- MarkLee <Mark-MC.Lee@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: Sean Wang <sean.wang@mediatek.com>, kernel-janitors@vger.kernel.org,
+ LKML <linux-kernel@vger.kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mediatek@lists.infradead.org, Shun-Chih Yu <shun-chih.yu@mediatek.com>,
+ dmaengine@vger.kernel.org, Dan Williams <dan.j.williams@intel.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-* Removes mediatek,physpeed property from dtsi that is useless in PHYLINK
-* Use the fixed-link property speed = <2500> to set the phy in 2.5Gbit.
-* Set gmac1 to gmii mode that connect to a internal gphy
+On 22-09-19, 13:00, Markus Elfring wrote:
+> From: Markus Elfring <elfring@users.sourceforge.net>
+> Date: Sun, 22 Sep 2019 12:52:25 +0200
+> 
+> Simplify this function implementation a bit by using
+> a known wrapper function.
+> 
+> This issue was detected by using the Coccinelle software.
 
-Signed-off-by: MarkLee <Mark-MC.Lee@mediatek.com>
---
-v2->v3:
-* no change
-v1->v2:
-* SGMII port only support BASE-X at 2.5Gbit.
----
- arch/arm/boot/dts/mt7629-rfb.dts | 13 ++++++++++++-
- arch/arm/boot/dts/mt7629.dtsi    |  2 --
- 2 files changed, 12 insertions(+), 3 deletions(-)
+Applied, thanks
 
-diff --git a/arch/arm/boot/dts/mt7629-rfb.dts b/arch/arm/boot/dts/mt7629-rfb.dts
-index 3621b7d2b22a..9980c10c6e29 100644
---- a/arch/arm/boot/dts/mt7629-rfb.dts
-+++ b/arch/arm/boot/dts/mt7629-rfb.dts
-@@ -66,9 +66,21 @@
- 	pinctrl-1 = <&ephy_leds_pins>;
- 	status = "okay";
- 
-+	gmac0: mac@0 {
-+		compatible = "mediatek,eth-mac";
-+		reg = <0>;
-+		phy-mode = "2500base-x";
-+		fixed-link {
-+			speed = <2500>;
-+			full-duplex;
-+			pause;
-+		};
-+	};
-+
- 	gmac1: mac@1 {
- 		compatible = "mediatek,eth-mac";
- 		reg = <1>;
-+		phy-mode = "gmii";
- 		phy-handle = <&phy0>;
- 	};
- 
-@@ -78,7 +90,6 @@
- 
- 		phy0: ethernet-phy@0 {
- 			reg = <0>;
--			phy-mode = "gmii";
- 		};
- 	};
- };
-diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
-index 9608bc2ccb3f..867b88103b9d 100644
---- a/arch/arm/boot/dts/mt7629.dtsi
-+++ b/arch/arm/boot/dts/mt7629.dtsi
-@@ -468,14 +468,12 @@
- 			compatible = "mediatek,mt7629-sgmiisys", "syscon";
- 			reg = <0x1b128000 0x3000>;
- 			#clock-cells = <1>;
--			mediatek,physpeed = "2500";
- 		};
- 
- 		sgmiisys1: syscon@1b130000 {
- 			compatible = "mediatek,mt7629-sgmiisys", "syscon";
- 			reg = <0x1b130000 0x3000>;
- 			#clock-cells = <1>;
--			mediatek,physpeed = "2500";
- 		};
- 	};
- };
 -- 
-2.17.1
-
+~Vinod
 
 _______________________________________________
 Linux-mediatek mailing list
