@@ -2,72 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 59B0AD6056
-	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 12:37:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3DCAED605A
+	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 12:37:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DVWIs7tBW6SWyUm6j2MLITYhPbR4QEaK4PPLie1KMxg=; b=NaL4X5fwJMmnyE
-	k5AI2SrRE2VvxRpv0N1TyhJscEQOHDJjbk0wxZ9SCapdD9klV14TtQlCkjOeb3KzqNHlXn7/BaIoX
-	dlOQ8FQC2+BIucpEZs3TYX0SpIpLYmV5Dle9fqEgatS6fC+1M8V+1+ytFo7lARISEs8T1AjQCf7Z2
-	cDJqXVHxGcmzIn5QYIH1nsBhwyIVQ5dRnsFFV7W2lQNQTcZU45XohzCUWRn1O7uGYO7XIWRhmDM5R
-	xo6b4aKDigy1A0hvqdvjXyDhFM1BEHkCzx8NeXtDxqqo6eZcOJLd/5zLO2iQpuwq/IExaJTg7hFEQ
-	9qFLSxzhKOUTmoZO85yQ==;
+	List-Owner; bh=XHc/SDGQI6I/tJcU9YJjNrh1wnhaHoz02kYcXMkxJ98=; b=uVT8/KG/S6ZNuW
+	YunNGEUJegTwi1ruiCgOPtFobA1z4n2HSF8v7Quniym8+62yzgK/hsCu4cUgFLu0yoTghTrRmuzcY
+	jnFKtAn7Qai/S1tfOFpDdQWFXsfAqVza8nnBV3lvTs1Pgle9PEBX533EY03nHnQ+mcfG/JkPzxN7h
+	TwQADhOC+5guwKViFM5XWNOPUG0WbIViWQf3FOSA9ZslRwK0CuUQzLXblp+axTzuGmlXMXZcNnJT2
+	IP5tSJVQu3EixpCrdQfJhc2WqN6DJ6Cm6HdZoLE8tzMkt6aMVoIc8VAXdLaBBiMouq64af8vt71Iz
+	gDIW9ihjKWnIRofGB/3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iJxj7-0000G8-OV; Mon, 14 Oct 2019 10:37:21 +0000
-Received: from mail-qt1-x843.google.com ([2607:f8b0:4864:20::843])
+	id 1iJxjd-0000UQ-Ha; Mon, 14 Oct 2019 10:37:53 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iJxio-0008OF-SV
- for linux-mediatek@lists.infradead.org; Mon, 14 Oct 2019 10:37:06 +0000
-Received: by mail-qt1-x843.google.com with SMTP id j31so24733982qta.5
- for <linux-mediatek@lists.infradead.org>; Mon, 14 Oct 2019 03:36:59 -0700 (PDT)
+ id 1iJxja-0000TJ-BP
+ for linux-mediatek@lists.infradead.org; Mon, 14 Oct 2019 10:37:51 +0000
+Received: by mail-qk1-x741.google.com with SMTP id w2so15446893qkf.2
+ for <linux-mediatek@lists.infradead.org>; Mon, 14 Oct 2019 03:37:49 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=26plC+LB/ET6lKUK8GUr/NZh4YTG4I5vCBM0xWKfjSY=;
- b=vhfeBhIbqctA+sxvOa8rDMgMZA0l1qMP0sDE3KgO56Y6lc3OpphV7fkCxySXu6yuf0
- zQI3csG/xFqaWpTB1334kqSZvke3KFNRZYH+iOzLeYF3LT0sw39+f3oVcoWI/Kv5yeV/
- nNxqTAO+Kkfu0gzhK+V47J7dgvcAuP4c770wVb5w76FXzfs6pyIY8mljaRNp6JX/TsgU
- uSpYNOzzWshBvP5PbZKMF4IAnIEEvTr8NIlBi/AY3fRAdB+qU1REmKvrl1AY0eM9iCWI
- gm54+mmfq7mVRBq78QlBBUDV44/ghCCEpEvb32E2HuFldPnFvz+sBUrhiU9wVri71POt
- YM6w==
+ :cc; bh=Xb4r1wuhDtOoPbUBnl8EutTh4mh6Tp7aWVqMVQujZhw=;
+ b=ncAdm5p62dlyPVnbhlG8Ia8TOY8Bj9kzLoEPG8kBn98/b8IfkhIVulK5Sep05pIK1O
+ a8o0B3t0aBxh0xAqIOcEfeSXp13CEtfHNcab6d7/193DUVfmkz6KLTW7BNnGSznYniOC
+ OrQZYXwNQfNq6OFKV5BbBiaTmdDdA/KzwRrZQgY2d88OFjuIVU2/uImhKHWnlurIyJTf
+ NP0R4emwQfuBb5AFCb0fsCrPv+n4gOBYVydhYj5Mse1CI1LeqzszvjYKB1kegwn/09dD
+ ncJyFdOgxfUX5QfpE14HpJht0iIDCoje7GqrMD9p9QhnHQ3UxkeRvYSV9f1KCk9Dy3Wa
+ IlLg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=26plC+LB/ET6lKUK8GUr/NZh4YTG4I5vCBM0xWKfjSY=;
- b=EjN2QSPDBgaQFdmMmZooZpY49LnMdAqeLa2RvFgQSE+pZ/5aSBMeXokpFrssAS1P6Y
- oBUUmC0JhmxQiy2PYiMrbmApsG2F0diCcPZTmuszOn6g0UbN3e4NNSXx75a8Yuamejl0
- eEMNH5QZBic0DZtn3wTisolpCZyrhOJNEfpWk7egKz2Ac+sZb1JNRbhM+y7eVOBE/EUu
- r+AevAOiZWfyObimj0tqQf+nO1t52zWMCwPSBkwkf40Y9urZBiazVJYQxlQoiGGfMhQY
- GtS3VdvLkXkHFOyI2NnF8LR3RLmTPRB9vEUYrkNjA3+79liqqhfj3i3JJtoHHnoz0K0g
- 4JYg==
-X-Gm-Message-State: APjAAAU66kNF/cR/zn/vMR9/fUOx3pAEq7Du4C82jYGlc3vN6jCXRkKp
- VY+B9gzgDJ29Q0cVoIHwWAd3NrXbV2mbxnoKb5Hm0g==
-X-Google-Smtp-Source: APXvYqwTjnC0ebjhJ3BkDHAXlucgRKIkCIRgkmsqM/V/dciQe1QoV4OVLkh9U5GxaZS3jwgbGp4caX/J7J0IoKwv77k=
-X-Received: by 2002:ac8:37e8:: with SMTP id e37mr30909144qtc.57.1571049418182; 
- Mon, 14 Oct 2019 03:36:58 -0700 (PDT)
+ bh=Xb4r1wuhDtOoPbUBnl8EutTh4mh6Tp7aWVqMVQujZhw=;
+ b=sWtO7AWQX2WlBfOtJ96kyC0aVT4t6gQpuPgSgPHHn2/zQFBX8r9ydlCewIWZmDPV+R
+ 4YTdI0nqr4VIAFVxWjeIoJUw1RHwDaP4b/RbrQl9JX/JpSx12GubzYkf5vFGHJ/aseB1
+ rj9VoOT+/TZgK2Vl4WwtX7szoXMd/ppuPUTYGQLu/hpgVfy0Zlf8vjRKCi3Y1uebOU1z
+ 6pCjGbFtYss3VaRsmQJT0upvmBXzAxf2/ZwHlTJ2mawGACAccUBKqI9Ww3EfdV8zH5pS
+ VsoW0MtMRkw9LVxbfGHjaCJQUaFp/k/U0zjxJ7Q7ghhIkhnBXorxbssEmodAF6mLVxgZ
+ 8vIg==
+X-Gm-Message-State: APjAAAVVuZeUM5XkZJV4sISSlKEHZ4pVHeiBKrkuY3NDqNtm0sria+d1
+ drPKr9KlrJUTDQ1O8dTafyaHFx/IhNrQuhWIct+qeQ==
+X-Google-Smtp-Source: APXvYqxYd8Es1sxTY+VJ2ATWYdlj9YU4K41B4R2sul1P3y5YoKeVysrLikKwT7pXtYzOTHQ/ki/Sr8bYKKH4sdYYyHs=
+X-Received: by 2002:a05:620a:2158:: with SMTP id
+ m24mr29448433qkm.250.1571049468723; 
+ Mon, 14 Oct 2019 03:37:48 -0700 (PDT)
 MIME-Version: 1.0
 References: <20191014103148.17816-1-walter-zh.wu@mediatek.com>
-In-Reply-To: <20191014103148.17816-1-walter-zh.wu@mediatek.com>
+ <CACT4Y+aSybD6Z0YHuhbaTKK+fd4c3t4z8WneYdRRqA4N-G0fkA@mail.gmail.com>
+In-Reply-To: <CACT4Y+aSybD6Z0YHuhbaTKK+fd4c3t4z8WneYdRRqA4N-G0fkA@mail.gmail.com>
 From: Dmitry Vyukov <dvyukov@google.com>
-Date: Mon, 14 Oct 2019 12:36:45 +0200
-Message-ID: <CACT4Y+aSybD6Z0YHuhbaTKK+fd4c3t4z8WneYdRRqA4N-G0fkA@mail.gmail.com>
+Date: Mon, 14 Oct 2019 12:37:37 +0200
+Message-ID: <CACT4Y+aj20xfJ4nSR1piWcZTmANJ-kS8+ZcBfz6jG4ZTjR51yw@mail.gmail.com>
 Subject: Re: [PATCH 0/2] fix the missing underflow in memory operation function
 To: Walter Wu <walter-zh.wu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191014_033703_096637_29F7ABCF 
-X-CRM114-Status: GOOD (  17.81  )
+X-CRM114-CacheID: sfid-20191014_033750_401868_272E91BE 
+X-CRM114-Status: GOOD (  19.02  )
 X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:843 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
  [list.dnswl.org]
  -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
  white-list
@@ -107,43 +109,47 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Oct 14, 2019 at 12:32 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+On Mon, Oct 14, 2019 at 12:36 PM Dmitry Vyukov <dvyukov@google.com> wrote:
 >
-> The patchsets help to produce KASAN report when size is negative numbers
-> in memory operation function. It is helpful for programmer to solve the
-> undefined behavior issue. Patch 1 based on Dmitry's review and
-> suggestion, patch 2 is a test in order to verify the patch 1.
+> On Mon, Oct 14, 2019 at 12:32 PM Walter Wu <walter-zh.wu@mediatek.com> wrote:
+> >
+> > The patchsets help to produce KASAN report when size is negative numbers
+> > in memory operation function. It is helpful for programmer to solve the
+> > undefined behavior issue. Patch 1 based on Dmitry's review and
+> > suggestion, patch 2 is a test in order to verify the patch 1.
+>
+> Hi Walter,
+>
+> I only received this cover letter, but not the actual patches. I also
+> don't see them in the group:
+> https://groups.google.com/forum/#!forum/kasan-dev
+> nor on internet. Have you mailed them? Where are they?
 
-Hi Walter,
+OK, received them just now.
 
-I only received this cover letter, but not the actual patches. I also
-don't see them in the group:
-https://groups.google.com/forum/#!forum/kasan-dev
-nor on internet. Have you mailed them? Where are they?
-
-> [1]https://bugzilla.kernel.org/show_bug.cgi?id=199341
-> [2]https://lore.kernel.org/linux-arm-kernel/20190927034338.15813-1-walter-zh.wu@mediatek.com/
->
-> Walter Wu (2):
-> kasan: detect negative size in memory operation function
-> kasan: add test for invalid size in memmove
->
-> ---
->  lib/test_kasan.c          | 18 ++++++++++++++++++
->  mm/kasan/common.c         | 13 ++++++++-----
->  mm/kasan/generic.c        |  5 +++++
->  mm/kasan/generic_report.c | 18 ++++++++++++++++++
->  mm/kasan/tags.c           |  5 +++++
->  mm/kasan/tags_report.c    | 17 +++++++++++++++++
->  6 files changed, 71 insertions(+), 5 deletions(-)
->
-> --
-> 2.18.0
->
-> --
-> You received this message because you are subscribed to the Google Groups "kasan-dev" group.
-> To unsubscribe from this group and stop receiving emails from it, send an email to kasan-dev+unsubscribe@googlegroups.com.
-> To view this discussion on the web visit https://groups.google.com/d/msgid/kasan-dev/20191014103148.17816-1-walter-zh.wu%40mediatek.com.
+> > [1]https://bugzilla.kernel.org/show_bug.cgi?id=199341
+> > [2]https://lore.kernel.org/linux-arm-kernel/20190927034338.15813-1-walter-zh.wu@mediatek.com/
+> >
+> > Walter Wu (2):
+> > kasan: detect negative size in memory operation function
+> > kasan: add test for invalid size in memmove
+> >
+> > ---
+> >  lib/test_kasan.c          | 18 ++++++++++++++++++
+> >  mm/kasan/common.c         | 13 ++++++++-----
+> >  mm/kasan/generic.c        |  5 +++++
+> >  mm/kasan/generic_report.c | 18 ++++++++++++++++++
+> >  mm/kasan/tags.c           |  5 +++++
+> >  mm/kasan/tags_report.c    | 17 +++++++++++++++++
+> >  6 files changed, 71 insertions(+), 5 deletions(-)
+> >
+> > --
+> > 2.18.0
+> >
+> > --
+> > You received this message because you are subscribed to the Google Groups "kasan-dev" group.
+> > To unsubscribe from this group and stop receiving emails from it, send an email to kasan-dev+unsubscribe@googlegroups.com.
+> > To view this discussion on the web visit https://groups.google.com/d/msgid/kasan-dev/20191014103148.17816-1-walter-zh.wu%40mediatek.com.
 
 _______________________________________________
 Linux-mediatek mailing list
