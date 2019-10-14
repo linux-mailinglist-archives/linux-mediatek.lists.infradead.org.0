@@ -2,62 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BCB82D66B5
-	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 17:59:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B8C8AD6734
+	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 18:23:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=OZFUHXYukAd9wUcI2B7iiKPjuk/Qw//yC1EUlXvwHm0=; b=kcNXK0TQKgsLfa
-	xXILdJAxPU3zj1NU19rqvlZOm6BPIUpkAWO+fYwZxwxJENzGNm9ftQzSaHUhyMzfh4KDIY3udT6sd
-	iO4vp6WZLw/87dem985CsvF7hbpMA9FfZ43pqGKprdQXBbgAvVZMipjBrVE8SUIBc/YMbH/Xug/sG
-	Kd1u4DRmalM0QaU+s+of2dunHc2JAMGt+HyOw6s/F0beYS1uIUE13rkJ+gaBjj/E7YL7SxhxWG0tu
-	ufTTotZR0xkM4wBr+2WNYafxlC0OwPrfwj3gE9QkWj2ME51nkoNd/FnBquyGh1kVv0De+N3mJ7zbB
-	k9czbYhjgd06d5d3k2tw==;
+	List-Owner; bh=c2ojaC81CswqeNWXZcztEdgJUPGEKI9wxdb8Z8VRT1s=; b=Y0SCnikRfwjHuI
+	86Dt/IhiQeTlith/j7vNLgMievp5sdkQ81v/wxrbgcb11m10fpVbCKW6NrakbLeDn+rh+i/OStl82
+	TGCtv/9TOzLrOs/HwEHJFoSJxOGUqUlRrr6RaQ9FDj+ztR8CPdmqnXuafpDatausMSoTfMctG0A9J
+	dBan9X+jfmb50Rf/aCQB4g2dFGx26labgwMtLtf2aFU7V9cMNO4eO96QDzVP+S4sc1AKv7slXm+Vu
+	lwRLwnZFN89JpyCpbs33PjguIZI+a8UN9XyQasp9IXpKUI/jkJnSEzvjSdP6DmGwMerNLSXHkoD2l
+	w1gFfvC7gmKW8bJYTHsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iK2kZ-0004H1-Io; Mon, 14 Oct 2019 15:59:11 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iK38P-0005SQ-Ql; Mon, 14 Oct 2019 16:23:49 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iK2kL-000477-6m; Mon, 14 Oct 2019 15:59:01 +0000
-X-UUID: 256bf7f3b04a409487720e36cc412546-20191014
-X-UUID: 256bf7f3b04a409487720e36cc412546-20191014
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1iK382-0005Gw-3J; Mon, 14 Oct 2019 16:23:30 +0000
+X-UUID: bcc38493f70642568ff5ae4ef0bbe282-20191014
+X-UUID: bcc38493f70642568ff5ae4ef0bbe282-20191014
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <walter-zh.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 897371410; Mon, 14 Oct 2019 07:58:49 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 126172491; Mon, 14 Oct 2019 08:23:19 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 14 Oct 2019 08:58:48 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 14 Oct 2019 23:58:47 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Mon, 14 Oct 2019 09:23:18 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 15 Oct 2019 00:23:17 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 14 Oct 2019 23:58:45 +0800
+ Frontend Transport; Tue, 15 Oct 2019 00:23:15 +0800
 From: Walter Wu <walter-zh.wu@mediatek.com>
 To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
  <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Matthias Brugger
  <matthias.bgg@gmail.com>
 Subject: [PATCH v2 1/2] kasan: detect negative size in memory operation
  function
-Date: Mon, 14 Oct 2019 23:58:45 +0800
-Message-ID: <20191014155845.26783-1-walter-zh.wu@mediatek.com>
+Date: Tue, 15 Oct 2019 00:23:16 +0800
+Message-ID: <20191014162316.28314-1-walter-zh.wu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191014_085858_844878_2197AA95 
-X-CRM114-Status: GOOD (  12.82  )
+X-CRM114-CacheID: sfid-20191014_092326_144084_CEA802AE 
+X-CRM114-Status: GOOD (  13.38  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -82,7 +80,7 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 KASAN missed detecting size is negative numbers in memset(), memcpy(),
-and memmove(), it will cause underflow bug, so needs to be detected
+and memmove(), it will cause out-of-bounds bug, so needs to be detected
 by KASAN.
 
 If size is negative numbers, then it has three reasons to be
@@ -120,7 +118,7 @@ KASAN report:
 [1] https://bugzilla.kernel.org/show_bug.cgi?id=199341
 
 Changes in v2:
-fix the indentation, thanks for the reminder Matthew.
+Fix the indentation bug, thanks for the reminder Matthew.
 
 Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
 Reported -by: Dmitry Vyukov <dvyukov@google.com>
