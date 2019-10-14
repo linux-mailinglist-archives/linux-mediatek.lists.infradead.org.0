@@ -2,59 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7492DD5B74
-	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 08:38:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 55225D5B79
+	for <lists+linux-mediatek@lfdr.de>; Mon, 14 Oct 2019 08:39:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=zwnxk70FztdmrKxAHVmmtLn7FWCltjZVzN5uKJcavX0=; b=DGceocqh/l6/u6
-	5xkLLi9MHLI3+qmUyPTdmCjgJfTXNIu7u0cnRSUrHb3D0tCrcjCiqzoHYWhOi+D1tRWWHZHUYAQBt
-	MZCTFcsTVeujLyR0HFQ8UgYeCVjzg7LabvQu/KF6d2GwbTC+mn8y0bNnzhzXsPXchYWd01e5EHvV3
-	nYJBOkDqZKIy2crCeV/d8c4q594sf1DizSzac1hQi2pb0LkBt6YqZu90Dhv7+e8u1LxViP3yaoe9o
-	ciZgFfPPDVTtYtS1hRuznOVh7b0htuz/dX10AqToxvWv0bY8BQd3Msd3b9QxxdyEMSijyF+yVlm6t
-	Tb8as1nJ4v6s4RKzdLyg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=xK+KLDKh6XYC47xMC8PoMi0UPl4dCrqjeNofFytylGw=; b=nq6fzvDTtKeKD2
+	yNgU2t11VlvDedNlo3hektOCIBU2pzhOJ/6ObBpGhIegEmyWARy2sFmOqD5jVpGEH1JdRE9QVn8AL
+	OvW87F3/AJpmGTQzxGeKTaooou36zGjWGx4GJlYzo3m4npUy5XM+UECdkZHOULgdnqqCeq5eDaojf
+	TDeK2xNxlrK5i5NZS/degGnebfdAYlI6qHXy2SvbytCthsjcz1MMB4NdjvUbDFICln06ediJomWmn
+	1vLFdjPvwLX8PUZarhGGK4f4VyvYDMojf1wcayCMbNSqC5SG79jDvatzFXd6NEXfG+5E/JAIySG6c
+	oYCwHBZbV+kb/oAyKPcw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iJu0A-0005cE-T9; Mon, 14 Oct 2019 06:38:42 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iJu0k-00067O-Vv; Mon, 14 Oct 2019 06:39:18 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iJu08-0005bF-G9; Mon, 14 Oct 2019 06:38:41 +0000
-X-UUID: 9ecfb59dd7b14378933988b13c6ffd98-20191013
-X-UUID: 9ecfb59dd7b14378933988b13c6ffd98-20191013
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1iJu0K-0005ic-BB; Mon, 14 Oct 2019 06:38:53 +0000
+X-UUID: 833bfe8bbc194fba94182d4d72728801-20191013
+X-UUID: 833bfe8bbc194fba94182d4d72728801-20191013
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 840623065; Sun, 13 Oct 2019 22:37:49 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 13 Oct 2019 23:38:28 -0700
+ with ESMTP id 947383271; Sun, 13 Oct 2019 22:38:06 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 13 Oct 2019 23:38:45 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 14 Oct 2019 14:38:26 +0800
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 14 Oct 2019 14:38:36 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 14 Oct 2019 14:38:26 +0800
+ Transport; Mon, 14 Oct 2019 14:38:36 +0800
 From: Yong Wu <yong.wu@mediatek.com>
 To: Matthias Brugger <matthias.bgg@gmail.com>, Joerg Roedel <joro@8bytes.org>, 
  Will Deacon <will.deacon@arm.com>
-Subject: [PATCH v3 0/7] Improve tlb range flush
-Date: Mon, 14 Oct 2019 14:38:14 +0800
-Message-ID: <1571035101-4213-1-git-send-email-yong.wu@mediatek.com>
+Subject: [PATCH v3 1/7] iommu/mediatek: Correct the flush_iotlb_all callback
+Date: Mon, 14 Oct 2019 14:38:15 +0800
+Message-ID: <1571035101-4213-2-git-send-email-yong.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1571035101-4213-1-git-send-email-yong.wu@mediatek.com>
+References: <1571035101-4213-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: F2C1779EB7F8A022E9DB73FE5ECD4AFF3BC684C1A4ADE5CDE1EA95C108C9BBB32000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191013_233840_541079_9C8BE7A0 
-X-CRM114-Status: UNSURE (   7.52  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191013_233852_401879_64474DE4 
+X-CRM114-Status: GOOD (  10.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -82,36 +86,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patchset mainly fixes a tlb flush timeout issue and use the new
-iommu_gather to re-implement the tlb flush flow. and several clean up
-patches about the tlb_flush.
+Use the correct tlb_flush_all instead of the original one.
 
-change note:
-v3:
-   1. Use the gather to implement the tlb_flush suggested from Tomasz.
-   2. add some clean up patches.
+Fixes: 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API TLB sync")
+Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+---
+ drivers/iommu/mtk_iommu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-v2:
-https://lore.kernel.org/linux-iommu/1570627143-29441-1-git-send-email-yong.wu@mediatek.com/T/#t
-   1. rebase on v5.4-rc1
-   2. only split to several patches.
-
-v1:
-https://lore.kernel.org/linux-iommu/CAAFQd5C3U7pZo4SSUJ52Q7E+0FaUoORQFbQC5RhCHBhi=NFYTw@mail.gmail.com/T/#t
-
-Yong Wu (7):
-  iommu/mediatek: Correct the flush_iotlb_all callback
-  iommu/mediatek: Add pgtlock in the iotlb_sync
-  iommu/mediatek: Use gather to achieve the tlb range flush
-  iommu/mediatek: Delete the leaf in the tlb flush
-  iommu/mediatek: Move the tlb_sync into tlb_flush
-  iommu/mediatek: Use writel for TLB range invalidation
-  iommu/mediatek: Reduce the tlb flush timeout value
-
- drivers/iommu/mtk_iommu.c | 77 +++++++++++++++++++++++------------------------
- drivers/iommu/mtk_iommu.h |  2 +-
- 2 files changed, 38 insertions(+), 41 deletions(-)
-
+diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+index 67a483c..76b9388 100644
+--- a/drivers/iommu/mtk_iommu.c
++++ b/drivers/iommu/mtk_iommu.c
+@@ -447,7 +447,7 @@ static size_t mtk_iommu_unmap(struct iommu_domain *domain,
+ 
+ static void mtk_iommu_flush_iotlb_all(struct iommu_domain *domain)
+ {
+-	mtk_iommu_tlb_sync(mtk_iommu_get_m4u_data());
++	mtk_iommu_tlb_flush_all(mtk_iommu_get_m4u_data());
+ }
+ 
+ static void mtk_iommu_iotlb_sync(struct iommu_domain *domain,
 -- 
 1.9.1
 
