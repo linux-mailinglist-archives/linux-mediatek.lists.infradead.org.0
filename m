@@ -2,48 +2,47 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E2DFCD763F
-	for <lists+linux-mediatek@lfdr.de>; Tue, 15 Oct 2019 14:15:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 308A2D7651
+	for <lists+linux-mediatek@lfdr.de>; Tue, 15 Oct 2019 14:19:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=18Y7Yw87dM1uvusN56qVPQ4efqlVAMpc9LMRJh3YB0M=; b=ndri7OaGp+4nW8
-	af8NMPO8hXPpDJVhi3ZzrJ2zEu+LyHmhnbbBnzN+ri0oIg+dYbHNSIgRqlkSCQpheze48eIAvvIRn
-	O1YSEP+9OisoG4Mg4/MsU3ZCSLh0lmgAlj71jux65x3QiD3lnIxE3wTcpH9rkoDlo6eT4O0idQH13
-	79aN88zHSFXZVp8+4imfD5dlW/3LkkvF4ByBzTUaLWsTaztZ5duRn63ivjH8h4rbu8wrePXBHZeSY
-	lKSOmhOjIOheoc/0DfvgT0cmru79HA0Y2hChNTIEgBJRmAwwuDhlTy92WeVEBjbELFuA34hEBf+2q
-	Sw7K6lMoBq+VpgSJVdkA==;
+	List-Owner; bh=3idhS1zFK62ukqAK7khz5AGmYlhPgJQtCzvFoWEDsdU=; b=AmaVCYsjRTLJ8q
+	L9o5d/xGtlCB118/Yfn5aUASyUW64iRrKEIY9VypLBj0ueTT4K1IbkdYIWN9VAqhYq21YlFtr8wYq
+	n+sDOsxypxMsV8c4HhUU/A5tkIi+Sx+TPLljeLKgFljiWipef4ZdoKjDKtk8t5+3BCbk0AVmr/w9o
+	I2BVbAgKeHUBgBzaljGFjK6o+Dih1VWNG2Ig5H6bd7a/AcqFURSTiNOPOPP/lq2OM1qFhL7n3klL7
+	fzaf3YCLeHs/ZEjcZ1x/IMHGFIIPUMI9roFgeKsxFfW2zGQab9nzs5TnEX4jIUGykFv7VEr6P1EY2
+	sBRK8PKZpLc/ceh4Xalg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKLjd-00067m-So; Tue, 15 Oct 2019 12:15:29 +0000
+	id 1iKLnB-0006cx-6H; Tue, 15 Oct 2019 12:19:09 +0000
 Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKLjT-0005zj-Qa; Tue, 15 Oct 2019 12:15:21 +0000
-Received: from DGGEMS403-HUB.china.huawei.com (unknown [172.30.72.60])
- by Forcepoint Email with ESMTP id 03760B4CE4007F68691B;
- Tue, 15 Oct 2019 20:15:18 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS403-HUB.china.huawei.com
- (10.3.19.203) with Microsoft SMTP Server id 14.3.439.0; Tue, 15 Oct 2019
- 20:15:10 +0800
+ id 1iKLn0-0006UU-PE; Tue, 15 Oct 2019 12:19:00 +0000
+Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id A3809619C7E085F0916D;
+ Tue, 15 Oct 2019 20:18:56 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
+ (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Tue, 15 Oct 2019
+ 20:18:49 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <mturquette@baylibre.com>, <sboyd@kernel.org>, <matthias.bgg@gmail.com>,
- <weiyi.lu@mediatek.com>, <robh@kernel.org>, <drinkcat@chromium.org>,
- <yong.liang@mediatek.com>, <erin.lo@mediatek.com>,
- <chunfeng.yun@mediatek.com>
-Subject: [PATCH -next] clk: mediatek: mt8183: use
+ <rfontana@redhat.com>, <allison@lohutok.net>, <tglx@linutronix.de>,
+ <gregkh@linuxfoundation.org>
+Subject: [PATCH -next] clk: mediatek: mt7622: use
  devm_platform_ioremap_resource() to simplify code
-Date: Tue, 15 Oct 2019 20:14:21 +0800
-Message-ID: <20191015121421.26144-1-yuehaibing@huawei.com>
+Date: Tue, 15 Oct 2019 20:17:35 +0800
+Message-ID: <20191015121735.26228-1-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191015_051520_438556_8A62E43D 
-X-CRM114-Status: UNSURE (   8.06  )
+X-CRM114-CacheID: sfid-20191015_051858_991903_0A761FE0 
+X-CRM114-Status: UNSURE (   7.94  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -78,30 +77,28 @@ This is detected by coccinelle.
 
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/clk/mediatek/clk-mt8183.c | 6 ++----
+ drivers/clk/mediatek/clk-mt7622.c | 6 ++----
  1 file changed, 2 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/clk/mediatek/clk-mt8183.c b/drivers/clk/mediatek/clk-mt8183.c
-index 51c8d5c..5046852 100644
---- a/drivers/clk/mediatek/clk-mt8183.c
-+++ b/drivers/clk/mediatek/clk-mt8183.c
-@@ -1189,11 +1189,10 @@ CLK_OF_DECLARE_DRIVER(mt8183_topckgen, "mediatek,mt8183-topckgen",
- 
- static int clk_mt8183_top_probe(struct platform_device *pdev)
- {
--	struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+diff --git a/drivers/clk/mediatek/clk-mt7622.c b/drivers/clk/mediatek/clk-mt7622.c
+index 8190dab..ef5947e1 100644
+--- a/drivers/clk/mediatek/clk-mt7622.c
++++ b/drivers/clk/mediatek/clk-mt7622.c
+@@ -614,9 +614,8 @@ static int mtk_topckgen_init(struct platform_device *pdev)
+ 	struct clk_onecell_data *clk_data;
  	void __iomem *base;
  	struct device_node *node = pdev->dev.of_node;
+-	struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
  
 -	base = devm_ioremap_resource(&pdev->dev, res);
 +	base = devm_platform_ioremap_resource(pdev, 0);
  	if (IS_ERR(base))
  		return PTR_ERR(base);
  
-@@ -1262,9 +1261,8 @@ static int clk_mt8183_mcu_probe(struct platform_device *pdev)
- 	struct clk_onecell_data *clk_data;
- 	struct device_node *node = pdev->dev.of_node;
+@@ -695,9 +694,8 @@ static int mtk_pericfg_init(struct platform_device *pdev)
  	void __iomem *base;
+ 	int r;
+ 	struct device_node *node = pdev->dev.of_node;
 -	struct resource *res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
  
 -	base = devm_ioremap_resource(&pdev->dev, res);
