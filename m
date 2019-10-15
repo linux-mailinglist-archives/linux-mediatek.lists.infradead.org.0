@@ -2,93 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2089D7C5D
-	for <lists+linux-mediatek@lfdr.de>; Tue, 15 Oct 2019 18:52:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E9B9BD800D
+	for <lists+linux-mediatek@lfdr.de>; Tue, 15 Oct 2019 21:21:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=pXv/FIJ5l8z/dpecEWwjwM6bHzpJEMy3A1rgtfCen5s=; b=g0rFHoeWgQv0hs0lXwuCycJHM
-	kY7PYdHb6TkeKVREM32nOsxwJRlb6Ck95KO+MI6RrfepBatHNJyzKs1PIhmKUxtYOnyNcohYhrNhF
-	hYIJX7ZJUvoBcvx/5MT+keyDgUbmfX0pp0sVnIRW2oopD9ED/+IP2D8hGnW9pyCnf1cYPDpw1fNxv
-	hKrPMYE+6E1scT+7Jqrg+0AXgu1coaouQDRWBv9ePRP2ql63xfu+XpRwjV8+z8wgwQotxSINuLhQ0
-	/4gWgate5wd27njgNHIz9GmTVkKcrYCkXb9P8WmuCIyD/1jA5p4+Irz7QO2vLHHVIYEDG8coL+ZTH
-	XFMBQj4fg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=C8HqbWmt7MGN4XdqipmiBRuwQpwXUGNTphEgJ/dTaBo=; b=nxiW24Bq9l08x6
+	hgenY8UJAgM/+ZCOIUXbexQ0szFbXc6f+XLqwcDE8glRka8D0zqJsxwvmrTQ+LNTwA3cFVWnMwZXY
+	Mk8RWsGRd9hNIiwsCpdRM3CsP6wRjMYqcBY8Zoa8Yo7UgjYo5Ds0A+Q1JhbtE9NUBx6Le8S2Jeys6
+	OQDCmrHU8ZzQy2aTs7S3fJSQcor4X+qLe0PRmW25/1n6i/xtuifoGcn+cO021o0LCYTjWqgk7ZOve
+	QYpZvYz2fNaq9jcqdpmxU0n3TsfPoSHa4QIJiPTts8DEu+cZofdIX2vFwI8by90r7OBsoBWryfN4G
+	e0/r4RLq6FQ0b8fCruJA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKQ3r-000227-Tz; Tue, 15 Oct 2019 16:52:39 +0000
-Received: from vulcan.natalenko.name ([104.207.131.136])
+	id 1iKSNM-0003jP-DD; Tue, 15 Oct 2019 19:20:56 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKQ3W-0001mY-CY; Tue, 15 Oct 2019 16:52:20 +0000
-Received: from mail.natalenko.name (vulcan.natalenko.name
- [IPv6:fe80::5400:ff:fe0c:dfa0])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by vulcan.natalenko.name (Postfix) with ESMTPSA id 08E8B600D27;
- Tue, 15 Oct 2019 18:52:13 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name;
- s=dkim-20170712; t=1571158333;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=gP7dY/174GGdD6usTpaalR67cnmsiaPwYD5OpFcQfyY=;
- b=axlssqB+DUWqk4taqLCosVffDK8d64AuWwQ15V7uZqtx7iDctmvnRYOYKT+W9sQ0eHsN/C
- 6jIbhyD9Sm2mIWuhiqx2sZThjUyh0zi3Yu4hB2KMVydbuj2Tr1PQqK7Q9NC5gMNnk2RdV6
- ZU1x93AcuTKJFTxW0B76PTLkE+3Rtj0=
+ id 1iKSN5-0003X1-IK; Tue, 15 Oct 2019 19:20:40 +0000
+Received: by mail-ot1-f67.google.com with SMTP id m19so17992939otp.1;
+ Tue, 15 Oct 2019 12:20:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=h5H37sJ61LUD/ljVtDlhAsfO5sV6TmGgopvlbfaEWZ8=;
+ b=g+FuRQIzgK6cQT9Vz8Q/DYUSpk8FmsK71weG8OO3c2JvUcPoYa44RkFccKGujMVXoM
+ 9fqKEAH0lu7K3gSc87FZ9wpHthcccFPOw7oNZrcR/oASETA3J4UrZ9g8eovI9+KmjGCc
+ 6NTuGVGhkskJQbaexkSJXDIGO1KivTmFIG9yUyH5zfvJE8fIMF048WP9FxPnYVld2/b5
+ 0XfB6ghoi/tawwDSgNSoYy6Cg/hckVDoI/7BjkGnGfWs6f4YmV/EC60CCOuansa7rXWl
+ tjY6juk/iuyRvXy10osSaCKShAzDxYlPA3hDOO1qeM+hAgc8ayFtH0CEmakFoRVGnSm2
+ fSSg==
+X-Gm-Message-State: APjAAAX6QvMphbszc9Ye06AHItXiNazFBqsyjZ7Jpm7XqaoaWbrQILmn
+ UsTLXTei4s9BfHynNjqhkw==
+X-Google-Smtp-Source: APXvYqwDWbiw9IcWLzy5NFqYMdjvTEqwdZgk4ryuCSiUp5VaQHf/4LJS4ik6SQYzDlQ79863axHHdA==
+X-Received: by 2002:a9d:7d02:: with SMTP id v2mr3381533otn.301.1571167237726; 
+ Tue, 15 Oct 2019 12:20:37 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id t12sm6526227otl.35.2019.10.15.12.20.36
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 15 Oct 2019 12:20:36 -0700 (PDT)
+Date: Tue, 15 Oct 2019 14:20:36 -0500
+From: Rob Herring <robh@kernel.org>
+To: Argus Lin <argus.lin@mediatek.com>
+Subject: Re: [PATCH 1/3] dt-bindings: pwrap: mediatek: add pwrap support for
+ MT6779
+Message-ID: <20191015192036.GA26160@bogus>
+References: <1570088901-23211-1-git-send-email-argus.lin@mediatek.com>
+ <1570088901-23211-2-git-send-email-argus.lin@mediatek.com>
 MIME-Version: 1.0
-Date: Tue, 15 Oct 2019 18:52:12 +0200
-From: Oleksandr Natalenko <oleksandr@natalenko.name>
-To: Lorenzo Bianconi <lorenzo@kernel.org>
-Subject: Re: mt76x2e hardware restart
-In-Reply-To: <20191012165028.GA8739@lore-desk-wlan.lan>
-References: <deaafa7a3e9ea2111ebb5106430849c6@natalenko.name>
- <c6d621759c190f7810d898765115f3b4@natalenko.name>
- <9d581001e2e6cece418329842b2b0959@natalenko.name>
- <20191012165028.GA8739@lore-desk-wlan.lan>
-Message-ID: <f7695bc79d40bbc96744a639b1243027@natalenko.name>
-X-Sender: oleksandr@natalenko.name
-User-Agent: Roundcube Webmail/1.3.10
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=natalenko.name; 
- s=arc-20170712; t=1571158333;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=gP7dY/174GGdD6usTpaalR67cnmsiaPwYD5OpFcQfyY=;
- b=DRapKaMH9Ss4+Y57MDmNYSjvx33aSfwXUw8own30SGyjDa5AMl64qaMDNsqvPX7/s1RUlT
- /QkkeIHxPcKgKgp5SWsPB7WS+D/aWzg/vXK6aNsqs0cbcnq0AIxk4q1eaPz/BTo77lmKqr
- 7yVWwSxfpPnFqoATcwt0citzVM5lIws=
-ARC-Seal: i=1; s=arc-20170712; d=natalenko.name; t=1571158333; a=rsa-sha256;
- cv=none;
- b=PesOlooj33cKhM+/mIkE91p8YnsF/RM+XyufMQ7N+HwXFSwngv2bnoT5IKQRxPvK2kLS4e
- 7/Ja/w9ZpmQ8oiIZboZ0nmfG8W7ad/eC012N804Ng5944lJbgzAaNEkQWMq1YRUDsdWJZ9
- ez1OhgcRkIU+TO6ThLjdLvcKF9Rbz7k=
-ARC-Authentication-Results: i=1; vulcan.natalenko.name;
- auth=pass smtp.auth=oleksandr@natalenko.name
- smtp.mailfrom=oleksandr@natalenko.name
+Content-Disposition: inline
+In-Reply-To: <1570088901-23211-2-git-send-email-argus.lin@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191015_095218_747236_B48B6450 
-X-CRM114-Status: UNSURE (   5.55  )
+X-CRM114-CacheID: sfid-20191015_122039_610208_875820D1 
+X-CRM114-Status: UNSURE (   9.88  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.207.131.136 listed in list.dnswl.org]
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.67 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,42 +92,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, Stanislaw Gruszka <sgruszka@redhat.com>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>,
- Felix Fietkau <nbd@nbd.name>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ wsd_upstream@mediatek.com, argus.lin@mediatek.com,
+ Chenglin Xu <chenglin.xu@mediatek.com>,
+ Catalin Marinas <catalin.marinas@arm.com>, Sean Wang <sean.wang@mediatek.com>,
+ Will Deacon <will.deacon@arm.com>, linux-kernel@vger.kernel.org,
+ henryc.chen@mediatek.com, flora.fu@mediatek.com,
+ Christophe Jaillet <christophe.jaillet@wanadoo.fr>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Chen Zhong <chen.zhong@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hey.
+On Thu, 3 Oct 2019 15:48:19 +0800, Argus Lin wrote:
+> Add binding document of pwrap for MT6779 SoCs.
+> 
+> Signed-off-by: Argus Lin <argus.lin@mediatek.com>
+> ---
+>  Documentation/devicetree/bindings/soc/mediatek/pwrap.txt | 1 +
+>  1 file changed, 1 insertion(+)
+> 
 
-On 12.10.2019 18:50, Lorenzo Bianconi wrote:
-> sorry for the delay. Felix and me worked on this issue today. Could you 
-> please
-> try if the following patch fixes your issue?
-
-Thanks for the answer and the IRC discussion. As agreed I've applied [1] 
-and [2], and have just swapped the card to try it again. So far, it 
-works fine in 5 GHz band in 802.11ac mode as an AP.
-
-I'll give it more load with my phone over evening, and we can discuss 
-what to do next (if needed) tomorrow again. Or feel free to drop me an 
-email today.
-
-Thanks for your efforts.
-
-[1] 
-https://github.com/LorenzoBianconi/wireless-drivers-next/commit/cf3436c42a297967235a9c9778620c585100529e.patch
-[2] 
-https://github.com/LorenzoBianconi/wireless-drivers-next/commit/aad256eb62620f9646d39c1aa69234f50c89eed8.patch
-
--- 
-   Oleksandr Natalenko (post-factum)
+Acked-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
