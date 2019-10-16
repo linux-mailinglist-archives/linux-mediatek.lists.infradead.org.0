@@ -2,82 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 773B1D9BAA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:22:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3CCDDD9BD1
+	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:28:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
+	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=T+aIx68vALMNb6fE97UtpJLdMfwrGOIX95jpfHmqcXk=; b=NF7kdOyRi1XFF7
-	FKbCJwAeM70QrRV2YdOBf4uOB1gF2JwbzuhS/HgFdGrKyt/O87Ovbr0ARxqPE0wJnutVNjPPvXyu5
-	cC9Hn6zJYPd5G/kmeTkPLmc3xGDfzX3z0Zmi9HYegfuS7Xkw7zR+ARqqm+QifdcP+rGxdK70gNvny
-	aU+LevQ/6RKHAkWKn6iLy6HefIhmTUHN5NnsUStZz90K0BaOlmbDA/0UKJ+oVw5WrzHW4wPnYhSmz
-	0HbSly/aKpn9H82Zb3m6dRpwynp5i+9O+HaFgVEG1X6E0fudscuyDtChEe/XFrOfy31eAY9tConQt
-	nsS0HBEBY9q5O2Z4ZTew==;
+	List-Owner; bh=1QaT5zwDTMGi2Kz4cwKUMJtoqnfeXbtZUDBDIffR33A=; b=Fn8pbyToOACSkS
+	cjodKeI4L6PC7tZkQ21bUjzjmzV7hhicqmheA2CYmPiOufS833P4nttvXAOTCHzcSRwUnGkENqidc
+	iP6iRA8lfF/sOaxzNBBxyHKwVitURSsivKUzNezF+9FE478hk0bKbfgzq0erQIg0hBCQwmMQZ+dTi
+	c/L10VAEh9HPgv4czxF8USQKR39WtPYUy6W6eBtK0PgAAnTsmIbSizhxkEQFUTK/QkGnABTsDCxEH
+	U0YcwjMC03vAEZJmKppinDeyHoQQb08nh1otjnJwUe+Wzk9NGv4lT+rl6Su4s83lPkmTsQbuuvFGe
+	nNprXU1X1/ivhgRo+npw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKpoU-0001tc-B9; Wed, 16 Oct 2019 20:22:30 +0000
-Received: from mail-oi1-f193.google.com ([209.85.167.193])
+	id 1iKptu-00089J-VX; Wed, 16 Oct 2019 20:28:07 +0000
+Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKpa5-0002U9-5U; Wed, 16 Oct 2019 20:07:46 +0000
-Received: by mail-oi1-f193.google.com with SMTP id a15so152953oic.0;
- Wed, 16 Oct 2019 13:07:36 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=5gD14iI8UpOKj376Bq/txSzTZsSs0VToSMrptEdmjdQ=;
- b=jk972yDEsFd7hvNNWtUZ9VpiAKxz4x8k0l4Qu5NrH03gMva8eQUcn4rPGrVG4lqC62
- SkpOFU0GgCY7c4Qc98yCu4UIBswcoWjF0Cu9cPzYcjsP0J3ELJq4iAvzbxr1ENjP6GL5
- Mj9gh18ft1sdYTAj+Z/E+sL1Z16Haj9ydh5N8vIzQuiF83XdU+tY3hrDuP1vIkuINxkn
- 2xu6E30qQ9fWT7vedDHw6/5OkRMebLxepnwbbg7OhQ2h+bd6lNQ9fYcQlmXDpNa4qqhy
- by1FxB3IsjGy4WmwEqp15Z8PJkQFMyJkHfTnkg9Vs9IzQ5dD4Zclecnm5UWtAXEThIjA
- b5GQ==
-X-Gm-Message-State: APjAAAXjIl3uTo+W7OwIpp736n4LuN84VJ3CxIeW63TS0s8TwW+IE5uX
- IMDkMnjICG8CXGqbIQ7PLw==
-X-Google-Smtp-Source: APXvYqwARWAGB+loxletdL6FrwiWyw5aEFkfQ6bbkwqrIvNHj0wJXVi7rbTCOJSVySk78uO9yqn8Ag==
-X-Received: by 2002:aca:df41:: with SMTP id w62mr110576oig.90.1571256456105;
- Wed, 16 Oct 2019 13:07:36 -0700 (PDT)
-Received: from xps15.herring.priv (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.googlemail.com with ESMTPSA id a9sm7412463oie.7.2019.10.16.13.07.34
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 16 Oct 2019 13:07:35 -0700 (PDT)
-From: Rob Herring <robh@kernel.org>
-To: Andrew Murray <andrew.murray@arm.com>, Bjorn Helgaas <bhelgaas@google.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Subject: [PATCH v2 25/25] PCI: Make devm_of_pci_get_host_bridge_resources()
- static
-Date: Wed, 16 Oct 2019 15:06:47 -0500
-Message-Id: <20191016200647.32050-26-robh@kernel.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191016200647.32050-1-robh@kernel.org>
-References: <20191016200647.32050-1-robh@kernel.org>
-MIME-Version: 1.0
+ id 1iKptM-0007eI-R1; Wed, 16 Oct 2019 20:27:34 +0000
+Received: from localhost (unknown [IPv6:2601:601:9f00:1e2::d71])
+ (using TLSv1 with cipher AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ (Authenticated sender: davem-davemloft)
+ by shards.monkeyblade.net (Postfix) with ESMTPSA id 9FD3614398687;
+ Wed, 16 Oct 2019 13:27:26 -0700 (PDT)
+Date: Wed, 16 Oct 2019 13:27:26 -0700 (PDT)
+Message-Id: <20191016.132726.112898872232866476.davem@davemloft.net>
+To: biao.huang@mediatek.com
+Subject: Re: [v2, PATCH] net: stmmac: disable/enable ptp_ref_clk in
+ suspend/resume flow
+From: David Miller <davem@davemloft.net>
+In-Reply-To: <20191015032444.15145-2-biao.huang@mediatek.com>
+References: <20191015032444.15145-1-biao.huang@mediatek.com>
+ <20191015032444.15145-2-biao.huang@mediatek.com>
+X-Mailer: Mew version 6.8 on Emacs 26.1
+Mime-Version: 1.0
+X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
+ (shards.monkeyblade.net [149.20.54.216]);
+ Wed, 16 Oct 2019 13:27:27 -0700 (PDT)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_130737_250660_481BD134 
-X-CRM114-Status: GOOD (  12.20  )
-X-Spam-Score: 0.6 (/)
+X-CRM114-CacheID: sfid-20191016_132732_900079_FFAF1C76 
+X-CRM114-Status: UNSURE (   4.69  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.6 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.193 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.193 listed in list.dnswl.org]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,98 +64,26 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>, linux-pci@vger.kernel.org,
- Shawn Lin <shawn.lin@rock-chips.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Toan Le <toan@os.amperecomputing.com>, Will Deacon <will@kernel.org>,
- Ryder Lee <ryder.lee@mediatek.com>, Michal Simek <michal.simek@xilinx.com>,
- linux-rockchip@lists.infradead.org, bcm-kernel-feedback-list@broadcom.com,
- Linus Walleij <linus.walleij@linaro.org>, Ray Jui <rjui@broadcom.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, Simon Horman <horms@verge.net.au>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org, Scott Branden <sbranden@broadcom.com>,
- Jingoo Han <jingoohan1@gmail.com>, rfi@lists.rocketboards.org,
- linux-renesas-soc@vger.kernel.org, Tom Joseph <tjoseph@cadence.com>,
- Srinath Mannam <srinath.mannam@broadcom.com>,
- Gustavo Pimentel <gustavo.pimentel@synopsys.com>,
- Ley Foon Tan <lftan@altera.com>
+Cc: andrew@lunn.ch, jianguo.zhang@mediatek.com, jakub.kicinski@netronome.com,
+ alexandre.torgue@st.com, boon.leong.ong@intel.com, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, joabreu@synopsys.com,
+ linux-mediatek@lists.infradead.org, mcoquelin.stm32@gmail.com,
+ matthias.bgg@gmail.com, peppe.cavallaro@st.com,
+ linux-stm32@st-md-mailman.stormreply.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Now that all the PCI host drivers are using pci_parse_request_of_pci_ranges(),
-make devm_of_pci_get_host_bridge_resources() static.
+From: Biao Huang <biao.huang@mediatek.com>
+Date: Tue, 15 Oct 2019 11:24:44 +0800
 
-Cc: Bjorn Helgaas <bhelgaas@google.com>
-Signed-off-by: Rob Herring <robh@kernel.org>
----
- drivers/pci/of.c  |  5 +----
- drivers/pci/pci.h | 17 -----------------
- 2 files changed, 1 insertion(+), 21 deletions(-)
+> disable ptp_ref_clk in suspend flow, and enable it in resume flow.
+> 
+> Fixes: f573c0b9c4e0 ("stmmac: move stmmac_clk, pclk, clk_ptp_ref and stmmac_rst to platform structure")
+> Signed-off-by: Biao Huang <biao.huang@mediatek.com>
 
-diff --git a/drivers/pci/of.c b/drivers/pci/of.c
-index 0b1e4623dfcf..00e4b9fcb41d 100644
---- a/drivers/pci/of.c
-+++ b/drivers/pci/of.c
-@@ -236,7 +236,6 @@ void of_pci_check_probe_only(void)
- }
- EXPORT_SYMBOL_GPL(of_pci_check_probe_only);
- 
--#if defined(CONFIG_OF_ADDRESS)
- /**
-  * devm_of_pci_get_host_bridge_resources() - Resource-managed parsing of PCI
-  *                                           host bridge resources from DT
-@@ -255,7 +254,7 @@ EXPORT_SYMBOL_GPL(of_pci_check_probe_only);
-  * It returns zero if the range parsing has been successful or a standard error
-  * value if it failed.
-  */
--int devm_of_pci_get_host_bridge_resources(struct device *dev,
-+static int devm_of_pci_get_host_bridge_resources(struct device *dev,
- 			unsigned char busno, unsigned char bus_max,
- 			struct list_head *resources,
- 			struct list_head *ib_resources,
-@@ -384,8 +383,6 @@ int devm_of_pci_get_host_bridge_resources(struct device *dev,
- 	pci_free_resource_list(resources);
- 	return err;
- }
--EXPORT_SYMBOL_GPL(devm_of_pci_get_host_bridge_resources);
--#endif /* CONFIG_OF_ADDRESS */
- 
- #if IS_ENABLED(CONFIG_OF_IRQ)
- /**
-diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index 6692c4fe4290..118a4974537b 100644
---- a/drivers/pci/pci.h
-+++ b/drivers/pci/pci.h
-@@ -630,23 +630,6 @@ static inline void pci_set_bus_of_node(struct pci_bus *bus) { }
- static inline void pci_release_bus_of_node(struct pci_bus *bus) { }
- #endif /* CONFIG_OF */
- 
--#if defined(CONFIG_OF_ADDRESS)
--int devm_of_pci_get_host_bridge_resources(struct device *dev,
--			unsigned char busno, unsigned char bus_max,
--			struct list_head *resources,
--			struct list_head *ib_resources,
--			resource_size_t *io_base);
--#else
--static inline int devm_of_pci_get_host_bridge_resources(struct device *dev,
--			unsigned char busno, unsigned char bus_max,
--			struct list_head *resources,
--			struct list_head *ib_resources,
--			resource_size_t *io_base)
--{
--	return -EINVAL;
--}
--#endif
--
- #ifdef CONFIG_PCIEAER
- void pci_no_aer(void);
- void pci_aer_init(struct pci_dev *dev);
--- 
-2.20.1
-
+Applied and queued up for -stable.
 
 _______________________________________________
 Linux-mediatek mailing list
