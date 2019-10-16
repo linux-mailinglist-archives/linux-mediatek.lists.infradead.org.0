@@ -2,53 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E1C4DA254
-	for <lists+linux-mediatek@lfdr.de>; Thu, 17 Oct 2019 01:34:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 87F39DA257
+	for <lists+linux-mediatek@lfdr.de>; Thu, 17 Oct 2019 01:34:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:Subject:To:From:
 	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=R01uJ5axG9OTLR+PrctivjYtPc0V94dFUwKpHF0l58M=; b=AkkJGHo8/UkiNW
-	E98LRRY17dvNNh7f/ZAeGq64Nkmx/I2Yp2PqwipmUYnWpJR6haMssz8yNSCQ2ePuVGNKM5QdIaCaK
-	S+Oi2ShbNqCP8G1V6GJrkpdqdQCywlYRMFY83ZD6laTXy/1TWCC4EFkNmJW5pcQf01XqfwFwsad/T
-	NdYZ4gO2kVe8dQ8xr+OYUbwWiK38rg5ktnL4M+tUD1DpuQuym8elywqWCltWjER8gxKaC0pq+WQ20
-	mVESxd8Gq96Su2AEszctrbEtUo0VVrfS3set8Upot6IUaJOYzHsv9AcmDM3xam3unkcYb2FuVOFds
-	0GkoQ3R2sEADzuk61Zxg==;
+	List-Owner; bh=n0e6ootLRUr9HVXqz5s7QHeL8YUrUAiV6/HHzJJ/Ghk=; b=ar8LZdXmIZ8xRP
+	g2CU9Q0kBYovZti/Ws9ZjHZF3PRMXSgg/bEmqh7yg55K0kjGrm1GKe6QzSMwMY2uBqIOt8nPbhnxO
+	arJVKOw7EjpTSgUS6irPfnvTQdj8ldvbrVi549Jrwe1ypWSaqWacPv4tZznt90iOBIOQ5GI0jWmez
+	DkgWf7qW3iegUjolYU3TM9G0rdkMTXxqr/5dkv+iOoiLC95TSeVcweDQ6p5fJJSDJ3dEJutJGKS39
+	PPUJogFZ0LeZvlbazNwZptUi3hhQZfoWpSb3IAXTBsHfo2bx3kfr4wQyXoU+O+Arzo1/wuRKO23uz
+	BLO/0hS/T5Imb668vJ0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKsoQ-0001EE-0N; Wed, 16 Oct 2019 23:34:38 +0000
+	id 1iKsoe-0001So-GM; Wed, 16 Oct 2019 23:34:52 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKsnd-0000S9-HL; Wed, 16 Oct 2019 23:33:51 +0000
+ id 1iKsnl-0000a2-6V; Wed, 16 Oct 2019 23:33:58 +0000
 Received: from kernel.org (unknown [104.132.0.74])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id BC30621A49;
- Wed, 16 Oct 2019 23:33:48 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id B432F2168B;
+ Wed, 16 Oct 2019 23:33:56 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1571268828;
- bh=J0c1fc+cVlOSedR6bxWcZ3BNhUFkVY/5owItVepDo14=;
+ s=default; t=1571268836;
+ bh=InOtPuMwiDZaEIQcAgB+1nPKHT1N2rj7QjJXTKKNC7o=;
  h=In-Reply-To:References:From:To:Cc:Subject:Date:From;
- b=ravOVQCp8V/0fJXEs3ewm1/jkVXFZTtklaupE62sRKCFtO8Tiz2GknIp8fK6Y2a93
- K2yFDI0zmFgPTJjGZvtgAKYGVaGocf3sxXdFgt23wPlE2vTr8zzBPBEXWkjD+iDKhL
- x5ZaCzE7g7nQz0lNw7Npz5oGRXi6bLt00nyGz05U=
+ b=wFLQPg6puYmgL1mNCYTIdQjVOcutLNGiGXr20LKi8d/LhVpjgirZGdQUgYOCZCZLg
+ QfD+sg3FQ541+atvLXZPgU+tosf/rqyQx5TVGPr+QHS/+nVSYPd5jmQ5w34FzyxNmr
+ 82FCxM4sy5L5BwqM5Wjftd8FDx6fdC64h4rQ4W8Y=
 MIME-Version: 1.0
-In-Reply-To: <20191015124226.25792-1-yuehaibing@huawei.com>
-References: <20191015124226.25792-1-yuehaibing@huawei.com>
+In-Reply-To: <20191015124728.25072-1-yuehaibing@huawei.com>
+References: <20191015124728.25072-1-yuehaibing@huawei.com>
 From: Stephen Boyd <sboyd@kernel.org>
-To: YueHaibing <yuehaibing@huawei.com>, matthias.bgg@gmail.com,
- mturquette@baylibre.com, robh@kernel.org, ryder.lee@mediatek.com,
- wenzhen.yu@mediatek.com
-Subject: Re: [PATCH -next] clk: mediatek: mt7629: use
+To: YueHaibing <yuehaibing@huawei.com>, gregkh@linuxfoundation.org,
+ jasu@njomotys.info, kstewart@linuxfoundation.org, matthias.bgg@gmail.com,
+ mturquette@baylibre.com, tglx@linutronix.de
+Subject: Re: [PATCH -next] clk: mediatek: mt6797: use
  devm_platform_ioremap_resource() to simplify code
 User-Agent: alot/0.8.1
-Date: Wed, 16 Oct 2019 16:33:48 -0700
-Message-Id: <20191016233348.BC30621A49@mail.kernel.org>
+Date: Wed, 16 Oct 2019 16:33:56 -0700
+Message-Id: <20191016233356.B432F2168B@mail.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_163349_713466_D51C3B24 
-X-CRM114-Status: UNSURE (   5.69  )
+X-CRM114-CacheID: sfid-20191016_163357_397165_B57EAE34 
+X-CRM114-Status: UNSURE (   5.70  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -86,7 +86,7 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Quoting YueHaibing (2019-10-15 05:42:26)
+Quoting YueHaibing (2019-10-15 05:47:28)
 > Use devm_platform_ioremap_resource() to simplify the code a bit.
 > This is detected by coccinelle.
 > 
