@@ -2,55 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E984DD86BE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 05:35:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D8B8D86DD
+	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 05:43:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FFj4RkdnXbJJMI1P5w09nf9AJpni0OfRJLVuaGDYGws=; b=mn4XIMwx/nAtMq
-	48vhdMeXrQgZmtjMXDEDOOg7MAESkiIee+0yqNeGVgbNb+TMCqehfAqv5jvg54jhr7wgXjJRUCsKE
-	40ImgDO6GnfDTN3t//5zBYwnur25ojCCuml05BNPlSuFlJiBxXu/BPPxPrlh8vKvmi/IavAqZo3q6
-	pQV8QC3XLDZHhOAF+Nsv/GB6KzAe0theRwlJ/8PzN4LVW1AhcNFdNFBVBI3KtHEAsKASgzSaqWb9y
-	+nLXpWKlhFzIY9ReXr3qQz7/i/mSW5LLwGL/PT2aAFr6c5FrAVvcHFmsN5083m2Iw0znDaBd1nxrU
-	mejQenycm9FwBeXEIy1A==;
+	List-Owner; bh=WOveS1TpTxDMUSroqddDtsc1dpRV0N6Px72M9GDC6Ek=; b=m6HrGDiwLZEdpF
+	Z+HMlO8Y0zZrf30RAWsHvlzNBAPX3OzkQbQyBipkuk6aUubP2YzLyfzyZIB/7S+DFS4rsPiekQjHU
+	Ol0yrYMiee5JJplCR4T+is/44pn+MpPyCdPnNleQq8uQivGwrk+5sLNAM2c9Zotrvob91OfZMUSVP
+	5kX/UWKBalhVaT7HM2VzQvqjo0sWNHwn332wnoYj4r8QuuDkfH+ITdDG3/q99Q90IHq20pvn+MVC9
+	cYFGfqNUzkurMd9IbamyroBAlzJ8Vbv8PArC069CYePqdFvdn9ZKdiZib/hKDVRRz0ECioOyRXyB6
+	pkHUFTHMmhpNBok66vgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKa5P-00074n-4m; Wed, 16 Oct 2019 03:34:55 +0000
+	id 1iKaDw-0002Fk-87; Wed, 16 Oct 2019 03:43:44 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKa4m-0006Vx-1g; Wed, 16 Oct 2019 03:34:17 +0000
-X-UUID: 5b741450edd9438b8ae22bf71297dcec-20191015
-X-UUID: 5b741450edd9438b8ae22bf71297dcec-20191015
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ id 1iKaDs-0002EI-Pd; Wed, 16 Oct 2019 03:43:42 +0000
+X-UUID: 07ec8db55d2a4da2aaf986686ec075c5-20191015
+X-UUID: 07ec8db55d2a4da2aaf986686ec075c5-20191015
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1026588013; Tue, 15 Oct 2019 19:34:00 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 15 Oct 2019 20:34:11 -0700
+ with ESMTP id 1208363795; Tue, 15 Oct 2019 19:43:20 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 15 Oct 2019 20:33:29 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 16 Oct 2019 11:34:09 +0800
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 16 Oct 2019 11:33:27 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 16 Oct 2019 11:34:08 +0800
+ Transport; Wed, 16 Oct 2019 11:33:26 +0800
 From: Yong Wu <yong.wu@mediatek.com>
 To: Matthias Brugger <matthias.bgg@gmail.com>, Joerg Roedel <joro@8bytes.org>, 
  Will Deacon <will.deacon@arm.com>
-Subject: [PATCH v4 6/7] iommu/mediatek: Get rid of the pgtlock
-Date: Wed, 16 Oct 2019 11:33:11 +0800
-Message-ID: <1571196792-12382-7-git-send-email-yong.wu@mediatek.com>
+Subject: [PATCH v4 1/7] iommu/mediatek: Correct the flush_iotlb_all callback
+Date: Wed, 16 Oct 2019 11:33:06 +0800
+Message-ID: <1571196792-12382-2-git-send-email-yong.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1571196792-12382-1-git-send-email-yong.wu@mediatek.com>
 References: <1571196792-12382-1-git-send-email-yong.wu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: BDD725E7AB20C2364C197E8B001FBC0EC27465FEDC83224779F452A2E0202FC82000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191015_203416_107403_BADDEB6F 
-X-CRM114-Status: GOOD (  12.52  )
+X-CRM114-CacheID: sfid-20191015_204340_837909_F7C58546 
+X-CRM114-Status: GOOD (  11.17  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -85,88 +86,28 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Now we have tlb_lock for the HW tlb flush, then pgtable code hasn't
-needed the external "pgtlock" for a while. this patch remove the
-"pgtlock".
+Use the correct tlb_flush_all instead of the original one.
 
+Fixes: 4d689b619445 ("iommu/io-pgtable-arm-v7s: Convert to IOMMU API TLB sync")
 Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+Reviewed-by: Robin Murphy <robin.murphy@arm.com>
 ---
- drivers/iommu/mtk_iommu.c | 25 +++----------------------
- 1 file changed, 3 insertions(+), 22 deletions(-)
+ drivers/iommu/mtk_iommu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index 0e5f41f..c2b7ed5 100644
+index 67a483c..76b9388 100644
 --- a/drivers/iommu/mtk_iommu.c
 +++ b/drivers/iommu/mtk_iommu.c
-@@ -101,8 +101,6 @@
- #define MTK_M4U_TO_PORT(id)		((id) & 0x1f)
- 
- struct mtk_iommu_domain {
--	spinlock_t			pgtlock; /* lock for page table */
--
- 	struct io_pgtable_cfg		cfg;
- 	struct io_pgtable_ops		*iop;
- 
-@@ -295,8 +293,6 @@ static int mtk_iommu_domain_finalise(struct mtk_iommu_domain *dom)
- {
- 	struct mtk_iommu_data *data = mtk_iommu_get_m4u_data();
- 
--	spin_lock_init(&dom->pgtlock);
--
- 	dom->cfg = (struct io_pgtable_cfg) {
- 		.quirks = IO_PGTABLE_QUIRK_ARM_NS |
- 			IO_PGTABLE_QUIRK_NO_PERMS |
-@@ -395,18 +391,13 @@ static int mtk_iommu_map(struct iommu_domain *domain, unsigned long iova,
- {
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
- 	struct mtk_iommu_data *data = mtk_iommu_get_m4u_data();
--	unsigned long flags;
--	int ret;
- 
- 	/* The "4GB mode" M4U physically can not use the lower remap of Dram. */
- 	if (data->enable_4GB)
- 		paddr |= BIT_ULL(32);
- 
--	spin_lock_irqsave(&dom->pgtlock, flags);
--	ret = dom->iop->map(dom->iop, iova, paddr, size, prot);
--	spin_unlock_irqrestore(&dom->pgtlock, flags);
--
--	return ret;
-+	/* Synchronize with the tlb_lock */
-+	return dom->iop->map(dom->iop, iova, paddr, size, prot);
- }
- 
- static size_t mtk_iommu_unmap(struct iommu_domain *domain,
-@@ -414,14 +405,8 @@ static size_t mtk_iommu_unmap(struct iommu_domain *domain,
- 			      struct iommu_iotlb_gather *gather)
- {
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
--	unsigned long flags;
--	size_t unmapsz;
--
--	spin_lock_irqsave(&dom->pgtlock, flags);
--	unmapsz = dom->iop->unmap(dom->iop, iova, size, gather);
--	spin_unlock_irqrestore(&dom->pgtlock, flags);
- 
--	return unmapsz;
-+	return dom->iop->unmap(dom->iop, iova, size, gather);
- }
+@@ -447,7 +447,7 @@ static size_t mtk_iommu_unmap(struct iommu_domain *domain,
  
  static void mtk_iommu_flush_iotlb_all(struct iommu_domain *domain)
-@@ -447,13 +432,9 @@ static phys_addr_t mtk_iommu_iova_to_phys(struct iommu_domain *domain,
  {
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
- 	struct mtk_iommu_data *data = mtk_iommu_get_m4u_data();
--	unsigned long flags;
- 	phys_addr_t pa;
+-	mtk_iommu_tlb_sync(mtk_iommu_get_m4u_data());
++	mtk_iommu_tlb_flush_all(mtk_iommu_get_m4u_data());
+ }
  
--	spin_lock_irqsave(&dom->pgtlock, flags);
- 	pa = dom->iop->iova_to_phys(dom->iop, iova);
--	spin_unlock_irqrestore(&dom->pgtlock, flags);
--
- 	if (data->enable_4GB && pa >= MTK_IOMMU_4GB_MODE_REMAP_BASE)
- 		pa &= ~BIT_ULL(32);
- 
+ static void mtk_iommu_iotlb_sync(struct iommu_domain *domain,
 -- 
 1.9.1
 
