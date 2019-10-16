@@ -2,59 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EEEFFD8BFB
-	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 10:59:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DE627D8CB8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 11:41:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Y72C6cyxs+8gpRfk8XQ+w7PylI/ZJwhiLeIVA/p9xO4=; b=iJbKREyu9UbXuY
-	chGPtHUfrm2/hcoSUUj9YM1/6FS3ImJIyRa4GoPLviA9mpYlrjrcS1TcYL1LYh+z0nvbyjxg/215p
-	E72MtcBO6XGzj4M8jYGAz8jQNwv/I4FEAJIZpUx2L0rOOssdQ28yHgSNp6dtYNZBhIQqZDSc8G8dY
-	VSlj7Q7mblFfQRpb4OFu7Pmv3J1plyZl4k8wkWe0ExMCv/vkccaI0XT1IfjIyoBeKstuUkfu45BHr
-	fvtyMVosHKZqefN+WbVecaGcf4MH3mA2B3b2rkcFRoQoYr8nWZzv33iIjxxdDOVHFIYnBXzLYk9pQ
-	I091xiS6YmorH5ReosIg==;
+	List-Owner; bh=H2XkeXCP86i9B5DqHz14ZRy/oTFyclzXfhflOUNQdPs=; b=G/Hq+5zX8L8aZP
+	ibS1/ClOWt+VilwovV61G5RHWNhJiFuA567zD0omGGMMm4bTJT9HPaxeWV4eC8qAw1FYZ7StANPkj
+	x5UoUsjXzhBAUD7SJZe3C1JZHUr9didoQoU1GjVPuZtRm+wm0y3qLcEpqVA1YuXzdJnCu0DP7HAAA
+	SmJJpmv9wSXKyM1jczr27kYoJcWSYFmfBuqfAVD/CM5kD3lD2T2PkGtbwtxFfaHZ+FxnYZCxW/H9E
+	p8biwXBGKI+wyFQ33UAFcaPk2MvoxE/231b4B5PDhNV6Z3mSwELxJGVoYEx20EmWwwG6Y7BeXuthf
+	l+hoptxS5dXzkJvTuQrw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKf9l-0007bP-Mg; Wed, 16 Oct 2019 08:59:45 +0000
-Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
+	id 1iKfnh-00026Y-JD; Wed, 16 Oct 2019 09:41:01 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKf9h-0007Zz-FJ
- for linux-mediatek@lists.infradead.org; Wed, 16 Oct 2019 08:59:43 +0000
-Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 0D8C0BE2ADF6A9344CCD;
- Wed, 16 Oct 2019 16:59:38 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
- (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Wed, 16 Oct 2019
- 16:59:30 +0800
-From: YueHaibing <yuehaibing@huawei.com>
-To: <gregkh@linuxfoundation.org>, <matthias.bgg@gmail.com>,
- <bhanusreemahesh@gmail.com>, <jbi.octave@gmail.com>, <swboyd@chromium.org>,
- <yuehaibing@huawi.com>, <sergio.paracuellos@gmail.com>,
- <puranjay12@gmail.com>, <arma2ff0@gmail.com>, <kimbrownkd@gmail.com>
-Subject: [PATCH -next] staging: mt7621-dma: use
- devm_platform_ioremap_resource() to simplify code
-Date: Wed, 16 Oct 2019 16:58:33 +0800
-Message-ID: <20191016085833.26376-1-yuehaibing@huawei.com>
-X-Mailer: git-send-email 2.10.2.windows.1
+ id 1iKfnP-0001uX-MA; Wed, 16 Oct 2019 09:40:45 +0000
+X-UUID: 7dc9fd9b50724128b0cc213cabc46d64-20191016
+X-UUID: 7dc9fd9b50724128b0cc213cabc46d64-20191016
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <wen.su@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2011870242; Wed, 16 Oct 2019 01:40:31 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 16 Oct 2019 02:40:29 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 16 Oct 2019 17:40:28 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 16 Oct 2019 17:40:28 +0800
+From: Wen Su <Wen.Su@mediatek.com>
+To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>, "Mark
+ Brown" <broonie@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH 0/4] Add Support for MediaTek PMIC MT6359 Regulator
+Date: Wed, 16 Oct 2019 17:39:42 +0800
+Message-ID: <1571218786-15073-1-git-send-email-Wen.Su@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-X-Originating-IP: [10.133.213.239]
-X-CFilter-Loop: Reflected
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_015941_687542_9F5DD070 
-X-CRM114-Status: UNSURE (   7.48  )
+X-CRM114-CacheID: sfid-20191016_024043_740022_8CBF1962 
+X-CRM114-Status: UNSURE (   8.31  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.32 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -66,47 +72,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devel@driverdev.osuosl.org, YueHaibing <yuehaibing@huawei.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.ifradead.org,
- linux-kernel@vger.kernel.org
+Cc: Mark
+ Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org, wen.su@mediatek.com,
+ wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Liam Girdwood <lgirdwood@gmail.com>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use devm_platform_ioremap_resource() to simplify the code a bit.
-This is detected by coccinelle.
+This patchset add support to MT6359 PMIC regulator. MT6359 is primary
+PMIC for MT6779 platform.
 
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
----
- drivers/staging/mt7621-dma/mtk-hsdma.c | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/staging/mt7621-dma/mtk-hsdma.c b/drivers/staging/mt7621-dma/mtk-hsdma.c
-index d964642..4d541c4 100644
---- a/drivers/staging/mt7621-dma/mtk-hsdma.c
-+++ b/drivers/staging/mt7621-dma/mtk-hsdma.c
-@@ -650,7 +650,6 @@ static int mtk_hsdma_probe(struct platform_device *pdev)
- 	struct mtk_hsdma_chan *chan;
- 	struct mtk_hsdam_engine *hsdma;
- 	struct dma_device *dd;
--	struct resource *res;
- 	int ret;
- 	int irq;
- 	void __iomem *base;
-@@ -667,8 +666,7 @@ static int mtk_hsdma_probe(struct platform_device *pdev)
- 	if (!hsdma)
- 		return -EINVAL;
- 
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	base = devm_ioremap_resource(&pdev->dev, res);
-+	base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(base))
- 		return PTR_ERR(base);
- 	hsdma->base = base + HSDMA_BASE_OFFSET;
+wen.su (4):
+  dt-bindings: regulator: Add document for MT6359 regulator
+  mfd: Add for PMIC MT6359 registers definition
+  regulator: mt6359: Add support for MT6359 regulator
+  arm64: dts: mt6359: add PMIC MT6359 related nodes
+
+ .../bindings/regulator/mt6359-regulator.txt        |  59 ++
+ arch/arm64/boot/dts/mediatek/mt6359.dtsi           | 312 ++++++++
+ drivers/regulator/Kconfig                          |   9 +
+ drivers/regulator/Makefile                         |   1 +
+ drivers/regulator/mt6359-regulator.c               | 859 +++++++++++++++++++++
+ include/linux/mfd/mt6359/registers.h               | 531 +++++++++++++
+ include/linux/regulator/mt6359-regulator.h         |  58 ++
+ 7 files changed, 1829 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/regulator/mt6359-regulator.txt
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt6359.dtsi
+ create mode 100644 drivers/regulator/mt6359-regulator.c
+ create mode 100644 include/linux/mfd/mt6359/registers.h
+ create mode 100644 include/linux/regulator/mt6359-regulator.h
+
 -- 
-2.7.4
-
+1.9.1
 
 
 _______________________________________________
