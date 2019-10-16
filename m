@@ -2,71 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 94090D9B6A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:17:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F14B0D9B76
+	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:18:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qV4WMDYAOId2e+KVQmoW4utpw9fQxSGc602OZqRXfS4=; b=pQQ0iIynQkV4HJ
-	Gg2lmhOkZGtIUtnhsLRDNAmL2rfl65LbHhYDL2IY4XCKg78hMhIN5dE459STULM7AtCH7TTF7glA/
-	ijI2fJoyJNo3eosA09sXPsIVbkZXFi3Jt7TXISiBdplShaxfjsyXJ71mEalcBRyVyVdzHWVF+OuWh
-	kZKgVGZ1GWNaI99eESRvXLn1EOdJlq/rS5vk7u4ZE8hVsDlAGr8kcLr0t16tJJwrWDBZf7i5wvU3O
-	2SHYnH3i00jSe9lA94HChHX4f63zUr5spev5iV8twzhYgkOTeq17QS7AJDubEr+y/Cli3j5Du+S6z
-	/k1cPJki09D7IbjSzDmQ==;
+	List-Owner; bh=yvttNHC6ZAqqpi7wszauwAV48wZtxFPLTspT6bBfXCo=; b=WXxvd+0vlssPAC
+	xuv7HjhuU1I/tQYDwMigXRCSHz6smeVgnkhA/NT1IcRNUfH7/50RmbjZYGU75n7FVIwd9VBNhhe/X
+	BrTGTRXIJQSMH5f1Lq8XbHe2OxALsqJx4xkfqx8t+3yEyYdh6okNsBh8jAjxR9n4omvuwsPIoCi7K
+	6InLH3IFnhMdOdEN6R9ef0jlqebxQt2gx3BVYvN1p1T+6KjfLRInidclYC/Ha7FzFQJOwvbz6LQqL
+	gKZnNM13h3Dim5uO0y8Dp3XpNjLv/ErkarAc6pvtMBLsWjKkzTa21GLL7xMsa0f+CDbKMe5GbEodg
+	q5oOYR0k700qwz0yk64Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKpjX-00048x-MB; Wed, 16 Oct 2019 20:17:23 +0000
-Received: from mail-oi1-f196.google.com ([209.85.167.196])
+	id 1iKpkc-0005CX-7f; Wed, 16 Oct 2019 20:18:30 +0000
+Received: from mail-oi1-f193.google.com ([209.85.167.193])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKpZe-00027R-TT; Wed, 16 Oct 2019 20:07:13 +0000
-Received: by mail-oi1-f196.google.com with SMTP id a15so151671oic.0;
- Wed, 16 Oct 2019 13:07:10 -0700 (PDT)
+ id 1iKpZg-00028g-N1; Wed, 16 Oct 2019 20:07:15 +0000
+Received: by mail-oi1-f193.google.com with SMTP id i185so104326oif.9;
+ Wed, 16 Oct 2019 13:07:11 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=st17vpO3Sjk/YveE/shGEEjM5IJJ8bf2RUn8pW/5jlw=;
- b=G4b/2qvMkzS+AD2CVQhVCNz4TLf/Gz2TZdheSP+0qqq6qw/ZmzJGKuM0vm7TCAM87M
- 5qDxiSdzfqDYlaVgQ//JluSLsM+IY8gFlHKXuW1pQUeqcCTBgZZ48kPCw+cXkfK7+nrR
- Xcs675Bk57V1ZRuy0Ji4j0SIEZgs0R2rkG17aEYCuhPz3Eu6o1nOM/mEDurSJ/5+KiwT
- HeaDGw3AQUQnr1/vPoDC3wNHso2BOxGqBMLxnJoCw155VhAfoqjFLbly0pMBDnmowkd9
- Mt/CvkSLIMNyyzjEhUXN1p5DzRkgK3yiILCA7Vvq+eRpr1qAsium1fL+9VHIQJjLbJpH
- Cw+A==
-X-Gm-Message-State: APjAAAUxw2PiZ3N87nEnCEbQ5dHIDJyxxArNlbCgEm8o+8RYZyuPmRkV
- qnEEjzVmqv1dbXJfnsqW8g==
-X-Google-Smtp-Source: APXvYqy7QYMWarjlrmBh8PnibBMnH8u9wCgCHLI7lviMJVQl9vK5JFNEJrVkOjl3hfz3ufReLXBzHQ==
-X-Received: by 2002:aca:d954:: with SMTP id q81mr76216oig.161.1571256428894;
- Wed, 16 Oct 2019 13:07:08 -0700 (PDT)
+ bh=+ndH97i4QB26bJd8O3NX+DEMC7cX9sGSdjN3vLEaTx4=;
+ b=j9wwPSUUO5BEPanmm0/Kcau/SD3mF+K31vNJjAnKX6jT5TO29aPZFEId6Qfo/7T5xG
+ +h6AB3rmsw+Rm7lWP9Nd6r0Bp3mpbwkNHGrYMKANGHPOP/k094GtBSNJDkWWphQpiXNU
+ iuVdRJfP5L+H1OxoI3b8sqJUqCKjF5v+lVNBrmUpLfDcwSwJ2hjDeOry61ekifA0F7Y7
+ dfmjXCK0BMs/kBIWjE3S5DW+9SXzul2zIfnhFfQ0bwqPvO8Hd9APKlZlLhNNfAE2ojG1
+ SUn0UVA92X7BfVe86d0aWLIJaV5+MO0zr5VfVsa5x8CDr8Bbsk0gY1rP1Bl/bDsqcchX
+ DcVg==
+X-Gm-Message-State: APjAAAVDXmSoHPYh5UKFEDDXKWJmgfCOXKmzLxedF0czL1cEX0tKvinz
+ 9iWNJroaVYu/f9ardNwN5A==
+X-Google-Smtp-Source: APXvYqzI74fewWK3CPeWEpiaODJ/cxLz3tHo/pwM12Rt8UF81clwBc9XxGHthO04xQTGEqcj0xf7iA==
+X-Received: by 2002:a54:4e89:: with SMTP id c9mr107513oiy.148.1571256430843;
+ Wed, 16 Oct 2019 13:07:10 -0700 (PDT)
 Received: from xps15.herring.priv (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.googlemail.com with ESMTPSA id a9sm7412463oie.7.2019.10.16.13.07.07
+ by smtp.googlemail.com with ESMTPSA id a9sm7412463oie.7.2019.10.16.13.07.08
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 16 Oct 2019 13:07:08 -0700 (PDT)
+ Wed, 16 Oct 2019 13:07:10 -0700 (PDT)
 From: Rob Herring <robh@kernel.org>
 To: Andrew Murray <andrew.murray@arm.com>, Bjorn Helgaas <bhelgaas@google.com>,
  Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Subject: [PATCH v2 10/25] PCI: rockchip: Use pci_parse_request_of_pci_ranges()
-Date: Wed, 16 Oct 2019 15:06:32 -0500
-Message-Id: <20191016200647.32050-11-robh@kernel.org>
+Subject: [PATCH v2 11/25] PCI: rockchip: Drop storing driver private outbound
+ resource data
+Date: Wed, 16 Oct 2019 15:06:33 -0500
+Message-Id: <20191016200647.32050-12-robh@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191016200647.32050-1-robh@kernel.org>
 References: <20191016200647.32050-1-robh@kernel.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_130711_125345_4B7280EF 
-X-CRM114-Status: GOOD (  14.66  )
+X-CRM114-CacheID: sfid-20191016_130712_790270_4B832DA7 
+X-CRM114-Status: GOOD (  13.88  )
 X-Spam-Score: 0.6 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.196 listed in wl.mailspike.net]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.196 listed in list.dnswl.org]
+ no trust [209.85.167.193 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.193 listed in wl.mailspike.net]
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -109,11 +110,9 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Convert the Rockchip host bridge to use the common
-pci_parse_request_of_pci_ranges().
-
-There's no need to assign the resources to a temporary list first. Just
-use bridge->windows directly and remove all the temporary list handling.
+The Rockchip host bridge driver doesn't need to store outboard resources
+in its private struct as they are already stored in struct
+pci_host_bridge.
 
 Cc: Shawn Lin <shawn.lin@rock-chips.com>
 Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
@@ -126,118 +125,135 @@ Signed-off-by: Rob Herring <robh@kernel.org>
 v2:
 - New patch
 
- drivers/pci/controller/pcie-rockchip-host.c | 36 ++++-----------------
- 1 file changed, 7 insertions(+), 29 deletions(-)
+ drivers/pci/controller/pcie-rockchip-host.c | 54 +++++++++------------
+ drivers/pci/controller/pcie-rockchip.h      |  5 --
+ 2 files changed, 23 insertions(+), 36 deletions(-)
 
 diff --git a/drivers/pci/controller/pcie-rockchip-host.c b/drivers/pci/controller/pcie-rockchip-host.c
-index ef8e677ce9d1..8d2e6f2e141e 100644
+index 8d2e6f2e141e..2255ff53e2fb 100644
 --- a/drivers/pci/controller/pcie-rockchip-host.c
 +++ b/drivers/pci/controller/pcie-rockchip-host.c
-@@ -950,14 +950,10 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
- 	struct device *dev = &pdev->dev;
- 	struct pci_bus *bus, *child;
- 	struct pci_host_bridge *bridge;
-+	struct resource *bus_res;
- 	struct resource_entry *win;
--	resource_size_t io_base;
--	struct resource	*mem;
--	struct resource	*io;
+@@ -806,19 +806,28 @@ static int rockchip_pcie_prog_ib_atu(struct rockchip_pcie *rockchip,
+ static int rockchip_pcie_cfg_atu(struct rockchip_pcie *rockchip)
+ {
+ 	struct device *dev = rockchip->dev;
++	struct pci_host_bridge *bridge = pci_host_bridge_from_priv(rockchip);
++	struct resource_entry *entry;
++	u64 pci_addr, size;
+ 	int offset;
  	int err;
+ 	int reg_no;
 
--	LIST_HEAD(res);
--
- 	if (!dev->of_node)
- 		return -ENODEV;
+ 	rockchip_pcie_cfg_configuration_accesses(rockchip,
+ 						 AXI_WRAPPER_TYPE0_CFG);
++	entry = resource_list_get_entry_of_type(&bridge->windows, IORESOURCE_MEM);
++	if (!entry)
++		return -ENODEV;
++
++	size = resource_size(entry->res);
++	pci_addr = entry->res->start - entry->offset;
++	rockchip->msg_bus_addr = pci_addr;
 
-@@ -995,29 +991,20 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
- 	if (err < 0)
- 		goto err_deinit_port;
-
--	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
--						    &res, &io_base);
-+	err = pci_parse_request_of_pci_ranges(dev, &bridge->windows, &bus_res);
- 	if (err)
- 		goto err_remove_irq_domain;
-
--	err = devm_request_pci_bus_resources(dev, &res);
--	if (err)
--		goto err_free_res;
-+	rockchip->root_bus_nr = bus_res->start;
-
- 	/* Get the I/O and memory ranges from DT */
--	resource_list_for_each_entry(win, &res) {
-+	resource_list_for_each_entry(win, &bridge->windows) {
- 		switch (resource_type(win->res)) {
- 		case IORESOURCE_IO:
- 			io = win->res;
- 			io->name = "I/O";
- 			rockchip->io_size = resource_size(io);
- 			rockchip->io_bus_addr = io->start - win->offset;
--			err = pci_remap_iospace(io, io_base);
--			if (err) {
--				dev_warn(dev, "error %d: failed to map resource %pR\n",
--					 err, io);
--				continue;
--			}
- 			rockchip->io = io;
- 			break;
- 		case IORESOURCE_MEM:
-@@ -1026,9 +1013,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
- 			rockchip->mem_size = resource_size(mem);
- 			rockchip->mem_bus_addr = mem->start - win->offset;
- 			break;
--		case IORESOURCE_BUS:
--			rockchip->root_bus_nr = win->res->start;
--			break;
- 		default:
- 			continue;
- 		}
-@@ -1036,15 +1020,14 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
-
- 	err = rockchip_pcie_cfg_atu(rockchip);
- 	if (err)
--		goto err_unmap_iospace;
-+		goto err_remove_irq_domain;
-
- 	rockchip->msg_region = devm_ioremap(dev, rockchip->msg_bus_addr, SZ_1M);
- 	if (!rockchip->msg_region) {
- 		err = -ENOMEM;
--		goto err_unmap_iospace;
-+		goto err_remove_irq_domain;
+-	for (reg_no = 0; reg_no < (rockchip->mem_size >> 20); reg_no++) {
++	for (reg_no = 0; reg_no < (size >> 20); reg_no++) {
+ 		err = rockchip_pcie_prog_ob_atu(rockchip, reg_no + 1,
+ 						AXI_WRAPPER_MEM_WRITE,
+ 						20 - 1,
+-						rockchip->mem_bus_addr +
+-						(reg_no << 20),
++						pci_addr + (reg_no << 20),
+ 						0);
+ 		if (err) {
+ 			dev_err(dev, "program RC mem outbound ATU failed\n");
+@@ -832,14 +841,20 @@ static int rockchip_pcie_cfg_atu(struct rockchip_pcie *rockchip)
+ 		return err;
  	}
 
--	list_splice_init(&res, &bridge->windows);
- 	bridge->dev.parent = dev;
- 	bridge->sysdata = rockchip;
- 	bridge->busnr = 0;
-@@ -1054,7 +1037,7 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+-	offset = rockchip->mem_size >> 20;
+-	for (reg_no = 0; reg_no < (rockchip->io_size >> 20); reg_no++) {
++	entry = resource_list_get_entry_of_type(&bridge->windows, IORESOURCE_IO);
++	if (!entry)
++		return -ENODEV;
++
++	size = resource_size(entry->res);
++	pci_addr = entry->res->start - entry->offset;
++
++	offset = size >> 20;
++	for (reg_no = 0; reg_no < (size >> 20); reg_no++) {
+ 		err = rockchip_pcie_prog_ob_atu(rockchip,
+ 						reg_no + 1 + offset,
+ 						AXI_WRAPPER_IO_WRITE,
+ 						20 - 1,
+-						rockchip->io_bus_addr +
+-						(reg_no << 20),
++						pci_addr + (reg_no << 20),
+ 						0);
+ 		if (err) {
+ 			dev_err(dev, "program RC io outbound ATU failed\n");
+@@ -852,8 +867,7 @@ static int rockchip_pcie_cfg_atu(struct rockchip_pcie *rockchip)
+ 				  AXI_WRAPPER_NOR_MSG,
+ 				  20 - 1, 0, 0);
 
- 	err = pci_scan_root_bus_bridge(bridge);
- 	if (err < 0)
--		goto err_unmap_iospace;
-+		goto err_remove_irq_domain;
+-	rockchip->msg_bus_addr = rockchip->mem_bus_addr +
+-					((reg_no + offset) << 20);
++	rockchip->msg_bus_addr += ((reg_no + offset) << 20);
+ 	return err;
+ }
 
- 	bus = bridge->bus;
+@@ -951,7 +965,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+ 	struct pci_bus *bus, *child;
+ 	struct pci_host_bridge *bridge;
+ 	struct resource *bus_res;
+-	struct resource_entry *win;
+ 	int err;
 
-@@ -1068,10 +1051,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
- 	pci_bus_add_devices(bus);
- 	return 0;
+ 	if (!dev->of_node)
+@@ -997,27 +1010,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
 
--err_unmap_iospace:
--	pci_unmap_iospace(rockchip->io);
--err_free_res:
--	pci_free_resource_list(&res);
- err_remove_irq_domain:
- 	irq_domain_remove(rockchip->irq_domain);
- err_deinit_port:
-@@ -1097,7 +1076,6 @@ static int rockchip_pcie_remove(struct platform_device *pdev)
+ 	rockchip->root_bus_nr = bus_res->start;
 
- 	pci_stop_root_bus(rockchip->root_bus);
- 	pci_remove_root_bus(rockchip->root_bus);
--	pci_unmap_iospace(rockchip->io);
- 	irq_domain_remove(rockchip->irq_domain);
-
- 	rockchip_pcie_deinit_phys(rockchip);
+-	/* Get the I/O and memory ranges from DT */
+-	resource_list_for_each_entry(win, &bridge->windows) {
+-		switch (resource_type(win->res)) {
+-		case IORESOURCE_IO:
+-			io = win->res;
+-			io->name = "I/O";
+-			rockchip->io_size = resource_size(io);
+-			rockchip->io_bus_addr = io->start - win->offset;
+-			rockchip->io = io;
+-			break;
+-		case IORESOURCE_MEM:
+-			mem = win->res;
+-			mem->name = "MEM";
+-			rockchip->mem_size = resource_size(mem);
+-			rockchip->mem_bus_addr = mem->start - win->offset;
+-			break;
+-		default:
+-			continue;
+-		}
+-	}
+-
+ 	err = rockchip_pcie_cfg_atu(rockchip);
+ 	if (err)
+ 		goto err_remove_irq_domain;
+diff --git a/drivers/pci/controller/pcie-rockchip.h b/drivers/pci/controller/pcie-rockchip.h
+index 8e87a059ce73..bef42a803b56 100644
+--- a/drivers/pci/controller/pcie-rockchip.h
++++ b/drivers/pci/controller/pcie-rockchip.h
+@@ -304,13 +304,8 @@ struct rockchip_pcie {
+ 	struct	irq_domain *irq_domain;
+ 	int     offset;
+ 	struct pci_bus *root_bus;
+-	struct resource *io;
+-	phys_addr_t io_bus_addr;
+-	u32     io_size;
+ 	void    __iomem *msg_region;
+-	u32     mem_size;
+ 	phys_addr_t msg_bus_addr;
+-	phys_addr_t mem_bus_addr;
+ 	bool is_rc;
+ 	struct resource *mem_res;
+ };
 --
 2.20.1
 
