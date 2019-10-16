@@ -2,71 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7AACD9B69
-	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:17:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 94090D9B6A
+	for <lists+linux-mediatek@lfdr.de>; Wed, 16 Oct 2019 22:17:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vpOkmAW8nfM4Vx7zSUxpB11o5iwoaa+co1mNAKTT2OI=; b=FhmqfkHJcO1bmM
-	L0T3YFubQOvQ19DVbFAqS/czYWl9yjDrRZjv/jbFHmCHrKbtvnIu0XbNeujAqKoXV9jN2ClvAstCa
-	aAKNyTN3+HH+bJlUU/1J63uMgISC8HJNNVyIwWmTifA7j/DVtDcz4rybprymUfDA2HWDIrNrSNhQP
-	nWdduULq6uLZ/UQI7RGzQnUPxMonkEy+1p8N0Juetq3VJx9rXzw85EDsi1/AYCNEo71brTwi9J7k3
-	tFz4AMvZ4x2Oz2FLdF6Y+eDaGUXN7foGm7D272EQQoabIfjwhz6N+IQWHCu8izrEOr7OO6npoVuk+
-	CgZHixjIZ8AEGowXrMLA==;
+	List-Owner; bh=qV4WMDYAOId2e+KVQmoW4utpw9fQxSGc602OZqRXfS4=; b=pQQ0iIynQkV4HJ
+	Gg2lmhOkZGtIUtnhsLRDNAmL2rfl65LbHhYDL2IY4XCKg78hMhIN5dE459STULM7AtCH7TTF7glA/
+	ijI2fJoyJNo3eosA09sXPsIVbkZXFi3Jt7TXISiBdplShaxfjsyXJ71mEalcBRyVyVdzHWVF+OuWh
+	kZKgVGZ1GWNaI99eESRvXLn1EOdJlq/rS5vk7u4ZE8hVsDlAGr8kcLr0t16tJJwrWDBZf7i5wvU3O
+	2SHYnH3i00jSe9lA94HChHX4f63zUr5spev5iV8twzhYgkOTeq17QS7AJDubEr+y/Cli3j5Du+S6z
+	/k1cPJki09D7IbjSzDmQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKpjW-00044v-0i; Wed, 16 Oct 2019 20:17:22 +0000
-Received: from mail-oi1-f195.google.com ([209.85.167.195])
+	id 1iKpjX-00048x-MB; Wed, 16 Oct 2019 20:17:23 +0000
+Received: from mail-oi1-f196.google.com ([209.85.167.196])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKpZc-000261-LA; Wed, 16 Oct 2019 20:07:11 +0000
-Received: by mail-oi1-f195.google.com with SMTP id w6so94685oie.11;
- Wed, 16 Oct 2019 13:07:08 -0700 (PDT)
+ id 1iKpZe-00027R-TT; Wed, 16 Oct 2019 20:07:13 +0000
+Received: by mail-oi1-f196.google.com with SMTP id a15so151671oic.0;
+ Wed, 16 Oct 2019 13:07:10 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=A7C9fu14PZNPMPToLZohd20YRaJONgsEc+K4W4AC4sE=;
- b=OrlY+Nb7su6Tm+heV3njphYlHPI2YI9LAdShi17d08j+U6l6YDCv0YEE6oZr8dCiwc
- 8TiZd8Mg/XJ2TaJw6e+DEKcJ402dgj9SAw3HHpZI0pwHJoL7V9LyeEA85DPqwHCj0ZnD
- g4B/Yv9dkNt7Ja+PMNfA3x6epoXJxHP4Wl84qIJteCyCsK99+ms3XdOk07ADASa7BWHw
- D4I05wJlirsylyG2vXUTQrAS0gTpalI3bsp6ya26q1XcoVpAs+l58YfTtifE+cGzQO8m
- enO1zLGvwxqO64o54LgAsylevWSC2mtYx11sYT5qUzuH9lkSgPyW98IzPTFAAcm1uvt1
- rNRw==
-X-Gm-Message-State: APjAAAUhItF5tbExlOjxKjIUSctqe+4W6mbgHPTy4J5Kz+gqrwAcOAM3
- GPRxQnVEujhDF5U5U5KEWQ==
-X-Google-Smtp-Source: APXvYqx5sX4YtWwnoQTMeFdCAOiuNltHZ4Ywvf9hhbChB1D1PBIgpu1iHMMXftZZAjcEsXkGQ3lhOQ==
-X-Received: by 2002:aca:4d12:: with SMTP id a18mr87482oib.79.1571256427172;
- Wed, 16 Oct 2019 13:07:07 -0700 (PDT)
+ bh=st17vpO3Sjk/YveE/shGEEjM5IJJ8bf2RUn8pW/5jlw=;
+ b=G4b/2qvMkzS+AD2CVQhVCNz4TLf/Gz2TZdheSP+0qqq6qw/ZmzJGKuM0vm7TCAM87M
+ 5qDxiSdzfqDYlaVgQ//JluSLsM+IY8gFlHKXuW1pQUeqcCTBgZZ48kPCw+cXkfK7+nrR
+ Xcs675Bk57V1ZRuy0Ji4j0SIEZgs0R2rkG17aEYCuhPz3Eu6o1nOM/mEDurSJ/5+KiwT
+ HeaDGw3AQUQnr1/vPoDC3wNHso2BOxGqBMLxnJoCw155VhAfoqjFLbly0pMBDnmowkd9
+ Mt/CvkSLIMNyyzjEhUXN1p5DzRkgK3yiILCA7Vvq+eRpr1qAsium1fL+9VHIQJjLbJpH
+ Cw+A==
+X-Gm-Message-State: APjAAAUxw2PiZ3N87nEnCEbQ5dHIDJyxxArNlbCgEm8o+8RYZyuPmRkV
+ qnEEjzVmqv1dbXJfnsqW8g==
+X-Google-Smtp-Source: APXvYqy7QYMWarjlrmBh8PnibBMnH8u9wCgCHLI7lviMJVQl9vK5JFNEJrVkOjl3hfz3ufReLXBzHQ==
+X-Received: by 2002:aca:d954:: with SMTP id q81mr76216oig.161.1571256428894;
+ Wed, 16 Oct 2019 13:07:08 -0700 (PDT)
 Received: from xps15.herring.priv (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.googlemail.com with ESMTPSA id a9sm7412463oie.7.2019.10.16.13.07.05
+ by smtp.googlemail.com with ESMTPSA id a9sm7412463oie.7.2019.10.16.13.07.07
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 16 Oct 2019 13:07:06 -0700 (PDT)
+ Wed, 16 Oct 2019 13:07:08 -0700 (PDT)
 From: Rob Herring <robh@kernel.org>
 To: Andrew Murray <andrew.murray@arm.com>, Bjorn Helgaas <bhelgaas@google.com>,
  Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Subject: [PATCH v2 09/25] PCI: mobiveil: Use pci_parse_request_of_pci_ranges()
-Date: Wed, 16 Oct 2019 15:06:31 -0500
-Message-Id: <20191016200647.32050-10-robh@kernel.org>
+Subject: [PATCH v2 10/25] PCI: rockchip: Use pci_parse_request_of_pci_ranges()
+Date: Wed, 16 Oct 2019 15:06:32 -0500
+Message-Id: <20191016200647.32050-11-robh@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191016200647.32050-1-robh@kernel.org>
 References: <20191016200647.32050-1-robh@kernel.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_130708_755496_4CD4443D 
-X-CRM114-Status: GOOD (  17.01  )
+X-CRM114-CacheID: sfid-20191016_130711_125345_4B7280EF 
+X-CRM114-Status: GOOD (  14.66  )
 X-Spam-Score: 0.6 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.195 listed in wl.mailspike.net]
+ [209.85.167.196 listed in wl.mailspike.net]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.195 listed in list.dnswl.org]
+ no trust [209.85.167.196 listed in list.dnswl.org]
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit (robherring2[at]gmail.com)
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -109,128 +109,135 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Convert the Mobiveil host bridge to use the common
+Convert the Rockchip host bridge to use the common
 pci_parse_request_of_pci_ranges().
 
 There's no need to assign the resources to a temporary list first. Just
 use bridge->windows directly and remove all the temporary list handling.
 
-Cc: Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>
-Cc: Hou Zhiqiang <Zhiqiang.Hou@nxp.com>
+Cc: Shawn Lin <shawn.lin@rock-chips.com>
 Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
 Cc: Andrew Murray <andrew.murray@arm.com>
 Cc: Bjorn Helgaas <bhelgaas@google.com>
+Cc: Heiko Stuebner <heiko@sntech.de>
+Cc: linux-rockchip@lists.infradead.org
 Signed-off-by: Rob Herring <robh@kernel.org>
 ---
 v2:
 - New patch
 
- drivers/pci/controller/pcie-mobiveil.c | 26 +++++++-------------------
- 1 file changed, 7 insertions(+), 19 deletions(-)
+ drivers/pci/controller/pcie-rockchip-host.c | 36 ++++-----------------
+ 1 file changed, 7 insertions(+), 29 deletions(-)
 
-diff --git a/drivers/pci/controller/pcie-mobiveil.c b/drivers/pci/controller/pcie-mobiveil.c
-index a45a6447b01d..4eab8624ce4d 100644
---- a/drivers/pci/controller/pcie-mobiveil.c
-+++ b/drivers/pci/controller/pcie-mobiveil.c
-@@ -140,7 +140,6 @@ struct mobiveil_msi {			/* MSI information */
-
- struct mobiveil_pcie {
- 	struct platform_device *pdev;
--	struct list_head resources;
- 	void __iomem *config_axi_slave_base;	/* endpoint config base */
- 	void __iomem *csr_axi_slave_base;	/* root port config base */
- 	void __iomem *apb_csr_base;	/* MSI register base */
-@@ -575,6 +574,7 @@ static void mobiveil_pcie_enable_msi(struct mobiveil_pcie *pcie)
-
- static int mobiveil_host_init(struct mobiveil_pcie *pcie)
- {
-+	struct pci_host_bridge *bridge = pci_host_bridge_from_priv(pcie);
- 	u32 value, pab_ctrl, type;
+diff --git a/drivers/pci/controller/pcie-rockchip-host.c b/drivers/pci/controller/pcie-rockchip-host.c
+index ef8e677ce9d1..8d2e6f2e141e 100644
+--- a/drivers/pci/controller/pcie-rockchip-host.c
++++ b/drivers/pci/controller/pcie-rockchip-host.c
+@@ -950,14 +950,10 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+ 	struct device *dev = &pdev->dev;
+ 	struct pci_bus *bus, *child;
+ 	struct pci_host_bridge *bridge;
++	struct resource *bus_res;
  	struct resource_entry *win;
+-	resource_size_t io_base;
+-	struct resource	*mem;
+-	struct resource	*io;
+ 	int err;
 
-@@ -631,7 +631,7 @@ static int mobiveil_host_init(struct mobiveil_pcie *pcie)
- 	program_ib_windows(pcie, WIN_NUM_0, 0, 0, MEM_WINDOW_TYPE, IB_WIN_SIZE);
+-	LIST_HEAD(res);
+-
+ 	if (!dev->of_node)
+ 		return -ENODEV;
+
+@@ -995,29 +991,20 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+ 	if (err < 0)
+ 		goto err_deinit_port;
+
+-	err = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
+-						    &res, &io_base);
++	err = pci_parse_request_of_pci_ranges(dev, &bridge->windows, &bus_res);
+ 	if (err)
+ 		goto err_remove_irq_domain;
+
+-	err = devm_request_pci_bus_resources(dev, &res);
+-	if (err)
+-		goto err_free_res;
++	rockchip->root_bus_nr = bus_res->start;
 
  	/* Get the I/O and memory ranges from DT */
--	resource_list_for_each_entry(win, &pcie->resources) {
+-	resource_list_for_each_entry(win, &res) {
 +	resource_list_for_each_entry(win, &bridge->windows) {
- 		if (resource_type(win->res) == IORESOURCE_MEM)
- 			type = MEM_WINDOW_TYPE;
- 		else if (resource_type(win->res) == IORESOURCE_IO)
-@@ -857,7 +857,6 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
- 	struct pci_bus *child;
- 	struct pci_host_bridge *bridge;
- 	struct device *dev = &pdev->dev;
--	resource_size_t iobase;
- 	int ret;
+ 		switch (resource_type(win->res)) {
+ 		case IORESOURCE_IO:
+ 			io = win->res;
+ 			io->name = "I/O";
+ 			rockchip->io_size = resource_size(io);
+ 			rockchip->io_bus_addr = io->start - win->offset;
+-			err = pci_remap_iospace(io, io_base);
+-			if (err) {
+-				dev_warn(dev, "error %d: failed to map resource %pR\n",
+-					 err, io);
+-				continue;
+-			}
+ 			rockchip->io = io;
+ 			break;
+ 		case IORESOURCE_MEM:
+@@ -1026,9 +1013,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
+ 			rockchip->mem_size = resource_size(mem);
+ 			rockchip->mem_bus_addr = mem->start - win->offset;
+ 			break;
+-		case IORESOURCE_BUS:
+-			rockchip->root_bus_nr = win->res->start;
+-			break;
+ 		default:
+ 			continue;
+ 		}
+@@ -1036,15 +1020,14 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
 
- 	/* allocate the PCIe port */
-@@ -875,11 +874,8 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
- 		return ret;
+ 	err = rockchip_pcie_cfg_atu(rockchip);
+ 	if (err)
+-		goto err_unmap_iospace;
++		goto err_remove_irq_domain;
+
+ 	rockchip->msg_region = devm_ioremap(dev, rockchip->msg_bus_addr, SZ_1M);
+ 	if (!rockchip->msg_region) {
+ 		err = -ENOMEM;
+-		goto err_unmap_iospace;
++		goto err_remove_irq_domain;
  	}
 
--	INIT_LIST_HEAD(&pcie->resources);
--
- 	/* parse the host bridge base addresses from the device tree file */
--	ret = devm_of_pci_get_host_bridge_resources(dev, 0, 0xff,
--						    &pcie->resources, &iobase);
-+	ret = pci_parse_request_of_pci_ranges(dev, &bridge->windows, NULL);
- 	if (ret) {
- 		dev_err(dev, "Getting bridge resources failed\n");
- 		return ret;
-@@ -892,24 +888,19 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
- 	ret = mobiveil_host_init(pcie);
- 	if (ret) {
- 		dev_err(dev, "Failed to initialize host\n");
--		goto error;
-+		return ret;
- 	}
-
- 	/* initialize the IRQ domains */
- 	ret = mobiveil_pcie_init_irq_domain(pcie);
- 	if (ret) {
- 		dev_err(dev, "Failed creating IRQ Domain\n");
--		goto error;
-+		return ret;
- 	}
-
- 	irq_set_chained_handler_and_data(pcie->irq, mobiveil_pcie_isr, pcie);
-
--	ret = devm_request_pci_bus_resources(dev, &pcie->resources);
--	if (ret)
--		goto error;
--
- 	/* Initialize bridge */
--	list_splice_init(&pcie->resources, &bridge->windows);
+-	list_splice_init(&res, &bridge->windows);
  	bridge->dev.parent = dev;
- 	bridge->sysdata = pcie;
- 	bridge->busnr = pcie->root_bus_nr;
-@@ -920,13 +911,13 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
- 	ret = mobiveil_bringup_link(pcie);
- 	if (ret) {
- 		dev_info(dev, "link bring-up failed\n");
--		goto error;
-+		return ret;
- 	}
+ 	bridge->sysdata = rockchip;
+ 	bridge->busnr = 0;
+@@ -1054,7 +1037,7 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
 
- 	/* setup the kernel resources for the newly added PCIe root bus */
- 	ret = pci_scan_root_bus_bridge(bridge);
- 	if (ret)
--		goto error;
-+		return ret;
+ 	err = pci_scan_root_bus_bridge(bridge);
+ 	if (err < 0)
+-		goto err_unmap_iospace;
++		goto err_remove_irq_domain;
 
  	bus = bridge->bus;
 
-@@ -936,9 +927,6 @@ static int mobiveil_pcie_probe(struct platform_device *pdev)
+@@ -1068,10 +1051,6 @@ static int rockchip_pcie_probe(struct platform_device *pdev)
  	pci_bus_add_devices(bus);
-
  	return 0;
--error:
--	pci_free_resource_list(&pcie->resources);
--	return ret;
- }
 
- static const struct of_device_id mobiveil_pcie_of_match[] = {
+-err_unmap_iospace:
+-	pci_unmap_iospace(rockchip->io);
+-err_free_res:
+-	pci_free_resource_list(&res);
+ err_remove_irq_domain:
+ 	irq_domain_remove(rockchip->irq_domain);
+ err_deinit_port:
+@@ -1097,7 +1076,6 @@ static int rockchip_pcie_remove(struct platform_device *pdev)
+
+ 	pci_stop_root_bus(rockchip->root_bus);
+ 	pci_remove_root_bus(rockchip->root_bus);
+-	pci_unmap_iospace(rockchip->io);
+ 	irq_domain_remove(rockchip->irq_domain);
+
+ 	rockchip_pcie_deinit_phys(rockchip);
 --
 2.20.1
 
