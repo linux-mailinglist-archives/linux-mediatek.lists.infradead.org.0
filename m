@@ -2,36 +2,36 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 51E2DDA65D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 17 Oct 2019 09:25:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6D3D6DA668
+	for <lists+linux-mediatek@lfdr.de>; Thu, 17 Oct 2019 09:26:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lEKJwXvP2eiS+FMSneAFXwXUUxcWT6GTymdh6OVLvF4=; b=QGVpBi9NvLoqKB
-	DvmDU9m6pQMA1LQYw3rarbxuiEMlYtYgO4AWdznNhPTAVamuUJK0jJW+u1WfackWjoWOEebdQXIc2
-	V5RUFkZywGgmN57NmgnsD4SEiH/IWv5koITNkg6Ykiy3DixLWLUOzpZRm39PaCcYd/XcbRGDwDvaj
-	U8k1DjoHO9Ob8F+UAF/v3Wy+dMVNxAVS8ufmBeVz2rs0VeKMZQViaJvMHVQfTZUglLaUyYQ9Jy8i8
-	iehHWpZuAKfXVK625WZQs1SVx70Evuf1AGm7JcwKcGo/bwAOZcm+d7o77vnxlymfnq4Rhp3kgluRC
-	FqcIUbE028tF664uLdag==;
+	List-Owner; bh=u9hIZ3Rl5u6Sc6zXIKOtVgfSxhhG0wbglfB2lLU9510=; b=BB8HP+z3U3f+PH
+	3IdhcRORLeQUItdwZ4WKomhmmccSqbwK53uIwSdT1QUe99MPigvckQ9H5Rv2IIO/5TG3g2ikbrK9F
+	9ukgwTUqWbhscap2KfbzH0UgIHYfD6ug1QnEr8BWrnCWIrXCa0vnzsEImZrwjjW4+WgRlQ0hP/jQa
+	Q2eEoWeDHrxxnlHOPMmFItcZkVwG/ugeVWd004ttZrj8s026H9KXegNoBIMT4kzqBvHSHkP+f0IIy
+	OA3vIlRRrNA1M1tcrrzTITSs0onSNk+0sFJz1KcC0YFXMZ+tNN7033WGRi/5CIwvtHwZFM1jwXcYc
+	aw/MDC6eHX/w1YSCnrGA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iL0AC-0007fR-Lw; Thu, 17 Oct 2019 07:25:36 +0000
+	id 1iL0BE-0008DZ-Ly; Thu, 17 Oct 2019 07:26:40 +0000
 Received: from hch by bombadil.infradead.org with local (Exim 4.92.3 #3 (Red
- Hat Linux)) id 1iL09v-0007VB-O1; Thu, 17 Oct 2019 07:25:19 +0000
-Date: Thu, 17 Oct 2019 00:25:19 -0700
+ Hat Linux)) id 1iL0Az-00081E-Rg; Thu, 17 Oct 2019 07:26:25 +0000
+Date: Thu, 17 Oct 2019 00:26:25 -0700
 From: Christoph Hellwig <hch@infradead.org>
 To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH v2 01/25] resource: Add a resource_list_get_entry_of_type
- helper
-Message-ID: <20191017072519.GA19517@infradead.org>
+Subject: Re: [PATCH v2 11/25] PCI: rockchip: Drop storing driver private
+ outbound resource data
+Message-ID: <20191017072625.GB19517@infradead.org>
 References: <20191016200647.32050-1-robh@kernel.org>
- <20191016200647.32050-2-robh@kernel.org>
+ <20191016200647.32050-12-robh@kernel.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20191016200647.32050-2-robh@kernel.org>
+In-Reply-To: <20191016200647.32050-12-robh@kernel.org>
 User-Agent: Mutt/1.12.1 (2019-06-15)
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -68,14 +68,10 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Oct 16, 2019 at 03:06:23PM -0500, Rob Herring wrote:
-> +static inline struct resource_entry *resource_list_get_entry_of_type(struct list_head *list,
-> +							      unsigned long type)
+On Wed, Oct 16, 2019 at 03:06:33PM -0500, Rob Herring wrote:
+> +	entry = resource_list_get_entry_of_type(&bridge->windows, IORESOURCE_MEM);
 
-This adds a way too long line.
-
-Part of that is that the name just seems way too long as well, any
-good shorter name?  resourse_list_first_type?
+This add another too long line.  Please audit the whole series for that.
 
 _______________________________________________
 Linux-mediatek mailing list
