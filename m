@@ -2,83 +2,92 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1FDFFE76E3
-	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 17:43:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B4269E7A31
+	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 21:36:40 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=T+aIx68vALMNb6fE97UtpJLdMfwrGOIX95jpfHmqcXk=; b=JpZAw29/kX2Djb
-	qXuLgl1iMZPsXGmyUp6TDVR83+zlYI4DLPRFbVtj6DQ/JsypdAs2FmoLhvINrOD3nDTxb86cs2d+H
-	GAd+NupSPNQr71Z+5BvFnz9Q1krIoj/MSfTm0QlUMF3+mF8Tpdq0Dar5O/S/BLp2l2ps0uIwdaUhS
-	L1yVu2OfRoAobPdq0RK+jsc3un87Qi99CT4ictTGtmr/q56EtOuGWGA0ySPFxNMMPiKqwKuu53p6e
-	DrlPT8XnLHmT9LnLMdKlZY5wuoxtWM41ja6Y5HFZSNbCh17lXlkri3LrnbKfNSLIFRMCBcxGjkOBE
-	PANKADM1ZqXaO8Rgy3gg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=fVONTpzJsvgKwVMTzIUk0q7Q73ur7cPTtRV0vig4dWk=; b=aRvMiwy+sY2Yrv
+	11rS8vrOmqOKKFK0mXLr6TY3YJkb6dX9qZecElhrIaN+MlDnKVLZFkJzsOv2U0jprKxMgHIEpO1D6
+	p9b4RO4x2j2U4lxB9Es/AWbP7pQ+h54QhMAEM1FFnX0BbrWi1k3mf8vW2WD6H/jgCflk/FNkW8BvO
+	mpBtZccwCHTEyztGsmEuwBKJeqPRLG5okpWuDmNh6zmhjuIYjaqRMSLKThQup6r4hc8V5A+3P21Ok
+	TNCBkgM85wtLdyitXpq5dwI0dikr9hTh3sop+xQ0lxMTGBf1B1nZN/oyG/5V6l/EmDReaeVg+3y2B
+	O3GmbFNtOX74k8dTHktw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iP87P-0001cW-Um; Mon, 28 Oct 2019 16:43:47 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1iPBkg-00043K-PP; Mon, 28 Oct 2019 20:36:34 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iP7xx-0007Zi-2B; Mon, 28 Oct 2019 16:34:02 +0000
-Received: by mail-ot1-f66.google.com with SMTP id b19so4820317otq.10;
- Mon, 28 Oct 2019 09:34:00 -0700 (PDT)
+ id 1iPBkQ-0003tK-UM; Mon, 28 Oct 2019 20:36:23 +0000
+Received: by mail-pf1-x441.google.com with SMTP id c13so7714459pfp.5;
+ Mon, 28 Oct 2019 13:36:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:mime-version:content-disposition
+ :user-agent; bh=2eVkQtIn/kKnma8y9cwV6ClxG9uop+VztYkAE7P1mO8=;
+ b=b//ClzcUZP5lNIguYzGrNsqlLmWAsiXCNmR6XVmRGQyO9IpHdPNJNM3zwzsH6xbL7l
+ r6aAJHRua/sLXQEKp5pe+yZxE/Y4WHHYlRMls9e7L9PHXOxFd52kwC++T07yRbwY4OJ0
+ o60C7ky1UJWOR6dS/uOHP+ukjEh/qQP8cxiSuTRCuweAoQ0tQAWMycdUMUh5PX4HeyE8
+ txTZcIw4mE3lTbFYmd9Mtm4hz1V6iyNHh0+JKKLdBF8+EeCK9ueRBZ/iKSXUepxpC8g7
+ e3lmsLfto5jfL9qiHSDhGAJYsaEeFV2EuqE9Pfr57eTtPTaNVWM8Ir5qkc4Y2lXjvpbR
+ DgwQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=5gD14iI8UpOKj376Bq/txSzTZsSs0VToSMrptEdmjdQ=;
- b=aIfRqPh3/FSG4OKFcJU4rrihPuhQelf0JRNLdEHPBoFOoQZtfmIn1j2NHxTWPqUDzY
- cEXULGf+RXwyP5BCGgsmq6tjEjZQ11WxA1FY3oMny5OMkzaHc89MVfn1Ih5IBBlIE/l3
- HIHzyE+26zU7i9g/kSHMI8l6i7VunjgjYFGa3HzEAAjEr/j72chZkt3N+8BxEaE3OIoQ
- qqDj2kESZYe45gVyScs8fi1NJn2+IJTxVUYiBzw0+7wqecl2qn/umYkH7jUWVsSjb6RC
- zREZDl/3NQU96TCIupLpXeCt5PskNukxcpCdnPLqku9ZVtBHZapY7cniT8wEyCpNATKh
- jvAQ==
-X-Gm-Message-State: APjAAAU+tDxeP1leKH2exw/TfVQ1CZIOLdF0PxcAhNwkYnAsL6dlXkt9
- dbp1q2vtVDxkgpHhl0tajQ==
-X-Google-Smtp-Source: APXvYqxwQvVW18ni2MGlR3yza3cM3F7fWkGTz5dS8pb+bIhSeEI2GqTMRaA5bo4tECabCiP8MTGJZA==
-X-Received: by 2002:a9d:4616:: with SMTP id y22mr13801201ote.319.1572280439895; 
- Mon, 28 Oct 2019 09:33:59 -0700 (PDT)
-Received: from xps15.herring.priv (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.googlemail.com with ESMTPSA id e186sm354991oia.47.2019.10.28.09.33.58
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:mime-version
+ :content-disposition:user-agent;
+ bh=2eVkQtIn/kKnma8y9cwV6ClxG9uop+VztYkAE7P1mO8=;
+ b=MoiUQ+94+SIBi2jzRmhAmCIzGiosXrpK3WPw8z+YsTc+HDa4CdeDomW6HjM0rdYgWV
+ 5uRp89SiEsYS71MFykE/e2AX3gC1+Ob14Dw8zE3swZRC+K8QbMAjDvvyTm/hoWMlsZu1
+ nIpLejQe2urc/iOFB9mNdbO6TzEyVVd4EAAoW4C/DxsRRY96gMHkqE8kB+3F+z4JK1fR
+ kCCBabWXe/apelqIbgJ0o5iskt5JYqGvV0D2aM4tcSpN3DRvERPxF6EAFdSBEUReKReC
+ joYnwc65h2iGdfDSnfJU6uNQr+iVazPjVcruyG3vE+/aMRbVwE172EmUNyEhguL4tdk7
+ QJ2w==
+X-Gm-Message-State: APjAAAWb6p1kKLgA/cQh/uh8CpwsTaob2EJ01B+pEq2aAbPSC6WhSn7x
+ zZUGJvatXdrn1MMJNB58PN8=
+X-Google-Smtp-Source: APXvYqxn4r3LTRA9B5aBfCDAvI4pAQSPotWe8JAzIrgIs7Z+04gKfRBPz3DLEc0RryrCUMBZKIaILw==
+X-Received: by 2002:a63:2225:: with SMTP id i37mr13535290pgi.62.1572294977814; 
+ Mon, 28 Oct 2019 13:36:17 -0700 (PDT)
+Received: from saurav ([27.62.167.137])
+ by smtp.gmail.com with ESMTPSA id e17sm11126717pgg.5.2019.10.28.13.36.13
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 28 Oct 2019 09:33:59 -0700 (PDT)
-From: Rob Herring <robh@kernel.org>
-To: Andrew Murray <andrew.murray@arm.com>, Bjorn Helgaas <bhelgaas@google.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
-Subject: [PATCH v3 25/25] PCI: Make devm_of_pci_get_host_bridge_resources()
- static
-Date: Mon, 28 Oct 2019 11:32:56 -0500
-Message-Id: <20191028163256.8004-26-robh@kernel.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191028163256.8004-1-robh@kernel.org>
-References: <20191028163256.8004-1-robh@kernel.org>
+ Mon, 28 Oct 2019 13:36:17 -0700 (PDT)
+Date: Tue, 29 Oct 2019 02:06:09 +0530
+From: Saurav Girepunje <saurav.girepunje@gmail.com>
+To: nbd@openwrt.org, john@phrozen.org, sean.wang@mediatek.com,
+ nelson.chang@mediatek.com, davem@davemloft.net,
+ matthias.bgg@gmail.com, netdev@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: [PATCH] mediatek: mtk_eth_path.c: Remove unneeded semicolon
+Message-ID: <20191028203609.GA29373@saurav>
 MIME-Version: 1.0
+Content-Disposition: inline
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191028_093401_185142_75D9990C 
-X-CRM114-Status: GOOD (  12.57  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20191028_133621_720692_5A3394BC 
+X-CRM114-Status: UNSURE (   9.86  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ provider (saurav.girepunje[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,96 +99,50 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>, linux-pci@vger.kernel.org,
- Shawn Lin <shawn.lin@rock-chips.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Toan Le <toan@os.amperecomputing.com>, Will Deacon <will@kernel.org>,
- Ryder Lee <ryder.lee@mediatek.com>, Michal Simek <michal.simek@xilinx.com>,
- Christoph Hellwig <hch@infradead.org>, linux-rockchip@lists.infradead.org,
- bcm-kernel-feedback-list@broadcom.com,
- Linus Walleij <linus.walleij@linaro.org>, Ray Jui <rjui@broadcom.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, Simon Horman <horms@verge.net.au>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org, Scott Branden <sbranden@broadcom.com>,
- Jingoo Han <jingoohan1@gmail.com>, rfi@lists.rocketboards.org,
- linux-renesas-soc@vger.kernel.org, Tom Joseph <tjoseph@cadence.com>,
- Srinath Mannam <srinath.mannam@broadcom.com>,
- Gustavo Pimentel <gustavo.pimentel@synopsys.com>,
- Ley Foon Tan <lftan@altera.com>
+Cc: saurav.girepunje@hotmail.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Now that all the PCI host drivers are using pci_parse_request_of_pci_ranges(),
-make devm_of_pci_get_host_bridge_resources() static.
+Remove unneeded semicolon in mtk_eth_path.c
 
-Cc: Bjorn Helgaas <bhelgaas@google.com>
-Signed-off-by: Rob Herring <robh@kernel.org>
+Signed-off-by: Saurav Girepunje <saurav.girepunje@gmail.com>
 ---
- drivers/pci/of.c  |  5 +----
- drivers/pci/pci.h | 17 -----------------
- 2 files changed, 1 insertion(+), 21 deletions(-)
+ drivers/net/ethernet/mediatek/mtk_eth_path.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/drivers/pci/of.c b/drivers/pci/of.c
-index 0b1e4623dfcf..00e4b9fcb41d 100644
---- a/drivers/pci/of.c
-+++ b/drivers/pci/of.c
-@@ -236,7 +236,6 @@ void of_pci_check_probe_only(void)
- }
- EXPORT_SYMBOL_GPL(of_pci_check_probe_only);
+diff --git a/drivers/net/ethernet/mediatek/mtk_eth_path.c b/drivers/net/ethernet/mediatek/mtk_eth_path.c
+index ef11cf3d1ccc..0fe97155dd8f 100644
+--- a/drivers/net/ethernet/mediatek/mtk_eth_path.c
++++ b/drivers/net/ethernet/mediatek/mtk_eth_path.c
+@@ -57,7 +57,7 @@ static int set_mux_gdm1_to_gmac1_esw(struct mtk_eth *eth, int path)
+ 	default:
+ 		updated = false;
+ 		break;
+-	};
++	}
  
--#if defined(CONFIG_OF_ADDRESS)
- /**
-  * devm_of_pci_get_host_bridge_resources() - Resource-managed parsing of PCI
-  *                                           host bridge resources from DT
-@@ -255,7 +254,7 @@ EXPORT_SYMBOL_GPL(of_pci_check_probe_only);
-  * It returns zero if the range parsing has been successful or a standard error
-  * value if it failed.
-  */
--int devm_of_pci_get_host_bridge_resources(struct device *dev,
-+static int devm_of_pci_get_host_bridge_resources(struct device *dev,
- 			unsigned char busno, unsigned char bus_max,
- 			struct list_head *resources,
- 			struct list_head *ib_resources,
-@@ -384,8 +383,6 @@ int devm_of_pci_get_host_bridge_resources(struct device *dev,
- 	pci_free_resource_list(resources);
- 	return err;
- }
--EXPORT_SYMBOL_GPL(devm_of_pci_get_host_bridge_resources);
--#endif /* CONFIG_OF_ADDRESS */
+ 	if (updated) {
+ 		val = mtk_r32(eth, MTK_MAC_MISC);
+@@ -143,7 +143,7 @@ static int set_mux_gmac1_gmac2_to_sgmii_rgmii(struct mtk_eth *eth, int path)
+ 	default:
+ 		updated = false;
+ 		break;
+-	};
++	}
  
- #if IS_ENABLED(CONFIG_OF_IRQ)
- /**
-diff --git a/drivers/pci/pci.h b/drivers/pci/pci.h
-index 6692c4fe4290..118a4974537b 100644
---- a/drivers/pci/pci.h
-+++ b/drivers/pci/pci.h
-@@ -630,23 +630,6 @@ static inline void pci_set_bus_of_node(struct pci_bus *bus) { }
- static inline void pci_release_bus_of_node(struct pci_bus *bus) { }
- #endif /* CONFIG_OF */
+ 	if (updated)
+ 		regmap_update_bits(eth->ethsys, ETHSYS_SYSCFG0,
+@@ -174,7 +174,7 @@ static int set_mux_gmac12_to_gephy_sgmii(struct mtk_eth *eth, int path)
+ 		break;
+ 	default:
+ 		updated = false;
+-	};
++	}
  
--#if defined(CONFIG_OF_ADDRESS)
--int devm_of_pci_get_host_bridge_resources(struct device *dev,
--			unsigned char busno, unsigned char bus_max,
--			struct list_head *resources,
--			struct list_head *ib_resources,
--			resource_size_t *io_base);
--#else
--static inline int devm_of_pci_get_host_bridge_resources(struct device *dev,
--			unsigned char busno, unsigned char bus_max,
--			struct list_head *resources,
--			struct list_head *ib_resources,
--			resource_size_t *io_base)
--{
--	return -EINVAL;
--}
--#endif
--
- #ifdef CONFIG_PCIEAER
- void pci_no_aer(void);
- void pci_aer_init(struct pci_dev *dev);
+ 	if (updated)
+ 		regmap_update_bits(eth->ethsys, ETHSYS_SYSCFG0,
 -- 
 2.20.1
 
