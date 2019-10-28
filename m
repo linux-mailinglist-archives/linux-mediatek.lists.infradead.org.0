@@ -2,55 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7349EE6AFF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 03:48:57 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 330AEE6C53
+	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 07:11:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vmQkCRX++4Gsr6Ayf3/vwaq93bn75hc+KoxrK+J2yk4=; b=E8Cj3oPWH5STzm
-	mNnInkEwnS8IYvglvg9Qemxenwa8s3YLI07j6y1OdaMNV1cAeXXsnT4eC7UrOcWmKY590oHrdkVFl
-	ed5xrPEJflnjUoRSGkSxzBxsVo9H3x4dhAhVCNGdy6rSYYlOLCiRJEMqzXVNpH2tWmgIyRI6Bt0mr
-	LUIaSWvE4lqtIxYL3GCUZB+Al/4SL1fIzzqjxX+KFpyZAkLEoInvS8avY4tAPVM6HA3YAgIFUyph/
-	9SPT43WItkHCdpL8Y3MEGU7jSw8Q4rrqSeLFxPzb6CiGHoA5FpXV35gMpN6vb9NT5u4pliD4Y5/Jx
-	DGj+Y0+2RQHQXcJgEbhA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=FiWCJetp3w7BBgyknTw4jeY31/ZPQg01xGRfB8OMVxE=; b=lFrmwhsWNWmWUE
+	0qAVKlwkAt4B6a98BA8rDGVTzy7lWK4myfXem5wbuN4XWGawBR8Nd5NQeEHblvxtFeXHHCRcMwMwR
+	LF3165E1K+9Tln07ZCJSoDxTMuP2h/v+UTBtZqgCaYy9njFdn9xjn+Q4x/mZ1BWOeP69GNQWCMxAw
+	6wy7XImHiIuEB74sM6m3leLd+FGQlqkewhCCPjNndFS+DFMXDwfHSoiyfzsOsoHVLSAPvr52Pr9ce
+	/6MkFr78QNiT1dMTL0fdCUWrE0UBEueJVgFcwSE/Pmy3QRB3g4XbcKSqphkiNxJKvDKFKX0n9dbsb
+	RtUFZ1xZHCAK3y5hjDzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iOv5O-0000uy-1j; Mon, 28 Oct 2019 02:48:50 +0000
+	id 1iOyF7-0007PO-MC; Mon, 28 Oct 2019 06:11:05 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iOv55-0000g8-My; Mon, 28 Oct 2019 02:48:32 +0000
-X-UUID: dfc32c500b0c401296fb34eb1579b2bf-20191027
-X-UUID: dfc32c500b0c401296fb34eb1579b2bf-20191027
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <weiyi.lu@mediatek.com>)
+ id 1iOyEz-0007Nm-Ec; Mon, 28 Oct 2019 06:11:03 +0000
+X-UUID: 58a9e3f24fe2457692b7155a58e49a6d-20191027
+X-UUID: 58a9e3f24fe2457692b7155a58e49a6d-20191027
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <dehui.sun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 586520476; Sun, 27 Oct 2019 18:48:40 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 27 Oct 2019 19:48:26 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 28 Oct 2019 10:48:26 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 28 Oct 2019 10:48:27 +0800
-From: Weiyi Lu <weiyi.lu@mediatek.com>
-To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh@kernel.org>
-Subject: [PATCH v8 14/14] arm64: dts: Add power-domains properity to mfgcfg
-Date: Mon, 28 Oct 2019 10:48:18 +0800
-Message-ID: <1572230898-7860-15-git-send-email-weiyi.lu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1572230898-7860-1-git-send-email-weiyi.lu@mediatek.com>
-References: <1572230898-7860-1-git-send-email-weiyi.lu@mediatek.com>
+ with ESMTP id 67656682; Sun, 27 Oct 2019 22:10:38 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 27 Oct 2019 23:10:27 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 28 Oct 2019 14:10:27 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 28 Oct 2019 14:10:25 +0800
+From: Dehui Sun <dehui.sun@mediatek.com>
+To: Daniel Lezcano <daniel.lezcano@linaro.org>, Thomas Gleixner
+ <tglx@linutronix.de>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
+ <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v2 0/2] add systimer node for MT8183 SoC
+Date: Mon, 28 Oct 2019 14:09:42 +0800
+Message-ID: <1572242984-30460-1-git-send-email-dehui.sun@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191027_194831_752663_3596D042 
-X-CRM114-Status: UNSURE (   8.42  )
+X-CRM114-CacheID: sfid-20191027_231102_769661_B4E12833 
+X-CRM114-Status: UNSURE (   8.39  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -72,36 +71,31 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: James Liao <jamesjj.liao@mediatek.com>, Weiyi Lu <weiyi.lu@mediatek.com>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- Yong Wu <yong.wu@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: dehui.sun@mediatek.com, devicetree@vger.kernel.org, weiyi.lu@mediatek.com,
+ srv_heupstream@mediatek.com, erin.lo@mediatek.com,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-mfgcfg clock is under MFG_ASYNC power domain
+This series are based on 5.4-rc1 and add systimer node for MT8183,
+and this timer will serve as a wakeup source for cpu-idle feature.
 
-Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 1 +
- 1 file changed, 1 insertion(+)
+Change in v2:
+ - rename the node's name from 'systimer' to 'timer'.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 6cbbd77..7e23179 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -634,6 +634,7 @@
- 			compatible = "mediatek,mt8183-mfgcfg", "syscon";
- 			reg = <0 0x13000000 0 0x1000>;
- 			#clock-cells = <1>;
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_ASYNC>;
- 		};
- 
- 		mmsys: syscon@14000000 {
+Dehui Sun (2):
+  dt-bindings: mediatek: update bindings for MT8183 systimer
+  arm64: dts: mt8183: add systimer0 device node
+
+ Documentation/devicetree/bindings/timer/mediatek,mtk-timer.txt | 1 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi                       | 9 +++++++++
+ 2 files changed, 10 insertions(+)
+
 -- 
-1.8.1.1.dirty
+1.9.1
 
 
 _______________________________________________
