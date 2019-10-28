@@ -2,56 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9981CE6C56
-	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 07:11:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3A6FDE6D40
+	for <lists+linux-mediatek@lfdr.de>; Mon, 28 Oct 2019 08:29:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n5ZHoS9exkkhQQFbVZKITt5RVPiKtTL3KLAAKPfQrqQ=; b=GZ/l6cOkIL9oLH
-	L6BFx2qjMvDhCDQ9RpccCLIMoEoKNoMcfpP8lw3ZmD/BDduoCMRADPnjAYZ0hE8TQHKa/pjUFGmzb
-	SwZzP0J6Z2ap9EOGI88qh/55j64vF5g5ds3fedHVB33tnFwO/oe4bFF908qY6/YP3AuZwq4E8Rvwn
-	yl5oQCsNTX0vURS64Hya/tEUNeBcLTO5EcLR51ZqqbO2xVmFBlfn3m/VL17JSPoUEmmpnbaa00MFr
-	DQcCzsfuUSzwEjR9ZoZ7LXkmqykLUTgiZsEJ9jSG1X1/F2DAJe1QDO5n2iENyOX4h091VMThaxi9/
-	MMspYdm0EIRFEwYHr6oQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=WfqtiK2ldoAovxVFDgAALcUGWhp0Vk30SZs2yFU3wF4=; b=be87bY4KnZmHAa
+	H1k8IF2Zd5augbJq6X3ubfxBIcXI7eSBxCOjE6glRodPwkjT1Mmkoffdb+DQI9SiO87V4XB0P+X0/
+	zA3vZATmfQsK8w43o0kbsovZQnvQsu9lIIn7lcoiSYhdM9bwf0AdZ5AIXvEsUWmEj2cFCpJSpM8z8
+	FzJOEqv5EaJ/VaY6Vp5FkhAQlnEmszXKXNFzEiMQMCm6CWAbgepZs8Fu5uF6fjIdfVUAOnpMYegn8
+	DK0R5+OkuWW0TzC7QkDyxWEyUgm7W+Df01VDImvIu4rMIQ8Klm9qsgGG6HLt4uTzRugsTZYrCvNkd
+	DFDjsZMOjLRQrKV3ERQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iOyFh-0007tv-LT; Mon, 28 Oct 2019 06:11:41 +0000
+	id 1iOzTF-00023I-FV; Mon, 28 Oct 2019 07:29:45 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iOyF1-0007Nz-GK; Mon, 28 Oct 2019 06:11:05 +0000
-X-UUID: 09c42ca4b82b4ee1a87226502ca8fe2f-20191027
-X-UUID: 09c42ca4b82b4ee1a87226502ca8fe2f-20191027
+ id 1iOzTA-00021M-Uv
+ for linux-mediatek@lists.infradead.org; Mon, 28 Oct 2019 07:29:42 +0000
+X-UUID: daecb0b3dbd64b38932a7e5e855537fa-20191027
+X-UUID: daecb0b3dbd64b38932a7e5e855537fa-20191027
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <dehui.sun@mediatek.com>)
+ (envelope-from <eason.yen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1834098918; Sun, 27 Oct 2019 22:10:39 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 27 Oct 2019 23:10:29 -0700
+ with ESMTP id 795448406; Sun, 27 Oct 2019 23:29:11 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 28 Oct 2019 00:29:11 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 28 Oct 2019 14:10:29 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 28 Oct 2019 14:10:28 +0800
-From: Dehui Sun <dehui.sun@mediatek.com>
-To: Daniel Lezcano <daniel.lezcano@linaro.org>, Thomas Gleixner
- <tglx@linutronix.de>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
- <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v2 2/2] arm64: dts: mt8183: add systimer0 device node
-Date: Mon, 28 Oct 2019 14:09:44 +0800
-Message-ID: <1572242984-30460-3-git-send-email-dehui.sun@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1572242984-30460-1-git-send-email-dehui.sun@mediatek.com>
-References: <1572242984-30460-1-git-send-email-dehui.sun@mediatek.com>
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 28 Oct 2019 15:29:10 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 28 Oct 2019 15:29:11 +0800
+From: Eason Yen <eason.yen@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH v1 1/1] soc: mediatek: add SMC fid table for SIP interface
+Date: Mon, 28 Oct 2019 15:29:08 +0800
+Message-ID: <1572247749-4276-1-git-send-email-eason.yen@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191027_231103_174050_D824F398 
-X-CRM114-Status: UNSURE (   9.01  )
+X-CRM114-CacheID: sfid-20191028_002940_995224_AB274FD6 
+X-CRM114-Status: UNSURE (   4.66  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -75,45 +72,28 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: dehui.sun@mediatek.com, devicetree@vger.kernel.org, weiyi.lu@mediatek.com,
- srv_heupstream@mediatek.com, erin.lo@mediatek.com,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com,
+ Eason Yen <eason.yen@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add systimer0 device node for MT8183.
+This patch add SMC fid table for SIP interface.
 
-Signed-off-by: Dehui Sun <dehui.sun@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 9 +++++++++
- 1 file changed, 9 insertions(+)
+1. Add a header file to provide SIP interface to ATF
+2. Add AUDIO SMC fid
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 7e23179..40145dc 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -326,6 +326,15 @@
- 			clock-names = "spi", "wrap";
- 		};
- 
-+		systimer: timer@10017000 {
-+			compatible = "mediatek,mt8183-timer",
-+				     "mediatek,mt6765-timer";
-+			reg = <0 0x10017000 0 0x1000>;
-+			interrupts = <GIC_SPI 200 IRQ_TYPE_LEVEL_HIGH>;
-+			clocks = <&topckgen CLK_TOP_CLK13M>;
-+			clock-names = "clk13m";
-+		};
-+
- 		auxadc: auxadc@11001000 {
- 			compatible = "mediatek,mt8183-auxadc",
- 				     "mediatek,mt8173-auxadc";
--- 
-1.9.1
+Signed-off-by: Eason Yen <eason.yen@mediatek.com>
 
+
+Eason Yen (1):
+  soc: mediatek: add SMC fid table for SIP interface
+
+ include/linux/soc/mediatek/mtk_sip_svc.h |   28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
 
 _______________________________________________
 Linux-mediatek mailing list
