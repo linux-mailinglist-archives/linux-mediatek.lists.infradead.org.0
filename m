@@ -2,62 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5F48AEBE14
-	for <lists+linux-mediatek@lfdr.de>; Fri,  1 Nov 2019 07:44:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41486EBEE6
+	for <lists+linux-mediatek@lfdr.de>; Fri,  1 Nov 2019 09:09:40 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HFZ6AnNmM/FNrcMbdfJ6/hUK1KHaU8mh6+FGFgeHTHk=; b=fBJZngaV3rA19I
-	c36P6C++SqKUvUXhZaPKXJtZxr7TWvIBL0eWRJn9ludnm2bc3qAiCCwAdMqrhw+YAzzxUXfujVvEq
-	ijgwkeWC5T6RJsp7+LgCzcIsNsPa4sVVC/zby/rThC8MJidA3caGGGi9GFQYTLCim427tPB5T2+xj
-	s27xuNn1n35whzdlHmiAGPLYeJLF0yhQXumM95dtmtYhKBXrA7OBvFN3T+tOSZ5cFFjsh5xGAHwXD
-	zemNLs7GuxBK0WQsAn1sVP+1Xw97ypa2TqAcuVO6l4Q5ZbvjdgifZBoFB9l2us/LupbieBpAWrbsf
-	iAuffUkBd8m6RGMVe6sA==;
+	List-Owner; bh=vozXp6+tax2OjD3wP1kABGDFGxWZ5Tqrl9hLo6IuBe0=; b=Zn7hs5Ll2kX8rW
+	6msJ9VTqneGaP35wvD+dtBxmTddcAUQMmB3JKTl3WInaS+96DJxd8iuMvMnUwcB8Zgc9h1nTBrNSc
+	ZQPnGwLgdUD1vv3kE6deC+4ve3az0k48oXA+420KVeFpp66BnMo94VXwLxLfDJYWi44LzXeKkQrl6
+	RgqrPjFBXudlw5movOHyeSZPOU/w5ULE6dMpHDyTC1BaYTzwEgQi/glewtpe/HX5Z5Ol/ATeQvpZO
+	eroI4LONk/CDGhBSwttctSkoJzrFEPTbxvlscwLIGI12XVqyH3qL12EJ9u3miLwMqg9J9R4S968AF
+	KZfsSFKL9rjpOW8z+9ZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iQQfA-0002iF-Hs; Fri, 01 Nov 2019 06:44:00 +0000
+	id 1iQRzx-0001c9-Se; Fri, 01 Nov 2019 08:09:33 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iQQer-0002Vb-OQ; Fri, 01 Nov 2019 06:43:42 +0000
-X-UUID: c7df892edf454530bce013e0ad3a9321-20191031
-X-UUID: c7df892edf454530bce013e0ad3a9321-20191031
+ id 1iQRzW-0001Fx-Py; Fri, 01 Nov 2019 08:09:08 +0000
+X-UUID: b408e069da9a460ca37108bd0dda1a0f-20191101
+X-UUID: b408e069da9a460ca37108bd0dda1a0f-20191101
 Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <chun-hung.wu@mediatek.com>)
+ (envelope-from <roger.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 388163895; Thu, 31 Oct 2019 22:43:36 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 31 Oct 2019 23:43:28 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 1 Nov 2019 14:43:26 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 1 Nov 2019 14:43:26 +0800
-From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-To: Chaotian Jing <chaotian.jing@mediatek.com>, Ulf Hansson
- <ulf.hansson@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
- <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>, "Linus
- Walleij" <linus.walleij@linaro.org>, Pavel Machek <pavel@ucw.cz>, Kate
- Stewart <kstewart@linuxfoundation.org>, Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>, Martin Blumenstingl
- <martin.blumenstingl@googlemail.com>, Pan Bian <bianpan2016@163.com>, "Thomas
- Gleixner" <tglx@linutronix.de>, Stanley Chu <stanley.chu@mediatek.com>,
- Kuohong Wang <kuohong.wang@mediatek.com>
-Subject: [PATCH 3/3] [3/3] dt-bindings: mmc: mediatek: Add document for mt6779
-Date: Fri, 1 Nov 2019 14:43:02 +0800
-Message-ID: <1572590582-11056-3-git-send-email-chun-hung.wu@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1572590582-11056-1-git-send-email-chun-hung.wu@mediatek.com>
-References: <1572590582-11056-1-git-send-email-chun-hung.wu@mediatek.com>
+ with ESMTP id 1579577412; Fri, 01 Nov 2019 00:09:15 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 1 Nov 2019 01:08:55 -0700
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 1 Nov 2019 16:08:54 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 1 Nov 2019 16:08:54 +0800
+Message-ID: <1572595738.6939.7.camel@mtksdaap41>
+Subject: Re: [v4, 6/8] PM / OPP: Support adjusting OPP voltages at runtime
+From: Roger Lu <roger.lu@mediatek.com>
+To: Viresh Kumar <viresh.kumar@linaro.org>
+Date: Fri, 1 Nov 2019 16:08:58 +0800
+In-Reply-To: <20190819111836.5cu245xre6ky6xav@vireshk-i7>
+References: <1565703113-31479-1-git-send-email-andrew-sh.cheng@mediatek.com>
+ <1565703113-31479-7-git-send-email-andrew-sh.cheng@mediatek.com>
+ <20190819111836.5cu245xre6ky6xav@vireshk-i7>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: DA0E43A199AF13C7A7A488606389C63F2A52057B18D158DDCD6B0E5FDE7197552000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191031_234341_797835_46809F2E 
-X-CRM114-Status: GOOD (  10.09  )
+X-CRM114-CacheID: sfid-20191101_010906_842782_A0429A5A 
+X-CRM114-Status: GOOD (  22.73  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -78,39 +73,82 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Chun-Hung Wu <chun-hung.wu@mediatek.com>, linux-mmc@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ Andrew-sh Cheng =?UTF-8?Q?=28=E9=84=AD=E5=BC=8F=E5=8B=B3=29?=
+ <andrew-sh.cheng@mediatek.com>, srv_heupstream <srv_heupstream@mediatek.com>,
+ "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
+ Stephen Boyd <sboyd@kernel.org>, Stephen Boyd <sboyd@codeaurora.org>,
+ "Rafael J. Wysocki" <rjw@rjwysocki.net>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>, Chanwoo Choi <cw00.choi@samsung.com>,
+ Kyungmin Park <kyungmin.park@samsung.com>,
+ MyungJoo Ham <myungjoo.ham@samsung.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Fan Chen =?UTF-8?Q?=28=E9=99=B3=E5=87=A1=29?= <fan.chen@mediatek.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add compatible node for mt6779 mmc
+Dear Viresh,
 
-Change-Id: Id36a136a75e892c9360ec95c7f52db06f5b308a4
-CR-Id:
-Feature:
-Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
----
- Documentation/devicetree/bindings/mmc/mtk-sd.txt | 1 +
- 1 file changed, 1 insertion(+)
+Sorry for the late reply.
 
-diff --git a/Documentation/devicetree/bindings/mmc/mtk-sd.txt b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-index 8a532f4..0c9cf6a 100644
---- a/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-+++ b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-@@ -12,6 +12,7 @@ Required properties:
- 	"mediatek,mt8173-mmc": for mmc host ip compatible with mt8173
- 	"mediatek,mt8183-mmc": for mmc host ip compatible with mt8183
- 	"mediatek,mt8516-mmc": for mmc host ip compatible with mt8516
-+	"mediatek,mt6779-mmc": for mmc host ip compatible with mt6779
- 	"mediatek,mt2701-mmc": for mmc host ip compatible with mt2701
- 	"mediatek,mt2712-mmc": for mmc host ip compatible with mt2712
- 	"mediatek,mt7622-mmc": for MT7622 SoC
--- 
-1.9.1
+On Mon, 2019-08-19 at 19:18 +0800, Viresh Kumar wrote:
+> On 13-08-19, 21:31, Andrew-sh.Cheng wrote:
+> > From: Stephen Boyd <sboyd@codeaurora.org>
+> > 
+> > On some SoCs the Adaptive Voltage Scaling (AVS) technique is
+> > employed to optimize the operating voltage of a device. At a
+> > given frequency, the hardware monitors dynamic factors and either
+> > makes a suggestion for how much to adjust a voltage for the
+> > current frequency, or it automatically adjusts the voltage
+> > without software intervention. Add an API to the OPP library for
+> > the former case, so that AVS type devices can update the voltages
+> > for an OPP when the hardware determines the voltage should
+> > change. The assumption is that drivers like CPUfreq or devfreq
+> > will register for the OPP notifiers and adjust the voltage
+> > according to suggestions that AVS makes.
+> > 
+> > This patch is devired from [1] submitted by Stephen.
+> > [1] https://lore.kernel.org/patchwork/patch/599279/
+> > 
+> > Signed-off-by: Stephen Boyd <sboyd@codeaurora.org>
+> > Signed-off-by: Roger Lu <roger.lu@mediatek.com>
+> > ---
+> >  drivers/opp/core.c     | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++
+> >  include/linux/pm_opp.h | 11 +++++++++
+> >  2 files changed, 74 insertions(+)
+> > 
+> > diff --git a/drivers/opp/core.c b/drivers/opp/core.c
+> > index c094d5d20fd7..407a07f29b12 100644
+> > --- a/drivers/opp/core.c
+> > +++ b/drivers/opp/core.c
+> > @@ -2054,6 +2054,69 @@ static int _opp_set_availability(struct device *dev, unsigned long freq,
+> >  }
+> >  
+> >  /**
+> > + * dev_pm_opp_adjust_voltage() - helper to change the voltage of an OPP
+> > + * @dev:		device for which we do this operation
+> > + * @freq:		OPP frequency to adjust voltage of
+> > + * @u_volt:		new OPP voltage
+> > + *
+> > + * Return: -EINVAL for bad pointers, -ENOMEM if no memory available for the
+> > + * copy operation, returns 0 if no modifcation was done OR modification was
+> > + * successful.
+> > + */
+> > +int dev_pm_opp_adjust_voltage(struct device *dev, unsigned long freq,
+> > +			      unsigned long u_volt)
+> 
+> Can you please update this to take a triplet instead ? That is what we are
+> storing in OPP core now a days.
+
+I've studied opp/core.c and still don't know meaning of triplet here.
+Could you give me more hints (reference API?) about how to take a
+triplet instead? Thanks in advance.
 
 
 _______________________________________________
