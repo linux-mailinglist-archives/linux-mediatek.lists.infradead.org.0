@@ -2,57 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C3B6EBDAB
-	for <lists+linux-mediatek@lfdr.de>; Fri,  1 Nov 2019 07:10:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 72013EBE17
+	for <lists+linux-mediatek@lfdr.de>; Fri,  1 Nov 2019 07:44:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OQt2HFOZYo/P8JX1/H/uOHNuiS4cXqTwm3P2R0iOKmE=; b=TOSoXe9aFTh0DZ
-	x708xvQZJ4RQJwFHsLvuGyOWVUSgSlWeXVAEbKzfC6h7prinXZSuklU5J3U8vdZMFLPHMAWF6Z+pn
-	xnZx/0jyPVbPfZ5JyJq/zqfZHD0EzyXUKtrEPjlxNcsSw6rXx1qmRoKFE5tZ4nT71Nx3Mg+KHVbOE
-	EVSdpDc0veimhm+oQD3TJ3kLJg6st/yaU42pcoNl7tVZgvKviuW2zzf1ypKug8geW+JyXOb2yYzVY
-	F7pkBINGuR246QyKeloE2wmj5f3OdB4GmGuqWz/R0C2N4E/dcYjwHgQFpl1deN0EXHc9RNmOCkHVb
-	hB0fRo8+6lYEqveVpxfA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=oaNv/H0KQedsSwKs3fHhBwD489ehwalenHNVq1h6ync=; b=gNLvqIlQSpjUET
+	By6jqulWtP1yT5kiEyg2MbvanglWkvSCLVFF8+7fXNCQZ2fagZMfHcP9tbLNiTo6pU9xGBpDpa17B
+	W/8zwpNmszhwdQzj6EXENd7aBsQayFwIw672pAeEOPAOIeZgllOPwF5WGX9ZnrusstxIKrRSHM6Yb
+	YLLu308H1eCD608U99rPrKHxT8mgyAVms6oqjHRinI0bYLBARXE17XMrnZapdPc6gt1ZmWo+FyMdn
+	QgzHpE057zRswct/+gNOzvwedK/biIxxw2RK+5Jh6DnpLT85B97JUtbE9qwpzfIxcmQmd+N3NRvFX
+	TOxx5WD/BayuJ1hTE13w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iQQ8h-0006PY-79; Fri, 01 Nov 2019 06:10:27 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iQQfU-0002z6-4N; Fri, 01 Nov 2019 06:44:20 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iQQ8R-0005ZT-QU; Fri, 01 Nov 2019 06:10:17 +0000
-X-UUID: 24e65507c1494c7aa813e1e79f3bcbee-20191031
-X-UUID: 24e65507c1494c7aa813e1e79f3bcbee-20191031
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <roger.lu@mediatek.com>)
+ id 1iQQes-0002VZ-Bd; Fri, 01 Nov 2019 06:43:43 +0000
+X-UUID: 3e89a3b6b52b4926b88aca9be2433735-20191031
+X-UUID: 3e89a3b6b52b4926b88aca9be2433735-20191031
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <chun-hung.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1339201955; Thu, 31 Oct 2019 22:10:06 -0800
+ with ESMTP id 234999842; Thu, 31 Oct 2019 22:43:34 -0800
 Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 31 Oct 2019 23:09:59 -0700
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 31 Oct 2019 23:43:26 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 1 Nov 2019 14:09:57 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 1 Nov 2019 14:09:57 +0800
-Message-ID: <1572588602.6939.1.camel@mtksdaap41>
-Subject: Re: [PATCH v5 3/3] PM / AVS: SVS: Introduce SVS engine
-From: Roger Lu <roger.lu@mediatek.com>
-To: Pi-Hsun Shih <pihsun@chromium.org>
-Date: Fri, 1 Nov 2019 14:10:02 +0800
-In-Reply-To: <CANdKZ0dAWWy7QMMZhNHAha5ZpcBo1GHebPc5_FRu5gvBc569QA@mail.gmail.com>
-References: <20190906100514.30803-1-roger.lu@mediatek.com>
- <20190906100514.30803-4-roger.lu@mediatek.com>
- <CANdKZ0dAWWy7QMMZhNHAha5ZpcBo1GHebPc5_FRu5gvBc569QA@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Fri, 1 Nov 2019 14:43:24 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 1 Nov 2019 14:43:24 +0800
+From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
+To: Chaotian Jing <chaotian.jing@mediatek.com>, Ulf Hansson
+ <ulf.hansson@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
+ <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>, "Linus
+ Walleij" <linus.walleij@linaro.org>, Pavel Machek <pavel@ucw.cz>, Kate
+ Stewart <kstewart@linuxfoundation.org>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Martin Blumenstingl
+ <martin.blumenstingl@googlemail.com>, Pan Bian <bianpan2016@163.com>, "Thomas
+ Gleixner" <tglx@linutronix.de>, Stanley Chu <stanley.chu@mediatek.com>,
+ Kuohong Wang <kuohong.wang@mediatek.com>
+Subject: [PATCH 1/3] [1/3] mmc: core: expose MMC_CAP2_CQE* to dt
+Date: Fri, 1 Nov 2019 14:43:00 +0800
+Message-ID: <1572590582-11056-1-git-send-email-chun-hung.wu@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 37EE6EFD37277920D5707B79253F0016321E83FB9A72C31F0E381067B1C135692000:8
+X-TM-SNTS-SMTP: 1790563609A4B527A36D226ACFB9CECC63DA74F3C4E3D57248FE8956863EA0C82000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191031_231012_082260_FFF00FF9 
-X-CRM114-Status: GOOD (  11.19  )
+X-CRM114-CacheID: sfid-20191031_234342_398109_7BADAE6F 
+X-CRM114-Status: UNSURE (   8.58  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -60,6 +65,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -73,85 +80,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nicolas Boichat <drinkcat@google.com>,
- Angus Lin <Angus.Lin@mediatek.com>, Kevin Hilman <khilman@kernel.org>,
- Stephen Boyd <sboyd@kernel.org>,
- "open list:THERMAL" <linux-pm@vger.kernel.org>,
- open list <linux-kernel@vger.kernel.org>,
- HenryC Chen <HenryC.Chen@mediatek.com>, yt.lee@mediatek.com, Fan
- Chen <fan.chen@mediatek.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE
- BINDINGS" <devicetree@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek
- SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Nishanth
- Menon <nm@ti.com>, "moderated list:ARM/Mediatek SoC
- support" <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ Chun-Hung Wu <chun-hung.wu@mediatek.com>, linux-mmc@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Dear Pi-Hsun,
+Expose MMC_CAP2_CQE and MMC_CAP2_CQE_DCMD
+to host->caps2 if
+1. "supports-cqe" is defined in dt and
+2. "disable-cqe-dcmd" is not defined in dt.
 
-Thanks for reminding me. I'll add dev_pm_opp_put(opp) in the next
-patchset.
+Change-Id: I3d172e6bcfac34520c3932a6f8df2e20f2c0d05b
+CR-Id:
+Feature:
+Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
+---
+ drivers/mmc/core/host.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
 
-On Mon, 2019-10-21 at 15:51 +0800, Pi-Hsun Shih wrote:
-> Hi Roger,
-> 
-> On Fri, Sep 6, 2019 at 6:06 PM Roger Lu <roger.lu@mediatek.com> wrote:
-> > ...
-> > +static int svs_resource_setup(struct mtk_svs *svs)
-> > ...
-> > +               for (i = 0, freq = (u32)-1; i < svsb->opp_count; i++, freq--) {
-> > +                       opp = dev_pm_opp_find_freq_floor(svsb->dev, &freq);
-> > +                       if (IS_ERR(opp)) {
-> > +                               pr_err("%s: error opp entry!!, err = %ld\n",
-> > +                                      svsb->name, PTR_ERR(opp));
-> > +                               return PTR_ERR(opp);
-> > +                       }
-> > +
-> > +                       svsb->opp_freqs[i] = freq;
-> > +                       svsb->opp_volts[i] = dev_pm_opp_get_voltage(opp);
-> > +                       svsb->freqs_pct[i] = percent(svsb->opp_freqs[i],
-> > +                                                    svsb->freq_base) & 0xff;
-> 
-> Should have dev_pm_opp_put(opp); here.
-Sure. Thanks.
-
-> 
-> > +               }
-> > +       }
-> > +
-> > +       return 0;
-> > +}
-> > ...
-> > +static int svs_status_proc_show(struct seq_file *m, void *v)
-> > ...
-> > +       for (i = 0, freq = (u32)-1; i < svsb->opp_count; i++, freq--) {
-> > +               opp = dev_pm_opp_find_freq_floor(svsb->dev, &freq);
-> > +               if (IS_ERR(opp)) {
-> > +                       seq_printf(m, "%s: error opp entry!!, err = %ld\n",
-> > +                                  svsb->name, PTR_ERR(opp));
-> > +                       return PTR_ERR(opp);
-> > +               }
-> > +
-> > +               seq_printf(m, "opp_freqs[%02u]: %lu, volts[%02u]: %lu, ",
-> > +                          i, freq, i, dev_pm_opp_get_voltage(opp));
-> > +               seq_printf(m, "svsb_volts[%02u]: 0x%x, freqs_pct[%02u]: %u\n",
-> > +                          i, svsb->volts[i], i, svsb->freqs_pct[i]);
-> 
-> Same here.
-Sure. Thanks.
-
-> 
-> > +       }
-> > +
-> > +       return 0;
-> > +}
-> > ...
-
+diff --git a/drivers/mmc/core/host.c b/drivers/mmc/core/host.c
+index 105b7a7..efb0dbe 100644
+--- a/drivers/mmc/core/host.c
++++ b/drivers/mmc/core/host.c
+@@ -319,6 +319,14 @@ int mmc_of_parse(struct mmc_host *host)
+ 		host->caps2 |= MMC_CAP2_NO_SD;
+ 	if (device_property_read_bool(dev, "no-mmc"))
+ 		host->caps2 |= MMC_CAP2_NO_MMC;
++	if (device_property_read_bool(dev, "supports-cqe"))
++		host->caps2 |= MMC_CAP2_CQE;
++
++	/* Must be after "supports-cqe" check */
++	if (!device_property_read_bool(dev, "disable-cqe-dcmd")) {
++		if (host->caps2 & MMC_CAP2_CQE)
++			host->caps2 |= MMC_CAP2_CQE_DCMD;
++	}
+ 
+ 	/* Must be after "non-removable" check */
+ 	if (device_property_read_u32(dev, "fixed-emmc-driver-type", &drv_type) == 0) {
+-- 
+1.9.1
 
 
 _______________________________________________
