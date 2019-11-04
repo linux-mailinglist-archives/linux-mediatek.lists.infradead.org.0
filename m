@@ -2,128 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64E1EEDD8C
-	for <lists+linux-mediatek@lfdr.de>; Mon,  4 Nov 2019 12:14:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3444BEDF6E
+	for <lists+linux-mediatek@lfdr.de>; Mon,  4 Nov 2019 12:59:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5grPXKb+LANfPHab7Nror4HOj6pOX8GNpWldhQmjg3w=; b=jNcVE3Ng+7HweU
-	XWU01Non0cKO5lHhcFcDHwT7/GBUKPGeWD5aR5EIaRRmXlMR+AyxzfE1SLEtPGinaVb8fMqtQ3fpY
-	2tE5EhsGC/vqycgbNqQ3/+IdiZ/JZoaiM91g24KRZL4ikBc24eNy6XIZ8ds7ZxXh9nXmD5bwvxVWf
-	ApcW5SB3oA38s4ArE9jM5rJVrIyBiUTxWyqa9HPkQSn/fI5vyx/ufXfDJU9P2RmGI2zsdVxPLyPE9
-	Vhp5DfzFNfmYN+1uwdS1Sb0gli394iNpKdFv0sLnm3mHFBYjpbT3M72CHEuli+IJsGLkqyVurjKnH
-	NlfZpdG6W0s1U6DBpa6w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HbmKVCPWtDFWGS5PDGM+Sf1i8tCj+OQDwB0BteZAvrU=; b=YQE9NmS5V3g9EX
+	LA0ROOu5YRBMejP6vvQOBW6OMDC7y4TdyW1+0hQ63X+kec95epN+Hzd91XyCyOytocF84gTKPxq7M
+	eFpDcgBky8xPPWn7twGOODrcuUFeyINAH5rqauFzLqqY5hB1MbZAN9UYkQwAWZOfq0K87442CQfna
+	hS2XCa4Z1GlKlJMcQcrmdQIIIRC865OhulEapND/WwssOxKk0HfvIxP23XSOpN8IbZKEm5E0vOTb/
+	bYzgJ3BG2NMNu26VJqwg8gYUYj4AJ/W1TufozMBRZz7lHKkdZrrQlQKVmA+USaD8FAyD3YA/fPVOy
+	nzv7xEB69+9dhP4Hctzw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iRaJZ-0006s9-SA; Mon, 04 Nov 2019 11:14:29 +0000
-Received: from mx2.suse.de ([195.135.220.15] helo=mx1.suse.de)
+	id 1iRb0l-0004C6-1D; Mon, 04 Nov 2019 11:59:07 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iRaJL-0006kB-LX; Mon, 04 Nov 2019 11:14:17 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx1.suse.de (Postfix) with ESMTP id 3F045ABD0;
- Mon,  4 Nov 2019 11:14:12 +0000 (UTC)
-Subject: Re: [PATCH v5 03/12] clk: mediatek: mt8173: switch mmsys to platform
- device probing
-To: Hsin-Yi Wang <hsinyi@chromium.org>, matthias.bgg@kernel.org
-References: <20181116125449.23581-1-matthias.bgg@kernel.org>
- <20181116125449.23581-4-matthias.bgg@kernel.org>
- <CAJMQK-jHHAsBoL6Zcv8ZW1nRAD9NRjEbH1hnf9q418zGka8Vxg@mail.gmail.com>
-From: Matthias Brugger <mbrugger@suse.com>
-Autocrypt: addr=mbrugger@suse.com; prefer-encrypt=mutual; keydata=
- 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
-Message-ID: <35f31784-6703-435a-2675-95bea33adf35@suse.com>
-Date: Mon, 4 Nov 2019 12:14:10 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.1.1
+ id 1iRawG-0007LR-Or; Mon, 04 Nov 2019 11:54:31 +0000
+X-UUID: cf8fd8b6a1a84d5fb2dc3bc72124570f-20191104
+X-UUID: cf8fd8b6a1a84d5fb2dc3bc72124570f-20191104
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <chao.hao@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 923489357; Mon, 04 Nov 2019 03:54:27 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 4 Nov 2019 03:52:34 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 4 Nov 2019 19:52:35 +0800
+Received: from localhost.localdomain (10.15.20.246) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 4 Nov 2019 19:52:31 +0800
+From: Chao Hao <chao.hao@mediatek.com>
+To: Joerg Roedel <joro@8bytes.org>, Rob Herring <robh+dt@kernel.org>,
+ "Matthias Brugger" <matthias.bgg@gmail.com>
+Subject: [RESEND,PATCH 00/13] MT6779 IOMMU SUPPORT
+Date: Mon, 4 Nov 2019 19:52:25 +0800
+Message-ID: <20191104115238.2394-1-chao.hao@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-In-Reply-To: <CAJMQK-jHHAsBoL6Zcv8ZW1nRAD9NRjEbH1hnf9q418zGka8Vxg@mail.gmail.com>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191104_031415_994620_20B5CB18 
-X-CRM114-Status: GOOD (  13.27  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20191104_035428_903670_39FDE61C 
+X-CRM114-Status: UNSURE (   8.46  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -135,53 +73,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Devicetree List <devicetree@vger.kernel.org>, sean.wang@mediatek.com,
- David Airlie <airlied@linux.ie>, mturquette@baylibre.com,
- rdunlap@infradead.org, sboyd@codeaurora.org,
- lkml <linux-kernel@vger.kernel.org>, dri-devel@lists.freedesktop.org,
- sean.wang@kernel.org, ulrich.hecht+renesas@gmail.com, wens@csie.org,
- Rob Herring <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- laurent.pinchart@ideasonboard.com, Philipp Zabel <p.zabel@pengutronix.de>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-clk@vger.kernel.org,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: Anan Sun <anan.sun@mediatek.com>, devicetree@vger.kernel.org,
+ Cui Zhang <cui.zhang@mediatek.com>, Jun Yan <jun.yan@mediatek.com>,
+ wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Chao Hao <chao.hao@mediatek.com>, iommu@lists.linux-foundation.org,
+ linux-mediatek@lists.infradead.org, Yong Wu <yong.wu@mediatek.com>,
+ Miles Chen <miles.chen@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ Guangming Cao <guangming.cao@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+I am sorry that previous patchset(2019/10/28) has a problem with e-mail format, some websites don't recevied it,
+so please based on this patchset to review, thanks!
+
+This patchset adds mt6779 iommu support and adjusts mtk iommu software architecture mainly.
+1. Add mt6779 basic function, such as smi_larb port define, registers define and so on.
+2. In addition, this patchset will adjust current mtk iommu SW architecture mainly to adapt all the mtk platforms:
+   Firstly, mt6779 iommu can support more HW modules, but some modules have special requirements for iova region,
+   for example, CCU only can access 0x4000_0000~0x47ff_ffff, VPU only can access 0x7da0_0000~0x7fbf_ffff. Current
+   architecture only support one iommu domain(include 0~4GB), all the modules allocate iova from 0~4GB region, so
+   it doesn't ensure to allocate expected iova region for special module(CCU and VPU). In order to resolve the problem,
+   we will create different iommu domains for special module, and every domain can include iova region which module
+   needs.
+   Secondly, all the iommus share one page table for current architecture by "mtk_iommu_get_m4u_data", to make the
+   architecture look clearly, we will create a global page table firstly(mtk_iommu_pgtable), and all the iommus can
+   use it. One page table can include 4GB iova space, so multiple iommu domains are created based on the same page
+   table. New SW architecture diagram is as below:
+
+                          iommu0   iommu1
+                             |        |
+                             ----------
+                                  |
+                         mtk_iommu_pgtable
+                                  |
+             ------------------------------------------
+             |                    |                   |
+       mtk_iommu_domain1   mtk_iommu_domain2   mtk_iommu_domain3
+             |                    |                   |
+        iommu_group1         iommu_group2        iommu_group3
+             |                    |                   |
+        iommu_domain1       iommu_domain2        iommu_domain3
+             |                    |                   |
+      iova region1(normal)  iova region2(CCU)   iova region3(VPU)
+
+This patchset depends on "Improve tlb range flush"[1] and based on v5.4-rc1.
+[1]http://lists.infradead.org/pipermail/linux-mediatek/2019-October/024207.html
+
+Chao Hao (13):
+  dt-bindings: mediatek: Add bindings for MT6779
+  iommu/mediatek: Add mt6779 IOMMU basic support
+  iommu/mediatek: Add mtk_iommu_pgtable structure
+  iommu/mediatek: Remove mtk_iommu_domain_finalise
+  iommu/mediatek: Remove pgtable info in mtk_iommu_domain
+  iommu/mediatek: Change get the way of m4u_group
+  iommu/mediatek: Add smi_larb info about device
+  iommu/mediatek: Add mtk_domain_data structure
+  iommu/mediatek: Remove the usage of m4u_dom variable
+  iommu/mediatek: Remove mtk_iommu_get_m4u_data api
+  iommu/mediatek: Add iova reserved function
+  iommu/mediatek: Change single domain to multiple domains
+  iommu/mediatek: Add multiple mtk_iommu_domain support for mt6779
+
+ .../bindings/iommu/mediatek,iommu.txt         |   2 +
+ drivers/iommu/mtk_iommu.c                     | 488 +++++++++++++++---
+ drivers/iommu/mtk_iommu.h                     |  50 +-
+ include/dt-bindings/memory/mt6779-larb-port.h | 217 ++++++++
+ 4 files changed, 685 insertions(+), 72 deletions(-)
+
+--
+2.18.0
 
 
-On 31/10/2019 05:17, Hsin-Yi Wang wrote:
-> On Fri, Nov 16, 2018 at 12:54 PM <matthias.bgg@kernel.org> wrote:
->>
->> From: Matthias Brugger <mbrugger@suse.com>
->>
->> Switch probing for the MMSYS to support invocation to a
->> plain paltform device. The driver will be probed by the DRM subsystem.
->>
->> Signed-off-by: Matthias Brugger <mbrugger@suse.com>
->> ---
-> 
->> +
->> +static struct platform_driver clk_mt8173_mm_drv = {
->> +       .probe = mtk_mmsys_probe,
->> +       .probe = mtk_mmsys_remove,
-> Should be .remove?
-> 
 
-Yes, definitely.
-
->> +       .driver = {
->> +               .name = "clk-mt8173-mm",
->> +       },
->> +};
->> +module_platform_driver(clk_mt8173_mm_drv);
->>
->>  static void __init mtk_vdecsys_init(struct device_node *node)
->>  {
 
 _______________________________________________
 Linux-mediatek mailing list
