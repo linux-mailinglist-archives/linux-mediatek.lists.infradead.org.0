@@ -2,55 +2,90 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2BEEF069B
-	for <lists+linux-mediatek@lfdr.de>; Tue,  5 Nov 2019 21:05:41 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DF099F07F7
+	for <lists+linux-mediatek@lfdr.de>; Tue,  5 Nov 2019 22:14:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=urwsr1YdXrTUkV6ydmCwZnRYMxrxmdaBz8qfn65WBvY=; b=oyuM4m6j+rc7An
-	whT5zLnQjgOCjPKHudaeBk88gBfTcPm+peoRaK5MwzudGRhrtL69Ig8E27mh0Dljj7vJHu5TuEbPX
-	NqIPL48cGAxefpZ8BpCUWiIigqrHI1yhPo57HWWIBMjPeZOcy1kX4uAP4Y5H8CRuOcdCSJlJki/84
-	u9Y4LQdXs4hB6XPnB6+4+nK1GBpALOnSo718abpgcmIt1IG+ut+wzCymjbY9464JJP2HuXDHtUq7n
-	H+swGIepUGt6vHTqHcix2oy0nRNOM+DYVGr7Xon467trXr00O7X1LRLd+B6vjOKNK1E83NPeA0QlD
-	JdoiDRrusMFd+8KejIbw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=5CakRKa3LIz9b5UNUTFwVGfvl9l0dsTJnh+ZDYSy6og=; b=cJK22xbtWKRC7P
+	RpGOxuebcCZKReFdS9vQz9OWzs75W6gjcGzuknVzRfL5/b0HSuBng8lWCxAyzO9Q5dPea/EGDOxtq
+	eTLqHvLMFPtIUPv3AtwsFILU6s67RaVdSDP6E2zHaQP0B7yS+Yu3lSPV7YsZ/oXGguuPRmZM5Bg/6
+	weaynCYih+3X+e/Q6uCQOJw9S/WUdqC0LWYyX6uDTWkBtvfuT7OA62zrGf7an5a24teJRQr3GqebK
+	qu+7dwnLErRuJuf9AmGyZ8Kj1sGDSDxfh/tZnhhoTwnQkcgXvmB7U5hSVgtqU2Em5ignjRynEUbrO
+	n1JHGFGCyEFGtGML8/yw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iS554-0006QZ-IG; Tue, 05 Nov 2019 20:05:34 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iS54V-0004hg-A3; Tue, 05 Nov 2019 20:05:00 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 48BBB7BB;
- Tue,  5 Nov 2019 12:04:56 -0800 (PST)
-Received: from localhost (unknown [10.37.6.20])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id D0AF740283;
- Tue,  5 Nov 2019 07:16:24 -0800 (PST)
-Date: Tue, 5 Nov 2019 15:16:23 +0000
-From: Andrew Murray <andrew.murray@arm.com>
-To: Linus Walleij <linus.walleij@linaro.org>
-Subject: Re: [PATCH v1 7/7] dt-bindings: PCI: Use IRQ flags for legacy PCI
- IRQ interrupts
-Message-ID: <20191105151622.GN9723@e119886-lin.cambridge.arm.com>
-References: <20191104163834.8932-1-andrew.murray@arm.com>
- <20191104163834.8932-8-andrew.murray@arm.com>
- <CACRpkdb=5i3+H3OtGXSYQEjSq5ROrysfmnG-koGck+chEEgLnQ@mail.gmail.com>
+	id 1iS69k-0006uG-Lm; Tue, 05 Nov 2019 21:14:28 +0000
+Received: from mail-yb1-xb44.google.com ([2607:f8b0:4864:20::b44])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iS661-0002fQ-To
+ for linux-mediatek@lists.infradead.org; Tue, 05 Nov 2019 21:10:40 +0000
+Received: by mail-yb1-xb44.google.com with SMTP id f6so5300299ybp.1
+ for <linux-mediatek@lists.infradead.org>; Tue, 05 Nov 2019 13:10:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=poorly.run; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=5GhjUCkz3ocQmrG6PmUyRxi5BVK7ftViRGTD2rrmkKI=;
+ b=Uuid+vkuIMoEPu11BJV35oCzoqSefDW9ZuIPEB7sSMRiLblnbvGw2td5OwAl0HYFEs
+ UQF0Rnc3aJGQnFA+a1sDH1IvqHqKfMbeIYvLNjeLoB5eNFEKXyiis9Altea1PfmHu5zm
+ GPdFmGda9zTFKHcAxkl3at79EyN9ESPetMHCcnN1+X6WVw0tU0K3Az1E6S8p0FiRbVV9
+ w1KOI8RL2KFZg/hZpLEe5JjxApP5DcS9nGCc5X8v4le9Gep+hxkTdws36dbptVGnOFfX
+ 7yfQXQ6miw0VHXsnRDzXgNcPuMcdwP9ZW1Dzld4Ok8GP6z0UTNzUzDnTh8G5fJWTGHX2
+ zgHA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=5GhjUCkz3ocQmrG6PmUyRxi5BVK7ftViRGTD2rrmkKI=;
+ b=gkL09Cn4a5ciGiA6b15TV6AHm+aKNQE3JfyLf9AI54aIZfZgNZZNgbdPmYMS7Fr9GY
+ a0iMTiE5vWlVU9pq41UTuD3FZ3hn7YNt8fGi/bFytcfDHecoQitUdiXblkVfOTU7hiBg
+ xHdMN4ew8Beb1Yz9b4bydYeZSSisJyKFFc7CmGNkAYaKZ/Db1lj2jZlvYac6Z6a2U7C7
+ icrmrpBGUAqWN8RUavZY0Nv0O/Tw3Zm1m74PyeCKzDuqusbHK2xiuDF58Ii+OQsz4lP8
+ Q96Rlwjd55DRSWC/WGzqbi7WlPRMdp3+/buPrnA8c1S42fj/MaL0i/0N0+9cveDgWi9k
+ dDcw==
+X-Gm-Message-State: APjAAAUr/x9QhhPfqOTXaDt2xBgsIdm30cFeLQBU3HK0J9uLephaliPJ
+ ps/9C6SbmHHfn3eFTRF+8pj4yA==
+X-Google-Smtp-Source: APXvYqwZpVTKw7wEDsr9syi4VlENMgrIrYl9+rQ/rlZeFQSHvVhD8rMyrCSti6ffViFWSs7d4O4Rog==
+X-Received: by 2002:a5b:d0a:: with SMTP id y10mr6596220ybp.36.1572988235921;
+ Tue, 05 Nov 2019 13:10:35 -0800 (PST)
+Received: from rosewood.cam.corp.google.com
+ ([2620:0:1013:11:89c6:2139:5435:371d])
+ by smtp.gmail.com with ESMTPSA id j66sm1815216ywb.101.2019.11.05.13.10.35
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 05 Nov 2019 13:10:35 -0800 (PST)
+From: Sean Paul <sean@poorly.run>
+To: dri-devel@lists.freedesktop.org,
+	linux-mediatek@lists.infradead.org
+Subject: [PATCH v2 0/7] drm/mediatek: Refactor plane init/check and support
+ rotation
+Date: Tue,  5 Nov 2019 16:10:17 -0500
+Message-Id: <20191105211034.123937-1-sean@poorly.run>
+X-Mailer: git-send-email 2.24.0.rc1.363.gb1bccd3e3d-goog
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CACRpkdb=5i3+H3OtGXSYQEjSq5ROrysfmnG-koGck+chEEgLnQ@mail.gmail.com>
-User-Agent: Mutt/1.10.1+81 (426a6c1) (2018-08-26)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_120459_401305_B8AEEEE4 
-X-CRM114-Status: GOOD (  14.34  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191105_131038_029171_1C0E0569 
+X-CRM114-Status: UNSURE (   8.32  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:b44 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,72 +97,55 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Heiko Stuebner <heiko@sntech.de>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>,
- David Daney <david.daney@cavium.com>, linux-pci <linux-pci@vger.kernel.org>,
- Shawn Lin <shawn.lin@rock-chips.com>, Binghui Wang <wangbinghui@hisilicon.com>,
- Michal Simek <michal.simek@xilinx.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
- Jonathan Chocron <jonnyc@amazon.com>, Toan Le <toan@os.amperecomputing.com>,
- Will Deacon <will@kernel.org>, Jesper Nilsson <jesper.nilsson@axis.com>,
- Ryder Lee <ryder.lee@mediatek.com>,
- Kunihiko Hayashi <hayashi.kunihiko@socionext.com>,
- Fabio Estevam <festevam@gmail.com>, Tom Joseph <tjoseph@cadence.com>,
- linux-arm-kernel@axis.com, Kishon Vijay Abraham I <kishon@ti.com>,
- "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
- Andy Gross <agross@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- NXP Linux Team <linux-imx@nxp.com>, Xiaowei Song <songxiaowei@hisilicon.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, Richard Zhu <hongxing.zhu@nxp.com>,
- MSM <linux-arm-msm@vger.kernel.org>, Sascha Hauer <s.hauer@pengutronix.de>,
- Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Bjorn Helgaas <bhelgaas@google.com>, Linux-OMAP <linux-omap@vger.kernel.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>, rfi@lists.rocketboards.org,
- Zhou Wang <wangzhou1@hisilicon.com>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Ley Foon Tan <lftan@altera.com>, Shawn Guo <shawnguo@kernel.org>,
- Lucas Stach <l.stach@pengutronix.de>
+Cc: dcastagna@chromium.org, matthias.bgg@gmail.com, mcasas@chromium.org,
+ Sean Paul <seanpaul@chromium.org>, p.zabel@pengutronix.de,
+ frkoenig@chromium.org, ck.hu@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, markyacoub@google.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Nov 05, 2019 at 04:08:29PM +0100, Linus Walleij wrote:
-> Hi Andrew,
-> 
-> thanks for your patch!
+From: Sean Paul <seanpaul@chromium.org>
 
-Thanks for the review.
+Hello,
+This is a follow-on to [1], which supports the original Y-flip. I've
+added X-flip and 180 degree rotate. Additionally, the rotation property
+is only exposed for ovl planes, not rdma planes since rdma doesn't
+support it. In order to differentiate between the two types, I had to
+do some plumbing in order to surface the supported rotations of a
+component as well as allowing a component to implement plane checks.
 
-> 
-> On Mon, Nov 4, 2019 at 5:39 PM Andrew Murray <andrew.murray@arm.com> wrote:
-> 
-> > Replace magic numbers used to describe legacy PCI IRQ interrupts
-> > with #define.
-> >
-> > Signed-off-by: Andrew Murray <andrew.murray@arm.com>
-> 
-> When I add examples I usually make sure that above the examples
-> are the appropriate #include files, this is becoming more important
-> as we convert to yaml, then you need the right includes because the
-> examples will get compiled.
+I've tested this on a 4.19 kernel on mt8183. The set was then forward
+ported to mainline and build tested. The forward port was relatively
+collision free, but there were a few.
 
-OK thanks - I can see other files in Documentation that take this approach
-I'll update this patch on my respin.
+Sean
 
-Thanks,
+[1]- https://lists.freedesktop.org/archives/dri-devel/2019-November/242312.html
 
-Andrew Murray
 
-> 
-> With that taken into account:
-> Reviewed-by: Linus Walleij <linus.walleij@linaro.org>
-> 
-> Yours,
-> Linus Walleij
+Sean Paul (7):
+  drm/mediatek: Refactor plane init
+  drm/mediatek: Add helper to get component for a plane
+  drm/mediatek: Add plumbing for layer_check hook
+  drm/mediatek: Plumb supported rotation values from components to plane
+    init
+  drm/mediatek: Support reflect-y plane rotation
+  drm/mediatek: Support reflect-x plane rotation
+  drm/mediatek: Support 180 degree rotation
+
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c     |  50 +++++++
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c     | 145 ++++++++++++++------
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.h     |   2 +
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  22 +++
+ drivers/gpu/drm/mediatek/mtk_drm_plane.c    |  18 ++-
+ drivers/gpu/drm/mediatek/mtk_drm_plane.h    |   4 +-
+ 6 files changed, 199 insertions(+), 42 deletions(-)
+
+-- 
+Sean Paul, Software Engineer, Google / Chromium OS
+
 
 _______________________________________________
 Linux-mediatek mailing list
