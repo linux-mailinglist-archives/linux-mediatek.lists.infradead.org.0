@@ -2,73 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 26C74F0808
-	for <lists+linux-mediatek@lfdr.de>; Tue,  5 Nov 2019 22:16:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3F33FF080B
+	for <lists+linux-mediatek@lfdr.de>; Tue,  5 Nov 2019 22:16:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=je6vBjzSBz6Rgezpa6DE7vw8FZkqKhmcyNNp9HqBNKE=; b=EJz19zv6X4gyg9
-	9oyLza+Ul7da2nbq5IMVAHEQgNwZrtXjimduTd3JDLcTgr5LJUdK+AEzs+8eSMVY/Ou9yE05RmYGg
-	/eqP7nZqDQmx7rfrWjLXiaGElK6geIqJdmxm1hp0ixIkZlNQhm8dPUh10IOJw0I6MiFRlKT0zu2BC
-	UvCOiQIEMBQ6CojabwNRtCr6UV9KZvMhdk1PPapP2xeTLJG5jS6Y/HyF+aJrOdO0AfOa+yYd0coKg
-	Sdv6HjxRLXxIcft8yYw8BnrIOda4f1UqAa5h+1Gly6PxjyIN9auequiWM7awZIa6qsdpfyeUWDT3D
-	fRL2Xqu8o1nIb9zd7+uQ==;
+	List-Owner; bh=nwRLcXfzHcUcVkxawTzMaT0YEfdwfkvgv94a+31j+00=; b=fDPyZRgkuzJFMg
+	uRhvVlZyddOX8olm12jiftMEf10YB25RXNcvKs/0ZVAOjZlToCX6Gsv1bvbgqrwbzJ1opUJ51laVd
+	AxbziyjYs5XQvWL4Xm/xwMj9ELeUSov3tx0EbXUCYH6V1xBECsKQq5IiL8hqbgiFk4lIb/rhV+k1E
+	PbaoUXvQKUqCe9M+f5RFgaaWbDsiHED2ObD1aYkxsJRKaEjuDBhRndiaZ2Dsdn+la/dpko/hjlmOa
+	0zLW4rLPpvLtYvJKfE9XYxSprjAyQ1vsxg6zgylMzCzKLWiN44wSELytwdhOJYTV6jljUCdX+TMfc
+	WEZndRnkbN+vAMNsR4aw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iS6BK-0001Pf-Se; Tue, 05 Nov 2019 21:16:06 +0000
+	id 1iS6Bz-00024k-Q0; Tue, 05 Nov 2019 21:16:47 +0000
 Received: from mail-yw1-xc43.google.com ([2607:f8b0:4864:20::c43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iS66O-00033C-9A
- for linux-mediatek@lists.infradead.org; Tue, 05 Nov 2019 21:11:06 +0000
-Received: by mail-yw1-xc43.google.com with SMTP id j190so3065906ywf.8
- for <linux-mediatek@lists.infradead.org>; Tue, 05 Nov 2019 13:11:00 -0800 (PST)
+ id 1iS66P-00035E-LL
+ for linux-mediatek@lists.infradead.org; Tue, 05 Nov 2019 21:11:08 +0000
+Received: by mail-yw1-xc43.google.com with SMTP id r131so2278378ywh.2
+ for <linux-mediatek@lists.infradead.org>; Tue, 05 Nov 2019 13:11:01 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=poorly.run; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=wkKPVb6pP5aq3OLgQzfYcwJ5aNwtIA26btnxZ0mORbM=;
- b=Mq6TglzNM33XbXY7U0CDyP267OuSAHrU9t/Sm6DqR/tMUQ61hFziZ0yRWSJeugur5+
- rDiepGUZBx3TNu3ZVfa/ay14OgmV9ay+S0QbY+AeRHda6+7AaqpR3TlAtZloi5bE6HTT
- PAtXrU8G/YWwxUEcsW7XJ71obGHphVljhfNcT3Um/caOXlpaBQFOrfPvNYE9MbHWmGJS
- XhqSNf+g8ZLpnScwCo4xMTQN5Cfe3w5agoGjyvbkaPo0IPh7kGmc/q3TA8isg6KZyICV
- cECCGKePRvI6jpsOiDJKHdlsEHT40fovY2XPOeWib4+FkwXFr5Wqh3bpHtJ9E/VtUC8K
- vr+w==
+ bh=+WiVxRRU/BsDC4YALJAt3eFqvdwKtmFyjMHuXXIhN00=;
+ b=b7BvNVaq55rSQstmyVb7FVPxaDzfpQvfg2LWzAsNLXIw4Zgl5nKJ8oQMM9S+74IlZf
+ 6evcHrczQNvXo4hfr/qCgBgUU1QXMEibjDd9StKHdtKFZ8/2d2HqLAUO9A0UGR3lsrpn
+ HUzkGW8k5Dvge9poGrqF0sURTtUNKfmb4kwUAnaOXEdwRJJVKqRDDS3P8DeScfku51AJ
+ xBYemInVm9isbevgdMHl1h6n0R4KLDQ6m+CMiC1pHpmibukZ66lHryHliW1ga6HcwnVx
+ mC2RhQ1///qyMnhFQh6+pp/VxcsN1UPACfXKltS0IxDOD9OPpCxKfbtpVGrKHi0jUkDc
+ yxmg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=wkKPVb6pP5aq3OLgQzfYcwJ5aNwtIA26btnxZ0mORbM=;
- b=OPZcWQI2J9yrsrXhVejw/X19QVxNv9TAsIU4WAuNDkVnT8ituqAgz463mG2EjuvHLO
- HZD4wzmIhiHGB2kBQ4hDX+XVg6OSVFLDPiuCJQtem9McvXbFBwV6QTi+Uni0Fv3PMcBd
- s4pAaWIAIry3g+UCx4JbgQPBFkCECBiC8oobqqbqDcJEDMHSZe3rFKzA7xaJRN4lh0fp
- yB77HDHC8dUoWzfxZg8trtRmbHNoPjGZuSZF1ttbtAARZy26JPX23j/g4nO6Q4JoXuVS
- H3m6r3o0zdXMIaZtvV4+HRZBLSf1ORzTJH2sMhHjCUPY7d60ahvYn5N3G2GZqqbGbnDq
- mRxw==
-X-Gm-Message-State: APjAAAVgFShmu9a2uyr0RFckEaTK7f25zPq1BVEjvnaPodVA9fodq6eO
- UzTX5s09BSPTFjB71LdGep+bfQ==
-X-Google-Smtp-Source: APXvYqyUCARybzwRjLGPnWuXk2JznQo9jeaLOMjuFbMyCaJBgQqqFWRHOQEwoBTwK7kELxzPui6Q+w==
-X-Received: by 2002:a0d:ca12:: with SMTP id m18mr25386699ywd.97.1572988259096; 
- Tue, 05 Nov 2019 13:10:59 -0800 (PST)
+ bh=+WiVxRRU/BsDC4YALJAt3eFqvdwKtmFyjMHuXXIhN00=;
+ b=Hmgm7f/O9JVNe8peUJVJlYWVMBT3Wvnd8SGYKDvPjJAaawzg5mlsoyQ04lzMOxdbWY
+ PwH+tmFnDDNpH42UXX8Z0yqtN9Mk3raTiXhSl8ecwEJM9keWb/IZq3AIhV6W60Hl1FSf
+ N/ttg0ozFosGTuDLifgCdCeyJr2hbHnPLPKTyv1fdTpAFdihKd1sRQmRzbazLBhvisUP
+ ZNCldsCWsv7T5ciYFl5orWUqmqRGBqLk4E4ceShyXs0vLVCwDBtIpDsvf8EBJZCx5rq5
+ SdtW4Khfdcr8IXTEcqM3sJLMfGp/hiyUkwJ18Em37ipkZjP+riFRhKvSM1H6VbTQUNKr
+ NRHg==
+X-Gm-Message-State: APjAAAXLkBPG0JFRJiw9RMJMffRVIKoQzaCamXui5/cWAHPHg/TMsrIE
+ usXtErwbxo1x0vSnxOn/VvIbg4RstRM=
+X-Google-Smtp-Source: APXvYqzqhKbfG6uj0C9QtCsk5hTcg0qnCB5SoNKDWw01NkumaG0mVUCnnbjJ/lO9GqEJnRlx8UxkVA==
+X-Received: by 2002:a81:7053:: with SMTP id l80mr23239678ywc.377.1572988260799; 
+ Tue, 05 Nov 2019 13:11:00 -0800 (PST)
 Received: from rosewood.cam.corp.google.com
  ([2620:0:1013:11:89c6:2139:5435:371d])
- by smtp.gmail.com with ESMTPSA id j66sm1815216ywb.101.2019.11.05.13.10.58
+ by smtp.gmail.com with ESMTPSA id j66sm1815216ywb.101.2019.11.05.13.11.00
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 05 Nov 2019 13:10:58 -0800 (PST)
+ Tue, 05 Nov 2019 13:11:00 -0800 (PST)
 From: Sean Paul <sean@poorly.run>
 To: dri-devel@lists.freedesktop.org,
 	linux-mediatek@lists.infradead.org
-Subject: [PATCH v2 6/7] drm/mediatek: Support reflect-x plane rotation
-Date: Tue,  5 Nov 2019 16:10:23 -0500
-Message-Id: <20191105211034.123937-7-sean@poorly.run>
+Subject: [PATCH v2 7/7] drm/mediatek: Support 180 degree rotation
+Date: Tue,  5 Nov 2019 16:10:24 -0500
+Message-Id: <20191105211034.123937-8-sean@poorly.run>
 X-Mailer: git-send-email 2.24.0.rc1.363.gb1bccd3e3d-goog
 In-Reply-To: <20191105211034.123937-1-sean@poorly.run>
 References: <20191105211034.123937-1-sean@poorly.run>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_131100_431242_9FC88470 
-X-CRM114-Status: GOOD (  10.37  )
+X-CRM114-CacheID: sfid-20191105_131101_748747_EE95FEA4 
+X-CRM114-Status: UNSURE (   8.88  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -108,59 +109,30 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Sean Paul <seanpaul@chromium.org>
 
-Add support for REFLECT_X rotations.
+Now that we support both reflections, we can expose 180 degree rotation
+and rely on the simplify routine to convert that into REFLECT_X |
+REFLECT_Y
 
-Cc: Fritz Koenig <frkoenig@chromium.org>
-Cc: Daniele Castagna <dcastagna@chromium.org>
-Cc: Miguel Casas <mcasas@chromium.org>
-Cc: Mark Yacoub <markyacoub@google.com>
 Signed-off-by: Sean Paul <seanpaul@chromium.org>
 ---
- drivers/gpu/drm/mediatek/mtk_disp_ovl.c | 10 +++++++++-
- 1 file changed, 9 insertions(+), 1 deletion(-)
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-index fae10aead3d5..f4c4d3fedc5f 100644
+index f4c4d3fedc5f..4a55bb6e2213 100644
 --- a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
 +++ b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-@@ -53,6 +53,7 @@
- #define	OVL_CON_AEN		BIT(8)
- #define	OVL_CON_ALPHA		0xff
- #define	OVL_CON_VIRT_FLIP	BIT(9)
-+#define	OVL_CON_HORZ_FLIP	BIT(10)
- 
- struct mtk_disp_ovl_data {
- 	unsigned int addr;
-@@ -142,7 +143,8 @@ static unsigned int mtk_ovl_layer_nr(struct mtk_ddp_comp *comp)
+@@ -143,8 +143,8 @@ static unsigned int mtk_ovl_layer_nr(struct mtk_ddp_comp *comp)
  
  static unsigned int mtk_ovl_supported_rotations(struct mtk_ddp_comp *comp)
  {
--	return DRM_MODE_ROTATE_0 | DRM_MODE_REFLECT_Y;
-+	return DRM_MODE_ROTATE_0 | DRM_MODE_REFLECT_Y |
-+	       DRM_MODE_REFLECT_X;
+-	return DRM_MODE_ROTATE_0 | DRM_MODE_REFLECT_Y |
+-	       DRM_MODE_REFLECT_X;
++	return DRM_MODE_ROTATE_0 | DRM_MODE_ROTATE_180 |
++	       DRM_MODE_REFLECT_X | DRM_MODE_REFLECT_Y;
  }
  
  static int mtk_ovl_layer_check(struct mtk_ddp_comp *comp, unsigned int idx,
-@@ -153,6 +155,7 @@ static int mtk_ovl_layer_check(struct mtk_ddp_comp *comp, unsigned int idx,
- 
- 	rotation = drm_rotation_simplify(state->rotation,
- 					 DRM_MODE_ROTATE_0 |
-+					 DRM_MODE_REFLECT_X |
- 					 DRM_MODE_REFLECT_Y);
- 	rotation &= ~DRM_MODE_ROTATE_0;
- 
-@@ -269,6 +272,11 @@ static void mtk_ovl_layer_config(struct mtk_ddp_comp *comp, unsigned int idx,
- 		addr += (pending->height - 1) * pending->pitch;
- 	}
- 
-+	if (pending->rotation & DRM_MODE_REFLECT_X) {
-+		con |= OVL_CON_HORZ_FLIP;
-+		addr += pending->pitch - 1;
-+	}
-+
- 	writel_relaxed(con, comp->regs + DISP_REG_OVL_CON(idx));
- 	writel_relaxed(pitch, comp->regs + DISP_REG_OVL_PITCH(idx));
- 	writel_relaxed(src_size, comp->regs + DISP_REG_OVL_SRC_SIZE(idx));
 -- 
 Sean Paul, Software Engineer, Google / Chromium OS
 
