@@ -2,85 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 25793F0DB1
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 05:17:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 90806F0F0A
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 07:40:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rLdJR+7AZ2Wkce1PCXluH70dv4bvbxwtXX2RDscVvrY=; b=IY003fR/0FeuAd
-	hUSZYzvURs+UkdZBtqWr9loIX6LFnbOqD8FxREPMV0vRTEEZNM+Hjmqepjdv6qhqywqIZvw/prPq3
-	ibByDROwywIog3czH4YALrz1mv1anPQtSrdWWae+i7VM4dxCtoAi3p8KZbq4R76Rb6XWpzfeh0a9R
-	/W36yejoPdQWZBpRN++IApr4Vn+WCcpwFbOop5pxUqNTR2P5iSuojJWiwm9doGgQS4DCsDqFksuup
-	CdK+UL0yHgshwv2XBstGRLa9TR4//MBC3TeyF5jGM6r5UsRghrPDTaS9LCRZtrZxEf88+VRUgp0UC
-	Y07EkV2GOjpS8ANnjYuQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=BXiTi/LOhtbee5nP7FfrlqlXF7W29HGxeA1eEAvn4Kg=; b=adcxCssIQaC7z6
+	xqFHXdJswDHOKnOIoYgMQlQu1UtVqBDi6HJV9oesNtPmYBlmZI/Mu45N0G6OSRhSroSiqbI3lw77u
+	KLecWRxSnnGwdGUFN9OYjVIJVvjbx5L45Ju4X8V3kI8kM4bM+5GWfku70XEGrzWt+lWGr6QmeydAF
+	poARNa2xakXBhUnUIxy999rMXISPV0eXB6adnZz5AQS9kUk5WrQSsMYU0ncEY9il1zROz/uADWQXN
+	Z2VdOhltei8dMOrsV490Kviorl/VmLiqB9jsr/bZH070PBhHyBAVxxbQd6EPNYVSvbpV4Xg1nPUqx
+	qLs/nI1DuruQzc4t60tw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSCks-000827-Ah; Wed, 06 Nov 2019 04:17:14 +0000
-Received: from mail-ot1-f66.google.com ([209.85.210.66])
+	id 1iSEzd-000778-GJ; Wed, 06 Nov 2019 06:40:37 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSCko-00081U-Hz; Wed, 06 Nov 2019 04:17:13 +0000
-Received: by mail-ot1-f66.google.com with SMTP id v24so14413848otp.5;
- Tue, 05 Nov 2019 20:17:10 -0800 (PST)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=Pasjx8CSERkmvokF+MIWXBinQV2inOneX0DH/i8NKYE=;
- b=J9Ij3boPUbXHvFDIUHSoBpCPioLd+28r7dM05+/pJwGYf8F3u0KSMTaloOXsVu/Uvy
- sZoZOGffX5PmAnqSxEzQu5zan0pN4hPV4kfrmMGA2P9mq8UFJvujZvqSv1YJ/ER1jp2Q
- ItBNo19eoIwznsIYMzuB1ttfZ3vYsX8JZVxyrkYLsHjY+sdVwXOzvcwlcorfeVpnMded
- zakmsQQ+9338s9YPbM1C0pUi57/vtBOGA6Sa9wmREERxi+csgoOD7IIoFZlFtGYB+OOQ
- 0VUMBmTpn5VFCov1Z5JVhzMTu9+0yeU5HaBxqdMbAjD6vrIgXO+ielwpuuMnkaUg+lIL
- peog==
-X-Gm-Message-State: APjAAAVD4PH+lvZxwfGfHA8toaVAiEkslHYh9ZAdS3R/9RTVXUvLG6LT
- rKaVir1tHjFG5HLuQTiIbg==
-X-Google-Smtp-Source: APXvYqymW3STVwrnKyM7oB8B3KKofNBMHecjlu2u2+qn0yFU8UaxgzxpuvOLNAN28Z1FkkCBVB69Ew==
-X-Received: by 2002:a05:6830:1e84:: with SMTP id
- n4mr262047otr.233.1573013829794; 
- Tue, 05 Nov 2019 20:17:09 -0800 (PST)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id e193sm837103oib.53.2019.11.05.20.17.09
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 05 Nov 2019 20:17:09 -0800 (PST)
-Date: Tue, 5 Nov 2019 22:17:08 -0600
-From: Rob Herring <robh@kernel.org>
-To: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-Subject: Re: [PATCH 3/3] [3/3] dt-bindings: mmc: mediatek: Add document for
- mt6779
-Message-ID: <20191106041708.GA26489@bogus>
-References: <1572590582-11056-1-git-send-email-chun-hung.wu@mediatek.com>
- <1572590582-11056-3-git-send-email-chun-hung.wu@mediatek.com>
+ id 1iSEza-00076A-IA
+ for linux-mediatek@lists.infradead.org; Wed, 06 Nov 2019 06:40:35 +0000
+X-UUID: 4c8b0eef25844e48b766bb06e8b468bd-20191105
+X-UUID: 4c8b0eef25844e48b766bb06e8b468bd-20191105
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 872849496; Tue, 05 Nov 2019 22:40:24 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 22:40:26 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 6 Nov 2019 14:40:22 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Wed, 6 Nov 2019 14:40:21 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Thierry Reding <thierry.reding@gmail.com>, Sam Ravnborg
+ <sam@ravnborg.org>, Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
+ Maxime Ripard <mripard@kernel.org>, Sean Paul <sean@poorly.run>, David Airlie
+ <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>,
+ <dri-devel@lists.freedesktop.org>, <linux-kernel@vger.kernel.org>, CK Hu
+ <ck.hu@mediatek.com>
+Subject: [PATCH] drm/panel: seperate panel power control from panel
+ prepare/unprepare
+Date: Wed, 6 Nov 2019 14:40:05 +0800
+Message-ID: <20191106064005.8016-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1572590582-11056-3-git-send-email-chun-hung.wu@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 224C4AAF48E6FE1BCE1C6862644246DA71F19843E559249984CDFA4CC65D93E32000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_201710_592565_7D8899B5 
-X-CRM114-Status: GOOD (  14.98  )
-X-Spam-Score: 0.6 (/)
+X-CRM114-CacheID: sfid-20191105_224034_605740_A748950F 
+X-CRM114-Status: UNSURE (   8.48  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.6 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.66 listed in list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.66 listed in wl.mailspike.net]
- 0.1 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,53 +79,127 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Kate Stewart <kstewart@linuxfoundation.org>,
- Ulf Hansson <ulf.hansson@linaro.org>, wsd_upstream@mediatek.com,
- devicetree@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>,
- Kuohong Wang <kuohong.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Pavel Machek <pavel@ucw.cz>, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-mmc@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
- Stanley Chu <stanley.chu@mediatek.com>, Pan Bian <bianpan2016@163.com>,
- Chaotian Jing <chaotian.jing@mediatek.com>
+Cc: Jitao Shi <jitao.shi@mediatek.com>, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Nov 01, 2019 at 02:43:02PM +0800, Chun-Hung Wu wrote:
-> Add compatible node for mt6779 mmc
-> 
-> Change-Id: Id36a136a75e892c9360ec95c7f52db06f5b308a4
-> CR-Id:
-> Feature:
+Some dsi panels require the dsi lanes keeping low before panel power
+on. So seperate the panel power control and the communication with panel.
 
-Remove these tags.
+And put the power control in drm_panel_prepare_power and
+drm_panel_unprepare_power. Put the communication with panel in
+drm_panel_prepare and drm_panel_unprepare.
 
-> Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-> ---
->  Documentation/devicetree/bindings/mmc/mtk-sd.txt | 1 +
->  1 file changed, 1 insertion(+)
-> 
-> diff --git a/Documentation/devicetree/bindings/mmc/mtk-sd.txt b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-> index 8a532f4..0c9cf6a 100644
-> --- a/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-> +++ b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-> @@ -12,6 +12,7 @@ Required properties:
->  	"mediatek,mt8173-mmc": for mmc host ip compatible with mt8173
->  	"mediatek,mt8183-mmc": for mmc host ip compatible with mt8183
->  	"mediatek,mt8516-mmc": for mmc host ip compatible with mt8516
-> +	"mediatek,mt6779-mmc": for mmc host ip compatible with mt6779
->  	"mediatek,mt2701-mmc": for mmc host ip compatible with mt2701
->  	"mediatek,mt2712-mmc": for mmc host ip compatible with mt2712
->  	"mediatek,mt7622-mmc": for MT7622 SoC
-> -- 
-> 1.9.1
-> 
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+---
+ drivers/gpu/drm/drm_panel.c | 38 +++++++++++++++++++++++++++++++++++++
+ include/drm/drm_panel.h     | 17 +++++++++++++++++
+ 2 files changed, 55 insertions(+)
+
+diff --git a/drivers/gpu/drm/drm_panel.c b/drivers/gpu/drm/drm_panel.c
+index 6b0bf42039cf..e57f6385d2cc 100644
+--- a/drivers/gpu/drm/drm_panel.c
++++ b/drivers/gpu/drm/drm_panel.c
+@@ -131,6 +131,24 @@ void drm_panel_detach(struct drm_panel *panel)
+ }
+ EXPORT_SYMBOL(drm_panel_detach);
+ 
++/**
++ * drm_panel_prepare_power - power on a panel's power
++ * @panel: DRM panel
++ *
++ * Calling this function will enable power and deassert any reset signals to
++ * the panel.
++ *
++ * Return: 0 on success or a negative error code on failure.
++ */
++int drm_panel_prepare_power(struct drm_panel *panel)
++{
++	if (panel && panel->funcs && panel->funcs->prepare_power)
++		return panel->funcs->prepare_power(panel);
++
++	return panel ? -ENOSYS : -EINVAL;
++}
++EXPORT_SYMBOL(drm_panel_prepare_power);
++
+ /**
+  * drm_panel_prepare - power on a panel
+  * @panel: DRM panel
+@@ -170,6 +188,26 @@ int drm_panel_unprepare(struct drm_panel *panel)
+ }
+ EXPORT_SYMBOL(drm_panel_unprepare);
+ 
++/**
++ * drm_panel_unprepare_power - power off a panel
++ * @panel: DRM panel
++ *
++ * Calling this function will completely power off a panel (assert the panel's
++ * reset, turn off power supplies, ...). After this function has completed, it
++ * is usually no longer possible to communicate with the panel until another
++ * call to drm_panel_prepare_power and drm_panel_prepare().
++ *
++ * Return: 0 on success or a negative error code on failure.
++ */
++int drm_panel_unprepare_power(struct drm_panel *panel)
++{
++	if (panel && panel->funcs && panel->funcs->unprepare_power)
++		return panel->funcs->unprepare_power(panel);
++
++	return panel ? -ENOSYS : -EINVAL;
++}
++EXPORT_SYMBOL(drm_panel_unprepare_power);
++
+ /**
+  * drm_panel_enable - enable a panel
+  * @panel: DRM panel
+diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
+index 624bd15ecfab..0d8c4855405c 100644
+--- a/include/drm/drm_panel.h
++++ b/include/drm/drm_panel.h
+@@ -61,6 +61,13 @@ struct display_timing;
+  * the panel. This is the job of the .unprepare() function.
+  */
+ struct drm_panel_funcs {
++	/**
++	 * @prepare_power:
++	 *
++	 * Turn on panel power.
++	 */
++	int (*prepare_power)(struct drm_panel *panel);
++
+ 	/**
+ 	 * @prepare:
+ 	 *
+@@ -89,6 +96,13 @@ struct drm_panel_funcs {
+ 	 */
+ 	int (*unprepare)(struct drm_panel *panel);
+ 
++	/**
++	 * @unprepare_power:
++	 *
++	 * Turn off panel_power.
++	 */
++	int (*unprepare_power)(struct drm_panel *panel);
++
+ 	/**
+ 	 * @get_modes:
+ 	 *
+@@ -155,6 +169,9 @@ void drm_panel_remove(struct drm_panel *panel);
+ int drm_panel_attach(struct drm_panel *panel, struct drm_connector *connector);
+ void drm_panel_detach(struct drm_panel *panel);
+ 
++int drm_panel_prepare_power(struct drm_panel *panel);
++int drm_panel_unprepare_power(struct drm_panel *panel);
++
+ int drm_panel_prepare(struct drm_panel *panel);
+ int drm_panel_unprepare(struct drm_panel *panel);
+ 
+-- 
+2.21.0
+
 
 _______________________________________________
 Linux-mediatek mailing list
