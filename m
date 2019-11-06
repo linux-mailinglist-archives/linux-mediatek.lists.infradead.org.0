@@ -2,63 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 93AFDF0CDE
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 420AEF0CD6
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:09 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CmVYnyi6Ll31jyttjh1SQSH9jytQLBIZtK3WYOWq0vk=; b=f2mZe7xo/jkvGX
-	22C1KArhhwiPBCrrTTLdga2pZ+qwNjm60tUHJSeWVABJR+SVBjQXP4uRc3GD+o1ZutSxHBlmx2+Bb
-	7g7FYVo9HOOjg7UW5yLMHItYvTObEoAanVgwtdmpt4EiJ4UegkktmONFcLhuQZviEY+lhGGtW6HEs
-	jkCOzciktNrZvceaqteA1uS3kKTmVsPceZlXey7rB7t76gFrf1dUXDRBl4IX4ZZr5Qpdkcvf0BB9K
-	cmw61nt2TiEgK2rHi/JH9/MLFil8Xdra2S4DA0YSDbcfs0LVR74e8WfcZ7ZUydoiHUuM3FZDHhsNw
-	djJJ/esyDqO/n9M4ewnA==;
+	List-Owner; bh=EvCAssVOTieTuwhxUApco9eOIEBOtfrxxihrPJNSoQc=; b=WngIv+/yFck/hw
+	EhFNkFFvSmSHPc66cJuF/bvOFa1o/W3975Zharud6KwMaEeA832mA7fnQL9yrDWrr23SuYJFKrKo7
+	+xjYg2CNGjznIOdtYfXVXlqdVaSWZKLNphZlzT2u6vRSmGFGpb/SOGkdO1a/gwwFoth545xarEzPn
+	dFAGjezd7fR4AzPhqNzg+/QykldaYuWJ1x+8cuwELBcoi6rx/QLCIPRx7OwtwsSPV8jmQcGlPfGmb
+	4Uq3ars1G/s7hvw1P4Id2XeqeBdFPipdPZXdfEKJKUsG3MsqSaVWqFsvaocPhSXrQ56vK28RslzyQ
+	GbCIwzJi2jTIZrTKYPng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBoq-0000iQ-S3; Wed, 06 Nov 2019 03:17:16 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iSBoe-0000PF-LV; Wed, 06 Nov 2019 03:17:04 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBoj-0000Xj-KQ; Wed, 06 Nov 2019 03:17:11 +0000
-X-UUID: 822838ee7d3046cf9b4b5188c2f08378-20191105
-X-UUID: 822838ee7d3046cf9b4b5188c2f08378-20191105
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1iSBob-0000MR-6l; Wed, 06 Nov 2019 03:17:02 +0000
+X-UUID: 9e38282becd740c38b40f1f9db1f5b2d-20191105
+X-UUID: 9e38282becd740c38b40f1f9db1f5b2d-20191105
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1440465095; Tue, 05 Nov 2019 19:17:00 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:48 -0800
+ with ESMTP id 2134346523; Tue, 05 Nov 2019 19:16:55 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:51 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:49 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:50 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:44 +0800
+ Transport; Wed, 6 Nov 2019 11:16:47 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 16/28] media: siano: use usb_debugfs_create_dir() to create
- directory
-Date: Wed, 6 Nov 2019 11:15:17 +0800
-Message-ID: <591c5ca23fc0399ebd8a4bc2520bdabf07d9538c.1573008520.git.chunfeng.yun@mediatek.com>
+Subject: [PATCH 17/28] usb: chipidea: debug: create debugfs directory under
+ usb root
+Date: Wed, 6 Nov 2019 11:15:18 +0800
+Message-ID: <202a7111c91e254a38098916ad6b4340ee979a0d.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191709_703565_B52A99C5 
-X-CRM114-Status: GOOD (  13.69  )
+X-CRM114-CacheID: sfid-20191105_191701_247747_17CE7135 
+X-CRM114-Status: GOOD (  13.35  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -114,27 +112,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The usb_debug_root is now a file-scope static variable, use
-usb_debugfs_create_dir() to create directory under usb root
+Move it's directory from the root of the debugfs filesystem into
+the root of usb
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/media/common/siano/smsdvb-debugfs.c | 2 +-
+ drivers/usb/chipidea/debug.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/media/common/siano/smsdvb-debugfs.c b/drivers/media/common/siano/smsdvb-debugfs.c
-index c95d4583498e..28c025e39a00 100644
---- a/drivers/media/common/siano/smsdvb-debugfs.c
-+++ b/drivers/media/common/siano/smsdvb-debugfs.c
-@@ -514,7 +514,7 @@ void smsdvb_debugfs_register(void)
- 	 * node for sdio-based boards, but this may need some logic at sdio
- 	 * subsystem.
- 	 */
--	d = debugfs_create_dir("smsdvb", usb_debug_root);
-+	d = usb_debugfs_create_dir("smsdvb");
- 	if (IS_ERR_OR_NULL(d)) {
- 		pr_err("Couldn't create sysfs node for smsdvb\n");
- 		return;
+diff --git a/drivers/usb/chipidea/debug.c b/drivers/usb/chipidea/debug.c
+index fcc91a338875..b777f30cbffe 100644
+--- a/drivers/usb/chipidea/debug.c
++++ b/drivers/usb/chipidea/debug.c
+@@ -342,7 +342,7 @@ DEFINE_SHOW_ATTRIBUTE(ci_registers);
+  */
+ void dbg_create_files(struct ci_hdrc *ci)
+ {
+-	ci->debugfs = debugfs_create_dir(dev_name(ci->dev), NULL);
++	ci->debugfs = usb_debugfs_create_dir(dev_name(ci->dev));
+ 
+ 	debugfs_create_file("device", S_IRUGO, ci->debugfs, ci,
+ 			    &ci_device_fops);
 -- 
 2.23.0
 
