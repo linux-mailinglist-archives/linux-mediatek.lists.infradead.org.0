@@ -2,56 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7DC07F0CDD
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 93AFDF0CDE
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:21 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0JgvPbhBn843a/5KFwXyp5tqxCc1itsPOapHTRH56Sk=; b=YzugsPxLvicx59
-	Y4BR7Yk74dQm3Tb2+1hRDHS+VcmQesQQwwZgJZ6SO5D1EzUlSCwGZmWI7RjkY3hisvlqVwb4dCspx
-	IhwKHUg5tz2CtmPB2fzX4TxqEE8XB01EMS68U7ZD5pE2ghuWBMSSyNqG2k1tGYI/PAlyt6q8jtcVA
-	A+hqJf/TJdsGfIE+kKNetvVJk1qvRgEaU8WI2DJ1KA+LQGktald/iqKA160SBJhii+8CDTc331jdZ
-	EQPkz6XYrGQTx9oQ0mcdfqFQWMK8LrgbIS+oyk+Zt5oDKuNdnOviE/V2q3D9p8b/1hbzWZ+M4gWc6
-	b8/gCLPrMzjj6ptGMzHQ==;
+	List-Owner; bh=CmVYnyi6Ll31jyttjh1SQSH9jytQLBIZtK3WYOWq0vk=; b=f2mZe7xo/jkvGX
+	22C1KArhhwiPBCrrTTLdga2pZ+qwNjm60tUHJSeWVABJR+SVBjQXP4uRc3GD+o1ZutSxHBlmx2+Bb
+	7g7FYVo9HOOjg7UW5yLMHItYvTObEoAanVgwtdmpt4EiJ4UegkktmONFcLhuQZviEY+lhGGtW6HEs
+	jkCOzciktNrZvceaqteA1uS3kKTmVsPceZlXey7rB7t76gFrf1dUXDRBl4IX4ZZr5Qpdkcvf0BB9K
+	cmw61nt2TiEgK2rHi/JH9/MLFil8Xdra2S4DA0YSDbcfs0LVR74e8WfcZ7ZUydoiHUuM3FZDHhsNw
+	djJJ/esyDqO/n9M4ewnA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBoo-0000eF-Ui; Wed, 06 Nov 2019 03:17:14 +0000
+	id 1iSBoq-0000iQ-S3; Wed, 06 Nov 2019 03:17:16 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBoi-0000Uy-Oq; Wed, 06 Nov 2019 03:17:10 +0000
-X-UUID: 8ebb5e5b3b164bc9ad455a10965bf696-20191105
-X-UUID: 8ebb5e5b3b164bc9ad455a10965bf696-20191105
+ id 1iSBoj-0000Xj-KQ; Wed, 06 Nov 2019 03:17:11 +0000
+X-UUID: 822838ee7d3046cf9b4b5188c2f08378-20191105
+X-UUID: 822838ee7d3046cf9b4b5188c2f08378-20191105
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 72021063; Tue, 05 Nov 2019 19:17:00 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 1440465095; Tue, 05 Nov 2019 19:17:00 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:46 -0800
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:48 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:44 +0800
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:49 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:42 +0800
+ Transport; Wed, 6 Nov 2019 11:16:44 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 15/28] media: uvcvideo: use usb_debugfs_create_dir() to create
+Subject: [PATCH 16/28] media: siano: use usb_debugfs_create_dir() to create
  directory
-Date: Wed, 6 Nov 2019 11:15:16 +0800
-Message-ID: <83b2f2f6a343e5609db60c81b0556fba80cee2cb.1573008520.git.chunfeng.yun@mediatek.com>
+Date: Wed, 6 Nov 2019 11:15:17 +0800
+Message-ID: <591c5ca23fc0399ebd8a4bc2520bdabf07d9538c.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191708_818776_215D7266 
-X-CRM114-Status: GOOD (  13.95  )
+X-CRM114-CacheID: sfid-20191105_191709_703565_B52A99C5 
+X-CRM114-Status: GOOD (  13.69  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -119,21 +119,21 @@ usb_debugfs_create_dir() to create directory under usb root
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/media/usb/uvc/uvc_debugfs.c | 2 +-
+ drivers/media/common/siano/smsdvb-debugfs.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/media/usb/uvc/uvc_debugfs.c b/drivers/media/usb/uvc/uvc_debugfs.c
-index d2b109959d82..0a5eb145379d 100644
---- a/drivers/media/usb/uvc/uvc_debugfs.c
-+++ b/drivers/media/usb/uvc/uvc_debugfs.c
-@@ -110,7 +110,7 @@ void uvc_debugfs_init(void)
- {
- 	struct dentry *dir;
- 
--	dir = debugfs_create_dir("uvcvideo", usb_debug_root);
-+	dir = usb_debugfs_create_dir("uvcvideo");
- 	if (IS_ERR_OR_NULL(dir)) {
- 		uvc_printk(KERN_INFO, "Unable to create debugfs directory\n");
+diff --git a/drivers/media/common/siano/smsdvb-debugfs.c b/drivers/media/common/siano/smsdvb-debugfs.c
+index c95d4583498e..28c025e39a00 100644
+--- a/drivers/media/common/siano/smsdvb-debugfs.c
++++ b/drivers/media/common/siano/smsdvb-debugfs.c
+@@ -514,7 +514,7 @@ void smsdvb_debugfs_register(void)
+ 	 * node for sdio-based boards, but this may need some logic at sdio
+ 	 * subsystem.
+ 	 */
+-	d = debugfs_create_dir("smsdvb", usb_debug_root);
++	d = usb_debugfs_create_dir("smsdvb");
+ 	if (IS_ERR_OR_NULL(d)) {
+ 		pr_err("Couldn't create sysfs node for smsdvb\n");
  		return;
 -- 
 2.23.0
