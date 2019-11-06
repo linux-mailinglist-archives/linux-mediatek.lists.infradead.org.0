@@ -2,57 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D6FDCF0CE2
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:27 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 707BEF0CE3
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=P4UDBvwPcxgS89NV4/MRmWGfz4MdAjG7hZ6omm/26Fc=; b=gr/f3f1HA5QdHf
-	/LiuCHroU+UM3m9cjYqiXdd9RO9lDC2/fDcC9sjxl/L1qLRMQs4I3BTNRxPFe6nK7voE4pN3qUOFQ
-	emHCOwLwKeON+pC06Tv5ZBX0c8HakWM3cJyVMtxKUdIxgIMECBNbnLX34A/XDvpp2V/GKiaPskJK7
-	n+KAZzx2cjS24gagl6gxAr8o1DUltcRtSxSCLG4gL1LZyA5O94PWshFoNjjwx+iYEKnjQQFrCd/1x
-	cqOOyw8rwL6d/k3ptxlT6vX5MoMt123SZz/wIlTiRIa0z6TNryMVdCF5wU1G4JuKUbBDnbEKPrn/i
-	O5z29m85hONc6YyrGidw==;
+	List-Owner; bh=KkOXhj4ECHmSGqjeoObcbGawLHzyWVWE4dskbALw7Zs=; b=m4oPSMlh91jWE6
+	hyIixcQc8wPTebQPOJxWU15bz34Np3OAKfihKoO9ZItZHfqrNtqrm2Z66vv064j4zzPRplyuNM2Oe
+	CrDsX6zxDTrkj9E1RcH7B8T5GOyyZRpGuoWHWii5U2vyycxzSyVOvseejd0z3/fWiHJ2g3oM0Fo+n
+	qMZImtjwhxN6ZCVS2q8nJWcCfgPwJbjs5pjSUbVnPia4ciH4UzePS2GZcnJGMqc1B4ZP40/Wx1G7E
+	tQrEKDSS0mhhN/3wk8v38bpsHn7Feo90ySYV0PvjlEj4qyc0q9yF7fw9HhEDO+8Cb3BFRNpPtRYLh
+	SYx9GHGZgmbk5+Qcnusg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBox-0000t6-6v; Wed, 06 Nov 2019 03:17:23 +0000
+	id 1iSBp0-0000xI-7e; Wed, 06 Nov 2019 03:17:26 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBon-0000dt-Eg; Wed, 06 Nov 2019 03:17:15 +0000
-X-UUID: 6e9c7f99716b4693a34aa125233cfe8f-20191105
-X-UUID: 6e9c7f99716b4693a34aa125233cfe8f-20191105
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1iSBoq-0000ig-8r; Wed, 06 Nov 2019 03:17:19 +0000
+X-UUID: 1fec5e138ff5438a87403ea2df9f5a05-20191105
+X-UUID: 1fec5e138ff5438a87403ea2df9f5a05-20191105
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 689603623; Tue, 05 Nov 2019 19:17:07 -0800
-Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:17:08 -0800
+ with ESMTP id 1330095547; Tue, 05 Nov 2019 19:17:09 -0800
+Received: from mtkexhb01.mediatek.inc (172.21.101.102) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:17:11 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:17:08 +0800
+ mtkexhb01.mediatek.inc (172.21.101.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:17:09 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:17:04 +0800
+ Transport; Wed, 6 Nov 2019 11:17:06 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 23/28] usb: gadget: bcm63xx_udc: create debugfs directory
- under usb root
-Date: Wed, 6 Nov 2019 11:15:24 +0800
-Message-ID: <67e24b1efd7266bb42e7e15871068ed95ed862e7.1573008520.git.chunfeng.yun@mediatek.com>
+Subject: [PATCH 24/28] usb: gadget: atmel: create debugfs directory under usb
+ root
+Date: Wed, 6 Nov 2019 11:15:25 +0800
+Message-ID: <c4d842db5bf92ff92933dd87e88d736ceeae07af.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F2C0E13D22448E3C0D95E5086ABD74219EEBAE9296AF9EF0AB262C23FA0EC86A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191713_548371_F09DAABD 
-X-CRM114-Status: GOOD (  13.83  )
+X-CRM114-CacheID: sfid-20191105_191716_317883_801A9862 
+X-CRM114-Status: GOOD (  13.84  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -121,22 +120,22 @@ the root of usb
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/gadget/udc/bcm63xx_udc.c | 2 +-
+ drivers/usb/gadget/udc/atmel_usba_udc.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/usb/gadget/udc/bcm63xx_udc.c b/drivers/usb/gadget/udc/bcm63xx_udc.c
-index 97b16463f3ef..ae2c3740540a 100644
---- a/drivers/usb/gadget/udc/bcm63xx_udc.c
-+++ b/drivers/usb/gadget/udc/bcm63xx_udc.c
-@@ -2248,7 +2248,7 @@ static void bcm63xx_udc_init_debugfs(struct bcm63xx_udc *udc)
- 	if (!IS_ENABLED(CONFIG_USB_GADGET_DEBUG_FS))
- 		return;
+diff --git a/drivers/usb/gadget/udc/atmel_usba_udc.c b/drivers/usb/gadget/udc/atmel_usba_udc.c
+index 86ffc8307864..43618833e0f6 100644
+--- a/drivers/usb/gadget/udc/atmel_usba_udc.c
++++ b/drivers/usb/gadget/udc/atmel_usba_udc.c
+@@ -226,7 +226,7 @@ static void usba_init_debugfs(struct usba_udc *udc)
+ 	struct dentry *root;
+ 	struct resource *regs_resource;
  
 -	root = debugfs_create_dir(udc->gadget.name, NULL);
-+	root = usb_debugfs_create_dir(udc->gadget.name);
++	root = debugfs_create_dir(udc->gadget.name);
  	udc->debugfs_root = root;
  
- 	debugfs_create_file("usbd", 0400, root, udc, &bcm63xx_usbd_dbg_fops);
+ 	regs_resource = platform_get_resource(udc->pdev, IORESOURCE_MEM,
 -- 
 2.23.0
 
