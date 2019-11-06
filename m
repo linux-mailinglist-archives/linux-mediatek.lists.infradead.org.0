@@ -2,56 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 95D88F0CCF
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7A886F0CCD
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:29 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KnRnLJlQmIKIS8myc7zWSdbJ1iNKqTp8vQMh4v96csY=; b=M46ie7zmEsNWVw
-	woYeATV22BEY7makTsWOw/NhTm60fOipEvtxaeeaKc9RdsVCsi6UrETuz1zuq8/r2advJWuJlKPoF
-	iMZIGYETH/ydTE7IwJovgU8A9Nj4z5zy/gQpPQvMO5KX8rgjqwSNew/lqDulLnkpPDr0VWlC4tb0q
-	TWeNSNCLJvo4mZ/76RVseSj5269KKa+611dzzB9/NRXVWkfQG68xXIl99VQ5hwabiJqpO93h/Dxer
-	AQUQphSVtLCXNE+K0aaiukWfxELoEuYTKsXZQ51xB3BTIpijU7EJ4Jgg5xJq6wnJxJHKqy0mx8+cg
-	wMZhTAN6W03HbMLcsvUA==;
+	List-Owner; bh=ENaB+X0V1xvZRFFWV8GrrEsnVuPCRJQU3/t70lP/fE0=; b=MF7yOSPN4YDqOX
+	TOK5X/GkTcBO7gIH99VB18BvHC4afaRUNU+OeqU/d6HB1ik3hs7lKgB69bLgOsvPwf/ySNgWZxMxt
+	32l7vBLM645H51BKZKqemeHVozBRfGmJLKAs3/rP83i/xl6s9O1ERpVnWgBGStxFow2KZlYhvF7EP
+	3cwiOj5XPLffJNCjuMWemSBJcyqGv5tJbMIDCLw6JfggeN4YgH9/KERjFXmnSXsCgV3CIL+7QHqcH
+	kfz2JxGkQSdfmjz67M7dWeIEh1kFID0ZWNf+xX7GTlJvZOFRDY7gAvFdU2/0oVyIGFKLGN2Dz3Mc2
+	WVt0K8av1j0o7fVblQ3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBoJ-0008Uv-FJ; Wed, 06 Nov 2019 03:16:43 +0000
+	id 1iSBo0-0008Il-D2; Wed, 06 Nov 2019 03:16:24 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBoF-0008RB-6x; Wed, 06 Nov 2019 03:16:40 +0000
-X-UUID: 4deed664ebbe47009e8b1823511366ea-20191105
-X-UUID: 4deed664ebbe47009e8b1823511366ea-20191105
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ id 1iSBnv-0008Ev-7I; Wed, 06 Nov 2019 03:16:20 +0000
+X-UUID: ccbdeb09a03b4138b691139ccfd6029c-20191105
+X-UUID: ccbdeb09a03b4138b691139ccfd6029c-20191105
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1549813199; Tue, 05 Nov 2019 19:16:32 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:12 -0800
+ with ESMTP id 947376966; Tue, 05 Nov 2019 19:16:14 -0800
+Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:15 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:10 +0800
+ mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:15 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:08 +0800
+ Transport; Wed, 6 Nov 2019 11:16:11 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 05/28] usb: typec: tcpm: use usb_debugfs_create_file() to
+Subject: [PATCH 06/28] usb: typec: fusb302: use usb_debugfs_create_file() to
  create debugfs file
-Date: Wed, 6 Nov 2019 11:15:06 +0800
-Message-ID: <63f3f7b07da47c054fef25419eebd970dcd5d20a.1573008520.git.chunfeng.yun@mediatek.com>
+Date: Wed, 6 Nov 2019 11:15:07 +0800
+Message-ID: <6a7404000cdde8f06a225b3d0d71eb6275ee8be3.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 774C183A3948EC1801A7C75CE39E4B5AE30F9220861AC71DBC2E3A0294B804592000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191639_253364_E05EBB01 
-X-CRM114-Status: GOOD (  13.81  )
+X-CRM114-CacheID: sfid-20191105_191619_262093_D1192C65 
+X-CRM114-Status: GOOD (  13.72  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -119,20 +120,20 @@ root directory
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/typec/tcpm/tcpm.c | 2 +-
+ drivers/usb/typec/tcpm/fusb302.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/usb/typec/tcpm/tcpm.c b/drivers/usb/typec/tcpm/tcpm.c
-index 96562744101c..6ee6a1f55bc6 100644
---- a/drivers/usb/typec/tcpm/tcpm.c
-+++ b/drivers/usb/typec/tcpm/tcpm.c
-@@ -578,7 +578,7 @@ static void tcpm_debugfs_init(struct tcpm_port *port)
+diff --git a/drivers/usb/typec/tcpm/fusb302.c b/drivers/usb/typec/tcpm/fusb302.c
+index ed8655c6af8c..beb1d6afd67d 100644
+--- a/drivers/usb/typec/tcpm/fusb302.c
++++ b/drivers/usb/typec/tcpm/fusb302.c
+@@ -213,7 +213,7 @@ static void fusb302_debugfs_init(struct fusb302_chip *chip)
  
- 	mutex_init(&port->logbuffer_lock);
- 	snprintf(name, NAME_MAX, "tcpm-%s", dev_name(port->dev));
--	port->dentry = debugfs_create_file(name, S_IFREG | 0444, usb_debug_root,
-+	port->dentry = usb_debugfs_create_file(name, S_IFREG | 0444,
- 					   port, &tcpm_debug_fops);
+ 	mutex_init(&chip->logbuffer_lock);
+ 	snprintf(name, NAME_MAX, "fusb302-%s", dev_name(chip->dev));
+-	chip->dentry = debugfs_create_file(name, S_IFREG | 0444, usb_debug_root,
++	chip->dentry = usb_debugfs_create_file(name, S_IFREG | 0444,
+ 					   chip, &fusb302_debug_fops);
  }
  
 -- 
