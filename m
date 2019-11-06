@@ -2,53 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D01E4F0CCC
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:28 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 30505F0CD1
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=3lLRgtcSQcz8M9GYdZF5tYvSft3lZFXwqeU3Qmcz6+Q=; b=PAgN4/ZUxy330z
-	Y+IPMjTUDn+/D2WtMdV6Zgaq/v86/Wjz1e83+0j275nu/+Vl8CfwylPiOkPbxHmCY5fUL0dysTcoY
-	pDTGuH1YV2jmDgmQHpQjhXsVtldnIM8VOPseIFBSwp9iQZyVjUGu/mQO2SYwzo/d8b6VmHhI28C1V
-	qVfTbVUFJ99I/A4pHz4RFXZYWJaHXrigvk22j44SOyPQB9rJ/UxHj4EFetcuWfsOn07aAi7ZqT+O4
-	zzLL/wu+jTSastabGDD8f7utmvHip7aYWa+biLc0wBJC2KxptNHEjKpGs8ZXvxclCPPSo4lJBbtn8
-	EWXQymKJ1uel335P32Tg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=QMKM/JB02XzapQamjYBEIK5l3rjqmltyvyQfaAbhv68=; b=uh8cLePwhV71dv
+	qIeEO9xV8LwwP/3tKFvSd2cIYN7gLHKLLdJw17aFovRq3QDEG/uTgnT9bCK8JwnpK1AuBCm8z2Hwz
+	vx0WPhGl51e4LFTcDl8MV7aduD3qGZVT94C9rMVb1CalcU2VlMx0gVsazI+gfhNGJROd8vCztZs4w
+	+6zDLkpItfyYl95jg/ExqYonNr8f45X2gDNR8SHssSb/onRHbb/gf2b6cUGdbLLfTt1IOjCI6bhDq
+	EMcdD5NybIjeffxIuTeAspjCeXWJJYh88PYhoLXQAwiKWJ1F/Xhn3gF4c+oc+OR1uMBY4lAgXqPXj
+	+kf3fzzNrDcEBZyPkxKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBnx-0008Fu-TC; Wed, 06 Nov 2019 03:16:21 +0000
+	id 1iSBoL-00007m-IX; Wed, 06 Nov 2019 03:16:45 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBnu-0008EG-12; Wed, 06 Nov 2019 03:16:19 +0000
-X-UUID: 79d9b0d2d44d4f82abf652617e149700-20191105
-X-UUID: 79d9b0d2d44d4f82abf652617e149700-20191105
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1iSBoG-0008Qw-OG; Wed, 06 Nov 2019 03:16:42 +0000
+X-UUID: 2caaced2355c4370ab3a62e58f6b96ff-20191105
+X-UUID: 2caaced2355c4370ab3a62e58f6b96ff-20191105
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1844636388; Tue, 05 Nov 2019 19:16:06 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ with ESMTP id 40405063; Tue, 05 Nov 2019 19:16:32 -0800
+Received: from mtkexhb01.mediatek.inc (172.21.101.102) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:01 -0800
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:16 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:01 +0800
+ mtkexhb01.mediatek.inc (172.21.101.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:02 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:15:57 +0800
+ Transport; Wed, 6 Nov 2019 11:16:00 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 01/28] usb: common: change usb_debug_root as static variable
-Date: Wed, 6 Nov 2019 11:15:02 +0800
-Message-ID: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
+Subject: [PATCH 02/28] usb: core: use usb_debugfs_create_file() to create
+ debugfs file
+Date: Wed, 6 Nov 2019 11:15:03 +0800
+Message-ID: <16adfdc8d285b7f8f85f769af4e6d7792980122d.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
+References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191618_075807_35139D9B 
-X-CRM114-Status: GOOD (  13.13  )
+X-CRM114-CacheID: sfid-20191105_191640_831222_E7734C54 
+X-CRM114-Status: GOOD (  13.88  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -111,58 +114,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Try to avoid using extern global variable, and provide two
-functions for the usage cases
+Use usb_debugfs_create_file() to create debugfs file under usb
+root
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/common/common.c | 16 ++++++++++++++--
- include/linux/usb.h         |  5 ++++-
- 2 files changed, 18 insertions(+), 3 deletions(-)
+ drivers/usb/core/usb.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
-index 1433260d99b4..639ee6d243a2 100644
---- a/drivers/usb/common/common.c
-+++ b/drivers/usb/common/common.c
-@@ -293,8 +293,20 @@ struct device *usb_of_get_companion_dev(struct device *dev)
- EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
- #endif
+diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
+index f16c26dc079d..8053af9e4218 100644
+--- a/drivers/usb/core/usb.c
++++ b/drivers/usb/core/usb.c
+@@ -967,7 +967,7 @@ static struct dentry *usb_devices_root;
  
--struct dentry *usb_debug_root;
--EXPORT_SYMBOL_GPL(usb_debug_root);
-+static struct dentry *usb_debug_root;
-+
-+struct dentry *usb_debugfs_create_dir(const char *name)
-+{
-+	return debugfs_create_dir(name, usb_debug_root);
-+}
-+EXPORT_SYMBOL_GPL(usb_debugfs_create_dir);
-+
-+struct dentry *usb_debugfs_create_file(const char *name, umode_t mode,
-+			void *data, const struct file_operations *fops)
-+{
-+	return debugfs_create_file(name, mode, usb_debug_root, data, fops);
-+}
-+EXPORT_SYMBOL_GPL(usb_debugfs_create_file);
- 
- static int __init usb_common_init(void)
+ static void usb_debugfs_init(void)
  {
-diff --git a/include/linux/usb.h b/include/linux/usb.h
-index e656e7b4b1e4..ad96e0aa0127 100644
---- a/include/linux/usb.h
-+++ b/include/linux/usb.h
-@@ -2001,7 +2001,10 @@ extern void usb_register_notify(struct notifier_block *nb);
- extern void usb_unregister_notify(struct notifier_block *nb);
+-	usb_devices_root = debugfs_create_file("devices", 0444, usb_debug_root,
++	usb_devices_root = usb_debugfs_create_file("devices", 0444,
+ 					       NULL, &usbfs_devices_fops);
+ }
  
- /* debugfs stuff */
--extern struct dentry *usb_debug_root;
-+extern struct dentry *usb_debugfs_create_dir(const char *name);
-+extern struct dentry *
-+usb_debugfs_create_file(const char *name, umode_t mode, void *data,
-+			const struct file_operations *fops);
- 
- /* LED triggers */
- enum usb_led_event {
 -- 
 2.23.0
 
