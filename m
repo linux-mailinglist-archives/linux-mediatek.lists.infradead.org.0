@@ -2,55 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ADCF4F1170
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 09:51:32 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 39966F1173
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 09:51:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n9Wv+jtBH++d2jIxOitfKNAn96/zWpMQVbCp2qhOixM=; b=SVGYL2iBCHnyus
-	mJerBdQwJqBtWJ2Dru9Qq+hTe6aj25PyD7bOH8bttsIA6MFdA2L5QU+IQUWS7/3Ek0D3pHgOovxoD
-	gH6XHVQG4lRLmOmHVzuDSsnfOzDiMg7P2y8Y6wVp4M5Tit2D8+MvwcJ7IpRcSL6OBRbQJvU64aW/N
-	4Duo+2zaEXFU5B03O77kZSnbqK7yfovp5qX3JRnbE0xJJGKjPNbEfYqox/r6hie6cdaxwlQOyfe7O
-	6mkIMs6VeczCQDMNEiI4A2bFnqj8nqpAalOIuhVr8OYlYsIolIqOvgVe/KLqzYFa9Znplip9uNjNP
-	+rbIOsk31eIocSDlln6Q==;
+	List-Owner; bh=QZ51wfTYAuRnB+C5af1iw+7h1gNCNVc9M10WMGHQh1U=; b=o94vZ+jr9sYncl
+	8cDp69Q0sj1ZkIM0RahHpAnsSOTskoyvyid09Pv2QQ8t+4NacMd+yi1eMC8qrCxcgDL0MVmaWDDfv
+	BpH7mJPbhH/WnXIQXS1yv48W9fYS75/3e65pN3TdX+SLFWP4/tNcvR81o/Bi4iBgmAmozqSKiCb3s
+	jGeqaHMVTqsAtGT4/2oB14apl/2+cuCGTXnqIScw4HSezSrr+gd9s1Vltn27UupODHsiirdvE6eFS
+	EitwkVmDHbeonGfdrYyKIHfvjJMZzr/IEGLZEYfsvrcWsCHZBOoa80b+wdW/iNpatRR4f56IPpYJZ
+	g+pNThy2Sjlp5shEnw8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSH2G-0006ZI-8E; Wed, 06 Nov 2019 08:51:28 +0000
+	id 1iSH2a-0006qg-P7; Wed, 06 Nov 2019 08:51:48 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSH29-0006YK-Ci; Wed, 06 Nov 2019 08:51:26 +0000
+ id 1iSH2W-0006pM-K0; Wed, 06 Nov 2019 08:51:45 +0000
 Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
  [83.86.89.107])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id DEF01206A3;
- Wed,  6 Nov 2019 08:51:19 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 5D7922187F;
+ Wed,  6 Nov 2019 08:51:43 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573030281;
- bh=w6b84J95hMSFCMrNJ2Y6lTW2n32w6MgoawbJHdh7P1U=;
+ s=default; t=1573030304;
+ bh=0qRP5sEKALx1y/0Ma1sFV2hdQpXidYhuxzQoWrPnw+M=;
  h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=dW9xxWMWUJBaK7ZxY8oQzAK0S/mxveM6NTSB+edw0UZObbVssvETBVtZY0RqbeuOt
- XLf/Jmfit+5Ckq8megXEtg5llMPFQXL+WQ4K9vDeRoD+yaAnVkj6/1ex+Ns5RG4VLx
- 3rR88rpuU6NpthEDCxdvYWmC/nw+SFxNfXV7zGIQ=
-Date: Wed, 6 Nov 2019 09:51:17 +0100
+ b=pLgLur1w6tm4rgK5BS6Jqv75Jc1vUCMzbroFrWt9um2o8lcNseY+yCwkCh5/btZB/
+ HpPUDDZmWVSuC0s6FcsJjIqCORojBS2NB4CRT5oASRWdyoJgUtGyS7WjK3riTXJPYo
+ jCzpD3Bg2RwtIIl8dVzumflQ+osX/iJ0ho2iu6Og=
+Date: Wed, 6 Nov 2019 09:51:41 +0100
 From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: Wolfram Sang <wsa@the-dreams.de>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
 Subject: Re: [PATCH 01/28] usb: common: change usb_debug_root as static
  variable
-Message-ID: <20191106085117.GB2971560@kroah.com>
+Message-ID: <20191106085141.GC2971560@kroah.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
- <79fd2ebd-b8c6-ee00-c71e-782475a20de6@roeck-us.net>
- <20191106073310.GA1085@ninjato>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20191106073310.GA1085@ninjato>
+In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 User-Agent: Mutt/1.12.2 (2019-09-21)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191106_005124_931318_67A6AD43 
-X-CRM114-Status: GOOD (  13.55  )
+X-CRM114-CacheID: sfid-20191106_005144_697951_ECE532BD 
+X-CRM114-Status: GOOD (  16.83  )
 X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.0 points)
@@ -78,17 +76,16 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Peter Chen <Peter.Chen@nxp.com>,
  Alexandre Belloni <alexandre.belloni@bootlin.com>,
  Heikki Krogerus <heikki.krogerus@linux.intel.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
- Yangtao Li <tiny.windzz@gmail.com>, Linus Walleij <linus.walleij@linaro.org>,
- linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Mans Rullgard <mans@mansr.com>,
+ Wolfram Sang <wsa@the-dreams.de>, Yangtao Li <tiny.windzz@gmail.com>,
+ Linus Walleij <linus.walleij@linaro.org>, linux-kernel@vger.kernel.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Mans Rullgard <mans@mansr.com>,
  Srinivas Kandagatla <srinivas.kandagatla@linaro.org>,
  Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
  Fabio Estevam <festevam@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
  Robert Jarzmik <robert.jarzmik@free.fr>, Kevin Cernekee <cernekee@gmail.com>,
+ "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
  Ludovic Desroches <ludovic.desroches@microchip.com>,
  Alan Stern <stern@rowland.harvard.edu>, NXP Linux Team <linux-imx@nxp.com>,
- Chunfeng Yun <chunfeng.yun@mediatek.com>,
  bcm-kernel-feedback-list@broadcom.com,
  David Kershner <david.kershner@unisys.com>,
  Hans Ulli Kroll <ulli.kroll@googlemail.com>,
@@ -115,18 +112,29 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Nov 06, 2019 at 08:33:10AM +0100, Wolfram Sang wrote:
+On Wed, Nov 06, 2019 at 11:15:02AM +0800, Chunfeng Yun wrote:
+> Try to avoid using extern global variable, and provide two
+> functions for the usage cases
 > 
-> > Did exported variables run out of favor ? Sorry if there was a
-> > patch 0 of the series explaining the rationale and I missed it.
+> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> ---
+>  drivers/usb/common/common.c | 16 ++++++++++++++--
+>  include/linux/usb.h         |  5 ++++-
+>  2 files changed, 18 insertions(+), 3 deletions(-)
 > 
-> I neither got it if there was one. If there wasn't, I agree a cover
-> letter makes a lot of sense here.
+> diff --git a/drivers/usb/common/common.c b/drivers/usb/common/common.c
+> index 1433260d99b4..639ee6d243a2 100644
+> --- a/drivers/usb/common/common.c
+> +++ b/drivers/usb/common/common.c
+> @@ -293,8 +293,20 @@ struct device *usb_of_get_companion_dev(struct device *dev)
+>  EXPORT_SYMBOL_GPL(usb_of_get_companion_dev);
+>  #endif
+>  
+> -struct dentry *usb_debug_root;
+> -EXPORT_SYMBOL_GPL(usb_debug_root);
+> +static struct dentry *usb_debug_root;
 
-I don't understand why this whole series is needed either.
-
-What is wrong with the original code?  Also, like I said before, you
-broke the build here with the first patch, which is not ok.
+You just broke the kernel build, which is not acceptable at all :(
 
 greg k-h
 
