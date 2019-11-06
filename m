@@ -2,7 +2,7 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CE2EFF0CCB
+	by mail.lfdr.de (Postfix) with ESMTPS id B8101F0CCA
 	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:28 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,48 +10,48 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+ddHrhoK/tBOaeALXngHdJAkinu3al1DnNjot8Zfg5I=; b=CVTv6D4YVlL+sa
-	vVF6QF7yk0yCAJdHYhst8yUHSZNLp5xOgyHyZGsgVQvDMD9QlkD+p9Rh9fDzfuLWoIilRSolUFQC/
-	JwCmrvDSyJiJB06ZAT+obfi6KOroWq3L9qoqZxFWkUGru3PHjP2wRqor6ZWA0+d18Bk8BxwhAolHM
-	It+Qhu94/4vhoOO1cFRL7jFpj0iY6YBEBADVfQpOBaJFwhLRQd1+0fKJH2WDhqc9fHX0bHJ8sEE+g
-	Hxb30D/injnepa2JzgW+yWSIX3h/fxetBH5O6P/4V/gkPRaQsFE5KBzJ6Wo9moVzNT84Ok1kY7l91
-	yC9crjwVmpVuuObNA3lw==;
+	List-Owner; bh=wjen8u5xugKO0rvHiuu3MnbGArgnUdOD0Q6fH+Vbs2Q=; b=WCloCa9SrOyUU2
+	qHoeNcIcvJUzKpenrVBFRfajwxiJjTZZwKgXvshpnZzxXTCwQd1qCcI6093OgcYKbV1V4746VybrS
+	FEmx7fa4+8zFX++ao6qcPR1r2GA9lITi1EDGAR+GA4pv16HiQBJosK8mzoGpagB2jj+9DDbgmKSQa
+	xgCFegkaV9S1hxtT8aTnv0GBQd840/bruTSUQVp2jTS3UoyukFbeBHyyXLpH4hyFeOwD3araMqdkq
+	EBPuBqErPmBU8FDGGgxxhlgrkbUCw17EZCGeFCkuhWJnNLyICIQwEbYIYaL4c2N9uSNgAf0qYf4eT
+	JXYUsuzm252cWAHstunA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBnz-0008Hg-KR; Wed, 06 Nov 2019 03:16:23 +0000
+	id 1iSBny-0008GY-K6; Wed, 06 Nov 2019 03:16:22 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBnv-0008Eu-6a; Wed, 06 Nov 2019 03:16:20 +0000
-X-UUID: f7da8a4296994da4ab09e9e6e20b4134-20191105
-X-UUID: f7da8a4296994da4ab09e9e6e20b4134-20191105
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1iSBnu-0008EO-Mb; Wed, 06 Nov 2019 03:16:19 +0000
+X-UUID: 991465009ed84aebb2a0b05b74b72d50-20191105
+X-UUID: 991465009ed84aebb2a0b05b74b72d50-20191105
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1266910855; Tue, 05 Nov 2019 19:16:11 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:12 -0800
+ with ESMTP id 918804241; Tue, 05 Nov 2019 19:16:08 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:09 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:05 +0800
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:08 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:02 +0800
+ Transport; Wed, 6 Nov 2019 11:16:05 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 03/28] usb: host: sl811: use usb_debugfs_create_file() to
+Subject: [PATCH 04/28] usb: host: isp1362: use usb_debugfs_create_file() to
  create file
-Date: Wed, 6 Nov 2019 11:15:04 +0800
-Message-ID: <c84b662b2cb07ba2ad931677d6e4315b49bf355a.1573008520.git.chunfeng.yun@mediatek.com>
+Date: Wed, 6 Nov 2019 11:15:05 +0800
+Message-ID: <bf9344f6ecede96eb68fb92c7e88e0b36b000ea6.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191619_240996_B05507B5 
-X-CRM114-Status: GOOD (  12.74  )
+X-CRM114-CacheID: sfid-20191105_191618_739774_B3817E44 
+X-CRM114-Status: GOOD (  14.05  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -117,25 +117,23 @@ usb_debugfs_create_file() to create file under usb root
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/host/sl811-hcd.c | 5 ++---
- 1 file changed, 2 insertions(+), 3 deletions(-)
+ drivers/usb/host/isp1362-hcd.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
-diff --git a/drivers/usb/host/sl811-hcd.c b/drivers/usb/host/sl811-hcd.c
-index 72a34a1eb618..8669cd3cd6f9 100644
---- a/drivers/usb/host/sl811-hcd.c
-+++ b/drivers/usb/host/sl811-hcd.c
-@@ -1496,9 +1496,8 @@ DEFINE_SHOW_ATTRIBUTE(sl811h_debug);
- /* expect just one sl811 per system */
- static void create_debug_file(struct sl811 *sl811)
+diff --git a/drivers/usb/host/isp1362-hcd.c b/drivers/usb/host/isp1362-hcd.c
+index 96f8daa11f25..6eb968dd9974 100644
+--- a/drivers/usb/host/isp1362-hcd.c
++++ b/drivers/usb/host/isp1362-hcd.c
+@@ -2164,8 +2164,7 @@ DEFINE_SHOW_ATTRIBUTE(isp1362);
+ /* expect just one isp1362_hcd per system */
+ static void create_debug_file(struct isp1362_hcd *isp1362_hcd)
  {
--	sl811->debug_file = debugfs_create_file("sl811h", S_IRUGO,
--						usb_debug_root, sl811,
--						&sl811h_debug_fops);
-+	sl811->debug_file = usb_debugfs_create_file("sl811h", S_IRUGO,
-+						sl811, &sl811h_debug_fops);
+-	isp1362_hcd->debug_file = debugfs_create_file("isp1362", S_IRUGO,
+-						      usb_debug_root,
++	isp1362_hcd->debug_file = usb_debugfs_create_file("isp1362", S_IRUGO,
+ 						      isp1362_hcd,
+ 						      &isp1362_fops);
  }
- 
- static void remove_debug_file(struct sl811 *sl811)
 -- 
 2.23.0
 
