@@ -2,63 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 58871F0CD2
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:51 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 56649F0CD8
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:11 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ghuToXB0sP26haj6q7+Y+HEewXvG1A7mXwCwldofNQw=; b=YpIwYyb9qi2b2f
-	MQmlOiFeLnpo7W39bMXbzx6wb3djraMvK4bEz6W5bH327+KjgJsPhi4foNRcS7hdL4K+gD35udJpx
-	0RJ3hAXoXyeJmk/7Rxv7Lp/l03rmqqpXLj6rpljsdm7hx1i6g90vqKAiH0PeFr95t+C0AHIO9CnGP
-	4qkkQcZvB4UqbQKbLGQOclhIyeQ29nDZ5wcxFBhuU9WybqcCda/ptUWTHDDW9Dz0GbT2SxmmdbaE+
-	0RjcD8eufrubGIK3802QNGjerVt1Oy0MS9oR1DoMygnay4FAHV5+YK7FjIUv76YiNye+WVj3TE1kK
-	TCr0U1suClZiARkzVDog==;
+	List-Owner; bh=E5K2ECWBQG6HMHhw7TKikDBDV8ALucV6YD3OIvM9+Eg=; b=VO24P8prvtZlY8
+	7dD9h1Rd1LBBPAvh2XtQV1O9P6Zt/CaePYDwwovXX3G8WRSnG3QLwyZe+ZtJXj+cemRf5pDI7/aVi
+	3mY6AUlMxC0xfViukiGHkyB7XPQVeBkz3EFgbnkgKWwA1LfM0IEwp1sghu8LEoBL6bw0P+G+1NvFP
+	BYp+D+n3ifREdfnCl2sGjcGm//rUt4TsWWKjvBUSfrIKXSqUlBPcYHyWGbfpGtfRHdhF9Cj5glf1O
+	FSao0SghEus271Gr7LeC3/M92PY5w29GqqWvGYgREWRd3jtHnNiYIKM5d+FcRWRAjxCo4JsL4au+t
+	d0RpCLzIdm0z0EkMyaVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBoM-0000AQ-Vm; Wed, 06 Nov 2019 03:16:47 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iSBoh-0000Sr-08; Wed, 06 Nov 2019 03:17:07 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBoG-0008RB-Hn; Wed, 06 Nov 2019 03:16:42 +0000
-X-UUID: 4ef4b8cf25ea4399a53a3987b01ef3da-20191105
-X-UUID: 4ef4b8cf25ea4399a53a3987b01ef3da-20191105
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ id 1iSBob-0000M8-EX; Wed, 06 Nov 2019 03:17:02 +0000
+X-UUID: 905205c385db49a5bd1b1251722d16c9-20191105
+X-UUID: 905205c385db49a5bd1b1251722d16c9-20191105
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1762654102; Tue, 05 Nov 2019 19:16:31 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:32 -0800
+ with ESMTP id 330661734; Tue, 05 Nov 2019 19:16:55 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:35 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:31 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:33 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:28 +0800
+ Transport; Wed, 6 Nov 2019 11:16:31 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 10/28] usb: uhci-hcd: use usb_debugfs_create_dir() to create
+Subject: [PATCH 11/28] usb: xhci: use usb_debugfs_create_dir() to create
  directory
-Date: Wed, 6 Nov 2019 11:15:11 +0800
-Message-ID: <192bd44f5a2f9120a812825f5f013dc3c1b5cf2f.1573008520.git.chunfeng.yun@mediatek.com>
+Date: Wed, 6 Nov 2019 11:15:12 +0800
+Message-ID: <54205b67872231d9940efd3e15f99a64a9ee00fd.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191640_617405_17028E94 
-X-CRM114-Status: GOOD (  14.43  )
+X-CRM114-CacheID: sfid-20191105_191701_506458_51BBAF6B 
+X-CRM114-Status: GOOD (  13.94  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -115,27 +113,27 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 The usb_debug_root is now a file-scope static variable, use
-usb_debugfs_create_dir() to create "uhci" directory under
+usb_debugfs_create_dir() to create "xhci" directory under
 usb root
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/host/uhci-hcd.c | 2 +-
+ drivers/usb/host/xhci-debugfs.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/usb/host/uhci-hcd.c b/drivers/usb/host/uhci-hcd.c
-index 03bc59755123..a9707f981072 100644
---- a/drivers/usb/host/uhci-hcd.c
-+++ b/drivers/usb/host/uhci-hcd.c
-@@ -877,7 +877,7 @@ static int __init uhci_hcd_init(void)
- 	errbuf = kmalloc(ERRBUF_LEN, GFP_KERNEL);
- 	if (!errbuf)
- 		goto errbuf_failed;
--	uhci_debugfs_root = debugfs_create_dir("uhci", usb_debug_root);
-+	uhci_debugfs_root = usb_debugfs_create_dir("uhci");
- #endif
+diff --git a/drivers/usb/host/xhci-debugfs.c b/drivers/usb/host/xhci-debugfs.c
+index 7ba6afc7ef23..932fdbd2804f 100644
+--- a/drivers/usb/host/xhci-debugfs.c
++++ b/drivers/usb/host/xhci-debugfs.c
+@@ -601,7 +601,7 @@ void xhci_debugfs_exit(struct xhci_hcd *xhci)
  
- 	uhci_up_cachep = kmem_cache_create("uhci_urb_priv",
+ void __init xhci_debugfs_create_root(void)
+ {
+-	xhci_debugfs_root = debugfs_create_dir("xhci", usb_debug_root);
++	xhci_debugfs_root = usb_debugfs_create_dir("xhci");
+ }
+ 
+ void __exit xhci_debugfs_remove_root(void)
 -- 
 2.23.0
 
