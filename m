@@ -2,61 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6FEE9F0CD4
-	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:16:56 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6275BF0CDB
+	for <lists+linux-mediatek@lfdr.de>; Wed,  6 Nov 2019 04:17:18 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9eVuETgZjl9wKc4gZJOxYFMjvZCeA1AxDjAM3Aw20+w=; b=AMr42b1aBEkxHU
-	ebj0CJNeHEeoeVc7gazEdrnxnPzOFCdfzmUAycYjOQFDw2mP2eansaqrTWzgCDkfGDU180QY3220g
-	Ws0rXmjKa7AsS+uPigz5WwcJB6gYYYimWhR44BYjkwIGP8hFQaYdz63IwS51UJtCEyZie4ndLKRQF
-	sGho1cR9GTyaKAztDn4Y+M3wRtJ89ifClOqJrTd5Xp3Wo3rCIoSKm3jYQLdN4rmskLlpqVrHpp78U
-	RC/MAXVnq6qkqnXr1BPLz/lsSqO2Z9lHGJLV+YW2MQnYpB+icyOW+qn8YN+Yi6c2EMm2S/7f97aL0
-	znz8ySU1GfoiI9vFba/Q==;
+	List-Owner; bh=gyxVV2NCeWV/szQk9+iCY/YXvufSYZ+U/fNZomjHbFY=; b=irXNOCPkIhg+xu
+	3kZZ+CG0mXdreMhD9ol3gHTRwT479vW10OaEMUYMj6R6id1zHrEvpOvpy4++saZkjRKGlfO6Kqrpn
+	FUxYEuQMUn97JAmtDpftnDS4COjXgjhnsQifUpMGj1Ey2rIXu9vFS34YufvxoWIwfcMlqLc3rRTxL
+	0HXCdMxfHrsH0Ej5qNuf7WUZP80jRTt85eIs+6uTxSO/VEOqKiLIIWnD+Fj1wCKzd9OmyfuaS0TvD
+	2aKoY3qXQruFMRqXQFeTpvd4Z2YZl6/y2TLMpEcvDsscfrcmxpsXtUxiT8K+6D9g/E+qgWjyECT0Z
+	+/C3oip6hUw8e9vDt/wA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSBoS-0000HQ-C6; Wed, 06 Nov 2019 03:16:52 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iSBon-0000cT-7s; Wed, 06 Nov 2019 03:17:13 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSBoP-0000Fe-7J; Wed, 06 Nov 2019 03:16:50 +0000
-X-UUID: 943ad40c58bf43a3a3bb7aa79468748e-20191105
-X-UUID: 943ad40c58bf43a3a3bb7aa79468748e-20191105
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ id 1iSBoi-0000Xj-Aw; Wed, 06 Nov 2019 03:17:09 +0000
+X-UUID: 90a66b077cf3485fbfab6743a1ed68d1-20191105
+X-UUID: 90a66b077cf3485fbfab6743a1ed68d1-20191105
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1136878642; Tue, 05 Nov 2019 19:16:42 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 5 Nov 2019 19:16:44 -0800
+ with ESMTP id 2125844526; Tue, 05 Nov 2019 19:17:00 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 5 Nov 2019 19:16:40 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 6 Nov 2019 11:16:36 +0800
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 6 Nov 2019 11:16:39 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 6 Nov 2019 11:16:33 +0800
+ Transport; Wed, 6 Nov 2019 11:16:36 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Felipe Balbi
  <balbi@kernel.org>
-Subject: [PATCH 12/28] usb: host: fotg2: use usb_debugfs_create_dir() to
- create directory
-Date: Wed, 6 Nov 2019 11:15:13 +0800
-Message-ID: <2d3de163f0b89a59660a7ccb27613f77e217c291.1573008520.git.chunfeng.yun@mediatek.com>
+Subject: [PATCH 13/28] usb: mon: use usb_debugfs_create_dir() to create
+ directory
+Date: Wed, 6 Nov 2019 11:15:14 +0800
+Message-ID: <7a8a17b4cfb395cbf25cacc9fe9796b04c4cfd49.1573008520.git.chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 References: <8cb137d5376b4e317dc22dcb9e81a1125b781f8f.1573008519.git.chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_191649_264557_0FE8BBD8 
-X-CRM114-Status: GOOD (  14.15  )
+X-CRM114-CacheID: sfid-20191105_191708_375712_7B4D0177 
+X-CRM114-Status: GOOD (  14.69  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -117,22 +119,22 @@ usb_debugfs_create_dir() to create directory under usb root
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
- drivers/usb/host/fotg210-hcd.c | 2 +-
+ drivers/usb/mon/mon_text.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/usb/host/fotg210-hcd.c b/drivers/usb/host/fotg210-hcd.c
-index 9e0c98d6bdb0..9c9030044b06 100644
---- a/drivers/usb/host/fotg210-hcd.c
-+++ b/drivers/usb/host/fotg210-hcd.c
-@@ -5709,7 +5709,7 @@ static int __init fotg210_hcd_init(void)
- 			sizeof(struct fotg210_qtd),
- 			sizeof(struct fotg210_itd));
+diff --git a/drivers/usb/mon/mon_text.c b/drivers/usb/mon/mon_text.c
+index bc5ecd5ff565..c34f952b70dc 100644
+--- a/drivers/usb/mon/mon_text.c
++++ b/drivers/usb/mon/mon_text.c
+@@ -763,7 +763,7 @@ static void mon_text_ctor(void *mem)
  
--	fotg210_debug_root = debugfs_create_dir("fotg210", usb_debug_root);
-+	fotg210_debug_root = usb_debugfs_create_dir("fotg210");
+ int __init mon_text_init(void)
+ {
+-	mon_dir = debugfs_create_dir("usbmon", usb_debug_root);
++	mon_dir = usb_debugfs_create_dir("usbmon");
+ 	return 0;
+ }
  
- 	retval = platform_driver_register(&fotg210_hcd_driver);
- 	if (retval < 0)
 -- 
 2.23.0
 
