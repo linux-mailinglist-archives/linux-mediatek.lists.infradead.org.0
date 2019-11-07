@@ -2,52 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E765F3131
-	for <lists+linux-mediatek@lfdr.de>; Thu,  7 Nov 2019 15:19:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id AEEE4F3371
+	for <lists+linux-mediatek@lfdr.de>; Thu,  7 Nov 2019 16:36:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:References:Message-Id:Date:
-	In-Reply-To:From:Subject:Mime-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0dNyRYWgn+v+sPQNCYLH1R15T0srNhA6cUTIF33HiQ4=; b=PS0rfuZLVQHY/d
-	oDu6w7yNRg/XtwnikQN4rZDa4I+a1syxnn8a/+j0uRb0qKyBRrwyY+3s6Gm7x0+xb9U1FCNC4CF6F
-	r6VU0jwuTJmTJK9w9wl8KizATd+CMpi0+VBwQYnwyoLWuqn+tecrzHibX3HKBjlkIUq0UHPi8Stud
-	fWyrl2KOpXvvUg9PLz4ImYnY+CjcmjgRZn3G+4keihY4ZnyCQy/QrOLMW6D4TW/u0QJqUMrW19FZ0
-	0QnzkavXXZb5+jQ9IBxSoEDO801IrH1M9v28vctz9n8Ni+CuEAA5j1Dc7e6Nhj3+LXZESAHYp1DKk
-	dteNCSSg1SG0YVXEK7sw==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Htn5EWG3scqLXv+5QH6yyQVGMB/DhXDTuIm49Kk7Uvk=; b=T6nki2W/640rd5
+	RQYlPb4Bmp/1qpnhcXT6DBKXt42Xe8awRSSiJ61PhHXGEjJtJwhiFsyCBP3+jWuKAEtxBJDZr0jud
+	VL3JnMVv1UGTPvO8Oh4RWulBLasvyFG3PnB1OT1JUNUkLPodprcUHmltugPsFhaBJB6qdOE1obYI/
+	ARUqOj6rhfZXiAlDj+GeDDlbo/YiraT/ae77wsli/OkmDzeviH8xQXQsJLgyB85XLR3EeA21++H6l
+	pgf+KuvuEsuqR6AaCjSsmnk8AOuKMkIxQ+BUXpjEWXP1Z6aFM53hcIIjIiqEj/pgTOOtd6ATfwyQc
+	8siB9kBZvstgD4FNR1qQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSid0-00044b-R8; Thu, 07 Nov 2019 14:19:14 +0000
-Received: from coyote.holtmann.net ([212.227.132.17] helo=mail.holtmann.org)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSibH-0002Ok-T8; Thu, 07 Nov 2019 14:17:30 +0000
-Received: from marcel-macpro.fritz.box (p5B3D2BA4.dip0.t-ipconnect.de
- [91.61.43.164])
- by mail.holtmann.org (Postfix) with ESMTPSA id 2A6C2CED08;
- Thu,  7 Nov 2019 15:26:23 +0100 (CET)
-Mime-Version: 1.0 (Mac OS X Mail 13.0 \(3601.0.10\))
-Subject: Re: [PATCH] bluetooth: btmtksdio: add MODULE_DEVICE_TABLE()
-From: Marcel Holtmann <marcel@holtmann.org>
-In-Reply-To: <20191107094610.22132-1-brgl@bgdev.pl>
-Date: Thu, 7 Nov 2019 15:17:18 +0100
-Message-Id: <D1FAA04C-681D-4832-AEDF-B4CE78FCA127@holtmann.org>
-References: <20191107094610.22132-1-brgl@bgdev.pl>
-To: Bartosz Golaszewski <brgl@bgdev.pl>
-X-Mailer: Apple Mail (2.3601.0.10)
+	id 1iSjpb-0003qA-S6; Thu, 07 Nov 2019 15:36:19 +0000
+Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iSjoP-0001aT-Jv; Thu, 07 Nov 2019 15:35:07 +0000
+Received: by mail-ot1-x341.google.com with SMTP id d5so2378820otp.4;
+ Thu, 07 Nov 2019 07:35:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=w4Awp6aOhgxlUbwSvEpd03sWLJcXbVuHqaesNRPrPJo=;
+ b=ijCUyc5iys61fP5qEnvqB8BCmoBcDMao3mCulvGbWvgt55dkkYzlQq0oJND3XvRnBi
+ YX/rX62aJZPdsgNa5wqocPqqKdiY4uUUBqLXVdkOVPvGzrCzQWan6hlUDPEy6m+8yrx/
+ ryzXIA6mflIgSgR//YvsyL1BcQ/3ElJPQwUxHHpuzOgUDRau5Aho3VfkvjiXUhq/UMSo
+ L2QLyWG0HdNqsrpkzuBewcFBc4q3C6WsFKch57Su8Q3AFKl/WCGb1LZSgIPs7q2NFUaJ
+ COtnVEMPQS6kzIgp3u/4H2p1rCrdZu6XeNJqzALe+E896Lw+1OuBmqf8O38BJwTTKygZ
+ XYIQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=w4Awp6aOhgxlUbwSvEpd03sWLJcXbVuHqaesNRPrPJo=;
+ b=TRgB0CWnUjnKwUqcpFhrGRs/MhA92eMe5szad1yAb+hxxI5qdTVpdpgpGFFFFTrue5
+ Cas21OE9Y3utZXMOZv4BWAnVCV6vITkW1NmWG5njddreDwT09he7AScFNKwzkNH5CXI1
+ lh6rRXCXn6kWmfEmelcE2G9vuDyv6cwniyAFGxDpa00i5KXhVFsPLmX/ukxpF1APELxk
+ 3wjf2bWLj817eEUsTzT0EIQmLs5xFNqR2snS2KJe6XsafqYB4uOLayZZP5zd9d+SEMvw
+ Yg6Uy7hJQ5DELsjuCS8QAv77DBtSlvF1/FA442EdiW269k6MZw+Jln8JYN4N8B+pZ8IF
+ 98lw==
+X-Gm-Message-State: APjAAAVi7nItYiO7xXi72CHVKrVRb5NT1ZNbyTDQprjiQDf3ovfoesHa
+ VspW+CpUx1m+9cUcNaF+6GlvLNDWO2xe9pGTLrg=
+X-Google-Smtp-Source: APXvYqztU5GX0wlrnLPTMRH3pBVlSCTlwNpEd98regvGSDq6dRbCARkLpuzO2q7834lI/wC55JMJf9/Mpu2uMwyeWNY=
+X-Received: by 2002:a9d:1b0d:: with SMTP id l13mr1540580otl.84.1573140903023; 
+ Thu, 07 Nov 2019 07:35:03 -0800 (PST)
+MIME-Version: 1.0
+References: <20191106140748.13100-1-gch981213@gmail.com>
+ <20191106140748.13100-2-gch981213@gmail.com>
+ <1573132996.8833.3.camel@mtksdaap41>
+In-Reply-To: <1573132996.8833.3.camel@mtksdaap41>
+From: Chuanhong Guo <gch981213@gmail.com>
+Date: Thu, 7 Nov 2019 23:34:49 +0800
+Message-ID: <CAJsYDV+UJFHsZWMOrvQFRm5BeG-6-YW8KSatSTxA=_gPuHJ6sw@mail.gmail.com>
+Subject: Re: [PATCH 1/2] mtd: mtk-quadspi: add support for memory-mapped flash
+ reading
+To: Yingjoe Chen <yingjoe.chen@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191107_061728_125027_079B186C 
-X-CRM114-Status: UNSURE (   7.95  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191107_073505_705432_9DBCF243 
+X-CRM114-Status: GOOD (  10.45  )
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.132.17 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (gch981213[at]gmail.com)
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (gch981213[at]gmail.com)
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,34 +95,43 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Johan Hedberg <johan.hedberg@gmail.com>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>, linux-kernel@vger.kernel.org,
- Bluez mailing list <linux-bluetooth@vger.kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, Vignesh Raghavendra <vigneshr@ti.com>,
+ Tudor Ambarus <tudor.ambarus@microchip.com>,
+ Richard Weinberger <richard@nod.at>, open list <linux-kernel@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>, linux-mtd@lists.infradead.org,
+ Miquel Raynal <miquel.raynal@bootlin.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Brian Norris <computersforpeace@gmail.com>,
+ David Woodhouse <dwmw2@infradead.org>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Bartosz,
+Hi!
 
-> This adds the missing MODULE_DEVICE_TABLE() for SDIO IDs. While certain
-> platforms using this driver indeed have HW issues causing problems if
-> the module is loaded too early - this should be handled from user-space
-> by blacklisting it or delaying the loading.
-> 
-> Signed-off-by: Bartosz Golaszewski <bgolaszewski@baylibre.com>
-> ---
-> drivers/bluetooth/btmtksdio.c | 1 +
-> 1 file changed, 1 insertion(+)
+On Thu, Nov 7, 2019 at 9:23 PM Yingjoe Chen <yingjoe.chen@mediatek.com> wrote:
+>
+> On Wed, 2019-11-06 at 22:07 +0800, Chuanhong Guo wrote:
+> > PIO reading mode on this controller is ridiculously inefficient
+> > (one cmd+addr+dummy sequence reads only one byte)
+> > This patch adds support for reading from memory-mapped flash area
+> > which increases reading speed from 1MB/s to 5.6MB/s
+>
+> This may not be true for all MTK SoC. Which one are you testing?
+>
 
-patch has been applied to bluetooth-next tree.
+I tested it on MT7629.
+There should be a 5x reading speed increment under DMA or direct read
+mode than PIO mode because PIO mode needs 30 or 36 clocks for every
+single byte of data while DMA or direct read only needs 24 or 30
+clocks for initial command/address/dummy and every byte of data after
+that only need 8 clocks.
 
-Regards
-
-Marcel
-
+Regards,
+Chuanhong Guo
 
 _______________________________________________
 Linux-mediatek mailing list
