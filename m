@@ -2,68 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0E294F6CCE
-	for <lists+linux-mediatek@lfdr.de>; Mon, 11 Nov 2019 03:30:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id F274DF6EBB
+	for <lists+linux-mediatek@lfdr.de>; Mon, 11 Nov 2019 07:52:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bLISxf10U3QuYx0qf/TYbCfxAdgcjHqTrxvsm2ytdXc=; b=MRcmBlrWUo0/ao
-	ZhosDrYigdvhSmA6ho2UL9f+R1c/ghVizLkdxnwTxv7p5sfhF/HdBg4YmbQtLbZOb27NfYDp2l9qC
-	KsyrzwoRszJiVCZn9wnW/rhfTxjMo74Whs3M8Vb1wXes2hECJIVhe30LGcUcVCZ2L1l9ZAAiR73Ke
-	OcDkbQl12oNr5Vjz6cxbZVJGEgEpt5x5hTyn62hhRlLFyTSGL3MiEbYRAqrCul7nIQWuHNAA2CJTO
-	jR4AdraFNvyWRxcM3QzntPGyWK7wMco7UMBH2p9HZAqhWEU/+XsQPAsI7+1smqR+gaCAt+t3d0AIG
-	q7ihLj6ZYzoRIiwAwydA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=RYdY6Aj5GHEkH0VVQa8tmrRhb3jssv+LCGiPevrmAzQ=; b=JiFpvWlW9xpDwF
+	8FZBSXhNW2+grmmgp4B68FE3ey1MISDGN5+njUjabhOKv0xKVNK0G56kfqqV2jd7RBqr6P002U5Bq
+	PF5rfIpvtz1ofWG9UbbC/5iqLMs9bjnwBX8aqlKBsRCbgZjrzLRkM7qtRuBox8q3eLn4fSHa0CEbA
+	l8dvM8NgL+WLlaiS9CbaDgYK2buiQ3s55GiB3y/tZdJZ+d8MVsHnmnu/HbyEM8JKrWNIN/7IQTKzr
+	cXv4gdfhJAYDaCBnNYAXcuvZX1ZqD1IufnfcXOWwFU72AIa33Tb3EagjV3Zqql3YPlUas1KJsh4T9
+	duY6cd26mVZy/08w2h/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iTzTd-0001Yg-Vq; Mon, 11 Nov 2019 02:30:50 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iU3Yk-0000n7-GR; Mon, 11 Nov 2019 06:52:22 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iTzTa-0001Xf-Uh
- for linux-mediatek@lists.infradead.org; Mon, 11 Nov 2019 02:30:48 +0000
-X-UUID: 3cf40d69e84248c9a7482b804a8f493b-20191110
+ id 1iU3Y4-0008Ow-2t; Mon, 11 Nov 2019 06:51:42 +0000
+X-UUID: 8a2e8b24864049688528a5fcd39d0afb-20191110
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=acEmGwvUjZOpmJa59Ln0aY1tOabs5B1U4izgcr2S2/4=; 
- b=GX52fptdC2by0mjmY64HLCuYWezz68+Ao7X2IYxAN41Fdu4EsrpdIMwC4U/ka53tsnGNEGJJ/jaBDrG+7nugDg3QanMDtHoWvu9ABOsuBOmkacTOrIx+OK+c2IRTGFARoxEoExHpGdmKEpYCz3dAhwPLa9DyxNz7v9vkbN64L6Y=;
-X-UUID: 3cf40d69e84248c9a7482b804a8f493b-20191110
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <eason.yen@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=1NPMi5s0B7PLycleggl/Ct6ul55hyyE2HzaKv33AkXA=; 
+ b=bdaC+/gnZss0+iInHREM2o3C5rYGGqZF+oGjr1dM2Oc7D0RQKQtaYaT2wV1DMQ123uYe5OJWYbF4Vxu3K4GdZXcidCXOjjms+uCuunJ5BpN8HVeOTOapb0RJwpflWxtbAmcQ+PKThxOZ7atyI1m8sQW1avidVo7UgW/zVfutN8s=;
+X-UUID: 8a2e8b24864049688528a5fcd39d0afb-20191110
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <mark-mc.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 926828510; Sun, 10 Nov 2019 18:30:48 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 10 Nov 2019 18:30:38 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 11 Nov 2019 10:30:38 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ with ESMTP id 827488120; Sun, 10 Nov 2019 22:51:40 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 10 Nov 2019 22:51:29 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 11 Nov 2019 14:51:28 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 11 Nov 2019 10:30:36 +0800
-From: Eason Yen <eason.yen@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v2 1/1] soc: mediatek: add SMC fid table for SIP interface
-Date: Mon, 11 Nov 2019 10:30:02 +0800
-Message-ID: <1573439402-16249-2-git-send-email-eason.yen@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1573439402-16249-1-git-send-email-eason.yen@mediatek.com>
-References: <1573439402-16249-1-git-send-email-eason.yen@mediatek.com>
+ Frontend Transport; Mon, 11 Nov 2019 14:51:28 +0800
+From: MarkLee <Mark-MC.Lee@mediatek.com>
+To: "David S. Miller" <davem@davemloft.net>, Sean Wang
+ <sean.wang@mediatek.com>, John Crispin <john@phrozen.org>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Andrew Lunn <andrew@lunn.ch>
+Subject: [PATCH net,v2 0/3]  Rework mt762x GDM setup flow
+Date: Mon, 11 Nov 2019 14:51:26 +0800
+Message-ID: <20191111065129.30078-1-Mark-MC.Lee@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191110_183046_992465_8F6453AB 
-X-CRM114-Status: UNSURE (   8.20  )
+X-CRM114-CacheID: sfid-20191110_225140_126736_7F743983 
+X-CRM114-Status: UNSURE (   6.80  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -88,65 +85,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com,
- Eason Yen <eason.yen@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org, Jakub
+ Kicinski <jakub.kicinski@netronome.com>, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Rene van Dorst <opensource@vdorst.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ MarkLee <Mark-MC.Lee@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-1. Add a header file to provide SIP interface to ATF
-for clients, please define MTK_SIP_XXX  with specific ID
+The mt762x GDM block is mainly used to setup the HW internal
+rx path from GMAC to RX DMA engine(PDMA) and the packet
+switching engine(PSE) is responsed to do the data forward
+following the GDM configuration.
 
-2. Add AUDIO SMC fid
-mtk sip call example:
-arm_smccc_smc(MTK_SIP_AUDIO_CONTROL,
-              MTK_AUDIO_SMC_OP_DRAM_REQUEST,
-              0, 0, 0, 0, 0, 0, &res)
+This patch set have three goals :
 
-Signed-off-by: Eason Yen <eason.yen@mediatek.com>
----
- include/linux/soc/mediatek/mtk_sip_svc.h |   28 ++++++++++++++++++++++++++++
- 1 file changed, 28 insertions(+)
- create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+1. Integrate GDM/PSE setup operations into single function "mtk_gdm_config"
 
-diff --git a/include/linux/soc/mediatek/mtk_sip_svc.h b/include/linux/soc/mediatek/mtk_sip_svc.h
-new file mode 100644
-index 0000000..00ee0f4
---- /dev/null
-+++ b/include/linux/soc/mediatek/mtk_sip_svc.h
-@@ -0,0 +1,28 @@
-+/* SPDX-License-Identifier: GPL-2.0 */
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
-+
-+#ifndef __MTK_SIP_SVC_H__
-+#define __MTK_SIP_SVC_H__
-+
-+#include <linux/kernel.h>
-+
-+/* Error Code */
-+#define SIP_SVC_E_SUCCESS               0
-+#define SIP_SVC_E_NOT_SUPPORTED         -1
-+#define SIP_SVC_E_INVALID_PARAMS        -2
-+#define SIP_SVC_E_INVALID_Range         -3
-+#define SIP_SVC_E_PERMISSION_DENY       -4
-+
-+#ifdef CONFIG_ARM64
-+#define MTK_SIP_SMC_AARCH_BIT			0x40000000
-+#else
-+#define MTK_SIP_SMC_AARCH_BIT			0x00000000
-+#endif
-+
-+/* AUDIO related SMC call */
-+#define MTK_SIP_AUDIO_CONTROL \
-+	(0x82000517 | MTK_SIP_SMC_AARCH_BIT)
-+#endif
-+/* __MTK_SIP_SVC_H__ */
+2. Refine the timing of GDM/PSE setup, move it from mtk_hw_init 
+   to mtk_open
+
+3. Enable GDM GDMA_DROP_ALL mode to drop all packet during the 
+   stop operation
+
+MarkLee (3):
+  net: ethernet: mediatek: Integrate GDM/PSE setup operations
+  net: ethernet: mediatek: Refine the timing of GDM/PSE setup
+  net: ethernet: mediatek: Enable GDM GDMA_DROP_ALL mode
+
+ drivers/net/ethernet/mediatek/mtk_eth_soc.c | 44 ++++++++++++++-------
+ drivers/net/ethernet/mediatek/mtk_eth_soc.h |  2 +
+ 2 files changed, 31 insertions(+), 15 deletions(-)
+
 -- 
-1.7.9.5
+2.17.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
