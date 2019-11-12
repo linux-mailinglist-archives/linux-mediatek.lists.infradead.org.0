@@ -2,69 +2,109 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82265F9403
-	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 16:21:15 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E717F942F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 16:27:23 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mFLA3tbQlRbW0BfNgRkZnk+CJLQIqGw9SI3K57gcszU=; b=mmpAZhfnDXGKXu
-	pwLMdEZe3h7PITpgyLzIH2BPxlWiCBY4xPP4Aj+7r76lKodubwrPWMyWRxv6l0O4I74Y1X8r9X72t
-	QG+BGb5b9YWQL7P4ksN/oXw0xePUl0hf2aPMUwVH/DH9lEBw85EF5IlreWCTfYNUiRvl3N1UI+XGh
-	MnebVO4x2LnYQRFFv+qZWI34ECjOTJ7fTDwYQSEjgNbynxV+lcDv+1gUGLhgFP/tH5cEjyhBOHBPq
-	rOegsHlii771J9Qf3NPfR7JSoM2AnpylifyHAE+G6PG8TCyOxPT4FYVEHerN8lrWK/nO0NTVoQcf3
-	iCTs8exrmWqmR5Ouh9YA==;
+	List-Owner; bh=G05WUss0dtprYO1if0fVa3ThjOOyFkQBYeqi8aKdCPc=; b=NlcxtUrp9WdlXw
+	trAHQQ9MSTM3UMTmWANtPr5wfGkPpTfdC+sx1oDzaRauzbc+PKsJKGEgg846QN39C1vm8qqO/ki70
+	Eft7Bz0a6Xlyyk5pOG7JnulfgXmqVVT8siFrJClE0a8DfhpYtJFsJl83wq32skfIi7v4x6Lrvo0yT
+	HKMNyLihrPDfh3b9TgZZwNOJW3vmHfLVgADG68dowHpbyrpnBBg73bH9IeI3AVRmdcMlJ+lPuLBnL
+	Bi8dGndX4z8nzqs9qp6KJmUHXYB0QsmCVsHLXlMY6v/nuw82jCEM20iWWj02VdW1Wa7bZI++KzvWI
+	V2yvdw07C+6a1hzz4HHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUXyf-0005Io-2B; Tue, 12 Nov 2019 15:21:09 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iUY4b-0008N2-AH; Tue, 12 Nov 2019 15:27:17 +0000
+Received: from fllv0015.ext.ti.com ([198.47.19.141])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUXyV-0005BK-IP; Tue, 12 Nov 2019 15:21:01 +0000
-X-UUID: 52c0ba2c7e15426eacd45d86468fb3a5-20191112
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=00tgKT8PrLUAKPdNow52sT3g7JzrzlOSLvjva9U8+i4=; 
- b=aNg9ioEjCTD/UuYmx8I4EXhlGq50s4f+4LuI+vC5bWHhtG48cfYoCBtno9Ajr0h99ttHRs+Quo6opAPXAJzhd5W/64euQwWYXsntYJvEa7I32kjrnZKFUoS8NXK1PzF3Bb2k9UdKHI1T+o/YMZpffUdob4Zihe7ll5WTNcQwzjU=;
-X-UUID: 52c0ba2c7e15426eacd45d86468fb3a5-20191112
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <mark-pk.tsai@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1419718016; Tue, 12 Nov 2019 07:20:55 -0800
-Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 12 Nov 2019 07:20:54 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 12 Nov 2019 23:20:52 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 12 Nov 2019 23:20:51 +0800
-From: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
-To: <lvqiang.huang@unisoc.com>
-Subject: Re: [PATCH] ARM: fix race in for_each_frame
-Date: Tue, 12 Nov 2019 23:20:51 +0800
-Message-ID: <C1108AB0-9156-426F-A933-486B4F5C91CF@unisoc.com> (raw)
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20191112132937.19335-1-mark-pk.tsai@mediatek.com>
-References: <C1108AB0-9156-426F-A933-486B4F5C91CF@unisoc.com>
+ id 1iUY4R-0008By-4v; Tue, 12 Nov 2019 15:27:08 +0000
+Received: from fllv0035.itg.ti.com ([10.64.41.0])
+ by fllv0015.ext.ti.com (8.15.2/8.15.2) with ESMTP id xACFQb3f062774;
+ Tue, 12 Nov 2019 09:26:37 -0600
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
+ s=ti-com-17Q1; t=1573572397;
+ bh=rMWe4kuCSfHHy9n9O/rcq81d4pIroGuMrSEkGSdS+F4=;
+ h=Date:From:To:CC:Subject:References:In-Reply-To;
+ b=qJC2c4gGQYe+XtOFSW8zlZ6fbeLzlhIG1/N+9RR3wjmUmTZcQjDPq3tizAB62H9Wf
+ ykV72RpP4wOCZ6+JGW04RXYY12/H1BdOJBATx7dzGQ23h9ee8UEBaXfiimW+PtPDcM
+ HSUerMrRmbZG0F0zAhB+t6ZLeVTMnjlwz+S4Vj3o=
+Received: from DFLE102.ent.ti.com (dfle102.ent.ti.com [10.64.6.23])
+ by fllv0035.itg.ti.com (8.15.2/8.15.2) with ESMTP id xACFQbnS126537;
+ Tue, 12 Nov 2019 09:26:37 -0600
+Received: from DFLE109.ent.ti.com (10.64.6.30) by DFLE102.ent.ti.com
+ (10.64.6.23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3; Tue, 12
+ Nov 2019 09:26:20 -0600
+Received: from lelv0326.itg.ti.com (10.180.67.84) by DFLE109.ent.ti.com
+ (10.64.6.30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3 via
+ Frontend Transport; Tue, 12 Nov 2019 09:26:20 -0600
+Received: from localhost (ileax41-snat.itg.ti.com [10.172.224.153])
+ by lelv0326.itg.ti.com (8.15.2/8.15.2) with ESMTP id xACFQbDL011087;
+ Tue, 12 Nov 2019 09:26:37 -0600
+Date: Tue, 12 Nov 2019 09:28:57 -0600
+From: Bin Liu <b-liu@ti.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: Re: [PATCH v2 05/13] usb: musb: create debugfs directory under usb
+ root
+Message-ID: <20191112152857.GA5853@uda0271908>
+Mail-Followup-To: Bin Liu <b-liu@ti.com>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Felipe Balbi <balbi@kernel.org>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Peter Chen <Peter.Chen@nxp.com>,
+ Minas Harutyunyan <hminas@synopsys.com>,
+ Cristian Birsan <cristian.birsan@microchip.com>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ Ludovic Desroches <ludovic.desroches@microchip.com>,
+ Kevin Cernekee <cernekee@gmail.com>,
+ Florian Fainelli <f.fainelli@gmail.com>,
+ bcm-kernel-feedback-list@broadcom.com,
+ Daniel Mack <daniel@zonque.org>,
+ Haojian Zhuang <haojian.zhuang@gmail.com>,
+ Robert Jarzmik <robert.jarzmik@free.fr>,
+ Shawn Guo <shawnguo@kernel.org>,
+ Sascha Hauer <s.hauer@pengutronix.de>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Fabio Estevam <festevam@gmail.com>,
+ NXP Linux Team <linux-imx@nxp.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Stephen Boyd <swboyd@chromium.org>,
+ Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>,
+ Colin Ian King <colin.king@canonical.com>,
+ Biju Das <biju.das@bp.renesas.com>,
+ Fabrizio Castro <fabrizio.castro@bp.renesas.com>,
+ "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
+ Yangtao Li <tiny.windzz@gmail.com>, linux-media@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-usb@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org,
+ linux-mediatek@lists.infradead.org
+References: <1573541519-28488-1-git-send-email-chunfeng.yun@mediatek.com>
+ <1573541519-28488-5-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 9C74EC90DFF44018F894B585C421D81AFE7E4C3710BA51A8D0AC3CF6940C760F2000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1573541519-28488-5-git-send-email-chunfeng.yun@mediatek.com>
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191112_072059_616076_60630FBF 
-X-CRM114-Status: GOOD (  13.44  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191112_072707_316628_8B5FACD8 
+X-CRM114-Status: GOOD (  12.84  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.47.19.141 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -72,8 +112,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,57 +124,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kstewart@linuxfoundation.org, mike-sl.lin@mediatek.com,
- alix.wu@mediatek.com, tglx@linutronix.de, eddy.lin@mediatek.com,
- gregkh@linuxfoundation.org, yj.chiang@mediatek.com, phil.chang@mediatek.com,
- linux-kernel@vger.kernel.org, linux@armlinux.org.uk,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- matthias.bgg@gmail.com, mark-pk.tsai@mediatek.com, info@metux.net,
- enlai.chu@unisoc.com, allison@lohutok.net
+Cc: Peter Chen <Peter.Chen@nxp.com>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
+ Yangtao Li <tiny.windzz@gmail.com>, linux-kernel@vger.kernel.org,
+ Minas Harutyunyan <hminas@synopsys.com>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
+ Fabio Estevam <festevam@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
+ Robert Jarzmik <robert.jarzmik@free.fr>, Kevin Cernekee <cernekee@gmail.com>,
+ Ludovic Desroches <ludovic.desroches@microchip.com>,
+ bcm-kernel-feedback-list@broadcom.com, NXP Linux Team <linux-imx@nxp.com>,
+ Cristian Birsan <cristian.birsan@microchip.com>, linux-media@vger.kernel.org,
+ Fabrizio Castro <fabrizio.castro@bp.renesas.com>,
+ Sascha Hauer <s.hauer@pengutronix.de>,
+ Haojian Zhuang <haojian.zhuang@gmail.com>, Stephen Boyd <swboyd@chromium.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ linux-arm-kernel@lists.infradead.org, Biju Das <biju.das@bp.renesas.com>,
+ Felipe Balbi <balbi@kernel.org>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>,
+ linux-usb@vger.kernel.org, Nicolas Ferre <nicolas.ferre@microchip.com>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Colin Ian King <colin.king@canonical.com>, Shawn Guo <shawnguo@kernel.org>,
+ Daniel Mack <daniel@zonque.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+Hi,
 
-> . 2019.11.12..21:31.Mark-PK Tsai <mark-pk.tsai@mediatek.com> ...
-> 
-> The sv_pc, which is saved in the stack, may be an invalid address
-> if the target thread is running on another processor in the meantime.
-> It will cause kernel crash at `ldr r2, [sv_pc, #-4]`.
-> 
-> Check if sv_pc is valid before use it like unwind_frame in
-> arch/arm/kernel/unwind.c.
-> 
-> Signed-off-by: Mike-SL Lin <mike-sl.lin@mediatek.com>
-> Signed-off-by: Mark-PK Tsai <mark-pk.tsai@mediatek.com>
-> ---
-> arch/arm/lib/backtrace.S | 5 +++++
-> 1 file changed, 5 insertions(+)
-> 
-> diff --git a/arch/arm/lib/backtrace.S b/arch/arm/lib/backtrace.S
-> index 582925238d65..84f06381bbfb 100644
-> --- a/arch/arm/lib/backtrace.S
-> +++ b/arch/arm/lib/backtrace.S
-> @@ -64,6 +64,11 @@ for_each_frame:    tst    frame, mask        @ Check for address exceptions
->        sub    sv_pc, sv_pc, offset    @ Correct PC for prefetching
->        bic    sv_pc, sv_pc, mask    @ mask PC/LR for the mode
-> 
-> +        mov    r0, sv_pc
-> +        bl    kernel_text_address    @ check if sv_pc is valid
-> +        cmp    r0, #0            @ if sv_pc is not kernel text
-> +        beq    1006f            @ address, abort backtrace
-> +
+On Tue, Nov 12, 2019 at 02:51:51PM +0800, Chunfeng Yun wrote:
+> Now the USB gadget subsystem can use the USB debugfs root directory,
+> so move musb's directory from the root of the debugfs filesystem into
+> the root of usb
 
-The sv_pc can be a kernel module text. 
+My opinion is this move is unnecessary. I breaks existing debug tools or
+documentation which is already published on Internet. 
 
-The module text area is ok for kernel_text_address().
+-Bin.
 
-> 1003:        ldr    r2, [sv_pc, #-4]    @ if stmfd sp!, {args} exists,
->        ldr    r3, .Ldsi+4        @ adjust saved 'pc' back one
->        teq    r3, r2, lsr #11        @ instruction
-> -- 
-> 2.18.0
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
