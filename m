@@ -2,107 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E717F942F
-	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 16:27:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 46526F967B
+	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 18:02:02 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=G05WUss0dtprYO1if0fVa3ThjOOyFkQBYeqi8aKdCPc=; b=NlcxtUrp9WdlXw
-	trAHQQ9MSTM3UMTmWANtPr5wfGkPpTfdC+sx1oDzaRauzbc+PKsJKGEgg846QN39C1vm8qqO/ki70
-	Eft7Bz0a6Xlyyk5pOG7JnulfgXmqVVT8siFrJClE0a8DfhpYtJFsJl83wq32skfIi7v4x6Lrvo0yT
-	HKMNyLihrPDfh3b9TgZZwNOJW3vmHfLVgADG68dowHpbyrpnBBg73bH9IeI3AVRmdcMlJ+lPuLBnL
-	Bi8dGndX4z8nzqs9qp6KJmUHXYB0QsmCVsHLXlMY6v/nuw82jCEM20iWWj02VdW1Wa7bZI++KzvWI
-	V2yvdw07C+6a1hzz4HHA==;
+	List-Owner; bh=mKuM0J1bypJPc7fZUmLsFhcpUOotogXNmQDvhXrq5Po=; b=aQHws7T0/14M5M
+	48I361VS2Y5cvi1yCtm3wstOF4//3n/pRvClGRh/BXEwtVBNfQPvXEPlg1nv61ULViIoXl9o4nkL+
+	/UjshAh9NtyhGJ0M2OaSG/UfdVnyCrBE4H9zoCdI9z/6Ov4eL1masSZxZSF7hExfN9D58OezQTAtQ
+	rNdsaIruzxUfDBigCV12zpooHsz4nXARpZs6OB4aLuKGNq0P2AKdQiNT+hEZmBCaoKq0+ZvLycuo6
+	YEPrlVq5sPmKrhiUmT8zJxlYVTzZqJq1+3nUdlfEyjdmlW1LfecwLqTQ1fW8hh+89DfX5uj5u30Q5
+	Kg9eF3zIutS4XvJQf1+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUY4b-0008N2-AH; Tue, 12 Nov 2019 15:27:17 +0000
-Received: from fllv0015.ext.ti.com ([198.47.19.141])
+	id 1iUZYA-0002x1-9S; Tue, 12 Nov 2019 17:01:54 +0000
+Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUY4R-0008By-4v; Tue, 12 Nov 2019 15:27:08 +0000
-Received: from fllv0035.itg.ti.com ([10.64.41.0])
- by fllv0015.ext.ti.com (8.15.2/8.15.2) with ESMTP id xACFQb3f062774;
- Tue, 12 Nov 2019 09:26:37 -0600
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
- s=ti-com-17Q1; t=1573572397;
- bh=rMWe4kuCSfHHy9n9O/rcq81d4pIroGuMrSEkGSdS+F4=;
- h=Date:From:To:CC:Subject:References:In-Reply-To;
- b=qJC2c4gGQYe+XtOFSW8zlZ6fbeLzlhIG1/N+9RR3wjmUmTZcQjDPq3tizAB62H9Wf
- ykV72RpP4wOCZ6+JGW04RXYY12/H1BdOJBATx7dzGQ23h9ee8UEBaXfiimW+PtPDcM
- HSUerMrRmbZG0F0zAhB+t6ZLeVTMnjlwz+S4Vj3o=
-Received: from DFLE102.ent.ti.com (dfle102.ent.ti.com [10.64.6.23])
- by fllv0035.itg.ti.com (8.15.2/8.15.2) with ESMTP id xACFQbnS126537;
- Tue, 12 Nov 2019 09:26:37 -0600
-Received: from DFLE109.ent.ti.com (10.64.6.30) by DFLE102.ent.ti.com
- (10.64.6.23) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3; Tue, 12
- Nov 2019 09:26:20 -0600
-Received: from lelv0326.itg.ti.com (10.180.67.84) by DFLE109.ent.ti.com
- (10.64.6.30) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3 via
- Frontend Transport; Tue, 12 Nov 2019 09:26:20 -0600
-Received: from localhost (ileax41-snat.itg.ti.com [10.172.224.153])
- by lelv0326.itg.ti.com (8.15.2/8.15.2) with ESMTP id xACFQbDL011087;
- Tue, 12 Nov 2019 09:26:37 -0600
-Date: Tue, 12 Nov 2019 09:28:57 -0600
-From: Bin Liu <b-liu@ti.com>
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Subject: Re: [PATCH v2 05/13] usb: musb: create debugfs directory under usb
- root
-Message-ID: <20191112152857.GA5853@uda0271908>
-Mail-Followup-To: Bin Liu <b-liu@ti.com>,
- Chunfeng Yun <chunfeng.yun@mediatek.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Felipe Balbi <balbi@kernel.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Peter Chen <Peter.Chen@nxp.com>,
- Minas Harutyunyan <hminas@synopsys.com>,
- Cristian Birsan <cristian.birsan@microchip.com>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Ludovic Desroches <ludovic.desroches@microchip.com>,
- Kevin Cernekee <cernekee@gmail.com>,
- Florian Fainelli <f.fainelli@gmail.com>,
- bcm-kernel-feedback-list@broadcom.com,
- Daniel Mack <daniel@zonque.org>,
- Haojian Zhuang <haojian.zhuang@gmail.com>,
- Robert Jarzmik <robert.jarzmik@free.fr>,
- Shawn Guo <shawnguo@kernel.org>,
- Sascha Hauer <s.hauer@pengutronix.de>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Fabio Estevam <festevam@gmail.com>,
- NXP Linux Team <linux-imx@nxp.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Stephen Boyd <swboyd@chromium.org>,
- Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>,
- Colin Ian King <colin.king@canonical.com>,
- Biju Das <biju.das@bp.renesas.com>,
- Fabrizio Castro <fabrizio.castro@bp.renesas.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
- Yangtao Li <tiny.windzz@gmail.com>, linux-media@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-usb@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org
-References: <1573541519-28488-1-git-send-email-chunfeng.yun@mediatek.com>
- <1573541519-28488-5-git-send-email-chunfeng.yun@mediatek.com>
+ id 1iUZY6-0002vm-Qn
+ for linux-mediatek@lists.infradead.org; Tue, 12 Nov 2019 17:01:52 +0000
+Received: by mail-pg1-x542.google.com with SMTP id q17so12231073pgt.9
+ for <linux-mediatek@lists.infradead.org>; Tue, 12 Nov 2019 09:01:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=GDojT++zYyimFKXjGTgtIMvoNwjyBW8FizODRtTHlkU=;
+ b=gqdeS5lER8xfVdf3MPfzRhQWtIdYGVkfvSEfkEikV5sK+iUbNyoUDxfqd0+Gf8qRon
+ qIHWABuQ6RrIuV9KP9et/nCefEYxwgv0VU6xWDH/6WigGjakxakLa/uAk/OZfK6aVs7K
+ LvkNK+dcIIHQrnxcoqA/IqdlZjyzz32xgRlYjaX7VbauzkexzJ8FhEebDZqN5k6CV5bv
+ 1E2P4sJBj7B20dAtY+vRdNYhwg7+Crzg+hEcAIZsxPn2ZVIiajYUgAJYOPGKF8JwDcwE
+ 0IZzMwP9eCWaBLOLkKUPL66WfWRvEgGNsCoRadK6bSa6QAU6DElkyAo1XDy0qVlKPQZg
+ tUWA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=GDojT++zYyimFKXjGTgtIMvoNwjyBW8FizODRtTHlkU=;
+ b=LM1F4Ao+JZ8r8qo+0wtVpq2lm3Fm1hIfLlwk5EPjt0mci1Nsnun7IqvAFTjnuNgTce
+ ZzumkHWH8fmZhmaeJeFc5if5YtAkNBfan5XAppwJLNb7F1fbzeDhriGdtHp+nYnBCGs7
+ azkSpztZ4ks7p8xE2Imvf4bJX9Hu1RcEjb2vU8/O4UgDKbGHyCk6Ln9I6JSxatuQqf87
+ t33cfqq+qKGbSS3uXOBdt6aoP2/FQRj+/H0nnAPFxj8r5oh0jsLXIvYgptHGK8LT6Op4
+ kXZsgUHJF8P6735JAptnuOZGItD56ytSo1ppzWXr6ivDH+jQSWLRtakc9c/1b7GroB52
+ 9Nlw==
+X-Gm-Message-State: APjAAAXPv7/+MyyMe6wMAdB5i0+t/vlEX4dYTjeGsxDjuICBwoeuvnCk
+ NAnIGZYVV9FJrofX6zUfsf3dkw==
+X-Google-Smtp-Source: APXvYqw4G8Nv44pA6Fs7EzjALZ0qCpPOe1DYkXKQWUmcJweMaKJlE6IhOyuyuFHl+85B3ZJqZHBicw==
+X-Received: by 2002:aa7:85d7:: with SMTP id z23mr38064618pfn.24.1573578109877; 
+ Tue, 12 Nov 2019 09:01:49 -0800 (PST)
+Received: from yoga (104-188-17-28.lightspeed.sndgca.sbcglobal.net.
+ [104.188.17.28])
+ by smtp.gmail.com with ESMTPSA id y138sm20294845pfb.174.2019.11.12.09.01.47
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 12 Nov 2019 09:01:48 -0800 (PST)
+Date: Tue, 12 Nov 2019 09:01:44 -0800
+From: Bjorn Andersson <bjorn.andersson@linaro.org>
+To: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
+Subject: Re: [PATCH 2/2] pinctrl: Use new GPIO_LINE_DIRECTION
+Message-ID: <20191112170144.GF3797@yoga>
+References: <20191112141819.GA22076@localhost.localdomain>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1573541519-28488-5-git-send-email-chunfeng.yun@mediatek.com>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
+In-Reply-To: <20191112141819.GA22076@localhost.localdomain>
+User-Agent: Mutt/1.12.2 (2019-09-21)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191112_072707_316628_8B5FACD8 
-X-CRM114-Status: GOOD (  12.84  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20191112_090150_875422_5AFCE2AD 
+X-CRM114-Status: GOOD (  11.76  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.47.19.141 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -112,7 +86,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -124,47 +97,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Peter Chen <Peter.Chen@nxp.com>,
+Cc: Andrew Lunn <andrew@lunn.ch>,
  Alexandre Belloni <alexandre.belloni@bootlin.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
- Yangtao Li <tiny.windzz@gmail.com>, linux-kernel@vger.kernel.org,
- Minas Harutyunyan <hminas@synopsys.com>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Fabio Estevam <festevam@gmail.com>, Florian Fainelli <f.fainelli@gmail.com>,
- Robert Jarzmik <robert.jarzmik@free.fr>, Kevin Cernekee <cernekee@gmail.com>,
+ Heiko Stuebner <heiko@sntech.de>, Geert Uytterhoeven <geert+renesas@glider.be>,
+ Neil Armstrong <narmstrong@baylibre.com>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ Patrice Chotard <patrice.chotard@st.com>, Paul Cercueil <paul@crapouillou.net>,
+ Eric Anholt <eric@anholt.net>, linux-stm32@st-md-mailman.stormreply.com,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ Florian Fainelli <f.fainelli@gmail.com>,
+ Gregory Clement <gregory.clement@bootlin.com>, Chen-Yu Tsai <wens@csie.org>,
+ linux-rockchip@lists.infradead.org,
  Ludovic Desroches <ludovic.desroches@microchip.com>,
- bcm-kernel-feedback-list@broadcom.com, NXP Linux Team <linux-imx@nxp.com>,
- Cristian Birsan <cristian.birsan@microchip.com>, linux-media@vger.kernel.org,
- Fabrizio Castro <fabrizio.castro@bp.renesas.com>,
- Sascha Hauer <s.hauer@pengutronix.de>,
- Haojian Zhuang <haojian.zhuang@gmail.com>, Stephen Boyd <swboyd@chromium.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org, Biju Das <biju.das@bp.renesas.com>,
- Felipe Balbi <balbi@kernel.org>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>,
- linux-usb@vger.kernel.org, Nicolas Ferre <nicolas.ferre@microchip.com>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Colin Ian King <colin.king@canonical.com>, Shawn Guo <shawnguo@kernel.org>,
- Daniel Mack <daniel@zonque.org>
+ Andy Gross <agross@kernel.org>, bcm-kernel-feedback-list@broadcom.com,
+ linux-arm-msm@vger.kernel.org,
+ Sebastian Hesselbarth <sebastian.hesselbarth@gmail.com>,
+ Jason Cooper <jason@lakedaemon.net>, mazziesaccount@gmail.com,
+ Ray Jui <rjui@broadcom.com>, linux-gpio@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Scott Branden <sbranden@broadcom.com>,
+ Sean Wang <sean.wang@kernel.org>, Nicolas Ferre <nicolas.ferre@microchip.com>,
+ linux-kernel@vger.kernel.org, linux-renesas-soc@vger.kernel.org,
+ Stefan Wahren <wahrenst@gmx.net>, Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ linux-oxnas@groups.io
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+On Tue 12 Nov 06:18 PST 2019, Matti Vaittinen wrote:
+> diff --git a/drivers/pinctrl/qcom/pinctrl-msm.c b/drivers/pinctrl/qcom/pinctrl-msm.c
+> index 763da0be10d6..8844ca1261d5 100644
+> --- a/drivers/pinctrl/qcom/pinctrl-msm.c
+> +++ b/drivers/pinctrl/qcom/pinctrl-msm.c
+> @@ -485,8 +485,8 @@ static int msm_gpio_get_direction(struct gpio_chip *chip, unsigned int offset)
+>  
+>  	val = msm_readl_ctl(pctrl, g);
+>  
+> -	/* 0 = output, 1 = input */
+> -	return val & BIT(g->oe_bit) ? 0 : 1;
+> +	return val & BIT(g->oe_bit) ? GPIO_LINE_DIRECTION_OUT :
+> +				      GPIO_LINE_DIRECTION_IN;
+>  }
+>  
 
-On Tue, Nov 12, 2019 at 02:51:51PM +0800, Chunfeng Yun wrote:
-> Now the USB gadget subsystem can use the USB debugfs root directory,
-> so move musb's directory from the root of the debugfs filesystem into
-> the root of usb
+For pinctrl-msm
 
-My opinion is this move is unnecessary. I breaks existing debug tools or
-documentation which is already published on Internet. 
+Reviewed-by: Bjorn Andersson <bjorn.andersson@linaro.org>
 
--Bin.
-
+Regards,
+Bjorn
 
 _______________________________________________
 Linux-mediatek mailing list
