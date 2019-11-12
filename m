@@ -2,73 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E5A2BF8A05
-	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 08:56:25 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 70BC3F8A15
+	for <lists+linux-mediatek@lfdr.de>; Tue, 12 Nov 2019 09:02:14 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cTLKeV1Z6QtsqPlp9ucbIQzyTajNdAB4XW2QIS5qDXA=; b=KB013OwGNRJF6a
-	+rEVwIF/eKpqb6PX1tC4MDnXMjh7Z1lFz3TZm7NQcAuQvBXSynhFfd3ldEx0o4RvChKJJQiL7Qdb6
-	zJTTLlp9RniJM4fNLv0j5PAUDxxTELJsdz6XR2W7XV/P6QaQxrBZW8iJKXSDKuvwkK3VFxSg5+6TB
-	U1uaEA/lqLvt8QXNATOyCS4/TtHwq1rzQayKIkwf5V/bU1cIUytnvLXsEcX+DSg13Q/EXG4ZE/swg
-	QmnSniGJXCd98gVEAjjKM4Vn5fItZgTMP50mbftMqWes2qKfRM9lTMmyx61G9Vc+dYfsrR2kXZ9bV
-	B7abm4cTQbIJgl2QALZA==;
+	List-Owner; bh=T0c6pp2wyfkktU9C6RC/RwyFZnU1S8o9H2wf0NK5BYI=; b=cb40mCvHpMnmiX
+	aEvhdilDhayDoxoJBYxrEd11JykbzMrwTEmANhOjcYkNv33D+YiLsOGIaU/yXeK0f7J8+16YyQknd
+	r/3HC+2/s45OeKHqaIvhODypiQnx9OUXyrp7wmE6g+9WtFcjG9dg2+beXyV3eBb26L88Dk83lxybA
+	waBunLEUNpUiVae/lMlxB5mwMLJ5IYkZgO5A5ZxFPlzRVDcmdlvE+PUA/lBj6UiaIyNc+4s+SyBzs
+	AlmRaBTFFLYklIIEXbbDNgT1AJBdDdcGd+CuF+zuxrQI6C8j33fUBozGI5QrtDrN+Lvc3PdxGxj3m
+	MjKEjVVP2KaaYFsRhGmA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUR2B-00013o-OS; Tue, 12 Nov 2019 07:56:19 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1iUR7p-0003NF-Hn; Tue, 12 Nov 2019 08:02:09 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUR27-00012h-QE
- for linux-mediatek@lists.infradead.org; Tue, 12 Nov 2019 07:56:17 +0000
-Received: by mail-ed1-x543.google.com with SMTP id w6so14122705edx.10
- for <linux-mediatek@lists.infradead.org>; Mon, 11 Nov 2019 23:56:15 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=d9CMSdwYc+0bvqNY3bj8MTiXUzC4S4T1DHmbw/hjbNU=;
- b=WVdrF/LbuxNK+RZNB4qelNBp/e4iwRucvZrfay5MYioNfC69yEfkiq3mEKN7+QocMA
- +ngIf7oLH3g4EnilEip1f0heRVINC3xqFE6iutRFJUMUuXRepN6qv6Ogb7eeXtq+437w
- VySjdaJ+YGZ4xajTgloZcmw/30nVqMmAXL1jo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=d9CMSdwYc+0bvqNY3bj8MTiXUzC4S4T1DHmbw/hjbNU=;
- b=t790P41tg92LSNjPCQP8bvLfzl+23h6FYvBg3YIG2kKnfjXRnKJFPgLVYrTszKtVSC
- OcfhjgsQxTXkt2cACK6L1hBrT7RfhLyYoSrzhsaryuYasmty3sKOSvVjTR3SnPazBq9u
- MR5P/9XJglqKJwUhcgc22jC0GN9JgbPa4k5vRLVbgm5YfHW8BRCvW3YG9n/SgFogvHJq
- U+RqdWYsCEHxOSotfMg9Z8qkqUalMIdz282poQZflpG79yhbotkFxlKWyDePPdrPKQZ7
- MpKvPVqUV9G2vEKUF5f0vdWkYFaqtllKQfPNL7N/t8cXLxz878QP3ThArJ3lSOMMtI/e
- Xkqg==
-X-Gm-Message-State: APjAAAVYhhOWZFYmcsH6R+db3Odgf8Unde0pi4GbH60YtEAM28Vpr2au
- ii/ZOHrn5bVa8r9K1HWDlZODch73G3tsdjRWQPHH/A==
-X-Google-Smtp-Source: APXvYqykVU2DO/Wmg+8yGSGg8XpY3WapNGgB/334lOZGqtD4Ac7vjW8R99gzzSZakZJfvmlK2D1L57s3QPnfDwLf6zI=
-X-Received: by 2002:aa7:c694:: with SMTP id n20mr31255461edq.87.1573545374058; 
- Mon, 11 Nov 2019 23:56:14 -0800 (PST)
+ id 1iUR7l-0003Ma-QB
+ for linux-mediatek@lists.infradead.org; Tue, 12 Nov 2019 08:02:07 +0000
+X-UUID: 2d8e83b9f8264b79a243471675a0898e-20191112
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=4RVlzdcDuNrzrh5f83WnNDQstUL/8Qt6uk2mPJJ+ERY=; 
+ b=U6HE9yGRkWNGNiLOwdYGx+akMPQRd2fQ6EyZG59SmsfYeSAA6b9Bo1rE3GeN8kaXfl4V1fu6PINlag6n42MKaddop2rblfHrU1V/WloQvJjbFcjeokYILq8CcOqbyIH+3zC3m8z5G/a2QzjOnHYGD32Y1vtcMHlugKJMoUJRCbI=;
+X-UUID: 2d8e83b9f8264b79a243471675a0898e-20191112
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <eason.yen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 873376593; Tue, 12 Nov 2019 00:00:21 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 12 Nov 2019 00:00:02 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 12 Nov 2019 16:00:01 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 12 Nov 2019 16:00:00 +0800
+Message-ID: <1573545601.14232.8.camel@mtkswgap22>
+Subject: Re: [PATCH v2] soc: mediatek: add SMC fid table for SIP interface
+From: Eason Yen <eason.yen@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Tue, 12 Nov 2019 16:00:01 +0800
+In-Reply-To: <71b9cfcc-bd4f-75de-0057-d64c5dc49e92@gmail.com>
+References: <1573439402-16249-1-git-send-email-eason.yen@mediatek.com>
+ <71b9cfcc-bd4f-75de-0057-d64c5dc49e92@gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-References: <20191014075812.181942-1-pihsun@chromium.org>
- <20191014075812.181942-3-pihsun@chromium.org>
- <20191111225316.GC3108315@builder>
-In-Reply-To: <20191111225316.GC3108315@builder>
-From: Pi-Hsun Shih <pihsun@chromium.org>
-Date: Tue, 12 Nov 2019 15:55:38 +0800
-Message-ID: <CANdKZ0ecgLjhnL9CawW+pPerTtPhnMkaUSmjxcB10OoMBzQaGQ@mail.gmail.com>
-Subject: Re: [PATCH v20 2/4] remoteproc/mediatek: add SCP support for mt8183
-To: Bjorn Andersson <bjorn.andersson@linaro.org>,
- Erin Lo <erin.lo@mediatek.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191111_235615_878313_83E865D0 
-X-CRM114-Status: GOOD (  17.43  )
+X-CRM114-CacheID: sfid-20191112_000205_849308_BCB166D7 
+X-CRM114-Status: GOOD (  12.14  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -78,7 +71,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,92 +84,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ohad Ben-Cohen <ohad@wizery.com>, Nicolas Boichat <drinkcat@chromium.org>,
- "open list:REMOTE PROCESSOR \(REMOTEPROC\) SUBSYSTEM"
- <linux-remoteproc@vger.kernel.org>, open list <linux-kernel@vger.kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
-Thanks for the review, I'll address them in the next version. Some
-inline comment below.
+Hi Matthias,
 
-On Tue, Nov 12, 2019 at 6:53 AM Bjorn Andersson
-<bjorn.andersson@linaro.org> wrote:
->
-> On Mon 14 Oct 00:58 PDT 2019, Pi-Hsun Shih wrote:
-> > diff --git a/drivers/remoteproc/mtk_scp.c b/drivers/remoteproc/mtk_scp.c
-> [..]
-> > +struct platform_device *scp_get_pdev(struct platform_device *pdev)
->
-> I'm unable to find a patch that calls this, but I assume you're only
-> using the returned struct platform_device * in order to call the other
-> exported functions in this driver.
 
-Some more information:
+I will upstream mt6779 sound card driver on Mark's ASoC repo:
+http://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git
 
-Patches for drivers that are using this function includes:
-https://patchwork.kernel.org/patch/11126059/
-https://patchwork.kernel.org/patch/11134913/
-https://patchwork.kernel.org/patch/11135073/
-https://patchwork.kernel.org/patch/11138511/
-https://patchwork.kernel.org/patch/11140755/
+But it is still under internal reviewing and not yet upstream.
+So, I think that this patch could be upstream first.
 
-The returned platform_device are used either:
-* As a pointer passing back to the scp_ipi_{register,unregister,send} APIs
-  # This is the case above.
-* Use the ->dev field for either passing to dma_alloc_coherent
-(11134913, 11138511), or logging
-(https://patchwork.kernel.org/patch/11140755/ mdp_vpu_register).
-  # Probably would need to export another function for mtk_scp* ->
-device* if going for this change.
+Maybe, other mtk sip clients can use this header and add their's
+specific MTSK_SIP_* ID.
 
-A particular problematic patch for this change is
-https://patchwork.kernel.org/patch/11135073/, which stores both
-platform_device from SCP or VPU in the same field, but it can be
-changed to two different fields.
+Regards,
+Eason
 
->
-> If this is the case I would suggest that you return a struct mtk_scp *
-> instead, as this makes your API cleaner and prevents confusion about
-> what platform_device could/should be passed in.
->
-> Note that you don't need to disclose the struct mtk_scp to your clients,
-> just add a "struct mtk_scp;" in include/remoteproc/mtk_scp.h and your
-> clients can pass this pointer around.
 
-Ok I'll change to this.
-
-> > +             return -ENOMEM;
-> > +     }
-> > +
-> > +     /* Reserved SCP code size */
-> > +     scp->dram_size = MAX_CODE_SIZE;
-> > +     scp->cpu_addr = dma_alloc_coherent(scp->dev, scp->dram_size,
-> > +                                        &scp->phys_addr, GFP_KERNEL);
->
-> Don't you have a problem with that the reserved memory region must be
-> 8MB for this allocation to succeed? If so, consider using devm_ioremap
-> or similar to map the region.
-
-Yes the reserved memory need to be large enough.
-There are other drivers (https://patchwork.kernel.org/patch/11134913/,
-https://patchwork.kernel.org/patch/11138511/) that also use
-dma_alloc_coherent on the same reserved memory, so we need to use
-dma_alloc_coherent here too.
-
-It seems to be problematic if this dma_alloc_coherent is not called
-before the other two dma_alloc_coherent, I'll check this.
-
-> [...]
+On Mon, 2019-11-11 at 16:17 +0100, Matthias Brugger wrote:
+> 
+> On 11/11/2019 03:30, Eason Yen wrote:
+> > soc: mediatek: add SMC fid table for SIP interface
+> > 
+> > 1. Add a header file to provide SIP interface to ATF
+> >    for clients, please define MTK_SIP_XXX  with specific ID
+> > 
+> > 2. Add AUDIO SMC fid
+> >    mtk sip call example:
+> >    arm_smccc_smc(MTK_SIP_AUDIO_CONTROL,
+> >                  MTK_AUDIO_SMC_OP_DRAM_REQUEST,
+> >                  0, 0, 0, 0, 0, 0, &res)
+> 
+> Are you planning to upstream a driver consuming this interface?
+> If so, I propose to add this patch to the submission of the driver. Sounds good?
+> 
 > Regards,
-> Bjorn
+> Matthias
+> 
+> > 
+> > 
+> > Eason Yen (1):
+> >   soc: mediatek: add SMC fid table for SIP interface
+> > 
+> >  include/linux/soc/mediatek/mtk_sip_svc.h |   28 ++++++++++++++++++++++++++++
+> >  1 file changed, 28 insertions(+)
+> >  create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+> > 
 
 _______________________________________________
 Linux-mediatek mailing list
