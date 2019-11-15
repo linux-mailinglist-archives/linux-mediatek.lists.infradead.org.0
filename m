@@ -2,95 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CB7E6FD341
-	for <lists+linux-mediatek@lfdr.de>; Fri, 15 Nov 2019 04:22:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A5C4FD46C
+	for <lists+linux-mediatek@lfdr.de>; Fri, 15 Nov 2019 06:33:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Cc:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=t1ucSR2oNJC+8DkeGm1Uhhy3rCrWMqmJpSXdWdhoQ8A=; b=FobHxZmfw7Z58h
-	Ar9Ct/ZhHN93vjz2P+Xf4kPoKOdljynQWdCqohg+xXCyxOsDyi1A/Zd6+Gve6uSxiLyy4+xYj6X+V
-	df4odbMMVAR13ydhaN8uob/NY+vQRukbPDEGVqXa/1wpfaCZKspujfEkoF642GTU+nyN/WTvgPCoF
-	+gszUDHmopP0hnufOY83xsJc+hPi+XmKOhuYmqJGzTgvBaRviLSc3r5avUOXhQorJg+Q/oFKIP9p1
-	iaqO78Y1yttU5tsxThFVCu2ZwDM2/LOhbQMoLhjv2eev8EV7+hWSDifIRZSK+huVpL3ZKLQnLNqZo
-	L+Du+YM90b+oGcKKtmWA==;
+	List-Owner; bh=uDbwzFCZdfbduYU1i4Yjw2Z1oway2h8aZieIF3bCELo=; b=qTmqh55HzGxYmc
+	50QiOhkwA9NGWN2vbHYiNIjG3k6vFBZKFNOK45Kv8pnzv7LsxS8OkTToJ10GoFsNKOo70Ns5QLhFz
+	vy64MMapdzEkiPB1y5ejnRXnhADWd2ZiZ+DtYtSvMLsTyM4BjB4nhpGFlkgaz38DmNZQiPFM23GJY
+	v41D7TAcHGPjZbqOfSukeLO336l0gGZixiE2k0urmBPm9Om8cFWK/ofh/xHxPMTkycAvFN8lGsKg1
+	OHKjXMZp8/tLnfwr5Dhtk1jfEVHvB9oXfCLUK+xf3ZVdB64WHLzZKFB8pF2F40K3jPwgl6xFD5ccn
+	EMMRCsq9CvZCK5cOXSYQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iVSBT-0002Ej-Uh; Fri, 15 Nov 2019 03:22:07 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1iVUEp-0002qW-5P; Fri, 15 Nov 2019 05:33:43 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iVSBJ-00025o-3a; Fri, 15 Nov 2019 03:21:58 +0000
-Received: from localhost (unknown [104.132.150.99])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 4D03720706;
- Fri, 15 Nov 2019 03:21:55 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573788116;
- bh=8/cY/P7mOC5ZWRzkTqP24RnTXXHa15NbkFVIzTSK364=;
- h=Date:From:To:Subject:References:In-Reply-To:From;
- b=JR2qBG/tbs+2u/BVDVXsZprjTey36G9Dh+snSLlcAX1kxtk0l/rMWe3cwt4MlhdCq
- 5+ZfbOGgxzp29+cn8YPcISIO/YK4QCO4q0+1cz43bS73NJanBJf/fA8r/Yp3jRS/Yf
- 1RbyPZ7FUwo1BaJ36gTF8p0Kq3zbdl2nqTCaTAw0=
-Date: Fri, 15 Nov 2019 11:21:53 +0800
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: Bin Liu <b-liu@ti.com>, Chunfeng Yun <chunfeng.yun@mediatek.com>,
- Felipe Balbi <balbi@kernel.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Peter Chen <Peter.Chen@nxp.com>, Minas Harutyunyan <hminas@synopsys.com>,
- Cristian Birsan <cristian.birsan@microchip.com>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- Ludovic Desroches <ludovic.desroches@microchip.com>,
- Kevin Cernekee <cernekee@gmail.com>,
- Florian Fainelli <f.fainelli@gmail.com>,
- bcm-kernel-feedback-list@broadcom.com, Daniel Mack <daniel@zonque.org>,
- Haojian Zhuang <haojian.zhuang@gmail.com>,
- Robert Jarzmik <robert.jarzmik@free.fr>, Shawn Guo <shawnguo@kernel.org>,
- Sascha Hauer <s.hauer@pengutronix.de>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Fabio Estevam <festevam@gmail.com>, NXP Linux Team <linux-imx@nxp.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Stephen Boyd <swboyd@chromium.org>,
- Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>,
- Colin Ian King <colin.king@canonical.com>,
- Biju Das <biju.das@bp.renesas.com>,
- Fabrizio Castro <fabrizio.castro@bp.renesas.com>,
- "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
- Yangtao Li <tiny.windzz@gmail.com>, linux-media@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-usb@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org
-Subject: Re: [PATCH v2 05/13] usb: musb: create debugfs directory under usb
- root
-Message-ID: <20191115032153.GC793701@kroah.com>
-References: <1573541519-28488-1-git-send-email-chunfeng.yun@mediatek.com>
- <1573541519-28488-5-git-send-email-chunfeng.yun@mediatek.com>
- <20191112152857.GA5853@uda0271908>
- <20191114032018.GA122287@kroah.com>
- <20191114140234.GB5853@uda0271908>
+ id 1iVUEf-0002iK-Kn
+ for linux-mediatek@lists.infradead.org; Fri, 15 Nov 2019 05:33:34 +0000
+X-UUID: dcb6dcca020045d4bb33f473dddfca2c-20191114
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=gmCzP92C7G4qxYX2rnqn8wBdFvNJ/rhP3o6A+8fl2G0=; 
+ b=p/0M+qb3eDhRKvkPjf5KIXIhey3RDqBLvm4wVRzwdzGedrLCWcssIEsRW6WoO67jYIwIRQluHTe6fZxFykUyTtlzesNJ0CJsw8krIMCdlyc4spEWGIVDSawR6179YjCF4zV2P86Y2ZW2IDmenHgTTjfrkYibawnOqp+EL76wJoU=;
+X-UUID: dcb6dcca020045d4bb33f473dddfca2c-20191114
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <eason.yen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 892533983; Thu, 14 Nov 2019 21:33:26 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 14 Nov 2019 21:33:22 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 15 Nov 2019 13:33:19 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 15 Nov 2019 13:33:20 +0800
+Message-ID: <1573796002.14232.14.camel@mtkswgap22>
+Subject: Re: [PATCH] ASoC: mediatek: common: refine mtk_afe_fe_hw_params
+From: Eason Yen <eason.yen@mediatek.com>
+To: Mark Brown <broonie@kernel.org>
+Date: Fri, 15 Nov 2019 13:33:22 +0800
+In-Reply-To: <20191112173409.GI5195@sirena.co.uk>
+References: <1573532538-30602-1-git-send-email-eason.yen@mediatek.com>
+ <1573532538-30602-2-git-send-email-eason.yen@mediatek.com>
+ <20191112173409.GI5195@sirena.co.uk>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191114140234.GB5853@uda0271908>
-User-Agent: Mutt/1.12.2 (2019-09-21)
+X-TM-SNTS-SMTP: 86CE66E82027474A9B0B7FFEFCC7979862667C6949F3058B7B4509A9EF0DCEB82000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191114_192157_190663_83851716 
-X-CRM114-Status: GOOD (  20.93  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20191114_213333_693979_62ECC141 
+X-CRM114-Status: UNSURE (   9.50  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -102,56 +89,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: matthias.bgg@gmail.com, alsa-devel@alsa-project.org,
+ linux-mediatek@lists.infradead.org, jiaxin.yu@mediatek.com,
+ chipeng.chang@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Nov 14, 2019 at 08:02:34AM -0600, Bin Liu wrote:
-> On Thu, Nov 14, 2019 at 11:20:18AM +0800, Greg Kroah-Hartman wrote:
-> > On Tue, Nov 12, 2019 at 09:28:57AM -0600, Bin Liu wrote:
-> > > Hi,
-> > > 
-> > > On Tue, Nov 12, 2019 at 02:51:51PM +0800, Chunfeng Yun wrote:
-> > > > Now the USB gadget subsystem can use the USB debugfs root directory,
-> > > > so move musb's directory from the root of the debugfs filesystem into
-> > > > the root of usb
-> > > 
-> > > My opinion is this move is unnecessary. I breaks existing debug tools or
-> > > documentation which is already published on Internet. 
-> > 
-> > Having a "root" directory for a single random driver seems like you are
-> > making your driver a "very important" thing in the overall scheme of the
-> > kernel, right?  What's wrong with using the usb subdirectory like all
+Hi Mark,
+
+ 
+On Tue, 2019-11-12 at 17:34 +0000, Mark Brown wrote:
+> On Tue, Nov 12, 2019 at 12:22:18PM +0800, Eason Yen wrote:
+...
 > 
-> Agree, it wasn't the right thing to do at the first place. But now
-> changing it adds support burden, because people very often refer to the
-> old information on the internet which no longer matches to the new
-> location. Basically, it is a cost of ABI change.
-
-What information says that /sys/kernel/debug/mdev/ is the location for
-this?  Is it in-kernel?
-
-> > other USB drivers use (after this patch series is merged)?  That feels
-> > like a much more "sane" way to handle the wide-open debugfs namespace.
+> It'd be better to split these two into separate patches, they're two
+> separate things.  Ideally the refactoring should just be simple code
+> motion.  Right now the patch is a bit difficult to follow.
 > 
-> Though I commented on this musb patch, my opinion is for this whole
-> series, either drop the whole series or apply the whole series.
 
-I've applied all but this one and 2 others that did not build properly.
+Ok, I will separate this patch soon.
 
-> > Yes, there are no rules when it comes to debugfs file names and
-> > locations, but let's try to be sane please.
+
+> >  static int mtk_regmap_update_bits(struct regmap *map, int reg,
+> > -			   unsigned int mask,
+> > -			   unsigned int val, int shift)
+> > +				  unsigned int mask,
+> > +				  unsigned int val, int shift)
+> >  {
+> >  	if (reg < 0 || WARN_ON_ONCE(shift < 0))
+> >  		return 0;
 > 
-> Fine with me. I can still support questions such as "can't open
-> /sys/kernel/debug/musb-hdrc.0/testmode: No such file or directory".
+> This is an unrelated indentation change?
 
-What tool looks for that?
+Yes, it is an alignment that to match open parenthesis.
 
-thanks,
+> 
+> > +	dev_info(afe->dev, "%s(), %s, ch %d, rate %d, fmt %d, dma_addr %pad, dma_area %p, dma_bytes 0x%zx\n",
+> > +		 __func__, memif->data->name,
+> > +		 channels, rate, format,
+> > +		 &substream->runtime->dma_addr,
+> > +		 substream->runtime->dma_area,
+> > +		 substream->runtime->dma_bytes);
+> 
+> This is going to get noisy, dev_dbg at most please.
 
-greg k-h
+Ok, thanks for your suggestion.
 
+
+Regards,
+Eason
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
