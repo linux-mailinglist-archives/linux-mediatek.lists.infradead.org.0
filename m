@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DC6EC105C90
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 23:21:01 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F665105C93
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 23:22:28 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OApwNw1zfJoq9bBS14QqG/1pzn5zPjJvt9vvGEDrBTs=; b=ejDouOrYHTWYOO
-	PsLEJIlms0yMS2ggaun0OCehmqhxtdGwa7oisecX8iMfWceYY+kCs+dNZAMVUJMv3ykDjjJDGVdnE
-	TZTUUrB3smin8lF/jqEOqUSyDWfCQZEhwLWZd8e0Rpya76dZct2rdL0YRFcdDoD2z2gqxkLSE53di
-	TcLoOPRBfERx3AE7mw6KWFr3DbWD+UYKX/PdiRdxalizPONkOdRLLE1SJgc6ElLjbMwMH+4C/3JOL
-	ifhn5TpNC6mHM/1r3X9iA+VnQzOl/mIfnrvsexxStxRlQiLwA7Dpzna39cRZgUINlyalu1QRBfVBB
-	qWQBYO1RCZMXy3jV0BGg==;
+	List-Owner; bh=bZRFHe0+TmofOjJMKimOWDbRELXAzhPUH0enoBxAdjw=; b=tHAHmPQq6oDU12
+	Zdnb3ABBkEl/mx4Tgn9tISVQB+7EvDOp3T/4JqC/ASv3SSbRpgIPjn3FT9So8k2zLnkhyDGR8oBcn
+	DiPfZBMPKhOuUo3VgXghaSRf66J2/WsIEP+mWEYBKFlEgiwQS+JDdGSmZS/0+lDgqE2qXoAPxVOfy
+	R3zgPEAI3XQdWm0s7cnNBNj359zaZ1pbc1G179WCy71OSRtqGct7737o2DkikFtmsYxnUnqU3FlqJ
+	2KlA1LKvfJd/A9+3EEz0cr92NRiYDxl2zA8VVQJVTVww+T7UtNw/7jGRgAamgJaicFAeug9+yYoSh
+	vGOi2GfgFuAKJ52wGDWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXuoh-0003Cf-L9; Thu, 21 Nov 2019 22:20:47 +0000
+	id 1iXuqC-0003Vl-Hr; Thu, 21 Nov 2019 22:22:20 +0000
 Received: from relay.sw.ru ([185.231.240.75])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXuod-0003C3-MY; Thu, 21 Nov 2019 22:20:45 +0000
+ id 1iXuq9-0003VI-6c; Thu, 21 Nov 2019 22:22:18 +0000
 Received: from [192.168.15.154] by relay.sw.ru with esmtp (Exim 4.92.3)
  (envelope-from <aryabinin@virtuozzo.com>)
- id 1iXuoL-0007nb-4j; Fri, 22 Nov 2019 01:20:25 +0300
+ id 1iXuq2-0007vl-St; Fri, 22 Nov 2019 01:22:11 +0300
 Subject: Re: [PATCH v4 1/2] kasan: detect negative size in memory operation
  function
-To: Dmitry Vyukov <dvyukov@google.com>
+To: Walter Wu <walter-zh.wu@mediatek.com>,
+ Alexander Potapenko <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>
 References: <20191112065302.7015-1-walter-zh.wu@mediatek.com>
- <040479c3-6f96-91c6-1b1a-9f3e947dac06@virtuozzo.com>
- <CACT4Y+botuVF6KanfRrudDguw7HGkJ1mrwvxYZQQF0eWoo-Lxw@mail.gmail.com>
 From: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Message-ID: <ad1aa63b-38d7-4c8d-00c0-bd215cf9b66e@virtuozzo.com>
-Date: Fri, 22 Nov 2019 01:18:38 +0300
+Message-ID: <b2ba5228-dec0-9acf-49e9-d57f156814ef@virtuozzo.com>
+Date: Fri, 22 Nov 2019 01:20:23 +0300
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.2.2
 MIME-Version: 1.0
-In-Reply-To: <CACT4Y+botuVF6KanfRrudDguw7HGkJ1mrwvxYZQQF0eWoo-Lxw@mail.gmail.com>
+In-Reply-To: <20191112065302.7015-1-walter-zh.wu@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_142043_734169_47380909 
-X-CRM114-Status: GOOD (  15.33  )
+X-CRM114-CacheID: sfid-20191121_142217_239698_42267878 
+X-CRM114-Status: GOOD (  11.29  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -60,12 +60,10 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>,
- wsd_upstream <wsd_upstream@mediatek.com>, LKML <linux-kernel@vger.kernel.org>,
- kasan-dev <kasan-dev@googlegroups.com>, Linux-MM <linux-mm@kvack.org>,
- Alexander Potapenko <glider@google.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, linux-kernel@vger.kernel.org,
+ kasan-dev@googlegroups.com, linux-mm@kvack.org,
+ linux-mediatek@lists.infradead.org, Andrew Morton <akpm@linux-foundation.org>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -73,75 +71,47 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 11/21/19 10:58 PM, Dmitry Vyukov wrote:
-> On Thu, Nov 21, 2019 at 1:27 PM Andrey Ryabinin <aryabinin@virtuozzo.com> wrote:
->>> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
->>> index 6814d6d6a023..4bfce0af881f 100644
->>> --- a/mm/kasan/common.c
->>> +++ b/mm/kasan/common.c
->>> @@ -102,7 +102,8 @@ EXPORT_SYMBOL(__kasan_check_write);
->>>  #undef memset
->>>  void *memset(void *addr, int c, size_t len)
->>>  {
->>> -     check_memory_region((unsigned long)addr, len, true, _RET_IP_);
->>> +     if (!check_memory_region((unsigned long)addr, len, true, _RET_IP_))
->>> +             return NULL;
->>>
->>>       return __memset(addr, c, len);
->>>  }
->>> @@ -110,8 +111,9 @@ void *memset(void *addr, int c, size_t len)
->>>  #undef memmove
->>>  void *memmove(void *dest, const void *src, size_t len)
->>>  {
->>> -     check_memory_region((unsigned long)src, len, false, _RET_IP_);
->>> -     check_memory_region((unsigned long)dest, len, true, _RET_IP_);
->>> +     if (!check_memory_region((unsigned long)src, len, false, _RET_IP_) ||
->>> +         !check_memory_region((unsigned long)dest, len, true, _RET_IP_))
->>> +             return NULL;
->>>
->>>       return __memmove(dest, src, len);
->>>  }
->>> @@ -119,8 +121,9 @@ void *memmove(void *dest, const void *src, size_t len)
->>>  #undef memcpy
->>>  void *memcpy(void *dest, const void *src, size_t len)
->>>  {
->>> -     check_memory_region((unsigned long)src, len, false, _RET_IP_);
->>> -     check_memory_region((unsigned long)dest, len, true, _RET_IP_);
->>> +     if (!check_memory_region((unsigned long)src, len, false, _RET_IP_) ||
->>> +         !check_memory_region((unsigned long)dest, len, true, _RET_IP_))
->>> +             return NULL;
->>>
->>
->> I realized that we are going a wrong direction here. Entirely skipping mem*() operation on any
->> poisoned shadow value might only make things worse. Some bugs just don't have any serious consequences,
->> but skipping the mem*() ops entirely might introduce such consequences, which wouldn't happen otherwise.
->>
->> So let's keep this code as this, no need to check the result of check_memory_region().
+On 11/12/19 9:53 AM, Walter Wu wrote:
+> KASAN missed detecting size is a negative number in memset(), memcpy(),
+> and memmove(), it will cause out-of-bounds bug. So needs to be detected
+> by KASAN.
 > 
-> I suggested it.
+> If size is a negative number, then it has a reason to be defined as
+> out-of-bounds bug type.
+> Casting negative numbers to size_t would indeed turn up as
+> a large size_t and its value will be larger than ULONG_MAX/2,
+> so that this can qualify as out-of-bounds.
 > 
-> For our production runs it won't matter, we always panic on first report.
-> If one does not panic, there is no right answer. You say: _some_ bugs
-> don't have any serious consequences, but skipping the mem*() ops
-> entirely might introduce such consequences. The opposite is true as
-> well, right? :) And it's not hard to come up with a scenario where
-> overwriting memory after free or out of bounds badly corrupts memory.
-> I don't think we can somehow magically avoid bad consequences in all
-> cases.
->
+> KASAN report is shown below:
+> 
+>  BUG: KASAN: out-of-bounds in kmalloc_memmove_invalid_size+0x70/0xa0
+>  Read of size 18446744073709551608 at addr ffffff8069660904 by task cat/72
+> 
+>  CPU: 2 PID: 72 Comm: cat Not tainted 5.4.0-rc1-next-20191004ajb-00001-gdb8af2f372b2-dirty #1
+>  Hardware name: linux,dummy-virt (DT)
+>  Call trace:
+>   dump_backtrace+0x0/0x288
+>   show_stack+0x14/0x20
+>   dump_stack+0x10c/0x164
+>   print_address_description.isra.9+0x68/0x378
+>   __kasan_report+0x164/0x1a0
+>   kasan_report+0xc/0x18
+>   check_memory_region+0x174/0x1d0
+>   memmove+0x34/0x88
+>   kmalloc_memmove_invalid_size+0x70/0xa0
+> 
+> [1] https://bugzilla.kernel.org/show_bug.cgi?id=199341
+> 
+> Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
+> Reported-by: Dmitry Vyukov <dvyukov@google.com>
+> Suggested-by: Dmitry Vyukov <dvyukov@google.com>
+> Reviewed-by: Dmitry Vyukov <dvyukov@google.com>
+> Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
+> Cc: Alexander Potapenko <glider@google.com>
+> Reported-by: kernel test robot <lkp@intel.com>
+> ---
 
-Absolutely right. My point was that if it's bad consequences either way,
-than there is no point in complicating this code, it doesn't buy us anything.
-
- 
-> What I was thinking about is tests. We need tests for this. And we
-> tried to construct tests specifically so that they don't badly corrupt
-> memory (e.g. OOB/UAF reads, or writes to unused redzones, etc), so
-> that it's possible to run all of them to completion reliably. Skipping
-> the actual memory options allows to write such tests for all possible
-> scenarios. That's was my motivation.
-
-But I see you point now. No objections to the patch in that case.
+Reviewed-by: Andrey Ryabinin <aryabinin@virtuozzo.com>
 
 _______________________________________________
 Linux-mediatek mailing list
