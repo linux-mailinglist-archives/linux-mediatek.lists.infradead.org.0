@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A964E104F00
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 10:16:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2D401104EFC
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 10:16:02 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=afcrLMSqhmxfweHgsed6ENmbIix9YhIT6rllMsi90+w=; b=Rzq/TQMd8PeEJ/
-	sj1M7+NmRQMF7U4qjci4TkwTOJkV99DuLnml/eXaJv6CymodOg2yojV9TuEZsRsRYp6zumgfVIU77
-	GKk/88CtBj/Icqa1apSE2rNeD8n0Rrc5NVn+5Dkignf6N4LdNE0ApmEroPhip4q0FRtqOk4i/2TPN
-	6pH1AMULfgYVqX0rUN4uS7MFEDNfzGDChjqVMO3AoDef+WWK2k8e5a/fovkWbGkWoI2f4opM+d8Nr
-	qm6nBK/slDeukdl1Vlqa14AhnmcNr7qwei2RicIJSVZRouRTZAzz3emZ4xwXyJDNkyqHA1Q1vsyrM
-	uSM6kBrrO2CBbajLjBFA==;
+	List-Owner; bh=kgSpxjRj1ddX13zoaFX3ZvQhK7O/T0PGJYqkkC2ZadY=; b=VpSTu03rQ/CHr1
+	tpPJmKcDl6YbG7e3VRauQ2ybtDa07oRaUqsjQs41rOoA8JqoRaCha+5UQv3rhbAz/Gie8A2Ls55e2
+	IIDZm/X4KIvCCO3N77cZ3hgGVmA7NV4DfELDYST6/YWJigAbvspvUQ0MKWelhRZquqGwIf2QEXPVK
+	+HdRSWHdSAwrC21ydZEHf7MabJKNSq3FH1OdEaqMHCLDNQyAdtiZ/wRG/0KyKIooizVChySqWiOx9
+	jSWb5GvkltNMrzVW8QMXfMAK6ykq8GtXkW+egh2/shwVPEaswqDuUZIY/k7oGkPoUCuHw/BPMa4RA
+	uHW8pJ3Ndq/wiSVmC8FQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXiZO-0005De-LN; Thu, 21 Nov 2019 09:16:10 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iXiZB-0004uq-1m; Thu, 21 Nov 2019 09:15:57 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXiX1-0001nl-Jo; Thu, 21 Nov 2019 09:13:45 +0000
-X-UUID: 5f64757ebefa413a88e1fecb7de96c72-20191121
+ id 1iXiWx-0001c6-Lu; Thu, 21 Nov 2019 09:13:42 +0000
+X-UUID: fa03384213314b3c80b6455febd04410-20191121
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=z1evitQJPyeiEI/V0SBkkReklkkebIVSw5JGTAaBmCI=; 
- b=KkM142mgYXcBnX2eXoUE+cxMidEiYAQ9xFscxE63O77yVJvIyZG9kcuCD3mZoQLIkUUB2ivnVZcfNRiD5s1N6rB7pMvGXs4dF84rRkV2OxpCgN1ny+wGgzfgsKb3SGA8jNNTNl/Tlvrn+EIeyNd6l4N79Qm1L3gFyTjMuLvAjMo=;
-X-UUID: 5f64757ebefa413a88e1fecb7de96c72-20191121
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ bh=sl45dCqyFBghX7iI92Q7u2tkimKd2NiTQVbQ2SfVmoo=; 
+ b=DmginNfCD/7ZrWqMsXN8l371CPx60pRYymb5I75klgB0LDgXwsqNnIu231p9+JTj8Hu0lgYY0sa6VbrXkLjcwPrfGALnoNGI/Jvgt7y9yJsdiQksKURWuAdqo/MB0xd43w5uahnuuByT19fAaoGqbNohjZtXcmuMFZ2YHsgz1Ko=;
+X-UUID: fa03384213314b3c80b6455febd04410-20191121
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <dennis-yc.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2042890020; Thu, 21 Nov 2019 01:13:39 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 1043932171; Thu, 21 Nov 2019 01:13:34 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 01:13:44 -0800
+ 15.0.1395.4; Thu, 21 Nov 2019 01:13:39 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 17:13:06 +0800
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 21 Nov 2019 17:13:10 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Thu, 21 Nov 2019 17:13:30 +0800
 From: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger
  <matthias.bgg@gmail.com>, Jassi Brar <jassisinghbrar@gmail.com>
-Subject: [PATCH v1 09/12] soc: mediatek: cmdq: add mem move function
-Date: Thu, 21 Nov 2019 17:12:29 +0800
-Message-ID: <1574327552-11806-10-git-send-email-dennis-yc.hsieh@mediatek.com>
+Subject: [PATCH v1 10/12] soc: mediatek: cmdq: add loop function
+Date: Thu, 21 Nov 2019 17:12:30 +0800
+Message-ID: <1574327552-11806-11-git-send-email-dennis-yc.hsieh@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 In-Reply-To: <1574327552-11806-1-git-send-email-dennis-yc.hsieh@mediatek.com>
 References: <1574327552-11806-1-git-send-email-dennis-yc.hsieh@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 2C673BA1539CA06C501A936EC27C5308E05B7F846F01518540D3F38435ED2A452000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_011343_831971_65CF9F84 
-X-CRM114-Status: GOOD (  10.08  )
+X-CRM114-CacheID: sfid-20191121_011339_994355_AB897654 
+X-CRM114-Status: GOOD (  11.40  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -97,83 +96,99 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add memory move function in cmdq helper functions which helps copy value
-between physical address.
+Add finalize loop function in cmdq helper functions which loop whole pkt
+in gce hardware thread without cpu operation.
 
 Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
 ---
- drivers/soc/mediatek/mtk-cmdq-helper.c |   26 ++++++++++++++++++++++++++
- include/linux/soc/mediatek/mtk-cmdq.h  |   13 +++++++++++++
- 2 files changed, 39 insertions(+)
+ drivers/soc/mediatek/mtk-cmdq-helper.c |   41 ++++++++++++++++++++++++++++++++
+ include/linux/soc/mediatek/mtk-cmdq.h  |    8 +++++++
+ 2 files changed, 49 insertions(+)
 
 diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-index 4c90fed..4235cf8 100644
+index 4235cf8..3b10241 100644
 --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
 +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-@@ -282,6 +282,32 @@ int cmdq_pkt_write_s(struct cmdq_pkt *pkt, dma_addr_t addr,
+@@ -385,12 +385,27 @@ int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value)
  }
- EXPORT_SYMBOL(cmdq_pkt_write_s);
+ EXPORT_SYMBOL(cmdq_pkt_assign);
  
-+int cmdq_pkt_mem_move(struct cmdq_pkt *pkt, phys_addr_t src_addr,
-+		      phys_addr_t dst_addr)
++static bool cmdq_pkt_finalized(struct cmdq_pkt *pkt)
 +{
++	struct cmdq_instruction *inst;
++
++	if (pkt->cmd_buf_size < 2 * CMDQ_INST_SIZE)
++		return false;
++
++	inst = pkt->va_base + pkt->cmd_buf_size - 2 * CMDQ_INST_SIZE;
++	return inst->op == CMDQ_CODE_EOC;
++}
++
+ static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
+ {
+ 	struct cmdq_client *cl = pkt->cl;
+ 	struct cmdq_instruction inst = { {0} };
+ 	int err;
+ 
++	/* do not finalize twice */
++	if (cmdq_pkt_finalized(pkt))
++		return 0;
++
+ 	/* insert EOC and generate IRQ for each command iteration */
+ 	inst.op = CMDQ_CODE_EOC;
+ 	inst.value = CMDQ_EOC_IRQ_EN;
+@@ -406,6 +421,32 @@ static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
+ 	return err;
+ }
+ 
++int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt)
++{
++	struct cmdq_client *cl = pkt->cl;
 +	struct cmdq_instruction inst = { {0} };
-+	const u16 dst_reg_idx = CMDQ_SPR_TEMP;
-+	const u16 swap_reg_idx = CMDQ_SPR1;
 +	int err;
 +
-+	err = cmdq_pkt_read_s(pkt, src_addr, swap_reg_idx);
++	/* do not finalize twice */
++	if (cmdq_pkt_finalized(pkt))
++		return 0;
++
++	/* insert EOC and generate IRQ for each command iteration */
++	inst.op = CMDQ_CODE_EOC;
++	err = cmdq_pkt_append_command(pkt, inst);
 +	if (err < 0)
 +		return err;
 +
-+	err = cmdq_pkt_assign(pkt, dst_reg_idx, CMDQ_ADDR_HIGH(dst_addr));
-+	if (err < 0)
-+		return err;
++	/* JUMP abaolute to begin */
++	inst.op = CMDQ_CODE_JUMP;
++	inst.offset = 1;
++	inst.value = pkt->pa_base >> cmdq_mbox_shift(cl->chan);
++	err = cmdq_pkt_append_command(pkt, inst);
 +
-+	inst.op = CMDQ_CODE_WRITE_S;
-+	inst.arg_b_t = CMDQ_REG_TYPE;
-+	inst.sop = dst_reg_idx;
-+	inst.offset = CMDQ_ADDR_LOW(dst_addr);
-+	inst.arg_b = swap_reg_idx;
-+
-+	return cmdq_pkt_append_command(pkt, inst);
++	return err;
 +}
-+EXPORT_SYMBOL(cmdq_pkt_mem_move);
++EXPORT_SYMBOL(cmdq_pkt_finalize_loop);
 +
- int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
+ static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
  {
- 	struct cmdq_instruction inst = { {0} };
+ 	struct cmdq_pkt *pkt = (struct cmdq_pkt *)data.data;
 diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-index fb48d3c..b3474f2 100644
+index b3474f2..77e8944 100644
 --- a/include/linux/soc/mediatek/mtk-cmdq.h
 +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-@@ -13,6 +13,7 @@
- 
- #define CMDQ_NO_TIMEOUT		0xffffffffu
- #define CMDQ_SPR_TEMP		0
-+#define CMDQ_SPR1		1
- 
- struct cmdq_pkt;
- 
-@@ -126,6 +127,18 @@ int cmdq_pkt_write_s(struct cmdq_pkt *pkt, dma_addr_t addr,
- 		     u32 value, u32 mask);
+@@ -203,6 +203,14 @@ int cmdq_pkt_poll_mask(struct cmdq_pkt *pkt, u8 subsys,
+ int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value);
  
  /**
-+ * cmdq_pkt_mem_move() - append read and write commands to copy data from
-+ *			 source address to destination address.
++ * cmdq_pkt_finalize_loop() - Append EOC and jump command to loop pkt.
 + * @pkt:	the CMDQ packet
-+ * @src_addr:	the source physical address
-+ * @dst_addr:	the destination physical address
 + *
 + * Return: 0 for success; else the error code is returned
 + */
-+int cmdq_pkt_mem_move(struct cmdq_pkt *pkt, phys_addr_t src_addr,
-+		      phys_addr_t dst_addr);
++int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt);
 +
 +/**
-  * cmdq_pkt_wfe() - append wait for event command to the CMDQ packet
+  * cmdq_pkt_flush_async() - trigger CMDQ to asynchronously execute the CMDQ
+  *                          packet and call back at the end of done packet
   * @pkt:	the CMDQ packet
-  * @event:	the desired event type to "wait and CLEAR"
 -- 
 1.7.9.5
 _______________________________________________
