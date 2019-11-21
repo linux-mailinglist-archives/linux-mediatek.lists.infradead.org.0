@@ -2,81 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8CA1D104ED7
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 10:14:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DB908105243
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 13:27:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9RWgx3r+WuSv7wyDhCxpAcZ95u3bHPSOnSqZijyswfs=; b=URcUXkmB33b90F
-	fg5d6pBPl5vfY1u82+cIBHQ/mlzysS2DgCbTpTSyCsDzSD10PY3r7Env1O7xe4CtiHoJJgFDJA79A
-	U5MSBeu227c43KEw73bAYNfKZZuP0mYwWHxOP4ZX4G/QKemJGaQ+xF1ZugDAEyrWuLC95R1/jqRKo
-	cMJfM5WJO1wj2FusSu8nrAxBX7rTNDGXUm8jAyrMfUaPbkyVX/oIjjmU3EctVN+RZD1Iwd8hWP/6T
-	KRBwZSCf0OKSVdH6z+iUTQkFNZ979WUsNE5x88/47qW6a2m791+47b0kOnMmGGVKu+HrtEDkOnu74
-	KI12grT3WEZRw6nslzgw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4/WSNPQ/Z4CX6THddlH765BGGywPS0wFlLQKU9/F3NE=; b=GCiez/cwqxafJh
+	cnvKV0q7pZpI5RVdWv7PZEaL+BpNBcnx3iBqe+sVNiBFDD38hE017sWpKeGLJhqsTfUgq49oepvw3
+	1Vzkc0hdU0ZpjRRpXmYa++sq8zahWd7Yb0EB180eIFzIIXUrcoEJNtI2QfKr/AGrtU/+6Kl5voK6v
+	2X0AfGe/n0WUaNRtOGgjlPbH/rmWYYIL1mpOHl3L+xcKwAFRy5cwClyH4gyIgfPaBYV7/l3SA7ukR
+	LFwtakW2nohK0y+UQun+GoM/9YEhukdBAhKw5utILW47giPf62Ef3CaRY2HQhznKGcdNwVS64S6ox
+	Bh7JoCNhqvoE+UzAl5hQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXiXx-0002Y6-6Z; Thu, 21 Nov 2019 09:14:41 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iXlYL-0002Cj-Az; Thu, 21 Nov 2019 12:27:17 +0000
+Received: from relay.sw.ru ([185.231.240.75])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXiWp-0001SE-RN; Thu, 21 Nov 2019 09:13:34 +0000
-X-UUID: 585ba7ad71cb4155a24b21b2f03e3db3-20191121
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=VqkAt8rgN3zVcjynrIl0FW+8LhE3QB8tyJbsUpCHPIA=; 
- b=d6zeW8uAFApCk2+xL8nkvsnceaDu84aXDWu62+MEvq/mVNkBqJBl1fIEWt51d8vvf75x0EmiwKCaQ7fIRLaSvvFXnWgINgXd43tXWZynfiglT9kxY3rJGPFyTlS6p/AfJNyJ7Qit+lyYLWsgcUv1P8UcxgyH15+xqNijnEhbXms=;
-X-UUID: 585ba7ad71cb4155a24b21b2f03e3db3-20191121
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <dennis-yc.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 800882075; Thu, 21 Nov 2019 01:13:28 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 01:13:47 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 17:13:19 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 21 Nov 2019 17:13:30 +0800
-From: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger
- <matthias.bgg@gmail.com>, Jassi Brar <jassisinghbrar@gmail.com>
-Subject: [PATCH v1 12/12] soc: mediatek: cmdq: add set event function
-Date: Thu, 21 Nov 2019 17:12:32 +0800
-Message-ID: <1574327552-11806-13-git-send-email-dennis-yc.hsieh@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1574327552-11806-1-git-send-email-dennis-yc.hsieh@mediatek.com>
-References: <1574327552-11806-1-git-send-email-dennis-yc.hsieh@mediatek.com>
+ id 1iXlYH-0002BK-5p; Thu, 21 Nov 2019 12:27:15 +0000
+Received: from dhcp-172-16-25-5.sw.ru ([172.16.25.5])
+ by relay.sw.ru with esmtp (Exim 4.92.3)
+ (envelope-from <aryabinin@virtuozzo.com>)
+ id 1iXlXu-00015y-97; Thu, 21 Nov 2019 15:26:50 +0300
+Subject: Re: [PATCH v4 1/2] kasan: detect negative size in memory operation
+ function
+To: Walter Wu <walter-zh.wu@mediatek.com>,
+ Alexander Potapenko <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+References: <20191112065302.7015-1-walter-zh.wu@mediatek.com>
+From: Andrey Ryabinin <aryabinin@virtuozzo.com>
+Message-ID: <040479c3-6f96-91c6-1b1a-9f3e947dac06@virtuozzo.com>
+Date: Thu, 21 Nov 2019 15:26:38 +0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.2.2
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20191112065302.7015-1-walter-zh.wu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_011331_902865_273EDD0B 
-X-CRM114-Status: UNSURE (   9.93  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191121_042713_218056_C44E06DE 
+X-CRM114-Status: GOOD (  10.42  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,85 +61,63 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, Houlong Wei <houlong.wei@mediatek.com>, Dennis
- YC Hsieh <dennis-yc.hsieh@mediatek.com>, linux-mediatek@lists.infradead.org,
- Bibby Hsieh <bibby.hsieh@mediatek.com>, CK Hu <ck.hu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, linux-kernel@vger.kernel.org,
+ kasan-dev@googlegroups.com, linux-mm@kvack.org,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add set event function in cmdq helper functions to set specific event.
 
-Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
----
- drivers/soc/mediatek/mtk-cmdq-helper.c   |   15 +++++++++++++++
- include/linux/mailbox/mtk-cmdq-mailbox.h |    1 +
- include/linux/soc/mediatek/mtk-cmdq.h    |    9 +++++++++
- 3 files changed, 25 insertions(+)
 
-diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-index 7f1e332..dd29968 100644
---- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-+++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-@@ -353,6 +353,21 @@ int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
- }
- EXPORT_SYMBOL(cmdq_pkt_clear_event);
- 
-+int cmdq_pkt_set_event(struct cmdq_pkt *pkt, u16 event)
-+{
-+	struct cmdq_instruction inst = { {0} };
-+
-+	if (event >= CMDQ_MAX_EVENT)
-+		return -EINVAL;
-+
-+	inst.op = CMDQ_CODE_WFE;
-+	inst.value = CMDQ_WFE_UPDATE | CMDQ_WFE_UPDATE_VALUE;
-+	inst.event = event;
-+
-+	return cmdq_pkt_append_command(pkt, inst);
-+}
-+EXPORT_SYMBOL(cmdq_pkt_set_event);
-+
- int cmdq_pkt_poll(struct cmdq_pkt *pkt, u8 subsys,
- 		  u16 offset, u32 value)
- {
-diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-index 3f6bc0d..dbedda6 100644
---- a/include/linux/mailbox/mtk-cmdq-mailbox.h
-+++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-@@ -17,6 +17,7 @@
- #define CMDQ_JUMP_PASS			CMDQ_INST_SIZE
- 
- #define CMDQ_WFE_UPDATE			BIT(31)
-+#define CMDQ_WFE_UPDATE_VALUE		BIT(16)
- #define CMDQ_WFE_WAIT			BIT(15)
- #define CMDQ_WFE_WAIT_VALUE		0x1
- 
-diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-index 5211827..84dbf0e 100644
---- a/include/linux/soc/mediatek/mtk-cmdq.h
-+++ b/include/linux/soc/mediatek/mtk-cmdq.h
-@@ -167,6 +167,15 @@ int cmdq_pkt_mem_move(struct cmdq_pkt *pkt, phys_addr_t src_addr,
- int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event);
- 
- /**
-+ * cmdq_pkt_set_event() - append set event command to the CMDQ packet
-+ * @pkt:	the CMDQ packet
-+ * @event:	the desired event to be set
-+ *
-+ * Return: 0 for success; else the error code is returned
-+ */
-+int cmdq_pkt_set_event(struct cmdq_pkt *pkt, u16 event);
-+
-+/**
-  * cmdq_pkt_poll() - Append polling command to the CMDQ packet, ask GCE to
-  *		     execute an instruction that wait for a specified
-  *		     hardware register to check for the value w/o mask.
--- 
-1.7.9.5
+On 11/12/19 9:53 AM, Walter Wu wrote:
+
+> diff --git a/mm/kasan/common.c b/mm/kasan/common.c
+> index 6814d6d6a023..4bfce0af881f 100644
+> --- a/mm/kasan/common.c
+> +++ b/mm/kasan/common.c
+> @@ -102,7 +102,8 @@ EXPORT_SYMBOL(__kasan_check_write);
+>  #undef memset
+>  void *memset(void *addr, int c, size_t len)
+>  {
+> -	check_memory_region((unsigned long)addr, len, true, _RET_IP_);
+> +	if (!check_memory_region((unsigned long)addr, len, true, _RET_IP_))
+> +		return NULL;
+>  
+>  	return __memset(addr, c, len);
+>  }
+> @@ -110,8 +111,9 @@ void *memset(void *addr, int c, size_t len)
+>  #undef memmove
+>  void *memmove(void *dest, const void *src, size_t len)
+>  {
+> -	check_memory_region((unsigned long)src, len, false, _RET_IP_);
+> -	check_memory_region((unsigned long)dest, len, true, _RET_IP_);
+> +	if (!check_memory_region((unsigned long)src, len, false, _RET_IP_) ||
+> +	    !check_memory_region((unsigned long)dest, len, true, _RET_IP_))
+> +		return NULL;
+>  
+>  	return __memmove(dest, src, len);
+>  }
+> @@ -119,8 +121,9 @@ void *memmove(void *dest, const void *src, size_t len)
+>  #undef memcpy
+>  void *memcpy(void *dest, const void *src, size_t len)
+>  {
+> -	check_memory_region((unsigned long)src, len, false, _RET_IP_);
+> -	check_memory_region((unsigned long)dest, len, true, _RET_IP_);
+> +	if (!check_memory_region((unsigned long)src, len, false, _RET_IP_) ||
+> +	    !check_memory_region((unsigned long)dest, len, true, _RET_IP_))
+> +		return NULL;
+>  
+
+I realized that we are going a wrong direction here. Entirely skipping mem*() operation on any
+poisoned shadow value might only make things worse. Some bugs just don't have any serious consequences,
+but skipping the mem*() ops entirely might introduce such consequences, which wouldn't happen otherwise.
+
+So let's keep this code as this, no need to check the result of check_memory_region().
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
