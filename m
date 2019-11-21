@@ -2,77 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1BB28104D96
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 09:13:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D841104DEF
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 09:30:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Bs2W8F9uhWykmXDINNtHHGRyOC9Xi8lt8muWVPAfHQ8=; b=lX766hYggI05Ol
-	XgybMoy2PcQDl9DbCBS4a/CpxLk6FVzzTT/Lyn5QwTk5ahQfDMsOD77UoXk0p/nB+nndYsKoeMGdO
-	O7NKCHRhaRd5xBpsXSfgNN4U/WZY4R8Ieo2GQyUlQnkQj3jv+s69KPG/7A6D6G7URr8aJ3Xr1mdo8
-	oq9XnLZsU6wMbvflW1Ai17rxnMUmYjzGvhM17FNRuCcqkzgNlvHvSRK8OTnlMb8oQg19sRvr7ExPe
-	aI0pjINlr41bRLflrRI2+Lz0MBQCHNgsx9Ju2rFIo6hTXNxqokv6xTNHk/U1J/fiQUo7KPQQdtIdj
-	blv7EAEe4xc+G6hG7hyw==;
+	List-Owner; bh=CPUjq0JC2nAm1lev9d4cXJNXLBamVRxsR4mQ6sEoc9A=; b=FFQjXb9l5KNuVJ
+	Hehir2G69ZqET/WessKtvbaoYEG/QxvoNe++LtU9K8/X9OpdFq7psTzYYvRARfMsrmWfwuZ93MON+
+	ta8xnsXGPBBGUXRhR0bNkAp+NVEVTzss14dfjk2vyBxHWsp6wlsX+CNRdbCzAm8A8XGohutl9aGNG
+	bm0aCpd69BCvM5/mX2w2ipFYTyBajcvzg3DGLNfWKNwplH5uzQPg9vIaWB1e2391EP/+Gv15KlVoL
+	9MtXJh95oftyUeY2vVI9O3jX4mHOJODD7pKDM5qHK42GHcAUS+RZVtQxCqhLW/jE2wPhUr5Lto1sX
+	E3qtjOlQL7n0+kVm8iUQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXhah-0002tB-Dh; Thu, 21 Nov 2019 08:13:27 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iXhr9-00029J-5M; Thu, 21 Nov 2019 08:30:27 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXhae-0002sG-Ui; Thu, 21 Nov 2019 08:13:26 +0000
-X-UUID: 0c63917b8d284f5380b58643958a4581-20191121
+ id 1iXhr6-00028Q-OV; Thu, 21 Nov 2019 08:30:26 +0000
+X-UUID: bb0a1d9a487949e9a1c1342ae8acb302-20191121
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=U97mKHK8idOeQxpJETaSEs2XLJJYwjnYHMcOchdEF+g=; 
- b=SJt/F7SyKCEqREcvs+FW59AwJMxgQkTUFhIt0sEmSuDcXpPD5l3fzGFmLcZBEpJbM4Trh7w+PYETKFwOw8wbuKTU7BKbZncbOnTgCkFciHAFgkcp61lrP1gxhXdRLOFuWoqX69NpwIZ5MsmekvZlLXRvmC/rPoDhyXD8QRvcHW0=;
-X-UUID: 0c63917b8d284f5380b58643958a4581-20191121
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=0Ckld6EwBzz2+Vv2aLPvbwitkSnSY2s1D7AUbqn0zrg=; 
+ b=i1ke+CB4hO9trYn+KlvsKyGptMnYEreF+L2kHRi5BQEeT1Jup1ewWq5B7VLn4GDFN4M3mtDPEFCIhSSkUU52hnR3i/ryJZFxUbV1ek9WYv8Io771D6k9E0iBNZj5GQaSesQuNxn6cuN2/M9pFLbvE1z12ISXPdizbcqbbxjDjzg=;
+X-UUID: bb0a1d9a487949e9a1c1342ae8acb302-20191121
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <yt.chang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1199080665; Thu, 21 Nov 2019 00:13:18 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 1153496331; Thu, 21 Nov 2019 00:30:12 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 00:13:22 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 16:13:13 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
+ 15.0.1395.4; Thu, 21 Nov 2019 00:30:16 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 21 Nov 2019 16:30:04 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 21 Nov 2019 16:13:37 +0800
+ Frontend Transport; Thu, 21 Nov 2019 16:30:14 +0800
 From: YT Chang <yt.chang@mediatek.com>
 To: YT Chang <yt.chang@mediatek.com>, Peter Zijlstra <peterz@infradead.org>,
  Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH 1/1] sched: panic, when call schedule with preemption disable
-Date: Thu, 21 Nov 2019 16:13:05 +0800
-Message-ID: <1574323985-24193-1-git-send-email-yt.chang@mediatek.com>
+Subject: [PATCH 1/1] sched: cfs_rq h_load might not update due to irq disable
+Date: Thu, 21 Nov 2019 16:30:09 +0800
+Message-ID: <1574325009-10846-1-git-send-email-yt.chang@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_001324_993426_6207080C 
-X-CRM114-Status: UNSURE (   9.18  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191121_003024_810147_15B1A112 
+X-CRM114-Status: GOOD (  10.96  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -93,29 +90,80 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-When preemption is disable, call schedule() is incorrect behavior.
-Suggest to panic directly rather than depend on panic_on_warn.
+Syndrome:
+
+Two CPUs might do idle balance in the same time.
+One CPU does idle balance and pulls some tasks.
+However before pick next task, ALL task are pulled back to other CPU.
+That results in infinite loop in both CPUs.
+
+=========================================
+code flow:
+
+in pick_next_task_fair()
+
+again:
+
+if nr_running == 0
+	goto idle
+pick next task
+	return
+
+idle:
+	idle_balance
+       /* pull some tasks from other CPU,
+        * However other CPU are also do idle balance,
+	* and pull back these task */
+
+	go to again
+
+=========================================
+The result to pull ALL tasks back when the task_h_load
+is incorrect and too low.
+
+static unsigned long task_h_load(struct task_struct *p)
+{
+        struct cfs_rq *cfs_rq = task_cfs_rq(p);
+
+	update_cfs_rq_h_load(cfs_rq);
+	return div64_ul(p->se.avg.load_avg_contrib * cfs_rq->h_load,
+			cfs_rq->runnable_load_avg + 1);
+}
+
+The cfs_rq->h_load is incorrect and might too small.
+The original idea of cfs_rq::last_h_load_update will not
+update cfs_rq::h_load more than once a jiffies.
+When the Two CPUs pull each other in the pick_next_task_fair,
+the irq disabled and result in jiffie not update.
+(Other CPUs wait for runqueue lock locked by the two CPUs.
+So, ALL CPUs are irq disabled.)
+
+Solution:
+cfs_rq h_load might not update due to irq disable
+use sched_clock instead jiffies
 
 Signed-off-by: YT Chang <yt.chang@mediatek.com>
 ---
- kernel/sched/core.c | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ kernel/sched/fair.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
-diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 7880f4f..214e8d8 100644
---- a/kernel/sched/core.c
-+++ b/kernel/sched/core.c
-@@ -3861,9 +3861,8 @@ static noinline void __schedule_bug(struct task_struct *prev)
- 		print_ip_sym(preempt_disable_ip);
- 		pr_cont("\n");
- 	}
--	if (panic_on_warn)
--		panic("scheduling while atomic\n");
+diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
+index 83ab35e..231c53f 100644
+--- a/kernel/sched/fair.c
++++ b/kernel/sched/fair.c
+@@ -7578,9 +7578,11 @@ static void update_cfs_rq_h_load(struct cfs_rq *cfs_rq)
+ {
+ 	struct rq *rq = rq_of(cfs_rq);
+ 	struct sched_entity *se = cfs_rq->tg->se[cpu_of(rq)];
+-	unsigned long now = jiffies;
++	u64 now = sched_clock_cpu(cpu_of(rq));
+ 	unsigned long load;
  
-+	panic("scheduling while atomic\n");
- 	dump_stack();
- 	add_taint(TAINT_WARN, LOCKDEP_STILL_OK);
- }
++	now = now * HZ >> 30;
++
+ 	if (cfs_rq->last_h_load_update == now)
+ 		return;
+ 
 -- 
 1.9.1
 _______________________________________________
