@@ -2,65 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0B207104C95
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 08:29:56 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BB28104D96
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 Nov 2019 09:13:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=W5CS8G7X4cVaQgzdvTKlMzw6Uvts/queL4z9QhXt6YU=; b=R/tEiLn5EVyZqe
-	uw8ZQlZZYPYt/k8vbB/Y8XmuKe7K6hcUBYVC7POIlK+mNmwFxdGHd5prHIGd4zvgwX4QEEOReg6Ld
-	iS3BywDFXkISluNUueWGyQ2TOpKcJWIRqphgc5lMjpfIn7RhFH7xcNVhXjCzv6ytMI39kEShKcuuC
-	7phZGFcwdGIud0UFy8zpmXBnNi2HyLtp5OyeATL1RO3SJolNkfPwWl8bAUeUS5uUbLxlC2rzzPulX
-	n4YB12VV9HCN4Ullj5e+JH+7MN3+kvgpm0AHz6g34Ml4I4VmkQ0cTB+dx3qHwHq/v+Uakk1b52okC
-	CsdUUGj2NXpT+uwkS9cA==;
+	List-Owner; bh=Bs2W8F9uhWykmXDINNtHHGRyOC9Xi8lt8muWVPAfHQ8=; b=lX766hYggI05Ol
+	XgybMoy2PcQDl9DbCBS4a/CpxLk6FVzzTT/Lyn5QwTk5ahQfDMsOD77UoXk0p/nB+nndYsKoeMGdO
+	O7NKCHRhaRd5xBpsXSfgNN4U/WZY4R8Ieo2GQyUlQnkQj3jv+s69KPG/7A6D6G7URr8aJ3Xr1mdo8
+	oq9XnLZsU6wMbvflW1Ai17rxnMUmYjzGvhM17FNRuCcqkzgNlvHvSRK8OTnlMb8oQg19sRvr7ExPe
+	aI0pjINlr41bRLflrRI2+Lz0MBQCHNgsx9Ju2rFIo6hTXNxqokv6xTNHk/U1J/fiQUo7KPQQdtIdj
+	blv7EAEe4xc+G6hG7hyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXguU-0002Qh-4e; Thu, 21 Nov 2019 07:29:50 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iXhah-0002tB-Dh; Thu, 21 Nov 2019 08:13:27 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXgtz-00020d-Kd; Thu, 21 Nov 2019 07:29:21 +0000
-X-UUID: 1ea9954627d44ae4a772b4488c1dc56d-20191120
+ id 1iXhae-0002sG-Ui; Thu, 21 Nov 2019 08:13:26 +0000
+X-UUID: 0c63917b8d284f5380b58643958a4581-20191121
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=DdOBazdkEY8z3b9oLQBOBsUR+PwkBxvsgtd16bL2wP8=; 
- b=dF7WIzR/p2XrAtxWVR+Uau04hx1SguyHDCvtAL0bumQpo8ZGhIzB07H26eHEYfdMkn2/o/0CgR9ItlVNh8Tz6g35yZIUMZs4km/tPhXQSPOFehPH3nUmb72k9cxTI3ZY5Io2WtdLG+tBJ8+lHghSvJ+oEnk/4FWL1CZdQVzL55o=;
-X-UUID: 1ea9954627d44ae4a772b4488c1dc56d-20191120
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <bibby.hsieh@mediatek.com>)
+ bh=U97mKHK8idOeQxpJETaSEs2XLJJYwjnYHMcOchdEF+g=; 
+ b=SJt/F7SyKCEqREcvs+FW59AwJMxgQkTUFhIt0sEmSuDcXpPD5l3fzGFmLcZBEpJbM4Trh7w+PYETKFwOw8wbuKTU7BKbZncbOnTgCkFciHAFgkcp61lrP1gxhXdRLOFuWoqX69NpwIZ5MsmekvZlLXRvmC/rPoDhyXD8QRvcHW0=;
+X-UUID: 0c63917b8d284f5380b58643958a4581-20191121
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <yt.chang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 28618728; Wed, 20 Nov 2019 23:29:12 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 20 Nov 2019 23:29:32 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 21 Nov 2019 15:29:05 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ with ESMTP id 1199080665; Thu, 21 Nov 2019 00:13:18 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 21 Nov 2019 00:13:22 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 21 Nov 2019 16:13:13 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Thu, 21 Nov 2019 15:29:07 +0800
-From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
- <ck.hu@mediatek.com>
-Subject: [PATCH] soc: mediatek: cmdq: avoid racing condition with mutex
-Date: Thu, 21 Nov 2019 15:29:10 +0800
-Message-ID: <20191121072910.31665-1-bibby.hsieh@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ Frontend Transport; Thu, 21 Nov 2019 16:13:37 +0800
+From: YT Chang <yt.chang@mediatek.com>
+To: YT Chang <yt.chang@mediatek.com>, Peter Zijlstra <peterz@infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH 1/1] sched: panic, when call schedule with preemption disable
+Date: Thu, 21 Nov 2019 16:13:05 +0800
+Message-ID: <1574323985-24193-1-git-send-email-yt.chang@mediatek.com>
+X-Mailer: git-send-email 1.9.1
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191120_232919_685554_994E055A 
-X-CRM114-Status: UNSURE (   8.31  )
+X-CRM114-CacheID: sfid-20191121_001324_993426_6207080C 
+X-CRM114-Status: UNSURE (   9.18  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -85,87 +86,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-If cmdq client is multi thread user, racing will occur without mutex
-protection. It will make the C message queued in mailbox's queue
-always need D message's triggering.
+When preemption is disable, call schedule() is incorrect behavior.
+Suggest to panic directly rather than depend on panic_on_warn.
 
-Thread A		Thread B		  Thread C		Thread D...
------------------------------------------------------------------------------------
-mbox_send_message()
-	send_data()
-			mbox_send_message()
-				*exit
-						mbox_send_message()
-							*exit
-mbox_client_txdone()
-	tx_tick()
-			mbox_client_txdone()
-				tx_tick()
-						mbox_client_txdone()
-							tx_tick()
-msg_submit()
-	send_data()
-			msg_submit()
-				*exit
-						msg_submit()
-							*exit
------------------------------------------------------------------------------------
-
-Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Signed-off-by: YT Chang <yt.chang@mediatek.com>
 ---
- drivers/soc/mediatek/mtk-cmdq-helper.c | 3 +++
- include/linux/soc/mediatek/mtk-cmdq.h  | 1 +
- 2 files changed, 4 insertions(+)
+ kernel/sched/core.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
-diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-index 9add0fd5fa6c..9e35e0beffaa 100644
---- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-+++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-@@ -81,6 +81,7 @@ struct cmdq_client *cmdq_mbox_create(struct device *dev, int index, u32 timeout)
- 	client->client.dev = dev;
- 	client->client.tx_block = false;
- 	client->chan = mbox_request_channel(&client->client, index);
-+	mutex_init(&client->mutex);
- 
- 	if (IS_ERR(client->chan)) {
- 		long err;
-@@ -352,9 +353,11 @@ int cmdq_pkt_flush_async(struct cmdq_pkt *pkt, cmdq_async_flush_cb cb,
- 		spin_unlock_irqrestore(&client->lock, flags);
+diff --git a/kernel/sched/core.c b/kernel/sched/core.c
+index 7880f4f..214e8d8 100644
+--- a/kernel/sched/core.c
++++ b/kernel/sched/core.c
+@@ -3861,9 +3861,8 @@ static noinline void __schedule_bug(struct task_struct *prev)
+ 		print_ip_sym(preempt_disable_ip);
+ 		pr_cont("\n");
  	}
+-	if (panic_on_warn)
+-		panic("scheduling while atomic\n");
  
-+	mutex_lock(&client->mutex);
- 	mbox_send_message(client->chan, pkt);
- 	/* We can send next packet immediately, so just call txdone. */
- 	mbox_client_txdone(client->chan, 0);
-+	mutex_unlock(&client->mutex);
- 
- 	return 0;
++	panic("scheduling while atomic\n");
+ 	dump_stack();
+ 	add_taint(TAINT_WARN, LOCKDEP_STILL_OK);
  }
-diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-index a74c1d5acdf3..0f9071cd1bc7 100644
---- a/include/linux/soc/mediatek/mtk-cmdq.h
-+++ b/include/linux/soc/mediatek/mtk-cmdq.h
-@@ -28,6 +28,7 @@ struct cmdq_client {
- 	struct mbox_chan *chan;
- 	struct timer_list timer;
- 	u32 timeout_ms; /* in unit of microsecond */
-+	struct mutex mutex;
- };
- 
- /**
 -- 
-2.18.0
+1.9.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
