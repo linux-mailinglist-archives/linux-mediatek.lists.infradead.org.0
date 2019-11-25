@@ -2,77 +2,95 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E6B8710897E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 25 Nov 2019 08:51:30 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C4B5108B10
+	for <lists+linux-mediatek@lfdr.de>; Mon, 25 Nov 2019 10:40:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vnra8OMzUsgdvnR/R0Wfif+rbWZijKR6Z6ky5ZewYEU=; b=E/TN3RI4hLWMp1
-	NtnuJY34f66iLBERHiE4cUJ6Y66kKmWhIysEkD5fVXcvEpJeO0bTD6wPJvSQ0eGzY7THnHxA6YFji
-	IhMATeBKyr0gAgTxhM3pBjNwZlpZAVou9oAL7b2APv9lJb4WsNDKg8cICUfO7FbhOoRJVdd1Siib/
-	Zlzs4u5p8kJ2w28xCHj+CyBLz/J/U7diInvtDPxfe9GCqxKaYhFUlYbR6FEF8dKc4K6gsKiYpjKBY
-	NWpX2Kpv53BR7i/dG/C4qhSPz4Klr2IJoRHP3No1B3YV/3j4YzG+fKGAtMmugatP+22HRDn7sRIaS
-	yDQ68iXY/1WnAL0C54Cw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=KqLtqCF8wJgZkXgpTRy7jZ5FNwTaoiCit98yxw8SFQg=; b=XTcsWV2Q/Bx6qc
+	zJEedIC/vlMgMekFK+tynoIVfW5yL23a5ehwiYtk56TVOCzZQ3maB39VFNBk+k9ZmsHLJVd1mn54+
+	dXu4yxgxZOqAn7Ico2fIGvN50bZxQwFQlnAQpD6pEMa1ezeWvpS3ob7adDPUI31i7OXLx06W3su44
+	nsPBw4zVCMz2mHLTd70Pa3Q3LDrF6tc63E7y4hiy/KT5lFmUIujbmGTA9T3rbqFALU2wxOywviPb3
+	hqf8pEJ7bfXPIL6zI7lZoKmxs9iVc9sf/DBb/dCkbEsljCh/pK1xUYLXv/lB6h+yr1xXtYA4/ljju
+	Nnh1ApJ9ZUq+b1a0R9Zw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZ99Y-0008Ch-GI; Mon, 25 Nov 2019 07:51:24 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iZArE-0007iW-MK; Mon, 25 Nov 2019 09:40:36 +0000
+Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZ99M-00083T-8N; Mon, 25 Nov 2019 07:51:14 +0000
-X-UUID: f5b9ab6cc71f43939f847d27592a9fac-20191124
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=dKoy+Dj949qquDmvkLLiMXT3sCo/sHKTe8EGHTNJRjE=; 
- b=CTn4oY6MT2wOJ0kzFZvDENY4K7Ieq0x2H3cedeFvd6/tmlhLWeQ/8KEnjgwBeGruL41WtJD6WbYSrb+AhaR4nOSXhmwZcF6xVZuHTP6CLwRC6Yv26KBwnI7lLZK8Ff6+BQk8HrjqmnfhsNsC2+qsyvBjesuFfowGcoTXdz4vLDM=;
-X-UUID: f5b9ab6cc71f43939f847d27592a9fac-20191124
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <dennis-yc.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 463010977; Sun, 24 Nov 2019 23:51:09 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 24 Nov 2019 23:41:15 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 25 Nov 2019 15:40:54 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 25 Nov 2019 15:40:24 +0800
-Message-ID: <1574667666.9851.5.camel@mtkswgap22>
-Subject: Re: [PATCH v1 06/12] soc: mediatek: cmdq: add assign function
-From: Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>
-To: CK Hu <ck.hu@mediatek.com>
-Date: Mon, 25 Nov 2019 15:41:06 +0800
-In-Reply-To: <1574660121.26500.1.camel@mtksdaap41>
-References: <1574327552-11806-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1574327552-11806-7-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1574660121.26500.1.camel@mtksdaap41>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1iZ7fk-0002Sf-TO; Mon, 25 Nov 2019 06:16:35 +0000
+Received: by mail-oi1-x243.google.com with SMTP id o12so12034754oic.9;
+ Sun, 24 Nov 2019 22:16:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=sender:date:from:to:cc:subject:message-id:mime-version
+ :content-disposition:user-agent;
+ bh=NJpCr4R+3WAviM6SLTFzHWBfwjLNKZd7X8haWCV9GGo=;
+ b=Fj9HaZFO/ioVEu7CN+ICTXq3cx8z6tPa5p49DKGQplUHKhsiDMoVlAuw9Ur7/7Zg71
+ j5ysfoV4qmYlrCoK48AT2tExVSD7cg5YeEbPi3zPXvlaqiEGEV6tPGKeNbs7/FHMBGx6
+ JJbxuQ/AIzJinJxFlEg0f7bbVz0xq3WhoNyqt40izHSVuvdvY7O8xwYuM8Xt4gCYdB12
+ sAVXF4vaurV+9fJew7sfWyxEwPjVdc0ycOYPEAXwxxwO825ciVQ21t06cmgSBPej1cpb
+ d2xG+ZA8dJNUeGzfs7wm3AoEIBKlwmdz06EGsQe0ZdpNTte70pPHbrDGX0oRHuU8EykR
+ ummQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
+ :mime-version:content-disposition:user-agent;
+ bh=NJpCr4R+3WAviM6SLTFzHWBfwjLNKZd7X8haWCV9GGo=;
+ b=fz9ZivTOww77es7MjKu4ExTFN+5VCRO+kYwG852FiFmncIr3em1rKpBpFL5uuGvFgJ
+ hl42zycOjLQs3TDuSdIWFvYa8y692n/S7ZoSlf4t8B3HcsI5xjHutAcjSoOMl5zfHy6Z
+ 6H4BbNU+yOsDQUlOXmRKrjtWuivFnT+IJ4esnNdNpGMmVvd8TkQ80i501lHCit7z+xOo
+ PxXy1MdEqYuHgDyNog+NaAm6PLGObzRmy7+C0vTU1ksYj0+11zryCmuH7c6ZQS3/7Gl6
+ O4oEeM09DdPnOk/8uqVWRTRZrAcTuoapz3tI6HwI1hN3sF8+ugigex7YiGkohw+1oJAc
+ hScQ==
+X-Gm-Message-State: APjAAAWHtO5WWnQkcFyJOtsQL/WxGgGeSi7P6gI817zD6erIpAWEDqBT
+ fXLt8SjMtYOdzaD39LX5fVE=
+X-Google-Smtp-Source: APXvYqyEa9YLh7eHkAthmKMtOoTEUu01iwoOqoASwt+6SYp3Biv4O6+q/c71MxSRFOvOQmoPm6v0WQ==
+X-Received: by 2002:aca:5a08:: with SMTP id o8mr20541735oib.104.1574662588984; 
+ Sun, 24 Nov 2019 22:16:28 -0800 (PST)
+Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
+ by smtp.gmail.com with ESMTPSA id c1sm2112384otn.44.2019.11.24.22.16.28
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Sun, 24 Nov 2019 22:16:28 -0800 (PST)
+Date: Sun, 24 Nov 2019 22:16:27 -0800
+From: Guenter Roeck <linux@roeck-us.net>
+To: Jiaxin Yu <jiaxin.yu@mediatek.com>
+Subject: Re: [PATCH v5 2/2] watchdog: mtk_wdt: mt8183: Add reset controller
+Message-ID: <20191125061627.GA7313@roeck-us.net>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-Bad-Reply: 'Re:' in Subject but no References or In-Reply-To headers
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191124_235112_299318_37C9E68E 
-X-CRM114-Status: GOOD (  19.16  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191124_221632_975168_754A4845 
+X-CRM114-Status: GOOD (  23.11  )
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ [list.dnswl.org]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (groeck7[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (groeck7[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 FAKE_REPLY_C           No description available.
+X-Mailman-Approved-At: Mon, 25 Nov 2019 01:40:34 -0800
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,136 +102,231 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Jassi Brar <jassisinghbrar@gmail.com>, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: mark.rutland@arm.com, alsa-devel@alsa-project.org, yong.liang@mediatek.com,
+ lgirdwood@gmail.com, robh+dt@kernel.org, perex@perex.cz, tzungbi@google.com,
+ broonie@kernel.org, linux-mediatek@lists.infradead.org, p.zabel@pengutronix.de,
+ eason.yen@mediatek.com, yingjoe.chen@mediatek.com, wim@linux-watchdog.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi CK,
+On Mon, Nov 25, 2019 at 11:03:50AM +0800, Jiaxin Yu wrote:
+> From: "yong.liang" <yong.liang@mediatek.com>
+> 
+> Add reset controller API in watchdog driver.
+> Besides watchdog, MTK toprgu module also provide sub-system (eg, audio,
+> camera, codec and connectivity) software reset functionality.
+> 
+> Signed-off-by: yong.liang <yong.liang@mediatek.com>
+> Signed-off-by: jiaxin.yu <jiaxin.yu@mediatek.com>
+> Reviewed-by: Yingjoe Chen <yingjoe.chen@mediatek.com>
+> ---
+>  drivers/watchdog/Kconfig   |   1 +
+>  drivers/watchdog/mtk_wdt.c | 111 ++++++++++++++++++++++++++++++++++++-
+>  2 files changed, 111 insertions(+), 1 deletion(-)
+> 
+> diff --git a/drivers/watchdog/Kconfig b/drivers/watchdog/Kconfig
+> index 2e07caab9db2..629249fe5305 100644
+> --- a/drivers/watchdog/Kconfig
+> +++ b/drivers/watchdog/Kconfig
+> @@ -717,6 +717,7 @@ config MEDIATEK_WATCHDOG
+>  	tristate "Mediatek SoCs watchdog support"
+>  	depends on ARCH_MEDIATEK || COMPILE_TEST
+>  	select WATCHDOG_CORE
+> +	select RESET_CONTROLLER
+>  	help
+>  	  Say Y here to include support for the watchdog timer
+>  	  in Mediatek SoCs.
+> diff --git a/drivers/watchdog/mtk_wdt.c b/drivers/watchdog/mtk_wdt.c
+> index 9c3d0033260d..d29484c7940a 100644
+> --- a/drivers/watchdog/mtk_wdt.c
+> +++ b/drivers/watchdog/mtk_wdt.c
+> @@ -9,6 +9,9 @@
+>   * Based on sunxi_wdt.c
+>   */
+>  
+> +#include <dt-bindings/reset-controller/mt2712-resets.h>
+> +#include <dt-bindings/reset-controller/mt8183-resets.h>
+> +#include <linux/delay.h>
+>  #include <linux/err.h>
+>  #include <linux/init.h>
+>  #include <linux/io.h>
+> @@ -16,10 +19,12 @@
+>  #include <linux/module.h>
+>  #include <linux/moduleparam.h>
+>  #include <linux/of.h>
+> +#include <linux/of_device.h>
+>  #include <linux/platform_device.h>
+> +#include <linux/reset-controller.h>
+> +#include <linux/slab.h>
+>  #include <linux/types.h>
+>  #include <linux/watchdog.h>
+> -#include <linux/delay.h>
+>  
+>  #define WDT_MAX_TIMEOUT		31
+>  #define WDT_MIN_TIMEOUT		1
+> @@ -44,6 +49,9 @@
+>  #define WDT_SWRST		0x14
+>  #define WDT_SWRST_KEY		0x1209
+>  
+> +#define WDT_SWSYSRST		0x18U
+> +#define WDT_SWSYS_RST_KEY	0x88000000
+> +
+>  #define DRV_NAME		"mtk-wdt"
+>  #define DRV_VERSION		"1.0"
+>  
+> @@ -53,8 +61,99 @@ static unsigned int timeout;
+>  struct mtk_wdt_dev {
+>  	struct watchdog_device wdt_dev;
+>  	void __iomem *wdt_base;
+> +	spinlock_t lock; /* protects WDT_SWSYSRST reg */
+> +	struct reset_controller_dev rcdev;
+> +};
+> +
+> +struct mtk_wdt_data {
+> +	int sw_rst_num;
+>  };
+>  
+> +static const struct mtk_wdt_data mt2712_data = {
+> +	.sw_rst_num = MT2712_TOPRGU_SW_RST_NUM,
+> +};
+> +
+> +static const struct mtk_wdt_data mt8183_data = {
+> +	.sw_rst_num = MT8183_TOPRGU_SW_RST_NUM,
+> +};
 
-On Mon, 2019-11-25 at 13:35 +0800, CK Hu wrote:
-> Hi, Dennis:
-> 
-> On Thu, 2019-11-21 at 17:12 +0800, Dennis YC Hsieh wrote:
-> > Add assign function in cmdq helper which assign constant value into
-> > internal register by index.
-> > 
-> > Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-> > ---
-> >  drivers/soc/mediatek/mtk-cmdq-helper.c   |   24 +++++++++++++++++++++++-
-> >  include/linux/mailbox/mtk-cmdq-mailbox.h |    1 +
-> >  include/linux/soc/mediatek/mtk-cmdq.h    |   14 ++++++++++++++
-> >  3 files changed, 38 insertions(+), 1 deletion(-)
-> > 
-> > diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > index 274f6f3..d419e99 100644
-> > --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> > @@ -14,6 +14,7 @@
-> >  #define CMDQ_EOC_IRQ_EN		BIT(0)
-> >  #define CMDQ_EOC_CMD		((u64)((CMDQ_CODE_EOC << CMDQ_OP_CODE_SHIFT)) \
-> >  				<< 32 | CMDQ_EOC_IRQ_EN)
-> > +#define CMDQ_REG_TYPE		1
-> >  
-> >  struct cmdq_instruction {
-> >  	union {
-> > @@ -23,8 +24,17 @@ struct cmdq_instruction {
-> >  	union {
-> >  		u16 offset;
-> >  		u16 event;
-> > +		u16 reg_dst;
-> > +	};
-> > +	union {
-> > +		u8 subsys;
-> > +		struct {
-> > +			u8 sop:5;
-> > +			u8 arg_c_t:1;
-> > +			u8 arg_b_t:1;
-> > +			u8 arg_a_t:1;
-> > +		};
-> >  	};
-> > -	u8 subsys;
-> >  	u8 op;
-> >  };
-> >  
-> > @@ -279,6 +289,18 @@ int cmdq_pkt_poll_mask(struct cmdq_pkt *pkt, u8 subsys,
-> >  }
-> >  EXPORT_SYMBOL(cmdq_pkt_poll_mask);
-> >  
-> > +int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value)
-> > +{
-> > +	struct cmdq_instruction inst = { {0} };
-> > +
-> > +	inst.op = CMDQ_CODE_LOGIC;
-> > +	inst.arg_a_t = CMDQ_REG_TYPE;
-> 
-> It looks like that arg_a_t could have a meaningful name.
-> 
-> Regards,
-> CK
-> 
+The number of resets can be set in .data directly; there is no need
+for the structures.
 
-Ok, I'll rename it.
-Thanks for your comment.
+> +
+> +static int toprgu_reset_assert(struct reset_controller_dev *rcdev,
+> +			       unsigned long id)
+> +{
+> +	unsigned int tmp;
+> +	unsigned long flags;
+> +	struct mtk_wdt_dev *data =
+> +		 container_of(rcdev, struct mtk_wdt_dev, rcdev);
+> +
+> +	spin_lock_irqsave(&data->lock, flags);
+> +
+> +	tmp = __raw_readl(data->wdt_base + WDT_SWSYSRST);
+> +	tmp |= BIT(id);
+> +	tmp |= WDT_SWSYS_RST_KEY;
+> +	writel(tmp, data->wdt_base + WDT_SWSYSRST);
+> +
+> +	spin_unlock_irqrestore(&data->lock, flags);
+> +
+> +	return 0;
+> +}
+> +
+> +static int toprgu_reset_deassert(struct reset_controller_dev *rcdev,
+> +				 unsigned long id)
+> +{
+> +	unsigned int tmp;
+> +	unsigned long flags;
+> +	struct mtk_wdt_dev *data =
+> +		 container_of(rcdev, struct mtk_wdt_dev, rcdev);
+> +
+> +	spin_lock_irqsave(&data->lock, flags);
+> +
+> +	tmp = __raw_readl(data->wdt_base + WDT_SWSYSRST);
+> +	tmp &= ~BIT(id);
+> +	tmp |= WDT_SWSYS_RST_KEY;
+> +	writel(tmp, data->wdt_base + WDT_SWSYSRST);
+> +
+> +	spin_unlock_irqrestore(&data->lock, flags);
+> +
+> +	return 0;
+> +}
 
+There is a lot of duplication in those functions. Only one line
+is different. I think this is a good example where a helper function
+with an additional argument indicating set or reset would be helpful.
 
-Regards,
-Dennis
+> +
+> +static int toprgu_reset(struct reset_controller_dev *rcdev,
+> +			unsigned long id)
+> +{
+> +	int ret;
+> +
+> +	ret = toprgu_reset_assert(rcdev, id);
+> +	if (ret)
+> +		return ret;
+> +
+> +	return toprgu_reset_deassert(rcdev, id);
+> +}
+> +
+> +static const struct reset_control_ops toprgu_reset_ops = {
+> +	.assert = toprgu_reset_assert,
+> +	.deassert = toprgu_reset_deassert,
+> +	.reset = toprgu_reset,
+> +};
+> +
+> +static int toprgu_register_reset_controller(struct platform_device *pdev,
+> +					    int rst_num)
+> +{
+> +	int ret;
+> +	struct mtk_wdt_dev *mtk_wdt = platform_get_drvdata(pdev);
+> +
+> +	spin_lock_init(&mtk_wdt->lock);
+> +
+> +	mtk_wdt->rcdev.owner = THIS_MODULE;
+> +	mtk_wdt->rcdev.nr_resets = rst_num;
+> +	mtk_wdt->rcdev.ops = &toprgu_reset_ops;
+> +	mtk_wdt->rcdev.of_node = pdev->dev.of_node;
+> +	ret = reset_controller_register(&mtk_wdt->rcdev);
+> +	if (ret != 0)
+> +		dev_err(&pdev->dev,
+> +			"couldn't register wdt reset controller: %d\n", ret);
+> +	return ret;
+> +}
+> +
+>  static int mtk_wdt_restart(struct watchdog_device *wdt_dev,
+>  			   unsigned long action, void *data)
+>  {
+> @@ -155,6 +254,7 @@ static int mtk_wdt_probe(struct platform_device *pdev)
+>  {
+>  	struct device *dev = &pdev->dev;
+>  	struct mtk_wdt_dev *mtk_wdt;
+> +	struct mtk_wdt_data *wdt_data;
+>  	int err;
+>  
+>  	mtk_wdt = devm_kzalloc(dev, sizeof(*mtk_wdt), GFP_KERNEL);
+> @@ -190,6 +290,13 @@ static int mtk_wdt_probe(struct platform_device *pdev)
+>  	dev_info(dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",
+>  		 mtk_wdt->wdt_dev.timeout, nowayout);
+>  
+> +	wdt_data = (struct mtk_wdt_data *)of_device_get_match_data(dev);
+> +	if (wdt_data) {
+> +		err = toprgu_register_reset_controller(pdev,
+> +						       wdt_data->sw_rst_num);
+> +		if (err)
+> +			return err;
 
-> > +	inst.reg_dst = reg_idx;
-> > +	inst.value = value;
-> > +	return cmdq_pkt_append_command(pkt, inst);
-> > +}
-> > +EXPORT_SYMBOL(cmdq_pkt_assign);
-> > +
-> >  static int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
-> >  {
-> >  	struct cmdq_client *cl = pkt->cl;
-> > diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > index dfe5b2e..121c3bb 100644
-> > --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> > @@ -59,6 +59,7 @@ enum cmdq_code {
-> >  	CMDQ_CODE_JUMP = 0x10,
-> >  	CMDQ_CODE_WFE = 0x20,
-> >  	CMDQ_CODE_EOC = 0x40,
-> > +	CMDQ_CODE_LOGIC = 0xa0,
-> >  };
-> >  
-> >  enum cmdq_cb_status {
-> > diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> > index a74c1d5..8334021 100644
-> > --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> > +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> > @@ -152,6 +152,20 @@ int cmdq_pkt_poll(struct cmdq_pkt *pkt, u8 subsys,
-> >   */
-> >  int cmdq_pkt_poll_mask(struct cmdq_pkt *pkt, u8 subsys,
-> >  		       u16 offset, u32 value, u32 mask);
-> > +
-> > +/**
-> > + * cmdq_pkt_assign() - Append logic assign command to the CMDQ packet, ask GCE
-> > + *		       to execute an instruction that set a constant value into
-> > + *		       internal register and use as value, mask or address in
-> > + *		       read/write instruction.
-> > + * @pkt:	the CMDQ packet
-> > + * @reg_idx:	the CMDQ internal register ID
-> > + * @value:	the specified value
-> > + *
-> > + * Return: 0 for success; else the error code is returned
-> > + */
-> > +int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value);
-> > +
-> >  /**
-> >   * cmdq_pkt_flush_async() - trigger CMDQ to asynchronously execute the CMDQ
-> >   *                          packet and call back at the end of done packet
-> 
-> 
+If this happens, the user will wonder why there was a message "Watchdog
+enabled", but there is no watchdog. It would be better to call this
+function before the dev_info() above.
+
+Guenter
+
+> +	}
+>  	return 0;
+>  }
+>  
+> @@ -218,7 +325,9 @@ static int mtk_wdt_resume(struct device *dev)
+>  #endif
+>  
+>  static const struct of_device_id mtk_wdt_dt_ids[] = {
+> +	{ .compatible = "mediatek,mt2712-wdt", .data = &mt2712_data },
+>  	{ .compatible = "mediatek,mt6589-wdt" },
+> +	{ .compatible = "mediatek,mt8183-wdt", .data = &mt8183_data },
+>  	{ /* sentinel */ }
+>  };
+>  MODULE_DEVICE_TABLE(of, mtk_wdt_dt_ids);
+> -- 
+> 2.18.0
 
 _______________________________________________
 Linux-mediatek mailing list
