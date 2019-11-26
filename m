@@ -2,73 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CE49F1098E7
-	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 06:38:26 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E2724109949
+	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 07:35:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KtyUFjnLeo8dccUTZ6ApP+iRwzvy16Ogusuo0/b0098=; b=sXZZReEa1UJgBO
-	2ssCyu4mSpbdwWinrWJ6CFB9kL1EJczbCRzrz6cRwSp/5biYQnFR9hvPQLUmI+rlgDA417+Hv6bnU
-	YYG5ae7UzTLzFHJwOMdo4bB3r0kqrHCLkg97jyWyqkY97ft4RmFYYJQRSjgMMpX0eKh8p3SllfOMW
-	wfJE8B50tWYPGRKOaEZyVf3nOjmam4uJoSGHy/VFvsECVQktBw1hJXa2jo2HHVyz8gOfax5QBnDy5
-	CH4LBg56atUalLGb+xhPY0w3JFrZkNsbXq4GE9cWXHEyukDvcP8yvnuMOT6IadYPCSSEX1DLb4Xsh
-	/c7g1YHQOoVuASUmcZZQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=7bDIgpIxtZSTbmJfJ9YNOQ+mFsIaTeYcJ0326Jmyxtw=; b=aGg0effDvcQO0F
+	QvEMZmWaZoeihaX1mwsSMYma246TrbuqFfsftSJUq5mBlXdWhHCtPGXd9WqkB3lw2ZlocJY3NCkO/
+	H1f237K3eUHGxCMO0nLRThl8arTjQoEY/IdUzIf/UCt2iWRoJOzhNae3VgexhYZIK/is/4QbagLNX
+	Y+jDvMPXgH6cAWpP+VsRlu38VFRCR+xoPW52u9ZPatgacI8jmkkREYw19gDwIhwwxQnQXnTH/pIKy
+	SIkQQmjLaE1JZh+QhL5ovLAU+NS9hSw/I3SGimTSICgtOezflfTFDpWVrtH2cXrhhFHYTydkILigH
+	RnbV2t4mj442ew38RSrQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZTYK-0005G2-SX; Tue, 26 Nov 2019 05:38:20 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iZUR6-0000EM-Ju; Tue, 26 Nov 2019 06:34:56 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZTXD-000479-37; Tue, 26 Nov 2019 05:37:12 +0000
-X-UUID: f3fb41bb820c4b7bb566ac84705eda90-20191125
+ id 1iZUQb-0008Bv-Va; Tue, 26 Nov 2019 06:34:27 +0000
+X-UUID: f825189d751e4673bb11e0f11d87f062-20191125
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=PTHlyvPT7+DKctsDgzzDOzGrtWUVdvF9uAmdUpUUCzI=; 
- b=mj2lbBLvkictvFSSj+JAgzHcQAc4bXK2h+Ln6vu27+lO41QJPsV5dmm+cnyQd0MGxR5vvilDM1cbmzvlhVQQSk5Mfs40q71MwdvBPexx59/WypM7JnpUQ3y+9Ug/4Bz3bWa2a6X/DHAAp3hZ7ZPe1+qor5um8q2b7nAun44O/Co=;
-X-UUID: f3fb41bb820c4b7bb566ac84705eda90-20191125
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <freddy.hsin@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=oJcXUCLZIxcF59qSTm2vQw2qkPkCytdOwN19qtc61zQ=; 
+ b=LLe3uvSis0vKvlWOxtqBDOJUV+XnCbwW/fe2QqakZzH6RrAmyJqfq9cgeU96V9Gat+exbqJK3opEXz2Y5j4yqbKa7dRbY9SVkbXMhA96WZycRP2MhgVli0j/8TX62sFM0uMnSEojPi4tKQHpT8SncqJ8EEwf+wuVF2V3p7L8TYA=;
+X-UUID: f825189d751e4673bb11e0f11d87f062-20191125
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 416290031; Mon, 25 Nov 2019 21:36:48 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 25 Nov 2019 21:35:03 -0800
+ with ESMTP id 1022281579; Mon, 25 Nov 2019 22:34:19 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 25 Nov 2019 22:30:05 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 26 Nov 2019 13:34:42 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 26 Nov 2019 14:29:10 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 26 Nov 2019 13:34:35 +0800
-From: <freddy.hsin@mediatek.com>
-To: <sre@kernel.org>, <linux-pm@vger.kernel.org>,
- <linux-kernel@vger.kernel.org>, <wim@linux-watchdog.org>,
- <linux@roeck-us.net>, <matthias.bgg@gmail.com>,
- <linux-watchdog@vger.kernel.org>, <linux-arm-kernel@lists.infradead.org>,
- <linux-mediatek@lists.infradead.org>, <robh+dt@kernel.org>,
- <mark.rutland@arm.com>, <devicetree@vger.kernel.org>
-Subject: [PATCH v1 4/4] dt-binding: power: reset: Add documentation for MTK
- RGU (Reset Gernation Unit) reboot driver
-Date: Tue, 26 Nov 2019 13:34:50 +0800
-Message-ID: <1574746490-625-5-git-send-email-freddy.hsin@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1574746490-625-1-git-send-email-freddy.hsin@mediatek.com>
-References: <1574746490-625-1-git-send-email-freddy.hsin@mediatek.com>
+ Frontend Transport; Tue, 26 Nov 2019 14:29:14 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: David Airlie <airlied@linux.ie>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Daniel Vetter <daniel.vetter@ffwll.ch>,
+ <dri-devel@lists.freedesktop.org>, <linux-mediatek@lists.infradead.org>
+Subject: [PATCH 0/7] drm/mediatek: fix cursor issue and apply CMDQ in
+Date: Tue, 26 Nov 2019 14:29:25 +0800
+Message-ID: <20191126062932.19773-1-bibby.hsieh@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 3886BE9112410BD4E984397ECA66E6660D117511F429C6329CE2E162650C9F092000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191125_213711_168111_580036A3 
-X-CRM114-Status: UNSURE (   9.58  )
+X-CRM114-CacheID: sfid-20191125_223426_016495_22BF3DF9 
+X-CRM114-Status: UNSURE (   7.75  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -93,61 +86,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Freddy Hsin <freddy.hsin@mediatek.com>, Chang-An.Chen@mediatek.com,
- wsd_upstream@mediatek.com
+Cc: drinkcat@chromium.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org, tfiga@chromium.org,
+ CK Hu <ck.hu@mediatek.com>, Thierry Reding <thierry.reding@gmail.com>,
+ Philipp Zabel <p.zabel@pengutronix.de>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Freddy Hsin <freddy.hsin@mediatek.com>
+The CMDQ (Command Queue) in MT8183 is used to help update all
+relevant display controller registers with critical time limation.
+This patch add cmdq interface in ddp_comp interface, let all
+ddp_comp interface can support cpu/cmdq function at the same time.
 
-Add documentation for MTK RGU (Reset Generation Unit) reboot driver.
+These patches also can fixup cursor moving is not smooth
+when heavy load in webgl.
 
-Signed-off-by: Freddy Hsin <freddy.hsin@mediatek.com>
----
- .../devicetree/bindings/power/reset/mtk-reboot.txt |   30 ++++++++++++++++++++
- 1 file changed, 30 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/power/reset/mtk-reboot.txt
+This patch depends on ptach:
+add drm support for MT8183
+(https://patchwork.kernel.org/cover/11121519/)
+support gce on mt8183 platform
+(https://patchwork.kernel.org/cover/11255147)
+drm/mediatek: Refactor plane init/check and support rotation
+(https://pw-emeril.freedesktop.org/series/69015/)
+drm/mediatek: Check return value of mtk_drm_ddp_comp_for_plane
+(https://lore.kernel.org/patchwork/patch/1154517/)
 
-diff --git a/Documentation/devicetree/bindings/power/reset/mtk-reboot.txt b/Documentation/devicetree/bindings/power/reset/mtk-reboot.txt
-new file mode 100644
-index 0000000..708d351
---- /dev/null
-+++ b/Documentation/devicetree/bindings/power/reset/mtk-reboot.txt
-@@ -0,0 +1,30 @@
-+Generic MTK RGU mapped register reset driver
-+
-+This is a reset driver using toprgu to map its non-volatile register.
-+The reset is generally performed with a write to the non-volatile register
-+defined by the register map pointed by toprgu reference plus the offset
-+with the mask defined in the reboot-mode node.
-+
-+Required properties:
-+- compatible: should contain "toprgu-reboot-mode"
-+- regmap: this is phandle to the register map node
-+- offset: offset in the register map for the reboot-mode register (in bytes)
-+- mask: the reset value written to the reboot register (32 bit access)
-+
-+Examples:
-+	reboot-mode {
-+	   compatible = "toprgu-reboot-mode";
-+	   regmap = <&toprgu>;
-+	   offset = <0x24>;
-+	   mask = <0xF>;
-+	};
-+
-+Optional properties - reboot mode value that will keep in toprgu nonrst RG:
-+- mode-charger = <BOOT_CHARGER>;
-+- mode-recovery = <BOOT_RECOVERY>;
-+- mode-bootloader = <BOOT_BOOTLOADER>;
-+- mode-dm-verity-dev-corrupt = <BOOT_DM_VERITY>;
-+- mode-kpoc = <BOOT_KPOC>;
-+- mode-ddr-reserve = <BOOT_DDR_RSVD>;
-+- mode-meta = <BOOT_META>;
-+- mode-rpmbpk = <BOOT_RPMBPK>;
+Bibby Hsieh (7):
+  drm/mediatek: fix atomic_state reference counting
+  drm/mediatek: put "event" in critical section
+  drm/mediatek: use DRM core's atomic commit helper
+  drm/mediatek: handle events when enabling/disabling crtc
+  drm/mediatek: update cursors by using async atomic update
+  drm/mediatek: support CMDQ interface in ddp component
+  drm/mediatek: apply CMDQ control flow
+
+ drivers/gpu/drm/mediatek/mtk_disp_color.c   |   7 +-
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c     |  65 +++---
+ drivers/gpu/drm/mediatek/mtk_disp_rdma.c    |  43 ++--
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c     | 223 ++++++++++++++++++--
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.h     |   4 +
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 151 +++++++++----
+ drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h |  55 +++--
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c      | 143 +++++++------
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h      |  17 +-
+ drivers/gpu/drm/mediatek/mtk_drm_plane.c    |  54 +++++
+ drivers/gpu/drm/mediatek/mtk_drm_plane.h    |   2 +
+ 11 files changed, 575 insertions(+), 189 deletions(-)
+
 -- 
-1.7.9.5
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
