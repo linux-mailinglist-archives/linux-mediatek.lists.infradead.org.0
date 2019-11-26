@@ -2,75 +2,95 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BDA09109D6B
-	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 13:01:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B80E9109D99
+	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 13:12:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=85W9ZrbVsIE708jeW10gFTjfWWvgqBwqCxVhq9i7qG4=; b=Eob7tOc5tdatW2
-	J+tZyyJHPyxOt7kBQ32u9AOyyy+g+7NBIrpHv4q0nyqdrLsbqZ/upgiYudYGNaQ7EPygSaH7wx9Ge
-	GvlCBtoku9W86juxoOpDLP2KBuPaqpZgbXL59KHnfkVdES1Vfc2hwyUBUkaBLqN1oB6ym9kK12z5W
-	ju2uN0yL1oRhp6SAson/r3GBo613fD7UUkaCGhYM/a/fCA8L9wqKPLgvUhtSQMRtK7BwUGEfglQ9b
-	dulKRjMlZpLt4ldxUW6JDVFKinjpvNYwPwSI7ddlsyjFwzV1zKlML5b57WMNES70MmEHjYVHv0HdB
-	Z8URPvKS2QYKm2FgrxaA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
+	List-Owner; bh=GFpinvPjqhTfSPtcaIDgEIdRoPeHrqyDz2F3X09vX7A=; b=X7c6bMQam9FFul
+	hzEbGDsBxbP4kpo+P5CUvFjdFaQtAc7M4Scr/yIz4EvOSJl9GO/s2YaEikyWOgkiBtMe+6O8xKoZ9
+	/oCz2Wd3jLL7XjLJb28zlf9/oxkoKXj13kf64pc3wSCw4tj612ncvbIYg9asJsaMb6bUjni1qxwqE
+	cvV0RlV1fR+JKO6ULWTH3hRfbHaz0N9Uz7Zw99BCXYOq7utwVihWZw90UBB3jZzWG23P4hnXVSsaq
+	DMMJz5By0B9IIPSX7N8Ain2nMVRtdv9YT+hJPTfG+tVQrscIuFFqoKWRtcud7tgusxRGyMlvhIxpu
+	Dh0pSF0Ay4x2faqfcYZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZZX8-0004y8-Fy; Tue, 26 Nov 2019 12:01:30 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iZZhO-0004Fw-Ck; Tue, 26 Nov 2019 12:12:06 +0000
+Received: from userp2130.oracle.com ([156.151.31.86])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZZX3-0004dF-QC; Tue, 26 Nov 2019 12:01:28 +0000
-X-UUID: 9d4c069b4dee4057ad6c9486373d6639-20191126
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=l0eT5JUNY43dn/lpok9fOypKOqfCP1urJmkFIHbTp5o=; 
- b=A3f8Aq9UWftB94LjEXqNb6mdxL1kJlfrGHia2gBLc5VsCzJ2/7qiY7K5MdurQWtMLns91TC3c6tMVmnKmyIDzWuSVm+SZEg+494SlTawt62rAy7EL9tLX7LlIS2NJV+3m7SPnEG2VLV9vMGC78s8z+hy1sVKoE0RHmP9gK35bKk=;
-X-UUID: 9d4c069b4dee4057ad6c9486373d6639-20191126
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <andrew-sh.cheng@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1553763220; Tue, 26 Nov 2019 04:01:20 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 26 Nov 2019 03:51:55 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 26 Nov 2019 19:51:15 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 26 Nov 2019 19:51:18 +0800
-From: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
-To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
- <kyungmin.park@samsung.com>, Chanwoo Choi <cw00.choi@samsung.com>, "Rob
- Herring" <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>, "Matthias
- Brugger" <matthias.bgg@gmail.com>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
- Viresh Kumar <viresh.kumar@linaro.org>, Nishanth Menon <nm@ti.com>, "Stephen
- Boyd" <sboyd@kernel.org>
-Subject: [v5,
- PATCH 5/5] devfreq: mediatek: cci devfreq register opp notification
- for SVS support
-Date: Tue, 26 Nov 2019 19:50:46 +0800
-Message-ID: <1574769046-28449-6-git-send-email-andrew-sh.cheng@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
-References: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
+ id 1iZZhK-0003zt-0X
+ for linux-mediatek@lists.infradead.org; Tue, 26 Nov 2019 12:12:03 +0000
+Received: from pps.filterd (userp2130.oracle.com [127.0.0.1])
+ by userp2130.oracle.com (8.16.0.27/8.16.0.27) with SMTP id xAQC8pDw116272;
+ Tue, 26 Nov 2019 12:11:53 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
+ h=date : from : to : cc
+ : subject : message-id : mime-version : content-type :
+ content-transfer-encoding : in-reply-to; s=corp-2019-08-05;
+ bh=/mBMxIIlBQ+XFxgJu+74RNcnTy1AckJgoUjuyVpyT6M=;
+ b=UVaFVpmuP55to/4hV4BOtz3AZvc5zUuB3/8JIbNJ3e06RElBJFpqC+Tx1TL3KyhLoQ/k
+ u3zhfsAW/k12OWQV+IEYJ5JpEacsTWx5zZTSllioxe0ChSgcQMI9QcbRcMIC8DIvsQbi
+ upraQTttR8lYgFES0JQfCJ9468zZzLIJwYtrWzrk90D9PNKBuupuh11p5E/NtF8Jhks8
+ DC58PlwnmpFUGrYu+Fe6ujIIzOHsGlQhWHDDOr9pQVDZdGs9lgMSCaxccJnAMbLDcNPk
+ UZTOBbusz+/m5gcHzW7aYZS/RCLeKsz8lPg4yjiR0XGZ9He+Mvbe+ZpVSGWszAse1HON sg== 
+Received: from userp3020.oracle.com (userp3020.oracle.com [156.151.31.79])
+ by userp2130.oracle.com with ESMTP id 2wev6u6d8m-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 26 Nov 2019 12:11:53 +0000
+Received: from pps.filterd (userp3020.oracle.com [127.0.0.1])
+ by userp3020.oracle.com (8.16.0.27/8.16.0.27) with SMTP id xAQC8Rtb089382;
+ Tue, 26 Nov 2019 12:09:53 GMT
+Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
+ by userp3020.oracle.com with ESMTP id 2wgvfjddd7-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 26 Nov 2019 12:09:52 +0000
+Received: from abhmp0019.oracle.com (abhmp0019.oracle.com [141.146.116.25])
+ by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id xAQC9pAO018135;
+ Tue, 26 Nov 2019 12:09:51 GMT
+Received: from kili.mountain (/129.205.23.165)
+ by default (Oracle Beehive Gateway v4.0)
+ with ESMTP ; Tue, 26 Nov 2019 04:09:49 -0800
+Date: Tue, 26 Nov 2019 15:09:39 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: Johannes Berg <johannes@sipsolutions.net>,
+ Toke H??iland-J??rgensen <toke@redhat.com>
+Subject: [PATCH] mac80211: airtime: Fix an off by one in
+ ieee80211_calc_rx_airtime()
+Message-ID: <20191126120910.ftr4t7me3by32aiz@kili.mountain>
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <87v9r7ysg0.fsf@toke.dk>
+X-Mailer: git-send-email haha only kidding
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9452
+ signatures=668685
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1911140001 definitions=main-1911260110
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9452
+ signatures=668685
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ priorityscore=1501 malwarescore=0
+ suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1015
+ lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=999 adultscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1911140001
+ definitions=main-1911260110
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191126_040125_898212_43B25E3C 
-X-CRM114-Status: GOOD (  13.61  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191126_041202_168505_3850A42C 
+X-CRM114-Status: GOOD (  15.23  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [156.151.31.86 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -80,6 +100,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,157 +112,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org,
- "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>, srv_heupstream@mediatek.com,
- linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org, fan.chen@mediatek.com,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Ryder Lee <ryder.lee@mediatek.com>, linux-wireless@vger.kernel.org,
+ kernel-janitors@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mediatek@lists.infradead.org, Roy Luo <royluo@google.com>,
+ Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ Kalle Valo <kvalo@codeaurora.org>
+Content-Type: multipart/mixed; boundary="===============5836632262232822709=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
+--===============5836632262232822709==
+Content-Type: text/plain; charset=unknown-8bit
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
 
-SVS will change the voltage of opp item.
-CCI devfreq need to react to change frequency.
+This code was copied from mt76 and inherited an off by one bug from
+there.  The > should be >= so that we don't read one element beyond
+the end of the array.
 
-Signed-off-by: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
+Fixes: db3e1c40cf2f ("mac80211: Import airtime calculation code from mt76")
+Reported-by: Toke Høiland-Jørgensen <toke@redhat.com>
+Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
 ---
- drivers/devfreq/mt8183-cci-devfreq.c | 61 ++++++++++++++++++++++++++++++++++++
- 1 file changed, 61 insertions(+)
+ net/mac80211/airtime.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/devfreq/mt8183-cci-devfreq.c b/drivers/devfreq/mt8183-cci-devfreq.c
-index 818a167c442f..afc274d73c2f 100644
---- a/drivers/devfreq/mt8183-cci-devfreq.c
-+++ b/drivers/devfreq/mt8183-cci-devfreq.c
-@@ -19,7 +19,10 @@ struct cci_devfreq {
- 	struct regulator *proc_reg;
- 	unsigned long proc_reg_uV;
- 	struct clk *cci_clk;
-+	unsigned long freq;
- 	struct notifier_block nb;
-+	struct notifier_block opp_nb;
-+	int cci_min_freq;
- };
+diff --git a/net/mac80211/airtime.c b/net/mac80211/airtime.c
+index 63cb0028b02d..9fc2968856c0 100644
+--- a/net/mac80211/airtime.c
++++ b/net/mac80211/airtime.c
+@@ -442,7 +442,7 @@ u32 ieee80211_calc_rx_airtime(struct ieee80211_hw *hw,
+ 			return 0;
  
- static int cci_devfreq_regulator_notifier(struct notifier_block *nb,
-@@ -65,17 +68,60 @@ static int cci_devfreq_regulator_notifier(struct notifier_block *nb,
- 	return 0;
- }
+ 		sband = hw->wiphy->bands[status->band];
+-		if (!sband || status->rate_idx > sband->n_bitrates)
++		if (!sband || status->rate_idx >= sband->n_bitrates)
+ 			return 0;
  
-+static int ccidevfreq_opp_notifier(struct notifier_block *nb,
-+				   unsigned long event, void *data)
-+{
-+	int ret;
-+	struct dev_pm_opp *opp = data;
-+	struct cci_devfreq *cci_df = container_of(nb, struct cci_devfreq,
-+						  opp_nb);
-+	unsigned long	freq, volt, cur_volt;
-+
-+	if (event == OPP_EVENT_ADJUST_VOLTAGE) {
-+		freq = dev_pm_opp_get_freq(opp);
-+		/* current opp item is changed */
-+		if (freq == cci_df->freq) {
-+			volt = dev_pm_opp_get_voltage(opp);
-+			cur_volt = regulator_get_voltage(cci_df->proc_reg);
-+
-+			if (volt > cur_volt) {
-+				/* need reduce freq */
-+				mutex_lock(&cci_df->devfreq->lock);
-+				ret = update_devfreq(cci_df->devfreq);
-+				if (ret)
-+					pr_err("Fail to reduce cci frequency by opp notification: %d\n",
-+					       ret);
-+				mutex_unlock(&cci_df->devfreq->lock);
-+			}
-+		}
-+
-+		if (freq == cci_df->cci_min_freq) {
-+			volt = dev_pm_opp_get_voltage(opp);
-+			regulator_set_voltage(cci_df->proc_reg, volt, INT_MAX);
-+		}
-+	}
-+
-+	return 0;
-+}
-+
- static int mtk_cci_governor_get_target(struct devfreq *devfreq,
- 				       unsigned long *freq)
- {
- 	struct cci_devfreq *cci_df;
- 	struct dev_pm_opp *opp;
-+	int ret;
- 
- 	cci_df = dev_get_drvdata(devfreq->dev.parent);
- 
- 	/* find available frequency */
- 	opp = dev_pm_opp_find_freq_ceil_by_volt(devfreq->dev.parent,
- 						cci_df->proc_reg_uV);
-+	ret = PTR_ERR_OR_ZERO(opp);
-+	if (ret) {
-+		pr_err("%s[%d], cannot find opp with voltage=%d: %d\n",
-+		       __func__, __LINE__, cci_df->proc_reg_uV, ret);
-+		return ret;
-+	}
- 	*freq = dev_pm_opp_get_freq(opp);
- 
- 	return 0;
-@@ -87,9 +133,11 @@ static int mtk_cci_governor_event_handler(struct devfreq *devfreq,
- 	int ret;
- 	struct cci_devfreq *cci_df;
- 	struct notifier_block *nb;
-+	struct notifier_block *opp_nb;
- 
- 	cci_df = dev_get_drvdata(devfreq->dev.parent);
- 	nb = &cci_df->nb;
-+	opp_nb = &cci_df->opp_nb;
- 
- 	switch (event) {
- 	case DEVFREQ_GOV_START:
-@@ -100,6 +148,8 @@ static int mtk_cci_governor_event_handler(struct devfreq *devfreq,
- 		if (ret)
- 			pr_err("%s: failed to add governor: %d\n", __func__,
- 			       ret);
-+		opp_nb->notifier_call = ccidevfreq_opp_notifier;
-+		dev_pm_opp_register_notifier(devfreq->dev.parent, opp_nb);
- 		break;
- 
- 	case DEVFREQ_GOV_STOP:
-@@ -141,6 +191,8 @@ static int mtk_cci_devfreq_target(struct device *dev, unsigned long *freq,
- 		return ret;
- 	}
- 
-+	cci_df->freq = *freq;
-+
- 	return 0;
- }
- 
-@@ -152,6 +204,8 @@ static int mtk_cci_devfreq_probe(struct platform_device *pdev)
- {
- 	struct device *cci_dev = &pdev->dev;
- 	struct cci_devfreq *cci_df;
-+	unsigned long freq, volt;
-+	struct dev_pm_opp *opp;
- 	int ret;
- 
- 	cci_df = devm_kzalloc(cci_dev, sizeof(*cci_df), GFP_KERNEL);
-@@ -181,6 +235,13 @@ static int mtk_cci_devfreq_probe(struct platform_device *pdev)
- 		return ret;
- 	}
- 
-+	/* set voltage lower bound */
-+	freq = 1;
-+	opp = dev_pm_opp_find_freq_ceil(cci_dev, &freq);
-+	cci_df->cci_min_freq = dev_pm_opp_get_freq(opp);
-+	volt = dev_pm_opp_get_voltage(opp);
-+	dev_pm_opp_put(opp);
-+
- 	platform_set_drvdata(pdev, cci_df);
- 
- 	cci_df->devfreq = devm_devfreq_add_device(cci_dev,
+ 		rate = &sband->bitrates[status->rate_idx];
 -- 
-2.12.5
+2.11.0
+
+
+
+--===============5836632262232822709==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============5836632262232822709==--
