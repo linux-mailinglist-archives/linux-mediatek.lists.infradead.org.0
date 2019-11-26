@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 025F7109D4A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 12:51:41 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 94278109D4D
+	for <lists+linux-mediatek@lfdr.de>; Tue, 26 Nov 2019 12:52:09 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=y9wLVDaUGY0DRnCJ/dZBsEt0SSIE9OYn1TALCOGqMbk=; b=tZEGPliGaA+q+e
-	+ym2iY+ayimgLsgk0361AikuoXCcwnNcGTXeGhL+l4WoNUPZvNqgnF4oZXzAHifcl9LKua9oQeLnO
-	yQy7Uey0Nx64Px/7h3OMcw8CNZ3Z/AalLozJ2EI73/4wmbPSWQkFigsA8Akz3VH1PZGkruDa090V+
-	D3lJx4nVDQZSpEiA0FqI6sAQQxZkDn1WA/9m8aeuLyVimelw79Rk9ZDedc8UbWS/339isb6xBB7M2
-	Ex3zWrvuc6A6ItI84qyqJHbG8YOR7GZKdjTcWWIdIBwRT/C3GSAHFOR6nGWTCdlLcrnE00rsp60OP
-	9YAzTycqZDcRjmArVRdA==;
+	List-Owner; bh=S5WjGbDZrrSBfwSIkEgPiuiekTDenrFZsNqeWAFXBV0=; b=gU75RcXKCZ/XIV
+	iqicekKLfnvxHujnaOdaqlZWqzovCXm0MSsMN+hwf0lLe3PbHb/pTM+KPvjBPDeyA2+8/lGLo3KYi
+	mV+y7j6ExJaB11xUSYCgFXG46UoEPNk5EUMHAEnwR0qVJrhJ8t31kYAbCfCuVBWzX9EvspvR8wO2s
+	m3PZV18BVELnx84tC1h8Nh72GlEhyhZ+RKyJbU1u3plvAibHo5x84z0AIPJ+//X/kS2o9b7EEm6+3
+	kZaF2pQe0xWN80zRTfJ2/HqVvhFLR4oSP/E0e/0zgW2gZkx+tHbo1VktSUCja++lZCZ+fH83sEjGA
+	08FuDCpP4I06uP2+ohGA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZZNX-0000dU-5R; Tue, 26 Nov 2019 11:51:35 +0000
+	id 1iZZNz-0001q9-N2; Tue, 26 Nov 2019 11:52:03 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZZNO-0000ES-BA; Tue, 26 Nov 2019 11:51:28 +0000
-X-UUID: bacc69b978024add8e01b7dd2335385d-20191126
+ id 1iZZNO-0000Bp-BA; Tue, 26 Nov 2019 11:51:30 +0000
+X-UUID: 7a9a676c30804ff58447a2a45e582c79-20191126
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=eJiXotx7RS3CCD0fTnzjC+RpLHec/H5zYb5evRMy2s4=; 
- b=tdFofEcNLFfXY3Dva8+iIhXNMUvnaEfG5OKJVJ1bKeVvCO5Hv4cWKvAbN+nTMs0jY/3JqpY5QqZBSSZEORb8QKU3X7JDxggyTNACn/RIjtafpfES7rm43yg6y/fkpO6B835oY2N7t0PgbktnRt/gz5SDBiuDJnjPHU9ZzLwtRBs=;
-X-UUID: bacc69b978024add8e01b7dd2335385d-20191126
+ bh=TAC2t4iFfrEbkB3/t23Ja5izb+mns8zyK7JUaEluMxE=; 
+ b=Jit1QBCnEcbg8ly+4kEwQZcUNdRHbW9/mAKOD0kBXIe/3ter8Bkygw37axfs8mWDPB+mKhSC0hU2ZVLB2NnXQYNvA+OPBUtCHMwgBMROY9mGX/53uWOEOlZDqgcf4aouRMKI1mFYedRgzhJTjF+CMT7oyTJ0B0XFzSDbKXb9kSM=;
+X-UUID: 7a9a676c30804ff58447a2a45e582c79-20191126
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <andrew-sh.cheng@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1838091942; Tue, 26 Nov 2019 03:51:20 -0800
+ with ESMTP id 1845158833; Tue, 26 Nov 2019 03:51:20 -0800
 Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 26 Nov 2019 03:51:52 -0800
+ 15.0.1395.4; Tue, 26 Nov 2019 03:51:53 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 26 Nov 2019 19:51:07 +0800
+ 15.0.1395.4; Tue, 26 Nov 2019 19:51:12 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 26 Nov 2019 19:50:49 +0800
+ Frontend Transport; Tue, 26 Nov 2019 19:51:15 +0800
 From: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
 To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
  <kyungmin.park@samsung.com>, Chanwoo Choi <cw00.choi@samsung.com>, "Rob
@@ -49,18 +49,19 @@ To: MyungJoo Ham <myungjoo.ham@samsung.com>, Kyungmin Park
  Brugger" <matthias.bgg@gmail.com>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
  Viresh Kumar <viresh.kumar@linaro.org>, Nishanth Menon <nm@ti.com>, "Stephen
  Boyd" <sboyd@kernel.org>
-Subject: [v5,
- PATCH 1/5] cpufreq: mediatek: add clock enable for intermediate clock
-Date: Tue, 26 Nov 2019 19:50:42 +0800
-Message-ID: <1574769046-28449-2-git-send-email-andrew-sh.cheng@mediatek.com>
+Subject: [v5, PATCH 2/5] dt-bindings: devfreq: add compatible for mt8183 cci
+ devfreq
+Date: Tue, 26 Nov 2019 19:50:43 +0800
+Message-ID: <1574769046-28449-3-git-send-email-andrew-sh.cheng@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
 References: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191126_035126_428852_D0DF26A3 
-X-CRM114-Status: GOOD (  12.93  )
+X-CRM114-CacheID: sfid-20191126_035126_567603_9917F2CF 
+X-CRM114-Status: UNSURE (   9.72  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -103,59 +104,42 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
 
-Intermediate clock is not always enabled by ccf in different projects,
-so cpufreq should always enable it by itself.
+This adds dt-binding documentation of cci devfreq
+for Mediatek MT8183 SoC platform.
 
 Signed-off-by: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
 ---
- drivers/cpufreq/mediatek-cpufreq.c | 13 +++++++++++--
- 1 file changed, 11 insertions(+), 2 deletions(-)
+ .../bindings/devfreq/mt8183-cci-devfreq.txt          | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
 
-diff --git a/drivers/cpufreq/mediatek-cpufreq.c b/drivers/cpufreq/mediatek-cpufreq.c
-index 0c98dd08273d..4b0cc50dd93b 100644
---- a/drivers/cpufreq/mediatek-cpufreq.c
-+++ b/drivers/cpufreq/mediatek-cpufreq.c
-@@ -368,13 +368,17 @@ static int mtk_cpu_dvfs_info_init(struct mtk_cpu_dvfs_info *info, int cpu)
- 		goto out_free_resources;
- 	}
- 
-+	ret = clk_prepare_enable(inter_clk);
-+	if (ret)
-+		goto out_free_opp_table;
+diff --git a/Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt b/Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
+new file mode 100644
+index 000000000000..a65a70bb9f09
+--- /dev/null
++++ b/Documentation/devicetree/bindings/devfreq/mt8183-cci-devfreq.txt
+@@ -0,0 +1,20 @@
++* Mediatek Cache Coherent Interconnect(CCI) frequency device
 +
- 	/* Search a safe voltage for intermediate frequency. */
- 	rate = clk_get_rate(inter_clk);
- 	opp = dev_pm_opp_find_freq_ceil(cpu_dev, &rate);
- 	if (IS_ERR(opp)) {
- 		pr_err("failed to get intermediate opp for cpu%d\n", cpu);
- 		ret = PTR_ERR(opp);
--		goto out_free_opp_table;
-+		goto out_disable_clock;
- 	}
- 	info->intermediate_voltage = dev_pm_opp_get_voltage(opp);
- 	dev_pm_opp_put(opp);
-@@ -393,6 +397,9 @@ static int mtk_cpu_dvfs_info_init(struct mtk_cpu_dvfs_info *info, int cpu)
- 
- 	return 0;
- 
-+out_disable_clock:
-+	clk_disable_unprepare(inter_clk);
++Required properties:
++- compatible: should contain "mediatek,mt8183-cci" for frequency scaling of CCI
++- clocks: for frequency scaling of CCI
++- clock-names: for frequency scaling of CCI driver to reference
++- regulator: for voltage scaling of CCI
++- operating-points-v2: for frequency scaling of CCI opp table
 +
- out_free_opp_table:
- 	dev_pm_opp_of_cpumask_remove_table(&info->cpus);
- 
-@@ -417,8 +424,10 @@ static void mtk_cpu_dvfs_info_release(struct mtk_cpu_dvfs_info *info)
- 		regulator_put(info->sram_reg);
- 	if (!IS_ERR(info->cpu_clk))
- 		clk_put(info->cpu_clk);
--	if (!IS_ERR(info->inter_clk))
-+	if (!IS_ERR(info->inter_clk)) {
-+		clk_disable_unprepare(info->inter_clk);
- 		clk_put(info->inter_clk);
-+	}
- 
- 	dev_pm_opp_of_cpumask_remove_table(&info->cpus);
- }
++Example:
++	cci: cci {
++		compatible = "mediatek,mt8183-cci";
++		clocks = <&apmixedsys CLK_APMIXED_CCIPLL>;
++		clock-names = "cci_clock";
++		operating-points-v2 = <&cci_opp>;
++	};
++
++	&cci {
++		proc-supply = <&mt6358_vproc12_reg>;
++	};
+\ No newline at end of file
 -- 
 2.12.5
 _______________________________________________
