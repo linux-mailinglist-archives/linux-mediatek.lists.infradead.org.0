@@ -2,71 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3819E10D17F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 29 Nov 2019 07:37:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C2DA610D182
+	for <lists+linux-mediatek@lfdr.de>; Fri, 29 Nov 2019 07:39:54 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ua3TShLulHCSPDY97m71m0mTUG7b651QUqJxbSvp7y4=; b=MmAM5vQklVky5e
-	MoJYAP7yoq8TruJfR5a8UP//BTIbYkpvxgMRiK/TWU5yjlyaCU6EYTmd0LrJQg1sTlQfM9adogODA
-	3sPaW0pXE4BpZ0rQ5MHJWta17R4m+Forwu5LLIYZPsRc7hFgfjLQSu+da3xsA0+JKBi51sD9XapNy
-	SxBwEtPkvvvpDa3Eh6NtHViJIV1+dWH+8EtOoSe4ZO+4nv3SIwjEZzY0JlE2RgLakvhb6vtFbjed/
-	1d4d2p4VstzWecOYBZLkwMXeFkYtZ53SLzQ/+t5ytfNP+UrPgOFvaT3XkBHDduwmUYq9/gKRISRJ6
-	BZV2+OPoHTp9Eo0DK4ZQ==;
+	List-Owner; bh=ua3TShLulHCSPDY97m71m0mTUG7b651QUqJxbSvp7y4=; b=OEtgFYg96unOS0
+	N5y2Miu9twaYOWprm489AUcaEiQdi1V9LTOG8Ig323RMyIacCO7gFDDfCeDS56KAads5FF2ZYJ4vP
+	jPFjD7N7gZdFhvhdA3/2EVHGYKZgx8O+DT/zsN84elYIFAgrs3G9P+e5Ssr/NfvmITpnjTx/7MUnq
+	AkfUilpZaE5Wq1QmCkwhuDLh7gGJ4GDOS0sUgeEloVN8mm2gzq6q8sFGI5k0NJnObQaJ7/7RDe9v2
+	XOrDwF//E4dTmxuJY0fv59/ptZyjMuscOSI7YYErUeuoLIG1EhvLRikR0RpdZUwXErm74vsB/9jFm
+	mRU8G6aLdOk/TWcO9QMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iaZuO-0006ru-0i; Fri, 29 Nov 2019 06:37:40 +0000
+	id 1iaZwR-0007FL-Rr; Fri, 29 Nov 2019 06:39:47 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iaZuB-0006kg-Kq; Fri, 29 Nov 2019 06:37:29 +0000
-X-UUID: 7628e1c4cd4a4767a5f350be23826242-20191128
+ id 1iaZwB-00074s-0h; Fri, 29 Nov 2019 06:39:32 +0000
+X-UUID: 2014a2c5e3c94d3ca910eb64e000d1ff-20191128
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
  bh=8lX9vCY1Mdos86S6vjMAmKgXT0YEpzezR8Mrp8YXb4A=; 
- b=KKqkxPo8E+ctOuuKlg+jg8kG47MnWvgLDbOA6+w9C+i+qNiznQe1Re+YzcdAZsDjqUGAh0DHSsP1o4Nz0f/m8ZYj+TSqsyUcy96mGv70wJS0ZpQySx3kGn90wWL7LAdlczZ5CFck4iQvzibJeoN27plL7O0RPVJwl/IcGscumDM=;
-X-UUID: 7628e1c4cd4a4767a5f350be23826242-20191128
+ b=rRdrD5gXqndIT3/njBf3FRX8oxFCcumb9b/DpktAiaCfjpXPOjOPyiwB6LtGbDR/WRknR0LgGCnDMKdhuuXkMguPn2mzW9IJzNEbCk6HTjShQ7bI449B12adyhq0xpFpYIRsw8MGR1Bf452Gb5QLc8SPnGSKjfa+eKVA3sBzkAg=;
+X-UUID: 2014a2c5e3c94d3ca910eb64e000d1ff-20191128
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <yong.liang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 35713696; Thu, 28 Nov 2019 22:37:20 -0800
+ with ESMTP id 216339792; Thu, 28 Nov 2019 22:39:28 -0800
 Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 28 Nov 2019 22:37:29 -0800
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 28 Nov 2019 22:40:00 -0800
 Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
  (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 29 Nov 2019 14:36:26 +0800
+ Fri, 29 Nov 2019 14:38:26 +0800
 Received: from [10.17.3.153] (172.27.4.253) by MTKCAS36.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 29 Nov 2019 14:37:28 +0800
-Message-ID: <1575009436.6367.6.camel@mhfsdcap03>
+ Transport; Fri, 29 Nov 2019 14:39:23 +0800
+Message-ID: <1575009551.6367.7.camel@mhfsdcap03>
 Subject: Re: [PATCH v5 1/2] dt-bindings: mediatek: mt8183: Add #reset-cells
 From: Yong Liang <yong.liang@mediatek.com>
 To: Philipp Zabel <p.zabel@pengutronix.de>
-Date: Fri, 29 Nov 2019 14:37:16 +0800
+Date: Fri, 29 Nov 2019 14:39:11 +0800
 In-Reply-To: <49c94039ba327a1295fdfd5d74dca0b9805269b0.camel@pengutronix.de>
 References: <1574651030-29519-1-git-send-email-jiaxin.yu@mediatek.com>
  <1574651030-29519-2-git-send-email-jiaxin.yu@mediatek.com>
  <49c94039ba327a1295fdfd5d74dca0b9805269b0.camel@pengutronix.de>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 690B49AA376DED3307D30E2046956457F70D0DC6A739D1DA8C5213334321E2D92000:8
+X-TM-SNTS-SMTP: EA2D3B01FEF3DF1451F222F4DEAE6B23217E6232D37F6AAD440B8D1E6DE8FE882000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191128_223727_692993_B566ECD6 
-X-CRM114-Status: GOOD (  17.22  )
+X-CRM114-CacheID: sfid-20191128_223931_069710_C2B88837 
+X-CRM114-Status: GOOD (  17.33  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
  no trust [216.200.240.184 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
