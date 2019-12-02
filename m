@@ -2,94 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0264310F0EC
-	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Dec 2019 20:44:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5297510F139
+	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Dec 2019 20:59:54 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LODP2AVJuZ9LZHjCIi+N8UlJbxqWeCRqIqP2ZUOTW9k=; b=r6e1WpQJx7kk6m
-	6ykgo1P0+1SvwVoyhLeZP3MkGv0q5aUx/M0Z5JZmcElEKN2pnZ/7qtMS8qzKSzrFyw8Z5KywfA/CJ
-	JvpGuLTSEwrY1+26/ebItL4mw87nh2ayJ/oWsLVCzihC6VTZt+ihOLol6fk9kQIV6F2PGl3D9iY59
-	kT9TH7MC7Za7/2Leyc+9nrPpDe4IBzgoUM0DfCSjpjXs6WXn1LyNbZ6oH68hvgz5IZjP54T/FiAzv
-	/kdSs93Rzh/bV9u9++WVODQXmtbNsYzy51z684YRq9j66/X2mcNxODCZQ3Ri/iEoknGvBNnSVRdIA
-	ZujsxjNXveWBTE/yPyyg==;
+	List-Owner; bh=CKVQEtqgZiKV1R44bCQ/jB2wwuwHyGlDx8ozwmDUFfE=; b=t3ntvI2Vc7ErZO
+	8cf6X7wR6yDfvoK68WJmnzRy8Mr8/mrxdh7nwBd9sNiAaXWxOR+SvE9iv8qoEuSTDgjDCOe0tDzww
+	zz8uPBgFHRrrIpqzm0sA2vCDtPrO7HnEgx3KLXfgCVQjnqJcRLdMk8yVyWl11QfVDfvamkd707gfo
+	ONNTVHKNgqsgsFB8SVCWISMESvfLxVPimSyI3HyE5XTkw22RXw79Q4M7JKjycX1LiVDx4m+Brtcu0
+	m0dRLe0C2Efjcld6Q1khDSDxAG6+C4KJv0e7DbXIwTRmph43S62C3bf//AskNJKVEZGUEhUJAoJkG
+	Qpj1AfDE8zJ4LglVuFMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ibrcf-0003k4-Ih; Mon, 02 Dec 2019 19:44:41 +0000
-Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
+	id 1ibrrI-0001n5-3x; Mon, 02 Dec 2019 19:59:48 +0000
+Received: from mail-il1-x143.google.com ([2607:f8b0:4864:20::143])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ibrSE-000810-O2; Mon, 02 Dec 2019 19:34:00 +0000
-Received: by mail-lf1-x141.google.com with SMTP id l18so808119lfc.1;
- Mon, 02 Dec 2019 11:33:54 -0800 (PST)
+ id 1ibrrD-0001li-VY; Mon, 02 Dec 2019 19:59:45 +0000
+Received: by mail-il1-x143.google.com with SMTP id w13so886503ilo.1;
+ Mon, 02 Dec 2019 11:59:41 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=sender:from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=CU1uoHEr1EClqVOFtZU3zB21PkkAQa6gthbvOIOjhXw=;
- b=sQ5sz84ahngu04detfdJb7WzDQ0QcopqKxnDfHTl6wWuDWFdmsW99YWf0HBWKVWdCP
- RtINs73RJ+Sk7G71eUzuQ9dzzWizDYLIb9hlwzETpJLExqI+mi5bryV4yuHDhM1bk64b
- vEQDA0fYt2NVXGAInm08lTk2qc9z8Zuy/bBxOD7ZeK96/nmYABuBHoroyzZmnlYo/3hL
- e6lBlbFUTJ/vQgNEhqRXR+CF6RtFCvzDPOJRsXl7kAidChgKhYB4T34t/JadF6qMZ/54
- Ia1/574eLMCCnimEAcJi1a8cMBlCfwJLuzWlre+3Lh7dtm0Umq9xTA63WTRQ+KYk8fR2
- Esxg==
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=/1GIiVAt9IkBpoZ9Uj4zenbh/EnV7XYXqjcP5Gkayek=;
+ b=InHq5aiL3hR9tFDnhuqx6aayq30VOPnHw69PCMZh0fSzKM55HtwqVJl0b4YhHu7o0S
+ +vKSRzTuJwrb/lXpHGExaIBaelO+6e1no2J7UB2BWeJc2O8zSrV6zrjf11Joenv7+K+O
+ bIOK66rwnalFLRsaiCMoP1L5Q+Gri2cgksvOUQua6x2NZ9JNO0modjT5LhxhvqbmC8dc
+ 2FZZWCxZ4UxsFPSHkDVN45m1Rxjv8DMuTLQZdROk5eqrpDHYKSl4SPzzPtiTLnQvNG4L
+ Gdc25pYlvp0qSQqCaGqVXUgLhtnumBY8uup6p7tMk8yK2DpH0DcOK17AODcn1FefgjKv
+ oLRA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:from:to:cc:subject:date:message-id
- :in-reply-to:references:mime-version:content-transfer-encoding;
- bh=CU1uoHEr1EClqVOFtZU3zB21PkkAQa6gthbvOIOjhXw=;
- b=s7YL1GoNvSr/sz+DVjnamiYPTfr0sAAcQWLAZzaseSfUzpBHwW16eNkC+domi6WIcK
- FZNHyoAxU0BwuKuwbqcvJtiqq2P5HCs8EFyrkbS7kyLBCKek1ghS9qUL421B/KxL067N
- tDnmB5UgRuZxhf8hFQjPhE4ZY02BvjcZnPiz1O9BOz/9bTiK3R6i4V38vViMt0fy4iEw
- J7Cus3hOWfFiotfsIevNiJ8FuYvalwA90rPeWykPgx96wIrx88XVAhRdk9sH+hiH1fqJ
- EUM/8UQhag+Om3MzN3JLxq0hWj/L1H+H/6h0UHpkg8nmkg2hfkj57oDgDUEm/505Fyn5
- qZTw==
-X-Gm-Message-State: APjAAAX3qZUhja+qBzkJFuF1nGD1DvJveuNwfpOQ++Gzp8da6eYAK+bS
- 8eaqGr7xWU06uzqjH6a1scU=
-X-Google-Smtp-Source: APXvYqy6JtwNRfjOhSCiLRMY0PnjwO80lGs4bEHgQWo2w/EjSnAnF5rp0zEQoTYkYl1Ki13jCNJp3w==
-X-Received: by 2002:ac2:5388:: with SMTP id g8mr412443lfh.43.1575315232849;
- Mon, 02 Dec 2019 11:33:52 -0800 (PST)
-Received: from saturn.lan (18.158-248-194.customer.lyse.net. [158.248.194.18])
- by smtp.gmail.com with ESMTPSA id
- g13sm79482lfb.74.2019.12.02.11.33.51
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 02 Dec 2019 11:33:52 -0800 (PST)
-From: Sam Ravnborg <sam@ravnborg.org>
-To: dri-devel@lists.freedesktop.org, Thierry Reding <thierry.reding@gmail.com>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-Subject: [PATCH v1 26/26] drm/panel: tpo-tpg110: use drm_panel backlight
- support
-Date: Mon,  2 Dec 2019 20:32:30 +0100
-Message-Id: <20191202193230.21310-27-sam@ravnborg.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191202193230.21310-1-sam@ravnborg.org>
-References: <20191202193230.21310-1-sam@ravnborg.org>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=/1GIiVAt9IkBpoZ9Uj4zenbh/EnV7XYXqjcP5Gkayek=;
+ b=q+hO3jzAUPXrexqIFoFOJMuCDVrKsXsOwEApr79wxzos+xjyTV2zZobjwt2yCQINDl
+ USckEEkCVGNiH++rzB6fylOepLWebIw8HRgD+wpjgPk9+pkgDZgrylchBwQPUCUNK2iD
+ GpvWoYu7AOixTBzpN6WKlHkP9IOqUST+4ccRILUHnwrUgENS93sQ3rG9UhEwfUKqHZQw
+ QSyk5zCNosec5PvaM4TmJgfgPVocn/hPoFN5HUASy/QG9MaNrDGhDxBiCH2zJ+pVGwUN
+ vr/fqixKZhmki7UGHGfL0Vi+XFIS8vbiJIsEHz+yDavvayS9Nv/uyQQQ5PeGgfSWh3TW
+ m68w==
+X-Gm-Message-State: APjAAAXeivuTcXrFyLDRIGodBDPNnSkNDvwA4rUCYQfqw78Y++FNrkpo
+ aiFVbs8cqtsYuBhIwIhhA+UIjlk/hUyLgXFp5Po=
+X-Google-Smtp-Source: APXvYqx6YUMOUm+z16ig9xldwuTeM19+Bd22B3aBAblOLhFaOGglg7N1XrSehMoTWzvuuSea3OH9TLlXRGuqdFXhTE0=
+X-Received: by 2002:a92:4891:: with SMTP id j17mr565262ilg.33.1575316780879;
+ Mon, 02 Dec 2019 11:59:40 -0800 (PST)
 MIME-Version: 1.0
+References: <20191202193230.21310-1-sam@ravnborg.org>
+In-Reply-To: <20191202193230.21310-1-sam@ravnborg.org>
+From: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
+Date: Mon, 2 Dec 2019 12:59:29 -0700
+Message-ID: <CAOCk7NoKPoxcETLYQ4CyAtYGnPwvYapdSavZM=aRdswDydTLEA@mail.gmail.com>
+Subject: Re: [PATCH v1 0/26] drm/panel infrastructure + backlight update
+To: Sam Ravnborg <sam@ravnborg.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191202_113355_001359_AC2F43A9 
-X-CRM114-Status: GOOD (  12.71  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20191202_115944_020011_0AA751B6 
+X-CRM114-Status: GOOD (  19.87  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:141 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:143 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (sam.ravnborg[at]gmail.com)
+ provider (jeffrey.l.hugo[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -103,110 +92,112 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Neil Armstrong <narmstrong@baylibre.com>, David Airlie <airlied@linux.ie>,
  Linus Walleij <linus.walleij@linaro.org>, Stefan Agner <stefan@agner.ch>,
- Andrzej Hajda <a.hajda@samsung.com>,
+ Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
+ Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
  Benjamin Gaignard <benjamin.gaignard@linaro.org>,
- Sam Ravnborg <sam@ravnborg.org>, linux-samsung-soc@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, Abhinav Kumar <abhinavk@codeaurora.org>,
  linux-rockchip@lists.infradead.org, Tomi Valkeinen <tomi.valkeinen@ti.com>,
- Jagan Teki <jagan@amarulasolutions.com>, NXP Linux Team <linux-imx@nxp.com>,
- Jitao Shi <jitao.shi@mediatek.com>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
+ NXP Linux Team <linux-imx@nxp.com>, Jagan Teki <jagan@amarulasolutions.com>,
+ Jitao Shi <jitao.shi@mediatek.com>, Daniel Vetter <daniel@ffwll.ch>,
  Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
  Maxime Ripard <mripard@kernel.org>, linux-mediatek@lists.infradead.org,
- Abhinav Kumar <abhinavk@codeaurora.org>, linux-tegra@vger.kernel.org,
- Sean Paul <sean@poorly.run>, linux-arm-kernel@lists.infradead.org,
+ "open list:DRM PANEL DRIVERS" <dri-devel@lists.freedesktop.org>,
+ linux-tegra@vger.kernel.org, Sean Paul <sean@poorly.run>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
  Purism Kernel Team <kernel@puri.sm>, linux-renesas-soc@vger.kernel.org,
  Boris Brezillon <boris.brezillon@collabora.com>,
- Daniel Vetter <daniel@ffwll.ch>
+ Pengutronix Kernel Team <kernel@pengutronix.de>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use the backlight support in drm_panel to simplify the driver
+On Mon, Dec 2, 2019 at 12:33 PM Sam Ravnborg <sam@ravnborg.org> wrote:
+>
+> This patchset include a couple of different
+> things - all related to panels.
+>
+> - The panel callbacks are optional - so drop error if
+>   callback is not present.
+>
+> - Add support for backlight in drm_panel.
+>   This allows us to make much simpler backlight
+>   support to most panels.
+>   The patchset include conversion of most of the
+>   trivial cases.
+>
+> - Drop drm_connector from drm_panel.
+>   This change required many changes to most
+>   panels and many bridges and display drivers.
+>   This is by far the most invasive change in this patchset.
+>
+> - Drop the unused get_timings() callback.
+>   No users, so no need to keep it around.
+>
+> With this patchset drm_panel_(attach|detach) are nop's
+> but they are kept for now.
+>
+> A few of these patches has been sent out before - but versioning
+> started again from v1 - as the most patches are new.
+>
+> I have tested the panel-simple changes, and thus some
+> of the infrastructure changes.
+> The testing was done on an earlier iteration - and I ended
+> up submitting this as Laurent and others started to depend on it.
+> Jitao has a patch to add more callbacks, and I wanted the
+> simplification of the callbacks before we add more callbacks.
+>
+>         Sam
+>
+>
+> Sam Ravnborg (26):
+>       drm/drm_panel: no error when no callback
+>       drm/panel: add backlight support
+>       drm/panel: simple: use drm_panel backlight support
+>       drm: get drm_bridge_panel connector via helper
+>       drm/panel: add drm_connector argument to get_modes()
+>       drm/panel: decouple connector from drm_panel
+>       drm/panel: remove get_timings
+>       drm/panel: drop drm_device from drm_panel
+>       drm/panel: feiyang-fy07024di26a30d: use drm_panel backlight support
+>       drm/panel: ilitek-ili9881c: use drm_panel backlight support
+>       drm/panel: innolux-p079zca: use drm_panel backlight support
+>       drm/panel: kingdisplay-kd097d04: use drm_panel backlight support
+>       drm/panel: lvds: use drm_panel backlight support
+>       drm/panel: olimex-lcd-olinuxino: use drm_panel backlight support
+>       drm/panel: osd-osd101t2587-53ts: use drm_panel backlight support
+>       drm/panel: panasonic-vvx10f034n00: use drm_panel backlight support
+>       drm/panel: raydium-rm68200: use drm_panel backlight support
+>       drm/panel: rocktech-jh057n00900: use drm_panel backlight support
+>       drm/panel: ronbo-rb070d30: use drm_panel backlight support
+>       drm/panel: seiko-43wvf1g: use drm_panel backlight support
+>       drm/panel: sharp-lq101r1sx01: use drm_panel backlight support
+>       drm/panel: sharp-ls043t1le01: use drm_panel backlight support
+>       drm/panel: sitronix-st7701: use drm_panel backlight support
+>       drm/panel: sitronix-st7789v: use drm_panel backlight support
+>       drm/panel: tpo-td028ttec1: use drm_panel backlight support
+>       drm/panel: tpo-tpg110: use drm_panel backlight support
+>
+>  drivers/gpu/drm/bridge/analogix/analogix-anx6345.c |   2 +-
+>  drivers/gpu/drm/bridge/analogix/analogix_dp_core.c |   2 +-
+>  drivers/gpu/drm/bridge/panel.c                     |  18 +++-
+>  drivers/gpu/drm/bridge/parade-ps8622.c             |   2 +-
+>  drivers/gpu/drm/bridge/tc358764.c                  |   2 +-
+>  drivers/gpu/drm/bridge/tc358767.c                  |   2 +-
+>  drivers/gpu/drm/bridge/ti-sn65dsi86.c              |   2 +-
+>  drivers/gpu/drm/drm_panel.c                        |  96 ++++++++++++++----
+>  drivers/gpu/drm/exynos/exynos_drm_dpi.c            |   2 +-
+>  drivers/gpu/drm/exynos/exynos_drm_dsi.c            |   2 +-
+>  drivers/gpu/drm/fsl-dcu/fsl_dcu_drm_rgb.c          |   2 +-
+>  drivers/gpu/drm/imx/imx-ldb.c                      |   2 +-
+>  drivers/gpu/drm/imx/parallel-display.c             |   2 +-
+>  drivers/gpu/drm/mediatek/mtk_dsi.c                 |   2 +-
+>  .../gpu/drm/msm/disp/mdp4/mdp4_lvds_connector.c    |   2 +-
+>  drivers/gpu/drm/msm/dsi/dsi_manager.c              |   2 +-
 
-Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
-Cc: Linus Walleij <linus.walleij@linaro.org>
-Cc: Thierry Reding <thierry.reding@gmail.com>
-Cc: Sam Ravnborg <sam@ravnborg.org>
----
- drivers/gpu/drm/panel/panel-tpo-tpg110.c | 20 ++++++--------------
- 1 file changed, 6 insertions(+), 14 deletions(-)
-
-diff --git a/drivers/gpu/drm/panel/panel-tpo-tpg110.c b/drivers/gpu/drm/panel/panel-tpo-tpg110.c
-index bee213ea1a42..8472d018c16f 100644
---- a/drivers/gpu/drm/panel/panel-tpo-tpg110.c
-+++ b/drivers/gpu/drm/panel/panel-tpo-tpg110.c
-@@ -14,13 +14,13 @@
- #include <drm/drm_panel.h>
- #include <drm/drm_print.h>
- 
--#include <linux/backlight.h>
- #include <linux/bitops.h>
- #include <linux/delay.h>
- #include <linux/gpio/consumer.h>
- #include <linux/init.h>
- #include <linux/kernel.h>
- #include <linux/module.h>
-+#include <linux/of.h>
- #include <linux/platform_device.h>
- #include <linux/spi/spi.h>
- 
-@@ -76,10 +76,6 @@ struct tpg110 {
- 	 * @panel: the DRM panel instance for this device
- 	 */
- 	struct drm_panel panel;
--	/**
--	 * @backlight: backlight for this panel
--	 */
--	struct backlight_device *backlight;
- 	/**
- 	 * @panel_type: the panel mode as detected
- 	 */
-@@ -356,8 +352,6 @@ static int tpg110_disable(struct drm_panel *panel)
- 	val &= ~TPG110_CTRL2_PM;
- 	tpg110_write_reg(tpg, TPG110_CTRL2_PM, val);
- 
--	backlight_disable(tpg->backlight);
--
- 	return 0;
- }
- 
-@@ -366,8 +360,6 @@ static int tpg110_enable(struct drm_panel *panel)
- 	struct tpg110 *tpg = to_tpg110(panel);
- 	u8 val;
- 
--	backlight_enable(tpg->backlight);
--
- 	/* Take chip out of standby */
- 	val = tpg110_read_reg(tpg, TPG110_CTRL2_PM);
- 	val |= TPG110_CTRL2_PM;
-@@ -432,11 +424,6 @@ static int tpg110_probe(struct spi_device *spi)
- 	if (ret)
- 		DRM_DEV_ERROR(dev, "no panel height specified\n");
- 
--	/* Look for some optional backlight */
--	tpg->backlight = devm_of_find_backlight(dev);
--	if (IS_ERR(tpg->backlight))
--		return PTR_ERR(tpg->backlight);
--
- 	/* This asserts the GRESTB signal, putting the display into reset */
- 	tpg->grestb = devm_gpiod_get(dev, "grestb", GPIOD_OUT_HIGH);
- 	if (IS_ERR(tpg->grestb)) {
-@@ -459,6 +446,11 @@ static int tpg110_probe(struct spi_device *spi)
- 
- 	drm_panel_init(&tpg->panel, dev, &tpg110_drm_funcs,
- 		       DRM_MODE_CONNECTOR_DPI);
-+
-+	ret = drm_panel_of_backlight(&tpg->panel);
-+	if (ret)
-+		return ret;
-+
- 	spi_set_drvdata(spi, tpg);
- 
- 	return drm_panel_add(&tpg->panel);
--- 
-2.20.1
-
+How come the diff stat in the cover letter here indicates a change to
+this file, yet I cannot find a change to this file in any of the
+patches?  What am I missing?
 
 _______________________________________________
 Linux-mediatek mailing list
