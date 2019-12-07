@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E6357115C3C
-	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 13:33:11 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6974E115C38
+	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 13:32:43 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=1lvHReRD0HEwF3Hjp9hjdoTM4oKxTo6KcCuOO+y9uh0=; b=LfhCMFP3+vrrjp
-	0sJ16wSgwUI3yeJahoRGHutlrGhKbHenK+Aph+xCFuPHF4nGq5hLOSMzbHituaauGXZA05Kr2vypn
-	zMucsAIMv/F0UO2+CxhtGAgvgfkMrDLfW261CRBJolOJg8pB+QLVdbUjZhYoj1GoI9cNZXFHy9zaU
-	HFp0mhmOrmoc/kSidGzcKS8FcYaadRdQOaWCI+21E/NiDKdwX9pYXiYPtaBGwtdrgD02w5VbKkLqN
-	jYTeDzhPfp3AxaaDIOZUholDBmIEVbtsjHQ7AMBXxVCeJPZJ8M0/2sj/hnEfimZQRFlIjFpQ2RQXn
-	mMBu5vewk8ZCtpwuzo2g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=TIIHkQHviWJlzANxRKOxq3bkjQQ3VUzBoCmKZy0aAo4=; b=u637yIBt7+Ptkn
+	pl7E8dSJ8jKOhUaZdeDXAzLEgRtTzSBC47QRd68NDWk/Ng/124FBx52xkRSx4zcv1LyJvL7il7uXV
+	iKkoR/NUZUmWuI9evIn7PH2cuPQdkB39WNGVmMj1AnEibWKs3WpCtJaAz3mLKIS0Qf71WFlJRE+VA
+	Q9237V3yiQY43MNAnOM9SeizJAAMF7AeoRuVgjOErewrDGmO344IxHkGcS8xqaeppD3m4maGQ4YEJ
+	76lzOye7LhZgPe3A70Obdj58fZ5Ccx+1I1e/Ik2AciZtahMK46kNRZeryfZ+8nmk5KCk19Yr0+i78
+	26k3HDBp/0oVgJEGpG9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1idZGk-0007ML-ST; Sat, 07 Dec 2019 12:33:06 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1idZGD-0006pZ-GE; Sat, 07 Dec 2019 12:32:33 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1idZGE-0006pE-2M; Sat, 07 Dec 2019 12:32:35 +0000
-X-UUID: a838075d8176472cb27ea2586e75da47-20191207
+ id 1idZG9-0006ol-K4; Sat, 07 Dec 2019 12:32:31 +0000
+X-UUID: ee488406bb544d1fbe7a632498da612f-20191207
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=K3/4d8dMyg2wXRwQFcJk/UGgrlNk/bp2Ig4rf75mjwY=; 
- b=jcjtTcYreCCa7qvYkNxwiogWhSRZakJ2Ofzmcw4ltFgZQtAs5uT3BAn7s2frPFyDpcixZ2AOZo2xFVGUAEEsDUvq4pKitpOAaWw1UNo30C9TdzOi4C0z2j/5tJsw13+ANCVilq8mbRDy11wKLZit6n+/HCsIe/++r539c063t5Q=;
-X-UUID: a838075d8176472cb27ea2586e75da47-20191207
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=WdphAW/gpXCO6Np9LJ/wLt5JaiJqP2sTAAv7fAToZng=; 
+ b=Y8K7+QrmVgzX5jprRcO+UT47F5AN5tPrAoMs+BIBGbdy8cBL3/r1EX1tM23AAq7lo5w4F+k4N6jE7gwQGRO2ljyZ1l9CFgJKShZdlCD83hVIzyvJC4UzNhLI1eRprvBpG6MMG0zgzcdEj/0TuU3EP3/wrwqoLMgYWHf943EGI+0=;
+X-UUID: ee488406bb544d1fbe7a632498da612f-20191207
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 755702007; Sat, 07 Dec 2019 04:32:28 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 7 Dec 2019 04:23:04 -0800
+ with ESMTP id 892752171; Sat, 07 Dec 2019 04:32:22 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 7 Dec 2019 04:23:17 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 7 Dec 2019 20:21:46 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 7 Dec 2019 20:21:44 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Sat, 7 Dec 2019 20:21:55 +0800
@@ -46,21 +46,26 @@ From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
  <pedrom.sousa@synopsys.com>, <jejb@linux.ibm.com>, <matthias.bgg@gmail.com>
-Subject: [PATCH v1 0/2] scsi: ufs: fixup active period of ufshcd interrupt
-Date: Sat, 7 Dec 2019 20:21:59 +0800
-Message-ID: <1575721321-8071-1-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v1 1/2] scsi: ufs: disable irq before disabling clocks
+Date: Sat, 7 Dec 2019 20:22:00 +0800
+Message-ID: <1575721321-8071-2-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1575721321-8071-1-git-send-email-stanley.chu@mediatek.com>
+References: <1575721321-8071-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 2AF96748D5321DF6AB154895A2E1C9E3DE4982FA9A1F03C07B3D57554AB449A02000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191207_043234_134563_8D0D8067 
-X-CRM114-Status: UNSURE (   3.86  )
+X-CRM114-CacheID: sfid-20191207_043229_759558_BA8E3794 
+X-CRM114-Status: UNSURE (   8.23  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -95,15 +100,50 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patchset fixes up active duration of ufshcd interrupt to avoid potential system hang issues.
+During suspend flow, interrupt shall be disabled before disabling
+clocks to avoid potential system hang due to accessing host registers
+after host clocks are disabled.
 
-Stanley Chu (2):
-  scsi: ufs: disable irq before disabling clocks
-  scsi: ufs: disable interrupt during clock-gating
+For example, if an interrupt comes with IRQF_IRQPOLL flag configured
+with the misrouted interrupt recovery feature enabled, ufshcd ISR may
+be triggered even if nothing shall be done for UFS. In this case, system
+hang may happen if UFS interrupt status register is accessed with host
+clocks disabled.
 
- drivers/scsi/ufs/ufshcd.c | 15 ++++++++++-----
- 1 file changed, 10 insertions(+), 5 deletions(-)
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ drivers/scsi/ufs/ufshcd.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
 
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index b5966faf3e98..f80bd4e811cb 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -7908,6 +7908,11 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
+ 	ret = ufshcd_vops_suspend(hba, pm_op);
+ 	if (ret)
+ 		goto set_link_active;
++	/*
++	 * Disable the host irq as host controller as there won't be any
++	 * host controller transaction expected till resume.
++	 */
++	ufshcd_disable_irq(hba);
+ 
+ 	if (!ufshcd_is_link_active(hba))
+ 		ufshcd_setup_clocks(hba, false);
+@@ -7917,11 +7922,7 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
+ 
+ 	hba->clk_gating.state = CLKS_OFF;
+ 	trace_ufshcd_clk_gating(dev_name(hba->dev), hba->clk_gating.state);
+-	/*
+-	 * Disable the host irq as host controller as there won't be any
+-	 * host controller transaction expected till resume.
+-	 */
+-	ufshcd_disable_irq(hba);
++
+ 	/* Put the host controller in low power mode if possible */
+ 	ufshcd_hba_vreg_set_lpm(hba);
+ 	goto out;
 -- 
 2.18.0
 _______________________________________________
