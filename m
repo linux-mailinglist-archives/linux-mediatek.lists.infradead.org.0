@@ -2,61 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CDA72115B5E
-	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 07:39:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E6357115C3C
+	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 13:33:11 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fRQxhSDfgjPAAgpQUfxG0LIjJr6iPbpEToFIHeAztN0=; b=bPtZ4mw9tQkVMB
-	zdcH2JThjr9VbLEMA5Tl/d/66t3m7fTzpWpzS3X7+cMwxsP1eLFUkqC2UsfbFOq6ODhvFRM1BSkxh
-	HblYIK2InDsbYlMyCU/1VOfCFs3pAAMC5gWsT9iyobVyqSwpKWWdtIqpLB1o0c3BfBtsVXqS3znrY
-	CzznqOe5dQw1Bzfn15vX5s6Ej6uQ5+Lz2EZoduU86F5vQwFB2c1iObKb2W+XNYKv5Mx3c3HEGNKzD
-	D6BUAqN6UDh4TQ2otS4Zvr6w0vEzqDoWA4JtqQ1g3h5ZlPHULaIEMKfKt2+Ltqt8gQpkTwy7atSYB
-	M1dSguQ/DlaHtIOh7JgA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=1lvHReRD0HEwF3Hjp9hjdoTM4oKxTo6KcCuOO+y9uh0=; b=LfhCMFP3+vrrjp
+	0sJ16wSgwUI3yeJahoRGHutlrGhKbHenK+Aph+xCFuPHF4nGq5hLOSMzbHituaauGXZA05Kr2vypn
+	zMucsAIMv/F0UO2+CxhtGAgvgfkMrDLfW261CRBJolOJg8pB+QLVdbUjZhYoj1GoI9cNZXFHy9zaU
+	HFp0mhmOrmoc/kSidGzcKS8FcYaadRdQOaWCI+21E/NiDKdwX9pYXiYPtaBGwtdrgD02w5VbKkLqN
+	jYTeDzhPfp3AxaaDIOZUholDBmIEVbtsjHQ7AMBXxVCeJPZJ8M0/2sj/hnEfimZQRFlIjFpQ2RQXn
+	mMBu5vewk8ZCtpwuzo2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1idTkS-0003ts-QZ; Sat, 07 Dec 2019 06:39:24 +0000
+	id 1idZGk-0007ML-ST; Sat, 07 Dec 2019 12:33:06 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1idTkP-0003tN-1X; Sat, 07 Dec 2019 06:39:22 +0000
-X-UUID: e05e125153d9401b898bf37850b2e51f-20191206
+ id 1idZGE-0006pE-2M; Sat, 07 Dec 2019 12:32:35 +0000
+X-UUID: a838075d8176472cb27ea2586e75da47-20191207
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=FsOPpGNcvyN3hqCpKWKad5Cxcn0GwUWSQI3FseIG2Rg=; 
- b=Ch2EJJRY4iHukue/yzS8oQ9cnCLyxaAYDIp8wKWnk6b2vAHc5j440FyHfuc5usvXgozSluJe0PiAnf0NO/IOaFu68v3rDG8/39vFGnzV6jGZPPo/v+gUEuh2fKLUwUpiubf/r9KC6REHx8Q/NWhF6iF8b4IW2RFhgYTKgHFH2c0=;
-X-UUID: e05e125153d9401b898bf37850b2e51f-20191206
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=K3/4d8dMyg2wXRwQFcJk/UGgrlNk/bp2Ig4rf75mjwY=; 
+ b=jcjtTcYreCCa7qvYkNxwiogWhSRZakJ2Ofzmcw4ltFgZQtAs5uT3BAn7s2frPFyDpcixZ2AOZo2xFVGUAEEsDUvq4pKitpOAaWw1UNo30C9TdzOi4C0z2j/5tJsw13+ANCVilq8mbRDy11wKLZit6n+/HCsIe/++r539c063t5Q=;
+X-UUID: a838075d8176472cb27ea2586e75da47-20191207
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2086838484; Fri, 06 Dec 2019 22:39:13 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 6 Dec 2019 22:40:08 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 7 Dec 2019 14:38:51 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
+ with ESMTP id 755702007; Sat, 07 Dec 2019 04:32:28 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 7 Dec 2019 04:23:04 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 7 Dec 2019 20:21:46 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Sat, 7 Dec 2019 14:38:44 +0800
+ Frontend Transport; Sat, 7 Dec 2019 20:21:55 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
  <pedrom.sousa@synopsys.com>, <jejb@linux.ibm.com>, <matthias.bgg@gmail.com>
-Subject: [PATCH v1 2/2] scsi: ufs-mediatek: add device reset implementation
-Date: Sat, 7 Dec 2019 14:39:08 +0800
-Message-ID: <1575700748-28191-3-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v1 0/2] scsi: ufs: fixup active period of ufshcd interrupt
+Date: Sat, 7 Dec 2019 20:21:59 +0800
+Message-ID: <1575721321-8071-1-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1575700748-28191-1-git-send-email-stanley.chu@mediatek.com>
-References: <1575700748-28191-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191206_223921_096445_312114F7 
-X-CRM114-Status: UNSURE (   8.55  )
+X-CRM114-CacheID: sfid-20191207_043234_134563_8D0D8067 
+X-CRM114-Status: UNSURE (   3.86  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -67,13 +65,13 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -87,7 +85,7 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: leon.chen@mediatek.com, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
  kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
  linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
  Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
@@ -97,95 +95,15 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add device reset vops implementation in MediaTek UFS driver.
+This patchset fixes up active duration of ufshcd interrupt to avoid potential system hang issues.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 27 +++++++++++++++++++++++++++
- drivers/scsi/ufs/ufs-mediatek.h |  7 +++++++
- 2 files changed, 34 insertions(+)
+Stanley Chu (2):
+  scsi: ufs: disable irq before disabling clocks
+  scsi: ufs: disable interrupt during clock-gating
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 83e28edc3ac5..6a3ec11b16db 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -6,10 +6,12 @@
-  *	Peter Wang <peter.wang@mediatek.com>
-  */
- 
-+#include <linux/arm-smccc.h>
- #include <linux/of.h>
- #include <linux/of_address.h>
- #include <linux/phy/phy.h>
- #include <linux/platform_device.h>
-+#include <linux/soc/mediatek/mtk_sip_svc.h>
- 
- #include "ufshcd.h"
- #include "ufshcd-pltfrm.h"
-@@ -269,6 +271,30 @@ static int ufs_mtk_link_startup_notify(struct ufs_hba *hba,
- 	return ret;
- }
- 
-+static void ufs_mtk_device_reset(struct ufs_hba *hba)
-+{
-+	struct arm_smccc_res res;
-+
-+	arm_smccc_smc(MTK_SIP_UFS_CONTROL, UFS_MTK_SIP_DEVICE_RESET,
-+		      0, 0, 0, 0, 0, 0, &res);
-+	/*
-+	 * The reset signal is active low. UFS devices shall detect
-+	 * more than or equal to 1us of positive or negative RST_n
-+	 * pulse width.
-+	 *
-+	 * To be on safe side, keep the reset low for at least 10us.
-+	 */
-+	usleep_range(10, 15);
-+
-+	arm_smccc_smc(MTK_SIP_UFS_CONTROL, UFS_MTK_SIP_DEVICE_RESET,
-+		      1, 0, 0, 0, 0, 0, &res);
-+
-+	/* Some devices may need time to respond to rst_n */
-+	usleep_range(10000, 15000);
-+
-+	dev_info(hba->dev, "device reset done\n");
-+}
-+
- static int ufs_mtk_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- {
- 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
-@@ -303,6 +329,7 @@ static struct ufs_hba_variant_ops ufs_hba_mtk_vops = {
- 	.pwr_change_notify   = ufs_mtk_pwr_change_notify,
- 	.suspend             = ufs_mtk_suspend,
- 	.resume              = ufs_mtk_resume,
-+	.device_reset        = ufs_mtk_device_reset,
- };
- 
- /**
-diff --git a/drivers/scsi/ufs/ufs-mediatek.h b/drivers/scsi/ufs/ufs-mediatek.h
-index 19f8c42fe06f..b03f601d3a9e 100644
---- a/drivers/scsi/ufs/ufs-mediatek.h
-+++ b/drivers/scsi/ufs/ufs-mediatek.h
-@@ -6,6 +6,8 @@
- #ifndef _UFS_MEDIATEK_H
- #define _UFS_MEDIATEK_H
- 
-+#include <linux/bitops.h>
-+
- /*
-  * Vendor specific pre-defined parameters
-  */
-@@ -29,6 +31,11 @@
- #define VS_SAVEPOWERCONTROL         0xD0A6
- #define VS_UNIPROPOWERDOWNCONTROL   0xD0A8
- 
-+/*
-+ * SiP commands
-+ */
-+#define UFS_MTK_SIP_DEVICE_RESET    BIT(1)
-+
- /*
-  * VS_DEBUGCLOCKENABLE
-  */
+ drivers/scsi/ufs/ufshcd.c | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+
 -- 
 2.18.0
 _______________________________________________
