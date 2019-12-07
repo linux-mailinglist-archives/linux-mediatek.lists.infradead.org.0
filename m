@@ -2,81 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2849B115D13
-	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 15:13:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 21D9F115D15
+	for <lists+linux-mediatek@lfdr.de>; Sat,  7 Dec 2019 15:13:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zUFlu/HeMM7tZU2DZhY4A2gVXc+LfXXQ2wZvFzRbB64=; b=Zq0He20zC6ZW3W
-	Yd56AXvThdBSbquX8mxKaxf8pKGJum/ZYKVtxy5bk2qzDzumuFNEk8VVNwD4UD7/4m6WmPeLknCeY
-	9wDSfvqIIvDY3GLvF9l7z8chUv6uodg+qh3rOP/qz0JMN6zqDj+GIsVbWGDnMhsAsZCXD+RdIQf++
-	08db3Ra9mI4Bb/mVcbODOgzfBcCHKr9co3DLc/QwSqG+/NvOTSvM7W2ldWfG/lkEYAdup09aJ93Fm
-	OrIo5Wos+ACAbcYvA+S/5PXcDrz4H07xZhgtpzgVhuPTNW6QeVRg4r235yKXnljN03Q+02M+n0Zlm
-	+8e1NZ4k2LoF03/KjaUw==;
+	List-Owner; bh=MNhGfFhtDOHevJI26aCaKgEWKjnS/l4usKasggjiDvI=; b=gxoBI/YF0P1tx7
+	YMqa9ibZD0WGmxO9Di2M+e9VSe4hg4PWeGeveOi+YEreg7LlDWYCnsALSKccZx8Xk2eb2WMAiV+y7
+	Q8sUWE2UzkbuLi3MBTA9a1iCxxrqhIZZJ+p/p2DD9LWiOOMC8SoUcljwSP8s9BlCgpMOnPL2HODA3
+	oir9Rco5Z9GiDmMK9N9EvQdTxz/bOcTGCW7A8AsWz2FHEe4L+eDrocZj/zW+QjqEtj13Lgc3eC8ne
+	8y0/319P2ROi5O4gF/xGirN5/Y10wG92k4GU4izzdpgAryc0YkUx2X8a+VfG/Zg6KoBTc589c+mCy
+	0NcyZbvxgUSCy24pQIEw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1idapb-0007dP-8O; Sat, 07 Dec 2019 14:13:11 +0000
-Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
+	id 1idapp-0007tQ-ON; Sat, 07 Dec 2019 14:13:25 +0000
+Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1idahV-0005uf-Am; Sat, 07 Dec 2019 14:04:51 +0000
-Received: by mail-lj1-x244.google.com with SMTP id e28so10676340ljo.9;
- Sat, 07 Dec 2019 06:04:48 -0800 (PST)
+ id 1idahW-0005vy-O8; Sat, 07 Dec 2019 14:04:52 +0000
+Received: by mail-lj1-x242.google.com with SMTP id 21so10751945ljr.0;
+ Sat, 07 Dec 2019 06:04:50 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=sender:from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=hw0rPta+AA/XFBLEBOh9a+kLNOAcb6jsKbJs4LtSRgU=;
- b=dujt1IVs5McsvvCsS7c3G0D/mTHDXUMi51mW2f99aBVUYnNM0USN10IKau9DTLbIXD
- N0w1Bxp2ZJQY4VWNYQZf6FDQd51O3sGNhWrqkB3oiiorl2hyxenjXW8v4i4n6DjmTHyv
- TWUFLU2Ow2/imOgILveZLZKmvAdZgNY/Ts4dRuLUCXML6td1LGA3UNom6LzqQ6gCV+t5
- gdcatQfkQ1WDpmFlbC+4HbLPGQ+gzXqkgVRKSHc9MEGkGFjFiZzolhPxEI5C3cKVent2
- vdsdkW1wpeBn3ajpWNmRLDC2AQapSvlxsrHAwg/JfiHH2CzarAQZBYcSc6lVbsqE8Pzt
- DAZQ==
+ bh=tMLaH1DcHQ+vslghT8+TRlkI4S2XQo8E4UTpDmragvw=;
+ b=D5+RmOPm/+yiH3s+zhgEQGpCAmW0YXmO48/99b7aaUbSUOvDCUGN6xw3aJGZok+YIl
+ iOJ+GDzDZKJQC457IWNLRwXQHFFwdVfDRnUxN+Q7eaI6POWbKXfSJ8cw7sb4/mHRBbpi
+ ynYuv49Pik/w7Xr+hnv7Fi0/jsE3DCzwGrHOx8y12KhtuP7nx4tbQpEOjP15CtyBnrUX
+ XF9CEacwHFVlssgCdD8nufa44SMQTmfwEHhskW5VZv72NI/qHuVzIXGwQbkNs2JJwkcG
+ qRlj1jvP7/PKAwsYvBF1P1bdl67vM/vuuvfH12DLL0tbY5NLpnHWbygQMkLMGPC8O8NJ
+ sHbg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:sender:from:to:cc:subject:date:message-id
  :in-reply-to:references:mime-version:content-transfer-encoding;
- bh=hw0rPta+AA/XFBLEBOh9a+kLNOAcb6jsKbJs4LtSRgU=;
- b=RrATGeMrjOEvXqPD7M3L1AO7tbtCBEQLkHxnvCsM0ZWMUdk2Z9b8O72ehNVCKcDb27
- XESXtxVqI2E8WNG+ff/GrBJjwE4aPnZJUdulmkLrXCRMdw/THdIHnI3Z/VlC/XlHCxUQ
- 7qMyGtY/gBCxPM2eRkDrGezuuQVLWnUJoJiJzFKjSV7zLSIqnX59XSBcr5tBfmgyfMKU
- JaI4/YHVhyXCM3b1xFP7UWumrUOVwXoWo9wve2cA7sxjrxoWb54AVV3g93NRHjyYvB/O
- WfNsoIai92ZetonSTRim0bI1OWHNz/oKG6gyVFD9L6lx5vss3TIF3LvR59+GMAP0bMSQ
- uj/Q==
-X-Gm-Message-State: APjAAAWrQDDA9Ozb2Dswi7etzjoyRNBwdIRfdUZsvUyBfMxfEgCFDpXZ
- pn+K/iRt26alJNsM48TOMYo=
-X-Google-Smtp-Source: APXvYqyWqS/UYClZRuV+PVSMCxa4dLKzGzQrOw/21c5lNjINDm39XRuZVV8pygqFWhwuQDk08wN9Sw==
-X-Received: by 2002:a2e:b017:: with SMTP id y23mr11611110ljk.229.1575727487602; 
- Sat, 07 Dec 2019 06:04:47 -0800 (PST)
+ bh=tMLaH1DcHQ+vslghT8+TRlkI4S2XQo8E4UTpDmragvw=;
+ b=EkjxiUDsGYHCqmQp4mPH9gmxQ4LJcKgol730Hz+3ZOU92atncZS8bCW6qT594ZSKPp
+ 1J2b6Y3b1p9Ychi0fBceQo+p00T493ag4ZMQs9YpcYAu9SU2/2cfw8Yd8vvGvFwA9CH7
+ j9UERc2PbouCsqJqN4lm3ZF5QF+gvehi4rCLo94LAsJuP/oiESXnqT5EVe2qzp+UFXkD
+ lsO0GP4xa//Q7QmEksNshsP6E71WvZfo0OsGQZ0Wuf0+6spNyQWWoyBtGyocbLWpVJba
+ JIYaDttQiltSNes4N8E5udGGQl9U1u5yCKg7/4QGIYF3FKc0Qn7w0pLgQIImcfcEnQv2
+ QzlA==
+X-Gm-Message-State: APjAAAXquDNjySPOwrBps+YLcI95ZhHg2v3VYM/8xRfOLQfqMUm5hPUE
+ /xhJdgeTLaXK5ZUMtUuoNRo=
+X-Google-Smtp-Source: APXvYqy+3wJ62tFG4eYTppjZHiTHnpCgFKPf2bYaW1HgVGCJ9bYH7aEQPcT0zxepBy1VmMfRB5FgmQ==
+X-Received: by 2002:a05:651c:153:: with SMTP id
+ c19mr11950509ljd.237.1575727489236; 
+ Sat, 07 Dec 2019 06:04:49 -0800 (PST)
 Received: from saturn.lan (18.158-248-194.customer.lyse.net. [158.248.194.18])
  by smtp.gmail.com with ESMTPSA id
- w17sm5644188lfn.22.2019.12.07.06.04.46
+ w17sm5644188lfn.22.2019.12.07.06.04.47
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 07 Dec 2019 06:04:47 -0800 (PST)
+ Sat, 07 Dec 2019 06:04:48 -0800 (PST)
 From: Sam Ravnborg <sam@ravnborg.org>
 To: dri-devel@lists.freedesktop.org, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
  Linus Walleij <linus.walleij@linaro.org>, Sam Ravnborg <sam@ravnborg.org>
-Subject: [PATCH v2 21/25] drm/panel: sharp-ls043t1le01: use drm_panel
- backlight support
-Date: Sat,  7 Dec 2019 15:03:49 +0100
-Message-Id: <20191207140353.23967-22-sam@ravnborg.org>
+Subject: [PATCH v2 22/25] drm/panel: sitronix-st7701: use drm_panel backlight
+ support
+Date: Sat,  7 Dec 2019 15:03:50 +0100
+Message-Id: <20191207140353.23967-23-sam@ravnborg.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191207140353.23967-1-sam@ravnborg.org>
 References: <20191207140353.23967-1-sam@ravnborg.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191207_060449_486490_C07B610B 
-X-CRM114-Status: GOOD (  12.58  )
+X-CRM114-CacheID: sfid-20191207_060450_843202_FCC7E975 
+X-CRM114-Status: GOOD (  11.97  )
 X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:244 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:242 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -126,95 +127,71 @@ Use the backlight support in drm_panel to simplify the driver
 
 Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
 Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Cc: Jagan Teki <jagan@amarulasolutions.com>
 Cc: Thierry Reding <thierry.reding@gmail.com>
 Cc: Sam Ravnborg <sam@ravnborg.org>
 ---
- .../gpu/drm/panel/panel-sharp-ls043t1le01.c   | 20 +++++++------------
- 1 file changed, 7 insertions(+), 13 deletions(-)
+ drivers/gpu/drm/panel/panel-sitronix-st7701.c | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
 
-diff --git a/drivers/gpu/drm/panel/panel-sharp-ls043t1le01.c b/drivers/gpu/drm/panel/panel-sharp-ls043t1le01.c
-index 7995cf5a9fc4..b60c4db1ed6d 100644
---- a/drivers/gpu/drm/panel/panel-sharp-ls043t1le01.c
-+++ b/drivers/gpu/drm/panel/panel-sharp-ls043t1le01.c
-@@ -7,7 +7,6 @@
-  * Based on AUO panel driver by Rob Clark <robdclark@gmail.com>
-  */
+diff --git a/drivers/gpu/drm/panel/panel-sitronix-st7701.c b/drivers/gpu/drm/panel/panel-sitronix-st7701.c
+index c08a865a2a93..4b4f2558e3b4 100644
+--- a/drivers/gpu/drm/panel/panel-sitronix-st7701.c
++++ b/drivers/gpu/drm/panel/panel-sitronix-st7701.c
+@@ -9,7 +9,6 @@
+ #include <drm/drm_panel.h>
+ #include <drm/drm_print.h>
  
 -#include <linux/backlight.h>
- #include <linux/delay.h>
  #include <linux/gpio/consumer.h>
+ #include <linux/delay.h>
  #include <linux/module.h>
-@@ -25,7 +24,6 @@ struct sharp_nt_panel {
- 	struct drm_panel base;
+@@ -103,7 +102,6 @@ struct st7701 {
  	struct mipi_dsi_device *dsi;
+ 	const struct st7701_panel_desc *desc;
  
 -	struct backlight_device *backlight;
- 	struct regulator *supply;
- 	struct gpio_desc *reset_gpio;
+ 	struct regulator_bulk_data *supplies;
+ 	struct gpio_desc *reset;
+ 	unsigned int sleep_delay;
+@@ -223,7 +221,6 @@ static int st7701_enable(struct drm_panel *panel)
+ 	struct st7701 *st7701 = panel_to_st7701(panel);
  
-@@ -107,8 +105,6 @@ static int sharp_nt_panel_disable(struct drm_panel *panel)
- 	if (!sharp_nt->enabled)
- 		return 0;
- 
--	backlight_disable(sharp_nt->backlight);
--
- 	sharp_nt->enabled = false;
+ 	ST7701_DSI(st7701, MIPI_DCS_SET_DISPLAY_ON, 0x00);
+-	backlight_enable(st7701->backlight);
  
  	return 0;
-@@ -190,8 +186,6 @@ static int sharp_nt_panel_enable(struct drm_panel *panel)
- 	if (sharp_nt->enabled)
- 		return 0;
- 
--	backlight_enable(sharp_nt->backlight);
--
- 	sharp_nt->enabled = true;
- 
- 	return 0;
-@@ -244,6 +238,7 @@ static const struct drm_panel_funcs sharp_nt_panel_funcs = {
- static int sharp_nt_panel_add(struct sharp_nt_panel *sharp_nt)
+ }
+@@ -232,7 +229,6 @@ static int st7701_disable(struct drm_panel *panel)
  {
- 	struct device *dev = &sharp_nt->dsi->dev;
-+	int ret;
+ 	struct st7701 *st7701 = panel_to_st7701(panel);
  
- 	sharp_nt->mode = &default_mode;
+-	backlight_disable(st7701->backlight);
+ 	ST7701_DSI(st7701, MIPI_DCS_SET_DISPLAY_OFF, 0x00);
  
-@@ -260,14 +255,13 @@ static int sharp_nt_panel_add(struct sharp_nt_panel *sharp_nt)
- 		gpiod_set_value(sharp_nt->reset_gpio, 0);
+ 	return 0;
+@@ -366,10 +362,6 @@ static int st7701_dsi_probe(struct mipi_dsi_device *dsi)
+ 		return PTR_ERR(st7701->reset);
  	}
  
--	sharp_nt->backlight = devm_of_find_backlight(dev);
+-	st7701->backlight = devm_of_find_backlight(&dsi->dev);
+-	if (IS_ERR(st7701->backlight))
+-		return PTR_ERR(st7701->backlight);
 -
--	if (IS_ERR(sharp_nt->backlight))
--		return PTR_ERR(sharp_nt->backlight);
--
- 	drm_panel_init(&sharp_nt->base, &sharp_nt->dsi->dev,
- 		       &sharp_nt_panel_funcs, DRM_MODE_CONNECTOR_DSI);
+ 	drm_panel_init(&st7701->panel, &dsi->dev, &st7701_funcs,
+ 		       DRM_MODE_CONNECTOR_DSI);
  
-+	ret = drm_panel_of_backlight(&sharp_nt->base);
+@@ -384,6 +376,10 @@ static int st7701_dsi_probe(struct mipi_dsi_device *dsi)
+ 	 */
+ 	st7701->sleep_delay = 120 + desc->panel_sleep_delay;
+ 
++	ret = drm_panel_of_backlight(&st7701->panel);
 +	if (ret)
 +		return ret;
 +
- 	return drm_panel_add(&sharp_nt->base);
- }
- 
-@@ -309,7 +303,7 @@ static int sharp_nt_panel_remove(struct mipi_dsi_device *dsi)
- 	struct sharp_nt_panel *sharp_nt = mipi_dsi_get_drvdata(dsi);
- 	int ret;
- 
--	ret = sharp_nt_panel_disable(&sharp_nt->base);
-+	ret = drm_panel_disable(&sharp_nt->base);
+ 	ret = drm_panel_add(&st7701->panel);
  	if (ret < 0)
- 		dev_err(&dsi->dev, "failed to disable panel: %d\n", ret);
- 
-@@ -326,7 +320,7 @@ static void sharp_nt_panel_shutdown(struct mipi_dsi_device *dsi)
- {
- 	struct sharp_nt_panel *sharp_nt = mipi_dsi_get_drvdata(dsi);
- 
--	sharp_nt_panel_disable(&sharp_nt->base);
-+	drm_panel_disable(&sharp_nt->base);
- }
- 
- static const struct of_device_id sharp_nt_of_match[] = {
+ 		return ret;
 -- 
 2.20.1
 
