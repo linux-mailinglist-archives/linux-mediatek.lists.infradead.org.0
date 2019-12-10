@@ -2,69 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C507E1181AB
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 09:05:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A54DF1181DE
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 09:15:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n35T0TV4fWpOaIeDuinBOq9mqciJDVcL2rg1tyKTDNE=; b=i0k/g01NGqgcuV
-	4j7pvI/yiidFSMdU4xJqpEtyqqAydtv9wRmojDQTUqyHnqCQPPc3EraZU8UNPlP5Dy8JcT8gllAwM
-	0ATN6mxtHb1wUlu+UItsynK/IW1Idrr5pEFf+FqMF8ni5A1oEmGQ/Eq6KlnyRsOPO+pUHiMEqv+6M
-	MToVYXxUmiBiHMxls6ZMx18S6loIOm9LbBGaapiQIn2MzJHveFdWQZpYZ9bcZRjYcV7BeiVTCbbyd
-	Kf0f9il50Rh8t84pNPEEpSiFBZyrrPhH3UElJauVAzt1LoCohiQfs3tor1MO0XD1m7s6yIR4VYWqA
-	u92YqYiLHwahYeSIO12A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=IWIShKZKB2ElNJZgpp3zPX+GbmdeTYTYBefKrb8A77k=; b=ndFu9gtHtZAN8s
+	Kjww2BMR3uiXScltGVltG4Wo+vDCH3RRVG4BrdDv22WH6sUOaP8wqE1r4q3VGbY/20dNrwdnhO2hX
+	2KUi+aY+cJIZRMjYtpf1HqO4bZGqTQdXNnrAlR3VK4hGecVEc25g+OKc83kUG1MiL76GF/b8UsamB
+	A1B+5r11vqODgf8FlbQtoVxo3VIvI+KWNRM3WObJPlUQpi6OYZGOH8As+7PD60Gb9OM5N6+Bjrzhf
+	z1NP8WzmDa/khRBkwwTvNHZYpHoRhX3YRTTo5hF6mF3MyBeD++Ndn5xWm5sdkjpEk0BhDrz65bu2D
+	yEzwcl5Kw3RoOHmOKAyg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ieaWO-00063p-HV; Tue, 10 Dec 2019 08:05:28 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ieafa-00007g-Lw; Tue, 10 Dec 2019 08:14:58 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ieaWF-0005wJ-O9; Tue, 10 Dec 2019 08:05:21 +0000
-X-UUID: 02e9fcaa927e43d2a399bc8c2ad4695a-20191210
+ id 1ieafV-0008U0-3T
+ for linux-mediatek@lists.infradead.org; Tue, 10 Dec 2019 08:14:54 +0000
+X-UUID: 52a2f52a81ea44d2a4018546d7bcf345-20191210
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=JVrSUftnU6zu374DeJmbQdbn/1WkZQorVyvlrHedkhs=; 
- b=J8Hz74skYS0bk9AvTrD9mhRNxhLc3pvsAtBW5vPw3WtPridK15sZIT/xtXMoGkD472VvxtmnWYbvSfenov/4xFZtChoPm4IB/N2xN0roxiYnzIgf+Mrn8BKedQEgUXKgLuWOuTtFWpCqSLFo2rrH3u5CJu6AzTb53xJdH/NWAHE=;
-X-UUID: 02e9fcaa927e43d2a399bc8c2ad4695a-20191210
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=uC8RbIA/Bmt5jx7r3LAgXAyyrUdbG45GJY60y9w1Jj0=; 
+ b=kzQG1PijyQIvz17fz+F/cb/IZaPnQR2v6XDMsEcwMk2B9pdtwxmPkQGVHpN0kIcp7nWg5Vb+Iy8ENI8FvTnEhHvpQHqRSmzQOjjExTkESI+bY1r7gw8RShydh0SYdOwlZK2oSdRNeIb2XqgZW4wREq+uRqGAJCo6kE0X5DZz4m0=;
+X-UUID: 52a2f52a81ea44d2a4018546d7bcf345-20191210
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <landen.chao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1507083109; Tue, 10 Dec 2019 00:05:19 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 2065345494; Tue, 10 Dec 2019 00:14:48 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 9 Dec 2019 23:55:31 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 15:54:51 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 10 Dec 2019 15:55:19 +0800
-Message-ID: <1575964515.13210.3.camel@mtksdaap41>
-Subject: Re: [PATCH v2 09/14] soc: mediatek: cmdq: add read_s function
-From: CK Hu <ck.hu@mediatek.com>
-To: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-Date: Tue, 10 Dec 2019 15:55:15 +0800
-In-Reply-To: <1574819937-6246-11-git-send-email-dennis-yc.hsieh@mediatek.com>
-References: <1574819937-6246-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1574819937-6246-11-git-send-email-dennis-yc.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Tue, 10 Dec 2019 00:15:02 -0800
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 16:14:30 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 10 Dec 2019 16:14:26 +0800
+From: Landen Chao <landen.chao@mediatek.com>
+To: <andrew@lunn.ch>, <f.fainelli@gmail.com>,
+ <vivien.didelot@savoirfairelinux.com>, <matthias.bgg@gmail.com>,
+ <robh+dt@kernel.org>, <mark.rutland@arm.com>
+Subject: [PATCH net-next 0/6] net-next: dsa: mt7530: add support for MT7531
+Date: Tue, 10 Dec 2019 16:14:36 +0800
+Message-ID: <cover.1575914275.git.landen.chao@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_000519_794650_36A907DD 
-X-CRM114-Status: GOOD (  15.35  )
+X-CRM114-CacheID: sfid-20191210_001453_159593_223223F7 
+X-CRM114-Status: UNSURE (   7.35  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -85,101 +86,44 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Jassi Brar <jassisinghbrar@gmail.com>, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Landen Chao <landen.chao@mediatek.com>,
+ frank-w@public-files.de, netdev@vger.kernel.org, sean.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, opensource@vdorst.com,
+ linux-mediatek@lists.infradead.org, davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Dennis:
+This patch series adds support for MT7531.
 
-On Wed, 2019-11-27 at 09:58 +0800, Dennis YC Hsieh wrote:
-> Add read_s function in cmdq helper functions which support read value from
-> register or dma physical address into gce internal register.
-> 
-> Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-> ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c   | 20 ++++++++++++++++++++
->  include/linux/mailbox/mtk-cmdq-mailbox.h |  1 +
->  include/linux/soc/mediatek/mtk-cmdq.h    | 10 ++++++++++
->  3 files changed, 31 insertions(+)
-> 
-> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index 2edbc0954d97..2cd693e34980 100644
-> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -231,6 +231,26 @@ int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
->  }
->  EXPORT_SYMBOL(cmdq_pkt_write_mask);
->  
-> +int cmdq_pkt_read_s(struct cmdq_pkt *pkt, phys_addr_t addr, u16 reg_idx)
-> +{
+MT7531 is the next generation of MT7530 which could be found on Mediatek
+router platforms such as MT7622 or MT7629. 
 
-Should addr be shifted in mt6779?
+It is also a 7-ports switch with 5 giga embedded phys, 2 cpu ports, and
+the same MAC logic of MT7530. Cpu port 6 only supports HSGMII interface.
+Cpu port 5 supports either RGMII or HSGMII in different HW SKU. Due to
+support for HSGMII interface, pll, and pad setting are different from
+MT7530.
 
-Regards,
-CK
+Landen Chao (6):
+  net: dsa: mt7530: Refine message in Kconfig
+  net: dsa: mt7530: Extend device data ready for adding a new hardware
+  dt-bindings: net: dsa: add new MT7531 binding to support MT7531
+  net: dsa: mt7530: Add the support of MT7531 switch
+  arm64: dts: mt7622: add mt7531 dsa to mt7622-rfb1 board
+  arm64: dts: mt7622: add mt7531 dsa to bananapi-bpi-r64 board
 
-> +	struct cmdq_instruction inst = { {0} };
-> +	int err;
-> +	const u16 src_reg_idx = CMDQ_SPR_TEMP;
-> +
-> +	err = cmdq_pkt_assign(pkt, src_reg_idx, CMDQ_ADDR_HIGH(addr));
-> +	if (err < 0)
-> +		return err;
-> +
-> +	inst.op = CMDQ_CODE_READ_S;
-> +	inst.dst_t = CMDQ_REG_TYPE;
-> +	inst.sop = src_reg_idx;
-> +	inst.reg_dst = reg_idx;
-> +	inst.arg_b = CMDQ_ADDR_LOW(addr);
-> +
-> +	return cmdq_pkt_append_command(pkt, inst);
-> +}
-> +EXPORT_SYMBOL(cmdq_pkt_read_s);
-> +
->  int cmdq_pkt_write_s(struct cmdq_pkt *pkt, phys_addr_t addr, u16 reg_idx,
->  		     u32 mask)
->  {
-> diff --git a/include/linux/mailbox/mtk-cmdq-mailbox.h b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> index 8ef87e1bd03b..3f6bc0dfd5da 100644
-> --- a/include/linux/mailbox/mtk-cmdq-mailbox.h
-> +++ b/include/linux/mailbox/mtk-cmdq-mailbox.h
-> @@ -59,6 +59,7 @@ enum cmdq_code {
->  	CMDQ_CODE_JUMP = 0x10,
->  	CMDQ_CODE_WFE = 0x20,
->  	CMDQ_CODE_EOC = 0x40,
-> +	CMDQ_CODE_READ_S = 0x80,
->  	CMDQ_CODE_WRITE_S = 0x90,
->  	CMDQ_CODE_WRITE_S_MASK = 0x91,
->  	CMDQ_CODE_LOGIC = 0xa0,
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index 56ff1970197c..bc28a41d7780 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -106,6 +106,16 @@ int cmdq_pkt_write(struct cmdq_pkt *pkt, u8 subsys, u16 offset, u32 value);
->  int cmdq_pkt_write_mask(struct cmdq_pkt *pkt, u8 subsys,
->  			u16 offset, u32 value, u32 mask);
->  
-> +/**
-> + * cmdq_pkt_read_s() - append read_s command to the CMDQ packet
-> + * @pkt:	the CMDQ packet
-> + * @addr:	the physical address of register or dma to read
-> + * @reg_idx:	the CMDQ internal register ID to cache read data
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + */
-> +int cmdq_pkt_read_s(struct cmdq_pkt *pkt, phys_addr_t addr, u16 reg_idx);
-> +
->  /**
->   * cmdq_pkt_write_s_mask() - append write_s command to the CMDQ packet
->   * @pkt:	the CMDQ packet
+ .../devicetree/bindings/net/dsa/mt7530.txt    |  77 +-
+ .../dts/mediatek/mt7622-bananapi-bpi-r64.dts  |  50 +
+ arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts  |  63 +-
+ drivers/net/dsa/Kconfig                       |   6 +-
+ drivers/net/dsa/mt7530.c                      | 874 ++++++++++++++++--
+ drivers/net/dsa/mt7530.h                      | 173 +++-
+ 6 files changed, 1168 insertions(+), 75 deletions(-)
 
+-- 
+2.17.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
