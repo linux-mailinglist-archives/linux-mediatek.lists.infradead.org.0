@@ -2,45 +2,45 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1E337118E09
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 17:44:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DC45E118E1F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 17:49:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fvYB+iDqA4yENUHoyV//yQ3XH0IWOj37YfiQIkktTgE=; b=qrMlBOXbXI8tOq
-	JC9EPkrn7zO0cQcX5mDD+8BwauKhHb9TEs9gNmRvxwECGSlEFRRZ8rCZj/bklL6C2Ukyich1lO25x
-	B9B5jz2linmSaf+E+uQtg3QiZOyYs8AYyENadEFbYcq7HUqve+mqPB6tVfaN1ax4tSbru+djJtnSD
-	8p1FiEEPecf8W7KrtVZSM2qKVy/YtdwQtO9UqNj0Jy+kLH1BUjFECKR0KU3JGRi08zQmIQUOYGLe9
-	ygPGls1f1KW5TLDmhOz+u95X/HXausFqZE3MIKK6qbQ0ajuPxxu6xPZp43rRqAWq+93jrRw1CbSh/
-	f1sz3O9WZyrrgK7PjXSQ==;
+	List-Owner; bh=l/m4znNqmc3n9pgIip63VqXv9uvfWCHSIT+1Y/WmQn8=; b=D7xMmLmVsPMnD4
+	Je2b8nEwDjpCZtC1YgyVIGnNamAe6j7dT8qVwuHlBl9kjgDvJuF7DqZKDYZ2id2oR0Tpl6+zu0uP5
+	oOvWH2knncQHkUiTd+dPaixXZAt+tdcIi4AshvEfWqGTS6TMRPXa5SXYi1qlOgwB5dxR20WtEge7c
+	DyCe1pXeY4y7KYd/7vInL3zUciJOnVm5t9hI+MOTR5hAYuyYGXx+6pZXPdkIdP1SD/UnmlrRGF2BV
+	227pgZfQvsdZJVJ1Q3yf3XNewG2zBJ977AA7ViG102qrEmsU3kjv7urI6pa8Nx8i0E8Pi8w6wJZ6R
+	644USqqn+NYUSdUDuFrw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ieicw-0005Kz-I5; Tue, 10 Dec 2019 16:44:46 +0000
+	id 1ieih4-0007M8-Es; Tue, 10 Dec 2019 16:49:02 +0000
 Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ieicu-0005K7-6i
- for linux-mediatek@lists.infradead.org; Tue, 10 Dec 2019 16:44:45 +0000
+ id 1ieih1-0007Lo-QR
+ for linux-mediatek@lists.infradead.org; Tue, 10 Dec 2019 16:49:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
  s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
  Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=Rn2HvqUHje4jyefJaRJuKH2kWexnmyg8GPKQ4GzLFWc=; b=wVpn3HTICHNgC9ULY2Ni+q5WSm
- qKK4GV1kc8Lqc5rDEyR9hpDxFPB4NsGXGITz+Bi0AWbnAqbUqGMrgApLpKR5CtjMDadASUVPown4s
- hJPvnSKRM3gb7aI0BnYJY2YyJEJv6yJHS8AhZYj9RdytbiKywITF0ZDNnq2NT4k+wZ0s=;
+ bh=iOz/6/0r92zuFKGcrFy7F2rvroSXU33rpP0w5fe4E3U=; b=IIdANMqMHtcM+54gM190UsDtPk
+ SUHzsAqkxb4XGBvxmuA1c515zloQfMWEiXz+Oj3/kwS8lswkNGoCf6E1PKE7C/RqA1LItg1GwPRMc
+ lff4LzwcffjJCBLQcQUCjNA+XiU05arpHnchX8RWm1i6ANWPAspUmaGSYpdmNIGBx4JA=;
 Received: from andrew by vps0.lunn.ch with local (Exim 4.92.2)
  (envelope-from <andrew@lunn.ch>)
- id 1ieico-0005OE-FG; Tue, 10 Dec 2019 17:44:38 +0100
-Date: Tue, 10 Dec 2019 17:44:38 +0100
+ id 1ieigx-0005Pm-P1; Tue, 10 Dec 2019 17:48:55 +0100
+Date: Tue, 10 Dec 2019 17:48:55 +0100
 From: Andrew Lunn <andrew@lunn.ch>
 To: Landen Chao <landen.chao@mediatek.com>
 Subject: Re: [PATCH net-next 4/6] net: dsa: mt7530: Add the support of MT7531
  switch
-Message-ID: <20191210164438.GD27714@lunn.ch>
+Message-ID: <20191210164855.GE27714@lunn.ch>
 References: <cover.1575914275.git.landen.chao@mediatek.com>
  <6d608dd024edc90b09ba4fe35417b693847f973c.1575914275.git.landen.chao@mediatek.com>
 MIME-Version: 1.0
@@ -48,8 +48,8 @@ Content-Disposition: inline
 In-Reply-To: <6d608dd024edc90b09ba4fe35417b693847f973c.1575914275.git.landen.chao@mediatek.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_084444_252358_CF0FC67B 
-X-CRM114-Status: UNSURE (   7.87  )
+X-CRM114-CacheID: sfid-20191210_084859_855316_52E4EF1E 
+X-CRM114-Status: UNSURE (   5.98  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -88,67 +88,24 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> +static int
-> +mt7531_ind_mmd_phy_read(struct mt7530_priv *priv, int port, int devad,
-> +			int regnum)
+> +static int mt7531_setup(struct dsa_switch *ds)
 > +{
-> +	struct mii_bus *bus = priv->bus;
-> +	struct mt7530_dummy_poll p;
-> +	u32 reg, val;
-> +	int ret;
+> +	/* Enable PHY power, since phy_device has not yet been created
+> +	 * provided for phy_[read,write]_mmd_indirect is called, we provide
+> +	 * our own mt7531_ind_mmd_phy_[read,write] to complete this
+> +	 * function.
+> +	 */
+> +	val = mt7531_ind_mmd_phy_read(priv, 0, PHY_DEV1F,
+> +				      MT7531_PHY_DEV1F_REG_403);
+> +	val |= MT7531_PHY_EN_BYPASS_MODE;
+> +	val &= ~MT7531_PHY_POWER_OFF;
+> +	mt7531_ind_mmd_phy_write(priv, 0, PHY_DEV1F,
+> +				 MT7531_PHY_DEV1F_REG_403, val);
 > +
-> +	INIT_MT7530_DUMMY_POLL(&p, priv, MT7531_PHY_IAC);
-> +
-> +	mutex_lock_nested(&bus->mdio_lock, MDIO_MUTEX_NESTED);
-> +
-> +	ret = readx_poll_timeout(_mt7530_unlocked_read, &p, val,
-> +				 !(val & PHY_ACS_ST), 20, 100000);
-> +	if (ret < 0) {
-> +		dev_err(priv->dev, "poll timeout\n");
-> +		goto out;
-> +	}
-> +
-> +	reg = MDIO_CL45_ADDR | MDIO_PHY_ADDR(port) | MDIO_DEV_ADDR(devad) |
-> +	      regnum;
 
-It might be better to call this mt7531_ind_c45_phy_read()
+Is this power to all the PHYs? Or just one?
 
-> +static int
-> +mt7531_ind_phy_read(struct dsa_switch *ds, int port, int regnum)
-> +{
-> +	struct mt7530_priv *priv = ds->priv;
-> +	struct mii_bus *bus = priv->bus;
-> +	struct mt7530_dummy_poll p;
-> +	int ret;
-> +	u32 val;
-> +
-> +	INIT_MT7530_DUMMY_POLL(&p, priv, MT7531_PHY_IAC);
-> +
-> +	mutex_lock_nested(&bus->mdio_lock, MDIO_MUTEX_NESTED);
-> +
-> +	ret = readx_poll_timeout(_mt7530_unlocked_read, &p, val,
-> +				 !(val & PHY_ACS_ST), 20, 100000);
-> +	if (ret < 0) {
-> +		dev_err(priv->dev, "poll timeout\n");
-> +		goto out;
-> +	}
-> +
-> +	val = MDIO_CL22_READ | MDIO_PHY_ADDR(port) | MDIO_REG_ADDR(regnum);
-
-This is then mt7531_ind_c22_phy_read().
-
-And then you can add a wrapper around this to provide
-
-mt7531_phy_read() which can do both C22 and C45.
-
-> +	[ID_MT7531] = {
-> +		.id = ID_MT7531,
-> +		.setup = mt7531_setup,
-> +		.phy_read = mt7531_ind_phy_read,
-
-and use it here.
-
-  Andrew
+   Andrew
 
 _______________________________________________
 Linux-mediatek mailing list
