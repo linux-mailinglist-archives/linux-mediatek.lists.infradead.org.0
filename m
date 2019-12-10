@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 481F6119415
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 22:15:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EEB7A119462
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 22:16:10 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7tjhTs9pHgFoYqz7KDQPms+95MXTXeJCdZHI9N2e2iw=; b=WmMT4G+HL3zOXK
-	TGruR8CsUWc0/6dOd1hff6dO727aFKaEUJ8QzMudhGU/gEmgkJIYWEewI3Et5UUYSI+Y8h9lNLxJ9
-	el7R7mS5PRa6S6n7zcpwnQCGvrxTw9etxp9JfpdH+/j0A95PtxZ6mDi+Zc+s5C2rUKjsstROaEIWr
-	uyEKGJ6SDXCBxh3xIsRTXCmNfLb5k8APQmQuV0wKA++DJm4WJAoiukdiY4G9WrPPnuVAVLto8pNKU
-	GUn1IjH5FOad4UyOrJs4VXE8g8wEP5kHHS2CEjCo/bs7VSPNRuIOqVfc4DJJnhrwN/SzJNGKIzwim
-	BZ1TYuItcH9i71BrxTvA==;
+	List-Owner; bh=E7TSAT4wtSa7HtppYwaXSJfd6qV+RYabweDNpq0rS4Q=; b=UCfQPxwZdcA4W8
+	YaDmMTKsUsAoF605sh9s+/sb3nwya9E5nhgXpzF2Q8x8XFPnUK4fLIpem6xqD7bC7G632+i50OFiS
+	aFTZoO/V4wNEOhdMQq/ULVDIYkuTDC5dJj6kc4N8Jk2ksARAUSR3BleQgSY5IoG84CfrOmQf9zJS5
+	Frezp1CjdAkn+cQeXUwPppVKS4XubWbptNIbI1nSzYXOfwzhAOnPXNFW4Y2k5cJwkEqnLLMbi+PRF
+	49d24TC3uCGcyWqLbDoQUURS8st0td8X7iqqki45MbacoMQQegmWEkfxI9XJ4keNVYoZHk9SNJdbu
+	XpzPM+JhBu5M1+o1zivA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iemqw-0001d9-Ce; Tue, 10 Dec 2019 21:15:30 +0000
+	id 1iemrV-0002FK-A3; Tue, 10 Dec 2019 21:16:05 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iemoD-0006XA-Lt; Tue, 10 Dec 2019 21:12:44 +0000
+ id 1iemow-0007DY-M5; Tue, 10 Dec 2019 21:13:30 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id D94682464B;
- Tue, 10 Dec 2019 21:12:39 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id F2110214AF;
+ Tue, 10 Dec 2019 21:13:24 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1576012361;
- bh=nrKFeK8ZfpA0LOttrffsxHf9XaNKRKS8gtS1ILBWzz4=;
+ s=default; t=1576012405;
+ bh=qLpA8Hj/Bemhj0QN8KheWl81yCIKzadDZCnWM+wT4+o=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=E4O4kVDTPfBp933OWfwDW+Rj692YBkJeJvKNQfrc5jZ5VY+Qgbs7Aeuz35vkpYkkG
- RYEz+jcPbNEc6+3k4fBoBbSb7gKKILzGlDH3K0mqfTL19pNRALNLD9aVk7oms3/hcx
- XmG+zw6AFWqTAQputvb0IdAfvBPkt2ovO7nNZP4I=
+ b=YWTPuRBRL9oqkiZsne/R6P40FbVQJsAhf44cR38Ypa/s9F6PzUnC+jmbnIp0ExGjU
+ YjU/YQFBwb5zWE5P3e6Uj7bs1w6zrftrePRgAGUhEs2vwV0R5b5WTptKTwNqXJRPFo
+ khOH5MrfjQ686J8ltzFHiEPiOO3HGTT285+1tRzE=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 288/350] MIPS: ralink: enable PCI support only if
- driver for mt7621 SoC is selected
-Date: Tue, 10 Dec 2019 16:06:33 -0500
-Message-Id: <20191210210735.9077-249-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 324/350] mt76: fix possible out-of-bound access in
+ mt7615_fill_txs/mt7603_fill_txs
+Date: Tue, 10 Dec 2019 16:07:09 -0500
+Message-Id: <20191210210735.9077-285-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191210210735.9077-1-sashal@kernel.org>
 References: <20191210210735.9077-1-sashal@kernel.org>
@@ -49,8 +49,9 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_131242_152577_63AFFC59 
-X-CRM114-Status: GOOD (  12.69  )
+X-CRM114-CacheID: sfid-20191210_131326_845415_7BAAF185 
+X-CRM114-Status: UNSURE (   9.73  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,69 +80,64 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, devel@driverdev.osuosl.org,
- Hauke Mehrtens <hauke@hauke-m.de>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, jhogan@kernel.org,
- linux-mips@vger.kernel.org, ralf@linux-mips.org,
- Sergio Paracuellos <sergio.paracuellos@gmail.com>,
- linux-mediatek@lists.infradead.org, john@phrozen.org,
- NeilBrown <neil@brown.name>, linux-arm-kernel@lists.infradead.org
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Lorenzo Bianconi <lorenzo@kernel.org>, linux-arm-kernel@lists.infradead.org,
+ Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Sergio Paracuellos <sergio.paracuellos@gmail.com>
+From: Lorenzo Bianconi <lorenzo@kernel.org>
 
-[ Upstream commit 3b2fa0c92686562ac0b8cf00c0326a45814f8e18 ]
+[ Upstream commit e8b970c8e367e85fab9b8ac4f36080e5d653c38e ]
 
-Some versions of SoC MT7621 have three PCI express hosts. Some boards
-make use of those PCI through the staging driver mt7621-pci. Recently
-PCI support has been removed from MT7621 Soc kernel configuration due
-to a build error. This makes imposible to compile staging driver and
-produces a regression for gnubee based boards. Enable support for PCI
-again but enable it only if staging mt7621-pci driver is selected.
+Fix possible out-of-bound access of status rates array in
+mt7615_fill_txs/mt7603_fill_txs routines
 
-Fixes: c4d48cf5e2f0 ("MIPS: ralink: deactivate PCI support for SOC_MT7621")
-Cc: Hauke Mehrtens <hauke@hauke-m.de>
-Cc: ralf@linux-mips.org
-Cc: jhogan@kernel.org
-Cc: john@phrozen.org
-Cc: NeilBrown <neil@brown.name>
-Cc: linux-mips@vger.kernel.org
-Signed-off-by: Sergio Paracuellos <sergio.paracuellos@gmail.com>
-Link: https://lore.kernel.org/r/20191019081233.7337-1-sergio.paracuellos@gmail.com
-Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Fixes: c5211e997eca ("mt76: mt7603: rework and fix tx status reporting")
+Fixes: 4af81f02b49c ("mt76: mt7615: sync with mt7603 rate control changes")
+Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
+Signed-off-by: Felix Fietkau <nbd@nbd.name>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- arch/mips/ralink/Kconfig           | 1 +
- drivers/staging/mt7621-pci/Kconfig | 1 -
- 2 files changed, 1 insertion(+), 1 deletion(-)
+ drivers/net/wireless/mediatek/mt76/mt7603/mac.c | 4 +++-
+ drivers/net/wireless/mediatek/mt76/mt7615/mac.c | 4 +++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
 
-diff --git a/arch/mips/ralink/Kconfig b/arch/mips/ralink/Kconfig
-index 1434fa60f3db1..94e9ce9944944 100644
---- a/arch/mips/ralink/Kconfig
-+++ b/arch/mips/ralink/Kconfig
-@@ -51,6 +51,7 @@ choice
- 		select MIPS_GIC
- 		select COMMON_CLK
- 		select CLKSRC_MIPS_GIC
-+		select HAVE_PCI if PCI_MT7621
- endchoice
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7603/mac.c b/drivers/net/wireless/mediatek/mt76/mt7603/mac.c
+index c328192307c48..ff3f3d98b6252 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7603/mac.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7603/mac.c
+@@ -1032,8 +1032,10 @@ mt7603_fill_txs(struct mt7603_dev *dev, struct mt7603_sta *sta,
+ 		if (idx && (cur_rate->idx != info->status.rates[i].idx ||
+ 			    cur_rate->flags != info->status.rates[i].flags)) {
+ 			i++;
+-			if (i == ARRAY_SIZE(info->status.rates))
++			if (i == ARRAY_SIZE(info->status.rates)) {
++				i--;
+ 				break;
++			}
  
- choice
-diff --git a/drivers/staging/mt7621-pci/Kconfig b/drivers/staging/mt7621-pci/Kconfig
-index af928b75a9403..ce58042f2f211 100644
---- a/drivers/staging/mt7621-pci/Kconfig
-+++ b/drivers/staging/mt7621-pci/Kconfig
-@@ -2,7 +2,6 @@
- config PCI_MT7621
- 	tristate "MediaTek MT7621 PCI Controller"
- 	depends on RALINK
--	depends on PCI
- 	select PCI_DRIVERS_GENERIC
- 	help
- 	  This selects a driver for the MediaTek MT7621 PCI Controller.
+ 			info->status.rates[i] = *cur_rate;
+ 			info->status.rates[i].count = 0;
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
+index e07ce2c100133..111e38ff954a2 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
+@@ -914,8 +914,10 @@ static bool mt7615_fill_txs(struct mt7615_dev *dev, struct mt7615_sta *sta,
+ 		if (idx && (cur_rate->idx != info->status.rates[i].idx ||
+ 			    cur_rate->flags != info->status.rates[i].flags)) {
+ 			i++;
+-			if (i == ARRAY_SIZE(info->status.rates))
++			if (i == ARRAY_SIZE(info->status.rates)) {
++				i--;
+ 				break;
++			}
+ 
+ 			info->status.rates[i] = *cur_rate;
+ 			info->status.rates[i].count = 0;
 -- 
 2.20.1
 
