@@ -2,44 +2,44 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6D5931181DF
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 09:15:05 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5BE351181E1
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 09:15:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7RYMWs+cOZ5+zMV7hM4mmsETD3zggvDhVogJ2IDbBec=; b=XSOvUR78Joe+G9
-	KK6xkmfEJ+WuO+meb/6+iV3oltlpoRLv8PcxWWftk7cU6tL6QuXmmrE2yfPhqzpbkJTchKME78Xl0
-	z9G0w5grQcCTazI2ZtN7nEV3yVXChFrpvgQWGzJhpT+5ofytohe5dT+5PL7qYZBBCz44Vhtnfzn5n
-	zVnTGdEd49DYxJVHyli9JU/BWUis5mBexxiOBcecr1xotk+D9MWs0PIYOS8TToogjIXh18Gtq0khU
-	nltZ/4wwgTQohVukRTS8PhUetV9a8F4kNsJa/967ZPfhUzKW2c0RoCW+P8m5WZV217ipxy2HSWdA/
-	TcnO2xzg+PRxCwMyhYGw==;
+	List-Owner; bh=p6d3RdahElEBA6k8435Hb+hr5F3SOd++X6WeCwJqYmA=; b=oi6ReT0OEj8v7C
+	cD8sTSjSN4VmEsXo2CLdWYHbdSeJFxT5gBo+IUszptztaGbUwX1i1ycaiHq/XOPYuMkMPjcZ8WiNJ
+	voQXmd93+Ss2V/FmO289YzRwlH4mpvmteFkY1LtwSwMN2BPGzjgd9vePG+NZK1iaxL7AYvaEjXLNQ
+	55y/onXsKG3zZLh7O8V4W9ys8EXQmtKsYHi+KlziCERXVCIl09qHVK29BHNFYS4dStX2Nj+2x/tCn
+	OXbtc993xwXaELfA/aKXdHVx1fN0ihnzs27XV1zn0OEvIB3vyV4xGrCh3M0gSs0hASbACetcARd1Z
+	gC+iT/FG/92ghBjNOrNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ieafb-00008g-Nx; Tue, 10 Dec 2019 08:14:59 +0000
+	id 1ieafc-0000A1-Kz; Tue, 10 Dec 2019 08:15:00 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ieafV-0008Tr-5J
+ id 1ieafV-0008Tz-BU
  for linux-mediatek@lists.infradead.org; Tue, 10 Dec 2019 08:14:54 +0000
-X-UUID: 51e300af8a634d85891699b6785d9015-20191210
+X-UUID: 88e335affded4712a666f2675a839654-20191210
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=ZHw1FyeA3BLUxG4FfGgyMIigBe1oxHthdz5KxHVSl40=; 
- b=qh6EOuOdbkGBZjdq2zNNSy2AYr6DD/qRcMpGfdVU3+kdK3im10fGUzkO1XNTGiWEEjxO/iIRcxYLeFOZz9kmtiw1w3Ect93n/ZTMhKXieB5VfneB1bS3hZ8AVfmqNsFT7bXVmz5ox+N9RzPRoffqg6gdvLcxg2wKS9WWKrj809g=;
-X-UUID: 51e300af8a634d85891699b6785d9015-20191210
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=BT+q/z4xoeKXCk+y25bvARvW/z0vRa1uB7kHqAjvpaw=; 
+ b=eagJVm76XNgnVVvxDHR4QtcIyynPPYY4k7twyvlRAQeSnsJbABh1afLK+LlxnJ0TM069F+hNNzWXq7ZGru/I+gYhmqZcYCt/SkEYgxdTb0VNE+DIW0hmNAOoJ0i23gobJ3xa7JVRfIfeZcbjwRJSuqwzLBRZBLIFzqSs71VZx1Y=;
+X-UUID: 88e335affded4712a666f2675a839654-20191210
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <landen.chao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 675618290; Tue, 10 Dec 2019 00:14:48 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 00:15:51 -0800
+ with ESMTP id 444849056; Tue, 10 Dec 2019 00:14:49 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 00:15:03 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 16:14:38 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 16:14:32 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Tue, 10 Dec 2019 16:14:27 +0800
@@ -47,18 +47,18 @@ From: Landen Chao <landen.chao@mediatek.com>
 To: <andrew@lunn.ch>, <f.fainelli@gmail.com>,
  <vivien.didelot@savoirfairelinux.com>, <matthias.bgg@gmail.com>,
  <robh+dt@kernel.org>, <mark.rutland@arm.com>
-Subject: [PATCH net-next 5/6] arm64: dts: mt7622: add mt7531 dsa to
- mt7622-rfb1 board
-Date: Tue, 10 Dec 2019 16:14:41 +0800
-Message-ID: <7f5a690281664a0fe47cfe7726f26d7f6211d015.1575914275.git.landen.chao@mediatek.com>
+Subject: [PATCH net-next 6/6] arm64: dts: mt7622: add mt7531 dsa to
+ bananapi-bpi-r64 board
+Date: Tue, 10 Dec 2019 16:14:42 +0800
+Message-ID: <62eef5503c117f48d4b41e94fd28d75e123590b4.1575914275.git.landen.chao@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1575914275.git.landen.chao@mediatek.com>
 References: <cover.1575914275.git.landen.chao@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_001453_206226_67CE2C1F 
-X-CRM114-Status: UNSURE (   7.93  )
+X-CRM114-CacheID: sfid-20191210_001453_422723_9458617E 
+X-CRM114-Status: UNSURE (   6.61  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -100,46 +100,22 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add mt7531 dsa to mt7622-rfb1 board for 5 giga Ethernet ports support.
-mt7622 only supports 1 sgmii interface, so either gmac0 or gmac1 can be
-configured as sgmii interface. In this patch, change to connet mt7622
-gmac0 and mt7531 port6 through sgmii interface.
+Add mt7531 dsa to bananapi-bpi-r64 board for 5 giga Ethernet ports support.
 
 Signed-off-by: Landen Chao <landen.chao@mediatek.com>
 ---
- arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts | 63 ++++++++++++++++++--
- 1 file changed, 57 insertions(+), 6 deletions(-)
+ .../dts/mediatek/mt7622-bananapi-bpi-r64.dts  | 50 +++++++++++++++++++
+ 1 file changed, 50 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts b/arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts
-index 3f783348c66a..e509b0c2fe79 100644
---- a/arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt7622-rfb1.dts
-@@ -105,20 +105,71 @@
- 	pinctrl-0 = <&eth_pins>;
- 	status = "okay";
- 
--	gmac1: mac@1 {
-+	gmac0: mac@0 {
- 		compatible = "mediatek,eth-mac";
--		reg = <1>;
--		phy-handle = <&phy5>;
-+		reg = <0>;
-+		phy-mode = "2500base-x";
-+
-+		fixed-link {
-+			speed = <2500>;
-+			full-duplex;
-+			pause;
-+		};
- 	};
- 
- 	mdio-bus {
+diff --git a/arch/arm64/boot/dts/mediatek/mt7622-bananapi-bpi-r64.dts b/arch/arm64/boot/dts/mediatek/mt7622-bananapi-bpi-r64.dts
+index 83e10591e0e5..ffacefee8e2a 100644
+--- a/arch/arm64/boot/dts/mediatek/mt7622-bananapi-bpi-r64.dts
++++ b/arch/arm64/boot/dts/mediatek/mt7622-bananapi-bpi-r64.dts
+@@ -143,6 +143,56 @@
+ 	mdio: mdio-bus {
  		#address-cells = <1>;
  		#size-cells = <0>;
- 
--		phy5: ethernet-phy@5 {
--			reg = <5>;
--			phy-mode = "sgmii";
++
 +		switch@0 {
 +			compatible = "mediatek,mt7531";
 +			reg = <0>;
@@ -151,27 +127,27 @@ index 3f783348c66a..e509b0c2fe79 100644
 +
 +				port@0 {
 +					reg = <0>;
-+					label = "lan0";
++					label = "wan";
 +				};
 +
 +				port@1 {
 +					reg = <1>;
-+					label = "lan1";
++					label = "lan0";
 +				};
 +
 +				port@2 {
 +					reg = <2>;
-+					label = "lan2";
++					label = "lan1";
 +				};
 +
 +				port@3 {
 +					reg = <3>;
-+					label = "lan3";
++					label = "lan2";
 +				};
 +
 +				port@4 {
 +					reg = <4>;
-+					label = "wan";
++					label = "lan3";
 +				};
 +
 +				port@6 {
@@ -187,7 +163,7 @@ index 3f783348c66a..e509b0c2fe79 100644
 +					};
 +				};
 +			};
- 		};
++		};
 +
  	};
  };
