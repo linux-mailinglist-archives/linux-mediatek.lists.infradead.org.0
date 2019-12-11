@@ -2,85 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 283FE11B51A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 16:52:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 52BC811B896
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 17:23:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:From:Subject:References:Mime-Version
-	:Message-Id:In-Reply-To:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cCfn+MarlolZ6IfRhA5+nsfNYDjnDAmgX7N3j/FTs1o=; b=GcQzyXTzd9krAB
-	vI9eqSmgSKAwwXc3Fl0zTvdc8NicuScXwXsjIwx2nA4ZRFoO78Vc0d8aN4RcMZLoLzJ/8Qvh1y0y9
-	x3CnAW+CpdQS7JI/UivHm0y6BsZGcNvpMP6JlT0QYa9WEZzFNpTDnwgEHxTXASYkdJB0gKMuiPvHm
-	Sz0dt1YJIcV5rbXWSbqGZYAjVdV+1uh31LbLNa3Wa0j8Le1maSZ0whBspdtlDUtXQdWqzOVZoK6xO
-	EhQ8EXTHV3kRprWVpEf0LsR/sG3eqY1z0/0FwM/2Gs5mT31LfVr/J3zrwpOFAp5TIXKEGmq9qSQs3
-	QiEJGK5aoJn8871RrLew==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=opbQSXQ4RMa/goiDEJXmmk30R4AG5vj6/Xu6hnQG0Os=; b=uPv1TgAZ5Mc3jS
+	75vXOgwUuyJUc9Q/rUFLfixZGszrGWMdrjI069vLoNeNN1MHp1etmZg0DWNW0wVUtzbhDTqZu9mqn
+	wy8wHRxwlCjkz/R6WcvIc8VlnkqHSHMT2/VOEBXLuMbaAvCACyUaaiZsoQ9zKOGxodPZAlWAyfVCv
+	oPQQgXAIU3clrO35RQHbpqOtFTDu+Qf1WSsa/ScOVmsg20aJJYbG9JtgTIHXoGYgLC64zSNqRtpk6
+	RO1e2yn7xBPOEBo+m4v1/iPkFqXBCLLYo2KFJsjAGTxqJ0+f3AgBLJk4tadDlHOk3JMwOvr+BdtaH
+	bbMGOoVNff4HXgOGPNZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1if4Ha-0001F3-Q2; Wed, 11 Dec 2019 15:52:10 +0000
-Received: from mail-qt1-x849.google.com ([2607:f8b0:4864:20::849])
+	id 1if4m3-00079N-QY; Wed, 11 Dec 2019 16:23:39 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1if4Ep-00055D-3B
- for linux-mediatek@lists.infradead.org; Wed, 11 Dec 2019 15:49:21 +0000
-Received: by mail-qt1-x849.google.com with SMTP id x8so4638987qtq.14
- for <linux-mediatek@lists.infradead.org>; Wed, 11 Dec 2019 07:49:18 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=date:in-reply-to:message-id:mime-version:references:subject:from:to
- :cc; bh=L3bqEDJc/83H6XSH4dKpp4Sz+uUocCwUuCh066ZPD24=;
- b=T7tmarUt73QPvvzsmlX8joprU84Bgn+q+g3Bub5VpNuPOkJ2OMgW/GR2NfK7AzKClC
- TVaQfOgipbhJkxSaBENCKqcs/xBqhcht6ipt8vpVxU8N0K7LDCJSrRC/1rsFS9tb+m1i
- xrDG46KfHWOx7stN/zivVYevObR3Lt28+6MPEh3++sYAWKHfWyyPtHWT99FEvqBwKUsk
- /2L6mMknwQVjBCXY2SHvUs9Tq7wghQ+mqZ1/jCay1ViVuWUsLkq7UxOQEwPovdQGJZDZ
- bvwP7rUww+runAY6qHX8Fl4Plmaut9fSbirsX6AWRHXQ1HGlqeCzE2/4WMjMeqTZd74Z
- Ssjg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:in-reply-to:message-id:mime-version
- :references:subject:from:to:cc;
- bh=L3bqEDJc/83H6XSH4dKpp4Sz+uUocCwUuCh066ZPD24=;
- b=D6YbotwX7kCzDTOLXYsYcRnORpspItT0LnSp9jzZjMve1XrJj0lMOXDbcVINO57Cxn
- lbABH8TJlkkp88hqgVstTwrvuNoeTS41s6968k/TtoQII/BftlCqozOI3NPQboLwXrXR
- 5/EAfaDOWYA9MzmeTDzZ0AenDY14+Jhh7rFbjmgi54Oe8jPOy4kuYykWdzagxRMLvRpU
- Smlj6LO/BXY/zVT2Aa+UoVGbIfOGAjSKRHdMAXRt3mGtZP9eihgdW1Giy+2vVDyiCY2h
- 0W6KxLmi7Dw8pY5c1HBi8/IS2khGwhSSIvqgF64kg044Su0IxRV/EcbMNpsVwr6KANn5
- ZHwQ==
-X-Gm-Message-State: APjAAAXAw8f7WSNf37Sq0xQP+ztZHNdkIMe8gYexk8KcFJ8GvJR8CCyq
- /8wDBc+AE6SRX1mdx/OIIgR/i60WTevIog6y
-X-Google-Smtp-Source: APXvYqzWVPRzbCutVlIWkKgo8ZdWbTIe/i8BsJDaINwYPE1tnMGWPJw4+4d/x/wDNk8QtVgjgmAdkZUNDVCj/ebY
-X-Received: by 2002:a0c:d0f1:: with SMTP id b46mr3637071qvh.188.1576079357145; 
- Wed, 11 Dec 2019 07:49:17 -0800 (PST)
-Date: Wed, 11 Dec 2019 10:49:01 -0500
-In-Reply-To: <20191211154901.176256-1-markyacoub@google.com>
-Message-Id: <20191211154901.176256-2-markyacoub@google.com>
-Mime-Version: 1.0
-References: <20191211154901.176256-1-markyacoub@google.com>
-X-Mailer: git-send-email 2.24.0.525.g8f36a354ae-goog
-Subject: [PATCH 2/2] Turn off Alpha bit when plane format has no alpha
-From: Mark Yacoub <markyacoub@google.com>
-To: CK Hu <ck.hu@mediatek.com>, dri-devel@lists.freedesktop.org
+ id 1if4lU-0006gw-2C; Wed, 11 Dec 2019 16:23:05 +0000
+X-UUID: d45729a5826648458fe6a46fb9dbd44e-20191211
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=iimza8cqkvrV1lF7V0mYtKiaYJScHBfp3AjzMCxE4gQ=; 
+ b=CTpH30TN4MmOSrnL9IVid5HNqTGghWnqq9dsYcUVwkjXzAKx1Z1fdk6SNy1brspl32QzavMWw+uizFf1w2kxZvnngpm24ZChzD7x8oKBSL6b6wgHHlMeuj6+wcLVXvtLhESq9N2kdimZYolQ9BaDoLgPdEpd8KQID1dvWKZu/Hc=;
+X-UUID: d45729a5826648458fe6a46fb9dbd44e-20191211
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jiaxin.yu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 816953848; Wed, 11 Dec 2019 08:22:58 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 08:23:12 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Dec 2019 00:22:23 +0800
+Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Thu, 12 Dec 2019 00:22:06 +0800
+From: Jiaxin Yu <jiaxin.yu@mediatek.com>
+To: <yong.liang@mediatek.com>, <wim@linux-watchdog.org>, <linux@roeck-us.net>, 
+ <p.zabel@pengutronix.de>, <matthias.bgg@gmail.com>,
+ <linux-watchdog@vger.kernel.org>, <linux-kernel@vger.kernel.org>,
+ <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
+ <devicetree@vger.kernel.org>
+Subject: [PATCH v6 0/2] ASoC: mt8183: fix audio playback slowly after playback
+Date: Thu, 12 Dec 2019 00:22:34 +0800
+Message-ID: <1576081356-18298-1-git-send-email-jiaxin.yu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191211_074919_177174_5EBD3E29 
-X-CRM114-Status: GOOD (  10.50  )
-X-Spam-Score: -7.7 (-------)
+X-CRM114-CacheID: sfid-20191211_082304_113937_EEDC2428 
+X-CRM114-Status: UNSURE (   7.73  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-7.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:849 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
+ valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,53 +89,69 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Daniele Castagna <dcastagna@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Sean Paul <seanpaul@chromium.org>, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Mark Yacoub <markyacoub@google.com>
+Cc: sboyd@kernel.org, yingjoe.chen@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-drm/mediatek: Add OVL_CON_ALPHA only when the plane format has_alpha.
+From: "yong.liang" <yong.liang@mediatek.com>
 
-This change enables XR24 format to be displayed as an overlay on top of
-the primary plane.
+This series patches add reset controller for MT8183, and audio will use it in 
+machine driver during bootup, they depend on the for-next.
 
-Suggested-by: Sean Paul <seanpaul@chromium.org>
-To: CK Hu <ck.hu@mediatek.com>
-To: dri-devel@lists.freedesktop.org
-Cc: Daniele Castagna <dcastagna@chromium.org>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>
-Cc: David Airlie <airlied@linux.ie>
-Cc: Daniel Vetter <daniel@ffwll.ch>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>
-Cc: linux-arm-kernel@lists.infradead.org
-Cc: linux-mediatek@lists.infradead.org
-Signed-off-by: Mark Yacoub <markyacoub@google.com>
----
- drivers/gpu/drm/mediatek/mtk_disp_ovl.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+v6 changes:
+	1. Simplify toprug_reset_assert() & toprug_reset_deassert().
+	2. Add members for mt2712_data & mt8183_data.
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-index 526b595eeff9..a7851756dddf 100644
---- a/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-+++ b/drivers/gpu/drm/mediatek/mtk_disp_ovl.c
-@@ -266,7 +266,7 @@ static void mtk_ovl_layer_config(struct mtk_ddp_comp *comp, unsigned int idx,
- 	}
- 
- 	con = ovl_fmt_convert(ovl, fmt);
--	if (idx != 0)
-+	if (state->base.fb->format->has_alpha)
- 		con |= OVL_CON_AEN | OVL_CON_ALPHA;
- 
- 	if (pending->rotation & DRM_MODE_REFLECT_Y) {
+v5 changes:
+	1. Add Signed-off-by tag and Reviewed-by tag.
+
+v4 changes:
+	1. Fixed wrong signed-off as correct mail suffix.
+	2. Fixed patch subject that add patch version.
+
+v3 changes:
+	1. https://patchwork.kernel.org/patch/11164283/ and 
+	   https://patchwork.kernel.org/patch/11164305/ has been merged.
+	2. Change the name of mtk_wdt_compatible to mtk_wdt_data.
+	3. Remove toprgu_reset struct and use mtk_wdt_dev instead.
+	4. Get the value of sw_rst_num from .h file.
+	5. Adddd mt2712-resets.h for mt2712.
+	6. Improve commit message.
+
+v2 changes:
+	1. remove "WIP" that in the title of patches
+	2. add hyper link for the patch that depends on
+	3. patchwork list:
+		https://patchwork.kernel.org/cover/11164285/
+		https://patchwork.kernel.org/patch/11164295/
+		https://patchwork.kernel.org/patch/11164299/
+		https://patchwork.kernel.org/patch/11164283/
+		https://patchwork.kernel.org/patch/11164305/
+
+v1 changes:
+	1. patchwork list:
+		https://patchwork.kernel.org/cover/11164173/
+		https://patchwork.kernel.org/patch/11164181/
+		https://patchwork.kernel.org/patch/11164185/
+		https://patchwork.kernel.org/patch/11164187/
+		https://patchwork.kernel.org/patch/11164175/
+
+yong.liang (2):
+  arm64: dts: mt8183: Add reset-cells in infracfg
+  clk: reset: Modify reset-controller driver
+
+ .../devicetree/bindings/watchdog/mtk-wdt.txt  |  10 +-
+ drivers/watchdog/Kconfig                      |   1 +
+ drivers/watchdog/mtk_wdt.c                    | 109 +++++++++++++++++-
+ .../reset-controller/mt2712-resets.h          |  22 ++++
+ .../reset-controller/mt8183-resets.h          |  17 +++
+ 5 files changed, 155 insertions(+), 4 deletions(-)
+ create mode 100644 include/dt-bindings/reset-controller/mt2712-resets.h
+
 -- 
-2.24.0.525.g8f36a354ae-goog
-
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
