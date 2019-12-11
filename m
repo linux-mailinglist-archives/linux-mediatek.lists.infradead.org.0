@@ -2,57 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B355C11A162
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 03:34:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F8CB11A42F
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 06:56:55 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=EnaOwf/EgM4qjj4I1BHXtjX9yy/rIrWWgqWd5GwHRkw=; b=ANL9vAa9QQUbq2
-	1Jyk3vbXdRvu59/Q58RLTN7cL4S9VuAoHdXACgv8rM4AiaNRKBO9KwhH0FBgWr6s6+Vh2V3ixnZJm
-	tT+5mwmq6CKxhmfW2ZyG3N/fd1KxH2KlR4l3+v1D9Wh89KMYbp4PpeTB8vJx3Ka5fS5aNBjqjZIV0
-	dd7wQ6OCwnlabHmjsq653IgTiQdKymHhr6/1asGieuAL7/J2QhNFUM1gMMI3PDUrF4wtsZ8yG7zCV
-	aWXwGzm8fM4U4rb/C014wH1h1trIGO75HsfzCifzObo81F7wfIYKvRCjKFIF1SN1qgj6dgeP4DdjH
-	yANBTyDi+WQv+1BwIKvw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=zNmxMJFb/N5ESNW9NJnlhZdgW2bCk0d/GyrW97AZ7vc=; b=szUrVgeLw+LN9k
+	3StFjf3PmrUczl/HPW1pPLH0dxf8YZNBx82JUnOkpMArGQ58JlunhJ/8Oz83Fzv+pY90yTaEdVqLw
+	SUKVZKrYUVsuh9HAvdpYvdZ3vjO3kSnyLOeowzI+P7r7pTABUCgNvo6iab5sDxG61Wxp/6QZognYL
+	ZmN76+WaHoSeTgfJuL0CLpMffw1ZuMVy7GmAV5ElCoQ+WAiXKrgs1f8HiS0ctLcKfJHzgBB8InRsN
+	Crk5OP6jZAnQaHcGblv+qZZ07mWyED2MKgYKzRqZn1DiJhbpSmrygHLK0JlsqbhKz9FPLNEFv1mZm
+	GbkOOGDPnHAxOBZFkvtA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ierpK-0004Ip-1B; Wed, 11 Dec 2019 02:34:10 +0000
+	id 1ieuzR-0001Ku-Lf; Wed, 11 Dec 2019 05:56:49 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ierpG-0004I1-KQ; Wed, 11 Dec 2019 02:34:08 +0000
-X-UUID: dc870180ded84dbc8e5aab1a67bf7875-20191210
+ id 1ieuya-0000ZM-Qh; Wed, 11 Dec 2019 05:55:58 +0000
+X-UUID: 5c4b7d814f3d42aabb643a70741b9f9f-20191210
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=03LJQNLf2DKEdnk4krO0zsTLdTXgWHOH5qSyT3/Sd9o=; 
- b=Usaj9rmLpnYLK/kmAd71xvnnHmJ9U3Ptx3yENeDUJz7vYUXiivCYiCBfTU1MbVuVUd3drHuxXq6uKXsnJMPkb/hZJj5bGZgwQQbgzWrckhoYuCQHPnqCbiBH0gbnEJ9N8KXDfIAS6SjRjQ/icRYlRHqzxgYVGw0j1yz7HhYsBWE=;
-X-UUID: dc870180ded84dbc8e5aab1a67bf7875-20191210
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=3nT/zyPqTRXKX+qkYY8Mvpnq2j5E/DAPw3se4gA7isQ=; 
+ b=UkSDuS9vrDChXn+tTID2abZ71JAmdgEcMT56SsEIG8RJlQ8WxBj0TsNuWYjXQwmF5bs/nRlg1TKD2F2QUUvM3IvPdbfhEZKxTDupfPLKp0K9vFMjmcmkrDOaFCD6NA535IsXN91h/rXK6OONVAi6AEZUiXrMj1kYe5EECHJYTaM=;
+X-UUID: 5c4b7d814f3d42aabb643a70741b9f9f-20191210
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <yong.wu@mediatek.com>)
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1245826193; Tue, 10 Dec 2019 18:33:58 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 18:35:01 -0800
+ with ESMTP id 374394742; Tue, 10 Dec 2019 21:55:49 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 21:55:03 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 10:33:40 +0800
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 13:54:37 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 11 Dec 2019 10:33:49 +0800
-From: Yong Wu <yong.wu@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v2] arm64: dts: Add m4u and smi-larbs nodes for mt8183
-Date: Wed, 11 Dec 2019 10:33:39 +0800
-Message-ID: <1576031619-12229-1-git-send-email-yong.wu@mediatek.com>
-X-Mailer: git-send-email 1.9.1
+ Transport; Wed, 11 Dec 2019 13:54:38 +0800
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Kishon Vijay Abraham I <kishon@ti.com>
+Subject: [PATCH v5 02/11] dt-bindings: phy-mtk-tphy: make the ref clock
+ optional
+Date: Wed, 11 Dec 2019 13:54:14 +0800
+Message-ID: <1576043663-14240-2-git-send-email-chunfeng.yun@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1576043663-14240-1-git-send-email-chunfeng.yun@mediatek.com>
+References: <1576043663-14240-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: E6D636E25E941F76D855B610108DD1415BA8EF136A00FE786FA65E47FD37832C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_183406_677480_7B51C49B 
-X-CRM114-Status: UNSURE (   8.67  )
+X-CRM114-CacheID: sfid-20191210_215556_904555_0FB545E8 
+X-CRM114-Status: UNSURE (   9.39  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -85,174 +89,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: youlin.pei@mediatek.com, anan.sun@mediatek.com,
- Nicolas Boichat <drinkcat@chromium.org>, cui.zhang@mediatek.com,
- weiyi.lu@mediatek.com, srv_heupstream@mediatek.com, chao.hao@mediatek.com,
- Joerg Roedel <joro@8bytes.org>, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, Tomasz Figa <tfiga@google.com>,
- iommu@lists.linux-foundation.org, Rob
- Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- yong.wu@mediatek.com, ming-fan.chen@mediatek.com,
- Robin Murphy <robin.murphy@arm.com>, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add nodes for M4U, smi-common, and smi-larbs.
+Make the ref clock optional, then we no need refer to a fixed-clock
+in DTS anymore when the clock of USB3 PHY comes from oscillator
+directly
 
-Signed-off-by: Yong Wu <yong.wu@mediatek.com>
+Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+Acked-by: Rob Herring <robh@kernel.org>
 ---
-change notes:
+v4~v5: no changes
 
-v2: Rebase on v5.5-rc1 and power_domain nodes[1].
-   [1] https://lore.kernel.org/patchwork/patch/1164746/
+v3: add acked-by Rob
 
-v1:  https://lore.kernel.org/patchwork/patch/1054099/
+v2: no changes
 ---
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 85 ++++++++++++++++++++++++++++++++
- 1 file changed, 85 insertions(+)
+ .../devicetree/bindings/phy/phy-mtk-tphy.txt        | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 91217e4f..0f8f78e 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -8,6 +8,7 @@
- #include <dt-bindings/clock/mt8183-clk.h>
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/interrupt-controller/irq.h>
-+#include <dt-bindings/memory/mt8183-larb-port.h>
- #include <dt-bindings/power/mt8183-power.h>
- #include "mt8183-pinfunc.h"
+diff --git a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+index ce6abfbdfbe1..1f4a36dd80e0 100644
+--- a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
++++ b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+@@ -34,12 +34,6 @@ Optional properties (controller (parent) node):
  
-@@ -335,6 +336,15 @@
- 			clock-names = "clk13m";
- 		};
+ Required properties (port (child) node):
+ - reg		: address and length of the register set for the port.
+-- clocks	: a list of phandle + clock-specifier pairs, one for each
+-		  entry in clock-names
+-- clock-names	: must contain
+-		  "ref": 48M reference clock for HighSpeed analog phy; and 26M
+-			reference clock for SuperSpeed analog phy, sometimes is
+-			24M, 25M or 27M, depended on platform.
+ - #phy-cells	: should be 1 (See second example)
+ 		  cell after port phandle is phy type from:
+ 			- PHY_TYPE_USB2
+@@ -48,6 +42,13 @@ Required properties (port (child) node):
+ 			- PHY_TYPE_SATA
  
-+		iommu: iommu@10205000 {
-+			compatible = "mediatek,mt8183-m4u";
-+			reg = <0 0x10205000 0 0x1000>;
-+			interrupts = <GIC_SPI 166 IRQ_TYPE_LEVEL_LOW>;
-+			mediatek,larbs = <&larb0 &larb1 &larb2 &larb3
-+					  &larb4 &larb5 &larb6>;
-+			#iommu-cells = <1>;
-+		};
+ Optional properties (PHY_TYPE_USB2 port (child) node):
++- clocks	: a list of phandle + clock-specifier pairs, one for each
++		  entry in clock-names
++- clock-names	: may contain
++		  "ref": 48M reference clock for HighSpeed anolog phy; and 26M
++			reference clock for SuperSpeed anolog phy, sometimes is
++			24M, 25M or 27M, depended on platform.
 +
- 		auxadc: auxadc@11001000 {
- 			compatible = "mediatek,mt8183-auxadc",
- 				     "mediatek,mt8173-auxadc";
-@@ -651,9 +661,25 @@
- 			#clock-cells = <1>;
- 		};
- 
-+		larb0: larb@14017000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x14017000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&mmsys CLK_MM_SMI_LARB0>,
-+				 <&mmsys CLK_MM_SMI_LARB0>;
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
-+			clock-names = "apb", "smi";
-+		};
-+
- 		smi_common: smi@14019000 {
- 			compatible = "mediatek,mt8183-smi-common", "syscon";
- 			reg = <0 0x14019000 0 0x1000>;
-+			clocks = <&mmsys CLK_MM_SMI_COMMON>,
-+				 <&mmsys CLK_MM_SMI_COMMON>,
-+				 <&mmsys CLK_MM_GALS_COMM0>,
-+				 <&mmsys CLK_MM_GALS_COMM1>;
-+			clock-names = "apb", "smi", "gals0", "gals1";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
- 		};
- 
- 		imgsys: syscon@15020000 {
-@@ -662,18 +688,57 @@
- 			#clock-cells = <1>;
- 		};
- 
-+		larb5: larb@15021000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x15021000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&imgsys CLK_IMG_LARB5>, <&imgsys CLK_IMG_LARB5>,
-+				 <&mmsys CLK_MM_GALS_IMG2MM>;
-+			clock-names = "apb", "smi", "gals";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_ISP>;
-+		};
-+
-+		larb2: larb@1502f000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x1502f000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&imgsys CLK_IMG_LARB2>, <&imgsys CLK_IMG_LARB2>,
-+				 <&mmsys CLK_MM_GALS_IPU2MM>;
-+			clock-names = "apb", "smi", "gals";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_ISP>;
-+		};
-+
- 		vdecsys: syscon@16000000 {
- 			compatible = "mediatek,mt8183-vdecsys", "syscon";
- 			reg = <0 0x16000000 0 0x1000>;
- 			#clock-cells = <1>;
- 		};
- 
-+		larb1: larb@16010000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x16010000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&vdecsys CLK_VDEC_VDEC>, <&vdecsys CLK_VDEC_LARB1>;
-+			clock-names = "apb", "smi";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_VDEC>;
-+		};
-+
- 		vencsys: syscon@17000000 {
- 			compatible = "mediatek,mt8183-vencsys", "syscon";
- 			reg = <0 0x17000000 0 0x1000>;
- 			#clock-cells = <1>;
- 		};
- 
-+		larb4: larb@17010000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x17010000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&vencsys CLK_VENC_LARB>,
-+				 <&vencsys CLK_VENC_LARB>;
-+			clock-names = "apb", "smi";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_VENC>;
-+		};
-+
- 		ipu_conn: syscon@19000000 {
- 			compatible = "mediatek,mt8183-ipu_conn", "syscon";
- 			reg = <0 0x19000000 0 0x1000>;
-@@ -703,5 +768,25 @@
- 			reg = <0 0x1a000000 0 0x1000>;
- 			#clock-cells = <1>;
- 		};
-+
-+		larb6: larb@1a001000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x1a001000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&camsys CLK_CAM_LARB6>, <&camsys CLK_CAM_LARB6>,
-+				 <&mmsys CLK_MM_GALS_CAM2MM>;
-+			clock-names = "apb", "smi", "gals";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-+		};
-+
-+		larb3: larb@1a002000 {
-+			compatible = "mediatek,mt8183-smi-larb";
-+			reg = <0 0x1a002000 0 0x1000>;
-+			mediatek,smi = <&smi_common>;
-+			clocks = <&camsys CLK_CAM_LARB3>, <&camsys CLK_CAM_LARB3>,
-+				 <&mmsys CLK_MM_GALS_IPU12MM>;
-+			clock-names = "apb", "smi", "gals";
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-+		};
- 	};
- };
+ - mediatek,eye-src	: u32, the value of slew rate calibrate
+ - mediatek,eye-vrt	: u32, the selection of VRT reference voltage
+ - mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage
 -- 
-1.9.1
+2.24.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
