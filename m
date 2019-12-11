@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2C3511A0E4
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 02:58:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D16EB11A0C8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 02:55:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5qLfTKr6bp13CHtZhP79vpHr1oQ3ycau4oAKjiXI3FA=; b=NXSnAMJBaidGx/
-	RX4AQk08Ep4CFxEPLwgMuXOjlpDH9lJ3F1V3pEW7RfyM0FNBuk1tXMsYM7gxl2kW7uSlbEu/R7BbQ
-	Zl8ZekqAVIyJf1dRObit/+nLWUWTfNTK41Oqh9f9hQxHnlQJ+wVrtRSmX7APuSIPZX/1oppmXlHmq
-	uHXPc7YV3F1bSu+7WuUuEeUf7i4ElYoP1Auch+LLmLFmev5Op9FDXOiZPZN/+x5da9fIXHzTbeOXc
-	zWU4IxumqieVd7rkcVM1PUDYGZoq+6Sa/gwKjcFcCTXBKfWFc3UESOlu79rGy651bY5qHCv1pkukt
-	f3jpQORg6goFNuLl1/Qg==;
+	List-Owner; bh=98KE63Xgke1/e9ZgKRrhTVGZqdQetcKg1esOiAgMhhY=; b=IYT1PRzinmFK0F
+	X7xTjH9VBga8Ac6NY9OmYf2ew03vQftv4zX/EEoRpqWUJ6l7gyARTWvDDJPxcuZsluV2oNFCEhYne
+	cdXhrYJMCv1t0hjDzWb4vQLQeQ4KkkeHiDo679XhtNVxtLAasLbjvZXGkDs+ifUpXnxiDvMFbrXDq
+	KJV4iAwQUldItqbN/k1syBzkggZeq2lSPXfW8AxXfG0BIpqDVLQauj8Sn30s0Px+9oHK1cZmtx04a
+	Eh21c3lLW8N+PxHeD++W49JNxIhfz3n+ICanTAnhybXJ7XCrnxYvXb2/3Ul1YARdt5IjeFbRNy4H4
+	dvox8dUYN7srFYiR3Ihw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ierGz-0006jv-0g; Wed, 11 Dec 2019 01:58:41 +0000
+	id 1ierDk-0005pQ-Ir; Wed, 11 Dec 2019 01:55:21 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ierGl-0006Z8-FL; Wed, 11 Dec 2019 01:58:28 +0000
-X-UUID: d14fe9ff70be47ef943df9b1bb420cd5-20191210
+ id 1ierDW-0004r2-LG; Wed, 11 Dec 2019 01:55:08 +0000
+X-UUID: 5b20f7d4331a4128b70a626c610524ed-20191210
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=sqQ1DVfAQShEvzPrqHNKDy4tI0jEIAeICULZI5AfwMw=; 
- b=J/FSAdTOdRqXo7TTzVE34BYBc4wdpei3wrEjp4ZrZ4tWUmyLj3hfU2WD5XeFQ3BjnGLV9iU7wqen75AIcpgCTPb1y1En+WaetQ0Wx69XyOzA1PPfkA+TaSRI+Pln38xVpl/ktdKMPQI/+2UMy35SdwQZhEOO56SyMyMvJY9G9fM=;
-X-UUID: d14fe9ff70be47ef943df9b1bb420cd5-20191210
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=DTdqGLNreI4e1sJ9dvMRJhExLHYEoJ4Xe55wfAj33vc=; 
+ b=Q9nLroBZkZ5vpoA3hQi4E83MuQL+Kv1dgkY9tquHDbcFc2hK1ced5lW5dPCIN+kVugkm3mYfV5/gl8FezwBme/CwRz5kmm+Qox9FLwo0vlvGrnxvpBpwKzpO2wTf/GcbX0xQbSHcB0YdAlSkI/np99PnCfZFv8zmrb7e4UnDLf4=;
+X-UUID: 5b20f7d4331a4128b70a626c610524ed-20191210
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <min.guo@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1956746249; Tue, 10 Dec 2019 17:58:23 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 17:48:36 -0800
+ with ESMTP id 76203771; Tue, 10 Dec 2019 17:55:00 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 17:55:57 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 09:47:21 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 09:54:48 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 11 Dec 2019 09:48:14 +0800
-Message-ID: <1576028899.19653.5.camel@mtksdaap41>
-Subject: Re: [PATCH v2 12/14] soc: mediatek: cmdq: add loop function
-From: CK Hu <ck.hu@mediatek.com>
-To: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-Date: Wed, 11 Dec 2019 09:48:19 +0800
-In-Reply-To: <1574819937-6246-14-git-send-email-dennis-yc.hsieh@mediatek.com>
-References: <1574819937-6246-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1574819937-6246-14-git-send-email-dennis-yc.hsieh@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Wed, 11 Dec 2019 09:54:47 +0800
+From: <min.guo@mediatek.com>
+To: Bin Liu <b-liu@ti.com>, Rob Herring <robh+dt@kernel.org>
+Subject: [PATCH v9 1/6] dt-bindings: usb: musb: Add support for MediaTek musb
+ controller
+Date: Wed, 11 Dec 2019 09:54:41 +0800
+Message-ID: <20191211015446.11477-2-min.guo@mediatek.com>
+X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20191211015446.11477-1-min.guo@mediatek.com>
+References: <20191211015446.11477-1-min.guo@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: A5230DE48B16A267340064E1455F9D274E3E4DE6A9287E6E0E4EC648793AA9F82000:8
+X-TM-SNTS-SMTP: 87FF25A57B59E089C7D4840C86B52E863F4494460E20D7CEF27A07A97310AFC32000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_175827_521221_7E2E32EF 
-X-CRM114-Status: GOOD (  14.86  )
+X-CRM114-CacheID: sfid-20191210_175506_710697_70B5E80B 
+X-CRM114-Status: GOOD (  13.16  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -64,6 +64,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -84,94 +86,137 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Jassi Brar <jassisinghbrar@gmail.com>, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ hdegoede@redhat.com, tony@atomide.com,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Alan Stern <stern@rowland.harvard.edu>, Min Guo <min.guo@mediatek.com>,
+ chunfeng.yun@mediatek.com, linux-mediatek@lists.infradead.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Dennis:
+From: Min Guo <min.guo@mediatek.com>
 
-On Wed, 2019-11-27 at 09:58 +0800, Dennis YC Hsieh wrote:
-> Add finalize loop function in cmdq helper functions which loop whole pkt
-> in gce hardware thread without cpu operation.
-> 
-> Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-> ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c | 22 ++++++++++++++++++++++
->  include/linux/soc/mediatek/mtk-cmdq.h  |  8 ++++++++
->  2 files changed, 30 insertions(+)
-> 
-> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index 38e0c13e1922..10a9b4481e58 100644
-> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -414,6 +414,28 @@ int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
->  }
->  EXPORT_SYMBOL(cmdq_pkt_finalize);
->  
-> +int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt)
-> +{
-> +	struct cmdq_client *cl = pkt->cl;
-> +	struct cmdq_instruction inst = { {0} };
-> +	int err;
-> +
-> +	/* insert EOC and generate IRQ for each command iteration */
-> +	inst.op = CMDQ_CODE_EOC;
-> +	err = cmdq_pkt_append_command(pkt, inst);
-> +	if (err < 0)
-> +		return err;
+This adds support for MediaTek musb controller in
+host, peripheral and otg mode.
 
-It looks like you want a pkt execute command repeatedly, but why do you
-repeatedly trigger IRQ? This IRQ would do nothing because this pkt would
-never finish.
+Signed-off-by: Min Guo <min.guo@mediatek.com>
+---
+changes in v9:
+1. Add usb-role-switch
+2. Remove label of usb connector child node
+3. Change usb connector child node compatible as "gpio-usb-b-connector", "usb-b-connector";
 
-> +
-> +	/* JUMP abaolute to begin */
-> +	inst.op = CMDQ_CODE_JUMP;
-> +	inst.offset = 1;
-> +	inst.value = pkt->pa_base >> cmdq_mbox_shift(cl->chan);
-> +	err = cmdq_pkt_append_command(pkt, inst);
+changes in v8:
+1. Add reviewed by Rob
 
-Why not just export this function as cmdq_pkt_jump()? Let client decide
-where to jump would be more flexible.
+changes in v7:
+1. Modify compatible as
+- compatible : should be one of:
+               "mediatek,mt2701-musb"
+               ...
+               followed by "mediatek,mtk-musb"
+2. Change usb connector child node compatible as "gpio-usb-b-connector" 
 
-Regards,
-CK
+changes in v6:
+1. Modify usb connector child node
 
-> +
-> +	return err;
-> +}
-> +EXPORT_SYMBOL(cmdq_pkt_finalize_loop);
-> +
->  static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
->  {
->  	struct cmdq_pkt *pkt = (struct cmdq_pkt *)data.data;
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index 998bc90f9da9..d15d8c941992 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -212,6 +212,14 @@ int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value);
->   */
->  int cmdq_pkt_finalize(struct cmdq_pkt *pkt);
->  
-> +/**
-> + * cmdq_pkt_finalize_loop() - Append EOC and jump command to loop pkt.
-> + * @pkt:	the CMDQ packet
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + */
-> +int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt);
-> +
->  /**
->   * cmdq_pkt_flush_async() - trigger CMDQ to asynchronously execute the CMDQ
->   *                          packet and call back at the end of done packet
+changes in v5:
+suggested by Rob:
+1. Modify compatible as 
+- compatible : should be one of:
+               "mediatek,mt-2701"
+               ...
+               followed by "mediatek,mtk-musb"
+2. Add usb connector child node
 
+changes in v4:
+suggested by Sergei:
+1. String alignment
+
+changes in v3:
+1. no changes
+
+changes in v2:
+suggested by Bin:
+1. Modify DRC to DRD
+suggested by Rob:
+2. Drop the "<soc-model>-musb" in compatible
+3. Remove phy-names
+4. Add space after comma in clock-names
+---
+ .../devicetree/bindings/usb/mediatek,musb.txt | 57 +++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/usb/mediatek,musb.txt
+
+diff --git a/Documentation/devicetree/bindings/usb/mediatek,musb.txt b/Documentation/devicetree/bindings/usb/mediatek,musb.txt
+new file mode 100644
+index 000000000000..2b8a87c90d9e
+--- /dev/null
++++ b/Documentation/devicetree/bindings/usb/mediatek,musb.txt
+@@ -0,0 +1,57 @@
++MediaTek musb DRD/OTG controller
++-------------------------------------------
++
++Required properties:
++ - compatible      : should be one of:
++                     "mediatek,mt2701-musb"
++                     ...
++                     followed by "mediatek,mtk-musb"
++ - reg             : specifies physical base address and size of
++                     the registers
++ - interrupts      : interrupt used by musb controller
++ - interrupt-names : must be "mc"
++ - phys            : PHY specifier for the OTG phy
++ - dr_mode         : should be one of "host", "peripheral" or "otg",
++                     refer to usb/generic.txt
++ - clocks          : a list of phandle + clock-specifier pairs, one for
++                     each entry in clock-names
++ - clock-names     : must contain "main", "mcu", "univpll"
++                     for clocks of controller
++
++Optional properties:
++ - power-domains   : a phandle to USB power domain node to control USB's
++                     MTCMOS
++
++Required child nodes:
++ usb connector node as defined in bindings/connector/usb-connector.txt
++Optional properties:
++ - id-gpios        : input GPIO for USB ID pin.
++ - vbus-gpios      : input GPIO for USB VBUS pin.
++ - vbus-supply     : reference to the VBUS regulator, needed when supports
++                     dual-role mode
++ - usb-role-switch : use USB Role Switch to support dual-role switch, see
++                     usb/generic.txt.
++
++Example:
++
++usb2: usb@11200000 {
++	compatible = "mediatek,mt2701-musb",
++		     "mediatek,mtk-musb";
++	reg = <0 0x11200000 0 0x1000>;
++	interrupts = <GIC_SPI 32 IRQ_TYPE_LEVEL_LOW>;
++	interrupt-names = "mc";
++	phys = <&u2port2 PHY_TYPE_USB2>;
++	dr_mode = "otg";
++	clocks = <&pericfg CLK_PERI_USB0>,
++		 <&pericfg CLK_PERI_USB0_MCU>,
++		 <&pericfg CLK_PERI_USB_SLV>;
++	clock-names = "main","mcu","univpll";
++	power-domains = <&scpsys MT2701_POWER_DOMAIN_IFR_MSC>;
++	usb-role-switch;
++	connector{
++		compatible = "gpio-usb-b-connector", "usb-b-connector";
++		type = "micro";
++		id-gpios = <&pio 44 GPIO_ACTIVE_HIGH>;
++		vbus-supply = <&usb_vbus>;
++	};
++};
+-- 
+2.24.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
