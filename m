@@ -2,64 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4D0E0119A83
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Dec 2019 23:02:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A2C3511A0E4
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 02:58:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m4DKd3/HszSIqsTYgyi83cPMFs3/0l5LiuagdTf13+4=; b=ATLwRUjyg8cRY+
-	oo+hKtqirgyHSKFKTJB6S4wmlrVK0AHYAjgQJ8yQbItFcEvc/8YWTEjUFlbQKoaJ7tRm4DFZ7LwJz
-	AM1/KbLOJ4UdUo2MM87m7LkK7DUj6iA62ktFbf2J7OqS0M9ah8VSm2c94yAYnHg+/dyr0tVEYTUrL
-	zTYKVs3XQU2iUv9eflOMbO0BVBvU+M4B6lHpdwlAO2SUbkikLIoARg7ZEqFRI5NbObi3ZueBWLzYI
-	6KTwvyMRmc6VFXwxc/HBvQhoXzNq93KxY5aYDyCiE8J2MgaYjQmwBtttDSBx29DfP06kHXPmjf9wM
-	tCSP5Wvbf5BwDpKBiMRw==;
+	List-Owner; bh=5qLfTKr6bp13CHtZhP79vpHr1oQ3ycau4oAKjiXI3FA=; b=NXSnAMJBaidGx/
+	RX4AQk08Ep4CFxEPLwgMuXOjlpDH9lJ3F1V3pEW7RfyM0FNBuk1tXMsYM7gxl2kW7uSlbEu/R7BbQ
+	Zl8ZekqAVIyJf1dRObit/+nLWUWTfNTK41Oqh9f9hQxHnlQJ+wVrtRSmX7APuSIPZX/1oppmXlHmq
+	uHXPc7YV3F1bSu+7WuUuEeUf7i4ElYoP1Auch+LLmLFmev5Op9FDXOiZPZN/+x5da9fIXHzTbeOXc
+	zWU4IxumqieVd7rkcVM1PUDYGZoq+6Sa/gwKjcFcCTXBKfWFc3UESOlu79rGy651bY5qHCv1pkukt
+	f3jpQORg6goFNuLl1/Qg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ienai-0008P4-Dm; Tue, 10 Dec 2019 22:02:48 +0000
-Received: from vps0.lunn.ch ([185.16.172.187])
+	id 1ierGz-0006jv-0g; Wed, 11 Dec 2019 01:58:41 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ienaf-0008Ny-Ek
- for linux-mediatek@lists.infradead.org; Tue, 10 Dec 2019 22:02:46 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
- s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
- Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=oNrhFWA1lMqgOP0XHTa3xdZ+GV9N7jCyBqMVj23yRHs=; b=xZWRhz+CFM5NfZoAhdE/Gf5Ate
- jwkCAm8gpKDWE3b5P9ajfLkTLdVB6mq5zla3yoyBXTl7B6q88/vbXgqargSm/6APZB/TKAoXevZv4
- oTGN3doiai+QIEhx1FqEk3Fa7u7QZwAndwta5kY3sotOnTY49pV6t4NxXfpKEYe8xkuI=;
-Received: from andrew by vps0.lunn.ch with local (Exim 4.92.2)
- (envelope-from <andrew@lunn.ch>)
- id 1ienaR-0007qA-JO; Tue, 10 Dec 2019 23:02:31 +0100
-Date: Tue, 10 Dec 2019 23:02:31 +0100
-From: Andrew Lunn <andrew@lunn.ch>
-To: Marek Behun <marek.behun@nic.cz>
-Subject: Re: [PATCH net-next 4/6] net: dsa: mt7530: Add the support of MT7531
- switch
-Message-ID: <20191210220231.GA30053@lunn.ch>
-References: <cover.1575914275.git.landen.chao@mediatek.com>
- <6d608dd024edc90b09ba4fe35417b693847f973c.1575914275.git.landen.chao@mediatek.com>
- <20191210163557.GC27714@lunn.ch> <20191210213351.2df6acbf@nic.cz>
+ id 1ierGl-0006Z8-FL; Wed, 11 Dec 2019 01:58:28 +0000
+X-UUID: d14fe9ff70be47ef943df9b1bb420cd5-20191210
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=sqQ1DVfAQShEvzPrqHNKDy4tI0jEIAeICULZI5AfwMw=; 
+ b=J/FSAdTOdRqXo7TTzVE34BYBc4wdpei3wrEjp4ZrZ4tWUmyLj3hfU2WD5XeFQ3BjnGLV9iU7wqen75AIcpgCTPb1y1En+WaetQ0Wx69XyOzA1PPfkA+TaSRI+Pln38xVpl/ktdKMPQI/+2UMy35SdwQZhEOO56SyMyMvJY9G9fM=;
+X-UUID: d14fe9ff70be47ef943df9b1bb420cd5-20191210
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ck.hu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1956746249; Tue, 10 Dec 2019 17:58:23 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 17:48:36 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 09:47:21 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Wed, 11 Dec 2019 09:48:14 +0800
+Message-ID: <1576028899.19653.5.camel@mtksdaap41>
+Subject: Re: [PATCH v2 12/14] soc: mediatek: cmdq: add loop function
+From: CK Hu <ck.hu@mediatek.com>
+To: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
+Date: Wed, 11 Dec 2019 09:48:19 +0800
+In-Reply-To: <1574819937-6246-14-git-send-email-dennis-yc.hsieh@mediatek.com>
+References: <1574819937-6246-1-git-send-email-dennis-yc.hsieh@mediatek.com>
+ <1574819937-6246-14-git-send-email-dennis-yc.hsieh@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191210213351.2df6acbf@nic.cz>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: A5230DE48B16A267340064E1455F9D274E3E4DE6A9287E6E0E4EC648793AA9F82000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_140245_496571_2018A794 
-X-CRM114-Status: GOOD (  10.55  )
+X-CRM114-CacheID: sfid-20191210_175827_521221_7E2E32EF 
+X-CRM114-Status: GOOD (  14.86  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [185.16.172.187 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -67,6 +71,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,43 +84,93 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- Landen Chao <landen.chao@mediatek.com>, f.fainelli@gmail.com,
- vivien.didelot@savoirfairelinux.com, netdev@vger.kernel.org,
- sean.wang@mediatek.com, linux-kernel@vger.kernel.org, frank-w@public-files.de,
- opensource@vdorst.com, robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, davem@davemloft.net
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ Jassi Brar <jassisinghbrar@gmail.com>, linux-kernel@vger.kernel.org,
+ Houlong Wei <houlong.wei@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Dec 10, 2019 at 09:33:51PM +0100, Marek Behun wrote:
-> On Tue, 10 Dec 2019 17:35:57 +0100
-> Andrew Lunn <andrew@lunn.ch> wrote:
-> 
-> > On Tue, Dec 10, 2019 at 04:14:40PM +0800, Landen Chao wrote:
-> > > Add new support for MT7531:
-> > > 
-> > > MT7531 is the next generation of MT7530. It is also a 7-ports switch with
-> > > 5 giga embedded phys, 2 cpu ports, and the same MAC logic of MT7530. Cpu
-> > > port 6 only supports HSGMII interface. Cpu port 5 supports either RGMII
-> > > or HSGMII in different HW sku.  
-> > 
-> > Hi Landen
-> > 
-> > Looking at the code, you seem to treat HSGMII as 2500Base-X. Is this
-> > correct? Or is it SGMII over clocked to 2.5Gbps?
-> > 
-> > 	 Andrew
-> 
-> How would that work? Would 10 and 100 be overclocked to 25 and 250?
+Hi, Dennis:
 
-No. SGMII clocked up to 2.5G does not support any of the lower
-speeds. And inband signalling does not make much sense, the control
-word is all wrong.
+On Wed, 2019-11-27 at 09:58 +0800, Dennis YC Hsieh wrote:
+> Add finalize loop function in cmdq helper functions which loop whole pkt
+> in gce hardware thread without cpu operation.
+> 
+> Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
+> ---
+>  drivers/soc/mediatek/mtk-cmdq-helper.c | 22 ++++++++++++++++++++++
+>  include/linux/soc/mediatek/mtk-cmdq.h  |  8 ++++++++
+>  2 files changed, 30 insertions(+)
+> 
+> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> index 38e0c13e1922..10a9b4481e58 100644
+> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
+> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
+> @@ -414,6 +414,28 @@ int cmdq_pkt_finalize(struct cmdq_pkt *pkt)
+>  }
+>  EXPORT_SYMBOL(cmdq_pkt_finalize);
+>  
+> +int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt)
+> +{
+> +	struct cmdq_client *cl = pkt->cl;
+> +	struct cmdq_instruction inst = { {0} };
+> +	int err;
+> +
+> +	/* insert EOC and generate IRQ for each command iteration */
+> +	inst.op = CMDQ_CODE_EOC;
+> +	err = cmdq_pkt_append_command(pkt, inst);
+> +	if (err < 0)
+> +		return err;
 
-     Andrew
+It looks like you want a pkt execute command repeatedly, but why do you
+repeatedly trigger IRQ? This IRQ would do nothing because this pkt would
+never finish.
+
+> +
+> +	/* JUMP abaolute to begin */
+> +	inst.op = CMDQ_CODE_JUMP;
+> +	inst.offset = 1;
+> +	inst.value = pkt->pa_base >> cmdq_mbox_shift(cl->chan);
+> +	err = cmdq_pkt_append_command(pkt, inst);
+
+Why not just export this function as cmdq_pkt_jump()? Let client decide
+where to jump would be more flexible.
+
+Regards,
+CK
+
+> +
+> +	return err;
+> +}
+> +EXPORT_SYMBOL(cmdq_pkt_finalize_loop);
+> +
+>  static void cmdq_pkt_flush_async_cb(struct cmdq_cb_data data)
+>  {
+>  	struct cmdq_pkt *pkt = (struct cmdq_pkt *)data.data;
+> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
+> index 998bc90f9da9..d15d8c941992 100644
+> --- a/include/linux/soc/mediatek/mtk-cmdq.h
+> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
+> @@ -212,6 +212,14 @@ int cmdq_pkt_assign(struct cmdq_pkt *pkt, u16 reg_idx, u32 value);
+>   */
+>  int cmdq_pkt_finalize(struct cmdq_pkt *pkt);
+>  
+> +/**
+> + * cmdq_pkt_finalize_loop() - Append EOC and jump command to loop pkt.
+> + * @pkt:	the CMDQ packet
+> + *
+> + * Return: 0 for success; else the error code is returned
+> + */
+> +int cmdq_pkt_finalize_loop(struct cmdq_pkt *pkt);
+> +
+>  /**
+>   * cmdq_pkt_flush_async() - trigger CMDQ to asynchronously execute the CMDQ
+>   *                          packet and call back at the end of done packet
 
 _______________________________________________
 Linux-mediatek mailing list
