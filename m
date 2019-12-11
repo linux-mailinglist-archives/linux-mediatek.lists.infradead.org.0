@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7406A11A100
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 03:05:26 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A018811A158
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 03:29:58 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iEfSyYZsheWlB/zWKp6ypYGvNmZ+zkOQgkBw5Wyomoo=; b=OaEplxR8bMTOTw
-	3xkWQFomMR+9MAp5uERL1X+IXMITAI5nbNzgs8imw5+JkvwnIL3ka37bZuN+BJeYBii+fKQsVwCo6
-	cbiXno0mqH5do87i4NXHwm7JplHgpW/1cTta2XGkc3Hz+c/di5oFmb/ot+9uaE8iAr67KLeawnee+
-	GxHZjT62gLaUgfwKUjA/i+Lh8WHh/dIndT6C+VSfN4DB2J7LrxWR2K+YLyiv0GdDYco+PPp68XRZC
-	nrASpjwbmDtX2BPDUdM903A9qQGNcRCbNlVl633/4CKjt5P7RxyEsKq0w+XV9T69wrRYuOZXYUpCM
-	sXGmhF6nEKg5EwHv68Uw==;
+	List-Owner; bh=Y+1AB4hQ5nxBoAKalWhONpGZx+QPSfLT7JOz2IZFFs8=; b=Kdrym44DoNwT/q
+	lAzDlFMejlB7gd43ZfRkScMl1Ax/RgvwrEoDNeTgrF/lyDT1TQ5jsKp0v+ZhEuOe9BPMuBL4n2Ys8
+	MHbJg9b/mB9K9qkiVjZBPkIHSwrBa8mHi+QM281UBZMPoP/hoQ8JDeYSQO5bSv8H3OsOt7nR8WVGl
+	7bWhsvYioPIKLYo3L4R0P5rZPZl+PITFgBjm3JQzAT0OBnxCEoOcB/MA3U0pYp4HxroHBpOQWzhBW
+	ePpDHclrl0bG125/F1rwLV2bOlvKuV58srcJ0tYi1m3WAgtkdyylusIinR3IYJ9A0vvkc2vy8ZkXK
+	GuplvjjustK2MIGNfJFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ierNP-0002YP-Ac; Wed, 11 Dec 2019 02:05:19 +0000
+	id 1ierlB-0002bf-4E; Wed, 11 Dec 2019 02:29:53 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ierN6-000197-Lp; Wed, 11 Dec 2019 02:05:02 +0000
-X-UUID: b34ea2cb1f1047e3987e63d7b74740ca-20191210
+ id 1ierl1-0002TO-KE; Wed, 11 Dec 2019 02:29:45 +0000
+X-UUID: e11fed2ff9194371927630e7d46ffd43-20191210
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=wg0RWtXnuazbnyWqaYUsInjXzTF5INnndGMTSvzSNXg=; 
- b=VY3oVp/kL+4z2JOIh6bbMIsWlTardtrptRq8k9S4xbwlHMFQhmFX6w1QBYXwA4lPtmAOBafnMXubU2L5qZncv3+adK1yTBkxszBKyb7X1+KbwN9wdT+5UAnkAqyyIE7/RrSrkfKFhR1P8neRM0mH7qGyXWVTwSlhjrWfoAfzhFU=;
-X-UUID: b34ea2cb1f1047e3987e63d7b74740ca-20191210
+ bh=rhfdqi2eRRPOmkQEKUGmuq54EZ73uOUii6nqn78dZ8M=; 
+ b=q50bYmGYPizR+0jps0AvO/uOh8KtsxOOYaIgX10598imLcEZpN6cXQfF6TQuBAyS0jEsnOiK986JSxCyf2pLOC/tzMvO568Obf+hYDAblDvwVcFHe1iPILfiA7SVOtxL2Y9NK7gKhU2R3drDXwyLHha1CEDDxomlz1hhMETlSHY=;
+X-UUID: e11fed2ff9194371927630e7d46ffd43-20191210
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ (envelope-from <hsin-hsiung.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 929821085; Tue, 10 Dec 2019 18:04:58 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 18:05:59 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 10:04:22 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ with ESMTP id 1098883894; Tue, 10 Dec 2019 18:29:38 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 10 Dec 2019 18:20:34 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 10:19:26 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 11 Dec 2019 10:04:43 +0800
-Message-ID: <1576029887.19653.17.camel@mtksdaap41>
-Subject: Re: [PATCH v2 13/14] soc: mediatek: cmdq: add wait no clear event
- function
-From: CK Hu <ck.hu@mediatek.com>
-To: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-Date: Wed, 11 Dec 2019 10:04:47 +0800
-In-Reply-To: <1574819937-6246-15-git-send-email-dennis-yc.hsieh@mediatek.com>
-References: <1574819937-6246-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1574819937-6246-15-git-send-email-dennis-yc.hsieh@mediatek.com>
+ Transport; Wed, 11 Dec 2019 10:19:35 +0800
+Message-ID: <1576030774.24528.2.camel@mtksdaap41>
+Subject: Re: [PATCH v6 5/6] rtc: mt6397: fix alarm register overwrite
+From: Hsin-hsiung Wang <hsin-hsiung.wang@mediatek.com>
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>
+Date: Wed, 11 Dec 2019 10:19:34 +0800
+In-Reply-To: <20191210164139.GT1463890@piout.net>
+References: <1575639183-17606-1-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <1575639183-17606-6-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <20191210164139.GT1463890@piout.net>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_180500_720670_64C0F5CC 
-X-CRM114-Status: GOOD (  16.00  )
+X-CRM114-CacheID: sfid-20191210_182943_675481_9602A797 
+X-CRM114-Status: GOOD (  17.78  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -84,98 +84,127 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Jassi Brar <jassisinghbrar@gmail.com>, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Alessandro Zummo <a.zummo@towertech.it>, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, Ran Bi <ran.bi@mediatek.com>,
+ Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+ Eddie Huang <eddie.huang@mediatek.com>, Lee Jones <lee.jones@linaro.org>,
+ linux-arm-kernel@lists.infradead.org, linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Dennis:
+Hi,
 
-On Wed, 2019-11-27 at 09:58 +0800, Dennis YC Hsieh wrote:
-> Add wait no clear event function in cmdq helper functions to wait specific
-> event without clear to 0 after receive it.
+On Tue, 2019-12-10 at 17:41 +0100, Alexandre Belloni wrote:
+> Hi,
 > 
-> Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-> ---
->  drivers/soc/mediatek/mtk-cmdq-helper.c | 15 +++++++++++++++
->  include/linux/soc/mediatek/mtk-cmdq.h  | 10 ++++++++++
->  2 files changed, 25 insertions(+)
+> On 06/12/2019 21:33:02+0800, Hsin-Hsiung Wang wrote:
+> > From: Ran Bi <ran.bi@mediatek.com>
+> > 
+> > Alarm registers high byte was reserved for other functions.
+> > This add mask in alarm registers operation functions.
+> > This also fix error condition in interrupt handler.
+> > 
+> > Fixes: fc2979118f3f ("rtc: mediatek: Add MT6397 RTC driver")
+> > 
+> > Signed-off-by: Ran Bi <ran.bi@mediatek.com>
+> > Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
+> > ---
+> >  drivers/rtc/rtc-mt6397.c | 47 +++++++++++++++++++++++++++++++++--------------
+> >  1 file changed, 33 insertions(+), 14 deletions(-)
+> > 
 > 
-> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> index 10a9b4481e58..6f270fadfb50 100644
-> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> @@ -330,6 +330,21 @@ int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
->  }
->  EXPORT_SYMBOL(cmdq_pkt_wfe);
->  
-> +int cmdq_pkt_wait_no_clear(struct cmdq_pkt *pkt, u16 event)
-> +{
-> +	struct cmdq_instruction inst = { {0} };
-> +
-> +	if (event >= CMDQ_MAX_EVENT)
-> +		return -EINVAL;
-> +
-> +	inst.op = CMDQ_CODE_WFE;
-> +	inst.value = CMDQ_WFE_WAIT | CMDQ_WFE_WAIT_VALUE;
-> +	inst.event = event;
-> +
-> +	return cmdq_pkt_append_command(pkt, inst);
-> +}
-> +EXPORT_SYMBOL(cmdq_pkt_wait_no_clear);
+> Can you rebase that one on top of v5.5-rc1 soon? I'll include it in -fixes.
+> 
+Sure, I will send the next version later.
 
-So the wait command has two version, one is wait and then clear event,
-another is wait and not clear event. The name of cmdq_pkt_wfe() is 'wait
-for event', so it's trivial that we think it does not clear event. I've
-three suggestion for this:
-
-1. Let cmdq_pkt_wfe() wait and not clear event, and
-cmdq_pkt_wfe_clear_event() wait and clear event.
-
-or 
-2. Let cmdq_pkt_wfe() has a parameter to indicate that clear event or
-not after wait.
-
-or
-3. Let cmdq_pkt_wfe() wait and not clear event, and not provide wait and
-clear event version. For DRM and MDP, I think both just need wait and
-not clear event.
-
-Regards,
-CK
-
-
-> +
->  int cmdq_pkt_clear_event(struct cmdq_pkt *pkt, u16 event)
->  {
->  	struct cmdq_instruction inst = { {0} };
-> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> index d15d8c941992..40bc61ad8d31 100644
-> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> @@ -149,6 +149,16 @@ int cmdq_pkt_write_s_value(struct cmdq_pkt *pkt, dma_addr_t addr,
->   */
->  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event);
->  
-> +/**
-> + * cmdq_pkt_wait_no_clear() - Append wait for event command to the CMDQ packet,
-> + *			      without update event to 0 after receive it.
-> + * @pkt:	the CMDQ packet
-> + * @event:	the desired event type to wait
-> + *
-> + * Return: 0 for success; else the error code is returned
-> + */
-> +int cmdq_pkt_wait_no_clear(struct cmdq_pkt *pkt, u16 event);
-> +
->  /**
->   * cmdq_pkt_clear_event() - append clear event command to the CMDQ packet
->   * @pkt:	the CMDQ packet
+> > diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
+> > index 704229e..b216bdc 100644
+> > --- a/drivers/rtc/rtc-mt6397.c
+> > +++ b/drivers/rtc/rtc-mt6397.c
+> > @@ -47,6 +47,14 @@
+> >  
+> >  #define RTC_AL_SEC		0x0018
+> >  
+> > +#define RTC_AL_SEC_MASK		0x003f
+> > +#define RTC_AL_MIN_MASK		0x003f
+> > +#define RTC_AL_HOU_MASK		0x001f
+> > +#define RTC_AL_DOM_MASK		0x001f
+> > +#define RTC_AL_DOW_MASK		0x0007
+> > +#define RTC_AL_MTH_MASK		0x000f
+> > +#define RTC_AL_YEA_MASK		0x007f
+> > +
+> >  #define RTC_PDN2		0x002e
+> >  #define RTC_PDN2_PWRON_ALARM	BIT(4)
+> >  
+> > @@ -103,7 +111,7 @@ static irqreturn_t mtk_rtc_irq_handler_thread(int irq, void *data)
+> >  		irqen = irqsta & ~RTC_IRQ_EN_AL;
+> >  		mutex_lock(&rtc->lock);
+> >  		if (regmap_write(rtc->regmap, rtc->addr_base + RTC_IRQ_EN,
+> > -				 irqen) < 0)
+> > +				 irqen) == 0)
+> >  			mtk_rtc_write_trigger(rtc);
+> >  		mutex_unlock(&rtc->lock);
+> >  
+> > @@ -225,12 +233,12 @@ static int mtk_rtc_read_alarm(struct device *dev, struct rtc_wkalrm *alm)
+> >  	alm->pending = !!(pdn2 & RTC_PDN2_PWRON_ALARM);
+> >  	mutex_unlock(&rtc->lock);
+> >  
+> > -	tm->tm_sec = data[RTC_OFFSET_SEC];
+> > -	tm->tm_min = data[RTC_OFFSET_MIN];
+> > -	tm->tm_hour = data[RTC_OFFSET_HOUR];
+> > -	tm->tm_mday = data[RTC_OFFSET_DOM];
+> > -	tm->tm_mon = data[RTC_OFFSET_MTH];
+> > -	tm->tm_year = data[RTC_OFFSET_YEAR];
+> > +	tm->tm_sec = data[RTC_OFFSET_SEC] & RTC_AL_SEC_MASK;
+> > +	tm->tm_min = data[RTC_OFFSET_MIN] & RTC_AL_MIN_MASK;
+> > +	tm->tm_hour = data[RTC_OFFSET_HOUR] & RTC_AL_HOU_MASK;
+> > +	tm->tm_mday = data[RTC_OFFSET_DOM] & RTC_AL_DOM_MASK;
+> > +	tm->tm_mon = data[RTC_OFFSET_MTH] & RTC_AL_MTH_MASK;
+> > +	tm->tm_year = data[RTC_OFFSET_YEAR] & RTC_AL_YEA_MASK;
+> >  
+> >  	tm->tm_year += RTC_MIN_YEAR_OFFSET;
+> >  	tm->tm_mon--;
+> > @@ -251,14 +259,25 @@ static int mtk_rtc_set_alarm(struct device *dev, struct rtc_wkalrm *alm)
+> >  	tm->tm_year -= RTC_MIN_YEAR_OFFSET;
+> >  	tm->tm_mon++;
+> >  
+> > -	data[RTC_OFFSET_SEC] = tm->tm_sec;
+> > -	data[RTC_OFFSET_MIN] = tm->tm_min;
+> > -	data[RTC_OFFSET_HOUR] = tm->tm_hour;
+> > -	data[RTC_OFFSET_DOM] = tm->tm_mday;
+> > -	data[RTC_OFFSET_MTH] = tm->tm_mon;
+> > -	data[RTC_OFFSET_YEAR] = tm->tm_year;
+> > -
+> >  	mutex_lock(&rtc->lock);
+> > +	ret = regmap_bulk_read(rtc->regmap, rtc->addr_base + RTC_AL_SEC,
+> > +			       data, RTC_OFFSET_COUNT);
+> > +	if (ret < 0)
+> > +		goto exit;
+> > +
+> > +	data[RTC_OFFSET_SEC] = ((data[RTC_OFFSET_SEC] & ~(RTC_AL_SEC_MASK)) |
+> > +				(tm->tm_sec & RTC_AL_SEC_MASK));
+> > +	data[RTC_OFFSET_MIN] = ((data[RTC_OFFSET_MIN] & ~(RTC_AL_MIN_MASK)) |
+> > +				(tm->tm_min & RTC_AL_MIN_MASK));
+> > +	data[RTC_OFFSET_HOUR] = ((data[RTC_OFFSET_HOUR] & ~(RTC_AL_HOU_MASK)) |
+> > +				(tm->tm_hour & RTC_AL_HOU_MASK));
+> > +	data[RTC_OFFSET_DOM] = ((data[RTC_OFFSET_DOM] & ~(RTC_AL_DOM_MASK)) |
+> > +				(tm->tm_mday & RTC_AL_DOM_MASK));
+> > +	data[RTC_OFFSET_MTH] = ((data[RTC_OFFSET_MTH] & ~(RTC_AL_MTH_MASK)) |
+> > +				(tm->tm_mon & RTC_AL_MTH_MASK));
+> > +	data[RTC_OFFSET_YEAR] = ((data[RTC_OFFSET_YEAR] & ~(RTC_AL_YEA_MASK)) |
+> > +				(tm->tm_year & RTC_AL_YEA_MASK));
+> > +
+> >  	if (alm->enabled) {
+> >  		ret = regmap_bulk_write(rtc->regmap,
+> >  					rtc->addr_base + RTC_AL_SEC,
+> > -- 
+> > 2.6.4
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
