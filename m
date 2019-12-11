@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5226D11A7E3
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 10:44:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D89AF11A845
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 10:52:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CEQMsCQv3izMEMSjVxBJYkLxQUVad1QPt1QIw6pQEtI=; b=enC2LFgw03PAIJ
-	kVjYUBEqI0c4YfTS1I+J+7dwL/zpoUUq4ca26aEhb0ZM23QWfKadx5LUapof9uVJD7IRoGpqDyBiI
-	QYfAdKjc+IaoY45CTmNda2aZR9KUbv83d2/waHomRpzU9Km2Tr9SzyPY/fMaOJA9gd0pdqRqxWl+U
-	WgykwcYnJhheKwOszKzoMO2tw5IBvr8BPfVNBFJ5GKljaT/HrphaiihE0Pe7rtLKhkps8AVBnRXPy
-	7rfBaEArASN1bdGenJknYQN6li5U2XTEUi0LP1qNoo6Rbxt1zzC1W4OeE+DDl4lKw477nuiGFx6rS
-	bda5P9gIv2LcfNXRpk+Q==;
+	List-Owner; bh=1qY5tFW+q7I4HbQ5nLyo5gdfPGwweq82dWpZAtS/myY=; b=O8c/Oz9Xl+1PyN
+	r279sywdGqVJ3DG8ay+qTi8HcBsz8V/RXnpDCYHDgYg3xem3+f8fQjRCvw+3G8+twlCF2uV1zJqH+
+	5WO5nehIYgyfhqXr/vzHNmRgM9jVVEK2GBs0Qj+1PcepniUh5mT0Cmd1mRD76bqgF7u889F4YIsPd
+	5OYPpV9pvbiR4J5eqhy2/lHk2kb0HkAYlFzNFMIHUYgdDmrlRMpa/bJxZ3MHQucWBJjnWJtFeSCbB
+	xX8AypIl+lqovG5VXVQENw6XpKSUzNucWNWqHd0XJlT60BJlvsZfNvVOYVA79VA4lPS/94UYEcIjo
+	19YQrPAqQG4nyEQ0jrJg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ieyXx-0002P6-St; Wed, 11 Dec 2019 09:44:41 +0000
+	id 1ieyfZ-00086d-Gx; Wed, 11 Dec 2019 09:52:33 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ieyXL-0001rf-RO; Wed, 11 Dec 2019 09:44:05 +0000
-X-UUID: 3fbca94f1b6c4a1bbe5355727d885da5-20191211
+ id 1ieyf1-0007aA-Ea; Wed, 11 Dec 2019 09:52:01 +0000
+X-UUID: 6ed83d7056cb44a3920c8266741890fe-20191211
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=vQNyyDLAOhUx/esjjJKKmBtt5AHvW77SqweS/Ym/Fh8=; 
- b=si6PFyLoYo3M87dC2AoUMRbRHIVtu6YTFz5wukBD0GWovLURanGzPRcOeZlOgAqSptkQG8rWA3apMZyyJRnqCeJ3aEo7HpDmymbsuwes07I3Nmll+WifUN24ed/5o7atBMasKggnCZG1NzayIPUpT7aTVkZB1fXmwV90Aty/Y48=;
-X-UUID: 3fbca94f1b6c4a1bbe5355727d885da5-20191211
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ bh=sNkHpXF8izKZUF7qsuSvErydtyfam/Pb0hpHXYo69zY=; 
+ b=Tto/TXc5UCP++bH4rTnUjXzl0aXbv2dzh8q0wrS64R1rz5AKm2nZLS3gajXYuuzvdxFVfgDnLcGrR76d1tL5DSxl1m0nGuXsFrbFRy12zW99RapB9mEAHEHhW6P2qviSgelYlz5H4y6qtThTUPyczyH8WIaL9Bl+u3pQpysxeBg=;
+X-UUID: 6ed83d7056cb44a3920c8266741890fe-20191211
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <hsin-hsiung.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1574361053; Wed, 11 Dec 2019 01:44:00 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 01:45:04 -0800
+ with ESMTP id 2100280102; Wed, 11 Dec 2019 01:51:56 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 01:44:14 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 17:43:33 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 17:43:35 +0800
 Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Wed, 11 Dec 2019 17:43:33 +0800
@@ -46,18 +46,19 @@ From: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
 To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>,
  Alexandre Belloni <alexandre.belloni@free-electrons.com>, Matthias Brugger
  <matthias.bgg@gmail.com>
-Subject: [PATCH v7 1/6] mfd: mt6397: modify suspend/resume behavior
-Date: Wed, 11 Dec 2019 17:43:50 +0800
-Message-ID: <1576057435-3561-2-git-send-email-hsin-hsiung.wang@mediatek.com>
+Subject: [PATCH v7 2/6] dt-bindings: mfd: Add compatible for the MediaTek
+ MT6358 PMIC
+Date: Wed, 11 Dec 2019 17:43:51 +0800
+Message-ID: <1576057435-3561-3-git-send-email-hsin-hsiung.wang@mediatek.com>
 X-Mailer: git-send-email 2.6.4
 In-Reply-To: <1576057435-3561-1-git-send-email-hsin-hsiung.wang@mediatek.com>
 References: <1576057435-3561-1-git-send-email-hsin-hsiung.wang@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 3C210F3274EF605D8A096194314ED7147F601C6527E113954096689DCD8CF7542000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191211_014403_898684_4B066EEF 
-X-CRM114-Status: GOOD (  14.29  )
+X-CRM114-CacheID: sfid-20191211_015159_507902_F90A633B 
+X-CRM114-Status: UNSURE (   9.57  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -102,148 +103,54 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Some pmics don't need backup interrupt settings, so we change to use
-pm notifier for the pmics which are necessary to store settings.
+This adds compatible for the MediaTek MT6358 PMIC.
 
+Acked-for-mfd-by: Lee Jones <lee.jones@linaro.org>
+Reviewed-by: Rob Herring <robh@kernel.org>
 Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
 ---
- drivers/mfd/mt6397-core.c       | 30 ------------------------------
- drivers/mfd/mt6397-irq.c        | 33 +++++++++++++++++++++++++++++++++
- include/linux/mfd/mt6397/core.h |  2 ++
- 3 files changed, 35 insertions(+), 30 deletions(-)
+ Documentation/devicetree/bindings/mfd/mt6397.txt | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/mfd/mt6397-core.c b/drivers/mfd/mt6397-core.c
-index 0437c85..d2e70d8 100644
---- a/drivers/mfd/mt6397-core.c
-+++ b/drivers/mfd/mt6397-core.c
-@@ -100,35 +100,6 @@ static const struct mfd_cell mt6397_devs[] = {
- 	}
- };
+diff --git a/Documentation/devicetree/bindings/mfd/mt6397.txt b/Documentation/devicetree/bindings/mfd/mt6397.txt
+index a9b105a..0df4382 100644
+--- a/Documentation/devicetree/bindings/mfd/mt6397.txt
++++ b/Documentation/devicetree/bindings/mfd/mt6397.txt
+@@ -18,24 +18,30 @@ See the following for pwarp node definitions:
+ This document describes the binding for MFD device and its sub module.
  
--#ifdef CONFIG_PM_SLEEP
--static int mt6397_irq_suspend(struct device *dev)
--{
--	struct mt6397_chip *chip = dev_get_drvdata(dev);
--
--	regmap_write(chip->regmap, chip->int_con[0], chip->wake_mask[0]);
--	regmap_write(chip->regmap, chip->int_con[1], chip->wake_mask[1]);
--
--	enable_irq_wake(chip->irq);
--
--	return 0;
--}
--
--static int mt6397_irq_resume(struct device *dev)
--{
--	struct mt6397_chip *chip = dev_get_drvdata(dev);
--
--	regmap_write(chip->regmap, chip->int_con[0], chip->irq_masks_cur[0]);
--	regmap_write(chip->regmap, chip->int_con[1], chip->irq_masks_cur[1]);
--
--	disable_irq_wake(chip->irq);
--
--	return 0;
--}
--#endif
--
--static SIMPLE_DEV_PM_OPS(mt6397_pm_ops, mt6397_irq_suspend,
--			mt6397_irq_resume);
--
- struct chip_data {
- 	u32 cid_addr;
- 	u32 cid_shift;
-@@ -238,7 +209,6 @@ static struct platform_driver mt6397_driver = {
- 	.driver = {
- 		.name = "mt6397",
- 		.of_match_table = of_match_ptr(mt6397_of_match),
--		.pm = &mt6397_pm_ops,
- 	},
- 	.id_table = mt6397_id,
- };
-diff --git a/drivers/mfd/mt6397-irq.c b/drivers/mfd/mt6397-irq.c
-index b2d3ce1..669e93d 100644
---- a/drivers/mfd/mt6397-irq.c
-+++ b/drivers/mfd/mt6397-irq.c
-@@ -9,6 +9,7 @@
- #include <linux/of_irq.h>
- #include <linux/platform_device.h>
- #include <linux/regmap.h>
-+#include <linux/suspend.h>
- #include <linux/mfd/mt6323/core.h>
- #include <linux/mfd/mt6323/registers.h>
- #include <linux/mfd/mt6397/core.h>
-@@ -128,6 +129,36 @@ static const struct irq_domain_ops mt6397_irq_domain_ops = {
- 	.map = mt6397_irq_domain_map,
- };
+ Required properties:
+-compatible: "mediatek,mt6397" or "mediatek,mt6323"
++compatible:
++	"mediatek,mt6323" for PMIC MT6323
++	"mediatek,mt6358" for PMIC MT6358
++	"mediatek,mt6397" for PMIC MT6397
  
-+static int mt6397_irq_pm_notifier(struct notifier_block *notifier,
-+				  unsigned long pm_event, void *unused)
-+{
-+	struct mt6397_chip *chip =
-+		container_of(notifier, struct mt6397_chip, pm_nb);
-+
-+	switch (pm_event) {
-+	case PM_SUSPEND_PREPARE:
-+		regmap_write(chip->regmap,
-+			     chip->int_con[0], chip->wake_mask[0]);
-+		regmap_write(chip->regmap,
-+			     chip->int_con[1], chip->wake_mask[1]);
-+		enable_irq_wake(chip->irq);
-+		break;
-+
-+	case PM_POST_SUSPEND:
-+		regmap_write(chip->regmap,
-+			     chip->int_con[0], chip->irq_masks_cur[0]);
-+		regmap_write(chip->regmap,
-+			     chip->int_con[1], chip->irq_masks_cur[1]);
-+		disable_irq_wake(chip->irq);
-+		break;
-+
-+	default:
-+		break;
-+	}
-+
-+	return NOTIFY_DONE;
-+}
-+
- int mt6397_irq_init(struct mt6397_chip *chip)
- {
- 	int ret;
-@@ -159,6 +190,7 @@ int mt6397_irq_init(struct mt6397_chip *chip)
- 	regmap_write(chip->regmap, chip->int_con[0], 0x0);
- 	regmap_write(chip->regmap, chip->int_con[1], 0x0);
+ Optional subnodes:
  
-+	chip->pm_nb.notifier_call = mt6397_irq_pm_notifier;
- 	chip->irq_domain = irq_domain_add_linear(chip->dev->of_node,
- 						 MT6397_IRQ_NR,
- 						 &mt6397_irq_domain_ops,
-@@ -177,5 +209,6 @@ int mt6397_irq_init(struct mt6397_chip *chip)
- 		return ret;
- 	}
- 
-+	register_pm_notifier(&chip->pm_nb);
- 	return 0;
- }
-diff --git a/include/linux/mfd/mt6397/core.h b/include/linux/mfd/mt6397/core.h
-index fc88d31..b81d333 100644
---- a/include/linux/mfd/mt6397/core.h
-+++ b/include/linux/mfd/mt6397/core.h
-@@ -8,6 +8,7 @@
- #define __MFD_MT6397_CORE_H__
- 
- #include <linux/mutex.h>
-+#include <linux/notifier.h>
- 
- enum chip_id {
- 	MT6323_CHIP_ID = 0x23,
-@@ -54,6 +55,7 @@ enum mt6397_irq_numbers {
- struct mt6397_chip {
- 	struct device *dev;
- 	struct regmap *regmap;
-+	struct notifier_block pm_nb;
- 	int irq;
- 	struct irq_domain *irq_domain;
- 	struct mutex irqlock;
+ - rtc
+ 	Required properties: Should be one of follows
+ 		- compatible: "mediatek,mt6323-rtc"
++		- compatible: "mediatek,mt6358-rtc"
+ 		- compatible: "mediatek,mt6397-rtc"
+ 	For details, see ../rtc/rtc-mt6397.txt
+ - regulators
+ 	Required properties:
+-		- compatible: "mediatek,mt6397-regulator"
+-	see ../regulator/mt6397-regulator.txt
+ 		- compatible: "mediatek,mt6323-regulator"
+ 	see ../regulator/mt6323-regulator.txt
++		- compatible: "mediatek,mt6358-regulator"
++	see ../regulator/mt6358-regulator.txt
++		- compatible: "mediatek,mt6397-regulator"
++	see ../regulator/mt6397-regulator.txt
+ - codec
+ 	Required properties:
+-		- compatible: "mediatek,mt6397-codec"
++		- compatible: "mediatek,mt6397-codec" or "mediatek,mt6358-sound"
+ - clk
+ 	Required properties:
+ 		- compatible: "mediatek,mt6397-clk"
 -- 
 2.6.4
 _______________________________________________
