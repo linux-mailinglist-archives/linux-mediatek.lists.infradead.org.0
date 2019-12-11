@@ -2,62 +2,126 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BCBE611ADAA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 15:39:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7643B11AE38
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 15:48:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=t8lNXXCs7JQ3v6DoweSG5ofbBFlGwkE+kzC4pzFu6X0=; b=K0EiKbABnqIEUH
-	PbMcfbcxM7rIHvPnlCYFTfuy9Rdv/7KBHMhPLAu+twaNkh6X3HHhb2n1mKu7URuFln9Jg4HUuAfmf
-	8/v/btQIPlXAMheGGGRU40jiV7dnTWTBdpivv87Mvu2ZVM3Pq72VodYyIOkr5nU7KfARSLhbkW5do
-	N3jeC0Kkw3EoB4ydNaV9gMryu9xEXxGZDpqp5e6L8ljsttDO4wibhsOD4v3ToSR8CxWQsvvHqiJrA
-	n61t0ynT5xNl5/nJImNriQcwFb0dtMsSnMy6/bGc3aL68zGUFs7PE9CRIjQXLhcHlDrqGyR2Angk6
-	1PwD/pj7mVL6bHNW570w==;
+	In-Reply-To:List-Owner; bh=STTvpZujJiNZcr4ky0CU93s1hXHBiB0P3u0chKx0ols=; b=O7
+	NJGrn7jHnIKjh4ILgJqW5bCOuMUbGuMMhF1yhLJX0sAFBGE0jr4vgsE13FgQQLBIgY0uZD0vUcRU3
+	9kGs7SpOkPZoGJNHB/BfW0xt5fy9NRGTKZE/VUYo9gmZhYoSSmqIRb6BOOLJa6s/NAmxRHX9h7luR
+	H/kWx8H0VSMWrpi0SgktU55pcoNOjR9NtLGGGru4c+bMfaX9mCMK4oC3H/84sfD2wL69PYFEsDUe4
+	JnneY29uKZPusF67CIYzLINFFZCLOhmuxpLuQq/INY2XpI2bLnJjp6kzPSpiZ4YS3DCupNYtn/HOZ
+	WW4gRppVi2N5lRfH7SKZZp8iVYmtISZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1if38j-0006Cm-Mu; Wed, 11 Dec 2019 14:38:57 +0000
-Received: from mga17.intel.com ([192.55.52.151])
+	id 1if3Ha-0004Nm-4B; Wed, 11 Dec 2019 14:48:06 +0000
+Received: from mailout2.w1.samsung.com ([210.118.77.12])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1if38Z-0005hG-1B; Wed, 11 Dec 2019 14:38:48 +0000
-X-Amp-Result: UNSCANNABLE
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by fmsmga107.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 11 Dec 2019 06:36:45 -0800
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.69,301,1571727600"; d="scan'208";a="220476305"
-Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
- by fmsmga001.fm.intel.com with ESMTP; 11 Dec 2019 06:36:41 -0800
-Received: from andy by smile with local (Exim 4.93-RC7)
- (envelope-from <andriy.shevchenko@linux.intel.com>)
- id 1if36W-0000CJ-VS; Wed, 11 Dec 2019 16:36:40 +0200
-Date: Wed, 11 Dec 2019 16:36:40 +0200
-From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-To: Dongchun Zhu <dongchun.zhu@mediatek.com>
-Subject: Re: [V6, 2/2] media: i2c: ov02a10: Add OV02A10 image sensor driver
-Message-ID: <20191211143640.GU32742@smile.fi.intel.com>
-References: <20191211112849.16705-1-dongchun.zhu@mediatek.com>
- <20191211112849.16705-3-dongchun.zhu@mediatek.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191211112849.16705-3-dongchun.zhu@mediatek.com>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ id 1if3GO-00039J-K8
+ for linux-mediatek@lists.infradead.org; Wed, 11 Dec 2019 14:46:58 +0000
+Received: from eucas1p1.samsung.com (unknown [182.198.249.206])
+ by mailout2.w1.samsung.com (KnoxPortal) with ESMTP id
+ 20191211144649euoutp026b9499d10bf7ad0fc73abf61649f2f88~fWGqBufG61096710967euoutp02P
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Dec 2019 14:46:49 +0000 (GMT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mailout2.w1.samsung.com
+ 20191211144649euoutp026b9499d10bf7ad0fc73abf61649f2f88~fWGqBufG61096710967euoutp02P
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=samsung.com;
+ s=mail20170921; t=1576075609;
+ bh=XB9Dsgs+MX/AW0zv105VApQLwH1V9mP5dnZl5ja9Fws=;
+ h=From:To:Cc:Subject:Date:References:From;
+ b=B3eaRYB5Mr5X1qoQKjpAxqQ+/m+bFucthlmfslL7uK4t2T56Rnc4I+gqKXDSvbEZf
+ koSrdW0qg9CccebV2zHfS6EXlRLe/RLoUBYHRm6aNB3VNs41I0c7jDESUTylIJWB2j
+ Jg7xhD1QbFizIWDASrrUBTUBAG8v+5VWmkxpRvSA=
+Received: from eusmges2new.samsung.com (unknown [203.254.199.244]) by
+ eucas1p1.samsung.com (KnoxPortal) with ESMTP id
+ 20191211144648eucas1p1f40add69b0d3c98ea90cc7eb58bfaa21~fWGpnfauJ0132701327eucas1p1t;
+ Wed, 11 Dec 2019 14:46:48 +0000 (GMT)
+Received: from eucas1p1.samsung.com ( [182.198.249.206]) by
+ eusmges2new.samsung.com (EUCPMTA) with SMTP id 79.19.60679.85101FD5; Wed, 11
+ Dec 2019 14:46:48 +0000 (GMT)
+Received: from eusmtrp2.samsung.com (unknown [182.198.249.139]) by
+ eucas1p2.samsung.com (KnoxPortal) with ESMTPA id
+ 20191211144647eucas1p23d85dee21029f864076eece98aadd525~fWGpBdiL80793007930eucas1p2g;
+ Wed, 11 Dec 2019 14:46:47 +0000 (GMT)
+Received: from eusmgms2.samsung.com (unknown [182.198.249.180]) by
+ eusmtrp2.samsung.com (KnoxPortal) with ESMTP id
+ 20191211144647eusmtrp2d8491073638ef673156b058d2fc4659a~fWGpAmAX10169801698eusmtrp20;
+ Wed, 11 Dec 2019 14:46:47 +0000 (GMT)
+X-AuditID: cbfec7f4-0e5ff7000001ed07-35-5df101584de4
+Received: from eusmtip1.samsung.com ( [203.254.199.221]) by
+ eusmgms2.samsung.com (EUCPMTA) with SMTP id 9C.9A.07950.75101FD5; Wed, 11
+ Dec 2019 14:46:47 +0000 (GMT)
+Received: from AMDC2765.digital.local (unknown [106.120.51.73]) by
+ eusmtip1.samsung.com (KnoxPortal) with ESMTPA id
+ 20191211144647eusmtip1c700ac96bfe3e4b5c78b020d9f2807c5~fWGoV4f1Q0906009060eusmtip1p;
+ Wed, 11 Dec 2019 14:46:47 +0000 (GMT)
+From: Marek Szyprowski <m.szyprowski@samsung.com>
+To: linux-usb@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
+Subject: [PATCH v2 0/4] USB3503: correct GPIOs polarity and update the driver
+Date: Wed, 11 Dec 2019 15:46:34 +0100
+Message-Id: <20191211144638.24676-1-m.szyprowski@samsung.com>
+X-Mailer: git-send-email 2.17.1
+X-Brightmail-Tracker: H4sIAAAAAAAAA0WSa0hTYRzGe3fOzjmOZscp+WKlsDBIyEuKvJlJSdApAqMPJcWopSc1ncrm
+ LP1Q6rzkKqkVZtLKpml5d96XaM1yedu8lOxDSlMoDWZ4gTS7OY/at+f//H8Pz5+Xl8JETXwP
+ Ki4xhZUnShPEhABv6Vk274sEcxL/6fdiZJ5awVFDUR0f9XfN4iivU4sjVWkdgSyWehLpp8b4
+ aNTwmECjqmGAiiydPKQrz8FQzdtxEmVlB6Lc/HI+aqzNI9Gy0cI7TDOlPyYwpn6yis+0F4+T
+ jL4yn2A+jXUQTJe2mmQay24w2b1dOFPQVAmYBb3nKcE5QWg0mxCXysr9wi4KYjVLbfzkTpdr
+ Vo2VzACZzmrgREE6CE5PaEg1EFAi+gWAQ4O1PG5YBHBwrAJ3UCJ6AUBz+/GNhM30CuOgCgC7
+ p5/gm4llk3otQdABUG1XE46FG10N4MqdojUKo80Y1KqG1yhXOgJW6mw8h8Zpb7iiyiIcWkgf
+ gq1lH3CuzwtW1b9e64O0gYRf5tsAtzgKDRlz65Ar/GZqIjm9E/5tf8rjAioAbeYakhtuAzia
+ VbSePgi7TcN8NaBWb9oL6wx+nH0EagdWcIcNaWdotbs4bGxValoeYpwthDdzRRy9Bxabajdr
+ 3wyNrCMM1FqiuKeTwL7Z57y7wLP4f1UJAJXAnVUqZDGsYn8ie9VXIZUplIkxvlFJMj1Y/Uv9
+ f0yLbcDw65IR0BQQbxWWtH6XiPjSVEWazAgghYndhKbcWYlIGC1NS2flSRfkygRWYQQ7KFzs
+ LgzUzUhEdIw0hY1n2WRWvrHlUU4eGeCELNX95MtGSXrUrivKxUcd0c278z529xYr4ye3LTkL
+ +3p4QcHXBzSlx2L0D7T2yLrgwu2kt83ZHnFLTzTr5l2Q+fy83HAWZaVPPSND6S1KGwDN78IP
+ NPxeVlpnxJfvF/p3iX6G+fr4FRhGzthPh+e4Z4aoaS/83ufYr/MhEjGuiJUG+GByhfQfFhoT
+ TkcDAAA=
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFupikeLIzCtJLcpLzFFi42I5/e/4Xd1wxo+xBm2bzS3OPf7NYrFxxnpW
+ i9P737FYtO+by2LRvHg9m8X58xvYLTY9vsZqcXnXHDaLy80XGS1mnN/HZLFoWSuzxdojd9kt
+ mlqMLdo6l7FabF7Xzm7x89B5JgcBj8Xf7zF7bHi0mtVj56y77B6bVnWyedy5tofNY//cNewe
+ m5fUe7Sc3M/i0bdlFaPH501yAVxRejZF+aUlqQoZ+cUltkrRhhZGeoaWFnpGJpZ6hsbmsVZG
+ pkr6djYpqTmZZalF+nYJehmTfuxgLdgnWHFj0g32BsZGvi5GTg4JAROJh8d3M3cxcnEICSxl
+ lJj9/wUTREJG4uS0BlYIW1jiz7UuNoiiT4wS8zu2MIIk2AQMJbreQiREBDYwSpx5/4QFJMEs
+ cI1ZYtlmaRBbWMBXYs3fOWBTWQRUJX43N7GB2LwCthLbl1xhgdggL7F6wwHmCYw8CxgZVjGK
+ pJYW56bnFhvpFSfmFpfmpesl5+duYgTGw7ZjP7fsYOx6F3yIUYCDUYmHd8H297FCrIllxZW5
+ hxglOJiVRHiPt72LFeJNSaysSi3Kjy8qzUktPsRoCrR8IrOUaHI+MFbzSuINTQ3NLSwNzY3N
+ jc0slMR5OwQOxggJpCeWpGanphakFsH0MXFwSjUwbvbm4rSVmnjpzYlNcyNPlhgpPPm1Tf1r
+ w43JkecrC5z2JzV3L/oa7DSpws8vbppG5iF9zV0yE28e98mRnzdBd8nd0mbVnx/7Xv03+nL0
+ 0Mpq/+f3DV515sc9W5s11ajhXq3DvTT1cIfVp54xfzuUeffcBw+/d5MWJAU9fFa1Tc30wF/z
+ pqd9z5RYijMSDbWYi4oTAfL3nrmdAgAA
+X-CMS-MailID: 20191211144647eucas1p23d85dee21029f864076eece98aadd525
+X-Msg-Generator: CA
+X-RootMTR: 20191211144647eucas1p23d85dee21029f864076eece98aadd525
+X-EPHeader: CA
+CMS-TYPE: 201P
+X-CMS-RootMailID: 20191211144647eucas1p23d85dee21029f864076eece98aadd525
+References: <CGME20191211144647eucas1p23d85dee21029f864076eece98aadd525@eucas1p2.samsung.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191211_063847_089456_88486AFE 
-X-CRM114-Status: GOOD (  16.58  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20191211_064652_879617_D7D1C7FC 
+X-CRM114-Status: GOOD (  14.76  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.151 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [210.118.77.12 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,223 +133,81 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, drinkcat@chromium.org,
- srv_heupstream@mediatek.com, shengnan.wang@mediatek.com, tfiga@chromium.org,
- louis.kuo@mediatek.com, sj.huang@mediatek.com, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, sakari.ailus@linux.intel.com,
- matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: Stefan Agner <stefan@agner.ch>,
+ Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Maxime Ripard <mripard@kernel.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>, Chen-Yu Tsai <wens@csie.org>,
+ Andy Gross <agross@kernel.org>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Dec 11, 2019 at 07:28:49PM +0800, Dongchun Zhu wrote:
-> Add a V4L2 sub-device driver for OV02A10 image sensor. The OV02A10 is a
-> 1/5" CMOS sensor from Omnivision, asupporting output format: 10-bit Raw.
-> 
-> This chip has a single MIPI lane interface and use the I2C bus for
-> control and the CSI-2 bus for data.
+Dear All,
 
-...
+A few days ago a patch for USB3503 driver has been posted (see v1 in the
+changelog below), which changes the GPIO API used by the driver to the
+new one (descriptor based). It turned out that this conversion broke USB
+HUB operation on some boards (observed on Arndale5250).
 
-> +#define OV02A10_MASK_8_BITS                            0xff
+Further analysis revealed that the existing code ignored the GPIO
+polarity flags in the device tree. On the other hand the current GPIO
+polarity flags used by various boards were simply incorrect, as it was
+not possible to test them properly.
 
-Besides GENMASK() why do you need a definition here? What's the point?
+This patchset provides some standardisation for the GPIO polarity flags
+for USB3503 chips in various DTS files and adds matching logic to USB3503
+driver. For more information and rationale behind this approach, see the
+thread linked as v1 below.
 
-...
+This patchset has been tested on the following boards:
+Odroid X2, U3, XU and Arndale5250.
 
-> +static int ov02a10_entity_init_cfg(struct v4l2_subdev *sd,
-> +				   struct v4l2_subdev_pad_config *cfg)
-> +{
-> +	struct v4l2_subdev_format fmt = {
-> +		.which = cfg ? V4L2_SUBDEV_FORMAT_TRY
-> +			     : V4L2_SUBDEV_FORMAT_ACTIVE,
-> +		.format = {
-> +			.width = 1600,
+The patch for USB3503 driver should be merged one release later than the
+DTS changes to keep the affected boards working in meantime.
 
-> +			.height = 1200
-
-Leave comma here.
-
-> +		}
-> +	};
-> +
-> +	ov02a10_set_fmt(sd, cfg, &fmt);
-> +
-> +	return 0;
-> +}
-
-...
-
-> +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_GAIN,
-> +					(val & OV02A10_MASK_8_BITS));
-
-Too many parentheses.
-
-> +	if (ret < 0)
-> +		return ret;
-
-...
-
-> +static int ov02a10_set_vblank(struct ov02a10 *ov02a10, int val)
-> +{
-> +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
-
-if you do
-
-	int vts = val + ov02a10->cur_mode->height - OV02A10_BASIC_LINE;
-
-you may increase readability below...
-
-> +	int ret;
-> +
-> +	ret = i2c_smbus_write_byte_data(client, REG_PAGE_SWITCH, REG_ENABLE);
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_H,
-> +					(((val + ov02a10->cur_mode->height -
-> +					OV02A10_BASIC_LINE) >>
-> +					OV02A10_VTS_SHIFT) &
-> +					OV02A10_MASK_8_BITS));
-
-	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_H,
-					(vts >> OV02A10_VTS_SHIFT) &
-					OV02A10_MASK_8_BITS));
-
-And actually why do you need this mask here? Isn't enough to call
-
-	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_H,
-					vts >> OV02A10_VTS_SHIFT);
-
-here...
+Best regards
+Marek Szyprowski
+Samsung R&D Institute Poland
 
 
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_L,
-> +					((val + ov02a10->cur_mode->height -
-> +					OV02A10_BASIC_LINE) &
-> +					OV02A10_MASK_8_BITS));
+Changelog:
+v2:
+- added DTS fixes, assumed that RESET GPIO should be ACTIVE_LOW and all
+  other GPIOs ACTIVE_HIGH
+- integrated a fixup for USB3503 driver inverting the logic behind the
+  RESET GPIO to match the standardised GPIOs polarity
 
-...and
+v1: https://lore.kernel.org/linux-usb/20191205145633.187511-1-linus.walleij@linaro.org/T/
+- initial version, contains only USB3503 driver patch
 
-	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_L, vts);
 
-here?
+Patch summary:
 
-> +	if (ret < 0)
-> +		return ret;
-> +
-> +	return i2c_smbus_write_byte_data(client, REG_GLOBAL_EFFECTIVE,
-> +					 REG_ENABLE);
-> +}
+Linus Walleij (1):
+  usb: usb3503: Convert to use GPIO descriptors
 
-...
+Marek Szyprowski (3):
+  ARM: dts: exynos: Correct USB3503 GPIOs polarity
+  ARM: dts: qcom: Correct USB3503 GPIOs polarity
+  ARM: dts: sun8i: a83t: Correct USB3503 GPIOs polarity
 
-> +static int ov02a10_check_hwcfg(struct device *dev, struct ov02a10 *ov02a10)
-> +{
-> +	struct fwnode_handle *ep;
-> +	struct fwnode_handle *fwnode = dev_fwnode(dev);
-> +	struct v4l2_fwnode_endpoint bus_cfg = {
-
-> +		.bus_type = V4L2_MBUS_CSI2_DPHY
-
-Leave comma here.
-
-> +	};
-> +	unsigned int i, j;
-> +	int ret;
-
-> +	if (!fwnode)
-> +		return -ENXIO;
-
-A bit strange error code here.
-
-> +
-> +	ep = fwnode_graph_get_next_endpoint(fwnode, NULL);
-> +	if (!ep)
-> +		return -ENXIO;
-> +
-> +	ret = v4l2_fwnode_endpoint_alloc_parse(ep, &bus_cfg);
-> +	fwnode_handle_put(ep);
-> +	if (ret)
-> +		return ret;
-
-> +	if (!bus_cfg.nr_of_link_frequencies) {
-> +		dev_err(dev, "no link frequencies defined");
-> +		ret = -EINVAL;
-> +		goto check_hwcfg_error;
-> +	}
-
-I still think it's redundant check, though it's up to maintainers.
-
-> +
-> +	for (i = 0; i < ARRAY_SIZE(link_freq_menu_items); i++) {
-> +		for (j = 0; j < bus_cfg.nr_of_link_frequencies; j++) {
-> +			if (link_freq_menu_items[i] ==
-> +				bus_cfg.link_frequencies[j])
-> +				break;
-> +		}
-> +
-> +		if (j == bus_cfg.nr_of_link_frequencies) {
-> +			dev_err(dev, "no link frequency %lld supported",
-> +				link_freq_menu_items[i]);
-> +			ret = -EINVAL;
-> +			goto check_hwcfg_error;
-> +		}
-> +	}
-> +
-> +check_hwcfg_error:
-> +	v4l2_fwnode_endpoint_free(&bus_cfg);
-> +
-> +	return ret;
-> +}
-
-...
-
-> +static int ov02a10_probe(struct i2c_client *client)
-> +{
-
-> +	/* Optional indication of physical rotation of sensor */
-> +	ret = fwnode_property_read_u32(dev_fwnode(dev), "rotation", &rotation);
-
-> +	if (!ret) {
-
-Why not positive conditional?
-
-> +		ov02a10->upside_down = rotation == 180;
-> +		if (rotation == 180) {
-> +			ov02a10->upside_down = true;
-> +			ov02a10->fmt.code = MEDIA_BUS_FMT_SRGGB10_1X10;
-> +		}
-> +	} else {
-> +		dev_warn(dev, "failed to get rotation\n");
-> +	}
-> +
-> +	/* Optional indication of mipi TX speed */
-> +	ret = fwnode_property_read_u32(dev_fwnode(dev), "ovti,mipi-tx-speed",
-> +				       &clock_lane_tx_speed);
-> +
-
-> +	if (!ret)
-
-Ditto.
-
-> +		ov02a10->mipi_clock_tx_speed = clock_lane_tx_speed;
-> +	else
-> +		dev_warn(dev, "failed to get mipi tx speed, using default...\n");
-> +
-
-> +	return ret;
-> +}
+ .../boot/dts/exynos4412-odroid-common.dtsi    |  2 +-
+ arch/arm/boot/dts/exynos5250-arndale.dts      |  2 +-
+ arch/arm/boot/dts/exynos5410-odroidxu.dts     |  2 +-
+ .../dts/qcom-mdm9615-wp8548-mangoh-green.dts  |  2 +-
+ .../boot/dts/sun8i-a83t-cubietruck-plus.dts   |  2 +-
+ drivers/usb/misc/usb3503.c                    | 94 +++++++------------
+ include/linux/platform_data/usb3503.h         |  3 -
+ 7 files changed, 40 insertions(+), 67 deletions(-)
 
 -- 
-With Best Regards,
-Andy Shevchenko
-
+2.17.1
 
 
 _______________________________________________
