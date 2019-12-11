@@ -2,61 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5A6B411A442
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 07:05:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BC0011A5AF
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Dec 2019 09:13:59 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yYHKcVfgXXVWHCsBcNYiGu3rplDbkYFuTWK9v5JMUr4=; b=T2Y5U9nx9+nSD3
-	wTPP3A+xNPTwqb9AJDpnwejRK+dldKQUnx+KrMreytpvYUHVd48ef40x0ApfXWfM8CDzbrRDQ6pOE
-	y5qyXt9oCOFWQg/iSbGwzMH7tc0FZjErnZq/KQ1g09JtK/Tq5aP2r7pK5sCMtnr2hTFJs1CB8NL4C
-	S4rnartSGQL/934Oz22z38L/rWH93mhsZpb33CTGfAFOAZhNhJuRzgtPatOCYJrbVjFb1XDITt1c+
-	xgZm9hUG9drDZig+Z5wEzhLKDT0aSBNHrJolfjnNqs/zmcJNOXwRrbX6645PM8npTE8PD5OuMXn17
-	4mtbtXLebhkHtba3Pd9g==;
+	List-Owner; bh=37+ksmQhbOx30PukyHgy76Sf/ShJjP36Em1NlaJBQQM=; b=irlAOTrhm7iYbW
+	Rhk2Dlq9n1BQdTQZ7L/yxBP/sa691WANRoR8ZMvHkYbgRoq4JDQ/melpskFYpLQz6aEnUDOgTcrS6
+	QNNAFvy6BujqkNSsiGNCCbVci5pRtcxQFtYQKDpI3eFx9VQh13UpqT91kdltJCCsOjuet/7BA2NRV
+	CSSOK+UzNVvN9sBmo24S0fE/VCB1FS89wszWbSlVASQCnA1QPHz0dDGYB2rADBvRbKJzNm24TGrTE
+	p7v6xDTZIVvHKCAyLJRKTwVcPKbAe3Yh1AJOGMvfogb9iWHojnuAL1D6KzF1vz3+AmQyNrH9+L0OM
+	mC6hGWdnstTFgd33LF0Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iev7I-0003dj-8W; Wed, 11 Dec 2019 06:04:56 +0000
+	id 1iex83-00028A-17; Wed, 11 Dec 2019 08:13:51 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iev7F-0003ce-1o; Wed, 11 Dec 2019 06:04:54 +0000
-X-UUID: da5cf4dd9a4449b0a55e6e7f740e0bf4-20191210
+ id 1iex7z-00027D-7C; Wed, 11 Dec 2019 08:13:48 +0000
+X-UUID: 53c14fa4ae144fad8c9fbb3e631e4350-20191211
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=XON1V6tySuKrrDd+LZuRUKWj6qe9V3o3++228yp8h3k=; 
- b=ESKfSwtYEJel+qShT+LTMdaz2d0yPLjuphWzpp3VWmsECyoUHMgKyS0tEwAt4BVwVPcZQziES9mpY9wcTVIPT/jcgs2njpu3fqn2TK1cjTJC9ugsBEb+45W6dzrMdd/E3F75MjdFZJIvvwZw5t5Fa8IiHdv2I6DveiMyp18pJfM=;
-X-UUID: da5cf4dd9a4449b0a55e6e7f740e0bf4-20191210
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <chunfeng.yun@mediatek.com>)
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=LMtGwOTN7KKUaEd8A9wg9LxG6VsxXxh0GBa84A4j5NY=; 
+ b=VrSyV1Cp/l36nS3QpKYFQo/XlsRas7PPPnVbCA0Vmr0Xq/oddPdYCRZ+S1LbSxLa35dk22OAX4BCsnJciiodIVZTT0ChjctJfIyvGXWxdOJosTtSwLsF9p3akTdDJSv8K+NEZp+u963N+G6BOLk9LhnhyLF5R0EpP+D0ff2xj7o=;
+X-UUID: 53c14fa4ae144fad8c9fbb3e631e4350-20191211
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <michael.kao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1188864698; Tue, 10 Dec 2019 22:04:47 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 10 Dec 2019 21:55:57 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Dec 2019 13:53:58 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
+ with ESMTP id 447750902; Wed, 11 Dec 2019 00:13:35 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 00:13:49 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Dec 2019 16:13:09 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 11 Dec 2019 13:54:50 +0800
-From: Chunfeng Yun <chunfeng.yun@mediatek.com>
-To: Kishon Vijay Abraham I <kishon@ti.com>
-Subject: [PATCH v5 11/11] arm64: dts: mt2712: use non-empty ranges for usb-phy
-Date: Wed, 11 Dec 2019 13:54:23 +0800
-Message-ID: <1576043663-14240-11-git-send-email-chunfeng.yun@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1576043663-14240-1-git-send-email-chunfeng.yun@mediatek.com>
-References: <1576043663-14240-1-git-send-email-chunfeng.yun@mediatek.com>
+ Transport; Wed, 11 Dec 2019 16:12:57 +0800
+Message-ID: <1576052012.1631.13.camel@mtksdccf07>
+Subject: Re: [PATCH] [RESEND] arm64: dts: mt8173: Add dynamic power node.
+From: Michael Kao <michael.kao@mediatek.com>
+To: Daniel Lezcano <daniel.lezcano@linaro.org>
+Date: Wed, 11 Dec 2019 16:13:32 +0800
+In-Reply-To: <4aaf8cee-eaa2-5de4-37f0-094b9bc8da22@linaro.org>
+References: <20191122090610.17015-1-michael.kao@mediatek.com>
+ <4aaf8cee-eaa2-5de4-37f0-094b9bc8da22@linaro.org>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E8A290FF9FD2179443F17556F81E7A3BC6A551CDB3B9A8AC9CC0F71F0DD2591A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_220453_102025_14115FCF 
-X-CRM114-Status: UNSURE (   9.27  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191211_001347_267662_454C9465 
+X-CRM114-Status: GOOD (  13.34  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -66,8 +65,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -89,118 +86,83 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Chunfeng Yun <chunfeng.yun@mediatek.com>,
+ linux-pm@vger.kernel.org, Dawei Chien <dawei.chien@mediatek.com>,
+ linux-kernel@vger.kernel.org, Eduardo Valentin <edubezval@gmail.com>,
  Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
+ hsinyi@chromium.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Zhang Rui <rui.zhang@intel.com>, mn.tsou@mediatek.com,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use non-empty ranges for usb-phy to make the layout of
-its registers clearer;
-Replace deprecated compatible by generic
+On Thu, 2019-12-05 at 17:00 +0100, Daniel Lezcano wrote:
+> Hi Michael,
+> 
+> 
+> On 22/11/2019 10:06, michael.kao@mediatek.com wrote:
+> > From: "michael.kao" <michael.kao@mediatek.com>
+> > 
+> > This device node is for calculating dynamic power in mW.
+> > Since mt8173 has two clusters, there are two dynamic power
+> > coefficient as well.
+> 
+> Are you sure about the values? Usually, Big is ~x4 little, here it is ~x2.
 
-Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
----
-v3~v5: no changes
+Hi Daniel,
 
-v2: use generic compatible
----
- arch/arm64/boot/dts/mediatek/mt2712e.dtsi | 42 ++++++++++++-----------
- 1 file changed, 22 insertions(+), 20 deletions(-)
+I have confirmed again with our IC designer.
+The dynamic power coefficients are these value is right.
+Designer comment that it is result from different IC implement.
+> 
+> > Signed-off-by: Dawei Chien <dawei.chien@mediatek.com>
+> > Signed-off-by: Michael.Kao <michael.kao@mediatek.com>
+> > 
+> > ---
+> >  arch/arm64/boot/dts/mediatek/mt8173.dtsi | 4 ++++
+> >  1 file changed, 4 insertions(+)
+> > 
+> > diff --git a/arch/arm64/boot/dts/mediatek/mt8173.dtsi b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> > index 15f1842f6df3..b03ca5a71338 100644
+> > --- a/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> > +++ b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> > @@ -157,6 +157,7 @@
+> >  			enable-method = "psci";
+> >  			cpu-idle-states = <&CPU_SLEEP_0>;
+> >  			#cooling-cells = <2>;
+> > +			dynamic-power-coefficient = <263>;
+> >  			clocks = <&infracfg CLK_INFRA_CA53SEL>,
+> >  				 <&apmixedsys CLK_APMIXED_MAINPLL>;
+> >  			clock-names = "cpu", "intermediate";
+> > @@ -170,6 +171,7 @@
+> >  			enable-method = "psci";
+> >  			cpu-idle-states = <&CPU_SLEEP_0>;
+> >  			#cooling-cells = <2>;
+> > +			dynamic-power-coefficient = <263>;
+> >  			clocks = <&infracfg CLK_INFRA_CA53SEL>,
+> >  				 <&apmixedsys CLK_APMIXED_MAINPLL>;
+> >  			clock-names = "cpu", "intermediate";
+> > @@ -183,6 +185,7 @@
+> >  			enable-method = "psci";
+> >  			cpu-idle-states = <&CPU_SLEEP_0>;
+> >  			#cooling-cells = <2>;
+> > +			dynamic-power-coefficient = <530>;
+> >  			clocks = <&infracfg CLK_INFRA_CA72SEL>,
+> >  				 <&apmixedsys CLK_APMIXED_MAINPLL>;
+> >  			clock-names = "cpu", "intermediate";
+> > @@ -196,6 +199,7 @@
+> >  			enable-method = "psci";
+> >  			cpu-idle-states = <&CPU_SLEEP_0>;
+> >  			#cooling-cells = <2>;
+> > +			dynamic-power-coefficient = <530>;
+> >  			clocks = <&infracfg CLK_INFRA_CA72SEL>,
+> >  				 <&apmixedsys CLK_APMIXED_MAINPLL>;
+> >  			clock-names = "cpu", "intermediate";
+> > 
+> 
+> 
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-index 43307bad3f0d..e24f2f2f6004 100644
---- a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-@@ -697,30 +697,31 @@ usb_host0: xhci@11270000 {
- 	};
- 
- 	u3phy0: usb-phy@11290000 {
--		compatible = "mediatek,mt2712-u3phy";
--		#address-cells = <2>;
--		#size-cells = <2>;
--		ranges;
-+		compatible = "mediatek,mt2712-tphy",
-+			     "mediatek,generic-tphy-v2";
-+		#address-cells = <1>;
-+		#size-cells = <1>;
-+		ranges = <0 0 0x11290000 0x9000>;
- 		status = "okay";
- 
--		u2port0: usb-phy@11290000 {
--			reg = <0 0x11290000 0 0x700>;
-+		u2port0: usb-phy@0 {
-+			reg = <0x0 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u2port1: usb-phy@11298000 {
--			reg = <0 0x11298000 0 0x700>;
-+		u2port1: usb-phy@8000 {
-+			reg = <0x8000 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u3port0: usb-phy@11298700 {
--			reg = <0 0x11298700 0 0x900>;
-+		u3port0: usb-phy@8700 {
-+			reg = <0x8700 0x900>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
-@@ -760,30 +761,31 @@ usb_host1: xhci@112c0000 {
- 	};
- 
- 	u3phy1: usb-phy@112e0000 {
--		compatible = "mediatek,mt2712-u3phy";
--		#address-cells = <2>;
--		#size-cells = <2>;
--		ranges;
-+		compatible = "mediatek,mt2712-tphy",
-+			     "mediatek,generic-tphy-v2";
-+		#address-cells = <1>;
-+		#size-cells = <1>;
-+		ranges = <0 0 0x112e0000 0x9000>;
- 		status = "okay";
- 
--		u2port2: usb-phy@112e0000 {
--			reg = <0 0x112e0000 0 0x700>;
-+		u2port2: usb-phy@0 {
-+			reg = <0x0 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u2port3: usb-phy@112e8000 {
--			reg = <0 0x112e8000 0 0x700>;
-+		u2port3: usb-phy@8000 {
-+			reg = <0x8000 0x700>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
- 			status = "okay";
- 		};
- 
--		u3port1: usb-phy@112e8700 {
--			reg = <0 0x112e8700 0 0x900>;
-+		u3port1: usb-phy@8700 {
-+			reg = <0x8700 0x900>;
- 			clocks = <&clk26m>;
- 			clock-names = "ref";
- 			#phy-cells = <1>;
--- 
-2.24.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
