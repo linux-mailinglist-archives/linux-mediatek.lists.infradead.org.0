@@ -2,67 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9B80E11C454
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Dec 2019 04:47:25 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BD8E911C455
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Dec 2019 04:47:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ei4zo+Qvo+h3WU/EOUob2q6JetU1GOnxpw3/+9Kkv8w=; b=MZyyW8a6cyCB3P
-	pvP0QBwvSGP+1D1EJKuuRCEieGD7r0NZhETWfSlfD3Nsm8oG7poUdKwB5ORPl8MWeAn28OgNacvVY
-	SQP5KHY7lySrBgHnzigna3tl9x+6qQ/x9XTnYsNyE1a/ZwuBFvm6NAkwzTG2C6EhDKS12ycVfWXcM
-	wq1HAEt+3qW6LQhiNW9GobHT6td4AyVms13faIAMDCRyXFKGsWRYmQrhdNQYmNzEefS8A1fZjyfYE
-	YPUsY1oOa2rChSuQKrWk/DNiKP1jRT2X1tF1ZR/tEZN3QLzNt9Z95tFRlvuzDX0OOmKnQhzjW72Gc
-	KmYXT5efg0hI6uF9zEtg==;
+	List-Owner; bh=FPHoyB7oSOsoBNlUh+A7+kWbEulp2LMVVsQJYrzE2qc=; b=Mdlpg4wNQTeGeb
+	lDbBOatj/07+f215o7oBEDWj5lcJ1xpxExVlA0jrz/tV4/sBBPeSu5RmUk3zcNNBR4Lj5ThwvbAF2
+	/5xA7RgifIfAVInHn+UnxhOjPLqO1tSaDsBDYsEO7OZn0WOWgcu4IYbeHAzBYn8rkzV3hbp9iidql
+	sMm4VYQ+TrD98CYFpVQgSoTfF8t+XH/fluv5cwWp7KD6VhxB1e0br02AmLFRRxdPloX5wGqz5g95g
+	qT9mj476QAhp6kyiqdNifdNber2MZnAMICAxn6ZVrs8Y5zKiK3HAAjRhyEg4A916mLBB2cmQUQdnI
+	NTewc+Nig0gjBy+o2k+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifFRf-0001Jx-Lt; Thu, 12 Dec 2019 03:47:19 +0000
-Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
+	id 1ifFRh-0001Li-2p; Thu, 12 Dec 2019 03:47:21 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifFLo-0002aS-GD
- for linux-mediatek@lists.infradead.org; Thu, 12 Dec 2019 03:41:21 +0000
-Received: by mail-pf1-x442.google.com with SMTP id b19so20783pfo.2
- for <linux-mediatek@lists.infradead.org>; Wed, 11 Dec 2019 19:41:15 -0800 (PST)
+ id 1ifFQH-0008H1-Tm
+ for linux-mediatek@lists.infradead.org; Thu, 12 Dec 2019 03:45:55 +0000
+Received: by mail-pg1-x543.google.com with SMTP id b137so415104pga.6
+ for <linux-mediatek@lists.infradead.org>; Wed, 11 Dec 2019 19:45:53 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:autocrypt:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=NNJRAqaJkIWqzb/CDYmRxXBROHXJp/Yh+I0Y5YIDqcA=;
- b=XzL4zvtON3SJjV67Du5v350P8/7FJ/PyOulNP8NGx7sjDPm/eMdgZ5aFptTFmkx/ot
- iXylgJHrQxf+TWGDeid14IdObz8Bem6FXZd1SxBSqfWFQCb7FxaRLLxbQGr9SwHgKWhP
- KdV5oufe+8EanvUa7wekoM0bqZ70XnnbSZzHWPvd7JNZ5o1dtAaTgPt90jac6Gc+oYoO
- Nj7TMPBJwiDkBX1RghnBLgzAan1tlpfD9x/GnYGJ2w9BkTTyBZ+8fb3L6RUsRqgCTfHg
- K0auzeKc2pmDxl7oLwKxmRTPmQX/zwXUzFTICdLrEth7DqjFlRdFL3dIdeG9GAWV9vj6
- JyTg==
+ bh=07OMjO7lmkGh9f8g4geNEJnFp2GEjPLld3FY42QsWmc=;
+ b=kVTWHYIL6XGFhib+bfcDZWj9aQTUa0qUNex7+FONF0PiBz/uh80+2A2951UAsQpB79
+ YHq7ZHeWYfOI1dUGnwiwL7ZiUkNE765/TYymlYSwW5K/xKVEmVu9rfIQHWQbsZZDvO1R
+ jkneKok0uYxJ3P79Pm4mpdN9aaaterhJKrjszPEr0cPuEZE8PEw57pDsqczlSHKwt9dL
+ DpZ/ygKS1kC6pjdhFdqaWtFsu9C6ZULC12xNbOtM1b3Eld508H2zoWcFJkfab2zXQ0Uy
+ uVDv4O1ShWzyKgzpUZt3YDlGXGe3P159yjdNiiM8UQCCwAQf0vh6NVIMNcjSOZ8+gmMR
+ EHhQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=NNJRAqaJkIWqzb/CDYmRxXBROHXJp/Yh+I0Y5YIDqcA=;
- b=Gh2prBbokM2D+H7dU1oEnTNLec46+xs/45y8SnV8c2SnX2Q+cO/NCaCL7jITuryP7x
- 7Sc1rfcVwekPq7d+MBv2Aak7wtb4bclPozq3ZmTcw43XMfDh/ubPyEy7esgeEUm71BYR
- kOpvb8WYfPKzt32zBURt8Lb3Zjsgyxgo7dHujYPhnEHhcEGfesN/R9dNWuHjG9O4TbLW
- ScEmP8+ffLGpdNX2Ym6bUezWxwGrqpK93ip5R7KPOl0Bi3WHUGEzyihgPruAv5P2E63l
- djaSbqPvEqpHxzZZuUMNy9sBA5Vh5A/j5x1aUvFHlSSH1/Lxug3gzSR6Hy4FNqclT7gm
- Ixgg==
-X-Gm-Message-State: APjAAAUawk/Xf5MkRJfSOYlgcj6llk9vwy7yknppczPA4ilfMWsqqlkz
- C6MC88vLE5YqDxTR3Jhux/w=
-X-Google-Smtp-Source: APXvYqyprN+MjMJDTS3ElcuGi/RIB3mFwl4y/IiDsVy9I/762s5r1fTtbCzJx/qNXFhdIqa/qSPGHA==
-X-Received: by 2002:a62:e318:: with SMTP id g24mr7517493pfh.218.1576122075080; 
- Wed, 11 Dec 2019 19:41:15 -0800 (PST)
+ bh=07OMjO7lmkGh9f8g4geNEJnFp2GEjPLld3FY42QsWmc=;
+ b=SoT+GgMGLMIQmIkRo30Svz+d2xv3dLa0uNmR4O/iastSZI4koGDFKzYMU3UNCvJNH9
+ o6b8/TuEBOsQVl94vw8lj4GHtO29sfstEDTWuY4YBMhJN4HBA0iTF0OS+MzXmqgshcqb
+ eHoPG0rNJp4gnEcjlsyyRJPTz7BkioRjoRen0idu7LpT7cAMW6kQ1aTyL/FT27gsbYK0
+ v7GmEM03m/LpVtOhy1/7v3nePTP1mpPyZ8XlafSrQW9iqffZMRTT1VqqHboCt/XwJ4A9
+ XdxdyJjGhjBivnpb2klUebhklMt92/xfyFmSAore4zaaPy/RfFFDww7b1fUg2htsKzJY
+ OJVQ==
+X-Gm-Message-State: APjAAAWoGZ+dHx5HnZd8AyPWF4y5HPS5oUAPt7tsRK9I9IpJ3N6Rd9en
+ YBjk7VNEfGQsus7iA15Jmug=
+X-Google-Smtp-Source: APXvYqznVMLWoXaG1KfzuljASoCWife9zOWrqBlls/IfY9KLjzX12fazK1jnaNL/zOx/Z0m9Z3PhjA==
+X-Received: by 2002:a65:6249:: with SMTP id q9mr8479861pgv.340.1576122352840; 
+ Wed, 11 Dec 2019 19:45:52 -0800 (PST)
 Received: from [192.168.1.3] (ip68-111-84-250.oc.oc.cox.net. [68.111.84.250])
  by smtp.gmail.com with ESMTPSA id
- i13sm4383122pgr.48.2019.12.11.19.41.13
+ c18sm4441414pgj.24.2019.12.11.19.45.51
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 11 Dec 2019 19:41:14 -0800 (PST)
-Subject: Re: [PATCH net-next 1/6] net: dsa: mt7530: Refine message in Kconfig
+ Wed, 11 Dec 2019 19:45:52 -0800 (PST)
+Subject: Re: [PATCH net-next 2/6] net: dsa: mt7530: Extend device data ready
+ for adding a new hardware
 To: Landen Chao <landen.chao@mediatek.com>, andrew@lunn.ch,
  vivien.didelot@savoirfairelinux.com, matthias.bgg@gmail.com,
  robh+dt@kernel.org, mark.rutland@arm.com
 References: <cover.1575914275.git.landen.chao@mediatek.com>
- <6ecf6cbf38223f35854bc361c2eefa1d85c724d2.1575914275.git.landen.chao@mediatek.com>
+ <2d546d6bb15ff8b4b75af2220e20db4e634f4145.1575914275.git.landen.chao@mediatek.com>
 From: Florian Fainelli <f.fainelli@gmail.com>
 Autocrypt: addr=f.fainelli@gmail.com; keydata=
  mQGiBEjPuBIRBACW9MxSJU9fvEOCTnRNqG/13rAGsj+vJqontvoDSNxRgmafP8d3nesnqPyR
@@ -118,24 +119,23 @@ Autocrypt: addr=f.fainelli@gmail.com; keydata=
  caxTGgc5zzQHeX67eMzrGomG3ZnIxmd1sAbgvJUDaD2GrYlulfwGWwWyTNbWRvMighVdPkSF
  6XFgQaosWxkV0OELLy2N485YrTr2Uq64VKyxpncLh50e2RnyAJ9qfUATKC9NgZjRvBztfqy4
  a9BQwACgnzGuH1BVeT2J0Ra+ZYgkx7DaPR0=
-Message-ID: <96e2b00c-d70d-9aca-95c6-33186c836392@gmail.com>
-Date: Wed, 11 Dec 2019 19:41:10 -0800
+Message-ID: <d77e3109-e022-3581-2ca8-02889c5ddbf4@gmail.com>
+Date: Wed, 11 Dec 2019 19:45:51 -0800
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
  Thunderbird/68.3.0
 MIME-Version: 1.0
-In-Reply-To: <6ecf6cbf38223f35854bc361c2eefa1d85c724d2.1575914275.git.landen.chao@mediatek.com>
+In-Reply-To: <2d546d6bb15ff8b4b75af2220e20db4e634f4145.1575914275.git.landen.chao@mediatek.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191211_194116_565857_31EEA5BC 
-X-CRM114-Status: UNSURE (   6.53  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191211_194553_995943_12448E24 
+X-CRM114-Status: GOOD (  17.09  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -170,12 +170,66 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 On 12/10/2019 12:14 AM, Landen Chao wrote:
-> Refine message in Kconfig with fixing typo and an explicit MT7621 support.
+> Add a structure holding required operations for each device such as device
+> initialization, PHY port read or write, a checker whether PHY interface is
+> supported on a certain port, MAC port setup for either bus pad or a
+> specific PHY interface.
+> 
+> The patch is done for ready adding a new hardware MT7531.
 > 
 > Signed-off-by: Landen Chao <landen.chao@mediatek.com>
 > Signed-off-by: Sean Wang <sean.wang@mediatek.com>
+> ---
+[snip]
 
-Reviewed-by: Florian Fainelli <f.fainelli@gmail.com>
+> diff --git a/drivers/net/dsa/mt7530.c b/drivers/net/dsa/mt7530.c
+> index ed1ec10ec62b..9a648d1f5d09 100644
+> --- a/drivers/net/dsa/mt7530.c
+> +++ b/drivers/net/dsa/mt7530.c
+> @@ -425,7 +425,7 @@ mt7530_fdb_write(struct mt7530_priv *priv, u16 vid,
+>  }
+>  
+>  static int
+> -mt7530_pad_clk_setup(struct dsa_switch *ds, int mode)
+> +mt7530_pad_clk_setup(struct dsa_switch *ds, phy_interface_t mode)
+
+Here you pass a phy_interface_t argument but not in mt7632_pad_clk_setup().
+
+> +static int
+> +mt7530_pad_setup(struct dsa_switch *ds, const struct phylink_link_state *state)
+> +{
+> +	struct mt7530_priv *priv = ds->priv;
+> +
+> +	/* Setup TX circuit incluing relevant PAD and driving */
+> +	mt7530_pad_clk_setup(ds, state->interface);
+> +
+> +	if (priv->id == ID_MT7530) {
+> +		/* Setup RX circuit, relevant PAD and driving on the
+> +		 * host which must be placed after the setup on the
+> +		 * device side is all finished.
+> +		 */
+> +		mt7623_pad_clk_setup(ds);
+
+Would not it make sense to pass it down here as well for consistency?
+
+[snip]
+
+> @@ -1660,8 +1768,19 @@ mt7530_probe(struct mdio_device *mdiodev)
+>  	/* Get the hardware identifier from the devicetree node.
+>  	 * We will need it for some of the clock and regulator setup.
+>  	 */
+> -	priv->id = (unsigned int)(unsigned long)
+> -		of_device_get_match_data(&mdiodev->dev);
+> +	priv->info = of_device_get_match_data(&mdiodev->dev);
+> +	if (!priv->info)
+> +		return -EINVAL;
+> +
+> +	/* Sanity check if these required device operstaions are filled
+> +	 * properly.
+
+Typo: operations.
+
+Other than that, this looks okay to me.
 -- 
 Florian
 
