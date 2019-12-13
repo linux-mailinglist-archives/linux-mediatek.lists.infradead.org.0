@@ -2,85 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 74C8311E92F
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Dec 2019 18:27:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8408311EADE
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Dec 2019 20:03:55 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QCXGi6UcK+4HVQsputshZacCQdOAKiKwcwo4syyNVGw=; b=PbAsiTy2k1sYMn
-	z2wc/dgow5TyafxOo1hf2Dmuh7CE0cHBbM1wT+GvJxuc8bwqU8QU+5YplWAWU0m1e8AZB0M3EBwmt
-	EFtnoUR0nFjLbsABYs+x0ZIBklwW/Isx6BeTW6kzq7SfeR1oPI7An+PxzGH8PXV08BfitelAamhAd
-	uBW6sas+wM8YqSLORUEEdE9rrDh3hugTkWBXM0WyZ4rbkdk/Ui65isql/Mp9jemgx6NfE7mZ6ZcoK
-	L29xlcj3t1KdXLMANz6eQEuFkXgib6mcPGKSUs3Vu5KulIXN0UDnX38YCrNhvzTOs0WQuphBoZgo6
-	JJCrK6OihsWMbyCshacg==;
+	List-Owner; bh=Qf3X9TJey4owm58LqfOTL6FLYhr+5PZgmUVX3kmGY90=; b=Jddkm1CD+XR/JW
+	r5aWhlczfkhaKv5J5Bof3YJBj0mvrKwAEG2ruwx9vcSPq8lc9txCIa4Jz/TszhV8/VomamGEezYrX
+	WBeJQPjA3t1G77AB9nLE5tvQj9tn6Cn128vM8ODGWLt7KLDH1deyAzVJzT2adEG3F/sYjO+B9zTMY
+	0jTuqHCSe7joq+0XREW1jy1QfoJdxX8WKctOZc868ctEXgbYOyZ9BsWpuGYu+LNdvKs7tyV4d7Dkd
+	mK3rWyXK3g300t8O0T6SuCviD2whhRLaZlmZHXkBvWMOs9iHk0zNzZHQzLNtz+KFdVsmavqvbS9CX
+	asO2cdCSwVzBgc1HqHew==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifoiY-0006BO-GL; Fri, 13 Dec 2019 17:27:06 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1ifqE8-0000NY-Jn; Fri, 13 Dec 2019 19:03:48 +0000
+Received: from mail-oi1-f194.google.com ([209.85.167.194])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifohs-0005Xi-3z
- for linux-mediatek@lists.infradead.org; Fri, 13 Dec 2019 17:26:26 +0000
-Received: by mail-wr1-x442.google.com with SMTP id w15so281456wru.4
- for <linux-mediatek@lists.infradead.org>; Fri, 13 Dec 2019 09:26:24 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ffwll.ch; s=google;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=+cbrIbSvVp0LclU+aOKqTmPIt3fby91EuMSME26/d5Y=;
- b=OKaJHrVAoaZtUEU3D85ZFLCR77H4fX6v6CsgmAjDRP9z9ftuNCnp76zTWWUm7HPKiN
- FTTSSUgJNQOmvoLndwEMxA/UsGm+L98LxGIzL43X7OUEB28m6PNUKY/007+20qZ70j5p
- 9F/y1NUVDwbvHhqktxm5Q/NhFLQrhd0/evKGg=
+ id 1ifqDy-0000FL-CG; Fri, 13 Dec 2019 19:03:40 +0000
+Received: by mail-oi1-f194.google.com with SMTP id j22so1637778oij.9;
+ Fri, 13 Dec 2019 11:03:37 -0800 (PST)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=+cbrIbSvVp0LclU+aOKqTmPIt3fby91EuMSME26/d5Y=;
- b=i++WR+4FCHnUHJK1y4xFumWv2tizMqftUn3rNACBGJ4ofYouxzb5U0g8/UVCdcxutz
- EFU5y9stEyQC+4Pz7turIFVw9kbPJwRueJyESpHN4m5VaG7hWPJXp2KcFC3uMZ5tkCUR
- PLa3SwRWwxgA2e1lKZ7ZSydkpEJqDPMThOX50au9a9lRTEqfocM7TUaOw9p3dbTqxdiy
- 6yJyjyebbozsoAisn9X5awld7hiDwagSvanxN8ggKaU0dZhsegYcx5EYouh3rBh5dFVd
- ApLIDZLdlombsAppBV3nMmJTOOqNyF5dv5kYJ0WYjtmd0AnJpPO/gukEllN1b5YmsXM1
- GCOQ==
-X-Gm-Message-State: APjAAAWZt0roqf5B8Zmsp10XettZ8g5Ea/PjsGHiDxr5goNM490WSQsW
- iln4dAI6VJUtE2XgARwX0YnJrw==
-X-Google-Smtp-Source: APXvYqyJt4nToJrw+6t6T/NTYV4dX0RRCO+tqGBGWSgh7apaWrrcILwebqQdGpcwUnJdOImfOsV15w==
-X-Received: by 2002:a5d:690e:: with SMTP id t14mr13815008wru.65.1576257982999; 
- Fri, 13 Dec 2019 09:26:22 -0800 (PST)
-Received: from phenom.ffwll.local ([2a02:168:564b:0:7567:bb67:3d7f:f863])
- by smtp.gmail.com with ESMTPSA id q15sm10689669wrr.11.2019.12.13.09.26.21
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=0jLdwo4Gh3BpcLr+x8Y4V1BSkeVDpmaHMCwdlyDbPHI=;
+ b=Dd8iHORFjAjx3msGa/j1vB36qAw5nxUfTewVFqppsFaAGY0fI/2Yr+6P74RXHomCD4
+ N5GoGVhyRGCELwOjIDNy3tHMX9StTXBG+CYtyAbEBDEF9iYfVoQQJZ7JP6GWHEgVcWfm
+ FcDej7OVsReFt3sgjfB69xxnTybkmWfGndqShM6ottCe2Fz7fm/HddPXy9NqCCOLjuk1
+ 3fm4iEKyL8/QsUJFzLtlDVGrJmz0AitxdGJhQlC7R/BZarCT8gRqA+vAWtR+2blJNq5D
+ j8FLjJaNZM+Keaqw5BKEn6/+7lT+M5WlsBSG+vVZ8K3t61aFz1HpzZTTmijIoSHOjbWC
+ IEoA==
+X-Gm-Message-State: APjAAAXMYMc1mXf05/IgraVMWB9sTGZp3mUpctq8QVA1EWoU/plI/ZLn
+ D7D+wrv3Go735nzrb21chQ==
+X-Google-Smtp-Source: APXvYqyDYMLhdnJ4CPCzJjTRPxkIRfS51N1GfBOGJw6/3Te72GU1lQmiGGiO0u/xbrXHuLqsxYwijg==
+X-Received: by 2002:aca:3141:: with SMTP id x62mr7090024oix.108.1576263816699; 
+ Fri, 13 Dec 2019 11:03:36 -0800 (PST)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id r124sm3612857oie.9.2019.12.13.11.03.35
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 13 Dec 2019 09:26:22 -0800 (PST)
-From: Daniel Vetter <daniel.vetter@ffwll.ch>
-To: DRI Development <dri-devel@lists.freedesktop.org>
-Subject: [PATCH 05/10] drm/mediatek: plane_state->fb iff plane_state->crtc
-Date: Fri, 13 Dec 2019 18:26:07 +0100
-Message-Id: <20191213172612.1514842-5-daniel.vetter@ffwll.ch>
-X-Mailer: git-send-email 2.24.0
-In-Reply-To: <20191213172612.1514842-1-daniel.vetter@ffwll.ch>
-References: <20191213172612.1514842-1-daniel.vetter@ffwll.ch>
+ Fri, 13 Dec 2019 11:03:35 -0800 (PST)
+Date: Fri, 13 Dec 2019 13:03:35 -0600
+From: Rob Herring <robh@kernel.org>
+To: min.guo@mediatek.com
+Subject: Re: [PATCH v9 1/6] dt-bindings: usb: musb: Add support for MediaTek
+ musb controller
+Message-ID: <20191213190335.GA16897@bogus>
+References: <20191211015446.11477-1-min.guo@mediatek.com>
+ <20191211015446.11477-2-min.guo@mediatek.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20191211015446.11477-2-min.guo@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191213_092624_155449_73E1B339 
-X-CRM114-Status: GOOD (  10.78  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191213_110338_422243_977F1B7B 
+X-CRM114-Status: GOOD (  12.63  )
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [209.85.167.194 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.194 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,44 +90,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Daniel Vetter <daniel.vetter@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Philipp Zabel <p.zabel@pengutronix.de>, CK Hu <ck.hu@mediatek.com>,
- Daniel Vetter <daniel.vetter@intel.com>, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ hdegoede@redhat.com, tony@atomide.com,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Alan Stern <stern@rowland.harvard.edu>, chunfeng.yun@mediatek.com,
+ linux-mediatek@lists.infradead.org, Bin Liu <b-liu@ti.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Checking both is one too much, so wrap a WARN_ON around it to stope
-the copypasta.
+On Wed, Dec 11, 2019 at 09:54:41AM +0800, min.guo@mediatek.com wrote:
+> From: Min Guo <min.guo@mediatek.com>
+> 
+> This adds support for MediaTek musb controller in
+> host, peripheral and otg mode.
+> 
+> Signed-off-by: Min Guo <min.guo@mediatek.com>
+> ---
+> changes in v9:
+> 1. Add usb-role-switch
+> 2. Remove label of usb connector child node
+> 3. Change usb connector child node compatible as "gpio-usb-b-connector", "usb-b-connector";
+> 
+> changes in v8:
+> 1. Add reviewed by Rob
+> 
+> changes in v7:
+> 1. Modify compatible as
+> - compatible : should be one of:
+>                "mediatek,mt2701-musb"
+>                ...
+>                followed by "mediatek,mtk-musb"
+> 2. Change usb connector child node compatible as "gpio-usb-b-connector" 
+> 
+> changes in v6:
+> 1. Modify usb connector child node
+> 
+> changes in v5:
+> suggested by Rob:
+> 1. Modify compatible as 
+> - compatible : should be one of:
+>                "mediatek,mt-2701"
+>                ...
+>                followed by "mediatek,mtk-musb"
+> 2. Add usb connector child node
+> 
+> changes in v4:
+> suggested by Sergei:
+> 1. String alignment
+> 
+> changes in v3:
+> 1. no changes
+> 
+> changes in v2:
+> suggested by Bin:
+> 1. Modify DRC to DRD
+> suggested by Rob:
+> 2. Drop the "<soc-model>-musb" in compatible
+> 3. Remove phy-names
+> 4. Add space after comma in clock-names
+> ---
+>  .../devicetree/bindings/usb/mediatek,musb.txt | 57 +++++++++++++++++++
+>  1 file changed, 57 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/usb/mediatek,musb.txt
 
-Signed-off-by: Daniel Vetter <daniel.vetter@intel.com>
-Cc: CK Hu <ck.hu@mediatek.com>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>
-Cc: linux-arm-kernel@lists.infradead.org
-Cc: linux-mediatek@lists.infradead.org
----
- drivers/gpu/drm/mediatek/mtk_drm_plane.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_plane.c b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
-index 540ef2faa40a..f0b0325381e0 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_plane.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
-@@ -94,7 +94,7 @@ static int mtk_plane_atomic_check(struct drm_plane *plane,
- 	if (!fb)
- 		return 0;
- 
--	if (!state->crtc)
-+	if (WARN_ON(!state->crtc))
- 		return 0;
- 
- 	ret = mtk_drm_crtc_plane_check(state->crtc, plane,
--- 
-2.24.0
-
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 Linux-mediatek mailing list
