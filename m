@@ -2,78 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 75A4311E7A9
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Dec 2019 17:06:31 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 74C8311E92F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Dec 2019 18:27:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fHpyj/0RWwVD4hy5yGEjwEH0joI/9Fc3FVkAN8y5sWU=; b=EB7hCRIWVc5ON4
-	VuDZFUmqwICbA+UHRf8aYcmTT6e1hve+zg1ZEcy6ClRvW9PBTbKzAQz4bCWPssum7Hsh2APv9dT4Q
-	XJ6E0lOmXyaecLyZTOyDLyD9qBeHmG+Bbb4F8RAbj7uvZsABTFdbkyGhCJctaO2afFZRps64+IAn2
-	1mzjhUxF/BWURyQsBOQygzxnSeveBo4xcKmLW5WdOsNJ0jn56Zz9gPcICT/JYa1LfGKANpYCM/Eer
-	6+B+y04JAKHcYIFRqmLWBlnohxOG6eAiTLEL4uID6+XAoZmrP33M4M+evGh0pdBreZhvHMt7qqLCP
-	ybTGZEN7VMihnqiwW6vQ==;
+	List-Owner; bh=QCXGi6UcK+4HVQsputshZacCQdOAKiKwcwo4syyNVGw=; b=PbAsiTy2k1sYMn
+	z2wc/dgow5TyafxOo1hf2Dmuh7CE0cHBbM1wT+GvJxuc8bwqU8QU+5YplWAWU0m1e8AZB0M3EBwmt
+	EFtnoUR0nFjLbsABYs+x0ZIBklwW/Isx6BeTW6kzq7SfeR1oPI7An+PxzGH8PXV08BfitelAamhAd
+	uBW6sas+wM8YqSLORUEEdE9rrDh3hugTkWBXM0WyZ4rbkdk/Ui65isql/Mp9jemgx6NfE7mZ6ZcoK
+	L29xlcj3t1KdXLMANz6eQEuFkXgib6mcPGKSUs3Vu5KulIXN0UDnX38YCrNhvzTOs0WQuphBoZgo6
+	JJCrK6OihsWMbyCshacg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifnSS-00042l-BF; Fri, 13 Dec 2019 16:06:24 +0000
-Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
+	id 1ifoiY-0006BO-GL; Fri, 13 Dec 2019 17:27:06 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifnRB-0001ie-LB
- for linux-mediatek@lists.infradead.org; Fri, 13 Dec 2019 16:05:07 +0000
-Received: by mail-lj1-x244.google.com with SMTP id e10so3212025ljj.6
- for <linux-mediatek@lists.infradead.org>; Fri, 13 Dec 2019 08:05:04 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=gbf8k5yJ19A5wSZeXVRUlCPqOm3eyldLxkULlc81AFU=;
- b=ymPQwlgoBu3AuxXxyAS8Pqr3jk0WyzPrXO0bCPOwIOGjnvgBRrGXil4Wbr2ayNyVg0
- 5oHwBqXWHlNYU4H4t0AGAUVusSZhkfHiNJjIj3uc5bx4NxoOqz31/r1rWdCvix34S3ZY
- 2LTTNgxyQ1bi8H8MZq9m+SG3t+rgn5AEU+AoO5VKhdPwcr7tzMRGFhdW9/jc9cvU1N9p
- yEh3vCXdHeINwcTyiFYrKgZxEzP6mSe5+H8dC7GEWci+dHT6he+jJOMaqoKrHvuaroER
- O8H3WuM0RCU6HzU+YAsXHI4yTGfj4+7zOW1wJoyn1ns5KWkT3b+TjkHMoaPRnN7i7Mnt
- wJ2Q==
+ id 1ifohs-0005Xi-3z
+ for linux-mediatek@lists.infradead.org; Fri, 13 Dec 2019 17:26:26 +0000
+Received: by mail-wr1-x442.google.com with SMTP id w15so281456wru.4
+ for <linux-mediatek@lists.infradead.org>; Fri, 13 Dec 2019 09:26:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ffwll.ch; s=google;
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=+cbrIbSvVp0LclU+aOKqTmPIt3fby91EuMSME26/d5Y=;
+ b=OKaJHrVAoaZtUEU3D85ZFLCR77H4fX6v6CsgmAjDRP9z9ftuNCnp76zTWWUm7HPKiN
+ FTTSSUgJNQOmvoLndwEMxA/UsGm+L98LxGIzL43X7OUEB28m6PNUKY/007+20qZ70j5p
+ 9F/y1NUVDwbvHhqktxm5Q/NhFLQrhd0/evKGg=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=gbf8k5yJ19A5wSZeXVRUlCPqOm3eyldLxkULlc81AFU=;
- b=X2HtnorE7ENAtAYeQvGpHTTTa7j+MjooKKrEtCr5QyFYabmuDPq9ve4f0uAmrUs9ZH
- dLQ/HhLe0mrpvJ2BLC/4Oo0o3KHGq5FPve2MbiJVqNaNsu9zMu18OzEONG7A+Kuqc3kU
- CI7CqOwF0XSR4SLw0yhLUw3xRWQC554sofLM7XQ5IEd3XB2KrxHdA4CzkC2L3QFwor7P
- GPN8XqqRXqFoVdt9KTXhZ3TrEzyksJkgQBM2b0UpsosE+RWGoCYYft3q/I5RYooP94q1
- S9pW24ETpxm0hgwKWg3bUvesYgon+wUp0g7IgwPcnlJPevTZcDGqPvjfLOqB3LIwpK3M
- Ax5Q==
-X-Gm-Message-State: APjAAAUN/gbiWMs5zDJAIBXONwRXD+jmNWULfYAo2q56S9LrMCFicaeL
- fZUX8wk+MB0NEBMM7hi+RjW/6X/GCCif25RgTUDYRw==
-X-Google-Smtp-Source: APXvYqwqvR2JGdbH6+gDLiMiftLZwqMCeGYmrtZEZ9p/3pwbALJms19uoBQteKErH11ha+LVboridg4Lm1ql8BrOASI=
-X-Received: by 2002:a05:651c:1049:: with SMTP id
- x9mr9963179ljm.233.1576253102887; 
- Fri, 13 Dec 2019 08:05:02 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=+cbrIbSvVp0LclU+aOKqTmPIt3fby91EuMSME26/d5Y=;
+ b=i++WR+4FCHnUHJK1y4xFumWv2tizMqftUn3rNACBGJ4ofYouxzb5U0g8/UVCdcxutz
+ EFU5y9stEyQC+4Pz7turIFVw9kbPJwRueJyESpHN4m5VaG7hWPJXp2KcFC3uMZ5tkCUR
+ PLa3SwRWwxgA2e1lKZ7ZSydkpEJqDPMThOX50au9a9lRTEqfocM7TUaOw9p3dbTqxdiy
+ 6yJyjyebbozsoAisn9X5awld7hiDwagSvanxN8ggKaU0dZhsegYcx5EYouh3rBh5dFVd
+ ApLIDZLdlombsAppBV3nMmJTOOqNyF5dv5kYJ0WYjtmd0AnJpPO/gukEllN1b5YmsXM1
+ GCOQ==
+X-Gm-Message-State: APjAAAWZt0roqf5B8Zmsp10XettZ8g5Ea/PjsGHiDxr5goNM490WSQsW
+ iln4dAI6VJUtE2XgARwX0YnJrw==
+X-Google-Smtp-Source: APXvYqyJt4nToJrw+6t6T/NTYV4dX0RRCO+tqGBGWSgh7apaWrrcILwebqQdGpcwUnJdOImfOsV15w==
+X-Received: by 2002:a5d:690e:: with SMTP id t14mr13815008wru.65.1576257982999; 
+ Fri, 13 Dec 2019 09:26:22 -0800 (PST)
+Received: from phenom.ffwll.local ([2a02:168:564b:0:7567:bb67:3d7f:f863])
+ by smtp.gmail.com with ESMTPSA id q15sm10689669wrr.11.2019.12.13.09.26.21
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 13 Dec 2019 09:26:22 -0800 (PST)
+From: Daniel Vetter <daniel.vetter@ffwll.ch>
+To: DRI Development <dri-devel@lists.freedesktop.org>
+Subject: [PATCH 05/10] drm/mediatek: plane_state->fb iff plane_state->crtc
+Date: Fri, 13 Dec 2019 18:26:07 +0100
+Message-Id: <20191213172612.1514842-5-daniel.vetter@ffwll.ch>
+X-Mailer: git-send-email 2.24.0
+In-Reply-To: <20191213172612.1514842-1-daniel.vetter@ffwll.ch>
+References: <20191213172612.1514842-1-daniel.vetter@ffwll.ch>
 MIME-Version: 1.0
-References: <CGME20191211145104eucas1p1ce04a26eebcd4c22d72f204e7ae0aa5a@eucas1p1.samsung.com>
- <20191211145054.24835-1-m.szyprowski@samsung.com>
-In-Reply-To: <20191211145054.24835-1-m.szyprowski@samsung.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Fri, 13 Dec 2019 17:04:51 +0100
-Message-ID: <CACRpkdbBBjXxftu1fw7H9N+hAe_MfkUPJErN6MPJ8Mxirh1w5A@mail.gmail.com>
-Subject: Re: [PATCH v2 0/4 RESEND] USB3503: correct GPIOs polarity and update
- the driver
-To: Marek Szyprowski <m.szyprowski@samsung.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191213_080505_991679_3B68A018 
-X-CRM114-Status: UNSURE (   6.60  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191213_092624_155449_73E1B339 
+X-CRM114-Status: GOOD (  10.78  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:244 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -93,38 +92,44 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stefan Agner <stefan@agner.ch>,
- linux-samsung-soc <linux-samsung-soc@vger.kernel.org>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-usb <linux-usb@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Krzysztof Kozlowski <krzk@kernel.org>,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- Chunfeng Yun <chunfeng.yun@mediatek.com>, Chen-Yu Tsai <wens@csie.org>,
- Andy Gross <agross@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Maxime Ripard <mripard@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: Daniel Vetter <daniel.vetter@ffwll.ch>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, CK Hu <ck.hu@mediatek.com>,
+ Daniel Vetter <daniel.vetter@intel.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Dec 11, 2019 at 3:51 PM Marek Szyprowski
-<m.szyprowski@samsung.com> wrote:
+Checking both is one too much, so wrap a WARN_ON around it to stope
+the copypasta.
 
-> Marek Szyprowski (3):
->   ARM: dts: exynos: Correct USB3503 GPIOs polarity
->   ARM: dts: qcom: Correct USB3503 GPIOs polarity
->   ARM: dts: sun8i: a83t: Correct USB3503 GPIOs polarity
+Signed-off-by: Daniel Vetter <daniel.vetter@intel.com>
+Cc: CK Hu <ck.hu@mediatek.com>
+Cc: Philipp Zabel <p.zabel@pengutronix.de>
+Cc: Matthias Brugger <matthias.bgg@gmail.com>
+Cc: linux-arm-kernel@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org
+---
+ drivers/gpu/drm/mediatek/mtk_drm_plane.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-Reviewed-by: Linus Walleij <linus.walleij@linaro.org>
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_plane.c b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
+index 540ef2faa40a..f0b0325381e0 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_plane.c
++++ b/drivers/gpu/drm/mediatek/mtk_drm_plane.c
+@@ -94,7 +94,7 @@ static int mtk_plane_atomic_check(struct drm_plane *plane,
+ 	if (!fb)
+ 		return 0;
+ 
+-	if (!state->crtc)
++	if (WARN_ON(!state->crtc))
+ 		return 0;
+ 
+ 	ret = mtk_drm_crtc_plane_check(state->crtc, plane,
+-- 
+2.24.0
 
-for all these three.
-
-Yours,
-Linus Walleij
 
 _______________________________________________
 Linux-mediatek mailing list
