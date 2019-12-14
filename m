@@ -2,83 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D5A6111EB03
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Dec 2019 20:11:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 30E4411F186
+	for <lists+linux-mediatek@lfdr.de>; Sat, 14 Dec 2019 12:26:18 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YMn9nZQVy5SPijg6sGpE3gMqAuSWtuumR1FJpya/EJY=; b=bFgiTXVDGD1CM2
-	c+fvwt+KlIFdLKpe2LAiFl3pp2EOFftO/UZJhcMxJhHNZ63PRrX9+B9n1TxofX6kF/zpf0MmudvuL
-	5ScZz4KcKq3GRkfKPvRuqW+zavtDHhJCcLoiAK6Z1QHZxx0VuIi6l3gRR1jUVL163BE0krNpIxrpm
-	x/GeY++Uv5af/CdC+4mV3AGEjK9NOspmXt09yyemuwkh51HrEZruwoN4F0ETuDphwgl55MXjrQ6A6
-	jghWW16QFLMZ3IF2bPUldL4tItGDXSDdk2xwpyMMPN0xfF4uPwODWJ/+YUPw1gSQLAqZmNKyTFLwj
-	PWZWoF3s2Lvd357xq/1w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=BRUfIQHBynCKYCEUcexe8addPYiJHRvmDUfVfBduO98=; b=o2w3AUlQIUHlOa
+	5iUVXsSJeCalzyG7JdZYDGOsUdrUT/OCdDtdDhCuY8rluKp2X3HEC19I6/JD3hyl4441QsHFerQ8+
+	KwKxbmO+tKuGIcWEki+oQRBmmDpMJ08Ze38rbW2MDEasbShN14FIJjudD2lQ5FqXvhearwXmIql4t
+	gxM8hZdo0XuUsa43K8BbNXRNdvZvps0PrHLXJ+lV4G6ep3jmer22KcXv87xS2wG2K6acP6YuJrXMC
+	S2tM6h3rhbztrpzy89IGpTKb+iG7GC3wUArGsFzvfYb+aRpZm3Hxflogk9H5KhCYr+D3lWMjii4iW
+	MmvpV3TrUTKgpfh/es8g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifqL6-0004Qa-5s; Fri, 13 Dec 2019 19:11:00 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1ig5Ym-0003W0-49; Sat, 14 Dec 2019 11:26:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifqKs-0004Fn-6R; Fri, 13 Dec 2019 19:10:47 +0000
-Received: by mail-ot1-f68.google.com with SMTP id h20so324982otn.5;
- Fri, 13 Dec 2019 11:10:45 -0800 (PST)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=qHsUIESi47GUujK3ymDIbUW6G62I8FASealFyFb2qxM=;
- b=q+qEpUGcYL4Ok1EaXdNTVYHa8popEyOmJP8hCMTVQneB2EWM5FQufY5kuy2ZRnpSaC
- UkBlNtZfEk01D1zg0OP/LByQPoIXPeLbAJAUr5KaRMxrLWki7jXVaCqy9HgChdeC6LiQ
- ErAo8vBeKkZUbV9wHBrS9vsTwqLXwfBRN2Xnqs26tIUhZ3LSps4+vQ6mKJRzcvd/AGSC
- zPQw8Vn5TJK0g9+fbr04jmbNYmYQlbUrTkVt1Rkh7Ssw08pO7B77UyvpYmbRQ/6Q23rQ
- XnE3B/B7gTGFEbWVCBZsGeYftSBeo1DtpaMRWZQQUUchtJYSpupbVJLab2cjGB0eY8GZ
- 9mbg==
-X-Gm-Message-State: APjAAAVLglFTKO3AbJRmgi4kvQ2PwJAof0vUqHvYMnYJJeh1H+GC4hLw
- gCgzxS9lIofmB21/iIBtmQ==
-X-Google-Smtp-Source: APXvYqzHxWniZ5J9xfopYjECrU07WUzV4L9U6fU6FRGgt1nEiyBXlgj3TRlcGj+V/4Fj0x84/KDZiQ==
-X-Received: by 2002:a9d:53cb:: with SMTP id i11mr16760478oth.158.1576264244638; 
- Fri, 13 Dec 2019 11:10:44 -0800 (PST)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id b3sm3550697oie.25.2019.12.13.11.10.43
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 13 Dec 2019 11:10:44 -0800 (PST)
-Date: Fri, 13 Dec 2019 13:10:43 -0600
-From: Rob Herring <robh@kernel.org>
-To: Ming-Fan Chen <ming-fan.chen@mediatek.com>
-Subject: Re: [PATCH v2 1/2] dt-bindings: mediatek: Add binding for MT6779 SMI
-Message-ID: <20191213191043.GB28558@bogus>
-References: <1575872371-671-1-git-send-email-ming-fan.chen@mediatek.com>
- <1575872371-671-3-git-send-email-ming-fan.chen@mediatek.com>
+ id 1ig5Yh-0003UJ-Uh
+ for linux-mediatek@lists.infradead.org; Sat, 14 Dec 2019 11:26:05 +0000
+X-UUID: 190e4aa909db4eedac83f1c264e14e76-20191214
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=tu9Jxro/WRqZ8zFULZtR4PTpeFKrsiSb8i5Fjp7K8r0=; 
+ b=Q1snk9PLCyWms+mrI6Y86hxirL+HOWCY1RYtpTDrJbWTwyBoxo4gLIHIF8mV6bZxOI5PBqK29gOXOMnmhMKY73q0m79flPKkggEa3GJCOyr1EfnNC9u6+DZdUvOnDgzccDJ0AUhZPHTq2H1yFdII2FuITwq23RKVXfXX6DKbBAU=;
+X-UUID: 190e4aa909db4eedac83f1c264e14e76-20191214
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <shayne.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 673563318; Sat, 14 Dec 2019 03:25:59 -0800
+Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 14 Dec 2019 03:27:03 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 14 Dec 2019 19:25:55 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Sat, 14 Dec 2019 19:25:14 +0800
+From: Shayne Chen <shayne.chen@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>
+Subject: [PATCH] mt76: do not overwrite max_tx_fragments if it has been set
+Date: Sat, 14 Dec 2019 19:22:04 +0800
+Message-ID: <20191214112204.32701-1-shayne.chen@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1575872371-671-3-git-send-email-ming-fan.chen@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 6C614476A65735D8D959C8976F109021CB8C575DD9BAB6DA3602F85CBB2D2B3C2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191213_111046_239122_6E07301D 
-X-CRM114-Status: GOOD (  10.71  )
-X-Spam-Score: 0.8 (/)
+X-CRM114-CacheID: sfid-20191214_032603_994903_C5174959 
+X-CRM114-Status: UNSURE (   7.34  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.8 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,33 +85,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Joerg Roedel <jroedel@suse.de>,
- wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- Evan Green <evgreen@chromium.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Ming-Fan Chen <ming-fan.chen@mediatek.com>, Yong Wu <yong.wu@mediatek.com>
+Cc: Ryder
+ Lee <ryder.lee@mediatek.com>, linux-wireless <linux-wireless@vger.kernel.org>,
+ linux-mediatek <linux-mediatek@lists.infradead.org>,
+ Roy Luo <royluo@google.com>, Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Shayne Chen <shayne.chen@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 9 Dec 2019 14:19:30 +0800, Ming-Fan Chen wrote:
-> This patch add description for MT6779 SMI.
-> 
-> Signed-off-by: Ming-Fan Chen <ming-fan.chen@mediatek.com>
-> ---
->  .../memory-controllers/mediatek,smi-common.txt     |    5 +++--
->  .../memory-controllers/mediatek,smi-larb.txt       |    3 ++-
->  2 files changed, 5 insertions(+), 3 deletions(-)
-> 
+Prevent the overwriting of max_tx_fragments if it has already been set
+in chip-specific init routine.
 
-Please add Acked-by/Reviewed-by tags when posting new versions. However,
-there's no need to repost patches *only* to add the tags. The upstream
-maintainer will do that for acks received on the version they apply.
+Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
+---
+ drivers/net/wireless/mediatek/mt76/mac80211.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
-If a tag was not added on purpose, please state why and what changed.
-
+diff --git a/drivers/net/wireless/mediatek/mt76/mac80211.c b/drivers/net/wireless/mediatek/mt76/mac80211.c
+index 00c2a875a596..0c71d671f29a 100644
+--- a/drivers/net/wireless/mediatek/mt76/mac80211.c
++++ b/drivers/net/wireless/mediatek/mt76/mac80211.c
+@@ -287,7 +287,9 @@ mt76_phy_init(struct mt76_dev *dev, struct ieee80211_hw *hw)
+ 	wiphy->available_antennas_rx = dev->phy.antenna_mask;
+ 
+ 	hw->txq_data_size = sizeof(struct mt76_txq);
+-	hw->max_tx_fragments = 16;
++
++	if (!hw->max_tx_fragments)
++		hw->max_tx_fragments = 16;
+ 
+ 	ieee80211_hw_set(hw, SIGNAL_DBM);
+ 	ieee80211_hw_set(hw, PS_NULLFUNC_STACK);
+-- 
+2.17.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
