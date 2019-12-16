@@ -2,71 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A8E2411FEBB
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 08:02:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB87111FEF9
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 08:22:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NMF6/hyeA39vzx+QoKFiFL/822vShALh0qIPBvPhj7Q=; b=q/45dppp/UjVWT
-	2NpN6V0iJbn9oo2P5KTHkdbyZ0Sjis+plGjI00mZPXuwj/hiS65fdoz4yanCNBOW/tzFgDWoBr2S7
-	TaRUg8VbKUY4FTuL4lllTooTQbjTBZnMcJUpdqJg5RIAxDQxQ46UTkzS6WzVsgebblw60B5sovn60
-	5LMCF8x37nGb9uNNXeh7LVcVuewow+8PtkQNuQy9zVt6GTXhZvqWLce7/YglcEfoNMWRZW4MyBpr0
-	k0jswtVLE0cYkTolI2SxjbzlBGj/Rizjtg8u/YQ4mXMwuTleZzWNp1r9V1ljOs6NTaQ6DUIpGGkJ6
-	BYLfFtCEmSkf2AkDU8hw==;
+	List-Owner; bh=TCD7EDva+xvulTbxJlEcFbESTUOlRsvmmy9+Aq54NEo=; b=tveEwJ5jUDE10D
+	YboxdGb5zI2zuzu3gvU5/ndDTfrAZCcQ1S8BKNhkR/+EUKR/ngvsWRuycOpn6R/Zbb4ApkCrLtmyN
+	8n90jqTz8I6PWJm2jdMd7RBSz7x54ZaZMJ11iukS72Vi8S3DGYTY7KfrWDmzlqmYZavUupcIH596G
+	VDcgeIVBDRUwOMzG7VQnE//SPW1o6dS9jRVKC177Ht5b3HvCcNXY9rpJgpW+nn27jg6A4lIc/TUpR
+	5odiSIexXI15GOsHOGStiqGhb538uPOpNjqKOSX9BiAgE9U3Ml4Y8ot1Ku/B/e48r5I5B484k3f94
+	lbRspaJHEJjlSGLHW72g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igkOQ-0005QD-Qd; Mon, 16 Dec 2019 07:02:10 +0000
-Received: from mail-qk1-x742.google.com ([2607:f8b0:4864:20::742])
+	id 1igkhs-0004gM-VZ; Mon, 16 Dec 2019 07:22:16 +0000
+Received: from mail-qv1-xf41.google.com ([2607:f8b0:4864:20::f41])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1igkO0-00051U-8V
- for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 07:01:46 +0000
-Received: by mail-qk1-x742.google.com with SMTP id w127so4401725qkb.11
- for <linux-mediatek@lists.infradead.org>; Sun, 15 Dec 2019 23:01:43 -0800 (PST)
+ id 1igkhp-0004ed-2U
+ for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 07:22:14 +0000
+Received: by mail-qv1-xf41.google.com with SMTP id p2so2321407qvo.10
+ for <linux-mediatek@lists.infradead.org>; Sun, 15 Dec 2019 23:22:08 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=mNxq9QEx/Y0AFfmFBHfjO9qh1l6j5wyPEAuFcOtgvko=;
- b=k8Jz8WhY1cxn9bFKXeAi5vzaTBfRitVt26Dv8N8sNlYJP+LrdDlQqaBI0DhBwVSp3j
- jqUvtkluKNvckqYdwX0zAwgdTSijpgtwIQkpJR0wV31kbIiO6lN/sqeFNJxRolylHi9z
- mkNpLYAbfL38r2dXtuppefORp2tXgISUEAbu4=
+ :cc; bh=QLwYMou2QNNU+Bbtah+RA9oMWQD3BzPPJMlbiXBB1/I=;
+ b=NdwBkCpbFJPMTNXk1ad0cpoBUAQZkJQHe3BmSg/COwJPa4xK4FCqULVmhzW+w0p9QV
+ WfA/rygfsNE9cJTi/rTiHAYH1q7LZBaiqM4NOW+fQnEh1X69F9UITrKFWqL1qvBRxMsO
+ 7H5ksoQkI9T9j2yk7ASRdZGIp+SDj+Kyj9kSo=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=mNxq9QEx/Y0AFfmFBHfjO9qh1l6j5wyPEAuFcOtgvko=;
- b=WRMlv+MKVgj24bYNAVDiQTykvb4YQmJJw/bKxC+JlZs+1VP9h2u8uX1LnlbTR6HIcN
- BfUsMbATxwt6vsvjjnAMBGJp2iOK0ISMxZX3xC8ilbScLGuFyDLsgYla1chRik0xlmiw
- cVWGvPrlfqTFfnFxm9rSkgCWWYDWKBEhgkFlKSo6mT935OCOdo0NM0KctFoSdUIkGL2e
- oNogCv0I14x+U277GSHnUDiRQjKeFzKJo6gwfv03YNvhfX85Jz3b/jwobOA5/2crPLGf
- pYO+Y1G+8vdZ7Foeaw7Ui8TJasN4O86RqiZ53ZR0ro0RXiXTS/eluSnmxiFOBDaLix/1
- MJZA==
-X-Gm-Message-State: APjAAAVTkjbAc3PC5nFWrukvtKk8IK2AnZeT8wx0OhMHv4edIcWkJ5V4
- hkoe6QJbOOUGKi8AjzvFxfg+ZQUPrx4Q/5k/qeUWMA==
-X-Google-Smtp-Source: APXvYqzVdceLqcG+3fAzc6E6Q5G9XbMKp+zuFLQXrq1VY+BvVu+NpyPVVDbAVBh4Vyd+Tbmbw9ZSQBEix3ZXm6HqNCo=
-X-Received: by 2002:ae9:f003:: with SMTP id l3mr25598095qkg.457.1576479702489; 
- Sun, 15 Dec 2019 23:01:42 -0800 (PST)
+ bh=QLwYMou2QNNU+Bbtah+RA9oMWQD3BzPPJMlbiXBB1/I=;
+ b=dIWh3wDWR+7IIvwG0M2wV1aRNZr3W7OmbeRoq+zmCoBMj4ry79BkK23yk8RdQX3Pgo
+ 86Ez6mhfaTsS5CfsThmBgfKTVE+KW5EntYX832llCQB0Ne/TcWJpCCWlRYAm4wo15/W6
+ kmnX3fbiesRPHRzW6Go9QDC2Q/9hJd0aoxxNQqcPEIQQr6glUavxriV6HT062S8sdejS
+ 7Gl9J9QbH5IV7BczsTjuA4SvWnYBedxyHeJrV7d8QUSdGnp7St/hLAWXF2qo4/VpIaWa
+ 8KFdo/n2G8+2Fq7tLfO62rOZRefZw9FnjNEOxT9mn2No4W1T+HB3U1NRwspFZlahXTNd
+ 6r+w==
+X-Gm-Message-State: APjAAAVxYY6jFpQLxh/OYOi1d0xP6I+U0unJHyhfLidxUcuzXFYJ96rp
+ S8ic4lBXNgHTc7hefDRNbT9alxr7VNJP2eLZvTxWsg==
+X-Google-Smtp-Source: APXvYqzFEIcrFrTNSr7HVqHHexEeQiAhr3dYzHFBq8Zo3RyDvXHnBPRwSaHHZt0irz/WjMERV0dX2mrxOBMgRWyFvzA=
+X-Received: by 2002:a0c:f703:: with SMTP id w3mr25457091qvn.6.1576480928001;
+ Sun, 15 Dec 2019 23:22:08 -0800 (PST)
 MIME-Version: 1.0
 References: <1575960413-6900-1-git-send-email-weiyi.lu@mediatek.com>
- <1575960413-6900-4-git-send-email-weiyi.lu@mediatek.com>
-In-Reply-To: <1575960413-6900-4-git-send-email-weiyi.lu@mediatek.com>
+ <1575960413-6900-5-git-send-email-weiyi.lu@mediatek.com>
+In-Reply-To: <1575960413-6900-5-git-send-email-weiyi.lu@mediatek.com>
 From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Mon, 16 Dec 2019 15:01:31 +0800
-Message-ID: <CANMq1KC4Qz8yKNTqfjYb335RCY8t5pdRa09Bvroo_BNXv19hWQ@mail.gmail.com>
-Subject: Re: [PATCH v9 3/9] soc: mediatek: Add basic_clk_id to scp_power_data
+Date: Mon, 16 Dec 2019 15:21:57 +0800
+Message-ID: <CANMq1KA4KL=ZpU=cQtw3LV79DKRdG3Eb16og6vU1SdsnnL=0CA@mail.gmail.com>
+Subject: Re: [PATCH v9 4/9] soc: mediatek: Add multiple step bus protection
+ control
 To: Weiyi Lu <weiyi.lu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191215_230144_324021_3089810A 
-X-CRM114-Status: GOOD (  17.16  )
+X-CRM114-CacheID: sfid-20191215_232213_143946_812269A5 
+X-CRM114-Status: GOOD (  18.81  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:742 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -101,89 +99,179 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 On Tue, Dec 10, 2019 at 2:47 PM Weiyi Lu <weiyi.lu@mediatek.com> wrote:
 >
-> Try to stop extending the clk_id or clk_names if there are
-> more and more new BASIC clocks. To get its own clocks by the
-> basic_clk_id of each power domain.
-
-Looking at this a bit more, I'm not sure why we make this an option...
-
-The easiest way to make this consistent with non-MT8183 scpsys drivers
-is to add your missing clocks to "enum clk_id" and clk_names, but I
-understand it's not desired (number of clocks would blow up).
-
-Can we, instead, convert all existing scpsys drivers to use "char *"
-clock names instead?
-I made an attempt here and it seems simple enough:
-https://chromium-review.googlesource.com/c/chromiumos/third_party/kernel/+/1969103
-
+> Both MT8183 & MT6765 have more control steps of bus protection
+> than previous project. And there add more bus protection registers
+> reside at infracfg & smi-common. Also add new APIs for multiple
+> step bus protection control with more customized arguments.
 >
 > Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
 > ---
->  drivers/soc/mediatek/mtk-scpsys.c | 29 +++++++++++++++++++++--------
->  1 file changed, 21 insertions(+), 8 deletions(-)
+>  drivers/soc/mediatek/Makefile           |  2 +-
+>  drivers/soc/mediatek/mtk-scpsys-ext.c   | 99 +++++++++++++++++++++++++++++++++
+>  drivers/soc/mediatek/mtk-scpsys.c       | 39 +++++++++----
+>  include/linux/soc/mediatek/scpsys-ext.h | 39 +++++++++++++
+>  4 files changed, 168 insertions(+), 11 deletions(-)
+>  create mode 100644 drivers/soc/mediatek/mtk-scpsys-ext.c
+>  create mode 100644 include/linux/soc/mediatek/scpsys-ext.h
 >
+> diff --git a/drivers/soc/mediatek/Makefile b/drivers/soc/mediatek/Makefile
+> index b017330..b442be9 100644
+> --- a/drivers/soc/mediatek/Makefile
+> +++ b/drivers/soc/mediatek/Makefile
+> @@ -1,5 +1,5 @@
+>  # SPDX-License-Identifier: GPL-2.0-only
+>  obj-$(CONFIG_MTK_CMDQ) += mtk-cmdq-helper.o
+> -obj-$(CONFIG_MTK_INFRACFG) += mtk-infracfg.o
+> +obj-$(CONFIG_MTK_INFRACFG) += mtk-infracfg.o mtk-scpsys-ext.o
+>  obj-$(CONFIG_MTK_PMIC_WRAP) += mtk-pmic-wrap.o
+>  obj-$(CONFIG_MTK_SCPSYS) += mtk-scpsys.o
+> diff --git a/drivers/soc/mediatek/mtk-scpsys-ext.c b/drivers/soc/mediatek/mtk-scpsys-ext.c
+> new file mode 100644
+> index 0000000..4f1adda
+> --- /dev/null
+> +++ b/drivers/soc/mediatek/mtk-scpsys-ext.c
+> @@ -0,0 +1,99 @@
+> +// SPDX-License-Identifier: GPL-2.0
+> +/*
+> + * Copyright (c) 2018 MediaTek Inc.
+> + * Author: Owen Chen <Owen.Chen@mediatek.com>
+> + */
+> +#include <linux/ktime.h>
+> +#include <linux/mfd/syscon.h>
+> +#include <linux/of_device.h>
+> +#include <linux/regmap.h>
+> +#include <linux/soc/mediatek/scpsys-ext.h>
+> +
+> +#define MTK_POLL_DELAY_US   10
+> +#define MTK_POLL_TIMEOUT    USEC_PER_SEC
+> +
+> +static int set_bus_protection(struct regmap *map, u32 mask, u32 ack_mask,
+> +               u32 reg_set, u32 reg_sta, u32 reg_en)
+> +{
+> +       u32 val;
+> +
+> +       if (reg_set)
+> +               regmap_write(map, reg_set, mask);
+> +       else
+> +               regmap_update_bits(map, reg_en, mask, mask);
+
+At least for 8183, we never seen to use the reg_set case, can we
+simplify this function?
+
+> +
+> +       return regmap_read_poll_timeout(map, reg_sta,
+> +                       val, (val & ack_mask) == ack_mask,
+> +                       MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
+
+From 8183, I see that you have either:
+ 1. mask == ack_mask
+ 2. ack_mask == 0 (essentially this skips this test)
+
+Would it be simpler to just skip this test if reg_sta == 0, and always
+assume mask == ack_mask otherwise?
+
+e.g.
+if (reg_sta == 0)
+   return 0;
+
+return regmap_read_poll_timeout(map, reg_sta,
+                       val, (val & mask) == mask,
+                       MTK_POLL_DELAY_US, MTK_POLL_TIMEOUT);
+
+> +}
+> +
+> [snip]
+> +
+> +int mtk_scpsys_ext_set_bus_protection(const struct bus_prot *bp_table,
+> +       struct regmap *infracfg, struct regmap *smi_common)
+> +{
+> +       int i;
+> +
+> +       for (i = 0; i < MAX_STEPS; i++) {
+> +               struct regmap *map = NULL;
+> +               int ret;
+> +
+> +               if (bp_table[i].type == INVALID_TYPE)
+> +                       continue;
+
+break? (but yes the one below in mtk_scpsys_ext_clear_bus_protection
+has to be continue).
+
+> +               else if (bp_table[i].type == IFR_TYPE)
+> +                       map = infracfg;
+> +               else if (bp_table[i].type == SMI_TYPE)
+> +                       map = smi_common;
+> +
+> +               ret = set_bus_protection(map,
+> +                               bp_table[i].mask, bp_table[i].mask,
+> +                               bp_table[i].set_ofs, bp_table[i].sta_ofs,
+> +                               bp_table[i].en_ofs);
+> +
+> +               if (ret)
+> +                       return ret;
+> +       }
+> +
+> +       return 0;
+> +}
+> +
+> +int mtk_scpsys_ext_clear_bus_protection(const struct bus_prot *bp_table,
+> +       struct regmap *infracfg, struct regmap *smi_common)
+> +{
+> +       int i;
+> +
+> +       for (i = MAX_STEPS - 1; i >= 0; i--) {
+> +               struct regmap *map = NULL;
+> +               int ret;
+> +
+> +               if (bp_table[i].type == INVALID_TYPE)
+> +                       continue;
+> +               else if (bp_table[i].type == IFR_TYPE)
+> +                       map = infracfg;
+> +               else if (bp_table[i].type == SMI_TYPE)
+> +                       map = smi_common;
+> +
+> +               ret = clear_bus_protection(map,
+> +                               bp_table[i].mask, bp_table[i].clr_ack_mask,
+> +                               bp_table[i].clr_ofs, bp_table[i].sta_ofs,
+> +                               bp_table[i].en_ofs);
+> +
+> +               if (ret)
+> +                       return ret;
+> +       }
+> +
+> +       return 0;
+> +}
 > diff --git a/drivers/soc/mediatek/mtk-scpsys.c b/drivers/soc/mediatek/mtk-scpsys.c
-> index f669d37..915d635 100644
+> index 915d635..466bb749 100644
 > --- a/drivers/soc/mediatek/mtk-scpsys.c
 > +++ b/drivers/soc/mediatek/mtk-scpsys.c
-> @@ -117,6 +117,8 @@ enum clk_id {
->   * @sram_pdn_ack_bits: The mask for sram power control acked bits.
->   * @bus_prot_mask: The mask for single step bus protection.
->   * @clk_id: The basic clocks required by this power domain.
-> + * @basic_clk_id: provide the same purpose with field "clk_id"
-> + *                by declaring basic clock prefix name rather than clk_id.
-
-Actually, I prefer the name clk_name, not sure why I pushed you in
-that direction...
-
+> @@ -12,6 +12,7 @@
+>  #include <linux/pm_domain.h>
+>  #include <linux/regulator/consumer.h>
+>  #include <linux/soc/mediatek/infracfg.h>
+> +#include <linux/soc/mediatek/scpsys-ext.h>
+>
+>  #include <dt-bindings/power/mt2701-power.h>
+>  #include <dt-bindings/power/mt2712-power.h>
+> @@ -120,6 +121,7 @@ enum clk_id {
+>   * @basic_clk_id: provide the same purpose with field "clk_id"
+>   *                by declaring basic clock prefix name rather than clk_id.
 >   * @caps: The flag for active wake-up action.
+> + * @bp_table: The mask table for multiple step bus protection.
 >   */
 >  struct scp_domain_data {
-> @@ -127,6 +129,7 @@ struct scp_domain_data {
->         u32 sram_pdn_ack_bits;
->         u32 bus_prot_mask;
+>         const char *name;
+> @@ -131,6 +133,7 @@ struct scp_domain_data {
 >         enum clk_id clk_id[MAX_CLKS];
-> +       const char *basic_clk_id[MAX_CLKS];
+>         const char *basic_clk_id[MAX_CLKS];
 >         u8 caps;
->  };
->
-> @@ -493,16 +496,26 @@ static struct scp *init_scp(struct platform_device *pdev,
->
->                 scpd->data = data;
->
-> -               for (j = 0; j < MAX_CLKS && data->clk_id[j]; j++) {
-> -                       struct clk *c = clk[data->clk_id[j]];
-> +               if (data->clk_id[0]) {
-> +                       WARN_ON(data->basic_clk_id[0]);
->
-> -                       if (IS_ERR(c)) {
-> -                               dev_err(&pdev->dev, "%s: clk unavailable\n",
-> -                                       data->name);
-> -                               return ERR_CAST(c);
-> -                       }
-> +                       for (j = 0; j < MAX_CLKS && data->clk_id[j]; j++) {
-> +                               struct clk *c = clk[data->clk_id[j]];
-> +
-> +                               if (IS_ERR(c)) {
-> +                                       dev_err(&pdev->dev,
-> +                                               "%s: clk unavailable\n",
-> +                                               data->name);
-> +                                       return ERR_CAST(c);
-> +                               }
->
-> -                       scpd->clk[j] = c;
-> +                               scpd->clk[j] = c;
-> +                       }
-> +               } else if (data->basic_clk_id[0]) {
-> +                       for (j = 0; j < MAX_CLKS &&
-> +                                       data->basic_clk_id[j]; j++)
-> +                               scpd->clk[j] = devm_clk_get(&pdev->dev,
-> +                                               data->basic_clk_id[j]);
->                 }
->
->                 genpd->name = data->name;
-> --
-> 1.8.1.1.dirty
+> +       struct bus_prot bp_table[MAX_STEPS];
+
+As with the previous patch, I'm not a big fan of having 2 approaches
+for something similar (bus_prot_mask vs bp_table), can we define a
+simple macro for this?
+e.g.:
+.bp_table = BUS_PROT_SINGLE(mask)
 
 _______________________________________________
 Linux-mediatek mailing list
