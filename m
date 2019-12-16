@@ -2,72 +2,47 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0D48A1206F0
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 14:19:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B41311207B4
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 14:59:11 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=LWfxjRVxti13aDwFwIglUvniU2oO/OVsqNr1PLaZmUc=; b=GtiS8qdgc9ILCO
-	DvtHRcHLzuZV65K1OCo5jv6gSOQAVtA40LY89GyHPWF5tNR7mZQe3s0OI4SvqbvA5R2FwChkXa0En
-	8aGw6p6pbmaQiDgyYwbsJlBWwTquaDTRLi0lbQ59TN3fJqtL3GRNeSaf7G1uCJXTmWPfkcCvnRMu/
-	kspM3AZLFLLvPjlBilcK6LToCfbMrz4gidFH+1NF/8QuEosnT7dcpFloRskqi8xVIGN5XS1JEeWvO
-	lYQxDQpEjhJe3z27W/JNfLPp9YWvk83UZuBcqNIJDnoVL3d4SFo60EWU8q1WkyCh9CaZyfjs0VdwZ
-	+/0/K6ZouhSe68WoG20A==;
+	List-Owner; bh=lqZ3Odd2G2PhMBCY06bNrI2HnN5OmYaXuR5kqxKhgM8=; b=YI+065TI4RuWW0
+	ErFArlIupXdHKUKp3PprohyjxUQFs/Qol5eLZQ1oOBkggy8OcVleYZ5oz0LxDhW3uxKaeF0DUDZEl
+	iJ1OeY3sjodZNHrod/traXqUNGE51bETgPvyeV4FKhYVzVg+m52OHl5SrLX/S0nCJQvn+Pg5hvf5z
+	aTJJ5x5JPnKsYRwR7JWmSjUhDXJ6F2zss63b4Z/N9oVODegcGRMjLU0q32YOQYyNt99gmyBb90JI6
+	0k4dSPDSnSgTf++i4J7WbtynL8iPdAqFnjZzcb7ZPo0uEPSzUwpTDnC9qxu4djHTuQJH52kIRWEWp
+	io60lY0y465t8BObg9lg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igqHl-0005M8-LB; Mon, 16 Dec 2019 13:19:41 +0000
-Received: from mout.kundenserver.de ([212.227.17.10])
+	id 1igqtt-0005dq-EB; Mon, 16 Dec 2019 13:59:05 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1igqHc-0005FB-7c; Mon, 16 Dec 2019 13:19:33 +0000
-Received: from threadripper.lan ([149.172.19.189]) by mrelayeu.kundenserver.de
- (mreue109 [212.227.15.145]) with ESMTPA (Nemesis) id
- 1Myb8N-1hmQPH0w85-00yyN5; Mon, 16 Dec 2019 14:19:06 +0100
-From: Arnd Bergmann <arnd@arndb.de>
-To: Felix Fietkau <nbd@nbd.name>,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- Kalle Valo <kvalo@codeaurora.org>, "David S. Miller" <davem@davemloft.net>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH] mt76: fix LED link time failure
-Date: Mon, 16 Dec 2019 14:18:42 +0100
-Message-Id: <20191216131902.3251040-1-arnd@arndb.de>
-X-Mailer: git-send-email 2.20.0
+ id 1igqtd-0005SG-2I; Mon, 16 Dec 2019 13:58:50 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id AC99B291972
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+To: linux-kernel@vger.kernel.org
+Subject: [PATCH v21 0/2] drm/bridge: PS8640 MIPI-to-eDP bridge
+Date: Mon, 16 Dec 2019 14:58:32 +0100
+Message-Id: <20191216135834.27775-1-enric.balletbo@collabora.com>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-X-Provags-ID: V03:K1:FfIXsVXcNeBt8DM3/oD14gV9AaEg1kuMd8THyqz4/RSYXt8bzol
- VT4nBhvNIR65oxPVAJBoQCx0Mg5xsmZZG4yY3iGDfIiztAFr9RRwyuwPZKCC1hP2Ebc2X1g
- FX+vENnYZfUQsOedDzvoVbIxv6rRVM10x3+jQQ75bdj2i/k+bC7y4tgiHPKrg398sgXI1Hk
- CLe6qn9H88bpgLmlWv4pw==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:iAZnidCZDMU=:WDeq3eS82GM9y63nrZiRmo
- 3JUG+UEbatz6cBmivM2B7+tBfsLXMZPjHyLnrYgr8AQyO4VWAWkAXvdINXftuV1yV9kOT2rJu
- rFD+Nb3NkNJP8T0W6aM3QVe+3hkwqidu4Qhbd7gcSGqEBJEJ1wEmoI5q3AWpjo4SVRh8BY/n8
- 1+v+yWdQEGSsYoAMpz0Q1pIWrsWpqQH59RXvBqCkFqpBg55DuFUvLAKZEnScfkj0zIDN9Sgh9
- y8edPkXPZocBM/alaots63k5Bc2TPiRiRqRs+U63biMkj68b47s3D6euxclI+ZalStQg9kw+t
- ltbSCk2Y5gaZ0nKKOX9lNNTof0DsU+auYJNy6RLT9k0pOwQ4VA2fXM1jzReLUS0jM/krpArf8
- uWGrdBr2/oEAAhhmoD7+dtqG+po7AwkTWOJYCDELxbGHPkKCDKPL7nOScNrIVqIO9hJA3XFwx
- OwY458CCIgKVJrBZKeI4EqLCmBs0J33fFkJcFCHjT1OWO8EBfmbv4nij7kY56kIynKxQRLJi6
- EbqKgPjtXCx92W+gDjbgHclBHuonNeSJXn1wm1FG2xglOPqs3qH5324sYq6NlZeehhTGpudYM
- gyV9UmJ+mEXBCI2NyjMtMLnyfRn72odkyFt6/CC82Lz4MCI3EKl8sWGx1y8G9G41Vj2GPmPUN
- pNjMciMVw6LVfiIKdJFboThBK+H2qcvbEszQ69sDfbLW3KUmmjMRmksX3R5XlgWcO/1lWCQnk
- h7NruKmPzsF471JVvfDsgChsoHsHBMUZQN3WT7y3wNhZtPFNmNa7aQovOOtyklkh7XhJHfyaJ
- nFkOl56Fng8tuNQkCDI+XFmo/EQGsS8UfUm8JRGCi1clYe0Kv1fT8B8zoCvK+9Wy7uvds+1QB
- fTcUteDG3KZFdJlzhPOw==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191216_051932_566101_720A6A98 
-X-CRM114-Status: GOOD (  10.71  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191216_055849_369622_DFA22976 
+X-CRM114-Status: GOOD (  13.79  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.17.10 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.17.10 listed in wl.mailspike.net]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,49 +54,119 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, Stanislaw Gruszka <sgruszka@redhat.com>,
- Arnd Bergmann <arnd@arndb.de>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Roy Luo <royluo@google.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Jernej Skrabec <jernej.skrabec@siol.net>, drinkcat@chromium.org,
+ Jitao Shi <jitao.shi@mediatek.com>, Daniel Vetter <daniel@ffwll.ch>,
+ Jonas Karlman <jonas@kwiboo.se>, David Airlie <airlied@linux.ie>,
+ Neil Armstrong <narmstrong@baylibre.com>, dri-devel@lists.freedesktop.org,
+ Andrzej Hajda <a.hajda@samsung.com>, Ulrich Hecht <uli@fpond.eu>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ Philipp Zabel <p.zabel@pengutronix.de>, hsinyi@chromium.org,
+ matthias.bgg@gmail.com, Collabora Kernel ML <kernel@collabora.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The mt76_led_cleanup() function is called unconditionally, which
-leads to a link error when CONFIG_LEDS is a loadable module or
-disabled but mt76 is built-in:
+Hi all,
 
-drivers/net/wireless/mediatek/mt76/mac80211.o: In function `mt76_unregister_device':
-mac80211.c:(.text+0x2ac): undefined reference to `led_classdev_unregister'
+This driver seems to continue failing to reach upstream. The latest
+version send by Ulrich [1] one month ago, seems to fix all the issues
+that prevented the driver to get merged, but, recent changes ended with
+this driver not building in current mainline. This new version is like a
+RESEND with these build errors fixed, and also a couple of few changes more
+to use device managed resources when available.
 
-Use the same trick that is guarding the registration, using an
-IS_ENABLED() check for the CONFIG_MT76_LEDS symbol that indicates
-whether LEDs can be used or not.
+This bridge is required to have the embedded display working on an Acer
+Chromebook R13 ("Elm"). Hopefully we are a bit more close to have this
+driver merged. If more changes are required, please let me know and I
+will work on it.
 
-Fixes: 36f7e2b2bb1d ("mt76: do not use devm API for led classdev")
-Signed-off-by: Arnd Bergmann <arnd@arndb.de>
----
- drivers/net/wireless/mediatek/mt76/mac80211.c | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+Note: Along these around 20 revisions of this driver I was unable to
+reconstruct the full changelog history, so I'm skipping this. Sorry
+about that, I promise I'll maintain the changelog for future revisions.
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mac80211.c b/drivers/net/wireless/mediatek/mt76/mac80211.c
-index b9f2a401041a..96018fd65779 100644
---- a/drivers/net/wireless/mediatek/mt76/mac80211.c
-+++ b/drivers/net/wireless/mediatek/mt76/mac80211.c
-@@ -378,7 +378,8 @@ void mt76_unregister_device(struct mt76_dev *dev)
- {
- 	struct ieee80211_hw *hw = dev->hw;
- 
--	mt76_led_cleanup(dev);
-+	if (IS_ENABLED(CONFIG_MT76_LEDS))
-+		mt76_led_cleanup(dev);
- 	mt76_tx_status_check(dev, NULL, true);
- 	ieee80211_unregister_hw(hw);
- }
+Thanks,
+ Enric
+
+[1] https://patchwork.kernel.org/cover/11176929/
+
+Changes in v21:
+ - Use devm_i2c_new_dummy_device and fix build issue using deprecated i2c_new_dummy
+ - Fix build issue due missing drm_bridge.h
+ - Do not remove in ps8640_remove device managed resources
+
+Changes in v19:
+ - fixed return value of ps8640_probe() when no panel is found
+
+Changes in v18:
+ - followed DRM API changes
+ - use DEVICE_ATTR_RO()
+ - remove firmware update code
+ - add SPDX identifier
+
+Changes in v17:
+ - remove some unused head files.
+ - add macros for ps8640 pages.
+ - remove ddc_i2c client
+ - add mipi_dsi_device_register_full
+ - remove the manufacturer from the name and i2c_device_id
+
+Changes in v16:
+ - Disable ps8640 DSI MCS Function.
+ - Rename gpios name more clearly.
+ - Tune the ps8640 power on sequence.
+
+Changes in v15:
+ - Drop drm_connector_(un)register calls from parade ps8640.
+   The main DRM driver mtk_drm_drv now calls
+   drm_connector_register_all() after drm_dev_register() in the
+   mtk_drm_bind() function. That function should iterate over all
+   connectors and call drm_connector_register() for each of them.
+   So, remove drm_connector_(un)register calls from parade ps8640.
+
+Changes in v14:
+ - update copyright info.
+ - change bridge_to_ps8640 and connector_to_ps8640 to inline function.
+ - fix some coding style.
+ - use sizeof as array counter.
+ - use drm_get_edid when read edid.
+ - add mutex when firmware updating.
+
+Changes in v13:
+ - add const on data, ps8640_write_bytes(struct i2c_client *client, const u8 *data, u16 data_len)
+ - fix PAGE2_SW_REST tyro.
+ - move the buf[3] init to entrance of the function.
+
+Changes in v12:
+ - fix hw_chip_id build warning
+
+Changes in v11:
+ - Remove depends on I2C, add DRM depends
+ - Reuse ps8640_write_bytes() in ps8640_write_byte()
+ - Use timer check for polling like the routines in <linux/iopoll.h>
+ - Fix no drm_connector_unregister/drm_connector_cleanup when ps8640_bridge_attach fail
+ - Check the ps8640 hardware id in ps8640_validate_firmware
+ - Remove fw_version check
+ - Move ps8640_validate_firmware before ps8640_enter_bl
+ - Add ddc_i2c unregister when probe fail and ps8640_remove
+
+Jitao Shi (2):
+  Documentation: bridge: Add documentation for ps8640 DT properties
+  drm/bridge: Add I2C based driver for ps8640 bridge
+
+ .../bindings/display/bridge/ps8640.txt        |  44 ++
+ drivers/gpu/drm/bridge/Kconfig                |  11 +
+ drivers/gpu/drm/bridge/Makefile               |   1 +
+ drivers/gpu/drm/bridge/parade-ps8640.c        | 655 ++++++++++++++++++
+ 4 files changed, 711 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/display/bridge/ps8640.txt
+ create mode 100644 drivers/gpu/drm/bridge/parade-ps8640.c
+
 -- 
-2.20.0
+2.20.1
 
 
 _______________________________________________
