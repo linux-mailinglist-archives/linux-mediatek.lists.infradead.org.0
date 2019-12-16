@@ -2,68 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 311BF11FFB3
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 09:29:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 45C2A120003
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 09:39:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UQXAheRYC4sXgtooiF3DA9bAiJHyAyWIk21qyvzjX+4=; b=isaP74h80dHcC0
-	fBw/KYJnzTh4a4j0rM/EsvrXdWq5XTxMkOtnCDFyTV+BcuJPvnc1YU2Sh3bJi1vfltiIPbBcK67vC
-	/Jx2IUAb+oreUaKRXwe5qZ1rJB9jyyWdkG5/Ms01nxBgu7zGvdbtTumQZJFrpMirCM11ytY0IYfEG
-	eoKBoILtf5dAG3wEfVz7ekemGeYxDoy2S0jrDeRhtm1tDWkkZUN7Gb1SaDNHYMwhLybFJFBHo67+2
-	ZYIRNsYXYdAHaMXs9a+myvG70ZMA+nGgqXCyq8kF+fEqqMLmiPZwX3q2IS6vYk5QNwa9yqRnsjfrB
-	9e5whAkK4dFPhX0taW2Q==;
+	List-Owner; bh=Pkl5jTwVv5KPwoNyCiaqbJJ/Sh2zhTjGBe9RL4k0/0g=; b=P6n35d/u1QRKvg
+	bYNTMyWeckB+DknDV/aBorOq/OqlTTD2upq/zGFgRtq79XPR1Q8SEPSvJigVG/9jWPmDOPDNojqHW
+	YXSCg37FOZ7t2cMndN5/mzzHBYGxAoSlGetTz0/L+uaMHpyx7o9CdluFvoABbme2/X3/09X0bd76x
+	wDErWGy44Q8mSxrPOjpb0nMwtYcxiAV41RXHiaT8H6bC8PeUl3oYxrldqSH04yRMDxjiaG9LSWrOa
+	WPMSRGZ1Rg5HD1yNJ684AGZhZY/HFUEi3ViHsg01hh+LElTMHQKziMiKGQBtgYc5YwD8owiBKY79a
+	UjHIDFmSEP23sXo+lT+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igllD-0004ep-2Z; Mon, 16 Dec 2019 08:29:47 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iglut-0008Ob-Mj; Mon, 16 Dec 2019 08:39:47 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1igll9-0004d5-2C
- for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 08:29:44 +0000
-X-UUID: 42b507f361084b5ba654ed6c6663b5f5-20191216
+ id 1igluo-0008L2-Cg
+ for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 08:39:43 +0000
+X-UUID: 969b92239676467089be1b28d7fdfb7c-20191216
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=XdO6DxCLv2eqDKtcLSh5mOGePmSad4AJHFN1yrqNlXg=; 
- b=p3eMdGzB23TqP1b6/0bU0UEOpgeC+pVU8dIRzL8mmjh6UJ1vGDFzuNPeldV2130z41NHy6LtcruqZjtKFj/3lCEhn0PPCTEKezo5C3za1S/5kBVOxVlNo6yOqO/mx7u4EYutHsGNuSheP1YzQdGLlckXXjjKQVUikkUM5u+0CTM=;
-X-UUID: 42b507f361084b5ba654ed6c6663b5f5-20191216
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ bh=Dcn4edIKmaaxZ4WZoa2gNgfaTP9lTdkKWVMAcN2SDvg=; 
+ b=ftRjKrdBTcJ5b0iUAxZSWSoJGcUS0IFFGTQGXD6bv2/ffYe/tZZnslSp/X+RsxU1O147/s8Y118l45/0bkTr0CrTkAvoUEKyv3S1vJxVY/1uNXSChIbAZQphcYLBNSdKtJfN9u3OKUaU/o/YfVSnnedYy13R0Jm53tiWewphjGE=;
+X-UUID: 969b92239676467089be1b28d7fdfb7c-20191216
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1136253284; Mon, 16 Dec 2019 00:29:36 -0800
-Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Dec 2019 00:29:54 -0800
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
- (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 16 Dec 2019 16:29:56 +0800
+ with ESMTP id 487610173; Mon, 16 Dec 2019 00:39:38 -0800
+Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Dec 2019 00:29:52 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
+ (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 16 Dec 2019 16:28:41 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Mon, 16 Dec 2019 16:29:18 +0800
+ 15.0.1395.4 via Frontend Transport; Mon, 16 Dec 2019 16:29:19 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: CK Hu <ck.hu@mediatek.com>, David Airlie <airlied@linux.ie>, Daniel Vetter
  <daniel@ffwll.ch>, <dri-devel@lists.freedesktop.org>
-Subject: [PATCH 3/4] drm/mediatek: add the mipitx driving control
-Date: Mon, 16 Dec 2019 16:29:36 +0800
-Message-ID: <20191216082937.119164-4-jitao.shi@mediatek.com>
+Subject: [PATCH 4/4] drm/mediatek: config mipitx impedance with calibration
+ data
+Date: Mon, 16 Dec 2019 16:29:37 +0800
+Message-ID: <20191216082937.119164-5-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20191216082937.119164-1-jitao.shi@mediatek.com>
 References: <20191216082937.119164-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 9DF936B3070C5451CC197DF71E14FCCB93E815FB780F9A5B6D6187004E3053832000:8
+X-TM-SNTS-SMTP: A94EBA85556E547017273BA5806BB90878484B707971CA67C29CE8ECBE80A01C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191216_002943_116249_450D3A8D 
-X-CRM114-Status: UNSURE (   8.87  )
+X-CRM114-CacheID: sfid-20191216_003942_432564_6C16F98C 
+X-CRM114-Status: UNSURE (   9.96  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -98,66 +101,118 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add a property in device tree to control the driving by different
-board.
+Read calibration data from nvmem, and config mipitx impedance with
+calibration data to make sure their impedance are 100ohm.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 ---
- drivers/gpu/drm/mediatek/mtk_mipi_tx.c        | 6 ++++++
- drivers/gpu/drm/mediatek/mtk_mipi_tx.h        | 1 +
- drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 7 +++++++
- 3 files changed, 14 insertions(+)
+ drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |  1 +
+ drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 63 +++++++++++++++++++
+ 2 files changed, 64 insertions(+)
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_mipi_tx.c b/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-index e4d34484ecc8..ec8406c86bfb 100644
---- a/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-+++ b/drivers/gpu/drm/mediatek/mtk_mipi_tx.c
-@@ -125,6 +125,12 @@ static int mtk_mipi_tx_probe(struct platform_device *pdev)
- 		return ret;
- 	}
- 
-+	ret = of_property_read_u32(dev->of_node, "mipitx-current-drive",
-+				   &mipi_tx->mipitx_drive);
-+	/* If can't get the "mipi_tx->mipitx_drive", set it default 0x8 */
-+	if (ret < 0)
-+		mipi_tx->mipitx_drive = 0x8;
-+
- 	ref_clk_name = __clk_get_name(ref_clk);
- 
- 	ret = of_property_read_string(dev->of_node, "clock-output-names",
 diff --git a/drivers/gpu/drm/mediatek/mtk_mipi_tx.h b/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
-index 413f35d86219..eea44327fe9f 100644
+index eea44327fe9f..a1b6292145de 100644
 --- a/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
 +++ b/drivers/gpu/drm/mediatek/mtk_mipi_tx.h
-@@ -27,6 +27,7 @@ struct mtk_mipi_tx {
- 	struct device *dev;
+@@ -28,6 +28,7 @@ struct mtk_mipi_tx {
  	void __iomem *regs;
  	u32 data_rate;
-+	u32 mipitx_drive;
+ 	u32 mipitx_drive;
++	u32 rt_code[5];
  	const struct mtk_mipitx_data *driver_data;
  	struct clk_hw pll_hw;
  	struct clk *pll;
 diff --git a/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-index 91f08a351fd0..124fdf95f1e5 100644
+index 124fdf95f1e5..f624516944bb 100644
 --- a/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
 +++ b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-@@ -17,6 +17,9 @@
- #define RG_DSI_BG_CORE_EN		BIT(7)
- #define RG_DSI_PAD_TIEL_SEL		BIT(8)
+@@ -5,6 +5,8 @@
+  */
  
-+#define MIPITX_VOLTAGE_SEL	0x0010
-+#define RG_DSI_HSTX_LDO_REF_SEL		(0xf << 6)
+ #include "mtk_mipi_tx.h"
++#include <linux/nvmem-consumer.h>
++#include <linux/slab.h>
+ 
+ #define MIPITX_LANE_CON		0x000c
+ #define RG_DSI_CPHY_T1DRV_EN		BIT(0)
+@@ -28,6 +30,7 @@
+ #define MIPITX_PLL_CON4		0x003c
+ #define RG_DSI_PLL_IBIAS		(3 << 10)
+ 
++#define MIPITX_D2P_RTCODE	0x0100
+ #define MIPITX_D2_SW_CTL_EN	0x0144
+ #define MIPITX_D0_SW_CTL_EN	0x0244
+ #define MIPITX_CK_CKMODE_EN	0x0328
+@@ -108,6 +111,64 @@ static const struct clk_ops mtk_mipi_tx_pll_ops = {
+ 	.recalc_rate = mtk_mipi_tx_pll_recalc_rate,
+ };
+ 
++static int mtk_mipi_tx_config_calibration_data(struct mtk_mipi_tx *mipi_tx)
++{
++	u32 *buf = NULL;
++	int i, j;
++	struct nvmem_cell *cell;
++	struct device *dev = mipi_tx->dev;
++	size_t len;
 +
- #define MIPITX_PLL_PWR		0x0028
- #define MIPITX_PLL_CON0		0x002c
- #define MIPITX_PLL_CON1		0x0030
-@@ -123,6 +126,10 @@ static void mtk_mipi_tx_power_on_signal(struct phy *phy)
- 	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_D3_SW_CTL_EN, DSI_SW_CTL_EN);
- 	mtk_mipi_tx_clear_bits(mipi_tx, MIPITX_CK_SW_CTL_EN, DSI_SW_CTL_EN);
++	cell = nvmem_cell_get(dev, "calibration-data");
++	if (IS_ERR(cell)) {
++		dev_warn(dev, "nvmem_cell_get fail\n");
++		return -EINVAL;
++	}
++
++	buf = (u32 *)nvmem_cell_read(cell, &len);
++
++	nvmem_cell_put(cell);
++
++	if (IS_ERR(buf)) {
++		dev_warn(dev, "can't get data\n");
++		return -EINVAL;
++	}
++
++	if (len < 3 * sizeof(u32)) {
++		dev_warn(dev, "invalid calibration data\n");
++		kfree(buf);
++		return -EINVAL;
++	}
++
++	mipi_tx->rt_code[0] = ((buf[0] >> 6 & 0x1F) << 5) |
++			      (buf[0] >> 11 & 0x1F);
++	mipi_tx->rt_code[1] = ((buf[1] >> 27 & 0x1F) << 5) |
++			      (buf[0] >> 1 & 0x1F);
++	mipi_tx->rt_code[2] = ((buf[1] >> 17 & 0x1F) << 5) |
++			      (buf[1] >> 22 & 0x1F);
++	mipi_tx->rt_code[3] = ((buf[1] >> 7 & 0x1F) << 5) |
++			      (buf[1] >> 12 & 0x1F);
++	mipi_tx->rt_code[4] = ((buf[2] >> 27 & 0x1F) << 5) |
++			      (buf[1] >> 2 & 0x1F);
++
++	for (i = 0; i < 5; i++) {
++		if ((mipi_tx->rt_code[i] & 0x1F) == 0)
++			mipi_tx->rt_code[i] |= 0x10;
++
++		if ((mipi_tx->rt_code[i] >> 5 & 0x1F) == 0)
++			mipi_tx->rt_code[i] |= 0x10 << 5;
++
++		for (j = 0; j < 10; j++) {
++			mtk_mipi_tx_update_bits(mipi_tx,
++				MIPITX_D2P_RTCODE * (i + 1) + j * 4,
++				1, mipi_tx->rt_code[i] >> j & 1);
++		}
++	}
++
++	kfree(buf);
++	return 0;
++}
++
+ static void mtk_mipi_tx_power_on_signal(struct phy *phy)
+ {
+ 	struct mtk_mipi_tx *mipi_tx = phy_get_drvdata(phy);
+@@ -130,6 +191,8 @@ static void mtk_mipi_tx_power_on_signal(struct phy *phy)
+ 				RG_DSI_HSTX_LDO_REF_SEL,
+ 				mipi_tx->mipitx_drive << 6);
  
-+	mtk_mipi_tx_update_bits(mipi_tx, MIPITX_VOLTAGE_SEL,
-+				RG_DSI_HSTX_LDO_REF_SEL,
-+				mipi_tx->mipitx_drive << 6);
++	mtk_mipi_tx_config_calibration_data(mipi_tx);
 +
  	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_CK_CKMODE_EN, DSI_CK_CKMODE_EN);
  }
