@@ -2,7 +2,7 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CD8BF120002
+	by mail.lfdr.de (Postfix) with ESMTPS id A979F120001
 	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 09:39:49 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,55 +10,55 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oT5QP8anyh5s1mOsb0TtHRZmm7+tcIK6ucIe6IsZCLQ=; b=taWNtr3sRKwctx
-	6x11xeSef+vjVPgIi6xvr81UNMQ7sJDkxoJ72/OVsd+57BrHTZJx56vxEjon/PVx/tM3Ky2ucW2SW
-	LbVNzokkICA1773p2WJ1ydISpoyD/FS3YlKN+pfjq1bjIxfBjWxIC37NM+zk3Rl1uGnZj1NEuZjf1
-	r0XD2Wa8vLItwmsIcQMZ3hY+mp5yn7CJeA+b1uKz8wG1d62roQZ5dd0PjfSqWEUr5RQ2JhuiDsDg5
-	P7lLC5OTLWNzcXQktDpcYwLh9ZMTlM3rKqQ4QwdOX5QilBw1OWeNVFOwG2SPq6Qx72HvOkYi7t/0O
-	R9cJdICjRiwHflhqc4VQ==;
+	List-Owner; bh=oGQxmG/F9wEf42pEykn0OM7qwMh13/CNPOd3hXgPO0g=; b=gJZZg/x4SQCWCW
+	966sGaT6qa85C11Gj5NzCoL7AFCSbqoKQfDYtukfByNNGRsphIWE9i55I6ApVn+0dHgC5/g+GQqT1
+	ANO3d6YWPP3XiMO2QRENrD/27b2DN4sDSmUvpoBkkaIbe/nv0QRu1vh/E4lSVK5SzrFQ3NB7C7IAH
+	vl5sNk5SSHWxZhH7wKYRYHefYq1tIzixos/tksyOfWjHCitVvOexEIg6dxSrDL1bFw5BfkAnPVHhp
+	vZN4nFs5VBd/Smycm3UosnN/pdAZFKlFh5kzhLn/Lvm83H6vzuB2nDiRLjswxtbxSHv7ESo8UVi2d
+	syNsy/vythv/EZabr/gw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igluq-0008M5-Ag; Mon, 16 Dec 2019 08:39:44 +0000
+	id 1iglur-0008Mm-1R; Mon, 16 Dec 2019 08:39:45 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iglun-0008L2-3B
+ id 1iglun-0008LI-Hz
  for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 08:39:42 +0000
-X-UUID: 3d89addaba7249e8a75ca1bd4771eb7a-20191216
+X-UUID: 519f6965277f4198af01ccbf8a967653-20191216
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=uG/aJuarO3hgV1jRiJvimGDQyEGjg4zprETLw6mHtxc=; 
- b=DoUu7D77r/sG+/NXQhk0raeS8n+h9qBzFOa+dDFaL2KEsyq9dqVE56MDt4pQHDErZl8WNO4XS6f4HtSRffJIS00dfcbtsgQz7mMBmwd5UzLzh7o7rwYMXq/Ae5AO6dGKhHpHuFQiNoHgAFTRjvdOxdMIPZ6mylPu//MnYcYFXec=;
-X-UUID: 3d89addaba7249e8a75ca1bd4771eb7a-20191216
+ bh=39ui2Wv99GeSAlafK/9HYk45gaD1Wuxeozd4Opspg4c=; 
+ b=QlsQT37cMa3i1wVHyn5NLbzFibGG9UCe89jkAdcRh2xUioDovsX0aRe0RNckXn2NyjIya8UsPu5YG7GvHh4ErKiLqn8a3oCnQ2XqKlEI6o5ZEvEhH4cniyMw5I1vCaV/9p24x1NhiQQyeGC9oBtEQ9iA0cHgTZ54kpSzPQu8P9k=;
+X-UUID: 519f6965277f4198af01ccbf8a967653-20191216
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1375053874; Mon, 16 Dec 2019 00:39:38 -0800
-Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ with ESMTP id 52131175; Mon, 16 Dec 2019 00:39:38 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Dec 2019 00:29:52 -0800
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
- (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Mon, 16 Dec 2019 16:28:39 +0800
+ 15.0.1395.4; Mon, 16 Dec 2019 00:29:54 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
+ (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 16 Dec 2019 16:27:04 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Mon, 16 Dec 2019 16:29:16 +0800
+ 15.0.1395.4 via Frontend Transport; Mon, 16 Dec 2019 16:29:17 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: CK Hu <ck.hu@mediatek.com>, David Airlie <airlied@linux.ie>, Daniel Vetter
  <daniel@ffwll.ch>, <dri-devel@lists.freedesktop.org>
-Subject: [PATCH 1/4] dt-binds: display: mediatek: add property to control mipi
- tx drive current
-Date: Mon, 16 Dec 2019 16:29:34 +0800
-Message-ID: <20191216082937.119164-2-jitao.shi@mediatek.com>
+Subject: [PATCH 2/4] dt-binds: display: mediatek: get mipitx calibration data
+ from nvmem
+Date: Mon, 16 Dec 2019 16:29:35 +0800
+Message-ID: <20191216082937.119164-3-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20191216082937.119164-1-jitao.shi@mediatek.com>
 References: <20191216082937.119164-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: B23DFF23995B9CDFCB207E15F6E7F0C50AA063A049411E85C7C953E59BA85AA32000:8
+X-TM-SNTS-SMTP: 732C0F32967A403F9DF38A1AD82FCF41EBEF8C787DDDC448E71F276184B39E302000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191216_003941_144024_292EAC60 
-X-CRM114-Status: UNSURE (   5.54  )
+X-CRM114-CacheID: sfid-20191216_003941_596625_105797C2 
+X-CRM114-Status: UNSURE (   6.41  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -101,36 +101,36 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add a property to control mipi tx drive current:
-"mipitx-current-drive"
+Add properties to get get mipitx calibration data.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 ---
- .../devicetree/bindings/display/mediatek/mediatek,dsi.txt     | 4 ++++
- 1 file changed, 4 insertions(+)
+ .../devicetree/bindings/display/mediatek/mediatek,dsi.txt    | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
-index a19a6cc375ed..780201ddcd5c 100644
+index 780201ddcd5c..7f12eb729791 100644
 --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
 +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
-@@ -33,6 +33,9 @@ Required properties:
- - #clock-cells: must be <0>;
+@@ -34,6 +34,9 @@ Required properties:
  - #phy-cells: must be <0>.
  
-+Optional properties:
-+- mipitx-current-drive: adjust driving current, should be 1 ~ 0xF
-+
- Example:
+ Optional properties:
++- nvmem-cells: A phandle to the calibration data provided by a nvmem device. If
++               unspecified default values shall be used.
++- nvmem-cell-names: Should be "calibration-data"
+ - mipitx-current-drive: adjust driving current, should be 1 ~ 0xF
  
- mipi_tx0: mipi-dphy@10215000 {
-@@ -42,6 +45,7 @@ mipi_tx0: mipi-dphy@10215000 {
+ Example:
+@@ -45,6 +48,8 @@ mipi_tx0: mipi-dphy@10215000 {
  	clock-output-names = "mipi_tx0_pll";
  	#clock-cells = <0>;
  	#phy-cells = <0>;
-+	mipitx-current-drive = <0x8>;
++	nvmem-cells= <&mipi_tx_calibration>;
++	nvmem-cell-names = "calibration-data";
+ 	mipitx-current-drive = <0x8>;
  };
  
- dsi0: dsi@1401b000 {
 -- 
 2.21.0
 _______________________________________________
