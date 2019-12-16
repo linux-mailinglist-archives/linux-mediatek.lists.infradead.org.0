@@ -2,62 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2880F11FF89
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 09:21:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD93A11FFB4
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 09:29:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=40BwlV4THLkTp86sDgUTbLEZyWclQYfm8wkTnIepCdA=; b=hIwVIqf4BKxcKV
-	Z1cvO9GXOBEWvnC9YMXUIFBB//jbNLie60scZMS2o+voqVGLHdmilVzAXPOS2y2LMbv+jppHLDITA
-	zc8nUqPlfn7aGsigo544/SikPUxAf001RQxvZpKc6NlyTY2Ohx6Z2sAcql6z+7OF3/bsNSDTcyLcR
-	HK3Ov7IqKcD7oRCMF6mfEd4QEA5okqie6FuBwbIvPr1ppmkhN4+Xg6OFojOXDfSRB+0OyVZEoq3kx
-	tHHLHphGczV/IWaQLVOUxEU3JJ1n25vbAAncpPnFrIehCXG/Gim1llYJUqbtaKlADH5JtxNo7CCrU
-	W/U3Uong4MOeq0hygjWA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=NFY/DDZ6F5SISQEE5vXFFjJZoczi9bhYWZwSvJpzPmI=; b=hqY5O78f/FYmCu
+	6rFsnQeG4CIIPRP3KfK+BJ5XnwYIwNALPkjgvSw/s+/1yxIPNMa2I+p6YlpoWOZiPyPADPv9BYsis
+	I73AE8YLo0mXU2bNt15/zHsKJRFGyY/iDw+dddx+C4bZ56eHWrGxTrLau9985TT7/FgYSs4T3s1It
+	qqJ8sRg9irZmtMZDuwmJCoL8dAf1NSgCq1o1v95MXCZBiqHEZ5MdDMXa+vqyqSry9LlZ8snDf77qb
+	vvByOmjJNDR4G1ItvaJ6NfWxvwQr4tWaQ5ouJnSHaXbb58HR0cbsF8yvjWIxle5KOKFRFLOibrP0o
+	+Eye5DtsvswR+vbhl36w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iglcr-00028s-GC; Mon, 16 Dec 2019 08:21:09 +0000
-Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
+	id 1igllC-0004e6-CQ; Mon, 16 Dec 2019 08:29:46 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iglci-00020O-3u
- for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 08:21:01 +0000
-Received: from ptx.hi.pengutronix.de ([2001:67c:670:100:1d::c0])
- by metis.ext.pengutronix.de with esmtps
- (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <ukl@pengutronix.de>)
- id 1iglcg-0007wx-JI; Mon, 16 Dec 2019 09:20:58 +0100
-Received: from ukl by ptx.hi.pengutronix.de with local (Exim 4.89)
- (envelope-from <ukl@pengutronix.de>)
- id 1iglcg-0003qd-8E; Mon, 16 Dec 2019 09:20:58 +0100
-Date: Mon, 16 Dec 2019 09:20:58 +0100
-From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [PATCH v2 2/2] pwm/mtk_disp: move the reg enable trigger in config
-Message-ID: <20191216082058.xisbafewfttpkij6@pengutronix.de>
-References: <20191216070123.114719-1-jitao.shi@mediatek.com>
- <20191216070123.114719-3-jitao.shi@mediatek.com>
+ id 1igll9-0004d3-2C
+ for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 08:29:44 +0000
+X-UUID: 26408f9bf84f432d84fc9aed16d4cb44-20191216
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=WhzTcd+pTtNcgJzwX1U6kGe1zUfl6N1bLB7CoWeNiCM=; 
+ b=pdxpYAKb3p5SBOhwKMI0nXn6e91C/Mnd1pScxpMhg+9t4qnYn5CFm5HQTpLJH8x3glFGrHQL29Oq64sWToLM4HCW3ErvJbrGvmUM9Q7lI/RqXwWNLWqAMaE4AH9/J6PpYQY572osI3wjM33DS4VvTLWFswJE5O8coCaqsQnn4FQ=;
+X-UUID: 26408f9bf84f432d84fc9aed16d4cb44-20191216
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 652498585; Mon, 16 Dec 2019 00:29:36 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Dec 2019 00:29:53 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 16 Dec 2019 16:29:53 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (172.27.4.253) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Mon, 16 Dec 2019 16:29:15 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: CK Hu <ck.hu@mediatek.com>, David Airlie <airlied@linux.ie>, Daniel Vetter
+ <daniel@ffwll.ch>, <dri-devel@lists.freedesktop.org>
+Subject: [PATCH 0/4] Config mipi tx drive current and impedance
+Date: Mon, 16 Dec 2019 16:29:33 +0800
+Message-ID: <20191216082937.119164-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191216070123.114719-3-jitao.shi@mediatek.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
-X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c0
-X-SA-Exim-Mail-From: ukl@pengutronix.de
-X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
- SAEximRunCond expanded to false
-X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
+X-TM-SNTS-SMTP: 944F9769D99980FD9F34232B6606DBCBEA77199AFBDE28CF16CC600B8A45F2AB2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191216_002100_152842_ECAC8B1A 
-X-CRM114-Status: UNSURE (   5.83  )
+X-CRM114-CacheID: sfid-20191216_002943_113895_4949A98E 
+X-CRM114-Status: UNSURE (   3.97  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,31 +86,35 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pwm@vger.kernel.org, linux-kernel@vger.kernel.org,
- CK Hu <ck.hu@mediatek.com>, sj.huang@mediatek.com,
- Thierry Reding <thierry.reding@gmail.com>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: Jitao Shi <jitao.shi@mediatek.com>, srv_heupstream@mediatek.com,
+ stonea168@163.com, cawa.cheng@mediatek.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, bibby.hsieh@mediatek.com,
+ Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
+ eddie.huang@mediatek.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Dec 16, 2019 at 03:01:23PM +0800, Jitao Shi wrote:
-> Remove the regist enable trigger setting in probe.
-> Move the trigger to mtk_disp_pwm_config().
+Changes in this patch:
+ - add the mipitx driving current control.
+ - config the mipitx impedance with calibration data in nvmem.
 
-Same as in patch 1: You describe what is (somewhat) obvious when reading
-the patch. But the motivation isn't clear.
+Jitao Shi (4):
+  dt-binds: display: mediatek: add property to control mipi tx drive
+    current
+  dt-binds: display: mediatek: get mipitx calibration data from nvmem
+  drm/mediatek: add the mipitx driving control
+  drm/mediatek: config mipitx impedance with calibration data
 
-Best regards
-Uwe
+ .../display/mediatek/mediatek,dsi.txt         |  9 +++
+ drivers/gpu/drm/mediatek/mtk_mipi_tx.c        |  6 ++
+ drivers/gpu/drm/mediatek/mtk_mipi_tx.h        |  2 +
+ drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 70 +++++++++++++++++++
+ 4 files changed, 87 insertions(+)
 
--- =
-
-Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
-Industrial Linux Solutions                 | https://www.pengutronix.de/ |
-
+-- 
+2.21.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
