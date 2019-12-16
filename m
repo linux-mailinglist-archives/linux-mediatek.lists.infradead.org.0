@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED82811FCF1
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 03:43:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 737A311FD60
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Dec 2019 04:59:10 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=L0xXb/h9eq9wC3hxhaVtvB3vZpaEEDRy37xVyoU95R4=; b=Qfjob8l0US1VE0
-	ZML4PIuIcdh9IVuhiQECxdAnyuIhPfXtyKovUU1gfbrTmq0VuuE0IT2mFDviYd+5Fce+dTyd8LwTp
-	VsHyN5lFOO3O/ZraZV2Hg1nwEZ3Dq8KDbZOsTpfgohA+PJPLeR0HW/gkJTMo/PAju23C2S4qkMBHt
-	mV3fle+j9pwBpuqyH2nNlsr7vX0vngIV+hcmTCSmDo3/mNzD5KEvxQymjPA0OAdzU3mchKiCGaOyW
-	0ENK3Hq7x3M9lXMBMnr/fbmvieGVXzoDj8rQpH/JO7ciym2rjnXEzUcJDGtXhNYLtHwbnJh2mJrqe
-	pkvgEiEi2jHwdX8ACKkw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=NxbZGv+lLeoYQ+QXE7gIRrjX5wjSs4uix/lGW/d5INs=; b=Jr9C7X0BZqCCH7
+	TgU/oA2T4xEFwczKUISc9uHFshQSl3xeovzU4XzDm7dubi4TqHwtJCSedCP6wDbyUDd8EruZgsa/x
+	Pq4GmhEnkrA+yPTzVlZybdoxGVpIphQ4aYRSt5R9EMTBWi2Lt9+mEn0vhtV+dWxETm7cuFgSkbYgz
+	OILeHeyD+ooKN2TE5hoRk6KoszXJ65BAWLBpvlbZr2fJmLyjI9QkxPETMvjxO5srDPHzdFeAX/YG3
+	NGfgDe6dLxvIMTbi6pPf1lSLbTkn8TG8N5L2yPUzaBLhVWO3kDeksPDFqGV4WqCeySxePi+CtVkzf
+	Idf1soP2fasEi65JeE1Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iggLX-000222-BJ; Mon, 16 Dec 2019 02:42:55 +0000
-Received: from mail-il1-x144.google.com ([2607:f8b0:4864:20::144])
+	id 1ighXD-0002qG-Oq; Mon, 16 Dec 2019 03:59:03 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iggLU-00021e-3W
- for linux-mediatek@lists.infradead.org; Mon, 16 Dec 2019 02:42:53 +0000
-Received: by mail-il1-x144.google.com with SMTP id b15so4206338ila.7
- for <linux-mediatek@lists.infradead.org>; Sun, 15 Dec 2019 18:42:50 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=9aCQDna0JdNgAijPNYO66CG/8UAC3gxJw6W+92Szu1s=;
- b=kiQS2TqrzYfZYPU/1gnhQNwf7BaK3yuKuPbUIr9uvHPiSCVvyG2e2bbRtCemQsxl+w
- ZI9NXg2Uw8JfEi4PJI9oCU3NwggR0UzFqsjdiF3tKXpqqx2Oy97r41md083YYxvbFqlw
- lHfY5VBlJ7w1kDKrjCWmEaKZBPgUNS6IoHRpo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=9aCQDna0JdNgAijPNYO66CG/8UAC3gxJw6W+92Szu1s=;
- b=SNu/y0zVLC9dW/ZGFGMiiGXOGkOJ1b+2vsWMKsCVjHRS6/UiacWL9jbibT//SC9HO7
- FEHZu6cYJBWhAqhfNKVS5DT6/84VdUKSjzEIboZsoZHHu5v///JmAtq8db3yy57Vkpz0
- MJ6bONvNI/Xj1Nu2Lp2Gzb3Nw9qGJO4crThDjlewgVcj1wjc4whFYDqkyBGhNNxF2IJl
- ABDKpnCbAPeiJ9WeetqugwA6ofVM/DTIavS8dbbi6Co1PveUmgGqjkaYwRnsgOmreJlg
- qzUiau9AcYQPRFEKs3wEXdflybG3pDxRtZZEczk7t5fG9nTIqgXW9NBXoafWZcpwDEux
- 3ZJA==
-X-Gm-Message-State: APjAAAV/1jY9HiveOhSnRdCzJkxJ/4EBb+Yi8iDSmdpyLlujAnTTrMqi
- 063LPoa7og5UFjz6+ggk5UrEzSLNgSD/lEvDQBmqhw==
-X-Google-Smtp-Source: APXvYqzbg32oU48Vmt3h27I+7GAVGf3W+sKHDO/Z56LHLEB+l1l4zmiyGkYXciJP3Lxka1EKNGXP3lMjw3WC7PBmK/Q=
-X-Received: by 2002:a92:af8e:: with SMTP id v14mr10077850ill.150.1576464170096; 
- Sun, 15 Dec 2019 18:42:50 -0800 (PST)
+ id 1ighXB-0002pC-AL; Mon, 16 Dec 2019 03:59:02 +0000
+X-UUID: 63490d0359344efb8c4343d7672f902f-20191215
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=0oTM8ec49riGzkXqbh5sFdhXmjjCrTrpNmENYdE7F7s=; 
+ b=M6/3IUhkmECZ4Xvqmv88gWoAUjact28Lub1Z3ZJBDYZZaEKvj5rgW9rxFYTj+oPkv0AGVoJtv4s4m6U10FMtsATlU4dzgQ8dpUetHlnCmAdD3loID7HEAtjhKXmJbTT6KfdB62o6f8MNBskVQUDPdoYzZbYFTMVpq+aJC/BHgZQ=;
+X-UUID: 63490d0359344efb8c4343d7672f902f-20191215
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 42826778; Sun, 15 Dec 2019 19:58:59 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 15 Dec 2019 19:50:21 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Dec 2019 11:48:28 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 16 Dec 2019 11:48:58 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
+ <pedrom.sousa@synopsys.com>, <jejb@linux.ibm.com>, <matthias.bgg@gmail.com>,
+ <f.fainelli@gmail.com>
+Subject: [PATCH v2 0/2 RESEND] scsi: ufs-mediatek: add device reset
+ implementation
+Date: Mon, 16 Dec 2019 11:48:55 +0800
+Message-ID: <1576468137-17220-1-git-send-email-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-References: <20191213095215.17068-1-jitao.shi@mediatek.com>
-In-Reply-To: <20191213095215.17068-1-jitao.shi@mediatek.com>
-From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Mon, 16 Dec 2019 10:42:24 +0800
-Message-ID: <CAJMQK-iZq0SRR7Q1cyh033xDXwD+MY-utO05+KqFR=ZRuaVUDg@mail.gmail.com>
-Subject: Re: [PATCH] drm/mediatek: reduce the hbp and hfp for phy timing
-To: Jitao Shi <jitao.shi@mediatek.com>
+X-TM-SNTS-SMTP: 2C63DA52B94AD84F64F4F77477A7075DBF46997BA5D1D4C0C62BC6CC6F9402E72000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191215_184252_171963_065C76EE 
-X-CRM114-Status: UNSURE (   6.82  )
+X-CRM114-CacheID: sfid-20191215_195901_365137_813691E8 
+X-CRM114-Status: UNSURE (   4.66  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -65,10 +65,11 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -76,7 +77,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,32 +90,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Bibby Hsieh <bibby.hsieh@mediatek.com>, srv_heupstream@mediatek.com,
- David Airlie <airlied@linux.ie>, stonea168@163.com, cawa.cheng@mediatek.com,
- dri-devel@lists.freedesktop.org, Matthias Brugger <matthias.bgg@gmail.com>,
- sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
- Daniel Vetter <daniel@ffwll.ch>, CK Hu <ck.hu@mediatek.com>,
- Yingjoe Chen <yingjoe.chen@mediatek.com>, eddie.huang@mediatek.com
+Cc: leon.chen@mediatek.com, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Dec 13, 2019 at 9:52 AM Jitao Shi <jitao.shi@mediatek.com> wrote:
->
-> There are some extra data transfer in dsi.
-> ex. LPX, hs_prepare, hs_zero, hs_exit and the sof/eof of dsi packet.
-> This signal will enlarge the line time. So the real frame on dsi bus
-> will be lower than calc by video timing.
->
-> So dsi driver reduces the hbp and hfp to keep the line time.
->
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-Tested-by: Hsin-Yi Wang <hsinyi@chromium.org>
-> ---
+This patchset add implementation of UFS device reset vops in MediaTek UFS driver.
 
-Tested on mt8183 and mt8173
+v2:
+ - Use definition defined in include/linux/arm-smccc.h instead of "magic definition" (Florian Fainelli)
 
+Stanley Chu (2):
+  soc: mediatek: add header for SiP service interface
+  scsi: ufs-mediatek: add device reset implementation
+
+ drivers/scsi/ufs/ufs-mediatek.c          | 27 +++++++++++++++++++++
+ drivers/scsi/ufs/ufs-mediatek.h          |  7 ++++++
+ include/linux/soc/mediatek/mtk_sip_svc.h | 30 ++++++++++++++++++++++++
+ 3 files changed, 64 insertions(+)
+ create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
+
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
