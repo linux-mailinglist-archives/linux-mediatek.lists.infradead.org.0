@@ -2,72 +2,90 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1E8CE122CBC
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Dec 2019 14:17:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B6022122EB5
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Dec 2019 15:28:55 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5uj/6/8v/yV+vivvSh5oIhOP1ygEGKB/RgEzSDr9zzU=; b=GRsc0Zb7wMBKel
-	zX6DjwJ2sUp39CykGYQeBZg3XQbxKQH/AadpcNxKscjBWVUIc/Dj192USDmNtwc40yg3hSEwyJZ7E
-	29gCjPEqYPeZRa2aBD21nX/V69qVeEKghwGJmlZkGpdPmGbyH9cBLWNi7wROAcDfSS66zO3Xf/D2e
-	g5UZvqHD7yYvyqkfWomMh/YNtmpvhdsG13+P8aPfJkdghIw61uzGL+N6K9kzM31xWIXQ5DodCXuji
-	1vBF34bPi70ncGN5RgNyj6qZk0+njq87AYOv4wSIYmxbw7tnCd5NT5CqakDWO0wl4cwFt2mr75dhn
-	KOma7zaFdtwJnL7P/KXQ==;
+	List-Owner; bh=5yOFVcibkuw8gyt0zq5jDqTBwVtnbsr5fQY1zLViVXs=; b=JWm+OoM19EJxCe
+	7MU2JoV+GE3TAiq4uVcbkNq2ZDHqz1o4d5eSdeVdtfsDXALo/iWREmvUj4CTW0H7NYz7ds5MjDgU2
+	2Hx5SJw+dv3yVpgON8X7z/szTIgjNnYhdupywE7mxUrcAKpSNX8/OsNxnMfhYC/ZQi7tpgw2vKdQD
+	myv4kJ6on8JIFmQhOLy7Wkn6LmjTcmSx9qHVJeqYUAfWmWGAcfMt3qj9tqPPV/FP5SWz+BlXY5E+g
+	z31gB/K/7jQXnZGHvhDSnTcRKiORF3KMOX+hb0hV+fPR5Vilhe0I1Jp44KT18614MMkWneF3s5bw2
+	5WqcC998XsMC8bmaWsCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihCj7-0001kX-VS; Tue, 17 Dec 2019 13:17:25 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ihDqD-00075A-8M; Tue, 17 Dec 2019 14:28:49 +0000
+Received: from new2-smtp.messagingengine.com ([66.111.4.224])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihCiw-0001bK-9x; Tue, 17 Dec 2019 13:17:15 +0000
-X-UUID: 72d83e69657048eaa891031c2babfac4-20191217
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=aC80HxRMBV0tY5Zddqx1ty1wteHBFoyprQsy+llvVXw=; 
- b=eypN7rEkT9HGqDDXJDSLityenSRC+M8pDXJTqc3fehKrSAh2N+90KguZszPe3ln1Vz94GZZpGeUlpmDjSxTsa3xpJqPgbd1EEu379AkepzJ7fmJxQmEV6Fb6DNwNcYlMzu0CXdBslheNoVyBiChEXO7CYp2zAXhBa4ZgwxeI3QU=;
-X-UUID: 72d83e69657048eaa891031c2babfac4-20191217
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <sam.shih@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 779452636; Tue, 17 Dec 2019 05:17:00 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Dec 2019 05:17:09 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Dec 2019 21:16:39 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 17 Dec 2019 21:16:32 +0800
-From: Sam Shih <sam.shih@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>, Rob Herring
- <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>
-Subject: [v2,1/1] arm: dts: mediatek: add mt7629 pwm support
-Date: Tue, 17 Dec 2019 21:16:53 +0800
-Message-ID: <1576588613-11530-2-git-send-email-sam.shih@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1576588613-11530-1-git-send-email-sam.shih@mediatek.com>
-References: <1576588613-11530-1-git-send-email-sam.shih@mediatek.com>
+ id 1ihDpw-0006p1-SX; Tue, 17 Dec 2019 14:28:35 +0000
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+ by mailnew.nyi.internal (Postfix) with ESMTP id 07CD61EAE;
+ Tue, 17 Dec 2019 09:28:24 -0500 (EST)
+Received: from mailfrontend1 ([10.202.2.162])
+ by compute3.internal (MEProxy); Tue, 17 Dec 2019 09:28:24 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=cerno.tech; h=
+ date:from:to:cc:subject:message-id:references:mime-version
+ :content-type:in-reply-to; s=fm1; bh=o7MJ2oxooSAZLrE4IgKBFIHl/Fq
+ uvlsScI7dDq2S0Lo=; b=hzl3RxcCTOf/6vakmast5z/ssSN6fGEGQslELZEROQ3
+ Frk7iXOG9tka5Q9WYrFjC/s8fkuSuROpKxvkLx9TkuD5AA15EFHmVBNUFH4nC7KO
+ czKIYqDJ2IfAm2CD5mEzM2hw0F9A35p63gDQUDV7MC+ms9U9Ja13sXsvttjKpy0G
+ mpcZ/WgegUv4YSjDtIcpHYFwCUyqWvprtkA/bOCzwqx4fh0VGv3Dwdir50dq2ScV
+ kvntqKv26XwNpqLNCm+TJ+ZsfdrKqv2ZJd3q7B4+vFXuBRb3jsgzFbuQdJFmv5je
+ +dCwtpPwEmYgBLmiRxUZemO1gqL1JcREZyFU8/Kevrw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+ messagingengine.com; h=cc:content-type:date:from:in-reply-to
+ :message-id:mime-version:references:subject:to:x-me-proxy
+ :x-me-proxy:x-me-sender:x-me-sender:x-sasl-enc; s=fm1; bh=o7MJ2o
+ xooSAZLrE4IgKBFIHl/FquvlsScI7dDq2S0Lo=; b=Pj8zWa8SuQBOs6JWhrGdUr
+ w5dAZH6vBwr25rTvG16U+YHnDjv6UhrVdGT7wvlHKzLbuZHb41bwqZMlxBw1sbQO
+ KqIZrUUfSJC53mtKc85UqL3vw3YLIP9qFEFMgTHiTJKgCtbu+guYOiTyKBMUq3PE
+ Tpo4ZrxZ1YwrbTomSpOx+jfMJ9slBwWc3nfl+OQdar6R8ZdqgMsbxkry+rLjNTer
+ 1Iax9QpBMSlGZq/KKF6cUC81qSIrvlWH4nQKjMkiSEZTqe9N15FjvQ7LJAp+nwyL
+ CxZYQZZnLzGVRQh8VE/3P431BVGieKHdTEfT08sdqmJPtxLbWecRYPuNU6YklynQ
+ ==
+X-ME-Sender: <xms:B-b4XaxYogkGZ-VkhbmZAG8ZW-NeQdkGcAS8s1TZJWAEIkLrLEMZrQ>
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgedufedrvddtjedgieegucetufdoteggodetrfdotf
+ fvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdfqfgfvpdfurfetoffkrfgpnffqhgen
+ uceurghilhhouhhtmecufedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmne
+ cujfgurhepfffhvffukfhfgggtuggjsehttdertddttddvnecuhfhrohhmpeforgigihhm
+ vgcutfhiphgrrhguuceomhgrgihimhgvsegtvghrnhhordhtvggthheqnecukfhppeeltd
+ drkeelrdeikedrjeeinecurfgrrhgrmhepmhgrihhlfhhrohhmpehmrgigihhmvgestggv
+ rhhnohdrthgvtghhnecuvehluhhsthgvrhfuihiivgeptd
+X-ME-Proxy: <xmx:B-b4XXUAC8RJFDB70axFrRUjezaNbOEDUp4OeYRUgBeVlokkhlNd3g>
+ <xmx:B-b4XfQkfHMZglJ4EjBq084hYFss1JXRAvMRoQ_r3bCpqSiYZXp04w>
+ <xmx:B-b4XeM52bBJz35B3keMx4xLX-ahcscnJRrJlGeUlMda_qbJwUo1Qw>
+ <xmx:COb4XYoVYHxDAt4SzjQwApM83lGLo5BlzAgc4Dj9NSlurRM0FrE-Nw>
+Received: from localhost (lfbn-tou-1-1502-76.w90-89.abo.wanadoo.fr
+ [90.89.68.76])
+ by mail.messagingengine.com (Postfix) with ESMTPA id 922EA80066;
+ Tue, 17 Dec 2019 09:28:22 -0500 (EST)
+Date: Tue, 17 Dec 2019 15:28:21 +0100
+From: Maxime Ripard <maxime@cerno.tech>
+To: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Subject: Re: [PATCH v21 1/2] Documentation: bridge: Add documentation for
+ ps8640 DT properties
+Message-ID: <20191217142821.xitumpvfg52heb4t@gilmour.lan>
+References: <20191216135834.27775-1-enric.balletbo@collabora.com>
+ <20191216135834.27775-2-enric.balletbo@collabora.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20191216135834.27775-2-enric.balletbo@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_051714_354998_72CF4D9D 
-X-CRM114-Status: UNSURE (   8.77  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191217_062833_087850_5EB9718A 
+X-CRM114-Status: GOOD (  14.52  )
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [66.111.4.224 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -75,8 +93,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,53 +104,108 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org, Sam
- Shih <sam.shih@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, Ulrich Hecht <uli@fpond.eu>,
+ drinkcat@chromium.org, Jitao Shi <jitao.shi@mediatek.com>,
+ devicetree@vger.kernel.org, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ hsinyi@chromium.org, matthias.bgg@gmail.com,
+ Collabora Kernel ML <kernel@collabora.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This adds pwm support for MT7629.
-Used:
-https://patchwork.kernel.org/patch/11160851/
+On Mon, Dec 16, 2019 at 02:58:33PM +0100, Enric Balletbo i Serra wrote:
+> From: Jitao Shi <jitao.shi@mediatek.com>
+>
+> Add documentation for DT properties supported by
+> ps8640 DSI-eDP converter.
+>
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> Acked-by: Rob Herring <robh@kernel.org>
+> Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
+> Signed-off-by: Ulrich Hecht <uli@fpond.eu>
+> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+> ---
+>
+> Changes in v21: None
+> Changes in v19: None
+> Changes in v18: None
+> Changes in v17: None
+> Changes in v16: None
+> Changes in v15: None
+> Changes in v14: None
+> Changes in v13: None
+> Changes in v12: None
+> Changes in v11: None
+>
+>  .../bindings/display/bridge/ps8640.txt        | 44 +++++++++++++++++++
+>  1 file changed, 44 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/display/bridge/ps8640.txt
+>
+> diff --git a/Documentation/devicetree/bindings/display/bridge/ps8640.txt b/Documentation/devicetree/bindings/display/bridge/ps8640.txt
+> new file mode 100644
+> index 000000000000..7b13f92f7359
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/display/bridge/ps8640.txt
+> @@ -0,0 +1,44 @@
+> +ps8640-bridge bindings
+> +
+> +Required properties:
+> +	- compatible: "parade,ps8640"
+> +	- reg: first page address of the bridge.
+> +	- sleep-gpios: OF device-tree gpio specification for PD pin.
+> +	- reset-gpios: OF device-tree gpio specification for reset pin.
+> +	- vdd12-supply: OF device-tree regulator specification for 1.2V power.
+> +	- vdd33-supply: OF device-tree regulator specification for 3.3V power.
+> +	- ports: The device node can contain video interface port nodes per
+> +		 the video-interfaces bind[1]. For port@0,set the reg = <0> as
+> +		 ps8640 dsi in and port@1,set the reg = <1> as ps8640 eDP out.
+> +
+> +Optional properties:
+> +	- mode-sel-gpios: OF device-tree gpio specification for mode-sel pin.
+> +[1]: Documentation/devicetree/bindings/media/video-interfaces.txt
+> +
+> +Example:
+> +	edp-bridge@18 {
+> +		compatible = "parade,ps8640";
+> +		reg = <0x18>;
+> +		sleep-gpios = <&pio 116 GPIO_ACTIVE_LOW>;
+> +		reset-gpios = <&pio 115 GPIO_ACTIVE_LOW>;
+> +		mode-sel-gpios = <&pio 92 GPIO_ACTIVE_HIGH>;
+> +		vdd12-supply = <&ps8640_fixed_1v2>;
+> +		vdd33-supply = <&mt6397_vgp2_reg>;
+> +
+> +		ports {
+> +			#address-cells = <1>;
+> +			#size-cells = <0>;
+> +			port@0 {
+> +				reg = <0>;
+> +				ps8640_in: endpoint {
+> +					remote-endpoint = <&dsi0_out>;
+> +				};
+> +			};
+> +			port@1 {
+> +				reg = <1>;
+> +				ps8640_out: endpoint {
+> +					remote-endpoint = <&panel_in>;
+> +				};
+> +			};
+> +		};
+> +	};
 
-Change since v1:
-remove unused property num-pwm
+It's not really fair to ask this after the rough history of this
+patchset apparently, but bindings should be submitted in the YAML
+format now.
 
-Signed-off-by: Sam Shih <sam.shih@mediatek.com>
----
- arch/arm/boot/dts/mt7629.dtsi | 14 ++++++++++++++
- 1 file changed, 14 insertions(+)
+This wouldn't be nice to stop it from going in just because of this,
+so can you send a subsequent patch fixing this?
 
-diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
-index 867b88103b9d..ce2a30a24017 100644
---- a/arch/arm/boot/dts/mt7629.dtsi
-+++ b/arch/arm/boot/dts/mt7629.dtsi
-@@ -241,6 +241,20 @@
- 			status = "disabled";
- 		};
- 
-+		pwm: pwm@11006000 {
-+			compatible = "mediatek,mt7629-pwm";
-+			reg = <0x11006000 0x1000>;
-+			interrupts = <GIC_SPI 77 IRQ_TYPE_LEVEL_LOW>;
-+			clocks = <&topckgen CLK_TOP_PWM_SEL>,
-+				 <&pericfg CLK_PERI_PWM_PD>,
-+				 <&pericfg CLK_PERI_PWM1_PD>;
-+			clock-names = "top", "main", "pwm1";
-+			assigned-clocks = <&topckgen CLK_TOP_PWM_SEL>;
-+			assigned-clock-parents =
-+					<&topckgen CLK_TOP_UNIVPLL2_D4>;
-+			status = "disabled";
-+		};
-+
- 		i2c: i2c@11007000 {
- 			compatible = "mediatek,mt7629-i2c",
- 				     "mediatek,mt2712-i2c";
--- 
-2.17.1
+Thanks!
+Maxime
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
