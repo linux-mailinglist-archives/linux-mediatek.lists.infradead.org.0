@@ -2,76 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CD377123D15
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Dec 2019 03:27:53 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D947B123D66
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Dec 2019 03:46:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bc8I9z7jgLFnztvrO5lW0pnAfgDWXSqqAtkkbmq8Ams=; b=WX0bTThF6deCc5
-	+CMc/Bl/m+WQaXt1ARFjKad+O8sQpwGeyqhb4fuzTqipSUv4ZITX5oDAeYnaoBkK39Vlh8pKiComK
-	XJ0LMXqy5+GD8uzxZ8h/kDooBZnFbwEM93RYt/s/6hMHYYiA8XFuHHPOIhk7H7fT+VccAbDGMVVH+
-	Nj1nPKzCcXftpH1MHreL6Ro5fkNH7Q2QjdRL/cVNliMeCeSnR2x4Dxg9n9TDn4PV5VBEPh8siGdF7
-	887XH7D8fm5Hs/pef6Z/Z30AFw1yFPm2eDocDOLqjWNA5yfOBu1K94VEXcI2aiVQBkRYlZEaTl/TB
-	1lTy4hmObphQ4n/7e97Q==;
+	List-Owner; bh=869N8Xt7fhKDQ1MZn6RvAxMje7SC5QnuDQUf25iVsA8=; b=pzeCiiegDVeTB3
+	mJg8qcryjTHR5PGUG/L9HP7AqCwEcGWvglbB+BZh3hd8WW9FxCOZ/o+QxbVEe70kBCtiZhvcWx2aK
+	6BwwrGsIOrI7izv65iksY7RZQDuCfqcMnP8xTlcBZJENeulfvb3pOQFK4RPWHZHCDbMbI+Za73DUo
+	Vo3uvrtVr+VIHXw2Oz1xKJMLOnVdJAX7mjaZOsQFa0/wIZYHi2v42cbj56BWb9mZHmNkHr8n7Eey7
+	ZgPV+CyjJgN7H7wZLtCdY4D064exTJWhaggFImo35+puYx2/Kahyf/PBvsa1iVYvoiaJ3p7zhjESS
+	bgRF6yGFi8OH5zL86vng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihP3y-0001CA-KO; Wed, 18 Dec 2019 02:27:46 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1ihPM2-00029Z-RM; Wed, 18 Dec 2019 02:46:26 +0000
+Received: from mail-ed1-f68.google.com ([209.85.208.68])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihP3a-00010B-7r; Wed, 18 Dec 2019 02:27:23 +0000
-Received: from mail-wr1-f50.google.com (mail-wr1-f50.google.com
- [209.85.221.50])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 8795824679;
- Wed, 18 Dec 2019 02:27:21 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1576636041;
- bh=XXM1qIhv6mp83mUAwPbmy0ZfgUh12/5MVM64g+j5teY=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=hCi55Za6H6EHQPAD6URE8PGJGj3b8jufgHzcpYxUrTf1oOUk0J+qMQUm0sPJCtc7r
- 6hqTkdqqH/VSIYUPWgFk0SWRXd5zDliUXY7JRQjWGD8UVI/Jkk3JvuQlCMV4fucBh3
- b39jAE0qN9Y0vhBvTYjp72lV3E2ydN0Rtg9KqVu8=
-Received: by mail-wr1-f50.google.com with SMTP id c14so561837wrn.7;
- Tue, 17 Dec 2019 18:27:21 -0800 (PST)
-X-Gm-Message-State: APjAAAUdafRhupAvPkorn9W6inWc5ipH7bgjxmcaAbo/lkAhEL+KwgI0
- i4eY0O7Ghj8y65TxtobuP9g8jOoEwbS38Br8IO4=
-X-Google-Smtp-Source: APXvYqx5UqcfQ1FFJHQCZKd5vBjgfL46TLBnUHJQVj6I1P5C7P5qttyGdV5lMniGCCRpoGO06aEnPCSAImq8qwlk310=
-X-Received: by 2002:adf:81e3:: with SMTP id 90mr1054120wra.23.1576636040002;
- Tue, 17 Dec 2019 18:27:20 -0800 (PST)
+ id 1ihPLk-0001wB-2A; Wed, 18 Dec 2019 02:46:09 +0000
+Received: by mail-ed1-f68.google.com with SMTP id c26so372312eds.8;
+ Tue, 17 Dec 2019 18:46:07 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=vxwj4gd/9Empd7D3FvHODrnvOnRhpeyanogRcG726ys=;
+ b=N9w2qj4FVyUPDpeE0hfN5gphda3dQ0fYT8kK2GT+xiFtyqC0DoJbkd3/MMIw0YiNdD
+ zr50D9/VgDE0zJo1hbj4XjcSNgGUzpMp4+c0ytF/Hmx/d7AyTAxFlK6LQ58V/K0h3CaP
+ aDE8vH0vceZrcMOLK90V1JTVQLzzlghRRzyco7WogvST1qsz7LFUNywAcaG4L/OCeqpX
+ N1GTk6oYG23DXI3RTWkO7wSzgxlsn6eWWwmMDfk8AifP+Oq07khMids8tyik4PTUUkLv
+ ALhCZxU2nDNInW0lL5+Fa3EOT+sVUMaAacVDvUTwEvJQJK293UsEnCaPtaenLTfNxbPt
+ /1xw==
+X-Gm-Message-State: APjAAAUppxtEwIrmoj3iX4LW8LXbvDf5uccB5B0nxP6eeO8wjVZnZ1go
+ 1CZq0QiRCv7IDYUjzLMt2POOpLwlv7w=
+X-Google-Smtp-Source: APXvYqwJSuCj7yXW5zQ1fzUvytfkh6teQkiqVhGTdxYgtt7zdbGI3edhTDLrLn4/mjn+5YS1SE1Edw==
+X-Received: by 2002:a50:9e01:: with SMTP id z1mr1037183ede.232.1576637165200; 
+ Tue, 17 Dec 2019 18:46:05 -0800 (PST)
+Received: from mail-wr1-f49.google.com (mail-wr1-f49.google.com.
+ [209.85.221.49])
+ by smtp.gmail.com with ESMTPSA id s12sm36898eja.79.2019.12.17.18.46.04
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Tue, 17 Dec 2019 18:46:04 -0800 (PST)
+Received: by mail-wr1-f49.google.com with SMTP id g17so615959wro.2;
+ Tue, 17 Dec 2019 18:46:04 -0800 (PST)
+X-Received: by 2002:adf:81e3:: with SMTP id 90mr1136437wra.23.1576637164034;
+ Tue, 17 Dec 2019 18:46:04 -0800 (PST)
 MIME-Version: 1.0
-References: <20191215175120.3290-1-tiny.windzz@gmail.com>
-In-Reply-To: <20191215175120.3290-1-tiny.windzz@gmail.com>
-From: Chen-Yu Tsai <wens@kernel.org>
-Date: Wed, 18 Dec 2019 10:27:08 +0800
-X-Gmail-Original-Message-ID: <CAGb2v64uQr6JKCbhY+iMd___bLedvSOMTffg=JDX-pOZHY+sbw@mail.gmail.com>
-Message-ID: <CAGb2v64uQr6JKCbhY+iMd___bLedvSOMTffg=JDX-pOZHY+sbw@mail.gmail.com>
-Subject: Re: [PATCH 01/13] mmc: sunxi-mmc: convert to
+References: <20191214175447.25482-1-tiny.windzz@gmail.com>
+In-Reply-To: <20191214175447.25482-1-tiny.windzz@gmail.com>
+From: Chen-Yu Tsai <wens@csie.org>
+Date: Wed, 18 Dec 2019 10:45:52 +0800
+X-Gmail-Original-Message-ID: <CAGb2v67kgMcV5hhURYzMCggeTSnOoupmYKDPViS0tiYFSxOfjA@mail.gmail.com>
+Message-ID: <CAGb2v67kgMcV5hhURYzMCggeTSnOoupmYKDPViS0tiYFSxOfjA@mail.gmail.com>
+Subject: Re: [PATCH 01/10] soc: sunxi: convert to
  devm_platform_ioremap_resource
-To: Yangtao Li <tiny.windzz@gmail.com>, Ulf Hansson <ulf.hansson@linaro.org>
+To: Yangtao Li <tiny.windzz@gmail.com>, Maxime Ripard <mripard@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_182722_306554_5AC1BE76 
-X-CRM114-Status: GOOD (  15.57  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20191217_184608_108660_5A3AFED4 
+X-CRM114-Status: GOOD (  14.57  )
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.208.68 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.208.68 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (wens213[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (wens213[at]gmail.com)
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,54 +92,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>, geert+renesas@glider.be,
- Linus Walleij <linus.walleij@linaro.org>,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Kevin Hilman <khilman@baylibre.com>, Jaehoon Chung <jh80.chung@samsung.com>,
- Andy Gross <agross@kernel.org>, chaotian.jing@mediatek.com,
+Cc: linuxppc-dev@lists.ozlabs.org, linux-mips@vger.kernel.org,
+ Kevin Hilman <khilman@baylibre.com>,
  linux-arm-msm <linux-arm-msm@vger.kernel.org>,
- wsa+renesas@sang-engineering.com, Maxime Ripard <mripard@kernel.org>,
+ Santosh Shilimkar <ssantosh@kernel.org>,
  "moderated list:ARM/Mediatek SoC..." <linux-mediatek@lists.infradead.org>,
- ben-linux@fluff.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ Krzysztof Kozlowski <krzk@kernel.org>, leoyang.li@nxp.com,
+ "moderated list:ARM/SAMSUNG EXYNO..." <linux-samsung-soc@vger.kernel.org>,
+ Andy Gross <agross@kernel.org>, khalasa@piap.pl, Kukjin Kim <kgene@kernel.org>,
+ John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
  "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- Thomas Gleixner <tglx@linutronix.de>, allison@lohutok.net,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>, nico@fluxnic.net,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- yoshihiro.shimoda.uh@renesas.com, linux-mmc <linux-mmc@vger.kernel.org>,
- Adrian Hunter <adrian.hunter@intel.com>,
- linux-kernel <linux-kernel@vger.kernel.org>, Viresh Kumar <vireshk@kernel.org>,
- manuel.lauss@gmail.com
+ Jun Nie <jun.nie@linaro.org>, Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Shawn Guo <shawnguo@kernel.org>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Dec 16, 2019 at 1:51 AM Yangtao Li <tiny.windzz@gmail.com> wrote:
+On Sun, Dec 15, 2019 at 1:54 AM Yangtao Li <tiny.windzz@gmail.com> wrote:
 >
 > Use devm_platform_ioremap_resource() to simplify code.
 >
 > Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
-> ---
 
 Acked-by: Chen-Yu Tsai <wens@csie.org>
 
->  drivers/mmc/host/sunxi-mmc.c | 3 +--
->  1 file changed, 1 insertion(+), 2 deletions(-)
+> ---
+>  drivers/soc/sunxi/sunxi_sram.c | 4 +---
+>  1 file changed, 1 insertion(+), 3 deletions(-)
 >
-> diff --git a/drivers/mmc/host/sunxi-mmc.c b/drivers/mmc/host/sunxi-mmc.c
-> index d577a6b0ceae..f87d7967457f 100644
-> --- a/drivers/mmc/host/sunxi-mmc.c
-> +++ b/drivers/mmc/host/sunxi-mmc.c
-> @@ -1273,8 +1273,7 @@ static int sunxi_mmc_resource_request(struct sunxi_mmc_host *host,
->         if (ret)
->                 return ret;
+> diff --git a/drivers/soc/sunxi/sunxi_sram.c b/drivers/soc/sunxi/sunxi_sram.c
+> index 1b0d50f36349..f73fbcc73f51 100644
+> --- a/drivers/soc/sunxi/sunxi_sram.c
+> +++ b/drivers/soc/sunxi/sunxi_sram.c
+> @@ -320,7 +320,6 @@ static struct regmap_config sunxi_sram_emac_clock_regmap = {
 >
-> -       host->reg_base = devm_ioremap_resource(&pdev->dev,
-> -                             platform_get_resource(pdev, IORESOURCE_MEM, 0));
-> +       host->reg_base = devm_platform_ioremap_resource(pdev, 0);
->         if (IS_ERR(host->reg_base))
->                 return PTR_ERR(host->reg_base);
+>  static int sunxi_sram_probe(struct platform_device *pdev)
+>  {
+> -       struct resource *res;
+>         struct dentry *d;
+>         struct regmap *emac_clock;
+>         const struct sunxi_sramc_variant *variant;
+> @@ -331,8 +330,7 @@ static int sunxi_sram_probe(struct platform_device *pdev)
+>         if (!variant)
+>                 return -EINVAL;
+>
+> -       res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> -       base = devm_ioremap_resource(&pdev->dev, res);
+> +       base = devm_platform_ioremap_resource(pdev, 0);
+>         if (IS_ERR(base))
+>                 return PTR_ERR(base);
 >
 > --
 > 2.17.1
