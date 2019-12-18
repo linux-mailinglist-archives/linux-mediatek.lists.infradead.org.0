@@ -2,83 +2,52 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4B56F124201
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Dec 2019 09:42:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0B65B1243A0
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Dec 2019 10:48:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jILNigt4iXsRCQjOd+IEVUIh9hQ/aM8FMatqJxhEXi8=; b=kc8K+nwsafhd7W
-	z4V7B592dUWu7xVagTAp1Qrrb6Ppwxxfj8M2UWcgfba6umRjsCmwFnfs8Hb+IAt7DizpIIizADaDf
-	ylquWG4kqzCNW+GGCt4xFz/afDycRltX/qgaUnACG6g0tzE9Bybi/cFtVKCqak1AJxcDhyEpQC45g
-	yPr47c7aKdqusbSHo144BmQDOeC7qklhoP1JvhQPQhnRFWCGSk8a/QBA2fUo6aH0XSUEdOQqrnUwq
-	w/2q2GqZu3tNI49jQFIRh//ejydzv05DFCRuokY2juBXTzWPRntc309NqkGWiHeRH9lwuDuGluaMk
-	+Z7PR7querTEGgfBOKsA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=IQufvZP7zvsRmigmO0jvlhy6U/QVqo2AlgcnnM2puwg=; b=rqTRPpWQZgguEs0RJs+k5raHZ
+	qz88PCwDaWuWFPZCzXBD/cPFrR/OFbJH0NXA9cNiNn//Lt/ba1TycfmqSqLJa4R/+FuxJc9gZ2MyJ
+	AKuH5Rl9BtPGe3PqQP8dS5Ux/RBWryZa0R/xvjkwmn0ncaz43DyhmuH6s7gNA2YZegUzFkw5s6f0k
+	2z/XvLbq942ezam+l0G4GnxvKdxbtp5YaMBGsNQErnz4tPsz2lwmhcSN+JjIr/tO5njpO+OMOUnIq
+	XhM3N2SXULoNubh4DioALIp6xZNlSABufZEuyITpFim3Y2XUENgIqA+Qgb8Vq7aZe/I6zGhTTuCyX
+	5bvQMis9w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihUuh-0005SF-QA; Wed, 18 Dec 2019 08:42:35 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihUtG-0004ER-PH; Wed, 18 Dec 2019 08:41:09 +0000
-X-UUID: ff225f20eb754956bbff842467f710c4-20191218
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=k477Yin3YYJsBHpEx1LJG/SeYRoLXIpqmsdtWHjiaaQ=; 
- b=d6DjRiukSQROsNcrxpJMxZgrzxpGr5LpZxH5MFYuYPZHa8FE2ldagqjvIzLn0VZeqDs6sUo/plHltXgZmPSKxQc5AWDmXHuvLRSGo6+lruzUBeg4YSlVn8sSkgy7WZ7Wt9bNy9N7F3HqukWtgwzT2BoaMNWcuToGQMmlm2nI/k4=;
-X-UUID: ff225f20eb754956bbff842467f710c4-20191218
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <weiyi.lu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 921000938; Wed, 18 Dec 2019 00:41:02 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Dec 2019 00:31:13 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Dec 2019 16:30:27 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 18 Dec 2019 16:30:30 +0800
-From: Weiyi Lu <weiyi.lu@mediatek.com>
-To: Nicolas Boichat <drinkcat@chromium.org>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh@kernel.org>, Sascha Hauer
- <kernel@pengutronix.de>
-Subject: [PATCH v10 12/12] arm64: dts: Add power-domains properity to mfgcfg
-Date: Wed, 18 Dec 2019 16:30:48 +0800
-Message-ID: <1576657848-14711-13-git-send-email-weiyi.lu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1576657848-14711-1-git-send-email-weiyi.lu@mediatek.com>
-References: <1576657848-14711-1-git-send-email-weiyi.lu@mediatek.com>
+	id 1ihVwH-0000xF-Te; Wed, 18 Dec 2019 09:48:17 +0000
+Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1ihVw4-0000ki-Rc; Wed, 18 Dec 2019 09:48:06 +0000
+Received: from localhost (p54B33260.dip0.t-ipconnect.de [84.179.50.96])
+ by pokefinder.org (Postfix) with ESMTPSA id 192732C06A9;
+ Wed, 18 Dec 2019 10:48:01 +0100 (CET)
+Date: Wed, 18 Dec 2019 10:47:57 +0100
+From: Wolfram Sang <wsa@the-dreams.de>
+To: Yangtao Li <tiny.windzz@gmail.com>
+Subject: Re: [PATCH 02/13] mmc: tmio: convert to devm_platform_ioremap_resource
+Message-ID: <20191218094757.GA1054@ninjato>
+References: <20191215175120.3290-1-tiny.windzz@gmail.com>
+ <20191215175120.3290-2-tiny.windzz@gmail.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 22B653AA39A49EDABF3D3E51A972D91CB27FBC86D0294B64370C67F47B81A3532000:8
-X-MTK: N
+In-Reply-To: <20191215175120.3290-2-tiny.windzz@gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191218_004106_848448_8A96D4C6 
-X-CRM114-Status: UNSURE (   8.59  )
+X-CRM114-CacheID: sfid-20191218_014805_041706_C633BF6F 
+X-CRM114-Status: UNSURE (   5.89  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [88.99.104.3 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,37 +59,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: James Liao <jamesjj.liao@mediatek.com>, Weiyi Lu <weiyi.lu@mediatek.com>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Fan Chen <fan.chen@mediatek.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: kstewart@linuxfoundation.org, ulf.hansson@linaro.org,
+ geert+renesas@glider.be, linus.walleij@linaro.org, bjorn.andersson@linaro.org,
+ yamada.masahiro@socionext.com, khilman@baylibre.com, jh80.chung@samsung.com,
+ wens@csie.org, agross@kernel.org, chaotian.jing@mediatek.com,
+ linux-arm-msm@vger.kernel.org, wsa+renesas@sang-engineering.com,
+ mripard@kernel.org, linux-mediatek@lists.infradead.org, ben-linux@fluff.org,
+ matthias.bgg@gmail.com, linux-amlogic@lists.infradead.org, tglx@linutronix.de,
+ allison@lohutok.net, linux-arm-kernel@lists.infradead.org, nico@fluxnic.net,
+ gregkh@linuxfoundation.org, yoshihiro.shimoda.uh@renesas.com,
+ linux-mmc@vger.kernel.org, adrian.hunter@intel.com,
+ linux-kernel@vger.kernel.org, vireshk@kernel.org, manuel.lauss@gmail.com
+Content-Type: multipart/mixed; boundary="===============6268588746845069269=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-mfgcfg clock is under MFG_ASYNC power domain
 
-Signed-off-by: Weiyi Lu <weiyi.lu@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 1 +
- 1 file changed, 1 insertion(+)
+--===============6268588746845069269==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="1yeeQ81UyVL57Vl7"
+Content-Disposition: inline
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 91217e4f..40145dc 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -643,6 +643,7 @@
- 			compatible = "mediatek,mt8183-mfgcfg", "syscon";
- 			reg = <0 0x13000000 0 0x1000>;
- 			#clock-cells = <1>;
-+			power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_ASYNC>;
- 		};
- 
- 		mmsys: syscon@14000000 {
--- 
-1.8.1.1.dirty
+
+--1yeeQ81UyVL57Vl7
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Sun, Dec 15, 2019 at 05:51:09PM +0000, Yangtao Li wrote:
+> Use devm_platform_ioremap_resource() to simplify code.
+>=20
+> Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
+
+I am not a big fan of this new function, but oh well...
+
+Tested on a Lager board (R-Car H2), SDHI gets recognized and SD cards
+are detected.
+
+Reviewed-by: Wolfram Sang <wsa+renesas@sang-engineering.com>
+Tested-by: Wolfram Sang <wsa+renesas@sang-engineering.com>
+
+
+--1yeeQ81UyVL57Vl7
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl359cgACgkQFA3kzBSg
+KbaFBw/+Np52ahaH5+TRKI/drXlFCXUL5HuWieFoxsd85DJHgxSXOTku4oSCDjSy
+tQ305gyE97P963NpUtrU9V2uovdl27ko/jA8kC9z0fxx7+DoDdTqw13JjTTBLOW9
+s3dELTr7BVx5j+UEWfFBGP0VbiM57oOm+qAiNMhjoY64Fkmkn/3oroDk9M7LY+kz
+GjvwgLpiDXeOylLKpHQzk4+pO1X0aGqtTncveQ8Oa/CKytN9UCDfUH7gI1HgXLeM
+FDqu3HGucRHbL52bLxnz71PrJWQ3Z6Cxm46Z8mKbWDFvnLJoCIegymSGdzawqzf0
+wWmBUh+LocMl6reuTeD4s5I0HDyt+LAU1Kx1R0LQMflXe9KIVukga9W20B1eh6dH
+r1PDsfj9Y0GQwyY9X7PEhV90B3t/rGHhmw/XMZAMqf2xkgkrD2rlLr1aO+xLv84D
+asn6q8ZYfgKF9tmN6lUnJTpP8hXKG017MOk1jS5R+2iaXi5Fp3rSmX0DpQTHye+x
+/wWU9IpJ1HBKTdGWZFnJwd1SCOVzYR4mlLwvOpjiw66ZbX00y5obr773NkgjG/iA
+p1mbF7OO/5MFOAZgpyM0zzCTSaWjh/GfbGEOfEVhcXErCZhS4WmQjJ3k+rg8JBn8
+Pwu2Sgz+1rwyeqOiHZJtY3QkffH3x1IsskLYbK2kSHs06L2t7O4=
+=XhTS
+-----END PGP SIGNATURE-----
+
+--1yeeQ81UyVL57Vl7--
+
+
+--===============6268588746845069269==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============6268588746845069269==--
+
