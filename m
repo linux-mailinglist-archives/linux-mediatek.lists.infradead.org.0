@@ -2,86 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9AB34128E7B
-	for <lists+linux-mediatek@lfdr.de>; Sun, 22 Dec 2019 15:14:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7AD27128F94
+	for <lists+linux-mediatek@lfdr.de>; Sun, 22 Dec 2019 19:51:38 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tFVixLGKrz1KW9SVK/DoyT5yn3b6nMmSAJrlwFUEuRo=; b=ANfy4zUPYdboRN
-	S+Sww3N8gogfQrLj9ALlxDVJaadRiHDBEt6d8tI+LCcO7dmLlV0h0HmoHg8L0ssRU89URyX/scGl1
-	n4BiyvXLDbAb5dAvmsjvCZNH4Sziv7M967z+EslTOoc25eS+9rZjzaiIQx4Ea3/oIrr4opxNBk2KP
-	vqlIioobEZ6byJC5bI6jXTIfeASMSoutw+uZ5iHGW5x1jv80Q/RQXOvGWqf99zceUagHgH0K3zsLz
-	UbECbbuggCKeqGXV9QrHWF1kMt9wcC6+4aj03AfwMjt7o5RfPoiUgXGxjVYnFYF5h7OlwiNM16D8m
-	eOffHY6gxnbviLRe5kQw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=fhnTsMyuned+U+JQnkfjQhK3vlZEFfT7zC1zL/s0Tc8=; b=DfF
+	pYMygyXmLWqltKpNCEe0GHj72vlP6npd1YsJfGBMhjyrEahjkGybogMwe+M2tyvux8Ce7ditrLLzk
+	/SlvZGWJKKWELwuoq/bbnKAEuMBz4wbYsX6qeY38GlyEqmOdg1fDIRtKkehvP5FQTceyCksn94CSN
+	rRyOzp7KCB/ZJTR11EWN1O0LovjYVS+VeMKqFqe5SaVvWkywdkd9TlfkVPLt3VO5unzekX6yk3G2x
+	5+IZv2bjSbaIq3hjiEfG2weEuD1FHlOGWS7dANfC4BMkA359Zz/GWPFf2iBpXhpQZ81jnDdxMOHQ2
+	Fvf+sAA/HTKd+cmLMbddiOQYBryN4lQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ij20T-000510-O5; Sun, 22 Dec 2019 14:14:53 +0000
-Received: from nbd.name ([2a01:4f8:221:3d45::2])
+	id 1ij6KB-0003o4-K7; Sun, 22 Dec 2019 18:51:31 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ij1z5-0003oT-9H
- for linux-mediatek@lists.infradead.org; Sun, 22 Dec 2019 14:13:31 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
- s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=m0FgooPBBIw1l4x4W2SABSMsW8gCsRYOEWrhJk0KSk8=; b=trcjrr1L5OUiRNoawN+h04Qicr
- GyfvtVwhZbylyzWYSwPL/rfT2N39PmXENs4hpxRFmblIdqYnOkKWqyp0zowTj3THxKB/3R4NmDjj8
- MEGzqOosu38d0cY9tb6JLFexPwi5O8oOCIkF8qgsKmWJp/w2q11ETb0L6KoKRJZbKj9M=;
-Received: from [81.95.5.44] (helo=nf.local)
- by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
- (Exim 4.89) (envelope-from <nbd@nbd.name>)
- id 1ij1yz-0000ut-DI; Sun, 22 Dec 2019 15:13:21 +0100
-Subject: Re: [PATCH 2/2] mt76: mt7615: add set_antenna callback
-To: Ryder Lee <ryder.lee@mediatek.com>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
-References: <d3d47e29e2a39c42adfcf912a27b9d19a01d5010.1576381077.git.ryder.lee@mediatek.com>
- <6b3ac6736c0cfa12492f383ec9cfcaad91bfb965.1576381077.git.ryder.lee@mediatek.com>
-From: Felix Fietkau <nbd@nbd.name>
-Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
- xsDiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
- ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
- Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
- AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
- vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
- wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
- TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
- l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwc0cRmVsaXggRmll
- dGthdSA8bmJkQG5iZC5uYW1lPsJgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
- HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
- VrwYTIThkTlQzsFNBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
- CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
- VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
- Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
- DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
- wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
- f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
- aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
- FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
- TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabwkkE
- GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
- RjMaxwtSdaCKMw3j33ZbsWS4
-Message-ID: <a29cf0f3-6f7d-9fe5-8d5f-70712963366d@nbd.name>
-Date: Sun, 22 Dec 2019 15:13:20 +0100
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0)
- Gecko/20100101 Thunderbird/68.3.0
-MIME-Version: 1.0
-In-Reply-To: <6b3ac6736c0cfa12492f383ec9cfcaad91bfb965.1576381077.git.ryder.lee@mediatek.com>
-Content-Language: en-US
+ id 1ij6JP-0003FY-UW; Sun, 22 Dec 2019 18:50:45 +0000
+Received: by mail-pg1-x541.google.com with SMTP id 6so7714768pgk.0;
+ Sun, 22 Dec 2019 10:50:38 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id;
+ bh=1MMK/7Lq6Q5MHtrU9nSWhUsHgp2FaIobPnqB6i1bmvU=;
+ b=bnPRKiD/QwgUAYoz9VJpDVZ/p49jbueKzMRH23UoBCumqWMJaoMPQ6dZKsx2LUpLwd
+ 6qLyEJnGymgKxrVXAQeUZyzLjfPstF428bDfW7u4w83ytM7jXae42VT7aKfH8v9Ojho9
+ ZSeJZpy8feXZePbc8zB0MwLGIxxFHWStinLBTA8nmHI456Nx8CLH5QDFlb6qaKkxsi/t
+ Ik/qjSa8zXDnH7xdgx+rQp5xifmJLeqiEKxY/Lg7e7u82xnxV7U9847OOQQ0ks/JX05+
+ 5WxkfOP9ggtKlWEpQ4xuDMToMznSBf61l3CgigFqEoUnTL4tC7tWGNmrbXdOGihgMBOJ
+ kJaQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=1MMK/7Lq6Q5MHtrU9nSWhUsHgp2FaIobPnqB6i1bmvU=;
+ b=DELlTXXcaEta/MjFr5dCxiuGFjwH1ovjJhFWtwgycV/+b0yfQgg/FvLq5PIiq4IHs1
+ RmLXzD9ld47R6ZdV2ocO6OTxSTlglwcQMWKo3Nngk8lvVpCoKKlFRPycd9D3rsNTgYjY
+ ih8LkyY162+eb3huQ1ssYAeABcIUmzb98q/RHPBAB/OZuoyTMOQHP8ezodG13v88HuKP
+ 6/7X+K4ZDM66Ml/L4MfVAXXeTSERsBM909DeXN/E8MZfiFJlUH1rRQKJHSTYid3ZSxKC
+ YxAMzCGQ+feN1xyUYBS713fv2zl/E4WkAxwaBs+2L1N4ozsy9JKIoC8ojL7y0N/9ZTaU
+ PI2g==
+X-Gm-Message-State: APjAAAWPGJfMUGi9kZTiT2iPgOwp6+9UGigQZOg9JONCo1hVu2/t/UmE
+ YLVXB+3gYiqUqJyOzfe4+RE=
+X-Google-Smtp-Source: APXvYqylTRiXM3UuNPaW1PQbCJGvvGrSq2F3X2MYO9m7QdlL5O965z+77yHko+WYYeaRM/Y4Tq4vxQ==
+X-Received: by 2002:a65:4381:: with SMTP id m1mr27847656pgp.68.1577040637744; 
+ Sun, 22 Dec 2019 10:50:37 -0800 (PST)
+Received: from localhost ([2001:19f0:6001:12c8:5400:2ff:fe72:6403])
+ by smtp.gmail.com with ESMTPSA id t63sm21401643pfb.70.2019.12.22.10.50.36
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Sun, 22 Dec 2019 10:50:37 -0800 (PST)
+From: Yangtao Li <tiny.windzz@gmail.com>
+To: ssantosh@kernel.org, paul@crapouillou.net, matthias.bgg@gmail.com,
+ rogerq@ti.com, tony@atomide.com, lukasz.luba@arm.com, kgene@kernel.org,
+ krzk@kernel.org, thierry.reding@gmail.com, jonathanh@nvidia.com,
+ allison@lohutok.net, tglx@linutronix.de, yong.wu@mediatek.com,
+ jroedel@suse.de, evgreen@chromium.org, rfontana@redhat.com,
+ digetx@gmail.com, pdeschrijver@nvidia.com, john@phrozen.org,
+ alexios.zavras@intel.com, sboyd@kernel.org, kstewart@linuxfoundation.org,
+ info@metux.net, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org,
+ linux-omap@vger.kernel.org, linux-pm@vger.kernel.org,
+ linux-samsung-soc@vger.kernel.org, linux-tegra@vger.kernel.org
+Subject: [PATCH 1/9] memory: emif: convert to devm_platform_ioremap_resource
+Date: Sun, 22 Dec 2019 18:50:26 +0000
+Message-Id: <20191222185034.4665-1-tiny.windzz@gmail.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191222_061328_107757_19B254EE 
-X-CRM114-Status: GOOD (  16.10  )
+X-CRM114-CacheID: sfid-20191222_105044_010296_B60EFA60 
+X-CRM114-Status: UNSURE (   8.29  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (tiny.windzz[at]gmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -100,68 +102,45 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Shayne Chen <shayne.chen@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Roy Luo <royluo@google.com>
+Cc: Yangtao Li <tiny.windzz@gmail.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2019-12-15 04:56, Ryder Lee wrote:
-> Add a set_antenna callback to setup per phy tx/rx streams.
-> 
-> Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> ---
->  .../net/wireless/mediatek/mt76/mt7615/main.c  | 30 +++++++++++++++++++
->  1 file changed, 30 insertions(+)
-> 
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> index 759a66997c6f..70791544a088 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
-> @@ -48,6 +48,8 @@ static int mt7615_start(struct ieee80211_hw *hw)
->  		mt7615_mcu_set_mac_enable(dev, 1, true);
->  	}
->  
-> +	mt7615_mcu_set_chan_info(phy, MCU_EXT_CMD_SET_RX_PATH);
-> +
->  	set_bit(MT76_STATE_RUNNING, &phy->mt76->state);
->  
->  	if (running)
-This chunk needs to be moved to the first patch to avoid creating a
-regression.
+Use devm_platform_ioremap_resource() to simplify code.
 
-> @@ -635,6 +637,33 @@ mt7615_set_coverage_class(struct ieee80211_hw *hw, s16 coverage_class)
->  	mt7615_mac_set_timing(phy);
->  }
->  
-> +static int
-> +mt7615_set_antenna(struct ieee80211_hw *hw, u32 tx_ant, u32 rx_ant)
-> +{
-> +	struct mt7615_dev *dev = mt7615_hw_dev(hw);
-> +	struct mt7615_phy *phy = mt7615_hw_phy(hw);
-> +	int max_nss = hweight8(hw->wiphy->available_antennas_tx);
-> +	bool ext_phy = phy != &dev->phy;
-> +
-> +	if (!tx_ant || tx_ant != rx_ant || ffs(tx_ant) > max_nss)
-> +		return -EINVAL;
-> +
-> +	if ((BIT(hweight8(tx_ant)) - 1) != tx_ant)
-> +		tx_ant = BIT(ffs(tx_ant) - 1) - 1;
-> +
-> +	mutex_lock(&dev->mt76.mutex);
-> +
-> +	phy->mt76->antenna_mask = tx_ant;
-> +	phy->chainmask = ext_phy ? tx_ant << 2 : tx_ant;
-> +
-> +	mt76_set_stream_caps(&dev->mt76, true);
-> +	mt7615_mcu_set_chan_info(phy, MCU_EXT_CMD_SET_RX_PATH);
-This call is unnecessary, because antenna settings can only be changed
-when the device is not running.
+Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
+---
+ drivers/memory/emif.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
-- Felix
+diff --git a/drivers/memory/emif.c b/drivers/memory/emif.c
+index 9d9127bf2a59..9a8463716a54 100644
+--- a/drivers/memory/emif.c
++++ b/drivers/memory/emif.c
+@@ -1537,7 +1537,6 @@ static struct emif_data *__init_or_module get_device_details(
+ static int __init_or_module emif_probe(struct platform_device *pdev)
+ {
+ 	struct emif_data	*emif;
+-	struct resource		*res;
+ 	int			irq;
+ 
+ 	if (pdev->dev.of_node)
+@@ -1557,8 +1556,7 @@ static int __init_or_module emif_probe(struct platform_device *pdev)
+ 	emif->dev = &pdev->dev;
+ 	platform_set_drvdata(pdev, emif);
+ 
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	emif->base = devm_ioremap_resource(emif->dev, res);
++	emif->base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(emif->base))
+ 		goto error;
+ 
+-- 
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
