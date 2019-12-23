@@ -2,63 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1C78012910D
-	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Dec 2019 04:02:15 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 780B512921B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Dec 2019 08:10:30 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=k2/UeV/i88Sa6ebqaX1SPVAujE7AW2/0VR4V+GqUcsM=; b=M/nP8zKk7K2hFIJOXJFy9PkPO
-	CDLJc1+3TVTiN1tDWmNx0+tC1Dys0WHF89TirshIBuK7pvZwyDUq37PYU2lCAMvThpBhaENC9U+9i
-	B5EDBs0g6UG14gL1eGRCILj88MArmEc3JmvzV841/vJ6eVcUZdpscKC9WAmEXM85Z6D3sVztOLhLk
-	cU017LbgCDih4RITH1nJpqFc6lOyCkRP3MhBbgmI6r+o2Z4tKQ8qGntQveGuNNmBUzMd+tQSoz7Ff
-	X0PLjj4ruwEwUhLD9Nx8XbzL2DZmEfbMS9dyeXTiuZpCE4fxdqhgnqWvOKIL6PzlyER4sELbbAGMD
-	TNt0hr/mQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=8V7k8W7Wf3OfTU8NpCKC7AL1E8NuE3v7dgYa740m17s=; b=HIQAz9IWwzw9e4
+	6oE5BQwwqlt0Pzn2cCqWPnL4gLNaOhDJpdunVrrl8ryRImuyAUEAz4XNNdoHrxY0chMGE255Vbd6L
+	69WQyeTZMbxRwHp+RKMqtrmkkmlIKJ7Eb/ZvFCK3noA5FzLLdzgDtIWjflyEQn4xxX+41OTAvMIQe
+	0r1Uz56vk50jLkk+7YBrJE602g9mQuzZwBE/4O732vbdbnV6xAzk6q8CbkBMIUBUefP7+1SAeDwmQ
+	GesLuJxnVALtnY5ND+d9IfojvbVx14iQ65KPy/v/Cti2GI0AlrvW3r/nnx0+6sFvZs/uf/W2Ib/Rh
+	9lSkI2ntnewiwTWK8VQg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ijDyp-0003t9-15; Mon, 23 Dec 2019 03:01:59 +0000
-Received: from mga02.intel.com ([134.134.136.20])
+	id 1ijHrA-0008SD-Gx; Mon, 23 Dec 2019 07:10:20 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ijDyk-0003sE-Hw; Mon, 23 Dec 2019 03:01:56 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga005.fm.intel.com ([10.253.24.32])
- by orsmga101.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 22 Dec 2019 19:01:49 -0800
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.69,346,1571727600"; d="scan'208";a="417121170"
-Received: from allen-box.sh.intel.com (HELO [10.239.159.136])
- ([10.239.159.136])
- by fmsmga005.fm.intel.com with ESMTP; 22 Dec 2019 19:01:43 -0800
-Subject: Re: [PATCH 1/8] iommu/vt-d: clean up 32bit si_domain assignment
-To: Tom Murphy <murphyt7@tcd.ie>, iommu@lists.linux-foundation.org
-References: <20191221150402.13868-1-murphyt7@tcd.ie>
- <20191221150402.13868-2-murphyt7@tcd.ie>
-From: Lu Baolu <baolu.lu@linux.intel.com>
-Message-ID: <e569e246-11a1-e8bd-9347-310284e96885@linux.intel.com>
-Date: Mon, 23 Dec 2019 11:00:47 +0800
+ id 1ijHqw-0007An-N2; Mon, 23 Dec 2019 07:10:09 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id 79C76283E20
+Subject: Re: [PATCH v22 2/2] drm/bridge: Add I2C based driver for ps8640 bridge
+To: Nicolas Boichat <drinkcat@chromium.org>
+References: <20191220081738.1895-1-enric.balletbo@collabora.com>
+ <20191220081738.1895-3-enric.balletbo@collabora.com>
+ <CANMq1KBHsc8oqcjWnjLPCpRToyOm16X6EcQqmqPjZf=D7wA2-Q@mail.gmail.com>
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Message-ID: <05db638b-02a6-0e3a-43ed-44a0a1458d87@collabora.com>
+Date: Mon, 23 Dec 2019 08:09:57 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.2.2
+ Thunderbird/68.3.0
 MIME-Version: 1.0
-In-Reply-To: <20191221150402.13868-2-murphyt7@tcd.ie>
+In-Reply-To: <CANMq1KBHsc8oqcjWnjLPCpRToyOm16X6EcQqmqPjZf=D7wA2-Q@mail.gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191222_190154_633160_AE92A8A3 
-X-CRM114-Status: GOOD (  17.24  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20191222_231007_028103_0627CFD2 
+X-CRM114-Status: GOOD (  22.56  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.20 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [134.134.136.20 listed in wl.mailspike.net]
- -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,74 +62,460 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>, kvm@vger.kernel.org,
- David Airlie <airlied@linux.ie>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- dri-devel@lists.freedesktop.org, Bjorn Andersson <bjorn.andersson@linaro.org>,
- linux-tegra@vger.kernel.org, Julien Grall <julien.grall@arm.com>,
- Thierry Reding <thierry.reding@gmail.com>, Will Deacon <will@kernel.org>,
- Marek Szyprowski <m.szyprowski@samsung.com>,
- Jean-Philippe Brucker <jean-philippe@linaro.org>,
- linux-samsung-soc@vger.kernel.org, Marc Zyngier <maz@kernel.org>,
- Joerg Roedel <joro@8bytes.org>, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
- Andy Gross <agross@kernel.org>, linux-arm-kernel@lists.infradead.org,
- linux-s390@vger.kernel.org, linux-arm-msm@vger.kernel.org,
- intel-gfx@lists.freedesktop.org, Jani Nikula <jani.nikula@linux.intel.com>,
- Eric Auger <eric.auger@redhat.com>,
- Alex Williamson <alex.williamson@redhat.com>,
- linux-mediatek@lists.infradead.org, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- virtualization@lists.linux-foundation.org,
- Gerald Schaefer <gerald.schaefer@de.ibm.com>,
- David Woodhouse <dwmw2@infradead.org>, Cornelia Huck <cohuck@redhat.com>,
- linux-kernel@vger.kernel.org, Rob Clark <robdclark@gmail.com>,
- Kukjin Kim <kgene@kernel.org>, Daniel Vetter <daniel@ffwll.ch>,
- Robin Murphy <robin.murphy@arm.com>, baolu.lu@linux.intel.com
+Cc: Ulrich Hecht <uli@fpond.eu>, Jernej Skrabec <jernej.skrabec@siol.net>,
+ Jitao Shi <jitao.shi@mediatek.com>, Jonas Karlman <jonas@kwiboo.se>,
+ David Airlie <airlied@linux.ie>, Neil Armstrong <narmstrong@baylibre.com>,
+ lkml <linux-kernel@vger.kernel.org>, Andrzej Hajda <a.hajda@samsung.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ dri-devel@lists.freedesktop.org, Daniel Vetter <daniel@ffwll.ch>,
+ Hsin-Yi Wang <hsinyi@chromium.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Collabora Kernel ML <kernel@collabora.com>,
+ linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Hi Nicolas,
 
-On 12/21/19 11:03 PM, Tom Murphy wrote:
-> @@ -5618,9 +5583,13 @@ static int intel_iommu_add_device(struct device *dev)
->   	struct iommu_domain *domain;
->   	struct intel_iommu *iommu;
->   	struct iommu_group *group;
-> +	u64 dma_mask = *dev->dma_mask;
->   	u8 bus, devfn;
->   	int ret;
->   
-> +	if (dev->coherent_dma_mask && dev->coherent_dma_mask < dma_mask)
-> +		dma_mask = dev->coherent_dma_mask;
-> +
->   	iommu = device_to_iommu(dev, &bus, &devfn);
->   	if (!iommu)
->   		return -ENODEV;
-> @@ -5640,7 +5609,12 @@ static int intel_iommu_add_device(struct device *dev)
->   	domain = iommu_get_domain_for_dev(dev);
->   	dmar_domain = to_dmar_domain(domain);
->   	if (domain->type == IOMMU_DOMAIN_DMA) {
-> -		if (device_def_domain_type(dev) == IOMMU_DOMAIN_IDENTITY) {
-> +		/*
-> +		 * We check dma_mask >= dma_get_required_mask(dev) because
-> +		 * 32 bit DMA falls back to non-identity mapping.
-> +		 */
-> +		if (device_def_domain_type(dev) == IOMMU_DOMAIN_IDENTITY &&
-> +				dma_mask >= dma_get_required_mask(dev)) {
->   			ret = iommu_request_dm_for_dev(dev);
->   			if (ret) {
->   				dmar_remove_one_dev_info(dev);
+Many thanks for you review. Just preparing a new version with your comments
+addressed.
 
-dev->dma_mask is set to 32bit by default. During loading driver, it sets
-the real dma_mask with dma_set_mask() according to the real capability.
-Here you will always see 32bit dma_mask for each device.
+On 20/12/19 9:44, Nicolas Boichat wrote:
+> On Fri, Dec 20, 2019 at 4:17 PM Enric Balletbo i Serra
+> <enric.balletbo@collabora.com> wrote:
+>>
+>> From: Jitao Shi <jitao.shi@mediatek.com>
+>>
+>> This patch adds drm_bridge driver for parade DSI to eDP bridge chip.
+>>
+>> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+>> Reviewed-by: Daniel Kurtz <djkurtz@chromium.org>
+>> Reviewed-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+>> [uli: followed API changes, removed FW update feature]
+>> Signed-off-by: Ulrich Hecht <uli@fpond.eu>
+>> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+>> ---
+>> [snip]
+>>
+>>  drivers/gpu/drm/bridge/Kconfig         |  11 +
+>>  drivers/gpu/drm/bridge/Makefile        |   1 +
+>>  drivers/gpu/drm/bridge/parade-ps8640.c | 354 +++++++++++++++++++++++++
+> 
+> Half the size! Sounds great.
+> 
+> Mostly nits below.
+> 
+>>  3 files changed, 366 insertions(+)
+>>  create mode 100644 drivers/gpu/drm/bridge/parade-ps8640.c
+>>
+>> diff --git a/drivers/gpu/drm/bridge/parade-ps8640.c b/drivers/gpu/drm/bridge/parade-ps8640.c
+>> new file mode 100644
+>> index 000000000000..aa0045037f44
+>> --- /dev/null
+>> +++ b/drivers/gpu/drm/bridge/parade-ps8640.c
+>> @@ -0,0 +1,354 @@
+>> +// SPDX-License-Identifier: GPL-2.0-only
+>> +/*
+>> + * Copyright (c) 2016 MediaTek Inc.
+>> + */
+>> +
+>> +#include <linux/delay.h>
+>> +#include <linux/err.h>
+>> +#include <linux/gpio/consumer.h>
+>> +#include <linux/i2c.h>
+>> +#include <linux/module.h>
+>> +#include <linux/of_graph.h>
+>> +#include <linux/regulator/consumer.h>
+>> +
+>> +#include <drm/drm_bridge.h>
+>> +#include <drm/drm_mipi_dsi.h>
+>> +#include <drm/drm_of.h>
+>> +#include <drm/drm_panel.h>
+>> +#include <drm/drm_print.h>
+>> +
+>> +#define PAGE2_GPIO_H           0xa7
+>> +#define PS_GPIO9               BIT(1)
+>> +#define PAGE2_I2C_BYPASS       0xea
+>> +#define I2C_BYPASS_EN          0xd0
+>> +#define PAGE2_MCS_EN           0xf3
+>> +#define MCS_EN                 BIT(0)
+>> +#define PAGE3_SET_ADD          0xfe
+>> +#define VDO_CTL_ADD            0x13
+>> +#define VDO_DIS                        0x18
+>> +#define VDO_EN                 0x1c
+>> +
+>> +/*
+>> + * PS8640 uses multiple addresses:
+>> + * page[0]: for DP control
+>> + * page[1]: for VIDEO Bridge
+>> + * page[2]: for control top
+>> + * page[3]: for DSI Link Control1
+>> + * page[4]: for MIPI Phy
+>> + * page[5]: for VPLL
+>> + * page[6]: for DSI Link Control2
+>> + * page[7]: for SPI ROM mapping
+>> + */
+>> +enum page_addr_offset {
+>> +       PAGE0_DP_CNTL = 0,
+>> +       PAGE1_VDO_BDG,
+>> +       PAGE2_TOP_CNTL,
+>> +       PAGE3_DSI_CNTL1,
+>> +       PAGE4_MIPI_PHY,
+>> +       PAGE5_VPLL,
+>> +       PAGE6_DSI_CNTL2,
+>> +       PAGE7_SPI_CNTL,
+>> +       MAX_DEVS
+>> +};
+>> +
+>> +struct ps8640 {
+>> +       struct drm_bridge bridge;
+>> +       struct drm_bridge *panel_bridge;
+>> +       struct mipi_dsi_device *dsi;
+>> +       struct i2c_client *page[MAX_DEVS];
+>> +       struct regulator_bulk_data supplies[2];
+>> +       struct gpio_desc *gpio_reset;
+>> +       struct gpio_desc *gpio_powerdown;
+>> +};
+>> +
+>> +static inline struct ps8640 *bridge_to_ps8640(struct drm_bridge *e)
+>> +{
+>> +       return container_of(e, struct ps8640, bridge);
+>> +}
+>> +
+>> +static int ps8640_bridge_unmute(struct ps8640 *ps_bridge)
+>> +{
+>> +       struct i2c_client *client = ps_bridge->page[PAGE3_DSI_CNTL1];
+>> +       u8 vdo_ctrl_buf[] = { VDO_CTL_ADD, VDO_EN };
+> 
+> nit: const?
+> 
+>> +       int ret;
+>> +
+>> +       ret = i2c_smbus_write_i2c_block_data(client, PAGE3_SET_ADD,
+>> +                                            sizeof(vdo_ctrl_buf),
+>> +                                            vdo_ctrl_buf);
+>> +       if (ret < 0)
+>> +               return ret;
+>> +
+>> +       return 0;
+>> +}
+>> +
+>> +static int ps8640_bridge_mute(struct ps8640 *ps_bridge)
+>> +{
+>> +       struct i2c_client *client = ps_bridge->page[PAGE3_DSI_CNTL1];
+>> +       u8 vdo_ctrl_buf[] = { VDO_CTL_ADD, VDO_DIS };
+> 
+> ditto
+> 
+>> +       int ret;
+>> +
+>> +       ret = i2c_smbus_write_i2c_block_data(client, PAGE3_SET_ADD,
+>> +                                            sizeof(vdo_ctrl_buf),
+>> +                                            vdo_ctrl_buf);
+>> +       if (ret < 0)
+>> +               return ret;
+>> +
+>> +       return 0;
+>> +}
+> 
+> Since the 2 functions are almost the same, you could shrink the driver
+> a bit further by merging them into one with a boolean parameter? (then
+> maybe give up on the const u8 comment).
+> 
 
-Best regards,
-baolu
+I decided to merge the two functions and use and enum instead of a boolean
+parameter, so the "bool" value is more understandable.
+
+>> +
+>> +static void ps8640_pre_enable(struct drm_bridge *bridge)
+>> +{
+>> +       struct ps8640 *ps_bridge = bridge_to_ps8640(bridge);
+>> +       struct i2c_client *client = ps_bridge->page[PAGE2_TOP_CNTL];
+>> +       unsigned long timeout;
+>> +       int ret, status;
+>> +
+>> +       ret = regulator_bulk_enable(ARRAY_SIZE(ps_bridge->supplies),
+>> +                                   ps_bridge->supplies);
+>> +       if (ret < 0) {
+>> +               DRM_ERROR("cannot enable regulators %d\n", ret);
+>> +               return;
+>> +       }
+>> +
+>> +       gpiod_set_value(ps_bridge->gpio_powerdown, 1);
+>> +       gpiod_set_value(ps_bridge->gpio_reset, 0);
+>> +       usleep_range(2000, 2500);
+>> +       gpiod_set_value(ps_bridge->gpio_reset, 1);
+>> +
+>> +       /*
+>> +        * Wait for the ps8640 embedded MCU to be ready
+>> +        * First wait 200ms and then check the MCU ready flag every 20ms
+>> +        */
+>> +       msleep(200);
+>> +
+>> +       timeout = jiffies + msecs_to_jiffies(200) + 1;
+>> +
+>> +       while (time_is_after_jiffies(timeout)) {
+>> +               status = i2c_smbus_read_byte_data(client, PAGE2_GPIO_H);
+>> +               if (status < 0) {
+>> +                       DRM_ERROR("failed read PAGE2_GPIO_H: %d\n", status);
+>> +                       goto err_regulators_disable;
+>> +               }
+>> +               if ((status & PS_GPIO9) == PS_GPIO9)
+>> +                       break;
+>> +
+>> +               msleep(20);
+>> +       }
+>> +
+>> +       msleep(50);
+>> +
+>> +       /*
+>> +        * The Manufacturer Command Set (MCS) is a device dependent interface
+>> +        * intended for factory programming of the display module default
+>> +        * parameters. Once the display module is configured, the MCS shall be
+>> +        * disabled by the manufacturer. Once disabled, all MCS commands are
+>> +        * ignored by the display interface.
+>> +        */
+>> +       status = i2c_smbus_read_byte_data(client, PAGE2_MCS_EN);
+>> +       if (status < 0) {
+>> +               DRM_ERROR("failed read PAGE2_MCS_EN: %d\n", status);
+>> +               goto err_regulators_disable;
+>> +       }
+>> +
+>> +       ret = i2c_smbus_write_byte_data(client, PAGE2_MCS_EN,
+>> +                                       status & ~MCS_EN);
+>> +       if (ret < 0) {
+>> +               DRM_ERROR("failed write PAGE2_MCS_EN: %d\n", ret);
+>> +               goto err_regulators_disable;
+>> +       }
+>> +
+>> +       ret = ps8640_bridge_unmute(ps_bridge);
+>> +       if (ret)
+>> +               DRM_ERROR("failed to enable unmutevideo: %d\n", ret);
+> 
+> failed to unmute? Or failed to enable?
+> 
+
+failed to unmute sound more clear to me.
+
+>> +
+>> +       /* Switch access edp panel's edid through i2c */
+>> +       ret = i2c_smbus_write_byte_data(client, PAGE2_I2C_BYPASS,
+>> +                                       I2C_BYPASS_EN);
+>> +       if (ret < 0) {
+>> +               DRM_ERROR("failed write PAGE2_I2C_BYPASS: %d\n", ret);
+>> +               goto err_regulators_disable;
+>> +       }
+>> +
+>> +       return;
+>> +
+>> +err_regulators_disable:
+>> +       regulator_bulk_disable(ARRAY_SIZE(ps_bridge->supplies),
+>> +                              ps_bridge->supplies);
+>> +}
+>> +
+>> +static void ps8640_post_disable(struct drm_bridge *bridge)
+>> +{
+>> +       struct ps8640 *ps_bridge = bridge_to_ps8640(bridge);
+>> +       int ret;
+>> +
+>> +       ret = ps8640_bridge_mute(ps_bridge);
+>> +       if (ret < 0)
+>> +               DRM_ERROR("failed to unmutevideo: %d\n", ret);
+> 
+> ditto
+> 
+
+Done.
+
+>> +
+>> +       gpiod_set_value(ps_bridge->gpio_reset, 0);
+>> +       gpiod_set_value(ps_bridge->gpio_powerdown, 0);
+>> +       ret = regulator_bulk_disable(ARRAY_SIZE(ps_bridge->supplies),
+>> +                                    ps_bridge->supplies);
+>> +       if (ret < 0)
+>> +               DRM_ERROR("cannot disable regulators %d\n", ret);
+>> +}
+>> +
+>> +int ps8640_bridge_attach(struct drm_bridge *bridge)
+>> +{
+>> +       struct ps8640 *ps_bridge = bridge_to_ps8640(bridge);
+>> +       struct device *dev = &ps_bridge->page[0]->dev;
+>> +       struct device_node *in_ep, *dsi_node;
+>> +       struct mipi_dsi_device *dsi;
+>> +       struct mipi_dsi_host *host;
+>> +       int ret;
+>> +       const struct mipi_dsi_device_info info = { .type = "ps8640",
+>> +                                                  .channel = 0,
+>> +                                                  .node = NULL,
+>> +                                                };
+>> +       /* port@0 is ps8640 dsi input port */
+>> +       in_ep = of_graph_get_endpoint_by_regs(dev->of_node, 0, -1);
+>> +       if (!in_ep)
+>> +               return -ENODEV;
+>> +
+>> +       dsi_node = of_graph_get_remote_port_parent(in_ep);
+>> +       of_node_put(in_ep);
+>> +       if (!dsi_node)
+>> +               return -ENODEV;
+>> +
+>> +       host = of_find_mipi_dsi_host_by_node(dsi_node);
+>> +       of_node_put(dsi_node);
+>> +       if (!host)
+>> +               return -ENODEV;
+>> +
+>> +       dsi = mipi_dsi_device_register_full(host, &info);
+>> +       if (IS_ERR(dsi)) {
+>> +               dev_err(dev, "failed to create dsi device\n");
+>> +               ret = PTR_ERR(dsi);
+>> +               return ret;
+>> +       }
+>> +
+>> +       ps_bridge->dsi = dsi;
+>> +
+>> +       dsi->host = host;
+>> +       dsi->mode_flags = MIPI_DSI_MODE_VIDEO |
+>> +                         MIPI_DSI_MODE_VIDEO_SYNC_PULSE;
+>> +       dsi->format = MIPI_DSI_FMT_RGB888;
+>> +       dsi->lanes = 4;
+>> +       ret = mipi_dsi_attach(dsi);
+>> +       if (ret)
+>> +               goto err_dsi_attach;
+>> +
+>> +       /* Attach the panel-bridge to the dsi bridge */
+>> +       return drm_bridge_attach(bridge->encoder, ps_bridge->panel_bridge,
+>> +                                &ps_bridge->bridge);
+>> +
+>> +err_dsi_attach:
+>> +       mipi_dsi_device_unregister(dsi);
+>> +       return ret;
+>> +}
+>> +
+>> +static const struct drm_bridge_funcs ps8640_bridge_funcs = {
+>> +       .attach = ps8640_bridge_attach,
+>> +       .post_disable = ps8640_post_disable,
+>> +       .pre_enable = ps8640_pre_enable,
+>> +};
+>> +
+>> +static int ps8640_probe(struct i2c_client *client)
+>> +{
+>> +       struct device *dev = &client->dev;
+>> +       struct device_node *np = dev->of_node;
+>> +       struct ps8640 *ps_bridge;
+>> +       struct drm_panel *panel;
+>> +       int ret;
+>> +       u32 i;
+>> +
+>> +       ps_bridge = devm_kzalloc(dev, sizeof(*ps_bridge), GFP_KERNEL);
+>> +       if (!ps_bridge)
+>> +               return -ENOMEM;
+>> +
+>> +       /* port@1 is ps8640 output port */
+>> +       ret = drm_of_find_panel_or_bridge(np, 1, 0, &panel, NULL);
+>> +       if (ret < 0)
+>> +               return ret;
+>> +       if (!panel)
+>> +               return -ENODEV;
+>> +
+>> +       panel->connector_type = DRM_MODE_CONNECTOR_eDP;
+>> +
+>> +       ps_bridge->panel_bridge = devm_drm_panel_bridge_add(dev, panel);
+>> +       if (IS_ERR(ps_bridge->panel_bridge))
+>> +               return PTR_ERR(ps_bridge->panel_bridge);
+>> +
+>> +       ps_bridge->supplies[0].supply = "vdd33";
+>> +       ps_bridge->supplies[1].supply = "vdd12";
+>> +       ret = devm_regulator_bulk_get(dev, ARRAY_SIZE(ps_bridge->supplies),
+>> +                                     ps_bridge->supplies);
+>> +       if (ret)
+>> +               return ret;
+>> +
+>> +       ps_bridge->gpio_powerdown = devm_gpiod_get(&client->dev, "powerdown",
+>> +                                                  GPIOD_OUT_LOW);
+>> +       if (IS_ERR(ps_bridge->gpio_powerdown))
+>> +               return PTR_ERR(ps_bridge->gpio_powerdown);
+>> +
+>> +       /*
+>> +        * Request the reset pin low to avoid the bridge being
+>> +        * initialized prematurely
+>> +        */
+>> +       ps_bridge->gpio_reset = devm_gpiod_get(&client->dev, "reset",
+>> +                                              GPIOD_OUT_LOW);
+>> +       if (IS_ERR(ps_bridge->gpio_reset))
+>> +               return PTR_ERR(ps_bridge->gpio_reset);
+>> +
+>> +       ps_bridge->bridge.funcs = &ps8640_bridge_funcs;
+>> +       ps_bridge->bridge.of_node = dev->of_node;
+>> +
+>> +       ps_bridge->page[PAGE0_DP_CNTL] = client;
+>> +
+>> +       for (i = 1; i < ARRAY_SIZE(ps_bridge->page); i++) {
+>> +               ps_bridge->page[i] = devm_i2c_new_dummy_device(&client->dev,
+>> +                                                            client->adapter,
+>> +                                                            client->addr + i);
+>> +               if (IS_ERR(ps_bridge->page[i])) {
+>> +                       dev_err(dev, "failed i2c dummy device, address%02x\n",
+> 
+> Space after address?
+> 
+
+Ack and done.
+
+>> +                               client->addr + i);
+>> +                       return PTR_ERR(ps_bridge->page[i]);
+>> +               }
+>> +       }
+>> +
+>> +       i2c_set_clientdata(client, ps_bridge);
+>> +
+>> +       drm_bridge_add(&ps_bridge->bridge);
+>> +
+>> +       return 0;
+>> +}
+>> +
+>> +static int ps8640_remove(struct i2c_client *client)
+>> +{
+>> +       struct ps8640 *ps_bridge = i2c_get_clientdata(client);
+>> +
+>> +       drm_bridge_remove(&ps_bridge->bridge);
+>> +
+>> +       return 0;
+>> +}
+>> +
+>> +static const struct of_device_id ps8640_match[] = {
+>> +       { .compatible = "parade,ps8640" },
+>> +       { }
+>> +};
+>> +MODULE_DEVICE_TABLE(of, ps8640_match);
+>> +
+>> +static struct i2c_driver ps8640_driver = {
+>> +       .probe_new = ps8640_probe,
+>> +       .remove = ps8640_remove,
+>> +       .driver = {
+>> +               .name = "ps8640",
+>> +               .of_match_table = ps8640_match,
+>> +       },
+>> +};
+>> +module_i2c_driver(ps8640_driver);
+>> +
+>> +MODULE_AUTHOR("Jitao Shi <jitao.shi@mediatek.com>");
+>> +MODULE_AUTHOR("CK Hu <ck.hu@mediatek.com>");
+> 
+> Since you just did a major refactor, do you want to add your name here?
+> 
+
+Sure.
+
+Thanks,
+ Enric
+
+>> +MODULE_DESCRIPTION("PARADE ps8640 DSI-eDP converter driver");
+>> +MODULE_LICENSE("GPL v2");
+>> --
+>> 2.20.1
+>>
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
