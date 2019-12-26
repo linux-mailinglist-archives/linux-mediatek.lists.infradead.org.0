@@ -2,80 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D641712AB5B
-	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Dec 2019 10:41:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 13BB912AD01
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Dec 2019 15:27:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NnBQaqtKnFQeUrWT9kJE75y/1WNJdqZis8yzdgKGi18=; b=oV+xyloQBduspo
-	NaTMkv5Wi/6Kvxoud2oGWlYd0rzABd24abkUUwdaLpOYjxaHrZnUEFZUcWpH1KHEwjwjr9hHlOE+M
-	C55ivFag10C9JUzf1xDcY6q89z+cTntlOI0QyjZ+L5NKc3FX9HOJOh94InlPyLvYRUfRmuDCZU72Q
-	lZSnObOeOPXrVr8ERPUNzM6GN0Jl+BZ3nHrxmmV+5p6FEbpBBx/1x+GssP3sZvRItNVgy4icP6+79
-	35kUIoKOucw0vS+x6o54cVKMq9cqJmeNenXaI3lK8o+ZX6gZUtLTwsiR3lHNqdD+J0xU1XfEoDRUY
-	v8sr3otMGZ7xWpHJEcqA==;
+	List-Owner; bh=GzWrF8SWrc70mC/bt2bPQE92DYc6f/TZCZLB3X3i8+A=; b=mm/aj9BwPBBm1N
+	tsY+2PdJhQQcU3UZq+9MgZh1ofY69ThEK3Ie4GBGOAkZUIC6UmID9C1XC1+VEP1ybvtXE3EfOR8+y
+	uA3YMNONkPrN+f2HmZ8MPI/09+h4ADYP8BXq9m/36zl1W4duhGY/PFiqXNv2FhJ9dhPHXjTZ2wHWC
+	99DgKI4TOGq2OI0zi/Q5dvF1CLbwavtRQ9NQX9VAHQZe7PnUIkemCGaOhTydQiGki1o9lIB+8a/at
+	HMyY496/nQ7PS2uSSKVM7Rm/nuB7H0sTMXr/BeLQJv/CS3unUZ0np441ImKKnDcIxafCADVHMElD2
+	sxlWoqazyEeZMNsGbQRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ikPdc-0000Zn-6d; Thu, 26 Dec 2019 09:41:00 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1ikU76-0000Fv-M8; Thu, 26 Dec 2019 14:27:44 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikPdK-0000OH-Oi; Thu, 26 Dec 2019 09:40:44 +0000
-X-UUID: b74aae5665f34f318918e2fce1864fa3-20191226
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=G72ihj4+vKRQawP385JqnMOAFlVY9C4u038qvj/EOmM=; 
- b=CcO1nEfGeenm64ygIwxVhVOpRji4w8BF6+en4ZoPNtN8jmAyR9udSuvyjfUu4jGPbvbqcnMXKtcys84NPNs5oRdwzL7YVWtT0WCARDx0dHjAZc/3hY1xre7OUjR+B5/eivTf67gQgIBh69W8Ewu5lRpa3XyuKWjDz5hMaq4DlG8=;
-X-UUID: b74aae5665f34f318918e2fce1864fa3-20191226
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <yong.liang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 807251076; Thu, 26 Dec 2019 01:40:38 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 26 Dec 2019 01:41:04 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 26 Dec 2019 17:39:29 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 26 Dec 2019 17:40:05 +0800
-From: Yong Liang <yong.liang@mediatek.com>
-To: <matthias.bgg@gmail.com>, <linux-arm-kernel@lists.infradead.org>,
- <linux-mediatek@lists.infradead.org>, <robh+dt@kernel.org>,
- <mark.rutland@arm.com>, <devicetree@vger.kernel.org>,
- <linux-kernel@vger.kernel.org>
-Subject: [PATCH v1 1/1] amr64: dts: modify mt8183.dtsi
-Date: Thu, 26 Dec 2019 17:39:30 +0800
-Message-ID: <20191226093930.22413-2-yong.liang@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20191226093930.22413-1-yong.liang@mediatek.com>
-References: <20191226093930.22413-1-yong.liang@mediatek.com>
+ id 1ikU6t-00006K-Ps; Thu, 26 Dec 2019 14:27:34 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: ezequiel) with ESMTPSA id 177E129203F
+Message-ID: <9fc5e30b8bc7e160ddc54a2056ca6e57eaebbab4.camel@collabora.com>
+Subject: Re: [PATCH v22 1/2] Documentation: bridge: Add documentation for
+ ps8640 DT properties
+From: Ezequiel Garcia <ezequiel@collabora.com>
+To: Enric Balletbo i Serra <enric.balletbo@collabora.com>, 
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>
+Date: Thu, 26 Dec 2019 11:27:15 -0300
+In-Reply-To: <20191223143538.20327-2-enric.balletbo@collabora.com>
+References: <20191223143538.20327-1-enric.balletbo@collabora.com>
+ <20191223143538.20327-2-enric.balletbo@collabora.com>
+Organization: Collabora
+User-Agent: Evolution 3.34.1-2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 65218FE8B39C48C3940BA86F10982CD6553602425CFCD5578F8792C6F04CD2B52000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191226_014042_808338_FD364E55 
-X-CRM114-Status: UNSURE (   7.28  )
+X-CRM114-CacheID: sfid-20191226_062732_036377_2887306A 
+X-CRM114-Status: UNSURE (   9.90  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -89,44 +63,116 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "yong.liang" <yong.liang@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, Rob Herring <robh@kernel.org>,
+ drinkcat@chromium.org, Jitao Shi <jitao.shi@mediatek.com>,
+ Daniel Vetter <daniel@ffwll.ch>, Ulrich Hecht <uli@fpond.eu>,
+ David Airlie <airlied@linux.ie>, dri-devel@lists.freedesktop.org,
+ devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, hsinyi@chromium.org,
+ matthias.bgg@gmail.com, Collabora Kernel ML <kernel@collabora.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "yong.liang" <yong.liang@mediatek.com>
+Hi Enric, Rob,
 
-Include mt8183-reset.h and add reset-cells in infracfg
-in dtsi file
+On Mon, 2019-12-23 at 15:35 +0100, Enric Balletbo i Serra wrote:
+> From: Jitao Shi <jitao.shi@mediatek.com>
+> 
+> Add documentation for DT properties supported by
+> ps8640 DSI-eDP converter.
+> 
+> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+> Acked-by: Rob Herring <robh@kernel.org>
+> Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
+> Signed-off-by: Ulrich Hecht <uli@fpond.eu>
+> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+[..]
+> +
+> +  ports:
+> +    type: object
+> +    description:
+> +      A node containing DSI input & output port nodes with endpoint
+> +      definitions as documented in
+> +      Documentation/devicetree/bindings/media/video-interfaces.txt
+> +      Documentation/devicetree/bindings/graph.txt
+> +    properties:
+> +      port@0:
+> +        type: object
+> +        description: |
+> +          Video port for DSI input
+> +
+> +      port@1:
+> +        type: object
+> +        description: |
+> +          Video port for eDP output (panel or connector).
+> +
+> +    required:
+> +      - port@0
+> +
 
-Signed-off-by: yong.liang <yong.liang@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 2 ++
- 1 file changed, 2 insertions(+)
+Is it correct to require port@0 ? This could be called port@1
+or port@2, and IIUC it should bind the same.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 10b32471bc7b..76bfcbdf097a 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -8,6 +8,7 @@
- #include <dt-bindings/clock/mt8183-clk.h>
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/interrupt-controller/irq.h>
-+#include <dt-bindings/reset-controller/mt8183-resets.h>
- #include "mt8183-pinfunc.h"
- 
- / {
-@@ -227,6 +228,7 @@
- 			compatible = "mediatek,mt8183-infracfg", "syscon";
- 			reg = <0 0x10001000 0 0x1000>;
- 			#clock-cells = <1>;
-+			#reset-cells = <1>;
- 		};
- 
- 		pio: pinctrl@10005000 {
--- 
-2.18.0
+Thanks,
+Ezequiel 
+
+> +required:
+> +  - compatible
+> +  - reg
+> +  - powerdown-gpios
+> +  - reset-gpios
+> +  - vdd12-supply
+> +  - vdd33-supply
+> +  - ports
+> +
+> +additionalProperties: false
+> +
+> +examples:
+> +  - |
+> +    #include <dt-bindings/gpio/gpio.h>
+> +    i2c0 {
+> +        #address-cells = <1>;
+> +        #size-cells = <0>;
+> +
+> +        ps8640: edp-bridge@18 {
+> +            compatible = "parade,ps8640";
+> +            reg = <0x18>;
+> +            powerdown-gpios = <&pio 116 GPIO_ACTIVE_LOW>;
+> +            reset-gpios = <&pio 115 GPIO_ACTIVE_LOW>;
+> +            vdd12-supply = <&ps8640_fixed_1v2>;
+> +            vdd33-supply = <&mt6397_vgp2_reg>;
+> +
+> +            ports {
+> +                #address-cells = <1>;
+> +                #size-cells = <0>;
+> +
+> +                port@0 {
+> +                    reg = <0>;
+> +                    ps8640_in: endpoint {
+> +                        remote-endpoint = <&dsi0_out>;
+> +                    };
+> +                };
+> +
+> +                port@1 {
+> +                    reg = <1>;
+> +                    ps8640_out: endpoint {
+> +                        remote-endpoint = <&panel_in>;
+> +                   };
+> +                };
+> +            };
+> +        };
+> +    };
+> +
+> -- 
+> 2.20.1
+> 
+> 
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
