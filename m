@@ -2,80 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A044112B374
-	for <lists+linux-mediatek@lfdr.de>; Fri, 27 Dec 2019 10:06:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1FABE12B386
+	for <lists+linux-mediatek@lfdr.de>; Fri, 27 Dec 2019 10:20:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FbcDXZ1jgCK1hL76uRXEx9mBpz6SucmUqFtHwzitO2Y=; b=cNMl/tXpLCrsUr
-	e/T6vPLsoZTdPkU/3dZHxuxZnHteiypUOGOKLQrK0p3KUo9Lq3qou5QKZ9XuPqjTVQEgpxAsAA6K9
-	mobav9e2tDUVKRIQXpFYAnzbPFIxEi9HG2FEOHPUxPZMs5W7MrH+qXxAQasUfFkDGuThD+vDXsBgf
-	9chXji18YjgXBkZDzkJbdWL8sF6YAxjzYzCkgrJMn8V9wp90GIA5r1OMZwQRJWBnEqhdtKJmBmFad
-	0EyUq9mIyWGaQgVFfgrBqy3Vuk7zwnSwnsPDLv0EWL74Ptx+6ZC7AI6Hi9+IgHXittRpFasjH+/sV
-	3PJrkMep1V1ny8TV57Rg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=9p8eevo7Bn3YNwH49EUvSl9wd7q1u1JuDC6KeDUtxg4=; b=u+ucRi+tj5sDaI
+	907mCf7yrTZA2iGygRLqUAIvLaPbweJAv0iFGG5LuxyP7P7IQsrHjI+3hAY0BVJ5vyrjspMC3tj8a
+	P2dsiINPzS8Hz5tDe20JoEjSXVGxp8V7bBPKUM44V2bZx0bcs+pUSd1PE6EryOD+rr3jY2QMOj75Q
+	ux5fmIB5IKuz5ipnF6nvCL0gYGRJuiiZQ91WEuoVO1y+PUv32nfin+FFqqqEt+/8athaMOPhiASrI
+	kmk1aHu85YgpTiZMcbkVNKs2gj8V6ki5Gh37l6jHGwFrlpfJgpRpvpsC3MQP0BZHP815APxW/RfdI
+	fg2NtaUjUd/7fz4DyhpQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iklZz-0006Yv-U2; Fri, 27 Dec 2019 09:06:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1ikln1-0002GG-6q; Fri, 27 Dec 2019 09:20:11 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iklZu-0006WX-1O; Fri, 27 Dec 2019 09:06:39 +0000
-X-UUID: d3e88caa31604eeaa9852467a20a0bf3-20191227
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=QXD1kl9Eu+Eq78WG0AJdM2CXyVFW/bQeIIWr1UnaH7o=; 
- b=fK6pEAJ787qFSPakHIZtcuHoteUL36TxcM9SHuLLJUuPYCtEACjnqYxdAVLZ0b088PFVZs9jticFa6bAnWP7Wxk80DfaTXOJnzXUIuyHB+SGRjPaPKggpCL0ZMYvbTxzppsg8qLeawpyVdcxyGTckMRcwp0hlnEyF+2Y1KoCDqM=;
-X-UUID: d3e88caa31604eeaa9852467a20a0bf3-20191227
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <jiaxin.yu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1470963012; Fri, 27 Dec 2019 01:06:33 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 27 Dec 2019 01:06:01 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 27 Dec 2019 17:05:10 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 27 Dec 2019 17:05:19 +0800
-From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-To: <yong.liang@mediatek.com>, <wim@linux-watchdog.org>, <linux@roeck-us.net>, 
- <p.zabel@pengutronix.de>, <matthias.bgg@gmail.com>,
- <linux-watchdog@vger.kernel.org>, <linux-kernel@vger.kernel.org>,
- <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
- <devicetree@vger.kernel.org>, <chang-an.chen@mediatek.com>,
- <freddy.hsin@mediatek.com>
-Subject: [PATCH v7 2/2] watchdog: mtk_wdt: mt8183: Add reset controller
-Date: Fri, 27 Dec 2019 17:04:54 +0800
-Message-ID: <1577437494-738-3-git-send-email-jiaxin.yu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1577437494-738-1-git-send-email-jiaxin.yu@mediatek.com>
-References: <1577437494-738-1-git-send-email-jiaxin.yu@mediatek.com>
+ id 1iklme-0001qi-8O; Fri, 27 Dec 2019 09:19:50 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id 03D5B283C07
+Subject: Re: [PATCH v22 1/2] Documentation: bridge: Add documentation for
+ ps8640 DT properties
+To: Ezequiel Garcia <ezequiel@collabora.com>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>
+References: <20191223143538.20327-1-enric.balletbo@collabora.com>
+ <20191223143538.20327-2-enric.balletbo@collabora.com>
+ <9fc5e30b8bc7e160ddc54a2056ca6e57eaebbab4.camel@collabora.com>
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Message-ID: <9eee88d1-21d4-5571-038f-60bc7fa05d3f@collabora.com>
+Date: Fri, 27 Dec 2019 10:19:39 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.3.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <9fc5e30b8bc7e160ddc54a2056ca6e57eaebbab4.camel@collabora.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191227_010638_085830_A4E94602 
-X-CRM114-Status: GOOD (  12.32  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191227_011948_561697_289AFC10 
+X-CRM114-Status: GOOD (  16.13  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -89,190 +62,159 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: sboyd@kernel.org, yingjoe.chen@mediatek.com,
- Jiaxin Yu <jiaxin.yu@mediatek.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, Rob Herring <robh@kernel.org>,
+ drinkcat@chromium.org, Jitao Shi <jitao.shi@mediatek.com>,
+ Daniel Vetter <daniel@ffwll.ch>, Ulrich Hecht <uli@fpond.eu>,
+ David Airlie <airlied@linux.ie>, dri-devel@lists.freedesktop.org,
+ devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, hsinyi@chromium.org,
+ matthias.bgg@gmail.com, Collabora Kernel ML <kernel@collabora.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add reset controller API in watchdog driver.
-Besides watchdog, MTK toprgu module alsa provide sub-system (eg, audio,
-camera, codec and connectivity) software reset functionality.
+Hi Ezequiel,
 
-Signed-off-by: yong.liang <yong.liang@mediatek.com>
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Reviewed-by: Yingjoe Chen <yingjoe.chen@mediatek.com>
----
- drivers/watchdog/mtk_wdt.c | 105 ++++++++++++++++++++++++++++++++++++-
- 1 file changed, 104 insertions(+), 1 deletion(-)
+On 26/12/19 15:27, Ezequiel Garcia wrote:
+> Hi Enric, Rob,
+> 
+> On Mon, 2019-12-23 at 15:35 +0100, Enric Balletbo i Serra wrote:
+>> From: Jitao Shi <jitao.shi@mediatek.com>
+>>
+>> Add documentation for DT properties supported by
+>> ps8640 DSI-eDP converter.
+>>
+>> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+>> Acked-by: Rob Herring <robh@kernel.org>
+>> Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
+>> Signed-off-by: Ulrich Hecht <uli@fpond.eu>
+>> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+> [..]
+>> +
+>> +  ports:
+>> +    type: object
+>> +    description:
+>> +      A node containing DSI input & output port nodes with endpoint
+>> +      definitions as documented in
+>> +      Documentation/devicetree/bindings/media/video-interfaces.txt
+>> +      Documentation/devicetree/bindings/graph.txt
+>> +    properties:
+>> +      port@0:
+>> +        type: object
+>> +        description: |
+>> +          Video port for DSI input
+>> +
+>> +      port@1:
+>> +        type: object
+>> +        description: |
+>> +          Video port for eDP output (panel or connector).
+>> +
+>> +    required:
+>> +      - port@0
+>> +
+> 
+> Is it correct to require port@0 ? This could be called port@1
+> or port@2, and IIUC it should bind the same.
+> 
 
-diff --git a/drivers/watchdog/mtk_wdt.c b/drivers/watchdog/mtk_wdt.c
-index 9c3d0033260d..c1bc19ab628e 100644
---- a/drivers/watchdog/mtk_wdt.c
-+++ b/drivers/watchdog/mtk_wdt.c
-@@ -9,6 +9,9 @@
-  * Based on sunxi_wdt.c
-  */
- 
-+#include <dt-bindings/reset-controller/mt2712-resets.h>
-+#include <dt-bindings/reset-controller/mt8183-resets.h>
-+#include <linux/delay.h>
- #include <linux/err.h>
- #include <linux/init.h>
- #include <linux/io.h>
-@@ -16,10 +19,11 @@
- #include <linux/module.h>
- #include <linux/moduleparam.h>
- #include <linux/of.h>
-+#include <linux/of_device.h>
- #include <linux/platform_device.h>
-+#include <linux/reset-controller.h>
- #include <linux/types.h>
- #include <linux/watchdog.h>
--#include <linux/delay.h>
- 
- #define WDT_MAX_TIMEOUT		31
- #define WDT_MIN_TIMEOUT		1
-@@ -44,6 +48,9 @@
- #define WDT_SWRST		0x14
- #define WDT_SWRST_KEY		0x1209
- 
-+#define WDT_SWSYSRST		0x18U
-+#define WDT_SWSYS_RST_KEY	0x88000000
-+
- #define DRV_NAME		"mtk-wdt"
- #define DRV_VERSION		"1.0"
- 
-@@ -53,8 +60,94 @@ static unsigned int timeout;
- struct mtk_wdt_dev {
- 	struct watchdog_device wdt_dev;
- 	void __iomem *wdt_base;
-+	spinlock_t lock; /* protects WDT_SWSYSRST reg */
-+	struct reset_controller_dev rcdev;
-+};
-+
-+struct mtk_wdt_data {
-+	int toprgu_sw_rst_num;
- };
- 
-+static const struct mtk_wdt_data mt2712_data = {
-+	.toprgu_sw_rst_num = MT2712_TOPRGU_SW_RST_NUM,
-+};
-+
-+static const struct mtk_wdt_data mt8183_data = {
-+	.toprgu_sw_rst_num = MT8183_TOPRGU_SW_RST_NUM,
-+};
-+
-+static int toprgu_reset_update(struct reset_controller_dev *rcdev,
-+			       unsigned long id, bool assert)
-+{
-+	unsigned int tmp;
-+	unsigned long flags;
-+	struct mtk_wdt_dev *data =
-+		 container_of(rcdev, struct mtk_wdt_dev, rcdev);
-+
-+	spin_lock_irqsave(&data->lock, flags);
-+
-+	tmp = readl(data->wdt_base + WDT_SWSYSRST);
-+	if (assert)
-+		tmp |= BIT(id);
-+	else
-+		tmp &= ~BIT(id);
-+	tmp |= WDT_SWSYS_RST_KEY;
-+	writel(tmp, data->wdt_base + WDT_SWSYSRST);
-+
-+	spin_unlock_irqrestore(&data->lock, flags);
-+
-+	return 0;
-+}
-+
-+static int toprgu_reset_assert(struct reset_controller_dev *rcdev,
-+			       unsigned long id)
-+{
-+	return toprgu_reset_update(rcdev, id, true);
-+}
-+
-+static int toprgu_reset_deassert(struct reset_controller_dev *rcdev,
-+				 unsigned long id)
-+{
-+	return toprgu_reset_update(rcdev, id, false);
-+}
-+
-+static int toprgu_reset(struct reset_controller_dev *rcdev,
-+			unsigned long id)
-+{
-+	int ret;
-+
-+	ret = toprgu_reset_assert(rcdev, id);
-+	if (ret)
-+		return ret;
-+
-+	return toprgu_reset_deassert(rcdev, id);
-+}
-+
-+static const struct reset_control_ops toprgu_reset_ops = {
-+	.assert = toprgu_reset_assert,
-+	.deassert = toprgu_reset_deassert,
-+	.reset = toprgu_reset,
-+};
-+
-+static int toprgu_register_reset_controller(struct platform_device *pdev,
-+					    int rst_num)
-+{
-+	int ret;
-+	struct mtk_wdt_dev *mtk_wdt = platform_get_drvdata(pdev);
-+
-+	spin_lock_init(&mtk_wdt->lock);
-+
-+	mtk_wdt->rcdev.owner = THIS_MODULE;
-+	mtk_wdt->rcdev.nr_resets = rst_num;
-+	mtk_wdt->rcdev.ops = &toprgu_reset_ops;
-+	mtk_wdt->rcdev.of_node = pdev->dev.of_node;
-+	ret = devm_reset_controller_register(&pdev->dev, &mtk_wdt->rcdev);
-+	if (ret != 0)
-+		dev_err(&pdev->dev,
-+			"couldn't register wdt reset controller: %d\n", ret);
-+	return ret;
-+}
-+
- static int mtk_wdt_restart(struct watchdog_device *wdt_dev,
- 			   unsigned long action, void *data)
- {
-@@ -155,6 +248,7 @@ static int mtk_wdt_probe(struct platform_device *pdev)
- {
- 	struct device *dev = &pdev->dev;
- 	struct mtk_wdt_dev *mtk_wdt;
-+	struct mtk_wdt_data *wdt_data;
- 	int err;
- 
- 	mtk_wdt = devm_kzalloc(dev, sizeof(*mtk_wdt), GFP_KERNEL);
-@@ -190,6 +284,13 @@ static int mtk_wdt_probe(struct platform_device *pdev)
- 	dev_info(dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",
- 		 mtk_wdt->wdt_dev.timeout, nowayout);
- 
-+	wdt_data = (struct mtk_wdt_data *)of_device_get_match_data(dev);
-+	if (wdt_data) {
-+		err = toprgu_register_reset_controller(pdev,
-+						       wdt_data->toprgu_sw_rst_num);
-+		if (err)
-+			return err;
-+	}
- 	return 0;
- }
- 
-@@ -218,7 +319,9 @@ static int mtk_wdt_resume(struct device *dev)
- #endif
- 
- static const struct of_device_id mtk_wdt_dt_ids[] = {
-+	{ .compatible = "mediatek,mt2712-wdt", .data = &mt2712_data },
- 	{ .compatible = "mediatek,mt6589-wdt" },
-+	{ .compatible = "mediatek,mt8183-wdt", .data = &mt8183_data },
- 	{ /* sentinel */ }
- };
- MODULE_DEVICE_TABLE(of, mtk_wdt_dt_ids);
--- 
-2.18.0
+My understanding is that at least the Video port for DSI input is required,
+which makes sense, otherwise you have the chip connected nowhere. port@1 is
+optional because it could be connected to a eDP panel or can just be a connector.
+
+About your second question, I am not sure I understand you. You mean that have a
+DT like this should work?
+
+            ports {
+                #address-cells = <1>;
+                #size-cells = <0>;
+
+                port@1 {
+                    reg = <0>;
+                    ps8640_in: endpoint {
+                        remote-endpoint = <&dsi0_out>;
+                    };
+                };
+
+                port@2 {
+                    reg = <1>;
+                    ps8640_out: endpoint {
+                        remote-endpoint = <&panel_in>;
+                   };
+                };
+            };
+
+
+Probably yes, because the driver what really looks is the register value, but
+that's odd and probably a bad practice. Also if I am not wrong the convention is
+name the nodes with port@<reg property> (like we do in i2c devices for example)
+
+port@0 is the label that has the register value to 0.
+port@1 is the label that has the register value to 1.
+...
+
+Thanks,
+ Enric
+
+> Thanks,
+> Ezequiel 
+> 
+>> +required:
+>> +  - compatible
+>> +  - reg
+>> +  - powerdown-gpios
+>> +  - reset-gpios
+>> +  - vdd12-supply
+>> +  - vdd33-supply
+>> +  - ports
+>> +
+>> +additionalProperties: false
+>> +
+>> +examples:
+>> +  - |
+>> +    #include <dt-bindings/gpio/gpio.h>
+>> +    i2c0 {
+>> +        #address-cells = <1>;
+>> +        #size-cells = <0>;
+>> +
+>> +        ps8640: edp-bridge@18 {
+>> +            compatible = "parade,ps8640";
+>> +            reg = <0x18>;
+>> +            powerdown-gpios = <&pio 116 GPIO_ACTIVE_LOW>;
+>> +            reset-gpios = <&pio 115 GPIO_ACTIVE_LOW>;
+>> +            vdd12-supply = <&ps8640_fixed_1v2>;
+>> +            vdd33-supply = <&mt6397_vgp2_reg>;
+>> +
+>> +            ports {
+>> +                #address-cells = <1>;
+>> +                #size-cells = <0>;
+>> +
+>> +                port@0 {
+>> +                    reg = <0>;
+>> +                    ps8640_in: endpoint {
+>> +                        remote-endpoint = <&dsi0_out>;
+>> +                    };
+>> +                };
+>> +
+>> +                port@1 {
+>> +                    reg = <1>;
+>> +                    ps8640_out: endpoint {
+>> +                        remote-endpoint = <&panel_in>;
+>> +                   };
+>> +                };
+>> +            };
+>> +        };
+>> +    };
+>> +
+>> -- 
+>> 2.20.1
+>>
+>>
+> 
+> 
+> 
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
