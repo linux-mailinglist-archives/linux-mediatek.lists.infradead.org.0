@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 44E1D12CCF3
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 06:33:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3732512CD02
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 06:43:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=PvAKFyqdYJFPFiqph3q2ieaAgcl2qr8eLqqU2UBXiV4=; b=JG+mK+plHLIjE9
-	NMu+d3Mdv3htcG29gf/Qyq4Fqw1O0trZHY4c712uHKFDGBHLhJMG3Cz/PZE6j52u6FXedmM43bgTH
-	VvUAm5N3faeXmeptPVl8ncdzgBaky7conVMaCIPZCDl/PEJGHSqEfvF+0FvrLOqPDPHGd29F+cgvt
-	niVdiyI3ymaAmNpYdP8eXamTg9AO3bfQHKaJ9kd7krI4qUJAsKiPtvMm4ZKHwKdv7LXOzuEuv7RI2
-	qINUsgDnLxdpvN8pFdkSlQbkEfTA51VFWQPNGe9BbACF5GQdDTpMlgvnmG4eMhtOzmt1VOYGom8+y
-	IQpioHrk2AM0zvdGjtNg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=EMqd/GXGDrGxrDjEGgl+YmXmiYKJHikFIkT7nANAhOk=; b=PNmfzZZnRekCDg
+	MvVfOnE73YVdipmIHoZ5+Lwa7uzWR9Z0XoBVpct+mmNhfQ53JJcTRqW3X+8UkFPGxF3061ThYvT57
+	G7ilF5Hj1r2j5seBtQK5c9WH5hdmqdvuKXZ2BQHZ7PhXz4FrfFe8U2P2vBm442/kPAt8E8owYy4y+
+	dv08J0khJ7k60a+wlEaBff2k9V+0kfyw0cNaDwtA/g1fD50qMxPs0pvHNRkZwBDCIMvvTxQ4AiYei
+	d7J7WOzsLB3bxwy6Vdq0OkSkt9GqXadWgCN6e/pSs2aF286Uvb6AsBhthYTnYVdA2tPoO8pHQVAmM
+	9n3xxpfGOYnSwGvsiZHQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ilng6-0007J4-3N; Mon, 30 Dec 2019 05:33:18 +0000
+	id 1ilnpp-0003Of-21; Mon, 30 Dec 2019 05:43:21 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ilnfl-00074n-0i; Mon, 30 Dec 2019 05:32:58 +0000
-X-UUID: bc64d4b4dd274b7780d4497286b8e31d-20191229
+ id 1ilnpL-00030R-Iq; Mon, 30 Dec 2019 05:42:53 +0000
+X-UUID: a80bab29a3c744fda7c4ece0062c707a-20191229
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=HtNPM7dejlWJWxW/NdMu+8iY5acDOzc1HLly9BYlNdw=; 
- b=HWn4hhCug2hcx21ztIaXlaCdem8ep5vNZF7ZoR9AMj865rrJOn+2YcuRwu79jA6SQ5UZ1Q80HZ5M+bi8LZ4Qw4soBYb83xo94mYolG9mOuktkXuu1I1eFJ+ZcWJ0QYD23buqaACME98TE44pxQ+KPHfPCCv9aFfX/5artdlHNd8=;
-X-UUID: bc64d4b4dd274b7780d4497286b8e31d-20191229
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=c9VpmytTBWUhbyeGUJ4t0316OksYU3H36qNO5LPrNNg=; 
+ b=jGIZbKegTKGyEQvqGCGNzQBxBYYgVOJwjTntbOuYgdbJVEMM8KxJHjSfhiULm16PCI5RVLCdzHlPEjIYOhu3/syoxiv4aPuZDRvMdG6VlO50PlbD1pvxc91LZ6wjlBY3lHtGmJ+luajY9YgIEMStwLYHzD5OdZBA1Oof3c0WV9c=;
+X-UUID: a80bab29a3c744fda7c4ece0062c707a-20191229
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2060566474; Sun, 29 Dec 2019 21:32:49 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 29 Dec 2019 21:33:02 -0800
+ with ESMTP id 111129702; Sun, 29 Dec 2019 21:42:48 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 29 Dec 2019 21:32:52 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Dec 2019 13:32:02 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 30 Dec 2019 13:33:20 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 30 Dec 2019 13:31:24 +0800
+ Frontend Transport; Mon, 30 Dec 2019 13:31:30 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
  <pedrom.sousa@synopsys.com>, <jejb@linux.ibm.com>, <matthias.bgg@gmail.com>,
  <bvanassche@acm.org>, <f.fainelli@gmail.com>
-Subject: [PATCH v2 0/6] scsi: ufs: add MediaTek vendor implementations
-Date: Mon, 30 Dec 2019 13:32:24 +0800
-Message-ID: <1577683950-1702-1-git-send-email-stanley.chu@mediatek.com>
+Subject: [PATCH v2 1/6] soc: mediatek: add header for SiP service interface
+Date: Mon, 30 Dec 2019 13:32:25 +0800
+Message-ID: <1577683950-1702-2-git-send-email-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1577683950-1702-1-git-send-email-stanley.chu@mediatek.com>
+References: <1577683950-1702-1-git-send-email-stanley.chu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 40A6531EB29FBBF407E2838E26378FC5BE786B18504C9DBB6B363B6E8C47BAF92000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191229_213257_068110_290B5B82 
-X-CRM114-Status: UNSURE (   5.97  )
+X-CRM114-CacheID: sfid-20191229_214251_632072_C54090B7 
+X-CRM114-Status: UNSURE (   9.55  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,37 +98,52 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Add a common header for the SiP service interface in MediaTek Chipsets.
 
-This series provides MediaTek vendor implementations as below,
-
-    - Device reset
-    - Reference clock control
-    - Auto-hibernate enabling with customized timer value
-    - Clk-gating enabling with customized delayed timer value
-
-v1 -> v2:
-    - Move MTK_SIP_UFS_CONTROL to ufs-mediatek.h and make include/linux/soc/mediatek/mtk_sip_svc.h has common definitions only (Alim)
-    - Remove dummy "line change" for MTK_SIP_UFS_CONTROL definition
-    - Refactor UFS SMC calls in ufs-mediatek.c
-
-Stanley Chu (6):
-  soc: mediatek: add header for SiP service interface
-  scsi: ufs-mediatek: add device reset implementation
-  scsi: ufs-mediatek: introduce reference clock control
-  scsi: ufs: export ufshcd_auto_hibern8_update for vendor usage
-  scsi: ufs-mediatek: configure customized auto-hibern8 timer
-  scsi: ufs-mediatek: configure and enable clk-gating
-
- drivers/scsi/ufs/ufs-mediatek.c          | 125 ++++++++++++++++++++++-
- drivers/scsi/ufs/ufs-mediatek.h          |  27 +++++
- drivers/scsi/ufs/ufs-sysfs.c             |  20 ----
- drivers/scsi/ufs/ufshcd.c                |  18 ++++
- drivers/scsi/ufs/ufshcd.h                |   1 +
- include/linux/soc/mediatek/mtk_sip_svc.h |  25 +++++
- 6 files changed, 192 insertions(+), 24 deletions(-)
+Cc: Alim Akhtar <alim.akhtar@samsung.com>
+Cc: Avri Altman <avri.altman@wdc.com>
+Cc: Bart Van Assche <bvanassche@acm.org>
+Cc: Bean Huo <beanhuo@micron.com>
+Cc: Can Guo <cang@codeaurora.org>
+Cc: Florian Fainelli <f.fainelli@gmail.com>
+Cc: Matthias Brugger <matthias.bgg@gmail.com>
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ include/linux/soc/mediatek/mtk_sip_svc.h | 25 ++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
  create mode 100644 include/linux/soc/mediatek/mtk_sip_svc.h
 
+diff --git a/include/linux/soc/mediatek/mtk_sip_svc.h b/include/linux/soc/mediatek/mtk_sip_svc.h
+new file mode 100644
+index 000000000000..082398e0cfb1
+--- /dev/null
++++ b/include/linux/soc/mediatek/mtk_sip_svc.h
+@@ -0,0 +1,25 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Copyright (C) 2019 MediaTek Inc.
++ */
++#ifndef __MTK_SIP_SVC_H
++#define __MTK_SIP_SVC_H
++
++/* Error Code */
++#define SIP_SVC_E_SUCCESS               0
++#define SIP_SVC_E_NOT_SUPPORTED         -1
++#define SIP_SVC_E_INVALID_PARAMS        -2
++#define SIP_SVC_E_INVALID_RANGE         -3
++#define SIP_SVC_E_PERMISSION_DENIED     -4
++
++#ifdef CONFIG_ARM64
++#define MTK_SIP_SMC_CONVENTION          ARM_SMCCC_SMC_64
++#else
++#define MTK_SIP_SMC_CONVENTION          ARM_SMCCC_SMC_32
++#endif
++
++#define MTK_SIP_SMC_CMD(fn_id) \
++	ARM_SMCCC_CALL_VAL(ARM_SMCCC_FAST_CALL, MTK_SIP_SMC_CONVENTION, \
++			   ARM_SMCCC_OWNER_SIP, fn_id)
++
++#endif
 -- 
 2.18.0
 _______________________________________________
