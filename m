@@ -2,68 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4533A12CE24
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 10:14:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CFD0E12D0DD
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 15:38:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=wswk+PJN0h5qUWCr9+kNYrKzExrkcWA9LYqvTazDl/E=; b=XiDbFkYXxHiEjhXBpcl/jhQXA
-	tL3srPOKNhXaD8NwltFqZQdk/bD5RkReEIP7vflomDJYc9JXblAuUFjyvJAzvGPX8qJMJDt3wiLj5
-	jOQJVT/mgTAAlUFaOG+wzPDEA5wfVKGpXvkoO7NEvmJ+Cm7vzMGQ0MXLw0P/ZMswtR7ATRgFAh+VF
-	/BnuaJ6mbPhEkThHSaN90hVKrS+8A/4gUUmCxuJELM01goE8MOXabUOyHh1gTGcaax1e5hjtVKkCN
-	Xll/beBKqSzI6tuCOUqW7O2g+j49zqwTaQ6mpCUyJ9gmy8rTrwRc11GcmOGarSaEep+0y3MB7Xgq0
-	VaICJhwgw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=QtC0qJCs25cDMnbWoSIRRNmdhDj0U12fKoHQSACi0y8=; b=rFx432yjOeXRAL
+	cBLHYCBqUA68xUuz6fpRU6/hI5akssmM6VJ1M0yTTINd+ToVi0womvDDSizupYO/CR5DIhTNw4xt2
+	ZrflH/FHlUXHaJX781/k/2WOqkmYbmPya1SVx/Hp/VLTf78HMT7CJixyM6BxKBxGWOoZK4kRlOas6
+	TvQNSNbCqueg5GEHvNvEDCBfjNeDTXUlJlVZhjVNGdupQB4YfLPmky4igZGbNZHuR2869xSHRFmPX
+	Qk/BF/WNwEAPGK0eA6oH2xfPuWWxLxEqACZ1IoiXfU/STrFz4WDzJh0z0VwkQRUAe7FaKJdaYJU00
+	DlUyIJEJ9pwk3S8Z9cCA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ilr8Q-0007jR-8i; Mon, 30 Dec 2019 09:14:46 +0000
-Received: from foss.arm.com ([217.140.110.172])
+	id 1ilwBS-0001ix-NA; Mon, 30 Dec 2019 14:38:14 +0000
+Received: from fd.dlink.ru ([178.170.168.18])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ilr7b-0006zy-Qw; Mon, 30 Dec 2019 09:13:57 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 745A8328;
- Mon, 30 Dec 2019 01:13:52 -0800 (PST)
-Received: from [10.37.12.68] (unknown [10.37.12.68])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id F31233F703;
- Mon, 30 Dec 2019 01:13:45 -0800 (PST)
-Subject: Re: [PATCH 7/9] memory: samsung: exynos5422-dmc: convert to
- devm_platform_ioremap_resource
-To: Yangtao Li <tiny.windzz@gmail.com>, ssantosh@kernel.org,
- paul@crapouillou.net, matthias.bgg@gmail.com, rogerq@ti.com,
- tony@atomide.com, kgene@kernel.org, krzk@kernel.org,
- thierry.reding@gmail.com, jonathanh@nvidia.com, allison@lohutok.net,
- tglx@linutronix.de, yong.wu@mediatek.com, jroedel@suse.de,
- evgreen@chromium.org, rfontana@redhat.com, digetx@gmail.com,
- pdeschrijver@nvidia.com, john@phrozen.org, alexios.zavras@intel.com,
- sboyd@kernel.org, kstewart@linuxfoundation.org, info@metux.net,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org, linux-omap@vger.kernel.org,
- linux-pm@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- linux-tegra@vger.kernel.org
-References: <20191222185034.4665-1-tiny.windzz@gmail.com>
- <20191222185034.4665-7-tiny.windzz@gmail.com>
-From: Lukasz Luba <lukasz.luba@arm.com>
-Message-ID: <a331ae9c-ee2c-6c5e-3a61-a50c172359aa@arm.com>
-Date: Mon, 30 Dec 2019 09:13:43 +0000
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.0
+ id 1ilwAk-0000xS-4X; Mon, 30 Dec 2019 14:37:33 +0000
+Received: by fd.dlink.ru (Postfix, from userid 5000)
+ id B981F1B201FA; Mon, 30 Dec 2019 17:31:16 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru B981F1B201FA
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dlink.ru; s=mail;
+ t=1577716277; bh=RwOI8oAxd+fijp+Xuc6Oa+5EbKzjW8W4KCZUcnbzQOs=;
+ h=From:To:Cc:Subject:Date;
+ b=o1PvHtIvToJL7zKhu8jpjdoeiOaz87nSFOdQtyEXLajOapuuo7RLoHiwKzn46tHm0
+ Nl0paQ7EifqSHDnuCh9Ai+IK6J1msf833KXg/KQOLaz49bNs9JRD7za5TZD9K/6mL4
+ zYFhTQbBXEbWXLw9vLUyzoA0PuKuAM3OAIns7n3g=
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on mail.dlink.ru
+X-Spam-Level: 
+X-Spam-Status: No, score=-99.2 required=7.5 tests=BAYES_50,USER_IN_WHITELIST
+ autolearn=disabled version=3.4.2
+Received: from mail.rzn.dlink.ru (mail.rzn.dlink.ru [178.170.168.13])
+ by fd.dlink.ru (Postfix) with ESMTP id C75FB1B205E4;
+ Mon, 30 Dec 2019 17:31:03 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru C75FB1B205E4
+Received: from mail.rzn.dlink.ru (localhost [127.0.0.1])
+ by mail.rzn.dlink.ru (Postfix) with ESMTP id CA84D1B229CB;
+ Mon, 30 Dec 2019 17:31:01 +0300 (MSK)
+Received: from localhost.localdomain (unknown [196.196.203.126])
+ by mail.rzn.dlink.ru (Postfix) with ESMTPA;
+ Mon, 30 Dec 2019 17:31:01 +0300 (MSK)
+From: Alexander Lobakin <alobakin@dlink.ru>
+To: "David S. Miller" <davem@davemloft.net>
+Subject: [PATCH RFC net-next 00/20] net: dsa: add GRO support
+Date: Mon, 30 Dec 2019 17:30:08 +0300
+Message-Id: <20191230143028.27313-1-alobakin@dlink.ru>
+X-Mailer: git-send-email 2.24.1
 MIME-Version: 1.0
-In-Reply-To: <20191222185034.4665-7-tiny.windzz@gmail.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191230_011356_188879_818D8E01 
-X-CRM114-Status: GOOD (  14.18  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191230_063730_546633_EE1872C3 
+X-CRM114-Status: UNSURE (   9.47  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 2.4 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (2.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [217.140.110.172 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ no trust [178.170.168.18 listed in list.dnswl.org]
+ 2.6 RCVD_IN_SBL            RBL: Received via a relay in Spamhaus SBL
+ [196.196.203.126 listed in zen.spamhaus.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,55 +85,105 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: Andrew Lunn <andrew@lunn.ch>, Song Liu <songliubraving@fb.com>,
+ Jakub Kicinski <jakub.kicinski@netronome.com>,
+ Alexander Lobakin <alobakin@dlink.ru>,
+ Yoshiki Komachi <komachi.yoshiki@gmail.com>, linux-kernel@vger.kernel.org,
+ Eric Dumazet <edumazet@google.com>, Stanislav Fomichev <sdf@google.com>,
+ Matteo Croce <mcroce@redhat.com>, Edward Cree <ecree@solarflare.com>,
+ Florian Fainelli <f.fainelli@gmail.com>, Jakub Sitnicki <jakub@cloudflare.com>,
+ Daniel Borkmann <daniel@iogearbox.net>, Paolo Abeni <pabeni@redhat.com>,
+ Vivien Didelot <vivien.didelot@gmail.com>, Hauke Mehrtens <hauke@hauke-m.de>,
+ Sean Wang <sean.wang@mediatek.com>, Jiri Pirko <jiri@mellanox.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, netdev@vger.kernel.org,
+ Paul Blakey <paulb@mellanox.com>,
+ Stephen Hemminger <stephen@networkplumber.org>,
+ Taehee Yoo <ap420073@gmail.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+As of now, napi_gro_receive() in cases where the corresponding
+device is installed as CPU port of DSA-driven switch is in fact
+an overheaded version of netif_receive_skb{,_list}() with no
+advantages over:
 
-On 12/22/19 6:50 PM, Yangtao Li wrote:
-> Use devm_platform_ioremap_resource() to simplify code.
-> 
-> Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
-> ---
->   drivers/memory/samsung/exynos5422-dmc.c | 7 ++-----
->   1 file changed, 2 insertions(+), 5 deletions(-)
-> 
-> diff --git a/drivers/memory/samsung/exynos5422-dmc.c b/drivers/memory/samsung/exynos5422-dmc.c
-> index 47dbf6d1789f..81a1b1d01683 100644
-> --- a/drivers/memory/samsung/exynos5422-dmc.c
-> +++ b/drivers/memory/samsung/exynos5422-dmc.c
-> @@ -1374,7 +1374,6 @@ static int exynos5_dmc_probe(struct platform_device *pdev)
->   	struct device *dev = &pdev->dev;
->   	struct device_node *np = dev->of_node;
->   	struct exynos5_dmc *dmc;
-> -	struct resource *res;
->   	int irq[2];
->   
->   	dmc = devm_kzalloc(dev, sizeof(*dmc), GFP_KERNEL);
-> @@ -1386,13 +1385,11 @@ static int exynos5_dmc_probe(struct platform_device *pdev)
->   	dmc->dev = dev;
->   	platform_set_drvdata(pdev, dmc);
->   
-> -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> -	dmc->base_drexi0 = devm_ioremap_resource(dev, res);
-> +	dmc->base_drexi0 = devm_platform_ioremap_resource(pdev, 0);
->   	if (IS_ERR(dmc->base_drexi0))
->   		return PTR_ERR(dmc->base_drexi0);
->   
-> -	res = platform_get_resource(pdev, IORESOURCE_MEM, 1);
-> -	dmc->base_drexi1 = devm_ioremap_resource(dev, res);
-> +	dmc->base_drexi1 = devm_platform_ioremap_resource(pdev, 1);
->   	if (IS_ERR(dmc->base_drexi1))
->   		return PTR_ERR(dmc->base_drexi1);
->   
-> 
+- dev_gro_receive() can't find packet_offload for ETH_P_XDSA type;
+- so it immediately returns GRO_NORMAL;
+- napi_skb_finish() passes skb to gro_normal_one() -> netstack.
 
-Acked-by: Lukasz Luba <lukasz.luba@arm.com>
+This series adds a basic infrastructure to allow DSA taggers to
+implement GRO callbacks and adds GRO support for 5 tagger drivers:
+* tag_ar9331
+* tag_gswip
+* tag_lan9303
+* tag_mtk
+* tag_qca
 
-Regards,
-Lukasz
+I didn't make it for the rest because they are in fact way more
+complicated (e.g. combined DSA + 802.1q tag etc.) and require
+more familiarity with them and tests on the real hardware, which
+is inaccesible for me at the moment.
+
+This series also includes a bunch of random fixes in several tagger
+drivers and some cleanup. I left them all in one place as they depend
+on each other, but there's no problem for me to split this into
+different series.
+
+I mark this as RFC, and there are the key questions for maintainers,
+developers, users etc.:
+- Do we need GRO support for DSA at all?
+- Which tagger protocols really need it and which don't?
+- Are the actual changes correct in every single tagger code?
+- Does this series bring any performance improvements on the
+  affected systems?
+- Would anybody mind if we'd add DSA support to napi_gro_frags()?
+- Any code/other comments/notes.
+
+I also would like to see more taggers with GRO callbacks, such as
+DSA and EDSA, and the results of their addition.
+
+Alexander Lobakin (20):
+  net: dsa: make .flow_dissect() callback returning void
+  net: dsa: add GRO support infrastructure
+  net: dsa: tag_ar9331: add .flow_dissect() callback
+  net: dsa: tag_ar9331: split out common tag accessors
+  net: dsa: tag_ar9331: add GRO callbacks
+  net: dsa: tag_gswip: fix typo in tag name
+  net: dsa: tag_gswip: switch to bitfield helpers
+  net: dsa: tag_gswip: add .flow_dissect() callback
+  net: dsa: tag_gswip: split out common tag accessors
+  net: dsa: tag_gswip: add GRO callbacks
+  net: dsa: tag_lan9303: add .flow_dissect() callback
+  net: dsa: tag_lan9303: split out common tag accessors
+  net: dsa: tag_lan9303: add GRO callbacks
+  net: dsa: tag_mtk: split out common tag accessors
+  net: dsa: tag_mtk: add GRO callbacks
+  net: dsa: tag_qca: fix doubled Tx statistics
+  net: dsa: tag_qca: switch to bitfield helpers
+  net: dsa: tag_qca: split out common tag accessors
+  net: dsa: tag_qca: add GRO callbacks
+  net: core: add (unlikely) DSA support in napi_gro_frags()
+
+ include/net/dsa.h         |  10 ++-
+ net/core/dev.c            |  11 ++-
+ net/core/flow_dissector.c |   8 +-
+ net/dsa/dsa.c             |  43 +++++++++-
+ net/dsa/dsa2.c            |   1 +
+ net/dsa/tag_ar9331.c      | 139 ++++++++++++++++++++++++++-----
+ net/dsa/tag_dsa.c         |   5 +-
+ net/dsa/tag_edsa.c        |   5 +-
+ net/dsa/tag_gswip.c       | 126 +++++++++++++++++++++++-----
+ net/dsa/tag_lan9303.c     | 139 ++++++++++++++++++++++++++-----
+ net/dsa/tag_mtk.c         | 115 +++++++++++++++++++++-----
+ net/dsa/tag_qca.c         | 167 ++++++++++++++++++++++++++++----------
+ 12 files changed, 629 insertions(+), 140 deletions(-)
+
+-- 
+2.24.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
