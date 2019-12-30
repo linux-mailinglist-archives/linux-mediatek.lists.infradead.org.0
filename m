@@ -2,57 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 119C512D12F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 15:49:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37BD312D0E6
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 15:43:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6FBq8SKBtrgOOYptgYcZaLVv/vKjtGmiq3Pw34NSoOI=; b=gLsS8QHuGBnZ4F
-	ZydO6BbqMdbtQ7XcXNP851K7sYSrWJO2xuDdDkkPUt0XeTr1Dt+0HE9bvyneIQDdktGJLRUJak5P2
-	AQnGx2zbLkQCuMMtftyqj6udLerTmHt0PtuKnoSVNwNP3gxR0+9ykonBObhwsHF6PhvIjYcQb6gTN
-	TdPjACZpsLwd7HWvj7KtTN9NvwT4P+ZFJSfwRQCU3zbhpsXXmkYr4K01sLvodMyTqG8nczevgWTlb
-	5qGC8iCPHgJhsbmyTLPqT9IICjc4i+6VmGjOTFf1DhCRTsYWfn/DvlTWJWNYOAnytDgW6al/X/IRb
-	1CwKiHSb0xb3bIr53Hyg==;
+	List-Owner; bh=HqDxjmcjMa2ySoBSO/X6nqbMFBZUY6EKjVkiF/9/DDU=; b=NvT6O7lo7bOzWC
+	BbAPbOeFhfi6CIo8imU4gpdoLJtvQAESmCxSzoYHkfMLJgUuR2RYtqilDWfgZtUlFcVLGSzBFGhXF
+	W000xrYK9CQxYU/WXBxYxY2KnEKFh5z9tWl6nq3T4b5GBx14x7i2w+oMpGyizrcazj/1DSe88usOa
+	XD2gyAnMtcuYIHYi2kFFOYJqRu2LxQ4INzYSruawJdcXd7ErcaIUcfsfs0uqWhfAzfpqU8deXqFip
+	RVh8hmm9/t4QYwUwUMNuBDJMBq52Uy4y6BvCjvbapHVvtk9OnG9qAlcVAO18JJIE2tnPjB9MMEOPe
+	RMcSR+HAcyJO/YhbP/Cg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ilwMA-0002Co-9d; Mon, 30 Dec 2019 14:49:18 +0000
+	id 1ilwGH-0004RH-G7; Mon, 30 Dec 2019 14:43:13 +0000
 Received: from mail.dlink.ru ([178.170.168.18] helo=fd.dlink.ru)
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ilwFc-0003yj-PU; Mon, 30 Dec 2019 14:42:37 +0000
+ id 1ilwFY-0003vp-EY; Mon, 30 Dec 2019 14:42:30 +0000
 Received: by fd.dlink.ru (Postfix, from userid 5000)
- id A32B11B2191E; Mon, 30 Dec 2019 17:32:10 +0300 (MSK)
-DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru A32B11B2191E
+ id 027DC1B219A8; Mon, 30 Dec 2019 17:33:47 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru 027DC1B219A8
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dlink.ru; s=mail;
- t=1577716330; bh=SYnifMPQP4kzdSLpDkUORDps+aCxCuIpXYmwM1fEL9I=;
+ t=1577716428; bh=omc8QrcNvP8pME1zDqBdaSM8dT/TdIR/78ZE/IJu6BE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References;
- b=qWSynPqamq2vu3rHWp6/Ys3pxIrOTkLRx3ZezonYii1EquqP08soQTNpX1WjtfEs4
- yz8JzEUB2EzofaWNraN5P31GJonoOytZ/1zxAFeyZBKKLcaHo75Z2jU3DNShyScBch
- lOCVovbzltnCE/K86L53IARuxB6GqHBPxqlI4xOA=
+ b=pVeNl+Pvn4Yrzl89PReZ1MU+3rtkWE6p2QPhpzLcOjHUrlJ5bR93xJjnPnsswJH+1
+ KdGgHRB0aNYEe98P84mc/T2kDlJ0XlRXUDKaumqX2OeUp31bMrDUvJY5ZONyQthfnB
+ wMevs+aXuuptlgPhHYlCDzymqq3mrta5FiPoVCrE=
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on mail.dlink.ru
+X-Spam-Level: 
+X-Spam-Status: No, score=-99.2 required=7.5 tests=BAYES_50,URIBL_BLOCKED,
+ USER_IN_WHITELIST autolearn=disabled version=3.4.2
 Received: from mail.rzn.dlink.ru (mail.rzn.dlink.ru [178.170.168.13])
- by fd.dlink.ru (Postfix) with ESMTP id 3C8BB1B21825;
- Mon, 30 Dec 2019 17:31:29 +0300 (MSK)
-DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru 3C8BB1B21825
+ by fd.dlink.ru (Postfix) with ESMTP id 041281B21829;
+ Mon, 30 Dec 2019 17:31:31 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.11.0 fd.dlink.ru 041281B21829
 Received: from mail.rzn.dlink.ru (localhost [127.0.0.1])
- by mail.rzn.dlink.ru (Postfix) with ESMTP id 678DC1B229D0;
- Mon, 30 Dec 2019 17:31:27 +0300 (MSK)
+ by mail.rzn.dlink.ru (Postfix) with ESMTP id 3A52F1B229CB;
+ Mon, 30 Dec 2019 17:31:29 +0300 (MSK)
 Received: from localhost.localdomain (unknown [196.196.203.126])
  by mail.rzn.dlink.ru (Postfix) with ESMTPA;
- Mon, 30 Dec 2019 17:31:27 +0300 (MSK)
+ Mon, 30 Dec 2019 17:31:29 +0300 (MSK)
 From: Alexander Lobakin <alobakin@dlink.ru>
 To: "David S. Miller" <davem@davemloft.net>
-Subject: [PATCH RFC net-next 13/19] net: dsa: tag_lan9303: add GRO callbacks
-Date: Mon, 30 Dec 2019 17:30:21 +0300
-Message-Id: <20191230143028.27313-14-alobakin@dlink.ru>
+Subject: [PATCH RFC net-next 14/19] net: dsa: tag_mtk: split out common tag
+ accessors
+Date: Mon, 30 Dec 2019 17:30:22 +0300
+Message-Id: <20191230143028.27313-15-alobakin@dlink.ru>
 X-Mailer: git-send-email 2.24.1
 In-Reply-To: <20191230143028.27313-1-alobakin@dlink.ru>
 References: <20191230143028.27313-1-alobakin@dlink.ru>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191230_064233_295036_836447C8 
-X-CRM114-Status: GOOD (  12.07  )
+X-CRM114-CacheID: sfid-20191230_064228_852051_57D57C81 
+X-CRM114-Status: GOOD (  11.16  )
 X-Spam-Score: 2.4 (++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (2.4 points)
@@ -102,108 +107,94 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add GRO callbacks for LAN9303 tagger to make GRO available for frames
-tagged with it.
+Misc: fix identation of MTK_HDR_LEN and make use of it in
+mtk_tag_flow_dissect() instead of open-coded value.
 
 Signed-off-by: Alexander Lobakin <alobakin@dlink.ru>
 ---
- net/dsa/tag_lan9303.c | 77 +++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 77 insertions(+)
+ net/dsa/tag_mtk.c | 40 +++++++++++++++++++++++-----------------
+ 1 file changed, 23 insertions(+), 17 deletions(-)
 
-diff --git a/net/dsa/tag_lan9303.c b/net/dsa/tag_lan9303.c
-index ba03502986a4..77aba4311f2d 100644
---- a/net/dsa/tag_lan9303.c
-+++ b/net/dsa/tag_lan9303.c
-@@ -151,12 +151,89 @@ static void lan9303_flow_dissect(const struct sk_buff *skb, __be16 *proto,
- 	*proto = lan9303_encap_proto(skb->data);
+diff --git a/net/dsa/tag_mtk.c b/net/dsa/tag_mtk.c
+index c3ad7b7b142a..b926ffdf5fb5 100644
+--- a/net/dsa/tag_mtk.c
++++ b/net/dsa/tag_mtk.c
+@@ -10,12 +10,27 @@
+ 
+ #include "dsa_priv.h"
+ 
+-#define MTK_HDR_LEN		4
++#define MTK_HDR_LEN			4
+ #define MTK_HDR_XMIT_UNTAGGED		0
+ #define MTK_HDR_XMIT_TAGGED_TPID_8100	1
+ #define MTK_HDR_RECV_SOURCE_PORT_MASK	GENMASK(2, 0)
+ #define MTK_HDR_XMIT_DP_BIT_MASK	GENMASK(5, 0)
+ 
++static inline int mtk_tag_source_port(const u8 *data)
++{
++	/* The MTK header is added by the switch between src addr
++	 * and ethertype at this point, skb->data points to 2 bytes
++	 * after src addr so header should be 2 bytes right before.
++	 * The source port field is in the second byte of the tag.
++	 */
++	return *(data - 1) & MTK_HDR_RECV_SOURCE_PORT_MASK;
++}
++
++static inline __be16 mtk_tag_encap_proto(const u8 *data)
++{
++	return *(__be16 *)(data + 2);
++}
++
+ static struct sk_buff *mtk_tag_xmit(struct sk_buff *skb,
+ 				    struct net_device *dev)
+ {
+@@ -60,17 +75,15 @@ static struct sk_buff *mtk_tag_rcv(struct sk_buff *skb, struct net_device *dev,
+ 				   struct packet_type *pt)
+ {
+ 	int port;
+-	__be16 *phdr, hdr;
+ 
+ 	if (unlikely(!pskb_may_pull(skb, MTK_HDR_LEN)))
+ 		return NULL;
+ 
+-	/* The MTK header is added by the switch between src addr
+-	 * and ethertype at this point, skb->data points to 2 bytes
+-	 * after src addr so header should be 2 bytes right before.
+-	 */
+-	phdr = (__be16 *)(skb->data - 2);
+-	hdr = ntohs(*phdr);
++	port = mtk_tag_source_port(skb->data);
++
++	skb->dev = dsa_master_find_slave(dev, 0, port);
++	if (!skb->dev)
++		return NULL;
+ 
+ 	/* Remove MTK tag and recalculate checksum. */
+ 	skb_pull_rcsum(skb, MTK_HDR_LEN);
+@@ -79,21 +92,14 @@ static struct sk_buff *mtk_tag_rcv(struct sk_buff *skb, struct net_device *dev,
+ 		skb->data - ETH_HLEN - MTK_HDR_LEN,
+ 		2 * ETH_ALEN);
+ 
+-	/* Get source port information */
+-	port = (hdr & MTK_HDR_RECV_SOURCE_PORT_MASK);
+-
+-	skb->dev = dsa_master_find_slave(dev, 0, port);
+-	if (!skb->dev)
+-		return NULL;
+-
+ 	return skb;
  }
  
-+static struct sk_buff *lan9303_gro_receive(struct list_head *head,
-+					   struct sk_buff *skb)
-+{
-+	const struct packet_offload *ptype;
-+	struct sk_buff *p, *pp = NULL;
-+	const u8 *data, *data_p;
-+	u32 data_off, data_end;
-+	int flush = 1;
-+
-+	data_off = skb_gro_offset(skb);
-+	data_end = data_off + LAN9303_TAG_LEN;
-+
-+	data = skb_gro_header_fast(skb, data_off);
-+	if (skb_gro_header_hard(skb, data_end)) {
-+		data = skb_gro_header_slow(skb, data_end, data_off);
-+		if (unlikely(!data))
-+			goto out;
-+	}
-+
-+	/* Data that is to the left to the current position is already
-+	 * pulled to the head
-+	 */
-+	if (!lan9303_sanity_check(skb->data + data_off))
-+		goto out;
-+
-+	rcu_read_lock();
-+
-+	ptype = gro_find_receive_by_type(lan9303_encap_proto(data));
-+	if (!ptype)
-+		goto out_unlock;
-+
-+	flush = 0;
-+
-+	list_for_each_entry(p, head, list) {
-+		if (!NAPI_GRO_CB(p)->same_flow)
-+			continue;
-+
-+		data_p = p->data + data_off;
-+		if (lan9303_source_port(data) ^ lan9303_source_port(data_p))
-+			NAPI_GRO_CB(p)->same_flow = 0;
-+	}
-+
-+	skb_gro_pull(skb, LAN9303_TAG_LEN);
-+	skb_gro_postpull_rcsum(skb, data, LAN9303_TAG_LEN);
-+
-+	pp = call_gro_receive(ptype->callbacks.gro_receive, head, skb);
-+
-+out_unlock:
-+	rcu_read_unlock();
-+out:
-+	skb_gro_flush_final(skb, pp, flush);
-+
-+	return pp;
-+}
-+
-+static int lan9303_gro_complete(struct sk_buff *skb, int nhoff)
-+{
-+	const struct packet_offload *ptype;
-+	int err = -ENOENT;
-+	__be16 proto;
-+
-+	proto = lan9303_encap_proto(skb->data + nhoff);
-+	nhoff += LAN9303_TAG_LEN;
-+
-+	rcu_read_lock();
-+
-+	ptype = gro_find_complete_by_type(proto);
-+	if (ptype)
-+		err = ptype->callbacks.gro_complete(skb, nhoff);
-+
-+	rcu_read_unlock();
-+
-+	return err;
-+}
-+
- static const struct dsa_device_ops lan9303_netdev_ops = {
- 	.name		= "lan9303",
- 	.proto		= DSA_TAG_PROTO_LAN9303,
- 	.xmit		= lan9303_xmit,
- 	.rcv		= lan9303_rcv,
- 	.flow_dissect	= lan9303_flow_dissect,
-+	.gro_receive	= lan9303_gro_receive,
-+	.gro_complete	= lan9303_gro_complete,
- 	.overhead	= LAN9303_TAG_LEN,
- };
+ static void mtk_tag_flow_dissect(const struct sk_buff *skb, __be16 *proto,
+ 				 int *offset)
+ {
+-	*offset = 4;
+-	*proto = ((__be16 *)skb->data)[1];
++	*offset = MTK_HDR_LEN;
++	*proto = mtk_tag_encap_proto(skb->data);
+ }
  
+ static const struct dsa_device_ops mtk_netdev_ops = {
 -- 
 2.24.1
 
