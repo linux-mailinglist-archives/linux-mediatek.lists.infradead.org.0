@@ -2,82 +2,50 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D8B8912CD87
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 09:13:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CD73B12CDC2
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Dec 2019 09:40:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vRyKKn1Trd6Bkx2tBlZdhU/0SwdTalPYwsMrdmNjk+I=; b=FGT//Vyych3T5S
-	gbOPQPC+88HomXZ0OI4d/RWfiNXTMVaFOD9hpOcoM6s2STlw9bGhwUksNJmWMmJZsgAz6VINb4Qcp
-	RTYCEhsOjYXPzG8ZTyGlIIQNoPsXF4s73uwze5AxwjXikDRtAGf81A7neFE6bEKjJFT9Oom2553EW
-	1JCcxACOW4vNLrKdIYwKYByoYSByaxtXdKAHcc4/dfISSl27KauXNkhz5zGY9mJFx+ZTgdd5Viq75
-	4UO05QpaBoSdpYeMDjMi/KrNF4KpoBaJtn45Twy2tNg1HFKz0+BggN8eXMiQ7oQTmei7f0YZj51Ky
-	qaUXxbaLZ+1on8oUX+OQ==;
+	List-Owner; bh=M8F1CR/ZRTqVGgW2eM/B0InGwstDZ+XcsQTZw1sbBlg=; b=S7QG9vVzuQjwy1
+	JgcKba4j8uVRRCCrcOXVj2kJvMhG970VtaAGPQeN4qu2r+geRNhvZn3eXeZf0YrHUuxNTybnVkISN
+	OunCSGWBUj6ad41D/kQ8XLEwCuBOCwXvODPqgN9NIT2O6/MZCL3Pa5ppADmKiYnyYdA8n0CC+kjIs
+	1Va3Yr9wJnhrukYbFn5S196TkK98ZoKUn0Imwe9f2DlMxmHnUb92nXLCvFVcXioGyHe4AZa+z1FPc
+	kIrA1XPrxNOiyMlA6WVV097lkD28kUv6YgXBiT5IXTGCkZIXIY/s081jZGAxoLdaJqYoL0x5NWmli
+	ei1hnmR9B4+RzGs5g/Yw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ilqAM-0000nL-EI; Mon, 30 Dec 2019 08:12:42 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1ilqb7-0002p3-GD; Mon, 30 Dec 2019 08:40:21 +0000
+Received: from gloria.sntech.de ([185.11.138.130])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ilqAJ-0000ms-KG; Mon, 30 Dec 2019 08:12:41 +0000
-X-UUID: a3113278e76b4386995a5660a4dfe469-20191230
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=0KIHktbzT0WK8dPIhtZ0AEWFT4vEf5OuB0GSMuDxVIM=; 
- b=sZXTbpNVSdNkJTgsrm3MuOLqChFWjl9HhNtgt/ON3EMwF+WKgfqlAZRFZzpB3gZvUrt07w0vSw1MZ8NivFWWcwkp0bhpms2CKD2S6LhMaDuRRc8ay1ZyU35k/6IViuCb6yEA79HoE3U9dK+mbqvAhG3L3CWnm/qHGrWt01r9qPA=;
-X-UUID: a3113278e76b4386995a5660a4dfe469-20191230
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 432576440; Mon, 30 Dec 2019 00:12:31 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Dec 2019 00:12:34 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Dec 2019 16:13:02 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 30 Dec 2019 16:12:01 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>,
- <pedrom.sousa@synopsys.com>, <jejb@linux.ibm.com>, <matthias.bgg@gmail.com>,
- <bvanassche@acm.org>, <subhashj@codeaurora.org>
-Subject: [PATCH v1 2/2] scsi: ufs: remove link_startup_again flow in
- ufshcd_link_startup
-Date: Mon, 30 Dec 2019 16:12:26 +0800
-Message-ID: <1577693546-7598-3-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1577693546-7598-1-git-send-email-stanley.chu@mediatek.com>
-References: <1577693546-7598-1-git-send-email-stanley.chu@mediatek.com>
+ id 1ilqak-0001QM-RK; Mon, 30 Dec 2019 08:40:00 +0000
+Received: from [217.166.243.182] (helo=phil.localnet)
+ by gloria.sntech.de with esmtpsa (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.89) (envelope-from <heiko@sntech.de>)
+ id 1ilqaS-0006tO-JZ; Mon, 30 Dec 2019 09:39:40 +0100
+From: Heiko Stuebner <heiko@sntech.de>
+To: Yangtao Li <tiny.windzz@gmail.com>
+Subject: Re: [PATCH 15/32] pwm: rockchip: convert to
+ devm_platform_ioremap_resource
+Date: Mon, 30 Dec 2019 09:39:38 +0100
+Message-ID: <3343090.K8KIS9te04@phil>
+In-Reply-To: <20191229080610.7597-15-tiny.windzz@gmail.com>
+References: <20191229080610.7597-1-tiny.windzz@gmail.com>
+ <20191229080610.7597-15-tiny.windzz@gmail.com>
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191230_001239_676676_37D922D8 
-X-CRM114-Status: UNSURE (   8.77  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191230_003959_036883_974FEBBA 
+X-CRM114-Status: GOOD (  12.38  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,74 +57,66 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
- stable@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- beanhuo@micron.com
+Cc: alexandre.belloni@bootlin.com, linux-kernel@vger.kernel.org,
+ linux-tegra@vger.kernel.org, thierry.reding@gmail.com,
+ linux-riscv@lists.infradead.org, festevam@gmail.com, f.fainelli@gmail.com,
+ shc_work@mail.ru, khilman@baylibre.com, wens@csie.org, jonathanh@nvidia.com,
+ linux-rockchip@lists.infradead.org, ludovic.desroches@microchip.com,
+ bcm-kernel-feedback-list@broadcom.com, linux-imx@nxp.com,
+ slemieux.tyco@gmail.com, linux-pwm@vger.kernel.org, rjui@broadcom.com,
+ s.hauer@pengutronix.de, u.kleine-koenig@pengutronix.de, mripard@kernel.org,
+ vz@mleia.com, linux-mediatek@lists.infradead.org,
+ linux-rpi-kernel@lists.infradead.org, paul.walmsley@sifive.com,
+ matthias.bgg@gmail.com, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, sbranden@broadcom.com,
+ nicolas.ferre@microchip.com, linux@prisktech.co.nz, palmer@dabbelt.com,
+ kernel@pengutronix.de, shawnguo@kernel.org, claudiu.beznea@microchip.com,
+ nsaenzjulienne@suse.de
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-link_startup_again flow in ufshcd_link_startup() is not necessary
-since currently device can be moved to "active" power mode during
-resume flow by commit as below,
+Am Sonntag, 29. Dezember 2019, 09:05:53 CET schrieb Yangtao Li:
+> Use devm_platform_ioremap_resource() to simplify code.
+> 
+> Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
 
-"scsi: ufs: set device as default active power mode during
-initialization only"
+Reviewed-by: Heiko Stuebner <heiko@sntech.de>
 
-Fixes: 7caf489b99a4 (scsi: ufs: issue link starup 2 times if device isn't active)
-Cc: Alim Akhtar <alim.akhtar@samsung.com>
-Cc: Avri Altman <avri.altman@wdc.com>
-Cc: Bart Van Assche <bvanassche@acm.org>
-Cc: Bean Huo <beanhuo@micron.com>
-Cc: Can Guo <cang@codeaurora.org>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>
-Cc: Subhash Jadavani <subhashj@codeaurora.org>
-Cc: stable@vger.kernel.org
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufshcd.c | 15 ---------------
- 1 file changed, 15 deletions(-)
 
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 9abb7085a5d0..1900f811394a 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -4365,16 +4365,7 @@ static int ufshcd_link_startup(struct ufs_hba *hba)
- {
- 	int ret;
- 	int retries = DME_LINKSTARTUP_RETRIES;
--	bool link_startup_again = false;
- 
--	/*
--	 * If UFS device isn't active then we will have to issue link startup
--	 * 2 times to make sure the device state move to active.
--	 */
--	if (!ufshcd_is_ufs_dev_active(hba))
--		link_startup_again = true;
--
--link_startup:
- 	do {
- 		ufshcd_vops_link_startup_notify(hba, PRE_CHANGE);
- 
-@@ -4408,12 +4399,6 @@ static int ufshcd_link_startup(struct ufs_hba *hba)
- 		goto out;
- 	}
- 
--	if (link_startup_again) {
--		link_startup_again = false;
--		retries = DME_LINKSTARTUP_RETRIES;
--		goto link_startup;
--	}
--
- 	/* Mark that link is up in PWM-G1, 1-lane, SLOW-AUTO mode */
- 	ufshcd_init_pwr_info(hba);
- 	ufshcd_print_pwr_info(hba);
--- 
-2.18.0
+> ---
+>  drivers/pwm/pwm-rockchip.c | 4 +---
+>  1 file changed, 1 insertion(+), 3 deletions(-)
+> 
+> diff --git a/drivers/pwm/pwm-rockchip.c b/drivers/pwm/pwm-rockchip.c
+> index 73352e6fbccb..f0549b82338d 100644
+> --- a/drivers/pwm/pwm-rockchip.c
+> +++ b/drivers/pwm/pwm-rockchip.c
+> @@ -292,7 +292,6 @@ static int rockchip_pwm_probe(struct platform_device *pdev)
+>  {
+>  	const struct of_device_id *id;
+>  	struct rockchip_pwm_chip *pc;
+> -	struct resource *r;
+>  	int ret, count;
+>  
+>  	id = of_match_device(rockchip_pwm_dt_ids, &pdev->dev);
+> @@ -303,8 +302,7 @@ static int rockchip_pwm_probe(struct platform_device *pdev)
+>  	if (!pc)
+>  		return -ENOMEM;
+>  
+> -	r = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> -	pc->base = devm_ioremap_resource(&pdev->dev, r);
+> +	pc->base = devm_platform_ioremap_resource(pdev, 0);
+>  	if (IS_ERR(pc->base))
+>  		return PTR_ERR(pc->base);
+>  
+> 
+
+
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
