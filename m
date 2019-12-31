@@ -2,61 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EE52012D93F
-	for <lists+linux-mediatek@lfdr.de>; Tue, 31 Dec 2019 14:52:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 50D5812D98A
+	for <lists+linux-mediatek@lfdr.de>; Tue, 31 Dec 2019 15:53:23 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AunU0r+dLJBXXcjKtbfP7agFX7zk7ZsdG0VQAUBvofM=; b=VVzbd+BiBz/QbN
-	+AYimu0VM58/zflIzXsTOT8yeSTD0gA1CCs9TknFMu5pOKnZXJ1Xd8APV02lJJ+OY2og+2ITdL5t8
-	UfTLvRtt40zu2h3Qw5ybh5hHPVjw+jRyj2a134hVoIpktiI/1CNKb1lI9pyrkkg3qvU1tjV8hAq5c
-	8k5PhSzOKHzw2KYJaYsPjHOPy8DTYZJBgT89wPS5sP4LsugcP1/El6gtqI9gKURTwEfDq6uz1NZLm
-	gTgJ9O1ixv9/2dYdC8YRdUN9whhxw69s4SSlVCNM/KS0OwjjXtxg5uICw19+9iCt576IUSU7kFai7
-	DcI+bAGoP6AFZ0e+carw==;
+	List-Owner; bh=bSDSfj6PnM1vu1c+JUnUnVI7rJJMFBbJbOUqAZqbkC4=; b=oAK0eKxfZL737y
+	0NqBckm4ck/eUB6gzXH0PCThOdEsGirjO50ZcrP70a+aDoRapWt5wIlXlSPTODFOCgGqMgGftObsx
+	1tbWgiYkWWMbHoZ/sgItGCuapCcHyhqlstI4HGgx8bP8Uj+2k/Yc6RhpLslmdx3dX4D+pI94jThjq
+	PEZoGjZH6zOU6qPTz3o+G78DMi295o9M5K+keaWgdVdkE4dzJ0vI/MgCo1/HZUDKCxj98CkN0SRae
+	xsZpOFdE7gIrXj8eMDel1jFgX1UMDQl6LLr0IXCnDXoN/EWNFJXS57kHhITPoOoApqjAmwCes+E50
+	o7H6oJ2hRIqeGLK8O+uQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1imHwH-0006Zn-HS; Tue, 31 Dec 2019 13:52:01 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1imItY-0000Py-AG; Tue, 31 Dec 2019 14:53:16 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1imHwC-0006Xp-SH
- for linux-mediatek@lists.infradead.org; Tue, 31 Dec 2019 13:51:58 +0000
-X-UUID: 20eeb316e7504e7ba85f05ee0d1c5807-20191231
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=z3pZFT+6t8ylWCp7AMGBvI067vp4npjbNdsiLxU09zM=; 
- b=SuPrK7A2wsSKEWknPVXkflkhacOSI812EAZI2Kh6yIHY+5xTpgeK1eUTUUgYrz9PA2Lcem1yvryAcst20y2Ndc4zPOwe/I1mniO/JhUfO0Zv2oE689ulPiS5AB7CKLzKeozMCGrkvEyVTlugDsR08a4vvSRZGE51Qw3ogCAaImM=;
-X-UUID: 20eeb316e7504e7ba85f05ee0d1c5807-20191231
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <light.hsieh@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1126686280; Tue, 31 Dec 2019 05:51:53 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 31 Dec 2019 05:42:10 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 31 Dec 2019 21:41:05 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 31 Dec 2019 21:41:17 +0800
-From: Light Hsieh <light.hsieh@mediatek.com>
-To: <linus.walleij@linaro.org>
-Subject: [PATCH v7 6/6] Add support for pin configuration dump via debugfs.
-Date: Tue, 31 Dec 2019 21:41:47 +0800
-Message-ID: <1577799707-11855-6-git-send-email-light.hsieh@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1577799707-11855-1-git-send-email-light.hsieh@mediatek.com>
-References: <1577799707-11855-1-git-send-email-light.hsieh@mediatek.com>
+ id 1imItL-0000Fb-NE; Tue, 31 Dec 2019 14:53:04 +0000
+Received: by mail-ed1-x542.google.com with SMTP id dc19so35398050edb.10;
+ Tue, 31 Dec 2019 06:53:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=2o20aAqayv6BZ7lYdB775KhwnJD8SsBVJk71b0rde2E=;
+ b=poRD7KZjKZr3ORNVyI2Yj3hyY1TSZPoPk95zGZ701aGlD/EuLWIYYGcQNBnu2tZ7En
+ xoxgSxs5loO/fAEkWpp678V8OLrQTcgJrUFksGkGuG8BarsWWXMPvtvZE1SfXAOgejml
+ SLB+9Fd0k3b41xtxmVe9f/raX5P1W249Yk2AqJ15SARoCzycZA1QzKvuIQ+3j32VCpGz
+ iKSAYWHJWSCOuZVvlXBzU8wMmL0ERW8LyW2wYDIQ9WUVbotyuWLM0aScSi3rKSQVm33C
+ mvV0Fo4HIPY9SHlLjH+P+IMsRlEgXN4N/aXUFYrOoO0MbtUyKTAwyLZ6UghZzNXybp5c
+ gC/g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=2o20aAqayv6BZ7lYdB775KhwnJD8SsBVJk71b0rde2E=;
+ b=a4ixuj7MJOUH7Kwwll9uRdht9P3aF7dk/61FezVtpQQ/0WvyMaD8w56vyvFXRh+JuU
+ EBcUl18gK0B4nHenY9bydg+MHGMj9VDUCuvdBrIuk34S+WBKrZLMsPI/KQtEY2BwMEeo
+ fw7hhQjwKIzqmy648iKmUsqTzAkhK7Mt8YQQAje5QiuGpG8/IzVJk8L1ALw5Ywts1S60
+ ojPSZZwHvpS4LkEDPsCGgU0Uqd2fkqpqh9mfgVyFNL2GxrI3fBJuvxumBusBj3Cy0L7s
+ ki1ZkjDKiS/9LBjKVpqm+i844HjwnbpwXnvolwmgsr7DVTxRQ63aMhjE7LQA3oI2Ahnf
+ 4jQw==
+X-Gm-Message-State: APjAAAV833Klb8OqnHzR/mzt3hxt4MlKKYCXC8CysB78WUEGNf/rm/wh
+ zTPx6qGdxvPyHZZyKUY/FdOvrn4kkor7h4QsiroKfviU
+X-Google-Smtp-Source: APXvYqyRa5i9cLmMHe86c+B4Fx/pd0qP4rUcFH9Tquw1x4/LQC/Oq5YixxDbRdVtRa9R4GKVNAzhEfLEp5Lfo8kVkxk=
+X-Received: by 2002:a50:bae1:: with SMTP id x88mr59378035ede.10.1577803980972; 
+ Tue, 31 Dec 2019 06:53:00 -0800 (PST)
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 32219F344A537A986D604800AECCF3AE49384A06C2C055A05C0A4F98DFB81C412000:8
-X-MTK: N
+References: <20191230172113.17222-1-krzk@kernel.org>
+ <20191230172113.17222-2-krzk@kernel.org>
+In-Reply-To: <20191230172113.17222-2-krzk@kernel.org>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Tue, 31 Dec 2019 15:52:50 +0100
+Message-ID: <CAFBinCAeE-mu4+F9vOkp3cMaGjQ7tst0xdd47zSp54wW4ArRug@mail.gmail.com>
+Subject: Re: [PATCH 2/2] pwm: Enable compile testing for some of drivers
+To: Krzysztof Kozlowski <krzk@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191231_055156_924175_FD0F213B 
-X-CRM114-Status: GOOD (  11.79  )
+X-CRM114-CacheID: sfid-20191231_065303_783216_144EC81C 
+X-CRM114-Status: UNSURE (   6.93  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -64,8 +70,11 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -73,8 +82,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,174 +93,35 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: sean.wang@kernel.org, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, Light Hsieh <light.hsieh@mediatek.com>,
- linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org
+Cc: linux-pwm@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-rockchip@lists.infradead.org,
+ Thierry Reding <thierry.reding@gmail.com>,
+ bcm-kernel-feedback-list@broadcom.com, linux-rpi-kernel@lists.infradead.org,
+ =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add support for pin configuration dump via catting
-/sys/kernel/debug/pinctrl/$platform_dependent_path/pinconf-pins.
-pinctrl framework had already support such dump. This patch implement the
-operation function pointer to fullfill this dump.
+On Mon, Dec 30, 2019 at 6:21 PM Krzysztof Kozlowski <krzk@kernel.org> wrote:
+>
+> Some of the PWM drivers can be compile tested to increase build
+> coverage.
+>
+> The Meson PWM driver requires COMMON_CLK dependency.
+>
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
+for PWM_MESON:
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-Change-Id: I823642561adaedb847e77f9a8baea182913d6163
----
- drivers/pinctrl/mediatek/pinctrl-paris.c | 109 +++++++++++++++++++++++++++++++
- drivers/pinctrl/mediatek/pinctrl-paris.h |   3 +
- 2 files changed, 112 insertions(+)
+thank you!
 
-diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.c b/drivers/pinctrl/mediatek/pinctrl-paris.c
-index 115ebc1..83bf29c 100644
---- a/drivers/pinctrl/mediatek/pinctrl-paris.c
-+++ b/drivers/pinctrl/mediatek/pinctrl-paris.c
-@@ -539,12 +539,120 @@ static int mtk_pctrl_get_group_pins(struct pinctrl_dev *pctldev,
- 	return 0;
- }
- 
-+static int mtk_hw_get_value_wrap(struct mtk_pinctrl *hw, unsigned int gpio, int field)
-+{
-+	const struct mtk_pin_desc *desc;
-+	int value, err;
-+
-+	if (gpio > hw->soc->npins)
-+		return -EINVAL;
-+
-+	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
-+
-+	err = mtk_hw_get_value(hw, desc, field, &value);
-+	if (err)
-+		return err;
-+
-+	return value;
-+}
-+
-+#define mtk_pctrl_get_pinmux(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_MODE)
-+
-+#define mtk_pctrl_get_direction(hw, gpio)		\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_DIR)
-+
-+#define mtk_pctrl_get_out(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_DO)
-+
-+#define mtk_pctrl_get_in(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_DI)
-+
-+#define mtk_pctrl_get_smt(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_SMT)
-+
-+#define mtk_pctrl_get_ies(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_IES)
-+
-+#define mtk_pctrl_get_driving(hw, gpio)			\
-+	mtk_hw_get_value_wrap(hw, gpio, PINCTRL_PIN_REG_DRV)
-+
-+ssize_t mtk_pctrl_show_one_pin(struct mtk_pinctrl *hw,
-+	unsigned int gpio, char *buf, unsigned int bufLen)
-+{
-+	int pinmux, pullup, pullen, len = 0, r1 = -1, r0 = -1;
-+	const struct mtk_pin_desc *desc;
-+
-+	if (gpio > hw->soc->npins)
-+		return -EINVAL;
-+
-+	desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
-+	pinmux = mtk_pctrl_get_pinmux(hw, gpio);
-+	if (pinmux >= hw->soc->nfuncs)
-+		pinmux -= hw->soc->nfuncs;
-+
-+	mtk_pinconf_bias_get_combo(hw, desc, &pullup, &pullen);
-+	if (pullen == MTK_PUPD_SET_R1R0_00) {
-+		pullen = 0;
-+		r1 = 0;
-+		r0 = 0;
-+	} else if (pullen == MTK_PUPD_SET_R1R0_01) {
-+		pullen = 1;
-+		r1 = 0;
-+		r0 = 1;
-+	} else if (pullen == MTK_PUPD_SET_R1R0_10) {
-+		pullen = 1;
-+		r1 = 1;
-+		r0 = 0;
-+	} else if (pullen == MTK_PUPD_SET_R1R0_11) {
-+		pullen = 1;
-+		r1 = 1;
-+		r0 = 1;
-+	} else if (pullen != MTK_DISABLE && pullen != MTK_ENABLE) {
-+		pullen = 0;
-+	}
-+	len += snprintf(buf + len, bufLen - len,
-+			"%03d: %1d%1d%1d%1d%02d%1d%1d%1d%1d",
-+			gpio,
-+			pinmux,
-+			mtk_pctrl_get_direction(hw, gpio),
-+			mtk_pctrl_get_out(hw, gpio),
-+			mtk_pctrl_get_in(hw, gpio),
-+			mtk_pctrl_get_driving(hw, gpio),
-+			mtk_pctrl_get_smt(hw, gpio),
-+			mtk_pctrl_get_ies(hw, gpio),
-+			pullen,
-+			pullup);
-+
-+	if (r1 != -1) {
-+		len += snprintf(buf + len, bufLen - len, " (%1d %1d)\n",
-+			r1, r0);
-+	} else {
-+		len += snprintf(buf + len, bufLen - len, "\n");
-+	}
-+
-+	return len;
-+}
-+
-+#define PIN_DBG_BUF_SZ 96
-+static void mtk_pctrl_dbg_show(struct pinctrl_dev *pctldev, struct seq_file *s,
-+			  unsigned int gpio)
-+{
-+	struct mtk_pinctrl *hw = pinctrl_dev_get_drvdata(pctldev);
-+	char buf[PIN_DBG_BUF_SZ];
-+
-+	(void)mtk_pctrl_show_one_pin(hw, gpio, buf, PIN_DBG_BUF_SZ);
-+
-+	seq_printf(s, "%s", buf);
-+}
-+
- static const struct pinctrl_ops mtk_pctlops = {
- 	.dt_node_to_map		= mtk_pctrl_dt_node_to_map,
- 	.dt_free_map		= pinctrl_utils_free_map,
- 	.get_groups_count	= mtk_pctrl_get_groups_count,
- 	.get_group_name		= mtk_pctrl_get_group_name,
- 	.get_group_pins		= mtk_pctrl_get_group_pins,
-+	.pin_dbg_show           = mtk_pctrl_dbg_show,
- };
- 
- static int mtk_pmx_get_funcs_cnt(struct pinctrl_dev *pctldev)
-@@ -641,6 +749,7 @@ static int mtk_pconf_group_set(struct pinctrl_dev *pctldev, unsigned group,
- 	.pin_config_get = mtk_pinconf_get,
- 	.pin_config_group_get	= mtk_pconf_group_get,
- 	.pin_config_group_set	= mtk_pconf_group_set,
-+	.is_generic = true,
- };
- 
- static struct pinctrl_desc mtk_desc = {
-diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.h b/drivers/pinctrl/mediatek/pinctrl-paris.h
-index 3d43771..afb7650 100644
---- a/drivers/pinctrl/mediatek/pinctrl-paris.h
-+++ b/drivers/pinctrl/mediatek/pinctrl-paris.h
-@@ -60,6 +60,9 @@
- int mtk_paris_pinctrl_probe(struct platform_device *pdev,
- 			    const struct mtk_pin_soc *soc);
- 
-+ssize_t mtk_pctrl_show_one_pin(struct mtk_pinctrl *hw,
-+	unsigned int gpio, char *buf, unsigned int bufLen);
-+
- extern const struct dev_pm_ops mtk_paris_pinctrl_pm_ops;
- 
- #endif /* __PINCTRL_PARIS_H */
--- 
-1.8.1.1.dirty
+
+Martin
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
