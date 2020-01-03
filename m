@@ -2,79 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F21EB12F4C1
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Jan 2020 07:53:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7309B12F62E
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Jan 2020 10:38:16 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HXflpMlpGsjvm86ahaznL/eL1njg8LQWrtFgXA3M2V0=; b=H+mcgyudMUGIMV
-	6bk91FcKJjCd2i/p4XRtSlMZIsc0QGLrOSjuKmAi71NLA2ZNGm+JHSCTtK4qTPyJQ1t/yRcSYNsuY
-	QTtbo+X0PjoAC/jPCHfNdvLoVS1znpoGp+d6FUEyO3pD9ei5yFcRJjSPOvF2ffYMzNRggEKI9qKOv
-	3HvKa6JcYTe4ZPGGNXHBGoxZ4KZLXDlSAg+wi2Fhchbgb9nyWYuM4Sj7Y3e7kxRlN64yfEvji2HK2
-	VfphvUmclabmRLeDOUw6V37goOvNtW6DVbUsBGzaiGi1aeB3hYf+0xmqpWiZ9lbSBATjjvVtqCp0t
-	j7mlkVe948G0DcV1KH/g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=QPXxZySbBwJs2MsENGf71RcK6eCRzNLoduaUgUprO18=; b=JyL/kb8Bw5PA7i
+	E1ATpLylpxe2nn0NNX8PkBM6yS7NENVM8XPTfXlul1eq+pN/SvAzlL/EZ8LdYKNy7JxMtu0S5Biet
+	gmsPJVySyQE4rnTt3beKjYriDU7kEcZvdbHmK0H6ugX5zaviQLXm0yBOGCkB+OKD8vGCj5UqRdY+E
+	hISwjZimgmjLcr6anuvH3GsALBVz6eG41iO9VdCkJlZEZ/epiO4TSRmI7EbfS1Eyc9KjF3d7rhwiT
+	cBjbd1wDUkyVoO73OBiWr6p85PyezmyJpX4hgNAfr9D/BaM84xWwZN1CtjqCjjD4KPArLK6dxbNPv
+	UISXKGMHTfgl+jvDlqxw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1inGpq-0001F8-CG; Fri, 03 Jan 2020 06:53:26 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1inJPG-0004n0-6P; Fri, 03 Jan 2020 09:38:10 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1inGp3-0000TV-Qm; Fri, 03 Jan 2020 06:52:39 +0000
-X-UUID: 63b1e6dc2eb84938a3184d7a4f6d16e6-20200102
+ id 1inJOn-0004NE-En; Fri, 03 Jan 2020 09:37:43 +0000
+X-UUID: 196813e0f4134f1cac87cb6e9beb208a-20200103
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=Uj1PHnlMjHZZtgpd4ky9cMYDx21GFrXK0KB5WSI+oCE=; 
- b=dyVDyXkzguDuOvCxzYMkUs1cIY789nwpD4HkRsHseoDwjc6CFW3lEoq8dOHJofJG0u5J0ax41YKtqTmHUZfmmp0hOQ7eEa3GwoZ9o9FSD0OHwK61ihCaLhYEwvZMqMHP+ZrG4osqDwAeDYkvAX/9G6//GFvOZ0m1qCZrVoXLC/I=;
-X-UUID: 63b1e6dc2eb84938a3184d7a4f6d16e6-20200102
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <michael.kao@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=aylJ44w3RnTZ4WfVk5V4D/nP65Vc+4LNLwxEH2TCevk=; 
+ b=bXFfRsWxUF2ifN7RFio4pbJcW9ZEisoKmG8ER4OEl9r6COwUYrqP95NEVvoRKhT5C45nf8+pPQzytLZytAKgPoKdXYAPlJLEbjJaBDxlUre5DajuXF2PkxLnaP1DiZXVh+waV0H15ogPuABzChnBXczoZpksoCrGrbWMkuJfelQ=;
+X-UUID: 196813e0f4134f1cac87cb6e9beb208a-20200103
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jiaxin.yu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 89289239; Thu, 02 Jan 2020 22:52:32 -0800
+ with ESMTP id 408514527; Fri, 03 Jan 2020 01:37:34 -0800
 Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 2 Jan 2020 22:44:16 -0800
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 3 Jan 2020 01:37:56 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
  mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 3 Jan 2020 14:43:40 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 3 Jan 2020 14:44:09 +0800
-From: Michael Kao <michael.kao@mediatek.com>
-To: Zhang Rui <rui.zhang@intel.com>, Eduardo Valentin <edubezval@gmail.com>,
- Daniel Lezcano <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, 
- Mark Rutland <mark.rutland@arm.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, <hsinyi@chromium.org>, <linux-pm@vger.kernel.org>,
- <srv_heupstream@mediatek.com>
-Subject: [PATCH v3,8/8] thermal: mediatek: use spinlock to protect PTPCORESEL
-Date: Fri, 3 Jan 2020 14:44:07 +0800
-Message-ID: <20200103064407.19861-9-michael.kao@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200103064407.19861-1-michael.kao@mediatek.com>
-References: <20200103064407.19861-1-michael.kao@mediatek.com>
+ 15.0.1395.4; Fri, 3 Jan 2020 17:37:01 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 3 Jan 2020 17:37:29 +0800
+From: Jiaxin Yu <jiaxin.yu@mediatek.com>
+To: <yong.liang@mediatek.com>, <wim@linux-watchdog.org>, <linux@roeck-us.net>, 
+ <p.zabel@pengutronix.de>, <matthias.bgg@gmail.com>,
+ <linux-watchdog@vger.kernel.org>, <linux-kernel@vger.kernel.org>,
+ <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
+ <devicetree@vger.kernel.org>, <chang-an.chen@mediatek.com>,
+ <freddy.hsin@mediatek.com>
+Subject: [PATCH v8 0/2] ASoC: mt8183: fix audio playback slowly after playback
+Date: Fri, 3 Jan 2020 17:37:23 +0800
+Message-ID: <1578044245-26939-1-git-send-email-jiaxin.yu@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200102_225237_875581_ED3F817D 
-X-CRM114-Status: GOOD (  11.67  )
+X-CRM114-CacheID: sfid-20200103_013741_525646_B85CB730 
+X-CRM114-Status: UNSURE (   6.63  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -88,73 +90,70 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- "michael.kao" <michael.kao@mediatek.com>
+Cc: sboyd@kernel.org, yingjoe.chen@mediatek.com,
+ Jiaxin Yu <jiaxin.yu@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "michael.kao" <michael.kao@mediatek.com>
+This series patches add reset controller for MT8183, and audio will use it in 
+machine driver during bootup, they depend on the for-next.
 
-The driver of thermal and svs will use the
-same register for the project which should select
-bank before reading sensor value.
+V8 changes:
+	1. Delete cast: (struct mtk_wdt_data *)
 
-Signed-off-by: Michael Kao <michael.kao@mediatek.com>
----
- drivers/thermal/mtk_thermal.c | 9 ++++-----
- 1 file changed, 4 insertions(+), 5 deletions(-)
+V7 changes:
+	1. Delete no use code.
 
-diff --git a/drivers/thermal/mtk_thermal.c b/drivers/thermal/mtk_thermal.c
-index 9be9fcb18d9e..639d34ed223b 100644
---- a/drivers/thermal/mtk_thermal.c
-+++ b/drivers/thermal/mtk_thermal.c
-@@ -22,6 +22,7 @@
- #include <linux/thermal.h>
- #include <linux/reset.h>
- #include <linux/types.h>
-+#include <linux/power/mtk_svs.h>
- 
- /* AUXADC Registers */
- #define AUXADC_CON1_SET_V	0x008
-@@ -262,7 +263,7 @@ struct mtk_thermal {
- 	struct clk *clk_peri_therm;
- 	struct clk *clk_auxadc;
- 	/* lock: for getting and putting banks */
--	struct mutex lock;
-+	unsigned long flags;
- 
- 	/* Calibration values */
- 	s32 adc_ge;
-@@ -561,7 +562,7 @@ static void mtk_thermal_get_bank(struct mtk_thermal_bank *bank)
- 	u32 val;
- 
- 	if (mt->conf->need_switch_bank) {
--		mutex_lock(&mt->lock);
-+		mt->flags = claim_mtk_svs_lock();
- 
- 		val = readl(mt->thermal_base + PTPCORESEL);
- 		val &= ~0xf;
-@@ -581,7 +582,7 @@ static void mtk_thermal_put_bank(struct mtk_thermal_bank *bank)
- 	struct mtk_thermal *mt = bank->mt;
- 
- 	if (mt->conf->need_switch_bank)
--		mutex_unlock(&mt->lock);
-+		release_mtk_svs_lock(mt->flags);
- }
- 
- /**
-@@ -936,8 +937,6 @@ static int mtk_thermal_probe(struct platform_device *pdev)
- 	if (ret)
- 		return ret;
- 
--	mutex_init(&mt->lock);
--
- 	mt->dev = &pdev->dev;
- 
- 	auxadc = of_parse_phandle(np, "mediatek,auxadc", 0);
+v6 changes:
+	1. Simplify toprug_reset_assert() & toprug_reset_deassert().
+	2. Add members for mt2712_data & mt8183_data.
+
+v5 changes:
+	1. Add Signed-off-by tag and Reviewed-by tag.
+
+v4 changes:
+	1. Fixed wrong signed-off as correct mail suffix.
+	2. Fixed patch subject that add patch version.
+
+v3 changes:
+	1. https://patchwork.kernel.org/patch/11164283/ and 
+	   https://patchwork.kernel.org/patch/11164305/ has been merged.
+	2. Change the name of mtk_wdt_compatible to mtk_wdt_data.
+	3. Remove toprgu_reset struct and use mtk_wdt_dev instead.
+	4. Get the value of sw_rst_num from .h file.
+	5. Adddd mt2712-resets.h for mt2712.
+	6. Improve commit message.
+
+v2 changes:
+	1. remove "WIP" that in the title of patches
+	2. add hyper link for the patch that depends on
+	3. patchwork list:
+		https://patchwork.kernel.org/cover/11164285/
+		https://patchwork.kernel.org/patch/11164295/
+		https://patchwork.kernel.org/patch/11164299/
+		https://patchwork.kernel.org/patch/11164283/
+		https://patchwork.kernel.org/patch/11164305/
+
+v1 changes:
+	1. patchwork list:
+		https://patchwork.kernel.org/cover/11164173/
+		https://patchwork.kernel.org/patch/11164181/
+		https://patchwork.kernel.org/patch/11164185/
+		https://patchwork.kernel.org/patch/11164187/
+		https://patchwork.kernel.org/patch/11164175/
+
+Jiaxin Yu (2):
+  dt-bindings: mediatek: mt8183: Add #reset-cells
+  watchdog: mtk_wdt: mt8183: Add reset controller
+
+ drivers/watchdog/mtk_wdt.c                    | 105 +++++++++++++++++-
+ .../reset-controller/mt2712-resets.h          |  22 ++++
+ .../reset-controller/mt8183-resets.h          |  17 +++
+ 3 files changed, 143 insertions(+), 1 deletion(-)
+ create mode 100644 include/dt-bindings/reset-controller/mt2712-resets.h
+
 -- 
 2.18.0
 _______________________________________________
