@@ -2,58 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 74A38130740
-	for <lists+linux-mediatek@lfdr.de>; Sun,  5 Jan 2020 11:47:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5BC67130787
+	for <lists+linux-mediatek@lfdr.de>; Sun,  5 Jan 2020 11:59:49 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=AfGwxAryZISotyv7LWigF+HWZPd1PETexIy5oCXCaEs=; b=Qhnp0+wJaBrCDL
-	8OEnoysWVQZGo4BDgrhQ70bmyqGNF2WqlYO1qStO3vCrVxCU6/B35HSCkPFK5BYqQl8tOvNtNI50v
-	0ok6ceoEWESIIR6nnVnOvhxIJpJ9bk1LxjJVDOwADwe506pQoB7uhXGI2Hc4F5yRJvROuyEr3V6xz
-	sQqsL+uoldW3/lYCRT6nE13nPlFKitB0DX+2CJvHcd0MYkpOJUvBn9Tq8twNgijbcVxNXlE1YvhD5
-	l6+VdOOzHb6y6RGk3dni2N15ps6EKT2vAQPRON9yOicIFOHwZikqAGGVcQJpPcV5uNNLDIoL/8TPU
-	lxM1x1Y99cVpcBaaH4Bw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=tJYyVKwOvqMOQp1c/bpqltFz3SH/BBTSGdjqtgkQxQI=; b=WE+kIyMd6WJYIX
+	ilOPr2SkNi/mVlNbs/thfYsZBtRqo4OIDIzraBRZPwy/YeUhi85ezh9XEDoMJgziJ6o0TfYxfxV4m
+	C9wekbVzBAe79jxSfs1GSmx6SnQY6mQWMfMzoSyOYOYWZmrZORNBSgXzq3UwAIQjgaL7KhsWp8tCY
+	3lTn7jv4frXnhpPF1SbH00U+4GZ/4wVCAoVR0AyLbDfxaO3UUSCROH5GuM+v+FlZjG2HPx6lYRPhg
+	Qs9BI1u71OsBL7nEgrgztRHoc0dOTsnbIm4jr7LfPrqQoz6u6jotmW4GO1tSrV74Y+F0ciagz5hms
+	Ycnl4WOcRDiRc2D7nPEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1io3R2-0000Uf-Ue; Sun, 05 Jan 2020 10:47:04 +0000
+	id 1io3dG-0006eZ-A7; Sun, 05 Jan 2020 10:59:42 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1io3Qb-0008Rs-Fe; Sun, 05 Jan 2020 10:46:40 +0000
-X-UUID: 4c2f27ff799c4e09abf7c00a8b2d19af-20200105
+ id 1io3aI-0003wZ-49; Sun, 05 Jan 2020 10:56:39 +0000
+X-UUID: f3c4a1e5a30a480b8fe11ab0d70974ea-20200105
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=lA5PzyXuyizUyRDDlXySD7ztXLzdwWD6WEfL0quguyU=; 
- b=HHLi2PYBBcwxhcMDxTY4DWHgLRp73zYcGBUpCWH5jq0Il7+4y0ad0Gnubn00kHyCGEio7urgihAo4WfvP0bwTmgpZdIBiUuD+fWjKyeX14DRf+saGMXwRQmnmjR+A9s3v/PF3trUJmWsa6hNy3lUor7PpKhcIbRlTFXHx0COXu0=;
-X-UUID: 4c2f27ff799c4e09abf7c00a8b2d19af-20200105
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=WZ/umlXOyPHUYCRi2U9EvlX0wVfU8S8+Ftnq58VNe5M=; 
+ b=WLi8uFTlkZxkdDuVo323MnIYuYvBwnFIoNJi5TkTVx0syRPYf3kO7FVOyh6XgOJejurMcYvBoOQvm8ytY5zxMemooEdfg5Xac3v29Q6/kdSKbl/I5KpR09oNXbDbXiJ1PdwzpJW0or79rY4VLvKa2sqqYTUKGvrvO0Qw6DQOiWE=;
+X-UUID: f3c4a1e5a30a480b8fe11ab0d70974ea-20200105
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chao.hao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 164975596; Sun, 05 Jan 2020 02:46:27 -0800
+ with ESMTP id 1409993764; Sun, 05 Jan 2020 02:56:33 -0800
 Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 Jan 2020 02:46:27 -0800
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 5 Jan 2020 02:46:59 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 Jan 2020 18:46:00 +0800
+ 15.0.1395.4; Sun, 5 Jan 2020 18:46:05 +0800
 Received: from localhost.localdomain (10.15.20.246) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 5 Jan 2020 18:44:56 +0800
+ Transport; Sun, 5 Jan 2020 18:45:01 +0800
 From: Chao Hao <chao.hao@mediatek.com>
 To: Joerg Roedel <joro@8bytes.org>, Rob Herring <robh+dt@kernel.org>,
  "Matthias Brugger" <matthias.bgg@gmail.com>
-Subject: [PATCH v2 00/19] MT6779 IOMMU SUPPORT
-Date: Sun, 5 Jan 2020 18:45:04 +0800
-Message-ID: <20200105104523.31006-1-chao.hao@mediatek.com>
+Subject: [PATCH v2 02/19] iommu/mediatek: Add m4u1_mask to distinguish m4u_id
+Date: Sun, 5 Jan 2020 18:45:06 +0800
+Message-ID: <20200105104523.31006-3-chao.hao@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200105104523.31006-1-chao.hao@mediatek.com>
+References: <20200105104523.31006-1-chao.hao@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200105_024637_530848_B1143EE5 
-X-CRM114-Status: UNSURE (   8.22  )
+X-CRM114-CacheID: sfid-20200105_025638_205913_B0D28535 
+X-CRM114-Status: UNSURE (   9.49  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,79 +99,52 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+For some platforms(ex: later mt6779), it maybe have two IOMMUs,
+so we can add m4u_mask variable to distinguish it by different
+smi_larb id
 
-This patchset adds mt6779 iommu support and adjusts mtk iommu software architecture mainly.
-1. Add mt6779 basic function, such as smi_larb port define, registers define and so on.
-2. In addition, this patchset will adjust current mtk iommu SW architecture mainly to adapt all the mtk platforms:
-   Firstly, mt6779 iommu can support more HW modules, but some modules have special requirements for iova region,
-   for example, CCU only can access 0x4000_0000~0x47ff_ffff, VPU only can access 0x7da0_0000~0x7fbf_ffff. Current
-   architecture only support one iommu domain(include 0~4GB), all the modules allocate iova from 0~4GB region, so
-   it doesn't ensure to allocate expected iova region for special module(CCU and VPU). In order to resolve the problem,
-   we will create different iommu domains for special module, and every domain can include iova region which module needs.
-   Secondly, all the iommus share one page table for current architecture by "mtk_iommu_get_m4u_data", to make the
-   architecture look clearly, we will create a global page table firstly(mtk_iommu_pgtable), and all the iommus can
-   use it. One page table can include 4GB iova space, so multiple iommu domains are created based on the same page table.
-   New SW architecture diagram is as below:
+Signed-off-by: Chao Hao <chao.hao@mediatek.com>
+---
+ drivers/iommu/mtk_iommu.c | 3 +++
+ drivers/iommu/mtk_iommu.h | 2 ++
+ 2 files changed, 5 insertions(+)
 
-                         iommu0   iommu1
-                            |        |
-                            ----------
-                                 |
-                        mtk_iommu_pgtable
-                                 |
-            ------------------------------------------
-            |                    |                   |
-      mtk_iommu_domain1   mtk_iommu_domain2   mtk_iommu_domain3
-            |                    |                   |
-       iommu_group1         iommu_group2        iommu_group3
-            |                    |                   |
-       iommu_domain1       iommu_domain2        iommu_domain3
-            |                    |                   |
-     iova region1(normal)  iova region2(CCU)   iova region3(VPU)
-
-change notes:
- v2:
-  1. Rebase on v5.5-rc1.
-  2. Delete M4U_PORT_UNKNOWN define because of not use it.
-  3. Correct coding format.
-  4. Rename offset=0x48 register.
-  5. Split "iommu/mediatek: Add mt6779 IOMMU basic support(patch v1)" to several patches(patch v2).
-
- v1:
-  http://lists.infradead.org/pipermail/linux-mediatek/2019-November/024567.html
-
-
- Chao Hao (19):
-   dt-bindings: mediatek: Add bindings for MT6779
-   iommu/mediatek: Add m4u1_mask to distinguish m4u_id
-   iommu/mediatek: Extend larb_remap to larb_remap[2]
-   iommu/mediatek: Rename offset=0x48 register
-   iommu/mediatek: Put inv_sel_reg in the plat_data for preparing add
-                   0x2c support in mt6779
-   iommu/mediatek: Add new flow to get SUB_COMMON ID in translation fault
-   iommu/mediatek: Add REG_MMU_WR_LEN reg define prepare for mt6779
-   iommu/mediatek: Add mt6779 basic support
-   iommu/mediatek: Add mtk_iommu_pgtable structure
-   iommu/mediatek: Remove mtk_iommu_domain_finalise
-   iommu/mediatek: Remove pgtable info in mtk_iommu_domain
-   iommu/mediatek: Change get the way of m4u_group
-   iommu/mediatek: Add smi_larb info about device
-   iommu/mediatek: Add mtk_domain_data structure
-   iommu/mediatek: Remove the usage of m4u_dom variable
-   iommu/mediatek: Remove mtk_iommu_get_m4u_data api
-   iommu/mediatek: Add iova reserved function
-   iommu/mediatek: Change single domain to multiple domains
-   iommu/mediatek: Add multiple mtk_iommu_domain support for mt6779
-
-  .../bindings/iommu/mediatek,iommu.txt         |   2 +
-  drivers/iommu/mtk_iommu.c                     | 493 +++++++++++++++---
-  drivers/iommu/mtk_iommu.h                     |  50 +-
-  include/dt-bindings/memory/mt6779-larb-port.h | 215 ++++++++
-  4 files changed, 683 insertions(+), 77 deletions(-)
-
- --
- 2.18.0
-
+diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+index 6fc1f5ecf91e..09192edef1f7 100644
+--- a/drivers/iommu/mtk_iommu.c
++++ b/drivers/iommu/mtk_iommu.c
+@@ -678,6 +678,9 @@ static int mtk_iommu_probe(struct platform_device *pdev)
+ 		}
+ 		data->larb_imu[id].dev = &plarbdev->dev;
+ 
++		if (data->plat_data->m4u1_mask == (1 << id))
++			data->m4u_id = 1;
++
+ 		component_match_add_release(dev, &match, release_of,
+ 					    compare_of, larbnode);
+ 	}
+diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+index ea949a324e33..b4bd76548615 100644
+--- a/drivers/iommu/mtk_iommu.h
++++ b/drivers/iommu/mtk_iommu.h
+@@ -42,6 +42,7 @@ struct mtk_iommu_plat_data {
+ 	bool                has_bclk;
+ 	bool                has_vld_pa_rng;
+ 	bool                reset_axi;
++	u32                 m4u1_mask;
+ 	unsigned char       larbid_remap[MTK_LARB_NR_MAX];
+ };
+ 
+@@ -59,6 +60,7 @@ struct mtk_iommu_data {
+ 	bool                            enable_4GB;
+ 	spinlock_t			tlb_lock; /* lock for tlb range flush */
+ 
++	u32				m4u_id;
+ 	struct iommu_device		iommu;
+ 	const struct mtk_iommu_plat_data *plat_data;
+ 
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
