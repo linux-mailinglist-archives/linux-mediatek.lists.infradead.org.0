@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D9C5B13076E
-	for <lists+linux-mediatek@lfdr.de>; Sun,  5 Jan 2020 11:57:18 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8225D130784
+	for <lists+linux-mediatek@lfdr.de>; Sun,  5 Jan 2020 11:58:59 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/mjLUbWPOtSPZDv/RN4s5vVElH4uT0np/HUy0DWqqA4=; b=WDnar4dimeJunp
-	OrGtrZ/FV1DStPaF//EYtTARgthw+vJ8CAjZSLPgNE6Kk5Loll9CfegvyTOfTRo2iBk12BwfbwBPG
-	MNcNtd5tSUoizYd6gq/hRrCaVs1R/GVfpeU1pBL4p0isZiv157GDMUEkhRwta2j4W2fnP9G20WsB5
-	E47/BNlzVfv7aD5OjptOpykHAu//oLICA5XJTY0wkE1cAUt54EDhJbFfTnJj/2ka2+y0SEwXZZe7F
-	zyBvQpHP1aZ41x4iasMIVTHlTucakRBoHS6zIagyhV59a9m4jR3X/BC5O+MXq31CV/PghLfkF8IBg
-	lHPP+xgdsfhnYDC6IszA==;
+	List-Owner; bh=LYi+B+2UrQyFFRHsXLp0bXv2gLkuXi3m03OsDUif0Jc=; b=BlQwg8U9ew8/OD
+	7Y0VcLDSDi0oCi/Em9w+/vFi0RKqn2s0uMzMokLmAsIS8QrhF/CrjcmcttUNZFj56P4xitWPv1TVk
+	Ml47r0HL7jDzr0Xl/jM62Mff2RVF+DD6aaBiQaxYcToe/87eYsGER79VzL2nM/BEZPQhyBdDlR323
+	0xiJPQCFyDYSq78wVGmJAANYasspw/yvyiLpTTX1hGzSz0pxyi2uWnvUWOH638hTsouQEa7GnCHAv
+	s2THF5MR1oO9wysdM0ESZzxgOAwOGE/KjUhx+lXfPlA1tvtd6mLUzumJBxsI7+ZMySPGrcsJvTrV4
+	xNBsexSrlOk0YGnjrRqA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1io3aq-0004S9-He; Sun, 05 Jan 2020 10:57:12 +0000
+	id 1io3cT-0005u9-RX; Sun, 05 Jan 2020 10:58:53 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1io3aD-0003wY-Bw; Sun, 05 Jan 2020 10:56:34 +0000
-X-UUID: 06a434deb92843c7a790902890432310-20200105
+ id 1io3aG-0003wZ-Dh; Sun, 05 Jan 2020 10:56:37 +0000
+X-UUID: 2ef7e684a96549919040751b8c5b9e87-20200105
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=lsBsohNu2b5AhB0kz+Ra/NLbhuyQup0UfX5XN+MeloA=; 
- b=RO52bEslr8xOTIHvC9Oe6tgTUEQQwhR1LfcYz/mMbC75FZUD2jG7xVcSQPyoWTQjkcMbr/RUUdyftW1X6H6S2yOVrqA34ptD4/S3dS9R90O1wr6L+mNMwvWM3t9pvvb0SoHepjzGwDxq1EIcdbwpdzSulbA+kN8uSWnUll/0Mbo=;
-X-UUID: 06a434deb92843c7a790902890432310-20200105
+ bh=O7bsaDAzWJe4pXQR0EOb47U3pYGGOvWkg6UdghMGuqI=; 
+ b=kbln8owUkNDBoqMRGpAXGcY6AVp9/gai5pIvAh+bfRuIpeOnAfm6RPa36YieEbrqtT9hEtAM6RtNu+Tl3dpOm3zpOstj2s03mSfL64a9NwknsutxcPlWjPmJanXFwEhVfP3jZHmZdzaijfXxPNyB0ZibN7jcfhQb3FoUIBrCBkc=;
+X-UUID: 2ef7e684a96549919040751b8c5b9e87-20200105
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chao.hao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1961746722; Sun, 05 Jan 2020 02:56:31 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 501591660; Sun, 05 Jan 2020 02:56:31 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 Jan 2020 02:47:04 -0800
+ 15.0.1395.4; Sun, 5 Jan 2020 02:47:14 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 Jan 2020 18:46:10 +0800
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 5 Jan 2020 18:46:18 +0800
 Received: from localhost.localdomain (10.15.20.246) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Sun, 5 Jan 2020 18:45:05 +0800
+ Transport; Sun, 5 Jan 2020 18:45:15 +0800
 From: Chao Hao <chao.hao@mediatek.com>
 To: Joerg Roedel <joro@8bytes.org>, Rob Herring <robh+dt@kernel.org>,
  "Matthias Brugger" <matthias.bgg@gmail.com>
-Subject: [PATCH v2 04/19] iommu/mediatek: Rename offset=0x48 register
-Date: Sun, 5 Jan 2020 18:45:08 +0800
-Message-ID: <20200105104523.31006-5-chao.hao@mediatek.com>
+Subject: [PATCH v2 06/19] iommu/mediatek: Add new flow to get SUB_COMMON ID in
+ translation fault
+Date: Sun, 5 Jan 2020 18:45:10 +0800
+Message-ID: <20200105104523.31006-7-chao.hao@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200105104523.31006-1-chao.hao@mediatek.com>
 References: <20200105104523.31006-1-chao.hao@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200105_025633_418774_9CBC76ED 
-X-CRM114-Status: UNSURE (   8.73  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200105_025636_480918_9FD19F53 
+X-CRM114-Status: GOOD (  11.27  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -99,54 +99,79 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-For different platforms(ex:later mt6779), offset=0x48 register will
-extend more feature by different bits, so we can rename REG_MMU_MISC_CTRL.
+When the number of smi_larb is more than seven, smi_larb id
+will be divided into COMMON_ID(high three bits, bit[11:9]) and
+SUB_COMMON_ID(low two bits,bit[8:7]). So we can analyse translation
+fault id by SUB_COMMON_ID and COMMON_ID. We can distinguish if
+has SUB_COMMON_ID and SUB_COMMON_ID by has_sub_comm variable.
 
 Signed-off-by: Chao Hao <chao.hao@mediatek.com>
 ---
- drivers/iommu/mtk_iommu.c | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
+ drivers/iommu/mtk_iommu.c | 16 ++++++++++++----
+ drivers/iommu/mtk_iommu.h |  1 +
+ 2 files changed, 13 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index f2d953fc09df..bffd417f4442 100644
+index b61785a87764..5de13ab1094e 100644
 --- a/drivers/iommu/mtk_iommu.c
 +++ b/drivers/iommu/mtk_iommu.c
-@@ -41,7 +41,7 @@
- #define F_INVLD_EN0				BIT(0)
- #define F_INVLD_EN1				BIT(1)
+@@ -89,6 +89,8 @@
+ #define REG_MMU1_INVLD_PA			0x148
+ #define REG_MMU0_INT_ID				0x150
+ #define REG_MMU1_INT_ID				0x154
++#define F_MMU_INT_ID_COMM_ID(a)			(((a) >> 9) & 0x7)
++#define F_MMU_INT_ID_SUB_COMM_ID(a)		(((a) >> 7) & 0x3)
+ #define F_MMU_INT_ID_LARB_ID(a)			(((a) >> 7) & 0x7)
+ #define F_MMU_INT_ID_PORT_ID(a)			(((a) >> 2) & 0x1f)
  
--#define REG_MMU_STANDARD_AXI_MODE		0x048
-+#define REG_MMU_MISC_CTRL			0x048
- #define REG_MMU_DCM_DIS				0x050
+@@ -227,7 +229,7 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
+ 	struct mtk_iommu_data *data = dev_id;
+ 	struct mtk_iommu_domain *dom = data->m4u_dom;
+ 	u32 int_state, regval, fault_iova, fault_pa;
+-	unsigned int fault_larb, fault_port;
++	unsigned int fault_larb, fault_port, sub_comm = 0;
+ 	bool layer, write;
  
- #define REG_MMU_CTRL_REG			0x110
-@@ -587,7 +587,7 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
- 	writel_relaxed(0, data->base + REG_MMU_DCM_DIS);
- 
- 	if (data->plat_data->reset_axi)
--		writel_relaxed(0, data->base + REG_MMU_STANDARD_AXI_MODE);
-+		writel_relaxed(0, data->base + REG_MMU_MISC_CTRL);
- 
- 	if (devm_request_irq(data->dev, data->irq, mtk_iommu_isr, 0,
- 			     dev_name(data->dev), (void *)data)) {
-@@ -735,7 +735,7 @@ static int __maybe_unused mtk_iommu_suspend(struct device *dev)
- 	void __iomem *base = data->base;
- 
- 	reg->standard_axi_mode = readl_relaxed(base +
--					       REG_MMU_STANDARD_AXI_MODE);
-+					       REG_MMU_MISC_CTRL);
- 	reg->dcm_dis = readl_relaxed(base + REG_MMU_DCM_DIS);
- 	reg->ctrl_reg = readl_relaxed(base + REG_MMU_CTRL_REG);
- 	reg->int_control0 = readl_relaxed(base + REG_MMU_INT_CONTROL0);
-@@ -760,7 +760,7 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
- 		return ret;
+ 	/* Read error info from registers */
+@@ -243,8 +245,13 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
  	}
- 	writel_relaxed(reg->standard_axi_mode,
--		       base + REG_MMU_STANDARD_AXI_MODE);
-+		       base + REG_MMU_MISC_CTRL);
- 	writel_relaxed(reg->dcm_dis, base + REG_MMU_DCM_DIS);
- 	writel_relaxed(reg->ctrl_reg, base + REG_MMU_CTRL_REG);
- 	writel_relaxed(reg->int_control0, base + REG_MMU_INT_CONTROL0);
+ 	layer = fault_iova & F_MMU_FAULT_VA_LAYER_BIT;
+ 	write = fault_iova & F_MMU_FAULT_VA_WRITE_BIT;
+-	fault_larb = F_MMU_INT_ID_LARB_ID(regval);
+ 	fault_port = F_MMU_INT_ID_PORT_ID(regval);
++	if (data->plat_data->has_sub_comm[data->m4u_id]) {
++		fault_larb = F_MMU_INT_ID_COMM_ID(regval);
++		sub_comm = F_MMU_INT_ID_SUB_COMM_ID(regval);
++	} else {
++		fault_larb = F_MMU_INT_ID_LARB_ID(regval);
++	}
+ 
+ 	fault_larb = data->plat_data->larbid_remap[data->m4u_id][fault_larb];
+ 
+@@ -252,8 +259,9 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
+ 			       write ? IOMMU_FAULT_WRITE : IOMMU_FAULT_READ)) {
+ 		dev_err_ratelimited(
+ 			data->dev,
+-			"fault type=0x%x iova=0x%x pa=0x%x larb=%d port=%d layer=%d %s\n",
+-			int_state, fault_iova, fault_pa, fault_larb, fault_port,
++			"fault type=0x%x iova=0x%x pa=0x%x larb=%d sub_comm=%d port=%d regval=0x%x layer=%d %s\n",
++			int_state, fault_iova, fault_pa, fault_larb,
++			sub_comm, fault_port, regval,
+ 			layer, write ? "write" : "read");
+ 	}
+ 
+diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+index ec3011a50728..d4495230c6e7 100644
+--- a/drivers/iommu/mtk_iommu.h
++++ b/drivers/iommu/mtk_iommu.h
+@@ -40,6 +40,7 @@ struct mtk_iommu_plat_data {
+ 
+ 	/* HW will use the EMI clock if there isn't the "bclk". */
+ 	bool                has_bclk;
++	bool                has_sub_comm[2];
+ 	bool                has_vld_pa_rng;
+ 	bool                reset_axi;
+ 	u32                 m4u1_mask;
 -- 
 2.18.0
 _______________________________________________
