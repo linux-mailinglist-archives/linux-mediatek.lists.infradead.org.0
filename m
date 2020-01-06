@@ -2,74 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CC9A2130AE7
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Jan 2020 01:28:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 61F0E130BFF
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Jan 2020 03:11:29 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ELicMxi7al9S+pS+QIRu0lVPbjEkQ5aayXHvchL5s50=; b=DjcLaSS4XAdzKE
-	Qihr4iL9uynHUdA6c05CYFJDrrz7hQqfVLZhdVNe11kN+zHyflvm8xZsk+RrsPYKCYbDte9sk6wXs
-	1C5Md9bnIXqztWayOhHd9oAiYq8AlZkzzsswK6qBWBy+IM87zq4s2tdTWRYz7lv8GSZ19HAfbXthg
-	H5Jbh4VQZXO3adqRWEtWEo6Ed1Yu10V68LI4E9PvgP5wtua4+La5hXaoDFDJKm6IEA/zdaOr401DO
-	Zs9tAp32yJQaDEePVV8rcoacyrzfYunSkRqCvJ6NblrRijjrppEAeosvw+Ri+xUMEx1H8lQ3IveVZ
-	0UKt+p+9epUZkWFE9Nfg==;
+	List-Owner; bh=YbERsrshbhuDpgfXuGornn4gd+KY/xoDpivVozKGwlI=; b=j8XcvIJ1jG7s9b
+	OyXKtLGVrAXxwLg8mkK0C0maMe6rnhauuKzXqvInXd/5bHS5YnayqfZobH4rNiGbGLuT+NEGBvSmn
+	jWcjS8dStBHiNUuoezsuLn6eqBmmA7wjGdoEpZQPdgkEe8XOgv81ZlclxDPF1jbM/i2bjTZ+UXxpP
+	Xu328ftKZfkgccnBh0RYx27fJ/VpOcH8q5sUQXAq/mxqxWZKZOaCuIvbOnXfOMkA9DABHaijNsh4m
+	P1KXU36JBmoGBy1iy3rrVaTRvZokfx1pAa6SCsSs9Pkl9SH1cqoVtcs6473+hOBSsikJtqi591peX
+	H0jGiPX4k1PUepbq3smQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ioGFj-0002ej-UV; Mon, 06 Jan 2020 00:28:15 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ioHrV-00028T-TY; Mon, 06 Jan 2020 02:11:21 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ioGEy-0001BB-HK; Mon, 06 Jan 2020 00:27:30 +0000
-X-UUID: 258ae10170a042efa5b15a8e00265149-20200105
+ id 1ioHrL-00020v-Lc; Mon, 06 Jan 2020 02:11:13 +0000
+X-UUID: d3f74d6ed74740bf9d5449013efe43e5-20200105
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=8BzC12aG5DHtHZ2qSHgLaSvaZKEz7ErXAlzHysQ8AUI=; 
- b=Ry324sGHxLqVHmRoBKJu0wrsH6bmmgdJ39/oul5CroLAEDNc6QcgWOiDk+m7/oVyBB3fDfnx820SfRVwzvIZOpLE8uZ/aEdKj9rQk++jOu0VBlvRe/5ZgDhlMQ2Bd4c2JSIxJgKnJONehwTsLzRtB8TaAB+y1G6q7uWNDS3txJI=;
-X-UUID: 258ae10170a042efa5b15a8e00265149-20200105
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=IFuraZzF877J9vJnN3oKRmiXLPR+UaYNdb3VQPcAbDo=; 
+ b=gdmqaXuKYaoGGuPF3ser2AMo21j8w2Ooty0o/bWUH96XG5skMx24dEOGupWUnViBJDfumpNjgxotmED66lZzu9vStFb+xmbISY1KIy2ynZbyOQ5u8Mi/gb/L0zbT3zLXvDFo4demEG56exgjHGhL4CRPlaJkJdJ/jK8V9557tco=;
+X-UUID: d3f74d6ed74740bf9d5449013efe43e5-20200105
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 355555144; Sun, 05 Jan 2020 16:27:24 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ with ESMTP id 174229578; Sun, 05 Jan 2020 18:11:00 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 5 Jan 2020 16:27:24 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 6 Jan 2020 08:26:24 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 6 Jan 2020 08:25:44 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v2 2/2] scsi: ufs-mediatek: add apply_dev_quirks variant
- operation
-Date: Mon, 6 Jan 2020 08:27:11 +0800
-Message-ID: <1578270431-9873-3-git-send-email-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1578270431-9873-1-git-send-email-stanley.chu@mediatek.com>
-References: <1578270431-9873-1-git-send-email-stanley.chu@mediatek.com>
+ 15.0.1395.4; Sun, 5 Jan 2020 18:10:59 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
+ (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 6 Jan 2020 10:10:22 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 6 Jan 2020 10:09:53 +0800
+Message-ID: <1578276653.21256.12.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 1/2] phy: mediatek: Fix Kconfig indentation
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Krzysztof Kozlowski <krzk@kernel.org>
+Date: Mon, 6 Jan 2020 10:10:53 +0800
+In-Reply-To: <20200103164710.4829-1-krzk@kernel.org>
+References: <20200103164710.4829-1-krzk@kernel.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: EF9F7240A7E5841972FBE79599879B822F061DC521957848BA3EC05D9979D0962000:8
+X-TM-SNTS-SMTP: 575598EFCB39BFB786417D543F5955B08556C0148A1349B2183C94FEB2DA7FA32000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200105_162728_593154_08D19586 
-X-CRM114-Status: UNSURE (   8.19  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200105_181111_714584_138CE448 
+X-CRM114-Status: GOOD (  15.40  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -90,71 +83,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stanley Chu <stanley.chu@mediatek.com>, bvanassche@acm.org,
- andy.teng@mediatek.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, beanhuo@micron.com,
- linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Cc: Florian Fainelli <f.fainelli@gmail.com>, linux-kernel@vger.kernel.org,
+ Maxime Ripard <mripard@kernel.org>, Kishon Vijay Abraham I <kishon@ti.com>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add vendor-specific variant callback "apply_dev_quirks"
-in MediaTek UFS driver.
+On Fri, 2020-01-03 at 17:47 +0100, Krzysztof Kozlowski wrote:
+> Adjust indentation from spaces to tab (+optional two spaces) as in
+> coding style.
+> 
+> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
+> 
+> ---
+> 
+> Changes since v1:
+> 1. None
+> ---
+>  drivers/phy/mediatek/Kconfig | 20 ++++++++++----------
+>  1 file changed, 10 insertions(+), 10 deletions(-)
+> 
+> diff --git a/drivers/phy/mediatek/Kconfig b/drivers/phy/mediatek/Kconfig
+> index 376f5d189da0..7d19134c6b7c 100644
+> --- a/drivers/phy/mediatek/Kconfig
+> +++ b/drivers/phy/mediatek/Kconfig
+> @@ -3,12 +3,12 @@
+>  # Phy drivers for Mediatek devices
+>  #
+>  config PHY_MTK_TPHY
+> -    tristate "MediaTek T-PHY Driver"
+> -    depends on ARCH_MEDIATEK && OF
+> -    select GENERIC_PHY
+> -    help
+> -      Say 'Y' here to add support for MediaTek T-PHY driver,
+> -      it supports multiple usb2.0, usb3.0 ports, PCIe and
+> +	tristate "MediaTek T-PHY Driver"
+> +	depends on ARCH_MEDIATEK && OF
+> +	select GENERIC_PHY
+> +	help
+> +	  Say 'Y' here to add support for MediaTek T-PHY driver,
+> +	  it supports multiple usb2.0, usb3.0 ports, PCIe and
+>  	  SATA, and meanwhile supports two version T-PHY which have
+>  	  different banks layout, the T-PHY with shared banks between
+>  	  multi-ports is first version, otherwise is second veriosn,
+> @@ -25,10 +25,10 @@ config PHY_MTK_UFS
+>  	  specified M-PHYs.
+>  
+>  config PHY_MTK_XSPHY
+> -    tristate "MediaTek XS-PHY Driver"
+> -    depends on ARCH_MEDIATEK && OF
+> -    select GENERIC_PHY
+> -    help
+> +	tristate "MediaTek XS-PHY Driver"
+> +	depends on ARCH_MEDIATEK && OF
+> +	select GENERIC_PHY
+> +	help
+>  	  Enable this to support the SuperSpeedPlus XS-PHY transceiver for
+>  	  USB3.1 GEN2 controllers on MediaTek chips. The driver supports
+>  	  multiple USB2.0, USB3.1 GEN2 ports.
 
-Cc: Alim Akhtar <alim.akhtar@samsung.com>
-Cc: Asutosh Das <asutoshd@codeaurora.org>
-Cc: Avri Altman <avri.altman@wdc.com>
-Cc: Bart Van Assche <bvanassche@acm.org>
-Cc: Bean Huo <beanhuo@micron.com>
-Cc: Can Guo <cang@codeaurora.org>
-Cc: Matthias Brugger <matthias.bgg@gmail.com>
-Reviewed-by: Avri Altman <avri.altman@wdc.com>
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 11 +++++++++++
- 1 file changed, 11 insertions(+)
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 41f80eeada46..8d999c0e60fe 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -16,6 +16,7 @@
- 
- #include "ufshcd.h"
- #include "ufshcd-pltfrm.h"
-+#include "ufs_quirks.h"
- #include "unipro.h"
- #include "ufs-mediatek.h"
- 
-@@ -405,6 +406,15 @@ static int ufs_mtk_resume(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- 	return 0;
- }
- 
-+static int ufs_mtk_apply_dev_quirks(struct ufs_hba *hba,
-+				    struct ufs_dev_desc *card)
-+{
-+	if (card->wmanufacturerid == UFS_VENDOR_SAMSUNG)
-+		ufshcd_dme_set(hba, UIC_ARG_MIB(PA_TACTIVATE), 6);
-+
-+	return 0;
-+}
-+
- /**
-  * struct ufs_hba_mtk_vops - UFS MTK specific variant operations
-  *
-@@ -417,6 +427,7 @@ static struct ufs_hba_variant_ops ufs_hba_mtk_vops = {
- 	.setup_clocks        = ufs_mtk_setup_clocks,
- 	.link_startup_notify = ufs_mtk_link_startup_notify,
- 	.pwr_change_notify   = ufs_mtk_pwr_change_notify,
-+	.apply_dev_quirks    = ufs_mtk_apply_dev_quirks,
- 	.suspend             = ufs_mtk_suspend,
- 	.resume              = ufs_mtk_resume,
- 	.device_reset        = ufs_mtk_device_reset,
--- 
-2.18.0
+Reviewed-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+
+Thanks
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
