@@ -2,60 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC1BC131DC8
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Jan 2020 03:56:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EE63A13203F
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Jan 2020 08:12:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:To:From:Subject:
-	Message-ID:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From
-	:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=3xHEpuSipnP+QFuUUM5mztI74kqHB54iHAKGntQU/is=; b=B48Q6SP7fRolVt
-	t8aaMkkHW74zQ/2vSepD1fpLqNO+6C2e2h/npmDeleOldsDp6ExTV1Ur6/NK8m27dToulRUzm6F5V
-	wBtnfp3LSN0/QOMgOTQDPGNFCLp4Kxu4cnq98oPUkvTjZbK8iswrJvLdvRoqtS7/xObv65IQEtwxt
-	f+y/tuJTNnMY6wTsiEw7JNyeoaLVMDWCjDxJAWcaBAU4KvTosZkQkVBbomdO52EYdH4t4ygXR+4Pr
-	CVLgOmMPZJLbPjp7KJ8FR3yLeCd7ppEJORXsNSzFyP8Z+bex0aM/OBFUlbqVq2B6ACNpR8RRzdzyq
-	B0iGpNM7AoNzKFP66AbA==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=5yitQsqIAZ6npoyReg/bjxgDMNejqjh4XhKIEIdqi2A=; b=qX+fo22VB+SQBb
+	6q/9MCT8IKEqA6koxenbNP8UeLj+ObXa0kvIZqKRnSvP3Wtav168sVKSYSiWRAt7aX0Ntr+hMV31l
+	AnYPvIqNtJYCwYBPpNC9eH2onA2q/TXHnHIXh6SYyQwrFtJPBDEK5tWEoVv6CrDa0X/UoqWgfpd3i
+	El2kVvE9MREoMLNhuncRXXw26zQTpvJSWYpV1RyO3+JlIPNCc/VwCbAMStdm5r14m5mbDEpGg/zy0
+	Ar9Q/eLNs36iA/+mepCvFQ6/mWdV51Wse2ZrSIdbx//A0/DXlBEtmWLJ6kxo1KYVuZiwpDUqZlo0W
+	eGnKermVpRS3rCq4nd9w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iof2t-0003lz-Ua; Tue, 07 Jan 2020 02:56:39 +0000
+	id 1ioj2P-0006Iz-LZ; Tue, 07 Jan 2020 07:12:25 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iof2q-0003lL-3C
- for linux-mediatek@lists.infradead.org; Tue, 07 Jan 2020 02:56:38 +0000
-X-UUID: 7d582e8614b94330bda6231b3d711262-20200106
+ id 1ioj2L-0006H8-P3; Tue, 07 Jan 2020 07:12:23 +0000
+X-UUID: 38b011388ca749b3a61458b986c21b4d-20200106
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:Date:To:From:Subject:Message-ID;
- bh=WvLYzmY4ueg2Fb5nUQMyGzQBFOIPCUF9ozekNaAJI0w=; 
- b=sF1kFZXt2IYCWEg2gsZH0wChmxMBqEYOiPXtxsYHfvIRYRFmITBjArmOj2GU5/uJDRvct4b+6AV54lgzEueZZgez9Iwgo/KpCEMWhRY3iZU7Wsvjbuh3Tk3q0n3+uDEbeldTLhR9I/85M1oyXY69y2CYTCAzoQ9S8a1gQlsC/oo=;
-X-UUID: 7d582e8614b94330bda6231b3d711262-20200106
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=RvU/Kf9/Q/5yNWiwRa+kdVfxoeAOhMP7au0EssfZUn8=; 
+ b=d7EBZApsUd8bRPNaXuK/3QblvdUscYwQyufhd5DJjfDlqH15N+p0RJlL3rDpR5HBNBO6bRmAS85YxJaW9BjHA19M6UcHXJtZJ4MhRgPRJcrHWY9m56NR0hkeKGkH19LhbN+r9vasBbm6zPUNEwY0prWboGENvXaq3Kbj0aZjqfc=;
+X-UUID: 38b011388ca749b3a61458b986c21b4d-20200106
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <roger.lu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 580940863; Mon, 06 Jan 2020 18:56:33 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ with ESMTP id 1614153436; Mon, 06 Jan 2020 23:12:17 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 6 Jan 2020 18:57:03 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 Jan 2020 10:56:30 +0800
-Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 7 Jan 2020 10:54:59 +0800
-Message-ID: <1578365790.28495.13.camel@mtksdaap41>
-Subject: Process identical patches in different tree
-From: CK Hu <ck.hu@mediatek.com>
-To: Dave Airlie <airlied@gmail.com>, Daniel Vetter <daniel.vetter@intel.com>, 
- MatthiasBrugger <matthias.bgg@gmail.com>, <dri-devel@lists.freedesktop.org>,
- <linux-mediatek@lists.infradead.org>
-Date: Tue, 7 Jan 2020 10:56:30 +0800
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Mon, 6 Jan 2020 23:02:47 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 Jan 2020 15:01:41 +0800
+Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Tue, 7 Jan 2020 15:01:09 +0800
+From: Roger Lu <roger.lu@mediatek.com>
+To: Kevin Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ Nicolas Boichat <drinkcat@google.com>, Stephen Boyd <sboyd@kernel.org>
+Subject: PM / AVS: SVS: Introduce SVS engine
+Date: Tue, 7 Jan 2020 15:01:51 +0800
+Message-ID: <20200107070154.1574-1-roger.lu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200106_185636_269185_2F79B989 
-X-CRM114-Status: UNSURE (   3.52  )
+X-CRM114-CacheID: sfid-20200106_231221_826002_881CF4EC 
+X-CRM114-Status: UNSURE (   9.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -64,6 +62,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -84,33 +84,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+ Angus Lin <Angus.Lin@mediatek.com>, devicetree@vger.kernel.org,
+ linux-pm@vger.kernel.org, Roger Lu <roger.lu@mediatek.com>,
+ linux-kernel@vger.kernel.org, Xiaoqing Liu <Xiaoqing.Liu@mediatek.com>,
+ YT Lee <yt.lee@mediatek.com>, Fan Chen <fan.chen@mediatek.com>,
+ linux-mediatek@lists.infradead.org, HenryC Chen <HenryC.Chen@mediatek.com>,
+ Charles Yang <Charles.Yang@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Dave, Daniel, Matthias:
+1. SVS driver use OPP adjust event in [1] to update OPP table voltage part.
+2. SVS dts node refers to CPU opp table [2] and GPU opp table [3].
+3. SVS and thermal dts use the same thermal efuse [4].
+4. SVS dts needs PMIC regulator [5].
+ 
+[1] https://patchwork.kernel.org/patch/11193513/
+[2] https://patchwork.kernel.org/patch/11304935/
+[3] https://patchwork.kernel.org/patch/11132381/
+[4] https://patchwork.kernel.org/patch/11316495/
+[5] https://patchwork.kernel.org/patch/11284617/
 
-In mediatek-drm-next-5.6 [1], I've cherry-pick 3 patches from
-v5.5-next/soc [2] because some drm patches depend on these cmdq patches.
-So these cmdq patches exist in both tree now. I want to know how to
-process this case. I think we could choose one of below way:
+changes since v5:
+- Add CONFIG_NVMEM dependency in SVS Kconfig.
+- Apply the latest dev_pm_opp_adjust_voltage() from [1] in SVS driver.
+- Add dev_pm_opp_put(opp) after calling dev_pm_opp_get_voltage(opp).
+- Fix multi-line comment style.
+- Add #define w/bit for magic constants.
+- Replace "int svs_is_supported()" with "bool svs_is_supported()".
+- Use default/max size for allocating memories to
+opp_volts/init02_volts/volts/opp_freqs/freqs_pct in struct svs_bank.
+- Name "main" instead of "main_clk" in SVS nodes for getting SVS clk.
+- In SVS binding document, remove fourth parameter of GIC interrupts.
+- Use '-' in node names.
 
-1. Because these cmdq patches are identical in both tree, so each tree
-could do its own upstream and the there would be nothing happen when
-merge.
-2. Let soc upstream first, and mediatek drm rebase on the latest
-mainline then upstream.
+Roger Lu (3):
+  dt-bindings: soc: add mtk svs dt-bindings
+  arm64: dts: mt8183: add svs device information
+  PM / AVS: SVS: Introduce SVS engine
 
-Which one do you prefer?
+ .../devicetree/bindings/power/mtk-svs.txt     |   76 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |   16 +
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |   41 +
+ drivers/power/avs/Kconfig                     |   10 +
+ drivers/power/avs/Makefile                    |    1 +
+ drivers/power/avs/mtk_svs.c                   | 2075 +++++++++++++++++
+ include/linux/power/mtk_svs.h                 |   23 +
+ 7 files changed, 2242 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/power/mtk-svs.txt
+ create mode 100644 drivers/power/avs/mtk_svs.c
+ create mode 100644 include/linux/power/mtk_svs.h
 
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.6
-[2]
-https://git.kernel.org/pub/scm/linux/kernel/git/matthias.bgg/linux.git/log/?h=v5.5-next/soc
-
-Regards,
-CK
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
