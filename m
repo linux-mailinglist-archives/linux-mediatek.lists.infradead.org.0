@@ -2,91 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D9C9131AD7
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Jan 2020 22:57:58 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 798D1131D51
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Jan 2020 02:45:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5HbKKQgOuwpzydZe2Hb9h0NPo1Zm+OO3lVxD8yXnH58=; b=QVH36SmiSguLYK
-	QpqxRq3gqzXFmR4HMnJqzKNG88nYqPZEm9EQNHbwpilmDAidrnZkUPSIlWZdA3ZCa4QbIc4SeMN1p
-	ytxC6+d2Yq4hqpAASK4BsZXg0nyAkT4RcDtWweFr0TjlhwbR+4y4REfRl0JCa+WJ/yrI3vhHLy3MD
-	Cpg8t0mPQI3+OxP11hfnJ1VZHpR05xp4wEbdizYhUb6u74WP/h2Hr/H8UlxZbmih0pPz/axqDzOow
-	8cQypCidPe3GUESRt9AZpaXwAEERJoXvHrKQBYh6ta8mbfZQRSLurj5s2w/+lR57/Yy3vvkGXzh14
-	aM9TN3OgzmUYVvCTPyMw==;
+	List-Owner; bh=DCFyk4NGQ+idchFRW8MSEYzGOJuG+zI/HAO0TcQihz8=; b=frrcTtHkOPv448
+	Q0Y+JHP/M9OrU4lyXOey89Te6pWp0F0BfAoX5z/TR8NYxlVdqiZiwrdTvs9wFkB7BrI+d+QjvbOWs
+	1aCTdoBRC4FUL5QxuGYLY4syYjFeL0M2FDrfxrP6RT/iNBwEKZYhXn9ACaE56SfijskSQCqfx4W68
+	zTiCKf5NH3NwTrh9Aql9jbpuxLwAB1ZtpNHhyZrRR2AIn6Mgysrn9PRZUtrLtKcTwt+vzhYJJKCTX
+	wH0WxeNomxxGpuzRRCaSldrY/ikraemBVAmERxHPO/D/OcuV0EYlYnVl1xNfDG+PB3NvLV5DukTmS
+	KjhGxjALdtmamobSh8wQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ioaNl-0007ze-GX; Mon, 06 Jan 2020 21:57:53 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
+	id 1iodwH-0003aP-1x; Tue, 07 Jan 2020 01:45:45 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ioaNJ-0007Z1-4L
- for linux-mediatek@lists.infradead.org; Mon, 06 Jan 2020 21:57:26 +0000
-Received: by mail-ot1-f65.google.com with SMTP id w21so65780185otj.7
- for <linux-mediatek@lists.infradead.org>; Mon, 06 Jan 2020 13:57:24 -0800 (PST)
+ id 1iodwD-0003Z8-F7
+ for linux-mediatek@lists.infradead.org; Tue, 07 Jan 2020 01:45:42 +0000
+Received: by mail-qk1-x741.google.com with SMTP id d71so33487166qkc.0
+ for <linux-mediatek@lists.infradead.org>; Mon, 06 Jan 2020 17:45:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=Ft6xmRm0Xn4A+6zJu2AAPIsi5FGpNr4OiKyWPq8PF3E=;
+ b=mdt/L/fHFt2uUCxneOT+wJBx1zeGq9fEF86Cyn+w5YQHYXVdG2UDKU90QAJJDbAT6E
+ IZWrNX6Taxnc5BNAW8Yp3jFm3p+efXels7I1FhUsccQ4zciOFeCl6pRPzl9m7pO2PuDr
+ KccNYENPlAXa8/HDVUEFXxyjyo87LkIjp98PX/W8bgzxDLiDmuBzWbE0awp041Lw231F
+ +39mAOxKlUQKQGTmn1zMvdes8C2LY2Tfwuk7RCMGiBDabQHnqMP7NGNdvxL2BEaX+Sak
+ z7fe9ZeK79KghIH6+sVVA3NzodbDqzqiLcC+fviJJ+agPmBXo3F4bTuXNJhJr2KcUTHw
+ nV6g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=TkT8eaIKGqV3wsrlyewlpi+P3L8o3guOiv9YMvMP6U8=;
- b=dselZLK8cfNvEpBBt8cXSrguWOGgNVNAj06jGKHt6XKBnvuy7ZyVpZYz0lZB02iWcK
- LSeWogqNAATcNkQfK2Z+LSe98lfUd8ik/ylDqluI1HEIft/4dkOKHHqyE9a2i0s8Q4x7
- EnSan2IlwH7lq2rDhWtwQIup7tNGLEalx6W0iyfP0AmTcrzjg8NLrL49w+22MMwSAymA
- ZqEeNOf+OXUY4DUXkhEayeg+Pi0XXJjf4NVcec3ShlVo1D0sNpBiX8+qQZBOM4X+zx/O
- SCOp7BcYSXklmXrvHwEAv6RkF/MUu3Yv+IBkTlQ/e7RYFUNc3LurbYIl+NrN2Oy+xFyX
- 4SxQ==
-X-Gm-Message-State: APjAAAWRZsseyZ39KJnIRvRYHgIcwurTpqDs57n6jjkpox2uTer35DxW
- BM7cZ3MXwHhbCk0RkePe5i6OGQU=
-X-Google-Smtp-Source: APXvYqw2bH65KczcRKw6CaCWI59Yj8k7Byrnh+JsH9KB6uAes+kULdPVtrGFe5Uwu9UGh5geUbwEnQ==
-X-Received: by 2002:a9d:4796:: with SMTP id b22mr43018227otf.353.1578347843445; 
- Mon, 06 Jan 2020 13:57:23 -0800 (PST)
-Received: from rob-hp-laptop (ip-70-5-121-225.ftwttx.spcsdns.net.
- [70.5.121.225])
- by smtp.gmail.com with ESMTPSA id w201sm21822480oif.29.2020.01.06.13.57.22
- for <linux-mediatek@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 06 Jan 2020 13:57:22 -0800 (PST)
-Received: from rob (uid 1000) (envelope-from rob@rob-hp-laptop) id 2219d8
- by rob-hp-laptop (DragonFly Mail Agent v0.11);
- Mon, 06 Jan 2020 15:57:21 -0600
-Date: Mon, 6 Jan 2020 15:57:21 -0600
-From: Rob Herring <robh@kernel.org>
-To: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Subject: Re: [PATCH v10 1/2] dt-bindings: mediatek: mt8183: Add #reset-cells
-Message-ID: <20200106215721.GB31059@bogus>
-References: <1578280296-18946-1-git-send-email-jiaxin.yu@mediatek.com>
- <1578280296-18946-2-git-send-email-jiaxin.yu@mediatek.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=Ft6xmRm0Xn4A+6zJu2AAPIsi5FGpNr4OiKyWPq8PF3E=;
+ b=Fh6cs5C7lly+JWJhAlCbynKxuXk0jcm4/sR9GFr5xTr5mjelRLrJI+4LL2TUFwYEj1
+ d7jquSn71riVrZbiZlYJuros1vyP20MqD4MAWjYp8cScwQ1RS+IgZI+IK8C7uB8iucI0
+ 5gBYBbyu8IBbS/FpfsZXcAfBWFpYAdhmF2PX9FUEXVzPeBV5UAckaSAVWIdXSkWFWsrm
+ GSlmTMglbCEG3QGOJwyynHsSKMFkiekL6FUY/qQXhNm4jd65T1l4WuN6c5qyFCAp0z1b
+ Pjaf82wI+aOam7YhqRY+/nwYpeTof8zSQ4cFBqYUFkAlaHyjnwY9c5Z3kW652yAaUkRG
+ OW6w==
+X-Gm-Message-State: APjAAAVlc6ngix0wJbFgoIXIqJY0JAx/jFZHzZ2Kf3JPwIXKHm7vOTyj
+ curyuk2HW8J9F2j5s9F55BOr94AagfWcX6ul8PlWzw==
+X-Google-Smtp-Source: APXvYqwhpelqz1BD3Zaxd7qhMERDtnjDXuXuK5sCqGFKA0nX5yXFO0Qqv4/D7HsevTyPJjTlnid1ORnGa9dP/VZvId4=
+X-Received: by 2002:a37:ba03:: with SMTP id k3mr83504125qkf.127.1578361533830; 
+ Mon, 06 Jan 2020 17:45:33 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1578280296-18946-2-git-send-email-jiaxin.yu@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20191210195333.648018-1-arnd@arndb.de>
+ <d739240f-aaa6-c310-9c68-16c1a08ce759@nvidia.com>
+In-Reply-To: <d739240f-aaa6-c310-9c68-16c1a08ce759@nvidia.com>
+From: Curtis Malainey <cujomalainey@google.com>
+Date: Mon, 6 Jan 2020 17:45:22 -0800
+Message-ID: <CAOReqxh9wamuKQnjPqUsZS_=4xUbsy-Y3v+=OXGaWV5EuONPmA@mail.gmail.com>
+Subject: Re: [PATCH] ASoC: rt5677: add SPI_MASTER dependency
+To: Jon Hunter <jonathanh@nvidia.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200106_135725_209398_863FB6E0 
-X-CRM114-Status: UNSURE (   9.83  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.8 (/)
+X-CRM114-CacheID: sfid-20200106_174541_510583_53198F60 
+X-CRM114-Status: GOOD (  15.28  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.8 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.65 listed in wl.mailspike.net]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,37 +96,60 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, yong.liang@mediatek.com,
- freddy.hsin@mediatek.com, linux-watchdog@vger.kernel.org, sboyd@kernel.org,
- linux-kernel@vger.kernel.org, Jiaxin Yu <jiaxin.yu@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- p.zabel@pengutronix.de, yingjoe.chen@mediatek.com, matthias.bgg@gmail.com,
- chang-an.chen@mediatek.com, wim@linux-watchdog.org, linux@roeck-us.net
+Cc: Pierre-Louis Bossart <pierre-louis.bossart@linux.intel.com>,
+ Cezary Rojewski <cezary.rojewski@intel.com>,
+ linux-tegra <linux-tegra@vger.kernel.org>,
+ Charles Keepax <ckeepax@opensource.cirrus.com>, Arnd Bergmann <arnd@arndb.de>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Takashi Iwai <tiwai@suse.com>, Jie Yang <yang.jie@linux.intel.com>,
+ Liam Girdwood <lgirdwood@gmail.com>, Jaroslav Kysela <perex@perex.cz>,
+ Ben Zhang <benzh@chromium.org>, Mark Brown <broonie@kernel.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ Curtis Malainey <cujomalainey@chromium.org>,
+ ALSA development <alsa-devel@alsa-project.org>,
+ linux-arm-kernel@lists.infradead.org,
+ KaiChieh Chuang <kaichieh.chuang@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 6 Jan 2020 11:11:35 +0800, Jiaxin Yu wrote:
-> Add #reset-cells property and update example
-> 
-> Signed-off-by: yong.liang <yong.liang@mediatek.com>
-> Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
-> Reviewed-by: Yingjoe Chen <yingjoe.chen@mediatek.com>
-> Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
-> ---
->  .../devicetree/bindings/watchdog/mtk-wdt.txt  | 10 ++++++---
->  .../reset-controller/mt2712-resets.h          | 22 +++++++++++++++++++
->  .../reset-controller/mt8183-resets.h          | 17 ++++++++++++++
->  3 files changed, 46 insertions(+), 3 deletions(-)
->  create mode 100644 include/dt-bindings/reset-controller/mt2712-resets.h
-> 
-
-Please add Acked-by/Reviewed-by tags when posting new versions. However,
-there's no need to repost patches *only* to add the tags. The upstream
-maintainer will do that for acks received on the version they apply.
-
-If a tag was not added on purpose, please state why and what changed.
+On Wed, Dec 11, 2019 at 3:00 AM Jon Hunter <jonathanh@nvidia.com> wrote:
+>
+>
+> On 10/12/2019 19:52, Arnd Bergmann wrote:
+> > When CONFIG_SPI is disabled, the newly added code for the DSP
+> > firmware loading fails to link:
+> >
+> > ERROR: "rt5677_spi_hotword_detected" [sound/soc/codecs/snd-soc-rt5677.ko] undefined!
+> > ERROR: "rt5677_spi_write" [sound/soc/codecs/snd-soc-rt5677.ko] undefined!
+>
+> Would it be better if the above functions or the functions that call
+> these are conditional on CONFIG_SND_SOC_RT5677_SPI?
+>
+> > Add a dependency to prevent this configuration.
+> >
+> > Note: the does not work with the DT probing, as there is no binding
+>
+> Are you missing 'SPI' or something here?
+>
+> > for the SPI half of the driver, but nothing seems to be using that
+> > with the mainline kernel anyway.
+>
+> From a Tegra perspective, given that we don't use SPI in conjunction
+> with the rt5677 codec, only I2C so far, I am not sure we should make the
+> tegra_rt5677 driver dependent upon it. We should be able to operate
+> without the SPI bits enabled.
+>
+There should be no changes needed for tegra, this should be isolated
+to the bdw machine driver. The only things added to the machine driver
+were some dai links.
+> Cheers
+> Jon
+>
+> --
+> nvpublic
 
 _______________________________________________
 Linux-mediatek mailing list
