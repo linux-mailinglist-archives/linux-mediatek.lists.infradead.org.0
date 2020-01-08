@@ -2,91 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33A9413436B
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 14:07:45 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 78BBB1343B7
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 14:23:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
 	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=Z5XVz+htnIN2pFAngFhyqesAtlNgM0BGfAbKctXfSK0=; b=n4VGi/MH14lLvI51WNDUFSHoZ
-	QRzbxnq2cSiAAkXwpA/8AbxR74aE/WT4TAQi9h9bMyEIJD8JW0FxdgcSy0wxSLuRrV7Wson3Qd25R
-	zCEmX8iLNuzWiM7OQP+o/HPkv4FXzNVSZF82agnPCz8Igr9XWsayBZ8Cse+PsznqSKnYXoXXRA2q+
-	phERPJtybg+HrlBjgyP7CoEDn4xXI/h/jvUvDNL5Fsc4l1bN44ebIk1sXdXULrm9hfqeDqt940PHh
-	6DdPveXfov8q/BDXXgX9A8W1QLdWqDiokEyT91eOov2EYoZw1fnycJpyjIZIKqd5GqAl/8jcVkTGB
-	cwH8YMTEA==;
+	 bh=tbOj57kMgvpJu1+VZjablT8ePasMZjx3EDr2c/4bVas=; b=POsAzyC7aafvsEjY6PDIk4chB
+	yMa8dHFtpGXOpHQAmhULOkwb9QA94vFg8wC2A30OMyeXCdyyjlZ8zE3FS1Ek+8ZeQwgXCRlVfDQGe
+	HsmgrGqmToF2a/rZJF8rLdFXiDpjjap/LaI6WCBaxBwdNqdjVkOCWYv0LkCy0vU/waTu4MTWXt5xE
+	xwN5LPA69zWVKDKAW5Ze/ZlWiXHWtrVPH8rsyyICgmidM3iLo/VAAoF2rGdwHSfF3Ak5qUAbwue3d
+	PGlT/vwTdnZi9TFx5sHrRdP7q/i7ZvVQwLlSGPIYInX+w/yDXmZOT71PtMC9jgXpq1e558U4xIXkV
+	CcxeQaHTw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ipB3h-0006Zw-BV; Wed, 08 Jan 2020 13:07:37 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ipAxE-0008AT-KT; Wed, 08 Jan 2020 13:00:58 +0000
-Received: by mail-wr1-x441.google.com with SMTP id b6so3340358wrq.0;
- Wed, 08 Jan 2020 05:00:55 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=8s6MBY17dmKuqB1spd1Y2svCKY1mGBybzjzWrguhdKw=;
- b=gE1Ze7d22HE5Q5vnTBA9TJ3sklMoxYoqc4qi5fHipRECxI0AbbTe7yOGYletjJPSmG
- +ni93Xnu1tzfiZFnXRrNN7/9U4sSHQNRhWB3u0H5/5LgIBx8y6JZ2dvG6K9UzFfeIs+t
- ucmWMwc34F1bCjWif80BBpDX+NigheLltnGLMjReolPZ5SDW/DH4dUm+wUq5r/jUmJ7s
- e2m0AP/4myXBS3YYO7G6r3U33CARN3WLrhMxJEK0ZB3mfe/XXCblny9ZEPEACVa0kLmj
- 3U+hwLGgcCpRcrE4b/ohDwhGIOeoYtr9t3UJp9qpLX3nPDKIaslKdYClYnIKHOhib/Rq
- UFDw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=8s6MBY17dmKuqB1spd1Y2svCKY1mGBybzjzWrguhdKw=;
- b=rslTwfNAAYU4y25qpeu0whfxi8ZJLu2S+0Oi1mggdCmB4U8P+nBN727NMAgqyl9buS
- DHhtElSmB6fRdlRwV5/EKmQZQhSaHfHDW0QLaH5YRWA6S1v7x7bM+dM18KhvL3GcPsTa
- fZIlFK+e5QnaryTrwZVOUbC4f4BD/sFjzmrNxRIpXivMv0vuS5TvAXf07zePu+k6SEfk
- o6lPSxHj7mI5KwZAUBY82BG8TQMlKsTI6AbDi10UKiIqri47tKOYJIEEotNF7oGVEbsl
- vpXx8t0oCozd02hkr5RU1jsd3b6pJrSY2/H6uFOHYnljnY6V3J+XKp7a7piwlntuePTu
- 3Y3A==
-X-Gm-Message-State: APjAAAV2AVOXjdxmERxlMl0GgOBJSFXB+scqZgtqdwxsW3SUhD3SVhTJ
- BaR08QXQ1Xh5Xy+T3HKvTn8=
-X-Google-Smtp-Source: APXvYqyiUk9DjLJLQC9p0jB9yqPCOOzRwx8SecHw6EXXSg6lP6Y/JDhW00O/AZmFm6lHLnBCa9UkDg==
-X-Received: by 2002:a05:6000:cf:: with SMTP id
- q15mr4321652wrx.393.1578488454567; 
- Wed, 08 Jan 2020 05:00:54 -0800 (PST)
-Received: from localhost (p2E5BEF3F.dip0.t-ipconnect.de. [46.91.239.63])
- by smtp.gmail.com with ESMTPSA id x7sm3931711wrq.41.2020.01.08.05.00.52
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 08 Jan 2020 05:00:53 -0800 (PST)
-Date: Wed, 8 Jan 2020 14:00:52 +0100
-From: Thierry Reding <thierry.reding@gmail.com>
-To: Krzysztof Kozlowski <krzk@kernel.org>
-Subject: Re: [PATCH 1/2] pwm: Fix minor Kconfig whitespace issues
-Message-ID: <20200108130052.GF1993114@ulmo>
-References: <20191230172113.17222-1-krzk@kernel.org>
+	id 1ipBIo-0005Zz-CN; Wed, 08 Jan 2020 13:23:14 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1ipBIf-0005TA-WC; Wed, 08 Jan 2020 13:23:07 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 1A8B431B;
+ Wed,  8 Jan 2020 05:23:04 -0800 (PST)
+Received: from localhost (unknown [10.37.6.21])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 99F2B3F703;
+ Wed,  8 Jan 2020 05:23:03 -0800 (PST)
+Date: Wed, 8 Jan 2020 13:23:02 +0000
+From: Mark Brown <broonie@kernel.org>
+To: Nicolas Boichat <drinkcat@chromium.org>
+Subject: Re: [PATCH v2 4/7] drm/panfrost: Add support for a second regulator
+ for the GPU
+Message-ID: <20200108132302.GA3817@sirena.org.uk>
+References: <20200108052337.65916-1-drinkcat@chromium.org>
+ <20200108052337.65916-5-drinkcat@chromium.org>
 MIME-Version: 1.0
-In-Reply-To: <20191230172113.17222-1-krzk@kernel.org>
-User-Agent: Mutt/1.13.1 (2019-12-14)
+In-Reply-To: <20200108052337.65916-5-drinkcat@chromium.org>
+X-Cookie: Trouble always comes at the wrong time.
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200108_050056_675232_801B406D 
-X-CRM114-Status: UNSURE (   9.05  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200108_052306_078226_FE6AB295 
+X-CRM114-Status: GOOD (  11.93  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (thierry.reding[at]gmail.com)
+ no trust [217.140.110.172 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,65 +65,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pwm@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-rockchip@lists.infradead.org,
- bcm-kernel-feedback-list@broadcom.com, linux-rpi-kernel@lists.infradead.org,
- Uwe =?utf-8?Q?Kleine-K=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
- linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Tomeu Vizoso <tomeu.vizoso@collabora.com>, David Airlie <airlied@linux.ie>,
+ linux-kernel@vger.kernel.org, Liam Girdwood <lgirdwood@gmail.com>,
+ dri-devel@lists.freedesktop.org, Steven Price <steven.price@arm.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>,
+ Daniel Vetter <daniel@ffwll.ch>, hsinyi@chromium.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
-Content-Type: multipart/mixed; boundary="===============3380458395605693868=="
+Content-Type: multipart/mixed; boundary="===============2413954238169564288=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 
---===============3380458395605693868==
-Content-Type: multipart/signed; micalg=pgp-sha256;
-	protocol="application/pgp-signature"; boundary="+jhVVhN62yS6hEJ8"
+--===============2413954238169564288==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="KsGdsel6WgEHnImy"
 Content-Disposition: inline
 
 
---+jhVVhN62yS6hEJ8
+--KsGdsel6WgEHnImy
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
 
-On Mon, Dec 30, 2019 at 06:21:12PM +0100, Krzysztof Kozlowski wrote:
-> Remove double whitespace after "config" keyword.
->=20
-> Signed-off-by: Krzysztof Kozlowski <krzk@kernel.org>
-> ---
->  drivers/pwm/Kconfig | 4 ++--
->  1 file changed, 2 insertions(+), 2 deletions(-)
+On Wed, Jan 08, 2020 at 01:23:34PM +0800, Nicolas Boichat wrote:
 
-Applied, thanks.
+> Some GPUs, namely, the bifrost/g72 part on MT8183, have a second
+> regulator for their SRAM, let's add support for that.
 
-Thierry
+> +	pfdev->regulator_sram = devm_regulator_get_optional(pfdev->dev, "sram");
+> +	if (IS_ERR(pfdev->regulator_sram)) {
 
---+jhVVhN62yS6hEJ8
+This supply is required for the devices that need it so I'd therefore
+expect the driver to request the supply non-optionally based on the
+compatible string rather than just hoping that a missing regulator isn't
+important.  Though I do have to wonder given the lack of any active
+management of the supply if this is *really* part of the GPU or if it's
+more of a SoC thing, it's not clear what exactly adding this code is
+achieving.
+
+--KsGdsel6WgEHnImy
 Content-Type: application/pgp-signature; name="signature.asc"
 
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAABCAAdFiEEiOrDCAFJzPfAjcif3SOs138+s6EFAl4V0oQACgkQ3SOs138+
-s6GW+RAAqt7l9DVUT1XZy2TgE7UeLRkeCbnVtYRqr1q4kqqjW1uRyRc2gbd6Q15a
-Orl53tUGiuE+Fr/t+UpQSLOmsc93zRIqkhbyMdfyTXJRGhzU5UCx2BuBDkelvmZ/
-ZcTgvi8IkXRVh7SJx6E2i956iFXifCQQKd/pbS3oPZbUCeRPJuhCTgmfD7NAKvCR
-YsaDo4MWHuuulx05CCLeZ+g915YEGXCV5nKr5RdY9/uf1ifS1waeUZK8+C+uwAy6
-17J7Ee4+27mydyVzsutgTLAWfnNf3wcwDzbYaR61G4dKZXHWZBlzjq1hAlyfLrfI
-Ue9fAv71KPfLULXpotqvoVkzKeTzW5SSnbtsi22wLJfmu5RI2ZCS2gXdRN0Z5f8y
-9M59CBmSSOvoQ7b/nBbOCxxlUqZTXGjnlJCXqrqGmomCMQvKZIJBNBILlFoQDDtZ
-wCVV+XXEHq3j4qvgsjgkAHLGyxkjmryg6fOFe9mqCGwk1huV5NYbI4aP1xiSCmTt
-00wLZMd67PnKuPv1GAgvRW+BLif97N1U7g2OP5ewhYXPj7cd1DVQHsgwbKnKkz1H
-UWG3gn+7n3KcstFfKsgS3X8fhKQ2+HalnX9hBfeORhPef5cCtIURILtOU/sS/pvZ
-f30UWoLal+Aylqbsc01nUJmxg27i/m0q4+v7waQmAJlE0L+1c6o=
-=p5N4
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl4V17MACgkQJNaLcl1U
+h9B1Tgf9F6myo+YZUDZcDAsE1tQHONaZ147hS3g2NDCgQf79b/fWyNVelAPRvxg+
+wz+J0q2LmDX9K0ldimkt+BEitrL5aVQsPjw/WOXbOk/n4FBP11uDMxk9i586GGfO
+EXHDmfUQh8D+wEjZBKck8+yaa0NYCFoHdlxc3rPILim9fGRiJKa18EdbPRfb7lNm
+86k2Nkicmd8gkBfk7GlJ8MgGabr1ezpiza+F/vhTkEm+WHCcDwy+BadJG5whNnC0
+GmKn0ieyraLxmVUjC4BpkJbeG/ye5VPCOcLn4ZjGrRU209STb45MyFAlAaYFNzX0
+0wWQAm/aPa23vn2QhxYUW1RALdueLQ==
+=UhEZ
 -----END PGP SIGNATURE-----
 
---+jhVVhN62yS6hEJ8--
+--KsGdsel6WgEHnImy--
 
 
---===============3380458395605693868==
+--===============2413954238169564288==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -167,5 +134,5 @@ Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
---===============3380458395605693868==--
+--===============2413954238169564288==--
 
