@@ -2,68 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1BB4B1338AF
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 02:53:09 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BD6C41338F0
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 03:02:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LGjye83GmDoo5b7Snw3xqAoUf7w+NND9ezfpguhfFBI=; b=JdGgtQ8VhaolVi
-	sqq8b4YYspI3oKQSrwhdY6Qit3ZamVDjD3W4+GKhHTbJZbxbfuH9dwVXM2n9/Ykve1TYhB1HJ/w8p
-	xrzOJWVQb/YBbiygIveDEtgrNP+34wJXdXSy7Q///LrFD41yZYJjLHhyU6D6uiH3tdubFMDbNfBm/
-	UJnAYLETEjwMeDy7rOVYoFhmvVN38flaQJ9uKwX3Ad122xlU/ICwJsaQm1LS4hQGk42F6APH/c5sc
-	qXS/CJ4vh8xVBzzt/7uaAD3T7uTekK25Vj53btHo1uvNcjctHVbKkrgoMrEI+BK4xgWsW/L1RahtI
-	Halu5EnctzAFms1mFfHg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=F5ecazHtZjD/KwbrMCPEzd1HmMHtUleUHEGY5TIzAZU=; b=C3hWvoWMDWeZuR
+	LcrEeFumj8Eb2GnaEQBER3RTnMIrQbCLD65jV9fxCAqSYophTnRiDWFiAU2kGff3PYSoQ32H+BCDm
+	u5q84xD+ZDAR92fdI1fVVSh7EVkc0lR/2RHbW88u5x0MUQTDGyXJANvTI9O8JfYsMyrYrmPEOGKHb
+	Rel5ftolpnHxHXLNRkVYLWEpJLE9rImC9e5T+6OKEioUp2Y+iPxO93MWp1YDbY2Y4TfWSXwCMrgPB
+	8tZrMTCQm8RdkdG3uhmuW9Ho28MN2LELPNohuhYyXLHw6Q+L/xDy6qf0tM90yrr7HeS9btuEmvc0L
+	8I4fQuoVXUbOssBUUGDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip0Ws-0004Fn-HH; Wed, 08 Jan 2020 01:53:02 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ip0fk-0001Og-EQ; Wed, 08 Jan 2020 02:02:12 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip0WQ-0003iT-AZ; Wed, 08 Jan 2020 01:52:36 +0000
-X-UUID: 3e38387b6dc44509951f631c98a6aa71-20200107
+ id 1ip0ek-0000In-8n; Wed, 08 Jan 2020 02:01:11 +0000
+X-UUID: 90c684595c2b4175a1b3021969ab2661-20200107
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=bGOiBo8UsCQP2pWWgLyPzgbBIX20HC4dwHtdo02etrI=; 
- b=Lp3YNNSvku1REfvKcdlpexuPe+R6Sdzn7z8j9K/fmqLgrBtj3qXC4xXzPKE/9Xf31au0NufCMtPAjTv6/6pQsNz5c8aYJf+4QwhBKdMXWP/ar25ydxUJlkSw1qKb2w7s2I1nsst4AljQz45DqNJoQUIu/LanIuYVyTQ8uSVopL4=;
-X-UUID: 3e38387b6dc44509951f631c98a6aa71-20200107
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=8qhhdoDqZ+CygTdbYi8g0Gw9RSr1TQM9pKMrc5q2zEY=; 
+ b=r0Ra852KID0fiJZkI+FioUo91ePEKaes3Pxf1UAfeDqCQ+/EVCSwR8RYTe9C9hZxeNp3Bczfd2trciWXwtO77OD8GML2JTB6E8PHOa9hRPJtGrbqTQDUP+BeU02Cx+TG7Xm3Zj0ZLoE8vWHKX9N+L4e1vts1lDtnD1qfAShyMG8=;
+X-UUID: 90c684595c2b4175a1b3021969ab2661-20200107
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 806019241; Tue, 07 Jan 2020 17:52:29 -0800
-Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 Jan 2020 17:52:28 -0800
+ with ESMTP id 2044906677; Tue, 07 Jan 2020 18:01:02 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 Jan 2020 17:53:00 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31DR.mediatek.inc (172.27.6.102) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 8 Jan 2020 09:50:47 +0800
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 Jan 2020 09:51:47 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 8 Jan 2020 09:53:01 +0800
+ Transport; Wed, 8 Jan 2020 09:52:56 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Kishon Vijay Abraham I <kishon@ti.com>
-Subject: [RESEND PATCH v5 05/11] dt-bindings: phy-mtk-tphy: add the properties
- about address mapping
-Date: Wed, 8 Jan 2020 09:52:00 +0800
-Message-ID: <1578448326-27455-5-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [RESEND PATCH v5 01/11] dt-bindings: phy-mtk-tphy: add two optional
+ properties for u2phy
+Date: Wed, 8 Jan 2020 09:51:56 +0800
+Message-ID: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
-References: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E7AD8DAC7C6F2045B14EF4CC6E078C9256E7C003A7D15FF2034D30DC13356E7B2000:8
+X-TM-SNTS-SMTP: AE60D5760CD9F0D4BC52BF08A0193871E03F54A712E21FCC77450FF9408ABF492000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_175234_382832_8C578771 
-X-CRM114-Status: GOOD (  11.66  )
+X-CRM114-CacheID: sfid-20200107_180110_361032_3DB85B03 
+X-CRM114-Status: UNSURE (   8.00  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -98,40 +95,37 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add three required properties about the address mapping, including
-'#address-cells', '#size-cells' and 'ranges'
+Add two optional properties, one for tuning J-K voltage by INTR,
+another for disconnect threshold, both of them are related with
+connect detection
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
+Acked-by: Rob Herring <robh@kernel.org>
 ---
-v3~v5: no changes
+v5: add acked-by Rob
 
-v2: add Reviewed-by Rob
+v4: no changes
+
+v3: change commit log
+
+v2: change description
 ---
- Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+ Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt | 2 ++
+ 1 file changed, 2 insertions(+)
 
 diff --git a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-index a859b0db4051..dd75b676b71d 100644
+index a5f7a4f0dbc1..ce6abfbdfbe1 100644
 --- a/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
 +++ b/Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-@@ -14,6 +14,16 @@ Required properties (controller (parent) node):
- 		  make use of "mediatek,generic-tphy-v1" on mt2701 instead and
- 		  "mediatek,generic-tphy-v2" on mt2712 instead.
+@@ -52,6 +52,8 @@ Optional properties (PHY_TYPE_USB2 port (child) node):
+ - mediatek,eye-vrt	: u32, the selection of VRT reference voltage
+ - mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage
+ - mediatek,bc12	: bool, enable BC12 of u2phy if support it
++- mediatek,discth	: u32, the selection of disconnect threshold
++- mediatek,intr	: u32, the selection of internal R (resistance)
  
-+- #address-cells:	the number of cells used to represent physical
-+		base addresses.
-+- #size-cells:	the number of cells used to represent the size of an address.
-+- ranges:	the address mapping relationship to the parent, defined with
-+		- empty value: if optional 'reg' is used.
-+		- non-empty value: if optional 'reg' is not used. should set
-+			the child's base address to 0, the physical address
-+			within parent's address space, and the length of
-+			the address map.
-+
- Required nodes	: a sub-node is required for each port the controller
- 		  provides. Address range information including the usual
- 		  'reg' property is used inside these nodes to describe
+ Example:
+ 
 -- 
 2.24.0
 _______________________________________________
