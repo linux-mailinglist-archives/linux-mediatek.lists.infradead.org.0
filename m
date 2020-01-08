@@ -2,57 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EEFE4133BD9
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 07:42:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E97C133BDA
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 07:42:56 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=EyQxneGwc8RXyzBAzK8Tw1iMTEGz+23ymXit6lo9xIE=; b=Xr68pn/fyjY238
-	5wURqgNnHxAzb0YSLvJbX+K0ouGaSUP3yr286bVK3p4Hbqg24wawd4QU+xu6cdH/GoNFoE+kqaIvQ
-	mLYrhvdNnOUELS2lM+hK1ujVImcwKGShKem2nNmg4gANvo4kdOeNa/2fTVi1b9+jBh648PqpDBNp6
-	f8TWFP1flXb8A+jouRlqwnlltNijCnFMLUNsso5xpLIepMYlomdSjWc5OihqmAP/QQihzoya4puqO
-	TBTt2KprIpVo7ez73zew5Xvy8nZOUsmK7hKk874T6TlmTYt4tXwmLPISAARtfXg654Mr8JvZnMzR4
-	3C31dHd5yzZHe8DkBV5g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=+/Db6y/cWW2+NLcu4I5DH32piviLBkcM734z6zSKQCA=; b=aGxBX+gZZnfxbL
+	6e7VlFrHRjYy0/HpxFj9dNa/Cak7L96tXW9tg4E7tQbhFBLbSg+9F3YlG20TF54AWVlTCviGkAx+4
+	npO+LOhwPHmHPQKLIyG+YNjY+aTR3/J6IBMoWaWQI/RXQxjmj2uBVaADrPGm21LTA2aRsXBJABtq0
+	J94k79Ev+lMGFQGYQlbnX10AqVcwUQlv8/bQIe1ixTElaXJl9UYzPvHP3YfyL093ZMi7W011ujfYW
+	PP3aQpzmIrzXfOusit65sEJWmvHNSt/OFx5VcfSH2jSFSYy4Bw+nBXJhQkZsyBzZ3vwRsThoYMcGL
+	NLZCTQNC4vHvlYjm5VXg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip53J-0002cy-GU; Wed, 08 Jan 2020 06:42:49 +0000
+	id 1ip53K-0002eS-Lg; Wed, 08 Jan 2020 06:42:50 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip52C-0001UK-DC; Wed, 08 Jan 2020 06:41:42 +0000
-X-UUID: 37e533df6f3d4ed6b243434bd13ff0c2-20200107
+ id 1ip52B-0001Ut-Vc; Wed, 08 Jan 2020 06:41:42 +0000
+X-UUID: b7d289a606b5449390a6c38b2f196ac1-20200107
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=kUH+CKXvuuCJ+JNqIK5cYBkD6I+QkoxV5z2ZPjtbIdw=; 
- b=IADYONrYkZQ/w7iaW6MPcF3js9vOzzIOX6UxzUAIoFmPDj5rkxumT1XOhfgfpq/GKK2a5u7/YHFWjk+PdUG4mxazZPzS8AtXOxM8tQJIa1mY1mnEsajyaLr5Jsc6dO75ee05GGpjU4fVWRLZ7B/yyIsy9+EhqDhfgkvG4CRgwOM=;
-X-UUID: 37e533df6f3d4ed6b243434bd13ff0c2-20200107
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=Yu9NqwYbodwJATiMDbCNRoEDTSoP+9XjHOc4EfpOpn0=; 
+ b=r59Z0UQjDPytbSDPxEgtRHtSDkO/HXRRrNMvzncfo+f9cwFS79Z5iIglIsU1pCljPTK+4aTgIg4XciBj2MhgQkxik7/mJHv+fAJ0OemCsa64LUMyFldVMPUaJQPjPnMGi/KwTMEgjkffs9Zdwt99+UXxNkA+ioJgwgxSvv9lhhc=;
+X-UUID: b7d289a606b5449390a6c38b2f196ac1-20200107
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <ming-fan.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1233793181; Tue, 07 Jan 2020 22:41:35 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ with ESMTP id 1129365498; Tue, 07 Jan 2020 22:41:35 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
  15.0.1395.4; Tue, 7 Jan 2020 22:42:07 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 8 Jan 2020 14:41:05 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 Jan 2020 14:41:07 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Wed, 8 Jan 2020 14:39:59 +0800
 From: Ming-Fan Chen <ming-fan.chen@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: memory: mtk-smi: Add bandwidth initial golden setting for MT6779
-Date: Wed, 8 Jan 2020 14:41:27 +0800
-Message-ID: <1578465691-30692-1-git-send-email-ming-fan.chen@mediatek.com>
+Subject: [PATCH v3 0/3] memory: mtk-smi: Add bandwidth initial golden setting
+Date: Wed, 8 Jan 2020 14:41:28 +0800
+Message-ID: <1578465691-30692-2-git-send-email-ming-fan.chen@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1578465691-30692-1-git-send-email-ming-fan.chen@mediatek.com>
+References: <1578465691-30692-1-git-send-email-ming-fan.chen@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_224140_478393_DFBD39CE 
-X-CRM114-Status: UNSURE (   6.46  )
+X-CRM114-CacheID: sfid-20200107_224140_018697_42D6EC8B 
+X-CRM114-Status: UNSURE (   6.71  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -88,24 +90,14 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: devicetree@vger.kernel.org, Joerg
  Roedel <jroedel@suse.de>, wsd_upstream@mediatek.com,
  linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
- linux-mediatek@lists.infradead.org, Yong Wu <yong.wu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+ linux-mediatek@lists.infradead.org, Yong Wu <yong.wu@mediatek.com>, Ming-Fan
+ Chen <ming-fan.chen@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch add description, basic nodes, config_port and
-bandwidth initial golden setting for MT6779 SMI both smi-larb and smi-common.
-The setting make better performance of memory control for multimedia modules.
-
-changelog since v2:
-Add GALS for mt6779 in smi-common.txt
-Split basic nodes and config_port support from initial golden setting patch
-Define local variable from long to short
-Merge writel_relaxed into one line
-Remove SMI_LARB_SW_FLAG in smi-larb
-
+*** BLURB HERE ***
 
 Ming-Fan Chen (3):
   dt-bindings: mediatek: Add binding for MT6779 SMI
@@ -116,6 +108,9 @@ Ming-Fan Chen (3):
  .../memory-controllers/mediatek,smi-larb.txt       |    3 +-
  drivers/memory/mtk-smi.c                           |  140 +++++++++++++++++++-
  3 files changed, 144 insertions(+), 4 deletions(-)
+
+-- 
+1.7.9.5
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
