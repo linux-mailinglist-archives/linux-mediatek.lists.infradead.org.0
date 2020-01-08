@@ -2,66 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 70B291338EC
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 03:01:57 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3111C1338F7
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 03:03:06 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=t1JQW495r1cv3Aih//klo+RiWqVniXqazwMmfZpc2xY=; b=fOpQNiIjAEMsYz
-	KC6DUSFDkWbQDlhDNlSVXm++yP5Lpcnlybk9BCXn1Ic5bOsxVh+adM7SYE8CYbBikYP7Q1D+Oc8Ao
-	tklX2gZ86USeqcnmfc04Qy7mXE0PAlLGpGtackknGsZ3KyOOP6srmX/ZbIEhf1Qyt0j+krom2Ohnx
-	wD+3O0t3WpwHr4VkGc9ZAKcg1H6Hn92U86MxtOfB+rBpDW86WKz9hf6rA8003YD1IWTv3XYcLAjPe
-	HWkhHNwOFBMSON9j8LG6byrxQRXKEBrEPvUDaZoROp6oXzNjYXxL5g2T8n8C/TTas1UmIt27W2EON
-	GwJWcNLsMhn0NJN/T/Cg==;
+	List-Owner; bh=eBY0YUXXuETVMaGbQspZJN3BOposUc4PJobUmFVNmuo=; b=Du2ypLSZjCXs3Z
+	sArsRrff+QFjMzGZqqCA1iw4T9mPuE6KQhA8Z+DQszrWVBQ3VXU1M8LLR6j9Gs+u6ilu/kKW/5yAQ
+	txq7NV1wlrjevT7Cixpra3c45TbjFmrcml/6YJXVj1636vBOqpjgIgPlzkH+g8tzeUZpdTfDoyqse
+	gqoVKpURPt8iqhW0LN2ODhHusiHXmOIuYRxPwhfvPeDcVbANnu/yy8bMlnLM5L4ztlpCeynB76kLS
+	Q3RS3j1KtW0WDVWKCjfEejKCtoNH0io2jU3BgTJiJv7CvjR6+ou4/lRATEndJFE4ovo6QXYHSUEES
+	Sbv0oRLJwc2h7F8m5IgA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip0fO-000135-PE; Wed, 08 Jan 2020 02:01:50 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1ip0gV-0002Dq-20; Wed, 08 Jan 2020 02:02:59 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip0ei-0000In-IC; Wed, 08 Jan 2020 02:01:10 +0000
-X-UUID: 8c7417cbc45b4226a1799180723044b8-20200107
+ id 1ip0gA-0001sk-0s; Wed, 08 Jan 2020 02:02:43 +0000
+X-UUID: 29ace0d29c40430497bfba563fcda468-20200107
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=oZdq+ZB5lizA1Zsv3OtqtZc7ySPrJ90tee+pr+IgKBQ=; 
- b=AstZOzVdlKNQpGDw2kWutbSCtHKfXowENkD4LJkKW0wfe5lR4dqbKTFcYblOiYg19NnOXn5hLg6CiwcB71BPi2FlOVC3D1ZMD1id8+q+vlNtFuFbF5e9WhOl+LpkkRE/SLG3vl4wMH8nz7p4r+erhMp7Mz8vRPLdxuH22fMg6AU=;
-X-UUID: 8c7417cbc45b4226a1799180723044b8-20200107
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=5Tn71PeBNCYWnUOwWbUMzdywYIjwGp8oXrwOtRNCvd8=; 
+ b=cQwaU1f/7MUknrgE2Ao53H0nXmJMlewlY8LyNxAxvrIc4OSMLkUDieegGyYA4Xjlxr1v0nDJrR1gBYEpb4SxLOsxJCF5CVlJVzCRlaMZXmXQ241RxPFW3SayzxA4vfJtlRIpL0TWqaMLtRBrqPXq97KjjKORRuohA58YcBBlq3o=;
+X-UUID: 29ace0d29c40430497bfba563fcda468-20200107
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 474636169; Tue, 07 Jan 2020 18:01:02 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 7 Jan 2020 17:53:07 -0800
+ with ESMTP id 957153144; Tue, 07 Jan 2020 18:02:33 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 7 Jan 2020 17:53:05 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 8 Jan 2020 09:51:17 +0800
+ MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 8 Jan 2020 09:51:53 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 8 Jan 2020 09:53:02 +0800
+ Transport; Wed, 8 Jan 2020 09:53:03 +0800
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Kishon Vijay Abraham I <kishon@ti.com>
-Subject: [RESEND PATCH v5 06/11] phy: phy-mtk-tphy: add a property for
- disconnect threshold
-Date: Wed, 8 Jan 2020 09:52:01 +0800
-Message-ID: <1578448326-27455-6-git-send-email-chunfeng.yun@mediatek.com>
+Subject: [RESEND PATCH v5 07/11] phy: phy-mtk-tphy: add a property for
+ internal resistance
+Date: Wed, 8 Jan 2020 09:52:02 +0800
+Message-ID: <1578448326-27455-7-git-send-email-chunfeng.yun@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
 In-Reply-To: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
 References: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: BFA84CA48E7339B3DB0587B4124D89784EB6BDEA2575B14996EC5CD22A51D9592000:8
+X-TM-SNTS-SMTP: AC88BC7D53065DE58BA57D0F5BC683CA226B30A9BD20F9F1A6D6B04162597E812000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_180108_636377_652A2768 
-X-CRM114-Status: GOOD (  12.55  )
+X-CRM114-CacheID: sfid-20200107_180238_163329_707D4A1E 
+X-CRM114-Status: GOOD (  12.34  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -96,9 +98,9 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This is used to tune the threshold of disconnect, the index range
-is [0, 15], the threshold voltage is about 400mV for 0, 700mV for
-15, and the step is 20mV.
+This is used to tune J-K voltage by internal R (resistance), the
+range is [0, 31], the resistance value is about 6.9K ohm for 0,
+3.8K ohm for 31, and the step is 1K ohm
 
 Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
 ---
@@ -106,61 +108,65 @@ v5: no changes
 
 v4: change commit log
 
-v2~3: no changes
+v3: change commit log
+
+v2: no changes
 ---
- drivers/phy/mediatek/phy-mtk-tphy.c | 17 +++++++++++++++--
- 1 file changed, 15 insertions(+), 2 deletions(-)
+ drivers/phy/mediatek/phy-mtk-tphy.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/phy/mediatek/phy-mtk-tphy.c b/drivers/phy/mediatek/phy-mtk-tphy.c
-index cb2ed3b25068..5afe33621dbc 100644
+index 5afe33621dbc..4a2dc92f10f5 100644
 --- a/drivers/phy/mediatek/phy-mtk-tphy.c
 +++ b/drivers/phy/mediatek/phy-mtk-tphy.c
-@@ -60,6 +60,8 @@
- #define U3P_USBPHYACR6		0x018
- #define PA6_RG_U2_BC11_SW_EN		BIT(23)
- #define PA6_RG_U2_OTG_VBUSCMP_EN	BIT(20)
-+#define PA6_RG_U2_DISCTH		GENMASK(7, 4)
-+#define PA6_RG_U2_DISCTH_VAL(x)	((0xf & (x)) << 4)
- #define PA6_RG_U2_SQTH		GENMASK(3, 0)
- #define PA6_RG_U2_SQTH_VAL(x)	(0xf & (x))
+@@ -43,6 +43,8 @@
+ #define PA0_RG_USB20_INTR_EN		BIT(5)
  
-@@ -300,6 +302,7 @@ struct mtk_phy_instance {
+ #define U3P_USBPHYACR1		0x004
++#define PA1_RG_INTR_CAL		GENMASK(23, 19)
++#define PA1_RG_INTR_CAL_VAL(x)	((0x1f & (x)) << 19)
+ #define PA1_RG_VRT_SEL			GENMASK(14, 12)
+ #define PA1_RG_VRT_SEL_VAL(x)	((0x7 & (x)) << 12)
+ #define PA1_RG_TERM_SEL		GENMASK(10, 8)
+@@ -302,6 +304,7 @@ struct mtk_phy_instance {
  	int eye_src;
  	int eye_vrt;
  	int eye_term;
-+	int discth;
++	int intr;
+ 	int discth;
  	bool bc12_en;
  };
- 
-@@ -850,9 +853,12 @@ static void phy_parse_property(struct mtk_tphy *tphy,
+@@ -853,12 +856,14 @@ static void phy_parse_property(struct mtk_tphy *tphy,
  				 &instance->eye_vrt);
  	device_property_read_u32(dev, "mediatek,eye-term",
  				 &instance->eye_term);
--	dev_dbg(dev, "bc12:%d, src:%d, vrt:%d, term:%d\n",
-+	device_property_read_u32(dev, "mediatek,discth",
-+				 &instance->discth);
-+	dev_dbg(dev, "bc12:%d, src:%d, vrt:%d, term:%d, disc:%d\n",
++	device_property_read_u32(dev, "mediatek,intr",
++				 &instance->intr);
+ 	device_property_read_u32(dev, "mediatek,discth",
+ 				 &instance->discth);
+-	dev_dbg(dev, "bc12:%d, src:%d, vrt:%d, term:%d, disc:%d\n",
++	dev_dbg(dev, "bc12:%d, src:%d, vrt:%d, term:%d, intr:%d, disc:%d\n",
  		instance->bc12_en, instance->eye_src,
--		instance->eye_vrt, instance->eye_term);
-+		instance->eye_vrt, instance->eye_term,
-+		instance->discth);
+ 		instance->eye_vrt, instance->eye_term,
+-		instance->discth);
++		instance->intr, instance->discth);
  }
  
  static void u2_phy_props_set(struct mtk_tphy *tphy,
-@@ -888,6 +894,13 @@ static void u2_phy_props_set(struct mtk_tphy *tphy,
- 		tmp |= PA1_RG_TERM_SEL_VAL(instance->eye_term);
+@@ -895,6 +900,13 @@ static void u2_phy_props_set(struct mtk_tphy *tphy,
  		writel(tmp, com + U3P_USBPHYACR1);
  	}
-+
-+	if (instance->discth) {
-+		tmp = readl(com + U3P_USBPHYACR6);
-+		tmp &= ~PA6_RG_U2_DISCTH;
-+		tmp |= PA6_RG_U2_DISCTH_VAL(instance->discth);
-+		writel(tmp, com + U3P_USBPHYACR6);
-+	}
- }
  
- static int mtk_phy_init(struct phy *phy)
++	if (instance->intr) {
++		tmp = readl(com + U3P_USBPHYACR1);
++		tmp &= ~PA1_RG_INTR_CAL;
++		tmp |= PA1_RG_INTR_CAL_VAL(instance->intr);
++		writel(tmp, com + U3P_USBPHYACR1);
++	}
++
+ 	if (instance->discth) {
+ 		tmp = readl(com + U3P_USBPHYACR6);
+ 		tmp &= ~PA6_RG_U2_DISCTH;
 -- 
 2.24.0
 _______________________________________________
