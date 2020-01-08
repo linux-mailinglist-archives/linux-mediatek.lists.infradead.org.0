@@ -2,171 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4E396134009
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 12:14:15 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E2E7134060
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 12:25:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Cc:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=VJJgKvZeDP/56ctCvsOdurU9+n1CJww3NRVdojv9AIE=; b=dH6BzMhiAhYXEwFgYKPstesWHM
-	HvvR7tOQlJtEuxLzFJUeVd7Dxts2y63yODHNdrNCVKXBnGi94kfcIU4RYLSDf0Fxyj/1Egi/13vyQ
-	PCBYG0tq8xNJlGfvmlc/4SfrZCo6IS0qFp4C9aYc5+EfDpe/SUQpG8CfetSFTWbzNAlR0lpXHgEp+
-	HUkDwgD9FE/wLeWLwkG5siiSPngybx4eOdHpU7Kq7GQlbfeMiPkD1mbur0avp8ggFHa2kfxk9Npwi
-	hnhhn8VkYCOBxcSkGAc8RRlUl33uFQ2L3yHZer5BBAChFBdISGEZdssfPKXOTgwbUzJPPrT8MOO7W
-	p0W5Ig8g==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=eG6cgCGBhFSJlATeJDZdFhEYNdF0sVOip3s3EK2YjY0=; b=IG8lFgbxQxfd2Z
+	2NnvR5kWcmfo3Bmqmsm2tSECnJCmv9QRVDGUli4oYxd83TCGVFQZQHt11/cAWtNAjRvprhpbjbmzq
+	aPpVCcyaF33DM+KCeVzfxl3I5GUXcOaHW8/yfnal4Yiy0SHAoWGdo0F6qYUFTzvL2CgvhqgbTUFah
+	1M+St++ILDW9T6AIyJbicYFFvimh7LaX1qQbvd27spQTQxSb+VJlX+9J9+xfknwxwdUWK9lOhxarO
+	MWy5vpDw3SwTfyFTlEU/GyvY+jQyvIr1bkm/shLwtCXIzTK4SncoIosGwVMJN8e4YwfkWd8JHDKqg
+	Yha6urqNaBfRZ5dqpUDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip9Hs-0006qn-QH; Wed, 08 Jan 2020 11:14:08 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1ip9SL-00055P-Oj; Wed, 08 Jan 2020 11:24:57 +0000
+Received: from mga03.intel.com ([134.134.136.65])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip9Hq-0006q6-6h
- for linux-mediatek@lists.infradead.org; Wed, 08 Jan 2020 11:14:07 +0000
-Received: by mail-wm1-x342.google.com with SMTP id d139so16269436wmd.0
- for <linux-mediatek@lists.infradead.org>; Wed, 08 Jan 2020 03:14:06 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:references:from:autocrypt:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=+7jLiVpkFQDfyxlISHD2/+d8HXQHVLYK6tXmb9yBFj4=;
- b=Thyz01607/DExf7rBR43m062QX7V0nQY53xS0cUuClytnmFal2mXQt3u1pR9TLXkeE
- zeeitIh0lcTUrh2JTd0517v4nP7KsCFEays17rI0iwQanwVqInxLlVyAfhKQ9/Wuq32H
- 8EDqDcyzV2cttnMf6eJce5HHsz+vlDHOkoZ73Q5aBkfz3ngDVx5wHQal+SrHCAgcIY+X
- cdtqByQnvyE7bVwAfVVzoj8RD+7bpROLRw05wdyKO2swJlVH06BsS9AoDcDm9L4Yh8qu
- MpZyEjvrN2C/1foJq9YXIJ7aXnXRHsR0EQrSC62d4IfEA0rCBpJRJPV35G3bMhzkf2jS
- 0EXg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:references:from:autocrypt:message-id
- :date:user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=+7jLiVpkFQDfyxlISHD2/+d8HXQHVLYK6tXmb9yBFj4=;
- b=X5AYOaihDmutegoMzoZ8mF9RdQPdUjXS0DcDHqhTFWEkT2CZ3yX3VUrzE3csFc/08p
- 1H3P/nejAHitYptTkA1BepubovM6YFmdUtDkbTzY11wsqfvknUlDmmUrWLp3xzndEt2k
- nmxC3fKC0hMbRMT1K+5pWNf+/NuMwlnQiqQBGsLKpKZEMmnCSQPaHks+8xe++qsn4VVQ
- Du06RPo7+DhkDtxKzmb/Hvqtugl8VK7x55TAKtKnMRcsgbFxjRCjsUQsfP3W7wfMm1bW
- wvbq9K29ar4CzCmZlubYPiBN3kefkwHjkiYiFtnPePChgA2p0qMO0jrlor48K2L5TKOe
- NzkQ==
-X-Gm-Message-State: APjAAAUWafh6Q/A+mPyuXOC1NwnNUsZTCb+xbUrMvZY4o5Cb0hDDnjIx
- wUK4LAjVC9oRypwfZ5nm1SbBFYF+2no=
-X-Google-Smtp-Source: APXvYqzv9x8rZVePCci1y6UgeeabLbco2Dz6cjvgUU4T1tqYxReseo0ksu0Brkjit5wB2tnPGsqSrg==
-X-Received: by 2002:a05:600c:2c13:: with SMTP id
- q19mr3131477wmg.144.1578482044702; 
- Wed, 08 Jan 2020 03:14:04 -0800 (PST)
-Received: from ziggy.stardust ([37.223.145.31])
- by smtp.gmail.com with ESMTPSA id j12sm4092492wrw.54.2020.01.08.03.14.03
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 08 Jan 2020 03:14:04 -0800 (PST)
-Subject: Re: Process identical patches in different tree
-To: CK Hu <ck.hu@mediatek.com>, Dave Airlie <airlied@gmail.com>,
- Daniel Vetter <daniel.vetter@intel.com>, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org
-References: <1578365790.28495.13.camel@mtksdaap41>
-From: Matthias Brugger <matthias.bgg@gmail.com>
-Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
- 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
-Message-ID: <e7c8313f-13cd-67b7-ad48-9f1d341bfcb6@gmail.com>
-Date: Wed, 8 Jan 2020 12:14:03 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.3.0
+ id 1ip9S5-0004SH-09; Wed, 08 Jan 2020 11:24:42 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga004.fm.intel.com ([10.253.24.48])
+ by orsmga103.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 08 Jan 2020 03:22:39 -0800
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.69,409,1571727600"; d="scan'208";a="246316350"
+Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
+ by fmsmga004.fm.intel.com with ESMTP; 08 Jan 2020 03:22:33 -0800
+Received: from andy by smile with local (Exim 4.93)
+ (envelope-from <andriy.shevchenko@linux.intel.com>)
+ id 1ip9Q1-0001q6-Be; Wed, 08 Jan 2020 13:22:33 +0200
+Date: Wed, 8 Jan 2020 13:22:33 +0200
+From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+To: fengping yu <fengping.yu@mediatek.com>
+Subject: Re: [PATCH V2 2/2] drivers: input: keyboard
+Message-ID: <20200108112233.GM32742@smile.fi.intel.com>
+References: <20200108062923.14684-1-fengping.yu@mediatek.com>
+ <20200108062923.14684-3-fengping.yu@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <1578365790.28495.13.camel@mtksdaap41>
-Content-Language: en-US
+Content-Disposition: inline
+In-Reply-To: <20200108062923.14684-3-fengping.yu@mediatek.com>
+Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200108_031406_276014_46C10328 
-X-CRM114-Status: GOOD (  12.33  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200108_032441_082448_164330A2 
+X-CRM114-Status: GOOD (  21.72  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (matthias.bgg[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [134.134.136.65 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -178,48 +70,341 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: Mark Rutland <mark.rutland@arm.com>, Jacky Bai <ping.bai@nxp.com>,
+ wsd_upstream@mediatek.com, Stefan Agner <stefan@agner.cn>,
+ Catalin Marinas <catalin.marinas@arm.com>,
+ Marco Felsch <m.felsch@pengutronix.de>,
+ Leonard Crestez <leonard.crestez@nxp.com>, Will Deacon <will@kernel.org>,
+ Anson Huang <Anson.Huang@nxp.com>, YueHaibing <yuehaibing@huawei.com>,
+ Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>,
+ linux-input@vger.kernel.org, Thierry Reding <treding@nvidia.com>,
+ Valentin Schneider <valentin.schneider@arm.com>, devicetree@vger.kernel.org,
+ Arnd Bergmann <arnd@arndb.de>, Maxime Ripard <mripard@kernel.org>,
+ Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org, Aisheng Dong <aisheng.dong@nxp.com>,
+ Dmitry Torokhov <dmitry.torokhov@gmail.com>, linux-kernel@vger.kernel.org,
+ Dinh Nguyen <dinguyen@kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ Olof Johansson <olof@lixom.net>, Shawn Guo <shawnguo@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi CK,
+On Wed, Jan 08, 2020 at 02:29:23PM +0800, fengping yu wrote:
+> From: "fengping.yu" <fengping.yu@mediatek.com>
+> 
+> add mtk keypad driver
 
-On 07/01/2020 03:56, CK Hu wrote:
-> Hi, Dave, Daniel, Matthias:
-> 
-> In mediatek-drm-next-5.6 [1], I've cherry-pick 3 patches from
-> v5.5-next/soc [2] because some drm patches depend on these cmdq patches.
-> So these cmdq patches exist in both tree now. I want to know how to
-> process this case. I think we could choose one of below way:
-> 
-> 1. Because these cmdq patches are identical in both tree, so each tree
-> could do its own upstream and the there would be nothing happen when
-> merge.
-> 2. Let soc upstream first, and mediatek drm rebase on the latest
-> mainline then upstream.
-> 
-> Which one do you prefer?
-> 
+A bit more details, perhaps?
+Also, what about proper English grammar and punctuation?
 
-What we would need is a stable branch with this commits that get merged by both
-trees. If I understand correctly that otherwise the SHA of the commits would be
-different and that would provoke merge conflicts.
+> Change-Id: I20bb26ee4112f51f60476b7ff7d6e42b43f729dc
 
-We should not rely on one tree being merged before the other. AFAIK there is no
-hard merge order between trees.
+Are you sure it's ready for upstream?
 
-Regards,
-Matthias
+...
 
-> [1]
-> https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-next-5.6
-> [2]
-> https://git.kernel.org/pub/scm/linux/kernel/git/matthias.bgg/linux.git/log/?h=v5.5-next/soc
-> 
-> Regards,
-> CK
-> 
+>  arch/arm64/configs/defconfig                  |   1 +
+
+Why?
+
+...
+
+> --- a/Documentation/devicetree/bindings/input/mtk-kpd.txt
+> +++ b/Documentation/devicetree/bindings/input/mtk-kpd.txt
+> @@ -38,8 +38,15 @@ Example:
+>  	};
+>  
+>  	&keypad {
+> -		mediatek,key-debounce-ms = <1024>;
+> +		mediatek,key-debounce-ms = <32>;
+>  		/*HW Keycode [0~71] -> Linux Keycode*/
+> -		mediatek,khw-map-num = <72>;
+> -		mediatek,hw-init-map = <114 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 >;
+> +		mediatek,hw-map-num = <72>;
+> +		mediatek,hw-init-map = <114 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0
+> +															0 0 0 0 0 0 0 0 0 >;
+>  	};
+
+Why above in this patch?
+
+...
+
+> +obj-$(CONFIG_KEYBOARD_MTK) 		+= mtk-kpd.o
+
+TABs/spaces mix.
+
+...
+
+> +#include <linux/atomic.h>
+> +#include <linux/clk.h>
+> +#include <linux/debugfs.h>
+> +#include <linux/delay.h>
+> +#include <linux/fs.h>
+> +#include <linux/gpio.h>
+> +#include <linux/init.h>
+> +#include <linux/input.h>
+> +#include <linux/interrupt.h>
+> +#include <linux/io.h>
+> +#include <linux/ioctl.h>
+> +#include <linux/kernel.h>
+> +#include <linux/miscdevice.h>
+> +#include <linux/module.h>
+> +#include <linux/of.h>
+> +#include <linux/of_address.h>
+> +#include <linux/of_irq.h>
+> +#include <linux/pinctrl/consumer.h>
+> +#include <linux/platform_device.h>
+> +#include <linux/pm_wakeup.h>
+> +#include <linux/regmap.h>
+> +#include <linux/timer.h>
+> +#include <linux/workqueue.h>
+
+Do you really need all of them?!
+
+...
+
+> +#define KP_STA			(0x0000)
+> +#define KP_MEM1			(0x0004)
+> +#define KP_MEM2			(0x0008)
+> +#define KP_MEM3			(0x000c)
+> +#define KP_MEM4			(0x0010)
+> +#define KP_MEM5			(0x0014)
+> +#define KP_DEBOUNCE		(0x0018)
+> +#define KP_SEL			(0x0020)
+> +#define KP_EN			(0x0024)
+
+What the purpose of parentheses?
+
+...
+
+> +#define KP_COL0_SEL		(1 << 10)
+> +#define KP_COL1_SEL		(1 << 11)
+> +#define KP_COL2_SEL		(1 << 12)
+
+BIT()
+
+> +#define KPD_DEBOUNCE_MASK	((1U << 14) - 1)
+> +#define KPD_DOUBLE_KEY_MASK	(1U << 0)
+
+GENMASK() / BIT_MASK() / BIT()
+
+...
+
+> +static int kpd_pdrv_probe(struct platform_device *pdev);
+
+Why this forward declaration is present?
+
+...
+
+> +static void kpd_get_keymap_state(void __iomem *kp_base, u16 state[])
+> +{
+> +	state[0] = readw(kp_base + KP_MEM1);
+> +	state[1] = readw(kp_base + KP_MEM2);
+> +	state[2] = readw(kp_base + KP_MEM3);
+> +	state[3] = readw(kp_base + KP_MEM4);
+> +	state[4] = readw(kp_base + KP_MEM5);
+
+> +	pr_debug("kpd register = %x %x %x %x %x\n",
+> +		 state[0], state[1], state[2], state[3], state[4]);
+
+Consider print_hex_dump() instead. But do you need this at all?
+
+> +}
+
+...
+
+> +		for (j = 0; j < 16U; j++) {
+> +			mask = (u16)1 << j;
+> +			if (!(change & mask))
+> +				continue;
+
+for_each_set_bit() ?
+
+> +		}
+
+...
+
+> +static int kpd_get_dts_info(struct mtk_keypad *keypad,
+> +			    struct device_node *node)
+> +{
+> +	int ret;
+
+Consider pr_*() -> dev_*() in all below code.
+
+> +
+> +	ret = of_property_read_u32(node, "mediatek,key-debounce-ms",
+> +				   &keypad->key_debounce);
+> +	if (ret) {
+> +		pr_debug("read mediatek,key-debounce-ms error.\n");
+> +		return ret;
+> +	}
+> +
+> +	ret = of_property_read_u32(node, "mediatek,hw-map-num",
+> +				   &keypad->hw_map_num);
+> +	if (ret) {
+> +		pr_debug("read mediatek,hw-map-num error.\n");
+> +		return ret;
+> +	}
+> +
+> +	if (keypad->hw_map_num > KPD_NUM_KEYS) {
+> +		pr_debug("hw-map-num error, it cannot bigger than %d.\n",
+> +			 KPD_NUM_KEYS);
+
+dev_err() ?
+
+> +		return -EINVAL;
+> +	}
+> +
+> +	ret = of_property_read_u32_array(node, "mediatek,hw-init-map",
+> +					 keypad->hw_init_map,
+> +					 keypad->hw_map_num);
+> +
+> +	if (ret) {
+> +		pr_debug("hw-init-map was not defined in dts.\n");
+> +		return ret;
+> +	}
+> +
+> +	pr_debug("deb= %d\n", keypad->key_debounce);
+> +
+> +	return 0;
+> +}
+
+It's for ARM64 which might support ACPI. Perhaps you may use device property
+API instead of be OF-centric.
+
+...
+
+> +	keypad_pinctrl = devm_pinctrl_get(dev);
+> +	if (IS_ERR(keypad_pinctrl)) {
+
+> +		pr_debug("Cannot find keypad_pinctrl!\n");
+> +
+
+These kind of messages are not for production.
+
+> +		return (int)PTR_ERR(keypad_pinctrl);
+
+Why explicit casting? (Same for similar places all over the driver)
+Is it really a fatal error?
+
+> +	}
+
+...
+
+> +	return pinctrl_select_state(keypad_pinctrl,
+> +				kpd_default);
+
+One line. Perhaps you need to configure your text editor.
+
+...
+
+> +	keypad->clk = devm_clk_get(&pdev->dev, "kpd");
+> +	if (IS_ERR(keypad->clk)) {
+
+> +		pr_notice("get kpd-clk fail: %d\n", (int)PTR_ERR(keypad->clk));
+
+Noise as a lot of such messages.
+
+> +		return (int)PTR_ERR(keypad->clk);
+
+Casting?!
+
+> +	}
+
+...
+
+> +	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+> +	if (!res) {
+> +		err = -ENODEV;
+> +		goto err_unprepare_clk;
+> +	}
+> +
+> +	keypad->base = devm_ioremap(&pdev->dev, res->start,
+> +				    resource_size(res));
+> +	if (!keypad->base) {
+> +		pr_notice("KP iomap failed\n");
+> +		err = -EBUSY;
+> +		goto err_unprepare_clk;
+> +	}
+
+What's wrong with devm_platform_ioremap_resource()?
+
+...
+
+> +	keypad->irqnr = irq_of_parse_and_map(pdev->dev.of_node, 0);
+> +	if (!keypad->irqnr) {
+> +		pr_notice("KP get irqnr failed\n");
+> +		err = -ENODEV;
+> +		goto err_unprepare_clk;
+> +	}
+
+Can't you use platform_get_irq()?
+Why not?
+
+...
+
+> +	pr_info("kp base: 0x%p, addr:0x%p,  kp irq: %d\n",
+> +		keypad->base, &keypad->base, keypad->irqnr);
+
+Useless message. Moreover I believe it has wrong specifiers in use.
+
+...
+
+> +	memset(keypad->keymap_state, 0xff, sizeof(keypad->keymap_state));
+
+Shouldn't be bitmap_fill()? In such case the variable has to be type of
+unsigned long.
+
+...
+
+> +	writew((u16)(keypad->key_debounce & KPD_DEBOUNCE_MASK),
+> +		     keypad->base + KP_DEBOUNCE);
+
+Why explicit casting?
+
+...
+
+> +	/* register IRQ */
+> +	err = request_irq(keypad->irqnr, kpd_irq_handler, IRQF_TRIGGER_NONE,
+> +			  KPD_NAME, keypad);
+> +	if (err) {
+> +		pr_notice("register IRQ failed (%d)\n", err);
+> +		goto err_irq;
+> +	}
+
+Why not threaded IRQ handler instead of ugly tasklet?
+
+...
+
+> +	pr_info("kpd_probe OK.\n");
+
+Noise.
+
+...
+
+> +static const struct of_device_id kpd_of_match[] = {
+> +	{.compatible = "mediatek,mt6779-keypad"},
+> +	{.compatible = "mediatek,kp"},
+
+> +	{},
+
+Comma is not needed in terminator lines.
+
+> +};
+
+-- 
+With Best Regards,
+Andy Shevchenko
+
+
 
 _______________________________________________
 Linux-mediatek mailing list
