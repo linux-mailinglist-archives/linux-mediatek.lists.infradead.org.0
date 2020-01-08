@@ -2,76 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82C87133B14
-	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 06:25:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A3DA7133B1B
+	for <lists+linux-mediatek@lfdr.de>; Wed,  8 Jan 2020 06:26:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bPROZIpydy6ztmy4ATmh12k3DZToblzswyBtwiAAY80=; b=WV7ZRUHw7PNkJL
-	YW0BI0MoGSOS+BsguHguAqatqSLVJ2t1/2lrxQGfM312lIm1Rd68Tp4uJhZBFCWxea6Jlncua/6Wd
-	pslqOIiwe+DASm43Mc07vsTA998lED6vOLLXwiwccpvJ4Mypcec7A0fc2TNtDmo0OcmOLq6SZDKQ+
-	onibaXQ742+HNQUkFW7bgd1CIHWR9j1tPhHXuh5q+MmN/jjCuom4RrAQwjfM1RCcQiWE82cipe/Cd
-	xBhjjJi+q29er1DZ+B46qKEDpcT236zbRUt1NftvfdeAr7ZLY6S5J+B5wlwOocoQJJ9xDmPbZyZVe
-	C7wHXBmXijL2Pmt5WZeQ==;
+	List-Owner; bh=akLa0yYaHedU9z6dKJGnWt7iFieJBu9vhMbB0iyRPxE=; b=RAJQPdEpbpTf7k
+	eaRGaNedHHFLYUB4ady/KwO8foYefqrEuB7JiT4KVbzV9mFwTTnF9I6KqsjtlWPgr+zQ1iNAg21XJ
+	gD75OtDHjT+Sgx17NGXk7RwcZm2yZtk+gWFnczmk5xm40nCwtS4PtdC85XxYlyyg+EVc4EzV967ZY
+	YiLQkgEZX43cu2dQHOd75/Zw3GKrO395yCGLyr3WLq12uu1nyZUDb7IxlFWrNLLoVE1FrWT105w68
+	Oe3KVP5TTszQN+Gp12DRWQQTKDyIKZgYy9j7WRKnsOS8/vDPDHkOWt9dyASbx7MQGaKC8L7/hrUXj
+	yY+j8P65Rj/X5fNJCnIw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip3qX-0007R8-6V; Wed, 08 Jan 2020 05:25:33 +0000
-Received: from mail-pj1-x1041.google.com ([2607:f8b0:4864:20::1041])
+	id 1ip3r4-0007wj-Lf; Wed, 08 Jan 2020 05:26:06 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip3pF-0004xH-Q3
- for linux-mediatek@lists.infradead.org; Wed, 08 Jan 2020 05:24:15 +0000
-Received: by mail-pj1-x1041.google.com with SMTP id n59so563794pjb.1
- for <linux-mediatek@lists.infradead.org>; Tue, 07 Jan 2020 21:24:13 -0800 (PST)
+ id 1ip3pI-00050b-PB
+ for linux-mediatek@lists.infradead.org; Wed, 08 Jan 2020 05:24:19 +0000
+Received: by mail-pg1-x543.google.com with SMTP id b137so975434pga.6
+ for <linux-mediatek@lists.infradead.org>; Tue, 07 Jan 2020 21:24:16 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=UOwyKJvK30gkDautsCvwyHXlhtr89ohJP+HqIMRnEEY=;
- b=QLx9yX4oKgUhsf9zqBiMKi9PC3cJUGptpG/rsIeA0xAbFDz3AFhMYQndfD4e5TiiA5
- wduA+xP76VAH3pTE/Y7N2zNP97+RQWMddxzeUn/Nf0v4LIAyD01x4QhbaispCA389giy
- 7q8R+qc9ynzewq3J8aV43Z09BdUAkc5nDf8Fg=
+ bh=tLPzDvqsyKjpMgl6ZY+ZEjymtgHHsFzBQXHTW4eiM1M=;
+ b=S3tVQZXgAvZAvGKT4jucRDlF/M0TWOh+3V7E9ZFoKg0xoIXSRxIr5TYGLCUnvTfS9N
+ f+oKg6lg9u0QxJzV+FId6ptqevsKmNbYDMNZJ9DJAVLRY/8KFELoCSNhdge1SKfgY0Xy
+ AuK7NrZkfWLHM89vkHp0eJTBqDJW+EynagsuQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=UOwyKJvK30gkDautsCvwyHXlhtr89ohJP+HqIMRnEEY=;
- b=HdRO7EdSi/tE3Lu5RQKMt+6dO9ul9rLiKsLrNzidkAjr8BEtZrbTWswYl6ZG6pd+ym
- KAifmtCUpTeM6w5eCoayUTNgmFkOXR9tnboRNDYSkHeOJh46WhXKUHl4WiTOXXe/VrlN
- KjIk97K3kLOBGgQw6QJ29jbIqOiIDQvAhDx8BNXd16Elvj9dvCs94wJF7CVe25dn1x8v
- rQ3yQXxw412iwvWspiymvMGCbdrTsa/HMnskJ4kNNhEaw5SocAKOPScCOZL4xStHGULl
- VOlMRv/BsIaz515T9ReuDcOD+ZWNBvTxQMC7z0CvG6za1a0npiitq2XWvlZ5ZP2wIorp
- av7A==
-X-Gm-Message-State: APjAAAVmyMgf0jt+jLX+sReEEVAxruZMGavwCk4J00XKMGMRxjsGKa2S
- ubJQIVgN/5qzMCWDuO/4Dvk5mQ==
-X-Google-Smtp-Source: APXvYqyP94Ucu5iILCPq19i7mowizjkSB4O/xb8qsx3dYRf/q3ysQY9apimu4OZEq+YRXwTIHiTnjQ==
-X-Received: by 2002:a17:902:265:: with SMTP id
- 92mr3326908plc.188.1578461052777; 
- Tue, 07 Jan 2020 21:24:12 -0800 (PST)
+ bh=tLPzDvqsyKjpMgl6ZY+ZEjymtgHHsFzBQXHTW4eiM1M=;
+ b=HuDnEmx6tf/IfN77DuXBzo0i6TaWZVYM6KRbgA7Sqqf8MJ7kwsSu9DsExPcNbyDGsL
+ OcJYrJO9sl9x55OIlWhZCPdZr77MJ6/UsH1DSKYDV7hvxHka7OdWTt7Mlpfuc1Sifw96
+ kQGgw1cASThB2UC5zoE6qE+17SF546jet6v0jQjECDRaNV5GyY8q/5K/UFR9rW9PXBz4
+ IaEcQOUcx/m0CavoSxu0BYUc8SGZLgwucaUmyevBTmICxR9PH3dVKj0PkezFiHHWPdzx
+ fLUrim4p5qG+BCpegpK+B96prD1hDYTBdlzgOSnT451npWKvyO/FFDeMWOII931cppUm
+ uaNg==
+X-Gm-Message-State: APjAAAXVqbMoUY6l5S+M73HxB1pKiQoVgX/O2XeBKhkEYPCw1LmFXHmk
+ 3fhm8ieevXMNN12dGHu/rraKog==
+X-Google-Smtp-Source: APXvYqzoefkOYFH4FXTTMbYJDxtsQiuVsYfMMaYxsSll0XpoVzmSh/ccdl9HE7eeGAdfYbzMduo/6Q==
+X-Received: by 2002:a63:ed56:: with SMTP id m22mr3334545pgk.261.1578461055680; 
+ Tue, 07 Jan 2020 21:24:15 -0800 (PST)
 Received: from drinkcat2.tpe.corp.google.com
  ([2401:fa00:1:b:d8b7:33af:adcb:b648])
- by smtp.gmail.com with ESMTPSA id n24sm387505pff.12.2020.01.07.21.24.10
+ by smtp.gmail.com with ESMTPSA id n24sm387505pff.12.2020.01.07.21.24.12
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 07 Jan 2020 21:24:12 -0800 (PST)
+ Tue, 07 Jan 2020 21:24:15 -0800 (PST)
 From: Nicolas Boichat <drinkcat@chromium.org>
 To: Rob Herring <robh+dt@kernel.org>
-Subject: [PATCH v2 6/7, RFC] drm/panfrost: Add bifrost compatible string
-Date: Wed,  8 Jan 2020 13:23:36 +0800
-Message-Id: <20200108052337.65916-7-drinkcat@chromium.org>
+Subject: [PATCH v2 7/7,
+ RFC]: drm/panfrost: devfreq: Add support for 2 regulators
+Date: Wed,  8 Jan 2020 13:23:37 +0800
+Message-Id: <20200108052337.65916-8-drinkcat@chromium.org>
 X-Mailer: git-send-email 2.24.1.735.g03f4e72817-goog
 In-Reply-To: <20200108052337.65916-1-drinkcat@chromium.org>
 References: <20200108052337.65916-1-drinkcat@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_212414_045288_283D3867 
-X-CRM114-Status: UNSURE (   9.65  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200107_212416_832593_63318C5F 
+X-CRM114-Status: GOOD (  11.73  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -107,25 +109,71 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-For testing only, the driver doesn't really work yet, AFAICT.
+The Bifrost GPU on MT8183 uses 2 regulators (core and SRAM) for
+devfreq, and provides OPP table with 2 sets of voltages.
+
+TODO: This is incomplete as we'll need add support for setting
+a pair of voltages as well.
 
 Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
 ---
- drivers/gpu/drm/panfrost/panfrost_drv.c | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/gpu/drm/panfrost/panfrost_devfreq.c | 18 ++++++++++++++++++
+ drivers/gpu/drm/panfrost/panfrost_device.h  |  2 ++
+ 2 files changed, 20 insertions(+)
 
-diff --git a/drivers/gpu/drm/panfrost/panfrost_drv.c b/drivers/gpu/drm/panfrost/panfrost_drv.c
-index 48e3c4165247cea..f3a4d77266ba961 100644
---- a/drivers/gpu/drm/panfrost/panfrost_drv.c
-+++ b/drivers/gpu/drm/panfrost/panfrost_drv.c
-@@ -591,6 +591,7 @@ static const struct of_device_id dt_match[] = {
- 	{ .compatible = "arm,mali-t830" },
- 	{ .compatible = "arm,mali-t860" },
- 	{ .compatible = "arm,mali-t880" },
-+	{ .compatible = "arm,mali-bifrost" },
- 	{}
+diff --git a/drivers/gpu/drm/panfrost/panfrost_devfreq.c b/drivers/gpu/drm/panfrost/panfrost_devfreq.c
+index 413987038fbfccb..5eb0effded7eb09 100644
+--- a/drivers/gpu/drm/panfrost/panfrost_devfreq.c
++++ b/drivers/gpu/drm/panfrost/panfrost_devfreq.c
+@@ -79,6 +79,22 @@ int panfrost_devfreq_init(struct panfrost_device *pfdev)
+ 	struct devfreq *devfreq;
+ 	struct thermal_cooling_device *cooling;
+ 
++	/* If we have 2 regulator, we need an OPP table with 2 voltages. */
++	if (pfdev->regulator_sram) {
++		const char * const reg_names[] = { "mali", "sram" };
++
++		pfdev->devfreq.dev_opp_table =
++			dev_pm_opp_set_regulators(dev,
++					reg_names, ARRAY_SIZE(reg_names));
++		if (IS_ERR(pfdev->devfreq.dev_opp_table)) {
++			ret = PTR_ERR(pfdev->devfreq.dev_opp_table);
++			pfdev->devfreq.dev_opp_table = NULL;
++			dev_err(dev,
++				"Failed to init devfreq opp table: %d\n", ret);
++			return ret;
++		}
++	}
++
+ 	ret = dev_pm_opp_of_add_table(dev);
+ 	if (ret == -ENODEV) /* Optional, continue without devfreq */
+ 		return 0;
+@@ -119,6 +135,8 @@ void panfrost_devfreq_fini(struct panfrost_device *pfdev)
+ 	if (pfdev->devfreq.cooling)
+ 		devfreq_cooling_unregister(pfdev->devfreq.cooling);
+ 	dev_pm_opp_of_remove_table(&pfdev->pdev->dev);
++	if (pfdev->devfreq.dev_opp_table)
++		dev_pm_opp_put_regulators(pfdev->devfreq.dev_opp_table);
+ }
+ 
+ void panfrost_devfreq_resume(struct panfrost_device *pfdev)
+diff --git a/drivers/gpu/drm/panfrost/panfrost_device.h b/drivers/gpu/drm/panfrost/panfrost_device.h
+index 92d471676fc7823..581da3fe5df8b17 100644
+--- a/drivers/gpu/drm/panfrost/panfrost_device.h
++++ b/drivers/gpu/drm/panfrost/panfrost_device.h
+@@ -91,10 +91,12 @@ struct panfrost_device {
+ 	struct {
+ 		struct devfreq *devfreq;
+ 		struct thermal_cooling_device *cooling;
++		struct opp_table *dev_opp_table;
+ 		ktime_t busy_time;
+ 		ktime_t idle_time;
+ 		ktime_t time_last_update;
+ 		atomic_t busy_count;
++		struct panfrost_devfreq_slot slot[NUM_JOB_SLOTS];
+ 	} devfreq;
  };
- MODULE_DEVICE_TABLE(of, dt_match);
+ 
 -- 
 2.24.1.735.g03f4e72817-goog
 
