@@ -2,76 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B31491367F1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Jan 2020 08:08:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F7841367F9
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Jan 2020 08:09:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1Dzae/cq692iPo0Lm7DcmbiMXDYRs1/IoG6BGYZN9AU=; b=eOWQhUtfIvYclT
-	0cmhnVkjhEHcSeKEqFxqWqtpfawySkS1+/TvNcGzcLegvijubETsV/p4z2+msPsXrnBtOSRBQONMP
-	fGKSs2sPsw6a76X+OvgAH1+pbl1YkdXTOyvnAFHUK29pKLr5ac1qYaKo9mNsSc1biz53Pkkh3GwAP
-	ZRIKppXXarI6BC5Xf2XmJtMaqiJNTkackGhNoUPdUpuRCmuwjdHiOzb7NYzq1ZmjF4ux55qQKGVST
-	aZR3g+J7ncIbUucBMu/iI797hhNzkgE0Wg6e5vjVP34TkOGuR6zC73h3CTSGuDF/2sB+49Myl8RPd
-	2ill+zTdzA/7PukAfulg==;
+	List-Owner; bh=VpzICekRVPnla34NiebhqFIdHyZ3gctJTzR2yUiJyMQ=; b=TLNkAdMj0LTeXt
+	msR7QGnYi8LZj4gy3DV4XXgmpoewH5pdW2BM9HeT9+hLcyu/DhfQ53uS+zzwFPfiTisj0ebZ7kBaB
+	1JjZtcdJweJtsau9gLce3GVPWzcnS00Ikifkg8kGlkpiyfJmNlSHx+mo2rw3KKs0CxouN0Kz7Buzg
+	Dw2aJKtZXtbx3rnV5JHnBDAElC3CfGyFqoZcV8JsoMYiW82IxAe6ZLqNpFiCvF2xIbZS3KgOF28I6
+	nDTyMQxOC7GquXdUL9qgha6qJcqYNVTZheBLQq7c6I0levAAcpevSqcRtRfT/+nGuUO6MDcLKTufa
+	WdWd0T0rxgnEmxoGI1OA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ipoPW-0006eP-7o; Fri, 10 Jan 2020 07:08:46 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ipoQ1-0007JK-QJ; Fri, 10 Jan 2020 07:09:17 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ipoPS-0006dA-JX; Fri, 10 Jan 2020 07:08:43 +0000
-X-UUID: 350002dbf2014d95bc46871f26efbf6e-20200109
+ id 1ipoPY-0006f6-0O; Fri, 10 Jan 2020 07:08:49 +0000
+X-UUID: 051adf20a9ad47ed852432d33dddd02c-20200109
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=qWyPZmajFzIdhHdy5cLGELWLgjaEXWjuyCtLLW6rxa4=; 
- b=itHAVCt2gfFerWNzUurt7DbuAfPEZCQFmSIigMdvlgfZt3c1Jwx0Zs5OPUJTC8gHgfwFeh1zc20GJUA/beRW1rdtqWn72Hgi4hJ8VSaQcOsQS/3yifiyYayzkJuEsEY8YtIdyolSiMvREe+RLBCTq1XHAucnwjcuPir/TTeKUmA=;
-X-UUID: 350002dbf2014d95bc46871f26efbf6e-20200109
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jiaxin.yu@mediatek.com>)
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=ffhcrwjsBwsjrgzkid/yOQ1liD4E9HyfxuER96MEH2g=; 
+ b=ayGQqiUWEf6Ot02/A+ME7PCtwFS9rvCN3bTRfL5Ubp5cZC6itfr/vewvWrWfJlv4TTranHZvzva+GLM8V2yVLUcmvNhKFD47gN6joQoTzR/sLn2stuPzhKyaHM//434KpARA/T3FXhHRMdIB4lY+HI0yL1LHn78gVvHkIIKVBm0=;
+X-UUID: 051adf20a9ad47ed852432d33dddd02c-20200109
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1733103487; Thu, 09 Jan 2020 23:08:40 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ with ESMTP id 618961714; Thu, 09 Jan 2020 23:08:44 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 9 Jan 2020 23:05:12 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 10 Jan 2020 15:04:04 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Thu, 9 Jan 2020 23:09:21 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 10 Jan 2020 15:07:43 +0800
+Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 10 Jan 2020 15:03:58 +0800
-From: Jiaxin Yu <jiaxin.yu@mediatek.com>
-To: <yong.liang@mediatek.com>, <wim@linux-watchdog.org>, <linux@roeck-us.net>, 
- <p.zabel@pengutronix.de>, <matthias.bgg@gmail.com>,
- <linux-watchdog@vger.kernel.org>, <linux-kernel@vger.kernel.org>,
- <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
- <devicetree@vger.kernel.org>, <chang-an.chen@mediatek.com>,
- <freddy.hsin@mediatek.com>
-Subject: [PATCH v11 3/3] watchdog: mtk_wdt: mt2712: Add reset controller
-Date: Fri, 10 Jan 2020 15:04:22 +0800
-Message-ID: <1578639862-14480-4-git-send-email-jiaxin.yu@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1578639862-14480-1-git-send-email-jiaxin.yu@mediatek.com>
-References: <1578639862-14480-1-git-send-email-jiaxin.yu@mediatek.com>
+ Transport; Fri, 10 Jan 2020 15:07:04 +0800
+Message-ID: <1578640121.17435.7.camel@mtkswgap22>
+Subject: Re: [PATCH v2 1/2] scsi: ufs: pass device information to
+ apply_dev_quirks
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: "Martin K. Petersen" <martin.petersen@oracle.com>
+Date: Fri, 10 Jan 2020 15:08:41 +0800
+In-Reply-To: <yq136cnx1yo.fsf@oracle.com>
+References: <1578270431-9873-1-git-send-email-stanley.chu@mediatek.com>
+ <1578270431-9873-2-git-send-email-stanley.chu@mediatek.com>
+ <yq136cnx1yo.fsf@oracle.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200109_230842_649467_23EB5F6B 
-X-CRM114-Status: UNSURE (   9.24  )
+X-CRM114-CacheID: sfid-20200109_230848_107405_8A901C62 
+X-CRM114-Status: UNSURE (   8.34  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -92,60 +86,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: sboyd@kernel.org, yingjoe.chen@mediatek.com,
- Jiaxin Yu <jiaxin.yu@mediatek.com>
+Cc: bvanassche@acm.org, linux-scsi@vger.kernel.org, andy.teng@mediatek.com,
+ jejb@linux.ibm.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, avri.altman@wdc.com, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ alim.akhtar@samsung.com, matthias.bgg@gmail.com, beanhuo@micron.com,
+ linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add reset controller for 2712.
-Besides watchdog, MTK toprgu module alsa provide sub-system (eg, audio,
-camera, codec and connectivity) software reset functionality.
+Hi Martin,
 
-Signed-off-by: yong.liang <yong.liang@mediatek.com>
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
-Reviewed-by: Yingjoe Chen <yingjoe.chen@mediatek.com>
-Reviewed-by: Philipp Zabel <p.zabel@pengutronix.de>
-Reviewed-by: Rob Herring <robh@kernel.org>
-Reviewed-by: Guenter Roeck <groeck7@gmail.com>
----
- drivers/watchdog/mtk_wdt.c | 6 ++++++
- 1 file changed, 6 insertions(+)
+On Fri, 2020-01-10 at 01:25 -0500, Martin K. Petersen wrote:
+> Stanley,
+> 
+> > Pass UFS device information to vendor-specific variant callback
+> > "apply_dev_quirks" because some platform vendors need to know such
+> > information to apply special handlings or quirks in specific devices.
+> 
+> This doesn't compile. You missed adding the additional argument to one
+> caller of ufshcd_tune_unipro_params().
+> 
 
-diff --git a/drivers/watchdog/mtk_wdt.c b/drivers/watchdog/mtk_wdt.c
-index e88aacb0404d..d6a6393f609d 100644
---- a/drivers/watchdog/mtk_wdt.c
-+++ b/drivers/watchdog/mtk_wdt.c
-@@ -9,6 +9,7 @@
-  * Based on sunxi_wdt.c
-  */
- 
-+#include <dt-bindings/reset-controller/mt2712-resets.h>
- #include <dt-bindings/reset-controller/mt8183-resets.h>
- #include <linux/delay.h>
- #include <linux/err.h>
-@@ -67,6 +68,10 @@ struct mtk_wdt_data {
- 	int toprgu_sw_rst_num;
- };
- 
-+static const struct mtk_wdt_data mt2712_data = {
-+	.toprgu_sw_rst_num = MT2712_TOPRGU_SW_RST_NUM,
-+};
-+
- static const struct mtk_wdt_data mt8183_data = {
- 	.toprgu_sw_rst_num = MT8183_TOPRGU_SW_RST_NUM,
- };
-@@ -314,6 +319,7 @@ static int mtk_wdt_resume(struct device *dev)
- #endif
- 
- static const struct of_device_id mtk_wdt_dt_ids[] = {
-+	{ .compatible = "mediatek,mt2712-wdt", .data = &mt2712_data },
- 	{ .compatible = "mediatek,mt6589-wdt" },
- 	{ .compatible = "mediatek,mt8183-wdt", .data = &mt8183_data },
- 	{ /* sentinel */ }
--- 
-2.18.0
+Sorry for this. I'll fix it in next version and try to separate vendor's
+implementation and common driver to different commits if this is the
+root cause of compile issue.
+
+Thanks.
+Stanley
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
