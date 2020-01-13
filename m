@@ -2,107 +2,112 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DF320138E5E
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Jan 2020 10:59:05 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92630138E77
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Jan 2020 11:03:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=O+uPaNbqkUEQctRV1fnXzjfEhMf4TDaYOCGeIsFku78=; b=uUzVp4mid4Yj7V
-	GRn2cmjRzH5h3dE6opjhD9X0xZ9WNzzDNPORnTJVpbU0QsNcLCgya5YphE2+CqX9T1atIOcyuxou2
-	0o9xeo57bjwr2YiZ4HFRBUXbpSFwHChWHP4iZJFC27zlOanfofQl80d7A/uPRgpsz4N7ir78WaNv8
-	j2uqikFV1sh5/ce0TkmHY8M2Crrk+Y5pDEMFbRW5gLP/FYlmgw9avPc/BfjHal1Kq/C9e7nAz9N6r
-	gdS3N69xcLkvvzdbsqTL86EqOaRmEgnlK8i2eIpclaVR6pyyaxwgGkr4YCI2sYX6lO5Mn9waaBgRk
-	5lE87CdaRPuE+7i4/Xxg==;
+	List-Owner; bh=OqG66POcbebMr6soMKM3TjkOFJYqs2vy2wmMEgh3vwk=; b=cT1rRU0OvI2K19
+	fBdhe+uO35Uqp9FVXmRzOZhY8w77VAmCvHbqm5GaOSTDYT1eda2OrQQKZRrQTtm3VankzBJaCgwW8
+	Na88GQiRSdNwDR1Xuo6CFR6D7GdZQooROukgQZKoZZPKchhKWAMQ2s2kEFQLnU5xAFS3epONcZirq
+	h2WAK4tnQe8UwRuRfjpmfOA5mc3oBh6Z5RmV2JURrHl4YgZsuRO8K6a0H4iDmddM+CaHeRG6jHTNW
+	2E7+PahiCRzrIlOIdaPesjLnkdDiD8FOuHFnW6SuwbYKYQGTvV/wHGsZmDypdBJd1VBWnKC7Mi2sa
+	CNq7+DQQBBmWuTYXD5PA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iqwUs-00080c-Hl; Mon, 13 Jan 2020 09:58:58 +0000
-Received: from mail-mw2nam12on2078.outbound.protection.outlook.com
- ([40.107.244.78] helo=NAM12-MW2-obe.outbound.protection.outlook.com)
+	id 1iqwZG-00024A-5T; Mon, 13 Jan 2020 10:03:30 +0000
+Received: from mail-dm6nam11on2054.outbound.protection.outlook.com
+ ([40.107.223.54] helo=NAM11-DM6-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iqwUp-0007zS-BF; Mon, 13 Jan 2020 09:58:56 +0000
+ id 1iqwZC-00023C-CB; Mon, 13 Jan 2020 10:03:27 +0000
 ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=HOz/eEFrG1inWPOM1JJcLgsv4JBMX1suVKQn5dE4h65JIwvEWQOmtxS+piOe9RV+rTxdG42rbnc7R/ox0PUHn4vzHN/ORrAgGyi+AyGJ5nCSY2s+aQ1zPyT70HuxGR4ItL/WuNstqu/xIu6A+d86ZX2iXPKxCeqHUp/ZU7SkTT2/YOETchRBoWvqhlWsWQu15OtE1DQHqT3K6TWi5gvpC6IE2XgTPDYMLX64z3YjHO+7FdwDbSsVnQdJtbSSVMP5VYjfxSqDuNjpHrBB8qgR2/CVtm4JufQHn6IgRHhKMy5vk8CUnfQp1Ct1cFuGJLygkDGZlO0s7Ws94669nt421A==
+ b=ar8U7swd0KtucXSGaw0wJsnNT8XnkcY/g62P5M3Y68ZoQxfKF0+eBrNsMJPaTtCPLpv4IugzDFqLM+xPsoWiUj1ROB9uaKF6AI1EkFbZAxxg4DlW6EKOPwgSu8r62TGq7JKbQ+0MfkHaC5QrW4Z/tKJhYocriHE3/HjoD+pKzFrN0Qrqyyv0JaCwyELWMj20q5Vpezo4gPiwFdpKDmGSEHvWARJUQOYzWDwOhUpDzIBg/QtVgcxtw6WQTXl3SwgpK0srXObw6rxmiUV6Gw8k6Tb5uOgQuRhwy3j6vQgxcIZzXBslYmXaVEzDOrpFc76QqABILUxif9b6OtoroMHpBQ==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=mkzh2HqmbmY1jtwx3yTyry6Lixdo5GjU70EYVHBqcZI=;
- b=Kx8weRhF4MLXzGE3A5r2jRxXxjMcvBATMgwNZ3s/dfQ1wCn3z/YnWD6cDWeKDs5ROdG0dopFGZNxP5vZPRTeR313HMAHvKIC779BYOaXP/0K4T22cJ4Qq4+ujxpO82iZ0D9YJ75qLbz3ZcpO9Ao98q9edJJ1pX8tvw4DgrKIqMtqFrXul0QPL+Gfiv521T0Uy5ya8YQBYsIdA3ptVZF+I3iBR3cFB+5/4DBNiCfkUOh1jNIOA2WcF1CGYprQTY+tsC/XL/yIJ3XrV20ClqSH2uLpBTks29N65rwQJFWIrZKFDck2q6j+FJr67lzu1F/jwXU0in9pvRN9rwKdhQLHPA==
+ bh=IF/u7iSFC5I8PsEK0SX0VTJsUiWOOqSgJjXKpeLE6Fc=;
+ b=HMWEqTyCrb+DEN1F5KfIeqOWWhpT5pxJMolVOHQV7WlhymwV1BkWwqx2XkLIJYGyjiJrdYE95d8VkPRuqFMYjEUAcLJAboctEuEl+bw/GJdS5Qtt7wNHbwnCKkM47HwV5ZsDYqES+5VM6m2Hs0uIr7+72677btTQm07gPIJliUBlxKprgBUwMmdP9C5MpFH76xC1Mv4lvz9/SiDcHEBowGqguR4XrAZDtEgyMZs9cbTxJxYMxKGg+kaUlcefwuJhgO4dv7x00sfHsw6qGhA2su/mpQOJ4xfL8pKayacHJ7I+h8EtqHqdRL22WxNgEuOKVlzPFX1LLk2QhsT6UuPRVQ==
 ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
  smtp.mailfrom=micron.com; dmarc=pass action=none header.from=micron.com;
  dkim=pass header.d=micron.com; arc=none
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
  s=selector2;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=mkzh2HqmbmY1jtwx3yTyry6Lixdo5GjU70EYVHBqcZI=;
- b=xRNgMX619b8LJzLAVJHBEl9NVPl0K/FdIT5TIVK7aAYi7ACN50UsZDdntrXZL6g/OZ/LpHtIAZ0jVIRiZPqHE4IQJKYaNMWqebNus4AydKQ271avkxHpqK+iGyPf07zoviqISfWmnp8KjcVp1M9CjcfxNEJY4PXY1EWAPh4Nmew=
+ bh=IF/u7iSFC5I8PsEK0SX0VTJsUiWOOqSgJjXKpeLE6Fc=;
+ b=CqwevTkn8XmGG//QreBcEQR6o3NYLtZgvDCEOpjub64KVFN52OXWKaMrumoreAHEO5OnL2RcJltPCCf+LKgQgLQMGtkES+hy1g21yntnFXRqUosuXkK2yp9h4O5S4I7gH6wqM6T7jx28a9/M2OOZYoZABq2IDZ17TtQR31QDDR8=
 Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.179.87) by
- BN7PR08MB5089.namprd08.prod.outlook.com (20.176.177.220) with Microsoft SMTP
+ BN7PR08MB4292.namprd08.prod.outlook.com (52.133.222.138) with Microsoft SMTP
  Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2623.9; Mon, 13 Jan 2020 09:58:52 +0000
+ 15.20.2623.13; Mon, 13 Jan 2020 10:03:22 +0000
 Received: from BN7PR08MB5684.namprd08.prod.outlook.com
  ([fe80::981f:90d7:d45f:fd11]) by BN7PR08MB5684.namprd08.prod.outlook.com
  ([fe80::981f:90d7:d45f:fd11%7]) with mapi id 15.20.2623.015; Mon, 13 Jan 2020
- 09:58:52 +0000
+ 10:03:22 +0000
 From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
-To: Stanley Chu <stanley.chu@mediatek.com>
-Subject: RE: [EXT] [PATCH v1 1/3] scsi: ufs: fix empty check of error history
-Thread-Topic: [EXT] [PATCH v1 1/3] scsi: ufs: fix empty check of error history
-Thread-Index: AQHVwwrtYdyISOHmvEWfKtFqbPPmzqfoX2LQgAAGaICAAABC0A==
-Date: Mon, 13 Jan 2020 09:58:51 +0000
-Message-ID: <BN7PR08MB568462931864FC928D262098DB350@BN7PR08MB5684.namprd08.prod.outlook.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>, "jejb@linux.ibm.com"
+ <jejb@linux.ibm.com>
+Subject: RE: [EXT] [PATCH v1 2/3] scsi: ufs: add device reset history for
+ vendor implementations
+Thread-Topic: [EXT] [PATCH v1 2/3] scsi: ufs: add device reset history for
+ vendor implementations
+Thread-Index: AQHVwwrtbgxYZ1BTsUeVCsCQhJSvJKfoalYg
+Date: Mon, 13 Jan 2020 10:03:22 +0000
+Message-ID: <BN7PR08MB5684CFC165190AD061E6B2F6DB350@BN7PR08MB5684.namprd08.prod.outlook.com>
 References: <1578147968-30938-1-git-send-email-stanley.chu@mediatek.com>
- <1578147968-30938-2-git-send-email-stanley.chu@mediatek.com>
- <BN7PR08MB56841F049CEF89CD8F40B4E3DB350@BN7PR08MB5684.namprd08.prod.outlook.com>
- <1578908621.17435.18.camel@mtkswgap22>
-In-Reply-To: <1578908621.17435.18.camel@mtkswgap22>
+ <1578147968-30938-3-git-send-email-stanley.chu@mediatek.com>
+In-Reply-To: <1578147968-30938-3-git-send-email-stanley.chu@mediatek.com>
 Accept-Language: en-150, en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
 X-MS-TNEF-Correlator: 
-x-dg-ref: PG1ldGE+PGF0IG5tPSJib2R5LnR4dCIgcD0iYzpcdXNlcnNcYmVhbmh1b1xhcHBkYXRhXHJvYW1pbmdcMDlkODQ5YjYtMzJkMy00YTQwLTg1ZWUtNmI4NGJhMjllMzViXG1zZ3NcbXNnLTQ5ZWNkZDY2LTM1ZWItMTFlYS04Yjg4LWRjNzE5NjFmOWRkM1xhbWUtdGVzdFw0OWVjZGQ2Ny0zNWViLTExZWEtOGI4OC1kYzcxOTYxZjlkZDNib2R5LnR4dCIgc3o9IjE3MjkiIHQ9IjEzMjIzMzgzMTI3MjU3NzA3MCIgaD0iR29mQVgwaU90MEJUTmtzY0FBenVqZFdncnhNPSIgaWQ9IiIgYmw9IjAiIGJvPSIxIi8+PC9tZXRhPg==
+x-dg-ref: PG1ldGE+PGF0IG5tPSJib2R5LnR4dCIgcD0iYzpcdXNlcnNcYmVhbmh1b1xhcHBkYXRhXHJvYW1pbmdcMDlkODQ5YjYtMzJkMy00YTQwLTg1ZWUtNmI4NGJhMjllMzViXG1zZ3NcbXNnLWVhZTliNTFiLTM1ZWItMTFlYS04Yjg4LWRjNzE5NjFmOWRkM1xhbWUtdGVzdFxlYWU5YjUxZC0zNWViLTExZWEtOGI4OC1kYzcxOTYxZjlkZDNib2R5LnR4dCIgc3o9IjI3MCIgdD0iMTMyMjMzODMzOTczMjI1ODc3IiBoPSJ1SUVjdVdZRjVuYVExTEV5QjhxeVFQSWQyb2M9IiBpZD0iIiBibD0iMCIgYm89IjEiLz48L21ldGE+
 x-dg-rorf: true
 authentication-results: spf=none (sender IP is )
  smtp.mailfrom=beanhuo@micron.com; 
 x-originating-ip: [195.89.176.137]
 x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: d3551af9-03c7-4af9-e0cb-08d7980f31df
-x-ms-traffictypediagnostic: BN7PR08MB5089:|BN7PR08MB5089:|BN7PR08MB5089:
-x-microsoft-antispam-prvs: <BN7PR08MB508900ADDE6689A1C0C35D9DDB350@BN7PR08MB5089.namprd08.prod.outlook.com>
+x-ms-office365-filtering-correlation-id: 3138d018-b889-40d8-346e-08d7980fd2d8
+x-ms-traffictypediagnostic: BN7PR08MB4292:|BN7PR08MB4292:|BN7PR08MB4292:
+x-microsoft-antispam-prvs: <BN7PR08MB4292672A3451055464B887BBDB350@BN7PR08MB4292.namprd08.prod.outlook.com>
 x-ms-exchange-transport-forked: True
-x-ms-oob-tlc-oobclassifiers: OLM:10000;
+x-ms-oob-tlc-oobclassifiers: OLM:1443;
 x-forefront-prvs: 028166BF91
 x-forefront-antispam-report: SFV:NSPM;
- SFS:(10009020)(4636009)(39860400002)(136003)(376002)(346002)(366004)(396003)(189003)(199004)(4326008)(54906003)(71200400001)(86362001)(8936002)(9686003)(55016002)(8676002)(7696005)(81156014)(2906002)(6916009)(66946007)(33656002)(66556008)(76116006)(66446008)(64756008)(66476007)(478600001)(81166006)(7416002)(5660300002)(6506007)(52536014)(26005)(186003)(316002);
- DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB5089;
+ SFS:(10009020)(4636009)(366004)(376002)(396003)(136003)(39860400002)(346002)(189003)(199004)(8936002)(86362001)(7696005)(186003)(54906003)(110136005)(558084003)(71200400001)(66946007)(66476007)(66556008)(26005)(64756008)(6506007)(52536014)(66446008)(5660300002)(76116006)(2906002)(4326008)(33656002)(7416002)(316002)(478600001)(55016002)(9686003)(81166006)(81156014)(8676002);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB4292;
  H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
  PTR:InfoNoRecords; MX:1; A:1; 
 received-spf: None (protection.outlook.com: micron.com does not designate
  permitted sender hosts)
 x-ms-exchange-senderadcheck: 1
 x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: 6zrUJ3uxkhrShR1eBkUvsN2fwy2LNolvKQwC/GgTAkgQx2mUepfSOkeoDlFo3aVnKjUkL+2JEe6Eo84Gn+JfRvE0Dxrav2q4nlJpGR6tBGyO9mP81/I2KvyTRWCIov03SH09KbLDtyupnk+JiOOy9GTHvkkSwdSBqCc6ZnRZP4Vzvk36cbGglo/nqdHhQsxCd2drhN89Vl4cGBp6XvJDGc3JucXmZ1LUfXtlJ8Zr/4WWjJrmyQMr2ZwPMoLRduDUVk6/oq6XRbywOOvQAxqfJNmtecJicWu5m5NdDn+muwDBe4dQIeIg1TBgXaWSXH7weMHCfNITGARk2MEAWGbppja9r5rTU08PLOMUPFpPn6FGTnPYLPI171adMBTVRWH81pQiX97qV2mMlS+izGIPYADcbRS5L5GQ9ajeDBaME5qfXA8e5cz1iw7LXGS7lTet
+x-microsoft-antispam-message-info: 6SU9qk4S8oUNKVDZRuW+KAYgnotAsvrPdQZymBT1USlg+JpIIu0d0CE6bpIDpvTvPlsDhsohZdAAWwtRFYfG3n06LhvYLgXgpis5LpJMxAiMqDH9b1WoarL6uF+bJB8wnQ4LKi6cTjOObbWKwAFtRj5roukbditC8Cm8OPXRboKHvmNIDVAgu9tGVpLPDT8eOSQyJ7IwiSEDVZzpOO+5DW4WFfEMapE5mjBhim+4nnYu56y4xUwb6AIPHGOOzp5AvKDLClNuFV1Je4RVCxKejokfkKrFTSfIkOr3CpY1cLMFN5zhgfEd9FxGFO8a0pcuG/Sqtc+eSpd5Sdb+xHcaUDqeASQmR7UtEGQ6e29URRXOctr/vFp3Yv1CyeBfQ+Sym+57gGum5fafK4nAktikRnzep2STx4sRF096F3/ZPiadZ/p4RV0P7lOvq1+mcltv
 MIME-Version: 1.0
 X-OriginatorOrg: micron.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: d3551af9-03c7-4af9-e0cb-08d7980f31df
-X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Jan 2020 09:58:52.2715 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3138d018-b889-40d8-346e-08d7980fd2d8
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Jan 2020 10:03:22.3983 (UTC)
 X-MS-Exchange-CrossTenant-fromentityheader: Hosted
 X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
 X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: kpVHKFgO4HKMqNpgRCfInpjUdg5mAM31h63RDvRDe400+3SHFjbOqc26FfMPdry3pRqRZCaPotwaWFeh6DrDug==
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB5089
+X-MS-Exchange-CrossTenant-userprincipalname: 4Yfj9WMbNpM5mm0Ovj5bP9OCdPYlr3Uw1LdmzDixBmHejEJlKlnZKLAxkFERsDAJZVCFooATTpWzyU2a39+Emw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4292
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200113_015855_388614_C8933D53 
-X-CRM114-Status: GOOD (  16.47  )
+X-CRM114-CacheID: sfid-20200113_020326_417447_F5B103B2 
+X-CRM114-Status: UNSURE (   4.41  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.244.78 listed in list.dnswl.org]
+ no trust [40.107.223.54 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -123,20 +128,15 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
+Cc: "bvanassche@acm.org" <bvanassche@acm.org>,
  "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
  "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
  "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
  "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
  "cang@codeaurora.org" <cang@codeaurora.org>,
  "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
  "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
  "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "bvanassche@acm.org" <bvanassche@acm.org>,
  "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
  "asutoshd@codeaurora.org" <asutoshd@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
@@ -144,50 +144,11 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> Subject: RE: [EXT] [PATCH v1 1/3] scsi: ufs: fix empty check of error history
-> 
-> Hi Bean,
-> 
-> On Mon, 2020-01-13 at 09:28 +0000, Bean Huo (beanhuo) wrote:
-> > Hi, Stanley
-> >
-> > >
-> > > Currently checking if an error history element is empty or not is by
-> > > its "value". In most cases, value is error code.
-> > >
-> > > However this checking is not correct because some errors or events
-> > > do not specify any values in error history so values remain as 0,
-> > > and this will lead to incorrect empty checking.
-> > >
-> > Do you think this is a bug of UFS host controller? According to the
-> > UFS host Spec, If there had error detected in each layer, at least
-> > bit31 in its error code register Should be set to 1.
-> >
-> > Why there was an error happening, but host didn't set this bit31?
-> >
-> 
-> Thanks so much for review.
-> 
-> Yes, the case bit[31] set is true for UIC errors.
-> 
-> However the users of UFS error history, i.e., users of ufshcd_update_reg_hlist(),
-> are not only UIC errors. Some other essential events will update history too, for
-> example, device reset events and abort events.
-> 
-> Take "device reset events" as example: parameter "val" may be 0 while invoking
-> ufshcd_update_reg_hlist(). If this happens, the device reset event will not be
-> printed out because its err_hist->reg[p] is 0 according to the original logic in
-> ufshcd_print_err_hist().
-> 
-> Feel free to correct above description if it is wrong.
-> 
-> Thanks,
-> Stanley
+As for me, no further question about this patch.
 
-Hi, Stanley
-Thanks, now clear, it is not controller negative act issue.
-
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
 Reviewed-by: Bean Huo <beanhuo@micron.com>
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
