@@ -2,89 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82D571398BA
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Jan 2020 19:18:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E173913997B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Jan 2020 19:59:41 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tWBvVNUgwyEcJ6qxSLdqn0DyUyRTu5dBL7ZvEDAvwLs=; b=DXrMYs62nBi94K
-	cr4QIshdHh8y//KokzneL/HkuLqUOxy0QoJ/aNfiT5YueIo89qBiNqAcxQ/vXqgziOXVoGvivMs76
-	4Gsqd6/FsmvZH5jhmtUYAVjhwZgbLAbq9gU9GrOq/O30nrmypFmzQ0bpt+mfSDDKajVqUF4jH5QD/
-	t3u8ZI4CP8Y8Al+xGegAbhNJ70L+BwIIMwoDtn6HQxJUuefDDot+1kSy50micjDxVpbohSv2p39ye
-	y4Ykq0DIw6jahM0Mr7WJbk7Lb8QQCQENHr6Uo1a2OxF6mlm3IAeBRWCqEafn0GXMOEblTLPvmy0pz
-	bjaFfT1hba+kcJzwZABQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=gwnEhxsVPOwJQwPkvHWpmDrjRyut+y8XwGxTrrcHq0c=; b=UR1e5DZz8h5h//G5FLImB3NRa
+	YkIEdN859NuF0Cu8ZjfasPwr/SMRBOGujJG0AVX2DtlR3VbjWkwN36pyM1jcVEDUNS8r4Ocxl/EXW
+	zqCMtMvpdJZ3ImxvOZJm/rwS3D5I/ySf9D61imbzB1Fw1vUE5b0UHKB7ODZMgSdWgUGbT0Nmc0CqT
+	2fPL4WRExUl/xjHogDJ/+dQj08VX17qf/YaL84LAhCrFIbaum5h3xHrgfWOs58N1rIl3Cb1lFRhWy
+	c7mY3uaqFAiqwSYxkQihbdc9dmQ6wJLR33Yack3fFDZDIm5ownDReYgnBHIUj5yEW3yDyXaseELAk
+	lTw5Cv6Cg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ir4IB-000125-BX; Mon, 13 Jan 2020 18:18:23 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1ir4w0-0001Pp-NZ; Mon, 13 Jan 2020 18:59:32 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ir4Hz-0000sm-BL
- for linux-mediatek@lists.infradead.org; Mon, 13 Jan 2020 18:18:13 +0000
-Received: by mail-pf1-x443.google.com with SMTP id w62so5246649pfw.8
- for <linux-mediatek@lists.infradead.org>; Mon, 13 Jan 2020 10:18:10 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=J17YeTOEpSo1FzyDOd+9aTAz8l6C4D4MHcZ+fgWk1Mo=;
- b=lzbZp2lH/gU4yPLMC6wYwDVhgGCuadvdlO8VX6DZQrbqAzclxITjWEIKq2Cl0jbIcH
- Pb8rfbp3ZyzD/ei8vViUF082DNsG9iO8XsvKWbhCH0UhNEiqZ0iHet659p8zuGShBJ8J
- oex8GmqQsyyu5bKGxGtL87Enz1KnBZJyEXUdo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=J17YeTOEpSo1FzyDOd+9aTAz8l6C4D4MHcZ+fgWk1Mo=;
- b=qZXuxTkPCD7w7+aFDCdI09lxKIWm4gSBBHdogOruFiUdc0NUu7KNKE/lmLa3StXAui
- A78m22XGFnhkFqxUBpcV88iDOiVpZ1yhi1H+631R4b8/W3dksBypbtPWuQkXdq/Q2IVf
- s0F6oFwUXCmbDuE0iA/5jGHhEzy7WePml0ZR30d+/3RThfc9eq8yMlt39LWU8ZiSg/es
- FYSLif5wdz4Q2MTLJXfRUyuKno8FevletGA7tYVtUhTQ78uInHGsxb4mRi9R72zgaLKG
- hhYtiUf64fcghqYp9sVRrBLM0qEc0m+/gR9qyR72ddm7RSjiFSwqumwlaHY9okCEMESc
- sy7Q==
-X-Gm-Message-State: APjAAAX4nJ4Q0bw2LbyXwH8SiVxbv5tYX+Qo74eUSpUMFoBhN5MWB2BA
- CP0sfMBNdacR1Mm2SBjXesU1cg==
-X-Google-Smtp-Source: APXvYqyO2vTrtNquO0tteVK8jK7Phzfpow0bBhbfaw7+obCd30pnX73il3H6mcF4Pibd+xR5fcY2gA==
-X-Received: by 2002:a62:c541:: with SMTP id j62mr21026945pfg.237.1578939490112; 
- Mon, 13 Jan 2020 10:18:10 -0800 (PST)
-Received: from localhost ([2620:15c:202:1:4fff:7a6b:a335:8fde])
- by smtp.gmail.com with ESMTPSA id z22sm15206346pfr.83.2020.01.13.10.18.09
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 13 Jan 2020 10:18:09 -0800 (PST)
-Date: Mon, 13 Jan 2020 10:18:07 -0800
-From: Matthias Kaehlcke <mka@chromium.org>
-To: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-Subject: Re: [PATCH v2 2/2] arm64: dts: mediatek: add mt8173 elm and hana board
-Message-ID: <20200113181807.GH89495@google.com>
-References: <20200110073730.213789-1-hsinyi@chromium.org>
- <20200110073730.213789-3-hsinyi@chromium.org>
- <cce7b5a4-7e5e-99c7-c647-fbb2d58ff3e0@collabora.com>
+ id 1ir4vm-0001Ef-Lg
+ for linux-mediatek@lists.infradead.org; Mon, 13 Jan 2020 18:59:20 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1578941959; h=Message-ID: References: In-Reply-To: Subject:
+ Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Sender; bh=rEVhNoA+SMCklIOXL2qRZ8K89XUanuaNJQR/wOG0Dcw=;
+ b=HLp9DLKGIkgi62qAQLPRYClSKO16AcjWJK4FJN5+4wU7QiU2yKlEwCkc+CGhtiUtMye2zJbF
+ En5+6Ry/Bi5ZslExl7cKxQSgbYYqCdq6gXw7PZ5MgJFRT7zxPtbUpjnIoG78pSYqIHciq5c9
+ jlLozHKYBrQwfJAz+CIvRBJEIkg=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyI0ZDIyMyIsICJsaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnIiwgImJlOWU0YSJd
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e1cbdfa.7f83ae025fb8-smtp-out-n01;
+ Mon, 13 Jan 2020 18:59:06 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id D2515C447A5; Mon, 13 Jan 2020 18:59:04 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (No client certificate requested) (Authenticated sender: asutoshd)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 758BBC433CB;
+ Mon, 13 Jan 2020 18:59:03 +0000 (UTC)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <cce7b5a4-7e5e-99c7-c647-fbb2d58ff3e0@collabora.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Date: Mon, 13 Jan 2020 10:59:03 -0800
+From: asutoshd@codeaurora.org
+To: Stanley Chu <stanley.chu@mediatek.com>
+Subject: Re: [PATCH v1 2/3] scsi: ufs: add device reset history for vendor
+ implementations
+In-Reply-To: <1578147968-30938-3-git-send-email-stanley.chu@mediatek.com>
+References: <1578147968-30938-1-git-send-email-stanley.chu@mediatek.com>
+ <1578147968-30938-3-git-send-email-stanley.chu@mediatek.com>
+Message-ID: <20ed97a2333ff27d5901c373579f710a@codeaurora.org>
+X-Sender: asutoshd@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200113_101811_387565_2E6465D2 
-X-CRM114-Status: GOOD (  30.65  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200113_105919_144977_5570B596 
+X-CRM114-Status: GOOD (  12.91  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [104.130.122.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,140 +87,86 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Nicolas Boichat <drinkcat@chromium.org>, linux-kernel@vger.kernel.org,
- Doug Anderson <dianders@google.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Hsin-Yi Wang <hsinyi@chromium.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: linux-scsi@vger.kernel.org, martin.petersen@oracle.com,
+ andy.teng@mediatek.com, jejb@linux.ibm.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, avri.altman@wdc.com,
+ cang@codeaurora.org, linux-mediatek@lists.infradead.org,
+ peter.wang@mediatek.com, alim.akhtar@samsung.com, matthias.bgg@gmail.com,
+ bvanassche@acm.org, linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+On 2020-01-04 06:26, Stanley Chu wrote:
+> Device reset history shall be also added for vendor's device
+> reset variant operation implementation.
+> 
+> Cc: Alim Akhtar <alim.akhtar@samsung.com>
+> Cc: Asutosh Das <asutoshd@codeaurora.org>
+> Cc: Avri Altman <avri.altman@wdc.com>
+> Cc: Bart Van Assche <bvanassche@acm.org>
+> Cc: Bean Huo <beanhuo@micron.com>
+> Cc: Can Guo <cang@codeaurora.org>
+> Cc: Matthias Brugger <matthias.bgg@gmail.com>
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+> ---
+>  drivers/scsi/ufs/ufshcd.c | 5 +++--
+>  drivers/scsi/ufs/ufshcd.h | 6 +++++-
+>  2 files changed, 8 insertions(+), 3 deletions(-)
+> 
+> diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+> index bae43da00bb6..29e3d50aabfb 100644
+> --- a/drivers/scsi/ufs/ufshcd.c
+> +++ b/drivers/scsi/ufs/ufshcd.c
+> @@ -4346,13 +4346,14 @@ static inline int
+> ufshcd_disable_device_tx_lcc(struct ufs_hba *hba)
+>  	return ufshcd_disable_tx_lcc(hba, true);
+>  }
+> 
+> -static void ufshcd_update_reg_hist(struct ufs_err_reg_hist *reg_hist,
+> -				   u32 reg)
+> +void ufshcd_update_reg_hist(struct ufs_err_reg_hist *reg_hist,
+> +			    u32 reg)
+>  {
+>  	reg_hist->reg[reg_hist->pos] = reg;
+>  	reg_hist->tstamp[reg_hist->pos] = ktime_get();
+>  	reg_hist->pos = (reg_hist->pos + 1) % UFS_ERR_REG_HIST_LENGTH;
+>  }
+> +EXPORT_SYMBOL_GPL(ufshcd_update_reg_hist);
+> 
+>  /**
+>   * ufshcd_link_startup - Initialize unipro link startup
+> diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+> index e05cafddc87b..de1be6a862b0 100644
+> --- a/drivers/scsi/ufs/ufshcd.h
+> +++ b/drivers/scsi/ufs/ufshcd.h
+> @@ -805,6 +805,8 @@ int ufshcd_wait_for_register(struct ufs_hba *hba,
+> u32 reg, u32 mask,
+>  				u32 val, unsigned long interval_us,
+>  				unsigned long timeout_ms, bool can_sleep);
+>  void ufshcd_parse_dev_ref_clk_freq(struct ufs_hba *hba, struct clk 
+> *refclk);
+> +void ufshcd_update_reg_hist(struct ufs_err_reg_hist *reg_hist,
+> +			    u32 reg);
+> 
+>  static inline void check_upiu_size(void)
+>  {
+> @@ -1083,8 +1085,10 @@ static inline void
+> ufshcd_vops_dbg_register_dump(struct ufs_hba *hba)
+> 
+>  static inline void ufshcd_vops_device_reset(struct ufs_hba *hba)
+>  {
+> -	if (hba->vops && hba->vops->device_reset)
+> +	if (hba->vops && hba->vops->device_reset) {
+>  		hba->vops->device_reset(hba);
+> +		ufshcd_update_reg_hist(&hba->ufs_stats.dev_reset, 0);
+> +	}
+>  }
+> 
+>  extern struct ufs_pm_lvl_states ufs_pm_lvl_states[];
 
-On Mon, Jan 13, 2020 at 10:29:51AM +0100, Enric Balletbo i Serra wrote:
-> Hi Hsin-Yi,
-> 
-> Apart from the maintainer comments, a few more comments ...
-> 
-> cc'ing Matthias and Doug who I know played a bit with the pwm-backlight for the
-> uprev of the veyron devices, and you might be interested in his feedback in general.
-> 
-> On 10/1/20 8:37, Hsin-Yi Wang wrote:
-> > Elm is Acer Chromebook R13. Hana is Lenovo Chromebook. Both uses mt8173
-> > SoC.
-> > 
-> > Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
-> > ---
-> > Changes in v2:
-> > - remove downstream nodes and unused nodes
-> > - use GPIO_ACTIVE_LOW for ps8640 gpios
-> > - move trackpad to hana
-> > ---
-> >  arch/arm64/boot/dts/mediatek/Makefile         |    3 +
-> >  .../dts/mediatek/mt8173-elm-hana-rev7.dts     |   27 +
-> >  .../boot/dts/mediatek/mt8173-elm-hana.dts     |   16 +
-> >  .../boot/dts/mediatek/mt8173-elm-hana.dtsi    |   60 +
-> >  arch/arm64/boot/dts/mediatek/mt8173-elm.dts   |   15 +
-> >  arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi  | 1040 +++++++++++++++++
-> >  6 files changed, 1161 insertions(+)
-> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana-rev7.dts
-> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dts
-> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dtsi
-> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dts
-> >  create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi
-
-<snip>
-
-> > diff --git a/arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi b/arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi
-> > new file mode 100644
-> > index 000000000000..2ac738bebe04
-> > --- /dev/null
-> > +++ b/arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi
-> > @@ -0,0 +1,1040 @@
-> > +// SPDX-License-Identifier: GPL-2.0-only
-> > +/*
-> > + * Copyright 2016 MediaTek Inc.
-> > + */
-> > +
-> > +#include <dt-bindings/input/input.h>
-> > +#include <dt-bindings/gpio/gpio.h>
-> > +#include "mt8173.dtsi"
-> > +
-> > +/ {
-> > +	aliases {
-> > +		serial0 = &uart0;
-> > +		serial1 = &uart1;
-> > +		serial2 = &uart2;
-> > +		serial3 = &uart3;
-> > +	};
-> 
-> I think this should be in mt8173.dtsi?
-> 
-> > +
-> > +	memory@40000000 {
-> > +		device_type = "memory";
-> > +		reg = <0 0x40000000 0 0x80000000>;
-> > +	};
-> > +
-> > +	backlight_lcd: backlight_lcd {
-> 
-> nit: Not sure if you need to change or not, but this node is usually called
-> backlight: backlight without the _lcd. Note that this imply a userspace change
-> but /sys/class/backlight/backlight is more aligned with other boards (I guess)
-> when you have only one backlight. See for example:
-> 
->  git grep backlight arch/arm64/boot/*
-> 
-> > +		compatible = "pwm-backlight";
-> > +		pwms = <&pwm0 0 1000000>;
-> > +		brightness-levels = <
-> > +			  0  16  32  48  64  80  96 112
-> > +			128 144 160 176 192 208 224 240
-> > +			255
-> > +		>;
-> > +		default-brightness-level = <9>;
-> 
-> The reason you see the display too dark is because userspace sets and remembers
-> the default value you have using the above configuration which is only 16
-> levels. So after removing the two above properties you should set a new
-> brightness from userspace.
-> 
-> AFAIK 16 levels is not enough to have fancy backlight effects on Chrome OS
-> userspace, at least is not enough for Rockchip devices so I suppose is the same
-> for Mediatek.
-> 
-> You have to options here.
-> 
-> A) Remove brightness-levels and default-brightness-level. This will end with a
-> non-linear brightness curve for the backlight up to 4095 levels.
-> 
-> # cat max_brightness
-> 4095
-> 
-> B) Use the num-interpolated-steps and default-brightness-level properties. This
-> will end with a linear curve brightness. Similar to what is done for veyron
-> devices but in this case with more levels because the PWM to control the
-> backlight is 16-bits instead of 8-bits for veyron devices.
-> 
-> *
-> https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/arm/boot/dts/rk3288-veyron-edp.dtsi#n42
-> 
-> My guess is that you're interested on option B here to be coherent with other
-> Chromebooks.
-
-You could evaluate either way. One of the reasons to chose the interpolated-steps
-for veyron was that some veyron panels require a minimum backlight level to
-work properly. This can be easily configured with the linear curve, but
-currently not with the non-linear one. Another reason was to keep the backlight
-curve of a released device unaltered, though I think that's not strictly
-required as long as the behavior with the non-linear curve is close/good enough.
-
-Chrome OS user space supports both types of curves, for a new device I would
-probably start with a non-linear curve, and only change that if the resulting
-behavior doesn't meet expectations for some reason.
+Reviewed-by: Asutosh Das <asutoshd@codeaurora.org>
 
 _______________________________________________
 Linux-mediatek mailing list
