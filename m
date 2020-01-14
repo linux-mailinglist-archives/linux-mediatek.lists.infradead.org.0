@@ -2,76 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BD68C13A2FE
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Jan 2020 09:30:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E77013A343
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Jan 2020 09:53:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XAYVTUcIdw02YIrvV6cDbGD7zQ5dWvgwjCd6Oquu0EY=; b=ClZylGEgr0D9jb
-	Lx1ky+QCPTfpQm+MRh24oqylmErtIIEn3lL+a1XPqJTska9flprgDgGaf0bdGzGRICrAn4mjEQYLt
-	jG11eqt2cOkANp7Q7ecW14Wvv61eu9DzBYGLM7W4x2IKd1WpokUn15E9jjXLSEg9uJt2dsSwLP3fl
-	4IEsWlDF+RFWUuZFTpRRpvSN7eWa8cl20sxuCHGpkmyU6Ghy0veMW7/YnKRy1ARxH1Br9kUoqZQmC
-	uxDkl5HdC3lnqkTEbiapXWP1DuOU+8SoVcVDiuOsyA6EIGGzCp9oSC4RP/lvcG2gNbaOe0qPh48P9
-	sJMnSU48VF5aYR4/sNHw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=j5KXFT+CQC6lMlDf3eQ/inWTQiLDINOuOIPK0ADyqLk=; b=E0eL00okSl4PoH
+	4tjEJ3xrpUrUPE4EXkXeWwPLcVBeJYfLhsQ/ODZ9BNEJUzv72tN9xbmkEituXqBm97tkhIqoJeM6t
+	g37hk5lqCTvYAX0Ibxz6SGKGnJ4opeIfN2U45BhXiHrGwLc1PRASE8+VMoOufDLBaemCrvmb2f0j+
+	LRMx8MwbmFSi7Stk9JBubuVMdWB7Cb1LW/gO5UY0VxmdL8/Gzwh5RnO8rie/lhGifWp7fHgkaiY7s
+	WfCHA0Z4ss/I+iWf9c25wBz/xw3y4l1YKEr9kAKyCysQsopuQ3B6LYpvGvmhtimqLl5X8VqViW3Jg
+	AFHUM8HGiju7WLyfksiQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1irHaK-0003Ue-0X; Tue, 14 Jan 2020 08:30:00 +0000
-Received: from lelv0143.ext.ti.com ([198.47.23.248])
+	id 1irHx3-0004OT-Hi; Tue, 14 Jan 2020 08:53:29 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1irHa7-0003Jv-3C; Tue, 14 Jan 2020 08:29:48 +0000
-Received: from lelv0265.itg.ti.com ([10.180.67.224])
- by lelv0143.ext.ti.com (8.15.2/8.15.2) with ESMTP id 00E8TfZC013873;
- Tue, 14 Jan 2020 02:29:41 -0600
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
- s=ti-com-17Q1; t=1578990581;
- bh=EREYuC/AXrNZ/pdGBfsKD3rJsw744+e7sxVQeRfj0Ms=;
- h=Subject:To:CC:References:From:Date:In-Reply-To;
- b=cYSAbBwXgYczJ1pzAgHb4s44xJhvBOfrWiaPtDtcOWA3pk4vWoH4RusCyBwGtRHWh
- h1cgcTwTWH/6ArvIdiID6Q8fjUqzqC3tz886wYHUXBRJYbzjeURiyZjgmQaZhViJVi
- 2ud4Shu7La5vYldKuKPeggufGiEex5pc1opnFiek=
-Received: from DFLE104.ent.ti.com (dfle104.ent.ti.com [10.64.6.25])
- by lelv0265.itg.ti.com (8.15.2/8.15.2) with ESMTPS id 00E8TfjR103963
- (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=FAIL);
- Tue, 14 Jan 2020 02:29:41 -0600
-Received: from DFLE100.ent.ti.com (10.64.6.21) by DFLE104.ent.ti.com
- (10.64.6.25) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3; Tue, 14
- Jan 2020 02:29:41 -0600
-Received: from fllv0040.itg.ti.com (10.64.41.20) by DFLE100.ent.ti.com
- (10.64.6.21) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1847.3 via
- Frontend Transport; Tue, 14 Jan 2020 02:29:41 -0600
-Received: from [10.24.69.159] (ileax41-snat.itg.ti.com [10.172.224.153])
- by fllv0040.itg.ti.com (8.15.2/8.15.2) with ESMTP id 00E8TbcU059355;
- Tue, 14 Jan 2020 02:29:38 -0600
+ id 1irHx0-0004Nw-Qa; Tue, 14 Jan 2020 08:53:28 +0000
+X-UUID: bb32172a98e44d63bc820f2c50adc678-20200114
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=Dost+0dFRh/iyChepfPjiNF1opJPrShWqwDKLyfccxU=; 
+ b=kPk55WYD7CVetq4NyivfOK5nRYcuZQUUzAeXOfgFDz3OOfxGTDOwqW6XOa5wysHDdP0/DuSgBe23f9nvLi4uTazpmSdFmB/v0pj2p8IwnrOyZL+3kMJvfhx/H6KSC4Pqb8Z1dlqg9bMLCBAo7sUWnAFIq1rp8xndPvCEf/vd2GY=;
+X-UUID: bb32172a98e44d63bc820f2c50adc678-20200114
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <chunfeng.yun@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2041577777; Tue, 14 Jan 2020 00:53:20 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 14 Jan 2020 00:43:17 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 14 Jan 2020 16:43:39 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 14 Jan 2020 16:42:27 +0800
+Message-ID: <1578991386.21256.36.camel@mhfsdcap03>
 Subject: Re: [RESEND PATCH v5 01/11] dt-bindings: phy-mtk-tphy: add two
  optional properties for u2phy
-To: Chunfeng Yun <chunfeng.yun@mediatek.com>, Kishon Vijay Abraham I
- <kishon@a0393678ub>
+From: Chunfeng Yun <chunfeng.yun@mediatek.com>
+To: Kishon Vijay Abraham I <kishon@ti.com>
+Date: Tue, 14 Jan 2020 16:43:06 +0800
+In-Reply-To: <970b7cce-40ed-9ab7-5e04-9e3d609eadf7@ti.com>
 References: <1578448326-27455-1-git-send-email-chunfeng.yun@mediatek.com>
  <20200110111006.GB2220@a0393678ub> <1578990166.21256.35.camel@mhfsdcap03>
-From: Kishon Vijay Abraham I <kishon@ti.com>
-Message-ID: <970b7cce-40ed-9ab7-5e04-9e3d609eadf7@ti.com>
-Date: Tue, 14 Jan 2020 14:01:47 +0530
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.0
+ <970b7cce-40ed-9ab7-5e04-9e3d609eadf7@ti.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-In-Reply-To: <1578990166.21256.35.camel@mhfsdcap03>
-Content-Language: en-US
-X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
+X-TM-SNTS-SMTP: D582942802D1883A0CC1327A8F6B5666E8F2723D1A7B198DCC432FD73969D2B32000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200114_002947_217053_0E07D654 
-X-CRM114-Status: GOOD (  19.51  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20200114_005326_868747_B9B20E20 
+X-CRM114-Status: GOOD (  20.37  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.47.23.248 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -81,7 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -95,77 +88,82 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
  linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Kishon Vijay Abraham I <kishon@a0393678ub>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Chunfeng,
-
-On 14/01/20 1:52 PM, Chunfeng Yun wrote:
-> Hi Kishon,
+On Tue, 2020-01-14 at 14:01 +0530, Kishon Vijay Abraham I wrote:
+> Hi Chunfeng,
 > 
-> On Fri, 2020-01-10 at 16:40 +0530, Kishon Vijay Abraham I wrote:
->> Hi,
->>
->> On Wed, Jan 08, 2020 at 09:51:56AM +0800, Chunfeng Yun wrote:
->>> Add two optional properties, one for tuning J-K voltage by INTR,
->>> another for disconnect threshold, both of them are related with
->>> connect detection
->>>
->>> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
->>> Acked-by: Rob Herring <robh@kernel.org>
->>
->> Patch does not apply. I get the following errors
->> error: patch failed: Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt:52
->> error: Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt: patch does not apply
->> error: Did you hand edit your patch?
->>
->> Can you send them again in the right format?
-> I download this patch from https://patchwork.kernel.org/patch/11322505/
-> and fetch kernel5.5-rc5, then
-
-Please try applying to
-git://git.kernel.org/pub/scm/linux/kernel/git/kishon/linux-phy.git next
+> On 14/01/20 1:52 PM, Chunfeng Yun wrote:
+> > Hi Kishon,
+> > 
+> > On Fri, 2020-01-10 at 16:40 +0530, Kishon Vijay Abraham I wrote:
+> >> Hi,
+> >>
+> >> On Wed, Jan 08, 2020 at 09:51:56AM +0800, Chunfeng Yun wrote:
+> >>> Add two optional properties, one for tuning J-K voltage by INTR,
+> >>> another for disconnect threshold, both of them are related with
+> >>> connect detection
+> >>>
+> >>> Signed-off-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+> >>> Acked-by: Rob Herring <robh@kernel.org>
+> >>
+> >> Patch does not apply. I get the following errors
+> >> error: patch failed: Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt:52
+> >> error: Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt: patch does not apply
+> >> error: Did you hand edit your patch?
+> >>
+> >> Can you send them again in the right format?
+> > I download this patch from https://patchwork.kernel.org/patch/11322505/
+> > and fetch kernel5.5-rc5, then
 > 
-> git am --reject
-> RESEND-v5-01-11-dt-bindings-phy-mtk-tphy-add-two-optional-properties-for-u2phy.patch
-> Applying: dt-bindings: phy-mtk-tphy: add two optional properties for
-> u2phy
+> Please try applying to
+> git://git.kernel.org/pub/scm/linux/kernel/git/kishon/linux-phy.git next
+
+Got it, will test again, thanks a lot
+
+> > 
+> > git am --reject
+> > RESEND-v5-01-11-dt-bindings-phy-mtk-tphy-add-two-optional-properties-for-u2phy.patch
+> > Applying: dt-bindings: phy-mtk-tphy: add two optional properties for
+> > u2phy
+> > Checking patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt...
+> > Applied patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+> > cleanly.
+> > 
+> > don't reproduce the error you encountered, can you tell me the steps you
+> > apply the patch, thanks
+> 
+> git am chunfeng.yun.patch --reject
+> Applying: dt-bindings: phy-mtk-tphy: add two optional properties for u2phy
 > Checking patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt...
-> Applied patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-> cleanly.
+> error: while searching for:
+> - mediatek,eye-vrt	: u32, the selection of VRT reference voltage?
+> - mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage?
+> - mediatek,bc12	: bool, enable BC12 of u2phy if support it?
+> ?
+> Example:?
+> ?
 > 
-> don't reproduce the error you encountered, can you tell me the steps you
-> apply the patch, thanks
-
-git am chunfeng.yun.patch --reject
-Applying: dt-bindings: phy-mtk-tphy: add two optional properties for u2phy
-Checking patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt...
-error: while searching for:
-- mediatek,eye-vrt	: u32, the selection of VRT reference voltage?
-- mediatek,eye-term	: u32, the selection of HS_TX TERM reference voltage?
-- mediatek,bc12	: bool, enable BC12 of u2phy if support it?
-?
-Example:?
-?
-
-error: patch failed:
-Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt:52
-Applying patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
-with 1 reject...
-Rejected hunk #1.
-Patch failed at 0001 dt-bindings: phy-mtk-tphy: add two optional
-properties for u2phy
-Use 'git am --show-current-patch' to see the failed patch
-When you have resolved this problem, run "git am --continue".
-If you prefer to skip this patch, run "git am --skip" instead.
-To restore the original branch and stop patching, run "git am --abort".
-
-Thanks
-Kishon
+> error: patch failed:
+> Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt:52
+> Applying patch Documentation/devicetree/bindings/phy/phy-mtk-tphy.txt
+> with 1 reject...
+> Rejected hunk #1.
+> Patch failed at 0001 dt-bindings: phy-mtk-tphy: add two optional
+> properties for u2phy
+> Use 'git am --show-current-patch' to see the failed patch
+> When you have resolved this problem, run "git am --continue".
+> If you prefer to skip this patch, run "git am --skip" instead.
+> To restore the original branch and stop patching, run "git am --abort".
+> 
+> Thanks
+> Kishon
 
 _______________________________________________
 Linux-mediatek mailing list
