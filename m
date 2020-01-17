@@ -2,55 +2,96 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C450B140DAB
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 16:17:02 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA672140F7F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 17:59:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0KqmcE1My3JYTOvOIgmO+XQOf5FGyaNduJYfPU7wLrs=; b=cl0aLFmEXRcvDA
-	fanY0Np3eDg+64uVQaxxBQY29G7NLjDx1wjwkdS3MlfSt9/7vicIy/yInCGu39y2yCQ3RCV4KxQSR
-	evz9zIfIAN1FcIWtSjVwZ33mF6N+xs9k0CgyrharJ7U+HNL7+pASpE/3Mw5DG1Ru8IFi2ibB1VBED
-	xZSrTumj9zw/++3A7AxxdLwIrx2kcCZ7H7C/rPfcuag/3C4aNQh9Jl7/4H8lz7U3CKXuKzcMhOauc
-	BT4feqgmhcpVsBKh56dh5HzZpDyQ6lAgywminez4ag8CK4tEixXePJeK0F8Iz9mkSoZs0i3JRAg17
-	KjkQWk6iecV1RlOM5f6w==;
+	List-Owner; bh=dCvqw3Z9XdBGzfFSWXWPWEp1w3UTLtQrcIMErO8QBMA=; b=rJQ0ysGcQGt1Y0
+	D6RbAyErTppEhVXsjnY/WssEZf/lyVifMxOX1t2VwkWNNnSNCB7+e2QrOxVRLY+rLWsY9OENXZoqj
+	rB8Uxa0o/659uaPZHEZSm4P5vcmV85NAHVAyc9y5r72e4GjLhnR0DTbFle12+b7NuRxNVyGXq1pq9
+	RVigshaN7c+6m1goeXEQEVsV09CEj9vMkNexVaSltoW3YKHAyHXabRvLWZj68+ZturLy9NAp0Cwu5
+	bQpeeV99dr2SqssYjuhyIFgGzotDr6m7cLXHkjrwhOJsGOKP10qlQCqy53XhBJcsnj8XiVFyxTeKM
+	7MP0Fij77+Unwcw856gw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1isTMk-00014V-Gh; Fri, 17 Jan 2020 15:16:54 +0000
-Received: from mx2.suse.de ([195.135.220.15])
+	id 1isUyE-0004Nc-La; Fri, 17 Jan 2020 16:59:42 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1isTLg-0008Vz-BG; Fri, 17 Jan 2020 15:15:56 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 09FD5AF42;
- Fri, 17 Jan 2020 15:15:47 +0000 (UTC)
-From: =?UTF-8?q?Michal=20Koutn=C3=BD?= <mkoutny@suse.com>
-To: cgroups@vger.kernel.org
-Subject: [PATCH 3/3] kselftest/cgroup: add cgroup destruction test
-Date: Fri, 17 Jan 2020 16:15:33 +0100
-Message-Id: <20200117151533.12381-4-mkoutny@suse.com>
-X-Mailer: git-send-email 2.24.1
-In-Reply-To: <20200117151533.12381-1-mkoutny@suse.com>
+ id 1isUxu-0004Dt-HV; Fri, 17 Jan 2020 16:59:27 +0000
+Received: by mail-qk1-x741.google.com with SMTP id c17so23307409qkg.7;
+ Fri, 17 Jan 2020 08:59:21 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=sender:date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to
+ :user-agent; bh=zUnqRXYQtoyEF5UfPwWmYzCrDBoI5jZ6BUT1W4OJSHA=;
+ b=dNwidGHTaO65iLrmuRFYsedrAORZcj1dlBJc6RMBU146ZCPVPbdo76G9xqEUHi/4Pt
+ EOjOovq0mE5jq+flTugwLRNLMe/HfRwsgkV8518vOU7/DmxMI7XRE8vFRc/XRTgb/ICe
+ rDke18QDeVAgygvYrcv/rpZui2Gx8OXVHY42jmMcwi2MkfLMXzY2zcHKratTxPYePE5C
+ 6/+6UJTgCLdF/6Q0CmUKGsNVRYhdpnM89yIl1USuXStY8jSq35oPPXc0UDZcFon7c8E7
+ I38FBOrLF5KnNZx0uQLQ11UdW+T1YiVS3L6zDZSMoGQuQQo1a/NONcwN9ay/gtbQB1Jz
+ 70Xw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
+ :references:mime-version:content-disposition
+ :content-transfer-encoding:in-reply-to:user-agent;
+ bh=zUnqRXYQtoyEF5UfPwWmYzCrDBoI5jZ6BUT1W4OJSHA=;
+ b=tB3dE02vEeRZ9f34WzlV3v5qEPs5S0POTHHTxGbXb+P9EyNSt+izx/zdG5pjJSxsjj
+ +uslg8S44HlhUMwMw3UtQXpJ9Dmy513LumVirvB0mrYOWBcGTPr0ReFubmosfKOrEF6V
+ Zr1ywEz8zMlj/ps+liUQ4G4oxtzvX3DlY0yt7G55IYT9zIq04FA8PoX8pivlnn7SGNzI
+ PiqWHk1aBWZ2LWPwIrs084EBrzsaRTIB1BelBU/hh8pq61J6aO9Nk40fWatuadqCwX5W
+ K3FkIlo8vUigbgJo4rznRweSMrii3+CZrXLADGZiBQXcYDye8zNMYP6Gw3iAcRJ9CFjX
+ lllw==
+X-Gm-Message-State: APjAAAUODukK3vJfhELqBDnvT/XaEwpkNB88Ayb+boKjEqkubAw93occ
+ ixIHHp8RcNgcXY26FYCI3YQ=
+X-Google-Smtp-Source: APXvYqxftns8R04Lq7DlRW0QHAR4L0VpzrsayZtZp6bJXTKdCVV6PA2/eZmoZzleZqMOolzPC/QbPA==
+X-Received: by 2002:a37:7005:: with SMTP id l5mr37840890qkc.334.1579280361177; 
+ Fri, 17 Jan 2020 08:59:21 -0800 (PST)
+Received: from localhost ([2620:10d:c091:500::1:7d10])
+ by smtp.gmail.com with ESMTPSA id g18sm12021690qki.13.2020.01.17.08.59.19
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Fri, 17 Jan 2020 08:59:20 -0800 (PST)
+Date: Fri, 17 Jan 2020 08:59:18 -0800
+From: Tejun Heo <tj@kernel.org>
+To: Michal =?iso-8859-1?Q?Koutn=FD?= <mkoutny@suse.com>
+Subject: Re: [PATCH 1/3] cgroup: Unify css_set task lists
+Message-ID: <20200117165918.GJ2677547@devbig004.ftw2.facebook.com>
 References: <20200116043612.52782-1-surenb@google.com>
  <20200117151533.12381-1-mkoutny@suse.com>
+ <20200117151533.12381-2-mkoutny@suse.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200117151533.12381-2-mkoutny@suse.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200117_071548_670075_B3F95D43 
-X-CRM114-Status: GOOD (  14.83  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200117_085922_584685_DB4996E4 
+X-CRM114-Status: UNSURE (   9.55  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [195.135.220.15 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (htejun[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,78 +104,45 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: linger.lee@mediatek.com, tomcherry@google.com, shuah@kernel.org,
- linux-kernel@vger.kernel.org, matthias.bgg@gmail.com,
- Li Zefan <lizefan@huawei.com>, linux-mediatek@lists.infradead.org,
- linux-kselftest@vger.kernel.org, Johannes Weiner <hannes@cmpxchg.org>,
- Tejun Heo <tj@kernel.org>, alex.shi@linux.alibaba.com, kernel-team@android.com,
+ linux-kernel@vger.kernel.org, Li Zefan <lizefan@huawei.com>,
+ linux-mediatek@lists.infradead.org, linux-kselftest@vger.kernel.org,
+ Johannes Weiner <hannes@cmpxchg.org>, matthias.bgg@gmail.com,
+ cgroups@vger.kernel.org, alex.shi@linux.alibaba.com, kernel-team@android.com,
  guro@fb.com, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RnJvbTogU3VyZW4gQmFnaGRhc2FyeWFuIDxzdXJlbmJAZ29vZ2xlLmNvbT4KCkFkZCBuZXcgdGVz
-dCB0byB2ZXJpZnkgdGhhdCBhIGNncm91cCB3aXRoIGRlYWQgcHJvY2Vzc2VzIGNhbiBiZSBkZXN0
-cm95ZWQuClRoZSB0ZXN0IHNwYXducyBhIGNoaWxkIHByb2Nlc3Mgd2hpY2ggYWxsb2NhdGVzIGFu
-ZCB0b3VjaGVzIDEwME1CIG9mIFJBTQp0byBlbnN1cmUgcHJvbG9uZ2VkIGV4aXQuIFN1YnNlcXVl
-bnRseSBpdCBraWxscyB0aGUgY2hpbGQsIHdhaXRzIHVudGlsCnRoZSBjZ3JvdXAgY29udGFpbmlu
-ZyB0aGUgY2hpbGQgaXMgZW1wdHkgYW5kIGRlc3Ryb3lzIHRoZSBjZ3JvdXAuCgpTaWduZWQtb2Zm
-LWJ5OiBTdXJlbiBCYWdoZGFzYXJ5YW4gPHN1cmVuYkBnb29nbGUuY29tPgpTaWduZWQtb2ZmLWJ5
-OiBNaWNoYWwgS291dG7DvSA8bWtvdXRueUBzdXNlLmNvbT4KLS0tCiB0b29scy90ZXN0aW5nL3Nl
-bGZ0ZXN0cy9jZ3JvdXAvdGVzdF9jb3JlLmMgfCAxMTMgKysrKysrKysrKysrKysrKysrKysrCiAx
-IGZpbGUgY2hhbmdlZCwgMTEzIGluc2VydGlvbnMoKykKCmRpZmYgLS1naXQgYS90b29scy90ZXN0
-aW5nL3NlbGZ0ZXN0cy9jZ3JvdXAvdGVzdF9jb3JlLmMgYi90b29scy90ZXN0aW5nL3NlbGZ0ZXN0
-cy9jZ3JvdXAvdGVzdF9jb3JlLmMKaW5kZXggYzVjYTY2OWZlYjJiLi4yYTUyNDJlYzFhNDkgMTAw
-NjQ0Ci0tLSBhL3Rvb2xzL3Rlc3Rpbmcvc2VsZnRlc3RzL2Nncm91cC90ZXN0X2NvcmUuYworKysg
-Yi90b29scy90ZXN0aW5nL3NlbGZ0ZXN0cy9jZ3JvdXAvdGVzdF9jb3JlLmMKQEAgLTIsNyArMiwx
-MCBAQAogCiAjaW5jbHVkZSA8bGludXgvbGltaXRzLmg+CiAjaW5jbHVkZSA8c3lzL3R5cGVzLmg+
-CisjaW5jbHVkZSA8c3lzL21tYW4uaD4KKyNpbmNsdWRlIDxzeXMvd2FpdC5oPgogI2luY2x1ZGUg
-PHVuaXN0ZC5oPgorI2luY2x1ZGUgPGZjbnRsLmg+CiAjaW5jbHVkZSA8c3RkaW8uaD4KICNpbmNs
-dWRlIDxlcnJuby5oPgogI2luY2x1ZGUgPHNpZ25hbC5oPgpAQCAtMTIsNiArMTUsMTE1IEBACiAj
-aW5jbHVkZSAiLi4va3NlbGZ0ZXN0LmgiCiAjaW5jbHVkZSAiY2dyb3VwX3V0aWwuaCIKIAorc3Rh
-dGljIGludCB0b3VjaF9hbm9uKGNoYXIgKmJ1Ziwgc2l6ZV90IHNpemUpCit7CisJaW50IGZkOwor
-CWNoYXIgKnBvcyA9IGJ1ZjsKKworCWZkID0gb3BlbigiL2Rldi91cmFuZG9tIiwgT19SRE9OTFkp
-OworCWlmIChmZCA8IDApCisJCXJldHVybiAtMTsKKworCXdoaWxlIChzaXplID4gMCkgeworCQlz
-c2l6ZV90IHJldCA9IHJlYWQoZmQsIHBvcywgc2l6ZSk7CisKKwkJaWYgKHJldCA8IDApIHsKKwkJ
-CWlmIChlcnJubyAhPSBFSU5UUikgeworCQkJCWNsb3NlKGZkKTsKKwkJCQlyZXR1cm4gLTE7CisJ
-CQl9CisJCX0gZWxzZSB7CisJCQlwb3MgKz0gcmV0OworCQkJc2l6ZSAtPSByZXQ7CisJCX0KKwl9
-CisJY2xvc2UoZmQpOworCisJcmV0dXJuIDA7Cit9CisKK3N0YXRpYyBpbnQgYWxsb2NfYW5kX3Rv
-dWNoX2Fub25fbm9leGl0KGNvbnN0IGNoYXIgKmNncm91cCwgdm9pZCAqYXJnKQoreworCWludCBw
-cGlkID0gZ2V0cHBpZCgpOworCXNpemVfdCBzaXplID0gKHNpemVfdClhcmc7CisJdm9pZCAqYnVm
-OworCisJYnVmID0gbW1hcChOVUxMLCBzaXplLCBQUk9UX1JFQUQgfCBQUk9UX1dSSVRFLCBNQVBf
-UFJJVkFURSB8IE1BUF9BTk9OLAorCQkgICAwLCAwKTsKKwlpZiAoYnVmID09IE1BUF9GQUlMRUQp
-CisJCXJldHVybiAtMTsKKworCWlmICh0b3VjaF9hbm9uKChjaGFyICopYnVmLCBzaXplKSkgewor
-CQltdW5tYXAoYnVmLCBzaXplKTsKKwkJcmV0dXJuIC0xOworCX0KKworCXdoaWxlIChnZXRwcGlk
-KCkgPT0gcHBpZCkKKwkJc2xlZXAoMSk7CisKKwltdW5tYXAoYnVmLCBzaXplKTsKKwlyZXR1cm4g
-MDsKK30KKworLyoKKyAqIENyZWF0ZSBhIGNoaWxkIHByb2Nlc3MgdGhhdCBhbGxvY2F0ZXMgYW5k
-IHRvdWNoZXMgMTAwTUIsIHRoZW4gd2FpdHMgdG8gYmUKKyAqIGtpbGxlZC4gV2FpdCB1bnRpbCB0
-aGUgY2hpbGQgaXMgYXR0YWNoZWQgdG8gdGhlIGNncm91cCwga2lsbCBhbGwgcHJvY2Vzc2VzCisg
-KiBpbiB0aGF0IGNncm91cCBhbmQgd2FpdCB1bnRpbCAiY2dyb3VwLmV2ZW50cyIgaXMgZW1wdHku
-IEF0IHRoaXMgcG9pbnQgdHJ5IHRvCisgKiBkZXN0cm95IHRoZSBlbXB0eSBjZ3JvdXAuIFRoZSB0
-ZXN0IGhlbHBzIGRldGVjdCByYWNlIGNvbmRpdGlvbnMgYmV0d2VlbgorICogZHlpbmcgcHJvY2Vz
-c2VzIGxlYXZpbmcgdGhlIGNncm91cCBhbmQgY2dyb3VwIGRlc3RydWN0aW9uIHBhdGguCisgKi8K
-K3N0YXRpYyBpbnQgdGVzdF9jZ2NvcmVfZGVzdHJveShjb25zdCBjaGFyICpyb290KQoreworCWlu
-dCByZXQgPSBLU0ZUX0ZBSUw7CisJY2hhciAqY2dfdGVzdCA9IE5VTEw7CisJaW50IGNoaWxkX3Bp
-ZDsKKwljaGFyIGJ1ZltQQUdFX1NJWkVdOworCisJY2dfdGVzdCA9IGNnX25hbWUocm9vdCwgImNn
-X3Rlc3QiKTsKKworCWlmICghY2dfdGVzdCkKKwkJZ290byBjbGVhbnVwOworCisJZm9yIChpbnQg
-aSA9IDA7IGkgPCAxMDsgaSsrKSB7CisJCWlmIChjZ19jcmVhdGUoY2dfdGVzdCkpCisJCQlnb3Rv
-IGNsZWFudXA7CisKKwkJY2hpbGRfcGlkID0gY2dfcnVuX25vd2FpdChjZ190ZXN0LCBhbGxvY19h
-bmRfdG91Y2hfYW5vbl9ub2V4aXQsCisJCQkJCSAgKHZvaWQgKikgTUIoMTAwKSk7CisKKwkJaWYg
-KGNoaWxkX3BpZCA8IDApCisJCQlnb3RvIGNsZWFudXA7CisKKwkJLyogd2FpdCBmb3IgdGhlIGNo
-aWxkIHRvIGVudGVyIGNncm91cCAqLworCQlpZiAoY2dfd2FpdF9mb3JfcHJvY19jb3VudChjZ190
-ZXN0LCAxKSkKKwkJCWdvdG8gY2xlYW51cDsKKworCQlpZiAoY2dfa2lsbGFsbChjZ190ZXN0KSkK
-KwkJCWdvdG8gY2xlYW51cDsKKworCQkvKiB3YWl0IGZvciBjZ3JvdXAgdG8gYmUgZW1wdHkgKi8K
-KwkJd2hpbGUgKDEpIHsKKwkJCWlmIChjZ19yZWFkKGNnX3Rlc3QsICJjZ3JvdXAucHJvY3MiLCBi
-dWYsIHNpemVvZihidWYpKSkKKwkJCQlnb3RvIGNsZWFudXA7CisJCQlpZiAoYnVmWzBdID09ICdc
-MCcpCisJCQkJYnJlYWs7CisJCQl1c2xlZXAoMTAwMCk7CisJCX0KKworCQlpZiAocm1kaXIoY2df
-dGVzdCkpCisJCQlnb3RvIGNsZWFudXA7CisKKwkJaWYgKHdhaXRwaWQoY2hpbGRfcGlkLCBOVUxM
-LCAwKSA8IDApCisJCQlnb3RvIGNsZWFudXA7CisJfQorCXJldCA9IEtTRlRfUEFTUzsKK2NsZWFu
-dXA6CisJaWYgKGNnX3Rlc3QpCisJCWNnX2Rlc3Ryb3koY2dfdGVzdCk7CisJZnJlZShjZ190ZXN0
-KTsKKwlyZXR1cm4gcmV0OworfQorCiAvKgogICogQSgwKSAtIEIoMCkgLSBDKDEpCiAgKiAgICAg
-ICAgXCBEKDApCkBAIC01MTIsNiArNjI0LDcgQEAgc3RydWN0IGNvcmVjZ190ZXN0IHsKIAlUKHRl
-c3RfY2djb3JlX3BvcHVsYXRlZCksCiAJVCh0ZXN0X2NnY29yZV9wcm9jX21pZ3JhdGlvbiksCiAJ
-VCh0ZXN0X2NnY29yZV90aHJlYWRfbWlncmF0aW9uKSwKKwlUKHRlc3RfY2djb3JlX2Rlc3Ryb3kp
-LAogfTsKICN1bmRlZiBUCiAKLS0gCjIuMjQuMQoKCl9fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1t
-ZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21h
-aWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Fri, Jan 17, 2020 at 04:15:31PM +0100, Michal Koutn=FD wrote:
+> We track tasks of css_set in three different lists. The iterators
+> unnecessarily process each list specially.
+> Use an array of lists and simplify the iterator code. This is
+> refactoring with no intended functional change.
+> =
+
+> Signed-off-by: Michal Koutn=FD <mkoutny@suse.com>
+> ---
+>  include/linux/cgroup-defs.h | 15 ++++---
+>  include/linux/cgroup.h      |  4 +-
+>  kernel/cgroup/cgroup.c      | 81 +++++++++++++++++++------------------
+>  kernel/cgroup/debug.c       | 16 ++++----
+>  4 files changed, 60 insertions(+), 56 deletions(-)
+
+So, I get the urge to move the lists into an array and thought about
+doing that while adding the third list for sure.  However, it does
+make code paths which don't walk all lists wordier and the code path
+is already tricky like hell.  Given that there aren't that many places
+which loop over the lists, if you really wanna clean it up, maybe add
+an interator over the lists so that both parts of code can look lean?
+
+Thanks.
+
+-- =
+
+tejun
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
