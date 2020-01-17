@@ -2,75 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 348711404BF
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 09:00:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5322E14057A
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 09:30:44 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Boa0CEzfyNjI1a1Ap0lZzgxFnkVtGJ69EP+tArcH56Y=; b=X7jkQe25wrNyOW
-	hMF8hr8aUcGOT63lm4DbmUT9jHyGmKjKg0Ew+oRPnec7bqJmrWPzRRnQYttfRe6ExQ5vL01fwwJ5M
-	J9LklLqcUoP6SrjnMrUGwSdnyToMSjSwCmSDKCCRlP10mo/fgxvb7GS3KH9KzeLb3DEZZ+nbY8hmh
-	tIKdOuzBWhvcoYJiTS3wyFzQ2SBfuwMASZN3O3xcjkZMs4ZMX5wJn6yGcTx4gTKYexwkCh7EW9Gty
-	GuS0WBdveMxt3inmUadwTi03FVj/qt3dYoMjyZjgomSQKZ2FUO7yf/EUgeXE7voaAQGjw6IXlrpHv
-	0zbO7r93L0rWgDxH1KvA==;
+	List-Owner; bh=aAWmHQcNzRPDxYXLnl5BWnLioWvWq/H7tDI1V0xRJOI=; b=IiYswnSBm7YI6j
+	676QGaYf5I0NGN6j9paguJIqFYqJktDGcdUftjLsQYf7ArjPWlbFaJJ05z15ToDnOO0LPo1vmTwRM
+	gDI5YDNLDN7lBY3klIiv1Jq+ELw0PPQk2Phiy6bE3BzxkeaBdtJCLT7He/R6LYs7NX05GSCkt2MOS
+	wu1QVYcMOszKaz8JDf6FTJp81jCuquFqQXYqkgbWSqFYFFdg2Dr8z8js8aMwcdIKfO3ykhZJuqgKY
+	sjJ4+P6kpfszf0pwJe9BOHqTGT1t9PpcgG26VUOXe4G5pPTlyF9NVfVo8O/hQU07hxFU2bDCnE39w
+	+tzGtiVyzzVc8IN/mEbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1isMYh-0007Fk-7E; Fri, 17 Jan 2020 08:00:47 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1isN1X-0004RU-AU; Fri, 17 Jan 2020 08:30:35 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1isMYV-00078s-AH; Fri, 17 Jan 2020 08:00:39 +0000
-X-UUID: 1d3d4e051bd043a39e65a86b89fa56e2-20200117
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=NVAlmuv6kEuotYvF3hdfckiboI5Lrf79DB2d2V0aLRQ=; 
- b=fJBlCoKSYvqmh/krlxy7dtvHbCj6JN770MyPSkAJi8L7TAXVazgVP6fsPChMCP2gtmoC9c97z15JapQJrJ/zy/BjqvVLSy/eVP+y6RSZbmpK0mZ1ZJxpuZsqaUTTH/7JQd+U9VCr9wwwdjeCIH9aBHoh7xf2foS2XEULsVLkRg4=;
-X-UUID: 1d3d4e051bd043a39e65a86b89fa56e2-20200117
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 499332844; Fri, 17 Jan 2020 00:00:33 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 Jan 2020 23:58:31 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 17 Jan 2020 15:57:38 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Fri, 17 Jan 2020 15:56:38 +0800
-Message-ID: <1579247852.19362.10.camel@mtksdccf07>
-Subject: Re: [PATCH v1 1/2] scsi: ufs: set device as default active power
- mode during initialization only
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: Can Guo <cang@codeaurora.org>
-Date: Fri, 17 Jan 2020 15:57:32 +0800
-In-Reply-To: <e13011fd858cf3ec0258c4b7ac914973@codeaurora.org>
-References: <1577693546-7598-1-git-send-email-stanley.chu@mediatek.com>
- <1577693546-7598-2-git-send-email-stanley.chu@mediatek.com>
- <fd129b859c013852bd80f60a36425757@codeaurora.org>
- <1577754469.13164.5.camel@mtkswgap22>
- <836772092daffd8283a97d633e59fc34@codeaurora.org>
- <1577766179.13164.24.camel@mtkswgap22>
- <1577778290.13164.45.camel@mtkswgap22>
- <44393ed9ff3ba9878bae838307e7eec0@codeaurora.org>
- <1577947124.13164.75.camel@mtkswgap22>
- <4888afd46a9065b7f298a5de039426c9@codeaurora.org>
- <e13011fd858cf3ec0258c4b7ac914973@codeaurora.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1isN1Q-0004Qa-SW
+ for linux-mediatek@lists.infradead.org; Fri, 17 Jan 2020 08:30:33 +0000
+Received: from mail-il1-f182.google.com (mail-il1-f182.google.com
+ [209.85.166.182])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id A872720842
+ for <linux-mediatek@lists.infradead.org>; Fri, 17 Jan 2020 08:30:26 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1579249826;
+ bh=aPx1yz/xieg/my6j8U8i2xBZNDcQbxeXnhR+lekzqkQ=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=vf8ClN+HlNNl7TEKQWZLqb1iyLIMclqSxx7pgEU5UCVwMQJ/11AN4zAynQT18wch9
+ zBhmcYe1C/Txk+1Kj+hd7Kj4ajHA6WMRK62RXWBb+LnpIh7s7kYdBzGoD9HoWBBebN
+ WWNEqViUIVMrRdEwNHCmNEfsxrmJq98y2LDb8c4c=
+Received: by mail-il1-f182.google.com with SMTP id v69so20621212ili.10
+ for <linux-mediatek@lists.infradead.org>; Fri, 17 Jan 2020 00:30:26 -0800 (PST)
+X-Gm-Message-State: APjAAAX/m+WZhvzm3wMk6DMPb6JRM0NXVtx+2QTNUhavEAr74t1dfs6S
+ yHVrMxucEIh/2L1CV99JIgg5I8Vhx5T4GlNZnD0=
+X-Google-Smtp-Source: APXvYqxhxO9G9rZzdTTifCGquFcS6Bt+UM24eh3lMyhzziWBq/MJfGaJV5s4itMVzqfcUrr6HdwNWIBiAPbVWb0s548=
+X-Received: by 2002:a92:cb10:: with SMTP id s16mr2228781ilo.176.1579249825938; 
+ Fri, 17 Jan 2020 00:30:25 -0800 (PST)
 MIME-Version: 1.0
-X-MTK: N
+References: <1577799707-11855-1-git-send-email-light.hsieh@mediatek.com>
+In-Reply-To: <1577799707-11855-1-git-send-email-light.hsieh@mediatek.com>
+From: Sean Wang <sean.wang@kernel.org>
+Date: Fri, 17 Jan 2020 00:30:15 -0800
+X-Gmail-Original-Message-ID: <CAGp9LzqMU8u1gi5mLMFj4=eUuRKZMJSZ16tbxo1J_07nP72Q1Q@mail.gmail.com>
+Message-ID: <CAGp9LzqMU8u1gi5mLMFj4=eUuRKZMJSZ16tbxo1J_07nP72Q1Q@mail.gmail.com>
+Subject: Re: [PATCH v7 1/6] Check gpio pin number and use binary search in
+ mtk_hw_pin_field_lookup()
+To: Light Hsieh <light.hsieh@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200117_000035_365808_2226E36C 
-X-CRM114-Status: GOOD (  13.46  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200117_003028_966559_59B20C19 
+X-CRM114-Status: GOOD (  20.98  )
+X-Spam-Score: -2.7 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
+ 2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -80,8 +73,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,103 +85,188 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "beanhuo@micron.com" <beanhuo@micron.com>,
- "bvanassche@acm.org" <bvanassche@acm.org>,
- "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- Peter Wang =?UTF-8?Q?=28=E7=8E=8B=E4=BF=A1=E5=8F=8B=29?=
- <peter.wang@mediatek.com>, "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
- "Andy Teng \($B{}G!9\(\(B\)" <Andy.Teng@mediatek.com>, CC
- Chou =?UTF-8?Q?=28=E5=91=A8=E5=BF=97=E6=9D=B0=29?= <cc.chou@mediatek.com>,
- Chun-Hung Wu =?UTF-8?Q?=28=E5=B7=AB=E9=A7=BF=E5=AE=8F=29?=
- <Chun-hung.Wu@mediatek.com>,
- Ron Hsu =?UTF-8?Q?=28=E8=A8=B1=E8=BB=92=E6=A6=AE=29?= <Ron.Hsu@mediatek.com>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "linux-scsi-owner@vger.kernel.org" <linux-scsi-owner@vger.kernel.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- Kuohong Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=8B=E9=B4=BB=29?=
- <kuohong.wang@mediatek.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "stable@vger.kernel.org" <stable@vger.kernel.org>,
- "subhashj@codeaurora.org" <subhashj@codeaurora.org>,
- "pedrom.sousa@synopsys.com" <pedrom.sousa@synopsys.com>,
- "asutoshd@codeaurora.org" <asutoshd@codeaurora.org>
+Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ lkml <linux-kernel@vger.kernel.org>, kuohong.wang@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Can,
+On Tue, Dec 31, 2019 at 5:42 AM Light Hsieh <light.hsieh@mediatek.com> wrote:
+>
+> 1. Check if gpio pin number is in valid range to prevent from get invalid
+>    pointer 'desc' in the following code:
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>
+> 2. Improve  mtk_hw_pin_field_lookup()
+> 2.1 Modify mtk_hw_pin_field_lookup() to use binary search for accelerating
+>      search.
+> 2.2 Correct message after the following check fail:
+>     if (hw->soc->reg_cal && hw->soc->reg_cal[field].range) {
+>                 rc = &hw->soc->reg_cal[field];
+>     The original message is:
+>         "Not support field %d for pin %d (%s)\n"
+>     However, the check is on soc chip level, not on pin level yet.
+>     So the message is corrected as:
+>         "Not support field %d for this soc\n"
+>
+> Change-Id: I498a18df73e6a693e0e35635d5b92b8dc9c063ac
 
-On Fri, 2020-01-03 at 13:28 +0800, Can Guo wrote:
-> > 
-> > Hi Stanley,
-> > 
-> > Above description is correct. The reason why the UFS device becomes
-> > Active after the 1st link startup in your experiment is due to you
-> > set spm_lvl to 5, during system suspend, UFS device is powered down.
-> > When resume kicks start, the UFS device is power cycled once.
-> > 
-> > Moreover, if you set rpm_lvl to 5, during runtime suspend, if bkops is
-> > enabled, the UFS device will not be powered off, meaning when runtime
-> > resume kicks start, the UFS device is not power cycled, in this case,
-> > we need 3 times of link startup.
-> > 
-> > Does above explain?
-> > 
-> > Thanks,
-> > 
-> > Can Guo.
-> > 
-> 
-> Hi Stanley,
-> 
-> Sorry, typo before. I meant if set rpm_lvl/spm_lvl to 5, during suspend,
-> if is_lu_power_on_wp is set, the UFS device will not be fully powered 
-> off
-> (only VCC is down), meaning when resume kicks start, the UFS device is 
-> not
-> power cycled, in this case, we need 3 times of link startup.
-> 
-> Regards,
-> 
-> Can Guo.
+If removing the change-ids, add a prefix "pinctrl: mediatek:" to the
+subject, and proper signed-off-by tags,
+and then the overall looks good to me.
 
-Hi Can,
-
-Very sorry for late responding this thread.
-
-Now I would like to focus on 3-times link startup behavior found in our
-platform because this dramatically downgrade resume performance.
-
-According to your description, then could the driver set
-"link_startup_again" as true only if "is_lu_power_on_wp" is set to avoid
-unnecessary three-times link startup in other cases?
-
-In addition, for the scenario you mentioned: "the UFS device will not be
-fully powered off (only VCC is down), meaning when resume kicks start,
-the UFS device is not power cycled": 
-
-1. Actually I tried to set xpm_lvl=5, and enforced "is_lu_power_on_wp"
-as true for evaluation, but found device can be still back to Active
-PowerMode (can be accessed normally) after one-time link startup after
-resumed. 
-
-Only VCC is down and VCCQ2 is kept during suspend in my evaluation.
-
-2. In this scenario, during resume the peer device shall have "UniPro
-Warm Reset" triggered by the first link start-up and then device power
-mode shall become Active according to UFS specification.
-
-So what device power mode did you see after the first link startup in
-this scenario? Or any other conditions to make device need
-"link_startup_again"?
-
-Thanks,
-Stanley
+> ---
+>  drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c | 27 ++++++++++++++++++------
+>  drivers/pinctrl/mediatek/pinctrl-paris.c         | 25 ++++++++++++++++++++++
+>  2 files changed, 46 insertions(+), 6 deletions(-)
+>
+> diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> index 20e1c89..d63e05e 100644
+> --- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> +++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+> @@ -68,32 +68,44 @@ static int mtk_hw_pin_field_lookup(struct mtk_pinctrl *hw,
+>  {
+>         const struct mtk_pin_field_calc *c, *e;
+>         const struct mtk_pin_reg_calc *rc;
+> +       int start = 0, end, check;
+> +       bool found = false;
+>         u32 bits;
+>
+>         if (hw->soc->reg_cal && hw->soc->reg_cal[field].range) {
+>                 rc = &hw->soc->reg_cal[field];
+>         } else {
+>                 dev_dbg(hw->dev,
+> -                       "Not support field %d for pin %d (%s)\n",
+> -                       field, desc->number, desc->name);
+> +                       "Not support field %d for this soc\n", field);
+>                 return -ENOTSUPP;
+>         }
+>
+> +       end = rc->nranges - 1;
+>         c = rc->range;
+>         e = c + rc->nranges;
+>
+> -       while (c < e) {
+> -               if (desc->number >= c->s_pin && desc->number <= c->e_pin)
+> +       while (start <= end) {
+> +               check = (start + end) >> 1;
+> +               if (desc->number >= rc->range[check].s_pin
+> +                && desc->number <= rc->range[check].e_pin) {
+> +                       found = true;
+> +                       break;
+> +               } else if (start == end)
+>                         break;
+> -               c++;
+> +               else if (desc->number < rc->range[check].s_pin)
+> +                       end = check - 1;
+> +               else
+> +                       start = check + 1;
+>         }
+>
+> -       if (c >= e) {
+> +       if (!found) {
+>                 dev_dbg(hw->dev, "Not support field %d for pin = %d (%s)\n",
+>                         field, desc->number, desc->name);
+>                 return -ENOTSUPP;
+>         }
+>
+> +       c = rc->range + check;
+> +
+>         if (c->i_base > hw->nbase - 1) {
+>                 dev_err(hw->dev,
+>                         "Invalid base for field %d for pin = %d (%s)\n",
+> @@ -182,6 +194,9 @@ int mtk_hw_set_value(struct mtk_pinctrl *hw, const struct mtk_pin_desc *desc,
+>         if (err)
+>                 return err;
+>
+> +       if (value < 0 || value > pf.mask)
+> +               return -EINVAL;
+> +
+>         if (!pf.next)
+>                 mtk_rmw(hw, pf.index, pf.offset, pf.mask << pf.bitpos,
+>                         (value & pf.mask) << pf.bitpos);
+> diff --git a/drivers/pinctrl/mediatek/pinctrl-paris.c b/drivers/pinctrl/mediatek/pinctrl-paris.c
+> index 923264d..3e13ae7 100644
+> --- a/drivers/pinctrl/mediatek/pinctrl-paris.c
+> +++ b/drivers/pinctrl/mediatek/pinctrl-paris.c
+> @@ -81,6 +81,8 @@ static int mtk_pinconf_get(struct pinctrl_dev *pctldev,
+>         int val, val2, err, reg, ret = 1;
+>         const struct mtk_pin_desc *desc;
+>
+> +       if (pin >= hw->soc->npins)
+> +               return -EINVAL;
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[pin];
+>
+>         switch (param) {
+> @@ -206,6 +208,10 @@ static int mtk_pinconf_set(struct pinctrl_dev *pctldev, unsigned int pin,
+>         int err = 0;
+>         u32 reg;
+>
+> +       if (pin >= hw->soc->npins) {
+> +               err = -EINVAL;
+> +               goto err;
+> +       }
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[pin];
+>
+>         switch ((u32)param) {
+> @@ -693,6 +699,9 @@ static int mtk_gpio_get_direction(struct gpio_chip *chip, unsigned int gpio)
+>         const struct mtk_pin_desc *desc;
+>         int value, err;
+>
+> +       if (gpio > hw->soc->npins)
+> +               return -EINVAL;
+> +
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>
+>         err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DIR, &value);
+> @@ -708,6 +717,9 @@ static int mtk_gpio_get(struct gpio_chip *chip, unsigned int gpio)
+>         const struct mtk_pin_desc *desc;
+>         int value, err;
+>
+> +       if (gpio > hw->soc->npins)
+> +               return -EINVAL;
+> +
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>
+>         err = mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DI, &value);
+> @@ -722,6 +734,9 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
+>         struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+>         const struct mtk_pin_desc *desc;
+>
+> +       if (gpio > hw->soc->npins)
+> +               return;
+> +
+>         desc = (const struct mtk_pin_desc *)&hw->soc->pins[gpio];
+>
+>         mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DO, !!value);
+> @@ -729,12 +744,22 @@ static void mtk_gpio_set(struct gpio_chip *chip, unsigned int gpio, int value)
+>
+>  static int mtk_gpio_direction_input(struct gpio_chip *chip, unsigned int gpio)
+>  {
+> +       struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+> +
+> +       if (gpio > hw->soc->npins)
+> +               return -EINVAL;
+> +
+>         return pinctrl_gpio_direction_input(chip->base + gpio);
+>  }
+>
+>  static int mtk_gpio_direction_output(struct gpio_chip *chip, unsigned int gpio,
+>                                      int value)
+>  {
+> +       struct mtk_pinctrl *hw = gpiochip_get_data(chip);
+> +
+> +       if (gpio > hw->soc->npins)
+> +               return -EINVAL;
+> +
+>         mtk_gpio_set(chip, gpio, value);
+>
+>         return pinctrl_gpio_direction_output(chip->base + gpio);
+> --
+> 1.8.1.1.dirty
 
 _______________________________________________
 Linux-mediatek mailing list
