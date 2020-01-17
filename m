@@ -2,69 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7ACD81402B8
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 05:01:57 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 408DF14049F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Jan 2020 08:52:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=leFlWf7e9upDuSghdK47r1F2B5er2Gwu1CZLY6vv2Ig=; b=PTSmkQ8KtH9FQl
-	8w8+Mu/YztXZa53IXs9Ul0Ec9knL+AgH8MuHvy5JuhuywP8mX/PZEVtoh6rE5B5aIXBGqdknBngfw
-	Jp8jIqcD9BrIVYiO3k12uIMpUy9ua3+q65stMPQw5KubJlccXdERuRznA8rzXUft1X5Xm87TfVJRw
-	NedQQxvDMHUTuc3zx3I4kUOqBYzUGBc3iWGDcsjtYOe5yeb9cdvLu6fdkhHJ9/wEFJe/YY1X/Ljjg
-	xMi7yNP6Zn0tRiBR21Lle4ZOB3KGN81QQZJCgOGqBKauACOrpl0F2vryRoq6UWaiy+pydZEcKkDQD
-	155gxUcz1roH0Nqak+HA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=PUhesEAoBCyLv3sNoVUVnL3DPBiKR2iR++aVUtZFsnc=; b=b1HGgg5rdPgfFT
+	OuHUMTbkqU51/kFwTbWYb41c4cdH93HH/RozKBIdGjfHXyFTe8XJ4fUfXO38vnvbSXjb+EBa/gykF
+	8tFoWAbH5II5nwair3abg03bet1BAqjqnzen4wg/k4sVDn0ROaDw6I5fBDAKoFT1x1okpkFgEZ74u
+	5oAF5Jimtjs5yO7tO3tRUCpaT4OhGr2gJnDY2VZfHHm1Jnsd7M1VgbsU3D+JZqP0Gi4kpNprLMeZ7
+	yLEo7zokguRcdehEPcN3f1/vdsE4b8qZkUL5ozsre3ue433XiXXLsQRl+RW0px6PC02ul4GWGgxtB
+	A+8ik5C+RGYTF2ma510w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1isIpS-0001eJ-TN; Fri, 17 Jan 2020 04:01:50 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1isMQS-0002lT-BM; Fri, 17 Jan 2020 07:52:16 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1isIov-0001CT-FC; Fri, 17 Jan 2020 04:01:22 +0000
-X-UUID: a3320fd2d029439e831887501f622dd4-20200116
+ id 1isMQM-0002kz-NF; Fri, 17 Jan 2020 07:52:14 +0000
+X-UUID: d1d56721978b4e04a2cab1b5c033353c-20200116
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=p2qxacDfCCVqjUwwOgx8vmOgcBiOvdFZh2JOvNF4dco=; 
- b=QfqQN30yiN5NPwUOijX/BKDmh5xRxb0wtMVKh/cRHgS+vpkRmU15dd2elGQzcgLw7yYw3qYrfhRIhiNzlV44WWwX/xHnk1YO4dAtUFTgtvlA3bU6r4C4mhmeYYdbsyJDAU5FWJytmbYRS/aGdeSkzZ0aJDg9Tvw+crpRjld/yOQ=;
-X-UUID: a3320fd2d029439e831887501f622dd4-20200116
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=XlVHRJUiQa0Jm/lTprpguXiXjS3b7Bht7uRo2za199k=; 
+ b=izdTNWFqdjMNAZtC4TMrjRJqR7uydOUzTwPTMWwgbMNFRRdhKsruhxQ8XqwdwQ4H8QCQqE5VeuCoCE3HFk+Ph51sqchHrDhIXo1LRH24121x0aoe/J6YDu29INUT94yIJAtVCrgS7TCTgU4DcYzk5IvilT4rA7hFFswPLfzAvHA=;
+X-UUID: d1d56721978b4e04a2cab1b5c033353c-20200116
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <macpaul.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1570715849; Thu, 16 Jan 2020 20:01:13 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 16 Jan 2020 19:52:13 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 17 Jan 2020 11:50:03 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ with ESMTP id 697601633; Thu, 16 Jan 2020 23:52:01 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 16 Jan 2020 23:42:05 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 17 Jan 2020 15:41:33 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 17 Jan 2020 11:51:09 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v1 3/3] scsi: ufs-mediatek: enable low-power mode for hibern8
- state
-Date: Fri, 17 Jan 2020 11:51:08 +0800
-Message-ID: <20200117035108.19699-4-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200117035108.19699-1-stanley.chu@mediatek.com>
-References: <20200117035108.19699-1-stanley.chu@mediatek.com>
+ Frontend Transport; Fri, 17 Jan 2020 15:41:10 +0800
+From: Macpaul Lin <macpaul.lin@mediatek.com>
+To: Mathias Nyman <mathias.nyman@intel.com>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ <linux-usb@vger.kernel.org>, <linux-arm-kernel@lists.infradead.org>,
+ <linux-mediatek@lists.infradead.org>, <linux-kernel@vger.kernel.org>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>
+Subject: [PATCH] xhci-mtk: Fix NULL pointer dereference with xhci_irq() for
+ shared_hcd
+Date: Fri, 17 Jan 2020 15:41:50 +0800
+Message-ID: <1579246910-22736-1-git-send-email-macpaul.lin@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_200117_520896_2FA0C67E 
-X-CRM114-Status: UNSURE (   9.19  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200116_235210_770096_5DFC517A 
+X-CRM114-Status: GOOD (  11.75  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -89,105 +87,51 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stanley Chu <stanley.chu@mediatek.com>, bvanassche@acm.org,
- andy.teng@mediatek.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, beanhuo@micron.com,
- linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Cc: Sriharsha Allenki <sallenki@codeaurora.org>,
+ Macpaul Lin <macpaul.lin@mediatek.com>,
+ Mediatek WSD Upstream <wsd_upstream@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In MediaTek Chipsets, UniPro link and ufshci can enter proprietary
-low-power mode while link is in hibern8 state.
+According to NULL pointer fix: https://tinyurl.com/uqft5ra
+xhci: Fix NULL pointer dereference with xhci_irq() for shared_hcd
+The similar issue has also been found in QC activities in Mediatek.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Here quote the description from the referenced patch as follows.
+"Commit ("f068090426ea xhci: Fix leaking USB3 shared_hcd
+at xhci removal") sets xhci_shared_hcd to NULL without
+stopping xhci host. This results into a race condition
+where shared_hcd (super speed roothub) related interrupts
+are being handled with xhci_irq happens when the
+xhci_plat_remove is called and shared_hcd is set to NULL.
+Fix this by setting the shared_hcd to NULL only after the
+controller is halted and no interrupts are generated."
+
+Signed-off-by: Sriharsha Allenki <sallenki@codeaurora.org>
+Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
 ---
- drivers/scsi/ufs/ufs-mediatek.c | 53 +++++++++++++++++++++++++++++++++
- 1 file changed, 53 insertions(+)
+ drivers/usb/host/xhci-mtk.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index d5194d0c4ef5..f32f3f34f6d0 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -382,11 +382,60 @@ static void ufs_mtk_device_reset(struct ufs_hba *hba)
- 	dev_info(hba->dev, "device reset done\n");
- }
+diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
+index b18a6baef204..c227c67f5dc5 100644
+--- a/drivers/usb/host/xhci-mtk.c
++++ b/drivers/usb/host/xhci-mtk.c
+@@ -593,11 +593,11 @@ static int xhci_mtk_remove(struct platform_device *dev)
+ 	struct usb_hcd  *shared_hcd = xhci->shared_hcd;
  
-+static int ufs_mtk_link_set_hpm(struct ufs_hba *hba)
-+{
-+	int err;
-+
-+	err = ufshcd_hba_enable(hba);
-+	if (err)
-+		return err;
-+
-+	err = ufshcd_dme_set(hba,
-+			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
-+			     0);
-+	if (err)
-+		return err;
-+
-+	err = ufshcd_uic_hibern8_exit(hba);
-+	if (!err)
-+		ufshcd_set_link_active(hba);
-+	else
-+		return err;
-+
-+	err = ufshcd_make_hba_operational(hba);
-+	if (err)
-+		return err;
-+
-+	return 0;
-+}
-+
-+static int ufs_mtk_link_set_lpm(struct ufs_hba *hba)
-+{
-+	int err;
-+
-+	err = ufshcd_dme_set(hba,
-+			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
-+			     1);
-+	if (err) {
-+		/* Resume UniPro state for following error recovery */
-+		ufshcd_dme_set(hba,
-+			       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
-+			       0);
-+		return err;
-+	}
-+
-+	return 0;
-+}
-+
- static int ufs_mtk_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- {
-+	int err;
- 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
+ 	usb_remove_hcd(shared_hcd);
+-	xhci->shared_hcd = NULL;
+ 	device_init_wakeup(&dev->dev, false);
  
- 	if (ufshcd_is_link_hibern8(hba)) {
-+		err = ufs_mtk_link_set_lpm(hba);
-+		if (err)
-+			return -EAGAIN;
- 		phy_power_off(host->mphy);
- 		ufs_mtk_setup_ref_clk(hba, false);
- 	}
-@@ -397,10 +446,14 @@ static int ufs_mtk_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- static int ufs_mtk_resume(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- {
- 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
-+	int err;
- 
- 	if (ufshcd_is_link_hibern8(hba)) {
- 		ufs_mtk_setup_ref_clk(hba, true);
- 		phy_power_on(host->mphy);
-+		err = ufs_mtk_link_set_hpm(hba);
-+		if (err)
-+			return err;
- 	}
- 
- 	return 0;
+ 	usb_remove_hcd(hcd);
+ 	usb_put_hcd(shared_hcd);
++	xhci->shared_hcd = NULL;
+ 	usb_put_hcd(hcd);
+ 	xhci_mtk_sch_exit(mtk);
+ 	xhci_mtk_clks_disable(mtk);
 -- 
 2.18.0
 _______________________________________________
