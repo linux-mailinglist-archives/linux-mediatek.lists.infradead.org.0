@@ -2,64 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A6CC7143983
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 Jan 2020 10:32:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A31F71439A2
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 Jan 2020 10:38:14 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TdxNuHbdB9DyV4UCjShjjn5mPK7KmFg1hcjXDnkt+bs=; b=KqiYrgEQUUr+Ao
-	9od5shWQdblY2THGup3A8aPlwspLCn/8aRSdRYA+0A67BDhebTJzcTc0jOGUkLnRful6WMqHtnMTc
-	RsKrhd4tGWetdUL2XVH6nqbHHWNo3qrPzePe1RI5VXB5O6tujiQIDRPtxnP/rK2YqlvLZwMubYaNP
-	SPJ80H9tEI9xbyRDNEjYAHkHAmr1+2oR/j0LfLBB19CKYx10MO9GhroBjW54OK58xc7xTNtzHYpcd
-	AZQAXaQoGERPLDV1xIuHSWXKWYnh4HU5pDvuZ/K7Qpl4h/0QAIhVzzlzTfyZFmVQ6YL6diovzOj6H
-	h9s9asgX/uaa9R4D6VpQ==;
+	List-Owner; bh=b4MAAo5AzdvkkBCe1HzLrweMNsU4pkILDvoG+0lOlP8=; b=LLhxQ56+VHpEc6
+	tcKrFzq1yyWgu4uhHxJn9Z5cKmbteuQMBiy5fXnSKahBywal+E75of6GUoP+OGhJlljz144fLkLw+
+	cylcA1YxsCDT8ntGgGhXQ6VNDiWM7AZzTxuucffi4FzeDWgOfbrcFEiZLIVl4reI7loUneblXHH0W
+	YwRi3Pl/qSJDF2tbDIKdwVwwmB1hReh+pkJtIHJUs3BkI/oivOFMedkWd/DFLNbKacqN8Uo1VD9pp
+	zQyWeCCjnwK+AkCBKWoYkl8UGaYgrbVcmnE24p7KPZIVUb/68oGb5bYL0A+r17J4Dd+Ls0rw/eePc
+	raKGmDDW1jYuZlgmSJ9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1itptM-0007nq-HB; Tue, 21 Jan 2020 09:32:12 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1itpz3-0001W9-Aj; Tue, 21 Jan 2020 09:38:05 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1itptF-0007md-Vn
- for linux-mediatek@lists.infradead.org; Tue, 21 Jan 2020 09:32:10 +0000
-Received: by mail-wm1-x342.google.com with SMTP id p17so2192576wma.1
- for <linux-mediatek@lists.infradead.org>; Tue, 21 Jan 2020 01:32:04 -0800 (PST)
+ id 1itpz0-0001VJ-2O
+ for linux-mediatek@lists.infradead.org; Tue, 21 Jan 2020 09:38:03 +0000
+Received: by mail-wr1-x444.google.com with SMTP id j42so2298400wrj.12
+ for <linux-mediatek@lists.infradead.org>; Tue, 21 Jan 2020 01:38:01 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to:user-agent;
- bh=imtrsyE4PqkfOuBH2bEU5/ycShpe5DgMQpGEtomyMa0=;
- b=rtcJ+LQlDZ/dhGfo9Iu5OJd4+HKMy2yzD9iSGdalzOoIEncUjzsz5/aNNTd5RjsSc8
- zO8R7IWeVumQmIJtNgo4RVZt7gUhd5yZRRBQqVDryoKs8BU04+PpGfSZJNvnjsH/62yj
- utNq7GGLPGyTxTb1yb3mltp6nzJAjgAWU6qQKOTamwB12SgQZpUurDCVdShHDY4zSwRt
- 27hnYDJCXhMMgdvO1mW+7T9xCr4uphzvbjrusTEF0ylfATpdKENfYomQu6F+lwzn6RUS
- UpDbh4WVRvpRmqp5fb/B2A+GM9Tidwg6k1/Hgf4wLH/tybPmLM/Hd8ve+be8A6ZldBH9
- pQLg==
+ bh=+M730A48Aqh4pFSc6/yOGVnR2p3jp3qMHztEPqPnpzo=;
+ b=I4Il4xqb/mQRJaa0qSSl+Y25gZ18e057wP1tdP0lh2yLeaVpX0hadSOR4cl/LQpB3Q
+ tyaDpcGYEDRokttwYZKiVcZfJVF8EHoSYV8AeT5Pk8Cx7E9Px1VKdhTcXR1aAUSJd42D
+ xFOr6MeGSxv5TF/P/YEky3SS2IZFj68f7cxUiU1OZ4UxuYB744pGOuVT1Fv5ZBgPKRCQ
+ 7lN+SeGd90TfRO9gjPQRhJKb/pkMVZLlA3k0gUeRo6+ZVDTta1IW1eGaQBVEL1GveVLC
+ n0vz510kYT0OpN/IyanOQzCHQTHpjRTMgbVeaY/5N811ccD6PckCAVfLKOa3fN1tAM5n
+ aJ0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=imtrsyE4PqkfOuBH2bEU5/ycShpe5DgMQpGEtomyMa0=;
- b=oJ9XiuGHKczWl2jlZ8RNfPi+ljpuCE3c+C+UerKenwtsAW4dRBUC5piUDdCn9M23h8
- QHp2PDXIaBbah12Tr9cBIxVqqiwHJXJFvKImEhqauS9yzmgN4cZ/X2bfiykAXO48hYMa
- 0DxqZy9dKBndS24FVBpy8Vo1GUHSA4Cee+gF7+KkX/n5locYwcRWgVKjMrz2dtyAHQSk
- VQyKPlmD3BQlG3nMCbKpzW03Y8O9jI+nNPIBbtOi4YA3BfLr0oVu0svuHJuBCelLDXBd
- uzgvJUVsZKmtedyJvf2ryxqKGKF1dsdUOwEBnW3yQ+HJ+r9N1jQvcOLjJOHVaxqLp1RD
- mqCQ==
-X-Gm-Message-State: APjAAAXGVS/wMoqtACO2yEnaf3Ir9Y/QfPNFIgh3FwbUOVEg4oQCE70S
- B4i2gIANcBu+ls2z6HxTezmPzA==
-X-Google-Smtp-Source: APXvYqxXLTNXCnqXFHWAqOhNn4BqFUdupPBlV6/fm+9Ho9HF0rYCv/gYw3ZqBCY91j9ikIx2kYRjiw==
-X-Received: by 2002:a1c:a584:: with SMTP id o126mr3199652wme.163.1579599122625; 
- Tue, 21 Jan 2020 01:32:02 -0800 (PST)
+ bh=+M730A48Aqh4pFSc6/yOGVnR2p3jp3qMHztEPqPnpzo=;
+ b=aRmz1qN/nGeVVKbguAqffsfuaBKpfTO08cmlH9pTvGlRYY6Yaj1pQE42O7K3iirSEh
+ mND+acTTnsEEgaSYQ8YuP3U1PIYwhWpKR16Ya6aeewo0miDBfeDbCdGPgEYXpzvuCLKH
+ KEooZfEN0KLqzgfpP7Z1M3bItQvtBM5dPeZkLkiHHClOcJZ7m7PwXeyWzVO3yQpcoFZ5
+ LAYey5oyJng6M/xh0K+hts8F8Ilche3dRgBxMbIJ8G44l2tw1hlrjkEs+USH9oCAWtwS
+ Ha5PMRb4CVrb0mrGQpZc5dzwcFyDBNLVk9RL9Q8ZAY2d/3MVtMT1j5zovd/vzRgs4LdL
+ 5tQw==
+X-Gm-Message-State: APjAAAWl3vu3AUQC11mzEBJqThiDNviNpVps6DVbC4xKzeDPzO5x71PH
+ 3NmcFCoqQUbZtFzX7z4nRlWo1g==
+X-Google-Smtp-Source: APXvYqzNPRBGH9fYa6XMUb9Kcbd+L9DaQWdS1c4YXNu4dlR3oazpTgiDZXxcGp6bVMzhgy2FLbeDYg==
+X-Received: by 2002:adf:dfc2:: with SMTP id q2mr4336811wrn.251.1579599479951; 
+ Tue, 21 Jan 2020 01:37:59 -0800 (PST)
 Received: from google.com ([2a00:79e0:d:110:d6cc:2030:37c1:9964])
- by smtp.gmail.com with ESMTPSA id g7sm51210925wrq.21.2020.01.21.01.32.01
+ by smtp.gmail.com with ESMTPSA id u22sm54210033wru.30.2020.01.21.01.37.58
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 21 Jan 2020 01:32:01 -0800 (PST)
-Date: Tue, 21 Jan 2020 09:31:58 +0000
+ Tue, 21 Jan 2020 01:37:59 -0800 (PST)
+Date: Tue, 21 Jan 2020 09:37:55 +0000
 From: Quentin Perret <qperret@google.com>
-To: Lukasz Luba <lukasz.luba@arm.com>
+To: Dietmar Eggemann <dietmar.eggemann@arm.com>
 Subject: Re: [PATCH 1/4] PM / EM: and devices to Energy Model
-Message-ID: <20200121093158.GA154455@google.com>
+Message-ID: <20200121093755.GA157387@google.com>
 References: <20200116152032.11301-1-lukasz.luba@arm.com>
  <20200116152032.11301-2-lukasz.luba@arm.com>
  <20200117105437.GA211774@google.com>
@@ -67,13 +67,14 @@ References: <20200116152032.11301-1-lukasz.luba@arm.com>
  <20200120150918.GA164543@google.com>
  <8332c4ac-2a7d-1e2d-76e9-7c979a666257@arm.com>
  <b02da0ed-9e0b-36db-9813-daa334cbf2ba@arm.com>
+ <c9910c74-ab47-0c78-a1c7-4f3978e1dd09@arm.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <b02da0ed-9e0b-36db-9813-daa334cbf2ba@arm.com>
+In-Reply-To: <c9910c74-ab47-0c78-a1c7-4f3978e1dd09@arm.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200121_013206_050429_7506ABF6 
-X-CRM114-Status: UNSURE (   9.78  )
+X-CRM114-CacheID: sfid-20200121_013802_138134_445ACB71 
+X-CRM114-Status: UNSURE (   8.89  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -13.9 (-------------)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -81,7 +82,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  1.8 FSL_HELO_FAKE          No description available.
  -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
@@ -122,39 +123,29 @@ Cc: nm@ti.com, juri.lelli@redhat.com, daniel.lezcano@linaro.org,
  linux-arm-msm@vger.kernel.org, s.hauer@pengutronix.de, rostedt@goodmis.org,
  linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
  Chris.Redpath@arm.com, linux-omap@vger.kernel.org,
- Dietmar Eggemann <dietmar.eggemann@arm.com>,
  linux-arm-kernel@lists.infradead.org, airlied@linux.ie, javi.merino@arm.com,
  tomeu.vizoso@collabora.com, sboyd@kernel.org, shawnguo@kernel.org,
  rjw@rjwysocki.net, linux-kernel@vger.kernel.org, kernel@pengutronix.de,
- sudeep.holla@arm.com, ionela.voinescu@arm.com
+ sudeep.holla@arm.com, ionela.voinescu@arm.com,
+ Lukasz Luba <lukasz.luba@arm.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Monday 20 Jan 2020 at 18:38:41 (+0000), Lukasz Luba wrote:
-> I think we could avoid this additional argument 'cpumask'. I have
-> checked the cpufreq_cpu_get function, which should do be good for this:
+On Tuesday 21 Jan 2020 at 10:10:16 (+0100), Dietmar Eggemann wrote:
+> True. But then we hard-code that a CPU device performance domain can
+> only be a frequency domain (which is true today).
 > 
-> ---------->8-------------------------
-> static int _get_sharing_cpus(struct device *cpu_dev, struct cpumask *span)
-> {
->         struct cpufreq_policy *policy;
-> 
->         policy = cpufreq_cpu_get(cpu_dev->id);
->         if (policy) {
->                 cpumask_copy(span, policy->cpus);
+> The task scheduler (build_perf_domains()) and thermal are already using
+> cpufreq_cpu_get() to access the cpufreq policy. Now the EM framework
+> would too for CPU devices. I assume that could work with a couple of
+> adaptations in Documentation/power/energy-model.rst.
 
-That should be with 'policy->related_cpus', but yes if the policy
-cpumasks have been populated this approach is OK I think.
-
->                 cpufreq_cpu_put(policy);
->                 return 0;
->         } else {
->                 return -EINVAL;
->         }
-> }
-> --------------------------8<-------------------------------
+Agreed, and if one day we have a real use case where the pd mask and the
+cpufreq policy mask need to be different, we'll do the necessary
+changes. But until then I don't see a reason to object to Lukasz'
+proposal. So +1 from me.
 
 Thanks,
 Quentin
