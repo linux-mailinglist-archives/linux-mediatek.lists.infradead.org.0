@@ -2,54 +2,89 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8920A144329
-	for <lists+linux-mediatek@lfdr.de>; Tue, 21 Jan 2020 18:28:32 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4D12E144565
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 Jan 2020 20:52:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=stGmoBG3yKSfF/S1d3y3GUd1umn3uZQrXOyRCDHWuZg=; b=LLQ
-	xvIhhntSEznlC6bS+Dj9gAzIb5DBXulFgFKdRpaS6tu4VgmGMfM0Rqy9zW124oXy4uoY0rrn+6NEZ
-	djvxh6ydC0/p5/61BIKlPuu8Fj5s6b4OMsoyzVTTlOXpRz+C0XOznchwIzFdXCCYSmxdye2uaLzKo
-	D4+cbeh7P9WNIFDQyj5BLYY0+hG7sicAqILBpxLkxKCBKxrOzp/JsJ0y94fD1wegSP87yIzw02KXV
-	Pfbm+tw1yVJfaIpJKhi0A8JZHVNvXIbLQUUzI8qqtgeHXirOMoYIXv7PkZjKspep0LLwJ1oVMHsI5
-	7NQkgQFNtFwNTjunw3tik2dl5JR+J7A==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ZjAaCMtwKcctVYvCejMIPlrC6xUOu5MNasErbb/QJfQ=; b=tpUkB03r5W0UmB
+	ghAEd/FGSxVhjq/AihX8ieVFr0zKHbydGAm+jggQlS4eWE8DEclaZ992E+Z+S1FGvOC2TO2h+3fZc
+	BfYhOT1ETNdibnk5MGuqeO9vJ157ahGXBr1HAGcnwVZE1P+YubqiZZbsvB17UMz7VTas9awzXIIc0
+	JnfieUoGesAUo67TbomQnEw/ufVx3F0OxLR9S1/pYD4zDf75Xy0levboDrh+qadcqS5E8SpMdxG0n
+	u29GHZ69Dt+1Hw4CZQMl2mLjqpzJdm7HNGu4PCybSnKBUAWaDgPUoddF74yMT/NBWoqyZbfMNNc0w
+	JXZd7PKWm6aIOROt3jQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1itxKD-00063t-4i; Tue, 21 Jan 2020 17:28:25 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1itxJv-0005tO-BY; Tue, 21 Jan 2020 17:28:12 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 8260830E;
- Tue, 21 Jan 2020 09:28:06 -0800 (PST)
-Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id C82203F6C4;
- Tue, 21 Jan 2020 09:28:05 -0800 (PST)
-Date: Tue, 21 Jan 2020 17:28:04 +0000
-From: Mark Brown <broonie@kernel.org>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Subject: Applied "ASoC: dt-bindings: rt5645: add suppliers" to the asoc tree
-In-Reply-To: <20200114150151.8537-1-matthias.bgg@kernel.org>
-Message-Id: <applied-20200114150151.8537-1-matthias.bgg@kernel.org>
-X-Patchwork-Hint: ignore
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+	id 1itzZY-0006ly-2Q; Tue, 21 Jan 2020 19:52:24 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1itzZV-0006kn-20; Tue, 21 Jan 2020 19:52:22 +0000
+Received: by mail-wm1-x341.google.com with SMTP id f129so4546138wmf.2;
+ Tue, 21 Jan 2020 11:52:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:mime-version:content-disposition
+ :user-agent; bh=zxuX1UtB2iSvDZIxFVQFKZTyCjRelb+xJCXnYV6RwPY=;
+ b=pyD7oMxb+h4jKCDHx8Zxqa3r8SpQmJ2Xi0xv8kpJVM4SCmmSXBcI+Z6rw5qTjx4OMx
+ z/xAs+8vfuVthEGaOJ8rIWttOdK4Uz21k39epbl9VGqHZAEd8djy5bShH3OIl9Pyv3o8
+ hT7lYK6/ARsKY+p3BiDduq4Nr2qio+HG+8JbHXOtaWhkyvT2tJmARM/6TJloPkJxjfEt
+ vNInaIUlgP5GwGog2HwymKIsXXlAIvVUvL+OW2DCZYxDfWr4c/oj8uO4PY9Rkx3ac3za
+ Px8ubbN0YxfyEEaiN3/DnmxizpwTA6dCqLh+7rSLrP8Gg9CcyoLrY0k2avYiuUaW1Go6
+ yLdQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:mime-version
+ :content-disposition:user-agent;
+ bh=zxuX1UtB2iSvDZIxFVQFKZTyCjRelb+xJCXnYV6RwPY=;
+ b=V//vTTnI9CWAKCoGdAQPgK1PB3j3ZwaJxUHBHyLdyHcMPe1JVT962Lam3Wcs5GO3pb
+ fp9GZeRsUimk638FRemENtWBtmBMiWIhNwJQ3GYYa94Lt10IBmK4TrCStRqJlJ3WKXL7
+ MfqMe9BIc+/503iS/37qlL6fcPGmYkVGGb31nho92eEVgDjLWfEYnopeKAeKsJ0jB2j8
+ 9ZWNCFXEXLkBmiwfHQAw8ET50tBMPY6IXkatTZdNctUVv3Qt2JinXllJJ/vGMxk4iuZI
+ VPkV/NqAlyHrGL3HRarOTCR+XPaklsEKY5FnhlUCEA4gwEmon61D8Ce5BV9YHVdbQ9ko
+ TM9A==
+X-Gm-Message-State: APjAAAXr5vM9vke/tddqRPFOuYN92qRDLJMIhDin1DRMemGER11RsUoj
+ ZSOBjMMDQU+54oiQ/+Zz5PE8sVjn
+X-Google-Smtp-Source: APXvYqx5Yx5lfcaSIVQJgA5csyaAkbauM0CYPILqYoYnpAt60f+UEz9SBSMVAtMbVmDNrGfVDa98NQ==
+X-Received: by 2002:a05:600c:20f:: with SMTP id 15mr61254wmi.128.1579636339537; 
+ Tue, 21 Jan 2020 11:52:19 -0800 (PST)
+Received: from linux ([2001:7c7:212a:d400:8c86:9345:7668:6b83])
+ by smtp.gmail.com with ESMTPSA id s15sm50254070wrp.4.2020.01.21.11.52.18
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 21 Jan 2020 11:52:19 -0800 (PST)
+Date: Tue, 21 Jan 2020 20:52:18 +0100
+From: Sandesh Kenjana Ashok <sandeshkenjanaashok@gmail.com>
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [PATCH] staging: mt7621-pinctrl: Align code by cleanup long lines
+Message-ID: <20200121195218.GA10666@SandeshPC>
+MIME-Version: 1.0
+Content-Disposition: inline
+User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200121_092807_439653_4C98C84E 
-X-CRM114-Status: GOOD (  12.42  )
-X-Spam-Score: -0.5 (/)
+X-CRM114-CacheID: sfid-20200121_115221_101846_0CBD51E7 
+X-CRM114-Status: UNSURE (   9.60  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.140.110.172 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [sandeshkenjanaashok[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,78 +96,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- alsa-devel@alsa-project.org, Nicolas Boichat <drinkcat@chromium.org>,
- Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
- robh+dt@kernel.org, Mark Brown <broonie@kernel.org>,
- linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
- Enric Balletbo i Serra <enric.balletbo@collabora.com>,
- linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
+Cc: devel@driverdev.osuosl.org, linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+Cleanup lines over 80 characters in pinctrl-rt2880.c.
+Issue found by checkpatch.pl
 
-   ASoC: dt-bindings: rt5645: add suppliers
-
-has been applied to the asoc tree at
-
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.6
-
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
-
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From 26aa19174f0d1837cb268b744f6dcb013265ab03 Mon Sep 17 00:00:00 2001
-From: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Tue, 14 Jan 2020 16:01:50 +0100
-Subject: [PATCH] ASoC: dt-bindings: rt5645: add suppliers
-
-The rt5645 and rt5650 have two suppliers, document them.
-
-Signed-off-by: Matthias Brugger <matthias.bgg@gmail.com>
-
-Link: https://lore.kernel.org/r/20200114150151.8537-1-matthias.bgg@kernel.org
-Signed-off-by: Mark Brown <broonie@kernel.org>
+Signed-off-by: Sandesh Kenjana Ashok <sandeshkenjanaashok@gmail.com>
 ---
- Documentation/devicetree/bindings/sound/rt5645.txt | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/Documentation/devicetree/bindings/sound/rt5645.txt b/Documentation/devicetree/bindings/sound/rt5645.txt
-index a03f9a872a71..41a62fd2ae1f 100644
---- a/Documentation/devicetree/bindings/sound/rt5645.txt
-+++ b/Documentation/devicetree/bindings/sound/rt5645.txt
-@@ -10,6 +10,10 @@ Required properties:
+diff --git a/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c b/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
+index d0f06790d38f..254d4eb88f5f 100644
+--- a/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
++++ b/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
+@@ -159,8 +159,8 @@ static int rt2880_pmx_group_enable(struct pinctrl_dev *pctrldev,
+ }
  
- - interrupts : The CODEC's interrupt output.
+ static int rt2880_pmx_group_gpio_request_enable(struct pinctrl_dev *pctrldev,
+-						struct pinctrl_gpio_range *range,
+-						unsigned int pin)
++					struct pinctrl_gpio_range *range,
++					unsigned int pin)
+ {
+ 	struct rt2880_priv *p = pinctrl_dev_get_drvdata(pctrldev);
  
-+- avdd-supply: Power supply for AVDD, providing 1.8V.
-+
-+- cpvdd-supply: Power supply for CPVDD, providing 3.5V.
-+
- Optional properties:
- 
- - hp-detect-gpios:
 -- 
-2.20.1
+2.17.1
 
 
 _______________________________________________
