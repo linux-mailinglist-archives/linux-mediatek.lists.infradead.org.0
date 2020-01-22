@@ -2,85 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4EB12144BBA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 22 Jan 2020 07:25:31 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A7725144C01
+	for <lists+linux-mediatek@lfdr.de>; Wed, 22 Jan 2020 07:53:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WarLvau94uvtErmd4JTRsKLtUieDyNJQUfdjc3TuyJw=; b=PpBArKlM23bXOb
-	7dCfTuP5J5kYvHR87JTjK9MHPqQaUGuX7cvroyNCAjhg8MMo5h61DfoKjoHbqQJZEVQvrmFMlSlby
-	XAaKpmtu2Err9evm01AaTUT2Ouvqh0OCUG76zkKqd7YSCNywpfHKwosGr3C3cVlE1flcAWIDliK/P
-	HdJuR7g8taizyxINhEBSAn3T4StKE2IvbIfNdU3GHVlf1aglRycZuzOnf/cRRDx9eRCXbQj1LX55x
-	9Om2Rpb0WTPs/CXgPwL2+GJ9KecE5lT+fDqvmvu53f5ZRpqjt0B8puSN3kzrR1i4eqZ/wMRNNmArg
-	s/s24HrjJ+jtd66v4lgA==;
+	List-Owner; bh=lIeRlikJHJGGNnmgig3oYp0O3y7bTvhQ7ovRuT/DlDQ=; b=RKlZgMGSqKqGt9
+	afubHp8QtJ2uFygTlha6U0sqd1hGlOfZ9/29q949J428uBmFH/l/cKxMniWRT8N2Th57qy/ruQZnr
+	yb9KKHEr2x238/kq6shDr1Uln6meMKjb4nnyvxny5c0qzxf9/memnDZ7FouPdBHY0J4fa+Cdl6hIx
+	IBhwkqxQhC0uG3ptmjnwiuMSihiLhWdhiT3OQbSE2nvLeA/hLD73z0GBQixLTLZNEubzLOown2CtF
+	RV6mk1sR7vWimmohkIl+1onJhe4MP7MUpRbk0sOX8MV08Ki+CFx2iuV4/ODZyoy4G7ygHzGW6u3DU
+	y8L20DedBf7uToV5Zbaw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iu9S2-0007WM-Qv; Wed, 22 Jan 2020 06:25:19 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1iu9tO-0007Jy-4l; Wed, 22 Jan 2020 06:53:34 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iu9Rk-0006Ap-0G; Wed, 22 Jan 2020 06:25:01 +0000
-Received: by mail-pl1-x641.google.com with SMTP id c9so2519484plo.1;
- Tue, 21 Jan 2020 22:24:57 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=zEQqVslVn1OMa/Lg91ZHwHuwRAUMaJJsC/qhf0szJTg=;
- b=P69E66XP7cN7UeiSLEvaCqhQBimfCrsEE8gtQ4svrB+Z0Ez99G0Rz3lFqr1NwtVeRe
- EM3TUCLrnj7pvHk/GMRqWp6/s4JVo+TD3T+AKTACkYSUfV8rShRILsGqdbEASZX6B6+U
- pattyGM0AljHgNwHIMS/Sh/njnptYBweZHmW06MQghMAJglmzNs84qwsXeilqWbJnx09
- vzKbExBYS1GGnsU7BYCRHhhLx3T62/DdbPCh5bodrKmuqnHfamRl6+e+ozdfQHxHKtPw
- EyUUfOsM0rLzx11Ni3cC7G/RQ9N1F4jeJQpYDU/q9rW0/sDuUix5C8EWWgSUPD9XJDNP
- IEiw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=zEQqVslVn1OMa/Lg91ZHwHuwRAUMaJJsC/qhf0szJTg=;
- b=ouo+LVLj8rmHOPbB6pUMGqVNZVleIpofvTFr+9WnsgDLPL9GpeUp9LM2otyhSBnVKi
- LFS8I+UA3TjukH/cQHyAI+LdtClvqaBtD5lCXo8uQrOoJuK6SESMTWrwj0Cg7W8IxI/w
- qs+rEu0AbfbZtCNV7qourCdFNlzTATsSdcAQPdYuzUi69FpnFYWgAfPV+YZS6uUf+inb
- AQw9o3RD+14LO/d6w86J34VPxHllHY3MeUmRg68zaK/0fKU8i4m6yyUZhUt9yjt8+nW8
- tC6Sl1sZL43v2Y4W/M0PQD00d24Yz8GM7mzneModfzFcJmDqFecqCXwnFBsfea4b+fqj
- mjVg==
-X-Gm-Message-State: APjAAAUIw+l2XzpTcKhUnnF0qfT1H2FMuwzW8pINuzn/jtrLV44XD7bd
- tXWULZyMwYu0XaUhuu8lYU2ucK6x
-X-Google-Smtp-Source: APXvYqxBxEOXQSKw4s1crZj4C/Zj53F/nGuUaj7bfVA+oXiYR/WYhbJn+r4pVFdXaGd8zmfoz/j2lw==
-X-Received: by 2002:a17:90a:3643:: with SMTP id
- s61mr1294594pjb.44.1579674296993; 
- Tue, 21 Jan 2020 22:24:56 -0800 (PST)
-Received: from dtor-ws ([2620:15c:202:201:3adc:b08c:7acc:b325])
- by smtp.gmail.com with ESMTPSA id z26sm42737423pgu.80.2020.01.21.22.24.56
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 21 Jan 2020 22:24:56 -0800 (PST)
-Date: Tue, 21 Jan 2020 22:24:54 -0800
-From: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-To: "fengping.yu" <fengping.yu@mediatek.com>
-Subject: Re: [PATCH V3 2/2] drivers: input: keyboard: add mtk keypad driver
-Message-ID: <20200122062454.GF110084@dtor-ws>
-References: <20200114122738.103344-1-fengping.yu@mediatek.com>
- <20200114122738.103344-3-fengping.yu@mediatek.com>
+ id 1iu9tK-0007IH-RM
+ for linux-mediatek@lists.infradead.org; Wed, 22 Jan 2020 06:53:32 +0000
+X-UUID: 4547d85d75b94a1cbc49f70029172134-20200121
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=KtD9QHwq7bfuSqhnaWSsi019jf5rw62Q2z/L7dueR8I=; 
+ b=r6RbM40ujb96wcP67sql4TGcZct5x9HKprvXhad/AK/wxStlp6O0b5+kEdBn6Be+u5Ga0PW1AWr5jfFd5cQOcHc8o1yHS9kVOY30/hXfRrcH3T4dNkiEtthdfMg+8tb0VlS7IrDUg1Go05sdl0EtzPTb3gxYfjMwzKzH8PnJzOw=;
+X-UUID: 4547d85d75b94a1cbc49f70029172134-20200121
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <light.hsieh@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 390103583; Tue, 21 Jan 2020 22:53:19 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 21 Jan 2020 22:54:25 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 22 Jan 2020 14:52:04 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 22 Jan 2020 14:51:58 +0800
+From: <light.hsieh@mediatek.com>
+To: <linus.walleij@linaro.org>
+Subject: [PATCH v8 2/6] pinctrl: mediatek: Supporting driving setting without
+ mapping current to register value
+Date: Wed, 22 Jan 2020 14:53:10 +0800
+Message-ID: <1579675994-7001-2-git-send-email-light.hsieh@mediatek.com>
+X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1579675994-7001-1-git-send-email-light.hsieh@mediatek.com>
+References: <1579675994-7001-1-git-send-email-light.hsieh@mediatek.com>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200114122738.103344-3-fengping.yu@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200121_222500_071223_F7A10374 
-X-CRM114-Status: GOOD (  20.58  )
+X-CRM114-CacheID: sfid-20200121_225330_885636_74763AC4 
+X-CRM114-Status: UNSURE (   8.90  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [dmitry.torokhov[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -88,6 +74,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,232 +87,97 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Marco Felsch <m.felsch@pengutronix.de>,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, linux-input@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: sean.wang@kernel.org, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, Light Hsieh <light.hsieh@mediatek.com>,
+ linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Fendping,
+From: Light Hsieh <light.hsieh@mediatek.com>
 
-On Tue, Jan 14, 2020 at 08:27:41PM +0800, fengping.yu wrote:
-> Signed-off-by: fengping.yu <fengping.yu@mediatek.com>
-> 
-> Add matrix keypad driver for MTK SoC.
-> 
-> ---
->  arch/arm64/configs/defconfig     |   1 +
->  drivers/input/keyboard/Kconfig   |   8 +
->  drivers/input/keyboard/Makefile  |   1 +
->  drivers/input/keyboard/mtk-kpd.c | 280 +++++++++++++++++++++++++++++++
->  4 files changed, 290 insertions(+)
->  create mode 100644 drivers/input/keyboard/mtk-kpd.c
-> 
-> diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
-> index 8e05c39eab08..62bed77ec127 100644
-> --- a/arch/arm64/configs/defconfig
-> +++ b/arch/arm64/configs/defconfig
-> @@ -315,6 +315,7 @@ CONFIG_KEYBOARD_ADC=m
->  CONFIG_KEYBOARD_GPIO=y
->  CONFIG_KEYBOARD_SNVS_PWRKEY=m
->  CONFIG_KEYBOARD_CROS_EC=y
-> +CONFIG_KEYBOARD_MTK=y
->  CONFIG_INPUT_TOUCHSCREEN=y
->  CONFIG_TOUCHSCREEN_ATMEL_MXT=m
->  CONFIG_INPUT_MISC=y
-> diff --git a/drivers/input/keyboard/Kconfig b/drivers/input/keyboard/Kconfig
-> index 8911bc2ec42a..01747a97536b 100644
-> --- a/drivers/input/keyboard/Kconfig
-> +++ b/drivers/input/keyboard/Kconfig
-> @@ -775,4 +775,12 @@ config KEYBOARD_MTK_PMIC
->  	  To compile this driver as a module, choose M here: the
->  	  module will be called pmic-keys.
->  
-> +config KEYBOARD_MTK
-> +	tristate "MediaTek Keypad Support"
-> +	help
-> +	  Say Y here if you want to use the keypad.
-> +	  If unuse, say N.
-> +	  To compile this driver as a module, choose M here: the
-> +	  module will be called mtk-kpd.
-> +
->  endif
-> diff --git a/drivers/input/keyboard/Makefile b/drivers/input/keyboard/Makefile
-> index 9510325c0c5d..daa654bcce6e 100644
-> --- a/drivers/input/keyboard/Makefile
-> +++ b/drivers/input/keyboard/Makefile
-> @@ -41,6 +41,7 @@ obj-$(CONFIG_KEYBOARD_MATRIX)		+= matrix_keypad.o
->  obj-$(CONFIG_KEYBOARD_MAX7359)		+= max7359_keypad.o
->  obj-$(CONFIG_KEYBOARD_MCS)		+= mcs_touchkey.o
->  obj-$(CONFIG_KEYBOARD_MPR121)		+= mpr121_touchkey.o
-> +obj-$(CONFIG_KEYBOARD_MTK) 		+= mtk-kpd.o
->  obj-$(CONFIG_KEYBOARD_MTK_PMIC) 	+= mtk-pmic-keys.o
->  obj-$(CONFIG_KEYBOARD_NEWTON)		+= newtonkbd.o
->  obj-$(CONFIG_KEYBOARD_NOMADIK)		+= nomadik-ske-keypad.o
-> diff --git a/drivers/input/keyboard/mtk-kpd.c b/drivers/input/keyboard/mtk-kpd.c
-> new file mode 100644
-> index 000000000000..e36461c9dd89
-> --- /dev/null
-> +++ b/drivers/input/keyboard/mtk-kpd.c
-> @@ -0,0 +1,280 @@
-> +// SPDX-License-Identifier: GPL-2.0
-> +/*
-> + * Copyright (C) 2019 MediaTek Inc.
-> + * Author Terry Chang <terry.chang@mediatek.com>
-> + */
-> +#include <linux/clk.h>
-> +#include <linux/fs.h>
-> +#include <linux/gpio.h>
-> +#include <linux/init.h>
-> +#include <linux/input/matrix_keypad.h>
-> +#include <linux/interrupt.h>
-> +#include <linux/io.h>
-> +#include <linux/module.h>
-> +#include <linux/of_address.h>
-> +#include <linux/of_irq.h>
-> +#include <linux/pinctrl/consumer.h>
-> +#include <linux/platform_device.h>
-> +#include <linux/regmap.h>
-> +
-> +#define KPD_NAME	"mtk-kpd"
-> +
-> +#define KP_STA				0x0000
-> +#define KP_MEM1				0x0004
-> +#define KP_MEM2				0x0008
-> +#define KP_MEM3				0x000c
-> +#define KP_MEM4				0x0010
-> +#define KP_MEM5				0x0014
-> +#define KP_DEBOUNCE			0x0018
-> +#define KP_SEL				0x0020
-> +#define KP_EN				0x0024
-> +
-> +#define KP_COL0_SEL		BIT(10)
-> +#define KP_COL1_SEL		BIT(11)
-> +#define KP_COL2_SEL		BIT(12)
-> +
-> +#define KPD_DEBOUNCE_MASK	GENMASK_ULL(13, 0)
-> +
-> +#define KPD_NUM_MEMS	5
-> +#define KPD_MEM5_BITS	8
-> +#define KPD_NUM_KEYS	72	/* 4 * 16 + KPD_MEM5_BITS */
-> +
-> +struct mtk_keypad {
-> +	struct input_dev *input_dev;
-> +	struct clk *clk;
-> +	void __iomem *base;
-> +	unsigned int irqnr;
-> +	bool wakeup;
-> +	u32 key_debounce;
-> +	u32 n_rows;
-> +	u32 n_cols;
-> +	u32 keymap_state[KPD_NUM_MEMS];
+MediaTek's smartphone project actual usage does need to know current value
+(in mA) in procedure of finding the best driving setting.
+The steps in the procedure is like as follow:
 
-	DECLARE_BITMAP(keymap_state, KPD_NUM_KEYS);
+1. set driving setting field in setting register as 0, measure waveform,
+   perform test, and etc.
+2. set driving setting field in setting register as 1, measure waveform,
+   perform test, and etc.
+...
+n. set driving setting field in setting register as n-1, measure
+   waveform, perform test, and etc.
+Check the results of steps 1~n and adopt the setting that get best result.
 
-> +};
-> +
-> +static void kpd_get_keymap_state(void __iomem *kp_base, u32 state[])
-> +{
-> +	memset_io(state, 0xff, KPD_NUM_MEMS);
-> +	memcpy_fromio(state, kp_base, KPD_NUM_MEMS);
-> +}
-> +
-> +static irqreturn_t kpd_irq_handler(int irq, void *dev_id)
-> +{
-> +	/* use _nosync to avoid deadlock */
-> +	struct mtk_keypad *keypad = dev_id;
-> +	unsigned short *keycode = keypad->input_dev->keycode;
-> +	u32 new_state[KPD_NUM_MEMS], mask;
-	DECLARE_BITMAP(new_state, KPD_NUM_KEYS);
-	DECLARE_BITMAP(changed_state, KPD_NUM_KEYS);
-> +	unsigned long change = 0;
-> +	int bit_nr;
-> +	int pressed;
-> +	u32 row_shift = get_count_order(keypad->n_cols);
-> +	unsigned short code;
-> +	int i;
-> +
-> +	disable_irq_nosync(keypad->irqnr);
+This procedure does need to know the mapping between current to register
+value.
+Therefore, setting driving without mapping current is more practical for
+MediaTek's smartphone usage.
 
-Not needed.
+Signed-off-by: Light Hsieh <light.hsieh@mediatek.com>
+---
+ drivers/pinctrl/mediatek/pinctrl-mt6765.c        |  4 ++--
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c | 12 ++++++++++++
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h |  5 +++++
+ 3 files changed, 19 insertions(+), 2 deletions(-)
 
-
-> +
-> +	kpd_get_keymap_state(keypad->base, new_state);
-
-	bitmap_xor(changed_state, keypad->keymap_state, new_state,
-		   KPD_NUM_KEYS);
-
-	for_each_set_bit(bit_nr, changed_state, KPD_NUM_KEYS) {
-		pressed = test_bit(new_state, bit_nr);
-
-		...
-	}
-
-> +
-> +	for (i = 0; i < KPD_NUM_MEMS; i++) {
-> +		change = new_state[i] ^ keypad->keymap_state[i];
-> +		if (!change)
-> +			continue;
-> +
-> +		for_each_set_bit(bit_nr, &change, 32) {
-> +			mask = 1 << bit_nr;
-> +			pressed = (new_state[i] & mask) == 0U;
-> +			dev_dbg(&keypad->input_dev->dev,
-> +				"%s", pressed ? "pressed" : "released");
-> +
-> +			code = keycode[MATRIX_SCAN_CODE(i, bit_nr, row_shift)];
-> +
-> +			input_report_key(keypad->input_dev, code, pressed);
-> +			input_sync(keypad->input_dev);
-> +
-> +			dev_dbg(&keypad->input_dev->dev,
-> +				"report Linux keycode = %d\n", code);
-> +		}
-> +	}
-> +
-> +	memcpy(keypad->keymap_state, new_state, sizeof(new_state));
-
-	bitmap_copy(keypad->keymap_state, new_state, KPD_NUM_KEYS);
-
-> +
-> +	enable_irq(keypad->irqnr);
-
-Not needed.
-
-> +
-> +	return IRQ_HANDLED;
-> +}
-> +
-> +static int kpd_get_dts_info(struct mtk_keypad *keypad)
-> +{
-> +	int ret;
-> +	struct device *dev = keypad->input_dev->dev.parent;
-> +	struct device_node *node = dev->of_node;
-> +
-> +	ret = matrix_keypad_parse_properties(dev, &keypad->n_rows,
-> +					     &keypad->n_cols);
-> +
-> +	if (ret) {
-> +		dev_err(dev, "failed to parse keypad params.\n");
-> +		return ret;
-> +	}
-> +
-> +	ret = of_property_read_u32(node, "mediatek,debounce-us",
-> +				   &keypad->key_debounce);
-
-Please use device_property_read_*() APIs instead of of_ ones.
-
-Thanks.
-
+diff --git a/drivers/pinctrl/mediatek/pinctrl-mt6765.c b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
+index 32451e8..1212264 100644
+--- a/drivers/pinctrl/mediatek/pinctrl-mt6765.c
++++ b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
+@@ -1077,8 +1077,8 @@
+ 	.bias_disable_get = mtk_pinconf_bias_disable_get,
+ 	.bias_set = mtk_pinconf_bias_set,
+ 	.bias_get = mtk_pinconf_bias_get,
+-	.drive_set = mtk_pinconf_drive_set_rev1,
+-	.drive_get = mtk_pinconf_drive_get_rev1,
++	.drive_set = mtk_pinconf_drive_set_raw,
++	.drive_get = mtk_pinconf_drive_get_raw,
+ 	.adv_pull_get = mtk_pinconf_adv_pull_get,
+ 	.adv_pull_set = mtk_pinconf_adv_pull_set,
+ };
+diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+index d63e05e..2247eae 100644
+--- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
++++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c
+@@ -608,6 +608,18 @@ int mtk_pinconf_drive_get_rev1(struct mtk_pinctrl *hw,
+ 	return 0;
+ }
+ 
++int mtk_pinconf_drive_set_raw(struct mtk_pinctrl *hw,
++			       const struct mtk_pin_desc *desc, u32 arg)
++{
++	return mtk_hw_set_value(hw, desc, PINCTRL_PIN_REG_DRV, arg);
++}
++
++int mtk_pinconf_drive_get_raw(struct mtk_pinctrl *hw,
++			       const struct mtk_pin_desc *desc, int *val)
++{
++	return mtk_hw_get_value(hw, desc, PINCTRL_PIN_REG_DRV, val);
++}
++
+ int mtk_pinconf_adv_pull_set(struct mtk_pinctrl *hw,
+ 			     const struct mtk_pin_desc *desc, bool pullup,
+ 			     u32 arg)
+diff --git a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
+index 1b7da42..75d0e07 100644
+--- a/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
++++ b/drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h
+@@ -288,6 +288,11 @@ int mtk_pinconf_drive_set_rev1(struct mtk_pinctrl *hw,
+ int mtk_pinconf_drive_get_rev1(struct mtk_pinctrl *hw,
+ 			       const struct mtk_pin_desc *desc, int *val);
+ 
++int mtk_pinconf_drive_set_raw(struct mtk_pinctrl *hw,
++			       const struct mtk_pin_desc *desc, u32 arg);
++int mtk_pinconf_drive_get_raw(struct mtk_pinctrl *hw,
++			       const struct mtk_pin_desc *desc, int *val);
++
+ int mtk_pinconf_adv_pull_set(struct mtk_pinctrl *hw,
+ 			     const struct mtk_pin_desc *desc, bool pullup,
+ 			     u32 arg);
 -- 
-Dmitry
-
+1.8.1.1.dirty
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
