@@ -2,65 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C3ADE1478B1
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Jan 2020 07:50:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D6CCF1478BC
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Jan 2020 08:00:08 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=BHH3nEhtZP09Cu94gGOVvOj+H248BB/tJQBDheY812o=; b=XnxwSDIQglkK4f
-	3BM7BzMM+LJ32q7EuNP90zik7vySCHRj2IqGyHt+kTsMU+RirHa231nRuol4XSnNwrRwgAMTT0rbk
-	PVwFJNrZfvrYavIWpDYrUM+QdANwJib9FJsuIfZJn+d61RIBXxsQojdP62zW3Moe5yhA5JzgcDdU4
-	oGiOEhDb5n7sl5sILRat5M+hvKRzXfklRKCOf85QyAfZ7q2hU/Acfyph9VmUDAQ6m5m5O0LV8A1Z1
-	N1KV/coewttKxhZDTGCqrKBRhiPZP5OphRNeHR3RxJ8RJX94T+LaDdlcMLHQYxe9j0zNghoSNobCX
-	Oa6LjZ1LqFygrTkXArtg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=PJ1kQaOL5kmqtpxjxJqJFq35Bkc8jfAg1P/ooAIWRJk=; b=HsNKrJ91nt524P
+	pfwFWwhnXi/3n5s0JCo7IWjRzJAKo7b4I1W2XErUSHWLJ30crub51ECYw3ZpcC+qVkJBeu9uS761f
+	ogSf9fL3OKf65zIGUuQwV/fx9lb6BNSbRrrgEJLA1xVBrK1TugMvW3GcOaxBkaHxkfksLrPEuQlJD
+	hfJcSkTIPN6wV5WSkzCmTNDi7R4zoiJTetwD6FBPDsdEY4tJkGi7hcRwHEhcppLocPYdE6NZlurAW
+	3DVfwD0mO1tIPYdLiA3fUVuzs7pL4+Q31yrEGmh/QDZ+DGCVDZ/9GMxl3Lr3L9oeNpF24iV/zrcbt
+	kBWJpWK6hO3sIXRIvX+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iusnK-0002TY-5B; Fri, 24 Jan 2020 06:50:19 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1iuswj-0006vz-2R; Fri, 24 Jan 2020 07:00:01 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iusmi-0001yq-Mu; Fri, 24 Jan 2020 06:49:42 +0000
-X-UUID: 81694a39251f433d9320fb200f5d53df-20200123
+ id 1iuswW-0006nd-L2; Fri, 24 Jan 2020 06:59:50 +0000
+X-UUID: 42917ee3b45c450eb5f7185589ba59d9-20200123
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=9ZQEtQSDH2l7X4gZYfdkXUBut/YYbTfvmWSTS2DhTxg=; 
- b=D10F9DWFCdvj4U79P4WJKEhizwxu5CWKXi9GlCvouB108AP/tFyU+Z3j+umHGI1/9OAR/tzCQMk8ZFQNZ9X23jxCb0Ll0IVMfL9+bXrYIaKpsNdNx9HE1MlxgH+Nt62/C+rduZTOJpNZEb/7yH0YiYRHobB/n39qJO13Uj3hzT8=;
-X-UUID: 81694a39251f433d9320fb200f5d53df-20200123
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=r4uFNCZlrJfbAJ6zHc5lh0WBsNxu96UHiQ4PJMYHYz8=; 
+ b=V5Vm7bIkKPgkjZPA86djf7vhc3N01MAGvA5lFFUmR3BwIK17VzRzPC64K9t/jjk36K+bQP/i5Wg0xeKAV7EBgVJmjbBVpgh/31RqGRL0R+jAsQKNzVH3VPHwn4alSaQsOWNEYIyzUz4G7XYX7OEqTxUUNFGy+UAtGeM+c5N08OA=;
+X-UUID: 42917ee3b45c450eb5f7185589ba59d9-20200123
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1067299609; Thu, 23 Jan 2020 22:49:31 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 23 Jan 2020 22:50:41 -0800
+ with ESMTP id 1834949673; Thu, 23 Jan 2020 22:59:45 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 23 Jan 2020 22:49:42 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 24 Jan 2020 14:48:53 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 Jan 2020 14:48:24 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Fri, 24 Jan 2020 14:48:57 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v1 0/5] MediaTek UFS vendor implemenation part III and
- Auto-Hibern8 fix
-Date: Fri, 24 Jan 2020 14:49:21 +0800
-Message-ID: <20200124064926.29472-1-stanley.chu@mediatek.com>
+Subject: [PATCH v1 1/5] scsi: ufs-mediatek: ensure UniPro is not powered down
+ before linkup
+Date: Fri, 24 Jan 2020 14:49:22 +0800
+Message-ID: <20200124064926.29472-2-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200124064926.29472-1-stanley.chu@mediatek.com>
+References: <20200124064926.29472-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: EE6B3AAFE2976FDE2B0D0A4B718E0322C10E6D114694D9985155B9BB79974CB92000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200123_224940_760017_4AB82C6F 
-X-CRM114-Status: UNSURE (   6.30  )
+X-CRM114-CacheID: sfid-20200123_225948_697951_DD2B9875 
+X-CRM114-Status: UNSURE (   9.63  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -96,31 +101,70 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+Mediatek Chipsets will enter proprietary UniPro low-power mode during
+suspend with link status as hibern8. Make sure leaving such low-power
+mode before linkup to avoid any possible recovery path.
 
-This series provides MediaTek vendor implementations and some general fixes.
+In the same time, re-factor related funciton to improve code readability.
 
-- General fixes
-	- Fix Auto-Hibern8 error detection
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ drivers/scsi/ufs/ufs-mediatek.c | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
 
-- MediaTek vendor implementations
-	- Ensure UniPro is powered on before every link startup
-	- Support linkoff state during suspend
-	- Gate reference clock for Auto-Hibern8 case
-
-Stanley Chu (5):
-  scsi: ufs-mediatek: ensure UniPro is not powered down before linkup
-  scsi: ufs-mediatek: support linkoff state during suspend
-  scsi: ufs: add ufshcd_is_auto_hibern8_enabled facility
-  scsi: ufs: fix auto-hibern8 error detection
-  scsi: ufs-mediatek: gate ref-clk during Auto-Hibern8
-
- drivers/scsi/ufs/ufs-mediatek.c | 65 +++++++++++++++++++++------------
- drivers/scsi/ufs/ufs-mediatek.h | 12 ++++++
- drivers/scsi/ufs/ufshcd.c       |  3 +-
- drivers/scsi/ufs/ufshcd.h       |  6 +++
- 4 files changed, 62 insertions(+), 24 deletions(-)
-
+diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
+index 53eae5fe2ade..7ac838cc15d1 100644
+--- a/drivers/scsi/ufs/ufs-mediatek.c
++++ b/drivers/scsi/ufs/ufs-mediatek.c
+@@ -30,6 +30,11 @@
+ #define ufs_mtk_device_reset_ctrl(high, res) \
+ 	ufs_mtk_smc(UFS_MTK_SIP_DEVICE_RESET, high, res)
+ 
++#define ufs_mtk_unipro_powerdown(hba, powerdown) \
++	ufshcd_dme_set(hba, \
++		       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0), \
++		       powerdown)
++
+ static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
+ {
+ 	u32 tmp;
+@@ -290,6 +295,8 @@ static int ufs_mtk_pre_link(struct ufs_hba *hba)
+ 	int ret;
+ 	u32 tmp;
+ 
++	ufs_mtk_unipro_powerdown(hba, 0);
++
+ 	/* disable deep stall */
+ 	ret = ufshcd_dme_get(hba, UIC_ARG_MIB(VS_SAVEPOWERCONTROL), &tmp);
+ 	if (ret)
+@@ -390,9 +397,7 @@ static int ufs_mtk_link_set_hpm(struct ufs_hba *hba)
+ 	if (err)
+ 		return err;
+ 
+-	err = ufshcd_dme_set(hba,
+-			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
+-			     0);
++	err = ufs_mtk_unipro_powerdown(hba, 0);
+ 	if (err)
+ 		return err;
+ 
+@@ -413,14 +418,10 @@ static int ufs_mtk_link_set_lpm(struct ufs_hba *hba)
+ {
+ 	int err;
+ 
+-	err = ufshcd_dme_set(hba,
+-			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
+-			     1);
++	err = ufs_mtk_unipro_powerdown(hba, 1);
+ 	if (err) {
+ 		/* Resume UniPro state for following error recovery */
+-		ufshcd_dme_set(hba,
+-			       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
+-			       0);
++		ufs_mtk_unipro_powerdown(hba, 0);
+ 		return err;
+ 	}
+ 
 -- 
 2.18.0
 _______________________________________________
