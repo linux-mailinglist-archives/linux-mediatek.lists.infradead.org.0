@@ -2,55 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D9D714844A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Jan 2020 12:41:56 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3DF1F148AFD
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Jan 2020 16:09:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8dwnUT9p79q7u5hdTceMqYP5V56Si3ZNkHRZfID0Wdc=; b=mQvvmudRAh2DgB
-	Q0n8NFejAaBoFN8Iq1sHVMQpDt31oonPT1i6E4OoQ+cLWDdhybeJIFm7XqNLn4fE78RjB0B2helZw
-	p9ViXJq2A5/2i44lUHXC/FaXGuYXu10GUylZTwsbkbX1xFEC53Hv6uhv5wVqyGW4SnopLrmJEWxm1
-	jetpVkwVFRomyb59tMDOdYzC2RBAzGwi2nqp77CAIUlj7tQLgMq6E9fdzfB3vjT7TuhkHmArdz8Kj
-	BzOuOSaakW07gJwil2WdHztM6Oq1QPjv/cDxH1u1WQfxtxWOB7jtw3x7QC5Vm/miTFLW6JkwJM+eR
-	krwsVjhmUiZ5Sy4CHnTA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4zqJxR62hrslpqN9SZ0AEXWqn1pYi3kRcAEO11WY674=; b=biSfEhWrbfBAtg
+	ApVVKf5EpeGEpSbBABSmb0XfZ9JFoQbiUUrcQ3/7C6nQcUB3QFqp4LjjF4klyzN51N+D6+G11xR9n
+	WlV0ZSqspk92rFtdSFbhzgNjS/MAsTThusfI8ZTiofho9caPG8LF/vV26ZE32ZFDZFye90/TgjTNH
+	NFW1xAb+aXnHHNaxOt8+fLrys/PlHSyPEFJTX9WHP8UwRQqyLecev354HfuzbsiFxKv+Okphf8Q2P
+	syjDz4fBC2ijSKRyg2f+ggdgIeRPNrAUCkV56DVwHeicV5obAn4XDVZh6M8XkI+VFXBUxnmGABGoJ
+	qC4M5IBF3Qzr9tBCaStA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iuxLR-0005Nh-QG; Fri, 24 Jan 2020 11:41:49 +0000
-Received: from mx2.suse.de ([195.135.220.15])
+	id 1iv0aF-0005m7-46; Fri, 24 Jan 2020 15:09:19 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iuxKK-0004MQ-NV; Fri, 24 Jan 2020 11:40:42 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 5475CABED;
- Fri, 24 Jan 2020 11:40:39 +0000 (UTC)
-From: =?UTF-8?q?Michal=20Koutn=C3=BD?= <mkoutny@suse.com>
-To: cgroups@vger.kernel.org
-Subject: [PATCH v2 3/3] kselftest/cgroup: add cgroup destruction test
-Date: Fri, 24 Jan 2020 12:40:17 +0100
-Message-Id: <20200124114017.8363-4-mkoutny@suse.com>
-X-Mailer: git-send-email 2.24.1
-In-Reply-To: <20200124114017.8363-1-mkoutny@suse.com>
-References: <20200120145635.GA30904@blackbody.suse.cz>
- <20200124114017.8363-1-mkoutny@suse.com>
+ id 1iv0Yv-0004eb-Sh; Fri, 24 Jan 2020 15:07:59 +0000
+X-UUID: 00531f33c5d2450f8260c6eac90104b3-20200124
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=4y9eiBw5IAfEzm5r7ldiQUyvda3M0QLb1AsObdV4hDc=; 
+ b=WA7OgJqoT6Jwb40V11zwpJQ1m/EQbeUsNTMezeB4V2TdNzrrK8EDfSnmPmRP6RSiZgN5EeJQSl4Bxx1StKn/V4lgbGZpxyRzHdGR1bA0Ygvh7niisq3bzomofbwi28cATOgi2XGPFlXXWwNO1AFsZC7tyTWcQXL4kJzMEhhQqCI=;
+X-UUID: 00531f33c5d2450f8260c6eac90104b3-20200124
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1164873769; Fri, 24 Jan 2020 07:07:53 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 Jan 2020 07:07:51 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 24 Jan 2020 23:06:30 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 24 Jan 2020 23:07:15 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
+Subject: [PATCH v2 0/5] MediaTek UFS vendor implemenation part III and
+ Auto-Hibern8 fix
+Date: Fri, 24 Jan 2020 23:07:38 +0800
+Message-ID: <20200124150743.15110-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200124_034041_096995_15A1F7FB 
-X-CRM114-Status: GOOD (  14.83  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200124_070757_940633_BF4EE642 
+X-CRM114-Status: UNSURE (   5.99  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [195.135.220.15 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,81 +87,48 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linger.lee@mediatek.com, tomcherry@google.com, shuah@kernel.org,
- linux-kernel@vger.kernel.org, surenb@google.com, tj@kernel.org,
- lizefan@huawei.com, linux-mediatek@lists.infradead.org,
- linux-kselftest@vger.kernel.org, hannes@cmpxchg.org, matthias.bgg@gmail.com,
- alex.shi@linux.alibaba.com, kernel-team@android.com, guro@fb.com,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Stanley Chu <stanley.chu@mediatek.com>, bvanassche@acm.org,
+ andy.teng@mediatek.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, beanhuo@micron.com,
+ linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RnJvbTogU3VyZW4gQmFnaGRhc2FyeWFuIDxzdXJlbmJAZ29vZ2xlLmNvbT4KCkFkZCBuZXcgdGVz
-dCB0byB2ZXJpZnkgdGhhdCBhIGNncm91cCB3aXRoIGRlYWQgcHJvY2Vzc2VzIGNhbiBiZSBkZXN0
-cm95ZWQuClRoZSB0ZXN0IHNwYXducyBhIGNoaWxkIHByb2Nlc3Mgd2hpY2ggYWxsb2NhdGVzIGFu
-ZCB0b3VjaGVzIDEwME1CIG9mIFJBTQp0byBlbnN1cmUgcHJvbG9uZ2VkIGV4aXQuIFN1YnNlcXVl
-bnRseSBpdCBraWxscyB0aGUgY2hpbGQsIHdhaXRzIHVudGlsCnRoZSBjZ3JvdXAgY29udGFpbmlu
-ZyB0aGUgY2hpbGQgaXMgZW1wdHkgYW5kIGRlc3Ryb3lzIHRoZSBjZ3JvdXAuCgpTaWduZWQtb2Zm
-LWJ5OiBTdXJlbiBCYWdoZGFzYXJ5YW4gPHN1cmVuYkBnb29nbGUuY29tPgpbbWtvdXRueUBzdXNl
-LmNvbTogRml4IHR5cG8gaW4gdGVzdF9jZ2NvcmVfZGVzdHJveSBjb21tZW50XQpBY2tlZC1ieTog
-TWljaGFsIEtvdXRuw70gPG1rb3V0bnlAc3VzZS5jb20+ClNpZ25lZC1vZmYtYnk6IE1pY2hhbCBL
-b3V0bsO9IDxta291dG55QHN1c2UuY29tPgotLS0KIHRvb2xzL3Rlc3Rpbmcvc2VsZnRlc3RzL2Nn
-cm91cC90ZXN0X2NvcmUuYyB8IDExMyArKysrKysrKysrKysrKysrKysrKysKIDEgZmlsZSBjaGFu
-Z2VkLCAxMTMgaW5zZXJ0aW9ucygrKQoKZGlmZiAtLWdpdCBhL3Rvb2xzL3Rlc3Rpbmcvc2VsZnRl
-c3RzL2Nncm91cC90ZXN0X2NvcmUuYyBiL3Rvb2xzL3Rlc3Rpbmcvc2VsZnRlc3RzL2Nncm91cC90
-ZXN0X2NvcmUuYwppbmRleCBjNWNhNjY5ZmViMmIuLjc2YzlkZDU3OGJhNSAxMDA2NDQKLS0tIGEv
-dG9vbHMvdGVzdGluZy9zZWxmdGVzdHMvY2dyb3VwL3Rlc3RfY29yZS5jCisrKyBiL3Rvb2xzL3Rl
-c3Rpbmcvc2VsZnRlc3RzL2Nncm91cC90ZXN0X2NvcmUuYwpAQCAtMiw3ICsyLDEwIEBACiAKICNp
-bmNsdWRlIDxsaW51eC9saW1pdHMuaD4KICNpbmNsdWRlIDxzeXMvdHlwZXMuaD4KKyNpbmNsdWRl
-IDxzeXMvbW1hbi5oPgorI2luY2x1ZGUgPHN5cy93YWl0Lmg+CiAjaW5jbHVkZSA8dW5pc3RkLmg+
-CisjaW5jbHVkZSA8ZmNudGwuaD4KICNpbmNsdWRlIDxzdGRpby5oPgogI2luY2x1ZGUgPGVycm5v
-Lmg+CiAjaW5jbHVkZSA8c2lnbmFsLmg+CkBAIC0xMiw2ICsxNSwxMTUgQEAKICNpbmNsdWRlICIu
-Li9rc2VsZnRlc3QuaCIKICNpbmNsdWRlICJjZ3JvdXBfdXRpbC5oIgogCitzdGF0aWMgaW50IHRv
-dWNoX2Fub24oY2hhciAqYnVmLCBzaXplX3Qgc2l6ZSkKK3sKKwlpbnQgZmQ7CisJY2hhciAqcG9z
-ID0gYnVmOworCisJZmQgPSBvcGVuKCIvZGV2L3VyYW5kb20iLCBPX1JET05MWSk7CisJaWYgKGZk
-IDwgMCkKKwkJcmV0dXJuIC0xOworCisJd2hpbGUgKHNpemUgPiAwKSB7CisJCXNzaXplX3QgcmV0
-ID0gcmVhZChmZCwgcG9zLCBzaXplKTsKKworCQlpZiAocmV0IDwgMCkgeworCQkJaWYgKGVycm5v
-ICE9IEVJTlRSKSB7CisJCQkJY2xvc2UoZmQpOworCQkJCXJldHVybiAtMTsKKwkJCX0KKwkJfSBl
-bHNlIHsKKwkJCXBvcyArPSByZXQ7CisJCQlzaXplIC09IHJldDsKKwkJfQorCX0KKwljbG9zZShm
-ZCk7CisKKwlyZXR1cm4gMDsKK30KKworc3RhdGljIGludCBhbGxvY19hbmRfdG91Y2hfYW5vbl9u
-b2V4aXQoY29uc3QgY2hhciAqY2dyb3VwLCB2b2lkICphcmcpCit7CisJaW50IHBwaWQgPSBnZXRw
-cGlkKCk7CisJc2l6ZV90IHNpemUgPSAoc2l6ZV90KWFyZzsKKwl2b2lkICpidWY7CisKKwlidWYg
-PSBtbWFwKE5VTEwsIHNpemUsIFBST1RfUkVBRCB8IFBST1RfV1JJVEUsIE1BUF9QUklWQVRFIHwg
-TUFQX0FOT04sCisJCSAgIDAsIDApOworCWlmIChidWYgPT0gTUFQX0ZBSUxFRCkKKwkJcmV0dXJu
-IC0xOworCisJaWYgKHRvdWNoX2Fub24oKGNoYXIgKilidWYsIHNpemUpKSB7CisJCW11bm1hcChi
-dWYsIHNpemUpOworCQlyZXR1cm4gLTE7CisJfQorCisJd2hpbGUgKGdldHBwaWQoKSA9PSBwcGlk
-KQorCQlzbGVlcCgxKTsKKworCW11bm1hcChidWYsIHNpemUpOworCXJldHVybiAwOworfQorCisv
-KgorICogQ3JlYXRlIGEgY2hpbGQgcHJvY2VzcyB0aGF0IGFsbG9jYXRlcyBhbmQgdG91Y2hlcyAx
-MDBNQiwgdGhlbiB3YWl0cyB0byBiZQorICoga2lsbGVkLiBXYWl0IHVudGlsIHRoZSBjaGlsZCBp
-cyBhdHRhY2hlZCB0byB0aGUgY2dyb3VwLCBraWxsIGFsbCBwcm9jZXNzZXMKKyAqIGluIHRoYXQg
-Y2dyb3VwIGFuZCB3YWl0IHVudGlsICJjZ3JvdXAucHJvY3MiIGlzIGVtcHR5LiBBdCB0aGlzIHBv
-aW50IHRyeSB0bworICogZGVzdHJveSB0aGUgZW1wdHkgY2dyb3VwLiBUaGUgdGVzdCBoZWxwcyBk
-ZXRlY3QgcmFjZSBjb25kaXRpb25zIGJldHdlZW4KKyAqIGR5aW5nIHByb2Nlc3NlcyBsZWF2aW5n
-IHRoZSBjZ3JvdXAgYW5kIGNncm91cCBkZXN0cnVjdGlvbiBwYXRoLgorICovCitzdGF0aWMgaW50
-IHRlc3RfY2djb3JlX2Rlc3Ryb3koY29uc3QgY2hhciAqcm9vdCkKK3sKKwlpbnQgcmV0ID0gS1NG
-VF9GQUlMOworCWNoYXIgKmNnX3Rlc3QgPSBOVUxMOworCWludCBjaGlsZF9waWQ7CisJY2hhciBi
-dWZbUEFHRV9TSVpFXTsKKworCWNnX3Rlc3QgPSBjZ19uYW1lKHJvb3QsICJjZ190ZXN0Iik7CisK
-KwlpZiAoIWNnX3Rlc3QpCisJCWdvdG8gY2xlYW51cDsKKworCWZvciAoaW50IGkgPSAwOyBpIDwg
-MTA7IGkrKykgeworCQlpZiAoY2dfY3JlYXRlKGNnX3Rlc3QpKQorCQkJZ290byBjbGVhbnVwOwor
-CisJCWNoaWxkX3BpZCA9IGNnX3J1bl9ub3dhaXQoY2dfdGVzdCwgYWxsb2NfYW5kX3RvdWNoX2Fu
-b25fbm9leGl0LAorCQkJCQkgICh2b2lkICopIE1CKDEwMCkpOworCisJCWlmIChjaGlsZF9waWQg
-PCAwKQorCQkJZ290byBjbGVhbnVwOworCisJCS8qIHdhaXQgZm9yIHRoZSBjaGlsZCB0byBlbnRl
-ciBjZ3JvdXAgKi8KKwkJaWYgKGNnX3dhaXRfZm9yX3Byb2NfY291bnQoY2dfdGVzdCwgMSkpCisJ
-CQlnb3RvIGNsZWFudXA7CisKKwkJaWYgKGNnX2tpbGxhbGwoY2dfdGVzdCkpCisJCQlnb3RvIGNs
-ZWFudXA7CisKKwkJLyogd2FpdCBmb3IgY2dyb3VwIHRvIGJlIGVtcHR5ICovCisJCXdoaWxlICgx
-KSB7CisJCQlpZiAoY2dfcmVhZChjZ190ZXN0LCAiY2dyb3VwLnByb2NzIiwgYnVmLCBzaXplb2Yo
-YnVmKSkpCisJCQkJZ290byBjbGVhbnVwOworCQkJaWYgKGJ1ZlswXSA9PSAnXDAnKQorCQkJCWJy
-ZWFrOworCQkJdXNsZWVwKDEwMDApOworCQl9CisKKwkJaWYgKHJtZGlyKGNnX3Rlc3QpKQorCQkJ
-Z290byBjbGVhbnVwOworCisJCWlmICh3YWl0cGlkKGNoaWxkX3BpZCwgTlVMTCwgMCkgPCAwKQor
-CQkJZ290byBjbGVhbnVwOworCX0KKwlyZXQgPSBLU0ZUX1BBU1M7CitjbGVhbnVwOgorCWlmIChj
-Z190ZXN0KQorCQljZ19kZXN0cm95KGNnX3Rlc3QpOworCWZyZWUoY2dfdGVzdCk7CisJcmV0dXJu
-IHJldDsKK30KKwogLyoKICAqIEEoMCkgLSBCKDApIC0gQygxKQogICogICAgICAgIFwgRCgwKQpA
-QCAtNTEyLDYgKzYyNCw3IEBAIHN0cnVjdCBjb3JlY2dfdGVzdCB7CiAJVCh0ZXN0X2NnY29yZV9w
-b3B1bGF0ZWQpLAogCVQodGVzdF9jZ2NvcmVfcHJvY19taWdyYXRpb24pLAogCVQodGVzdF9jZ2Nv
-cmVfdGhyZWFkX21pZ3JhdGlvbiksCisJVCh0ZXN0X2NnY29yZV9kZXN0cm95KSwKIH07CiAjdW5k
-ZWYgVAogCi0tIAoyLjI0LjEKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlz
-dHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3Rp
-bmZvL2xpbnV4LW1lZGlhdGVrCg==
+Hi,
+
+This series provides MediaTek vendor implementations and some general fixes.
+
+- General fixes
+	- Fix Auto-Hibern8 error detection
+
+- MediaTek vendor implementations
+	- Ensure UniPro is powered on before every link startup
+	- Support linkoff state during suspend
+	- Gate reference clock for Auto-Hibern8 case
+
+v1 -> v2
+	- Fix and refine commit messages.
+
+Stanley Chu (5):
+  scsi: ufs-mediatek: ensure UniPro is not powered down before linkup
+  scsi: ufs-mediatek: support linkoff state during suspend
+  scsi: ufs: add ufshcd_is_auto_hibern8_enabled facility
+  scsi: ufs: fix auto-hibern8 error detection
+  scsi: ufs-mediatek: gate ref-clk during Auto-Hibern8
+
+ drivers/scsi/ufs/ufs-mediatek.c | 65 +++++++++++++++++++++------------
+ drivers/scsi/ufs/ufs-mediatek.h | 12 ++++++
+ drivers/scsi/ufs/ufshcd.c       |  3 +-
+ drivers/scsi/ufs/ufshcd.h       |  6 +++
+ 4 files changed, 62 insertions(+), 24 deletions(-)
+
+-- 
+2.18.0
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
