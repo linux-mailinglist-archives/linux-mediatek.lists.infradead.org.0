@@ -2,82 +2,122 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C266E14AE10
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Jan 2020 03:24:25 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4540414BD20
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Jan 2020 16:41:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9tTMuLxSWdjhMKrhJ9iX4cBGdonWlN5DLiAog0LUpj4=; b=au8d+SIj5e+UvQ
-	vAQTX4TOLMmOGmo3wi1tUe81Giust5/hOFKakPN7BZwr4kCc6tPnHKenQex2Muwn17vCjwIdwYa8y
-	gZjpeMpruH/cZJ7UrzGCcfTvKwHY32XHZmdd79qj6KR4P7T+sc9RWZb8UsPl6IlZ7W/7CNJylsIf7
-	1Ahtrk2+W6rIHBVAUlmaj1ATKsdDD1vkQwGvM727SXfhPfdjFhNGnVKu8Bc22vtDBekSkZVwSJk3N
-	lxmad2ZHTEA/30zmqANk/fRG4mRPYLciujoyVz+nBAcQ22I+zmPOJyS5LF7xqJ/qTehNoL4rL2t++
-	2V5iSIRNMp2wxlmmtoXw==;
+	List-Owner; bh=ii6lea9xr+5rYa8I0dC/muolNYXC9Bav6Gq/4H0oz6Q=; b=XKErzdLtZBhx2y
+	5HIodZhNaP4PbFz09vKqD8U932sL2uMTGroHLsSmwII7/+26t1ujYVB6QIqkFcGmo7eiD1khIxo7U
+	qTJVU0tAaO6yTWPOmtTk8gKS3kxe1g0KnjnbK2Cy6bKhD4LtMQuVf7T28Y1oGCsbplZLIb0IxPkAI
+	iV01tnAyY/7Jbni+p9dZ7oyNr2ALY0qSjJHH+0h/AvsACQ14DIxmmWR9UdJcUkyW9czCIziDKk7RC
+	D3y1VnH7wbvA0eHDV1TWK3LECw8xarTXCL8NTXlBqtEl1fddAHyWEuDe64KrpXinBgovV/5TsZ1oA
+	I+/2JX/ZLPeUIEesYlfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iwGY1-0004Kw-1f; Tue, 28 Jan 2020 02:24:13 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iwSzD-0007ET-I8; Tue, 28 Jan 2020 15:41:07 +0000
+Received: from mail-mw2nam10on2049.outbound.protection.outlook.com
+ ([40.107.94.49] helo=NAM10-MW2-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iwGXo-0004C5-7m; Tue, 28 Jan 2020 02:24:02 +0000
-X-UUID: 8d10e93ab4234aad89416d7a412427ef-20200127
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=p0nnIJ+ph00THpKCeQPEgq8IEXgYibuUyEVe40bgwLo=; 
- b=tweU/fVXTQAo6VX3cUKRcrPqoH3joTikGDwRk6ERECb30fZcp85+4Jnoa0QemtlMTk6j9oO5O/hgle1Q0NtqxqNfOHXOraLzLzKF1+8lrie2+0hwPhPDyGIOIjOV5gG25lwxLLzSATpZJa7YbPSeYj9ILx7ZsNAT4+zs5Io+xd8=;
-X-UUID: 8d10e93ab4234aad89416d7a412427ef-20200127
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jungo.lin@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1567482917; Mon, 27 Jan 2020 18:23:51 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 27 Jan 2020 18:15:09 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 28 Jan 2020 10:13:47 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 28 Jan 2020 10:14:00 +0800
-Message-ID: <1580177627.13350.8.camel@mtksdccf07>
-Subject: Re: [v6, 5/5] media: platform: Add Mediatek ISP P1 V4L2 device driver
-From: Jungo Lin <jungo.lin@mediatek.com>
-To: Hans Verkuil <hverkuil-cisco@xs4all.nl>
-Date: Tue, 28 Jan 2020 10:13:47 +0800
-In-Reply-To: <c481734a-c706-2ea9-3888-ab2fb9c805ef@xs4all.nl>
-References: <Jungo Lin <jungo.lin@mediatek.com>
- <20191219054930.29513-1-jungo.lin@mediatek.com>
- <20191219054930.29513-6-jungo.lin@mediatek.com>
- <c481734a-c706-2ea9-3888-ab2fb9c805ef@xs4all.nl>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1iwSws-0003vo-1v; Tue, 28 Jan 2020 15:38:43 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=JtZW/HbWaJphMsno//sfK1o4jLtjy75AXJcRi6q30HB8npEelrXh439JuanKIdMaVO8FD0ytfJrtzWsmrZJz+WWrSjYg46h1C+lz1UmaCYJ9evRaatSXL1XoV05HqCgrFW9HZjtCDiDXLoAZLdmcq4Qw6m6IZlsgM6ol+eUWqtNnubWE2/80Flgvfc4Bnr7PIUle+gfbPaTaFC1k8ojNLflvF5aUIyTlSbge2WPaMYZfBLMcqREPAzsrPY2MF18ua8PxVZhXrpWujbJlQwbR/ryUDf9tdQFYO8og3/FhKbsy2RHvRNQ4uqFUrZ89pTzUoY+L4woyQ71XuXFNOV8xcQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Y1Ebke6eveyxao7m6TM2J+k5u29xj8tTIql2r8ll4bY=;
+ b=AbAe4p4mYdM7OW71LpwkN16xOdiYIAPZ2vDsAuh9quPpQhjhC1t+Rm7hRyudGd1zA4ZkxYFKScYFfe9SzSPaUPXmbnCyNHD5shubjM3dnNgsOuKc/n94OYGHlUy3RwxBCD2AA5dmGvT3hlbbJ4jE74WCtwqjSimQbGBfNWDSfKLDl96Okh5/P1VTyLyIGMOH+LIvOIQFs4RUmYpZuXFSL39v/ZPVJK+W4V7ThiPW+Il8+yKZ9iI8h803yhaZR8wUiiHfqOFGlHcRMSw2dyGIl+YOmdYtkVsd/M1sdldUD8OlPvE+e7QL07Ubea0YVnYLRjdV7FWs3UFsgsXt8tiVOQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=micron.com; dmarc=pass action=none header.from=micron.com;
+ dkim=pass header.d=micron.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=micron.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Y1Ebke6eveyxao7m6TM2J+k5u29xj8tTIql2r8ll4bY=;
+ b=pKpikirxO6t+XQFv/XlaFpGY9PpbXvzFJNvcOT+wSAg4iFgAHO8mHApIDi23rbV5oLn3Ts9kGTmm0yuvm6z50MD/zMFVENYwokp/tUWOKK4bAF1GI/nUkJlXbS8g+C5I1GP52bLSSyah3xqR48uWYf6bIUeNoHSILwJUpFQpEPU=
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com (20.176.179.87) by
+ BN7PR08MB4324.namprd08.prod.outlook.com (52.135.251.143) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2665.22; Tue, 28 Jan 2020 15:38:38 +0000
+Received: from BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::981f:90d7:d45f:fd11]) by BN7PR08MB5684.namprd08.prod.outlook.com
+ ([fe80::981f:90d7:d45f:fd11%7]) with mapi id 15.20.2665.026; Tue, 28 Jan 2020
+ 15:38:38 +0000
+From: "Bean Huo (beanhuo)" <beanhuo@micron.com>
+To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
+ <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
+ <martin.petersen@oracle.com>, "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>, "jejb@linux.ibm.com"
+ <jejb@linux.ibm.com>
+Subject: RE: [EXT] [PATCH v2 3/5] scsi: ufs: add
+ ufshcd_is_auto_hibern8_enabled facility
+Thread-Topic: [EXT] [PATCH v2 3/5] scsi: ufs: add
+ ufshcd_is_auto_hibern8_enabled facility
+Thread-Index: AQHV0sgOxlbzOPcdrkKbef6h38DLDqgAOCsw
+Date: Tue, 28 Jan 2020 15:38:38 +0000
+Message-ID: <BN7PR08MB5684D9F9D37F3031F3FEDAC7DB0A0@BN7PR08MB5684.namprd08.prod.outlook.com>
+References: <20200124150743.15110-1-stanley.chu@mediatek.com>
+ <20200124150743.15110-4-stanley.chu@mediatek.com>
+In-Reply-To: <20200124150743.15110-4-stanley.chu@mediatek.com>
+Accept-Language: en-150, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=beanhuo@micron.com; 
+x-originating-ip: [165.225.81.21]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 8b574952-6181-4547-cfe8-08d7a408253b
+x-ms-traffictypediagnostic: BN7PR08MB4324:|BN7PR08MB4324:|BN7PR08MB4324:
+x-microsoft-antispam-prvs: <BN7PR08MB4324B61BCE1F54DF75E686D2DB0A0@BN7PR08MB4324.namprd08.prod.outlook.com>
+x-ms-exchange-transport-forked: True
+x-ms-oob-tlc-oobclassifiers: OLM:400;
+x-forefront-prvs: 029651C7A1
+x-forefront-antispam-report: SFV:NSPM;
+ SFS:(10009020)(4636009)(376002)(366004)(346002)(396003)(39860400002)(136003)(189003)(199004)(7696005)(478600001)(55236004)(64756008)(66446008)(66476007)(66556008)(7416002)(316002)(76116006)(186003)(66946007)(6506007)(8936002)(558084003)(8676002)(81166006)(81156014)(26005)(54906003)(71200400001)(2906002)(55016002)(9686003)(110136005)(52536014)(86362001)(33656002)(4326008)(5660300002);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:BN7PR08MB4324;
+ H:BN7PR08MB5684.namprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; MX:1; A:1; 
+received-spf: None (protection.outlook.com: micron.com does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: BCeAsdyQracZ4gx9LOV9/M6dXjFHgc4HvZFyIB6wJKZ7KJBvaYrUG/njEb8GbLTQuRodyX3eMjHPOFav27RGxxeRg4zIdQCDzj/IUVCZV52bcDZJ6lLKwdqetQ619RFDpMqKil0rhPdzfLHZNBXacHOmxTFaPD8YDAOws5RUlliZ0ILudLyPySisNyHF5UhBt2HlndWiC1zIendc9Sqs9gGTC7mXz3jJQmYS5+MdSYVdmCc5NKaXGprdivIXWWTzNYbZPY4RpEe0SW+kdfH8JZ6XxAnvVvAqzERLI8EOCRbFVZnWa2zqM+cQAk3pN2WRLvarqjAUsvduIbmwuwHls2coMyy+QR2q80WLHt15CQ3YLBFV2zUGeKS2xEyTn6JS3gPaQ6kd1EVx3Q1iks9/x6pDeA0OdmejxFI08T49FOd5km/lelg3XqOjUKM+10WI
+x-ms-exchange-antispam-messagedata: ZY0/V0+/aP8/Nvw2+RGe4ngsKTKQ8D7NKnubTXiYPu6vphgp40DWSHRtaCPQ30jEWBDvSFj40qCrYAaisQ+MESCLBmVMQOtog2JRU/UUVSEap3vhXq6kyl5W5RgkTM1IJZK9CFsrUZTnGcsewSe/5g==
 MIME-Version: 1.0
-X-MTK: N
+X-OriginatorOrg: micron.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8b574952-6181-4547-cfe8-08d7a408253b
+X-MS-Exchange-CrossTenant-originalarrivaltime: 28 Jan 2020 15:38:38.5646 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f38a5ecd-2813-4862-b11b-ac1d563c806f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: vWrtZB/D9EB8lEQWXO5q33XsKm53aIXqCfyXrSCZ3IbS+SSqfjSu3fNSTPKjFFEhM8FeKqVcE5Cg6agmyBfvLQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4324
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200127_182400_299078_CA084A6C 
-X-CRM114-Status: GOOD (  23.09  )
-X-Spam-Score: 2.3 (++)
+X-CRM114-CacheID: sfid-20200128_073842_261807_4FC1C16D 
+X-CRM114-Status: UNSURE (   3.65  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 3.4 (+++)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (2.3 points)
+ Content analysis details:   (3.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_ABUSE_MALW   Contains an abused malware URL listed in
- the Spamhaus DBL blocklist [URIs: infradead.org]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [165.225.81.21 listed in zen.spamhaus.org]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [40.107.94.49 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,200 +129,24 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: ryan.yu@mediatek.com, frankie.chiu@mediatek.com,
- laurent.pinchart@ideasonboard.com, robh@kernel.org, Rynn.Wu@mediatek.com,
- suleiman@chromium.org, Jerry-ch.Chen@mediatek.com, frederic.chen@mediatek.com,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org, sj.huang@mediatek.com,
- yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
- Pi-Hsun Shih <pihsun@chromium.org>, matthias.bgg@gmail.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, Sean.Cheng@mediatek.com,
- srv_heupstream@mediatek.com, shik@chromium.org, tfiga@chromium.org,
- zwisler@chromium.org, ddavenport@chromium.org
+Cc: "bvanassche@acm.org" <bvanassche@acm.org>,
+ "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
+ "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
+ "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "cang@codeaurora.org" <cang@codeaurora.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "asutoshd@codeaurora.org" <asutoshd@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Hans:
-
-On Thu, 2020-01-23 at 14:59 +0100, Hans Verkuil wrote:
-> Hi Jungo,
-> 
-> On 12/19/19 6:49 AM, Jungo Lin wrote:
-> > This patch adds the Mediatek ISP P1 HW control device driver.
-> > It handles the ISP HW configuration, provides interrupt handling and
-> > initializes the V4L2 device nodes and other V4L2 functions. Moreover,
-> > implement standard V4L2 video driver that utilizes V4L2 and media
-> > framework APIs. It supports one media device, one sub-device and
-> > several video devices during initialization. Moreover, it also connects
-> > with sensor and seninf drivers with V4L2 async APIs. Communicate with
-> > co-process via SCP communication to compose ISP registers in the
-> > firmware.
-> > 
-> > (The current metadata interface used in meta input and partial
-> > meta nodes is only a temporary solution to kick off the driver
-> > development and is not ready to be reviewed yet.)
-> > 
-> > Signed-off-by: Jungo Lin <jungo.lin@mediatek.com>
-> > Signed-off-by: Tomasz Figa <tfiga@chromium.org>
-> > Signed-off-by: Pi-Hsun Shih <pihsun@chromium.org>
-> > ---
-> > Changes from v6:
-> >  - Revise help description for VIDEO_MEDIATEK_ISP_PASS1
-> >  - Apply SCP v21 change in P1 driver by Pi-Hsun Shih
-> >  - Correct auto suspend timer value for suspend/resume issue
-> >  - Increase IPI guard timer to 1 second to avoid false alarm command timeout event
-> >  - Fix KE due to no sen-inf sub-device
-> > ---
-> >  drivers/media/platform/mtk-isp/Kconfig        |   20 +
-> >  .../media/platform/mtk-isp/isp_50/Makefile    |    3 +
-> >  .../platform/mtk-isp/isp_50/cam/Makefile      |    6 +
-> >  .../platform/mtk-isp/isp_50/cam/mtk_cam-hw.c  |  636 +++++
-> >  .../platform/mtk-isp/isp_50/cam/mtk_cam-hw.h  |   64 +
-> >  .../platform/mtk-isp/isp_50/cam/mtk_cam-ipi.h |  222 ++
-> >  .../mtk-isp/isp_50/cam/mtk_cam-regs.h         |   95 +
-> >  .../platform/mtk-isp/isp_50/cam/mtk_cam.c     | 2087 +++++++++++++++++
-> >  .../platform/mtk-isp/isp_50/cam/mtk_cam.h     |  244 ++
-> >  9 files changed, 3377 insertions(+)
-> >  create mode 100644 drivers/media/platform/mtk-isp/Kconfig
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/Makefile
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/Makefile
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-hw.c
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-hw.h
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-ipi.h
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam-regs.h
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam.c
-> >  create mode 100644 drivers/media/platform/mtk-isp/isp_50/cam/mtk_cam.h
-> 
-> <snip>
-> 
-> > +static void isp_tx_frame_worker(struct work_struct *work)
-> > +{
-> > +	struct mtk_cam_dev_request *req =
-> > +		container_of(work, struct mtk_cam_dev_request, frame_work);
-> > +	struct mtk_cam_dev *cam =
-> > +		container_of(req->req.mdev, struct mtk_cam_dev, media_dev);
-> > +	struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(cam->dev);
-> > +
-> > +	scp_ipi_send(p1_dev->scp, SCP_IPI_ISP_FRAME, &req->frame_params,
-> > +		     sizeof(req->frame_params), MTK_ISP_IPI_SEND_TIMEOUT);
-> > +}
-> 
-> <snip>
-> 
-> > +void mtk_isp_req_enqueue(struct mtk_cam_dev *cam,
-> > +			 struct mtk_cam_dev_request *req)
-> > +{
-> > +	struct mtk_isp_p1_device *p1_dev = dev_get_drvdata(cam->dev);
-> > +
-> > +	/* Accumulated frame sequence number */
-> > +	req->frame_params.frame_seq_no = ++p1_dev->enqueued_frame_seq_no;
-> > +
-> > +	INIT_WORK(&req->frame_work, isp_tx_frame_worker);
-> > +	queue_work(p1_dev->composer_wq, &req->frame_work);
-> > +	dev_dbg(cam->dev, "enqueue fd:%s frame_seq_no:%d job cnt:%d\n",
-> > +		req->req.debug_str, req->frame_params.frame_seq_no,
-> > +		cam->running_job_count);
-> > +}
-> 
-> <snip>
-> 
-> > +/*
-> > + * struct dma_buffer - DMA buffer address information
-> > + *
-> > + * @iova: DMA address for ISP DMA device
-> > + * @scp_addr: SCP address for external co-process unit
-> > + *
-> > + */
-> > +struct dma_buffer {
-> > +	u32 iova;
-> > +	u32 scp_addr;
-> > +} __packed;
-> 
-> <snip>
-> 
-> > +static void mtk_cam_vb2_buf_queue(struct vb2_buffer *vb)
-> > +{
-> > +	struct mtk_cam_dev *cam = vb2_get_drv_priv(vb->vb2_queue);
-> > +	struct mtk_cam_dev_buffer *buf = mtk_cam_vb2_buf_to_dev_buf(vb);
-> > +	struct mtk_cam_dev_request *req = mtk_cam_req_to_dev_req(vb->request);
-> > +	struct mtk_cam_video_device *node = mtk_cam_vbq_to_vdev(vb->vb2_queue);
-> > +	struct device *dev = cam->dev;
-> > +	unsigned long flags;
-> > +
-> > +	dev_dbg(dev, "%s: node:%d fd:%d idx:%d\n", __func__,
-> > +		node->id, buf->vbb.request_fd, buf->vbb.vb2_buf.index);
-> > +
-> > +	/* added the buffer into the tracking list */
-> > +	spin_lock_irqsave(&node->buf_list_lock, flags);
-> > +	list_add_tail(&buf->list, &node->buf_list);
-> > +	spin_unlock_irqrestore(&node->buf_list_lock, flags);
-> > +
-> > +	/* update buffer internal address */
-> > +	req->frame_params.dma_bufs[buf->node_id].iova = buf->daddr;
-> > +	req->frame_params.dma_bufs[buf->node_id].scp_addr = buf->scp_addr;
-> > +}
-> > +
-> 
-> <snip>
-> 
-> > +/*
-> > + * struct mtk_p1_frame_param - MTK ISP P1 driver frame parameters.
-> > + *
-> > + * @frame_seq_no: The frame sequence of frame in driver layer.
-> > + * @dma_bufs: The DMA buffer address information of enabled DMA nodes.
-> > + *
-> > + */
-> > +struct mtk_p1_frame_param {
-> > +	unsigned int frame_seq_no;
-> > +	struct dma_buffer dma_bufs[MTK_CAM_P1_TOTAL_NODES];
-> > +} __packed;
-> 
-> So if I understand this correctly, to set the ISP frame parameters userspace
-> provides an array of pointers to other memory areas that are magically created
-> somewhere and containing magic, undocumented data.
-> 
-> I know you said that this is 'not ready to be reviewed yet', but I just wanted
-> to mention that this is of course not acceptable and needs to be replaced with
-> a documented metadata structure that userspace can pass in the metadata buffer.
-> 
-> Just ignore this email if you were already planning on doing that. I just wanted
-> to make sure that it is clear that the current approach won't fly.
-> 
-> Regards,
-> 
-> 	Hans
-> 
-
-Thanks for your comment.
-
-Firstly, I think I miss meta data types definition in this series.
-https://patchwork.kernel.org/patch/11126055/
-include/uapi/linux/videodev2.h
-+#define V4L2_META_FMT_MTISP_3A    v4l2_fourcc('M', 'T', 'f', 'a') /*
-AE/AWB histogram */
-+#define V4L2_META_FMT_MTISP_AF    v4l2_fourcc('M', 'T', 'f', 'f') /* AF
-histogram */
-+#define V4L2_META_FMT_MTISP_LCS   v4l2_fourcc('M', 'T', 'f', 'c') /*
-Local contrast enhanced statistics */
-+#define V4L2_META_FMT_MTISP_LMV   v4l2_fourcc('M', 'T', 'f', 'm') /*
-Local motion vector histogram */
-+#define V4L2_META_FMT_MTISP_PARAMS v4l2_fourcc('M', 'T', 'f', 'p') /*
-ISP tuning parameters */
-We will correct this missing error in next patch set.
-
-Secondly, we are working on the documented meta-data structures for
-these meta nodes, especially on 4L2_META_FMT_MTISP_PARAMS which is used
-for tuning parameters  from user space.
-
-Sincerely
-
-Jungo
-
-> _______________________________________________
-> Linux-mediatek mailing list
-> Linux-mediatek@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Reviewed-by: Bean Huo <beanhuo@micron.com>
 
 _______________________________________________
 Linux-mediatek mailing list
