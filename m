@@ -2,82 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6CE9214C936
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Jan 2020 12:03:18 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2561E14D051
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Jan 2020 19:19:28 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cRTaPpHdhn8WT2k6Eb1eCn+q/bxbRUY7cfLrztGH8mU=; b=sfB7kTwaQRVkCP
-	xWAIZBZUXJf4t+NeiiXCae1hkWjZbZpkHTZ2ZSs3LaftFiCMoqZgqro1p5gBKpn2ozn3HB2DGnBpV
-	x+sUF6gsmpyfwFeZDvMWs6kYToPZ3gdKl65A1vsxlWFELruAY54ODpVZTWAWEdmqYAt5zwDmcFiNV
-	sioFToSXa0E0EkbbMpvrm0bc4rnm6FAM7fNN7eGF7DZaSryl5C9KpE6icPKIqa62/mJ6r+DoLtYI7
-	hhN3y8sT739iwC7FfLdVYeFAiVZ9ajwRSyA6rOc1iPEEZerJyp+SpAEMWPwrBjl99zGuUF5TI6WB2
-	SPRYLv/TLHZF8pdx09zA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=pQrPQTA1VBx1auBbYN30Nwyn4XIYdwB0qgK9AANs1YI=; b=WISKB/53XZB5GEgzKCtoNI9Wi
+	dlIlD10wnmpLO+iI6v/qyBbIS3cuzXYj7a4qvoVQgdkiY5wBiYfubAnWoqciuCZeqnoXjOhdnxAzQ
+	gPD/g3RHHeMweKTQXL7AtGW42Ofc9/fESfpzA4VJT1BtY9+Zx6L+AGj2wuVve7rP0IJ5dhAmhumPd
+	PnNnuFBLfS1+cgXO6osvRydEYW19cxVQGiDAdQWK+S3zq8rBuroIL54rZb4nTnuho5xITaGFW31aL
+	JwmfzEdaZjjJLfO50hgmIMuJT62IGxNEgTYvrtIJphqK2MFipihJZkF6BkXRE8PGT1aj1nualQ8wv
+	fFo4vILRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iwl7l-0007yA-8Q; Wed, 29 Jan 2020 11:03:09 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1iwrvp-0000Ds-8T; Wed, 29 Jan 2020 18:19:17 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iwl7h-0007xF-UQ; Wed, 29 Jan 2020 11:03:07 +0000
-X-UUID: 68575a524d1b46d5bd58cf1b2fa39b30-20200129
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=On3ymt2nIzso/VupG3uq3vXt9HiMtRzJKLdz08bIXPs=; 
- b=d4uPOyytD6ZfR4ey2Yg5Mrq5s05ZrIkpNH3wuXaPINdSpi+V4p36y8OdS1SNVSi6/l/xssfbcK4nRpBIz6prwYGCxzWZ0rFhz8AUtXUOSmNpuMfv1/XFWHG7cqjIru2rJ6qVcYokP85DEifotSInvw9nnE526mWH6xNdt+exzOA=;
-X-UUID: 68575a524d1b46d5bd58cf1b2fa39b30-20200129
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 598524992; Wed, 29 Jan 2020 03:03:02 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 Jan 2020 02:53:07 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 29 Jan 2020 18:53:16 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 29 Jan 2020 18:52:59 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
- <beanhuo@micron.com>
-Subject: [PATCH RESEND v3 3/4] scsi: ufs: fix Auto-Hibern8 error detection
-Date: Wed, 29 Jan 2020 18:52:50 +0800
-Message-ID: <20200129105251.12466-4-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200129105251.12466-1-stanley.chu@mediatek.com>
+ id 1iwrvY-0008VX-1u
+ for linux-mediatek@lists.infradead.org; Wed, 29 Jan 2020 18:19:03 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1580321941; h=Content-Transfer-Encoding: Content-Type:
+ In-Reply-To: MIME-Version: Date: Message-ID: From: References: Cc: To:
+ Subject: Sender; bh=rNueugt7+ShJvXDNSBQmIyNMaj5LO03LUNGcC7CqzMg=;
+ b=SVe+SHYeUVfcIlZF+MBXjwXo2eeOOWwFdyMrC0OCJBtfAUk9ZM70qJ++TNyFKzCyamgpca7/
+ Vi25BUea64QdkJPE/OcLfPPmFqRQ5rqGUBILndNUUSqqXkYjB4P0b5FkbEsWj2H1CdcYRyqu
+ ixr1V+TePR8BY2Gnokvfds0pnys=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyI0ZDIyMyIsICJsaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnIiwgImJlOWU0YSJd
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e31cc8f.7f1bc7e64fb8-smtp-out-n03;
+ Wed, 29 Jan 2020 18:18:55 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 8535CC43383; Wed, 29 Jan 2020 18:18:55 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from [10.71.154.194] (i-global254.qualcomm.com [199.106.103.254])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: asutoshd)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 37EFCC43383;
+ Wed, 29 Jan 2020 18:18:53 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 37EFCC43383
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=asutoshd@codeaurora.org
+Subject: Re: [PATCH RESEND v3 3/4] scsi: ufs: fix Auto-Hibern8 error detection
+To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
+ martin.petersen@oracle.com, avri.altman@wdc.com, alim.akhtar@samsung.com,
+ jejb@linux.ibm.com, beanhuo@micron.com
 References: <20200129105251.12466-1-stanley.chu@mediatek.com>
+ <20200129105251.12466-4-stanley.chu@mediatek.com>
+From: "Asutosh Das (asd)" <asutoshd@codeaurora.org>
+Message-ID: <daaf442c-1fad-b6dc-8206-beb535c21ec3@codeaurora.org>
+Date: Wed, 29 Jan 2020 10:18:52 -0800
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+ Thunderbird/68.4.1
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20200129105251.12466-4-stanley.chu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200129_030305_993810_F42E411C 
-X-CRM114-Status: UNSURE (   9.24  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200129_101901_805922_50821A1E 
+X-CRM114-Status: GOOD (  20.15  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [104.130.122.26 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,71 +98,79 @@ Cc: bvanassche@acm.org, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
  kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
  stable@vger.kernel.org, cang@codeaurora.org,
  linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
-Content-Type: text/plain; charset="us-ascii"
+ matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Auto-Hibern8 may be disabled by some vendors or sysfs
-in runtime even if Auto-Hibern8 capability is supported
-by host. If Auto-Hibern8 capability is supported by host
-but not actually enabled, Auto-Hibern8 error shall not happen.
+On 1/29/2020 2:52 AM, Stanley Chu wrote:
+> Auto-Hibern8 may be disabled by some vendors or sysfs
+> in runtime even if Auto-Hibern8 capability is supported
+> by host. If Auto-Hibern8 capability is supported by host
+> but not actually enabled, Auto-Hibern8 error shall not happen.
+> 
+> To fix this, provide a way to detect if Auto-Hibern8 is
+> actually enabled first, and bypass Auto-Hibern8 disabling
+> case in ufshcd_is_auto_hibern8_error().
+> 
+> Fixes: 821744403913 ("scsi: ufs: Add error-handling of Auto-Hibernate")
+> Cc: stable@vger.kernel.org
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+> Reviewed-by: Bean Huo <beanhuo@micron.com>
+> ---
 
-To fix this, provide a way to detect if Auto-Hibern8 is
-actually enabled first, and bypass Auto-Hibern8 disabling
-case in ufshcd_is_auto_hibern8_error().
+Reviewed-by: Asutosh Das <asutoshd@codeaurora.org>
 
-Fixes: 821744403913 ("scsi: ufs: Add error-handling of Auto-Hibernate")
-Cc: stable@vger.kernel.org
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Bean Huo <beanhuo@micron.com>
----
- drivers/scsi/ufs/ufshcd.c | 3 ++-
- drivers/scsi/ufs/ufshcd.h | 6 ++++++
- 2 files changed, 8 insertions(+), 1 deletion(-)
+>   drivers/scsi/ufs/ufshcd.c | 3 ++-
+>   drivers/scsi/ufs/ufshcd.h | 6 ++++++
+>   2 files changed, 8 insertions(+), 1 deletion(-)
+> 
+> diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+> index abd0e6b05f79..214a3f373dd8 100644
+> --- a/drivers/scsi/ufs/ufshcd.c
+> +++ b/drivers/scsi/ufs/ufshcd.c
+> @@ -5479,7 +5479,8 @@ static irqreturn_t ufshcd_update_uic_error(struct ufs_hba *hba)
+>   static bool ufshcd_is_auto_hibern8_error(struct ufs_hba *hba,
+>   					 u32 intr_mask)
+>   {
+> -	if (!ufshcd_is_auto_hibern8_supported(hba))
+> +	if (!ufshcd_is_auto_hibern8_supported(hba) ||
+> +	    !ufshcd_is_auto_hibern8_enabled(hba))
+>   		return false;
+>   
+>   	if (!(intr_mask & UFSHCD_UIC_HIBERN8_MASK))
+> diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+> index 2ae6c7c8528c..81c71a3e3474 100644
+> --- a/drivers/scsi/ufs/ufshcd.h
+> +++ b/drivers/scsi/ufs/ufshcd.h
+> @@ -55,6 +55,7 @@
+>   #include <linux/clk.h>
+>   #include <linux/completion.h>
+>   #include <linux/regulator/consumer.h>
+> +#include <linux/bitfield.h>
+>   #include "unipro.h"
+>   
+>   #include <asm/irq.h>
+> @@ -773,6 +774,11 @@ static inline bool ufshcd_is_auto_hibern8_supported(struct ufs_hba *hba)
+>   	return (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT);
+>   }
+>   
+> +static inline bool ufshcd_is_auto_hibern8_enabled(struct ufs_hba *hba)
+> +{
+> +	return FIELD_GET(UFSHCI_AHIBERN8_TIMER_MASK, hba->ahit) ? true : false;
+> +}
+> +
+>   #define ufshcd_writel(hba, val, reg)	\
+>   	writel((val), (hba)->mmio_base + (reg))
+>   #define ufshcd_readl(hba, reg)	\
+> 
 
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index abd0e6b05f79..214a3f373dd8 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -5479,7 +5479,8 @@ static irqreturn_t ufshcd_update_uic_error(struct ufs_hba *hba)
- static bool ufshcd_is_auto_hibern8_error(struct ufs_hba *hba,
- 					 u32 intr_mask)
- {
--	if (!ufshcd_is_auto_hibern8_supported(hba))
-+	if (!ufshcd_is_auto_hibern8_supported(hba) ||
-+	    !ufshcd_is_auto_hibern8_enabled(hba))
- 		return false;
- 
- 	if (!(intr_mask & UFSHCD_UIC_HIBERN8_MASK))
-diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index 2ae6c7c8528c..81c71a3e3474 100644
---- a/drivers/scsi/ufs/ufshcd.h
-+++ b/drivers/scsi/ufs/ufshcd.h
-@@ -55,6 +55,7 @@
- #include <linux/clk.h>
- #include <linux/completion.h>
- #include <linux/regulator/consumer.h>
-+#include <linux/bitfield.h>
- #include "unipro.h"
- 
- #include <asm/irq.h>
-@@ -773,6 +774,11 @@ static inline bool ufshcd_is_auto_hibern8_supported(struct ufs_hba *hba)
- 	return (hba->capabilities & MASK_AUTO_HIBERN8_SUPPORT);
- }
- 
-+static inline bool ufshcd_is_auto_hibern8_enabled(struct ufs_hba *hba)
-+{
-+	return FIELD_GET(UFSHCI_AHIBERN8_TIMER_MASK, hba->ahit) ? true : false;
-+}
-+
- #define ufshcd_writel(hba, val, reg)	\
- 	writel((val), (hba)->mmio_base + (reg))
- #define ufshcd_readl(hba, reg)	\
+
 -- 
-2.18.0
+The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
+Linux Foundation Collaborative Project
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
