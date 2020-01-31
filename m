@@ -2,78 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2324D14E329
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 Jan 2020 20:25:28 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 272A714E6CC
+	for <lists+linux-mediatek@lfdr.de>; Fri, 31 Jan 2020 02:07:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=De7Fi/7H2XYysdiopxsAL86a8WIAIGnKEystuxURSEo=; b=fnBnaAjKCOngvk
-	CVGhK3bkPITlBk53zNV0/5rOYLFWGCmlTFximKwBkxiHsF9daB2VviR4Xstix+rCCGhgmyILQN6Vv
-	VEzPmrweCF+xMn9Lg8ponJJC8/GHf0XEjU6S+k5rnjayd1+ZSYOqsbrGf4LKWLZvYo8GkTkQDmEJk
-	exRuT5MvNk1N94vOoURZGmSBllQ1kKYQlixvG1akTvgaa61hFbm+3Xk9XaM6t2teQrFPX7cEKk43H
-	HoEmXutxUEKfHU75CZmnSuiqVSAA2Sz1mJcNrPY9fU4rO26VAv5XIsDSa0sYzQIlJIzf2ZDTbIhQN
-	lJLn9bcVeIc74cWVN9GA==;
+	List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:From:To:Subject:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=veni+PtVhGfEKY63szABml0tifT0KOqK1xLJp7PAtUk=; b=iLubCkeKu/zSim
+	holsJvmEaL1v5t8VEu4naJeucYUrRenxxzPrKr2sFWt1I3CozTq9ONOLXYlTyyeCRfy8bSXCQFiKO
+	A1yTF7c9TQEGALvOvFVy3OrMIqPAmBgyyfLaYID+LgpzfAmHYOEpfwt05cZeHDAVpv1a+DhJLvYX1
+	G2ElL85fvqyeyFHyssCAQccd2TMaYJ/ITl2pcGZk63b4FsOqctEIx8ohmGK1oMfm7TMMKTD1aMAwI
+	2zqZ+WYeBjL2wZsxEXxzgh2YRE7j9G0a+OtEN8hE6+7/EBN6sm88m9RYzrXvM2qpiMjC2/d+VtUoF
+	IoLSJ82GlqEkgXdcGFEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ixFRF-0004lU-Ta; Thu, 30 Jan 2020 19:25:17 +0000
-Received: from mail-yb1-xb43.google.com ([2607:f8b0:4864:20::b43])
+	id 1ixKlv-00057a-Kk; Fri, 31 Jan 2020 01:06:59 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ixFRD-0004kj-4X
- for linux-mediatek@lists.infradead.org; Thu, 30 Jan 2020 19:25:16 +0000
-Received: by mail-yb1-xb43.google.com with SMTP id k15so1927023ybd.10
- for <linux-mediatek@lists.infradead.org>; Thu, 30 Jan 2020 11:25:14 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=poorly.run; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=xqLc/hiOsciiuReeei4PXbgfrPt2jGOWmt/3LtzVX+A=;
- b=DgRjlq3+8uQ60Z4tZCeDI0XkrzyloKfvhUsMa2JS2PIDqrvsT8vNPnJKkzCFxpDXdg
- zNfMU5tYYw26ODXUUcOV+ncqGdHYZTDHZm+gplAaRAJnYla6/12srb8veAqa1itI/572
- IOL4515vgO3xWVjo4hGUHMK8NYXvRKZFHyRBg58rixOCnVQCIbJwMurKfUxZPJ6x7tpz
- csX9SZ2LSYEVMjxH4gD7ehi2IZDwfkEh9FTqBHhjhlzZTjtoyNjEQZCDIwzv5XsjgI2u
- l2WStydYRiGLfVsAawn9AUDhXHBlWmNKw2vg0OYQBcdaskTFnkStHR30VUkzGRw3eA5z
- qx9g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=xqLc/hiOsciiuReeei4PXbgfrPt2jGOWmt/3LtzVX+A=;
- b=Px5H7mZ+DL2yBc/e2xLCyS6t3/Z1V1Nxquxif0ilq1N33zNjPSwbGcejEXDdCx9kcM
- KUWE3WUgsqlqOFr98Kh+959MRC8rCJ4l1g3hFnXfBgLKFNsAsc7iYRhQVOi7PyUvPEau
- sDNui9s0LBivsxmtjDFHDtmwCgxPdMwChr5+P5uEjPA57LP6e4hoSMvdzZ5GBMb//IXw
- ekb1fEgWENFuUiPgGcr/xo7v3aj2PLZFxONPFGl14J7fzIt5hsV/g2Y9lYLflWNafXB4
- LbLtqstAbM1o7Wwdgt0hX+AtHkn+YvJFQTvVjIpusQ+iRoe9gRL7LrYH2K1IwOmYiVkJ
- g36g==
-X-Gm-Message-State: APjAAAXvalP4wcyL7WzWjrqF9L2TG8MS+5PElByVOoI7cFSNXmq5wM3K
- keneCnsQwcJXvP/H666qrwZdEw==
-X-Google-Smtp-Source: APXvYqx+ZkhVmVEkjn3RME81x0M11aBuvdISwPw+4I0dmwSnJ11ZrG50bodS1GIP/bPXGsAVyBL5Ew==
-X-Received: by 2002:a25:d74c:: with SMTP id o73mr5252636ybg.102.1580412313620; 
- Thu, 30 Jan 2020 11:25:13 -0800 (PST)
-Received: from localhost ([2620:0:1013:11:1e1:4760:6ce4:fc64])
- by smtp.gmail.com with ESMTPSA id q62sm2879183ywg.76.2020.01.30.11.25.12
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 30 Jan 2020 11:25:13 -0800 (PST)
-From: Sean Paul <sean@poorly.run>
-To: dri-devel@lists.freedesktop.org
-Subject: [PATCH] drm/mediatek: Ensure the cursor plane is on top of other
- overlays
-Date: Thu, 30 Jan 2020 14:24:55 -0500
-Message-Id: <20200130192511.81205-1-sean@poorly.run>
-X-Mailer: git-send-email 2.25.0.341.g760bfbb309-goog
+ id 1ixKlr-000578-OE; Fri, 31 Jan 2020 01:06:56 +0000
+Received: from kernel.org (unknown [104.132.0.74])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 3336320678;
+ Fri, 31 Jan 2020 01:06:54 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1580432814;
+ bh=jsJEjfvvosoNzF+1nP8nbj7092fwdtBhOz2X+N5rSYc=;
+ h=In-Reply-To:References:Subject:To:From:Cc:Date:From;
+ b=EAVQXk1uO5WynQ7Wtd1arSl2mIu7+KTMUvTyGUtP+CBTahefWsrjBU/w5+WVG5pbJ
+ 6oeJf0VKlrt/bX9mb5sNu4yXZTeLRu/m8+rnihFdYrPqyT+y1zbbhNQrvRbDOAHQvT
+ kM55lR9ogO4s8yk5mrgvNveWr+uooWYXRl/S1ipM=
 MIME-Version: 1.0
+In-Reply-To: <20191209195749.868-1-tiny.windzz@gmail.com>
+References: <20191209195749.868-1-tiny.windzz@gmail.com>
+Subject: Re: [PATCH 01/17] clk: sunxi: sunxi-ng: convert to
+ devm_platform_ioremap_resource
+To: Eugeniy.Paltsev@synopsys.com, Yangtao Li <tiny.windzz@gmail.com>,
+ afaerber@suse.de, agross@kernel.org, aisheng.dong@nxp.com, allison@lohutok.net,
+ chunhui.dai@mediatek.com, cw00.choi@samsung.com, daniel.baluta@nxp.com,
+ dinguyen@kernel.org, emilio@elopez.com.ar, festevam@gmail.com,
+ geert+renesas@glider.be, gregkh@linuxfoundation.org, heiko@sntech.de,
+ jcmvbkbc@gmail.com, john@phrozen.org, jonathanh@nvidia.com,
+ kernel@pengutronix.de, kgene@kernel.org, krzk@kernel.org,
+ kstewart@linuxfoundation.org, linux-imx@nxp.com,
+ manivannan.sadhasivam@linaro.org, matthias.bgg@gmail.com,
+ miquel.raynal@bootlin.com, mripard@kernel.org, mturquette@baylibre.com,
+ nsekhar@ti.com, palmer@sifive.com, paul.walmsley@sifive.com,
+ pdeschrijver@nvidia.com, pgaikwad@nvidia.com, rfontana@redhat.com,
+ robh@kernel.org, s.hauer@pengutronix.de, s.nawrocki@samsung.com,
+ shawnguo@kernel.org, swinslow@gmail.com, t-kristo@ti.com, tglx@linutronix.de,
+ thierry.reding@gmail.com, tomasz.figa@gmail.com, wangyan.wang@mediatek.com, 
+ weiyongjun1@huawei.com, wens@csie.org
+From: Stephen Boyd <sboyd@kernel.org>
+User-Agent: alot/0.8.1
+Date: Thu, 30 Jan 2020 17:06:53 -0800
+Message-Id: <20200131010654.3336320678@mail.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200130_112515_238052_8D03DA2B 
-X-CRM114-Status: GOOD (  10.01  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200130_170655_818638_CD76F0CF 
+X-CRM114-Status: UNSURE (   5.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:b43 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -83,6 +79,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,58 +91,26 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: dcastagna@chromium.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Sean Paul <seanpaul@chromium.org>, Philipp Zabel <p.zabel@pengutronix.de>,
- CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
+Cc: linux-samsung-soc@vger.kernel.org, Yangtao Li <tiny.windzz@gmail.com>,
+ linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
+ linux-riscv@lists.infradead.org, linux-clk@vger.kernel.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Sean Paul <seanpaul@chromium.org>
+Quoting Yangtao Li (2019-12-09 11:57:33)
+> Use devm_platform_ioremap_resource() to simplify code.
+> 
+> Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
 
-Currently the cursor is placed on the first overlay plane, which means
-it will be at the bottom of the stack when the hw does the compositing
-with anything other than primary plane. Since mtk doesn't support plane
-zpos, change the cursor location to the top-most plane.
-
-Signed-off-by: Sean Paul <seanpaul@chromium.org>
----
- drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 8 +++++---
- 1 file changed, 5 insertions(+), 3 deletions(-)
-
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-index 0dfcd1787e651..4ac76b9613926 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-@@ -689,11 +689,12 @@ static int mtk_drm_crtc_num_comp_planes(struct mtk_drm_crtc *mtk_crtc,
- }
- 
- static inline
--enum drm_plane_type mtk_drm_crtc_plane_type(unsigned int plane_idx)
-+enum drm_plane_type mtk_drm_crtc_plane_type(unsigned int plane_idx,
-+					    unsigned int num_planes)
- {
- 	if (plane_idx == 0)
- 		return DRM_PLANE_TYPE_PRIMARY;
--	else if (plane_idx == 1)
-+	else if (plane_idx == (num_planes - 1))
- 		return DRM_PLANE_TYPE_CURSOR;
- 	else
- 		return DRM_PLANE_TYPE_OVERLAY;
-@@ -712,7 +713,8 @@ static int mtk_drm_crtc_init_comp_planes(struct drm_device *drm_dev,
- 		ret = mtk_plane_init(drm_dev,
- 				&mtk_crtc->planes[mtk_crtc->layer_nr],
- 				BIT(pipe),
--				mtk_drm_crtc_plane_type(mtk_crtc->layer_nr),
-+				mtk_drm_crtc_plane_type(mtk_crtc->layer_nr,
-+							num_planes),
- 				mtk_ddp_comp_supported_rotations(comp));
- 		if (ret)
- 			return ret;
--- 
-Sean Paul, Software Engineer, Google / Chromium OS
+Please add a cover letter, resend this series picking up any acks and
+dropping any patches that were rejected by maintainers of the drivers.
+There was significant discussion on one patch that was rejected, so I'll
+only pick up patches for the next cycle that are acked/reviewed-by
+relevant folks.
 
 
 _______________________________________________
