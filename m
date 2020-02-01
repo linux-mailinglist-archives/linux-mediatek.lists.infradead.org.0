@@ -2,69 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8B0514F899
-	for <lists+linux-mediatek@lfdr.de>; Sat,  1 Feb 2020 16:34:31 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00B9D14F897
+	for <lists+linux-mediatek@lfdr.de>; Sat,  1 Feb 2020 16:34:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vIbTWqrqCc/fZeG6NkHL3jDM1mz3YVCJnL+ORM9FOQY=; b=UHOvbhHl0evAe+
-	5+ovfwVOjP0rZV22C7E+NLkr0Oy9Fc7xFM4McHWUgbTQTG1V4SP/33mhLJxKfkdXbx//dDHFMfNll
-	3dWcmBmWesiMFq0NPx46zg5eUu0p31nUQ6QNFFL+N2KUzmEgSp8aDegEy9MafiAKTmuD6JCHUKCnz
-	VIeQ9ijlfTd8uXinZmboNA9QpxYfUglt/6/zPbfHmNRsxoNITvcJYhyU00TQZqdy6FTVs5lpMbI1b
-	0m//zwlWr7i6WOUofumRqcmIa+N5+66KGL3jqbYbnzithmaGoWmnf8KYfJsArBMNPaOyDB9VSr2IQ
-	QXnafTFR3AZOcOClupRw==;
+	List-Owner; bh=yAmkAChKmGnnqUOzzQDMGLZPb2ULVzggCCsr7KpGLd8=; b=EW9wmH9hcHNFrV
+	mLknvjLSBaXYTiuomiBFwGOa7heMHQF8PqtuC7v74vVQhVDmNHVgc25YJ9unf+K89AbVNM43DGiNR
+	Uk+Kibp5gugrAY09dJoz9pd2EJmpwIOjZvLwvL43/0uNmiFVCDyx/iJ99Mjcb1ikLB5VntkLpJ9VS
+	2mbhzDAVlyAJNbUzzXz+XD5e6h9bF92fQmVY0eQlrdpKrO6vh0KRxUyEftvz5ZD+hFD+dYtSsgI5b
+	SifFzTyfDlhHGKlxpYTatgU84BidH1WyTEuwI7GYqovzBqitH3ToOz1Qr/3Cm8kGW+2KPttwKzzIm
+	o7s9RvwLEUrmriui48Fw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ixumv-0004s8-Ll; Sat, 01 Feb 2020 15:34:25 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1ixumk-0004or-30; Sat, 01 Feb 2020 15:34:14 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ixumr-0004qv-Ot
- for linux-mediatek@lists.infradead.org; Sat, 01 Feb 2020 15:34:23 +0000
-X-UUID: feeba40bbd734b70b2a6b68009e683f5-20200201
+ id 1ixumg-0004oA-St
+ for linux-mediatek@lists.infradead.org; Sat, 01 Feb 2020 15:34:12 +0000
+X-UUID: 1e9ff7840fbf484c883cf56238be49b0-20200201
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=x0RcsqRquhcXQty96nPHhZqu/2xMH1iLFFxG59uudt4=; 
- b=ekeI1kib4OZbY95KWnv1hvLFb3mJHgU0mePx7mP5yxLYXu5Ydceh3QSDgPaJ+UYAer2Mr8jdPQJuZ66yr1ItAA4b9hnn6CZbYEVjfp3RIBp89L3yiph/aLiZAzYqKjeu9yofsCaDyHGe3py7T1s5eHCISpgOJb4y73apKxm7rW8=;
-X-UUID: feeba40bbd734b70b2a6b68009e683f5-20200201
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ bh=yuPIAAalJI7V6zSDuiapuZAUnXw2pqdb6RVynu9ZCJQ=; 
+ b=HZWJLoBL8o3aDUNXbdS3/5hjLfQsz78xP0B5U91coblSKimcA+jfYQnynXZp5AdOrGXeyeiETgJTJiPpK8zVUxSLLJMEDjZjRPGhKdCaKqzsJjTX8FvHwWsm47deqLjt0UbZYU9YuR4NNiCeybaB7prro9PLlHJ+KmzzKblEmxA=;
+X-UUID: 1e9ff7840fbf484c883cf56238be49b0-20200201
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 140594365; Sat, 01 Feb 2020 07:34:09 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 1686463486; Sat, 01 Feb 2020 07:34:04 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 1 Feb 2020 07:34:37 -0800
+ 15.0.1395.4; Sat, 1 Feb 2020 07:34:32 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 1 Feb 2020 23:34:13 +0800
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sat, 1 Feb 2020 23:34:01 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Sat, 1 Feb 2020 23:31:35 +0800
+ Frontend Transport; Sat, 1 Feb 2020 23:31:36 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v2 6/7] mt76: mt7615: switch mt7615_mcu_set_tx_ba to v2 format
-Date: Sat, 1 Feb 2020 23:33:51 +0800
-Message-ID: <d2ec8d96e98d289af203e38c5c0d62634065b15a.1580565624.git.ryder.lee@mediatek.com>
+Subject: [PATCH v2 7/7] mt76: mt7615: switch mt7615_mcu_set_rx_ba to v2 format
+Date: Sat, 1 Feb 2020 23:33:52 +0800
+Message-ID: <21e5b635042aed4d2c8d3c1b75c96136f2e20d6d.1580565624.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1580565624.git.ryder.lee@mediatek.com>
 References: <cover.1580565624.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200201_073421_813293_26D6F48C 
-X-CRM114-Status: UNSURE (   9.06  )
+X-CRM114-CacheID: sfid-20200201_073410_949263_EFB2E884 
+X-CRM114-Status: UNSURE (   8.73  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -103,14 +101,14 @@ To adapt new firmware version.
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 Tested-by: Shayne Chen <shayne.chen@mediatek.com>
 ---
- .../net/wireless/mediatek/mt76/mt7615/mcu.c   | 60 ++++++++++---------
- 1 file changed, 33 insertions(+), 27 deletions(-)
+ .../net/wireless/mediatek/mt76/mt7615/mcu.c   | 62 ++++++++++---------
+ 1 file changed, 34 insertions(+), 28 deletions(-)
 
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-index 58eac8fe5511..a7c4538e56fc 100644
+index a7c4538e56fc..6639f9291721 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
 +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-@@ -1572,28 +1572,11 @@ int mt7615_mcu_set_tx_ba(struct mt7615_dev *dev,
+@@ -1646,29 +1646,11 @@ int mt7615_mcu_set_rx_ba(struct mt7615_dev *dev,
  {
  	struct mt7615_sta *msta = (struct mt7615_sta *)params->sta->drv_priv;
  	struct mt7615_vif *mvif = msta->vif;
@@ -127,9 +125,10 @@ index 58eac8fe5511..a7c4538e56fc 100644
 -			.tag = cpu_to_le16(WTBL_BA),
 -			.len = cpu_to_le16(sizeof(struct wtbl_ba)),
 -			.tid = params->tid,
--			.ba_type = MT_BA_TYPE_ORIGINATOR,
--			.sn = add ? cpu_to_le16(params->ssn) : 0,
--			.ba_en = add,
+-			.ba_type = MT_BA_TYPE_RECIPIENT,
+-			.rst_ba_tid = params->tid,
+-			.rst_ba_sel = RST_BA_MAC_TID_MATCH,
+-			.rst_ba_sb = 1,
 -		},
 -	};
  	struct {
@@ -141,7 +140,7 @@ index 58eac8fe5511..a7c4538e56fc 100644
  		.hdr = {
  			.bss_idx = mvif->idx,
  			.wlan_idx = msta->wcid.idx,
-@@ -1612,7 +1595,32 @@ int mt7615_mcu_set_tx_ba(struct mt7615_dev *dev,
+@@ -1687,17 +1669,41 @@ int mt7615_mcu_set_rx_ba(struct mt7615_dev *dev,
  			.winsize = cpu_to_le16(params->buf_size),
  		},
  	};
@@ -150,53 +149,47 @@ index 58eac8fe5511..a7c4538e56fc 100644
 +	struct wtbl_req_hdr *wtbl_hdr;
 +	struct wtbl_ba *wtbl_ba;
 +	u8 *buf = req.buf;
-+
+ 
+-	memcpy(wtbl_req.ba.peer_addr, params->sta->addr, ETH_ALEN);
 +	if (dev->fw_ver > MT7615_FIRMWARE_V1) {
 +		req.hdr.tlv_num = cpu_to_le16(2);
 +		wtbl = (struct sta_rec_wtbl *)buf;
 +		wtbl->tag = cpu_to_le16(STA_REC_WTBL);
 +		buf += sizeof(*wtbl);
 +	}
-+
+ 
+-	ret = __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_STA_REC_UPDATE,
+-				  &sta_req, sizeof(sta_req), true);
+-	if (ret || !add)
+-		return ret;
 +	wtbl_hdr = (struct wtbl_req_hdr *)buf;
 +	buf += sizeof(*wtbl_hdr);
 +	wtbl_hdr->wlan_idx = msta->wcid.idx;
 +	wtbl_hdr->operation = WTBL_SET;
 +	wtbl_hdr->tlv_num = cpu_to_le16(1);
-+
+ 
+-	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_WTBL_UPDATE,
+-				   &wtbl_req, sizeof(wtbl_req), true);
 +	wtbl_ba = (struct wtbl_ba *)buf;
 +	buf += sizeof(*wtbl_ba);
 +	wtbl_ba->tag = cpu_to_le16(WTBL_BA);
 +	wtbl_ba->len = cpu_to_le16(sizeof(*wtbl_ba));
 +	wtbl_ba->tid = params->tid;
-+	wtbl_ba->ba_type = MT_BA_TYPE_ORIGINATOR;
-+	wtbl_ba->sn = add ? cpu_to_le16(params->ssn) : 0;
-+	wtbl_ba->ba_en = add;
- 
- 	if (add) {
- 		u8 idx, ba_range[] = { 4, 8, 12, 24, 36, 48, 54, 64 };
-@@ -1622,16 +1630,14 @@ int mt7615_mcu_set_tx_ba(struct mt7615_dev *dev,
- 				break;
- 		}
- 
--		wtbl_req.ba.ba_winsize_idx = idx;
-+		wtbl_ba->ba_winsize_idx = idx;
- 	}
- 
--	ret = __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_WTBL_UPDATE,
--				  &wtbl_req, sizeof(wtbl_req), true);
--	if (ret)
--		return ret;
++	wtbl_ba->ba_type = MT_BA_TYPE_RECIPIENT;
++	wtbl_ba->rst_ba_tid = params->tid;
++	wtbl_ba->rst_ba_sel = RST_BA_MAC_TID_MATCH;
++	wtbl_ba->rst_ba_sb = 1;
++
++	memcpy(wtbl_ba->peer_addr, params->sta->addr, ETH_ALEN);
++
 +	if (wtbl)
 +		wtbl->len = cpu_to_le16(buf - (u8 *)wtbl_hdr);
- 
--	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_STA_REC_UPDATE,
--				   &sta_req, sizeof(sta_req), true);
++
 +	return mt7615_mcu_send_sta_rec(dev, (u8 *)&req, (u8 *)wtbl_hdr,
-+				       buf - (u8 *)wtbl_hdr, true);
++				       buf - (u8 *)wtbl_hdr, add);
  }
  
- int mt7615_mcu_set_rx_ba(struct mt7615_dev *dev,
+ int mt7615_mcu_get_temperature(struct mt7615_dev *dev, int index)
 -- 
 2.18.0
 _______________________________________________
