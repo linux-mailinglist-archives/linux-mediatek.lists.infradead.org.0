@@ -2,82 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0F37C15043B
-	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Feb 2020 11:30:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 380F81504A2
+	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Feb 2020 11:54:41 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=F2tQGgTFHV4Av0rfrvLkmSTkPC0Ws5wKA038ld3IJHI=; b=N/fk7KmJ37SIkl
-	jNX4aCt/AtUaks4K8oE2JWzPiuldsnzpTphsgIHTX6S5PvsovIBG+vYttoswofDWuvdNPWIDJE51d
-	8b3cdgDZxybVA1FsxTLvIF8jxXon16aeVOY5tZnlXDboWIpnatDuieEMSHHR32DGAIIvfdUqM7pxe
-	bLjng9JFGacYHKy1jKCYjBex4C4dPaiFH1kEHeDYrgUuG1tE8L7HONk8RivN/89CBBJNhKTcBK+Tr
-	3h9Lp24semXtCJRe8JkiVTJeJu0vrfB4AVQ4OqSoMVLU09+V2eQAJtwqJWe8w8MWkARJXlB0B9/xM
-	IsUtjlGy+3wadYXAOhdw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=oCLR7a/ayOeGU8GOAL0BiNPSwkJiAgXa4bXmohBVvQg=; b=O2YQfwY6bSzmDh
+	5yCQ2YPdyZo16rCLnRvo0jcBNdt0dDIFExzuy0m/nJADbg2cVFdBjky562xDbVUXN3y5UKMFQSwC2
+	9Z3XzrV5xxSTWQ60+qZscqWeAwxv+E8sATjBe+3Z94n332M3+PVqy90s8pR69yogptz5i19iHt8Eg
+	W5Rr614L3C5KTEPhIszdc1n3ThsZJ13X2SciM/apG4HwPFHgFbtvDHu2ounXxubc2Pg9Rvd+52CeD
+	97swIUt00E2Bg1YsJIaPp9O74Aw2VxEHc/IlRZG2aOt+cRUPGYq9IdDJI/pvnLRsHFff0Zp1wJ8qu
+	jz5ZdKMmi3DTVKQy+qXA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iyZ0B-0005qD-VL; Mon, 03 Feb 2020 10:30:47 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1iyZND-0005gP-As; Mon, 03 Feb 2020 10:54:35 +0000
+Received: from mail-pg1-x529.google.com ([2607:f8b0:4864:20::529])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iyZ08-0005mz-PK
- for linux-mediatek@lists.infradead.org; Mon, 03 Feb 2020 10:30:46 +0000
-Received: by mail-wm1-x344.google.com with SMTP id t23so15217851wmi.1
- for <linux-mediatek@lists.infradead.org>; Mon, 03 Feb 2020 02:30:41 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=dD9fba3D0HqXgOSqJlLFz2muhY16h6Gr+BwVuHnFIv4=;
- b=UKGNNJxPihSVdDnyfCzDlB+1MVddilSdG2GMCVkiCGZL6D4AXhN/Byg8SWyWW/bnPv
- ZhR3DWnYrfYRCjJom/Sh/JFBZ7Iwl4epixB/18DbnkFz7yPe8kl55ww3eOTntukb3ppn
- DJMyUvrIU12QGoinWcbsJ/q0VJC88l8j9qeBE7MvLq2Yj6xHtWBYBAQYNNlPMKQf8Nd5
- EqLLTWtOUfsnFNR7Kr+L3uZvlKVeimHI/QULdJTHLV8iEpdDqj4VDcz3s7vCA2nKdmiV
- f+EQ9zpHVS6KalEcfPgv8DBDc6jw7fnqqMZlQjLHwj9n0GfXXn0NPvHjPnaM1pSMxGxT
- XLKQ==
+ id 1iyZN9-0005fG-EH
+ for linux-mediatek@lists.infradead.org; Mon, 03 Feb 2020 10:54:32 +0000
+Received: by mail-pg1-x529.google.com with SMTP id g3so1903900pgs.11
+ for <linux-mediatek@lists.infradead.org>; Mon, 03 Feb 2020 02:54:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ADW24ulzjRxWFs8Inpi2MLUJLlYv0kpD0PDD8jb7dpI=;
+ b=gng9XmRj2Jusgtv+OYAhFWAfvviQ4ANaqX3dAANJ1k+PZMrE4ERLooYqWXjiNk3lNK
+ nH5zqTbV/Q52LMsnKyq/zfmgTAe0RB9n1NxSy2kAeAvwI7psST63mCuiC4vDRhHjQpz/
+ 9q/rXFgPt7i+vBrEhnU9H7PTU0M039FzoSKC0=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=dD9fba3D0HqXgOSqJlLFz2muhY16h6Gr+BwVuHnFIv4=;
- b=MzDFk0eJxBsY82661ceKREs3NGWflMmGa3frggpBa/26799NZmrZrjVlRfmOT851wH
- 8kIVIElJ+gOho2zblbNWWZBE9VqI6aMa1ipZvLU5dZBiU8SW99PyI3V5yetHKE1RSfIG
- e7rBII16kw2OWJCGKLyxbWxwCghKcxI6UrbXgWY7gqymDVVkRObDeFJqofXLly9E8lqN
- zwz4eu2wHDPvmPfG5ZGMwGSN7A6qqxHUzxZnyn89lPIMEIQ69Aoysw/QEOAEneQOIUWU
- RUeC70E4s/PYCA9HnHS8Zm5bQ2H9vOR5CbEcTRhj+cGenSMwp1MwAz4b24Umj38C3U41
- OHqg==
-X-Gm-Message-State: APjAAAWdWjx9s41/IjvIH1/InObIlKrg6e9MxzU7wCO6MIrXNFZ2nkFY
- 5GOrv6GvyFwi3Sed8Cyj9Yfs5Fuh6sFespfgwN36Jw==
-X-Google-Smtp-Source: APXvYqxNx7Z0KIvo/FhK4eHPDW3mZ84bqAFnEzCbf8Hd0g8df+eNawGKBotlJvsxIVfVYaHjsPN4BUWk/DfxFPRlw6I=
-X-Received: by 2002:a1c:7907:: with SMTP id l7mr27326507wme.37.1580725840251; 
- Mon, 03 Feb 2020 02:30:40 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ADW24ulzjRxWFs8Inpi2MLUJLlYv0kpD0PDD8jb7dpI=;
+ b=EuE6cvaCSG8BqN6lZQjLlGG7qX7iPYBkhJIv7qutK6MeOXOrMnw/f2wBOfneGlUmE/
+ dkyjW4zmHpynDGsjc+vEPugBTbKAyM68mXOhjpgTEAT1hYR/c3LV9elXSFcwsqrWqdNe
+ YnG6oqgXnNOgIpC0qvhDbnq7jieyNrEQ0cUsnHTfZi03OLY+5p+gJBBz5TR0AGX7mRsP
+ FAM/EUO9rATH57fPX+Ins280vZqK59KjhNNSxzSZgPAZxoUUGJIQ8eEQGDNPb0RcqzC8
+ 5DFbNxxKEOfGxa57QvcMmORE1mLbGemOpmM+7Ip9KbjxBUrTs1fKvZ+/qLTLFLrco+Y0
+ wTQw==
+X-Gm-Message-State: APjAAAXPQQXrJxerk1LrX0o7mQbAkz/FgFSpyl2rDY1fiwi9N2+yX0/k
+ b5goRBRRUhhvJZ48VxSONr7YNA==
+X-Google-Smtp-Source: APXvYqwmogyQ4tkjuKnABxnJkcUDNUWk6sjSeWh+MezxRj8XAoT7P+8oP0g/yi1wYM4Yic/x6imZaQ==
+X-Received: by 2002:aa7:9796:: with SMTP id o22mr23897517pfp.101.1580727270135; 
+ Mon, 03 Feb 2020 02:54:30 -0800 (PST)
+Received: from hsinyi-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:b852:bd51:9305:4261])
+ by smtp.gmail.com with ESMTPSA id 11sm20923835pfz.25.2020.02.03.02.54.28
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 03 Feb 2020 02:54:29 -0800 (PST)
+From: Hsin-Yi Wang <hsinyi@chromium.org>
+To: linux-arm-kernel@lists.infradead.org
+Subject: [PATCH v5 0/3] Add mt8173 elm and hana board
+Date: Mon,  3 Feb 2020 18:53:45 +0800
+Message-Id: <20200203105345.118294-1-hsinyi@chromium.org>
+X-Mailer: git-send-email 2.25.0.341.g760bfbb309-goog
 MIME-Version: 1.0
-References: <20200130064430.17198-1-walter-zh.wu@mediatek.com>
- <CAG_fn=X_jSUJXD932z9oN5hBa--n3Qct4zrjzGaPtb2MwJye7A@mail.gmail.com>
- <1580436306.11126.16.camel@mtksdccf07>
- <CAG_fn=X2V0nL=+s38bDbS3UXf2_i61tSevd8vzkV-ZKY=7MHvw@mail.gmail.com>
- <1580695544.17006.7.camel@mtksdccf07>
-In-Reply-To: <1580695544.17006.7.camel@mtksdccf07>
-From: Alexander Potapenko <glider@google.com>
-Date: Mon, 3 Feb 2020 11:30:28 +0100
-Message-ID: <CAG_fn=UHhZB-2JBdSBAbuNjBZwVwrzhqQvR1nHb+XOqUEvLMsw@mail.gmail.com>
-Subject: Re: [PATCH v3] lib/stackdepot: Fix global out-of-bounds in stackdepot
-To: Walter Wu <walter-zh.wu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200203_023044_859032_28FFC2B8 
-X-CRM114-Status: GOOD (  23.36  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20200203_025431_498902_0AAA9043 
+X-CRM114-Status: GOOD (  10.34  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:529 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -86,8 +80,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,98 +92,63 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>,
- wsd_upstream <wsd_upstream@mediatek.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- LKML <linux-kernel@vger.kernel.org>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Josh Poimboeuf <jpoimboe@redhat.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Dmitry Vyukov <dvyukov@google.com>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, linux-kernel@vger.kernel.org,
+ Enric Balletbo i Serra <enric.balletbo@collabora.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Feb 3, 2020 at 3:05 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
->
-> On Fri, 2020-01-31 at 19:11 +0100, Alexander Potapenko wrote:
-> > On Fri, Jan 31, 2020 at 3:05 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
-> > >
-> > > On Thu, 2020-01-30 at 13:03 +0100, Alexander Potapenko wrote:
-> > > > On Thu, Jan 30, 2020 at 7:44 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
-> > > >
-> > > > Hi Walter,
-> > > >
-> > > > > If the depot_index = STACK_ALLOC_MAX_SLABS - 2 and next_slab_inited = 0,
-> > > > > then it will cause array out-of-bounds access, so that we should modify
-> > > > > the detection to avoid this array out-of-bounds bug.
-> > > > >
-> > > > > Assume depot_index = STACK_ALLOC_MAX_SLABS - 3
-> > > > > Consider following call flow sequence:
-> > > > >
-> > > > > stack_depot_save()
-> > > > >    depot_alloc_stack()
-> > > > >       if (unlikely(depot_index + 1 >= STACK_ALLOC_MAX_SLABS)) //pass
-> > > > >       depot_index++  //depot_index = STACK_ALLOC_MAX_SLABS - 2
-> > > > >       if (depot_index + 1 < STACK_ALLOC_MAX_SLABS) //enter
-> > > > >          smp_store_release(&next_slab_inited, 0); //next_slab_inited = 0
-> > > > >       init_stack_slab()
-> > > > >          if (stack_slabs[depot_index] == NULL) //enter and exit
-> > > > >
-> > > > > stack_depot_save()
-> > > > >    depot_alloc_stack()
-> > > > >       if (unlikely(depot_index + 1 >= STACK_ALLOC_MAX_SLABS)) //pass
-> > > > >       depot_index++  //depot_index = STACK_ALLOC_MAX_SLABS - 1
-> > > > >       init_stack_slab(&prealloc)
-> > > > >          stack_slabs[depot_index + 1]  //here get global out-of-bounds
-> > > > >
-> > > > > Cc: Dmitry Vyukov <dvyukov@google.com>
-> > > > > Cc: Matthias Brugger <matthias.bgg@gmail.com>
-> > > > > Cc: Thomas Gleixner <tglx@linutronix.de>
-> > > > > Cc: Alexander Potapenko <glider@google.com>
-> > > > > Cc: Josh Poimboeuf <jpoimboe@redhat.com>
-> > > > > Cc: Kate Stewart <kstewart@linuxfoundation.org>
-> > > > > Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> > > > > Cc: Kate Stewart <kstewart@linuxfoundation.org>
-> > > > > Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-> > > > > ---
-> > > > > changes in v2:
-> > > > > modify call flow sequence and preconditon
-> > > > >
-> > > > > changes in v3:
-> > > > > add some reviewers
-> > > > > ---
-> > > > >  lib/stackdepot.c | 2 +-
-> > > > >  1 file changed, 1 insertion(+), 1 deletion(-)
-> > > > >
-> > > > > diff --git a/lib/stackdepot.c b/lib/stackdepot.c
-> > > > > index ed717dd08ff3..7e8a15e41600 100644
-> > > > > --- a/lib/stackdepot.c
-> > > > > +++ b/lib/stackdepot.c
-> > > > > @@ -106,7 +106,7 @@ static struct stack_record *depot_alloc_stack(unsigned long *entries, int size,
-> > > > >         required_size = ALIGN(required_size, 1 << STACK_ALLOC_ALIGN);
-> > > > >
-> > > > >         if (unlikely(depot_offset + required_size > STACK_ALLOC_SIZE)) {
-> > > > > -               if (unlikely(depot_index + 1 >= STACK_ALLOC_MAX_SLABS)) {
-> > > > > +               if (unlikely(depot_index + 2 >= STACK_ALLOC_MAX_SLABS)) {
-> >
-> > This again means stack_slabs[STACK_ALLOC_MAX_SLABS - 2] gets
-> > initialized, but stack_slabs[STACK_ALLOC_MAX_SLABS - 1] doesn't,
-> > because we'll be bailing out from init_stack_slab() from now on.
-> > Does this patch actually fix the problem (do you have a reliable reproducer?)
-> We get it by reviewing code, because Kasan doesn't scan it and we catch
-> another bug internally, we found it unintentionally.
->
-> > This addition of 2 is also counterintuitive, I don't think further
-> > readers will understand the logic behind it.
-> >
-> Yes
->
-> > What if we just check that depot_index + 1 is a valid index before accessing it?
-> >
-> It should fix the problem, do you want to send this patch?
+This series adds devicetree and binding document for Acer Chromebook R13 (elm)
+and Lenovo Chromebook (hana), which are using mt8173 as SoC.
 
-I've sent the patch. Thanks for the report!
+Changes in v5:
+- add gpio-line-names for gpio controller
+
+Changes in v4:
+- fix dtbs_check errors on cros-ec-keyboard
+- add comments for second source touchscreen and trackpad
+
+Changes in v3:
+- address comments in v2, major changes include:
+  * move uart aliases from mt8173-elm.dtsi to mt8173.dtsi
+  * remove brightness-levels in backlight
+  * add interrupt for da9211
+  * move pinmux for sdio_fixed_3v3 from mmc3_pins_default
+  * remove some non upstream property
+  * checked on schematic, cd-gpio in mmc1 should be GPIO_ACTIVE_LOW
+
+Changes in v2:
+- fix mediatek.yaml
+- fixup some nodes and remove unused nodes in dts
+
+
+Hsin-Yi Wang (3):
+  dt-bindings: arm64: dts: mediatek: Add mt8173 elm and hana
+  arm64: dts: mt8173: add uart aliases
+  arm64: dts: mediatek: add mt8173 elm and hana board
+
+ .../devicetree/bindings/arm/mediatek.yaml     |   22 +
+ arch/arm64/boot/dts/mediatek/Makefile         |    3 +
+ .../dts/mediatek/mt8173-elm-hana-rev7.dts     |   27 +
+ .../boot/dts/mediatek/mt8173-elm-hana.dts     |   14 +
+ .../boot/dts/mediatek/mt8173-elm-hana.dtsi    |   70 +
+ arch/arm64/boot/dts/mediatek/mt8173-elm.dts   |   14 +
+ arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi  | 1169 +++++++++++++++++
+ arch/arm64/boot/dts/mediatek/mt8173.dtsi      |    5 +-
+ 8 files changed, 1323 insertions(+), 1 deletion(-)
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana-rev7.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dtsi
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi
+
+-- 
+2.25.0.341.g760bfbb309-goog
+
 
 _______________________________________________
 Linux-mediatek mailing list
