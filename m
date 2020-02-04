@@ -2,62 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0EE29150E49
-	for <lists+linux-mediatek@lfdr.de>; Mon,  3 Feb 2020 18:00:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F2971513DD
+	for <lists+linux-mediatek@lfdr.de>; Tue,  4 Feb 2020 01:54:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FQM2j5wshCns3ET1GSnsYf0FQev1XPEP0NAa65U2m/E=; b=uhj0KGWgoQY40C
-	ZRt+ajhka2M8jiUldhTbfADlhggCYSIfyU/syPREJ0MsVJsWNr63YqovjVzq/T64QrsXLxjSSKbpM
-	p8mU1KEl0ub63nrQj66b5P4IOaYJLDNpSDLbXiHbutg9ElAnGWNX2S94hAzoB1kVCRh9crlJxg0XK
-	eGnvwL5JIrWjYpziLz17uB1TPVLCmFvM/CBIeeX+Abc1sRVG6SkK4x6IJScKGlIO5kmtprv6OPCpW
-	/4UMgUxPSpwqnqdiHQIhrvVUdMf+VEE/4TF72IWklWvj6jq2kUyC+/qhxBtAglYehtJESPGIQ9pya
-	v+uTAFff7t0g5ykDY06Q==;
+	List-Owner; bh=NqbVrXtj79teaO6vLlzWFctKBT5MNLA4wjgAoik/JD0=; b=dfkx7fcHznyaHn
+	R6qQI/h1k8u1GR98nOYxduAH8hF3k7i0WY7eY/gQvuukl2itxsHHNp8lMRqEPOtT+RnR/g83Q9zfn
+	wB4uhODv+9LYzurVrSW2+4SOVaNJwQ6HunmWraLiBrStxBan5n/XUAS4DiV5QobncuYrTAa7yKash
+	eMt73qg2QFFVo78+wy5tJcFIYJbxcJTuXSptYIbywoTUCnxzczXtOzN7qH6AZKqoS/n73QwFXhHU8
+	VgYXF+KyFDf1XCHY3jUCttbNYTL0Axeez6gL18rZ6r0yApFAh8wiNKI4LsxNHnG1HHCWRanjuNqeP
+	4gVWz8zfBGbABxFUTqIQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iyf5O-0004r1-Os; Mon, 03 Feb 2020 17:00:34 +0000
+	id 1iymU9-000297-T6; Tue, 04 Feb 2020 00:54:37 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iyf5A-0004XO-Eb; Mon, 03 Feb 2020 17:00:22 +0000
-X-UUID: 2335677369974be39e39367ee9d32f89-20200203
+ id 1iymU0-00023w-IK; Tue, 04 Feb 2020 00:54:31 +0000
+X-UUID: d391a02244254eceb83a790f4b61c53f-20200203
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=H9GMx9DnwGDgodla7Vg+jUBwtFlHLpaLo8S7jY2l5XU=; 
- b=Zue/IOlNDbjjIhCQSoLUzz07QVmuwh4FejS979v1jf76XShrTaNvPXnPGTnrvQl+1pvYnQKgcNlKQvXnOU3hUjzK0BhQR4RGGMoO4jl84yPmrnpPWqbVV/CXBXZaZYFbtLGFMrLrGazlNbADNV98R0csRVj5ODcyjQu1oNuUZPI=;
-X-UUID: 2335677369974be39e39367ee9d32f89-20200203
+ bh=5GT0W0D4fp1R9e9GcyJmXd1HEmQL0ETrvY40fzATcrY=; 
+ b=bAGxRWqRT1Ty4qarjsRGSiKWZfm4/fmRF+ofrie3juJEv//55/vg7Cx5pNzJa9jVLHFd97FCkMzVLrD7XdYpJPvNn8auiWS5FtQ2KyHUjgSCUIs9cjCQanmURnLcuYPD9OfAcynFXK1yP4ZJNbSmlZLHb2UMBd/6JyOZI+kbYhU=;
+X-UUID: d391a02244254eceb83a790f4b61c53f-20200203
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <yingjoe.chen@mediatek.com>)
+ (envelope-from <chun-hung.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1389832465; Mon, 03 Feb 2020 09:00:11 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 3 Feb 2020 08:50:33 -0800
+ with ESMTP id 1170873240; Mon, 03 Feb 2020 16:54:17 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 3 Feb 2020 16:44:13 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 4 Feb 2020 00:47:30 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 4 Feb 2020 08:43:34 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 4 Feb 2020 00:50:22 +0800
-Message-ID: <1580748607.31376.3.camel@mtksdaap41>
-Subject: Re: [PATCH v8 4/5] rtc: mt6397: Add support for the MediaTek MT6358
- RTC
-From: Yingjoe Chen <yingjoe.chen@mediatek.com>
-To: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-Date: Tue, 4 Feb 2020 00:50:07 +0800
-In-Reply-To: <1580730044-30501-5-git-send-email-hsin-hsiung.wang@mediatek.com>
-References: <1580730044-30501-1-git-send-email-hsin-hsiung.wang@mediatek.com>
- <1580730044-30501-5-git-send-email-hsin-hsiung.wang@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Tue, 4 Feb 2020 08:44:29 +0800
+Message-ID: <1580777053.4621.1.camel@mtkswgap22>
+Subject: Re: [PATCH 1/3] [1/3] mmc: core: expose MMC_CAP2_CQE* to dt
+From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
+To: Ulf Hansson <ulf.hansson@linaro.org>
+Date: Tue, 4 Feb 2020 08:44:13 +0800
+In-Reply-To: <CAPDyKFropF-au2OTgyRL8-sO0MKXs3GtZGMqYpWpsKHtfdtpyw@mail.gmail.com>
+References: <1572590582-11056-1-git-send-email-chun-hung.wu@mediatek.com>
+ <CAPDyKFropF-au2OTgyRL8-sO0MKXs3GtZGMqYpWpsKHtfdtpyw@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 37D3D0CDB433DAF44B511CA24F2337DFE40A7492358ED61E79F74C61A38C3D7A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200203_090020_508896_9AD4F695 
-X-CRM114-Status: GOOD (  15.80  )
+X-CRM114-CacheID: sfid-20200203_165428_616348_DC2E3CF0 
+X-CRM114-Status: GOOD (  16.29  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -85,121 +83,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Alessandro
- Zummo <a.zummo@towertech.it>, Alexandre Belloni <alexandre.belloni@bootlin.com>,
- srv_heupstream@mediatek.com, Frank Wunderlich <frank-w@public-files.de>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Ran Bi <ran.bi@mediatek.com>,
- Sean Wang <sean.wang@mediatek.com>, Josef Friedl <josef.friedl@speed.at>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
- devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Lee Jones <lee.jones@linaro.org>, linux-arm-kernel@lists.infradead.org,
- linux-rtc@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Kate Stewart <kstewart@linuxfoundation.org>, wsd_upstream@mediatek.com,
+ DTML <devicetree@vger.kernel.org>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>, Greg
+ Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Linus Walleij <linus.walleij@linaro.org>,
+ Kuohong Wang <kuohong.wang@mediatek.com>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>, Pavel
+ Machek <pavel@ucw.cz>, Matthias Brugger <matthias.bgg@gmail.com>,
+ "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>, Thomas
+ Gleixner <tglx@linutronix.de>, Stanley Chu <stanley.chu@mediatek.com>,
+ Pan Bian <bianpan2016@163.com>, Chaotian Jing <chaotian.jing@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2020-02-03 at 19:40 +0800, Hsin-Hsiung Wang wrote:
-> From: Ran Bi <ran.bi@mediatek.com>
+Thanks for the review , will remove the tag in v2 driver.
+
+On Mon, 2019-11-11 at 14:04 +0100, Ulf Hansson wrote:
+> On Fri, 1 Nov 2019 at 07:43, Chun-Hung Wu <chun-hung.wu@mediatek.com> wrote:
+> >
+> > Expose MMC_CAP2_CQE and MMC_CAP2_CQE_DCMD
+> > to host->caps2 if
+> > 1. "supports-cqe" is defined in dt and
+> > 2. "disable-cqe-dcmd" is not defined in dt.
+> >
+> > Change-Id: I3d172e6bcfac34520c3932a6f8df2e20f2c0d05b
+> > CR-Id:
+> > Feature:
 > 
-> This add support for the MediaTek MT6358 RTC. Driver using
-> compatible data to store different RTC_WRTGR address offset.
+> Remove these tags please.
 > 
-> Signed-off-by: Ran Bi <ran.bi@mediatek.com>
-> Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-> ---
->  drivers/rtc/rtc-mt6397.c       | 25 +++++++++++++++++--------
->  include/linux/mfd/mt6397/rtc.h | 16 +++++++++++++++-
->  2 files changed, 32 insertions(+), 9 deletions(-)
+> > Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
+> > ---
+> >  drivers/mmc/core/host.c | 8 ++++++++
+> >  1 file changed, 8 insertions(+)
+> >
+> > diff --git a/drivers/mmc/core/host.c b/drivers/mmc/core/host.c
+> > index 105b7a7..efb0dbe 100644
+> > --- a/drivers/mmc/core/host.c
+> > +++ b/drivers/mmc/core/host.c
+> > @@ -319,6 +319,14 @@ int mmc_of_parse(struct mmc_host *host)
+> >                 host->caps2 |= MMC_CAP2_NO_SD;
+> >         if (device_property_read_bool(dev, "no-mmc"))
+> >                 host->caps2 |= MMC_CAP2_NO_MMC;
+> > +       if (device_property_read_bool(dev, "supports-cqe"))
+> > +               host->caps2 |= MMC_CAP2_CQE;
+> > +
+> > +       /* Must be after "supports-cqe" check */
+> > +       if (!device_property_read_bool(dev, "disable-cqe-dcmd")) {
+> > +               if (host->caps2 & MMC_CAP2_CQE)
+> > +                       host->caps2 |= MMC_CAP2_CQE_DCMD;
+> > +       }
+> >
+> >         /* Must be after "non-removable" check */
+> >         if (device_property_read_u32(dev, "fixed-emmc-driver-type", &drv_type) == 0) {
+> > --
+> > 1.9.1
+> >
 > 
-> diff --git a/drivers/rtc/rtc-mt6397.c b/drivers/rtc/rtc-mt6397.c
-> index 5249fc9..a90735e1 100644
-> --- a/drivers/rtc/rtc-mt6397.c
-> +++ b/drivers/rtc/rtc-mt6397.c
-> @@ -9,18 +9,31 @@
->  #include <linux/mfd/mt6397/core.h>
->  #include <linux/module.h>
->  #include <linux/mutex.h>
-> +#include <linux/of_device.h>
->  #include <linux/platform_device.h>
->  #include <linux/regmap.h>
->  #include <linux/rtc.h>
->  #include <linux/mfd/mt6397/rtc.h>
->  #include <linux/mod_devicetable.h>
->  
-> +static const struct of_device_id mt6397_rtc_of_match[] = {
-> +	{ .compatible = "mediatek,mt6323-rtc",
-> +		.data = (void *)&mt6397_rtc_data, },
-> +	{ .compatible = "mediatek,mt6358-rtc",
-> +		.data = (void *)&mt6358_rtc_data, },
-> +	{ .compatible = "mediatek,mt6397-rtc",
-> +		.data = (void *)&mt6397_rtc_data, },
-> +	{}
-> +};
-> +MODULE_DEVICE_TABLE(of, mt6397_rtc_of_match);
-> +
->  static int mtk_rtc_write_trigger(struct mt6397_rtc *rtc)
->  {
->  	int ret;
->  	u32 data;
->  
-> -	ret = regmap_write(rtc->regmap, rtc->addr_base + RTC_WRTGR, 1);
-> +	ret = regmap_write(rtc->regmap,
-> +			   rtc->addr_base + rtc->data->wrtgr, 1);
-
-nit: fit in one line.
-
-<...>
-
-> diff --git a/include/linux/mfd/mt6397/rtc.h b/include/linux/mfd/mt6397/rtc.h
-> index f84b916..fffe34a 100644
-> --- a/include/linux/mfd/mt6397/rtc.h
-> +++ b/include/linux/mfd/mt6397/rtc.h
-> @@ -18,7 +18,8 @@
->  #define RTC_BBPU_CBUSY         BIT(6)
->  #define RTC_BBPU_KEY            (0x43 << 8)
->  
-> -#define RTC_WRTGR              0x003c
-> +#define RTC_WRTGR_MT6358       0x3a
-> +#define RTC_WRTGR_MT6397       0x3c
->  
->  #define RTC_IRQ_STA            0x0002
->  #define RTC_IRQ_STA_AL         BIT(0)
-> @@ -57,6 +58,10 @@
->  #define MTK_RTC_POLL_DELAY_US  10
->  #define MTK_RTC_POLL_TIMEOUT   (jiffies_to_usecs(HZ))
->  
-> +struct mtk_rtc_data {
-> +	u32			wrtgr;
-> +};
-> +
->  struct mt6397_rtc {
->  	struct device           *dev;
->  	struct rtc_device       *rtc_dev;
-> @@ -66,6 +71,15 @@ struct mt6397_rtc {
->  	struct regmap           *regmap;
->  	int                     irq;
->  	u32                     addr_base;
-> +	const struct mtk_rtc_data *data;
-> +};
-> +
-> +static const struct mtk_rtc_data mt6358_rtc_data = {
-> +	.wrtgr = RTC_WRTGR_MT6358,
-> +};
-> +
-> +static const struct mtk_rtc_data mt6397_rtc_data = {
-> +	.wrtgr = RTC_WRTGR_MT6397,
->  };
-
-Hi,
-
-Putting these in header file doesn't looks right to me.
-Who need this? can you move them back to rtc-mt6397.c?
-
-Joe.C
-
+> Otherwise, this looks good to me.
+> 
+> Kind regards
+> Uffe
 
 _______________________________________________
 Linux-mediatek mailing list
