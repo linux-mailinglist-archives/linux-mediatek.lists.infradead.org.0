@@ -2,92 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E2E2D15277F
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Feb 2020 09:19:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id ADC52152874
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Feb 2020 10:36:32 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7zkH0zoD1whqFzFHtRHJDnJy4Dne+NuWYoGr3WzzHhU=; b=HTJYVCBtimBtim
-	R3nT/oWm/876s+tcxVDVBmcVac9tNDjsoUllytqb5Och0v2KrkOWJxERohusmtWCDabCrK3WhYr2W
-	FgSGxmUk6oPx0PaTLPX6xF8PxtRNW98ah74SFnN914rPQ14EB0HTwvcNIeFUHPZIq9KPYGu5Vwn4E
-	IM7sJ6pC/l3wbLcP632XonN3PtAaMOn/1L++pQza+tWy8lUZMAbeURbhqjmfEyJGJfT3URJhlGYUJ
-	3GdDGKklqA/B54tuqJ1x1nBgKrN1QQeepXfMW3LDMDc6NUswsCBb7VVCccA0soPtD1M73ggLxBdvp
-	ol9zsiQjVlaxg83jq66Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=FdH9E0zG3I0YrDGbXPoZEwVUPfG8E7NV/k/YfbGiEGQ=; b=kI/kkrduHUOZmd
+	DvjA8BHyClzJX0xw/GOUJrUNgoHUajKEaVAFCErM28DqHUp0dsYicmEsBAzBLCaOGEk8y/BKsHAmg
+	0FAYk6vOu4Dy7O9A5PwRk13w9HvzqEDd8jJGnG5bKfDFypUwzDWXtRUh7AxU2+3bhg08EN5aigso9
+	0uCWi4oACY5W4nR7AN0DCXvgNhTVMqb/qh+UJyU7eJiTBoWfIs8oJVKNd1/PVfHD9aZbJNT8u65h7
+	2Wl/yvit2l5apybaBoEM/JTK7V7oG5s4NGaHIaiJvlP177Sh8gwOTX9NXzV/QOarTqAiF3+LwPJEO
+	ao/LifZuG+dHerBaZqPA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1izFtu-00089W-SL; Wed, 05 Feb 2020 08:19:10 +0000
-Received: from nbd.name ([2a01:4f8:221:3d45::2])
+	id 1izH6a-0004va-4Z; Wed, 05 Feb 2020 09:36:20 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1izFts-00088z-JP
- for linux-mediatek@lists.infradead.org; Wed, 05 Feb 2020 08:19:09 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
- s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=MAi2ziLm73yBVR1HelvKHpsAbG3ROAi3rNA0HWTfhZs=; b=KuSMIfKeHwXwvMhqMAImQvQPT6
- 8yO2EEuSmn6oupkVI3KHaPHTFXSaGv6AuX9l8PkVegK5gSieF2gw8wGJi4wIwdwtrnPCf4F21tUyg
- qU6GbPcuLSQKbUJj+q7+0URPNcgkDb4W4VhKfw1q2kcwjEQQa6s+1NU9GV3xmcfil5H8=;
-Received: from [80.255.10.202] (helo=nf.local)
- by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
- (Exim 4.89) (envelope-from <nbd@nbd.name>)
- id 1izFtn-0002xx-FD; Wed, 05 Feb 2020 09:19:03 +0100
-Subject: Re: [PATCH] mt76: mt7615: fix wrong length in strncmp
-To: Ryder Lee <ryder.lee@mediatek.com>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>
-References: <cee34bac9d6041784a92c5fdbf667c367dc7f968.1580874252.git.ryder.lee@mediatek.com>
-From: Felix Fietkau <nbd@nbd.name>
-Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
- xsDiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
- ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
- Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
- AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
- vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
- wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
- TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
- l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwc0cRmVsaXggRmll
- dGthdSA8bmJkQG5iZC5uYW1lPsJgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
- HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
- VrwYTIThkTlQzsFNBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
- CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
- VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
- Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
- DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
- wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
- f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
- aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
- FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
- TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabwkkE
- GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
- RjMaxwtSdaCKMw3j33ZbsWS4
-Message-ID: <4d166d0c-db0a-fc25-4315-a15bf1002bf8@nbd.name>
-Date: Wed, 5 Feb 2020 09:19:02 +0100
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0)
- Gecko/20100101 Thunderbird/68.4.2
+ id 1izH6W-0004uw-RQ
+ for linux-mediatek@lists.infradead.org; Wed, 05 Feb 2020 09:36:18 +0000
+Received: from localhost (unknown [212.187.182.163])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 0AD5E20661;
+ Wed,  5 Feb 2020 09:36:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1580895375;
+ bh=RwByi0XDoyCwQdPe5YV1dEFXavEuBmppr0k662j0vE0=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=GVMZpACbv7YDWH+Ckvp13K/sQxq6HMXMZWFjtjxgZOzZCqv9+3Rz5m7YrNUSRGzRo
+ 8xla3g7gqRFfMK8GwmrjBaSCImKNAg1i5cq0H1VmAJSHqnh8N8ShGFvp+81/Aocfwd
+ zPKKa2l7omXB4nxNHq8JHvMsPIqUAf6bH7AZ+bNg=
+Date: Wed, 5 Feb 2020 09:36:12 +0000
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Frankie Chang <Frankie.Chang@mediatek.com>
+Subject: Re: [PATCH v1 1/1] binder: transaction latency tracking for user build
+Message-ID: <20200205093612.GA1167956@kroah.com>
+References: <1580885572-14272-1-git-send-email-Frankie.Chang@mediatek.com>
 MIME-Version: 1.0
-In-Reply-To: <cee34bac9d6041784a92c5fdbf667c367dc7f968.1580874252.git.ryder.lee@mediatek.com>
-Content-Language: en-US
+Content-Disposition: inline
+In-Reply-To: <1580885572-14272-1-git-send-email-Frankie.Chang@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200205_001908_839108_B1170A87 
-X-CRM114-Status: GOOD (  12.95  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200205_013616_925257_9230FB01 
+X-CRM114-Status: GOOD (  18.85  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,36 +71,126 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Josh Boyer <jwboyer@kernel.org>, Sean Wang <sean.wang@mediatek.com>,
- linux-wireless@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Shayne Chen <shayne.chen@mediatek.com>
+Cc: Todd Kjos <tkjos@android.com>, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org,
+ Arve =?iso-8859-1?B?SGr4bm5lduVn?= <arve@android.com>,
+ Jian-Min.Liu@mediatek.com, linux-mediatek@lists.infradead.org,
+ Joel Fernandes <joel@joelfernandes.org>, Martijn Coenen <maco@android.com>,
+ Christian Brauner <christian@brauner.io>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2020-02-05 04:46, Ryder Lee wrote:
-> Fix it to proper length.
+On Wed, Feb 05, 2020 at 02:52:52PM +0800, Frankie Chang wrote:
+> Record start/end timestamp to binder transaction.
+> When transaction is completed or transaction is free,
+> it would be checked if transaction latency over threshold (2 sec),
+> if yes, printing related information for tracing.
 > 
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+> Signed-off-by: Frankie Chang <Frankie.Chang@mediatek.com>
 > ---
->  drivers/net/wireless/mediatek/mt76/mt7615/mcu.c | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
+>  drivers/android/Kconfig           |    8 +++
+>  drivers/android/binder.c          |  107 +++++++++++++++++++++++++++++++++++++
+>  drivers/android/binder_internal.h |    4 ++
+>  3 files changed, 119 insertions(+)
 > 
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> index 6639f9291721..fbda56342d11 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-> @@ -491,7 +491,7 @@ static int mt7615_load_ram(struct mt7615_dev *dev)
->  		goto out;
->  	}
+> diff --git a/drivers/android/Kconfig b/drivers/android/Kconfig
+> index 6fdf2ab..7ba80eb 100644
+> --- a/drivers/android/Kconfig
+> +++ b/drivers/android/Kconfig
+> @@ -54,6 +54,14 @@ config ANDROID_BINDER_IPC_SELFTEST
+>  	  exhaustively with combinations of various buffer sizes and
+>  	  alignments.
 >  
-> -	if (!strncmp(hdr->fw_ver, "2.0", 6))
-> +	if (!strncmp(hdr->fw_ver, "2.0", 3))
-Do you plan on allowing more characters after the 2.0 and still match?
-If not, maybe we should just use sizeof(hdr->fw_ver) as max len.
+> +config BINDER_USER_TRACKING
+> +	bool "Android Binder transaction tracking"
+> +	help
+> +	  Used for track abnormal binder transaction which is over 2 seconds,
+> +	  when the transaction is done or be free, this transaction would be
+> +	  checked whether it executed overtime.
+> +	  If yes, printing out the detail info about it.
+> +
+>  endif # if ANDROID
+>  
+>  endmenu
+> diff --git a/drivers/android/binder.c b/drivers/android/binder.c
+> index e9bc9fc..5a352ee 100644
+> --- a/drivers/android/binder.c
+> +++ b/drivers/android/binder.c
+> @@ -76,6 +76,11 @@
+>  #include "binder_internal.h"
+>  #include "binder_trace.h"
+>  
+> +#ifdef CONFIG_BINDER_USER_TRACKING
+> +#include <linux/rtc.h>
+> +#include <linux/time.h>
+> +#endif
+> +
+>  static HLIST_HEAD(binder_deferred_list);
+>  static DEFINE_MUTEX(binder_deferred_lock);
+>  
+> @@ -591,8 +596,104 @@ struct binder_transaction {
+>  	 * during thread teardown
+>  	 */
+>  	spinlock_t lock;
+> +#ifdef CONFIG_BINDER_USER_TRACKING
+> +	struct timespec timestamp;
+> +	struct timeval tv;
+> +#endif
+>  };
+>  
+> +#ifdef CONFIG_BINDER_USER_TRACKING
+> +
+> +/*
+> + * binder_print_delay - Output info of a delay transaction
+> + * @t:          pointer to the over-time transaction
+> + */
+> +static void binder_print_delay(struct binder_transaction *t)
+> +{
+> +	struct rtc_time tm;
+> +	struct timespec *startime;
+> +	struct timespec cur, sub_t;
+> +
+> +	ktime_get_ts(&cur);
+> +	startime = &t->timestamp;
+> +	sub_t = timespec_sub(cur, *startime);
+> +
+> +	/* if transaction time is over than 2 sec,
+> +	 * show timeout warning log.
+> +	 */
+> +	if (sub_t.tv_sec < 2)
+> +		return;
+> +
+> +	rtc_time_to_tm(t->tv.tv_sec, &tm);
+> +
+> +	spin_lock(&t->lock);
+> +	pr_info_ratelimited("%d: from %d:%d to %d:%d",
+> +			    t->debug_id,
+> +			    t->from ? t->from->proc->pid : 0,
+> +			    t->from ? t->from->pid : 0,
+> +			    t->to_proc ? t->to_proc->pid : 0,
+> +			    t->to_thread ? t->to_thread->pid : 0);
+> +	spin_unlock(&t->lock);
+> +
+> +	pr_info_ratelimited(" total %u.%03ld s code %u start %lu.%03ld android %d-%02d-%02d %02d:%02d:%02d.%03lu\n",
+> +			    (unsigned int)sub_t.tv_sec,
+> +			    (sub_t.tv_nsec / NSEC_PER_MSEC),
+> +			    t->code,
+> +			    (unsigned long)startime->tv_sec,
+> +			    (startime->tv_nsec / NSEC_PER_MSEC),
+> +			    (tm.tm_year + 1900), (tm.tm_mon + 1), tm.tm_mday,
+> +			    tm.tm_hour, tm.tm_min, tm.tm_sec,
+> +			    (unsigned long)(t->tv.tv_usec / USEC_PER_MSEC));
+> +}
 
-- Felix
+Ick, why not use a tracepoint for this instead?
+
+And what is userspace supposed to do with this if they see it?
+
+thanks,
+
+greg k-h
 
 _______________________________________________
 Linux-mediatek mailing list
