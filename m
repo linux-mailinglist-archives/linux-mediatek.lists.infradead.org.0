@@ -2,81 +2,82 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 07CC8153496
-	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Feb 2020 16:49:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E580153670
+	for <lists+linux-mediatek@lfdr.de>; Wed,  5 Feb 2020 18:28:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LZO/amAN20r2qukVWlyxXOKloW4LAKNv66SaAHacyNk=; b=id5dVKFSCHNXgO
-	+5NkMmmeoM7byWlpd9Abjuiai0KwCMa8G6HHTnSuzsp7xyuWt4PoxmBa3vykSZKBdjzMBUhu2HBZr
-	AmzBFq5/AnS2MRYUKYFGeIhI8XPXN49M9ymCgtdIDVH0KNE0kvlVbigmeic1+HuDPoANlB+uiQK5j
-	ko1lTZxY771cYxMC4vQPwHWjgUicwihsunDxmhWkK3d+fjE++LEw3IO/GhObFglyg0gyQ9Il5KPc7
-	eenJxWrp5zWEP7vaTns1/KadJp2qVXiFyuDznytwqNQDhy+0NiKZdljEe2UAUTiwGEM0qP8aKQTY5
-	rbfTj6T3Nuv0Nks3PuoA==;
+	List-Owner; bh=J3l6GnFei/NLbxt4E5+K9TA1OuB68knpovX1RuuhCSc=; b=CQSDldObUApop3
+	vWAU1roSCvy3NmWvppiBb+hPuaHbUaBMUgTYctULRNimHdiJNtWHeE8cLYSE1T+vCYtf5C5XKy9gH
+	rWnVvpNpRoo9Z2lTkVQGR6xZCnOTfnxV8eCiextxRM2jr7t0ALPwAY9U1ZOan4zf1BRfrzmP+wd1x
+	P6psS74T1L26RHasCtD8TUosQsWzI1PppmtNQHBeOf/58shubhcyyA8fAC5sZTlOQtkFZ/DDje1xN
+	fDzUH1CZSW33DoOLpY5y3QsePixS9o1TZt2T9ftrpCThRsOtj5w4Dg64kPLiD7NLii2pXSlU984RN
+	cGsQeeGJ3QuJPqGZUOxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1izMw0-00053L-Vd; Wed, 05 Feb 2020 15:49:48 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1izOT7-0000M1-En; Wed, 05 Feb 2020 17:28:05 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1izMvx-00052u-Dm
- for linux-mediatek@lists.infradead.org; Wed, 05 Feb 2020 15:49:46 +0000
-Received: by mail-pl1-x644.google.com with SMTP id t14so1033690plr.8
- for <linux-mediatek@lists.infradead.org>; Wed, 05 Feb 2020 07:49:45 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=joelfernandes.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=RPp5BsouysxroPhjIW01q+VuZ3Zg2HgHZWKyGaExUZg=;
- b=VGTRUXMPuFFJkymuHS2/Clldk4Y1Ge5GOyVhJ4cs+a/qSOBfjNhHiwLzi7d7OvtKXV
- dTrPuljzYeG2f5M+0LrgXa4dMnoSRLBISr7y4SRJpf74F7YAsfuuBpeTGyDBqGjyeyv0
- J+bgNX7T4s6JbQaikcgdXL8m16mC8nbRAxqAA=
+ id 1izOT4-0000Ky-6j
+ for linux-mediatek@lists.infradead.org; Wed, 05 Feb 2020 17:28:03 +0000
+Received: by mail-wm1-x344.google.com with SMTP id m10so4974143wmc.0
+ for <linux-mediatek@lists.infradead.org>; Wed, 05 Feb 2020 09:27:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc:content-transfer-encoding;
+ bh=/J7K6eoBY50PYm0N/u4X3+dlKUZnt64LaOlAE9qk+tY=;
+ b=lJaz2HSL0GodXUnBdAWn5vXGicOnSOjlEzL6WRhsXUYvoCwf2EksV/H80DsSr0HvVU
+ jf5gZF9txDXrM3yAMqWtQrJa6rF6ZxYg2ABlbXin3ylMvhed2NeSefp4yc29oR7AO7Kq
+ SForPuVGtkLxc0SWSZpIfaM7l+JRe3quj6YnZtk6CLCdH6Ya1+FowX4QH8PE8atAmrxL
+ 2mwslJZqu1/pZH8QJ9X3mo5JZXE2zX0ovIXlKc9ZS9JoWrcs0qZi3ZNp1BsgCSehUGC7
+ pVPo2EESWoXfB1s0YdZHI7GfTR2svAMgYjRNn51zpIpuaTZN19/bg1o9tYC2NLTZCylr
+ L8ig==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=RPp5BsouysxroPhjIW01q+VuZ3Zg2HgHZWKyGaExUZg=;
- b=m/DfoSFanVxj0DLPC1cWHbdLWKftwJRmEz5uJpKkI0G9TV6v+5Fz40u7zG49RiMN/E
- Xhs+uqHX5fDm/nqAEyb98sqo5kZ3MU1k5rz+0/0/Q7THw2m75ivJ27hD77rVrqAXNQzb
- lxrG2etll0tjS8cHeboDzHkpXbn23jO2wmnmnPolFyDh0qRlPvUW1VFzTIRN4UQ3uP0+
- ac122CjpUn81pXDIrndprOUUJ14WQcxW6Y5ZRhZlbIZfLGhU9R1FCFAJA4mZzeBrIIPn
- PfKp+XQBCJrJ/kmL/JnIgiFV3n6HEwN0p/14BD0e3gXE1apCCyfJRnncCmaq3BLb18yN
- PtBw==
-X-Gm-Message-State: APjAAAVLO6yHb9NZmva0TCd5mIuNWjbsy1SG+Rs9koxR1PPcxZ2ElxwS
- LvTp4wMfUUl5cvZZgVplAL0LgGBmrb8=
-X-Google-Smtp-Source: APXvYqzBWmPXxov8CXDn0aWq6V0NpdKfdbcbT7BgCYr2N1QKWoHGjuBr62N0A01RE7BiU7Vo8aHXZA==
-X-Received: by 2002:a17:90b:4004:: with SMTP id
- ie4mr6308224pjb.49.1580917784505; 
- Wed, 05 Feb 2020 07:49:44 -0800 (PST)
-Received: from localhost ([2620:15c:6:12:9c46:e0da:efbf:69cc])
- by smtp.gmail.com with ESMTPSA id f18sm229910pgn.2.2020.02.05.07.49.43
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 05 Feb 2020 07:49:43 -0800 (PST)
-Date: Wed, 5 Feb 2020 10:49:43 -0500
-From: Joel Fernandes <joel@joelfernandes.org>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Subject: Re: [PATCH v1 1/1] binder: transaction latency tracking for user build
-Message-ID: <20200205154943.GE142103@google.com>
-References: <1580885572-14272-1-git-send-email-Frankie.Chang@mediatek.com>
- <20200205093612.GA1167956@kroah.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc:content-transfer-encoding;
+ bh=/J7K6eoBY50PYm0N/u4X3+dlKUZnt64LaOlAE9qk+tY=;
+ b=sH02naowHNoeNBfwUUwB2BSQOXP0EwQosyirQBL4ur0JCCuGM4HaQRRu3eXR5jsF8f
+ t7gHFt/DN2QwdhnDLJWE7oSYGYf5Z6Uy6/QbiO6YC17UhiSTYIRVqkCTtk8plyUB5VHM
+ YKtSiZLoDucTfaZlL37gAvkDuvKEe6VucFRHk1pHUqenp3ZYzPP0SKay9xD3k0Z2bV6K
+ yZivZIxxAjvGjVHq99gsfvqIBTAyMOGQg4O1B3TwBJcC4FtnuqsPJLXHPju2c1/t5mHR
+ 8DBUwQHjHYJsYiasXFHCFVhdH+arkkEmIHmHv2l9J48Zu34VwzgmnpKyrKFNmSymy3kw
+ CPng==
+X-Gm-Message-State: APjAAAUwOCcawOg2pQfI4RV14gQo/K4DAgM2AaqLTlyd8MNXUayRK0BO
+ g2x7AjYk9JFVllNfb1psTAa3TkTpEym4arObySXUAw==
+X-Google-Smtp-Source: APXvYqynJh5j49aSDjFF+KSFSB3CwQRk6jra7/lReDNXiogMGUoOKebQhesHur67DC3ixje/LTjLJnSEbVX+e6ufw68=
+X-Received: by 2002:a1c:6a15:: with SMTP id f21mr6625580wmc.126.1580923677710; 
+ Wed, 05 Feb 2020 09:27:57 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200205093612.GA1167956@kroah.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20200120145635.GA30904@blackbody.suse.cz>
+ <20200124114017.8363-1-mkoutny@suse.com>
+ <20200124114017.8363-2-mkoutny@suse.com>
+ <CAJuCfpGjC=YwY=oNnYFNDp2nCuR9YhSU95=xbbeoDEheemte+Q@mail.gmail.com>
+In-Reply-To: <CAJuCfpGjC=YwY=oNnYFNDp2nCuR9YhSU95=xbbeoDEheemte+Q@mail.gmail.com>
+From: Suren Baghdasaryan <surenb@google.com>
+Date: Wed, 5 Feb 2020 09:27:45 -0800
+Message-ID: <CAJuCfpEq9c6cdEdqZOq6KDmxSHLNzby=46psRYpGxYhDT31yew@mail.gmail.com>
+Subject: Re: [PATCH v2 1/3] cgroup: Iterate tasks that did not finish do_exit()
+To: =?UTF-8?Q?Michal_Koutn=C3=BD?= <mkoutny@suse.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200205_074945_465366_68660DCC 
-X-CRM114-Status: GOOD (  22.21  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200205_092802_266281_D45189A6 
+X-CRM114-Status: GOOD (  18.28  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -85,6 +86,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,136 +99,101 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Todd Kjos <tkjos@android.com>, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org,
- Arve =?iso-8859-1?B?SGr4bm5lduVn?= <arve@android.com>,
- Jian-Min.Liu@mediatek.com, linux-mediatek@lists.infradead.org,
- Frankie Chang <Frankie.Chang@mediatek.com>, Martijn Coenen <maco@android.com>,
- Christian Brauner <christian@brauner.io>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: JeiFeng Lee <linger.lee@mediatek.com>, Tom Cherry <tomcherry@google.com>,
+ shuah@kernel.org, LKML <linux-kernel@vger.kernel.org>,
+ Tejun Heo <tj@kernel.org>, Li Zefan <lizefan@huawei.com>,
+ linux-mediatek@lists.infradead.org, linux-kselftest@vger.kernel.org,
+ Johannes Weiner <hannes@cmpxchg.org>, matthias.bgg@gmail.com,
+ cgroups mailinglist <cgroups@vger.kernel.org>, alex.shi@linux.alibaba.com,
+ kernel-team <kernel-team@android.com>, Roman Gushchin <guro@fb.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Feb 05, 2020 at 09:36:12AM +0000, Greg Kroah-Hartman wrote:
-> On Wed, Feb 05, 2020 at 02:52:52PM +0800, Frankie Chang wrote:
-> > Record start/end timestamp to binder transaction.
-> > When transaction is completed or transaction is free,
-> > it would be checked if transaction latency over threshold (2 sec),
-> > if yes, printing related information for tracing.
-> > 
-> > Signed-off-by: Frankie Chang <Frankie.Chang@mediatek.com>
-> > ---
-> >  drivers/android/Kconfig           |    8 +++
-> >  drivers/android/binder.c          |  107 +++++++++++++++++++++++++++++++++++++
-> >  drivers/android/binder_internal.h |    4 ++
-> >  3 files changed, 119 insertions(+)
-> > 
-> > diff --git a/drivers/android/Kconfig b/drivers/android/Kconfig
-> > index 6fdf2ab..7ba80eb 100644
-> > --- a/drivers/android/Kconfig
-> > +++ b/drivers/android/Kconfig
-> > @@ -54,6 +54,14 @@ config ANDROID_BINDER_IPC_SELFTEST
-> >  	  exhaustively with combinations of various buffer sizes and
-> >  	  alignments.
-> >  
-> > +config BINDER_USER_TRACKING
-> > +	bool "Android Binder transaction tracking"
-> > +	help
-> > +	  Used for track abnormal binder transaction which is over 2 seconds,
-> > +	  when the transaction is done or be free, this transaction would be
-> > +	  checked whether it executed overtime.
-> > +	  If yes, printing out the detail info about it.
-> > +
-> >  endif # if ANDROID
-> >  
-> >  endmenu
-> > diff --git a/drivers/android/binder.c b/drivers/android/binder.c
-> > index e9bc9fc..5a352ee 100644
-> > --- a/drivers/android/binder.c
-> > +++ b/drivers/android/binder.c
-> > @@ -76,6 +76,11 @@
-> >  #include "binder_internal.h"
-> >  #include "binder_trace.h"
-> >  
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +#include <linux/rtc.h>
-> > +#include <linux/time.h>
-> > +#endif
-> > +
-> >  static HLIST_HEAD(binder_deferred_list);
-> >  static DEFINE_MUTEX(binder_deferred_lock);
-> >  
-> > @@ -591,8 +596,104 @@ struct binder_transaction {
-> >  	 * during thread teardown
-> >  	 */
-> >  	spinlock_t lock;
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +	struct timespec timestamp;
-> > +	struct timeval tv;
-> > +#endif
-> >  };
-> >  
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +
-> > +/*
-> > + * binder_print_delay - Output info of a delay transaction
-> > + * @t:          pointer to the over-time transaction
-> > + */
-> > +static void binder_print_delay(struct binder_transaction *t)
-> > +{
-> > +	struct rtc_time tm;
-> > +	struct timespec *startime;
-> > +	struct timespec cur, sub_t;
-> > +
-> > +	ktime_get_ts(&cur);
-> > +	startime = &t->timestamp;
-> > +	sub_t = timespec_sub(cur, *startime);
-> > +
-> > +	/* if transaction time is over than 2 sec,
-> > +	 * show timeout warning log.
-> > +	 */
-> > +	if (sub_t.tv_sec < 2)
-> > +		return;
-> > +
-> > +	rtc_time_to_tm(t->tv.tv_sec, &tm);
-> > +
-> > +	spin_lock(&t->lock);
-> > +	pr_info_ratelimited("%d: from %d:%d to %d:%d",
-> > +			    t->debug_id,
-> > +			    t->from ? t->from->proc->pid : 0,
-> > +			    t->from ? t->from->pid : 0,
-> > +			    t->to_proc ? t->to_proc->pid : 0,
-> > +			    t->to_thread ? t->to_thread->pid : 0);
-> > +	spin_unlock(&t->lock);
-> > +
-> > +	pr_info_ratelimited(" total %u.%03ld s code %u start %lu.%03ld android %d-%02d-%02d %02d:%02d:%02d.%03lu\n",
-> > +			    (unsigned int)sub_t.tv_sec,
-> > +			    (sub_t.tv_nsec / NSEC_PER_MSEC),
-> > +			    t->code,
-> > +			    (unsigned long)startime->tv_sec,
-> > +			    (startime->tv_nsec / NSEC_PER_MSEC),
-> > +			    (tm.tm_year + 1900), (tm.tm_mon + 1), tm.tm_mday,
-> > +			    tm.tm_hour, tm.tm_min, tm.tm_sec,
-> > +			    (unsigned long)(t->tv.tv_usec / USEC_PER_MSEC));
-> > +}
-> 
-> Ick, why not use a tracepoint for this instead?
-> 
-> And what is userspace supposed to do with this if they see it?
-
-Or another option is to implement this separately outside of binder.c using
-register_trace_* on the existing binder tracepoints, similar to what say the
-block tracer or preempt-off tracers do. Call it, say, "binder-latency tracer".
-
-That way all of this tracing code is in-kernel but outside of binder.c.
-
-thanks,
-
- - Joel
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gRnJpLCBKYW4gMjQsIDIwMjAgYXQgMjo1NiBQTSBTdXJlbiBCYWdoZGFzYXJ5YW4gPHN1cmVu
+YkBnb29nbGUuY29tPiB3cm90ZToKPgo+IE9uIEZyaSwgSmFuIDI0LCAyMDIwIGF0IDM6NDAgQU0g
+TWljaGFsIEtvdXRuw70gPG1rb3V0bnlAc3VzZS5jb20+IHdyb3RlOgo+ID4KPiA+IFBGX0VYSVRJ
+TkcgaXMgc2V0IGVhcmxpZXIgdGhhbiBhY3R1YWwgcmVtb3ZhbCBmcm9tIGNzc19zZXQgd2hlbiBh
+IHRhc2sKPiA+IGlzIGV4aXR0aW5nLiBUaGlzIGNhbiBjb25mdXNlIGNncm91cC5wcm9jcyByZWFk
+ZXJzIHdobyBzZWUgbm8gUEZfRVhJVElORwo+ID4gdGFza3MsIGhvd2V2ZXIsIHJtZGlyIGlzIGNo
+ZWNraW5nIGFnYWluc3QgY3NzX3NldCBtZW1iZXJzaGlwIHNvIGl0IGNhbgo+ID4gdHJhbnNpdGlv
+bmFsbHkgZmFpbCB3aXRoIEVCVVNZLgo+ID4KPiA+IEZpeCB0aGlzIGJ5IGxpc3RpbmcgdGFza3Mg
+dGhhdCB3ZXJlbid0IHVubGlua2VkIGZyb20gY3NzX3NldCBhY3RpdmUKPiA+IGxpc3RzLgo+ID4g
+SXQgbWF5IGhhcHBlbiB0aGF0IG90aGVyIHVzZXJzIG9mIHRoZSB0YXNrIGl0ZXJhdG9yICh3aXRo
+b3V0Cj4gPiBDU1NfVEFTS19JVEVSX1BST0NTKSBzcG90IGEgUEZfRVhJVElORyB0YXNrIGJlZm9y
+ZSBjZ3JvdXBfZXhpdCgpLiBUaGlzCj4gPiBpcyBlcXVhbCB0byB0aGUgc3RhdGUgYmVmb3JlIGNv
+bW1pdCBjMDNjZDc3MzhhODMgKCJjZ3JvdXA6IEluY2x1ZGUgZHlpbmcKPiA+IGxlYWRlcnMgd2l0
+aCBsaXZlIHRocmVhZHMgaW4gUFJPQ1MgaXRlcmF0aW9ucyIpIGJ1dCBpdCBtYXkgYmUgcmV2aWV3
+ZWQKPiA+IGxhdGVyLgo+ID4KPiA+IFJlcG9ydGVkLWJ5OiBTdXJlbiBCYWdoZGFzYXJ5YW4gPHN1
+cmVuYkBnb29nbGUuY29tPgo+ID4gRml4ZXM6IGMwM2NkNzczOGE4MyAoImNncm91cDogSW5jbHVk
+ZSBkeWluZyBsZWFkZXJzIHdpdGggbGl2ZSB0aHJlYWRzIGluIFBST0NTIGl0ZXJhdGlvbnMiKQo+
+ID4gU2lnbmVkLW9mZi1ieTogTWljaGFsIEtvdXRuw70gPG1rb3V0bnlAc3VzZS5jb20+Cj4gPiAt
+LS0KPiA+ICBpbmNsdWRlL2xpbnV4L2Nncm91cC5oIHwgIDEgKwo+ID4gIGtlcm5lbC9jZ3JvdXAv
+Y2dyb3VwLmMgfCAyMyArKysrKysrKysrKysrKysrLS0tLS0tLQo+ID4gIDIgZmlsZXMgY2hhbmdl
+ZCwgMTcgaW5zZXJ0aW9ucygrKSwgNyBkZWxldGlvbnMoLSkKPiA+Cj4gPiBkaWZmIC0tZ2l0IGEv
+aW5jbHVkZS9saW51eC9jZ3JvdXAuaCBiL2luY2x1ZGUvbGludXgvY2dyb3VwLmgKPiA+IGluZGV4
+IGQ3ZGRlYmQwY2RlYy4uZTc1ZDIxOTEyMjZiIDEwMDY0NAo+ID4gLS0tIGEvaW5jbHVkZS9saW51
+eC9jZ3JvdXAuaAo+ID4gKysrIGIvaW5jbHVkZS9saW51eC9jZ3JvdXAuaAo+ID4gQEAgLTYyLDYg
+KzYyLDcgQEAgc3RydWN0IGNzc190YXNrX2l0ZXIgewo+ID4gICAgICAgICBzdHJ1Y3QgbGlzdF9o
+ZWFkICAgICAgICAgICAgICAgICptZ190YXNrc19oZWFkOwo+ID4gICAgICAgICBzdHJ1Y3QgbGlz
+dF9oZWFkICAgICAgICAgICAgICAgICpkeWluZ190YXNrc19oZWFkOwo+ID4KPiA+ICsgICAgICAg
+c3RydWN0IGxpc3RfaGVhZCAgICAgICAgICAgICAgICAqY3VyX3Rhc2tzX2hlYWQ7Cj4gPiAgICAg
+ICAgIHN0cnVjdCBjc3Nfc2V0ICAgICAgICAgICAgICAgICAgKmN1cl9jc2V0Owo+ID4gICAgICAg
+ICBzdHJ1Y3QgY3NzX3NldCAgICAgICAgICAgICAgICAgICpjdXJfZGNzZXQ7Cj4gPiAgICAgICAg
+IHN0cnVjdCB0YXNrX3N0cnVjdCAgICAgICAgICAgICAgKmN1cl90YXNrOwo+ID4gZGlmZiAtLWdp
+dCBhL2tlcm5lbC9jZ3JvdXAvY2dyb3VwLmMgYi9rZXJuZWwvY2dyb3VwL2Nncm91cC5jCj4gPiBp
+bmRleCA3MzVhZjhmMTVmOTUuLmE2ZTM2MTllMDEzYiAxMDA2NDQKPiA+IC0tLSBhL2tlcm5lbC9j
+Z3JvdXAvY2dyb3VwLmMKPiA+ICsrKyBiL2tlcm5lbC9jZ3JvdXAvY2dyb3VwLmMKPiA+IEBAIC00
+NDA0LDEyICs0NDA0LDE2IEBAIHN0YXRpYyB2b2lkIGNzc190YXNrX2l0ZXJfYWR2YW5jZV9jc3Nf
+c2V0KHN0cnVjdCBjc3NfdGFza19pdGVyICppdCkKPiA+ICAgICAgICAgICAgICAgICB9Cj4gPiAg
+ICAgICAgIH0gd2hpbGUgKCFjc3Nfc2V0X3BvcHVsYXRlZChjc2V0KSAmJiBsaXN0X2VtcHR5KCZj
+c2V0LT5keWluZ190YXNrcykpOwo+ID4KPiA+IC0gICAgICAgaWYgKCFsaXN0X2VtcHR5KCZjc2V0
+LT50YXNrcykpCj4gPiArICAgICAgIGlmICghbGlzdF9lbXB0eSgmY3NldC0+dGFza3MpKSB7Cj4g
+PiAgICAgICAgICAgICAgICAgaXQtPnRhc2tfcG9zID0gY3NldC0+dGFza3MubmV4dDsKPiA+IC0g
+ICAgICAgZWxzZSBpZiAoIWxpc3RfZW1wdHkoJmNzZXQtPm1nX3Rhc2tzKSkKPiA+ICsgICAgICAg
+ICAgICAgICBpdC0+Y3VyX3Rhc2tzX2hlYWQgPSAmY3NldC0+dGFza3M7Cj4gPiArICAgICAgIH0g
+ZWxzZSBpZiAoIWxpc3RfZW1wdHkoJmNzZXQtPm1nX3Rhc2tzKSkgewo+ID4gICAgICAgICAgICAg
+ICAgIGl0LT50YXNrX3BvcyA9IGNzZXQtPm1nX3Rhc2tzLm5leHQ7Cj4gPiAtICAgICAgIGVsc2UK
+PiA+ICsgICAgICAgICAgICAgICBpdC0+Y3VyX3Rhc2tzX2hlYWQgPSAmY3NldC0+bWdfdGFza3M7
+Cj4gPiArICAgICAgIH0gZWxzZSB7Cj4gPiAgICAgICAgICAgICAgICAgaXQtPnRhc2tfcG9zID0g
+Y3NldC0+ZHlpbmdfdGFza3MubmV4dDsKPiA+ICsgICAgICAgICAgICAgICBpdC0+Y3VyX3Rhc2tz
+X2hlYWQgPSAmY3NldC0+ZHlpbmdfdGFza3M7Cj4gPiArICAgICAgIH0KPiA+Cj4gPiAgICAgICAg
+IGl0LT50YXNrc19oZWFkID0gJmNzZXQtPnRhc2tzOwo+ID4gICAgICAgICBpdC0+bWdfdGFza3Nf
+aGVhZCA9ICZjc2V0LT5tZ190YXNrczsKPiA+IEBAIC00NDY3LDEwICs0NDcxLDE0IEBAIHN0YXRp
+YyB2b2lkIGNzc190YXNrX2l0ZXJfYWR2YW5jZShzdHJ1Y3QgY3NzX3Rhc2tfaXRlciAqaXQpCj4g
+PiAgICAgICAgICAgICAgICAgZWxzZQo+ID4gICAgICAgICAgICAgICAgICAgICAgICAgaXQtPnRh
+c2tfcG9zID0gaXQtPnRhc2tfcG9zLT5uZXh0Owo+ID4KPiA+IC0gICAgICAgICAgICAgICBpZiAo
+aXQtPnRhc2tfcG9zID09IGl0LT50YXNrc19oZWFkKQo+ID4gKyAgICAgICAgICAgICAgIGlmIChp
+dC0+dGFza19wb3MgPT0gaXQtPnRhc2tzX2hlYWQpIHsKPiA+ICAgICAgICAgICAgICAgICAgICAg
+ICAgIGl0LT50YXNrX3BvcyA9IGl0LT5tZ190YXNrc19oZWFkLT5uZXh0Owo+ID4gLSAgICAgICAg
+ICAgICAgIGlmIChpdC0+dGFza19wb3MgPT0gaXQtPm1nX3Rhc2tzX2hlYWQpCj4gPiArICAgICAg
+ICAgICAgICAgICAgICAgICBpdC0+Y3VyX3Rhc2tzX2hlYWQgPSBpdC0+bWdfdGFza3NfaGVhZDsK
+PiA+ICsgICAgICAgICAgICAgICB9Cj4gPiArICAgICAgICAgICAgICAgaWYgKGl0LT50YXNrX3Bv
+cyA9PSBpdC0+bWdfdGFza3NfaGVhZCkgewo+ID4gICAgICAgICAgICAgICAgICAgICAgICAgaXQt
+PnRhc2tfcG9zID0gaXQtPmR5aW5nX3Rhc2tzX2hlYWQtPm5leHQ7Cj4gPiArICAgICAgICAgICAg
+ICAgICAgICAgICBpdC0+Y3VyX3Rhc2tzX2hlYWQgPSBpdC0+ZHlpbmdfdGFza3NfaGVhZDsKPiA+
+ICsgICAgICAgICAgICAgICB9Cj4gPiAgICAgICAgICAgICAgICAgaWYgKGl0LT50YXNrX3BvcyA9
+PSBpdC0+ZHlpbmdfdGFza3NfaGVhZCkKPiA+ICAgICAgICAgICAgICAgICAgICAgICAgIGNzc190
+YXNrX2l0ZXJfYWR2YW5jZV9jc3Nfc2V0KGl0KTsKPiA+ICAgICAgICAgfSBlbHNlIHsKPiA+IEBA
+IC00NDg5LDExICs0NDk3LDEyIEBAIHN0YXRpYyB2b2lkIGNzc190YXNrX2l0ZXJfYWR2YW5jZShz
+dHJ1Y3QgY3NzX3Rhc2tfaXRlciAqaXQpCj4gPiAgICAgICAgICAgICAgICAgICAgICAgICBnb3Rv
+IHJlcGVhdDsKPiA+Cj4gPiAgICAgICAgICAgICAgICAgLyogYW5kIGR5aW5nIGxlYWRlcnMgdy9v
+IGxpdmUgbWVtYmVyIHRocmVhZHMgKi8KPiA+IC0gICAgICAgICAgICAgICBpZiAoIWF0b21pY19y
+ZWFkKCZ0YXNrLT5zaWduYWwtPmxpdmUpKQo+ID4gKyAgICAgICAgICAgICAgIGlmIChpdC0+Y3Vy
+X3Rhc2tzX2hlYWQgPT0gaXQtPmR5aW5nX3Rhc2tzX2hlYWQgJiYKPiA+ICsgICAgICAgICAgICAg
+ICAgICAgIWF0b21pY19yZWFkKCZ0YXNrLT5zaWduYWwtPmxpdmUpKQo+ID4gICAgICAgICAgICAg
+ICAgICAgICAgICAgZ290byByZXBlYXQ7Cj4gPiAgICAgICAgIH0gZWxzZSB7Cj4gPiAgICAgICAg
+ICAgICAgICAgLyogc2tpcCBhbGwgZHlpbmcgb25lcyAqLwo+ID4gLSAgICAgICAgICAgICAgIGlm
+ICh0YXNrLT5mbGFncyAmIFBGX0VYSVRJTkcpCj4gPiArICAgICAgICAgICAgICAgaWYgKGl0LT5j
+dXJfdGFza3NfaGVhZCA9PSBpdC0+ZHlpbmdfdGFza3NfaGVhZCkKPiA+ICAgICAgICAgICAgICAg
+ICAgICAgICAgIGdvdG8gcmVwZWF0Owo+ID4gICAgICAgICB9Cj4gPiAgfQo+ID4gLS0KPiA+IDIu
+MjQuMQo+ID4KPgo+IFRlc3RlZC1ieTogU3VyZW4gQmFnaGRhc2FyeWFuIDxzdXJlbmJAZ29vZ2xl
+LmNvbT4KPgo+IFRoYW5rcyEKCkhpIEZvbGtzLApJZiB0aGlzIG5ldyB2ZXJzaW9uIGxvb2tzIGdv
+b2QgY291bGQgd2UgZ2V0IGFuIEFjayBwbGVhc2U/IEkgbmVlZCB0bwpzdGFydCBiYWNrcG9ydGlu
+ZyB0aGlzIGZpeCB0byBBbmRyb2lkIGFuZCB3b3VsZCBsaWtlIGEgY29uZmlybWF0aW9uCmJlZm9y
+ZSBkb2luZyBzby4KVGhhbmtzIQoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxp
+c3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0
+aW5mby9saW51eC1tZWRpYXRlawo=
