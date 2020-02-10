@@ -2,72 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4AE81156E6C
-	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Feb 2020 05:24:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C281E156F82
+	for <lists+linux-mediatek@lfdr.de>; Mon, 10 Feb 2020 07:36:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3QZ3D2uCLgNWqGhspQfL+neE8F60gEDKwBjU4YjakcI=; b=P2iotYqqxBhLD3
-	r6ic7YvIHCThWm0IBfAgBo6AS86I2oaoUMNVfs1O2RaupbNKVsaK9aM9iow+BPw+VmoLsa+m+xYMH
-	qC00rHOiFEykyf6TxIO+pTWwsCYP/SZ6ah3oM+M/0cdL17lJsBSQwKdSmTx5InYL+ieV68dHQAwXG
-	rImmpLCFMkJxqzsFKPViuPaz8qIg1/L2KJupc7Bx46shBTupUYMkWfswOwA8YTRhVyBuQUAE9895L
-	4MKP7wWM8DTISaSnUrC1hPDiTZHjZrUf+TrtYKBrl5dQCcaB7QXbq/ws/7UOAmq1lfJL5PJ5PTOrG
-	w1va5mpvaJzms9R57v1w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=kjmBddlAD4KoTmQ5ofTV26V+/CV1wYDmRg9hiBSdM1I=; b=cAK5hE08OMIp4y
+	s8QHbrE4SPg/7ISXDcxTdQxsRaOpjs9EQDpzpxkV7ksUrU8ZA7/6DxjEGLMm/Q/zx3fR3JjVekLRG
+	ikq6xrIPkEePynilg2vD+/bnz4F//1c0PdPZLGo9EdjXD38Na6YeF4Wqo+UWnM8OpuwNwaKAv0dO8
+	WX6CcFkFXLtIajAdEsbfNUlzjbJ6VizJDHR5yGtQ3ZmkaVEcd2VOetcy1lgT294cJgfrhxYuNza3m
+	kfrNNiMYgXU1H5AN/19a/M2Ry7Miy53yIlNbiOuB/tzROXvC1KIkpbNvqYv9MMRPtg67IssDYZOX9
+	k0LoD/b0jn9+2H+6tGgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j10cj-0000nH-AC; Mon, 10 Feb 2020 04:24:41 +0000
-Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
+	id 1j12gK-0001B9-Gd; Mon, 10 Feb 2020 06:36:32 +0000
+Received: from mail-pf1-x42b.google.com ([2607:f8b0:4864:20::42b])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j10cg-0000m3-5j
- for linux-mediatek@lists.infradead.org; Mon, 10 Feb 2020 04:24:39 +0000
-Received: by mail-io1-xd42.google.com with SMTP id z193so6088891iof.1
- for <linux-mediatek@lists.infradead.org>; Sun, 09 Feb 2020 20:24:37 -0800 (PST)
+ id 1j12gA-00011o-Gh
+ for linux-mediatek@lists.infradead.org; Mon, 10 Feb 2020 06:36:23 +0000
+Received: by mail-pf1-x42b.google.com with SMTP id 185so3212340pfv.3
+ for <linux-mediatek@lists.infradead.org>; Sun, 09 Feb 2020 22:36:21 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=f9/SpRmu7ZftQfQrFKpqn3FiKFBhLldZW4LlC+d7FEA=;
- b=n3Ht9nwt3oFNzZVouxN0h0x/ECuQGwRj6N97mqr+Sl429uxJEHSrkHS48aRexIh3fw
- nxvTLNDb3J/oVL1q0Ehb403siYgBTFrUfX1rH95Qcc6Uu/Fc/DLJcbPL+n3f9QvqIAZk
- P3442KH4s6p4cw3q4HQ4kudxH0tWMvlIJXEmg=
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Lo17ppS/z0H1lSs1uTt0PZLLJNNtFvUKsUcqWlfn7Dc=;
+ b=bUN6TfTE7usvEbrf47ULqCV7Q1Wmo6/Vzyto8zU5n07Oijvw4PAsNQlaYy5fRB+Own
+ LBZXlJr3KquKZ+JciXDyIRgUHtAVe27qImHD4CtpQCOp6qC9h4wib31fnJ40b+jIxn/S
+ 6ytT9ejZ497xQAfK5M11UhTtxBHR5HpdXQsBM=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=f9/SpRmu7ZftQfQrFKpqn3FiKFBhLldZW4LlC+d7FEA=;
- b=WZxnmQkqTELY9CRl6ynbRzYJyNKYOM8qhcFF1tBaMLQtsYHENEGklz7MfYqiDJy81C
- hUIGBrtclkHJyNjumGpxzQxctTgGYoPWEkor5OsfiDxRg4OaXNUsnpyEfzUoTGce0NQT
- 5wUuosxb/aeWVYFQR4dA/lWtPf/41Nt0K+zen83qv42frbW0h8aFYbfCLK3aWoJC/IDV
- DsQilpi11ZFU5D8BsfllA4V2J2ThXb6ohbhBBccs8fvT86Rl0e2AhmWjEyvnC9DhGemz
- aJ1NLfKTP5kEhHqqycC4/0KDinVpiXbace6ZiwXOqwvj2oJxqfuGE9VeT51HT3kf6am9
- yNuQ==
-X-Gm-Message-State: APjAAAUa5qszAwE3M49vESXrrwaRT5NnTm1k0aRqp++BGAKMkA6zDenj
- ugxF1FwOwiBgp3L5MGTkR7W8R3nlrqW24sbZAXSNjQ==
-X-Google-Smtp-Source: APXvYqyKXFQWOfUcJughVD7+IczCYrEmXa8+KVPkwR23+DH7h9JTtgAmwF5wDycGjx9kxCMYaIKV2ieQTzAYHPcKEJU=
-X-Received: by 2002:a02:b385:: with SMTP id p5mr8392462jan.43.1581308676642;
- Sun, 09 Feb 2020 20:24:36 -0800 (PST)
-MIME-Version: 1.0
-References: <1579591258-30940-1-git-send-email-yong.mao@mediatek.com>
- <1579591258-30940-2-git-send-email-yong.mao@mediatek.com>
- <CAJMQK-gZcvpQTSqM4kNsnNOXpcOfJw9u-X9uedQDM6W2soF_4w@mail.gmail.com>
-In-Reply-To: <CAJMQK-gZcvpQTSqM4kNsnNOXpcOfJw9u-X9uedQDM6W2soF_4w@mail.gmail.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Lo17ppS/z0H1lSs1uTt0PZLLJNNtFvUKsUcqWlfn7Dc=;
+ b=M0KdlRrf6UiUtDsvn6ZpDxbkr1ucIZVZGr0s+PxOUPdh6d0aJ3AREPw1xJ00tzcJfW
+ iiWqwQczo3IE4zMITQ3uekVzR8u59Tiq7QvOL9APNM9cI7VYPlrPlCA+6pQbhnx8d+L+
+ IZTtpaDnD6TuYDP7sttLHXnd5w3Ve0NxbEomXtV+tNhXXQwdaYD0dhanGvIOM21FC7TB
+ 7tP/i1RW9A4C3EwPmREwcb1ZZ2koqlk+fxtghB/zNlHhwEL8I01gVm4mreuDvCjYgvWn
+ Hsejoc56CxPZZUeyAiHADH2Vi+ee9r3N7VmAuHipi2KpotnXATBot12oxJziWCHCsy/p
+ /Qfg==
+X-Gm-Message-State: APjAAAU/dTppIMxJixz5Qi7Pen3BoAr7W7zHwv8ysAJ9krFjCJ99Ranw
+ YQcra5tee6tE0G8rc6VFqLckjg==
+X-Google-Smtp-Source: APXvYqyV5uXjYlcd6ghIM6ap/HEp0sTQIJM1ZhrD03kxdqxEcvdfBDVhE8hzFps31kS5WDBa6r922Q==
+X-Received: by 2002:a62:6342:: with SMTP id x63mr11616369pfb.103.1581316580334; 
+ Sun, 09 Feb 2020 22:36:20 -0800 (PST)
+Received: from hsinyi-z840.tpe.corp.google.com
+ ([2401:fa00:1:10:b852:bd51:9305:4261])
+ by smtp.gmail.com with ESMTPSA id f15sm11070041pgj.30.2020.02.09.22.36.17
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Sun, 09 Feb 2020 22:36:19 -0800 (PST)
 From: Hsin-Yi Wang <hsinyi@chromium.org>
-Date: Mon, 10 Feb 2020 12:24:10 +0800
-Message-ID: <CAJMQK-g57BLA0auzFbZsv-__rEQBb38-P5Sv4JNhyQz0M08ZBg@mail.gmail.com>
-Subject: Re: [PATCH] mmc: mediatek: fix SDIO irq issue
-To: Yong Mao <yong.mao@mediatek.com>
+To: linux-arm-kernel@lists.infradead.org
+Subject: [PATCH v7 0/5] Add mt8173 elm and hana board
+Date: Mon, 10 Feb 2020 14:35:19 +0800
+Message-Id: <20200210063523.133333-1-hsinyi@chromium.org>
+X-Mailer: git-send-email 2.25.0.225.g125e21ebc7-goog
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200209_202438_241512_C02B415F 
-X-CRM114-Status: UNSURE (   8.34  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200209_223622_551636_A7BDD064 
+X-CRM114-Status: GOOD (  11.51  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:42b listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -90,39 +92,71 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ulf Hansson <ulf.hansson@linaro.org>, srv_heupstream@mediatek.com,
- linux-mmc@vger.kernel.org, lkml <linux-kernel@vger.kernel.org>,
- linux-mediatek@lists.infradead.org, Chaotian Jing <chaotian.jing@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, linux-kernel@vger.kernel.org,
+ Enric Balletbo i Serra <enric.balletbo@collabora.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jan 21, 2020 at 3:38 PM Hsin-Yi Wang <hsinyi@chromium.org> wrote:
->
-> On Tue, Jan 21, 2020 at 7:20 AM Yong Mao <yong.mao@mediatek.com> wrote:
-> >
-> > From: yong mao <yong.mao@mediatek.com>
-> >
-> > Host controller may lost interrupt in some specail case.
-> > Add SDIO irq recheck mechanism to make sure all interrupts
-> > can be processed immediately.
-> >
-> > Signed-off-by: Yong Mao <yong.mao@mediatek.com>
-> > ---
->
-> Thanks, mt8173 need this patch for cap-sdio-irq to work.
->
-> Tested-by: Hsin-Yi Wang <hsinyi@chromium.org>
->
->
+This series adds devicetree and binding document for Acer Chromebook R13 (elm)
+and Lenovo Chromebook (hana), which are using mt8173 as SoC.
 
-Gentle ping
+Changes in v7:
+- add pull-up for da9211 to fix spurious interrupts
 
-Thanks.
+Changes in v6:
+- fix several unit name warnings in mt8173.dtsi and mt8173-elm.dtsi
+
+Changes in v5:
+- add gpio-line-names for gpio controller
+
+Changes in v4:
+- fix dtbs_check errors on cros-ec-keyboard
+- add comments for second source touchscreen and trackpad
+
+Changes in v3:
+- address comments in v2, major changes include:
+  * move uart aliases from mt8173-elm.dtsi to mt8173.dtsi
+  * remove brightness-levels in backlight
+  * add interrupt for da9211
+  * move pinmux for sdio_fixed_3v3 from mmc3_pins_default
+  * remove some non upstream property
+  * checked on schematic, cd-gpio in mmc1 should be GPIO_ACTIVE_LOW
+
+Changes in v2:
+- fix mediatek.yaml
+- fixup some nodes and remove unused nodes in dts
+
+Hsin-Yi Wang (5):
+  dt-bindings: arm64: dts: mediatek: Add mt8173 elm and hana
+  arm64: dts: mt8173: add uart aliases
+  arm64: dts: mt8173: fix unit name warnings
+  arm64: dts: mediatek: add mt8173 elm and hana board
+  media: mtk-mdp: Use correct aliases name
+
+ .../devicetree/bindings/arm/mediatek.yaml     |   22 +
+ arch/arm64/boot/dts/mediatek/Makefile         |    3 +
+ .../dts/mediatek/mt8173-elm-hana-rev7.dts     |   27 +
+ .../boot/dts/mediatek/mt8173-elm-hana.dts     |   14 +
+ .../boot/dts/mediatek/mt8173-elm-hana.dtsi    |   70 +
+ arch/arm64/boot/dts/mediatek/mt8173-elm.dts   |   14 +
+ arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi  | 1173 +++++++++++++++++
+ arch/arm64/boot/dts/mediatek/mt8173.dtsi      |   43 +-
+ drivers/media/platform/mtk-mdp/mtk_mdp_comp.c |    8 +-
+ 9 files changed, 1350 insertions(+), 24 deletions(-)
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana-rev7.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm-hana.dtsi
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8173-elm.dtsi
+
+-- 
+2.25.0.225.g125e21ebc7-goog
+
 
 _______________________________________________
 Linux-mediatek mailing list
