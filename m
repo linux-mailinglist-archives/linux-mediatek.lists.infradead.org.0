@@ -2,69 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 26D8D15BA6B
-	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Feb 2020 09:02:58 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 12D9815BA77
+	for <lists+linux-mediatek@lfdr.de>; Thu, 13 Feb 2020 09:05:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nJx4Nk/w7uMgU86pIbCh+diLNeieBB2vIXzLMa1/zxk=; b=O2ETpvhDphVnak
-	OVBsyWGA4f8V/BniUm8AMa/7Nr/oTv+PolNuLLqnLfLxZ0ufIkxt8eZcFaV9qFKA3ncZYTACxxqxi
-	9PbSHyQE3TQ41EhPwnMJzgS0JoxzpZDi4y8jLGu9VcLFt7PVnndNuUKG8zzsIsRnVqBn9Sd872ieC
-	AxJykdi8SA8OGJ460LaxIlON5mxir28nZKjpFsq1NVdluKj5eEnX1j6GndbHRJyIpnlLSdVrhIAH6
-	hAA9zq2Qsv1njiPXz7piYnsOLyvF/OP8/yROishMveguWkMmiOw3jORX8qjWjMiIpixgAjM77vPwV
-	c3oVFLNVRdkEOo+nrCbA==;
+	List-Owner; bh=LUSP96SbWFLb3xjIhS/ME9nuU1HGCpofL9G+O5KkFrU=; b=buQ1ObVYJ2hjC6
+	GaattxTYT2T/ELIydEozLyab4DX4c8opkz9DGZSNho62dyZd1NNXy+31XH4gD5/Fo30amPoRvr0wj
+	IFGLXAicc3g4P+U/j0GYXf9i6javB9RZkzqKpnI38CYRnqmyNypyiX5VmGQPc/7gPH/MNEGRq0BmS
+	4yyXUJppEW3BIQDa4Qz4fOmPjNJotD0wt1rlZODMAEJm5UBU0TBzoaTFCGRJrqGSjT3+qN0UxA6aK
+	4mBLnRG28UoblA5JsI5ZRJ5SNKqVSF63drsvgmOwDKn91J9Pq0/zgYapR1jQNbsY/NmtyaeBPsvvO
+	IUBKY4Z7bazsVstx02cQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j29SW-0002iN-AX; Thu, 13 Feb 2020 08:02:52 +0000
-Received: from mail-il1-x142.google.com ([2607:f8b0:4864:20::142])
+	id 1j29UZ-0003DG-Gu; Thu, 13 Feb 2020 08:04:59 +0000
+Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j29SJ-0002Zz-QM
- for linux-mediatek@lists.infradead.org; Thu, 13 Feb 2020 08:02:41 +0000
-Received: by mail-il1-x142.google.com with SMTP id g12so4201981ild.2
- for <linux-mediatek@lists.infradead.org>; Thu, 13 Feb 2020 00:02:39 -0800 (PST)
+ id 1j29UI-0002vS-HO
+ for linux-mediatek@lists.infradead.org; Thu, 13 Feb 2020 08:04:44 +0000
+Received: by mail-io1-xd42.google.com with SMTP id d15so5471721iog.3
+ for <linux-mediatek@lists.infradead.org>; Thu, 13 Feb 2020 00:04:42 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=10gKpQZri/82cKq6/v6n1q70/ykUGaRsAC3tbxvLKNg=;
- b=VrWi7c2dKzqZsYHKurZTdMgkC4RFCLz8pRQXKliNxIOnXIQN+w/7W6XmD6fSAowzQM
- ioOh/SrY3dOutMvt3wb5cGoy9CCd2hq9e+XJfPgkt+l6cd7VhjlSGIwQXuLnco2uNsYC
- UypTXDK4eCxQ2pS4z1F9tocVzjWyCYt5twKT2tGFFb0FupN3d1FiybANMraeI/WOAHuO
- Vbh4+aY3BmlkgOA8BGZ67TXc1X2ej6xK2B6Xe6W65hODbjUpqhOCOYwGzk3H7J8Q00Ki
- OVjdyTUPZ8P7QlU9e6592dew2zas6uql7ZoBeMEedlHy4AhNyucuGZdfqAR9pwlXQ8jB
- AoJQ==
+ :cc; bh=sc3keblL800YvOavDBCb855qDz/NufloEJ5TcEwfY7k=;
+ b=smkU19UKPG07Wu5DsBkdgAAwKhnW0ebOa1khT8jd7fCuMNJjwP+Saxa3Jobis/+muN
+ ZkmXGbw9ZnB/3LDbSUs4/xtbo60UJOYOHZ5xsS5isrkMbaFnYMuFwcAN729yoACIz+3v
+ FYDd2d/Oe8JmmpRlGAklaTD/JJ95QCnvjlqw1evmT8HliD72qW1NxqIZ7PkjhgncaiwZ
+ YLLIbV7zROOaEhz8NUpya9wKbr8QUC63vSN11nHyAcl1mhrgTeH2uAUyVeqhV+pTFw5o
+ ZTvBIMozhpOdC2mI/nBqSkb2DVbsKCjtsTdEeQbanSTBgZmqS+EQur03LuOGo3gdDha0
+ pgaw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=10gKpQZri/82cKq6/v6n1q70/ykUGaRsAC3tbxvLKNg=;
- b=pRGNFGfpUtSHwXJJmjOfBBQ7eD7nJ36B6teRtqIcpb7nhK2zFMqqifdEtPLoHcW/V3
- WS1Dqo9s/s5tYs4qd47moFcevlCH6kSxk0yFIZgFmar1mZfVxSPp2AAU5HTViMsUHaJm
- 8cp4EZHhLiIJDfleaDMCOQudoEwh89WE2DfsjvI5DSihHMliUubaTt5sEW6UqoXH+yVi
- o9J0ajqY9SheIu+sEyeGjT71ZkvdRL0qsaR/Z9y8OdWroAqGfI5/OunaRg4DgcKUQBIz
- Xwfwx5aqU3G5fIJuWytLBQzRI6o2lMs3rsZnQdisinayVAajbiwwOM/fY1lWjpqqh0i/
- rMmw==
-X-Gm-Message-State: APjAAAUU8A4CxNPcyQ/Y+8skEFdAtMwJgW970TOZZsMi5XCqvKfHYM9m
- 1FETH9zj4spPaFOOojC+F02K63iVnZ9HeDiSoIvBsg==
-X-Google-Smtp-Source: APXvYqyyqulvy1f+tDe7AmP1JblcXRQSp7dWSy72c8KxhM3n5LgVfLKIkT420HK+MTxArT2iueFQFfyI3z7Ky2ifzjI=
-X-Received: by 2002:a92:981b:: with SMTP id l27mr15162000ili.118.1581580958517; 
- Thu, 13 Feb 2020 00:02:38 -0800 (PST)
+ bh=sc3keblL800YvOavDBCb855qDz/NufloEJ5TcEwfY7k=;
+ b=gWZWEtkSNV+PGTWYm2MxgbHlcyUVAu4zFoQblygShy2hLQPR5nKXj6EW5PBdI9OTk3
+ adaA1fEOW9yMUtHedpDVoyZuUqSJbJCeG0N3aq1SkZ7+SE+1aBZOWEIAGfZ2jWj3+t4d
+ U1/SpJzkhIFDdNM2oqUCll9vcoxqNi6Q9QbtmcZIMg4m+0L/nrR9eD+Mcq2M53yR/CHH
+ RihzFInoiV7o4GIHbqWZHQ+Cuy8BPkkyEor4e3AOptoRA9xV0H/McfsYZ//imuZsCLym
+ NjyOVqwOMmqPPE+iwJGIbYPKMHj2ET6CDo5oNOKTJDIzKMOswHZENt4CzGsbo0Z1U0fp
+ 0Jew==
+X-Gm-Message-State: APjAAAVJhXIzvgW2vb4aMWvWzy3DvQ9vmIRfczXOr9eWgnI2ixOsip8Q
+ EXZAiJsrrdz/HehuiDjszhdcKPzceIn9pxcdTNO1Dw==
+X-Google-Smtp-Source: APXvYqz80zbBUl4azLIlTYZJqui4gbd2SKx6LXrZUjj87iiR7EZYRgG1ei+0n/JP2A0qiVFK0NgJVqH3yG53c8hyEJs=
+X-Received: by 2002:a6b:c703:: with SMTP id x3mr21246766iof.118.1581581081318; 
+ Thu, 13 Feb 2020 00:04:41 -0800 (PST)
 MIME-Version: 1.0
-References: <20200206031752.193298-1-tzungbi@google.com>
- <20200206102509.2.I230fd59de28e73934a91cb01424e25b9e84727f4@changeid>
- <1581495554.22603.2.camel@mtksdaap41>
- <CA+Px+wXjC1rchzUGhYYCJVyEbm7RQNFnqf-sQNaky6d82DyLyw@mail.gmail.com>
- <1581559033.14792.9.camel@mtksdaap41>
-In-Reply-To: <1581559033.14792.9.camel@mtksdaap41>
+References: <20200212192707.PATCH.I477092c2f104fd589133436c3ae4590e6fc6323b@changeid>
+In-Reply-To: <20200212192707.PATCH.I477092c2f104fd589133436c3ae4590e6fc6323b@changeid>
 From: Tzung-Bi Shih <tzungbi@google.com>
-Date: Thu, 13 Feb 2020 16:02:27 +0800
-Message-ID: <CA+Px+wWAR3E8TWnPJEa62WjXQQ1Y-Ni9g1rqvPq0f_HPYYynHg@mail.gmail.com>
-Subject: Re: [PATCH v2 2/3] drm/mediatek: support HDMI jack status reporting
-To: CK Hu <ck.hu@mediatek.com>
+Date: Thu, 13 Feb 2020 16:04:30 +0800
+Message-ID: <CA+Px+wW6G274xtGhjmBc-QMqBahe0rtNVGt1Tc4bC6SH9VGiqg@mail.gmail.com>
+Subject: Re: [PATCH] drm/mediatek: fix race condition of plugged_cb and
+ codec_dev
+To: Mark Brown <broonie@kernel.org>, David Airlie <airlied@linux.ie>, 
+ Daniel Vetter <daniel@ffwll.ch>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200213_000239_861917_BA9E3CD5 
-X-CRM114-Status: UNSURE (   7.35  )
+X-CRM114-CacheID: sfid-20200213_000442_611019_55A3AAD2 
+X-CRM114-Status: UNSURE (   6.56  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -72,7 +70,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:142 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
  [list.dnswl.org]
  -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
  white-list
@@ -101,32 +99,23 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: ALSA development <alsa-devel@alsa-project.org>,
- Jimmy Cheng-Yi Chiang <cychiang@google.com>, David Airlie <airlied@linux.ie>,
- dri-devel@lists.freedesktop.org, Mark Brown <broonie@kernel.org>,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, p.zabel@pengutronix.de,
+ Jimmy Cheng-Yi Chiang <cychiang@google.com>, dri-devel@lists.freedesktop.org,
+ CK Hu <ck.hu@mediatek.com>, linux-mediatek@lists.infradead.org,
+ p.zabel@pengutronix.de, Matthias Brugger <matthias.bgg@gmail.com>,
  Dylan Reid <dgreid@google.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Feb 13, 2020 at 9:57 AM CK Hu <ck.hu@mediatek.com> wrote:
-> I'm not only consider the race condition of plugged_cb and codec_dev. I
-> also care about the atomic of mtk_cec_hpd_high() and hdmi->plugged_cb().
-> If these two function is not an atomic operation, below is an example of
-> problem:
+On Wed, Feb 12, 2020 at 7:29 PM Tzung-Bi Shih <tzungbi@google.com> wrote:
 >
-> <Status disconnected>
-> 1. Thread A call mtk_hdmi_audio_hook_plugged_cb()
-> 2. Thread A call mtk_cec_hpd_high() and get disconnected.
-> <Status connected>
-> 3. Thread B call hdmi_conn_detect()
-> 4. Thread B call mtk_cec_hpd_high() and get connected
-> 5. Thread B callback plugged_cb() with connected
-> 6. Thread A callback plugged_cb() with disconnected (Bug here)
+> hdmi_conn_detect and mtk_hdmi_audio_hook_plugged_cb woule be called
+> by different threads.  plugged_cb and codec_dev are in danger of race
+> condition.
 
-Another attempt: https://patchwork.kernel.org/patch/11379979/
+Please ignore the patch.  The successive attempt:
+https://patchwork.kernel.org/patch/11379979/
 
 _______________________________________________
 Linux-mediatek mailing list
