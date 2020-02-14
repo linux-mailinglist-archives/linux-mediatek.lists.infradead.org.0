@@ -2,71 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AF76715E7F4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Feb 2020 17:57:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 84E4A15E88F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Feb 2020 18:01:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TfkawHmOo9ZtzDk6aRJpgYDdhOX59hFdp31Xe3WbOTI=; b=TcwR8YSCuIRj5s
-	2R7hvKHXQ9UuauK+RudidAfKL6EICuxN3A4yUnYIqEPJv6IlDKSer/VuBEZCn9JqTBVZ7jQb/jCGO
-	gFpQydOlD7qv0ZLLiWGmyVtRnX4UfLDrQq5JukzzwFhzo6ZPutSm7qXLsGvq0Tkjto9qqmPHgRq5v
-	LAswYU6XOG3J21nh82AwHSO+GpcYk2ieax0q5t1gN5M3hXW0VcAhDOTAJ8EYLCMOHdWWe4schxKDl
-	BE+xaTJ3K7cIEMpEfuGxsdtzzNnx6nGiO0loftjauEsBZ5EO3fgXS85cGYjSrNgVJmZN7wWqiSVXn
-	V6lP8Zy6gXGXDuOiiPMA==;
+	List-Owner; bh=M15fM9oJNhPUdtQPuVlBbHV2vvAKhuDc5zwgMpJOADE=; b=HRe8OjdrhOyq0L
+	mYiKHFEXOunjLOEe8pNFXkeFYkf2phgK6UZFsHh9pVUZp4ORje6pWR1/NgUL/F42jqQNTyXR0jyst
+	G6OCOidDIZmMms7X5j7ghoruE2IH3HCL8VIiBU+mG7xgwoLfbAF8g5vHuVKiaO/xyJ8U6cfHQTqs0
+	EYVyJLgB3qa+Hz7+2oj5IbGSMbtDlBA1j5ki5gXrjhg7uB/BxN4GUiiirwVN69U8S5gTAAKS0lioy
+	NvWojb9o8FD3MYrGWA3ddNAIcvAV5zD34vCWR8LHfb5HEJQkFQ3+jIT4drShKmBYJQMbzAag8PV4V
+	m/g5brXDWP4o2I08frdw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2eHT-0006MQ-Dw; Fri, 14 Feb 2020 16:57:31 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1j2eL8-0002cS-NB; Fri, 14 Feb 2020 17:01:18 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2dlj-0008Dd-Pv; Fri, 14 Feb 2020 16:24:45 +0000
+ id 1j2dwN-00058a-Fh; Fri, 14 Feb 2020 16:35:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=casper.20170209; h=Content-Transfer-Encoding:MIME-Version:
+ References:In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:
+ Content-Type:Content-ID:Content-Description;
+ bh=X1FIY36JkPPlRt9syaihRAiVQrR7KaQAAxvdKCe1Uzk=; b=X7BRzg2EuZTZKJZAe4ToWypTpw
+ Efseg8smbnbcZIpbPxOD8ngpqRzF9SdxAfphCSKTf+hdmlBPJtMIJPcHxtOl0XauiokVee++8od1r
+ +QAn+cxxqnebHLhsI+5l0WLf3WGfeoRdtbqLV1uFd/lSYvm74nQG/ehZK+qqjc0c+YoMvRJrcgtdG
+ ePLiPhcuqs4jS9TIncAL5aHm7a2Xzvq7Zei9IN9nSDefIcsjxBuk+AngukMGHtvGaep/Jtj3qZ/Zv
+ fQ5uCBXRLJKErhBXrD1R2pbyB8fKhO28dVxj/j+aFzdyAQZCinkr+RcHMLr02pAV9BAUQmtgQ9vzU
+ aw9qOaRg==;
+Received: from mail.kernel.org ([198.145.29.99])
+ by casper.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j2dba-0002P0-1G; Fri, 14 Feb 2020 16:14:18 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 44BF424796;
- Fri, 14 Feb 2020 16:24:42 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id A13BC246D5;
+ Fri, 14 Feb 2020 16:14:11 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1581697483;
- bh=IIQkzwaSYNPxypvwziHu1CMFfRZ5x+h9J6jgJYYVWiI=;
+ s=default; t=1581696852;
+ bh=vVexZEER5O/jm8hcPhJvhiZ8rHMq++7YZdv102yM0tw=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=X+Yqi8yXV2gBs1oF5iL3iXy1QWQGbAHPgvxN3LFm+CNVvIDStWJqO58etwUaRGzJi
- z0f2k1z7J00p7Htcl5GAweRGI6hVoQWAOlU0OlCWrFcaT2M3SncUl+mEU9JU07Lniv
- 3WcN0x8hrZbI46Crgw1ff1wEGhDGNtVnzy2rY/PM=
+ b=IhEnV7UGM8A7GwSoQ6wkT6VRDxNdd6wPyeSefu/3lPDtPUj5MORPtpjID+14vP3y1
+ /W0blwTDnsMRIRONOOmMOHU+8AHsi1Odz0qgdMKQi8DIu/jmBn5r861VhxUBzXiXql
+ iRLtauuhBdMuKF7dmwpLptOn8TOZY/wVJf1n9R7c=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.4 014/100] scsi: ufs: Fix ufshcd_probe_hba() reture
- value in case ufshcd_scsi_add_wlus() fails
-Date: Fri, 14 Feb 2020 11:22:58 -0500
-Message-Id: <20200214162425.21071-14-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 113/252] drm/mediatek: handle events when
+ enabling/disabling crtc
+Date: Fri, 14 Feb 2020 11:09:28 -0500
+Message-Id: <20200214161147.15842-113-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200214162425.21071-1-sashal@kernel.org>
-References: <20200214162425.21071-1-sashal@kernel.org>
+In-Reply-To: <20200214161147.15842-1-sashal@kernel.org>
+References: <20200214161147.15842-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_082443_866660_6F79C5AE 
-X-CRM114-Status: GOOD (  10.03  )
-X-Spam-Score: -5.2 (-----)
-X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+X-CRM114-CacheID: sfid-20200214_161414_355031_FCD3F2A2 
+X-CRM114-Status: GOOD (  11.73  )
+X-Spam-Score: -7.1 (-------)
+X-Spam-Report: SpamAssassin version 3.4.3 on casper.infradead.org summary:
+ Content analysis details:   (-7.1 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
  high trust [198.145.29.99 listed in list.dnswl.org]
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+ [score: 0.0000]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -79,51 +94,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, linux-scsi@vger.kernel.org,
- "Martin K . Petersen" <martin.petersen@oracle.com>,
- linux-mediatek@lists.infradead.org, Alim Akhtar <alim.akhtar@samsung.com>,
- Bean Huo <beanhuo@micron.com>, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, Asutosh Das <asutoshd@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, dri-devel@lists.freedesktop.org,
+ linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ CK Hu <ck.hu@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Bean Huo <beanhuo@micron.com>
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
 
-[ Upstream commit b9fc5320212efdfb4e08b825aaa007815fd11d16 ]
+[ Upstream commit 411f5c1eacfebb1f6e40b653d29447cdfe7282aa ]
 
-A non-zero error value likely being returned by ufshcd_scsi_add_wlus() in
-case of failure of adding the WLs, but ufshcd_probe_hba() doesn't use this
-value, and doesn't report this failure to upper caller.  This patch is to
-fix this issue.
+The driver currently handles vblank events only when updating planes on
+an already enabled CRTC. The atomic update API however allows requesting
+an event when enabling or disabling a CRTC. This currently leads to
+event objects being leaked in the kernel and to events not being sent
+out. Fix it.
 
-Fixes: 2a8fa600445c ("ufs: manually add well known logical units")
-Link: https://lore.kernel.org/r/20200120130820.1737-2-huobean@gmail.com
-Reviewed-by: Asutosh Das <asutoshd@codeaurora.org>
-Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
-Reviewed-by: Stanley Chu <stanley.chu@mediatek.com>
-Signed-off-by: Bean Huo <beanhuo@micron.com>
-Signed-off-by: Martin K. Petersen <martin.petersen@oracle.com>
+Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
+Signed-off-by: CK Hu <ck.hu@mediatek.com>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/scsi/ufs/ufshcd.c | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
 
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index fcf5141bf950f..19f82069c68ac 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -4324,7 +4324,8 @@ static int ufshcd_probe_hba(struct ufs_hba *hba)
- 			ufshcd_init_icc_levels(hba);
+diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+index 92ecb9bf982cf..b86ee7d25af36 100644
+--- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
++++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
+@@ -308,6 +308,7 @@ static int mtk_crtc_ddp_hw_init(struct mtk_drm_crtc *mtk_crtc)
+ static void mtk_crtc_ddp_hw_fini(struct mtk_drm_crtc *mtk_crtc)
+ {
+ 	struct drm_device *drm = mtk_crtc->base.dev;
++	struct drm_crtc *crtc = &mtk_crtc->base;
+ 	int i;
  
- 		/* Add required well known logical units to scsi mid layer */
--		if (ufshcd_scsi_add_wlus(hba))
-+		ret = ufshcd_scsi_add_wlus(hba);
-+		if (ret)
- 			goto out;
+ 	DRM_DEBUG_DRIVER("%s\n", __func__);
+@@ -329,6 +330,13 @@ static void mtk_crtc_ddp_hw_fini(struct mtk_drm_crtc *mtk_crtc)
+ 	mtk_disp_mutex_unprepare(mtk_crtc->mutex);
  
- 		scsi_scan_host(hba->host);
+ 	pm_runtime_put(drm->dev);
++
++	if (crtc->state->event && !crtc->state->active) {
++		spin_lock_irq(&crtc->dev->event_lock);
++		drm_crtc_send_vblank_event(crtc, crtc->state->event);
++		crtc->state->event = NULL;
++		spin_unlock_irq(&crtc->dev->event_lock);
++	}
+ }
+ 
+ static void mtk_crtc_ddp_config(struct drm_crtc *crtc)
 -- 
 2.20.1
 
