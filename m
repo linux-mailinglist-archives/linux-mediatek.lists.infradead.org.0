@@ -2,80 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7972415D096
-	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Feb 2020 04:34:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E41D15D123
+	for <lists+linux-mediatek@lfdr.de>; Fri, 14 Feb 2020 05:38:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=PC//AYGC15uEi9DVUy6ct41DowKbw3epkh94YdpL+TA=; b=BSm
-	Jt+1fhHbqeDNBhF4slTK0uFJ0mfi2ZgtMVHOr8Q09S/cEBC1LNNCUdIrvtu8VE58erFeBZ/wFRJiF
-	uAVN/3ASzxjc5RJQnNEXztleUWXEHBdFK6WaveXtXKARytLwvJ1ZSX/0b8kLEYKf6tpbSMSzSUibK
-	Iy3uvevgzAKQh4wiUIPnUb2gWilntXeqO3XuEn9PoBfCqtc/4UQtPgLZW5EzahMallRXn/6bdTCMI
-	nmTTtCqNkXelkr42adl4fdCDUgulqkMl5lq+EWgag3p75pYMkuiVUwO6paRuplxI5YQpJHDarG+hd
-	fRfFXU4T7VCDgf/O0f0+c6AenVb+oVQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=GRnMQYg5kdRanhTs4gLVawCAtafeT2KF8FhW+JGPDNA=; b=e1padU2U5PlD+7
+	uOu41PaDVkl/t4XBGzEboPqN00nKILKclI1LSj0W7jmXrT5G+YIbpzi5unxUhkXsX1C3dnHeicARC
+	aqdwVlybq8Iy54IF5vjh9iQp1lNH2/5blFtT+lrlZma7ajK1iOCUVW4Ddn+vSr6w0RwWviAn+YRmC
+	cq26PFQY14zghf6DT3dhJnQQ089Ee8qTUVXsQDMGbQJPVIMk9HzdSd2NPkfPOZX6aF7FvbBU+kSaS
+	w27MlzTJE87dgTsEy+lKkeGDXICcaoD4e7AH7ecnLJQ6RvSW+5nBBdq2VeWiRgDmJ25Nqmyfb0w3o
+	whVqKCSKtEuP4mp0YL8Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2Rkc-0005m1-CT; Fri, 14 Feb 2020 03:34:46 +0000
-Received: from mail-pj1-x1044.google.com ([2607:f8b0:4864:20::1044])
+	id 1j2Sjg-0006H5-MP; Fri, 14 Feb 2020 04:37:52 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2RkZ-0005lV-JJ
- for linux-mediatek@lists.infradead.org; Fri, 14 Feb 2020 03:34:45 +0000
-Received: by mail-pj1-x1044.google.com with SMTP id fa20so3284146pjb.1
- for <linux-mediatek@lists.infradead.org>; Thu, 13 Feb 2020 19:34:42 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=6g5qTCrzQFZ3eAHmVApQv94R1DbpyCc1XXw3LcUa15Y=;
- b=f1IntwTHC7VZyI+zY4q/yOBy+KQdGMha4v1cqv8pLpPgml/BPg2XPrgDmdm4HTiRHh
- 85YtsRWk1IVRAmVnIHL9Pvr1PZ/d6avCNuu5r5aPuJD4X4KjAvuBaZSQIAKI/MGDKK6W
- Exy0caGbef7j2SFeqsuRQ61bLzBmgSVXO4zD2Skfb5wcJ0siPQ5aiRQU7PoqdTCH/BLm
- k1DLM7002tzlv/dLQnDEEuu6Fu8C4TMuWcncSSyfcmvOHM4jAbH3L6Yw602cmoFcm/Hr
- 3C3yW/Q5q+m042dxiS/Diktcz2i/ipplHBeC0uoutBTBERDFAnfRc0fvo+eI9XsJ+8FZ
- hMrw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=6g5qTCrzQFZ3eAHmVApQv94R1DbpyCc1XXw3LcUa15Y=;
- b=JptFIm5Ok5spHoJKpinxwjlETbGHHUqxuxctFmiQjwv483+cTAeSE3fiioRgl5wPch
- qzbLOitAQef/95Pq0ojv+JBiC4rpCtycsr47rx/A0JIsLcyxc0eqbmyZUXVJmLxtd/1U
- VeuWetX2qSTJYBJ0PBKz/9zghNKqn2Y08/qHWTDWlIzmmM8CFXPuzeFurSvQczQuNH86
- IORwWIsz8ayC8og1vpQ0Y7Xor57SjYkagsoh5ZZHZoYJEMhL0yuOt+C5XnNeEeLcQQTs
- Qbp5fmC41lQiwDy5vrxUI24yh9Py5qLnZHlBCg50bxzkasr1zH5+Ds1iuLSvXNoGz7jZ
- mlpQ==
-X-Gm-Message-State: APjAAAW3DEVEhP7MmMR0C5b4qEdw9adZQezk5ToJc9dqjcSw8em8ERt9
- aiON2fKpqCJhfyQA5nl5eew=
-X-Google-Smtp-Source: APXvYqzBwfz75bgRIbLvVitkuu/3R+QCx8h5dAkZWCHTZIwfT55ZqHKw3qxqNfRN+kp8lFGjITixEw==
-X-Received: by 2002:a17:90a:7303:: with SMTP id m3mr997565pjk.62.1581651282189; 
- Thu, 13 Feb 2020 19:34:42 -0800 (PST)
-Received: from localhost ([43.224.245.179])
- by smtp.gmail.com with ESMTPSA id w6sm5065297pfq.99.2020.02.13.19.34.41
- (version=TLS1_2 cipher=AES128-SHA bits=128/128);
- Thu, 13 Feb 2020 19:34:41 -0800 (PST)
-From: qiwuchen55@gmail.com
-To: mturquette@baylibre.com,
-	sboyd@kernel.org,
-	matthias.bgg@gmail.com
-Subject: [PATCH] clk: mediatek: clk-mt8173: fix potential memory leak
-Date: Fri, 14 Feb 2020 11:34:34 +0800
-Message-Id: <1581651274-5933-1-git-send-email-qiwuchen55@gmail.com>
-X-Mailer: git-send-email 1.9.1
+ id 1j2SjE-0005sY-8a; Fri, 14 Feb 2020 04:37:26 +0000
+X-UUID: baa1252ce7db45f188ad29ca53ff206b-20200213
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=sOXRtKwjw1Ahc1rly56OaA1QzNe/iiZaYY1UpQs1y/g=; 
+ b=VIEAdEWKZU2dx2qC57jM/2WPVYo4Anw0ZUKG0nHAyWMs3TzyRnnamaYz1t8Up7eUUroJETTcTOFyN72sq5MECl2fhjQLbNq66jITeAIN74dRFwFzUdOKbtDkD93FvbezvOxxQIH0U4y4zu4DzcgKtCfyDsoTJyB3+3UA8MRmtNE=;
+X-UUID: baa1252ce7db45f188ad29ca53ff206b-20200213
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 361430082; Thu, 13 Feb 2020 20:37:22 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 13 Feb 2020 20:33:26 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 14 Feb 2020 12:33:56 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 14 Feb 2020 12:33:18 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
+ <ck.hu@mediatek.com>
+Subject: [PATCH 0/3] Remove atomic_exec
+Date: Fri, 14 Feb 2020 12:33:22 +0800
+Message-ID: <20200214043325.16618-1-bibby.hsieh@mediatek.com>
+X-Mailer: git-send-email 2.18.0
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200213_193443_666675_FC20CF87 
-X-CRM114-Status: UNSURE (   9.37  )
+X-CRM114-CacheID: sfid-20200213_203724_309120_F1D273E4 
+X-CRM114-Status: UNSURE (   6.40  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.1 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.1 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [qiwuchen55[at]gmail.com]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [qiwuchen55[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -83,6 +72,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,162 +85,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kstewart@linuxfoundation.org, seiya.wang@mediatek.com,
- gregkh@linuxfoundation.org, linux-mediatek@lists.infradead.org,
- tglx@linutronix.de, chenqiwu <chenqiwu@xiaomi.com>, linux-clk@vger.kernel.org
-MIME-Version: 1.0
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Houlong Wei <houlong.wei@mediatek.com>,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: chenqiwu <chenqiwu@xiaomi.com>
+The atomic_exec was designed for processing continuous
+packets of commands in atomic way for Mediatek DRM driver.
 
-Free clk_data or iomem resources if init is not successful.
+After we implement flush function, Mediatek DRM driver
+doesn't need atomic_exec, the primary concept is to let
+Mediatek DRM driver can make sure previous message done or
+be aborted (if the message has not started yet) before they
+send next message.
 
-Signed-off-by: chenqiwu <chenqiwu@xiaomi.com>
----
- drivers/clk/mediatek/clk-mt8173.c | 43 +++++++++++++++++++++++++++++++--------
- 1 file changed, 34 insertions(+), 9 deletions(-)
+Bibby Hsieh (3):
+  mailbox: mediatek: implement flush function
+  mailbox: mediatek: remove implementation related to atomic_exec
+  dt-binding: gce: remove atomic_exec in mboxes property
 
-diff --git a/drivers/clk/mediatek/clk-mt8173.c b/drivers/clk/mediatek/clk-mt8173.c
-index 537a7f4..eaf4e70 100644
---- a/drivers/clk/mediatek/clk-mt8173.c
-+++ b/drivers/clk/mediatek/clk-mt8173.c
-@@ -7,6 +7,7 @@
- #include <linux/clk.h>
- #include <linux/of.h>
- #include <linux/of_address.h>
-+#include <linux/slab.h>
- 
- #include "clk-mtk.h"
- #include "clk-gate.h"
-@@ -941,9 +942,13 @@ static void __init mtk_topckgen_init(struct device_node *node)
- 			&mt8173_clk_lock, clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+		clk_data = NULL;
-+		iounmap(base);
-+	}
- 
- 	mtk_clk_enable_critical();
- }
-@@ -964,9 +969,11 @@ static void __init mtk_infrasys_init(struct device_node *node)
- 				  clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- 
- 	mtk_register_reset_controller(node, 2, 0x30);
- }
-@@ -992,9 +999,12 @@ static void __init mtk_pericfg_init(struct device_node *node)
- 			&mt8173_clk_lock, clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+		iounmap(base);
-+	}
- 
- 	mtk_register_reset_controller(node, 2, 0);
- }
-@@ -1117,9 +1127,14 @@ static void __init mtk_apmixedsys_init(struct device_node *node)
- 	clk_data->clks[CLK_APMIXED_HDMI_REF] = clk;
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		clk_unregister_divider(clk);
-+		kfree(clk_data);
-+		clk_data = NULL;
-+		iounmap(base);
-+	}
- 
- 	mtk_clk_enable_critical();
- }
-@@ -1138,9 +1153,11 @@ static void __init mtk_imgsys_init(struct device_node *node)
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
- 
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- }
- CLK_OF_DECLARE(mtk_imgsys, "mediatek,mt8173-imgsys", mtk_imgsys_init);
- 
-@@ -1155,9 +1172,11 @@ static void __init mtk_mmsys_init(struct device_node *node)
- 						clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- }
- CLK_OF_DECLARE(mtk_mmsys, "mediatek,mt8173-mmsys", mtk_mmsys_init);
- 
-@@ -1172,9 +1191,11 @@ static void __init mtk_vdecsys_init(struct device_node *node)
- 						clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- }
- CLK_OF_DECLARE(mtk_vdecsys, "mediatek,mt8173-vdecsys", mtk_vdecsys_init);
- 
-@@ -1189,9 +1210,11 @@ static void __init mtk_vencsys_init(struct device_node *node)
- 						clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- }
- CLK_OF_DECLARE(mtk_vencsys, "mediatek,mt8173-vencsys", mtk_vencsys_init);
- 
-@@ -1206,8 +1229,10 @@ static void __init mtk_vencltsys_init(struct device_node *node)
- 						clk_data);
- 
- 	r = of_clk_add_provider(node, of_clk_src_onecell_get, clk_data);
--	if (r)
-+	if (r) {
- 		pr_err("%s(): could not register clock provider: %d\n",
- 			__func__, r);
-+		kfree(clk_data);
-+	}
- }
- CLK_OF_DECLARE(mtk_vencltsys, "mediatek,mt8173-vencltsys", mtk_vencltsys_init);
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |  10 +-
+ drivers/mailbox/mtk-cmdq-mailbox.c            | 126 ++++++++----------
+ 2 files changed, 60 insertions(+), 76 deletions(-)
+
 -- 
-1.9.1
-
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
