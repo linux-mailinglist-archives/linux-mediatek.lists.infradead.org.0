@@ -2,68 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D3DEE160240
-	for <lists+linux-mediatek@lfdr.de>; Sun, 16 Feb 2020 07:28:02 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6BC8A16023C
+	for <lists+linux-mediatek@lfdr.de>; Sun, 16 Feb 2020 07:17:58 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=gYFSchI/8ha+H0ynHrngfktDQTtMyAkPNbfwAo4pop4=; b=mrkimx+MUMkral
-	jg99Nte+K5x3gKHBgL5/mnFRi18J06GbfzCDmTgxvNNT8JJg/tCKJXnNA/xSOS4gA+5/yZRFpl3oL
-	SbcHPUn/kOiq/U+zoQc7uJuS6xupjlY2ZQ+lkGx/muMUOdd2/LJ02jsNyzfqLjZxHZkjVr8QbTeN7
-	2Q4tdOUiZEIxR6m8GsPGCak7kG055mJwo8CNCVMPQMLqVsnCY7BS9el/hRVICxDnjcfCG1aBJqRIn
-	Fv8ORPVrGOuv/UCgVm1rQcsz9rEFJpo+sdxS/RiXE814oIxVS3Ft8OgcuBABGIvxD3Omq61gqjcZU
-	k9+xVp36b85YVdcjTSvg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=t9/YUAXVHIw+3B848F8UChXDFbSOLFUnmXC0sNIyJCQ=; b=cWowuI8ljhpNh7
+	6g6IPGHwO1wGniDUeDEgfBp8Wb5hO35ta1Q4Yg1cGaQjEsEB60MmDBIOhBBS0cVz50BmHmgb5Xu/z
+	VYOGM3fK8hhiP3016m1QkMM0NN6VYa66e7E6ppheJeJjVXJwMJCB02POzr8nowr68eK9OAbKLis8F
+	3phJEQD7aS/FSUbSlOqtEsi3P7K2EbRWNB5CxRK7TqLNU072iDzkXba7fmUVgvQNdrZlIBc2REUKa
+	R7RK0yNEPfTk0GLIXes/qR5qG0OsUTSQIIoNWxgqU4jCSWexj6Th8EDRE38Mtgy94tbyGNlRjyFRJ
+	4jD18dt5ss/KE2I8ezWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3DPJ-0003Ab-28; Sun, 16 Feb 2020 06:27:57 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1j3DFX-0007KJ-B4; Sun, 16 Feb 2020 06:17:51 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3DP6-00030X-TU; Sun, 16 Feb 2020 06:27:46 +0000
-X-UUID: b6021cc1698c40ddbc74e5a1e53a8806-20200215
+ id 1j3DFI-00076T-5S; Sun, 16 Feb 2020 06:17:37 +0000
+X-UUID: d843167912b9403ea83710dd8a2e7b0f-20200215
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=TbzTN9VDopWuQM9WqUfKWtNwI/MMB07r6MYptBp9CNE=; 
- b=Y7XpsBu2ngHN5KNahAEYHUfMWfZnYWZd2E+x4HatzN1ZGI7nqsajiYlSyL3syDXDutuNuJtlGsyPMWuYU88lXAeZnqyzRAsC3VCjfql8bpPWqxR74SPfEsvs0o9Twut6geF8XYsX2vvgqzcFBshdqECjn1bTqJCHDu/WeGXCe3E=;
-X-UUID: b6021cc1698c40ddbc74e5a1e53a8806-20200215
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=PnaAJPfe8UDyZR006OQGPtqV2JRsmbV8fNWy8VRokME=; 
+ b=OyD6+QEN8Bm+tkck/+3saiZLoqpOMMh4husZFw+j80PoZJrLkUE/9W3bg5dG1KqCbTfVyelo/yX2ouE+VKiTbzmqy8of7uSlxvT9HyZLH+myxdvrvpxPWsuGHnlVcQ0cd/sfMEvyT7AJAYa7CuR+lZESHxMD3mSYs2NM9tTmxKk=;
+X-UUID: d843167912b9403ea83710dd8a2e7b0f-20200215
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <argus.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1116204255; Sat, 15 Feb 2020 22:27:40 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ with ESMTP id 570859812; Sat, 15 Feb 2020 22:17:35 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 15 Feb 2020 22:17:37 -0800
+ 15.0.1395.4; Sat, 15 Feb 2020 22:17:32 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 16 Feb 2020 14:13:31 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 16 Feb 2020 14:15:00 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Sun, 16 Feb 2020 14:17:16 +0800
+ Frontend Transport; Sun, 16 Feb 2020 14:17:17 +0800
 From: Argus Lin <argus.lin@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Catalin Marinas
  <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>
-Subject: [PATCH v2 0/3] soc: mediatek: pwrap: add pwrap driver for MT6779 SoCs
-Date: Sun, 16 Feb 2020 14:17:20 +0800
-Message-ID: <1581833843-4485-1-git-send-email-argus.lin@mediatek.com>
+Subject: [PATCH v2 1/3] dt-bindings: pwrap: mediatek: add pwrap support for
+ MT6779
+Date: Sun, 16 Feb 2020 14:17:21 +0800
+Message-ID: <1581833843-4485-2-git-send-email-argus.lin@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
+In-Reply-To: <1581833843-4485-1-git-send-email-argus.lin@mediatek.com>
+References: <1581833843-4485-1-git-send-email-argus.lin@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 7412AF20A4FC3BC8F73193F5B5A732A519D5745AA9092E8F85F58D612DB633FB2000:8
+X-TM-SNTS-SMTP: E42B2A5851BA3347534F24890D19F31A2FEBC875C3FF1CB527B8A703235A94082000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200215_222744_990945_F1EAAA16 
-X-CRM114-Status: UNSURE (   8.15  )
+X-CRM114-CacheID: sfid-20200215_221736_222518_1C65E864 
+X-CRM114-Status: UNSURE (   8.87  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -100,30 +101,26 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-changes since v1:
-1. Modify pwrap_mt6779 arb_en_all, int_en_all, and wdt_src value
-when initialization.
-2. Remove PWRAP_WDT_UNIT, PWRAP_WDT_UNIT, PWRAP_INT_EN, and
-PWRAP_CAP_INT1_EN registered value check, we will initialize them
-again at kernel level.
+Add binding document of pwrap for MT6779 SoCs.
 
-Here's version 1 of the patch series, include 3 patches:
-1. Add compatible for MT6779 pwrap
-2. Add pwrap driver for MT6779 SoCs. Keep PWRAP_HIPRIO_ARB_EN,
-PWRAP_WDT_UNIT, and PWRAP_WDT_SRC_EN value if it has initialized.
-When we enable interrupt flag, read current value then do logical
-OR opersion with wrp->master->int_en_all.
-3. Add MT6359 support for MT6779 SoCs.
+Signed-off-by: Argus Lin <argus.lin@mediatek.com>
+Acked-by: Rob Herring <robh@kernel.org>
+---
+ Documentation/devicetree/bindings/soc/mediatek/pwrap.txt | 1 +
+ 1 file changed, 1 insertion(+)
 
-Argus Lin (3):
-  dt-bindings: pwrap: mediatek: add pwrap support for MT6779
-  soc: mediatek: pwrap: add pwrap driver for MT6779 SoCs
-  soc: mediatek: pwrap: add support for MT6359 PMIC
-
- .../devicetree/bindings/soc/mediatek/pwrap.txt     |   1 +
- drivers/soc/mediatek/mtk-pmic-wrap.c               | 128 +++++++++++++++++++++
- 2 files changed, 129 insertions(+)
-
+diff --git a/Documentation/devicetree/bindings/soc/mediatek/pwrap.txt b/Documentation/devicetree/bindings/soc/mediatek/pwrap.txt
+index 7a32404..ecac2bb 100644
+--- a/Documentation/devicetree/bindings/soc/mediatek/pwrap.txt
++++ b/Documentation/devicetree/bindings/soc/mediatek/pwrap.txt
+@@ -20,6 +20,7 @@ Required properties in pwrap device node.
+ - compatible:
+ 	"mediatek,mt2701-pwrap" for MT2701/7623 SoCs
+ 	"mediatek,mt6765-pwrap" for MT6765 SoCs
++	"mediatek,mt6779-pwrap" for MT6779 SoCs
+ 	"mediatek,mt6797-pwrap" for MT6797 SoCs
+ 	"mediatek,mt7622-pwrap" for MT7622 SoCs
+ 	"mediatek,mt8135-pwrap" for MT8135 SoCs
 --
 1.8.1.1.dirty
 _______________________________________________
