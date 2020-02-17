@@ -2,80 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2CC34160CCB
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 09:20:42 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 59AEB160E06
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 10:06:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Cc:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MFx15DlA0in0xpe4Ghtq94SUIaUJylqvqxeFuk+qt2Q=; b=p/21TARTYelFh9
-	sjsbrdK7cTt3BREIvirWEBV45R3QcaYsIG4nYBQaDIU+jFhh215UOps+r5RNURLIOeywFzSgJY+MD
-	zXRwwE/EYXCJM5vA4/UEyymJ2zMkZRA7gpZw2ZhWbdfamg6bhL0UyZ8bpRkCnMCNebqeo6RLUV8Hj
-	ROZOdf5AWZD0/pHtQNxyqvJ6RXc3w+UDlPnMv5MlEtHnKIAV5xNE3J08Wn1z1aXXFFxdXgk1tGQdf
-	OyfdlTfswXIIo7rAPcU2L1yrN8vpN6p33hbvjGHqVX7+YNfM3kz0F2U7QbunAZpIAdBJOmzUX5JD8
-	C28PuVzRZps0arC0jStg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=kyyJkouB5uLid/x+JOb88Eo8ToilV6tWMJ3trqh8/1w=; b=ti+yeN+duuMrP6
+	1kj6/cpYKqzMSI34iG3XlT+7ZlW1es8veirqQmBkWNNb8l8cc+bYyy6yqKnJboW7osNnUcr4NZTuH
+	EN4uds05o5REqZ8I99JIl9uivIPIkfSWDrfAne2fTTqjw9h80VfDCJEFfMCQgbK5/vWLXOxoMe9qm
+	y3+fGlr7Uo+YVtfLuHhv6gs1g9f6NKxk6T8HTA2mBK/xq3jXVkmL5WPRcHhe2JyNK7O4AVMKIiYrl
+	8OF66dFsTVwdx/gfLAoUcXLlKn4VJHOaiTGDxWx3+KNZapw7emXvsx/2zJgpF2HiY9LUTugvCj3/i
+	S3Yr4A4CFp0hLK2Jy70Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3bdq-00009G-3e; Mon, 17 Feb 2020 08:20:34 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1j3cMK-000469-GK; Mon, 17 Feb 2020 09:06:32 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3bdH-0006xM-AN; Mon, 17 Feb 2020 08:20:00 +0000
-X-UUID: af25591f23994d42b03bcef43e657805-20200217
+ id 1j3cLV-0003Xb-Eo; Mon, 17 Feb 2020 09:05:42 +0000
+X-UUID: 8e6713ee10374a499fe96c9ff4740013-20200217
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From;
- bh=jQ9jiEAD2Qgw9xt2uBetQRSbbbkk2xVLWRf6Tt0CQOM=; 
- b=ovFWnEovHbQgmArRt5239KHyQ/tn7TP89aiWMIdtCIk6W17QAFYapr48Z0NdANrTuFX4EtEBbKuvXFaZ1vuwDabLvj8EMNnYai2K95H1cUAIvZtfIlnjDWpHKcx/vgJxC7Qqt2nAiwouHs+LQFBzUdiPPWtDr+mJSqHOvBo+fhE=;
-X-UUID: af25591f23994d42b03bcef43e657805-20200217
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <yong.liang@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=TH2Ce9vmxpcBg+uja+1cRFMB0hG0JtrMLOaW8Iql/R8=; 
+ b=lOV+nQz2bpgM8/GGsBM1mzyYU3/NmoBU0CFGxj+pQEJGnN5JRYwG8MMci60p1P+M1GnzODIQr0I00u6XRc9zWn5B9weLakOt37YI2rv9Z6bTKeozmVqszuhPpDktg4NcHRdtTcnwnpbvFxe2yxBxnYyu51ZY0v6463vKZRDhC/Y=;
+X-UUID: 8e6713ee10374a499fe96c9ff4740013-20200217
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1186865318; Mon, 17 Feb 2020 00:19:52 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ with ESMTP id 1021915022; Mon, 17 Feb 2020 01:05:36 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 00:20:39 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 16:18:15 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 17 Feb 2020 16:19:21 +0800
-From: Yong Liang <yong.liang@mediatek.com>
-To: <yong.liang@mediatek.com>, <robh+dt@kernel.org>, <mark.rutland@arm.com>,
- <matthias.bgg@gmail.com>, <devicetree@vger.kernel.org>,
- <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
- <linux-kernel@vger.kernel.org>
-Subject: [PATCH 1/1] amr64: dts: modify mt8183.dtsi
-Date: Mon, 17 Feb 2020 16:19:22 +0800
-Message-ID: <20200217081922.22544-2-yong.liang@mediatek.com>
+ 15.0.1395.4; Mon, 17 Feb 2020 01:06:23 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 17 Feb 2020 17:04:41 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 17 Feb 2020 17:03:35 +0800
+From: Bibby Hsieh <bibby.hsieh@mediatek.com>
+To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
+ <ck.hu@mediatek.com>
+Subject: [PATCH v1 0/3] Remove atomic_exec
+Date: Mon, 17 Feb 2020 17:05:29 +0800
+Message-ID: <20200217090532.16019-1-bibby.hsieh@mediatek.com>
 X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200217081922.22544-1-yong.liang@mediatek.com>
-References: <Add watchdog device node>
- <20200217081922.22544-1-yong.liang@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: E9D7FE62B9A55861B3935A74EF087037A76413B02FF19D309EAAD239B8C7F5C52000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_001959_364464_45263E3E 
-X-CRM114-Status: UNSURE (   6.13  )
+X-CRM114-CacheID: sfid-20200217_010541_515501_B18FD373 
+X-CRM114-Status: UNSURE (   6.94  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
@@ -90,39 +87,39 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
+Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Houlong Wei <houlong.wei@mediatek.com>,
+ Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "yong.liang" <yong.liang@mediatek.com>
+The atomic_exec was designed for processing continuous
+packets of commands in atomic way for Mediatek DRM driver.
 
-Add watchdog device node
-Document base on http://lists.infradead.org/pipermail/linux-mediatek/2020-January/026415.html
+After we implement flush function, Mediatek DRM driver
+doesn't need atomic_exec, the primary concept is to let
+Mediatek DRM driver can make sure previous message done or
+be aborted (if the message has not started yet) before they
+send next message.
 
-Signed-off-by: yong.liang <yong.liang@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 7 +++++++
- 1 file changed, 7 insertions(+)
+Changes since v0:
+ - move the binding changes to first
+ - remove unnecessary changes
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 10b32471bc7b..8b59e0eba2eb 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -253,6 +253,13 @@
- 			#interrupt-cells = <2>;
- 		};
- 
-+		watchdog: watchdog@10007000 {
-+			compatible = "mediatek,mt8183-wdt",
-+				     "mediatek,mt6589-wdt";
-+			reg = <0 0x10007000 0 0x100>;
-+			#reset-cells = <1>;
-+		};
-+
- 		apmixedsys: syscon@1000c000 {
- 			compatible = "mediatek,mt8183-apmixedsys", "syscon";
- 			reg = <0 0x1000c000 0 0x1000>;
+Bibby Hsieh (3):
+  dt-binding: gce: remove atomic_exec in mboxes property
+  mailbox: mediatek: implement flush function
+  mailbox: mediatek: remove implementation related to atomic_exec
+
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |  10 +-
+ drivers/mailbox/mtk-cmdq-mailbox.c            | 128 ++++++++----------
+ 2 files changed, 64 insertions(+), 74 deletions(-)
+
 -- 
 2.18.0
 _______________________________________________
