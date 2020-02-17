@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F0735160B4C
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 07:57:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 72454160B4A
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 07:57:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6RSoVmdlNuvGp52y/2/iGS0fHBvOK9eFtd/74u481QY=; b=SkhoB6hq5Cm5NG
-	jxbYnDbhKNt88CJvG+0VG+nXqm97zvBEouvMhl/90/WuG/rcXmSUtfCbZsRUX6Mi+IAHbFp3gu78t
-	eVhdIB8CpUB+CNDj3rjTfg52KJX6LTsH5soB4tV9cAdjJm85VPpyR8yBcoswx7lVA7wj0mZKqrDnC
-	C/GNuO3ThD/lnpLKHJIMYpzY1vVKloVdPRXlJOSFe5GKDESIokdCoJS0Akb3iF5BGq+7gFrX5gRQw
-	JKDRB2NxaZFBXL7tGpTgY6p5CrMTZimxEwGhdCgkcecqz/adgnss4opgzHkKcqZEUdjCGQfWO83m2
-	qZbkB3xK0OFvL4SJ30dg==;
+	List-Owner; bh=N4nsGfHTxI3DYn2eVBcmsqxegGeNMvRj+8fACYLOgDw=; b=muMgSQ/wmboYgZ
+	ijrKhRwdkPfhzGyhevQMf+rwacvTN3W+Fbgv9Y3jTVyEf7br9pwKrFZsC/Jo08k3I28tvpoka6bRr
+	vCGwhUE6ireORhh+XPVgyZfjj2zhOdWgL31zLNxIKye12JLJnf1mQAsZ3qJCrYr0OGze1vVr7BZFy
+	rAXCCwUvRBFntyKuwdWmf2ZYMn6KPq6qZ8wPKTEhd/1eWqy3V5wcHC8+VKt3+RvOjvAZE2cSvsZEm
+	dO/2pOpXzCrTJjjysbpMQbLRkC9rKuL4pZPSzngaJ6UCxaX1Nn0W82Bx0IE2ZHBTYLbPzQPlUMSVZ
+	D1ZZnqohgY9ZFJAr2SsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3aLQ-0001Ri-Ib; Mon, 17 Feb 2020 06:57:28 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1j3aLA-00018d-UD; Mon, 17 Feb 2020 06:57:12 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3aKp-0000rF-TE; Mon, 17 Feb 2020 06:56:54 +0000
-X-UUID: be4e136f9e0d46f2885d9b33da919f3c-20200216
+ id 1j3aKj-0000o1-Oz; Mon, 17 Feb 2020 06:56:48 +0000
+X-UUID: 7e2e2bc758744afaa7a84318a6aa662a-20200216
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=VES/omlnKMBiO/wtqDCo7RTwP3Kif06WozMFJM82Hbo=; 
- b=BpMp3CmdIXFouCFXQe4mCdd+anD+welzID9ORuFUpwgTKU4p21RPrgv60KIMHIj9QKZJiOTaD9OKJVgCqXCdJFb06s+Tt8BdvhIb8bHhxNop3Aiwkw2OqjWftawbTeU7ieTmDGTTv82bW957Og1dKNrt/OyVL2yFLi4j3yCHKnw=;
-X-UUID: be4e136f9e0d46f2885d9b33da919f3c-20200216
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ bh=hxYCCL3/k4cibEcsvPHtckq0NXx5A2Fj9khz3ehuN+o=; 
+ b=XXl4x+6iLcNzxq1U8TP1Rv8w3caeoVGEuwSfNFhQtALODHwTQ8lTB9j3b6LVYZRoImZs5h0Sx2CPnnKL5ldBFsebs+rEQF4gUpa1RiKHy5TwIRmdPdwMnu/zg2RvWWgqjEoUelPViMFm7kj/bYwe/jHDCD2XME4Utga0Ob18Yf4=;
+X-UUID: 7e2e2bc758744afaa7a84318a6aa662a-20200216
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <chun-hung.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 621565398; Sun, 16 Feb 2020 22:56:49 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 597281584; Sun, 16 Feb 2020 22:56:44 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 16 Feb 2020 22:57:07 -0800
+ 15.0.1395.4; Sun, 16 Feb 2020 22:57:02 -0800
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 14:54:57 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 17 Feb 2020 14:55:46 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 17 Feb 2020 14:54:42 +0800
+ Frontend Transport; Mon, 17 Feb 2020 14:54:43 +0800
 From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
 To: Chaotian Jing <chaotian.jing@mediatek.com>, Ulf Hansson
  <ulf.hansson@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
@@ -53,23 +53,24 @@ To: Chaotian Jing <chaotian.jing@mediatek.com>, Ulf Hansson
  Gleixner" <tglx@linutronix.de>, Allison Randal <allison@lohutok.net>,
  "Mathieu Malaterre" <malat@debian.org>, Stanley Chu
  <stanley.chu@mediatek.com>, "Kuohong Wang" <kuohong.wang@mediatek.com>
-Subject: [PATCH v3 1/4] mmc: core: expose MMC_CAP2_CQE* to dt
-Date: Mon, 17 Feb 2020 14:56:01 +0800
-Message-ID: <1581922564-24914-2-git-send-email-chun-hung.wu@mediatek.com>
+Subject: [PATCH v3 2/4] mmc: mediatek: refine msdc timeout api
+Date: Mon, 17 Feb 2020 14:56:02 +0800
+Message-ID: <1581922564-24914-3-git-send-email-chun-hung.wu@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1581922564-24914-1-git-send-email-chun-hung.wu@mediatek.com>
 References: <1581922564-24914-1-git-send-email-chun-hung.wu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200216_225652_098709_241CBDFB 
-X-CRM114-Status: UNSURE (   9.75  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200216_225645_841756_5A6C63DA 
+X-CRM114-Status: GOOD (  11.08  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -103,35 +104,73 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Expose MMC_CAP2_CQE and MMC_CAP2_CQE_DCMD
-to host->caps2 if
-1. "supports-cqe" is defined in dt and
-2. "disable-cqe-dcmd" is not defined in dt.
+Extract msdc timeout api common part to have
+better code architecture and avoid redundent
+code.
 
 Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
 ---
- drivers/mmc/core/host.c | 8 ++++++++
- 1 file changed, 8 insertions(+)
+ drivers/mmc/host/mtk-sd.c | 32 ++++++++++++++++++++++----------
+ 1 file changed, 22 insertions(+), 10 deletions(-)
 
-diff --git a/drivers/mmc/core/host.c b/drivers/mmc/core/host.c
-index 105b7a7..efb0dbe 100644
---- a/drivers/mmc/core/host.c
-+++ b/drivers/mmc/core/host.c
-@@ -319,6 +319,14 @@ int mmc_of_parse(struct mmc_host *host)
- 		host->caps2 |= MMC_CAP2_NO_SD;
- 	if (device_property_read_bool(dev, "no-mmc"))
- 		host->caps2 |= MMC_CAP2_NO_MMC;
-+	if (device_property_read_bool(dev, "supports-cqe"))
-+		host->caps2 |= MMC_CAP2_CQE;
-+
-+	/* Must be after "supports-cqe" check */
-+	if (!device_property_read_bool(dev, "disable-cqe-dcmd")) {
-+		if (host->caps2 & MMC_CAP2_CQE)
-+			host->caps2 |= MMC_CAP2_CQE_DCMD;
-+	}
+diff --git a/drivers/mmc/host/mtk-sd.c b/drivers/mmc/host/mtk-sd.c
+index 189e426..127b0cf 100644
+--- a/drivers/mmc/host/mtk-sd.c
++++ b/drivers/mmc/host/mtk-sd.c
+@@ -698,21 +698,21 @@ static void msdc_unprepare_data(struct msdc_host *host, struct mmc_request *mrq)
+ 	}
+ }
  
- 	/* Must be after "non-removable" check */
- 	if (device_property_read_u32(dev, "fixed-emmc-driver-type", &drv_type) == 0) {
+-/* clock control primitives */
+-static void msdc_set_timeout(struct msdc_host *host, u32 ns, u32 clks)
++static u64 msdc_timeout_cal(struct msdc_host *host, u64 ns, u64 clks)
+ {
+-	u32 timeout, clk_ns;
++	u64 timeout, clk_ns;
+ 	u32 mode = 0;
+ 
+-	host->timeout_ns = ns;
+-	host->timeout_clks = clks;
+ 	if (host->mmc->actual_clock == 0) {
+ 		timeout = 0;
+ 	} else {
+-		clk_ns  = 1000000000UL / host->mmc->actual_clock;
+-		timeout = (ns + clk_ns - 1) / clk_ns + clks;
++		clk_ns  = 1000000000ULL;
++		do_div(clk_ns, host->mmc->actual_clock);
++		timeout = ns + clk_ns - 1;
++		do_div(timeout, clk_ns);
++		timeout += clks;
+ 		/* in 1048576 sclk cycle unit */
+-		timeout = (timeout + (0x1 << 20) - 1) >> 20;
++		timeout = DIV_ROUND_UP(timeout, (0x1 << 20));
+ 		if (host->dev_comp->clk_div_bits == 8)
+ 			sdr_get_field(host->base + MSDC_CFG,
+ 				      MSDC_CFG_CKMOD, &mode);
+@@ -722,9 +722,21 @@ static void msdc_set_timeout(struct msdc_host *host, u32 ns, u32 clks)
+ 		/*DDR mode will double the clk cycles for data timeout */
+ 		timeout = mode >= 2 ? timeout * 2 : timeout;
+ 		timeout = timeout > 1 ? timeout - 1 : 0;
+-		timeout = timeout > 255 ? 255 : timeout;
+ 	}
+-	sdr_set_field(host->base + SDC_CFG, SDC_CFG_DTOC, timeout);
++	return timeout;
++}
++
++/* clock control primitives */
++static void msdc_set_timeout(struct msdc_host *host, u64 ns, u64 clks)
++{
++	u64 timeout;
++
++	host->timeout_ns = ns;
++	host->timeout_clks = clks;
++
++	timeout = msdc_timeout_cal(host, ns, clks);
++	sdr_set_field(host->base + SDC_CFG, SDC_CFG_DTOC,
++		      (u32)(timeout > 255 ? 255 : timeout));
+ }
+ 
+ static void msdc_gate_clock(struct msdc_host *host)
 -- 
 1.9.1
 _______________________________________________
