@@ -2,62 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 54245160E0F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 10:10:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CF79D160E2C
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 10:11:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TwwyVOoQ3l0s3Dg/ZPFwylsY9AIaMbObe+KpNYF/pYg=; b=pYyGYs9oZEvt0I
-	Uj9w8tgMPOaCRvG8FY62jyCzO/xWiHtTgb82mRZ0Wuqok86RVbrU2e+jPZ+hCRgRNGUFxFxHPCBw+
-	3ahbc16scQGYZ3Bh/hvI9Q/A3SspPfhJGE6bPsOEy1cgzaX2HrJ9hVVPkVHmPkrnfqNtDMIRRNI8F
-	0t8nXx8W8hQwd4GTTiVw1GDyYrDJUGAcZZRugBbshM44lgZM52dvbXcmpCesqh16t49hotkN+rGf1
-	Mq3EpbxDHUNNIN6BmS3LLfgPcyXa0XHW3usBMId9xwrayTA2m+c+GS7zEhElvHUOJ7xvEpSyGyaOV
-	20R5i+RGEtBDByQcEaGw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=k8LUxIyXgm99L6qHIiXB69Jeh5TqZP39yvJEGxpDWi8=; b=PreYKA+Og1RKAa
+	eGNraGXRiXGYYbAQeajHOxTwjvHm+jIdjPdKR7en3OvDREZIbrNoZ+38VwKVLmULW34H6HWVTPK9i
+	XvhGFeySs7QmqisREj57sSpcVc87oWc0YDgZxZyIf3bM+xWnjNUpFxcaby1IbQugbPA3rFE25JuWw
+	MUsHZuHgBlgbJ5KjG9ELr6ferYOAR3hQrLmeGY/+71UlY5z2fySlC0MEIdl2DVc31SweJdbqgQuMX
+	bU1tyY3Wa5gbOStaiJc1fOq2YZQn8Onzwf7jQhrqDFi8Wku5dvRv8EeWEZCexp34h2NSbmMKOuryW
+	qc/2S3houUVUu1ju+TSA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3cPZ-0004vb-0I; Mon, 17 Feb 2020 09:09:53 +0000
+	id 1j3cQr-0007Rx-Dt; Mon, 17 Feb 2020 09:11:13 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3cPP-0004ne-FB; Mon, 17 Feb 2020 09:09:44 +0000
-X-UUID: a664acd45a3c460293d1ac853917cd48-20200217
+ id 1j3cQ7-0006jm-MB; Mon, 17 Feb 2020 09:10:29 +0000
+X-UUID: 2fda702ff48348fba767a93dcd958753-20200217
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=035FQ1Fw3xURfPM55/UUoa6QVfGND190Ak9FtnTFJ0g=; 
- b=KU7uNzSuul8qgKRsTbzaDNP5WB0tPR8kiGqP+Q7NbcpsuuPrgR1kCuL+ysbvjyQgCdqi99oQPI2akmkcT0Vhe6SUlCZXPUT2422hUUOVhoH/HpSE6EXCn5R1zqN3wnjN6MlJP10VUd+z+4mlv08ucLZpDm2S8CQB2+2ugtGWjaI=;
-X-UUID: a664acd45a3c460293d1ac853917cd48-20200217
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=9HE6ijD/iKnj2zbwehdoMouoW6uxc6gif4/hSLPq9IQ=; 
+ b=qz2MyJl4+KZT4tNFu0h/uXUFT3l+fEOgkjSbXpOkpOyev3+rHjFdgMnimrC8VWkZJS+fWSfzqBOfgdQ088ELq2b3SNYT8IWyMjCZx0Bi7+NacuipWP5hQAGm8Atwm/lSzt933de5z/4L3JvG+e2L0mImXqhy0GnGt8Lv6dQUwQ8=;
+X-UUID: 2fda702ff48348fba767a93dcd958753-20200217
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <bibby.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2027552165; Mon, 17 Feb 2020 01:09:38 -0800
+ with ESMTP id 725776544; Mon, 17 Feb 2020 01:10:24 -0800
 Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 01:05:34 -0800
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 17 Feb 2020 01:11:11 -0800
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
  mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 17:04:39 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ 15.0.1395.4; Mon, 17 Feb 2020 17:09:26 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 17 Feb 2020 17:03:36 +0800
+ Frontend Transport; Mon, 17 Feb 2020 17:09:57 +0800
 From: Bibby Hsieh <bibby.hsieh@mediatek.com>
-To: Jassi Brar <jassisinghbrar@gmail.com>, Matthias Brugger
- <matthias.bgg@gmail.com>, Rob Herring <robh+dt@kernel.org>, CK HU
- <ck.hu@mediatek.com>
-Subject: [PATCH v1 3/3] mailbox: mediatek: remove implementation related to
- atomic_exec
-Date: Mon, 17 Feb 2020 17:05:32 +0800
-Message-ID: <20200217090532.16019-4-bibby.hsieh@mediatek.com>
+To: David Airlie <airlied@linux.ie>, Matthias Brugger
+ <matthias.bgg@gmail.com>, Daniel Vetter <daniel.vetter@ffwll.ch>,
+ <dri-devel@lists.freedesktop.org>, <linux-mediatek@lists.infradead.org>
+Subject: [PATCH v1 1/3] arm64: dts: mt8183: Add gce setting in display node
+Date: Mon, 17 Feb 2020 17:10:18 +0800
+Message-ID: <20200217091020.16144-1-bibby.hsieh@mediatek.com>
 X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200217090532.16019-1-bibby.hsieh@mediatek.com>
-References: <20200217090532.16019-1-bibby.hsieh@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_010943_517976_CE96A73B 
-X-CRM114-Status: GOOD (  15.11  )
+X-CRM114-CacheID: sfid-20200217_011027_755168_8FE050E4 
+X-CRM114-Status: UNSURE (   8.17  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -87,142 +85,141 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
- Houlong Wei <houlong.wei@mediatek.com>,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: drinkcat@chromium.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ srv_heupstream@mediatek.com, Yongqiang Niu <yongqiang.niu@mediatek.com>,
+ linux-kernel@vger.kernel.org, tfiga@chromium.org, CK Hu <ck.hu@mediatek.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Philipp Zabel <p.zabel@pengutronix.de>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-After implement flush, client can flush the executing
-command buffer or abort the still waiting for event
-command buffer, so controller do not need to implement
-atomic_exe feature. remove it.
+In order to use GCE function, we need add some information
+into display node (mboxes, mediatek,gce-client-reg, mediatek,gce-events).
 
 Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Reviewed-by: CK Hu <ck.hu@mediatek.com>
----
- drivers/mailbox/mtk-cmdq-mailbox.c | 76 ++++--------------------------
- 1 file changed, 8 insertions(+), 68 deletions(-)
+Signed-off-by: Yongqiang Niu <yongqiang.niu@mediatek.com>
 
-diff --git a/drivers/mailbox/mtk-cmdq-mailbox.c b/drivers/mailbox/mtk-cmdq-mailbox.c
-index 0da5e2dc2c0e..b24822ad8409 100644
---- a/drivers/mailbox/mtk-cmdq-mailbox.c
-+++ b/drivers/mailbox/mtk-cmdq-mailbox.c
-@@ -56,7 +56,6 @@ struct cmdq_thread {
- 	void __iomem		*base;
- 	struct list_head	task_busy_list;
- 	u32			priority;
--	bool			atomic_exec;
- };
+---
+This patch depends on ptach:
+[RESEND,v6,02/17] arm64: dts: add display nodes for mt8183
+https://patchwork.kernel.org/patch/11316277/
+---
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index be4428c92f35..8b522b039a37 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -9,6 +9,7 @@
+ #include <dt-bindings/interrupt-controller/arm-gic.h>
+ #include <dt-bindings/interrupt-controller/irq.h>
+ #include <dt-bindings/power/mt8183-power.h>
++#include <dt-bindings/gce/mt8183-gce.h>
+ #include "mt8183-pinfunc.h"
  
- struct cmdq_task {
-@@ -162,48 +161,11 @@ static void cmdq_task_insert_into_thread(struct cmdq_task *task)
- 	cmdq_thread_invalidate_fetched_data(thread);
- }
+ / {
+@@ -664,6 +665,9 @@
+ 			reg = <0 0x14000000 0 0x1000>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			#clock-cells = <1>;
++			mboxes = <&gce 0 CMDQ_THR_PRIO_HIGHEST>,
++				 <&gce 1 CMDQ_THR_PRIO_HIGHEST>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0 0x1000>;
+ 		};
  
--static bool cmdq_command_is_wfe(u64 cmd)
--{
--	u64 wfe_option = CMDQ_WFE_UPDATE | CMDQ_WFE_WAIT | CMDQ_WFE_WAIT_VALUE;
--	u64 wfe_op = (u64)(CMDQ_CODE_WFE << CMDQ_OP_CODE_SHIFT) << 32;
--	u64 wfe_mask = (u64)CMDQ_OP_CODE_MASK << 32 | 0xffffffff;
--
--	return ((cmd & wfe_mask) == (wfe_op | wfe_option));
--}
--
--/* we assume tasks in the same display GCE thread are waiting the same event. */
--static void cmdq_task_remove_wfe(struct cmdq_task *task)
--{
--	struct device *dev = task->cmdq->mbox.dev;
--	u64 *base = task->pkt->va_base;
--	int i;
--
--	dma_sync_single_for_cpu(dev, task->pa_base, task->pkt->cmd_buf_size,
--				DMA_TO_DEVICE);
--	for (i = 0; i < CMDQ_NUM_CMD(task->pkt); i++)
--		if (cmdq_command_is_wfe(base[i]))
--			base[i] = (u64)CMDQ_JUMP_BY_OFFSET << 32 |
--				  CMDQ_JUMP_PASS;
--	dma_sync_single_for_device(dev, task->pa_base, task->pkt->cmd_buf_size,
--				   DMA_TO_DEVICE);
--}
--
- static bool cmdq_thread_is_in_wfe(struct cmdq_thread *thread)
- {
- 	return readl(thread->base + CMDQ_THR_WAIT_TOKEN) & CMDQ_THR_IS_WAITING;
- }
+ 		ovl0: ovl@14008000 {
+@@ -672,6 +676,7 @@
+ 			interrupts = <GIC_SPI 225 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_OVL0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x8000 0x1000>;
+ 		};
  
--static void cmdq_thread_wait_end(struct cmdq_thread *thread,
--				 unsigned long end_pa)
--{
--	struct device *dev = thread->chan->mbox->dev;
--	unsigned long curr_pa;
--
--	if (readl_poll_timeout_atomic(thread->base + CMDQ_THR_CURR_ADDR,
--			curr_pa, curr_pa == end_pa, 1, 20))
--		dev_err(dev, "GCE thread cannot run to end.\n");
--}
--
- static void cmdq_task_exec_done(struct cmdq_task *task, enum cmdq_cb_status sta)
- {
- 	struct cmdq_task_cb *cb = &task->pkt->async_cb;
-@@ -383,36 +345,15 @@ static int cmdq_mbox_send_data(struct mbox_chan *chan, void *data)
- 		WARN_ON(cmdq_thread_suspend(cmdq, thread) < 0);
- 		curr_pa = readl(thread->base + CMDQ_THR_CURR_ADDR);
- 		end_pa = readl(thread->base + CMDQ_THR_END_ADDR);
--
--		/*
--		 * Atomic execution should remove the following wfe, i.e. only
--		 * wait event at first task, and prevent to pause when running.
--		 */
--		if (thread->atomic_exec) {
--			/* GCE is executing if command is not WFE */
--			if (!cmdq_thread_is_in_wfe(thread)) {
--				cmdq_thread_resume(thread);
--				cmdq_thread_wait_end(thread, end_pa);
--				WARN_ON(cmdq_thread_suspend(cmdq, thread) < 0);
--				/* set to this task directly */
--				writel(task->pa_base,
--				       thread->base + CMDQ_THR_CURR_ADDR);
--			} else {
--				cmdq_task_insert_into_thread(task);
--				cmdq_task_remove_wfe(task);
--				smp_mb(); /* modify jump before enable thread */
--			}
-+		/* check boundary */
-+		if (curr_pa == end_pa - CMDQ_INST_SIZE ||
-+		    curr_pa == end_pa) {
-+			/* set to this task directly */
-+			writel(task->pa_base,
-+			       thread->base + CMDQ_THR_CURR_ADDR);
- 		} else {
--			/* check boundary */
--			if (curr_pa == end_pa - CMDQ_INST_SIZE ||
--			    curr_pa == end_pa) {
--				/* set to this task directly */
--				writel(task->pa_base,
--				       thread->base + CMDQ_THR_CURR_ADDR);
--			} else {
--				cmdq_task_insert_into_thread(task);
--				smp_mb(); /* modify jump before enable thread */
--			}
-+			cmdq_task_insert_into_thread(task);
-+			smp_mb(); /* modify jump before enable thread */
- 		}
- 		writel(task->pa_base + pkt->cmd_buf_size,
- 		       thread->base + CMDQ_THR_END_ADDR);
-@@ -501,7 +442,6 @@ static struct mbox_chan *cmdq_xlate(struct mbox_controller *mbox,
+ 		ovl_2l0: ovl@14009000 {
+@@ -680,6 +685,7 @@
+ 			interrupts = <GIC_SPI 226 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_OVL0_2L>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0x9000 0x1000>;
+ 		};
  
- 	thread = (struct cmdq_thread *)mbox->chans[ind].con_priv;
- 	thread->priority = sp->args[1];
--	thread->atomic_exec = (sp->args[2] != 0);
- 	thread->chan = &mbox->chans[ind];
+ 		ovl_2l1: ovl@1400a000 {
+@@ -688,6 +694,7 @@
+ 			interrupts = <GIC_SPI 227 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_OVL1_2L>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xa000 0x1000>;
+ 		};
  
- 	return &mbox->chans[ind];
+ 		rdma0: rdma@1400b000 {
+@@ -697,6 +704,7 @@
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_RDMA0>;
+ 			mediatek,rdma_fifo_size = <5120>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xb000 0x1000>;
+ 		};
+ 
+ 		rdma1: rdma@1400c000 {
+@@ -706,6 +714,7 @@
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_RDMA1>;
+ 			mediatek,rdma_fifo_size = <2048>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xc000 0x1000>;
+ 		};
+ 
+ 		color0: color@1400e000 {
+@@ -715,6 +724,7 @@
+ 			interrupts = <GIC_SPI 231 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_COLOR0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xe000 0x1000>;
+ 		};
+ 
+ 		ccorr0: ccorr@1400f000 {
+@@ -723,6 +733,7 @@
+ 			interrupts = <GIC_SPI 232 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_CCORR0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1400XXXX 0xf000 0x1000>;
+ 		};
+ 
+ 		aal0: aal@14010000 {
+@@ -732,6 +743,7 @@
+ 			interrupts = <GIC_SPI 233 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_AAL0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0 0x1000>;
+ 		};
+ 
+ 		gamma0: gamma@14011000 {
+@@ -741,6 +753,7 @@
+ 			interrupts = <GIC_SPI 234 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_GAMMA0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0x1000 0x1000>;
+ 		};
+ 
+ 		dither0: dither@14012000 {
+@@ -749,6 +762,7 @@
+ 			interrupts = <GIC_SPI 235 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
+ 			clocks = <&mmsys CLK_MM_DISP_DITHER0>;
++			mediatek,gce-client-reg = <&gce SUBSYS_1401XXXX 0x2000 0x1000>;
+ 		};
+ 
+ 		mutex: mutex@14016000 {
+@@ -756,6 +770,8 @@
+ 			reg = <0 0x14016000 0 0x1000>;
+ 			interrupts = <GIC_SPI 217 IRQ_TYPE_LEVEL_LOW>;
+ 			power-domains = <&scpsys MT8183_POWER_DOMAIN_DISP>;
++			mediatek,gce-events = <CMDQ_EVENT_MUTEX_STREAM_DONE0>,
++					      <CMDQ_EVENT_MUTEX_STREAM_DONE1>;
+ 		};
+ 
+ 		smi_common: smi@14019000 {
 -- 
 2.18.0
 _______________________________________________
