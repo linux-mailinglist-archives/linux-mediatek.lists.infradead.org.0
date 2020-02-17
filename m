@@ -2,69 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 234DF160994
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 05:14:28 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7BCD51609AF
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 05:49:38 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Q9GzqzsrYVMQ6bgjprZFtb4gQumRNfAbJWFKlFTBpp8=; b=QA5YV9cKOMuzPB
-	DZJpwFCsnntN59PvuNkBB7M392TkN2RPzGHSEz1LdyOZ2MzUucZhz+T4fpwAhZgTZ+YUGuJjpfLDE
-	KvHDh3uJn2OeHFDM11FONmA2tageo7TxIMNxaYzWCtPVSRYaAP+6Xl1VvhJMhQCtvGI3+GQDGRx+W
-	98fB7RLOcKtGyVCpWyJNlP/XvmIElemI0vem7K1asBvmGFo4ddQpQugq2JhM6Rw+twsfXGn8w2VKk
-	QB2SFVYVSVD/X+FfGQFU64NHHX1lJUjW3puxE6+PnXzaKxFjOspzLm6YzlKnv0iCI/oqz5UyT574L
-	eGY/xnZEgktAoiwQ5mTw==;
+	List-Owner; bh=CRqN/pqHraUiU7CT+I7QGokjUhmiIqWvwsMpTVFu5lM=; b=e86qz+wcG9yo47
+	/U4uJ40y4zyej/IoQI3Ku4XFusFMUaHUVYx9WY6Tt1V80vaxwqxYDLvBVcwsHgseJuoG71D+n2DZz
+	eHlK+K4Di0Cauanp9m/+bOxAY2G0w+Q07vJtjHBszkffrtcLQgFsTAPsAE97DrBkrxTn07Ll5L6bv
+	6b2xZL9DJh/BImzI+rg7IF+pQL7cpcri4kqCo0RIFcRPnmvekCkg4oLWQdbS+HzRk9wAc9y8RMFCj
+	ErVQb4yr17Nq4hwwHArpHtQs+xjjGC7Beukudowt972Vq3ppR5WBvNLaiwOLsDdb6yLZ4low22sKZ
+	Y2y0L0D3d+hrGiDsPfJQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3Xna-00006w-03; Mon, 17 Feb 2020 04:14:22 +0000
+	id 1j3YLb-0003aI-DA; Mon, 17 Feb 2020 04:49:31 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3Xme-0007YC-0u; Mon, 17 Feb 2020 04:13:25 +0000
-X-UUID: 9191f5d4de4f4e56aac1213b523a3e61-20200216
+ id 1j3YLR-0003SL-VW; Mon, 17 Feb 2020 04:49:23 +0000
+X-UUID: bac842a78bf34ae39848c0966b93df05-20200216
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=feYX8zW0ZWQoMc1W0bskoB216n7Lm1ZtbWluuzSZ8/c=; 
- b=Lo36KXcyJL98fXOSkRjKR8lJpl5Zf+8QHayAZoZqeedhHtcX54nzAtcnsmR2QjhfextKs+z1hYA3XhD4IOhWKVdClJd7QV1D2V0KSyQsjz2y6sHWcUnipQGYblOdB3vOVS5uSN7rORYNiToZWpAPAOwkkxVnGPE/cjoN3vCKdT0=;
-X-UUID: 9191f5d4de4f4e56aac1213b523a3e61-20200216
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=Ib3CGDT48ndknLXCzeQvFl+o88PHBbAK1vPnBCCEPIU=; 
+ b=LzeR3AZZNezNMC2uS+TX/bIxwUBA7Z2udE90OAaUxZoSgQ4Rtf81incW3AxkF97NnBP22yYcrMxjCIJzl9Hl7RWaea+CUXmXvoc1YB0YWVxqR68DcJtRkrtWE4nSEpl89hM/bI2YZurhxk+x8S/ji+FLNqyNWiQzPngxksfdIoE=;
+X-UUID: bac842a78bf34ae39848c0966b93df05-20200216
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <chun-hung.wu@mediatek.com>)
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1904573788; Sun, 16 Feb 2020 20:13:21 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 16 Feb 2020 20:13:19 -0800
+ with ESMTP id 423041955; Sun, 16 Feb 2020 20:49:16 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 16 Feb 2020 20:49:34 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 12:12:23 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 17 Feb 2020 12:13:05 +0800
-From: Chun-Hung Wu <chun-hung.wu@mediatek.com>
-To: Chaotian Jing <chaotian.jing@mediatek.com>, Ulf Hansson
- <ulf.hansson@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
- <mark.rutland@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>, "Linus
- Walleij" <linus.walleij@linaro.org>, Pavel Machek <pavel@ucw.cz>, Kate
- Stewart <kstewart@linuxfoundation.org>, Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>, Martin Blumenstingl
- <martin.blumenstingl@googlemail.com>, Pan Bian <bianpan2016@163.com>, "Thomas
- Gleixner" <tglx@linutronix.de>, Allison Randal <allison@lohutok.net>,
- "Mathieu Malaterre" <malat@debian.org>, Stanley Chu
- <stanley.chu@mediatek.com>, "Kuohong Wang" <kuohong.wang@mediatek.com>
-Subject: [PATCH v2 4/4] [4/4] dt-bindings: mmc: mediatek: Add document for
- mt6779
-Date: Mon, 17 Feb 2020 12:13:10 +0800
-Message-ID: <1581912790-19382-5-git-send-email-chun-hung.wu@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1581912790-19382-1-git-send-email-chun-hung.wu@mediatek.com>
-References: <1581912790-19382-1-git-send-email-chun-hung.wu@mediatek.com>
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 17 Feb 2020 12:48:24 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 17 Feb 2020 12:49:00 +0800
+Message-ID: <1581914953.20102.3.camel@mtksdaap41>
+Subject: Re: [PATCH v2 2/2] drm/mediatek: fix race condition for HDMI jack
+ status reporting
+From: CK Hu <ck.hu@mediatek.com>
+To: Tzung-Bi Shih <tzungbi@google.com>
+Date: Mon, 17 Feb 2020 12:49:13 +0800
+In-Reply-To: <CA+Px+wWRn1-t2fd+bD-PGRVjyLaAHqm1wF3W3T_GMUh0GXkA_A@mail.gmail.com>
+References: <20200217031653.52345-1-tzungbi@google.com>
+ <20200217105513.2.I477092c2f104fd589133436c3ae4590e6fc6323b@changeid>
+ <1581911058.12629.1.camel@mtksdaap41>
+ <CA+Px+wWRn1-t2fd+bD-PGRVjyLaAHqm1wF3W3T_GMUh0GXkA_A@mail.gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200216_201324_095001_A0EFDE92 
-X-CRM114-Status: UNSURE (   9.91  )
+X-CRM114-CacheID: sfid-20200216_204922_027727_2E8AB050 
+X-CRM114-Status: UNSURE (   8.65  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -73,8 +67,6 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -95,39 +87,32 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Chun-Hung Wu <chun-hung.wu@mediatek.com>, linux-mmc@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- kernel-team@android.com, linux-arm-kernel@lists.infradead.org
+Cc: ALSA development <alsa-devel@alsa-project.org>, p.zabel@pengutronix.de,
+ David Airlie <airlied@linux.ie>, dri-devel@lists.freedesktop.org,
+ Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org, Daniel
+ Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Dylan Reid <dgreid@google.com>, linux-arm-kernel@lists.infradead.org,
+ Jimmy Cheng-Yi Chiang <cychiang@google.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add compatible node for mt6779 mmc
+On Mon, 2020-02-17 at 11:55 +0800, Tzung-Bi Shih wrote:
+> On Mon, Feb 17, 2020 at 11:44 AM CK Hu <ck.hu@mediatek.com> wrote:
+> > On Mon, 2020-02-17 at 11:16 +0800, Tzung-Bi Shih wrote:
+> > > Fixes: 5d3c64477392 ("drm/mediatek: support HDMI jack status reporting")
+> >
+> > This patch looks good to me, but please merge this patch with the patch
+> > it fix.
+> 
+> 5d3c64477392 ("drm/mediatek: support HDMI jack status reporting") has
+> applied to ASoC for-next branch.  This is a fixup patch.
 
-Change-Id: Id36a136a75e892c9360ec95c7f52db06f5b308a4
-CR-Id:
-Feature:
-Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
----
- Documentation/devicetree/bindings/mmc/mtk-sd.txt | 1 +
- 1 file changed, 1 insertion(+)
+I thought a patch need an ack by the maintainer. OK, so I could do is,
+for this patch,
 
-diff --git a/Documentation/devicetree/bindings/mmc/mtk-sd.txt b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-index 8a532f4..0c9cf6a 100644
---- a/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-+++ b/Documentation/devicetree/bindings/mmc/mtk-sd.txt
-@@ -12,6 +12,7 @@ Required properties:
- 	"mediatek,mt8173-mmc": for mmc host ip compatible with mt8173
- 	"mediatek,mt8183-mmc": for mmc host ip compatible with mt8183
- 	"mediatek,mt8516-mmc": for mmc host ip compatible with mt8516
-+	"mediatek,mt6779-mmc": for mmc host ip compatible with mt6779
- 	"mediatek,mt2701-mmc": for mmc host ip compatible with mt2701
- 	"mediatek,mt2712-mmc": for mmc host ip compatible with mt2712
- 	"mediatek,mt7622-mmc": for MT7622 SoC
--- 
-1.9.1
+Acked-by: CK Hu <ck.hu@mediatek.com> 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
