@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E3CCE16092A
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 04:46:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 51395160947
+	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 04:52:44 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=a4mjUEBSc2DgUINiWVTtvwoGW2fDo6v5SeEJqT9UhVA=; b=cUD2WFh1DzPPUZ
-	Cm5tyltgQ1RJ45RvXTEGkKMhP0ceDyrFv36f4q0T51rUtUPyiffUBMWsA/aQS82aacdm8ezTPJrLy
-	RH9P7b1XJCuGOwSmXfTfI0VbWBvbbQQjjD6bKB8Bm5dwJ6OIGpmkFnFsWBeJdEP4XgB+tRMR+VbvD
-	ayPzTZRboFsvZT3dy//erC9XEXq7i31J5M1Z+EoGU9bECLMW/ZsVCWGpHt61jcS+0JGaaAxN57y3P
-	M8EsWyzLBB2R92gG8C+A+ewdvOJZ74ABvmgf76A17dQ1BvSwXF+Fk2eNroRm08rZVpQgcEVkBzJna
-	p+PkfwL9fX5RBK8IxZBg==;
+	List-Owner; bh=QRjlnZMHcHU0CE+irG7w767Of3dXCV5AfRf1Z9tDU1M=; b=tlyyUflNF48JCq
+	7WWPoEOzlDHhTDtV4yucj6UIXw8pO5Y2XOJcC+FpJU56dj30iPKmpJdnSqNtyLyh0Ot9v41a4VQDN
+	7VzUNsCYZ/ZddsSlHyK8+bRQ6DPHS/Tjs0AwdHABEIF2LzQtEdrIWCor759bwUxyYH34SemZP3Qgx
+	BhxiYS+pVPbXcI3vdCYWRKbVpFXEpMraBsnah6nZS8xumNcr5tmzVME/77GMd053ahQ9rT+sPGyfD
+	bOmM52uUTxGOlDdNzKbAI1EgBXM1VAl1TIx8P++7invbwsyxGmfzFmvy9ZRABuW79j2NQMjg1gLQw
+	k9J7LCp9RZ+Umb9At9kw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3XMb-0001M3-0d; Mon, 17 Feb 2020 03:46:29 +0000
+	id 1j3XSY-00059h-PW; Mon, 17 Feb 2020 03:52:38 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3XLs-0000qD-Ot; Mon, 17 Feb 2020 03:45:47 +0000
-X-UUID: f8ec10930c894453bd64bd6fd6cfe2b1-20200216
+ id 1j3XSI-00050E-El; Mon, 17 Feb 2020 03:52:23 +0000
+X-UUID: a1b5bd5c727a437aaa0670529c15806e-20200216
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=t94t8oVrB/2x1V0xqotqa7NVwVrZU5xruUOUaNPm/Ck=; 
- b=gFbOVRIfs89aOPosJ7mvekkKq5sEBx1Hdsy8fEb3HeB6MnqVWYt6cN6wxDemI+95zAVePzF+g+tXzbrccuA9GvEhEkAeRlo1oN/wmQJ8JS1M9RhCIDqmjWTnkZMCBVG63ZVrnkSN360Ee5sLf2zTLVWd52v1lvMl/CLEKxl/ngg=;
-X-UUID: f8ec10930c894453bd64bd6fd6cfe2b1-20200216
+ bh=oOYnDTaPt4d2SztN+2gFkz5sbV1QrJ72DYNKiC6jaZ4=; 
+ b=SpSxJD+kzNk7x+akrGkeowgjJzlJ5FQvaRO4wNBHSTYqWYLlgcKL+qwMIyTTx1DXtCu8Se+XVUSAI6LTERFqUpNNY//orGGUZqAAyaStepeA1izG15ZS6tlki+4ECe27gTPplT/zCokbadgR3UFpCEaboRJGLhK7GUVHO96ouSU=;
+X-UUID: a1b5bd5c727a437aaa0670529c15806e-20200216
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ (envelope-from <ran.bi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 905077273; Sun, 16 Feb 2020 19:45:33 -0800
-Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 16 Feb 2020 19:44:39 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 11:44:18 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 17 Feb 2020 11:43:55 +0800
-Message-ID: <1581911058.12629.1.camel@mtksdaap41>
-Subject: Re: [PATCH v2 2/2] drm/mediatek: fix race condition for HDMI jack
- status reporting
-From: CK Hu <ck.hu@mediatek.com>
-To: Tzung-Bi Shih <tzungbi@google.com>
-Date: Mon, 17 Feb 2020 11:44:18 +0800
-In-Reply-To: <20200217105513.2.I477092c2f104fd589133436c3ae4590e6fc6323b@changeid>
-References: <20200217031653.52345-1-tzungbi@google.com>
- <20200217105513.2.I477092c2f104fd589133436c3ae4590e6fc6323b@changeid>
+ with ESMTP id 1227258070; Sun, 16 Feb 2020 19:52:18 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 16 Feb 2020 19:53:05 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by mtkmbs02n1.mediatek.inc
+ (172.21.101.77) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Mon, 17 Feb 2020 11:50:21 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 17 Feb 2020 11:51:25 +0800
+Message-ID: <1581911502.20099.13.camel@mhfsdcap03>
+Subject: Re: [PATCH v8 4/5] rtc: mt6397: Add support for the MediaTek MT6358
+ RTC
+From: Ran Bi <ran.bi@mediatek.com>
+To: Yingjoe Chen <yingjoe.chen@mediatek.com>
+Date: Mon, 17 Feb 2020 11:51:42 +0800
+In-Reply-To: <1580748607.31376.3.camel@mtksdaap41>
+References: <1580730044-30501-1-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <1580730044-30501-5-git-send-email-hsin-hsiung.wang@mediatek.com>
+ <1580748607.31376.3.camel@mtksdaap41>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200216_194545_806940_DA602E40 
-X-CRM114-Status: GOOD (  15.86  )
+X-CRM114-CacheID: sfid-20200216_195222_501373_A3544328 
+X-CRM114-Status: GOOD (  13.33  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -84,104 +85,81 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, p.zabel@pengutronix.de, airlied@linux.ie,
- dri-devel@lists.freedesktop.org, broonie@kernel.org,
- linux-mediatek@lists.infradead.org, daniel@ffwll.ch, matthias.bgg@gmail.com,
- dgreid@google.com, linux-arm-kernel@lists.infradead.org, cychiang@google.com
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Alessandro Zummo <a.zummo@towertech.it>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>, srv_heupstream@mediatek.com,
+ Frank Wunderlich <frank-w@public-files.de>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Sean
+ Wang <sean.wang@mediatek.com>, Josef Friedl <josef.friedl@speed.at>,
+ linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
+ devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
+ Lee Jones <lee.jones@linaro.org>,
+ Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>, linux-rtc@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Tzhung-Bi:
+On Tue, 2020-02-04 at 00:50 +0800, Yingjoe Chen wrote:
+> > diff --git a/include/linux/mfd/mt6397/rtc.h b/include/linux/mfd/mt6397/rtc.h
+> > index f84b916..fffe34a 100644
+> > --- a/include/linux/mfd/mt6397/rtc.h
+> > +++ b/include/linux/mfd/mt6397/rtc.h
+> > @@ -18,7 +18,8 @@
+> >  #define RTC_BBPU_CBUSY         BIT(6)
+> >  #define RTC_BBPU_KEY            (0x43 << 8)
+> >  
+> > -#define RTC_WRTGR              0x003c
+> > +#define RTC_WRTGR_MT6358       0x3a
+> > +#define RTC_WRTGR_MT6397       0x3c
+> >  
+> >  #define RTC_IRQ_STA            0x0002
+> >  #define RTC_IRQ_STA_AL         BIT(0)
+> > @@ -57,6 +58,10 @@
+> >  #define MTK_RTC_POLL_DELAY_US  10
+> >  #define MTK_RTC_POLL_TIMEOUT   (jiffies_to_usecs(HZ))
+> >  
+> > +struct mtk_rtc_data {
+> > +	u32			wrtgr;
+> > +};
+> > +
+> >  struct mt6397_rtc {
+> >  	struct device           *dev;
+> >  	struct rtc_device       *rtc_dev;
+> > @@ -66,6 +71,15 @@ struct mt6397_rtc {
+> >  	struct regmap           *regmap;
+> >  	int                     irq;
+> >  	u32                     addr_base;
+> > +	const struct mtk_rtc_data *data;
+> > +};
+> > +
+> > +static const struct mtk_rtc_data mt6358_rtc_data = {
+> > +	.wrtgr = RTC_WRTGR_MT6358,
+> > +};
+> > +
+> > +static const struct mtk_rtc_data mt6397_rtc_data = {
+> > +	.wrtgr = RTC_WRTGR_MT6397,
+> >  };
+> 
+> Hi,
+> 
+> Putting these in header file doesn't looks right to me.
+> Who need this? can you move them back to rtc-mt6397.c?
+> 
+> Joe.C
+> 
 
-On Mon, 2020-02-17 at 11:16 +0800, Tzung-Bi Shih wrote:
-> hdmi_conn_detect and mtk_hdmi_audio_hook_plugged_cb would be called
-> by different threads.
-> 
-> Imaging the following calling sequence:
->            Thread A                            Thread B
-> --------------------------------------------------------------------
-> mtk_hdmi_audio_hook_plugged_cb()
-> mtk_cec_hpd_high() -> disconnected
->                                      hdmi_conn_detect()
->                                      mtk_cec_hpd_high() -> connected
->                                      plugged_cb(connected)
-> plugged_cb(disconnected)
-> 
-> The latest disconnected is false reported.  Makes mtk_cec_hpd_high
-> and plugged_cb atomic to fix.
-> 
-> Also uses the same lock to protect read/write of plugged_cb and codec_dev.
-> 
-> Fixes: 5d3c64477392 ("drm/mediatek: support HDMI jack status reporting")
-
-This patch looks good to me, but please merge this patch with the patch
-it fix.
-
-Regards,
-CK
-
-> Signed-off-by: Tzung-Bi Shih <tzungbi@google.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_hdmi.c | 11 ++++++++++-
->  1 file changed, 10 insertions(+), 1 deletion(-)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_hdmi.c b/drivers/gpu/drm/mediatek/mtk_hdmi.c
-> index 03aeb73005ef..d80017e3d84a 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_hdmi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_hdmi.c
-> @@ -12,6 +12,7 @@
->  #include <linux/io.h>
->  #include <linux/kernel.h>
->  #include <linux/mfd/syscon.h>
-> +#include <linux/mutex.h>
->  #include <linux/of_platform.h>
->  #include <linux/of.h>
->  #include <linux/of_gpio.h>
-> @@ -171,6 +172,7 @@ struct mtk_hdmi {
->  	bool enabled;
->  	hdmi_codec_plugged_cb plugged_cb;
->  	struct device *codec_dev;
-> +	struct mutex update_plugged_status_lock;
->  };
->  
->  static inline struct mtk_hdmi *hdmi_ctx_from_bridge(struct drm_bridge *b)
-> @@ -1199,10 +1201,13 @@ static void mtk_hdmi_clk_disable_audio(struct mtk_hdmi *hdmi)
->  static enum drm_connector_status
->  mtk_hdmi_update_plugged_status(struct mtk_hdmi *hdmi)
->  {
-> -	bool connected = mtk_cec_hpd_high(hdmi->cec_dev);
-> +	bool connected;
->  
-> +	mutex_lock(&hdmi->update_plugged_status_lock);
-> +	connected = mtk_cec_hpd_high(hdmi->cec_dev);
->  	if (hdmi->plugged_cb && hdmi->codec_dev)
->  		hdmi->plugged_cb(hdmi->codec_dev, connected);
-> +	mutex_unlock(&hdmi->update_plugged_status_lock);
->  
->  	return connected ?
->  	       connector_status_connected : connector_status_disconnected;
-> @@ -1669,8 +1674,11 @@ static int mtk_hdmi_audio_hook_plugged_cb(struct device *dev, void *data,
->  {
->  	struct mtk_hdmi *hdmi = data;
->  
-> +	mutex_lock(&hdmi->update_plugged_status_lock);
->  	hdmi->plugged_cb = fn;
->  	hdmi->codec_dev = codec_dev;
-> +	mutex_unlock(&hdmi->update_plugged_status_lock);
-> +
->  	mtk_hdmi_update_plugged_status(hdmi);
->  
->  	return 0;
-> @@ -1729,6 +1737,7 @@ static int mtk_drm_hdmi_probe(struct platform_device *pdev)
->  		return ret;
->  	}
->  
-> +	mutex_init(&hdmi->update_plugged_status_lock);
->  	platform_set_drvdata(pdev, hdmi);
->  
->  	ret = mtk_hdmi_output_init(hdmi);
+This could also effect kernel/drivers/power/reset/mt6323-poweroff.c
+which using same region of RTC registers.
+There are 2 ways of modification:
+1. kernel/drivers/rtc/rtc-mt6397.c implement do_pwroff function and
+export to mt6323-poweroff.c
+2. Just modify mt6323-poweroff.c file to compatible this patch. I mean
+using RTC_WRTGR_MT6397 to replace RTC_WRTGR. Or modify mt6323-poweroff.c
+like rtc-mt6397.c
 
 _______________________________________________
 Linux-mediatek mailing list
