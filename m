@@ -2,55 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 06509161D1F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 17 Feb 2020 23:04:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EE3F6161E48
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Feb 2020 01:51:02 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=/0O5kAehdDtli+KyW4DITndTNuKJYsWCoIg+qu1yDGA=; b=nMt
-	sRGX0Xt4ygYEeOvmO3oIRfQ6zpl9dUtF/XPstFXYaiVrFiVj8JgysTPwdUtOD4rYBnisDAm24M3mt
-	D8ZE7B31Zo1nJuoF83cFYogRjX+7oa8sf+E4SJRoVacmlpgc46SI7cHXxkg7TUuCrK27QIanS42Ul
-	aOEqDQ1syckDOEjVZHQGYx/XNh1A6K5s+OAJ/WWTASgiGIXprYReOzpAi/NMlFCLCTR+s/EhdHMcM
-	Qp+FSh51J5U7z0e/KZDxKNYf2h45+aWwelZScf9/DNPnfh87fPyjyKIwdpeIV1e1Rs7okQPZHL0HC
-	nQtUeS2YbFLPnRXnKt/5FnZzW438zeg==;
+	List-Owner; bh=95AV4tmG449l5uN5ApkWGZpm9vF6GnVLAAbFa/gmnwM=; b=Zx342ASjlzeDJk
+	V1FPwrYbh03Mq3P3ODoBasSHttxkoa7Vu/GxZNCoOx8NoO+TWpLJ9ZOyu0hKqn2igvTRDH/V37IFF
+	nQ2MPgfXCa2cQPCuT2lY+piYWBjmUy0IIZuhhYsFr4ZycyZxIeOQUPxsPoQ/JV03vPGsQPYQwpnoF
+	528IaHx9Vusuz4whXtREpwXCcMq6/rxW6YAUr6goj7Nu4+br5WeRvLy589pClee7EQhdaR5BC9QmL
+	5ZMDS4ON/yKtDjwBuwHK0leg8YyV4Fvm8HWSdxUFM/wuWQKWOxn13wbOpAJH9gCrVSwjHkjJr0hpR
+	YNxQC4iTkmShYkejGi/w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3oVL-0006QK-0g; Mon, 17 Feb 2020 22:04:39 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3oUw-0005sp-JS; Mon, 17 Feb 2020 22:04:16 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id F24EA106F;
- Mon, 17 Feb 2020 14:04:13 -0800 (PST)
-Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 76E393F703;
- Mon, 17 Feb 2020 14:04:13 -0800 (PST)
-Date: Mon, 17 Feb 2020 22:04:12 +0000
-From: Mark Brown <broonie@kernel.org>
-To: Tzung-Bi Shih <tzungbi@google.com>
-Subject: Applied "ASoC: hdmi-codec: set plugged_cb to NULL when component
- removing" to the asoc tree
-In-Reply-To: <20200217105513.1.Icc323daaf71ad02f191fd8d91136b01b61eca5e3@changeid>
-Message-Id: <applied-20200217105513.1.Icc323daaf71ad02f191fd8d91136b01b61eca5e3@changeid>
-X-Patchwork-Hint: ignore
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+	id 1j3r6C-00056j-QL; Tue, 18 Feb 2020 00:50:52 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j3r62-0004z5-6M; Tue, 18 Feb 2020 00:50:43 +0000
+X-UUID: 307131bbc75747df9a2d69654b108153-20200217
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=aYb7eYVcWGhu/tm1bPl140Be8k4HkWRqF47wgIfyVRY=; 
+ b=aNg9N86MZL7lAVcfmKvwzIhCL9FpIAhuQZL871hfpxwRQzBS0IHL+xCzTCghNyxzHP3EBjUiB04yyZmlvvVMri1nZDoxeVHTkkj6zpXBa+aLH64f1zzeibOFEkgX2V9HzQBVVrlpeh68QuUT1Bed6ijkhGxiXOWuJAmDE8ceMDw=;
+X-UUID: 307131bbc75747df9a2d69654b108153-20200217
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 967725832; Mon, 17 Feb 2020 16:50:37 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 17 Feb 2020 16:50:57 -0800
+Received: from mtkcas09.mediatek.inc (172.21.101.178) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 18 Feb 2020 08:51:45 +0800
+Received: from [172.21.84.99] (172.21.84.99) by mtkcas09.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Tue, 18 Feb 2020 08:49:59 +0800
+Message-ID: <1581987023.26304.22.camel@mtksdccf07>
+Subject: Re: [PATCH v1 1/2] scsi: ufs: add required delay after gating
+ reference clock
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: Bart Van Assche <bvanassche@acm.org>
+Date: Tue, 18 Feb 2020 08:50:23 +0800
+In-Reply-To: <87f03ff5-445b-25c2-308d-5c9e18942a0f@acm.org>
+References: <20200217093559.16830-1-stanley.chu@mediatek.com>
+ <20200217093559.16830-2-stanley.chu@mediatek.com>
+ <87f03ff5-445b-25c2-308d-5c9e18942a0f@acm.org>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_140414_704116_E42A1C41 
-X-CRM114-Status: GOOD (  14.73  )
-X-Spam-Score: -2.0 (--)
+X-CRM114-CacheID: sfid-20200217_165042_241601_45ABF020 
+X-CRM114-Status: UNSURE (   7.67  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-2.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [217.140.110.172 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,86 +86,36 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: alsa-devel@alsa-project.org, cychiang@google.com, tzungbi@google.com,
- airlied@linux.ie, dri-devel@lists.freedesktop.org, matthias.bgg@gmail.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- daniel@ffwll.ch, ck.hu@mediatek.com, p.zabel@pengutronix.de, dgreid@google.com,
- linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
+Cc: linux-scsi@vger.kernel.org, martin.petersen@oracle.com,
+ andy.teng@mediatek.com, jejb@linux.ibm.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, avri.altman@wdc.com,
+ cang@codeaurora.org, linux-mediatek@lists.infradead.org,
+ peter.wang@mediatek.com, alim.akhtar@samsung.com, matthias.bgg@gmail.com,
+ asutoshd@codeaurora.org, linux-arm-kernel@lists.infradead.org,
+ beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The patch
+Hi Bart,
 
-   ASoC: hdmi-codec: set plugged_cb to NULL when component removing
+On Mon, 2020-02-17 at 08:17 -0800, Bart Van Assche wrote:
+> On 2020-02-17 01:35, Stanley Chu wrote:
+> > -			if (skip_ref_clk && !strcmp(clki->name, "ref_clk"))
+> > +			ref_clk = !strcmp(clki->name, "ref_clk") ? true : false;
+> > +			if (skip_ref_clk && ref_clk)
+> 
+> Since the " ? true : false" part is superfluous, please leave it out.
 
-has been applied to the asoc tree at
+Will fix this in next version.
 
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git 
-
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
-
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
+> Thanks,
+> 
+> Bart.
 
 Thanks,
-Mark
-
-From 4aadf4b49ec7d80c5db842ca28479d07108c9484 Mon Sep 17 00:00:00 2001
-From: Tzung-Bi Shih <tzungbi@google.com>
-Date: Mon, 17 Feb 2020 11:16:52 +0800
-Subject: [PATCH] ASoC: hdmi-codec: set plugged_cb to NULL when component
- removing
-
-Sets plugged_cb to NULL when component removing to notify its consumers
-: no further plugged status report is required.
-
-Signed-off-by: Tzung-Bi Shih <tzungbi@google.com>
-Link: https://lore.kernel.org/r/20200217105513.1.Icc323daaf71ad02f191fd8d91136b01b61eca5e3@changeid
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- sound/soc/codecs/hdmi-codec.c | 10 ++++++++++
- 1 file changed, 10 insertions(+)
-
-diff --git a/sound/soc/codecs/hdmi-codec.c b/sound/soc/codecs/hdmi-codec.c
-index 543363102d03..bc2903d27e6e 100644
---- a/sound/soc/codecs/hdmi-codec.c
-+++ b/sound/soc/codecs/hdmi-codec.c
-@@ -779,7 +779,17 @@ static int hdmi_of_xlate_dai_id(struct snd_soc_component *component,
- 	return ret;
- }
- 
-+static void hdmi_remove(struct snd_soc_component *component)
-+{
-+	struct hdmi_codec_priv *hcp = snd_soc_component_get_drvdata(component);
-+
-+	if (hcp->hcd.ops->hook_plugged_cb)
-+		hcp->hcd.ops->hook_plugged_cb(component->dev->parent,
-+					      hcp->hcd.data, NULL, NULL);
-+}
-+
- static const struct snd_soc_component_driver hdmi_driver = {
-+	.remove			= hdmi_remove,
- 	.dapm_widgets		= hdmi_widgets,
- 	.num_dapm_widgets	= ARRAY_SIZE(hdmi_widgets),
- 	.of_xlate_dai_id	= hdmi_of_xlate_dai_id,
--- 
-2.20.1
-
-
+Stanley Chu
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
