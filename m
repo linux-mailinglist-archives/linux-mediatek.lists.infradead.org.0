@@ -2,70 +2,74 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EE3F6161E48
-	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Feb 2020 01:51:02 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8508D161EAE
+	for <lists+linux-mediatek@lfdr.de>; Tue, 18 Feb 2020 02:54:22 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=95AV4tmG449l5uN5ApkWGZpm9vF6GnVLAAbFa/gmnwM=; b=Zx342ASjlzeDJk
-	V1FPwrYbh03Mq3P3ODoBasSHttxkoa7Vu/GxZNCoOx8NoO+TWpLJ9ZOyu0hKqn2igvTRDH/V37IFF
-	nQ2MPgfXCa2cQPCuT2lY+piYWBjmUy0IIZuhhYsFr4ZycyZxIeOQUPxsPoQ/JV03vPGsQPYQwpnoF
-	528IaHx9Vusuz4whXtREpwXCcMq6/rxW6YAUr6goj7Nu4+br5WeRvLy589pClee7EQhdaR5BC9QmL
-	5ZMDS4ON/yKtDjwBuwHK0leg8YyV4Fvm8HWSdxUFM/wuWQKWOxn13wbOpAJH9gCrVSwjHkjJr0hpR
-	YNxQC4iTkmShYkejGi/w==;
+	List-Owner; bh=itTPGB2S2y5UJYYtsUJU0pleRw/aLlxaLLI5g/pAEQo=; b=XqJtlYFGEHCLqX
+	SB4Q0fb+k6UB2jbBTyG9sth+0jE3kQcWlm5EJeUW9zY/TDqzprbORrKeF5BpzqNTDuHA2FNXV7UV4
+	7iXZoUqtNpus9xX0Kcx4Rcu441jh6Hp1PsqgHwIUe53RtKz7PskO2++nrH00jINf9SZBlneF1VunU
+	ZHyVjXSut77rILgXuTnfIjvjsd1Zm2mpuhP1EM6ldhCxpRlWnXzjX1AIkRYNV516dxLLVsCCuyEvb
+	soy2L2GG1lTPJrENFrpKdF75bUH7iGYqyUrTwJdEoQQLrHeCOAQGaE/0bUxE4Ej7UqfntoLEgHGRP
+	oR+7isEQgXiOiPi0PDNQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3r6C-00056j-QL; Tue, 18 Feb 2020 00:50:52 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1j3s5W-0002ch-GZ; Tue, 18 Feb 2020 01:54:14 +0000
+Received: from pandora.armlinux.org.uk
+ ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3r62-0004z5-6M; Tue, 18 Feb 2020 00:50:43 +0000
-X-UUID: 307131bbc75747df9a2d69654b108153-20200217
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=aYb7eYVcWGhu/tm1bPl140Be8k4HkWRqF47wgIfyVRY=; 
- b=aNg9N86MZL7lAVcfmKvwzIhCL9FpIAhuQZL871hfpxwRQzBS0IHL+xCzTCghNyxzHP3EBjUiB04yyZmlvvVMri1nZDoxeVHTkkj6zpXBa+aLH64f1zzeibOFEkgX2V9HzQBVVrlpeh68QuUT1Bed6ijkhGxiXOWuJAmDE8ceMDw=;
-X-UUID: 307131bbc75747df9a2d69654b108153-20200217
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 967725832; Mon, 17 Feb 2020 16:50:37 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 17 Feb 2020 16:50:57 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 18 Feb 2020 08:51:45 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 18 Feb 2020 08:49:59 +0800
-Message-ID: <1581987023.26304.22.camel@mtksdccf07>
-Subject: Re: [PATCH v1 1/2] scsi: ufs: add required delay after gating
- reference clock
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: Bart Van Assche <bvanassche@acm.org>
-Date: Tue, 18 Feb 2020 08:50:23 +0800
-In-Reply-To: <87f03ff5-445b-25c2-308d-5c9e18942a0f@acm.org>
-References: <20200217093559.16830-1-stanley.chu@mediatek.com>
- <20200217093559.16830-2-stanley.chu@mediatek.com>
- <87f03ff5-445b-25c2-308d-5c9e18942a0f@acm.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1j3s5T-0002Wv-Jp; Tue, 18 Feb 2020 01:54:13 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=Zi/r8mbt3ArBElcGWaOvulYaFWwCLLGqTvQ8tW82sm8=; b=Y8gnB20+kMGP6TPFsLqUZ+xR9
+ pCvJWoL/yMGmbYUsAEci98dSssqiYXl4OWUljCcU4eHFI8HrQCM0++2E5GNyHqVKjF59duOtOrG2A
+ ak+/ETbJituUu0nCLLaNL3q8KWuEg83+5Jr0P5e6yFYEkCdNP7nmktmOafEQVvpd4xS495RiBcrZr
+ SQf9jBeY3cMkdURtEJ+9F1sGUl1I31qIPpR4+wWdsAC5X8htuiLH78zBGcApEm+A+TQsKl4dXTA8S
+ /a3RN+Kh/upi1G0HG8YWCUk9PP/pXQiOAV8BAolOaw353yla1DrrL7QVVQkQu/nvyh0s+GhK5fOK9
+ gnx8OUMcg==;
+Received: from shell.armlinux.org.uk
+ ([2001:4d48:ad52:3201:5054:ff:fe00:4ec]:41782)
+ by pandora.armlinux.org.uk with esmtpsa
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <linux@armlinux.org.uk>)
+ id 1j3s4u-0004Jk-S6; Tue, 18 Feb 2020 01:53:37 +0000
+Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
+ (envelope-from <linux@shell.armlinux.org.uk>)
+ id 1j3s4l-0006oC-Qv; Tue, 18 Feb 2020 01:53:27 +0000
+Date: Tue, 18 Feb 2020 01:53:27 +0000
+From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
+To: Florian Fainelli <f.fainelli@gmail.com>
+Subject: Re: [CFT 1/8] net: phylink: propagate resolved link config via
+ mac_link_up()
+Message-ID: <20200218015327.GD25745@shell.armlinux.org.uk>
+References: <20200217172242.GZ25745@shell.armlinux.org.uk>
+ <E1j3k7e-00071q-3R@rmk-PC.armlinux.org.uk>
+ <16f6912c-84a9-f1ab-6688-6a55ebf34270@gmail.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <16f6912c-84a9-f1ab-6688-6a55ebf34270@gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_165042_241601_45ABF020 
-X-CRM114-Status: UNSURE (   7.67  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200217_175411_662951_80534695 
+X-CRM114-Status: GOOD (  12.25  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -73,8 +77,6 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,36 +88,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-scsi@vger.kernel.org, martin.petersen@oracle.com,
- andy.teng@mediatek.com, jejb@linux.ibm.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, avri.altman@wdc.com,
- cang@codeaurora.org, linux-mediatek@lists.infradead.org,
- peter.wang@mediatek.com, alim.akhtar@samsung.com, matthias.bgg@gmail.com,
- asutoshd@codeaurora.org, linux-arm-kernel@lists.infradead.org,
- beanhuo@micron.com
+Cc: Andrew Lunn <andrew@lunn.ch>, linux-doc@vger.kernel.org,
+ Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
+ linux-stm32@st-md-mailman.stormreply.com, Felix Fietkau <nbd@openwrt.org>,
+ Ioana Radulescu <ruxandra.radulescu@nxp.com>, Jonathan Corbet <corbet@lwn.net>,
+ Michal Simek <michal.simek@xilinx.com>, Jose Abreu <joabreu@synopsys.com>,
+ Jakub Kicinski <kuba@kernel.org>, Vivien Didelot <vivien.didelot@gmail.com>,
+ Radhey Shyam Pandey <radhey.shyam.pandey@xilinx.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>, Sean Wang <sean.wang@mediatek.com>,
+ linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Giuseppe Cavallaro <peppe.cavallaro@st.com>,
+ linux-arm-kernel@lists.infradead.org, netdev@vger.kernel.org,
+ Mark Lee <Mark-MC.Lee@mediatek.com>,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ "David S. Miller" <davem@davemloft.net>,
+ Heiner Kallweit <hkallweit1@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Bart,
-
-On Mon, 2020-02-17 at 08:17 -0800, Bart Van Assche wrote:
-> On 2020-02-17 01:35, Stanley Chu wrote:
-> > -			if (skip_ref_clk && !strcmp(clki->name, "ref_clk"))
-> > +			ref_clk = !strcmp(clki->name, "ref_clk") ? true : false;
-> > +			if (skip_ref_clk && ref_clk)
+On Mon, Feb 17, 2020 at 01:54:19PM -0800, Florian Fainelli wrote:
 > 
-> Since the " ? true : false" part is superfluous, please leave it out.
-
-Will fix this in next version.
-
-> Thanks,
 > 
-> Bart.
+> On 2/17/2020 9:23 AM, Russell King wrote:
+> > Propagate the resolved link parameters via the mac_link_up() call for
+> > MACs that do not automatically track their PCS state.
+> > 
+> > Signed-off-by: Russell King <rmk+kernel@armlinux.org.uk>
+> > ---
+> 
+> [snip]
+> 
+> 
+> > -static void macb_mac_link_up(struct phylink_config *config, unsigned int mode,
+> > -			     phy_interface_t interface, struct phy_device *phy)
+> > +static void macb_mac_link_up(struct phylink_config *config,
+> > +			     struct phy_device *phy,
+> > +			     unsigned int mode, phy_interface_t interface,
+> > +			     int speed, int duplex,
+> > +			     bool tx_pause, bool rx_pause)
+> 
+> I have not been able to find an answer so I will ask this question, why
+> not pass a const struct phylink_link_state reference here instead of
+> splitting those link settings as individual function parameters? Or
+> maybe introduce a phylink_link_settings comprised of all of those 4
+> settings and embed it within phylink_link_state as well?
 
-Thanks,
-Stanley Chu
+History of mac_config() has shown that passing something like
+struct phylink_link_state results in stuff that should not be used
+being used inspite of documentation saying otherwise.  Passing
+just the appropriate state ensures that stuff which should not
+be used can't be got at.
+
+-- 
+RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
+FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps up
+According to speedtest.net: 11.9Mbps down 500kbps up
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
