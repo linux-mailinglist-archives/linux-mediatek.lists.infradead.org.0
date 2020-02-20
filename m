@@ -2,64 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 42DA4166A2D
-	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 23:06:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BA5A8166A3F
+	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 23:18:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Svgmjl1YUPXFhB8lHZegSFTSSi+CsuchOgUD7oDpqEE=; b=sH1pcnsuIpcqSd
-	oEvfOWr6JhGh27YAsKp7A3MijWGTNLODuSiYMCFwFY6Yk5/CYUoVWzEL67bai+4A8ek3F70xi5olz
-	Dkhj4J0cHN4gaV1QBfPJP/c3FUKdyAWGI+OQcv+rQw0K6ye3HCJP3+V2CQlzyQQIeAn/CXIJH2j2u
-	Xvq6taJ//LM+yo0YXK29MR4OEjOo7NnaWFT3EKohdFVXkb83/lbRS00s+jOSjl9oAyks1w37JtbsP
-	JLZLyvxzc+UPjkVRm6RiZAUfRt0iwBOrqGOZYWi79helx7wUvdA80VcerhTtT+ASW+vuy1/vlaTmp
-	yh1oPteQQLuzBcSiZaUw==;
+	List-Owner; bh=EwECgbySSy4GzwdGBID+s4AdhcpGtqFRdQ6u2vIYj/o=; b=HPAJwUNDrTWuBN
+	gTJURRG1nfVWYTFLRTXjYuUHQT190jFAF/s17Mr59INQ69EsOuZX3RSfALR894CkvN9Qxtrfl7JXA
+	Zw0Rh1e5K4yDsMX8H7Bp+3xFUmSwLDXs0J2BqcCLas1hog5mg7v1QyhebLa6oYHUUnEoWyPIoQXqL
+	0/7C0Lx33m4m+lhFmKyEbkFNKJAOTnG0sr0+bi5cwNdEHXnA5dUsvgQ/dGdG0EScEMeKADEXYqSM+
+	E9MDdmyXR9OeLtjIJkCyy32AKobGjkRUXEB4uxh0yriQEy2XXWPMVmyOFlZYf6u5+SuduxPdd+Z73
+	1uQUvSW2xK3qTumsQN8g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j4ty3-0002vN-H2; Thu, 20 Feb 2020 22:06:47 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1j4u8p-0007eE-UP; Thu, 20 Feb 2020 22:17:55 +0000
+Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j4txs-0002mu-6F; Thu, 20 Feb 2020 22:06:37 +0000
-Received: by mail-wr1-x441.google.com with SMTP id t3so6326880wru.7;
- Thu, 20 Feb 2020 14:06:31 -0800 (PST)
+ id 1j4u8m-0007dX-IV; Thu, 20 Feb 2020 22:17:54 +0000
+Received: by mail-ot1-x344.google.com with SMTP id b3so228196otp.4;
+ Thu, 20 Feb 2020 14:17:52 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:autocrypt:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=gFZYtwWsOJiAfSxxUlqRa+9DDsc5/g3T59cg2TasU4Y=;
- b=Lw4u+qOmOnz/QyLfekH1agNEhJQe2x+O13swKNEmvu3HA9spp0lh444i0SeGJVf6uT
- 4btriFh/O9bm6Hecp1jf+rxZ7UxSfjesYieLvUWY5nv080Al6xddIPmi79f9J95UZjKW
- W3+tfGnmWAmWPR+QBBEott21JaqRkyDse9inREGkyllf3JohjVhu2VhZgj86UwQzrOrj
- mZnwUMJz9goLXt7NOrg/vQGYeqV7o1vl8Dh5VLbVA4edgAs6WWXuZFa17H6oIIXob5zI
- rvSpIz+fQVupRkkXHYPhHL1gkcq6vkVQmj0TDH/UFPc0aX3HB9ZJQA5cJCdLvU2QCF2d
- jTjw==
+ bh=yTy/vQqrL06eFwjAezXHG8dLAd5pWpP0AFPfvMFyoYg=;
+ b=swphFoMYNBEUiDnLDMNYMZh4dlPHt9J54/tfhokUm3SoGFNGJHedQLRIQyi4ljzSaO
+ fZB8aK8RKdAabjHYY4+4I5BVyACk+4v3mala9+47WDk7GDwFspfARe1X30Z+S/fWC0bC
+ aAd5aF1F7E1cVqb6oT32tJzBDbUwDD3RQFDv3WgkdMmleTW6pAoWDtmDCVMq3jwsYCtT
+ XO7FOhk+1uUBtDMOEFvvNIC9ePA6Xvgcb0DHqr7e23O+xjejkVWOzlMUIHpOYFqOg66a
+ /KZ71hnNJj/M7qRu08WcQAopk7xlC5OllAZ2nsiQiHTvvx/3KLn1tzc2iGkdNfDlPPa6
+ kKXw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=gFZYtwWsOJiAfSxxUlqRa+9DDsc5/g3T59cg2TasU4Y=;
- b=Y3eJTgQAekCw6UbBMbgCUJQ9Bzz8D0kLzupW65q5Uy+epkUzPWcq0b4FooL7bDQ5VB
- l4SAnZX3SDVE+9p2RVPbiZ7GY21EU89l76bOUAQj8xR3IaC/jtiW6hLGkZXOAEXaGoeO
- IvRSOC9Vs73KxBEFMUGteoVFKCBsi5SCPmv5d61yKC41k1Aqf9aabyUCd7rxPXWPnivn
- ZZQTOZ/TFqejzuFRF4EIO/n3oJAASWcuwEKP1ixaTU7ZvFfuHTm4H1fEkFIFy2/KHdOp
- +Lv0aQqqviaucg5HUcFg0iLlAyWh38C6l3FUeU/FmnsOvmfHEIGwW8L+ehdz+gNKruPl
- EsiQ==
-X-Gm-Message-State: APjAAAWZ6GsV04zgvk7FSeA49EK5Ln6JfJVUv/tmttUg/q1qv6MzicC0
- +6QW/a2iGMqhRhZ41TK1QNQR6bOhHiw=
-X-Google-Smtp-Source: APXvYqzQsk2HWs8t9gFw6i8Bv/TRvSwDsY+48IdxNFD9s74DUxr4m8NiV07+d3FEcJ5scDbwWy7Gvw==
-X-Received: by 2002:adf:ea48:: with SMTP id j8mr46871194wrn.363.1582236390473; 
- Thu, 20 Feb 2020 14:06:30 -0800 (PST)
+ bh=yTy/vQqrL06eFwjAezXHG8dLAd5pWpP0AFPfvMFyoYg=;
+ b=q+x2J7wWm8J7dSB3CL0fjyqHeWiHkh3G1l6P8n4WcpjnWcSI3FAgluWYq4a0+shVKc
+ KDumlLku5/F7jQ15LL3tGdlOb13v+ReJcKHg55US82Yeri6tNBGAKIPTlkIfZGifhAg1
+ rz6irjZ4BDrN9MzpXRiE6281ewAb+29dHFl/+VE5jigZDu0HyMAXJD4xaMvoznXOgwCX
+ H82nGdt3KV9orGkq6IVTTsGzGFjASuFFYYapCGgQETazP1AE0/cq3eDIK40YElUryy+G
+ fHTCFPdzgKz8eZfwvhtzsCOf7/w8MC49r47L95+jEZMXglKk7HaiS6MMxnSIAELShkIT
+ m6ow==
+X-Gm-Message-State: APjAAAWDUSaF+9v/cxhmTwCtQ63kznelblIrrPtuqOgex60/6A9XNl1w
+ CBfRwkdBD4aTiHYvVdkRQ1s=
+X-Google-Smtp-Source: APXvYqxePzBp2/a06Ne4T58403jibHLf5zYT1E2LZCo8mlCM0RLg4NiSzKSwei+fJjpurVPn4t4e0g==
+X-Received: by 2002:a9d:6e8f:: with SMTP id a15mr24762621otr.178.1582237071272; 
+ Thu, 20 Feb 2020 14:17:51 -0800 (PST)
 Received: from ziggy.stardust ([213.195.113.243])
- by smtp.gmail.com with ESMTPSA id h13sm1215039wrw.54.2020.02.20.14.06.28
+ by smtp.gmail.com with ESMTPSA id k201sm217082oih.43.2020.02.20.14.17.48
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 20 Feb 2020 14:06:29 -0800 (PST)
-Subject: Re: [PATCH v3 4/4] dt-bindings: mmc: mediatek: Add document for mt6779
-To: Rob Herring <robh@kernel.org>, Chun-Hung Wu <chun-hung.wu@mediatek.com>
-References: <1581922564-24914-1-git-send-email-chun-hung.wu@mediatek.com>
- <1581922564-24914-5-git-send-email-chun-hung.wu@mediatek.com>
- <20200219030225.GA14824@bogus>
+ Thu, 20 Feb 2020 14:17:50 -0800 (PST)
+Subject: Re: [PATCH v7 3/5] arm64: dts: mt8173: fix unit name warnings
+To: Hsin-Yi Wang <hsinyi@chromium.org>, linux-arm-kernel@lists.infradead.org
+References: <20200210063523.133333-1-hsinyi@chromium.org>
+ <20200210063523.133333-4-hsinyi@chromium.org>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
@@ -135,23 +134,23 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  jzi+DzD9cvj2K6eD5j5kcKJJQactXqfJvF1Eb+OnxlB1BCLE8D1rNkPO5O742Mq3MgDmq19l
  +abzEL6QDAAxn9md8KwrA3RtucNh87cHlDXfUBKa7SRvBjTczDg+HEPNk2u3hrz1j3l2rliQ
  y1UfYx7Vk/TrdwUIJgKS8QAr8Lw9WuvY2hSqL9vEjx8VAkPWNWPwrQ==
-Message-ID: <96e4df17-999e-2356-f203-4cef26a8d66d@gmail.com>
-Date: Thu, 20 Feb 2020 23:06:27 +0100
+Message-ID: <bbc75f19-0581-c902-a455-13157d66d72f@gmail.com>
+Date: Thu, 20 Feb 2020 23:17:46 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.5.0
 MIME-Version: 1.0
-In-Reply-To: <20200219030225.GA14824@bogus>
+In-Reply-To: <20200210063523.133333-4-hsinyi@chromium.org>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200220_140636_257539_9D38837C 
-X-CRM114-Status: GOOD (  15.18  )
+X-CRM114-CacheID: sfid-20200220_141752_639423_4BF555C7 
+X-CRM114-Status: GOOD (  17.88  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider [matthias.bgg[at]gmail.com]
@@ -175,20 +174,10 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Kate Stewart <kstewart@linuxfoundation.org>,
- Ulf Hansson <ulf.hansson@linaro.org>, wsd_upstream@mediatek.com,
- devicetree@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Linus Walleij <linus.walleij@linaro.org>,
- Kuohong Wang <kuohong.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- Mathieu Malaterre <malat@debian.org>, linux-mediatek@lists.infradead.org,
- Allison Randal <allison@lohutok.net>, Pavel Machek <pavel@ucw.cz>,
- linux-mmc@vger.kernel.org, Thomas Gleixner <tglx@linutronix.de>,
- Stanley Chu <stanley.chu@mediatek.com>, kernel-team@android.com,
- Pan Bian <bianpan2016@163.com>, Chaotian Jing <chaotian.jing@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Nicolas Boichat <drinkcat@chromium.org>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Enric Balletbo i Serra <enric.balletbo@collabora.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -196,24 +185,149 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 19/02/2020 04:02, Rob Herring wrote:
-> On Mon, 17 Feb 2020 14:56:04 +0800, Chun-Hung Wu wrote:
->> Add compatible node for mt6779 mmc
->>
->> Signed-off-by: Chun-Hung Wu <chun-hung.wu@mediatek.com>
->> ---
->>  Documentation/devicetree/bindings/mmc/mtk-sd.txt | 1 +
->>  1 file changed, 1 insertion(+)
->>
+On 10/02/2020 07:35, Hsin-Yi Wang wrote:
+> Fixing several unit name warnings:
 > 
-> Acked-by: Rob Herring <robh@kernel.org>
+> Warning (unit_address_vs_reg): /oscillator@0: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /oscillator@1: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /oscillator@2: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /thermal-zones/cpu_thermal/trips/trip-point@0: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /thermal-zones/cpu_thermal/trips/trip-point@1: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /thermal-zones/cpu_thermal/trips/cpu_crit@0: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /thermal-zones/cpu_thermal/cooling-maps/map@0: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /thermal-zones/cpu_thermal/cooling-maps/map@1: node has a unit name, but no reg property
+> Warning (unit_address_vs_reg): /reserved-memory/vpu_dma_mem_region: node has a reg or ranges property, but no unit name
+> Warning (simple_bus_reg): /soc/pinctrl@10005000: simple-bus unit address format error, expected "1000b000"
+> Warning (simple_bus_reg): /soc/interrupt-controller@10220000: simple-bus unit address format error, expected "10221000"
+> Warning (alias_paths): /aliases: aliases property name must include only lowercase and '-'
 > 
+> Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+> ---
+>  arch/arm64/boot/dts/mediatek/mt8173.dtsi | 38 ++++++++++++------------
+>  1 file changed, 19 insertions(+), 19 deletions(-)
+> 
+> diff --git a/arch/arm64/boot/dts/mediatek/mt8173.dtsi b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> index 790cd64aa447..2b7f566fb407 100644
+> --- a/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> +++ b/arch/arm64/boot/dts/mediatek/mt8173.dtsi
+> @@ -42,14 +42,14 @@ aliases {
+>  		dpi0 = &dpi0;
+>  		dsi0 = &dsi0;
+>  		dsi1 = &dsi1;
+> -		mdp_rdma0 = &mdp_rdma0;
+> -		mdp_rdma1 = &mdp_rdma1;
+> -		mdp_rsz0 = &mdp_rsz0;
+> -		mdp_rsz1 = &mdp_rsz1;
+> -		mdp_rsz2 = &mdp_rsz2;
+> -		mdp_wdma0 = &mdp_wdma0;
+> -		mdp_wrot0 = &mdp_wrot0;
+> -		mdp_wrot1 = &mdp_wrot1;
+> +		mdp-rdma0 = &mdp_rdma0;
+> +		mdp-rdma1 = &mdp_rdma1;
+> +		mdp-rsz0 = &mdp_rsz0;
+> +		mdp-rsz1 = &mdp_rsz1;
+> +		mdp-rsz2 = &mdp_rsz2;
+> +		mdp-wdma0 = &mdp_wdma0;
+> +		mdp-wrot0 = &mdp_wrot0;
+> +		mdp-wrot1 = &mdp_wrot1;
 
-With the commit from patch 3/4 the compatible should be:
-"mediatek,mt6779-mmc", "mediatek,mt8183-mmc": for mmc host ip compatible with mt6779
+Won't we need to update the mdp driver as well, as it uses of_alias_get_id()?
 
-Regards,
-Matthias
+>  		serial0 = &uart0;
+>  		serial1 = &uart1;
+>  		serial2 = &uart2;
+> @@ -246,21 +246,21 @@ psci {
+>  		cpu_on	      = <0x84000003>;
+>  	};
+>  
+> -	clk26m: oscillator@0 {
+> +	clk26m: oscillator0 {
+>  		compatible = "fixed-clock";
+>  		#clock-cells = <0>;
+>  		clock-frequency = <26000000>;
+>  		clock-output-names = "clk26m";
+>  	};
+>  
+> -	clk32k: oscillator@1 {
+> +	clk32k: oscillator1 {
+>  		compatible = "fixed-clock";
+>  		#clock-cells = <0>;
+>  		clock-frequency = <32000>;
+>  		clock-output-names = "clk32k";
+>  	};
+>  
+> -	cpum_ck: oscillator@2 {
+> +	cpum_ck: oscillator2 {
+>  		compatible = "fixed-clock";
+>  		#clock-cells = <0>;
+>  		clock-frequency = <0>;
+> @@ -276,19 +276,19 @@ cpu_thermal: cpu_thermal {
+>  			sustainable-power = <1500>; /* milliwatts */
+>  
+>  			trips {
+> -				threshold: trip-point@0 {
+> +				threshold: trip-point0 {
+>  					temperature = <68000>;
+>  					hysteresis = <2000>;
+>  					type = "passive";
+>  				};
+>  
+> -				target: trip-point@1 {
+> +				target: trip-point1 {
+>  					temperature = <85000>;
+>  					hysteresis = <2000>;
+>  					type = "passive";
+>  				};
+>  
+> -				cpu_crit: cpu_crit@0 {
+> +				cpu_crit: cpu_crit0 {
+>  					temperature = <115000>;
+>  					hysteresis = <2000>;
+>  					type = "critical";
+> @@ -296,13 +296,13 @@ cpu_crit: cpu_crit@0 {
+>  			};
+>  
+>  			cooling-maps {
+> -				map@0 {
+> +				map0 {
+>  					trip = <&target>;
+>  					cooling-device = <&cpu0 0 0>,
+>  							 <&cpu1 0 0>;
+>  					contribution = <3072>;
+>  				};
+> -				map@1 {
+> +				map1 {
+>  					trip = <&target>;
+>  					cooling-device = <&cpu2 0 0>,
+>  							 <&cpu3 0 0>;
+> @@ -316,7 +316,7 @@ reserved-memory {
+>  		#address-cells = <2>;
+>  		#size-cells = <2>;
+>  		ranges;
+> -		vpu_dma_reserved: vpu_dma_mem_region {
+> +		vpu_dma_reserved: vpu_dma_mem_region@b7000000 {
+>  			compatible = "shared-dma-pool";
+>  			reg = <0 0xb7000000 0 0x500000>;
+>  			alignment = <0x1000>;
+> @@ -368,7 +368,7 @@ syscfg_pctl_a: syscfg_pctl_a@10005000 {
+>  			reg = <0 0x10005000 0 0x1000>;
+>  		};
+>  
+> -		pio: pinctrl@10005000 {
+> +		pio: pinctrl@1000b000 {
+>  			compatible = "mediatek,mt8173-pinctrl";
+>  			reg = <0 0x1000b000 0 0x1000>;
+>  			mediatek,pctl-regmap = <&syscfg_pctl_a>;
+> @@ -575,7 +575,7 @@ mipi_tx1: mipi-dphy@10216000 {
+>  			status = "disabled";
+>  		};
+>  
+> -		gic: interrupt-controller@10220000 {
+> +		gic: interrupt-controller@10221000 {
+>  			compatible = "arm,gic-400";
+>  			#interrupt-cells = <3>;
+>  			interrupt-parent = <&gic>;
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
