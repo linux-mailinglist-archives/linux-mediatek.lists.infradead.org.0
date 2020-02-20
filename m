@@ -2,67 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 02429166844
-	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 21:25:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 61412166894
+	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 21:39:16 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=EiQfYSEnXapi//vzq3uVWYpOkOX/q71QZ0QXqf4nsYI=; b=SbpfX/eHgHt/4d
-	AXI/LQAT2l9ed6qLRCIk9arsotu4v4FxPIiSB0DvV6h3IxtU0eNjiweOqyyN/qRThRWmfKi+bMXH1
-	urryhJ4HjEsLdzvAzeEd7uuz5Z93eaGlbOJZcCfKfXuoEYam40hEhNP4eL8+09QgqGQBzs9wvZ6fl
-	d+CzgwFeyJg5RRuaLbHJs8zSp4kKIqwuy5PkM8rj1I8DTYMpuL/iLzWP7+ZXZ4QYndR8Zwe2aCiVc
-	qq+mmtXx768G7kMbczScqGJN/lMUc/f2IjTwph/r7guPyys+nICZ1paZYqArofNDmh6iktjzPcuqB
-	h+mENL6+rdDfnjg2LAsA==;
+	List-Owner; bh=oziNxFemjhXReKMP9QygygskKvexhgotwJk/y8v2p/Q=; b=DxZQ1l91CjDlKH
+	MhPVSxiuWFWSeSgXWwWlxRX/q+b8umEMfXv5jhGw6JmxBwXodGdj7MUDTBJjvsBq8Es5ptDXrQZJ/
+	vfbMsnLKkBfstgJ5cKhNnliOwQkTS9IygbRtumkwasUHmUDDRjOZjXCU0/oDLmKbnh7WGCV/pAHK0
+	2pO9NPC+WOjggiCY13K69NfNkpTp3YkExCRJQgY1KQ0+jPFnbcaHav5omTeA+hRC2SjVdxCkff0wp
+	aCUl/Nj8Y0gjGbjjSNUF1Y64pxNo9egjNYUyrwMy6qjHSLho2EXNe2wl3dPtD2eUHcrDfzD/Bz++q
+	m1jIxhbWr78zzn93vupA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j4sNX-0003Ld-W2; Thu, 20 Feb 2020 20:24:59 +0000
-Received: from mail-oi1-x241.google.com ([2607:f8b0:4864:20::241])
+	id 1j4sbF-0002Rd-PS; Thu, 20 Feb 2020 20:39:09 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j4sNV-0003JR-6F
- for linux-mediatek@lists.infradead.org; Thu, 20 Feb 2020 20:24:58 +0000
-Received: by mail-oi1-x241.google.com with SMTP id a142so28882348oii.7
- for <linux-mediatek@lists.infradead.org>; Thu, 20 Feb 2020 12:24:54 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:autocrypt:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=VL4WfOoLJnjZ2R/okVHXD23hjAj0o27pdyoFh9MWulM=;
- b=RH8cgRNxioZwzGchWP5Fh4Hc7rPQgcOhNFEcsTkKAgbDDUuq+xiaSft2EN2/1tM9Zs
- Va9hpD7tJXWi4OlTnbOPJ5kgDCJEHki37U8153DBNeX8rWICbpqpLgUpRjguVKWFAMj3
- gctLsX5bNuDbEXVegp1lxNMu/jDxttSHmevD0MSCdThFO30aF66TEWnoymVvhnomTRXn
- f0CTbyrrSNcDqs4G+auokF+q3wFyy1EQdv0d9ztpqFkTPbcsLJihZlI+a49S6m2pBbWX
- jStYkAuuI+3aWXDnpTjGcsFKoHwATbmXG2Ch5mD+fdyQz7lRK0O2VJUhMqZSeyupOY+r
- 9law==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:autocrypt
- :message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=VL4WfOoLJnjZ2R/okVHXD23hjAj0o27pdyoFh9MWulM=;
- b=VNmWjvfy8gj6bJv+lyNu0p9RPjXvspVI8ouhdzXmql/t5HjQTEO5jHjTuiRGSRDq2C
- G3iIq8KSOreRjyMxoG1Xri0TXtCsDZGtvzRNFrRIHfFZ5kxLDm2YyDTUIvLI8Gaqjmst
- 2S/HU+3fW4ueu6toQBxjvMPURMBwDogxo+fXXOST+MQwCLzBYGp+QeWG1VNQm+dqYT7X
- 66xNCZGkefAvjY26arJHDyxEI/BM924TWsmA8W3fEg7GvJ3REj4UE8tg5gyV+pzNMszk
- DLK6Uhk4v9xmhbO5oNRq5qkf9wgLzw+W2uiLYid5cAbru9g15mAre3hNjsDs5TU7/AWF
- h9rQ==
-X-Gm-Message-State: APjAAAXPLf2L4nMrWoJcxZsAqMYZPdEHWBxueVMVgR3y/ruyP4lzk6+6
- +AcgnI0cxzOnHkuJP8ggrI0=
-X-Google-Smtp-Source: APXvYqyqwBnUDWo9pAjLKTKlodDyuDcMk03B59vgEzCpTTp5T1uTLaRGek3wb8/GwIbaNas/G0wQoA==
-X-Received: by 2002:aca:f487:: with SMTP id s129mr3500567oih.75.1582230293647; 
- Thu, 20 Feb 2020 12:24:53 -0800 (PST)
-Received: from ziggy.stardust ([213.195.113.243])
- by smtp.gmail.com with ESMTPSA id a30sm175773otc.79.2020.02.20.12.24.50
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 20 Feb 2020 12:24:52 -0800 (PST)
+ id 1j4sa3-0001Y7-BO
+ for linux-mediatek@bombadil.infradead.org; Thu, 20 Feb 2020 20:37:55 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=Content-Transfer-Encoding:Content-Type:
+ In-Reply-To:MIME-Version:Date:Message-ID:References:Cc:To:From:Subject:Sender
+ :Reply-To:Content-ID:Content-Description;
+ bh=2+1JkRigxeI05ugTyTZ5LEX3rksoxED2pDVAahQMqPg=; b=cU+wgOffu/a8U1PggHdevM89fa
+ GD0WAxmDF3+S7N2xSbRYltMJeDQk7MNMa+mENpDfYNcq58zNaGWQAUUT+QCZ5q9JpVm+N43VI7L4I
+ BD6I8rjn4YpUuS4wyCri81AN7JOJ0Fa2kKMKXDrb1o1NTlJzNbwfVcnSjY02uDXD4qQoIQkaeZyiP
+ DVAslHYKJiaqaScot6CC8V/Wqy3UskwIhkF7TriIpvWBwmYY/Bn14sNZW7iTczrFd2LdYB3xDut7r
+ m0CeKpN+6BYYenXPm1J8ypZJUAIBdaXNlOr4lgcrNVg2Q4CAQUFopazctTB7qFrfwPaAMkf70FfEW
+ aSQUZ+AQ==;
+Received: from mx2.suse.de ([195.135.220.15])
+ by merlin.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j4sZz-0004kO-EO
+ for linux-mediatek@lists.infradead.org; Thu, 20 Feb 2020 20:37:52 +0000
+X-Virus-Scanned: by amavisd-new at test-mx.suse.de
+Received: from relay2.suse.de (unknown [195.135.220.254])
+ by mx2.suse.de (Postfix) with ESMTP id 210AEAD11;
+ Thu, 20 Feb 2020 20:37:48 +0000 (UTC)
 Subject: Re: [PATCH] pinctrl: mediatek: Fix some off by one bugs
+From: Matthias Brugger <matthias.bgg@gmail.com>
 To: Linus Walleij <linus.walleij@linaro.org>,
  Dan Carpenter <dan.carpenter@oracle.com>
 References: <20200218055247.74s2xa7veqx2do34@kili.mountain>
  <CACRpkdYWsWNg9oetuHPt0VEz+WKKiqfbfuCu503tpRyZ=7nV=A@mail.gmail.com>
-From: Matthias Brugger <matthias.bgg@gmail.com>
-Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
+ <1c333e81-7468-80d6-0835-02c444bb8b5d@gmail.com>
+Autocrypt: addr=matthias.bgg@gmail.com; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
  fL3eT7ZsYV5nur7zctmJ+vbszoOASXUpfq8M+S5hU2w7sBaVk5rpH9yW8CUWz2+ZpQXPJcFa
  OhLZuSKB1F5JcvLbETRjNzNU7B3TdS2+zkgQQdEyt7Ij2HXGLJ2w+yG2GuR9/iyCJRf10Okq
@@ -136,35 +122,34 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  jzi+DzD9cvj2K6eD5j5kcKJJQactXqfJvF1Eb+OnxlB1BCLE8D1rNkPO5O742Mq3MgDmq19l
  +abzEL6QDAAxn9md8KwrA3RtucNh87cHlDXfUBKa7SRvBjTczDg+HEPNk2u3hrz1j3l2rliQ
  y1UfYx7Vk/TrdwUIJgKS8QAr8Lw9WuvY2hSqL9vEjx8VAkPWNWPwrQ==
-Message-ID: <1c333e81-7468-80d6-0835-02c444bb8b5d@gmail.com>
-Date: Thu, 20 Feb 2020 21:24:48 +0100
+Message-ID: <a4d98431-32c1-c903-56a6-d23a3c790333@gmail.com>
+Date: Thu, 20 Feb 2020 21:37:44 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.5.0
 MIME-Version: 1.0
-In-Reply-To: <CACRpkdYWsWNg9oetuHPt0VEz+WKKiqfbfuCu503tpRyZ=7nV=A@mail.gmail.com>
+In-Reply-To: <1c333e81-7468-80d6-0835-02c444bb8b5d@gmail.com>
 Content-Language: en-US
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200220_122457_258851_C4EE19D7 
-X-CRM114-Status: GOOD (  12.84  )
-X-Spam-Score: -0.2 (/)
-X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+X-Spam-Note: CRM114 invocation failed
+X-Spam-Score: 0.9 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+ Content analysis details:   (0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:241 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [195.135.220.15 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [195.135.220.15 listed in wl.mailspike.net]
+ 0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
+ CUSTOM_MED
+ 1.0 FORGED_GMAIL_RCVD      'From' gmail.com does not match 'Received'
+ headers
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [matthias.bgg[at]gmail.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ provider (matthias.bgg[at]gmail.com)
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing
+ list
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -185,24 +170,34 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-
-
-On 20/02/2020 16:14, Linus Walleij wrote:
-> On Tue, Feb 18, 2020 at 6:55 AM Dan Carpenter <dan.carpenter@oracle.com> wrote:
+On 20/02/2020 21:24, Matthias Brugger wrote:
 > 
->> These comparisons should be >= instead of > to prevent accessing one
->> element beyond the end of the hw->soc->pins[] array.
+> 
+> On 20/02/2020 16:14, Linus Walleij wrote:
+>> On Tue, Feb 18, 2020 at 6:55 AM Dan Carpenter <dan.carpenter@oracle.com> wrote:
 >>
->> Fixes: 3de7deefce69 ("pinctrl: mediatek: Check gpio pin number and use binary search in mtk_hw_pin_field_lookup()")
->> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+>>> These comparisons should be >= instead of > to prevent accessing one
+>>> element beyond the end of the hw->soc->pins[] array.
+>>>
+>>> Fixes: 3de7deefce69 ("pinctrl: mediatek: Check gpio pin number and use binary search in mtk_hw_pin_field_lookup()")
+>>> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+>>
+>> Matthias could you have a look at this patch?
+>>
 > 
-> Matthias could you have a look at this patch?
+> From what I see hw->soc->npins is the ARRAY_SIZE() of the pins. So the index
+> should smaller hw->soc->npins.
+> 
+> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
 > 
 
-From what I see hw->soc->npins is the ARRAY_SIZE() of the pins. So the index
-should smaller hw->soc->npins.
+Actually missing a second
+Fixes: 184d8e13f9b1 ("pinctrl: mediatek: Add support for pin configuration dump
+via debugfs.")
 
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
+
+Regards,
+Matthias
 
 _______________________________________________
 Linux-mediatek mailing list
