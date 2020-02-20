@@ -2,69 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 44B67165ED4
-	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 14:31:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 58313165F2A
+	for <lists+linux-mediatek@lfdr.de>; Thu, 20 Feb 2020 14:49:40 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sDfzMBerDrRdAntdi+vWEDeXuxL+udHStS4xMqpFlzQ=; b=DTzgmhTA0QJucy
-	iVHGOXtBX/PazBz5R6nLSl7XbIJWGdvvBh55BuvSpNsY9oxIm8gzkpKSzsyca2eH5zJv19ulGOlU4
-	zMMUK4yr9/Ld4L/RCfYlcHfEl1iT96N4BFHgrzd38ybrKSArsnKQUEU3Rsiv/AZykv+2YZn3vXN9n
-	DEMpfyyu7lddTDvGxDizkiDq7rEHOZmw5V9RgRDHNzVnuL+sbzBXv9lVIUfcKBvHHpkQYijq0kzCD
-	uiewYHyJkD/h4rom/r3xDEgJZwZZeRWYeaKYC9DS7ckwETn2VqG3505tRdf2+T7Nf1radZStbTnUl
-	uUhzgLb4vpI8DGu6ApOQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=eJ/pFvS7m76S28fZV4PAtl7+w8D1Xa/cmZuj25KcyQk=; b=a/1rUbkGP0krDn
+	Nsug4P+o9wn6AyGP0lQhymu007nM55Cgq0Z/YXPrhcEswj7zvbdWmuXpDSuU0GYXaf8rYqvvy9oHx
+	4iwgbJtuwptZP1L0tLBkshdp/P+r5AWC/ptpjSEQciHHqB3fEFIKMD5b4GGQ1gycIKvBEhgjq+Qtg
+	CKqxeVhXCGsOzF5A87YIG6/VfEvtk2PZDCjhiZ7RTNms7yYwxVjLaTw++cH4xLSeCACPV+Jo9w/LU
+	4sMqB1ETjm9yWjpWr4BiZ1TaAmYB1pf1CWShM8OfamCVdvWlvfcKQC8NLoufXNW9jbm8QRrjroTS5
+	YhI9N5binHXH3xaoVZOA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j4lv2-0007lf-CV; Thu, 20 Feb 2020 13:31:08 +0000
+	id 1j4mCs-00075d-N2; Thu, 20 Feb 2020 13:49:34 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j4luq-0007WW-HE; Thu, 20 Feb 2020 13:30:58 +0000
-X-UUID: 5077218484e34b079bcc58cbb3197cb3-20200220
+ id 1j4mCS-0006fi-1J; Thu, 20 Feb 2020 13:49:09 +0000
+X-UUID: a1fb60b189ce4cb1ae3de7c72a67d661-20200220
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=djf6C0Eeez3RoBVkU7r/xsvLyT1pkg0ulRptnAvpIIw=; 
- b=pKCHkOqttH21TlFjUvPYdX4gP4MsLYjUlXJZ4qiGeJo9YQmACakGqJB0nOloXDd/Ag3dD53pWbyk9ggCo+FJNhVcfBu3IVFdrYiV0W4fhUUmNh6It2eCQMj2BGHTC1zPob6Wp/abAa9q/4V09OZlUTONwEf6TnGVv4SaKtTmUdk=;
-X-UUID: 5077218484e34b079bcc58cbb3197cb3-20200220
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=KmAGgXrlCHQ77cMErepngIlOvfaHprPW+G8GQkksoF0=; 
+ b=A6pnecmcTdlSi1ZSgE1r/8Gm8+b1CfJzrHrXI21KMXpVQMUtbnR1ULeFJ5AMSoHys3Pjl7hI6Rxh8O7MCrqkIjRaulrYyqJRvk7CfJ/pcv2NsaswXNjIh4pGgufYFJR29yC54BJwHQ0axPehVdk1nLjddVq+ODX8qB2IzFd0tuE=;
+X-UUID: a1fb60b189ce4cb1ae3de7c72a67d661-20200220
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 518899328; Thu, 20 Feb 2020 05:30:50 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 908554262; Thu, 20 Feb 2020 05:49:05 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 20 Feb 2020 05:30:48 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 20 Feb 2020 21:28:54 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 20 Feb 2020 21:31:13 +0800
-Message-ID: <1582205440.26304.50.camel@mtksdccf07>
-Subject: Re: [PATCH v1 1/2] scsi: ufs: add required delay after gating
- reference clock
+ 15.0.1395.4; Thu, 20 Feb 2020 05:49:03 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 20 Feb 2020 21:46:20 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Thu, 20 Feb 2020 21:46:45 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
-To: Can Guo <cang@codeaurora.org>
-Date: Thu, 20 Feb 2020 21:30:40 +0800
-In-Reply-To: <bbb0b0637d9667d4691a9a28f9988dea@codeaurora.org>
-References: <20200217093559.16830-1-stanley.chu@mediatek.com>
- <20200217093559.16830-2-stanley.chu@mediatek.com>
- <c6874825dd60ea04ed401fbd1b5cb568@codeaurora.org>
- <1581945168.26304.4.camel@mtksdccf07>
- <e518c4d1d94ec15e9c4c31c34a9e42d1@codeaurora.org>
- <1581946449.26304.15.camel@mtksdccf07>
- <56c1fc80919491d058d904fcc7301835@codeaurora.org>
- <a8cd5beee0a1e12a40da752c6cd9b5de@codeaurora.org>
- <1582103495.26304.42.camel@mtksdccf07>
- <bbb0b0637d9667d4691a9a28f9988dea@codeaurora.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
+Subject: [PATCH v2 0/1] scsi: ufs: fix waiting time for reference clock
+Date: Thu, 20 Feb 2020 21:48:47 +0800
+Message-ID: <20200220134848.8807-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: A530EFBDC78C0C129A69103C87BA3A3A8647BB6446C1DE1CFF13CD807CE25A6D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200220_053056_583042_F8B828F7 
-X-CRM114-Status: GOOD (  21.10  )
+X-CRM114-CacheID: sfid-20200220_054908_129583_53302051 
+X-CRM114-Status: UNSURE (   5.34  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -72,6 +63,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -92,101 +85,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: chun-hung.wu@mediatek.com, linux-scsi@vger.kernel.org,
- martin.petersen@oracle.com, andy.teng@mediatek.com, jejb@linux.ibm.com,
- peter.wang@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, avri.altman@wdc.com,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- alim.akhtar@samsung.com, matthias.bgg@gmail.com, beanhuo@micron.com,
- bvanassche@acm.org, hongwus@codeaurora.org,
- Asutosh Das <asutoshd@codeaurora.org>
+Cc: Stanley Chu <stanley.chu@mediatek.com>, bvanassche@acm.org,
+ andy.teng@mediatek.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, beanhuo@micron.com,
+ linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Can,
+Hi,
 
-On Wed, 2020-02-19 at 18:33 +0800, Can Guo wrote:
-> Hi Stanley,
-> 
-> On 2020-02-19 17:11, Stanley Chu wrote:
-> > Hi Can,
-> > 
-> > On Wed, 2020-02-19 at 10:35 +0800, Can Guo wrote:
-> > 
-> >> Since we all need this delay here, how about put the delay in the
-> >> entrence of ufshcd_setup_clocks(), before vops_setup_clocks()?
-> >> If so, we can remove all the delays we added in our vops since the
-> >> delay anyways delays everything inside ufshcd_setup_clocks().
-> >> 
-> > 
-> > Always putting the delay in the entrance of ufshcd_setup_clocks() may
-> > add unwanted delay for vendors, just like your current implementation,
-> > or some other vendors who do not want to disable the reference clock.
-> > 
-> > I think current patch is more reasonable because the delay is applied 
-> > to
-> > clock only named as "ref_clk" specifically.
-> > 
-> > If you needs to keep "ref_clk" in DT, would you consider to remove the
-> > delay in your ufs_qcom_dev_ref_clk_ctrl() and let the delay happens via
-> > common ufshcd_setup_clocks() only? However you may still need delay if
-> > call path comes from ufs_qcom_pwr_change_notify().
-> > 
-> > What do you think?
-> > 
-> 
-> I agree current change is more reasonable from what it looks, but the 
-> fact
-> is that I canont remove the delay in ufs_qcom_dev_ref_clk_ctrl() even 
-> with
-> this change. On our platforms, ref_clk in DT serves multipule purposes,
-> the ref_clk provided to UFS device is actually controlled in
-> ufs_qcom_dev_ref_clk_ctrl(), which comes before where this change kicks 
-> start,
-> so if I remove the delay in ufs_qcom_dev_ref_clk_ctrl(), this change 
-> cannot
-> provide us the correct delay before gate the ref_clk provided to UFS 
-> device.
+This patchset adds waiting time for reference clock provided to UFS device in MediaTek UFS implementation.
 
-> > Always putting the delay in the entrance of ufshcd_setup_clocks() may
-> > add unwanted delay for vendors, just like your current implementation,
-> > or some other vendors who do not want to disable the reference clock.
-> 
-> I meant if we put the delay in the entrance, I will be able to remove
-> the delay in ufs_qcom_dev_ref_clk_ctrl(). Meanwhile, we can add proper
-> checks before the delay to make sure it is initiated only if ref_clk 
-> needs
-> to be disabled, i.e:
-> 
-> if(!on && !skip_ref_clk && hba->dev_info.clk_gating_wait_us)
->      usleep_range();
-> 
-> Does this look better to you?
+v1 -> v2:
+  - Drop patch #1 "scsi: ufs: add required delay after gating reference clock" since it will impact ufs-qcom flow without solid conclusion yet.
 
-Firstly thanks so much for above details.
+Stanley Chu (1):
+  scsi: ufs: ufs-mediatek: add waiting time for reference clock
 
-Again this statement may also add unwanted delay if some other vendors
-does not have "ref_clk" in DT or they don't/can't disable the reference
-clock provided to UFS device.
+ drivers/scsi/ufs/ufs-mediatek.c | 46 +++++++++++++++++++++++++++++++--
+ drivers/scsi/ufs/ufs-mediatek.h |  2 ++
+ 2 files changed, 46 insertions(+), 2 deletions(-)
 
-> 
-> Anyways, we will see regressions with this change on our platforms, can 
-> we
-> have more discussions before get it merged? It should be OK if you go 
-> with
-> patch #2 alone first, right? Thanks.
-
-Now the fact is that this change will impact your flow and it seems no
-solid conclusion yet. Sure I could drop patch #1 and submit patch #2
-only first : )
-
-Thanks,
-Stanley Chu
-
-
-
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
