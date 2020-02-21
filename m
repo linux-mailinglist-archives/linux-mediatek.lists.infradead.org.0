@@ -2,61 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA612167C30
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Feb 2020 12:32:31 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 829F5167C34
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Feb 2020 12:33:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=dArD7MNgiUAafSlDZ+jBzY/2kvWK2bJCFsP7WBLkQ8k=; b=NS41wmlNlHpKOb
-	fIG3+Y+0HkZ3sYtaZ8Y3NuGZ0wMy2dBSqw4yMi6pKqWzANHPfzgRSj9P+XmavP4LWc58bMaj9DJQl
-	3obxPMY1KrHfwxdXEhLJAekzOyBEwTCM3dbfFyRW3X69AdN1szaXvvOPKpwtxdqHZ0b3hHa8TvIQ3
-	h6rKkhcD24meGppt0aYJYaEzEI1llrIyFAH8htJBZCORr3d92ToLjVfXZuWBKGuYdVu/++OXSVIXn
-	tzRZEl6COExIfg3tUnco98QKuJT7ZZixIM1BuVtJQy0Hq7aNVLlbemzBPo8XMXfqgHnhlkwhoHUQM
-	jnL5rDN1xTOjP+3fqgxw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7EiOviI1hNkrY+K0ptR3ANqX56t6dJtQfLcp8W4WU9A=; b=TDWL9OQgSDmtqS
+	P8Kh8uUjmmAJwM4fJASYox8azdYJd0Cuu4YkrWnsnha00iolv8VJjrWEB9SScQ8ILKDYGWtQQ2Xq3
+	uj+c6UYvt2u5H8gF2KNV8+9WCeL4Lzn7jEtdpH4KlFRo/nFpp8II29ZpHGFwbxzjuAK0ZSCexAFCR
+	3/wd8BFSWGfPFIEeRn0E2ZaxfCF06DXIguXcE1hVVqgT0snMU0nu0nTX2P5bFS63ecBcf3ObhL5dY
+	BDGwN0bmCMvjxNyoZDMY5QqVWekoahbjzxaBsEtrzo59xJlKLUx02+DJKWLnHXuLMAFz2xPQyE3K3
+	6CJb3FRrOdsWXQqo3Nmw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j56Xg-0002OE-U5; Fri, 21 Feb 2020 11:32:24 +0000
+	id 1j56YC-0002qG-U2; Fri, 21 Feb 2020 11:32:56 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j56Xe-0002NE-Gt; Fri, 21 Feb 2020 11:32:23 +0000
-X-UUID: 473caf798a2c4edea5edbd75212dcc22-20200221
+ id 1j56Xf-0002NE-PO; Fri, 21 Feb 2020 11:32:25 +0000
+X-UUID: 4e8226352c7647acb64c885e5e3dfa60-20200221
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=WqPXsEqYilGj+Se9aLiobnNaBsVbzCQKOya7+P5P4dk=; 
- b=kXK6lRaunl7/UWOwtZbJMinLn9Pk7NfLiwoe+htins+csdOl4IeXIFEe82u1oJ6R8mIrUVlCrBxTdM4HXQAsxN02J3XyMszYOcOBAtMMEbOHv01Cp13WpS59BTWZz2+GS7iPsxMdX0RPczaVkkk0eCyoSFHxFirEE8pwsBceTlc=;
-X-UUID: 473caf798a2c4edea5edbd75212dcc22-20200221
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=zFZhXk7fCqXKk9Mb/Rx6jZKFuJRDTSRGsr1lm/b+5DU=; 
+ b=ovexBTzC48RueZbJWZ+GrTK/Hn7xV7SIeRvMI8QvWXNouMt+mRI45xOOZMYQ56YgnItVtHVPx1zQqPqEX1FFtOoCoPOg33SJiApGb4RuZWKPH2JfBYn4NurRWrdJ9285hC2nn+3Utvb/YNqgZ/b69tpbPMRtvVBZTv8zN/Ik6Go=;
+X-UUID: 4e8226352c7647acb64c885e5e3dfa60-20200221
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1661915842; Fri, 21 Feb 2020 03:32:18 -0800
-Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ with ESMTP id 597208939; Fri, 21 Feb 2020 03:32:18 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 21 Feb 2020 03:28:34 -0800
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
- (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Fri, 21 Feb 2020 19:27:13 +0800
+ 15.0.1395.4; Fri, 21 Feb 2020 03:28:41 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
+ (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Fri, 21 Feb 2020 19:23:59 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Fri, 21 Feb 2020 19:27:32 +0800
+ 15.0.1395.4 via Frontend Transport; Fri, 21 Feb 2020 19:27:34 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
  David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
  <linux-kernel@vger.kernel.org>
-Subject: [PATCH v6 0/4] add mt8183 dpi driver
-Date: Fri, 21 Feb 2020 19:28:24 +0800
-Message-ID: <20200221112828.55837-1-jitao.shi@mediatek.com>
+Subject: [PATCH v6 1/4] dt-bindings: display: mediatek: update dpi supported
+ chips
+Date: Fri, 21 Feb 2020 19:28:25 +0800
+Message-ID: <20200221112828.55837-2-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
+In-Reply-To: <20200221112828.55837-1-jitao.shi@mediatek.com>
+References: <20200221112828.55837-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 65587B8808C753827096943E733EBABAA07D4FF1005ED706468AEEA59267476E2000:8
+X-TM-SNTS-SMTP: 45350EF9107AC20D662E832B95D598681BBB945A8E95C707967860581846053F2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200221_033222_567492_105CEF5B 
-X-CRM114-Status: UNSURE (   6.12  )
+X-CRM114-CacheID: sfid-20200221_033223_828735_8ACEC1A0 
+X-CRM114-Status: UNSURE (   7.76  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -97,31 +100,56 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Changes since v5:
- - fine tune the dt-bindings commit message.
+Add decriptions about supported chips, including MT2701 & MT8173 &
+mt8183
 
-Changes since v4:
- - move pin mode control and dual edge control to deveice tree.
- - update dt-bindings document for pin mode swap and dual edge control.
+1. Add more chips support. ex. MT2701 & MT8173 & MT8183
+2. Add property "dpi_pin_mode_swap" and "pinctrl-names" gpio mode dpi mode and
+   gpio oupput-low to avoid leakage current.
+3. Add property "dpi_dual_edge" to config the dpi pin output mode dual edge or
+   single edge sample data.
 
-Changes since v3:
- - add dpi pin mode control when dpi on or off.
- - update dpi dual edge comment.
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+---
+ .../bindings/display/mediatek/mediatek,dpi.txt        | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
 
-Changes since v2:
- - update dt-bindings document for mt8183 dpi.
- - separate dual edge modfication as independent patch.
-
-Jitao Shi (4):
-  dt-bindings: display: mediatek: update dpi supported chips
-  drm/mediatek: dpi dual edge support
-  drm/mediatek: add mt8183 dpi clock factor
-  drm/mediatek: set dpi pin mode to gpio low to avoid leakage current
-
- .../display/mediatek/mediatek,dpi.txt         | 11 +++
- drivers/gpu/drm/mediatek/mtk_dpi.c            | 69 ++++++++++++++++++-
- 2 files changed, 79 insertions(+), 1 deletion(-)
-
+diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+index b6a7e7397b8b..cd6a1469c8b7 100644
+--- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
++++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+@@ -7,6 +7,7 @@ output bus.
+ 
+ Required properties:
+ - compatible: "mediatek,<chip>-dpi"
++  the supported chips are mt2701 , mt8173 and mt8183.
+ - reg: Physical base address and length of the controller's registers
+ - interrupts: The interrupt signal from the function block.
+ - clocks: device clocks
+@@ -16,6 +17,11 @@ Required properties:
+   Documentation/devicetree/bindings/graph.txt. This port should be connected
+   to the input port of an attached HDMI or LVDS encoder chip.
+ 
++Optional properties:
++- dpi_pin_mode_swap: Swap the pin mode between dpi mode and gpio mode.
++- pinctrl-names: Contain "gpiomode" and "dpimode".
++- dpi_dual_edge: Control the RGB 24bit data on 12 pins or 24 pins.
++
+ Example:
+ 
+ dpi0: dpi@1401d000 {
+@@ -26,6 +32,11 @@ dpi0: dpi@1401d000 {
+ 		 <&mmsys CLK_MM_DPI_ENGINE>,
+ 		 <&apmixedsys CLK_APMIXED_TVDPLL>;
+ 	clock-names = "pixel", "engine", "pll";
++	dpi_dual_edge;
++	dpi_pin_mode_swap;
++	pinctrl-names = "gpiomode", "dpimode";
++	pinctrl-0 = <&dpi_pin_gpio>;
++	pinctrl-1 = <&dpi_pin_func>;
+ 
+ 	port {
+ 		dpi0_out: endpoint {
 -- 
 2.21.0
 _______________________________________________
