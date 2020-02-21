@@ -2,61 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BC636166D0A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Feb 2020 03:41:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1D57B166E98
+	for <lists+linux-mediatek@lfdr.de>; Fri, 21 Feb 2020 05:40:29 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gKHscbXu7dchmWjQCJv43p1eO6Wl5bRVGjJnMBQIU1A=; b=DdX6HYm+EIim+/
-	BhksKj1YnU3fgXyjk1L4KmGLg7aXd5j+lSb+d8dP8Tx4hWlaoxz8XvtfU19qH/+e96y5/Ss9/AmhL
-	RyvvS3LWM6adjhRdcV5bJkr+iCFhgx18BsZV9e2s3NqUXGv3ChHhUmvKo94jLQ6xXR1lN5vTXOMGa
-	fnbe4UP8I2UjlV/NCAHXKFyVdFJWVNqAKOjzWTlfSfbCGwc7tZg/G0s2VPU8AJz+ph1J4XhXbpprO
-	zcV8hRX8H5vV4A7aN5Dhye+D8bueyu7FJ5yl2k8jiMd7+eXcPfE17VOuTN/Oqq8c1Zv4DolNnjjBM
-	9yMhh0r9/RWTs/rkmXAQ==;
+	List-Owner; bh=qEdJM7qU38LV89rDLZp6G9VvW5ael/czL7TKwtewP3A=; b=VttrZCZNKPUC/a
+	s4Gnldu5ahq5Q8GKhpaclahUxojSC7l5OrsPyRfF3JThx7WKMxaMb/mR+uUXnFVa/RYk/cSl2XoHZ
+	+1xVT2CcjDD0Z+/1vx76DFG414CXE9N1VSl/y90VDuPdgEVsgkN4J+ruy62KJo+8VDLOUipWZsDwg
+	sr2ywO67UWnGS33JSeQRZf8SNQR3sXBlFcRwBgHKH1HV2YiIqs1NgawzCWgc7+uuHZUE0dt4pBwuh
+	3yJWOb1ewt7JJfU9MbWbQll1XJtrQH84DNalib8ZzCmyUstf+uJBthhChFpZbqfACy3OCfm6bs/0h
+	zFjxFbjjwpOyNHKB2w2w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j4yFS-0003VV-3L; Fri, 21 Feb 2020 02:41:02 +0000
+	id 1j506l-0005Q8-6w; Fri, 21 Feb 2020 04:40:11 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j4yEm-00027Q-AK; Fri, 21 Feb 2020 02:40:23 +0000
-X-UUID: 21f3bc3ff3d74212b993b746a849c067-20200220
+ id 1j506g-00046U-3r; Fri, 21 Feb 2020 04:40:08 +0000
+X-UUID: 83e1bbc277d24677be71ac1f3fb7374a-20200220
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=NGRWbUEybKuJdghF57xuKN/afOcKN7GZqEttpP7MgxI=; 
- b=FKUJT0YZnaed5IBunK7dSNipKIQp2YsErR51ByxazCQf0rT0jaU7ermp55MMzq5GlR6GTNMkgZKcKssK5Y+FUS4eM20bMilUXssAyVCmG/5fOaX069CBXte9EHspuiUrHG/jxb9DxOBAZME65LcCnsl2bjC8+WxBRDZO8oWqxWE=;
-X-UUID: 21f3bc3ff3d74212b993b746a849c067-20200220
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=c6LxKOrtf7zqmWMQ6HOJ1i4yDenxu3IQklK++RZdHNY=; 
+ b=rATm3auciYfKwqBo300ayxZ+epaBIPidFLEOlYR9R+lDw3Sp+wVUGJfQ/SnMCJj2IlLlRrnfPhygOlPO76AN/7FP6irXcAVyfhVWuWJj5+EoGJyr4O+QUJUqF41kXVEViY6blmVtLf130JmWPN0aA6yAcj65lUJZjI08MHLM4xs=;
+X-UUID: 83e1bbc277d24677be71ac1f3fb7374a-20200220
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <wen.su@mediatek.com>)
+ (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1012677004; Thu, 20 Feb 2020 18:40:16 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 20 Feb 2020 18:40:08 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 21 Feb 2020 10:38:19 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 21 Feb 2020 10:38:51 +0800
-From: Wen Su <Wen.Su@mediatek.com>
-To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>, "Mark
- Brown" <broonie@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [RESEND v2 4/4] arm64: dts: mt6359: add PMIC MT6359 related nodes
-Date: Fri, 21 Feb 2020 10:39:06 +0800
-Message-ID: <1582252746-8149-5-git-send-email-Wen.Su@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1582252746-8149-1-git-send-email-Wen.Su@mediatek.com>
-References: <1582252746-8149-1-git-send-email-Wen.Su@mediatek.com>
+ with ESMTP id 1511868965; Thu, 20 Feb 2020 20:39:59 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 20 Feb 2020 20:39:57 -0800
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 21 Feb 2020 12:39:09 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Fri, 21 Feb 2020 12:40:26 +0800
+Message-ID: <1582259996.1846.7.camel@mtksdaap41>
+Subject: Re: [PATCH v8 0/6] arm/arm64: mediatek: Fix mmsys device probing
+From: CK Hu <ck.hu@mediatek.com>
+To: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Date: Fri, 21 Feb 2020 12:39:56 +0800
+In-Reply-To: <20200220172147.919996-1-enric.balletbo@collabora.com>
+References: <20200220172147.919996-1-enric.balletbo@collabora.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200220_184020_402628_88EAB555 
-X-CRM114-Status: UNSURE (   9.89  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200220_204006_180769_B839BDC3 
+X-CRM114-Status: GOOD (  20.21  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -64,8 +62,6 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -86,340 +82,154 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark
- Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org, wen.su@mediatek.com,
- wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- Liam Girdwood <lgirdwood@gmail.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, Kate Stewart <kstewart@linuxfoundation.org>,
+ Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
+ Andrew-CT Chen <andrew-ct.chen@mediatek.com>, airlied@linux.ie,
+ mturquette@baylibre.com, dri-devel@lists.freedesktop.org,
+ Richard Fontana <rfontana@redhat.com>, laurent.pinchart@ideasonboard.com,
+ ulrich.hecht+renesas@gmail.com, Collabora
+ Kernel ML <kernel@collabora.com>, linux-clk@vger.kernel.org, Nicolas
+ Boichat <drinkcat@chromium.org>, Weiyi Lu <weiyi.lu@mediatek.com>,
+ Krzysztof Kozlowski <krzk@kernel.org>, wens@csie.org,
+ linux-arm-kernel@lists.infradead.org, mtk01761 <wendell.lin@mediatek.com>,
+ Owen Chen <owen.chen@mediatek.com>, linux-media@vger.kernel.org,
+ devicetree@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
+ frank-w@public-files.de, Seiya
+ Wang <seiya.wang@mediatek.com>, sean.wang@mediatek.com,
+ Houlong Wei <houlong.wei@mediatek.com>, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Mauro
+ Carvalho Chehab <mchehab@kernel.org>, Allison Randal <allison@lohutok.net>,
+ Matthias Brugger <mbrugger@suse.com>, Fabien Parent <fparent@baylibre.com>,
+ sboyd@kernel.org, Greg
+ Kroah-Hartman <gregkh@linuxfoundation.org>, rdunlap@infradead.org,
+ linux-kernel@vger.kernel.org, p.zabel@pengutronix.de, matthias.bgg@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "Wen Su" <wen.su@mediatek.com>
+Hi, Enric:
 
-add PMIC MT6359 related nodes which is for MT6779 platform
+On Thu, 2020-02-20 at 18:21 +0100, Enric Balletbo i Serra wrote:
+> Dear all,
+> 
+> Those patches are intended to solve an old standing issue on some
+> Mediatek devices (mt8173, mt2701 and mt2712) in a slightly different way
+> to the precedent series.
+> 
+> Up to now both drivers, clock and drm are probed with the same device tree
+> compatible. But only the first driver get probed, which in effect breaks
+> graphics on those devices.
+> 
+> The version eight of the series tries to solve the problem with a
+> different approach than the previous series but similar to how is solved
+> on other Mediatek devices.
+> 
+> The MMSYS (Multimedia subsystem) in Mediatek SoCs has some registers to
+> control clock gates (which is used in the clk driver) and some registers
+> to set the routing and enable the differnet blocks of the display
+> and MDP (Media Data Path) subsystem. On this series the clk driver is
+> not a pure clock controller but a system controller that can provide
+> access to the shared registers between the different drivers that need
+> it (mediatek-drm and mediatek-mdp). And the biggest change is, that in
+> this version, clk driver is the entry point (parent) which will trigger
+> the probe of the corresponding mediatek-drm driver and pass its MMSYS
+> platform data for display configuration.
 
-Signed-off-by: Wen Su <wen.su@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt6359.dtsi | 306 +++++++++++++++++++++++++++++++
- 1 file changed, 306 insertions(+)
- create mode 100644 arch/arm64/boot/dts/mediatek/mt6359.dtsi
+When mmsys is a system controller, I prefer to place mmsys in
+drivers/soc/mediatek, and it share registers for clock, display, and mdp
+driver. This means the probe function is placed in
+drivers/soc/mediatek ,its display clock function, mdp clock function are
+placed in drivers/clk, display routing are placed in drivers/gpu/drm,
+and mdp routing are placed in dirvers/video.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt6359.dtsi b/arch/arm64/boot/dts/mediatek/mt6359.dtsi
-new file mode 100644
-index 0000000..4cafe1f
---- /dev/null
-+++ b/arch/arm64/boot/dts/mediatek/mt6359.dtsi
-@@ -0,0 +1,306 @@
-+// SPDX-License-Identifier: GPL-2.0
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
-+
-+&pwrap {
-+	pmic: pmic {
-+		mt6359regulator: mt6359regulator {
-+			compatible = "mediatek,mt6359-regulator";
-+			mt6359_vs1_buck_reg: buck_vs1 {
-+				regulator-name = "vs1";
-+				regulator-min-microvolt = <800000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <0>;
-+				regulator-always-on;
-+			};
-+			mt6359_vgpu11_buck_reg: buck_vgpu11 {
-+				regulator-name = "vgpu11";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <5000>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1 2>;
-+			};
-+			mt6359_vmodem_buck_reg: buck_vmodem {
-+				regulator-name = "vmodem";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1100000>;
-+				regulator-ramp-delay = <10760>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+			};
-+			mt6359_vpu_buck_reg: buck_vpu {
-+				regulator-name = "vpu";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <5000>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-allowed-modes = <0 1 2>;
-+			};
-+			mt6359_vcore_buck_reg: buck_vcore {
-+				regulator-name = "vcore";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <5000>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1 2>;
-+			};
-+			mt6359_vs2_buck_reg: buck_vs2 {
-+				regulator-name = "vs2";
-+				regulator-min-microvolt = <800000>;
-+				regulator-max-microvolt = <1600000>;
-+				regulator-enable-ramp-delay = <0>;
-+				regulator-always-on;
-+			};
-+			mt6359_vpa_buck_reg: buck_vpa {
-+				regulator-name = "vpa";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <3650000>;
-+				regulator-enable-ramp-delay = <300>;
-+			};
-+			mt6359_vproc2_buck_reg: buck_vproc2 {
-+				regulator-name = "vproc2";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <7500>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1 2>;
-+			};
-+			mt6359_vproc1_buck_reg: buck_vproc1 {
-+				regulator-name = "vproc1";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <7500>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1 2>;
-+			};
-+			mt6359_vcore_sshub_buck_reg: buck_vcore_sshub {
-+				regulator-name = "vcore_sshub";
-+				regulator-min-microvolt = <400000>;
-+				regulator-max-microvolt = <1193750>;
-+			};
-+			mt6359_vaud18_ldo_reg: ldo_vaud18 {
-+				regulator-name = "vaud18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vsim1_ldo_reg: ldo_vsim1 {
-+				regulator-name = "vsim1";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <3100000>;
-+				regulator-enable-ramp-delay = <480>;
-+			};
-+			mt6359_vibr_ldo_reg: ldo_vibr {
-+				regulator-name = "vibr";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vrf12_ldo_reg: ldo_vrf12 {
-+				regulator-name = "vrf12";
-+				regulator-min-microvolt = <1100000>;
-+				regulator-max-microvolt = <1300000>;
-+				regulator-enable-ramp-delay = <120>;
-+			};
-+			mt6359_vusb_ldo_reg: ldo_vusb {
-+				regulator-name = "vusb";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3000000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vsram_proc2_ldo_reg: ldo_vsram_proc2 {
-+				regulator-name = "vsram_proc2";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <7500>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vio18_ldo_reg: ldo_vio18 {
-+				regulator-name = "vio18";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1900000>;
-+				regulator-enable-ramp-delay = <960>;
-+				regulator-always-on;
-+			};
-+			mt6359_vcamio_ldo_reg: ldo_vcamio {
-+				regulator-name = "vcamio";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1900000>;
-+				regulator-enable-ramp-delay = <1920>;
-+			};
-+			mt6359_vcn18_ldo_reg: ldo_vcn18 {
-+				regulator-name = "vcn18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vfe28_ldo_reg: ldo_vfe28 {
-+				regulator-name = "vfe28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <120>;
-+				regulator-always-on;
-+			};
-+			mt6359_vcn13_ldo_reg: ldo_vcn13 {
-+				regulator-name = "vcn13";
-+				regulator-min-microvolt = <900000>;
-+				regulator-max-microvolt = <1300000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vcn33_1_bt_ldo_reg: ldo_vcn33_1_bt {
-+				regulator-name = "vcn33_1_bt";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vcn33_1_wifi_ldo_reg: ldo_vcn33_1_wifi {
-+				regulator-name = "vcn33_1_wifi";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vaux18_ldo_reg: ldo_vaux18 {
-+				regulator-name = "vaux18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vsram_others_ldo_reg: ldo_vsram_others {
-+				regulator-name = "vsram_others";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <5000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vefuse_ldo_reg: ldo_vefuse {
-+				regulator-name = "vefuse";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <2000000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vxo22_ldo_reg: ldo_vxo22 {
-+				regulator-name = "vxo22";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <120>;
-+				regulator-always-on;
-+			};
-+			mt6359_vrfck_ldo_reg: ldo_vrfck {
-+				regulator-name = "vrfck";
-+				regulator-min-microvolt = <1500000>;
-+				regulator-max-microvolt = <1700000>;
-+				regulator-enable-ramp-delay = <480>;
-+			};
-+			mt6359_vbif28_ldo_reg: ldo_vbif28 {
-+				regulator-name = "vbif28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vio28_ldo_reg: ldo_vio28 {
-+				regulator-name = "vio28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vemc_ldo_reg: ldo_vemc {
-+				regulator-name = "vemc";
-+				regulator-min-microvolt = <2900000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vcn33_2_bt_ldo_reg: ldo_vcn33_2_bt {
-+				regulator-name = "vcn33_2_bt";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vcn33_2_wifi_ldo_reg: ldo_vcn33_2_wifi {
-+				regulator-name = "vcn33_2_wifi";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_va12_ldo_reg: ldo_va12 {
-+				regulator-name = "va12";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <1300000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_va09_ldo_reg: ldo_va09 {
-+				regulator-name = "va09";
-+				regulator-min-microvolt = <800000>;
-+				regulator-max-microvolt = <1200000>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vrf18_ldo_reg: ldo_vrf18 {
-+				regulator-name = "vrf18";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1810000>;
-+				regulator-enable-ramp-delay = <120>;
-+				regulator-always-on;
-+			};
-+			mt6359_vsram_md_ldo_reg: ldo_vsram_md {
-+				regulator-name = "vsram_md";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1100000>;
-+				regulator-ramp-delay = <10760>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vufs_ldo_reg: ldo_vufs {
-+				regulator-name = "vufs";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1900000>;
-+				regulator-enable-ramp-delay = <1920>;
-+				regulator-always-on;
-+			};
-+			mt6359_vm18_ldo_reg: ldo_vm18 {
-+				regulator-name = "vm18";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1900000>;
-+				regulator-enable-ramp-delay = <1920>;
-+				regulator-always-on;
-+			};
-+			mt6359_vbbck_ldo_reg: ldo_vbbck {
-+				regulator-name = "vbbck";
-+				regulator-min-microvolt = <1100000>;
-+				regulator-max-microvolt = <1200000>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+			mt6359_vsram_proc1_ldo_reg: ldo_vsram_proc1 {
-+				regulator-name = "vsram_proc1";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1193750>;
-+				regulator-ramp-delay = <7500>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+			mt6359_vsim2_ldo_reg: ldo_vsim2 {
-+				regulator-name = "vsim2";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <3100000>;
-+				regulator-enable-ramp-delay = <480>;
-+			};
-+			mt6359_vsram_others_sshub_ldo: ldo_vsram_others_sshub {
-+				regulator-name = "vsram_others_sshub";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1193750>;
-+			};
-+		};
-+	};
-+};
--- 
-1.9.1
+Regards,
+CK
+
+> 
+> All this series was tested on the Acer R13 Chromebook only.
+> 
+> For reference, here are the links to the old discussions:
+> 
+> * v7: https://patchwork.kernel.org/project/linux-mediatek/list/?series=241217
+> * v6: https://patchwork.kernel.org/project/linux-mediatek/list/?series=213219
+> * v5: https://patchwork.kernel.org/project/linux-mediatek/list/?series=44063
+> * v4:
+>   * https://patchwork.kernel.org/patch/10530871/
+>   * https://patchwork.kernel.org/patch/10530883/
+>   * https://patchwork.kernel.org/patch/10530885/
+>   * https://patchwork.kernel.org/patch/10530911/
+>   * https://patchwork.kernel.org/patch/10530913/
+> * v3:
+>   * https://patchwork.kernel.org/patch/10367857/
+>   * https://patchwork.kernel.org/patch/10367861/
+>   * https://patchwork.kernel.org/patch/10367877/
+>   * https://patchwork.kernel.org/patch/10367875/
+>   * https://patchwork.kernel.org/patch/10367885/
+>   * https://patchwork.kernel.org/patch/10367883/
+>   * https://patchwork.kernel.org/patch/10367889/
+>   * https://patchwork.kernel.org/patch/10367907/
+>   * https://patchwork.kernel.org/patch/10367909/
+>   * https://patchwork.kernel.org/patch/10367905/
+> * v2: No relevant discussion, see v3
+> * v1:
+>   * https://patchwork.kernel.org/patch/10016497/
+>   * https://patchwork.kernel.org/patch/10016499/
+>   * https://patchwork.kernel.org/patch/10016505/
+>   * https://patchwork.kernel.org/patch/10016507/
+> 
+> Best regards,
+>  Enric
+> 
+> Changes in v8:
+> - Be a builtin_platform_driver like other mediatek mmsys drivers.
+> - New patches introduced in this series.
+> 
+> Changes in v7:
+> - Add R-by from CK
+> - Add R-by from CK
+> - Fix check of return value of of_clk_get
+> - Fix identation
+> - Free clk_data->clks as well
+> - Get rid of private data structure
+> 
+> Enric Balletbo i Serra (2):
+>   drm/mediatek: Move MMSYS configuration to include/linux/platform_data
+>   clk/drm: mediatek: Fix mediatek-drm device probing
+> 
+> Matthias Brugger (4):
+>   drm/mediatek: Use regmap for register access
+>   drm/mediatek: Omit warning on probe defers
+>   media: mtk-mdp: Check return value of of_clk_get
+>   clk: mediatek: mt8173: Switch MMSYS to platform driver
+> 
+>  drivers/clk/mediatek/Kconfig                  |   6 +
+>  drivers/clk/mediatek/Makefile                 |   1 +
+>  drivers/clk/mediatek/clk-mt2701-mm.c          |  30 +++
+>  drivers/clk/mediatek/clk-mt2712-mm.c          |  44 +++++
+>  drivers/clk/mediatek/clk-mt8173-mm.c          | 172 ++++++++++++++++++
+>  drivers/clk/mediatek/clk-mt8173.c             | 104 -----------
+>  drivers/gpu/drm/mediatek/mtk_disp_color.c     |   5 +-
+>  drivers/gpu/drm/mediatek/mtk_disp_ovl.c       |   5 +-
+>  drivers/gpu/drm/mediatek/mtk_disp_rdma.c      |   5 +-
+>  drivers/gpu/drm/mediatek/mtk_dpi.c            |  12 +-
+>  drivers/gpu/drm/mediatek/mtk_drm_crtc.c       |   4 +-
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp.c        |  53 +++---
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp.h        |   4 +-
+>  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.h   |  56 +-----
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.c        | 113 +-----------
+>  drivers/gpu/drm/mediatek/mtk_drm_drv.h        |  13 +-
+>  drivers/gpu/drm/mediatek/mtk_dsi.c            |   8 +-
+>  drivers/gpu/drm/mediatek/mtk_hdmi.c           |   4 +-
+>  drivers/media/platform/mtk-mdp/mtk_mdp_comp.c |   6 +
+>  include/linux/platform_data/mtk_mmsys.h       |  73 ++++++++
+>  20 files changed, 401 insertions(+), 317 deletions(-)
+>  create mode 100644 drivers/clk/mediatek/clk-mt8173-mm.c
+>  create mode 100644 include/linux/platform_data/mtk_mmsys.h
+> 
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
