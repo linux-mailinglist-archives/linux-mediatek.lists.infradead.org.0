@@ -2,62 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B52A6169F83
-	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Feb 2020 08:51:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4220A16A052
+	for <lists+linux-mediatek@lfdr.de>; Mon, 24 Feb 2020 09:46:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mlyiaLb0xxfuh7Psx+fDp0vinMtnUAJFm87BQ7RNShY=; b=i4muNCLum53GDm
-	XcBMhemMX7B2HZ2aCpk/iFVel50woYzYKuAutPr/3ebwoQriXivib3KTaxO38yoOubY7TUgPkAUD3
-	PChfaPdEYb7BKsP8dh7LCQfFJg85ndOmBzJoRQM2IjoEq2VHIA5HsGYKowsJ6Wf9nm2fvFyHYHBc1
-	X3EnPwifgVM1I4G7V27icF3nWV45rgZlTrMjiKe55OXrQ+dJWyDRCeIbP91kfd5H5416eZt5YT01a
-	s5lFzOBfPVRE618CU7gXdqqOnP2rkkbKfpUvwKmxJSVM36dsaNCJowg9SSR6ZmHCDb+NXTGG/WawU
-	HTx2uLMQrwHivtR63aZA==;
+	List-Owner; bh=v1dFeUTaGtrB1E79C0IqipPz3fkHojnunHy2+ieQKyQ=; b=m9FRMfh8yVEL9a
+	FOCaU1cMZadzmrq3nlDqyXx/4otvT319hQP3f8MDcTqhlTl2BPhyOmuj7SrVxaNcRWn+p47uADuZi
+	iu5rTd7EcT7XQeP+FrSUAuhgPftxd9EDm5uCwXS96Urh0iBOaaAV73bba36AnHa7i2A+2wi11F2B6
+	wFkM65RuK2QWczIZfBjDIzGeTtWbfzj2rL6t25LDp+XKXsAmjd8aPwlAv8NLj69wINvxMbTQPcZSW
+	aAZUFgRn+ldXnJRl7RRb2vHQDPNrY+rFo79IXvsjhb9Q7/kK7fShLlqYs3Ov/Rh1J5xIbGAnpRBtK
+	qCPPr8MIoh7KgBivg8+Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j68WD-0001oF-My; Mon, 24 Feb 2020 07:51:09 +0000
+	id 1j69O0-0003yn-KC; Mon, 24 Feb 2020 08:46:44 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j68W0-0001f6-Bf; Mon, 24 Feb 2020 07:50:57 +0000
-X-UUID: d718dfb7f5964d37989ecd5c17b6939d-20200223
+ id 1j69Nm-0003mF-Tu; Mon, 24 Feb 2020 08:46:34 +0000
+X-UUID: aa9775777c5444fb95d54e4cc1a23bfe-20200224
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=b1f8R5VKx8rDI0QkQ5z0LpeMG+bYnjwu6UVhc1lPbgo=; 
- b=C0vHqBRd5slR4DY+Y1TysXkifRyJaX3oLSWyXSHKdCUahpGzFeHebOHtNQRKdmP1Ts/uJq9bNGTmlfZv+JBSRPLazr7LBKgwu4C3vApGTTYVB773a+1zu1XC9rnQt+MCHht1VakDW32vcyWoyoMItar7E1i/fD8IDhq6h2RSLnw=;
-X-UUID: d718dfb7f5964d37989ecd5c17b6939d-20200223
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ bh=ucwhUjhwtXJ7fomoy+TbQYpZVLRcyud+cUdXEQuJ3Mw=; 
+ b=iiH3PAIEkFzFwIci+IKErSH9RGG4s3HsUgyJ3C11MY4TDwR+IL482XiFT0x87OM742CNXyv0z9eyF6xYFm9moaLwe10IOxyqAauNKuJVjLqq9jxoHShr9PIOnTHWTDg7H1Cf06xQ6envjtcTDsyJpf4vHpLmYX2hq73y+GRAbqg=;
+X-UUID: aa9775777c5444fb95d54e4cc1a23bfe-20200224
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1328591989; Sun, 23 Feb 2020 23:50:50 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sun, 23 Feb 2020 23:51:23 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 24 Feb 2020 15:48:14 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
+ with ESMTP id 163051272; Mon, 24 Feb 2020 00:46:25 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 24 Feb 2020 00:47:25 -0800
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 24 Feb 2020 16:45:34 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Mon, 24 Feb 2020 15:50:32 +0800
-Message-ID: <1582530646.6520.2.camel@mtksdaap41>
+ Transport; Mon, 24 Feb 2020 16:46:39 +0800
+Message-ID: <1582533982.12922.5.camel@mtksdaap41>
 Subject: Re: [PATCH v6 1/4] dt-bindings: display: mediatek: update dpi
  supported chips
 From: CK Hu <ck.hu@mediatek.com>
 To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Mon, 24 Feb 2020 15:50:46 +0800
+Date: Mon, 24 Feb 2020 16:46:22 +0800
 In-Reply-To: <20200221112828.55837-2-jitao.shi@mediatek.com>
 References: <20200221112828.55837-1-jitao.shi@mediatek.com>
  <20200221112828.55837-2-jitao.shi@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: C3E3BC25D0A0281A4E03E48A0124703D8325F29AC83D197F9454C0F43EB7827A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200223_235056_405947_0AA2EEE8 
-X-CRM114-Status: GOOD (  14.73  )
+X-CRM114-CacheID: sfid-20200224_004630_984340_14377D57 
+X-CRM114-Status: GOOD (  14.45  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -67,13 +66,13 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -135,16 +134,20 @@ On Fri, 2020-02-21 at 19:28 +0800, Jitao Shi wrote:
 >  
 > +Optional properties:
 > +- dpi_pin_mode_swap: Swap the pin mode between dpi mode and gpio mode.
+> +- pinctrl-names: Contain "gpiomode" and "dpimode".
+> +- dpi_dual_edge: Control the RGB 24bit data on 12 pins or 24 pins.
 
-When you have both pinctrl-name of "gpiomode" and "dpimode", it imply
-that dpi_pin_mode_swap = true, isn't it? If so, I think this property is
-redundant.
+I've find that in [1], there are already a property of "pclk-sample"
+which like this, but it only have rising (1) or falling (0) status. Does
+that property describe the same thing with this property? If they are
+the same, I think you should add new state, dual (2), for "pclk-sample".
+
+[1]
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/media/video-interfaces.txt?h=v5.6-rc3
 
 Regards,
 CK
 
-> +- pinctrl-names: Contain "gpiomode" and "dpimode".
-> +- dpi_dual_edge: Control the RGB 24bit data on 12 pins or 24 pins.
 > +
 >  Example:
 >  
