@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 09CCC16B8B8
-	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Feb 2020 06:08:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C9A0E16BA21
+	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Feb 2020 07:56:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BBsCQ2X/xiGVqr/2aDgYcBpPF4OCsNmEffW0dT33UcI=; b=qOhrn39Li7vj2Z
-	87NXj9djMRt87Hbq8n4c0b6aj+MBZchyt2vzVhOLZlue19+8s85wf/M4GpsubzVjQhS4TbDw7gqV8
-	mlJsn1anvYqumgCNE7qTZ8xxcyVtIN4vFntwL7Ds7kIgGWzl6q1ueYFGAndn3sm92FQ6sLl2DEO4w
-	0Rqx/5InsgGitRvjkuNoVKKpQc8VR5zqDfxUekbmfzj/BY5eNm0SJY+2AU849PXbfEyUsn7TbQYVc
-	yOu6eZSJQIxdour3LERelkTtglwdmZwNBxAq16ihqzdFOgWiWXBB5Wjy3z06vb80R96++P/rGveg5
-	lXt/Ty7PNgVmywXt9anA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=G4Ydc0KKIMpb9dvg7fdwylTPctjNwOE1y1eloxBidZI=; b=NCpQdnqeO8LSiF
+	qBf3GwjYEnwgvofFexZ3yxJxlfGKjNlHCwF2gTjqoZOWG7/PJmJrDuDeUp1P9E4fTQktU8FuhcPOk
+	AaEa9EQJ8nn17xVGfMaYhCVPtW1E0ReYhFwu1JyJ6v8JVJHVYk1ZAeHOPl7hhB9xMj2lhyUOdzpqF
+	+/01dMlA33+vpyf7VZ97d0gieA02ti5Nt+kpRNBcs41j4Eyg1HNADQkcfnwrqCEaqCzW6KIREdEzL
+	F4WXB4gT7wjmiRhYFcdSIDNanrCDXvi47RglL3B1pWqE+nNM2KQW0COwcYGZsZ5gW2w3iovX+rBls
+	aBuII4goN3YN3dzIAXAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6SS2-00050i-5J; Tue, 25 Feb 2020 05:08:10 +0000
+	id 1j6U9A-0002M2-Og; Tue, 25 Feb 2020 06:56:48 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6SRn-0004pU-Tv; Tue, 25 Feb 2020 05:07:57 +0000
-X-UUID: 7ffb3ae7994d45a9a050f143c1604cf8-20200224
+ id 1j6U97-0002LC-M0; Tue, 25 Feb 2020 06:56:47 +0000
+X-UUID: dcea3b937e8047ddadba7c921f6be0da-20200224
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=/rtGSIQMd4B3KB57xrUi7K3ubIpRTDkINY3agOAnA5g=; 
- b=k6MaK41Z4INDrhlLEsvigYWeqTh9KMbVAE4ZQ0AUwAR/E6/XeZeuqynBxE/WxD1qeeiY7W6m6HsF1GYPTzQpTTLUSHUPGcjZs4u8fenJ3IydNtJ6BfnlT7x9HSypnkdAbgcTOR+2PeEMeKS5eV4IsmKz/Dev9txQai0K7pSeBEA=;
-X-UUID: 7ffb3ae7994d45a9a050f143c1604cf8-20200224
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=pmuf7vvzpu765ixMqbePyvDNsg3g6qbRoBiCP+4dj5U=; 
+ b=Ck/AapoJGvrRJ1GzlazX/beX0BYj5Zd5f2SeF7I6TkfGPjrR5xamq+06BK5EMM6c4eDAOfCw9Jzn7tudpXD/3e+vE2zboMc4o/Iva3TUAH/OkF0kVPIkYaF9cSoE8f6VRQwh3mZe1naQrp3hNg8eRZDBij4UXDb3Tp8OnOS+3c4=;
+X-UUID: dcea3b937e8047ddadba7c921f6be0da-20200224
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2019203508; Mon, 24 Feb 2020 21:07:50 -0800
-Received: from mtkexhb02.mediatek.inc (172.21.101.103) by
+ with ESMTP id 1711923885; Mon, 24 Feb 2020 22:56:42 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 24 Feb 2020 21:08:25 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkexhb02.mediatek.inc (172.21.101.103) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 25 Feb 2020 13:07:08 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 25 Feb 2020 13:07:28 +0800
-Message-ID: <1582607261.2773.0.camel@mtksdaap41>
-Subject: Re: [PATCH] drm/mediatek: component type MTK_DISP_OVL_2L is not
- correctly handled
-From: CK Hu <ck.hu@mediatek.com>
-To: Phong LE <ple@baylibre.com>
-Date: Tue, 25 Feb 2020 13:07:41 +0800
-In-Reply-To: <1582162568.24713.0.camel@mtksdaap41>
-References: <20200219141324.29299-1-ple@baylibre.com>
- <1582162568.24713.0.camel@mtksdaap41>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ 15.0.1395.4; Mon, 24 Feb 2020 22:47:25 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 25 Feb 2020 14:47:20 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Tue, 25 Feb 2020 14:45:25 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
+ David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
+ <linux-kernel@vger.kernel.org>
+Subject: [PATCH v7 0/4] add mt8183 dpi driver
+Date: Tue, 25 Feb 2020 14:46:34 +0800
+Message-ID: <20200225064638.112282-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: A756B05E682182D02D9E9B215338CD2D8D14BDB3747DC244107AB7A279AE734D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200224_210755_970197_2DC3936B 
-X-CRM114-Status: GOOD (  12.92  )
+X-CRM114-CacheID: sfid-20200224_225645_726064_955A539E 
+X-CRM114-Status: UNSURE (   7.21  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -66,6 +67,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -86,57 +89,47 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Jitao Shi <jitao.shi@mediatek.com>,
+ srv_heupstream@mediatek.com, huijuan.xie@mediatek.com, stonea168@163.com,
+ cawa.cheng@mediatek.com, linux-mediatek@lists.infradead.org,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
+ eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Phong:
+Changes since v6:
+ - change dual_edge to pclk-sample
+ - remove dpi_pin_mode_swap and
 
-On Thu, 2020-02-20 at 09:36 +0800, CK Hu wrote:
-> Hi, Phong:
-> 
-> On Wed, 2020-02-19 at 15:13 +0100, Phong LE wrote:
-> > The larb device remains NULL if the type is MTK_DISP_OVL_2L.
-> > A kernel panic is raised when a crtc uses mtk_smi_larb_get or
-> > mtk_smi_larb_put.
-> > 
-> 
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> 
+Changes since v5:
+ - fine tune the dt-bindings commit message.
 
-Applied to mediatek-drm-fixes-5.6 [1], thanks.
+Changes since v4:
+ - move pin mode control and dual edge control to deveice tree.
+ - update dt-bindings document for pin mode swap and dual edge control.
 
-[1]
-https://github.com/ckhu-mediatek/linux.git-tags/commits/mediatek-drm-fixes-5.6
+Changes since v3:
+ - add dpi pin mode control when dpi on or off.
+ - update dpi dual edge comment.
 
-Regards,
-CK
+Changes since v2:
+ - update dt-bindings document for mt8183 dpi.
+ - separate dual edge modfication as independent patch.
 
-> > Signed-off-by: Phong LE <ple@baylibre.com>
-> > ---
-> >  drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c | 1 +
-> >  1 file changed, 1 insertion(+)
-> > 
-> > diff --git a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> > index 1f5a112bb034..57c88de9a329 100644
-> > --- a/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> > +++ b/drivers/gpu/drm/mediatek/mtk_drm_ddp_comp.c
-> > @@ -471,6 +471,7 @@ int mtk_ddp_comp_init(struct device *dev, struct device_node *node,
-> >  	/* Only DMA capable components need the LARB property */
-> >  	comp->larb_dev = NULL;
-> >  	if (type != MTK_DISP_OVL &&
-> > +	    type != MTK_DISP_OVL_2L &&
-> >  	    type != MTK_DISP_RDMA &&
-> >  	    type != MTK_DISP_WDMA)
-> >  		return 0;
-> 
+Jitao Shi (4):
+  dt-bindings: display: mediatek: update dpi supported chips
+  drm/mediatek: dpi sample mode support
+  drm/mediatek: add mt8183 dpi clock factor
+  drm/mediatek: set dpi pin mode to gpio low to avoid leakage current
 
+ .../display/mediatek/mediatek,dpi.txt         | 10 +++
+ drivers/gpu/drm/mediatek/mtk_dpi.c            | 65 ++++++++++++++++++-
+ 2 files changed, 73 insertions(+), 2 deletions(-)
+
+-- 
+2.21.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
