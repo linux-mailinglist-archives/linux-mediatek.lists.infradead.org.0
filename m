@@ -2,72 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1382416BFD7
-	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Feb 2020 12:47:53 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0622C16BFE5
+	for <lists+linux-mediatek@lfdr.de>; Tue, 25 Feb 2020 12:48:30 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oT5QP8anyh5s1mOsb0TtHRZmm7+tcIK6ucIe6IsZCLQ=; b=uL5ymltmQY7ZDB
-	D4qkoHuS2s2mZpfK5InRLg7nMSJehwj5zOn12xcGN8oBthmyxpChq8rURMVTL7ogKRpj6U6ovm4s7
-	iufbu7Pt4kbFRZQh5CG7S27a7rDx7DWVkDgxqQfHWqRQKBuu4U94gQkDWwGApJ03UtzT4y0DL4tt1
-	0tHkNSuLObxEFjLALAqAN65awuZJVThgGbF38sgdNSgaiSsDJU+ALxROw1yEdDbmcgTeocYnb2onh
-	bRSkIlfJnXrjtQ3dQ/AxVMW3nUxNIBvgAKLuevxtVvc7SfOkhA/7eIrmkZCdLZabv3ouParGpMFpm
-	KT4zvmOWxawzKEbSR2pg==;
+	List-Owner; bh=oGQxmG/F9wEf42pEykn0OM7qwMh13/CNPOd3hXgPO0g=; b=I8rs1bOVJ5dZrt
+	d7YhnVK7n3Tr7zWdCmJQMoUsZCOPSCFKbTdNyJEn1WLSCIfRcsIq6lvnWQzRqYsh2Ts9B0PxuFd6D
+	4ypU8LrPyOMYtUuQYKMm0vt75kS3uWqOcTeXJxTUuj5yX/f57x3AydOc5NrBr70ewe5L9+vCOe0bG
+	uCEVnb8X7GC3rYSjsoQRsdlzaeat2OqKoKqt83zasJ4aqkRv5Hi/0unDAlm3fcrCxVWhI/qbSqkIp
+	uDoYSy9LWkHF2jTa26LajgsQcL/IJihqrlzlstBiQ5ObxFAj8hZNRy7MddzFDHtBbH2ndP3BVfX3J
+	sINSSQRzbYbBb6K4kdPA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6Ygj-0007mE-Ez; Tue, 25 Feb 2020 11:47:45 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1j6YhL-0008JW-9D; Tue, 25 Feb 2020 11:48:23 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6Ygg-0007l6-4r; Tue, 25 Feb 2020 11:47:43 +0000
-X-UUID: 330526588d59454d81495795cb8bca7e-20200225
+ id 1j6Ygo-0007p5-7D; Tue, 25 Feb 2020 11:47:52 +0000
+X-UUID: fbc1384b253045b8848c7f4d684da099-20200225
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=uG/aJuarO3hgV1jRiJvimGDQyEGjg4zprETLw6mHtxc=; 
- b=TbCOTLvKvSO0DfRTVDpIAnaEw2IPfHLGbeB7W350MqTT7uhtyir12Zrcp6L1ulVMNV+CrWXBeStFUJyu12+Nr8m4lngsf/Qrlt1DkkEIX5r1DmfN4Ri0JQSgEeSUwAH4ysA0BjVCTQjJjU8aE7z8IaR3RjTPvCkp27lySoZteSY=;
-X-UUID: 330526588d59454d81495795cb8bca7e-20200225
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=39ui2Wv99GeSAlafK/9HYk45gaD1Wuxeozd4Opspg4c=; 
+ b=Zcb+sFn7eztRNcILpfmwWXSazfCYE4Hus6AKWm1782CYimlDTwsEc2saoZP7Jqes3qFaTEgEfAU3xl2EBO083brcXHJ0lkF4vZAGYvgyxdiaIyJQK6hR33fQyL6CbUQJQ10w6XvhMZBgRLGCnip+/S1d4+M68aA+al0T+cCuepI=;
+X-UUID: fbc1384b253045b8848c7f4d684da099-20200225
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <jitao.shi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 645969261; Tue, 25 Feb 2020 03:47:41 -0800
-Received: from MTKMBS33N1.mediatek.inc (172.27.4.75) by
+ with ESMTP id 1424336683; Tue, 25 Feb 2020 03:47:43 -0800
+Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 25 Feb 2020 03:48:17 -0800
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N1.mediatek.inc
- (172.27.4.75) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 25 Feb 2020 19:46:17 +0800
+ 15.0.1395.4; Tue, 25 Feb 2020 03:48:18 -0800
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
+ (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Tue, 25 Feb 2020 19:43:44 +0800
 Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
  MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Tue, 25 Feb 2020 19:46:18 +0800
+ 15.0.1395.4 via Frontend Transport; Tue, 25 Feb 2020 19:46:19 +0800
 From: Jitao Shi <jitao.shi@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
  David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
  <linux-kernel@vger.kernel.org>
-Subject: [PATCH v2 1/4] dt-binds: display: mediatek: add property to control
- mipi tx drive current
-Date: Tue, 25 Feb 2020 19:47:27 +0800
-Message-ID: <20200225114730.124939-2-jitao.shi@mediatek.com>
+Subject: [PATCH v2 2/4] dt-binds: display: mediatek: get mipitx calibration
+ data from nvmem
+Date: Tue, 25 Feb 2020 19:47:28 +0800
+Message-ID: <20200225114730.124939-3-jitao.shi@mediatek.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20200225114730.124939-1-jitao.shi@mediatek.com>
 References: <20200225114730.124939-1-jitao.shi@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 40DE30FEC415DA454AAABC48CB3544E2F670014FB02503C8587B9B19739D33C22000:8
+X-TM-SNTS-SMTP: CE2C1B199D80B5DA7756133ED194042CE19C7AAF0C02D93751A82EB184EDC9BD2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_034742_191682_23DE4CE3 
-X-CRM114-Status: UNSURE (   8.06  )
+X-CRM114-CacheID: sfid-20200225_034750_401388_59DA6B6D 
+X-CRM114-Status: UNSURE (   9.24  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -102,36 +100,36 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add a property to control mipi tx drive current:
-"mipitx-current-drive"
+Add properties to get get mipitx calibration data.
 
 Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 ---
- .../devicetree/bindings/display/mediatek/mediatek,dsi.txt     | 4 ++++
- 1 file changed, 4 insertions(+)
+ .../devicetree/bindings/display/mediatek/mediatek,dsi.txt    | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
-index a19a6cc375ed..780201ddcd5c 100644
+index 780201ddcd5c..7f12eb729791 100644
 --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
 +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt
-@@ -33,6 +33,9 @@ Required properties:
- - #clock-cells: must be <0>;
+@@ -34,6 +34,9 @@ Required properties:
  - #phy-cells: must be <0>.
  
-+Optional properties:
-+- mipitx-current-drive: adjust driving current, should be 1 ~ 0xF
-+
- Example:
+ Optional properties:
++- nvmem-cells: A phandle to the calibration data provided by a nvmem device. If
++               unspecified default values shall be used.
++- nvmem-cell-names: Should be "calibration-data"
+ - mipitx-current-drive: adjust driving current, should be 1 ~ 0xF
  
- mipi_tx0: mipi-dphy@10215000 {
-@@ -42,6 +45,7 @@ mipi_tx0: mipi-dphy@10215000 {
+ Example:
+@@ -45,6 +48,8 @@ mipi_tx0: mipi-dphy@10215000 {
  	clock-output-names = "mipi_tx0_pll";
  	#clock-cells = <0>;
  	#phy-cells = <0>;
-+	mipitx-current-drive = <0x8>;
++	nvmem-cells= <&mipi_tx_calibration>;
++	nvmem-cell-names = "calibration-data";
+ 	mipitx-current-drive = <0x8>;
  };
  
- dsi0: dsi@1401b000 {
 -- 
 2.21.0
 _______________________________________________
