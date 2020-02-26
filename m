@@ -2,71 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BBF8B16F587
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 03:12:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E41816F628
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 04:37:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sj06soTKKY0yI1/T92HrRgl8Ia/9yLP30MhqbAoZE+U=; b=lMnkCuWKVlfEDj
-	NpVK1MYa2MgM02T+mFBYKhgGoQRBOiGRSL1eKumu+9P+Ow4mQHcMwM7GgFl6+Cl5/dGsrBBcjdN4A
-	5lYVNYRWn8V/uN+9hQUh+DW5Jpol6LomaHqxC+jhXJoDPjdP4jVjwtU9RF3cgMQHkl+jXVubmVJUk
-	cabXxabvzRFal/P4Kv+40GW9LMoW2aLztZY8Ula2GjVSOZjkOvMhgFYiC0SSPpPXWMO1FNybTkjlr
-	+l37rFUvXXzI+6mnlZvsqrTA55siuKfBMEBRtZQ4nqe/kr1vAYUiZycrBNAv3U6436FgYvDpEiejl
-	qQlfSEG47epiIWp2GzpQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=UCMV/WwlkceC00WMaAKDp9GJVqvq3WMZLX+19qPr1Sg=; b=jwrAF3gj0CidOf
+	z/N9I4xp+zGUT5rs1q2d7wrGlfkBqj8oHDoc22cKZlnDkjtDriXk6asA82sOUEI1yyCyzGEP8iRwM
+	utLlygxGo1JO0+H+lG4MzM8AwVoNIicwdu0bG/9wbtXWfPe6aUTcWplFAZ2gT+E3BGyR9q8HanqQ1
+	ZFvMjuEnXDEXQmlQf10GW6EKrmmQl21SOmZDXLKLN+oSvTwH6BIgoI95x29AI9ilrib/KzKOK3OO/
+	ZKdDspB3I7OflEjHURZpLXsodd7O1DgW632REFHpl1hAEzBD+SB4Hf+V2dAt9ZdSfkqp1w2m8kjqD
+	nL2ziqOvFQT2W3eRQmSA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6mBB-0004ky-G7; Wed, 26 Feb 2020 02:12:05 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1j6nW4-0005De-GV; Wed, 26 Feb 2020 03:37:44 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6mAv-0004XE-KK; Wed, 26 Feb 2020 02:11:51 +0000
-X-UUID: ff906e24f1014167bd6b73d91c8fb295-20200225
+ id 1j6nW0-0005Cv-VU; Wed, 26 Feb 2020 03:37:42 +0000
+X-UUID: 7f55703d4e334b648e6988c1aa81e03e-20200225
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=5gQw0zrOUHDrCBSICicGAtsSYh73NvfJUD3qiJATi0Y=; 
- b=mRB0wEP/F5vuVB6TSohC4dFayY0au+kOV627Mi5JbYjNnp4KWseNMt7QXL3bT8VjzqtlZO/4aabqvC61R4+kbXNs7G2U1msD30/6xuzKNZu/K38UfihDUTvJz4gerbYpitoott+dLgEuGsfe4VcVNH+6ldtfuilakC3baz0zAGM=;
-X-UUID: ff906e24f1014167bd6b73d91c8fb295-20200225
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <ck.hu@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=cgYMAr+8MfT+9oQtPueYQelaIVbakgIZFZ6xAha24GI=; 
+ b=SxQOgIVOLRjIF+gK7VXGEwRNrXa7ujVEynNqJRvggUXr3PxzQQAQRHoBN8v9NHpM0A4jqhaiNUyDyJRY68gYviAlBVeTT9ULT6vZ1YFbKPVVgj/V/69s3l89/MH0cyRVuPKDrkHG/TA/NmClrKtRNBEmhui6cYvxB8oXFqFerMQ=;
+X-UUID: 7f55703d4e334b648e6988c1aa81e03e-20200225
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <gtk_ruiwang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 623865294; Tue, 25 Feb 2020 18:11:46 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 25 Feb 2020 18:11:43 -0800
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 26 Feb 2020 10:09:08 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
+ with ESMTP id 1215638783; Tue, 25 Feb 2020 19:37:35 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 25 Feb 2020 19:38:38 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 26 Feb 2020 11:36:43 +0800
+Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 26 Feb 2020 10:11:51 +0800
-Message-ID: <1582683102.16944.11.camel@mtksdaap41>
-Subject: Re: [PATCH v8 7/7] drm/mediatek: set dpi pin mode to gpio low to
- avoid leakage current
-From: CK Hu <ck.hu@mediatek.com>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Wed, 26 Feb 2020 10:11:42 +0800
-In-Reply-To: <20200225094057.120144-8-jitao.shi@mediatek.com>
-References: <20200225094057.120144-1-jitao.shi@mediatek.com>
- <20200225094057.120144-8-jitao.shi@mediatek.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ Transport; Wed, 26 Feb 2020 11:35:09 +0800
+From: <gtk_ruiwang@mediatek.com>
+To: <linux-firmware@kernel.org>
+Subject: pull request: linux-firmware: move MT8173 VPU FW to subfolder 
+Date: Wed, 26 Feb 2020 11:36:45 +0800
+Message-ID: <20200226033646.20949-1-gtk_ruiwang@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 23A290A4F303B13413DC230C06E07F5D9F1D9150BAFE1A2424A844D25E8EE80F2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_181149_673464_62D7BF16 
-X-CRM114-Status: GOOD (  14.73  )
+X-CRM114-CacheID: sfid-20200225_193741_022220_A9A93129 
+X-CRM114-Status: UNSURE (   6.66  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -87,111 +83,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- bibby.hsieh@mediatek.com, srv_heupstream@mediatek.com,
- David Airlie <airlied@linux.ie>, huijuan.xie@mediatek.com, stonea168@163.com,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- cawa.cheng@mediatek.com, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
+Cc: gtk_ruiwang@mediatek.com, Maoguang Meng <maoguang.meng@mediatek.com>,
+ Alexandre Courbot <acourbot@chromium.org>, srv_heupstream@mediatek.com,
+ Yunfei Dong <yunfei.dong@mediatek.com>,
+ Longfei Wang <longfei.wang@mediatek.com>, linux-kernel@vger.kernel.org,
+ Tomasz Figa <tfiga@chromium.org>, linux-mediatek@lists.infradead.org,
+ PoChun.Lin@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Jitao:
+Hi linux-firmware maintainers,
 
-On Tue, 2020-02-25 at 17:40 +0800, Jitao Shi wrote:
-> Config dpi pins mode to output and pull low when dpi is disabled.
-> Aovid leakage current from some dpi pins (Hsync Vsync DE ... ).
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  drivers/gpu/drm/mediatek/mtk_dpi.c | 30 ++++++++++++++++++++++++++++++
->  1 file changed, 30 insertions(+)
-> 
-> diff --git a/drivers/gpu/drm/mediatek/mtk_dpi.c b/drivers/gpu/drm/mediatek/mtk_dpi.c
-> index db3272f7a4c4..d6a570c03ee9 100644
-> --- a/drivers/gpu/drm/mediatek/mtk_dpi.c
-> +++ b/drivers/gpu/drm/mediatek/mtk_dpi.c
-> @@ -10,7 +10,9 @@
->  #include <linux/kernel.h>
->  #include <linux/of.h>
->  #include <linux/of_device.h>
-> +#include <linux/of_gpio.h>
->  #include <linux/of_graph.h>
-> +#include <linux/pinctrl/consumer.h>
->  #include <linux/platform_device.h>
->  #include <linux/types.h>
->  
-> @@ -74,6 +76,9 @@ struct mtk_dpi {
->  	enum mtk_dpi_out_yc_map yc_map;
->  	enum mtk_dpi_out_bit_num bit_num;
->  	enum mtk_dpi_out_channel_swap channel_swap;
-> +	struct pinctrl *pinctrl;
-> +	struct pinctrl_state *pins_gpio;
-> +	struct pinctrl_state *pins_dpi;
->  	int refcount;
->  	u32 pclk_sample;
->  };
-> @@ -387,6 +392,9 @@ static void mtk_dpi_power_off(struct mtk_dpi *dpi)
->  	if (--dpi->refcount != 0)
->  		return;
->  
-> +	if (dpi->pinctrl && dpi->pins_gpio)
-> +		pinctrl_select_state(dpi->pinctrl, dpi->pins_gpio);
-> +
->  	mtk_dpi_disable(dpi);
->  	clk_disable_unprepare(dpi->pixel_clk);
->  	clk_disable_unprepare(dpi->engine_clk);
-> @@ -411,6 +419,9 @@ static int mtk_dpi_power_on(struct mtk_dpi *dpi)
->  		goto err_pixel;
->  	}
->  
-> +	if (dpi->pinctrl && dpi->pins_dpi)
-> +		pinctrl_select_state(dpi->pinctrl, dpi->pins_dpi);
-> +
->  	mtk_dpi_enable(dpi);
->  	return 0;
->  
-> @@ -719,6 +730,25 @@ static int mtk_dpi_probe(struct platform_device *pdev)
->  	of_property_read_u32_index(dev->of_node, "pclk-sample", 1,
->  				   &dpi->pclk_sample);
->  
-> +	dpi->pinctrl = devm_pinctrl_get(&pdev->dev);
-> +	if (IS_ERR(dpi->pinctrl)) {
-> +		dpi->pinctrl = NULL;
-> +		dev_dbg(&pdev->dev, "Cannot find pinctrl!\n");
-> +	}
-> +	dpi->pins_gpio = pinctrl_lookup_state(dpi->pinctrl, "gpiomode");
+The following changes since commit efcfa03ae6100dfe523ebf612e03c3a90fc4c794:
 
-When dpi->pinctrl is NULL, you pass it into pinctrl_lookup_state() would
-get something wrong, so call this function only when dpi->pinctrl is not
-NULL.
+  linux-firmware: Update firmware file for Intel Bluetooth AX201 (2020-02-24 07:43:42 -0500)
 
-> +	if (IS_ERR(dpi->pins_gpio)) {
-> +		dpi->pins_gpio = NULL;
-> +		dev_dbg(&pdev->dev, "Cannot find pinctrl gpiomode!\n");
-> +	}
-> +	if (dpi->pinctrl && dpi->pins_gpio)
-> +		pinctrl_select_state(dpi->pinctrl, dpi->pins_gpio);
-> +
-> +	dpi->pins_dpi = pinctrl_lookup_state(dpi->pinctrl, "dpimode");
+are available in the Git repository at:
 
-Ditto.
+  https://github.com/ruiwang-mtk/linux_fw_vpu.git
 
-Regards,
-CK
+for you to fetch changes up to e5caf7b0f56350704836ec63845d398a9faca506:
 
-> +	if (IS_ERR(dpi->pins_dpi)) {
-> +		dpi->pins_dpi = NULL;
-> +		dev_dbg(&pdev->dev, "Cannot find pinctrl dpimode!\n");
-> +	}
-> +
->  	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->  	dpi->regs = devm_ioremap_resource(dev, mem);
->  	if (IS_ERR(dpi->regs)) {
+  mediatek: move MT8173 VPU FW to subfolder (2020-02-26 11:02:00 +0800)
+
+----------------------------------------------------------------
+gtk_ruiwang (1):
+      mediatek: move MT8173 VPU FW to subfolder
+
+ vpu_d.bin => mediatek/mt8173/vpu_d.bin | Bin
+ vpu_p.bin => mediatek/mt8173/vpu_p.bin | Bin
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename vpu_d.bin => mediatek/mt8173/vpu_d.bin (100%)
+ rename vpu_p.bin => mediatek/mt8173/vpu_p.bin (100%)
 
 _______________________________________________
 Linux-mediatek mailing list
