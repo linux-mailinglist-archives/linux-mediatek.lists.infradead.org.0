@@ -2,74 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F3AF16F48E
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 01:56:18 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 369FE16F50F
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 02:32:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yaAA0JsttdDGiqrjVcy/BxacpPMxxxmSUADcw4dm5lg=; b=tKWVdW4PlRQp1W
-	8WQkbbwtuFjlSJyVLTsX69NlA+cjw+OgoFmANwtWVFDCFMkd8hy5FIWtFrjpjplpPZ+2v2Ewo2R0B
-	gyZetk8P7n5EnscNat2yrQeqC1RUedUkvfFCDJUa1rWfrOvKZEY/0ZTzE2rkPM8EJSzoHxKlsh1EC
-	0Qoqua6WfFABRezUmySOT9OQGRa1x43dAigJCVNk9ugFmgqn0NOMWlSEPJStVCnO4TrGbQ9BQKMqq
-	Rd26VT6nOoZHzwZduTkuOqlbSezkMiMM6sZE3Cv8edtilcBMMJnt2DoT6vwISZ7VdWO/GjKOnPAR6
-	oB8NAlfYcuy5rJwh5rkw==;
+	List-Owner; bh=BaHvQugbQi+U3mm7JUUni0Zstd7Zd8CDARipH/rSO4A=; b=OMuqdVgSHKnQm2
+	i6J1oLarPbkEkti3dVx4RufkhAOUIvPyczdLhteQOE1QuthH9yV4aRNzue9s/Yrzl/Xm7IFHDok1I
+	PyYxaEgnlkGkKYhKvlVsYrWbuJIaOTMdqK9uwH5CQGa7U+004UKHJhGJ45a56NQQ/E9tuSdZAte/D
+	sp5hjB5GI0YG/QSLe5u/35WO8wusDG6xlX1sE+EXDqpXbH7AXecOX3J2k+ZKhdYCHbx2r1KumJJk8
+	aeYcatD8IYHM3TfWAu1qKKLUj4igWfBDxG1Y3h0ss/+HzD16aTKdWaEXSJ0g/VHs90MUPzzxom75I
+	y788aL/hg4tliixvdg7A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6kze-0005lx-8G; Wed, 26 Feb 2020 00:56:06 +0000
-Received: from mail-qt1-x843.google.com ([2607:f8b0:4864:20::843])
+	id 1j6lYE-0005mZ-W1; Wed, 26 Feb 2020 01:31:50 +0000
+Received: from mail-ot1-x342.google.com ([2607:f8b0:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6kza-0005l2-IA
- for linux-mediatek@lists.infradead.org; Wed, 26 Feb 2020 00:56:03 +0000
-Received: by mail-qt1-x843.google.com with SMTP id l21so1063304qtr.8
- for <linux-mediatek@lists.infradead.org>; Tue, 25 Feb 2020 16:56:01 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ id 1j6lYB-0005lj-NZ; Wed, 26 Feb 2020 01:31:49 +0000
+Received: by mail-ot1-x342.google.com with SMTP id w6so1493047otk.0;
+ Tue, 25 Feb 2020 17:31:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=KTr07x+ZuW+Wkx10CmLSTlKU+6ax9EaUyaBXKAF3OqM=;
- b=Y7BmXd6Mfp+6AZ5v7tzuyEct+NldmkDhFbkaCIoOl6/SfR059Z2NK44rQkbVc+4j7t
- n0RrGob1lJqy4jSvVTBHC3x7e53bCvZCs0af4K9zwmRDwcKU3x3vY+Goiu220sgiSxhg
- LkPCOLYG0N6aE3fNLH+xw2IiIErd9z+gBVRxo=
+ :cc; bh=m69OUPpDCFCPc/oa2eyFJo4I++z0wlZi/kprUKpLj3Y=;
+ b=nA2f+OLzY/0xumh5TuXz4ftOJdyLWFEddIBk66xJxkReDm94lliWkpwvPZ4a2z3aL+
+ 7F+sqVUc1AzH4De2HzKgueukRv45rp0BhL1+N00JyaUl0pf8w2HajjUgeCkoJF7IJOlA
+ ggEwGRbikFgBXKyJuSgVOcXhbcpJCTQKeyo/nw/xbjt6rWvnKRe6cB5I1Zh31qnj988D
+ ZkrhLAL1NuHixK58f6i/pdi/eHNF5m+KjXIhJbAzoqxI3ZfMK2b0tUyDtQ86XgSM/Yq1
+ 8gK34CHyXzjHzraPQJFoD50QgHtNUe9dEYNAgyQra9e7EQzFbKF/kURdvfMeW7/ka4B6
+ +tGA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=KTr07x+ZuW+Wkx10CmLSTlKU+6ax9EaUyaBXKAF3OqM=;
- b=aJpR5ZsLm2zYAaeTI2LXP/RUAFRf/KUDgi8clmoJzEWRPkB1MwSkzo+gRXBbwJ/7CW
- vCVAXOBI7UzbdtqGVFdEl0q1yQjFDC+TxXaS1b+A7IIfUG0vd3xgiZF8szazP/iubKl9
- BbW/nLjP3aEc23KECli1DinsxRRyRS0lBkFrcjXn7CRtmj6YzTArjjNPUvJJdswho9sq
- ztYB+TzIRzCeUsSx/hyyucnl35Ug8HOVIc36K9Z/J8jWooa5KpKLEVXlqIyWsH6fIKzn
- K/oRX9v2N8Qsvi28upH+elLAPHgMYvn5YmlOqFAUO18YLtn5uajx68eCsHC7lWlpyS4L
- 5DTQ==
-X-Gm-Message-State: APjAAAU43Adrd9gerMywDis4m4fdBs/pUEiiYBFsDpfzQnLCKBxOkCkF
- 4Jy22TQOEUyNUxi4pNn/CmaCzOb0dLPBrX/67AX6DA==
-X-Google-Smtp-Source: APXvYqwn/doZ3Sl5MivNf7aeBY0i9IjKThPIXnCkYsjm6+vHV5atNhFSLqXf91LmG+mgvcdhqR+658LdmJfFTgy7fYc=
-X-Received: by 2002:ac8:72d6:: with SMTP id o22mr1774873qtp.174.1582678561028; 
- Tue, 25 Feb 2020 16:56:01 -0800 (PST)
+ bh=m69OUPpDCFCPc/oa2eyFJo4I++z0wlZi/kprUKpLj3Y=;
+ b=Np2/0CSAjUn6qZ6aih/3NLkJo7yTXkpoz6qrUEQsSsiHX33QlzgHEOj2tvf8oPftAy
+ 6Kih9+n8Jr0JShrV4Gfu/+kutg3oRiPNiDVqo9e7CxSkSPA+pkK5gNAC2H75+vASndiB
+ 6WNKFrtoaRDR4hv3Kq0T8hGDD//UO6Vgf4+U6IkguZwGZ+PIMANxaWzuIXWWmMANmrlI
+ jx+XFviKUV4pbz43LtAh9dQpTpMazSqLpjGBXAfkPT75I5sds3tPqlR8d6/dbLD1fCGm
+ x9p89lEV2QQyWSPXlZiHO3U3fwqkFiHSvpa61KrWVJNEvTEMXeP5UR88gNsbkcvcJeME
+ vTjQ==
+X-Gm-Message-State: APjAAAVL/4PfjELXC6mCyro07Dtt6CWVOfM/WeQlkF8sdoyLp+MrUO6T
+ G4F6zYyzpyRt3FRM5PBypEHQdmXsihcvfV3x5xI=
+X-Google-Smtp-Source: APXvYqx4k8rPNcqHzRcAhaiCXWJ4jVniE5gHoAh/s13hkt4+EPZPVv3r7htQo04hdVYPzVU1U3PK6wlRKTZrD779bTc=
+X-Received: by 2002:a9d:6a4f:: with SMTP id h15mr1129292otn.86.1582680704677; 
+ Tue, 25 Feb 2020 17:31:44 -0800 (PST)
 MIME-Version: 1.0
-References: <20200207052627.130118-1-drinkcat@chromium.org>
- <20200207052627.130118-2-drinkcat@chromium.org> <20200225171613.GA7063@bogus>
-In-Reply-To: <20200225171613.GA7063@bogus>
-From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Wed, 26 Feb 2020 08:55:50 +0800
-Message-ID: <CANMq1KAVX4o5yC7c_88Wq_O=F+MaSN_V4uNcs1nzS3wBS6A5AA@mail.gmail.com>
-Subject: Re: [PATCH v4 1/7] dt-bindings: gpu: mali-bifrost: Add Mediatek MT8183
-To: Rob Herring <robh@kernel.org>, Nick Fan <nick.fan@mediatek.com>, 
- Sj Huang <sj.huang@mediatek.com>
+References: <20200215065826.739102-1-gch981213@gmail.com>
+ <20200218125557.GD4232@sirena.org.uk>
+ <CAJsYDVL03KJv7eewGekBPCfpbOuTX0tJ6qZaydvJnBDzZ5vEwg@mail.gmail.com>
+ <20200225173137.GA31830@bogus>
+In-Reply-To: <20200225173137.GA31830@bogus>
+From: Chuanhong Guo <gch981213@gmail.com>
+Date: Wed, 26 Feb 2020 09:31:33 +0800
+Message-ID: <CAJsYDVKqcd-ytLLf5zKqs8DfjPAa5ELCX53OiPDAi-tDnLd=Eg@mail.gmail.com>
+Subject: Re: [PATCH 0/2] rewrite mtk-quadspi spi-nor driver with spi-mem
+To: Rob Herring <robh@kernel.org>, Mark Brown <broonie@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_165602_603393_237226CD 
-X-CRM114-Status: GOOD (  13.63  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200225_173147_793921_10BD9D1E 
+X-CRM114-Status: GOOD (  13.70  )
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.3 URIBL_RHS_DOB          Contains an URI of a new domain (Day Old Bread)
+ [URIs: bootlin.com]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:843 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [gch981213[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [gch981213[at]gmail.com]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -77,7 +86,6 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,106 +98,50 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>,
- Devicetree List <devicetree@vger.kernel.org>,
- Ulf Hansson <ulf.hansson@linaro.org>,
- Tomeu Vizoso <tomeu.vizoso@collabora.com>, David Airlie <airlied@linux.ie>,
- lkml <linux-kernel@vger.kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
- dri-devel <dri-devel@lists.freedesktop.org>,
- Steven Price <steven.price@arm.com>, Mark Brown <broonie@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>,
- Daniel Vetter <daniel@ffwll.ch>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm Mailing List <linux-arm-kernel@lists.infradead.org>
+ "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, Vignesh Raghavendra <vigneshr@ti.com>,
+ Richard Weinberger <richard@nod.at>, open list <linux-kernel@vger.kernel.org>,
+ linux-spi@vger.kernel.org, linux-mtd@lists.infradead.org,
+ Miquel Raynal <miquel.raynal@bootlin.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-+Nick Fan +Sj Huang @ MTK
+Hi!
 
-On Wed, Feb 26, 2020 at 1:16 AM Rob Herring <robh@kernel.org> wrote:
+On Wed, Feb 26, 2020 at 1:31 AM Rob Herring <robh@kernel.org> wrote:
 >
-> On Fri, Feb 07, 2020 at 01:26:21PM +0800, Nicolas Boichat wrote:
-> > Define a compatible string for the Mali Bifrost GPU found in
-> > Mediatek's MT8183 SoCs.
+> On Thu, Feb 20, 2020 at 07:58:06AM +0800, Chuanhong Guo wrote:
+> > Hi!
 > >
-> > Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> > Reviewed-by: Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
-> > ---
+> > On Tue, Feb 18, 2020 at 8:55 PM Mark Brown <broonie@kernel.org> wrote:
+> > > This is an ABI break so you shouldn't be doing this, if the existing
+> > > binding works it should continue to work.
 > >
-> > v4:
-> >  - Add power-domain-names description
-> >    (kept Alyssa's reviewed-by as the change is minor)
-> > v3:
-> >  - No change
-> >
-> >  .../bindings/gpu/arm,mali-bifrost.yaml        | 25 +++++++++++++++++++
-> >  1 file changed, 25 insertions(+)
-> >
-> > diff --git a/Documentation/devicetree/bindings/gpu/arm,mali-bifrost.yaml b/Documentation/devicetree/bindings/gpu/arm,mali-bifrost.yaml
-> > index 4ea6a8789699709..0d93b3981445977 100644
-> > --- a/Documentation/devicetree/bindings/gpu/arm,mali-bifrost.yaml
-> > +++ b/Documentation/devicetree/bindings/gpu/arm,mali-bifrost.yaml
-> > @@ -17,6 +17,7 @@ properties:
-> >      items:
-> >        - enum:
-> >            - amlogic,meson-g12a-mali
-> > +          - mediatek,mt8183-mali
-> >            - realtek,rtd1619-mali
-> >            - rockchip,px30-mali
-> >        - const: arm,mali-bifrost # Mali Bifrost GPU model/revision is fully discoverable
-> > @@ -62,6 +63,30 @@ allOf:
-> >            minItems: 2
-> >        required:
-> >          - resets
-> > +  - if:
-> > +      properties:
-> > +        compatible:
-> > +          contains:
-> > +            const: mediatek,mt8183-mali
-> > +    then:
-> > +      properties:
-> > +        sram-supply: true
-> > +        power-domains:
-> > +          description:
-> > +            List of phandle and PM domain specifier as documented in
-> > +            Documentation/devicetree/bindings/power/power_domain.txt
-> > +          minItems: 3
-> > +          maxItems: 3
-> > +        power-domain-names:
-> > +          items:
-> > +            - const: core0
-> > +            - const: core1
-> > +            - const: 2d
+> > The missing spi-max-frequency is the only part preventing old
+> > device tree to work with this driver.
+> > If the goal is to make existing dt binding work, I could patch dt using
+> > of_add_property in v2. I saw similar device tree patching for legacy
+> > bindings in pinctrl-single driver.
+
+I just noticed that of_add_property isn't a exported symbol, which means that
+device tree patching isn't possible unless driver is builtin.
+
 >
-> AFAIK, there's no '2d' block in bifrost GPUs. A power domain for each
-> core group is correct though.
+> You should should really only need 'spi-max-frequency' if the max freq
+> is less than the minimum of the host and device max freq.
 
-Good question... Hopefully Nick/SJ@MTK can comment, the non-upstream DTS has:
-gpu: mali@13040000 {
-compatible = "mediatek,mt8183-mali", "arm,mali-bifrost";
-power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE0>;
-...
-}
+But current spi framework forces that a "spi-max-frequency" property
+is present. [0]
+Should we patch spi framework then?
 
-gpu_core1: mali_gpu_core1 {
-compatible = "mediatek,gpu_core1";
-power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_CORE1>;
-};
-
-gpu_core2: mali_gpu_core2 {
-compatible = "mediatek,gpu_core2";
-power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-};
-
-So I picked core0/core1/2d as names, but looking at this, it's likely
-core2 is more appropriate (and MT8183_POWER_DOMAIN_MFG_2D might just
-be a internal/legacy name, if there is no real 2d domain).
-
-Thanks.
-
-> Rob
+[0] https://elixir.bootlin.com/linux/latest/source/drivers/spi/spi.c#L1951
+-- 
+Regards,
+Chuanhong Guo
 
 _______________________________________________
 Linux-mediatek mailing list
