@@ -2,60 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A37416F6FE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 06:23:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2867D16F6EC
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 06:14:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5SSKWHEnQx3oMpKyV3XHGLlTWMFvewu448Vcqek36n0=; b=m6KbVo/Fb/fVte
-	6MCz4R0w0JMP+FxZTx2wkWsb6GNsSO3TLdzKO/K/VQOIajhOHQTcQ/eVI3HMPNnMdVuNseeYr3ksk
-	jRUO8AXLmDJDaGQtkWmxuIlo/0A4eIrZ+B/TO637gKetCotMahQWM/Lp4tNDP2JQCiBvIToP6iLHb
-	99xQrggT5YBRhh9LzJVKdGa5ezR5WOCCd6lW2U/OAIvthBQ93aVwhX8BPdryatWeFkKPUg3ytCGBo
-	yuLiRsyR4QNd0xz6qs/kLVlWxaim47SRszbVXhLqSYMsfbsnZokQ6f8LQn7Qkt5pp8nIbUuUvTgDq
-	3q68Ui4V1PezquNXlVGA==;
+	List-Owner; bh=VGyIV/HqMc7f0mC5G4gGM9bQpY5mq04+EjY5XkQtOG4=; b=M2IUPuv0L13dj9
+	qKTSO1nVmlipXmCckDSH4GIsmnhJNptjkFQIKS+/HM/K4Y/U/zZ14nWgJeCrb3yg2Df6NJXRpNVWU
+	xCxcflyQvi3DCWwHXhKTSVVoitj8WUXKuDBc0cinr4HPlOKdWt4GHZYxL49mFs8CHUpOYicdupVJa
+	bDO5UeZ7APCxcdsPVmBfXm1m3DPrBd9t82l0li/lYg5S1nQR/aziW8742naPwf5cN3iuh/rzSC2Tv
+	3mIeb0x3xPIDEVIPzfFOjeV1CoMYm6kjdywE27Ji917Z2zcUPCFiilq9HEsjInATtXsnBMepW7Ijs
+	COB+KxxBpQP2NgcHgBMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6pAc-0006l7-ID; Wed, 26 Feb 2020 05:23:42 +0000
+	id 1j6p1A-0003Eq-RS; Wed, 26 Feb 2020 05:13:56 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6pAK-0006b5-AE; Wed, 26 Feb 2020 05:23:26 +0000
-X-UUID: a0d40d3be7fb4975b2030ba4bf241712-20200225
+ id 1j6p0j-0002oZ-Lc; Wed, 26 Feb 2020 05:13:31 +0000
+X-UUID: 6c84fa4d899745dba311b4455f539306-20200225
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=uxsCDf0ysT4LH+OE1Me7ZG/35nON8l37J7ezy9Y74SI=; 
- b=PsuPeBDjguCSfPGwXXN6Iov2zzjuSk5we5KnuWgFjQ+Amd1gvQ5gPYSflvXSm8avY1ymEI/xPZ3RcIYdQpVLV41G9L+/1Hcd8UN2Ysx0Nja4eW3N3aB7pwwBmBU0AKvQs/Bufh2ILfo7wZjoulXiI+zUdQPM3bKLkvh5qDtKDrY=;
-X-UUID: a0d40d3be7fb4975b2030ba4bf241712-20200225
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=WprY2p001dM2lLokmS7+bS79wDilKJUSlHK85cBS7ig=; 
+ b=WzsCBCmuu+zP13lR0zHB8p9110EKe+HZZHudEYv4v7DtnkoBLwhwOMObUkZsmvDCae82RUEYqy1F63/Be8eexmyXvfXiSxSQ++ogAY/XQAjuPzAesboKjZZwkLzzhPchWj4DcMhjhZFvUyoixekw3u5+BFmNF4RzZHjhL5V9V5M=;
+X-UUID: 6c84fa4d899745dba311b4455f539306-20200225
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <ran.bi@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 867841389; Tue, 25 Feb 2020 21:23:23 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 25 Feb 2020 21:14:26 -0800
+ with ESMTP id 79662373; Tue, 25 Feb 2020 21:13:24 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 25 Feb 2020 21:13:21 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 26 Feb 2020 13:14:07 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 26 Feb 2020 13:12:28 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 26 Feb 2020 13:13:27 +0800
+ Transport; Wed, 26 Feb 2020 13:13:28 +0800
 From: Ran Bi <ran.bi@mediatek.com>
 To: Alexandre Belloni <alexandre.belloni@bootlin.com>, Rob Herring
  <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v3 3/4] arm64: dts: add RTC nodes for MT2712
-Date: Wed, 26 Feb 2020 13:13:02 +0800
-Message-ID: <20200226051303.22560-4-ran.bi@mediatek.com>
+Subject: [PATCH v3 4/4] MAINTAINERS: add MT2712 RTC files
+Date: Wed, 26 Feb 2020 13:13:03 +0800
+Message-ID: <20200226051303.22560-5-ran.bi@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200226051303.22560-1-ran.bi@mediatek.com>
 References: <20200226051303.22560-1-ran.bi@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_212324_363089_0B5B7D62 
-X-CRM114-Status: GOOD (  10.15  )
+X-CRM114-CacheID: sfid-20200225_211329_752306_A7057852 
+X-CRM114-Status: UNSURE (   9.53  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -104,30 +105,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch add device node for MT2712 RTC.
+This patch add MT2712 RTC related files to MAINTAINERS file.
 
 Signed-off-by: Ran Bi <ran.bi@mediatek.com>
 ---
- arch/arm64/boot/dts/mediatek/mt2712e.dtsi | 6 ++++++
- 1 file changed, 6 insertions(+)
+ MAINTAINERS | 2 ++
+ 1 file changed, 2 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-index 43307bad3f0d..31166c17c39a 100644
---- a/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt2712e.dtsi
-@@ -303,6 +303,12 @@ uart5: serial@1000f000 {
- 		status = "disabled";
- 	};
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 38fe2f3f7b6f..57549356e731 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -1995,7 +1995,9 @@ M:	Sean Wang <sean.wang@mediatek.com>
+ L:	linux-arm-kernel@lists.infradead.org (moderated for non-subscribers)
+ L:	linux-mediatek@lists.infradead.org (moderated for non-subscribers)
+ S:	Maintained
++F:	Documentation/devicetree/bindings/rtc/rtc-mt2712.txt
+ F:	Documentation/devicetree/bindings/rtc/rtc-mt7622.txt
++F:	drivers/rtc/rtc-mt2712.c
+ F:	drivers/rtc/rtc-mt6397.c
+ F:	drivers/rtc/rtc-mt7622.c
  
-+	rtc: rtc@10011000 {
-+		compatible = "mediatek,mt2712-rtc";
-+		reg = <0 0x10011000 0 0x1000>;
-+		interrupts = <GIC_SPI 239 IRQ_TYPE_LEVEL_LOW>;
-+	};
-+
- 	spis1: spi@10013000 {
- 		compatible = "mediatek,mt2712-spi-slave";
- 		reg = <0 0x10013000 0 0x100>;
 -- 
 2.25.0
 _______________________________________________
