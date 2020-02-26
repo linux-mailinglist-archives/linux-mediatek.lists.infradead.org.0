@@ -2,61 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 79FAF16F551
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 02:52:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8DA9916F55C
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 02:54:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PSZ4k9vcKE9S3KJwT/8RzH51zyO5BoedADAzO0voYdA=; b=ZUf8elB3MMkqfi
-	Hyk8ap+kg0jfDNT3fdYAmlbFNg9paf79vOEUAvGjBw7hpEVA4J7DF0ED9SH2a5KbetWlPlUaOtRJh
-	BiZkLOvyD3Ju1X9lb7raCN+o5prpMp/4x8mfJaTm93sDEJndheyflqTikc0YdrzEFG6xRdeAqoIrl
-	uD7Y2t/1OgByql1x2jWJWOLEfXa4fa5MeS4ChFS0QlXhHTwdQxm6gzH4Eo2+3It9hYgeUzlGcgf2Q
-	zTU/9qX/f6Drn3T7le15ElSgEN9vWC/aBYmACVczkC/bVKnlJ1V1tSuBLSevFJasMjdT+/7X1tOYz
-	HnG+VvxYd+DYsCmOSfdw==;
+	List-Owner; bh=lc5ZlDCXUWipIrC8N6Ce77ico5Z9CH1klzKIscVbl40=; b=SjsFjxmtZj+ogd
+	zQfGTuesK+g37F5ZPFxwIZU6ZiuZPtM4kCIKsnpem6EPCddJiUNjPYxQed7lnS5/w3CAFgrI+z5gI
+	yh1OJypj0MJFBFtQfrz4Zx0VW1lecERcICBfSg3WTfFGpnaJ7poGujpfrxymUKlzhygCHGeuQAYW3
+	G/6kvM8/Ok8fzyf0VziIe2m4Cqaoojmh6BnWejiyyYJyoJ6+bbVGfaXNaOIK8LhuZBGNwIFooFBbV
+	F0A9UQhou0OxV7FViuEMNj3PSbg5vdFzqKtbkXRhEm7aLfMobPjBjk4VKv3VeHxj7kZRa1sPJDLth
+	Q8KWwZ/+wISMn7Kqn91g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6lsM-0005PM-HK; Wed, 26 Feb 2020 01:52:38 +0000
+	id 1j6luA-0005lH-Bw; Wed, 26 Feb 2020 01:54:30 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6lsB-0005Fs-MW; Wed, 26 Feb 2020 01:52:29 +0000
-X-UUID: 5dae918d64664bd3bb3bd22449050494-20200225
+ id 1j6ltx-0005bm-Ks; Wed, 26 Feb 2020 01:54:18 +0000
+X-UUID: 31d166c5330b46de93fe7a00bfb11e7e-20200225
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=U5dy4O9U1YCjMd3HfOjbAbPOYUVKV3VTQCaAPmr7dCw=; 
- b=ePc0xyAXZnVrqibKNf4RZHSMGGRdn3Xdc5kY6BOrdY9gvxftmUulSAII38L6w1ezwq+jm6iPlc1i996Nsgo1oN2Oop0Bmk6DXw/q7hcg3anMxUzUBdo9KexkKm9AwCNezj27haHts3vArf5LN0Y4Km9aD/YTn5nqjJZf3snbSWA=;
-X-UUID: 5dae918d64664bd3bb3bd22449050494-20200225
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ bh=fmtsNN0uSeJVYQhys/t7YS9quDrs4iXg3LaXINTkW+w=; 
+ b=JElzA3PP4ihq7INUOdakeWAiHRQHgqZbV4WX8RA1Dmepd8u2G6C7t71wdOR3ZY6a+8Hhm6XDarQexNAwKxidtJCKrNbzYq12nsXgW7uybUYSv8bfhkne/COUU2EhzGREXXFZQhWFos/rkTfNMfEbRDl8C3RrcEHUm5cScNq3aUY=;
+X-UUID: 31d166c5330b46de93fe7a00bfb11e7e-20200225
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 228932966; Tue, 25 Feb 2020 17:52:23 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 25 Feb 2020 17:52:59 -0800
+ with ESMTP id 2092947902; Tue, 25 Feb 2020 17:54:14 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 25 Feb 2020 17:54:11 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 26 Feb 2020 09:51:31 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 26 Feb 2020 09:52:50 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 26 Feb 2020 09:52:29 +0800
-Message-ID: <1582681939.16944.4.camel@mtksdaap41>
-Subject: Re: [PATCH v8 1/7] dt-bindings: media: add pclk-sample dual edge
- property
+ Transport; Wed, 26 Feb 2020 09:54:15 +0800
+Message-ID: <1582682045.16944.5.camel@mtksdaap41>
+Subject: Re: [PATCH v8 3/7] dt-bindings: display: mediatek: control dpi pins
+ mode to avoid leakage
 From: CK Hu <ck.hu@mediatek.com>
 To: Jitao Shi <jitao.shi@mediatek.com>
-Date: Wed, 26 Feb 2020 09:52:19 +0800
-In-Reply-To: <20200225094057.120144-2-jitao.shi@mediatek.com>
+Date: Wed, 26 Feb 2020 09:54:05 +0800
+In-Reply-To: <20200225094057.120144-4-jitao.shi@mediatek.com>
 References: <20200225094057.120144-1-jitao.shi@mediatek.com>
- <20200225094057.120144-2-jitao.shi@mediatek.com>
+ <20200225094057.120144-4-jitao.shi@mediatek.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_175227_749619_EDF6F9CD 
-X-CRM114-Status: GOOD (  13.22  )
+X-CRM114-CacheID: sfid-20200225_175417_686593_13BCFA2D 
+X-CRM114-Status: GOOD (  12.37  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,33 +100,42 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 On Tue, 2020-02-25 at 17:40 +0800, Jitao Shi wrote:
-> Some chips's sample mode are rising, falling and dual edge (both
-> falling and rising edge).
-> Extern the pclk-sample property to support dual edge.
+> Add property "pinctrl-names" to swap pin mode between gpio and dpi mode. Set
+> pin mode to gpio oupput-low to avoid leakage current when dpi disable.
 > 
 
 Reviewed-by: CK Hu <ck.hu@mediatek.com>
 
 > Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
 > ---
->  Documentation/devicetree/bindings/media/video-interfaces.txt | 4 ++--
->  1 file changed, 2 insertions(+), 2 deletions(-)
+>  .../devicetree/bindings/display/mediatek/mediatek,dpi.txt  | 7 +++++++
+>  1 file changed, 7 insertions(+)
 > 
-> diff --git a/Documentation/devicetree/bindings/media/video-interfaces.txt b/Documentation/devicetree/bindings/media/video-interfaces.txt
-> index f884ada0bffc..da9ad24935db 100644
-> --- a/Documentation/devicetree/bindings/media/video-interfaces.txt
-> +++ b/Documentation/devicetree/bindings/media/video-interfaces.txt
-> @@ -118,8 +118,8 @@ Optional endpoint properties
->  - data-enable-active: similar to HSYNC and VSYNC, specifies the data enable
->    signal polarity.
->  - field-even-active: field signal level during the even field data transmission.
-> -- pclk-sample: sample data on rising (1) or falling (0) edge of the pixel clock
-> -  signal.
-> +- pclk-sample: sample data on rising (1), falling (0) or both rising and
-> +  falling (2) edge of the pixel clock signal.
->  - sync-on-green-active: active state of Sync-on-green (SoG) signal, 0/1 for
->    LOW/HIGH respectively.
->  - data-lanes: an array of physical data lane indexes. Position of an entry
+> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> index 58914cf681b8..a7b1b8bfb65e 100644
+> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+> @@ -17,6 +17,10 @@ Required properties:
+>    Documentation/devicetree/bindings/graph.txt. This port should be connected
+>    to the input port of an attached HDMI or LVDS encoder chip.
+>  
+> +Optional properties:
+> +- pinctrl-names: Contain "gpiomode" and "dpimode".
+> +  pinctrl-names see Documentation/devicetree/bindings/pinctrlpinctrl-bindings.txt
+> +
+>  Example:
+>  
+>  dpi0: dpi@1401d000 {
+> @@ -27,6 +31,9 @@ dpi0: dpi@1401d000 {
+>  		 <&mmsys CLK_MM_DPI_ENGINE>,
+>  		 <&apmixedsys CLK_APMIXED_TVDPLL>;
+>  	clock-names = "pixel", "engine", "pll";
+> +	pinctrl-names = "gpiomode", "dpimode";
+> +	pinctrl-0 = <&dpi_pin_gpio>;
+> +	pinctrl-1 = <&dpi_pin_func>;
+>  
+>  	port {
+>  		dpi0_out: endpoint {
 
 _______________________________________________
 Linux-mediatek mailing list
