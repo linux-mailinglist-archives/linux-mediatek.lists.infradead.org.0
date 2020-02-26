@@ -2,87 +2,42 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 440D9170227
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 16:19:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7651B1702D0
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 16:40:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Q8NLFpGEaIuJFWWlslf9fA/+QFhvBIybT0+eVS7nj0U=; b=WGniBae3ZhTtIJ
-	dV5+0KT6tE1L9Qg9ZSiGeeq/d6HXO96dz5UeVfqXOYgh7Wtgg/M8W9YIEX/+74sF88gkBOZEhVdNA
-	s3q0OH/19xD2FktRfLuD+TJLIO4gNtiLjd4h7sFmCQLKEb0PrjCjANGU71tkUX94dKUbOtnyeISlk
-	BE7y/AKbpaZRy3xQz2L+XAL1P1Bp+FnQ3+3xIaAy3r070fTsthuhe1xV0wKv9BWZ3xk+nyxl1ec8x
-	GvTBicyvcv4rX4JVxQs3lVi3LpVasmldZZdtoqOgKrIDjOxZ40YlA4U5ZZDfD77vEt7P2m/vzLlPj
-	VY85MjvBITNTR97mrkuA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=0W3BOzSn0EwcdN46fFmvvZpFzncEyz7QLjEBFLVQGm4=; b=sfp+QLTFL+hEnZ
+	0rZkSTrp+8VV12rkff4odogm6gUYDfSM2Inr0denmwBAiFvsHrh3/A/JMn/oOrXoPBoLAu0FeNdDT
+	2BhpvoAz19rzfecES1VSKdd4EixI/75YKbc5mha8GludQubn76veKd/dyGbF85LLARzKhz1yjgnNC
+	g+/fXijJ8J3TpRZJf/sXYmtBXXLz4IyF4NKYBNGGs7k5fid3ctATPdvfdKZeDX7qqXQLdBV0zhrBl
+	atdZqOndNnIeEoK9jPmrQb4zJHj99GrqceNvyLN5sqVBCPHCwYFIYdcETpBzC9z7VfDC8lAWEWg1D
+	mVxwCHZlepVIjtk/oUog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6ySn-0006rC-Fc; Wed, 26 Feb 2020 15:19:05 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6ySX-0006gW-EV; Wed, 26 Feb 2020 15:18:50 +0000
-Received: by mail-ot1-f68.google.com with SMTP id i6so3254888otr.7;
- Wed, 26 Feb 2020 07:18:49 -0800 (PST)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=/6qDOCrFaT70GMrXC62oODapAv06LXpjcPH50sFJvcw=;
- b=a3DP7H1mykUEdpdvJxry4lRhpfmwT0jrFKLJ6HfbG+QL3BN9LTvz4wdYOj3i94wZTm
- ad/95cDYX1YYRjAoYExsmgmPJTsNXhqQITyxZmetv02foDJtYOHusc3VZtG54Lj4KsMV
- +lOQGMmbtE0PHzpL2mFU8j780Vv61BbDcuDxgqnizkb87i7aFZxJ1gVSChdWNQ4+rXHn
- 8qPO+5H5OvRGCcLRwUcPWb8So+0eIQz2YcUDcl5wFECM7nn10arTLR55163ioNVKlRV/
- CULvmy9bYxFQYvfbDvRYNcnWtba2OA6BN6IROJSUzPQjaYdjGiSnRJ/VMUBUVa0u0UUs
- V0Ng==
-X-Gm-Message-State: APjAAAW8OKKqxV+JB3zDjLg0G+9mQmmjvYeDWMI0xykGYSAXlv6ZxvyI
- QTXp3WEQim8k77AQRmqxgQ==
-X-Google-Smtp-Source: APXvYqxBufLVc2f4vqiKPF5cMNUCr0xqWnYB6+zcMOrJYU0lwVw8DbBaOxQKyHF5SXgHCNdsMk2NOg==
-X-Received: by 2002:a9d:638a:: with SMTP id w10mr3650110otk.130.1582730328475; 
- Wed, 26 Feb 2020 07:18:48 -0800 (PST)
-Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id m68sm886194oig.50.2020.02.26.07.18.47
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 26 Feb 2020 07:18:47 -0800 (PST)
-Received: (nullmailer pid 22097 invoked by uid 1000);
- Wed, 26 Feb 2020 15:18:47 -0000
-Date: Wed, 26 Feb 2020 09:18:47 -0600
-From: Rob Herring <robh@kernel.org>
-To: Bibby Hsieh <bibby.hsieh@mediatek.com>
-Subject: Re: [PATCH v1 1/3] dt-binding: gce: remove atomic_exec in mboxes
- property
-Message-ID: <20200226151847.GA22046@bogus>
-References: <20200217090532.16019-1-bibby.hsieh@mediatek.com>
- <20200217090532.16019-2-bibby.hsieh@mediatek.com>
+	id 1j6ynf-0001z2-TL; Wed, 26 Feb 2020 15:40:39 +0000
+Received: from [2601:1c0:6280:3f0::19c2]
+ by bombadil.infradead.org with esmtpsa (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j6ynR-0001q6-Qg; Wed, 26 Feb 2020 15:40:25 +0000
+Subject: Re: [PATCH v9 3/4] soc: mediatek: Move mt8173 MMSYS to platform driver
+To: Enric Balletbo i Serra <enric.balletbo@collabora.com>,
+ robh+dt@kernel.org, mark.rutland@arm.com, ck.hu@mediatek.com,
+ p.zabel@pengutronix.de, airlied@linux.ie, mturquette@baylibre.com,
+ sboyd@kernel.org, ulrich.hecht+renesas@gmail.com,
+ laurent.pinchart@ideasonboard.com
+References: <20200226105419.632771-1-enric.balletbo@collabora.com>
+ <20200226105419.632771-4-enric.balletbo@collabora.com>
+From: Randy Dunlap <rdunlap@infradead.org>
+Message-ID: <54b3cfed-92f3-54c8-05a1-90ef4c057e4c@infradead.org>
+Date: Wed, 26 Feb 2020 07:40:22 -0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.5.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200217090532.16019-2-bibby.hsieh@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200226_071849_482585_C17E0CF2 
-X-CRM114-Status: UNSURE (   9.38  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
-X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+In-Reply-To: <20200226105419.632771-4-enric.balletbo@collabora.com>
+Content-Language: en-US
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,31 +49,54 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- srv_heupstream@mediatek.com, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel@vger.kernel.org, Houlong Wei <houlong.wei@mediatek.com>,
- Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>, CK HU <ck.hu@mediatek.com>,
- linux-mediatek@lists.infradead.org, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+Cc: Kate Stewart <kstewart@linuxfoundation.org>,
+ Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Minghsiu Tsai <minghsiu.tsai@mediatek.com>, dri-devel@lists.freedesktop.org,
+ Richard Fontana <rfontana@redhat.com>,
+ Collabora Kernel ML <kernel@collabora.com>, linux-clk@vger.kernel.org,
+ Weiyi Lu <weiyi.lu@mediatek.com>, wens@csie.org,
+ linux-arm-kernel@lists.infradead.org, mtk01761 <wendell.lin@mediatek.com>,
+ linux-media@vger.kernel.org, devicetree@vger.kernel.org,
+ frank-w@public-files.de, Seiya Wang <seiya.wang@mediatek.com>,
+ sean.wang@mediatek.com, Houlong Wei <houlong.wei@mediatek.com>,
+ linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
  Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+ Thomas Gleixner <tglx@linutronix.de>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Allison Randal <allison@lohutok.net>, Matthias Brugger <mbrugger@suse.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-kernel@vger.kernel.org,
+ Daniel Vetter <daniel@ffwll.ch>, matthias.bgg@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 17 Feb 2020 17:05:30 +0800, Bibby Hsieh wrote:
-> There is not any client driver using this feature now,
-> so remove it from binding.
-> 
-> Signed-off-by: Bibby Hsieh <bibby.hsieh@mediatek.com>
-> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
-> ---
->  Documentation/devicetree/bindings/mailbox/mtk-gce.txt | 10 ++++------
->  1 file changed, 4 insertions(+), 6 deletions(-)
-> 
+On 2/26/20 2:54 AM, Enric Balletbo i Serra wrote:
+> diff --git a/drivers/soc/mediatek/Kconfig b/drivers/soc/mediatek/Kconfig
+> index 2114b563478c..dcd6481a14d0 100644
+> --- a/drivers/soc/mediatek/Kconfig
+> +++ b/drivers/soc/mediatek/Kconfig
+> @@ -44,4 +44,11 @@ config MTK_SCPSYS
+>  	  Say yes here to add support for the MediaTek SCPSYS power domain
+>  	  driver.
+>  
+> +config MT8173_MMSYS
+> +	bool "MediaTek MT8173 MMSYS Support"
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Hi,
+Can this be tristate instead of bool?
+
+> +	depends on COMMON_CLK_MT8173
+> +	help
+> +	  Say yes here to add support for the MediaTek MT8173 Multimedia
+> +	  Subsystem (MMSYS).
+> +
+>  endmenu
+
+thanks.
+-- 
+~Randy
+
 
 _______________________________________________
 Linux-mediatek mailing list
