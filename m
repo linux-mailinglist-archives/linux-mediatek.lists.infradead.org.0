@@ -2,59 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 16403170089
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 14:56:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7C5EF170133
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 15:30:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=MP9XotVIXxDfk4ek59Xb9YKtT1zg0amdtFmWSuvSsmo=; b=pvgpP0b6HLLnqbtshTyncMXBa
-	10XTPoiLpzwztBVZ7UeDV3Bx3O4jyiuSpMEOTEtqlfujhvRA8pVeJ08kvfIQY+jXe0faKGSzMh9fN
-	kqkR6xdeCqPwWqtEFsrKJ+YnU2A268DUV1WBit5C2eR1uKpJU1SQomG3pNikhCdie/4Aa4fBDzHuW
-	ZpmR5ZNbwc5MonqT9rcCzTu78TKOK8scv6VL17egpyXMKO+hZYPJPc7hPl9XZUcvW318aED4YkYp8
-	afLA5NDLYsOMPMub2jrLylMzss+cYL0u4rfffl8cjGVOMoJhJHys7gZbzmDDjiQk4f3OvrpuZL/n5
-	pllR976jg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Qk4qIa6wNfvVOUAfbiOqsDHyBP2Wz3zjS3nQNDIn/+A=; b=aRmrH/1QEKU2K4
+	u1kQ6FY2kfKKaXsjbB8i7fwmUDgI73HGReHJCQC7DRGmvn0gfXz9bvqP7UZUZPWEyOIvoKNzhWSvp
+	/6+BghDBvE7pxBdI7tIn4gc37wIyuNARebRjl4SHdmSXatBvFRPyYdQRDjaxAf67WwIRmFJnAao4H
+	faYCD8j6SDtEPq0jeVo0GhZ2i/l+jdfQrs1/dBWFtDfFaoVCNLoWXIOWuKICVv46DYlMFDfjCnq0l
+	+tip764dZwAm8tbwnULe8MIqEjNXnc7iI279uTFOynY6J3Oj103pAAV8Mw1yHFmUJQ+SoP0H2dRlk
+	5b72WokXbPZjaLw+2qzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6xAd-00070C-Go; Wed, 26 Feb 2020 13:56:15 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6xAR-0006sA-Am; Wed, 26 Feb 2020 13:56:04 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 4E36C30E;
- Wed, 26 Feb 2020 05:56:02 -0800 (PST)
-Received: from [10.1.196.37] (e121345-lin.cambridge.arm.com [10.1.196.37])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id B1C723F9E6;
- Wed, 26 Feb 2020 05:55:55 -0800 (PST)
-Subject: Re: [PATCH v3 4/4] drm/panfrost: Register to the Energy Model with
- devfreq device
-To: Lukasz Luba <lukasz.luba@arm.com>, Rob Herring <robh@kernel.org>
-References: <20200221194731.13814-1-lukasz.luba@arm.com>
- <20200221194731.13814-5-lukasz.luba@arm.com>
- <CAL_JsqJ1D6Cf2cxdskDS2JCEe8ja6uUeoSpA3i-wxNgi=S1SYA@mail.gmail.com>
- <96d3287c-4559-7c4a-2f99-0a3aad9e42f6@arm.com>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <67aef493-82ab-e3e0-7564-610ef8756b48@arm.com>
-Date: Wed, 26 Feb 2020 13:55:53 +0000
-User-Agent: Mozilla/5.0 (X11; Linux aarch64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.0
+	id 1j6xhg-0005Cd-Cm; Wed, 26 Feb 2020 14:30:24 +0000
+Received: from mail.kernel.org ([198.145.29.99])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j6xhT-00052D-Pv; Wed, 26 Feb 2020 14:30:13 +0000
+Received: from mail-qk1-f170.google.com (mail-qk1-f170.google.com
+ [209.85.222.170])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 2028A2468D;
+ Wed, 26 Feb 2020 14:30:09 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1582727409;
+ bh=FTavrhRvD3/cAi6dtPOZfJq/yT2BV2F/rKEuNXloXiw=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=UgKEAOVPqCjEnalnG/MJpctIDGJWpzc2VZ3liqn3FBmTSyRcGR6x0QQxl+hDA8K7m
+ 0N/mJRIgoKmlNj5OsWGP15UXTpGPisYFxZ62tjsvVR5qzCWQS5DYFn4Ij5KrMu0G8J
+ JQK2IWg89VZASe7ljBjnu5MKAJcRa0Sws1CB9+HQ=
+Received: by mail-qk1-f170.google.com with SMTP id z19so2775716qkj.5;
+ Wed, 26 Feb 2020 06:30:09 -0800 (PST)
+X-Gm-Message-State: APjAAAViYQk2kYB7PXJyYSHGcRIKOOBIUmuumfysJ9PoPMgWvnZYy9a+
+ u7mlWDzI0rGtqxT7ij16lI/eichO8Bp6LOhTYQ==
+X-Google-Smtp-Source: APXvYqx8P7fHvCOhAoSOWA8DnUwX4yyOHQiABO8b/bbXdZCaWKAxi3z6qQ+ITbxwwNfVk+W8jZLhM9/ZJQIl6x+NuTM=
+X-Received: by 2002:a05:620a:12a3:: with SMTP id
+ x3mr2439558qki.254.1582727408199; 
+ Wed, 26 Feb 2020 06:30:08 -0800 (PST)
 MIME-Version: 1.0
-In-Reply-To: <96d3287c-4559-7c4a-2f99-0a3aad9e42f6@arm.com>
-Content-Language: en-GB
+References: <20200221053802.70716-1-evanbenn@chromium.org>
+ <20200221163717.v2.1.I02ebc5b8743b1a71e0e15f68ea77e506d4e6f840@changeid>
+ <CAL_JsqL94vtBEmV2gNWx-D==sLiRXjxBBFZS8fw1cR6=KjS7XQ@mail.gmail.com>
+ <CAKz_xw2ETZ5eyNfdWU5cF6Qy23E1NqhpFHoLT_CzUDHWTCbw4Q@mail.gmail.com>
+In-Reply-To: <CAKz_xw2ETZ5eyNfdWU5cF6Qy23E1NqhpFHoLT_CzUDHWTCbw4Q@mail.gmail.com>
+From: Rob Herring <robh+dt@kernel.org>
+Date: Wed, 26 Feb 2020 08:29:56 -0600
+X-Gmail-Original-Message-ID: <CAL_JsqLYpSK6HRT4s=hq153xvU_aiPCq3Hk_oZC-7X7e7daA7Q@mail.gmail.com>
+Message-ID: <CAL_JsqLYpSK6HRT4s=hq153xvU_aiPCq3Hk_oZC-7X7e7daA7Q@mail.gmail.com>
+Subject: Re: [PATCH v2 1/2] dt-bindings: watchdog: Add mt8173, smc-wdt watchdog
+To: Evan Benn <evanbenn@chromium.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200226_055603_459584_077A7FD5 
-X-CRM114-Status: GOOD (  15.15  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200226_063011_869332_498684A9 
+X-CRM114-Status: GOOD (  12.17  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [217.140.110.172 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -66,69 +86,43 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nishanth Menon <nm@ti.com>, juri.lelli@redhat.com,
- Peter Zijlstra <peterz@infradead.org>, Viresh Kumar <viresh.kumar@linaro.org>,
- Liviu Dudau <liviu.dudau@arm.com>, dri-devel <dri-devel@lists.freedesktop.org>,
- Bjorn Andersson <bjorn.andersson@linaro.org>, bsegall@google.com,
- Fabio Estevam <festevam@gmail.com>,
- Morten Rasmussen <Morten.Rasmussen@arm.com>, patrick.bellasi@matbug.net,
- Amit Kucheria <amit.kucheria@verdurent.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Kevin Hilman <khilman@kernel.org>, Daniel Lezcano <daniel.lezcano@linaro.org>,
- Steven Price <steven.price@arm.com>, Chanwoo Choi <cw00.choi@samsung.com>,
- Ingo Molnar <mingo@redhat.com>,
- Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>,
- Zhang Rui <rui.zhang@intel.com>, NXP Linux Team <linux-imx@nxp.com>,
- orjan.eide@arm.com, Sascha Hauer <kernel@pengutronix.de>,
- "open list:THERMAL" <linux-pm@vger.kernel.org>,
- linux-arm-msm <linux-arm-msm@vger.kernel.org>,
- Sascha Hauer <s.hauer@pengutronix.de>, Steven Rostedt <rostedt@goodmis.org>,
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ LINUX-WATCHDOG <linux-watchdog@vger.kernel.org>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ LKML <linux-kernel@vger.kernel.org>,
+ Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
  "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-omap <linux-omap@vger.kernel.org>, mgorman@suse.de,
  "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>, David Airlie <airlied@linux.ie>,
- javi.merino@arm.com, Tomeu Vizoso <tomeu.vizoso@collabora.com>,
- qperret@google.com, Stephen Boyd <sboyd@kernel.org>,
- "Rafael J. Wysocki" <rjw@rjwysocki.net>, Andy Gross <agross@kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Daniel Vetter <daniel@ffwll.ch>, Sudeep Holla <sudeep.holla@arm.com>,
- Shawn Guo <shawnguo@kernel.org>, Dietmar.Eggemann@arm.com
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+ <linux-arm-kernel@lists.infradead.org>,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Julius Werner <jwerner@chromium.org>,
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ "David S. Miller" <davem@davemloft.net>, Guenter Roeck <linux@roeck-us.net>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gMjYvMDIvMjAyMCAxMDowNiBhbSwgTHVrYXN6IEx1YmEgd3JvdGU6ClsuLi5dCj4+PiBAQCAt
-MTE4LDYgKzEyMCw3IEBAIHZvaWQgcGFuZnJvc3RfZGV2ZnJlcV9maW5pKHN0cnVjdCBwYW5mcm9z
-dF9kZXZpY2UgCj4+PiAqcGZkZXYpCj4+PiDCoCB7Cj4+PiDCoMKgwqDCoMKgwqDCoMKgIGlmIChw
-ZmRldi0+ZGV2ZnJlcS5jb29saW5nKQo+Pj4gwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKg
-wqAgZGV2ZnJlcV9jb29saW5nX3VucmVnaXN0ZXIocGZkZXYtPmRldmZyZXEuY29vbGluZyk7Cj4+
-PiArwqDCoMKgwqDCoMKgIGRldl9wbV9vcHBfb2ZfdW5yZWdpc3Rlcl9lbSgmcGZkZXYtPnBkZXYt
-PmRldik7Cj4+PiDCoMKgwqDCoMKgwqDCoMKgIGRldl9wbV9vcHBfb2ZfcmVtb3ZlX3RhYmxlKCZw
-ZmRldi0+cGRldi0+ZGV2KTsKPj4KPj4gRG9lcyBpdCBtYWtlIHNlbnNlIHRvIGtlZXAgdGhpcyAo
-YW5kIHRoZSByZWdpc3RyYXRpb24gc2lkZSkgYXMKPj4gc2VwYXJhdGUgY2FsbHM/IFBlcmhhcHMg
-dGhlcmUncyBzb21lIG9yZGVyaW5nIHJlcXVpcmVtZW50IHdpdGgKPj4gZXZlcnl0aGluZyBiZXR3
-ZWVuIGRldl9wbV9vcHBfb2ZfYWRkX3RhYmxlKCkgYW5kCj4+IGRldl9wbV9vcHBfb2ZfcmVnaXN0
-ZXJfZW0oKT8KPiAKPiBZZXMsIGRldl9wbV9vcHBfb2ZfcmVnaXN0ZXJfZW0oKSB1c2VzIGVtX2Rh
-dGFfY2FsbGJhY2sgd2hpY2ggb3BlcmF0ZXMKPiBvbiBPUFBzIHRvIGNhbGN1bGF0ZSBwb3dlciB2
-YWx1ZXMgYW5kIGNvc3RzLCBzbyB0aGUgdGhlIE9QUCB0YWJsZSBzaG91bGQKPiBiZSBhbHJlYWR5
-IHRoZXJlLgo+IAo+Pgo+PiBXaGlsZSB5b3UncmUganVzdCBhZGRpbmcgMiBsaW5lcywgaXQgc2Vl
-bXMgdGhlcmUncyBhIGxvdCBvZiBjb21wbGV4aXR5Cj4+IGV4cG9zZWQgdG8gdGhlIGRyaXZlciBq
-dXN0IHRvIGluaXRpYWxpemUgZGV2ZnJlcS9vcHAuCj4gCj4gSXQgZGVwZW5kcywgZm9yIGV4YW1w
-bGUgZGV2ZnJlcSBkZXZpY2VzIGxpa2UgYnVzZXMgd291bGQgbGlrZWx5IG5ldmVyCj4gdXNlIHRo
-ZSBlbmVyZ3kgbW9kZWwuIFBvdGVudGlhbCBjbGllbnRzIHdvdWxkIGJlIEdQVXMsIERTUHMsIElT
-UHMuCgpTdGlsbCwgaXQgc2VlbXMgbGVzcyB0aGFuIGlkZWFsIGZvciBldmVyeSBjbGllbnQgdG8g
-aGF2ZSB0byByZW1lbWJlciB0byAKbWFrZSBhbGwgdGhlc2UgaW5kaXZpZHVhbCBjYWxscywgYWxs
-IGluIHRoZSByaWdodCBvcmRlciAoZXNwZWNpYWxseSB3aGVuIAppdCBjb21lcyB0byB1bmRvaW5n
-IHRoZW0gaW4gZmFpbHVyZSBwYXRocykuCgpJIGhhdmVuJ3QgcXVpdGUgZ3Jhc3BlZCB3aGV0aGVy
-IHRoZSBlbmVyZ3kgbW9kZWwgaXMgY29uY2VwdHVhbGx5ICJvd25lZCIgCmJ5IHRoZSBPUFAgdGFi
-bGUgb3IgYnkgdGhlIGNvb2xpbmcgZGV2aWNlLCBidXQgZWl0aGVyIHdheSBpdCB3b3VsZCBzZWVt
-IAp0byBiZSBhIG11Y2ggbmljZXIgQVBJIGlmIHRoZXJlIHdlcmUgc2ltcGx5IGFuIGFkZGl0aW9u
-YWwgIndpdGggZW5lcmd5IAptb2RlbCIgdmFyaWFudCBvZiB0aGUgcmVnaXN0cmF0aW9uIGNhbGws
-IGFuZCB0aGUgc3RhbmRhcmQgcmVtb3ZhbCBjYWxsIApqdXN0IGF1dG9tYXRpY2FsbHkgY2xlYW5l
-ZCB1cCBhbiBlbmVyZ3kgbW9kZWwgYXMgd2VsbCBpZiBvbmUgd2FzIHByZXNlbnQuCgpSb2Jpbi4K
-Cl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1l
-ZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0
-dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
+On Tue, Feb 25, 2020 at 6:15 PM Evan Benn <evanbenn@chromium.org> wrote:
+>
+> Thanks Rob
+>
+> > This should be a child of some Mediatek firmware node. I assume
+> > watchdog is not the *only* function.
+>
+> I am not quite sure what you mean, do you intend this:
+>
+>  firmware {
+>    watchdog {
+
+Not quite. /firmware is generic container. I'd expect another layer in
+the middle for the overall set of Mediatek firmware behind smc calls.
+Look at 'xlnx,zynqmp-firmware' for an example.
+
+Rob
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
