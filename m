@@ -2,62 +2,65 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 018D116FC2B
-	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 11:27:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2FBF516FC6B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 26 Feb 2020 11:40:38 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:MIME-Version:Subject:To
-	:From:References:In-Reply-To:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=v8+T3DGJYTbbmEycWBPJdI7W3Li9O/bSi6gBNJmmlic=; b=tYnxCTG6Stk1bX
-	3yMmnjVsvkPfEYCpgT1dRqFCc8LKrqSXgtJAeXG9Be9Pw6KH4L8v7eXf71OAU+fZAky+h7+dIqSqY
-	GixgTwLJAnptKxx/j26B22IAl6a+PAlaYpZ4rtM46BbEGFsrU4yC28xfnp178iKmTNn88J08CjZ/9
-	2tykHUPby95TOPgRmhmJL+j6W+BMAMU704LrzDgioXL+HGtPnkki4lNAHVRulyvA8a4Ou8/brGpb1
-	JtuqibBddtDVmYX/KlWOFh/LkHhI7h1I0LDjjrEW7gmH9pFQh3kkaBVoBfMBhUHB2RcMBpv4yikgi
-	mdTZhBrmT9++K1PJWn0Q==;
+	List-Owner; bh=tta8dJpEYt0R49OOf+VpUf6MoMTroB5V4iOMzpbKRQ0=; b=QV23hT4wKsJCGE
+	Km10ElY+MRXctH9d/66pxjSMlcFu8Vmb6yHUMXpUWra3bKE7bEf3jxfYCMxrYyxgLjy9M454pi2S4
+	3FNFh9MQIysCfugsAFoGJVCTzqffRx2HjlEyRiOHFRJHh4YomBxgUHRPfNaPU0ROmOCAEvDDCMstZ
+	l4Rz3IPdJMjLY/6HX4pxbuzw0oK1JTKTPWnz3sJawlTkl1RqXaTbZZ4kk8W7a5i0HBG62S+eyRQaw
+	l5ksPz5iEPlIhkPUhf47OZBZ4qLuFGWSItfVNLqRNYM24EsX/yDtxnbih4JOptuyJfBjEWWgE9JEq
+	vM4FG508irMcP8yGwDuQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6tuj-00086o-SD; Wed, 26 Feb 2020 10:27:37 +0000
+	id 1j6u7C-0005ue-Ib; Wed, 26 Feb 2020 10:40:30 +0000
 Received: from pandora.armlinux.org.uk
  ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6tti-00074x-AA; Wed, 26 Feb 2020 10:26:36 +0000
+ id 1j6u79-0005tw-2u; Wed, 26 Feb 2020 10:40:28 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=armlinux.org.uk; s=pandora-2019; h=Date:Sender:Message-Id:Content-Type:
- Content-Transfer-Encoding:MIME-Version:Subject:Cc:To:From:References:
- In-Reply-To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
- Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=G8lpiHOZ+WUfp/iCKEL1UO+gAa/0Xygzi08CY28mEYI=; b=aimr3yBnSmB7VNsSBlEvPEzI31
- OOFIvxuzvtBWRDjB5YsOIgJDZIOwS7RxGwfvUHqPOnCOYZR3GvpoRdXMeIVHzepDtQ9OMn2FHtz6i
- Tp4DkbZ+yPIOQLImHhiQaEpQaM0fM9F9mn+aASuz60Y/22Cv97bSu+oqwlpGwLjMVj/EvzrzHeOYg
- 2HQJj4AN5K4UJw5F2G7U1O2QjAL2NVXbjZpccFUOJNz+gQGHIUIDtd/iq3b3ZDJZldpXyhwTaktn1
- hax4/+Uook7zySAR0zoADe9UgzkzfrbT++/RRWHFwjdkxKol4xKXoAoelnTwzD4MKyol34U0l85xr
- +0T6Htlg==;
-Received: from e0022681537dd.dyn.armlinux.org.uk
- ([2001:4d48:ad52:3201:222:68ff:fe15:37dd]:53878 helo=rmk-PC.armlinux.org.uk)
+ d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=PHjOim15jd4o09NnZjH5LH9s+ZcSG6bZ/1c5E3qyvo4=; b=r/p4PjDpcixJ8lUnSiXLAl4AV
+ M3/nlPwheegQWB6gz85+4JN8JbeNT+1nUpxDGwwTIaDpnbxhk/5Fo4H893Ls6FoWMiBxz1xGLG9zU
+ Y4R3FIqxjy6zmwaDYotrgUjsLzwq0ZIG0/klV1V2Toz4/xVllt3hk+UDInPxvqY1x8Pp7iWePdElj
+ G33ifII3WAfBYsu7CSq/IaGilQ8xfQ16ikE6nIARLjvi9laOHpUwg1SsCwTSLsyCiz1Oj4UTXJm42
+ n78Ijep4FE90dHV5Ow9NHKtdBZF2uAFagJmklL2ZqtgGNqDZMKCq+00wOYdK2Uu61a3/96O/gA99Q
+ j23bm05mQ==;
+Received: from shell.armlinux.org.uk
+ ([fd8f:7570:feb6:1:5054:ff:fe00:4ec]:57120)
  by pandora.armlinux.org.uk with esmtpsa
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <rmk@armlinux.org.uk>)
- id 1j6trb-0006sW-8D; Wed, 26 Feb 2020 10:24:23 +0000
-Received: from rmk by rmk-PC.armlinux.org.uk with local (Exim 4.92)
- (envelope-from <rmk@armlinux.org.uk>)
- id 1j6trV-0003H1-5H; Wed, 26 Feb 2020 10:24:17 +0000
-In-Reply-To: <20200226102312.GX25745@shell.armlinux.org.uk>
-References: <20200226102312.GX25745@shell.armlinux.org.uk>
-From: Russell King <rmk+kernel@armlinux.org.uk>
-To: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
- Heiner Kallweit <hkallweit1@gmail.com>
-Subject: [PATCH net-next v2 8/8] net: mvpp2: use resolved link config in
- mac_link_up()
+ (envelope-from <linux@armlinux.org.uk>)
+ id 1j6u6i-00070o-Gh; Wed, 26 Feb 2020 10:40:00 +0000
+Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
+ (envelope-from <linux@shell.armlinux.org.uk>)
+ id 1j6u6d-0008LS-Mn; Wed, 26 Feb 2020 10:39:55 +0000
+Date: Wed, 26 Feb 2020 10:39:55 +0000
+From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
+To: Vladimir Oltean <olteanv@gmail.com>
+Subject: Re: [PATCH net-next 2/8] net: dsa: propagate resolved link config
+ via mac_link_up()
+Message-ID: <20200226103955.GY25745@shell.armlinux.org.uk>
+References: <20200225093703.GS25745@shell.armlinux.org.uk>
+ <E1j6Wg0-0000Ss-W7@rmk-PC.armlinux.org.uk>
+ <CA+h21hp8KCqhCasOAGz17k0eRteHVVYK-eANQmn4h443qv=2JQ@mail.gmail.com>
+ <20200225232307.GU25745@shell.armlinux.org.uk>
 MIME-Version: 1.0
 Content-Disposition: inline
-Message-Id: <E1j6trV-0003H1-5H@rmk-PC.armlinux.org.uk>
-Date: Wed, 26 Feb 2020 10:24:17 +0000
+In-Reply-To: <20200225232307.GU25745@shell.armlinux.org.uk>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200226_022634_858199_EFF30F7D 
-X-CRM114-Status: GOOD (  12.69  )
+X-CRM114-CacheID: sfid-20200226_024027_129232_25E57FD1 
+X-CRM114-Status: GOOD (  20.64  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -86,177 +89,80 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-doc@vger.kernel.org, Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
+Cc: Andrew Lunn <andrew@lunn.ch>,
+ Linux Doc Mailing List <linux-doc@vger.kernel.org>,
+ Thomas Petazzoni <thomas.petazzoni@bootlin.com>,
  Ioana Ciornei <ioana.ciornei@nxp.com>,
- linux-stm32@st-md-mailman.stormreply.com, Jonathan Corbet <corbet@lwn.net>,
+ linux-stm32@st-md-mailman.stormreply.com,
+ Florian Fainelli <f.fainelli@gmail.com>, Jonathan Corbet <corbet@lwn.net>,
  Michal Simek <michal.simek@xilinx.com>, Jose Abreu <joabreu@synopsys.com>,
- Jakub Kicinski <kuba@kernel.org>, Mark Lee <Mark-MC.Lee@mediatek.com>,
+ Jakub Kicinski <kuba@kernel.org>, Vivien Didelot <vivien.didelot@gmail.com>,
  Sean Wang <sean.wang@mediatek.com>, Alexandre Torgue <alexandre.torgue@st.com>,
  Hauke Mehrtens <hauke@hauke-m.de>,
  Radhey Shyam Pandey <radhey.shyam.pandey@xilinx.com>,
- linux-mediatek@lists.infradead.org, John Crispin <john@phrozen.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ John Crispin <john@phrozen.org>, Matthias Brugger <matthias.bgg@gmail.com>,
  Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- linux-arm-kernel@lists.infradead.org, netdev@vger.kernel.org,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Vivien Didelot <vivien.didelot@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>, netdev <netdev@vger.kernel.org>,
+ Mark Lee <Mark-MC.Lee@mediatek.com>,
  Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Vladimir Oltean <olteanv@gmail.com>, "David S. Miller" <davem@davemloft.net>,
- Felix Fietkau <nbd@nbd.name>
+ Heiner Kallweit <hkallweit1@gmail.com>,
+ "David S. Miller" <davem@davemloft.net>, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Convert the Marvell mvpp2 ethernet driver to use the finalised link
-parameters in mac_link_up() rather than the parameters in mac_config().
+On Tue, Feb 25, 2020 at 11:23:07PM +0000, Russell King - ARM Linux admin wrote:
+> On Tue, Feb 25, 2020 at 11:09:35PM +0200, Vladimir Oltean wrote:
+> > Hi Russell,
+> > 
+> > On Tue, 25 Feb 2020 at 11:39, Russell King <rmk+kernel@armlinux.org.uk> wrote:
+> > >
+> > > Propagate the resolved link configuration down via DSA's
+> > > phylink_mac_link_up() operation to allow split PCS/MAC to work.
+> > >
+> > > Signed-off-by: Russell King <rmk+kernel@armlinux.org.uk>
+> > > ---
+> > >  drivers/net/dsa/b53/b53_common.c       | 4 +++-
+> > >  drivers/net/dsa/b53/b53_priv.h         | 4 +++-
+> > >  drivers/net/dsa/bcm_sf2.c              | 4 +++-
+> > >  drivers/net/dsa/lantiq_gswip.c         | 4 +++-
+> > >  drivers/net/dsa/mt7530.c               | 4 +++-
+> > >  drivers/net/dsa/mv88e6xxx/chip.c       | 4 +++-
+> > >  drivers/net/dsa/sja1105/sja1105_main.c | 4 +++-
+> > >  include/net/dsa.h                      | 4 +++-
+> > >  net/dsa/port.c                         | 3 ++-
+> > >  9 files changed, 26 insertions(+), 9 deletions(-)
+> > >
+> > 
+> > It looks like you missed the felix_phylink_mac_link_up() conversion in
+> > this patch? (which also makes it fail to build, by the way, I'm
+> > supposed the Kbuild robot didn't already jump)
+> > Nonetheless, I've manually added the missing speed, duplex, tx_pause
+> > and rx_pause parameters, and it appears to work as before.
+> > Same for sja1105.
+> 
+> Quite possibly; the patch was developed against 5.5 plus the phylink
+> changes, but applied to net-next. Hmm, it seems my coccinelle script
+> that detects .mac_link_up initialiser prototypes, but not the DSA
+> equivalent using the old prototype.
+> 
+> Thanks for pointing it out.
 
-Signed-off-by: Russell King <rmk+kernel@armlinux.org.uk>
----
- .../net/ethernet/marvell/mvpp2/mvpp2_main.c   | 83 +++++++++++--------
- 1 file changed, 47 insertions(+), 36 deletions(-)
+I've just sent v2 with ocelot and qca included... and some recipients
+for patch 2 bounced - the Cc line is now too long!
 
-diff --git a/drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c b/drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c
-index ed8042d97e29..6b9c7ed2547e 100644
---- a/drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c
-+++ b/drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c
-@@ -4976,15 +4976,13 @@ static void mvpp2_gmac_config(struct mvpp2_port *port, unsigned int mode,
- 	old_ctrl2 = ctrl2 = readl(port->base + MVPP2_GMAC_CTRL_2_REG);
- 	old_ctrl4 = ctrl4 = readl(port->base + MVPP22_GMAC_CTRL_4_REG);
- 
--	an &= ~(MVPP2_GMAC_CONFIG_MII_SPEED | MVPP2_GMAC_CONFIG_GMII_SPEED |
--		MVPP2_GMAC_AN_SPEED_EN | MVPP2_GMAC_FC_ADV_EN |
-+	an &= ~(MVPP2_GMAC_AN_SPEED_EN | MVPP2_GMAC_FC_ADV_EN |
- 		MVPP2_GMAC_FC_ADV_ASM_EN | MVPP2_GMAC_FLOW_CTRL_AUTONEG |
--		MVPP2_GMAC_CONFIG_FULL_DUPLEX | MVPP2_GMAC_AN_DUPLEX_EN |
--		MVPP2_GMAC_IN_BAND_AUTONEG | MVPP2_GMAC_IN_BAND_AUTONEG_BYPASS);
-+		MVPP2_GMAC_AN_DUPLEX_EN | MVPP2_GMAC_IN_BAND_AUTONEG |
-+		MVPP2_GMAC_IN_BAND_AUTONEG_BYPASS);
- 	ctrl0 &= ~MVPP2_GMAC_PORT_TYPE_MASK;
- 	ctrl2 &= ~(MVPP2_GMAC_INBAND_AN_MASK | MVPP2_GMAC_PORT_RESET_MASK |
- 		   MVPP2_GMAC_PCS_ENABLE_MASK);
--	ctrl4 &= ~(MVPP22_CTRL4_RX_FC_EN | MVPP22_CTRL4_TX_FC_EN);
- 
- 	/* Configure port type */
- 	if (phy_interface_mode_is_8023z(state->interface)) {
-@@ -5014,31 +5012,20 @@ static void mvpp2_gmac_config(struct mvpp2_port *port, unsigned int mode,
- 
- 	/* Configure negotiation style */
- 	if (!phylink_autoneg_inband(mode)) {
--		/* Phy or fixed speed - no in-band AN */
--		if (state->duplex)
--			an |= MVPP2_GMAC_CONFIG_FULL_DUPLEX;
--
--		if (state->speed == SPEED_1000 || state->speed == SPEED_2500)
--			an |= MVPP2_GMAC_CONFIG_GMII_SPEED;
--		else if (state->speed == SPEED_100)
--			an |= MVPP2_GMAC_CONFIG_MII_SPEED;
--
--		if (state->pause & MLO_PAUSE_TX)
--			ctrl4 |= MVPP22_CTRL4_TX_FC_EN;
--		if (state->pause & MLO_PAUSE_RX)
--			ctrl4 |= MVPP22_CTRL4_RX_FC_EN;
-+		/* Phy or fixed speed - no in-band AN, nothing to do, leave the
-+		 * configured speed, duplex and flow control as-is.
-+		 */
- 	} else if (state->interface == PHY_INTERFACE_MODE_SGMII) {
- 		/* SGMII in-band mode receives the speed and duplex from
- 		 * the PHY. Flow control information is not received. */
--		an &= ~(MVPP2_GMAC_FORCE_LINK_DOWN | MVPP2_GMAC_FORCE_LINK_PASS);
-+		an &= ~(MVPP2_GMAC_FORCE_LINK_DOWN |
-+			MVPP2_GMAC_FORCE_LINK_PASS |
-+			MVPP2_GMAC_CONFIG_MII_SPEED |
-+			MVPP2_GMAC_CONFIG_GMII_SPEED |
-+			MVPP2_GMAC_CONFIG_FULL_DUPLEX);
- 		an |= MVPP2_GMAC_IN_BAND_AUTONEG |
- 		      MVPP2_GMAC_AN_SPEED_EN |
- 		      MVPP2_GMAC_AN_DUPLEX_EN;
--
--		if (state->pause & MLO_PAUSE_TX)
--			ctrl4 |= MVPP22_CTRL4_TX_FC_EN;
--		if (state->pause & MLO_PAUSE_RX)
--			ctrl4 |= MVPP22_CTRL4_RX_FC_EN;
- 	} else if (phy_interface_mode_is_8023z(state->interface)) {
- 		/* 1000BaseX and 2500BaseX ports cannot negotiate speed nor can
- 		 * they negotiate duplex: they are always operating with a fixed
-@@ -5046,19 +5033,17 @@ static void mvpp2_gmac_config(struct mvpp2_port *port, unsigned int mode,
- 		 * speed and full duplex here.
- 		 */
- 		ctrl0 |= MVPP2_GMAC_PORT_TYPE_MASK;
--		an &= ~(MVPP2_GMAC_FORCE_LINK_DOWN | MVPP2_GMAC_FORCE_LINK_PASS);
-+		an &= ~(MVPP2_GMAC_FORCE_LINK_DOWN |
-+			MVPP2_GMAC_FORCE_LINK_PASS |
-+			MVPP2_GMAC_CONFIG_MII_SPEED |
-+			MVPP2_GMAC_CONFIG_GMII_SPEED |
-+			MVPP2_GMAC_CONFIG_FULL_DUPLEX);
- 		an |= MVPP2_GMAC_IN_BAND_AUTONEG |
- 		      MVPP2_GMAC_CONFIG_GMII_SPEED |
- 		      MVPP2_GMAC_CONFIG_FULL_DUPLEX;
- 
--		if (state->pause & MLO_PAUSE_AN && state->an_enabled) {
-+		if (state->pause & MLO_PAUSE_AN && state->an_enabled)
- 			an |= MVPP2_GMAC_FLOW_CTRL_AUTONEG;
--		} else {
--			if (state->pause & MLO_PAUSE_TX)
--				ctrl4 |= MVPP22_CTRL4_TX_FC_EN;
--			if (state->pause & MLO_PAUSE_RX)
--				ctrl4 |= MVPP22_CTRL4_RX_FC_EN;
--		}
- 	}
- 
- /* Some fields of the auto-negotiation register require the port to be down when
-@@ -5155,18 +5140,44 @@ static void mvpp2_mac_link_up(struct phylink_config *config,
- 	struct mvpp2_port *port = netdev_priv(dev);
- 	u32 val;
- 
--	if (!phylink_autoneg_inband(mode)) {
--		if (mvpp2_is_xlg(interface)) {
-+	if (mvpp2_is_xlg(interface)) {
-+		if (!phylink_autoneg_inband(mode)) {
- 			val = readl(port->base + MVPP22_XLG_CTRL0_REG);
- 			val &= ~MVPP22_XLG_CTRL0_FORCE_LINK_DOWN;
- 			val |= MVPP22_XLG_CTRL0_FORCE_LINK_PASS;
- 			writel(val, port->base + MVPP22_XLG_CTRL0_REG);
--		} else {
-+		}
-+	} else {
-+		if (!phylink_autoneg_inband(mode)) {
- 			val = readl(port->base + MVPP2_GMAC_AUTONEG_CONFIG);
--			val &= ~MVPP2_GMAC_FORCE_LINK_DOWN;
-+			val &= ~(MVPP2_GMAC_FORCE_LINK_DOWN |
-+				 MVPP2_GMAC_CONFIG_MII_SPEED |
-+				 MVPP2_GMAC_CONFIG_GMII_SPEED |
-+				 MVPP2_GMAC_CONFIG_FULL_DUPLEX);
- 			val |= MVPP2_GMAC_FORCE_LINK_PASS;
-+
-+			if (speed == SPEED_1000 || speed == SPEED_2500)
-+				val |= MVPP2_GMAC_CONFIG_GMII_SPEED;
-+			else if (speed == SPEED_100)
-+				val |= MVPP2_GMAC_CONFIG_MII_SPEED;
-+
-+			if (duplex == DUPLEX_FULL)
-+				val |= MVPP2_GMAC_CONFIG_FULL_DUPLEX;
-+
- 			writel(val, port->base + MVPP2_GMAC_AUTONEG_CONFIG);
- 		}
-+
-+		/* We can always update the flow control enable bits;
-+		 * these will only be effective if flow control AN
-+		 * (MVPP2_GMAC_FLOW_CTRL_AUTONEG) is disabled.
-+		 */
-+		val = readl(port->base + MVPP22_GMAC_CTRL_4_REG);
-+		val &= ~(MVPP22_CTRL4_RX_FC_EN | MVPP22_CTRL4_TX_FC_EN);
-+		if (tx_pause)
-+			val |= MVPP22_CTRL4_TX_FC_EN;
-+		if (rx_pause)
-+			val |= MVPP22_CTRL4_RX_FC_EN;
-+		writel(val, port->base + MVPP22_GMAC_CTRL_4_REG);
- 	}
- 
- 	mvpp2_port_enable(port);
+As far as the kbuild robot goes, you are not the first to notice that
+kbuild seems to be flakey... I've noticed it for some time, as has
+Greg KH.  It isn't just patches on mailing lists, it's git trees as
+well.
+
 -- 
-2.20.1
-
+RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
+FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps up
+According to speedtest.net: 11.9Mbps down 500kbps up
 
 _______________________________________________
 Linux-mediatek mailing list
