@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8ECCA173AE0
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Feb 2020 16:09:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 50469173AE3
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Feb 2020 16:09:16 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,33 +11,33 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=Z6cFmR3qds/5+WsbazDAAEjK1fQ/1SFxgWIKrOs+rjs=; b=CcALafW6i9lT5bCJKoXyk5FGtO
-	u8YGmnX/krAp6UhQgdfK/Q4gOxUW9CxYg09E3FumI+Lm6Lv7N/JjB1q6zugWlVGb+pLiCyd/77KZ2
-	nIcOUgq8QiKaGNgxk3r+ofkPm/6Q0FGzqfGrs78M+Gw9sckM7OrG5lccH17NI2PsXbvGMFRZMIoq5
-	xTyVoRp89wPVsdt2b1aQCZ5ssMa7F2WPvUMauiwemwvyiwt09ASOnWjZ8ELTjGYrEd7BcPtfdT6TL
-	2tQh2SDaeaOAGYPa/e/DzAs5Y7zll04WZ04ww0jf+yOimKBB+Iz1gvIwK7GAII1XMRSxPaH/VcoVJ
-	MQxeabeg==;
+	bh=PcW7qEtrypZB6Pw5C8GThmL0YKZPPVBrSH/QXdfop1w=; b=XmUG6T1h/f5zYKq1svqFpLU7et
+	aeYSQ59ReJkrpHJr4+/EXT/f9gjlqZqreX8aRLO3qxp+jxlj+S51ffnbM4/SnyPl2WRFKqg73Tq8+
+	Ec8pnLw5NZ67lzGERxkx2nupg6x2v90+kBoiEvZ1zqDo6SQZyeASuA4Ll/y/MKIvVWpRpmWd15s0Z
+	pE0JOSf5tvzUQ2x1Asx/ubGAFv1jWZ1PVAE/3sUmc43f8suWZ+LNFMQxQ02UmMx6coV7LQXppcXiZ
+	XPYoRZc1m0+SlszUOvOD6dMByRVYlFse7uYuCVTx+9GNnFUrLQe6EjPTdEiaLFbowqReQIeyRQaBs
+	sp/5tlTw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j7hGF-0006hz-Td; Fri, 28 Feb 2020 15:09:07 +0000
+	id 1j7hGJ-0006qV-N0; Fri, 28 Feb 2020 15:09:11 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j7hFx-0006KV-3R
+ id 1j7hFx-0006KW-89
  for linux-mediatek@lists.infradead.org; Fri, 28 Feb 2020 15:08:52 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id C88165B2; Fri, 28 Feb 2020 16:08:29 +0100 (CET)
+ id F2B905BB; Fri, 28 Feb 2020 16:08:29 +0100 (CET)
 From: Joerg Roedel <joro@8bytes.org>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH 07/14] iommu: Introduce accessors for iommu private data
-Date: Fri, 28 Feb 2020 16:08:13 +0100
-Message-Id: <20200228150820.15340-8-joro@8bytes.org>
+Subject: [PATCH 08/14] iommu/arm-smmu-v3: Use accessor functions for iommu
+ private data
+Date: Fri, 28 Feb 2020 16:08:14 +0100
+Message-Id: <20200228150820.15340-9-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200228150820.15340-1-joro@8bytes.org>
 References: <20200228150820.15340-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200228_070849_332670_53F97D3A 
-X-CRM114-Status: UNSURE (   9.18  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200228_070849_480443_C9C79D9C 
+X-CRM114-Status: GOOD (  10.52  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -76,36 +76,62 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Add dev_iommu_priv_get/set() functions to access per-device iommu
-private data. This makes it easier to move the pointer to a different
-location.
+Make use of dev_iommu_priv_set/get() functions in the code.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- include/linux/iommu.h | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+ drivers/iommu/arm-smmu-v3.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index a049bcb660e1..904fb24418e5 100644
---- a/include/linux/iommu.h
-+++ b/include/linux/iommu.h
-@@ -627,6 +627,16 @@ static inline void dev_iommu_fwspec_set(struct device *dev,
- 	dev->iommu->fwspec = fwspec;
+diff --git a/drivers/iommu/arm-smmu-v3.c b/drivers/iommu/arm-smmu-v3.c
+index aa3ac2a03807..2b68498dfb66 100644
+--- a/drivers/iommu/arm-smmu-v3.c
++++ b/drivers/iommu/arm-smmu-v3.c
+@@ -2659,7 +2659,7 @@ static int arm_smmu_attach_dev(struct iommu_domain *domain, struct device *dev)
+ 	if (!fwspec)
+ 		return -ENOENT;
+ 
+-	master = fwspec->iommu_priv;
++	master = dev_iommu_priv_get(dev);
+ 	smmu = master->smmu;
+ 
+ 	arm_smmu_detach_dev(master);
+@@ -2795,7 +2795,7 @@ static int arm_smmu_add_device(struct device *dev)
+ 	if (!fwspec || fwspec->ops != &arm_smmu_ops)
+ 		return -ENODEV;
+ 
+-	if (WARN_ON_ONCE(fwspec->iommu_priv))
++	if (WARN_ON_ONCE(dev_iommu_priv_get(dev)))
+ 		return -EBUSY;
+ 
+ 	smmu = arm_smmu_get_by_fwnode(fwspec->iommu_fwnode);
+@@ -2810,7 +2810,7 @@ static int arm_smmu_add_device(struct device *dev)
+ 	master->smmu = smmu;
+ 	master->sids = fwspec->ids;
+ 	master->num_sids = fwspec->num_ids;
+-	fwspec->iommu_priv = master;
++	dev_iommu_priv_set(dev, master);
+ 
+ 	/* Check the SIDs are in range of the SMMU and our stream table */
+ 	for (i = 0; i < master->num_sids; i++) {
+@@ -2852,7 +2852,7 @@ static int arm_smmu_add_device(struct device *dev)
+ 	iommu_device_unlink(&smmu->iommu, dev);
+ err_free_master:
+ 	kfree(master);
+-	fwspec->iommu_priv = NULL;
++	dev_iommu_priv_set(dev, NULL);
+ 	return ret;
  }
  
-+static inline void *dev_iommu_priv_get(struct device *dev)
-+{
-+	return dev->iommu->fwspec->iommu_priv;
-+}
-+
-+static inline void dev_iommu_priv_set(struct device *dev, void *priv)
-+{
-+	dev->iommu->fwspec->iommu_priv = priv;
-+}
-+
- int iommu_probe_device(struct device *dev);
- void iommu_release_device(struct device *dev);
+@@ -2865,7 +2865,7 @@ static void arm_smmu_remove_device(struct device *dev)
+ 	if (!fwspec || fwspec->ops != &arm_smmu_ops)
+ 		return;
  
+-	master = fwspec->iommu_priv;
++	master = dev_iommu_priv_get(dev);
+ 	smmu = master->smmu;
+ 	arm_smmu_detach_dev(master);
+ 	iommu_group_remove_device(dev);
 -- 
 2.17.1
 
