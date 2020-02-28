@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A4204173ADE
-	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Feb 2020 16:09:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8ECCA173AE0
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Feb 2020 16:09:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,38 +11,40 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=Dr9za1n58vQ2qcGZNjc335YaLEqho8vYK0ePNkXczWY=; b=iUQC8VHroJCs1/euzESj2lJC7a
-	HSeIHNKo7brPMePRgwo2aS95Z0v6borMoXDtDMiU7lInUa4K/anyZDAI08NUS0KB+ig45UHOEo2O2
-	qUN2aufzkoZXy51AcAGp2H99Ywz+vq7aIUsJl4vDTWq26gRt+A/C98neCJJTz9JsFZM+OHpNQwYL2
-	FAmeceyg2UJuwiCYz1yZ2g9tnDCwNxJ6js6s+sPw+yGrahxw0YTc8/Cn+tUPRLeIOE0V8/Cek7KUe
-	sL+9oyqT7Xo+gcUqVLYuKqf1zkx4LBUNTz6WrTdsFNuX8+jcAnJVGOyVHREUWDq1CRnfp6FjxFHTn
-	TLXJaowA==;
+	bh=Z6cFmR3qds/5+WsbazDAAEjK1fQ/1SFxgWIKrOs+rjs=; b=CcALafW6i9lT5bCJKoXyk5FGtO
+	u8YGmnX/krAp6UhQgdfK/Q4gOxUW9CxYg09E3FumI+Lm6Lv7N/JjB1q6zugWlVGb+pLiCyd/77KZ2
+	nIcOUgq8QiKaGNgxk3r+ofkPm/6Q0FGzqfGrs78M+Gw9sckM7OrG5lccH17NI2PsXbvGMFRZMIoq5
+	xTyVoRp89wPVsdt2b1aQCZ5ssMa7F2WPvUMauiwemwvyiwt09ASOnWjZ8ELTjGYrEd7BcPtfdT6TL
+	2tQh2SDaeaOAGYPa/e/DzAs5Y7zll04WZ04ww0jf+yOimKBB+Iz1gvIwK7GAII1XMRSxPaH/VcoVJ
+	MQxeabeg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j7hG8-0006Yp-Uz; Fri, 28 Feb 2020 15:09:00 +0000
-Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
- helo=theia.8bytes.org)
+	id 1j7hGF-0006hz-Td; Fri, 28 Feb 2020 15:09:07 +0000
+Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j7hFx-0006KT-36
- for linux-mediatek@lists.infradead.org; Fri, 28 Feb 2020 15:08:50 +0000
+ id 1j7hFx-0006KV-3R
+ for linux-mediatek@lists.infradead.org; Fri, 28 Feb 2020 15:08:52 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 92B9159C; Fri, 28 Feb 2020 16:08:29 +0100 (CET)
+ id C88165B2; Fri, 28 Feb 2020 16:08:29 +0100 (CET)
 From: Joerg Roedel <joro@8bytes.org>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH 06/14] iommu: Move iommu_fwspec to struct dev_iommu
-Date: Fri, 28 Feb 2020 16:08:12 +0100
-Message-Id: <20200228150820.15340-7-joro@8bytes.org>
+Subject: [PATCH 07/14] iommu: Introduce accessors for iommu private data
+Date: Fri, 28 Feb 2020 16:08:13 +0100
+Message-Id: <20200228150820.15340-8-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200228150820.15340-1-joro@8bytes.org>
 References: <20200228150820.15340-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200228_070849_316791_04920652 
-X-CRM114-Status: GOOD (  11.03  )
+X-CRM114-CacheID: sfid-20200228_070849_332670_53F97D3A 
+X-CRM114-Status: UNSURE (   9.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -74,84 +76,36 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Move the iommu_fwspec pointer in struct device into struct dev_iommu.
-This is a step in the effort to reduce the iommu related pointers in
-struct device to one.
+Add dev_iommu_priv_get/set() functions to access per-device iommu
+private data. This makes it easier to move the pointer to a different
+location.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c  |  3 +++
- include/linux/device.h |  1 -
- include/linux/iommu.h  | 12 ++++++++----
- 3 files changed, 11 insertions(+), 5 deletions(-)
+ include/linux/iommu.h | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
 
-diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index beac2ef063dd..826a67ba247f 100644
---- a/drivers/iommu/iommu.c
-+++ b/drivers/iommu/iommu.c
-@@ -2405,6 +2405,9 @@ int iommu_fwspec_init(struct device *dev, struct fwnode_handle *iommu_fwnode,
- 	if (fwspec)
- 		return ops == fwspec->ops ? 0 : -EINVAL;
- 
-+	if (!dev_iommu_get(dev))
-+		return -ENOMEM;
-+
- 	fwspec = kzalloc(sizeof(*fwspec), GFP_KERNEL);
- 	if (!fwspec)
- 		return -ENOMEM;
-diff --git a/include/linux/device.h b/include/linux/device.h
-index af621f9fe85b..9cc7da36a9b6 100644
---- a/include/linux/device.h
-+++ b/include/linux/device.h
-@@ -613,7 +613,6 @@ struct device {
- 
- 	void	(*release)(struct device *dev);
- 	struct iommu_group	*iommu_group;
--	struct iommu_fwspec	*iommu_fwspec;
- 	struct dev_iommu	*iommu;
- 
- 	bool			offline_disabled:1;
 diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index a2dc84183fce..a049bcb660e1 100644
+index a049bcb660e1..904fb24418e5 100644
 --- a/include/linux/iommu.h
 +++ b/include/linux/iommu.h
-@@ -368,14 +368,15 @@ struct iommu_fault_param {
-  * struct dev_iommu - Collection of per-device IOMMU data
-  *
-  * @fault_param: IOMMU detected device fault reporting data
-+ * @fwspec:	 IOMMU fwspec data
-  *
-  * TODO: migrate other per device data pointers under iommu_dev_data, e.g.
-  *	struct iommu_group	*iommu_group;
-- *	struct iommu_fwspec	*iommu_fwspec;
-  */
- struct dev_iommu {
- 	struct mutex lock;
--	struct iommu_fault_param *fault_param;
-+	struct iommu_fault_param	*fault_param;
-+	struct iommu_fwspec		*fwspec;
- };
- 
- int  iommu_device_register(struct iommu_device *iommu);
-@@ -614,13 +615,16 @@ const struct iommu_ops *iommu_ops_from_fwnode(struct fwnode_handle *fwnode);
- 
- static inline struct iommu_fwspec *dev_iommu_fwspec_get(struct device *dev)
- {
--	return dev->iommu_fwspec;
-+	if (dev->iommu)
-+		return dev->iommu->fwspec;
-+	else
-+		return NULL;
+@@ -627,6 +627,16 @@ static inline void dev_iommu_fwspec_set(struct device *dev,
+ 	dev->iommu->fwspec = fwspec;
  }
  
- static inline void dev_iommu_fwspec_set(struct device *dev,
- 					struct iommu_fwspec *fwspec)
- {
--	dev->iommu_fwspec = fwspec;
-+	dev->iommu->fwspec = fwspec;
- }
- 
++static inline void *dev_iommu_priv_get(struct device *dev)
++{
++	return dev->iommu->fwspec->iommu_priv;
++}
++
++static inline void dev_iommu_priv_set(struct device *dev, void *priv)
++{
++	dev->iommu->fwspec->iommu_priv = priv;
++}
++
  int iommu_probe_device(struct device *dev);
+ void iommu_release_device(struct device *dev);
+ 
 -- 
 2.17.1
 
