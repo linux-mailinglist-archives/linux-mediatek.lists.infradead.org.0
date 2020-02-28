@@ -2,73 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 290F5172AEF
-	for <lists+linux-mediatek@lfdr.de>; Thu, 27 Feb 2020 23:14:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E161A172FE0
+	for <lists+linux-mediatek@lfdr.de>; Fri, 28 Feb 2020 05:38:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tgFlTBOAg/fPZco34ViadIoT5unX8sMJ1ZnVWFw9/wU=; b=SxjFcg4IgjLObg
-	1ZoeRFTB95Va1W0pXwLj5vrlFAoJ+K7rqarlkBIix4n1f94ElrxmX7iAhKqd/U5QkA7LRVIruC3qU
-	dqXCXt2uSBCSbP9bArJfh3/r1bAq0TgsJggd/sGQj6eNsTA/dZB9P//gU+RrCQC4sbvQ0TAx8A5J2
-	mzGctjc+NgYcbcr21fp87BSQfebjKY1J1NuANvg7Y2ogauCFRpXn7Q9PepbfyUlGxpGB/TsM9unJO
-	EgUI0LRyCPMbnjaFtWU4DnShDUYxZTJ6yZposRm8a/tRS6K7qSAR8XQOjkwr5TYD1fuZwgCAurM+8
-	Wbk3D/C1RgLfG0ctZkRQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=TSVPdyRR1D4n+dcNeRF1EeSj9iTCaaOQl976YfwSEnk=; b=lItD43CVcdJC4Z
+	y/7HlFvYFpEVkY44q78XZkpDBYiDU8hD3VIUYdYR1kYRwEFtV3sxn8K2uGTSC4QwmeK41iEeINL4i
+	GbF7H0nrx6+0Pq5g28Awkhq1IQEagD+Kf/0LrP1+D36ospg87pCTr0ZFhbLHO+A+uSJ5v43eilCSy
+	/pF27bFDWvC6SfElxgWEt4vf6dTlD9X2rkK90GcyrR92kOf6ri5x0RkI1RwAw8ALhkoKN7BaUQXmH
+	gCus4n5smpN5/rzXgUqo6SMqNB+tPadaQcZ7ALvfdwcgiQmSd1Ffzpo63DkIqDb1qhkxaYQVAW8d3
+	/uo/Kq/DbIQaePKX0G4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j7RQ0-0003nl-JM; Thu, 27 Feb 2020 22:14:08 +0000
-Received: from pandora.armlinux.org.uk
- ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
+	id 1j7XPw-0008WU-3e; Fri, 28 Feb 2020 04:38:28 +0000
+Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j7RPw-0003nG-Q9; Thu, 27 Feb 2020 22:14:06 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TLyRnJ1kCDzmRuRPTz7K92VaFFh1/vMyyOGH0HaTtQU=; b=hCxh6qfDzl2vp7DfzH7YiKHP4
- DhRLp6tdz6Pf8sxKQD3D3uLhUeE+80ZYoKZT3UyLGQSdNw2BZ2vr/HFjStzNnKnsTYpuy/9jOOGfk
- 6he1mGrm1X7/9X5DeNZUs1Z0YBlJbGOhyg/Mxqn/zwJREwIsRGrpgC623yJdZzyZ7xB5x/DQCzdNa
- fm5KA+xAB23YrLCSiNZBi0hBMiSRKZamKETgxTXepn1R/l59dEmUXwWzllDpEEhgRZJDxCjgOc3kp
- mQO+YUx+2XZASMjQcq5zZM75k/L8YzXGdqB7mqjRvkBPzH4TlE6bzD5IbwetU/vIwC7WwXYqo+UDW
- J0cfEvkEA==;
-Received: from shell.armlinux.org.uk
- ([2002:4e20:1eda:1:5054:ff:fe00:4ec]:53650)
- by pandora.armlinux.org.uk with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <linux@armlinux.org.uk>)
- id 1j7RPK-0008OF-2y; Thu, 27 Feb 2020 22:13:26 +0000
-Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
- (envelope-from <linux@shell.armlinux.org.uk>)
- id 1j7RP9-0001Kj-JH; Thu, 27 Feb 2020 22:13:15 +0000
-Date: Thu, 27 Feb 2020 22:13:15 +0000
-From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-To: David Miller <davem@davemloft.net>
-Subject: Re: [PATCH net-next v2 0/8] rework phylink interface for split
- MAC/PCS support
-Message-ID: <20200227221315.GS25745@shell.armlinux.org.uk>
-References: <20200226102312.GX25745@shell.armlinux.org.uk>
- <20200227.120254.241641132362203475.davem@davemloft.net>
+ id 1j7XPt-0008Vx-Kz; Fri, 28 Feb 2020 04:38:27 +0000
+Received: by mail-pl1-x644.google.com with SMTP id j7so738707plt.1;
+ Thu, 27 Feb 2020 20:38:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=srFQTDpYVngqG0eYKY8zeXeTxEow1+Q6Yy9to892+K8=;
+ b=OGuISWEli9eLWMchX3FyKGExfAxWPgMbRqfnKQ71+WgTo0dAEu2wLJuIhrKoGocX7C
+ NgR5sxtUyB2qc+ar05E0dailbAMsC/Kwdrk8MOBfQ4vYqgtPKQVDCZtupwPoBDBSJaHY
+ 5N3TV62amf+JgPDxaRZ8kRVzgFexamdDBZnLMUd4UHpeSeFtwRVdcFnfvP7jDC5JxKXB
+ GprPn9waSFKdqTuaDbE50CEKUjlPN4vQKSkRzh1HrfX0oIkzMyIVOEFMVnYflBo8FWGe
+ ldlX01IUa/AEq4++DIRco4fmEed+VmzvnXwDP4sNJG4uEuNpeZa3AdkdoTFZjyMu7OSo
+ lYNA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=srFQTDpYVngqG0eYKY8zeXeTxEow1+Q6Yy9to892+K8=;
+ b=hvZhZDM+/ATAXIcC5go1kyTFqfZOzWK3kBtIt5Vzh54NUd2oNLEHJYPvmi90GZe9lX
+ 5YKFTYqTcyenudYi5KXVcvL83AGUKWtvClTuCVRhgZdBViF6rUUjNN3nfFThc0QjX7Vo
+ 5iOZypwGCzprm8uvPJi/0HMkvTlAnAwVyMbPmk4CtzZ0NFaL2YvzUCuZSUFteUl2MB7F
+ LHzeor+uXxxFctuZi0MDmyX6gyOgo7Lp3OIaVl9sJ+dbsCR8x7ih2KZU1f+ayOUnsRRC
+ ct3cogeDp1SZW1IkG4NnvAMmzN5dOYWtIfivOsiez6spIx3j0LRZNLBdoFIx0qYEWgkt
+ 28pQ==
+X-Gm-Message-State: APjAAAW6rwbbmp4Tdse6nzx1630fm51Q0o/U7jlZH+JbZhjpeLpFMKVa
+ k4Jb2FgYCGtCQ6I9ozejIhRKbvrzJpa+TQ==
+X-Google-Smtp-Source: APXvYqyvibBkO+TV6UPsBt0A3f9XT3QV3cG3heDfSZwLqQ1gjV5l3PPpcjCz6rPkJXCg+y5fzWLizA==
+X-Received: by 2002:a17:90a:aa83:: with SMTP id l3mr2715072pjq.5.1582864703657; 
+ Thu, 27 Feb 2020 20:38:23 -0800 (PST)
+Received: from localhost.localdomain ([240e:379:962:6595:7b84:9990:1a82:371c])
+ by smtp.gmail.com with ESMTPSA id
+ 196sm9069047pfy.86.2020.02.27.20.37.57
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 27 Feb 2020 20:38:22 -0800 (PST)
+From: Chuanhong Guo <gch981213@gmail.com>
+To: linux-mediatek@lists.infradead.org, linux-spi@vger.kernel.org,
+ linux-mtd@lists.infradead.org, devicetree@vger.kernel.org
+Subject: [PATCH v2 0/4] rewrite mtk-quadspi spi-nor driver with spi-mem
+Date: Fri, 28 Feb 2020 12:36:32 +0800
+Message-Id: <20200228043636.559915-1-gch981213@gmail.com>
+X-Mailer: git-send-email 2.24.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200227.120254.241641132362203475.davem@davemloft.net>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200227_141404_848654_66B5A103 
-X-CRM114-Status: GOOD (  19.09  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200227_203825_713136_C677D2ED 
+X-CRM114-Status: GOOD (  10.07  )
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [gch981213[at]gmail.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [gch981213[at]gmail.com]
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -87,66 +98,52 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, linux-doc@vger.kernel.org, thomas.petazzoni@bootlin.com,
- ioana.ciornei@nxp.com, linux-stm32@st-md-mailman.stormreply.com,
- f.fainelli@gmail.com, corbet@lwn.net, michal.simek@xilinx.com,
- hkallweit1@gmail.com, joabreu@synopsys.com, kuba@kernel.org,
- vivien.didelot@gmail.com, sean.wang@mediatek.com, alexandre.torgue@st.com,
- hauke@hauke-m.de, radhey.shyam.pandey@xilinx.com,
- linux-mediatek@lists.infradead.org, john@phrozen.org, matthias.bgg@gmail.com,
- peppe.cavallaro@st.com, linux-arm-kernel@lists.infradead.org,
- netdev@vger.kernel.org, Mark-MC.Lee@mediatek.com, mcoquelin.stm32@gmail.com,
- olteanv@gmail.com, nbd@nbd.name
+Cc: Vignesh Raghavendra <vigneshr@ti.com>,
+ Tudor Ambarus <tudor.ambarus@microchip.com>,
+ Richard Weinberger <richard@nod.at>, Mark Brown <broonie@kernel.org>,
+ open list <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ Miquel Raynal <miquel.raynal@bootlin.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Chuanhong Guo <gch981213@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Feb 27, 2020 at 12:02:54PM -0800, David Miller wrote:
-> From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-> Date: Wed, 26 Feb 2020 10:23:12 +0000
-> 
-> > The following series changes the phylink interface to allow us to
-> > better support split MAC / MAC PCS setups.  The fundamental change
-> > required for this turns out to be quite simple.
-> > 
-> > Today, mac_config() is used for everything to do with setting the
-> > parameters for the MAC, and mac_link_up() is used to inform the
-> > MAC driver that the link is now up (and so to allow packet flow.)
-> > mac_config() also has had a few implementation issues, with folk
-> > who believe that members such as "speed" and "duplex" are always
-> > valid, where "link" gets used inappropriately, etc.
-> > 
-> > With the proposed patches, all this changes subtly - but in a
-> > backwards compatible way at this stage.
-> > 
-> > We pass the the full resolved link state (speed, duplex, pause) to
-> > mac_link_up(), and it is now guaranteed that these parameters to
-> > this function will always be valid (no more SPEED_UNKNOWN or
-> > DUPLEX_UNKNOWN here - unless phylink is fed with such things.)
-> > 
-> > Drivers should convert over to using the state in mac_link_up()
-> > rather than configuring the speed, duplex and pause in the
-> > mac_config() method. The patch series includes a number of MAC
-> > drivers which I've thought have been easy targets - I've left the
-> > remainder as I think they need maintainer input. However, *all*
-> > drivers will need conversion for future phylink development.
-> > 
-> > v2: add ocelot/felix and qca/ar9331 DSA drivers to patch 2, add
-> >   received tested-by so far.
-> 
-> In order to end the storm in a teacup, I've applied this series.
-> 
-> :-)
-> 
-> Thanks Russell.
+This patchset adds a spi-mem driver for Mediatek SPI-NOR controller,
+which already has limited support by mtk-quadspi. This new driver can
+make use of full quadspi capability of this controller.
 
-Thanks David, I was getting concerned that the teacup might break! :p
+1st new commit makes spi-max-frequency optional to match current
+binding doc and make this new driver compatible with old driver dt
+bindings.
+
+Changes since v1:
+ two new commits.
+
+Chuanhong Guo (4):
+  spi: make spi-max-frequency optional
+  spi: add support for mediatek spi-nor controller
+  dt-bindings: convert mtk-quadspi binding doc for spi-mtk-nor
+  mtd: spi-nor: remove mtk-quadspi driver
+
+ .../mtk-quadspi.txt => spi/spi-mtk-nor.txt}   |  34 +-
+ drivers/mtd/spi-nor/Kconfig                   |   8 -
+ drivers/mtd/spi-nor/Makefile                  |   1 -
+ drivers/mtd/spi-nor/mtk-quadspi.c             | 565 --------------
+ drivers/spi/Kconfig                           |  10 +
+ drivers/spi/Makefile                          |   1 +
+ drivers/spi/spi-mtk-nor.c                     | 689 ++++++++++++++++++
+ drivers/spi/spi.c                             |   9 +-
+ 8 files changed, 717 insertions(+), 600 deletions(-)
+ rename Documentation/devicetree/bindings/{mtd/mtk-quadspi.txt => spi/spi-mtk-nor.txt} (62%)
+ delete mode 100644 drivers/mtd/spi-nor/mtk-quadspi.c
+ create mode 100644 drivers/spi/spi-mtk-nor.c
 
 -- 
-RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
-FTTC broadband for 0.8mile line in suburbia: sync at 12.1Mbps down 622kbps up
-According to speedtest.net: 11.9Mbps down 500kbps up
+2.24.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
