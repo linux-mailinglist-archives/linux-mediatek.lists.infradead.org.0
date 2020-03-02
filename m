@@ -2,76 +2,48 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 378D71756DB
-	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Mar 2020 10:22:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 39BD81758F4
+	for <lists+linux-mediatek@lfdr.de>; Mon,  2 Mar 2020 12:02:08 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=+mhG+guda5I0wMIsxW6NRI1/5pj9Y9+JfBSQayiI4mY=; b=Zb/2hlHXISkBuU
-	FNgOKF4/AYI5jbklBVEtvN/NldRLVhioA9HIZot3nYHhh8+zrrCPCQVSEjgsdu4KJJSN3pACQ6VyJ
-	q1cxOHzbiRUhFlUqXkq17rXaB8tRi88hB2yx79BTd6rUI/6R1wArzVfhzpay2xnfXE2Uvq+3HxhTG
-	NWG0Y8uPl8WwKjhQ5n/k1doFy68YoWyn7SwCQMsH45zNS/0Qrjqfgmaq8j5yzKNoZFrvXXxg4/sXO
-	vYxBy1Vg4QaGzlWAIXMTrSXkfHn+4lTnTgjl63PsoME5iF91153eCNctnf98zccjWDe/ObU8zngZ4
-	/yqz6fC2A6ZmDHmLsLhQ==;
+	List-Owner; bh=MWD6L3AOQBb+oy+ivrbHqY0Qka5AfyckfWsUZUSrcRI=; b=dyydjIl49N5IG7
+	vCsXcXl6+d2ayiA1VLX67ewQLG0Q62/ExDdICohLjZhiM+xEb+gT7qKFBrLawBNHfNI4GiuoeNTcS
+	OB5waY79W+9hRpmJkksqyjwrtljW+l4AMjrfKvSZ/cvzePgMd1dsaOFSP8asxp3wElW1xDvlyjSQz
+	J6EY/Tb7uIGehee8p0CGp9DHHanYopS11RpP0fAz3n46zPb7H9URQSTt1LfLEP+Tu3X4AuizBwSE8
+	6lfBkn63kOFE83UcwYu9/oq0e2eFF1L8bGCOjK4dFpWeFP7/pSXwaS0blBmOk6u4jzj6KY+tic5Zj
+	dlEA1DYUFgTZS7Sjx9zg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j8hGx-00032e-4G; Mon, 02 Mar 2020 09:21:59 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1j8iph-00077b-0z; Mon, 02 Mar 2020 11:01:57 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j8hGt-00031k-SB; Mon, 02 Mar 2020 09:21:57 +0000
-X-UUID: 7970c94c01f14af6b1101d8a80f17437-20200302
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=0Y23yxwohWhXaBotvUv65ILHSsUsxieq1MmLFigexZw=; 
- b=vAK36ER269blXWVp9ID1zgWmo9YVYJ4yZROsmsh22z0kJguPv94Cbr9fvWNRUty0Vqt7P2L3rjw3La5SWEKG/lVcW2EhwGaYYQh6HZDR4/lS7+78Nlq0nweI+b+57NW2uey1dIDNMER7A9bgjHAn0Dq1agr8syj3B7JabkS+wL0=;
-X-UUID: 7970c94c01f14af6b1101d8a80f17437-20200302
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1297678464; Mon, 02 Mar 2020 01:21:50 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 2 Mar 2020 01:12:37 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 2 Mar 2020 17:09:00 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 2 Mar 2020 17:11:08 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <ebiggers@kernel.org>,
- <martin.petersen@oracle.com>, <avri.altman@wdc.com>,
- <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [RFC PATCH v1] scsi: ufs-mediatek: add inline encryption support
-Date: Mon, 2 Mar 2020 17:11:38 +0800
-Message-ID: <20200302091138.10341-1-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ id 1j8ipQ-0006wk-Qh; Mon, 02 Mar 2020 11:01:42 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id 2EE212949CC
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+To: robh+dt@kernel.org, mark.rutland@arm.com, ck.hu@mediatek.com,
+ p.zabel@pengutronix.de, airlied@linux.ie, mturquette@baylibre.com,
+ sboyd@kernel.org, ulrich.hecht+renesas@gmail.com,
+ laurent.pinchart@ideasonboard.com
+Subject: [PATCH v11 0/5] arm/arm64: mediatek: Fix mt8173 mmsys device probing
+Date: Mon,  2 Mar 2020 12:01:23 +0100
+Message-Id: <20200302110128.2664251-1-enric.balletbo@collabora.com>
+X-Mailer: git-send-email 2.25.1
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 1E0A8519FB5C75622F8B15201DA37225490402B846AFCF514B41CA5CB4FE07DC2000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200302_012155_920066_4B1C3B25 
-X-CRM114-Status: GOOD (  11.57  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200302_030141_131542_79170A03 
+X-CRM114-Status: GOOD (  17.35  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -85,112 +57,146 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
- light.hsieh@mediatek.com, satyat@google.com, linux-fscrypt@vger.kernel.org,
- cang@codeaurora.org, linux-mediatek@lists.infradead.org,
- peter.wang@mediatek.com, matthias.bgg@gmail.com,
- Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- beanhuo@micron.com
+Cc: Kate Stewart <kstewart@linuxfoundation.org>,
+ Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Minghsiu Tsai <minghsiu.tsai@mediatek.com>, dri-devel@lists.freedesktop.org,
+ Richard Fontana <rfontana@redhat.com>,
+ Collabora Kernel ML <kernel@collabora.com>, linux-clk@vger.kernel.org,
+ Weiyi Lu <weiyi.lu@mediatek.com>, wens@csie.org,
+ linux-arm-kernel@lists.infradead.org, mtk01761 <wendell.lin@mediatek.com>,
+ linux-media@vger.kernel.org, devicetree@vger.kernel.org,
+ frank-w@public-files.de, Seiya Wang <seiya.wang@mediatek.com>,
+ sean.wang@mediatek.com, Houlong Wei <houlong.wei@mediatek.com>,
+ linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>,
+ Allison Randal <allison@lohutok.net>, Matthias Brugger <mbrugger@suse.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, rdunlap@infradead.org,
+ linux-kernel@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
+ matthias.bgg@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add inline encryption support to ufs-mediatek.
+Dear all,
 
-The standards-compliant parts, such as querying the crypto capabilities
-and enabling crypto for individual UFS requests, are already handled by
-ufshcd-crypto.c, which itself is wired into the blk-crypto framework.
+Those patches are intended to solve an old standing issue on some
+Mediatek devices (mt8173, mt2701 and mt2712 are affected by this issue).
 
-However MediaTek UFS host requires a vendor-specific hce_enable operation
-to allow crypto-related registers being accessed normally in kernel.
-After this step, MediaTek UFS host can work as standard-compliant host
-for inline-encryption related functions.
+Up to now both drivers, clock and drm are probed with the same device tree
+compatible. But only the first driver gets probed, which in effect breaks
+graphics on those devices.
 
-This patch is rebased to the latest wip-inline-encryption branch in
-Eric Biggers's git:
-https://git.kernel.org/pub/scm/linux/kernel/git/ebiggers/linux.git/
+The MMSYS (Multimedia subsystem) in Mediatek SoCs has some registers to
+control clock gates (which is used in the clk driver) and some registers
+to set the routing and enable the differnet blocks of the display
+and MDP (Media Data Path) subsystem. On this series the clk driver is
+not a pure clock controller but a system controller that can provide
+access to the shared registers between the different drivers that need
+it (mediatek-drm and mediatek-mdp). Hence the MMSYS clk driver was moved
+to drivers/soc/mediatek and is the entry point (parent) which will trigger
+the probe of the corresponding mediatek-drm driver.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 27 ++++++++++++++++++++++++++-
- drivers/scsi/ufs/ufs-mediatek.h |  1 +
- 2 files changed, 27 insertions(+), 1 deletion(-)
+**IMPORTANT** This series only fixes the issue on mt8173 to make it
+simple and as is the only platform I can test. Similar changes should be
+applied for mt2701 and mt2712 to have display working.
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 53eae5fe2ade..12d01fd3d5e1 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -15,6 +15,7 @@
- #include <linux/soc/mediatek/mtk_sip_svc.h>
- 
- #include "ufshcd.h"
-+#include "ufshcd-crypto.h"
- #include "ufshcd-pltfrm.h"
- #include "ufs_quirks.h"
- #include "unipro.h"
-@@ -24,6 +25,9 @@
- 	arm_smccc_smc(MTK_SIP_UFS_CONTROL, \
- 		      cmd, val, 0, 0, 0, 0, 0, &(res))
- 
-+#define ufs_mtk_crypto_ctrl(res, enable) \
-+	ufs_mtk_smc(UFS_MTK_SIP_CRYPTO_CTRL, enable, res)
-+
- #define ufs_mtk_ref_clk_notify(on, res) \
- 	ufs_mtk_smc(UFS_MTK_SIP_REF_CLK_NOTIFICATION, on, res)
- 
-@@ -66,7 +70,27 @@ static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
- 	}
- }
- 
--static int ufs_mtk_bind_mphy(struct ufs_hba *hba)
-+static void ufs_mtk_crypto_enable(struct ufs_hba *hba)
-+{
-+	struct arm_smccc_res res;
-+
-+	ufs_mtk_crypto_ctrl(res, 1);
-+	if (res.a0) {
-+		dev_info(hba->dev, "%s: crypto enable failed, err: %lu\n",
-+			 __func__, res.a0);
-+	}
-+}
-+
-+static int ufs_mtk_hce_enable_notify(struct ufs_hba *hba,
-+				     enum ufs_notify_change_status status)
-+{
-+	if (status == PRE_CHANGE && ufshcd_hba_is_crypto_supported(hba))
-+		ufs_mtk_crypto_enable(hba);
-+
-+	return 0;
-+}
-+
-+int ufs_mtk_bind_mphy(struct ufs_hba *hba)
- {
- 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
- 	struct device *dev = hba->dev;
-@@ -494,6 +518,7 @@ static struct ufs_hba_variant_ops ufs_hba_mtk_vops = {
- 	.name                = "mediatek.ufshci",
- 	.init                = ufs_mtk_init,
- 	.setup_clocks        = ufs_mtk_setup_clocks,
-+	.hce_enable_notify   = ufs_mtk_hce_enable_notify,
- 	.link_startup_notify = ufs_mtk_link_startup_notify,
- 	.pwr_change_notify   = ufs_mtk_pwr_change_notify,
- 	.apply_dev_quirks    = ufs_mtk_apply_dev_quirks,
-diff --git a/drivers/scsi/ufs/ufs-mediatek.h b/drivers/scsi/ufs/ufs-mediatek.h
-index fccdd979d6fb..5ebaa59898bf 100644
---- a/drivers/scsi/ufs/ufs-mediatek.h
-+++ b/drivers/scsi/ufs/ufs-mediatek.h
-@@ -58,6 +58,7 @@
-  */
- #define MTK_SIP_UFS_CONTROL               MTK_SIP_SMC_CMD(0x276)
- #define UFS_MTK_SIP_DEVICE_RESET          BIT(1)
-+#define UFS_MTK_SIP_CRYPTO_CTRL           BIT(2)
- #define UFS_MTK_SIP_REF_CLK_NOTIFICATION  BIT(3)
- 
- /*
+For reference, here are the links to the old discussions:
+* v10: https://patchwork.kernel.org/project/linux-mediatek/list/?series=248505
+* v9: https://patchwork.kernel.org/project/linux-clk/list/?series=247591
+* v8: https://patchwork.kernel.org/project/linux-mediatek/list/?series=244891
+* v7: https://patchwork.kernel.org/project/linux-mediatek/list/?series=241217
+* v6: https://patchwork.kernel.org/project/linux-mediatek/list/?series=213219
+* v5: https://patchwork.kernel.org/project/linux-mediatek/list/?series=44063
+* v4:
+  * https://patchwork.kernel.org/patch/10530871/
+  * https://patchwork.kernel.org/patch/10530883/
+  * https://patchwork.kernel.org/patch/10530885/
+  * https://patchwork.kernel.org/patch/10530911/
+  * https://patchwork.kernel.org/patch/10530913/
+* v3:
+  * https://patchwork.kernel.org/patch/10367857/
+  * https://patchwork.kernel.org/patch/10367861/
+  * https://patchwork.kernel.org/patch/10367877/
+  * https://patchwork.kernel.org/patch/10367875/
+  * https://patchwork.kernel.org/patch/10367885/
+  * https://patchwork.kernel.org/patch/10367883/
+  * https://patchwork.kernel.org/patch/10367889/
+  * https://patchwork.kernel.org/patch/10367907/
+  * https://patchwork.kernel.org/patch/10367909/
+  * https://patchwork.kernel.org/patch/10367905/
+* v2: No relevant discussion, see v3
+* v1:
+  * https://patchwork.kernel.org/patch/10016497/
+  * https://patchwork.kernel.org/patch/10016499/
+  * https://patchwork.kernel.org/patch/10016505/
+  * https://patchwork.kernel.org/patch/10016507/
+
+Best regards,
+ Enric
+
+Changes in v11:
+- Select CONFIG_MTK_MMSYS (CK)
+- Pass device pointer of mmsys device instead of config regs (CK)
+
+Changes in v10:
+- Update the binding documentation for the mmsys system controller.
+- Renamed to be generic mtk-mmsys
+- Add driver data support to be able to support diferent SoCs
+- Introduced a new patch to move routing control into mmsys driver.
+- Removed the patch to use regmap as is not needed anymore.
+- Match driver data to get display routing.
+
+Changes in v9:
+- Move mmsys to drivers/soc/mediatek (CK)
+- Do not move the display routing from the drm driver (CK)
+
+Changes in v8:
+- Be a builtin_platform_driver like other mediatek mmsys drivers.
+- New patch introduced in this series.
+
+Changes in v7:
+- Free clk_data->clks as well
+- Get rid of private data structure
+
+Enric Balletbo i Serra (3):
+  dt-bindings: mediatek: Update mmsys binding to reflect it is a system
+    controller
+  soc / drm: mediatek: Move routing control to mmsys device
+  soc / drm: mediatek: Fix mediatek-drm device probing
+
+Matthias Brugger (2):
+  drm/mediatek: Omit warning on probe defers
+  soc: mediatek: Move mt8173 MMSYS to platform driver
+
+ .../bindings/arm/mediatek/mediatek,mmsys.txt  |   7 +-
+ drivers/clk/mediatek/clk-mt8173.c             | 104 -----
+ drivers/gpu/drm/mediatek/Kconfig              |   1 +
+ drivers/gpu/drm/mediatek/mtk_disp_color.c     |   5 +-
+ drivers/gpu/drm/mediatek/mtk_disp_ovl.c       |   5 +-
+ drivers/gpu/drm/mediatek/mtk_disp_rdma.c      |   5 +-
+ drivers/gpu/drm/mediatek/mtk_dpi.c            |  12 +-
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c       |  19 +-
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.c        | 259 +----------
+ drivers/gpu/drm/mediatek/mtk_drm_ddp.h        |   7 -
+ drivers/gpu/drm/mediatek/mtk_drm_drv.c        |  45 +-
+ drivers/gpu/drm/mediatek/mtk_drm_drv.h        |   2 +-
+ drivers/gpu/drm/mediatek/mtk_dsi.c            |   8 +-
+ drivers/gpu/drm/mediatek/mtk_hdmi.c           |   4 +-
+ drivers/soc/mediatek/Kconfig                  |   7 +
+ drivers/soc/mediatek/Makefile                 |   1 +
+ drivers/soc/mediatek/mtk-mmsys.c              | 437 ++++++++++++++++++
+ include/linux/soc/mediatek/mtk-mmsys.h        |  20 +
+ 18 files changed, 537 insertions(+), 411 deletions(-)
+ create mode 100644 drivers/soc/mediatek/mtk-mmsys.c
+ create mode 100644 include/linux/soc/mediatek/mtk-mmsys.h
+
 -- 
-2.18.0
+2.25.1
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
