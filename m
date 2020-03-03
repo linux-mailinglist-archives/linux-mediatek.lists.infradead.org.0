@@ -2,60 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 456D31773E0
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 11:20:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 45AAF1773DE
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 11:19:44 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=k4uciRexfMN3j+TuTgVZlyggkhfvoiuEkOdFfBYErjQ=; b=Io+Nu5r1U9Kmr9
-	e3gysGhzhaOxJ4LJlxYvuIW4/o/YMM2Wh1KZdPSxWYkMwRc7ujyn5jSlUrOJChJaoOFKZuMGITiMb
-	tbn3SavnEX2QPV6JqU+sFplRqKe2l43gX32ldmz5Egsl7+IPGeaKHgu7smCP8H0mTCNR0xkn6mL3j
-	q7KjnYKnBlDkNj7EvrKeWGGzu2zFQbQULz59K4k3D9ZeR9GWCuJ/tMPZiy4Hax3Oiv173k799J7qQ
-	ocSURAE1J+nERQrIIdAx3+1/ylpibsz2//YxGYTYkSS3wSgOzAyMhJigj9y0ciJ6KQZ7b5Xgkj06s
-	bHt3yD15CMbDfv4gc7Ug==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=FT+2LN07iTT0U5eSgTgKaD/JhG3tdATPUJD+WOCig60=; b=BX8XyueMS2gUGs
+	MKncmuFsI9uUOyxN6n3CYjStY4OXDJmzBbJdCEz8o0J30330626GLWmj5+wpGGuqn9Qb0mrtCtQBG
+	qKYJmINqDZ/ZU5VvxYuCWEOEPwCr9bngnO//WlDoZ5eHUMxb5MnB5tE5GfRuq2hIp+1Q5Uxs886Ti
+	NQ3F4Xn26DAfLL95KqZbEQQcpv0o53O5s3juyZcdRqF/gz1WHliNRvgxNuLoIWamnED4G0zgxqexw
+	3ElF3mz0Rh1ZN4/03rOXM7MvatgeViERWnY1DXNTT284dOGf219+nhynxMviTLJmqtu/U42A78ip+
+	KwfJNTXaVUjCy8r/ifNQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j94ef-00045g-Iy; Tue, 03 Mar 2020 10:20:01 +0000
+	id 1j94eD-0003j0-Ux; Tue, 03 Mar 2020 10:19:33 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j94ed-000454-Cs; Tue, 03 Mar 2020 10:20:00 +0000
-X-UUID: ef63e1f503eb40c4a5b00d89f7ce4f0f-20200303
+ id 1j94eA-0003hn-5k; Tue, 03 Mar 2020 10:19:31 +0000
+X-UUID: 32216669192f44229ce3ff9c2e44121a-20200303
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=+FkgnuhMth6UFDfn+Y38HmyJc9tDM2pj8gHrymrjp7Y=; 
- b=QBvydKp/VDcMgtpz080lQsrzctzF3az6GAHlo0/P1ikAI+6+1e1/CcB1VkcZYaxDORpttZOW76wCxGIBzGqbNYeATWR0zt8wkhdbIQqbrJTGpz0hxXitpPm9Q9mEMo7mJtosENweF/VB0ZdP8Thg6ESatuE8LK3hkPCpO5v7ow0=;
-X-UUID: ef63e1f503eb40c4a5b00d89f7ce4f0f-20200303
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=kNo7DFj3b9HktV/9EBruUcLqKxjTBFu6uKwuH9eM2VA=; 
+ b=fStkvVGfdODZUFXguzcaSao361mDB+EW3bBusAbnaUlGGE/VqKZLS5KuAaEyBY9TUxIXZXS5weqU0adXCsNkx6rOzkyQYQmMquvB2VF3631lmuQE71qIba/YVbK+YKby1XTp4ukN2F+CcXHcwjVWne3RcKqaERgSJw5JrlcgMCQ=;
+X-UUID: 32216669192f44229ce3ff9c2e44121a-20200303
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <sam.shih@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1313247374; Tue, 03 Mar 2020 02:19:58 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 02:20:35 -0800
+ with ESMTP id 1481984747; Tue, 03 Mar 2020 02:19:21 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Mar 2020 02:20:11 -0800
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 18:18:10 +0800
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Mar 2020 18:18:18 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 3 Mar 2020 18:19:14 +0800
+ Frontend Transport; Tue, 3 Mar 2020 18:19:16 +0800
 From: Sam Shih <sam.shih@mediatek.com>
 To: Thierry Reding <thierry.reding@gmail.com>,
  =?UTF-8?q?Uwe=20Kleine-K=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
  Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v2 0/1] pwm: mediatek: add longer period support
-Date: Tue, 3 Mar 2020 18:19:14 +0800
-Message-ID: <1583230755-25986-1-git-send-email-sam.shih@mediatek.com>
+Subject: [PATCH v2 1/1] pwm: mediatek: add longer period support
+Date: Tue, 3 Mar 2020 18:19:15 +0800
+Message-ID: <1583230755-25986-2-git-send-email-sam.shih@mediatek.com>
 X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1583230755-25986-1-git-send-email-sam.shih@mediatek.com>
+References: <1583230755-25986-1-git-send-email-sam.shih@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_021959_442899_D7B0B2D8 
-X-CRM114-Status: UNSURE (   6.06  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200303_021930_224400_23657B83 
+X-CRM114-Status: GOOD (  13.95  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -93,15 +94,82 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+The pwm clock source could be divided by 1625 with PWM_CON
+BIT(3) setting in mediatek hardware.
+
 This patch add support for longer pwm period configuration,
 which allowing blinking LEDs via pwm interface.
 
-Sam Shih (1):
-  pwm: mediatek: add longer period support
-
+Signed-off-by: Sam Shih <sam.shih@mediatek.com>
+---
  drivers/pwm/pwm-mediatek.c | 34 ++++++++++++++++++++++++++++++----
  1 file changed, 30 insertions(+), 4 deletions(-)
 
+diff --git a/drivers/pwm/pwm-mediatek.c b/drivers/pwm/pwm-mediatek.c
+index b94e0d09c300..c64ecff6c550 100644
+--- a/drivers/pwm/pwm-mediatek.c
++++ b/drivers/pwm/pwm-mediatek.c
+@@ -121,8 +121,11 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 			       int duty_ns, int period_ns)
+ {
+ 	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
+-	u32 clkdiv = 0, cnt_period, cnt_duty, reg_width = PWMDWIDTH,
+-	    reg_thres = PWMTHRES;
++	/* The source clock is divided by 2^clkdiv or iff the clksel bit
++	 * is set by (2^clkdiv*1625)
++	 */
++	u32 clkdiv = 0, clksel = 0, cnt_period, cnt_duty,
++	    reg_width = PWMDWIDTH, reg_thres = PWMTHRES;
+ 	u64 resolution;
+ 	int ret;
+ 
+@@ -133,12 +136,30 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 
+ 	/* Using resolution in picosecond gets accuracy higher */
+ 	resolution = (u64)NSEC_PER_SEC * 1000;
++	/* Calculate resolution based on current clock frequency */
+ 	do_div(resolution, clk_get_rate(pc->clk_pwms[pwm->hwpwm]));
+-
++	/* Using resolution to calculate cnt_period which represents
++	 * the effective range of the PWM period counter
++	 */
+ 	cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000, resolution);
+ 	while (cnt_period > 8191) {
++		/* Using clkdiv to reduce clock frequency and calculate
++		 * new resolution based on new clock speed
++		 */
+ 		resolution *= 2;
+ 		clkdiv++;
++		if (clkdiv > PWM_CLK_DIV_MAX && !clksel) {
++			/* Using clksel to divide the pwm source clock by
++			 * an additional 1625, and recalculate new clkdiv
++			 * and resolution
++			 */
++			clksel = 1;
++			clkdiv = 0;
++			resolution = (u64)NSEC_PER_SEC * 1000 * 1625;
++			do_div(resolution,
++				clk_get_rate(pc->clk_pwms[pwm->hwpwm]));
++		}
++		/* Calculate cnt_period based on resolution */
+ 		cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000,
+ 						   resolution);
+ 	}
+@@ -158,8 +179,13 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
+ 		reg_thres = PWM45THRES_FIXUP;
+ 	}
+ 
++	/* Calculate cnt_duty based on resolution */
+ 	cnt_duty = DIV_ROUND_CLOSEST_ULL((u64)duty_ns * 1000, resolution);
+-	pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
++	if (clksel)
++		pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | BIT(3) |
++				    clkdiv);
++	else
++		pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
+ 	pwm_mediatek_writel(pc, pwm->hwpwm, reg_width, cnt_period);
+ 	pwm_mediatek_writel(pc, pwm->hwpwm, reg_thres, cnt_duty);
+ 
 -- 
 2.17.1
 _______________________________________________
