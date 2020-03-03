@@ -2,79 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 45AAF1773DE
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 11:19:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 820ED1773F6
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 11:22:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FT+2LN07iTT0U5eSgTgKaD/JhG3tdATPUJD+WOCig60=; b=BX8XyueMS2gUGs
-	MKncmuFsI9uUOyxN6n3CYjStY4OXDJmzBbJdCEz8o0J30330626GLWmj5+wpGGuqn9Qb0mrtCtQBG
-	qKYJmINqDZ/ZU5VvxYuCWEOEPwCr9bngnO//WlDoZ5eHUMxb5MnB5tE5GfRuq2hIp+1Q5Uxs886Ti
-	NQ3F4Xn26DAfLL95KqZbEQQcpv0o53O5s3juyZcdRqF/gz1WHliNRvgxNuLoIWamnED4G0zgxqexw
-	3ElF3mz0Rh1ZN4/03rOXM7MvatgeViERWnY1DXNTT284dOGf219+nhynxMviTLJmqtu/U42A78ip+
-	KwfJNTXaVUjCy8r/ifNQ==;
+	List-Owner; bh=LcFFm3AgWh5sAhDLGzZTjac3u4+mHGho0d0sNi5ElGc=; b=q2mHv3pY+USJOw
+	ZCBjRzSkiFWTGC55V9CiVxrCFBaR+V3WC92AUMJTxY3Q6Vzb5VK9wxmEExobkR4HGUuDaofKX6NFB
+	he1Ql/8++3j+1H6o6ht5tY9Inurr2FAHZN05LmqcF+L9AR4DP6GgXHc1sKw9g64Vw0dOdpsj+JZtb
+	Yl5U4m8VFY5+sJa3F3cPDGHbWKWBlSNqiaM0xDskMagHSH/9DwgivU1lZ6wLcuYWL3DE48X3y/oMk
+	VM1Qf4VKKwlhvsKW0ci+e5bkG5rJxdQLZdGyolXFDdTeSAmMNpKuygMX4Iai98J+YJGa/41lKT0zS
+	iTDgEz8jUml6bthdYJfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j94eD-0003j0-Ux; Tue, 03 Mar 2020 10:19:33 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1j94hO-0005sh-Sd; Tue, 03 Mar 2020 10:22:50 +0000
+Received: from mga01.intel.com ([192.55.52.88])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j94eA-0003hn-5k; Tue, 03 Mar 2020 10:19:31 +0000
-X-UUID: 32216669192f44229ce3ff9c2e44121a-20200303
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=kNo7DFj3b9HktV/9EBruUcLqKxjTBFu6uKwuH9eM2VA=; 
- b=fStkvVGfdODZUFXguzcaSao361mDB+EW3bBusAbnaUlGGE/VqKZLS5KuAaEyBY9TUxIXZXS5weqU0adXCsNkx6rOzkyQYQmMquvB2VF3631lmuQE71qIba/YVbK+YKby1XTp4ukN2F+CcXHcwjVWne3RcKqaERgSJw5JrlcgMCQ=;
-X-UUID: 32216669192f44229ce3ff9c2e44121a-20200303
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <sam.shih@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1481984747; Tue, 03 Mar 2020 02:19:21 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 02:20:11 -0800
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 18:18:18 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Tue, 3 Mar 2020 18:19:16 +0800
-From: Sam Shih <sam.shih@mediatek.com>
-To: Thierry Reding <thierry.reding@gmail.com>,
- =?UTF-8?q?Uwe=20Kleine-K=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
- Matthias Brugger <matthias.bgg@gmail.com>
-Subject: [PATCH v2 1/1] pwm: mediatek: add longer period support
-Date: Tue, 3 Mar 2020 18:19:15 +0800
-Message-ID: <1583230755-25986-2-git-send-email-sam.shih@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1583230755-25986-1-git-send-email-sam.shih@mediatek.com>
-References: <1583230755-25986-1-git-send-email-sam.shih@mediatek.com>
+ id 1j94hE-0005kZ-UM; Tue, 03 Mar 2020 10:22:42 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by fmsmga101.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 03 Mar 2020 02:22:30 -0800
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.70,510,1574150400"; d="scan'208";a="351793990"
+Received: from lahna.fi.intel.com (HELO lahna) ([10.237.72.163])
+ by fmsmga001.fm.intel.com with SMTP; 03 Mar 2020 02:22:23 -0800
+Received: by lahna (sSMTP sendmail emulation); Tue, 03 Mar 2020 12:22:22 +0200
+Date: Tue, 3 Mar 2020 12:22:22 +0200
+From: Mika Westerberg <mika.westerberg@linux.intel.com>
+To: Tudor.Ambarus@microchip.com
+Subject: Re: [PATCH 12/23] mtd: spi-nor: Move Intel bits out of core.c
+Message-ID: <20200303102222.GL2540@lahna.fi.intel.com>
+References: <20200302180730.1886678-1-tudor.ambarus@microchip.com>
+ <20200302180730.1886678-13-tudor.ambarus@microchip.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20200302180730.1886678-13-tudor.ambarus@microchip.com>
+Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_021930_224400_23657B83 
-X-CRM114-Status: GOOD (  13.95  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200303_022240_992739_C3403DEB 
+X-CRM114-Status: UNSURE (   8.25  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.88 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [192.55.52.88 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,92 +71,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pwm@vger.kernel.org, Sam Shih <sam.shih@mediatek.com>,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- John Crispin <john@phrozen.org>, linux-arm-kernel@lists.infradead.org
+Cc: kstewart@linuxfoundation.org, alexandre.belloni@bootlin.com,
+ vigneshr@ti.com, linux-aspeed@lists.ozlabs.org, thor.thayer@linux.intel.com,
+ jethro@fortanix.com, rfontana@redhat.com, linux-mtd@lists.infradead.org,
+ miquel.raynal@bootlin.com, opensource@jilayne.com, richard@nod.at,
+ allison@lohutok.net, michal.simek@xilinx.com, Ludovic.Desroches@microchip.com,
+ joel@jms.id.au, nishkadg.linux@gmail.com, john.garry@huawei.com, vz@mleia.com,
+ alexander.sverdlin@nokia.com, matthias.bgg@gmail.com, tglx@linutronix.de,
+ swboyd@chromium.org, ludovic.barre@st.com,
+ linux-arm-kernel@lists.infradead.org, bbrezillon@kernel.org, andrew@aj.id.au,
+ Nicolas.Ferre@microchip.com, linux-kernel@vger.kernel.org, dinguyen@kernel.org,
+ michael@walle.cc, linux-mediatek@lists.infradead.org, info@metux.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The pwm clock source could be divided by 1625 with PWM_CON
-BIT(3) setting in mediatek hardware.
+On Mon, Mar 02, 2020 at 06:07:51PM +0000, Tudor.Ambarus@microchip.com wrote:
+> From: Boris Brezillon <bbrezillon@kernel.org>
+> 
+> Create a SPI NOR manufacturer driver for Intel chips, and move the
+> Intel definitions outside of core.c.
+> 
+> Signed-off-by: Boris Brezillon <bbrezillon@kernel.org>
+> Signed-off-by: Tudor Ambarus <tudor.ambarus@microchip.com>
 
-This patch add support for longer pwm period configuration,
-which allowing blinking LEDs via pwm interface.
+Reviewed-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 
-Signed-off-by: Sam Shih <sam.shih@mediatek.com>
----
- drivers/pwm/pwm-mediatek.c | 34 ++++++++++++++++++++++++++++++----
- 1 file changed, 30 insertions(+), 4 deletions(-)
-
-diff --git a/drivers/pwm/pwm-mediatek.c b/drivers/pwm/pwm-mediatek.c
-index b94e0d09c300..c64ecff6c550 100644
---- a/drivers/pwm/pwm-mediatek.c
-+++ b/drivers/pwm/pwm-mediatek.c
-@@ -121,8 +121,11 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
- 			       int duty_ns, int period_ns)
- {
- 	struct pwm_mediatek_chip *pc = to_pwm_mediatek_chip(chip);
--	u32 clkdiv = 0, cnt_period, cnt_duty, reg_width = PWMDWIDTH,
--	    reg_thres = PWMTHRES;
-+	/* The source clock is divided by 2^clkdiv or iff the clksel bit
-+	 * is set by (2^clkdiv*1625)
-+	 */
-+	u32 clkdiv = 0, clksel = 0, cnt_period, cnt_duty,
-+	    reg_width = PWMDWIDTH, reg_thres = PWMTHRES;
- 	u64 resolution;
- 	int ret;
- 
-@@ -133,12 +136,30 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
- 
- 	/* Using resolution in picosecond gets accuracy higher */
- 	resolution = (u64)NSEC_PER_SEC * 1000;
-+	/* Calculate resolution based on current clock frequency */
- 	do_div(resolution, clk_get_rate(pc->clk_pwms[pwm->hwpwm]));
--
-+	/* Using resolution to calculate cnt_period which represents
-+	 * the effective range of the PWM period counter
-+	 */
- 	cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000, resolution);
- 	while (cnt_period > 8191) {
-+		/* Using clkdiv to reduce clock frequency and calculate
-+		 * new resolution based on new clock speed
-+		 */
- 		resolution *= 2;
- 		clkdiv++;
-+		if (clkdiv > PWM_CLK_DIV_MAX && !clksel) {
-+			/* Using clksel to divide the pwm source clock by
-+			 * an additional 1625, and recalculate new clkdiv
-+			 * and resolution
-+			 */
-+			clksel = 1;
-+			clkdiv = 0;
-+			resolution = (u64)NSEC_PER_SEC * 1000 * 1625;
-+			do_div(resolution,
-+				clk_get_rate(pc->clk_pwms[pwm->hwpwm]));
-+		}
-+		/* Calculate cnt_period based on resolution */
- 		cnt_period = DIV_ROUND_CLOSEST_ULL((u64)period_ns * 1000,
- 						   resolution);
- 	}
-@@ -158,8 +179,13 @@ static int pwm_mediatek_config(struct pwm_chip *chip, struct pwm_device *pwm,
- 		reg_thres = PWM45THRES_FIXUP;
- 	}
- 
-+	/* Calculate cnt_duty based on resolution */
- 	cnt_duty = DIV_ROUND_CLOSEST_ULL((u64)duty_ns * 1000, resolution);
--	pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
-+	if (clksel)
-+		pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | BIT(3) |
-+				    clkdiv);
-+	else
-+		pwm_mediatek_writel(pc, pwm->hwpwm, PWMCON, BIT(15) | clkdiv);
- 	pwm_mediatek_writel(pc, pwm->hwpwm, reg_width, cnt_period);
- 	pwm_mediatek_writel(pc, pwm->hwpwm, reg_thres, cnt_duty);
- 
--- 
-2.17.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
