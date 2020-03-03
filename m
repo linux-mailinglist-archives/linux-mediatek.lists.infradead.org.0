@@ -2,73 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8A38117764A
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 13:45:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 55DD6177658
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 13:47:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NYlFD9s0d3zHpzNIUf9cpeutMxbEoGu+EQI1EUq2HR4=; b=om9YIpPYfSdYN0
-	wdliwCLvOJdVmKinkC2JOtrbfGuG3XqOiY6CyfuE4ZO/DSejrej3qq7HQq58jdZFQe/1YvL/WFXS1
-	ur0Vda2FATHYluCtx+xHcBOmPlHr12vrm2i6FcxnoqESunOo5db2AGiLdsKhxKYOoFNwW5g2yIRpm
-	ytjBmhQSS7v7C+WjRhRR7tjwbdKPD8yiHFCchgLmjpO/72HLfDc6ddT6zCBCJtmeT5wm6S35kr0sv
-	TKPDKozrhWOZsJ6MqzFIw+1oBp6TxgfktVJAdzWCLi0fQp0NaSg3lrOtrEVcs+eX/EFyI5aoD0uaT
-	pQ5kWCktiEWF8YwJ7m3A==;
+	List-Owner; bh=qp4Cv7dtpLsjyD7+5lXth2YHvG5thVV0x+skVZjIqsE=; b=gtG0GRXdSvN+bG
+	R3VFEyqq1z0NVqrAUWgpWZcENx0ByPKczHWg+Z9ePVkXwilvDNt0l9p279pLtb/k6LJR/cYjtaEkN
+	GSQ9ZzzPy/sa6AylxbT+NgoA14NtyHQZM1kahKC7INFzbDjTW0kZZTHgbUNwfnkrKV3BsmMz8l8BY
+	IYhSLmoxyceTs1JNwBL9IL2HR91lb5K0mQZNI1wTL6Diy4I8FUtKUxQZ2djWlYGCjvaGBU6t6n/1b
+	EkIRP600a2HbqM65n2LnVizPWverDgCxxj4XMN6KvhWo6Zo51gP/96StTnNphzKKuIf1m8gAfCbgt
+	vBey0wP4+aQ7i4QlhGwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j96vY-0008V8-Tx; Tue, 03 Mar 2020 12:45:36 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1j96x0-0001dN-Hm; Tue, 03 Mar 2020 12:47:06 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j96v3-0007BX-E0; Tue, 03 Mar 2020 12:45:07 +0000
-X-UUID: 3f55fcde72af4d5e8ff727abbd577c43-20200303
+ id 1j96v9-0007Uz-9e; Tue, 03 Mar 2020 12:45:13 +0000
+X-UUID: 368110217fed44dba42874720fc3ecd2-20200303
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=8tqG320za0mW9RIagYkPiOg3CQwLqQXnwr9xDSmqpV8=; 
- b=vExT40JAWHV3pzX+i+Sw10KVWqWfabf6JUolALoaQa5SKBRRSz6O0agfqwlg7GalrLMvbiw1pjeBSAIMyit3x0klPk0q8nssHSnhXVFPCdj2PHUBCOyJCoGnbVmD6UsGsUwVKL1oz8vPsaWc4Uz5+xNx6G33XG9E+QsYS99seB8=;
-X-UUID: 3f55fcde72af4d5e8ff727abbd577c43-20200303
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=lH1GxrrBmjcQZs+IZ5Gs3RNfRgwZkD+ZkgKeH4PktnM=; 
+ b=fEJrdJ6moLK/dZX658utmY/SvMNjYwSlEsuuRz8c34nZrR81gaD5a4hD7xnMMpJDuLlN9VoUJ9xPV5B5RtM4ZEVh5R+Y9tUQcnCLF5lz0saHmONCBLhQAFRV7SLbKdbwmy9c+80sR/0W9G2+xaW3TwkJu3YeATfPwAKpYw1v+F0=;
+X-UUID: 368110217fed44dba42874720fc3ecd2-20200303
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <xia.jiang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2094723658; Tue, 03 Mar 2020 04:45:01 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 04:35:00 -0800
+ with ESMTP id 1678892120; Tue, 03 Mar 2020 04:45:03 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Mar 2020 04:36:17 -0800
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 3 Mar 2020 20:34:07 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Mar 2020 20:34:04 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Tue, 3 Mar 2020 20:35:39 +0800
+ Transport; Tue, 3 Mar 2020 20:35:40 +0800
 From: Xia Jiang <xia.jiang@mediatek.com>
 To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Mauro Carvalho Chehab
  <mchehab+samsung@kernel.org>, Rob Herring <robh+dt@kernel.org>, "Matthias
  Brugger" <matthias.bgg@gmail.com>, Rick Chang <rick.chang@mediatek.com>
-Subject: [PATCH v7 03/11] media: platform: Improve s_selection flow for bug
- fixing
-Date: Tue, 3 Mar 2020 20:34:38 +0800
-Message-ID: <20200303123446.20095-4-xia.jiang@mediatek.com>
+Subject: [PATCH v7 04/11] media: platform: Use kernel native functions for
+ improving code quality
+Date: Tue, 3 Mar 2020 20:34:39 +0800
+Message-ID: <20200303123446.20095-5-xia.jiang@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200303123446.20095-1-xia.jiang@mediatek.com>
 References: <20200303123446.20095-1-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_044505_525744_0CA7EC34 
-X-CRM114-Status: UNSURE (   9.88  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 1.8 (+)
+X-CRM114-CacheID: sfid-20200303_044511_473976_A1F78D06 
+X-CRM114-Status: GOOD (  12.34  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (1.8 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs [URI: r.top (top)]
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -101,28 +97,147 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Get correct compose value in mtk_jpeg_s_selection function.
+Use clamp() to replace mtk_jpeg_bound_align_image() and round() to
+replace mtk_jpeg_align().
 
 Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 ---
- drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ .../media/platform/mtk-jpeg/mtk_jpeg_core.c   | 41 +++++--------------
+ .../media/platform/mtk-jpeg/mtk_jpeg_core.h   |  8 ++--
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c |  8 ++--
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h |  5 ---
+ 4 files changed, 19 insertions(+), 43 deletions(-)
 
 diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-index da0dae4b0fc9..fb2c8d026580 100644
+index fb2c8d026580..4e9ff1f9732e 100644
 --- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
 +++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-@@ -492,8 +492,8 @@ static int mtk_jpeg_s_selection(struct file *file, void *priv,
- 	case V4L2_SEL_TGT_COMPOSE:
- 		s->r.left = 0;
- 		s->r.top = 0;
--		s->r.width = ctx->out_q.w;
--		s->r.height = ctx->out_q.h;
-+		ctx->out_q.w = s->r.width;
-+		ctx->out_q.h = s->r.height;
- 		break;
- 	default:
- 		return -EINVAL;
+@@ -157,25 +157,6 @@ static struct mtk_jpeg_fmt *mtk_jpeg_find_format(struct mtk_jpeg_ctx *ctx,
+ 	return NULL;
+ }
+ 
+-static void mtk_jpeg_bound_align_image(u32 *w, unsigned int wmin,
+-				       unsigned int wmax, unsigned int walign,
+-				       u32 *h, unsigned int hmin,
+-				       unsigned int hmax, unsigned int halign)
+-{
+-	int width, height, w_step, h_step;
+-
+-	width = *w;
+-	height = *h;
+-	w_step = 1 << walign;
+-	h_step = 1 << halign;
+-
+-	v4l_bound_align_image(w, wmin, wmax, walign, h, hmin, hmax, halign, 0);
+-	if (*w < width && (*w + w_step) <= wmax)
+-		*w += w_step;
+-	if (*h < height && (*h + h_step) <= hmax)
+-		*h += h_step;
+-}
+-
+ static void mtk_jpeg_adjust_fmt_mplane(struct mtk_jpeg_ctx *ctx,
+ 				       struct v4l2_format *f)
+ {
+@@ -218,25 +199,25 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
+ 	if (q_type == MTK_JPEG_FMT_TYPE_OUTPUT) {
+ 		struct v4l2_plane_pix_format *pfmt = &pix_mp->plane_fmt[0];
+ 
+-		mtk_jpeg_bound_align_image(&pix_mp->width, MTK_JPEG_MIN_WIDTH,
+-					   MTK_JPEG_MAX_WIDTH, 0,
+-					   &pix_mp->height, MTK_JPEG_MIN_HEIGHT,
+-					   MTK_JPEG_MAX_HEIGHT, 0);
++		pix_mp->height = clamp(pix_mp->height, MTK_JPEG_MIN_HEIGHT,
++				       MTK_JPEG_MAX_HEIGHT);
++		pix_mp->width = clamp(pix_mp->width, MTK_JPEG_MIN_WIDTH,
++				      MTK_JPEG_MAX_WIDTH);
+ 
+ 		memset(pfmt->reserved, 0, sizeof(pfmt->reserved));
+ 		pfmt->bytesperline = 0;
+ 		/* Source size must be aligned to 128 */
+-		pfmt->sizeimage = mtk_jpeg_align(pfmt->sizeimage, 128);
++		pfmt->sizeimage = round_up(pfmt->sizeimage, 128);
+ 		if (pfmt->sizeimage == 0)
+ 			pfmt->sizeimage = MTK_JPEG_DEFAULT_SIZEIMAGE;
+ 		goto end;
+ 	}
+ 
+ 	/* type is MTK_JPEG_FMT_TYPE_CAPTURE */
+-	mtk_jpeg_bound_align_image(&pix_mp->width, MTK_JPEG_MIN_WIDTH,
+-				   MTK_JPEG_MAX_WIDTH, fmt->h_align,
+-				   &pix_mp->height, MTK_JPEG_MIN_HEIGHT,
+-				   MTK_JPEG_MAX_HEIGHT, fmt->v_align);
++	pix_mp->height = clamp(round_up(pix_mp->height, fmt->v_align),
++			       MTK_JPEG_MIN_HEIGHT, MTK_JPEG_MAX_HEIGHT);
++	pix_mp->width = clamp(round_up(pix_mp->width, fmt->h_align),
++			      MTK_JPEG_MIN_WIDTH, MTK_JPEG_MAX_WIDTH);
+ 
+ 	for (i = 0; i < fmt->colplanes; i++) {
+ 		struct v4l2_plane_pix_format *pfmt = &pix_mp->plane_fmt[i];
+@@ -771,8 +752,8 @@ static void mtk_jpeg_set_dec_src(struct mtk_jpeg_ctx *ctx,
+ {
+ 	bs->str_addr = vb2_dma_contig_plane_dma_addr(src_buf, 0);
+ 	bs->end_addr = bs->str_addr +
+-			 mtk_jpeg_align(vb2_get_plane_payload(src_buf, 0), 16);
+-	bs->size = mtk_jpeg_align(vb2_plane_size(src_buf, 0), 128);
++		       round_up(vb2_get_plane_payload(src_buf, 0), 16);
++	bs->size = round_up(vb2_plane_size(src_buf, 0), 128);
+ }
+ 
+ static int mtk_jpeg_set_dec_dst(struct mtk_jpeg_ctx *ctx,
+diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
+index 999bd1427809..28e9b30ad5c3 100644
+--- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
++++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
+@@ -21,10 +21,10 @@
+ #define MTK_JPEG_FMT_TYPE_OUTPUT	1
+ #define MTK_JPEG_FMT_TYPE_CAPTURE	2
+ 
+-#define MTK_JPEG_MIN_WIDTH	32
+-#define MTK_JPEG_MIN_HEIGHT	32
+-#define MTK_JPEG_MAX_WIDTH	8192
+-#define MTK_JPEG_MAX_HEIGHT	8192
++#define MTK_JPEG_MIN_WIDTH	32U
++#define MTK_JPEG_MIN_HEIGHT	32U
++#define MTK_JPEG_MAX_WIDTH	8192U
++#define MTK_JPEG_MAX_HEIGHT	8192U
+ 
+ #define MTK_JPEG_DEFAULT_SIZEIMAGE	(1 * 1024 * 1024)
+ 
+diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c
+index ddf0dfa78e20..68abcfd7494d 100644
+--- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c
++++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.c
+@@ -153,10 +153,10 @@ static int mtk_jpeg_calc_dst_size(struct mtk_jpeg_dec_param *param)
+ 				param->sampling_w[i];
+ 		/* output format is 420/422 */
+ 		param->comp_w[i] = padding_w >> brz_w[i];
+-		param->comp_w[i] = mtk_jpeg_align(param->comp_w[i],
+-						  MTK_JPEG_DCTSIZE);
+-		param->img_stride[i] = i ? mtk_jpeg_align(param->comp_w[i], 16)
+-					: mtk_jpeg_align(param->comp_w[i], 32);
++		param->comp_w[i] = round_up(param->comp_w[i],
++					    MTK_JPEG_DCTSIZE);
++		param->img_stride[i] = i ? round_up(param->comp_w[i], 16)
++					: round_up(param->comp_w[i], 32);
+ 		ds_row_h[i] = (MTK_JPEG_DCTSIZE * param->sampling_h[i]);
+ 	}
+ 	param->dec_w = param->img_stride[0];
+diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h b/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h
+index 9c6584eaad99..7b0687f8f4b6 100644
+--- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h
++++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_hw.h
+@@ -54,11 +54,6 @@ struct mtk_jpeg_dec_param {
+ 	u8 uv_brz_w;
+ };
+ 
+-static inline u32 mtk_jpeg_align(u32 val, u32 align)
+-{
+-	return (val + align - 1) & ~(align - 1);
+-}
+-
+ struct mtk_jpeg_bs {
+ 	dma_addr_t	str_addr;
+ 	dma_addr_t	end_addr;
 -- 
 2.18.0
 _______________________________________________
