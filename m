@@ -2,84 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 89020176ED8
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 06:38:42 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8A194176FE2
+	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 08:16:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FJGO8SaN5G4OZjFTGfDFGczDNq+5ohoTCtlgH6893uA=; b=OTfq27SWHJIrjh
-	tfLdMbRuYIxLIHt9B23LkxuGK8Cv1fcqnz+hzVl3LaK8TnW25kpNsk0iWS0UPe04gI1Y6QJ3Tqv5U
-	nbGHyhr8yyxeuxtkqYeqojpveQeazejpIbAUZNTXOC/A2IHodbj3WSmkbh8R2n3+aefZeL0Es4hoJ
-	WscdIhpyH12FsHcMTvh446CuE9uh+uhotg2mFZqXqYXkjpqaX+P6BSRINgaez9qEcqQGTuCLcB3+s
-	js4yrpzmFlO5/I/0S+5GkdHDMROd8LlrGtpk0MXSjKwVV2Odwof0cM3Y40kd9L3WWeZdxrrgeJUSX
-	zTaHJhYHq/szhGHYnzDg==;
+	List-Owner; bh=nS+cApkfTPuwhp9f2XIz6WHFdqjOQxW1xZKYhMT9YnI=; b=LFt0w+2YQiybbc
+	5HlI/XR+zZ4f29XAgBYqukMuGmHn/44qGvzGBE0SqpFnYRRzGW+BycmI+HrVq04uiCJV3O8EowL33
+	JRVnT/IucCPVSyXtF6buENRS3/gUHQN5giBb2QQSURb4KQsDtv0gNDd0MZuAQe9MCNidnUvhYl1Pc
+	znkWFuH1pnG8M2yP96yKaIa+62NDGMu9HQrCjlCGl7cVkLEf5u+67SMzYPVP3RdGlUYvSDEp88vQY
+	SF3ThVa04MRNvTNIJQi6DsLy4zs+KlbZhJ6vSqqMkctw4EKnZ4oFI8inICbI8HiWnnJpsrIlgAUGd
+	xAVdICQYTwfd+pSJ37Pg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j90GK-0001dI-9w; Tue, 03 Mar 2020 05:38:36 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1j91mU-0005wl-Fv; Tue, 03 Mar 2020 07:15:54 +0000
+Received: from mail-qt1-x844.google.com ([2607:f8b0:4864:20::844])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j90Fr-00012u-EY; Tue, 03 Mar 2020 05:38:08 +0000
-X-UUID: 7eb3f18483bb45ec8e189127c7bf1d8a-20200302
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=sB31c1utjXoEI0bkxHgvZA0r/O+d8TC2fbnDDVG92d8=; 
- b=RLCN62+1nXVlFbVoOONZPrKcEpjwpH18fb0tQ1Uzx7AEIjjwyZrDne8Ed7wbL3UA850GmC4/DQUoysxzV9t6GW1kxyFlqmgvQZIiOCDiqYazlYf20omM7u4q2IF2bPS5Bx4J3bHznYpFpAfDxcfmHJ4T3PQ7Y2trnMk1b1L11Kg=;
-X-UUID: 7eb3f18483bb45ec8e189127c7bf1d8a-20200302
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <jitao.shi@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1408934268; Mon, 02 Mar 2020 21:38:03 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 2 Mar 2020 21:28:18 -0800
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Tue, 3 Mar 2020 13:23:39 +0800
-Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
- MTKCAS32.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Tue, 3 Mar 2020 13:28:31 +0800
-From: Jitao Shi <jitao.shi@mediatek.com>
-To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
- David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
- <linux-kernel@vger.kernel.org>
-Subject: [PATCH v12 6/6] drm/mediatek: set dpi pin mode to gpio low to avoid
- leakage current
-Date: Tue, 3 Mar 2020 13:27:22 +0800
-Message-ID: <20200303052722.94795-7-jitao.shi@mediatek.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20200303052722.94795-1-jitao.shi@mediatek.com>
-References: <20200303052722.94795-1-jitao.shi@mediatek.com>
+ id 1j91mK-0005oY-GS; Tue, 03 Mar 2020 07:15:45 +0000
+Received: by mail-qt1-x844.google.com with SMTP id i14so2027678qtv.13;
+ Mon, 02 Mar 2020 23:15:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jms.id.au; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=ypYkPGQ+tuqNht2BOkSbdXQNq89bA72Qai2EXZj0f5o=;
+ b=gXPMEWnOC5Cy3ZPGY+FzhF5FeyaaKpTZhjCaytHjaH7R5bIJ+NeoX29usAxajcmFWD
+ 0osf+xGKl8I1Rk25X70aOLLAx066ylCSu2IiUw76f42PjizbAasiLLQU6eaWVZ08Ecla
+ Nphech8ot3kQYbTOsW3KbZ+gn5bvdm8A5nHQo=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=ypYkPGQ+tuqNht2BOkSbdXQNq89bA72Qai2EXZj0f5o=;
+ b=ApHfmZAPdr15WJwOsjyJ3r0gA4htjovzcPr/06bdYNNb+1OZzlFxbNuYH+a1k79bNk
+ z/Xt0tmIhF9fHqvr4WjhJ//5lqFT+ssBuAQtbiEk9ofs8E0mdFNSIBXkE3IKHw15K23Y
+ Uj13H0S45Ou+OH3TqKNF3jk95hnR6iQDixzzORS0zE5fMfCzDIpHX6SbwzEGN9eumIRO
+ 2154m7AJo5Tsb40IyaFVbSBq7L5NM0Vr0958R8RFFe8F7dZxmWLXskoHnaCzLmwiKNKE
+ DA1xr5vtWSitfcdtoCF06bzr31ZYf4i7hgyLG6TIJu8lro93ShUy/Jx8PKjKW4YIq8ua
+ OPKQ==
+X-Gm-Message-State: ANhLgQ2F1WkpD30mVloCEWiFXErGRZZQJbHkYPsetXYhipunilXMJFqZ
+ eLnFT6aV7mMr/5XgWOGLUgppP31KfO6Io8KePGo=
+X-Google-Smtp-Source: ADFU+vvpPdIPrOMla3lHMKsvtgOsYhvOly+EDWJuxYHMS9CAj7ketuc9MhtRLZmEt1grmksChe08v/qQPfdfCEzGbUE=
+X-Received: by 2002:aed:3841:: with SMTP id j59mr3274883qte.220.1583219742473; 
+ Mon, 02 Mar 2020 23:15:42 -0800 (PST)
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: A7DA1D6B70A54B88BB92C62DF5B57B82FE7C188A7E6E462BA9E92C17D90207F02000:8
-X-MTK: N
+References: <20200302180730.1886678-1-tudor.ambarus@microchip.com>
+In-Reply-To: <20200302180730.1886678-1-tudor.ambarus@microchip.com>
+From: Joel Stanley <joel@jms.id.au>
+Date: Tue, 3 Mar 2020 07:15:31 +0000
+Message-ID: <CACPK8Xcvf2wSE5Y4E8Lbs6R9mHhztvNsr8vNrYaPX+kMMUhZvA@mail.gmail.com>
+Subject: Re: [PATCH 00/23] mtd: spi-nor: Move manufacturer/SFDP code out of
+ the core
+To: Tudor Ambarus <Tudor.Ambarus@microchip.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200302_213807_496358_30CCD9EF 
-X-CRM114-Status: GOOD (  12.69  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200302_231544_713427_FFB243E1 
+X-CRM114-Status: GOOD (  10.04  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:844 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [joel.stan[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,118 +90,45 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Jitao Shi <jitao.shi@mediatek.com>,
- srv_heupstream@mediatek.com, huijuan.xie@mediatek.com, stonea168@163.com,
- cawa.cheng@mediatek.com, linux-mediatek@lists.infradead.org,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
+Cc: Kate Stewart <kstewart@linuxfoundation.org>,
+ Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ Vignesh Raghavendra <vigneshr@ti.com>,
+ linux-aspeed <linux-aspeed@lists.ozlabs.org>, thor.thayer@linux.intel.com,
+ jethro@fortanix.com, rfontana@redhat.com,
+ linux-mtd <linux-mtd@lists.infradead.org>,
+ Miquel Raynal <miquel.raynal@bootlin.com>, opensource@jilayne.com,
+ Richard Weinberger <richard@nod.at>, Michal Simek <michal.simek@xilinx.com>,
+ Ludovic.Desroches@microchip.com, allison@lohutok.net, nishkadg.linux@gmail.com,
+ john.garry@huawei.com, Vladimir Zapolskiy <vz@mleia.com>,
+ alexander.sverdlin@nokia.com, Matthias Brugger <matthias.bgg@gmail.com>,
+ Thomas Gleixner <tglx@linutronix.de>, Stephen Boyd <swboyd@chromium.org>,
+ mika.westerberg@linux.intel.com, ludovic.barre@st.com,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ Boris Brezillon <bbrezillon@kernel.org>, Andrew Jeffery <andrew@aj.id.au>,
+ Nicolas Ferre <Nicolas.Ferre@microchip.com>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>, dinguyen@kernel.org,
+ Michael Walle <michael@walle.cc>, linux-mediatek@lists.infradead.org,
+ info@metux.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Config dpi pins mode to output and pull low when dpi is disabled.
-Aovid leakage current from some dpi pins (Hsync Vsync DE ... ).
+Hi Tudor,
 
-Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
----
- drivers/gpu/drm/mediatek/mtk_dpi.c | 44 ++++++++++++++++++++++++++++--
- 1 file changed, 42 insertions(+), 2 deletions(-)
+On Mon, 2 Mar 2020 at 18:07, <Tudor.Ambarus@microchip.com> wrote:
+>
+> From: Tudor Ambarus <tudor.ambarus@microchip.com>
+>
+> Hello,
+>
+> This patch series is an attempt at getting all manufacturer specific
+> quirks/code out of the core to make the core logic more readable and
+> thus ease maintainance.
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_dpi.c b/drivers/gpu/drm/mediatek/mtk_dpi.c
-index db3272f7a4c4..b6359e979588 100644
---- a/drivers/gpu/drm/mediatek/mtk_dpi.c
-+++ b/drivers/gpu/drm/mediatek/mtk_dpi.c
-@@ -10,7 +10,9 @@
- #include <linux/kernel.h>
- #include <linux/of.h>
- #include <linux/of_device.h>
-+#include <linux/of_gpio.h>
- #include <linux/of_graph.h>
-+#include <linux/pinctrl/consumer.h>
- #include <linux/platform_device.h>
- #include <linux/types.h>
- 
-@@ -74,6 +76,9 @@ struct mtk_dpi {
- 	enum mtk_dpi_out_yc_map yc_map;
- 	enum mtk_dpi_out_bit_num bit_num;
- 	enum mtk_dpi_out_channel_swap channel_swap;
-+	struct pinctrl *pinctrl;
-+	struct pinctrl_state *pins_gpio;
-+	struct pinctrl_state *pins_dpi;
- 	int refcount;
- 	u32 pclk_sample;
- };
-@@ -387,6 +392,9 @@ static void mtk_dpi_power_off(struct mtk_dpi *dpi)
- 	if (--dpi->refcount != 0)
- 		return;
- 
-+	if (dpi->pinctrl && dpi->pins_gpio)
-+		pinctrl_select_state(dpi->pinctrl, dpi->pins_gpio);
-+
- 	mtk_dpi_disable(dpi);
- 	clk_disable_unprepare(dpi->pixel_clk);
- 	clk_disable_unprepare(dpi->engine_clk);
-@@ -411,6 +419,9 @@ static int mtk_dpi_power_on(struct mtk_dpi *dpi)
- 		goto err_pixel;
- 	}
- 
-+	if (dpi->pinctrl && dpi->pins_dpi)
-+		pinctrl_select_state(dpi->pinctrl, dpi->pins_dpi);
-+
- 	mtk_dpi_enable(dpi);
- 	return 0;
- 
-@@ -705,6 +716,7 @@ static const struct mtk_dpi_conf mt8183_conf = {
- static int mtk_dpi_probe(struct platform_device *pdev)
- {
- 	struct device *dev = &pdev->dev;
-+	struct device_node *ep;
- 	struct mtk_dpi *dpi;
- 	struct resource *mem;
- 	int comp_id;
-@@ -716,9 +728,37 @@ static int mtk_dpi_probe(struct platform_device *pdev)
- 
- 	dpi->dev = dev;
- 	dpi->conf = (struct mtk_dpi_conf *)of_device_get_match_data(dev);
--	of_property_read_u32_index(dev->of_node, "pclk-sample", 1,
--				   &dpi->pclk_sample);
- 
-+	ep = of_graph_get_endpoint_by_regs(dev->of_node, 0, 0);
-+	if (!ep) {
-+		dev_err(dev, "Failed get the endpoint port\n");
-+		return -EINVAL;
-+	}
-+
-+	/* Get the sampling edge from the endpoint. */
-+	of_property_read_u32(ep, "pclk-sample", &dpi->pclk_sample);
-+	of_node_put(ep);
-+
-+	dpi->pinctrl = devm_pinctrl_get(&pdev->dev);
-+	if (IS_ERR(dpi->pinctrl)) {
-+		dpi->pinctrl = NULL;
-+		dev_dbg(&pdev->dev, "Cannot find pinctrl!\n");
-+	}
-+	if (dpi->pinctrl) {
-+		dpi->pins_gpio = pinctrl_lookup_state(dpi->pinctrl, "sleep");
-+		if (IS_ERR(dpi->pins_gpio)) {
-+			dpi->pins_gpio = NULL;
-+			dev_dbg(&pdev->dev, "Cannot find pinctrl idle!\n");
-+		}
-+		if (dpi->pins_gpio)
-+			pinctrl_select_state(dpi->pinctrl, dpi->pins_gpio);
-+
-+		dpi->pins_dpi = pinctrl_lookup_state(dpi->pinctrl, "default");
-+		if (IS_ERR(dpi->pins_dpi)) {
-+			dpi->pins_dpi = NULL;
-+			dev_dbg(&pdev->dev, "Cannot find pinctrl active!\n");
-+		}
-+	}
- 	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
- 	dpi->regs = devm_ioremap_resource(dev, mem);
- 	if (IS_ERR(dpi->regs)) {
--- 
-2.21.0
+I tried to apply this to linus' tree (5.6-rc4) but it had a bunch of
+conflicts. What did you base this on?
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
