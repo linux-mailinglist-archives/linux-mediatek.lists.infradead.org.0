@@ -2,85 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5A0771792E9
-	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Mar 2020 16:00:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4CBFE179316
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Mar 2020 16:14:56 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8sHEASeIVbHEV5od+BKToMmnW/JqWHEpiGs+R9anKpI=; b=m0T8p+//A+4IPu
-	QC0XqDJgxVGlLfxylxozfHAyFJMjXDkGK59yB1yV/kjbHM6iZET4QmZOVl00IMwrEy4bnVFvL53MC
-	ok/SmvzBhr1DzwPSbEV2z4YxLC3b5uLEmiLgL8/69W4d69uwD1THfeBumKcW3WxNeLeQRYEYWCjq9
-	OGG95rvJTTgAnDPJBFHVhlS73MrCB5I4wuw2R5iTKepS3fp2AeFNAOCbIsqyXHCkz5KBsvH0NIrCD
-	w2ey60Dk80Y9VE0n7DbTzgoJoyeCZ+y9osgyGgSDBKeWCkXHoPB9LBtFdcVZnEHetFxTVGzs410/C
-	teWb3SH8NbEGBF4zqYZw==;
+	List-Owner; bh=EYh7AMRqavSCkdZGNU+GJjD1mDx7T5H3VN6VEytdsjM=; b=eLOyBmj7xceYj8
+	LgDxuXQJCmeEBSgz+g0EzYvaFBMyrlsyRRG8aYO/PjlN5Gw24UP57m6F1CIgRYVzGVDpuM6nFAVm2
+	qgw2C+IhNyFY3+VNTytyly43FUbzw4J2lq4S0onQBRXHjZecjpR5yhNY4F7SjU/I6sagDo/8cisy6
+	2Cci7SV/ZW6gQ4y4lS8Qz/hso/C3NS+KlwbCQnW45r1OPA2eJ60IyFFmkqu3IHnFyONv5cbHeW7Ul
+	KVfLQC/WGLw5Pi41vS+CEUei90FLfybmfpmI/dB08hskXTKQI7m0Ghp5wrbM711bVdzHNFbB1kxqT
+	HNM07+f/8tZ/c/qDwN2A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9VVE-00047r-32; Wed, 04 Mar 2020 15:00:04 +0000
-Received: from mail-oi1-f196.google.com ([209.85.167.196])
+	id 1j9VjR-0002H1-CB; Wed, 04 Mar 2020 15:14:45 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9VVB-00045w-0P; Wed, 04 Mar 2020 15:00:02 +0000
-Received: by mail-oi1-f196.google.com with SMTP id g6so2381695oiy.1;
- Wed, 04 Mar 2020 07:00:00 -0800 (PST)
+ id 1j9VjH-00028p-3r
+ for linux-mediatek@lists.infradead.org; Wed, 04 Mar 2020 15:14:36 +0000
+Received: by mail-wm1-x344.google.com with SMTP id a5so2520746wmb.0
+ for <linux-mediatek@lists.infradead.org>; Wed, 04 Mar 2020 07:14:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to
+ :user-agent; bh=ntkN2Bt2eytzYo8LHWkETJyp51uX20eFB3He3wFrMNw=;
+ b=ZNJALoFg7NbZIlCreszRaLeqZiUnLe5Flj9+uAcQPt3PU/qA2sI14FPluBDqsdXgI/
+ 1fCS41eNErjZSFzRZxMeJhMget6pFDN5fOEU5+wD+RfNcrP2bq430ItHZZiyifyZQgW3
+ twe3emHg0w9L/OTmr73xd+dGeQTRQaOL6mgy5YZ44MHF5lmqa0qimopn4zrnYGSfjtiF
+ Kt0H38kUXf0eNP0snIMzOSgkWWvUuN2AlPcKssLWAU+OeL9TfEr6zQU8fVQNV8lLdhuC
+ g1+/G1KOcW7kuW7/qYTbHWrEqg03ocpLCwmC0M+VVslR/xkjNiv41SZ3qUEhqDtWATD1
+ +BPw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=5kzs+suiXGOLM6214SN1xySZQC2yuoHuAv+kXNmxnJI=;
- b=EP1pamTlcikhYGjTHp/9UzOznxU/ls+sNpfM+0JrXOzzQZr8LYKvfhhTNBdBmgd88o
- VCTnHzILxWnvFppuitGNMh0Q2PAmJf3T5MhiqFqa7wf3bQ2wm55ICQWM98/SaRIUhNmb
- tyK8I4FxIJ4705fj9yXg37TTuv9trHkdUXuOHegElaAFqWRn9KtDcFNGl3bFyd7K/bdw
- aoEINepp97UwjexLpC/SKiyY1Ep8RLxJgmlQZd7zf2BxOz7xIbXLVk3YsTd8GIsC1qiG
- o69icYva9lu8pRVJnF/3rSDOKCdyIF9CHOBRiZCXu0rS61ttoAtEdQHbX7/NLxByfu2T
- GzgQ==
-X-Gm-Message-State: ANhLgQ2q+XVPSUIZKBDPcyCe6LxlaY466XUzeslULfxAZx0mbIdjsUIO
- hPDVjWA9/BusLjdHwqllQQ==
-X-Google-Smtp-Source: ADFU+vv8e6bqzfrEUfhRglZm6ics/VgmQ0DWwpgysZeN1Q7F7AyUjL7HRD+dgHJdDUz55H2/3Q1G6Q==
-X-Received: by 2002:aca:5194:: with SMTP id f142mr2089262oib.100.1583333999966; 
- Wed, 04 Mar 2020 06:59:59 -0800 (PST)
-Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id b15sm6358282oic.52.2020.03.04.06.59.58
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to:user-agent;
+ bh=ntkN2Bt2eytzYo8LHWkETJyp51uX20eFB3He3wFrMNw=;
+ b=oHJ9aRIorO8F01pnqWvzD4gMHHGk9/QYhMFyJSlWMDkXAVwWUzzGldG0TMMvXeY0rK
+ wK+Ia/oKOlkQ7Skbrivk3wWATXDRS8cTyhMUqEKQkxSAsjO3jxCT3lUEGFDw0eSaWD72
+ Tv7pjf2rSsWB8EkhlflCKOmL0VPc9HjCJrSysPAY+LCKfAuQfsE8qFxjFaT7COIP19b6
+ JSk7Yxi4VNSKUZNvTGnC8WQee/Ol1Ah0rFiS2tkpr0pcpINkZF5AevCg8cFEmtHb2Xmv
+ 0UANiztqoHOlLw7CX5+N6UwbtziGCwRXJ3s3rDCHEJlwouMmiwIT7AX63z0rRGwOTNxO
+ 8aVA==
+X-Gm-Message-State: ANhLgQ2bOHuz2uriSNR7+JYumRDLwopd9UoLntNiGcfCgV3XQu1+m2Qr
+ nhFcK/SHfH+fXQJuJ3kAQthPyg==
+X-Google-Smtp-Source: ADFU+vsy9i8tQNn4aoMQESfufuXZTbONKfMbOIzTmzcSncwnWJ+oYo6P0UZaWtHBIQA1UKlaxZJ3tA==
+X-Received: by 2002:a1c:f008:: with SMTP id a8mr4024812wmb.81.1583334872783;
+ Wed, 04 Mar 2020 07:14:32 -0800 (PST)
+Received: from dell ([2.31.163.122])
+ by smtp.gmail.com with ESMTPSA id c11sm39066333wrp.51.2020.03.04.07.14.31
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 04 Mar 2020 06:59:59 -0800 (PST)
-Received: (nullmailer pid 20406 invoked by uid 1000);
- Wed, 04 Mar 2020 14:59:58 -0000
-Date: Wed, 4 Mar 2020 08:59:58 -0600
-From: Rob Herring <robh@kernel.org>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [PATCH v12 2/6] dt-bindings: display: mediatek: control dpi pins
- mode to avoid leakage
-Message-ID: <20200304145958.GA17716@bogus>
-References: <20200303052722.94795-1-jitao.shi@mediatek.com>
- <20200303052722.94795-3-jitao.shi@mediatek.com>
+ Wed, 04 Mar 2020 07:14:32 -0800 (PST)
+Date: Wed, 4 Mar 2020 15:15:12 +0000
+From: Lee Jones <lee.jones@linaro.org>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Subject: Re: 
+Message-ID: <20200304151512.GD3332@dell>
+References: <1583249249-17380-1-git-send-email-gene.chen.richtek@gmail.com>
+ <6b920875-8764-73a4-a763-788ce485b0cb@gmail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20200303052722.94795-3-jitao.shi@mediatek.com>
+In-Reply-To: <6b920875-8764-73a4-a763-788ce485b0cb@gmail.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200304_070001_059656_B8E79C56 
-X-CRM114-Status: GOOD (  13.37  )
-X-Spam-Score: -1.0 (-)
+X-CRM114-CacheID: sfid-20200304_071435_258414_6544ABF0 
+X-CRM114-Status: GOOD (  10.14  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-1.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.196 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
- -1.5 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.196 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,61 +98,33 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- bibby.hsieh@mediatek.com, srv_heupstream@mediatek.com,
- David Airlie <airlied@linux.ie>, huijuan.xie@mediatek.com, stonea168@163.com,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- cawa.cheng@mediatek.com, ck.hu@mediatek.com,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: gene_chen@richtek.com, linux-kernel@vger.kernel.org, cy_huang@richtek.com,
+ linux-mediatek@lists.infradead.org, Gene Chen <gene.chen.richtek@gmail.com>,
+ Wilma.Wu@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ shufan_lee@richtek.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Mar 03, 2020 at 01:27:18PM +0800, Jitao Shi wrote:
-> Add property "pinctrl-names" to swap pin mode between gpio and dpi mode. Set
-> the dpi pins to gpio mode and output-low to avoid leakage current when dpi
-> disabled.
-> 
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  .../devicetree/bindings/display/mediatek/mediatek,dpi.txt  | 7 +++++++
->  1 file changed, 7 insertions(+)
-> 
-> diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
-> index 58914cf681b8..77ca32a32399 100644
-> --- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
-> +++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
-> @@ -17,6 +17,10 @@ Required properties:
->    Documentation/devicetree/bindings/graph.txt. This port should be connected
->    to the input port of an attached HDMI or LVDS encoder chip.
->  
-> +Optional properties:
-> +- pinctrl-names: Contain "gpiomode" and "dpimode".
-
-Doesn't match the example.
-
-> +  pinctrl-names see Documentation/devicetree/bindings/pinctrlpinctrl-bindings.txt
-> +
->  Example:
->  
->  dpi0: dpi@1401d000 {
-> @@ -27,6 +31,9 @@ dpi0: dpi@1401d000 {
->  		 <&mmsys CLK_MM_DPI_ENGINE>,
->  		 <&apmixedsys CLK_APMIXED_TVDPLL>;
->  	clock-names = "pixel", "engine", "pll";
-> +	pinctrl-names = "active", "idle";
-> +	pinctrl-0 = <&dpi_pin_func>;
-> +	pinctrl-1 = <&dpi_pin_idle>;
->  
->  	port {
->  		dpi0_out: endpoint {
-> -- 
-> 2.21.0
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gV2VkLCAwNCBNYXIgMjAyMCwgTWF0dGhpYXMgQnJ1Z2dlciB3cm90ZToKCj4gUGxlYXNlIHJl
+c2VuZCB3aXRoIGFwcHJvcGlhdGUgY29tbWl0IG1lc3NhZ2UuCgpQbGVhc2UgcmVmcmFpbiBmcm9t
+IHRvcC1wb3N0aW5nIGFuZCBkb24ndCBmb3JnZXQgdG8gc25pcC4KCj4gT24gMDMvMDMvMjAyMCAx
+NjoyNywgR2VuZSBDaGVuIHdyb3RlOgo+ID4gQWRkIG1mZCBkcml2ZXIgZm9yIG10NjM2MCBwbWlj
+IGNoaXAgaW5jbHVkZQoKTG9va3MgbGlrZSB5b3VyIGZvcm1hdHRpbmcgaXMgb2ZmLgoKSG93IHdh
+cyB0aGlzIHBhdGNoIHNlbnQ/CgpCZXN0IHByYWN0aWNlIGlzIHRvIHVzZSBgZ2l0IHNlbmQtZW1h
+aWxgLgoKPiA+IEJhdHRlcnkgQ2hhcmdlci9VU0JfUEQvRmxhc2ggTEVEL1JHQiBMRUQvTERPL0J1
+Y2sKPiA+IAo+ID4gU2lnbmVkLW9mZi1ieTogR2VuZSBDaGVuIDxnZW5lX2NoZW5AcmljaHRlay5j
+b20KPiA+IC0tLQo+ID4gIGRyaXZlcnMvbWZkL0tjb25maWcgICAgICAgIHwgIDEyICsrCj4gPiAg
+ZHJpdmVycy9tZmQvTWFrZWZpbGUgICAgICAgfCAgIDEgKwo+ID4gIGRyaXZlcnMvbWZkL210NjM2
+MC1jb3JlLmMgIHwgNDI1ICsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysr
+KysrKwo+ID4gIGluY2x1ZGUvbGludXgvbWZkL210NjM2MC5oIHwgMjQwICsrKysrKysrKysrKysr
+KysrKysrKysrKysKPiA+ICA0IGZpbGVzIGNoYW5nZWQsIDY3OCBpbnNlcnRpb25zKCspCj4gPiAg
+Y3JlYXRlIG1vZGUgMTAwNjQ0IGRyaXZlcnMvbWZkL210NjM2MC1jb3JlLmMKPiA+ICBjcmVhdGUg
+bW9kZSAxMDA2NDQgaW5jbHVkZS9saW51eC9tZmQvbXQ2MzYwLmgKCi0tIApMZWUgSm9uZXMgW+ad
+jueQvOaWr10KTGluYXJvIFNlcnZpY2VzIFRlY2huaWNhbCBMZWFkCkxpbmFyby5vcmcg4pSCIE9w
+ZW4gc291cmNlIHNvZnR3YXJlIGZvciBBUk0gU29DcwpGb2xsb3cgTGluYXJvOiBGYWNlYm9vayB8
+IFR3aXR0ZXIgfCBCbG9nCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMu
+aW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZv
+L2xpbnV4LW1lZGlhdGVrCg==
