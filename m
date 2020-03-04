@@ -2,86 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB13D1785E1
-	for <lists+linux-mediatek@lfdr.de>; Tue,  3 Mar 2020 23:47:22 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5012417882A
+	for <lists+linux-mediatek@lfdr.de>; Wed,  4 Mar 2020 03:21:48 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xgnpePNBcs8miOtVT5dxsV69wO7IOQTfvZj/m/NixCE=; b=qfxylnn3l1eSa7
-	wPFu2C6RbxCSZJGLaIIsLa1+MMdd0tkIZi0R7KLBnoQJeseDcWrgrBmHi9DngIBKeKMMDN29DBn17
-	3t1TbuR8a7qwt5Ph0NJqLVVUyP3PymdQgMfkNZw1H0wzaauhnfOH+2yet62N9sDfsE8fiQlZFU0G4
-	kEUjxqpvUS+0lRpPogV/lCJzBc5cTlpgolDGe4wX8tXgA25RvQ848bNe0EUvNKWwqb04OdFjmhLEe
-	zoMNgXFP1otCYqEAp8uYLttxOahMU1pvewKvjaxhKzar7gkDsr3f08jgrTzw7x1G4BI0d2Jdf5Vau
-	RpgWsrFGxbR/97Xps1/A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=AMdzAqzOO04lJPJ748BE7jQ0MHbjk+dhlPSuaV4teSs=; b=FGJ22SQrrzkigu
+	p2DlSDgA9RvNkRfViW/nYLw9mcvvWdmZdom44y/SXWsgz+w7iY4Urwnx84dO0OM7BDishxnV+aDn5
+	oNqMW3Nnvclk6flcLfKbm5ZzF2rz8jlojQYvv6BbXMOPiXYA9T8N457JiefKkBbEiZmdi0VLjMWA3
+	ZlF5auUw1XjZK7/LgO7hWZ2lrDVKxMhyxeNFFMpwuzgL4FRsSFIkuwoSvvW4hb0dMREOoFu4mKXkv
+	PeyLTk4+v1UMIP/BWzhadKYq7pnRAbaJnw/paFAeAevHB6zC6W7+BEMo8EicLEfhZn/LoK826rvag
+	qlk99CHCcqcGtP8hfJZQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9GJk-0008ES-Ds; Tue, 03 Mar 2020 22:47:12 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
+	id 1j9JfC-00063e-RK; Wed, 04 Mar 2020 02:21:34 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9GJh-0008Dn-Cn; Tue, 03 Mar 2020 22:47:10 +0000
-Received: by mail-ot1-f65.google.com with SMTP id i14so95454otp.5;
- Tue, 03 Mar 2020 14:47:09 -0800 (PST)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=Z0du2wcxyjg7iRH0s/qpIMsj7X0YCwaBDvE2vsxIrbk=;
- b=lagoFGtSBW7BIMufWo914TZz8gdFTZT16BflTmeZmo2Cvo3+YHT8jP1H3+alOk3zqO
- EfaLbQbGV5KKO0TFxkFkS2SgV0bYuY5zmkbZOIKybKNvqfkvAHyZwoQSrpmnifLZ+sNh
- BWVAmoYiJedYKBiw+WpXaZxnfZC9/jcHprkwb2YpiUIX1ORwv4cLnneBI7oxgcKMAYuy
- LqU2a3es6aUE1gcxWvpLDpSSu4YXhWjEW5hjZLUmCQIB+fhXRuuR8zYBC0Gc4M/JYPC/
- NAiMAcHXUmT7SS6+g9ENqaA4MbeTbgYU9S9YCxqsDJs9sI5qlkZtCa/kJugR+Be0ja/D
- 97Lg==
-X-Gm-Message-State: ANhLgQ2tvuEduWb4HPW1NNwaVTaiQX78p1ZsEPamzMxNGN5XC4EiiW87
- vUjXJ/adXGmbTkNXX48VNw==
-X-Google-Smtp-Source: ADFU+vuU+JCOVQpYg1AlYEQdEKGSsg5SLhgtKZoaS1dScWhKEQWMAhE4l5CbjQlxM9gWy34zkZG6zg==
-X-Received: by 2002:a9d:4c92:: with SMTP id m18mr129586otf.168.1583275628368; 
- Tue, 03 Mar 2020 14:47:08 -0800 (PST)
-Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id b2sm5879600oii.20.2020.03.03.14.47.07
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 03 Mar 2020 14:47:07 -0800 (PST)
-Received: (nullmailer pid 32174 invoked by uid 1000);
- Tue, 03 Mar 2020 22:47:06 -0000
-Date: Tue, 3 Mar 2020 16:47:06 -0600
-From: Rob Herring <robh@kernel.org>
-To: Chuanhong Guo <gch981213@gmail.com>
-Subject: Re: [PATCH v2 3/4] dt-bindings: convert mtk-quadspi binding doc for
- spi-mtk-nor
-Message-ID: <20200303224706.GA22867@bogus>
-References: <20200228043636.559915-1-gch981213@gmail.com>
- <20200228043636.559915-4-gch981213@gmail.com>
+ id 1j9Jf9-00062D-D9; Wed, 04 Mar 2020 02:21:33 +0000
+X-UUID: 6444003239c44345b3d40cf00ab90b49-20200303
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=Dm2V6GDWvlxQSEubyRoFN1pLie+rFhFwHaZFOLLiCqw=; 
+ b=iyv4DQGAgUhykmexFoEHsa+5g7ZRs/voyb4EhescE6Mha12o3MgyFqBvQbWDpv2bX9/hDyD2MqAfQRwzUO7iTdekXVy76Do0Hh6kp7gsh4D4AUuP7C5mKI0WkxitFUWpUufYBLcIMV1KZo/dgRTv/l+Ewpf1ZHmKTzLmUQjFdn8=;
+X-UUID: 6444003239c44345b3d40cf00ab90b49-20200303
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 2098469868; Tue, 03 Mar 2020 18:21:25 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 3 Mar 2020 18:22:41 -0800
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 4 Mar 2020 10:18:34 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Wed, 4 Mar 2020 10:18:44 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <ebiggers@kernel.org>,
+ <martin.petersen@oracle.com>, <avri.altman@wdc.com>,
+ <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
+Subject: [RFC PATCH v2] scsi: ufs-mediatek: add inline encryption support
+Date: Wed, 4 Mar 2020 10:21:02 +0800
+Message-ID: <20200304022101.14165-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200228043636.559915-4-gch981213@gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+X-TM-SNTS-SMTP: 6FCB616A2934E695AB18D81FA70BEAADA050A97D3BDBD961B702E6F8CF1085B92000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_144709_439257_1FC5268B 
-X-CRM114-Status: GOOD (  20.46  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20200303_182131_455349_B745D7C7 
+X-CRM114-Status: GOOD (  12.21  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.65 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,113 +87,112 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Vignesh Raghavendra <vigneshr@ti.com>,
- Tudor Ambarus <tudor.ambarus@microchip.com>,
- Richard Weinberger <richard@nod.at>, open list <linux-kernel@vger.kernel.org>,
- linux-spi@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- linux-mtd@lists.infradead.org, Miquel Raynal <miquel.raynal@bootlin.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- "moderated list:ARM/Mediatek SoC support"
- <linux-arm-kernel@lists.infradead.org>
+Cc: andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org,
+ light.hsieh@mediatek.com, satyat@google.com, linux-fscrypt@vger.kernel.org,
+ cang@codeaurora.org, linux-mediatek@lists.infradead.org,
+ peter.wang@mediatek.com, matthias.bgg@gmail.com,
+ Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
+ beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Feb 28, 2020 at 12:36:35PM +0800, Chuanhong Guo wrote:
-> spi-mtk-nor is a driver to replace mtk-quadspi and they have almost
-> the same device-tree bindings. Reuse this binding documentation and
-> convert it for new driver:
-> 
-> 1. "Mediatek SoCs" -> "Mediatek ARM SoCs" because MTK MIPS SoCs
->    use different controllers.
-> 2. document "interrupts" as a required property because it's
->    available on all SoCs with this controller and new driver takes
->    advantages of it. It's implemented as optional only to maintain
->    backward compatibility.
-> 3. replace binding example with a mt7629 one because this is the
->    only one I know the interrupt assignment.
+Add inline encryption support to ufs-mediatek.
 
-That doesn't really matter. It would be less churn without that change 
-and examples are just examples.
+The standards-compliant parts, such as querying the crypto capabilities
+and enabling crypto for individual UFS requests, are already handled by
+ufshcd-crypto.c, which itself is wired into the blk-crypto framework.
 
-> 
-> Signed-off-by: Chuanhong Guo <gch981213@gmail.com>
-> ---
-> Change since v1:
->  none
-> 
->  .../mtk-quadspi.txt => spi/spi-mtk-nor.txt}   | 34 ++++++++-----------
->  1 file changed, 15 insertions(+), 19 deletions(-)
->  rename Documentation/devicetree/bindings/{mtd/mtk-quadspi.txt => spi/spi-mtk-nor.txt} (62%)
-> 
-> diff --git a/Documentation/devicetree/bindings/mtd/mtk-quadspi.txt b/Documentation/devicetree/bindings/spi/spi-mtk-nor.txt
-> similarity index 62%
-> rename from Documentation/devicetree/bindings/mtd/mtk-quadspi.txt
-> rename to Documentation/devicetree/bindings/spi/spi-mtk-nor.txt
-> index a12e3b5c495d..829da480b9a9 100644
-> --- a/Documentation/devicetree/bindings/mtd/mtk-quadspi.txt
-> +++ b/Documentation/devicetree/bindings/spi/spi-mtk-nor.txt
-> @@ -1,4 +1,4 @@
-> -* Serial NOR flash controller for MediaTek SoCs
-> +* SPI NOR flash controller for MediaTek ARM SoCs
->  
->  Required properties:
->  - compatible: 	  For mt8173, compatible should be "mediatek,mt8173-nor",
-> @@ -13,6 +13,7 @@ Required properties:
->  		  "mediatek,mt7629-nor", "mediatek,mt8173-nor"
->  		  "mediatek,mt8173-nor"
->  - reg: 		  physical base address and length of the controller's register
-> +- interrupts:	  Interrupt number used by the controller.
->  - clocks: 	  the phandle of the clocks needed by the nor controller
->  - clock-names: 	  the names of the clocks
->  		  the clocks should be named "spi" and "sf". "spi" is used for spi bus,
-> @@ -22,29 +23,24 @@ Required properties:
->  - #address-cells: should be <1>
->  - #size-cells:	  should be <0>
->  
-> -The SPI flash must be a child of the nor_flash node and must have a
-> -compatible property. Also see jedec,spi-nor.txt.
-> -
-> -Required properties:
-> -- compatible:	  May include a device-specific string consisting of the manufacturer
-> -		  and name of the chip. Must also include "jedec,spi-nor" for any
-> -		  SPI NOR flash that can be identified by the JEDEC READ ID opcode (0x9F).
-> -- reg :		  Chip-Select number
-> +There should be only one spi slave device following generic spi bindings.
-> +It's not recommended to use this controller for devices other than SPI NOR
-> +flash due to limited transfer capability of this controller.
->  
->  Example:
-> +#include <dt-bindings/interrupt-controller/irq.h>
-> +#include <dt-bindings/interrupt-controller/arm-gic.h>
-> +#include <dt-bindings/clock/mt7629-clk.h>
->  
-> -nor_flash: spi@1100d000 {
-> -	compatible = "mediatek,mt8173-nor";
-> -	reg = <0 0x1100d000 0 0xe0>;
-> -	clocks = <&pericfg CLK_PERI_SPI>,
-> -		 <&topckgen CLK_TOP_SPINFI_IFR_SEL>;
-> +spi_nor: spi@11014000 {
-> +	compatible = "mediatek,mt7629-nor",
-> +		     "mediatek,mt8173-nor";
-> +	reg = <0x11014000 0xe0>;
-> +	interrupts = <GIC_SPI 88 IRQ_TYPE_LEVEL_LOW>;
-> +	clocks = <&pericfg CLK_PERI_FLASH_PD>,
-> +		 <&topckgen CLK_TOP_FLASH_SEL>;
->  	clock-names = "spi", "sf";
->  	#address-cells = <1>;
->  	#size-cells = <0>;
-> -
-> -	flash@0 {
-> -		compatible = "jedec,spi-nor";
-> -		reg = <0>;
-> -	};
+However MediaTek UFS host requires a vendor-specific hce_enable operation
+to allow crypto-related registers being accessed normally in kernel.
+After this step, MediaTek UFS host can work as standard-compliant host
+for inline-encryption related functions.
 
-Better to leave this in the example IMO.
+This patch is rebased to below repo and tag:
+	Repo: https://git.kernel.org/pub/scm/fs/fscrypt/fscrypt.git
+	Tag: inline-encryption-v7
 
-Rob
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ drivers/scsi/ufs/ufs-mediatek.c | 27 ++++++++++++++++++++++++++-
+ drivers/scsi/ufs/ufs-mediatek.h |  1 +
+ 2 files changed, 27 insertions(+), 1 deletion(-)
 
+diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
+index 53eae5fe2ade..12d01fd3d5e1 100644
+--- a/drivers/scsi/ufs/ufs-mediatek.c
++++ b/drivers/scsi/ufs/ufs-mediatek.c
+@@ -15,6 +15,7 @@
+ #include <linux/soc/mediatek/mtk_sip_svc.h>
+ 
+ #include "ufshcd.h"
++#include "ufshcd-crypto.h"
+ #include "ufshcd-pltfrm.h"
+ #include "ufs_quirks.h"
+ #include "unipro.h"
+@@ -24,6 +25,9 @@
+ 	arm_smccc_smc(MTK_SIP_UFS_CONTROL, \
+ 		      cmd, val, 0, 0, 0, 0, 0, &(res))
+ 
++#define ufs_mtk_crypto_ctrl(res, enable) \
++	ufs_mtk_smc(UFS_MTK_SIP_CRYPTO_CTRL, enable, res)
++
+ #define ufs_mtk_ref_clk_notify(on, res) \
+ 	ufs_mtk_smc(UFS_MTK_SIP_REF_CLK_NOTIFICATION, on, res)
+ 
+@@ -66,7 +70,27 @@ static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
+ 	}
+ }
+ 
+-static int ufs_mtk_bind_mphy(struct ufs_hba *hba)
++static void ufs_mtk_crypto_enable(struct ufs_hba *hba)
++{
++	struct arm_smccc_res res;
++
++	ufs_mtk_crypto_ctrl(res, 1);
++	if (res.a0) {
++		dev_info(hba->dev, "%s: crypto enable failed, err: %lu\n",
++			 __func__, res.a0);
++	}
++}
++
++static int ufs_mtk_hce_enable_notify(struct ufs_hba *hba,
++				     enum ufs_notify_change_status status)
++{
++	if (status == PRE_CHANGE && ufshcd_hba_is_crypto_supported(hba))
++		ufs_mtk_crypto_enable(hba);
++
++	return 0;
++}
++
++int ufs_mtk_bind_mphy(struct ufs_hba *hba)
+ {
+ 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
+ 	struct device *dev = hba->dev;
+@@ -494,6 +518,7 @@ static struct ufs_hba_variant_ops ufs_hba_mtk_vops = {
+ 	.name                = "mediatek.ufshci",
+ 	.init                = ufs_mtk_init,
+ 	.setup_clocks        = ufs_mtk_setup_clocks,
++	.hce_enable_notify   = ufs_mtk_hce_enable_notify,
+ 	.link_startup_notify = ufs_mtk_link_startup_notify,
+ 	.pwr_change_notify   = ufs_mtk_pwr_change_notify,
+ 	.apply_dev_quirks    = ufs_mtk_apply_dev_quirks,
+diff --git a/drivers/scsi/ufs/ufs-mediatek.h b/drivers/scsi/ufs/ufs-mediatek.h
+index fccdd979d6fb..5ebaa59898bf 100644
+--- a/drivers/scsi/ufs/ufs-mediatek.h
++++ b/drivers/scsi/ufs/ufs-mediatek.h
+@@ -58,6 +58,7 @@
+  */
+ #define MTK_SIP_UFS_CONTROL               MTK_SIP_SMC_CMD(0x276)
+ #define UFS_MTK_SIP_DEVICE_RESET          BIT(1)
++#define UFS_MTK_SIP_CRYPTO_CTRL           BIT(2)
+ #define UFS_MTK_SIP_REF_CLK_NOTIFICATION  BIT(3)
+ 
+ /*
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
