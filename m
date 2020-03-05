@@ -2,30 +2,30 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9551517A9E2
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:01:12 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DA22E17A9E6
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:01:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ntt6T2l53lkZuAo4Vsi2QCVwsyQlATkOLB7qipmAe/0=; b=TyqGT2uSKJQosC
-	tx17UdsbFkzS89b7zGgA6zUUvbvqrRsQGLTOlse4ZQlZr/KoxmTOW4qt0fsGSiuP5CWNfmk93Nli4
-	EfrHBdm4VJJtXr+mf04I3saPm+nF84197dZgxjOePeTVs3mXmthN3Phg7/w4tBZbum9vkIrjRZuQa
-	s2J880WIF8dgVJznjjvYQjH7HAESlsSTSCRH2vnfnE1se0wHCi1ft3+vGXDERmw8t+MqXGfwYC1N6
-	JIFHuJCvxwI02S1/2fp/Q8T9VxDqoKtvLXXm3gxlcFJDtVRxmaTrh0PdIqxAatn6nh80EY5Wb1xi3
-	fwULp6TE8VeKeVSQhkFg==;
+	List-Owner; bh=o1Q2poQ5agwxpkiY+0GsWa8x+sBhphc9Ft6vXfkw2wU=; b=F2PELGymR/Z6i4
+	Xi/Hmo9ChbE3rw1fQwjYdEL99yiFT3SCgteJlxvn9TXkltHs3hqkc6CQtcM3CmN8d/equE33HoNVA
+	vr+bHFNlSORBmi+qINkzUvrtDWPB1oMPPcCclepcRcVvLbTR8KO29RMB2Jezl6cIuqGhqydMtBEl9
+	/yhAHycBwnGfFRyz3okJWFTAQvmIRsf8AvEH0EsFOGp22i9yEUUe9frnUZOHh8EuNSNuAfEhYKtTf
+	YyNwMtfUTg9lFOU8464wfRaO3DAbI0BFPg9Zl9F1uG2bnmkyUeDF2e3MuLYXbRl8nr0L+mxOKs8w7
+	DRy9laJk8y2GpeXO0vBA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9svq-0007mi-AQ; Thu, 05 Mar 2020 16:01:06 +0000
+	id 1j9svw-0007sm-38; Thu, 05 Mar 2020 16:01:12 +0000
 Received: from mx2.suse.de ([195.135.220.15])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9suy-0006am-4t; Thu, 05 Mar 2020 16:00:15 +0000
+ id 1j9suy-0006an-43; Thu, 05 Mar 2020 16:00:16 +0000
 X-Virus-Scanned: by amavisd-new at test-mx.suse.de
 Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 78FAAB03C;
- Thu,  5 Mar 2020 16:00:06 +0000 (UTC)
+ by mx2.suse.de (Postfix) with ESMTP id 02B60B03E;
+ Thu,  5 Mar 2020 16:00:07 +0000 (UTC)
 From: Thomas Zimmermann <tzimmermann@suse.de>
 To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
  bbrezillon@kernel.org, nicolas.ferre@microchip.com,
@@ -47,16 +47,16 @@ To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
  tomi.valkeinen@ti.com, eric@anholt.net, kraxel@redhat.com,
  rodrigosiqueiramelo@gmail.com, hamohammed.sa@gmail.com,
  sebastian.reichel@collabora.com
-Subject: [PATCH 09/22] drm/ingenic: Use simple encoder
-Date: Thu,  5 Mar 2020 16:59:37 +0100
-Message-Id: <20200305155950.2705-10-tzimmermann@suse.de>
+Subject: [PATCH 10/22] drm/mediatek: Use simple encoder
+Date: Thu,  5 Mar 2020 16:59:38 +0100
+Message-Id: <20200305155950.2705-11-tzimmermann@suse.de>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200305155950.2705-1-tzimmermann@suse.de>
 References: <20200305155950.2705-1-tzimmermann@suse.de>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200305_080012_377800_F9FC8998 
-X-CRM114-Status: GOOD (  12.27  )
+X-CRM114-CacheID: sfid-20200305_080012_536702_9F5DC103 
+X-CRM114-Status: GOOD (  12.81  )
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.3 points)
@@ -89,47 +89,92 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The ingenic driver uses an empty implementation for its encoder. Replace
+The mediatak driver uses empty implementations for its encoders. Replace
 the code with the generic simple encoder.
 
 Signed-off-by: Thomas Zimmermann <tzimmermann@suse.de>
 ---
- drivers/gpu/drm/ingenic/ingenic-drm.c | 9 +++------
- 1 file changed, 3 insertions(+), 6 deletions(-)
+ drivers/gpu/drm/mediatek/mtk_dpi.c | 14 +++-----------
+ drivers/gpu/drm/mediatek/mtk_dsi.c | 14 +++-----------
+ 2 files changed, 6 insertions(+), 22 deletions(-)
 
-diff --git a/drivers/gpu/drm/ingenic/ingenic-drm.c b/drivers/gpu/drm/ingenic/ingenic-drm.c
-index 9dfe7cb530e1..9f7983a97392 100644
---- a/drivers/gpu/drm/ingenic/ingenic-drm.c
-+++ b/drivers/gpu/drm/ingenic/ingenic-drm.c
-@@ -28,6 +28,7 @@
- #include <drm/drm_plane.h>
- #include <drm/drm_plane_helper.h>
- #include <drm/drm_probe_helper.h>
+diff --git a/drivers/gpu/drm/mediatek/mtk_dpi.c b/drivers/gpu/drm/mediatek/mtk_dpi.c
+index 14fbe1c09ce9..9c90c58e5acd 100644
+--- a/drivers/gpu/drm/mediatek/mtk_dpi.c
++++ b/drivers/gpu/drm/mediatek/mtk_dpi.c
+@@ -20,6 +20,7 @@
+ #include <drm/drm_bridge.h>
+ #include <drm/drm_crtc.h>
+ #include <drm/drm_of.h>
 +#include <drm/drm_simple_kms_helper.h>
- #include <drm/drm_vblank.h>
  
- #define JZ_REG_LCD_CFG				0x00
-@@ -592,10 +593,6 @@ static const struct drm_mode_config_funcs ingenic_drm_mode_config_funcs = {
- 	.atomic_commit		= drm_atomic_helper_commit,
- };
+ #include "mtk_dpi_regs.h"
+ #include "mtk_drm_ddp_comp.h"
+@@ -509,15 +510,6 @@ static int mtk_dpi_set_display_mode(struct mtk_dpi *dpi,
+ 	return 0;
+ }
  
--static const struct drm_encoder_funcs ingenic_drm_encoder_funcs = {
--	.destroy		= drm_encoder_cleanup,
+-static void mtk_dpi_encoder_destroy(struct drm_encoder *encoder)
+-{
+-	drm_encoder_cleanup(encoder);
+-}
+-
+-static const struct drm_encoder_funcs mtk_dpi_encoder_funcs = {
+-	.destroy = mtk_dpi_encoder_destroy,
 -};
 -
- static void ingenic_drm_free_dma_hwdesc(void *d)
- {
- 	struct ingenic_drm *priv = d;
-@@ -730,8 +727,8 @@ static int ingenic_drm_probe(struct platform_device *pdev)
- 	drm_encoder_helper_add(&priv->encoder,
- 			       &ingenic_drm_encoder_helper_funcs);
+ static bool mtk_dpi_encoder_mode_fixup(struct drm_encoder *encoder,
+ 				       const struct drm_display_mode *mode,
+ 				       struct drm_display_mode *adjusted_mode)
+@@ -596,8 +588,8 @@ static int mtk_dpi_bind(struct device *dev, struct device *master, void *data)
+ 		return ret;
+ 	}
  
--	ret = drm_encoder_init(drm, &priv->encoder, &ingenic_drm_encoder_funcs,
--			       DRM_MODE_ENCODER_DPI, NULL);
-+	ret = drm_simple_encoder_init(drm, &priv->encoder,
-+				      DRM_MODE_ENCODER_DPI);
+-	ret = drm_encoder_init(drm_dev, &dpi->encoder, &mtk_dpi_encoder_funcs,
+-			       DRM_MODE_ENCODER_TMDS, NULL);
++	ret = drm_simple_encoder_init(drm_dev, &dpi->encoder,
++				      DRM_MODE_ENCODER_TMDS);
  	if (ret) {
- 		dev_err(dev, "Failed to init encoder: %i", ret);
+ 		dev_err(dev, "Failed to initialize decoder: %d\n", ret);
+ 		goto err_unregister;
+diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+index 0ede69830a9d..a9a25087112f 100644
+--- a/drivers/gpu/drm/mediatek/mtk_dsi.c
++++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+@@ -22,6 +22,7 @@
+ #include <drm/drm_panel.h>
+ #include <drm/drm_print.h>
+ #include <drm/drm_probe_helper.h>
++#include <drm/drm_simple_kms_helper.h>
+ 
+ #include "mtk_drm_ddp_comp.h"
+ 
+@@ -787,15 +788,6 @@ static void mtk_output_dsi_disable(struct mtk_dsi *dsi)
+ 	dsi->enabled = false;
+ }
+ 
+-static void mtk_dsi_encoder_destroy(struct drm_encoder *encoder)
+-{
+-	drm_encoder_cleanup(encoder);
+-}
+-
+-static const struct drm_encoder_funcs mtk_dsi_encoder_funcs = {
+-	.destroy = mtk_dsi_encoder_destroy,
+-};
+-
+ static bool mtk_dsi_encoder_mode_fixup(struct drm_encoder *encoder,
+ 				       const struct drm_display_mode *mode,
+ 				       struct drm_display_mode *adjusted_mode)
+@@ -888,8 +880,8 @@ static int mtk_dsi_create_conn_enc(struct drm_device *drm, struct mtk_dsi *dsi)
+ {
+ 	int ret;
+ 
+-	ret = drm_encoder_init(drm, &dsi->encoder, &mtk_dsi_encoder_funcs,
+-			       DRM_MODE_ENCODER_DSI, NULL);
++	ret = drm_simple_encoder_init(drm, &dsi->encoder,
++				      DRM_MODE_ENCODER_DSI);
+ 	if (ret) {
+ 		DRM_ERROR("Failed to encoder init to drm\n");
  		return ret;
 -- 
 2.25.1
