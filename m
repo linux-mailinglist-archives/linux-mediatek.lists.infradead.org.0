@@ -2,82 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3A2AA17AB1D
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 18:03:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A2C5A17AE1F
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 19:32:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9RScimq5QsV7Rn/DK29nWpECKuFzETd4figt76w1i4Y=; b=qICe9ahDO3Y1O6
-	1uKT4dCGWr21DcYIgdO45Z5cC2MJEiKMoDG5N75fK1gaiBdYU2okMWKGZ2v2NuNTSasj0ekC5FhmT
-	D08J3KVLK21JDX9TzaXUB0Dun4AfSowDfGkpcux0MpkBwPGQIDV26BnOWVI9fEBLHJ2maB5GUZQzy
-	9UcPX25A3Zr6oh1EmabGQ8htkwU5LbAP5SgTPb64Y8AyWex3V4uIsIpRMv/wDWPmG5SjLvGkO/Nvk
-	bStOQSZE5oozU9M6UMpeQCa2+75VaOh3MrmznjUvciiXbTGbj0DssgJmFRYCBJpGT3dehOfzitaq5
-	8vjy7ibkzsGvLT5I1coA==;
+	List-Owner; bh=MEJXAW3bCQRy3+zidCTNeez1Y3iWDXk4mb3Adnuqoo0=; b=WGhmubYalBHQc0
+	csuFOaQ1BkcBKABM6CQ2smfq/1zag9eWQr6Q1cSrf5DSeRqH2X9Al/ar1JEyyUm7iQGl/WRbU0pYb
+	e5t66dAJSfdQiY3Jzd0llwXS2xr2FK8sIwOJJEH+o+qn+aZfOu9xrhi2g3XS5eDFuGBucdmFX48J2
+	h/axUXndukMP5sGVa3k9Lyr6cqS/eyYfRfEHh6WokqhCkeBTWwHMxsEHNnWp4wP3KKnW2geKP/265
+	t2wiZYHBxP4xet2oGNgIf2ACyqUSr/PfAXYd/7QpS8gWd5+CM+3rPQKE2NZP6OxdBajRXOhSrjqCG
+	qf7+2u8fHUzQDxPlcQGQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9tuA-00077O-Vj; Thu, 05 Mar 2020 17:03:26 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1j9vIA-0006jL-BJ; Thu, 05 Mar 2020 18:32:18 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9tu7-000766-NS
- for linux-mediatek@lists.infradead.org; Thu, 05 Mar 2020 17:03:25 +0000
-Received: by mail-lf1-x144.google.com with SMTP id s23so5224525lfs.10
- for <linux-mediatek@lists.infradead.org>; Thu, 05 Mar 2020 09:03:23 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=anholt-net.20150623.gappssmtp.com; s=20150623;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=W2UjAEkYLoxg6JgLNx0dN+e49hTl06XZg+T5mliqMNU=;
- b=QdJpsICtDG2FI/4Z9M6lKYAcG0BpjpbXK8rLQyA4OEixlsxjDiGx3To1lir1sBp1M9
- UwuoRwaVCnVgUPq4inbZJ3TxCkxCrFEJn1E6DTKoLoG9iHe+E01qy4ui4vtj9Q36JSXp
- ZqI3vZjzXINJNR2WZQYS26NJieBM4iEKc5bwAVwHReucih3l3k93tS1OUlLleRX0o1y1
- KtuaE/jXH3s5Pdf2YA/jnZsd2GI9LGTK5wvLZgDIrxGSZbyinFeR134NKThtgyXxUoJU
- f3VfKoFSVmnBne9A3FTkdC4acYw5/x1ZZwLrZ04c0wXHMYb/1RofGGRyRmlBqM+aIrD4
- 1aQQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=W2UjAEkYLoxg6JgLNx0dN+e49hTl06XZg+T5mliqMNU=;
- b=UPtFNw0GnUNt4LDIo0k+Xc0TODesBFY3I8vL976nqv6ntKqhzgWKWZdnI7TbUOxHBr
- dxTQWFNWROJMma4ZsQMpSfA//EMcSOSfMAvEmtbmW6aCwXoNYEsPh5+Bma/YELr99Q9f
- q0/rICQ6t5xCDojFeASgcymRgGwVJlSTTR/geH6p71YrCQZrHiETpIvb6L9P8rHAQutb
- gHBHlUdl3Zx4yDyut9KV1Y+xEjrxJpr0qzHxbTbY95K3+Q1loV5LOc5SObyygqcFKTuU
- Z1LZL0NqH/3TIeVzEwBNcFP1vn4zS0CkEvqqvmf7VqtXYPp9B2Cu9OyHuK6ysNLg80sp
- 3fnQ==
-X-Gm-Message-State: ANhLgQ395v2+PXCxVw92cX3GHpHLvKbnR0T7kkHSa8ivtxFzUT0DtMqR
- tLFdxWYLx8pO21GMuxu1tv9z0VMBPX9am5daz4JvDg==
-X-Google-Smtp-Source: ADFU+vtj5gp1/LY+e6ph9lZLVyP4h9/sF6S8jMp7MXl11AHO2LcgdwYrHVm+Ah8nGom52hUhqSxPo5r0KmpWtLmClCc=
-X-Received: by 2002:a05:6512:692:: with SMTP id
- t18mr6077856lfe.212.1583427801701; 
- Thu, 05 Mar 2020 09:03:21 -0800 (PST)
+ id 1j9vHy-0006bz-M8; Thu, 05 Mar 2020 18:32:08 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id B85A3208C3;
+ Thu,  5 Mar 2020 18:32:04 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1583433125;
+ bh=KM0uYAqk/5kpfoI8SkJkxTAAEAL/IwWV/D+DdVwkhN8=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=dWlx6EJD/iVDV2O/rwdjD6kQBkYUslAly1nbSjuhyAvZC51Ye/muMuU/lrPdTD91A
+ 5HMr6pSJEb8eMBvsSCL4xYUylv6eQ2P/ksYwBqVR7bDWQVV3ChG7nBgyL0tuKUdAc9
+ FWqoxYNLhSoQY5EJRVMcpq1upnLaXWHsMyEyNxtw=
+Date: Thu, 5 Mar 2020 19:32:02 +0100
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Macpaul Lin <macpaul.lin@mediatek.com>
+Subject: Re: [PATCH] xhci-mtk: Fix NULL pointer dereference with xhci_irq()
+ for shared_hcd
+Message-ID: <20200305183202.GA2107395@kroah.com>
+References: <1579246910-22736-1-git-send-email-macpaul.lin@mediatek.com>
+ <08f69bab-2ada-d6ab-7bf7-d960e9f148a0@linux.intel.com>
+ <1580556039.10835.3.camel@mtkswgap22>
+ <39ec1610-1686-6509-02ac-6e73d8be2453@linux.intel.com>
+ <1583291775.12083.59.camel@mtkswgap22>
+ <ef4d9d96-df4d-be0c-22af-a97a03c39d3a@linux.intel.com>
+ <1583377126.12083.63.camel@mtkswgap22>
 MIME-Version: 1.0
-References: <20200305155950.2705-1-tzimmermann@suse.de>
- <20200305155950.2705-19-tzimmermann@suse.de>
-In-Reply-To: <20200305155950.2705-19-tzimmermann@suse.de>
-From: Eric Anholt <eric@anholt.net>
-Date: Thu, 5 Mar 2020 09:03:10 -0800
-Message-ID: <CADaigPXaBRx+DG8TP-BPFycqwzmf-2NMQX6cXQP69MTVE6CzAw@mail.gmail.com>
-Subject: Re: [PATCH 18/22] drm/vc4: Use simple encoder
-To: Thomas Zimmermann <tzimmermann@suse.de>
+Content-Disposition: inline
+In-Reply-To: <1583377126.12083.63.camel@mtkswgap22>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200305_090323_895142_80DAE8BA 
-X-CRM114-Status: UNSURE (   5.78  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200305_103206_952402_499FD18B 
+X-CRM114-Status: GOOD (  32.94  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,37 +78,174 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: hamohammed.sa@gmail.com, alexandre.belloni@bootlin.com, heiko@sntech.de,
- David Airlie <airlied@linux.ie>, stefan@agner.ch, linux@armlinux.org.uk,
- paul@crapouillou.net, linux-tegra@vger.kernel.org, thierry.reding@gmail.com,
- krzk@kernel.org, sam@ravnborg.org, sebastian.reichel@collabora.com,
- linux-samsung-soc@vger.kernel.org, jy0922.shim@samsung.com, hjc@rock-chips.com,
- festevam@gmail.com, abrodkin@synopsys.com, kong.kongxinwei@hisilicon.com,
- patrik.r.jakobsson@gmail.com, jonathanh@nvidia.com, xinliang.liu@linaro.org,
- ludovic.desroches@microchip.com, kgene@kernel.org, linux-imx@nxp.com,
- ck.hu@mediatek.com, linux-rockchip@lists.infradead.org,
- virtualization@lists.linux-foundation.org, p.zabel@pengutronix.de,
- puck.chen@hisilicon.com, s.hauer@pengutronix.de, alison.wang@nxp.com,
- maarten.lankhorst@linux.intel.com, mripard@kernel.org, inki.dae@samsung.com,
- john.stultz@linaro.org, jsarha@ti.com, matthias.bgg@gmail.com, wens@csie.org,
- kernel@pengutronix.de, jernej.skrabec@siol.net, kraxel@redhat.com,
- rodrigosiqueiramelo@gmail.com, tomi.valkeinen@ti.com, bbrezillon@kernel.org,
- jingoohan1@gmail.com, DRI Development <dri-devel@lists.freedesktop.org>,
- sw0312.kim@samsung.com, nicolas.ferre@microchip.com, kyungmin.park@samsung.com,
- kieran.bingham+renesas@ideasonboard.com, Daniel Vetter <daniel@ffwll.ch>,
- zourongrong@gmail.com, linux-mediatek@lists.infradead.org, shawnguo@kernel.org,
- laurent.pinchart@ideasonboard.com
+Cc: Sriharsha Allenki <sallenki@codeaurora.org>,
+ Mathias Nyman <mathias.nyman@linux.intel.com>,
+ wsd_upstream <wsd_upstream@mediatek.com>,
+ Mathias Nyman <mathias.nyman@intel.com>,
+ "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Chunfeng Yun =?utf-8?B?KOS6keaYpeWzsCk=?= <Chunfeng.Yun@mediatek.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, Mar 5, 2020 at 8:00 AM Thomas Zimmermann <tzimmermann@suse.de> wrote:
->
-> The vc4 driver uses empty implementations for its encoders. Replace
-> the code with the generic simple encoder.
+On Thu, Mar 05, 2020 at 10:58:46AM +0800, Macpaul Lin wrote:
+> On Wed, 2020-03-04 at 16:39 +0200, Mathias Nyman wrote:
+> > On 4.3.2020 5.16, Macpaul Lin wrote:
+> > > On Tue, 2020-02-04 at 17:44 +0800, Mathias Nyman wrote:
+> > >> On 1.2.2020 13.20, Macpaul Lin wrote:
+> > >>> On Fri, 2020-01-31 at 16:50 +0200, Mathias Nyman wrote:
+> > >>>> On 17.1.2020 9.41, Macpaul Lin wrote:
+> > >>>>> According to NULL pointer fix: https://tinyurl.com/uqft5ra
+> > >>>>> xhci: Fix NULL pointer dereference with xhci_irq() for shared_hcd
+> > >>>>> The similar issue has also been found in QC activities in Mediatek.
+> > >>>>>
+> > >>>>> Here quote the description from the referenced patch as follows.
+> > >>>>> "Commit ("f068090426ea xhci: Fix leaking USB3 shared_hcd
+> > >>>>> at xhci removal") sets xhci_shared_hcd to NULL without
+> > >>>>> stopping xhci host. This results into a race condition
+> > >>>>> where shared_hcd (super speed roothub) related interrupts
+> > >>>>> are being handled with xhci_irq happens when the
+> > >>>>> xhci_plat_remove is called and shared_hcd is set to NULL.
+> > >>>>> Fix this by setting the shared_hcd to NULL only after the
+> > >>>>> controller is halted and no interrupts are generated."
+> > >>>>>
+> > >>>>> Signed-off-by: Sriharsha Allenki <sallenki@codeaurora.org>
+> > >>>>> Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
+> > >>>>> ---
+> > >>>>>    drivers/usb/host/xhci-mtk.c | 2 +-
+> > >>>>>    1 file changed, 1 insertion(+), 1 deletion(-)
+> > >>>>>
+> > >>>>> diff --git a/drivers/usb/host/xhci-mtk.c b/drivers/usb/host/xhci-mtk.c
+> > >>>>> index b18a6baef204..c227c67f5dc5 100644
+> > >>>>> --- a/drivers/usb/host/xhci-mtk.c
+> > >>>>> +++ b/drivers/usb/host/xhci-mtk.c
+> > >>>>> @@ -593,11 +593,11 @@ static int xhci_mtk_remove(struct platform_device *dev)
+> > >>>>>    	struct usb_hcd  *shared_hcd = xhci->shared_hcd;
+> > >>>>>    
+> > >>>>>    	usb_remove_hcd(shared_hcd);
+> > >>>>> -	xhci->shared_hcd = NULL;
+> > >>>>>    	device_init_wakeup(&dev->dev, false);
+> > >>>>>    
+> > >>>>>    	usb_remove_hcd(hcd);
+> > >>>>>    	usb_put_hcd(shared_hcd);
+> > >>>>> +	xhci->shared_hcd = NULL;
+> > >>>>>    	usb_put_hcd(hcd);
+> > >>>>>    	xhci_mtk_sch_exit(mtk);
+> > >>>>>    	xhci_mtk_clks_disable(mtk);
+> > >>>>>
+> > >>>>
+> > >>>> Could you share details of the NULL pointer dereference, (backtrace).
+> > >>>
+> > >>> This bug was found by our QA staff while doing 500 times plug-in and
+> > >>> plug-out devices. The backtrace I have was recorded by QA and I didn't
+> > >>> reproduce this issue on my own environment. However, after applied this
+> > >>> patch the issue seems resolve. Here is the backtrace:
+> > >>>
+> > >>> Exception Class: Kernel (KE)
+> > >>> PC is at [<ffffff8008cccbc0>] xhci_irq+0x728/0x2364
+> > >>> LR is at [<ffffff8008ccc788>] xhci_irq+0x2f0/0x2364
+> > >>>
+> > >>> Current Executing Process:
+> > >>> [iptables, 859][netdagent, 770]
+> > >>>
+> > >>> Backtrace:
+> > >>> [<ffffff80080ead58>] __atomic_notifier_call_chain+0xa8/0x130
+> > >>> [<ffffff80080eb6d4>] notify_die+0x84/0xac
+> > >>> [<ffffff800808e874>] die+0x1d8/0x3b8
+> > >>> [<ffffff80080a89b0>] __do_kernel_fault+0x178/0x188
+> > >>> [<ffffff80080a81b4>] do_page_fault+0x44/0x3b0
+> > >>> [<ffffff80080a811c>] do_translation_fault+0x44/0x98
+> > >>> [<ffffff8008080e08>] do_mem_abort+0x4c/0x128
+> > >>> [<ffffff80080832d0>] el1_da+0x24/0x3c
+> > >>> [<ffffff8008cccbc0>] xhci_irq+0x728/0x2364
+> > >>> [<ffffff8008c98804>] usb_hcd_irq+0x2c/0x44
+> > >>> [<ffffff8008179bb0>] __handle_irq_event_percpu+0x26c/0x4a4
+> > >>> [<ffffff8008179ec8>] handle_irq_event+0x5c/0xd0
+> > >>> [<ffffff800817e3c0>] handle_fasteoi_irq+0x10c/0x1e0
+> > >>> [<ffffff80081787b0>] __handle_domain_irq+0x32c/0x738
+> > >>> [<ffffff800808159c>] gic_handle_irq+0x174/0x1c4
+> > >>> [<ffffff8008083cf8>] el0_irq_naked+0x50/0x5c
+> > >>> [<ffffffffffffffff>] 0xffffffffffffffff
+> > >>>
+> > >>
+> > >> Thanks,
+> > >> Could you help me find out which line of code xhci_irq+0x728 is in your case.
+> > >>
+> > >> As Guenter pointed out there is a risk of turning the NULL pointer dereference
+> > >> into a use after free if we just solve this by setting xhci->shared_hcd = NULL
+> > >> later.
+> > >>
+> > >> If you still have that kernel around, and xhci is compiled in:
+> > >> gdb vmlinux
+> > >> gdb li *(xhci_irq+0x728)
+> > >>
+> > > 
+> > > Sorry that I couldn't get back to you soon. The internal code version
+> > > for this issue was really old and a little bit difficult to rewind to
+> > > that version.
+> > > However, I think the following dump might be correct for the code base.
+> > > 
+> > > (gdb) li *(xhci_irq+0x728)
+> > > 0xffffff8008cc8634 is in xhci_irq (*stripped*
+> > > kernel-4.14/drivers/usb/host/xhci.h:1694).
+> > > 1689     */
+> > > 1690    #define XHCI_MAX_REXIT_TIMEOUT_MS       20
+> > > 1691
+> > > 1692    static inline unsigned int hcd_index(struct usb_hcd *hcd)
+> > > 1693    {
+> > > 1694            if (hcd->speed >= HCD_USB3)
+> > > 1695                    return 0;
+> > > 1696            else
+> > > 1697                    return 1;
+> > > 1698    }
+> > > (gdb)
+> > > 
+> > > Thanks
+> > > Macpaul Lin
+> > > 
+> > 
+> > Ah, it was a 4.14 kernel.
+> > This should be fixed in 4.20 with patch:
+> > 1245374e9b83 xhci: handle port status events for removed USB3 hcd
+> > 
+> > Port arrays/structures were changed completely in 4.18
+> > 
+> > Something like the below should work for 4.14:
+> > 
+> > diff --git a/drivers/usb/host/xhci-ring.c b/drivers/usb/host/xhci-ring.c
+> > index 61fa3007a74a..e7367b9f19c5 100644
+> > --- a/drivers/usb/host/xhci-ring.c
+> > +++ b/drivers/usb/host/xhci-ring.c
+> > @@ -1640,6 +1640,12 @@ static void handle_port_status(struct xhci_hcd *xhci,
+> >  	if ((major_revision == 0x03) != (hcd->speed >= HCD_USB3))
+> >  		hcd = xhci->shared_hcd;
+> >  
+> > +	if (!hcd) {
+> > +		xhci_dbg(xhci, "No hcd found for port %u event\n", port_id);
+> > +		bogus_port_status = true;
+> > +		goto cleanup;
+> > +	}
+> > +
+> >  	if (major_revision == 0) {
+> >  		xhci_warn(xhci, "Event for port %u not in "
+> >  				"Extended Capabilities, ignoring.\n",
+> 
+> Thanks for this suggestion, this is much better! I am sorry that we're
+> using android kernel that some reported issue might be out of date. I
+> will update the suggestion into our code base. Thanks!
 
-Acked-by: Eric Anholt <eric@anholt.net>
+Should I backport this to 4.14 and older kernels to prevent this issue
+from showing up in newer Android devices that are using these older
+kernels?
+
+thanks,
+
+greg k-h
 
 _______________________________________________
 Linux-mediatek mailing list
