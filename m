@@ -2,30 +2,30 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D996917A9DF
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:01:01 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CD0D217A9DC
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:00:51 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=D2ePPhOj7/UaKJRhi0nn6Kn6q5cq9SfH9vJuM4KAJMk=; b=m34sa9ltF3C/fe
-	KVMYVy0Y9+RPplaGO1MX9EG4nG3eEdrzsQ/1iP319bWs/UdZtR6mDsVJeUBbwbVyySnjgwkE4lR5y
-	yTBx668vvxq+b4DE/d3jXFtTl7akFXfqfBhggBMJMoKLu2F2eoNIcLjIWbj33LuG6Lvdum4CEGR4B
-	h+ioLCeAc6nI7m4K8GwAth//zZ74/Gbe6uM46ht9EoNFOBZy9mNwkNuD4qPTVDZyYEsPTgZge11DN
-	RlMjgQ3EIzR3cPBbPOCjb+POR5RMHuPHt+qQOSXru2cdBRDBpLMnOrfaAHCfhbsAjh+czOWo+yaj+
-	JeNu3Cq0kRiSaC6cUD4Q==;
+	List-Owner; bh=9kzAOokV9eBLHnSLpfYbueUkDf8c5xQKApXOx+GJEiA=; b=LtqfIMh3XGp40H
+	pvCPg1r8EYFAdS8yjqBMDh3aacmQmI+ahhDKZn3fCARjZIrCYqAouhzWDmUax9biu4f02iTtB/8Ke
+	6Sm5xLeWd9LzTGHBhkL6nsKVeKBN/Sp6aPld16xHRYklbxGcH0LdkZTouK/h5J/Cfi1kMADg+ZASi
+	JenVZH5CmFms4ctez5YIhqAMe5pbD4YRrLoH+KCMwOh6Zo3Va4XnvyVINYYXYGDW37+AaOkwlZJhX
+	gYp+1xzmd70t7jDjohcZv244KdArSZad+xSOknktWvx7h+1VVzR13yDhjbY4m0ntg0jLTJ1QM1f5F
+	tyMOZGaP1EQ2lGM2IUEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9svf-0007cO-Hs; Thu, 05 Mar 2020 16:00:55 +0000
+	id 1j9svV-0007UW-3N; Thu, 05 Mar 2020 16:00:45 +0000
 Received: from mx2.suse.de ([195.135.220.15])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9suu-0006LF-MR; Thu, 05 Mar 2020 16:00:12 +0000
+ id 1j9suu-0006Me-RX; Thu, 05 Mar 2020 16:00:12 +0000
 X-Virus-Scanned: by amavisd-new at test-mx.suse.de
 Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 28452B020;
- Thu,  5 Mar 2020 16:00:02 +0000 (UTC)
+ by mx2.suse.de (Postfix) with ESMTP id C8F5BB034;
+ Thu,  5 Mar 2020 16:00:03 +0000 (UTC)
 From: Thomas Zimmermann <tzimmermann@suse.de>
 To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
  bbrezillon@kernel.org, nicolas.ferre@microchip.com,
@@ -47,16 +47,16 @@ To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
  tomi.valkeinen@ti.com, eric@anholt.net, kraxel@redhat.com,
  rodrigosiqueiramelo@gmail.com, hamohammed.sa@gmail.com,
  sebastian.reichel@collabora.com
-Subject: [PATCH 06/22] drm/hisilicon/kirin: Use simple encoder
-Date: Thu,  5 Mar 2020 16:59:34 +0100
-Message-Id: <20200305155950.2705-7-tzimmermann@suse.de>
+Subject: [PATCH 07/22] drm/i2c/tda998x: Use simple encoder
+Date: Thu,  5 Mar 2020 16:59:35 +0100
+Message-Id: <20200305155950.2705-8-tzimmermann@suse.de>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200305155950.2705-1-tzimmermann@suse.de>
 References: <20200305155950.2705-1-tzimmermann@suse.de>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200305_080008_935549_348B29BB 
-X-CRM114-Status: GOOD (  11.98  )
+X-CRM114-CacheID: sfid-20200305_080009_117950_BF65C27E 
+X-CRM114-Status: GOOD (  12.95  )
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.3 points)
@@ -89,47 +89,53 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The kirin driver uses an empty implementation for its encoder. Replace
+The tda998x driver uses an empty implementation for its encoder. Replace
 the code with the generic simple encoder.
 
 Signed-off-by: Thomas Zimmermann <tzimmermann@suse.de>
 ---
- drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.c | 8 ++------
- 1 file changed, 2 insertions(+), 6 deletions(-)
+ drivers/gpu/drm/i2c/tda998x_drv.c | 14 +++-----------
+ 1 file changed, 3 insertions(+), 11 deletions(-)
 
-diff --git a/drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.c b/drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.c
-index f31068d74b18..08c1ab542c03 100644
---- a/drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.c
-+++ b/drivers/gpu/drm/hisilicon/kirin/dw_drm_dsi.c
-@@ -25,6 +25,7 @@
+diff --git a/drivers/gpu/drm/i2c/tda998x_drv.c b/drivers/gpu/drm/i2c/tda998x_drv.c
+index c3332209f27a..0e1a90f70ec0 100644
+--- a/drivers/gpu/drm/i2c/tda998x_drv.c
++++ b/drivers/gpu/drm/i2c/tda998x_drv.c
+@@ -19,6 +19,7 @@
  #include <drm/drm_of.h>
  #include <drm/drm_print.h>
  #include <drm/drm_probe_helper.h>
 +#include <drm/drm_simple_kms_helper.h>
+ #include <drm/i2c/tda998x.h>
  
- #include "dw_dsi_reg.h"
+ #include <media/cec-notifier.h>
+@@ -1997,15 +1998,6 @@ static int tda998x_create(struct device *dev)
  
-@@ -696,10 +697,6 @@ static const struct drm_encoder_helper_funcs dw_encoder_helper_funcs = {
- 	.disable	= dsi_encoder_disable
- };
+ /* DRM encoder functions */
  
--static const struct drm_encoder_funcs dw_encoder_funcs = {
--	.destroy = drm_encoder_cleanup,
+-static void tda998x_encoder_destroy(struct drm_encoder *encoder)
+-{
+-	drm_encoder_cleanup(encoder);
+-}
+-
+-static const struct drm_encoder_funcs tda998x_encoder_funcs = {
+-	.destroy = tda998x_encoder_destroy,
 -};
 -
- static int dw_drm_encoder_init(struct device *dev,
- 			       struct drm_device *drm_dev,
- 			       struct drm_encoder *encoder)
-@@ -713,8 +710,7 @@ static int dw_drm_encoder_init(struct device *dev,
- 	}
+ static int tda998x_encoder_init(struct device *dev, struct drm_device *drm)
+ {
+ 	struct tda998x_priv *priv = dev_get_drvdata(dev);
+@@ -2023,8 +2015,8 @@ static int tda998x_encoder_init(struct device *dev, struct drm_device *drm)
  
- 	encoder->possible_crtcs = crtc_mask;
--	ret = drm_encoder_init(drm_dev, encoder, &dw_encoder_funcs,
--			       DRM_MODE_ENCODER_DSI, NULL);
-+	ret = drm_simple_encoder_init(drm_dev, encoder, DRM_MODE_ENCODER_DSI);
- 	if (ret) {
- 		DRM_ERROR("failed to init dsi encoder\n");
- 		return ret;
+ 	priv->encoder.possible_crtcs = crtcs;
+ 
+-	ret = drm_encoder_init(drm, &priv->encoder, &tda998x_encoder_funcs,
+-			       DRM_MODE_ENCODER_TMDS, NULL);
++	ret = drm_simple_encoder_init(drm, &priv->encoder,
++				      DRM_MODE_ENCODER_TMDS);
+ 	if (ret)
+ 		goto err_encoder;
+ 
 -- 
 2.25.1
 
