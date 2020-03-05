@@ -2,29 +2,29 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C62EC17A9D0
-	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:00:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D03E17A9D9
+	for <lists+linux-mediatek@lfdr.de>; Thu,  5 Mar 2020 17:00:47 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MxdnNwwwg1Nwxwe/X79qHoXkNcBd6mjtHvlJP1gE2Qs=; b=EH80GLZ8kECWrV
-	9NGa4ifaITMqWr4t2Twt012/8obQlQtPXO/mDDL+FzIWPMrMfpyHzbQ4beb5udn1nQJ9F+ANUKArJ
-	pWeFVIbGbVYQIlwttczHu2+yDvEQ/DDLayEas74h0kvJP8Dmv2+wM+V43A+68JrkP7jhYT7SU9w73
-	DkKpCTS+3VX3Fai4g4OINfI70hVkI4v+iyTWvIP2STT1ZzY5/LTYTEMD//tKblKgFR2jYqordNiPo
-	/VqF6Ku71JaeU6gfYB+f9xXVdmdMlsltCDoBcl79zosxXtQA4bLYul6NhDms1T9DRl2Ko3kaw1R5e
-	jlHwAxx0CQSfL63AiafQ==;
+	List-Owner; bh=7aqvZimrvgSnjgkCZlEf5ljLH2XY5a8fdS95ljVSjVA=; b=TgLyRgzHkWa/0q
+	soV5uoFXbM03C8tc0g0BL5HqDOJgQJEzBSkoyMopme/y/ESfj/gPC3ag4O7aKZrm6ZAzIKbN5oJWi
+	v49sVEptKWauDvAi/aXRe4P7pKcBss69Wcx8KYGzIHsjKuPgCKde1RNIfOAIQzHKIAVpsT435gZ9T
+	I0hgpiqWwkDwbOiOPXsMAEdsgVGa87nBDUqweL0r3yzIsh09klONCj/GINbWljapOgPW69JOOOLaV
+	UcayJCN2zNBdRhHG0+K0pQ1KlYsFcibuC43s91jf321PR9KnjOeiycrrP86EVTBeR+uCu4Y10WE8e
+	kaadKZnTYEhBCX5TZYCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9svA-0007DW-Pk; Thu, 05 Mar 2020 16:00:24 +0000
+	id 1j9svQ-0007RR-VQ; Thu, 05 Mar 2020 16:00:40 +0000
 Received: from mx2.suse.de ([195.135.220.15])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9suq-0005qV-Q5; Thu, 05 Mar 2020 16:00:06 +0000
+ id 1j9suq-0005rH-Uz; Thu, 05 Mar 2020 16:00:11 +0000
 X-Virus-Scanned: by amavisd-new at test-mx.suse.de
 Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 5CA83ADE3;
+ by mx2.suse.de (Postfix) with ESMTP id 5C8EEADD7;
  Thu,  5 Mar 2020 15:59:59 +0000 (UTC)
 From: Thomas Zimmermann <tzimmermann@suse.de>
 To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
@@ -47,16 +47,16 @@ To: airlied@linux.ie, daniel@ffwll.ch, sam@ravnborg.org, abrodkin@synopsys.com,
  tomi.valkeinen@ti.com, eric@anholt.net, kraxel@redhat.com,
  rodrigosiqueiramelo@gmail.com, hamohammed.sa@gmail.com,
  sebastian.reichel@collabora.com
-Subject: [PATCH 02/22] drm/atmel-hlcdc: Use simple encoder
-Date: Thu,  5 Mar 2020 16:59:30 +0100
-Message-Id: <20200305155950.2705-3-tzimmermann@suse.de>
+Subject: [PATCH 03/22] drm/exynos: Use simple encoder
+Date: Thu,  5 Mar 2020 16:59:31 +0100
+Message-Id: <20200305155950.2705-4-tzimmermann@suse.de>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200305155950.2705-1-tzimmermann@suse.de>
 References: <20200305155950.2705-1-tzimmermann@suse.de>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200305_080005_048337_C4FCFE35 
-X-CRM114-Status: GOOD (  12.65  )
+X-CRM114-CacheID: sfid-20200305_080005_350530_7805EF7C 
+X-CRM114-Status: GOOD (  12.42  )
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.3 points)
@@ -64,10 +64,10 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
  medium trust [195.135.220.15 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
  [195.135.220.15 listed in wl.mailspike.net]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -89,52 +89,182 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The atmel-hlcdc driver uses an empty implementation for its encoder.
-Replace the code with the generic simple encoder.
+The exynos driver uses empty implementations for its encoders. Replace
+the code with the generic simple encoder.
 
 Signed-off-by: Thomas Zimmermann <tzimmermann@suse.de>
 ---
- drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c | 12 ++++--------
- 1 file changed, 4 insertions(+), 8 deletions(-)
+ drivers/gpu/drm/exynos/exynos_dp.c       | 8 ++------
+ drivers/gpu/drm/exynos/exynos_drm_dpi.c  | 8 ++------
+ drivers/gpu/drm/exynos/exynos_drm_dsi.c  | 8 ++------
+ drivers/gpu/drm/exynos/exynos_drm_vidi.c | 8 ++------
+ drivers/gpu/drm/exynos/exynos_hdmi.c     | 8 ++------
+ 5 files changed, 10 insertions(+), 30 deletions(-)
 
-diff --git a/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c b/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-index e2019fe97fff..43bc709e3523 100644
---- a/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-+++ b/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-@@ -11,9 +11,10 @@
- #include <linux/media-bus-format.h>
- #include <linux/of_graph.h>
- 
-+#include <drm/drm_bridge.h>
- #include <drm/drm_encoder.h>
- #include <drm/drm_of.h>
--#include <drm/drm_bridge.h>
+diff --git a/drivers/gpu/drm/exynos/exynos_dp.c b/drivers/gpu/drm/exynos/exynos_dp.c
+index d23d3502ca91..a61482af2998 100644
+--- a/drivers/gpu/drm/exynos/exynos_dp.c
++++ b/drivers/gpu/drm/exynos/exynos_dp.c
+@@ -25,6 +25,7 @@
+ #include <drm/drm_panel.h>
+ #include <drm/drm_print.h>
+ #include <drm/drm_probe_helper.h>
 +#include <drm/drm_simple_kms_helper.h>
+ #include <drm/exynos_drm.h>
  
- #include "atmel_hlcdc_dc.h"
- 
-@@ -22,10 +23,6 @@ struct atmel_hlcdc_rgb_output {
- 	int bus_fmt;
+ #include "exynos_drm_crtc.h"
+@@ -135,10 +136,6 @@ static const struct drm_encoder_helper_funcs exynos_dp_encoder_helper_funcs = {
+ 	.disable = exynos_dp_nop,
  };
  
--static const struct drm_encoder_funcs atmel_hlcdc_panel_encoder_funcs = {
+-static const struct drm_encoder_funcs exynos_dp_encoder_funcs = {
 -	.destroy = drm_encoder_cleanup,
 -};
 -
- static struct atmel_hlcdc_rgb_output *
- atmel_hlcdc_encoder_to_rgb_output(struct drm_encoder *encoder)
+ static int exynos_dp_dt_parse_panel(struct exynos_dp_device *dp)
  {
-@@ -98,9 +95,8 @@ static int atmel_hlcdc_attach_endpoint(struct drm_device *dev, int endpoint)
- 		return -EINVAL;
+ 	int ret;
+@@ -174,8 +171,7 @@ static int exynos_dp_bind(struct device *dev, struct device *master, void *data)
+ 			return ret;
  	}
  
--	ret = drm_encoder_init(dev, &output->encoder,
--			       &atmel_hlcdc_panel_encoder_funcs,
--			       DRM_MODE_ENCODER_NONE, NULL);
-+	ret = drm_simple_encoder_init(dev, &output->encoder,
-+				      DRM_MODE_ENCODER_NONE);
- 	if (ret)
- 		return ret;
+-	drm_encoder_init(drm_dev, encoder, &exynos_dp_encoder_funcs,
+-			 DRM_MODE_ENCODER_TMDS, NULL);
++	drm_simple_encoder_init(drm_dev, encoder, DRM_MODE_ENCODER_TMDS);
+ 
+ 	drm_encoder_helper_add(encoder, &exynos_dp_encoder_helper_funcs);
+ 
+diff --git a/drivers/gpu/drm/exynos/exynos_drm_dpi.c b/drivers/gpu/drm/exynos/exynos_drm_dpi.c
+index 43fa0f26c052..7ba5354e7d94 100644
+--- a/drivers/gpu/drm/exynos/exynos_drm_dpi.c
++++ b/drivers/gpu/drm/exynos/exynos_drm_dpi.c
+@@ -14,6 +14,7 @@
+ #include <drm/drm_panel.h>
+ #include <drm/drm_print.h>
+ #include <drm/drm_probe_helper.h>
++#include <drm/drm_simple_kms_helper.h>
+ 
+ #include <video/of_videomode.h>
+ #include <video/videomode.h>
+@@ -149,10 +150,6 @@ static const struct drm_encoder_helper_funcs exynos_dpi_encoder_helper_funcs = {
+ 	.disable = exynos_dpi_disable,
+ };
+ 
+-static const struct drm_encoder_funcs exynos_dpi_encoder_funcs = {
+-	.destroy = drm_encoder_cleanup,
+-};
+-
+ enum {
+ 	FIMD_PORT_IN0,
+ 	FIMD_PORT_IN1,
+@@ -201,8 +198,7 @@ int exynos_dpi_bind(struct drm_device *dev, struct drm_encoder *encoder)
+ {
+ 	int ret;
+ 
+-	drm_encoder_init(dev, encoder, &exynos_dpi_encoder_funcs,
+-			 DRM_MODE_ENCODER_TMDS, NULL);
++	drm_simple_encoder_init(dev, encoder, DRM_MODE_ENCODER_TMDS);
+ 
+ 	drm_encoder_helper_add(encoder, &exynos_dpi_encoder_helper_funcs);
+ 
+diff --git a/drivers/gpu/drm/exynos/exynos_drm_dsi.c b/drivers/gpu/drm/exynos/exynos_drm_dsi.c
+index 669d3857502a..2986c93382e0 100644
+--- a/drivers/gpu/drm/exynos/exynos_drm_dsi.c
++++ b/drivers/gpu/drm/exynos/exynos_drm_dsi.c
+@@ -30,6 +30,7 @@
+ #include <drm/drm_panel.h>
+ #include <drm/drm_print.h>
+ #include <drm/drm_probe_helper.h>
++#include <drm/drm_simple_kms_helper.h>
+ 
+ #include "exynos_drm_crtc.h"
+ #include "exynos_drm_drv.h"
+@@ -1524,10 +1525,6 @@ static const struct drm_encoder_helper_funcs exynos_dsi_encoder_helper_funcs = {
+ 	.disable = exynos_dsi_disable,
+ };
+ 
+-static const struct drm_encoder_funcs exynos_dsi_encoder_funcs = {
+-	.destroy = drm_encoder_cleanup,
+-};
+-
+ MODULE_DEVICE_TABLE(of, exynos_dsi_of_match);
+ 
+ static int exynos_dsi_host_attach(struct mipi_dsi_host *host,
+@@ -1705,8 +1702,7 @@ static int exynos_dsi_bind(struct device *dev, struct device *master,
+ 	struct drm_bridge *in_bridge;
+ 	int ret;
+ 
+-	drm_encoder_init(drm_dev, encoder, &exynos_dsi_encoder_funcs,
+-			 DRM_MODE_ENCODER_TMDS, NULL);
++	drm_simple_encoder_init(drm_dev, encoder, DRM_MODE_ENCODER_TMDS);
+ 
+ 	drm_encoder_helper_add(encoder, &exynos_dsi_encoder_helper_funcs);
+ 
+diff --git a/drivers/gpu/drm/exynos/exynos_drm_vidi.c b/drivers/gpu/drm/exynos/exynos_drm_vidi.c
+index b320b3a21ad4..282467121699 100644
+--- a/drivers/gpu/drm/exynos/exynos_drm_vidi.c
++++ b/drivers/gpu/drm/exynos/exynos_drm_vidi.c
+@@ -14,6 +14,7 @@
+ #include <drm/drm_atomic_helper.h>
+ #include <drm/drm_edid.h>
+ #include <drm/drm_probe_helper.h>
++#include <drm/drm_simple_kms_helper.h>
+ #include <drm/drm_vblank.h>
+ #include <drm/exynos_drm.h>
+ 
+@@ -369,10 +370,6 @@ static const struct drm_encoder_helper_funcs exynos_vidi_encoder_helper_funcs =
+ 	.disable = exynos_vidi_disable,
+ };
+ 
+-static const struct drm_encoder_funcs exynos_vidi_encoder_funcs = {
+-	.destroy = drm_encoder_cleanup,
+-};
+-
+ static int vidi_bind(struct device *dev, struct device *master, void *data)
+ {
+ 	struct vidi_context *ctx = dev_get_drvdata(dev);
+@@ -406,8 +403,7 @@ static int vidi_bind(struct device *dev, struct device *master, void *data)
+ 		return PTR_ERR(ctx->crtc);
+ 	}
+ 
+-	drm_encoder_init(drm_dev, encoder, &exynos_vidi_encoder_funcs,
+-			 DRM_MODE_ENCODER_TMDS, NULL);
++	drm_simple_encoder_init(drm_dev, encoder, DRM_MODE_ENCODER_TMDS);
+ 
+ 	drm_encoder_helper_add(encoder, &exynos_vidi_encoder_helper_funcs);
+ 
+diff --git a/drivers/gpu/drm/exynos/exynos_hdmi.c b/drivers/gpu/drm/exynos/exynos_hdmi.c
+index 3e5f1a77286d..302ffda5f297 100644
+--- a/drivers/gpu/drm/exynos/exynos_hdmi.c
++++ b/drivers/gpu/drm/exynos/exynos_hdmi.c
+@@ -38,6 +38,7 @@
+ #include <drm/drm_edid.h>
+ #include <drm/drm_print.h>
+ #include <drm/drm_probe_helper.h>
++#include <drm/drm_simple_kms_helper.h>
+ 
+ #include "exynos_drm_crtc.h"
+ #include "regs-hdmi.h"
+@@ -1559,10 +1560,6 @@ static const struct drm_encoder_helper_funcs exynos_hdmi_encoder_helper_funcs =
+ 	.disable	= hdmi_disable,
+ };
+ 
+-static const struct drm_encoder_funcs exynos_hdmi_encoder_funcs = {
+-	.destroy = drm_encoder_cleanup,
+-};
+-
+ static void hdmi_audio_shutdown(struct device *dev, void *data)
+ {
+ 	struct hdmi_context *hdata = dev_get_drvdata(dev);
+@@ -1851,8 +1848,7 @@ static int hdmi_bind(struct device *dev, struct device *master, void *data)
+ 
+ 	hdata->phy_clk.enable = hdmiphy_clk_enable;
+ 
+-	drm_encoder_init(drm_dev, encoder, &exynos_hdmi_encoder_funcs,
+-			 DRM_MODE_ENCODER_TMDS, NULL);
++	drm_simple_encoder_init(drm_dev, encoder, DRM_MODE_ENCODER_TMDS);
+ 
+ 	drm_encoder_helper_add(encoder, &exynos_hdmi_encoder_helper_funcs);
  
 -- 
 2.25.1
