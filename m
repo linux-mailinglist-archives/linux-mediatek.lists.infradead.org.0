@@ -2,63 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C3DBE17D20F
-	for <lists+linux-mediatek@lfdr.de>; Sun,  8 Mar 2020 07:35:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9492A17D369
+	for <lists+linux-mediatek@lfdr.de>; Sun,  8 Mar 2020 11:54:08 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ohTxEfjtgNlWB0V1CHjZ8LAZW55LaP0G2kMCHQjzc2M=; b=YbJ5PqODAj9Ikm
-	DA5tEDUd5dO8U4H7obqa+46lxO5MGxYBA5c7mEw3srBAXYBRoUpYwkA7j1x2oqVHfdhKOuMuHE8P/
-	5Tfl92kh/1m/gRlTCsOMOtpCkOJWrxh/bWGcJwCzaxLB7wvnv+uVebgzIw1Fu/KLKIQP0VOa25uK0
-	IkMWrd0T5/eC9nIPf/YUxL8V1zlBSlKuPaL8znTDPHUB/nTiQmdf4LueCoiIFaKuCkjm/Q1Js1A4L
-	fNFot6sCSjaEUTR6WB4blDtaKR4SknCHBeCM4J0O7Rgiqnn7Bo6Mvy2QhJi1p+q/FuG9qaXkdMsnj
-	meaJHS0ao+2Y/F0Snfbg==;
+	List-Owner; bh=7NJJARTJD94oMvhQpQ713O5OcwUyv7zaRXIsqXJHy9Y=; b=L+FMl1aCXj7XLh
+	mryu/+MQfr6DNfH7B4xeLIeK4+LS5k78GPmIS8PLNiqLS/qIbYiF3R1zVyAkZDHbvyjIKunGLUwkz
+	f5hoQO9DPqNMM3NxiHjAv1L6JZau9W1vPHpysPZBJthc8NSikeoAOxGtbyZn6sj/STx7UJX7aesl9
+	fa3RN0YzMLoEqoegngki4pk9MSo63QjuojmaXcbvdNvplXf4Do4xe/beXTtiN+UzZFiTUPjC+fCiK
+	BkaFa3XiXS8dns8EMiADazNoyqEVTAfOkiWLSHdkoLJi1ddN0lm2XIDukXhyg6JDTy7WqTI/Lj3P6
+	2f4Y/HfT11qfPTHWFpeA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jApWp-0002vu-H7; Sun, 08 Mar 2020 06:35:11 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jAtZK-0007LR-8o; Sun, 08 Mar 2020 10:54:02 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jApWW-0002pO-8v; Sun, 08 Mar 2020 06:34:53 +0000
-X-UUID: 17983672a028440f8395a694e8eef122-20200307
+ id 1jAtYX-0006Y4-3N; Sun, 08 Mar 2020 10:53:17 +0000
+X-UUID: e119f701f6cd488c872aa35969c83cbd-20200308
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=amPnNjmjefQsyk5bkPNYdHvxBnqS5HcVAeBUw7OCcuY=; 
- b=Ax2DXZTx9qOU0YVK64+DxYjQUgqiu5d8juThM7utccukdRnzfKT5jkACsIE29Qds6UArdWVk6pp3vnSEXP7yMJpWMVVWTms67vHtrtw+G0lKPZ8K+ldmZFyqQPUfowkrzvaj7sYtWYCxy9GCILk22PXWx9clUO591cAknpOev7U=;
-X-UUID: 17983672a028440f8395a694e8eef122-20200307
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <sean.wang@mediatek.com>)
+ bh=GxTjmEm049B3GShhfkpoy+9dkylx+QGAxLN83d+jIDk=; 
+ b=dG5A6N4VprMwPggjgqUYJYQegrZKzv6IJp9Dl76oICqgRdCJ0jgoN7MAtPmBLbIc3rY0bQo/AK6FyNbre9dUPleeeZCNJ9cNUGtgmPpUdY4mafXgzMAscde3bOPS5LiC3/UGLhkaMm8F0PwSTyDFbwlmUM/6PZpVSrC4tqf9g60=;
+X-UUID: e119f701f6cd488c872aa35969c83cbd-20200308
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <dennis-yc.hsieh@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 862519836; Sat, 07 Mar 2020 22:34:41 -0800
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ with ESMTP id 1481110567; Sun, 08 Mar 2020 02:53:01 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Sat, 7 Mar 2020 22:34:40 -0800
+ 15.0.1395.4; Sun, 8 Mar 2020 03:53:00 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 8 Mar 2020 18:51:55 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Sun, 8 Mar 2020 14:34:38 +0800
-From: <sean.wang@mediatek.com>
-To: <robh+dt@kernel.org>, <matthias.bgg@gmail.com>, <mark.rutland@arm.com>,
- <devicetree@vger.kernel.org>, <linux-mediatek@lists.infradead.org>
-Subject: [PATCH] arm: dts: mt7623: add phy-mode property for gmac2
-Date: Sun, 8 Mar 2020 14:34:37 +0800
-Message-ID: <70e3eff31ecd500ed4862d9de28325a4dbd15105.1583648927.git.sean.wang@mediatek.com>
+ Frontend Transport; Sun, 8 Mar 2020 18:52:58 +0800
+From: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Jassi Brar
+ <jassisinghbrar@gmail.com>, Philipp Zabel <p.zabel@pengutronix.de>, "David
+ Airlie" <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>
+Subject: [PATCH v5 00/13] support gce on mt6779 platform 
+Date: Sun, 8 Mar 2020 18:52:42 +0800
+Message-ID: <1583664775-19382-1-git-send-email-dennis-yc.hsieh@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200307_223452_324776_1C66B0FD 
-X-CRM114-Status: UNSURE (   7.37  )
+X-CRM114-CacheID: sfid-20200308_035313_149334_0638E146 
+X-CRM114-Status: UNSURE (   9.21  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
  encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -81,37 +88,60 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, john@phrozen.org
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ HS Liao <hs.liao@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Houlong Wei <houlong.wei@mediatek.com>, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ CK Hu <ck.hu@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Sean Wang <sean.wang@mediatek.com>
+This patch support gce on mt6779 platform.
 
-Add phy-mode property required by phylink on gmac2
+Change since v4:
+- do not clear disp event again in drm driver
+- symbolize value 1 to jump relative
 
-Fixes: b8fc9f30821e ("net: ethernet: mediatek: Add basic PHYLINK support")
-Signed-off-by: Sean Wang <sean.wang@mediatek.com>
----
- arch/arm/boot/dts/mt7623n-rfb-emmc.dts | 1 +
- 1 file changed, 1 insertion(+)
+Change since v3:
+- refine code for local variable usage
+- use cmdq error code to consistent with current design
+- return error directly after send if error code return
+- also modify drm driver which uses cmdq_pkt_wfe api
+- add finalize in drm driver
 
-diff --git a/arch/arm/boot/dts/mt7623n-rfb-emmc.dts b/arch/arm/boot/dts/mt7623n-rfb-emmc.dts
-index b7606130ade9..0447748f9fa0 100644
---- a/arch/arm/boot/dts/mt7623n-rfb-emmc.dts
-+++ b/arch/arm/boot/dts/mt7623n-rfb-emmc.dts
-@@ -138,6 +138,7 @@ fixed-link {
- 	mac@1 {
- 		compatible = "mediatek,eth-mac";
- 		reg = <1>;
-+		phy-mode = "rgmii";
- 		phy-handle = <&phy5>;
- 	};
- 
+[... snip ...]
+
+
+
+Dennis YC Hsieh (13):
+  dt-binding: gce: add gce header file for mt6779
+  mailbox: cmdq: variablize address shift in platform
+  mailbox: cmdq: support mt6779 gce platform definition
+  mailbox: mediatek: cmdq: clear task in channel before shutdown
+  soc: mediatek: cmdq: return send msg error code
+  soc: mediatek: cmdq: add assign function
+  soc: mediatek: cmdq: add write_s function
+  soc: mediatek: cmdq: add read_s function
+  soc: mediatek: cmdq: add write_s value function
+  soc: mediatek: cmdq: export finalize function
+  soc: mediatek: cmdq: add jump function
+  soc: mediatek: cmdq: add clear option in cmdq_pkt_wfe api
+  soc: mediatek: cmdq: add set event function
+
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |   8 +-
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c       |   3 +-
+ drivers/mailbox/mtk-cmdq-mailbox.c            | 101 ++++++--
+ drivers/soc/mediatek/mtk-cmdq-helper.c        | 144 +++++++++++-
+ include/dt-bindings/gce/mt6779-gce.h          | 222 ++++++++++++++++++
+ include/linux/mailbox/mtk-cmdq-mailbox.h      |  10 +-
+ include/linux/soc/mediatek/mtk-cmdq.h         |  94 +++++++-
+ 7 files changed, 549 insertions(+), 33 deletions(-)
+ create mode 100644 include/dt-bindings/gce/mt6779-gce.h
+
 -- 
-2.25.1
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
