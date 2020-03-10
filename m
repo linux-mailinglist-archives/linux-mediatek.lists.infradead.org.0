@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3B63517F300
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Mar 2020 10:13:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E78ED17F2FF
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Mar 2020 10:13:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,32 +11,32 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=k2Lpu5qLhreYbHkkCv2cqh5zbeYlVxS4bEqJltPRQ+0=; b=sZZdhsQXaRRqEE3wXX5x9HzYkR
-	FkIflJfFJVzX4JDLtQnt3QffUnvpnrZr5Ls6VETGf2xFzP/fMsEhUolO9caF63//BJ2aZ5gubADeO
-	oCkRt8oP1+f/q3wAwuKR4XQTbPlAVIQXhHR83zeF4nJdS+nIh7MBb3ZT//Cn55MOttqcfBAKt63xp
-	PrmkawFbW1HDTytYAE2nDdDWE9wGmyU9TNC9jzdfgCi8isoZwuwTWJF5r77Sc++6iya0gcy752DHT
-	H8SEWPU263IVfD+0nOh7AzONAg3QVu8hQ0Ooom8sqk2mLbtQwhI1msN0y82d1AdeZvuCixJFQQvk+
-	NL6guBpg==;
+	bh=w+njyRqFQjSOwsvlMpGfNivBO5WxChJ1BUklwvLukVs=; b=OwUh8bg2hl3/ifv+w+nHv1MeUr
+	QWk95ZXtBbD+d92yuQP/6Fa6c6qokQ2fTe++x/kyw5LDuBKBLxFapVuwjoqSg31SECua8MY7/4LN3
+	+Qw8lDBqppqyVaDOSuw4AKSXK67GVL5rFDZoKW5VCS95wdrgFyfCDRXACFZNCd9KLdXop7SCsCeLS
+	ChU4KGipazJ6if2gr2jhj6lr/7AiQgQ/QC36lQjsgOATDooN6yXIpacAAh8MDnZIfbkbULhIYewDn
+	G8LXi0W9cF5TOQTawFIlxkHRKPf5sExBpn+vmhA2R0L+tUl5ywBsd3uGksCl7lGHx0wcB+AI73YVM
+	2fPB15Zw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBawd-0006UM-4H; Tue, 10 Mar 2020 09:12:59 +0000
+	id 1jBawa-0006Rw-WC; Tue, 10 Mar 2020 09:12:57 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBawQ-0006Hp-TZ
+ id 1jBawQ-0006Hq-Sk
  for linux-mediatek@lists.infradead.org; Tue, 10 Mar 2020 09:12:48 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 92FC870B; Tue, 10 Mar 2020 10:12:32 +0100 (CET)
+ id CD11C768; Tue, 10 Mar 2020 10:12:32 +0100 (CET)
 From: Joerg Roedel <joro@8bytes.org>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH 05/15] iommu: Rename struct iommu_param to dev_iommu
-Date: Tue, 10 Mar 2020 10:12:19 +0100
-Message-Id: <20200310091229.29830-6-joro@8bytes.org>
+Subject: [PATCH 06/15] iommu: Move iommu_fwspec to struct dev_iommu
+Date: Tue, 10 Mar 2020 10:12:20 +0100
+Message-Id: <20200310091229.29830-7-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200310091229.29830-1-joro@8bytes.org>
 References: <20200310091229.29830-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200310_021247_138012_C22B00AB 
-X-CRM114-Status: GOOD (  13.01  )
+X-CRM114-CacheID: sfid-20200310_021247_084784_265C0AF3 
+X-CRM114-Status: GOOD (  11.01  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -75,171 +75,85 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-The term dev_iommu aligns better with other existing structures and
-their accessor functions.
+Move the iommu_fwspec pointer in struct device into struct dev_iommu.
+This is a step in the effort to reduce the iommu related pointers in
+struct device to one.
 
 Tested-by: Will Deacon <will@kernel.org> # arm-smmu
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c  | 28 ++++++++++++++--------------
- include/linux/device.h |  6 +++---
- include/linux/iommu.h  |  4 ++--
- 3 files changed, 19 insertions(+), 19 deletions(-)
+ drivers/iommu/iommu.c  |  3 +++
+ include/linux/device.h |  1 -
+ include/linux/iommu.h  | 12 ++++++++----
+ 3 files changed, 11 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index 3e3528436e0b..beac2ef063dd 100644
+index beac2ef063dd..826a67ba247f 100644
 --- a/drivers/iommu/iommu.c
 +++ b/drivers/iommu/iommu.c
-@@ -152,9 +152,9 @@ void iommu_device_unregister(struct iommu_device *iommu)
- }
- EXPORT_SYMBOL_GPL(iommu_device_unregister);
+@@ -2405,6 +2405,9 @@ int iommu_fwspec_init(struct device *dev, struct fwnode_handle *iommu_fwnode,
+ 	if (fwspec)
+ 		return ops == fwspec->ops ? 0 : -EINVAL;
  
--static struct iommu_param *iommu_get_dev_param(struct device *dev)
-+static struct dev_iommu *dev_iommu_get(struct device *dev)
- {
--	struct iommu_param *param = dev->iommu_param;
-+	struct dev_iommu *param = dev->iommu;
- 
- 	if (param)
- 		return param;
-@@ -164,14 +164,14 @@ static struct iommu_param *iommu_get_dev_param(struct device *dev)
- 		return NULL;
- 
- 	mutex_init(&param->lock);
--	dev->iommu_param = param;
-+	dev->iommu = param;
- 	return param;
- }
- 
--static void iommu_free_dev_param(struct device *dev)
-+static void dev_iommu_free(struct device *dev)
- {
--	kfree(dev->iommu_param);
--	dev->iommu_param = NULL;
-+	kfree(dev->iommu);
-+	dev->iommu = NULL;
- }
- 
- int iommu_probe_device(struct device *dev)
-@@ -183,7 +183,7 @@ int iommu_probe_device(struct device *dev)
- 	if (!ops)
- 		return -EINVAL;
- 
--	if (!iommu_get_dev_param(dev))
 +	if (!dev_iommu_get(dev))
++		return -ENOMEM;
++
+ 	fwspec = kzalloc(sizeof(*fwspec), GFP_KERNEL);
+ 	if (!fwspec)
  		return -ENOMEM;
- 
- 	if (!try_module_get(ops->owner)) {
-@@ -200,7 +200,7 @@ int iommu_probe_device(struct device *dev)
- err_module_put:
- 	module_put(ops->owner);
- err_free_dev_param:
--	iommu_free_dev_param(dev);
-+	dev_iommu_free(dev);
- 	return ret;
- }
- 
-@@ -211,9 +211,9 @@ void iommu_release_device(struct device *dev)
- 	if (dev->iommu_group)
- 		ops->remove_device(dev);
- 
--	if (dev->iommu_param) {
-+	if (dev->iommu) {
- 		module_put(ops->owner);
--		iommu_free_dev_param(dev);
-+		dev_iommu_free(dev);
- 	}
- }
- 
-@@ -972,7 +972,7 @@ int iommu_register_device_fault_handler(struct device *dev,
- 					iommu_dev_fault_handler_t handler,
- 					void *data)
- {
--	struct iommu_param *param = dev->iommu_param;
-+	struct dev_iommu *param = dev->iommu;
- 	int ret = 0;
- 
- 	if (!param)
-@@ -1015,7 +1015,7 @@ EXPORT_SYMBOL_GPL(iommu_register_device_fault_handler);
-  */
- int iommu_unregister_device_fault_handler(struct device *dev)
- {
--	struct iommu_param *param = dev->iommu_param;
-+	struct dev_iommu *param = dev->iommu;
- 	int ret = 0;
- 
- 	if (!param)
-@@ -1055,7 +1055,7 @@ EXPORT_SYMBOL_GPL(iommu_unregister_device_fault_handler);
-  */
- int iommu_report_device_fault(struct device *dev, struct iommu_fault_event *evt)
- {
--	struct iommu_param *param = dev->iommu_param;
-+	struct dev_iommu *param = dev->iommu;
- 	struct iommu_fault_event *evt_pending = NULL;
- 	struct iommu_fault_param *fparam;
- 	int ret = 0;
-@@ -1104,7 +1104,7 @@ int iommu_page_response(struct device *dev,
- 	int ret = -EINVAL;
- 	struct iommu_fault_event *evt;
- 	struct iommu_fault_page_request *prm;
--	struct iommu_param *param = dev->iommu_param;
-+	struct dev_iommu *param = dev->iommu;
- 	struct iommu_domain *domain = iommu_get_domain_for_dev(dev);
- 
- 	if (!domain || !domain->ops->page_response)
 diff --git a/include/linux/device.h b/include/linux/device.h
-index fa04dfd22bbc..405a8f11bec1 100644
+index 405a8f11bec1..ca29c39a6480 100644
 --- a/include/linux/device.h
 +++ b/include/linux/device.h
-@@ -44,7 +44,7 @@ struct iommu_ops;
- struct iommu_group;
- struct iommu_fwspec;
- struct dev_pin_info;
--struct iommu_param;
-+struct dev_iommu;
+@@ -613,7 +613,6 @@ struct device {
  
- /**
-  * struct subsys_interface - interfaces to device functions
-@@ -514,7 +514,7 @@ struct dev_links_info {
-  * 		device (i.e. the bus driver that discovered the device).
-  * @iommu_group: IOMMU group the device belongs to.
-  * @iommu_fwspec: IOMMU-specific properties supplied by firmware.
-- * @iommu_param: Per device generic IOMMU runtime data
-+ * @iommu:	Per device generic IOMMU runtime data
-  *
-  * @offline_disabled: If set, the device is permanently online.
-  * @offline:	Set after successful invocation of bus type's .offline().
-@@ -614,7 +614,7 @@ struct device {
  	void	(*release)(struct device *dev);
  	struct iommu_group	*iommu_group;
- 	struct iommu_fwspec	*iommu_fwspec;
--	struct iommu_param	*iommu_param;
-+	struct dev_iommu	*iommu;
+-	struct iommu_fwspec	*iommu_fwspec;
+ 	struct dev_iommu	*iommu;
  
  	bool			offline_disabled:1;
- 	bool			offline:1;
 diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index 3c4ca041d7a2..1c9fa5c1174b 100644
+index 1c9fa5c1174b..f5edc21a644d 100644
 --- a/include/linux/iommu.h
 +++ b/include/linux/iommu.h
-@@ -365,7 +365,7 @@ struct iommu_fault_param {
- };
- 
- /**
-- * struct iommu_param - collection of per-device IOMMU data
-+ * struct dev_iommu - Collection of per-device IOMMU data
+@@ -368,14 +368,15 @@ struct iommu_fault_param {
+  * struct dev_iommu - Collection of per-device IOMMU data
   *
   * @fault_param: IOMMU detected device fault reporting data
++ * @fwspec:	 IOMMU fwspec data
   *
-@@ -373,7 +373,7 @@ struct iommu_fault_param {
+  * TODO: migrate other per device data pointers under iommu_dev_data, e.g.
   *	struct iommu_group	*iommu_group;
-  *	struct iommu_fwspec	*iommu_fwspec;
+- *	struct iommu_fwspec	*iommu_fwspec;
   */
--struct iommu_param {
-+struct dev_iommu {
+ struct dev_iommu {
  	struct mutex lock;
- 	struct iommu_fault_param *fault_param;
+-	struct iommu_fault_param *fault_param;
++	struct iommu_fault_param	*fault_param;
++	struct iommu_fwspec		*fwspec;
  };
+ 
+ int  iommu_device_register(struct iommu_device *iommu);
+@@ -614,13 +615,16 @@ const struct iommu_ops *iommu_ops_from_fwnode(struct fwnode_handle *fwnode);
+ 
+ static inline struct iommu_fwspec *dev_iommu_fwspec_get(struct device *dev)
+ {
+-	return dev->iommu_fwspec;
++	if (dev->iommu)
++		return dev->iommu->fwspec;
++	else
++		return NULL;
+ }
+ 
+ static inline void dev_iommu_fwspec_set(struct device *dev,
+ 					struct iommu_fwspec *fwspec)
+ {
+-	dev->iommu_fwspec = fwspec;
++	dev->iommu->fwspec = fwspec;
+ }
+ 
+ int iommu_probe_device(struct device *dev);
 -- 
 2.17.1
 
