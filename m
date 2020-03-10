@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 395F817F314
-	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Mar 2020 10:13:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 257C917F31F
+	for <lists+linux-mediatek@lfdr.de>; Tue, 10 Mar 2020 10:13:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,40 +11,39 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=NLZQxVXZP24Ru0pmzCjUzEeCv0tYDWyIsOCtmBjt6UE=; b=PGKlt7pt9ltl7Ov0vypOVikBuY
-	El7nqdE4ve+Vdzb1afR146Q+x9KwFgMD6sZ5PZHy++Y/wfsufkvPLJd6RxddvEyVqahVYDH4822zx
-	2/jaDjw+GtQmdVzsBEVnufp7lVM3ojzhGfrDdopTmzvHlhR7w8rxJ0Fs9dfJB8YgGofsotjKXeGnH
-	KvZfd/SuzgOl2HQXa85YjmSUUWoe7bZPt34WBiSNUmyJg/i2528crPPeBqNV7wAdsqst+OwrxCPQG
-	mWYaQko0ZB1nSHpTpeOyxzo459HO/Njn5cI3qg3R6yDe4VUljJxwDR6wGLQBze0eRsA9PGBk0Pl+0
-	h8cZG/Ew==;
+	bh=MO0MSDR/23SNqyNBltwoBQ+WBM6Ew4g1SrQzgIC3Ge0=; b=A1es9J0bMNOyP7MJiGHAPEXSQr
+	Gx0s41vaD3zIOizBUNi7YvZTMQx7VIVVaviFX14eFPIAGf5umy/d2xByXSx/4wBHJBKZASDiVFeu0
+	O/+Sdm2qwhANGseggJuH+CpnrCHzovWemkUCCJpR2DXUbUlBEGmJsjUgeezWck4bpQ7u8XpFDG6mO
+	rKtvuou0jbWPIhST+eXNyhtQjLVF4k+A6NUph5Ja1fWS4M5c/0v+3XX/lXHnV2kSRiUHDOtvfhv+I
+	fdGgd2I60OjI76VCA6O1o4142dZY+TMXtMrcxqEaaMQ5g9SvV+sQVkNFrtJKzglXxXzgU0Qjmjcwo
+	4ogA4wow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBawl-0006nd-LV; Tue, 10 Mar 2020 09:13:07 +0000
-Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
+	id 1jBawp-0006xW-A5; Tue, 10 Mar 2020 09:13:11 +0000
+Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
+ helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBawR-0006IL-PQ
- for linux-mediatek@lists.infradead.org; Tue, 10 Mar 2020 09:12:50 +0000
+ id 1jBawR-0006IO-Uv
+ for linux-mediatek@lists.infradead.org; Tue, 10 Mar 2020 09:12:52 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id F1D59D98; Tue, 10 Mar 2020 10:12:33 +0100 (CET)
+ id 2EA32DB2; Tue, 10 Mar 2020 10:12:34 +0100 (CET)
 From: Joerg Roedel <joro@8bytes.org>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH 12/15] iommu/mediatek: Use accessor functions for iommu
- private data
-Date: Tue, 10 Mar 2020 10:12:26 +0100
-Message-Id: <20200310091229.29830-13-joro@8bytes.org>
+Subject: [PATCH 13/15] iommu/qcom: Use accessor functions for iommu private
+ data
+Date: Tue, 10 Mar 2020 10:12:27 +0100
+Message-Id: <20200310091229.29830-14-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200310091229.29830-1-joro@8bytes.org>
 References: <20200310091229.29830-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200310_021247_972640_D5FAC3B5 
-X-CRM114-Status: GOOD (  10.81  )
+X-CRM114-CacheID: sfid-20200310_021248_287225_C543B9E3 
+X-CRM114-Status: GOOD (  13.68  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -80,140 +79,204 @@ Make use of dev_iommu_priv_set/get() functions.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/mtk_iommu.c    | 13 ++++++-------
- drivers/iommu/mtk_iommu_v1.c | 14 +++++++-------
- 2 files changed, 13 insertions(+), 14 deletions(-)
+ drivers/iommu/qcom_iommu.c | 61 ++++++++++++++++++++++----------------
+ 1 file changed, 36 insertions(+), 25 deletions(-)
 
-diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
-index 95945f467c03..5f4d6df59cf6 100644
---- a/drivers/iommu/mtk_iommu.c
-+++ b/drivers/iommu/mtk_iommu.c
-@@ -358,8 +358,8 @@ static void mtk_iommu_domain_free(struct iommu_domain *domain)
- static int mtk_iommu_attach_device(struct iommu_domain *domain,
- 				   struct device *dev)
+diff --git a/drivers/iommu/qcom_iommu.c b/drivers/iommu/qcom_iommu.c
+index 4328da0b0a9f..80147f82d427 100644
+--- a/drivers/iommu/qcom_iommu.c
++++ b/drivers/iommu/qcom_iommu.c
+@@ -74,16 +74,19 @@ static struct qcom_iommu_domain *to_qcom_iommu_domain(struct iommu_domain *dom)
+ 
+ static const struct iommu_ops qcom_iommu_ops;
+ 
+-static struct qcom_iommu_dev * to_iommu(struct iommu_fwspec *fwspec)
++static struct qcom_iommu_dev * to_iommu(struct device *dev)
  {
-+	struct mtk_iommu_data *data = dev_iommu_priv_get(dev);
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
--	struct mtk_iommu_data *data = dev_iommu_fwspec_get(dev)->iommu_priv;
++	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
++
+ 	if (!fwspec || fwspec->ops != &qcom_iommu_ops)
+ 		return NULL;
+-	return fwspec->iommu_priv;
++
++	return dev_iommu_priv_get(dev);
+ }
  
- 	if (!data)
- 		return -ENODEV;
-@@ -378,7 +378,7 @@ static int mtk_iommu_attach_device(struct iommu_domain *domain,
- static void mtk_iommu_detach_device(struct iommu_domain *domain,
- 				    struct device *dev)
+-static struct qcom_iommu_ctx * to_ctx(struct iommu_fwspec *fwspec, unsigned asid)
++static struct qcom_iommu_ctx * to_ctx(struct device *dev, unsigned asid)
  {
--	struct mtk_iommu_data *data = dev_iommu_fwspec_get(dev)->iommu_priv;
-+	struct mtk_iommu_data *data = dev_iommu_priv_get(dev);
+-	struct qcom_iommu_dev *qcom_iommu = to_iommu(fwspec);
++	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev);
+ 	if (!qcom_iommu)
+ 		return NULL;
+ 	return qcom_iommu->ctxs[asid - 1];
+@@ -115,11 +118,14 @@ iommu_readq(struct qcom_iommu_ctx *ctx, unsigned reg)
  
- 	if (!data)
- 		return;
-@@ -450,7 +450,7 @@ static int mtk_iommu_add_device(struct device *dev)
- 	if (!fwspec || fwspec->ops != &mtk_iommu_ops)
- 		return -ENODEV; /* Not a iommu client device */
+ static void qcom_iommu_tlb_sync(void *cookie)
+ {
+-	struct iommu_fwspec *fwspec = cookie;
++	struct iommu_fwspec *fwspec;
++	struct device *dev = cookie;
+ 	unsigned i;
  
--	data = fwspec->iommu_priv;
-+	data = dev_iommu_priv_get(dev);
- 	iommu_device_link(&data->iommu, dev);
++	fwspec = dev_iommu_fwspec_get(dev);
++
+ 	for (i = 0; i < fwspec->num_ids; i++) {
+-		struct qcom_iommu_ctx *ctx = to_ctx(fwspec, fwspec->ids[i]);
++		struct qcom_iommu_ctx *ctx = to_ctx(dev, fwspec->ids[i]);
+ 		unsigned int val, ret;
  
- 	group = iommu_group_get_for_dev(dev);
-@@ -469,7 +469,7 @@ static void mtk_iommu_remove_device(struct device *dev)
- 	if (!fwspec || fwspec->ops != &mtk_iommu_ops)
- 		return;
+ 		iommu_writel(ctx, ARM_SMMU_CB_TLBSYNC, 0);
+@@ -133,11 +139,14 @@ static void qcom_iommu_tlb_sync(void *cookie)
  
--	data = fwspec->iommu_priv;
-+	data = dev_iommu_priv_get(dev);
- 	iommu_device_unlink(&data->iommu, dev);
+ static void qcom_iommu_tlb_inv_context(void *cookie)
+ {
+-	struct iommu_fwspec *fwspec = cookie;
++	struct device *dev = cookie;
++	struct iommu_fwspec *fwspec;
+ 	unsigned i;
  
- 	iommu_group_remove_device(dev);
-@@ -496,7 +496,6 @@ static struct iommu_group *mtk_iommu_device_group(struct device *dev)
++	fwspec = dev_iommu_fwspec_get(dev);
++
+ 	for (i = 0; i < fwspec->num_ids; i++) {
+-		struct qcom_iommu_ctx *ctx = to_ctx(fwspec, fwspec->ids[i]);
++		struct qcom_iommu_ctx *ctx = to_ctx(dev, fwspec->ids[i]);
+ 		iommu_writel(ctx, ARM_SMMU_CB_S1_TLBIASID, ctx->asid);
+ 	}
  
- static int mtk_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
+@@ -147,13 +156,16 @@ static void qcom_iommu_tlb_inv_context(void *cookie)
+ static void qcom_iommu_tlb_inv_range_nosync(unsigned long iova, size_t size,
+ 					    size_t granule, bool leaf, void *cookie)
+ {
+-	struct iommu_fwspec *fwspec = cookie;
++	struct device *dev = cookie;
++	struct iommu_fwspec *fwspec;
+ 	unsigned i, reg;
+ 
+ 	reg = leaf ? ARM_SMMU_CB_S1_TLBIVAL : ARM_SMMU_CB_S1_TLBIVA;
+ 
++	fwspec = dev_iommu_fwspec_get(dev);
++
+ 	for (i = 0; i < fwspec->num_ids; i++) {
+-		struct qcom_iommu_ctx *ctx = to_ctx(fwspec, fwspec->ids[i]);
++		struct qcom_iommu_ctx *ctx = to_ctx(dev, fwspec->ids[i]);
+ 		size_t s = size;
+ 
+ 		iova = (iova >> 12) << 12;
+@@ -222,9 +234,10 @@ static irqreturn_t qcom_iommu_fault(int irq, void *dev)
+ 
+ static int qcom_iommu_init_domain(struct iommu_domain *domain,
+ 				  struct qcom_iommu_dev *qcom_iommu,
+-				  struct iommu_fwspec *fwspec)
++				  struct device *dev)
+ {
+ 	struct qcom_iommu_domain *qcom_domain = to_qcom_iommu_domain(domain);
++	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
+ 	struct io_pgtable_ops *pgtbl_ops;
+ 	struct io_pgtable_cfg pgtbl_cfg;
+ 	int i, ret = 0;
+@@ -243,7 +256,7 @@ static int qcom_iommu_init_domain(struct iommu_domain *domain,
+ 	};
+ 
+ 	qcom_domain->iommu = qcom_iommu;
+-	pgtbl_ops = alloc_io_pgtable_ops(ARM_32_LPAE_S1, &pgtbl_cfg, fwspec);
++	pgtbl_ops = alloc_io_pgtable_ops(ARM_32_LPAE_S1, &pgtbl_cfg, dev);
+ 	if (!pgtbl_ops) {
+ 		dev_err(qcom_iommu->dev, "failed to allocate pagetable ops\n");
+ 		ret = -ENOMEM;
+@@ -256,7 +269,7 @@ static int qcom_iommu_init_domain(struct iommu_domain *domain,
+ 	domain->geometry.force_aperture = true;
+ 
+ 	for (i = 0; i < fwspec->num_ids; i++) {
+-		struct qcom_iommu_ctx *ctx = to_ctx(fwspec, fwspec->ids[i]);
++		struct qcom_iommu_ctx *ctx = to_ctx(dev, fwspec->ids[i]);
+ 
+ 		if (!ctx->secure_init) {
+ 			ret = qcom_scm_restore_sec_cfg(qcom_iommu->sec_id, ctx->asid);
+@@ -363,8 +376,7 @@ static void qcom_iommu_domain_free(struct iommu_domain *domain)
+ 
+ static int qcom_iommu_attach_dev(struct iommu_domain *domain, struct device *dev)
  {
 -	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
- 	struct platform_device *m4updev;
- 
- 	if (args->args_count != 1) {
-@@ -505,13 +504,13 @@ static int mtk_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
- 		return -EINVAL;
- 	}
- 
--	if (!fwspec->iommu_priv) {
-+	if (!dev_iommu_priv_get(dev)) {
- 		/* Get the m4u device */
- 		m4updev = of_find_device_by_node(args->np);
- 		if (WARN_ON(!m4updev))
- 			return -EINVAL;
- 
--		fwspec->iommu_priv = platform_get_drvdata(m4updev);
-+		dev_iommu_priv_set(dev, platform_get_drvdata(m4updev));
- 	}
- 
- 	return iommu_fwspec_add_ids(dev, args->args, 1);
-diff --git a/drivers/iommu/mtk_iommu_v1.c b/drivers/iommu/mtk_iommu_v1.c
-index e93b94ecac45..9930ac7413cc 100644
---- a/drivers/iommu/mtk_iommu_v1.c
-+++ b/drivers/iommu/mtk_iommu_v1.c
-@@ -263,8 +263,8 @@ static void mtk_iommu_domain_free(struct iommu_domain *domain)
- static int mtk_iommu_attach_device(struct iommu_domain *domain,
- 				   struct device *dev)
- {
-+	struct mtk_iommu_data *data = dev_iommu_priv_get(dev);
- 	struct mtk_iommu_domain *dom = to_mtk_domain(domain);
--	struct mtk_iommu_data *data = dev_iommu_fwspec_get(dev)->iommu_priv;
+-	struct qcom_iommu_dev *qcom_iommu = to_iommu(fwspec);
++	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev);
+ 	struct qcom_iommu_domain *qcom_domain = to_qcom_iommu_domain(domain);
  	int ret;
  
- 	if (!data)
-@@ -286,7 +286,7 @@ static int mtk_iommu_attach_device(struct iommu_domain *domain,
- static void mtk_iommu_detach_device(struct iommu_domain *domain,
- 				    struct device *dev)
- {
--	struct mtk_iommu_data *data = dev_iommu_fwspec_get(dev)->iommu_priv;
-+	struct mtk_iommu_data *data = dev_iommu_priv_get(dev);
+@@ -375,7 +387,7 @@ static int qcom_iommu_attach_dev(struct iommu_domain *domain, struct device *dev
  
- 	if (!data)
+ 	/* Ensure that the domain is finalized */
+ 	pm_runtime_get_sync(qcom_iommu->dev);
+-	ret = qcom_iommu_init_domain(domain, qcom_iommu, fwspec);
++	ret = qcom_iommu_init_domain(domain, qcom_iommu, dev);
+ 	pm_runtime_put_sync(qcom_iommu->dev);
+ 	if (ret < 0)
+ 		return ret;
+@@ -397,9 +409,9 @@ static int qcom_iommu_attach_dev(struct iommu_domain *domain, struct device *dev
+ 
+ static void qcom_iommu_detach_dev(struct iommu_domain *domain, struct device *dev)
+ {
+-	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
+-	struct qcom_iommu_dev *qcom_iommu = to_iommu(fwspec);
+ 	struct qcom_iommu_domain *qcom_domain = to_qcom_iommu_domain(domain);
++	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
++	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev);
+ 	unsigned i;
+ 
+ 	if (WARN_ON(!qcom_domain->iommu))
+@@ -407,7 +419,7 @@ static void qcom_iommu_detach_dev(struct iommu_domain *domain, struct device *de
+ 
+ 	pm_runtime_get_sync(qcom_iommu->dev);
+ 	for (i = 0; i < fwspec->num_ids; i++) {
+-		struct qcom_iommu_ctx *ctx = to_ctx(fwspec, fwspec->ids[i]);
++		struct qcom_iommu_ctx *ctx = to_ctx(dev, fwspec->ids[i]);
+ 
+ 		/* Disable the context bank: */
+ 		iommu_writel(ctx, ARM_SMMU_CB_SCTLR, 0);
+@@ -514,7 +526,7 @@ static bool qcom_iommu_capable(enum iommu_cap cap)
+ 
+ static int qcom_iommu_add_device(struct device *dev)
+ {
+-	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev_iommu_fwspec_get(dev));
++	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev);
+ 	struct iommu_group *group;
+ 	struct device_link *link;
+ 
+@@ -545,7 +557,7 @@ static int qcom_iommu_add_device(struct device *dev)
+ 
+ static void qcom_iommu_remove_device(struct device *dev)
+ {
+-	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev_iommu_fwspec_get(dev));
++	struct qcom_iommu_dev *qcom_iommu = to_iommu(dev);
+ 
+ 	if (!qcom_iommu)
  		return;
-@@ -387,20 +387,20 @@ static int mtk_iommu_create_mapping(struct device *dev,
+@@ -557,7 +569,6 @@ static void qcom_iommu_remove_device(struct device *dev)
+ 
+ static int qcom_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
+ {
+-	struct iommu_fwspec *fwspec = dev_iommu_fwspec_get(dev);
+ 	struct qcom_iommu_dev *qcom_iommu;
+ 	struct platform_device *iommu_pdev;
+ 	unsigned asid = args->args[0];
+@@ -583,14 +594,14 @@ static int qcom_iommu_of_xlate(struct device *dev, struct of_phandle_args *args)
+ 	    WARN_ON(asid > qcom_iommu->num_ctxs))
  		return -EINVAL;
- 	}
  
 -	if (!fwspec->iommu_priv) {
-+	if (!dev_iommu_priv_get(dev)) {
- 		/* Get the m4u device */
- 		m4updev = of_find_device_by_node(args->np);
- 		if (WARN_ON(!m4updev))
+-		fwspec->iommu_priv = qcom_iommu;
++	if (dev_iommu_priv_get(dev)) {
++		dev_iommu_priv_set(dev, qcom_iommu);
+ 	} else {
+ 		/* make sure devices iommus dt node isn't referring to
+ 		 * multiple different iommu devices.  Multiple context
+ 		 * banks are ok, but multiple devices are not:
+ 		 */
+-		if (WARN_ON(qcom_iommu != fwspec->iommu_priv))
++		if (WARN_ON(qcom_iommu != dev_iommu_priv_get(dev)))
  			return -EINVAL;
- 
--		fwspec->iommu_priv = platform_get_drvdata(m4updev);
-+		dev_iommu_priv_set(dev, platform_get_drvdata(m4updev));
  	}
  
- 	ret = iommu_fwspec_add_ids(dev, args->args, 1);
- 	if (ret)
- 		return ret;
- 
--	data = fwspec->iommu_priv;
-+	data = dev_iommu_priv_get(dev);
- 	m4udev = data->dev;
- 	mtk_mapping = m4udev->archdata.iommu;
- 	if (!mtk_mapping) {
-@@ -459,7 +459,7 @@ static int mtk_iommu_add_device(struct device *dev)
- 	if (err)
- 		return err;
- 
--	data = fwspec->iommu_priv;
-+	data = dev_iommu_priv_get(dev)
- 	mtk_mapping = data->dev->archdata.iommu;
- 	err = arm_iommu_attach_device(dev, mtk_mapping);
- 	if (err) {
-@@ -478,7 +478,7 @@ static void mtk_iommu_remove_device(struct device *dev)
- 	if (!fwspec || fwspec->ops != &mtk_iommu_ops)
- 		return;
- 
--	data = fwspec->iommu_priv;
-+	data = dev_iommu_priv_get(dev)
- 	iommu_device_unlink(&data->iommu, dev);
- 
- 	iommu_group_remove_device(dev);
 -- 
 2.17.1
 
