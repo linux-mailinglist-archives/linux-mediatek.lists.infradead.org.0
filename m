@@ -2,79 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E21818149D
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 10:20:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 99A031814AC
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 10:22:43 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=76ijGeGJeU2SlV51coobID5O7+8uzuiDBd/5uRLiiQo=; b=V2lCY2hx8SfK7X
-	DCChCRvMYJWFlUI094NzfKZlJ7f9GFOBVv80ik9EhzxxauV0y+lIH7HXGb0MYWf9EdLDd7W0Kttvr
-	EtJQRrXHLsuaX9JAolBDpp4+eDm3XwPNUN275zGaDyjT2OWZlsDwgF3ZEyoqx2tE3AjBSJkRBNHB6
-	KSrS4pp6a1wsSGgnLKnOqVrS30ORKvotnmBwR5ZkxQ0YpZOBAnL1o43gPByfzoqkyHsTl6tgwG3pe
-	q8OOXzhvIpLLPx2a2ooDLf12uYi0NPikm0ebdhWxJpx9mAnUXqWxTBfJUuVB6K7HjMeVGpuKjk+YA
-	wzBTwxMl7Mk6ojDCnqrw==;
+	List-Owner; bh=qfEso5ls59wnv1FtWKMjI5DJUAX332pPaS7LAAnJUKE=; b=CCSMKiULpBg8P1
+	hDcdljjTaatNmVD8gJYXZ7jKdlFUx6M6/7mVLh1U7sNr6a2+L5X0x/CSSmSmVcKELZeNdX0RrqeYN
+	96Qgv426O6mtbMyaBBepxYCoM1c1tYFvkWZ4nslbqhc3I+XPdX2z+MLfyx/lQSrBCk5z+iJTyV97u
+	VQ4hcFi5RK0Dz1b/9g2eUprx6TVYVn3K5avazchsqCfzCKu2Ts9TTv/RYJEHj9FqZGkJ8XBjO6rII
+	NXML+0iU5Opl0OLSzm1tO4dAvlK0LCUIEJ3aoA3faDmVKLSFXHsTRk6LmahsU1vcspNAwzQ58DYL9
+	TeMOSPL5NnqQ3avesNzA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBxXN-0005DK-40; Wed, 11 Mar 2020 09:20:25 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jBxZV-0006NQ-9O; Wed, 11 Mar 2020 09:22:37 +0000
+Received: from relay8-d.mail.gandi.net ([217.70.183.201])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBxW8-0002vu-4y; Wed, 11 Mar 2020 09:19:10 +0000
-X-UUID: 94880e4204fb498ea6635addce4ef210-20200311
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=bMAGFYIyebf4WTfeSqrPodJzjUX1SU+zN1FTUaXXPlA=; 
- b=OlEXVSTrvoYLI+m4JV6NRrmsGa6U4q0psgCI0cgWgZZRBm8wH/moQQiF/CUMN2KpFKvJ/1G9mTAU7GUidwqnMNnaFSKe3KEG1fzg7gtC5sLWpEpgqfQqWtu5/A5Hx3Jk5mgx05MzveJ0MAeQmqrv+ljIM8ZjWKpMweGX4eX2lbI=;
-X-UUID: 94880e4204fb498ea6635addce4ef210-20200311
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <hsin-hsiung.wang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1099580944; Wed, 11 Mar 2020 01:18:58 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Mar 2020 02:17:08 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Mar 2020 17:15:38 +0800
-Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 11 Mar 2020 17:17:13 +0800
-From: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
-To: Lee Jones <lee.jones@linaro.org>, Rob Herring <robh+dt@kernel.org>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, Matthias Brugger
- <matthias.bgg@gmail.com>
-Subject: [PATCH v10 5/5] arm64: dts: mt6358: add PMIC MT6358 related nodes
-Date: Wed, 11 Mar 2020 17:17:03 +0800
-Message-ID: <1583918223-22506-6-git-send-email-hsin-hsiung.wang@mediatek.com>
-X-Mailer: git-send-email 2.6.4
-In-Reply-To: <1583918223-22506-1-git-send-email-hsin-hsiung.wang@mediatek.com>
-References: <1583918223-22506-1-git-send-email-hsin-hsiung.wang@mediatek.com>
+ id 1jBxZO-0006Ky-VF; Wed, 11 Mar 2020 09:22:33 +0000
+X-Originating-IP: 90.89.41.158
+Received: from xps13 (lfbn-tou-1-1473-158.w90-89.abo.wanadoo.fr [90.89.41.158])
+ (Authenticated sender: miquel.raynal@bootlin.com)
+ by relay8-d.mail.gandi.net (Postfix) with ESMTPSA id 296831BF20B;
+ Wed, 11 Mar 2020 09:22:20 +0000 (UTC)
+Date: Wed, 11 Mar 2020 10:22:19 +0100
+From: Miquel Raynal <miquel.raynal@bootlin.com>
+To: Chuanhong Guo <gch981213@gmail.com>
+Subject: Re: [PATCH 3/3] spi: spi-mem: MediaTek: Add SPI NAND Flash
+ interface driver for MediaTek MT7622
+Message-ID: <20200311102219.419feb66@xps13>
+In-Reply-To: <CAJsYDVJeZGpz6K2w1JuBVXM+zdFca9qp3+=PERTE2avehw6LXg@mail.gmail.com>
+References: <1536716612-24610-1-git-send-email-xiangsheng.hou@mediatek.com>
+ <1536716612-24610-4-git-send-email-xiangsheng.hou@mediatek.com>
+ <20181023075247.004982c9@bbrezillon>
+ <1540532796.24602.11.camel@mhfsdcap03>
+ <20181026080833.2fedbd94@bbrezillon>
+ <CAJsYDV+dAikBZ4gg_3u7z_jgV2ZehhyWyRQ709dNQV0XdDOUbQ@mail.gmail.com>
+ <CAJsYDV+ACknTVAhVJ-R-8p7H0B3XdP9nnrRZ+erJ=vbqt_VeKw@mail.gmail.com>
+ <20200311091813.41b55a97@collabora.com>
+ <CAJsYDVJeZGpz6K2w1JuBVXM+zdFca9qp3+=PERTE2avehw6LXg@mail.gmail.com>
+Organization: Bootlin
+X-Mailer: Claws Mail 3.17.4 (GTK+ 2.24.32; x86_64-pc-linux-gnu)
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200311_021908_223826_CBAED1C4 
-X-CRM114-Status: GOOD (  12.04  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200311_022231_275359_8D1C0C2D 
+X-CRM114-Status: GOOD (  37.15  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [217.70.183.201 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,409 +69,118 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Alessandro Zummo <a.zummo@towertech.it>, Josef Friedl <josef.friedl@speed.at>,
- Nicolas Boichat <drinkcat@chromium.org>, srv_heupstream@mediatek.com,
- Frank Wunderlich <frank-w@public-files.de>, Ran Bi <ran.bi@mediatek.com>,
- Sean Wang <sean.wang@mediatek.com>, Sebastian Reichel <sre@kernel.org>,
- linux-kernel@vger.kernel.org, Richard Fontana <rfontana@redhat.com>,
- devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, linux-pm@vger.kernel.org,
- Thomas Gleixner <tglx@linutronix.de>, Eddie Huang <eddie.huang@mediatek.com>,
- Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>, linux-rtc@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: ryder.lee@mediatek.com, Boris Brezillon <bbrezillon@kernel.org>,
+ Mark Brown <broonie@kernel.org>, sean.wang@mediatek.com,
+ linux-mediatek@lists.infradead.org,
+ "Bayi Cheng \(=?UTF-8?B?56iL5YWr5oSP?=\)" <bayi.cheng@mediatek.com>,
+ linux-spi@vger.kernel.org, marek.vasut@gmail.com,
+ Boris Brezillon <boris.brezillon@collabora.com>, linux-mtd@lists.infradead.org,
+ "Benliang Zhao \(=?UTF-8?B?6LW15pys5Lqu?=\)" <benliang.zhao@mediatek.com>,
+ Xiangsheng Hou <xiangsheng.hou@mediatek.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-add PMIC MT6358 related nodes which is for MT8183 platform
-
-Signed-off-by: Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt6358.dtsi    | 358 ++++++++++++++++++++++++++++
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts |   1 +
- 2 files changed, 359 insertions(+)
- create mode 100644 arch/arm64/boot/dts/mediatek/mt6358.dtsi
-
-diff --git a/arch/arm64/boot/dts/mediatek/mt6358.dtsi b/arch/arm64/boot/dts/mediatek/mt6358.dtsi
-new file mode 100644
-index 0000000..2afebd7
---- /dev/null
-+++ b/arch/arm64/boot/dts/mediatek/mt6358.dtsi
-@@ -0,0 +1,358 @@
-+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
-+/*
-+ * Copyright (c) 2019 MediaTek Inc.
-+ */
-+
-+&pwrap {
-+	pmic: mt6358 {
-+		compatible = "mediatek,mt6358";
-+		interrupt-controller;
-+		interrupt-parent = <&pio>;
-+		interrupts = <182 IRQ_TYPE_LEVEL_HIGH>;
-+		#interrupt-cells = <2>;
-+
-+		mt6358codec: mt6358codec {
-+			compatible = "mediatek,mt6358-sound";
-+		};
-+
-+		mt6358regulator: mt6358regulator {
-+			mt6358_vdram1_reg: buck_vdram1 {
-+				regulator-name = "vdram1";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <2087500>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-enable-ramp-delay = <0>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vcore_reg: buck_vcore {
-+				regulator-name = "vcore";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vpa_reg: buck_vpa {
-+				regulator-name = "vpa";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <3650000>;
-+				regulator-ramp-delay = <50000>;
-+				regulator-enable-ramp-delay = <250>;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vproc11_reg: buck_vproc11 {
-+				regulator-name = "vproc11";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vproc12_reg: buck_vproc12 {
-+				regulator-name = "vproc12";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vgpu_reg: buck_vgpu {
-+				regulator-name = "vgpu";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <200>;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vs2_reg: buck_vs2 {
-+				regulator-name = "vs2";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <2087500>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-enable-ramp-delay = <0>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vmodem_reg: buck_vmodem {
-+				regulator-name = "vmodem";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <900>;
-+				regulator-always-on;
-+				regulator-allowed-modes = <0 1>;
-+			};
-+
-+			mt6358_vs1_reg: buck_vs1 {
-+				regulator-name = "vs1";
-+				regulator-min-microvolt = <1000000>;
-+				regulator-max-microvolt = <2587500>;
-+				regulator-ramp-delay = <12500>;
-+				regulator-enable-ramp-delay = <0>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vdram2_reg: ldo_vdram2 {
-+				regulator-name = "vdram2";
-+				regulator-min-microvolt = <600000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <3300>;
-+			};
-+
-+			mt6358_vsim1_reg: ldo_vsim1 {
-+				regulator-name = "vsim1";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <3100000>;
-+				regulator-enable-ramp-delay = <540>;
-+			};
-+
-+			mt6358_vibr_reg: ldo_vibr {
-+				regulator-name = "vibr";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <60>;
-+			};
-+
-+			mt6358_vrf12_reg: ldo_vrf12 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vrf12";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <1200000>;
-+				regulator-enable-ramp-delay = <120>;
-+			};
-+
-+			mt6358_vio18_reg: ldo_vio18 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vio18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <2700>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vusb_reg: ldo_vusb {
-+				regulator-name = "vusb";
-+				regulator-min-microvolt = <3000000>;
-+				regulator-max-microvolt = <3100000>;
-+				regulator-enable-ramp-delay = <270>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vcamio_reg: ldo_vcamio {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vcamio";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <325>;
-+			};
-+
-+			mt6358_vcamd_reg: ldo_vcamd {
-+				regulator-name = "vcamd";
-+				regulator-min-microvolt = <900000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <325>;
-+			};
-+
-+			mt6358_vcn18_reg: ldo_vcn18 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vcn18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vfe28_reg: ldo_vfe28 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vfe28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vsram_proc11_reg: ldo_vsram_proc11 {
-+				regulator-name = "vsram_proc11";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vcn28_reg: ldo_vcn28 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vcn28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vsram_others_reg: ldo_vsram_others {
-+				regulator-name = "vsram_others";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vsram_gpu_reg: ldo_vsram_gpu {
-+				regulator-name = "vsram_gpu";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <240>;
-+			};
-+
-+			mt6358_vxo22_reg: ldo_vxo22 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vxo22";
-+				regulator-min-microvolt = <2200000>;
-+				regulator-max-microvolt = <2200000>;
-+				regulator-enable-ramp-delay = <120>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vefuse_reg: ldo_vefuse {
-+				regulator-name = "vefuse";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <1900000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vaux18_reg: ldo_vaux18 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vaux18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vmch_reg: ldo_vmch {
-+				regulator-name = "vmch";
-+				regulator-min-microvolt = <2900000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <60>;
-+			};
-+
-+			mt6358_vbif28_reg: ldo_vbif28 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vbif28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vsram_proc12_reg: ldo_vsram_proc12 {
-+				regulator-name = "vsram_proc12";
-+				regulator-min-microvolt = <500000>;
-+				regulator-max-microvolt = <1293750>;
-+				regulator-ramp-delay = <6250>;
-+				regulator-enable-ramp-delay = <240>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vcama1_reg: ldo_vcama1 {
-+				regulator-name = "vcama1";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <3000000>;
-+				regulator-enable-ramp-delay = <325>;
-+			};
-+
-+			mt6358_vemc_reg: ldo_vemc {
-+				regulator-name = "vemc";
-+				regulator-min-microvolt = <2900000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <60>;
-+			};
-+
-+			mt6358_vio28_reg: ldo_vio28 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vio28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_va12_reg: ldo_va12 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "va12";
-+				regulator-min-microvolt = <1200000>;
-+				regulator-max-microvolt = <1200000>;
-+				regulator-enable-ramp-delay = <270>;
-+				regulator-always-on;
-+			};
-+
-+			mt6358_vrf18_reg: ldo_vrf18 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vrf18";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <1800000>;
-+				regulator-enable-ramp-delay = <120>;
-+			};
-+
-+			mt6358_vcn33_bt_reg: ldo_vcn33_bt {
-+				regulator-name = "vcn33_bt";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vcn33_wifi_reg: ldo_vcn33_wifi {
-+				regulator-name = "vcn33_wifi";
-+				regulator-min-microvolt = <3300000>;
-+				regulator-max-microvolt = <3500000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vcama2_reg: ldo_vcama2 {
-+				regulator-name = "vcama2";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <3000000>;
-+				regulator-enable-ramp-delay = <325>;
-+			};
-+
-+			mt6358_vmc_reg: ldo_vmc {
-+				regulator-name = "vmc";
-+				regulator-min-microvolt = <1800000>;
-+				regulator-max-microvolt = <3300000>;
-+				regulator-enable-ramp-delay = <60>;
-+			};
-+
-+			mt6358_vldo28_reg: ldo_vldo28 {
-+				regulator-name = "vldo28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <3000000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vaud28_reg: ldo_vaud28 {
-+				compatible = "regulator-fixed";
-+				regulator-name = "vaud28";
-+				regulator-min-microvolt = <2800000>;
-+				regulator-max-microvolt = <2800000>;
-+				regulator-enable-ramp-delay = <270>;
-+			};
-+
-+			mt6358_vsim2_reg: ldo_vsim2 {
-+				regulator-name = "vsim2";
-+				regulator-min-microvolt = <1700000>;
-+				regulator-max-microvolt = <3100000>;
-+				regulator-enable-ramp-delay = <540>;
-+			};
-+		};
-+
-+		mt6358rtc: mt6358rtc {
-+			compatible = "mediatek,mt6358-rtc";
-+		};
-+	};
-+};
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-index 1fb195c..9eb84d7 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-@@ -7,6 +7,7 @@
- 
- /dts-v1/;
- #include "mt8183.dtsi"
-+#include "mt6358.dtsi"
- 
- / {
- 	model = "MediaTek MT8183 evaluation board";
--- 
-2.6.4
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGkgQ2h1YW5ob25nLAoKQ2h1YW5ob25nIEd1byA8Z2NoOTgxMjEzQGdtYWlsLmNvbT4gd3JvdGUg
+b24gV2VkLCAxMSBNYXIgMjAyMCAxNzoxNTozOAorMDgwMDoKCj4gSGkhCj4gCj4gT24gV2VkLCBN
+YXIgMTEsIDIwMjAgYXQgNDoxOCBQTSBCb3JpcyBCcmV6aWxsb24KPiA8Ym9yaXMuYnJlemlsbG9u
+QGNvbGxhYm9yYS5jb20+IHdyb3RlOgo+ID4KPiA+ICtNaXF1ZWwgd2hvIHdvcmtlZCBvbiB0aGUg
+RUNDIGVuZ2luZSBhYnN0cmFjdGlvbiBbM10gcmVjZW50bHkuCj4gPgo+ID4gSGVsbG8gQ2h1YW5o
+b25nLAo+ID4KPiA+IE9uIFdlZCwgMTEgTWFyIDIwMjAgMTU6MzU6NDMgKzA4MDAKPiA+IENodWFu
+aG9uZyBHdW8gPGdjaDk4MTIxM0BnbWFpbC5jb20+IHdyb3RlOgo+ID4gIAo+ID4gPiBIaSBCb3Jp
+cyEKPiA+ID4KPiA+ID4gW3Jlc2VuZCB0byB5b3UgYmVjYXVzZSBvZiB0aGUgd3JvbmcgbWFpbCBh
+ZGRyZXNzIGluIHByZXZpb3VzIG9uZS5dCj4gPiA+Cj4gPiA+IEknbSBhYm91dCB0byBwaWNrIHRo
+aXMgZHJpdmVyIHVwIGFuZCBzdGFydCB1cHN0cmVhbSBpdCBpbiB0aGUgZnV0dXJlLgo+ID4gPiBT
+byBJJ20gYW5zd2VyaW5nCj4gPiA+IHlvdXIgcXVlc3Rpb25zIGJlbG93IGFuZCB3b3VsZCBsaWtl
+IHRvIGdldCB5b3VyIGZ1cnRoZXIgc3VnZ2VzdGlvbnMuCj4gPiA+Cj4gPiA+IE9uIEZyaSwgT2N0
+IDI2LCAyMDE4IGF0IDI6MDkgUE0gQm9yaXMgQnJlemlsbG9uCj4gPiA+IDxib3Jpcy5icmV6aWxs
+b25AYm9vdGxpbi5jb20+IHdyb3RlOiAgCj4gPiA+ID4gPiA+IFRoZXJlJ3MgYSBmdW5kYW1lbnRh
+bCBpc3N1ZSB3aXRoIHRoaXMgZHJpdmVyOiBzcGktbWVtIHdhcyBkZXNpZ25lZCB0byBiZQo+ID4g
+PiA+ID4gPiBtZW1vcnkgYWdub3N0aWMsIGFuZCB5b3Ugc2VlbSB0byBoYXZlIGEgU1BJIGNvbnRy
+b2xsZXIgdGhhdCBzdXBwb3J0cwo+ID4gPiA+ID4gPiBvbmx5IFNQSSBOQU5Ecy4gSXMgdGhhdCBj
+b3JyZWN0LCBvciBpcyBpdCBqdXN0IHRoYXQgeW91IGRldmVsb3BlZCB0aGUKPiA+ID4gPiA+ID4g
+ZHJpdmVyIHdpdGggU1BJIE5BTkRzIGluICBtaW5kPwo+ID4gPiA+ID4gPiAgCj4gPiA+ID4gPiBZ
+ZXMsIHRoaXMgZHJpdmVyIHN1cHBvcnRzIG9ubHkgU1BJIE5BTkRzLgo+ID4gPiA+ID4gQWN0dWFs
+bHksIE1lZGlhdGVrJ3MgY29udHJvbGxlciBpcyBkZXNpZ25lZCBmb3IgTkFORCBzcGVjaWZpY2Fs
+bHksIHdoaWNoCj4gPiA+ID4gPiBjYW4gc3VwcG9ydCBTUEkgTkFORHMgYW5kIFBBUkFMTEVMIE5B
+TkRzLGFuZCB0aGlzIGRyaXZlciBpcyBqdXN0IGZvciBTUEkKPiA+ID4gPiA+IE5BTkRzLiAgCj4g
+PiA+ID4KPiA+ID4gPiBIbSwgSSdtIG5vdCBzbyBzdXJlIGFib3V0IHRoYXQgKEkgbWlnaHQgYmUg
+d3JvbmcgdGhvdWdoKSwgaXQgc2VlbXMgeW91Cj4gPiA+ID4gY2FuIHNlbmQgYW55IGNvbW1hbmQg
+eW91IHdhbnQsIG5vdCBvbmx5IFNQSSBOQU5EIHJlbGF0ZWQgb25lcy4gTWF5YmUgdGhlCj4gPiA+
+ID4gY29udHJvbGxlciBpcyBvcHRpbWl6ZWQgZm9yIFNQSSBOQU5EcyBidXQgY2FuIGRvIGFsbCBr
+aW5kIG9mIFNQSQo+ID4gPiA+IHRyYW5zZmVycy4gIAo+ID4gPgo+ID4gPiBZb3UgYXJlIGNvcnJl
+Y3QgaGVyZS4gVGhpcyBjb250cm9sbGVyIGNhbiBwZXJmb3JtIGdlbmVyaWMgc3BpLW1lbSBvcGVy
+YXRpb25zLAo+ID4gPiBhbmQgaXQgaGFzIHNwZWNpYWwgcm91dGluZXMgZm9yIHBhZ2UgY2FjaGUg
+Ui9XIHRoYXQgdXRpbGl6ZSBjb250cm9sbGVyJ3MgRUNDCj4gPiA+IGZ1bmN0aW9uYWxpdHkuICAK
+PiA+Cj4gPiBTb3VuZHMgc2ltaWxhciB0byB0aGUgd2F5IHRoZSBNWElDIGNvbnRyb2xsZXIgd29y
+a3MsIGFuZCB0aGF0J3MKPiA+IGFjdHVhbGx5IHdoYXQgTWlxdWVsIGlzIHRyeWluZyB0byBzdXBw
+b3J0IHdpdGggaGlzIEVDQyBlbmdpbmUKPiA+IGFic3RyYWN0aW9uIHNlcmllcyBbM10uCj4gPiAg
+Cj4gPiA+IEkgdGhpbmsgdGhlIHB1cnBvc2Ugb2YgdGhpcyBpcyB0byBwcm92aWRlIGJldHRlciBF
+Q0MgY2FwYWJpbGl0eQo+ID4gPiBmb3Igc29tZSBTUEkgTkFORHMgd2l0aCB3b3JzZSBFQ0MgYWxn
+b3JpdGhtIG9uIGNoaXAuICAKPiA+Cj4gPiBZZXAsIG9yIG1ha2UgaXQgZmFzdGVyLiBBY3R1YWxs
+eSB0aGUgcmVhc29uIGRvZXNuJ3QgbWF0dGVyLCBJIHRoaW5rCj4gPiB3ZSBhbGwgYWdyZWUgdGhh
+dCB3ZSdsbCBoYXZlIHRvIHN1cHBvcnQgZXh0ZXJuYWwgRUNDIGZvciBTUEkgTkFORHMgYXQKPiA+
+IHNvbWUgcG9pbnQsIGhlbmNlIHRoZSB3b3JrIE1pcXVlbCBoYXMgYmVlbiBkb2luZy4KPiA+ICAK
+PiA+ID4gIAo+ID4gPiA+ID4gPiBEb24ndCBrbm93IHdoYXQncyBwb3NzaWJsZSB0byBkbyB3aXRo
+IHlvdXIgY29udHJvbGxlciwgYW5kIG1heWJlIGl0J3MKPiA+ID4gPiA+ID4gbm90IGFibGUgdG8g
+ZXhlY3V0ZSByYW5kb20gU1BJIG1lbW9yeSBvcGVyYXRpb25zLCBidXQgaW4gdGhpcyBjYXNlIHdl
+Cj4gPiA+ID4gPiA+IHNob3VsZCBjb25zaWRlciBhIGRpZmZlcmVudCBzb2x1dGlvbiB0byBzdXBw
+b3J0IHRoaXMgZHJpdmVyLgo+ID4gPiA+ID4gPgo+ID4gPiA+ID4gPiBEbyB5b3UgaGF2ZSBhIHB1
+YmxpYyBkYXRhc2hlZXQgSSBjYW4gbG9vayBhdD8KPiA+ID4gPiA+ID4gIAo+ID4gPiA+ID4gV2Ug
+ZG8gbm90IGhhdmUgYSBwdWJsaWMgZGF0YXNoZWV0IGZvciBNZWRpYXRlayBjb250cm9sbGVyIGN1
+cnJlbnRseS4gIAo+ID4gPiA+Cj4gPiA+ID4gVW5mb3J0dW5hdGVseSwgdGhlcmUncyBub3QgbXVj
+aCBJIGNhbiBkbyB3aXRob3V0IGEgY2xlYXIgdW5kZXJzdGFuZGluZwo+ID4gPiA+IG9mIGhvdyB0
+aGUgY29udHJvbGxlciB3b3Jrcy4KPiA+ID4gPiAgCj4gPiA+Cj4gPiA+IEkgZm91bmQgYSBwdWJs
+aWMgZGF0YXNoZWV0IFswXSBvbiB3aWtpIHBhZ2UgZm9yIEJhbmFuYSBQaSBSNjQgWzFdLgo+ID4g
+PiBSZWdpc3RlciBkZXNjcmlwdGlvbiBpcyBhdmFpbGFibGUgdW5kZXIgIk5BTkQgZmxhc2ggaW50
+ZXJmYWNlIiBzZWN0aW9uCj4gPiA+IHN0YXJ0aW5nIGF0IHBhZ2UgNTkyLgo+ID4gPiBUaGVyZSdz
+IGEgaGFja2llciB2ZXJzaW9uIG9mIHRoaXMgZHJpdmVyIGluIE9wZW5XcnQgWzJdIHdoaWNoIGNo
+ZWNrcwo+ID4gPiBvcGNvZGUgYW5kIHVzZSBjb250cm9sbGVyIHJvdXRpbmUgZm9yIHBhZ2UgY2Fj
+aGUgUi9XLgo+ID4gPgo+ID4gPiBFQ0MgcGFydCBvZiB0aGlzIGNvbnRyb2xsZXIgY2FuIGFsc28g
+YmUgdXNlZCBhcyBhIHN0YW5kYWxvbmUgRUNDCj4gPiA+IGFsZ29yaXRobSBhbmQgcGVyZm9ybSBF
+Q0Mgb3BlcmF0aW9ucyBvbiBkYXRhIHByb3ZpZGVkIGJ5IENQVS4gIAo+IAo+IFRoZSBzb2x1dGlv
+biBJJ20gcmVmZXJyaW5nIHRvIGhlcmUgaXM6Cj4gMS4gcmVhZCB1bmNvcnJlY3RlZCBkYXRhIHRv
+IGhvc3QgZGlyZWN0bHkgZnJvbSBTUEkgTkFORAo+IDIuIHN0YXJ0IGFuIEVDQyBjb3JyZWN0aW9u
+IHNlcGFyYXRlbHkKPiAKPiA+ID4gQnV0IEkgdGhpbmsgaWYgaXQncyBpbXBsZW1lbnQgdGhpcyB3
+YXksIHdlIHdhc3RlZCB0aGUgcGFnZSBjYWNoZQo+ID4gPiBSL1cgcm91dGluZXMgaW4gdGhpcyBj
+b250cm9sbGVyLiAgCj4gPgo+ID4gT2gsIHlvdSBwcm9iYWJseSBkb24ndCB3YW50IHRoZSBwYWdl
+IGNhY2hlIHRvIGJlIGFjdGl2ZSBhbnl3YXkuIFdoZW4KPiA+IHRoZSBmcmFtZXdvcmsgcmVhZHMg
+YSBOQU5EIHBhZ2UsIGl0IGFsc28gY2hlY2tzIHRoZSBudW1iZXIgb2YgRUNDCj4gPiBlcnJvcnMs
+IGlmIHRoZSBwYWdlIGlzIGhlbGQgaW4gc29tZSBpbnRlcm5hbCBjYWNoZSwgeW91IHdvbid0IHNl
+ZQo+ID4gdGhlIGV2b2x1dGlvbiBvZiB0aGlzIG51bWJlci4gTm90ZSB0aGF0IHRoZSBGUyBzaG91
+bGQgZG8gc29tZSBjYWNoaW5nLAo+ID4gc28gY2FjaGluZyB0aGluZ3MgYXQgdGhlIEhXIGxldmVs
+IGlzIHByb2JhYmx5IHVzZWxlc3MuICAKPiAKPiBJdCBkb2Vzbid0IGNhY2hlIGFueXRoaW5nIGlu
+IGNvbnRyb2xsZXIuIFRoZSBSL1cgcm91dGluZSBJIHJlZmVyIHRvIGlzOgo+IFdoZW4gd2UgaXNz
+dWUgYSByZXF1ZXN0IHRvIHJlYWQgcGFnZSBjYWNoZSBvbiBTUEkgTkFORDoKPiAxLiBob3N0IHBy
+b2dyYW1zIGEgRE1BLWFibGUgbWVtb3J5IGFyZWEgZm9yIHJlY2VpdmluZyBkYXRhLgo+IDIuIGNv
+bnRyb2xsZXIgcmVhZHMgdGhlIHBhZ2UgY2FjaGUgZnJvbSBTUEkgTkFORAo+IDMuIGNvbnRyb2xs
+ZXIgZ2V0IHRoZSBkYXRhIGFuZCBzdGFydCBFQ0MgY29ycmVjdGlvbgo+IDQuIGNvcnJlY3RlZCBk
+YXRhIHdpbGwgYmUgc2VudCBiYWNrIHRvIGhvc3QgdmlhIERNQQo+IDUuIGhvc3QgY291bGQgY2hl
+Y2sgRUNDIHN0YXR1cwo+IAo+IHdyaXRpbmcgb2YgcGFnZSBjYWNoZSBnb2VzIHNpbWlsYXJseS4K
+PiBUaGVyZSdzIG5vIG5lZWQgZm9yIGEgc2VwYXJhdGVkIEVDQyByZXF1ZXN0IGNvbXBhcmluZyB0
+byBwcmV2aW91cwo+IG9uZS4KPiAKPiA+ICAKPiA+ID4KPiA+ID4gSSBoYXZlIHR3byBvdGhlciBp
+bml0aWFsIHRob3VnaHRzOgo+ID4gPiAxLiBhYnN0cmFjdCBzb21lIGtpbmQgb2YgRUNDIGZ1bmN0
+aW9uYWxpdHkgaW4gc3BpLW1lbSBpbnRlcmZhY2UKPiA+ID4gICAgIEkgaGF2ZW4ndCByZWFsbHkg
+bGVhcm5lZCBFQ0Mgc3R1ZmYgc28gSSBkb24ndCBrbm93IHdoZXRoZXIgdGhpcyBpcwo+ID4gPiAg
+ICAgcG9zc2libGUgYW5kIHdoYXQga2luZCBvZiBhcmd1bWVudCB3ZSBuZWVkcyBmb3IgaXQuICAK
+PiA+Cj4gPiBOb3BlLCBzcGktbWVtIHNob3VsZCBzdGF5IGZvY3VzZWQgb24gU1BJIHRyYW5zZmVy
+cywgbm90aGluZwo+ID4gbWVtb3J5LXNwZWNpZmljIHNob3VsZCBsZWFrIHRoZXJlLgo+ID4gIAo+
+ID4gPiAyLiBtb2RpZnkgU1BJLU5BTkQgY29yZSB0byBhZGQgc3VwcG9ydCBmb3Igc3BlY2lhbCBT
+UEktTkFORCBjb250cm9sbGVyLgo+ID4gPiAgICAgVGhpcyBsaW1pdHMgY29udHJvbGxlcidzIGFi
+aWxpdHkgYW5kIGFkZHMgZXh0cmEgYnVyZGVuIGZvciBmdXR1cmUgZXh0ZW50aW9uCj4gPiA+ICAg
+ICBvZiBTUEktTkFORCBmcmFtZXdvcmsuICAKPiA+Cj4gPiBUaGF0IGRvZXNuJ3Qgd29yayBlaXRo
+ZXIgYXMgc29tZSBFQ0MgZW5naW5lcyBhcmUgc2hhcmVkIGJldHdlZW4gdGhlCj4gPiByYXcgTkFO
+RCBhbmQgc3BpLW1lbSBJUHMuCj4gPiAgCj4gPiA+Cj4gPiA+IFdoaWNoIHdheSB3b3VsZCB5b3Ug
+cHJlZmVyIGFuZCBkbyB5b3UgaGF2ZSBvdGhlciBzdWdnZXN0aW9ucz8gIAo+ID4KPiA+IFNlZSBb
+M10uIEkgdGhpbmsgeW91IGNhbiBhbHJlYWR5IGJhc2UgeW91ciB3b3JrIG9uIE1pcXVlbCdzIHNl
+cmllcywgYnV0Cj4gPiBtYXliZSBoZSBoYXMgYSBtb3JlIHVwLXRvLWRhdGUgdmVyc2lvbiB0byBz
+aGFyZS4gSSdsbCBsZXQgeW91IHN5bmMgd2l0aAo+ID4gaGltLiAgCgpJIGFtIGFjdGl2ZWx5IHdv
+cmtpbmcgb24gaXQsIHRoaXMgc2VyaWVzIGlzIGFkZGluZyBhbiAiRUNDIGVuZ2luZQpmcmFtZXdv
+cmsiIHRoYXQgY291bGQgcG90ZW50aWFsbHkgZml0IGFueSBhcmNoaXRlY3R1cmUuIEkgYW0gY3Vy
+cmVudGx5Cndvcmtpbmcgd2l0aCBhIE1hY3Jvbml4IGV4dGVybmFsIEVDQyBlbmdpbmUsIEkgd2ls
+bCAic29vbiIgc2VuZCBhIG5ldwp2ZXJzaW9uIG9mIGl0LCBJJ2xsIGNvcHkgeW91LgoKVGhhbmtz
+LApNaXF1w6hsCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+XwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFk
+ZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4
+LW1lZGlhdGVrCg==
