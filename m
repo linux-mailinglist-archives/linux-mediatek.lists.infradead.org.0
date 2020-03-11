@@ -2,88 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7480A181061
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 07:06:40 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 530321811CA
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 08:21:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MVFgQQh/tx3HFTi2Y+Df2ZzhT0l7KiJ8V6xi15GwQ8E=; b=CnnI8yWtMm8B03
-	B0+c9EL+/uwZSHsu1bnJkZcrdPi6iL77Wz1k0opSc/5Ibw7byI0siU1jAUsYe2x1ItajVKSYSpgZT
-	lKSkN7APAkPaBQlIpJSu09/PDw0D4TbD279c5HbOTEGA2dLUrgbDzvVnRBg+ZxNPddGRxiFM4eSd/
-	SZ8y9UVq6HZzBAxpo3/Y0IsRk17Pvin/8wFH1w0J/q/77AkittPHzD17ZbUbzavkM1IZFV8FCRLIe
-	GhJ4I5hUm2RmUUvLasR9ca2KjF6tzfKWHzYTL1d36MMpw0G+XV+ENwOXp1bv1iPHL5PZyhyR1A9/P
-	nF2fukIrsO+cQdzQ/BMQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=oe9PsM0Fhjx3DVAf7fSPV3R2r8ngElZDE7vWDweC0+A=; b=gOZvENZEgfTZZI
+	il06WUJjvmSvXQDAYLd/5BZDK76uIx0eU7g20p0UKl3kN3+Wv30p0Q1Qz1cQWQABXVa5fLfuD0IeX
+	K3lWYMXdgrnfCHj3L70oXu11w0qTnb8zniFxBsMqrgcAccyr75T+Rkn5A1f4mYOV+KtSQQsL3geGQ
+	NSgpliYaCbWswMQjpuzEN2ukRCEuKbTlnnxeLnoPUgyEX/es2ecv8wH8QTrRyE82zj+F9xwEf8OdY
+	MEITytfZQWoQ59IDhSUd/0YPCtkMH5T8Lh9JzXFK3+ckWZi8/JXIdBfkQFvXfeKA9ilttPoH928Q9
+	+/tbCPdS1k4sBgDpoHLw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBuVj-0003fq-Sk; Wed, 11 Mar 2020 06:06:31 +0000
-Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
+	id 1jBvgW-0000xv-ET; Wed, 11 Mar 2020 07:21:44 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBuVZ-0003XL-3G
- for linux-mediatek@lists.infradead.org; Wed, 11 Mar 2020 06:06:22 +0000
-Received: by mail-pg1-x541.google.com with SMTP id b1so578120pgm.8
- for <linux-mediatek@lists.infradead.org>; Tue, 10 Mar 2020 23:06:20 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=VD15hEVyVLaO06R8soxT+wdeQAWi6jWDprT4gENa4Pk=;
- b=BXuEks7icu5+J5qHi20hsEXmiCS9E/ow1l+ZYZM9dxF94vzf71w5/CXBQ/elTEp2KY
- sK8PCWAC3CzcAsApi7PogMStwLY/F4bznDnaXJEdBmhw68CVuyf9vg0GSasdNXWi1ZwT
- 7hT/PuFLEvpc89BNSLsKiNMtvhjH4ARqGRItPC1FZ5eS88OofdfR+fvzxCiIw9RNVbBH
- DKPTCJAE4h7KiuM6zOg9g0+3oavV1W+RM5RX6EcvpwmUgcS5BSDXSw+8pyqe4yxY6HxW
- YO+gCM+xBLjl9wjlLUpYgIyOjYjSmeSVRwCpR+CVEmmjBcyduqs/JiHWgwd69myM0ZN/
- bKMw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=VD15hEVyVLaO06R8soxT+wdeQAWi6jWDprT4gENa4Pk=;
- b=RR6YQCX9Kw3fFVcHDC6kvi99Tu9BgENYYXtHRc2X9sWXsM8aGJEwhgkBg9uqMuxqN+
- crNXDx8ad8mBll4GGMgzYsY0d8xX9n5c0sqAIfCb+GsC1/qcolY3eR2ST+Uc57fqilBv
- tYvOsvJO244MeniEMeWxK7ivvB1mR/u4/tp4DO27cZBAoL4He4cX6oCWXbF0Dsf4hmrp
- 7PuMEuwOEOXf9+rk6f9sMZEH1OsgIiR9Tx03+GNnmkVgcV39omOC3UV1roEQ5FuD3B+l
- DAUchZvzDrICBh3AWyQJtTgvF2Hz6GVyY25PfR0ZqawJivY2B0wEUkUH6rG9ttl92Mbl
- hXfg==
-X-Gm-Message-State: ANhLgQ3236JXj/gm7A/qK4WqqdsTk7f6WHxqkF7JIRAFDxXODNA7AhMu
- QHL1lHjIecgKxLjwLVT76uZRFw==
-X-Google-Smtp-Source: ADFU+vtUcWmiYBhCHp72xQGkMofh54beImT2nmLF78jXNh6JeBSFkkPXyzzpZemY6U8GEERnxtK6Bg==
-X-Received: by 2002:a63:a055:: with SMTP id u21mr1300692pgn.100.1583906780227; 
- Tue, 10 Mar 2020 23:06:20 -0700 (PDT)
-Received: from localhost ([122.171.122.128])
- by smtp.gmail.com with ESMTPSA id i5sm31347131pfo.173.2020.03.10.23.06.19
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 10 Mar 2020 23:06:19 -0700 (PDT)
-Date: Wed, 11 Mar 2020 11:36:16 +0530
-From: Viresh Kumar <viresh.kumar@linaro.org>
-To: "andrew-sh.cheng" <andrew-sh.cheng@mediatek.com>
-Subject: Re: [v5, PATCH 4/5] cpufreq: mediatek: add opp notification for SVS
- support
-Message-ID: <20200311060616.62nh7sfwtjwvrjfr@vireshk-i7>
-References: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <1574769046-28449-5-git-send-email-andrew-sh.cheng@mediatek.com>
- <20191127083619.etocnhpyyut3hzwq@vireshk-i7>
- <1575874588.13494.4.camel@mtksdaap41>
- <20191210064319.f4ksrxozp3gv4xry@vireshk-i7>
- <1583827865.4840.1.camel@mtksdaap41>
+ id 1jBvgS-0000x4-S9; Wed, 11 Mar 2020 07:21:42 +0000
+X-UUID: 936e956b9e8047609c403a2223aa7c84-20200310
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=8nLyZVk/PhYmrdzTV342CZJrfyCY+3YyqtqMqJ7V3+0=; 
+ b=R/C//83yzgMDVRQmfq9ukHdSmyOj2yrBax+4BZswesSaaPy/qByw0sqGgDtQWI0zYzo/fikoHmH0+1PvAtkHsQCMJFANx2TgzzVvK5vEz7LsnoULqfhNO7c4wEj5Y9sD/WmsAT/0Av7od87xK8BOR5xxu7hYLYF+4Ozixz/8h8k=;
+X-UUID: 936e956b9e8047609c403a2223aa7c84-20200310
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <jitao.shi@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 501838213; Tue, 10 Mar 2020 23:21:38 -0800
+Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 11 Mar 2020 00:19:13 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33N2.mediatek.inc
+ (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 11 Mar 2020 15:19:01 +0800
+Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
+ MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
+ 15.0.1395.4 via Frontend Transport; Wed, 11 Mar 2020 15:18:05 +0800
+From: Jitao Shi <jitao.shi@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
+ David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
+ <linux-kernel@vger.kernel.org>
+Subject: [PATCH v13 0/6] mt8183 dpi supports dual edge and pin mode swap
+Date: Wed, 11 Mar 2020 15:18:17 +0800
+Message-ID: <20200311071823.117899-1-jitao.shi@mediatek.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1583827865.4840.1.camel@mtksdaap41>
-User-Agent: NeoMutt/20180716-391-311a52
+X-TM-SNTS-SMTP: 1C7E631F0024CEF11B8147BAD69898DD502D82A9C849D73040D0A592C700B9AD2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200310_230621_142332_B02D0DB5 
-X-CRM114-Status: GOOD (  20.40  )
+X-CRM114-CacheID: sfid-20200311_002140_909535_AC1A9A15 
+X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -91,6 +74,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -102,83 +87,78 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
- Stephen Boyd <sboyd@kernel.org>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- MyungJoo Ham <myungjoo.ham@samsung.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Fan Chen =?utf-8?B?KOmZs+WHoSk=?= <fan.chen@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, Jitao Shi <jitao.shi@mediatek.com>,
+ srv_heupstream@mediatek.com, huijuan.xie@mediatek.com, stonea168@163.com,
+ cawa.cheng@mediatek.com, linux-mediatek@lists.infradead.org,
+ bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
+ eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 10-03-20, 16:11, andrew-sh.cheng wrote:
-> On Tue, 2019-12-10 at 14:43 +0800, Viresh Kumar wrote:
-> > On 09-12-19, 14:56, andrew-sh.cheng wrote:
-> > > On Wed, 2019-11-27 at 14:06 +0530, Viresh Kumar wrote:
-> > > > On 26-11-19, 19:50, Andrew-sh.Cheng wrote:
-> > > > > +		if (!IS_ERR(opp_item))
-> > > > > +			dev_pm_opp_put(opp_item);
-> > > > > +		else
-> > > > > +			freq = 0;
-> > > > > +
-> > > > 
-> > > > What is the purpose of the above code ?
-> > > When dev_pm_opp_find_freq_ceil() doesn't find matching opp item, freq
-> > > value won't be set.
-> > > Set it as 0 for below checking
-> > > > 
-> > > > > +		/* case of current opp is disabled */
-> > > > > +		if (freq == 0 || freq != info->opp_freq) {
-> > > > > +			// find an enable opp item
-> > > > > +			freq = 1;
-> > > > > +			opp_item = dev_pm_opp_find_freq_ceil(info->cpu_dev,
-> > > > > +							     &freq);
-> > > > > +			if (!IS_ERR(opp_item)) {
-> > > > > +				dev_pm_opp_put(opp_item);
-> > > > > +				policy = cpufreq_cpu_get(info->opp_cpu);
-> > > > > +				if (policy) {
-> > > > > +					cpufreq_driver_target(policy,
-> > > > > +						freq / 1000,
-> > > > > +						CPUFREQ_RELATION_L);
-> > > > 
-> > > > Why don't you simply call this instead of all the code in the else
-> > > > block ?
-> > > These else code is used to check "current opp item is disabled or not".
-> > > If not, do nothing.
-> > > If current opp item is disabled, need to find an not-disabled opp item,
-> > > and set frequency to it.
-> > 
-> > Right. So this notifier helper of yours receive the opp which is getting
-> > disabled, why don't you compare its frequency directly to see if the current OPP
-> > is getting disabled ?
-> Sorry to overlook your question.
-> This is because when the opp is disabled,
-> we cannot use dev_pm_opp_get_freq() to get frequency of that opp.
-> There is a check:
-> 	if (IS_ERR_OR_NULL(opp) || !opp->available) {
+Changes since v12:
+ - fix mediatek,dpi.yaml make_dt_binding_check errors.
 
-I think we can remove the available check here, as we are jut trying
-to find frequency of an OPP we already have. Send a patch for that
-please.
+Change since v11:
+ - fine tune mediatek,dpi.yaml.
+ - add Acked-by: Rob Herring <robh@kernel.org>.
 
-> 		pr_err("%s: Invalid parameters\n", __func__);
-> 		return 0;
-> 
-> > 
-> 
+Change since v10:
+ - convert the Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+   to yaml format.
+ - read the pclk-sample in endpoint.
+
+Changes since v9:
+ - rename pinctrl-names = "gpiomode", "dpimode" to "active", "idle".
+ - fix some typo.
+
+Changes since v8:
+ - drop pclk-sample redefine in mediatek,dpi.txt
+ - only get the gpiomode and dpimode when dpi->pinctrl is successful.
+
+Changes since v7:
+ - separate dt-bindings to independent patches.
+ - move dpi dual edge to one patch.
+
+Changes since v6:
+ - change dual_edge to pclk-sample
+ - remove dpi_pin_mode_swap and
+
+Changes since v5:
+ - fine tune the dt-bindings commit message.
+
+Changes since v4:
+ - move pin mode control and dual edge control to deveice tree.
+ - update dt-bindings document for pin mode swap and dual edge control.
+
+Changes since v3:
+ - add dpi pin mode control when dpi on or off.
+ - update dpi dual edge comment.
+
+Changes since v2:
+ - update dt-bindings document for mt8183 dpi.
+ - separate dual edge modfication as independent patch.
+
+Jitao Shi (6):
+  dt-bindings: media: add pclk-sample dual edge property
+  dt-bindings: display: mediatek: control dpi pins mode to avoid leakage
+  dt-bindings: display: mediatek: dpi sample data in dual edge support
+  dt-bindings: display: mediatek: convert the document format from txt
+    to yaml
+  drm/mediatek: dpi sample mode support
+  drm/mediatek: set dpi pin mode to gpio low to avoid leakage current
+
+ .../display/mediatek/mediatek,dpi.txt         |  36 ------
+ .../display/mediatek/mediatek,dpi.yaml        | 103 ++++++++++++++++++
+ .../bindings/media/video-interfaces.txt       |   4 +-
+ drivers/gpu/drm/mediatek/mtk_dpi.c            |  58 +++++++++-
+ 4 files changed, 161 insertions(+), 40 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+ create mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.yaml
 
 -- 
-viresh
-
+2.21.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
