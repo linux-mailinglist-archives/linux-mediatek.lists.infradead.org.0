@@ -2,52 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 07146181749
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 12:59:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F976181791
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 13:13:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fGhel1LvjHAVbcgZ0ohh+CiClj6DsT8k4Xqk4XoSuXw=; b=NMBUtM84bB8GVa
-	uUHqGTtNtdAsdtL1nKTz2Em6P0v1zZW0ctqjENNEGePHnHDFDaPpNB+D0WdgMbJearx6s8qW0jIjh
-	HP1MrBGIgebgXWjIMhXlBN8aiCGrxRoF1wjPjhzJ/BHc3wylerd1th0u0WDmHt6uVZiv8F+1L2ga1
-	tT54fRRNQO3qucPD2KQf+wExN67DTQvn8rrdH7k3rm+lbOF7j1ejWR4jC2WcINrxRpBLn2v/BhSfZ
-	R58qflafkzLsfFXmL36eptGerp3mj9Fw/v3E4TKrQynwrQvb9MxFrY6U90J3mhiQvwtirNy+72Cu6
-	Qn7xO/HAYd/rz18o8V2g==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=kmqG34bwe9aLBfXtsoEvH8vu7E4DAtpeDdPnWrwlTDw=; b=oGeN/7qET4ZfXQnIQDgtUEzAY
+	g66uQflsj+FJSKyokX1XBRNSgMTgcVEkSW9Iw3mnVV4e0XshlyGaM5tycfqisw5YAg9nEN7Tp6A4n
+	fqe3g0R6YLfOaHLCJONmXSY0r9a2hFKu7U19eObPM5IYOrqxIw3gYKS2RWHMS2RhyYk2Ocao0BYL+
+	eCOQKlL7kw5QAjjZ35GQ9K9gT2OjQw5faNoXAFF/H4zYcZv9VDHBDsGFFINFp6RyIF9BIzKkcntBx
+	Y/FNYjr8cs91GgVOQy8mF5s1WkqzGqbYuJD34obfwLoZMS839z1bA3nhTFK3gsQznWDBgGNGbu+xN
+	t3WWyqnuA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jC00p-0004fw-Qo; Wed, 11 Mar 2020 11:58:59 +0000
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBzys-0002vM-PJ; Wed, 11 Mar 2020 11:57:00 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id B2559295EBA
-From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-To: robh+dt@kernel.org, mark.rutland@arm.com, ck.hu@mediatek.com,
- p.zabel@pengutronix.de, airlied@linux.ie, mturquette@baylibre.com,
- sboyd@kernel.org, ulrich.hecht+renesas@gmail.com,
- laurent.pinchart@ideasonboard.com
-Subject: [PATCH v11 5/5] soc / drm: mediatek: Fix mediatek-drm device probing
-Date: Wed, 11 Mar 2020 12:56:14 +0100
-Message-Id: <20200311115614.1425528-6-enric.balletbo@collabora.com>
-X-Mailer: git-send-email 2.25.1
-In-Reply-To: <20200311115614.1425528-1-enric.balletbo@collabora.com>
-References: <20200311115614.1425528-1-enric.balletbo@collabora.com>
+	id 1jC0E2-0001xJ-3s; Wed, 11 Mar 2020 12:12:38 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jC0Dy-0001wl-Nn
+ for linux-mediatek@lists.infradead.org; Wed, 11 Mar 2020 12:12:36 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 141AC1FB;
+ Wed, 11 Mar 2020 05:12:34 -0700 (PDT)
+Received: from localhost (unknown [10.37.6.21])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 8914C3F6CF;
+ Wed, 11 Mar 2020 05:12:33 -0700 (PDT)
+Date: Wed, 11 Mar 2020 12:12:32 +0000
+From: Mark Brown <broonie@kernel.org>
+To: Eason Yen <eason.yen@mediatek.com>
+Subject: Re: [PATCH 2/2] ASoC: codec: mediatek: add mt6359 codec driver
+Message-ID: <20200311121232.GB5411@sirena.org.uk>
+References: <1583465622-16628-1-git-send-email-eason.yen@mediatek.com>
+ <1583465622-16628-3-git-send-email-eason.yen@mediatek.com>
+ <20200309131346.GF4101@sirena.org.uk>
+ <1583918544.19248.69.camel@mtkswgap22>
 MIME-Version: 1.0
+In-Reply-To: <1583918544.19248.69.camel@mtkswgap22>
+X-Cookie: I'm a Lisp variable -- bind me!
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200311_045659_230683_E8ECD319 
-X-CRM114-Status: GOOD (  17.22  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20200311_051234_866546_86017563 
+X-CRM114-Status: GOOD (  28.27  )
+X-Spam-Score: -2.1 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-2.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [217.140.110.172 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,157 +67,237 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Minghsiu Tsai <minghsiu.tsai@mediatek.com>, dri-devel@lists.freedesktop.org,
- Richard Fontana <rfontana@redhat.com>,
- Collabora Kernel ML <kernel@collabora.com>, linux-clk@vger.kernel.org,
- Weiyi Lu <weiyi.lu@mediatek.com>, wens@csie.org,
- Allison Randal <allison@lohutok.net>, mtk01761 <wendell.lin@mediatek.com>,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- frank-w@public-files.de, Seiya Wang <seiya.wang@mediatek.com>,
- sean.wang@mediatek.com, Houlong Wei <houlong.wei@mediatek.com>,
- linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org, Matthias Brugger <mbrugger@suse.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, rdunlap@infradead.org,
- linux-kernel@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
- matthias.bgg@kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org, jiaxin.yu@mediatek.com,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>
+Content-Type: multipart/mixed; boundary="===============0432674530929777104=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In the actual implementation the same compatible string
-"mediatek,<chip>-mmsys" is used to bind the clock drivers
-(drivers/soc/mediatek) as well as to the gpu driver
-(drivers/gpu/drm/mediatek/mtk_drm_drv.c). This ends with the problem
-that the only probed driver is the clock driver and there is no display
-at all.
 
-In any case having the same compatible string for two drivers is not
-correct and should be fixed. To fix this, and maintain backward
-compatibility, we can consider that the mmsys driver is the top-level
-entry point for the multimedia subsystem, so is not a pure clock
-controller but a system controller, and the drm driver is instantiated
-by that MMSYS driver.
+--===============0432674530929777104==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="GRPZ8SYKNexpdSJ7"
+Content-Disposition: inline
 
-Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-Reviewed-by: CK Hu <ck.hu@mediatek.com>
----
 
-Changes in v11: None
-Changes in v10:
-- Match driver data to get display routing.
+--GRPZ8SYKNexpdSJ7
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
 
-Changes in v9:
-- Do not move the display routing from the drm driver (CK)
+On Wed, Mar 11, 2020 at 05:22:24PM +0800, Eason Yen wrote:
+> On Mon, 2020-03-09 at 13:13 +0000, Mark Brown wrote:
+> > On Fri, Mar 06, 2020 at 11:33:42AM +0800, Eason Yen wrote:
 
-Changes in v8:
-- New patch introduced in this series.
+> > This looks like things that might be better exposed via pinctrl and
+> > gpiolib for board specific configuration - what exactly are these GPIOs
+> > doing?  A lot of this code looks like it might be board specific.
 
-Changes in v7: None
+> MT6359 has some gpios (pad_aud_*) for downlink/uplink.
+> And these pins is connected between AP part and PMIC part.
+> (1) For AP part, user need to set gpio pinmux for these gpio using DT.
+> (2) For pmic part, gpio are configured at codec driver by default.
 
- drivers/gpu/drm/mediatek/mtk_drm_drv.c | 31 ++++++++++++++++----------
- drivers/soc/mediatek/mtk-mmsys.c       |  6 +++++
- 2 files changed, 25 insertions(+), 12 deletions(-)
+> For PMIC part, user need to set in these register :
+> GPIO_MODE1/GPIO_MODE2/GPIO_MODE3
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_drv.c b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-index 208f9c5256ef..bb26e346750a 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_drv.c
-@@ -422,9 +422,21 @@ static const struct of_device_id mtk_ddp_comp_dt_ids[] = {
- 	{ }
- };
- 
-+static const struct of_device_id mtk_drm_of_ids[] = {
-+	{ .compatible = "mediatek,mt2701-mmsys",
-+	  .data = &mt2701_mmsys_driver_data},
-+	{ .compatible = "mediatek,mt2712-mmsys",
-+	  .data = &mt2712_mmsys_driver_data},
-+	{ .compatible = "mediatek,mt8173-mmsys",
-+	  .data = &mt8173_mmsys_driver_data},
-+	{ }
-+};
-+
- static int mtk_drm_probe(struct platform_device *pdev)
- {
- 	struct device *dev = &pdev->dev;
-+	struct device_node *phandle = dev->parent->of_node;
-+	const struct of_device_id *of_id;
- 	struct mtk_drm_private *private;
- 	struct device_node *node;
- 	struct component_match *match = NULL;
-@@ -442,8 +454,14 @@ static int mtk_drm_probe(struct platform_device *pdev)
- 		return -ENODEV;
- 	}
- 
-+	of_id = of_match_node(mtk_drm_of_ids, phandle);
-+	if (!of_id)
-+		return -ENODEV;
-+
-+	private->data = of_id->data;
-+
- 	/* Iterate over sibling DISP function blocks */
--	for_each_child_of_node(dev->of_node->parent, node) {
-+	for_each_child_of_node(phandle->parent, node) {
- 		const struct of_device_id *of_id;
- 		enum mtk_ddp_comp_type comp_type;
- 		int comp_id;
-@@ -575,22 +593,11 @@ static int mtk_drm_sys_resume(struct device *dev)
- static SIMPLE_DEV_PM_OPS(mtk_drm_pm_ops, mtk_drm_sys_suspend,
- 			 mtk_drm_sys_resume);
- 
--static const struct of_device_id mtk_drm_of_ids[] = {
--	{ .compatible = "mediatek,mt2701-mmsys",
--	  .data = &mt2701_mmsys_driver_data},
--	{ .compatible = "mediatek,mt2712-mmsys",
--	  .data = &mt2712_mmsys_driver_data},
--	{ .compatible = "mediatek,mt8173-mmsys",
--	  .data = &mt8173_mmsys_driver_data},
--	{ }
--};
--
- static struct platform_driver mtk_drm_platform_driver = {
- 	.probe	= mtk_drm_probe,
- 	.remove	= mtk_drm_remove,
- 	.driver	= {
- 		.name	= "mediatek-drm",
--		.of_match_table = mtk_drm_of_ids,
- 		.pm     = &mtk_drm_pm_ops,
- 	},
- };
-diff --git a/drivers/soc/mediatek/mtk-mmsys.c b/drivers/soc/mediatek/mtk-mmsys.c
-index 4b286b525cd3..32a92ec447c5 100644
---- a/drivers/soc/mediatek/mtk-mmsys.c
-+++ b/drivers/soc/mediatek/mtk-mmsys.c
-@@ -285,6 +285,7 @@ static int mtk_mmsys_probe(struct platform_device *pdev)
- 	const struct mtk_mmsys_driver_data *data;
- 	struct device *dev = &pdev->dev;
- 	struct platform_device *clks;
-+	struct platform_device *drm;
- 	void __iomem *config_regs;
- 	struct resource *mem;
- 	int ret;
-@@ -307,6 +308,11 @@ static int mtk_mmsys_probe(struct platform_device *pdev)
- 	if (IS_ERR(clks))
- 		return PTR_ERR(clks);
- 
-+	drm = platform_device_register_data(&pdev->dev, "mediatek-drm",
-+					    PLATFORM_DEVID_AUTO, NULL, 0);
-+	if (IS_ERR(drm))
-+		return PTR_ERR(drm);
-+
- 	return 0;
- }
- 
--- 
-2.25.1
+> The following functions are used to set:
+> - playback_gpio_set/playback_gpio_reset
+> - capture_gpio_set/capture_gpio_reset
+> - vow_gpio_set/vow_gpio_reset
 
+This sounds like it should be handled at the machine driver level, it's
+possible some system integrator will wire things up differently.
+
+> > > +/* use only when not govern by DAPM */
+> > > +static int mt6359_set_dcxo(struct mt6359_priv *priv, bool enable)
+> > > +{
+
+> > Why might this sometimes be controlled outside of DAPM?
+
+> mt6359_set_dcxo is used at mt6359_mtkaif_calibration_enable/disable.
+
+> mtkaif_calibration process needs be completed at booting stage once.
+> And it has a specific control sequence provided by codec designer.
+> So it need to be controlled outside of DAPM.
+
+OK, this should explicitly say that this is for use during calibration
+then.
+
+> > > +static const char *const mic_type_mux_map[] =3D {
+> > > +	"Idle",
+> > > +	"ACC",
+> > > +	"DMIC",
+> > > +	"DCC",
+> > > +	"DCC_ECM_DIFF",
+> > > +	"DCC_ECM_SINGLE",
+> > > +	"VOW_ACC",
+> > > +	"VOW_DMIC",
+> > > +	"VOW_DMIC_LP",
+> > > +	"VOW_DCC",
+> > > +	"VOW_DCC_ECM_DIFF",
+> > > +	"VOW_DCC_ECM_SINGLE"
+> > > +};
+
+> > This looks like something that should be being set by DT or other
+> > platform data rather than at runtime - we're not likely to change from a
+> > digital to analogue microphone at runtime for example.
+
+> For mic1, it's mic_type can set one of mic_type_mux_map[] at different
+> scenario.
+> (1) When mic1 is not used, it should be set as "Idle"
+> (2) When mic1 is ACC mode and used at normal capture scenario, it should
+> be set as "ACC"
+> (3) When mic1 is ACC mode and used at Voice Wakeup scenario, it should
+> be set as "VOW_ACC"
+
+That still doesn't mean you should have control over things like if the
+microphone is single ended or differential at runtime.  This at least
+needs to be a higher level control, it should be integrated with both
+board data and DAPM.  You can at least select idle mode with DAPM, and
+you may be able to select voice wakeup that way too (by looking at where
+things are routed).
+
+> > > +	SOC_SINGLE_EXT_TLV("LineoutR Volume",
+> > > +			   MT6359_ZCD_CON1, 7, 0x12, 0,
+> > > +			   snd_soc_get_volsw, mt6359_put_volsw, playback_tlv),
+
+> > These should be stereo controls not pairs of mono controls.
+
+> It is more flexible for customization.
+
+> For example, customer may use lineout path for stereo speaker amp.
+> And for specific amp, it need different gain on channel L and channel R.
+
+You can set the gains of stereo pairs independently, that's not a
+problem.
+
+> > > +static const char * const lo_in_mux_map[] =3D {
+> > > +	"Open", "Playback_L_DAC", "Playback", "Test Mode"
+> > > +};
+> > > +
+> > > +static int lo_in_mux_map_value[] =3D {
+> > > +	0x0, 0x1, 0x2, 0x3,
+> > > +};
+> >=20
+> > Why use a value enum here, a normal mux should be fine?
+> >=20
+
+> Could I modify as follow:
+
+> /* LOL MUX */
+> enum {
+> 	LO_MUX_OPEN =3D 0,
+> 	LO_MUX_L_DAC,
+> 	LO_MUX_3RD_DAC,
+> 	LO_MUX_TEST_MODE,
+> 	LO_MUX_MASK =3D 0x3,
+> };
+
+> static const char * const lo_in_mux_map[] =3D {
+> 	"Open", "Playback_L_DAC", "Playback", "Test Mode"
+> };
+
+> static int lo_in_mux_map_value[] =3D {
+> 	LO_MUX_OPEN,
+> 	LO_MUX_L_DAC,
+> 	LO_MUX_3RD_DAC,
+> 	LO_MUX_TEST_MODE,
+> };
+
+Why bother with the value mapping at all?
+
+> > > +static int mt_delay_250_event(struct snd_soc_dapm_widget *w,
+> > > +			      struct snd_kcontrol *kcontrol,
+> > > +			      int event)
+> > > +{
+> > > +	switch (event) {
+> > > +	case SND_SOC_DAPM_POST_PMU:
+> > > +	case SND_SOC_DAPM_PRE_PMD:
+> > > +		usleep_range(250, 270);
+
+> > Why would having a sleep before power down be useful?
+
+> It is based on designer's control sequence to add some delay while
+> PMU/PMD.
+
+But how does the designer know when the sequence starts?  Don't they
+mean to have a delay *after* power down?
+
+> > > +static int mt6359_codec_probe(struct snd_soc_component *cmpnt)
+> > > +{
+> > > +	struct mt6359_priv *priv =3D snd_soc_component_get_drvdata(cmpnt);
+> > > +	int ret;
+> > > +
+> > > +	snd_soc_component_init_regmap(cmpnt, priv->regmap);
+> > > +
+> > > +	snd_soc_add_component_controls(cmpnt,
+> > > +				       mt6359_snd_vow_controls,
+> > > +				       ARRAY_SIZE(mt6359_snd_vow_controls));
+
+> > Use the controls member of the component driver struct.
+
+> Do you mean that I should merge mt6359_snd_vow_controls into
+> mt6359_snd_controls?
+
+Yes, you're unconditionally registering these so there's no sense in
+splitting them.
+
+> > > +	priv->avdd_reg =3D devm_regulator_get(priv->dev, "vaud18");
+> > > +	if (IS_ERR(priv->avdd_reg)) {
+> > > +		dev_err(priv->dev, "%s(), have no vaud18 supply", __func__);
+> > > +		return PTR_ERR(priv->avdd_reg);
+> > > +	}
+
+> > The driver should request resources during device model probe rather
+> > than component probe.
+
+> Do you mean that it need be requested at mt6359_platform_driver_probe()
+> instead of mt6359_codec_probe() ?
+
+Yes.
+
+> > > +	ret =3D regulator_enable(priv->avdd_reg);
+> > > +	if (ret)
+> > > +		return ret;
+> > > +
+
+> > There's nothing to disable this on remove.
+
+> Do you mean that I should add a remove function to execute
+> regulator_disable()?
+
+Yes.
+
+--GRPZ8SYKNexpdSJ7
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl5o1a8ACgkQJNaLcl1U
+h9A3ZAf/fSGW262FFfaBIN8zruvv1AU7r7tMppnvX4z8VgxGv4Lky42aOvGd8NGT
+4KyygigtShycEcaPm32mKpgw7t9cEpGEhqMwHbS+k8xNWDNmsQLKoGuV+7EcNQxA
+LxvONiREyb+/DQvqvttPiS9KiWXz7b3DRVbI3gLFNEcECcYre6+A2lDxravhNRu5
+SflQyk+sW2S1Br54xNSeJu4d+FOatyVgxYg2GKSOoLrIhleu8p20cL6pZlWRVFMO
+lf7gMTnU0jwvL8/sjKSYWdAzLaFlOXYD7UtXyVHcQoVl+nEAnI4HSC3FLaWufL7M
+tWazpUSkZz0rbfpeN+E3z4NoL/cJPg==
+=i3NB
+-----END PGP SIGNATURE-----
+
+--GRPZ8SYKNexpdSJ7--
+
+
+--===============0432674530929777104==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============0432674530929777104==--
+
