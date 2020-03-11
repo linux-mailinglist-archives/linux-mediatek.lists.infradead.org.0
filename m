@@ -2,53 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F1459181CEE
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 16:53:40 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 20BD3181D9D
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 17:18:10 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iY5bvH+8UMCu4FOnoMkqYNuJabbmVlJVvLfY6S4Wk5w=; b=DHAKSgYAT3/Mb2
-	4i6xH7iqbg5zHtrx656dafTmzOLIs66Z2JB8L20b9ZU+7PIM4FLx4jDg1vbvOCFJU6P1Fb+ByVgcX
-	GYixKPOtkLq9sPxBPX3oHeVIrdBmNMtjwvRn6CQwxTmTvsXrtncytKyuP8G6sCKpcd9t9MkViVm8w
-	t9QePxH55G90WZYq23k6fDaKV/Mat5ydkPg1RzO31KVg3xcdBx7l3FHJQLv+2leZ7++U7ymFBpufi
-	6UpdouqEhaqsZZboLDrPISV6DFpUuYyqiyY9RL03x4T7xn+SpItvCYIBdfbOlS+4JvgOdOpSu0M6k
-	vcXAddhhB0vrVADWVFsA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Gp3cdbmJJJjvLsmMlWtYvrk6KN8lygLqcb+/W3cFlXU=; b=VcVWGirK1RBVnZ
+	ksSm0O0sjWtrnXjrSuNqDOPiZNv2BQuX8AptyaND304pf4vRCxuhlKwu9vlqpqJknZdmSg/+HwzXI
+	kE96rZ0MnIci2Dotha5LNtfApr31T/vfPmV6rTh1+M6KN2VTdi57NNm1adnP5Z5mmg5YqoZzcu8wx
+	my2EZJTaflqo3OGpBoyzWMgWmyz2FgJGVhzslHRM3F66fwfkXmLIJur0DjB8zY+CmtsBEQKfU6G1Q
+	hMK28e+OFctOkZZQwMXA2AV1+2gKsp0sS/2PxD6KsFik+L+usejgLse/rdMShf/J1C3QYtzlKT8Zn
+	nGa+8uJgaqnmHSDSghLA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jC3fo-0001dP-PK; Wed, 11 Mar 2020 15:53:32 +0000
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
+	id 1jC43T-0003JM-Q4; Wed, 11 Mar 2020 16:17:59 +0000
+Received: from hillosipuli.retiisi.org.uk ([2a01:4f9:c010:4572::81:2])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jC3fY-0001Sy-Jj; Wed, 11 Mar 2020 15:53:18 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id EC0A3293F52
-Subject: Re: [PATCH v11 0/5] arm/arm64: mediatek: Fix mt8173 mmsys device
- probing
-To: CK Hu <ck.hu@mediatek.com>
-References: <20200311115614.1425528-1-enric.balletbo@collabora.com>
- <1583931705.29614.3.camel@mtksdaap41>
-From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-Message-ID: <24893e7f-5d76-e10e-61db-4b0abd43d12d@collabora.com>
-Date: Wed, 11 Mar 2020 16:53:05 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.5.0
+ id 1jC43J-0003AG-7r; Wed, 11 Mar 2020 16:17:51 +0000
+Received: from valkosipuli.localdomain (valkosipuli.retiisi.org.uk
+ [IPv6:2a01:4f9:c010:4572::80:2])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+ key-exchange ECDHE (P-256) server-signature RSA-PSS (4096 bits) server-digest
+ SHA256) (No client certificate requested)
+ by hillosipuli.retiisi.org.uk (Postfix) with ESMTPS id 2E35E634C87;
+ Wed, 11 Mar 2020 18:16:54 +0200 (EET)
+Received: from sailus by valkosipuli.localdomain with local (Exim 4.92)
+ (envelope-from <sakari.ailus@retiisi.org.uk>)
+ id 1jC42Q-0001TH-B5; Wed, 11 Mar 2020 18:16:54 +0200
+Date: Wed, 11 Mar 2020 18:16:54 +0200
+From: Sakari Ailus <sakari.ailus@iki.fi>
+To: Robert Foss <robert.foss@linaro.org>
+Subject: Re: [v1 2/3] media: ov8856: Add devicetree support
+Message-ID: <20200311161654.GK2619@valkosipuli.retiisi.org.uk>
+References: <20200310134603.30260-1-robert.foss@linaro.org>
+ <20200310134603.30260-3-robert.foss@linaro.org>
+ <20200310142652.GK1922688@smile.fi.intel.com>
+ <CAG3jFyu5S1H=r6pV92tc_a2LoCUnhb0mDbOegP2BCO8a5C1nVg@mail.gmail.com>
+ <20200311114848.GJ2619@valkosipuli.retiisi.org.uk>
+ <CAG3jFyv8X=k=1EGMCHnSNqDaRBZ68pht42yDzc5hJPui0wdAjQ@mail.gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <1583931705.29614.3.camel@mtksdaap41>
-Content-Language: en-US
+Content-Disposition: inline
+In-Reply-To: <CAG3jFyv8X=k=1EGMCHnSNqDaRBZ68pht42yDzc5hJPui0wdAjQ@mail.gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200311_085316_915281_680EE341 
-X-CRM114-Status: GOOD (  22.58  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20200311_091749_455319_A5129ECA 
+X-CRM114-Status: GOOD (  23.36  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -60,180 +70,69 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, Kate Stewart <kstewart@linuxfoundation.org>,
- Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>, airlied@linux.ie,
- mturquette@baylibre.com, dri-devel@lists.freedesktop.org,
- Richard Fontana <rfontana@redhat.com>, laurent.pinchart@ideasonboard.com,
- ulrich.hecht+renesas@gmail.com, Collabora Kernel ML <kernel@collabora.com>,
- linux-clk@vger.kernel.org, Nicolas Boichat <drinkcat@chromium.org>,
- Weiyi Lu <weiyi.lu@mediatek.com>, Krzysztof Kozlowski <krzk@kernel.org>,
- wens@csie.org, linux-arm-kernel@lists.infradead.org,
- mtk01761 <wendell.lin@mediatek.com>, Owen Chen <owen.chen@mediatek.com>,
- linux-media@vger.kernel.org, devicetree@vger.kernel.org,
- p.zabel@pengutronix.de, frank-w@public-files.de,
- Seiya Wang <seiya.wang@mediatek.com>, sean.wang@mediatek.com,
- Houlong Wei <houlong.wei@mediatek.com>, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Allison Randal <allison@lohutok.net>, Matthias Brugger <mbrugger@suse.com>,
- Fabien Parent <fparent@baylibre.com>, sboyd@kernel.org,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, rdunlap@infradead.org,
- linux-kernel@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
- matthias.bgg@kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
+ <devicetree@vger.kernel.org>, linux-kernel <linux-kernel@vger.kernel.org>,
+ Tomasz Figa <tfiga@chromium.org>, ben.kao@intel.com,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Dongchun Zhu <dongchun.zhu@mediatek.com>,
+ Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ linux-media <linux-media@vger.kernel.org>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi CK,
-
-On 11/3/20 14:01, CK Hu wrote:
-> Hi, Enric:
-> 
-> I'm confused this is v11 or v12.
-> For v12, you've lost some 'Acked-by' and 'Reviewed-by' tag.
-> 
-
-Right, sorry about that, I messed my workflow after a patman upgrade that didn't
-work. I'll collect the acks and reviews and send a v12 later today, so it's
-clear which patches to apply.
-
-Thanks,
- Enric
-
-> Regards,
-> CK
-> 
-> On Wed, 2020-03-11 at 12:56 +0100, Enric Balletbo i Serra wrote:
->> Dear all,
->>
->> These patches are intended to solve an old standing issue on some
->> Mediatek devices (mt8173, mt2701 and mt2712 are affected by this issue).
->>
->> Up to now both drivers, clock and drm are probed with the same device tree
->> compatible. But only the first driver gets probed, which in effect breaks
->> graphics on those devices.
->>
->> The MMSYS (Multimedia subsystem) in Mediatek SoCs has some registers to
->> control clock gates (which is used in the clk driver) and some registers
->> to set the routing and enable the differnet blocks of the display
->> and MDP (Media Data Path) subsystem. On this series the clk driver is
->> not a pure clock controller but a system controller that can provide
->> access to the shared registers between the different drivers that need
->> it (mediatek-drm and mediatek-mdp). Hence the MMSYS clk driver was moved
->> to drivers/soc/mediatek and is the entry point (parent) which will trigger
->> the probe of the corresponding mediatek-drm driver.
->>
->> **IMPORTANT** This series only fixes the issue on mt8173 to make it
->> simple and as is the only platform I can test. Similar changes should be
->> applied for mt2701 and mt2712 to have display working.
->>
->> These patches apply on top of linux-next.
->>
->> For reference, here are the links to the old discussions:
->> * v10: https://patchwork.kernel.org/project/linux-mediatek/list/?series=248505
->> * v9: https://patchwork.kernel.org/project/linux-clk/list/?series=247591
->> * v8: https://patchwork.kernel.org/project/linux-mediatek/list/?series=244891
->> * v7: https://patchwork.kernel.org/project/linux-mediatek/list/?series=241217
->> * v6: https://patchwork.kernel.org/project/linux-mediatek/list/?series=213219
->> * v5: https://patchwork.kernel.org/project/linux-mediatek/list/?series=44063
->> * v4:
->>   * https://patchwork.kernel.org/patch/10530871/
->>   * https://patchwork.kernel.org/patch/10530883/
->>   * https://patchwork.kernel.org/patch/10530885/
->>   * https://patchwork.kernel.org/patch/10530911/
->>   * https://patchwork.kernel.org/patch/10530913/
->> * v3:
->>   * https://patchwork.kernel.org/patch/10367857/
->>   * https://patchwork.kernel.org/patch/10367861/
->>   * https://patchwork.kernel.org/patch/10367877/
->>   * https://patchwork.kernel.org/patch/10367875/
->>   * https://patchwork.kernel.org/patch/10367885/
->>   * https://patchwork.kernel.org/patch/10367883/
->>   * https://patchwork.kernel.org/patch/10367889/
->>   * https://patchwork.kernel.org/patch/10367907/
->>   * https://patchwork.kernel.org/patch/10367909/
->>   * https://patchwork.kernel.org/patch/10367905/
->> * v2: No relevant discussion, see v3
->> * v1:
->>   * https://patchwork.kernel.org/patch/10016497/
->>   * https://patchwork.kernel.org/patch/10016499/
->>   * https://patchwork.kernel.org/patch/10016505/
->>   * https://patchwork.kernel.org/patch/10016507/
->>
->> Best regards,
->>  Enric
->>
->> Changes in v11:
->> - Leave the clocks part in drivers/clk (clk-mt8173-mm)
->> - Instantiate the clock driver from the mtk-mmsys driver.
->> - Add default config option to not break anything.
->> - Removed the Reviewed-by CK tag as changed the organization.
->>
->> Changes in v10:
->> - Update the binding documentation for the mmsys system controller.
->> - Renamed to be generic mtk-mmsys
->> - Add driver data support to be able to support diferent SoCs
->> - Select CONFIG_MTK_MMSYS (CK)
->> - Pass device pointer of mmsys device instead of config regs (CK)
->> - Match driver data to get display routing.
->>
->> Changes in v9:
->> - Move mmsys to drivers/soc/mediatek (CK)
->> - Introduced a new patch to move routing control into mmsys driver.
->> - Removed the patch to use regmap as is not needed anymore.
->> - Do not move the display routing from the drm driver (CK)
->>
->> Changes in v8:
->> - Be a builtin_platform_driver like other mediatek mmsys drivers.
->> - New patch introduced in this series.
->>
->> Changes in v7:
->> - Free clk_data->clks as well
->> - Get rid of private data structure
->>
->> Enric Balletbo i Serra (3):
->>   dt-bindings: mediatek: Update mmsys binding to reflect it is a system
->>     controller
->>   soc / drm: mediatek: Move routing control to mmsys device
->>   soc / drm: mediatek: Fix mediatek-drm device probing
->>
->> Matthias Brugger (2):
->>   drm/mediatek: Omit warning on probe defers
->>   clk / soc: mediatek: Move mt8173 MMSYS to platform driver
->>
->>  .../bindings/arm/mediatek/mediatek,mmsys.txt  |   7 +-
->>  drivers/clk/mediatek/Kconfig                  |   7 +
->>  drivers/clk/mediatek/Makefile                 |   1 +
->>  drivers/clk/mediatek/clk-mt8173-mm.c          | 146 ++++++++
->>  drivers/clk/mediatek/clk-mt8173.c             | 104 ------
->>  drivers/gpu/drm/mediatek/Kconfig              |   1 +
->>  drivers/gpu/drm/mediatek/mtk_disp_color.c     |   5 +-
->>  drivers/gpu/drm/mediatek/mtk_disp_ovl.c       |   5 +-
->>  drivers/gpu/drm/mediatek/mtk_disp_rdma.c      |   5 +-
->>  drivers/gpu/drm/mediatek/mtk_dpi.c            |  12 +-
->>  drivers/gpu/drm/mediatek/mtk_drm_crtc.c       |  19 +-
->>  drivers/gpu/drm/mediatek/mtk_drm_ddp.c        | 259 +-------------
->>  drivers/gpu/drm/mediatek/mtk_drm_ddp.h        |   7 -
->>  drivers/gpu/drm/mediatek/mtk_drm_drv.c        |  45 +--
->>  drivers/gpu/drm/mediatek/mtk_drm_drv.h        |   2 +-
->>  drivers/gpu/drm/mediatek/mtk_dsi.c            |   8 +-
->>  drivers/gpu/drm/mediatek/mtk_hdmi.c           |   4 +-
->>  drivers/soc/mediatek/Kconfig                  |   8 +
->>  drivers/soc/mediatek/Makefile                 |   1 +
->>  drivers/soc/mediatek/mtk-mmsys.c              | 335 ++++++++++++++++++
->>  include/linux/soc/mediatek/mtk-mmsys.h        |  20 ++
->>  21 files changed, 590 insertions(+), 411 deletions(-)
->>  create mode 100644 drivers/clk/mediatek/clk-mt8173-mm.c
->>  create mode 100644 drivers/soc/mediatek/mtk-mmsys.c
->>  create mode 100644 include/linux/soc/mediatek/mtk-mmsys.h
->>
-> 
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gV2VkLCBNYXIgMTEsIDIwMjAgYXQgMDI6MzI6MzBQTSArMDEwMCwgUm9iZXJ0IEZvc3Mgd3Jv
+dGU6Cj4gSGV5IFNha2FyaSwKPiAKPiBPbiBXZWQsIDExIE1hciAyMDIwIGF0IDEyOjQ5LCBTYWth
+cmkgQWlsdXMgPHNha2FyaS5haWx1c0Bpa2kuZmk+IHdyb3RlOgo+ID4KPiA+IEhpIFJvYmVydCwK
+PiA+Cj4gPiBPbiBUdWUsIE1hciAxMCwgMjAyMCBhdCAwNDo1NToyMFBNICswMTAwLCBSb2JlcnQg
+Rm9zcyB3cm90ZToKPiA+ID4gSGkgQW5keSwKPiA+ID4KPiA+ID4gT24gVHVlLCAxMCBNYXIgMjAy
+MCBhdCAxNToyNiwgQW5keSBTaGV2Y2hlbmtvCj4gPiA+IDxhbmRyaXkuc2hldmNoZW5rb0BsaW51
+eC5pbnRlbC5jb20+IHdyb3RlOgo+ID4gPiA+Cj4gPiA+ID4gT24gVHVlLCBNYXIgMTAsIDIwMjAg
+YXQgMDI6NDY6MDJQTSArMDEwMCwgUm9iZXJ0IEZvc3Mgd3JvdGU6Cj4gPiA+ID4gPiBBZGQgZGV2
+aWNldHJlZSBtYXRjaCB0YWJsZSwgYW5kIGVuYWJsZSBvdjg4NTZfcHJvYmUoKQo+ID4gPiA+ID4g
+dG8gaW5pdGlhbGl6ZSBwb3dlciwgY2xvY2tzIGFuZCByZXNldCBwaW5zLgo+ID4gPiA+Cj4gPiA+
+ID4gLi4uCj4gPiA+ID4KPiA+ID4gPiA+ICsjZGVmaW5lIE9WODg1Nl9OVU1fU1VQUExJRVMgQVJS
+QVlfU0laRShvdjg4NTZfc3VwcGx5X25hbWVzKQo+ID4gPiA+Cj4gPiA+ID4gVXNlIEFSUkFZX1NJ
+WkUoKSBkaXJlY3RseS4KPiA+ID4KPiA+ID4gQWNrLgo+ID4gPgo+ID4gPiA+Cj4gPiA+ID4gSGF2
+ZSB5b3Ugc2VlbiBTYWthcmkncyBjb21tZW50cz8KPiA+ID4gPiBTYWthcmksIGRvIEkgaGF2ZSBk
+w6lqxIUgdnUgb3IgeW91IGluZGVlZCBjb21tZW50ZWQgdGhpcyBkcml2ZXI/Cj4gPiA+Cj4gPiA+
+IFllcywgSSBtYXkgaGF2ZSBtaXNzZWQgc29tZSBwYXJ0IG9mIGl0LCBzbyBwbGVhc2UgdGVsbCBt
+ZSBpZiBJIGhhdmUuCj4gPiA+Cj4gPiA+IFRoZXJlIGlzIGEgcGF0Y2hzZXQgZmxvYXRpbmcgYXJv
+dW5kIHRoYXQgaW1wbGVtZW50cyBhIGxhcmdlciBjaHVuayBvZgo+ID4gPiBmdW5jdGlvbmFsaXR5
+LAo+ID4gPiBpbmNsdWRpbmcgYSBjb3VwbGUgb2YgbmV3IG1vZGVzLiBUaGlzIGlzIGJhc2VkIG9u
+IHRoYXQgc2VyaWVzLgo+ID4KPiA+IFBsZWFzZSBzZWUgZWFybGllciBjb21tZW50cyBnaXZlbiBh
+Z2FpbnN0IGFuIGVhcmxpZXIgdmFyaWFudCBvZiB0aGlzIHNldC4KPiA+IFRoZXkncmUgb24gTE1N
+TC4KPiA+Cj4gPiA+Cj4gPiA+ID4KPiA+ID4gPiAuLi4KPiA+ID4gPgo+ID4gPiA+ID4gKyAgICAg
+Z3Bpb2Rfc2V0X3ZhbHVlX2NhbnNsZWVwKG92ODg1Ni0+bl9zaHV0ZG5fZ3BpbywgR1BJT0RfT1VU
+X0xPVyk7Cj4gPiA+ID4KPiA+ID4gPiA+ICsgICAgIGdwaW9kX3NldF92YWx1ZV9jYW5zbGVlcChv
+djg4NTYtPm5fc2h1dGRuX2dwaW8sIEdQSU9EX09VVF9ISUdIKTsKPiA+ID4gPgo+ID4gPiA+IFll
+cywgc2VlbXMgdGhpcyBvbmUgaXMgaW52ZXJ0ZWQuCj4gPiA+ID4KPiA+ID4gPiAuLi4KPiA+ID4g
+Pgo+ID4gPiA+ID4gK3sKPiA+ID4gPiA+ICsgICAgIGdwaW9kX3NldF92YWx1ZV9jYW5zbGVlcChv
+djg4NTYtPm5fc2h1dGRuX2dwaW8sIEdQSU9EX09VVF9MT1cpOwo+ID4gPiA+ID4gKyAgICAgcmVn
+dWxhdG9yX2J1bGtfZGlzYWJsZShPVjg4NTZfTlVNX1NVUFBMSUVTLCBvdjg4NTYtPnN1cHBsaWVz
+KTsKPiA+ID4gPiA+ICsgICAgIGNsa19kaXNhYmxlX3VucHJlcGFyZShvdjg4NTYtPnh2Y2xrKTsK
+PiA+ID4gPiA+ICt9Cj4gPiA+ID4gPiArCj4gPiA+ID4gPiArCj4gPiA+ID4KPiA+ID4gPiBPbmUg
+YmxhbmsgbGluZSBpcyBlbm91Z2guCj4gPiA+ID4KPiA+ID4gPiAuLi4KPiA+ID4gPgo+ID4gPiA+
+ID4gKyAgICAgb3Y4ODU2LT54dmNsayA9IGRldm1fY2xrX2dldCgmY2xpZW50LT5kZXYsICJ4dmNs
+ayIpOwo+ID4gPiA+ID4gKyAgICAgaWYgKElTX0VSUihvdjg4NTYtPnh2Y2xrKSkgewo+ID4gPiA+
+ID4gKyAgICAgICAgICAgICBkZXZfZXJyKCZjbGllbnQtPmRldiwgImZhaWxlZCB0byBnZXQgeHZj
+bGtcbiIpOwo+ID4gPiA+ID4gKyAgICAgICAgICAgICByZXR1cm4gLUVJTlZBTDsKPiA+ID4gPiA+
+ICsgICAgIH0KPiA+ID4gPgo+ID4gPiA+IFByZXZpb3VzbHkgaXQgd29ya2VkIHdpdGhvdXQgY2xv
+Y2sgcHJvdmlkZXIsIG5vdyB5b3UgbWFrZSBhIGRlcGVuZGVuY3kuCj4gPiA+ID4KPiA+ID4gPiBU
+aGlzIHdvbid0IHdvcmsuCj4gPiA+Cj4gPiA+IFNvIHRoZSBpZGVhbCBiZWhhdmlvciB3b3VsZCBi
+ZSB0byBvbmx5IHVzZSB0aGUgeGNsayBpZiBpdCBpcyBwcm92aWRlZD8KPiA+Cj4gPiBTZWUgZS5n
+LiB0aGUgc21pYXBwIGRyaXZlciBvbiBob3cgdG8gZG8gdGhpcyBzbyBpdCBjb250aW51ZXMgdG8g
+d29yayBvbgo+ID4gQUNQSS4KPiAKPiBUaGFua3MgZm9yIHRoZSBwb2ludGVyIQo+IAo+ID4KPiA+
+IEkgdGhpbmsgaXQnZCBiZSBhbHNvIGFwcHJvcHJpYXRlIHRvIGFkZCB0aGUgdXNsZWVwKCkgYWZ0
+ZXIgbGlmdGluZyByZXNldAo+ID4gb25seSBpZiB0aGUgcmVzZXQgR1BJTyBpcyBkZWZpbmVkIGZv
+ciB0aGUgZGV2aWNlLgo+IAo+IEFjawoKT24gc2Vjb25kIHRob3VnaHQsIHRoYXQgcHJvYmFibHkg
+YXBwbGllcyBpZiBhbnkgb2YgdGhlIHJlc291cmNlcyBuZWVkZWQgZm9yCnBvd2VyaW5nIHRoZSBk
+ZXZpY2Ugb24gYXJlIGRlZmluZWQuIEl0IGNvdWxkIGJlIHRoYXQgdGhlcmUncyBubyByZXNldCBH
+UElPCmJ1dCBhIHJlZ3VsYXRvciBpcyBzdGlsbCB0aGVyZSwgaW4gd2hpY2ggY2FzZSBhIGRlbGF5
+IGlzIG5lZWRlZC4KCi0tIApTYWthcmkgQWlsdXMKCl9fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVrIG1haWxpbmcgbGlzdApMaW51eC1t
+ZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21h
+aWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
