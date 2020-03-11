@@ -2,82 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA4CB18121F
-	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 08:42:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BCE7A1813F8
+	for <lists+linux-mediatek@lfdr.de>; Wed, 11 Mar 2020 10:06:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4HTfl5ddVfdwi6yrYi9mjFTj240+4o0u1EH748yv8nM=; b=c7vfMnTtPXj4Lp
-	8HpEIgcnES5WG635k4xakS8mDHr2Tz7lcwL9fWctQtRadQ9Wu5KWqNv4d3cqM+5xKGpqAkjuz2an5
-	7gdMJ6X034CwDN9ucL473I/mFAtgn/ILqwPaU/QkPlH/d+mxDqE0nJ2ww1GoSkUP02j6gm6QaUWcC
-	K8mySjNtlL7eWnKzSam/aY4WLOUFjjws64AaK/7hVpV9SUtRulvAIoz1B3T96UrSRjFCDsgHlZ654
-	gl6HbuN9xsow739Q35S0JMaWniKoddNtsRiYTcoeeB8PFl1jJKRZILUpI6ltnloBv+oOi3MeUhHuF
-	5wxvaSjPLYMXl9+Y8KWA==;
+	List-Owner; bh=kNBNBtbVNwSd2B2xvuziLOBjToqOiJiTFM/KIHghzk4=; b=eSrV0KT+e4HnOt
+	teLY+ZLdPXeKueXcESQqI/af9nZ+Dos1h0SNFcoCV9CaylHjXGJVUygdTef+fb58kPkRx+Sf/IG0A
+	1XowKW/cojLcjLxps8/YgJTXtLQXzmO+N4UhIwWUOKRf1j7BydHh/rVQi5LpUhM4FLot256GrsD7a
+	Y0nmcPOg+lZRjvu0CAcCQJRIojewN5sCqqiA6mK5czFK9jWYyc4G+tw2Y3uCK/mUeJezziDp41i1+
+	l6Zjf7zyG2Y/74LFBdZfbuGNK8s27Bt+CE0MztfFZD5XeyBPreZm/jt8q9ccxbB5ANuft66aHsgpU
+	Udzlz0DD3VWYK8G/A/bg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBw09-0003oa-0k; Wed, 11 Mar 2020 07:42:01 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jBxJm-0004WM-Uw; Wed, 11 Mar 2020 09:06:22 +0000
+Received: from mga04.intel.com ([192.55.52.120])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBvzN-0003DA-5A; Wed, 11 Mar 2020 07:41:14 +0000
-X-UUID: 7daed73576724a1da050e1bfafc3f6f5-20200310
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=npWCMlNAf6vwIc/DWpZvRQRY1F0x8+HE51QC285Pl4k=; 
- b=OdoZRqYeIIfHqfGz8YoRqyNfcB0Giusls61DhZdFk3ee1JOnQzAV5sqTnfW1E9aJzseZkM4eIyzEkUxdEtSm/EUJAVrFEFNho7K6M0FKfOPOlmDzgX7Q7IBeoN95E8zAk22lwIz4HwK1VG9Uq/0x4e8YPO1UNgV9ONMeius64io=;
-X-UUID: 7daed73576724a1da050e1bfafc3f6f5-20200310
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <jitao.shi@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 198516614; Tue, 10 Mar 2020 23:41:10 -0800
-Received: from MTKMBS33N2.mediatek.inc (172.27.4.76) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 11 Mar 2020 00:41:15 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS33N2.mediatek.inc
- (172.27.4.76) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 11 Mar 2020 15:41:25 +0800
-Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
- MTKCAS32.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1395.4 via Frontend Transport; Wed, 11 Mar 2020 15:42:06 +0800
-From: Jitao Shi <jitao.shi@mediatek.com>
-To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Daniel Vetter <daniel@ffwll.ch>,
- David Airlie <airlied@linux.ie>, <dri-devel@lists.freedesktop.org>,
- <linux-kernel@vger.kernel.org>
-Subject: [PATCH v3 4/4] drm/mediatek: config mipitx impedance with calibration
- data
-Date: Wed, 11 Mar 2020 15:40:32 +0800
-Message-ID: <20200311074032.119481-5-jitao.shi@mediatek.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20200311074032.119481-1-jitao.shi@mediatek.com>
-References: <20200311074032.119481-1-jitao.shi@mediatek.com>
+ id 1jBxJZ-0004GL-Bu; Wed, 11 Mar 2020 09:06:10 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga007.fm.intel.com ([10.253.24.52])
+ by fmsmga104.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 11 Mar 2020 02:05:52 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.70,540,1574150400"; d="scan'208";a="234652853"
+Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
+ by fmsmga007.fm.intel.com with ESMTP; 11 Mar 2020 02:05:49 -0700
+Received: from andy by smile with local (Exim 4.93)
+ (envelope-from <andriy.shevchenko@linux.intel.com>)
+ id 1jBxJG-008h6u-OT; Wed, 11 Mar 2020 11:05:50 +0200
+Date: Wed, 11 Mar 2020 11:05:50 +0200
+From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+To: Robert Foss <robert.foss@linaro.org>
+Subject: Re: [v1 2/3] media: ov8856: Add devicetree support
+Message-ID: <20200311090550.GB1922688@smile.fi.intel.com>
+References: <20200310134603.30260-1-robert.foss@linaro.org>
+ <20200310134603.30260-3-robert.foss@linaro.org>
+ <20200310142652.GK1922688@smile.fi.intel.com>
+ <CAG3jFyu5S1H=r6pV92tc_a2LoCUnhb0mDbOegP2BCO8a5C1nVg@mail.gmail.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: F58B740D8966EE329A7B198D2569BE8D1EF0981AF9706E2EFCADD53E09D0F5262000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <CAG3jFyu5S1H=r6pV92tc_a2LoCUnhb0mDbOegP2BCO8a5C1nVg@mail.gmail.com>
+Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200311_004113_218037_9DD8A9C0 
-X-CRM114-Status: GOOD (  11.19  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200311_020609_416291_12E415F7 
+X-CRM114-Status: GOOD (  10.99  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.120 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,115 +71,45 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Jitao Shi <jitao.shi@mediatek.com>,
- srv_heupstream@mediatek.com, huijuan.xie@mediatek.com, stonea168@163.com,
- cawa.cheng@mediatek.com, linux-mediatek@lists.infradead.org,
- bibby.hsieh@mediatek.com, ck.hu@mediatek.com, yingjoe.chen@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ gregkh@linuxfoundation.org, linux-kernel@vger.kernel.org,
+ Tomasz Figa <tfiga@chromium.org>, ben.kao@intel.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, Dongchun Zhu <dongchun.zhu@mediatek.com>,
+ Jonathan.Cameron@huawei.com, matthias.bgg@gmail.com, mchehab@kernel.org,
+ davem@davemloft.net, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Read calibration data from nvmem, and config mipitx impedance with
-calibration data to make sure their impedance are 100ohm.
+On Tue, Mar 10, 2020 at 04:55:20PM +0100, Robert Foss wrote:
+> On Tue, 10 Mar 2020 at 15:26, Andy Shevchenko
+> <andriy.shevchenko@linux.intel.com> wrote:
+> > On Tue, Mar 10, 2020 at 02:46:02PM +0100, Robert Foss wrote:
 
-Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
----
- drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c | 57 +++++++++++++++++++
- 1 file changed, 57 insertions(+)
+...
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-index 124fdf95f1e5..878feeb7ac6c 100644
---- a/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-+++ b/drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c
-@@ -5,6 +5,8 @@
-  */
- 
- #include "mtk_mipi_tx.h"
-+#include <linux/nvmem-consumer.h>
-+#include <linux/slab.h>
- 
- #define MIPITX_LANE_CON		0x000c
- #define RG_DSI_CPHY_T1DRV_EN		BIT(0)
-@@ -28,6 +30,7 @@
- #define MIPITX_PLL_CON4		0x003c
- #define RG_DSI_PLL_IBIAS		(3 << 10)
- 
-+#define MIPITX_D2P_RTCODE	0x0100
- #define MIPITX_D2_SW_CTL_EN	0x0144
- #define MIPITX_D0_SW_CTL_EN	0x0244
- #define MIPITX_CK_CKMODE_EN	0x0328
-@@ -108,6 +111,58 @@ static const struct clk_ops mtk_mipi_tx_pll_ops = {
- 	.recalc_rate = mtk_mipi_tx_pll_recalc_rate,
- };
- 
-+static void mtk_mipi_tx_config_calibration_data(struct mtk_mipi_tx *mipi_tx)
-+{
-+	u32 *buf;
-+	u32 rt_code[5];
-+	int i, j;
-+	struct nvmem_cell *cell;
-+	struct device *dev = mipi_tx->dev;
-+	size_t len;
-+
-+	cell = nvmem_cell_get(dev, "calibration-data");
-+	if (IS_ERR(cell)) {
-+		dev_info(dev, "nvmem_cell_get fail\n");
-+		return;
-+	}
-+
-+	buf = (u32 *)nvmem_cell_read(cell, &len);
-+
-+	nvmem_cell_put(cell);
-+
-+	if (IS_ERR(buf)) {
-+		dev_info(dev, "can't get data\n");
-+		return;
-+	}
-+
-+	if (len < 3 * sizeof(u32)) {
-+		dev_info(dev, "invalid calibration data\n");
-+		kfree(buf);
-+		return;
-+	}
-+
-+	rt_code[0] = ((buf[0] >> 6 & 0x1f) << 5) | (buf[0] >> 11 & 0x1f);
-+	rt_code[1] = ((buf[1] >> 27 & 0x1f) << 5) | (buf[0] >> 1 & 0x1f);
-+	rt_code[2] = ((buf[1] >> 17 & 0x1f) << 5) | (buf[1] >> 22 & 0x1f);
-+	rt_code[3] = ((buf[1] >> 7 & 0x1f) << 5) | (buf[1] >> 12 & 0x1f);
-+	rt_code[4] = ((buf[2] >> 27 & 0x1f) << 5) | (buf[1] >> 2 & 0x1f);
-+
-+	for (i = 0; i < 5; i++) {
-+		if ((rt_code[i] & 0x1f) == 0)
-+			rt_code[i] |= 0x10;
-+
-+		if ((rt_code[i] >> 5 & 0x1f) == 0)
-+			rt_code[i] |= 0x10 << 5;
-+
-+		for (j = 0; j < 10; j++)
-+			mtk_mipi_tx_update_bits(mipi_tx,
-+				MIPITX_D2P_RTCODE * (i + 1) + j * 4,
-+				1, rt_code[i] >> j & 1);
-+	}
-+
-+	kfree(buf);
-+}
-+
- static void mtk_mipi_tx_power_on_signal(struct phy *phy)
- {
- 	struct mtk_mipi_tx *mipi_tx = phy_get_drvdata(phy);
-@@ -130,6 +185,8 @@ static void mtk_mipi_tx_power_on_signal(struct phy *phy)
- 				RG_DSI_HSTX_LDO_REF_SEL,
- 				mipi_tx->mipitx_drive << 6);
- 
-+	mtk_mipi_tx_config_calibration_data(mipi_tx);
-+
- 	mtk_mipi_tx_set_bits(mipi_tx, MIPITX_CK_CKMODE_EN, DSI_CK_CKMODE_EN);
- }
- 
+> > > +     ov8856->xvclk = devm_clk_get(&client->dev, "xvclk");
+> > > +     if (IS_ERR(ov8856->xvclk)) {
+> > > +             dev_err(&client->dev, "failed to get xvclk\n");
+> > > +             return -EINVAL;
+> > > +     }
+> >
+> > Previously it worked without clock provider, now you make a dependency.
+> >
+> > This won't work.
+> 
+> So the ideal behavior would be to only use the xclk if it is provided?
+
+Yes, make it optional.
+
 -- 
-2.21.0
+With Best Regards,
+Andy Shevchenko
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
