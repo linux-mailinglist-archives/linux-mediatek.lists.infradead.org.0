@@ -2,66 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1B948182EAA
-	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Mar 2020 12:10:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id F131F182EE9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 12 Mar 2020 12:21:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OtHMH8vzaxr9dCerGm5qjojJf56AlsDj2JlckDdjgK0=; b=UAn87PtzEl9f7C
-	vtNp0opEfrN+0HPojCdnID2MSCZmVlCLhI/bk3oFXv09bqIOuEQUDeFghFoLVa2QcPQaTsSOsEFTr
-	r79HCJWIS4kC76Ngn0QS6ja4z4ySZ8gHBfgKR/xeoSWP70Pn7HWoC6O+V5o3KW1FsZK/EpC8PLZBk
-	Qy7jt7+DesXZsaqD8gYzl5dL/slVsVoBEmmp+dyJ/7AodwmJu84iafhfJ8PnZjKlsdnMPxcXDGRX2
-	rEXGv37rW8aE15vx4lDNJFkdvHw+QcmySBgnaTMbp/RKwnoYaTA1csYvQmf9r8S4+H50fvTh/d1sT
-	1xAVmuixZxQ/rIulNCnw==;
+	List-Owner; bh=7YVkkagmdl3aqlLNzoA+vFDpHaOyuJz+IQM9lD/S+vI=; b=AItfquarFz+o7B
+	LOhtr+2XPM2GCNrrPQ985ZkuAtKk7VKnoKS5gVaAZff0ZXuHCqvRugMd6W7yMBGGEA0bXs2sZrTSy
+	zwsOUVMCmFZin5mt2CCx8soY8dx/4xb9jxZ6NshlFtOkLabrYEZO7GAp9aPnEr0pwLy9riswV6BX0
+	Xk6WDrnjzSi9jKvCDjXvi8njRIuW3OCldlcro/b4yb7A6q/nX+u3+sFCnlC49q2SDk6+eh5UCYVzA
+	0jahW8Raw7zBPsl5ehYQX4Y1S2vLx3cwxeEf2wNQ7d6CcJlwnNNA1XgiL1b3QK/LXrgbd624P8zNf
+	z8IgglBX6xoLhRF8fOew==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jCLjC-0000uW-DF; Thu, 12 Mar 2020 11:10:14 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jCLtY-0006kN-B7; Thu, 12 Mar 2020 11:20:56 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jCLiM-0007ZR-KY; Thu, 12 Mar 2020 11:09:24 +0000
-X-UUID: 09f2739fbfd649d68836fb0607861742-20200312
+ id 1jCLs6-0003w5-NS; Thu, 12 Mar 2020 11:19:28 +0000
+X-UUID: fb65c50c89ce4bae826f6a66553bc23b-20200312
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=V0NA4KPO9Qx6CWFwXlXwaAgsNy5l/HosjCAdNi25TcM=; 
- b=ebFetOWloV3FIYapEBFPSCR2xI/W+lj4ujKpCIPiAnrM1IL3vog2ZaAUMQbKW9wLGprLgusInLbMJkYvyGYp6p+uMo88H6N+Md9ibV90m0T3ZQXY5R8NofS9+6T52aiKA+UUUfGxn6SdP8CSqQoUhC8BJnD0EOJdfs5M5oW3ek0=;
-X-UUID: 09f2739fbfd649d68836fb0607861742-20200312
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=4TIG4byHma4NOdZnY1tFZDNMEK8I4hnml0HdV5eY6KA=; 
+ b=OlTNiGFOOFTvmvLHVaCzbKDR2kwplWDqXztmi745OwdwJAOIkVKGib9PjfzmW3fLmWmxpzW+KKvnG+kKkSXdh85VTmj4rpV4WbvSjhiuMhDDz6dEJiBrmJtz6t8qhiv6ugpxmNFf4355OwfJ5m5dRUc4RImI6MjOiTgfOMPqMxE=;
+X-UUID: fb65c50c89ce4bae826f6a66553bc23b-20200312
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 332729883; Thu, 12 Mar 2020 03:09:20 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Mar 2020 04:09:27 -0700
+ with ESMTP id 228233227; Thu, 12 Mar 2020 03:19:20 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Mar 2020 04:09:24 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 12 Mar 2020 19:07:43 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 12 Mar 2020 19:06:22 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Thu, 12 Mar 2020 19:08:50 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v2 3/8] scsi: ufs: use an enum for host capabilities
-Date: Thu, 12 Mar 2020 19:09:03 +0800
-Message-ID: <20200312110908.14895-4-stanley.chu@mediatek.com>
+Subject: [PATCH v2 4/8] scsi: ufs: introduce common delay function
+Date: Thu, 12 Mar 2020 19:09:04 +0800
+Message-ID: <20200312110908.14895-5-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200312110908.14895-1-stanley.chu@mediatek.com>
 References: <20200312110908.14895-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 1F9954EFF68B75AC86A7E02E9F2627FC51461FF97E076A047928928F4A86C0982000:8
+X-TM-SNTS-SMTP: 640FA8D674D04502A57F937DF8F04FAFA73D2CCC4DDAA72B2DC102A3490FAD1C2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200312_040922_682249_52302C6F 
-X-CRM114-Status: GOOD (  10.93  )
+X-CRM114-CacheID: sfid-20200312_041926_931913_84D95543 
+X-CRM114-Status: GOOD (  12.67  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -97,98 +99,108 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Use an enum to specify the host capabilities instead of #defines inside the
-structure definition.
+Introduce common delay function to collect all delay requirements
+to simplify driver and take choices of udelay and usleep_range into
+consideration.
 
 Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Can Guo <cang@codeaurora.org>
 ---
- drivers/scsi/ufs/ufshcd.h | 65 ++++++++++++++++++++++-----------------
- 1 file changed, 37 insertions(+), 28 deletions(-)
+ drivers/scsi/ufs/ufshcd.c | 27 ++++++++++++++++++---------
+ drivers/scsi/ufs/ufshcd.h |  1 +
+ 2 files changed, 19 insertions(+), 9 deletions(-)
 
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index b4988b9ee36c..ce65d321a73f 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -597,6 +597,18 @@ static void ufshcd_print_pwr_info(struct ufs_hba *hba)
+ 		 hba->pwr_info.hs_rate);
+ }
+ 
++void ufshcd_wait_us(unsigned long us, unsigned long tolerance, bool can_sleep)
++{
++	if (!us)
++		return;
++
++	if (us < 10 || !can_sleep)
++		udelay(us);
++	else
++		usleep_range(us, us + tolerance);
++}
++EXPORT_SYMBOL_GPL(ufshcd_wait_us);
++
+ /*
+  * ufshcd_wait_for_register - wait for register value to change
+  * @hba - per-adapter interface
+@@ -620,10 +632,7 @@ int ufshcd_wait_for_register(struct ufs_hba *hba, u32 reg, u32 mask,
+ 	val = val & mask;
+ 
+ 	while ((ufshcd_readl(hba, reg) & mask) != val) {
+-		if (can_sleep)
+-			usleep_range(interval_us, interval_us + 50);
+-		else
+-			udelay(interval_us);
++		ufshcd_wait_us(interval_us, 50, can_sleep);
+ 		if (time_after(jiffies, timeout)) {
+ 			if ((ufshcd_readl(hba, reg) & mask) != val)
+ 				err = -ETIMEDOUT;
+@@ -3565,7 +3574,7 @@ static inline void ufshcd_add_delay_before_dme_cmd(struct ufs_hba *hba)
+ 	}
+ 
+ 	/* allow sleep for extra 50us if needed */
+-	usleep_range(min_sleep_time_us, min_sleep_time_us + 50);
++	ufshcd_wait_us(min_sleep_time_us, 50, true);
+ }
+ 
+ /**
+@@ -4289,7 +4298,7 @@ int ufshcd_hba_enable(struct ufs_hba *hba)
+ 	 * instruction might be read back.
+ 	 * This delay can be changed based on the controller.
+ 	 */
+-	usleep_range(1000, 1100);
++	ufshcd_wait_us(1000, 100, true);
+ 
+ 	/* wait for the host controller to complete initialization */
+ 	retry = 10;
+@@ -4301,7 +4310,7 @@ int ufshcd_hba_enable(struct ufs_hba *hba)
+ 				"Controller enable failed\n");
+ 			return -EIO;
+ 		}
+-		usleep_range(5000, 5100);
++		ufshcd_wait_us(5000, 100, true);
+ 	}
+ 
+ 	/* enable UIC related interrupts */
+@@ -6224,7 +6233,7 @@ static int ufshcd_abort(struct scsi_cmnd *cmd)
+ 			reg = ufshcd_readl(hba, REG_UTP_TRANSFER_REQ_DOOR_BELL);
+ 			if (reg & (1 << tag)) {
+ 				/* sleep for max. 200us to stabilize */
+-				usleep_range(100, 200);
++				ufshcd_wait_us(100, 100, true);
+ 				continue;
+ 			}
+ 			/* command completed already */
+@@ -7783,7 +7792,7 @@ static void ufshcd_vreg_set_lpm(struct ufs_hba *hba)
+ 	 */
+ 	if (!ufshcd_is_link_active(hba) &&
+ 	    hba->dev_quirks & UFS_DEVICE_QUIRK_DELAY_BEFORE_LPM)
+-		usleep_range(2000, 2100);
++		ufshcd_wait_us(2000, 100, true);
+ 
+ 	/*
+ 	 * If UFS device is either in UFS_Sleep turn off VCC rail to save some
 diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
-index 5cf79d2319a6..fec004cd8054 100644
+index fec004cd8054..4683e7bf6640 100644
 --- a/drivers/scsi/ufs/ufshcd.h
 +++ b/drivers/scsi/ufs/ufshcd.h
-@@ -501,6 +501,43 @@ enum ufshcd_quirks {
- 	UFSHCD_QUIRK_BROKEN_UFS_HCI_VERSION		= 1 << 5,
- };
- 
-+enum ufshcd_caps {
-+	/* Allow dynamic clk gating */
-+	UFSHCD_CAP_CLK_GATING				= 1 << 0,
-+
-+	/* Allow hiberb8 with clk gating */
-+	UFSHCD_CAP_HIBERN8_WITH_CLK_GATING		= 1 << 1,
-+
-+	/* Allow dynamic clk scaling */
-+	UFSHCD_CAP_CLK_SCALING				= 1 << 2,
-+
-+	/* Allow auto bkops to enabled during runtime suspend */
-+	UFSHCD_CAP_AUTO_BKOPS_SUSPEND			= 1 << 3,
-+
-+	/*
-+	 * This capability allows host controller driver to use the UFS HCI's
-+	 * interrupt aggregation capability.
-+	 * CAUTION: Enabling this might reduce overall UFS throughput.
-+	 */
-+	UFSHCD_CAP_INTR_AGGR				= 1 << 4,
-+
-+	/*
-+	 * This capability allows the device auto-bkops to be always enabled
-+	 * except during suspend (both runtime and suspend).
-+	 * Enabling this capability means that device will always be allowed
-+	 * to do background operation when it's active but it might degrade
-+	 * the performance of ongoing read/write operations.
-+	 */
-+	UFSHCD_CAP_KEEP_AUTO_BKOPS_ENABLED_EXCEPT_SUSPEND = 1 << 5,
-+
-+	/*
-+	 * This capability allows host controller driver to automatically
-+	 * enable runtime power management by itself instead of waiting
-+	 * for userspace to control the power management.
-+	 */
-+	UFSHCD_CAP_RPM_AUTOSUSPEND			= 1 << 6,
-+};
-+
- /**
-  * struct ufs_hba - per adapter private structure
-  * @mmio_base: UFSHCI base register address
-@@ -653,34 +690,6 @@ struct ufs_hba {
- 	struct ufs_clk_gating clk_gating;
- 	/* Control to enable/disable host capabilities */
- 	u32 caps;
--	/* Allow dynamic clk gating */
--#define UFSHCD_CAP_CLK_GATING	(1 << 0)
--	/* Allow hiberb8 with clk gating */
--#define UFSHCD_CAP_HIBERN8_WITH_CLK_GATING (1 << 1)
--	/* Allow dynamic clk scaling */
--#define UFSHCD_CAP_CLK_SCALING	(1 << 2)
--	/* Allow auto bkops to enabled during runtime suspend */
--#define UFSHCD_CAP_AUTO_BKOPS_SUSPEND (1 << 3)
--	/*
--	 * This capability allows host controller driver to use the UFS HCI's
--	 * interrupt aggregation capability.
--	 * CAUTION: Enabling this might reduce overall UFS throughput.
--	 */
--#define UFSHCD_CAP_INTR_AGGR (1 << 4)
--	/*
--	 * This capability allows the device auto-bkops to be always enabled
--	 * except during suspend (both runtime and suspend).
--	 * Enabling this capability means that device will always be allowed
--	 * to do background operation when it's active but it might degrade
--	 * the performance of ongoing read/write operations.
--	 */
--#define UFSHCD_CAP_KEEP_AUTO_BKOPS_ENABLED_EXCEPT_SUSPEND (1 << 5)
--	/*
--	 * This capability allows host controller driver to automatically
--	 * enable runtime power management by itself instead of waiting
--	 * for userspace to control the power management.
--	 */
--#define UFSHCD_CAP_RPM_AUTOSUSPEND (1 << 6)
- 
- 	struct devfreq *devfreq;
- 	struct ufs_clk_scaling clk_scaling;
+@@ -781,6 +781,7 @@ int ufshcd_init(struct ufs_hba * , void __iomem * , unsigned int);
+ int ufshcd_make_hba_operational(struct ufs_hba *hba);
+ void ufshcd_remove(struct ufs_hba *);
+ int ufshcd_uic_hibern8_exit(struct ufs_hba *hba);
++void ufshcd_wait_us(unsigned long us, unsigned long tolerance, bool can_sleep);
+ int ufshcd_wait_for_register(struct ufs_hba *hba, u32 reg, u32 mask,
+ 				u32 val, unsigned long interval_us,
+ 				unsigned long timeout_ms, bool can_sleep);
 -- 
 2.18.0
 _______________________________________________
