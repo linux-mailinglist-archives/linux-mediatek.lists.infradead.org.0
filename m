@@ -2,99 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BEC5018436A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 10:12:42 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6A02A1843A8
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 10:30:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hy3kCBucw6+tRwQ9MjD6nw49uS7TtKq9j7pwakkrduU=; b=Ai4gK3K52cKOEx
-	gJxpupuGPiiQNvMa618FgQ8m320BrqZqgbPJcEvqMpBGuw1EaW9OfwH3MDUyYAQSJA2C0UwfkHFaJ
-	golco/X1vpe3cOhvYgdy6iTtD7v1XdVZwOzM7CmDqAI4ihT6jBd79jlNO0ltVZbZHOD48JJBzT61U
-	UP8qORLoZZex3r6S96/7m88TSmry7Xf1VfoXoc7RK1A/3a3m4tq0CkxVx4vbab0UTO4hBw2y4fUG7
-	C7QAtXxyY37Z22iCxLt4jTpwVuHLlfKVBkRzwCUtb+vUYpxBlm6IzlakZufub8D2qIyIeTPkF9mYn
-	CtV0tBjp2UX1PDmVIxkA==;
+	List-Owner; bh=u5N88KEAzlBaLy4NrNaAkOOP9CNztzvOrv99HenC0so=; b=iy3zwRbscQwRtT
+	1L572uT2fF76ud+VhN9NGfgWCrqpDXY1k3ZTDYbn8wqbvGlLj1qIn+mpVqZdgpQowARBRzltKLC+v
+	saOmWWu9i87Oros8mrUxK037psO/yzZ0TdnJVIK+Gv/aem0ntq+SIA//FBkqyr2jtlMYYszF2RieN
+	162Q/VK9F8z3lBH9DL0WIas7eAcIohpS5DWCR3StVDpZDcEFmwXoCq9fycVEtPqScJVrXUfy88j1p
+	TTGtlSPYndNge4OtEnvM+T7mchcqFU6W3AMAJO23eJxjTVGzgBDyK1D+c4HdZdDIGiikQyvKBqrCN
+	7lHV5KBiLnilB5oepXUg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jCgMt-0001wt-IB; Fri, 13 Mar 2020 09:12:35 +0000
-Received: from mail-pj1-x1043.google.com ([2607:f8b0:4864:20::1043])
+	id 1jCgeE-0004kn-UO; Fri, 13 Mar 2020 09:30:30 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jCgL3-00008K-O4
- for linux-mediatek@lists.infradead.org; Fri, 13 Mar 2020 09:10:43 +0000
-Received: by mail-pj1-x1043.google.com with SMTP id u10so3840739pjy.0
- for <linux-mediatek@lists.infradead.org>; Fri, 13 Mar 2020 02:10:41 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=JtkM+yZ5+lxvRbR9JLka9INk2b+8sAQT2vc0MdMcdF0=;
- b=R4Eg+CqTJ0CA4+mX+Q0HT1tcnR6NS4q4j5dn6d8VDy7Wz394wQUwvT/NaDJrrFoRkR
- O4/q4o8nR8aYr9LiZjCjS7mE1Zfot+KRD4H1e72uNXjMpENOJ3vSrzA5e/rgHS2aYJt/
- BaKX921yAoqhLuHWhyjVZwWDx6d1rQow8LiWogRoqoq5Ed1jrZ5gmHxTleTjyMQZ8CKs
- T+ypxEPiziHju+YAqbmPXZgW3yTKrcT7Suk/VWNVnzOZBXvpyetDTnzJ6oSWvSHDjPYA
- 8QMe+yOkIm+I3kT1Poq2VSQAD5vtvUNRuCXLrRBzA4wiXWN3t1vy/UNExwtyBq89ThAc
- hzzg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=JtkM+yZ5+lxvRbR9JLka9INk2b+8sAQT2vc0MdMcdF0=;
- b=bsyVB+ZJ2e2qsV0Uw9/2AlbUyi3MJ5F1N+PKwTw//OhTNRF9vWfGij2ge2rp6xxNn3
- Opg8bW4/wvnnJNghFSuATJYH5EDd89iCKguqYtcrZ+Kdllcv+oTsxe54z6dGjsD3JxJf
- o1K1pKgG2RkvQUrkmR5Ts/SNhe5New1oeYIeRbncaaDAbmFjni6h9MZFBJTIb5OdgLcj
- c3HGRoXdJXEwekMvdLHz1vqn5Mqr+LQwI+jat7aHrIEAYkUBG7122xN2dDW6aSCbYJ6w
- vL9/6ZcoDpd72EhavtA8rYKqYvGDDRuvwkWmtaivtbz168pxbxS7gw/KapYPxZxLTEw3
- Bg5w==
-X-Gm-Message-State: ANhLgQ1ioPJ8rZMLXdm2bSrSZgD/sEV/98jKLaTvZbknEZwmQCMi/1IV
- wKTef8zcGO9Rk+IVeQHS7X2hRQ==
-X-Google-Smtp-Source: ADFU+vueMkKxf9i4W6oJIJHRrSOEaNDdoKCVYBJIRGmkg6vmX/eRdo6zNqs5xJmNtBnSly4IqRo2Fg==
-X-Received: by 2002:a17:902:7485:: with SMTP id
- h5mr11624298pll.13.1584090640801; 
- Fri, 13 Mar 2020 02:10:40 -0700 (PDT)
-Received: from localhost ([122.171.122.128])
- by smtp.gmail.com with ESMTPSA id c8sm4233902pfj.108.2020.03.13.02.10.39
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Fri, 13 Mar 2020 02:10:39 -0700 (PDT)
-Date: Fri, 13 Mar 2020 14:40:38 +0530
-From: Viresh Kumar <viresh.kumar@linaro.org>
-To: "andrew-sh.cheng" <andrew-sh.cheng@mediatek.com>
-Subject: Re: [v5, PATCH 4/5] cpufreq: mediatek: add opp notification for SVS
- support
-Message-ID: <20200313091038.q7q7exiowoah4nk4@vireshk-i7>
-References: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <1574769046-28449-5-git-send-email-andrew-sh.cheng@mediatek.com>
- <20191127083619.etocnhpyyut3hzwq@vireshk-i7>
- <1575874588.13494.4.camel@mtksdaap41>
- <20191210064319.f4ksrxozp3gv4xry@vireshk-i7>
- <1583827865.4840.1.camel@mtksdaap41>
- <20200311060616.62nh7sfwtjwvrjfr@vireshk-i7>
- <1584084154.7753.3.camel@mtksdaap41>
+ id 1jCgdz-0004bF-Uw; Fri, 13 Mar 2020 09:30:17 +0000
+Received: from localhost (unknown [IPv6:2a01:e0a:2c:6930:5cf4:84a1:2763:fe0d])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256
+ bits)) (No client certificate requested)
+ (Authenticated sender: bbrezillon)
+ by bhuna.collabora.co.uk (Postfix) with ESMTPSA id 83AF0295CF8;
+ Fri, 13 Mar 2020 09:30:11 +0000 (GMT)
+Date: Fri, 13 Mar 2020 10:30:07 +0100
+From: Boris Brezillon <boris.brezillon@collabora.com>
+To: Vignesh Raghavendra <vigneshr@ti.com>
+Subject: Re: [PATCH 01/23] mtd: spi-nor: Stop prefixing generic functions
+ with a manufacturer name
+Message-ID: <20200313103007.7d7ea6af@collabora.com>
+In-Reply-To: <91394111-cbd6-c24e-485d-88fcd6825dc7@ti.com>
+References: <20200302180730.1886678-1-tudor.ambarus@microchip.com>
+ <20200302180730.1886678-2-tudor.ambarus@microchip.com>
+ <91394111-cbd6-c24e-485d-88fcd6825dc7@ti.com>
+Organization: Collabora
+X-Mailer: Claws Mail 3.17.5 (GTK+ 2.24.32; x86_64-redhat-linux-gnu)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1584084154.7753.3.camel@mtksdaap41>
-User-Agent: NeoMutt/20180716-391-311a52
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200313_021041_842530_73453515 
-X-CRM114-Status: UNSURE (   9.78  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200313_023016_128546_39F27EB3 
+X-CRM114-Status: GOOD (  19.17  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:1043 listed in]
- [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -106,43 +62,117 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
- Stephen Boyd <sboyd@kernel.org>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>, Rob Herring <robh+dt@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- MyungJoo Ham <myungjoo.ham@samsung.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Fan Chen =?utf-8?B?KOmZs+WHoSk=?= <fan.chen@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: kstewart@linuxfoundation.org, alexandre.belloni@bootlin.com,
+ linux-aspeed@lists.ozlabs.org, thor.thayer@linux.intel.com,
+ jethro@fortanix.com, rfontana@redhat.com, linux-mtd@lists.infradead.org,
+ miquel.raynal@bootlin.com, opensource@jilayne.com, richard@nod.at,
+ allison@lohutok.net, michal.simek@xilinx.com, Ludovic.Desroches@microchip.com,
+ joel@jms.id.au, nishkadg.linux@gmail.com, Tudor.Ambarus@microchip.com,
+ john.garry@huawei.com, vz@mleia.com, alexander.sverdlin@nokia.com,
+ matthias.bgg@gmail.com, tglx@linutronix.de, swboyd@chromium.org,
+ mika.westerberg@linux.intel.com, ludovic.barre@st.com,
+ linux-arm-kernel@lists.infradead.org, bbrezillon@kernel.org, andrew@aj.id.au,
+ Nicolas.Ferre@microchip.com, linux-kernel@vger.kernel.org, dinguyen@kernel.org,
+ michael@walle.cc, linux-mediatek@lists.infradead.org, info@metux.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 13-03-20, 15:22, andrew-sh.cheng wrote:
-> I have something want to consult you.
-> For your previous comment, you suggest use read-write lock to replace
-> mutex lock.
-> Will it be more efficiently even when all are write lock?
-> (all lock region are "setting VProc voltage")
+On Fri, 13 Mar 2020 11:34:55 +0530
+Vignesh Raghavendra <vigneshr@ti.com> wrote:
 
-The data to be protected here isn't the VProc voltage but the list of
-valid OPPs. My idea was if we can make the target() routine run a bit
-faster as it really matters as it is called from scheduler hot path.
+> On 02/03/20 11:37 pm, Tudor.Ambarus@microchip.com wrote:
+> > From: Boris Brezillon <bbrezillon@kernel.org>
+> > 
+> > Replace the manufacturer prefix by something describing more precisely
+> > what those functions do.
+> > 
+> > Signed-off-by: Boris Brezillon <bbrezillon@kernel.org>
+> > [tudor.ambarus@microchip.com: prepend spi_nor_ to all modified methods.]
+> > Signed-off-by: Tudor Ambarus <tudor.ambarus@microchip.com>
+> > ---
+> >  drivers/mtd/spi-nor/spi-nor.c | 88 ++++++++++++++++++-----------------
+> >  1 file changed, 45 insertions(+), 43 deletions(-)
+> > 
+> > diff --git a/drivers/mtd/spi-nor/spi-nor.c b/drivers/mtd/spi-nor/spi-nor.c
+> > index caf0c109cca0..b15e262765e1 100644
+> > --- a/drivers/mtd/spi-nor/spi-nor.c
+> > +++ b/drivers/mtd/spi-nor/spi-nor.c
+> > @@ -568,14 +568,15 @@ static int spi_nor_read_cr(struct spi_nor *nor, u8 *cr)
+> >  }
+> >  
+> >  /**
+> > - * macronix_set_4byte() - Set 4-byte address mode for Macronix flashes.
+> > + * spi_nor_en4_ex4_set_4byte() - Enter/Exit 4-byte mode for Macronix like
+> > + * flashes.
+> >   * @nor:	pointer to 'struct spi_nor'.
+> >   * @enable:	true to enter the 4-byte address mode, false to exit the 4-byte
+> >   *		address mode.
+> >   *
+> >   * Return: 0 on success, -errno otherwise.
+> >   */
+> > -static int macronix_set_4byte(struct spi_nor *nor, bool enable)
+> > +static int spi_nor_en4_ex4_set_4byte(struct spi_nor *nor, bool enable)  
+> 
+> 
+> Sounds a bit weird, how about simplifying this to:
+> 
+> 	spi_nor_set_4byte_addr_mode()
+> 
+> Or if you want to be specific:
+> 
+> 	spi_nor_en_ex_4byte_addr_mode()
 
-It won't be wrong to use the mutex the way you have used it right now,
-but I think the read lock is much faster, though the read/write lock
-is more beneficial in case where there are multiple readers and fewer
-writers. The target() routine gets called multiple times here, not
-in parallel, and the OPP change notifier won't be called so often.
+You're right. Maybe we can simplify things by having a single function
+that does optional steps based on new flags
 
--- 
-viresh
+SPI_NOR_EN_EX_4B_NEEDS_WEN
+SPI_NOR_CLEAR_EAR_ON_4B_EXIT
+
+This should probably be done in a separate patch though, so ack on the
+spi_nor_en_ex_4byte_addr_mode() rename, assuming we also change the
+bool argument name to enter.
+
+> 
+> >  {
+> >  	int ret;
+> >  
+> > @@ -604,14 +605,15 @@ static int macronix_set_4byte(struct spi_nor *nor, bool enable)
+> >  }
+> >  
+> >  /**
+> > - * st_micron_set_4byte() - Set 4-byte address mode for ST and Micron flashes.
+> > + * spi_nor_en4_ex4_wen_set_4byte() - Set 4-byte address mode for ST and Micron
+> > + * flashes.
+> >   * @nor:	pointer to 'struct spi_nor'.
+> >   * @enable:	true to enter the 4-byte address mode, false to exit the 4-byte
+> >   *		address mode.
+> >   *
+> >   * Return: 0 on success, -errno otherwise.
+> >   */
+> > -static int st_micron_set_4byte(struct spi_nor *nor, bool enable)
+> > +static int spi_nor_en4_ex4_wen_set_4byte(struct spi_nor *nor, bool enable)  
+> 
+> 
+> Unrelated to this patch itself, but can we just have one set_4byte
+> variant that uses WREN and drop the other one?
+
+Hm, not sure that's a good idea to insert WEN instructions for
+everyone, sounds like a recipe for regressions.
+
+> I expect sending WREN should be harmless even for cmds that don't expect
+> one.
+
+In theory yes, but you know flash chips are capricious, so let's not
+take the risk of breaking things :-).
+
+> 
+> Rest looks good to me.
+> 
+> Reviewed-by: Vignesh Raghavendra <vigneshr@ti.com>
+> 
+
 
 _______________________________________________
 Linux-mediatek mailing list
