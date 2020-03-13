@@ -2,74 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 762391843D5
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 10:35:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D1D08184447
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 11:04:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=G5ULMANOW9mhYvxBmjdW/7GMil0I5xsXWBH2MYM4few=; b=Mw/YEeexibj1AM
-	O+migyWr+v9FRl0oVJemSD6pT0S3PGOZIpj7WO0sqkMZeksKWcDPPibAsaCm5MdXwv6wwbNQNebKV
-	2G2LZwDGQgcI4ew8ZPZPuDRlrGmI8c2gE7wS7yTvM2nLCBxJk+2SUQLUErGuYzpjJ5WdYih4WKygJ
-	4fP4IuV21HYcVd2B8c4+xwmWKDpyLHOU2JashFK4D8zk6ThwyKxqLFR+BmKfYf3wqCGEts/M9wBOK
-	Jt7la+xZLADotKxc0rPdvtpQSOoGZIA90boR0J+qzPkfpuvt9xCwW0At/U9MbvDgqqUS8i4OzEBZY
-	5poE9oUvX1ZVP1v/0QuA==;
+	List-Owner; bh=EjnSeHZMp34T6a5+HWw3Vwwv6WWE6BPKvVCAi54heFc=; b=s21GMT10iaucQc
+	Dwn/1pJtIaD9Ej0sl2ZwBv8Gdy8El64RTy8sPQ+LIoTxT31d0Ywk52p6jE6oh31oev6XcmRPnCKgW
+	Qml9Winl8t499vYiIRrbp/nP180ZGMwQUnmIziEVD/zn2oAN6lw+6gIkj51holECj8pG4wFhY4sv0
+	/de2byRh40uO00GX32IxTAjITbc7JAJqjmOe3t1kZliIgyDvWwuZnzYBwHenY59NJ7jLipVk2tHOg
+	JAybbK19CfeS2Zj5ynyjNJKqWgeZMpF0MZWYpLxyOeC6CyfmsR27Y+kJs6pEpSZQ1145c01N0v+fN
+	m2i/GYijWQBAksa7SBpg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jCgj7-0007eP-Cw; Fri, 13 Mar 2020 09:35:33 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jChBE-0005no-56; Fri, 13 Mar 2020 10:04:36 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jCgiE-0005hE-9Z; Fri, 13 Mar 2020 09:34:40 +0000
-X-UUID: c24e25b729074038ab394ad658f0be99-20200313
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=2qE7PbfXzy66Yp8LoZ/lGZF9GEsphFhu31a20MpMGno=; 
- b=JQlH6rF5iwVlBWE2fNrVnlBE4kWH9p69UQfmadunlCfleGMvoY/3Dd+YCkxmE4y7YdzLjzSe1ewiUyFl7LTG35VVTyE82qzaXekEf3UgqvP3+5fpmfQ8OKKe6g62/6Kzz7S6I/Nlf+Wry2JcwyI5yTCckH3XyKxRj0kToij1WY0=;
-X-UUID: c24e25b729074038ab394ad658f0be99-20200313
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <henryc.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 757866669; Fri, 13 Mar 2020 01:34:33 -0800
-Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 13 Mar 2020 02:34:43 -0700
-Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 13 Mar 2020 17:33:32 +0800
-Received: from mtksdaap41.mediatek.inc (172.21.77.4) by mtkcas09.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Fri, 13 Mar 2020 17:33:42 +0800
-From: Henry Chen <henryc.chen@mediatek.com>
-To: Georgi Djakov <georgi.djakov@linaro.org>, Rob Herring
- <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, Viresh Kumar
- <vireshk@kernel.org>, Stephen Boyd <swboyd@chromium.org>, Ryan Case
- <ryandcase@chromium.org>, Mark Brown <broonie@kernel.org>
-Subject: [PATCH V4 13/13] arm64: dts: mt8183: add dvfsrc regulator nodes
-Date: Fri, 13 Mar 2020 17:34:26 +0800
-Message-ID: <1584092066-24425-14-git-send-email-henryc.chen@mediatek.com>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1584092066-24425-1-git-send-email-henryc.chen@mediatek.com>
-References: <1584092066-24425-1-git-send-email-henryc.chen@mediatek.com>
+ id 1jChAv-0005XK-LY
+ for linux-mediatek@lists.infradead.org; Fri, 13 Mar 2020 10:04:19 +0000
+Received: by mail-wr1-x443.google.com with SMTP id s5so11314926wrg.3
+ for <linux-mediatek@lists.infradead.org>; Fri, 13 Mar 2020 03:04:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=Q1BEt3UIGfTekolaIpPF/hNSscfxV9hshAR77bRQcfs=;
+ b=Iro+3wZDWxCWBF3ZCk4grTtxEu8Ng2iTU/+5rxgpeCPlIMvgELtoh1xmBS6mLfYBJp
+ PbKf695K0pbXUAtKLP81n78yrq39uBxyUxhVDEjljT/whkCSZqM6Jg2mOnzW6LaNCha8
+ aqI0aswpcT9Wrv5bn1NFxW/5C/KUtz8ABt9I0XpHUu9fQjtK6GV3SJkyZNpqtXtNDcXm
+ IPS1f3XXRq5PRyhiZhaQfY+WFVV84msB79je7IBk5pWsWkH/oJLcPrICAH9qW7Dw8tdP
+ kwGJQBs+RqMQfqI3N8r8SOixaP1DgMzACMqqflMsgRcl0KTOu6NjLf5utsw9IJzFIM0H
+ l7Pw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=Q1BEt3UIGfTekolaIpPF/hNSscfxV9hshAR77bRQcfs=;
+ b=fVzfhJ8ueJK36heA75AX7kTMTjGu31oAZESfWbbJPVJoBxevsfwAFtqVLhdMDGtWbz
+ /rmqWGwr02zpXs90kxOET8NqqOAvUE8AW4HdNmleSGb6LZVW1VbqCmX7CvETPmdFjFUa
+ 2KZbSJWCn5TbEHe0bKlfaAPKaLf+WjN/GqVPxLAX/jGoel4Ny3US78aE0nEG+L2e4ewc
+ BvEpOEKFa/GZqLYzNNvRpoGRFeBzYkYpPCEKazm5L5NUGKi1gqJf0Vw7X5WZ7Bm4bZzM
+ PzDD/6w4Xk5mQkf3giFLRuOyl50oPwkSPnwLnf0kXrpwtN5eTQ0n3voQGD7Hiyt4xi1z
+ qOXg==
+X-Gm-Message-State: ANhLgQ0whfnWkWPBfsQy9AbVZcRQylFjwggsGDeDp6d6W+VpZfeiqWhu
+ QlQ354slO6LH31qrTZtcpY3thQ==
+X-Google-Smtp-Source: ADFU+vuSOxM7UP5iet+lNWpCxn8Nzw1dxCSR6mmfTI+siSqyYgXG1TXkJqWMlxCnj9dsZhpGWBOitA==
+X-Received: by 2002:a5d:5691:: with SMTP id f17mr16399522wrv.74.1584093852416; 
+ Fri, 13 Mar 2020 03:04:12 -0700 (PDT)
+Received: from google.com ([2a00:79e0:d:110:d6cc:2030:37c1:9964])
+ by smtp.gmail.com with ESMTPSA id l83sm16694454wmf.43.2020.03.13.03.04.10
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 13 Mar 2020 03:04:11 -0700 (PDT)
+Date: Fri, 13 Mar 2020 10:04:07 +0000
+From: Quentin Perret <qperret@google.com>
+To: Lukasz Luba <lukasz.luba@arm.com>
+Subject: Re: [PATCH v4 1/4] PM / EM: add devices to Energy Model
+Message-ID: <20200313100407.GA144499@google.com>
+References: <20200309134117.2331-1-lukasz.luba@arm.com>
+ <20200309134117.2331-2-lukasz.luba@arm.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20200309134117.2331-2-lukasz.luba@arm.com>
+User-Agent: Mutt/1.12.2 (2019-09-21)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200313_023438_334982_E69A0184 
-X-CRM114-Status: UNSURE (   8.21  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200313_030417_704546_DD4AC886 
+X-CRM114-Status: GOOD (  20.37  )
+X-Spam-Score: -14.0 (--------------)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-14.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
+ 1.7 FSL_HELO_FAKE          No description available.
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -77,8 +91,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,49 +104,197 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nicolas Boichat <drinkcat@google.com>,
- Mike Turquette <mturquette@linaro.org>, srv_heupstream@mediatek.com,
- James Liao <jamesjj.liao@mediatek.com>, linux-pm@vger.kernel.org,
- linux-kernel@vger.kernel.org, "henryc.chen" <henryc.chen@mediatek.com>,
- Fan Chen <fan.chen@mediatek.com>, devicetree@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Arvin Wang <arvin.wang@mediatek.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: nm@ti.com, juri.lelli@redhat.com, peterz@infradead.org,
+ viresh.kumar@linaro.org, liviu.dudau@arm.com, dri-devel@lists.freedesktop.org,
+ bjorn.andersson@linaro.org, bsegall@google.com,
+ alyssa.rosenzweig@collabora.com, festevam@gmail.com, Morten.Rasmussen@arm.com,
+ robh@kernel.org, amit.kucheria@verdurent.com, lorenzo.pieralisi@arm.com,
+ vincent.guittot@linaro.org, khilman@kernel.org, agross@kernel.org,
+ daniel.lezcano@linaro.org, steven.price@arm.com, cw00.choi@samsung.com,
+ mingo@redhat.com, linux-imx@nxp.com, rui.zhang@intel.com, mgorman@suse.de,
+ orjan.eide@arm.com, daniel@ffwll.ch, linux-pm@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, s.hauer@pengutronix.de, rostedt@goodmis.org,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
+ linux-omap@vger.kernel.org, Dietmar.Eggemann@arm.com,
+ linux-arm-kernel@lists.infradead.org, airlied@linux.ie, javi.merino@arm.com,
+ tomeu.vizoso@collabora.com, sboyd@kernel.org, rdunlap@infradead.org,
+ rjw@rjwysocki.net, linux-kernel@vger.kernel.org, b.zolnierkie@samsung.com,
+ kernel@pengutronix.de, sudeep.holla@arm.com, patrick.bellasi@matbug.net,
+ shawnguo@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "henryc.chen" <henryc.chen@mediatek.com>
+Hi Lukasz,
 
-Add dvfsrc regulator nodes which is for MT8183-based platforms
+On Monday 09 Mar 2020 at 13:41:14 (+0000), Lukasz Luba wrote:
+<snip>
+> diff --git a/drivers/opp/of.c b/drivers/opp/of.c
+> index 9cd8f0adacae..0efd6cf6d023 100644
+> --- a/drivers/opp/of.c
+> +++ b/drivers/opp/of.c
+> @@ -1047,9 +1047,8 @@ EXPORT_SYMBOL_GPL(dev_pm_opp_get_of_node);
+>   * calculation failed because of missing parameters, 0 otherwise.
+>   */
+>  static int __maybe_unused _get_cpu_power(unsigned long *mW, unsigned long *kHz,
+> -					 int cpu)
+> +					 struct device *cpu_dev)
+>  {
+> -	struct device *cpu_dev;
+>  	struct dev_pm_opp *opp;
+>  	struct device_node *np;
+>  	unsigned long mV, Hz;
+> @@ -1057,10 +1056,6 @@ static int __maybe_unused _get_cpu_power(unsigned long *mW, unsigned long *kHz,
+>  	u64 tmp;
+>  	int ret;
+>  
+> -	cpu_dev = get_cpu_device(cpu);
+> -	if (!cpu_dev)
+> -		return -ENODEV;
+> -
+>  	np = of_node_get(cpu_dev->of_node);
+>  	if (!np)
+>  		return -EINVAL;
+> @@ -1128,6 +1123,6 @@ void dev_pm_opp_of_register_em(struct cpumask *cpus)
+>  	if (ret || !cap)
+>  		return;
+>  
+> -	em_register_perf_domain(cpus, nr_opp, &em_cb);
+> +	em_register_perf_domain(cpu_dev, nr_opp, &em_cb, cpus);
 
-Signed-off-by: Henry chen <henryc.chen@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 9 +++++++++
- 1 file changed, 9 insertions(+)
+Any reason for not checking the return value here ? You added a nice
+check in scmi_get_cpu_power(), perhaps do the same thing here ?
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 57a55a3..66a3372 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -169,6 +169,15 @@
- 			compatible = "mediatek,mt8183-emi";
- 			#interconnect-cells = <1>;
- 		};
-+		dvfsrc-regulator {
-+			compatible = "mediatek,mt8183-dvfsrc-regulator";
-+			dvfsrc_vcore: dvfsrc-vcore {
-+				regulator-name = "dvfsrc-vcore";
-+				regulator-min-microvolt = <725000>;
-+				regulator-max-microvolt = <800000>;
-+				regulator-always-on;
-+			};
-+		};
- 	};
- 
- 	timer {
--- 
-1.9.1
+>  }
+>  EXPORT_SYMBOL_GPL(dev_pm_opp_of_register_em);
+> diff --git a/drivers/thermal/cpufreq_cooling.c b/drivers/thermal/cpufreq_cooling.c
+> index fe83d7a210d4..fcf2dab1b3b8 100644
+> --- a/drivers/thermal/cpufreq_cooling.c
+> +++ b/drivers/thermal/cpufreq_cooling.c
+> @@ -333,18 +333,18 @@ static inline bool em_is_sane(struct cpufreq_cooling_device *cpufreq_cdev,
+>  		return false;
+>  
+>  	policy = cpufreq_cdev->policy;
+> -	if (!cpumask_equal(policy->related_cpus, to_cpumask(em->cpus))) {
+> +	if (!cpumask_equal(policy->related_cpus, em_span_cpus(em))) {
+>  		pr_err("The span of pd %*pbl is misaligned with cpufreq policy %*pbl\n",
+> -			cpumask_pr_args(to_cpumask(em->cpus)),
+> +			cpumask_pr_args(em_span_cpus(em)),
+>  			cpumask_pr_args(policy->related_cpus));
+>  		return false;
+>  	}
+>  
+>  	nr_levels = cpufreq_cdev->max_level + 1;
+> -	if (em->nr_cap_states != nr_levels) {
+> +	if (em->nr_perf_states != nr_levels) {
+>  		pr_err("The number of cap states in pd %*pbl (%u) doesn't match the number of cooling levels (%u)\n",
+
+s/cap states/performance states
+
+> -			cpumask_pr_args(to_cpumask(em->cpus)),
+> -			em->nr_cap_states, nr_levels);
+> +			cpumask_pr_args(em_span_cpus(em)),
+> +			em->nr_perf_states, nr_levels);
+>  		return false;
+>  	}
+
+<snip>
+> +static int em_create_perf_table(struct device *dev, struct em_perf_domain *pd,
+> +				int nr_states, struct em_data_callback *cb)
+>  {
+>  	unsigned long opp_eff, prev_opp_eff = ULONG_MAX;
+>  	unsigned long power, freq, prev_freq = 0;
+> -	int i, ret, cpu = cpumask_first(span);
+> -	struct em_cap_state *table;
+> -	struct em_perf_domain *pd;
+> +	struct em_perf_state *table;
+> +	int i, ret;
+>  	u64 fmax;
+>  
+> -	if (!cb->active_power)
+> -		return NULL;
+> -
+> -	pd = kzalloc(sizeof(*pd) + cpumask_size(), GFP_KERNEL);
+> -	if (!pd)
+> -		return NULL;
+> -
+>  	table = kcalloc(nr_states, sizeof(*table), GFP_KERNEL);
+>  	if (!table)
+> -		goto free_pd;
+> +		return -ENOMEM;
+>  
+> -	/* Build the list of capacity states for this performance domain */
+> +	/* Build the list of performance states for this performance domain */
+>  	for (i = 0, freq = 0; i < nr_states; i++, freq++) {
+>  		/*
+>  		 * active_power() is a driver callback which ceils 'freq' to
+> -		 * lowest capacity state of 'cpu' above 'freq' and updates
+> +		 * lowest performance state of 'dev' above 'freq' and updates
+>  		 * 'power' and 'freq' accordingly.
+>  		 */
+> -		ret = cb->active_power(&power, &freq, cpu);
+> +		ret = cb->active_power(&power, &freq, dev);
+>  		if (ret) {
+> -			pr_err("pd%d: invalid cap. state: %d\n", cpu, ret);
+> +			dev_err(dev, "EM: invalid perf. state: %d\n",
+> +				ret);
+
+Not easy to figure out which device has a problem with this. I'm
+guessing you went that way since this is called before ida_simple_get() ?
+Could that be refactored to make the error message more useful ?
+
+>  			goto free_cs_table;
+>  		}
+
+<snip>
+> +/**
+> + * em_unregister_perf_domain() - Unregister Energy Model (EM) for the device
+> + * @dev		: Device for which the EM is registered
+> + *
+> + * Try to unregister the EM for the specified device (it checks current
+> + * reference counter). The EM for CPUs will not be freed.
+> + */
+> +void em_unregister_perf_domain(struct device *dev)
+> +{
+> +	struct em_device *em_dev, *tmp;
+> +
+> +	if (IS_ERR_OR_NULL(dev))
+> +		return;
+> +
+> +	/* We don't support freeing CPU structures in hotplug */
+> +	if (_is_cpu_device(dev))
+> +		return;
+
+Can we WARN() here ?
+
+> +
+> +	mutex_lock(&em_pd_mutex);
+> +
+> +	if (list_empty(&em_pd_dev_list)) {
+> +		mutex_unlock(&em_pd_mutex);
+> +		return;
+> +	}
+> +
+> +	list_for_each_entry_safe(em_dev, tmp, &em_pd_dev_list, em_dev_list) {
+> +		if (em_dev->dev == dev) {
+> +			kref_put(&em_dev->kref, _em_release);
+> +			break;
+> +		}
+> +	}
+> +
+> +	mutex_unlock(&em_pd_mutex);
+> +}
+> +EXPORT_SYMBOL_GPL(em_unregister_perf_domain);
+
+Otherwise this looks pretty good to me. So, with these small nits
+addressed:
+
+  Acked-by: Quentin Perret <qperret@google.com>
+
+Thanks!
+Quentin
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
