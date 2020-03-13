@@ -2,94 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F111218502C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 21:19:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9273D1850A1
+	for <lists+linux-mediatek@lfdr.de>; Fri, 13 Mar 2020 22:06:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m6tc/LgbQMVHm5fIdhNAIJPQ0zIMLOozDabsuTMe8vs=; b=OXt95//33diWGh
-	+rJplni/QO0h/pFEwYqbCcRC3MuZcS9H3K051duTMLzrMNeO1s1jiNYdYSGgD1j82aMkfcZ09zggJ
-	m0Go/OJmwzjvOl4yLvIfETIRscVwD67x6akETSpNy9t1lhfgazk+kCR7jS217t8ejNZg2GzGyiMin
-	Hm8FAW0sQT2cX1jKRtN7EAuei2SWxiQuQsWKWbkIVXeKD5wrI/+9mwfDq/Vzp0c8ivEjxjhSoLRK4
-	eOdx/JnekMJslg6l2bs4aHz9ATW8PA0TyeMhTEyxuiK+UIWbfr1q4znIu5AypfM8gm2MxHoKf43Xp
-	L3Sbg+f2qJO0RjHEtMVw==;
+	List-Owner; bh=CJnEBeZXstzuany7WkkA/GYkQGW87hrDzKZK2vHl93E=; b=X2AycTnUjsssBJ
+	XDbx/7XUN8cx35WgNWuWwKRrTHOn61FfDgzprmPbXzRuI2PCOrIaDqAwIeA7luh91s2ABfISvtzgR
+	4b/ru3/kSwp68fbP/N2juz095+mdvnBLV/2DJNDw8Eq/1t4oVvqQrrmui0WMmkqyZkDNZVHMNiLjJ
+	1Fc6h1MyrG0KU9I+Fy3Gtw91sYyE2w9LLT+QC2tmlsToLSAxaVB7MECmrSQlsqZMRqbQD02PeC57F
+	Rkb97yCR++kBAIt1bCVC4fT0x54xonunYKTuVpUQzdVJG25nmUQIAUbSH0P4yKZI9e2zk3Z8Yeuhj
+	1o0ZIDARm3CxNTPyNQjA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jCqmG-0002AG-75; Fri, 13 Mar 2020 20:19:28 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1jCrVa-00050i-PW; Fri, 13 Mar 2020 21:06:18 +0000
+Received: from galois.linutronix.de ([2a0a:51c0:0:12e:550::1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jCqkw-0000wd-Ib; Fri, 13 Mar 2020 20:18:08 +0000
-Received: by mail-lf1-x144.google.com with SMTP id 5so1810292lfr.2;
- Fri, 13 Mar 2020 13:18:04 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=sender:from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=BOrKdqp0xX849tkbGYoL5GifZ0fJWuSnmKvneHoBEPI=;
- b=SFHap9SA3MQWq/rDzTcpj95GukhT+WmakBXzY2/W/iVbaG3CYS78HgdDNCnklu2dLE
- kFU0QDG9SImIs7hlVZiJyUAgm7YUizziMveCoCVIzJ9O8cqrKgolPpoV6am7DfhU89XJ
- ltxCH8nvbIYs393MHpsDO6BhvtaKdvLKO1cCTYQMgnrpgZsHazgpH66LACi+70HhiJ6l
- AJYv+s/W3gch6gNZXXxxbLFCll+TfRRcrcTxa5xQeHRhtYaQSbszeLTX6zP5G5Jz7Jm/
- gUDVBMvSktGH2MZ2dnKv8dJAIQub63dYzfpzuua04+X6h9+JvUqOMVK/Ctt+DZXCV3Yi
- OCig==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:from:to:cc:subject:date:message-id
- :in-reply-to:references:mime-version:content-transfer-encoding;
- bh=BOrKdqp0xX849tkbGYoL5GifZ0fJWuSnmKvneHoBEPI=;
- b=Twzx7em6i2JFt89Mu/l6h9XaTie4JaxSUUxZyB4NYUt6GRm/zcElAegNSaWEJE7rdx
- rRPVSXlwURA26mpnvjs3CcyqoNERxmoihk8dKP8f6/Or2l4vDy4rNzy0gWvlxSbqmCAf
- Bi0laoQAYMAMLSomTIjgkGYsLFJwnJe0I2zB2cKdgnkrxKQLT2D2qSPc4nP94vAP9N6e
- TfsiMT4/R9fmbZ2VK09jEtayav6w9Bs0+CKQ3NuMTv/saUoLCLEvK2weQkWcFPg/aK1q
- 5Qbrw4KFZShaQ+e20WKTkI2qDLLke5ZBhAZDVprsIlyE4vHxZjZOp77EPwCmbob1M4HF
- nlwA==
-X-Gm-Message-State: ANhLgQ3Nd8H3CoQRGdFIHdhokfUkzjZcoKr97a8/A9Id50kScW9kp8cQ
- JxDKzzhxeT5tMuLb5GPiZvg=
-X-Google-Smtp-Source: ADFU+vuWMe8I2528Uyu2tKaIGPqCCGIWF6uu2OphKJd6rnCU8MYCRJ3bIyFwbbl07L6oMFBFxGQoig==
-X-Received: by 2002:a19:7d04:: with SMTP id y4mr9463704lfc.111.1584130682588; 
- Fri, 13 Mar 2020 13:18:02 -0700 (PDT)
-Received: from saturn.lan (18.158-248-194.customer.lyse.net. [158.248.194.18])
- by smtp.gmail.com with ESMTPSA id
- v10sm30774074lfb.61.2020.03.13.13.18.00
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 13 Mar 2020 13:18:01 -0700 (PDT)
-From: Sam Ravnborg <sam@ravnborg.org>
-To: Thomas Zimmermann <tzimmermann@suse.de>, Daniel Vetter <daniel@ffwll.ch>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- dri-devel@lists.freedesktop.org
-Subject: [PATCH v1 3/3] drm/atmel-hlcdc: Use drm_encoder_init()
-Date: Fri, 13 Mar 2020 21:17:44 +0100
-Message-Id: <20200313201744.19773-4-sam@ravnborg.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200313201744.19773-1-sam@ravnborg.org>
-References: <20200313201744.19773-1-sam@ravnborg.org>
+ id 1jCrVQ-0004su-KC; Fri, 13 Mar 2020 21:06:10 +0000
+Received: from p5de0bf0b.dip0.t-ipconnect.de ([93.224.191.11]
+ helo=nanos.tec.linutronix.de)
+ by Galois.linutronix.de with esmtpsa (TLS1.2:DHE_RSA_AES_256_CBC_SHA256:256)
+ (Exim 4.80) (envelope-from <tglx@linutronix.de>)
+ id 1jCrVH-0003IC-Bk; Fri, 13 Mar 2020 22:05:59 +0100
+Received: by nanos.tec.linutronix.de (Postfix, from userid 1000)
+ id 7674A100C8D; Fri, 13 Mar 2020 22:05:58 +0100 (CET)
+From: Thomas Gleixner <tglx@linutronix.de>
+To: Bjorn Helgaas <helgaas@kernel.org>, Marc Gonzalez <marc.w.gonzalez@free.fr>
+Subject: Re: [PATCH 4/5] pci: handled return value of platform_get_irq
+ correctly
+In-Reply-To: <20200312141102.GA93224@google.com>
+References: <20200312141102.GA93224@google.com>
+Date: Fri, 13 Mar 2020 22:05:58 +0100
+Message-ID: <871rpwhsnd.fsf@nanos.tec.linutronix.de>
 MIME-Version: 1.0
+X-Linutronix-Spam-Score: -1.0
+X-Linutronix-Spam-Level: -
+X-Linutronix-Spam-Status: No , -1.0 points, 5.0 required, ALL_TRUSTED=-1,
+ SHORTCIRCUIT=-0.0001
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200313_131806_666525_2B3C178C 
-X-CRM114-Status: GOOD (  10.90  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20200313_140608_807509_73D30780 
+X-CRM114-Status: GOOD (  13.02  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
- [list.dnswl.org]
+ no trust [2a0a:51c0:0:12e:550:0:0:1 listed in] [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [sam.ravnborg[at]gmail.com]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,70 +65,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
- David Airlie <airlied@linux.ie>, Jose Roberto de Souza <jose.souza@intel.com>,
- virtualization@lists.linux-foundation.org, Gerd Hoffmann <kraxel@redhat.com>,
- Sam Ravnborg <sam@ravnborg.org>, linux-stm32@st-md-mailman.stormreply.com,
- Emil Velikov <emil.velikov@collabora.com>, linux-samsung-soc@vger.kernel.org,
- amd-gfx@lists.freedesktop.org, linux-rockchip@lists.infradead.org,
- Ludovic Desroches <ludovic.desroches@microchip.com>,
- NXP Linux Team <linux-imx@nxp.com>, Dave Airlie <airlied@redhat.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Maxime Ripard <mripard@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Boris Brezillon <bbrezillon@kernel.org>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Andrzej Pietrasiewicz <andrzej.p@collabora.com>,
- linux-renesas-soc@vger.kernel.org
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>, linux-pci@vger.kernel.org,
+ Linus Walleij <linus.walleij@linaro.org>,
+ Aman Sharma <amanharitsh123@gmail.com>, linux-kernel@vger.kernel.org,
+ Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
+ linux-mediatek@lists.infradead.org,
+ Thomas Petazzoni <thomas.petazzoni@bootlin.com>, Marc Zyngier <maz@kernel.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Mans Rullgard <mans@mansr.com>,
+ Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, linux-arm-kernel@lists.infradead.org,
+ Andrew Murray <amurray@thegoodpenguin.co.uk>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-atmel-hlcdc has no need to extend the functionality of the
-encoder, so use drm_encoder_init().
+Bjorn,
 
-Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
-Cc: Sam Ravnborg <sam@ravnborg.org>
-Cc: Boris Brezillon <bbrezillon@kernel.org>
-Cc: Nicolas Ferre <nicolas.ferre@microchip.com>
-Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>
-Cc: Ludovic Desroches <ludovic.desroches@microchip.com>
-Cc: Thomas Zimmermann <tzimmermann@suse.de>
-Cc: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
----
- drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c | 8 +-------
- 1 file changed, 1 insertion(+), 7 deletions(-)
+Bjorn Helgaas <helgaas@kernel.org> writes:
+> On Thu, Mar 12, 2020 at 10:53:06AM +0100, Marc Gonzalez wrote:
+>> Last time around, my understanding was that, going forward,
+>> the best solution was:
+>> 
+>> 	virq = platform_get_irq(...)
+>> 	if (virq <= 0)
+>> 		return virq ? : -ENODEV;
+>> 
+>> i.e. map 0 to -ENODEV, pass other errors as-is, remove the dev_err
+>> 
+>> @Bjorn/Lorenzo did you have a change of heart?
+>
+> Yes.  In 10006651 (Oct 20, 2017), I thought:
+>
+>   irq = platform_get_irq(pdev, 0);
+>   if (irq <= 0)
+>     return -ENODEV;
+>
+> was fine.  In 11066455 (Aug 7, 2019), I said I thought I was wrong and
+> that:
+>
+>   platform_get_irq() is a generic interface and we have to be able to
+>   interpret return values consistently.  The overwhelming consensus
+>   among platform_get_irq() callers is to treat "irq < 0" as an error,
+>   and I think we should follow suit.
+>   ...
+>   I think the best pattern is:
+>
+>     irq = platform_get_irq(pdev, i);
+>     if (irq < 0)
+>       return irq;
 
-diff --git a/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c b/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-index a845d587c315..96e0d85748d2 100644
---- a/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-+++ b/drivers/gpu/drm/atmel-hlcdc/atmel_hlcdc_output.c
-@@ -22,10 +22,6 @@ struct atmel_hlcdc_rgb_output {
- 	int bus_fmt;
- };
- 
--static const struct drm_encoder_funcs atmel_hlcdc_panel_encoder_funcs = {
--	.destroy = drm_encoder_cleanup,
--};
--
- static struct atmel_hlcdc_rgb_output *
- atmel_hlcdc_encoder_to_rgb_output(struct drm_encoder *encoder)
- {
-@@ -98,9 +94,7 @@ static int atmel_hlcdc_attach_endpoint(struct drm_device *dev, int endpoint)
- 		return -EINVAL;
- 	}
- 
--	ret = drm_encoder_init_funcs(dev, &output->encoder,
--				     &atmel_hlcdc_panel_encoder_funcs,
--				     DRM_MODE_ENCODER_NONE, NULL);
-+	ret = drm_encoder_init(dev, &output->encoder, DRM_MODE_ENCODER_NONE);
- 	if (ret)
- 		return ret;
- 
--- 
-2.20.1
+Careful. 0 is not a valid interrupt.
 
+Thanks,
+
+        tglx
 
 _______________________________________________
 Linux-mediatek mailing list
