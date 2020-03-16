@@ -2,70 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B4A77186A03
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 12:24:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D8AA8186A35
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 12:40:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0wvTfsPNyYqtLXxwwA8rhaLZ1aH67Z0taZ//chtNWVw=; b=cVYUrjeIfIBxf0
-	4PkT8u31u4LPBV7m0nAiXvKnyrOcfp7j/NY19C1voOj2EH9LsXXBtE5TxkW3L19H41J+fLuYhR2AT
-	yXRocIJ8CfBksKZppZK7aFJxA0PlFNfUFCZRvQwtJTUsQMg+zmdv2E8jnHiXsv4/2tqD/BGdpDB/O
-	KFvkNHkRQY/w8x7qy62xIRj4mZzqTMCj9+eULpEtJq0gaD1OiAiq2mwMhURyMSD9EVo17BwO1OG29
-	DdT6eWcHSvM+i0bVWaO3yOpYgp9tc9IxVAmunEOFhHvNi8EeF14xMMQfxvQhGlTv5xQy9QKQZ1mXe
-	f+R0oo0wnFj8pT+9QscA==;
+	List-Owner; bh=A+65VKXEGh0RnphN2q40r57FxLitiui1vFPyrC4zVr8=; b=bId18Hh1O/59eN
+	Gd4vIc27WxTbq6LvoG8RI8FsZlIYtdpvU1dW9SHibV1ay6dE5jFvhpG5qbym72UGP2S9TPMtnYpJu
+	9xxrEXFsUpJqWt14mASSYQx3GK3OZnSnZLbr+Ujew43G3mzk3HhLcXMbWK7ODRx9GRgSa1TV2auyy
+	yLDD9rR4mc8UqptVp2062/mJUunFNG5pzfiAcRLY0m1nllyp5S3pLfT539md+dLGQiWnOcdmJzdbz
+	iAkOHZkBG4/Zob6gxOsLdipT8C/TkHoNWmBxwC9ymshI4vFqqMONIa56/gthTjT3Z7iQjmeoj8s/7
+	8yHI+gmtRu5uZ4buLBMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDnrC-0004Hd-9K; Mon, 16 Mar 2020 11:24:30 +0000
-Received: from pandora.armlinux.org.uk
- ([2001:4d48:ad52:3201:214:fdff:fe10:1be6])
+	id 1jDo6V-0002HH-Oj; Mon, 16 Mar 2020 11:40:19 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDnr9-0004GS-0y; Mon, 16 Mar 2020 11:24:28 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=armlinux.org.uk; s=pandora-2019; h=Sender:In-Reply-To:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=y8G04rfoWKUYzwsoZKQ5OhBejLp6XViSQs7CrSOGTTM=; b=faw7oWA9PeRP5tE0NxZu6Ae69
- ALbTYfZYMc/tDDu7yWb2uKEGnzTwABdSYzR7JInOVhXdKmP1u4ZlaVgFYI/Ebe1GBaWzwsK3RIOwN
- CzsPoCLYHOAWPiqKy67VxvfyJxJoMsV0mG8ycjXH2Cegk75D6qilj0DJatUzt1RIIEGnQZbT+4lty
- XGWzg+PXBEU08Tc7xPKkaoTM8YzESxwh0UKhzrgpYi8t0+41dZPtLPK3aNKqr9Pg1/ENqyD/YZA8r
- Sc5Q02sRfSdjuWfol0uBSOHQA0ZCwu+hMVgBN81KZL+7QvccD01s1rhw9Jt+bERARCTpJztK2p4sk
- kHuEXGswQ==;
-Received: from shell.armlinux.org.uk
- ([fd8f:7570:feb6:1:5054:ff:fe00:4ec]:37186)
- by pandora.armlinux.org.uk with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <linux@armlinux.org.uk>)
- id 1jDnqp-0000e3-Ef; Mon, 16 Mar 2020 11:24:07 +0000
-Received: from linux by shell.armlinux.org.uk with local (Exim 4.92)
- (envelope-from <linux@shell.armlinux.org.uk>)
- id 1jDnqn-0001mN-BG; Mon, 16 Mar 2020 11:24:05 +0000
-Date: Mon, 16 Mar 2020 11:24:05 +0000
-From: Russell King - ARM Linux admin <linux@armlinux.org.uk>
-To: Alexandre Belloni <alexandre.belloni@bootlin.com>
-Subject: Re: [PATCH 1/2] rtc: mt2712: fix build without PM_SLEEP
-Message-ID: <20200316112405.GN25745@shell.armlinux.org.uk>
-References: <20200316104701.209293-1-alexandre.belloni@bootlin.com>
+ id 1jDo6J-0001jI-Ah; Mon, 16 Mar 2020 11:40:08 +0000
+Received: from mail-il1-f173.google.com (mail-il1-f173.google.com
+ [209.85.166.173])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 78F6420738;
+ Mon, 16 Mar 2020 11:40:06 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1584358806;
+ bh=Ko27tvjSOxWw2c+7T+N9R5DU0h2C2x51xk/JtN4IhvE=;
+ h=References:In-Reply-To:From:Date:Subject:To:List-Id:Cc:From;
+ b=WeLvgyLamuHAFXdtwDXFSF/6/Piw4dFGq8Pf9LSF5XqllMJnGQJxWw0Wq71qBh7WY
+ orOPf5+N4Y0nJJY4OV0vPtwE5EHnLpjNZhO3THohB65YKk+f+U1vjdTXBphM2ZcOun
+ DhkTOTbhaBW336jmYqOvh/14JCkrgnG07hFl3qqg=
+Received: by mail-il1-f173.google.com with SMTP id c8so16184814ilm.1;
+ Mon, 16 Mar 2020 04:40:06 -0700 (PDT)
+X-Gm-Message-State: ANhLgQ2Vtlt9PvvLT88utDRI96b8bqyYtInSK9SuK5kycCHqYWlqOEQA
+ Ov5y+vQwIOrxVZd7BewccYxewzzMW/qYORxiYf0=
+X-Google-Smtp-Source: ADFU+vuFgPhL5LIJn6Q6qWWAt8kgnZ/+G77NUpqLggYXbJzzJCCABWIIMJBEP4g7XAkLWWpU1XlUU9Fkhq+CNT5Cfig=
+X-Received: by 2002:a92:5a88:: with SMTP id b8mr27282656ilg.206.1584358805937; 
+ Mon, 16 Mar 2020 04:40:05 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200316104701.209293-1-alexandre.belloni@bootlin.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20200311033908.31960-1-erin.lo@mediatek.com>
+In-Reply-To: <20200311033908.31960-1-erin.lo@mediatek.com>
+From: Josh Boyer <jwboyer@kernel.org>
+Date: Mon, 16 Mar 2020 07:39:55 -0400
+X-Gmail-Original-Message-ID: <CA+5PVA5SQWD0DOeDU4kr9CYQhz6u=o5L3OinG_+2VUxsUEpvbw@mail.gmail.com>
+Message-ID: <CA+5PVA5SQWD0DOeDU4kr9CYQhz6u=o5L3OinG_+2VUxsUEpvbw@mail.gmail.com>
+Subject: Re: pull request: linux-firmware: Create Mediatek MT8183 SCP firmware
+To: Erin Lo <erin.lo@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_042427_066077_F046CF9E 
-X-CRM114-Status: GOOD (  14.14  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200316_044007_396117_9ADCAE05 
+X-CRM114-Status: GOOD (  14.35  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2001:4d48:ad52:3201:214:fdff:fe10:1be6 listed in]
- [list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -74,6 +70,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,40 +82,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-rtc@vger.kernel.org, Alessandro Zummo <a.zummo@towertech.it>,
- Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Eddie Huang <eddie.huang@mediatek.com>,
+Cc: menghui.lin@mediatek.com, Maoguang Meng <maoguang.meng@mediatek.com>,
+ srv_heupstream@mediatek.com, drinkcat@google.com,
+ Yunfei Dong <yunfei.dong@mediatek.com>, linux-remoteproc@vger.kernel.org,
+ Linux Firmware <linux-firmware@kernel.org>, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, shawnku@google.com,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, Mar 16, 2020 at 11:47:00AM +0100, Alexandre Belloni wrote:
-> Move SIMPLE_DEV_PM_OPS out of #ifdef to fix build issues when PM_SLEEP is
-> not selected.
-> 
-> Signed-off-by: Alexandre Belloni <alexandre.belloni@bootlin.com>
-> ---
->  drivers/rtc/rtc-mt2712.c | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
-> 
-> diff --git a/drivers/rtc/rtc-mt2712.c b/drivers/rtc/rtc-mt2712.c
-> index 432df9b0a3ac..c2709c1602f0 100644
-> --- a/drivers/rtc/rtc-mt2712.c
-> +++ b/drivers/rtc/rtc-mt2712.c
-> @@ -394,10 +394,10 @@ static int mt2712_rtc_resume(struct device *dev)
->  
->  	return 0;
->  }
-> +#endif
+On Tue, Mar 10, 2020 at 11:40 PM Erin Lo <erin.lo@mediatek.com> wrote:
+>
+> The following changes since commit 0148cfefcbf98898ca65bb26d9d7d638b30e211d:
+>
+>   Merge https://github.com/rjliao-qca/qca-btfw (2020-03-02 08:08:15 -0500)
+>
+> are available in the Git repository at:
+>
+>   https://github.com/erinlo/linux_fw_scp v12573.77
+>
+> for you to fetch changes up to a52150d8e1fe65994464b15ea162bdc89ba61ce8:
+>
+>   mediatek: Add mt8183 SCP firmware (2020-03-11 10:36:45 +0800)
+>
+> ----------------------------------------------------------------
+> Erin Lo (1):
+>       mediatek: Add mt8183 SCP firmware
+>
+>  mediatek/mt8183/scp.img | Bin 0 -> 1027104 bytes
+>  1 file changed, 0 insertions(+), 0 deletions(-)
+>  create mode 100644 mediatek/mt8183/scp.img
 
-Maybe use __maybe_unused for these, so they can still be compile-tested
-rather than #if'd out?
+This file needs to be added to WHENCE.  Can you adjust the commit to add it?
 
--- 
-RMK's Patch system: https://www.armlinux.org.uk/developer/patches/
-FTTC broadband for 0.8mile line in suburbia: sync at 10.2Mbps down 587kbps up
+josh
 
 _______________________________________________
 Linux-mediatek mailing list
