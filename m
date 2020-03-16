@@ -2,80 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 30B34186EBF
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 16:39:56 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3BAF7186EC6
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 16:40:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+AABQ9KsK/Wg26EduSfk9kmkqcvcja6hIdLlxuBkFAM=; b=oINTfePlEMTZ29
-	z3jD7ZN7F6nr1uCYiyRnnWkPaEJU7Lcn7S1WkDwX9FTpd5f79lk20rtV7LUMNncFk5VJ9Q2Y9T+yk
-	OWY5H2iMQCZqZe+j7PHp43GVTsJBBNkVXaEtRxpn0wSegb0qMhN5oXtGaqTSGll32jw4BcDh7rZF4
-	Nf5QeIC3hqgQVQw5/Rn9WZ2GQ0HP7dXs8JPSWi4J7iSmyHuvlMh4z8sLSK+Ei/naniLHW92aaWF24
-	gUdPCCLKdjhCE7d5LhqkbPJvkkE3gxVesznAxib8kP/B3uItK5kr9soDeYH3USO+MTbc+GDl8njf+
-	mH3A2LhLlD3YLHEODj5A==;
+	List-Owner; bh=TFiR0LMSbaIwWaCeJMY8fWy+KdXnXjtg1dacg5wlbDA=; b=ePhTgsk813TmsY
+	y8nSDB+RuCcBfPD/5hyAHv58MkLUfbp6M4lXsoan2xcZ5CgJX0j3eboRCOhRmCTrQGW2HMNo+2vqU
+	1jZ7V3wWAFAb22tclAulS3CPG9B6Acaz5yYXU88qa+2IFr1c7LvdL3N3YGdf95SnI3sp7jLlThEYM
+	5XtW5lOQWiOnJ4pAhz5sPQcy6Lwt7+M+MsC02a5UPZueF9hLnbx4Y11p61MQ6lPXPe9DZi6/8BS3u
+	z3p8+gCJApKEcQ090ki7s8ewrxkG5ms+C+qxrd6Q3neR+ZiWBDzfIhYlnv4gxQBxIdKMY/e9bxUzZ
+	pmOFXTw2UTpruuIv/EeQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDrqD-0006P3-Ic; Mon, 16 Mar 2020 15:39:45 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1jDrqm-0007rt-Fa; Mon, 16 Mar 2020 15:40:20 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDrpv-0006BH-MZ
- for linux-mediatek@lists.infradead.org; Mon, 16 Mar 2020 15:39:29 +0000
-Received: by mail-wr1-x443.google.com with SMTP id z15so21794504wrl.1
- for <linux-mediatek@lists.infradead.org>; Mon, 16 Mar 2020 08:39:26 -0700 (PDT)
+ id 1jDrqj-0007r6-7b
+ for linux-mediatek@lists.infradead.org; Mon, 16 Mar 2020 15:40:18 +0000
+Received: by mail-wr1-x441.google.com with SMTP id h6so1489193wrs.6
+ for <linux-mediatek@lists.infradead.org>; Mon, 16 Mar 2020 08:40:13 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to;
- bh=Q0yzkSCm1Xcsm6hOYYsbTqS4amhDbi797Ag8RmkjurU=;
- b=VjUfHswCT1UKNAujAPhK8VCtliVrWtYIYyppBsAtlnbFCrxaad4Uc2A5soRvyi8Lz/
- SqPfxSFRDIQCzDyvLFNz52fC+JJkBauYJCclNDsvmtzidrUQROIsVQV6zcwzj00LmPWd
- He65rfdf7A/Oc+IFkmPIIFP2thDMmrP7w+MUVZbhd7yiRPnRF5U7lNWsW24hYJVoJYeR
- 8wHBvHBpk9d8ZmoBo1s6yLkrnEqIRgPQmKuMyjkvlD33ynh0mEfoeYi9XfpNu36ky7nN
- jntyaqHoGFn/okVfozaKqLoYwnG4+U3ZIqhxZ9ETSHCiCMC6Iw7WS6sjUwRs0+vfP+X7
- +bQA==
+ bh=vJQ7s9x85ia8HxlMYprwaZJGn4L6RP+BR7+jWVKPLTo=;
+ b=w84O1QQJwU6wMTGEhyd3tdZmzyokkNQNgtvlgCbk7JrgRg0w2R3EtdUzes5TKo/XyE
+ 0GN9BzerCd+PBe2gdX+VVWalWV0GvUaZ1Hvpn02xC7Z6cQbZ9zUYoVR8SlrMkeTHa5pO
+ ZNV7G4zwVtMQAtwNFVsP7G9rAugODJUvegfg+Joz2/pLSwTVFLeBdLC69Mm9fmsFaT0H
+ 4lQ985eQTWmn73BDP/WhhWDXVBZBfC45ZHQLQxe35G5uOfpUGYH7dFLUTw7I6qKsVqm6
+ VCf79+8VBzgdX46YQ4mkH13lYwMdQrGC6Ai/EhOinV88dF/tVd63mOiTbTus//PTo1AD
+ eHZg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to;
- bh=Q0yzkSCm1Xcsm6hOYYsbTqS4amhDbi797Ag8RmkjurU=;
- b=loRM+8sfIfqSSv+8rREJCHZ871URAyyYwuxjN0FUFS63gxAUoU0HRw7izN2aerH44u
- 8zSbmNU3JVqQDIoiQjcnjZoVR9jO5TkqeANZhnWusZ0XtNBypslP8e/F4dch+VM+vjVF
- ieRyS0Pl1EaP1XijgSZDrtzgyATCnUDVT7L6bd+zy0f9MM+Iurk6qiadHI1EcA+VKEzM
- 8DYnpSR4CgF4PEp7nfHjXJUtcNVqgJm9o5MnRcDJ4MCUVUG1tkpEr6I8tEjkuz8BGadu
- Mp3eoeIITSWlcHtdVsotiVqk5V2wW3/dJFU766XkIF2W4kIXRHinwdbCrX1boGsrdCg3
- Lwuw==
-X-Gm-Message-State: ANhLgQ3AUssJ6EYzRk2aoYAiNf7UAFWO54hveZlW3ntw2aBzr/Ewv/mG
- 0xBeXy83+k5juntlQn6hJUt4ng==
-X-Google-Smtp-Source: ADFU+vs0mvRenL1g+U69U0qbNtFq1SVNLFNkkOGefFPc2C+th0hGKZ/JyHhYDuRn/eeS5wXEeUsB/Q==
-X-Received: by 2002:adf:d4ce:: with SMTP id w14mr26159791wrk.101.1584373164974; 
- Mon, 16 Mar 2020 08:39:24 -0700 (PDT)
+ bh=vJQ7s9x85ia8HxlMYprwaZJGn4L6RP+BR7+jWVKPLTo=;
+ b=gwy2nu28hESB8xPYSkr75Q53pvrrW508Sz/pBLjXMFbd0/NQqbaSilIfnsOsEfPPyx
+ 4Fxt5fZhod/jMIIZvHCKt796je0mxIrQHSon5h6ICQGvesKo3dwk49TDsWGLed9o6BC9
+ urv5r1YEpR4oVSR49srLDrdioNn+sA2pQiXwYUHomi1EjjJR/4nfXj1XMEv+wvJeJU9Z
+ R+Xgsxy6Au+T4h8JdbNeI0zZoyf6pLAWox1Z3962WHARO2nmbqE+wt+p/T1o+buz5a6O
+ bljXQ2GZburPyBVBoNlt94mewuygz3I/NJahKVtgYc7ATARg6UTgueVC38zYYWJ1RBG8
+ 1APw==
+X-Gm-Message-State: ANhLgQ3N6WT3cKkQeqnTnRR63Alj06xtsr4efLYqlEAM+n9qz1Hhj1d9
+ Qp0W/YinXR5+WvgfVHLApW2Auw==
+X-Google-Smtp-Source: ADFU+vu5RlEmmjxd74oFX3RvJEdQFPOMmKqi/N4OkXyJVDSx1NxqeLTrLEHwet7QRQD2B1qytUrz8w==
+X-Received: by 2002:a5d:4ad1:: with SMTP id y17mr29213545wrs.119.1584373212032; 
+ Mon, 16 Mar 2020 08:40:12 -0700 (PDT)
 Received: from myrica ([2001:171b:226b:54a0:116c:c27a:3e7f:5eaf])
- by smtp.gmail.com with ESMTPSA id 19sm143446wma.3.2020.03.16.08.39.23
+ by smtp.gmail.com with ESMTPSA id u17sm393519wrm.43.2020.03.16.08.40.10
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 16 Mar 2020 08:39:24 -0700 (PDT)
-Date: Mon, 16 Mar 2020 16:39:16 +0100
+ Mon, 16 Mar 2020 08:40:11 -0700 (PDT)
+Date: Mon, 16 Mar 2020 16:40:03 +0100
 From: Jean-Philippe Brucker <jean-philippe@linaro.org>
 To: Joerg Roedel <joro@8bytes.org>
-Subject: Re: [PATCH 01/15] iommu: Define dev_iommu_fwspec_get() for
- !CONFIG_IOMMU_API
-Message-ID: <20200316153916.GB304669@myrica>
+Subject: Re: [PATCH 02/15] ACPI/IORT: Remove direct access of dev->iommu_fwspec
+Message-ID: <20200316154003.GC304669@myrica>
 References: <20200310091229.29830-1-joro@8bytes.org>
- <20200310091229.29830-2-joro@8bytes.org>
+ <20200310091229.29830-3-joro@8bytes.org>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20200310091229.29830-2-joro@8bytes.org>
+In-Reply-To: <20200310091229.29830-3-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_083927_791497_A8E9955E 
-X-CRM114-Status: GOOD (  13.44  )
+X-CRM114-CacheID: sfid-20200316_084017_272890_6743B4FC 
+X-CRM114-Status: GOOD (  13.84  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -112,40 +111,45 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Mar 10, 2020 at 10:12:15AM +0100, Joerg Roedel wrote:
+On Tue, Mar 10, 2020 at 10:12:16AM +0100, Joerg Roedel wrote:
 > From: Joerg Roedel <jroedel@suse.de>
 > 
-> There are users outside of the IOMMU code that need to call that
-> function. Define it for !CONFIG_IOMMU_API too so that compilation does
-> not break.
+> Use the accessor functions instead of directly dereferencing
+> dev->iommu_fwspec.
 > 
-> Reported-by: kbuild test robot <lkp@intel.com>
+> Tested-by: Hanjun Guo <guohanjun@huawei.com>
 > Signed-off-by: Joerg Roedel <jroedel@suse.de>
 
 Reviewed-by: Jean-Philippe Brucker <jean-philippe@linaro.org>
 
-As a result drivers/gpu/host1x/hw/channel_hw.c and
-drivers/gpu/drm/tegra/vic.c can lose their #ifdef CONFIG_IOMMU_API
-
 > ---
->  include/linux/iommu.h | 4 ++++
->  1 file changed, 4 insertions(+)
+>  drivers/acpi/arm64/iort.c | 6 ++++--
+>  1 file changed, 4 insertions(+), 2 deletions(-)
 > 
-> diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-> index d1b5f4d98569..3c4ca041d7a2 100644
-> --- a/include/linux/iommu.h
-> +++ b/include/linux/iommu.h
-> @@ -1073,6 +1073,10 @@ static inline int iommu_sva_unbind_gpasid(struct iommu_domain *domain,
->  	return -ENODEV;
->  }
+> diff --git a/drivers/acpi/arm64/iort.c b/drivers/acpi/arm64/iort.c
+> index ed3d2d1a7ae9..7d04424189df 100644
+> --- a/drivers/acpi/arm64/iort.c
+> +++ b/drivers/acpi/arm64/iort.c
+> @@ -1015,6 +1015,7 @@ const struct iommu_ops *iort_iommu_configure(struct device *dev)
+>  		return ops;
 >  
-> +static inline struct iommu_fwspec *dev_iommu_fwspec_get(struct device *dev)
-> +{
-> +	return NULL;
-> +}
->  #endif /* CONFIG_IOMMU_API */
+>  	if (dev_is_pci(dev)) {
+> +		struct iommu_fwspec *fwspec;
+>  		struct pci_bus *bus = to_pci_dev(dev)->bus;
+>  		struct iort_pci_alias_info info = { .dev = dev };
 >  
->  #ifdef CONFIG_IOMMU_DEBUGFS
+> @@ -1027,8 +1028,9 @@ const struct iommu_ops *iort_iommu_configure(struct device *dev)
+>  		err = pci_for_each_dma_alias(to_pci_dev(dev),
+>  					     iort_pci_iommu_init, &info);
+>  
+> -		if (!err && iort_pci_rc_supports_ats(node))
+> -			dev->iommu_fwspec->flags |= IOMMU_FWSPEC_PCI_RC_ATS;
+> +		fwspec = dev_iommu_fwspec_get(dev);
+> +		if (fwspec && iort_pci_rc_supports_ats(node))
+> +			fwspec->flags |= IOMMU_FWSPEC_PCI_RC_ATS;
+>  	} else {
+>  		int i = 0;
+>  
 > -- 
 > 2.17.1
 > 
