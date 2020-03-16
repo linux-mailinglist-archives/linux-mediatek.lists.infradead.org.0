@@ -2,62 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A326B18630D
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 03:42:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CBD991863E0
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 04:43:21 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=5fjFrBAMRmxONktmLFnNNBJAkKw12Wwws1CTSVnUfmc=; b=iSeauMUp+rowBz
-	5xkwILWcikuR6XKEznsXL8Fmd5dVMJCTgczFLpWVIpg5DIWW0dL+Tq3NaU6NkY3ZpiSHtYA8VX+la
-	Hka35ToLnWzwA1htFTkFVpFjcQ+ndwt1DPz3JR/Yom2Dy0iubumFb3VoHEVU4aTYOXW3GjmWD99zM
-	LBZoU9GzVrQtdqHQ0vHkBILeuX17lfP7PcnBkvL61jtcuMrp6PbszPLYOe6YB4s3j9pJkgaUqvWRJ
-	WNiL3A1Mf14/dWBGlKujHNFjcl1d6k2T28EzWgYqI4slpYq82CFrJPPbyjgUhZquh5At5noF7sIot
-	oZnTzpx4jfsAqpXr9r7Q==;
+	List-Owner; bh=W2v4YOnqpiJuI7pox6VuHFe5PEW9aUBiif1X1zMuMR4=; b=oYlyktorQVW/eV
+	hXQgg7ySF4rVlqLdttXbyt3FRGdjDFDslNI0QSv/pvkTOYh5Hyy++oHTOy4X1sRBkkHyJfKSr2Qww
+	TACG5+0ziliQoljKljPQI6R3vO6nww3A/ilLbD1H3RPtOomKiJcufeneg4PSRJMNPGo0cgD5iWUrt
+	g732pPkAsrTGT8AINOvEM8r3uUdhGcFT6p7sP6qHeiCWjkfTsHeJQoUsqAmQyzBKIKX0CtJt8dI0j
+	cYjOje04mVeDyKZsiUIngvwR0CdUuFd+Pr1rGMh7+Gbdlts/MhpddpooEC2DCsW/xqADvUP6tSO9c
+	uT/6oXevI/UBdseSK91w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDfiH-0004sl-3v; Mon, 16 Mar 2020 02:42:45 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jDgeo-00024n-PZ; Mon, 16 Mar 2020 03:43:14 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDfai-0003Jr-Ua; Mon, 16 Mar 2020 02:34:58 +0000
-Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
- [73.47.72.35])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id B1A1E206EB;
- Mon, 16 Mar 2020 02:34:54 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1584326095;
- bh=2r/XNzVFSWap5ZGR8e9lGlA6d7DtrmjBgB/Zzu8NrGo=;
- h=From:To:Cc:Subject:Date:From;
- b=crJnaWAjQnP0Z7GMiDBa7yymQzc3f00ZmhB/pZV6th1BRm2QjCE7qaGhPy87Cr7Uw
- 4+H1qg2zESjtjSLdAhWUr5/A4FpNTJInbM6qvaj18fUWEhCrBtPaiJhg7sXVIx/zIU
- hAb9tC66EseDFGMcICHdHi8mKIfB9fx7sMWduq90=
-From: Sasha Levin <sashal@kernel.org>
-To: linux-kernel@vger.kernel.org,
-	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 01/20] drm/mediatek: Find the cursor plane
- instead of hard coding it
-Date: Sun, 15 Mar 2020 22:34:34 -0400
-Message-Id: <20200316023453.1800-1-sashal@kernel.org>
-X-Mailer: git-send-email 2.20.1
+ id 1jDge7-0001HQ-IU; Mon, 16 Mar 2020 03:42:32 +0000
+X-UUID: f8b3b1eee68e428aa79c95602ff37f54-20200315
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=vi8sUp7wfNGzry+oc6hx+6Yugm6avGTPSPtWm++c2Ic=; 
+ b=TDw1Gam3EYLq+TB+byGWj26q52Sk2NuFxGEfWbvrn6XJTkfFbMoQ6fmxhHpn3kP77Aca9sRlAUoN2J0cRBi+gT6Ue45OSB38jN1RdZE8f2rxLSOsqYYnZiKvhPbBW8+LjnywPS3bpjBM5s0G4u0zfw4OKqXyX22RU0yt7A0e7uc=;
+X-UUID: f8b3b1eee68e428aa79c95602ff37f54-20200315
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1065521491; Sun, 15 Mar 2020 19:42:22 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 15 Mar 2020 20:42:20 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Mar 2020 11:39:27 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Mon, 16 Mar 2020 11:39:22 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <martin.peter~sen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
+Subject: [PATCH v5 0/8] scsi: ufs: some cleanups and make the delay for host
+ enabling customizable
+Date: Mon, 16 Mar 2020 11:42:10 +0800
+Message-ID: <20200316034218.11914-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-X-stable: review
-X-Patchwork-Hint: Ignore
+X-TM-SNTS-SMTP: 2894A1BF0F52B2EA31AD88934CEC3761E565330CEFDA4095AACD5209D52A5C982000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200315_193457_142478_A8067640 
-X-CRM114-Status: GOOD (  10.16  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200315_204231_612975_F8375AFF 
+X-CRM114-Status: UNSURE (   6.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -65,7 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,71 +86,62 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, linux-mediatek@lists.infradead.org,
- dri-devel@lists.freedesktop.org, Sean Paul <seanpaul@chromium.org>,
- CK Hu <ck.hu@mediatek.com>, Evan Benn <evanbenn@chromium.org>,
- linux-arm-kernel@lists.infradead.org
+Cc: Stanley Chu <stanley.chu@mediatek.com>, bvanassche@acm.org,
+ andy.teng@mediatek.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, beanhuo@micron.com,
+ linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Evan Benn <evanbenn@chromium.org>
+Hi,
 
-[ Upstream commit 318caac7c81cdf5806df30c3d72385659a5f0f53 ]
+This patchset applies some driver cleanups and performance improvement
+in ufs host drivers by making the delay for host enabling customizable
+according to vendors' requirements.
 
-The cursor and primary planes were hard coded.
-Now search for them for passing to drm_crtc_init_with_planes
+v4 -> v5
+	- Collect review tags in v4
+	- Fix patch #7: Fix typo "initializatoin" in title
 
-Signed-off-by: Evan Benn <evanbenn@chromium.org>
-Reviewed-by: Sean Paul <seanpaul@chromium.org>
-Signed-off-by: CK Hu <ck.hu@mediatek.com>
-Signed-off-by: Sasha Levin <sashal@kernel.org>
----
- drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 18 ++++++++++++------
- 1 file changed, 12 insertions(+), 6 deletions(-)
+v3 -> v4
+	- Collect review tags in v2
+	- In patch #8, fix incorrect condition of customized delay for host enabling
 
-diff --git a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-index b86ee7d25af36..eac9caf322f90 100644
---- a/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-+++ b/drivers/gpu/drm/mediatek/mtk_drm_crtc.c
-@@ -506,10 +506,18 @@ static const struct drm_crtc_helper_funcs mtk_crtc_helper_funcs = {
- 
- static int mtk_drm_crtc_init(struct drm_device *drm,
- 			     struct mtk_drm_crtc *mtk_crtc,
--			     struct drm_plane *primary,
--			     struct drm_plane *cursor, unsigned int pipe)
-+			     unsigned int pipe)
- {
--	int ret;
-+	struct drm_plane *primary = NULL;
-+	struct drm_plane *cursor = NULL;
-+	int i, ret;
-+
-+	for (i = 0; i < mtk_crtc->layer_nr; i++) {
-+		if (mtk_crtc->planes[i].type == DRM_PLANE_TYPE_PRIMARY)
-+			primary = &mtk_crtc->planes[i];
-+		else if (mtk_crtc->planes[i].type == DRM_PLANE_TYPE_CURSOR)
-+			cursor = &mtk_crtc->planes[i];
-+	}
- 
- 	ret = drm_crtc_init_with_planes(drm, &mtk_crtc->base, primary, cursor,
- 					&mtk_crtc_funcs, NULL);
-@@ -622,9 +630,7 @@ int mtk_drm_crtc_create(struct drm_device *drm_dev,
- 			goto unprepare;
- 	}
- 
--	ret = mtk_drm_crtc_init(drm_dev, mtk_crtc, &mtk_crtc->planes[0],
--				mtk_crtc->layer_nr > 1 ? &mtk_crtc->planes[1] :
--				NULL, pipe);
-+	ret = mtk_drm_crtc_init(drm_dev, mtk_crtc, pipe);
- 	if (ret < 0)
- 		goto unprepare;
- 	drm_mode_crtc_set_gamma_size(&mtk_crtc->base, MTK_LUT_SIZE);
+v2 -> v3
+	- Remove /arch/arm64/configs/defconfig chnage because it is for local test only
+
+v1 -> v2
+	- Add patch #1 "scsi: ufs: fix uninitialized tx_lanes in ufshcd_disable_tx_lcc"
+	- Remove struct ufs_init_prefetch in patch #2 "scsi: ufs: remove init_prefetch_data in struct ufs_hba"
+	- Introduce common delay function in patch #4
+	- Replace all delay places by common delay function in ufs-mediatek in patch #5
+	- Use common delay function instead for host enabling delay in patch #6
+	- Add patch #7 "scsi: ufs: make HCE polling more compact to improve initializatoin latency"
+	- In patch #8, customize the delay in ufs_mtk_hce_enable_notify callback instead of ufs_mtk_init (Avri)
+
+Stanley Chu (8):
+  scsi: ufs: fix uninitialized tx_lanes in ufshcd_disable_tx_lcc()
+  scsi: ufs: remove init_prefetch_data in struct ufs_hba
+  scsi: ufs: use an enum for host capabilities
+  scsi: ufs: introduce common delay function
+  scsi: ufs-mediatek: replace all delay places by common delay function
+  scsi: ufs: allow customized delay for host enabling
+  scsi: ufs: make HCE polling more compact to improve initialization
+    latency
+  scsi: ufs-mediatek: customize the delay for host enabling
+
+ drivers/scsi/ufs/ufs-mediatek.c | 64 ++++++++++++++++-----------
+ drivers/scsi/ufs/ufs-mediatek.h |  1 +
+ drivers/scsi/ufs/ufshcd.c       | 47 +++++++++++---------
+ drivers/scsi/ufs/ufshcd.h       | 78 ++++++++++++++++-----------------
+ 4 files changed, 106 insertions(+), 84 deletions(-)
+
 -- 
-2.20.1
-
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
