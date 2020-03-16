@@ -2,65 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D8B3186716
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 09:55:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E68EC186718
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 09:55:18 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=DfN+xxb7v7aXjagtwYw5aOZUXOGRfNHjn+LXjDb/2h8=; b=h92haTk53G4sPU
-	Xl2lZltQEl7HHG6gjO6mNt/AN5M4p65DCoRP38hn9x+x7dipTkTVm4mCROBmKbQhx2uOzH4BouuIZ
-	5zkd89flbfpYa45+O6664391TW4myeAyjzpOPDQEt7Qkmkf8BUQmSrtyEWj+MVN0ucw84ldOdPyw8
-	XSx4UtblfaPaUUMBGMNBmDjkyEFE7/hcZorKt3OwK06JS4ecjawVFRjJuNKenrrHeyhkS2esJ7je9
-	LDW9cttXYiq8lUIzwHQH9CmoXORwv7S/AWAdO5jLJP1fxGAbEVuhJHHIGqnEAJuqc7IjUaE+L0k0N
-	Vxax1zasTIR4ck4JjgBw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=qLGbXPSXfTaUGP1HU2+PaOZrNU4/kAnnHQ5/9ayzKmM=; b=kgvTkc+CNfo6+d
+	krl6ikrpFSWwhOeqJelEQz17MTuhzpQTEbKqX+ggeQTVKRtmqhfAgkha4PN6LDPQlG5HcWuKjzhCh
+	mO69cxxt0yXHNCK47hHGGnpSBSbEhEDm3GJylOiKm5VZZSCHv5bz9Rpb8hcjVVDSondZ1+ecV4ubi
+	h9GpfJH/WIdwuw+BxpH0FIemFV3eiJUk8BeZNg830tE/WvX21GfsEVGcP/u7euiEcae1a2kWApgHC
+	0p2mWPuSNkri37DCFsRwaRA0NrVnH9Ls2Msb2alH4LMRlx3Hxp3/I9rwyE8GoH0MoJjE/7eynVLgC
+	PMOSOO0nNDt+E4diuiuQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDlWd-00031t-Pv; Mon, 16 Mar 2020 08:55:07 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jDlWe-00033E-PS; Mon, 16 Mar 2020 08:55:08 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDlUo-0000Z2-P9; Mon, 16 Mar 2020 08:53:16 +0000
-X-UUID: 39d43779d3c94b73971fa9ffda7b77a2-20200316
+ id 1jDlUr-0000cu-Ap; Mon, 16 Mar 2020 08:53:19 +0000
+X-UUID: eb4aff019246471babdf085390b83b27-20200316
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=gp+miboBva3gmpY9AwDXQhfWdq6yO74UoFEFEIC5fwA=; 
- b=okxbpSCfQ77cDzQBfHEQOlcZkqRx0Ph7F0Bu2T/MTeqDP8ifLmPQSDUmsoja6J65D/qXKQdKlra4+HkdzCuHhExjog/JDDeKZXbq3VjW3pBCEqwhtG25lQXtNnkksmRCqeNZDz5kDlOq3x8EWRJgA+8tXo+DRiNruuqu/1LmBUU=;
-X-UUID: 39d43779d3c94b73971fa9ffda7b77a2-20200316
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=Pe2ICmxiDGZfXw8Ju8bu2oy7yN84cTxQ4OAqo9x25H8=; 
+ b=owCX1E0+QaZZ9JzzjJR0CXeiGkDPkdRE3+nX35TGNeJZsNhF7CjPp6g7fEwOoiWHt/qWS5dB+vuFfSs7NIBs3+NLA8plRQjNX3h6Y/67w4XFPGXwxkb+sz0NIbII1roZ9UP9U3i+2qwjPor6p/ZTTRLOTZ9+EtVDmAFbRNmVYpM=;
+X-UUID: eb4aff019246471babdf085390b83b27-20200316
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 890443897; Mon, 16 Mar 2020 00:53:07 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 1258842285; Mon, 16 Mar 2020 00:53:08 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Mar 2020 01:53:23 -0700
+ 15.0.1395.4; Mon, 16 Mar 2020 01:53:24 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Mar 2020 16:50:49 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Mar 2020 16:50:13 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 16 Mar 2020 16:53:51 +0800
+ Frontend Transport; Mon, 16 Mar 2020 16:53:52 +0800
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.peter~sen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v6 0/7] scsi: ufs: some cleanups and make the delay for host
- enabling customizable
-Date: Mon, 16 Mar 2020 16:52:56 +0800
-Message-ID: <20200316085303.20350-1-stanley.chu@mediatek.com>
+Subject: [PATCH v6 1/7] scsi: ufs: fix uninitialized tx_lanes in
+ ufshcd_disable_tx_lcc()
+Date: Mon, 16 Mar 2020 16:52:57 +0800
+Message-ID: <20200316085303.20350-2-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200316085303.20350-1-stanley.chu@mediatek.com>
+References: <20200316085303.20350-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: F3751F886D718EC3FA56A4ABBA8D56BA2D38AB9B8567EA112E77272E6AD0D5362000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_015314_830896_C66F9BB5 
-X-CRM114-Status: UNSURE (   6.03  )
+X-CRM114-CacheID: sfid-20200316_015317_395752_22821EAA 
+X-CRM114-Status: UNSURE (   9.07  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -96,44 +101,33 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-v5 -> v6
-	- Drop patch #2 "scsi: ufs: remove init_prefetch_data in struct ufs_hba" in v5
-	because Can Guo has similar cleanup earlier in patch "scsi: ufs: Do not rely on prefetched data"
+In ufshcd_disable_tx_lcc(), if ufshcd_dme_get() or ufshcd_dme_peer_get()
+get fail, uninitialized variable "tx_lanes" may be used as unexpected lane
+ID for DME configuration.
 
-v4 -> v5
-	- Fix patch #7: Fix typo "initializatoin" in title
+Fix this issue by initializing "tx_lanes".
 
-v3 -> v4
-	- In patch #8, fix incorrect condition of customized delay for host enabling
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Reviewed-by: Asutosh Das <asutoshd@codeaurora.org>
+Reviewed-by: Avri Altman <avri.altman@wdc.com>
+Reviewed-by: Can Guo <cang@codeaurora.org>
+---
+ drivers/scsi/ufs/ufshcd.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-v2 -> v3
-	- Remove /arch/arm64/configs/defconfig chnage because it is for local test only
-
-v1 -> v2
-	- Add patch #1 "scsi: ufs: fix uninitialized tx_lanes in ufshcd_disable_tx_lcc"
-	- Remove struct ufs_init_prefetch in patch #2 "scsi: ufs: remove init_prefetch_data in struct ufs_hba"
-	- Introduce common delay function in patch #4
-	- Replace all delay places by common delay function in ufs-mediatek in patch #5
-	- Use common delay function instead for host enabling delay in patch #6
-	- Add patch #7 "scsi: ufs: make HCE polling more compact to improve initializatoin latency"
-	- In patch #8, customize the delay in ufs_mtk_hce_enable_notify callback instead of ufs_mtk_init (Avri)
-
-Stanley Chu (7):
-  scsi: ufs: fix uninitialized tx_lanes in ufshcd_disable_tx_lcc()
-  scsi: ufs: use an enum for host capabilities
-  scsi: ufs: introduce common delay function
-  scsi: ufs-mediatek: replace all delay places by common delay function
-  scsi: ufs: allow customized delay for host enabling
-  scsi: ufs: make HCE polling more compact to improve initialization
-    latency
-  scsi: ufs-mediatek: customize the delay for host enabling
-
- drivers/scsi/ufs/ufs-mediatek.c | 64 +++++++++++++++++++------------
- drivers/scsi/ufs/ufs-mediatek.h |  1 +
- drivers/scsi/ufs/ufshcd.c       | 32 ++++++++++------
- drivers/scsi/ufs/ufshcd.h       | 67 +++++++++++++++++++--------------
- 4 files changed, 100 insertions(+), 64 deletions(-)
-
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index 5698f1164a5e..314e808b0d4e 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -4315,7 +4315,7 @@ EXPORT_SYMBOL_GPL(ufshcd_hba_enable);
+ 
+ static int ufshcd_disable_tx_lcc(struct ufs_hba *hba, bool peer)
+ {
+-	int tx_lanes, i, err = 0;
++	int tx_lanes = 0, i, err = 0;
+ 
+ 	if (!peer)
+ 		ufshcd_dme_get(hba, UIC_ARG_MIB(PA_CONNECTEDTXDATALANES),
 -- 
 2.18.0
 _______________________________________________
