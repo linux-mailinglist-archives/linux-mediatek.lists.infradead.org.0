@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0AC2D1865BD
-	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 08:34:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8D1DC1865F4
+	for <lists+linux-mediatek@lfdr.de>; Mon, 16 Mar 2020 08:52:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lCUxBIstsZfn13JL4RnFI/2l/8rvTymKWp3G7VIqZys=; b=hr07nMiz87fOg3
-	jxd0dWPBvJ2aTc1j5uwpGiMrWD5MNHVM7cv1SWxtm38GMK603LqcL14g+02gNayuQWezDL2KJXNM3
-	SLqoCVPgtabiRkvpj9HvMhxt/CB5feJE33adkFxFJIruuC6l4G+wUYJx7HgwomvZliJyPvgUu5TdY
-	ih63U9SCuARuhmL/irnuUJ6Qkyjao8QQYt0zaER10uA8bp6dcKxY+jilzrfedC1GULg7PI0YWVJAW
-	xuOsjdgmW1kkMm9tdHYYvOz1y7H1lLgMlI/LhGwqoYu5ErSwXuqIobEZeTmjENHSjvfiRCyk9yAKU
-	MPe4w+2lDaVBDPRdrtaw==;
+	List-Owner; bh=YAYPNuoH8ZlbuWrTDIDrLeMFEKKGIfEzHP+vDp7zokc=; b=jfyepX2NCWXqi2
+	DOht+bn3Fb3LJXs23zuUM/64+eNruvcONjVcSUWPKa1wCPq2u6kZm0WXIETulTvBDabWIB7OV1YCx
+	IL1wigPUAdAn2pZ5YEiQNbl1E92U3W4O0UajDHlDAQg40MMLJJBDDy89VjCKrzghxoGaapJtyUFkc
+	ROEkPrx3z0+aMa8X6gs5muzjRlCLlniYY9OaaFIKSEE+VRVxMS9UhlQa+FMQkksOc0Q0QM4a0/1cD
+	okyqOTZVGuz4htuAcgG3XvUypvWktH2Ssum33K8iHxNlFbhen15kA5T6aw41fBubp0md/RmpV2ZGI
+	Ghok/isF8/m0Qzdwvs7A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDkGw-00008A-2r; Mon, 16 Mar 2020 07:34:50 +0000
+	id 1jDkXp-0008QD-Dp; Mon, 16 Mar 2020 07:52:17 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDkGs-00007Q-Kb; Mon, 16 Mar 2020 07:34:48 +0000
-X-UUID: 0211b5b73e764e1e95c0c63e8017f36e-20200315
+ id 1jDkXm-0008PM-Kq
+ for linux-mediatek@lists.infradead.org; Mon, 16 Mar 2020 07:52:16 +0000
+X-UUID: 61693cc5afab4984ab64a973e2f21778-20200315
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=39ItGNth9VrE85n3VIY5Tt/fJgOiTIGshUGjxE8ZVBQ=; 
- b=Uf7xUX1OYTeqo0ZDks2kCHHHabbzKo4vDQ5WfDJCDtVuWtxZnRN48Gbs6PICta3J5M3lPxGJNXw2ZqI7j3/evDtsMWj7Vt1J9Yck2Uwff3qU3LnINZTmEpy6EZOUSucEggjq6SQz+poIVndYixI4vqcvNQ14EFEA9Rx7YY77AtM=;
-X-UUID: 0211b5b73e764e1e95c0c63e8017f36e-20200315
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=BlXDFmnnqorVgQpulgg7ck1YZ6kA0CFS6J6lD1RPe/M=; 
+ b=IVFLh0VCB+aMcNA9+LrG31fTNQM1aqh7VfjWgnLRb2dOFhJQn/vurbsCUI+pBxJgWwDg/2WLooF83pi4DO5NQ3JTON6pj8aGtJSSNw4eIY50bIYKbM7dvQ7rWhcb5eTN3RWtrVAnMrlTPFFRgq9f9Nf94JlhkS6IJSe5kJTotAU=;
+X-UUID: 61693cc5afab4984ab64a973e2f21778-20200315
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <roger.lu@mediatek.com>)
+ (envelope-from <hanks.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2041479299; Sun, 15 Mar 2020 23:34:42 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ with ESMTP id 716464010; Sun, 15 Mar 2020 23:52:11 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Mar 2020 00:24:57 -0700
+ 15.0.1395.4; Mon, 16 Mar 2020 00:46:49 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 16 Mar 2020 15:23:22 +0800
-Received: from mtksdaap41.mediatek.inc (172.21.77.4) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 16 Mar 2020 15:21:41 +0800
-From: Roger Lu <roger.lu@mediatek.com>
-To: Kevin Hilman <khilman@kernel.org>, Rob Herring <robh+dt@kernel.org>,
- Nicolas Boichat <drinkcat@google.com>, Stephen Boyd <sboyd@kernel.org>
-Subject: [PATCH v7 2/3] arm64: dts: mt8183: add svs device information
-Date: Mon, 16 Mar 2020 15:23:16 +0800
-Message-ID: <20200316072316.7156-3-roger.lu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200316072316.7156-1-roger.lu@mediatek.com>
-References: <20200316072316.7156-1-roger.lu@mediatek.com>
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 16 Mar 2020 15:45:32 +0800
+Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 16 Mar 2020 15:43:32 +0800
+Message-ID: <1584344790.29731.1.camel@mtkswgap22>
+Subject: Re: [PATCH 1/1] dt-bindings: cpu: Add a support cpu type for
+ cortex-a75
+From: Hanks Chen <hanks.chen@mediatek.com>
+To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Mon, 16 Mar 2020 15:46:30 +0800
+In-Reply-To: <f1b8239a-a68f-bd50-585e-26109850a1fc@gmail.com>
+References: <1584284885-20836-1-git-send-email-hanks.chen@mediatek.com>
+ <f1b8239a-a68f-bd50-585e-26109850a1fc@gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_003446_685402_14416EC4 
-X-CRM114-Status: UNSURE (   9.11  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200316_005214_693526_D9BEA9F5 
+X-CRM114-Status: GOOD (  13.34  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -66,15 +67,13 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -88,116 +87,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
- Angus Lin <Angus.Lin@mediatek.com>, devicetree@vger.kernel.org,
- linux-pm@vger.kernel.org, Roger Lu <roger.lu@mediatek.com>,
- linux-kernel@vger.kernel.org, Xiaoqing Liu <Xiaoqing.Liu@mediatek.com>,
- YT Lee <yt.lee@mediatek.com>, Fan Chen <fan.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, HenryC Chen <HenryC.Chen@mediatek.com>,
- Charles Yang <Charles.Yang@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ wsd_upstream@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-add pmic/clock/irq/efuse setting in svs node
+On Sun, 2020-03-15 at 19:44 +0100, Matthias Brugger wrote:
+> Thanks for your patch.
+> 
+> On 15/03/2020 16:08, Hanks Chen wrote:
+> > [Detail]
+> 
+> This line is not needed.
+got it, will fix it. Thanks for reviewing.
 
-Signed-off-by: Roger Lu <roger.lu@mediatek.com>
----
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts | 16 ++++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 41 +++++++++++++++++++++
- 2 files changed, 57 insertions(+)
+> 
+> > Add arm cpu type cortex-a75.
+> > 
+> > Change-Id: I2b05948915acfa6a04a0b8fa88684a12b6d5c2ca
+> 
+> No Change-Id in upstream kernel patches please.
+> 
+got it, will fix it. Thanks for reviewing.
 
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-index 1fb195c683c3..6ae1d9a1bcbf 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-+++ b/arch/arm64/boot/dts/mediatek/mt8183-evb.dts
-@@ -231,6 +231,22 @@
- 
- };
- 
-+&svs_cpu_little {
-+	vcpu-little-supply = <&mt6358_vproc12_reg>;
-+};
-+
-+&svs_cpu_big {
-+	vcpu-big-supply = <&mt6358_vproc11_reg>;
-+};
-+
-+&svs_cci {
-+	vcci-supply = <&mt6358_vproc12_reg>;
-+};
-+
-+&svs_gpu {
-+	vgpu-spply = <&mt6358_vgpu_reg>;
-+};
-+
- &uart0 {
- 	status = "okay";
- };
-diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-index 433c62efab2d..78f3cd0940e7 100644
---- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-+++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
-@@ -457,6 +457,39 @@
- 			status = "disabled";
- 		};
- 
-+		svs: svs@1100b000 {
-+			compatible = "mediatek,mt8183-svs";
-+			reg = <0 0x1100b000 0 0x1000>;
-+			interrupts = <GIC_SPI 127 IRQ_TYPE_LEVEL_LOW>;
-+			clocks = <&infracfg CLK_INFRA_THERM>;
-+			clock-names = "main";
-+			nvmem-cells = <&svs_calibration>,
-+				      <&thermal_calibration>;
-+			nvmem-cell-names = "svs-calibration-data",
-+					   "calibration-data";
-+
-+			svs_cpu_little: svs-cpu-little {
-+				compatible = "mediatek,mt8183-svs-cpu-little";
-+				operating-points-v2 = <&cluster0_opp>;
-+			};
-+
-+			svs_cpu_big: svs-cpu-big {
-+				compatible = "mediatek,mt8183-svs-cpu-big";
-+				operating-points-v2 = <&cluster1_opp>;
-+			};
-+
-+			svs_cci: svs-cci {
-+				compatible = "mediatek,mt8183-svs-cci";
-+				operating-points-v2 = <&cci_opp>;
-+			};
-+
-+			svs_gpu: svs-gpu {
-+				compatible = "mediatek,mt8183-svs-gpu";
-+				power-domains = <&scpsys MT8183_POWER_DOMAIN_MFG_2D>;
-+				operating-points-v2 = <&gpu_opp_table>;
-+			};
-+		};
-+
- 		i2c3: i2c@1100f000 {
- 			compatible = "mediatek,mt8183-i2c";
- 			reg = <0 0x1100f000 0 0x1000>,
-@@ -648,6 +681,14 @@
- 			compatible = "mediatek,mt8183-efuse",
- 				     "mediatek,efuse";
- 			reg = <0 0x11f10000 0 0x1000>;
-+			#address-cells = <1>;
-+			#size-cells = <1>;
-+			thermal_calibration: calib@180 {
-+				reg = <0x180 0xc>;
-+			};
-+			svs_calibration: calib@580 {
-+				reg = <0x580 0x64>;
-+			};
- 		};
- 
- 		mfgcfg: syscon@13000000 {
--- 
-2.18.0
+> > Signed-off-by: Hanks Chen <hanks.chen@mediatek.com>
+> > ---
+> >  Documentation/devicetree/bindings/arm/cpus.yaml |    1 +
+> >  1 file changed, 1 insertion(+)
+> > 
+> > diff --git a/Documentation/devicetree/bindings/arm/cpus.yaml b/Documentation/devicetree/bindings/arm/cpus.yaml
+> > index c23c24f..51b75f7 100644
+> > --- a/Documentation/devicetree/bindings/arm/cpus.yaml
+> > +++ b/Documentation/devicetree/bindings/arm/cpus.yaml
+> > @@ -128,6 +128,7 @@ properties:
+> >        - arm,cortex-a57
+> >        - arm,cortex-a72
+> >        - arm,cortex-a73
+> > +      - arm,cortex-a75
+> >        - arm,cortex-m0
+> >        - arm,cortex-m0+
+> >        - arm,cortex-m1
+> > 
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
