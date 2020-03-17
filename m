@@ -2,109 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F329918785A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Mar 2020 04:59:58 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED43D1879F0
+	for <lists+linux-mediatek@lfdr.de>; Tue, 17 Mar 2020 07:55:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tJO5wSISos5AR03oRoSd8DZ8peDuF0c3k+5a4KB8SsM=; b=Kowy43HtHOLKnJ
-	gJrRMY7YcyPmGcrPiKqyANRuEcN6pu/TrgM3s2yN+oP771uo46jlO1FiL3HuvnbSeR3kENnGoc1Zk
-	egJ9MgIFejESyb/ASkmHSXCvyfz9d3d7ErJMmYkFAAg/bgOLiKKsxbGMNGx8LqV9e3tfMraKq0nTN
-	Liw3KbTXUcjglrwEuuG/M0YN1BgmYLPRtudxByyiH1kRhIosjL0UEuPeBUOsJSsbigFPnI340mDu7
-	aiinG4M6pkwV+Co+DG2FwmpPlLj/8r7Gcb54Mz06cqdyLOzOM+D5Fz2aYgmq88GxvaBm3hy3ZEhOC
-	CBSXZB2u2sT3X4rLQy1Q==;
+	List-Archive:List-Unsubscribe:List-Id:To:From:Subject:Mime-Version:Message-Id
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=1yPBghxy7NAUJXAFXXQWhCkIW2eTj/BJ0knz4wJZBzk=; b=H3KQSoxfEZL4Te
+	7v0PZz4tqBe+jMCOtvmnnF/OTM7I8nMqr9ctkxTUSCioXISoLRMKcbEDLZyWeLV27+1okUmL9/ByA
+	TCOKO/2W9GeBp4T5MLt8xAMo8stqqNdNSy4bXei3e+eNqOf9w8kG8+qAtIP4nH8znKdd3vhbiWdPB
+	DM5EQxt3x6h2J864AasAw35DtHEB9GL2CTdJBSyGNyQN5Rscu2boU+Dn63OiJ8hsJffTBiBTjrHnI
+	Y10lTpHdUSbqx3Abwp0w/CtSvtazukAX2CxuPhjUmiheSh2Uoz71BTRkxlF1TywfS7ke89iKqzJ5R
+	uyjPaZ4+MsxdgI8+PJFQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jE3OO-0006zW-RH; Tue, 17 Mar 2020 03:59:48 +0000
-Received: from mail-pl1-f193.google.com ([209.85.214.193])
+	id 1jE680-0003ct-4C; Tue, 17 Mar 2020 06:55:04 +0000
+Received: from mail-pl1-x64a.google.com ([2607:f8b0:4864:20::64a])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jE3OE-0006qJ-8X; Tue, 17 Mar 2020 03:59:40 +0000
-Received: by mail-pl1-f193.google.com with SMTP id ay11so9017782plb.0;
- Mon, 16 Mar 2020 20:59:37 -0700 (PDT)
+ id 1jE67w-0003WH-0b
+ for linux-mediatek@lists.infradead.org; Tue, 17 Mar 2020 06:55:01 +0000
+Received: by mail-pl1-x64a.google.com with SMTP id p25so11892351pli.7
+ for <linux-mediatek@lists.infradead.org>; Mon, 16 Mar 2020 23:54:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=date:message-id:mime-version:subject:from:to:cc;
+ bh=cF0mn8RFp/NzGOPpgquFoVLhCbRSN6dQrHYHqFzbKxU=;
+ b=qLUq4/RNPb7PhrgnudeQu/ls8asTv9i4YDOfr3NggSvcNYi4UxSfYMit8S1WUgfRKZ
+ hZbbZQPFLrVYc4w+L0UZzkonnR+9Rm8+cgeDoLy//zUl/eEx1tyOtsRTwwk0IC1GmMk5
+ 7CS7xqEvKVY1hdXlUYzYVEQFG7dy5X2lR4whv4tssypZlespqwDBYf2ykgBrHzGRsoWw
+ KSyWF/LIwFFvygdQi7hxsX3du+o+gHjUR3p65oe+tr2Bc5ohTBv5n7uD892DON5VSkoX
+ pinFPh3FrUqi+8QXt/ZEbxdi0FQwUvd8TPga7GUwJMefUnNRxfnPnWu3NX9YAlqNlHUu
+ 10hg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:autocrypt
- :message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=o+0HagUr4HI/xbZe0kDuhSARtN12WFdm90lmgkXYbjo=;
- b=SPTkwXpZGbvwzI20SEsQXmKEW8uk66TbqKEkWoN50jKLC3Rd8BVTloUqt+zMc80NoW
- 8ISvWCmiRdW9uLy+1+ls94Yw9YU816bxCqo5UfzTSXzJVKGRlJKyScpyykSvqwZXokgm
- +Aw2LHehBtxI/DCuAu9S1gXzwJADgXxsnlUZJlo6UISfpnhm0k6vkqp7rwto/JJVKy64
- IYau0GprVyp/Q5PYIenmpOuojdA1U1Kmadp86ajP0jlFW6o7uqlhWJSYQKeLmTPs1ZEB
- LLlsNmJJ0T6sFFMVS5IzCtyl16B8sgiBZrTAx3jmBaD+SnR17qX1iQ3nCGW+NEvOmr4q
- GV4Q==
-X-Gm-Message-State: ANhLgQ1eYrjva2PfKsgxzbT4w7EuOFjmdP8P7CHcYWx/mm+N8hO7zKKl
- 1gAl18Uwo/UvR1MT0qHW7c8=
-X-Google-Smtp-Source: ADFU+vsXomTDgzT6KgwIqseoW04GHkn2UK/Mw6vKIvY+mvHnkDTo863+r8mAFDy8AB4kc8InAOyEmw==
-X-Received: by 2002:a17:90b:352:: with SMTP id
- fh18mr3039940pjb.168.1584417577134; 
- Mon, 16 Mar 2020 20:59:37 -0700 (PDT)
-Received: from ?IPv6:2601:647:4000:d7:f131:b83b:a5b4:4b1b?
- ([2601:647:4000:d7:f131:b83b:a5b4:4b1b])
- by smtp.gmail.com with ESMTPSA id 8sm1293481pfv.65.2020.03.16.20.59.35
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 16 Mar 2020 20:59:36 -0700 (PDT)
-Subject: Re: [PATCH v6 3/7] scsi: ufs: introduce common delay function
-To: Stanley Chu <stanley.chu@mediatek.com>
-References: <20200316085303.20350-1-stanley.chu@mediatek.com>
- <20200316085303.20350-4-stanley.chu@mediatek.com>
- <fdf91490-9c7d-df34-1c1f-e03e12855378@acm.org>
- <1584404000.14250.28.camel@mtksdccf07>
-From: Bart Van Assche <bvanassche@acm.org>
-Autocrypt: addr=bvanassche@acm.org; prefer-encrypt=mutual; keydata=
- mQENBFSOu4oBCADcRWxVUvkkvRmmwTwIjIJvZOu6wNm+dz5AF4z0FHW2KNZL3oheO3P8UZWr
- LQOrCfRcK8e/sIs2Y2D3Lg/SL7qqbMehGEYcJptu6mKkywBfoYbtBkVoJ/jQsi2H0vBiiCOy
- fmxMHIPcYxaJdXxrOG2UO4B60Y/BzE6OrPDT44w4cZA9DH5xialliWU447Bts8TJNa3lZKS1
- AvW1ZklbvJfAJJAwzDih35LxU2fcWbmhPa7EO2DCv/LM1B10GBB/oQB5kvlq4aA2PSIWkqz4
- 3SI5kCPSsygD6wKnbRsvNn2mIACva6VHdm62A7xel5dJRfpQjXj2snd1F/YNoNc66UUTABEB
- AAG0JEJhcnQgVmFuIEFzc2NoZSA8YnZhbmFzc2NoZUBhY20ub3JnPokBOQQTAQIAIwUCVI67
- igIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEHFcPTXFzhAJ8QkH/1AdXblKL65M
- Y1Zk1bYKnkAb4a98LxCPm/pJBilvci6boefwlBDZ2NZuuYWYgyrehMB5H+q+Kq4P0IBbTqTa
- jTPAANn62A6jwJ0FnCn6YaM9TZQjM1F7LoDX3v+oAkaoXuq0dQ4hnxQNu792bi6QyVdZUvKc
- macVFVgfK9n04mL7RzjO3f+X4midKt/s+G+IPr4DGlrq+WH27eDbpUR3aYRk8EgbgGKvQFdD
- CEBFJi+5ZKOArmJVBSk21RHDpqyz6Vit3rjep7c1SN8s7NhVi9cjkKmMDM7KYhXkWc10lKx2
- RTkFI30rkDm4U+JpdAd2+tP3tjGf9AyGGinpzE2XY1K5AQ0EVI67igEIAKiSyd0nECrgz+H5
- PcFDGYQpGDMTl8MOPCKw/F3diXPuj2eql4xSbAdbUCJzk2ETif5s3twT2ER8cUTEVOaCEUY3
- eOiaFgQ+nGLx4BXqqGewikPJCe+UBjFnH1m2/IFn4T9jPZkV8xlkKmDUqMK5EV9n3eQLkn5g
- lco+FepTtmbkSCCjd91EfThVbNYpVQ5ZjdBCXN66CKyJDMJ85HVr5rmXG/nqriTh6cv1l1Js
- T7AFvvPjUPknS6d+BETMhTkbGzoyS+sywEsQAgA+BMCxBH4LvUmHYhpS+W6CiZ3ZMxjO8Hgc
- ++w1mLeRUvda3i4/U8wDT3SWuHcB3DWlcppECLkAEQEAAYkBHwQYAQIACQUCVI67igIbDAAK
- CRBxXD01xc4QCZ4dB/0QrnEasxjM0PGeXK5hcZMT9Eo998alUfn5XU0RQDYdwp6/kMEXMdmT
- oH0F0xB3SQ8WVSXA9rrc4EBvZruWQ+5/zjVrhhfUAx12CzL4oQ9Ro2k45daYaonKTANYG22y
- //x8dLe2Fv1By4SKGhmzwH87uXxbTJAUxiWIi1np0z3/RDnoVyfmfbbL1DY7zf2hYXLLzsJR
- mSsED/1nlJ9Oq5fALdNEPgDyPUerqHxcmIub+pF0AzJoYHK5punqpqfGmqPbjxrJLPJfHVKy
- goMj5DlBMoYqEgpbwdUYkH6QdizJJCur4icy8GUNbisFYABeoJ91pnD4IGei3MTdvINSZI5e
-Message-ID: <b7a6045e-9615-0cd2-9812-2871bf9ba44c@acm.org>
-Date: Mon, 16 Mar 2020 20:59:34 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.5.0
-MIME-Version: 1.0
-In-Reply-To: <1584404000.14250.28.camel@mtksdccf07>
-Content-Language: en-US
+ h=x-gm-message-state:date:message-id:mime-version:subject:from:to:cc;
+ bh=cF0mn8RFp/NzGOPpgquFoVLhCbRSN6dQrHYHqFzbKxU=;
+ b=fvULrN5sb/ro9h8RSSkdjvE/Ohprz7wTRj4ciEGkYDaNQ0aY86AExTx5MAJSUJMFAv
+ YgGErAzPo5q+k0MVxVQGFYolmlAN8MW6Ps2lnN/x/Y2RvVta3MYQck1W1XAoNfSuBItP
+ i0JdbB6ZdFlZ6bxyUo298w2H//IN8okQNSOBsFaNHx+w9HLYicdhLJfKKAlqMvG5bLPg
+ xKc81RvxxDwE2sWynlup8A+0sZouTYvuBSPWCszk2DbKn0dKfWr63yYr8j1mJhQw9YDe
+ 5+8jK/bXD53l5MO0dIAg9kKNLQEEoeZ6j6yMDeJklMbVLXrlSZQ1nVlJeeBl8+yCILtG
+ AIKQ==
+X-Gm-Message-State: ANhLgQ2hAIVgfjHu2KjCJJ+joAptN7CU6OQRKSuyhMj7IkjQwZYZaD4k
+ MWN3oIoJ4gM8g6EVqK1NkaQKgu4JeS3TKFE=
+X-Google-Smtp-Source: ADFU+vt2Zvqf1px/Dmb35lmQnUB5JpW8RvY7l95YZat6XfupQdXF2UMeOYFTa4BNyZ32vltscuYTU3kAv+PeRtc=
+X-Received: by 2002:a63:8342:: with SMTP id h63mr3660917pge.141.1584428098211; 
+ Mon, 16 Mar 2020 23:54:58 -0700 (PDT)
+Date: Mon, 16 Mar 2020 23:54:46 -0700
+Message-Id: <20200317065452.236670-1-saravanak@google.com>
+Mime-Version: 1.0
+X-Mailer: git-send-email 2.25.1.481.gfbce0eb801-goog
+Subject: [PATCH v1 0/6] Fix device links functional breakage in 4.19.99
+From: Saravana Kannan <saravanak@google.com>
+To: stable@vger.kernel.org, Jonathan Corbet <corbet@lwn.net>, 
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ "Rafael J. Wysocki" <rafael@kernel.org>, 
+ Len Brown <len.brown@intel.com>, Pavel Machek <pavel@ucw.cz>, 
+ Matthias Brugger <matthias.bgg@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_205938_793013_FADA105F 
-X-CRM114-Status: GOOD (  18.73  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20200316_235500_085526_3AE4BD6B 
+X-CRM114-Status: GOOD (  11.12  )
+X-Spam-Score: -7.7 (-------)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (-7.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.214.193 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [bart.vanassche[at]gmail.com]
+ no trust [2607:f8b0:4864:20:0:0:0:64a listed in]
+ [list.dnswl.org]
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.214.193 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -116,65 +94,57 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-scsi@vger.kernel.org,
- "Martin K . Petersen" <martin.petersen@oracle.com>, andy.teng@mediatek.com,
- jejb@linux.ibm.com, chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, avri.altman@wdc.com, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- alim.akhtar@samsung.com, matthias.bgg@gmail.com, asutoshd@codeaurora.org,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: Saravana Kannan <saravanak@google.com>, linux-pm@vger.kernel.org,
+ linux-doc@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, kernel-team@android.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2020-03-16 17:13, Stanley Chu wrote:
-> On Mon, 2020-03-16 at 09:23 -0700, Bart Van Assche wrote:
->> On 3/16/20 1:52 AM, Stanley Chu wrote:
->>> +void ufshcd_wait_us(unsigned long us, unsigned long tolerance, bool can_sleep)
->>> +{
->>> +	if (!us)
->>> +		return;
->>> +
->>> +	if (us < 10 || !can_sleep)
->>> +		udelay(us);
->>> +	else
->>> +		usleep_range(us, us + tolerance);
->>> +}
->>> +EXPORT_SYMBOL_GPL(ufshcd_wait_us);
->>
->> I don't like this function because I think it makes the UFS code harder 
->> to read instead of easier. The 'can_sleep' argument is only set by one 
->> caller which I think is a strong argument to remove that argument again 
->> and to move the code that depends on that argument from the above 
->> function into the caller. Additionally, it is not possible to comprehend 
->> what a ufshcd_wait_us() call does without looking up the function 
->> definition to see what the meaning of the third argument is.
->>
->> Please drop this patch.
-> 
-> Thanks for your review and comments.
-> 
-> If the problem is the third argument 'can_sleep' which makes the code
-> not be easily comprehensible, how about just removing 'can_sleep' from
-> this function and keeping left parts because this function provides good
-> flexibility to users to choose udelay or usleep_range according to the
-> 'us' argument?
+As mentioned in an earlier email thread [1], 4.19.99 broke the ability
+to create stateful and stateless device links between the same set of
+devices when it pulled in a valid bug fix [2]. While the fix was valid,
+it removes a functionality that was present before the bug fix.
 
-Hi Stanley,
+This patch series attempts to fix that by pulling in more patches from
+upstream. I've just done compilation testing so far. But wanted to send
+out a v1 to see if this patch list was acceptable before I fixed up the
+commit text format to match what's needed for stable mailing list.
 
-I think that we need to get rid of 'can_sleep' across the entire UFS
-driver. As far as I can see the only context from which 'can_sleep' is
-set to true is ufshcd_host_reset_and_restore() and 'can_sleep' is set to
-true because ufshcd_hba_stop() is called with a spinlock held. Do you
-agree that it is wrong to call udelay() while holding a spinlock() and
-that doing so has a bad impact on the energy consumption of the UFS
-driver? Has it already been considered to use another mechanism to
-serialize REG_CONTROLLER_ENABLE changes, e.g. a mutex?
+Some of the patches are new functionality, but for a first pass, it was
+easier to pull these in than try and fix the conflicts. If these patches
+are okay to pull into stable, then all I need to do is fix the commit
+text.
 
 Thanks,
+Saravana
 
-Bart.
+[1] - https://lore.kernel.org/stable/CAGETcx-0dKRWo=tTVcfJQhQUsMtX_LtL6yvDkb3CMbvzREsvOQ@mail.gmail.com/#t
+[2] - 6fdc440366f1a99f344b629ac92f350aefd77911
+
+
+Rafael J. Wysocki (5):
+  driver core: Fix adding device links to probing suppliers
+  driver core: Make driver core own stateful device links
+  driver core: Add device link flag DL_FLAG_AUTOPROBE_CONSUMER
+  driver core: Remove device link creation limitation
+  driver core: Fix creation of device links with PM-runtime flags
+
+Yong Wu (1):
+  driver core: Remove the link if there is no driver with AUTO flag
+
+ Documentation/driver-api/device_link.rst |  63 +++--
+ drivers/base/core.c                      | 293 +++++++++++++++++------
+ drivers/base/dd.c                        |   2 +-
+ drivers/base/power/runtime.c             |   4 +-
+ include/linux/device.h                   |   7 +-
+ 5 files changed, 265 insertions(+), 104 deletions(-)
+
+-- 
+2.25.1.481.gfbce0eb801-goog
+
 
 _______________________________________________
 Linux-mediatek mailing list
