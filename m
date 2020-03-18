@@ -2,83 +2,53 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5A76B1899B5
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 11:41:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4E772189AF2
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 12:46:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5Ww7rANEPw0o3rxVmuQ2i6W50B5xbKbkBPkDWGjdjyQ=; b=oravATEfHcTGtQ
-	9lND73AQLrs+PPhK46CTsaj0eOhnsphAhK80SEnFdRU2vFF/l36L1NFt3KL8h5r2jPG0tjYmUsmpd
-	EcG211r14FOYfeABafpXgTw+Ako9NfJhAQ2lfkEmJ61n9r4GNVZbd/KOY++DJELfk6YJPk4OHIJ8S
-	Xrrjc8wt1P+T9XGqqyaexUvbxy/8zs2AH5Eidt3uaeG0s8m4P3+51F9zPqNHxOmBF/Xp1UY9KKCHq
-	a6cRRaKOvTt623POZdL/lBCnlTWd/WQfcLfTqqH+l7kxjhILvtgsPqEK9iiyhSQiL9w9WNam4AusD
-	mBeQOW5aae7PuOkH8Zfw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=qQV55UuKbbyu3nkoJQgTggP5iRb6rqW3j9JElW7+cDY=; b=dEB
+	GFfNF5Fufuv/mN3l95O96OQsj06r/HyUEOdr8LxzJx8mgts6eaphF9WFs2y+NdsNeH9CHjjb+8Qsx
+	8/owYDn/vBRk/Px/nc6Yqxa/mMPpfmIGcF8W6Qgb6CT+MEXmzl+0QQbmxZSNa4QdUq/lpUdrtpz9w
+	C0t+qwPWVL7z9z9UodziYf5bL93YX3GChvHLZ8199wvrLx1Tt9AambMamTpCX8HVaz5NXTMscQHDW
+	H0/2QzsCwOzKG6r8xo1J+mYV57MwK320MIfYvnj9J6f9a0ItfotrBoEFt49qdjHt7RwA2S74BnTK3
+	6VxgQXHbJiPoLwzbj0E9CeeY35QwbBw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jEW8R-0000PX-4l; Wed, 18 Mar 2020 10:41:15 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jEW7e-0008Dr-LV; Wed, 18 Mar 2020 10:40:28 +0000
-X-UUID: 2fe4eaba36744769a1e4e867ccb5df91-20200318
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=dnaSBK+72fnD5GyHY2aq/bAt/ZnYmT7UNcTU1nsG078=; 
- b=KEMe7Gj8TSKdDlTTGYESPtjUlXBt5NhbvmL5Oy3nD9fLFfpFXWNmDxNXXtEmNXFZfHzvJmLgtM+EV+k6OtTPKyhLTxn7TApiCPAqyHGX5b5m7E8e/iKFjb+1LMmZRHz6VzVb8M5jujr1jwLKpxjSv9I6dKjekEhX3wMFNUUXy2E=;
-X-UUID: 2fe4eaba36744769a1e4e867ccb5df91-20200318
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1448410426; Wed, 18 Mar 2020 02:40:23 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Mar 2020 03:40:55 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Mar 2020 18:39:40 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Wed, 18 Mar 2020 18:40:31 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.peter~sen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
- <bvanassche@acm.org>
-Subject: [PATCH v7 7/7] scsi: ufs-mediatek: customize the delay for host
- enabling
-Date: Wed, 18 Mar 2020 18:40:16 +0800
-Message-ID: <20200318104016.28049-8-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200318104016.28049-1-stanley.chu@mediatek.com>
-References: <20200318104016.28049-1-stanley.chu@mediatek.com>
-MIME-Version: 1.0
-X-TM-SNTS-SMTP: 7E6F8BFA6B3F39D2107586FB052DAB7D9B93DE6EAE31C102D80358A06156AE8D2000:8
-X-MTK: N
+	id 1jEX9X-0002Ib-FA; Wed, 18 Mar 2020 11:46:27 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jEX9T-0002Hq-2I; Wed, 18 Mar 2020 11:46:24 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id ABDB81FB;
+ Wed, 18 Mar 2020 04:46:21 -0700 (PDT)
+Received: from e123648.arm.com (unknown [10.37.12.57])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPA id 04D633F534;
+ Wed, 18 Mar 2020 04:46:09 -0700 (PDT)
+From: Lukasz Luba <lukasz.luba@arm.com>
+To: linux-kernel@vger.kernel.org, linux-pm@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, dri-devel@lists.freedesktop.org,
+ linux-omap@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-msm@vger.kernel.org, linux-imx@nxp.com
+Subject: [PATCH v5 0/5] Add support for devices in the Energy Model
+Date: Wed, 18 Mar 2020 11:45:43 +0000
+Message-Id: <20200318114548.19916-1-lukasz.luba@arm.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200318_034026_719297_DD461FBE 
-X-CRM114-Status: GOOD (  14.17  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200318_044623_198704_75C7C7A7 
+X-CRM114-Status: GOOD (  19.08  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [217.140.110.172 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,140 +60,150 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stanley Chu <stanley.chu@mediatek.com>, andy.teng@mediatek.com,
- chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, beanhuo@micron.com,
- linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Cc: nm@ti.com, juri.lelli@redhat.com, peterz@infradead.org,
+ viresh.kumar@linaro.org, liviu.dudau@arm.com, bjorn.andersson@linaro.org,
+ bsegall@google.com, festevam@gmail.com, Morten.Rasmussen@arm.com,
+ robh@kernel.org, amit.kucheria@verdurent.com, lorenzo.pieralisi@arm.com,
+ vincent.guittot@linaro.org, khilman@kernel.org, daniel.lezcano@linaro.org,
+ steven.price@arm.com, cw00.choi@samsung.com, mingo@redhat.com, mgorman@suse.de,
+ rui.zhang@intel.com, alyssa.rosenzweig@collabora.com, orjan.eide@arm.com,
+ daniel@ffwll.ch, b.zolnierkie@samsung.com, s.hauer@pengutronix.de,
+ rostedt@goodmis.org, matthias.bgg@gmail.com, Dietmar.Eggemann@arm.com,
+ airlied@linux.ie, javi.merino@arm.com, tomeu.vizoso@collabora.com,
+ qperret@google.com, sboyd@kernel.org, mka@chromium.org, rdunlap@infradead.org,
+ rjw@rjwysocki.net, agross@kernel.org, kernel@pengutronix.de,
+ sudeep.holla@arm.com, patrick.bellasi@matbug.net, shawnguo@kernel.org,
+ lukasz.luba@arm.com
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-MediaTek platform and UFS controller can dynamically customize
-the delay for host enabling according to different scenarios.
+Hi all,
 
-For example, if UniPro enters lower-power mode, such delay can
-be minimized, otherwise longer delay shall be expected.
+This patch set introduces support for devices in the Energy Model (EM)
+framework. It will unify the power model for thermal subsystem and make it
+simpler. The 1st patch refactors EM framework and adds support for devices.
+The 2nd patch changes dev_pm_opp_of_register_em() in OPP/OF which now should
+take as an argument struct device pointer. It touches a few trees
+(OMAP, NXP, Mediatek) updating their CPUfreq drivers to the new interface.
+Patch 4/5 changes thermal devfreq cooling removing old code for calculating
+local power table. It simplifies the code and uses EM for requested power
+calculation. Last patch 5/5 adds EM to Panfrost driver.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Avri Altman <avri.altman@wdc.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 43 ++++++++++++++++++++++++++-------
- drivers/scsi/ufs/ufs-mediatek.h |  1 +
- 2 files changed, 35 insertions(+), 9 deletions(-)
+The patch set is based on linux-next tag next-20200317. I have decided to add
+a pending patch developed by Matthias [5]. It introduces PM QoS limits in
+devfreq cooling, to not break the build test. When it lands into
+thermal/linux-next and then in linux-next, I'll drop it from this series.
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 73bd4c245f4a..40a66b31b31f 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -30,11 +30,6 @@
- #define ufs_mtk_device_reset_ctrl(high, res) \
- 	ufs_mtk_smc(UFS_MTK_SIP_DEVICE_RESET, high, res)
- 
--#define ufs_mtk_unipro_powerdown(hba, powerdown) \
--	ufshcd_dme_set(hba, \
--		       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0), \
--		       powerdown)
--
- static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
- {
- 	u32 tmp;
-@@ -71,6 +66,21 @@ static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
- 	}
- }
- 
-+static int ufs_mtk_hce_enable_notify(struct ufs_hba *hba,
-+				     enum ufs_notify_change_status status)
-+{
-+	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
-+
-+	if (status == PRE_CHANGE) {
-+		if (host->unipro_lpm)
-+			hba->hba_enable_delay_us = 0;
-+		else
-+			hba->hba_enable_delay_us = 600;
-+	}
-+
-+	return 0;
-+}
-+
- static int ufs_mtk_bind_mphy(struct ufs_hba *hba)
- {
- 	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
-@@ -324,12 +334,26 @@ static int ufs_mtk_pwr_change_notify(struct ufs_hba *hba,
- 	return ret;
- }
- 
-+static int ufs_mtk_unipro_set_pm(struct ufs_hba *hba, u32 lpm)
-+{
-+	int ret;
-+	struct ufs_mtk_host *host = ufshcd_get_variant(hba);
-+
-+	ret = ufshcd_dme_set(hba,
-+			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
-+			     lpm);
-+	if (!ret)
-+		host->unipro_lpm = lpm;
-+
-+	return ret;
-+}
-+
- static int ufs_mtk_pre_link(struct ufs_hba *hba)
- {
- 	int ret;
- 	u32 tmp;
- 
--	ufs_mtk_unipro_powerdown(hba, 0);
-+	ufs_mtk_unipro_set_pm(hba, 0);
- 
- 	/*
- 	 * Setting PA_Local_TX_LCC_Enable to 0 before link startup
-@@ -437,7 +461,7 @@ static int ufs_mtk_link_set_hpm(struct ufs_hba *hba)
- 	if (err)
- 		return err;
- 
--	err = ufs_mtk_unipro_powerdown(hba, 0);
-+	err = ufs_mtk_unipro_set_pm(hba, 0);
- 	if (err)
- 		return err;
- 
-@@ -458,10 +482,10 @@ static int ufs_mtk_link_set_lpm(struct ufs_hba *hba)
- {
- 	int err;
- 
--	err = ufs_mtk_unipro_powerdown(hba, 1);
-+	err = ufs_mtk_unipro_set_pm(hba, 1);
- 	if (err) {
- 		/* Resume UniPro state for following error recovery */
--		ufs_mtk_unipro_powerdown(hba, 0);
-+		ufs_mtk_unipro_set_pm(hba, 0);
- 		return err;
- 	}
- 
-@@ -552,6 +576,7 @@ static struct ufs_hba_variant_ops ufs_hba_mtk_vops = {
- 	.name                = "mediatek.ufshci",
- 	.init                = ufs_mtk_init,
- 	.setup_clocks        = ufs_mtk_setup_clocks,
-+	.hce_enable_notify   = ufs_mtk_hce_enable_notify,
- 	.link_startup_notify = ufs_mtk_link_startup_notify,
- 	.pwr_change_notify   = ufs_mtk_pwr_change_notify,
- 	.apply_dev_quirks    = ufs_mtk_apply_dev_quirks,
-diff --git a/drivers/scsi/ufs/ufs-mediatek.h b/drivers/scsi/ufs/ufs-mediatek.h
-index 4c787b99fe41..5bbd3e9cbae2 100644
---- a/drivers/scsi/ufs/ufs-mediatek.h
-+++ b/drivers/scsi/ufs/ufs-mediatek.h
-@@ -91,6 +91,7 @@ enum {
- struct ufs_mtk_host {
- 	struct ufs_hba *hba;
- 	struct phy *mphy;
-+	bool unipro_lpm;
- 	bool ref_clk_enabled;
- 	u16 ref_clk_ungating_wait_us;
- 	u16 ref_clk_gating_wait_us;
+Changes:
+v5:
+- devfreq cooling: rebased on top of pending patch introducing PM QoS limits
+- devfreq cooling: added Matthias's patch to make this series build check pass
+- devfreq cooling: removed OPP disable code and switched to PM QoS
+- devfreq cooling: since thermal code always used a pointer to devfreq_dev_status,
+  switched to work on a local copy and avoid potential race when either busy_time or
+  total_time could change in the background
+- devfreq cooling: added _normalize_load() and handle all scenarios when
+  busy_time and total_time could have odd values (even raw counters)
+- Energy Model patch 2/4: removed prints from cpufreq drivers and added print inside
+  dev_pm_opp_of_register_em()
+- update patch 2/4 description to better reflect upcoming changes
+- collected ACK from Quentin for patch 1/4 and Reviewed-by from Steven for 4/4
+v4 [4]:
+- devfreq cooling: added two new registration functions, which will take care
+  of registering EM for the device and simplify drivers code
+  (suggested by Robin and Rob)
+- Energy Model: changed unregistering code, added kref to track usage, added
+  code freeing tables, added helper function
+- added return value to function dev_pm_opp_of_register_em() and updated
+  CPUFreq drivers code, added debug prints in case of failure
+- updated comments in devfreq cooling removing statement that only
+  simple_ondemand devfreq governor is supported to work with power extentions
+- fixed spelling in the documentation (reported by Randy)
+v3 [3]:
+- added back the cpumask 'cpus' in the em_perf_domain due potential cache misses
+- removed _is_cpu_em() since there is no need for it
+- changed function name from em_pd_energy() to em_cpu_energy(), which is
+  optimized for usage from the scheduler making some assumptions and not
+  validating arguments to speed-up, there is a comment stressing that it should
+  be used only for CPUs em_perf_domain
+- changed em_get_pd() to em_pd_get() which is now aligned with em_cpu_get()
+  naming
+- Energy Model: add code which checks if the EM is already registered for the
+  devfreq device
+- extended comment in em_cpu_get() describing the need for this function
+- fixed build warning reported on x86 by kbuild test robot in devfreq_cooling.c
+- updated documentation in the energy-model.rst
+- changed print messages from 'energy_model' to 'EM'
+- changed dev_warn to dev_dbg, should calm down test scripts in case the
+  platform has OPPs less efficient in the OPP table (some of them are there for
+  cooling reasons, we shouldn't warn in this case, debug info is enough)
+v2 [2]:
+- changed EM API em_register_perf_domain() adding cpumask_t pointer
+  as last argument (which was discussed with Dietmar and Quentin)
+- removed dependency on PM_OPP, thanks to the cpumask_t argument
+- removed enum em_type and em->type dependent code
+- em_get_pd() can handle CPU device as well as devfreq device
+- updated EM documentation
+- in devfreq cooling added code which prevents from race condition with
+  devfreq governors which are trying to use OPPs while thermal is in the middle
+  of disabling them.
+- in devfreq cooling added code which updates state of the devfreq device to
+  avoid working on stale data when governor has not updated it for a long time
+- in devfreq cooling added backward compatibility frequency table for drivers
+  which did not provide EM
+- added Steven's Reviewed-by to trace code in thermal
+- added another CPUFreq driver which needs to be updated to the new API
+
+The v1 can be found here [1].
+
+Regards,
+Lukasz Luba
+
+[1] https://lkml.org/lkml/2020/1/16/619
+[2] https://lkml.org/lkml/2020/2/6/377
+[3] https://lkml.org/lkml/2020/2/21/1910
+[4] https://lkml.org/lkml/2020/3/9/471
+[5] https://patchwork.kernel.org/patch/11435217/
+
+Lukasz Luba (4):
+  PM / EM: add devices to Energy Model
+  OPP: refactor dev_pm_opp_of_register_em() and update related drivers
+  thermal: devfreq_cooling: Refactor code and switch to use Energy Model
+  drm/panfrost: Register devfreq cooling and attempt to add Energy Model
+
+Matthias Kaehlcke (1):
+  thermal: devfreq_cooling: Use PM QoS to set frequency limits
+
+ Documentation/power/energy-model.rst        | 133 ++---
+ Documentation/scheduler/sched-energy.rst    |   2 +-
+ drivers/cpufreq/cpufreq-dt.c                |   2 +-
+ drivers/cpufreq/imx6q-cpufreq.c             |   2 +-
+ drivers/cpufreq/mediatek-cpufreq.c          |   2 +-
+ drivers/cpufreq/omap-cpufreq.c              |   2 +-
+ drivers/cpufreq/qcom-cpufreq-hw.c           |   2 +-
+ drivers/cpufreq/scmi-cpufreq.c              |  13 +-
+ drivers/cpufreq/scpi-cpufreq.c              |   2 +-
+ drivers/cpufreq/vexpress-spc-cpufreq.c      |   2 +-
+ drivers/gpu/drm/panfrost/panfrost_devfreq.c |   2 +-
+ drivers/opp/of.c                            |  76 +--
+ drivers/thermal/cpufreq_cooling.c           |  12 +-
+ drivers/thermal/devfreq_cooling.c           | 536 ++++++++++----------
+ include/linux/devfreq_cooling.h             |  39 +-
+ include/linux/energy_model.h                | 111 ++--
+ include/linux/pm_opp.h                      |  15 +-
+ include/trace/events/thermal.h              |  19 +-
+ kernel/power/energy_model.c                 | 465 +++++++++++++----
+ kernel/sched/fair.c                         |   2 +-
+ kernel/sched/topology.c                     |   4 +-
+ 21 files changed, 901 insertions(+), 542 deletions(-)
+
 -- 
-2.18.0
+2.17.1
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
