@@ -2,70 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8998818A809
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 23:23:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A5AA918A859
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 23:38:56 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Message-ID:
-	Subject:To:From:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
-	List-Owner; bh=ttYoj338iMZPFkrJGL5OzqupWfZ/yp2kO+NEaDoNfO8=; b=tCcMEpO5cN3T3c
-	9DB9nScemybGKzU6Y6zJVp7z2Pz8z3oX+z8rlqCKp8ri3GsAW32RbP8kTAAciiU4V4nYhTYa99IoA
-	IYgRmhOJb63jWU0+d0aoWldtt7L7wGTAkStgSTgRbMOZt9Ci+uHkPp+Eq05vvGwCVnkB+tkka10QN
-	GH9qo6Vh9mwCnVHBmo+5gQI2CV1kuZHLMYpgOAHYgTIonVMVpKN71fMv/rnHv8k5nBE8pJqRIKjcg
-	c11veNu7/nChPPdsdbeoOluJWbXBcjIB1L//AAULnSjMmR5eWKUpSXiskNIJ6okpOGBUCP/IA624v
-	KJbCjbxvrWkUDKwFdS3Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=8n+3AGFqam9IxpyKftjfUKO1KxCSTY6QDbddiRvfp98=; b=kIGv2hiX9Hg4Q5
+	SelpuJZEGwiPQhd8zVzuj69tiN/480qPkjVrNf/XOiT0p7BqxzbJV8jgzhF62ts3erOK2swK48Prl
+	cJ1c64SahvkXNfQRgrhv/Ti32YYZ8PzZsaL1UPwTcEPaqUAy5j/+hfimU5P8NRvlIlXUP7y5eCY0Z
+	xAi63Qa7F3dKUObj72LduXXscZHfI8FajPRTgceWPjdXQVazr3Z7aazs6XEei4XmH9oJivNcYwFIF
+	WXVd3yBW0eRLxN1SxxISymgyU0Ei0mi0W/y2pwFLs8z0V7y2Th+8/1r9tEvkD9EmQqMWVJ5RDDR9O
+	jznZEPxLtisZ8/LQbX2A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jEh5R-0004cv-SN; Wed, 18 Mar 2020 22:22:53 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jEhKr-00056P-Jx; Wed, 18 Mar 2020 22:38:49 +0000
+Received: from mail-io1-f65.google.com ([209.85.166.65])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jEh5F-0004Rz-EY; Wed, 18 Mar 2020 22:22:42 +0000
-Received: from localhost (mobile-166-175-186-165.mycingular.net
- [166.175.186.165])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6804D20714;
- Wed, 18 Mar 2020 22:22:40 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1584570160;
- bh=Xz/0EvZI1ZYMODHoYRMl9J+dOM/tsbfHznYvsE+DY4A=;
- h=Date:From:To:Cc:Subject:In-Reply-To:From;
- b=TeaROXeqtIiOuPZEJEeYWnIPHrh1Ask7srNIxIYhwTpKsUqP2jP8EVgIYJM33HfwF
- 1jFMhhapjJedYXzGwqqv6NFwF3Nch7XWO1iNLYfMzXCjEK5TU34+g7gYssJdkFOM1b
- DGF8UtEi5MxA8pPt6Acsc8nHRD8W/OlpKBw98Rb4=
-Date: Wed, 18 Mar 2020 17:22:38 -0500
-From: Bjorn Helgaas <helgaas@kernel.org>
-To: Thomas Gleixner <tglx@linutronix.de>
-Subject: Re: [PATCH 4/5] pci: handled return value of platform_get_irq
- correctly
-Message-ID: <20200318222238.GA247500@google.com>
+ id 1jEhKo-00055u-3S
+ for linux-mediatek@lists.infradead.org; Wed, 18 Mar 2020 22:38:47 +0000
+Received: by mail-io1-f65.google.com with SMTP id q9so265596iod.4
+ for <linux-mediatek@lists.infradead.org>; Wed, 18 Mar 2020 15:38:46 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=hjd4cWdqxb7vqLIGudSEI03tN+skbBZc4IaGVCWe4bE=;
+ b=VNf9ffoQUVP2JQ1wsOufjqzmbi030xQKPbrB4yw4jelr5f/hbjM/9awm+YEHymYGjO
+ 2qrSh2yHWHsYYTeAlU9YDxemC+0U0V3FlkP1JN8fQCCDpTUXFBTUepZys/bKY+/UHhju
+ H23spAuzF6DmTgRd55IpBr3kvs5Yn5yhPDMhjOsYLCiZyTBJx3P8WypVOowK3UWsPTJB
+ aqjfkXrPOQIUf3jm5ahO8SnPCLuP+41nRbN7tFeLjH+uKt5XxntizHZBVABPdY1U9MjI
+ 2scOk/rRowxMfDKdK81LNet3ZOCVhMsmfob1UenaB6S/wcRqqALGduB+/0lfUZNWjHL4
+ 0R3A==
+X-Gm-Message-State: ANhLgQ1+bjZI9lB3GcL0g5iLar3xvkT6impBFVOS95o25Sqi/lpD1kVN
+ OEy1pPqthPR8rLulIfclFw==
+X-Google-Smtp-Source: ADFU+vuWOZ5C5oLxE9dB/U/jglteCOUaH90nZHmvZdWYJLWdri0o66f9VabHUrjNFihG7WzqU2uzrA==
+X-Received: by 2002:a5d:958f:: with SMTP id a15mr70087ioo.170.1584571125436;
+ Wed, 18 Mar 2020 15:38:45 -0700 (PDT)
+Received: from rob-hp-laptop ([64.188.179.250])
+ by smtp.gmail.com with ESMTPSA id h29sm96397ili.19.2020.03.18.15.38.43
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 18 Mar 2020 15:38:44 -0700 (PDT)
+Received: (nullmailer pid 31930 invoked by uid 1000);
+ Wed, 18 Mar 2020 22:38:42 -0000
+Date: Wed, 18 Mar 2020 16:38:42 -0600
+From: Rob Herring <robh@kernel.org>
+To: Hanks Chen <hanks.chen@mediatek.com>
+Subject: Re: [PATCH v3 1/6] dt-bindings: pinctrl: add bindings for MediaTek
+ MT6779 SoC
+Message-ID: <20200318223842.GA31707@bogus>
+References: <1584454007-2115-1-git-send-email-hanks.chen@mediatek.com>
+ <1584454007-2115-2-git-send-email-hanks.chen@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <874kulbwyv.fsf@nanos.tec.linutronix.de>
-User-Agent: Mutt/1.12.2 (2019-09-21)
+In-Reply-To: <1584454007-2115-2-git-send-email-hanks.chen@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200318_152241_531567_CF88EEF6 
-X-CRM114-Status: GOOD (  19.24  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200318_153846_146220_57EC7B07 
+X-CRM114-Status: GOOD (  10.24  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.166.65 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [robherring2[at]gmail.com]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [robherring2[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 FAKE_REPLY_C           No description available.
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.65 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,169 +92,44 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Karthikeyan Mitran <m.karthikeyan@mobiveil.co.in>,
- Marc Gonzalez <marc.w.gonzalez@free.fr>, linux-pci@vger.kernel.org,
- Linus Walleij <linus.walleij@linaro.org>,
- Aman Sharma <amanharitsh123@gmail.com>, linux-kernel@vger.kernel.org,
- Ryder Lee <ryder.lee@mediatek.com>, linux-mediatek@lists.infradead.org,
- Thomas Petazzoni <thomas.petazzoni@bootlin.com>, Marc Zyngier <maz@kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Mans Rullgard <mans@mansr.com>,
- Hou Zhiqiang <Zhiqiang.Hou@nxp.com>, linux-arm-kernel@lists.infradead.org,
- Andrew Murray <amurray@thegoodpenguin.co.uk>
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ wsd_upstream@mediatek.com, Andy Teng <andy.teng@mediatek.com>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@kernel.org>,
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, Mar 18, 2020 at 02:42:48PM +0100, Thomas Gleixner wrote:
-> Bjorn Helgaas <helgaas@kernel.org> writes:
-> > On Fri, Mar 13, 2020 at 04:56:42PM -0500, Bjorn Helgaas wrote:
-> >> On Fri, Mar 13, 2020 at 10:05:58PM +0100, Thomas Gleixner wrote:
-> >> > >   I think the best pattern is:
-> >> > >
-> >> > >     irq = platform_get_irq(pdev, i);
-> >> > >     if (irq < 0)
-> >> > >       return irq;
-> >> > 
-> >> > Careful. 0 is not a valid interrupt.
-> >> 
-> >> Should callers of platform_get_irq() check for a 0 return value?
-> >> About 900 of them do not.
+On Tue, 17 Mar 2020 22:06:42 +0800, Hanks Chen wrote:
+> From: Andy Teng <andy.teng@mediatek.com>
 > 
-> I don't know what I was looking at.
+> Add devicetree bindings for MediaTek MT6779 pinctrl driver.
 > 
-> platform_get_irq() does the right thing already, so checking for irq < 0
-> is sufficient.
+> Change-Id: I92586369564948f2628f70421bcd70668f132c4f
+> Signed-off-by: Andy Teng <andy.teng@mediatek.com>
+> ---
+>  .../bindings/pinctrl/mediatek,mt6779-pinctrl.yaml  |  208 ++++++++++++++++++++
+>  1 file changed, 208 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml
 > 
-> Sorry for the confusion!
 
-Thanks, I was indeed confused!  Maybe we could reduce future confusion
-by strengthening the comments slightly, e.g.,
+My bot found errors running 'make dt_binding_check' on your patch:
 
-  - * Return: IRQ number on success, negative error number on failure.
-  + * Return: non-zero IRQ number on success, negative error number on failure.
+warning: no schema found in file: Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml
+/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml: ignoring, error parsing file
+Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml:  while parsing a block collection
+  in "<unicode string>", line 28, column 5
+did not find expected '-' indicator
+  in "<unicode string>", line 29, column 5
+Documentation/devicetree/bindings/Makefile:12: recipe for target 'Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.example.dts' failed
+make[1]: *** [Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.example.dts] Error 1
+Makefile:1262: recipe for target 'dt_binding_check' failed
+make: *** [dt_binding_check] Error 2
 
-I don't want to push my luck, but it's pretty hard to prove that
-platform_get_irq() never returns 0.  What would you think of something
-like the following?
-
-@@ -133,23 +133,24 @@ EXPORT_SYMBOL_GPL(devm_platform_ioremap_resource_byname);
-  *		if (irq < 0)
-  *			return irq;
-  *
-- * Return: IRQ number on success, negative error number on failure.
-+ * Return: non-zero IRQ number on success, negative error number on failure.
-  */
- int platform_get_irq_optional(struct platform_device *dev, unsigned int num)
- {
-+	int ret;
- #ifdef CONFIG_SPARC
- 	/* sparc does not have irqs represented as IORESOURCE_IRQ resources */
- 	if (!dev || num >= dev->archdata.num_irqs)
- 		return -ENXIO;
--	return dev->archdata.irqs[num];
-+	ret = dev->archdata.irqs[num];
-+	goto out;
- #else
- 	struct resource *r;
--	int ret;
- 
- 	if (IS_ENABLED(CONFIG_OF_IRQ) && dev->dev.of_node) {
- 		ret = of_irq_get(dev->dev.of_node, num);
- 		if (ret > 0 || ret == -EPROBE_DEFER)
--			return ret;
-+			goto out;
- 	}
- 
- 	r = platform_get_resource(dev, IORESOURCE_IRQ, num);
-@@ -157,7 +158,7 @@ int platform_get_irq_optional(struct platform_device *dev, unsigned int num)
- 		if (r && r->flags & IORESOURCE_DISABLED) {
- 			ret = acpi_irq_get(ACPI_HANDLE(&dev->dev), num, r);
- 			if (ret)
--				return ret;
-+				goto out;
- 		}
- 	}
- 
-@@ -171,13 +172,17 @@ int platform_get_irq_optional(struct platform_device *dev, unsigned int num)
- 		struct irq_data *irqd;
- 
- 		irqd = irq_get_irq_data(r->start);
--		if (!irqd)
--			return -ENXIO;
-+		if (!irqd) {
-+			ret = -ENXIO;
-+			goto out;
-+		}
- 		irqd_set_trigger_type(irqd, r->flags & IORESOURCE_BITS);
- 	}
- 
--	if (r)
--		return r->start;
-+	if (r) {
-+		ret = r->start;
-+		goto out;
-+	}
- 
- 	/*
- 	 * For the index 0 interrupt, allow falling back to GpioInt
-@@ -190,11 +195,14 @@ int platform_get_irq_optional(struct platform_device *dev, unsigned int num)
- 		ret = acpi_dev_gpio_irq_get(ACPI_COMPANION(&dev->dev), num);
- 		/* Our callers expect -ENXIO for missing IRQs. */
- 		if (ret >= 0 || ret == -EPROBE_DEFER)
--			return ret;
-+			goto out;
- 	}
- 
--	return -ENXIO;
-+	ret = -ENXIO;
- #endif
-+out:
-+	WARN(ret == 0, "0 is an invalid IRQ number\n");
-+	return ret;
- }
- EXPORT_SYMBOL_GPL(platform_get_irq_optional);
- 
-@@ -212,7 +220,7 @@ EXPORT_SYMBOL_GPL(platform_get_irq_optional);
-  *		if (irq < 0)
-  *			return irq;
-  *
-- * Return: IRQ number on success, negative error number on failure.
-+ * Return: non-zero IRQ number on success, negative error number on failure.
-  */
- int platform_get_irq(struct platform_device *dev, unsigned int num)
- {
-@@ -284,8 +292,10 @@ static int __platform_get_irq_byname(struct platform_device *dev,
- 	}
- 
- 	r = platform_get_resource_byname(dev, IORESOURCE_IRQ, name);
--	if (r)
-+	if (r) {
-+		WARN(r->start == 0, "0 is an invalid IRQ number\n");
- 		return r->start;
-+	}
- 
- 	return -ENXIO;
- }
-@@ -297,7 +307,7 @@ static int __platform_get_irq_byname(struct platform_device *dev,
-  *
-  * Get an IRQ like platform_get_irq(), but then by name rather then by index.
-  *
-- * Return: IRQ number on success, negative error number on failure.
-+ * Return: non-zero IRQ number on success, negative error number on failure.
-  */
- int platform_get_irq_byname(struct platform_device *dev, const char *name)
- {
-@@ -319,7 +329,7 @@ EXPORT_SYMBOL_GPL(platform_get_irq_byname);
-  * Get an optional IRQ by name like platform_get_irq_byname(). Except that it
-  * does not print an error message if an IRQ can not be obtained.
-  *
-- * Return: IRQ number on success, negative error number on failure.
-+ * Return: non-zero IRQ number on success, negative error number on failure.
-  */
- int platform_get_irq_byname_optional(struct platform_device *dev,
- 				     const char *name)
+See https://patchwork.ozlabs.org/patch/1256429
+Please check and re-submit.
 
 _______________________________________________
 Linux-mediatek mailing list
