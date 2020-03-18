@@ -2,52 +2,51 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 75ED3189589
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 07:03:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 953C718959B
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 07:14:33 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mL5OIvSll9wI1o5Npjx/G/UOwtEMYSDoMGenFmCwXrw=; b=mmK9BptstAAiqp
-	oV9VVBzQ/x1tWXiPAW5a136HLfDX4HJiDsrlmRaaCyVJHv5cwqT05Gn6FyN2I5o002u3MkL3VjRO2
-	yl9miLXCFyrXjEzyB8Ff8piNmQSIUj1UoZtr2fSdDgcU3fWF0XnLW3m11aErvWQkbUaUjuCHvo/fv
-	ZoffjmYGGJtYJMr2HayF5Yf53fzlcoddjOZgroUZN34n97UdH8/jjNfUk2s3lA3zHMLdPCCi1jfXb
-	lZpzd7/+Lb+mhZA+vmbdGm1XAJ5ndOz9NZG5eUASVQ5iiIVRgQrixrNbrjA5TPX9HysbJqoNYN0ax
-	shHo+Et3BgWH9iBr3KMA==;
+	List-Owner; bh=s+7Oql+40bYjFLMoHigXWfqGksPdLBBXQYQYspBAVSw=; b=NQCN7PjvODQnJT
+	IyCJuWbk711HKVQD76ULlKuGqgie6Yd2Ni5PrucQACbnA6JNf2tFmtxnBfVrF/Oixs4hWvd09RRLI
+	ddE3q1Uu7mfUCK7DPkkJ6nwYr0MWh2JPHyG5Q83dTgTpnygjojPYJesJ+9UJPNrQKWjKVkIujoGQC
+	9ihNq6u1sdC6Ww0+Is2BptOR11kZRhkm/kIO7OFc/qL+V9Wj1qoBS13zt/RQ4TPyjv6EPL6p+eKNL
+	+h4JGOcrBqRgSfihwfCc8u9oAWQDrzRKvowf1ukuXC86B2qUF69sodUVgszekY119V3G+RGe5T+zK
+	PZEvK+6QanPTRSi8NNYA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jERnS-0005sH-Gs; Wed, 18 Mar 2020 06:03:18 +0000
+	id 1jERyD-0000n5-Kc; Wed, 18 Mar 2020 06:14:25 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jERnE-0005bx-Gg; Wed, 18 Mar 2020 06:03:05 +0000
-X-UUID: 0010e68ef9d542c4a1e19e54408ef303-20200317
+ id 1jERxz-0000bv-6k; Wed, 18 Mar 2020 06:14:12 +0000
+X-UUID: 3a744552c3874b36b44b3cd2e223c143-20200317
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=JtfsImJ1VhBceXif49tzk/48LaZcVQ1FVbSnBovfdT8=; 
- b=lkfUPx7g/8ZbGbhJ0ml3nUUU84sJF8s40F748F1YqvxvRENnG6VQ28Jss4VnhdnvKJNiFJAamenKri+7x95wDhVVt3tmDwLCnsMJYaQ3imIVTXO6aG3uRNoOY0ORo4MuIth6ti1ye759IJ7r5JWhp9zE7cUJ8hrJnWiJ1HyHLak=;
-X-UUID: 0010e68ef9d542c4a1e19e54408ef303-20200317
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=gv0c5/3tvz4dQesZfQxOdDx8ye9ZpCqR4KhwIKL8Yyw=; 
+ b=oQcwWisshxa/A4CUOwZr8eMmCS4JoPdDTlcJ5wgYRN5yrlk+Bb8d5E7mpT7T51T9OQ3P8VZf77ecmHFZbEUNJtCIVoC0Ky1KnO5DJ02KTO0OXIo+tAOXC3CvCzeUL07nBRg2NvvDlNv1/5+vDYb1BzrXgW6snaozr7E9azAdgAM=;
+X-UUID: 3a744552c3874b36b44b3cd2e223c143-20200317
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1401561184; Tue, 17 Mar 2020 22:03:01 -0800
+ with ESMTP id 25997053; Tue, 17 Mar 2020 22:14:10 -0800
 Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 17 Mar 2020 23:02:59 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 17 Mar 2020 23:14:30 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
  mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 18 Mar 2020 14:00:40 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas08.mediatek.inc
+ 15.0.1395.4; Wed, 18 Mar 2020 14:11:49 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 18 Mar 2020 14:03:37 +0800
-Message-ID: <1584511378.14250.55.camel@mtksdccf07>
-Subject: Re: [SPAM]Re: [PATCH v6 3/7] scsi: ufs: introduce common delay
- function
+ Transport; Wed, 18 Mar 2020 14:11:05 +0800
+Message-ID: <1584512047.14250.56.camel@mtksdccf07>
+Subject: Re: [PATCH v6 3/7] scsi: ufs: introduce common delay function
 From: Stanley Chu <stanley.chu@mediatek.com>
 To: Bart Van Assche <bvanassche@acm.org>
-Date: Wed, 18 Mar 2020 14:02:58 +0800
+Date: Wed, 18 Mar 2020 14:14:07 +0800
 In-Reply-To: <b7a6045e-9615-0cd2-9812-2871bf9ba44c@acm.org>
 References: <20200316085303.20350-1-stanley.chu@mediatek.com>
  <20200316085303.20350-4-stanley.chu@mediatek.com>
@@ -58,8 +57,8 @@ X-Mailer: Evolution 3.2.3-0ubuntu6
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200317_230304_568610_5FEF7174 
-X-CRM114-Status: GOOD (  22.65  )
+X-CRM114-CacheID: sfid-20200317_231411_251766_F97A3EA9 
+X-CRM114-Status: GOOD (  22.56  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,6 +99,8 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
+
+(Sorry to resend this mail with "[SPAM]" prefix removed in title)
 
 Hi Bart,
 
@@ -172,6 +173,7 @@ way but this is beyond this patch set. I would like to remove the
 
 Thanks,
 Stanley Chu
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
