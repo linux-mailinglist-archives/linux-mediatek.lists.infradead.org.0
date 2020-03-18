@@ -2,49 +2,51 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 983F7189C1A
-	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 13:41:40 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 83CF4189C1C
+	for <lists+linux-mediatek@lfdr.de>; Wed, 18 Mar 2020 13:41:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=9TUWZ2246gr2kxvMBwkvkKMciL/kLU1qokdn5UdI7Ro=; b=OI9uIVSi/FeOG4
-	drdG4ZOwMAi9XIByrbZzhH11ycxyUjDyV5MlY/gUFBPzkPjEetF0CR5hXzfGx8E1Tkb1lp7h83Kpe
-	N6XHr16HAEMDgXDv0POpQmBjeLMGGgPQH1FmjnE5OxJVhY39HXOQT9MTmBd2QBZHhoIzjfUa+d/Pd
-	pqodC1CXC9MoGlIGgSxdWTx3b+th1hfJEQB5NayVh1KD2eNA0h4qnCBJjZFREVhQ74ryoi80XbDMb
-	A3mZGhmNnTvaVe5xQhw/2gK/AmjbV5d2HJ3xoajt49a05rLQNfRdh9iHavVNSoEJITk3psQ/6w6Yt
-	t6DBzka/gLU2r6hnyFMA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=SWk70ASr6w0qe77m7yb6hBa4VGn17L7pfm7XyHj7lvY=; b=h9zzPrUU560WzQ
+	r5wUOvWOZ/0nzxMdMSB0mTyhds9EgoLA6AYglEWhuq3lN8soYADf6tIOJvCXtQ645B9fvNFpLpzWT
+	PFrv9HZGVQC5f3IQFog3b/80/IrejoBjjACbjv93/8+TTLvaZecAgSb3utn69bDhxltzjRvmygMjU
+	oZpwAohpiVxHAk55rcLZ3ecTnjrab/m76gN/Soom5kFYodOltpb0YeXIwfqUXrBTjcJBLokke1zBN
+	eIZ3CWeXyfNbjcWboHyUwbtnxtfYqNQOkeFmo++KvQdxEAjNKxy6kcVZGq0Zfhg6sNBRjps/aIbai
+	piHNSbIaN7QLw7CibkZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jEY0p-0004Z2-Qf; Wed, 18 Mar 2020 12:41:31 +0000
+	id 1jEY0x-0004bR-Br; Wed, 18 Mar 2020 12:41:39 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jEY0m-0004Yi-LM
- for linux-mediatek@lists.infradead.org; Wed, 18 Mar 2020 12:41:29 +0000
+ id 1jEY0u-0004aX-8K
+ for linux-mediatek@lists.infradead.org; Wed, 18 Mar 2020 12:41:37 +0000
 Received: from lore-desk-wlan.redhat.com (unknown [151.48.128.122])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id AB5112076D;
- Wed, 18 Mar 2020 12:41:26 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 1798B2076D;
+ Wed, 18 Mar 2020 12:41:33 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1584535288;
- bh=Q3YkWDIso2rkDToYkjHZTdthkqcDiWBoQtFaHy10IgA=;
- h=From:To:Cc:Subject:Date:From;
- b=vg4hfPo8Ao2hPKsZNNHUeEquAd5IxUr/Gl/q8ObhifNxoP38+w2ZtiQABhSTB77Qy
- 2YlXjcealooVQ4e3aZwZ0D3BaKy1Li1ijoCTGQnAxmxCkmRCpcZWqgdEG7djfSa69Y
- ovA530FD5QZqMesrT562CAeJXkKlGHy513UGznPg=
+ s=default; t=1584535295;
+ bh=lqF7zlnVf6/0NevdwimAGCK2mAe+Unj/eKbq5AcaaTk=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=0zoBC4DjueVAsTH1srqDMn38jdGTE4SiRcKHsMtsXubaswhnNf7XuRfJm3+Ev9+yP
+ 26GoqgwOgzN7A3K8NI/iV+ZyamvzjPVGJ5hlxoSx/68xyM72pjsedpDiZNMQ1cdWXz
+ tEvPl9SidP1UsqG/jyTs4MkcJvXjmsD8zFCSz4p0=
 From: Lorenzo Bianconi <lorenzo@kernel.org>
 To: kvalo@codeaurora.org
-Subject: [PATCH 0/3] fix endianness issues in mt7663e driver
-Date: Wed, 18 Mar 2020 13:41:02 +0100
-Message-Id: <cover.1584534454.git.lorenzo@kernel.org>
+Subject: [PATCH 1/3] mt76: mt7615: fix mt7663e firmware struct endianness
+Date: Wed, 18 Mar 2020 13:41:03 +0100
+Message-Id: <d14dfd7cd91a4dda8c5dcd03e8a70ff11314182e.1584534454.git.lorenzo@kernel.org>
 X-Mailer: git-send-email 2.25.1
+In-Reply-To: <cover.1584534454.git.lorenzo@kernel.org>
+References: <cover.1584534454.git.lorenzo@kernel.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200318_054128_722007_9CA97837 
-X-CRM114-Status: UNSURE (   7.48  )
+X-CRM114-CacheID: sfid-20200318_054136_315662_868AE99F 
+X-CRM114-Status: UNSURE (   9.04  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -82,17 +84,51 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Fix endianness issues reported by kbuild test robot
+Convert fields in mt7663_fw_trailer and mt7663_fw_buf to little-endian
 
-Lorenzo Bianconi (3):
-  mt76: mt7615: fix mt7663e firmware struct endianness
-  mt76: mt7615: fix endianness in unified command
-  mt76: mt7615: add missing declaration in mt7615.h
+Reported-by: kbuild test robot <lkp@intel.com>
+Fixes: f40ac0f3d3c0 ("mt76: mt7615: introduce mt7663e support")
+Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
+---
+ drivers/net/wireless/mediatek/mt76/mt7615/mcu.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
 
- drivers/net/wireless/mediatek/mt76/mt7615/mcu.c  | 16 ++++++++--------
- .../net/wireless/mediatek/mt76/mt7615/mt7615.h   |  1 +
- 2 files changed, 9 insertions(+), 8 deletions(-)
-
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+index 50c98913d81d..9978f6bb22ab 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
+@@ -44,16 +44,16 @@ struct mt7663_fw_trailer {
+ 	u8 reserv[2];
+ 	char fw_ver[10];
+ 	char build_date[15];
+-	u32 crc;
++	__le32 crc;
+ } __packed;
+ 
+ struct mt7663_fw_buf {
+-	u32 crc;
+-	u32 d_img_size;
+-	u32 block_size;
++	__le32 crc;
++	__le32 d_img_size;
++	__le32 block_size;
+ 	u8 rsv[4];
+-	u32 img_dest_addr;
+-	u32 img_size;
++	__le32 img_dest_addr;
++	__le32 img_size;
+ 	u8 feature_set;
+ };
+ 
+@@ -1896,7 +1896,7 @@ static int mt7663_load_n9(struct mt7615_dev *dev, const char *name)
+ 			goto out;
+ 		}
+ 
+-		offset += buf->img_size;
++		offset += le32_to_cpu(buf->img_size);
+ 		if (buf->feature_set & DL_MODE_VALID_RAM_ENTRY) {
+ 			override_addr = le32_to_cpu(buf->img_dest_addr);
+ 			dev_info(dev->mt76.dev, "Region %d, override_addr = 0x%08x\n",
 -- 
 2.25.1
 
