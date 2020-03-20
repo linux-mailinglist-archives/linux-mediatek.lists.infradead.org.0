@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 85FC518C9C9
-	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Mar 2020 10:14:45 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A35BE18C9CF
+	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Mar 2020 10:14:51 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,32 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=bE6niYG87KZb6DXUTwo19dJM1/TiPCLCTeAGG+b/V0A=; b=AZYU8Nz9QcgJ44d/7szNSugekr
-	Lw0ccw/D+8VGaNMS1EfhJKLjYkfQtNHuPR77soshDhlbt0v974272hvvu275rcGo0prUGxpbNP/1N
-	uHTEoNABUCsAA0Lx7lMpzuBmIMM+KFaCfQx/H9RhrNNYe+3ziJbULKF1wjcBhUN8F9XeJeSm6spUu
-	r22TCisuCGk/Ac3TTIBivWKwLHest06tR8QUzZPn7FcWUJ0rSOtb491aRszLHo+v1gZc3bW4YSwWn
-	p7lnfCZWSTMutKFN5IKt5SKeTyrkhZY8cbZKduGBfgmU+1rn5tcdkP1H0GPK3e4pPBzBvo4lLVscb
-	keUhO4Nw==;
+	bh=0X6oG7toOfRiX3VCX8PFZS6MNmw/hJolLFwhiZk8SCo=; b=kLhWdlBFx4T0aj6iD3VWAIyL7x
+	OWTTM95o0bdLaFToBxJZ/TYnV7eWM9yevpvBxnLuZvOGHzASMg6vcomzuYc2TmAijxxp0TAcNPrYJ
+	oDFo125s7IaKOCQu1z2j/2RBSI5niwG+SkQ7Ybrte/ME4Vo3iLFIqlR8+6BPHBMNAocKo/KswsIld
+	BX5uu+ZPEOToPDfAMulI/GiH9kPoEcOjINxIo3+XEw9MFN3pNKsgaXJeSwxo7LyplV3sWDl1UrPH6
+	+Fh/3056l6oYocqprEBvh8KrZFCXLXpWUGyKb7KP2drnUridK6Lt+xj4IWbN9SZltY7zYxPOJ8tIk
+	9cLd2bSQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jFDjf-0000Bi-7S; Fri, 20 Mar 2020 09:14:35 +0000
+	id 1jFDjo-0000Pj-4i; Fri, 20 Mar 2020 09:14:44 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jFDja-00009I-8z
- for linux-mediatek@lists.infradead.org; Fri, 20 Mar 2020 09:14:31 +0000
+ id 1jFDjd-0000Ba-BB
+ for linux-mediatek@lists.infradead.org; Fri, 20 Mar 2020 09:14:35 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 13723352; Fri, 20 Mar 2020 10:14:20 +0100 (CET)
+ id 49471364; Fri, 20 Mar 2020 10:14:20 +0100 (CET)
 From: Joerg Roedel <joro@8bytes.org>
 To: iommu@lists.linux-foundation.org
-Subject: [PATCH v3 04/15] iommu/tegra-gart: Remove direct access of
- dev->iommu_fwspec
-Date: Fri, 20 Mar 2020 10:14:03 +0100
-Message-Id: <20200320091414.3941-5-joro@8bytes.org>
+Subject: [PATCH v3 05/15] iommu: Rename struct iommu_param to dev_iommu
+Date: Fri, 20 Mar 2020 10:14:04 +0100
+Message-Id: <20200320091414.3941-6-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200320091414.3941-1-joro@8bytes.org>
 References: <20200320091414.3941-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200320_021430_476512_8B7E7024 
-X-CRM114-Status: UNSURE (   9.54  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200320_021433_563570_AD0693AD 
+X-CRM114-Status: GOOD (  12.55  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -61,13 +59,13 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Jean-Philippe Brucker <jean-philippe@linaro.org>,
  Joerg Roedel <jroedel@suse.de>, Will Deacon <will@kernel.org>,
- linux-arm-msm@vger.kernel.org, Joerg Roedel <joro@8bytes.org>,
- guohanjun@huawei.com, linux-kernel@vger.kernel.org,
- Bjorn Andersson <bjorn.andersson@linaro.org>, Rob Clark <robdclark@gmail.com>,
- Thierry Reding <thierry.reding@gmail.com>, linux-mediatek@lists.infradead.org,
- Andy Gross <agross@kernel.org>, Sudeep Holla <sudeep.holla@arm.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>,
- Robin Murphy <robin.murphy@arm.com>
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-arm-msm@vger.kernel.org,
+ Joerg Roedel <joro@8bytes.org>, guohanjun@huawei.com,
+ linux-kernel@vger.kernel.org, Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Rob Clark <robdclark@gmail.com>, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, Andy Gross <agross@kernel.org>,
+ Sudeep Holla <sudeep.holla@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Sean Paul <sean@poorly.run>, Robin Murphy <robin.murphy@arm.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -76,28 +74,173 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Use the accessor functions instead of directly dereferencing
-dev->iommu_fwspec.
+The term dev_iommu aligns better with other existing structures and
+their accessor functions.
 
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Tested-by: Will Deacon <will@kernel.org> # arm-smmu
 Reviewed-by: Jean-Philippe Brucker <jean-philippe@linaro.org>
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/tegra-gart.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/iommu/iommu.c  | 28 ++++++++++++++--------------
+ include/linux/device.h |  6 +++---
+ include/linux/iommu.h  |  4 ++--
+ 3 files changed, 19 insertions(+), 19 deletions(-)
 
-diff --git a/drivers/iommu/tegra-gart.c b/drivers/iommu/tegra-gart.c
-index 3fb7ba72507d..db6559e8336f 100644
---- a/drivers/iommu/tegra-gart.c
-+++ b/drivers/iommu/tegra-gart.c
-@@ -247,7 +247,7 @@ static int gart_iommu_add_device(struct device *dev)
+diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
+index 3e3528436e0b..beac2ef063dd 100644
+--- a/drivers/iommu/iommu.c
++++ b/drivers/iommu/iommu.c
+@@ -152,9 +152,9 @@ void iommu_device_unregister(struct iommu_device *iommu)
+ }
+ EXPORT_SYMBOL_GPL(iommu_device_unregister);
+ 
+-static struct iommu_param *iommu_get_dev_param(struct device *dev)
++static struct dev_iommu *dev_iommu_get(struct device *dev)
  {
- 	struct iommu_group *group;
+-	struct iommu_param *param = dev->iommu_param;
++	struct dev_iommu *param = dev->iommu;
  
--	if (!dev->iommu_fwspec)
-+	if (!dev_iommu_fwspec_get(dev))
- 		return -ENODEV;
+ 	if (param)
+ 		return param;
+@@ -164,14 +164,14 @@ static struct iommu_param *iommu_get_dev_param(struct device *dev)
+ 		return NULL;
  
- 	group = iommu_group_get_for_dev(dev);
+ 	mutex_init(&param->lock);
+-	dev->iommu_param = param;
++	dev->iommu = param;
+ 	return param;
+ }
+ 
+-static void iommu_free_dev_param(struct device *dev)
++static void dev_iommu_free(struct device *dev)
+ {
+-	kfree(dev->iommu_param);
+-	dev->iommu_param = NULL;
++	kfree(dev->iommu);
++	dev->iommu = NULL;
+ }
+ 
+ int iommu_probe_device(struct device *dev)
+@@ -183,7 +183,7 @@ int iommu_probe_device(struct device *dev)
+ 	if (!ops)
+ 		return -EINVAL;
+ 
+-	if (!iommu_get_dev_param(dev))
++	if (!dev_iommu_get(dev))
+ 		return -ENOMEM;
+ 
+ 	if (!try_module_get(ops->owner)) {
+@@ -200,7 +200,7 @@ int iommu_probe_device(struct device *dev)
+ err_module_put:
+ 	module_put(ops->owner);
+ err_free_dev_param:
+-	iommu_free_dev_param(dev);
++	dev_iommu_free(dev);
+ 	return ret;
+ }
+ 
+@@ -211,9 +211,9 @@ void iommu_release_device(struct device *dev)
+ 	if (dev->iommu_group)
+ 		ops->remove_device(dev);
+ 
+-	if (dev->iommu_param) {
++	if (dev->iommu) {
+ 		module_put(ops->owner);
+-		iommu_free_dev_param(dev);
++		dev_iommu_free(dev);
+ 	}
+ }
+ 
+@@ -972,7 +972,7 @@ int iommu_register_device_fault_handler(struct device *dev,
+ 					iommu_dev_fault_handler_t handler,
+ 					void *data)
+ {
+-	struct iommu_param *param = dev->iommu_param;
++	struct dev_iommu *param = dev->iommu;
+ 	int ret = 0;
+ 
+ 	if (!param)
+@@ -1015,7 +1015,7 @@ EXPORT_SYMBOL_GPL(iommu_register_device_fault_handler);
+  */
+ int iommu_unregister_device_fault_handler(struct device *dev)
+ {
+-	struct iommu_param *param = dev->iommu_param;
++	struct dev_iommu *param = dev->iommu;
+ 	int ret = 0;
+ 
+ 	if (!param)
+@@ -1055,7 +1055,7 @@ EXPORT_SYMBOL_GPL(iommu_unregister_device_fault_handler);
+  */
+ int iommu_report_device_fault(struct device *dev, struct iommu_fault_event *evt)
+ {
+-	struct iommu_param *param = dev->iommu_param;
++	struct dev_iommu *param = dev->iommu;
+ 	struct iommu_fault_event *evt_pending = NULL;
+ 	struct iommu_fault_param *fparam;
+ 	int ret = 0;
+@@ -1104,7 +1104,7 @@ int iommu_page_response(struct device *dev,
+ 	int ret = -EINVAL;
+ 	struct iommu_fault_event *evt;
+ 	struct iommu_fault_page_request *prm;
+-	struct iommu_param *param = dev->iommu_param;
++	struct dev_iommu *param = dev->iommu;
+ 	struct iommu_domain *domain = iommu_get_domain_for_dev(dev);
+ 
+ 	if (!domain || !domain->ops->page_response)
+diff --git a/include/linux/device.h b/include/linux/device.h
+index fa04dfd22bbc..405a8f11bec1 100644
+--- a/include/linux/device.h
++++ b/include/linux/device.h
+@@ -44,7 +44,7 @@ struct iommu_ops;
+ struct iommu_group;
+ struct iommu_fwspec;
+ struct dev_pin_info;
+-struct iommu_param;
++struct dev_iommu;
+ 
+ /**
+  * struct subsys_interface - interfaces to device functions
+@@ -514,7 +514,7 @@ struct dev_links_info {
+  * 		device (i.e. the bus driver that discovered the device).
+  * @iommu_group: IOMMU group the device belongs to.
+  * @iommu_fwspec: IOMMU-specific properties supplied by firmware.
+- * @iommu_param: Per device generic IOMMU runtime data
++ * @iommu:	Per device generic IOMMU runtime data
+  *
+  * @offline_disabled: If set, the device is permanently online.
+  * @offline:	Set after successful invocation of bus type's .offline().
+@@ -614,7 +614,7 @@ struct device {
+ 	void	(*release)(struct device *dev);
+ 	struct iommu_group	*iommu_group;
+ 	struct iommu_fwspec	*iommu_fwspec;
+-	struct iommu_param	*iommu_param;
++	struct dev_iommu	*iommu;
+ 
+ 	bool			offline_disabled:1;
+ 	bool			offline:1;
+diff --git a/include/linux/iommu.h b/include/linux/iommu.h
+index 3c4ca041d7a2..1c9fa5c1174b 100644
+--- a/include/linux/iommu.h
++++ b/include/linux/iommu.h
+@@ -365,7 +365,7 @@ struct iommu_fault_param {
+ };
+ 
+ /**
+- * struct iommu_param - collection of per-device IOMMU data
++ * struct dev_iommu - Collection of per-device IOMMU data
+  *
+  * @fault_param: IOMMU detected device fault reporting data
+  *
+@@ -373,7 +373,7 @@ struct iommu_fault_param {
+  *	struct iommu_group	*iommu_group;
+  *	struct iommu_fwspec	*iommu_fwspec;
+  */
+-struct iommu_param {
++struct dev_iommu {
+ 	struct mutex lock;
+ 	struct iommu_fault_param *fault_param;
+ };
 -- 
 2.17.1
 
